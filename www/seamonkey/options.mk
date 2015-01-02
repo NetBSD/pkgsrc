@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2014/06/22 08:54:39 ryoon Exp $
+# $NetBSD: options.mk,v 1.30 2015/01/02 04:26:21 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome mozilla-enigmail
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	--disable-alsa
 .if !empty(PKG_OPTIONS:Mmozilla-chatzilla)
 PLIST_SRC+=		PLIST.chatzilla
 CONFIGURE_ARGS+=	--enable-extensions=default,irc
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/chatzilla*.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/inspector*.xpi
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
@@ -67,8 +69,9 @@ CONFIGURE_ARGS+=	--enable-install-strip
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
 CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/gdata-provider*.xpi
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/lightning*.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/gdata-provider*.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/lightning*.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/quitter*.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
 .endif

@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.2 2015/01/02 04:26:21 ryoon Exp $
 
---- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2014-11-01 10:20:11.000000000 +0000
+--- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2015-01-01 17:44:53.000000000 +0000
 +++ mozilla/media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,399 @@
+@@ -0,0 +1,404 @@
 +/*
 + * Copyright © 2014 Mozilla Foundation
 + *
@@ -400,5 +400,10 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.1 2014/11/02 05:40:31
 +  .stream_start = oss_stream_start,
 +  .stream_stop = oss_stream_stop,
 +  .stream_get_position = oss_stream_get_position,
-+  .stream_get_latency = oss_stream_get_latency
++  .stream_get_latency = oss_stream_get_latency,
++  .stream_set_volume = oss_stream_set_volume,
++  .stream_set_panning = oss_stream_set_panning,
++  .stream_get_current_device = NULL,
++  .stream_device_destroy = NULL,
++  .stream_register_device_changed_callback = NULL
 +};

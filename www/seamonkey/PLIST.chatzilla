@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST.chatzilla,v 1.3 2014/11/02 05:40:31 ryoon Exp $
+@comment $NetBSD: PLIST.chatzilla,v 1.4 2015/01/02 04:26:21 ryoon Exp $
 lib/seamonkey/extensions/inspector@mozilla.org/chrome.manifest
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.ico
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.xpm
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain16.xpm
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/content/inspector/Flasher.js
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/content/inspector/ViewerRegistry.js
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/content/inspector/commandOverlay.xul
@@ -305,6 +309,7 @@ lib/seamonkey/extensions/inspector@mozilla.org/components/inspector-cmdline.js
 lib/seamonkey/extensions/inspector@mozilla.org/defaults/preferences/inspector.js
 lib/seamonkey/extensions/inspector@mozilla.org/install.rdf
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome.manifest
+lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/.mkdir.done
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/content/chatzilla/about/about.js
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/content/chatzilla/about/about.xul
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/content/chatzilla/browserOverlay.xul
@@ -429,6 +434,7 @@ lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/output-dark.css
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/output-default.css
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/output-light.css
+lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/icons/default/chatzilla-window.ico
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/icons/default/chatzilla-window.xpm
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/icons/default/chatzilla-window16.xpm
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/components/chatzilla-service.js

@@ -1,0 +1,10 @@
+$NetBSD: patch-mozilla_media_libtheora_moz.build,v 1.1 2015/01/02 04:26:21 ryoon Exp $
+
+--- mozilla/media/libtheora/moz.build.orig	2014-12-03 06:23:09.000000000 +0000
++++ mozilla/media/libtheora/moz.build
+@@ -6,3 +6,5 @@
+ 
+ DIRS += ['include', 'lib']
+ 
++if CONFIG['MOZ_NATIVE_OGG']:
++    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']

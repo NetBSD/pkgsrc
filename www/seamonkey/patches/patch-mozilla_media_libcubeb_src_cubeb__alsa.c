@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.3 2015/01/02 04:26:21 ryoon Exp $
 
---- mozilla/media/libcubeb/src/cubeb_alsa.c.orig	2014-10-14 06:36:30.000000000 +0000
+--- mozilla/media/libcubeb/src/cubeb_alsa.c.orig	2014-12-03 06:23:08.000000000 +0000
 +++ mozilla/media/libcubeb/src/cubeb_alsa.c
 @@ -6,11 +6,15 @@
   */
@@ -78,7 +78,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
  };
  
  enum stream_state {
-@@ -261,7 +311,7 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -262,7 +312,7 @@ alsa_refill_stream(cubeb_stream * stm)
  
    pthread_mutex_lock(&stm->mutex);
  
@@ -87,7 +87,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    if (r < 0 || revents != POLLOUT) {
      /* This should be a stream error; it makes no sense for poll(2) to wake
         for this stream and then have the stream report that it's not ready.
-@@ -270,10 +320,10 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -271,10 +321,10 @@ alsa_refill_stream(cubeb_stream * stm)
      return RUNNING;
    }
  
@@ -101,7 +101,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    }
  
    /* Failed to recover from an xrun, this stream must be broken. */
-@@ -292,8 +342,8 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -293,8 +343,8 @@ alsa_refill_stream(cubeb_stream * stm)
       available to write.  If avail is still zero here, the stream must be in
       a funky state, so recover and try again. */
    if (avail == 0) {
@@ -112,7 +112,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (avail <= 0) {
        pthread_mutex_unlock(&stm->mutex);
        stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-@@ -301,7 +351,7 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -302,7 +352,7 @@ alsa_refill_stream(cubeb_stream * stm)
      }
    }
  
@@ -121,12 +121,12 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    assert(p);
  
    pthread_mutex_unlock(&stm->mutex);
-@@ -313,10 +363,10 @@ alsa_refill_stream(cubeb_stream * stm)
-     return ERROR;
-   }
-   if (got > 0) {
--    snd_pcm_sframes_t wrote = snd_pcm_writei(stm->pcm, p, got);
-+    snd_pcm_sframes_t wrote = WRAP(snd_pcm_writei)(stm->pcm, p, got);
+@@ -327,10 +377,10 @@ alsa_refill_stream(cubeb_stream * stm)
+         b[i] *= stm->volume;
+       }
+     }
+-    wrote = snd_pcm_writei(stm->pcm, p, got);
++    wrote = WRAP(snd_pcm_writei)(stm->pcm, p, got);
      if (wrote == -EPIPE) {
 -      snd_pcm_recover(stm->pcm, wrote, 1);
 -      wrote = snd_pcm_writei(stm->pcm, p, got);
@@ -135,7 +135,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      }
      assert(wrote >= 0 && wrote == got);
      stm->write_position += wrote;
-@@ -328,7 +378,7 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -342,7 +392,7 @@ alsa_refill_stream(cubeb_stream * stm)
  
      /* Fill the remaining buffer with silence to guarantee one full period
         has been written. */
@@ -144,7 +144,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
  
      set_timeout(&stm->drain_timeout, buffer_time * 1000);
  
-@@ -439,26 +489,26 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -453,26 +503,26 @@ get_slave_pcm_node(snd_config_t * lconf,
  
    slave_def = NULL;
  
@@ -176,7 +176,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (r < 0) {
        break;
      }
-@@ -467,7 +517,7 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -481,7 +531,7 @@ get_slave_pcm_node(snd_config_t * lconf,
      if (r < 0 || r > (int) sizeof(node_name)) {
        break;
      }
@@ -185,7 +185,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (r < 0) {
        break;
      }
-@@ -476,7 +526,7 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -490,7 +540,7 @@ get_slave_pcm_node(snd_config_t * lconf,
    } while (0);
  
    if (slave_def) {
@@ -194,7 +194,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    }
  
    return NULL;
-@@ -499,22 +549,22 @@ init_local_config_with_workaround(char c
+@@ -513,22 +563,22 @@ init_local_config_with_workaround(char c
  
    lconf = NULL;
  
@@ -221,7 +221,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (r < 0) {
        break;
      }
-@@ -523,7 +573,7 @@ init_local_config_with_workaround(char c
+@@ -537,7 +587,7 @@ init_local_config_with_workaround(char c
      if (r < 0 || r > (int) sizeof(node_name)) {
        break;
      }
@@ -230,7 +230,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (r < 0) {
        break;
      }
-@@ -534,12 +584,12 @@ init_local_config_with_workaround(char c
+@@ -548,12 +598,12 @@ init_local_config_with_workaround(char c
      }
  
      /* Fetch the PCM node's type, and bail out if it's not the PulseAudio plugin. */
@@ -245,7 +245,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (r < 0) {
        break;
      }
-@@ -550,18 +600,18 @@ init_local_config_with_workaround(char c
+@@ -564,18 +614,18 @@ init_local_config_with_workaround(char c
  
      /* Don't clobber an explicit existing handle_underrun value, set it only
         if it doesn't already exist. */
@@ -267,7 +267,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      if (r < 0) {
        break;
      }
-@@ -569,7 +619,7 @@ init_local_config_with_workaround(char c
+@@ -583,7 +633,7 @@ init_local_config_with_workaround(char c
      return lconf;
    } while (0);
  
@@ -276,7 +276,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
  
    return NULL;
  }
-@@ -581,9 +631,9 @@ alsa_locked_pcm_open(snd_pcm_t ** pcm, s
+@@ -595,9 +645,9 @@ alsa_locked_pcm_open(snd_pcm_t ** pcm, s
  
    pthread_mutex_lock(&cubeb_alsa_mutex);
    if (local_config) {
@@ -288,7 +288,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    }
    pthread_mutex_unlock(&cubeb_alsa_mutex);
  
-@@ -596,7 +646,7 @@ alsa_locked_pcm_close(snd_pcm_t * pcm)
+@@ -610,7 +660,7 @@ alsa_locked_pcm_close(snd_pcm_t * pcm)
    int r;
  
    pthread_mutex_lock(&cubeb_alsa_mutex);
@@ -297,7 +297,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    pthread_mutex_unlock(&cubeb_alsa_mutex);
  
    return r;
-@@ -653,12 +703,65 @@ alsa_init(cubeb ** context, char const *
+@@ -667,12 +717,65 @@ alsa_init(cubeb ** context, char const *
    pthread_attr_t attr;
    snd_pcm_t * dummy;
  
@@ -364,7 +364,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      cubeb_alsa_error_handler_set = 1;
    }
    pthread_mutex_unlock(&cubeb_alsa_mutex);
-@@ -666,6 +769,8 @@ alsa_init(cubeb ** context, char const *
+@@ -680,6 +783,8 @@ alsa_init(cubeb ** context, char const *
    ctx = calloc(1, sizeof(*ctx));
    assert(ctx);
  
@@ -373,7 +373,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    ctx->ops = &alsa_ops;
  
    r = pthread_mutex_init(&ctx->mutex, NULL);
-@@ -715,7 +820,7 @@ alsa_init(cubeb ** context, char const *
+@@ -729,7 +834,7 @@ alsa_init(cubeb ** context, char const *
         config fails with EINVAL, the PA PCM is too old for this workaround. */
      if (r == -EINVAL) {
        pthread_mutex_lock(&cubeb_alsa_mutex);
@@ -382,7 +382,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
        pthread_mutex_unlock(&cubeb_alsa_mutex);
        ctx->local_config = NULL;
      } else if (r >= 0) {
-@@ -754,9 +859,13 @@ alsa_destroy(cubeb * ctx)
+@@ -768,9 +873,13 @@ alsa_destroy(cubeb * ctx)
    pthread_mutex_destroy(&ctx->mutex);
    free(ctx->fds);
  
@@ -397,7 +397,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      pthread_mutex_unlock(&cubeb_alsa_mutex);
    }
  
-@@ -823,7 +932,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+@@ -838,7 +947,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
      return CUBEB_ERROR;
    }
  
@@ -406,7 +406,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    assert(r == 0);
  
    /* Ugly hack: the PA ALSA plugin allows buffer configurations that can't
-@@ -833,23 +942,23 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+@@ -848,23 +957,23 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
      latency = latency < 500 ? 500 : latency;
    }
  
@@ -436,7 +436,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    assert((nfds_t) r == stm->nfds);
  
    r = pthread_cond_init(&stm->cond, NULL);
-@@ -880,7 +989,7 @@ alsa_stream_destroy(cubeb_stream * stm)
+@@ -895,7 +1004,7 @@ alsa_stream_destroy(cubeb_stream * stm)
    pthread_mutex_lock(&stm->mutex);
    if (stm->pcm) {
      if (stm->state == DRAINING) {
@@ -445,7 +445,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      }
      alsa_locked_pcm_close(stm->pcm);
      stm->pcm = NULL;
-@@ -922,12 +1031,12 @@ alsa_get_max_channel_count(cubeb * ctx, 
+@@ -937,12 +1046,12 @@ alsa_get_max_channel_count(cubeb * ctx, 
      return CUBEB_ERROR;
    }
  
@@ -460,7 +460,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    if (rv < 0) {
      return CUBEB_ERROR;
    }
-@@ -947,34 +1056,34 @@ alsa_get_preferred_sample_rate(cubeb * c
+@@ -962,34 +1071,34 @@ alsa_get_preferred_sample_rate(cubeb * c
  
    /* get a pcm, disabling resampling, so we get a rate the
     * hardware/dmix/pulse/etc. supports. */
@@ -503,7 +503,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
  
    return CUBEB_OK;
  }
-@@ -998,7 +1107,7 @@ alsa_stream_start(cubeb_stream * stm)
+@@ -1013,7 +1122,7 @@ alsa_stream_start(cubeb_stream * stm)
    ctx = stm->context;
  
    pthread_mutex_lock(&stm->mutex);
@@ -512,7 +512,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    gettimeofday(&stm->last_activity, NULL);
    pthread_mutex_unlock(&stm->mutex);
  
-@@ -1032,7 +1141,7 @@ alsa_stream_stop(cubeb_stream * stm)
+@@ -1047,7 +1156,7 @@ alsa_stream_stop(cubeb_stream * stm)
    pthread_mutex_unlock(&ctx->mutex);
  
    pthread_mutex_lock(&stm->mutex);
@@ -521,7 +521,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
    pthread_mutex_unlock(&stm->mutex);
  
    return CUBEB_OK;
-@@ -1048,8 +1157,8 @@ alsa_stream_get_position(cubeb_stream * 
+@@ -1063,8 +1172,8 @@ alsa_stream_get_position(cubeb_stream * 
    pthread_mutex_lock(&stm->mutex);
  
    delay = -1;
@@ -532,7 +532,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/11/02 05:40:3
      *position = stm->last_position;
      pthread_mutex_unlock(&stm->mutex);
      return CUBEB_OK;
-@@ -1074,7 +1183,7 @@ alsa_stream_get_latency(cubeb_stream * s
+@@ -1089,7 +1198,7 @@ alsa_stream_get_latency(cubeb_stream * s
    snd_pcm_sframes_t delay;
    /* This function returns the delay in frames until a frame written using
       snd_pcm_writei is sent to the DAC. The DAC delay should be < 1ms anyways. */
