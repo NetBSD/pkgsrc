@@ -1,19 +1,10 @@
-$NetBSD: patch-ae,v 1.9 2014/08/21 19:32:27 tron Exp $
+$NetBSD: patch-ae,v 1.10 2015/01/02 09:14:16 fhajny Exp $
 
 - Default locations.
 - Make it work with NetBSD's flock(1).
 
 --- ejabberdctl.template.orig	2014-07-22 16:42:49.000000000 +0100
 +++ ejabberdctl.template	2014-08-21 20:17:35.000000000 +0100
-@@ -22,7 +22,7 @@
-     EXEC_CMD="false"
-     for GID in `id -G`; do
-         if [ $GID -eq 0 ] ; then
--            EXEC_CMD="su $INSTALLUSER -p -c"
-+            EXEC_CMD="su $INSTALLUSER -m -c"
-         fi
-     done
-     if [ `id -g` -eq `id -g $INSTALLUSER` ] ; then
 @@ -67,10 +67,10 @@
      EJABBERD_CONFIG_PATH=$ETC_DIR/ejabberd.yml
  fi
