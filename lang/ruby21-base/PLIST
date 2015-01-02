@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/15 14:42:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/02 07:32:58 ryoon Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -711,6 +711,7 @@ ${RUBY_LIB}/rubygems/source_local.rb
 ${RUBY_LIB}/rubygems/source_specific_file.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
+${RUBY_LIB}/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
 ${RUBY_LIB}/rubygems/ssl_certs/Class3PublicPrimaryCertificationAuthority.pem
 ${RUBY_LIB}/rubygems/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
 ${RUBY_LIB}/rubygems/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
