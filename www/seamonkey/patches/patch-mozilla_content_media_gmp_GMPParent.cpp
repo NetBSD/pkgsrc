@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_content_media_gmp_GMPParent.cpp,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_gmp_GMPParent.cpp,v 1.2 2015/01/02 04:26:21 ryoon Exp $
 
---- mozilla/content/media/gmp/GMPParent.cpp.orig	2014-10-14 06:36:06.000000000 +0000
+--- mozilla/content/media/gmp/GMPParent.cpp.orig	2014-12-03 06:22:34.000000000 +0000
 +++ mozilla/content/media/gmp/GMPParent.cpp
-@@ -87,23 +87,16 @@ GMPParent::Init(GeckoMediaPluginService 
+@@ -90,23 +90,16 @@ GMPParent::Init(GeckoMediaPluginService 
    mService = aService;
    mDirectory = aPluginDir;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-mozilla_content_media_gmp_GMPParent.cpp,v 1.1 2014/11/02 05:40:31
    if (NS_FAILED(rv)) {
      return rv;
    }
-   LOGD(("%s::%s: %p for %s", __CLASS__, __FUNCTION__, this, 
+   LOGD(("%s::%s: %p for %s", __CLASS__, __FUNCTION__, this,
 -       NS_LossyConvertUTF16toASCII(parentLeafName).get()));
 +       NS_LossyConvertUTF16toASCII(leafname).get()));
  
