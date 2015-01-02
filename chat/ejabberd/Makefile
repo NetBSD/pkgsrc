@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.47 2014/11/13 09:45:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.48 2015/01/02 09:14:16 fhajny Exp $
 
-DISTNAME=	ejabberd-14.07
-PKGREVISION=	4
+DISTNAME=	ejabberd-14.12
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
 
-DISTFILES+=	${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
 SITES.${DISTNAME}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
