@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.3 2014/02/15 03:37:27 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2015/01/02 12:32:13 morr Exp $
 
-PKG_SUPPORTED_OPTIONS+=	ruby python perl
+PKG_SUPPORTED_OPTIONS+=	ruby python perl lua
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
 
 .include "../../mk/bsd.options.mk"
@@ -21,4 +21,9 @@ CONFIGURE_ENV+=		vi_cv_path_python=${PYTHONBIN}
 .include "../../lang/perl5/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-perlinterp
 CONFIGURE_ENV+=		vi_cv_path_perl=${PERL5}
+.endif
+
+.if !empty(PKG_OPTIONS:Mlua)
+.include "../../lang/lua/buildlink3.mk"
+CONFIGURE_ARGS+=   --enable-luainterp
 .endif
