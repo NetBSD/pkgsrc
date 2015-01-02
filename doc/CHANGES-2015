@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.35 2015/01/02 10:07:39 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.36 2015/01/02 11:52:07 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-msgpack to 0.4.2nb1 [obache 2015-01-02]
 	Updated lang/ruby21-base to 2.1.5nb1 [ryoon 2015-01-02]
 	Updated chat/ejabberd to 14.12 [fhajny 2015-01-02]
+	Updated editors/vim-share to 7.4.560 [morr 2015-01-02]
