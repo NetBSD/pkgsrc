@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.33 2015/01/02 07:33:41 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.34 2015/01/02 09:14:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey to 2.31 [ryoon 2015-01-02]
 	Updated devel/py-msgpack to 0.4.2nb1 [obache 2015-01-02]
 	Updated lang/ruby21-base to 2.1.5nb1 [ryoon 2015-01-02]
+	Updated chat/ejabberd to 14.12 [fhajny 2015-01-02]
