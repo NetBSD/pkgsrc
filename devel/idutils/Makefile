@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/12/15 11:35:42 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/02 12:56:37 wiz Exp $
 
 DISTNAME=	idutils-4.6
 CATEGORIES=	devel
@@ -13,7 +13,8 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS=	sh-utils>=2.0nb2 coreutils-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt
+# autoconf needed for 4.6; see PR 49522; can probably be removed on next update
+USE_TOOLS+=		autoconf msgfmt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_prog_EMACS=no
@@ -24,12 +25,13 @@ MAKE_ENV+=		BSD_SETENV=${SETENV:Q}
 MAKE_FLAGS+=		elc_SCRIPTS=
 
 LISPDIR=		${PREFIX}/share/emacs/site-lisp
-
 INSTALLATION_DIRS=	${LISPDIR}
 
-.include "../../devel/gettext-lib/buildlink3.mk"
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lisp/idutils.el ${DESTDIR}${LISPDIR}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
