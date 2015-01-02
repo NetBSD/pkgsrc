@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2015/01/02 02:03:42 christos Exp $
+@comment $NetBSD: PLIST,v 1.46 2015/01/02 09:24:31 wiz Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -39,7 +39,7 @@ lib/libcupscgi.la
 lib/libcupsimage.la
 lib/libcupsmime.la
 lib/libcupsppdc.la
-libexec/cups/backend/dnssd
+${PLIST.dnssd}libexec/cups/backend/dnssd
 libexec/cups/backend/http
 libexec/cups/backend/ipp
 libexec/cups/backend/lpd
@@ -66,7 +66,7 @@ libexec/cups/filter/rastertolabel
 libexec/cups/filter/rastertopwg
 libexec/cups/monitor/bcp
 libexec/cups/monitor/tbcp
-libexec/cups/notifier/dbus
+${PLIST.dbus}libexec/cups/notifier/dbus
 libexec/cups/notifier/mailto
 libexec/cups/notifier/rss
 man/man1/cancel.1
@@ -326,7 +326,7 @@ share/cups/templates/subscription-canceled.tmpl
 share/cups/templates/test-page.tmpl
 share/cups/templates/trailer.tmpl
 share/cups/templates/users.tmpl
-share/cups/usb/org.cups.usb-quirks
+${PLIST.libusb}share/cups/usb/org.cups.usb-quirks
 share/doc/cups/LICENSE.txt
 share/doc/cups/README.txt
 share/doc/cups/apple-touch-icon.png
