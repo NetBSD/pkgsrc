@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.36 2015/01/02 11:52:07 morr Exp $
+$NetBSD: CHANGES-2015,v 1.37 2015/01/02 12:41:49 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -34,3 +34,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ruby21-base to 2.1.5nb1 [ryoon 2015-01-02]
 	Updated chat/ejabberd to 14.12 [fhajny 2015-01-02]
 	Updated editors/vim-share to 7.4.560 [morr 2015-01-02]
+	Updated www/wordpress to 4.1 [morr 2015-01-02]
