@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2015/01/02 10:03:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.538 2015/01/02 12:53:35 imil Exp $
 #
 
 COMMENT=	Security tools
@@ -307,6 +307,7 @@ SUBDIR+=	pam-tacplus
 SUBDIR+=	pam-yubico
 SUBDIR+=	pam_ssh_agent_auth
 SUBDIR+=	paperkey
+SUBDIR+=	password-store
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
 SUBDIR+=	pev
