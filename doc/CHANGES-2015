@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.38 2015/01/02 12:56:13 imil Exp $
+$NetBSD: CHANGES-2015,v 1.39 2015/01/02 15:54:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -36,3 +36,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/vim-share to 7.4.560 [morr 2015-01-02]
 	Updated www/wordpress to 4.1 [morr 2015-01-02]
 	Added security/password-store version 1.6.3 [imil 2015-01-02]
+	Updated emulators/mame to 0.157 [wiz 2015-01-02]
