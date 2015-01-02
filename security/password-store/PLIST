@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/02 12:52:16 imil Exp $
+bin/pass
+man/man1/pass.1
+share/examples/password-store/completion/pass.bash-completion
+share/examples/password-store/completion/pass.fish-completion
+share/examples/password-store/completion/pass.zsh-completion
+share/examples/password-store/contrib/dmenu/README.md
+share/examples/password-store/contrib/dmenu/passmenu
+share/examples/password-store/contrib/emacs/.gitignore
+share/examples/password-store/contrib/emacs/Cask
+share/examples/password-store/contrib/emacs/README.md
+share/examples/password-store/contrib/emacs/password-store.el
+share/examples/password-store/contrib/importers/1password2pass.rb
+share/examples/password-store/contrib/importers/fpm2pass.pl
+share/examples/password-store/contrib/importers/gorilla2pass.rb
+share/examples/password-store/contrib/importers/kedpm2pass.py
+share/examples/password-store/contrib/importers/keepass2pass.py
+share/examples/password-store/contrib/importers/keepassx2pass.py
+share/examples/password-store/contrib/importers/kwallet2pass.py
+share/examples/password-store/contrib/importers/lastpass2pass.rb
+share/examples/password-store/contrib/importers/pwsafe2pass.sh
+share/examples/password-store/contrib/importers/revelation2pass.py
+share/examples/password-store/contrib/related-projects.txt
+share/examples/password-store/example-filter.sh
