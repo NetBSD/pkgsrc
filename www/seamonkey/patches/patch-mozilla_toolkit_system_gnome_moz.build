@@ -1,0 +1,14 @@
+$NetBSD: patch-mozilla_toolkit_system_gnome_moz.build,v 1.1 2015/01/02 04:26:21 ryoon Exp $
+
+--- mozilla/toolkit/system/gnome/moz.build.orig	2014-12-03 06:23:26.000000000 +0000
++++ mozilla/toolkit/system/gnome/moz.build
+@@ -5,7 +5,9 @@
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ 
+ SOURCES += [
++    'nsAlertsIconListener.cpp',
+     'nsGnomeModule.cpp',
++    'nsSystemAlertsService.cpp',
+ ]
+ 
+ if CONFIG['MOZ_ENABLE_GCONF']:

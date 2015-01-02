@@ -1,26 +1,18 @@
-$NetBSD: patch-mozilla_js_src_Makefile.in,v 1.6 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_Makefile.in,v 1.7 2015/01/02 04:26:21 ryoon Exp $
 
---- mozilla/js/src/Makefile.in.orig	2014-10-14 06:36:15.000000000 +0000
+--- mozilla/js/src/Makefile.in.orig	2014-12-03 06:22:47.000000000 +0000
 +++ mozilla/js/src/Makefile.in
-@@ -18,8 +18,6 @@ run_for_side_effects := $(shell echo 'MA
- STATIC_LIBRARY_NAME = js_static
- LIBS		= $(NSPR_LIBS)
+@@ -16,9 +16,6 @@ TOPLEVEL_BUILD := 1
+ 
+ run_for_side_effects := $(shell echo 'MAKE: $(MAKE)')
  
 -DIST_INSTALL = 1
+-NO_EXPAND_LIBS = 1
 -
- ifdef JS_STANDALONE
- SHARED_LIBRARY_LIBS += $(call EXPAND_LIBNAME_PATH,mfbt,$(DEPTH)/mfbt)
- ifndef MOZ_NATIVE_ZLIB
-@@ -226,7 +224,7 @@ EXTRA_LIBS += $(MOZ_ZLIB_LIBS)
- ifdef MOZ_SHARED_ICU
- EXTRA_DSO_LDOPTS += $(MOZ_ICU_LIBS)
- else
--SHARED_LIBRARY_LIBS += $(MOZ_ICU_LIBS)
-+SHARED_LIBRARY_LIBS += $(filter-out -L% -l% -Wl%,$(MOZ_ICU_LIBS))
- endif
- 
- ifeq ($(OS_ARCH),FreeBSD)
-@@ -344,7 +342,7 @@ endif
+ ifdef JS_HAS_CTYPES
+ ifdef MOZ_NATIVE_FFI
+ LOCAL_INCLUDES = $(MOZ_FFI_CFLAGS)
+@@ -295,7 +292,7 @@ endif
  
  ifdef HAVE_DTRACE
  $(CURDIR)/javascript-trace.h: $(srcdir)/devtools/javascript-trace.d

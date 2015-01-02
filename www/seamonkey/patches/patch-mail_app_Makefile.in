@@ -1,15 +1,15 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.7 2013/12/26 13:17:37 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.8 2015/01/02 04:26:21 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2013-12-11 04:19:55.000000000 +0000
+--- mail/app/Makefile.in.orig	2014-12-03 06:11:58.000000000 +0000
 +++ mail/app/Makefile.in
-@@ -57,6 +57,10 @@ LOCAL_INCLUDES += \
+@@ -48,6 +48,10 @@ else
+ 
  DEFINES += -DXPCOM_GLUE
- STL_FLAGS=
  
 +ifeq ($(OS_ARCH),NetBSD)
 +LIBS += -lossaudio
 +endif
 +
- LIBS += \
- 	$(XPCOM_STANDALONE_GLUE_LDOPTS) \
- 	$(NULL)
+ ifndef MOZ_WINCONSOLE
+ ifdef MOZ_DEBUG
+ MOZ_WINCONSOLE = 1
