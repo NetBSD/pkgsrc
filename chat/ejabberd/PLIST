@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.27 2014/10/15 22:05:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/01/02 09:14:16 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
 lib/erlang/lib/${PKGNAME}/ebin/adhoc.beam
-lib/erlang/lib/${PKGNAME}/ebin/beam_util.beam
+lib/erlang/lib/${PKGNAME}/ebin/bitmap.beam
 lib/erlang/lib/${PKGNAME}/ebin/cache_tab.beam
 lib/erlang/lib/${PKGNAME}/ebin/cache_tab_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/cache_tab_sup.beam
@@ -12,6 +12,8 @@ lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_anonymous.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_digest.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_plain.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_scram.beam
+lib/erlang/lib/${PKGNAME}/ebin/ehyperloglog.app
+lib/erlang/lib/${PKGNAME}/ebin/ehyperloglog.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.app
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_admin.beam
@@ -83,7 +85,6 @@ lib/erlang/lib/${PKGNAME}/ebin/esip_tmp_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/esip_transaction.beam
 lib/erlang/lib/${PKGNAME}/ebin/esip_transport.beam
 lib/erlang/lib/${PKGNAME}/ebin/esip_udp_sup.beam
-lib/erlang/lib/${PKGNAME}/ebin/example_serv.beam
 lib/erlang/lib/${PKGNAME}/ebin/extauth.beam
 lib/erlang/lib/${PKGNAME}/ebin/ezlib.beam
 lib/erlang/lib/${PKGNAME}/ebin/ezlib_app.beam
@@ -140,10 +141,12 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_announce.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_client_state.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure2.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_disco.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_echo.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_fail2ban.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_http_bind.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_http_fileserver.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_ip_blacklist.beam
@@ -238,26 +241,18 @@ lib/erlang/lib/${PKGNAME}/ebin/stun_shaper.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun_test.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun_tmp_sup.beam
-lib/erlang/lib/${PKGNAME}/ebin/tcp_serv.beam
 lib/erlang/lib/${PKGNAME}/ebin/translate.beam
 lib/erlang/lib/${PKGNAME}/ebin/treap.beam
 lib/erlang/lib/${PKGNAME}/ebin/turn.beam
 lib/erlang/lib/${PKGNAME}/ebin/turn_sm.beam
 lib/erlang/lib/${PKGNAME}/ebin/turn_tmp_sup.beam
-lib/erlang/lib/${PKGNAME}/ebin/url_util.beam
 lib/erlang/lib/${PKGNAME}/ebin/win32_dns.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_gen.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_stream.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_sup.beam
-lib/erlang/lib/${PKGNAME}/ebin/xmlrpc.app
-lib/erlang/lib/${PKGNAME}/ebin/xmlrpc.beam
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_codec.beam
-lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_decode.beam
-lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_encode.beam
-lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_http.beam
-lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_util.beam
 lib/erlang/lib/${PKGNAME}/include/ELDAPv3.hrl
 lib/erlang/lib/${PKGNAME}/include/XmppAddr.hrl
 lib/erlang/lib/${PKGNAME}/include/adhoc.hrl
@@ -283,8 +278,8 @@ lib/erlang/lib/${PKGNAME}/include/pubsub.hrl
 lib/erlang/lib/${PKGNAME}/include/stun.hrl
 lib/erlang/lib/${PKGNAME}/include/xml.hrl
 lib/erlang/lib/${PKGNAME}/include/xml_gen.hrl
-lib/erlang/lib/${PKGNAME}/include/xmlrpc.hrl
 lib/erlang/lib/${PKGNAME}/priv/bin/captcha.sh
+lib/erlang/lib/${PKGNAME}/priv/jiffy.so
 lib/erlang/lib/${PKGNAME}/priv/lib/esip_drv.so
 lib/erlang/lib/${PKGNAME}/priv/lib/expat_erl.so
 lib/erlang/lib/${PKGNAME}/priv/lib/ezlib_drv.so
