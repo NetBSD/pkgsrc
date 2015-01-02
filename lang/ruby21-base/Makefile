@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/10/27 16:29:57 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/02 07:32:58 ryoon Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_FULL}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -139,6 +140,10 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
 			${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
 # ${RUBY_ARCHINC} ${RUBY_ARCHLIB}
 EMPTY_DIRS=		generator/template markup/simple_markup
+
+post-extract:
+	${CP} ${FILESDIR}/AddTrustExternalCARoot-2048.pem \
+		${WRKSRC}/lib/rubygems/ssl_certs
 
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
