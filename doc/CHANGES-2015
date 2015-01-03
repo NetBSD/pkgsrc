@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.53 2015/01/03 14:44:36 schwarz Exp $
+$NetBSD: CHANGES-2015,v 1.54 2015/01/03 15:43:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -49,3 +49,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed mail/libspf-alt [mef 2015-01-03]
 	Updated net/arping to 2.14 [schwarz 2015-01-03]
 	Updated net/arp-scan to 1.9 [schwarz 2015-01-03]
+	Updated games/sl to 5.02 [wiz 2015-01-03]
