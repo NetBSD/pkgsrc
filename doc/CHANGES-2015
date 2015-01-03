@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.47 2015/01/03 05:10:45 darcy Exp $
+$NetBSD: CHANGES-2015,v 1.48 2015/01/03 09:26:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -43,3 +43,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-mccabe version 0.3 [wiz 2015-01-03]
 	Added devel/py-flake8 version 2.2.5 [wiz 2015-01-03]
 	Added audio/shine version 3.1.0 [wiz 2015-01-03]
+	Updated devel/py-mercurial to 3.2.4 [wiz 2015-01-03]
