@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/03 00:39:26 wiz Exp $
+bin/shineenc
+include/shine/layer3.h
+lib/libshine.la
+lib/pkgconfig/shine.pc
