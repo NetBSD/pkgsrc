@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/03 00:05:47 wiz Exp $
+
+SHA1 (flake8-2.2.5.tar.gz) = 255f6f5d1c06c52c833584ab6cf3c9ef867f1a4c
+RMD160 (flake8-2.2.5.tar.gz) = 8171f0887905feccdf743e2443040ebc3a5c9ee2
+Size (flake8-2.2.5.tar.gz) = 28333 bytes
