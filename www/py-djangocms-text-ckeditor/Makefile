@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/03 16:29:09 adam Exp $
 
-DISTNAME=	djangocms-text-ckeditor-2.4.1
+DISTNAME=	djangocms-text-ckeditor-2.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/djangocms-text-ckeditor/
