@@ -1,0 +1,1 @@
+bin/flake8 @PREFIX@/bin/flake8-@PYVERSSUFFIX@
