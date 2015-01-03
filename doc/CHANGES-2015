@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.58 2015/01/03 16:48:33 adam Exp $
+$NetBSD: CHANGES-2015,v 1.59 2015/01/03 18:16:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -56,3 +56,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache-tomcat6 to 6.0.43 [ryoon 2015-01-03]
 	Updated www/py-djangocms-admin-style to 0.2.5 [adam 2015-01-03]
 	Updated www/py-djangocms-text-ckeditor to 2.4.3 [adam 2015-01-03]
+	Updated multimedia/gst-plugins1-bad to 1.4.5 [wiz 2015-01-03]
+	Updated multimedia/gst-plugins1-base to 1.4.5 [wiz 2015-01-03]
+	Updated multimedia/gst-plugins1-good to 1.4.5 [wiz 2015-01-03]
+	Updated multimedia/gst-plugins1-libav to 1.4.5 [wiz 2015-01-03]
+	Updated multimedia/gst-plugins1-ugly to 1.4.5 [wiz 2015-01-03]
+	Updated multimedia/gstreamer1 to 1.4.5 [wiz 2015-01-03]
+	Updated net/gst-rtsp-server to 1.4.5 [wiz 2015-01-03]
