@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.513 2014/11/30 19:04:43 adam Exp $
+# $NetBSD: Makefile,v 1.514 2015/01/03 00:39:40 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -407,6 +407,7 @@ SUBDIR+=	rtunes
 SUBDIR+=	ruby-mp3info
 SUBDIR+=	ruby-taglib
 SUBDIR+=	sfxr
+SUBDIR+=	shine
 SUBDIR+=	shntool
 SUBDIR+=	shorten
 SUBDIR+=	sidplay
