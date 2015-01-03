@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2014/10/22 09:19:55 wiz Exp $
+$NetBSD: distinfo,v 1.27 2015/01/03 18:04:06 spz Exp $
 
-SHA1 (gettext-0.19.3.tar.gz) = 8a4614d5d797af98822b88858c17ad8b3ed4224f
-RMD160 (gettext-0.19.3.tar.gz) = a1316591e3fd490bbca7ce47b9efdcc4383f598a
-Size (gettext-0.19.3.tar.gz) = 17414357 bytes
+SHA1 (gettext-0.19.4.tar.gz) = c473f4f268501d971b913197fb07767e628644bb
+RMD160 (gettext-0.19.4.tar.gz) = ab9191c0ac33c11ee98278271defe7cecc5a567f
+Size (gettext-0.19.4.tar.gz) = 17717034 bytes
 SHA1 (patch-aa) = aed0e4e34c45fd442ee15254f494fe02c9dd55f7
 SHA1 (patch-ab) = bb975a36b3fe9e4411703caaf455e7eef530a0a7
