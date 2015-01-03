@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.50 2015/01/03 10:20:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.51 2015/01/03 14:21:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mercurial to 3.2.4 [wiz 2015-01-03]
 	Updated x11/libdrm to 2.4.58nb2 [wiz 2015-01-03]
 	Updated net/youtube-dl to 20150102 [wiz 2015-01-03]
+	Removed mail/libspf-alt [mef 2015-01-03]
