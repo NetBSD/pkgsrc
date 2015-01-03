@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/11/30 10:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/03 15:46:00 adam Exp $
 
-DISTNAME=	Pillow-2.6.1
+DISTNAME=	Pillow-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/Pillow/
