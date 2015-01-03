@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.46 2015/01/03 00:39:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.47 2015/01/03 05:10:45 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -29,7 +29,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/acr to 0.9.9 [wiz 2015-01-01]
 	Updated fonts/umefont-ttf to 0.468 [ryoon 2015-01-01]
 	Updated lang/python33 to 3.3.6 [he 2015-01-01]
-	Updated printer/cups to 2.0.1 [christos 2015-01-01]
+	Updated print/cups to 2.0.1 [christos 2015-01-01]
 	Updated www/seamonkey to 2.31 [ryoon 2015-01-02]
 	Updated devel/py-msgpack to 0.4.2nb1 [obache 2015-01-02]
 	Updated lang/ruby21-base to 2.1.5nb1 [ryoon 2015-01-02]
