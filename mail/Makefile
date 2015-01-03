@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2014/12/05 18:38:07 rodent Exp $
+# $NetBSD: Makefile,v 1.460 2015/01/03 13:55:42 mef Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -128,7 +128,6 @@ SUBDIR+=	libesmtp
 SUBDIR+=	libetpan
 SUBDIR+=	libmilter
 SUBDIR+=	libsieve
-SUBDIR+=	libspf-alt
 SUBDIR+=	libspf2
 SUBDIR+=	libsylph
 SUBDIR+=	libytnef
