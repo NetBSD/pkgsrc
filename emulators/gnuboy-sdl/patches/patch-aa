@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/26 17:05:05 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2015/01/03 11:21:07 nat Exp $
 
---- sys/sdl/sdl.c.orig	2001-09-17 18:40:14.000000000 +0200
+--- sys/sdl/sdl.c.orig	2001-09-17 16:40:14.000000000 +0000
 +++ sys/sdl/sdl.c
-@@ -441,6 +441,8 @@ static int sound = 1;
+@@ -28,6 +28,7 @@ static int use_joy = 1, sdl_joy_num;
+ static SDL_Joystick * sdl_joy = NULL;
+ static const int joy_commit_range = 3276;
+ static char Xstatus, Ystatus;
++static int closing = 0;
+ 
+ static SDL_Surface *screen;
+ static SDL_Overlay *overlay;
+@@ -441,6 +442,8 @@ static int sound = 1;
  static int samplerate = 44100;
  static int stereo = 1;
  static volatile int audio_done;
@@ -11,25 +19,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/26 17:05:05 dillo Exp $
  
  rcvar_t pcm_exports[] =
  {
-@@ -453,8 +455,16 @@ rcvar_t pcm_exports[] =
+@@ -453,8 +456,19 @@ rcvar_t pcm_exports[] =
  
  static void audio_callback(void *blah, byte *stream, int len)
  {
-+	SDL_SemWait(pcm_rsem);
- 	memcpy(stream, pcm.buf, len);
+-	memcpy(stream, pcm.buf, len);
 -	audio_done = 1;
-+	SDL_SemPost(pcm_wsem);
++	if (!closing) {
++		SDL_SemWait(pcm_rsem);
++		memcpy(stream, pcm.buf, len);
++		SDL_SemPost(pcm_wsem);
++	}
 +}
 +
 +
 +static void audio_atexit(void)
 +{
++	closing = 1;
 +	if (pcm_wsem)
 +		SDL_SemPost(pcm_rsem);
  }
  
  
-@@ -466,6 +476,13 @@ void pcm_init()
+@@ -466,6 +480,13 @@ void pcm_init()
  	if (!sound) return;
  	
  	SDL_InitSubSystem(SDL_INIT_AUDIO);
@@ -43,7 +55,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/26 17:05:05 dillo Exp $
  	as.freq = samplerate;
  	as.format = AUDIO_U8;
  	as.channels = 1 + stereo;
-@@ -491,16 +508,20 @@ int pcm_submit()
+@@ -491,16 +512,20 @@ int pcm_submit()
  {
  	if (!pcm.buf) return 0;
  	if (pcm.pos < pcm.len) return 1;
