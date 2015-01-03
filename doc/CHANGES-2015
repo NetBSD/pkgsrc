@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.60 2015/01/03 18:57:22 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.61 2015/01/03 19:52:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/gstreamer1 to 1.4.5 [wiz 2015-01-03]
 	Updated net/gst-rtsp-server to 1.4.5 [wiz 2015-01-03]
 	Added devel/redmine version 2.6.0 [ryoon 2015-01-03]
+	Updated devel/nspr to 4.10.7nb1 [ryoon 2015-01-03]
