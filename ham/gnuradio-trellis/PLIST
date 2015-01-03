@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/28 16:59:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/01/03 14:18:13 mef Exp $
 include/gnuradio/swig/trellis_swig.i
 include/gnuradio/swig/trellis_swig_doc.i
 include/gnuradio/trellis/api.h
@@ -80,6 +80,7 @@ ${PYSITELIB}/gnuradio/trellis/trellis_swig.pyc
 ${PYSITELIB}/gnuradio/trellis/trellis_swig.pyo
 share/doc/gnuradio-${PKGVERSION}/xml/test_tcm.py.xml
 share/doc/gnuradio-${PKGVERSION}/xml/test_viterbi_equalization1.py.xml
+share/doc/gnuradio-${PKGVERSION}/html/gr-trellis.html
 share/gnuradio/examples/trellis/README
 share/gnuradio/examples/trellis/fsm_files/awgn1o2_128.fsm
 share/gnuradio/examples/trellis/fsm_files/awgn1o2_16.fsm
