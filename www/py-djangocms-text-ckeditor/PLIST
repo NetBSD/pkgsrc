@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/30 10:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/03 16:29:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -374,6 +374,8 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/embaressed_smile.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/embarrassed_smile.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/embarrassed_smile.png
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/envelope.gif
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/envelope.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/heart.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/heart.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/kiss.gif
