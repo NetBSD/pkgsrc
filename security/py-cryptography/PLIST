@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/20 11:21:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/01/03 16:00:55 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,7 +12,6 @@ ${PYSITELIB}/cryptography/__about__.pyo
 ${PYSITELIB}/cryptography/__init__.py
 ${PYSITELIB}/cryptography/__init__.pyc
 ${PYSITELIB}/cryptography/__init__.pyo
-${PYSITELIB}/cryptography/checkpkcs7padding.so
 ${PYSITELIB}/cryptography/constanttime.so
 ${PYSITELIB}/cryptography/cryptography.so
 ${PYSITELIB}/cryptography/exceptions.py
@@ -78,10 +77,15 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/bindings/__pycache__/constanttime.c
 ${PYSITELIB}/cryptography/hazmat/bindings/__pycache__/cryptography.hazmat.bindings.openssl.x509_vfy.c
+${PYSITELIB}/cryptography/hazmat/bindings/__pycache__/padding.c
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/__init__.pyo
@@ -223,8 +227,6 @@ ${PYSITELIB}/cryptography/hazmat/bindings/utils.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyo
-${PYSITELIB}/cryptography/hazmat/primitives/__pycache__/checkpkcs7padding.c
-${PYSITELIB}/cryptography/hazmat/primitives/__pycache__/constanttime.c
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.pyo
@@ -240,6 +242,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/rsa.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/rsa.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/rsa.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.pyo
@@ -293,6 +298,10 @@ ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/hotp.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/totp.py
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/totp.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/totp.pyo
+${PYSITELIB}/cryptography/padding.so
 ${PYSITELIB}/cryptography/utils.py
 ${PYSITELIB}/cryptography/utils.pyc
 ${PYSITELIB}/cryptography/utils.pyo
+${PYSITELIB}/cryptography/x509.py
+${PYSITELIB}/cryptography/x509.pyc
+${PYSITELIB}/cryptography/x509.pyo
