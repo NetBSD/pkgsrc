@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2014/11/23 14:05:13 adam Exp $
+# $NetBSD: Makefile,v 1.55 2015/01/03 15:47:21 adam Exp $
 
-DISTNAME=	Django-1.6.8
+DISTNAME=	Django-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -15,39 +15,17 @@ PREV_PKGPATH=	www/py-django-devel
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 USE_LANGUAGES=		# empty
-REPLACE_PYTHON=		${WRKSRC}/django/bin/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/bin/profiling/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/contrib/admin/bin/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/contrib/admin/static/admin/js/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/*.py
+REPLACE_PYTHON=		${WRKSRC}/django/bin/django-admin.py
+REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/manage.py
 
 PYTHON_VERSIONED_DEPENDENCIES=	flup
 
-.include "options.mk"
-
-pre-configure:
-.if empty(PKG_OPTIONS:Mmysql)
-	rm -r ${WRKSRC}/django/db/backends/mysql
-.endif
-.if empty(PKG_OPTIONS:Moracle)
-	rm -r ${WRKSRC}/django/db/backends/oracle
-.endif
-.if empty(PKG_OPTIONS:Mpgsql)
-	rm -r ${WRKSRC}/django/db/backends/postgresql_psycopg2
-.endif
-.if empty(PKG_OPTIONS:Msqlite)
-	rm -r ${WRKSRC}/django/db/backends/sqlite3
-.endif
-
-BACKEND_PATH=		${PYSITELIB}/django/db/backends
-BACKEND_PATH_PLIST=	$${PYSITELIB}/django/db/backends
-
-PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/mysql/", "$${PLIST.mysql}${BACKEND_PATH_PLIST}/mysql/") }
-PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/oracle/", "$${PLIST.oracle}${BACKEND_PATH_PLIST}/oracle/") }
-PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
-PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/django-admin \
+		${DESTDIR}${PREFIX}/bin/django-admin${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/django-admin.py \
+		${DESTDIR}${PREFIX}/bin/django-admin${PYVERSSUFFIX}.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
