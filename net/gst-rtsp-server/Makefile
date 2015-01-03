@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/10/01 14:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/03 18:09:31 wiz Exp $
 
-DISTNAME=	gst-rtsp-server-1.4.3
+DISTNAME=	gst-rtsp-server-1.4.5
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-rtsp-server/
 EXTRACT_SUFX=	.tar.xz
