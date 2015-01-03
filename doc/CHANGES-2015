@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.55 2015/01/03 15:49:28 adam Exp $
+$NetBSD: CHANGES-2015,v 1.56 2015/01/03 16:01:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -52,3 +52,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/sl to 5.02 [wiz 2015-01-03]
 	Updated graphics/py-Pillow to 2.7.0 [adam 2015-01-03]
 	Updated www/py-django to 1.7.2 [adam 2015-01-03]
+	Updated security/py-cryptography to 0.7.1 [wiz 2015-01-03]
