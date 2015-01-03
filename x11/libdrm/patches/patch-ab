@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2014/10/26 10:20:10 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2015/01/03 10:01:40 wiz Exp $
 
 --- xf86drm.c.orig	2014-09-28 16:19:54.000000000 +0000
 +++ xf86drm.c
@@ -11,33 +11,3 @@ $NetBSD: patch-ab,v 1.6 2014/10/26 10:20:10 wiz Exp $
  #endif
  
  # ifdef __OpenBSD__
-@@ -1128,6 +1128,9 @@ int drmClose(int fd)
- int drmMap(int fd, drm_handle_t handle, drmSize size, drmAddressPtr address)
- {
-     static unsigned long pagesize_mask = 0;
-+#ifdef DRM_IOCTL_MMAP
-+    struct drm_mmap mmap_req = {0};
-+#endif
- 
-     if (fd < 0)
- 	return -EINVAL;
-@@ -1137,7 +1140,18 @@ int drmMap(int fd, drm_handle_t handle, 
- 
-     size = (size + pagesize_mask) & ~pagesize_mask;
- 
--    *address = drm_mmap(0, size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, handle);
-+#ifdef DRM_IOCTL_MMAP
-+    mmap_req.dnm_addr = NULL;
-+    mmap_req.dnm_size = size;
-+    mmap_req.dnm_prot = (PROT_READ | PROT_WRITE);
-+    mmap_req.dnm_flags = MAP_SHARED;
-+    mmap_req.dnm_offset = handle;
-+    if (drmIoctl(fd, DRM_IOCTL_MMAP, &mmap_req) == 0) {
-+	*address = mmap_req.dnm_addr;
-+	return 0;
-+    }
-+#endif
-+   *address = drm_mmap(0, size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, handle);
-     if (*address == MAP_FAILED)
- 	return -errno;
-     return 0;
