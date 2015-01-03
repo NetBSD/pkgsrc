@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2014/10/13 09:14:29 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2015/01/03 19:52:22 ryoon Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE}
 NSPR_RELEASE=	4.10.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
 
@@ -72,6 +73,12 @@ PLIST.sun4u_32=                yes
 .endif
 
 .if ${OPSYS} == "Linux"
+.  if defined(ABI) && ${ABI} == "64"
+CONFIGURE_ARGS+=	--enable-64bit
+.  endif
+.endif
+
+.if ${OPSYS} == "Darwin"
 .  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .  endif
