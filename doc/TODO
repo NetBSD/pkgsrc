@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13975 2015/01/02 15:58:55 wiz Exp $
+$NetBSD: TODO,v 1.13976 2015/01/03 09:57:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calcoo-2.1.0
 	o calibre-2.2.0 [wip]
-	o calibre-2.14.0
+	o calibre-2.15.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -632,6 +632,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-docs-2.6.5
 	o gnuchess-6.1.2
 	o gnuradio-core-3.7.5.1 [wip]
 	o gob-2.0.19
