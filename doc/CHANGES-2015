@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.43 2015/01/02 15:58:37 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.44 2015/01/03 00:05:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -40,3 +40,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/mame to 0.157 [wiz 2015-01-02]
 	Updated emulators/mess to 0.157 [wiz 2015-01-02]
 	Updated x11/xterm to 314 [wiz 2015-01-02]
+	Added devel/py-mccabe version 0.3 [wiz 2015-01-03]
