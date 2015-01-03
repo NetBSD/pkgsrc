@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/09/10 14:16:22 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2015/01/03 01:33:59 dholland Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		1
@@ -11,9 +11,10 @@ COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
 CONFLICTS=		bin86-[0-9]*
 CONFLICTS+=		dev86-[0-9]*
 
-NOT_FOR_PLATFORM=	*-*-alpha
-NOT_FOR_PLATFORM+=	Interix-*-*		# no <a.out.h>
-NOT_FOR_PLATFORM+=	DragonFly-*-x86_64	# Cannot build 32-bit binary
+NOT_FOR_PLATFORM=	Interix-*-*		# no <a.out.h>
+# These platforms cannot build 32-on-64 binaries.
+NOT_FOR_PLATFORM+=	*-*-alpha
+NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
@@ -25,11 +26,13 @@ MAKE_FLAGS+=	CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH}  == "x86_64"
-# Has LP64 issues, so must build as 32-bit binary
+# This package has LP64 issues, so must build as 32-bit binary.
+.for P in ${LP64PLATFORMS}
+.if ${MACHINE_PLATFORM:M${P}}
 CFLAGS+=		-m32
 LDFLAGS+=		-m32
 .endif
+.endfor
 
 .if ${OPSYS} == "DragonFly"
 CPPFLAGS+=	-D_POSIX_SOURCE
