@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.56 2014/11/03 12:25:36 ryoon Exp $
+$NetBSD: distinfo,v 1.56.2.1 2015/01/04 13:19:07 tron Exp $
 
-SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
-RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
-Size (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
 Size (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 4351965 bytes
@@ -42,6 +39,9 @@ Size (openjdk7/icedtea-web-1.5.1.tar.gz) = 1616344 bytes
 SHA1 (openjdk7/openjdk-1.7.71-20141102.tar.bz2) = 11ebaf7cc59ea92ba03d6fba491e136a7aab5f28
 RMD160 (openjdk7/openjdk-1.7.71-20141102.tar.bz2) = 04df0741dc19f6536287b8f6657394620b5c37b2
 Size (openjdk7/openjdk-1.7.71-20141102.tar.bz2) = 52222297 bytes
+SHA1 (openjdk7/patches-74a70385c21d) = e711f9af4b8f63e70246aa631191004ff9e94435
+RMD160 (openjdk7/patches-74a70385c21d) = 6aecd6b8b7a8033ab742f0d32dd0a974751051ed
+Size (openjdk7/patches-74a70385c21d) = 14814 bytes
 SHA1 (openjdk7/rhino1_7R4.zip) = 483e097cb575c724c745edd80c9512f073bd510a
 RMD160 (openjdk7/rhino1_7R4.zip) = fba5ce71edd396a241991fb7b3ce43628b891035
 Size (openjdk7/rhino1_7R4.zip) = 6481918 bytes
