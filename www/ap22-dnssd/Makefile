@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/01/04 02:53:29 obache Exp $
+# $NetBSD: Makefile,v 1.31 2015/01/04 05:38:07 obache Exp $
 #
 
 DISTNAME=	mod_dnssd-0.6
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--disable-lynx
 
 PKG_APACHE_ACCEPTED=	apache22
 APACHE_MODULE_NAME=	mod_dnssd
+APACHE_MODULE=		yes
 
 INSTALLATION_DIRS+=	lib/httpd
 
