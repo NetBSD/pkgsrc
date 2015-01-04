@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/29 05:06:05 asau Exp $
+# $NetBSD: Makefile,v 1.25 2015/01/04 04:36:47 dholland Exp $
 
 DISTNAME=		9term.1.6.3
 PKGNAME=		9term-1.6.3
@@ -12,7 +12,7 @@ COMMENT=		X11 program which emulates a plan9 window
 
 BUILDLINK_DEPMETHOD.sam=	full
 
-NOT_FOR_PLATFORM=	*-*-alpha	#LP64 Problems
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
 WRKSRC=			${WRKDIR}
 
