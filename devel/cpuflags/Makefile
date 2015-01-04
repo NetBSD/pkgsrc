@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2012/10/31 11:16:48 asau Exp $
+# $NetBSD: Makefile,v 1.152 2015/01/04 04:48:10 dholland Exp $
 
 DISTNAME=	cpuflags-1.42
 CATEGORIES=	devel sysutils
@@ -8,6 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	abs@NetBSD.org
 COMMENT=	Determine compiler flags to best target current cpu
 
+# each OS needs explicit support (files/subr_*)
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-* FreeBSD-*-* Darwin-*-*
 
 USE_LANGUAGES=	# empty
