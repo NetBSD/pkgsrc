@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 10:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/01/04 02:55:02 dholland Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -17,7 +17,7 @@ CONFIGURE_ENV+=		LDFLAGS=${X11_LDFLAGS:Q}
 USE_TOOLS+=		gmake gtar
 USE_LANGUAGES=		c c++
 
-NOT_FOR_PLATFORM=	NetBSD-*-arm32
+BROKEN_ON_PLATFORM=	NetBSD-*-arm32
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
