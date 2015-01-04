@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.816 2014/12/31 13:18:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.817 2015/01/04 07:29:45 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -460,6 +460,7 @@ SUBDIR+=	p5-String-ToIdentifier-EN
 SUBDIR+=	p5-String-Truncate
 SUBDIR+=	p5-Swim
 SUBDIR+=	p5-Syntax-Highlight-Engine-Kate
+SUBDIR+=	p5-Syntax-SourceHighlight
 SUBDIR+=	p5-Template-Declare
 SUBDIR+=	p5-Template-Plugin-Autoformat
 SUBDIR+=	p5-Template-Plugin-CSV
