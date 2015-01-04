@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2020 2015/01/04 06:17:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.2021 2015/01/04 06:22:11 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1310,6 +1310,7 @@ SUBDIR+=	p5-Term-Cap
 SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-ProgressBar-Quiet
+SUBDIR+=	p5-Term-ProgressBar-Simple
 SUBDIR+=	p5-Term-Prompt
 SUBDIR+=	p5-Term-ReadKey
 SUBDIR+=	p5-Term-ReadLine
