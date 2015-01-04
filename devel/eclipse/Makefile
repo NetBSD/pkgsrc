@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/31 11:16:54 asau Exp $
+# $NetBSD: Makefile,v 1.31 2015/01/04 04:56:53 dholland Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -23,8 +23,10 @@ MAKE_ENV+=	ANT_HOME=${PREFIX:Q}
 
 VERSION=	3.0.1
 
-# XXX: Others might work but might need significant tweaking
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-*
+# Note: Linux is "native"; x86 NetBSD is (or was) tested.
+# Others might work but might need significant tweaking.
+# Don't mark others broken until tested; otherwise they'll never *be* tested.
+#BROKEN_EXCEPT_ON_PLATFORM=	Linux-*-* NetBSD-*-i386 NetBSD-*-x86_64
 
 .include "../../mk/bsd.prefs.mk"
 
