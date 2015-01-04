@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/31 11:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.45 2015/01/04 02:16:49 dholland Exp $
 #
 
 DISTNAME=	gdb-5.3
@@ -10,6 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
+# This (ancient) version of gdb does not understand or has never heard of
+#   - mach-o (hence macos)
+#   - dragonfly
+#   - amd64 (probably on all OSes but certainly on netbsd)
+# and is not worth fixing.
 NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* NetBSD-*-x86_64
 
 BROKEN_GETTEXT_DETECTION=	yes
