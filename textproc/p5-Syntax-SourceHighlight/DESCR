@@ -1,0 +1,9 @@
+Source Highlight is a library to format code written in a number
+of programming languages as text in a number of markup languages.
+
+This binding to the underlying C++ library is very basic, supporting
+only the essential functionality.
+
+Note that any exceptions thrown by the underlying C++ library are
+caught by the Perl binding and rethrown using the equivalent of a
+die statement.
