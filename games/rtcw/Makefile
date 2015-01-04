@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/04/06 12:04:01 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2015/01/04 03:04:27 dholland Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -19,9 +19,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
-
-# This package needs DRI support.
-NOT_FOR_PLATFORM=	NetBSD-*-*
 
 BUILD_DIRS=	# empty
 RTCWDIR=	${PREFIX}/lib/lokigames/rtcw
