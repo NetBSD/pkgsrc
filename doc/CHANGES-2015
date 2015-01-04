@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.79 2015/01/04 11:49:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.80 2015/01/04 11:49:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -87,3 +87,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added audio/eyed3 version 0.7.5 [wiz 2015-01-04]
 	Removed chat/zephyr-mode [joerg 2015-01-04]
 	Added audio/p5-MusicBrainz-DiscID version 0.03 [wiz 2015-01-04]
+	Removed chat/tzc [joerg 2015-01-04]
