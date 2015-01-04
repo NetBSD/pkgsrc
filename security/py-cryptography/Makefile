@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/01/03 16:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/04 10:25:08 wiz Exp $
 
 DISTNAME=	cryptography-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/cryptography/
 COMMENT=	Cryptographic recipes and primitives for Python
 LICENSE=	apache-2.0 OR modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-cffi>=0.8:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser>=2.10:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
