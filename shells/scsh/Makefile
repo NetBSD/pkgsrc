@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/09/11 23:25:09 asau Exp $
+# $NetBSD: Makefile,v 1.44 2015/01/04 04:04:23 dholland Exp $
 
 DISTNAME=		scsh-0.6.7
 PKGREVISION=		1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.scsh.net/
 COMMENT=		Unix shell embedded into Scheme, with access to all Posix calls
 LICENSE=		modified-bsd
 
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}	# Not 64-bit clean.
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}	# Not 64-bit clean.
 
 GNU_CONFIGURE=		yes
 
