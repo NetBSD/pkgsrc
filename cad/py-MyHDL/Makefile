@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2014/05/09 07:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/01/04 02:21:53 mef Exp $
 
-DISTNAME=	myhdl-0.7
-PKGNAME=	${PYPKGPREFIX}-MyHDL-0.7
-PKGREVISION=	1
+DISTNAME=	myhdl-0.8.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	Hardware description in Python
+LICENSE=	gnu-gpl-v2
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.7
 
