@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1048 2014/12/10 14:50:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.1049 2015/01/04 11:57:48 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -496,6 +496,7 @@ SUBDIR+=	p5-Test-DNS
 SUBDIR+=	p5-Test-TCP
 SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-WebService-Google-Reader
+SUBDIR+=	p5-WebService-MusicBrainz
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-Zabbix-Sender
 SUBDIR+=	p5-eBay-API
