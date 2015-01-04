@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/12 09:00:54 imil Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/04 04:13:26 dholland Exp $
 #
 
 DISTNAME=		monit-5.8
@@ -11,7 +11,7 @@ COMMENT=		Monitors processes, files, directories and devices
 LICENSE=		gnu-agpl-v3
 
 # no platform specific code yet
-NOT_FOR_PLATFORM+=	BSDOS-*-* DragonFly-*-* Interix-*-* IRIX-*-* OSF1-*-*
+BROKEN_ON_PLATFORM+=	BSDOS-*-* DragonFly-*-* Interix-*-* IRIX-*-* OSF1-*-*
 
 USE_TOOLS+=		gmake gzcat flex yacc
 USE_PKGLOCALEDIR=	yes
