@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2013/10/10 18:27:37 roy Exp $
+$NetBSD: distinfo,v 1.13 2015/01/04 06:58:44 dholland Exp $
 
 SHA1 (tads-3.0.8-1/tads23-unix.tar.gz) = 2bd4c64fd090d880b98a8a590d48482d4dfcb67b
 RMD160 (tads-3.0.8-1/tads23-unix.tar.gz) = 8f83f60d01fb8549fa38adcc48fa04c92fba5250
 Size (tads-3.0.8-1/tads23-unix.tar.gz) = 4122345 bytes
-SHA1 (patch-aa) = 1466c119b43e1090d4f0946cc2bceb40c8c2dc23
+SHA1 (patch-aa) = 11df10583079b27d116b3da0713d793abe0cc2d5
 SHA1 (patch-ab) = b8e48ff15ef5fa1834c98a5bcc6df3d732dfe062
-SHA1 (patch-ac) = 2e387c9844cdcf47ecd63ee1051876c27b50aa95
+SHA1 (patch-ac) = 8ceaa2739191faa6e2611a58e586a04ae6cae825
 SHA1 (patch-tads2_osunixt.c) = 7bf4ca85ae9986eea4caff61c27845b6a309ef9f
 SHA1 (patch-tads3_tcprs.cpp) = 7f377ea541009490910259c734d577b612f264ef
