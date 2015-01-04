@@ -1,0 +1,4 @@
+App::Prove plugin that shows progress bar for each test script.
+Greatly inspired by App::Prove::Plugin::ProgressBar. Use it like so:
+
+$ prove -PProgressBar::Each t/
