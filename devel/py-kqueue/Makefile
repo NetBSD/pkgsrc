@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/09 07:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/04 09:50:46 dholland Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(PKG_HAVE_KQUEUE)
-PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}, needs OS support for kqueue(2)"
+PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}; needs OS support for kqueue(2)"
 .endif
 
 EGG_NAME=	${DISTNAME:S/py-//}
