@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/06 11:54:31 asau Exp $
+# $NetBSD: Makefile,v 1.44 2015/01/04 02:57:17 dholland Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -13,11 +13,10 @@ COMMENT=		Virtual reality 3D GL game for X11
 
 NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
-SETGIDGAME=		yes
-
 WRKSRC=			${WRKDIR}/battalionSource
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
 USE_TOOLS+=		gtar
+USE_GAMESGROUP=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
