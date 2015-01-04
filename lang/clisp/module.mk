@@ -1,15 +1,10 @@
-# $NetBSD: module.mk,v 1.5 2014/12/10 23:24:42 joerg Exp $
+# $NetBSD: module.mk,v 1.6 2015/01/04 03:19:45 dholland Exp $
 
 # Used variables:
 # CLISP_MODULE - name of module and subdirectory in "modules"
 
 CLISP_VERSION=		2.49
 DISTNAME=		clisp-$(CLISP_VERSION)
-
-# Sparc64 has assembler code problems, see
-# http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
-NOT_FOR_PLATFORM=	*-*-sparc64
-NOT_FOR_PLATFORM+=	*-*-arm
 
 CONFIGURE_DIRS=		modules/$(CLISP_MODULE)
 GNU_CONFIGURE=		YES
