@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/05/29 23:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/01/04 04:28:16 dholland Exp $
 #
 
 DISTNAME=		strace-4.5.15
@@ -15,6 +15,7 @@ LICENSE=		modified-bsd
 #			NetBSD < 3.99.16
 NOT_FOR_PLATFORM=	NetBSD-[012]*-* NetBSD-3.[0-9][._]*-* \
 			NetBSD-3.99.[0-9]-* NetBSD-3.99.1[0-5]-*
+# "not supported" according to joerg@
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 GNU_CONFIGURE=		yes
