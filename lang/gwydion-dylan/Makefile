@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 23:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/04 07:50:39 dholland Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -41,7 +41,7 @@ ALT_ARCH=		${MACHINE_ARCH}
 SUBST_CLASSES+=		gc
 SUBST_STAGE.gc=		pre-configure
 SUBST_FILES.gc=		d2c/runtime/garbage-collection/Makegen
-SUBST_SED.gc=		-e 's,-I/usr/include,-I${LOCALBASE}/include,'
+SUBST_SED.gc=		-e 's,-I/usr/include,-I${BUILDLINK_PREFIX.boehm-gc}/include,'
 
 PLIST_SUBST+=		ALT_ARCH=${ALT_ARCH:Q}
 PLIST_SUBST+=		DYLAN_VERSION=${DYLAN_VERSION:Q}
