@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 20:11:36 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/01/04 03:14:00 dholland Exp $
 #
 
 DISTNAME=	b116
@@ -13,7 +13,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://jaguar.orpheusweb.co.uk/branpage.html
 COMMENT=	Brandy Basic V interpreter - Acorn ARM Computers BASIC dialect
 
-NOT_FOR_PLATFORM=	SunOS-*-* # needs porting
+BROKEN_ON_PLATFORM=	SunOS-*-* # needs porting
 
 WRKSRC=		${WRKDIR}/brandy-1.0.16
 DOCDIR=		share/doc/brandy
