@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2014/02/12 23:17:50 tron Exp $
+# $NetBSD: Makefile,v 1.67 2015/01/04 02:21:16 dholland Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -12,6 +12,8 @@ HOMEPAGE=	http://sourceforge.net/projects/openh323/
 COMMENT=	Portable Windows Library
 # note: obsoleted by devel/ptlib
 
+# Very fundamentally 32-bit only; fixing it would require a complete
+# incompatible rework. That rework is (or is subsumed by) "ptlib".
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 PKG_DESTDIR_SUPPORT=	destdir
