@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 19:31:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/04 04:12:32 dholland Exp $
 #
 
 DISTNAME=		mesure-0.5
@@ -12,8 +12,6 @@ COMMENT=		Tool to measure different kind of streams
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-
-NOT_FOR_PLATFORM+=	OpenBSD-*-*
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR} \
