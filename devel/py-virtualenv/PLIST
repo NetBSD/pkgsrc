@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/12/30 14:26:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/01/04 23:48:43 wiz Exp $
 bin/virtualenv
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -14,5 +14,5 @@ ${PYSITELIB}/virtualenv.pyo
 ${PYSITELIB}/virtualenv_support/__init__.py
 ${PYSITELIB}/virtualenv_support/__init__.pyc
 ${PYSITELIB}/virtualenv_support/__init__.pyo
-${PYSITELIB}/virtualenv_support/pip-6.0.3-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/setuptools-8.2.1-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/pip-6.0.6-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/setuptools-11.0-py2.py3-none-any.whl
