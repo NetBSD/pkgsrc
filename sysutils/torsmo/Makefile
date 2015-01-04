@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/13 07:55:03 ghen Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/04 04:29:27 dholland Exp $
 
 DISTNAME=		torsmo-0.18
 PKGREVISION=		2
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://torsmo.sourceforge.net/
 COMMENT=		Tyopoytaorvelo System Monitor
 
-NOT_FOR_PLATFORM=	Darwin-*-*
+BROKEN_ON_PLATFORM=	Darwin-*-*
 
 GNU_CONFIGURE=		yes
 
