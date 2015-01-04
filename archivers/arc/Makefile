@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 14:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/01/04 10:43:44 wiz Exp $
 
-DISTNAME=	arc-5.21o
+DISTNAME=	arc-5.21p
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arc/}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/arc/
