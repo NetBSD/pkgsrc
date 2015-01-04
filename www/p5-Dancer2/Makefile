@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/12/08 08:08:19 wen Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/04 12:36:16 wen Exp $
 
-DISTNAME=	Dancer2-0.156000
+DISTNAME=	Dancer2-0.158000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
@@ -49,7 +49,8 @@ DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
 DEPENDS+=	p5-YAML-LibYAML>=0:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 
-REPLACE_PERL+=	share/skel/bin/+app.pl
+REPLACE_PERL+=	share/skel/bin/+app.psgi
+REPLACE_PERL+=	script/dancer2
 
 post-extract:
 	${CHMOD} -x ${WRKSRC}/share/skel/public/+dispatch.cgi
