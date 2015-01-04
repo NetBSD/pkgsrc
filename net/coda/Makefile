@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/05/29 23:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/01/04 03:44:00 dholland Exp $
 #
 
 DISTNAME=	coda-6.9.5
@@ -12,6 +12,7 @@ COMMENT=	Coda distributed fileystem
 
 LICENSE=	gnu-gpl-v2
 
+# No kernel support for the coda fs
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 # See http://coda.wikidev.net/Quick_Client_Action for hints on how
