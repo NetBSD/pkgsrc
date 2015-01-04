@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/09/06 08:55:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2015/01/04 02:14:10 dholland Exp $
 
 DISTNAME=	binutils-2.24
 PKGREVISION=	3
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 EXTRACT_SUFX=	.tar.bz2
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
-
-NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-*
 
 USE_PKGLOCALEDIR=	yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
