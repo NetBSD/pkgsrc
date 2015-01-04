@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2013/10/10 18:27:37 roy Exp $
+$NetBSD: patch-aa,v 1.7 2015/01/04 06:58:44 dholland Exp $
+
+ - configure for pkgsrc
+ - add destdir support
 
 --- tads2/Makefile.orig	2004-11-05 13:34:49.000000000 +0000
 +++ tads2/Makefile
@@ -11,36 +14,29 @@ $NetBSD: patch-aa,v 1.6 2013/10/10 18:27:37 roy Exp $
  BINDIR=$(PREFIX)/bin
  DATADIR=$(PREFIX)/share/tads2
  
-@@ -278,16 +278,18 @@ MATT=Matt Herberg <meherberg@earthlink.n
- # No testing has been done on pre 1.5 or a.out systems
- # HAVE_TPARM is set in osunixt.h
+@@ -333,6 +333,21 @@ MATT=Matt Herberg <meherberg@earthlink.n
+ #MAKEXEC=touch
+ 
  #
--#CC=gcc
--#OPTIMIZE=
--#UNIXFLAGS=-g -DOSANSI -DUNIX -DHAVE_STRCASECMP
--#SYSFLAGS= -DOS_SYSTEM_NAME=\""NETBSD"\" -DSYSNAME=\""NetBSD"\" -DSYSPL=\"1\" -DPORTER=\""$(DOUGLAS)"\" -DSYSMAINTAINER=\""NetBSD port maintained by $(DOUGLAS)\n"\"
--#CFLAGS= $(UNIXFLAGS) $(SYSFLAGS) -DNETBSD
--#AFLAGS=
--#OVLFLG=
--#MACHDEP=
--#LIBS=-L/usr/pkg/lib -Wl,-R/usr/pkg/lib -lncurses
--#MAKEXEC=touch
-+.if ${OPSYS} == "NetBSD"
-+CC=gcc
++# pkgsrc (should be suitable for all modern or semimodern systems)
++#
++CC=cc
 +OPTIMIZE=
-+UNIXFLAGS=-g -DOSANSI -DUNIX -DHAVE_STRCASECMP
-+SYSFLAGS=-DOS_SYSTEM_NAME=\""NETBSD"\" -DSYSNAME=\""NetBSD"\" -DSYSPL=\"1\" -DPORTER=\""$(DOUGLAS)"\" -DSYSMAINTAINER=\""NetBSD port maintained by $(DOUGLAS)\n"\"
++UNIXFLAGS=-DOSANSI -DUNIX -DHAVE_STRCASECMP
++SYSFLAGS=-DOS_SYSTEM_NAME=\""${OPSYS}"\" -DSYSNAME=\""${OPSYS}"\" -DSYSPL=\"${PKGREVISION}\" -DPORTER=\""pkgsrc-users"\" -DSYSMAINTAINER=\""pkgsrc port maintained by ${MAINTAINER}\n"\"
 +CFLAGS+=$(UNIXFLAGS) $(SYSFLAGS) -DNETBSD
 +AFLAGS=
 +OVLFLG=
 +MACHDEP=
 +LIBS=-ltermcap
 +MAKEXEC=touch
-+.endif
- 
++
++
++#
+ # Don't change stuff below this line unless you really know what you're doing.
  #
- # i386+ running DOS/Windows, using DJGPP 2.X
-@@ -382,10 +384,14 @@ TDBOBJS= $(DBGOBJS) osgen.o osunixt.o tp
+ 
+@@ -382,10 +397,14 @@ TDBOBJS= $(DBGOBJS) osgen.o osunixt.o tp
  all: tadsr tadsc tdb
  
  install: all
