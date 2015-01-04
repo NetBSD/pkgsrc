@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2014/12/03 22:50:15 rodent Exp $
+# $NetBSD: Makefile,v 1.177 2015/01/04 12:02:21 joerg Exp $
 #
 
 COMMENT=	Communication programs
@@ -123,7 +123,6 @@ SUBDIR+=	tkabber
 SUBDIR+=	tkicb
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
-SUBDIR+=	tzc
 SUBDIR+=	unrealircd
 SUBDIR+=	vicq
 SUBDIR+=	weechat
@@ -135,8 +134,6 @@ SUBDIR+=	xchat-systray-integration
 SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
-SUBDIR+=	zephyr
-SUBDIR+=	zephyr-mode
 SUBDIR+=	zircon
 
 .include "../mk/misc/category.mk"
