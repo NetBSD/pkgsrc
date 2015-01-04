@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/23 19:51:23 asau Exp $
+# $NetBSD: Makefile,v 1.27 2015/01/04 04:15:21 dholland Exp $
 #
 
 DISTNAME=	skill-4.1.4
@@ -10,7 +10,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://mysite.verizon.net/jforys/jeffware.html
 COMMENT=	Signal processes given user names, ttys, commands, or pids
 
-NOT_FOR_PLATFORM+= Interix-*-* # currently no machdep support
+BROKEN_ON_PLATFORM+= Interix-*-* # currently no machdep support
 
 .include "../../mk/bsd.prefs.mk"
 
