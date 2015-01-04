@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/02/12 23:18:32 tron Exp $
+# $NetBSD: Makefile,v 1.50 2015/01/04 04:01:47 dholland Exp $
 #
 
 DISTNAME=		isakmpd-20030903
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenBSD IKE daemon
 
+# Dragonfly upstream says to use security/racoon2 instead.
 NOT_FOR_PLATFORM=	DragonFly-*-*
 
 MAKE_JOBS_SAFE=		no
