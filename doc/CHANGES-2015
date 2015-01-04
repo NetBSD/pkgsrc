@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.92 2015/01/04 13:07:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.93 2015/01/04 20:13:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -100,3 +100,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Scalar-List-Utils to 1.41 [wiz 2015-01-04]
 	Updated www/p5-Dancer2 to 0.158000 [wen 2015-01-04]
 	Updated devel/p5-Test-Warnings to 0.020 [wen 2015-01-04]
+	Updated textproc/p5-Swim to 0.1.35 [schmonz 2015-01-04]
