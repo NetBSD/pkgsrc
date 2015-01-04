@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/02/01 22:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/01/04 02:18:11 dholland Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gdb/gdb.html
 COMMENT=		The GNU Project Debugger
 
+# This (outdated) gdb does not understand mach-o (hence macos) and has
+# never heard of dragonfly either, and is not worth fixing.
 NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-*
 
 USE_TOOLS+=		gmake makeinfo msgfmt
