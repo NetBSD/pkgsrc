@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/09/25 15:59:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/04 03:48:50 dholland Exp $
 
 DISTNAME=	oidentd-2.0.7
 PKGREVISION=	4
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dev.ojnk.net/
 COMMENT=	Configurable IDENT server that supports NAT/IP masq
 
+# messes with kernel internals in unsupported ways
 NOT_FOR_PLATFORM+=	NetBSD-[5-9]*-* NetBSD-1[0-9]*-* SunOS-5.1[0-9]-*
 
 GNU_CONFIGURE=		YES
