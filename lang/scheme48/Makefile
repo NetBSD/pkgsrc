@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/12/12 10:52:33 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2015/01/04 03:31:07 dholland Exp $
 
 DISTNAME=		scheme48-1.9
 PKGREVISION=		1
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://s48.org/
 COMMENT=		The Scheme Underground implementation of R5RS
 LICENSE=		modified-bsd
-
-NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
 MAKE_JOBS_SAFE=		no
 
