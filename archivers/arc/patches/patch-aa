@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2006/05/02 19:06:45 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2015/01/04 10:43:44 wiz Exp $
 
---- Makefile.orig	2005-10-09 03:30:24.000000000 +0200
+--- Makefile.orig	2010-08-07 13:06:42.000000000 +0000
 +++ Makefile
-@@ -41,14 +41,14 @@ SYSTEM = -DSYSV=1
- OPT = -O
+@@ -44,14 +44,14 @@ SYSTEM = -DSYSV=1
+ OPT = -O -Wall
  # For MWC 3.0 on the Atari ST, use:
  #CFLAGS = -VCOMPAC -VPEEP
 -CFLAGS = $(OPT) $(SYSTEM)
