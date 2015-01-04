@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/01/04 02:57:17 dholland Exp $
+# $NetBSD: Makefile,v 1.45 2015/01/04 02:59:11 dholland Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -10,8 +10,6 @@ DISTFILES=		battalionSource1.4.tar.Z battalionSUN4.tar.gz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.evl.uic.edu/aej/AndyBattalion.html
 COMMENT=		Virtual reality 3D GL game for X11
-
-NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
 WRKSRC=			${WRKDIR}/battalionSource
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
