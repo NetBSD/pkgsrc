@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 09:57:18 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/04 09:10:06 dholland Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
@@ -10,6 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opensource.lineo.com/cuecat/cuecat_driver/
 COMMENT=	Read and parse barcodes from your CueCat barcode reader
 
+# patch-ab changes the code from linux-specific to netbsd-specific
+# (although it might also work with openbsd wscons...)
+# Theoretically it wouldn't be too hard to improve the patch to work
+# with both netbsd and linux.
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 RESTRICTED=	Hardware manufacturer claims intellectual property infringement.
