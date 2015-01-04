@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/07/15 02:02:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2015/01/04 09:06:17 dholland Exp $
 #
 
 DISTNAME=	chipmunk-1.4
@@ -10,11 +10,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitwizard.nl/chipmunk/index.html
 COMMENT=	Shell-like tool for hardware debugging
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
-
 BUILD_TARGET=	chipmunk
 MAKE_ENV+=	CONFIG_OPTIONS=${CPPFLAGS:M*:Q}
-MAKE_ENV+=	EXTRA_LIBS=-li386
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+MAKE_ENV+=	EXTRA_LIBS=-l${MACHINE_ARCH}
+.endif
+.endif
 
 INSTALLATION_DIRS=	sbin
 
