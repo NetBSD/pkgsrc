@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.397 2015/01/01 01:37:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.398 2015/01/04 10:14:47 dholland Exp $
 #
 
 COMMENT=	Programming languages
@@ -223,7 +223,6 @@ SUBDIR+=	tcl-expect
 SUBDIR+=	tcl-otcl
 SUBDIR+=	tcl85
 SUBDIR+=	tinyscheme
-SUBDIR+=	twelf
 SUBDIR+=	ucblogo
 SUBDIR+=	umb-scheme
 SUBDIR+=	utilisp
