@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/04 11:05:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/04 11:43:12 wiz Exp $
 
 DISTNAME=	eyeD3-0.7.5
 CATEGORIES=	audio
@@ -13,6 +13,12 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.7.5
 REPLACE_SH+=		bin/eyeD3
+
+SUBST_CLASSES+=		python
+SUBST_SED.python+=	-e "s,python,${PYTHONBIN},"
+SUBST_MESSAGE.python=	Fixing path to python executable.
+SUBST_FILES.python+=	bin/eyeD3
+SUBST_STAGE.python+=	post-configure
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
