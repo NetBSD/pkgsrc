@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.89 2015/01/04 12:25:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.90 2015/01/04 12:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -97,3 +97,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Params-Validate to 1.15 [wiz 2015-01-04]
 	Updated time/p5-DateTime to 1.1400 [wiz 2015-01-04]
 	Updated devel/p5-boolean to 0.43 [wiz 2015-01-04]
+	Updated devel/p5-Scalar-List-Utils to 1.41 [wiz 2015-01-04]
