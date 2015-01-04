@@ -1,8 +1,11 @@
-$NetBSD: patch-ac,v 1.2 2012/08/11 17:20:23 marino Exp $
+$NetBSD: patch-ac,v 1.3 2015/01/04 03:57:30 dholland Exp $
+
+- recognize dragonfly, openbsd, macos, hpux
+- use pkgsrc imake
 
 --- configure.orig	2000-02-01 07:11:24.000000000 +0000
 +++ configure
-@@ -17,6 +17,9 @@ case $system in
+@@ -17,12 +17,21 @@ case $system in
  			echo "enabling proc stats reading";
  		fi	
  		;;
@@ -12,7 +15,31 @@ $NetBSD: patch-ac,v 1.2 2012/08/11 17:20:23 marino Exp $
  	FreeBSD)
  		os="freebsd";
  		;;
-@@ -62,7 +65,7 @@ else
+ 	NetBSD)
+ 		os="netbsd";
+ 		;;
++	OpenBSD)
++		os="openbsd";
++		;;
++	Darwin)
++		os="macos";
++		;;
+ 	SunOS)
+ 		os="sunos";
+ 		streams="-DSTREAMS";
+@@ -36,6 +45,11 @@ case $system in
+ 		streams="-DSTREAMS";
+ 		sys_src="strioctl.c"
+ 		;;
++	HP-UX)
++		os="hpux";
++		streams="-DSTREAMS";
++		sys_src="strioctl.c"
++		;;
+ 	UNIX*)
+ 		os="svr4";
+ 		streams="-DSTREAMS";
+@@ -62,7 +76,7 @@ else
  	# is this proper sed syntax?
  	echo "OBJS=`echo $common_src $sys_src | sed s/'\.c'/'\.o'/g`" >> osdefs.mk
  	
