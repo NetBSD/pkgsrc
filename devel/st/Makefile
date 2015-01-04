@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/12/17 01:58:55 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2015/01/04 05:41:01 dholland Exp $
 #
 
 DISTNAME=	st-1.8
@@ -9,17 +9,19 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://state-threads.sourceforge.net/
 COMMENT=	Non-preemptive thread library for Internet applications
 
-ONLY_FOR_PLATFORM=	NetBSD-*-x86_64 NetBSD-*-i386 \
-			NetBSD-*-sparc NetBSD-*-vax
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
-BUILD_TARGET=	netbsd-debug
+MAKE_ENV+=	CONFIG_GUESS_PATH=.
+BUILD_TARGET=	default
 
 HTMLDIR=	${PREFIX}/share/doc/html/st
 
 INSTALLATION_DIRS=	bin include lib
+
+post-extract:
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
