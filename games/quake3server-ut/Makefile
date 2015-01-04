@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/04/08 11:17:14 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/04 06:19:05 dholland Exp $
 
 DISTNAME=	urbanterror3
 PKGNAME=	quake3server-ut-3.0
@@ -14,7 +14,6 @@ COMMENT=	Quake III Arena Mod: Urban Terror 3 for Linux
 .include "../../games/quake3server/Makefile.common"
 
 DEPENDS+=	quake3server>=1.32:../../games/quake3server
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/q3ut3
 Q3MODDIR=	${Q3ROOTDIR}/ut
