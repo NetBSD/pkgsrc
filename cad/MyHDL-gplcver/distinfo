@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/04/13 16:14:10 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/01/04 02:51:44 mef Exp $
 
-SHA1 (myhdl-0.7.tar.gz) = 4382444230297593f0a08ba8178c542b4ce1f19b
-RMD160 (myhdl-0.7.tar.gz) = c525b21a86c9204ec7cf659709bc0e8fb2c7450b
-Size (myhdl-0.7.tar.gz) = 241770 bytes
+SHA1 (myhdl-0.8.1.tar.gz) = 9b34a04c57166d99df4eec74bd8c2201e8736cd0
+RMD160 (myhdl-0.8.1.tar.gz) = da08bb105e58a13a5fa22320c8d4e7efda5d1b02
+Size (myhdl-0.8.1.tar.gz) = 579332 bytes
 SHA1 (patch-aa) = 7ed6848aa47394cf714cc9521b1a7e4e456c80a9
