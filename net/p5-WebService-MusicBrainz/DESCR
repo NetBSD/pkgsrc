@@ -1,0 +1,2 @@
+This perl module will search the MusicBrainz database through their
+web service and return objects with the found data.
