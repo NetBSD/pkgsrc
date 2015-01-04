@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/01/04 23:22:37 wiz Exp $
 include/ebml/Debug.h
 include/ebml/EbmlBinary.h
 include/ebml/EbmlConfig.h
@@ -23,6 +23,9 @@ include/ebml/EbmlVersion.h
 include/ebml/EbmlVoid.h
 include/ebml/IOCallback.h
 include/ebml/MemIOCallback.h
+include/ebml/MemReadIOCallback.h
+include/ebml/SafeReadIOCallback.h
 include/ebml/StdIOCallback.h
 include/ebml/c/libebml_t.h
 lib/libebml.la
+lib/pkgconfig/libebml.pc

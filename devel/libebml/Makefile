@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2014/10/09 14:06:09 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2015/01/04 23:22:37 wiz Exp $
 
-DISTNAME=	libebml-1.3.0
+DISTNAME=	libebml-1.3.1
 CATEGORIES=	devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libebml/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,17 +14,8 @@ USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
-NO_CONFIGURE=		yes
-MAKEFLAGS+=		prefix=${PREFIX}
-MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:Q} RANLIB=${RANLIB:Q}
-BUILD_DIRS=		make/linux
-BUILD_TARGET=		sharedlib
-INSTALL_TARGET=		install_headers install_sharedlib
+PKGCONFIG_OVERRIDE=	libebml.pc.in
 
-# remove CRs: fixes patching on Darwin and stops pkglint from complaining
-pre-patch:
-	cd ${WRKSRC}/make/linux && \
-		${TR} -d '\r' < Makefile > Makefile.new && \
-		${MV} Makefile.new Makefile
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"
