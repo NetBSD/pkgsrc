@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/01/04 04:03:42 dholland Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -10,7 +10,7 @@ MAINTAINER=	frazee.23@osu.edu
 HOMEPAGE=	http://www.porcupine.org/forensics/tct.html
 COMMENT=	Programs to aid post-mortem after a break-in
 
-NOT_FOR_PLATFORM=	NetBSD-[4-9]*-*
+BROKEN_ON_PLATFORM=	NetBSD-[4-9]*-*	 # see PR 42039
 MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
