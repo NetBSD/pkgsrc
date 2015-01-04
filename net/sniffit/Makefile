@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/02/06 19:31:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2015/01/04 03:58:57 dholland Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
 COMMENT=		Packet sniffer program
 
-NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}	# severe LP64 loss
 
 GNU_CONFIGURE=		YES
 BUILD_TARGET=
