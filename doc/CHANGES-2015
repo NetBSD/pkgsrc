@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.68 2015/01/04 06:11:49 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.69 2015/01/04 06:17:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -75,3 +75,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-ScanDeps to 1.17 [schmonz 2015-01-04]
 	Updated devel/p5-Module-Install to 1.14 [schmonz 2015-01-04]
 	Updated devel/p5-Module-Install-XSUtil to 0.45 [schmonz 2015-01-04]
+	Added devel/p5-Term-ProgressBar-Quiet version 0.31 [schmonz 2015-01-04]
