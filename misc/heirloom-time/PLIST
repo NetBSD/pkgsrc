@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:33:06 cheusov Exp $
-${HLROOT}/bin/ptime
+@comment $NetBSD: PLIST,v 1.2 2015/01/04 09:21:40 dholland Exp $
+${PLIST.ptime}${HLROOT}/bin/ptime
 ${HLROOT}/bin/time
-${HLROOT}/man/man1/ptime.1
+${PLIST.ptime}${HLROOT}/man/man1/ptime.1
 ${HLROOT}/man/man1/time.1
