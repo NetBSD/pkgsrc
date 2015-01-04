@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13982 2015/01/04 10:16:37 dholland Exp $
+$NetBSD: TODO,v 1.13983 2015/01/04 23:12:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,6 +354,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adns-1.5.0
 	o adocman-0.13
 	o aewm++-1.0.27
+	o afl-1.06b
 	o akonadi-1.10.3
 	o alacarte-0.13.2
 	o album-4.12
@@ -414,6 +415,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bugzilla-3.6.12
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
+	o caff-1.1.12
 	o cal3d-0.11.0
 	o calcoo-2.1.0
 	o calibre-2.2.0 [wip]
@@ -441,7 +443,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clutter-1.20.0
 	o clutter-gst-2.0.10
 	o clutter-gtk-1.6.0
-	o cmake-3.1
+	o cmake-3.1.0
 	o coccigrep-2.13
 	o cogl-1.18.2
 	o colorize-0.3.4
@@ -743,8 +745,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnomekbd-3.4.0.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
+	o libmatroska-1.4.2
 	o libmcs-0.7.2
 	o libmicrohttpd-0.9.38
+	o libmspub-0.1.2
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
@@ -762,6 +766,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libuv-1.0.1 [pkg/49442]
 	o libv4l-0.8.5
 	o libvdpau-0.9
+	o libvisio-0.1.1
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o libxmp-4.3.1
@@ -792,6 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcabber-0.10.3
 	o mcsim-5.5.0
 	o mednafen-0.9.36.5
+	o memcached-1.4.22
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metacity-3.14.2
@@ -929,6 +935,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
 	o py-hgtools-4.0
+	o py-html2text-2014.12.29
 	o py-lasso-2.4.0
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.2
@@ -944,8 +951,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-qt5-5.4 [wip]
 	o py-reportlab-3.0
 	o py-rope-0.9.4
+	o py-setuptools-11.0
 	o py-simpletal-5.1
 	o py-simpy-3.0.5
+	o py-six-1.9.0
 	o py-smb-1.1.8
 	o py-sphinx-theme-cloud-1.6
 	o py-suds-0.4.1
@@ -953,6 +962,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-trytond-account-3.4.1	
 	o py-trytond-stock-3.4.0
+	o py-virtualenv-12.0.5
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qnetwalk-1.4
@@ -1102,6 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
 	o unicap-0.9.8
+	o unison-2.48.3
 	o unrealircd-3.2.10.2
 	o userppp-030706
 	o utilisp-1.14
