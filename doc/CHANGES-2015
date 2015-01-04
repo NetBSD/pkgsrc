@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.65 2015/01/04 03:20:27 mef Exp $
+$NetBSD: CHANGES-2015,v 1.66 2015/01/04 06:06:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated cad/py-MyHDL to 0.8.1 [mef 2015-01-04]
 	Updated cad/MyHDL-iverilog to 0.8.1 [mef 2015-01-04]
 	Updated cad/MyHDL-gplcver to 0.8.1 [mef 2015-01-04]
+	Updated devel/p5-Module-ScanDeps to 1.17 [schmonz 2015-01-04]
