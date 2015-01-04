@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 20:11:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/04 08:03:50 dholland Exp $
 #
 
 DISTNAME=	LuaJIT-1.1.5
@@ -9,6 +9,7 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 
+# Only supports 32-bit x86. Try lang/LuaJIT2 instead...
 ONLY_FOR_PLATFORM=	*-*-i386
 
 LICENSE=	mit
