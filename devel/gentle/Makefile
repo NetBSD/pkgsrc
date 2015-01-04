@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/12/21 01:26:34 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/04 02:19:37 dholland Exp $
 #
 
 DISTNAME=		gentle-97
@@ -10,7 +10,7 @@ MAINTAINER=		MarkoSchuetz@web.de
 HOMEPAGE=		http://gentle.compilertools.net/
 COMMENT=		Gentle Compiler Construction System
 
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
 USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	bin lib share/doc/gentle/html share/examples/gentle

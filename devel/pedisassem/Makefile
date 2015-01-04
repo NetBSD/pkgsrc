@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/01/04 02:20:16 dholland Exp $
 
 DISTNAME=	dsasmsrc
 PKGNAME=	pedisassem-0.23
@@ -14,7 +14,7 @@ COMMENT=	Disassembler for Win32 code
 WRKSRC=		${WRKDIR}
 
 # LP64 problems
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
 USE_BSD_MAKEFILE=	yes
 INSTALLATION_DIRS=	bin
