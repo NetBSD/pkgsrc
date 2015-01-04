@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/07/22 11:20:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/01/04 23:39:40 wiz Exp $
 bin/vsd2raw
 bin/vsd2text
 bin/vsd2xhtml
@@ -37,6 +37,9 @@ share/doc/libvisio/html/VSDGeometryList_8h_source.html
 share/doc/libvisio/html/VSDInternalStream_8cpp.html
 share/doc/libvisio/html/VSDInternalStream_8h.html
 share/doc/libvisio/html/VSDInternalStream_8h_source.html
+share/doc/libvisio/html/VSDMetaData_8cpp.html
+share/doc/libvisio/html/VSDMetaData_8h.html
+share/doc/libvisio/html/VSDMetaData_8h_source.html
 share/doc/libvisio/html/VSDOutputElementList_8cpp.html
 share/doc/libvisio/html/VSDOutputElementList_8h.html
 share/doc/libvisio/html/VSDOutputElementList_8h_source.html
@@ -72,6 +75,9 @@ share/doc/libvisio/html/VSDXMLParserBase_8h_source.html
 share/doc/libvisio/html/VSDXMLTokenMap_8cpp.html
 share/doc/libvisio/html/VSDXMLTokenMap_8h.html
 share/doc/libvisio/html/VSDXMLTokenMap_8h_source.html
+share/doc/libvisio/html/VSDXMetaData_8cpp.html
+share/doc/libvisio/html/VSDXMetaData_8h.html
+share/doc/libvisio/html/VSDXMetaData_8h_source.html
 share/doc/libvisio/html/VSDXParser_8cpp.html
 share/doc/libvisio/html/VSDXParser_8h.html
 share/doc/libvisio/html/VSDXParser_8h_source.html
@@ -164,6 +170,8 @@ share/doc/libvisio/html/classlibvisio_1_1VSDInsertTextOutputElement.png
 share/doc/libvisio/html/classlibvisio_1_1VSDLineTo-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDLineTo.html
 share/doc/libvisio/html/classlibvisio_1_1VSDLineTo.png
+share/doc/libvisio/html/classlibvisio_1_1VSDMetaData-members.html
+share/doc/libvisio/html/classlibvisio_1_1VSDMetaData.html
 share/doc/libvisio/html/classlibvisio_1_1VSDMoveTo-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDMoveTo.html
 share/doc/libvisio/html/classlibvisio_1_1VSDMoveTo.png
@@ -270,6 +278,8 @@ share/doc/libvisio/html/classlibvisio_1_1VSDXMLParserBase.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXMLParserBase.png
 share/doc/libvisio/html/classlibvisio_1_1VSDXMLTokenMap-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXMLTokenMap.html
+share/doc/libvisio/html/classlibvisio_1_1VSDXMetaData-members.html
+share/doc/libvisio/html/classlibvisio_1_1VSDXMetaData.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXParser-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXParser.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXParser.png
@@ -373,19 +383,23 @@ share/doc/libvisio/html/functions_y.html
 share/doc/libvisio/html/functions_~.html
 share/doc/libvisio/html/globals.html
 share/doc/libvisio/html/globals_b.html
+share/doc/libvisio/html/globals_c.html
 share/doc/libvisio/html/globals_d.html
 share/doc/libvisio/html/globals_defs.html
 share/doc/libvisio/html/globals_defs_b.html
+share/doc/libvisio/html/globals_defs_c.html
 share/doc/libvisio/html/globals_defs_d.html
 share/doc/libvisio/html/globals_defs_f.html
 share/doc/libvisio/html/globals_defs_l.html
 share/doc/libvisio/html/globals_defs_m.html
+share/doc/libvisio/html/globals_defs_p.html
 share/doc/libvisio/html/globals_defs_s.html
 share/doc/libvisio/html/globals_defs_t.html
 share/doc/libvisio/html/globals_defs_v.html
 share/doc/libvisio/html/globals_f.html
 share/doc/libvisio/html/globals_l.html
 share/doc/libvisio/html/globals_m.html
+share/doc/libvisio/html/globals_p.html
 share/doc/libvisio/html/globals_s.html
 share/doc/libvisio/html/globals_t.html
 share/doc/libvisio/html/globals_v.html
@@ -457,6 +471,8 @@ share/doc/libvisio/html/structlibvisio_1_1VSDXVariationClrScheme-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXVariationClrScheme.html
 share/doc/libvisio/html/structlibvisio_1_1XForm-members.html
 share/doc/libvisio/html/structlibvisio_1_1XForm.html
+share/doc/libvisio/html/structlibvisio_1_1XForm1D-members.html
+share/doc/libvisio/html/structlibvisio_1_1XForm1D.html
 share/doc/libvisio/html/structxmltoken-members.html
 share/doc/libvisio/html/structxmltoken.html
 share/doc/libvisio/html/sync_off.png

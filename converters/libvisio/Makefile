@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2014/11/07 19:39:27 adam Exp $
+# $NetBSD: Makefile,v 1.28 2015/01/04 23:39:40 wiz Exp $
 
-DISTNAME=	libvisio-0.1.0
-PKGREVISION=	3
+DISTNAME=	libvisio-0.1.1
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libvisio/
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +25,7 @@ USE_TOOLS+=	perl:build
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
