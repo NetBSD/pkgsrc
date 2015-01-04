@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/12/10 08:56:06 obache Exp $
+# $NetBSD: Makefile,v 1.38 2015/01/04 03:41:59 dholland Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.${FLASH_ARCH}
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
@@ -16,6 +16,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
+# On NetBSD, requires sufficiently new compat_linux.
 NOT_FOR_PLATFORM=	NetBSD-[0-4]*-* NetBSD-5.[0-9].*-*
 
 WRKSRC=			${WRKDIR}
