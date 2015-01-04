@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.75 2015/01/04 10:43:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.76 2015/01/04 10:45:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/p5-Syntax-SourceHighlight version 1.1.2 [schmonz 2015-01-04]
 	Removed lang/twelf [dholland 2015-01-04]
 	Updated archivers/arc to 5.21p [wiz 2015-01-04]
+	Updated archivers/lziprecover to 1.16 [wiz 2015-01-04]
