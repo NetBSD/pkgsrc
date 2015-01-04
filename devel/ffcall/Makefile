@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/14 11:13:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2015/01/04 04:58:47 dholland Exp $
 
 DISTNAME=	ffcall-1.10
 PKGREVISION=	3
@@ -15,7 +15,8 @@ MAKE_JOBS_SAFE=			no
 
 # the file ${WRKSRC}/avcall/avcall-${MACHINE_ARCH}.c needs to
 # be added for additional port support.
-ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-convex *-*-hppa *-*-i386 \
+BROKEN_EXCEPT_ON_PLATFORM= \
+			*-*-alpha *-*-arm *-*-convex *-*-hppa *-*-i386 \
 			*-*-ia64 *-*-m68k *-*-m88k *-*-mips *-*-mipsel \
 			*-*-mipseb *-*-mips64 *-*-mipsn32 \
 			*-*-powerpc *-*-rs6000 \
