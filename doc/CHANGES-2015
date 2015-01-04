@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.83 2015/01/04 12:03:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.84 2015/01/04 12:06:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -91,3 +91,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed chat/zephyr [joerg 2015-01-04]
 	Added net/p5-WebService-MusicBrainz version 0.93 [wiz 2015-01-04]
 	Updated audio/abcde to 2.6 [wiz 2015-01-04]
+	Removed security/kth-krb4 [joerg 2015-01-04]
