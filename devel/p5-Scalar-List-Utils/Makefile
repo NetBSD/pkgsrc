@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2014/10/09 13:44:44 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.31 2015/01/04 12:26:36 wiz Exp $
 
-DISTNAME=	Scalar-List-Utils-1.38
+DISTNAME=	Scalar-List-Utils-1.41
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel misc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 
