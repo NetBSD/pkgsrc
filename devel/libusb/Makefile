@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/06/23 16:59:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2015/01/04 05:09:51 dholland Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	3
@@ -17,8 +17,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-build-docs
 PKGCONFIG_OVERRIDE+=	libusb.pc.in
 
-ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
-ONLY_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*-* SunOS-*-*
+# The configure script recognizes only specific OSes that have one of
+# three USB APIs: Linux, BSD, or MacOS. If you have some other OS that
+# supports one of these APIs, add it here and also in the configure
+# script. Solaris support has been hacked on separately.
+ONLY_FOR_PLATFORM=	Linux-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
+ONLY_FOR_PLATFORM+=	Darwin-*-*
+ONLY_FOR_PLATFORM+=	SunOS-*-*
 
 TEST_TARGET=		check
 
