@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.94 2015/01/04 21:52:24 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.95 2015/01/04 23:13:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -102,3 +102,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Warnings to 0.020 [wen 2015-01-04]
 	Updated textproc/p5-Swim to 0.1.35 [schmonz 2015-01-04]
 	Updated mail/opendkim to 2.9.3 [pettai 2015-01-04]
+	Updated devel/afl to 1.06b [wiz 2015-01-04]
