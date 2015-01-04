@@ -1,0 +1,7 @@
+Progress bars are handy - they tell you how much work has been done,
+how much is left to do and estimate how long it will take.
+
+But they can be fiddly!
+
+This module does the right thing in almost all cases in a really
+convenient way.
