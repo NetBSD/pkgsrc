@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.100 2015/01/04 23:39:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.101 2015/01/04 23:41:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -108,3 +108,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libmatroska to 1.4.2 [wiz 2015-01-04]
 	Updated converters/libmspub to 0.1.2 [wiz 2015-01-04]
 	Updated converters/libvisio to 0.1.1 [wiz 2015-01-04]
+	Updated devel/memcached to 1.4.22 [wiz 2015-01-04]
