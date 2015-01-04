@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/02/01 22:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/04 02:40:22 dholland Exp $
 #
 
 DISTNAME=		uno_v213
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spinroot.com/uno/
 COMMENT=		Tool for source code analysis
 
-NOT_FOR_PLATFORM=	DragonFly-*-x86_64	#Cannot build 32-bit binary
 WRKSRC=			${WRKDIR}/uno/src
 MAKE_FILE=		makefile
 
@@ -20,7 +19,18 @@ USE_TOOLS+=		bison gmake flex
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386"
+# These platforms cannot build 32-on-64 binaries.
+NOT_FOR_PLATFORM+=	*-*-alpha
+NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
+
+# This package always issues -m32 from its makefile; remove it if 32-bit.
+IS32=yes
+.for P in ${LP64PLATFORMS}
+.if ${MACHINE_PLATFORM:M${P}}
+IS32=no
+.endif
+.endfor
+.if ${IS32} == "yes"
 BUILDLINK_TRANSFORM+=	rm:-m32
 .endif
 
