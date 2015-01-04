@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.67 2015/01/04 06:09:47 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.68 2015/01/04 06:11:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated cad/MyHDL-gplcver to 0.8.1 [mef 2015-01-04]
 	Updated devel/p5-Module-ScanDeps to 1.17 [schmonz 2015-01-04]
 	Updated devel/p5-Module-Install to 1.14 [schmonz 2015-01-04]
+	Updated devel/p5-Module-Install-XSUtil to 0.45 [schmonz 2015-01-04]
