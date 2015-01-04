@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 09:57:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/04 09:25:36 dholland Exp $
 
 DISTNAME=	window-20120215
 CATEGORIES=	misc
@@ -8,13 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Windowing environment for ASCII terminals
 LICENSE=	modified-bsd
 
-# The current distfile relies on the NetBSD make system and does not use any
-# kind of autoconfiguration.  This is done purely for simplicity reasons but
-# is why this package is restricted to NetBSD.  If anyone is willing to
-# improve the distfile to be more portable (e.g. by adding autoconf support),
-# we can remove this limitation.
-ONLY_FOR_PLATFORM=	NetBSD-[5-9]*-*
-
+USE_BSD_MAKEFILE=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
