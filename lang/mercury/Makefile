@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2014/05/29 23:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/01/04 19:37:02 asau Exp $
 
-DISTNAME=		mercury-srcdist-13.05.1-beta-2013-05-28
-PKGNAME=		mercury-13.05.1beta
-PKGREVISION=		1
+DISTNAME=		mercury-srcdist-14.01.1
+PKGNAME=		mercury-14.01.1
 CATEGORIES=		lang
 MASTER_SITES=		http://dl.mercurylang.org/release/ \
 			ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
@@ -14,7 +13,7 @@ HOMEPAGE=		http://www.mercurylang.org/
 COMMENT=		Modern logic/functional programming language
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pax bison flex
+USE_TOOLS+=		gmake pax bison flex makeinfo
 USE_TOOLS+=		perl # ?
 INFO_FILES=		yes
 
