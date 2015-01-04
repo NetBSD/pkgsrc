@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.95 2015/01/04 23:13:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.96 2015/01/04 23:15:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -103,3 +103,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Swim to 0.1.35 [schmonz 2015-01-04]
 	Updated mail/opendkim to 2.9.3 [pettai 2015-01-04]
 	Updated devel/afl to 1.06b [wiz 2015-01-04]
+	Updated security/caff to 1.1.12 [wiz 2015-01-04]
