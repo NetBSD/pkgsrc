@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2015/01/04 11:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.517 2015/01/04 11:49:15 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -356,6 +356,7 @@ SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
 SUBDIR+=	p5-MPEG-Audio-Frame
 SUBDIR+=	p5-MusicBrainz-Client
+SUBDIR+=	p5-MusicBrainz-DiscID
 SUBDIR+=	p5-MusicBrainz-Queries
 SUBDIR+=	paman
 SUBDIR+=	paprefs
