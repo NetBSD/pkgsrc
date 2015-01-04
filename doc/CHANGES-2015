@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.74 2015/01/04 10:16:09 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.75 2015/01/04 10:43:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -82,3 +82,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/tads to 3.0.8nb3 [dholland 2015-01-04]
 	Added textproc/p5-Syntax-SourceHighlight version 1.1.2 [schmonz 2015-01-04]
 	Removed lang/twelf [dholland 2015-01-04]
+	Updated archivers/arc to 5.21p [wiz 2015-01-04]
