@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:57 asau Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/04 03:07:51 dholland Exp $
 #
 
 DISTNAME=	veleng10
@@ -17,7 +17,9 @@ RESTRICTED=		You must not charge a fee for this software nor for any derived wor
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
-NOT_FOR_PLATFORM=	DragonFly-*-x86_64    # Can't build 32-bit binaries
+# These platforms cannot build 32-on-64 binaries.
+NOT_FOR_PLATFORM+=	*-*-alpha
+NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
 
 EXTRACT_OPTS_ZIP=	-LLaqo
 WRKSRC=			${WRKDIR}
@@ -39,19 +41,19 @@ SUBST_STAGE.cflags=	pre-configure
 SUBST_FILES.cflags=	makefile
 SUBST_SED.cflags=	-e s,^CFLAGS.*,,
 
+.include "../../mk/bsd.prefs.mk"
+
 # Velena isn't 64bit-safe, which results in a "fatal error" for some
 # board positions.
 #
 # Try for example "c170", which works with -m32 and fails without.
 #
-.include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_ARCH:M*64} != ""
-.  if ${PKGSRC_COMPILER:Mgcc} != ""
-CFLAGS+=	-m32
-.  else
-PKG_FAIL_REASON+=	"Velena doesn't work on 64-bit platforms."
-.  endif
+.for P in ${LP64PLATFORMS}
+.if ${MACHINE_PLATFORM:M${P}}
+CFLAGS+=		-m32
+LDFLAGS+=		-m32
 .endif
+.endfor
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/veleng ${DESTDIR}${PREFIX}/bin/velena
