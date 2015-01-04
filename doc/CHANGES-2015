@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.70 2015/01/04 06:22:35 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.71 2015/01/04 06:26:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -77,3 +77,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-Install-XSUtil to 0.45 [schmonz 2015-01-04]
 	Added devel/p5-Term-ProgressBar-Quiet version 0.31 [schmonz 2015-01-04]
 	Added devel/p5-Term-ProgressBar-Simple version 0.03 [schmonz 2015-01-04]
+	Added devel/p5-App-Prove-Plugin-ProgressBar-Each version 0.01 [schmonz 2015-01-04]
