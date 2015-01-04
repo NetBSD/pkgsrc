@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/11/10 20:59:39 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/04 02:53:44 dholland Exp $
 #
 
 DISTNAME=	userspace-rcu-0.8.6
@@ -15,8 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-# liburcu requires TLS support, thus,
-# only NetBSD-6 or later is supported
+# liburcu requires thread local storage support; thus,
+# only NetBSD-6 or later is supported.
 NOT_FOR_PLATFORM=	NetBSD-[0-5]*-*
 
 PKGCONFIG_OVERRIDE+=	liburcu-bp.pc.in
