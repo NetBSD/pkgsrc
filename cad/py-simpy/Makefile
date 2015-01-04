@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 07:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/04 02:13:16 mef Exp $
 
-DISTNAME=		SimPy-2.3
+DISTNAME=		SimPy-2.3.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=		1
 CATEGORIES=		cad math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=simpy/} \
 			http://pypi.python.org/packages/source/S/SimPy/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://simpy.sourceforge.net/
+HOMEPAGE=		http://simpy.readthedocs.org/en/latest/
 COMMENT=		Discrete event simulation framework
 LICENSE=		gnu-lgpl-v2.1
 
