@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.63 2015/01/04 02:09:05 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.64 2015/01/04 02:53:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -67,3 +67,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nspr to 4.10.7nb1 [ryoon 2015-01-03]
 	Updated sysutils/etcmanage to 0.9.2 [gdt 2015-01-04]
 	Updated lang/algol68g to 2.8 [dholland 2015-01-04]
+	Updated www/ap22-dnssd to 0.6 [obache 2015-01-04]
