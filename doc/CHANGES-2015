@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.78 2015/01/04 11:48:07 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.79 2015/01/04 11:49:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/lziprecover to 1.16 [wiz 2015-01-04]
 	Added audio/eyed3 version 0.7.5 [wiz 2015-01-04]
 	Removed chat/zephyr-mode [joerg 2015-01-04]
+	Added audio/p5-MusicBrainz-DiscID version 0.03 [wiz 2015-01-04]
