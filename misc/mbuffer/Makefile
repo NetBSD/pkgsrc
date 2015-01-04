@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/08 11:21:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/04 03:39:57 dholland Exp $
 
 DISTNAME=	mbuffer-20140310
 CATEGORIES=	misc
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.maier-komor.de/mbuffer.html
 COMMENT=	Tool for buffering data streams
 LICENSE=	gnu-gpl-v3
 
-NOT_FOR_PLATFORM=	NetBSD-*-*	# Needs sysctl bits
+BROKEN_ON_PLATFORM=	NetBSD-*-*	# Needs sysctl bits
 
 GNU_CONFIGURE=	yes
 
