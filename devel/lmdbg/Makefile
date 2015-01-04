@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/02/05 21:14:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/04 02:47:06 dholland Exp $
 #
 
 DISTNAME=	lmdbg-1.2.1
@@ -17,7 +17,7 @@ DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
 
 ONLY_FOR_COMPILER=	gcc icc clang
-NOT_FOR_PLATFORM=	Darwin-*-*
+BROKEN_ON_PLATFORM=	Darwin-*-*
 
 TEST_TARGET=		test
 
