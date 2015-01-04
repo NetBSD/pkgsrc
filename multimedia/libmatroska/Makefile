@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2014/10/09 14:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/01/04 23:24:45 wiz Exp $
 
-DISTNAME=	libmatroska-1.4.1
-PKGREVISION=	1
+DISTNAME=	libmatroska-1.4.2
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,21 +12,12 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
+PKGCONFIG_OVERRIDE=	libmatroska.pc.in
 
-NO_CONFIGURE=		yes
-MAKEFLAGS+=		prefix=${PREFIX}
-MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:Q} RANLIB=${RANLIB:Q}
-BUILD_DIRS=		make/linux
-BUILD_TARGET=		sharedlib
-INSTALL_TARGET=		install_headers install_sharedlib
+GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 
-# remove CRs: fixes patching on Darwin and stops pkglint from complaining
-pre-patch:
-	cd ${WRKSRC}/make/linux && \
-		${TR} -d '\r' < Makefile > Makefile.new && \
-		${MV} Makefile.new Makefile
-
+BUILDLINK_API_DEPENDS.libebml+=	libebml>=1.3.1
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
