@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.81 2015/01/04 11:50:08 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.82 2015/01/04 11:57:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added audio/p5-MusicBrainz-DiscID version 0.03 [wiz 2015-01-04]
 	Removed chat/tzc [joerg 2015-01-04]
 	Removed chat/zephyr [joerg 2015-01-04]
+	Added net/p5-WebService-MusicBrainz version 0.93 [wiz 2015-01-04]
