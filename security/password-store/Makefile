@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/05 11:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/05 11:32:49 imil Exp $
 
 DISTNAME=	password-store-1.6.3
 CATEGORIES=	security
@@ -32,7 +32,7 @@ SUBST_FILES.fixsh=	src/password-store.sh
 SUBST_SED.fixsh+=	-e 's,GETOPT="getopt",GETOPT="${PREFIX}/bin/getopt",'
 SUBST_SED.fixsh+=	-e "s,SHRED=\"shred -f -z\",SHRED=\"${RM} -f -P\","
 
-#.include "options.mk"
+.include "options.mk"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/password-store.sh	\
