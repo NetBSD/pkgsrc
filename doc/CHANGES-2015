@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.107 2015/01/05 21:56:24 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.108 2015/01/05 22:19:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -115,3 +115,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-paramiko to 1.15.2 [drochner 2015-01-05]
 	Updated mail/fdm to 1.8 [mef 2015-01-05]
 	Updated security/libgcrypt to 1.6.2nb3 [wiz 2015-01-05]
+	Updated audio/musicpd to 0.19.7 [wiz 2015-01-05]
