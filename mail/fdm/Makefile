@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/02/12 23:18:07 tron Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/05 13:56:46 mef Exp $
 
-DISTNAME=		fdm-1.7
-PKGREVISION=		1
+DISTNAME=		fdm-1.8
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fdm/}
 
@@ -19,10 +18,6 @@ DOCDIR=			${PREFIX}/share/doc/fdm
 USE_TOOLS+=		yacc pax
 
 .include "options.mk"
-
-post-build:
-	${RUN}cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
-		-f tools/dist.mk manual
 
 post-install:
 	cd ${WRKSRC}/examples && pax -rwpam . ${DESTDIR}${EGDIR}
