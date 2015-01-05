@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/06/12 00:43:28 gls Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/01/05 13:18:28 drochner Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
+${PYSITELIB}/paramiko/_version.py
+${PYSITELIB}/paramiko/_version.pyc
+${PYSITELIB}/paramiko/_version.pyo
 ${PYSITELIB}/paramiko/_winapi.py
 ${PYSITELIB}/paramiko/_winapi.pyc
 ${PYSITELIB}/paramiko/_winapi.pyo
@@ -55,6 +58,12 @@ ${PYSITELIB}/paramiko/kex_gex.pyo
 ${PYSITELIB}/paramiko/kex_group1.py
 ${PYSITELIB}/paramiko/kex_group1.pyc
 ${PYSITELIB}/paramiko/kex_group1.pyo
+${PYSITELIB}/paramiko/kex_group14.py
+${PYSITELIB}/paramiko/kex_group14.pyc
+${PYSITELIB}/paramiko/kex_group14.pyo
+${PYSITELIB}/paramiko/kex_gss.py
+${PYSITELIB}/paramiko/kex_gss.pyc
+${PYSITELIB}/paramiko/kex_gss.pyo
 ${PYSITELIB}/paramiko/message.py
 ${PYSITELIB}/paramiko/message.pyc
 ${PYSITELIB}/paramiko/message.pyo
@@ -109,6 +118,9 @@ ${PYSITELIB}/paramiko/sftp_si.pyo
 ${PYSITELIB}/paramiko/ssh_exception.py
 ${PYSITELIB}/paramiko/ssh_exception.pyc
 ${PYSITELIB}/paramiko/ssh_exception.pyo
+${PYSITELIB}/paramiko/ssh_gss.py
+${PYSITELIB}/paramiko/ssh_gss.pyc
+${PYSITELIB}/paramiko/ssh_gss.pyo
 ${PYSITELIB}/paramiko/transport.py
 ${PYSITELIB}/paramiko/transport.pyc
 ${PYSITELIB}/paramiko/transport.pyo
