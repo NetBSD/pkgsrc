@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2014/12/30 13:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2015/01/05 22:19:02 wiz Exp $
 
-DISTNAME=		mpd-0.18.21
+DISTNAME=		mpd-0.19.7
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
 CATEGORIES=		audio
-MASTER_SITES=		http://www.musicpd.org/download/mpd/0.18/
+MASTER_SITES=		http://www.musicpd.org/download/mpd/0.19/
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 EXTRACT_SUFX=		.tar.xz
 
@@ -47,7 +47,9 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mpd.conf ${DESTDIR}${EGDIR}
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
