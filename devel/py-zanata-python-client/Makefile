@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/01 07:02:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/05 13:17:41 jperkin Exp $
 
 ZANATACVER=	1.3.18
 DISTNAME=	zanata-python-client-${ZANATACVER}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://zanata.org/
 COMMENT=	Zanata translation service client written in Python
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-httplib2:../../www/py-httplib2
-DEPENDS+=	${PYPKGPREFIX}-polib:../../devel/py-polib
+DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 
 USE_LANGUAGES=	# none
 
