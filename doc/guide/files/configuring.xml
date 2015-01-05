@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.45 2014/12/06 23:28:18 agc Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.46 2015/01/05 12:13:48 prlw1 Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -126,7 +126,7 @@ works.</para>
 	    package is created for them. You can set this variable to
 	    <literal>package-install</literal> to automatically create binary
 	    packages after installing dependencies. Please note that the
-	    <varname>PKGSRC_KEEP_BIN_PKGS</varname>can be set to
+	    <varname>PKGSRC_KEEP_BIN_PKGS</varname> can be set to
 	    <literal>yes</literal> to preserve binary packages when
 	    using the <literal>install</literal> as well.</para>
 	</listitem>
