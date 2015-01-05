@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/05/09 17:18:48 morr Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/01/05 22:44:17 morr Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -8,11 +8,10 @@ ${PLIST.perl}lib/urxvt/perl/block-graphics-to-ascii
 ${PLIST.perl}lib/urxvt/perl/clipboard-osc
 ${PLIST.perl}lib/urxvt/perl/confirm-paste
 ${PLIST.perl}lib/urxvt/perl/digital-clock
+${PLIST.perl}lib/urxvt/perl/eval
 ${PLIST.perl}lib/urxvt/perl/example-refresh-hooks
 ${PLIST.perl}lib/urxvt/perl/keysym-list
 ${PLIST.perl}lib/urxvt/perl/kuake
-${PLIST.perl}lib/urxvt/perl/macosx-clipboard
-${PLIST.perl}lib/urxvt/perl/macosx-clipboard-native
 ${PLIST.perl}lib/urxvt/perl/matcher
 ${PLIST.perl}lib/urxvt/perl/option-popup
 ${PLIST.perl}lib/urxvt/perl/overlay-osc
@@ -34,12 +33,11 @@ ${PLIST.perl}man/man1/urxvt-block-graphics-to-ascii.1
 ${PLIST.perl}man/man1/urxvt-clipboard-osc.1
 ${PLIST.perl}man/man1/urxvt-confirm-paste.1
 ${PLIST.perl}man/man1/urxvt-digital-clock.1
+${PLIST.perl}man/man1/urxvt-eval.1
 ${PLIST.perl}man/man1/urxvt-example-refresh-hooks.1
 ${PLIST.perl}man/man1/urxvt-extensions.1
 ${PLIST.perl}man/man1/urxvt-keysym-list.1
 ${PLIST.perl}man/man1/urxvt-kuake.1
-${PLIST.perl}man/man1/urxvt-macosx-clipboard-native.1
-${PLIST.perl}man/man1/urxvt-macosx-clipboard.1
 ${PLIST.perl}man/man1/urxvt-matcher.1
 ${PLIST.perl}man/man1/urxvt-option-popup.1
 ${PLIST.perl}man/man1/urxvt-overlay-osc.1
