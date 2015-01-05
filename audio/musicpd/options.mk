@@ -1,8 +1,12 @@
-# $NetBSD: options.mk,v 1.26 2014/12/14 15:47:03 wiz Exp $
+# $NetBSD: options.mk,v 1.27 2015/01/05 22:19:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libmpdclient libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shout sqlite3 tremor twolame vorbis wavpack zziplib
 PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 inet6 libao musepack vorbis
+
+# TODO:
+# shine
+# libsoxr
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	vorbis
 PKG_OPTIONS_GROUP.vorbis=	tremor vorbis
