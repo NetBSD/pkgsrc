@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2014/08/23 15:31:55 richard Exp $
+$NetBSD: patch-configure,v 1.5 2015/01/05 22:44:17 morr Exp $
 
 Don't use predefined CXXFLAGS.
 
@@ -37,12 +37,3 @@ Don't use predefined CXXFLAGS.
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing setlocale" >&5
  $as_echo_n "checking for library containing setlocale... " >&6; }
  if ${ac_cv_search_setlocale+:} false; then :
-@@ -7146,7 +7120,7 @@ fi
- case $host in
-    *-*-solaris*)
- 
--$as_echo "#define _XOPEN_SOURCE 500" >>confdefs.h
-+$as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
- 
-       { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing sendmsg" >&5
- $as_echo_n "checking for library containing sendmsg... " >&6; }
