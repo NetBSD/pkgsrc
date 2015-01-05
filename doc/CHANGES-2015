@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.108 2015/01/05 22:19:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.109 2015/01/05 22:45:06 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -116,3 +116,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/fdm to 1.8 [mef 2015-01-05]
 	Updated security/libgcrypt to 1.6.2nb3 [wiz 2015-01-05]
 	Updated audio/musicpd to 0.19.7 [wiz 2015-01-05]
+	Updated x11/rxvt-unicode to 9.21 [morr 2015-01-05]
