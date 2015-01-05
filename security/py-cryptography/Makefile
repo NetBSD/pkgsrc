@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/01/04 10:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/05 08:42:32 wiz Exp $
 
 DISTNAME=	cryptography-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,12 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 BUILD_DEPENDS+=	${PYPKGPREFIX}-requests>=0.8:../../devel/py-requests
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0.8:../../devel/py-test
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPKGPREFIX} == "py26" || ${PYPKGPREFIX} == "py27" || ${PYPKGPREFIX} == "py33"
+DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
+.endif
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
