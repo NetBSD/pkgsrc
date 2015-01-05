@@ -1,12 +1,11 @@
-# $NetBSD: Makefile.common,v 1.11 2015/01/04 08:57:36 dholland Exp $
+# $NetBSD: Makefile.common,v 1.12 2015/01/05 11:03:22 wiz Exp $
 #
 # used by lang/smlnj/Makefile
-# used by lang/twelf/Makefile
 
 # smlnj supports i386, hppa, sparc, ppc, mlrisc & alpha
 # but this package only handles i386, ppc, and sparc.
 # Extending this is left as an (easy) exercise for the reader.
-ONLY_FOR_PLATFORM+=	*-*-alpha *-*-hppa *-*-i386
+ONLY_FOR_PLATFORM+=	*-*-alpha *-*-hppa *-*-i386 \
 			*-*-mlrisc *-*-sparc *-*-powerpc
 BROKEN_ON_PLATFORM=	*-*-alpha *-*-hppa *-*-mlrisc
 
