@@ -1,4 +1,4 @@
-$NetBSD: patch-build__mozc.py,v 1.6 2014/11/07 23:28:36 ryoon Exp $
+$NetBSD: patch-build__mozc.py,v 1.7 2015/01/06 10:30:54 ryoon Exp $
 
 --- build_mozc.py.orig	2014-11-03 05:13:03.000000000 +0000
 +++ build_mozc.py
@@ -72,7 +72,7 @@ $NetBSD: patch-build__mozc.py,v 1.6 2014/11/07 23:28:36 ryoon Exp $
        usage='Usage: %prog runtests [options] [test_targets] [-- build options]')
    AddCommonOptions(parser)
 -  if IsLinux():
-+  if IsLinux() or ISNetBSD():
++  if IsLinux() or IsNetBSD():
      default_build_concurrency = GetNumberOfProcessors() * 2
      parser.add_option('--jobs', '-j', dest='jobs',
                        default=('%d' % default_build_concurrency),
