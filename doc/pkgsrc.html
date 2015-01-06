@@ -30,8 +30,8 @@
         The pkgsrc Developers
       </h3>
 </div></div>
-<div><p class="copyright">Copyright © 1994-2014 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.27 2014/09/19 04:53:09 jnemeth Exp $</p></div>
+<div><p class="copyright">Copyright © 1994-2015 The NetBSD Foundation, Inc</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.28 2015/01/01 05:19:02 jnemeth Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -148,24 +148,23 @@ builds)</a></span></dt>
 <dt><span class="chapter"><a href="#faq">9. Frequently Asked Questions</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#mailing-list-pointers">9.1. Are there any mailing lists for pkg-related discussion?</a></span></dt>
-<dt><span class="sect1"><a href="#pkgviews-docs">9.2. Where's the pkgviews documentation?</a></span></dt>
-<dt><span class="sect1"><a href="#faq-pkgtools">9.3. Utilities for package management (pkgtools)</a></span></dt>
-<dt><span class="sect1"><a href="#non-root-pkgsrc">9.4. How to use pkgsrc as non-root</a></span></dt>
-<dt><span class="sect1"><a href="#resume-transfers">9.5. How to resume transfers when fetching distfiles?</a></span></dt>
-<dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-behind-firewall">9.7. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-https">9.8. How to fetch files from HTTPS sites</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">9.9. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
-<dt><span class="sect1"><a href="#fetching-all-distfiles">9.10. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">9.11. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
+<dt><span class="sect1"><a href="#faq-pkgtools">9.2. Utilities for package management (pkgtools)</a></span></dt>
+<dt><span class="sect1"><a href="#non-root-pkgsrc">9.3. How to use pkgsrc as non-root</a></span></dt>
+<dt><span class="sect1"><a href="#resume-transfers">9.4. How to resume transfers when fetching distfiles?</a></span></dt>
+<dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.5. How can I install/use modular X.org from pkgsrc?</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-behind-firewall">9.6. How to fetch files from behind a firewall</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-https">9.7. How to fetch files from HTTPS sites</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#fetching-all-distfiles">9.9. How to fetch all distfiles at once</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221;</span> mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.12. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</a></span></dt>
-<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.13. Using 'sudo' with pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#faq.conf">9.14. How do I change the location of configuration files?</a></span></dt>
-<dt><span class="sect1"><a href="#audit-packages">9.15. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">9.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">9.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.18. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</a></span></dt>
+<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.12. Using 'sudo' with pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#faq.conf">9.13. How do I change the location of configuration files?</a></span></dt>
+<dt><span class="sect1"><a href="#audit-packages">9.14. Automated security checks</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">9.16. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -876,24 +875,23 @@ builds)</a></span></dt>
 <dt><span class="chapter"><a href="#faq">9. Frequently Asked Questions</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#mailing-list-pointers">9.1. Are there any mailing lists for pkg-related discussion?</a></span></dt>
-<dt><span class="sect1"><a href="#pkgviews-docs">9.2. Where's the pkgviews documentation?</a></span></dt>
-<dt><span class="sect1"><a href="#faq-pkgtools">9.3. Utilities for package management (pkgtools)</a></span></dt>
-<dt><span class="sect1"><a href="#non-root-pkgsrc">9.4. How to use pkgsrc as non-root</a></span></dt>
-<dt><span class="sect1"><a href="#resume-transfers">9.5. How to resume transfers when fetching distfiles?</a></span></dt>
-<dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-behind-firewall">9.7. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-https">9.8. How to fetch files from HTTPS sites</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">9.9. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
-<dt><span class="sect1"><a href="#fetching-all-distfiles">9.10. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">9.11. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
+<dt><span class="sect1"><a href="#faq-pkgtools">9.2. Utilities for package management (pkgtools)</a></span></dt>
+<dt><span class="sect1"><a href="#non-root-pkgsrc">9.3. How to use pkgsrc as non-root</a></span></dt>
+<dt><span class="sect1"><a href="#resume-transfers">9.4. How to resume transfers when fetching distfiles?</a></span></dt>
+<dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.5. How can I install/use modular X.org from pkgsrc?</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-behind-firewall">9.6. How to fetch files from behind a firewall</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-https">9.7. How to fetch files from HTTPS sites</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#fetching-all-distfiles">9.9. How to fetch all distfiles at once</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221;</span> mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.12. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</a></span></dt>
-<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.13. Using 'sudo' with pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#faq.conf">9.14. How do I change the location of configuration files?</a></span></dt>
-<dt><span class="sect1"><a href="#audit-packages">9.15. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">9.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">9.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.18. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</a></span></dt>
+<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.12. Using 'sudo' with pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#faq.conf">9.13. How do I change the location of configuration files?</a></span></dt>
+<dt><span class="sect1"><a href="#audit-packages">9.14. Automated security checks</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">9.16. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -2152,7 +2150,7 @@ works.</p>
 	    <code class="filename">${LOCALBASE}/cross</code>.</p></li>
 <li class="listitem"><p><code class="varname">X11BASE</code>: Where
 	    X11 is installed on the system. The default is
-	    <code class="filename">/usr/X11R6</code>.</p></li>
+	    <code class="filename">/usr/X11R7</code>.</p></li>
 <li class="listitem"><p><code class="varname">DISTDIR</code>: Where to store the
 	    downloaded copies of the original source distributions used
 	    for building pkgsrc packages. The default is
@@ -2221,7 +2219,7 @@ works.</p>
 	    package is created for them. You can set this variable to
 	    <code class="literal">package-install</code> to automatically create binary
 	    packages after installing dependencies. Please note that the
-	    <code class="varname">PKGSRC_KEEP_BIN_PKGS</code>can be set to
+	    <code class="varname">PKGSRC_KEEP_BIN_PKGS</code> can be set to
 	    <code class="literal">yes</code> to preserve binary packages when
 	    using the <code class="literal">install</code> as well.</p></li>
 </ul></div>
@@ -2391,7 +2389,7 @@ LDFLAGS+=        -your -linkerflags
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="developer-advanced-settings"></a>5.5. Developer/advanced settings</h2></div></div></div>
-<p>XXX
+<p>
       </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
@@ -2861,24 +2859,23 @@ currently running.</p></dd>
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="sect1"><a href="#mailing-list-pointers">9.1. Are there any mailing lists for pkg-related discussion?</a></span></dt>
-<dt><span class="sect1"><a href="#pkgviews-docs">9.2. Where's the pkgviews documentation?</a></span></dt>
-<dt><span class="sect1"><a href="#faq-pkgtools">9.3. Utilities for package management (pkgtools)</a></span></dt>
-<dt><span class="sect1"><a href="#non-root-pkgsrc">9.4. How to use pkgsrc as non-root</a></span></dt>
-<dt><span class="sect1"><a href="#resume-transfers">9.5. How to resume transfers when fetching distfiles?</a></span></dt>
-<dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-behind-firewall">9.7. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-https">9.8. How to fetch files from HTTPS sites</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">9.9. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
-<dt><span class="sect1"><a href="#fetching-all-distfiles">9.10. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">9.11. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
+<dt><span class="sect1"><a href="#faq-pkgtools">9.2. Utilities for package management (pkgtools)</a></span></dt>
+<dt><span class="sect1"><a href="#non-root-pkgsrc">9.3. How to use pkgsrc as non-root</a></span></dt>
+<dt><span class="sect1"><a href="#resume-transfers">9.4. How to resume transfers when fetching distfiles?</a></span></dt>
+<dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.5. How can I install/use modular X.org from pkgsrc?</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-behind-firewall">9.6. How to fetch files from behind a firewall</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-https">9.7. How to fetch files from HTTPS sites</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#fetching-all-distfiles">9.9. How to fetch all distfiles at once</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221;</span> mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.12. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</a></span></dt>
-<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.13. Using 'sudo' with pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#faq.conf">9.14. How do I change the location of configuration files?</a></span></dt>
-<dt><span class="sect1"><a href="#audit-packages">9.15. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">9.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">9.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.18. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</a></span></dt>
+<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.12. Using 'sudo' with pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#faq.conf">9.13. How do I change the location of configuration files?</a></span></dt>
+<dt><span class="sect1"><a href="#audit-packages">9.14. Automated security checks</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">9.16. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -2917,14 +2914,7 @@ it contains items for both pkgsrc users and developers.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="pkgviews-docs"></a>9.2. Where's the pkgviews documentation?</h2></div></div></div>
-<p>Pkgviews is tightly integrated with buildlink.  You can find a
-pkgviews User's guide in
-<code class="filename">pkgsrc/mk/buildlink3/PKGVIEWS_UG</code>.</p>
-</div>
-<div class="sect1">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="faq-pkgtools"></a>9.3. Utilities for package management (pkgtools)</h2></div></div></div>
+<a name="faq-pkgtools"></a>9.2. Utilities for package management (pkgtools)</h2></div></div></div>
 <p>The directory <code class="filename">pkgsrc/pkgtools</code> contains
 a number of useful utilities for both users and developers of pkgsrc.  This
 section attempts only to make the reader aware of the utilities and when
@@ -3000,7 +2990,7 @@ utilities)</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="non-root-pkgsrc"></a>9.4. How to use pkgsrc as non-root</h2></div></div></div>
+<a name="non-root-pkgsrc"></a>9.3. How to use pkgsrc as non-root</h2></div></div></div>
 <p>If you want to use pkgsrc as non-root user, you can set some
 variables to make pkgsrc work under these conditions.  At the very least,
 you need to set <code class="varname">UNPRIVILEGED</code> to <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>; this
@@ -3021,7 +3011,7 @@ that allow finer tuning of the tree layout.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="resume-transfers"></a>9.5. How to resume transfers when fetching distfiles?</h2></div></div></div>
+<a name="resume-transfers"></a>9.4. How to resume transfers when fetching distfiles?</h2></div></div></div>
 <p>By default, resuming transfers in pkgsrc is disabled, but you can
 enable this feature by adding the option
 <code class="varname">PKG_RESUME_TRANSFERS=YES</code> into
@@ -3045,7 +3035,7 @@ FETCH_USING=	wget
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="x.org-from-pkgsrc"></a>9.6. How can I install/use modular X.org from pkgsrc?</h2></div></div></div>
+<a name="x.org-from-pkgsrc"></a>9.5. How can I install/use modular X.org from pkgsrc?</h2></div></div></div>
 <p>If you want to use modular X.org from pkgsrc instead of your system's own X11
 (<code class="filename">/usr/X11R6</code>, <code class="filename">/usr/openwin</code>, ...)
 you will have to add the following line into
@@ -3061,7 +3051,7 @@ X11_TYPE=modular
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fetch-behind-firewall"></a>9.7. How to fetch files from behind a firewall</h2></div></div></div>
+<a name="fetch-behind-firewall"></a>9.6. How to fetch files from behind a firewall</h2></div></div></div>
 <p>If you are sitting behind a firewall which does not allow direct
 connections to Internet hosts (i.e. non-NAT), you may specify the
 relevant proxy hosts.  This is done using an environment variable in the
@@ -3076,7 +3066,7 @@ http_proxy=http://orpheus.amdahl.com:80/
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fetch-https"></a>9.8. How to fetch files from HTTPS sites</h2></div></div></div>
+<a name="fetch-https"></a>9.7. How to fetch files from HTTPS sites</h2></div></div></div>
 <p>Some fetch tools are not prepared to support HTTPS by default
 (for example, the one in NetBSD 6.0), or the one installed by the
 pkgsrc bootstrap (to avoid an openssl dependency that low in the
@@ -3091,7 +3081,7 @@ installed before you can use them this way.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="passive-ftp"></a>9.9. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</h2></div></div></div>
+<a name="passive-ftp"></a>9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</h2></div></div></div>
 <p>This depends on which utility is used to retrieve distfiles.  From
 <code class="filename">bsd.pkg.mk</code>, <code class="varname">FETCH_CMD</code> is assigned
 the first available command from the following list:</p>
@@ -3111,7 +3101,7 @@ transfers.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fetching-all-distfiles"></a>9.10. How to fetch all distfiles at once</h2></div></div></div>
+<a name="fetching-all-distfiles"></a>9.9. How to fetch all distfiles at once</h2></div></div></div>
 <p>You would like to download all the distfiles in a single batch
 from work or university, where you can't run a <span class="command"><strong>make
 fetch</strong></span>.  There is an archive of distfiles on <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/" target="_top">ftp.NetBSD.org</a>,
@@ -3143,7 +3133,7 @@ by running:</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="tmac.andoc-missing"></a>9.11. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
+<a name="tmac.andoc-missing"></a>9.10. What does <span class="quote">&#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221;</span> mean?</h2></div></div></div>
 <p>When compiling the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a>
 package, you get the error from make that it doesn't know how to make
@@ -3157,7 +3147,7 @@ environment or in <a class="link" href="#mk.conf"><code class="filename">mk.conf
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bsd.own.mk-missing"></a>9.12. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</h2></div></div></div>
+<a name="bsd.own.mk-missing"></a>9.11. What does <span class="quote">&#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221;</span> mean?</h2></div></div></div>
 <p>You didn't install the compiler set, <code class="filename">comp.tgz</code>,
 when you installed your NetBSD machine.  Please get and install it, by
 extracting it in <code class="filename">/</code>:</p>
@@ -3169,7 +3159,7 @@ the one that corresponds to your release (determine via <span class="command"><s
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="using-sudo-with-pkgsrc"></a>9.13. Using 'sudo' with pkgsrc</h2></div></div></div>
+<a name="using-sudo-with-pkgsrc"></a>9.12. Using 'sudo' with pkgsrc</h2></div></div></div>
 <p>When installing packages as non-root user and using the just-in-time
 <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a> feature of pkgsrc, it can become annoying to type in the root
 password for each required package installed.  To avoid this, the sudo
@@ -3187,7 +3177,7 @@ SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="faq.conf"></a>9.14. How do I change the location of configuration files?</h2></div></div></div>
+<a name="faq.conf"></a>9.13. How do I change the location of configuration files?</h2></div></div></div>
 <p>As the system administrator, you can choose where configuration files
 are installed.  The default settings make all these files go into
 <code class="filename">${PREFIX}/etc</code> or some of its subdirectories; this may
@@ -3209,7 +3199,7 @@ reinstall any affected packages.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="audit-packages"></a>9.15. Automated security checks</h2></div></div></div>
+<a name="audit-packages"></a>9.14. Automated security checks</h2></div></div></div>
 <p>Please be aware that there can often be bugs in third-party software,
 and some of these bugs can leave a machine vulnerable to exploitation by
 attackers.  In an effort to lessen the exposure, the NetBSD packages team
@@ -3242,7 +3232,7 @@ check.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ufaq-cflags"></a>9.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</h2></div></div></div>
+<a name="ufaq-cflags"></a>9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</h2></div></div></div>
 <p>When you add your own preferences to the
 	<code class="varname">CFLAGS</code> variable in your
 	<a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, these flags are passed in
@@ -3264,7 +3254,7 @@ check.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ufaq-fail"></a>9.17. A package does not build.  What shall I do?</h2></div></div></div>
+<a name="ufaq-fail"></a>9.16. A package does not build.  What shall I do?</h2></div></div></div>
 <div class="procedure"><ol class="procedure" type="1">
 <li class="step"><p>Make sure that your copy of pkgsrc is consistent. A
 	case that occurs often is that people only update pkgsrc in
@@ -3285,7 +3275,7 @@ check.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="faq.rcs-conflicts"></a>9.18. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</h2></div></div></div>
+<a name="faq.rcs-conflicts"></a>9.17. What does <span class="quote">&#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221;</span> mean?</h2></div></div></div>
 <p>You have modified a file from pkgsrc, and someone else has
 modified that same file afterwards in the CVS repository. Both changes
 are in the same region of the file, so when you updated pkgsrc, the
@@ -5330,13 +5320,11 @@ BUILDLINK_TREE+=	-tiff
 	    <code class="filename">+CONTENTS</code> input into a list of files
 	    relative to
 	    <code class="filename">${BUILDLINK_PREFIX.<em class="replaceable"><code>pkg</code></em>}</code>
-	    on stdout.  By default for overwrite packages,
+	    on stdout.  By default,
 	    <code class="varname">BUILDLINK_CONTENTS_FILTER.<em class="replaceable"><code>pkg</code></em></code>
 	    outputs the contents of the <code class="filename">include</code>
 	    and <code class="filename">lib</code> directories in the package
-	    <code class="filename">+CONTENTS</code>, and for pkgviews packages,
-	    it outputs any libtool archives in
-	    <code class="filename">lib</code> directories.</p></li>
+	    <code class="filename">+CONTENTS</code>.</p></li>
 <li class="listitem"><p><code class="varname">BUILDLINK_FNAME_TRANSFORM.<em class="replaceable"><code>pkg</code></em></code>
 	    (not shown above) is a list of sed arguments used to
 	    transform the name of the source filename into a
@@ -7348,7 +7336,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm77799312"></a><dl>
+<a name="idm74667440"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7367,7 +7355,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm77798928"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm74667056"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7377,7 +7365,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm77797904"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm74666032"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7388,7 +7376,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm77796752"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm74665008"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8905,7 +8893,7 @@ PERL5_PACKLIST= auto/Pg/.packlist
 	need to manually patch the package.</p></li>
 <li class="listitem"><p>Check the PLIST and remove any entries under the etc/gconf
 	directory, as they will be handled automatically.  See
-	<a class="xref" href="#faq.conf" title="9.14. How do I change the location of configuration files?">Section 9.14, &#8220;How do I change the location of configuration files?&#8221;</a> for more information.</p></li>
+	<a class="xref" href="#faq.conf" title="9.13. How do I change the location of configuration files?">Section 9.13, &#8220;How do I change the location of configuration files?&#8221;</a> for more information.</p></li>
 <li class="listitem"><p>Define the <code class="varname">GCONF_SCHEMAS</code> variable in
 	your <code class="filename">Makefile</code> with a list of all
 	<code class="filename">.schemas</code> files installed by the package, if
@@ -9483,7 +9471,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm77235344"></a><dl>
+<a name="idm74107696"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9528,7 +9516,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm77234960"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm74107312"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9544,7 +9532,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm77230992"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm74103216"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9562,7 +9550,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm77226512"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm74098864"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9580,7 +9568,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm77222416"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm74094640"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9593,7 +9581,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm77220240"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm74092464"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9609,7 +9597,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm77208848"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm74085168"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9633,7 +9621,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm77200784"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm74068912"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9658,7 +9646,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm77197072"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm74065200"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9706,7 +9694,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm77190544"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm74058672"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
