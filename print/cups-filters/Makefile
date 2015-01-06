@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2014/11/20 16:04:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/06 14:56:04 bouyer Exp $
 
 DISTNAME=	cups-filters-1.0.61
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +17,7 @@ USE_TOOLS+=	bash:run pkg-config
 USE_LANGUAGES=	c c++
 
 CONFLICTS+=	cups<1.6
+DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 
 PKGCONFIG_OVERRIDE+=	libcupsfilters.pc.in
 PKGCONFIG_OVERRIDE+=	libfontembed.pc.in
