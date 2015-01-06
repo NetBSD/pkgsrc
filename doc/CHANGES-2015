@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.110 2015/01/05 23:25:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.111 2015/01/06 10:27:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/musicpd to 0.19.7 [wiz 2015-01-05]
 	Updated x11/rxvt-unicode to 9.21 [morr 2015-01-05]
 	Updated sysutils/dbus to 1.8.14 [wiz 2015-01-05]
+	Updated devel/gyp to 0.1pre2019 [ryoon 2015-01-06]
