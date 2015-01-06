@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/01/01 21:39:45 he Exp $
+# $NetBSD: Makefile,v 1.28 2015/01/06 09:51:51 he Exp $
 
 .include "dist.mk"
 
@@ -29,6 +29,8 @@ CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
 USE_LANGUAGES=		c c++
+
+MAKE_JOBS_SAFE=		no
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
