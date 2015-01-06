@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/10/29 05:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/06 13:32:25 mef Exp $
 
-DISTNAME=		slock-1.0
+DISTNAME=		slock-1.2
 CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/tools/
 
@@ -9,27 +9,36 @@ HOMEPAGE=		http://tools.suckless.org/slock
 COMMENT=		Simple X11 screen locker
 LICENSE=		mit
 
+MAKE_JOBS_SAFE=	no
+
 NO_CONFIGURE=		yes
+
+# Adjust config.mk
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-build
+SUBST_MESSAGE.makefile=	Fixing config.mk
+SUBST_FILES.makefile=	config.mk
+SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
+SUBST_SED.makefile+=	-e '/^CPPFLAGS/ s,-DHAVE_SHADOW_H,,'
+SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
+SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
+
 INSTALLATION_DIRS=	bin share/doc/slock
 
 .include "../../mk/bsd.prefs.mk"
 
 .if !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
-CFLAGS+=-DHAVE_SHADOW_H
+CFLAGS+=		-DHAVE_SHADOW_H
 .endif
 
-# TODO: handle -lcrypt too
+.if !(${OPSYS} == "OpenBSD" || ${OPSYS} == "Darwin")
 LIBS+=	-lcrypt
 
-do-build:
-	cd ${WRKSRC} && ${CC} -c -DVERSION=\"1.0\" ${CFLAGS} slock.c && \
-		${CC} -o slock slock.o -lc ${LIBS} ${X11_LDFLAGS} -lX11
+.endif
 
 SPECIAL_PERMS+=	bin/slock ${SETUID_ROOT_PERMS}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/slock ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/slock/
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
