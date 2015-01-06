@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.121 2015/01/06 14:12:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.122 2015/01/06 14:23:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/slock to 1.2 [mef 2015-01-06]
 	Updated devel/p5-Module-CoreList to 5.20141220 [wen 2015-01-06]
 	Updated archivers/unzip to 6.0nb3 [wiz 2015-01-06]
+	Updated devel/p5-PPI to 1.220 [wen 2015-01-06]
