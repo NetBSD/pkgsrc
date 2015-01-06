@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/01/01 21:05:13 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/01/06 23:00:16 joerg Exp $
 
 SHA1 (qtbase-opensource-src-5.4.0.tar.xz) = 2e3d32f32e36a92782ca66c260940824746900bd
 RMD160 (qtbase-opensource-src-5.4.0.tar.xz) = 0df3e024b331c705e895fb5bb76cacd71c6e4909
@@ -10,7 +10,7 @@ SHA1 (patch-mkspecs_features_qt__module__pris.prf) = edaab0b9e407cc52f4682ce1cf8
 SHA1 (patch-mkspecs_features_simd.prf) = 3dea0d38e2791bdcae589bef38f2cce29a4c5b6c
 SHA1 (patch-qmake_Makefile.unix) = d07bfa160af94d06546865662bc2049a789fffec
 SHA1 (patch-qmake_generators_makefile.cpp) = 9db55a0a64183b9bff830af185ea1eb7c59d296a
-SHA1 (patch-qmake_generators_unix_unixmake.cpp) = 8b8f1b6b34c06f50fb1c20c8c13220a7b4b46989
+SHA1 (patch-qmake_generators_unix_unixmake.cpp) = b278ab55b2a8083d5bd343d9e748790cf99dc4e6
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 7c2966006f20390c5b40698f1a110debd0b88c3a
 SHA1 (patch-src_concurrent_qtconcurrentiteratekernel.cpp) = abdb069ef9b77ced3c18a9cc9c18bcdfeda02ce8
 SHA1 (patch-src_corelib_arch_sparc_arch.pri) = cb95ec1bb7aa6084f14dff5828854deed54b8ca1
