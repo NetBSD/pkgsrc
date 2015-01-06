@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/11 09:54:30 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2015/01/06 14:41:08 jperkin Exp $
 
 DISTNAME=	libpeas-1.12.1
 CATEGORIES=	devel gnome
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 
 .include "../../lang/python/pyversion.mk"
 CONFIGURE_ARGS+=	--disable-python2
-CONFIGURE_ENV+=		PYTHON3_CONFIG=/usr/pkg/bin/python${PYVERSSUFFIX}-config
+CONFIGURE_ENV+=		PYTHON3_CONFIG=${PYTHONCONFIG}
 
 PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
