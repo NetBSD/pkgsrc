@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 13:55:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/06 22:59:07 joerg Exp $
 
 DISTNAME=	augeas-1.3.0
 CATEGORIES=	sysutils
@@ -15,5 +15,6 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	augeas.pc.in
 
+.include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
