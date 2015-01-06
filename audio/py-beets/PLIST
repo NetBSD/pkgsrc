@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/10/17 16:04:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/01/06 19:50:43 drochner Exp $
 bin/beet
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -56,9 +56,6 @@ ${PYSITELIB}/beets/ui/commands.py
 ${PYSITELIB}/beets/ui/commands.pyc
 ${PYSITELIB}/beets/ui/commands.pyo
 ${PYSITELIB}/beets/ui/completion_base.sh
-${PYSITELIB}/beets/ui/migrate.py
-${PYSITELIB}/beets/ui/migrate.pyc
-${PYSITELIB}/beets/ui/migrate.pyo
 ${PYSITELIB}/beets/util/__init__.py
 ${PYSITELIB}/beets/util/__init__.pyc
 ${PYSITELIB}/beets/util/__init__.pyo
@@ -119,15 +116,15 @@ ${PYSITELIB}/beetsplug/duplicates.pyo
 ${PYSITELIB}/beetsplug/echonest.py
 ${PYSITELIB}/beetsplug/echonest.pyc
 ${PYSITELIB}/beetsplug/echonest.pyo
-${PYSITELIB}/beetsplug/echonest_tempo.py
-${PYSITELIB}/beetsplug/echonest_tempo.pyc
-${PYSITELIB}/beetsplug/echonest_tempo.pyo
 ${PYSITELIB}/beetsplug/embedart.py
 ${PYSITELIB}/beetsplug/embedart.pyc
 ${PYSITELIB}/beetsplug/embedart.pyo
 ${PYSITELIB}/beetsplug/fetchart.py
 ${PYSITELIB}/beetsplug/fetchart.pyc
 ${PYSITELIB}/beetsplug/fetchart.pyo
+${PYSITELIB}/beetsplug/freedesktop.py
+${PYSITELIB}/beetsplug/freedesktop.pyc
+${PYSITELIB}/beetsplug/freedesktop.pyo
 ${PYSITELIB}/beetsplug/fromfilename.py
 ${PYSITELIB}/beetsplug/fromfilename.pyc
 ${PYSITELIB}/beetsplug/fromfilename.pyo
@@ -160,6 +157,9 @@ ${PYSITELIB}/beetsplug/lastgenre/__init__.pyc
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyo
 ${PYSITELIB}/beetsplug/lastgenre/genres-tree.yaml
 ${PYSITELIB}/beetsplug/lastgenre/genres.txt
+${PYSITELIB}/beetsplug/lastimport.py
+${PYSITELIB}/beetsplug/lastimport.pyc
+${PYSITELIB}/beetsplug/lastimport.pyo
 ${PYSITELIB}/beetsplug/lyrics.py
 ${PYSITELIB}/beetsplug/lyrics.pyc
 ${PYSITELIB}/beetsplug/lyrics.pyo
@@ -178,9 +178,15 @@ ${PYSITELIB}/beetsplug/mpdstats.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo
+${PYSITELIB}/beetsplug/permissions.py
+${PYSITELIB}/beetsplug/permissions.pyc
+${PYSITELIB}/beetsplug/permissions.pyo
 ${PYSITELIB}/beetsplug/play.py
 ${PYSITELIB}/beetsplug/play.pyc
 ${PYSITELIB}/beetsplug/play.pyo
+${PYSITELIB}/beetsplug/plexupdate.py
+${PYSITELIB}/beetsplug/plexupdate.pyc
+${PYSITELIB}/beetsplug/plexupdate.pyo
 ${PYSITELIB}/beetsplug/random.py
 ${PYSITELIB}/beetsplug/random.pyc
 ${PYSITELIB}/beetsplug/random.pyo
