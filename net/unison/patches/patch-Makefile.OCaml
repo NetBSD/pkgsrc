@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.OCaml,v 1.4 2012/12/09 15:02:51 wiz Exp $
+$NetBSD: patch-Makefile.OCaml,v 1.5 2015/01/06 12:58:37 wiz Exp $
 
 Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
 
---- Makefile.OCaml.orig	2011-04-16 20:35:38.000000000 +0000
+--- Makefile.OCaml.orig	2014-09-28 16:48:05.000000000 +0000
 +++ Makefile.OCaml
-@@ -71,8 +71,8 @@ OCAMLLIBDIR=$(shell ocamlc -v | tail -1 
+@@ -75,8 +75,8 @@ OCAMLLIBDIR=$(shell ocamlc -v | tail -1 
  #
  # This should be set to an appropriate value automatically, depending
  # on whether the lablgtk library is available
@@ -15,7 +15,7 @@ Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
  ##BCP [3/2007]: Removed temporarily, since the OSX UI is not working well 
  ## at the moment and we don't want to confuse people by building it by default
  ifeq ($(OSARCH),osx)
-@@ -285,14 +285,14 @@ endif
+@@ -292,14 +292,14 @@ endif
  
  # Gtk GUI
  ifeq ($(UISTYLE), gtk)
@@ -32,12 +32,12 @@ Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
    OCAMLOBJS+=pixmaps.cmo uigtk2.cmo linkgtk2.cmo
    OCAMLLIBS+=lablgtk.cma
  endif
-@@ -364,7 +364,7 @@ ifeq ($(PROFILING), true)
+@@ -384,7 +384,7 @@ ifeq ($(PROFILING), true)
  else
-   OCAMLC=ocamlc
+   OCAMLC=$(EXEC_PREFIX)ocamlc
  endif
--OCAMLOPT=ocamlopt
-+OCAMLOPT=ocamlopt.opt
+-OCAMLOPT=$(EXEC_PREFIX)ocamlopt
++OCAMLOPT=$(EXEC_PREFIX)ocamlopt.opt
  
  ifeq ($(NATIVE), true)
    ## Set up for native code compilation
