@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1049 2015/01/04 11:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.1050 2015/01/06 12:57:36 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -736,6 +736,7 @@ SUBDIR+=	unbound
 SUBDIR+=	unfs3
 SUBDIR+=	unison
 SUBDIR+=	unison2.32
+SUBDIR+=	unison2.40
 SUBDIR+=	unworkable
 SUBDIR+=	upclient
 SUBDIR+=	upnpinspector
