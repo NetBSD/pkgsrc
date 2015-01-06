@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.124 2015/01/06 14:39:59 wen Exp $
+$NetBSD: CHANGES-2015,v 1.125 2015/01/06 15:03:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-PPI to 1.220 [wen 2015-01-06]
 	Updated devel/p5-Readonly to 2.00 [wen 2015-01-06]
 	Updated devel/p5-Perl-Critic to 1.123 [wen 2015-01-06]
+	Updated finance/gnucash-docs to 2.6.5 [wiz 2015-01-06]
