@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.32 2014/06/07 23:49:47 ryoon Exp $
+$NetBSD: distinfo,v 1.33 2015/01/06 12:40:06 mef Exp $
 
-SHA1 (irssi-0.8.16.tar.bz2) = 631dd70b6d3872c5f81c1a46a6872fef5bd65ffb
-RMD160 (irssi-0.8.16.tar.bz2) = 2d4caefc9d713b0ff4b26ceaa63430f1bb346caa
-Size (irssi-0.8.16.tar.bz2) = 986129 bytes
+SHA1 (irssi-0.8.17.tar.bz2) = 3bdee9a1c1f3e99673143c275d2c40275136664a
+RMD160 (irssi-0.8.17.tar.bz2) = 0ee6f41a4725c8498030d2c524e202df78a2aff6
+Size (irssi-0.8.17.tar.bz2) = 1102196 bytes
 SHA1 (patch-aa) = 83a0f6def09cb283aa55b63a249a81121748232b
 SHA1 (patch-ad) = 8cb41612afcd6088b869235166da9a6eb37e6ec7
