@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/12/12 22:55:25 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/06 11:53:39 szptvlfn Exp $
 
-DISTNAME=	scientific-0.3.3.1
-PKGREVISION=	2
+DISTNAME=	scientific-0.3.3.4
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
-COMMENT=	Arbitrary-precision floating-point numbers
+COMMENT=	Numbers represented using scientific notation
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
