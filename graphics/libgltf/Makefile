@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/07 19:39:35 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/06 10:44:38 ryoon Exp $
 
 DISTNAME=	libgltf-0.0.2
 PKGREVISION=	1
@@ -20,6 +20,9 @@ PKGCONFIG_OVERRIDE+=	libgltf.pc.in
 
 # Fix build with GCC 4.8.3 under NetBSD/amd64 7.99.1
 CONFIGURE_ARGS+=	--disable-werror
+
+# Fix build with GCC 4.5.3 under NetBSD 6.1
+BUILDLINK_TRANSFORM+=	rm:-Weffc++
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
