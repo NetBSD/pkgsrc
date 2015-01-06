@@ -1,19 +1,9 @@
-$NetBSD: patch-qmake_generators_unix_unixmake.cpp,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-qmake_generators_unix_unixmake.cpp,v 1.2 2015/01/06 23:00:16 joerg Exp $
 
-* First chunk, add a whitespace after -rpath.
 * fix install target so that destdir is added when installing QMAKE_TARGET
 
 --- qmake/generators/unix/unixmake.cpp.orig	2014-12-05 16:24:30.000000000 +0000
 +++ qmake/generators/unix/unixmake.cpp
-@@ -169,7 +169,7 @@ UnixMakefileGenerator::init()
-             QString rpathdir = rpathdirs[i].toQString();
-             if (!rpathdir.startsWith('@') && !rpathdir.startsWith('$'))
-                 rpathdir = QFileInfo(rpathdir).absoluteFilePath();
--            project->values("QMAKE_LFLAGS") += var("QMAKE_LFLAGS_RPATH") + escapeFilePath(rpathdir);
-+            project->values("QMAKE_LFLAGS") += var("QMAKE_LFLAGS_RPATH") + " " + escapeFilePath(rpathdir);
-         }
-     }
-     if (!project->isEmpty("QMAKE_RPATHLINKDIR")) {
 @@ -353,27 +353,29 @@ UnixMakefileGenerator::init()
                  if (!strncmp(libtoolify[i], "QMAKE_LINK", 10) || !strcmp(libtoolify[i], "QMAKE_AR_CMD")) {
                      libtool_flags += " --mode=link";
