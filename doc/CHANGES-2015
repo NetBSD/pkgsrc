@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.114 2015/01/06 11:27:48 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.115 2015/01/06 11:54:00 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -127,3 +127,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/ibus-mozc to 2.16.2007.102 [ryoon 2015-01-06]
 	Updated www/seamonkey-l10n to 2.31 [ryoon 2015-01-06]
 	Updated misc/fd to 3.01b [ryoon 2015-01-06]
+	Updated math/hs-scientific to 0.3.3.4 [szptvlfn 2015-01-06]
