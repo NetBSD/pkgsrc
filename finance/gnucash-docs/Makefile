@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2015/01/03 18:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/01/06 15:03:01 wiz Exp $
 
-DISTNAME=		gnucash-docs-2.6.3
+DISTNAME=		gnucash-docs-2.6.5
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
-DEPENDS+=		yelp-[0-9]*:../../misc/yelp
+DEPENDS+=		yelp-[0-9]*:../../misc/yelp3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
