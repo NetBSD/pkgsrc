@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2013/10/27 20:41:49 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2015/01/06 17:45:46 wiz Exp $
 
 Caution: the extra cpp checking (the three hunks containing "Should be
 one line") is manually hacked and not reflected in configure.in; do
@@ -9,12 +9,14 @@ started doing regrettable things with backslash-escaped newlines.
 * Fix build on NetBSD 6.99.23, gcc -E -traditional-cpp with native X
   results syntax error. Use -traditional-cpp for Makefile generation only.
 
---- configure.orig	2003-03-18 14:19:12.000000000 +0000
-+++ configure
-@@ -822,9 +824,17 @@ case "${canonical}" in
+--- configure.orig	2003-03-18 09:19:12.000000000 -0500
++++ configure	2015-01-05 04:09:09.000000000 -0500
+@@ -821,10 +821,18 @@ case "${canonical}" in
+       powerpc-*-netbsd*) machine=macppc ;;
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
-       arm-*-netbsd*)	machine=arm ;;
+-      arm-*-netbsd*)	machine=arm ;;
++      arm*-*-netbsd*)	machine=arm ;;
 +      x86_64-*-netbsd*)	machine=amd64 ;;
 +      hppa-*-netbsd*)	machine=hp800 ;;
 +      shle-*-netbsd*)	machine=sh3el ;;
@@ -29,7 +31,7 @@ started doing regrettable things with backslash-escaped newlines.
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
-@@ -909,6 +919,10 @@ case "${canonical}" in
+@@ -909,6 +917,10 @@ case "${canonical}" in
      machine=macppc opsys=gnu-linux
    ;;
  
@@ -40,7 +42,7 @@ started doing regrettable things with backslash-escaped newlines.
    ## Altos 3068
    m68*-altos-sysv* )
      machine=altos opsys=usg5-2
-@@ -1659,6 +1673,7 @@ case "${canonical}" in
+@@ -1659,6 +1671,7 @@ case "${canonical}" in
        *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
        *-386bsd* )	        opsys=386bsd ;;
        *-freebsd* )	        opsys=freebsd ;;
@@ -48,7 +50,7 @@ started doing regrettable things with backslash-escaped newlines.
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
-@@ -2052,15 +2067,20 @@ else
+@@ -2052,15 +2065,20 @@ else
    CPP="${CC-cc} -E"
    # On the NeXT, cc -E runs the code through the compiler's parser,
    # not just through cpp.
@@ -71,7 +73,7 @@ started doing regrettable things with backslash-escaped newlines.
  if test -z "$ac_err"; then
    :
  else
-@@ -2068,16 +2088,19 @@ else
+@@ -2068,16 +2086,19 @@ else
    echo "configure: failed program was:" >&5
    cat conftest.$ac_ext >&5
    rm -rf conftest*
@@ -94,7 +96,7 @@ started doing regrettable things with backslash-escaped newlines.
  if test -z "$ac_err"; then
    :
  else
-@@ -2091,10 +2114,13 @@ else
+@@ -2091,10 +2112,13 @@ else
  #include "confdefs.h"
  #include <assert.h>
  Syntax Error
@@ -110,7 +112,7 @@ started doing regrettable things with backslash-escaped newlines.
  if test -z "$ac_err"; then
    :
  else
-@@ -2416,7 +2442,7 @@ ac_link="$ac_link $ld_switch_machine $ld
+@@ -2416,7 +2440,7 @@ ac_link="$ac_link $ld_switch_machine $ld
  if test x"${OVERRIDE_CPPFLAGS}" != x; then
    CPPFLAGS="${OVERRIDE_CPPFLAGS}"
  else
@@ -119,7 +121,7 @@ started doing regrettable things with backslash-escaped newlines.
  fi
  
  
-@@ -5583,24 +5619,24 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -5583,24 +5607,24 @@ if eval "test \"`echo '$ac_cv_header_'$a
    echo "$ac_t""yes" 1>&6
    # EGifPutExtensionLast only exists from version libungif-4.1.0b1.
  # Earlier versions can crash Emacs.
@@ -150,7 +152,7 @@ started doing regrettable things with backslash-escaped newlines.
  ; return 0; }
  EOF
  if { (eval echo configure:5607: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-@@ -9124,6 +9160,22 @@ EOF
+@@ -9124,6 +9148,22 @@ EOF
  fi
  
  
@@ -173,7 +175,7 @@ started doing regrettable things with backslash-escaped newlines.
  # Set up the CFLAGS for real compilation, so we can substitute it.
  CFLAGS="$REAL_CFLAGS"
  CPPFLAGS="$REAL_CPPFLAGS"
-@@ -9735,7 +9793,7 @@ echo creating lib-src/Makefile
+@@ -9735,7 +9777,7 @@ echo creating lib-src/Makefile
    sed -e '1,/start of cpp stuff/d'\
        -e 's,/\*\*/#\(.*\)$,/* \1 */,' \
        < Makefile.c > junk.c
@@ -182,7 +184,7 @@ started doing regrettable things with backslash-escaped newlines.
        sed -e 's/^ /	/' -e '/^#/d' -e '/^[ 	]*$/d' > junk2.c
    cat junk1.c junk2.c > Makefile.new
    rm -f junk.c junk1.c junk2.c
-@@ -9751,7 +9809,7 @@ echo creating src/Makefile
+@@ -9751,7 +9793,7 @@ echo creating src/Makefile
    sed -e '1,/start of cpp stuff/d'\
        -e 's,/\*\*/#\(.*\)$,/* \1 */,' \
        < Makefile.c > junk.c
