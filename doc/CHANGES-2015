@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.111 2015/01/06 10:27:32 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.112 2015/01/06 10:32:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -119,3 +119,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/rxvt-unicode to 9.21 [morr 2015-01-05]
 	Updated sysutils/dbus to 1.8.14 [wiz 2015-01-05]
 	Updated devel/gyp to 0.1pre2019 [ryoon 2015-01-06]
+	Updated inputmethod/mozc-server to 2.16.2007.102 [ryoon 2015-01-06]
+	Updated inputmethod/mozc-renderer to 2.16.2007.102 [ryoon 2015-01-06]
+	Updated inputmethod/mozc-tool to 2.16.2007.102 [ryoon 2015-01-06]
+	Updated inputmethod/mozc-elisp to 2.16.2007.102 [ryoon 2015-01-06]
+	Updated inputmethod/uim-mozc to 2.16.2007.102 [ryoon 2015-01-06]
+	Updated inputmethod/ibus-mozc to 2.16.2007.102 [ryoon 2015-01-06]
