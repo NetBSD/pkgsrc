@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13998 2015/01/06 12:58:45 wiz Exp $
+$NetBSD: TODO,v 1.13999 2015/01/06 13:32:34 mef Exp $
 
 Suggested new packages
 ======================
@@ -1024,7 +1024,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skype-4.3
-	o slock-1.1 [pkg/49063]
 	o slurm-14.11.2
 	o smproxy-1.0.3
 	o snd-10.6
