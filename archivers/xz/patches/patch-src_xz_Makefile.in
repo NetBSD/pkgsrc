@@ -1,0 +1,22 @@
+$NetBSD: patch-src_xz_Makefile.in,v 1.1 2015/01/06 22:57:58 joerg Exp $
+
+--- src/xz/Makefile.in.orig	2015-01-06 21:53:59.000000000 +0000
++++ src/xz/Makefile.in
+@@ -163,7 +163,7 @@ am__v_CC_1 = 
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(AM_LDFLAGS) $(LDFLAGS) -o $@
++	-o $@
+ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
+ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
+@@ -478,7 +478,7 @@ clean-binPROGRAMS:
+ 
+ xz$(EXEEXT): $(xz_OBJECTS) $(xz_DEPENDENCIES) $(EXTRA_xz_DEPENDENCIES) 
+ 	@rm -f xz$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(xz_OBJECTS) $(xz_LDADD) $(LIBS)
++	$(AM_V_CCLD)$(LINK) $(xz_OBJECTS) $(xz_LDADD) $(AM_LDFLAGS) $(LDFLAGS) $(LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
