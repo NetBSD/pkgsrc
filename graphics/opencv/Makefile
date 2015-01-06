@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/11/30 02:31:22 markd Exp $
+# $NetBSD: Makefile,v 1.52 2015/01/06 14:28:12 jperkin Exp $
 
 DISTNAME=	opencv-2.4.9
 PKGREVISION=	2
@@ -36,6 +36,10 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11
 .endif
+
+OPSYSVARS+=		CMAKE_ARGS
+CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
+CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
 
 PLIST_VARS+=	opencl
 
