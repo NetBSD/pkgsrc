@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13995 2015/01/05 22:19:11 wiz Exp $
+$NetBSD: TODO,v 1.13996 2015/01/06 11:26:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -635,7 +635,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.6.5
-	o gnuchess-6.1.2
+	o gnuchess-6.2.1
 	o gnuradio-core-3.7.5.1 [wip]
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
