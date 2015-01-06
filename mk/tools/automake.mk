@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.22 2014/08/02 04:27:51 obache Exp $
+# $NetBSD: automake.mk,v 1.23 2015/01/06 09:26:55 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -189,5 +189,5 @@ ${_TOOLS_AM_TYPE.${_t_}}+=	${_t_}
 .endif
 
 .if !empty(USE_TOOLS:Mgettext-m4)
-TOOL_DEPENDS+=	{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
+TOOL_DEPENDS+=	{gettext-m4-[0-9]*,gettext-0.10.35nb1}:../../devel/gettext-m4
 .endif
