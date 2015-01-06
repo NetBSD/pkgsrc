@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1 2015/01/06 12:57:03 wiz Exp $
+
+Correct installation procedure
+--- Makefile.orig	2011-04-16 20:35:38.000000000 +0000
++++ Makefile
+@@ -49,7 +49,7 @@ all:: INSTALL
+ 
+ INSTALL: $(NAME)$(EXEC_EXT)
+ # file isn't made for OS X, so check that it's there first
+-	(if [ -f $(NAME) ]; then ./$(NAME) -doc install > INSTALLATION; fi)
++##	(if [ -f $(NAME) ]; then ./$(NAME) -doc install > INSTALLATION; fi)
+ 
+ ########################################################################
+ ## Miscellaneous developer-only switches
+@@ -80,7 +80,7 @@ include Makefile.OCaml
+ ######################################################################
+ # Installation
+ 
+-INSTALLDIR = $(HOME)/bin/
++INSTALLDIR = ${DESTDIR}$(PREFIX)/bin/
+ 
+ # This has two names because on OSX the file INSTALL shadows the target 'install'!
+ install: doinstall
+@@ -92,9 +92,7 @@ text: 
+ 	$(MAKE) -C .. text
+ 
+ doinstall: $(NAME)$(EXEC_EXT)
+-	-mv $(INSTALLDIR)/$(NAME)$(EXEC_EXT) /tmp/$(NAME)-$(shell echo $$$$)
+ 	cp $(NAME)$(EXEC_EXT) $(INSTALLDIR)
+-	cp $(NAME)$(EXEC_EXT) $(INSTALLDIR)$(NAME)-$(MAJORVERSION)$(EXEC_EXT)
+ 
+ 
+ ######################################################################
+@@ -350,7 +348,6 @@ tags:
+ 	    $(ETAGS) *.mli */*.mli *.ml */*.ml */*.m *.c */*.c *.txt \
+           ; fi 
+ 
+-all:: TAGS
+ 
+ TAGS:
+ 	$(MAKE) tags
