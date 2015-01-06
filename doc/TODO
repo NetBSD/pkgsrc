@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13997 2015/01/06 12:54:00 mef Exp $
+$NetBSD: TODO,v 1.13998 2015/01/06 12:58:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1105,7 +1105,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
 	o unicap-0.9.8
-	o unison-2.48.3
 	o unrealircd-3.2.10.2
 	o userppp-030706
 	o utilisp-1.14
