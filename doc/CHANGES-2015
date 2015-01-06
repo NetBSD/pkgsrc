@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.116 2015/01/06 12:54:00 mef Exp $
+$NetBSD: CHANGES-2015,v 1.117 2015/01/06 12:57:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -129,3 +129,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/fd to 3.01b [ryoon 2015-01-06]
 	Updated math/hs-scientific to 0.3.3.4 [szptvlfn 2015-01-06]
 	Updated chat/irssi to 0.8.17 [mef 2015-01-06]
+	Added net/unison2.40 version 2.40.102nb22 [wiz 2015-01-06]
