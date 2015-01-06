@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2014/11/24 12:22:17 mef Exp $
+# $NetBSD: Makefile,v 1.25 2015/01/06 19:54:39 drochner Exp $
 
-DISTNAME=	picard-1.3
+DISTNAME=	picard-1.3.1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/
 
@@ -9,13 +9,15 @@ HOMEPAGE=	http://musicbrainz.org/doc/Picard_Tagger
 COMMENT=	Audio file tagger
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/picard-release-1.3.1
+
 DEPENDS+=	${PYPKGPREFIX}-qt4>=4.5:../../x11/py-qt4
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.20:../../audio/py-mutagen
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.3.1
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}
