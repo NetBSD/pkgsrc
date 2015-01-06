@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/10/17 15:58:57 drochner Exp $
+$NetBSD: distinfo,v 1.9 2015/01/06 19:52:40 drochner Exp $
 
-SHA1 (mutagen-1.25.1.tar.gz) = ac5c193f783ed69d0d3173110e602ea3c29e8169
-RMD160 (mutagen-1.25.1.tar.gz) = 4b21a39e2bbe72005e07069105394eecbfb31e10
-Size (mutagen-1.25.1.tar.gz) = 850800 bytes
-SHA1 (patch-aa) = 3a19a9abdfa15d2e321238a8820ae7ab7011ce62
+SHA1 (mutagen-1.27.tar.gz) = 4c9b874feb6f1e9dbf6f2c37341dad3a47135640
+RMD160 (mutagen-1.27.tar.gz) = b6d4c5c880b9eba4b0377e04421c840392c20eff
+Size (mutagen-1.27.tar.gz) = 875720 bytes
+SHA1 (patch-aa) = 23644c996940b95bb430ae303d3aef2e0a9287d4

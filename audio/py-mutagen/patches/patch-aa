@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2014/10/17 15:58:57 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2015/01/06 19:52:40 drochner Exp $
 
---- setup.py.orig	2014-10-04 21:18:16.000000000 +0000
+--- setup.py.orig	2014-11-26 13:18:57.000000000 +0000
 +++ setup.py
-@@ -253,15 +253,15 @@ if __name__ == "__main__":
+@@ -256,15 +256,15 @@ if __name__ == "__main__":
              'Topic :: Multimedia :: Sound/Audio',
            ],
-           packages=["mutagen", "mutagen.id3"],
+           packages=["mutagen", "mutagen.id3", "mutagen.mp4"],
 -          data_files=data_files,
 -          scripts=[os.path.join("tools", name) for name in [
 -            "mid3cp",

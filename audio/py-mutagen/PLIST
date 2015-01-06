@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/17 15:58:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/01/06 19:52:40 drochner Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
@@ -21,6 +21,9 @@ ${PYSITELIB}/mutagen/_util.pyo
 ${PYSITELIB}/mutagen/_vorbis.py
 ${PYSITELIB}/mutagen/_vorbis.pyc
 ${PYSITELIB}/mutagen/_vorbis.pyo
+${PYSITELIB}/mutagen/aac.py
+${PYSITELIB}/mutagen/aac.pyc
+${PYSITELIB}/mutagen/aac.pyo
 ${PYSITELIB}/mutagen/aiff.py
 ${PYSITELIB}/mutagen/aiff.pyc
 ${PYSITELIB}/mutagen/aiff.pyo
@@ -60,9 +63,18 @@ ${PYSITELIB}/mutagen/monkeysaudio.pyo
 ${PYSITELIB}/mutagen/mp3.py
 ${PYSITELIB}/mutagen/mp3.pyc
 ${PYSITELIB}/mutagen/mp3.pyo
-${PYSITELIB}/mutagen/mp4.py
-${PYSITELIB}/mutagen/mp4.pyc
-${PYSITELIB}/mutagen/mp4.pyo
+${PYSITELIB}/mutagen/mp4/__init__.py
+${PYSITELIB}/mutagen/mp4/__init__.pyc
+${PYSITELIB}/mutagen/mp4/__init__.pyo
+${PYSITELIB}/mutagen/mp4/_as_entry.py
+${PYSITELIB}/mutagen/mp4/_as_entry.pyc
+${PYSITELIB}/mutagen/mp4/_as_entry.pyo
+${PYSITELIB}/mutagen/mp4/_atom.py
+${PYSITELIB}/mutagen/mp4/_atom.pyc
+${PYSITELIB}/mutagen/mp4/_atom.pyo
+${PYSITELIB}/mutagen/mp4/_util.py
+${PYSITELIB}/mutagen/mp4/_util.pyc
+${PYSITELIB}/mutagen/mp4/_util.pyo
 ${PYSITELIB}/mutagen/musepack.py
 ${PYSITELIB}/mutagen/musepack.pyc
 ${PYSITELIB}/mutagen/musepack.pyo
