@@ -12,9 +12,9 @@ Hubert Feyrer
 
 The pkgsrc Developers
 
-Copyright   1994-2014 The NetBSD Foundation, Inc
+Copyright   1994-2015 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.27 2014/09/19 04:53:09 jnemeth Exp $
+$NetBSD: pkgsrc.xml,v 1.28 2015/01/01 05:19:02 jnemeth Exp $
 
 Abstract
 
@@ -131,24 +131,23 @@ I. The pkgsrc user's guide
     9. Frequently Asked Questions
 
         9.1. Are there any mailing lists for pkg-related discussion?
-        9.2. Where's the pkgviews documentation?
-        9.3. Utilities for package management (pkgtools)
-        9.4. How to use pkgsrc as non-root
-        9.5. How to resume transfers when fetching distfiles?
-        9.6. How can I install/use modular X.org from pkgsrc?
-        9.7. How to fetch files from behind a firewall
-        9.8. How to fetch files from HTTPS sites
-        9.9. How do I tell make fetch to do passive FTP?
-        9.10. How to fetch all distfiles at once
-        9.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc"
+        9.2. Utilities for package management (pkgtools)
+        9.3. How to use pkgsrc as non-root
+        9.4. How to resume transfers when fetching distfiles?
+        9.5. How can I install/use modular X.org from pkgsrc?
+        9.6. How to fetch files from behind a firewall
+        9.7. How to fetch files from HTTPS sites
+        9.8. How do I tell make fetch to do passive FTP?
+        9.9. How to fetch all distfiles at once
+        9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc"
             mean?
-        9.12. What does "Could not find bsd.own.mk" mean?
-        9.13. Using 'sudo' with pkgsrc
-        9.14. How do I change the location of configuration files?
-        9.15. Automated security checks
-        9.16. Why do some packages ignore my CFLAGS?
-        9.17. A package does not build. What shall I do?
-        9.18. What does "Makefile appears to contain unresolved cvs/rcs/???
+        9.11. What does "Could not find bsd.own.mk" mean?
+        9.12. Using 'sudo' with pkgsrc
+        9.13. How do I change the location of configuration files?
+        9.14. Automated security checks
+        9.15. Why do some packages ignore my CFLAGS?
+        9.16. A package does not build. What shall I do?
+        9.17. What does "Makefile appears to contain unresolved cvs/rcs/???
             merge conflicts" mean?
 
 II. The pkgsrc developer's guide
@@ -776,23 +775,22 @@ Table of Contents
 9. Frequently Asked Questions
 
     9.1. Are there any mailing lists for pkg-related discussion?
-    9.2. Where's the pkgviews documentation?
-    9.3. Utilities for package management (pkgtools)
-    9.4. How to use pkgsrc as non-root
-    9.5. How to resume transfers when fetching distfiles?
-    9.6. How can I install/use modular X.org from pkgsrc?
-    9.7. How to fetch files from behind a firewall
-    9.8. How to fetch files from HTTPS sites
-    9.9. How do I tell make fetch to do passive FTP?
-    9.10. How to fetch all distfiles at once
-    9.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
-    9.12. What does "Could not find bsd.own.mk" mean?
-    9.13. Using 'sudo' with pkgsrc
-    9.14. How do I change the location of configuration files?
-    9.15. Automated security checks
-    9.16. Why do some packages ignore my CFLAGS?
-    9.17. A package does not build. What shall I do?
-    9.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+    9.2. Utilities for package management (pkgtools)
+    9.3. How to use pkgsrc as non-root
+    9.4. How to resume transfers when fetching distfiles?
+    9.5. How can I install/use modular X.org from pkgsrc?
+    9.6. How to fetch files from behind a firewall
+    9.7. How to fetch files from HTTPS sites
+    9.8. How do I tell make fetch to do passive FTP?
+    9.9. How to fetch all distfiles at once
+    9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+    9.11. What does "Could not find bsd.own.mk" mean?
+    9.12. Using 'sudo' with pkgsrc
+    9.13. How do I change the location of configuration files?
+    9.14. Automated security checks
+    9.15. Why do some packages ignore my CFLAGS?
+    9.16. A package does not build. What shall I do?
+    9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
         conflicts" mean?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
@@ -1885,7 +1883,7 @@ each variable's intent.
   * CROSSBASE: Where "cross" category packages will be installed. The default
     is ${LOCALBASE}/cross.
 
-  * X11BASE: Where X11 is installed on the system. The default is /usr/X11R6.
+  * X11BASE: Where X11 is installed on the system. The default is /usr/X11R7.
 
   * DISTDIR: Where to store the downloaded copies of the original source
     distributions used for building pkgsrc packages. The default is $
@@ -1937,7 +1935,7 @@ XXX
   * DEPENDS_TARGET: By default, dependencies are only installed, and no binary
     package is created for them. You can set this variable to package-install
     to automatically create binary packages after installing dependencies.
-    Please note that the PKGSRC_KEEP_BIN_PKGScan be set to yes to preserve
+    Please note that the PKGSRC_KEEP_BIN_PKGS can be set to yes to preserve
     binary packages when using the install as well.
 
 5.3. Variables affecting the installation process
@@ -2055,8 +2053,6 @@ settings, use the += operator:
 LDFLAGS+=        -your -linkerflags
 
 5.5. Developer/advanced settings
-
-XXX
 
   * PKG_DEVELOPER: Run some sanity checks that package developers want:
 
@@ -2483,23 +2479,22 @@ Chapter 9. Frequently Asked Questions
 Table of Contents
 
 9.1. Are there any mailing lists for pkg-related discussion?
-9.2. Where's the pkgviews documentation?
-9.3. Utilities for package management (pkgtools)
-9.4. How to use pkgsrc as non-root
-9.5. How to resume transfers when fetching distfiles?
-9.6. How can I install/use modular X.org from pkgsrc?
-9.7. How to fetch files from behind a firewall
-9.8. How to fetch files from HTTPS sites
-9.9. How do I tell make fetch to do passive FTP?
-9.10. How to fetch all distfiles at once
-9.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
-9.12. What does "Could not find bsd.own.mk" mean?
-9.13. Using 'sudo' with pkgsrc
-9.14. How do I change the location of configuration files?
-9.15. Automated security checks
-9.16. Why do some packages ignore my CFLAGS?
-9.17. A package does not build. What shall I do?
-9.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+9.2. Utilities for package management (pkgtools)
+9.3. How to use pkgsrc as non-root
+9.4. How to resume transfers when fetching distfiles?
+9.5. How can I install/use modular X.org from pkgsrc?
+9.6. How to fetch files from behind a firewall
+9.7. How to fetch files from HTTPS sites
+9.8. How do I tell make fetch to do passive FTP?
+9.9. How to fetch all distfiles at once
+9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+9.11. What does "Could not find bsd.own.mk" mean?
+9.12. Using 'sudo' with pkgsrc
+9.13. How do I change the location of configuration files?
+9.14. Automated security checks
+9.15. Why do some packages ignore my CFLAGS?
+9.16. A package does not build. What shall I do?
+9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
     conflicts" mean?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
@@ -2533,12 +2528,7 @@ To subscribe, do:
 Archives for all these mailing lists are available from http://
 mail-index.NetBSD.org/.
 
-9.2. Where's the pkgviews documentation?
-
-Pkgviews is tightly integrated with buildlink. You can find a pkgviews User's
-guide in pkgsrc/mk/buildlink3/PKGVIEWS_UG.
-
-9.3. Utilities for package management (pkgtools)
+9.2. Utilities for package management (pkgtools)
 
 The directory pkgsrc/pkgtools contains a number of useful utilities for both
 users and developers of pkgsrc. This section attempts only to make the reader
@@ -2606,7 +2596,7 @@ Utilities for people maintaining pkgsrc (or: more obscure pkg utilities)
 
   * pkgtools/libkver: Spoof kernel version for chrooted cross builds.
 
-9.4. How to use pkgsrc as non-root
+9.3. How to use pkgsrc as non-root
 
 If you want to use pkgsrc as non-root user, you can set some variables to make
 pkgsrc work under these conditions. At the very least, you need to set
@@ -2624,7 +2614,7 @@ choose and use multiple default directories under ~/pkg as the installation
 targets. These directories can be overridden by the "--prefix" flag provided by
 the script, as well as some others that allow finer tuning of the tree layout.
 
-9.5. How to resume transfers when fetching distfiles?
+9.4. How to resume transfers when fetching distfiles?
 
 By default, resuming transfers in pkgsrc is disabled, but you can enable this
 feature by adding the option PKG_RESUME_TRANSFERS=YES into mk.conf. If, during
@@ -2642,7 +2632,7 @@ like:
 
 FETCH_USING=    wget
 
-9.6. How can I install/use modular X.org from pkgsrc?
+9.5. How can I install/use modular X.org from pkgsrc?
 
 If you want to use modular X.org from pkgsrc instead of your system's own X11
 (/usr/X11R6, /usr/openwin, ...) you will have to add the following line into
@@ -2654,7 +2644,7 @@ Note
 
 The DragonFly operating system defaults to using modular X.org from pkgsrc.
 
-9.7. How to fetch files from behind a firewall
+9.6. How to fetch files from behind a firewall
 
 If you are sitting behind a firewall which does not allow direct connections to
 Internet hosts (i.e. non-NAT), you may specify the relevant proxy hosts. This
@@ -2665,7 +2655,7 @@ the proxy port number. So the proxy environment variables are:
 ftp_proxy=ftp://orpheus.amdahl.com:80/
 http_proxy=http://orpheus.amdahl.com:80/
 
-9.8. How to fetch files from HTTPS sites
+9.7. How to fetch files from HTTPS sites
 
 Some fetch tools are not prepared to support HTTPS by default (for example, the
 one in NetBSD 6.0), or the one installed by the pkgsrc bootstrap (to avoid an
@@ -2677,7 +2667,7 @@ pkgsrc-current. In that case, set FETCH_USING in your mk.conf file to "curl" or
 "wget", which are both compiled with HTTPS support by default. Of course, these
 tools need to be installed before you can use them this way.
 
-9.9. How do I tell make fetch to do passive FTP?
+9.8. How do I tell make fetch to do passive FTP?
 
 This depends on which utility is used to retrieve distfiles. From bsd.pkg.mk,
 FETCH_CMD is assigned the first available command from the following list:
@@ -2694,7 +2684,7 @@ following to your mk.conf file: PASSIVE_FETCH=1.
 Having that option present will prevent /usr/bin/ftp from falling back to
 active transfers.
 
-9.10. How to fetch all distfiles at once
+9.9. How to fetch all distfiles at once
 
 You would like to download all the distfiles in a single batch from work or
 university, where you can't run a make fetch. There is an archive of distfiles
@@ -2729,7 +2719,7 @@ everything by running:
 
 % make fetch NO_SKIP=yes
 
-9.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
 
 When compiling the pkgtools/pkg_install package, you get the error from make
 that it doesn't know how to make /usr/share/tmac/tmac.andoc? This indicates
@@ -2739,7 +2729,7 @@ distribution on your machine. It is recommended to do that to format man pages.
 In the case of the pkgtools/pkg_install package, you can get away with setting
 NOMAN=YES either in the environment or in mk.conf.
 
-9.12. What does "Could not find bsd.own.mk" mean?
+9.11. What does "Could not find bsd.own.mk" mean?
 
 You didn't install the compiler set, comp.tgz, when you installed your NetBSD
 machine. Please get and install it, by extracting it in /:
@@ -2750,7 +2740,7 @@ machine. Please get and install it, by extracting it in /:
 comp.tgz is part of every NetBSD release. Get the one that corresponds to your
 release (determine via uname -r).
 
-9.13. Using 'sudo' with pkgsrc
+9.12. Using 'sudo' with pkgsrc
 
 When installing packages as non-root user and using the just-in-time su(1)
 feature of pkgsrc, it can become annoying to type in the root password for each
@@ -2763,7 +2753,7 @@ mk.conf, somewhere after the definition of the LOCALBASE variable:
 SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
 .endif
 
-9.14. How do I change the location of configuration files?
+9.13. How do I change the location of configuration files?
 
 As the system administrator, you can choose where configuration files are
 installed. The default settings make all these files go into ${PREFIX}/etc or
@@ -2783,7 +2773,7 @@ of PKGBASE.
 Note that after changing these settings, you must rebuild and reinstall any
 affected packages.
 
-9.15. Automated security checks
+9.14. Automated security checks
 
 Please be aware that there can often be bugs in third-party software, and some
 of these bugs can leave a machine vulnerable to exploitation by attackers. In
@@ -2812,7 +2802,7 @@ If this package is installed, pkgsrc builds will use it to perform a security
 check before building any package. See Section 5.2, "Variables affecting the
 build process" for ways to control this check.
 
-9.16. Why do some packages ignore my CFLAGS?
+9.15. Why do some packages ignore my CFLAGS?
 
 When you add your own preferences to the CFLAGS variable in your mk.conf, these
 flags are passed in environment variables to the ./configure scripts and to
@@ -2826,7 +2816,7 @@ Usually you can remove these lines. But be aware that some "smart" programmers
 write so bad code that it only works for the specific combination of CFLAGS
 they have chosen.
 
-9.17. A package does not build. What shall I do?
+9.16. A package does not build. What shall I do?
 
  1. Make sure that your copy of pkgsrc is consistent. A case that occurs often
     is that people only update pkgsrc in parts, because of performance reasons.
@@ -2842,7 +2832,7 @@ they have chosen.
 
  4. If the problem still exists, write a mail to the pkgsrc-users mailing list.
 
-9.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
 conflicts" mean?
 
 You have modified a file from pkgsrc, and someone else has modified that same
@@ -4518,10 +4508,9 @@ symlinking:
 
   * BUILDLINK_CONTENTS_FILTER.pkg (not shown above) is a filter command that
     filters +CONTENTS input into a list of files relative to $
-    {BUILDLINK_PREFIX.pkg} on stdout. By default for overwrite packages,
-    BUILDLINK_CONTENTS_FILTER.pkg outputs the contents of the include and lib
-    directories in the package +CONTENTS, and for pkgviews packages, it outputs
-    any libtool archives in lib directories.
+    {BUILDLINK_PREFIX.pkg} on stdout. By default, BUILDLINK_CONTENTS_FILTER.pkg
+    outputs the contents of the include and lib directories in the package
+    +CONTENTS.
 
   * BUILDLINK_FNAME_TRANSFORM.pkg (not shown above) is a list of sed arguments
     used to transform the name of the source filename into a destination
@@ -7395,7 +7384,7 @@ take some extra steps to make sure they get registered in the database:
     manually patch the package.
 
  3. Check the PLIST and remove any entries under the etc/gconf directory, as
-    they will be handled automatically. See Section 9.14, "How do I change the
+    they will be handled automatically. See Section 9.13, "How do I change the
     location of configuration files?" for more information.
 
  4. Define the GCONF_SCHEMAS variable in your Makefile with a list of all
