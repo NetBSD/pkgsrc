@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/11/14 22:24:10 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/06 14:51:33 jperkin Exp $
 #
 
 DISTNAME=	Panel-0.3.1
@@ -25,6 +25,8 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../mk/bsd.prefs.mk"
 
