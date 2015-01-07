@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2014/12/11 20:00:15 markd Exp $
+# $NetBSD: Makefile,v 1.54 2015/01/07 12:20:07 jperkin Exp $
 
 DISTNAME=	kde-runtime-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -17,6 +17,8 @@ DEPENDS+=	htdig>=3.2.0:../../www/htdig
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 
 USE_TOOLS+=		gmake
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
