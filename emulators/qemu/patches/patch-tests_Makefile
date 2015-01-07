@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_Makefile,v 1.1 2015/01/07 21:39:24 wiedi Exp $
+Don't link -lutil on SunOS
+
+--- tests/Makefile.orig	2014-12-09 14:45:44.000000000 +0000
++++ tests/Makefile
+@@ -353,8 +353,10 @@ tests/qemu-iotests/socket_scm_helper$(EX
+ tests/test-qemu-opts$(EXESUF): tests/test-qemu-opts.o libqemuutil.a libqemustub.a
+ 
+ ifeq ($(CONFIG_POSIX),y)
++ifneq ($(CONFIG_SOLARIS),y)
+ LIBS += -lutil
+ endif
++endif
+ 
+ # QTest rules
+ 
