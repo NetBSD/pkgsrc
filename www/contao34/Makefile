@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/11/25 17:07:20 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/07 10:39:02 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${CT_MASTER_SITE}
 
@@ -26,7 +27,7 @@ USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
 EG_CONFIG=	ace.php agents.php constants.php countries.php \
-		languages.php tcpdf.php timezones.php \
+		languages.php mimetypes.php tcpdf.php timezones.php \
 		tinyFlash.php tinyMCE.php tinyNews.php
 EG_DATA=	${WWW_EG_FILES} system/config files
 EG_TEMPLATES=	tinymce.css tiny_templates/index.html
