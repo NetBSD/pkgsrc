@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.3 2015/01/04 13:19:20 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.4 2015/01/07 23:40:53 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -9,3 +9,5 @@ Pullup ticket #4580 - requested by dholland
 print/ghostscript-gpl: security patch
 Pullup ticket #4581 - requested by ryoon
 lang/openjdk7: build fix
+Pullup ticket #4583 - requested by bouyer
+print/cups-filters: dependence fix
