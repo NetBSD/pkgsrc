@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.41 2014/12/04 17:28:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.42 2015/01/07 16:09:23 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
+bin/ikiwiki-comment
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
 bin/ikiwiki-update-wikilist
@@ -8,6 +9,7 @@ lib/ikiwiki/plugins/proxy.py
 lib/ikiwiki/plugins/rst
 ${PLIST.w3m}libexec/w3m/cgi-bin/ikiwiki-w3m.cgi
 man/man1/ikiwiki-calendar.1
+man/man1/ikiwiki-comment.1
 man/man1/ikiwiki-makerepo.1
 man/man1/ikiwiki-transition.1
 man/man1/ikiwiki-update-wikilist.1
