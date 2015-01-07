@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.135 2015/01/07 23:21:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.136 2015/01/07 23:23:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -151,3 +151,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-flask-admin to 1.0.9 [kleink 2015-01-07]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.861 [kleink 2015-01-07]
 	Updated databases/p5-DBD-postgresql to 3.5.0 [wiz 2015-01-07]
+	Updated time/p5-DateTime to 1.1800 [wiz 2015-01-07]
