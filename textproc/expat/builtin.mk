@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2013/11/23 12:36:34 obache Exp $
+# $NetBSD: builtin.mk,v 1.18 2015/01/07 14:26:47 ryoon Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -84,3 +84,34 @@ BUILDLINK_PREFIX.expat=	/boot/common
 .  endif
 
 .endif	# CHECK_BUILTIN.expat
+
+# Fake pkg-config for builtin expat on NetBSD
+
+.if !empty(USE_BUILTIN.expat:M[yY][eE][sS])
+.  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
+do-configure-pre-hook: override-expat-pkgconfig
+
+BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
+EXPAT_PKGCFGF=	expat.pc
+
+override-expat-pkgconfig: override-message-expat-pkgconfig
+override-message-expat-pkgconfig:
+	@${STEP_MSG} "Magical transformations for expat on NetBSD."
+
+override-expat-pkgconfig:
+	${RUN}						\
+	${MKDIR} ${BLKDIR_PKGCFG};			\
+	{						\
+	${ECHO} "prefix=${BUILDLINK_PREFIX.expat}";		\
+	${ECHO} "exec_prefix=\$${prefix}";		\
+	${ECHO} "libdir=\$${exec_prefix}/lib";		\
+	${ECHO} "includedir=\$${prefix}/include";	\
+	${ECHO} "";					\
+	${ECHO} "Name: expat";				\
+	${ECHO} "Description: expat XML parser";	\
+	${ECHO} "Version: ${BUILTIN_VERSION.expat}";	\
+	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -lexpat";	\
+	${ECHO} "Cflags: -I\$${includedir}";		\
+	} >> ${BLKDIR_PKGCFG}/${EXPAT_PKGCFGF};
+.  endif
+.endif
