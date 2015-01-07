@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 19:10:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/07 00:15:22 joerg Exp $
 lib/lokigames/rtcw/CHANGES
 lib/lokigames/rtcw/Docs/ATVIsmall.jpg
 lib/lokigames/rtcw/Docs/Dedicated Server Notes.html
@@ -184,18 +184,18 @@ lib/lokigames/rtcw/bin/x86/wolfded.x86
 lib/lokigames/rtcw/bin/x86/wolfmp
 lib/lokigames/rtcw/bin/x86/wolfsp
 lib/lokigames/rtcw/bin/x86/wolfsp.x86
-lib/lokigames/rtcw/main/cgame.mp.${MACHINE_ARCH}.so
-lib/lokigames/rtcw/main/cgame${MACHINE_ARCH}.so
+lib/lokigames/rtcw/main/cgame.mp.i386.so
+lib/lokigames/rtcw/main/cgamei386.so
 lib/lokigames/rtcw/main/mp_bin.pk3
 lib/lokigames/rtcw/main/mp_pak3.pk3
 lib/lokigames/rtcw/main/mp_pak4.pk3
-lib/lokigames/rtcw/main/qagame.mp.${MACHINE_ARCH}.so
-lib/lokigames/rtcw/main/qagame${MACHINE_ARCH}.so
+lib/lokigames/rtcw/main/qagame.mp.i386.so
+lib/lokigames/rtcw/main/qagamei386.so
 lib/lokigames/rtcw/main/rotate.cfg
 lib/lokigames/rtcw/main/scripts/translation.cfg
 lib/lokigames/rtcw/main/sp_pak3.pk3
-lib/lokigames/rtcw/main/ui.mp.${MACHINE_ARCH}.so
-lib/lokigames/rtcw/main/ui${MACHINE_ARCH}.so
+lib/lokigames/rtcw/main/ui.mp.i386.so
+lib/lokigames/rtcw/main/uii386.so
 lib/lokigames/rtcw/openurl.sh
 lib/lokigames/rtcw/pb/PB_EULA.txt
 lib/lokigames/rtcw/pb/htm/la001289.htm
