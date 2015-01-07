@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/07 05:02:37 manu Exp $
+libexec/nagios/check_dnsrbl

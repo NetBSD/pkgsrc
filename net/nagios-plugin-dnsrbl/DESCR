@@ -1,0 +1,3 @@
+$NetBSD: DESCR,v 1.1 2015/01/07 05:02:37 manu Exp $
+
+This Nagios plugin checks for host presence in various DNSRBL
