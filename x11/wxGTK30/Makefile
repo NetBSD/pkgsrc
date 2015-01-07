@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/12/10 14:02:32 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/07 13:22:58 ryoon Exp $
 
-VERSION=	3.0.1
-PKGREVISION=	3
+VERSION=	3.0.2
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
