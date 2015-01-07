@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_dbm_extconf.rb,v 1.3 2014/12/28 15:51:01 bsiegert Exp $
+$NetBSD: patch-ext_dbm_extconf.rb,v 1.4 2015/01/07 10:35:59 taca Exp $
+
+Fix for Mac OS X 10.4 Tiger.
 
 --- ext/dbm/extconf.rb.orig    2014-12-28 14:04:40.000000000 +0000
 +++ ext/dbm/extconf.rb
