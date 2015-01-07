@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.6 2015/01/07 21:39:24 wiedi Exp $
+Don't use gld on SunOS
+
+--- configure.orig	2014-12-09 14:45:40.000000000 +0000
++++ configure
+@@ -622,7 +622,6 @@ SunOS)
+   solaris="yes"
+   make="${MAKE-gmake}"
+   install="${INSTALL-ginstall}"
+-  ld="gld"
+   smbd="${SMBD-/usr/sfw/sbin/smbd}"
+   needs_libsunmath="no"
+   solarisrev=`uname -r | cut -f2 -d.`
