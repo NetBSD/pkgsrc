@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14001 2015/01/07 08:51:58 wiz Exp $
+$NetBSD: TODO,v 1.14002 2015/01/07 13:24:15 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -443,7 +443,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clutter-1.20.0
 	o clutter-gst-2.0.10
 	o clutter-gtk-1.6.0
-	o cmake-3.1.0
+	o cmake-3.1.0 [higher version of libarchive is required]
 	o coccigrep-2.13
 	o cogl-1.18.2
 	o colorize-0.3.4
