@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/07 14:55:21 kleink Exp $
 
-DISTNAME=	Flask-Admin-1.0.8
+DISTNAME=	Flask-Admin-1.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Admin/
@@ -26,7 +26,7 @@ post-extract:
 post-install:
 .for i in LICENSE select2.css select2.min.js
 	${CHMOD} -x \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_admin/static/select2/${i}
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_admin/static/vendor/select2/${i}
 .endfor
 	${TOUCH} ${DESTDIR}${PREFIX}/${EGDIR}/__init__.py
 	cd ${WRKSRC}/examples && pax -rwppm . ${DESTDIR}${PREFIX}/${EGDIR}
