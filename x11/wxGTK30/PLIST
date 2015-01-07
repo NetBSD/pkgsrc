@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/08/20 07:07:32 dbj Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/07 13:22:58 ryoon Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-3.0
@@ -680,6 +680,7 @@ include/wx-3.0/wx/xrc/xh_ribbon.h
 include/wx-3.0/wx/xrc/xh_richtext.h
 include/wx-3.0/wx/xrc/xh_scrol.h
 include/wx-3.0/wx/xrc/xh_scwin.h
+include/wx-3.0/wx/xrc/xh_simplebook.h
 include/wx-3.0/wx/xrc/xh_sizer.h
 include/wx-3.0/wx/xrc/xh_slidr.h
 include/wx-3.0/wx/xrc/xh_spin.h
