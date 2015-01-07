@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.133 2015/01/07 13:28:25 mef Exp $
+$NetBSD: CHANGES-2015,v 1.134 2015/01/07 15:02:51 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -148,3 +148,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/hs-scientific to 0.3.3.5 [szptvlfn 2015-01-07]
 	Updated x11/wxGTK30 to 3.0.2 [ryoon 2015-01-07]
 	Updated www/p5-Catalyst-View-JSON to 0.34 [mef 2015-01-07]
+	Updated www/py-flask-admin to 1.0.9 [kleink 2015-01-07]
+	Updated textproc/p5-XML-Atom-SimpleFeed to 0.861 [kleink 2015-01-07]
