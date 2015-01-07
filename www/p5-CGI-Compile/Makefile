@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/12/31 13:38:41 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/07 00:16:37 joerg Exp $
 
 DISTNAME=	CGI-Compile-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/CGI/Compile/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
