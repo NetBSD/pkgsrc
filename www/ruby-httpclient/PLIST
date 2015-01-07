@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2014/12/30 07:57:38 obache Exp $
-bin/httpclient${RUBY_VER}
+@comment $NetBSD: PLIST,v 1.10 2015/01/07 00:50:40 obache Exp $
+bin/httpclient${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/bin/httpclient
