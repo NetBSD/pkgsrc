@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/05/29 23:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/01/08 21:10:05 wiz Exp $
 
 DISTNAME=	gnumeric-1.12.9
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Apps/Gnumeric
+HOMEPAGE=	http://www.gnumeric.org/
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2
 
