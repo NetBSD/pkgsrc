@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.144 2015/01/08 13:35:33 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.145 2015/01/08 14:07:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -160,3 +160,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/abcde to 2.6nb1 [wiz 2015-01-08]
 	Added devel/happy version 1.19.5 [szptvlfn 2015-01-08]
 	Updated www/php-basercms to 3.0.6.1nb1 [ryoon 2015-01-08]
+	Updated devel/p5-Class-C3 to 0.27 [wen 2015-01-08]
