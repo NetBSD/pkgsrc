@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2015/01/08 17:23:07 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2015/01/08 19:23:53 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=	inet6 libssh2 gssapi ldap rtmp libidn
@@ -7,13 +7,7 @@ PKG_SUGGESTED_OPTIONS=	inet6 libidn
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == NetBSD
 # Kerberos is built in - no additional dependency
-# broken in 1.40.0
-# https://sourceforge.net/p/curl/bugs/1469/
-#curl_sasl_gssapi.c:129:40: error: 'gss_nt_service_name' undeclared (first use in this function)
-#                                        gss_nt_service_name, &krb5->spn);
-#                                        ^
-#curl_sasl_gssapi.c:129:40: note: each undeclared identifier is reported only once for each function it appears in
-#PKG_SUGGESTED_OPTIONS+=	gssapi
+PKG_SUGGESTED_OPTIONS+=	gssapi
 .endif
 
 .include "../../mk/bsd.options.mk"
