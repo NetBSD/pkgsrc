@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/01/04 23:42:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/01/08 16:36:58 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -40,6 +40,15 @@ ${PYSITELIB}/pkg_resources/_vendor/packaging/specifiers.pyo
 ${PYSITELIB}/pkg_resources/_vendor/packaging/version.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/version.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/version.pyo
+${PYSITELIB}/pkg_resources/tests/__init__.py
+${PYSITELIB}/pkg_resources/tests/__init__.pyc
+${PYSITELIB}/pkg_resources/tests/__init__.pyo
+${PYSITELIB}/pkg_resources/tests/test_pkg_resources.py
+${PYSITELIB}/pkg_resources/tests/test_pkg_resources.pyc
+${PYSITELIB}/pkg_resources/tests/test_pkg_resources.pyo
+${PYSITELIB}/pkg_resources/tests/test_resources.py
+${PYSITELIB}/pkg_resources/tests/test_resources.pyc
+${PYSITELIB}/pkg_resources/tests/test_resources.pyo
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -204,9 +213,6 @@ ${PYSITELIB}/setuptools/tests/test_msvc9compiler.pyo
 ${PYSITELIB}/setuptools/tests/test_packageindex.py
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyc
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyo
-${PYSITELIB}/setuptools/tests/test_resources.py
-${PYSITELIB}/setuptools/tests/test_resources.pyc
-${PYSITELIB}/setuptools/tests/test_resources.pyo
 ${PYSITELIB}/setuptools/tests/test_sandbox.py
 ${PYSITELIB}/setuptools/tests/test_sandbox.pyc
 ${PYSITELIB}/setuptools/tests/test_sandbox.pyo
