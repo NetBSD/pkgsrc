@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.141 2015/01/08 10:20:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.142 2015/01/08 10:27:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/album_themes to 20081222 [mef 2015-01-08]
 	Updated textproc/groff to 1.22.3 [wiz 2015-01-08]
 	Updated print/poppler to 0.30.0 [wiz 2015-01-08]
+	Updated audio/abcde to 2.6nb1 [wiz 2015-01-08]
