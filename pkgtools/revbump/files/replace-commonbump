@@ -83,7 +83,7 @@ sub GenerateHash ($$) {
 	my $dir   = $File::Find::dir ;
 	my $fname = "$File::Find::dir/$_" ;
 
-	# skip these directories and files ( as a files including something )
+	# skip these directories and files ( as files including something )
 	if ($dir =~ m|CVS$| )		{$File::Find::prune = 1; return;}
 	if ($dir =~ m|mk$| )		{$File::Find::prune = 1; return;}
 	if ($dir =~ m|work$| )		{$File::Find::prune = 1; return;}
@@ -91,7 +91,7 @@ sub GenerateHash ($$) {
 	if ($dir =~ m|files$| )		{$File::Find::prune = 1; return;}
 	if ($dir =~ m|bootstrap$| )	{$File::Find::prune = 1; return;}
 	if ($dir =~ m|pkgsrc/[^/]$| )	{$File::Find::prune = 1; return;}
-	if ($dir =~ m|x11-links| ){$File::Find::prune = 1; return;}	
+	if ($dir =~ m|x11-links| )	{$File::Find::prune = 1; return;}
 	if ($_ =~ m|^\.\#| )		{                        return;}
 	if ($_ =~ m|~$| )		{                        return;}
 	if ($_ =~ m|buildlink3.mk$| )	{                        return;}
@@ -102,24 +102,24 @@ sub GenerateHash ($$) {
 	my($shortdir)  = $dir;
 	$shortdir  =~ s|$prefix/||;
 
-	# pick only Makefile.* and .mk  ( as a files including something )
+	# pick only Makefile.* and .mk  ( as files including something )
 	if ($_ =~ m|Makefile| ||
 	    $_ =~ m|\.mk$|          )	{
 	    print STDERR __LINE__, ' ', $fname,' ', `pwd`, "\n" if $debug;
 	    open(FNAME, $fname) || print STDERR __LINE__, " Problem opening file $fname:$!\n";
 	    my ($included) = '';
 	    while (<FNAME>){
-		# now starts finding included file		
+		# now starts finding included file
 		# pick .include "../../
 		if ( m|^\.\s*include\s+\"\.\./\.\./(.*)\"| ) { $included = $1;}
 		# pick ".include "Makefile" etc (without leading ../../), this needs to add package dir.
-		if ( m|^\.\s*include\s+\"(.*)\"|           ) { next;}	# including the same directory stuff, doesn't matter
-		if ( m|^\.\s*include\s+\"(.*)\"|           ) { $included = $prefix .'/'. $1;}		
-		if ( $included =~ m|/mk/| )       	{ next;}	# it is include line but for mk, skip this line
+		if ( m|^\.\s*include\s+\"(.*)\"| )	{ next;}	# including the same directory stuff, doesn't matter
+		if ( m|^\.\s*include\s+\"(.*)\"| )	{ $included = $prefix .'/'. $1;}		
+		if ( $included =~ m|/mk/| )		{ next;}	# it is include line but for mk, skip this line
 		if ( $included =~ m|version.mk| )	{ next;}
 		if ( $included =~ m|tests/| )		{ next;}
 		if ( $included =~ m|options.mk| )	{ next;}
-		if ( $included =~ m|enigmail.mk| )	{ next;}		
+		if ( $included =~ m|enigmail.mk| )	{ next;}
 
 		$included =~ s,\${.CURDIR},$shortname,;
 		if ($included =~ /\${([^}]+)}/ ) { 
