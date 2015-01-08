@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2015/01/04 12:03:07 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2015/01/08 10:27:24 wiz Exp $
 
 DISTNAME=	abcde-2.6
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://abcde.einval.com/download/
 
