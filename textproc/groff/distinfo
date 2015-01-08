@@ -1,25 +1,10 @@
-$NetBSD: distinfo,v 1.19 2014/07/18 10:11:35 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2015/01/08 09:02:27 wiz Exp $
 
-SHA1 (groff-1.20.1.tar.gz) = 3066587d73df73c2bda235034f4515cf52d22549
-RMD160 (groff-1.20.1.tar.gz) = ec311727206d183fb04f1b4bd01c1284142fdb52
-Size (groff-1.20.1.tar.gz) = 3594658 bytes
+SHA1 (groff-1.22.3.tar.gz) = 61a6808ea1ef715df9fa8e9b424e1f6b9fa8c091
+RMD160 (groff-1.22.3.tar.gz) = 8f6d364f759e559c12c497091118f6d68f3a3b85
+Size (groff-1.22.3.tar.gz) = 4188772 bytes
 SHA1 (patch-aa) = 3c74f1b8e809da5359d4702f0f5f299593601209
-SHA1 (patch-ab) = 35f8a7f724ab13bedda8ad8bc54bcbede37f12c7
+SHA1 (patch-ab) = 64ba9805a0798bfce543a258cd66347caa1bf860
 SHA1 (patch-ac) = 7c29e3ca0c0a2e5389ff436ff5c15c9a0a4d7581
 SHA1 (patch-ae) = 777b9b4d5f39da5acf8d79616ae9d42025772fc5
-SHA1 (patch-config.guess) = 212dccdaed0d96c5d3c7fb126caeba3c3c20f006
-SHA1 (patch-configure) = f27e51ba29331fb351015c2216928940a3148dd3
-SHA1 (patch-contrib_chem_Makefile.sub) = b033fde895aee25e8db0e4c46565efb020f5b586
-SHA1 (patch-contrib_eqn2graph_eqn2graph.sh) = 88b8f06f29448dabed66922cc494412662b15431
-SHA1 (patch-contrib_gdiffmk_tests_runtests.in) = 791c07909912a8ff0c98f6846f14de1fbc0fb7b0
-SHA1 (patch-contrib_grap2graph_grap2graph.sh) = 5b5a5ac958edc8d4f5e828b57198178bda8bb970
-SHA1 (patch-contrib_groffer_perl_groffer.pl) = 2583145fe594a11619cf237ca38a20bbbfee17f1
-SHA1 (patch-contrib_groffer_perl_roff2.pl) = 8ee9d4bba3c25a391b406e4dfac6352d414f7263
-SHA1 (patch-contrib_pdfmark_pdfroff.man) = c2a48a9f16650044a493d23192d9c00c2dabbc67
-SHA1 (patch-contrib_pdfmark_pdfroff.sh) = 8ff3360392c214940854a1b93a5f262c37e3cd2e
-SHA1 (patch-contrib_pic2graph_pic2graph.sh) = 447e25325f3c26be1e5fa8b6cd0bc05d9f99474e
-SHA1 (patch-doc_fixinfo.sh) = 7ad376be722b712b129f736804b9c8c30789da2d
-SHA1 (patch-doc_groff.info-2) = a5e366af0bc9ee018664d2ba9192b136980af6ce
-SHA1 (patch-gendef.sh) = c5cbd81faa496764816d538913cb560376ead218
 SHA1 (patch-src_libs_libgroff_tmpfile.cpp) = 6fe0b56ad05a39beac37823b7a7fb5951e36ceb8
-SHA1 (patch-src_roff_groff_pipeline.c) = 1ce068b8548240a8a6bbd0095fb15b5792b9d0f1

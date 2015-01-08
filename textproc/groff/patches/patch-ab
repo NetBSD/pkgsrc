@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.6 2009/10/21 16:51:46 tnn Exp $
+$NetBSD: patch-ab,v 1.7 2015/01/08 09:02:27 wiz Exp $
 
---- src/libs/libgroff/Makefile.sub.orig	2009-01-09 15:25:52.000000000 +0100
+--- src/libs/libgroff/Makefile.sub.orig	2014-11-04 08:38:35.000000000 +0000
 +++ src/libs/libgroff/Makefile.sub
-@@ -153,6 +153,9 @@ MKINSTALLDIRS = $(SHELL) $(top_srcdir)/m
- 
- install_data: install_charset_data
- install_charset_data:
+@@ -153,6 +153,9 @@ version.cpp: $(top_srcdir)/VERSION $(top
+ snprintf.$(OBJEXT): $(srcdir)/../snprintf/snprintf.c
+ 	$(CC) -c $(CDEFINES) $(CFLAGS) $(CPPFLAGS) \
+ 	  $(srcdir)/../snprintf/snprintf.c
 +	# provided by pkgsrc/converters/libiconv
 +
 +install_charset_data_disabled:
- 	test $(GLIBC21) != no || $(MKINSTALLDIRS) $(DESTDIR)$(libdir)
- 	if test -f $(DESTDIR)$(libdir)/charset.alias; then \
- 	  sed -f ref-add.sed $(DESTDIR)$(libdir)/charset.alias \
+ 
+ # Data for localcharset.c.  Taken from libiconv/libcharset.
+ 
