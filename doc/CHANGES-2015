@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.145 2015/01/08 14:07:01 wen Exp $
+$NetBSD: CHANGES-2015,v 1.146 2015/01/08 14:11:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -161,3 +161,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/happy version 1.19.5 [szptvlfn 2015-01-08]
 	Updated www/php-basercms to 3.0.6.1nb1 [ryoon 2015-01-08]
 	Updated devel/p5-Class-C3 to 0.27 [wen 2015-01-08]
+	Updated devel/p5-Class-Field to 0.23 [wen 2015-01-08]
