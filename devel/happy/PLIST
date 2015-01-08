@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/08 11:50:54 szptvlfn Exp $
+bin/happy
+man/man1/happy.1
+share/doc/${PKGNAME}/LICENSE
+share/${PKGNAME}/GLR_Base
+share/${PKGNAME}/GLR_Lib
+share/${PKGNAME}/GLR_Lib-ghc
+share/${PKGNAME}/GLR_Lib-ghc-debug
+share/${PKGNAME}/HappyTemplate
+share/${PKGNAME}/HappyTemplate-arrays
+share/${PKGNAME}/HappyTemplate-arrays-coerce
+share/${PKGNAME}/HappyTemplate-arrays-coerce-debug
+share/${PKGNAME}/HappyTemplate-arrays-debug
+share/${PKGNAME}/HappyTemplate-arrays-ghc
+share/${PKGNAME}/HappyTemplate-arrays-ghc-debug
+share/${PKGNAME}/HappyTemplate-coerce
+share/${PKGNAME}/HappyTemplate-ghc
