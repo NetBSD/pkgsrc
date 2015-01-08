@@ -1,4 +1,6 @@
-$NetBSD: patch-src_libs_libgroff_tmpfile.cpp,v 1.1 2014/07/18 10:11:35 ryoon Exp $
+$NetBSD: patch-src_libs_libgroff_tmpfile.cpp,v 1.2 2015/01/08 09:14:58 wiz Exp $
+
+Fix SCO OpenServer 5.0.7/3.2 build.
 
 --- src/libs/libgroff/tmpfile.cpp.orig	2009-01-09 14:25:52.000000000 +0000
 +++ src/libs/libgroff/tmpfile.cpp
