@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2015/01/08 10:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2015/01/08 16:16:55 wiz Exp $
 
 DISTNAME=	inkscape-0.48.5
 PKGREVISION=	2
@@ -30,7 +30,6 @@ CONFIGURE_ENV+=		GMSGFMT=${TOOLS_DIR}/bin/msgfmt
 CONFIGURE_ARGS+=	--with-python
 
 REPLACE_PERL+=		share/extensions/*.p[lm]
-REPLACE_PERL+=		share/extensions/svg_dropshadow
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
 BUILDLINK_API_DEPENDS.poppler+=		poppler>=0.5.9
