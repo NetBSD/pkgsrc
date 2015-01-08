@@ -1,0 +1,15 @@
+$NetBSD: patch-abcde,v 1.1 2015/01/08 10:27:24 wiz Exp $
+
+Default to cdda2wav since icedax is not in pkgsrc.
+
+--- abcde.orig	2014-10-26 20:16:54.000000000 +0000
++++ abcde
+@@ -3274,7 +3274,7 @@ AACTAG=faac
+ ATOMICPARSLEY=AtomicParsley
+ 
+ CDPARANOIA=cdparanoia
+-CDDA2WAV=icedax
++CDDA2WAV=cdda2wav
+ DAGRAB=dagrab
+ CDDAFS=cp
+ PIRD=pird
