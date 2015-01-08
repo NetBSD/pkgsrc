@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.149 2015/01/08 16:37:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.150 2015/01/08 16:40:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -165,3 +165,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-Load-XS to 0.09 [wen 2015-01-08]
 	Updated devel/p5-Class-MethodMaker to 2.21 [wen 2015-01-08]
 	Updated devel/py-setuptools to 11.3.1 [wiz 2015-01-08]
+	Updated devel/automake to 1.15 [wiz 2015-01-08]
