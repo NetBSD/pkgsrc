@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.151 2015/01/08 16:58:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.152 2015/01/08 17:23:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -167,3 +167,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 11.3.1 [wiz 2015-01-08]
 	Updated devel/automake to 1.15 [wiz 2015-01-08]
 	Updated security/openssl to 1.0.1k [wiz 2015-01-08]
+	Updated www/curl to 7.40.0 [wiz 2015-01-08]
