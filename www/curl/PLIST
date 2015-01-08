@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2014/11/07 14:10:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2015/01/08 17:23:07 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -223,6 +223,7 @@ man/man3/CURLOPT_TLSAUTH_TYPE.3
 man/man3/CURLOPT_TLSAUTH_USERNAME.3
 man/man3/CURLOPT_TRANSFERTEXT.3
 man/man3/CURLOPT_TRANSFER_ENCODING.3
+man/man3/CURLOPT_UNIX_SOCKET_PATH.3
 man/man3/CURLOPT_UNRESTRICTED_AUTH.3
 man/man3/CURLOPT_UPLOAD.3
 man/man3/CURLOPT_URL.3
