@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2023 2015/01/08 11:52:00 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2024 2015/01/08 17:03:58 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1678,6 +1678,7 @@ SUBDIR+=	rcs
 SUBDIR+=	rdp
 SUBDIR+=	re2c
 SUBDIR+=	readline
+SUBDIR+=	redmine
 SUBDIR+=	refinecvs
 SUBDIR+=	reposurgeon
 SUBDIR+=	roundup
