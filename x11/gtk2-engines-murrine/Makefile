@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.26 2014/05/05 00:48:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2015/01/08 04:19:13 obache Exp $
 
-DISTNAME=	murrine-0.90.3
+DISTNAME=	murrine-0.98.2
 PKGNAME=	${DISTNAME:S/^/gtk2-engines-/}
-PKGREVISION=	19
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/murrine/0.90/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/murrine/0.98/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cimitan.com/murrine/
 COMMENT=	GTK2+ engine featuring a modern glassy look
+LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--enable-animation
 
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.0
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
