@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/08 11:50:54 szptvlfn Exp $
+
+SHA1 (happy-1.19.5.tar.gz) = 60323f24b6c0863393fb02ec0347dfe6f9fb0779
+RMD160 (happy-1.19.5.tar.gz) = 31895a6e6bcf1eeae2e5949cc5ca49d84094ae89
+Size (happy-1.19.5.tar.gz) = 159280 bytes
