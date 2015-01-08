@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.143 2015/01/08 11:52:29 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.144 2015/01/08 13:35:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -159,3 +159,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/poppler to 0.30.0 [wiz 2015-01-08]
 	Updated audio/abcde to 2.6nb1 [wiz 2015-01-08]
 	Added devel/happy version 1.19.5 [szptvlfn 2015-01-08]
+	Updated www/php-basercms to 3.0.6.1nb1 [ryoon 2015-01-08]
