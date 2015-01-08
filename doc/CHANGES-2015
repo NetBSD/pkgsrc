@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.137 2015/01/08 01:50:16 mef Exp $
+$NetBSD: CHANGES-2015,v 1.138 2015/01/08 04:19:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -153,3 +153,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBD-postgresql to 3.5.0 [wiz 2015-01-07]
 	Updated time/p5-DateTime to 1.1800 [wiz 2015-01-07]
 	Updated www/album to 4.12 [mef 2015-01-08]
+	Updated x11/gtk2-engines-murrine to 0.98.2 [obache 2015-01-08]
