@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.64 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: license.mk,v 1.65 2015/01/08 11:12:29 prlw1 Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -58,7 +58,7 @@
 #	and non-free licenses do.
 #
 #	http://opensource.org/licenses/category
-#	http://www.fsf.org/licensing/licenses/index_html
+#	http://www.gnu.org/licenses/license-list.html
 #
 # === Predefined variables ===
 #
