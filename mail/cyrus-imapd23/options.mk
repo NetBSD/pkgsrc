@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/01/05 11:52:34 obache Exp $
+# $NetBSD: options.mk,v 1.6 2015/01/08 17:01:23 joerg Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
@@ -64,13 +64,6 @@ CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
 USE_TOOLS+=		perl:run
 .else
 CONFIGURE_ARGS+=	--without-snmp
-.endif
-
-.if !empty(PKG_OPTIONS:Mzephyr)
-.  include "../../chat/zephyr/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-zephyr=${BUILDLINK_PREFIX.zephyr}
-.else
-CONFIGURE_ARGS+=	--without-zephyr
 .endif
 
 .if !empty(PKG_OPTIONS:Mbdb)
