@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.133 2014/12/11 14:04:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.134 2015/01/08 23:00:42 wiedi Exp $
 
 DISTNAME=	qemu-2.2.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -81,6 +82,7 @@ USER_EMUL=		${UE_ARCHS}
 PLIST.nbd=		YES
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 PLIST.nbd=		YES
+CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} nbd
