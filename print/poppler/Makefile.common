@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2014/11/20 16:03:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.72 2015/01/08 10:16:54 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -8,7 +8,7 @@
 # used by print/poppler-qt5/Makefile
 # used by print/poppler-utils/Makefile
 
-POPPLER_VERS=		0.28.1
+POPPLER_VERS=		0.30.0
 DISTNAME=		poppler-${POPPLER_VERS}
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
@@ -31,3 +31,5 @@ CONFIGURE_ARGS+=	--disable-libtiff
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=   rm:-fno-check-new
 .endif
+
+.include "../../graphics/openjpeg/buildlink3.mk"
