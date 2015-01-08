@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/11/22 14:35:56 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2015/01/08 13:35:03 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-basercms
 
@@ -13,18 +13,15 @@ PKG_SUGGESTED_OPTIONS=	mysql
 ### Use csv, mysql, pgsql, or sqlite backend
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.0:../../databases/php-pdo_mysql
 .elif !empty(PKG_OPTIONS:Msqlite)
-
-# php-sqlite provides sqlite2
-#DEPENDS+=	${PHP_PKG_PREFIX}-sqlite>=5.2.0:../../databases/php-sqlite
 
 # php-pdo_sqlite provides sqlite3.  An owncloud instance that was
 # installed as version 2 and upgraded to 3 and then 4
 # complained/failed that PDO was not present.
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.2.0:../../databases/php-pdo_sqlite
 .elif !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.2.0:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=5.2.0:../../databases/php-pdo_pgsql
 .elif !!empty(PKG_OPTIONS:Mcsv)
 # no DEPENDS
 .endif
