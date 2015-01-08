@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/05/06 17:29:38 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/01/08 04:19:13 obache Exp $
 
-SHA1 (murrine-0.90.3.tar.bz2) = 5c65acf7948d23bb1693728157425120486303a8
-RMD160 (murrine-0.90.3.tar.bz2) = 347909724a11cfe53f922208f46e39f47b420459
-Size (murrine-0.90.3.tar.bz2) = 271512 bytes
-SHA1 (patch-src_animation_c) = 807b41e782050f6d8d0e596d1412c96cb4f5646e
+SHA1 (murrine-0.98.2.tar.xz) = ddaca56b6e10736838572014ae9d20b814242615
+RMD160 (murrine-0.98.2.tar.xz) = d408ce9ca25be3e3b7afe9ce1e6127ffa0d9cff3
+Size (murrine-0.98.2.tar.xz) = 296944 bytes
