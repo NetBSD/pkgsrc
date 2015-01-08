@@ -1,0 +1,3 @@
+Happy is a parser generator for Haskell. Given a grammar specification in
+BNF, Happy generates Haskell code to parse the grammar. Happy works in a
+similar way to the yacc tool for C.
