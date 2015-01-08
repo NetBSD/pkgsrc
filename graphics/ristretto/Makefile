@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/05/29 23:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/01/08 10:14:38 martin Exp $
 #
 
 DISTNAME=	ristretto-0.0.22
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
 
 LDFLAGS.DragonFly=	-lX11
+LDFLAGS.FreeBSD=	-lX11
 LDFLAGS.SunOS=		-lX11
 
 .include "../../devel/xfce4-dev-tools/buildlink3.mk"
