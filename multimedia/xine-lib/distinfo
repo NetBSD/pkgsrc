@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2014/12/30 13:34:59 wiz Exp $
+$NetBSD: distinfo,v 1.99 2015/01/09 14:33:10 joerg Exp $
 
 SHA1 (xine-lib-1.2.6.tar.xz) = ac929eef2b7bf5c27699bbed612b953a01fccba5
 RMD160 (xine-lib-1.2.6.tar.xz) = 05edcd9a36e93d2fc9d1bf13cae3b32d4bd996da
@@ -17,7 +17,7 @@ SHA1 (patch-src-post-mosaico-switch.c) = ff46e13acfbcaf0167943b536b12cb95ec7591d
 SHA1 (patch-src-post-planar-boxblur.c) = 191ce5819fce39a247adaefe07e3302870c3d1c3
 SHA1 (patch-src-post-planar-denoise3d.c) = e140ff0b7867fd850099ff073f67201b4649dcad
 SHA1 (patch-src-post-planar-eq.c) = 2c81fdb839456affa6882577479cea7934121619
-SHA1 (patch-src-post-planar-eq2.c) = 7f33e001294e3933a7aad8ed817b678fa4379924
+SHA1 (patch-src-post-planar-eq2.c) = 98455d83caf02c450aa55a5b7d9662805e4cb41d
 SHA1 (patch-src-post-planar-expand.c) = 9d9ec1f5619f9a3d832bcace54d23011371f2067
 SHA1 (patch-src-post-planar-noise.c) = 2deabf5d80e2c45959a4f89bbf2528f7e1c9e1f5
 SHA1 (patch-src-post-planar-pp.c) = f5bea421785132c5f1422ae9f0d468974fb0ae5d
