@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/01/06 13:32:25 mef Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/09 14:34:54 joerg Exp $
 
 DISTNAME=		slock-1.2
 CATEGORIES=		x11
@@ -41,4 +41,5 @@ LIBS+=	-lcrypt
 SPECIAL_PERMS+=	bin/slock ${SETUID_ROOT_PERMS}
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
