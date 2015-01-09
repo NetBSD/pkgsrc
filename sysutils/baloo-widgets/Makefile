@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/13 11:05:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 10:50:38 jperkin Exp $
 
 DISTNAME=	baloo-widgets-${_KDE_VERSION}
 CATEGORIES=	sysutils
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 #.include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../sysutils/baloo/buildlink3.mk"
 .include "../../sysutils/kfilemetadata/buildlink3.mk"
-#.include "../../textproc/xapian/buildlink3.mk"
+.include "../../textproc/xapian/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
