@@ -1,7 +1,0 @@
-Is there any reason why a shell (or command line) cannot be as
-tolerant or as intelligent as a text adventure game like Zork, or a
-MUD (Multi User Dungeon)? Is there any reason why a shell cannot work
-like such a game? ("Go North", etc.)
-
-Actually, the answer is no and this is a perl implementation to prove it.
-Have fun, and don't get eaten by a Grue!
