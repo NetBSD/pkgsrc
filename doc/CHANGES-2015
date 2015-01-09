@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.155 2015/01/09 13:27:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.156 2015/01/09 14:13:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -171,3 +171,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/wireshark to 1.10.12 [tron 2015-01-08]
 	Updated x11/gtk3 to 3.14.5nb1 [obache 2015-01-09]
 	Removed shells/mudsh [mef 2015-01-09]
+	Updated archivers/p5-Archive-Zip to 1.40 [mef 2015-01-09]
+	Updated archivers/unalz to 0.65 [mef 2015-01-09]
