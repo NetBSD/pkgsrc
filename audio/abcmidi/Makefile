@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/03/03 10:19:10 shattered Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/09 14:06:26 mef Exp $
 #
 
 DISTNAME=	abcMIDI-${ABCMIDIVER}
@@ -14,6 +14,7 @@ COMMENT=	Music utilities for abc
 LICENSE=	gnu-gpl-v2
 
 ABCMIDIVER=	2012-12-01
+ABCMIDIVER=	2014-10-16
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}/programming \
 			share/examples/${PKGBASE}
