@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.158 2015/01/09 21:04:49 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.159 2015/01/09 22:14:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -175,3 +175,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/unalz to 0.65 [mef 2015-01-09]
 	Updated audio/abcmidi to 20141016 [mef 2015-01-09]
 	Updated www/py-wtforms to 2.0.1 [kleink 2015-01-09]
+	Updated print/kpathsea to 6.2.0 [minskim 2015-01-09]
