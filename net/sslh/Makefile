@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/11/28 10:45:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/09 14:34:20 joerg Exp $
 #
 
 DISTNAME=	v1.16
@@ -12,6 +12,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rutschle.net/tech/sslh.shtml
 COMMENT=	Multiplex ssl, ssh, and other connections on the same port
 LICENSE=	gnu-gpl-v2
+
+# version.h created too late
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	gmake gzip pod2man
 USE_LANGUAGES=	c
