@@ -1,5 +1,9 @@
-$NetBSD: patch-src-post-planar-eq2.c,v 1.6 2015/01/09 14:33:10 joerg Exp $
+$NetBSD: patch-src-post-planar-eq2.c,v 1.7 2015/01/09 22:59:43 wiz Exp $
 
+First chunk:
+https://bugs.xine-project.org/show_bug.cgi?id=556
+
+Rest:
 https://bugs.xine-project.org/show_bug.cgi?id=524
 
 --- src/post/planar/eq2.c.orig	2014-06-09 16:08:42.000000000 +0000
