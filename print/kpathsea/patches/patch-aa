@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2013/11/17 16:45:32 minskim Exp $
+$NetBSD: patch-aa,v 1.12 2015/01/09 22:13:13 minskim Exp $
 
 Set paths to texmf trees for pkgsrc.
 
---- texmf.cnf.orig	2013-04-15 16:58:08.000000000 +0000
+--- texmf.cnf.orig	2014-04-22 21:07:54.000000000 +0000
 +++ texmf.cnf
 @@ -51,7 +51,7 @@
  % Redistributors will probably want $SELFAUTODIR/share, i.e., /usr/share.
@@ -17,7 +17,7 @@ Set paths to texmf trees for pkgsrc.
  TEXMFMAIN = $TEXMFDIST
  
  % Local additions to the distribution trees.
--TEXMFLOCAL = $TEXMFROOT/../texmf-local
+-TEXMFLOCAL = $SELFAUTOGRANDPARENT/texmf-local
 +TEXMFLOCAL = @TEXMFLOCAL@
  
  % TEXMFSYSVAR, where *-sys store cached runtime data.
@@ -39,7 +39,7 @@ Set paths to texmf trees for pkgsrc.
  
  % On some systems, there will be a system tree which contains all the font
  % files that may be created as well as the formats.  For example
-@@ -485,33 +485,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+@@ -481,33 +481,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % since we don't want to scatter ../'s throughout the value.  Hence we
  % explicitly list every directory.  Arguably more understandable anyway.
  %
@@ -60,7 +60,7 @@ Set paths to texmf trees for pkgsrc.
 -$SELFAUTODIR/texmf-dist/web2c,\
 -$SELFAUTODIR/texmf/web2c,\
 -\
--$SELFAUTOPARENT/../texmf-local/web2c,\
+-$SELFAUTOGRANDPARENT/texmf-local/web2c,\
 -$SELFAUTOPARENT,\
 -\
 -$SELFAUTOPARENT/share/texmf-local/web2c,\
