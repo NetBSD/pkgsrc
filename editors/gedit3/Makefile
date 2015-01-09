@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/12/29 04:37:44 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2015/01/09 11:32:47 obache Exp $
 
 DISTNAME=	gedit-3.14.2
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gedit.org/
 COMMENT=	Lightweight GNOME UTF-8 text editor
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=		gedit>=2.0<3.0
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
