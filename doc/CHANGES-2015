@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.156 2015/01/09 14:13:14 mef Exp $
+$NetBSD: CHANGES-2015,v 1.157 2015/01/09 14:14:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -173,3 +173,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed shells/mudsh [mef 2015-01-09]
 	Updated archivers/p5-Archive-Zip to 1.40 [mef 2015-01-09]
 	Updated archivers/unalz to 0.65 [mef 2015-01-09]
+	Updated audio/abcmidi to 20141016 [mef 2015-01-09]
