@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/11/17 16:45:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/01/09 22:13:13 minskim Exp $
 bin/kpseaccess
 bin/kpsereadlink
 bin/kpsestat
@@ -42,6 +42,7 @@ include/kpathsea/pathsearch.h
 include/kpathsea/proginit.h
 include/kpathsea/progname.h
 include/kpathsea/readable.h
+include/kpathsea/simpletypes.h
 include/kpathsea/str-list.h
 include/kpathsea/str-llist.h
 include/kpathsea/systypes.h
