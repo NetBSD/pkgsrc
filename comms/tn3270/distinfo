@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2011/12/26 03:11:10 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/01/09 14:28:42 joerg Exp $
 
 SHA1 (tn3270-0.20100116.tar.gz) = b550f2c240aa3b185b935c11ed36e75c8c574503
 RMD160 (tn3270-0.20100116.tar.gz) = 59ca2fcaa8f44258eb9cb0069cf17e560754f2c9
 Size (tn3270-0.20100116.tar.gz) = 156352 bytes
 SHA1 (patch-aa) = dfec3563624578dc775f4ec7d0ce813eb9431dce
+SHA1 (patch-tools_mkmake_mkmake.y) = e72636ac31a99247b871024665c055db0706b005
