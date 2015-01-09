@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2009/12/15 19:43:16 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2015/01/09 16:30:57 rumko Exp $
 
---- src/dirmngr.c.orig	2008-12-09 10:52:06.000000000 +0000
+With libgcrypt >= 1.6.0, one needs to init pth before init-ing libgcrypt.
+Taken from https://bugs.g10code.com/gnupg/issue1590
+
+--- src/dirmngr.c.orig	2010-03-13 07:33:58.000000000 +0000
 +++ src/dirmngr.c
 @@ -39,6 +39,7 @@
  #include <unistd.h>
@@ -10,7 +13,20 @@ $NetBSD: patch-ac,v 1.5 2009/12/15 19:43:16 drochner Exp $
  
  #include <gcrypt.h>
  #include <ksba.h>
-@@ -954,7 +955,10 @@ main (int argc, char **argv)
+@@ -656,8 +657,11 @@ main (int argc, char **argv)
+      the option parsing may need services of the libraries. */
+ 
+   /* Libgcrypt requires us to register the threading model first.
+-     Note that this will also do the pth_init. */
++     Note that this will also do the pth_init for libgcrypt < 1.6. */
+ 
++#if GCRYPT_VERSION_NUMBER >= 0x010600
++  pth_init();
++#endif
+   /* Init Libgcrypt. */
+   rc = gcry_control (GCRYCTL_SET_THREAD_CBS, &gcry_threads_pth);
+   if (rc)
+@@ -1014,7 +1018,10 @@ main (int argc, char **argv)
        len = (offsetof (struct sockaddr_un, sun_path)
               + strlen (serv_addr.sun_path) + 1);
  
