@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/12/30 17:23:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/01/09 14:36:06 joerg Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaQuick_p.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
@@ -271,6 +271,7 @@ ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderSer
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake
 qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake
+${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QPulseAudioPlugin.cmake
 qt5/lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfig.cmake
 qt5/lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfigVersion.cmake
 qt5/lib/libQt5Multimedia.la
@@ -293,6 +294,7 @@ ${PLIST.mac}qt5/plugins/audio/libqtaudio_coreaudio.la
 ${PLIST.mac}qt5/plugins/mediaservice/libqavfcamera.la
 ${PLIST.mac}qt5/plugins/mediaservice/libqavfmediaplayer.la
 ${PLIST.mac}qt5/plugins/mediaservice/libqtmedia_audioengine.la
+${PLIST.unix}qt5/plugins/audio/libqtmedia_pulse.la
 ${PLIST.unix}qt5/plugins/mediaservice/libgstaudiodecoder.la
 ${PLIST.unix}qt5/plugins/mediaservice/libgstcamerabin.la
 ${PLIST.unix}qt5/plugins/mediaservice/libgstmediacapture.la
