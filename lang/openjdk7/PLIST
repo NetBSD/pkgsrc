@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/06/14 22:44:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/01/09 16:29:04 rumko Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -387,6 +387,7 @@ java/openjdk7/jre/lib/${ARCH}/libjsdt.diz
 java/openjdk7/jre/lib/${ARCH}/libjsdt.so
 java/openjdk7/jre/lib/${ARCH}/libjsig.so
 java/openjdk7/jre/lib/${ARCH}/libjsound.so
+${PLIST.alsa}java/openjdk7/jre/lib/${ARCH}/libjsoundalsa.so
 java/openjdk7/jre/lib/${ARCH}/liblcms.so
 java/openjdk7/jre/lib/${ARCH}/libmanagement.diz
 java/openjdk7/jre/lib/${ARCH}/libmanagement.so
@@ -396,6 +397,7 @@ java/openjdk7/jre/lib/${ARCH}/libnio.so
 java/openjdk7/jre/lib/${ARCH}/libnpt.diz
 java/openjdk7/jre/lib/${ARCH}/libnpt.so
 java/openjdk7/jre/lib/${ARCH}/libsaproc.so
+${PLIST.sctp}java/openjdk7/jre/lib/${ARCH}/libsctp.so
 java/openjdk7/jre/lib/${ARCH}/libsplashscreen.so
 java/openjdk7/jre/lib/${ARCH}/libsunec.so
 java/openjdk7/jre/lib/${ARCH}/libunpack.so

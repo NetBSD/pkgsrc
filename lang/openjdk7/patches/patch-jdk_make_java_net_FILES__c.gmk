@@ -1,12 +1,18 @@
-$NetBSD: patch-jdk_make_java_net_FILES__c.gmk,v 1.1 2014/07/25 20:35:14 ryoon Exp $
+$NetBSD: patch-jdk_make_java_net_FILES__c.gmk,v 1.2 2015/01/09 16:29:04 rumko Exp $
 
---- jdk/make/java/net/FILES_c.gmk.orig	2014-06-14 20:38:28.000000000 +0000
+Use bsd_close.c on all BSD platforms, but avoid duplication on fbsd
+
+--- jdk/make/java/net/FILES_c.gmk.orig	2014-11-02 07:18:20.000000000 +0000
 +++ jdk/make/java/net/FILES_c.gmk
-@@ -44,7 +44,7 @@ ifeq ($(PLATFORM), linux)
+@@ -45,11 +45,7 @@ ifeq ($(PLATFORM), linux)
      FILES_c += linux_close.c
  endif
  
 -ifeq ($(PLATFORM), macosx)
+-    FILES_c += bsd_close.c
+-endif
+-
+-ifeq ($(OS_VENDOR), FreeBSD)
 +ifeq ($(PLATFORM), bsd)
      FILES_c += bsd_close.c
  endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2014/12/30 23:48:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2015/01/09 16:29:04 rumko Exp $
 
 DISTNAME=	openjdk-1.7.71-20141102
 PKGNAME=	openjdk7-1.7.71
@@ -127,17 +127,21 @@ SUBST_SED.mapfix2=	-e '/environ/d'
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
 			-Wno-unused-value -Wno-switch-enum -Wno-switch \
-			-Wno-tautological-compare -Wno-new-returns-null \
+			-Wno-tautological-compare \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
 			-Wno-parentheses-equality -Wno-empty-body
 CWRAPPERS_APPEND.cxx+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
 			-Wno-unused-value -Wno-switch-enum -Wno-switch \
-			-Wno-tautological-compare -Wno-new-returns-null \
+			-Wno-tautological-compare \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
 			-Wno-parentheses-equality -Wno-empty-body
+.if ${OPSYS} != "FreeBSD"
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-new-returns-null
+CWRAPPERS_APPEND.cxx+=	-Wno-new-returns-null
+.endif
 BUILDLINK_TRANSFORM+=	rm:-fcheck-new
 BUILDLINK_TRANSFORM+=	rm:-fpch-deps
 .  if ${MACHINE_ARCH} == "x86_64"
@@ -174,6 +178,13 @@ PLIST.i386=	yes
 .endif
 .if ${OPSYS} != "SunOS"
 PLIST.manja=	yes
+.endif
+
+PLIST_VARS+=	sctp alsa
+.if ${OPSYS} == "FreeBSD"
+PLIST.sctp=	yes
+PLIST.alsa=	yes
+.include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
 post-extract:
