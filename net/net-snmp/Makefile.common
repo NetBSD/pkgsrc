@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2014/12/31 10:06:57 adam Exp $
-
+# $NetBSD: Makefile.common,v 1.3 2015/01/09 14:00:00 adam Exp $
 # used by net/net-snmp/Makefile
 # used by net/py-netsnmp/Makefile
 
@@ -8,3 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
 HOMEPAGE=	http://www.net-snmp.org/
 LICENSE=	modified-bsd
+
+DISTINFO_FILE=	${.CURDIR}/../../net/net-snmp/distinfo
+PATCHDIR=	${.CURDIR}/../../net/net-snmp/patches
