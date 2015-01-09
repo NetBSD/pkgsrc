@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2013/04/06 03:45:15 rodent Exp $
+# $NetBSD: Makefile,v 1.61 2015/01/09 16:34:19 rumko Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PLIST_VARS+=		mustek pint sm3600
 
-.if (${OPSYS} == "SunOS") || (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly")
+.if (${OPSYS} == "SunOS") || (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly") || (${OPSYS} == "FreeBSD")
 PLIST.sm3600=		yes
 .elif (${OPSYS} == "Darwin")
 PLIST.mustek=		yes
