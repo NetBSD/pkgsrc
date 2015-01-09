@@ -1,10 +1,25 @@
-$NetBSD: patch-src-post-planar-eq2.c,v 1.5 2014/12/30 13:34:59 wiz Exp $
+$NetBSD: patch-src-post-planar-eq2.c,v 1.6 2015/01/09 14:33:10 joerg Exp $
 
 https://bugs.xine-project.org/show_bug.cgi?id=524
 
---- src/post/planar/eq2.c.orig	2012-02-05 19:17:02.000000000 +0000
+--- src/post/planar/eq2.c.orig	2014-06-09 16:08:42.000000000 +0000
 +++ src/post/planar/eq2.c
-@@ -288,19 +292,26 @@ typedef struct eq2_parameters_s {
+@@ -125,11 +125,11 @@ void affine_1d_MMX (eq2_param_t *par, un
+   dstep = dstride - w;
+ 
+   asm volatile (
+-    "movq (%0), %%mm3 \n\t"
+-    "movq (%1), %%mm4 \n\t"
++    "movq %0, %%mm3 \n\t"
++    "movq %1, %%mm4 \n\t"
+     "pxor %%mm0, %%mm0 \n\t"
+     :
+-    : "g" (brvec), "g" (contvec)
++    : "m" (brvec), "m" (contvec)
+   );
+ 
+   while (h-- > 0) {
+@@ -293,19 +293,26 @@ typedef struct eq2_parameters_s {
   * description of params struct
   */
  START_PARAM_DESCR( eq2_parameters_t )
