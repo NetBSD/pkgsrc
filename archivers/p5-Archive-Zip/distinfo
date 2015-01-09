@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2014/11/24 08:29:51 mef Exp $
+$NetBSD: distinfo,v 1.14 2015/01/09 13:35:32 mef Exp $
 
-SHA1 (Archive-Zip-1.39.tar.gz) = 03a16f6cfdebd1b53db9b998acad2d46da80222a
-RMD160 (Archive-Zip-1.39.tar.gz) = 9a2c17623e3b6f7838c5273b72681c1e59b489ce
-Size (Archive-Zip-1.39.tar.gz) = 183667 bytes
+SHA1 (Archive-Zip-1.40.tar.gz) = 0f25a3fad9d6569041cfe04011ef16d4779fb0ef
+RMD160 (Archive-Zip-1.40.tar.gz) = ede38aa1bef83def83b15d49ae1c212412522470
+Size (Archive-Zip-1.40.tar.gz) = 185915 bytes
