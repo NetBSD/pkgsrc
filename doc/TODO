@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14010 2015/01/10 12:35:40 mef Exp $
+$NetBSD: TODO,v 1.14011 2015/01/10 16:27:54 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aspell-nb-2.0.10
 	o asymptote-2.32
 	o aterm-1.0.1
-	o at-spi2-core-2.14.1 [2.15.x is unstable version, tks prlw1@]
 	o aubio-0.4.0
 	o audacity-2.0.5 [wip (audacity-devel)]
 	o autoconf-archive-20141015
