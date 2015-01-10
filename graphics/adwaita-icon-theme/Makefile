@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/18 07:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/10 12:23:05 prlw1 Exp $
 
 DISTNAME=		adwaita-icon-theme-3.14.1
 CATEGORIES=		graphics gnome
@@ -11,7 +11,7 @@ COMMENT=		Standard GNOME icons
 LICENSE=		cc-by-sa-v3.0 OR gnu-lgpl-v3
 
 TOOL_DEPENDS+=		librsvg>=2.22.3:../../graphics/librsvg
-# for icontool-render
+# for gtk-encode-symbolic-svg
 TOOL_DEPENDS+=		gtk3+>=3:../../x11/gtk3
 
 GNU_CONFIGURE=		yes
