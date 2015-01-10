@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.168 2015/01/10 20:38:38 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.169 2015/01/10 22:28:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -185,3 +185,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/ffmpeg2 to 2.5.3 [adam 2015-01-10]
 	Updated pkgtools/lintpkgsrc to 4.88 [wiz 2015-01-10]
 	Updated net/youtube-dl to 20150110.2 [wiz 2015-01-10]
+	Updated www/py-uwsgi to 2.0.9 [adam 2015-01-10]
