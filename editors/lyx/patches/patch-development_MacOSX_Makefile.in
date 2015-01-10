@@ -1,15 +1,15 @@
-$NetBSD: patch-development_MacOSX_Makefile.in,v 1.1 2011/03/07 23:28:38 minskim Exp $
+$NetBSD: patch-development_MacOSX_Makefile.in,v 1.2 2015/01/10 18:13:22 rumko Exp $
 
 Install files under $(DESTDIR) on Mac OS X.
 
---- development/MacOSX/Makefile.in.orig	2011-03-05 04:50:39.000000000 +0000
+--- development/MacOSX/Makefile.in.orig	2014-11-15 18:11:37.000000000 +0000
 +++ development/MacOSX/Makefile.in
-@@ -884,7 +884,7 @@ uninstall-am: uninstall-dist_binSCRIPTS 
+@@ -877,7 +877,7 @@ uninstall-am: uninstall-dist_binSCRIPTS 
  install-data-hook:
  	LINGUAS_=`sed -e "/^#/d" -e "s/#.*//" $(LINGUAS)`; \
  	for f in en $$LINGUAS_ ; do \
--	  mkdir -p $(pkgdatadir)/$$f.lproj ; \
-+	  mkdir -p $(DESTDIR)$(pkgdatadir)/$$f.lproj ; \
+-	  $(MKDIR_P) $(pkgdatadir)/$$f.lproj ; \
++	  $(MKDIR_P) $(DESTDIR)$(pkgdatadir)/$$f.lproj ; \
  	done
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
