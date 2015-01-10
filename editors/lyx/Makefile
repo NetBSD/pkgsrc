@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.43 2014/05/29 23:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2015/01/10 18:13:22 rumko Exp $
 
-DISTNAME=		lyx-2.0.7
-PKGREVISION=		2
+DISTNAME=		lyx-2.1.2.2
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/ \
-			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.0.x/ \
-			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.0.x/ \
-			ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.0.x/ \
-			ftp://ftp.lip6.fr/pub/lyx/stable/2.0.x/ \
-			ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.0.x/
+MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.1.x/ \
+			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.1.x/ \
+			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.1.x/ \
+			ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.1.x/ \
+			ftp://ftp.lip6.fr/pub/lyx/stable/2.1.x/ \
+			ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.1.x/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		reed@reedmedia.net
@@ -70,6 +69,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.6.10
 CXXFLAGS.Linux+=	-fpermissive
 
 CONFIGURE_ARGS+=	--without-included-mythes
+CONFIGURE_ARGS+=	--without-included-boost
 
 CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 			--with-qt4-dir=${QTDIR:Q} \
@@ -91,15 +91,52 @@ PLIST_SUBST+=		BIN_DIR=bin \
 			SHARE_DIR=share/lyx
 .endif
 
-REPLACE_PYTHON=	development/cmake/doc/ReplaceValues.py \
+PRINT_PLIST_AWK+=	{ sub(/bin\//, "$${BIN_DIR}/"); \
+				sub(/^share\/lyx\//, "$${SHARE_DIR}/"); \
+				gsub(/LC_MESSAGES\/lyx./, "LC_MESSAGES/$${LYX}."); \
+				sub(/^${PKGMANDIR}\//, "$${MAN_DIR}/"); \
+				print; next; }
+
+REPLACE_PYTHON=	development/autotests/keytest.py \
+			development/cmake/doc/ReplaceValues.py \
 			development/cmake/po/cat.py \
+			development/cmake/po/dos2unix.py \
+			development/cmake/po/unix2dos.py \
+			development/keystest/cache-bisect.py \
+			development/keystest/make_screenshot_html.py \
+			development/keystest/keytest.py \
 			development/tools/convert_kmap.py \
 			development/tools/gen_lfuns.py \
+			development/tools/generate_symbols_images.py \
 			development/tools/generate_symbols_list.py \
 			development/tools/unicodesymbols.py \
 			lib/configure.py \
+			lib/lyx2lyx/LyX.py \
+			lib/lyx2lyx/generate_encoding_info.py \
 			lib/lyx2lyx/lyx2lyx \
+			lib/lyx2lyx/lyx2lyx_lang.py \
+			lib/lyx2lyx/lyx2lyx_tools.py \
+			lib/lyx2lyx/lyx2lyx_version.py \
+			lib/lyx2lyx/lyx_0_06.py \
+			lib/lyx2lyx/lyx_0_08.py \
+			lib/lyx2lyx/lyx_0_10.py \
+			lib/lyx2lyx/lyx_0_12.py \
+			lib/lyx2lyx/lyx_1_0.py \
+			lib/lyx2lyx/lyx_1_1.py \
+			lib/lyx2lyx/lyx_1_1_5.py \
+			lib/lyx2lyx/lyx_1_1_6_0.py \
+			lib/lyx2lyx/lyx_1_1_6_3.py \
+			lib/lyx2lyx/lyx_1_2.py \
+			lib/lyx2lyx/lyx_1_3.py \
+			lib/lyx2lyx/lyx_1_4.py \
+			lib/lyx2lyx/lyx_1_5.py \
+			lib/lyx2lyx/lyx_1_6.py \
+			lib/lyx2lyx/lyx_2_0.py \
+			lib/lyx2lyx/lyx_2_1.py \
+			lib/lyx2lyx/parser_tools.py \
 			lib/lyx2lyx/profiling.py \
+			lib/lyx2lyx/test_parser_tools.py \
+			lib/lyx2lyx/unicode_symbols.py \
 			lib/scripts/TeXFiles.py \
 			lib/scripts/clean_dvi.py \
 			lib/scripts/convertDefault.py \
@@ -110,21 +147,21 @@ REPLACE_PYTHON=	development/cmake/doc/ReplaceValues.py \
 			lib/scripts/fig2pdftex.py \
 			lib/scripts/fig2pstex.py \
 			lib/scripts/fig_copy.py \
+			lib/scripts/html2latexwrapper.py \
 			lib/scripts/include_bib.py \
 			lib/scripts/layout2layout.py \
 			lib/scripts/legacy_lyxpreview2ppm.py \
 			lib/scripts/listerrors \
 			lib/scripts/lyxpak.py \
-			lib/scripts/lyxpreview-lytex2bitmap.py \
-			lib/scripts/lyxpreview-platex2bitmap.py \
 			lib/scripts/lyxpreview2bitmap.py \
 			lib/scripts/lyxpreview_tools.py \
-			lib/scripts/tex_copy.py \
 			lib/scripts/prefs2prefs.py \
 			lib/scripts/prefs2prefs_lfuns.py \
 			lib/scripts/prefs2prefs_prefs.py \
+			lib/scripts/tex_copy.py \
 			po/lyx_pot.py \
-			po/postats.py
+			po/postats.py \
+			src/tex2lyx/test/runtests.py
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
@@ -133,7 +170,6 @@ SUBST_SED.python=	-e "s,python ,${PYTHONBIN} ,"
 SUBST_FILES.python+=	src/graphics/GraphicsConverter.cpp
 SUBST_SED.python+=	-e "s,\#!/usr/bin/env python,\#!${PYTHONBIN},"
 SUBST_FILES.python+=	lib/scripts/lyxpak.py
-SUBST_FILES.python+=	development/scons/SConstruct
 SUBST_SED.python+=	-e "s, = 'python, = '${PYTHONBIN},"
 SUBST_FILES.python+=	src/support/os.cpp
 SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
@@ -145,7 +181,10 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../textproc/mythes/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

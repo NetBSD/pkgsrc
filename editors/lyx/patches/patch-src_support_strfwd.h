@@ -1,12 +1,11 @@
-$NetBSD: patch-src_support_strfwd.h,v 1.1 2012/11/23 12:32:00 joerg Exp $
+$NetBSD: patch-src_support_strfwd.h,v 1.2 2015/01/10 18:13:22 rumko Exp $
 
---- src/support/strfwd.h.orig	2012-11-22 21:47:30.000000000 +0000
+--- src/support/strfwd.h.orig	2014-11-15 18:11:26.000000000 +0000
 +++ src/support/strfwd.h
-@@ -28,28 +28,8 @@ namespace lyx { typedef boost::uint32_t 
+@@ -41,28 +41,8 @@ namespace lyx { typedef boost::uint32_t 
+ #include <string>
+ #else
  
- #endif
- 
--
 -namespace std {
 -
 -template<typename Alloc> class allocator;
@@ -22,14 +21,15 @@ $NetBSD: patch-src_support_strfwd.h,v 1.1 2012/11/23 12:32:00 joerg Exp $
 -
 -template<class Char, class Traits> class basic_istream;
 -template<class Char, class Traits> class basic_ostream;
+-template<class Char, class Traits, class Allocator> class basic_ostringstream;
 -
 -typedef basic_istream<char, char_traits<char> > istream;
 -typedef basic_ostream<char, char_traits<char> > ostream;
+-typedef basic_ostringstream<char, char_traits<char>, allocator<char> > ostringstream;
 -
 -} // namepace std
--
 +#include <string>
 +#include <iostream>
  
- namespace lyx {
+ #endif
  
