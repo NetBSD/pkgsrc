@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/02/20 09:43:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/01/10 15:21:41 prlw1 Exp $
 bin/gtkdoc-check
 bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
@@ -10,7 +10,6 @@ bin/gtkdoc-mktmpl
 bin/gtkdoc-rebase
 bin/gtkdoc-scan
 bin/gtkdoc-scangobj
-bin/gtkdoc-scanobj
 bin/gtkdocize
 share/aclocal/gtk-doc.m4
 share/gtk-doc/data/devhelp2.xsl
