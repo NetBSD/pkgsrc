@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/01/02 08:31:39 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/10 20:35:24 wiz Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/mediainfo_/libmediainfo-/S/_AllInclusive//}
+PKGNAME=		libmediainfo-${MIVER}
 
 COMMENT=		MediaInfoLib, support library for MediaInfo program
 LICENSE=		zlib
