@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/12/31 23:19:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/10 20:35:24 wiz Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/mediainfo_/mediainfo-/S/_AllInclusive//}
+PKGNAME=		mediainfo-${MIVER}
 LICENSE=		gnu-lgpl-v3
 
 USE_TOOLS+=		autoconf automake gmake pkg-config
