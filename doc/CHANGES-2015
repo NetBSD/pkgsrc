@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.162 2015/01/10 12:28:38 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.163 2015/01/10 15:22:00 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -179,3 +179,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/gtk3 to 3.14.5nb2 [wiz 2015-01-09]
 	Updated x11/mlterm to 3.4.2 [tsutsui 2015-01-10]
 	Updated games/onscripter to 20150102 [tsutsui 2014-01-10]
+	Updated textproc/gtk-doc to 1.21 [prlw1 2015-01-10]
