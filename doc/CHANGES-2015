@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.167 2015/01/10 20:29:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.168 2015/01/10 20:38:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -184,3 +184,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/lyx to 2.1.2.2 [rumko 2015-01-10]
 	Updated multimedia/ffmpeg2 to 2.5.3 [adam 2015-01-10]
 	Updated pkgtools/lintpkgsrc to 4.88 [wiz 2015-01-10]
+	Updated net/youtube-dl to 20150110.2 [wiz 2015-01-10]
