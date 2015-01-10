@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.160 2015/01/09 22:25:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.161 2015/01/10 11:16:16 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-wtforms to 2.0.1 [kleink 2015-01-09]
 	Updated print/kpathsea to 6.2.0 [minskim 2015-01-09]
 	Updated x11/gtk3 to 3.14.5nb2 [wiz 2015-01-09]
+	Updated x11/mlterm to 3.4.2 [tsutsui 2015-01-10]
