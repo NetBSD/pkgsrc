@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.166 2015/01/10 19:11:08 adam Exp $
+$NetBSD: CHANGES-2015,v 1.167 2015/01/10 20:29:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -183,3 +183,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/at-spi2-core to 2.14.1 [prlw1 2015-01-10]
 	Updated editors/lyx to 2.1.2.2 [rumko 2015-01-10]
 	Updated multimedia/ffmpeg2 to 2.5.3 [adam 2015-01-10]
+	Updated pkgtools/lintpkgsrc to 4.88 [wiz 2015-01-10]
