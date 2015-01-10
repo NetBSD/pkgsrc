@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2015/01/10 18:13:22 rumko Exp $
+
+Fix build under fbsd, do not use tr1 with libc++.
+
+--- config.h.in.orig	2014-11-15 18:11:36.000000000 +0000
++++ config.h.in
+@@ -353,7 +353,8 @@ char * strerror(int n);
+ 
+ // TR1 regex not supported in GCC <= 4.5
+ #ifndef LYX_USE_TR1
+-#  if __GNUC__ == 4 
++#  include <ciso646>
++#  if __GNUC__ == 4 && !defined(_LIBCPP_VERSION)
+ #    define LYX_USE_TR1
+ #  endif
+ #endif
