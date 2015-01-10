@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/01/09 14:29:10 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/10 20:25:57 wiz Exp $
 
 DISTNAME=	lgogdownloader-2.20
 CATEGORIES=	games
@@ -10,9 +10,6 @@ COMMENT=	Download games from GOG
 #LICENSE=	dwtfywtpl
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
-
-# error: unable to open output file 'obj/Debug/main.o': 'No such file or directory'
-MAKE_JOBS_SAFE=	no
 
 #WRKSRC=		${WRKDIR}/lgogdownloader
 USE_LANGUAGES=	c++
