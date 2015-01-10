@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/08/31 10:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/01/10 16:19:48 gdt Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--with-included-libcroco
 CONFIGURE_ARGS+=	--without-git
 CONFIGURE_ARGS+=	--with-xz
 CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--without-emacs
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
