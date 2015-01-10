@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.4 2014/11/24 09:41:25 bsiegert Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.5 2015/01/10 20:12:24 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1190,6 +1190,7 @@ sub parse_makefile_vars($$) {
             # fully expand
             if (   $incfile =~ m#/mk/bsd#
                 || $incfile =~ /$magic_undefined/
+                || $incfile =~ /\${/
                 || ( !$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)# ) )
             {
                 debug("$file: .include \"$incfile\" skipped\n");
