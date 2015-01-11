@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/01/11 13:35:16 cheusov Exp $
+
+SHA1 (csvkit-0.9.0/0.9.0.tar.gz) = 9afc884d9af7b5c8c5277d6816384dd15a4968cf
+RMD160 (csvkit-0.9.0/0.9.0.tar.gz) = 2836ec7769e87ee0fe13829187069ebcbfcac26b
+Size (csvkit-0.9.0/0.9.0.tar.gz) = 3928467 bytes
+SHA1 (patch-csvkit_convert_____init____.py) = b2da7ef399cac88c9f4de737aa0b43ee61341ce0
+SHA1 (patch-setup.py) = d0f4f3b6bbe9b4adbdabbeb90d60d02a3e92cb61
