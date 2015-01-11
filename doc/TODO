@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14012 2015/01/10 18:15:48 rumko Exp $
+$NetBSD: TODO,v 1.14013 2015/01/11 20:54:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,6 +354,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o aewm++-1.0.27
 	o afio-2.5.1
+	o afl-1.09b
 	o akonadi-1.10.3
 	o alacarte-0.13.2
 	o allegro-5.10
@@ -417,7 +418,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calcoo-2.1.0
 	o calibre-2.2.0 [wip]
-	o calibre-2.15.0
+	o calibre-2.16.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -446,6 +447,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cogl-1.18.2
 	o colorize-0.3.4
 	o colortail-0.3.3
+	o compiz-0.8.10
 	o cone-0.91.1
 	o connect-1.96
 	o conserver-8.1.19
@@ -741,6 +743,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnomekbd-3.4.0.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
+	o libjpeg-turbo-1.4
 	o libmcs-0.7.2
 	o libmicrohttpd-0.9.38
 	o libnasl-2.3.1
@@ -848,6 +851,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o open-vm-tools-2010.09.19.301124
 	o openmortal-0.7.1
 	o openmpi-1.8.4
+	o openntpd-5.7p1
 	o openoffice-4.1
 	o openoffice3-3.3
 	o openscad-2013.06
@@ -919,6 +923,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
 	o py-datapkg-0.9
+	o py-dateutil-2.4.0
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
@@ -928,6 +933,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hgtools-4.0
 	o py-html2text-2014.12.29
 	o py-lasso-2.4.0
+	o py-ldap-2.4.19
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.2
 	o py-mezzanine-3.0.5
@@ -937,6 +943,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pandas-0.13.0
 	o py-pendrell-0.3.7
 	o py-pexpect-3.0
+	o py-psutil-2.2.0
 	o py-ptt-1.10.2
 	o py-qt5-5.4 [wip]
 	o py-reportlab-3.0
@@ -950,6 +957,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-trytond-account-3.4.1	
 	o py-trytond-stock-3.4.0
+	o py-vdirsyncer-0.4.1
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
@@ -1123,12 +1131,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
+	o webkit-gtk-2.4.8
 	o webkit-gtk-2.6.4
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
 	o wine-1.7.30
-	o wine-devel-1.7.33
+	o wine-devel-1.7.34
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
