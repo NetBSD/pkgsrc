@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/30 13:07:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/11 21:04:27 wiz Exp $
 bin/afl-clang
 bin/afl-clang++
 bin/afl-fuzz
@@ -431,14 +431,24 @@ share/afl/testcases/_extras/xml/tag_open_exclamation
 share/afl/testcases/_extras/xml/tag_open_q
 share/afl/testcases/_extras/xml/tag_sq2_close
 share/afl/testcases/_extras/xml/tag_xml_q
-share/afl/testcases/archives/ar/small_archive.a
-share/afl/testcases/archives/compress/small_archive.Z
-share/afl/testcases/archives/cpio/small_archive.cpio
-share/afl/testcases/archives/gzip/small_archive.gz
-share/afl/testcases/archives/lzo/small_achive.lzo
-share/afl/testcases/archives/tar/small_archive.tar
-share/afl/testcases/archives/xz/small_archive.xz
-share/afl/testcases/archives/zip/small_archive.zip
+share/afl/testcases/archives/common/ar/small_archive.a
+share/afl/testcases/archives/common/bzip2/small_archive.bz2
+share/afl/testcases/archives/common/cab/small_archive.cab
+share/afl/testcases/archives/common/compress/small_archive.Z
+share/afl/testcases/archives/common/cpio/small_archive.cpio
+share/afl/testcases/archives/common/gzip/small_archive.gz
+share/afl/testcases/archives/common/lzo/small_achive.lzo
+share/afl/testcases/archives/common/rar/small_archive.rar
+share/afl/testcases/archives/common/tar/small_archive.tar
+share/afl/testcases/archives/common/xz/small_archive.xz
+share/afl/testcases/archives/common/zip/small_archive.zip
+share/afl/testcases/archives/exotic/arj/small_archive.arj
+share/afl/testcases/archives/exotic/lha/small_archive.lha
+share/afl/testcases/archives/exotic/lrzip/small_archive.lrz
+share/afl/testcases/archives/exotic/lzip/small_archive.lz
+share/afl/testcases/archives/exotic/lzma/small_archive.lzma
+share/afl/testcases/archives/exotic/rzip/small_archive.rz
+share/afl/testcases/archives/exotic/zoo/small_archive.zoo
 share/afl/testcases/images/bmp/hello_kitty.bmp
 share/afl/testcases/images/gif/hello_kitty.gif
 share/afl/testcases/images/ico/hello_kitty.ico
@@ -454,10 +464,11 @@ share/afl/testcases/images/tiff/hello_kitty.tif
 share/afl/testcases/images/webp/hello_kitty_lossless.webp
 share/afl/testcases/multimedia/h264/small_movie.mp4
 share/afl/testcases/others/elf/small_exec.elf
-share/afl/testcases/others/hello/hello.txt
 share/afl/testcases/others/pcap/small_capture.pcap
 share/afl/testcases/others/pdf/small.pdf
 share/afl/testcases/others/rtf/small_document.rtf
+share/afl/testcases/others/sql/simple_queries.sql
+share/afl/testcases/others/text/hello_world.txt
 share/afl/testcases/others/xml/small_document.xml
 share/afl/testcases/testcases_readme.txt
 share/doc/afl/ChangeLog
