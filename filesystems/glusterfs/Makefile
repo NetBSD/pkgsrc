@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/01/11 22:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2015/01/11 23:07:01 joerg Exp $
 
 DISTNAME=	glusterfs-3.6.0
 #PKGREVISION=	1
@@ -95,6 +95,12 @@ CONFIGURE_ARGS+=	--enable-debug
 #LIBS+=-lgc
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	mmx
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PLIST.mmx=	yes
+.endif
+
 #.include "../../devel/argp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/python/application.mk"
