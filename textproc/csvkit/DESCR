@@ -1,0 +1,16 @@
+csvkit is a suite of utilities for converting to and working with CSV,
+the king of tabular file formats.
+
+csvkit is to tabular data what the standard Unix text processing suite
+(grep, sed, cut, sort) is to text. As such, csvkit adheres to the Unix
+philosophy.
+
+    Small is beautiful.
+    Make each program do one thing well.
+    Build a prototype as soon as possible.
+    Choose portability over efficiency.
+    Store data in flat text files.
+    Use software leverage to your advantage.
+    Use shell scripts to increase leverage and portability.
+    Avoid captive user interfaces.
+    Make every program a filter.
