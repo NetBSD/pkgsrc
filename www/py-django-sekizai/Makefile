@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/12/31 13:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/11 14:08:34 adam Exp $
 
-DISTNAME=	django-sekizai-0.7
+DISTNAME=	django-sekizai-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-sekizai/
