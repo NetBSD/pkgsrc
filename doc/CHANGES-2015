@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.169 2015/01/10 22:28:09 adam Exp $
+$NetBSD: CHANGES-2015,v 1.170 2015/01/11 02:36:56 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/lintpkgsrc to 4.88 [wiz 2015-01-10]
 	Updated net/youtube-dl to 20150110.2 [wiz 2015-01-10]
 	Updated www/py-uwsgi to 2.0.9 [adam 2015-01-10]
+	Removed x11/openmotif [joerg 2015-01-11]
