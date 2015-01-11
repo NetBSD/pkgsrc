@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/09/30 09:34:18 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/01/11 21:17:43 wiz Exp $
 
-SHA1 (Radicale-0.8.tar.gz) = 05e07d8ff851d15bcdb7274680ee3aceeebe01c3
-RMD160 (Radicale-0.8.tar.gz) = 80b176d0c324f6711e2508e52b15a321c803dc25
-Size (Radicale-0.8.tar.gz) = 39813 bytes
+SHA1 (Radicale-0.9.tar.gz) = 2d6af8b60a4c6f96f17bf69bc85eae9bd5740a38
+RMD160 (Radicale-0.9.tar.gz) = 657401d0b8624357d6a220ad42c46dfc02766338
+Size (Radicale-0.9.tar.gz) = 42100 bytes
