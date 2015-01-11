@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/21 02:57:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/11 08:48:39 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
@@ -13,6 +13,14 @@ ${GEM_LIBDIR}/doclib/msgpack/core_ext.rb
 ${GEM_LIBDIR}/doclib/msgpack/error.rb
 ${GEM_LIBDIR}/doclib/msgpack/packer.rb
 ${GEM_LIBDIR}/doclib/msgpack/unpacker.rb
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Buffer.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Decoder.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Encoder.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/ExtensionValue.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/MessagePackLibrary.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Packer.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Types.java
+${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Unpacker.java
 ${GEM_LIBDIR}/ext/msgpack/buffer.c
 ${GEM_LIBDIR}/ext/msgpack/buffer.h
 ${GEM_LIBDIR}/ext/msgpack/buffer_class.c
@@ -48,9 +56,15 @@ ${GEM_LIBDIR}/spec/cruby/buffer_io_spec.rb
 ${GEM_LIBDIR}/spec/cruby/buffer_packer.rb
 ${GEM_LIBDIR}/spec/cruby/buffer_spec.rb
 ${GEM_LIBDIR}/spec/cruby/buffer_unpacker.rb
+${GEM_LIBDIR}/spec/cruby/packer_spec.rb
+${GEM_LIBDIR}/spec/cruby/unpacker_spec.rb
 ${GEM_LIBDIR}/spec/format_spec.rb
-${GEM_LIBDIR}/spec/packer_spec.rb
+${GEM_LIBDIR}/spec/jruby/benchmarks/shootout_bm.rb
+${GEM_LIBDIR}/spec/jruby/benchmarks/symbolize_keys_bm.rb
+${GEM_LIBDIR}/spec/jruby/msgpack/unpacker_spec.rb
+${GEM_LIBDIR}/spec/jruby/msgpack_spec.rb
+${GEM_LIBDIR}/spec/pack_spec.rb
 ${GEM_LIBDIR}/spec/random_compat.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unpacker_spec.rb
+${GEM_LIBDIR}/spec/unpack_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
