@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.200 2014/10/15 19:04:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.200.2.1 2015/01/11 19:52:04 tron Exp $
 
-DISTNAME=	openssl-1.0.1j
+DISTNAME=	openssl-1.0.1k
 MASTER_SITES=	http://ftp.openssl.org/source/
 CATEGORIES=	security
 
