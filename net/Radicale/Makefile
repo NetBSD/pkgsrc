@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/05/17 16:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/11 21:17:43 wiz Exp $
 
-DISTNAME=	Radicale-0.8
-PKGREVISION=	2
+DISTNAME=	Radicale-0.9
 CATEGORIES=	net time www
 MASTER_SITES=	http://pypi.python.org/packages/source/R/Radicale/
 
@@ -10,12 +9,13 @@ HOMEPAGE=	http://radicale.org/
 COMMENT=	CalDAV (calendar) and CardDAV (contact) server
 LICENSE=	gnu-gpl-v3
 
-PYDISTUTILSPKG=		yes
 EGDIR=			share/examples/radicale
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
 CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/radicale/config
+
+#PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		config
 SUBST_SED.config+=	-e 's,/etc/radicale/config,${PKG_SYSCONFDIR}/radicale/config,'
@@ -30,6 +30,7 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.pkgsrc \
 	  ${DESTDIR}${PREFIX}/${EGDIR}/config
+#	${MV} ${DESTDIR}${PREFIX}/bin/radicale ${DESTDIR}${PREFIX}/bin/radicale-${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
