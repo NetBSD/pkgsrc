@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.182 2015/01/11 20:17:22 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.183 2015/01/11 20:35:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -201,3 +201,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django-sekizai to 0.8.1 [adam 2015-01-11]
 	Added devel/py-dialog version 3.2.1 [bsiegert 2015-01-11]
 	Added devel/py-dialog2 version 3.0.1 [bsiegert 2015-01-11]
+	Updated www/p5-HTML-TableExtract to 2.12 [wiz 2015-01-11]
