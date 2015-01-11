@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/30 09:34:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/11 21:17:43 wiz Exp $
 bin/radicale
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/radicale/__init__.py
 ${PYSITELIB}/radicale/__init__.pyc
 ${PYSITELIB}/radicale/__init__.pyo
@@ -27,6 +28,9 @@ ${PYSITELIB}/radicale/auth/htpasswd.pyo
 ${PYSITELIB}/radicale/auth/http.py
 ${PYSITELIB}/radicale/auth/http.pyc
 ${PYSITELIB}/radicale/auth/http.pyo
+${PYSITELIB}/radicale/auth/remote_user.py
+${PYSITELIB}/radicale/auth/remote_user.pyc
+${PYSITELIB}/radicale/auth/remote_user.pyo
 ${PYSITELIB}/radicale/config.py
 ${PYSITELIB}/radicale/config.pyc
 ${PYSITELIB}/radicale/config.pyo
@@ -39,15 +43,9 @@ ${PYSITELIB}/radicale/log.pyo
 ${PYSITELIB}/radicale/rights/__init__.py
 ${PYSITELIB}/radicale/rights/__init__.pyc
 ${PYSITELIB}/radicale/rights/__init__.pyo
-${PYSITELIB}/radicale/rights/from_file.py
-${PYSITELIB}/radicale/rights/from_file.pyc
-${PYSITELIB}/radicale/rights/from_file.pyo
-${PYSITELIB}/radicale/rights/owner_only.py
-${PYSITELIB}/radicale/rights/owner_only.pyc
-${PYSITELIB}/radicale/rights/owner_only.pyo
-${PYSITELIB}/radicale/rights/owner_write.py
-${PYSITELIB}/radicale/rights/owner_write.pyc
-${PYSITELIB}/radicale/rights/owner_write.pyo
+${PYSITELIB}/radicale/rights/regex.py
+${PYSITELIB}/radicale/rights/regex.pyc
+${PYSITELIB}/radicale/rights/regex.pyo
 ${PYSITELIB}/radicale/storage/__init__.py
 ${PYSITELIB}/radicale/storage/__init__.pyc
 ${PYSITELIB}/radicale/storage/__init__.pyo
@@ -57,6 +55,9 @@ ${PYSITELIB}/radicale/storage/database.pyo
 ${PYSITELIB}/radicale/storage/filesystem.py
 ${PYSITELIB}/radicale/storage/filesystem.pyc
 ${PYSITELIB}/radicale/storage/filesystem.pyo
+${PYSITELIB}/radicale/storage/multifilesystem.py
+${PYSITELIB}/radicale/storage/multifilesystem.pyc
+${PYSITELIB}/radicale/storage/multifilesystem.pyo
 ${PYSITELIB}/radicale/xmlutils.py
 ${PYSITELIB}/radicale/xmlutils.pyc
 ${PYSITELIB}/radicale/xmlutils.pyo
