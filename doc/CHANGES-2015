@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.176 2015/01/11 11:44:26 wen Exp $
+$NetBSD: CHANGES-2015,v 1.177 2015/01/11 11:48:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/groonga to 4.1.0 [obache 2015-01-11]
 	Updated inputmethod/ibus-table to 1.9.2 [obache 2015-01-11]
 	Updated textproc/p5-Pod-Elemental to 0.103004 [wen 2015-01-11]
+	Updated textproc/p5-Pod-Escapes to 1.07 [wen 2015-01-11]
