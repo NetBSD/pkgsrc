@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.5 2015/01/08 21:09:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.6 2015/01/11 19:52:19 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -13,3 +13,5 @@ Pullup ticket #4583 - requested by bouyer
 print/cups-filters: dependence fix
 Pullup ticket #4584 - requested by ryoon
 www/php-basercms: dependence fix
+Pullup ticket #4586 - requested by wiz
+security/openssl: security update
