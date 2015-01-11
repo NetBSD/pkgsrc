@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.190 2015/01/11 21:17:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.191 2015/01/11 21:20:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -209,3 +209,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.09b [wiz 2015-01-11]
 	Updated time/py-dateutil to 2.4.0 [wiz 2015-01-11]
 	Updated net/Radicale to 0.9 [wiz 2015-01-11]
+	Updated textproc/py-html2text to 2014.12.29 [wiz 2015-01-11]
