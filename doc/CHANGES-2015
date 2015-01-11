@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.187 2015/01/11 21:02:00 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.188 2015/01/11 21:04:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooX-HandlesVia to 0.001006 [wiz 2015-01-11]
 	Updated security/py-keyring to 4.0nb1 [wiz 2015-01-11]
 	Updated time/py-vdirsyncer to 0.4.1 [wiz 2015-01-11]
+	Updated devel/afl to 1.09b [wiz 2015-01-11]
