@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.177 2015/01/11 11:48:08 wen Exp $
+$NetBSD: CHANGES-2015,v 1.178 2015/01/11 13:27:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -194,3 +194,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/ibus-table to 1.9.2 [obache 2015-01-11]
 	Updated textproc/p5-Pod-Elemental to 0.103004 [wen 2015-01-11]
 	Updated textproc/p5-Pod-Escapes to 1.07 [wen 2015-01-11]
+	Updated archivers/libunrar to 5.2.4 [adam 2015-01-11]
+	Updated archivers/unrar to 5.2.4 [adam 2015-01-11]
