@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/03 09:00:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/11 09:09:28 obache Exp $
 bin/ibus-table-createdb
 lib/pkgconfig/ibus-table.pc
 libexec/ibus-engine-table
@@ -10,6 +10,8 @@ share/ibus-table/engine/chinese_variants.pyc
 share/ibus-table/engine/chinese_variants.pyo
 share/ibus-table/engine/factory.pyc
 share/ibus-table/engine/factory.pyo
+share/ibus-table/engine/ibus_table_location.pyc
+share/ibus-table/engine/ibus_table_location.pyo
 share/ibus-table/engine/main.pyc
 share/ibus-table/engine/main.pyo
 share/ibus-table/engine/tabcreatedb.pyc
@@ -20,6 +22,7 @@ share/ibus-table/engine/tabsqlitedb.pyc
 share/ibus-table/engine/tabsqlitedb.pyo
 share/ibus-table/engine/chinese_variants.py
 share/ibus-table/engine/factory.py
+share/ibus-table/engine/ibus_table_location.py
 share/ibus-table/engine/main.py
 share/ibus-table/engine/tabcreatedb.py
 share/ibus-table/engine/table.py
