@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/09/06 14:22:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/01/11 20:37:30 wiz Exp $
 
-SHA1 (MooX-HandlesVia-0.001005.tar.gz) = d9e58fca8b26004878de49390941d01d17a98d7f
-RMD160 (MooX-HandlesVia-0.001005.tar.gz) = 64a38d24200a28b711136edb16a54d9ba6555f20
-Size (MooX-HandlesVia-0.001005.tar.gz) = 24293 bytes
+SHA1 (MooX-HandlesVia-0.001006.tar.gz) = 65eb48460d1211d5f2ed1f65cd36b962933a81e7
+RMD160 (MooX-HandlesVia-0.001006.tar.gz) = aae5e08e99f244ba005659ebe5791501452cbe8b
+Size (MooX-HandlesVia-0.001006.tar.gz) = 25835 bytes
