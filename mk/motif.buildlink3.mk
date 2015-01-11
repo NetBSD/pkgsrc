@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink3.mk,v 1.16 2012/11/10 17:13:37 ryoon Exp $
+# $NetBSD: motif.buildlink3.mk,v 1.17 2015/01/11 02:36:31 joerg Exp $
 #
 # Package-settable variables:
 #
@@ -33,9 +33,6 @@ BUILD_DEFS+=			MOTIF_TYPE MOTIFBASE
       exists(/usr/dt/include/Xm/Xm.h) && \
       exists(/usr/dt/include/Xm/Gadget.h)
 _MOTIF_TYPE=		dt
-.elif exists(${X11BASE}/lib/X11/config/OpenMotif.tmpl) || \
-	exists(${LOCALBASE}/lib/X11/config/OpenMotif.tmpl)
-_MOTIF_TYPE=		openmotif
 .elif exists(${X11BASE}/lib/X11/config/LessTif.tmpl) || \
 	exists(${LOCALBASE}/lib/X11/config/LessTif.tmpl)
 _MOTIF_TYPE=		lesstif
@@ -53,8 +50,7 @@ _MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
 .if defined(MOTIF_TYPE)
 .  if (${MOTIF_TYPE} == "dt") || \
 	(${MOTIF_TYPE} == "lesstif") || \
-	(${MOTIF_TYPE} == "motif") || \
-	(${MOTIF_TYPE} == "openmotif")
+	(${MOTIF_TYPE} == "motif")
 _MOTIF_TYPE=		${MOTIF_TYPE}
 .  endif
 .endif
@@ -76,8 +72,6 @@ _MOTIFBASE=		${X11BASE}
 
 .if ${_MOTIF_TYPE} == "motif"
 .  include "../../x11/motif/buildlink3.mk"
-.elif ${_MOTIF_TYPE} == "openmotif"
-.  include "../../x11/openmotif/buildlink3.mk"
 .elif ${_MOTIF_TYPE} == "lesstif"
 .  include "../../x11/lesstif/buildlink3.mk"
 .else
