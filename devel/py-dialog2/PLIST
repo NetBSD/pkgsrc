@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/11 20:14:58 bsiegert Exp $
+${PYSITELIB}/dialog.py
+${PYSITELIB}/dialog.pyc
+${PYSITELIB}/dialog.pyo
+${PYSITELIB}/python2_pythondialog-${PKGVERSION}-py2.7.egg-info
