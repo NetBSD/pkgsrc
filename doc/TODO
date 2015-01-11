@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14016 2015/01/11 21:05:38 wiz Exp $
+$NetBSD: TODO,v 1.14017 2015/01/11 21:20:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -929,7 +929,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
 	o py-hgtools-4.0
-	o py-html2text-2014.12.29
 	o py-lasso-2.4.0
 	o py-ldap-2.4.19
 	o py-markdown-2.3.1
