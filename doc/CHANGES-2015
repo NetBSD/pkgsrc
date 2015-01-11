@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.174 2015/01/11 09:03:49 obache Exp $
+$NetBSD: CHANGES-2015,v 1.175 2015/01/11 09:09:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Digest-SHA3 to 0.24 [wen 2015-01-11]
 	Updated devel/ruby-msgpack to 0.5.10 [obache 2015-01-11]
 	Updated textproc/groonga to 4.1.0 [obache 2015-01-11]
+	Updated inputmethod/ibus-table to 1.9.2 [obache 2015-01-11]
