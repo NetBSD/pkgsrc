@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/11/15 09:10:53 hiramatsu Exp $
+$NetBSD: distinfo,v 1.10 2015/01/11 20:35:36 wiz Exp $
 
-SHA1 (HTML-TableExtract-2.11.tar.gz) = 1d7267b73ee1341bff60ea47fa5cb97d3f55931e
-RMD160 (HTML-TableExtract-2.11.tar.gz) = d132ddc3b74500784356e61224de41c794b99eec
-Size (HTML-TableExtract-2.11.tar.gz) = 27123 bytes
+SHA1 (HTML-TableExtract-2.12.tar.gz) = 41900b286a7a5cf692451bca0b39d8604af24902
+RMD160 (HTML-TableExtract-2.12.tar.gz) = fbbdaab3f269f69e286ac2cd45feceb49e3032f8
+Size (HTML-TableExtract-2.12.tar.gz) = 33797 bytes
