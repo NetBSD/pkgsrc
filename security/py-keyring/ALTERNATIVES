@@ -1,0 +1,1 @@
+bin/keyring @PREFIX@/bin/keyring-@PYVERSSUFFIX@
