@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.194 2015/01/12 10:29:10 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.195 2015/01/12 10:36:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -225,3 +225,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Tiny to 0.053 [mef 2015-01-12]
 	Updated databases/phpmyadmin to 4.3.6 [tron 2015-01-12]
 	Added geography/py-google-maps-services-python 2.0 [kleink 2015-01-12]
+	Updated www/p5-Handel to 1.00014 [mef 2015-01-12]
+	Updated www/p5-JSON-RPC to 1.06 [mef 2015-01-12]
+	Updated www/p5-LWP-UserAgent-Determined to 1.07 [mef 2015-01-12]
+	Updated www/p5-Mojolicious to 5.71 [mef 2015-01-12]
+	Updated www/p5-Plack-Handler-AnyEvent-SCGI to 0.03 [mef 2015-01-12]
