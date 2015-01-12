@@ -1,15 +1,15 @@
-$NetBSD: patch-gnuradio_runtime_lib_thread_thread_cc,v 1.3 2014/10/29 15:13:48 mef Exp $
+$NetBSD: patch-gnuradio_runtime_lib_thread_thread_cc,v 1.4 2015/01/12 14:29:34 jperkin Exp $
 
 Extending for BSD
 
---- gnuradio-runtime/lib/thread/thread.cc.orig	2014-07-31 05:39:51.000000000 +0900
-+++ gnuradio-runtime/lib/thread/thread.cc	2014-09-07 21:53:13.000000000 +0900
+--- gnuradio-runtime/lib/thread/thread.cc.orig	2014-07-30 20:39:51.000000000 +0000
++++ gnuradio-runtime/lib/thread/thread.cc
 @@ -158,7 +158,7 @@ namespace gr {
  
  
  #elif defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__) || \
 -    defined(__FreeBSD__)
-+    defined(__FreeBSD__) || defined(__NetBSD__) || defined(__solaris__)
++    defined(__FreeBSD__) || defined(__NetBSD__) || defined(__sun)
  
  namespace gr {
    namespace thread {
