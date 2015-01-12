@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/12/11 00:15:26 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2015/01/12 06:59:51 mef Exp $
 
-SHA1 (HTML-Strip-2.08.tar.gz) = 88c54cb45b7f3c1541d102f3e94665f296d37e31
-RMD160 (HTML-Strip-2.08.tar.gz) = 63506e3766b5263780411f98355e8fcb97fd8330
-Size (HTML-Strip-2.08.tar.gz) = 14811 bytes
+SHA1 (HTML-Strip-2.09.tar.gz) = 26fd08bee18bfafe56c992726c02446907da4aaa
+RMD160 (HTML-Strip-2.09.tar.gz) = 53eed91a8ce6e5624a8159b757854f29deeb2d2a
+Size (HTML-Strip-2.09.tar.gz) = 15040 bytes
