@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/10/09 14:07:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/12 09:46:50 mef Exp $
 
-DISTNAME=	JSON-RPC-1.03
+DISTNAME=	JSON-RPC-1.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JSON/}
 
@@ -22,7 +21,7 @@ DEPENDS+=	p5-Router-Simple-[0-9]*:../../www/p5-Router-Simple
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 
 PERL5_PACKLIST=	auto/JSON/RPC/.packlist
-PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
