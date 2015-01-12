@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.200 2015/01/12 12:51:28 wen Exp $
+$NetBSD: CHANGES-2015,v 1.201 2015/01/12 13:36:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -234,3 +234,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.2 [obache 2015-01-12]
 	Updated archivers/p5-Archive-Zip to 1.42 [wen 2015-01-12]
 	Updated textproc/p5-XML-Parser to 2.44 [wen 2015-01-12]
+	Updated www/moodle to 2.8.2 [wen 2015-01-12]
