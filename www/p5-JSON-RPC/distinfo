@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/10/20 14:08:07 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2015/01/12 09:46:50 mef Exp $
 
-SHA1 (JSON-RPC-1.03.tar.gz) = 543ec9e674c28612f420bd71847e97dd7270fcfe
-RMD160 (JSON-RPC-1.03.tar.gz) = 26df14729722b9ee947b2089fb3f96f03fc252c1
-Size (JSON-RPC-1.03.tar.gz) = 37495 bytes
+SHA1 (JSON-RPC-1.06.tar.gz) = d3288e5475c2fae5c7ed7fd5e547dd26a1fd07cd
+RMD160 (JSON-RPC-1.06.tar.gz) = 0481b4187a07f22f2e737cc23bee9022e51ef7d3
+Size (JSON-RPC-1.06.tar.gz) = 36034 bytes
