@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.197 2015/01/12 12:03:55 obache Exp $
+$NetBSD: CHANGES-2015,v 1.198 2015/01/12 12:19:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -224,7 +224,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Server-Simple-Static to 0.09 [mef 2015-01-12]
 	Updated www/p5-HTTP-Tiny to 0.053 [mef 2015-01-12]
 	Updated databases/phpmyadmin to 4.3.6 [tron 2015-01-12]
-	Added geography/py-google-maps-services-python 2.0 [kleink 2015-01-12]
+	Added geography/py-google-maps-services-python version 2.0 [kleink 2015-01-12]
 	Updated www/p5-Handel to 1.00014 [mef 2015-01-12]
 	Updated www/p5-JSON-RPC to 1.06 [mef 2015-01-12]
 	Updated www/p5-LWP-UserAgent-Determined to 1.07 [mef 2015-01-12]
