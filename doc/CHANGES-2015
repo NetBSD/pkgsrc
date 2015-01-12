@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.191 2015/01/11 21:20:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.192 2015/01/12 08:08:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -210,3 +210,16 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/py-dateutil to 2.4.0 [wiz 2015-01-11]
 	Updated net/Radicale to 0.9 [wiz 2015-01-11]
 	Updated textproc/py-html2text to 2014.12.29 [wiz 2015-01-11]
+	Updated www/p5-HTML-Selector-XPath to 0.18 [mef 2015-01-12]
+	Updated www/p5-HTML-Strip to 2.09 [mef 2015-01-12]
+	Updated www/p5-HTML-TreeBuilder-LibXML to 0.24 [mef 2015-01-12]
+	Updated www/p5-HTTP-Async to 0.27 [mef 2015-01-12]
+	Updated www/p5-HTTP-DAV to 0.47 [mef 2015-01-12]
+	Updated www/p5-HTTP-Lite to 2.4.3 [mef 2015-01-12]
+	Updated www/p5-HTTP-OAI to 4.03 [mef 2015-01-12]
+	Updated www/p5-HTTP-Parser-XS to 0.17 [mef 2015-01-12]
+	Updated www/p5-HTTP-Proxy to 0.301 [mef 2015-01-12]
+	Updated www/p5-HTTP-Server-EV to 0.68 [mef 2015-01-12]
+	Updated www/p5-HTTP-Server-Simple-PSGI to 0.16 [mef 2015-01-12]
+	Updated www/p5-HTTP-Server-Simple-Static to 0.09 [mef 2015-01-12]
+	Updated www/p5-HTTP-Tiny to 0.053 [mef 2015-01-12]
