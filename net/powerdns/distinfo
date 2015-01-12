@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2014/12/15 12:56:41 fhajny Exp $
+$NetBSD: distinfo,v 1.16 2015/01/12 11:40:43 jperkin Exp $
 
 SHA1 (pdns-3.4.1.tar.bz2) = e4d807b4dc27ef130a49e0efaf82a74cb66f5b11
 RMD160 (pdns-3.4.1.tar.bz2) = fe9df921ac82db834bc011c7c20ad9b436c70cec
@@ -11,7 +11,7 @@ SHA1 (patch-modules_pipebackend_pipebackend.cc) = 51cd06282231768df2e6f82c01e305
 SHA1 (patch-modules_pipebackend_pipebackend.hh) = 3ff9f666a1b348810be38ffe67fd740521390630
 SHA1 (patch-pdns_botan18signers.cc) = 6827a3e2eade467c53d710b57352bd9ed978b47c
 SHA1 (patch-pdns_dns.hh) = c8864cd742a2f5bd8209e6ab569d018dbff3f836
-SHA1 (patch-pdns_dnspacket.cc) = c6f1d543e07a1d081056b49d063fd0ca19151fd8
+SHA1 (patch-pdns_dnspacket.cc) = 9b3abf3e572d0cdf978d18caca82b601d55f3cc1
 SHA1 (patch-pdns_dnsparser.cc) = ec1a279a48825a2adbc528a644b711d225a7e728
 SHA1 (patch-pdns_dnsparser.hh) = d9480c40b97fb8c7d8f1dbbe1777c42ef270d9d1
 SHA1 (patch-pdns_dnsscope.cc) = cc38014e1eb20ed3c65b59714e2725a8283f6391
