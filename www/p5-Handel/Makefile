@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/05/31 12:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/12 09:40:35 mef Exp $
 
-DISTNAME=	Handel-1.00011
+DISTNAME=	Handel-1.00014
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CL/CLACO/}
 
@@ -10,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://handelframework.com/
 #HOMEPAGE=	http://search.cpan.org/dist/Handel/
 COMMENT=	Simple commerce framework with AxKit/TT/Catalyst support
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DBIx-Class>=0.08008:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBIx-Class-UUIDColumns>=0.02000:../../databases/p5-DBIx-Class-UUIDColumns
