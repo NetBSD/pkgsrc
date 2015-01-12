@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/10/20 02:52:45 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2015/01/12 13:10:22 mef Exp $
 
-SHA1 (Router-Simple-0.15.tar.gz) = d04906daa6babf9f2dfbdac1bf7c531f97bb4bdf
-RMD160 (Router-Simple-0.15.tar.gz) = 35e16fd3a18b6e6470e8376e8eaaedf8b38dc10f
-Size (Router-Simple-0.15.tar.gz) = 19124 bytes
+SHA1 (Router-Simple-0.17.tar.gz) = c1aaee6bb200289f1b80bf97480cfb000edc367b
+RMD160 (Router-Simple-0.17.tar.gz) = 42447b26a81794ab7ed178865f5bcf16f33be2da
+Size (Router-Simple-0.17.tar.gz) = 19990 bytes
