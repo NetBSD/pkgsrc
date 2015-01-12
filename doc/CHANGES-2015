@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.196 2015/01/12 11:47:33 adam Exp $
+$NetBSD: CHANGES-2015,v 1.197 2015/01/12 12:03:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -231,3 +231,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Mojolicious to 5.71 [mef 2015-01-12]
 	Updated www/p5-Plack-Handler-AnyEvent-SCGI to 0.03 [mef 2015-01-12]
 	Updated databases/py-ldap to 2.4.19 [adam 2015-01-12]
+	Updated net/mikutter to 3.2.2 [obache 2015-01-12]
