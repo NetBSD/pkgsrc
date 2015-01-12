@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.201 2015/01/12 13:36:42 wen Exp $
+$NetBSD: CHANGES-2015,v 1.202 2015/01/12 13:55:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -235,3 +235,18 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p5-Archive-Zip to 1.42 [wen 2015-01-12]
 	Updated textproc/p5-XML-Parser to 2.44 [wen 2015-01-12]
 	Updated www/moodle to 2.8.2 [wen 2015-01-12]
+	Updated www/p5-Pod-POM-Web to 1.20 [mef 2015-01-12]
+	Updated www/p5-Rose-HTML-Objects to 0.621 [mef 2015-01-12]
+	Updated www/p5-Rose-HTMLx-Form-Related to 0.24 [mef 2015-01-12]
+	Updated www/p5-Router-Simple to 0.17 [mef 2015-01-12]
+	Updated www/p5-Squatting to 0.83 [mef 2015-01-12]
+	Updated www/p5-Starlet to 0.24 [mef 2015-01-12]
+	Updated www/p5-Starman to 0.4011 [mef 2015-01-12]
+	Updated www/p5-Template-Toolkit-Simple to 0.31 [mef 2015-01-12]
+	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.60 [mef 2015-01-12]
+	Updated www/p5-Twiggy to 0.1025 [mef 2015-01-12]
+	Updated www/p5-WWW-Amazon-Wishlist to 2.012 [mef 2015-01-12]
+	Updated www/p5-WWW-Mechanize to 1.73 [mef 2015-01-12]
+	Updated www/p5-WWW-Pastebin-PastebinCom-Create to 1.003 [mef 2015-01-12]
+	Updated www/p5-WWW-Shorten to 3.06 [mef 2015-01-12]
+	Updated www/p5-Web-Scraper to 0.38 [mef 2015-01-12]
