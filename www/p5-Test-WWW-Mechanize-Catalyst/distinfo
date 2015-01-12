@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/11/11 22:54:00 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2015/01/12 13:31:31 mef Exp $
 
-SHA1 (Test-WWW-Mechanize-Catalyst-0.56.tar.gz) = 091429261e6168af2a6d025ec6b3bb94938c4725
-RMD160 (Test-WWW-Mechanize-Catalyst-0.56.tar.gz) = 0e3eedda193c86f81fffc3be8f2ca42198c5fe7d
-Size (Test-WWW-Mechanize-Catalyst-0.56.tar.gz) = 31492 bytes
+SHA1 (Test-WWW-Mechanize-Catalyst-0.60.tar.gz) = 268adf271c2ced9df5a389d23c3d149c657d2223
+RMD160 (Test-WWW-Mechanize-Catalyst-0.60.tar.gz) = 94e920eb44daa1e320dbd2e2abcac240c3c3f746
+Size (Test-WWW-Mechanize-Catalyst-0.60.tar.gz) = 34080 bytes
