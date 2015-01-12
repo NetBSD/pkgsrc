@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/10/20 14:09:24 wen Exp $
+$NetBSD: distinfo,v 1.7 2015/01/12 13:49:30 mef Exp $
 
-SHA1 (WWW-Shorten-3.04.tar.gz) = 043dcd44ef2a7d80918974ff42847a71a2c68663
-RMD160 (WWW-Shorten-3.04.tar.gz) = 302dd3d29a0549d4a1e4a93b7db59a2f239c3b82
-Size (WWW-Shorten-3.04.tar.gz) = 26632 bytes
+SHA1 (WWW-Shorten-3.06.tar.gz) = a11eec7d7dc3b2bcb888878110a56ac3daf7c540
+RMD160 (WWW-Shorten-3.06.tar.gz) = a8ef800165417bfb0095c305d67e1920a6fc5e52
+Size (WWW-Shorten-3.06.tar.gz) = 27522 bytes
