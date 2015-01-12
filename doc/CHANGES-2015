@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.192 2015/01/12 08:08:51 mef Exp $
+$NetBSD: CHANGES-2015,v 1.193 2015/01/12 08:35:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -223,3 +223,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Server-Simple-PSGI to 0.16 [mef 2015-01-12]
 	Updated www/p5-HTTP-Server-Simple-Static to 0.09 [mef 2015-01-12]
 	Updated www/p5-HTTP-Tiny to 0.053 [mef 2015-01-12]
+	Updated databases/phpmyadmin to 4.3.6 [tron 2015-01-12]
