@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.198 2015/01/12 12:19:25 obache Exp $
+$NetBSD: CHANGES-2015,v 1.199 2015/01/12 12:38:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -232,3 +232,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Plack-Handler-AnyEvent-SCGI to 0.03 [mef 2015-01-12]
 	Updated databases/py-ldap to 2.4.19 [adam 2015-01-12]
 	Updated net/mikutter to 3.2.2 [obache 2015-01-12]
+	Updated archivers/p5-Archive-Zip to 1.42 [wen 2015-01-12]
