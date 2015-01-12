@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.193 2015/01/12 08:35:50 tron Exp $
+$NetBSD: CHANGES-2015,v 1.194 2015/01/12 10:29:10 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -224,3 +224,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Server-Simple-Static to 0.09 [mef 2015-01-12]
 	Updated www/p5-HTTP-Tiny to 0.053 [mef 2015-01-12]
 	Updated databases/phpmyadmin to 4.3.6 [tron 2015-01-12]
+	Added geography/py-google-maps-services-python 2.0 [kleink 2015-01-12]
