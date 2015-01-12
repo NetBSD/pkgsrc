@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4972 2014/12/31 19:32:18 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.4973 2015/01/12 21:54:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5128,7 +5128,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 33.0.1 [ryoon 2014-10-28]
 	Updated devel/nasm to 2.11.06 [wen 2014-10-29]
 	Updated devel/p5-Module-CoreList to 5.20141020 [wen 2014-10-29]
-	Renamed lang/vala to lang/vala012 [prlw1 2014-10-29]
+	Moved lang/vala to lang/vala012 [prlw1 2014-10-29]
 	Updated www/squidanalyzer to 6.1 [adam 2014-10-29]
 	Updated security/libgpg-error to 1.17nb1 [he 2014-10-29]
 	Updated net/miniupnpd to 1.8.20141022 [adam 2014-10-29]
