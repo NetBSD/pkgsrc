@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/11/13 10:53:49 markd Exp $
+# $NetBSD: Makefile,v 1.30 2015/01/12 11:20:49 jperkin Exp $
 
 DISTNAME=	kde-baseapps-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -31,6 +31,7 @@ CHECK_INTERPRETER_SKIP=	share/kde/templates/.source/Program.desktop
 .include "../../sysutils/baloo/buildlink3.mk"
 .include "../../sysutils/baloo-widgets/buildlink3.mk"
 .include "../../sysutils/kfilemetadata/buildlink3.mk"
+.include "../../textproc/xapian/buildlink3.mk"
 .include "../../x11/kactivities/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"
