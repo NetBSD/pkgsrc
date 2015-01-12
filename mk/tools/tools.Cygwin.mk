@@ -1,8 +1,11 @@
-# $NetBSD: tools.Cygwin.mk,v 1.8 2014/03/06 07:34:20 uebayasi Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.9 2015/01/12 04:54:19 obache Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
+.if exists(/bin/autopoint)
+TOOLS_PLATFORM.autopoint?=	/bin/autopoint
+.endif
 TOOLS_PLATFORM.awk?=		/bin/awk
 TOOLS_PLATFORM.basename?=	/bin/basename
 TOOLS_PLATFORM.bash?=		/bin/bash
@@ -50,6 +53,9 @@ TOOLS_PLATFORM.flex?=		/bin/flex
 TOOLS_PLATFORM.ftp?=		/bin/tnftp
 .endif
 TOOLS_PLATFORM.gawk?=		/bin/gawk
+.if exists(/bin/gettext)
+TOOLS_PLATFORM.gettext?=	/bin/gettext
+.endif
 .if exists(/bin/m4)
 TOOLS_PLATFORM.gm4?=		/bin/m4
 .endif
@@ -82,8 +88,14 @@ TOOLS_PLATFORM.gmake?=		/bin/make
 TOOLS_PLATFORM.makeinfo?=	/bin/makeinfo
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/bin/mktemp
+.if exists(/bin/msgconv)
+TOOLS_PLATFORM.msgconv?=	/bin/msgconv
+.endif
 .if exists(/bin/msgfmt)
 TOOLS_PLATFORM.msgfmt?=		/bin/msgfmt
+.endif
+.if exists(/bin/msgmerge)
+TOOLS_PLATFORM.msgmerge?=	/bin/msgmerge
 .endif
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/bin/nice
