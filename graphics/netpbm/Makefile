@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2014/11/23 16:12:10 wiz Exp $
+# $NetBSD: Makefile,v 1.199 2015/01/12 11:44:09 is Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
@@ -41,7 +41,7 @@ WRAPPER_REORDER_CMDS+=	reorder:l:rle:netpbm
 SUBST_CLASSES+=		rgb_txt
 SUBST_STAGE.rgb_txt=	post-patch
 SUBST_MESSAGE.rgb_txt=	Configure RGB_TXT
-SUBST_FILES.rgb_txt=	pm_config.in.h
+SUBST_FILES.rgb_txt=	config.mk
 SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'
 
 .include "../../mk/bsd.prefs.mk"
