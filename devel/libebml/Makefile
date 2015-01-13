@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/01/04 23:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/01/13 18:19:01 rumko Exp $
 
 DISTNAME=	libebml-1.3.1
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ HOMEPAGE=	http://sourceforge.net/projects/ebml/
 COMMENT=	Extensible Binary Meta Language support library
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
