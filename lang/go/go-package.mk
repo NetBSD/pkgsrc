@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.1 2015/01/02 14:04:00 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.2 2015/01/13 21:35:13 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -29,6 +29,8 @@ BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
 
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin gopkg
+
+GOTOOLDIR=		${PREFIX}/go/pkg/tool/${LOWER_OPSYS}_${GOARCH}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
