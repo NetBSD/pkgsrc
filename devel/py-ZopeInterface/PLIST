@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/08/13 17:42:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/01/13 12:54:25 bsiegert Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -129,6 +129,9 @@ ${PYSITELIB}/zope/interface/tests/test_odd_declarations.pyo
 ${PYSITELIB}/zope/interface/tests/test_registry.py
 ${PYSITELIB}/zope/interface/tests/test_registry.pyc
 ${PYSITELIB}/zope/interface/tests/test_registry.pyo
+${PYSITELIB}/zope/interface/tests/test_ro.py
+${PYSITELIB}/zope/interface/tests/test_ro.pyc
+${PYSITELIB}/zope/interface/tests/test_ro.pyo
 ${PYSITELIB}/zope/interface/tests/test_sorting.py
 ${PYSITELIB}/zope/interface/tests/test_sorting.pyc
 ${PYSITELIB}/zope/interface/tests/test_sorting.pyo
