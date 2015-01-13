@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2014/12/09 10:45:51 he Exp $
+$NetBSD: distinfo,v 1.5 2015/01/13 20:25:13 he Exp $
 
 SHA1 (dbeacon-0.3.9.1.tar.gz) = d6131e723a251c01d245fcb3ead864f1348e2565
 RMD160 (dbeacon-0.3.9.1.tar.gz) = 81ec4cfe1c2890c7cdb5afbbd98fd2d0cf2a57a3
@@ -6,4 +6,4 @@ Size (dbeacon-0.3.9.1.tar.gz) = 43893 bytes
 SHA1 (patch-contrib_matrix.pl) = 50a5db8c19e7500ef210b873c8dd114edde5dc40
 SHA1 (patch-dbeacon.cpp) = a666e67d9523d7cd2d11cd60b61e01c4f7f933c7
 SHA1 (patch-dbeacon.h) = 8396f6702402100f37cbae30d19cd2b0bb28fb4a
-SHA1 (patch-dbeacon__posix.cpp) = e98bb2e6da3cc2119bbb962249b5c831a8feefc2
+SHA1 (patch-dbeacon__posix.cpp) = 634eb939c71d59d191c3e44242290ab07cb77b08
