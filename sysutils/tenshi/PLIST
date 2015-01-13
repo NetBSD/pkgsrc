@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/13 22:20:03 bsiegert Exp $
+man/man8/tenshi.8
+sbin/tenshi
+share/doc/${PKGNAME}/CREDITS
+share/doc/${PKGNAME}/Changelog
+share/doc/${PKGNAME}/FAQ
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/README
+share/examples/tenshi/tenshi.conf
