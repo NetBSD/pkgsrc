@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2015/01/12 14:24:40 he Exp $
+# $NetBSD: Makefile,v 1.92 2015/01/13 08:27:28 he Exp $
 
 DISTNAME=	screen-4.2.1
 PKGREVISION=	1
@@ -42,12 +42,13 @@ post-install: screen-terminfo
 .  endif
 .endif
 
+INSTALLATION_DIRS+=	share/examples/screen
+
 .if empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 SPECIAL_PERMS+=		bin/${DISTNAME} ${SETUID_ROOT_PERMS}
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
 		${DESTDIR}${PREFIX}/share/examples/screen/etcscreenrc
 	${INSTALL_DATA} ${WRKSRC}/etc/screenrc				\
