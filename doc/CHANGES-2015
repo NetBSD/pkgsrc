@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.203 2015/01/13 12:55:22 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.204 2015/01/13 14:08:59 gson Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-WWW-Shorten to 3.06 [mef 2015-01-12]
 	Updated www/p5-Web-Scraper to 0.38 [mef 2015-01-12]
 	Updated devel/py-ZopeInterface to 4.1.2 [bsiegert 2015-01-13]
+	Updated misc/py-anita to 1.34 [gson 2015-01-13]
