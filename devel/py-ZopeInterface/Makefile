@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2014/01/25 10:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/13 12:54:25 bsiegert Exp $
 
-DISTNAME=	zope.interface-4.0.5
+DISTNAME=	zope.interface-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.i/ZopeI/}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/z/zope.interface/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	https://pypi.python.org/packages/source/z/zope.interface/
 
-MAINTAINER=	sifu@0xx0.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/zope.interface
 COMMENT=	The zope.interface package used in Zope 3 and Twisted
 LICENSE=	zpl
