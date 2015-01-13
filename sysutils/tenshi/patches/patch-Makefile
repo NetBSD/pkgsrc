@@ -1,0 +1,44 @@
+$NetBSD: patch-Makefile,v 1.1 2015/01/13 22:20:03 bsiegert Exp $
+
+Fix install locations.
+
+--- Makefile.orig	2015-01-12 22:03:23.993870619 +0000
++++ Makefile
+@@ -3,11 +3,11 @@
+ 
+ VERSION = 0.15
+ 
+-bindir = /usr/sbin
+-sysconfdir = /etc
+-docdir = /usr/share/doc/tenshi-${VERSION}
+-mandir = /usr/share/man
+-libdir = /var/lib/tenshi
++bindir = ${PREFIX}/sbin
++sysconfdir = ${PREFIX}/share/examples
++docdir = ${PREFIX}/share/doc
++mandir = ${PREFIX}/${PKGMANDIR}
++
+ 
+ DOCS = README INSTALL CREDITS LICENSE Changelog FAQ
+ SAMPLES = tenshi.conf tenshi.debian-init tenshi.gentoo-init tenshi.solaris-init tenshi.redhat-init tenshi.suse-init tenshi.redhat-spec tenshi.suse-spec
+@@ -33,12 +33,11 @@ ${TARBALL}:
+ 	rm -rf ${DIST_DIR}
+ 
+ install:
+-	install -D tenshi ${DESTDIR}${bindir}/tenshi
+-	[ -f ${DESTDIR}${sysconfdir}/tenshi/tenshi.conf ] || \
+-		install -g root -m 0644 -D tenshi.conf ${DESTDIR}${sysconfdir}/tenshi/tenshi.conf
+-	install -d ${DESTDIR}${docdir}
+-	install -m 0644 ${DOCS} ${DESTDIR}${docdir}/
+-	[ -d ${DESTDIR}${mandir}/man8 ] || \
+-		install -d ${DESTDIR}${mandir}/man8
+-	install -g root -m 0644 tenshi.8 ${DESTDIR}${mandir}/man8/
+-	install -g root -m 755 -d ${DESTDIR}${libdir}
++	install -d ${DESTDIR}${bindir}
++	install tenshi ${DESTDIR}${bindir}
++	install -d ${DESTDIR}${sysconfdir}/tenshi
++	install tenshi.conf ${DESTDIR}${sysconfdir}/tenshi
++	install -d ${DESTDIR}${docdir}/tenshi-${VERSION}
++	install ${DOCS} ${DESTDIR}${docdir}/tenshi-${VERSION}/
++	install -d ${DESTDIR}${mandir}/man8
++	install tenshi.8 ${DESTDIR}${mandir}/man8/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.621 2014/12/30 17:04:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.622 2015/01/13 22:20:03 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -482,6 +482,7 @@ SUBDIR+=	sysupgrade
 SUBDIR+=	tarsnap
 SUBDIR+=	tcx
 SUBDIR+=	tdir
+SUBDIR+=	tenshi
 SUBDIR+=	testdisk
 SUBDIR+=	tits
 SUBDIR+=	tkcron
