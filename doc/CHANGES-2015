@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.205 2015/01/13 20:25:48 he Exp $
+$NetBSD: CHANGES-2015,v 1.206 2015/01/13 22:21:49 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -253,3 +253,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-ZopeInterface to 4.1.2 [bsiegert 2015-01-13]
 	Updated misc/py-anita to 1.34 [gson 2015-01-13]
 	Updated mbone/dbeacon to 0.3.9.1nb4 [he 2015-01-13]
+	Added sysutils/tenshi version 0.15 [bsiegert 2015-01-13]
