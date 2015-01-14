@@ -1,3 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:06 jperkin Exp $
-sbin/minidlna
+@comment $NetBSD: PLIST,v 1.4 2015/01/14 21:32:20 degroote Exp $
+sbin/minidlnad
 share/examples/minidlna/minidlna.conf
+share/locale/da/LC_MESSAGES/minidlna.mo
+share/locale/de/LC_MESSAGES/minidlna.mo
+share/locale/es/LC_MESSAGES/minidlna.mo
+share/locale/fr/LC_MESSAGES/minidlna.mo
+share/locale/it/LC_MESSAGES/minidlna.mo
+share/locale/ja/LC_MESSAGES/minidlna.mo
+share/locale/nb/LC_MESSAGES/minidlna.mo
+share/locale/nl/LC_MESSAGES/minidlna.mo
+share/locale/pl/LC_MESSAGES/minidlna.mo
+share/locale/ru/LC_MESSAGES/minidlna.mo
+share/locale/sl/LC_MESSAGES/minidlna.mo
+share/locale/sv/LC_MESSAGES/minidlna.mo
