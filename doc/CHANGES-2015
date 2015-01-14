@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.209 2015/01/14 09:24:52 obache Exp $
+$NetBSD: CHANGES-2015,v 1.210 2015/01/14 09:30:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/deforaos-icon-theme to 0.1.0 [khorben 2015-01-13]
 	Updated print/tex-texlive.infra to 2014 [minskim 2015-01-14]
 	Updated inputmethod/ibus-table-others to 1.3.7 [obache 2015-01-14]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.429 [obache 2015-01-14]
