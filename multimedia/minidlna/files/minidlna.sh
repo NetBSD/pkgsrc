@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: minidlna.sh,v 1.1 2012/10/25 10:25:27 drochner Exp $
+# $NetBSD: minidlna.sh,v 1.2 2015/01/14 21:32:20 degroote Exp $
 #
 # PROVIDE: minidlna
 # REQUIRE: DAEMON
@@ -10,11 +10,14 @@
 
 name="minidlna"
 rcvar=${name}
-command="@PREFIX@/sbin/${name}"
-requre_files="@PKG_SYSCONFDIR@/${name}.conf"
+start_cmd="start_minidlna"
+required_files="@PKG_SYSCONFDIR@/${name}.conf"
+pidfile="/var/run/minidlna/minidlna.pid"
+
+start_minidlna()
+{
+	@PREFIX@/sbin/minidlnad -f ${required_files}
+}
 
 load_rc_config ${name}
-
-pidfile="/var/run/minidlna.pid"
-
-run_rc_command $1
+run_rc_command "$1"
