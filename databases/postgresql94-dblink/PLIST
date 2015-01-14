@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/14 21:01:19 adam Exp $
+lib/postgresql/dblink.so
+share/postgresql/extension/dblink--1.0--1.1.sql
+share/postgresql/extension/dblink--1.1.sql
+share/postgresql/extension/dblink--unpackaged--1.0.sql
+share/postgresql/extension/dblink.control
