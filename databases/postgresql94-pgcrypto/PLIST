@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/14 21:01:19 adam Exp $
+lib/postgresql/pgcrypto.so
+share/postgresql/extension/pgcrypto--1.0--1.1.sql
+share/postgresql/extension/pgcrypto--1.1.sql
+share/postgresql/extension/pgcrypto--unpackaged--1.0.sql
+share/postgresql/extension/pgcrypto.control

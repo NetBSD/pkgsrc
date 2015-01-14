@@ -1,0 +1,20 @@
+# $NetBSD: DEINSTALL,v 1.1 2015/01/14 21:01:19 adam Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	${CAT} << EOF
+===========================================================================
+
+If you intend to upgrade your PostgreSQL installation, you may need to
+perform a dump-and-restore to move your current databases into the newer
+PostgreSQL installation.  Please dump your databases *prior* to installing
+the new PostgreSQL.
+
+Please see the Backup and Restore section of the PostgreSQL Administrator's
+Guide (databases/postgresql-docs) for complete information on how to
+perform the databases dump.
+
+===========================================================================
+EOF
+	;;
+esac

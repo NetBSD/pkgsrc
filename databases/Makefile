@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2015/01/01 18:53:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.478 2015/01/14 21:01:18 adam Exp $
 
 COMMENT=	Databases
 
@@ -324,6 +324,21 @@ SUBDIR+=	postgresql93-pltcl
 SUBDIR+=	postgresql93-replicationtools
 SUBDIR+=	postgresql93-server
 SUBDIR+=	postgresql93-upgrade
+SUBDIR+=	postgresql94
+SUBDIR+=	postgresql94-adminpack
+SUBDIR+=	postgresql94-client
+SUBDIR+=	postgresql94-datatypes
+SUBDIR+=	postgresql94-dblink
+SUBDIR+=	postgresql94-docs
+SUBDIR+=	postgresql94-fuzzystrmatch
+SUBDIR+=	postgresql94-monitoring
+SUBDIR+=	postgresql94-pgcrypto
+SUBDIR+=	postgresql94-plperl
+SUBDIR+=	postgresql94-plpython
+SUBDIR+=	postgresql94-pltcl
+SUBDIR+=	postgresql94-replicationtools
+SUBDIR+=	postgresql94-server
+SUBDIR+=	postgresql94-upgrade
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-apsw
