@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.198 2014/11/23 16:12:10 wiz Exp $
+# $NetBSD: Makefile,v 1.198.2.1 2015/01/14 08:33:27 tron Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
 MASTER_SITES=	#
+PKGREVISION=	1
 # manually created from svn checkout of
 # svn checkout http://svn.code.sf.net/p/netpbm/code/advanced netpbm
 # tar --exclude netpbm/.svn/\* -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
@@ -41,7 +42,7 @@ WRAPPER_REORDER_CMDS+=	reorder:l:rle:netpbm
 SUBST_CLASSES+=		rgb_txt
 SUBST_STAGE.rgb_txt=	post-patch
 SUBST_MESSAGE.rgb_txt=	Configure RGB_TXT
-SUBST_FILES.rgb_txt=	pm_config.in.h
+SUBST_FILES.rgb_txt=	config.mk
 SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'
 
 .include "../../mk/bsd.prefs.mk"
