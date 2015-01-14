@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/11/02 18:22:11 khorben Exp $
+$NetBSD: distinfo,v 1.2 2015/01/14 01:29:32 khorben Exp $
 
-SHA1 (DeforaOS-Artwork-0.0.0.tar.gz) = 214bc134d734a90ac16c5d0280e6433a0acaff6f
-RMD160 (DeforaOS-Artwork-0.0.0.tar.gz) = a4719b440d37a1876017d1064ab5d872868f1ba3
-Size (DeforaOS-Artwork-0.0.0.tar.gz) = 20604 bytes
-SHA1 (patch-src_convert.sh) = 6438296938fad8fae62f0aabdf97bbbb8d96ef9a
+SHA1 (DeforaOS-Artwork-0.1.0.tar.gz) = 53fa416bdb0316b32b55f18e8a8fb678ff1de22b
+RMD160 (DeforaOS-Artwork-0.1.0.tar.gz) = 3f02a942d0928f1ad868d9236505848d92ccb686
+Size (DeforaOS-Artwork-0.1.0.tar.gz) = 20970 bytes
