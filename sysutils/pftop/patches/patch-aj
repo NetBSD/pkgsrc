@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.2 2011/06/10 11:45:01 obache Exp $
+$NetBSD: patch-aj,v 1.3 2015/01/14 20:39:42 rumko Exp $
+
+DragonFly and FreeBSD compatibility.
 
 --- sf-gencode.h.orig	2007-11-07 06:34:18.000000000 +0000
 +++ sf-gencode.h
@@ -6,7 +8,7 @@ $NetBSD: patch-aj,v 1.2 2011/06/10 11:45:01 obache Exp $
  struct arth  *gen_loadexpire(void);
  
  void bpf_optimize(struct block **);
-+#ifdef __DragonFly__
++#if defined(__DragonFly__) || defined(__FreeBSD__)
 +void bpf_error(const char *, ...)
 +    __attribute__((volatile, __format__ (printf, 1, 2)));
 +#else
@@ -20,7 +22,7 @@ $NetBSD: patch-aj,v 1.2 2011/06/10 11:45:01 obache Exp $
  #define JT(b)  ((b)->et.succ)
  #define JF(b)  ((b)->ef.succ)
  
-+#ifdef __DragonFly__
++#if defined(__DragonFly__) || defined(__FreeBSD__)
 +void sf_error(const char *fmt, ...);
 +#else
  __dead void sf_error(const char *fmt, ...);
