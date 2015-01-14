@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.212 2015/01/14 13:12:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.213 2015/01/14 13:13:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -260,3 +260,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.429 [obache 2015-01-14]
 	Updated databases/p5-DBI to 1.633 [wiz 2015-01-14]
 	Updated converters/p5-MIME-Base64 to 3.15 [wiz 2015-01-14]
+	Updated security/p5-Digest-MD5 to 2.54 [wiz 2015-01-14]
