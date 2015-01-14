@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/14 21:01:19 adam Exp $
+${PLIST.py2x}lib/postgresql/plpython2.so
+${PLIST.py3x}lib/postgresql/plpython3.so
+share/locale/cs/LC_MESSAGES/plpython-9.4.mo
+share/locale/de/LC_MESSAGES/plpython-9.4.mo
+share/locale/es/LC_MESSAGES/plpython-9.4.mo
+share/locale/fr/LC_MESSAGES/plpython-9.4.mo
+share/locale/it/LC_MESSAGES/plpython-9.4.mo
+share/locale/ja/LC_MESSAGES/plpython-9.4.mo
+share/locale/pl/LC_MESSAGES/plpython-9.4.mo
+share/locale/pt_BR/LC_MESSAGES/plpython-9.4.mo
+share/locale/ru/LC_MESSAGES/plpython-9.4.mo
+share/locale/zh_CN/LC_MESSAGES/plpython-9.4.mo
+${PLIST.py2x}share/postgresql/extension/plpython2u--1.0.sql
+${PLIST.py2x}share/postgresql/extension/plpython2u--unpackaged--1.0.sql
+${PLIST.py2x}share/postgresql/extension/plpython2u.control
+${PLIST.py3x}share/postgresql/extension/plpython3u--1.0.sql
+${PLIST.py3x}share/postgresql/extension/plpython3u--unpackaged--1.0.sql
+${PLIST.py3x}share/postgresql/extension/plpython3u.control
+${PLIST.py2x}share/postgresql/extension/plpythonu--1.0.sql
+${PLIST.py2x}share/postgresql/extension/plpythonu--unpackaged--1.0.sql
+${PLIST.py2x}share/postgresql/extension/plpythonu.control

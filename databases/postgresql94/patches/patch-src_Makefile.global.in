@@ -1,0 +1,32 @@
+$NetBSD: patch-src_Makefile.global.in,v 1.1 2015/01/14 21:01:18 adam Exp $
+
+--- src/Makefile.global.in.orig	2014-12-16 01:07:34.000000000 +0000
++++ src/Makefile.global.in
+@@ -41,7 +41,6 @@ MAJORVERSION = @PG_MAJORVERSION@
+ 
+ # Support for VPATH builds
+ # (PGXS VPATH support is handled separately in pgxs.mk)
+-ifndef PGXS
+ vpath_build = @vpath_build@
+ abs_top_srcdir = @abs_top_srcdir@
+ 
+@@ -53,7 +52,6 @@ top_srcdir = $(abs_top_srcdir)
+ srcdir = $(top_srcdir)/$(subdir)
+ VPATH = $(srcdir)
+ endif
+-endif # not PGXS
+ 
+ vpathsearch = `for f in $(addsuffix /$(1),$(subst :, ,. $(VPATH))); do test -r $$f && echo $$f && break; done`
+ 
+@@ -553,6 +551,11 @@ ifeq ($(PORTNAME),win32)
+ LIBS += -lws2_32
+ endif
+ 
++# missing for link on cygwin ? 
++ifeq ($(PORTNAME),cygwin)
++LIBS +=  $(LDAP_LIBS_BE)
++endif
++
+ # Not really standard libc functions, used by the backend.
+ TAS         = @TAS@
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-src_interfaces_libpq_Makefile,v 1.1 2015/01/14 21:01:18 adam Exp $
+
+--- src/interfaces/libpq/Makefile.orig	2013-09-02 20:53:17.000000000 +0000
++++ src/interfaces/libpq/Makefile
+@@ -45,7 +45,7 @@ OBJS += ip.o md5.o
+ OBJS += encnames.o wchar.o
+ 
+ ifeq ($(PORTNAME), cygwin)
+-override shlib = cyg$(NAME)$(DLSUFFIX)
++override shlib = cyg$(NAME)-$(SO_MAJOR_VERSION)$(DLSUFFIX)
+ endif
+ 
+ ifeq ($(PORTNAME), win32)
