@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/01/14 21:01:19 adam Exp $
+
+Please see the PL/Python section of the PostgreSQL Programmer's Guide
+(databases/postgresql-docs) for information on programming with
+${PKGNAME}.
+
+Note that PL/Python is unrestricted language, meaning it does not
+offer any way of restricting what users can do in it.  Any DB user with
+access to PL/Python can run arbitrary Python code under privileges
+of the PostgreSQL server process.
+
+To enable PL/Python for database <dbname>, run following:
+
+createlang plpythonu <dbname>
+
+===========================================================================

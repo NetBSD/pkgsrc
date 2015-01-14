@@ -1,0 +1,38 @@
+This package provides the following PostgreSQL modules: btree_gist,
+citext, hstore, intarray, isn, ltree, lo, uuid-ossp, unaccent.
+
+The "btree_gist" module provides GIST operator classes for scalar data types.
+
+The "citext" module provides a case-insensitive character string type,
+citext. Essentially, it internally calls lower when comparing values.
+Otherwise, it behaves almost exactly like text.
+
+The "hstore" module implements the "hstore" data type for storing sets
+of key/value pairs within a single PostgreSQL value. This can be useful
+in various scenarios, such as rows with many attributes that are rarely
+examined, or semi-structured data. Keys and values are simply text strings.
+
+The "intarray" module provides a number of useful functions and operators
+for manipulating one-dimensional arrays of integers. There is also support
+for indexed searches using some of the operators.
+
+The "isn" module provides data types for the following international
+product numbering standards: EAN13, UPC, ISBN (books), ISMN (music),
+and ISSN (serials). Numbers are validated on input, and correctly
+hyphenated on output.
+
+The "ltree" module implements a data type ltree for representing
+labels of data stored in a hierarchical tree-like structure.
+Extensive facilities for searching through label trees are provided.
+
+The "lo" module provides support for managing Large Objects (also called
+LOs or BLOBs). This includes a data type "lo" and a trigger "lo_manage."
+
+The "uuid-ossp" module provides functions to generate universally unique
+identifiers (UUIDs) using one of several standard algorithms. There are
+also functions to produce certain special UUID constants.
+
+"unaccent" is a text search dictionary that removes accents (diacritic signs)
+from lexemes. It's a filtering dictionary, which means its output is always
+passed to the next dictionary (if any), unlike the normal behavior of
+dictionaries. This allows accent-insensitive processing for full text search.
