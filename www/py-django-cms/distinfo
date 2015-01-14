@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2014/11/29 15:06:12 adam Exp $
+$NetBSD: distinfo,v 1.21 2015/01/14 17:11:10 adam Exp $
 
-SHA1 (django-cms-3.0.7.tar.gz) = 2aec0ef7ee832bdd2f452e04fb6178805468cec0
-RMD160 (django-cms-3.0.7.tar.gz) = 1a77df693705eacdf590dc752a352a076a327bef
-Size (django-cms-3.0.7.tar.gz) = 5924392 bytes
+SHA1 (django-cms-3.0.9.tar.gz) = b37ad9805bb8084990a30119f9b7cd8a4d659416
+RMD160 (django-cms-3.0.9.tar.gz) = 353710402c97d466cfcfa5e6f858e557142e81d6
+Size (django-cms-3.0.9.tar.gz) = 8121242 bytes
