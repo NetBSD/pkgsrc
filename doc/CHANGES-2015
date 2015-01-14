@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.220 2015/01/14 17:42:45 adam Exp $
+$NetBSD: CHANGES-2015,v 1.221 2015/01/14 21:04:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -272,3 +272,18 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django to 1.7.3 [adam 2015-01-14]
 	Updated www/py-django14 to 1.4.18 [adam 2015-01-14]
 	Updated www/py-django-cms to 3.0.9 [adam 2015-01-14]
+	Added databases/postgresql94 version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-client version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-server version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-docs version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-adminpack version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-datatypes version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-dblink version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-fuzzystrmatch version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-monitoring version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-pgcrypto version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-plperl version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-plpython version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-pltcl version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-replicationtools version 9.4.0 [adam 2015-01-14]
+	Added databases/postgresql94-upgrade version 9.4.0 [adam 2015-01-14]

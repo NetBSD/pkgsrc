@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14021 2015/01/14 01:09:09 mef Exp $
+$NetBSD: TODO,v 1.14022 2015/01/14 21:04:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -904,7 +904,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
-	o postgresql-9.4
 	o powermanga-0.91
 	o powwow-1.2.16
 	o ppp-2.4.6
