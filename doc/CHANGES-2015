@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.214 2015/01/14 13:23:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.215 2015/01/14 13:24:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -262,3 +262,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/p5-MIME-Base64 to 3.15 [wiz 2015-01-14]
 	Updated security/p5-Digest-MD5 to 2.54 [wiz 2015-01-14]
 	Updated security/p5-IO-Socket-SSL to 2.009 [wiz 2015-01-14]
+	Updated textproc/p5-Encode-Locale to 1.04 [wiz 2015-01-14]
