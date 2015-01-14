@@ -1,16 +1,21 @@
-$NetBSD: patch-al,v 1.1 2011/02/09 22:51:38 rumko Exp $
+$NetBSD: patch-al,v 1.2 2015/01/14 20:39:42 rumko Exp $
 $OpenBSD: patch-cache_h,v 1.1 2008/06/13 00:38:12 canacar Exp $
 
+FreeBSD compatibility.
 Patches to support PF > 4.1 taken from OpenBSD's ports.
 
---- cache.h.orig	Tue Nov  6 23:34:18 2007
-+++ cache.h	Wed Jun 11 19:50:07 2008
-@@ -31,14 +31,20 @@
+--- cache.h.orig	2007-11-07 06:34:18.000000000 +0000
++++ cache.h
+@@ -31,14 +31,24 @@
  struct sc_ent {
          RB_ENTRY(sc_ent)    tlink;
  	TAILQ_ENTRY(sc_ent) qlink;
 +#ifdef HAVE_PFSYNC_STATE
++#if defined(__FreeBSD__) && __FreeBSD_version > 1000017
++	u_int64_t	    id;
++#else
 +	u_int32_t	    id[2];
++#endif
 +#else
  	struct pf_addr      addr[2];
 +#endif

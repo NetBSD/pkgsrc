@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2011/02/09 22:51:38 rumko Exp $
+$NetBSD: patch-ad,v 1.4 2015/01/14 20:39:42 rumko Exp $
 $OpenBSD: patch-engine_c,v 1.1 2008/06/13 00:38:12 canacar Exp $
 
-* DragonFly compatibility
+* DragonFly and FreeBSD compatibility
 * Patches to support PF > 4.1 taken from OpenBSD's ports.
 
 --- engine.c.orig	2007-11-07 07:35:44 +0100
@@ -10,7 +10,7 @@ $OpenBSD: patch-engine_c,v 1.1 2008/06/13 00:38:12 canacar Exp $
  
  
  #include <sys/types.h>
-+#ifdef __DragonFly__
++#if defined(__DragonFly__) || defined(__FreeBSD__)
 +#include "queue.h"
 +#else
  #include <sys/queue.h>
