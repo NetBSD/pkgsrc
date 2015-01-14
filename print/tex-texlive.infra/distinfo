@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2013/11/17 16:58:33 minskim Exp $
+$NetBSD: distinfo,v 1.6 2015/01/14 04:37:26 minskim Exp $
 
-SHA1 (tex-texlive.infra-31673/texlive.infra.tar.xz) = f8e636286e3db2a2c174be16be8a27626fd74ee4
-RMD160 (tex-texlive.infra-31673/texlive.infra.tar.xz) = abfe1a6bb9c974ebb4c222e87e95d6a5008abfc9
-Size (tex-texlive.infra-31673/texlive.infra.tar.xz) = 209212 bytes
+SHA1 (tex-texlive.infra-35898/texlive.infra.tar.xz) = 3e0d2f56b11e73edd9cc7753699e9e0af841fe2a
+RMD160 (tex-texlive.infra-35898/texlive.infra.tar.xz) = 0a7ffdf113de28cd73ab158c234cfb14bd44c0f4
+Size (tex-texlive.infra-35898/texlive.infra.tar.xz) = 207740 bytes
 SHA1 (patch-aa) = fa49e775842a96e0667b35fb9629cd007d043544
 SHA1 (patch-ab) = e9a708b1d2df9442a30a45f8937a1560840f7be1
