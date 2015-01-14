@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.207 2015/01/14 01:30:30 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.208 2015/01/14 04:43:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -255,3 +255,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mbone/dbeacon to 0.3.9.1nb4 [he 2015-01-13]
 	Added sysutils/tenshi version 0.15 [bsiegert 2015-01-13]
 	Updated graphics/deforaos-icon-theme to 0.1.0 [khorben 2015-01-13]
+	Updated print/tex-texlive.infra to 2014 [minskim 2015-01-14]
