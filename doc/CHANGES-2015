@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.222 2015/01/14 21:33:38 degroote Exp $
+$NetBSD: CHANGES-2015,v 1.223 2015/01/14 21:48:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -288,3 +288,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/postgresql94-replicationtools version 9.4.0 [adam 2015-01-14]
 	Added databases/postgresql94-upgrade version 9.4.0 [adam 2015-01-14]
 	Update multimedia/minidlna to 1.1.4 [degroote 2015-01-14]
+	Updated devel/cppcheck to 1.68 [wiz 2015-01-14]
