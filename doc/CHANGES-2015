@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.218 2015/01/14 14:18:35 mef Exp $
+$NetBSD: CHANGES-2015,v 1.219 2015/01/14 15:23:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -268,3 +268,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-View-JSON to 0.35 [mef 2015-01-14]
 	Updated ham/fldigi to 3.22.05 [mef 2015-01-14]
 	Updated ham/xnec2c to 3.2 [mef 2015-01-14]
+	Updated devel/p5-AnyEvent-RabbitMQ to 1.18 [mef 2015-01-14]
