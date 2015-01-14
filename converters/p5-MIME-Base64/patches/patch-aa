@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2013/07/10 02:26:11 schmonz Exp $
+$NetBSD: patch-aa,v 1.6 2015/01/14 13:12:09 wiz Exp $
 
---- Makefile.PL.orig	2013-07-02 17:39:29.000000000 +0000
+--- Makefile.PL.orig	2015-01-12 20:13:20.000000000 +0000
 +++ Makefile.PL
 @@ -1,15 +1,9 @@
- require 5.006;
+ require 5.004;
  use ExtUtils::MakeMaker;
  
 -my @makefileopts;

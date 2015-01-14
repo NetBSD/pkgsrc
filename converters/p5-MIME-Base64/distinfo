@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2013/07/10 02:26:11 schmonz Exp $
+$NetBSD: distinfo,v 1.17 2015/01/14 13:12:09 wiz Exp $
 
-SHA1 (MIME-Base64-3.14.tar.gz) = e6334e5d751483cccc9d80a539a4d2e78de3c6ca
-RMD160 (MIME-Base64-3.14.tar.gz) = 75bae366fd4d24ec5e46600233088ad586d1e5be
-Size (MIME-Base64-3.14.tar.gz) = 18193 bytes
-SHA1 (patch-aa) = 43d67be37ba7e3620c071e1da65b87d6e2d24641
+SHA1 (MIME-Base64-3.15.tar.gz) = 07dd64adbec0e8952954664cbf8fa6b20915f95c
+RMD160 (MIME-Base64-3.15.tar.gz) = 02e2b20b1c6f2102afef0178f3a0587f00ba75c7
+Size (MIME-Base64-3.15.tar.gz) = 18438 bytes
+SHA1 (patch-aa) = 2b3401a79b1db14d3f9937a3268f4d1cbae56965
