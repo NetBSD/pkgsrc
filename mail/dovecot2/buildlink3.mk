@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/02/12 23:18:07 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2015/01/14 21:44:38 wiz Exp $
 
 BUILDLINK_TREE+=	dovecot
 
@@ -6,7 +6,8 @@ BUILDLINK_TREE+=	dovecot
 DOVECOT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=2.2.0
-BUILDLINK_ABI_DEPENDS.dovecot+=		dovecot>=2.2.10nb1
+# must match current package version for plugins to load
+BUILDLINK_ABI_DEPENDS.dovecot+=		dovecot>=2.2.15
 BUILDLINK_PKGSRCDIR.dovecot?=		../../mail/dovecot2
 
 pkgbase:=	dovecot
