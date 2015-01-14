@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/01/14 21:01:19 adam Exp $
+
+To enable this package, run the following command as pgsql superuser
+
+	psql database < ${PREFIX}/share/postgresql/contrib/fuzzystrmatch.sql
+
+===========================================================================

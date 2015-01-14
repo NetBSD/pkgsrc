@@ -1,0 +1,12 @@
+This package provides the following PostgreSQL tools:
+  - pg_archivecleanup
+  - pg_standby
+
+pg_standby supports creation of a "warm standby" database server.
+It is designed to be a waiting restore_command, which is needed
+to turn a standard archive recovery into a warm standby operation.
+
+pg_archivecleanup is designed to cleanup an archive when used as
+an archive_cleanup_command when running with standby_mode = on.
+pg_archivecleanup can also be used as a standalone program to
+clean WAL file archives.

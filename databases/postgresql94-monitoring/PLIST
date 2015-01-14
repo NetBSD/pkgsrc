@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/14 21:01:19 adam Exp $
+bin/pg_test_timing
+lib/postgresql/auto_explain.so
+lib/postgresql/pg_buffercache.so
+lib/postgresql/pg_stat_statements.so
+lib/postgresql/pgstattuple.so
+share/postgresql/extension/pg_buffercache--1.0.sql
+share/postgresql/extension/pg_buffercache--unpackaged--1.0.sql
+share/postgresql/extension/pg_buffercache.control
+share/postgresql/extension/pg_stat_statements--1.0--1.1.sql
+share/postgresql/extension/pg_stat_statements--1.1--1.2.sql
+share/postgresql/extension/pg_stat_statements--1.2.sql
+share/postgresql/extension/pg_stat_statements--unpackaged--1.0.sql
+share/postgresql/extension/pg_stat_statements.control
+share/postgresql/extension/pgstattuple--1.0--1.1.sql
+share/postgresql/extension/pgstattuple--1.1--1.2.sql
+share/postgresql/extension/pgstattuple--1.2.sql
+share/postgresql/extension/pgstattuple--unpackaged--1.0.sql
+share/postgresql/extension/pgstattuple.control

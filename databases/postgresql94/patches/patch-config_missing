@@ -1,0 +1,13 @@
+$NetBSD: patch-config_missing,v 1.1 2015/01/14 21:01:18 adam Exp $
+
+--- config/missing.orig	2012-10-05 12:14:55.000000000 +0000
++++ config/missing
+@@ -40,7 +40,7 @@ pre-packaged $1 output.
+ ERROR: Perl is missing on your system. It is needed unless you are building
+ from an unmodified official distribution of PostgreSQL.
+ ***" >&2
+-        exit 1
++        exit 0
+         ;;
+ 
+     *)
