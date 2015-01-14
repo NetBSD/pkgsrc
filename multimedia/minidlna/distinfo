@@ -1,22 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/12/17 12:51:32 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/01/14 21:32:20 degroote Exp $
 
-SHA1 (minidlna_1.0.25_src.tar.gz) = 33742f02367006c6e4af7128b91c830026e59b9f
-RMD160 (minidlna_1.0.25_src.tar.gz) = 7008ef98c03f820d9200c1b1db2ec2f7995ece6d
-Size (minidlna_1.0.25_src.tar.gz) = 211756 bytes
-SHA1 (patch-aa) = 7eade704068ea67e8ced43453976aa2ef24b3ef8
-SHA1 (patch-ab) = 7e62ef89c7bf2029cacda3e43cfe41800b90201f
-SHA1 (patch-conf) = f02d87c245efd80ca43158b172c13e10c2130610
-SHA1 (patch-icons) = f9bdf47cd8cd6ee67a3e011655fd0ce7d8a1dcc2
-SHA1 (patch-image_utils.c) = 1f8a5d31aef9fa7182ac5ee40f9b9ad374a2772c
-SHA1 (patch-inline) = 3bab5f706124d96492f6fd017b671e34c3f2bd59
-SHA1 (patch-lg) = 3889c03ca8118a7769266bb25687945701f3d29e
-SHA1 (patch-minidlna.c) = 4c8de50a3de506cb6f34b43e60504a930f6f5282
-SHA1 (patch-other-subnets) = 3739394543005a658c73a62bd150a161d43253e1
-SHA1 (patch-replace-glob3) = 08f9676870e4143bdadbd68c8c09cf39aa504d89
-SHA1 (patch-scanner.c) = d07998a31ec8b890baa7cccc58d211af69953625
-SHA1 (patch-tagutils.c) = 0010283c8a538024abf1dddd64e9b5446ec7ee02
-SHA1 (patch-tagutils_asf.h) = 855b7e59b657f1e6ea8d07b48c0ca261cd9ddacd
-SHA1 (patch-tagutils_misc.c) = b49931d9a3d338576a8fb9911da1664085475aa6
-SHA1 (patch-upnpglobalvars.c) = fbe22ff08d1462bf6a3cc36c456cf41624bcbd4e
-SHA1 (patch-upnphttp) = deeda56b30f06bbacdf9190ca18d65b2ae93e863
-SHA1 (patch-utils-mpo) = 8f94873331d2d87f2b2652d131f506a12cf171b8
+SHA1 (minidlna-1.1.4.tar.gz) = 56f333f8af91105ce5f0861d1f1918ebf5b0a028
+RMD160 (minidlna-1.1.4.tar.gz) = 45ab4371f17efcca5e5693d46f787cff180dadea
+Size (minidlna-1.1.4.tar.gz) = 494478 bytes
