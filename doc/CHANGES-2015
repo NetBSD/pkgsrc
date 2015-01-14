@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.219 2015/01/14 15:23:11 mef Exp $
+$NetBSD: CHANGES-2015,v 1.220 2015/01/14 17:42:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -269,3 +269,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/fldigi to 3.22.05 [mef 2015-01-14]
 	Updated ham/xnec2c to 3.2 [mef 2015-01-14]
 	Updated devel/p5-AnyEvent-RabbitMQ to 1.18 [mef 2015-01-14]
+	Updated www/py-django to 1.7.3 [adam 2015-01-14]
+	Updated www/py-django14 to 1.4.18 [adam 2015-01-14]
+	Updated www/py-django-cms to 3.0.9 [adam 2015-01-14]
