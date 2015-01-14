@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/14 00:00:39 wiedi Exp $
 
 DISTNAME=	libcdio-paranoia-10.2+0.93+1
 PKGNAME=	libcdio-paranoia-0.93
@@ -22,4 +22,5 @@ CONFIGURE_ARGS+=	--without-versioned-libs
 INFO_FILES=		yes
 
 .include "../../misc/libcdio/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
