@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/01/15 09:33:55 obache Exp $
 
 SHA1 (suse131/libFLAC8-1.3.0-2.1.2.i586.rpm) = 0c2d46363611c659bc4075b5f15beba9dc3d7be1
 RMD160 (suse131/libFLAC8-1.3.0-2.1.2.i586.rpm) = 5b85070e674d32916f0d913699407edf527d4889
@@ -12,12 +12,12 @@ Size (suse131/libogg0-1.3.0-8.1.2.i586.rpm) = 19959 bytes
 SHA1 (suse131/libogg0-1.3.0-8.1.2.x86_64.rpm) = 6d568c2bd976e7ef9e125f14235b9a9b4bc9bf7c
 RMD160 (suse131/libogg0-1.3.0-8.1.2.x86_64.rpm) = c499c50c76fe850dd5b4c6f871a248f2265443d2
 Size (suse131/libogg0-1.3.0-8.1.2.x86_64.rpm) = 19629 bytes
-SHA1 (suse131/libsndfile1-1.0.25-17.1.2.i586.rpm) = db607ca744f916bfa4d8d283d4a3a17df51ecaa1
-RMD160 (suse131/libsndfile1-1.0.25-17.1.2.i586.rpm) = 3ab08e579b9e6d2aef3583ce57196edfa4b1835e
-Size (suse131/libsndfile1-1.0.25-17.1.2.i586.rpm) = 149957 bytes
-SHA1 (suse131/libsndfile1-1.0.25-17.1.2.x86_64.rpm) = 70ad7dda6afa60ea251e6d107d810cb4a3becf16
-RMD160 (suse131/libsndfile1-1.0.25-17.1.2.x86_64.rpm) = 3e0d1de98bf3268e545b8e236020f8fb338cc76f
-Size (suse131/libsndfile1-1.0.25-17.1.2.x86_64.rpm) = 142878 bytes
+SHA1 (suse131/libsndfile1-1.0.25-17.4.1.i586.rpm) = c23cf16921becf8ecea76d62d9417047a090f879
+RMD160 (suse131/libsndfile1-1.0.25-17.4.1.i586.rpm) = 0665a88ca308856685dc3d0306f9c18e38b0555e
+Size (suse131/libsndfile1-1.0.25-17.4.1.i586.rpm) = 150702 bytes
+SHA1 (suse131/libsndfile1-1.0.25-17.4.1.x86_64.rpm) = 72a45d8a2cf8c8a1822c3189699d3f63d9b6259e
+RMD160 (suse131/libsndfile1-1.0.25-17.4.1.x86_64.rpm) = c3b9e2f50ff90746a8981facbfa52360eb449694
+Size (suse131/libsndfile1-1.0.25-17.4.1.x86_64.rpm) = 143598 bytes
 SHA1 (suse131/libspeex1-1.1.999_1.2rc1-21.1.2.i586.rpm) = cb9e0b41cdbd0f852e0b916dbf6bbdb0b6d2ba80
 RMD160 (suse131/libspeex1-1.1.999_1.2rc1-21.1.2.i586.rpm) = a374b1ec3683383cf4a32c04430730835f74fa8b
 Size (suse131/libspeex1-1.1.999_1.2rc1-21.1.2.i586.rpm) = 48024 bytes
