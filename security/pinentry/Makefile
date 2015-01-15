@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2014/12/10 10:24:21 mef Exp $
+# $NetBSD: Makefile,v 1.43 2015/01/15 20:48:33 wiz Exp $
 #
 #PKGNAME=		${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Applications for entering PINs or Passphrases
+
+CONFIGURE_ARGS+=	--enable-pinentry-tty
 
 .include		"../../security/pinentry/Makefile.common"
 
