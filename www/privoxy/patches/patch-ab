@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2011/12/07 16:13:51 drochner Exp $
+$NetBSD: patch-ab,v 1.9 2015/01/15 19:39:16 drochner Exp $
 
 Multiple changes.
 
@@ -15,18 +15,9 @@ Multiple changes.
    Not pushed upstream; it's not clear that upstream supports DESTDIR
    at all.
 
---- GNUmakefile.in.orig	2011-09-06 18:45:28.000000000 +0000
+--- GNUmakefile.in.orig	2013-02-05 14:04:11.000000000 +0000
 +++ GNUmakefile.in
-@@ -86,7 +86,7 @@ INSTALL    = @INSTALL@
- # Binaries
- BIN_MODE	 = 0755
- # Support files, docs, etc.
--RA_MODE   = 0664
-+RA_MODE   = 0644
- # Directory
- DIR_MODE   = 0755
- # Files daemon writes to.
-@@ -808,16 +808,6 @@ install-strip:
+@@ -809,16 +809,6 @@ install-strip:
  # Perhaps the whole user/group validation should be done here, and simplified.
  PROGRAM_V = Privoxy $(VERSION) $(CODE_STATUS)
  install: CONF_DEST LOG_DEST PID_DEST check_doc GROUP_T
@@ -43,7 +34,7 @@ Multiple changes.
  	@$(ECHO) "Creating directories, and preparing $(PROGRAM_V) installation"
  	$(CHMOD) $(DIR_MODE) $(MKDIR)
  	@$(MKDIR) $(DESTDIR)$(SBIN_DEST) $(DESTDIR)$(prefix) $(DESTDIR)$(CONF_DEST) \
-@@ -885,48 +875,13 @@ install: CONF_DEST LOG_DEST PID_DEST che
+@@ -886,48 +876,13 @@ install: CONF_DEST LOG_DEST PID_DEST che
  		$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST)/templates ;\
  	done
  
@@ -93,7 +84,7 @@ Multiple changes.
  			$(ECHO) Installing $$i as $$i.new ;\
  			$(INSTALL) $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST)/$$i.new || exit 1;\
  			NEW=1;\
-@@ -938,36 +893,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
+@@ -939,36 +894,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
  		$(CHMOD) $(RWD_MODE) $(DESTDIR)$(CONF_DEST)/*.new || exit 1 ;\
  		$(ECHO) "Warning: Older config files are preserved. Check new versions for changes!" ;\
  	fi ;\
