@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/13 11:33:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/15 18:17:16 rumko Exp $
 bin/okular
 include/okular/core/action.h
 include/okular/core/annotations.h
@@ -41,6 +41,7 @@ lib/kde4/okularGenerator_epub.so
 lib/kde4/okularGenerator_fax.so
 lib/kde4/okularGenerator_fb.so
 lib/kde4/okularGenerator_ghostview.so
+lib/kde4/okularGenerator_mobi.so
 lib/kde4/okularGenerator_ooo.so
 lib/kde4/okularGenerator_plucker.so
 lib/kde4/okularGenerator_poppler.so
@@ -75,6 +76,7 @@ share/applications/kde4/okularApplication_epub.desktop
 share/applications/kde4/okularApplication_fax.desktop
 share/applications/kde4/okularApplication_fb.desktop
 share/applications/kde4/okularApplication_ghostview.desktop
+share/applications/kde4/okularApplication_mobi.desktop
 share/applications/kde4/okularApplication_ooo.desktop
 share/applications/kde4/okularApplication_pdf.desktop
 share/applications/kde4/okularApplication_plucker.desktop
@@ -166,6 +168,7 @@ share/kde4/services/libokularGenerator_epub.desktop
 share/kde4/services/libokularGenerator_fax.desktop
 share/kde4/services/libokularGenerator_fb.desktop
 share/kde4/services/libokularGenerator_ghostview.desktop
+share/kde4/services/libokularGenerator_mobi.desktop
 share/kde4/services/libokularGenerator_ooo.desktop
 share/kde4/services/libokularGenerator_plucker.desktop
 share/kde4/services/libokularGenerator_poppler.desktop
@@ -181,6 +184,7 @@ share/kde4/services/okularEPub.desktop
 share/kde4/services/okularFax.desktop
 share/kde4/services/okularFb.desktop
 share/kde4/services/okularGhostview.desktop
+share/kde4/services/okularMobi.desktop
 share/kde4/services/okularOoo.desktop
 share/kde4/services/okularPlucker.desktop
 share/kde4/services/okularPoppler.desktop
