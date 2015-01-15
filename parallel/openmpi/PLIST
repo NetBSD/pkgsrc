@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/01/15 20:26:47 dholland Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/01/15 20:51:11 dholland Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -77,6 +77,8 @@ ${PLIST.f90}lib/mpi.mod
 lib/openmpi/libompi_dbg_msgq.la
 lib/openmpi/mca_allocator_basic.la
 lib/openmpi/mca_allocator_bucket.la
+${PLIST.ofud}lib/openmpi/mca_btl_ofud.la                
+${PLIST.openib}lib/openmpi/mca_btl_openib.la              
 lib/openmpi/mca_bml_r2.la
 lib/openmpi/mca_btl_self.la
 lib/openmpi/mca_btl_sm.la
@@ -112,6 +114,7 @@ lib/openmpi/mca_mpool_fake.la
 lib/openmpi/mca_mpool_rdma.la
 lib/openmpi/mca_mpool_sm.la
 lib/openmpi/mca_notifier_command.la
+${PLIST.notifier-smtp}lib/openmpi/mca_notifier_smtp.la           
 lib/openmpi/mca_notifier_syslog.la
 lib/openmpi/mca_odls_default.la
 lib/openmpi/mca_oob_tcp.la
@@ -124,9 +127,11 @@ lib/openmpi/mca_pml_cm.la
 lib/openmpi/mca_pml_csum.la
 lib/openmpi/mca_pml_ob1.la
 lib/openmpi/mca_pml_v.la
+${PLIST.linux}lib/openmpi/mca_pstat_linux.la
 lib/openmpi/mca_pubsub_orte.la
 lib/openmpi/mca_ras_cm.la
 ${PLIST.sge}lib/openmpi/mca_ras_gridengine.la
+${PLIST.loadleveler}lib/openmpi/mca_ras_loadleveler.la
 lib/openmpi/mca_rcache_vma.la
 lib/openmpi/mca_rmaps_load_balance.la
 lib/openmpi/mca_rmaps_rank_file.la
@@ -144,6 +149,7 @@ lib/openmpi/mca_routed_slave.la
 lib/openmpi/mca_shmem_mmap.la
 ${PLIST.shm}lib/openmpi/mca_shmem_posix.la
 lib/openmpi/mca_shmem_sysv.la
+${PLIST.linux}lib/openmpi/mca_sysinfo_linux.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
 lib/pkgconfig/ompi-c.pc
@@ -488,7 +494,9 @@ man/man7/opal_crs.7
 man/man7/orte_filem.7
 man/man7/orte_hosts.7
 man/man7/orte_snapc.7
+${PLIST.openib}share/openmpi/amca-param-sets/btl-openib-benchmark
 share/openmpi/amca-param-sets/example.conf
+${PLIST.linux}share/openmpi/doc/COPYRIGHT-ptmalloc2.txt
 share/openmpi/examples/openmpi-default-hostfile
 share/openmpi/examples/openmpi-mca-params.conf
 share/openmpi/examples/openmpi-totalview.tcl
@@ -503,6 +511,8 @@ share/openmpi/help-mca-op-base.txt
 share/openmpi/help-mca-param.txt
 share/openmpi/help-mpi-api.txt
 share/openmpi/help-mpi-btl-base.txt
+${PLIST.openib}share/openmpi/help-mpi-btl-openib-cpc-base.txt
+${PLIST.openib}share/openmpi/help-mpi-btl-openib.txt
 share/openmpi/help-mpi-btl-sm.txt
 share/openmpi/help-mpi-btl-tcp.txt
 share/openmpi/help-mpi-coll-sm.txt
@@ -527,6 +537,7 @@ share/openmpi/help-opal-carto-file.txt
 share/openmpi/help-opal-crs-base.txt
 share/openmpi/help-opal-crs-none.txt
 share/openmpi/help-opal-maffinity-hwloc.txt
+${PLIST.linux}share/openmpi/help-opal-memory-linux.txt
 share/openmpi/help-opal-runtime.txt
 share/openmpi/help-opal-shmem-mmap.txt
 ${PLIST.shm}share/openmpi/help-opal-shmem-posix.txt
@@ -538,6 +549,7 @@ share/openmpi/help-orte-filem-base.txt
 share/openmpi/help-orte-filem-rsh.txt
 share/openmpi/help-orte-iof.txt
 share/openmpi/help-orte-notifier-command.txt
+${PLIST.notifier-smtp}share/openmpi/help-orte-notifier-smtp.txt
 share/openmpi/help-orte-odls-base.txt
 share/openmpi/help-orte-ps.txt
 share/openmpi/help-orte-rmaps-base.txt
@@ -557,6 +569,7 @@ share/openmpi/help-ras-base.txt
 ${PLIST.sge}share/openmpi/help-ras-gridengine.txt
 share/openmpi/help-regex.txt
 share/openmpi/help-rmaps_rank_file.txt
+${PLIST.openib}share/openmpi/mca-btl-openib-device-params.ini
 share/openmpi/mpiCC-wrapper-data.txt
 share/openmpi/mpic++-wrapper-data.txt
 share/openmpi/mpicc-wrapper-data.txt

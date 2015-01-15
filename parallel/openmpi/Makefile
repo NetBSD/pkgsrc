@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/01/15 20:26:47 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2015/01/15 20:51:11 dholland Exp $
 
 DISTNAME=	openmpi-1.6.4
 PKGREVISION=	4
@@ -37,11 +37,20 @@ USE_TOOLS+=		perl:run
 
 TEST_TARGET=	check
 
-PLIST_VARS+=	shm
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || \
-    ${OPSYS} == "Linux" || \
+PLIST_VARS+=	linux loadleveler notifier-smtp ofud openib shm
+
+.if ${OPSYS} == "Linux"
+PLIST.shm=		yes
+PLIST.linux=		yes
+PLIST.openib=		yes
+PLIST.loadleveler=	yes
+PLIST.ofud=		yes
+PLIST.notifier-smtp=	yes
+.elif ${OPSYS} == "AIX"
+PLIST.loadleveler=	yes
+.elif ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || \
     (${OPSYS} == "NetBSD" && exists(/var/shm))
-PLIST.shm=	yes
+PLIST.shm=		yes
 .endif
 
 ## Just in case you'll need it...
