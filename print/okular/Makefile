@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2015/01/08 10:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/01/15 18:17:16 rumko Exp $
 
 DISTNAME=	okular-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 COMMENT=	KDE universal document viewer
 
@@ -23,5 +23,6 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 .include "../../textproc/ebook-tools/buildlink3.mk"
 .include "../../x11/kactivities/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../graphics/kdegraphics-mobipocket/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
