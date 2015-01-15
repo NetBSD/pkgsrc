@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.224 2015/01/15 09:34:07 obache Exp $
+$NetBSD: CHANGES-2015,v 1.225 2015/01/15 09:37:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -290,3 +290,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Update multimedia/minidlna to 1.1.4 [degroote 2015-01-14]
 	Updated devel/cppcheck to 1.68 [wiz 2015-01-14]
 	Updated emulators/suse131_libsndfile to 13.1nb1 [obache 2015-01-15]
+	Updated emulators/suse131_gtk2 to 13.1nb5 [obache 2015-01-15]
