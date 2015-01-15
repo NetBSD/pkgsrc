@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.sge,v 1.1 2014/05/22 13:24:49 manu Exp $
-lib/openmpi/mca_ras_gridengine.la
-share/openmpi/help-ras-gridengine.txt
