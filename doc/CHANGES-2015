@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.225 2015/01/15 09:37:16 obache Exp $
+$NetBSD: CHANGES-2015,v 1.226 2015/01/15 11:22:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -287,7 +287,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/postgresql94-pltcl version 9.4.0 [adam 2015-01-14]
 	Added databases/postgresql94-replicationtools version 9.4.0 [adam 2015-01-14]
 	Added databases/postgresql94-upgrade version 9.4.0 [adam 2015-01-14]
-	Update multimedia/minidlna to 1.1.4 [degroote 2015-01-14]
+	Updated multimedia/minidlna to 1.1.4 [degroote 2015-01-14]
 	Updated devel/cppcheck to 1.68 [wiz 2015-01-14]
 	Updated emulators/suse131_libsndfile to 13.1nb1 [obache 2015-01-15]
 	Updated emulators/suse131_gtk2 to 13.1nb5 [obache 2015-01-15]
