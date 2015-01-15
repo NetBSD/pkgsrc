@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/02/12 23:18:42 tron Exp $
+# $NetBSD: Makefile,v 1.37 2015/01/15 13:02:26 joerg Exp $
 
 DISTNAME=	xmlrpc-c-1.25.26
 # the "super stable" branch
@@ -7,6 +7,10 @@ PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz
+
+#/usr/bin/ld: ./libxmlrpc_server++.a(registry.o): relocation R_X86_64_32S against `_ZTVN8xmlrpc_c8callInfoE' can not be used when making a shared object; recompile with -fPIC
+#./libxmlrpc_server++.a: could not read symbols: Bad value
+MAKE_JOBS_SAFE=	no
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmlrpc-c.sourceforge.net/
