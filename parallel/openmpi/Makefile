@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/12/27 02:10:19 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2015/01/15 20:26:47 dholland Exp $
 
 DISTNAME=	openmpi-1.6.4
 PKGREVISION=	4
@@ -37,10 +37,11 @@ USE_TOOLS+=		perl:run
 
 TEST_TARGET=	check
 
+PLIST_VARS+=	shm
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || \
     ${OPSYS} == "Linux" || \
     (${OPSYS} == "NetBSD" && exists(/var/shm))
-PLIST_SRC+=		PLIST.shm
+PLIST.shm=	yes
 .endif
 
 ## Just in case you'll need it...

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/02/24 01:22:36 asau Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/01/15 20:26:47 dholland Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -69,9 +69,11 @@ lib/libmca_common_sm.la
 lib/libmpi.la
 lib/libmpi_cxx.la
 lib/libmpi_f77.la
+${PLIST.f90}lib/libmpi_f90.la
 lib/libompitrace.la
 lib/libopen-pal.la
 lib/libopen-rte.la
+${PLIST.f90}lib/mpi.mod
 lib/openmpi/libompi_dbg_msgq.la
 lib/openmpi/mca_allocator_basic.la
 lib/openmpi/mca_allocator_bucket.la
@@ -124,6 +126,7 @@ lib/openmpi/mca_pml_ob1.la
 lib/openmpi/mca_pml_v.la
 lib/openmpi/mca_pubsub_orte.la
 lib/openmpi/mca_ras_cm.la
+${PLIST.sge}lib/openmpi/mca_ras_gridengine.la
 lib/openmpi/mca_rcache_vma.la
 lib/openmpi/mca_rmaps_load_balance.la
 lib/openmpi/mca_rmaps_rank_file.la
@@ -139,6 +142,7 @@ lib/openmpi/mca_routed_linear.la
 lib/openmpi/mca_routed_radix.la
 lib/openmpi/mca_routed_slave.la
 lib/openmpi/mca_shmem_mmap.la
+${PLIST.shm}lib/openmpi/mca_shmem_posix.la
 lib/openmpi/mca_shmem_sysv.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
@@ -525,6 +529,7 @@ share/openmpi/help-opal-crs-none.txt
 share/openmpi/help-opal-maffinity-hwloc.txt
 share/openmpi/help-opal-runtime.txt
 share/openmpi/help-opal-shmem-mmap.txt
+${PLIST.shm}share/openmpi/help-opal-shmem-posix.txt
 share/openmpi/help-opal-shmem-sysv.txt
 share/openmpi/help-opal-util.txt
 share/openmpi/help-opal-wrapper.txt
@@ -549,6 +554,7 @@ share/openmpi/help-orterun.txt
 share/openmpi/help-plm-base.txt
 share/openmpi/help-plm-rsh.txt
 share/openmpi/help-ras-base.txt
+${PLIST.sge}share/openmpi/help-ras-gridengine.txt
 share/openmpi/help-regex.txt
 share/openmpi/help-rmaps_rank_file.txt
 share/openmpi/mpiCC-wrapper-data.txt

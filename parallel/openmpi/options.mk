@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/05/22 13:24:49 manu Exp $
+# $NetBSD: options.mk,v 1.8 2015/01/15 20:26:47 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
 PKG_SUPPORTED_OPTIONS=	debug f90 sge
@@ -9,13 +9,14 @@ PKG_SUPPORTED_OPTIONS=	debug f90 sge
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
+PLIST_VARS+=		f90 sge
 
 .if !empty(PKG_OPTIONS:Mf90)
 GCC_REQD+=		4.7
 GCCDIR=			${PREFIX}/gcc47
 CONFIGURE_ARGS+=	--enable-mpi-f90
 CONFIGURE_ENV+=		FC=${GCCDIR}/bin/gfortran
-PLIST_SRC+=		PLIST.f90
+PLIST.f90=		yes
 
 SUBST_CLASSES+=		f90
 SUBST_STAGE.f90=	post-configure
@@ -30,9 +31,7 @@ CONFIGURE_ARGS+=	--disable-mpi-f90
 
 .if !empty(PKG_OPTIONS:Msge)
 CONFIGURE_ARGS+=        --with-sge
-PLIST_SRC+=             ${PKGDIR}/PLIST.sge
+PLIST.sge=		yes
 .else
 CONFIGURE_ARGS+=	--without-sge
 .endif
-
-PLIST_SRC+=		PLIST
