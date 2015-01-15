@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/11/01 10:25:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.27 2015/01/15 16:44:33 wiz Exp $
 
 DISTNAME=	vala-0.26.1
 CATEGORIES=	lang gnome
@@ -11,7 +11,6 @@ COMMENT=	Compiler for the GObject type system
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-vapigen
 CONFIGURE_ARGS+=	--disable-unversioned
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake pkg-config
