@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2014/12/16 01:59:04 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/01/15 09:37:05 obache Exp $
 
 SHA1 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = 7b0ba199a95aba9648be1f08bbaa66d39aa1ae67
 RMD160 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = a6f7fc419dc7655689c25be5c24c697321f3f614
@@ -54,12 +54,12 @@ Size (suse131/libharfbuzz0-0.9.21-1.3.i586.rpm) = 134567 bytes
 SHA1 (suse131/libharfbuzz0-0.9.21-1.3.x86_64.rpm) = eba99079ce8aa69e6544140e1b1896da7cf8c8ee
 RMD160 (suse131/libharfbuzz0-0.9.21-1.3.x86_64.rpm) = 28a3ab3348e942db6e619a617b70b44e47daf88c
 Size (suse131/libharfbuzz0-0.9.21-1.3.x86_64.rpm) = 136946 bytes
-SHA1 (suse131/libjasper1-1.900.1-160.5.1.i586.rpm) = f08ffebf60d7e6d04cd9d52815be2d59abf27249
-RMD160 (suse131/libjasper1-1.900.1-160.5.1.i586.rpm) = 7bd097a32a3ff2fcebded2f57f8f34693450ed9b
-Size (suse131/libjasper1-1.900.1-160.5.1.i586.rpm) = 128930 bytes
-SHA1 (suse131/libjasper1-1.900.1-160.5.1.x86_64.rpm) = 831665a3cabf2e99dd20f6c5a62d12acae5e4690
-RMD160 (suse131/libjasper1-1.900.1-160.5.1.x86_64.rpm) = 13a99d24bc284f8661a3ba6f8f32c43dc4b9b3cd
-Size (suse131/libjasper1-1.900.1-160.5.1.x86_64.rpm) = 131555 bytes
+SHA1 (suse131/libjasper1-1.900.1-160.9.1.i586.rpm) = 7b79047cf37de03e95dde1bb7abc9fd4b6ec6a56
+RMD160 (suse131/libjasper1-1.900.1-160.9.1.i586.rpm) = 44fbb2cc441d4bef97ae340697c641963b7a0ddb
+Size (suse131/libjasper1-1.900.1-160.9.1.i586.rpm) = 128822 bytes
+SHA1 (suse131/libjasper1-1.900.1-160.9.1.x86_64.rpm) = bee2b2faf07b25780d741118d59cdd295a209ebb
+RMD160 (suse131/libjasper1-1.900.1-160.9.1.x86_64.rpm) = d64d776843504c509aeec5b25b721f1327e93a57
+Size (suse131/libjasper1-1.900.1-160.9.1.x86_64.rpm) = 131780 bytes
 SHA1 (suse131/libpango-1_0-0-1.36.0-1.1.i586.rpm) = 07ea0da7f133497f2b5ec975afee21a757837742
 RMD160 (suse131/libpango-1_0-0-1.36.0-1.1.i586.rpm) = bd741213ecc61c7823d7e1270669bba7f6164d07
 Size (suse131/libpango-1_0-0-1.36.0-1.1.i586.rpm) = 276661 bytes
