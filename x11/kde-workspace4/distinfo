@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2014/11/13 10:53:49 markd Exp $
+$NetBSD: distinfo,v 1.13 2015/01/15 17:59:10 rumko Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -16,7 +16,7 @@ SHA1 (patch-kcontrol_keyboard_xkb_rules.cpp) = e4569e0671c55e990cbc0913e5abaead0
 SHA1 (patch-kdm_config.def) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
 SHA1 (patch-kdm_kcm_main.cpp) = bb692c83fa189342105744cc9c3c180b970571b7
 SHA1 (patch-kdm_kfrontend_CMakeLists.txt) = 0b0c541c7305d31e01a45f0a6a7f5ddb2d2e57fe
-SHA1 (patch-kdm_kfrontend_genkdmconf.c) = 12986752a1062199833df5aeba8163277ddb7361
+SHA1 (patch-kdm_kfrontend_genkdmconf.c) = d586b2e40b46a350140613d934f809444ce43165
 SHA1 (patch-kinfocenter_Modules_nics_nic.cpp) = 0f7e846eac8d694e0ab6018d4f4c571b4e0c84db
 SHA1 (patch-ksysguard_example_CMakeLists.txt) = bd10f03a308442b8febe8864010987fb504b2d21
 SHA1 (patch-ksysguard_ksysguard_FreeBSD_ProcessList.c) = 716f1e75fb23f7d6ddf31092e9a60961f078845c
