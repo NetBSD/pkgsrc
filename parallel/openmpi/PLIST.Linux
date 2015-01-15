@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2014/12/27 02:10:19 dholland Exp $
-lib/openmpi/mca_pstat_linux.la
-lib/openmpi/mca_ras_loadleveler.la
-lib/openmpi/mca_sysinfo_linux.la
-share/openmpi/doc/COPYRIGHT-ptmalloc2.txt
-share/openmpi/help-opal-memory-linux.txt
-
