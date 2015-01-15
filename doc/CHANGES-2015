@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.228 2015/01/15 19:40:04 drochner Exp $
+$NetBSD: CHANGES-2015,v 1.229 2015/01/15 20:48:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/suse131_gtk2 to 13.1nb5 [obache 2015-01-15]
 	Updated net/lldpd to 0.7.13 [mef 2015-01-15]
 	Updated www/privoxy to 3.0.22 [drochner 2015-01-15]
+	Updated security/pinentry to 0.9.0nb1 [wiz 2015-01-15]
