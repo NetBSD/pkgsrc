@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/01/12 13:28:09 mef Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/15 14:53:45 mef Exp $
 
 DISTNAME=	Template-Toolkit-Simple-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,8 @@ PERL5_MODULE_TYPE=	Module::Install::Bundled
 DEPENDS+=	p5-Template-Toolkit>=2.22:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-YAML-LibYAML>=0.37:../../textproc/p5-YAML-LibYAML
 BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
+
+REPLACE_PERL=	bin/tt-render
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
