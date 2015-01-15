@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/10/01 16:27:03 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.24 2015/01/15 20:56:03 wiz Exp $
 
 DISTNAME=	pcsc-lite-1.8.12
+PKGREVISION=	1
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but
@@ -41,7 +41,7 @@ EGDIR=			${PREFIX}/share/examples/pcsc-lite
 PKGCONFIG_OVERRIDE+=	src/libpcsclite.pc.in
 
 BUILD_DEFS+=		VARBASE
-INSTALLATION_DIRS=	${EGDIR}
+RCD_SCRIPTS=		pcscd
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
