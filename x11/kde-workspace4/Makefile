@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/11/30 03:27:46 markd Exp $
+# $NetBSD: Makefile,v 1.44 2015/01/15 17:59:10 rumko Exp $
 
 DISTNAME=	kde-workspace-4.11.14
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -65,6 +65,8 @@ PLIST_SUBST+=		KDE_VERSION=${_KDE_VERSION}
 
 PLIST_VARS+=	utempter noutempter
 .if ${OPSYS} == "Linux" && exists(/usr/include/utempter.h)
+PLIST.utempter=		yes
+.elif ${OPSYS} == "FreeBSD" && exists(/usr/include/utempter.h)
 PLIST.utempter=		yes
 .else
 PLIST.noutempter=	yes
