@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/12/30 17:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.22 2015/01/15 13:03:13 joerg Exp $
 
 DISTNAME=	qtwebkit-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
@@ -13,13 +13,13 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
+.include "../../x11/qt5-qtbase/Makefile.common"
+
 .if ${USE_CWRAPPERS:Uno} == "yes"
 BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
 .else
 BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 .endif
-
-.include "../../x11/qt5-qtbase/Makefile.common"
 
 post-install:
 .for i in Qt5WebKit.pc Qt5WebKitWidgets.pc
@@ -32,6 +32,7 @@ post-install:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
