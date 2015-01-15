@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/11/07 19:39:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/15 13:00:32 joerg Exp $
 
 DISTNAME=	swift-2.0
 PKGREVISION=	4
@@ -26,7 +26,7 @@ SUBST_MESSAGE.path=	Fixing path to support files.
 do-configure:
 	cd ${WRKSRC} ; \
 	${ECHO} "qt=\"${QTDIR}\"" > config.py ;\
-	${ECHO} "linkflags=\"-Wl,-R${QTDIR}/lib -Wl,-R${X11BASE}/lib -Wl,-R${BUILDLINK_DIR}/lib\"" >> config.py ; \
+	${ECHO} "linkflags=\"-L${PREFIX}/lib -Wl,-R${QTDIR}/lib -Wl,-R${X11BASE}/lib -Wl,-R${BUILDLINK_DIR}/lib\"" >> config.py ; \
 	${ECHO} "allow_warnings=\"true\"" >> config.py ;
 
 do-build:
