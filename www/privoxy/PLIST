@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/01/15 19:39:15 drochner Exp $
 man/man1/privoxy.1
 sbin/privoxy
 share/doc/privoxy/AUTHORS
@@ -6,14 +6,11 @@ share/doc/privoxy/ChangeLog
 share/doc/privoxy/LICENSE
 share/doc/privoxy/README
 share/doc/privoxy/developer-manual/coding.html
-share/doc/privoxy/developer-manual/contact.html
-share/doc/privoxy/developer-manual/copyright.html
 share/doc/privoxy/developer-manual/cvs.html
 share/doc/privoxy/developer-manual/documentation.html
 share/doc/privoxy/developer-manual/index.html
 share/doc/privoxy/developer-manual/introduction.html
 share/doc/privoxy/developer-manual/newrelease.html
-share/doc/privoxy/developer-manual/seealso.html
 share/doc/privoxy/developer-manual/testing.html
 share/doc/privoxy/developer-manual/webserver-update.html
 share/doc/privoxy/faq/configuration.html
@@ -46,13 +43,10 @@ share/doc/privoxy/user-manual/seealso.html
 share/doc/privoxy/user-manual/startup.html
 share/doc/privoxy/user-manual/templates.html
 share/doc/privoxy/user-manual/whatsnew.html
-share/examples/privoxy/templates/url-info-osd.xml
 share/examples/privoxy/config
 share/examples/privoxy/default.action
 share/examples/privoxy/default.filter
 share/examples/privoxy/match-all.action
-share/examples/privoxy/templates/connection-timeout
-share/examples/privoxy/templates/no-server-data
 share/examples/privoxy/templates/blocked
 share/examples/privoxy/templates/cgi-error-404
 share/examples/privoxy/templates/cgi-error-bad-param
@@ -63,6 +57,7 @@ share/examples/privoxy/templates/cgi-error-modified
 share/examples/privoxy/templates/cgi-error-parse
 share/examples/privoxy/templates/cgi-style.css
 share/examples/privoxy/templates/connect-failed
+share/examples/privoxy/templates/connection-timeout
 share/examples/privoxy/templates/default
 share/examples/privoxy/templates/edit-actions-add-url-form
 share/examples/privoxy/templates/edit-actions-for-url
@@ -78,6 +73,7 @@ share/examples/privoxy/templates/mod-local-help
 share/examples/privoxy/templates/mod-support-and-service
 share/examples/privoxy/templates/mod-title
 share/examples/privoxy/templates/mod-unstable-warning
+share/examples/privoxy/templates/no-server-data
 share/examples/privoxy/templates/no-such-domain
 share/examples/privoxy/templates/show-request
 share/examples/privoxy/templates/show-status
