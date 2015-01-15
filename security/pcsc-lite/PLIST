@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/02/25 17:47:19 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/01/15 20:56:03 wiz Exp $
 ${PLIST.spy}bin/pcsc-spy
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
@@ -15,4 +15,3 @@ man/man8/pcscd.8
 sbin/pcscd
 share/doc/pcsc-lite/README.DAEMON
 share/doc/pcsc-lite/README.polkit
-@pkgdir share/examples/pcsc-lite
