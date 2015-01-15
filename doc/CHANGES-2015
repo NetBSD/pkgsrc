@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.226 2015/01/15 11:22:52 obache Exp $
+$NetBSD: CHANGES-2015,v 1.227 2015/01/15 13:54:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -291,3 +291,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cppcheck to 1.68 [wiz 2015-01-14]
 	Updated emulators/suse131_libsndfile to 13.1nb1 [obache 2015-01-15]
 	Updated emulators/suse131_gtk2 to 13.1nb5 [obache 2015-01-15]
+	Updated net/lldpd to 0.7.13 [mef 2015-01-15]
