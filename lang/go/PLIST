@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/12/31 11:40:14 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/01/16 11:27:03 wiz Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -4325,6 +4325,7 @@ go/test/fixedbugs/issue8947.go
 go/test/fixedbugs/issue8961.go
 go/test/fixedbugs/issue9006.go
 go/test/fixedbugs/issue9110.go
+go/test/fixedbugs/issue9321.go
 go/test/float_lit.go
 go/test/float_lit2.go
 go/test/float_lit3.go
