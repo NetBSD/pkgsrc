@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.278 2015/01/16 22:42:55 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.279 2015/01/16 23:10:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -345,3 +345,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-docs to 3.8.8 [adam 2015-01-16]
 	Updated databases/sqlite3-tcl to 3.8.8 [adam 2015-01-16]
 	Updated www/firefox to 35.0 [ryoon 2015-01-16]
+	Updated www/firefox-l10n to 35.0 [ryoon 2015-01-16]
