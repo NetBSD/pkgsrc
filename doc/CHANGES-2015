@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.241 2015/01/16 09:21:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.242 2015/01/16 09:23:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -306,3 +306,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.12b [wiz 2015-01-16]
 	Updated devel/autoconf-archive to 2014.10.15 [wiz 2015-01-16]
 	Updated devel/commit-patch to 2.5.2 [wiz 2015-01-16]
+	Updated devel/cproto to 4.7l [wiz 2015-01-16]
