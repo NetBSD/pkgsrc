@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3393 2014/07/22 17:54:35 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3394 2015/01/16 21:08:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -148,8 +148,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-ulem-doc to 2010 [minskim 2011-01-18]
 	Updated fonts/tex-helvetic to 2010 [minskim 2011-01-18]
 	Updated fonts/tex-courier to 2010.21101 [minskim 2011-01-18]
-	Updated graphics/shotwell to 0.8.1 [gls 2010-01-18]
-	Updated audio/cmus to 2.3.3 [gls 2010-01-18]
+	Updated graphics/shotwell to 0.8.1 [gls 2011-01-18]
+	Updated audio/cmus to 2.3.3 [gls 2011-01-18]
 	Updated multimedia/mplayer to mplayer-1.0rc20100913nb3 [jmcneill 2011-01-18]
 	Updated print/cups to 1.4.6nb1 [sbd 2011-01-19]
 	Updated pkgtools/x11-links to 0.62 [jmcneill 2011-01-18]
