@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.260 2015/01/16 11:44:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.261 2015/01/16 11:47:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -325,3 +325,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/pwgen to 2.07 [wiz 2015-01-16]
 	Updated www/squid3 to 3.4.11 [adam 2015-01-16]
 	Updated textproc/coccigrep to 1.13 [wiz 2015-01-16]
+	Updated textproc/docbook-xsl to 1.78.1 [wiz 2015-01-16]
