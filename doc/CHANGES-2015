@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.239 2015/01/16 09:17:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.240 2015/01/16 09:19:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -304,3 +304,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/libwps to 0.3.1 [wiz 2015-01-16]
 	Updated converters/p5-Unicode-Collate to 1.09 [wiz 2015-01-16]
 	Updated devel/afl to 1.12b [wiz 2015-01-16]
+	Updated devel/autoconf-archive to 2014.10.15 [wiz 2015-01-16]
