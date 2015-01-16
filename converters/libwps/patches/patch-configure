@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/01/16 09:08:38 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2014-12-30 09:10:53.000000000 +0000
++++ configure
+@@ -16187,7 +16187,7 @@ else
+ fi
+ 
+ 
+-if test "x$platform_win32" == "xyes"; then :
++if test "x$platform_win32" = "xyes"; then :
+ 
+ else
+ 
