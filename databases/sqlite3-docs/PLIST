@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2014/12/10 10:39:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/01/16 21:01:19 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -50,6 +50,7 @@ share/doc/sqlite3/c3ref/c_limit_attached.html
 share/doc/sqlite3/c3ref/c_lock_exclusive.html
 share/doc/sqlite3/c3ref/c_mutex_fast.html
 share/doc/sqlite3/c3ref/c_open_autoproxy.html
+share/doc/sqlite3/c3ref/c_scanstat_est.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
 share/doc/sqlite3/c3ref/c_shm_nlock.html
 share/doc/sqlite3/c3ref/c_source_id.html
@@ -148,6 +149,8 @@ share/doc/sqlite3/c3ref/step.html
 share/doc/sqlite3/c3ref/stmt.html
 share/doc/sqlite3/c3ref/stmt_busy.html
 share/doc/sqlite3/c3ref/stmt_readonly.html
+share/doc/sqlite3/c3ref/stmt_scanstatus.html
+share/doc/sqlite3/c3ref/stmt_scanstatus_reset.html
 share/doc/sqlite3/c3ref/stmt_status.html
 share/doc/sqlite3/c3ref/strglob.html
 share/doc/sqlite3/c3ref/stricmp.html
@@ -630,6 +633,7 @@ share/doc/sqlite3/releaselog/3_8_7_1.html
 share/doc/sqlite3/releaselog/3_8_7_2.html
 share/doc/sqlite3/releaselog/3_8_7_3.html
 share/doc/sqlite3/releaselog/3_8_7_4.html
+share/doc/sqlite3/releaselog/3_8_8.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/rescode.html
