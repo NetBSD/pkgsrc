@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2012/10/25 06:55:46 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/16 11:49:07 wiz Exp $
 
-DISTNAME=	diction-1.11
-PKGREVISION=	3
+DISTNAME=	diction-1.13
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.moria.de/~michael/diction/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/diction/diction.html
 COMMENT=	GNU version of diction and style
+LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
