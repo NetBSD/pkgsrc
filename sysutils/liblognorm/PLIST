@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/04 19:53:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/16 16:37:41 fhajny Exp $
 bin/lognormalizer
 include/annot.h
 include/enc.h
 include/liblognorm.h
+include/lognorm-features.h
 include/lognorm.h
 include/parser.h
 include/ptree.h
