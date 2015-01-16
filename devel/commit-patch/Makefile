@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/09 23:49:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/16 09:21:49 wiz Exp $
 
-DISTNAME=	commit-patch-2.5
+DISTNAME=	commit-patch-2.5.2
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.porkrind.org/commit-patch/
 
@@ -9,7 +9,8 @@ HOMEPAGE=	http://www.porkrind.org/commit-patch/
 COMMENT=	Commit patches to most common SCM repositories
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
+# included!
+#DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=	patchutils-[0-9]*:../../devel/patchutils
 
 USE_LANGUAGES=	# none
