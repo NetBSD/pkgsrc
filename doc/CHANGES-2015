@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.254 2015/01/16 10:46:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.255 2015/01/16 11:27:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -319,3 +319,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/vala to 0.26.2 [wiz 2015-01-16]
 	Updated mail/imapsync to 1.607 [wiz 2015-01-16]
 	Updated misc/kchmviewer to 7.2.1 [wiz 2015-01-16]
+	Updated lang/go to 1.4.1 [wiz 2015-01-16]
