@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.268 2015/01/16 12:15:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.269 2015/01/16 12:57:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/libmicrohttpd to 0.9.39 [wiz 2015-01-16]
 	Updated www/viewvc to 1.1.23 [wiz 2015-01-16]
 	Updated www/wml to 2.0.11 [wiz 2015-01-16]
+	Updated ham/gnuradio-core to 3.7.5.1 [mef 2015-01-16]
