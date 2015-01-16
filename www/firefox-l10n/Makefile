@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2014/12/01 18:14:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2015/01/16 23:10:20 ryoon Exp $
 #
 
-FIREFOX_VER=	34.0.5
+FIREFOX_VER=	35.0
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
-COMMENT=	Language packs for www/firefox (version 29.x)
+COMMENT=	Language packs for www/firefox (version 35.x)
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${XPI_FILES}
@@ -18,7 +18,7 @@ DISTFILES=	${XPI_FILES}
 NO_BUILD=	yes
 
 FIREFOX_LOCALES=ach af an ar as ast az be bg bn-BD bn-IN br bs ca cs	\
-		csb cy da de dsb el en-GB en-US en-ZA eo es-AR es-CL 	\
+		cy da de dsb el en-GB en-US en-ZA eo es-AR es-CL 	\
 		es-ES es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gu-IN	\
 		he hi-IN hr hsb hu hy-AM id is it ja kk km kn ko lij	\
 		lt lv mai mk ml mr ms nb-NO nl nn-NO or pa-IN pl pt-BR	\
