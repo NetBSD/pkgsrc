@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.271 2015/01/16 16:36:51 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.272 2015/01/16 16:37:53 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -336,3 +336,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/gnuradio-core to 3.7.5.1 [mef 2015-01-16]
 	Updated net/istgt to 20141125 [sborrill 2015-01-16]
 	Updated sysutils/liblogging to 1.0.5 [fhajny 2015-01-16]
+	Updated sysutils/liblognorm to 1.1.0 [fhajny 2015-01-16]
