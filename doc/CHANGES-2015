@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.233 2015/01/16 08:50:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.234 2015/01/16 08:57:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -298,3 +298,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnupg2 to 2.0.26nb1 [wiz 2015-01-15]
 	Updated audio/opus-tools to 0.1.9 [wiz 2015-01-16]
 	Updated audio/speex to 1.2rc2 [wiz 2015-01-16]
+	Updated chat/mcabber to 0.10.3 [wiz 2015-01-16]
