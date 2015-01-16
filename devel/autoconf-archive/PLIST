@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/03 09:05:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/16 09:18:54 wiz Exp $
 info/autoconf-archive.info
 share/aclocal/ax_absolute_header.m4
 share/aclocal/ax_ac_append_to_file.m4
@@ -19,6 +19,7 @@ share/aclocal/ax_append_link_flags.m4
 share/aclocal/ax_append_to_file.m4
 share/aclocal/ax_arg_with_path_style.m4
 share/aclocal/ax_asm_inline.m4
+share/aclocal/ax_at_check_pattern.m4
 share/aclocal/ax_auto_include_headers.m4
 share/aclocal/ax_berkeley_db.m4
 share/aclocal/ax_berkeley_db_cxx.m4
@@ -132,6 +133,7 @@ share/aclocal/ax_check_docbook_dtd.m4
 share/aclocal/ax_check_docbook_xslt.m4
 share/aclocal/ax_check_docbook_xslt_min.m4
 share/aclocal/ax_check_dos_filesys.m4
+share/aclocal/ax_check_enable_debug.m4
 share/aclocal/ax_check_func_in.m4
 share/aclocal/ax_check_gd.m4
 share/aclocal/ax_check_gl.m4
@@ -168,6 +170,7 @@ share/aclocal/ax_check_typedef.m4
 share/aclocal/ax_check_uname_syscall.m4
 share/aclocal/ax_check_user.m4
 share/aclocal/ax_check_zlib.m4
+share/aclocal/ax_code_coverage.m4
 share/aclocal/ax_compare_version.m4
 share/aclocal/ax_compile_check_sizeof.m4
 share/aclocal/ax_compiler_vendor.m4
@@ -208,18 +211,32 @@ share/aclocal/ax_cxx_function_nontype_parameters.m4
 share/aclocal/ax_cxx_function_try_blocks.m4
 share/aclocal/ax_cxx_gcc_abi_demangle.m4
 share/aclocal/ax_cxx_gnucxx_hashmap.m4
+share/aclocal/ax_cxx_have_bad_function_call.m4
+share/aclocal/ax_cxx_have_bind.m4
+share/aclocal/ax_cxx_have_bit_and.m4
+share/aclocal/ax_cxx_have_bit_or.m4
+share/aclocal/ax_cxx_have_bit_xor.m4
 share/aclocal/ax_cxx_have_complex.m4
 share/aclocal/ax_cxx_have_complex_math1.m4
 share/aclocal/ax_cxx_have_complex_math2.m4
+share/aclocal/ax_cxx_have_cref.m4
 share/aclocal/ax_cxx_have_empty_iostream.m4
 share/aclocal/ax_cxx_have_ext_hash_map.m4
 share/aclocal/ax_cxx_have_ext_hash_set.m4
 share/aclocal/ax_cxx_have_ext_slist.m4
 share/aclocal/ax_cxx_have_freeze_sstream.m4
+share/aclocal/ax_cxx_have_function.m4
+share/aclocal/ax_cxx_have_hash.m4
 share/aclocal/ax_cxx_have_ieee_math.m4
+share/aclocal/ax_cxx_have_is_bind_expression.m4
+share/aclocal/ax_cxx_have_is_placeholder.m4
 share/aclocal/ax_cxx_have_koenig_lookup.m4
 share/aclocal/ax_cxx_have_long_long_for_iostream.m4
+share/aclocal/ax_cxx_have_mem_fn.m4
 share/aclocal/ax_cxx_have_numeric_limits.m4
+share/aclocal/ax_cxx_have_placeholders.m4
+share/aclocal/ax_cxx_have_ref.m4
+share/aclocal/ax_cxx_have_reference_wrapper.m4
 share/aclocal/ax_cxx_have_sstream.m4
 share/aclocal/ax_cxx_have_std.m4
 share/aclocal/ax_cxx_have_stl.m4
@@ -260,6 +277,7 @@ share/aclocal/ax_cxx_templates.m4
 share/aclocal/ax_cxx_templates_as_template_arguments.m4
 share/aclocal/ax_cxx_typename.m4
 share/aclocal/ax_cxx_use_numtrait.m4
+share/aclocal/ax_cxx_var_prettyfunc.m4
 share/aclocal/ax_cxx_verbose_terminate_handler.m4
 share/aclocal/ax_decl_wchar_max.m4
 share/aclocal/ax_define_integer_bits.m4
@@ -269,6 +287,7 @@ share/aclocal/ax_dist_msi.m4
 share/aclocal/ax_dist_rpm.m4
 share/aclocal/ax_dll_string.m4
 share/aclocal/ax_enable_builddir.m4
+share/aclocal/ax_execinfo.m4
 share/aclocal/ax_expand_prefix.m4
 share/aclocal/ax_ext.m4
 share/aclocal/ax_ext_check_header.m4
@@ -296,12 +315,15 @@ share/aclocal/ax_func_snprintf.m4
 share/aclocal/ax_func_which_gethostbyname_r.m4
 share/aclocal/ax_func_which_getservbyname_r.m4
 share/aclocal/ax_gcc_archflag.m4
+share/aclocal/ax_gcc_builtin.m4
 share/aclocal/ax_gcc_const_call.m4
+share/aclocal/ax_gcc_func_attribute.m4
 share/aclocal/ax_gcc_lib.m4
 share/aclocal/ax_gcc_libgcc_eh.m4
 share/aclocal/ax_gcc_libraries_dir.m4
 share/aclocal/ax_gcc_libsupcxx.m4
 share/aclocal/ax_gcc_malloc_call.m4
+share/aclocal/ax_gcc_var_attribute.m4
 share/aclocal/ax_gcc_version.m4
 share/aclocal/ax_gcc_warn_unused_result.m4
 share/aclocal/ax_gcc_x86_avx_xgetbv.m4
@@ -444,6 +466,7 @@ share/aclocal/ax_python_config_var.m4
 share/aclocal/ax_python_devel.m4
 share/aclocal/ax_python_embed.m4
 share/aclocal/ax_python_module.m4
+share/aclocal/ax_require_defined.m4
 share/aclocal/ax_require_one_func.m4
 share/aclocal/ax_restore_flags.m4
 share/aclocal/ax_rpm_init.m4
