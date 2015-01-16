@@ -1,8 +1,8 @@
-$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.4 2015/01/16 22:42:09 ryoon Exp $
 
---- memory/mozalloc/mozalloc_abort.cpp.orig	2013-05-11 19:19:46.000000000 +0000
+--- memory/mozalloc/mozalloc_abort.cpp.orig	2015-01-09 04:38:22.000000000 +0000
 +++ memory/mozalloc/mozalloc_abort.cpp
-@@ -34,7 +34,11 @@ mozalloc_abort(const char* const msg)
+@@ -63,7 +63,11 @@ void fillAbortMessage(char (&msg)[N], ui
  // Define abort() here, so that it is used instead of the system abort(). This
  // lets us control the behavior when aborting, in order to get better results
  // on *NIX platforms. See mozalloc_abort for details.
@@ -12,5 +12,5 @@ $NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.3 2014/02/20 13:19:03 ryo
  void abort(void)
 +#endif
  {
-     mozalloc_abort("Redirecting call to abort() to mozalloc_abort\n");
- }
+ #ifdef MOZ_WIDGET_ANDROID
+     char msg[64] = {};
