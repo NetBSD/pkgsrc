@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/25 08:49:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/16 16:58:28 fhajny Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -8,8 +8,6 @@ BUILDLINK_DEPMETHOD.libuuid=	full
 .include "../../sysutils/rsyslog/Makefile.common"
 
 COMMENT=		The enhanced syslogd for Unix
-
-#.include "options.mk"
 
 CONFIGURE_ARGS+=	--disable-testbench --enable-cached-man-pages		\
 			--enable-diagtools --enable-usertools --enable-uuid	\
@@ -52,5 +50,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/platform/redhat/rsyslog.conf			\
 		${DESTDIR}${EGDIR}/rsyslog.conf
 
+BUILDLINK_ABI_DEPENDS.liblognorm+=	liblognorm>=1.0.2
 .include "../../sysutils/liblognorm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
