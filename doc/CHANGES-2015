@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.231 2015/01/15 21:00:07 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.232 2015/01/16 08:45:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/pinentry to 0.9.0nb1 [wiz 2015-01-15]
 	Updated security/pcsc-lite to 1.8.12nb1 [wiz 2015-01-15]
 	Updated security/gnupg2 to 2.0.26nb1 [wiz 2015-01-15]
+	Updated audio/opus-tools to 0.1.9 [wiz 2015-01-16]
