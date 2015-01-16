@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.243 2015/01/16 09:27:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.244 2015/01/16 09:29:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -308,3 +308,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/commit-patch to 2.5.2 [wiz 2015-01-16]
 	Updated devel/cproto to 4.7l [wiz 2015-01-16]
 	Updated devel/patchutils to 0.3.3 [wiz 2015-01-16]
+	Updated devel/pangox-compat to 0.0.2 [wiz 2015-01-16]
