@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/07/23 06:20:48 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/01/16 09:05:22 wiz Exp $
 
-SHA1 (libmwaw-0.3.1.tar.xz) = 3a989a0ed551600b46ff0dacd18c423be789d192
-RMD160 (libmwaw-0.3.1.tar.xz) = c95eb2bac58ea4a4538b6cdaf5f02691bcc42bd2
-Size (libmwaw-0.3.1.tar.xz) = 916320 bytes
+SHA1 (libmwaw-0.3.2.tar.xz) = 36532c7007cd444df06d38abf8678b26282a7de8
+RMD160 (libmwaw-0.3.2.tar.xz) = 354b006656225de2570fe63981f649e9eca99925
+Size (libmwaw-0.3.2.tar.xz) = 940368 bytes
