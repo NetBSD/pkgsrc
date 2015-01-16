@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/08 11:15:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/16 11:44:07 wiz Exp $
 bin/coccigrep
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,7 @@ ${PYSITELIB}/coccigrep/coccigrep.pyc
 ${PYSITELIB}/coccigrep/coccigrep.pyo
 ${PYSITELIB}/coccigrep/data/deref.cocci
 ${PYSITELIB}/coccigrep/data/func.cocci
+${PYSITELIB}/coccigrep/data/named.cocci
 ${PYSITELIB}/coccigrep/data/set.cocci
 ${PYSITELIB}/coccigrep/data/test.cocci
 ${PYSITELIB}/coccigrep/data/used.cocci
