@@ -1,10 +1,10 @@
-$NetBSD: patch-config_external_moz.build,v 1.5 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.6 2015/01/16 22:42:09 ryoon Exp $
 
---- config/external/moz.build.orig	2014-11-21 03:37:23.000000000 +0000
+--- config/external/moz.build.orig	2015-01-09 04:38:18.000000000 +0000
 +++ config/external/moz.build
-@@ -16,13 +16,19 @@ if CONFIG['MOZ_UPDATER']:
-     if not CONFIG['MOZ_NATIVE_BZ2']:
-         external_dirs += ['modules/libbz2']
+@@ -19,13 +19,19 @@ if CONFIG['MOZ_UPDATER']:
+ # There's no "native brotli" yet, but probably in the future...
+ external_dirs += ['modules/brotli']
  
 -if CONFIG['MOZ_VORBIS']:
 +if not CONFIG['MOZ_NATIVE_OGG']:
@@ -25,7 +25,7 @@ $NetBSD: patch-config_external_moz.build,v 1.5 2014/12/01 18:11:14 ryoon Exp $
      external_dirs += ['media/libopus']
  
  if CONFIG['MOZ_WEBM']:
-@@ -37,14 +43,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+@@ -40,14 +46,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
  

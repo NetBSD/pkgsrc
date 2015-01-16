@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.13 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-as,v 1.14 2015/01/16 22:42:09 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2014-11-21 03:37:33.000000000 +0000
+--- js/src/configure.in.orig	2015-01-09 04:38:17.000000000 +0000
 +++ js/src/configure.in
-@@ -2089,8 +2089,7 @@ AC_LANG_CPLUSPLUS
+@@ -2180,8 +2180,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -14,7 +14,7 @@ Treat DragonFly like FreeBSD.
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3004,7 +3003,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3095,7 +3094,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -23,7 +23,7 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3924,6 +3923,16 @@ MOZ_SUBCONFIGURE_ICU()
+@@ -3989,6 +3988,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
@@ -38,5 +38,5 @@ Treat DragonFly like FreeBSD.
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
- AC_HAVE_FUNCS(setlocale)
- AC_HAVE_FUNCS(localeconv)
+ MALLOC_HEADERS="malloc.h malloc_np.h malloc/malloc.h sys/malloc.h"
+ MALLOC_H=

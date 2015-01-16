@@ -1,10 +1,10 @@
-$NetBSD: patch-b2g_installer_package-manifest.in,v 1.1 2014/07/24 14:57:12 ryoon Exp $
+$NetBSD: patch-b2g_installer_package-manifest.in,v 1.2 2015/01/16 22:42:09 ryoon Exp $
 
---- b2g/installer/package-manifest.in.orig	2014-07-17 01:45:05.000000000 +0000
+--- b2g/installer/package-manifest.in.orig	2015-01-09 04:38:12.000000000 +0000
 +++ b2g/installer/package-manifest.in
-@@ -565,7 +565,7 @@
- @BINPATH@/components/MozKeyboard.js
- @BINPATH@/components/InputMethod.manifest
+@@ -606,7 +606,7 @@
+ @BINPATH@/components/EngineeringModeAPI.js
+ @BINPATH@/components/EngineeringModeService.js
  
 -#ifdef MOZ_DEBUG
 +#if defined(ENABLE_TESTS) && defined(MOZ_DEBUG)
