@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.478 2015/01/14 21:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.479 2015/01/16 17:13:49 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -346,6 +346,7 @@ SUBDIR+=	py-barman
 SUBDIR+=	py-bdb-xml
 SUBDIR+=	py-bsddb3
 SUBDIR+=	py-cassa
+SUBDIR+=	py-cassandra-driver
 SUBDIR+=	py-cdb
 SUBDIR+=	py-ckanclient
 SUBDIR+=	py-couchdb
