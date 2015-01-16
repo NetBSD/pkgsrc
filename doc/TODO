@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14022 2015/01/14 21:04:05 adam Exp $
+$NetBSD: TODO,v 1.14023 2015/01/16 08:57:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -791,7 +791,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mawk-1.3.4.20141206
 	o mbuf-20141227
 	o mc-4.8.13
-	o mcabber-0.10.3
 	o mcsim-5.5.0
 	o mednafen-0.9.36.5
 	o mergeant-0.67
