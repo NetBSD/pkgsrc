@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.258 2015/01/16 11:41:07 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.259 2015/01/16 11:42:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -323,3 +323,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/Radicale to 0.10 [wiz 2015-01-16]
 	Updated security/libsodium to 1.0.1 [wiz 2015-01-16]
 	Updated sysutils/pwgen to 2.07 [wiz 2015-01-16]
+	Updated www/squid3 to 3.4.11 [adam 2015-01-16]
