@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.256 2015/01/16 11:28:16 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.257 2015/01/16 11:39:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/kchmviewer to 7.2.1 [wiz 2015-01-16]
 	Updated lang/go to 1.4.1 [wiz 2015-01-16]
 	Updated net/Radicale to 0.10 [wiz 2015-01-16]
+	Updated security/libsodium to 1.0.1 [wiz 2015-01-16]
