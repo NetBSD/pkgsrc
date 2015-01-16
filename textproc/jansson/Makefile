@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/07/23 09:42:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/16 11:50:28 wiz Exp $
 
-DISTNAME=	jansson-2.4
-PKGREVISION=	1
+DISTNAME=	jansson-2.7
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.digip.org/jansson/releases/
 
