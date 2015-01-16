@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/01/11 21:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/16 11:28:08 wiz Exp $
 
-DISTNAME=	Radicale-0.9
+DISTNAME=	Radicale-0.10
 CATEGORIES=	net time www
 MASTER_SITES=	http://pypi.python.org/packages/source/R/Radicale/
 
