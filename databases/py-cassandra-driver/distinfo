@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/16 17:12:23 fhajny Exp $
+
+SHA1 (python-driver-2.1.3.tar.gz) = c0efda846d6908c37c778c86cd22916bc54a720e
+RMD160 (python-driver-2.1.3.tar.gz) = 42420a1d4238f66ddc6e5f02f095960dab31999b
+Size (python-driver-2.1.3.tar.gz) = 201251 bytes
