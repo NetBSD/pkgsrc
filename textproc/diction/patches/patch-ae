@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2007/12/04 00:57:40 bjs Exp $
+$NetBSD: patch-ae,v 1.2 2015/01/16 11:49:07 wiz Exp $
 
---- sentence.h.orig	2007-07-30 16:44:18.000000000 -0400
+--- sentence.h.orig	2011-08-31 17:04:20.000000000 +0000
 +++ sentence.h
 @@ -25,7 +25,13 @@ with this program.  If not, write to the
  #define SENTENCE_H
@@ -15,4 +15,4 @@ $NetBSD: patch-ae,v 1.1 2007/12/04 00:57:40 bjs Exp $
 +#endif
  
  int endingInPossesiveS(const char *s, size_t length);
- void sentence(const char *cmd, FILE *in, const char *file, void (*process)(const char *, size_t, const char *, int), const char *lang);
+ void sentence(const char *cmd, FILE *in, const char *file, void (*process)(const char *, size_t, const char *, int, int, int, int), const char *lang);
