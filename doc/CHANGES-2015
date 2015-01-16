@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.236 2015/01/16 09:05:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.237 2015/01/16 09:08:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/mcabber to 0.10.3 [wiz 2015-01-16]
 	Updated converters/libe-book to 0.1.2 [wiz 2015-01-16]
 	Updated converters/libmwaw to 0.3.2 [wiz 2015-01-16]
+	Updated converters/libwps to 0.3.1 [wiz 2015-01-16]
