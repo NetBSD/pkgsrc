@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14028 2015/01/16 12:12:11 wiz Exp $
+$NetBSD: TODO,v 1.14029 2015/01/16 12:15:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1130,7 +1130,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wine-devel-1.7.34
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
-	o wml-2.0.11
 	o wmweather-2.4.4
 	o wmx-7
 	o worker-3.4.1
