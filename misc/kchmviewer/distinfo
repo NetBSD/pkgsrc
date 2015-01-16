@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2014/11/27 15:32:54 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/01/16 10:46:00 wiz Exp $
 
-SHA1 (kchmviewer-7.1.tar.gz) = e596bff926ce4a99154a6aa65f58a3ec45380e41
-RMD160 (kchmviewer-7.1.tar.gz) = 64dd41fe0615d231f5344d186ea889e24aabe5b0
-Size (kchmviewer-7.1.tar.gz) = 340934 bytes
-SHA1 (patch-build-release.sh) = 7156f5fcc3985fdcd0536b6f3c8df18e48f8a4cb
-SHA1 (patch-po_kchmviewer_it.po) = 8c29ac0490b5e220988e23cba6f02234db10d986
+SHA1 (kchmviewer-7.2.1.tar.gz) = 2234ae47e7915aa673cda7e31efe3569cd6c5ddc
+RMD160 (kchmviewer-7.2.1.tar.gz) = a8e5c18082eb34d9b76abe783494cdeb6bdad4ca
+Size (kchmviewer-7.2.1.tar.gz) = 342665 bytes
+SHA1 (patch-po_kchmviewer_it.po) = beca7d046ed0409c2391660b12de5202160bd623
