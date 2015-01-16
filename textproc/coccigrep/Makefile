@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/16 11:44:07 wiz Exp $
 
-DISTNAME=	coccigrep-1.12
+DISTNAME=	coccigrep-1.13
 CATEGORIES=	textproc
 MASTER_SITES=	http://home.regit.org/wp-content/uploads/2011/08/
 
