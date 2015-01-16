@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/20 08:57:51 mef Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/16 22:55:56 wiedi Exp $
 #
 
 DISTNAME=	bml-0.7.0
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++
 
 PKGCONFIG_OVERRIDE+=	libbml.pc.in
 
