@@ -1,8 +1,8 @@
-$NetBSD: patch-xpcom_build_nsXPComInit.cpp,v 1.2 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-xpcom_build_XPCOMInit.cpp,v 1.1 2015/01/16 22:42:09 ryoon Exp $
 
---- xpcom/build/nsXPComInit.cpp.orig	2014-11-21 03:37:53.000000000 +0000
-+++ xpcom/build/nsXPComInit.cpp
-@@ -138,7 +138,9 @@ extern nsresult nsStringInputStreamConst
+--- xpcom/build/XPCOMInit.cpp.orig	2015-01-09 04:38:29.000000000 +0000
++++ xpcom/build/XPCOMInit.cpp
+@@ -139,7 +139,9 @@ extern nsresult nsStringInputStreamConst
  #include "mozilla/VisualEventTracer.h"
  #endif
  

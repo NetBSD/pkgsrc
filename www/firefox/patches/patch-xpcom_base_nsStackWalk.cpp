@@ -1,29 +1,11 @@
-$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.8 2014/10/05 01:59:08 ryoon Exp $
+$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.9 2015/01/16 22:42:09 ryoon Exp $
 
 * Replace XP_MACOSX with XP_DARWIN as the former is not defined when
   the toolkit is not cocoa.
 
---- xpcom/base/nsStackWalk.cpp.orig	2014-09-24 01:05:41.000000000 +0000
+--- xpcom/base/nsStackWalk.cpp.orig	2015-01-09 04:38:29.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
-@@ -47,7 +47,7 @@ static CriticalAddress gCriticalAddress;
-   (defined(__sun) && \
-    (defined(__sparc) || defined(sparc) || defined(__i386) || defined(i386)))
- 
--#if NSSTACKWALK_SUPPORTS_MACOSX
-+#if NSSTACKWALK_SUPPORTS_DARWIN
- #include <pthread.h>
- #include <CoreServices/CoreServices.h>
- 
-@@ -866,7 +866,7 @@ NS_FormatCodeAddressDetails(void* aPC, c
- 
- // WIN32 x86 stack walking code
- // i386 or PPC Linux stackwalking code or Solaris
--#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_SOLARIS || NSSTACKWALK_SUPPORTS_MACOSX)
-+#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_SOLARIS || NSSTACKWALK_SUPPORTS_DARWIN)
- 
- #include <stdlib.h>
- #include <string.h>
-@@ -1191,7 +1191,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -903,7 +903,7 @@ FramePointerStackWalk(NS_WalkStackCallba
          (long(next) & 3)) {
        break;
      }
@@ -32,7 +14,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.8 2014/10/05 01:59:08 ryoon Exp $
      // ppc mac or powerpc64 linux
      void* pc = *(bp + 2);
      bp += 3;
-@@ -1221,7 +1221,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -933,7 +933,7 @@ FramePointerStackWalk(NS_WalkStackCallba
  }
  
  #define X86_OR_PPC (defined(__i386) || defined(PPC) || defined(__ppc__))
