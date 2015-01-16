@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/12/04 11:13:25 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/01/16 09:31:33 adam Exp $
 
-SHA1 (tdb-1.3.3.tar.gz) = eb64808ff23263fdfc11e393cadcbf4dfd68d5d2
-RMD160 (tdb-1.3.3.tar.gz) = b0ea7d807e5721afefc07df11fe95c432bec09e3
-Size (tdb-1.3.3.tar.gz) = 482682 bytes
+SHA1 (tdb-1.3.4.tar.gz) = 585d188267e4ba698c86b86703cc8cd97f1a71ac
+RMD160 (tdb-1.3.4.tar.gz) = 47aabcdef10f9a22adb3a38d197548a6326cf6cc
+Size (tdb-1.3.4.tar.gz) = 483140 bytes
