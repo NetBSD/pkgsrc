@@ -1,22 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/01/16 08:50:47 wiz Exp $
 bin/speexdec
 bin/speexenc
 include/speex/speex.h
 include/speex/speex_bits.h
-include/speex/speex_buffer.h
 include/speex/speex_callbacks.h
 include/speex/speex_config_types.h
-include/speex/speex_echo.h
 include/speex/speex_header.h
-include/speex/speex_jitter.h
-include/speex/speex_preprocess.h
-include/speex/speex_resampler.h
 include/speex/speex_stereo.h
 include/speex/speex_types.h
 lib/libspeex.la
-lib/libspeexdsp.la
 lib/pkgconfig/speex.pc
-lib/pkgconfig/speexdsp.pc
 man/man1/speexdec.1
 man/man1/speexenc.1
 share/aclocal/speex.m4
