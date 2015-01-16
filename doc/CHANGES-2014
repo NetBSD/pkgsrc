@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4973 2015/01/12 21:54:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4974 2015/01/16 21:08:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -216,7 +216,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/grep to 2.16 [adam 2014-01-11]
 	Updated emulators/qemu to 1.6.2 [adam 2014-01-11]
 	Updated lang/tcl to 8.6.1 [adam 2014-01-11]
-	Updated x11/tk to 8.6.1 [adam 2013-01-11]
+	Updated x11/tk to 8.6.1 [adam 2014-01-11]
 	Updated lang/php54 to 5.4.24 [taca 2014-01-11]
 	Updated lang/php55 to 5.5.8 [taca 2014-01-11]
 	Updated www/drupal7 to 7.25 [taca 2014-01-11]
@@ -278,7 +278,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.1.0 [obache 2014-01-14]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.1.0 [obache 2014-01-14]
 	Updated multimedia/libass to 0.10.2nb1 [jperkin 2014-01-14]
-	Added cross/bossa version bossa-20140109 [reinoud 2013-01-14]
+	Added cross/bossa version bossa-20140109 [reinoud 2014-01-14]
 	Updated devel/git-base to 1.8.5.2nb2 [wiz 2014-01-14]
 	Updated x11/libxkbcommon to 0.3.2nb2 [wiz 2014-01-14]
 	Updated lang/gcc47 to 4.7.3nb2 [wiz 2014-01-14]
@@ -561,7 +561,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libmikmod to 3.3.5 [wiz 2014-01-27]
 	Updated devel/global to 6.2.10 [wiz 2014-01-27]
 	Updated graphics/dcraw to 9.20 [wiz 2014-01-27]
-	Added www/goaccess version 0.7 [wiedi 2013-01-27]
+	Added www/goaccess version 0.7 [wiedi 2014-01-27]
 	Updated net/youtube-dl to 20140127.2 [wiz 2014-01-27]
 	Updated x11/qt5-qtbase to 5.2.0nb3 [ryoon 2014-01-28]
 	Updated databases/p5-DBD-SQLite to 1.40 [wiz 2014-01-28]
@@ -574,7 +574,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/openldap-nops to 2.4.39 [adam 2014-01-28]
 	Updated databases/openldap-smbk5pwd to 2.4.39 [adam 2014-01-28]
 	Updated graphics/jpeg to 9anb1 [wiz 2014-01-28]
-	Added lang/nuitka version 0.5.0.1 [agc 2013-01-28]
+	Added lang/nuitka version 0.5.0.1 [agc 2014-01-28]
 	Updated lang/nuitka to 0.5.0.1nb1 [wiz 2014-01-29]
 	Updated devel/cmake-fedora to 1.2.3 [obache 2014-01-29]
 	Updated textproc/groonga to 3.1.2 [obache 2014-01-29]
