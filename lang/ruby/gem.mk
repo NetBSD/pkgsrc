@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.32 2014/08/19 15:26:44 taca Exp $
+# $NetBSD: gem.mk,v 1.33 2015/01/16 09:18:47 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -92,7 +92,7 @@
 #
 #	    GEM_CLEANBUILD=	*.o *.${RUBY_DLEXT} mkmf.log
 #
-# GEM_CLEANBUOLD_EXTENSIONS
+# GEM_CLEANBUILD_EXTENSIONS
 #	A list of shell globs representing files under ${RUBY_EXTSDIR}.
 #	These files will be additionaly removed from the gem installed in
 #	the installation root.
@@ -303,14 +303,14 @@ gem-extract: fake-home
 ### ${WRKDIR} (${RUBYGEM_INSTALL_ROOT}), possibly compiling any extensions.
 ###
 GEM_CLEANBUILD?=		ext/*
-GEM_CLEANBUOLD_EXTENSIONS+=	gem.build_complete *.out *.log
+GEM_CLEANBUILD_EXTENSIONS+=	gem.build_complete *.out *.log
 
 .if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
 PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
 .endif
 
-.if !empty(GEM_CLEANBUOLD_EXTENSIONS:M/*) || !empty(GEM_CLEANBUOLD_EXTENSIONS:M*../*)
-PKG_FAIL_REASON=	"GEM_CLEANBUOLD_EXTENSIONS must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
+.if !empty(GEM_CLEANBUILD_EXTENSIONS:M/*) || !empty(GEM_CLEANBUILD_EXTENSIONS:M*../*)
+PKG_FAIL_REASON=	"GEM_CLEANBUILD_EXTENSIONS must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
 .endif
 
 .PHONY: gem-build
@@ -385,7 +385,7 @@ _gem-build-install-root-check:
 	${RUN} ${TEST} -f ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_CACHEDIR}/${GEM_NAME}.gem || \
 		${FAIL_MSG} "Installing ${GEM_NAME}.gem into installation root failed."
 
-.if !empty(GEM_CLEANBUILD) || !empty(GEM_CLEANBUOLD_EXTENSIONS)
+.if !empty(GEM_CLEANBUILD) || !empty(GEM_CLEANBUILD_EXTENSIONS)
 .PHONY: _gem-build-cleanbuild
 _gem-build-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
@@ -410,13 +410,13 @@ _gem-build-cleanbuild:
 		fi;							\
 	done
 .endif
-.if !empty(GEM_EXTSDIR) && !empty(GEM_CLEANBUOLD_EXTENSIONS)
+.if !empty(GEM_EXTSDIR) && !empty(GEM_CLEANBUILD_EXTENSIONS)
 	${RUN} \
 	if test ! -d ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_EXTSDIR}; then \
 		:; \
 	else \
 		cd ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_EXTSDIR} && \
-		for f in ${GEM_CLEANBUOLD_EXTENSIONS}; do \
+		for f in ${GEM_CLEANBUILD_EXTENSIONS}; do \
 			echo "rm -f $$f"; \
 			rm -f $$f; \
 		done; \

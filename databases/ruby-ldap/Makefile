@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/03/13 18:21:14 taca Exp $
+# $NetBSD: Makefile,v 1.19 2015/01/16 09:18:47 taca Exp $
 
 DISTNAME=	ruby-ldap-0.9.16
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--with-openldap2
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
 
 GEM_CLEANBUILD=	Makefile *.o *.time ldap.${RUBY_DLEXT} mkmf.log
-GEM_CLEANBUOLD_EXTENSIONS=	ldap/control.rb ldap/ldif.rb ldap/schema.rb
+GEM_CLEANBUILD_EXTENSIONS=	ldap/control.rb ldap/ldif.rb ldap/schema.rb
 
 # for LDAP_OPT_X_SASL_NOCANON
 BUILDLINK_API_DEPENDS.openldap-client+=	openldap-client>=2.4.14
