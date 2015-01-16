@@ -1,0 +1,3 @@
+Python client driver for Apache Cassandra. This driver works exclusively
+with the Cassandra Query Language v3 (CQL3) and Cassandra's native protocol.
+Cassandra versions 1.2 through 2.1 are supported.
