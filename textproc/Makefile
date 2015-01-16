@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.817 2015/01/04 07:29:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.818 2015/01/16 21:03:59 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -127,6 +127,7 @@ SUBDIR+=	colorit
 SUBDIR+=	convertlit
 SUBDIR+=	crimson
 SUBDIR+=	crush-tools
+SUBDIR+=	csvkit
 SUBDIR+=	dadadodo
 SUBDIR+=	db2latex
 SUBDIR+=	dblatex
