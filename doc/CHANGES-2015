@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.262 2015/01/16 11:47:20 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.263 2015/01/16 11:49:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -327,3 +327,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/coccigrep to 1.13 [wiz 2015-01-16]
 	Updated textproc/docbook-xsl to 1.78.1 [wiz 2015-01-16]
 	Updated textproc/dbtoepub to 1.78.1 [wiz 2015-01-16]
+	Updated textproc/diction to 1.13 [wiz 2015-01-16]
