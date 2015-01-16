@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.267 2015/01/16 12:12:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.268 2015/01/16 12:15:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/fet to 5.25.0 [wiz 2015-01-16]
 	Updated www/libmicrohttpd to 0.9.39 [wiz 2015-01-16]
 	Updated www/viewvc to 1.1.23 [wiz 2015-01-16]
+	Updated www/wml to 2.0.11 [wiz 2015-01-16]
