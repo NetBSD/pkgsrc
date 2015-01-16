@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.252 2015/01/16 09:54:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.253 2015/01/16 09:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/jpegoptim to 1.4.2 [wiz 2015-01-16]
 	Updated graphics/xsane to 0.99.9 [wiz 2015-01-16]
 	Updated lang/vala to 0.26.2 [wiz 2015-01-16]
+	Updated mail/imapsync to 1.607 [wiz 2015-01-16]
