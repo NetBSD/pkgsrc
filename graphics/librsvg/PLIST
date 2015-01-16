@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/04/30 14:17:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/01/16 09:39:12 wiz Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/librsvg-enum-types.h
 include/librsvg-2.0/librsvg/librsvg-features.h
@@ -22,9 +22,11 @@ share/gtk-doc/html/rsvg-2.0/api-index-full.html
 share/gtk-doc/html/rsvg-2.0/home.png
 share/gtk-doc/html/rsvg-2.0/index.html
 share/gtk-doc/html/rsvg-2.0/index.sgml
+share/gtk-doc/html/rsvg-2.0/left-insensitive.png
 share/gtk-doc/html/rsvg-2.0/left.png
 share/gtk-doc/html/rsvg-2.0/licence.html
 share/gtk-doc/html/rsvg-2.0/object-tree.html
+share/gtk-doc/html/rsvg-2.0/right-insensitive.png
 share/gtk-doc/html/rsvg-2.0/right.png
 share/gtk-doc/html/rsvg-2.0/rsvg-2.0.devhelp2
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-GIO.html
@@ -33,4 +35,5 @@ share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-cairo.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Version-check-and-feature-tests.html
 share/gtk-doc/html/rsvg-2.0/rsvg.html
 share/gtk-doc/html/rsvg-2.0/style.css
+share/gtk-doc/html/rsvg-2.0/up-insensitive.png
 share/gtk-doc/html/rsvg-2.0/up.png
