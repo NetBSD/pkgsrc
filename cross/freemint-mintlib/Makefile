@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/19 07:43:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/16 23:53:04 wiedi Exp $
 
 DISTNAME=		mintlib-CVS-20131219
 PKGNAME=		cross-freemint-${DISTNAME:S/CVS-//}
@@ -28,7 +28,7 @@ FREEMINT_PREFIX=	${PREFIX}/cross-freemint
 CONFIGURE_DIRS=		${GCCNAME}bin
 CONFIGURE_SCRIPT=	../${GCCNAME}/configure
 
-USE_TOOLS+=		bash:run gmake makeinfo bison
+USE_TOOLS+=		bash:run gmake makeinfo bison flex
 GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_PREFIX=	${FREEMINT_PREFIX}
