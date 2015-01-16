@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14026 2015/01/16 11:44:17 wiz Exp $
+$NetBSD: TODO,v 1.14027 2015/01/16 12:10:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -744,7 +744,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libjit-1.0.2
 	o libjpeg-turbo-1.4
 	o libmcs-0.7.2
-	o libmicrohttpd-0.9.38
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
