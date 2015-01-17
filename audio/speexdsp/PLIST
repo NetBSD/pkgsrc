@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/17 00:16:12 wiz Exp $
+include/speex/speex_echo.h
+include/speex/speex_jitter.h
+include/speex/speex_preprocess.h
+include/speex/speex_resampler.h
+include/speex/speexdsp_config_types.h
+include/speex/speexdsp_types.h
+lib/libspeexdsp.la
+lib/pkgconfig/speexdsp.pc
+share/doc/speexdsp/manual.pdf
