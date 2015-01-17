@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.14 2012/09/14 13:26:20 wiz Exp $
+$NetBSD: patch-ab,v 1.15 2015/01/17 13:29:55 adam Exp $
 
 Insist on select python version for pkgsrc.
 
---- Modules/FindPythonInterp.cmake.orig	2012-04-18 18:10:54.000000000 +0000
+--- Modules/FindPythonInterp.cmake.orig	2014-12-15 20:07:43.000000000 +0000
 +++ Modules/FindPythonInterp.cmake
-@@ -60,14 +60,20 @@ endif(PythonInterp_FIND_VERSION)
- 
- list(APPEND _Python_NAMES python)
- 
--# Search for the current active python version first
+@@ -75,7 +75,14 @@ if(PythonInterp_FIND_VERSION)
+ else()
+     set(_PYTHON_FIND_OTHER_VERSIONS ${_PYTHON3_VERSIONS} ${_PYTHON2_VERSIONS} ${_PYTHON1_VERSIONS})
+ endif()
 -find_program(PYTHON_EXECUTABLE NAMES ${_Python_NAMES})
 +# for pkgsrc: force Python version (set in pyversion.mk)
 +IF(DEFINED PYVERSSUFFIX)
@@ -21,10 +20,12 @@ Insist on select python version for pkgsrc.
  
  # Set up the versions we know about, in the order we will search. Always add
  # the user supplied additional versions to the front.
- set(_Python_VERSIONS
-   ${Python_ADDITIONAL_VERSIONS}
--  ${_PYTHON_FIND_OTHER_VERSIONS}
-+  ${_VERSIONS}
-   )
+@@ -91,7 +98,7 @@ if(DEFINED PYTHONLIBS_VERSION_STRING)
+ endif()
+ # Search for the current active python version first
+ list(APPEND _Python_VERSIONS ";")
+-list(APPEND _Python_VERSIONS ${_PYTHON_FIND_OTHER_VERSIONS})
++list(APPEND _Python_VERSIONS ${_VERSIONS})
  
  unset(_PYTHON_FIND_OTHER_VERSIONS)
+ unset(_PYTHON1_VERSIONS)
