@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2015/01/17 17:50:23 alnsn Exp $
+bin/lua5.3
+bin/luac5.3
+include/lua-5.3/lauxlib.h
+include/lua-5.3/lua.h
+include/lua-5.3/lua.hpp
+include/lua-5.3/luaconf.h
+include/lua-5.3/lualib.h
+lib/liblua5.3.la
+lib/pkgconfig/lua-5.3.pc
+man/man1/lua5.3.1
+man/man1/luac5.3.1
+share/doc/lua-5.3/contents.html
+share/doc/lua-5.3/logo.gif
+share/doc/lua-5.3/lua.css
+share/doc/lua-5.3/manual.css
+share/doc/lua-5.3/manual.html
+share/doc/lua-5.3/osi-certified-72x60.png
+share/doc/lua-5.3/readme.html
+@pkgdir share/lua/5.3
+@pkgdir lib/lua/5.3
