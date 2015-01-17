@@ -1,6 +1,7 @@
-$NetBSD: patch-cogl-winsys-cogl-winsys-glx.c,v 1.3 2014/01/03 12:32:24 obache Exp $
+$NetBSD: patch-cogl-winsys-cogl-winsys-glx.c,v 1.4 2015/01/17 14:28:51 prlw1 Exp $
 
 * for Mac OS X, missing clock_gettime(2), taken from MacPorts.
+  https://bugzilla.gnome.org/show_bug.cgi?id=741647
 
 --- cogl/winsys/cogl-winsys-glx.c.orig	2013-07-09 15:20:23.000000000 +0000
 +++ cogl/winsys/cogl-winsys-glx.c

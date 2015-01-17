@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2014/05/05 00:47:55 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.9 2015/01/17 14:28:51 prlw1 Exp $
 
-DISTNAME=	cogl-1.16.2
+DISTNAME=	cogl-1.18.2
 PKGREVISION=	1
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cogl/1.16/}
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cogl/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cogl3d.org/
 COMMENT=	Modern 3D graphics API
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	mit AND sgi-free-software-b-v2.0 AND modified-bsd
+# if --standalone
+# LICENSE += AND gnu-lgpl-v2.1
 
 CONFLICTS+=	clutter<1.8
 
@@ -25,6 +26,13 @@ PKGCONFIG_OVERRIDE+=	cogl-pango/cogl-pango-2.0-experimental.pc.in
 PKGCONFIG_OVERRIDE+=	cogl-pango/cogl-pango.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl-2.0-experimental.pc.in
+
+PKGCONFIG_OVERRIDE+=	cogl-pango/cogl-pango2.pc.in
+PKGCONFIG_OVERRIDE+=	cogl-pango/cogl-pango.pc.in
+PKGCONFIG_OVERRIDE+=	cogl/cogl2.pc.in
+PKGCONFIG_OVERRIDE+=	cogl-gles2/cogl-gles2-experimental.pc.in
+PKGCONFIG_OVERRIDE+=	cogl-gst/cogl-gst.pc.in
+PKGCONFIG_OVERRIDE+=	cogl-path/cogl-path.pc.in
 
 .include "options.mk"
 
