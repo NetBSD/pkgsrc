@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/01/19 13:05:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2015/01/17 09:20:54 wiz Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -100,10 +100,12 @@ share/gtk-doc/html/libsoup-2.4/home.png
 share/gtk-doc/html/libsoup-2.4/index.html
 share/gtk-doc/html/libsoup-2.4/index.sgml
 share/gtk-doc/html/libsoup-2.4/ix01.html
+share/gtk-doc/html/libsoup-2.4/left-insensitive.png
 share/gtk-doc/html/libsoup-2.4/left.png
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-GValue-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-HTML-Form-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Soup-Miscellaneous-Utilities.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupServer-deprecated-API.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Top-Level-Domain-utils.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Version-Information.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-XMLRPC-Support.html
@@ -112,10 +114,13 @@ share/gtk-doc/html/libsoup-2.4/libsoup-2.4-soup-status.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4.devhelp2
 share/gtk-doc/html/libsoup-2.4/libsoup-build-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-client-howto.html
+share/gtk-doc/html/libsoup-2.4/libsoup-request-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-server-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-session-porting.html
+share/gtk-doc/html/libsoup-2.4/right-insensitive.png
 share/gtk-doc/html/libsoup-2.4/right.png
 share/gtk-doc/html/libsoup-2.4/style.css
+share/gtk-doc/html/libsoup-2.4/up-insensitive.png
 share/gtk-doc/html/libsoup-2.4/up.png
 share/locale/an/LC_MESSAGES/libsoup.mo
 share/locale/as/LC_MESSAGES/libsoup.mo
