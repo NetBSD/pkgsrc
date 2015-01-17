@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/01/07 13:22:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/17 11:16:59 wiedi Exp $
 
 VERSION=	3.0.2
+PKGREVISION=	1
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
@@ -57,6 +58,10 @@ SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
 PLIST_VARS+=		notdarwin
 .if ${OPSYS} != "Darwin"
 PLIST.notdarwin=	yes
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-xlocale
 .endif
 
 post-configure:

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2015/01/07 13:22:58 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2015/01/17 11:16:59 wiedi Exp $
 
 SHA1 (wxWidgets-3.0.2-libtool.diff.bz2) = d0235d8d9ec9c05deefecf8b15ea3d919e82f1d0
 RMD160 (wxWidgets-3.0.2-libtool.diff.bz2) = c144c8484fabd7dcdc669d0618bcbc4af7f07b4a
@@ -9,6 +9,7 @@ Size (wxWidgets-3.0.2.tar.bz2) = 20172909 bytes
 SHA1 (patch-build_aclocal_bakefile.m4) = 7d3d6fb1e6a72e370dc6147010fa5bf2c46f1206
 SHA1 (patch-configure) = 897f13daa5bc8246902d7d864096d621f2e54928
 SHA1 (patch-configure.in) = e49b9a83040201f01c22b3e1cbc4b331985f4e99
+SHA1 (patch-src_stc_scintilla_src_Editor.cxx) = 0b3fb6b8a6c3e72868a12d7b16ceebe295a599a8
 SHA1 (patch-src_tiff_configure) = e1c002f5b7d0bf2c0bec399dbb62d0146c14ec20
 SHA1 (patch-src_tiff_configure.ac) = 0d51a7c251f897aa00e58c3a7ec5f348b50d1821
 SHA1 (patch-src_unix_fswatcher__kqueue.cpp) = 49e142dbdd5c8b8f449ab19b4adbe403d515ab95
