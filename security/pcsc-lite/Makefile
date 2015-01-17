@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2015/01/15 20:56:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/01/17 18:43:15 wiz Exp $
 
 DISTNAME=	pcsc-lite-1.8.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but
