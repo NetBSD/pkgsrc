@@ -1,0 +1,270 @@
+<!-- Creator     : groff version 1.21 -->
+<!-- CreationDate: Sat Feb  9 12:24:02 2013 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p>ARCHIVE_ENTRY_ACL(3) BSD Library Functions Manual
+ARCHIVE_ENTRY_ACL(3)</p>
+
+<p style="margin-top: 1em"><b>NAME</b></p>
+
+
+<p style="margin-left:6%;"><b>archive_entry_acl_add_entry</b>,
+<b>archive_entry_acl_add_entry_w</b>,
+<b>archive_entry_acl_clear</b>,
+<b>archive_entry_acl_count</b>,
+<b>archive_entry_acl_next</b>,
+<b>archive_entry_acl_next_w</b>,
+<b>archive_entry_acl_reset</b>,
+<b>archive_entry_acl_text_w</b> &mdash; functions for
+manipulating Access Control Lists in archive entry
+descriptions</p>
+
+<p style="margin-top: 1em"><b>LIBRARY</b></p>
+
+<p style="margin-left:6%;">Streaming Archive Library
+(libarchive, -larchive)</p>
+
+<p style="margin-top: 1em"><b>SYNOPSIS</b></p>
+
+<p style="margin-left:6%;"><b>#include
+&lt;archive_entry.h&gt;</b></p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+
+
+<p><b>archive_entry_acl_add_entry</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;type</i>, <i>int&nbsp;permset</i>,
+<i>int&nbsp;tag</i>, <i>int&nbsp;qualifier</i>,
+<i>const&nbsp;char&nbsp;*name</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+
+
+<p><b>archive_entry_acl_add_entry_w</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;type</i>, <i>int&nbsp;permset</i>,
+<i>int&nbsp;tag</i>, <i>int&nbsp;qualifier</i>,
+<i>const&nbsp;wchar_t&nbsp;*name</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_entry_acl_clear</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_entry_acl_count</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;type</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p><b>archive_entry_acl_next</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;type</i>, <i>int&nbsp;*ret_type</i>,
+<i>int&nbsp;*ret_permset</i>, <i>int&nbsp;*ret_tag</i>,
+<i>int&nbsp;*ret_qual</i>,
+<i>const&nbsp;char&nbsp;**ret_name</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p><b>archive_entry_acl_next_w</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;type</i>, <i>int&nbsp;*ret_type</i>,
+<i>int&nbsp;*ret_permset</i>, <i>int&nbsp;*ret_tag</i>,
+<i>int&nbsp;*ret_qual</i>,
+<i>const&nbsp;wchar_t&nbsp;**ret_name</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_entry_acl_reset</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;type</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>const wchar_t
+*</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_entry_acl_text_w</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<i>int&nbsp;flags</i>);</p>
+
+<p style="margin-top: 1em"><b>DESCRIPTION</b></p>
+
+<p style="margin-left:6%;">An &rsquo;&rsquo;Access Control
+List&rsquo;&rsquo; is a generalisation of the classic Unix
+permission system. The ACL interface of <b>libarchive</b> is
+derived from the POSIX.1e draft, but restricted to simplify
+dealing with practical implementations in various Operating
+Systems and archive formats.</p>
+
+<p style="margin-left:6%; margin-top: 1em">An ACL consists
+of a number of independent entries. Each entry specifies the
+permission set as bitmask of basic permissions. Valid
+permissions are:</p>
+
+<p>ARCHIVE_ENTRY_ACL_EXECUTE <br>
+ARCHIVE_ENTRY_ACL_WRITE <br>
+ARCHIVE_ENTRY_ACL_READ</p>
+
+<p style="margin-left:6%; margin-top: 1em">The permissions
+correspond to the normal Unix permissions.</p>
+
+<p style="margin-left:6%; margin-top: 1em">The tag
+specifies the principal to which the permission applies.
+Valid values are:</p>
+
+<p>ARCHIVE_ENTRY_ACL_USER</p>
+
+<p style="margin-left:51%; margin-top: 1em">The user
+specified by the name field.</p>
+
+<p>ARCHIVE_ENTRY_ACL_USER_OBJ</p>
+
+<p style="margin-left:51%; margin-top: 1em">The owner of
+the file.</p>
+
+<p>ARCHIVE_ENTRY_ACL_GROUP</p>
+
+<p style="margin-left:51%; margin-top: 1em">The group
+specied by the name field.</p>
+
+<p>ARCHIVE_ENTRY_ACL_GROUP_OBJ</p>
+
+<p style="margin-left:51%; margin-top: 1em">The group who
+owns the file.</p>
+
+<p>ARCHIVE_ENTRY_ACL_MASK</p>
+
+<p style="margin-left:51%; margin-top: 1em">The maximum
+permissions to be obtained via group permissions.</p>
+
+<p>ARCHIVE_ENTRY_ACL_OTHER</p>
+
+<p style="margin-left:51%; margin-top: 1em">Any principal
+who doesn&rsquo;t have a user or group entry.</p>
+
+<p style="margin-left:6%;">The principals
+ARCHIVE_ENTRY_ACL_USER_OBJ, ARCHIVE_ENTRY_ACL_GROUP_OBJ and
+ARCHIVE_ENTRY_ACL_OTHER are equivalent to user, group and
+other in the classic Unix permission model and specify
+non-extended ACL entries.</p>
+
+<p style="margin-left:6%; margin-top: 1em">All files have
+an access ACL (ARCHIVE_ENTRY_ACL_TYPE_ACCESS). This
+specifies the permissions required for access to the file
+itself. Directories have an additional ACL
+(ARCHIVE_ENTRY_ACL_TYPE_DEFAULT), which controls the initial
+access ACL for newly created directory entries.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_add_entry</b>()
+and <b>archive_entry_acl_add_entry_w</b>() add a single ACL
+entry. For the access ACL and non-extended principals, the
+classic Unix permissions are updated.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_clear</b>()
+removes all ACL entries and resets the enumeration
+pointer.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_count</b>()
+counts the ACL entries that have the given type mask.
+<i>type</i> can be the bitwise-or of
+ARCHIVE_ENTRY_ACL_TYPE_ACCESS and
+ARCHIVE_ENTRY_ACL_TYPE_DEFAULT. If
+ARCHIVE_ENTRY_ACL_TYPE_ACCESS is included and at least one
+extended ACL entry is found, the three non-extened ACLs are
+added.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_next</b>()
+and <b>archive_entry_acl_next_w</b>() return the next entry
+of the ACL list. This functions may only be called after
+<b>archive_entry_acl_reset</b>() has indicated the presence
+of extended ACL entries.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_reset</b>()
+prepare reading the list of ACL entries with
+<b>archive_entry_acl_next</b>() or
+<b>archive_entry_acl_next_w</b>(). The function returns
+either 0, if no non-extended ACLs are found. In this case,
+the access permissions should be obtained by
+archive_entry_mode(3) or set using chmod(2). Otherwise, the
+function returns the same value as
+<b>archive_entry_acl_count</b>().</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_text_w</b>()
+converts the ACL entries for the given type mask into a wide
+string. In addition to the normal type flags,
+ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID and
+ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT can be specified to
+further customize the result. The returned long string is
+valid until the next call to
+<b>archive_entry_acl_clear</b>(),
+<b>archive_entry_acl_add_entry</b>(),
+<b>archive_entry_acl_add_entry_w</b>() or
+<b>archive_entry_acl_text_w</b>().</p>
+
+<p style="margin-top: 1em"><b>RETURN VALUES</b></p>
+
+
+<p style="margin-left:6%;"><b>archive_entry_acl_count</b>()
+and <b>archive_entry_acl_reset</b>() returns the number of
+ACL entries that match the given type mask. If the type mask
+includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS and at least one
+extended ACL entry exists, the three classic Unix
+permissions are counted.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_next</b>()
+and <b>archive_entry_acl_next_w</b>() return ARCHIVE_OK on
+success, ARCHIVE_EOF if no more ACL entries exist and
+ARCHIVE_WARN if <b>archive_entry_acl_reset</b>() has not
+been called first.</p>
+
+
+<p style="margin-left:6%; margin-top: 1em"><b>archive_entry_text_w</b>()
+returns a wide string representation of the ACL entrise
+matching the given type mask. The returned long string is
+valid until the next call to
+<b>archive_entry_acl_clear</b>(),
+<b>archive_entry_acl_add_entry</b>(),
+<b>archive_entry_acl_add_entry_w</b>() or
+<b>archive_entry_acl_text_w</b>().</p>
+
+<p style="margin-top: 1em"><b>SEE ALSO</b></p>
+
+<p style="margin-left:6%;">archive(3), archive_entry(3)</p>
+
+<p style="margin-top: 1em"><b>BUGS</b></p>
+
+
+<p style="margin-left:6%;">ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID
+and ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT are not
+documented.</p>
+
+<p style="margin-left:6%; margin-top: 1em">BSD
+February&nbsp;2, 2012 BSD</p>
+<hr>
+</body>
+</html>

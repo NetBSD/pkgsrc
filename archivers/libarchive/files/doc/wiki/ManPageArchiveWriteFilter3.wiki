@@ -1,0 +1,86 @@
+ARCHIVE_WRITE_FILTER(3) manual page 
+== NAME == 
+'''archive_write_add_filter_bzip2''', 
+'''archive_write_add_filter_compress''', 
+'''archive_write_add_filter_gzip''', 
+'''archive_write_add_filter_lzip''', 
+'''archive_write_add_filter_lzma''', 
+'''archive_write_add_filter_none''', 
+'''archive_write_add_filter_program''', 
+'''archive_write_add_filter_xz''' 
+== LIBRARY == 
+Streaming Archive Library (libarchive, -larchive) 
+== SYNOPSIS == 
+'''<nowiki>#include <archive.h></nowiki>''' 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_bzip2'''(''struct archive *''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_compress'''(''struct archive *''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_gzip'''(''struct archive *''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_lzip'''(''struct archive *''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_lzma'''(''struct archive *''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_none'''(''struct archive *''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_program'''(''struct archive *'', ''const char * cmd''); 
+<br> 
+'''int''' 
+<br> 
+'''archive_write_add_filter_xz'''(''struct archive *''); 
+== DESCRIPTION == 
+<dl> 
+<dt> 
+'''archive_write_add_filter_bzip2'''(), 
+'''archive_write_add_filter_compress'''(), 
+'''archive_write_add_filter_gzip'''(), 
+'''archive_write_add_filter_lzip'''(), 
+'''archive_write_add_filter_lzma'''(), 
+'''archive_write_add_filter_xz'''(), 
+</dt> <dd> 
+The resulting archive will be compressed as specified. 
+Note that the compressed output is always properly blocked. 
+</dd><dt>'''archive_write_add_filter_none'''()</dt><dd> 
+This is never necessary. 
+It is provided only for backwards compatibility. 
+</dd><dt>'''archive_write_add_filter_program'''()</dt><dd> 
+The archive will be fed into the specified compression program. 
+The output of that program is blocked and written to the client 
+write callbacks. 
+</dd></dl> 
+== RETURN VALUES == 
+These functions return 
+'''ARCHIVE_OK''' 
+on success, or 
+'''ARCHIVE_FATAL'''. 
+== ERRORS == 
+Detailed error codes and textual descriptions are available from the 
+'''archive_errno'''() 
+and 
+'''archive_error_string'''() 
+functions. 
+== SEE ALSO == 
+'''tar'''(1), 
+'''libarchive'''(3), 
+'''archive_write'''(3), 
+'''archive_write_format'''(3), 
+'''archive_write_set_options'''(3), 
+'''cpio'''(5), 
+'''mtree'''(5), 
+'''tar'''(5) 
