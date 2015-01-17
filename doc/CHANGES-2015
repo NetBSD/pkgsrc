@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.290 2015/01/17 09:25:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.291 2015/01/17 12:33:34 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -356,3 +356,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/libsoup24 to 2.48.1 [wiz 2015-01-17]
 	Updated net/gupnp to 0.20.13 [wiz 2015-01-17]
 	Updated net/gupnp-av to 0.12.7 [wiz 2015-01-17]
+	Updated net/get_iplayer to 2.91 [prlw1 2015-01-17]
