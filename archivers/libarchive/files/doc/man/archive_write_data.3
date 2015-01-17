@@ -1,0 +1,41 @@
+.TH ARCHIVE_WRITE_DATA 3 "February 2, 2012" ""
+.SH NAME
+.ad l
+\fB\%archive_write_data\fP
+\- functions for creating archives
+.SH LIBRARY
+.ad l
+Streaming Archive Library (libarchive, -larchive)
+.SH SYNOPSIS
+.ad l
+\fB#include <archive.h>\fP
+.br
+\fIssize_t\fP
+.br
+\fB\%archive_write_data\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\fP);
+.SH DESCRIPTION
+.ad l
+Write data corresponding to the header just written.
+.SH RETURN VALUES
+.ad l
+This function returns the number of bytes actually written, or
+.RS 4
+-1
+.RE
+on error.
+.SH ERRORS
+.ad l
+Detailed error codes and textual descriptions are available from the
+\fB\%archive_errno\fP()
+and
+\fB\%archive_error_string\fP()
+functions.
+.SH SEE ALSO
+.ad l
+\fBtar\fP(1),
+\fBlibarchive\fP(3),
+\fBarchive_write_finish_entry\fP(3),
+\fBarchive_write_set_options\fP(3),
+\fBcpio\fP(5),
+\fBmtree\fP(5),
+\fBtar\fP(5)

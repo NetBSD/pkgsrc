@@ -162,14 +162,4 @@
 #define	ARCHIVE_ERRNO_MISC (-1)
 #endif
 
-/*
- * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
- * in limits.h. But it is not usable under ordinal condition.
- */
-#if !defined(PATH_MAX)
-#if defined(_SCO_DS)
-#define PATH_MAX	1024
-#endif
-#endif
-
 #endif /* !ARCHIVE_PLATFORM_H_INCLUDED */
