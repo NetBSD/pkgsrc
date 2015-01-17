@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2015/01/06 11:49:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.111 2015/01/17 14:01:31 mef Exp $
 
 DISTNAME=	WindowMaker-0.95.6
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -6,7 +6,7 @@ CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://windowmaker.info/pub/source/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.windowmaker.info/
+HOMEPAGE=	http://www.windowmaker.org/
 COMMENT=	GNUStep-compliant NEXTSTEP(tm) window manager clone
 LICENSE=	gnu-gpl-v2
 
