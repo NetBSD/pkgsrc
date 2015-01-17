@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/12/12 22:55:24 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/17 14:05:10 szptvlfn Exp $
 
-DISTNAME=		cpphs-1.18.6
-PKGREVISION=		2
+DISTNAME=		cpphs-1.18.7
 CATEGORIES=		devel
 
 MAINTAINER=		esg@sdf.lonestar.org
-COMMENT=		Re-implementation of cpp in Haskell
+COMMENT=		Liberalised re-implementation of cpp, the C pre-processor
 LICENSE=		gnu-lgpl-v2.1
 
 INSTALLATION_DIRS+= ${PKGMANDIR}/man1
