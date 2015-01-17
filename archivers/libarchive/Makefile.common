@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2015/01/17 12:44:47 adam Exp $
+# used by archivers/bsdtar/Makefile
+# used by archivers/libarchive/Makefile
+
+DISTNAME=	libarchive-3.1.2
+CATEGORIES=	archivers
+MASTER_SITES=	http://www.libarchive.org/downloads/
+DISTFILES=	# empty
+
+MAINTAINER?=	joerg@NetBSD.org
+HOMEPAGE=	http://www.libarchive.org/
+LICENSE=	2-clause-bsd
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-expat
+CONFIGURE_ARGS+=	--without-lzo2
+CONFIGURE_ARGS+=	--without-nettle
+CONFIGURE_ARGS+=	--without-xml2
