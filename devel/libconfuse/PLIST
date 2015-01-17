@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/03 01:27:43 mef Exp $
-include/confuse.h
-lib/libconfuse.la
-lib/pkgconfig/libconfuse.pc
