@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/11/07 19:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/17 02:42:46 mef Exp $
 
 DISTNAME=	libftdi1-1.1
 PKGREVISION=	1
@@ -44,7 +44,7 @@ do-configure:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/libconfuse/buildlink3.mk"
+.include "../../devel/confuse/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
