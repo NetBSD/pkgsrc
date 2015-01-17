@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2026 2015/01/16 19:32:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2027 2015/01/17 02:50:11 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -406,7 +406,6 @@ SUBDIR+=	libbson
 SUBDIR+=	libcfg+
 SUBDIR+=	libcompizconfig
 SUBDIR+=	libconfig
-SUBDIR+=	libconfuse
 SUBDIR+=	libctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
