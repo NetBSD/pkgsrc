@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.303 2015/01/17 17:53:38 alnsn Exp $
+$NetBSD: CHANGES-2015,v 1.304 2015/01/17 18:43:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -371,3 +371,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/rspamd to 0.8.0 [wiedi 2015-01-17]
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.16 [wiedi 2015-01-17]
 	Added lang/lua53 version 5.3.0 [alnsn 2015-01-17]
+	Updated security/pcsc-lite to 1.8.12nb2 [wiz 2015-01-17]
