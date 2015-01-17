@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/01/06 14:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/17 00:32:31 wiz Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
 			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
@@ -118,7 +118,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/musepack/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
