@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/11/13 16:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/17 12:33:14 prlw1 Exp $
 
-DISTNAME=	get_iplayer-2.90
+DISTNAME=	get_iplayer-2.91
 CATEGORIES=	net multimedia
 MASTER_SITES=	ftp://ftp.infradead.org/pub/get_iplayer/
 
