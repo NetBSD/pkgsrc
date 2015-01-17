@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/05/18 13:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/17 09:10:59 wiz Exp $
 
-DISTNAME=		bitmap-1.0.7
+DISTNAME=		bitmap-1.0.8
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
