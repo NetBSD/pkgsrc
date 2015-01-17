@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/10/21 12:46:25 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/17 18:53:48 wiedi Exp $
 
-VERSION=	0.13.0
+VERSION=	0.14.0
 DISTNAME=	v${VERSION}
 PKGNAME=	znapzend-${VERSION}
 CATEGORIES=	sysutils
