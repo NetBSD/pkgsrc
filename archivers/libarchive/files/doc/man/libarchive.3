@@ -1,20 +1,20 @@
-.TH LIBARCHIVE 3 "August 19, 2006" ""
+.TH LIBARCHIVE 3 "March 18, 2012" ""
 .SH NAME
 .ad l
 \fB\%libarchive\fP
 \- functions for reading and writing streaming archives
-.SH LIBRARY
-.ad l
-Lb libarchive
 .SH OVERVIEW
 .ad l
 The
 \fB\%libarchive\fP
 library provides a flexible interface for reading and writing
-streaming archive files such as tar and cpio.
+archives in various formats such as tar and cpio.
+\fB\%libarchive\fP
+also supports reading and writing archives compressed using
+various compression filters such as gzip and bzip2.
 The library is inherently stream-oriented; readers serially iterate through
 the archive, writers serially add things to the archive.
-In particular, note that there is no built-in support for
+In particular, note that there is currently no built-in support for
 random access nor for in-place modification.
 .PP
 When reading an archive, the library automatically detects the
@@ -36,16 +36,35 @@ GNU-format tar archives,
 .IP \(bu
 most common cpio archive formats,
 .IP \(bu
-ISO9660 CD images (with or without RockRidge extensions),
+ISO9660 CD images (including RockRidge and Joliet extensions),
 .IP \(bu
-Zip archives.
+Zip archives,
+.IP \(bu
+ar archives (including GNU/SysV and BSD extensions),
+.IP \(bu
+Microsoft CAB archives,
+.IP \(bu
+LHA archives,
+.IP \(bu
+mtree file tree descriptions,
+.IP \(bu
+RAR archives,
+.IP \(bu
+XAR archives.
 .RE
 The library automatically detects archives compressed with
 \fBgzip\fP(1),
 \fBbzip2\fP(1),
+\fBxz\fP(1),
+\fBlzip\fP(1),
 or
 \fBcompress\fP(1)
 and decompresses them transparently.
+It can similarly detect and decode archives processed with
+\fBuuencode\fP(1)
+or which have an
+\fBrpm\fP(1)
+header.
 .PP
 When writing an archive, you can specify the compression
 to be used and the format to use.
@@ -62,7 +81,19 @@ archives,
 .IP \(bu
 POSIX octet-oriented cpio archives,
 .IP \(bu
-two different variants of shar archives.
+Zip archive,
+.IP \(bu
+two different variants of shar archives,
+.IP \(bu
+ISO9660 CD images,
+.IP \(bu
+7-Zip archives,
+.IP \(bu
+ar archives,
+.IP \(bu
+mtree file tree descriptions,
+.IP \(bu
+XAR archives.
 .RE
 Pax interchange format is an extension of the tar archive format that
 eliminates essentially all of the limitations of historic tar formats
@@ -88,131 +119,48 @@ More detailed information can be found in the individual manual
 pages for each API or utility function.
 .SH READING AN ARCHIVE
 .ad l
-To read an archive, you must first obtain an initialized
-Tn struct archive
-object from
-\fB\%archive_read_new\fP().
-You can then modify this object for the desired operations with the
-various
-\fB\%archive_read_set_XXX\fP()
-and
-\fB\%archive_read_support_XXX\fP()
-functions.
-In particular, you will need to invoke appropriate
-\fB\%archive_read_support_XXX\fP()
-functions to enable the corresponding compression and format
-support.
-Note that these latter functions perform two distinct operations:
-they cause the corresponding support code to be linked into your
-program, and they enable the corresponding auto-detect code.
-Unless you have specific constraints, you will generally want
-to invoke
-\fB\%archive_read_support_compression_all\fP()
-and
-\fB\%archive_read_support_format_all\fP()
-to enable auto-detect for all formats and compression types
-currently supported by the library.
-.PP
-Once you have prepared the
-Tn struct archive
-object, you call
-\fB\%archive_read_open\fP()
-to actually open the archive and prepare it for reading.
-There are several variants of this function;
-the most basic expects you to provide pointers to several
-functions that can provide blocks of bytes from the archive.
-There are convenience forms that allow you to
-specify a filename, file descriptor,
-\fIFILE *\fP
-object, or a block of memory from which to read the archive data.
-Note that the core library makes no assumptions about the
-size of the blocks read;
-callback functions are free to read whatever block size is
-most appropriate for the medium.
-.PP
-Each archive entry consists of a header followed by a certain
-amount of data.
-You can obtain the next header with
-\fB\%archive_read_next_header\fP(),
-which returns a pointer to an
-Tn struct archive_entry
-structure with information about the current archive element.
-If the entry is a regular file, then the header will be followed
-by the file data.
-You can use
-\fB\%archive_read_data\fP()
-(which works much like the
-\fBread\fP(2)
-system call)
-to read this data from the archive.
-You may prefer to use the higher-level
-\fB\%archive_read_data_skip\fP(),
-which reads and discards the data for this entry,
-\fB\%archive_read_data_to_buffer\fP(),
-which reads the data into an in-memory buffer,
-\fB\%archive_read_data_to_file\fP(),
-which copies the data to the provided file descriptor, or
-\fB\%archive_read_extract\fP(),
-which recreates the specified entry on disk and copies data
-from the archive.
-In particular, note that
-\fB\%archive_read_extract\fP()
-uses the
-Tn struct archive_entry
-structure that you provide it, which may differ from the
-entry just read from the archive.
-In particular, many applications will want to override the
-pathname, file permissions, or ownership.
-.PP
-Once you have finished reading data from the archive, you
-should call
-\fB\%archive_read_close\fP()
-to close the archive, then call
-\fB\%archive_read_finish\fP()
-to release all resources, including all memory allocated by the library.
-.PP
-The
-\fBarchive_read\fP(3)
-manual page provides more detailed calling information for this API.
+See
+\fBlibarchive_read\fP(3).
 .SH WRITING AN ARCHIVE
 .ad l
-You use a similar process to write an archive.
+See
+\fBlibarchive_write\fP(3).
+.SH WRITING ENTRIES TO DISK
+.ad l
 The
-\fB\%archive_write_new\fP()
-function creates an archive object useful for writing,
-the various
-\fB\%archive_write_set_XXX\fP()
-functions are used to set parameters for writing the archive, and
-\fB\%archive_write_open\fP()
-completes the setup and opens the archive for writing.
-.PP
-Individual archive entries are written in a three-step
-process:
-You first initialize a
-Tn struct archive_entry
-structure with information about the new entry.
-At a minimum, you should set the pathname of the
-entry and provide a
-\fIstruct\fP stat
-with a valid
-\fIst_mode\fP
-field, which specifies the type of object and
-\fIst_size\fP
-field, which specifies the size of the data portion of the object.
+\fBarchive_write_disk\fP(3)
+API allows you to write
+\fBarchive_entry\fP(3)
+objects to disk using the same API used by
+\fBarchive_write\fP(3).
 The
-\fB\%archive_write_header\fP()
-function actually writes the header data to the archive.
-You can then use
-\fB\%archive_write_data\fP()
-to write the actual data.
-.PP
-After all entries have been written, use the
-\fB\%archive_write_finish\fP()
-function to release all resources.
-.PP
+\fBarchive_write_disk\fP(3)
+API is used internally by
+\fB\%archive_read_extract\fP(\fI\%;\fP)
+using it directly can provide greater control over how entries
+get written to disk.
+This API also makes it possible to share code between
+archive-to-archive copy and archive-to-disk extraction
+operations.
+.SH READING ENTRIES FROM DISK
+.ad l
 The
-\fBarchive_write\fP(3)
-manual page provides more detailed calling information for this API.
+\fBarchive_read_disk\fP(3)
+supports for populating
+\fBarchive_entry\fP(3)
+objects from information in the filesystem.
+This includes the information accessible from the
+\fBstat\fP(2)
+system call as well as ACLs, extended attributes,
+and other metadata.
+The
+\fBarchive_read_disk\fP(3)
+API also supports iterating over directory trees,
+which allows directories of files to be read using
+an API compatible with
+the
+\fBarchive_read\fP(3)
+API.
 .SH DESCRIPTION
 .ad l
 Detailed descriptions of each function are provided by the
@@ -238,7 +186,9 @@ in arbitrary character sets that exceed
 \fIPATH_MAX\fP.
 .SH RETURN VALUES
 .ad l
-Most functions return zero on success, non-zero on error.
+Most functions return
+\fBARCHIVE_OK\fP
+(zero) on success, non-zero on error.
 The return value indicates the general severity of the error, ranging
 from
 \fBARCHIVE_WARN\fP,
@@ -296,7 +246,7 @@ FreeBSD 5.3.
 -nosplit
 The
 \fB\%libarchive\fP
-library was written by
+library was originally written by
 Tim Kientzle \%<kientzle@acm.org.>
 .SH BUGS
 .ad l
@@ -313,3 +263,9 @@ Tn struct archive_entry
 is supported by all formats.
 For example, cpio formats do not support nanosecond timestamps;
 old tar formats do not support large device numbers.
+.PP
+The ISO9660 reader cannot yet read all ISO9660 images;
+it should learn how to seek.
+.PP
+The AR writer requires the client program to use
+two passes, unlike all other libarchive writers.
