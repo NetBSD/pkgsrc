@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.281 2015/01/17 00:32:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.282 2015/01/17 02:52:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -348,3 +348,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 35.0 [ryoon 2015-01-16]
 	Added audio/speexdsp version 1.2rc3 [wiz 2015-01-17]
 	Updated multimedia/vlc21 to 2.1.5nb3 [wiz 2015-01-17]
+	Removed devel/libconfuse [mef 2015-01-17]
