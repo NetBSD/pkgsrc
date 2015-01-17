@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.224 2015/01/17 05:31:52 obache Exp $
+# $NetBSD: Makefile,v 1.225 2015/01/17 05:51:43 obache Exp $
 
 DISTNAME=		openssh-6.6p1
 PKGNAME=		openssh-6.6.1
 PKGREVISION=		4
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp3.usa.openbsd.org/pub/OpenBSD/OpenSSH/portable/ \
-			ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp.freenet.de/pub/ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp.jaist.ac.jp/pub/OpenBSD/OpenSSH/portable/
+MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openssh.com/
