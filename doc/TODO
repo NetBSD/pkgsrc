@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14030 2015/01/16 12:57:24 mef Exp $
+$NetBSD: TODO,v 1.14031 2015/01/17 12:24:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -335,8 +335,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DarwinStreamingServer-6.0.3
 	o ETL-0.2.1a
 	o GMT-5.1.1
-	o Mesa-10.4.1 [do not update since it removes support for DRI features needed by NetBSD]
-	o MesaLib-10.4.1 [do not update since it removes support for DRI features needed by NetBSD]
+	o Mesa-10.4.2 [do not update since it removes support for DRI features needed by NetBSD]
+	o MesaLib-10.4.2 [do not update since it removes support for DRI features needed by NetBSD]
 	o PAM-0.99.7.1
 	o R-3.1.2
 	o RBTools-0.6.3
@@ -392,6 +392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o autogen-5.18.4
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
+	o awesome-3.5.6
 	o baci-20040415
 	o balance-3.56
 	o bbcim-1.0
@@ -416,8 +417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
-	o calibre-2.2.0 [wip]
-	o calibre-2.16.0
+	o calibre-2.16.0 [wip]
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -536,6 +536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07 [wip]
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
+	o filezilla-3.10.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o filerunner-14.06.18.10
@@ -575,7 +576,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcombust-0.1.55
 	o gcompris-14.05
 	o gdb-7.6 [wip]
-	o gdb-7.8.1
+	o gdb-7.8.2
 	o gdeskcal-1.01
 	o gdl-3.14.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -597,7 +598,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.4.1
+	o glu-10.4.2
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.14.2
@@ -772,6 +773,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
 	o lsh-2.1
+	o lua-5.3
 	o lwm-1.2.3
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
@@ -788,6 +790,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbuf-20141227
 	o mc-4.8.13
 	o mcsim-5.5.0
+	o mediainfo-0.7.72
 	o mednafen-0.9.36.5
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -956,7 +959,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o radiance-4.1
 	o rails-4.1.5
 	o rainbowcrack-1.5
-	o raine-0.64
+	o raine-0.64.2
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdesktop-1.8.2
@@ -1124,6 +1127,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webkit-gtk-2.6.4
 	o webmin-1.690
 	o websvn-2.3.2
+	o weechat-1.1
 	o windowlab-1.40
 	o wine-1.7.30
 	o wine-devel-1.7.34
