@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/01/03 12:35:06 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/01/17 16:02:53 prlw1 Exp $
 
-SHA1 (clutter-gst-2.0.8.tar.xz) = b692ff83e0484d87b55fc3ac6e420c83a7504a95
-RMD160 (clutter-gst-2.0.8.tar.xz) = 8618558439f0880efb09b27744a6bf5c0d2a2e1a
-Size (clutter-gst-2.0.8.tar.xz) = 355796 bytes
+SHA1 (clutter-gst-2.0.12.tar.xz) = da6249c6ce686ba74e459402774831f19672379f
+RMD160 (clutter-gst-2.0.12.tar.xz) = b830af07dbd725753f72444adbd14759a8e7ad21
+Size (clutter-gst-2.0.12.tar.xz) = 356164 bytes
