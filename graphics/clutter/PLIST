@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/01/03 12:34:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/01/17 15:19:04 prlw1 Exp $
 include/clutter-1.0/cally/cally-actor.h
 include/clutter-1.0/cally/cally-clone.h
 include/clutter-1.0/cally/cally-factory.h
@@ -84,8 +84,8 @@ include/clutter-1.0/clutter/clutter-snap-constraint.h
 include/clutter-1.0/clutter/clutter-stage-manager.h
 include/clutter-1.0/clutter/clutter-stage.h
 include/clutter-1.0/clutter/clutter-swipe-action.h
-include/clutter-1.0/clutter/clutter-table-layout.h
 include/clutter-1.0/clutter/clutter-tap-action.h
+include/clutter-1.0/clutter/clutter-test-utils.h
 include/clutter-1.0/clutter/clutter-text-buffer.h
 include/clutter-1.0/clutter/clutter-text.h
 include/clutter-1.0/clutter/clutter-texture.h
@@ -127,6 +127,7 @@ include/clutter-1.0/clutter/deprecated/clutter-shader.h
 include/clutter-1.0/clutter/deprecated/clutter-stage-manager.h
 include/clutter-1.0/clutter/deprecated/clutter-stage.h
 include/clutter-1.0/clutter/deprecated/clutter-state.h
+include/clutter-1.0/clutter/deprecated/clutter-table-layout.h
 include/clutter-1.0/clutter/deprecated/clutter-texture.h
 include/clutter-1.0/clutter/deprecated/clutter-timeline.h
 include/clutter-1.0/clutter/deprecated/clutter-timeout-pool.h
@@ -374,6 +375,7 @@ share/locale/el/LC_MESSAGES/clutter-1.0.mo
 share/locale/en_GB/LC_MESSAGES/clutter-1.0.mo
 share/locale/eo/LC_MESSAGES/clutter-1.0.mo
 share/locale/es/LC_MESSAGES/clutter-1.0.mo
+share/locale/eu/LC_MESSAGES/clutter-1.0.mo
 share/locale/fa/LC_MESSAGES/clutter-1.0.mo
 share/locale/fi/LC_MESSAGES/clutter-1.0.mo
 share/locale/fr/LC_MESSAGES/clutter-1.0.mo
@@ -386,6 +388,7 @@ share/locale/it/LC_MESSAGES/clutter-1.0.mo
 share/locale/ja/LC_MESSAGES/clutter-1.0.mo
 share/locale/km/LC_MESSAGES/clutter-1.0.mo
 share/locale/kn/LC_MESSAGES/clutter-1.0.mo
+share/locale/ko/LC_MESSAGES/clutter-1.0.mo
 share/locale/lt/LC_MESSAGES/clutter-1.0.mo
 share/locale/lv/LC_MESSAGES/clutter-1.0.mo
 share/locale/mk/LC_MESSAGES/clutter-1.0.mo
