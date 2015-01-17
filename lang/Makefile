@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2015/01/04 10:14:47 dholland Exp $
+# $NetBSD: Makefile,v 1.399 2015/01/17 17:52:17 alnsn Exp $
 #
 
 COMMENT=	Programming languages
@@ -108,6 +108,7 @@ SUBDIR+=	likepython
 #SUBDIR+=	lua		# only contains Makefile fragments
 SUBDIR+=	lua51
 SUBDIR+=	lua52
+SUBDIR+=	lua53
 SUBDIR+=	lush
 SUBDIR+=	maude
 SUBDIR+=	mawk
