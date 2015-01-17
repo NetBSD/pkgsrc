@@ -1,28 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/07 14:39:19 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/17 17:34:07 wiedi Exp $
 bin/rspamc
 bin/rspamc-${PKGVERSION}
 bin/rspamd
 bin/${PKGNAME}
-include/rspamd/librspamdclient.h
 lib/rspamd/librspamd-cdb.so
 lib/rspamd/librspamd-cdb.so.${PKGVERSION}
 lib/rspamd/librspamd-http-parser.so
 lib/rspamd/librspamd-http-parser.so.${PKGVERSION}
-lib/rspamd/librspamd-json.so
-lib/rspamd/librspamd-json.so.${PKGVERSION}
 lib/rspamd/librspamd-lua.so
 lib/rspamd/librspamd-lua.so.${PKGVERSION}
 lib/rspamd/librspamd-mime.so
 lib/rspamd/librspamd-mime.so.${PKGVERSION}
 lib/rspamd/librspamd-server.so
 lib/rspamd/librspamd-server.so.${PKGVERSION}
-lib/rspamd/librspamd-ucl.so
-lib/rspamd/librspamd-ucl.so.${PKGVERSION}
 lib/rspamd/librspamd-util.so
 lib/rspamd/librspamd-util.so.${PKGVERSION}
 lib/rspamd/librspamdclient.so
-lib/rspamd/librspamdclient.so.${PKGVERSION}
-lib/rspamd/librspamdclient_static.a
 man/man1/rspamc.1
 man/man8/rspamd.8
 share/examples/rspamd/2tld.inc
@@ -51,5 +44,15 @@ share/rspamd/lua/once_received.lua
 share/rspamd/lua/phishing.lua
 share/rspamd/lua/ratelimit.lua
 share/rspamd/lua/rbl.lua
+share/rspamd/lua/settings.lua
 share/rspamd/lua/trie.lua
-share/rspamd/lua/whitelist.lua
+share/rspamd/www/README.md
+share/rspamd/www/css/rspamd.css
+share/rspamd/www/img/asc.png
+share/rspamd/www/img/desc.png
+share/rspamd/www/img/spinner.gif
+share/rspamd/www/img/spinner.png
+share/rspamd/www/index.html
+share/rspamd/www/js/jquery.paginatetable.js
+share/rspamd/www/js/rspamd.js
+share/rspamd/www/plugins.txt
