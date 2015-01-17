@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.44 2014/10/07 16:47:14 adam Exp $
+# $NetBSD: Makefile,v 1.45 2015/01/17 04:47:17 obache Exp $
 
 DISTNAME=	PackageKit-0.4.0
 PKGREVISION=	33
 PKGNAME=	${DISTNAME:S/PackageKit/packagekit/}
 CATEGORIES=	pkgtools
-MASTER_SITES=	http://www.packagekit.org/releases/
+MASTER_SITES=	http://www.freedesktop.org/software/PackageKit/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.packagekit.org/
+HOMEPAGE=	http://www.freedesktop.org/software/PackageKit/
 COMMENT=	System activated daemon for managing software updates
 LICENSE=	gnu-gpl-v2
 
