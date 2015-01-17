@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/01/17 09:13:56 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/01/17 09:35:46 wiz Exp $
 
 SHA1 (gssdp-0.14.11.tar.xz) = e1cd94c7e33252aeccf5b534a7a32e47d7743e5a
 RMD160 (gssdp-0.14.11.tar.xz) = d7bbf3cf1ec31fc906b29896d0783020a47ce888
 Size (gssdp-0.14.11.tar.xz) = 291872 bytes
-SHA1 (patch-ab) = 16088d79afd534ec44b47f26ee30d3f9be126897
+SHA1 (patch-ab) = 4fa8df3bedce54cec439142bc4a9cbfd3e30652d
