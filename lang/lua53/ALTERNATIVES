@@ -1,0 +1,2 @@
+bin/lua @PREFIX@/bin/lua5.3
+bin/luac @PREFIX@/bin/luac5.3
