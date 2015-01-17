@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/01/17 15:34:21 wiedi Exp $
+
+SHA1 (1.1.tar.gz) = f9750733ac298837f519fcfedcbfec74f781bc68
+RMD160 (1.1.tar.gz) = e99e365e90e6ade83af2d6b842a71472252b98a6
+Size (1.1.tar.gz) = 2603 bytes
+SHA1 (patch-Makefile) = 6f56125fe38c5cc06d8b3928c88b2b4a0fd8bd0c
