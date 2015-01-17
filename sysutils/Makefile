@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2015/01/13 22:20:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.623 2015/01/17 15:36:02 wiedi Exp $
 #
 
 COMMENT=	System utilities
@@ -446,6 +446,7 @@ SUBDIR+=	salt
 SUBDIR+=	salt-docs
 SUBDIR+=	same
 SUBDIR+=	sarah
+SUBDIR+=	screenbrightness
 SUBDIR+=	screentest
 SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
