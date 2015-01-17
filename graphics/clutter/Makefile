@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2015/01/17 14:36:12 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.49 2015/01/17 15:19:04 prlw1 Exp $
 
-DISTNAME=	clutter-1.16.4
-PKGREVISION=	3
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter/1.16/}
+DISTNAME=	clutter-1.20.0
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,9 +29,9 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.37.3
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.30.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.10.0
+BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.12.0
 .include "../../graphics/cairo-gobject/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.15.9
+BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.17.5
 .include "../../graphics/cogl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.12.0
 .include "../../textproc/json-glib/buildlink3.mk"
