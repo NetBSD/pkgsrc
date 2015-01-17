@@ -11,17 +11,18 @@
 
 		<method_context><method_credential user='root'/></method_context>
 
-		<exec_method type="method" name="start" exec="@PREFIX@/bin/znapzend --daemonize --pidfile=/dev/null" timeout_seconds="170" />
-		<exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
+		<exec_method type="method" name="start"   exec="@PREFIX@/bin/znapzend --daemonize --pidfile=/dev/null" timeout_seconds="180" />
+		<exec_method type="method" name="stop"    exec=":kill" timeout_seconds="180" />
+		<exec_method type="method" name="refresh" exec=":kill -HUP" timeout_seconds="180" />
 
 		<stability value="Unstable" />
 
 		<template>
 			<common_name><loctext xml:lang="C">ZnapZend - ZFS Backup System</loctext></common_name>
 			<documentation>
-				<manpage title="znapzend" section="1" manpath="@PREFIX@/share/man" />
-				<manpage title="znapzendzetup" section="1" manpath="@PREFIX@/share/man" />
-				<manpage title="znapzendztatz" section="1" manpath="@PREFIX@/share/man" />
+				<manpage title="znapzend"      section="1" manpath="@PREFIX@/@PKGMANDIR@/" />
+				<manpage title="znapzendzetup" section="1" manpath="@PREFIX@/@PKGMANDIR@/" />
+				<manpage title="znapzendztatz" section="1" manpath="@PREFIX@/@PKGMANDIR@/" />
 			</documentation>
 		</template>
 	</service>
