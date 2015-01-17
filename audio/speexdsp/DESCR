@@ -1,0 +1,9 @@
+The Speex project aims to build an open-source, patent-free voice
+codec.  Unlike other codecs like MP3 and Ogg Vorbis, Speex is
+specially designed for compressing voice at low bitrates in the
+8-32 kbps/channel range.  Possible applications include Voice over
+IP (VoIP), internet audio streaming, archiving of speech data (e.g.
+voice mail), and audio books.  In some sense, it is meant to be
+complementary to the Ogg Vorbis codec.
+
+This package contains a DSP library to use with speex.
