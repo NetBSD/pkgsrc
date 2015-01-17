@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/17 00:16:12 wiz Exp $
+
+SHA1 (speexdsp-1.2rc3.tar.gz) = 818403a21ec428feb39fe58f6cb6836d595e639b
+RMD160 (speexdsp-1.2rc3.tar.gz) = 65b99919abd7d7bd139d50669afffc3823f06e6f
+Size (speexdsp-1.2rc3.tar.gz) = 901771 bytes
