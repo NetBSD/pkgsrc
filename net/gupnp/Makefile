@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2014/10/07 16:47:13 adam Exp $
+# $NetBSD: Makefile,v 1.36 2015/01/17 09:23:26 wiz Exp $
 
-DISTNAME=	gupnp-0.20.12
-PKGREVISION=	1
+DISTNAME=	gupnp-0.20.13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp/0.20/}
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +31,7 @@ pre-configure:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/application.mk"
+BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.48.0
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../net/gssdp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
