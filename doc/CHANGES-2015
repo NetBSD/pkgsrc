@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.285 2015/01/17 09:12:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.286 2015/01/17 09:13:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -351,3 +351,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed devel/libconfuse successor devel/confuse [mef 2015-01-17]
 	Updated x11/bitmap to 1.0.8 [wiz 2015-01-17]
 	Updated x11/iceauth to 1.0.7 [wiz 2015-01-17]
+	Updated fonts/mkfontscale to 1.1.2 [wiz 2015-01-17]
