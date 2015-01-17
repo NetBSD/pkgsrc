@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2014/11/07 19:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.50 2015/01/17 12:50:51 mef Exp $
 
 DISTNAME=	mlt-0.9.0
 PKGREVISION=	14
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.sourceforge.net/project/mlt/mlt/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mltframework.org/twiki/bin/view/MLT/
