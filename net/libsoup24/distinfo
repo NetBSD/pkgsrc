@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.36 2014/01/19 13:05:04 wiz Exp $
+$NetBSD: distinfo,v 1.37 2015/01/17 09:20:54 wiz Exp $
 
-SHA1 (libsoup-2.44.2.tar.xz) = d469abbeaffca9b157f50ce079662078e239d962
-RMD160 (libsoup-2.44.2.tar.xz) = 7c4da8251a72a4d687a1af74b5656433f980f35e
-Size (libsoup-2.44.2.tar.xz) = 748592 bytes
-SHA1 (patch-libsoup_soup-xmlrpc.c) = 4d718e7ac61d30361c7835114ee1ad6f31e12343
-SHA1 (patch-tests_coding-test.c) = 2b76cf778cf389d9c67abb2b5222656e7e4191fb
+SHA1 (libsoup-2.48.1.tar.xz) = cccb3e0ab4182bbe891d8ae3de504b8a848a3497
+RMD160 (libsoup-2.48.1.tar.xz) = 3267a44eddd7d1c2afda3f889b6d58ea1fc0977f
+Size (libsoup-2.48.1.tar.xz) = 1707612 bytes
