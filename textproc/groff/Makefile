@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/01/08 09:02:27 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2015/01/17 12:10:01 wiedi Exp $
 
 DISTNAME=	groff-1.22.3
 CATEGORIES=	textproc
@@ -49,7 +49,7 @@ CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-4.[6-9].*)
-CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .endif
 
 post-extract:
