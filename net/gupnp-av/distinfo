@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/06/10 13:41:29 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/01/17 09:25:20 wiz Exp $
 
-SHA1 (gupnp-av-0.12.6.tar.xz) = 8ea44b3b9bd1dcb2ad56d56943fc1cd235570d00
-RMD160 (gupnp-av-0.12.6.tar.xz) = db0484100eb65f397b59f94b17bf3f1c88ce3410
-Size (gupnp-av-0.12.6.tar.xz) = 348264 bytes
+SHA1 (gupnp-av-0.12.7.tar.xz) = 68f79ca7a22d85fa6f2ebfd9616bda68af31f1f5
+RMD160 (gupnp-av-0.12.7.tar.xz) = 982717083a5e8deff29aba973bad6475df398b74
+Size (gupnp-av-0.12.7.tar.xz) = 349292 bytes
