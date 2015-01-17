@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.293 2015/01/17 14:05:34 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.294 2015/01/17 14:29:13 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -361,3 +361,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/bsdtar to 3.1.2 [adam 2015-01-17]
 	Updated devel/cmake to 3.1.0 [adam 2015-01-17]
 	Updated devel/hs-cpphs to 1.18.7 [szptvlfn 2015-01-17]
+	Updated graphics/cogl to 1.18.2nb1 [prlw1 2015-01-17]
