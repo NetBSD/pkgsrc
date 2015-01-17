@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2014/02/04 00:11:43 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2015/01/17 14:48:56 bsiegert Exp $
 
---- config.h.orig	2002-02-11 19:31:49.000000000 +0000
-+++ config.h
-@@ -41,7 +41,7 @@
+--- config.h.orig	2007-01-30 04:45:09.000000000 +0100
++++ config.h	2014-12-13 18:30:51.000000000 +0100
+@@ -39,7 +39,7 @@
  /*
    Tcl/Tk Version numbers to use.
  */
@@ -11,23 +11,23 @@ $NetBSD: patch-aa,v 1.4 2014/02/04 00:11:43 joerg Exp $
  
  /*
    Japanese Tcl/Tk Version numbers to use.
-@@ -54,13 +54,13 @@
+@@ -52,13 +52,13 @@
    double quotes and should be all one one line.  This list is used to
    find X11, tcl and tk.
  */
--#define TKGATE_INCDIRS		"/usr/X11R6/include /usr/X11/include /usr/local/include /usr/openwin/include /usr/X/include /usr/include"
+-#define TKGATE_INCDIRS		"/usr/X11R6/include /usr/X11/include /pkgs/include /usr/local/include /usr/openwin/include /usr/X/include /usr/include /sw/include"
 +#define TKGATE_INCDIRS		"@X11BASE@/include @LOCALBASE@/include"
  
  /*
    List of directories to search for tcl library.  The list must be in 
    double quotes and should be all one one line.
  */
--#define TKGATE_LIBDIRS		"/usr/X11R6/lib /usr/X11/lib /usr/local/lib /usr/lib"
+-#define TKGATE_LIBDIRS		"/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib"
 +#define TKGATE_LIBDIRS		"@X11BASE@/lib @LOCALBASE@/lib"
  
  /*
    Required libraries.  TkGate will not compile unless these libraries are found.
-@@ -80,19 +80,19 @@
+@@ -79,19 +79,19 @@
    version number to this path.  You can override the default by
    uncommenting the defintion of TKGATE_HOMEDIR below.
   */
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.4 2014/02/04 00:11:43 joerg Exp $
  
  /*
    Digital circuit editor and simulator.
-@@ -102,7 +102,7 @@
+@@ -101,7 +101,7 @@
  /*
    URL for local documentation
   */
