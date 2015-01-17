@@ -1,0 +1,88 @@
+.TH ARCHIVE_WRITE_FORMAT 3 "February 2, 2012" ""
+.SH NAME
+.ad l
+\fB\%archive_write_set_format_cpio\fP,
+\fB\%archive_write_set_format_pax\fP,
+\fB\%archive_write_set_format_pax_restricted\fP,
+\fB\%archive_write_set_format_shar\fP,
+\fB\%archive_write_set_format_shar_dump\fP,
+\fB\%archive_write_set_format_ustar\fP
+\- functions for creating archives
+.SH LIBRARY
+.ad l
+Streaming Archive Library (libarchive, -larchive)
+.SH SYNOPSIS
+.ad l
+\fB#include <archive.h>\fP
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_cpio\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_pax\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_pax_restricted\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_shar\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_shar_dump\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_ustar\fP(\fI\%struct\ archive\ *\fP);
+.SH DESCRIPTION
+.ad l
+These functions set the format that will be used for the archive.
+.PP
+The library can write
+POSIX octet-oriented cpio format archives,
+POSIX-standard
+``pax interchange''
+format archives,
+traditional
+``shar''
+archives,
+enhanced
+``dump''
+shar archives that store a variety of file attributes and handle binary files,
+and
+POSIX-standard
+``ustar''
+archives.
+The pax interchange format is a backwards-compatible tar format that
+adds key/value attributes to each entry and supports arbitrary
+filenames, linknames, uids, sizes, etc.
+``Restricted pax interchange format''
+is the library default; this is the same as pax format, but suppresses
+the pax extended header for most normal files.
+In most cases, this will result in ordinary ustar archives.
+.SH RETURN VALUES
+.ad l
+These functions return
+\fBARCHIVE_OK\fP
+on success, or
+\fBARCHIVE_FATAL\fP.
+.SH ERRORS
+.ad l
+Detailed error codes and textual descriptions are available from the
+\fB\%archive_errno\fP()
+and
+\fB\%archive_error_string\fP()
+functions.
+.SH SEE ALSO
+.ad l
+\fBtar\fP(1),
+\fBlibarchive\fP(3),
+\fBarchive_write\fP(3),
+\fBarchive_write_set_options\fP(3),
+\fBcpio\fP(5),
+\fBmtree\fP(5),
+\fBtar\fP(5)
