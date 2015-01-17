@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.299 2015/01/17 15:55:38 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.300 2015/01/17 16:03:38 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -367,3 +367,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/unrealircd to 3.2.10.4 [bsiegert 2015-01-17]
 	Added sysutils/screenbrightness version 1.1 [wiedi 2015-01-17]
 	Updated graphics/clutter-gtk to 1.6.0 [prlw1 2015-01-17]
+	Updated multimedia/clutter-gst to 2.0.12 [prlw1 2015-01-17]
