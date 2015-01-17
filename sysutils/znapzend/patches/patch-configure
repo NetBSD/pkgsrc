@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2015/01/17 18:53:48 wiedi Exp $
+
+install man pages to the correct location
+--- configure.orig	2014-12-16 22:48:06.000000000 +0000
++++ configure
+@@ -2542,11 +2542,11 @@ if test x$exec_prefix = xNONE; then
+     exec_prefix=$actual_prefix
+ fi
+ 
+-if test x$datarootdir=x'${prefix}/share'; then
++if test "x$datarootdir" = "x${prefix}/share"; then
+     datarootdir=$actual_prefix/share
+ fi
+ 
+-if test x$mandir=x'${datarootdir}/man'; then
++if test "x$mandir" = "x${datarootdir}/man"; then
+     mandir=$datarootdir/man
+ fi
+ 
