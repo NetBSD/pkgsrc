@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14031 2015/01/17 12:24:56 wiz Exp $
+$NetBSD: TODO,v 1.14032 2015/01/17 12:32:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -623,9 +623,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-panel-3.14.0
 	o gnome-pilot-2.32.1 [GNOME 2.32]
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
-	o gnome-power-manager-2.32.0 [GNOME 2.32, wants DeviceKit-power]
+	o gnome-power-manager-2.32.0 [GNOME 2.32, wants UPower]
 	o gnome-power-manager-3.4.0 [wants UPower]
-	o gnome-session-2.32.1 [GNOME 2.32, wants DeviceKit-power]
+	o gnome-session-2.32.1 [GNOME 2.32, wants UPower]
 	o gnome-settings-daemon-3.8.3
 	o gnome-subtitles-1.3
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
@@ -898,7 +898,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o plasma-5.0.2
 	o ploticus-examples-230
 	o pokerth-1.0.1
-	o policykit-0.104
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
@@ -1055,7 +1054,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.19
 	o sysinfo-4.2.2
-	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
+	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-2.101
 	o tacacs-4.0.4.14
