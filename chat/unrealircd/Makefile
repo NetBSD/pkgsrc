@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2014/11/02 05:35:39 obache Exp $
+# $NetBSD: Makefile,v 1.41 2015/01/17 15:24:22 bsiegert Exp $
 
-DISTNAME=	Unreal3.2.10.1
+DISTNAME=	Unreal3.2.10.4
 PKGNAME=	${DISTNAME:tl:S/l/lircd-/1}
 PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://unrealircd.com/downloads/
+MASTER_SITES=	http://unrealircd.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.unrealircd.com/
+HOMEPAGE=	http://www.unrealircd.org/
 COMMENT=	Advanced IRC server with IPv6 and SSL support
 LICENSE=	gnu-gpl-v2
 
@@ -104,6 +104,7 @@ INSTALLATION_DIRS=	sbin ${IRCD_DOCS} ${IRCD_EG} ${IRCD_SHARE}/aliases \
 INSTALL_UNSTRIPPED=YES
 .endif
 
+CFLAGS.Darwin+=	-DUSE_LOCALE
 CFLAGS.SunOS+=	-DUSE_LOCALE
 
 .include "../../net/libcares/buildlink3.mk"

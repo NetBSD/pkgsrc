@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2013/07/14 15:42:34 rodent Exp $
+$NetBSD: distinfo,v 1.15 2015/01/17 15:24:22 bsiegert Exp $
 
-SHA1 (Unreal3.2.10.1.tar.gz) = 09428d3d7724dfc80f5add94f33665bf825c7175
-RMD160 (Unreal3.2.10.1.tar.gz) = a8698c9028b4436743cb9fdeffdc552db21c9394
-Size (Unreal3.2.10.1.tar.gz) = 3135615 bytes
+SHA1 (Unreal3.2.10.4.tar.gz) = fa2b828b98afeab8677cb04aed9a634f7e43c386
+RMD160 (Unreal3.2.10.4.tar.gz) = 07c4854a59432dfa8a2ef16c5c9517e08b20cb6b
+Size (Unreal3.2.10.4.tar.gz) = 3540227 bytes
 SHA1 (patch-ab) = b66ae1990e25479abe9087a9308a2185692fcba2
 SHA1 (patch-ac) = 4c3e7219d03e93c2a3e8f735c350d919efdf8fbb
 SHA1 (patch-ae) = dc5f4d080d1027e229f9817d1d4f1e501124f7ba
