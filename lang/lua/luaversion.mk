@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.6 2014/12/07 05:10:43 obache Exp $
+# $NetBSD: luaversion.mk,v 1.7 2015/01/17 17:54:59 alnsn Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # LUA_VERSION_DEFAULT
 #	The preferred lua version to use.
 #
-#	Possible values: 51 52
+#	Possible values: 51 52 53
 #	Default: 52
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	is significant; those listed earlier are preferred over those
 #	listed later.
 #
-#	Possible values: 51 52
-#	Default: 52 51
+#	Possible values: 51 52 53
+#	Default: 52 53 51
 #
 # LUA_VERSIONS_INCOMPATIBLE
 #	The Lua versions that the package *cannot* build against.
 #
-#	Possible values: 51 52
+#	Possible values: 51 52 53
 #	Default: <empty>
 #
 # LUA_SELF_CONFLICT
@@ -80,7 +80,7 @@ BUILD_DEFS+=		LUA_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	LUA_PACKAGE
 
 LUA_VERSION_DEFAULT?=	52
-LUA_VERSIONS_ACCEPTED?=	52 51
+LUA_VERSIONS_ACCEPTED?=	52 53 51
 LUA_VERSIONS_INCOMPATIBLE?=# empty
 
 #
@@ -131,6 +131,12 @@ LUA_PACKAGE=		lua52
 LUA_PKGSRCDIR=		../../lang/lua52
 LUA_PKGPREFIX=		lua52
 LUA_BASEDEPENDS=	lua52>=5.2<5.3:${LUA_PKGSRCDIR}
+
+.elif ${_LUA_VERSION} == "53"
+LUA_PACKAGE=		lua53
+LUA_PKGSRCDIR=		../../lang/lua53
+LUA_PKGPREFIX=		lua53
+LUA_BASEDEPENDS=	lua53>=5.3<5.4:${LUA_PKGSRCDIR}
 
 .elif ${_LUA_VERSION} == "51"
 LUA_PACKAGE=		lua51
