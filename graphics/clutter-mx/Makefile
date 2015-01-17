@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2014/05/05 00:47:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2015/01/17 14:36:12 prlw1 Exp $
 #
 
 DISTNAME=	mx-1.0.4
 PKGNAME=	clutter-mx-1.0.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/mx/1.0/
 EXTRACT_SUFX=	.tar.bz2
