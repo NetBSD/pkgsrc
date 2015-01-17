@@ -1,4 +1,4 @@
-.TH archive_write_disk 3 "August 5, 2008" ""
+.TH ARCHIVE_WRITE_DISK 3 "February 2, 2012" ""
 .SH NAME
 .ad l
 \fB\%archive_write_disk_new\fP,
@@ -9,10 +9,15 @@
 \fB\%archive_write_disk_set_user_lookup\fP,
 \fB\%archive_write_header\fP,
 \fB\%archive_write_data\fP,
+\fB\%archive_write_data_block\fP,
 \fB\%archive_write_finish_entry\fP,
 \fB\%archive_write_close\fP,
 \fB\%archive_write_finish\fP
+\fB\%archive_write_free\fP
 \- functions for creating objects on disk
+.SH LIBRARY
+.ad l
+Streaming Archive Library (libarchive, -larchive)
 .SH SYNOPSIS
 .ad l
 \fB#include <archive.h>\fP
@@ -49,6 +54,10 @@
 .br
 \fB\%archive_write_data\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\fP);
 .br
+\fIssize_t\fP
+.br
+\fB\%archive_write_data_block\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\ size\fP, \fI\%int64_t\ offset\fP);
+.br
 \fIint\fP
 .br
 \fB\%archive_write_finish_entry\fP(\fI\%struct\ archive\ *\fP);
@@ -60,6 +69,10 @@
 \fIint\fP
 .br
 \fB\%archive_write_finish\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_free\fP(\fI\%struct\ archive\ *\fP);
 .SH DESCRIPTION
 .ad l
 These functions provide a complete API for creating objects on
@@ -225,6 +238,21 @@ objects.
 Write data corresponding to the header just written.
 Returns number of bytes written or -1 on error.
 .TP
+\fB\%archive_write_data_block\fP()
+Write data corresponding to the header just written.
+This is like
+\fB\%archive_write_data\fP()
+except that it performs a seek on the file being
+written to the specified offset before writing the data.
+This is useful when restoring sparse files from archive
+formats that support sparse files.
+Returns number of bytes written or -1 on error.
+(Note: This is currently not supported for
+Tn archive_write
+handles, only for
+Tn archive_write_disk
+handles.)
+.TP
 \fB\%archive_write_finish_entry\fP()
 Close out the entry just written.
 Ordinarily, clients never need to call this, as it
@@ -233,6 +261,9 @@ is called automatically by
 and
 \fB\%archive_write_close\fP()
 as needed.
+However, some file attributes are written to disk only
+after the file is closed, so this can be necessary
+if you need to work with the file on disk right away.
 .TP
 \fB\%archive_write_close\fP()
 Set any attributes that could not be set during the initial restore.
@@ -246,6 +277,10 @@ library maintains a list of all such deferred attributes and
 sets them when this function is invoked.
 .TP
 \fB\%archive_write_finish\fP()
+This is a deprecated synonym for
+\fB\%archive_write_free\fP().
+.TP
+\fB\%archive_write_free\fP()
 Invokes
 \fB\%archive_write_close\fP()
 if it was not invoked manually, then releases all resources.
@@ -270,12 +305,6 @@ for operations that might succeed if retried,
 for unusual conditions that do not prevent further operations, and
 \fBARCHIVE_FATAL\fP
 for serious errors that make remaining operations impossible.
-The
-\fB\%archive_errno\fP()
-and
-\fB\%archive_error_string\fP()
-functions can be used to retrieve an appropriate error code and a
-textual error message.
 .PP
 \fB\%archive_write_disk_new\fP()
 returns a pointer to a newly-allocated
@@ -283,12 +312,19 @@ Tn struct archive
 object.
 .PP
 \fB\%archive_write_data\fP()
-returns a count of the number of bytes actually written.
-On error, -1 is returned and the
+returns a count of the number of bytes actually written,
+or
+.RS 4
+-1
+.RE
+on error.
+.SH ERRORS
+.ad l
+Detailed error codes and textual descriptions are available from the
 \fB\%archive_errno\fP()
 and
 \fB\%archive_error_string\fP()
-functions will return appropriate values.
+functions.
 .SH SEE ALSO
 .ad l
 \fBarchive_read\fP(3),
@@ -350,7 +386,7 @@ In particular, the directory
 \fIaa\fP
 is created as well as the final object
 \fIbb\fP.
-In theory, this can be exploited to create an entire directory heirarchy
+In theory, this can be exploited to create an entire directory hierarchy
 with a single request.
 Of course, this does not work if the
 \fBARCHIVE_EXTRACT_NODOTDOT\fP
@@ -382,5 +418,5 @@ compact implementation when appropriate.
 .PP
 There should be a corresponding
 \fB\%archive_read_disk\fP
-interface that walks a directory heirarchy and returns archive
+interface that walks a directory hierarchy and returns archive
 entry objects.

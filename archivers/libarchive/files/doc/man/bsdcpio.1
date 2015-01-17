@@ -1,4 +1,4 @@
-.TH BSDCPIO 1 "December 21, 2007" ""
+.TH CPIO 1 "October 7, 2012" ""
 .SH NAME
 .ad l
 \fB\%cpio\fP
@@ -38,7 +38,7 @@ is a mode indicator from the following list:
 .TP
 \fB\-i\fP
 Input.
-Read an archive from standard input (unless overriden) and extract the
+Read an archive from standard input (unless overridden) and extract the
 contents to disk or (if the
 \fB\-t\fP
 option is specified)
@@ -49,7 +49,7 @@ one of the patterns will be extracted.
 \fB\-o\fP
 Output.
 Read a list of filenames from standard input and produce a new archive
-on standard output (unless overriden) containing the specified items.
+on standard output (unless overridden) containing the specified items.
 .TP
 \fB\-p\fP
 Pass-through.
@@ -63,7 +63,7 @@ Unless specifically stated otherwise, options are applicable in
 all operating modes.
 .RS 5
 .TP
-\fB\-0\fP
+\fB\-0\fP, \fB\-Fl\fP null
 Read filenames separated by NUL characters instead of newlines.
 This is necessary if any of the filenames being read might contain newlines.
 .TP
@@ -90,9 +90,9 @@ bytes.
 (o mode only)
 Use the old POSIX portable character format.
 Equivalent to
-\fB\--format\fP \fIodc\fP.
+\fB\-Fl\fP format \fIodc\fP.
 .TP
-\fB\-d\fP
+\fB\-d\fP, \fB\-Fl\fP make-directories
 (i and p modes)
 Create directories as necessary.
 .TP
@@ -102,7 +102,7 @@ Read list of file name patterns from
 \fIfile\fP
 to list and extract.
 .TP
-\fB\-F\fP \fIfile\fP
+\fB\-F\fP \fIfile\fP, \fB\-Fl\fP file \fIfile\fP
 Read archive from or write archive to
 \fIfile\fP.
 .TP
@@ -111,7 +111,7 @@ Read archive from or write archive to
 Ignore files that match
 \fIpattern\fP.
 .TP
-\fB\--format\fP \fIformat\fP
+\fB\-H\fP \fIformat\fP, \fB\-Fl\fP format \fIformat\fP
 (o mode only)
 Produce the output archive in the specified format.
 Supported formats include:
@@ -138,35 +138,31 @@ The POSIX.1 tar format.
 The default format is
 \fIodc\fP.
 See
-\fBlibarchive_formats\fP(5)
+\fBlibarchive-formats\fP(5)
 for more complete information about the
 formats currently supported by the underlying
 \fBlibarchive\fP(3)
 library.
 .TP
-\fB\-H\fP \fIformat\fP
-Synonym for
-\fB\--format\fP.
-.TP
-\fB\-h\fP, \fB\--help\fP
+\fB\-h\fP, \fB\-Fl\fP help
 Print usage information.
 .TP
 \fB\-I\fP \fIfile\fP
 Read archive from
 \fIfile\fP.
 .TP
-\fB\-i\fP
+\fB\-i\fP, \fB\-Fl\fP extract
 Input mode.
 See above for description.
 .TP
-\fB\--insecure\fP
+\fB\-Fl\fP insecure
 (i and p mode only)
 Disable security checks during extraction or copying.
 This allows extraction via symbolic links and path names containing
 Sq ..
 in the name.
 .TP
-\fB\-J\fP
+\fB\-J\fP, \fB\-Fl\fP xz
 (o mode only)
 Compress the file with xz-compatible compression before writing it.
 In input mode, this option is ignored; xz compression is recognized
@@ -182,23 +178,35 @@ All symbolic links will be followed.
 Normally, symbolic links are archived and copied as symbolic links.
 With this option, the target of the link will be archived or copied instead.
 .TP
-\fB\-l\fP
+\fB\-l\fP, \fB\-Fl\fP link
 (p mode only)
 Create links from the target directory to the original files,
 instead of copying.
 .TP
-\fB\-lzma\fP
+\fB\-Fl\fP lrzip
+(o mode only)
+Compress the resulting archive with
+\fBlrzip\fP(1).
+In input mode, this option is ignored.
+.TP
+\fB\-Fl\fP lzma
 (o mode only)
 Compress the file with lzma-compatible compression before writing it.
 In input mode, this option is ignored; lzma compression is recognized
 automatically on input.
 .TP
-\fB\-m\fP
+\fB\-Fl\fP lzop
+(o mode only)
+Compress the resulting archive with
+\fBlzop\fP(1).
+In input mode, this option is ignored.
+.TP
+\fB\-m\fP, \fB\-Fl\fP preserve-modification-time
 (i and p modes)
 Set file modification time on created files to match
 those in the source.
 .TP
-\fB\-n\fP
+\fB\-n\fP, \fB\-Fl\fP numeric-uid-gid
 (i mode, only with
 \fB\-t\fP)
 Display numeric uid and gid.
@@ -208,7 +216,7 @@ displays the user and group names when they are provided in the
 archive, or looks up the user and group names in the system
 password database.
 .TP
-\fB\-no-preserve-owner\fP
+\fB\-Fl\fP no-preserve-owner
 (i mode only)
 Do not attempt to restore file ownership.
 This is the default when run by non-root users.
@@ -217,23 +225,23 @@ This is the default when run by non-root users.
 Write archive to
 \fIfile\fP.
 .TP
-\fB\-o\fP
+\fB\-o\fP, \fB\-Fl\fP create
 Output mode.
 See above for description.
 .TP
-\fB\-p\fP
+\fB\-p\fP, \fB\-Fl\fP pass-through
 Pass-through mode.
 See above for description.
 .TP
-\fB\-preserve-owner\fP
+\fB\-Fl\fP preserve-owner
 (i mode only)
 Restore file ownership.
 This is the default when run by the root user.
 .TP
-\fB\--quiet\fP
+\fB\-Fl\fP quiet
 Suppress unnecessary messages.
 .TP
-\fB\-R\fP [user] [:] [group]
+\fB\-R\fP [user] [:] [group], \fB\-Fl\fP owner [user] [:] [group]
 Set the owner and/or group on files in the output.
 If group is specified with no user
 (for example,
@@ -263,23 +271,28 @@ If the line read is blank, the file is skipped.
 If the line contains a single period, the file is processed normally.
 Otherwise, the line is taken to be the new name of the file.
 .TP
-\fB\-t\fP
+\fB\-t\fP, \fB\-Fl\fP list
 (i mode only)
 List the contents of the archive to stdout;
 do not restore the contents to disk.
 .TP
-\fB\-u\fP
+\fB\-u\fP, \fB\-Fl\fP unconditional
 (i and p modes)
 Unconditionally overwrite existing files.
 Ordinarily, an older file will not overwrite a newer file on disk.
 .TP
-\fB\-v\fP
+\fB\-V\fP, \fB\-Fl\fP dot
+Print a dot to stderr for each file as it is processed.
+Superseded by
+\fB\-v\fP.
+.TP
+\fB\-v\fP, \fB\-Fl\fP verbose
 Print the name of each file to stderr as it is processed.
 With
 \fB\-t\fP,
 provide a detailed listing of each file.
 .TP
-\fB\--version\fP
+\fB\-Fl\fP version
 Print the program version information and exit.
 .TP
 \fB\-y\fP
@@ -300,6 +313,9 @@ Compress the archive with gzip-compatible compression before writing it.
 In input mode, this option is ignored;
 gzip compression is recognized automatically on input.
 .RE
+.SH EXIT STATUS
+.ad l
+The \fBcpio\fP utility exits 0 on success, and >0 if an error occurs.
 .SH ENVIRONMENT
 .ad l
 The following environment variables affect the execution of
@@ -318,14 +334,11 @@ See
 \fBenviron\fP(7)
 for more information.
 .RE
-.SH EXIT STATUS
-.ad l
-The \fBcpio\fP utility exits 0 on success, and >0 if an error occurs.
 .SH EXAMPLES
 .ad l
 The
 \fB\%cpio\fP
-command is traditionally used to copy file heirarchies in conjunction
+command is traditionally used to copy file hierarchies in conjunction
 with the
 \fBfind\fP(1)
 command.

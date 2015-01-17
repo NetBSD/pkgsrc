@@ -1,21 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2014/07/18 11:08:29 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.22 2015/01/17 12:44:51 adam Exp $
 
-DISTNAME=	bsdtar-2.8.4
-PKGREVISION=	1
-CATEGORIES=	archivers
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+.include "../../archivers/libarchive/Makefile.common"
 
-MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libarchive/
+PKGNAME=	${DISTNAME:S/libarchive/bsdtar/}
 COMMENT=	Fast multi-format tape archiver
 
-GNU_CONFIGURE=	yes
 # Explicitly do not depend on libtool as this can be used
 # as bootstrap dependency.
-#
 #USE_LIBTOOL=	yes
+CONFIGURE_ARGS+=	--enable-bsdtar=static
+CONFIGURE_ARGS+=	--disable-bsdcpio
+CONFIGURE_ARGS+=	--disable-shared
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
@@ -39,14 +34,11 @@ FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
 FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
 
-CONFIGURE_ARGS+=	--enable-bsdtar=static --disable-cpio \
-			--disable-shared --without-xml2 --without-expat
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OS_VARIANT} == "SCOOSR5"
-# SCO OpenServer 5.0.7/3.2 has windows.h, and configure expacts it for MS Windows.
+# SCO OpenServer 5.0.7/3.2 has windows.h, and configure expects it for MS Windows.
 CONFIGURE_ENV+=		ac_cv_header_windows_h=no
 .endif
 

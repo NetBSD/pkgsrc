@@ -1,17 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.7 2012/05/07 01:53:12 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2015/01/17 12:44:47 adam Exp $
 
 BUILDLINK_TREE+=	libarchive
 
 .if !defined(LIBARCHIVE_BUILDLINK3_MK)
 LIBARCHIVE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.2
-BUILDLINK_ABI_DEPENDS.libarchive+=	libarchive>=2.8.4nb1
+BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.1
+BUILDLINK_ABI_DEPENDS.libarchive+=	libarchive>=3.1.2
 BUILDLINK_PKGSRCDIR.libarchive?=	../../archivers/libarchive
 
-CHECK_BUILTIN.libarchive:=     yes
+CHECK_BUILTIN.libarchive:=	yes
 .include "../../archivers/libarchive/builtin.mk"
-CHECK_BUILTIN.libarchive:=     no
+CHECK_BUILTIN.libarchive:=	no
 
 # A built-in libarchive is always using built-in zlib, bzip2, and xz.
 .if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])

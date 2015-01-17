@@ -1,4 +1,4 @@
-# $LastChangedRevision: 8 $, $LastChangedDate: 2008-05-01 00:11:33 +0200 (Thu, 01 May 2008) $
+# $LastChangedRevision$, $LastChangedDate$
 Summary:        Library to create and read several different archive formats
 Summary(pl):    Biblioteka do tworzenia i odczytu ró¿nych formatów archiwów
 Name:           libarchive
@@ -127,13 +127,11 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.5  2010/07/09 12:02:42  joerg
-Merge libarchive-2.8.4
-
-Revision 1.4  2010/03/14 18:39:08  joerg
-Import libarchive-2.8.4:
-- Improved reliability of hash function detection
-- Fix issues on ancient FreeBSD, QNX, ancient NetBSD and Minix
+Revision 1.6  2015/01/17 12:44:48  adam
+Changes 3.1.2:
+This is a maintenance update to fix issues with the new RAR seeking
+feature. This new release also contains fixes for build failures when
+building libarchive using Visual Studio 2012 and MinGW.
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
@@ -148,7 +146,7 @@ Revision 1.6  2006/11/15 10:41:28  qboosh
 Revision 1.5  2006/11/08 22:22:25  twittner
 - up to 1.3.1
 - added BR: e2fsprogs-devel
-- added -CVE-2006-5680.patch agains entering in infinite
+- added -CVE-2006-5680.patch against entering an infinite
 loop in corrupt archives
 - added bsdtar package (bsdtar is included now in libarchive
 sources)
