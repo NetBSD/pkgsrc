@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.31 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.32 2015/01/17 14:48:56 bsiegert Exp $
 #
 
-DISTNAME=	tkgate-1.6i
-PKGREVISION=	9
+DISTNAME=	tkgate-1.8.7
 CATEGORIES=	cad
-MASTER_SITES=	ftp://gadoid.ices.cmu.edu/pub/tkgate/
+MASTER_SITES=	http://www.tkgate.org/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tkgate.org/
+LICENSE=	gnu-gpl-v2
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
 
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
