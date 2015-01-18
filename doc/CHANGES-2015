@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.318 2015/01/18 16:45:56 cheusov Exp $
+$NetBSD: CHANGES-2015,v 1.319 2015/01/18 17:00:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Log-Report-Optional to 1.01 [wen 2015-01-18]
 	Updated www/trac to 1.0.3 [gdt 2015-01-18]
 	Updated pkgtools/pkg_summary-utils to 0.65.2 [cheusov 2015-01-18]
+	Updated textproc/p5-Pod-Readme to 1.1.2nb1 [wiz 2015-01-18]
