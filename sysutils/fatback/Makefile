@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/18 19:53:27 wiedi Exp $
 
 DISTNAME=	fatback-1.3
 PKGREVISION=	1
@@ -14,5 +14,7 @@ INFO_FILES=	yes
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	lex
+
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -D__EXTENSIONS__
 
 .include "../../mk/bsd.pkg.mk"
