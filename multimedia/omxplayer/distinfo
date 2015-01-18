@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
+
+SHA1 (omxplayer-20150118.zip) = 95522df16247bd1ece40cbccac05f9e73f1c1d2a
+RMD160 (omxplayer-20150118.zip) = 0d3678c8ae71ed3ae507b7f0aaab2a482ee87691
+Size (omxplayer-20150118.zip) = 1265704 bytes
+SHA1 (patch-Makefile) = fe45c59a7cb1282c48f16bd56be9f64422fa4bf2
+SHA1 (patch-Makefile.include) = c78979b5b0e2d76f4e83f80bd6144d5b892eff34
+SHA1 (patch-OMXControl.cpp) = 55e3e73b29c1e8cf1999271a0fbf298e3e0eaa8e
+SHA1 (patch-OMXPlayerVideo.cpp) = e5cdfa000c45538848375dac8846ac05cddf346e
+SHA1 (patch-OMXVideo.h) = 6cb8d4f02b3ad43536d4c2d19219fde53acb236a
+SHA1 (patch-help.h) = 49e329a67791221b5ea40733086ae627802e22b2
+SHA1 (patch-linux_PlatformDefs.h) = 1918a2b87e33074a08cd36f3b932c8d6b3273457
+SHA1 (patch-omxplayer.cpp) = 6746573a66ccdf6791afe3e38f07330d8444dd0b
