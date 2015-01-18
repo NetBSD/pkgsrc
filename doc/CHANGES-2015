@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.321 2015/01/18 17:15:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.322 2015/01/18 17:19:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Readme to 1.1.2nb1 [wiz 2015-01-18]
 	Updated devel/afl to 1.13b [wiz 2015-01-18]
 	Updated print/cups-filters to 1.0.62 [wiz 2015-01-18]
+	Updated net/filezilla to 3.10.0 [wiz 2015-01-18]
