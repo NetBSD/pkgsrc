@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/07/03 13:43:50 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/01/18 10:02:55 wen Exp $
 
-SHA1 (Log-Any-0.15.tar.gz) = ddeaf87f93609a25cf3835d18c4d5b66338488e2
-RMD160 (Log-Any-0.15.tar.gz) = 4b8e06bffed01b3dc2fdc021b566a3b64f88371e
-Size (Log-Any-0.15.tar.gz) = 17537 bytes
+SHA1 (Log-Any-1.03.tar.gz) = cd917920b479ea19b4c89b42f6e5bdf9c3262ee5
+RMD160 (Log-Any-1.03.tar.gz) = 9fc3dd85f458f705aea2d12c7d33afd1680a9b2f
+Size (Log-Any-1.03.tar.gz) = 39709 bytes
