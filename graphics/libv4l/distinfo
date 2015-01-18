@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2013/06/24 15:57:21 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2015/01/18 05:57:25 dholland Exp $
 
 SHA1 (libv4l-0.4.3.tar.gz) = 2539aa6b04650b97c9fc7ba95721f1e362a73031
 RMD160 (libv4l-0.4.3.tar.gz) = 4f0435d955f15602ac093385607417fab71deb17
 Size (libv4l-0.4.3.tar.gz) = 83022 bytes
-SHA1 (patch-aa) = ab28c6400bbf8cf4e4e5ae6b258841574ec95ee3
+SHA1 (patch-aa) = 2e6e4d525be190a890c03ca3d00ba77f7e06d124
 SHA1 (patch-ab) = 5ade487d6d64d280f3fdae8afad99fbd0b6e5eda
 SHA1 (patch-ac) = 5457af836909f1c9f759c6a780daeb13968ec91f
 SHA1 (patch-ad) = 1d2568e49182efcbde47c14911b6a04e088b2578
