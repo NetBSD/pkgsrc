@@ -1,9 +1,9 @@
-$NetBSD: patch-data_Makefile,v 1.1 2014/08/22 21:54:39 wiz Exp $
+$NetBSD: patch-data_Makefile,v 1.2 2015/01/18 17:15:20 wiz Exp $
 
 Do not install banner files and testprint to avoid conflict with
 cups-filters, which installs them too.
 
-https://bugs.linuxfoundation.org/show_bug.cgi?id=1222
+https://cups.org/str.php?L4518+P-1+S-2+C0+I0+E0+Q
 
 --- data/Makefile.orig	2013-05-29 11:51:34.000000000 +0000
 +++ data/Makefile
