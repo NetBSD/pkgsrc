@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/21 09:59:35 he Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/18 16:03:10 wiedi Exp $
 
 DISTVERSION=	1.6.17
 PKGVERSION=	0.06
@@ -19,4 +19,5 @@ PERL5_PACKLIST=	auto/DNS/LDNS/.packlist
 
 .include "../../net/ldns/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
