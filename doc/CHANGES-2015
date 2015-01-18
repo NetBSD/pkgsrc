@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.308 2015/01/18 10:04:23 wen Exp $
+$NetBSD: CHANGES-2015,v 1.309 2015/01/18 10:10:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -376,3 +376,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/ruby-libarchive to 0.1.2 [adam 2015-01-17]
 	Updated math/isl to 0.14 [mef 2015-01-18]
 	Updated devel/p5-Log-Any to 1.03 [wen 2015-01-18]
+	Updated devel/p5-Log-Any-Adapter-Dispatch to 0.06nb6 [wen 2015-01-18]
