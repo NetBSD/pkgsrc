@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2014/12/13 11:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.231 2015/01/18 23:10:21 jmcneill Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -155,6 +155,7 @@ SUBDIR+=	mpv
 SUBDIR+=	ogle
 SUBDIR+=	ogle_gui
 SUBDIR+=	ogmtools
+SUBDIR+=	omxplayer
 SUBDIR+=	openquicktime
 SUBDIR+=	p5-GStreamer
 SUBDIR+=	p5-xmltv
