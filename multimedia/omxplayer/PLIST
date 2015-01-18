@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
+bin/omxplayer
+bin/omxplayer.bin
+share/docs/omxplayer/COPYING
+share/docs/omxplayer/README
