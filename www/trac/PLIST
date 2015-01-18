@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/10/27 17:13:33 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/01/18 13:32:00 gdt Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -829,6 +829,7 @@ share/examples/trac/htpasswd.py
 share/examples/trac/l10n_diff_index.py
 share/examples/trac/l10n_reset_en_GB.py
 share/examples/trac/l10n_revert_lineno_conflicts.py
+share/examples/trac/make_status.py
 share/examples/trac/migrateticketmodel.py
 share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-pre-commit-hook
