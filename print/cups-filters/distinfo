@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.10 2014/11/02 22:44:54 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/01/18 17:15:42 wiz Exp $
 
-SHA1 (cups-filters-1.0.61.tar.xz) = 42aed5c3388e71bbf3a91dd0e51e19041461188f
-RMD160 (cups-filters-1.0.61.tar.xz) = cd76e2858a822879636e44a8b1071a3c5ae05439
-Size (cups-filters-1.0.61.tar.xz) = 1327904 bytes
-SHA1 (patch-mime_cupsfilters.conf) = aa001064822da0950c87696ab4aa760be6d6b6b5
-SHA1 (patch-utils_cups-browsed.c) = 5c392d3f47c097884fe2bda5bf861438569d6d58
+SHA1 (cups-filters-1.0.62.tar.xz) = 93f6b6ddadc4124bb6008428ae4cc466d9c51e1c
+RMD160 (cups-filters-1.0.62.tar.xz) = 3d2b83539bffa65c0e2bf0606f883c1e202d54b2
+Size (cups-filters-1.0.62.tar.xz) = 1329164 bytes
