@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/03 13:38:08 adam Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/18 15:52:05 wiedi Exp $
 
 DISTNAME=	c_icap_modules-0.2.4
 PKGNAME=	${DISTNAME:S/_/-/g}
@@ -23,5 +23,6 @@ INSTALLATION_DIRS=	share/c-icap
 .include "options.mk"
 
 .include "../../www/c-icap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
