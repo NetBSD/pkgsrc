@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2015/01/08 16:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2015/01/18 17:29:01 wiz Exp $
 
-EGG_VERSION=		11.3.1
+EGG_VERSION=		12.0.1
 DISTNAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
 CATEGORIES=		devel python
@@ -16,7 +16,7 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=		EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
-REPLACE_PYTHON=		setuptools/command/easy_install.py
+REPLACE_PYTHON+=	setuptools/command/easy_install.py
 REPLACE_PYTHON+=	setuptools/tests/test_resources.py
 
 # upstream often forgets deleting files, and packages on Windows,
