@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.310 2015/01/18 10:21:19 wen Exp $
+$NetBSD: CHANGES-2015,v 1.311 2015/01/18 10:31:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Log-Any to 1.03 [wen 2015-01-18]
 	Updated devel/p5-Log-Any-Adapter-Dispatch to 0.06nb6 [wen 2015-01-18]
 	Updated devel/p5-Log-Any-Adapter-Log4perl to 0.07 [wen 2015-01-18]
+	Updated devel/p5-MooseX-Types-LogAny to 0.001001nb2 [wen 2015-01-18]
