@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/01/03 16:00:55 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/01/18 17:25:39 wiz Exp $
 
-SHA1 (cryptography-0.7.1.tar.gz) = 02f7d6b197e6424498e83587d59e3ba2ada6c379
-RMD160 (cryptography-0.7.1.tar.gz) = fc272e0f192573e74846bf81b45845d885d41c24
-Size (cryptography-0.7.1.tar.gz) = 247309 bytes
+SHA1 (cryptography-0.7.2.tar.gz) = 55fdb6258da9b0cc5a6ba4c3a3e123ca172d77cc
+RMD160 (cryptography-0.7.2.tar.gz) = e86780518727107e93494b5c915818442f9fe043
+Size (cryptography-0.7.2.tar.gz) = 247477 bytes
 SHA1 (patch-src_cryptography_hazmat_bindings_utils.py) = 1dbe88db3f1af4dd1b5836d9f353223d532d79bb
 SHA1 (patch-src_cryptography_hazmat_primitives_constant__time.py) = dae1d27d76589a0f1f4236e4b8a311bb44c43185
 SHA1 (patch-src_cryptography_hazmat_primitives_padding.py) = 994ee7d82ad59b9e3d28eaf4b192c17820d13323
