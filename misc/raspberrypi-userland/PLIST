@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2013/04/01 21:02:02 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/18 21:41:36 jmcneill Exp $
 bin/tvservice
 bin/vcgencmd
 bin/vchiq_test
@@ -68,6 +68,7 @@ include/interface/vcos/user_nodefs.h
 include/interface/vcos/vcos.h
 include/interface/vcos/vcos_assert.h
 include/interface/vcos/vcos_atomic_flags.h
+include/interface/vcos/vcos_attr.h
 include/interface/vcos/vcos_blockpool.h
 include/interface/vcos/vcos_build_info.h
 include/interface/vcos/vcos_cfg.h

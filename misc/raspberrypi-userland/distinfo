@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2014/03/31 08:49:42 skrll Exp $
+$NetBSD: distinfo,v 1.4 2015/01/18 21:41:36 jmcneill Exp $
 
 SHA1 (raspberrypi-userland-20140329.tar.gz) = c555cd10773d2017039f9c456092e364a7a9d682
 RMD160 (raspberrypi-userland-20140329.tar.gz) = ba02090e4d1dc0ca027f02635f45f912383d1d2d
 Size (raspberrypi-userland-20140329.tar.gz) = 32387040 bytes
+SHA1 (patch-interface_vcos_CMakeLists.txt) = f96c052af9c1d10f3f386efc1b5d0006559e4e67
 SHA1 (patch-interface_vmcs__host_linux_vcfiled_CMakeLists.txt) = 09eafe7b7d2a9743b7b5d6beca43026204ea451d
