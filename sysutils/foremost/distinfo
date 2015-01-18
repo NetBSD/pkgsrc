@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/06/28 10:18:58 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/01/18 22:50:42 wiedi Exp $
 
 SHA1 (foremost-1.4.tar.gz) = c6f9f28ae80a57388a8e8a6b958bc8c76797fad4
 RMD160 (foremost-1.4.tar.gz) = b2ea590ab78f96e74cb3842ad60dc4f1429244ef
 Size (foremost-1.4.tar.gz) = 49521 bytes
 SHA1 (patch-aa) = 39f986d19d80efe431d92af7884ae0a395ff9576
-SHA1 (patch-ab) = a5f6eb555818b333faebfc611fbabf8cef49f441
+SHA1 (patch-ab) = 208474631afc9822d753d17620adf6885168a1e0
 SHA1 (patch-ac) = 7832701bafa1336fda2b4e08ef38bca8ddf29f8d
