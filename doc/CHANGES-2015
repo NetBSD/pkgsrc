@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.331 2015/01/18 19:00:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.332 2015/01/18 23:11:37 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -399,3 +399,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-IO-Socket-SSL to 2.010 [wiz 2015-01-18]
 	Updated textproc/p5-YAML to 1.14 [wiz 2015-01-18]
 	Updated time/p5-DateTime-TimeZone to 1.84 [wiz 2015-01-18]
+	Added multimedia/omxplayer version 20150118 [jmcneill 2015-01-18]
