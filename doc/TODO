@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14037 2015/01/17 15:55:38 prlw1 Exp $
+$NetBSD: TODO,v 1.14038 2015/01/18 00:50:38 mef Exp $
 
 Suggested new packages
 ======================
@@ -487,7 +487,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o doxygen-1.8.9
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
-	o easytag-2.3.3
+	o easytag-2.2.5 [2.3.3 is development version]
 	o eboard-1.1.1
 	o eclipse-3.2.0
 	o ed-1.10
@@ -759,7 +759,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libvdpau-0.9
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
-	o libxml++-2.37.2
 	o libxmp-4.3.1
 	o licq-1.3.8
 	o liferea-1.10.9
