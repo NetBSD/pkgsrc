@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.329 2015/01/18 18:58:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.330 2015/01/18 18:59:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -397,3 +397,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-LibXSLT to 1.93 [wiz 2015-01-18]
 	Updated security/p5-Net-SSLeay to 1.67 [wiz 2015-01-18]
 	Updated security/p5-IO-Socket-SSL to 2.010 [wiz 2015-01-18]
+	Updated textproc/p5-YAML to 1.14 [wiz 2015-01-18]
