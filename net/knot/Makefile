@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/11/10 21:20:32 pettai Exp $
+# $NetBSD: Makefile,v 1.23 2015/01/18 16:00:02 wiedi Exp $
 
 DISTNAME=	knot-1.5.3
 CATEGORIES=	net
@@ -41,4 +41,5 @@ OWN_DIRS+=		${VARBASE}/knot
 
 .include "../../devel/userspace-rcu/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
