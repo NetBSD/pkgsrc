@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.38 2014/11/02 22:14:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.39 2015/01/18 18:52:01 wiz Exp $
 # used by www/webkit-gtk/Makefile
 
-DISTNAME=	webkitgtk-2.4.7
+DISTNAME=	webkitgtk-2.4.8
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
