@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.324 2015/01/18 17:29:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.325 2015/01/18 17:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -392,3 +392,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/filezilla to 3.10.0 [wiz 2015-01-18]
 	Updated security/py-cryptography to 0.7.2 [wiz 2015-01-18]
 	Updated devel/py-setuptools to 12.0.1 [wiz 2015-01-18]
+	Updated audio/musicpd to 0.19.8 [wiz 2015-01-18]
