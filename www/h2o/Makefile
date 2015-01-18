@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 12:50:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/18 15:56:07 wiedi Exp $
 
 DISTNAME=	h2o-0.9.0
 CATEGORIES=	www
@@ -13,4 +13,5 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../textproc/libyaml/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/01 12:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/18 15:53:17 wiedi Exp $
 
 DISTNAME=	cgit-0.10.2
 CATEGORIES=	www
@@ -46,4 +46,5 @@ do-install:
 		${DESTDIR}${CGIT_FILTERS}/syntax-highlighting.sh
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

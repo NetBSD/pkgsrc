@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/01/16 16:31:25 sborrill Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/18 15:58:40 wiedi Exp $
 #
 
 DISTNAME=		istgt-20141125
@@ -43,4 +43,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/istgt.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/istgt.1
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
