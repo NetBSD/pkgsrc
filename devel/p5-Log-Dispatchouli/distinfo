@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 14:10:51 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/01/18 12:37:43 wen Exp $
 
-SHA1 (Log-Dispatchouli-2.005.tar.gz) = fe944715c58864e8af10f66f9152e7ae3ec6799f
-RMD160 (Log-Dispatchouli-2.005.tar.gz) = d4f717e6ee29240335d836352010ff080d77bb98
-Size (Log-Dispatchouli-2.005.tar.gz) = 22449 bytes
+SHA1 (Log-Dispatchouli-2.012.tar.gz) = 35a4138173f971f5a7cccf9b76612bfb1a1f20f5
+RMD160 (Log-Dispatchouli-2.012.tar.gz) = 7e60c46b7ca22e2fa270888086cdd304559718d8
+Size (Log-Dispatchouli-2.012.tar.gz) = 29796 bytes
