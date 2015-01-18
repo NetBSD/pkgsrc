@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/10 14:04:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/18 15:53:58 wiedi Exp $
 
 DISTNAME=	chimera-1.20
 CATEGORIES=	net
@@ -18,4 +18,5 @@ AUTO_MKDIRS=		yes
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
