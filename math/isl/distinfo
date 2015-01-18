@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/04/25 09:11:49 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/01/18 09:20:21 mef Exp $
 
-SHA1 (isl-0.13.tar.bz2) = 3904274c84fb3068e4f59b6a6b0fe29e7a2b7010
-RMD160 (isl-0.13.tar.bz2) = 418eeadbc3d82cc49b1eab51242813820b7c82c8
-Size (isl-0.13.tar.bz2) = 1351299 bytes
+SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
+RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
+Size (isl-0.14.tar.bz2) = 1399896 bytes
 SHA1 (patch-Makefile.in) = 2fcae513a23e31d41a9a0c3e3d792f94c995f354
