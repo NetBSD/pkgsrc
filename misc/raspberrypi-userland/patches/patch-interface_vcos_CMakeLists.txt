@@ -1,0 +1,12 @@
+$NetBSD: patch-interface_vcos_CMakeLists.txt,v 1.1 2015/01/18 21:41:36 jmcneill Exp $
+
+--- interface/vcos/CMakeLists.txt.orig	2013-01-27 21:57:20.000000000 +0000
++++ interface/vcos/CMakeLists.txt
+@@ -6,6 +6,7 @@ include (${VIDEOCORE_ROOT}/makefiles/cma
+ set (HEADERS
+    vcos_assert.h
+    vcos_atomic_flags.h
++   vcos_attr.h
+    vcos_blockpool.h
+    vcos_cmd.h
+    vcos_dlfcn.h
