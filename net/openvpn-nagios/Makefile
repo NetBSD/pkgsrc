@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/07/20 17:43:29 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/18 16:01:37 wiedi Exp $
 
 .include "../../net/openvpn/Makefile.common"
 
@@ -27,4 +27,5 @@ MESSAGE_SUBST+=	OPENVPN_PLUGINSDIR=${PREFIX:Q}/${OPENVPN_PLUGINSDIR:Q}
 
 DEPENDS+=	openvpn>=2.3.0:../../net/openvpn
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
