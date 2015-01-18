@@ -1,9 +1,10 @@
-$NetBSD: patch-tracopt_versioncontrol_git_PyGIT.py,v 1.1 2014/03/11 17:41:44 gdt Exp $
+$NetBSD: patch-tracopt_versioncontrol_git_PyGIT.py,v 1.2 2015/01/18 14:46:09 gdt Exp $
 
 The git browser can fail if the git log process has already exited when
 trac tries to terminate it (resulting in a python exception).
 
-This patch should be applied upstream; Reported to trac-devel@ on 2014-03-11.
+This patch should be applied upstream; Reported to trac-devel@ on
+2014-03-11 and on 2015-01-18.
 
 --- tracopt/versioncontrol/git/PyGIT.py.orig	2013-02-01 00:47:41.000000000 +0000
 +++ tracopt/versioncontrol/git/PyGIT.py
