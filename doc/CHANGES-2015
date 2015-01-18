@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.313 2015/01/18 12:38:33 wen Exp $
+$NetBSD: CHANGES-2015,v 1.314 2015/01/18 12:52:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -381,3 +381,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooseX-Types-LogAny to 0.001001nb2 [wen 2015-01-18]
 	Updated devel/p5-Log-Dispatch to 2.44 [wen 2015-01-18]
 	Updated devel/p5-Log-Dispatchouli to 2.012 [wen 2015-01-18]
+	Updated devel/p5-Log-Handler to 0.84 [wen 2015-01-18]
