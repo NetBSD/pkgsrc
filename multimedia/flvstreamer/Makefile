@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/12 18:38:18 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/18 21:20:46 wiedi Exp $
 
 DISTNAME=	flvstreamer-2.1c1
 WRKSRC=		${WRKDIR}/flvstreamer
@@ -16,5 +16,7 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS+=	posix
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
