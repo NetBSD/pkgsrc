@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2014/09/06 12:07:20 wiz Exp $
+$NetBSD: distinfo,v 1.33 2015/01/18 18:56:43 wiz Exp $
 
-SHA1 (Net-SSLeay-1.66.tar.gz) = 04925fb5964c45504c6e2f13de82425a0f926431
-RMD160 (Net-SSLeay-1.66.tar.gz) = 7525d508fb3605f901eabf994879446c9c8e9829
-Size (Net-SSLeay-1.66.tar.gz) = 382503 bytes
+SHA1 (Net-SSLeay-1.67.tar.gz) = 35132cdd380a13836dd3e09b238dd888a5a18198
+RMD160 (Net-SSLeay-1.67.tar.gz) = 78f3552f294ef4cbb1da3eee7fbabecfd7bde557
+Size (Net-SSLeay-1.67.tar.gz) = 383532 bytes
