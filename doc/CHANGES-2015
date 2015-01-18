@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.306 2015/01/17 20:16:25 adam Exp $
+$NetBSD: CHANGES-2015,v 1.307 2015/01/18 09:20:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -374,3 +374,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/pcsc-lite to 1.8.12nb2 [wiz 2015-01-17]
 	Updated sysutils/znapzend to 0.14.0 [wiedi 2015-01-17]
 	Updated archivers/ruby-libarchive to 0.1.2 [adam 2015-01-17]
+	Updated math/isl to 0.14 [mef 2015-01-18]
