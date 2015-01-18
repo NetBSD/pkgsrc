@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.326 2015/01/18 18:52:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.327 2015/01/18 18:55:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -394,3 +394,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 12.0.1 [wiz 2015-01-18]
 	Updated audio/musicpd to 0.19.8 [wiz 2015-01-18]
 	Updated www/webkit-gtk to 2.4.8 [wiz 2015-01-18]
+	Updated textproc/p5-XML-LibXSLT to 1.93 [wiz 2015-01-18]
