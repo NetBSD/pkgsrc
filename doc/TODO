@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14042 2015/01/18 17:19:41 wiz Exp $
+$NetBSD: TODO,v 1.14043 2015/01/18 17:25:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -914,7 +914,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-biggles-1.6.6
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
-	o py-cryptography-0.7.2
 	o py-datapkg-0.9
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
