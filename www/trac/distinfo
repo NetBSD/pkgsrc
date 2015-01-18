@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2015/01/18 13:32:00 gdt Exp $
+$NetBSD: distinfo,v 1.36 2015/01/18 14:46:08 gdt Exp $
 
 SHA1 (Trac-1.0.3.tar.gz) = 260cde4211044c82bfdb47a433ff1b5b5c224515
 RMD160 (Trac-1.0.3.tar.gz) = 054de3aa8a397d85c3aacc049e8e4b90af5eddea
 Size (Trac-1.0.3.tar.gz) = 3579519 bytes
-SHA1 (patch-tracopt_versioncontrol_git_PyGIT.py) = e0ccdbe2c6a0dc83009460a214763d9d5eccdf04
+SHA1 (patch-tracopt_versioncontrol_git_PyGIT.py) = 71c82c57f4d47dee47beb5e270d7fb7c363d0cf6
