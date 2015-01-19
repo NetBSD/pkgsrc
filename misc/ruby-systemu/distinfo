@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/03 13:30:47 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/01/19 20:52:39 fhajny Exp $
 
-SHA1 (systemu-2.5.2.gem) = 9fe27b2c97e7d8444dc54dd55d9a0a9ae6e7e253
-RMD160 (systemu-2.5.2.gem) = 2bf234ce7665a55cc6ae6d10f1ef4306bdabc362
-Size (systemu-2.5.2.gem) = 12800 bytes
+SHA1 (systemu-2.6.4.gem) = c42bc93bd949e2dd8b50d8c82ce6903b7c882cca
+RMD160 (systemu-2.6.4.gem) = c2cd3903d51b07877e39a2c178da9142b06cab6e
+Size (systemu-2.6.4.gem) = 14336 bytes
