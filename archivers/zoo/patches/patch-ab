@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.6 2014/06/29 03:24:33 dholland Exp $
+$NetBSD: patch-ab,v 1.7 2015/01/19 00:40:35 wiedi Exp $
 
 - use standard headers
 - use standard macros for seeking
 - don't declare own lseek
 - use off_t
 - supply missing return value
+- on sunos ignore unsupported tm_gmtoff
 
 --- bsd.c.orig	1993-05-01 04:21:53.000000000 +0000
 +++ bsd.c
@@ -17,7 +18,7 @@ $NetBSD: patch-ab,v 1.6 2014/06/29 03:24:33 dholland Exp $
  #endif
  
  long ftell();
-@@ -74,26 +74,13 @@ long gettz()
+@@ -74,24 +74,15 @@ long gettz()
  #define SEC_IN_DAY	(24L * 60L * 60L)
  #define INV_VALUE		(SEC_IN_DAY + 1L)
  	static long retval = INV_VALUE;	     /* cache, init to impossible value */
@@ -39,12 +40,13 @@ $NetBSD: patch-ab,v 1.6 2014/06/29 03:24:33 dholland Exp $
 -#else
  	time(&lt);
  	tm = localtime(&lt);
++#if defined(__sun)
++	retval = 0;
++#else
  	retval = -tm->tm_gmtoff;
--#endif
+ #endif
  	return retval;
- }
- 
-@@ -103,6 +90,7 @@ long gettz()
+@@ -103,6 +94,7 @@ long gettz()
  /* Standard UNIX-specific file attribute routines */
  #include "nixmode.i"
  
@@ -52,7 +54,7 @@ $NetBSD: patch-ab,v 1.6 2014/06/29 03:24:33 dholland Exp $
  #ifndef SEEK_CUR
  # define  SEEK_CUR    1
  #endif
-@@ -110,10 +98,10 @@ long gettz()
+@@ -110,10 +102,10 @@ long gettz()
  /* Truncate a file. */
  int zootrunc(f) FILE *f;
  {
