@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.479 2015/01/16 17:13:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.480 2015/01/19 02:11:43 mef Exp $
 
 COMMENT=	Databases
 
@@ -20,7 +20,6 @@ SUBDIR+=	db4
 SUBDIR+=	db5
 SUBDIR+=	db6
 SUBDIR+=	dbfsak
-SUBDIR+=	dbh
 SUBDIR+=	deforaos-libdatabase
 SUBDIR+=	edb
 SUBDIR+=	elasticsearch
@@ -57,6 +56,7 @@ SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
 SUBDIR+=	libcassandra
+SUBDIR+=	libdbh2
 SUBDIR+=	libdbi
 SUBDIR+=	libdbi-driver-mysql
 SUBDIR+=	libdbi-driver-pgsql
