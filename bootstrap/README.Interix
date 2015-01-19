@@ -1,11 +1,6 @@
-$NetBSD: README.Interix,v 1.15 2012/01/11 01:15:17 riz Exp $
+$NetBSD: README.Interix,v 1.16 2015/01/19 00:12:43 obache Exp $
 
 Please read the general README file, and the Interix installation
 instructions in the pkgsrc Guide at:
 
     http://www.NetBSD.org/docs/pkgsrc/platforms.html#interix
-
-A prebuilt bootstrap kit and prebuilt binary packages for Interix 3.5 are
-available from the pkgsrc information page:
-
-    http://www.NetBSD.org/docs/software/packages.html
