@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.332 2015/01/18 23:11:37 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.333 2015/01/19 00:55:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -400,3 +400,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-YAML to 1.14 [wiz 2015-01-18]
 	Updated time/p5-DateTime-TimeZone to 1.84 [wiz 2015-01-18]
 	Added multimedia/omxplayer version 20150118 [jmcneill 2015-01-18]
+	Removed p5-Log-Any-Adapter successor p5-Log-Any [wen 2015-01-19]
