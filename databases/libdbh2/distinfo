@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/01/19 02:07:41 mef Exp $
+
+SHA1 (libdbh2-5.0.16.tar.gz) = a42712a900d8eb5dcb4d0da17092e3ea1f0e04cb
+RMD160 (libdbh2-5.0.16.tar.gz) = 350b9c41cb323020bc168bceedc3b46b1c4abdf2
+Size (libdbh2-5.0.16.tar.gz) = 530740 bytes
+SHA1 (patch-aa) = 806c02e2e0acf31b454f12e477dc429ab9e19465
