@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/19 20:32:18 fhajny Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/wmi-lite.rb
+${GEM_LIBDIR}/lib/wmi-lite/version.rb
+${GEM_LIBDIR}/lib/wmi-lite/wmi.rb
+${GEM_LIBDIR}/lib/wmi-lite/wmi_exception.rb
+${GEM_LIBDIR}/lib/wmi-lite/wmi_instance.rb
+${GEM_LIBDIR}/spec/functional/wmi_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/unit/wmi_spec.rb
+${GEM_LIBDIR}/wmi-lite.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
