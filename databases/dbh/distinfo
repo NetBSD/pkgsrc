@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2011/11/28 22:56:52 marino Exp $
-
-SHA1 (dbh-1.0.24.tar.gz) = 235e33979da23727c40070c8c9c215590e3e6898
-RMD160 (dbh-1.0.24.tar.gz) = e7ac0eeff608a73b9fc1c3a2b3185b07c3769ada
-Size (dbh-1.0.24.tar.gz) = 371463 bytes
-SHA1 (patch-aa) = 83fb4019c616290fd31547f92fb733b2fca5b05e
