@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2015/01/18 17:19:32 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2015/01/19 12:38:08 wiz Exp $
 
-VERSION=	3.10.0
+VERSION=	3.10.0.2
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
 CATEGORIES=	net x11
