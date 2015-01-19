@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/12/21 09:11:40 obache Exp $
+# $NetBSD: options.mk,v 1.8 2015/01/19 11:15:37 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnftp
 PKG_SUPPORTED_OPTIONS=		inet6 ssl
@@ -30,9 +30,9 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--with-ssl=yes
+CONFIGURE_ARGS+=	--enable-ssl
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .else
-CONFIGURE_ARGS+=	--with-ssl=no
+CONFIGURE_ARGS+=	--disable-ssl
 .endif
