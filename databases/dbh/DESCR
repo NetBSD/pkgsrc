@@ -1,7 +1,0 @@
-Disk based hashes is a method to create multidimensional binary trees on disk.
-This library permits the extension of database concept to a plethora of
-electronic data, such as graphic information. With the multidimensional binary
-tree it is possible to mathematically prove that access time to any
-particular record is minimized (using the concept of critical points from
-calculus), which provides the means to construct optimized databases for
-particular applications.
