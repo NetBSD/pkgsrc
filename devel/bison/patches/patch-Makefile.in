@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.3 2014/01/10 09:40:44 pho Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2015/01/19 15:40:03 pho Exp $
 
 As we don't have a separate directory for builddir, AM_CPPFLAGS gets
 resolved to "-I. -Ilib -I. -I./lib". This causes a trouble with some C
@@ -6,6 +6,8 @@ preprocessors because headers like lib/unistd.in.h use "#include_next"
 directive and they all result in an infinite recursion. I think the
 semantics of the combination of duplicate -I and "#include_next" is
 not defined but I'm not sure.
+
+NOTE: This patch has been sent to the upstream and will hopefully be merged at bison-3.0.4 with a slight modification.
 
 --- Makefile.in.orig	2013-12-05 13:58:54.000000000 +0000
 +++ Makefile.in
