@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.341 2015/01/19 15:46:40 adam Exp $
+$NetBSD: CHANGES-2015,v 1.342 2015/01/19 20:32:32 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -413,3 +413,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-gitk to 2.2.2 [adam 2015-01-19]
 	Updated devel/git-svn to 2.2.2 [adam 2015-01-19]
 	Updated www/gitweb to 2.2.2 [adam 2015-01-19]
+	Added devel/ruby-wmi-lite version 1.0.0 [fhajny 2015-01-19]
