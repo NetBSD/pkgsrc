@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/19 20:43:37 fhajny Exp $
+
+SHA1 (libyajl2-1.2.0.gem) = b60923cf401ba8b1885d499847df54cf38be501a
+RMD160 (libyajl2-1.2.0.gem) = 39c6e6d7c1c017e0ae9e282cb0c24f5820615b68
+Size (libyajl2-1.2.0.gem) = 129536 bytes
