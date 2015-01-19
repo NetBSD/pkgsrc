@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2015/01/19 16:10:23 wiedi Exp $
+
+help configure find blowfish headers from openssl
+--- configure.orig	2009-03-29 10:08:48.000000000 +0000
++++ configure
+@@ -5680,7 +5680,7 @@ echo "$as_me: checking for blowfish Libr
+     echo "$as_me:$LINENO: checking \"for blowfish.h\"" >&5
+ echo $ECHO_N "checking \"for blowfish.h\"... $ECHO_C" >&6
+     ac_hdr_found=no
+-    for p in $BLOWFISH_HDR_DIR /usr/include/ssl /usr/include/openssl /usr/include /usr/local/include /usr/local/ssl/include  /usr/include/crypto; do
++    for p in $BLOWFISH_HDR_DIR $SSL_HDR_DIR /usr/include/ssl /usr/include/openssl /usr/include /usr/local/include /usr/local/ssl/include  /usr/include/crypto; do
+ 	if test -n "$p"; then
+ 	  dir="$p"
+ 	else
