@@ -1,0 +1,4 @@
+The aim of Net::DHCP is to provide a set of classes to low level handle
+the DHCP protocol (rfc2131, rfc2132, etc.). With Net::DHCP you will be
+able to craft custom DHCP packages and have access to all the fields
+defined for the protocol.
