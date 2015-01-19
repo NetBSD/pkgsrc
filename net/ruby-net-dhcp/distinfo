@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/19 20:37:07 fhajny Exp $
+
+SHA1 (net-dhcp-1.3.2.gem) = ae4bac850422fb5343322460305d6b19b8eb8c2e
+RMD160 (net-dhcp-1.3.2.gem) = d349000914fcc2bafaee89f0340fb081d1995bbf
+Size (net-dhcp-1.3.2.gem) = 526336 bytes

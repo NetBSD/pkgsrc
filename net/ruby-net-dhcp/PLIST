@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/19 20:37:07 fhajny Exp $
+bin/net-dhcp
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.etd.original
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/net-dhcp
+${GEM_LIBDIR}/lib/net-dhcp.rb
+${GEM_LIBDIR}/lib/net-dhcp/version.rb
+${GEM_LIBDIR}/lib/net/dhcp.rb
+${GEM_LIBDIR}/lib/net/dhcp/constants.rb
+${GEM_LIBDIR}/lib/net/dhcp/core.rb
+${GEM_LIBDIR}/lib/net/dhcp/options.rb
+${GEM_LIBDIR}/lib/net/dhcp/oui.txt
+${GEM_LIBDIR}/net-dhcp.gemspec
+${GEM_LIBDIR}/spec/net-dhcp_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/test/test_dhcp.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
