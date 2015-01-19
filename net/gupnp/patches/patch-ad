@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.6 2015/01/17 09:42:01 wiz Exp $
+$NetBSD: patch-ad,v 1.7 2015/01/19 12:42:37 wiz Exp $
 
 Add support for BSD uuid library.
 https://bugzilla.gnome.org/show_bug.cgi?id=743072
 
---- libgupnp/gupnp-service.c.orig	2013-02-20 12:35:57.000000000 +0000
+--- libgupnp/gupnp-service.c.orig	2015-01-04 11:58:24.000000000 +0000
 +++ libgupnp/gupnp-service.c
-@@ -44,8 +44,12 @@
+@@ -46,8 +46,12 @@
  #ifdef G_OS_WIN32
  #include <rpc.h>
  #else
@@ -18,19 +18,20 @@ https://bugzilla.gnome.org/show_bug.cgi?id=743072
  
  #define SUBSCRIPTION_TIMEOUT 300 /* DLNA (7.2.22.1) enforced */
  
-@@ -1100,9 +1104,19 @@ generate_sid (void)
+@@ -1110,9 +1114,19 @@ generate_sid (void)
  #else
          uuid_t id;
          char out[39];
+-
 +#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
-+	char *myout;
-+#endif
- 
-+#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
-+	uuid_create(&id, 0);
-+	uuid_to_string(&id, &myout, 0);
-+	strncpy(out, myout, sizeof(out));
-+	free(myout);
++        {
++	        char *myout;
++
++	        uuid_create (&id, 0);
++	        uuid_to_string (&id, &myout, 0);
++	        strncpy (out, myout, sizeof(out));
++	        free (myout);
++        }
 +#else
          uuid_generate (id);
          uuid_unparse (id, out);
