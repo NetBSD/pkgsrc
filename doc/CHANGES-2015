@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.339 2015/01/19 12:38:49 obache Exp $
+$NetBSD: CHANGES-2015,v 1.340 2015/01/19 12:51:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -404,7 +404,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-version to 0.9911 [wen 2015-01-19]
 	Removed devel/dbh successor databases/libdbh2 [mef 2015-01-19]
 	Added databases/libdbh2 version 5.0.16 [mef 2015-01-19]
-	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
 	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
 	Updated net/filezilla to 3.10.0.2 [wiz 2015-01-19]
 	Updated devel/ruby-ole to 1.2.11.8 [obache 2015-01-19]
