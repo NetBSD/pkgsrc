@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.340 2015/01/19 12:51:56 obache Exp $
+$NetBSD: CHANGES-2015,v 1.341 2015/01/19 15:46:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -407,3 +407,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
 	Updated net/filezilla to 3.10.0.2 [wiz 2015-01-19]
 	Updated devel/ruby-ole to 1.2.11.8 [obache 2015-01-19]
+	Updated devel/git to 2.2.2 [adam 2015-01-19]
+	Updated devel/git-base to 2.2.2 [adam 2015-01-19]
+	Updated devel/git-docs to 2.2.2 [adam 2015-01-19]
+	Updated devel/git-gitk to 2.2.2 [adam 2015-01-19]
+	Updated devel/git-svn to 2.2.2 [adam 2015-01-19]
+	Updated www/gitweb to 2.2.2 [adam 2015-01-19]
