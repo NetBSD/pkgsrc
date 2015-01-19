@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.10 2014/08/10 09:08:21 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/01/19 23:39:27 wiz Exp $
 
-SHA1 (xf86-video-vmware-13.0.2.tar.bz2) = ec38323a260e50c00f033aeff486a3ae53f46997
-RMD160 (xf86-video-vmware-13.0.2.tar.bz2) = 5ee347b3da2cba26dac8f947696feb67974cb074
-Size (xf86-video-vmware-13.0.2.tar.bz2) = 438773 bytes
-SHA1 (patch-configure) = 3f9e74646610d9fda96a98016ea34541e1ebd1fe
-SHA1 (patch-configure.ac) = 11a4479bff29fb3aa465df93d42f9fc800b0f9fc
+SHA1 (xf86-video-vmware-13.1.0.tar.bz2) = 3af1d56a9a75b5f6e10a78db2ce155ec65498802
+RMD160 (xf86-video-vmware-13.1.0.tar.bz2) = 50b8cd42e6176672c2e047a21cfabd624bb39b9b
+Size (xf86-video-vmware-13.1.0.tar.bz2) = 459255 bytes
 SHA1 (patch-src_svga__modes.h) = 3f70fd34b6d202445f1a6713f9c552f0dd17f488
