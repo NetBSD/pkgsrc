@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/17 19:17:59 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2015/01/19 13:36:12 mef Exp $
 
 DISTNAME=		haskell-mode-1.44
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel editors
 MASTER_SITES=		http://www.haskell.org/haskell-mode/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.haskell.org/haskell-mode/
+HOMEPAGE=		https://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs
 COMMENT=		Haskell mode for Emacs
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/haskell-mode \
