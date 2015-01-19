@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/07/04 12:09:18 obache Exp $
+$NetBSD: distinfo,v 1.8 2015/01/19 12:38:41 obache Exp $
 
-SHA1 (ruby-ole-1.2.11.7.gem) = cf885cf21bfd32da6b7665f20543c3af9f2574e1
-RMD160 (ruby-ole-1.2.11.7.gem) = 46f1018d5c4347269b9a9d38c8d10ed604e48fe1
-Size (ruby-ole-1.2.11.7.gem) = 56832 bytes
+SHA1 (ruby-ole-1.2.11.8.gem) = a263abe76190bf63dc9a99791f7d6fd75dd4db7c
+RMD160 (ruby-ole-1.2.11.8.gem) = 3ef4953775b06e48a60bb8c9ba47dad9426e50c7
+Size (ruby-ole-1.2.11.8.gem) = 56832 bytes
