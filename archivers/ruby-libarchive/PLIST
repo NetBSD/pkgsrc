@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2015/01/17 20:00:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/01/19 13:26:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_EXTSDIR}/libarchive_ruby.${RUBY_DLEXT}
+${GEM_EXTSDIR}/rblibarchive.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING.libarchive
 ${GEM_LIBDIR}/LICENSE.libbzip2
 ${GEM_LIBDIR}/README.txt
