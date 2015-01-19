@@ -1,0 +1,2 @@
+wmi-lite is a lightweight Ruby gem utility library for accessing basic
+Windows Management Instrumentation (WMI) functionality on Windows.
