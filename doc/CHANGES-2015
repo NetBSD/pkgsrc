@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.349 2015/01/19 21:25:45 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.350 2015/01/19 23:39:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -421,3 +421,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-mixlib-shellout to 2.0.1 [fhajny 2015-01-19]
 	Updated misc/ruby-ohai to 8.0.1 [fhajny 2015-01-19]
 	Updated sysutils/ruby-chef-zero to 3.2.1 [fhajny 2015-01-19]
+	Updated x11/xf86-video-vmware to 13.1.0 [wiz 2015-01-19]
