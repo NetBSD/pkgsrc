@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/07/21 11:29:55 shattered Exp $
+$NetBSD: distinfo,v 1.10 2015/01/19 12:22:51 wiedi Exp $
 
 SHA1 (xaric-0.13.6.tar.gz) = ed10e395dea29fdf7bbc0d65389d789d7d4ca09b
 RMD160 (xaric-0.13.6.tar.gz) = a63aaa1fce98b195c23530ca4730ea5792ae1b52
 Size (xaric-0.13.6.tar.gz) = 479754 bytes
+SHA1 (patch-configure) = 93742a59e3c558d648957319ba79b1fba92d3f09
 SHA1 (patch-source_iflist.c) = 32647096ba2dcbb258676d70ccd147b508f931bd
 SHA1 (patch-source_ircterm.c) = 166b658d9fb41e69b0101bdeb0d524e71d745621
