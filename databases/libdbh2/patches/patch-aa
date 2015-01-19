@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2015/01/19 02:07:41 mef Exp $
+
+ERROR: [check-portability.awk] => Found test ... == ...:
+ERROR: [check-portability.awk] configure: if test "$ac_cv_lib_rt_shm_open" == yes ; then
+
+--- configure.orig	2015-01-15 23:33:54.000000000 +0900
++++ configure	2015-01-15 23:36:02.000000000 +0900
+@@ -15118,7 +15118,7 @@ _ACEOF
+ 
+ fi
+ 
+-if test "$ac_cv_lib_rt_shm_open" == yes ; then
++if test "$ac_cv_lib_rt_shm_open" = yes ; then
+ 	 RT_LIB="-lrt"
+ fi
+ 
