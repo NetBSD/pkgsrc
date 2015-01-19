@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.338 2015/01/19 12:38:16 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.339 2015/01/19 12:38:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -407,3 +407,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
 	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
 	Updated net/filezilla to 3.10.0.2 [wiz 2015-01-19]
+	Updated devel/ruby-ole to 1.2.11.8 [obache 2015-01-19]
