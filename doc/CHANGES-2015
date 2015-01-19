@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.337 2015/01/19 12:31:33 obache Exp $
+$NetBSD: CHANGES-2015,v 1.338 2015/01/19 12:38:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -406,3 +406,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/libdbh2 version 5.0.16 [mef 2015-01-19]
 	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
 	Updated devel/py-msgpack to 0.4.4 [obache 2015-01-19]
+	Updated net/filezilla to 3.10.0.2 [wiz 2015-01-19]
