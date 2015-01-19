@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2014/06/29 03:24:33 dholland Exp $
+$NetBSD: distinfo,v 1.14 2015/01/19 00:40:35 wiedi Exp $
 
 SHA1 (zoo-2.10pl1.tar.gz) = c02d96148ee57df01596d0c8d07a3e327b821600
 RMD160 (zoo-2.10pl1.tar.gz) = 971d388b8cb29def1e4e31011463563e91c3d700
 Size (zoo-2.10pl1.tar.gz) = 172096 bytes
 SHA1 (patch-aa) = 22faf3fdc38c7d75867327718d23db50fb6013d3
-SHA1 (patch-ab) = 205936660e84f17c9ec49830acd3b46e343268bd
+SHA1 (patch-ab) = 93bb90bd404f0ecf07bec0d54d3c837b9123eba3
 SHA1 (patch-ac) = e5c9e18461b86fbfba4526f685fb65a507bb6f97
 SHA1 (patch-ad) = d8992d565f48aab10521ecbd346d233a1e717790
 SHA1 (patch-ae) = d1e60cea71bb1c56e76a6ffc9923341664283a0c
