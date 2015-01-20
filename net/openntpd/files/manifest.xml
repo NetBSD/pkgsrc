@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled="false" />
+    <single_instance />
+    <dependency name='filesystem' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/system/filesystem/minimal' />
+    </dependency>
+    <dependency name='network' grouping='require_any' restart_on='error' type='service'>
+      <service_fmri value='svc:/network/service' />
+    </dependency>
+    <dependency name='name-services' grouping='optional_all' restart_on='refresh' type='service'>
+      <service_fmri value='svc:/milestone/name-services' />
+    </dependency>
+    <dependency name='system-log' grouping='optional_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/system-log' />
+    </dependency>
+    <dependency name='config-file' grouping='require_all' restart_on='refresh' type='path'>
+      <service_fmri value='file://@PKG_SYSCONFDIR@/ntpd.conf' />
+    </dependency>
+    <exec_method name='start' type='method' exec='@PREFIX@/sbin/ntpd -f @PKG_SYSCONFDIR@/ntpd.conf $(%{startup_set} == true &amp;&amp; echo -s)' timeout_seconds='60' />
+    <exec_method name='stop' type='method' exec=':kill' timeout_seconds='60' />
+    <property_group name='startd' type='framework'>
+      <propval name='ignore_error' type='astring' value='signal' />
+    </property_group>
+    <property_group name='application' type='application'>
+      <propval name='startup_set' type='boolean' value='true' />
+    </property_group>
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>OpenNTPD time server</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='ntpd' section='8' />
+        <doc_link name='openntpd.org' uri='http://www.openntpd.org/' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
