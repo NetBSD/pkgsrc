@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/10/09 19:14:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/20 14:24:35 jaapb Exp $
 
 
 DISTNAME=	type_conv-${VERS}
 VERS=			111.13.00
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/janestreet/type_conv/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
