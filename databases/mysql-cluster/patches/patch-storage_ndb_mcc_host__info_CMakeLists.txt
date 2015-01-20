@@ -1,0 +1,24 @@
+$NetBSD: patch-storage_ndb_mcc_host__info_CMakeLists.txt,v 1.1 2015/01/20 11:03:51 fhajny Exp $
+
+Use DEFAULT_MACHINE instead of CMAKE_SYSTEM_PROCESSOR, because the latter is unreliable
+on systems like SunOS where `uname -p` returns i386 regardless.
+--- storage/ndb/mcc/host_info/CMakeLists.txt.orig	2014-10-09 13:46:25.000000000 +0000
++++ storage/ndb/mcc/host_info/CMakeLists.txt
+@@ -80,7 +80,7 @@ include_directories(${CMAKE_CURRENT_BINA
+ 
+ if(DEFAULT_MYSQL_HOME)
+   MYSQL_ADD_EXECUTABLE(host_info host_info.c
+-    DESTINATION "${MCC_INSTALL_SUBDIR}/host_info/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}"
++    DESTINATION "${MCC_INSTALL_SUBDIR}/host_info/${CMAKE_SYSTEM_NAME}/${DEFAULT_MACHINE}"
+     COMPONENT ClusterTools)
+ else()
+   # If not building as part of Cluster we don't have the
+@@ -91,7 +91,7 @@ else()
+   # ... and install the old way
+   # "Install" binary for this host into source tree
+   install(TARGETS host_info
+-    DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/binaries/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
++    DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/binaries/${CMAKE_SYSTEM_NAME}/${DEFAULT_MACHINE}")
+ 
+   # Install all binaries in source tree into install dir/package
+   install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/binaries" 

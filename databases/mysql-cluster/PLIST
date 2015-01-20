@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/20 11:03:51 fhajny Exp $
 bin/innochecksum
 bin/mcc_config.py
 bin/memclient
@@ -5677,7 +5677,7 @@ share/mysql/mcc/frontend/js/mcc/util/tests/runTests.html
 share/mysql/mcc/frontend/js/mcc/util/tests/util.js
 share/mysql/mcc/frontend/testProtocol.html
 share/mysql/mcc/frontend/welcome.html
-share/mysql/mcc/host_info/NetBSD/${MACHINE_ARCH}/host_info
+share/mysql/mcc/host_info/${OPSYS}/${MACHINE_ARCH}/host_info
 share/mysql/mcc/post-install.py
 share/mysql/mcc/remote_clusterhost.py
 share/mysql/mcc/request_handler.py
