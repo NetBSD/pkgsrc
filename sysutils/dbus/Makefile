@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2015/01/05 23:25:20 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2015/01/20 23:45:35 wiz Exp $
 
 DISTNAME=	dbus-1.8.14
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -35,7 +36,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS_GROUPS=	enable disable with without
 
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+= --with-session-socket-dir=/tmp
+CONFIGURE_ARGS+=	--with-launchd-agent-dir=${PREFIX}/Library/LaunchAgents
+CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
 .endif
 
 CONFIGURE_ARGS.Linux=	abstract-sockets selinux
