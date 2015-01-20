@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.366 2015/01/20 11:35:00 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.367 2015/01/20 11:47:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -438,3 +438,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/ibus-array to 0.1.0 [obache 2015-01-20]
 	Updated textproc/ruby-htree to 0.8 [obache 2015-01-20]
 	Updated www/dansguardian to 2.12.0.3nb2 [prlw1 2015-01-20]
+	Updated www/ruby-httpclient to 2.6.0.1 [obache 2015-01-20]
