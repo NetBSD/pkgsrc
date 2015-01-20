@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.372 2015/01/20 16:03:38 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.373 2015/01/20 16:09:28 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -444,3 +444,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/pcre-ocaml to 7.1.5 [jaapb 2015-01-20]
 	Added devel/ocaml-reactiveData version 0.1 [jaapb 2015-01-20]
 	Updated textproc/ocaml-tyxml to 3.3.0nb1 [jaap1 2015-01-20]
+	Updated devel/js_of_ocaml to 2.5nb1 [jaapb 2015-01-20]
