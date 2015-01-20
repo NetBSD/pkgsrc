@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14048 2015/01/19 14:29:12 mef Exp $
+$NetBSD: TODO,v 1.14049 2015/01/20 09:38:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1134,7 +1134,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20141218
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.8.0
