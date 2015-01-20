@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2014/06/18 09:26:10 wiz Exp $
+# $NetBSD: options.mk,v 1.33 2015/01/20 23:49:52 wiz Exp $
 
 # Recommended package options for various setups:
 #
@@ -9,13 +9,17 @@
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
 PKG_SUPPORTED_OPTIONS=	ads cups fam ldap pam winbind
-PKG_SUGGESTED_OPTIONS=	ads ldap pam winbind
+PKG_SUGGESTED_OPTIONS=	ldap pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux OSF1 SunOS
 .if !empty(SAMBA_ACL_OPSYS:M${OPSYS})
 PKG_SUPPORTED_OPTIONS+=	acl
+.endif
+
+.if empty(MACHINE_PLATFORM:MDarwin-1[1-9].*)
+PKG_SUGGESTED_OPTIONS+=	ads
 .endif
 
 .include "../../mk/bsd.options.mk"
