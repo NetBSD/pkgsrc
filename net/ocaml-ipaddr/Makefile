@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/11/19 12:00:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/20 16:31:26 jaapb Exp $
 
-VERSION=	1.0.0
+VERSION=	2.5.0
 PKGNAME=	ocaml-ipaddr-${VERSION}
-DISTNAME=	v${VERSION}
+DISTNAME=	${VERSION}
 DIST_SUBDIR=	ocaml-ipaddr
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/mirage/ocaml-ipaddr/archive/
@@ -17,5 +17,6 @@ WRKSRC=		${WRKDIR}/ocaml-ipaddr-${VERSION}
 OCAML_USE_FINDLIB=	yes
 OCAML_USE_OASIS=	yes
 
+.include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
