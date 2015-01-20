@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.362 2015/01/20 10:52:59 obache Exp $
+$NetBSD: CHANGES-2015,v 1.363 2015/01/20 10:55:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -434,3 +434,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/openntpd to 5.7p2 [wiz 2015-01-20]
 	Updated graphics/py-nwdiag to 1.0.4 [obache 2015-01-20]
 	Updated graphics/py-seqdiag to 0.9.5 [obache 2015-01-20]
+	Updated graphics/ruby-rcairo to 1.14.1 [obache 2015-01-20]
