@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/11/27 13:38:15 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/20 15:22:53 jaapb Exp $
 
 DISTNAME=	react-1.2.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://erratique.ch/software/react/releases/
 EXTRACT_SUFX=	.tbz
