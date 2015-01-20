@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.374 2015/01/20 16:27:34 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.375 2015/01/20 16:31:42 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -446,3 +446,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ocaml-tyxml to 3.3.0nb1 [jaap1 2015-01-20]
 	Updated devel/js_of_ocaml to 2.5nb1 [jaapb 2015-01-20]
 	Added devel/ocaml-sexplib version 112.01.00 [jaapb 2015-01-20]
+	Updated net/ocaml-ipaddr to 2.5.0 [jaapb 2015-01-20]
