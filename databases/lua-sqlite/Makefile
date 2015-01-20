@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/19 22:27:43 alnsn Exp $
+# $NetBSD: Makefile,v 1.20 2015/01/20 19:56:54 alnsn Exp $
 #
 
 DISTNAME=	lsqlite_src
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 CFLAGS+=	-fPIC
 LIBS+=		-llua -lsqlite
 
-LUA_VERSIONS_INCOMPATIBLE=	52
+LUA_VERSIONS_INCOMPATIBLE=	52 53
 
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_DOCDIR} ${LUA_EXAMPLESDIR}
