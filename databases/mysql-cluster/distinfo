@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2015/01/20 11:03:51 fhajny Exp $
 
 SHA1 (mysql-cluster-gpl-7.3.7.tar.gz) = c0574d48d5ee94dcc8dbcfdcc89ae581df1cbaea
 RMD160 (mysql-cluster-gpl-7.3.7.tar.gz) = 93b62e00ea24bef90644df1daddead9b339e7e99
@@ -34,5 +34,6 @@ SHA1 (patch-storage_heap_CMakeLists.txt) = 0a1a5a7b5e83f14cec43bfa4782dd4bb7b629
 SHA1 (patch-storage_myisam_CMakeLists.txt) = 55897ae78208f78a396776d1082cb5f98631fff8
 SHA1 (patch-storage_myisammrg_CMakeLists.txt) = 0a56a16ccaff3fa9de996fec6ffc324af9855a4e
 SHA1 (patch-storage_ndb_mcc_frontend_dojo_dojox_mobile_build_build.sh) = 1aa09b34d5f9cef6fb244a2ca8d675a22f30a9a8
+SHA1 (patch-storage_ndb_mcc_host__info_CMakeLists.txt) = c21711c96387d0e9ddda9eff01691f7fbf08cab3
 SHA1 (patch-strings_decimal.c) = 069c9d930c735f74510702baa9bef38aec425903
 SHA1 (patch-vio_viossl.c) = 538c08e6ec85d02a7eeead2bb940c91c7f701321
