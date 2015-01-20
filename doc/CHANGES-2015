@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.358 2015/01/20 10:36:29 obache Exp $
+$NetBSD: CHANGES-2015,v 1.359 2015/01/20 10:44:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -430,3 +430,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/ruby-mp3info to 0.8.5 [obache 2015-01-20]
 	Updated net/gupnp-tools to 0.8.9nb5 [wiz 2015-01-20]
 	Updated graphics/py-blockdiag to 1.5.0 [obache 2015-01-20]
+	Updated graphics/py-actdiag to 0.5.4 [obache 2015-01-20]
