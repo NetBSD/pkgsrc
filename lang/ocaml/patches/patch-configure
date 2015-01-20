@@ -1,7 +1,7 @@
-$NetBSD: patch-configure,v 1.8 2014/10/09 19:08:28 jaapb Exp $
+$NetBSD: patch-configure,v 1.9 2015/01/20 14:12:25 jaapb Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
---- configure.orig	2014-08-21 10:06:19.000000000 +0000
+--- configure.orig	2014-10-03 19:25:46.000000000 +0000
 +++ configure
 @@ -318,11 +318,11 @@ TOOLCHAIN="cc"
  case "$bytecc,$target" in
@@ -17,9 +17,14 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      mathlib="";;
    *,*-*-darwin*)
      bytecccompopts="$gcc_warnings"
-@@ -334,11 +334,11 @@ case "$bytecc,$target" in
+@@ -334,15 +334,15 @@ case "$bytecc,$target" in
      echo "#  define ARCH_CODE32" >> m.h
      echo "#endif" >> m.h;;
+   *,*-*-haiku*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings"
++    bytecccompopts="$gcc_warnings"
+     # No -lm library
+     mathlib="";;
    *,*-*-beos*)
 -    bytecccompopts="-fno-defer-pop $gcc_warnings"
 +    bytecccompopts="$gcc_warnings"
@@ -31,7 +36,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      if cc="$bytecc" sh ./hasgot -mieee; then
        bytecccompopts="-mieee $bytecccompopts";
      fi
-@@ -366,11 +366,11 @@ case "$bytecc,$target" in
+@@ -370,11 +370,11 @@ case "$bytecc,$target" in
      bytecccompopts="-DUMK";;
    *gcc*,powerpc-*-aix*)
      # Avoid name-space pollution by requiring Unix98-conformant includes
@@ -45,7 +50,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      dllccompopts="-U_WIN32 -DCAML_DLL"
      if test $with_sharedlibs = yes; then
        flexlink="flexlink -chain cygwin -merge-manifest -stack 16777216"
-@@ -391,7 +391,7 @@ case "$bytecc,$target" in
+@@ -395,7 +395,7 @@ case "$bytecc,$target" in
      exe=".exe"
      ostype="Cygwin";;
    *gcc*,*-*-mingw*)
@@ -54,7 +59,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      dllccompopt="-DCAML_DLL"
      if test $with_sharedlibs = yes; then
        case "$target" in
-@@ -415,14 +415,14 @@ case "$bytecc,$target" in
+@@ -419,14 +419,14 @@ case "$bytecc,$target" in
      SO="dll"
      ;;
    *gcc*,x86_64-*-linux*)
@@ -71,16 +76,16 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
  esac
  
  # Configure compiler to use in further tests
-@@ -655,7 +655,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -659,7 +659,7 @@ if test $with_sharedlibs = "yes"; then
        mksharedlib="$flexlink"
        mkmaindll="$flexlink -maindll"
        shared_libraries_supported=true;;
--    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*)
-+    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*|*-*-dragonfly)
+-    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*|*-*-haiku*)
++    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-dragonfly|*-*-gnu*|*-*-haiku*)
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -752,7 +752,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -756,7 +756,7 @@ if test $with_sharedlibs = "yes"; then
      x86_64-*-linux*)              natdynlink=true;;
      i[3456]86-*-darwin[89].*)     natdynlink=true;;
      i[3456]86-*-darwin*)
@@ -89,16 +94,16 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
          natdynlink=true
        fi;;
      x86_64-*-darwin*)             natdynlink=true;;
-@@ -766,6 +766,8 @@ if test $with_sharedlibs = "yes"; then
+@@ -770,6 +770,8 @@ if test $with_sharedlibs = "yes"; then
      x86_64-*-openbsd*)            natdynlink=true;;
      i[3456]86-*-netbsd*)          natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
 +    i[3456]86-*-dragonfly*)       natdynlink=true;;
 +    x86_64-*-dragonfly*)          natdynlink=true;;
      i386-*-gnu0.3)                natdynlink=true;;
+     i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-     arm*-*-freebsd*)              natdynlink=true;;
-@@ -793,6 +795,7 @@ case "$target" in
+@@ -798,6 +800,7 @@ case "$target" in
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -106,15 +111,15 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -801,6 +804,7 @@ case "$target" in
-                                 fi;;
+@@ -807,6 +810,7 @@ case "$target" in
+   i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
-+  i[3456]86-*-interix3*)	arch=i386; system=interix3;;
++  i[3456]86-*-interix3*)        arch=i386; system=interix3;;
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -814,6 +818,7 @@ case "$target" in
+@@ -820,6 +824,7 @@ case "$target" in
    powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
    powerpc-*-darwin*)            arch=power; system=rhapsody
                                  if $arch64;then model=ppc64;else model=ppc;fi;;
@@ -122,7 +127,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    armv6*-*-linux-gnueabihf)     arch=arm; model=armv6; system=linux_eabihf;;
    arm*-*-linux-gnueabihf)       arch=arm; system=linux_eabihf;;
    armv7*-*-linux-gnueabi)       arch=arm; model=armv7; system=linux_eabi;;
-@@ -829,6 +834,7 @@ case "$target" in
+@@ -835,6 +840,7 @@ case "$target" in
    x86_64-*-gnu*)                arch=amd64; system=gnu;;
    x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
    x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
@@ -130,7 +135,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
-@@ -868,7 +874,7 @@ case "$arch,$nativecc,$system,$target" i
+@@ -874,7 +880,7 @@ case "$arch,$nativecc,$system,$target" i
                         if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    *,gcc*,cygwin,*)     nativecccompopts="$gcc_warnings -U_WIN32";;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -139,7 +144,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    *,gcc*,*,*)          nativecccompopts="$gcc_warnings";;
  esac
  
-@@ -885,7 +891,7 @@ case "$arch,$system" in
+@@ -891,7 +897,7 @@ case "$arch,$system" in
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
    i386,solaris)   as="${TOOLPREF}as"
@@ -148,7 +153,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    power,elf)      as="${TOOLPREF}as -u -m ppc"
                    aspp="${TOOLPREF}gcc -c";;
    power,rhapsody) as="${TOOLPREF}as -arch $model"
-@@ -924,6 +930,7 @@ case "$arch,$system" in
+@@ -930,6 +936,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -156,7 +161,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    *) profiling='noprof';;
  esac
  
-@@ -1413,6 +1420,8 @@ fi
+@@ -1434,6 +1441,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -165,7 +170,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1459,6 +1468,7 @@ if test "$x11_include" = "not found"; th
+@@ -1480,6 +1489,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -173,7 +178,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1516,6 +1526,7 @@ if test "$x11_include" = "not found"; th
+@@ -1537,6 +1547,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -181,7 +186,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1537,18 +1548,16 @@ if test "$x11_include" = "not found"; th
+@@ -1558,18 +1569,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
