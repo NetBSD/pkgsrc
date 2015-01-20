@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/01/20 00:04:58 enami Exp $
+$NetBSD: distinfo,v 1.10 2015/01/20 08:29:22 enami Exp $
 
 SHA1 (tcptrace-6.6.7.tar.gz) = ae4d10a0829c57f2eda17e63f593e558f52b7f24
 RMD160 (tcptrace-6.6.7.tar.gz) = 1dd0f373f766322343ffad59d0655eba4c6682e0
@@ -8,3 +8,4 @@ SHA1 (patch-filt__parser.y) = ac7c510d6bf231496e9c6b459c7a97d98531dbaf
 SHA1 (patch-filter.c) = 3058ee8b08ceca99b38ae772b51d26df91de6d9c
 SHA1 (patch-filter.h) = 6e8170f63938e4e3b2c8c97ea9361d707af2f8bb
 SHA1 (patch-tcpdump.c) = 4079d257814d966aca2c290fc131bef82ad15fe2
+SHA1 (patch-trace.c) = 9a373fb586526301804cac283abda8031a15df0d
