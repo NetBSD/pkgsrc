@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/11/27 13:38:15 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/20 16:04:57 jaapb Exp $
 
 DISTNAME=	uutf-0.9.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/uutf/releases/
 EXTRACT_SUFX=	.tbz
