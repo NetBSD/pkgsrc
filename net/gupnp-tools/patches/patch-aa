@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2012/10/06 08:21:00 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2015/01/20 10:28:53 wiz Exp $
 
---- src/network-light/upnp.c.orig	2011-07-30 07:39:56.000000000 +0000
+Add UUID support for *BSD
+https://bugzilla.gnome.org/show_bug.cgi?id=743234
+
+--- src/network-light/upnp.c.orig	2013-10-20 11:15:48.000000000 +0000
 +++ src/network-light/upnp.c
 @@ -27,7 +27,11 @@
  #include <string.h>
  #include <gmodule.h>
  #ifndef G_OS_WIN32
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +#include <uuid.h>
 +#else
  #include <uuid/uuid.h>
@@ -14,19 +17,18 @@ $NetBSD: patch-aa,v 1.4 2012/10/06 08:21:00 ryoon Exp $
  #else
  #include <rpc.h>
  typedef UUID uuid_t;
-@@ -335,8 +339,19 @@ static void init_uuid ()
+@@ -335,8 +339,18 @@ static void init_uuid ()
          char *udn;
  
  #ifndef G_OS_WIN32
-+#if defined(__NetBSD__) || defined(__DragonFly__)
-+char *myuuidstr;
-+#endif
-+
-+#if defined(__NetBSD__) || defined(__DragonFly__)
-+	uuid_create(&uuid_context, 0);
-+	uuid_to_string(&uuid_context, &myuuidstr, 0);
-+	strncpy(uuid, myuuidstr, sizeof(uuid));
-+	free(myuuidstr);
++#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
++        {
++                char *myuuidstr;
++                uuid_create (&uuid_context, 0);
++                uuid_to_string (&uuid_context, &myuuidstr, 0);
++                strncpy (uuid, myuuidstr, sizeof(uuid));
++                free (myuuidstr);
++        }
 +#else
          uuid_generate (uuid_context);
          uuid_unparse (uuid_context, uuid);
