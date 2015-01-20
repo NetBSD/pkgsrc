@@ -1,0 +1,12 @@
+$NetBSD: patch-examples_Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- examples/Makefile.orig	2015-01-12 17:53:24.000000000 +0100
++++ examples/Makefile	2015-01-19 13:37:18.000000000 +0100
+@@ -1,6 +1,6 @@
+ XEN_ROOT = $(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+-
++XEN_CONFIG_DIR=${XEN_EXAMPLES_DIR}
+ # Xen configuration dir and configs to go there.
+ XEN_READMES = README
+ XEN_READMES += README.incompatibilities

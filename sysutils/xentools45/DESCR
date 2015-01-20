@@ -1,0 +1,5 @@
+The Xen virtual machine monitor allows running several virtual machines
+on a single physical machine.  The xentools45 package contains the
+tools to create, destroy and control the virtual machines.
+
+This package contains the tools for Xen 4.5.x

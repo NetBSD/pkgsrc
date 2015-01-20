@@ -1,0 +1,26 @@
+$NetBSD: patch-firmware_etherboot_Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- firmware/etherboot/Makefile.orig	2015-01-12 17:53:24.000000000 +0100
++++ firmware/etherboot/Makefile	2015-01-19 13:42:54.000000000 +0100
+@@ -27,18 +27,10 @@
+ %.rom: $D/src/arch/i386/Makefile
+ 	$(MAKE) -C $D/src bin/$(*F).rom
+ 
+-$T:
+-	if ! $(FETCHER) _$T $(IPXE_TARBALL_URL); then \
+-		$(GIT) clone $(IPXE_GIT_URL) $D.git; \
+-		(cd $D.git && $(GIT) archive --format=tar --prefix=$D/ \
+-		$(IPXE_GIT_TAG) | gzip >../_$T); \
+-		rm -rf $D.git; \
+-	fi
+-	mv _$T $T
++$D:
++	ln -sf $(WRKSRC)/../../ipxe $D
+ 
+-$D/src/arch/i386/Makefile: $T Config
+-	rm -rf $D
+-	gzip -dc $T | tar xf -
++$D/src/arch/i386/Makefile: $D Config
+ 	for i in $$(cat patches/series) ; do                 \
+ 	    patch -d $D -p1 --quiet <patches/$$i || exit 1 ; \
+ 	done

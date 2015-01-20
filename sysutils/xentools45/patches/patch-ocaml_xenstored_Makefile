@@ -1,0 +1,12 @@
+$NetBSD: patch-ocaml_xenstored_Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- ocaml/xenstored/Makefile.orig	2015-01-12 17:53:24.000000000 +0100
++++ ocaml/xenstored/Makefile	2015-01-19 14:06:50.000000000 +0100
+@@ -1,6 +1,7 @@
+ XEN_ROOT = $(CURDIR)/../../..
+ OCAML_TOPLEVEL = $(CURDIR)/..
+ include $(OCAML_TOPLEVEL)/common.make
++XEN_CONFIG_DIR=${XEN_EXAMPLES_DIR}
+ 
+ CFLAGS += -I$(XEN_ROOT)/tools/
+ CFLAGS-$(CONFIG_SYSTEMD)  += $(SYSTEMD_CFLAGS)

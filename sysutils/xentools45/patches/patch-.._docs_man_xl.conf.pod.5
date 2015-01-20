@@ -1,0 +1,30 @@
+$NetBSD: patch-.._docs_man_xl.conf.pod.5,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- ../docs/man/xl.conf.pod.5.orig	2015-01-12 17:53:24.000000000 +0100
++++ ../docs/man/xl.conf.pod.5	2015-01-19 13:18:33.000000000 +0100
+@@ -1,6 +1,6 @@
+ =head1 NAME
+ 
+-/etc/xen/xl.conf - XL Global/Host Configuration 
++@XENDCONFDIR@/xl.conf - XL Global/Host Configuration 
+ 
+ =head1 DESCRIPTION
+ 
+@@ -83,7 +83,7 @@
+ 
+ The old B<vifscript> option is deprecated and should not be used.
+ 
+-Default: C</etc/xen/scripts/vif-bridge>
++Default: C<@XENDCONFDIR@/scripts/vif-bridge>
+ 
+ =item B<vif.default.bridge="NAME">
+ 
+@@ -109,7 +109,7 @@
+ 
+ Configures the default script used by Remus to setup network buffering.
+ 
+-Default: C</etc/xen/scripts/remus-netbuf-setup>
++Default: C<@XENDCONFDIR@/scripts/remus-netbuf-setup>
+ 
+ =item B<output_format="json|sxp">
+ 

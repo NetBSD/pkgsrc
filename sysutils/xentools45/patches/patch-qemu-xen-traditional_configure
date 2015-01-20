@@ -1,0 +1,31 @@
+$NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- qemu-xen-traditional/configure.orig	2014-10-06 17:50:24.000000000 +0200
++++ qemu-xen-traditional/configure	2015-01-19 14:17:28.000000000 +0100
+@@ -1089,7 +1089,7 @@
+ # Check if tools are available to build documentation.
+ if [ -x "`which texi2html 2>/dev/null`" ] && \
+    [ -x "`which pod2man 2>/dev/null`" ]; then
+-  build_docs="yes"
++#  build_docs="yes"
+ fi
+ 
+ ##########################################
+@@ -1124,7 +1124,7 @@
+   if test -z "$prefix" ; then
+       prefix="/usr/local"
+   fi
+-  mansuffix="/share/man"
++  mansuffix="/man"
+   datasuffix="/share/qemu"
+   docsuffix="/share/doc/qemu"
+   binsuffix="/bin"
+@@ -1216,6 +1216,8 @@
+ echo "MAKE=$make" >> $config_mak
+ echo "INSTALL=$install" >> $config_mak
+ echo "INSTALL_PROG=$install -m 0755" >> $config_mak
++echo "INSTALL_DATA=$install -m0644" >> $config_mak
++echo "INSTALL_DIR=$install -d -m0755 -p" >> $config_mak
+ echo "CC=$cc" >> $config_mak
+ echo "HOST_CC=$host_cc" >> $config_mak
+ echo "AR=$ar" >> $config_mak

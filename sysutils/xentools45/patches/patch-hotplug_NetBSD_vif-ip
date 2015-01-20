@@ -1,0 +1,15 @@
+$NetBSD: patch-hotplug_NetBSD_vif-ip,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- hotplug/NetBSD/vif-ip.orig	2015-01-12 17:53:24.000000000 +0100
++++ hotplug/NetBSD/vif-ip	2015-01-19 13:16:37.000000000 +0100
+@@ -24,6 +24,10 @@
+ 	xfid=$(xenstore-read "$xpath/frontend-id")
+ 	xhandle=$(xenstore-read "$xpath/handle")
+ 	iface=$(xenstore-read "$xpath/vifname")
++	iface=$(xenstore-read "$xpath/vifname") || true
++	if [ x${iface} = "x" ] ; then
++		iface=xvif$xfid.$xhandle
++	fi
+ 	ifconfig $iface $xip up
+ 	xenstore-write $xpath/hotplug-status connected
+ 	exit 0

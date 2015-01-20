@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+Please ensure that the Xen-specific devices needed by xend(8) exist:
+
+	cd /dev && sh MAKEDEV xen
+
+There are example configuration files for setting up a guest domain in:
+
+	${EGDIR}/
+
+Please also refer to the the "NetBSD/xen How-To" for more information on
+creating a Xen setup:
+
+	http://www.NetBSD.org/ports/xen/howto.html
+
+===========================================================================
