@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/20 08:17:09 he Exp $
+
+SHA1 (radsecproxy-1.6.6.tar.xz) = b6a41d5604515b4cdfdd71e611278cb0fcdfa927
+RMD160 (radsecproxy-1.6.6.tar.xz) = 1895cbf80fcdad1e3bb0ce4596908821d7a9c488
+Size (radsecproxy-1.6.6.tar.xz) = 159736 bytes
