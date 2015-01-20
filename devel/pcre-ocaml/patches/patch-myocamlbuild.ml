@@ -1,14 +1,13 @@
-$NetBSD: patch-myocamlbuild.ml,v 1.1 2014/10/09 19:39:24 jaapb Exp $
+$NetBSD: patch-myocamlbuild.ml,v 1.2 2015/01/20 14:31:09 jaapb Exp $
 
-Deal with reorder issues by linking pcre_stubs statically
---- myocamlbuild.ml.orig	2014-07-06 14:49:44.000000000 +0000
+Use pkgsrc-runtime flag for proper building
+--- myocamlbuild.ml.orig	2014-12-12 02:37:43.000000000 +0000
 +++ myocamlbuild.ml
-@@ -539,7 +539,7 @@ module MyOCamlbuildBase = struct
-                         A("-l"^(nm_libstubs lib))]);
+@@ -420,6 +420,7 @@ module MyOCamlbuildFindlib = struct
+           flag ["ocaml"; "package(threads)"; "doc"] (S[A "-I"; A "+threads"]);
+           flag ["ocaml"; "package(threads)"; "link"] (S[A "-thread"]);
+           flag ["ocaml"; "package(threads)"; "infer_interface"] (S[A "-thread"]);
++					flag ["ocaml"; "link"; "native"] (S[A "-passopt"; A "-pkgsrc-runtime"]);
  
-                    flag ["link"; "library"; "ocaml"; "native"; tag_libstubs lib]
--                     (S[A"-cclib"; A("-l"^(nm_libstubs lib))]);
-+                     (S[A"-cclib"; A("lib/lib"^(nm_libstubs lib)^".a")]);
- 
-                    flag ["link"; "program"; "ocaml"; "byte"; tag_libstubs lib]
-                      (S[A"-dllib"; A("dll"^(nm_libstubs lib))]);
+       | _ ->
+           ()
