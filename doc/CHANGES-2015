@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.378 2015/01/20 21:15:57 degroote Exp $
+$NetBSD: CHANGES-2015,v 1.379 2015/01/20 23:45:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -453,3 +453,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-docs to 3.8.8.1 [adam 2015-01-20]
 	Updated databases/sqlite3-tcl to 3.8.8.1 [adam 2015-01-20]
 	Updated audio/easytag to 2.2.5 [degroote 2015-01-20]
+	Updated sysutils/dbus to 1.8.14nb1 [wiz 2015-01-20]
