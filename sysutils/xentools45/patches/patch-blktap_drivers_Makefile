@@ -1,0 +1,16 @@
+$NetBSD: patch-blktap_drivers_Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- blktap/drivers/Makefile.orig	2015-01-12 17:53:24.000000000 +0100
++++ blktap/drivers/Makefile	2015-01-19 13:16:17.000000000 +0100
+@@ -44,9 +44,11 @@
+ BLK-OBJS-y  += aes.o
+ BLK-OBJS-y  += tapaio.o
+ BLK-OBJS-$(CONFIG_Linux) += blk_linux.o
++BLK-OBJS-$(CONFIG_NetBSD) += blk_netbsd.o
+ 
+ BLKTAB-OBJS-y := blktapctrl.o
+ BLKTAB-OBJS-$(CONFIG_Linux) += blktapctrl_linux.o
++BLKTAB-OBJS-$(CONFIG_NetBSD) += blktapctrl_netbsd.o
+ 
+ all: $(IBIN) qcow-util
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-libxl_Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- libxl/Makefile.orig	2015-01-19 21:18:26.000000000 +0100
++++ libxl/Makefile	2015-01-19 21:18:49.000000000 +0100
+@@ -253,7 +253,7 @@
+ 	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+ 	$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
+ 	$(INSTALL_DIR) $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(BASH_COMPLETION_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)
+ 	$(INSTALL_DIR) $(DESTDIR)$(LIBEXEC_BIN)
+ 	$(INSTALL_PROG) xl $(DESTDIR)$(SBINDIR)
+ 	$(INSTALL_PROG) xen-init-dom0 $(DESTDIR)$(LIBEXEC_BIN)
+@@ -267,7 +267,7 @@
+ 	$(SYMLINK_SHLIB) libxlutil.so.$(XLUMAJOR) $(DESTDIR)$(LIBDIR)/libxlutil.so
+ 	$(INSTALL_DATA) libxlutil.a $(DESTDIR)$(LIBDIR)
+ 	$(INSTALL_DATA) libxl.h libxl_event.h libxl_json.h _libxl_types.h _libxl_types_json.h _libxl_list.h libxl_utils.h libxl_uuid.h $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_DATA) bash-completion $(DESTDIR)$(BASH_COMPLETION_DIR)/xl.sh
++	$(INSTALL_DATA) bash-completion $(DESTDIR)$(XEN_EXAMPLES_DIR)/xl.sh
+ 
+ .PHONY: clean
+ clean:
