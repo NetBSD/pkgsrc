@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/19 21:21:11 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/20 07:45:28 fhajny Exp $
 
 DISTNAME=	ohai-8.0.1
 CATEGORIES=	misc
@@ -20,6 +20,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.16:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-systemu>=2.6.4:../../misc/ruby-systemu
 DEPENDS+=	${RUBY_PKGPREFIX}-ipaddress>=0.8.0:../../net/ruby-ipaddress
 DEPENDS+=	${RUBY_PKGPREFIX}-net-dhcp>=0:../../net/ruby-net-dhcp
+
+RUBY_VERSION_SUPPORTED=	200 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
