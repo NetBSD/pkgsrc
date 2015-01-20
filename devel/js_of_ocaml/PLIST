@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/09 21:18:05 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/20 16:09:15 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/js_of_ocaml
 bin/js_of_ocaml
 bin/jsoo_minify
@@ -86,6 +86,13 @@ ${OCAML_SITELIB}/js_of_ocaml/sys_js.mli
 ${OCAML_SITELIB}/js_of_ocaml/toplevel.js
 ${OCAML_SITELIB}/js_of_ocaml/typed_array.cmi
 ${OCAML_SITELIB}/js_of_ocaml/typed_array.mli
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml.cma
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml_cast.cmi
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml_cast.mli
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml_cast_sigs.cmi
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml_cast_sigs.mli
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml_js.cmi
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml/tyxml_js.mli
 ${OCAML_SITELIB}/js_of_ocaml/url.cmi
 ${OCAML_SITELIB}/js_of_ocaml/url.mli
 ${OCAML_SITELIB}/js_of_ocaml/weak.js
