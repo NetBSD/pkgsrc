@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/15 10:47:20 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/01/20 10:25:45 obache Exp $
 
-SHA1 (ruby-mp3info-0.6.13.tgz) = 81174cb4e78b2f8377dcd2b870c508f09f0fc8c0
-RMD160 (ruby-mp3info-0.6.13.tgz) = 7519bd419066bb1fee79f84348906f3ebf4a3307
-Size (ruby-mp3info-0.6.13.tgz) = 25050 bytes
+SHA1 (ruby-mp3info-0.8.5.gem) = 07b90e60e928160281c2d64a7acabde0d1da83ac
+RMD160 (ruby-mp3info-0.8.5.gem) = bc37718fbd62b8e5b43b9f8dd79cb61c0b1f5758
+Size (ruby-mp3info-0.8.5.gem) = 79872 bytes
