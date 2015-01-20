@@ -519,6 +519,7 @@ nntpcache-pgp		Enable pgp signed nocem support.
 notmuch-emacs		Install emacs support files for notmuch.
 nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
+ocaml-tyxml		Enable OCaml-tyxml support
 ocamlgraph		Enable Ocamlgraph support.
 octave			Enable Octave support.
 odbc			Enable ODBC support.
