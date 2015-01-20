@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:57 asau Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/20 11:34:25 obache Exp $
 
-DISTNAME=	htree-0.7
+DISTNAME=	htree-0.8
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.a-k-r.org/htree/
 
