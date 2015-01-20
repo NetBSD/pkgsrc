@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14049 2015/01/20 09:38:02 wiz Exp $
+$NetBSD: TODO,v 1.14050 2015/01/20 10:45:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -846,7 +846,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o open-vm-tools-2010.09.19.301124
 	o openmortal-0.7.1
 	o openmpi-1.8.4
-	o openntpd-5.7p1
 	o openoffice-4.1
 	o openoffice3-3.3
 	o openscad-2013.06
