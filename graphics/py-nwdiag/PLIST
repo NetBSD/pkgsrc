@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/07/06 12:36:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/01/20 10:50:03 obache Exp $
 bin/nwdiag
 bin/packetdiag
 bin/rackdiag
@@ -29,6 +29,11 @@ ${PYSITELIB}/nwdiag/metrics.pyo
 ${PYSITELIB}/nwdiag/parser.py
 ${PYSITELIB}/nwdiag/parser.pyc
 ${PYSITELIB}/nwdiag/parser.pyo
+${PYSITELIB}/nwdiag/tests/VLGothic/LICENSE
+${PYSITELIB}/nwdiag/tests/VLGothic/LICENSE.en
+${PYSITELIB}/nwdiag/tests/VLGothic/LICENSE_E.mplus
+${PYSITELIB}/nwdiag/tests/VLGothic/LICENSE_J.mplus
+${PYSITELIB}/nwdiag/tests/VLGothic/VL-Gothic-Regular.ttf
 ${PYSITELIB}/nwdiag/tests/__init__.py
 ${PYSITELIB}/nwdiag/tests/__init__.pyc
 ${PYSITELIB}/nwdiag/tests/__init__.pyo
@@ -111,6 +116,7 @@ ${PYSITELIB}/packetdiag/noderenderers.pyo
 ${PYSITELIB}/packetdiag/parser.py
 ${PYSITELIB}/packetdiag/parser.pyc
 ${PYSITELIB}/packetdiag/parser.pyo
+${PYSITELIB}/packetdiag/tests/VLGothic/VL-Gothic-Regular.ttf
 ${PYSITELIB}/packetdiag/tests/diagrams/oneliner.diag
 ${PYSITELIB}/packetdiag/tests/diagrams/oneliner_with_quoted.diag
 ${PYSITELIB}/packetdiag/tests/diagrams/oneliner_without_last_semicolon.diag
@@ -163,6 +169,8 @@ ${PYSITELIB}/rackdiag/metrics.pyo
 ${PYSITELIB}/rackdiag/parser.py
 ${PYSITELIB}/rackdiag/parser.pyc
 ${PYSITELIB}/rackdiag/parser.pyo
+${PYSITELIB}/rackdiag/tests/VLGothic/VL-Gothic-Regular.ttf
+${PYSITELIB}/rackdiag/tests/diagrams/ascending.diag
 ${PYSITELIB}/rackdiag/tests/diagrams/autonumber.diag
 ${PYSITELIB}/rackdiag/tests/diagrams/multi_rackitem.diag
 ${PYSITELIB}/rackdiag/tests/diagrams/multi_racks.diag
