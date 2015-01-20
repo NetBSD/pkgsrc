@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14051 2015/01/20 14:12:42 jaapb Exp $
+$NetBSD: TODO,v 1.14052 2015/01/20 21:15:57 degroote Exp $
 
 Suggested new packages
 ======================
@@ -489,7 +489,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o doxygen-1.8.9
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
-	o easytag-2.2.5 [2.3.3 is development version]
 	o eboard-1.1.1
 	o eclipse-3.2.0
 	o ed-1.10
