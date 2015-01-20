@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.367 2015/01/20 11:47:28 obache Exp $
+$NetBSD: CHANGES-2015,v 1.368 2015/01/20 12:19:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -439,3 +439,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-htree to 0.8 [obache 2015-01-20]
 	Updated www/dansguardian to 2.12.0.3nb2 [prlw1 2015-01-20]
 	Updated www/ruby-httpclient to 2.6.0.1 [obache 2015-01-20]
+	Updated multimedia/mpv to 0.7.2 [wiz 2015-01-20]
