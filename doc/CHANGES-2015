@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.376 2015/01/20 16:44:35 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.377 2015/01/20 20:12:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -449,3 +449,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ocaml-ipaddr to 2.5.0 [jaapb 2015-01-20]
 	Added sysutils/xenkernel45 version 4.5.0 [bouyer 2015-01-20]
 	Added sysutils/xentools45 version 4.5.0 [bouyer 2015-01-20]
+	Updated databases/sqlite3 to 3.8.8.1 [adam 2015-01-20]
+	Updated databases/sqlite3-docs to 3.8.8.1 [adam 2015-01-20]
+	Updated databases/sqlite3-tcl to 3.8.8.1 [adam 2015-01-20]
