@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 21:06:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/20 14:24:37 jaapb Exp $
 #
 
 PKGNAME=	${DISTNAME} # to avoid prefixing with ocaml-
 DISTNAME=	ocaml-ssl-0.4.7
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=savonet/}
 
