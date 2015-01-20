@@ -1,0 +1,39 @@
+$NetBSD: patch-configure,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- configure.orig	2015-01-12 17:53:24.000000000 +0100
++++ configure	2015-01-19 20:34:47.000000000 +0100
+@@ -2276,7 +2276,7 @@
+ 
+ 
+ 
+-ac_config_files="$ac_config_files ../config/Tools.mk hotplug/FreeBSD/rc.d/xencommons hotplug/Linux/init.d/sysconfig.xencommons hotplug/Linux/init.d/xen-watchdog hotplug/Linux/init.d/xencommons hotplug/Linux/init.d/xendomains hotplug/Linux/systemd/proc-xen.mount hotplug/Linux/systemd/var-lib-xenstored.mount hotplug/Linux/systemd/xen-init-dom0.service hotplug/Linux/systemd/xen-qemu-dom0-disk-backend.service hotplug/Linux/systemd/xen-watchdog.service hotplug/Linux/systemd/xenconsoled.service hotplug/Linux/systemd/xendomains.service hotplug/Linux/systemd/xenstored.service hotplug/Linux/systemd/xenstored.socket hotplug/Linux/systemd/xenstored_ro.socket hotplug/Linux/vif-setup hotplug/Linux/xen-backend.rules hotplug/Linux/xen-hotplug-common.sh hotplug/Linux/xendomains hotplug/NetBSD/rc.d/xencommons"
++ac_config_files="$ac_config_files ../config/Tools.mk ../config/Paths.mk hotplug/FreeBSD/rc.d/xencommons hotplug/Linux/init.d/sysconfig.xencommons hotplug/Linux/init.d/xen-watchdog hotplug/Linux/init.d/xencommons hotplug/Linux/init.d/xendomains hotplug/Linux/systemd/proc-xen.mount hotplug/Linux/systemd/var-lib-xenstored.mount hotplug/Linux/systemd/xen-init-dom0.service hotplug/Linux/systemd/xen-qemu-dom0-disk-backend.service hotplug/Linux/systemd/xen-watchdog.service hotplug/Linux/systemd/xenconsoled.service hotplug/Linux/systemd/xendomains.service hotplug/Linux/systemd/xenstored.service hotplug/Linux/systemd/xenstored.socket hotplug/Linux/systemd/xenstored_ro.socket hotplug/Linux/vif-setup hotplug/Linux/xen-backend.rules hotplug/Linux/xen-hotplug-common.sh hotplug/Linux/xendomains hotplug/NetBSD/rc.d/xencommons"
+ 
+ ac_config_headers="$ac_config_headers config.h"
+ 
+@@ -3710,7 +3710,7 @@
+ 
+ if test "x$sysconfdir" = 'x${prefix}/etc' ; then
+     case "$host_os" in
+-         *freebsd*)
++         *freebsd*|*netbsd*)
+          sysconfdir=$prefix/etc
+          ;;
+          *solaris*)
+@@ -9483,6 +9483,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
+@@ -9566,6 +9568,7 @@
+ do
+   case $ac_config_target in
+     "../config/Tools.mk") CONFIG_FILES="$CONFIG_FILES ../config/Tools.mk" ;;
++    "../config/Paths.mk") CONFIG_FILES="$CONFIG_FILES ../config/Paths.mk" ;;
+     "hotplug/FreeBSD/rc.d/xencommons") CONFIG_FILES="$CONFIG_FILES hotplug/FreeBSD/rc.d/xencommons" ;;
+     "hotplug/Linux/init.d/sysconfig.xencommons") CONFIG_FILES="$CONFIG_FILES hotplug/Linux/init.d/sysconfig.xencommons" ;;
+     "hotplug/Linux/init.d/xen-watchdog") CONFIG_FILES="$CONFIG_FILES hotplug/Linux/init.d/xen-watchdog" ;;

@@ -1,0 +1,28 @@
+$NetBSD: patch-.._docs_man_xlcpupool.cfg.pod.5,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- ../docs/man/xlcpupool.cfg.pod.5.orig	2015-01-12 17:53:24.000000000 +0100
++++ ../docs/man/xlcpupool.cfg.pod.5	2015-01-19 13:16:17.000000000 +0100
+@@ -4,12 +4,12 @@
+ 
+ =head1 SYNOPSIS
+ 
+- /etc/xen/xlcpupool
++ @XENDCONFDIR@/xlcpupool
+ 
+ =head1 DESCRIPTION
+ 
+ To create a Cpupool with xl requires the provision of a cpupool config
+-file.  Typically these live in `/etc/xen/CPUPOOL.cfg` where CPUPOOL is
++file.  Typically these live in `@XENDCONFDIR@/CPUPOOL.cfg` where CPUPOOL is
+ the name of the cpupool.
+ 
+ =head1 SYNTAX
+@@ -101,7 +101,7 @@
+ 
+ =head1 FILES
+ 
+-F</etc/xen/CPUPOOL.cfg>
++F<@XENDCONFDIR@/CPUPOOL.cfg>
+ 
+ =head1 BUGS
+ 
