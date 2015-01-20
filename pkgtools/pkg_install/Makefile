@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2015/01/20 19:15:56 adam Exp $
 
 # Notes to package maintainers:
 #
@@ -20,8 +20,8 @@ SKIP_LICENSE_CHECK=	yes
 CONFLICTS+=		audit-packages-[0-9]*
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
 USE_FEATURES=		nbcompat
 
@@ -76,23 +76,23 @@ CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
 
-MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-MAKE_ENV+=		OPSYS=${OPSYS:Q}
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+MAKE_ENV+=		OPSYS=${OPSYS}
 MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
 PKG_DBDIR?=		/var/db/pkg
 EGDIR=			${PREFIX}/share/examples/pkg_install
 
-PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
+PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR}
 
 DEINSTALL_SRC=		# empty
 INSTALL_SRC=		${PKGDIR}/INSTALL
-FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}			\
-			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}		\
+FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR}			\
+			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
 			MKDIR=${MKDIR:Q}
-MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
-			EGDIR=${EGDIR:Q}
+MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR}			\
+			EGDIR=${EGDIR}
 
 .include "../../mk/compiler.mk"
 
@@ -143,11 +143,11 @@ LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
 # Until we support pkgsrc openssl at bootstrap time, disable it completely
 # if asked to avoid the builtin.
-.if empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
+.  if empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
 LIBARCHIVE_CONFIGURE_ARGS=	--without-openssl
-.endif
+.  endif
 
-LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs://p' -e 's/^Libs.private://p' \
+LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
     ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
 LIBS+=		${LIBARCHIVE_LIBS:sh}
 
@@ -164,18 +164,17 @@ CPPFLAGS+=	-DLIBARCHIVE_STATIC
 LDFLAGS+=	-Wl,-search_paths_first
 .  endif
 
-.if ${OPSYS} == SunOS
+.  if ${OPSYS} == "SunOS"
 # workaround for pkg/45491
 CONFIGURE_ENV+=	ac_cv_header_ext2fs_ext2_fs_h=no
-.endif
+.  endif
 
 # Hack to make sure that the libarchive version is replaced
 pre-configure: config-guess-override config-sub-override
-.else
-LIBS+=		-larchive
 .endif
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 LDFLAGS+=	-L${WRKDIR}/libfetch
+LIBS+=		-larchive
 
 CONFIGURE_ENV+=	LIBS=${LIBS:Q}
 
@@ -200,12 +199,12 @@ pre-configure:
 	cd ${WRKDIR}/zlib && ${BUILD_MAKE_CMD} libz.a
 .endif
 .if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
-	cd ${WRKDIR}/libarchive &&					\
-	${SETENV} ${_CONFIGURE_SCRIPT_ENV}				\
-		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
-		./configure --disable-shared --disable-bsdtar		\
-		--disable-bsdcpio --without-expat --without-xml2	\
-		--disable-dependency-tracking				\
+	cd ${WRKDIR}/libarchive && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} ./configure	\
+		--disable-bsdcpio --disable-bsdtar --disable-shared	\
+		--disable-dependency-tracking --without-expat		\
+		--without-iconv --without-lzo2 --without-nettle		\
+		--without-xml2	\
 		${LIBARCHIVE_CONFIGURE_ARGS}
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
