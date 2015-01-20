@@ -1,0 +1,29 @@
+$NetBSD: patch-.._docs_man_xl.cfg.pod.5,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- ../docs/man/xl.cfg.pod.5.orig	2015-01-12 17:53:24.000000000 +0100
++++ ../docs/man/xl.cfg.pod.5	2015-01-19 15:32:47.000000000 +0100
+@@ -4,13 +4,13 @@
+ 
+ =head1 SYNOPSIS
+ 
+- /etc/xen/xldomain
++ @XENDCONFDIR@/xldomain
+ 
+ =head1 DESCRIPTION
+ 
+ To create a VM (a domain in Xen terminology, sometimes called a guest)
+ with xl requires the provision of a domain config file.  Typically
+-these live in `/etc/xen/DOMAIN.cfg` where DOMAIN is the name of the
++these live in `@XENDCONFDIR@/DOMAIN.cfg` where DOMAIN is the name of the
+ domain.
+ 
+ =head1 SYNTAX
+@@ -1604,7 +1604,7 @@
+ 
+ =head1 FILES
+ 
+-F</etc/xen/NAME.cfg>
++F<@XENDCONFDIR@/NAME.cfg>
+ F</var/xen/dump/NAME>
+ 
+ =head1 BUGS

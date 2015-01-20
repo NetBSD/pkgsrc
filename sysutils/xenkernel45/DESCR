@@ -1,0 +1,12 @@
+Xen is a virtual machine monitor which supports running multiple
+guests operating systems on a single machine. Guest OSes (also
+called "domains") require a modified kernel which supports Xen
+hypercalls in replacement to access to the physical hardware. At
+boot, the xen kernel is loaded along with the guest kernel for the
+first domain (called domain0). domain0 has privileges to access
+the physical hardware (PCI and ISA devices), administrate other
+domains and provide virtual devices (disks and network) to other
+domains.
+
+This package contains the 4.5 Xen4 kernel itself.  PCI passthrough is
+not supported.  PAE is mandatory; on i386 one must use XEN3PAE_DOM[0U].

@@ -1,0 +1,16 @@
+$NetBSD: patch-hotplug_NetBSD_vif-bridge,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- hotplug/NetBSD/vif-bridge.orig	2015-01-12 17:53:24.000000000 +0100
++++ hotplug/NetBSD/vif-bridge	2015-01-19 13:16:37.000000000 +0100
+@@ -23,7 +23,10 @@
+ 	xbridge=$(xenstore-read "$xpath/bridge")
+ 	xfid=$(xenstore-read "$xpath/frontend-id")
+ 	xhandle=$(xenstore-read "$xpath/handle")
+-	iface=$(xenstore-read "$xpath/vifname")
++	iface=$(xenstore-read "$xpath/vifname") || true
++	if [ x${iface} = "x" ] ; then
++		iface=xvif$xfid.$xhandle
++	fi
+ 	ifconfig $iface up
+ 	brconfig $xbridge add $iface
+ 	xenstore-write $xpath/hotplug-status connected

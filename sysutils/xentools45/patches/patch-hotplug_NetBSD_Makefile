@@ -1,0 +1,46 @@
+$NetBSD: patch-hotplug_NetBSD_Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+--- hotplug/NetBSD/Makefile.orig	2015-01-12 17:53:24.000000000 +0100
++++ hotplug/NetBSD/Makefile	2015-01-19 14:18:22.000000000 +0100
+@@ -8,7 +8,7 @@
+ XEN_SCRIPTS += vif-ip
+ 
+ XEN_SCRIPT_DATA =
+-XEN_RCD_PROG = rc.d/xencommons rc.d/xendomains rc.d/xen-watchdog
++#XEN_RCD_PROG = rc.d/xencommons rc.d/xendomains rc.d/xen-watchdog
+ 
+ .PHONY: all
+ all:
+@@ -21,10 +21,11 @@
+ 
+ .PHONY: install-scripts
+ install-scripts:
+-	$(INSTALL_DIR) $(DESTDIR)$(XEN_SCRIPT_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts
+ 	set -e; for i in $(XEN_SCRIPTS); \
+ 	   do \
+-	   $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
++	   $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts; \
+ 	done
+ 	set -e; for i in $(XEN_SCRIPT_DATA); \
+ 	   do \
+@@ -33,12 +34,12 @@
+ 
+ .PHONY: install-rcd
+ install-rcd:
+-	$(INSTALL_DIR) $(DESTDIR)$(INITD_DIR)
+-	set -e; for i in $(XEN_RCD_PROG); \
+-	   do \
+-	   $(INSTALL_PROG) $$i $(DESTDIR)$(INITD_DIR); \
+-	done
+-	$(INSTALL_DATA) ../common/hotplugpath.sh $(DESTDIR)$(INITD_DIR)/xen-hotplugpath.sh
++#	$(INSTALL_DIR) $(DESTDIR)$(INITD_DIR)
++#	set -e; for i in $(XEN_RCD_PROG); \
++#	   do \
++#	   $(INSTALL_PROG) $$i $(DESTDIR)$(INITD_DIR); \
++#	done
++#	$(INSTALL_DATA) ../common/hotplugpath.sh $(DESTDIR)$(INITD_DIR)/xen-hotplugpath.sh
+ 
+ .PHONY: clean
+ clean:

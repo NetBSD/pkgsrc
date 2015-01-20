@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+
+The Xen hypervisor is installed under the following locations:
+	${XENKERNELDIR}/xen.gz		(standard hypervisor)
+	${XENKERNELDIR}/xen-debug.gz	(debug hypervisor)
+===========================================================================
