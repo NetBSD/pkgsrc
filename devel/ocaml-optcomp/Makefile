@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/10/09 21:08:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/20 16:12:12 jaapb Exp $
 
 VERSION=	1.6
+PKGREVISION=	1
 DISTNAME=	${VERSION}
 PKGNAME=	ocaml-optcomp-${VERSION}
 CATEGORIES=	devel
