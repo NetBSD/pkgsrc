@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2014/10/09 19:08:28 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/01/20 14:12:25 jaapb Exp $
 bin/ocaml
 bin/ocamlbuild
 bin/ocamlbuild.byte
@@ -464,6 +464,32 @@ man/man1/ocamlyacc.1
 man/man3o/Arg.3o
 man/man3o/Array.3o
 man/man3o/ArrayLabels.3o
+man/man3o/Ast_helper.3o
+man/man3o/Ast_helper.Cf.3o
+man/man3o/Ast_helper.Ci.3o
+man/man3o/Ast_helper.Cl.3o
+man/man3o/Ast_helper.Csig.3o
+man/man3o/Ast_helper.Cstr.3o
+man/man3o/Ast_helper.Ctf.3o
+man/man3o/Ast_helper.Cty.3o
+man/man3o/Ast_helper.Exp.3o
+man/man3o/Ast_helper.Incl.3o
+man/man3o/Ast_helper.Mb.3o
+man/man3o/Ast_helper.Md.3o
+man/man3o/Ast_helper.Mod.3o
+man/man3o/Ast_helper.Mtd.3o
+man/man3o/Ast_helper.Mty.3o
+man/man3o/Ast_helper.Opn.3o
+man/man3o/Ast_helper.Pat.3o
+man/man3o/Ast_helper.Sig.3o
+man/man3o/Ast_helper.Str.3o
+man/man3o/Ast_helper.Te.3o
+man/man3o/Ast_helper.Typ.3o
+man/man3o/Ast_helper.Type.3o
+man/man3o/Ast_helper.Val.3o
+man/man3o/Ast_helper.Vb.3o
+man/man3o/Ast_mapper.3o
+man/man3o/Asttypes.3o
 man/man3o/Bigarray.3o
 man/man3o/Bigarray.Array1.3o
 man/man3o/Bigarray.Array2.3o
@@ -496,9 +522,12 @@ man/man3o/Hashtbl.SeededS.3o
 man/man3o/Int32.3o
 man/man3o/Int64.3o
 man/man3o/Lazy.3o
+man/man3o/Lexer.3o
 man/man3o/Lexing.3o
 man/man3o/List.3o
 man/man3o/ListLabels.3o
+man/man3o/Location.3o
+man/man3o/Longident.3o
 man/man3o/Map.3o
 man/man3o/Map.Make.3o
 man/man3o/Map.OrderedType.3o
@@ -524,9 +553,15 @@ man/man3o/Nativeint.3o
 man/man3o/Num.3o
 man/man3o/Obj.3o
 man/man3o/Oo.3o
+man/man3o/Parse.3o
+man/man3o/Parser.3o
+man/man3o/Parsetree.3o
 man/man3o/Parsing.3o
 man/man3o/Pervasives.3o
 man/man3o/Pervasives.LargeFile.3o
+man/man3o/Pprintast.3o
+man/man3o/Pprintast.printer.3o
+man/man3o/Printast.3o
 man/man3o/Printexc.3o
 man/man3o/Printexc.Slot.3o
 man/man3o/Printf.3o
@@ -549,6 +584,7 @@ man/man3o/StdLabels.String.3o
 man/man3o/Str.3o
 man/man3o/Stream.3o
 man/man3o/StringLabels.3o
+man/man3o/Syntaxerr.3o
 man/man3o/Sys.3o
 man/man3o/Unix.3o
 man/man3o/Unix.LargeFile.3o
