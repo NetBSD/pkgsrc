@@ -1,0 +1,5 @@
+This OCaml library contains functionality for parsing and
+pretty-printing S-expressions. In addition to that it contains a
+preprocessing module for Camlp4 which can be used to automatically
+generate code from type definitions for efficiently converting
+OCaml-values to S-expressions and vice versa.
