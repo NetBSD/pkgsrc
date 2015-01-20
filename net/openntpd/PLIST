@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:10 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/20 10:45:01 wiz Exp $
 man/man5/ntpd.conf.5
+man/man8/ntpctl.8
 man/man8/ntpd.8
+sbin/ntpctl
 sbin/ntpd
 share/examples/openntpd/ntpd.conf
