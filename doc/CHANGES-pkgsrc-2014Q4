@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.7 2015/01/14 08:38:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.8 2015/01/20 23:58:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -19,3 +19,5 @@ Pullup ticket #4588 - requested by is
 graphics/netpbm: bug fix patch
 Pullup ticket #4589 - requested by he
 misc/screen: portability patch
+Pullup ticket #4591 - requested by he
+www/curl: security patch
