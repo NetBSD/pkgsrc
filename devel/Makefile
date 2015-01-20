@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2028 2015/01/19 00:53:02 wen Exp $
+# $NetBSD: Makefile,v 1.2029 2015/01/20 10:46:38 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1720,6 +1720,7 @@ SUBDIR+=	ruby-extlib
 SUBDIR+=	ruby-facade
 SUBDIR+=	ruby-fast_gettext
 SUBDIR+=	ruby-ffi
+SUBDIR+=	ruby-ffi-yajl
 SUBDIR+=	ruby-fiddle
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-gemcutter
@@ -1742,6 +1743,7 @@ SUBDIR+=	ruby-inline
 SUBDIR+=	ruby-io-console
 SUBDIR+=	ruby-io-like
 SUBDIR+=	ruby-kgio
+SUBDIR+=	ruby-libyajl2
 SUBDIR+=	ruby-linecache
 SUBDIR+=	ruby-little-plugger
 SUBDIR+=	ruby-locale
@@ -1823,6 +1825,7 @@ SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
+SUBDIR+=	ruby-wmi-lite
 SUBDIR+=	ruby2ruby
 SUBDIR+=	rubyforge
 SUBDIR+=	rudiments
