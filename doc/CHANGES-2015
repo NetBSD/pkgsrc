@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.354 2015/01/20 09:38:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.355 2015/01/20 10:11:04 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/sessreg to 1.1.0 [wiz 2015-01-20]
 	Updated x11/xcalc to 1.0.6 [wiz 2015-01-20]
 	Updated multimedia/x264-devel to 20141218 [wiz 2015-01-20]
+	Updated sysutils/ruby-chef to 12.0.3 [fhajny 2015-01-20]
