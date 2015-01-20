@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/02/11 09:18:46 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/01/20 09:22:06 wiz Exp $
 
-SHA1 (sessreg-1.0.8.tar.bz2) = dc4fa8b804e7cb4cfbadbef3708c3b97076ddb65
-RMD160 (sessreg-1.0.8.tar.bz2) = f74a47dc735365093ce6152f0b035a7964830214
-Size (sessreg-1.0.8.tar.bz2) = 126979 bytes
+SHA1 (sessreg-1.1.0.tar.bz2) = a27a476f7f39ae30a16dfa25ca07c12378cff7f0
+RMD160 (sessreg-1.1.0.tar.bz2) = b5779a4f4bf7214fd186e41a81d4cf906f6b4443
+Size (sessreg-1.1.0.tar.bz2) = 134484 bytes
