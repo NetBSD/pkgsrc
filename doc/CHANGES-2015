@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.369 2015/01/20 14:12:42 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.370 2015/01/20 14:31:21 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -441,3 +441,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-httpclient to 2.6.0.1 [obache 2015-01-20]
 	Updated multimedia/mpv to 0.7.2 [wiz 2015-01-20]
 	Updated lang/ocaml to 4.02.1 [jaapb 2015-01-20]
+	Updated devel/pcre-ocaml to 7.1.5 [jaapb 2015-01-20]
