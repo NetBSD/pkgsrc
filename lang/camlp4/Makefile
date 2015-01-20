@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/10/09 20:39:27 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/20 15:40:14 jaapb Exp $
 
 DISTNAME=	4.02.0+1
 PKGNAME=	camlp4-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://github.com/ocaml/camlp4/archive/
 DIST_SUBDIR=	ocaml-camlp4
