@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/15 10:47:20 obache Exp $
-${RUBY_VENDORLIB}/mp3info.rb
-${RUBY_VENDORLIB}/mp3info/extension_modules.rb
-${RUBY_VENDORLIB}/mp3info/id3v2.rb
+@comment $NetBSD: PLIST,v 1.2 2015/01/20 10:25:45 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/mp3info.rb
+${GEM_LIBDIR}/lib/mp3info/extension_modules.rb
+${GEM_LIBDIR}/lib/mp3info/id3v2.rb
+${GEM_LIBDIR}/test/fixtures.yml
+${GEM_LIBDIR}/test/test_ruby-mp3info.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
