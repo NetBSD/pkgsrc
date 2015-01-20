@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2014/10/09 22:19:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.78 2015/01/20 14:24:36 jaapb Exp $
 #
 
 DISTNAME=	coq-8.4pl4
 PKGNAME=	${DISTNAME} # to avoid prefixing with ocaml-
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PKGVERSION_NOREV}/files/
 
