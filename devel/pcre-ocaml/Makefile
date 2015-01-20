@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 19:41:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2015/01/20 14:31:09 jaapb Exp $
 
 DISTNAME=		pcre-ocaml-${VERSION}
 PKGNAME=	${DISTNAME} # avoid prefixing with ocaml
-VERSION=	7.1.1
+VERSION=	7.1.5
 CATEGORIES=		devel
 MASTER_SITES=		http://github.com/mmottl/pcre-ocaml/releases/download/v${VERSION}/
 LICENSE=	gnu-lgpl-v2.1
@@ -13,16 +13,14 @@ COMMENT=		Perl compatible regular expressions for OCaml
 
 OCAML_USE_OASIS=	yes
 USE_TOOLS=	pax
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/ocaml.mk"
 
-.if ${OCAML_USE_OPT_COMPILER} != "yes"
-BUILD_TARGET=		byte
-.endif
-
 EGDIR=			${PREFIX}/share/examples/pcre-ocaml
 INSTALLATION_DIRS+=	${EGDIR}
+WRAPPER_DEBUG=	yes
 
 post-install:
 	cd ${WRKSRC}/examples && pax -rw -pm . ${DESTDIR}${EGDIR}

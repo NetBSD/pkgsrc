@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/09 19:39:24 jaapb Exp $
-lib/ocaml/site-lib/pcre/META
-lib/ocaml/site-lib/pcre/dllpcre_stubs.so
-lib/ocaml/site-lib/pcre/libpcre_stubs.a
-${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.a
-lib/ocaml/site-lib/pcre/pcre.cma
-${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.cmx
-${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.cmxa
-${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.cmxs
-lib/ocaml/site-lib/pcre/pcre.cmi
-lib/ocaml/site-lib/pcre/pcre.mli
+@comment $NetBSD: PLIST,v 1.6 2015/01/20 14:31:09 jaapb Exp $
+${OCAML_SITELIB}/pcre/META
+${OCAML_SITELIB}/pcre/dllpcre_stubs.so
+${OCAML_SITELIB}/pcre/libpcre_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.a
+${OCAML_SITELIB}/pcre/pcre.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.cmxs
+${OCAML_SITELIB}/pcre/pcre.annot
+${OCAML_SITELIB}/pcre/pcre.cmi
+${OCAML_SITELIB}/pcre/pcre.cmt
+${OCAML_SITELIB}/pcre/pcre.cmti
+${OCAML_SITELIB}/pcre/pcre.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre_compat.cmx
 share/examples/pcre-ocaml/cloc/README.md
 share/examples/pcre-ocaml/cloc/cloc.ml
 share/examples/pcre-ocaml/count_hash/README.md
@@ -17,5 +21,5 @@ share/examples/pcre-ocaml/pcregrep/README.md
 share/examples/pcre-ocaml/pcregrep/pcregrep.ml
 share/examples/pcre-ocaml/subst/README.md
 share/examples/pcre-ocaml/subst/subst.ml
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pcre
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pcre
+@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/pcre
+@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/pcre
