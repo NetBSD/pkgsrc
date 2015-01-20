@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/07/06 12:28:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/01/20 10:52:50 obache Exp $
 bin/seqdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,11 @@ ${PYSITELIB}/seqdiag/metrics.pyo
 ${PYSITELIB}/seqdiag/parser.py
 ${PYSITELIB}/seqdiag/parser.pyc
 ${PYSITELIB}/seqdiag/parser.pyo
+${PYSITELIB}/seqdiag/tests/VLGothic/LICENSE
+${PYSITELIB}/seqdiag/tests/VLGothic/LICENSE.en
+${PYSITELIB}/seqdiag/tests/VLGothic/LICENSE_E.mplus
+${PYSITELIB}/seqdiag/tests/VLGothic/LICENSE_J.mplus
+${PYSITELIB}/seqdiag/tests/VLGothic/VL-Gothic-Regular.ttf
 ${PYSITELIB}/seqdiag/tests/diagrams/alt_block.diag
 ${PYSITELIB}/seqdiag/tests/diagrams/altblock.diag
 ${PYSITELIB}/seqdiag/tests/diagrams/diagram_class.diag
