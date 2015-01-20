@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1052 2015/01/20 08:18:45 he Exp $
+# $NetBSD: Makefile,v 1.1053 2015/01/20 10:47:10 fhajny Exp $
 #
 
 COMMENT=	Networking tools
@@ -636,6 +636,7 @@ SUBDIR+=	ruby-domain_name
 SUBDIR+=	ruby-em-socksify
 SUBDIR+=	ruby-icmp
 SUBDIR+=	ruby-ipaddress
+SUBDIR+=	ruby-net-dhcp
 SUBDIR+=	ruby-net-ldap
 SUBDIR+=	ruby-net-ping
 SUBDIR+=	ruby-netaddr
