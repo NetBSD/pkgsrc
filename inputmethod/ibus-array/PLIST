@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 01:53:41 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/20 11:24:33 obache Exp $
 libexec/ibus-engine-array
 libexec/ibus-setup-array
 share/ibus-array/icons/ibus-array.png
@@ -10,3 +10,4 @@ share/ibus-array/setup/main.pyc
 share/ibus-array/setup/main.pyo
 share/ibus-array/tables/array.db
 share/ibus/component/array.xml
+share/locale/zh_TW/LC_MESSAGES/ibus-array.mo
