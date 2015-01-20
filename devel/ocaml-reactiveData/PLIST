@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/20 15:19:54 jaapb Exp $
+${OCAML_SITELIB}/reactiveData/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.a
+${OCAML_SITELIB}/reactiveData/reactiveData.cma
+${OCAML_SITELIB}/reactiveData/reactiveData.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.cmxs
+${OCAML_SITELIB}/reactiveData/reactiveData.mli
