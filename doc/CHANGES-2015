@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.351 2015/01/20 08:18:01 he Exp $
+$NetBSD: CHANGES-2015,v 1.352 2015/01/20 09:22:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/ruby-chef-zero to 3.2.1 [fhajny 2015-01-19]
 	Updated x11/xf86-video-vmware to 13.1.0 [wiz 2015-01-19]
 	Added net/radsecproxy version 1.6.6 [he 2015-01-20]
+	Updated x11/sessreg to 1.1.0 [wiz 2015-01-20]
