@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.375 2015/01/20 16:31:42 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.376 2015/01/20 16:44:35 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -447,3 +447,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/js_of_ocaml to 2.5nb1 [jaapb 2015-01-20]
 	Added devel/ocaml-sexplib version 112.01.00 [jaapb 2015-01-20]
 	Updated net/ocaml-ipaddr to 2.5.0 [jaapb 2015-01-20]
+	Added sysutils/xenkernel45 version 4.5.0 [bouyer 2015-01-20]
+	Added sysutils/xentools45 version 4.5.0 [bouyer 2015-01-20]
