@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/07/15 02:02:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2015/01/21 09:12:41 obache Exp $
 
 DISTNAME=		yap-6.3.3
+PKGREVISION=		1
 CATEGORIES=		lang
 # MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yap/}
 MASTER_SITES=		http://www.dcc.fc.up.pt/~vsc/Yap/ \
