@@ -1,7 +1,7 @@
-$NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+$NetBSD: patch-qemu-xen-traditional_configure,v 1.2 2015/01/21 08:53:21 bouyer Exp $
 
 --- qemu-xen-traditional/configure.orig	2014-10-06 17:50:24.000000000 +0200
-+++ qemu-xen-traditional/configure	2015-01-19 14:17:28.000000000 +0100
++++ qemu-xen-traditional/configure	2015-01-20 22:58:07.000000000 +0100
 @@ -1089,7 +1089,7 @@
  # Check if tools are available to build documentation.
  if [ -x "`which texi2html 2>/dev/null`" ] && \
@@ -29,3 +29,13 @@ $NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2015/01/20 16:42:13 bouyer E
  echo "CC=$cc" >> $config_mak
  echo "HOST_CC=$host_cc" >> $config_mak
  echo "AR=$ar" >> $config_mak
+@@ -1493,7 +1495,9 @@
+ # XXX: suppress that
+ if [ "$bsd" = "yes" ] ; then
+   echo "#define O_LARGEFILE 0" >> $config_h
++  echo "#ifndef MAP_ANONYMOUS" >> $config_h
+   echo "#define MAP_ANONYMOUS MAP_ANON" >> $config_h
++  echo "#endif" >> $config_h
+   echo "#define _BSD 1" >> $config_h
+ fi
+ 
