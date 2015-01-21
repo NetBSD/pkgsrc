@@ -1,0 +1,13 @@
+$NetBSD: patch-src_GNUmakefile,v 1.1 2015/01/21 15:18:05 joerg Exp $
+
+--- src/GNUmakefile.orig	2015-01-19 16:06:40.000000000 +0000
++++ src/GNUmakefile
+@@ -72,7 +72,7 @@ SUBARCH = $(patsubst .%,%,$(suffix $(TEE
+ ## If these are not over-written, we assume that they'll work.
+ ##
+ CC ?= cc
+-LD = ld
++LD = ${CC}
+ AR = ar
+ ARFLAGS = ru
+ RM = rm -f
