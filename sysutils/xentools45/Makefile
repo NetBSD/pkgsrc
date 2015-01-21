@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/21 08:53:21 bouyer Exp $
 
 VERSION=	4.5.0
 VERSION_IPXE=	9a93db3f0947484e30e753bbd61a10b17336e20e
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools45-${VERSION}
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -23,10 +23,6 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 .if !exists(/usr/bin/iasl)
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
-DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
-DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
 
 PKG_SYSCONFSUBDIR=	xen
 
@@ -206,7 +202,6 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../textproc/py-xml/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
