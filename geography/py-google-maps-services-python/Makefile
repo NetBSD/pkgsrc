@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/01/12 10:27:41 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/21 13:22:20 kleink Exp $
 
 DISTNAME=	google-maps-services-python-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	geography python
 MASTER_SITES=	-https://github.com/googlemaps/google-maps-services-python/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -12,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
-EGG_NAME=	googlemaps
+EGG_NAME=	googlemaps-${PKGVERSION_NOREV}
 PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/egg.mk"
