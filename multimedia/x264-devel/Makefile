@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/01/20 09:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/01/21 18:15:17 adam Exp $
 
 SNAPSHOT_DATE=	20141218
 
@@ -48,9 +48,8 @@ BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-USE_TOOLS+=		gmake bash
+USE_TOOLS+=		bash gmake
 USE_LIBTOOL=		yes
-
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${BASH}
 CONFIGURE_ARGS+=	--enable-pic	# uses libtool's -prefer-pic
@@ -70,7 +69,6 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 BUILD_TARGET=		default
 INSTALL_TARGET=		install-lib-static install-cli
 INSTALLATION_DIRS=	bin
-BUILDLINK_TRANSFORM+=	rm:-O4	# XXX does this mean anything to any compiler?
 REPLACE_SH=		strip_fopt.sh version.sh
 
 .include "../../mk/dlopen.buildlink3.mk"

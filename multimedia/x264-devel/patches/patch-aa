@@ -1,6 +1,11 @@
-$NetBSD: patch-aa,v 1.19 2014/10/24 10:20:44 adam Exp $
+$NetBSD: patch-aa,v 1.20 2015/01/21 18:15:17 adam Exp $
 
---- configure.orig	2014-10-23 20:45:04.000000000 +0000
+Add support for DragonFly.
+Use 'amd64' as a synonym for 'x86_64'.
+Avoid endian test failure for -flto.
+Do not force compiler optimisations.
+
+--- configure.orig	2014-11-28 21:45:04.000000000 +0000
 +++ configure
 @@ -516,6 +516,10 @@ case $host_os in
          SYS="FREEBSD"
@@ -39,6 +44,15 @@ $NetBSD: patch-aa,v 1.19 2014/10/24 10:20:44 adam Exp $
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
+@@ -817,7 +822,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
+ # skip endianness check for Intel Compiler and MSVS, as all supported platforms are little. each have flags that will cause the check to fail as well
+ if [ $compiler = GNU ]; then
+     echo "int i[2] = {0x42494745,0}; double f[2] = {0x1.0656e6469616ep+102,0};" > conftest.c
+-    $CC $CFLAGS conftest.c -c -o conftest.o 2>/dev/null || die "endian test failed"
++    $CC $CPPFLAGS conftest.c -c -o conftest.o 2>/dev/null || die "endian test failed"
+     if (${cross_prefix}strings -a conftest.o | grep -q BIGE) && (${cross_prefix}strings -a conftest.o | grep -q FPendian) ; then
+         define WORDS_BIGENDIAN
+     elif !(${cross_prefix}strings -a conftest.o | grep -q EGIB && ${cross_prefix}strings -a conftest.o | grep -q naidnePF) ; then
 @@ -830,7 +835,7 @@ fi
  # pthread-win32 is lgpl, prevent its use if --disable-gpl is specified and targeting windows
  [ "$SYS" = "WINDOWS" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
@@ -62,3 +76,21 @@ $NetBSD: patch-aa,v 1.19 2014/10/24 10:20:44 adam Exp $
      [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
  fi
  
+@@ -1061,8 +1067,6 @@ fi
+ 
+ if [ "$debug" = "yes" ]; then
+     CFLAGS="-O1 -g $CFLAGS"
+-else
+-    CFLAGS="-O3 -ffast-math $CFLAGS"
+ fi
+ 
+ if cc_check '' -fno-tree-vectorize ; then
+@@ -1154,7 +1158,7 @@ else # gcc/icc
+     DEPMM="$DEPMM -g0"
+     AR="$AR rc "
+     LD="$CC -o "
+-    LIBX264=libx264.a
++    LIBX264=libx264.la
+     [ -n "$RC" ] && RCFLAGS="$RCFLAGS -I. -o "
+ fi
+ [ $compiler != GNU ] && CFLAGS="$(cc_cflags $CFLAGS)"
