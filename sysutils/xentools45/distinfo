@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/01/21 08:53:21 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -36,7 +36,7 @@ SHA1 (patch-ocaml_xenstored_utils.ml) = 04997cb9189a3331522c344aa1957e61febfd4d2
 SHA1 (patch-pygrub_Makefile) = 4380d7ddeed41c80e47f8130760f4bdc6842a394
 SHA1 (patch-qemu-xen-traditional_Makefile) = aac50189b3e359314c5d47745d50113f190bbbe0
 SHA1 (patch-qemu-xen-traditional_block-raw-posix.c) = fb03fe527515424d72758b606ab8d2e5bf8c341b
-SHA1 (patch-qemu-xen-traditional_configure) = 34499887d6e426c29e0514407a9b6e23d2496064
+SHA1 (patch-qemu-xen-traditional_configure) = a29520d12c229feed85b335e9241dc085427a3db
 SHA1 (patch-qemu-xen-traditional_hw_e1000.c) = d94874baa64a0974d29c8c3a117cf0fae030952d
 SHA1 (patch-qemu-xen-traditional_hw_ide.c) = fb674b326321f4865183eee889967b1a948698e0
 SHA1 (patch-qemu-xen-traditional_hw_pass-through.c) = b87481f764e16fb1345c44b4f46fa3837901a4e2
