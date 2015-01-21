@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2014/10/05 16:41:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/01/21 15:19:56 joerg Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -22,6 +22,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docs.gimp.org/
 LICENSE=	gnu-fdl-v1.2
+
+# warning: failed to load external entity "xml/de/gimp.xml"
+# unable to parse xml/de/gimp.xml
+# Makefile:1378: recipe for target 'html/de/index.html' failed
+MAKE_JOBS_SAFE=	no
 
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
