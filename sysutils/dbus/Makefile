@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2015/01/20 23:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2015/01/21 05:38:59 pho Exp $
 
 DISTNAME=	dbus-1.8.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -28,6 +28,8 @@ SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROU
 SMF_METHODS=	dbus
 SMF_NAME=	dbus
 
+MESSAGE_SRC+=	MESSAGE
+
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
@@ -36,6 +38,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS_GROUPS=	enable disable with without
 
 .if ${OPSYS} == "Darwin"
+MESSAGE_SRC+=		MESSAGE.launchd
 CONFIGURE_ARGS+=	--with-launchd-agent-dir=${PREFIX}/Library/LaunchAgents
 CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
 .endif
