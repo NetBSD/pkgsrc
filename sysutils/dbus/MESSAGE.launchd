@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE.launchd,v 1.1 2015/01/21 05:38:59 pho Exp $
+
+A launchd agent configuration file has been installed at:
+  ${PREFIX}/Library/LaunchAgents/org.freedesktop.dbus-session.plist
+
+You need to manually load it to auto-start a session bus. Without
+loading it, no applications can start a bus nor find an existing one:
+  % sudo launchctl load \
+      ${PREFIX}/Library/LaunchAgents/org.freedesktop.dbus-session.plist
+
+Or alternatively, you can copy it under the system default path to
+automatically load it on system boot:
+  % sudo cp \
+      ${PREFIX}/Library/LaunchAgents/org.freedesktop.dbus-session.plist \
+      /Library/LaunchAgents/
+  % sudo launchctl load \
+      /Library/LaunchAgents/org.freedesktop.dbus-session.plist
+
+===========================================================================
