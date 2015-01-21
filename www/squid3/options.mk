@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2014/04/01 09:57:07 adam Exp $
+# $NetBSD: options.mk,v 1.14 2015/01/21 11:23:16 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -11,9 +11,9 @@ PKG_OPTIONS_LEGACY_OPTS+=	diskd:squid-backend-diskd \
 	arp-acl:squid-arp-acl pam-helper:squid-pam-helper carp:squid-carp
 
 PLIST_VARS+=	diskd snmp unlinkd
-PLIST_VARS+=	ba_LDAP ba_MSNT ba_NCSA ba_NIS ba_PAM ba_getpwnam
+PLIST_VARS+=	ba_LDAP ba_NCSA ba_NIS ba_PAM ba_getpwnam
 PLIST_VARS+=	da_file da_LDAP
-PLIST_VARS+=	na_SMB
+PLIST_VARS+=	na_sml_lm
 PLIST_VARS+=	ta_kerberos
 PLIST_VARS+=	eacl_file_userip eacl_LDAP_group eacl_unix_group
 PLIST_VARS+=	ssl
@@ -59,9 +59,9 @@ PKG_SUPPORTED_OPTIONS+=	squid-arp-acl
 .include "../../mk/bsd.options.mk"
 
 SQUID_BACKENDS?=		ufs
-SQUID_BASIC_AUTH_HELPERS?=	MSNT NCSA NIS getpwnam
+SQUID_BASIC_AUTH_HELPERS?=	NCSA NIS getpwnam
 SQUID_DIGEST_AUTH_HELPERS?=	file
-SQUID_NTLM_AUTH_HELPERS?=	fake
+SQUID_NTLM_AUTH_HELPERS?=	fake smb_lm
 SQUID_EXTERNAL_ACL_HELPERS?=	file_userip unix_group
 
 # squid's code has preference as:
@@ -190,8 +190,11 @@ squid-enable-helper-negotiate_auth:
 CONFIGURE_ARGS+=	--disable-auth-ntlm
 .else
 CONFIGURE_ARGS+=	--enable-auth-ntlm=${SQUID_NTLM_AUTH_HELPERS:Q}
+.PHONY: squid-enable-helper-ntlm_auth
+pre-configure: squid-enable-helper-ntlm_auth
+squid-enable-helper-ntlm_auth:
 .  for i in ${SQUID_NTLM_AUTH_HELPERS}
-PLIST.na_${i}=		yes
+	${ECHO} "exit 0" > ${WRKSRC}/helpers/ntlm_auth/${i}/config.test
 .  endfor
 .endif
 

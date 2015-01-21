@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.4 2015/01/21 11:23:16 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2015-01-21 08:58:55.000000000 +0000
++++ configure
+@@ -32600,7 +32600,7 @@ done
+ ## Please see the COPYING and CONTRIBUTORS files for details.
+ ##
+ 
+-if test "x$with_krb5" == "xyes"; then
++if test "x$with_krb5" = "xyes"; then
+   BUILD_HELPER="kerberos"
+ fi
+ 
+@@ -33141,7 +33141,7 @@ done
+ ## Please see the COPYING and CONTRIBUTORS files for details.
+ ##
+ 
+-if test "x$with_krb5" == "xyes"; then
++if test "x$with_krb5" = "xyes"; then
+   BUILD_HELPER="kerberos_ldap_group"
+ 
+   squid_cv_check_sasl="auto"
