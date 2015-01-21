@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2008/05/28 22:01:16 abs Exp $
+$NetBSD: distinfo,v 1.11 2015/01/21 21:43:07 wiz Exp $
 
-SHA1 (AppConfig-1.66.tar.gz) = 177d362530b532ee70dd59ab899eb83664b7bbda
-RMD160 (AppConfig-1.66.tar.gz) = 172ea4493291722cd5acd414395fa1d96597dd84
-Size (AppConfig-1.66.tar.gz) = 63521 bytes
+SHA1 (AppConfig-1.67.tar.gz) = dd70f4caf28fbed2917425ef1a1f51d1ceaecd4a
+RMD160 (AppConfig-1.67.tar.gz) = 8fce2371d56b4406da5c4f2bc24821b7e2e61272
+Size (AppConfig-1.67.tar.gz) = 64463 bytes
