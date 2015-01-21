@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/09/02 13:02:13 shattered Exp $
+# $NetBSD: options.mk,v 1.8 2015/01/21 13:45:18 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
 PKG_SUPPORTED_OPTIONS+=	debug x11
@@ -11,6 +11,12 @@ PKG_SUGGESTED_OPTIONS=	x11
      ${OPSYS} == "DragonFly")
 PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
+.endif
+
+.if ${OPSYS} == "Darwin"
+# We may want to make it SUGGESTED once we have a framework for
+# launchd support. See PR/49591.
+PKG_SUPPORTED_OPTIONS+=	launchd
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -34,4 +40,13 @@ BUILDLINK_DEPMETHOD.libXt=	build
 .  include "../../x11/libXt/buildlink3.mk"
 .else
 CONFIGURE_ARGS.without=	x
+.endif
+
+.if !empty(PKG_OPTIONS:Mlaunchd)
+MESSAGE_SRC+=			MESSAGE.launchd
+PLIST.launchd=			yes
+CONFIGURE_ARGS.enable+=		launchd
+CONFIGURE_ARGS.with+=		launchd-agent-dir=${PREFIX}/Library/LaunchAgents
+.else
+CONFIGURE_ARGS.disable+=	launchd
 .endif

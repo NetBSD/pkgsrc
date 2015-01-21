@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2015/01/20 23:45:35 wiz Exp $
-Library/LaunchAgents/org.freedesktop.dbus-session.plist
