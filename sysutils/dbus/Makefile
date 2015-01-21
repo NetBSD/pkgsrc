@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2015/01/21 05:38:59 pho Exp $
+# $NetBSD: Makefile,v 1.80 2015/01/21 13:45:18 pho Exp $
 
 DISTNAME=	dbus-1.8.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -38,19 +38,19 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS_GROUPS=	enable disable with without
 
 .if ${OPSYS} == "Darwin"
-MESSAGE_SRC+=		MESSAGE.launchd
-CONFIGURE_ARGS+=	--with-launchd-agent-dir=${PREFIX}/Library/LaunchAgents
-CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
+# Prevent the configure script from picking up a per-user tmp
+# directory. See the commit message on revision 1.35
+CONFIGURE_ARGS.with+=	session-socket-dir=/tmp
 .endif
 
 CONFIGURE_ARGS.Linux=	abstract-sockets selinux
 CONFIGURE_ARGS.docs=	doxygen-docs xml-docs
 
 CONFIGURE_ARGS.without+=	init-scripts
-CONFIGURE_ARGS.disable=		ansi
+CONFIGURE_ARGS.disable+=	ansi
 CONFIGURE_ARGS.disable+=	console-owner-file
 CONFIGURE_ARGS.disable+=	${CONFIGURE_ARGS.docs}
-CONFIGURE_ARGS.enable=		checks static
+CONFIGURE_ARGS.enable+=		checks static
 ###
 ### XXX the spawn test hangs, and some of these tests may be bogus
 ###
@@ -59,7 +59,7 @@ CONFIGURE_ARGS.enable=		checks static
 #TEST_TARGET=			check
 #.endif
 
-CONFIGURE_ARGS.with=	dbus-user=${DBUS_USER}
+CONFIGURE_ARGS.with+=	dbus-user=${DBUS_USER}
 CONFIGURE_ARGS.with+=	test-socket-dir=${WRKDIR:Q}
 
 PTHREAD_AUTO_VARS=	yes
@@ -71,7 +71,7 @@ CONFIGURE_ARGS.disable+=\
 			${CONFIGURE_ARGS.Linux}
 .endif
 
-PLIST_VARS+=    	linux
+PLIST_VARS+=    	linux launchd
 
 CONFIGURE_ARGS+=\
 	${CONFIGURE_ARGS_GROUPS:@.g.@			\
