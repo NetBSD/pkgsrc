@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/01/11 13:25:11 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/01/21 15:18:05 joerg Exp $
 
 SHA1 (teem-1.8.0-src.tar.gz) = fd57c40136d877d33cb45b2afc54a95564e67225
 RMD160 (teem-1.8.0-src.tar.gz) = 7154b1a7b12a08f7267017e213794673f6192827
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 6eb2ebdc6c4f7c4235bb714dda2e116a32e794c0
 SHA1 (patch-ab) = 0dbbe8290711e18d4c1312a452aaee19a13b5a04
 SHA1 (patch-ac) = 5e3f9a3fcf2c3807025fec65f5bb034691ba9457
 SHA1 (patch-ad) = c977a2bde100f2280a7db6182ae1d02e28b4a0bc
+SHA1 (patch-src_GNUmakefile) = 591cabd53dc7593387b8fe7442dc9021f2f6da14
