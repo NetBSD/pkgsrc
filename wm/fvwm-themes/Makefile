@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/21 15:22:14 joerg Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -24,6 +24,7 @@ USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-ft-datadir=${PREFIX}/share/fvwm2
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include --x-libraries=${X11BASE}/lib
 
 REPLACE_PERL+=	themes/cde/modules/create-buttonbar-config
 
