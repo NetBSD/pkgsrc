@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/11/07 19:39:33 adam Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/21 15:19:31 joerg Exp $
 
 DISTNAME=	pingus-0.7.3
 PKGREVISION=	12
@@ -13,14 +13,7 @@ COMMENT=	Lemmings(TM) Clone
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 USE_LANGUAGES+=		c c++
 
-SUBST_CLASSES+=			fix-prefix
-SUBST_STAGE.fix-prefix=		post-patch
-SUBST_MESSAGE.fix-prefix=	Fixing buildlink prefix
-SUBST_FILES.fix-prefix=		SConstruct
-SUBST_SED.fix-prefix=		-e 's,BUILDLINK_DIR,${BUILDLINK_DIR},'
-
 MAKE_JOBS?=	1
-
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 SCONS_CXX=	${CXX} -std=c++11
@@ -28,11 +21,9 @@ SCONS_CXX=	${CXX} -std=c++11
 SCONS_CXX=	${CXX}
 .endif
 
-MAKE_ENV+=	CPPPATH=${BUILDLINK_DIR}/include LIBPATH=${BUILDLINK_DIR}/lib
-
 do-configure:
 	cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${MAKE_ENV} scons configure CXX=${SCONS_CXX:Q}
+	${PKGSRC_SETENV} ${MAKE_ENV} scons configure CXX=${SCONS_CXX:Q} CPPPATH=${PREFIX}/include LIBPATH=${PREFIX}/lib
 
 do-build:
 	cd ${WRKSRC} && \
