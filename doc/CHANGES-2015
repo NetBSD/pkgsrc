@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.383 2015/01/21 15:43:00 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.384 2015/01/21 21:42:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/py-google-maps-services-python to 2.0nb1 [kleink 2015-01-21]
 	Updated www/squid3 to 3.5.1 [adam 2015-01-21]
 	Updated databases/elasticsearch to 1.4.2 [fhajny 2015-01-21]
+	Updated net/p5-Net-DNS to 0.82 [wiz 2015-01-21]
