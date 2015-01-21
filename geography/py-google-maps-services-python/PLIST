@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/12 10:27:41 kleink Exp $
-${PYSITELIB}/googlemaps-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/googlemaps-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/googlemaps-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/googlemaps-${PKGVERSION}-py2.7.egg-info/requires.txt
-${PYSITELIB}/googlemaps-${PKGVERSION}-py2.7.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2015/01/21 13:22:20 kleink Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/googlemaps/__init__.py
 ${PYSITELIB}/googlemaps/__init__.pyc
 ${PYSITELIB}/googlemaps/__init__.pyo
