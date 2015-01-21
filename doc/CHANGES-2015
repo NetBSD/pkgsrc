@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.380 2015/01/21 07:02:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.381 2015/01/21 13:24:21 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/easytag to 2.2.5 [degroote 2015-01-20]
 	Updated sysutils/dbus to 1.8.14nb1 [wiz 2015-01-20]
 	Updated net/openntpd to 5.7p2nb1 [wiz 2015-01-21]
+	Updated geography/py-google-maps-services-python to 2.0nb1 [kleink 2015-01-21]
