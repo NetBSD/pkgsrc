@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2013/02/16 11:21:25 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2015/01/21 15:19:31 joerg Exp $
 
 NetBSD config & path fixes
 
---- SConstruct.orig	2010-03-18 15:34:15.000000000 +0200
-+++ SConstruct	2011-01-19 20:02:53.000000000 +0200
+--- SConstruct.orig	2010-03-18 13:34:15.000000000 +0000
++++ SConstruct
 @@ -19,7 +19,7 @@
  ##  along with this program; if not, write to the Free Software
  ##  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
@@ -13,7 +13,7 @@ NetBSD config & path fixes
  import SCons.Util
  
  pingus_sources = [
-@@ -348,7 +348,10 @@
+@@ -348,7 +348,10 @@ def DefineOptions(filename, args):
  
     opts.Add(BoolVariable('with_xinput',        'Build with Xinput support', False))
     opts.Add(BoolVariable('with_linuxusbmouse', 'Build with Linux USB mouse support', True))
@@ -25,7 +25,7 @@ NetBSD config & path fixes
     opts.Add(BoolVariable('with_wiimote',       'Build with Wiimote support', False))
     opts.Add(BoolVariable('ignore_errors',      'Ignore any fatal configuration errors', False))
     opts.Add('optional_sources', 'Additional source files', [])
-@@ -383,7 +386,10 @@
+@@ -383,7 +386,10 @@ int main() {
     return 0;
  }
  """
@@ -37,14 +37,30 @@ NetBSD config & path fixes
     context.Message('Check how to call iconv...')
  
     for i in ['', 'const']:
-@@ -539,7 +545,9 @@
+@@ -408,7 +414,7 @@ if ('configure' in COMMAND_LINE_TARGETS)
+    not (os.path.exists('config.py') and os.path.exists('config.h')) and \
+    not GetOption('clean'):
+     opts = DefineOptions(None, ARGUMENTS)
+-    env = Environment(options = opts)
++    env = Environment(options = opts, ENV=os.environ)
      Help(opts.GenerateHelpText(env))
  
      opts.Update(env)
+@@ -421,7 +427,7 @@ if ('configure' in COMMAND_LINE_TARGETS)
+     if os.environ.has_key('PKG_CONFIG_PATH'):
+         env['ENV']['PKG_CONFIG_PATH'] = os.environ['PKG_CONFIG_PATH']
+     
 -    env['CPPPATH'] += ['.', 'src/']
-+    env['CPPPATH'] += ['.', 'src/', 'BUILDLINK_DIR/include']
-+    env['LIBPATH'] += ['BUILDLINK_DIR/lib', '/usr/lib/i18n']
-+    env['ENV']['PATH'] = os.environ['PATH']
-     Default(env.Program('pingus', pingus_sources + env['optional_sources']))
-     Clean('pingus', ['config.py', 'config.h'])
++    env['CPPPATH'] += '.:src/'
  
+     config_h_defines = []      
+ 
+@@ -535,7 +541,7 @@ if not ('configure' in COMMAND_LINE_TARG
+         os.sys.exit(1)
+         
+     opts = DefineOptions("config.py", {})
+-    env = Environment(options = opts)
++    env = Environment(options = opts, ENV=os.environ)
+     Help(opts.GenerateHelpText(env))
+ 
+     opts.Update(env)
