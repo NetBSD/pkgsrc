@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.381 2015/01/21 13:24:21 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.382 2015/01/21 14:23:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -456,3 +456,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/dbus to 1.8.14nb1 [wiz 2015-01-20]
 	Updated net/openntpd to 5.7p2nb1 [wiz 2015-01-21]
 	Updated geography/py-google-maps-services-python to 2.0nb1 [kleink 2015-01-21]
+	Updated www/squid3 to 3.5.1 [adam 2015-01-21]
