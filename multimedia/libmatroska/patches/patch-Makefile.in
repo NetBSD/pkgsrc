@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/01/22 14:43:19 pho Exp $
+
+Fix linkage failure of libmatroska due to missing -lebml flag. This
+seems to be an actual issue only on non-ELF platforms.
+
+Pull request sent and merged to the upstream:
+https://github.com/Matroska-Org/libmatroska/pull/5
+
+--- Makefile.in.orig	2015-01-04 14:07:12.000000000 +0000
++++ Makefile.in
+@@ -386,7 +386,7 @@ libmatroska_la_SOURCES = \
+ 	src/KaxTracks.cpp \
+ 	src/KaxVersion.cpp
+ 
+-libmatroska_la_LDFLAGS = -version-info 6:0:0 -no-undefined
++libmatroska_la_LDFLAGS = $(EBML_LIBS) -version-info 6:0:0 -no-undefined
+ nobase_include_HEADERS = \
+ 	matroska/c/libmatroska.h \
+ 	matroska/c/libmatroska_t.h \
