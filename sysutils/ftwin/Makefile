@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/01/21 09:12:41 obache Exp $
+# $NetBSD: Makefile,v 1.29 2015/01/22 20:46:58 wiz Exp $
 
 DISTNAME=	ftwin-0.8.8
 PKGREVISION=	3
@@ -15,6 +15,9 @@ GNU_CONFIGURE=		yes
 DOCDIR=			${PREFIX}/share/doc/ftwin
 
 INSTALLATION_DIRS+=	${DOCDIR} ${PKGMANDIR}/man8
+
+# 0.8.8 gives warnings with libarchive-3.x
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLES ${DESTDIR}${DOCDIR}
