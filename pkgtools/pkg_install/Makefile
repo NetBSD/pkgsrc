@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2015/01/20 19:15:56 adam Exp $
+# $NetBSD: Makefile,v 1.206 2015/01/22 09:19:47 jperkin Exp $
 
 # Notes to package maintainers:
 #
@@ -174,7 +174,6 @@ pre-configure: config-guess-override config-sub-override
 .endif
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 LDFLAGS+=	-L${WRKDIR}/libfetch
-LIBS+=		-larchive
 
 CONFIGURE_ENV+=	LIBS=${LIBS:Q}
 
