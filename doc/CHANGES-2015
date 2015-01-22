@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.388 2015/01/21 21:47:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.389 2015/01/22 04:58:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-LibXSLT to 1.94 [wiz 2015-01-21]
 	Updated devel/p5-Clone to 0.38 [wiz 2015-01-21]
 	Updated textproc/p5-Filter to 1.54 [wiz 2015-01-21]
+	Updated devel/bison to 3.0.3 [mef 2015-01-22]
