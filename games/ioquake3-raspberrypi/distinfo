@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/01/22 12:51:00 jmcneill Exp $
+
+SHA1 (ioquake3-raspberrypi-20150118.zip) = 4d41a7d4290d99ce20179d5f693e327831392436
+RMD160 (ioquake3-raspberrypi-20150118.zip) = 4baba47cddba21e25a0e9986b50c9bb6ba22b4e0
+Size (ioquake3-raspberrypi-20150118.zip) = 4062816 bytes
+SHA1 (patch-Makefile) = ea0d64b9be3647c0771ea018fd06500b521e3864
+SHA1 (patch-code_qcommon_q__platform.h) = d0a080004c40b8daebc9e5de24d6a31a6940beca
