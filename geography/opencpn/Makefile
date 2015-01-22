@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/07/08 14:59:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/22 12:34:15 bouyer Exp $
 #
 
-VERSION=	3.2.2
+VERSION=	4.0.0
 DISTNAME=	OpenCPN-${VERSION}-Source
 PKGNAME=	opencpn-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencpn/${VERSION}/}
 
@@ -18,6 +17,7 @@ USE_TOOLS=		gettext
 USE_CMAKE=		yes
 
 CMAKE_ARGS+=	-DPREFIX:PATH=${PREFIX} -DPREFIX_PLUGINS:PATH=${PREFIX}/lib/opencpn
+CMAKE_ARGS+=	-DBUNDLE_DOCS=ON -DBUNDLE_GSHHS=CRUDE -DBUNDLE_TCDATA=ON
 CMAKE_MODULE_PATH_OVERRIDE = \
 		plugins/grib_pi/CMakeLists.txt \
 		plugins/demo_pi_sample/src/CMakeLists.txt \
