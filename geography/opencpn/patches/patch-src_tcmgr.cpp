@@ -1,9 +1,11 @@
-$NetBSD: patch-src_tcmgr.cpp,v 1.1 2014/05/25 18:26:57 bouyer Exp $
-64bit time_t fix
+$NetBSD: patch-src_tcmgr.cpp,v 1.2 2015/01/22 12:34:15 bouyer Exp $
 
---- src/tcmgr.cpp.orig	2014-05-23 17:16:52.000000000 +0200
-+++ src/tcmgr.cpp	2014-05-23 17:18:08.000000000 +0200
-@@ -569,7 +569,7 @@
+64bit time_t fix
+Reported in FS#1403
+
+--- src/tcmgr.cpp.orig	2014-05-26 21:26:36.000000000 +0200
++++ src/tcmgr.cpp	2014-05-26 21:30:22.000000000 +0200
+@@ -518,7 +518,7 @@
          f += fact * w[n] * (fr[deriv-n] - fl[deriv-n]);
          fact *= (double)(deriv - n)/(n+1) * (1.0/TIDE_BLEND_TIME);
      }
