@@ -1,17 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2014/05/25 18:26:57 bouyer Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2015/01/22 12:34:15 bouyer Exp $
 
-/usr/lib/libdl* is not available on NetBSD
-
---- CMakeLists.txt.orig	2014-05-23 16:28:34.000000000 +0200
-+++ CMakeLists.txt	2014-05-23 16:28:41.000000000 +0200
-@@ -818,10 +818,6 @@
+--- CMakeLists.txt.orig	2014-05-26 21:26:36.000000000 +0200
++++ CMakeLists.txt	2014-06-16 11:41:17.000000000 +0200
+@@ -1007,9 +1007,9 @@
  
  #   Certain older Cmake FindGTK2 modules ( e.g. cmake-2.8.0-2) do not yield all of the required link libraries
  #   So, add them manually.  These declarations may be redundant in some architectures, but do no harm.
 -IF(UNIX)
--TARGET_LINK_LIBRARIES( ${PACKAGE_NAME} dl )
++IF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
+ TARGET_LINK_LIBRARIES( ${PACKAGE_NAME} dl )
 -ENDIF(UNIX)
--
++ENDIF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
+ 
  IF(GTK2_FOUND)
  TARGET_LINK_LIBRARIES( ${PACKAGE_NAME} gobject-2.0 )
- ENDIF(GTK2_FOUND)
