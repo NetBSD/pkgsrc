@@ -1,10 +1,11 @@
-$NetBSD: patch-src_chart1.cpp,v 1.1 2014/05/25 18:26:57 bouyer Exp $
+$NetBSD: patch-src_chart1.cpp,v 1.2 2015/01/22 12:34:15 bouyer Exp $
 
 Adapt for tty devices on NetBSD
+Reported in FS#1403
 
---- src/chart1.cpp.orig	2014-05-23 15:58:32.000000000 +0200
-+++ src/chart1.cpp	2014-05-23 16:03:10.000000000 +0200
-@@ -7305,7 +7305,9 @@
+--- src/chart1.cpp.orig	2014-05-26 21:26:36.000000000 +0200
++++ src/chart1.cpp	2014-05-26 21:30:22.000000000 +0200
+@@ -8032,7 +8032,9 @@
  
  #include <termios.h>
  #include <sys/ioctl.h>
@@ -14,7 +15,7 @@ Adapt for tty devices on NetBSD
  
  #endif
  
-@@ -7371,6 +7373,15 @@
+@@ -8098,6 +8100,15 @@
  
  int isTTYreal(const char *dev)
  {
@@ -30,7 +31,7 @@ Adapt for tty devices on NetBSD
      struct serial_struct serinfo;
      int ret = 0;
  
-@@ -7387,6 +7398,7 @@
+@@ -8114,6 +8125,7 @@
      }
  
      return ret;
@@ -38,7 +39,7 @@ Adapt for tty devices on NetBSD
  }
  
  
-@@ -7427,11 +7439,13 @@
+@@ -8154,11 +8166,13 @@
  
  //        We try to add a few more, arbitrarily, for those systems that have fixed, traditional COM ports
  
