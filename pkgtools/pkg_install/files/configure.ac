@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.38 2013/08/03 11:45:14 obache Exp $
+dnl $NetBSD: configure.ac,v 1.39 2015/01/22 18:15:39 pho Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -55,6 +55,9 @@ AC_ARG_ENABLE([bootstrap],
     [bootstrap=yes], [bootstrap=])
 
 AC_SUBST(bootstrap)
+
+dnl Checks for large file support.
+AC_SYS_LARGEFILE
 
 dnl Checks for libraries.
 AC_CHECK_LIB(db, __db185_open, , AC_SEARCH_LIBS(dbopen, [db db1]))
