@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/01/22 11:38:58 obache Exp $
+# $NetBSD: Makefile,v 1.43 2015/01/22 11:53:21 obache Exp $
 
 DISTNAME=	squid-3.5.1
 CATEGORIES=	www
@@ -79,4 +79,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${EGDIR}/`basename ${f} .default`
 .endfor
 
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
