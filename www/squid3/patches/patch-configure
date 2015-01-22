@@ -1,10 +1,28 @@
-$NetBSD: patch-configure,v 1.4 2015/01/21 11:23:16 adam Exp $
+$NetBSD: patch-configure,v 1.5 2015/01/22 11:38:58 obache Exp $
 
-Portability fix.
+* int64_t GNU atomic operations are used, check them instead.
+* Portability fix.
 
---- configure.orig	2015-01-21 08:58:55.000000000 +0000
+--- configure.orig	2015-01-13 12:54:26.000000000 +0000
 +++ configure
-@@ -32600,7 +32600,7 @@ done
+@@ -20128,8 +20128,14 @@ $as_echo "cross-compiler cant tell" >&6;
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-
+-    int n = 0;
++$ac_includes_default
++#ifdef HAVE_INTTYPES_H
++# include <inttypes.h>
++#endif
++#ifdef HAVE_STDINT_H
++# include <stdint.h>
++#endif
++    int64_t n = 0;
+ 
+ int
+ main ()
+@@ -32600,7 +32606,7 @@ done
  ## Please see the COPYING and CONTRIBUTORS files for details.
  ##
  
@@ -13,7 +31,7 @@ Portability fix.
    BUILD_HELPER="kerberos"
  fi
  
-@@ -33141,7 +33141,7 @@ done
+@@ -33141,7 +33147,7 @@ done
  ## Please see the COPYING and CONTRIBUTORS files for details.
  ##
  
