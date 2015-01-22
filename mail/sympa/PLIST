@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.12 2014/08/30 20:26:45 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/01/22 12:04:36 bouyer Exp $
 man/man1/sympa_newaliases.1
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
 man/man8/sympa.8
-share/doc/sympa/sample/README
 share/doc/sympa/NEWS
+share/doc/sympa/sample/README
 share/doc/sympa/sample/employees.ldap
 share/doc/sympa/sample/robot.conf
 share/doc/sympa/sample/test/config
@@ -245,10 +245,12 @@ sympa/default/scenari/access_web_archive.owner
 sympa/default/scenari/access_web_archive.private
 sympa/default/scenari/access_web_archive.public
 sympa/default/scenari/add.auth
+sympa/default/scenari/add.authdkim
 sympa/default/scenari/add.closed
 sympa/default/scenari/add.default
 sympa/default/scenari/add.owner
 sympa/default/scenari/add.owner_notify
+sympa/default/scenari/add.ownerdkim
 sympa/default/scenari/automatic_list_creation.family_owner
 sympa/default/scenari/automatic_list_creation.listmaster
 sympa/default/scenari/automatic_list_creation.public
@@ -267,10 +269,12 @@ sympa/default/scenari/d_read.private
 sympa/default/scenari/d_read.private-https
 sympa/default/scenari/d_read.public
 sympa/default/scenari/del.auth
+sympa/default/scenari/del.authdkim
 sympa/default/scenari/del.closed
 sympa/default/scenari/del.default
 sympa/default/scenari/del.owner
 sympa/default/scenari/del.owner_notify
+sympa/default/scenari/del.ownerdkim
 sympa/default/scenari/global_remind.listmaster
 sympa/default/scenari/info.conceal
 sympa/default/scenari/info.default
@@ -283,7 +287,9 @@ sympa/default/scenari/invite.private
 sympa/default/scenari/invite.public
 sympa/default/scenari/remind.default
 sympa/default/scenari/remind.listmaster
+sympa/default/scenari/remind.listmasterdkim
 sympa/default/scenari/remind.owner
+sympa/default/scenari/remind.ownerdkim
 sympa/default/scenari/review.closed
 sympa/default/scenari/review.default
 sympa/default/scenari/review.intranet
@@ -294,6 +300,7 @@ sympa/default/scenari/review.public
 sympa/default/scenari/send.closed
 sympa/default/scenari/send.confidential
 sympa/default/scenari/send.default
+sympa/default/scenari/send.editordkim
 sympa/default/scenari/send.editorkey
 sympa/default/scenari/send.editorkeyonly
 sympa/default/scenari/send.editorkeyonlyauth
@@ -317,7 +324,10 @@ sympa/default/scenari/send.publicnomultipart
 sympa/default/scenari/spam_status.x-spam-status
 sympa/default/scenari/subscribe.auth
 sympa/default/scenari/subscribe.auth_notify
+sympa/default/scenari/subscribe.auth_notifydkim
 sympa/default/scenari/subscribe.auth_owner
+sympa/default/scenari/subscribe.auth_ownerdkim
+sympa/default/scenari/subscribe.authdkim
 sympa/default/scenari/subscribe.closed
 sympa/default/scenari/subscribe.default
 sympa/default/scenari/subscribe.intranet
@@ -334,6 +344,8 @@ sympa/default/scenari/topics_visibility.identified
 sympa/default/scenari/topics_visibility.noconceal
 sympa/default/scenari/unsubscribe.auth
 sympa/default/scenari/unsubscribe.auth_notify
+sympa/default/scenari/unsubscribe.auth_notifydkim
+sympa/default/scenari/unsubscribe.authdkim
 sympa/default/scenari/unsubscribe.closed
 sympa/default/scenari/unsubscribe.default
 sympa/default/scenari/unsubscribe.open
