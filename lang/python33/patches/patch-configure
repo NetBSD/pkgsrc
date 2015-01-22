@@ -1,7 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2015/01/01 21:39:45 he Exp $
+$NetBSD: patch-configure,v 1.2 2015/01/22 11:09:18 sevan Exp $
 
 Add support for MirBSD and Interix.
 Don't make SO-ABI-dependent shared lib names on Linux.
+Don't trim the library name on FreeBSD.
 
 --- configure.orig	2014-10-12 07:03:54.000000000 +0000
 +++ configure
@@ -14,7 +15,7 @@ Don't make SO-ABI-dependent shared lib names on Linux.
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5602,7 +5602,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5602,15 +5602,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -23,7 +24,15 @@ Don't make SO-ABI-dependent shared lib names on Linux.
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -8473,8 +8473,8 @@ then
+-	  case $ac_sys_system in
+-	      FreeBSD*)
+-		SOVERSION=`echo $SOVERSION|cut -d "." -f 1`
+-		;;
+-	  esac
+ 	  INSTSONAME="$LDLIBRARY".$SOVERSION
+ 	  if test "$with_pydebug" != yes
+           then
+@@ -8473,8 +8468,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -34,7 +43,7 @@ Don't make SO-ABI-dependent shared lib names on Linux.
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -8499,9 +8499,9 @@ then
+@@ -8499,9 +8494,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -47,7 +56,7 @@ Don't make SO-ABI-dependent shared lib names on Linux.
  			fi
  		fi
  		;;
-@@ -8535,9 +8535,15 @@ then
+@@ -8535,9 +8530,15 @@ then
  				   ;;
  				esac
  		fi;;
@@ -63,7 +72,7 @@ Don't make SO-ABI-dependent shared lib names on Linux.
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -8578,7 +8584,8 @@ then
+@@ -8578,7 +8579,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -73,7 +82,7 @@ Don't make SO-ABI-dependent shared lib names on Linux.
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8621,11 +8628,12 @@ then
+@@ -8621,11 +8623,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -87,7 +96,7 @@ Don't make SO-ABI-dependent shared lib names on Linux.
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -13766,8 +13774,6 @@ $as_echo "$SOABI" >&6; }
+@@ -13766,8 +13769,6 @@ $as_echo "$SOABI" >&6; }
  
  
  case $ac_sys_system in
