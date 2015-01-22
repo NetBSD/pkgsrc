@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/01/21 11:23:16 adam Exp $
+# $NetBSD: Makefile,v 1.42 2015/01/22 11:38:58 obache Exp $
 
 DISTNAME=	squid-3.5.1
 CATEGORIES=	www
@@ -51,11 +51,6 @@ OWN_DIRS_PERMS+=${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
 
 .include "Makefile.common"
 .include "options.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5]*-i386)
-GNU_ARCH.i386=	i486
-CFLAGS+=	-march=i486
-.endif
 
 # Incorrect check for <netinet/ip_icmp.h> on FreeBSD:
 .if $(OPSYS) == "FreeBSD"
