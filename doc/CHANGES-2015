@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.393 2015/01/22 12:39:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.394 2015/01/22 12:54:05 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -468,3 +468,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/sympa to 6.1.24 [bouyer 2015-01-22]
 	Updated geography/opencpn to 4.0.0 [bouyer 2015-01-22]
 	Updated audio/chromaprint to 1.2nb1 [wiz 2015-01-22]
+	Added games/ioquake3-raspberrypi version 20150118 [jmcneill 2015-01-22]
