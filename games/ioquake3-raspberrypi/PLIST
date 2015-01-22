@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/22 12:51:00 jmcneill Exp $
+lib/ioquake3/baseq3/cgamerpi.so
+lib/ioquake3/baseq3/qagamerpi.so
+lib/ioquake3/baseq3/uirpi.so
+lib/ioquake3/ioq3ded.rpi
+lib/ioquake3/ioquake3.rpi
+lib/ioquake3/missionpack/cgamerpi.so
+lib/ioquake3/missionpack/qagamerpi.so
+lib/ioquake3/missionpack/uirpi.so
