@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_isnan.c,v 1.3 2012/06/06 07:20:36 wiz Exp $
+$NetBSD: patch-lib_isnan.c,v 1.4 2015/01/22 04:57:57 mef Exp $
+
+Fix definition of NaN on VAX.
 
 --- lib/isnan.c.orig	2012-03-30 07:18:32.000000000 +0000
 +++ lib/isnan.c

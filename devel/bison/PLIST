@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2013/12/06 12:02:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/01/22 04:57:57 mef Exp $
 bin/bison
 info/bison.info
 man/man1/bison.1
@@ -26,6 +26,20 @@ share/bison/xslt/xml2dot.xsl
 share/bison/xslt/xml2text.xsl
 share/bison/xslt/xml2xhtml.xsl
 share/bison/yacc.c
+share/doc/bison/AUTHORS
+share/doc/bison/COPYING
+share/doc/bison/NEWS
+share/doc/bison/README
+share/doc/bison/THANKS
+share/doc/bison/TODO
+share/doc/bison/examples/calc++/calc++-driver.cc
+share/doc/bison/examples/calc++/calc++-driver.hh
+share/doc/bison/examples/calc++/calc++-parser.yy
+share/doc/bison/examples/calc++/calc++-scanner.ll
+share/doc/bison/examples/calc++/calc++.cc
+share/doc/bison/examples/mfcalc/calc.h
+share/doc/bison/examples/mfcalc/mfcalc.y
+share/doc/bison/examples/rpcalc/rpcalc.y
 share/locale/ast/LC_MESSAGES/bison-runtime.mo
 share/locale/da/LC_MESSAGES/bison-runtime.mo
 share/locale/da/LC_MESSAGES/bison.mo
