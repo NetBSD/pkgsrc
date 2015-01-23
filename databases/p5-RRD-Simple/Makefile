@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/01/23 06:31:13 obache Exp $
 
 DISTNAME=	RRD-Simple-1.44
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	24
 CATEGORIES=	perl5 databases
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/N/NI/NICOLAW/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RRD/}
 
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/RRD-Simple/
