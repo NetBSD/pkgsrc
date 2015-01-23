@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2015/01/09 16:29:04 rumko Exp $
+$NetBSD: distinfo,v 1.62 2015/01/23 15:43:45 joerg Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -108,8 +108,8 @@ SHA1 (patch-hotspot_src_share_vm_runtime_os.cpp) = c7a33e791e3b5fec5cca9a5343c6d
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = fe40909864fc561495b1e15a5bc6c7c6373830b2
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 30084c64570e420fbda8fbd36fcd4aa2641eab8e
 SHA1 (patch-jaxp_build.xml) = 9f6b45a11302a652244d6b6e201dbfda7d16773b
-SHA1 (patch-jaxp_make_Makefile) = 42a7e1816c72ab1be206e1056f362407c10b5f7c
-SHA1 (patch-jaxws_make_Makefile) = 63d3f1539afa51d1619b801526bec3941f0fb9a4
+SHA1 (patch-jaxp_make_Makefile) = 8f5f74f62bd6b68a493105524e311eea50003dec
+SHA1 (patch-jaxws_make_Makefile) = 4f2181844246441a930daa80b2dc892fede6e6c3
 SHA1 (patch-jdk_make_com_sun_Makefile) = 5826c64eb1971d69e8b874d6b8a60d25e0d02c5b
 SHA1 (patch-jdk_make_com_sun_java_pack_Makefile) = bb258d4c2235ea780810d980b84b90a0380f3b46
 SHA1 (patch-jdk_make_com_sun_jmx_Makefile) = 65fa2d6191311766cdb5d9933d760cae7955f664
