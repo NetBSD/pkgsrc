@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.399 2015/01/23 04:06:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.400 2015/01/23 06:08:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -472,3 +472,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/abcmidi to 20141225 [mef 2015-01-23]
 	Updated audio/bml to 0.8.0 [mef 2015-01-23]
 	Updated devel/cmake to 3.1.0nb1 [wiz 2015-01-23]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.438 [obache 2015-01-23]
