@@ -1,0 +1,20 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/01/23 17:15:09 pho Exp $
+
+Move checks for aligned malloc function from opj_malloc.h to cmake.
+See also patch-aa
+
+--- CMakeLists.txt.orig	2015-01-23 16:40:21.000000000 +0000
++++ CMakeLists.txt
+@@ -213,6 +213,12 @@ CHECK_INCLUDE_FILE("sys/stat.h"     HAVE
+ CHECK_INCLUDE_FILE("sys/types.h"    HAVE_SYS_TYPES_H)
+ CHECK_INCLUDE_FILE("unistd.h"       HAVE_UNISTD_H)
+ 
++# Check for functions
++include (${CMAKE_ROOT}/Modules/CheckSymbolExists.cmake)
++CHECK_SYMBOL_EXISTS(_mm_malloc     "malloc.h" HAVE_MM_MALLOC     )
++CHECK_SYMBOL_EXISTS(memalign       "malloc.h" HAVE_MEMALIGN      )
++CHECK_SYMBOL_EXISTS(posix_memalign "stdlib.h" HAVE_POSIX_MEMALIGN)
++
+ # Enable Large file support
+ include(TestLargeFiles)
+ OPJ_TEST_LARGE_FILES(OPJ_HAVE_LARGEFILES)
