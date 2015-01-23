@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2011/12/10 23:53:34 marino Exp $
+$NetBSD: distinfo,v 1.21 2015/01/23 15:07:53 joerg Exp $
 
 SHA1 (pari-2.3.5.tar.gz) = f211ccfe42a4b18dbcde832dfd1ece6f477f4966
 RMD160 (pari-2.3.5.tar.gz) = 488adf3af5398d0ab5390eb86b65cd79bd1044c5
@@ -20,3 +20,6 @@ SHA1 (patch-an) = 4e1f9c8e0c63e2f1922bb8b181212b3e09c56ce6
 SHA1 (patch-ao) = 44bf077f1585e20277dcd42a7c5fd38d12b19af5
 SHA1 (patch-ap) = 21a20b68b589f8be3036d1f2f9c4b2a7f43210a8
 SHA1 (patch-config_get_fltk) = 2c2aa271fad5880a44b2df70a7143d2aea690ca0
+SHA1 (patch-src_headers_paridecl.h) = ee02e487807d8ed1c1a11268965ade76a2f80cf2
+SHA1 (patch-src_language_anal.c) = d0028a51e8ef14cae766cb881fcfce82cec0346f
+SHA1 (patch-src_modules_mpqs.c) = 3dd164e5c686fd2eb8317569cf05906a4c527721
