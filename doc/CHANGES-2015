@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.396 2015/01/22 22:45:43 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.397 2015/01/23 00:02:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -469,3 +469,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/opencpn to 4.0.0 [bouyer 2015-01-22]
 	Added games/ioquake3-raspberrypi version 20150118 [jmcneill 2015-01-22]
 	Updated devel/fossil to 1.30 [wiz 2015-01-22]
+	Updated audio/abcmidi to 20141225 [mef 2015-01-23]
