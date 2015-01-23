@@ -1,0 +1,25 @@
+$NetBSD: patch-src_lib_openjp2_opj__config__private.h.cmake.in,v 1.1 2015/01/23 17:15:09 pho Exp $
+
+Add #cmakedefine for aligned malloc functions.
+See also patch-CMakeLists.txt
+
+--- src/lib/openjp2/opj_config_private.h.cmake.in.orig	2014-04-29 07:15:02.000000000 +0000
++++ src/lib/openjp2/opj_config_private.h.cmake.in
+@@ -12,6 +12,10 @@
+ /*#cmakedefine HAVE_SYS_TYPES_H @HAVE_SYS_TYPES_H@ */
+ /*#cmakedefine HAVE_UNISTD_H @HAVE_UNISTD_H@*/
+ 
++#cmakedefine HAVE_MM_MALLOC
++#cmakedefine HAVE_MEMALIGN
++#cmakedefine HAVE_POSIX_MEMALIGN
++
+ #cmakedefine _LARGEFILE_SOURCE
+ #cmakedefine _LARGE_FILES
+ #cmakedefine _FILE_OFFSET_BITS @_FILE_OFFSET_BITS@
+@@ -28,4 +32,4 @@ On other platforms we use the result of 
+ #cmakedefine OPJ_BIG_ENDIAN
+ #elif defined(__BIG_ENDIAN__)
+ # define OPJ_BIG_ENDIAN
+-#endif
+\ No newline at end of file
++#endif
