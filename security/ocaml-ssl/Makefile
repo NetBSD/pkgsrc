@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/01/20 14:24:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/23 15:09:26 joerg Exp $
 #
 
 PKGNAME=	${DISTNAME} # to avoid prefixing with ocaml-
@@ -11,6 +11,9 @@ MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://savonet.sourceforge.net/wiki/OCamlLibs
 COMMENT=	SSL library for OCaml
 LICENSE=	gnu-lgpl-v2.1
+
+# ssl.cmo used before written
+MAKE_JOBS_SAFE=	no
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake
