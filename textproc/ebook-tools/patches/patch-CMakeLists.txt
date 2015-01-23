@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/01/23 14:09:36 wiz Exp $
+
+Set minimum version to 3.0 to fix build with 3.1.
+
+--- CMakeLists.txt.orig	2015-01-23 14:07:21.000000000 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,5 @@
+ project (EBOOK-TOOLS)
++cmake_minimum_required(VERSION 3.0)
+ 
+ #set(CMAKE_CURRENT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+ set(LIBRARY_OUTPUT_PATH ${EBOOK-TOOLS_BINARY_DIR}/libs)
