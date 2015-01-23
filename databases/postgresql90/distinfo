@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2014/07/25 22:14:55 adam Exp $
+$NetBSD: distinfo,v 1.23 2015/01/23 15:06:01 joerg Exp $
 
 SHA1 (postgresql-9.0.18.tar.bz2) = f0d14ca3cd116ed88aa6ce96b22137fe37a31958
 RMD160 (postgresql-9.0.18.tar.bz2) = aa50ea194637449ad57fd86b9ea997516f5f0ebc
@@ -13,5 +13,7 @@ SHA1 (patch-ah) = 25102dce1b9b22385353af23500636fb18e3bf64
 SHA1 (patch-ai) = 0d6f536f7593e362ec216eafa73c718ad6bed8fc
 SHA1 (patch-ao) = 4d7c40d107d4c13c63ef2908d9a02be319863657
 SHA1 (patch-src_Makefile.shlib) = 72d6db917b7d6ba1dbf8037e03f83a7ce7c4d6c9
+SHA1 (patch-src_backend_utils_adt_datetime.c) = 02ec83af9d06565e0607b0635364b2dc501f1d7c
+SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = 2de11e149003e4a7205e44f58990afe8a24f80cb
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_plperl.h) = 8e2d954642cb68dc6c6fd08debd058d053566826
