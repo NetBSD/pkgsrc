@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/01/16 22:55:56 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/23 00:16:03 mef Exp $
 #
 
-DISTNAME=	bml-0.7.0
+DISTNAME=	bml-0.8.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
