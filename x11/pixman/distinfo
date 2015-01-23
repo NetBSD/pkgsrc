@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2014/07/12 14:51:04 wiz Exp $
+$NetBSD: distinfo,v 1.54 2015/01/23 15:10:51 joerg Exp $
 
 SHA1 (pixman-0.32.6.tar.bz2) = 5b730399e1e212e5acaa69a4f1a2c7be1af1cdc4
 RMD160 (pixman-0.32.6.tar.bz2) = d3bd5fef800499215944606c750696325853de2c
@@ -7,3 +7,4 @@ SHA1 (patch-ba) = 9bd8a7fd0cfbd280df06d69838d3d10ab1b51e23
 SHA1 (patch-bb) = d47b1857771b8addb6897d45782ba2735a7aacbd
 SHA1 (patch-bc) = 3e23e6c482ea193885f3f762af355ef2f692132b
 SHA1 (patch-bd) = 1b1432f4a88d5486afdb4c0cad0808d3748fa522
+SHA1 (patch-pixman_pixman-mmx.c) = 9ddd1bd5a691b8e86a81539fbe518c9b3a3a25ff
