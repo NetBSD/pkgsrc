@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/02/17 13:54:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/01/23 00:02:48 mef Exp $
 bin/abc2abc
 bin/abc2midi
 bin/abcmatch
@@ -8,6 +8,7 @@ bin/midicopy
 bin/yaps
 man/man1/abc2abc.1
 man/man1/abc2midi.1
+man/man1/abcmatch.1
 man/man1/mftext.1
 man/man1/midi2abc.1
 man/man1/midicopy.1
