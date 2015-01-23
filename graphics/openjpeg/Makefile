@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/15 14:14:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/23 17:15:09 pho Exp $
 
 DISTNAME=	openjpeg-2.1.0
 CATEGORIES=	graphics
@@ -11,8 +11,6 @@ LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DOPENJPEG_INSTALL_MAN_DIR=${PKGMANDIR}
-
-CFLAGS+=	-DHAVE_POSIX_MEMALIGN
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
