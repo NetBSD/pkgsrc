@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2011/01/06 11:23:21 obache Exp $
+$NetBSD: patch-aa,v 1.2 2015/01/23 10:11:47 wiz Exp $
 
 * for the case MIN is aready defined somewhere else.
+https://github.com/fpesce/ftwin/issues/4
 
 --- src/ft_file.h.orig	2009-05-20 17:57:08.000000000 +0000
 +++ src/ft_file.h
