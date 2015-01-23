@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/23 06:56:20 obache Exp $
 #
 
 DISTNAME=		WordPress-XMLRPC-1.23
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		4
 CATEGORIES=		www net
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LE/LEOCHARRE/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=WordPress/}
 
 MAINTAINER=		imil@gcu.info
 HOMEPAGE=		http://search.cpan.org/dist/WordPress-XMLRPC/
