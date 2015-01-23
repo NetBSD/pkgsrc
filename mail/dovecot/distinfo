@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.118 2011/06/09 13:15:35 obache Exp $
+$NetBSD: distinfo,v 1.119 2015/01/23 12:17:47 wiz Exp $
 
 SHA1 (dovecot-1.2-managesieve-0.11.13.tar.gz) = cd5d2149250072aa8079f9db967cfeffc1b57c53
 RMD160 (dovecot-1.2-managesieve-0.11.13.tar.gz) = 9deed0637f1b5942a1b4996a343fed1b23301023
@@ -13,7 +13,12 @@ SHA1 (dovecot-1.2.17.tar.gz) = 457b16791a15e739c6bc8b02bc9c78f9ad794e39
 RMD160 (dovecot-1.2.17.tar.gz) = 59f619dba2aadef3cccd6ceb045a2e75a11700a2
 Size (dovecot-1.2.17.tar.gz) = 2983431 bytes
 SHA1 (patch-aa) = 447e46268a93201b3ef22491ff0968752978d020
-SHA1 (patch-ab) = e5b5d72f0553da42d14ee05a9ed0faff8a6c7075
+SHA1 (patch-ab) = c4b94708ba99d8ae51898a1a46ef0c0faef92f14
 SHA1 (patch-ac) = 5912392abb79df8e78de6f710c2a83264ee58fe7
 SHA1 (patch-ag) = 7e733d41c0607df64c2c3195b78683689f2143d6
 SHA1 (patch-ah) = a7d02fa3ab1d1a760e05510ebd3cfb07a6652863
+SHA1 (patch-src_imap-login_client.c) = 9385443757ab53499385b099bc65e6aee0b4edbf
+SHA1 (patch-src_login-common_ssl-proxy-openssl.c) = dc965b545681f09a74758033c0665924377ff551
+SHA1 (patch-src_login-common_ssl-proxy.c) = b1cf551a2f68d9acad3e2ce4b768a91683dc6e2f
+SHA1 (patch-src_login-common_ssl-proxy.h) = ec9bfc3eb70cdff8983f17ab05e47bdefece1c63
+SHA1 (patch-src_pop3-login_client.c) = 290427f221d1f8bfae89aef07b61798cdabc29ca
