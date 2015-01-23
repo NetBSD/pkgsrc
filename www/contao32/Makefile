@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/06/10 03:47:59 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/23 16:14:35 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
@@ -64,11 +64,6 @@ SUBST_FILES.conf+=	${WRKDIR}/contao.conf
 SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
 SUBST_SED.conf+=        -e 's|@CT_WEBDIR@|${CT_WEBDIR:Q}|g'
 SUBST_STAGE.conf=	post-configure
-
-SUBST_CLASSES+=		php
-SUBST_FILES.php+=	${WRKSRC}/system/bin/transifex
-SUBST_SED.php+=		-e "s|\#!/.*php|\#!${PREFIX}/bin/php|"
-SUBST_STAGE.php=	post-configure
 
 WWW_FILES=	.gitignore .htaccess.default README.md assets contao \
 		index.php share templates
