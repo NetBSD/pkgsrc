@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.96 2014/11/23 16:12:10 wiz Exp $
+$NetBSD: distinfo,v 1.97 2015/01/23 11:28:41 jdc Exp $
 
 SHA1 (netpbm-10.68.02.tar.gz) = 90fa87549dc7fb33bd7f9f29abad09fe99faf3e1
 RMD160 (netpbm-10.68.02.tar.gz) = 7567eb6c38f06ad89b995b9315deec91db94bfb0
@@ -9,3 +9,4 @@ Size (netpbm-docs-r2313.tar.gz) = 447907 bytes
 SHA1 (patch-common.mk) = f590cc66e0fe6a07e848b9b46662bca350557bea
 SHA1 (patch-lib_Makefile) = 3f93bd24c53aa1f22aa43545d7ca5422af8e78ca
 SHA1 (patch-pm__config.in.h) = 9cb3084371be4b354832581d47d552bfe9ff1ce1
+SHA1 (patch-wordaccess_be_aligned.h) = 7cc5cd1126f65b3307393c978ac9ff4a49d666de
