@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/25 09:11:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/23 01:18:53 mef Exp $
 include/isl/aff.h
 include/isl/aff_type.h
 include/isl/arg.h
@@ -6,7 +6,6 @@ include/isl/ast.h
 include/isl/ast_build.h
 include/isl/ast_type.h
 include/isl/band.h
-include/isl/config.h
 include/isl/constraint.h
 include/isl/ctx.h
 include/isl/deprecated/aff_int.h
