@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2014/05/15 14:14:54 adam Exp $
+$NetBSD: distinfo,v 1.8 2015/01/23 17:15:09 pho Exp $
 
 SHA1 (openjpeg-2.1.0.tar.gz) = c2a255f6b51ca96dc85cd6e85c89d300018cb1cb
 RMD160 (openjpeg-2.1.0.tar.gz) = dc6e77a2539ab4071cf1a1b62f653fea13707b54
 Size (openjpeg-2.1.0.tar.gz) = 1789675 bytes
-SHA1 (patch-aa) = 29025aa1db85cfaf483ca92fdfba7343a9a1b84f
+SHA1 (patch-CMakeLists.txt) = 3738946db63df4d623c6ce486bd22fa4d57336e2
+SHA1 (patch-aa) = 6201b76c91edd88ba23e18218f2951b5fb65eb24
 SHA1 (patch-src_bin_jp2_CMakeLists.txt) = cbb8e9f33fe781af54a1b7e44694413220d114a2
 SHA1 (patch-src_lib_openjp2_CMakeLists.txt) = 85d7729bdebbc5ce520c69df7541575547b49708
+SHA1 (patch-src_lib_openjp2_opj__config__private.h.cmake.in) = 6b0b3ca45bfb80c586edeef81920a03e9d5eef2a
