@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.405 2015/01/23 16:17:06 taca Exp $
+$NetBSD: CHANGES-2015,v 1.406 2015/01/23 16:19:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -481,3 +481,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.5 [taca 2015-01-23]
 	Updated www/contao32 to 3.2.17 [taca 2015-01-23]
 	Updated www/contao34 to 3.4.2 [taca 2015-01-23]
+	Removed www/contao33 [taca 2015-01-23]
