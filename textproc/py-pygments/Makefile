@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/01/01 11:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/01/23 07:07:42 obache Exp $
 
 DISTNAME=	Pygments-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,6 +13,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		#none
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
