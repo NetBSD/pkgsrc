@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/23 06:48:12 obache Exp $
 #
 
 DISTNAME=		SGMLSpm-1.03ii
 PKGNAME=		p5-SGMLS-1.03.2
 PKGREVISION=		6
 CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/D/DM/DMEGG/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=SGMLS/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/SGMLSpm-1.03ii/
+HOMEPAGE=		http://search.cpan.org/dist/SGMLSpm/
 COMMENT=		Class for postprocessing the output from the sgmls and nsgmls parsers
 
 USE_LANGUAGES=		# empty
