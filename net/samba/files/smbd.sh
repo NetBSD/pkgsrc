@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smbd.sh,v 1.13 2011/01/27 07:55:39 adam Exp $
+# $NetBSD: smbd.sh,v 1.14 2015/01/23 08:09:37 obache Exp $
 #
 # PROVIDE: smbd
 
@@ -9,6 +9,7 @@
 name="smbd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
+pidfile="@SAMBA_PIDDIR@/${name}.pid"
 required_files="@SAMBA_ETCDIR@/smb.conf"
 extra_commands="reload"
 command_args="-D"		# _must_ start as daemon from rc.d;
