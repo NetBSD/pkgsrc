@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/01/17 17:34:07 wiedi Exp $
+$NetBSD: distinfo,v 1.4 2015/01/23 21:47:44 wiedi Exp $
 
-SHA1 (rspamd-0.8.0.tar.xz) = b3d704c0cf3ed92271f3f4f640f6406c7ec267b2
-RMD160 (rspamd-0.8.0.tar.xz) = 02b4889a3e5d3d89357be50a05bf4a6b15e2b738
-Size (rspamd-0.8.0.tar.xz) = 754636 bytes
-SHA1 (patch-src_client_rspamc.c) = cd4001655198b93fed898a01b5adbc206a25c604
-SHA1 (patch-src_lua_lua__task.c) = 88dfa4f7ee98aad5d91b4aac4a40324ea1339598
+SHA1 (rspamd-0.8.1.tar.xz) = 7ffe119d8ddfb05e298d740c2ad66156385170db
+RMD160 (rspamd-0.8.1.tar.xz) = 16817053945d234122a93aee39287320f8c5cf75
+Size (rspamd-0.8.1.tar.xz) = 750724 bytes

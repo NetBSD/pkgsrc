@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/01/17 17:34:07 wiedi Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/23 21:47:44 wiedi Exp $
 
-DISTNAME=	rspamd-0.8.0
+DISTNAME=	rspamd-0.8.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.rspamd.com/downloads/
 EXTRACT_SUFX=	.tar.xz
