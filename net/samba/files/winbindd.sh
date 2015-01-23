@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: winbindd.sh,v 1.5 2010/04/15 09:36:50 sborrill Exp $
+# $NetBSD: winbindd.sh,v 1.6 2015/01/23 08:09:37 obache Exp $
 #
 # PROVIDE: winbindd
 # REQUIRE: DAEMON
@@ -10,6 +10,7 @@
 name="winbindd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
+pidfile="@SAMBA_PIDDIR@/${name}.pid"
 required_files="@SAMBA_ETCDIR@/smb.conf"
 extra_commands="reload"
 
