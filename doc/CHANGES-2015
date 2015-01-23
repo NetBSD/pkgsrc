@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.403 2015/01/23 12:17:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.404 2015/01/23 16:12:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -476,3 +476,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/ruby-spreadsheet to 1.0.1 [obache 2015-01-23]
 	Updated emulators/suse131_libdbus to 13.1nb6 [obache 2015-01-23]
 	Updated mail/dovecot to 1.2.17nb15 [wiz 2015-01-23]
+	Updated lang/php54 to 5.4.37 [taca 2015-01-23]
+	Updated lang/php55 to 5.5.21 [taca 2015-01-23]
+	Updated lang/php56 to 5.6.5 [taca 2015-01-23]
