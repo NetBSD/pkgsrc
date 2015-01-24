@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2014/11/22 01:26:09 mef Exp $
+$NetBSD: distinfo,v 1.17 2015/01/24 17:59:42 wiz Exp $
 
-SHA1 (rcs-5.9.3.tar.xz) = e4a9549678618f5d69968b10c6c9b92b29519813
-RMD160 (rcs-5.9.3.tar.xz) = e2fb369722d4d2701093435393852332e884a673
-Size (rcs-5.9.3.tar.xz) = 800736 bytes
+SHA1 (rcs-5.9.4.tar.xz) = e87fb2e587fa165204ef69f69b7d5cd354c4e44d
+RMD160 (rcs-5.9.4.tar.xz) = 90a62da2391d6fd3d36db0f97cdf1ee995ee4917
+Size (rcs-5.9.4.tar.xz) = 801360 bytes
 SHA1 (patch-src_b-complain.h) = 5e0f688e59692b115f5a4ce1d9d571c4081325f3
 SHA1 (patch-src_b-fb.h) = ede2d0ef5af0b16eada75a95e09451d9efa41077
 SHA1 (patch-src_base.h) = 721a2cede835ca897f040e14e63548f110cbc50a
