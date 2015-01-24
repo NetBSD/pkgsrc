@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.424 2015/01/24 13:40:24 mef Exp $
+$NetBSD: CHANGES-2015,v 1.425 2015/01/24 16:36:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/flpsed to 0.4.4 [mef 2015-01-24]
 	Updated ham/gnuradio-core to 3.7.5.2 [mef 2015-01-24]
 	Updated print/bibtool to 2.57 [mef 2015-01-24]
+	Updated mail/roundcube to 1.0.5 [taca 2015-01-24]
