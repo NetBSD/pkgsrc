@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 10:50:11 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/01/24 08:02:19 wen Exp $
 
-SHA1 (Memoize-Memcached-0.03.tar.gz) = 6e9412f0d2fd27a7d255af55167caa51683ade00
-RMD160 (Memoize-Memcached-0.03.tar.gz) = c854ae0fc4449c5c8d3edf656ec7bb188b222275
-Size (Memoize-Memcached-0.03.tar.gz) = 6625 bytes
+SHA1 (Memoize-Memcached-0.04.tar.gz) = ca4bd5958c4cc8ef8af2f5d9bb9f55bb63d4634f
+RMD160 (Memoize-Memcached-0.04.tar.gz) = 704213e368378ea6ed306f1d00bb4cdbe3b20db1
+Size (Memoize-Memcached-0.04.tar.gz) = 6695 bytes
