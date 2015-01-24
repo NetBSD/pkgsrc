@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/23 21:32:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/01/24 11:16:32 mef Exp $
 
-SHA1 (flpsed-0.3.9.tar.gz) = b6638b0c0d496a4973eabd7ae74c9aae1d833e00
-RMD160 (flpsed-0.3.9.tar.gz) = a9be5edbd83d5d41b9d04d43be82851405c0e79e
-Size (flpsed-0.3.9.tar.gz) = 100555 bytes
+SHA1 (flpsed-0.4.4.tar.gz) = bbbf214dc86406a92378f5cbca5e81b067a7a8de
+RMD160 (flpsed-0.4.4.tar.gz) = 759af29f6e94f1388674f9b1357da99daea3eb32
+Size (flpsed-0.4.4.tar.gz) = 101467 bytes
 SHA1 (patch-aa) = 09da6993bf1ee4f1ce8464ef0421344c1364092e
