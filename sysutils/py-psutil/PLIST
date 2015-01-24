@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2015/01/24 23:01:29 adam Exp $
-${PYSITELIB}/_psutil_${LOWER_OPSYS}.so
+@comment $NetBSD: PLIST,v 1.5 2015/01/24 23:23:48 adam Exp $
+${PYSITELIB}/_psutil_${SYSTEM}.so
 ${PYSITELIB}/_psutil_posix.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
