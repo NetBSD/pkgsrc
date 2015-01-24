@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.413 2015/01/24 07:22:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.414 2015/01/24 07:29:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/advi to 1.10.2 [mef 2015-01-24]
 	Updated www/p5-WWW-Mechanize to 1.74 [wen 2015-01-24]
 	Updated www/p5-Mojolicious to 5.73 [wen 2015-01-24]
+	Updated devel/p5-Config-INI to 0.025 [wen 2015-01-24]
