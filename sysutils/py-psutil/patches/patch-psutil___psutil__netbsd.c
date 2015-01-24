@@ -1,4 +1,4 @@
-$NetBSD: patch-psutil___psutil__netbsd.c,v 1.1 2013/10/12 13:32:36 wiz Exp $
+$NetBSD: patch-psutil___psutil__netbsd.c,v 1.2 2015/01/24 23:01:29 adam Exp $
 
 Port to NetBSD.
 
@@ -1251,7 +1251,7 @@ Port to NetBSD.
 +}
 +
 +static int
-+psutil_netbsd_clear(PyObject *m) {5A
++psutil_netbsd_clear(PyObject *m) {
 +    Py_CLEAR(GETSTATE(m)->error);
 +    return 0;
 +}
