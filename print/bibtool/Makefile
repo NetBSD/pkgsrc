@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/12/24 01:51:20 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/24 13:40:14 mef Exp $
 
-DISTNAME=	BibTool-2.48
-PKGREVISION=	1
+DISTNAME=	BibTool-2.57
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
 
@@ -18,6 +17,8 @@ BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 GNU_CONFIGURE=		yes
 MAKE_FILE=	makefile
 #CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/BibTcl
+WRKSRC=		${WRKDIR}/${PKGBASE}
+USE_TOOLS+=	perl
 
 REPLACE_INTERPRETER+=	tcl
 REPLACE.tcl.old=	/usr/local/bin/tclsh
@@ -38,11 +39,11 @@ INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLEDIR}
 #	mv ${WRKSRC}/BibTcl/Makefile.in ${WRKSRC}/BibTcl/makefile.in
 
 post-build:
-	cd ${WRKSRC}/Doc && ${MAKE}
+	cd ${WRKSRC}/doc && ${MAKE}
 #	cd ${WRKSRC}/BibTcl && ${MAKE}
 
 post-install:
-	set -e; for i in ${WRKSRC}/Doc/*.dvi; do \
+	set -e; for i in ${WRKSRC}/doc/*.pdf; do \
 		${INSTALL_DATA} "$$i" ${DESTDIR}${DOCDIR}; \
 	 done
 	${INSTALL_DATA} ${WRKSRC}/Perl/bibtool.pl ${DESTDIR}${EXAMPLEDIR}
