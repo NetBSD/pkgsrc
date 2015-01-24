@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.407 2015/01/23 21:48:32 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.408 2015/01/24 00:58:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/contao34 to 3.4.2 [taca 2015-01-23]
 	Removed www/contao33 [taca 2015-01-23]
 	Updated mail/rspamd to 0.8.1 [wiedi 2015-01-23]
+	Updated print/abcm2ps to 7.8.12 [mef 2015-01-24]
