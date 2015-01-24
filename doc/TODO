@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14055 2015/01/24 17:56:41 wiz Exp $
+$NetBSD: TODO,v 1.14056 2015/01/24 17:59:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -955,7 +955,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o raine-0.64.2
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rcs-5.9.4
 	o rdesktop-1.8.2
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
