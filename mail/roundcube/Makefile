@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2014/12/19 03:32:00 taca Exp $
+# $NetBSD: Makefile,v 1.66 2015/01/24 16:36:29 taca Exp $
 
-DISTNAME=	roundcubemail-1.0.4-dep
+DISTNAME=	roundcubemail-1.0.5-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -82,7 +82,6 @@ CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	roundcube.conf
-SUBST_FILES.files+=	config/defaults.inc.php
 SUBST_FILES.files+=	installer/index.php installer/rcube_install.php
 SUBST_FILES.files+=	program/include/iniset.php
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
