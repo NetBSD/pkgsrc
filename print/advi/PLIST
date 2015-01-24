@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/07 20:40:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/01/24 03:55:34 mef Exp $
 bin/advi
 bin/advi.byt
 lib/ocaml/stublibs/dlladvi.so
@@ -23,6 +23,7 @@ share/doc/html/advi/screen-shots.html
 share/texmf-dist/tex/latex/advi/advi-annot.sty
 share/texmf-dist/tex/latex/advi/advi-graphicx.sty
 share/texmf-dist/tex/latex/advi/advi-slides.sty
+share/texmf-dist/tex/latex/advi/advi.hva
 share/texmf-dist/tex/latex/advi/advi.sty
 share/texmf-dist/tex/latex/advi/advilogo.eps
 share/texmf-dist/tex/latex/advi/argv.sty
