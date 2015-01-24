@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.423 2015/01/24 12:23:32 mef Exp $
+$NetBSD: CHANGES-2015,v 1.424 2015/01/24 13:40:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooX-Log-Any to 0.004001 [wen 2015-01-24]
 	Updated print/flpsed to 0.4.4 [mef 2015-01-24]
 	Updated ham/gnuradio-core to 3.7.5.2 [mef 2015-01-24]
+	Updated print/bibtool to 2.57 [mef 2015-01-24]
