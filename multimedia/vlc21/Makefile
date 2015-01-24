@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/17 00:32:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/24 20:42:22 wiz Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		3
@@ -44,6 +44,8 @@ CXXFLAGS+=		-fPIC
 .if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
 PLIST.oss=		yes
 .include "../../mk/oss.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-oss
 .endif
 
 # Build optimalized modules
