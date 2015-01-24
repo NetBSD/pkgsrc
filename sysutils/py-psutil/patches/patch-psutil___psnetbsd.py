@@ -1,10 +1,10 @@
-$NetBSD: patch-psutil___psnetbsd.py,v 1.1 2013/10/12 13:32:36 wiz Exp $
+$NetBSD: patch-psutil___psnetbsd.py,v 1.2 2015/01/24 23:01:29 adam Exp $
 
 Port to NetBSD.
 
 --- psutil/_psnetbsd.py.orig	2013-10-12 13:19:29.000000000 +0000
 +++ psutil/_psnetbsd.py
-@@ -0,0 +1,367 @@
+@@ -0,0 +1,366 @@
 +#!/usr/bin/env python
 +
 +# Copyright (c) 2009, Giampaolo Rodola'. All rights reserved.
@@ -21,7 +21,6 @@ Port to NetBSD.
 +import _psutil_netbsd
 +import _psutil_posix
 +from psutil import _psposix
-+from psutil._error import AccessDenied, NoSuchProcess, TimeoutExpired
 +from psutil._compat import namedtuple, wraps
 +from psutil._common import *
 +
@@ -83,12 +82,12 @@ Port to NetBSD.
 +    percent = usage_percent(used, total, _round=1)
 +    return nt_swapmeminfo(total, used, free, percent, sin, sout)
 +
-+def get_system_cpu_times():
++def cpu_times():
 +    """Return system per-CPU times as a named tuple"""
 +    user, nice, system, idle, irq = _psutil_netbsd.get_system_cpu_times()
 +    return _cputimes_ntuple(user, nice, system, idle, irq)
 +
-+def get_system_per_cpu_times():
++def per_cpu_times():
 +    """Return system CPU times as a named tuple"""
 +    ret = []
 +    for cpu_t in _psutil_netbsd.get_system_per_cpu_times():
@@ -106,14 +105,14 @@ Port to NetBSD.
 +# crash at psutil import time.
 +# Next calls will fail with NotImplementedError
 +if not hasattr(_psutil_netbsd, "get_system_per_cpu_times"):
-+    def get_system_per_cpu_times():
++    def per_cpu_times():
 +        if NUM_CPUS == 1:
 +            return [get_system_cpu_times]
-+        if get_system_per_cpu_times.__called__:
++        if per_cpu_times.__called__:
 +            raise NotImplementedError("supported only starting from FreeBSD 8")
-+        get_system_per_cpu_times.__called__ = True
++        per_cpu_times.__called__ = True
 +        return [get_system_cpu_times]
-+get_system_per_cpu_times.__called__ = False
++per_cpu_times.__called__ = False
 +
 +def disk_partitions(all=False):
 +    retlist = []
@@ -143,7 +142,7 @@ Port to NetBSD.
 +
 +get_pid_list = _psutil_netbsd.get_pid_list
 +pid_exists = _psposix.pid_exists
-+get_disk_usage = _psposix.get_disk_usage
++disk_usage = _psposix.disk_usage
 +net_io_counters = _psutil_netbsd.get_net_io_counters
 +disk_io_counters = _psutil_netbsd.get_disk_io_counters
 +

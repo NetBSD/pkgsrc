@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/05 14:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/24 23:01:29 adam Exp $
 
 DISTNAME=	psutil-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,13 +11,14 @@ COMMENT=	Cross-platform process and system utilities module for Python
 LICENSE=	modified-bsd
 
 REPLACE_PYTHON=	psutil/*py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.1.0
 
 .include "../../mk/bsd.prefs.mk"
 
 # facilitate PLIST processing
 .if ${OPSYS} == "SunOS"
 LOWER_OPSYS=	${OPSYS:tl}
+.elif ${OPSYS} == "Darwin"
+LOWER_OPSYS=	osx
 .endif
 
 .include "../../lang/python/application.mk"
