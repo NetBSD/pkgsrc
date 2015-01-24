@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/03/31 03:11:56 smb Exp $
+$NetBSD: patch-aa,v 1.2 2015/01/24 13:40:14 mef Exp $
+
+Correction to filename Makefile -> makefile
 
 --- BibTcl/configure.orig	2006-03-19 11:48:19.000000000 -0500
 +++ BibTcl/configure
