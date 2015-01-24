@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2015/01/17 13:29:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2015/01/24 16:55:20 wiz Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -799,6 +799,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXTRA_SHARED_LIBRARY_SUFFIXES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_LIBRARY_PREFIXES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_LIBRARY_SUFFIXES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_NO_INSTALL_PREFIX.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_NAME.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_WARN_NO_MODULE.rst
