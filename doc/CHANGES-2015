@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.409 2015/01/24 01:02:08 obache Exp $
+$NetBSD: CHANGES-2015,v 1.410 2015/01/24 01:10:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/rspamd to 0.8.1 [wiedi 2015-01-23]
 	Updated print/abcm2ps to 7.8.12 [mef 2015-01-24]
 	Updated emulators/suse131_openssl to 13.1nb12 [obache 2015-01-24]
+	Updated print/chktex to 1.6.4 [mef 2015-01-24]
