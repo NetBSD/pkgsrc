@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.416 2015/01/24 07:54:50 wen Exp $
+$NetBSD: CHANGES-2015,v 1.417 2015/01/24 08:02:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -492,3 +492,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Config-INI to 0.025 [wen 2015-01-24]
 	Updated devel/p5-Moo to 1.007000 [wen 2015-01-24]
 	Updated devel/p5-Mixin-Linewise to 0.106 [wen 2015-01-24]
+	Updated devel/p5-Memoize-Memcached to 0.04 [wen 2015-01-24]
