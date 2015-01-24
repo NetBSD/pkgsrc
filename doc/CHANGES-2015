@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.419 2015/01/24 10:27:06 wen Exp $
+$NetBSD: CHANGES-2015,v 1.420 2015/01/24 10:31:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Memoize-Memcached to 0.04 [wen 2015-01-24]
 	Updated devel/p5-MooX-Cmd to 0.011 [wen 2015-01-24]
 	Updated devel/p5-MooX-ConfigFromFile to 0.005 [wen 2015-01-24]
+	Updated devel/p5-MooX-File-ConfigDir to 0.004 [wen 2015-01-24]
