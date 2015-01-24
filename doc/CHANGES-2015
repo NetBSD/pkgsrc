@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.415 2015/01/24 07:44:58 wen Exp $
+$NetBSD: CHANGES-2015,v 1.416 2015/01/24 07:54:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -491,3 +491,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Mojolicious to 5.73 [wen 2015-01-24]
 	Updated devel/p5-Config-INI to 0.025 [wen 2015-01-24]
 	Updated devel/p5-Moo to 1.007000 [wen 2015-01-24]
+	Updated devel/p5-Mixin-Linewise to 0.106 [wen 2015-01-24]
