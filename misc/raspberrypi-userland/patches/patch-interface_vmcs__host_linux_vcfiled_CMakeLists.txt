@@ -1,8 +1,8 @@
-$NetBSD: patch-interface_vmcs__host_linux_vcfiled_CMakeLists.txt,v 1.1.1.1 2013/04/01 21:02:02 jmcneill Exp $
+$NetBSD: patch-interface_vmcs__host_linux_vcfiled_CMakeLists.txt,v 1.2 2015/01/24 12:54:15 skrll Exp $
 
 Don't install Linux specific init script.
 
---- interface/vmcs_host/linux/vcfiled/CMakeLists.txt.orig	2013-01-28 14:07:20.000000000 +0000
+--- interface/vmcs_host/linux/vcfiled/CMakeLists.txt.orig	2013-01-27 21:57:20.000000000 +0000
 +++ interface/vmcs_host/linux/vcfiled/CMakeLists.txt
 @@ -20,8 +20,8 @@ install(TARGETS vcfiled 
  configure_file (etc/init.d/vcfiled ${PROJECT_BINARY_DIR}/etc/init.d/vcfiled)
