@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/01/24 13:40:14 mef Exp $
 bin/bibtool
+lib/BibTool/biblatex.rsc
 lib/BibTool/braces.rsc
 lib/BibTool/check_y.rsc
 lib/BibTool/default.rsc
@@ -11,8 +12,8 @@ lib/BibTool/opt.rsc
 lib/BibTool/sort_fld.rsc
 lib/BibTool/tex_def.rsc
 man/man1/bibtool.1
-share/doc/BibTool/bibtool.dvi
-share/doc/BibTool/c_lib.dvi
-share/doc/BibTool/ref_card.dvi
+share/doc/BibTool/bibtool.pdf
+share/doc/BibTool/c_lib.pdf
+share/doc/BibTool/ref_card.pdf
 share/examples/BibTool/bibtool.pl
 share/examples/BibTool/bibtool.tcl
