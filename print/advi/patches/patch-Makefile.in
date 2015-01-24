@@ -1,4 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1 2011/08/07 20:40:58 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2015/01/24 03:55:34 mef Exp $
+
+Not to build doc
+1.10.2 claims doc problems fixed. But now getting
+! LaTeX Error: File `hevea.sty' not found.
+pkgsrc does not have following packge (yet).
+  http://hevea.inria.fr/
 
 --- Makefile.in.orig	2011-08-07 14:15:44.000000000 +0000
 +++ Makefile.in	2011-08-07 14:16:03.000000000 +0000
