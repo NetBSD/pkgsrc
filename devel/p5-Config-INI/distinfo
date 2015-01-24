@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/10/15 15:10:48 wen Exp $
+$NetBSD: distinfo,v 1.7 2015/01/24 07:28:56 wen Exp $
 
-SHA1 (Config-INI-0.020.tar.gz) = 4f7ce5aed2a619a8d1cf9faa0e338983674dd1de
-RMD160 (Config-INI-0.020.tar.gz) = 4d34d94a9f1b2c2de1ada4859caeeed9d93b263f
-Size (Config-INI-0.020.tar.gz) = 21463 bytes
+SHA1 (Config-INI-0.025.tar.gz) = 06954cc4fb707cf44d710704b663d3e3c21a8817
+RMD160 (Config-INI-0.025.tar.gz) = b0d6a3cbbc418fdda92aa321e87b309b13e1cb22
+Size (Config-INI-0.025.tar.gz) = 25405 bytes

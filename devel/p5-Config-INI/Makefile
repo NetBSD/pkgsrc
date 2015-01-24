@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:35:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/24 07:28:56 wen Exp $
 
-DISTNAME=	Config-INI-0.020
+DISTNAME=	Config-INI-0.025
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Config-INI/
 COMMENT=	Perl 5 module to handle simple .ini-file format
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Mixin-Linewise-[0-9]*:../../devel/p5-Mixin-Linewise
+DEPENDS+=	p5-Mixin-Linewise>=0.105:../../devel/p5-Mixin-Linewise
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Config/INI/.packlist
