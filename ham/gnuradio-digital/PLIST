@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/01/24 12:22:05 mef Exp $
 include/gnuradio/digital/additive_scrambler_bb.h
 include/gnuradio/digital/api.h
 include/gnuradio/digital/binary_slicer_fb.h
@@ -180,6 +180,7 @@ ${PYSITELIB}/gnuradio/digital/utils/tagged_streams.pyc
 ${PYSITELIB}/gnuradio/digital/utils/tagged_streams.pyo
 share/doc/gnuradio-${PKGVERSION}/README.digital
 share/gnuradio/examples/digital/demod/ber_simulation.grc
+share/gnuradio/examples/digital/demod/constellation_soft_decoder.grc
 share/gnuradio/examples/digital/demod/digital_freq_lock.grc
 share/gnuradio/examples/digital/demod/dpsk_loopback.grc
 share/gnuradio/examples/digital/demod/gfsk_loopback.grc
