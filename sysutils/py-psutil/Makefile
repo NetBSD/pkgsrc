@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/01/24 23:01:29 adam Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/24 23:23:48 adam Exp $
 
 DISTNAME=	psutil-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,10 +15,10 @@ REPLACE_PYTHON=	psutil/*py
 .include "../../mk/bsd.prefs.mk"
 
 # facilitate PLIST processing
-.if ${OPSYS} == "SunOS"
-LOWER_OPSYS=	${OPSYS:tl}
-.elif ${OPSYS} == "Darwin"
-LOWER_OPSYS=	osx
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	SYSTEM=osx
+.else
+PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
 .endif
 
 .include "../../lang/python/application.mk"
