@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.410 2015/01/24 01:10:51 mef Exp $
+$NetBSD: CHANGES-2015,v 1.411 2015/01/24 03:55:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/abcm2ps to 7.8.12 [mef 2015-01-24]
 	Updated emulators/suse131_openssl to 13.1nb12 [obache 2015-01-24]
 	Updated print/chktex to 1.6.4 [mef 2015-01-24]
+	Updated print/advi to 1.10.2 [mef 2015-01-24]
