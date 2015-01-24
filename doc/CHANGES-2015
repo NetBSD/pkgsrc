@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.425 2015/01/24 16:36:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.426 2015/01/24 16:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -501,3 +501,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/gnuradio-core to 3.7.5.2 [mef 2015-01-24]
 	Updated print/bibtool to 2.57 [mef 2015-01-24]
 	Updated mail/roundcube to 1.0.5 [taca 2015-01-24]
+	Updated devel/cmake to 3.1.1 [wiz 2015-01-24]
