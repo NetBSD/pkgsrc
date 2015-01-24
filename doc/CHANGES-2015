@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.408 2015/01/24 00:58:45 mef Exp $
+$NetBSD: CHANGES-2015,v 1.409 2015/01/24 01:02:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -484,3 +484,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed www/contao33 [taca 2015-01-23]
 	Updated mail/rspamd to 0.8.1 [wiedi 2015-01-23]
 	Updated print/abcm2ps to 7.8.12 [mef 2015-01-24]
+	Updated emulators/suse131_openssl to 13.1nb12 [obache 2015-01-24]
