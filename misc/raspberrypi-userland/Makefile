@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/01/18 21:41:36 jmcneill Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/24 12:54:15 skrll Exp $
 #
 
-DISTNAME=	raspberrypi-userland-20140329
+DISTNAME=	raspberrypi-userland-20150118
 PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/skrll/rpi/
