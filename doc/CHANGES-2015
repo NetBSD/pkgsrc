@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.427 2015/01/24 17:59:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.428 2015/01/25 00:07:58 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -503,3 +503,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/roundcube to 1.0.5 [taca 2015-01-24]
 	Updated devel/cmake to 3.1.1 [wiz 2015-01-24]
 	Updated devel/rcs to 5.9.4 [wiz 2015-01-24]
+	Updated multimedia/totem-pl-parser to 3.4.5 [prlw1 2015-01-25]
