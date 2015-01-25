@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2014/03/13 18:05:49 taca Exp $
+# $NetBSD: Makefile,v 1.58 2015/01/25 16:13:13 taca Exp $
 
-DISTNAME=	rubygems-2.0.10
-PKGREVISION=	2
+DISTNAME=	rubygems-${RUBY_GEMS_PKGSRC_VERS}
 CATEGORIES=	misc ruby
 MASTER_SITES=	http://production.cf.rubygems.org/rubygems/
 EXTRACT_SUFX=	.tgz
@@ -14,6 +13,9 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 CONFLICTS+=	rubygems-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
+
+# Modern ruby bundles rubygems.
+RUBY_VERSION_SUPPORTED= 18
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

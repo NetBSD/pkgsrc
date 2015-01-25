@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.8 2013/06/11 14:55:54 taca Exp $
+$NetBSD: patch-ac,v 1.9 2015/01/25 16:13:13 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/install_update_options.rb.orig	2013-02-12 20:04:55.000000000 +0000
+--- lib/rubygems/install_update_options.rb.orig	2014-07-21 18:50:29.000000000 +0000
 +++ lib/rubygems/install_update_options.rb
-@@ -33,6 +33,12 @@ module Gem::InstallUpdateOptions
+@@ -36,6 +36,12 @@ module Gem::InstallUpdateOptions
        value
      end
  
