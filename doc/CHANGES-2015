@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.436 2015/01/25 16:13:46 taca Exp $
+$NetBSD: CHANGES-2015,v 1.437 2015/01/25 16:14:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -514,3 +514,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/py-mod_wsgi version 4.4.6 [adam 2015-01-25]
 	Removed www/ap2-wsgi successor www/py-mod_wsgi [adam 2015-01-25]
 	Updated misc/rubygems to 2.4.5 [taca 2015-01-25]
+	Updated devel/ruby-rdoc to 4.2.0 [taca 2015-01-25]
