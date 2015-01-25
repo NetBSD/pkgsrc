@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.431 2015/01/25 07:44:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.432 2015/01/25 07:46:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -507,3 +507,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p5-Archive-Zip to 1.44 [mef 2015-01-25]
 	Updated archivers/p5-Compress-Bzip2 to 2.20 [mef 2015-01-25]
 	Updated net/gupnp to 0.20.13nb1 [wiz 2015-01-25]
+	Updated archivers/par2 to 0.6.11 [mef 2015-01-25]
