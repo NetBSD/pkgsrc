@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.18 2014/02/19 15:47:32 taca Exp $
+$NetBSD: patch-ab,v 1.19 2015/01/25 16:13:13 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/dependency_installer.rb.orig	2013-09-09 23:41:27.000000000 +0000
+--- lib/rubygems/dependency_installer.rb.orig	2014-09-10 04:23:57.000000000 +0000
 +++ lib/rubygems/dependency_installer.rb
-@@ -50,6 +50,7 @@ class Gem::DependencyInstaller
+@@ -63,6 +63,7 @@ class Gem::DependencyInstaller
    # :format_executable:: See Gem::Installer#initialize.
    # :ignore_dependencies:: Don't install any dependencies.
    # :install_dir:: See Gem::Installer#install.
@@ -12,23 +12,7 @@ Add install_root option for pkgsrc's rubygems support.
    # :prerelease:: Allow prerelease versions.  See #install.
    # :security_policy:: See Gem::Installer::new and Gem::Security.
    # :user_install:: See Gem::Installer.new
-@@ -57,12 +58,13 @@ class Gem::DependencyInstaller
-   # :build_args:: See Gem::Installer::new
- 
-   def initialize(options = {})
--    @install_dir = options[:install_dir] || Gem.dir
--
-     if options[:install_dir] then
-+      @install_dir = options[:install_dir]
-       # HACK shouldn't change the global settings, needed for -i behavior
-       # maybe move to the install command?  See also github #442
-       Gem::Specification.dirs = @install_dir
-+    else
-+      @install_dir = Gem.dir
-     end
- 
-     options = DEFAULT_OPTIONS.merge options
-@@ -91,7 +93,12 @@ class Gem::DependencyInstaller
+@@ -101,7 +102,12 @@ class Gem::DependencyInstaller
      @installed_gems = []
      @toplevel_specs = nil
  
@@ -40,13 +24,13 @@ Add install_root option for pkgsrc's rubygems support.
 +    end
 +    @cache_dir = options[:cache_dir] || install_dir
  
-     # Set with any errors that SpecFetcher finds while search through
-     # gemspecs for a dep
-@@ -363,6 +370,7 @@ class Gem::DependencyInstaller
-                                 :format_executable   => @format_executable,
-                                 :ignore_dependencies => @ignore_dependencies,
-                                 :install_dir         => @install_dir,
-+                                :install_root        => @install_root,
-                                 :security_policy     => @security_policy,
-                                 :user_install        => @user_install,
-                                 :wrappers            => @wrappers,
+     @errors = []
+   end
+@@ -382,6 +388,7 @@ class Gem::DependencyInstaller
+       :force               => @force,
+       :format_executable   => @format_executable,
+       :ignore_dependencies => @ignore_dependencies,
++      :install_root        => @install_root,
+       :prerelease          => @prerelease,
+       :security_policy     => @security_policy,
+       :user_install        => @user_install,

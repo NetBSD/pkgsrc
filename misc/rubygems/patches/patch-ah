@@ -1,19 +1,18 @@
-$NetBSD: patch-ah,v 1.14 2014/02/19 15:47:32 taca Exp $
+$NetBSD: patch-ah,v 1.15 2015/01/25 16:13:13 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems.rb.orig	2013-09-09 23:41:27.000000000 +0000
+--- lib/rubygems.rb.orig	2014-12-03 07:22:15.000000000 +0000
 +++ lib/rubygems.rb
-@@ -291,11 +291,17 @@ module Gem
+@@ -265,10 +265,16 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
 -  def self.bindir(install_dir=Gem.dir)
-+  def self.bindir(install_dir=Gem.dir, install_root=nil)
-     # TODO: move to Gem::Dirs
 -    return File.join install_dir, 'bin' unless
 -      install_dir.to_s == Gem.default_dir.to_s
 -    Gem.default_bindir
++  def self.bindir(install_dir=Gem.dir, install_root=nil)
 +    if install_dir.to_s == Gem.default_dir.to_s
 +      install_dir = Gem.default_bindir
 +    else
@@ -26,26 +25,20 @@ Add install_root option for pkgsrc's rubygems support.
    end
  
    ##
-@@ -551,12 +557,12 @@ module Gem
-   ##
-   # The index to insert activated gem paths into the $LOAD_PATH.
-   #
--  # Defaults to the site lib directory unless gem_prelude.rb has loaded paths,
-+  # Defaults to the vendor lib directory unless gem_prelude.rb has loaded paths,
-   # then it inserts the activated gem's paths before the gem_prelude.rb paths
-   # so you can override the gem_prelude.rb default $LOAD_PATH paths.
+@@ -580,7 +586,7 @@ module Gem
+   # gem's paths are inserted before site lib directory by default.
  
    def self.load_path_insert_index
--    index = $LOAD_PATH.index ConfigMap[:sitelibdir]
-+    index = $LOAD_PATH.index ConfigMap[:vendorlibdir]
+-    index = $LOAD_PATH.index RbConfig::CONFIG['sitelibdir']
++    index = $LOAD_PATH.index RbConfig::CONFIG['vendorlibdir']
  
      index
    end
-@@ -729,6 +735,7 @@ module Gem
+@@ -752,6 +758,7 @@ module Gem
      prefix = File.dirname RUBYGEMS_DIR
  
-     if prefix != File.expand_path(ConfigMap[:sitelibdir]) and
+     if prefix != File.expand_path(RbConfig::CONFIG['sitelibdir']) and
 +       prefix != File.expand_path(ConfigMap[:vendorlibdir]) and
-        prefix != File.expand_path(ConfigMap[:libdir]) and
+        prefix != File.expand_path(RbConfig::CONFIG['libdir']) and
         'lib' == File.basename(RUBYGEMS_DIR) then
        prefix
