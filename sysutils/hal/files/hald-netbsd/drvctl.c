@@ -123,7 +123,7 @@ drvctl_dev_add(gchar *name)
 		parent = hal_device_store_match_key_value_string (
 		    hald_get_gdl(), "netbsd.device", pdevnode);
 		if (parent == NULL)
-			HAL_INFO (("dev_add: name=%s but netbsd.device=%s not found", pdevnode));
+			HAL_INFO (("dev_add: name=%s but netbsd.device=%s not found",name, pdevnode));
 	}
 
 	d = devinfo_add_node (parent, name);
@@ -245,7 +245,7 @@ drvctl_find_device_with_child(const gchar *curnode, const gchar *devnode,
 	if (laa.l_childname)
 		free(laa.l_childname);
 
-	/* HAL_INFO (("%s: couldn't find device with child %s", curnode, devnode)); */
+	HAL_INFO (("%s: couldn't find device with child %s", curnode, devnode));
 	return FALSE;
 }
 
