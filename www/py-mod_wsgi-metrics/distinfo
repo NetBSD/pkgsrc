@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/25 12:00:49 adam Exp $
+
+SHA1 (mod_wsgi-metrics-1.1.1.tar.gz) = 846d66bca409cad14fca8cd8c55659e1792b2206
+RMD160 (mod_wsgi-metrics-1.1.1.tar.gz) = 2148d5e203c630cfb1b0349466d845443ff7495f
+Size (mod_wsgi-metrics-1.1.1.tar.gz) = 17430 bytes
