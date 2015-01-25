@@ -137,12 +137,12 @@ devinfo_default_apply_quirks(HalDevice *d, const char *devnode)
 
 /* acpiacad(4) */
 	if (strncmp (devnode, "acpiacad", 8) == 0) {
-		HAL_INFO (("%s: applying acpiacad quirks"));
+		HAL_INFO (("%s: applying acpiacad quirks",devnode));
 		hal_device_add_capability (d, "ac_adapter");
 
 /* acpibat(4) */
 	} else if (strncmp (devnode, "acpibat", 7) == 0) {
-		HAL_INFO (("%s: applying acpibat quirks"));
+		HAL_INFO (("%s: applying acpibat quirks",devnode));
 		hal_device_add_capability (d, "battery");
 		hal_device_property_set_string (d, "battery.type", "primary");
 	}

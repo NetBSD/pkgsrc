@@ -1,4 +1,4 @@
-/* $NetBSD: devinfo_mass.c,v 1.4 2010/12/26 20:59:31 markd Exp $ */
+/* $NetBSD: devinfo_mass.c,v 1.5 2015/01/25 18:46:09 wiz Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -230,7 +230,7 @@ devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char 
 	}
 	if (gparent_devnode && strstr (gparent_devnode, "umass") == gparent_devnode)
 		hal_device_property_set_string (d, "storage.bus", "usb");
-	else if (strstr (parent_devnode, "atabus") == parent_devnode)
+	else if (parent_devnode && strstr (parent_devnode, "atabus") == parent_devnode)
 		hal_device_property_set_string (d, "storage.bus", "ide");
 	else
 		hal_device_property_set_string (d, "storage.bus", "scsi");
