@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1082 2015/01/23 16:18:22 taca Exp $
+# $NetBSD: Makefile,v 1.1083 2015/01/25 12:03:37 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -38,7 +38,6 @@ SUBDIR+=	ap2-python
 SUBDIR+=	ap2-subversion
 SUBDIR+=	ap2-suphp
 SUBDIR+=	ap2-transform
-SUBDIR+=	ap2-wsgi
 SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap22-authn-sasl
 SUBDIR+=	ap22-authnz-external
@@ -622,6 +621,8 @@ SUBDIR+=	py-httplib2
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-mechanize
 SUBDIR+=	py-mezzanine
+SUBDIR+=	py-mod_wsgi
+SUBDIR+=	py-mod_wsgi-metrics
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
