@@ -1,7 +1,8 @@
-$NetBSD: patch-src_util_Alloc.hxx,v 1.1 2015/01/25 14:10:03 pho Exp $
+$NetBSD: patch-src_util_Alloc.hxx,v 1.2 2015/01/25 14:45:35 wiz Exp $
 
 Some platforms (e.g. Darwin 9) don't have strndup(3), but the function
 xstrndup() isn't used in the first place.
+http://bugs.musicpd.org/view.php?id=4289
 
 --- src/util/Alloc.hxx.orig	2014-10-24 22:28:53.000000000 +0000
 +++ src/util/Alloc.hxx
