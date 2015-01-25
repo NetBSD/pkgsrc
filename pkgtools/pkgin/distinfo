@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.32 2014/01/21 16:31:27 jperkin Exp $
+$NetBSD: distinfo,v 1.33 2015/01/25 10:09:34 imil Exp $
 
-SHA1 (3859170568fbe4fe21b5660dbaeca8d65ac10f1b.tar.gz) = 58d06c5884dd490508f609c5320542c919afe0c7
-RMD160 (3859170568fbe4fe21b5660dbaeca8d65ac10f1b.tar.gz) = e783457044af3b41a784012f4d0961ed87e8c4af
-Size (3859170568fbe4fe21b5660dbaeca8d65ac10f1b.tar.gz) = 187873 bytes
-SHA1 (patch-Makefile.in) = 46f676a8e2bdb89f1d0f6f4e6c9cce55c56bb4bd
-SHA1 (patch-actions.c) = c7a630a2509ade9d913abb771a7bde4653a44e78
-SHA1 (patch-main.c) = 2faf9b225fdf30a997c5c0249cd40486d5d8d55c
+SHA1 (70928282ab5c09848e04a58b96fcca4c961701e6.tar.gz) = 6fd6477c7bd09a76c461070adb31d4ad96acf640
+RMD160 (70928282ab5c09848e04a58b96fcca4c961701e6.tar.gz) = e94b54685ae5fce605cdd1c7aad8f8a750751746
+Size (70928282ab5c09848e04a58b96fcca4c961701e6.tar.gz) = 190334 bytes
