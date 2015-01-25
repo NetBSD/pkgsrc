@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.130 2014/11/15 14:42:20 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.131 2015/01/25 16:03:38 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -119,6 +119,12 @@
 # RUBY_VERSION_FULL
 #	Version of Ruby including patchlevel.
 #
+# RUBY_GEMS_PKGSRC_VERS
+#	Version of rubygems provided by misc/rubygems.
+#
+# RUBY_RDOC_PKGSRC_VERS
+#	Version of rdoc provided by devel/rdoc.
+#
 # RUBY_BASE
 #	Name of ruby base package's name.
 #
@@ -224,23 +230,32 @@ RUBY18_VERSION=		1.8.7
 RUBY193_VERSION=	1.9.3
 RUBY200_VERSION=	2.0.0
 RUBY21_VERSION=		2.1.5
+RUBY22_VERSION=		2.2.0
 
 # patch
 RUBY18_PATCHLEVEL=	pl374
 RUBY193_PATCHLEVEL=	p551
 RUBY200_PATCHLEVEL=	p598
 #RUBY21_PATCHLEVEL=	p273
+#RUBY22_PATCHLEVEL=	p0
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
 RUBY193_API_VERSION=	1.9.1
 RUBY200_API_VERSION=	2.0.0
 RUBY21_API_VERSION=	2.1.0
+RUBY22_API_VERSION=	2.2.0
+
+# pkgsrc's rubygems's version
+RUBY_GEMS_PKGSRC_VERS=	2.4.5
+
+# pkgsrc's rdoc's version
+RUBY_RDOC_PKGSRC_VERS=	4.2.0
 
 #
 RUBY_VERSION_DEFAULT?=	200
 
-RUBY_VERSION_SUPPORTED?= 200 193 18 21
+RUBY_VERSION_SUPPORTED?= 200 193 18 21 # 22
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
@@ -305,6 +320,16 @@ RUBY_ABI_VERSION=	${RUBY_VERSION}
 RUBY_GEMS_VERSION=	2.2.2
 RUBY_RDOC_VERSION=	4.1.0
 RUBY_RAKE_VERSION=	10.1.0
+RUBY_JSON_VERSION=	1.8.1
+
+.elif ${RUBY_VER} == "22"
+RUBY_VERSION=		${RUBY22_VERSION}
+RUBY_VERSION_FULL=	${RUBY_VERSION}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+
+RUBY_GEMS_VERSION=	2.4.5
+RUBY_RDOC_VERSION=	4.2.0
+RUBY_RAKE_VERSION=	10.4.2
 RUBY_JSON_VERSION=	1.8.1
 
 .else
