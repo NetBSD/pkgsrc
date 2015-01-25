@@ -1,14 +1,14 @@
-$NetBSD: patch-ao,v 1.5 2013/06/11 14:55:54 taca Exp $
+$NetBSD: patch-ao,v 1.6 2015/01/25 16:13:13 taca Exp $
 
 Don't hard code config file's path for gem.
 
---- lib/rubygems/config_file.rb.orig	2013-02-12 20:04:55.000000000 +0000
+--- lib/rubygems/config_file.rb.orig	2014-09-04 20:56:50.000000000 +0000
 +++ lib/rubygems/config_file.rb
-@@ -56,32 +56,7 @@ class Gem::ConfigFile
+@@ -57,32 +57,7 @@ class Gem::ConfigFile
  
    # :stopdoc:
  
--  system_config_path =
+-  SYSTEM_CONFIG_PATH =
 -    begin
 -      require "etc"
 -      Etc.sysconfdir
@@ -34,7 +34,7 @@ Don't hard code config file's path for gem.
 -        RbConfig::CONFIG["sysconfdir"] || "/etc"
 -      end
 -    end
-+  system_config_path = '@PKG_SYSCONFDIR@'
++  SYSTEM_CONFIG_PATH = '@PKG_SYSCONFDIR@'
  
    # :startdoc:
  
