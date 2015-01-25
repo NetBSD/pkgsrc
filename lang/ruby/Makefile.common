@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2014/05/21 03:10:30 taca Exp $
+# $NetBSD: Makefile.common,v 1.32 2015/01/25 15:58:29 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -35,6 +35,7 @@ LICENSE=		2-clause-bsd OR ruby-license
 RUBY_SITE_SUBDIR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 
 MASTER_SITE_RUBY?= \
+	http://cache.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://www.ibiblio.org/pub/languages/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://xyz.lcs.mit.edu/pub/ruby/${RUBY_SITE_SUBDIR}/ \
