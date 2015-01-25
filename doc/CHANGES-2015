@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.434 2015/01/25 11:59:55 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.435 2015/01/25 12:06:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -510,3 +510,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/par2 to 0.6.11 [mef 2015-01-25]
 	Updated security/p5-Net-SSLeay to 1.68 [wiz 2015-01-25]
 	Updated devel/p5-IO-CaptureOutput to 1.1104 [wiz 2015-01-25]
+	Added www/py-mod_wsgi-metrics version 1.1.1 [adam 2015-01-25]
+	Added www/py-mod_wsgi version 4.4.6 [adam 2015-01-25]
+	Removed www/ap2-wsgi successor www/py-mod_wsgi [adam 2015-01-25]
