@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/11/21 15:19:51 gdt Exp $
-lib/httpd/mod_wsgi.so
