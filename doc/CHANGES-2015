@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.440 2015/01/25 18:51:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.441 2015/01/25 18:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/hal to 0.5.14nb14 [wiz 2015-01-25]
 	Updated fonts/harfbuzz to 0.9.38 [wiz 2015-01-25]
 	Updated devel/py-setuptools to 12.0.4 [wiz 2015-01-25]
+	Updated devel/py-tortoisehg to 3.2.4 [wiz 2015-01-25]
