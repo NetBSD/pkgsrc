@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/03/14 14:31:20 taca Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/25 16:14:23 taca Exp $
 
-DISTNAME=	rdoc-4.1.1
+DISTNAME=	rdoc-${RUBY_RDOC_PKGSRC_VERS}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
