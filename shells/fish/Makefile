@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/07 21:29:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/25 08:35:07 mef Exp $
 
 DISTNAME=		fish-1.23.1
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fish/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.fishshell.org/
+HOMEPAGE=		http://www.fishshell.com/
 COMMENT=		User friendly command line shell for UNIX-like operating systems
 LICENSE=		gnu-gpl-v2
 
