@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/04/20 21:03:24 adam Exp $
+# $NetBSD: Makefile,v 1.51 2015/01/25 15:54:30 wiedi Exp $
 
 DISTNAME=	vtun-3.0.3
 CATEGORIES=	net
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--with-ssl-lib=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_PREFIX.lzo}/include/lzo
 CONFIGURE_ARGS+=	--with-lzo-lib=${BUILDLINK_PREFIX.lzo}/lib
 BUILD_TARGET=		vtund
+
+USE_TOOLS+=		yacc
 
 DOCDIR=			${PREFIX}/share/doc/vtun
 EGDIR=			${PREFIX}/share/examples/vtun
