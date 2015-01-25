@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/14 14:31:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/01/25 16:14:23 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -41,6 +41,7 @@ ${GEM_LIBDIR}/lib/rdoc/generator.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/darkfish.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/json_index.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/markup.rb
+${GEM_LIBDIR}/lib/rdoc/generator/pot.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/ri.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/.document
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_footer.rhtml
@@ -59,7 +60,8 @@ ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_search.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_sections.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_table_of_contents.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/class.rhtml
-${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts.css
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/css/fonts.css
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/css/rdoc.css
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-Light.ttf
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-LightItalic.ttf
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-Regular.ttf
@@ -96,7 +98,6 @@ ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/js/darkfish.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/js/jquery.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/js/search.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/page.rhtml
-${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/rdoc.css
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/servlet_not_found.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/servlet_root.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/table_of_contents.rhtml
@@ -238,7 +239,12 @@ ${GEM_LIBDIR}/test/test_rdoc_extend.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_darkfish.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_json_index.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_markup.rb
+${GEM_LIBDIR}/test/test_rdoc_generator_pot.rb
+${GEM_LIBDIR}/test/test_rdoc_generator_pot_po.rb
+${GEM_LIBDIR}/test/test_rdoc_generator_pot_po_entry.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_ri.rb
+${GEM_LIBDIR}/test/test_rdoc_i18n_locale.rb
+${GEM_LIBDIR}/test/test_rdoc_i18n_text.rb
 ${GEM_LIBDIR}/test/test_rdoc_include.rb
 ${GEM_LIBDIR}/test/test_rdoc_markdown.rb
 ${GEM_LIBDIR}/test/test_rdoc_markdown_test.rb
