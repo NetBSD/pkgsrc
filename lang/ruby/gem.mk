@@ -1,22 +1,9 @@
-# $NetBSD: gem.mk,v 1.33 2015/01/16 09:18:47 taca Exp $
+# $NetBSD: gem.mk,v 1.34 2015/01/25 16:09:16 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
 #
 # Package-settable variables:
-#
-# RUBYGEMS_REQD
-#	Minimum version of required rubygems.  Ruby base packages contain:
-#
-#		ruby18-base:	none
-#		ruby193-base:	1.8.23
-#		ruby200-base:	2.0.3
-#		ruby210-base:	2.2.0
-#
-#	If newer version of rubygems is resuiqred, set RUBYGEMS_REQD to
-#	minimum version.
-#
-#	Default: not defined
 #
 # OVERRIDE_GEMSPEC
 #	Fix version of depending gem or modify files in gemspec.
@@ -163,40 +150,22 @@ USE_RAKE?=		YES
 # build tool.
 #
 
-.if !empty(RUBY_GEMS_VERSION)
+FIND_PREFIX+=	RUBYGEM_PREFIX=${RUBY_BASE}
+.include "../../mk/find-prefix.mk"
+RUBYGEM=	${RUBYGEM_PREFIX}/bin/${RUBYGEM_NAME}
+
+RUBY_GEMS_VERSION?=	${RUBY_GEMS_PKGSRC_VERS}
+
 _RUBYGEMS_MAJOR=	${RUBY_GEMS_VERSION:C/\.[0-9\.]+$//}
 _RUBYGEMS_MINORS=	${RUBY_GEMS_VERSION:C/^([0-9]+)\.*//}
-.endif
 
 .if ${RUBY_VER} == "18"
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.1.0:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
-.else # !ruby18
-. if defined(RUBYGEMS_REQD)
-
-_RUBYGEMS_REQD_MAJOR=	${RUBYGEMS_REQD:C/\.[0-9\.]+$//}
-_RUBYGEMS_REQD_MINORS=	${RUBYGEMS_REQD:C/^([0-9]+)\.*//}
-
-_RUBYGEMS_REQD=	NO
-
-.  if ${_RUBYGEMS_REQD_MAJOR} > ${_RUBYGEMS_MAJOR}
-_RUBYGEMS_REQD=	YES
-.  elif ${_RUBYGEMS_REQD_MAJOR} == ${_RUBYGEMS_MAJOR}
-.   if !empty(_RUBYGEMS_MINORS) && ${_RUBYGEMS_REQD_MINORS} > ${_RUBYGEMS_MINORS}
-_RUBYGEMS_REQD=	YES
-.   endif
-.  endif
-
-.  if empty(_RUBYGEMS_REQD:M[nN][oO])
-DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
-.  endif
-. endif
 .endif # !ruby18
 
-.if !empty(RUBY_GEMS_VERSION)
 .if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2
-GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VERSION}/${GEM_NAME}
-.endif
+GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VER_DIR}/${GEM_NAME}
 .endif
 
 CATEGORIES+=	ruby
@@ -233,10 +202,6 @@ GEM_BUILDINFO_DIR=	${GEM_HOME}/build_info
 #
 CHECK_INTERPRETER_SKIP+=	${GEM_LIBDIR}/*
 CHECK_PERMS_SKIP+=		${GEM_LIBDIR}/*
-
-# RUBYGEM holds the path to RubyGems' gem command
-EVAL_PREFIX+=	RUBYGEM_PREFIX=${RUBYGEM_NAME}
-RUBYGEM=	${RUBYGEM_PREFIX}/bin/${RUBYGEM_NAME}
 
 # PLIST support
 PLIST_SUBST+=		GEM_NAME=${GEM_NAME}
