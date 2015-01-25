@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2014/12/02 20:22:14 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2015/01/25 22:14:05 fhajny Exp $
 #
 
 DISTNAME=	quagga-0.99.23.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.gnu.org/releases/quagga/
 
@@ -41,6 +42,14 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/quagga/log_syslog.conf \
 .endfor
 
 .include "options.mk"
+
+.if ${INIT_SYSTEM} == "smf"
+BUILD_DIRS=		. solaris
+SMF_INSTANCES=		bgp ospf ospf6 rip ripng zebra
+SMF_METHODS=		quagga
+SMF_METHOD_SRC.quagga=	${WRKSRC}/solaris/quagga.init
+FILES_SUBST+=		PKG_SMF_METHOD_DIR=${PKG_SMF_METHOD_DIR}
+.endif
 
 PLIST_CAT+=		${PKGDIR}/PLIST
 
