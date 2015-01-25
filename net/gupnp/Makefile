@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/01/25 07:43:13 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/01/25 08:15:34 wiz Exp $
 
 DISTNAME=	gupnp-0.20.13
 PKGREVISION=	1
@@ -17,6 +17,12 @@ USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	gupnp-1.0.pc.in
 REPLACE_PYTHON=	tools/gupnp-binding-tool
+
+TEST_TARGET=	check
+#CFLAGS=-O0 -g
+#CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
+#CONFIGURE_ARGS+=	--disable-shared
+#CONFIGURE_ARGS+=	--enable-static
 
 .include "../../mk/bsd.prefs.mk"
 
