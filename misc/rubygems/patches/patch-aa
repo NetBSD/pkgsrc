@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.14 2013/09/10 16:33:29 taca Exp $
+$NetBSD: patch-aa,v 1.15 2015/01/25 16:13:13 taca Exp $
 
 * Relax to allow some attribute could be nil.
 * Complete "http://" to homepage attribute if it isn't begin with it.
 * Accpet date with Time, but ignore time part.
+* Skip checking gem.build_complete existence of file.
+* Allow duplicate dependencies but warn them.
 
---- lib/rubygems/specification.rb.orig	2013-09-09 23:41:27.000000000 +0000
+--- lib/rubygems/specification.rb.orig	2014-11-30 04:25:42.000000000 +0000
 +++ lib/rubygems/specification.rb
-@@ -162,6 +162,12 @@ class Gem::Specification
+@@ -172,6 +172,12 @@ class Gem::Specification < Gem::BasicSpe
      @@default_value[k].nil?
    }
  
@@ -19,25 +21,36 @@ $NetBSD: patch-aa,v 1.14 2013/09/10 16:33:29 taca Exp $
    ######################################################################
    # :section: Required gemspec attributes
  
-@@ -2337,7 +2343,24 @@ class Gem::Specification
+@@ -1779,7 +1785,7 @@ class Gem::Specification < Gem::BasicSpe
+   # directory.
+ 
+   def gem_build_complete_path # :nodoc:
+-    File.join extension_dir, 'gem.build_complete'
++    File.join extension_dir
+   end
+ 
+   ##
+@@ -2456,8 +2462,25 @@ class Gem::Specification < Gem::BasicSpe
+     extend Gem::UserInteraction
      normalize
  
-     nil_attributes = self.class.non_nil_attributes.find_all do |name|
+-    nil_attributes = self.class.non_nil_attributes.find_all do |name|
 -      instance_variable_get("@#{name}").nil?
-+      val = instance_variable_get("@#{name}")
++    nil_attributes = self.class.non_nil_attributes.find_all do |attrname|
++      val = instance_variable_get("@#{attrname}")
 +      if val.nil?
-+        if @@pkgsrc_nil_attributes.key?(name)
-+          case name
++        if @@pkgsrc_nil_attributes.key?(attrname)
++          case attrname
 +          when :required_rubygems_version
 +            val = Gem::Requirement.default
 +          else
 +            val = []
 +          end
-+          instance_variable_set("@#{name}", val)
++          instance_variable_set("@#{attrname}", val)
 +          false
 +        end
 +      end
-+      if name == :authors and val.empty?
++      if attrname == :authors and val.empty?
 +        val = ['not specified']
 +        self.authors = val
 +        false
@@ -45,7 +58,7 @@ $NetBSD: patch-aa,v 1.14 2013/09/10 16:33:29 taca Exp $
      end
  
      unless nil_attributes.empty? then
-@@ -2475,10 +2498,15 @@ class Gem::Specification
+@@ -2601,10 +2624,15 @@ http://opensource.org/licenses/alphabeti
        raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
      end
  
@@ -65,3 +78,12 @@ $NetBSD: patch-aa,v 1.14 2013/09/10 16:33:29 taca Exp $
      end
  
      # Warnings
+@@ -2647,7 +2675,7 @@ http://opensource.org/licenses/alphabeti
+ 
+     dependencies.each do |dep|
+       if prev = seen[dep.name] then
+-        raise Gem::InvalidSpecificationException, <<-MESSAGE
++        warn <<-MESSAGE
+ duplicate dependency on #{dep}, (#{prev.requirement}) use:
+     add_runtime_dependency '#{dep.name}', '#{dep.requirement}', '#{prev.requirement}'
+         MESSAGE

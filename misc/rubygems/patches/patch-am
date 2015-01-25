@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2013/09/10 16:33:29 taca Exp $
+$NetBSD: patch-am,v 1.7 2015/01/25 16:13:13 taca Exp $
 
 Make sure to setup under DESTDIR.
 
---- lib/rubygems/commands/setup_command.rb.orig	2013-09-09 23:41:27.000000000 +0000
+--- lib/rubygems/commands/setup_command.rb.orig	2014-07-21 18:50:29.000000000 +0000
 +++ lib/rubygems/commands/setup_command.rb
 @@ -145,7 +145,7 @@ By default, this RubyGems will install g
  
