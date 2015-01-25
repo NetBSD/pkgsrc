@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/07/08 13:37:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2015/01/25 13:09:33 joerg Exp $
 #
 
 ETVER=				0.9.3
@@ -13,6 +13,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
 COMMENT=		Atari Running on Any Machine
 LICENSE=		gnu-gpl-v2
+
+# error: unable to open output file 'gen_x86_64/gencpu.o': 'No such file or directory'
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
