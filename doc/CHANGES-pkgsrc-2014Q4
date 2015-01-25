@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.10 2015/01/24 20:49:33 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.11 2015/01/25 10:21:54 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -25,3 +25,5 @@ Pullup ticket #4592 - requested by bouyer
 mail/sympa: security update
 Pullup ticket #4594 - requested by wiz
 mail/dovecot: security patch
+Pullup ticket #4595 - requested by gdt
+editors/emacs24: build fix
