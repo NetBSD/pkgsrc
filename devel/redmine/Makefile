@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/03 18:55:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/25 13:09:10 joerg Exp $
 
 DISTNAME=	redmine-2.6.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
+
+RUBY_VERSION_SUPPORTED= 200 193 21
 
 DISTFILES+=	${DEFAULT_DISTFILES} \
 		actionmailer-3.2.19.gem \
@@ -73,7 +75,7 @@ DISTFILES+=	${DEFAULT_DISTFILES} \
 WRKSRC=		${WRKDIR}
 RM_DIR=		share/redmine
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax pkg-config
 
 REPLACE_RUBY+=	builder-3.0.4/lib/*
 REPLACE_RUBY+=	builder-3.0.4/lib/builder/*
