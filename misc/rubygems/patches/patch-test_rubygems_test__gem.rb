@@ -1,22 +1,22 @@
-$NetBSD: patch-test_rubygems_test__gem.rb,v 1.4 2013/06/15 02:12:48 taca Exp $
+$NetBSD: patch-test_rubygems_test__gem.rb,v 1.5 2015/01/25 16:13:13 taca Exp $
 
 Use vendorlibdir.
 
---- test/rubygems/test_gem.rb.orig	2013-03-11 21:10:40.000000000 +0000
+--- test/rubygems/test_gem.rb.orig	2014-11-30 04:31:10.000000000 +0000
 +++ test/rubygems/test_gem.rb
-@@ -964,12 +964,12 @@ class TestGem < Gem::TestCase
+@@ -641,12 +641,12 @@ class TestGem < Gem::TestCase
    end
  
    def test_self_prefix_sitelibdir
--    orig_sitelibdir = Gem::ConfigMap[:sitelibdir]
--    Gem::ConfigMap[:sitelibdir] = @@project_dir
-+    orig_sitelibdir = Gem::ConfigMap[:vendorlibdir]
-+    Gem::ConfigMap[:vendorlibdir] = @@project_dir
+-    orig_sitelibdir = RbConfig::CONFIG['sitelibdir']
+-    RbConfig::CONFIG['sitelibdir'] = @@project_dir
++    orig_sitelibdir = RbConfig::CONFIG['vendorlibdir']
++    RbConfig::CONFIG['vendorlibdir'] = @@project_dir
  
      assert_nil Gem.prefix
    ensure
--    Gem::ConfigMap[:sitelibdir] = orig_sitelibdir
-+    Gem::ConfigMap[:vendorlibdir] = orig_sitelibdir
+-    RbConfig::CONFIG['sitelibdir'] = orig_sitelibdir
++    RbConfig::CONFIG['vendorlibdir'] = orig_sitelibdir
    end
  
-   def test_self_refresh
+   def test_self_read_binary
