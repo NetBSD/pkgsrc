@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.433 2015/01/25 11:58:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.434 2015/01/25 11:59:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -509,3 +509,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/gupnp to 0.20.13nb1 [wiz 2015-01-25]
 	Updated archivers/par2 to 0.6.11 [mef 2015-01-25]
 	Updated security/p5-Net-SSLeay to 1.68 [wiz 2015-01-25]
+	Updated devel/p5-IO-CaptureOutput to 1.1104 [wiz 2015-01-25]
