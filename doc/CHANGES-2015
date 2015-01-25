@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.439 2015/01/25 18:50:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.440 2015/01/25 18:51:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -517,3 +517,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rdoc to 4.2.0 [taca 2015-01-25]
 	Updated sysutils/hal to 0.5.14nb14 [wiz 2015-01-25]
 	Updated fonts/harfbuzz to 0.9.38 [wiz 2015-01-25]
+	Updated devel/py-setuptools to 12.0.4 [wiz 2015-01-25]
