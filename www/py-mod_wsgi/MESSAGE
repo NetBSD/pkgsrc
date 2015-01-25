@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/01/25 12:00:28 adam Exp $
+
+In order to use this module in your Apache 2.x installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule wsgi_module ${PYSITELIB}/mod_wsgi/server/mod_wsgi-${PYPKGPREFIX}.so
+
+===========================================================================
