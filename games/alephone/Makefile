@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/02/16 11:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/01/25 13:30:03 wiz Exp $
 
 DISTNAME=	AlephOne-20120514
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +23,7 @@ post-install:
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../audio/SDL_sound/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.6
 .include "../../devel/SDL/buildlink3.mk"
 BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.31
