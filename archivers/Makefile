@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2014/08/12 21:23:37 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.136 2015/01/26 07:49:53 mef Exp $
 #
 
 COMMENT=	Archivers
@@ -60,6 +60,7 @@ SUBDIR+=	ocaml-bz2
 SUBDIR+=	ocaml-zip
 SUBDIR+=	p5-Archive-Any
 SUBDIR+=	p5-Archive-Any-Lite
+SUBDIR+=	p5-Archive-Extract
 SUBDIR+=	p5-Archive-Peek
 SUBDIR+=	p5-Archive-Tar
 SUBDIR+=	p5-Archive-Zip
