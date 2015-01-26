@@ -1,0 +1,6 @@
+Archive::Extract is a generic archive extraction mechanism.
+It allows you to extract .tgz, .tar, .gz and .zip files, using
+either perl modules or commandline tools
+
+This was first released with perl v5.9.5, deprecated (will be
+CPAN-only) in v5.17.9 and removed from v5.19.0
