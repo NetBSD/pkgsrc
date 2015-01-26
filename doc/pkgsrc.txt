@@ -1549,7 +1549,7 @@ packages).
 
 4.1.2. Installing binary packages
 
-In the directory from the last section, there is a subdirectory called All,
+In the directory from the last section, there is a subdirectory called All/,
 which contains all the binary packages that are available for the platform,
 excluding those that may not be distributed via FTP or CDROM (depending on
 which medium you are using).
@@ -1558,7 +1558,7 @@ To install packages directly from an FTP or HTTP server, run the following
 commands in a Bourne-compatible shell (be sure to su to root first):
 
 # PATH="/usr/pkg/sbin:$PATH"
-# PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/OPSYS/ARCH/VERSIONS/All"
+# PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/OPSYS/ARCH/VERSIONS/All/"
 # export PATH PKG_PATH
 
 Instead of URLs, you can also use local paths, for example if you are
