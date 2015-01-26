@@ -1,3 +1,7 @@
+$NetBSD: patch-zebra-kernel_socket.c,v 1.2 2015/01/26 00:06:50 gdt Exp $
+
+This patch has already been applied upstream.
+
 From 2fa9994ed80f1b5620cbebf040e85127992ec20d Mon Sep 17 00:00:00 2001
 From: Greg Troxel <gdt@ir.bbn.com>
 Date: Tue, 2 Dec 2014 14:51:49 -0500
