@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.444 2015/01/26 04:08:15 mef Exp $
+$NetBSD: CHANGES-2015,v 1.445 2015/01/26 05:40:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -522,3 +522,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.26b [wiz 2015-01-25]
 	Updated misc/zyGrib to 7.0.0 [plunky 2015-01-25]
 	Updated devel/p5-App-Cmd to 0.326 [mef 2015-01-26]
+	Updated devel/p5-App-FatPacker to 0.010002 [mef 2015-01-26]
+	Updated devel/p5-App-cpanminus to 1.7024 [mef 2015-01-26]
+	Updated devel/p5-Devel-PatchPerl to 1.30 [mef 2015-01-26]
+	Updated devel/p5-CPAN-Perl-Releases to 2.04 [mef 2015-01-26]
+	Updated devel/p5-App-perlbrew to 0.72 [mef 2015-01-26]
+	Updated devel/p5-AppConfig-Std to 1.09 [mef 2015-01-26]
+	Updated devel/p5-AtExit to 2.02 [mef 2015-01-26]
+	
