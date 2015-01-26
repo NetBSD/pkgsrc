@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.452 2015/01/26 13:09:19 mef Exp $
+$NetBSD: CHANGES-2015,v 1.453 2015/01/26 14:27:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -544,3 +544,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/qpdf to 5.1.2 [mef 2015-01-26]
 	Updated archivers/gtar-base to 1.28nb1 [jperkin 2015-01-26]
 	Updated print/pslib to 0.4.5 [mef 2015-01-26]
+	Updated textproc/p5-Convert-ASN1 to 0.27 [mef 2015-01-26]
+	Updated textproc/p5-Dist-Zilla-Plugin-PodWeaver to 4.006 [mef 2015-01-26]
+	Updated textproc/p5-FormValidator-Simple to 0.29 [mef 2015-01-26]
+	Updated textproc/p5-Kwalify to 1.22 [mef 2015-01-26]
+	Updated textproc/p5-Lingua-EN-FindNumber to 1.30 [mef 2015-01-26]
+	Updated textproc/p5-Lingua-EN-Numbers-Ordinate to 1.03 [mef 2015-01-26]
+	Updated textproc/p5-Lingua-EN-Tagger to 0.24 [mef 2015-01-26]
