@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:02:26 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/26 06:58:56 dbj Exp $
 bin/miri_sdr
 include/mirisdr.h
 include/mirisdr_export.h
 lib/libmirisdr.a
 lib/libmirisdr.so
 lib/libmirisdr.so.0
-lib/libmirisdr.so.0.0git
+lib/libmirisdr.so.0.0.${PKGREVISION}
 lib/pkgconfig/libmirisdr.pc
