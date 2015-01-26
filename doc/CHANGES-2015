@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.447 2015/01/26 07:38:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.448 2015/01/26 07:54:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -539,3 +539,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Carp-Assert to 0.21 [mef 2015-01-26]
 	Updated devel/p5-Carp-Assert-More to 1.14 [mef 2015-01-26]
 	Updated devel/p5-Carp-REPL to 0.17 [mef 2015-01-26]
+	Added archivers/p5-Archive-Extract version 0.74 [mef 2015-01-26]
