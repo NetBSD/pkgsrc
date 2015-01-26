@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/11/19 12:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/26 18:38:44 adam Exp $
 
 DISTNAME=	gtkmm-3.14.0
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
@@ -11,26 +11,30 @@ HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ Interfaces for GTK+ and GNOME (v3)
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
-USE_TOOLS+=	gmake perl pkg-config
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-
-PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake perl pkg-config
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
+PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
-.include "../../textproc/libxslt/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+PLIST_VARS+=	x11
+.if !empty(PKG_BUILD_OPTIONS.gtk3:Mx11)
+PLIST.x11=	yes
+.endif
+
 .include "../../devel/atkmm/buildlink3.mk"
-.include "../../graphics/cairomm/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.gtk3+=	gtk3+>=3.14.0
-.include "../../x11/gtk3/buildlink3.mk"
-.include "../../devel/pangomm/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.36.0
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/mm-common/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/mm-common/buildlink3.mk"
+.include "../../devel/pangomm/buildlink3.mk"
+.include "../../graphics/cairomm/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.gtk3+=	gtk3+>=3.14.0
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
