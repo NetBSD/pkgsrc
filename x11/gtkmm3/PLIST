@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/19 12:54:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/26 18:38:44 adam Exp $
 include/gdkmm-3.0/gdkmm.h
 include/gdkmm-3.0/gdkmm/applaunchcontext.h
 include/gdkmm-3.0/gdkmm/color.h
@@ -185,7 +185,7 @@ include/gtkmm-3.0/gtkmm/pagesetupunixdialog.h
 include/gtkmm-3.0/gtkmm/paned.h
 include/gtkmm-3.0/gtkmm/papersize.h
 include/gtkmm-3.0/gtkmm/placessidebar.h
-include/gtkmm-3.0/gtkmm/plug.h
+${PLIST.x11}include/gtkmm-3.0/gtkmm/plug.h
 include/gtkmm-3.0/gtkmm/popover.h
 include/gtkmm-3.0/gtkmm/printcontext.h
 include/gtkmm-3.0/gtkmm/printer.h
@@ -327,7 +327,7 @@ include/gtkmm-3.0/gtkmm/private/pagesetupunixdialog_p.h
 include/gtkmm-3.0/gtkmm/private/paned_p.h
 include/gtkmm-3.0/gtkmm/private/papersize_p.h
 include/gtkmm-3.0/gtkmm/private/placessidebar_p.h
-include/gtkmm-3.0/gtkmm/private/plug_p.h
+${PLIST.x11}include/gtkmm-3.0/gtkmm/private/plug_p.h
 include/gtkmm-3.0/gtkmm/private/popover_p.h
 include/gtkmm-3.0/gtkmm/private/printcontext_p.h
 include/gtkmm-3.0/gtkmm/private/printer_p.h
@@ -365,7 +365,7 @@ include/gtkmm-3.0/gtkmm/private/separatormenuitem_p.h
 include/gtkmm-3.0/gtkmm/private/separatortoolitem_p.h
 include/gtkmm-3.0/gtkmm/private/settings_p.h
 include/gtkmm-3.0/gtkmm/private/sizegroup_p.h
-include/gtkmm-3.0/gtkmm/private/socket_p.h
+${PLIST.x11}include/gtkmm-3.0/gtkmm/private/socket_p.h
 include/gtkmm-3.0/gtkmm/private/spinbutton_p.h
 include/gtkmm-3.0/gtkmm/private/spinner_p.h
 include/gtkmm-3.0/gtkmm/private/stack_p.h
@@ -447,7 +447,7 @@ include/gtkmm-3.0/gtkmm/separatormenuitem.h
 include/gtkmm-3.0/gtkmm/separatortoolitem.h
 include/gtkmm-3.0/gtkmm/settings.h
 include/gtkmm-3.0/gtkmm/sizegroup.h
-include/gtkmm-3.0/gtkmm/socket.h
+${PLIST.x11}include/gtkmm-3.0/gtkmm/socket.h
 include/gtkmm-3.0/gtkmm/spinbutton.h
 include/gtkmm-3.0/gtkmm/spinner.h
 include/gtkmm-3.0/gtkmm/stack.h
