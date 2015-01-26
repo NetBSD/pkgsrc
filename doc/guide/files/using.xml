@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.38 2010/03/18 10:56:18 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.39 2015/01/26 23:00:00 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -57,7 +57,7 @@ and you can still use binary packages from someone else.</para>
     <title>Installing binary packages</title>
 
     <para>In the directory from the last section, there is a
-    subdirectory called <filename>All</filename>, which contains all the
+    subdirectory called <filename>All/</filename>, which contains all the
     binary packages that are available for the platform, excluding those
     that may not be distributed via FTP or CDROM (depending on which
     medium you are using).</para>
@@ -68,7 +68,7 @@ and you can still use binary packages from someone else.</para>
 
 <screen>
 &rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
-&rprompt; <userinput>PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All"</userinput>
+&rprompt; <userinput>PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
 &rprompt; <userinput>export PATH PKG_PATH</userinput>
 </screen>
 
