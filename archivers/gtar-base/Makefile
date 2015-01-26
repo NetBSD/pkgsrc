@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2014/10/09 13:44:32 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2015/01/26 12:30:30 jperkin Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
@@ -6,6 +6,7 @@
 .include "../../archivers/gtar/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
+PKGREVISION=	1
 COMMENT=	The GNU tape archiver with remote magnetic tape support
 LICENSE=	gnu-gpl-v3
 
