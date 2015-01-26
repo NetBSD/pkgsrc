@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.3 2013/08/07 14:05:15 gdt Exp $
+$NetBSD: patch-configure,v 1.4 2015/01/26 00:06:50 gdt Exp $
+
+This patch has not yet been sent upstream.
 
 Extend ip_mreq hack to DragonFlyBSD and SunOS.
 --- configure.orig	2013-08-07 13:54:57.000000000 +0000
