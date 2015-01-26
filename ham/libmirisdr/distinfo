@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/10/13 13:02:26 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/01/26 06:56:43 dbj Exp $
 
-SHA1 (libmirisdr-2013-06-08/libmirisdr-master.tar.gz) = 0f35bb91bc7976aa2feeeddd1a4d974a5963e324
-RMD160 (libmirisdr-2013-06-08/libmirisdr-master.tar.gz) = 299ded85f7bec8cd500cd7936bcba22c3782a1eb
-Size (libmirisdr-2013-06-08/libmirisdr-master.tar.gz) = 45818 bytes
+SHA1 (libmirisdr-59ba372.tar.gz) = 9dc777a126a74357fdc68ee2604fd1ca80828be5
+RMD160 (libmirisdr-59ba372.tar.gz) = 8c68ade38c2ccdd0c45e7d21c5da6e782d7c27ac
+Size (libmirisdr-59ba372.tar.gz) = 45826 bytes
