@@ -1,6 +1,6 @@
 #!@SMF_METHOD_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.1 2014/03/11 14:34:36 jperkin Exp $
+# $NetBSD: mysqld.sh,v 1.2 2015/01/26 12:39:56 fhajny Exp $
 #
 # Init script for mysqld.
 #
@@ -13,7 +13,7 @@ ulimit -n 10240
 
 case "$1" in
 start)
-	@LOCALBASE@/sbin/mysqld --user=mysql \
+	@LOCALBASE@/libexec/mysqld --user=mysql \
 		--basedir=@LOCALBASE@ \
 		--datadir=@MYSQL_DATADIR@ \
 		--pid-file=${PIDFILE} \
