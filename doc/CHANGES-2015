@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.446 2015/01/26 06:46:06 mef Exp $
+$NetBSD: CHANGES-2015,v 1.447 2015/01/26 07:38:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -530,3 +530,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-AppConfig-Std to 1.09 [mef 2015-01-26]
 	Updated devel/p5-AtExit to 2.02 [mef 2015-01-26]
 	Updated devel/p5-CHI to 0.59 [mef 2015-01-26]
+	Updated devel/p5-CPAN-Meta to 2.143240 [mef 2015-01-26]
+	Updated devel/p5-CPAN-Meta-Requirements to 2.132 [mef 2015-01-26]
+	Updated devel/p5-File-NFSLock to 1.27 [mef 2015-01-26]
+	Updated devel/p5-Cache to 2.10 [mef 2015-01-26]
+	Updated devel/p5-Cache-Cache to 1.08 [mef 2015-01-26]
+	Updated devel/p5-Carp-Always to 0.13 [mef 2015-01-26]
+	Updated devel/p5-Carp-Assert to 0.21 [mef 2015-01-26]
+	Updated devel/p5-Carp-Assert-More to 1.14 [mef 2015-01-26]
+	Updated devel/p5-Carp-REPL to 0.17 [mef 2015-01-26]
