@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/01/23 06:58:42 obache Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/26 13:57:10 mef Exp $
 
-DISTNAME=	FormValidator-Simple-0.28
+DISTNAME=	FormValidator-Simple-0.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FormValidator/}
 
