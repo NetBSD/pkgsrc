@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.449 2015/01/26 08:00:13 mef Exp $
+$NetBSD: CHANGES-2015,v 1.450 2015/01/26 11:54:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -541,3 +541,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Carp-REPL to 0.17 [mef 2015-01-26]
 	Added archivers/p5-Archive-Extract version 0.74 [mef 2015-01-26]
 	Updated devel/p5-BackPAN-Index to 0.42 [mef 2015-01-26]
+	Updated print/qpdf to 5.1.2 [mef 2015-01-26]
