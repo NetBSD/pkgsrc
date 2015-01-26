@@ -1,9 +1,19 @@
-$NetBSD: patch-asmrun_signals_osdep.h,v 1.2 2014/10/09 19:08:28 jaapb Exp $
+$NetBSD: patch-asmrun_signals_osdep.h,v 1.3 2015/01/26 14:46:51 jaapb Exp $
 
-Use correct data structures for power architecture
---- asmrun/signals_osdep.h.orig	2014-05-13 13:20:48.000000000 +0000
+Use correct data structures for power architecture; also do signal
+handling correctly for i386
+--- asmrun/signals_osdep.h.orig	2014-09-28 19:46:24.000000000 +0000
 +++ asmrun/signals_osdep.h
-@@ -248,12 +248,21 @@
+@@ -161,7 +161,7 @@
+ 
+ /****************** I386, BSD_ELF */
+ 
+-#elif defined(TARGET_i386) && defined(SYS_bsd_elf)
++#elif defined(TARGET_i386) && defined(SYS_bsd_elf) && !defined(__NetBSD__)
+ 
+  #define DECLARE_SIGNAL_HANDLER(name) \
+  static void name(int sig, siginfo_t * info, struct sigcontext * context)
+@@ -278,12 +278,21 @@
       sigact.sa_handler = (void (*)(int)) (name); \
       sigact.sa_flags = 0
  
