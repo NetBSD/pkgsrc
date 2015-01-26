@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/08/16 21:01:38 gls Exp $
+# $NetBSD: Makefile,v 1.29 2015/01/26 11:08:52 jperkin Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -62,6 +62,20 @@ JACKD_PROCFS_PATH?=	/proc
 CONFIGURE_ARGS+=	--with-default-tmpdir=/dev/shm
 .else
 CONFIGURE_ARGS+=	--with-default-tmpdir=${JACKD_DEFAULT_TMPDIR:Q}
+.endif
+
+#
+# Older Darwin releases do not ship /usr/include/MacTypes.h, newer ones do
+# not ship a copy in the SDK, we somehow need to handle both.  This package
+# explicitly passes -mmacosx-version-min=10.4 meaning we cannot test the
+# __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ macro.  So for now we perform
+# a direct substitution - cleaner fixes welcome.
+#
+.if ${OPSYS} == "Darwin" && exists(/usr/include/MacTypes.h)
+SUBST_CLASSES+=		mactypes
+SUBST_FILES.mactypes=	config/os/macosx/pThreadUtilities.h
+SUBST_STAGE.mactypes=	pre-configure
+SUBST_SED.mactypes=	-e 's,CoreServices.*Headers/,,'
 .endif
 
 PLIST_VARS=		coreaudio oss sunaudio
