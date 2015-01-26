@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/26 06:58:56 dbj Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/26 07:05:04 dbj Exp $
 
 PKGNAME=	libmirisdr-0.1
 PKGREVISION=	1
@@ -19,12 +19,12 @@ USE_CMAKE=	yes
 # Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
 
-PLIST_SUBST+=			PKGREVISION=${PKGREVISION}
+PLIST_SUBST+=			PKGREVISION=${PKGREVISION:U0}
 SUBST_CLASSES+=			patchlevel
 SUBST_STAGE.patchlevel=		pre-configure
 SUBST_MESSAGE.patchlevel=	Fixing library version patchlevel
 SUBST_FILES.patchlevel=		CMakeLists.txt
-SUBST_SED.patchlevel=		-e 's,\(VERSION_INFO_PATCH_VERSION\) git,\1 ${PKGREVISION},'
+SUBST_SED.patchlevel=		-e 's,\(VERSION_INFO_PATCH_VERSION\) git,\1 ${PKGREVISION:U0},'
 
 .include	"../../devel/libusb1/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
