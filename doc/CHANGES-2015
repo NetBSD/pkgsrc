@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.445 2015/01/26 05:40:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.446 2015/01/26 06:46:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -529,4 +529,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-App-perlbrew to 0.72 [mef 2015-01-26]
 	Updated devel/p5-AppConfig-Std to 1.09 [mef 2015-01-26]
 	Updated devel/p5-AtExit to 2.02 [mef 2015-01-26]
-	
+	Updated devel/p5-CHI to 0.59 [mef 2015-01-26]
