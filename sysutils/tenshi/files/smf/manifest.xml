@@ -15,7 +15,7 @@
     </dependency>
     <exec_method name='start' type='method' exec='@PREFIX@/sbin/tenshi -c @PKG_SYSCONFDIR@/tenshi/tenshi.conf -P @VARBASE@/lib/tenshi/tenshi.pid' timeout_seconds='60' />
     <exec_method name='stop' type='method' exec=':kill' timeout_seconds='60' />
-    <exec_method name='refresh' type='method' exec=':kill -HUP' timeout_seconds='60' />
+    <exec_method name='refresh' type='method' exec='pkill -HUP -c %{restarter/contract} -n' timeout_seconds='60' />
     <property_group name='startd' type='framework'>
         <propval name='ignore_error' type='astring' value='signal' />
     </property_group>
