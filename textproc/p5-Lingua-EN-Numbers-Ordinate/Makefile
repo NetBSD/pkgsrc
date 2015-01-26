@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/26 14:18:57 mef Exp $
 #
 
-DISTNAME=		Lingua-EN-Numbers-Ordinate-1.02
+DISTNAME=		Lingua-EN-Numbers-Ordinate-1.03
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 
