@@ -1,12 +1,14 @@
-$NetBSD: patch-include_qpdf_QUtil.hh,v 1.1 2014/04/17 21:37:55 asau Exp $
+$NetBSD: patch-include_qpdf_QUtil.hh,v 1.2 2015/01/26 11:54:17 mef Exp $
 
---- include/qpdf/QUtil.hh.orig	2013-10-18 17:51:30.000000000 +0000
-+++ include/qpdf/QUtil.hh
+Pull time.h to define time_t on FreeBSD.
+
+--- include/qpdf/QUtil.hh.orig	2014-06-08 06:06:13.000000000 +0900
++++ include/qpdf/QUtil.hh	2015-01-26 20:47:22.000000000 +0900
 @@ -14,6 +14,7 @@
  #include <list>
  #include <stdexcept>
  #include <stdio.h>
 +#include <time.h>
  
- namespace QUtil
- {
+ class RandomDataProvider;
+ 
