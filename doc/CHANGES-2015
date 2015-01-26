@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.454 2015/01/26 23:03:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.455 2015/01/26 23:20:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -552,3 +552,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Lingua-EN-Numbers-Ordinate to 1.03 [mef 2015-01-26]
 	Updated textproc/p5-Lingua-EN-Tagger to 0.24 [mef 2015-01-26]
 	Updated sysutils/tenshi to 0.15nb1 [wiz 2015-01-26]
+	Updated devel/p5-Devel-REPL to 1.003026 [wiz 2015-01-26]
