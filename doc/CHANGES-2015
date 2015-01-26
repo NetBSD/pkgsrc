@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.443 2015/01/25 21:40:21 plunky Exp $
+$NetBSD: CHANGES-2015,v 1.444 2015/01/26 04:08:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tortoisehg to 3.2.4 [wiz 2015-01-25]
 	Updated devel/afl to 1.26b [wiz 2015-01-25]
 	Updated misc/zyGrib to 7.0.0 [plunky 2015-01-25]
+	Updated devel/p5-App-Cmd to 0.326 [mef 2015-01-26]
