@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/26 13:09:09 mef Exp $
 #
 
-DISTNAME=		pslib-0.2.6
-PKGREVISION=		7
+DISTNAME=		pslib-0.4.5
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pslib/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pslib.sourceforge.net/
 COMMENT=		C-library to create PostScript files
+LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
@@ -16,7 +16,14 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libps.pc.in
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		msgfmt perl
+USE_TOOLS+=		msgfmt perl gmake
+
+# share/locale/de/LC_MESSAGES/pslib.mo is missing without these
+post-build:
+	(cd ${WRKSRC}/po; ${GMAKE})
+
+post-install:
+	(cd ${WRKSRC}/po; ${GMAKE} install)
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
