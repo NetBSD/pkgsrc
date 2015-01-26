@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.451 2015/01/26 12:30:49 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.452 2015/01/26 13:09:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-BackPAN-Index to 0.42 [mef 2015-01-26]
 	Updated print/qpdf to 5.1.2 [mef 2015-01-26]
 	Updated archivers/gtar-base to 1.28nb1 [jperkin 2015-01-26]
+	Updated print/pslib to 0.4.5 [mef 2015-01-26]
