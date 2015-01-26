@@ -1,7 +1,10 @@
-$NetBSD: patch-src_system.c,v 1.1 2015/01/26 12:30:30 jperkin Exp $
+$NetBSD: patch-src_system.c,v 1.2 2015/01/26 12:41:53 jperkin Exp $
 
 Do not call into gettext which may not be async-signal-safe in between fork
 and exec.  Fixes crashes on OSX when LC_ALL is unset.
+
+Thanks to http://article.gmane.org/gmane.os.macosx.fink.devel/21882 for the
+diagnosis and fix.
 
 --- src/system.c.orig	2014-02-25 22:26:02.000000000 +0000
 +++ src/system.c
