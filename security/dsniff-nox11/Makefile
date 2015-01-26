@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/10/06 08:28:37 obache Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/26 16:05:04 sevan Exp $
 
 .include "../../security/dsniff/Makefile.common"
 
@@ -10,6 +10,10 @@ CONFIGURE_ARGS+=	--without-x
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8
 INSTALL_MAKE_FLAGS+=	install_prefix=${DESTDIR}
+
+.if ${OPSYS} == "Darwin"
+CFLAGS+= 	-DBIND_8_COMPAT
+.endif
 
 post-configure:
 	( cd ${WRKSRC} \
