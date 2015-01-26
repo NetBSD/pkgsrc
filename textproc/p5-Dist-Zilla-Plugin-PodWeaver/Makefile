@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/10/09 14:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/26 13:52:22 mef Exp $
 
-DISTNAME=	Dist-Zilla-Plugin-PodWeaver-4.005
+DISTNAME=	Dist-Zilla-Plugin-PodWeaver-4.006
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
 
