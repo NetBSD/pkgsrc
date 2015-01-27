@@ -1,0 +1,15 @@
+$NetBSD: patch-coda-src_vice_Makefile.in,v 1.1 2015/01/27 15:21:52 hauke Exp $
+
+Leave it to the CONF_FILES framework to install config files.
+
+--- coda-src/vice/Makefile.in.orig	2010-03-29 19:14:02.000000000 +0000
++++ coda-src/vice/Makefile.in
+@@ -303,7 +303,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ @BUILD_SERVER_TRUE@noinst_LTLIBRARIES = libviceerror.la
+ @BUILD_SERVER_TRUE@dist_man_MANS = codasrv.8 servers.5
+-@BUILD_SERVER_TRUE@dist_sysconf_DATA = server.conf.ex
++@BUILD_SERVER_TRUE@dist_sysconf_DATA = 
+ libviceerror_la_SOURCES = ViceErrorMsg.c
+ codasrv_SOURCES = srv.cc srvproc.cc srvproc2.cc coppend.cc coppend.h \
+ 		  codaproc.cc codaproc.h codaproc2.cc clientproc.cc vicecb.cc \
