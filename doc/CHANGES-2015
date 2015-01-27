@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.468 2015/01/27 21:55:40 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.469 2015/01/27 23:02:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/privoxy to 3.0.23 [drochner 2015-01-27]
 	Updated www/firefox to 35.0.1 [ryoon 2015-01-27]
 	Updated www/firefox-l10n to 35.0.1 [ryoon 2015-01-27]
+	Added net/publicfile-run version 20150109 [schmonz 2015-01-27]
