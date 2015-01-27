@@ -1,0 +1,15 @@
+$NetBSD: patch-coda-src_venus_Makefile.in,v 1.1 2015/01/27 15:21:52 hauke Exp $
+
+Leave it to the CONF_FILES framework to install config files.
+
+--- coda-src/venus/Makefile.in.orig	2010-03-29 19:14:02.000000000 +0000
++++ coda-src/venus/Makefile.in
+@@ -294,7 +294,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ @BUILD_CLIENT_TRUE@dist_man_MANS = venus.8 vutil.8
+-@BUILD_CLIENT_TRUE@dist_sysconf_DATA = venus.conf.ex realms
++@BUILD_CLIENT_TRUE@dist_sysconf_DATA = 
+ venus_SOURCES = binding.cc binding.h comm.cc comm.h comm_daemon.cc daemon.cc \
+     fso.h fso0.cc fso1.cc fso_cachefile.cc fso_cfscalls0.cc fso_cfscalls1.cc \
+     fso_cfscalls2.cc fso_daemon.cc fso_dir.cc hdb.cc hdb.h hdb_daemon.cc \
