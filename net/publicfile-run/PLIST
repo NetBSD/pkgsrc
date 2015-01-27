@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/27 23:01:31 schmonz Exp $
+libexec/pubftpd
+share/doc/publicfile-run/README.pkgsrc
