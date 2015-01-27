@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/10/17 09:51:56 mef Exp $
+# $NetBSD: options.mk,v 1.3 2015/01/27 06:01:44 dbj Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
@@ -30,8 +30,6 @@ do-build:
 DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 .endif
 
-# if set optionally, we need to initialize (as an standard)
-PLIST_SRC+=	${PKGDIR}/PLIST
 .if !empty(PKG_OPTIONS:Malsa)
 .include	"../../audio/alsa-lib/buildlink3.mk"
 ALSA_ENABLED=
