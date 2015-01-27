@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/17 01:36:28 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/27 00:36:44 khorben Exp $
 bin/download
 bin/helper
 bin/surfer
+man/html1/download.html
+man/html1/helper.html
+man/html1/surfer.html
 man/man1/download.1
 man/man1/helper.1
 man/man1/surfer.1
-share/applications/helper.desktop
-share/applications/surfer.desktop
-share/doc/html/Surfer/download.html
-share/doc/html/Surfer/helper.html
-share/doc/html/Surfer/surfer.html
+share/applications/deforaos-helper.desktop
+share/applications/deforaos-surfer.desktop
 share/icons/hicolor/16x16/apps/surfer-view-html-source.png
 share/icons/hicolor/24x24/apps/surfer-view-html-source.png
 share/locale/de/LC_MESSAGES/Surfer.mo
