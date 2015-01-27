@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.455 2015/01/26 23:20:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.456 2015/01/27 00:37:36 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Lingua-EN-Tagger to 0.24 [mef 2015-01-26]
 	Updated sysutils/tenshi to 0.15nb1 [wiz 2015-01-26]
 	Updated devel/p5-Devel-REPL to 1.003026 [wiz 2015-01-26]
+	Updated www/deforaos-surfer to 0.2.7 [khorben 2015-01-26]
