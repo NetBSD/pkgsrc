@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/01/27 23:01:31 schmonz Exp $
+
+Please read ${PREFIX}/share/doc/publicfile-run/README.pkgsrc.
+
+To enable the...
+
+FTP service:
+- Set pubftpd=YES in /etc/rc.conf.
+- Create ${VARBASE}/public with suitable contents.
+  This is the _root_ directory described at
+  <http://cr.yp.to/publicfile/ftpd.html> and the _D_/file directory
+  described at <http://cr.yp.to/publicfile/configure.html>.
+
+HTTP service:
+- Set pubhttpd=YES in /etc/rc.conf.
+- Create ${VARBASE}/public with suitable contents.
+  This is the _root_ directory described at
+  <http://cr.yp.to/publicfile/httpd.html> and the _D_/file directory
+  described at <http://cr.yp.to/publicfile/configure.html>.
+
+===========================================================================
