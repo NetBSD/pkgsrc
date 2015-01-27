@@ -1,7 +1,8 @@
-$NetBSD: patch-coda-src_venus_worker.cc,v 1.1 2015/01/27 15:21:52 hauke Exp $
+$NetBSD: patch-coda-src_venus_worker.cc,v 1.2 2015/01/27 19:40:24 gdt Exp $
 
 Added experimental code to support mounting on NetBSD >= 4.99.24. The
 magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
+Sent upstream on 2011-03-11 and again on 2015-01-27.
 
 gcc 4.7 on SunOS insists on de-'const'ifying venusRoot.
 
