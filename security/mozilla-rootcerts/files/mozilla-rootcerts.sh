@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.7 2015/01/27 13:53:06 jperkin Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.8 2015/01/27 13:54:10 jperkin Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -19,7 +19,7 @@
 : ${SSLDIR=@SSLDIR@}
 : ${RM=@RM@}
 
-self="@LOCALBASE@/bin/mozilla-rootcerts"
+self="@LOCALBASE@/sbin/mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
 certdir="/etc/ssl/certs"
 
