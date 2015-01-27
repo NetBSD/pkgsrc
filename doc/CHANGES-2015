@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.463 2015/01/27 13:54:19 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.464 2015/01/27 14:00:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -561,3 +561,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/doxygen to 1.8.9.1 [mef 2015-01-27]
 	Updated security/mozilla-rootcerts to 1.0.20140820nb2 [jperkin 2015-01-27]
 	Updated security/mozilla-rootcerts to 1.0.20140820nb2 [jperkin 2015-01-27]
+	Updated devel/p5-Class-Base to 0.06 [mef 2015-01-27]
+	Updated devel/p5-Class-Gomor to 1.03 [mef 2015-01-27]
+	Updated devel/p5-Class-MethodMaker to 2.22 [mef 2015-01-27]
