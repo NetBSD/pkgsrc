@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/01/27 15:21:52 hauke Exp $
+# $NetBSD: Makefile,v 1.23 2015/01/27 22:03:16 gdt Exp $
 #
 
 DISTNAME=	coda-6.9.5
@@ -12,8 +12,10 @@ COMMENT=	Coda distributed fileystem
 
 LICENSE=	gnu-gpl-v2
 
-# No kernel support for the coda fs
-NOT_FOR_PLATFORM+=	DragonFly-*-*
+# This package requires a coda kernel module, which is only known to
+# work on NetBSD and Linux.  It is known not to work on DragonFly (has
+# never existed) and FreeBSD (removed).
+ONLY_FOR_PLATFORM+=	NetBSD-*-* Linux-*-*
 
 # See http://coda.wikidev.net/Quick_Client_Action for hints on how
 # to configure venus.
