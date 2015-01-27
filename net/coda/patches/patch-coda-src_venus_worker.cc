@@ -1,7 +1,9 @@
-$NetBSD: patch-ac,v 1.6 2012/08/03 10:32:55 marino Exp $
+$NetBSD: patch-coda-src_venus_worker.cc,v 1.1 2015/01/27 15:21:52 hauke Exp $
 
 Added experimental code to support mounting on NetBSD >= 4.99.24. The
 magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
+
+gcc 4.7 on SunOS insists on de-'const'ifying venusRoot.
 
 --- coda-src/venus/worker.cc.orig	2008-10-06 16:52:22.000000000 +0000
 +++ coda-src/venus/worker.cc
@@ -11,7 +13,7 @@ magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
  #endif
 -			
 +
-+#if defined(__NetBSD__) && defined(__NetBSD_Prereq__) && __NetBSD_Prereq__(4,99,24)
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 499002400   /* 4.99.24 */
 +	if (error < 0)
 +	    error = mount("coda", venusRoot, 0, (void *)kernDevice, 256);
 +	if (error < 0)
@@ -26,3 +28,13 @@ magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
  #if defined(__FreeBSD__) && !defined(__FreeBSD_version)
  #define MOUNT_CFS 19
  	if (error < 0)
+@@ -492,7 +500,8 @@ child_done:
+ 	  mnttab = fopen(MNTTAB, "a+");
+ 	  if (mnttab != NULL) {
+ 	    mt.mnt_special = "CODA";
+-	    mt.mnt_mountp = venusRoot;
++            /* XXX */
++	    mt.mnt_mountp = (char *)venusRoot;
+ 	    mt.mnt_fstype = "CODA";
+ 	    mt.mnt_mntopts = "rw";
+ 	    mt.mnt_time = tm;
