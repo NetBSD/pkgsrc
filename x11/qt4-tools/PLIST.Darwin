@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2015/01/27 05:19:45 dbj Exp $
+qt4/mkspecs/default/Info.plist.app
+qt4/mkspecs/default/Info.plist.lib
