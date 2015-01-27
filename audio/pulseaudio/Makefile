@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2014/08/07 07:43:48 spz Exp $
+# $NetBSD: Makefile,v 1.93 2015/01/27 04:04:50 dbj Exp $
 
 DISTNAME=	pulseaudio-5.0
 PKGREVISION=	2
@@ -57,11 +57,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/input.h)
 PLIST.evdev=		yes
-.endif
-
-# Find the appropriate SDK
-.if !empty(MACHINE_PLATFORM:MDarwin-10.*)
-CONFIGURE_ARGS+=	--with-mac-sysroot=/Developer/SDKs/MacOSX10.6.sdk
 .endif
 
 .include "options.mk"
