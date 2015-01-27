@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.464 2015/01/27 14:00:17 mef Exp $
+$NetBSD: CHANGES-2015,v 1.465 2015/01/27 14:04:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -559,7 +559,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/openjdk7 to 1.7.76 [ryoon 2015-01-27]
 	Updated devel/nspr to 4.10.8 [ryoon 2015-01-27]
 	Updated devel/doxygen to 1.8.9.1 [mef 2015-01-27]
-	Updated security/mozilla-rootcerts to 1.0.20140820nb2 [jperkin 2015-01-27]
 	Updated security/mozilla-rootcerts to 1.0.20140820nb2 [jperkin 2015-01-27]
 	Updated devel/p5-Class-Base to 0.06 [mef 2015-01-27]
 	Updated devel/p5-Class-Gomor to 1.03 [mef 2015-01-27]
