@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2014/08/21 21:33:07 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2015/01/27 06:10:15 dbj Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.11.1
@@ -53,12 +53,8 @@ SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_SRC=		${PKGDIR}/PLIST.common
-.if ${OPSYS} == "Darwin"
-DISTNAME=		PyQt-mac-gpl-${PYQT_VERSION}
-.else
 DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
 PLIST_SRC+=		${PKGDIR}/PLIST.X11
-.endif
 .include "../../lang/python/extension.mk"
 
 CONFIGURE_ARGS+=	--verbose
