@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/02/12 12:53:56 obache Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/27 06:36:27 dbj Exp $
 
 DISTNAME=	scipy-0.12.1
 PKGNAME=	${PYPKGPREFIX}-scipy-0.12.1
@@ -22,6 +22,9 @@ MAKE_ENV+=	ATLAS=None
 PYSETUPBUILDARGS+= --fcompiler=g95
 .elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
 PYSETUPBUILDARGS+= --fcompiler=gnu95
+.if ${OPSYS} == "Darwin"
+LDFLAGS+=	-undefined dynamic_lookup
+.endif
 .else
 BROKEN=		Requires fortran 95
 .endif
