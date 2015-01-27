@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.467 2015/01/27 21:42:31 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.468 2015/01/27 21:55:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -565,3 +565,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-MethodMaker to 2.22 [mef 2015-01-27]
 	Updated www/privoxy to 3.0.23 [drochner 2015-01-27]
 	Updated www/firefox to 35.0.1 [ryoon 2015-01-27]
+	Updated www/firefox-l10n to 35.0.1 [ryoon 2015-01-27]
