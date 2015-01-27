@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2014/10/07 16:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.20 2015/01/27 00:36:44 khorben Exp $
 
-DISTNAME=	Surfer-0.2.6
-PKGNAME=	deforaos-surfer-0.2.6
-PKGREVISION=	16
+DISTNAME=	Surfer-0.2.7
+PKGNAME=	deforaos-surfer-0.2.7
 CATEGORIES=	www
-MASTER_SITES=	http://www.defora.org/os/download/download/3709/
+MASTER_SITES=	http://www.defora.org/os/download/download/4345/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -25,16 +24,20 @@ OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	LDFLAGSF="-lnsl -lresolv"
 
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/download.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/download.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/helper.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/helper.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/surfer.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/surfer.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/download.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/download.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/helper.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/helper.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/surfer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/surfer.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
