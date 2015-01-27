@@ -1,0 +1,11 @@
+ Getting help
+ ============
+
+You've installed an automated and customized publicfile-run package.
+If you're having trouble getting the publicfile daemons to run, ask
+the package's maintainer:
+
+<URL:mailto:jlmuir@imca-cat.org>
+
+If you need to ask for help on the publicfile list, please mention that
+you're using the publicfile-run package from pkgsrc.
