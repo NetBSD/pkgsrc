@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.465 2015/01/27 14:04:34 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.466 2015/01/27 20:33:08 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-Base to 0.06 [mef 2015-01-27]
 	Updated devel/p5-Class-Gomor to 1.03 [mef 2015-01-27]
 	Updated devel/p5-Class-MethodMaker to 2.22 [mef 2015-01-27]
+	Updated www/privoxy to 3.0.23 [drochner 2015-01-27]
