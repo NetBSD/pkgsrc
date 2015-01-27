@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.81 2014/12/19 16:12:48 taca Exp $
+# $NetBSD: phpversion.mk,v 1.81.2.1 2015/01/27 18:30:15 tron Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -82,7 +82,7 @@ PHPVERSION_MK=	defined
 
 # Define each PHP's version.
 PHP53_VERSION=	5.3.29
-PHP54_VERSION=	5.4.36
+PHP54_VERSION=	5.4.37
 PHP55_VERSION=	5.5.20
 PHP56_VERSION=	5.6.4
 
@@ -173,7 +173,7 @@ PHP_CHECK_INSTALLED?=	Yes
 # if installed PHP isn't compatible with required PHP, bail out
 .if empty(PHP_CHECK_INSTALLED:M[nN][oO])
 .if defined(_PHP_INSTALLED) && !defined(_PHP_VERSION_${_PHP_VERSION}_INSTALLED)
-PKG_SKIP_REASON+=	"Package accepts ${PKG_PHP}, but different version is installed"
+PKG_FAIL_REASON+=	"Package accepts ${PKG_PHP}, but different version is installed"
 .endif
 .endif
 
@@ -211,7 +211,7 @@ PHP_PKG_PREFIX=		php56
 PHP_EXTENSION_DIR=	lib/php/${PHP56_RELDATE}
 .else
 # force an error
-PKG_SKIP_REASON+=	"${PKG_PHP} is not a valid package"
+PKG_FAIL_REASON+=	"${PKG_PHP} is not a valid package"
 .endif
 
 #
@@ -219,7 +219,7 @@ PKG_SKIP_REASON+=	"${PKG_PHP} is not a valid package"
 #
 .if !empty(PHP_CHECK_INSTALLED:M[nN][oO])
 .if defined(_PHP_VERSION_INSTALLED) && ${_PHP_VERSION} != ${_PHP_VERSION_INSTALLED}
-PKG_SKIP_REASON+=	"${PKGBASE} requires ${PKG_PHP}, but php-${_PHP_VERSION_INSTALLED} is already installed."
+PKG_FAIL_REASON+=	"${PKGBASE} requires ${PKG_PHP}, but php-${_PHP_VERSION_INSTALLED} is already installed."
 .endif
 .endif
 
