@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.8 2006/10/17 14:25:43 drochner Exp $
+$NetBSD: distinfo,v 1.9 2015/01/27 05:05:30 dbj Exp $
 
 SHA1 (numarray-1.5.2.tar.gz) = 17f6c4bb5f0d97e93923b8ca4f55fccc1ee985e9
 RMD160 (numarray-1.5.2.tar.gz) = 51cc7681958cada32c515872e8def6fc0ff296ca
 Size (numarray-1.5.2.tar.gz) = 1196014 bytes
+SHA1 (patch-Include_numarray_arraybase.h) = 4ea0b49b50a7cb0e9c9cb539eab5e750584795f7
+SHA1 (patch-Src___dotblas.c) = fcb6109d0c73ad50e0c33c79d6655a1b4cfeca0d
 SHA1 (patch-aa) = 6edaab221c6d52a47e5a52b3039e37b8fef814b1
+SHA1 (patch-cfg__packages.py) = 6ded69dabce1942624daa588fe3c64ef67758e34

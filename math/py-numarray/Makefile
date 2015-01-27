@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/09 07:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/01/27 05:05:30 dbj Exp $
 
 DISTNAME=	numarray-1.5.2
 PKGNAME=	${PYPKGPREFIX}-numarray-1.5.2
@@ -11,8 +11,7 @@ HOMEPAGE=	http://www.numpy.org/old_array_packages.html
 COMMENT=	Array manipulation
 
 PLIST_VARS+=	blas
-.if exists(/System/Library/Frameworks/vecLib.framework/Headers)
-BUILDLINK_PASSTHRU_DIRS+=	/System/Library/Frameworks/vecLib.framework/Headers
+.if exists(/System/Library/Frameworks/Accelerate.framework)
 PLIST.blas=	yes
 .endif
 
