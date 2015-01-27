@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.457 2015/01/27 06:13:16 mef Exp $
+$NetBSD: CHANGES-2015,v 1.458 2015/01/27 11:25:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-REPL to 1.003026 [wiz 2015-01-26]
 	Updated www/deforaos-surfer to 0.2.7 [khorben 2015-01-26]
 	Updated devel/doxygen to 1.8.9 [mef 2015-01-27]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.440 [obache 2015-01-27]
