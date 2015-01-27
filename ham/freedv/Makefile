@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/27 08:19:22 dbj Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/27 08:29:52 dbj Exp $
 #
 
 VERSION=	0.97.0.1696
@@ -31,6 +31,12 @@ CMAKE_ARG_PATH=..
 SUBST_STAGE.fixbinconst=	pre-configure
 SUBST_FILES.fixbinconst+=	src/varicode_table.h
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	icons
+.if ${OPSYS} != "Darwin"
+PLIST.icons=	yes
+.endif
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
