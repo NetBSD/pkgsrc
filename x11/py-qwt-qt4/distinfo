@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/10/02 03:47:28 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/01/27 06:11:12 dbj Exp $
 
 SHA1 (PyQwt-5.2.0.tar.gz) = 797f37c63dec660272f6a8ccfd16a017df0ad640
 RMD160 (PyQwt-5.2.0.tar.gz) = e4c8a63d623d974cd500e29fbc62255746ca7feb
 Size (PyQwt-5.2.0.tar.gz) = 2670893 bytes
+SHA1 (patch-configure_configure.py) = 4fbae449cd80b7cf8ed3893ba1333b6fbbca17fc
