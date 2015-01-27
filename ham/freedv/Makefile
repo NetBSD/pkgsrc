@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/10 12:16:15 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/27 08:19:22 dbj Exp $
 #
 
 VERSION=	0.97.0.1696
@@ -26,6 +26,10 @@ USE_CMAKE=yes
 CONFIGURE_DIRS=build
 BUILD_DIRS=${CONFIGURE_DIRS}
 CMAKE_ARG_PATH=..
+
+.include "fixbinconst.mk"
+SUBST_STAGE.fixbinconst=	pre-configure
+SUBST_FILES.fixbinconst+=	src/varicode_table.h
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
