@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/10/31 14:22:20 ryoon Exp $
+# $NetBSD: options.mk,v 1.8 2015/01/27 04:46:06 dbj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -131,6 +131,14 @@ JAVA_ARCH=		${MACHINE_ARCH:S/x86_64/amd64/}
 PLIST_SRC+=		PLIST.java
 PLIST_SUBST+=		JAVA_NAME=${JAVA_NAME:Q}
 PLIST_SUBST+=		JAVA_ARCH=${JAVA_ARCH:Q}
+
+.if ${OPSYS} == "Darwin"
+SUBST_CLASSES+=			fix-dylib
+SUBST_STAGE.fix-dylib=		pre-configure
+SUBST_MESSAGE.fix-dylib=	Fixing java dylib symlink
+SUBST_FILES.fix-dylib=		libjava/Makefile.in
+SUBST_SED.fix-dylib=		-e 's,libjvm.so,libjvm.dylib,g'
+.endif
 
 # Create a JPackage compatible SDK environment.
 CONFIGURE_ARGS+=	--enable-java-home
