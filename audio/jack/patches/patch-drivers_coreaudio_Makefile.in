@@ -1,0 +1,15 @@
+$NetBSD: patch-drivers_coreaudio_Makefile.in,v 1.1 2015/01/27 04:37:53 dbj Exp $
+
+Avoid hard coding header path on Darwin
+
+--- drivers/coreaudio/Makefile.in.orig	2011-09-28 13:10:12.000000000 +0000
++++ drivers/coreaudio/Makefile.in
+@@ -249,7 +249,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ MAINTAINERCLEANFILES = Makefile.in
+-AM_CFLAGS = $(JACK_CFLAGS) -include /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
++AM_CFLAGS = $(JACK_CFLAGS) -framework Carbon -include Carbon/Carbon.h
+ plugindir = $(ADDON_DIR)
+ plugin_LTLIBRARIES = jack_coreaudio.la
+ jack_coreaudio_la_LDFLAGS = -module -avoid-version @OS_LDFLAGS@
