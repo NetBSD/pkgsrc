@@ -1,5 +1,10 @@
-$NetBSD: patch-ah,v 1.4 2012/07/03 11:31:35 mef Exp $
+$NetBSD: patch-ah,v 1.5 2015/01/27 06:13:08 mef Exp $
 
+date: 2005-10-13 21:15:58 +0900;  author: markd;  state: Exp;
+The latest doxygen encodes the source directory path into some of the
+output filenames.  This is problematic in a pkgsrc context as it means
+WRKDIR pathnames can appear in generated filenames.  Fix by reverting
+to the old way of naming the files.  Bump PKGREVISION.
 
 --- src/dirdef.cpp.orig	2012-05-28 23:17:06.000000000 +0900
 +++ src/dirdef.cpp	2012-06-23 11:52:57.000000000 +0900
