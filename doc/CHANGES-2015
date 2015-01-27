@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.458 2015/01/27 11:25:06 obache Exp $
+$NetBSD: CHANGES-2015,v 1.459 2015/01/27 12:31:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/deforaos-surfer to 0.2.7 [khorben 2015-01-26]
 	Updated devel/doxygen to 1.8.9 [mef 2015-01-27]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.440 [obache 2015-01-27]
+	Updated lang/openjdk7 to 1.7.76 [ryoon 2015-01-27]
