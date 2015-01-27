@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.6 2014/01/02 18:26:36 wiz Exp $
+$NetBSD: patch-af,v 1.7 2015/01/27 06:13:08 mef Exp $
+
+Make epstopdf configurable
 
 --- doc/Makefile.in.orig	2013-10-07 19:20:02.000000000 +0000
 +++ doc/Makefile.in
