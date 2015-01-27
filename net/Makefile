@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1053 2015/01/20 10:47:10 fhajny Exp $
+# $NetBSD: Makefile,v 1.1054 2015/01/27 23:02:11 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -548,6 +548,7 @@ SUBDIR+=	proftpd
 SUBDIR+=	proxycheck
 SUBDIR+=	proxytunnel
 SUBDIR+=	publicfile
+SUBDIR+=	publicfile-run
 SUBDIR+=	puf
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
