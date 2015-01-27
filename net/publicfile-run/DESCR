@@ -1,0 +1,2 @@
+This package creates the users and group needed to run publicfile
+services and provides NetBSD-style rc.d scripts.
