@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/12 00:24:41 asau Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/27 00:36:22 jperkin Exp $
 #
 
 DISTNAME=	libdca-0.0.5
@@ -20,5 +20,12 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
+
+.include "../../mk/compiler.mk"
+
+# Avoid clang bugs resulting in "duplicate symbol ___sputc".
+.if !empty(PKGSRC_COMPILER:Mclang) && ${OPSYS} == "Darwin"
+CFLAGS+=	-std=gnu89
+.endif
 
 .include "../../mk/bsd.pkg.mk"
