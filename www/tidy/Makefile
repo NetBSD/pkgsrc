@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/04/25 21:04:24 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2015/01/28 07:13:55 wiz Exp $
 
 DISTNAME=	tidy-20091027
 PKGREVISION=	5
@@ -29,7 +29,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+= doxygen>=1.8.7:../../devel/doxygen
+BUILD_DEPENDS+= doxygen>=1.8.9:../../devel/doxygen
 
 HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif tidy.css faq.html \
 		license.html pending.html release-notes.html tidy.gif
