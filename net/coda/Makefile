@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/01/27 22:03:16 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2015/01/28 13:11:22 hauke Exp $
 #
 
 DISTNAME=	coda-6.9.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/coda/src/
 
@@ -14,15 +14,10 @@ LICENSE=	gnu-gpl-v2
 
 # This package requires a coda kernel module, which is only known to
 # work on NetBSD and Linux.  It is known not to work on DragonFly (has
-# never existed) and FreeBSD (removed).
+# never existed), FreeBSD (removed) and Solaris (outdated).
 ONLY_FOR_PLATFORM+=	NetBSD-*-* Linux-*-*
 
-# See http://coda.wikidev.net/Quick_Client_Action for hints on how
-# to configure venus.
-
 PKG_SYSCONFSUBDIR=	coda
-
-#SMF_INSTANCES=		TODO
 
 EGDIR=			${PREFIX}/share/examples/coda
 CONF_FILES+=		${EGDIR}/server.conf	${PKG_SYSCONFDIR}/server.conf
@@ -35,13 +30,6 @@ USE_TOOLS+=		gmake pkg-config perl perl:run
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 REPLACE_PERL=		coda-src/scripts/tape.pl coda-src/scripts/volmunge
-
-# Sources use both in equal share 
-CFLAGS.SunOS+=		-Du_int32_t=uint32_t
-CFLAGS.SunOS+=		-Du_int16_t=uint16_t
-CFLAGS.SunOS+=		-Du_int8_t=uint8_t
-# Use the value from <netdb.h>
-CFLAGS.SunOS+=		-DMAXHOSTNAMELEN=256
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/coda-src/vice/server.conf.ex \
