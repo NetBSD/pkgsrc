@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.13 2015/01/27 19:49:09 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.14 2015/01/28 17:37:38 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -39,3 +39,5 @@ Pullup ticket #4598 - requested by taca
 lang/php55: security update
 Pullup ticket #4599 - requested by taca
 lang/php56: security update
+Pullup ticket #4600 - requested by wiz
+mail/dovecot: build fix
