@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2015/01/04 23:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/01/28 06:45:41 wiz Exp $
 
 DISTNAME=	libvisio-0.1.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libvisio/
 EXTRACT_SUFX=	.tar.xz
@@ -10,7 +11,7 @@ HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libvisio
 COMMENT=	Library and tools for parsing the visio file format
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
-BUILD_DEPENDS+=	doxygen>=1.8.7:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.8.9:../../devel/doxygen
 BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LANGUAGES=	c c++
