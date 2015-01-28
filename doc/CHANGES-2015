@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.472 2015/01/28 03:15:25 mef Exp $
+$NetBSD: CHANGES-2015,v 1.473 2015/01/28 05:00:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -586,3 +586,13 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Harness to 3.35 [mef 2015-01-28]
 	Updated devel/p5-ExtUtils-Manifest to 1.70 [mef 2015-01-28]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.05.10 [mef 2015-01-28]
+	Updated devel/p5-Module-ExtractUse to 0.33 [mef 2015-01-28]
+	Updated devel/p5-Config-Auto to 0.44 [mef 2015-01-28]
+	Updated devel/p5-Config-AutoConf to 0.309 [mef 2015-01-28]
+	Updated devel/p5-Config-General to 2.56 [mef 2015-01-28]
+	Updated devel/p5-Config-GitLike to 1.15 [mef 2015-01-28]
+	Updated devel/p5-Config-IniFiles to 2.83 [mef 2015-01-28]
+	Updated devel/p5-Config-MVP to 2.200008 [mef 2015-01-28]
+	Updated devel/p5-Config-MVP-Reader-INI to 2.101463 [mef 2015-01-28]
+	Updated devel/p5-Config-Properties to 1.77 [mef 2015-01-28]
+	Updated devel/p5-Config-Std to 0.901 [mef 2015-01-28]
