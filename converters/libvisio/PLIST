@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/01/04 23:39:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/01/28 06:45:41 wiz Exp $
 bin/vsd2raw
 bin/vsd2text
 bin/vsd2xhtml
@@ -88,6 +88,8 @@ share/doc/libvisio/html/VisioDocument_8cpp.html
 share/doc/libvisio/html/VisioDocument_8h.html
 share/doc/libvisio/html/VisioDocument_8h_source.html
 share/doc/libvisio/html/annotated.html
+share/doc/libvisio/html/arrowdown.png
+share/doc/libvisio/html/arrowright.png
 share/doc/libvisio/html/bc_s.png
 share/doc/libvisio/html/bdwn.png
 share/doc/libvisio/html/classPerfect__Hash-members.html
@@ -297,22 +299,12 @@ share/doc/libvisio/html/dir_000000.html
 share/doc/libvisio/html/dir_000001.html
 share/doc/libvisio/html/dir_000002.html
 share/doc/libvisio/html/dir_000003.html
+share/doc/libvisio/html/doc.png
 share/doc/libvisio/html/doxygen.css
 share/doc/libvisio/html/doxygen.png
 share/doc/libvisio/html/files.html
-share/doc/libvisio/html/ftv2blank.png
-share/doc/libvisio/html/ftv2doc.png
-share/doc/libvisio/html/ftv2folderclosed.png
-share/doc/libvisio/html/ftv2folderopen.png
-share/doc/libvisio/html/ftv2lastnode.png
-share/doc/libvisio/html/ftv2link.png
-share/doc/libvisio/html/ftv2mlastnode.png
-share/doc/libvisio/html/ftv2mnode.png
-share/doc/libvisio/html/ftv2node.png
-share/doc/libvisio/html/ftv2plastnode.png
-share/doc/libvisio/html/ftv2pnode.png
-share/doc/libvisio/html/ftv2splitbar.png
-share/doc/libvisio/html/ftv2vertline.png
+share/doc/libvisio/html/folderclosed.png
+share/doc/libvisio/html/folderopen.png
 share/doc/libvisio/html/functions.html
 share/doc/libvisio/html/functions_a.html
 share/doc/libvisio/html/functions_b.html
@@ -425,6 +417,7 @@ share/doc/libvisio/html/nav_g.png
 share/doc/libvisio/html/nav_h.png
 share/doc/libvisio/html/navtree.css
 share/doc/libvisio/html/open.png
+share/doc/libvisio/html/splitbar.png
 share/doc/libvisio/html/structlibvisio_1_1ChunkHeader-members.html
 share/doc/libvisio/html/structlibvisio_1_1ChunkHeader.html
 share/doc/libvisio/html/structlibvisio_1_1Colour-members.html
