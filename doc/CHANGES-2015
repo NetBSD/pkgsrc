@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.470 2015/01/28 00:27:57 mef Exp $
+$NetBSD: CHANGES-2015,v 1.471 2015/01/28 01:05:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -568,3 +568,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 35.0.1 [ryoon 2015-01-27]
 	Added net/publicfile-run version 20150109 [schmonz 2015-01-27]
 	Updated net/arping to 2.15 [mef 2015-01-28]
+	Updated ham/gnuradio-doxygen to 3.7.5.2nb1 [mef 2015-01-28]
