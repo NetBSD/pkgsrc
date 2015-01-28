@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST.doc,v 1.8 2014/04/25 21:04:24 wiz Exp $
+@comment $NetBSD: PLIST.doc,v 1.9 2015/01/28 07:13:55 wiz Exp $
 share/doc/tidy/Overview.html
 share/doc/tidy/api/annotated.html
 share/doc/tidy/api/annotated.js
+share/doc/tidy/api/arrowdown.png
+share/doc/tidy/api/arrowright.png
 share/doc/tidy/api/bc_s.png
 share/doc/tidy/api/bdwn.png
 share/doc/tidy/api/buffio_8h.html
@@ -11,24 +13,14 @@ share/doc/tidy/api/classes.html
 share/doc/tidy/api/closed.png
 share/doc/tidy/api/deprecated.html
 share/doc/tidy/api/dir_000000.html
+share/doc/tidy/api/doc.png
 share/doc/tidy/api/doxygen.css
 share/doc/tidy/api/doxygen.png
 share/doc/tidy/api/dynsections.js
 share/doc/tidy/api/files.html
 share/doc/tidy/api/files.js
-share/doc/tidy/api/ftv2blank.png
-share/doc/tidy/api/ftv2doc.png
-share/doc/tidy/api/ftv2folderclosed.png
-share/doc/tidy/api/ftv2folderopen.png
-share/doc/tidy/api/ftv2lastnode.png
-share/doc/tidy/api/ftv2link.png
-share/doc/tidy/api/ftv2mlastnode.png
-share/doc/tidy/api/ftv2mnode.png
-share/doc/tidy/api/ftv2node.png
-share/doc/tidy/api/ftv2plastnode.png
-share/doc/tidy/api/ftv2pnode.png
-share/doc/tidy/api/ftv2splitbar.png
-share/doc/tidy/api/ftv2vertline.png
+share/doc/tidy/api/folderclosed.png
+share/doc/tidy/api/folderopen.png
 share/doc/tidy/api/functions.html
 share/doc/tidy/api/functions_func.html
 share/doc/tidy/api/functions_vars.html
@@ -71,12 +63,14 @@ share/doc/tidy/api/nav_g.png
 share/doc/tidy/api/nav_h.png
 share/doc/tidy/api/navtree.css
 share/doc/tidy/api/navtree.js
+share/doc/tidy/api/navtreedata.js
 share/doc/tidy/api/navtreeindex0.js
 share/doc/tidy/api/navtreeindex1.js
 share/doc/tidy/api/open.png
 share/doc/tidy/api/pages.html
 share/doc/tidy/api/platform_8h_source.html
 share/doc/tidy/api/resize.js
+share/doc/tidy/api/splitbar.png
 share/doc/tidy/api/structTidyAttr.html
 share/doc/tidy/api/structTidyDoc.html
 share/doc/tidy/api/structTidyNode.html
