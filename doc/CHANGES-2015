@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.481 2015/01/28 18:47:20 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.482 2015/01/28 19:16:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -604,3 +604,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/iso-codes to 3.57 [adam 2015-01-28]
 	Added geography/opencpn-plugin-gshhs version 2.2.4 [bouyer 2015-01-28]
 	Added devel/hs-haskell-src-exts version 1.16.0.1 [szptvlfn 2015-01-28]
+	Updated textproc/py-generateDS to 2.14a [gdt 2015-01-28]
