@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.484 2015/01/28 21:12:47 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.485 2015/01/28 21:53:03 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/hs-haskell-src-exts version 1.16.0.1 [szptvlfn 2015-01-28]
 	Added textproc/py-generateDS version 2.14a [gdt 2015-01-28]
 	Updated devel/nss to 3.17.4 [ryoon 2015-01-28]
+	Updated graphics/libjpeg-turbo to 1.4.0 [rjs 2015-01-28]
