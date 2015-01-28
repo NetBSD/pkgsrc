@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.478 2015/01/28 09:51:47 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.479 2015/01/28 11:41:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -601,3 +601,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/tidy to 20091027nb5 [wiz 2015-01-28]
 	Updated converters/libvisio to 0.1.1nb1 [wiz 2015-01-28]
 	Updated net/Radicale to 0.10nb1 [wiz 2015-01-28]
+	Updated textproc/iso-codes to 3.57 [adam 2015-01-28]
