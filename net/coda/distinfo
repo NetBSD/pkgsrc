@@ -1,21 +1,10 @@
-$NetBSD: distinfo,v 1.13 2015/01/27 19:50:40 gdt Exp $
+$NetBSD: distinfo,v 1.14 2015/01/28 13:11:22 hauke Exp $
 
 SHA1 (coda-6.9.5.tar.gz) = 248af27c506f5c3be4c4e53f821c9c904580fe60
 RMD160 (coda-6.9.5.tar.gz) = 9ef0643aacc7d1352ef253af00d4c7e6ad9e1f78
 Size (coda-6.9.5.tar.gz) = 1723098 bytes
 SHA1 (patch-ad) = cb0963800d73fdcc00350a07fd840a388e678c33
 SHA1 (patch-coda-src_dir_dirbody.c) = 3e3524a4a03ce359956ae00d9b24d1aa3292c752
-SHA1 (patch-coda-src_kerndep_coda.h) = 14af6b7554ce36c55f426ab62630df629c2df6db
-SHA1 (patch-coda-src_kerndep_pioctl.h) = 1eae6d05b461f6e235d8f290ef41c10877f59650
-SHA1 (patch-coda-src_librepair_repio.cc) = 3a79f16fb51bdeb76ccceb095f1409bec4bf098f
-SHA1 (patch-coda-src_resolution_rescoord.cc) = a885ced4a7bcfe38b14a0891d0ce84cc9c53ef19
 SHA1 (patch-coda-src_venus_Makefile.in) = ecfb5d2d8bf806dddaf360f2b36d12b871e9f0e2
-SHA1 (patch-coda-src_venus_fso_dir.cc) = 3e02f3bdb02639a82db1be9c138267431d36697c
-SHA1 (patch-coda-src_venus_venus.cc) = 93c115fb8a8b22df3fdb166162410c67820dcb4c
-SHA1 (patch-coda-src_venus_venusrecov.cc) = 089b6c5db50a78b7df9ca5c504628dacb3c550f9
-SHA1 (patch-coda-src_venus_vproc_vfscalls.cc) = da71de1648e09aefdd442c4ab3cb2463aad6d397
 SHA1 (patch-coda-src_venus_worker.cc) = 5ba012ae1ef61657c1d9057a7d8198953f677c8b
 SHA1 (patch-coda-src_vice_Makefile.in) = 07744dcc45c269ecfe1f4c4feba37e7b7047c00b
-SHA1 (patch-coda-src_vice_codaproc2.cc) = 81dfacf9a0cda4bd8f891fbf0dacf0001a46bd02
-SHA1 (patch-coda-src_volutil_vol-ancient.cc) = e69f3e492aa78cbf5c4dbd34c15424ee7ebd150c
-SHA1 (patch-coda-src_volutil_vol-dump.cc) = 6405a0be3edeb1f1cdb74d705c0fcccae1a8cefc
