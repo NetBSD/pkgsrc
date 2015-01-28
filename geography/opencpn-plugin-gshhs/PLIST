@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/28 14:14:52 bouyer Exp $
+share/opencpn/gshhs/poly-f-1.dat
+share/opencpn/gshhs/poly-h-1.dat
+share/opencpn/gshhs/poly-i-1.dat
+share/opencpn/gshhs/poly-l-1.dat
+share/opencpn/gshhs/wdb_borders_f.b
+share/opencpn/gshhs/wdb_borders_h.b
+share/opencpn/gshhs/wdb_borders_i.b
+share/opencpn/gshhs/wdb_borders_l.b
+share/opencpn/gshhs/wdb_rivers_f.b
+share/opencpn/gshhs/wdb_rivers_h.b
+share/opencpn/gshhs/wdb_rivers_i.b
+share/opencpn/gshhs/wdb_rivers_l.b
