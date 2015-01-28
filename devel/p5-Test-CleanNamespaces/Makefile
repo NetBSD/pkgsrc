@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/11/24 14:04:52 wen Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/28 02:02:24 mef Exp $
 
-DISTNAME=		Test-CleanNamespaces-0.16
+DISTNAME=		Test-CleanNamespaces-0.18
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
