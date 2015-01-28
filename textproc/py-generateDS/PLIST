@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/28 19:15:08 gdt Exp $
+bin/gends_extract_simple_types.py
+bin/gends_generate_django.py
+bin/gends_run_gen_django.py
+bin/generateDS.py
+bin/generateds_gui.py
+bin/process_includes.py
+${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/top_level.txt
+${PYSITELIB}/libgenerateDS/gui/generateds_gui.py
+${PYSITELIB}/libgenerateDS/gui/generateds_gui.pyc
+${PYSITELIB}/libgenerateDS/gui/generateds_gui.pyo
+${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.py
+${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.pyc
+${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.pyo
+${PYSITELIB}/libgenerateDS/process_includes.py
+${PYSITELIB}/libgenerateDS/process_includes.pyc
+${PYSITELIB}/libgenerateDS/process_includes.pyo
