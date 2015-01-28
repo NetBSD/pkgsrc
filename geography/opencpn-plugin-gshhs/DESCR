@@ -1,0 +1,8 @@
+OpenCPN is a free software (GPLv2) project to create a concise chart plotter
+and navigation software, for use underway or as a planning tool. OpenCPN is
+developed by a team of active sailors using real world conditions for
+program testing and refinement.
+
+This package contains data files from the Global Self-consistent,
+Hierarchical, High-resolution Shoreline Database which are displayed
+when no charts are present.
