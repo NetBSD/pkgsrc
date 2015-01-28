@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.473 2015/01/28 05:00:01 mef Exp $
+$NetBSD: CHANGES-2015,v 1.474 2015/01/28 06:42:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -596,3 +596,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Config-MVP-Reader-INI to 2.101463 [mef 2015-01-28]
 	Updated devel/p5-Config-Properties to 1.77 [mef 2015-01-28]
 	Updated devel/p5-Config-Std to 0.901 [mef 2015-01-28]
+	Updated www/py-django to 1.7.4 [adam 2015-01-28]
+	Updated www/py-django14 to 1.4.19 [adam 2015-01-28]
