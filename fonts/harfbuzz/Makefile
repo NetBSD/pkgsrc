@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/01/25 18:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2015/01/28 08:17:33 wiz Exp $
 
 DISTNAME=	harfbuzz-0.9.38
 CATEGORIES=	fonts
@@ -18,6 +18,14 @@ CONFIGURE_ARGS+=	--with-cairo=no
 
 PKGCONFIG_OVERRIDE+=	src/harfbuzz.pc.in
 PKGCONFIG_OVERRIDE+=	src/harfbuzz-icu.pc.in
+
+# The freetype2 version in the pkg-config file was not properly
+# defined in NetBSD-6, NetBSD-7 and -current up to 7.99.4.
+# Manually override the detection since pkgsrc makes sure the proper
+# version is available.
+CONFIGURE_ARGS+=	--with-freetype=yes
+CONFIGURE_ENV+=		FREETYPE_CFLAGS="`pkg-config --cflags freetype2`"
+CONFIGURE_ENV+=		FREETYPE_LIBS="`pkg-config --libs freetype2`"
 
 LDFLAGS.OpenBSD+=	-lz
 
