@@ -1,0 +1,6 @@
+generateDS.py generates Python data structures (for example, class
+definitions) from an XML Schema document. These data structures represent
+the elements in an XML document described by the XML Schema. In addition, a
+separate file containing subclasses (stubs) is optionally generated. The user
+can add methods to the subclasses in order to process the contents of an XML
+document.
