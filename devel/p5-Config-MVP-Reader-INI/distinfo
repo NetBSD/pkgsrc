@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 17:10:49 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/01/28 04:54:36 mef Exp $
 
-SHA1 (Config-MVP-Reader-INI-2.101461.tar.gz) = 85b0a66144bea6fee858e9dede19b7105aafa399
-RMD160 (Config-MVP-Reader-INI-2.101461.tar.gz) = 1e9a8f92bd747368140d295e505dafc2728c80f1
-Size (Config-MVP-Reader-INI-2.101461.tar.gz) = 11330 bytes
+SHA1 (Config-MVP-Reader-INI-2.101463.tar.gz) = 511642cd955d30675a4b1417c6e4247d26b09afa
+RMD160 (Config-MVP-Reader-INI-2.101463.tar.gz) = 13117df4c18e2ff9256b767c7915687f42e58fe4
+Size (Config-MVP-Reader-INI-2.101463.tar.gz) = 14671 bytes
