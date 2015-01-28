@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.471 2015/01/28 01:05:51 mef Exp $
+$NetBSD: CHANGES-2015,v 1.472 2015/01/28 03:15:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -569,3 +569,20 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/publicfile-run version 20150109 [schmonz 2015-01-27]
 	Updated net/arping to 2.15 [mef 2015-01-28]
 	Updated ham/gnuradio-doxygen to 3.7.5.2nb1 [mef 2015-01-28]
+	Updated devel/p5-ExtUtils-Depends to 0.403 [mef 2015-01-28]
+	Updated devel/p5-Data-Dump-Streamer to 2.38 [mef 2015-01-28]
+	Updated devel/p5-Test-Aggregate to 0.372 [mef 2015-01-28]
+	Updated devel/p5-Test-CPAN-Meta-YAML to 0.24 [mef 2015-01-28]
+	Updated devel/p5-Test-YAML-Meta to 0.21 [mef 2015-01-28]
+	Updated devel/p5-Test-CheckDeps to 0.010 [mef 2015-01-28]
+	Updated devel/p5-Test-CheckManifest to 1.29 [mef 2015-01-28]
+	Updated devel/p5-Test-CleanNamespaces to 0.18 [mef 2015-01-28]
+	Updated devel/p5-Devel-CheckOS to 1.73 [mef 2015-01-28]
+	Updated devel/p5-Test-Compile to 1.2.1 [mef 2015-01-28]
+	Updated devel/p5-Test-Exception to 0.36 [mef 2015-01-28]
+	Updated devel/p5-Test-FailWarnings to 0.008 [mef 2015-01-28]
+	Updated devel/p5-Test-File to 1.41 [mef 2015-01-28]
+	Updated devel/p5-Test-File-ShareDir to 1.000005 [mef 2015-01-28]
+	Updated devel/p5-Test-Harness to 3.35 [mef 2015-01-28]
+	Updated devel/p5-ExtUtils-Manifest to 1.70 [mef 2015-01-28]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.05.10 [mef 2015-01-28]
