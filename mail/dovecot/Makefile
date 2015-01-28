@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2015/01/23 12:17:47 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2015/01/28 17:44:28 tron Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -8,7 +8,7 @@ DISTNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}
 PKGREVISION=		15
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/${DOVECOT_VERSION}/
-DOVECOT_SIEVE_SITES=	http://www.rename-it.nl/dovecot/${DOVECOT_VERSION}/
+DOVECOT_SIEVE_SITES=	http://pigeonhole.dovecot.org/releases/${DOVECOT_VERSION}/
 
 MANAGESIEVE_PATCH=			dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}-managesieve-${MANAGESIEVE_VERSION}.diff.gz
 SITES.${MANAGESIEVE_PATCH}=	${DOVECOT_SIEVE_SITES}
