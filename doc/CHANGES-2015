@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.480 2015/01/28 14:16:41 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.481 2015/01/28 18:47:20 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -603,3 +603,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/Radicale to 0.10nb1 [wiz 2015-01-28]
 	Updated textproc/iso-codes to 3.57 [adam 2015-01-28]
 	Added geography/opencpn-plugin-gshhs version 2.2.4 [bouyer 2015-01-28]
+	Added devel/hs-haskell-src-exts version 1.16.0.1 [szptvlfn 2015-01-28]
