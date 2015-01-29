@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/08/08 09:21:27 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/01/29 08:43:47 mef Exp $
 
-SHA1 (Dist-Zooky-0.10.tar.gz) = b966edf0d8f0fdc0b3ac7fe81572b2a35dde8c3b
-RMD160 (Dist-Zooky-0.10.tar.gz) = 16249c463aaa96bc82ed9c7cfb60b93a2edb1333
-Size (Dist-Zooky-0.10.tar.gz) = 16639 bytes
+SHA1 (Dist-Zooky-0.14.tar.gz) = 451a620af7196dabefa1a3ebf208166b189a6be9
+RMD160 (Dist-Zooky-0.14.tar.gz) = da05b2a8da53e2c8271ef832cb09fcc952a5412f
+Size (Dist-Zooky-0.14.tar.gz) = 17503 bytes
