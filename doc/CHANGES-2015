@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.505 2015/01/29 20:47:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.506 2015/01/29 21:48:16 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -665,3 +665,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/mame to 0.158 [wiz 2015-01-29]
 	Updated emulators/mess to 0.158 [wiz 2015-01-29]
 	Updated graphics/p5-RRDTool-OO to 0.35 [wiz 2015-01-29]
+	Updated comms/asterisk18 to 1.8.32.2 [jnemeth 2015-01-29]
