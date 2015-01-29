@@ -1,4 +1,4 @@
-$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jmcneill Exp $
+$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jmcneill Exp $
 
 --- src/video/wscons/SDL_wsconsevents.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/video/wscons/SDL_wsconsevents.c
@@ -61,7 +61,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jm
        if (tcsetattr(private->fd, TCSANOW, &private->saved_tty) < 0) {
  	WSCONS_ReportError("cannot restore keynoard attributes: %s",
  			   strerror(errno));
-@@ -89,8 +114,57 @@ void WSCONS_ReleaseKeyboard(_THIS)
+@@ -89,8 +114,65 @@ void WSCONS_ReleaseKeyboard(_THIS)
    }
  }
  
@@ -115,12 +115,20 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jm
 +    case WSCONS_EVENT_MOUSE_DELTA_Y:
 +      posted += SDL_PrivateMouseMotion(0, 1, 0, -ev->value);
 +      break;
++    case WSCONS_EVENT_MOUSE_DELTA_Z:
++      posted += SDL_PrivateMouseButton(SDL_PRESSED,
++                    ev->value > 0 ? SDL_BUTTON_WHEELUP : SDL_BUTTON_WHEELDOWN,
++                    0, 0);
++      posted += SDL_PrivateMouseButton(SDL_RELEASED,
++                    ev->value > 0 ? SDL_BUTTON_WHEELUP : SDL_BUTTON_WHEELDOWN,
++                    0, 0);
++      break;
 +    }
 +  }
  }
  
  static SDLKey keymap[128];
-@@ -107,6 +181,11 @@ static SDL_keysym *TranslateKey(int scan
+@@ -107,6 +189,11 @@ static SDL_keysym *TranslateKey(int scan
    if (keysym->sym == SDLK_UNKNOWN)
      printf("Unknown mapping for scancode %d\n", scancode);
  
@@ -132,7 +140,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jm
    return keysym;
  }
  
-@@ -120,19 +199,42 @@ static void updateKeyboard(_THIS)
+@@ -120,19 +207,42 @@ static void updateKeyboard(_THIS)
      for (i = 0; i < n; i++) {
        unsigned char c = buf[i] & 0x7f;
        if (c == 224) // special key prefix -- what should we do with it?
@@ -179,7 +187,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jm
    } while (posted);
  }
  
-@@ -146,8 +248,10 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -146,8 +256,10 @@ void WSCONS_InitOSKeymap(_THIS)
    }
  
    switch (private->kbdType) {
@@ -191,7 +199,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jm
      /* top row */
      keymap[2] = SDLK_1;
      keymap[3] = SDLK_2;
-@@ -220,7 +324,6 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -220,7 +332,6 @@ void WSCONS_InitOSKeymap(_THIS)
      keymap[77] = SDLK_RIGHT;
      keymap[80] = SDLK_DOWN;
      break;

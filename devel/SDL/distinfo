@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2015/01/29 12:22:04 jmcneill Exp $
+$NetBSD: distinfo,v 1.71 2015/01/29 12:31:07 jmcneill Exp $
 
 SHA1 (SDL-1.2.15.tar.gz) = 0c5f193ced810b0d7ce3ab06d808cbb5eef03a2c
 RMD160 (SDL-1.2.15.tar.gz) = d4802a090cb4a24eeb0c8ce5690802f596d394c3
@@ -8,7 +8,7 @@ SHA1 (patch-ac) = 8b2dddff9ad449b19b35ef364e2d960e46284563
 SHA1 (patch-src_audio_sun_SDL__sunaudio.c) = 4b492b40d39e6444037dfda55766e4a149cc6c30
 SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = 4ea0136f231729129b82e5f7ee4b9eaf68a13876
 SHA1 (patch-src_video_quartz_SDL__QuartzVideo.h) = 19d952bade06dbd646e94f42139c38436969b1a8
-SHA1 (patch-src_video_wscons_SDL__wsconsevents.c) = 459a72044beba6655298b5ef2b4a5073a2fdb9a8
+SHA1 (patch-src_video_wscons_SDL__wsconsevents.c) = 216a07cbfb99e1f3d6fe2da191922be76cb09759
 SHA1 (patch-src_video_wscons_SDL__wsconsevents__c.h) = 97206e2aca0b620005217d9d07ad1177516cac92
 SHA1 (patch-src_video_wscons_SDL__wsconsvideo.c) = 17e048ccb201ae961e820ab880d5a588b2db2639
 SHA1 (patch-src_video_wscons_SDL__wsconsvideo.h) = efc75da910cfe370b7361a0b9d2b90837c6b9aa9
