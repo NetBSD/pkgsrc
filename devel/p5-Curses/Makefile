@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 14:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/01/29 01:00:26 mef Exp $
 
-DISTNAME=	Curses-1.29
+DISTNAME=	Curses-1.32
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 EXTRACT_SUFX=	.tgz
