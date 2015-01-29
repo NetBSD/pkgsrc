@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/29 02:46:25 mef Exp $
 
-DISTNAME=	mimms-3.2
+DISTNAME=	mimms-3.2.1
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://download.savannah.gnu.org/releases/mimms/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/mimms/
 COMMENT=	MMS (e.g. mms://) stream downloader
 LICENSE=	gnu-gpl-v3
+
+# default is at lang/python/distutils.mk, but
+# drop the third digit from DISTNAME. Is it too tricky ?
+EGG_NAME?=       ${DISTNAME:C/-([^0-9])/_\1/gC/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2
