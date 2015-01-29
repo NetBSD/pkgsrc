@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.27 2014/12/31 02:35:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/01/29 10:34:14 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
 ${PLIST.learner}bin/groonga-suggest-httpd
 ${PLIST.learner}bin/groonga-suggest-learner
 include/groonga/groonga.h
+include/groonga/groonga/command.h
 include/groonga/groonga/expr.h
 include/groonga/groonga/groonga.h
 include/groonga/groonga/ii.h
@@ -94,7 +95,9 @@ share/doc/groonga/en/html/_sources/reference/api/grn_user_data.txt
 share/doc/groonga/en/html/_sources/reference/api/plugin.txt
 share/doc/groonga/en/html/_sources/reference/cast.txt
 share/doc/groonga/en/html/_sources/reference/column.txt
+share/doc/groonga/en/html/_sources/reference/columns/index.txt
 share/doc/groonga/en/html/_sources/reference/columns/pseudo.txt
+share/doc/groonga/en/html/_sources/reference/columns/scalar.txt
 share/doc/groonga/en/html/_sources/reference/columns/vector.txt
 share/doc/groonga/en/html/_sources/reference/command.txt
 share/doc/groonga/en/html/_sources/reference/command/command_version.txt
@@ -299,7 +302,9 @@ share/doc/groonga/en/html/reference/api/grn_user_data.html
 share/doc/groonga/en/html/reference/api/plugin.html
 share/doc/groonga/en/html/reference/cast.html
 share/doc/groonga/en/html/reference/column.html
+share/doc/groonga/en/html/reference/columns/index.html
 share/doc/groonga/en/html/reference/columns/pseudo.html
+share/doc/groonga/en/html/reference/columns/scalar.html
 share/doc/groonga/en/html/reference/columns/vector.html
 share/doc/groonga/en/html/reference/command.html
 share/doc/groonga/en/html/reference/command/command_version.html
@@ -481,7 +486,9 @@ share/doc/groonga/ja/html/_sources/reference/api/grn_user_data.txt
 share/doc/groonga/ja/html/_sources/reference/api/plugin.txt
 share/doc/groonga/ja/html/_sources/reference/cast.txt
 share/doc/groonga/ja/html/_sources/reference/column.txt
+share/doc/groonga/ja/html/_sources/reference/columns/index.txt
 share/doc/groonga/ja/html/_sources/reference/columns/pseudo.txt
+share/doc/groonga/ja/html/_sources/reference/columns/scalar.txt
 share/doc/groonga/ja/html/_sources/reference/columns/vector.txt
 share/doc/groonga/ja/html/_sources/reference/command.txt
 share/doc/groonga/ja/html/_sources/reference/command/command_version.txt
@@ -686,7 +693,9 @@ share/doc/groonga/ja/html/reference/api/grn_user_data.html
 share/doc/groonga/ja/html/reference/api/plugin.html
 share/doc/groonga/ja/html/reference/cast.html
 share/doc/groonga/ja/html/reference/column.html
+share/doc/groonga/ja/html/reference/columns/index.html
 share/doc/groonga/ja/html/reference/columns/pseudo.html
+share/doc/groonga/ja/html/reference/columns/scalar.html
 share/doc/groonga/ja/html/reference/columns/vector.html
 share/doc/groonga/ja/html/reference/command.html
 share/doc/groonga/ja/html/reference/command/command_version.html
