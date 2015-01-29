@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.500 2015/01/29 11:39:25 adam Exp $
+$NetBSD: CHANGES-2015,v 1.501 2015/01/29 12:43:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -653,3 +653,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xkeyboard-config to 2.14 [wiz 2015-01-29]
 	Updated textproc/groonga to 4.1.1 [obache 2015-01-29]
 	Updated lang/clang to 3.5.1 [adam 2015-01-29]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.20 [mef 2015-01-29]
+	Updated devel/p5-Exporter-Tiny to 0.043.01 [mef 2015-01-29]
+	Updated devel/p5-ExtUtils-Command to 1.20 [mef 2015-01-29]
+	Updated devel/p5-ExtUtils-CppGuess to 0.08 [mef 2015-01-29]
+	Updated devel/p5-ExtUtils-Helpers to 0.022 [mef 2015-01-29]
+	Updated devel/p5-ExtUtils-ModuleMaker to 0.52 [mef 2015-01-29]
+	Updated devel/p5-ExtUtils-ModuleMaker-TT to 0.94 [mef 2015-01-29]
+	Updated devel/p5-ExtUtils-XSpp to 0.18 [mef 2015-01-29]
