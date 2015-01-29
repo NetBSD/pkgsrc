@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.177 2015/01/27 21:41:47 ryoon Exp $
+$NetBSD: distinfo,v 1.178 2015/01/29 22:19:13 wiz Exp $
 
 SHA1 (firefox-35.0.1.source.tar.bz2) = cf256ee1491ee502eb4432ade5a879104ebceede
 RMD160 (firefox-35.0.1.source.tar.bz2) = ca4dc6f6c5de1e6e69133de3b8b502991d519fa7
@@ -115,8 +115,6 @@ SHA1 (patch-memory_mozalloc_mozalloc__abort.cpp) = 44cb29dac1e8032c3f58149227bfe
 SHA1 (patch-mfbt_Alignment.h) = 9ebc9892fd11eba7105974979b54f4f8759b7749
 SHA1 (patch-mfbt_Attributes.h) = 0cf62084c0220a3fa46226714cea5c30b1b155e9
 SHA1 (patch-mfbt_Poison.cpp) = f502581db96b3e5eca25a9aa9035f436e9167503
-SHA1 (patch-mobile_android_installer_Makefile.in) = b2ea844a0145f4c15ef1b350dde6b000bd231fa5
-SHA1 (patch-mobile_android_installer_package-manifest.in) = 9664858fe3b4593eb29dd0180d5a2df3cd245bb2
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
 SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
 SHA1 (patch-netwerk_dns_moz.build) = 01dd7d9094ddaeffbcd6cfa296e28fb56681b0e6
