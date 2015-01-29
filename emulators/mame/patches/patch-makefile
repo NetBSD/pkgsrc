@@ -1,9 +1,12 @@
-$NetBSD: patch-makefile,v 1.8 2015/01/29 20:08:16 wiz Exp $
+$NetBSD: patch-makefile,v 1.9 2015/01/29 21:48:15 wiz Exp $
 
 Link against pkgsrc versions of expat, zlib, flac, jpeg, and
 sqlite3, and add appropriate linker search paths.
 
---- makefile.orig	2015-01-29 17:12:56.000000000 +0000
+*nix: Fixed linking tools against system libraries
+https://github.com/mamedev/mame/commit/b55b45a5a99b8bce694b7ed3cd2d4a00d790f6ae
+
+--- makefile.orig	2015-01-29 21:11:10.000000000 +0000
 +++ makefile
 @@ -227,19 +227,19 @@ endif
  # BIGENDIAN = 1
@@ -39,3 +42,19 @@ sqlite3, and add appropriate linker search paths.
  
  # add expat XML library
  ifeq ($(BUILD_EXPAT),1)
+@@ -756,6 +756,7 @@ INCPATH += -I$(3RDPARTY)/zlib
+ ZLIB = $(OBJ)/libz.a
+ else
+ LIBS += -lz
++BASELIBS += -lz
+ ZLIB =
+ endif
+ 
+@@ -766,6 +767,7 @@ FLAC_LIB = $(OBJ)/libflac.a
+ # $(OBJ)/libflac++.a
+ else
+ LIBS += -lFLAC
++BASELIBS += -lFLAC
+ FLAC_LIB =
+ endif
+ 
