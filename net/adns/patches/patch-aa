@@ -1,16 +1,20 @@
-$NetBSD: patch-aa,v 1.3 2010/04/17 12:43:03 obache Exp $
+$NetBSD: patch-aa,v 1.4 2015/01/29 09:47:03 mef Exp $
 
---- client/Makefile.in.orig	2006-05-10 10:58:02.000000000 +0000
-+++ client/Makefile.in
+date: 2001-11-20 04:39:05 +0900;  author: jlam;  state: Exp;
+Strongly buildlinkify and libtoolize (NetBSD's interesting contributions to
+technical vocabulary).
+
+--- client/Makefile.in.orig	2014-10-20 08:07:01.000000000 +0900
++++ client/Makefile.in	2015-01-29 18:30:26.000000000 +0900
 @@ -30,7 +30,7 @@ PROGRAMS=	adnslogres adnsheloex adnshost
- PROGRAMS_LOCAL=	fanftest adnstest
+ PROGRAMS_LOCAL=	fanftest adnstest addrtext
  PROGRAMS_ALL=	$(PROGRAMS) $(PROGRAMS_LOCAL)
  
--STATIC_LIB=	$(ADNSDIR)/libadns.a
-+STATIC_LIB=	$(ADNSDIR)/libadns.la
+-STATIC_LIB=	../src/libadns.a
++STATIC_LIB=	../src/libadns.la
  
  ifeq ($(ENABLE_DYNAMIC),elf)
- DYNAMIC_DEP=	$(srcdir)/../dynamic/$(SHLIBFILE)
+ DYNAMIC_DEP=	../dynamic/$(SHLIBFILE)
 @@ -60,13 +60,13 @@ all:		$(TARGETS)
  install:	$(TARG_INSTALL)
  		mkdir -p $(bindir)
@@ -27,7 +31,7 @@ $NetBSD: patch-aa,v 1.3 2010/04/17 12:43:03 obache Exp $
  
  adnshost_s:	$(ADH_OBJS) $(STATIC_LIB)
  		$(CC) $(LDFLAGS) $(ADH_OBJS) $(STATIC_LIB) -o $@ $(LDLIBS)
-@@ -76,7 +76,7 @@ $(ALL_OBJS):		$(ADNSDIR)/adns.h $(ADNSDI
+@@ -76,7 +76,7 @@ $(ALL_OBJS):		$(ADNSDIR)/adns.h ../src/c
  adnsresfilter.o:	$(ADNSDIR)/tvarith.h
  
  %:		%.o $(DYNAMIC_DEP)
