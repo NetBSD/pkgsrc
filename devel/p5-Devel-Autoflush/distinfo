@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2009/03/01 23:03:16 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/01/29 04:53:21 mef Exp $
 
-SHA1 (Devel-Autoflush-0.05.tar.gz) = fe5ca1cf1997ec2456e71f67168433218cb4c747
-RMD160 (Devel-Autoflush-0.05.tar.gz) = a18a0bb8bac51696cff3749321568ed543874d64
-Size (Devel-Autoflush-0.05.tar.gz) = 8832 bytes
+SHA1 (Devel-Autoflush-0.06.tar.gz) = 5faf1ea42f42e693e3d186e443c7a92d9b9a6957
+RMD160 (Devel-Autoflush-0.06.tar.gz) = 2b13868082a09ba21e97b42789f71583ff57b07c
+Size (Devel-Autoflush-0.06.tar.gz) = 12917 bytes
