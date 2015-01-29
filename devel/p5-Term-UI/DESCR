@@ -1,0 +1,6 @@
+Term::UI provides methods to ask both elaborate questions as well
+as simple yes/no questions via a Term::ReadLine interface using a
+template. It can also parse options per unix style.
+
+Term::UI was first released with perl v5.9.5, deprecated (will
+be CPAN-only) in v5.17.9 and removed from v5.19.0
