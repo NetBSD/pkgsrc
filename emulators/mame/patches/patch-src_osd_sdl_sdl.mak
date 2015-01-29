@@ -1,6 +1,7 @@
-$NetBSD: patch-src_osd_sdl_sdl.mak,v 1.3 2014/11/27 12:46:59 wiz Exp $
+$NetBSD: patch-src_osd_sdl_sdl.mak,v 1.4 2015/01/29 21:52:10 wiz Exp $
 
 Choose a network interface type for NetBSD to fix linking.
+https://github.com/mamedev/mame/pull/124
 
 --- src/osd/sdl/sdl.mak.orig	2014-11-26 10:37:58.000000000 +0000
 +++ src/osd/sdl/sdl.mak
