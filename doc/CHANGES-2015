@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.494 2015/01/29 06:37:47 mef Exp $
+$NetBSD: CHANGES-2015,v 1.495 2015/01/29 08:44:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -642,3 +642,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-ebug to 0.56 [mef 2015-01-29]
 	Updated devel/p5-Dir-Self to 0.11 [mef 2015-01-29]
 	Added devel/p5-Term-UI version 0.42 [mef 2015-01-29]
+	Updated lang/nodejs to 0.10.36 [fhajny 2015-01-29]
