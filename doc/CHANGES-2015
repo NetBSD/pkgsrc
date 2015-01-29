@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.487 2015/01/29 00:11:44 obache Exp $
+$NetBSD: CHANGES-2015,v 1.488 2015/01/29 01:27:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -609,3 +609,14 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/libjpeg-turbo to 1.4.0 [rjs 2015-01-28]
 	Updated devel/p5-List-MoreUtils to 0.403 [wiz 2015-01-28]
 	Updated emulators/suse131_libpng to 13.1nb4 [obache 2015-01-29]
+	Updated devel/p5-Data-Compare to 1.25 [mef 2015-01-29]
+	Updated devel/p5-Coro to 6.41 [mef 2015-01-29]
+	Updated devel/p5-Curses to 1.32 [mef 2015-01-29]
+	Updated devel/p5-Data-Dumper-Concise to 2.022 [mef 2015-01-29]
+	Updated devel/p5-Data-Munge to 0.093 [mef 2015-01-29]
+	Updated devel/p5-Data-Peek to 0.42 [mef 2015-01-29]
+	Updated devel/p5-Data-Printer to 01 [mef 2015-01-29]
+	Updated devel/p5-Data-Section to 0.200.006 [mef 2015-01-29]
+	Updated devel/p5-Data-Serializer to 0.60 [mef 2015-01-29]
+	Updated devel/p5-Data-UUID to 1.220 [mef 2015-01-29]
+	Updated devel/p5-Debug-Client to 0.29 [mef 2015-01-29]
