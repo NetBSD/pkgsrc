@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2015/01/25 13:14:46 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/01/29 21:33:47 joerg Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -7,12 +7,16 @@ SHA1 (xen-4.5.0.tar.gz) = c4aab5fb366496ad1edc7fe0a935a0d604335637
 RMD160 (xen-4.5.0.tar.gz) = e35ba0cb484492c1a289218eb9bf53b57dbd3a45
 Size (xen-4.5.0.tar.gz) = 18404933 bytes
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 9e053e5e9936f49c46af0d59382a67d5f28cb39d
+SHA1 (patch-.._.._ipxe_src_interface_efi_efi_snp.c) = 7cd8a2d2dbeff55624b5d3461d22cd8331221762
+SHA1 (patch-.._.._ipxe_src_net_fcels.c) = 7c13c87af5e38233f8b867503789f536394e7005
+SHA1 (patch-.._.._ipxe_src_net_tls.c) = c36b812c4c9a3aa7309219dfad2f7a24ba818e59
 SHA1 (patch-.._Config.mk) = 36a8942a9fc0f7d601c9b5f7fd1332db99f9ac4b
 SHA1 (patch-.._docs_man_xl.cfg.pod.5) = e2058495b6fe85af338e22560d46996d36aeedab
 SHA1 (patch-.._docs_man_xl.conf.pod.5) = 015da24a45388468d56f1ecfa60f6acf07bdfef8
 SHA1 (patch-.._docs_man_xl.pod.1) = b194f2c5608c6f0e80a4abd8655808cf91355cd5
 SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736a4663b2
 SHA1 (patch-Makefile) = 5d5b9678ed9764275ee95f49d24e8538a0e8a01c
+SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
 SHA1 (patch-configure) = d1a1b9c9e00dd79bb872190282006201510ce2c1
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
@@ -29,6 +33,7 @@ SHA1 (patch-libfsimage_ufs_ufs.h) = ce1461ab83499edb4e127e3b7af9dfc1e9c0267f
 SHA1 (patch-libxc_xc__netbsd.c) = 547a713bbe9ddc92ee51b57a7b58a619f01225f1
 SHA1 (patch-libxl_Makefile) = 5b5dede29e5d9c579cdd7d6497f692ecf3a3c2cb
 SHA1 (patch-libxl_libxl__create.c) = d4c94e9a389e9a7601513460f31c82e4f4bf28c9
+SHA1 (patch-libxl_libxl__save__helper.c) = 70e5237e28bea1aa87486e080fc25aa81300a6d8
 SHA1 (patch-libxl_libxl_uuid.c) = d14286be8ccdbcb5fae544a1968e7b681b63e884
 SHA1 (patch-ocaml_common.make) = 4d4bddca7b5d93489a3f6620af51d95bbe265abb
 SHA1 (patch-ocaml_xenstored_Makefile) = 8014db42b65ca9290013069d1f3cb816e3f023c2
@@ -51,4 +56,5 @@ SHA1 (patch-qemu-xen-traditional_xen-hooks.mak) = ccc055fdb56ee796e1464f709aa576
 SHA1 (patch-qemu-xen_audio_audio.c) = 8452d63fe90e38a64111d0cf425bacd565fe6d82
 SHA1 (patch-qemu-xen_qemu-doc.texi) = 721e80d15ac30ac71df3d6c4c485b0bf70897cf9
 SHA1 (patch-qemu-xen_util_hbitmap.c) = 5a495ae2b47d1ff6dd342633b8d655582f21dffe
+SHA1 (patch-qemu-xen_xen-hvm.c) = 11d4deb5de577e8beb2d1c6c3ca886e3d7563f8a
 SHA1 (patch-xenstore_xc.c) = 51b39e9929062e72d0ff85f0ee6d13a6ac04ac65
