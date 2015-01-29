@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.488 2015/01/29 01:27:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.489 2015/01/29 02:27:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Data-Serializer to 0.60 [mef 2015-01-29]
 	Updated devel/p5-Data-UUID to 1.220 [mef 2015-01-29]
 	Updated devel/p5-Debug-Client to 0.29 [mef 2015-01-29]
+	Updated net/httping to 2.3.4 [mef 2015-01-29]
