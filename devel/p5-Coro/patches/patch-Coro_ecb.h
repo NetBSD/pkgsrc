@@ -1,4 +1,6 @@
-$NetBSD: patch-Coro_ecb.h,v 1.1 2014/11/10 18:09:10 joerg Exp $
+$NetBSD: patch-Coro_ecb.h,v 1.2 2015/01/29 00:48:51 mef Exp $
+
+Use __builtin_unreachable on Clang instead of the broken C11 hack.
 
 --- Coro/ecb.h.orig	2014-11-10 12:35:13.000000000 +0000
 +++ Coro/ecb.h
