@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/10/27 08:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/01/29 10:29:13 wiz Exp $
 
 DISTNAME=	serf-1.3.8
 CATEGORIES=	www
@@ -18,8 +18,9 @@ SCONS_ARGS+=		CC=${CC:Q}
 SCONS_ARGS+=		CFLAGS=${CFLAGS:Q}
 SCONS_ARGS+=		LDFLAGS=${LDFLAGS:Q}
 SCONS_ARGS+=		OPENSSL=${PREFIX}/lib
-SCONS_ARGS+=		GSSAPI=${KRB5_CONFIG:Q}
 SCONS_ARGS+=		--install-sandbox=${DESTDIR}
+
+.include "options.mk"
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
@@ -32,6 +33,5 @@ do-install:
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/krb5.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
