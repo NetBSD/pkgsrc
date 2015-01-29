@@ -1,4 +1,7 @@
-$NetBSD: patch-src_tools_tools.mak,v 1.1 2015/01/29 20:00:29 wiz Exp $
+$NetBSD: patch-src_tools_tools.mak,v 1.2 2015/01/29 20:08:16 wiz Exp $
+
+Fix linking against pkgsrc libraries.
+https://github.com/mamedev/mame/pull/123
 
 --- src/tools/tools.mak.orig	2015-01-28 09:20:10.000000000 +0000
 +++ src/tools/tools.mak

@@ -1,4 +1,7 @@
-$NetBSD: patch-makefile,v 1.7 2015/01/29 20:00:29 wiz Exp $
+$NetBSD: patch-makefile,v 1.8 2015/01/29 20:08:16 wiz Exp $
+
+Link against pkgsrc versions of expat, zlib, flac, jpeg, and
+sqlite3, and add appropriate linker search paths.
 
 --- makefile.orig	2015-01-29 17:12:56.000000000 +0000
 +++ makefile
