@@ -1,4 +1,6 @@
-$NetBSD: patch-src_select.cpp,v 1.1 2013/10/24 09:48:00 jperkin Exp $
+$NetBSD: patch-src_select.cpp,v 1.2 2015/01/29 02:59:27 mef Exp $
+
+Fix build on SunOS.  Patch from Sebastian Wiedenroth.
 
 --- src/select.cpp.orig	2009-08-24 12:18:29.000000000 +0000
 +++ src/select.cpp
