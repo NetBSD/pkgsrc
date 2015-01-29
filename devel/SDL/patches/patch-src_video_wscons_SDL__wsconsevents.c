@@ -1,6 +1,4 @@
-$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.5 2015/01/28 17:14:47 jmcneill Exp $
-
-Add support for USB keyboards on NetBSD.
+$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.6 2015/01/29 01:56:02 jmcneill Exp $
 
 --- src/video/wscons/SDL_wsconsevents.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/video/wscons/SDL_wsconsevents.c
@@ -18,7 +16,121 @@ Add support for USB keyboards on NetBSD.
    if (tcgetattr(private->fd, &private->saved_tty) == -1) {
      WSCONS_ReportError("cannot get terminal attributes: %s", strerror(errno));
      return -1;
-@@ -146,7 +153,72 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -65,6 +72,7 @@ int WSCONS_InitKeyboard(_THIS)
+     WSCONS_ReportError("cannot set terminal attributes: %s", strerror(errno));
+     return -1;
+   }
++
+   if (ioctl(private->fd, KDSKBMODE, K_RAW) == -1) {
+     WSCONS_ReportError("cannot set raw keyboard mode: %s", strerror(errno));
+     return -1;
+@@ -89,8 +97,57 @@ void WSCONS_ReleaseKeyboard(_THIS)
+   }
+ }
+ 
+-static void updateMouse()
++int WSCONS_InitMouse(_THIS)
++{
++  if (private->mouseFd != -1) {
++#if defined(WSMOUSEIO_SETVERSION)
++    int version = WSMOUSE_EVENT_VERSION;
++    if (ioctl(private->mouseFd, WSMOUSEIO_SETVERSION, &version) == -1) {
++      WSCONS_ReportError("cannot set mouse API version: %s", strerror(errno));
++      return -1;
++    }
++#endif
++  }
++  return 0;
++}
++
++void WSCONS_ReleaseMouse(_THIS)
++{
++}
++
++#define NUMEVENTS 64
++
++static void updateMouse(_THIS)
+ {
++  struct wscons_event evlist[NUMEVENTS];
++  struct wscons_event *ev = evlist;
++  int nev, i;
++  ssize_t len;
++
++  len = read(private->mouseFd, evlist, sizeof(evlist));
++  if (len == -1) {
++    WSCONS_ReportError("Failed to read wsmouse event: %s", strerror(errno));
++    return;
++  }
++
++  nev = len / sizeof(*ev);
++
++  for (i = 0; i < nev; i++, ev++) {
++    switch (ev->type) {
++    case WSCONS_EVENT_MOUSE_UP:
++      posted += SDL_PrivateMouseButton(SDL_RELEASED, ev->value+1, 0, 0);
++      break;
++    case WSCONS_EVENT_MOUSE_DOWN:
++      posted += SDL_PrivateMouseButton(SDL_PRESSED, ev->value+1, 0, 0);
++      break;
++    case WSCONS_EVENT_MOUSE_DELTA_X:
++      posted += SDL_PrivateMouseMotion(0, 1, ev->value, 0);
++      break;
++    case WSCONS_EVENT_MOUSE_DELTA_Y:
++      posted += SDL_PrivateMouseMotion(0, 1, 0, -ev->value);
++      break;
++    }
++  }
+ }
+ 
+ static SDLKey keymap[128];
+@@ -120,19 +177,42 @@ static void updateKeyboard(_THIS)
+     for (i = 0; i < n; i++) {
+       unsigned char c = buf[i] & 0x7f;
+       if (c == 224) // special key prefix -- what should we do with it?
+-	continue;
++       continue;
+       posted += SDL_PrivateKeyboard((buf[i] & 0x80) ? SDL_RELEASED : SDL_PRESSED,
+-				    TranslateKey(c, &keysym));
++                                   TranslateKey(c, &keysym));
+     }
+   }
+ }
+ 
+ void WSCONS_PumpEvents(_THIS)
+ {
++  static struct timeval zero;
++  int maxfd = 0;
++
++  if (private->fd > maxfd)
++    maxfd = private->fd;
++  if (private->mouseFd > maxfd)
++    maxfd = private->mouseFd;
++
+   do {
++    fd_set fds;
++
+     posted = 0;
+-    updateMouse();
+-    updateKeyboard(this);
++
++    FD_ZERO(&fds);
++    if (private->fd != -1)
++      FD_SET(private->fd, &fds);
++    if (private->mouseFd != -1)
++      FD_SET(private->mouseFd, &fds);
++
++    if (select(maxfd+1, &fds, NULL, NULL, &zero) > 0) {
++      if (private->mouseFd != -1 && FD_ISSET(private->mouseFd, &fds)) {
++        updateMouse(this);
++      }
++      if (private->fd != -1 && FD_ISSET(private->fd, &fds)) {
++        updateKeyboard(this);
++      }
++    }
+   } while (posted);
+ }
+ 
+@@ -146,7 +226,72 @@ void WSCONS_InitOSKeymap(_THIS)
    }
  
    switch (private->kbdType) {
@@ -92,7 +204,7 @@ Add support for USB keyboards on NetBSD.
    case WSKBD_TYPE_ZAURUS:
      /* top row */
      keymap[2] = SDLK_1;
-@@ -220,7 +292,7 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -220,7 +365,7 @@ void WSCONS_InitOSKeymap(_THIS)
      keymap[77] = SDLK_RIGHT;
      keymap[80] = SDLK_DOWN;
      break;
