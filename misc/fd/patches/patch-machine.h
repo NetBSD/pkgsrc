@@ -1,4 +1,4 @@
-$NetBSD: patch-machine.h,v 1.1 2015/01/06 11:24:58 ryoon Exp $
+$NetBSD: patch-machine.h,v 1.2 2015/01/29 21:30:35 joerg Exp $
 
 * Force the use of -ltermcap and let BUILDLINK_TRANSFORM sort out the right
  library to use.
@@ -18,3 +18,12 @@ $NetBSD: patch-machine.h,v 1.1 2015/01/06 11:24:58 ryoon Exp $
  #define	USELEAPCNT
  #define	USEFFSTYPE
  #define	USERE_COMP
+@@ -1210,7 +1212,7 @@ typedef long	off_t;
+ #define	USEGETGROUPS
+ #endif
+ 
+-#if	(!defined (__GNUC__) || defined (__clang__)) \
++#if	(!defined (__GNUC__) && !defined (__clang__)) \
+ && !defined (__attribute__)
+ #define	__attribute__(x)
+ #endif
