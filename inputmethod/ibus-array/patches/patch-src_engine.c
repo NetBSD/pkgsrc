@@ -1,4 +1,7 @@
-$NetBSD: patch-src_engine.c,v 1.4 2015/01/25 13:12:02 joerg Exp $
+$NetBSD: patch-src_engine.c,v 1.5 2015/01/29 11:45:25 obache Exp $
+
+* Fixes return type mismatch:
+  https://code.google.com/p/ibus-array/issues/detail?id=11
 
 --- src/engine.c.orig	2015-01-24 16:30:52.000000000 +0000
 +++ src/engine.c
