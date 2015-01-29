@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.10 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-ay,v 1.11 2015/01/29 22:22:27 wiz Exp $
 
 --- mozilla/browser/app/nsBrowserApp.cpp.orig	2014-07-18 00:05:06.000000000 +0000
 +++ mozilla/browser/app/nsBrowserApp.cpp
@@ -23,11 +23,3 @@ $NetBSD: patch-ay,v 1.10 2014/07/27 20:04:59 ryoon Exp $
    return mach_absolute_time();
  #elif defined(HAVE_CLOCK_MONOTONIC)
    struct timespec ts;
-@@ -586,6 +588,7 @@ int main(int argc, char* argv[])
-   TriggerQuirks();
- #endif
- 
-+  setenv("MOZ_PLUGIN_PATH", "%%LOCALBASE%%/lib/browser_plugins/symlinks/gecko", 0);
-   int gotCounters;
- #if defined(XP_UNIX)
-   struct rusage initialRUsage;
