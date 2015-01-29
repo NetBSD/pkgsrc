@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.503 2015/01/29 20:00:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.504 2015/01/29 20:00:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -663,3 +663,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-ExtUtils-XSpp to 0.18 [mef 2015-01-29]
 	Updated archivers/cabextract to 1.5 [wiz 2015-01-29]
 	Updated emulators/mame to 0.158 [wiz 2015-01-29]
+	Updated emulators/mess to 0.158 [wiz 2015-01-29]
