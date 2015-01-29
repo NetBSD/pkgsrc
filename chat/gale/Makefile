@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2014/04/30 14:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/01/29 09:53:29 mef Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	chat
 MASTER_SITES=	http://download.ofb.net/gale/
 EXTRACT_SUFX=	.tar.bz2
