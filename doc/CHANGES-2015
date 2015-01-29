@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.486 2015/01/28 22:15:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.487 2015/01/29 00:11:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -608,3 +608,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nss to 3.17.4 [ryoon 2015-01-28]
 	Updated graphics/libjpeg-turbo to 1.4.0 [rjs 2015-01-28]
 	Updated devel/p5-List-MoreUtils to 0.403 [wiz 2015-01-28]
+	Updated emulators/suse131_libpng to 13.1nb4 [obache 2015-01-29]
