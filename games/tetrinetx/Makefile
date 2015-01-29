@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 11:54:56 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/29 09:53:29 mef Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://tetrinetx.sourceforge.net/
 
