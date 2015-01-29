@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2033 2015/01/29 06:37:47 mef Exp $
+# $NetBSD: Makefile,v 1.2034 2015/01/29 06:38:53 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1300,7 +1300,6 @@ SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
 SUBDIR+=	p5-TAP-Formatter-HTML
 SUBDIR+=	p5-TAP-Harness-Archive
-SUBDIR+=	p5-Term-UI
 SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Tee
 SUBDIR+=	p5-Template-Plugin-Handy
@@ -1327,6 +1326,7 @@ SUBDIR+=	p5-Term-ShellUI
 SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Term-Size-Any
 SUBDIR+=	p5-Term-Size-Perl
+SUBDIR+=	p5-Term-UI
 SUBDIR+=	p5-Test-Aggregate
 SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
