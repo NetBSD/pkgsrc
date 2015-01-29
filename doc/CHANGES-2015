@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.492 2015/01/29 04:48:14 mef Exp $
+$NetBSD: CHANGES-2015,v 1.493 2015/01/29 06:16:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -624,3 +624,20 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mimms to 3.2.1 [mef 2015-01-29]
 	Updated net/net6 to 1.3.14 [mef 2015-01-29]
 	Updated net/p5-Geo-IP to 1.45 [mef 2015-01-29]
+	Updated devel/p5-Devel-Autoflush to 0.06 [mef 2015-01-29]
+	Updated devel/p5-Devel-Caller to 2.06 [mef 2015-01-29]
+	Updated devel/p5-Devel-CheckLib to 1.03 [mef 2015-01-29]
+	Updated devel/p5-Devel-Cover to 1.17 [mef 2015-01-29]
+	Updated devel/p5-Devel-Cycle to 1.12 [mef 2015-01-29]
+	Updated devel/p5-Devel-Declare to 0.006017 [mef 2015-01-29]
+	Updated devel/p5-Devel-FindPerl to 0.012 [mef 2015-01-29]
+	Updated devel/p5-Devel-FindRef to 1.440 [mef 2015-01-29]
+	Updated devel/p5-Devel-Gladiator to 0.07 [mef 2015-01-29]
+	Updated devel/p5-Devel-PPPort to 3.28 [mef 2015-01-29]
+	Updated devel/p5-Devel-PartialDump to 0.17 [mef 2015-01-29]
+	Updated devel/p5-Devel-Pragma to 0.60 [mef 2015-01-29]
+	Updated devel/p5-Devel-StackTrace-AsHTML to 0.14 [mef 2015-01-29]
+	Updated devel/p5-Devel-StackTrace-WithLexicals to 2.01 [mef 2015-01-29]
+	Updated devel/p5-Devel-TraceUse to 2.093 [mef 2015-01-29]
+	Updated devel/p5-Devel-ebug to 0.56 [mef 2015-01-29]
+	Updated devel/p5-Dir-Self to 0.11 [mef 2015-01-29]
