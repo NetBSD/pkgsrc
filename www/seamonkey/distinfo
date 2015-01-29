@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.117 2015/01/02 04:26:21 ryoon Exp $
+$NetBSD: distinfo,v 1.118 2015/01/29 22:22:26 wiz Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -19,7 +19,7 @@ SHA1 (patch-ldap_sdks_c-sdk_ldap_include_portable.h) = 4ce9e1a0e8f0d05367243e8d2
 SHA1 (patch-mail_app_Makefile.in) = 8064fb110405584b53582181006a11fc049657cc
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 0cbabcf5b188e86404e3ded8452c73a7f498efe3
 SHA1 (patch-mozilla_b2g_installer_package-manifest.in) = ea0b9619be73fa769b8875ad8f2a73ec718d7501
-SHA1 (patch-mozilla_browser_app_nsBrowserApp.cpp) = 76a99e7b8b2383224a2322bab65f1824fc69a614
+SHA1 (patch-mozilla_browser_app_nsBrowserApp.cpp) = 895b2e788b924ab0d5f7ac7c264d3e8e1c5934ed
 SHA1 (patch-mozilla_browser_installer_package-manifest.in) = aa83f2e7d2b545beb83da1571594333722dc369e
 SHA1 (patch-mozilla_build_autoconf_compiler-opts.m4) = 1970fa246049adde4f2338ccd51f3651081bea56
 SHA1 (patch-mozilla_build_autoconf_nss.m4) = 3b05127e72a76ac2f87c8362cbde13ce76485a19
