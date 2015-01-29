@@ -1,4 +1,4 @@
-$NetBSD: patch-browser_app_nsBrowserApp.cpp,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+$NetBSD: patch-browser_app_nsBrowserApp.cpp,v 1.2 2015/01/29 22:22:27 wiz Exp $
 
 * Replace XP_MACOSX with XP_DARWIN as the former is not defined when
   the toolkit is not cocoa.
@@ -26,11 +26,3 @@ $NetBSD: patch-browser_app_nsBrowserApp.cpp,v 1.1 2014/11/03 12:18:32 ryoon Exp 
    return mach_absolute_time();
  #elif defined(HAVE_CLOCK_MONOTONIC)
    struct timespec ts;
-@@ -586,6 +588,7 @@ int main(int argc, char* argv[])
-   TriggerQuirks();
- #endif
- 
-+  setenv("MOZ_PLUGIN_PATH", "%%LOCALBASE%%/lib/browser_plugins/symlinks/gecko", 0);
-   int gotCounters;
- #if defined(XP_UNIX)
-   struct rusage initialRUsage;
