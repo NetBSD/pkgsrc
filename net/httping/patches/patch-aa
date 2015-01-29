@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2013/06/26 12:39:24 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2015/01/29 02:27:39 mef Exp $
 
 * Fix man page directory for pkgsrc.
 * Create nls directory before installation.
 
---- Makefile.orig	2013-06-07 13:18:52.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2014-02-04 05:17:29.000000000 +0900
++++ Makefile	2015-01-29 11:16:49.000000000 +0900
 @@ -42,7 +42,7 @@ LDFLAGS+=-lm
  PACKAGE=$(TARGET)-$(VERSION)
  PREFIX?=/usr
@@ -14,10 +14,11 @@ $NetBSD: patch-aa,v 1.4 2013/06/26 12:39:24 ryoon Exp $
  DOCDIR=$(PREFIX)/share/doc/$(TARGET)
  
  INSTALL=install
-@@ -116,6 +116,7 @@ install: $(TARGET) $(TRANSLATIONS)
+@@ -116,7 +116,7 @@ install: $(TARGET) $(TRANSLATIONS)
  ifneq ($(DEBUG),yes)
  	$(STRIP) $(DESTDIR)/$(BINDIR)/$(TARGET)
  endif
+-	mkdir -p $(DESTDIR)/$(PREFIX)/share/locale/nl/LC_MESSAGES
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/locale/nl/LC_MESSAGES
  	cp nl.mo $(DESTDIR)/$(PREFIX)/share/locale/nl/LC_MESSAGES/httping.mo
  
