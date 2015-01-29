@@ -1,0 +1,38 @@
+$NetBSD: patch-makefile,v 1.7 2015/01/29 20:00:29 wiz Exp $
+
+--- makefile.orig	2015-01-29 17:12:56.000000000 +0000
++++ makefile
+@@ -227,19 +227,19 @@ endif
+ # BIGENDIAN = 1
+ 
+ # uncomment next line to build expat as part of MAME build
+-BUILD_EXPAT = 1
++#BUILD_EXPAT = 1
+ 
+ # uncomment next line to build zlib as part of MAME build
+-BUILD_ZLIB = 1
++#BUILD_ZLIB = 1
+ 
+ # uncomment next line to build libflac as part of MAME build
+-BUILD_FLAC = 1
++#BUILD_FLAC = 1
+ 
+ # uncomment next line to build jpeglib as part of MAME build
+-BUILD_JPEGLIB = 1
++#BUILD_JPEGLIB = 1
+ 
+ # uncomment next line to build libsqlite3 as part of MAME/MESS build
+-BUILD_SQLITE3 = 1
++#BUILD_SQLITE3 = 1
+ 
+ # uncomment next line to build PortMidi as part of MAME/MESS build
+ BUILD_MIDILIB = 1
+@@ -739,7 +739,7 @@ DRIVLISTOBJ = $(OBJ)/$(TARGET)/$(SUBTARG
+ #-------------------------------------------------
+ 
+ # start with an empty set of libs
+-LIBS = 
++LIBS = -Wl,-R${PREFIX}/lib -L${PREFIX}/lib
+ 
+ # add expat XML library
+ ifeq ($(BUILD_EXPAT),1)
