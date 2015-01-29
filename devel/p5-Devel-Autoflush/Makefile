@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/29 04:53:21 mef Exp $
 
-DISTNAME=	Devel-Autoflush-0.05
+DISTNAME=	Devel-Autoflush-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
