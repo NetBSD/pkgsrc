@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2014/11/15 00:04:33 riz Exp $
+# $NetBSD: Makefile,v 1.34 2015/01/29 11:38:29 adam Exp $
 
-DISTNAME=	clang-3.5.0
+DISTNAME=	clang-3.5.1
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.xz \
 		libcxx-${PKGVERSION_NOREV}.src.tar.xz \
 		cfe-${PKGVERSION_NOREV}.src.tar.xz \
 		compiler-rt-${PKGVERSION_NOREV}.src.tar.xz
-SITES.compiler-rt-3.4.src.tar.gz=http://llvm.org/releases/3.4/
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
@@ -49,10 +48,9 @@ PLIST_SUBST+=		SOEXT="so"
 # put this here so it can be removed when clang matures.
 # cxa_finalize.o is no longer necessary with libc.so >= ILLUMOS_0.5
 TEST_ILLUMOS_3849!=\
-	if /usr/bin/elfdump -v /lib/libc.so |\
-	  ${GREP} -q 'ILLUMOS_0.5' ; then	\
-		${ECHO} 1;	\
-	else ${ECHO} 0;	\
+	if /usr/bin/elfdump -v /lib/libc.so | \
+		${GREP} -q 'ILLUMOS_0.5' ; then ${ECHO} 1; \
+	else ${ECHO} 0; \
 	fi
 
 #doesn't seem to be needed anymore, but may be dependent on
