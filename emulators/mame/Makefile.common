@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2014/12/01 12:39:17 joerg Exp $
+# $NetBSD: Makefile.common,v 1.20 2015/01/29 20:00:29 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -22,7 +22,7 @@ WRKSRC=			${WRKDIR}
 PATCHDIR=		${.CURDIR}/../../emulators/mame/patches
 DISTINFO_FILE=		${.CURDIR}/../../emulators/mame/distinfo
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile
@@ -76,16 +76,19 @@ post-extract:
 	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
 	rm ${WRKDIR}/mame.zip
 	# This needs to be done for every file that is patched.
-	${RUN} for f in src/lib/web/mongoose.c src/osd/osdcore.h; do    \
+	${RUN} for f in 3rdparty/mongoose/mongoose.c makefile src/osd/sdl/sdl.mak; do    \
 		${CP} ${WRKSRC}/$${f} ${WRKSRC}/$${f}.bak;              \
 		${CAT} ${WRKSRC}/$${f}.bak | dos2unix >${WRKSRC}/$${f}; \
 	done
 
 .include "../../lang/python/application.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
