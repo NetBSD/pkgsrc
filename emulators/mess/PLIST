@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/01/02 15:54:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/01/29 20:00:38 wiz Exp $
 bin/castool
 bin/floptool
 bin/imgtool
@@ -50,6 +50,7 @@ share/mess/hash/apollo_ctape.xml
 share/mess/hash/apple1.xml
 share/mess/hash/apple2.xml
 share/mess/hash/apple2gs.xml
+share/mess/hash/apple3.xml
 share/mess/hash/aquarius.xml
 share/mess/hash/arcadia.xml
 share/mess/hash/archimedes.xml
@@ -127,6 +128,7 @@ share/mess/hash/gba.xml
 share/mess/hash/gbcolor.xml
 share/mess/hash/genius.xml
 share/mess/hash/gimix.xml
+share/mess/hash/gjmovie.xml
 share/mess/hash/gl2000.xml
 share/mess/hash/gl6000sl.xml
 share/mess/hash/glcolor.xml
@@ -161,6 +163,7 @@ share/mess/hash/kc_cart.xml
 share/mess/hash/kc_cass.xml
 share/mess/hash/kc_flop.xml
 share/mess/hash/korvet_flop.xml
+share/mess/hash/lantutor.xml
 share/mess/hash/leapster.xml
 share/mess/hash/lisa.xml
 share/mess/hash/lisa2.xml
