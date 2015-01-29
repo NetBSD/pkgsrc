@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/01 16:09:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/29 21:26:52 joerg Exp $
 
 DISTNAME=	3.1.1
 PKGNAME=	libgroove-${DISTNAME}
@@ -26,6 +26,7 @@ DIST_SUBDIR=	libgroove
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libebur128/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
