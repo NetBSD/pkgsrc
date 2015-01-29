@@ -1,16 +1,21 @@
-$NetBSD: patch-ab,v 1.4 2010/04/17 12:43:03 obache Exp $
+$NetBSD: patch-ab,v 1.5 2015/01/29 09:47:03 mef Exp $
 
---- src/Makefile.in.orig	2006-05-10 10:58:03.000000000 +0000
-+++ src/Makefile.in
-@@ -23,14 +23,14 @@
+date: 2001-11-20 04:39:05 +0900;  author: jlam;  state: Exp;
+Strongly buildlinkify and libtoolize (NetBSD's interesting contributions to
+technical vocabulary).
+
+--- src/Makefile.in.orig	2014-10-20 08:07:03.000000000 +0900
++++ src/Makefile.in	2015-01-29 18:34:04.000000000 +0900
+@@ -23,7 +23,7 @@
  srcdir=		@srcdir@
  VPATH=		@srcdir@
  
 -TARGETS=	libadns.a
 +TARGETS=	libadns.la
- include		$(srcdir)/../settings.make
- include		adns.make
+ include		../settings.make
+ include		$(srcdir)/adns.make
  
+@@ -32,7 +32,7 @@ DIRCFLAGS=	-I. -I$(srcdir)
  install:
  		mkdir -p $(libdir) $(includedir)
  		set -xe; for f in $(TARGETS); \
@@ -19,7 +24,7 @@ $NetBSD: patch-ab,v 1.4 2010/04/17 12:43:03 obache Exp $
  		$(INSTALL_DATA) $(srcdir)/../src/adns.h $(includedir)/adns.h
  
  uninstall:
-@@ -39,10 +39,10 @@ uninstall:
+@@ -41,10 +41,10 @@ uninstall:
  
  ALLOBJS=	$(LIBOBJS)
  
