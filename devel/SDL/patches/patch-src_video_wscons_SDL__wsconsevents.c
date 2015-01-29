@@ -1,4 +1,4 @@
-$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.7 2015/01/29 11:28:50 jmcneill Exp $
+$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.8 2015/01/29 12:22:04 jmcneill Exp $
 
 --- src/video/wscons/SDL_wsconsevents.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/video/wscons/SDL_wsconsevents.c
@@ -120,7 +120,19 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.7 2015/01/29 11:28:50 jm
  }
  
  static SDLKey keymap[128];
-@@ -120,19 +194,42 @@ static void updateKeyboard(_THIS)
+@@ -107,6 +181,11 @@ static SDL_keysym *TranslateKey(int scan
+   if (keysym->sym == SDLK_UNKNOWN)
+     printf("Unknown mapping for scancode %d\n", scancode);
+ 
++  keysym->unicode = 0;
++  if (SDL_TranslateUNICODE) {
++    keysym->unicode = keysym->sym;
++  }
++
+   return keysym;
+ }
+ 
+@@ -120,19 +199,42 @@ static void updateKeyboard(_THIS)
      for (i = 0; i < n; i++) {
        unsigned char c = buf[i] & 0x7f;
        if (c == 224) // special key prefix -- what should we do with it?
@@ -167,7 +179,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.7 2015/01/29 11:28:50 jm
    } while (posted);
  }
  
-@@ -146,8 +243,10 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -146,8 +248,10 @@ void WSCONS_InitOSKeymap(_THIS)
    }
  
    switch (private->kbdType) {
@@ -179,7 +191,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.7 2015/01/29 11:28:50 jm
      /* top row */
      keymap[2] = SDLK_1;
      keymap[3] = SDLK_2;
-@@ -220,7 +319,6 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -220,7 +324,6 @@ void WSCONS_InitOSKeymap(_THIS)
      keymap[77] = SDLK_RIGHT;
      keymap[80] = SDLK_DOWN;
      break;
