@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/08/26 01:30:03 seb Exp $
+$NetBSD: distinfo,v 1.8 2015/01/29 05:08:07 mef Exp $
 
-SHA1 (Devel-Cycle-1.11.tar.gz) = c88be23f7d5205e67745a4c6c3cdd2fc39595ea8
-RMD160 (Devel-Cycle-1.11.tar.gz) = ccffb21fcb4c3f80ed4d46b07af4e1b294828931
-Size (Devel-Cycle-1.11.tar.gz) = 6843 bytes
+SHA1 (Devel-Cycle-1.12.tar.gz) = 6a47d603d328e2867fbe971cbf411b67cdd211a0
+RMD160 (Devel-Cycle-1.12.tar.gz) = cacc652b35622c2ef40c028894b5649e743b180b
+Size (Devel-Cycle-1.12.tar.gz) = 7276 bytes
