@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2010/04/17 12:43:03 obache Exp $
+$NetBSD: patch-ac,v 1.6 2015/01/29 09:47:03 mef Exp $
+
+date: 2005-03-12 15:05:33 +0900;  author: tv;  state: Exp;  lines: +37 -15;
+If poll(2) is missing, don't even contemplate using it.
+Fixes build on Interix.
 
 --- client/adnslogres.c.orig	2006-05-09 19:37:58.000000000 +0000
 +++ client/adnslogres.c
