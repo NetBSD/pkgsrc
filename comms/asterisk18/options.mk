@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2012/09/30 19:29:05 jnemeth Exp $
+# $NetBSD: options.mk,v 1.12 2015/01/29 21:48:07 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -97,6 +97,7 @@ CONFIGURE_ARGS+=	--without-ldap
 
 .if !empty(PKG_OPTIONS:Mspeex)
 .include "../../audio/speex/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-speex
 CONFIGURE_ARGS+=	--with-speexdsp
 PLIST.speex=		yes
