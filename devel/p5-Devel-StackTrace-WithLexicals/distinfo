@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/08/12 11:50:51 adam Exp $
+$NetBSD: distinfo,v 1.5 2015/01/29 05:32:26 mef Exp $
 
-SHA1 (Devel-StackTrace-WithLexicals-0.10.tar.gz) = 51de32b627b251bd6d4e8dc1633e10a783c645dc
-RMD160 (Devel-StackTrace-WithLexicals-0.10.tar.gz) = 0373d55216e43201f9fcc47fa1a15e5a6a40969b
-Size (Devel-StackTrace-WithLexicals-0.10.tar.gz) = 22688 bytes
+SHA1 (Devel-StackTrace-WithLexicals-2.01.tar.gz) = dd7b6f9d845a850afa2b06f65d2d81b61754b35c
+RMD160 (Devel-StackTrace-WithLexicals-2.01.tar.gz) = de20813cca9ad3d607d669812e04db3fd8d588d2
+Size (Devel-StackTrace-WithLexicals-2.01.tar.gz) = 25316 bytes
