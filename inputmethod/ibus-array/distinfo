@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/25 13:12:02 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/01/29 11:45:25 obache Exp $
 
 SHA1 (ibus-array-0.1.0.tgz) = f4f6f5ccb0c2d54ef80b5e694fc508f99bf1f381
 RMD160 (ibus-array-0.1.0.tgz) = 2526bd21f704bbd4bf8d563a6e89870a047562b9
 Size (ibus-array-0.1.0.tgz) = 3838716 bytes
-SHA1 (patch-src_engine.c) = 6e6913250874ff47f9133ce4d414db5e34000aba
+SHA1 (patch-src_engine.c) = aa7978ae11c8e1410980585ff6f7a76200df6f99
