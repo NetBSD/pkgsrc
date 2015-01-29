@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/06/16 21:21:15 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/01/29 02:46:25 mef Exp $
 
-SHA1 (mimms-3.2.tar.bz2) = e8ddf9905919e7eb6602e2c9547ba537e2f69d88
-RMD160 (mimms-3.2.tar.bz2) = 3189b6974e42159183c0e031b86e440e19aaecc8
-Size (mimms-3.2.tar.bz2) = 18217 bytes
+SHA1 (mimms-3.2.1.tar.bz2) = 279eee76dd4032cd2c1dddf1d49292a952c57b80
+RMD160 (mimms-3.2.1.tar.bz2) = 669d5d80ae9bd318bf98c032197fa6980622182e
+Size (mimms-3.2.1.tar.bz2) = 18224 bytes
