@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.507 2015/01/29 21:52:33 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.508 2015/01/29 21:54:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -667,3 +667,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/p5-RRDTool-OO to 0.35 [wiz 2015-01-29]
 	Updated comms/asterisk18 to 1.8.32.2 [jnemeth 2015-01-29]
 	Updated comms/asterisk10 to 10.12.4nb6 [jnemeth 2015-01-29]
+	Updated comms/asterisk to 11.15.1 [jnemeth 2015-01-29]
