@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/01/09 21:03:27 kleink Exp $
+$NetBSD: distinfo,v 1.7 2015/01/30 21:12:58 kleink Exp $
 
-SHA1 (WTForms-2.0.1.zip) = f2ffcb4068f0f29efb05da5631a017279b3fdffb
-RMD160 (WTForms-2.0.1.zip) = f509df447f3cc6a55bdc0bd40ee1f9e4715e0023
-Size (WTForms-2.0.1.zip) = 444489 bytes
+SHA1 (WTForms-2.0.2.zip) = b42def9604c8b8c8fd31f2e4118258f2d1605474
+RMD160 (WTForms-2.0.2.zip) = f891dba7798c7aa3106da36f2e12fad5f2a10d14
+Size (WTForms-2.0.2.zip) = 449167 bytes
