@@ -1,4 +1,4 @@
-$NetBSD: patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp,v 1.6 2015/01/30 07:32:24 pho Exp $
+$NetBSD: patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp,v 1.7 2015/01/30 15:19:59 ryoon Exp $
 
 Load system hunspell dictionaries.
 
@@ -10,7 +10,7 @@ Load system hunspell dictionaries.
  
 +  // load system hunspell dictionaries
 +  nsCOMPtr<nsIFile> hunDir;
-+  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("%%LOCALBASE%%/share/hunspell"),
++  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("@PREFIX@/share/hunspell"),
 +                        true, getter_AddRefs(hunDir));
 +  if (hunDir) {
 +      LoadDictionariesFromDir(hunDir);
