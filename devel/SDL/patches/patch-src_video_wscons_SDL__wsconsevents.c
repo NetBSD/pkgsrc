@@ -1,8 +1,16 @@
-$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jmcneill Exp $
+$NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.10 2015/01/30 12:02:49 wiz Exp $
 
 --- src/video/wscons/SDL_wsconsevents.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/video/wscons/SDL_wsconsevents.c
-@@ -47,14 +47,31 @@ int WSCONS_InitKeyboard(_THIS)
+@@ -25,6 +25,7 @@
+ #include <dev/wscons/wsdisplay_usl_io.h>
+ #include <sys/ioctl.h>
+ #include <fcntl.h>    
++#include <limits.h>    
+ #include <unistd.h>  
+ #include <termios.h>
+ #include <errno.h> 
+@@ -47,14 +48,31 @@ int WSCONS_InitKeyboard(_THIS)
      return -1;
    }
  
@@ -35,7 +43,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
    tty.c_cflag = CREAD | CS8;
    tty.c_lflag = 0;
    tty.c_cc[VTIME] = 0;
-@@ -65,8 +82,12 @@ int WSCONS_InitKeyboard(_THIS)
+@@ -65,8 +83,12 @@ int WSCONS_InitKeyboard(_THIS)
      WSCONS_ReportError("cannot set terminal attributes: %s", strerror(errno));
      return -1;
    }
@@ -50,7 +58,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
      return -1;
    }
  
-@@ -81,6 +102,10 @@ void WSCONS_ReleaseKeyboard(_THIS)
+@@ -81,6 +103,10 @@ void WSCONS_ReleaseKeyboard(_THIS)
  			 strerror(errno));
      }
      if (private->did_save_tty) {
@@ -61,7 +69,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
        if (tcsetattr(private->fd, TCSANOW, &private->saved_tty) < 0) {
  	WSCONS_ReportError("cannot restore keynoard attributes: %s",
  			   strerror(errno));
-@@ -89,8 +114,65 @@ void WSCONS_ReleaseKeyboard(_THIS)
+@@ -89,8 +115,65 @@ void WSCONS_ReleaseKeyboard(_THIS)
    }
  }
  
@@ -128,7 +136,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
  }
  
  static SDLKey keymap[128];
-@@ -107,6 +189,11 @@ static SDL_keysym *TranslateKey(int scan
+@@ -107,6 +190,11 @@ static SDL_keysym *TranslateKey(int scan
    if (keysym->sym == SDLK_UNKNOWN)
      printf("Unknown mapping for scancode %d\n", scancode);
  
@@ -140,7 +148,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
    return keysym;
  }
  
-@@ -120,19 +207,42 @@ static void updateKeyboard(_THIS)
+@@ -120,19 +208,42 @@ static void updateKeyboard(_THIS)
      for (i = 0; i < n; i++) {
        unsigned char c = buf[i] & 0x7f;
        if (c == 224) // special key prefix -- what should we do with it?
@@ -187,7 +195,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
    } while (posted);
  }
  
-@@ -146,8 +256,10 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -146,8 +257,10 @@ void WSCONS_InitOSKeymap(_THIS)
    }
  
    switch (private->kbdType) {
@@ -199,7 +207,7 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsevents.c,v 1.9 2015/01/29 12:31:08 jm
      /* top row */
      keymap[2] = SDLK_1;
      keymap[3] = SDLK_2;
-@@ -220,7 +332,6 @@ void WSCONS_InitOSKeymap(_THIS)
+@@ -220,7 +333,6 @@ void WSCONS_InitOSKeymap(_THIS)
      keymap[77] = SDLK_RIGHT;
      keymap[80] = SDLK_DOWN;
      break;
