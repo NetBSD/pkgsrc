@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.21 2014/03/06 07:34:20 uebayasi Exp $
+# $NetBSD: tools.IRIX.mk,v 1.22 2015/01/30 11:06:36 obache Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -67,5 +67,6 @@ TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
+TOOLS_PLATFORM.unlink?=		/usr/sbin/unlink
 TOOLS_PLATFORM.wc?=		/sbin/wc
 TOOLS_PLATFORM.xargs?=		/sbin/xargs
