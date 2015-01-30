@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.520 2015/01/30 16:06:12 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.521 2015/01/30 17:36:59 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -682,3 +682,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 35.0.1nb1 [ryoon 2015-01-30]
 	Updated textproc/p5-Swim to 0.1.38 [schmonz 2015-01-30]
 	Updated devel/p5-Ouch to 0.0409 [schmonz 2015-01-30]
+	Updated geography/py-google-maps-services-python to 2.1 [kleink 2015-01-30]
