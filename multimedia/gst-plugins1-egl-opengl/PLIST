@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/30 11:10:20 jmcneill Exp $
+lib/gstreamer-1.0/libgstopengl.la
