@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.509 2015/01/29 22:43:37 nat Exp $
+$NetBSD: CHANGES-2015,v 1.510 2015/01/30 01:27:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -669,3 +669,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated comms/asterisk10 to 10.12.4nb6 [jnemeth 2015-01-29]
 	Updated comms/asterisk to 11.15.1 [jnemeth 2015-01-29]
 	Updated graphics/glu to 7.11.2nb1 [nat 2015-01-29]
+	Updated devel/bison to 3.0.4 [wiz 2015-01-30]
