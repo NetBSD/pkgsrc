@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2035 2015/01/30 12:59:06 mef Exp $
+# $NetBSD: Makefile,v 1.2036 2015/01/30 14:29:27 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -917,7 +917,6 @@ SUBDIR+=	p5-File-ShareDir
 SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Slurp-Tiny
-SUBDIR+=	p5-File-Slurp-Unicode
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-File-Tempdir
 SUBDIR+=	p5-File-Touch
