@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.521 2015/01/30 17:36:59 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.522 2015/01/30 18:49:08 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -683,3 +683,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Swim to 0.1.38 [schmonz 2015-01-30]
 	Updated devel/p5-Ouch to 0.0409 [schmonz 2015-01-30]
 	Updated geography/py-google-maps-services-python to 2.1 [kleink 2015-01-30]
+	Updated security/libnetpgpverify to 20150115 [agc 2015-01-30]
+	Updated security/netpgpverify to 20150115 [agc 2015-01-30]
