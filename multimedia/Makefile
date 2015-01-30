@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2015/01/18 23:10:21 jmcneill Exp $
+# $NetBSD: Makefile,v 1.232 2015/01/30 01:37:35 jmcneill Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -73,6 +73,7 @@ SUBDIR+=	gst-plugins1-good
 SUBDIR+=	gst-plugins1-libav
 SUBDIR+=	gst-plugins1-mpeg2dec
 SUBDIR+=	gst-plugins1-ogg
+SUBDIR+=	gst-plugins1-omx
 SUBDIR+=	gst-plugins1-resindvd
 SUBDIR+=	gst-plugins1-theora
 SUBDIR+=	gst-plugins1-ugly
