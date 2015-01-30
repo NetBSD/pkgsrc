@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.518 2015/01/30 15:20:22 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.519 2015/01/30 16:04:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/p5-biblatex-biber to 1.9 [mef 2015-01-30]
 	Removed devel/p5-File-Slurp-Unicode successor devel/p5-File-Slurp [mef 2015-01-30]
 	Updated www/firefox to 35.0.1nb1 [ryoon 2015-01-30]
+	Updated textproc/p5-Swim to 0.1.38 [schmonz 2015-01-30]
