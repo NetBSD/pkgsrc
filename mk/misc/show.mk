@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.11 2013/06/07 00:41:39 obache Exp $
+# $NetBSD: show.mk,v 1.12 2015/01/30 16:45:33 jperkin Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -48,7 +48,7 @@ show-build-defs: .PHONY
 	@${ECHO} "The following variables will affect the build process of this package,"
 	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
 	@${ECHO} ""
-.  for var in ${BUILD_DEFS:O}
+.  for var in ${BUILD_DEFS:O:u}
 .    if !defined(${var})
 	@${ECHO} "        * ${var} (not defined)"
 .    elif defined(${var}) && empty(${var})
@@ -62,7 +62,7 @@ show-build-defs: .PHONY
 	@${ECHO} "Based on these variables, the following variables have been set:"
 	@${ECHO} ""
 .  endif
-.  for var in ${BUILD_DEFS_EFFECTS:O}
+.  for var in ${BUILD_DEFS_EFFECTS:O:u}
 .    if !defined(${var})
 	@${ECHO} "        * ${var} (not defined)"
 .    elif defined(${var}) && empty(${var})
