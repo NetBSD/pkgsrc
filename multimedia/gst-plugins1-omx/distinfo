@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/30 01:37:08 jmcneill Exp $
+
+SHA1 (gst-omx-1.2.0.tar.xz) = 7f85bc6521067f90a508b5e5a14cd52d5a7bfd7c
+RMD160 (gst-omx-1.2.0.tar.xz) = b741bd6230f849dcf61071d9eb69e21ccd888102
+Size (gst-omx-1.2.0.tar.xz) = 463384 bytes
