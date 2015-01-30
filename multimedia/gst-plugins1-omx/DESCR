@@ -1,0 +1,2 @@
+This module contains a plugin that wraps available OpenMAX IL components and
+makes them available as standard GStreamer elements.
