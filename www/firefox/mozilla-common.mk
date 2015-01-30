@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.47 2014/11/06 13:56:32 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.48 2015/01/30 07:32:24 pho Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -149,6 +149,20 @@ PLIST.vorbis=	yes
 # installed as a shared library on these platforms.
 .if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" # or Android
 PLIST.mozglue=	yes
+.endif
+
+# See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
+# support is only available when the toolkit is cairo-cocoa.
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-sandbox
+.endif
+
+# See ${WRKSRC}/configure.in: It tries to use MacOS X 10.6 SDK by
+# default, which is not always possible.
+.if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
+CONFIGURE_ARGS+=	--enable-macos-target=10.4
+.elif !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
+CONFIGURE_ARGS+=	--enable-macos-target=10.5
 .endif
 
 #

@@ -1,10 +1,44 @@
-$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.9 2015/01/16 22:42:09 ryoon Exp $
+$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.10 2015/01/30 07:32:24 pho Exp $
 
 * Replace XP_MACOSX with XP_DARWIN as the former is not defined when
   the toolkit is not cocoa.
 
---- xpcom/base/nsStackWalk.cpp.orig	2015-01-09 04:38:29.000000000 +0000
+--- xpcom/base/nsStackWalk.cpp.orig	2015-01-23 06:00:09.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
+@@ -34,12 +34,12 @@ static CriticalAddress gCriticalAddress;
+ #define _GNU_SOURCE
+ #endif
+ 
+-#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
++#if defined(HAVE_DLOPEN) || defined(XP_DARWIN)
+ #include <dlfcn.h>
+ #endif
+ 
+-#define NSSTACKWALK_SUPPORTS_MACOSX \
+-  (defined(XP_MACOSX) && \
++#define NSSTACKWALK_SUPPORTS_DARWIN \
++  (defined(XP_DARWIN) && \
+    (defined(__i386) || defined(__ppc__) || defined(HAVE__UNWIND_BACKTRACE)))
+ 
+ #define NSSTACKWALK_SUPPORTS_LINUX \
+@@ -47,7 +47,7 @@ static CriticalAddress gCriticalAddress;
+    ((defined(__GNUC__) && (defined(__i386) || defined(PPC))) || \
+     defined(HAVE__UNWIND_BACKTRACE)))
+ 
+-#if NSSTACKWALK_SUPPORTS_MACOSX
++#if NSSTACKWALK_SUPPORTS_DARWIN
+ #include <pthread.h>
+ #include <CoreServices/CoreServices.h>
+ 
+@@ -832,7 +832,7 @@ NS_DescribeCodeAddress(void* aPC, nsCode
+ }
+ 
+ // i386 or PPC Linux stackwalking code
+-#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_MACOSX)
++#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_DARWIN)
+ 
+ #include <stdlib.h>
+ #include <string.h>
 @@ -903,7 +903,7 @@ FramePointerStackWalk(NS_WalkStackCallba
          (long(next) & 3)) {
        break;
