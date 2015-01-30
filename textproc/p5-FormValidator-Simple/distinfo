@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/07 21:34:36 sno Exp $
+$NetBSD: distinfo,v 1.3 2015/01/30 15:08:00 mef Exp $
 
-SHA1 (FormValidator-Simple-0.28.tar.gz) = d607ca3fe71b48d661085adbcf675703bf1c676b
-RMD160 (FormValidator-Simple-0.28.tar.gz) = 6c2eb8951588795473b7b327095a83897802407b
-Size (FormValidator-Simple-0.28.tar.gz) = 36273 bytes
+SHA1 (FormValidator-Simple-0.29.tar.gz) = 7f7a812fa435f643a5ac8dcd0a7700e302a75edf
+RMD160 (FormValidator-Simple-0.29.tar.gz) = c18d3403d18158c14f191295225f2becc6f43ba0
+Size (FormValidator-Simple-0.29.tar.gz) = 46467 bytes
