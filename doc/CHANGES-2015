@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.514 2015/01/30 12:59:06 mef Exp $
+$NetBSD: CHANGES-2015,v 1.515 2015/01/30 13:50:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -675,3 +675,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added multimedia/gst-plugins1-egl-gl version 1.4.5 [jmcneill 2015-01-30]
 	Added multimedia/gst-plugins1-egl-opengl version 1.4.5 [jmcneill 2015-01-30]
 	Added devel/p5-Tie-Cycle version 1.21 [mef 2015-01-30]
+	Added misc/p5-Business-ISSN version 0.91 [mef 2015-01-30]
+	Added misc/p5-Business-ISMN version 1.13 [mef 2015-01-30]
