@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/01/30 12:56:48 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/30 13:38:14 mef Exp $
 #
 
 DISTNAME=	Tie-Cycle-1.21
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Tie-Cycle/lib/Tie/Cycle.pm
