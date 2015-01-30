@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/10/04 12:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/30 14:17:26 mef Exp $
 
-VER=		0.9.9
+VER=		1.9
 DISTNAME=	biblatex-biber
 PKGNAME=	p5-biblatex-biber-${VER}
-PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/${VER}/
 
@@ -13,7 +12,7 @@ COMMENT=	Replacement of bibtex for users of BibLaTeX
 LICENSE=	gnu-gpl-v1 OR artistic-2.0
 
 DIST_SUBDIR=		${DISTNAME}-${VER}
-WRKSRC=			${WRKDIR}/${DISTNAME}-v${VER}
+WRKSRC=			${WRKDIR}/${DISTNAME}-${VER}
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Biber/Config/.packlist
@@ -25,7 +24,6 @@ DEPENDS+=		p5-Data-Compare-[0-9]*:../../devel/p5-Data-Compare
 DEPENDS+=		p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=		p5-Date-Simple-[0-9]*:../../devel/p5-Date-Simple
 DEPENDS+=		p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
-DEPENDS+=		p5-File-Slurp-Unicode-[0-9]*:../../devel/p5-File-Slurp-Unicode
 DEPENDS+=		p5-List-AllUtils-[0-9]*:../../devel/p5-List-AllUtils
 DEPENDS+=		p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
 DEPENDS+=		p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
@@ -34,8 +32,8 @@ DEPENDS+=		p5-XML-LibXML-Simple-[0-9]*:../../textproc/p5-XML-LibXML-Simple
 DEPENDS+=		p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
 DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
 DEPENDS+=		p5-XML-Writer-String-[0-9]*:../../textproc/p5-XML-Writer-String
-DEPENDS+=		p5-Business-ISSN-[0-9]*:../../wip/p5-Business-ISSN
-DEPENDS+=		p5-Business-ISMN-[0-9]*:../../wip/p5-Business-ISMN
+DEPENDS+=		p5-Business-ISSN-[0-9]*:../../misc/p5-Business-ISSN
+DEPENDS+=		p5-Business-ISMN-[0-9]*:../../misc/p5-Business-ISMN
 
 DEPENDS+=		p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
 DEPENDS+=		tex-biblatex-1.7:../../print/tex-biblatex
