@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2034 2015/01/29 06:38:53 mef Exp $
+# $NetBSD: Makefile,v 1.2035 2015/01/30 12:59:06 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1414,6 +1414,7 @@ SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tie-Cache
 SUBDIR+=	p5-Tie-Cache-LRU
 SUBDIR+=	p5-Tie-Cache-LRU-Expires
+SUBDIR+=	p5-Tie-Cycle
 SUBDIR+=	p5-Tie-Function
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Tie-LLHash
