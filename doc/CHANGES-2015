@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.515 2015/01/30 13:50:44 mef Exp $
+$NetBSD: CHANGES-2015,v 1.516 2015/01/30 14:18:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -677,3 +677,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Tie-Cycle version 1.21 [mef 2015-01-30]
 	Added misc/p5-Business-ISSN version 0.91 [mef 2015-01-30]
 	Added misc/p5-Business-ISMN version 1.13 [mef 2015-01-30]
+	Updated print/p5-biblatex-biber to 1.9 [mef 2015-01-30]
