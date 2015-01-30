@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/01/27 06:01:44 dbj Exp $
+# $NetBSD: Makefile,v 1.47 2015/01/30 09:14:08 mef Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Core part of GNU Radio, all others need this
@@ -14,7 +14,7 @@ CONF_FILES+=	${EGDIR}/gr-audio.conf		${PKG_SYSCONFDIR}/gr-audio.conf
 .include	"../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
 CONF_FILES+=	${EGDIR}/gr-audio-oss.conf	${PKG_SYSCONFDIR}/gr-audio-oss.conf
-PLIST_SRC+=	${PKGDIR}/PLIST.oss
+PLIST_SRC=	${PKGDIR}/PLIST ${PKGDIR}/PLIST.oss
 .endif
 
 # set default as minimum
