@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2014/12/14 08:01:42 obache Exp $
+# $NetBSD: Makefile,v 1.446 2015/01/30 13:50:44 mef Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -201,6 +201,8 @@ SUBDIR+=	p5-Array-PrintCols
 SUBDIR+=	p5-Business-CreditCard
 SUBDIR+=	p5-Business-ISBN
 SUBDIR+=	p5-Business-ISBN-Data
+SUBDIR+=	p5-Business-ISMN
+SUBDIR+=	p5-Business-ISSN
 SUBDIR+=	p5-Business-UPS
 SUBDIR+=	p5-ControlX10-CM11
 SUBDIR+=	p5-ControlX10-CM17
