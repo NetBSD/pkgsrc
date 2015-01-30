@@ -1,4 +1,4 @@
-# $NetBSD: tools.Cygwin.mk,v 1.9 2015/01/12 04:54:19 obache Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.10 2015/01/30 11:06:36 obache Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
@@ -144,6 +144,7 @@ TOOLS_PLATFORM.tr?=		/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/bin/tsort
 TOOLS_PLATFORM.uniq?=		/bin/uniq
+TOOLS_PLATFORM.unlink?=		/bin/unlink
 .if exists(/bin/unzip)
 TOOLS_PLATFORM.unzip?=		/bin/unzip
 .endif

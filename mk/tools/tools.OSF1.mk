@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.16 2014/03/06 07:34:20 uebayasi Exp $
+# $NetBSD: tools.OSF1.mk,v 1.17 2015/01/30 11:06:36 obache Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 #
@@ -58,5 +58,6 @@ TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
+TOOLS_PLATFORM.unlink?=		/usr/sbin/unlink
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
