@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/30 01:37:08 jmcneill Exp $
+lib/gstreamer-1.0/libgstomx.la
+share/examples/gst-omx/gstomx.conf
