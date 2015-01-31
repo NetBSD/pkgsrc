@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.526 2015/01/31 12:09:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.527 2015/01/31 12:11:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -704,3 +704,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Filesys-Notify-Simple to 0.12 [mef 2015-01-31]
 	Updated biology/primer3 to 2.3.6 [mef 2015-01-31]
 	Updated sysutils/hal to 0.5.14nb15 [wiz 2015-01-31]
+	Updated devel/p5-TAP-Harness-Archive to 0.16 [wiz 2015-01-31]
