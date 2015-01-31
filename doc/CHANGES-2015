@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.533 2015/01/31 21:28:36 adam Exp $
+$NetBSD: CHANGES-2015,v 1.534 2015/01/31 21:49:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -716,3 +716,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libdvdcss to 1.3.99 [adam 2015-01-31]
 	Updated multimedia/libdvdread to 5.0.2 [adam 2015-01-31]
 	Updated multimedia/libdvdnav to 5.0.3 [adam 2015-01-31]
+	Updated multimedia/libbluray to 0.7.0 [adam 2015-01-31]
+	Updated multimedia/libaacs to 0.8.0 [adam 2015-01-31]
+	Updated multimedia/libbdplus to 0.1.2 [adam 2015-01-31]
