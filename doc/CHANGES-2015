@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.531 2015/01/31 13:22:54 mef Exp $
+$NetBSD: CHANGES-2015,v 1.532 2015/01/31 13:45:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -615,7 +615,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Data-Dumper-Concise to 2.022 [mef 2015-01-29]
 	Updated devel/p5-Data-Munge to 0.093 [mef 2015-01-29]
 	Updated devel/p5-Data-Peek to 0.42 [mef 2015-01-29]
-	Updated devel/p5-Data-Printer to 01 [mef 2015-01-29]
+	Updated devel/p5-Data-Printer to 0.35.01 [mef 2015-01-29]
 	Updated devel/p5-Data-Section to 0.200.006 [mef 2015-01-29]
 	Updated devel/p5-Data-Serializer to 0.60 [mef 2015-01-29]
 	Updated devel/p5-Data-UUID to 1.220 [mef 2015-01-29]
