@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.530 2015/01/31 12:49:53 obache Exp $
+$NetBSD: CHANGES-2015,v 1.531 2015/01/31 13:22:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -708,3 +708,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed devel/p5-constant [wiz 2015-01-31]
 	Added time/php-mrbs version 1.4.11 [bouyer 2015-01-31]
 	Updated www/ruby-faraday to 0.9.1 [obache 2015-01-31]
+	Updated devel/p5-Class-Tiny to 1.001 [mef 2015-01-31]
+	Updated devel/p5-Future to 0.30 [mef 2015-01-31]
+	Updated devel/p5-Getopt-Euclid to 0.4.5 [mef 2015-01-31]
+	Updated devel/p5-Getopt-Long to 2.43 [mef 2015-01-31]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.099 [mef 2015-01-31]
