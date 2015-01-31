@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/05/29 23:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2015/01/31 12:19:56 wiz Exp $
 
 DISTNAME=	SOAP-Lite-1.11
 PKGNAME=	p5-${DISTNAME}
@@ -24,7 +24,6 @@ DEPENDS+=	{perl>=5.10,p5-Net>=0}:../../net/p5-Net
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
-DEPENDS+=	{perl>=5.10.1,p5-constant>=1.14}:../../devel/p5-constant
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=	{perl>=5.10.0,p5-version>=0}:../../devel/p5-version
 
