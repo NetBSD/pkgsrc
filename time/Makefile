@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2014/12/14 02:39:36 obache Exp $
+# $NetBSD: Makefile,v 1.144 2015/01/31 12:23:40 bouyer Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -117,6 +117,7 @@ SUBDIR+=	pclock
 SUBDIR+=	pear-Date
 SUBDIR+=	phoon
 SUBDIR+=	php-calendar
+SUBDIR+=	php-mrbs
 SUBDIR+=	plan
 SUBDIR+=	planner
 SUBDIR+=	polclock
