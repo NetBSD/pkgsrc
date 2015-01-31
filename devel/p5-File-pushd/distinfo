@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/09/10 18:16:20 adam Exp $
+$NetBSD: distinfo,v 1.5 2015/01/31 01:38:22 mef Exp $
 
-SHA1 (File-pushd-1.005.tar.gz) = 927e75e2c4300318e67534ac240c6e13704ea61c
-RMD160 (File-pushd-1.005.tar.gz) = 4b592cd481d7ce3554e09e2e95322afd92b83f79
-Size (File-pushd-1.005.tar.gz) = 16407 bytes
+SHA1 (File-pushd-1.009.tar.gz) = eec3fe5eb100e1996a4b5861c3de25604c44763e
+RMD160 (File-pushd-1.009.tar.gz) = be8c2fb28421ec32c88cac4510beb70be6c9b95c
+Size (File-pushd-1.009.tar.gz) = 18933 bytes
