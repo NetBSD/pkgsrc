@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/11/07 19:39:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/31 00:58:06 mef Exp $
 
 DISTNAME=		uhd-release_003_007_002
 PKGNAME=		uhd-3.7.2
@@ -53,14 +53,14 @@ REPLACE_PYTHON=	\
 	uhd-fpga/usrp3/top/python/bit_to_zynq_bin.py \
 	uhd-fpga/usrp3/top/python/check_inout.py \
 	uhd-fpga/usrp3/top/python/check_timing.py \
-        uhd-fpga/usrp3/lib/io_port2/create-lvbitx.py \
+        uhd-fpga/usrp3/lib/io_port2/create-lvbitx.py
 
 REPLACE_PERL=	uhd-fpga/usrp1/tb/makesine.pl
 
 REPLACE_BASH=	\
 	uhd-fpga/usrp2/top/impactor.sh \
 	uhd-fpga/usrp3/top/impactor.sh \
-        uhd-fpga/usrp3/top/python/batch-build \
+        uhd-fpga/usrp3/top/python/batch-build
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
@@ -91,13 +91,13 @@ post-patch:
 # (2) suppress warning at intallation, "non executable files get +x bit set".
 #
 #  Converting ${CP} into ${INTALL_DATA_DIR} and ${INSTALL_DATA} as pkglint
-#  flags are not easy, sorry for that.
+#  flags are NOT easy, sorry for that.
 post-install:
 	for i in firmware fpga images ; do \
 	  ${CP} -r ${WRKSRC}/uhd-$$i/* ${DESTDIR}${PREFIX}/share/uhd/$$i/;\
 	  ${FIND} ${DESTDIR}${PREFIX}/share/uhd/$$i -type f -exec \
 	          ${CHMOD} -x '{}' \; ;\
-		done	
+		done
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
