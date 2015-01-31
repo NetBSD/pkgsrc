@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/29 23:36:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/31 12:20:53 wiz Exp $
 #
 
 DISTNAME=	constant-def-0.01
@@ -13,7 +13,6 @@ COMMENT=	Perl pragma to declare previously undeclared constants
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	{perl>=5.13.11,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
-DEPENDS+=	{perl>=5.8.7,p5-constant>=1.05}:../../devel/p5-constant
 DEPENDS+=	p5-ex-lib>=0.03:../../devel/p5-ex-lib
 
 .include "../../lang/perl5/module.mk"
