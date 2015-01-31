@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/17 08:36:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/31 12:49:45 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -42,11 +42,13 @@ ${GEM_LIBDIR}/lib/faraday/response/logger.rb
 ${GEM_LIBDIR}/lib/faraday/response/raise_error.rb
 ${GEM_LIBDIR}/lib/faraday/upload_io.rb
 ${GEM_LIBDIR}/lib/faraday/utils.rb
+${GEM_LIBDIR}/script/cached-bundle
 ${GEM_LIBDIR}/script/console
 ${GEM_LIBDIR}/script/generate_certs
 ${GEM_LIBDIR}/script/package
 ${GEM_LIBDIR}/script/proxy-server
 ${GEM_LIBDIR}/script/release
+${GEM_LIBDIR}/script/s3-put
 ${GEM_LIBDIR}/script/server
 ${GEM_LIBDIR}/script/test
 ${GEM_LIBDIR}/test/adapters/default_test.rb
@@ -73,6 +75,7 @@ ${GEM_LIBDIR}/test/middleware/retry_test.rb
 ${GEM_LIBDIR}/test/middleware_stack_test.rb
 ${GEM_LIBDIR}/test/multibyte.txt
 ${GEM_LIBDIR}/test/options_test.rb
+${GEM_LIBDIR}/test/parameters_test.rb
 ${GEM_LIBDIR}/test/request_middleware_test.rb
 ${GEM_LIBDIR}/test/response_middleware_test.rb
 ${GEM_LIBDIR}/test/strawberry.rb
