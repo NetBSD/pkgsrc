@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/01/28 00:57:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/31 00:28:19 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -11259,4 +11259,3 @@ share/doc/gnuradio-${PKGVERSION}/xml/xor__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ss_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/zeromq_8dox.xml
-share/examples/gnuradio/conf.d/gr-audio-oss.conf
