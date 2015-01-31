@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2013/10/12 04:39:01 richard Exp $
+$NetBSD: distinfo,v 1.36 2015/01/31 23:07:48 jperkin Exp $
 
 SHA1 (gnome-vfs-2.24.4.tar.bz2) = 0dc634e7dd979fd218f378902c0ca1af80738961
 RMD160 (gnome-vfs-2.24.4.tar.bz2) = 6a5952bea02dfc96782b6f1129fe765f5313a75b
@@ -23,3 +23,4 @@ SHA1 (patch-cb) = 370c75a72d8575051bb5f02d54fdd4a191ac00eb
 SHA1 (patch-cc) = 010674b9e7674cc4b84a57ac680a5769c5cffd29
 SHA1 (patch-cd) = 64ce812ca541dc34705586b4b01446b29bab8613
 SHA1 (patch-ce) = 718d7de318e85e58b7412345496263ca559e9a73
+SHA1 (patch-modules_inotify-kernel.c) = 049236b40569358a91c6a58881c13be63a16aff5
