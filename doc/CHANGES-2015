@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.524 2015/01/31 01:43:49 mef Exp $
+$NetBSD: CHANGES-2015,v 1.525 2015/01/31 06:18:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-pushd to 1.009 [mef 2015-01-31]
 	Updated devel/p5-FileHandle-Fmode to 0.14 [mef 2015-01-31]
 	Updated devel/p5-Filesys-Notify-Simple to 0.12 [mef 2015-01-31]
+	Updated biology/primer3 to 2.3.6 [mef 2015-01-31]
