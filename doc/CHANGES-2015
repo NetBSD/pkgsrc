@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.528 2015/01/31 12:19:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.529 2015/01/31 12:24:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -706,3 +706,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/hal to 0.5.14nb15 [wiz 2015-01-31]
 	Updated devel/p5-TAP-Harness-Archive to 0.16 [wiz 2015-01-31]
 	Removed devel/p5-constant [wiz 2015-01-31]
+	Added time/php-mrbs version 1.4.11 [bouyer 2015-01-31]
