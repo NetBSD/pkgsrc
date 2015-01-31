@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 20:32:13 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/31 06:18:42 mef Exp $
 #
 
-VERS=		2.2.3
+VERS=		2.3.6
 
-DISTNAME=	primer3-${VERS}
+DISTNAME=	primer3-src-${VERS}
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=primer3/}
 
@@ -12,6 +13,7 @@ HOMEPAGE=	http://primer3.sourceforge.net/
 COMMENT=	Design PCR primers
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 BUILD_DIRS=	src
