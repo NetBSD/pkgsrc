@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2014/12/30 14:07:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53 2015/01/31 18:41:01 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -238,7 +238,7 @@ lib/gnucash/libgncmod-html.la
 lib/gnucash/libgncmod-ledger-core.la
 lib/gnucash/libgncmod-locale-reports-us.la
 lib/gnucash/libgncmod-log-replay.la
-lib/gnucash/libgncmod-ofx.la
+${PLIST.ofx}lib/gnucash/libgncmod-ofx.la
 lib/gnucash/libgncmod-python.la
 lib/gnucash/libgncmod-qif-import.la
 lib/gnucash/libgncmod-qif.la
@@ -337,7 +337,7 @@ share/glib-2.0/schemas/org.gnucash.dialogs.export.csv.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.import.csv.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.import.generic.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.import.ofx.gschema.xml
+${PLIST.ofx}share/glib-2.0/schemas/org.gnucash.dialogs.import.ofx.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.import.qif.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.reconcile.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.sxs.gschema.xml
@@ -1120,7 +1120,7 @@ share/gnucash/ui/gnc-plugin-csv-import-ui.xml
 share/gnucash/ui/gnc-plugin-customer_import-ui.xml
 share/gnucash/ui/gnc-plugin-file-history-ui.xml
 share/gnucash/ui/gnc-plugin-log-replay-ui.xml
-share/gnucash/ui/gnc-plugin-ofx-ui.xml
+${PLIST.ofx}share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree2-ui.xml
 share/gnucash/ui/gnc-plugin-page-budget-ui.xml
