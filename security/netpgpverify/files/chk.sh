@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: chk.sh,v 1.2 2015/01/30 18:55:01 agc Exp $
+# $NetBSD: chk.sh,v 1.3 2015/01/31 22:00:55 agc Exp $
 
 # Copyright (c) 2013,2014,2015 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -35,9 +35,11 @@ os=EdgeBSD
 osrev=6
 arch=amd64
 pkgsrc=pkgsrc-2013Q1
+keyring=pubring.gpg
 while [ $# -gt 0 ]; do
 	case "$1" in
 	--arch|-a)	arch=$2; shift ;;
+	--keyring|-k)	keyring=$2; shift ;;
 	--os|-o)	os=$2; shift ;;
 	--pkgsrc)	pkgsrc=$2; shift ;;
 	-v)		set -x ;;
@@ -95,7 +97,7 @@ diff ${dir}/+PKG_HASH ${dir}/calc || die "Bad hashes generated"
 if [ -x /usr/bin/netpgpverify -o -x /usr/pkg/bin/netpgpverify ]; then
 	echo "=== Using netpgpverify to verify the package signature ==="
 	# check the signature in +PKG_GPG_SIGNATURE
-	cp ${here}/pubring.pub ${dir}/pubring.gpg
+	cp ${keyring} ${dir}/pubring.gpg
 	# calculate the sig file we want to verify
 	echo "-----BEGIN PGP SIGNED MESSAGE-----" > ${dir}/${name}.sig
 	echo "Hash: ${digest}" >> ${dir}/${name}.sig
