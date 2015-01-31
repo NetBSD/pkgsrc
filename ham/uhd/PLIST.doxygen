@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST.doxygen,v 1.1 2014/09/08 07:12:05 mef Exp $
+@comment $NetBSD: PLIST.doxygen,v 1.2 2015/01/31 00:58:06 mef Exp $
 share/doc/uhd/doxygen/html/algorithm_8hpp.html
 share/doc/uhd/doxygen/html/algorithm_8hpp_source.html
 share/doc/uhd/doxygen/html/annotated.html
+share/doc/uhd/doxygen/html/arrowdown.png
+share/doc/uhd/doxygen/html/arrowright.png
 share/doc/uhd/doxygen/html/assert__has_8hpp.html
 share/doc/uhd/doxygen/html/assert__has_8hpp_source.html
 share/doc/uhd/doxygen/html/atomic_8hpp.html
@@ -193,25 +195,15 @@ share/doc/uhd/doxygen/html/dir_000004.html
 share/doc/uhd/doxygen/html/dir_000005.html
 share/doc/uhd/doxygen/html/dir_000006.html
 share/doc/uhd/doxygen/html/dir_000007.html
+share/doc/uhd/doxygen/html/doc.png
 share/doc/uhd/doxygen/html/doxygen.css
 share/doc/uhd/doxygen/html/doxygen.png
 share/doc/uhd/doxygen/html/dynsections.js
 share/doc/uhd/doxygen/html/exception_8hpp.html
 share/doc/uhd/doxygen/html/exception_8hpp_source.html
 share/doc/uhd/doxygen/html/files.html
-share/doc/uhd/doxygen/html/ftv2blank.png
-share/doc/uhd/doxygen/html/ftv2doc.png
-share/doc/uhd/doxygen/html/ftv2folderclosed.png
-share/doc/uhd/doxygen/html/ftv2folderopen.png
-share/doc/uhd/doxygen/html/ftv2lastnode.png
-share/doc/uhd/doxygen/html/ftv2link.png
-share/doc/uhd/doxygen/html/ftv2mlastnode.png
-share/doc/uhd/doxygen/html/ftv2mnode.png
-share/doc/uhd/doxygen/html/ftv2node.png
-share/doc/uhd/doxygen/html/ftv2plastnode.png
-share/doc/uhd/doxygen/html/ftv2pnode.png
-share/doc/uhd/doxygen/html/ftv2splitbar.png
-share/doc/uhd/doxygen/html/ftv2vertline.png
+share/doc/uhd/doxygen/html/folderclosed.png
+share/doc/uhd/doxygen/html/folderopen.png
 share/doc/uhd/doxygen/html/functions.html
 share/doc/uhd/doxygen/html/functions_a.html
 share/doc/uhd/doxygen/html/functions_b.html
@@ -591,6 +583,7 @@ share/doc/uhd/doxygen/html/search/search.js
 share/doc/uhd/doxygen/html/search/search_l.png
 share/doc/uhd/doxygen/html/search/search_m.png
 share/doc/uhd/doxygen/html/search/search_r.png
+share/doc/uhd/doxygen/html/search/searchdata.js
 share/doc/uhd/doxygen/html/search/typedefs_0.html
 share/doc/uhd/doxygen/html/search/typedefs_0.js
 share/doc/uhd/doxygen/html/search/typedefs_1.html
@@ -667,6 +660,7 @@ share/doc/uhd/doxygen/html/sensors_8hpp.html
 share/doc/uhd/doxygen/html/sensors_8hpp_source.html
 share/doc/uhd/doxygen/html/serial_8hpp.html
 share/doc/uhd/doxygen/html/serial_8hpp_source.html
+share/doc/uhd/doxygen/html/splitbar.png
 share/doc/uhd/doxygen/html/static_8hpp.html
 share/doc/uhd/doxygen/html/static_8hpp_source.html
 share/doc/uhd/doxygen/html/stream_8hpp.html
