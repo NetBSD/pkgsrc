@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2014/12/30 14:07:45 wiz Exp $
+# $NetBSD: Makefile,v 1.213 2015/01/31 18:41:01 wiz Exp $
 
 DISTNAME=		gnucash-2.6.5
 CATEGORIES=		finance
@@ -43,10 +43,11 @@ CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 
+.include "options.mk"
+
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../finance/libofx/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
