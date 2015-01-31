@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/08/09 20:22:51 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/01/31 21:46:48 adam Exp $
 
-SHA1 (libaacs-0.7.1.tar.bz2) = 09eb61bcfceca77cd779c4475093dd22a0cb5510
-RMD160 (libaacs-0.7.1.tar.bz2) = 4133f42b0e610abb1704a534bb6ce26899fb60d4
-Size (libaacs-0.7.1.tar.bz2) = 318472 bytes
+SHA1 (libaacs-0.8.0.tar.bz2) = 667fd744ddd73c8a3e51192dd3822f7e5002883c
+RMD160 (libaacs-0.8.0.tar.bz2) = fb27b9a65b3902ce66671a9d3578acba4f50604b
+Size (libaacs-0.8.0.tar.bz2) = 311904 bytes
 SHA1 (patch-src_file_file__posix.c) = 0e4b7849f2b3c9c13f71132bbb13216c758a6b14
