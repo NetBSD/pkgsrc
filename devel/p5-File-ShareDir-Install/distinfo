@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/10/16 12:11:50 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/01/31 01:33:20 mef Exp $
 
-SHA1 (File-ShareDir-Install-0.09.tar.gz) = 2b9df206e8aeb04c6ca2bd9072683fad5a707b7c
-RMD160 (File-ShareDir-Install-0.09.tar.gz) = d6de2cb1a6c749a55d83d9dfe4afe4b49410573a
-Size (File-ShareDir-Install-0.09.tar.gz) = 7501 bytes
+SHA1 (File-ShareDir-Install-0.10.tar.gz) = 392984d4d524d63184b4010c463e527053cfcc37
+RMD160 (File-ShareDir-Install-0.10.tar.gz) = 06adee6013824e62b079ab452c09aa478480c037
+Size (File-ShareDir-Install-0.10.tar.gz) = 6870 bytes
