@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/31 06:18:42 mef Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/31 06:21:39 mef Exp $
 #
 
 VERS=		2.3.6
@@ -30,7 +30,7 @@ INSTALLATION_DIRS+=	${BINDIR} ${DOCDIR}
 
 do-install:
 .for f in ${BINFILES}
-	${INSTALL_DATA} ${WRKSRC}/src/${f} ${DESTDIR}${BINDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${f} ${DESTDIR}${BINDIR}
 .endfor
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
