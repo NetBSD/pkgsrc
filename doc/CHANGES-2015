@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.523 2015/01/30 21:16:28 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.524 2015/01/31 01:43:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -688,3 +688,17 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-vCard to 3.07 [kleink 2015-01-30]
 	Updated www/py-wtforms to 2.0.2 [kleink 2015-01-30]
 	Updated www/py-flask-wtf to 0.11 [kleink 2015-01-30]
+	Updated devel/p5-CPAN-Meta-Check to 0.010 [mef 2015-01-31]
+	Updated devel/p5-ExtUtils-Depends to 0.404 [mef 2015-01-31]
+	Updated devel/p5-MooseX-Params-Validate to 0.19 [mef 2015-01-31]
+	Updated devel/p5-File-ChangeNotify to 0.24 [mef 2015-01-31]
+	Updated devel/p5-File-ConfigDir to 0.015 [mef 2015-01-31]
+	Updated devel/p5-File-DesktopEntry to 0.08 [mef 2015-01-31]
+	Updated devel/p5-File-Find-Rule-Age to 0.302 [mef 2015-01-31]
+	Updated devel/p5-File-Modified to 0.09 [mef 2015-01-31]
+	Updated devel/p5-File-ShareDir to 1.102 [mef 2015-01-31]
+	Updated devel/p5-File-ShareDir-Install to 0.10 [mef 2015-01-31]
+	Updated devel/p5-File-Touch to 0.09 [mef 2015-01-31]
+	Updated devel/p5-File-pushd to 1.009 [mef 2015-01-31]
+	Updated devel/p5-FileHandle-Fmode to 0.14 [mef 2015-01-31]
+	Updated devel/p5-Filesys-Notify-Simple to 0.12 [mef 2015-01-31]
