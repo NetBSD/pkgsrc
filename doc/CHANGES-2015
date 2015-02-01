@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.537 2015/02/01 04:52:24 taca Exp $
+$NetBSD: CHANGES-2015,v 1.538 2015/02/01 05:50:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -723,3 +723,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/rsnapshot to 1.3.1nb4 [wiz 2015-02-01]
 	Updated www/contao32 to 3.2.18 [taca 2015-02-01]
 	Updated www/contao34 to 3.4.3 [taca 2015-02-01]
+	Updated devel/p5-Test-Reporter to 1.6000 [mef 2015-02-01]
