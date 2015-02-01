@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.56 2015/01/30 11:06:36 obache Exp $
+# $NetBSD: tools.Linux.mk,v 1.57 2015/02/01 08:48:56 obache Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -254,11 +254,6 @@ TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.uniq?=		/bin/uniq
 .elif exists(/usr/bin/uniq)
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
-.endif
-.if exists(/bin/unlink)
-TOOLS_PLATFORM.unlink?=		/bin/unlink
-.elif exists(/usr/bin/unlink)
-TOOLS_PLATFORM.unlink?=		/usr/bin/unlink
 .endif
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 .if exists(/usr/bin/wget)
