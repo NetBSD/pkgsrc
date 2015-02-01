@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.554 2015/02/01 12:44:38 taca Exp $
+$NetBSD: CHANGES-2015,v 1.555 2015/02/01 12:46:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -740,3 +740,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Git-Repository to 1.312 [mef 2015-02-01]
 	Updated devel/ruby-parslet to 1.5.0 [taca 2015-02-01]
 	Updated textproc/ruby-toml to 0.1.2 [taca 2015-02-01]
+	Updated archivers/ruby-zip to 1.1.6 [taca 2015-02-01]
