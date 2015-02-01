@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.540 2015/02/01 07:07:02 taca Exp $
+$NetBSD: CHANGES-2015,v 1.541 2015/02/01 08:07:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -693,7 +693,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooseX-Params-Validate to 0.19 [mef 2015-01-31]
 	Updated devel/p5-File-ChangeNotify to 0.24 [mef 2015-01-31]
 	Updated devel/p5-File-ConfigDir to 0.015 [mef 2015-01-31]
-	Updated devel/p5-File-DesktopEntry to 0.08 [mef 2015-01-31]
 	Updated devel/p5-File-Find-Rule-Age to 0.302 [mef 2015-01-31]
 	Updated devel/p5-File-Modified to 0.09 [mef 2015-01-31]
 	Updated devel/p5-File-ShareDir to 1.102 [mef 2015-01-31]
