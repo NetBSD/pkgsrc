@@ -1,0 +1,4 @@
+Perl module: CPAN::ParseDistribution:
+Given a file from the BackPAN, this will let you find out what
+versions of what modules it contains, the distribution name
+and version.
