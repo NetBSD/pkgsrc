@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2014/09/05 12:10:43 obache Exp $
+# $NetBSD: Makefile,v 1.26 2015/02/01 14:26:25 taca Exp $
 
-DISTNAME=	gettext-3.1.4
-PKGREVISION=	1
+DISTNAME=	gettext-3.1.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,7 @@ LICENSE=	ruby-license OR gnu-lgpl-v3
 RUBY_VERSION_SUPPORTED=	193 200 21
 
 DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.0.5:../../devel/ruby-locale
-DEPENDS+=	${RUBY_PKGPREFIX}-text-[0-9]*:../../textproc/ruby-text
+DEPENDS+=	${RUBY_PKGPREFIX}-text>=1.3.0:../../textproc/ruby-text
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
