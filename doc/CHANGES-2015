@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.602 2015/02/01 19:44:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.603 2015/02/01 19:46:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -788,3 +788,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.36b [wiz 2015-02-01]
 	Updated devel/py-virtualenv to 12.0.6 [wiz 2015-02-01]
 	Updated devel/py-setuptools to 12.0.5 [wiz 2015-02-01]
+	Updated converters/help2man to 1.46.5 [wiz 2015-02-01]
