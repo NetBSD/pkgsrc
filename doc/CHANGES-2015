@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.555 2015/02/01 12:46:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.556 2015/02/01 12:48:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -741,3 +741,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-parslet to 1.5.0 [taca 2015-02-01]
 	Updated textproc/ruby-toml to 0.1.2 [taca 2015-02-01]
 	Updated archivers/ruby-zip to 1.1.6 [taca 2015-02-01]
+	Updated audio/ruby-taglib to 0.7.0 [taca 2015-02-01]
