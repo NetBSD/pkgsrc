@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/10/20 10:13:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/02/01 19:49:38 wiz Exp $
 bin/gpg-error
 bin/gpg-error-config
 include/gpg-error.h
@@ -15,12 +15,17 @@ ${PLIST.nls}share/locale/da/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/eo/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/libgpg-error.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/libgpg-error.mo
+${PLIST.nls}share/locale/pt/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/ro/LC_MESSAGES/libgpg-error.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/libgpg-error.mo
+${PLIST.nls}share/locale/sr/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/libgpg-error.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/libgpg-error.mo
