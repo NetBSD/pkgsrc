@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.551 2015/02/01 12:34:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.552 2015/02/01 12:35:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -737,3 +737,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/ruby-arel30 version 3.0.3 [taca 2015-02-01]
 	Added devel/ruby-algorithms version 0.6.1 [taca 2015-02-01]
 	Added devel/ruby-curses-gem version 1.0.1 [taca 2015-02-01]
+	Updated devel/p5-Git-Repository to 1.312 [mef 2015-02-01]
