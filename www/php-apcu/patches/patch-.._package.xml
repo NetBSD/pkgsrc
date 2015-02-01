@@ -1,0 +1,15 @@
+$NetBSD: patch-.._package.xml,v 1.1 2015/02/01 08:11:20 taca Exp $
+
+Update md5 sum.
+
+--- ../package.xml.orig	2014-10-12 02:02:21.000000000 +0900
++++ ../package.xml	2015-02-01 16:50:25.000000000 +0900
+@@ -105,7 +105,7 @@
+    <file md5sum="2a8437130a0d8b546a4ad0a4c46f6e6b" name="pgsql_s_lock.h" role="src" />
+    <file md5sum="f779685bd4d96e1d925ea93b73131d9c" name="pgsql_s_lock.c" role="src" />
+    <file md5sum="54bfc8892372c1cf55cfa069aaf81eb2" name="apc_serializer.h" role="src" />
+-   <file md5sum="5be4ac2cf190c97d2933e008b57d1055" name="config.m4" role="src" />
++   <file md5sum="5a19fef359933bfc9b208a4598f3ce53" name="config.m4" role="src" />
+    <file md5sum="8c723e3d9a87c81326117fc32e56edff" name="config.w32" role="src" />
+    <file md5sum="d6c836c279b1fbabf69ada700dd5cdfc" name="INSTALL" role="doc" />
+    <file md5sum="de1caba45c42bd445f33d52eb1e82339" name="LICENSE" role="doc" />
