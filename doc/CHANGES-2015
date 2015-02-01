@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.605 2015/02/01 19:51:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.606 2015/02/01 19:52:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -791,3 +791,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/help2man to 1.46.5 [wiz 2015-02-01]
 	Updated security/libgpg-error to 1.18 [wiz 2015-02-01]
 	Updated security/py-keyring to 4.1 [wiz 2015-02-01]
+	Updated time/py-vdirsyncer to 0.4.2 [wiz 2015-02-01]
