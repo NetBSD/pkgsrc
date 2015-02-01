@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.584 2015/02/01 16:21:03 taca Exp $
+$NetBSD: CHANGES-2015,v 1.585 2015/02/01 16:24:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-pathname2 to 1.7.3 [taca 2015-02-01]
 	Updated devel/ruby-posix-spawn to 0.3.9 [taca 2015-02-01]
 	Updated devel/ruby-polyglot to 0.3.5 [taca 2015-02-01]
+	Added devel/ruby-power_assert version 0.2.2 [taca 2015-02-01]
