@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.607 2015/02/01 19:55:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.608 2015/02/01 19:55:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -793,3 +793,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-keyring to 4.1 [wiz 2015-02-01]
 	Updated time/py-vdirsyncer to 0.4.2 [wiz 2015-02-01]
 	Updated net/py-twisted to 15.0.0 [wiz 2015-02-01]
+	Updated net/py-twisted-docs to 15.0.0 [wiz 2015-02-01]
