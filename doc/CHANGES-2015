@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.557 2015/02/01 12:52:12 taca Exp $
+$NetBSD: CHANGES-2015,v 1.558 2015/02/01 12:58:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -743,3 +743,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/ruby-zip to 1.1.6 [taca 2015-02-01]
 	Updated audio/ruby-taglib to 0.7.0 [taca 2015-02-01]
 	Updated converters/ruby-unf to 0.1.4 [taca 2015-02-01]
+	Updated databases/ruby-hiera to 1.3.4 [taca 2015-02-01]
