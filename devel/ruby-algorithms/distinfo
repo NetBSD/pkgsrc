@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/01 12:28:16 taca Exp $
+
+SHA1 (algorithms-0.6.1.gem) = f2f3d8e5416cb9800ccc9eeb470aac81f44e6894
+RMD160 (algorithms-0.6.1.gem) = adbf59fa46bfef346e17bde220ae0981e0431be8
+Size (algorithms-0.6.1.gem) = 322560 bytes
