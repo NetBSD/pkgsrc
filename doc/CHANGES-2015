@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.598 2015/02/01 18:55:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.599 2015/02/01 18:59:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -784,3 +784,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/p5-DateTime-TimeZone to 1.85 [wiz 2015-02-01]
 	Updated pkgtools/pkglint to 4.151 [wiz 2015-02-01]
 	Updated multimedia/mpv to 0.7.3 [wiz 2015-02-01]
+	Updated sysutils/estd to 0.9 [wiz 2015-02-01]
