@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/14 15:42:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/01 14:33:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/kgio_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.manifest
-${GEM_LIBDIR}/.wrongdoc.yml
+${GEM_LIBDIR}/.olddoc.yml
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GIT-VERSION-FILE
 ${GEM_LIBDIR}/GIT-VERSION-GEN
 ${GEM_LIBDIR}/GNUmakefile
@@ -16,8 +15,9 @@ ${GEM_LIBDIR}/LATEST
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NEWS
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/archive/.gitignore
+${GEM_LIBDIR}/archive/slrnpull.conf
 ${GEM_LIBDIR}/ext/kgio/accept.c
 ${GEM_LIBDIR}/ext/kgio/ancient_ruby.h
 ${GEM_LIBDIR}/ext/kgio/autopush.c
