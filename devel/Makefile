@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2039 2015/02/01 12:30:01 taca Exp $
+# $NetBSD: Makefile,v 1.2040 2015/02/01 12:33:30 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1710,6 +1710,7 @@ SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
+SUBDIR+=	ruby-curses-gem
 SUBDIR+=	ruby-daemon_controller
 SUBDIR+=	ruby-debug
 SUBDIR+=	ruby-debug-base
