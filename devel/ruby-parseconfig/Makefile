@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/03/14 16:15:33 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/01 16:09:57 taca Exp $
 
-DISTNAME=	parseconfig-1.0.4
+DISTNAME=	parseconfig-1.0.6
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
