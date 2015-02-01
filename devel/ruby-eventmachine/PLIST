@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/03/16 17:52:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/01 13:57:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/fastfilereaderext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/rubyeventmachine.${RUBY_DLEXT}
@@ -135,6 +135,7 @@ ${GEM_LIBDIR}/tests/test_httpclient.rb
 ${GEM_LIBDIR}/tests/test_httpclient2.rb
 ${GEM_LIBDIR}/tests/test_idle_connection.rb
 ${GEM_LIBDIR}/tests/test_inactivity_timeout.rb
+${GEM_LIBDIR}/tests/test_iterator.rb
 ${GEM_LIBDIR}/tests/test_kb.rb
 ${GEM_LIBDIR}/tests/test_line_protocol.rb
 ${GEM_LIBDIR}/tests/test_ltp.rb
