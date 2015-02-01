@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/16 07:26:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/02/01 13:45:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/sdl_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/LICENSE
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/doc-en/sdlskk.rsd
 ${GEM_LIBDIR}/doc-en/time.rsd
 ${GEM_LIBDIR}/doc-en/video.rsd
 ${GEM_LIBDIR}/doc-en/wm.rsd
+${GEM_LIBDIR}/doc.txt
 ${GEM_LIBDIR}/doc/Makefile
 ${GEM_LIBDIR}/doc/cdrom.rsd
 ${GEM_LIBDIR}/doc/collision.rsd
@@ -35,6 +36,7 @@ ${GEM_LIBDIR}/doc/init.rsd
 ${GEM_LIBDIR}/doc/joystick.rsd
 ${GEM_LIBDIR}/doc/mixer.rsd
 ${GEM_LIBDIR}/doc/mpeg.rsd
+${GEM_LIBDIR}/doc/opengl.rsd
 ${GEM_LIBDIR}/doc/rsd.rb
 ${GEM_LIBDIR}/doc/sdlskk.rsd
 ${GEM_LIBDIR}/doc/time.rsd
@@ -44,7 +46,10 @@ ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/lib/rubysdl_aliases.rb
 ${GEM_LIBDIR}/lib/rubysdl_compatible_ver1.rb
 ${GEM_LIBDIR}/lib/sdl.rb
+${GEM_LIBDIR}/lib/sdl1_compatible.rb
 ${GEM_LIBDIR}/lib/sdl_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/mkpkg.sh
+${GEM_LIBDIR}/rubysdl.gemspec
 ${GEM_LIBDIR}/rubysdl.h
 ${GEM_LIBDIR}/rubysdl_cdrom.c
 ${GEM_LIBDIR}/rubysdl_event.c
@@ -57,10 +62,6 @@ ${GEM_LIBDIR}/rubysdl_mixer.c
 ${GEM_LIBDIR}/rubysdl_mouse.c
 ${GEM_LIBDIR}/rubysdl_opengl.c
 ${GEM_LIBDIR}/rubysdl_pixel.c
-${GEM_LIBDIR}/rubysdl_ref.en.html
-${GEM_LIBDIR}/rubysdl_ref.en.rd
-${GEM_LIBDIR}/rubysdl_ref.html
-${GEM_LIBDIR}/rubysdl_ref.rd
 ${GEM_LIBDIR}/rubysdl_rwops.c
 ${GEM_LIBDIR}/rubysdl_sdlskk.c
 ${GEM_LIBDIR}/rubysdl_sge_video.c
@@ -73,6 +74,7 @@ ${GEM_LIBDIR}/sample/aadraw.rb
 ${GEM_LIBDIR}/sample/alpha.rb
 ${GEM_LIBDIR}/sample/alphadraw.rb
 ${GEM_LIBDIR}/sample/bfont.rb
+${GEM_LIBDIR}/sample/caption.rb
 ${GEM_LIBDIR}/sample/cdrom.rb
 ${GEM_LIBDIR}/sample/collision.rb
 ${GEM_LIBDIR}/sample/cursor.bmp
@@ -101,4 +103,39 @@ ${GEM_LIBDIR}/sample/testgl.rb
 ${GEM_LIBDIR}/sample/testgl_old.rb
 ${GEM_LIBDIR}/sample/testsprite.rb
 ${GEM_LIBDIR}/sample/transformblit.rb
+${GEM_LIBDIR}/sge/INSTALL
+${GEM_LIBDIR}/sge/LICENSE
+${GEM_LIBDIR}/sge/Makefile
+${GEM_LIBDIR}/sge/Makefile.conf
+${GEM_LIBDIR}/sge/README
+${GEM_LIBDIR}/sge/Todo
+${GEM_LIBDIR}/sge/WhatsNew
+${GEM_LIBDIR}/sge/sge.h
+${GEM_LIBDIR}/sge/sge_blib.cpp
+${GEM_LIBDIR}/sge/sge_blib.h
+${GEM_LIBDIR}/sge/sge_bm_text.cpp
+${GEM_LIBDIR}/sge/sge_bm_text.h
+${GEM_LIBDIR}/sge/sge_collision.cpp
+${GEM_LIBDIR}/sge/sge_collision.h
+${GEM_LIBDIR}/sge/sge_config.h
+${GEM_LIBDIR}/sge/sge_internal.h
+${GEM_LIBDIR}/sge/sge_misc.cpp
+${GEM_LIBDIR}/sge/sge_misc.h
+${GEM_LIBDIR}/sge/sge_primitives.cpp
+${GEM_LIBDIR}/sge/sge_primitives.h
+${GEM_LIBDIR}/sge/sge_rotation.cpp
+${GEM_LIBDIR}/sge/sge_rotation.h
+${GEM_LIBDIR}/sge/sge_shape.cpp
+${GEM_LIBDIR}/sge/sge_shape.h
+${GEM_LIBDIR}/sge/sge_surface.cpp
+${GEM_LIBDIR}/sge/sge_surface.h
+${GEM_LIBDIR}/sge/sge_textpp.cpp
+${GEM_LIBDIR}/sge/sge_textpp.h
+${GEM_LIBDIR}/sge/sge_tt_text.cpp
+${GEM_LIBDIR}/sge/sge_tt_text.h
+${GEM_LIBDIR}/utils/buildtest.sh
+${GEM_LIBDIR}/win32/README.en.win32
+${GEM_LIBDIR}/win32/README.ja.win32
+${GEM_LIBDIR}/win32/install_rubysdl.rb
+${GEM_LIBDIR}/win32/mkpkg.sh
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
