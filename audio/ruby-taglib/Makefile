@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/10/17 07:56:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/01 12:47:45 taca Exp $
 
-DISTNAME=	taglib-ruby-0.6.0
+DISTNAME=	taglib-ruby-0.7.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
