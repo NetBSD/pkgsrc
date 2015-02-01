@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.43 2015/01/30 11:06:36 obache Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.44 2015/02/01 08:48:56 obache Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -92,7 +92,6 @@ TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		/usr/bin/true
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
-TOOLS_PLATFORM.unlink?=		/bin/unlink
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 TOOLS_PLATFORM.xz?=		/usr/bin/xz
