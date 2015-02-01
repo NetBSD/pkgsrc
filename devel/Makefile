@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2037 2015/01/31 12:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2038 2015/02/01 08:53:24 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -682,6 +682,7 @@ SUBDIR+=	p5-CPAN-Meta-Check
 SUBDIR+=	p5-CPAN-Meta-Requirements
 SUBDIR+=	p5-CPAN-Meta-YAML
 SUBDIR+=	p5-CPAN-Mini
+SUBDIR+=	p5-CPAN-ParseDistribution
 SUBDIR+=	p5-CPAN-Perl-Releases
 SUBDIR+=	p5-CPAN-Reporter
 SUBDIR+=	p5-CPAN-Uploader
