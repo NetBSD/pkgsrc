@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.593 2015/02/01 18:29:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.594 2015/02/01 18:30:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -779,3 +779,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-List-MoreUtils to 0.404 [wiz 2015-02-01]
 	Updated devel/p5-Term-ReadLine to 1.26 [wiz 2015-02-01]
 	Updated devel/p5-boolean to 0.44 [wiz 2015-02-01]
+	Updated devel/p5-strictures to 1.005006 [wiz 2015-02-01]
