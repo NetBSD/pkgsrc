@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.599 2015/02/01 18:59:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.600 2015/02/01 19:42:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkglint to 4.151 [wiz 2015-02-01]
 	Updated multimedia/mpv to 0.7.3 [wiz 2015-02-01]
 	Updated sysutils/estd to 0.9 [wiz 2015-02-01]
+	Updated devel/afl to 1.36b [wiz 2015-02-01]
