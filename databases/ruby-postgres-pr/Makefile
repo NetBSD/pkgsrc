@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 04:38:01 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/01 13:33:17 taca Exp $
 
-DISTNAME=	postgres-pr-0.6.3
+DISTNAME=	postgres-pr-0.7.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
