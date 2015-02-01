@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.460 2015/01/03 13:55:42 mef Exp $
+# $NetBSD: Makefile,v 1.461 2015/02/01 11:14:06 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -301,6 +301,7 @@ SUBDIR+=	ruby-mail
 SUBDIR+=	ruby-mail24
 SUBDIR+=	ruby-mailfactory
 SUBDIR+=	ruby-mime-types
+SUBDIR+=	ruby-mime-types1
 SUBDIR+=	ruby-tmail
 SUBDIR+=	safecat
 SUBDIR+=	sendmail
