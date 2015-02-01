@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/01 10:06:01 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/01 12:44:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/toml.rb
 ${GEM_LIBDIR}/lib/toml/generator.rb
 ${GEM_LIBDIR}/lib/toml/key.rb
@@ -12,17 +11,5 @@ ${GEM_LIBDIR}/lib/toml/parser.rb
 ${GEM_LIBDIR}/lib/toml/parslet.rb
 ${GEM_LIBDIR}/lib/toml/table.rb
 ${GEM_LIBDIR}/lib/toml/transformer.rb
-${GEM_LIBDIR}/script/bootstrap
-${GEM_LIBDIR}/script/cibuild
-${GEM_LIBDIR}/script/console
-${GEM_LIBDIR}/test/empty.toml
-${GEM_LIBDIR}/test/hard_example.toml
-${GEM_LIBDIR}/test/spec.toml
-${GEM_LIBDIR}/test/test_empty.rb
-${GEM_LIBDIR}/test/test_generator.rb
-${GEM_LIBDIR}/test/test_parser.rb
-${GEM_LIBDIR}/test/test_parser_hard.rb
-${GEM_LIBDIR}/test/test_table_arrays.rb
-${GEM_LIBDIR}/test/tmp.rb
-${GEM_LIBDIR}/toml.gemspec
+${GEM_LIBDIR}/lib/toml/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
