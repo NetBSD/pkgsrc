@@ -1,12 +1,9 @@
-# $NetBSD: tools.Linux.mk,v 1.57 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.Linux.mk,v 1.58 2015/02/01 09:15:49 obache Exp $
 #
 # System-supplied tools for the Linux operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		${TOOLS_PLATFORM.gawk}
-.if exists(/usr/bin/autopoint)
-TOOLS_PLATFORM.autopoint?=	/usr/bin/autopoint
-.endif
 .if exists(/bin/basename)
 TOOLS_PLATFORM.basename?=	/bin/basename
 .elif exists(/usr/bin/basename)
@@ -95,9 +92,6 @@ TOOLS_PLATFORM.gawk?=		/bin/awk
 .else
 TOOLS_PLATFORM.gawk?=		/usr/bin/awk
 .endif
-.if exists(/usr/bin/gettext)
-TOOLS_PLATFORM.gettext?=	/usr/bin/gettext
-.endif
 .if exists(/usr/bin/m4)
 TOOLS_PLATFORM.gm4?=		/usr/bin/m4
 .endif
@@ -184,14 +178,8 @@ TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
 .elif exists(/bin/mktemp)
 TOOLS_PLATFORM.mktemp?=		/bin/mktemp
 .endif
-.if exists(/usr/bin/msgconv)
-TOOLS_PLATFORM.msgconv?=	/usr/bin/msgconv
-.endif
 .if exists(/usr/bin/msgfmt)
 TOOLS_PLATFORM.msgfmt?=		/usr/bin/msgfmt
-.endif
-.if exists(/usr/bin/msgmerge)
-TOOLS_PLATFORM.msgmerge?=	/usr/bin/msgmerge
 .endif
 TOOLS_PLATFORM.mv?=		/bin/mv
 .if exists(/bin/nice)
