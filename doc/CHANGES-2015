@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.576 2015/02/01 14:44:15 taca Exp $
+$NetBSD: CHANGES-2015,v 1.577 2015/02/01 14:45:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -762,3 +762,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-gettext_i18n_rails to 1.2.0 [taca 2015-02-01]
 	Updated devel/ruby-kgio to 2.9.3 [taca 2015-02-01]
 	Updated devel/ruby-inline to 3.12.3 [taca 2015-02-01]
+	Updated devel/ruby-mercenary to 0.3.5 [taca 2015-02-01]
