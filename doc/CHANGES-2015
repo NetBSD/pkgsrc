@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.541 2015/02/01 08:07:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.542 2015/02/01 08:13:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -725,3 +725,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Reporter to 1.6000 [mef 2015-02-01]
 	Updated devel/p5-Spiffy to 0.46 [mef 2015-02-01]
 	Updated time/ruby-tzinfo to 0.3.43 [taca 2015-02-01]
+	Added www/php-apcu version 4.0.7 [taca 2015-02-01]
