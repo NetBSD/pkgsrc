@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2014/10/12 15:21:28 wiz Exp $
+$NetBSD: distinfo,v 1.21 2015/02/01 19:46:16 wiz Exp $
 
-SHA1 (help2man-1.46.4.tar.xz) = 7eebb6ead072b19863f28acca051bc3e3c40fdf9
-RMD160 (help2man-1.46.4.tar.xz) = f7636d666002a7c126867ee1b8300bf9a221a0c5
-Size (help2man-1.46.4.tar.xz) = 169812 bytes
+SHA1 (help2man-1.46.5.tar.xz) = e7c046e29f3182e99e5dea6bc20262b206e27065
+RMD160 (help2man-1.46.5.tar.xz) = 273b1b1191c3dd536a2a9588d5d6505b7192318d
+Size (help2man-1.46.5.tar.xz) = 168944 bytes
 SHA1 (patch-bindtextdomain.c) = 527f54db2b220bad60e80ed8959b9e9c20191cc7
 SHA1 (patch-help2man.PL) = 72b5a1cccbc832967a892ccf7e18d2cf44a21454
