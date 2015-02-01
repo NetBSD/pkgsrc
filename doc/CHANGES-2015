@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.549 2015/02/01 12:24:43 taca Exp $
+$NetBSD: CHANGES-2015,v 1.550 2015/02/01 12:30:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -735,3 +735,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-System-Command to 1.110 [mef 2015-02-01]
 	Updated mail/ruby-actionmailer32 to 3.2.21nb1 [taca 2015-02-01]
 	Added databases/ruby-arel30 version 3.0.3 [taca 2015-02-01]
+	Added devel/ruby-algorithms version 0.6.1 [taca 2015-02-01]
