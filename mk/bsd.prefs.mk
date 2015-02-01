@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.356 2015/01/01 09:00:28 dholland Exp $
+# $NetBSD: bsd.prefs.mk,v 1.357 2015/02/01 11:33:08 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -320,8 +320,8 @@ OS_VARIANT=		OmniOS
 SCO_RELEASE!=		${UNAME} -r
 SCO_VERSION!=		${UNAME} -v
 LOWER_VENDOR?=		pc
-LOWER_OPSYS?=		sco
-LOWER_OPSYS_VERSUFFIX=	${SCO_RELEASE}v${SCO_VERSION}
+LOWER_OPSYS?=		sco${SCO_RELEASE}v${SCO_VERSION}
+MACHINE_GNU_PLATFORM?=	${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 _UNAME_V!=		${UNAME} -v
 .  if !empty(_UNAME_V:M5.0*)
 OS_VARIANT=		SCOOSR5
