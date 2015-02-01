@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.544 2015/02/01 11:14:51 taca Exp $
+$NetBSD: CHANGES-2015,v 1.545 2015/02/01 11:17:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -728,3 +728,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/php-apcu version 4.0.7 [taca 2015-02-01]
 	Added devel/p5-CPAN-ParseDistribution version 1.52 [mef 2015-02-01]
 	Added mail/ruby-mime-types1 version 1.25.1 [taca 2015-02-01]
+	Updated mail/ruby-mail24 to 2.4.4nb1 [taca 2015-02-01]
+	Updated mail/ruby-mailfactory to 1.4.0nb1 [taca 2015-02-01]
+	Updated misc/ruby-ohai to 8.0.1nb1 [taca 2015-02-01]
