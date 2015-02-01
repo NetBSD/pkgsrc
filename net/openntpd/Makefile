@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2015/02/01 01:47:27 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/02/01 09:07:40 obache Exp $
 
 DISTNAME=		openntpd-5.7p3
 CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenNTPD/}
+MASTER_SITES=		ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/ \
+			ftp://ftp3.usa.openbsd.org/pub/OpenBSD/OpenNTPD/ \
+			ftp://ftp.jaist.ac.jp/pub/OpenBSD/OpenNTPD/
+
 
 MAINTAINER=		henson@acm.org
 HOMEPAGE=		http://www.openntpd.org/
