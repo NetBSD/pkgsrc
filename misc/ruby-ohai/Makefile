@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/01/20 07:45:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/01 11:16:35 taca Exp $
 
 DISTNAME=	ohai-8.0.1
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=1.6.0:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0.0:../../devel/ruby-mixlib-shellout
 DEPENDS+=	${RUBY_PKGPREFIX}-rake>=10.1:../../devel/ruby-rake
 DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0:../../devel/ruby-wmi-lite
-DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.16:../../mail/ruby-mime-types
+DEPENDS+=	${RUBY_PKGPREFIX}-mime-types1>=1.16:../../mail/ruby-mime-types1
 DEPENDS+=	${RUBY_PKGPREFIX}-systemu>=2.6.4:../../misc/ruby-systemu
 DEPENDS+=	${RUBY_PKGPREFIX}-ipaddress>=0.8.0:../../net/ruby-ipaddress
 DEPENDS+=	${RUBY_PKGPREFIX}-net-dhcp>=0:../../net/ruby-net-dhcp
