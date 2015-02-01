@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2014/12/01 12:39:17 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2015/02/01 20:02:42 wiz Exp $
 #
 # Also update net/gst-plugins1-libnice when you update this!
 
-DISTNAME=	libnice-0.1.8
+DISTNAME=	libnice-0.1.10
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
