@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 08:47:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/01 12:43:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/HISTORY.txt
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/example/boolean_algebra.rb
+${GEM_LIBDIR}/example/calc.rb
+${GEM_LIBDIR}/example/capture.rb
 ${GEM_LIBDIR}/example/comments.rb
 ${GEM_LIBDIR}/example/deepest_errors.rb
 ${GEM_LIBDIR}/example/documentation.rb
@@ -20,6 +22,8 @@ ${GEM_LIBDIR}/example/minilisp.rb
 ${GEM_LIBDIR}/example/modularity.rb
 ${GEM_LIBDIR}/example/nested_errors.rb
 ${GEM_LIBDIR}/example/output/boolean_algebra.out
+${GEM_LIBDIR}/example/output/calc.out
+${GEM_LIBDIR}/example/output/capture.out
 ${GEM_LIBDIR}/example/output/comments.out
 ${GEM_LIBDIR}/example/output/deepest_errors.out
 ${GEM_LIBDIR}/example/output/documentation.err
@@ -38,12 +42,14 @@ ${GEM_LIBDIR}/example/output/modularity.out
 ${GEM_LIBDIR}/example/output/nested_errors.out
 ${GEM_LIBDIR}/example/output/parens.out
 ${GEM_LIBDIR}/example/output/readme.out
+${GEM_LIBDIR}/example/output/scopes.out
 ${GEM_LIBDIR}/example/output/seasons.out
 ${GEM_LIBDIR}/example/output/sentence.out
 ${GEM_LIBDIR}/example/output/simple_xml.out
 ${GEM_LIBDIR}/example/output/string_parser.out
 ${GEM_LIBDIR}/example/parens.rb
 ${GEM_LIBDIR}/example/readme.rb
+${GEM_LIBDIR}/example/scopes.rb
 ${GEM_LIBDIR}/example/seasons.rb
 ${GEM_LIBDIR}/example/sentence.rb
 ${GEM_LIBDIR}/example/simple.lit
@@ -55,13 +61,16 @@ ${GEM_LIBDIR}/lib/parslet/atoms.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/alternative.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/base.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/can_flatten.rb
+${GEM_LIBDIR}/lib/parslet/atoms/capture.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/context.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/dsl.rb
+${GEM_LIBDIR}/lib/parslet/atoms/dynamic.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/entity.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/lookahead.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/named.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/re.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/repetition.rb
+${GEM_LIBDIR}/lib/parslet/atoms/scope.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/sequence.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/str.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/visitor.rb
@@ -77,6 +86,7 @@ ${GEM_LIBDIR}/lib/parslet/parser.rb
 ${GEM_LIBDIR}/lib/parslet/pattern.rb
 ${GEM_LIBDIR}/lib/parslet/pattern/binding.rb
 ${GEM_LIBDIR}/lib/parslet/rig/rspec.rb
+${GEM_LIBDIR}/lib/parslet/scope.rb
 ${GEM_LIBDIR}/lib/parslet/slice.rb
 ${GEM_LIBDIR}/lib/parslet/source.rb
 ${GEM_LIBDIR}/lib/parslet/source/line_cache.rb
