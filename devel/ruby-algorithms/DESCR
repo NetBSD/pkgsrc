@@ -1,0 +1,4 @@
+Useful algorithms and data structures for Ruby, optional C extensions.
+
+Heap, Priority Queue, Deque, Stack, Queue, Red-Black Trees, Splay Trees,
+sorting algorithms, and more.
