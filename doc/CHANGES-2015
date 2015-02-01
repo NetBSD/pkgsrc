@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.587 2015/02/01 16:33:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.588 2015/02/01 16:37:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -773,3 +773,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/ruby-power_assert version 0.2.2 [taca 2015-02-01]
 	Updated devel/ruby-racc to 1.4.12 [taca 2015-02-01]
 	Updated devel/ruby-rake to 10.4.2 [taca 2015-02-01]
+	Updated devel/ruby-rcsparse to 0.0.0.47 [taca 2015-02-01]
