@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 15:21:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/01 13:56:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -382,10 +382,6 @@ ${GEM_LIBDIR}/lib/backports/2.1.0/module.rb
 ${GEM_LIBDIR}/lib/backports/2.1.0/module/include.rb
 ${GEM_LIBDIR}/lib/backports/2.1.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
-${GEM_LIBDIR}/lib/backports/extra/random/MT19937.rb
-${GEM_LIBDIR}/lib/backports/extra/random/bits_and_bytes.rb
-${GEM_LIBDIR}/lib/backports/extra/random/implementation.rb
-${GEM_LIBDIR}/lib/backports/extra/random/load.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
 ${GEM_LIBDIR}/lib/backports/force/enumerable_map.rb
 ${GEM_LIBDIR}/lib/backports/force/hash_select.rb
@@ -398,7 +394,22 @@ ${GEM_LIBDIR}/lib/backports/rails/hash.rb
 ${GEM_LIBDIR}/lib/backports/rails/kernel.rb
 ${GEM_LIBDIR}/lib/backports/rails/module.rb
 ${GEM_LIBDIR}/lib/backports/rails/string.rb
+${GEM_LIBDIR}/lib/backports/random/MT19937.rb
+${GEM_LIBDIR}/lib/backports/random/bits_and_bytes.rb
+${GEM_LIBDIR}/lib/backports/random/implementation.rb
+${GEM_LIBDIR}/lib/backports/random/load.rb
+${GEM_LIBDIR}/lib/backports/std_lib.rb
 ${GEM_LIBDIR}/lib/backports/tools.rb
+${GEM_LIBDIR}/lib/backports/tools/alias_method.rb
+${GEM_LIBDIR}/lib/backports/tools/alias_method_chain.rb
+${GEM_LIBDIR}/lib/backports/tools/arguments.rb
+${GEM_LIBDIR}/lib/backports/tools/extreme_object.rb
+${GEM_LIBDIR}/lib/backports/tools/io.rb
+${GEM_LIBDIR}/lib/backports/tools/make_block_optional.rb
+${GEM_LIBDIR}/lib/backports/tools/path.rb
+${GEM_LIBDIR}/lib/backports/tools/require_relative_dir.rb
+${GEM_LIBDIR}/lib/backports/tools/std_lib.rb
+${GEM_LIBDIR}/lib/backports/tools/suppress_verbose_warnings.rb
 ${GEM_LIBDIR}/lib/backports/version.rb
 ${GEM_LIBDIR}/set_version/1.8.7.rb
 ${GEM_LIBDIR}/set_version/1.9.1.rb
@@ -475,6 +486,8 @@ ${GEM_LIBDIR}/spec/tags/1.8.7/core/array/rotate_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/array/select_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/array/uniq_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/complex/to_r_spec.rb
+${GEM_LIBDIR}/spec/tags/1.8.7/core/enumerable/collect_concat_spec.rb
+${GEM_LIBDIR}/spec/tags/1.8.7/core/enumerable/flat_map_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/env/to_h_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/file/lchmod_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/file/new_spec.rb
@@ -497,6 +510,7 @@ ${GEM_LIBDIR}/spec/tags/1.8.7/core/kernel/public_method_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/kernel/require_relative_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/math/log2_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/math/log_spec.rb
+${GEM_LIBDIR}/spec/tags/1.8.7/core/module/include_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/proc/curry_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/proc/yield_spec.rb
 ${GEM_LIBDIR}/spec/tags/1.8.7/core/range/size_spec.rb
