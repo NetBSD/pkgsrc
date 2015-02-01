@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2014/03/14 16:11:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/02/01 14:50:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/COPYING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE.md
@@ -144,6 +145,7 @@ ${GEM_LIBDIR}/test/acceptance/multiple_expectations_failure_message_test.rb
 ${GEM_LIBDIR}/test/acceptance/optional_parameters_test.rb
 ${GEM_LIBDIR}/test/acceptance/parameter_matcher_test.rb
 ${GEM_LIBDIR}/test/acceptance/partial_mocks_test.rb
+${GEM_LIBDIR}/test/acceptance/prepend_test.rb
 ${GEM_LIBDIR}/test/acceptance/raise_exception_test.rb
 ${GEM_LIBDIR}/test/acceptance/return_value_test.rb
 ${GEM_LIBDIR}/test/acceptance/sequence_test.rb
