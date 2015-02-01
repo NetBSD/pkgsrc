@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.568 2015/02/01 13:58:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.569 2015/02/01 14:03:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -754,3 +754,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-atomic to 1.1.99 [taca 2015-02-01]
 	Updated devel/ruby-backports to 3.6.4 [taca 2015-02-01]
 	Updated devel/ruby-eventmachine to 1.0.4 [taca 2015-02-01]
+	Updated devel/ruby-facade to 1.0.6 [taca 2015-02-01]
