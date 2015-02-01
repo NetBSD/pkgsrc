@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/09 18:15:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/01 16:08:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -15,9 +15,9 @@ ${GEM_LIBDIR}/samples/simple.rb
 ${GEM_LIBDIR}/samples/spawn.rb
 ${GEM_LIBDIR}/samples/stdin_timeout.rb
 ${GEM_LIBDIR}/samples/timeout.rb
+${GEM_LIBDIR}/test/lib/test_case.rb
 ${GEM_LIBDIR}/test/pfork4_test.rb
 ${GEM_LIBDIR}/test/popen4_test.rb
 ${GEM_LIBDIR}/test/popen4ext_test.rb
-${GEM_LIBDIR}/test/support/test_case.rb
 ${GEM_LIBDIR}/white_box/leak.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
