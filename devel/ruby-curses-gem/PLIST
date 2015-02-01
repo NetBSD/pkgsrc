@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/01 12:33:04 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/curses.${RUBY_DLEXT}
+${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/curses.gemspec
+${GEM_LIBDIR}/ext/curses/curses.c
+${GEM_LIBDIR}/ext/curses/depend
+${GEM_LIBDIR}/ext/curses/extconf.rb
+${GEM_LIBDIR}/lib/curses.rb
+${GEM_LIBDIR}/lib/curses.${RUBY_DLEXT}
+${GEM_LIBDIR}/sample/hello.rb
+${GEM_LIBDIR}/sample/mouse.rb
+${GEM_LIBDIR}/sample/rain.rb
+${GEM_LIBDIR}/sample/view.rb
+${GEM_LIBDIR}/sample/view2.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
