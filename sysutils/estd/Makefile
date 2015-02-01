@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/01/04 18:42:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.24 2015/02/01 18:59:05 wiz Exp $
 
-DISTNAME=	estd-r7
-PKGNAME=	estd-0.7
-PKGREVISION=	2
+DISTNAME=	estd-r9
+PKGNAME=	estd-0.9
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
