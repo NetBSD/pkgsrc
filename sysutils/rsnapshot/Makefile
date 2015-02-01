@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/05/29 23:37:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2015/02/01 01:48:36 wiz Exp $
 
 DISTNAME=	rsnapshot-1.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://www.rsnapshot.org/downloads/
 
@@ -37,6 +36,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rsnapshot ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/rsnapshot.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/rsnapshot-diff ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/rsnapshot-diff.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/rsnapshot.conf.default ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
