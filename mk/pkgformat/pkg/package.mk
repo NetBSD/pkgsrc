@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.7 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: package.mk,v 1.8 2015/02/01 11:24:58 obache Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -196,7 +196,6 @@ real-package-install:
 	@${DO_NADA}
 .endif
 
-MAKEFLAGS.su-real-package-install=	PKGNAME_REQD=${PKGNAME_REQD:Q}
 su-real-package-install:
 	@${PHASE_MSG} "Install binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
