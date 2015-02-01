@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.110 2015/02/01 09:07:40 obache Exp $
+# $NetBSD: sites.mk,v 1.111 2015/02/01 13:40:36 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -290,59 +290,8 @@ MASTER_SITE_IFARCHIVE+= \
 	http://ifarchive.heanet.ie/if-archive/ \
 	ftp://ftp.giga.or.at/pub/ifarchive/
 
-### PGSQL list was last updated on 20110328
 MASTER_SITE_PGSQL+=	\
-	ftp://ftp5.ca.postgresql.org/mirrors/postgresql/ \
-	http://ftp2.cz.postgresql.org/pub/postgresql/ \
-	ftp://ftp2.cz.postgresql.org/pub/postgresql/ \
-	http://ftp.dk.postgresql.org/postgresql/ \
-	ftp://ftp.dk.postgresql.org/postgresql/ \
-	http://ftp.ee.postgresql.org/pub/postgresql/ \
-	ftp://ftp.fi.postgresql.org/pub/postgresql/ \
-	http://ftp4.fr.postgresql.org/pub/mirrors/postgresql/ \
-	ftp://ftp4.fr.postgresql.org/pub/mirrors/postgresql/ \
-	http://ftp3.de.postgresql.org/pub/Mirrors/ftp.postgresql.org/ \
-	ftp://ftp3.de.postgresql.org/pub/Mirrors/ftp.postgresql.org/ \
-	http://ftp8.de.postgresql.org/pub/misc/pgsql/ \
-	ftp://ftp8.de.postgresql.org/pub/misc/pgsql/ \
-	ftp://ftp7.de.postgresql.org/pub/ftp.postgresql.org/ \
-	ftp://ftp9.de.postgresql.org/unix/databases/postgresql/ \
-	http://ftp.gr.postgresql.org/pub/databases/postgresql/ \
-	ftp://ftp.gr.postgresql.org/pub/databases/postgresql/ \
-	http://ftp3.gr.postgresql.org/ \
-	ftp://ftp3.gr.postgresql.org/mirrors/postgresql/ \
-	http://ftp.ie.postgresql.org/mirrors/ftp.postgresql.org/pub/ \
-	ftp://ftp.ie.postgresql.org/mirrors/ftp.postgresql.org/pub/ \
-	http://ftp2.ie.postgresql.org/mirrors/ftp.postgresql.org/ \
-	ftp://ftp2.ie.postgresql.org/mirrors/ftp.postgresql.org/ \
-	http://ftp2.it.postgresql.org/mirrors/postgres/ \
-	ftp://ftp2.it.postgresql.org/mirrors/postgres/ \
-	ftp://ftp3.jp.postgresql.org/pub/db/postgresql/ \
-	ftp://ftp.lv.postgresql.org/mirrors/ftp.postgresql.org/ \
-	http://ftp2.nl.postgresql.org/ \
-	ftp://ftp2.nl.postgresql.org/mirror/postgresql/ \
-	ftp://ftp.nz.postgresql.org/postgresql/ \
-	http://ftp6.pl.postgresql.org/pub/postgresql/ \
-	ftp://ftp6.pl.postgresql.org/pub/postgresql/ \
-	http://ftp8.pl.postgresql.org/pub/postgresql/ \
-	ftp://ftp8.pl.postgresql.org/pub/postgresql/ \
-	ftp://ftp7.pl.postgresql.org/pub/mirror/ftp.postgresql.org/ \
-	http://ftp.pt.postgresql.org/pub/postgresql/ \
-	ftp://ftp.pt.postgresql.org/pub/postgresql/ \
-	ftp://ftp6.ro.postgresql.org/pub/mirrors/ftp.postgresql.org/ \
-	ftp://ftp3.ru.postgresql.org/pub/mirror/postgresql/pub/ \
-	ftp://ftp.si.postgresql.org/pub/mirrors/postgresql/ \
-	ftp://ftp.za.postgresql.org/mirror/ftp.postgresql.org/ \
-	http://ftp.se.postgresql.org/pub/databases/relational/postgresql/ \
-	ftp://ftp.se.postgresql.org/pub/databases/relational/postgresql/ \
-	http://ftp2.ch.postgresql.org/pub/mirrors/postgresql/ \
-	ftp://ftp2.ch.postgresql.org/pub/mirrors/postgresql/ \
-	ftp://ftp.ch.postgresql.org/mirror/postgresql/ \
-	http://ftp3.tw.postgresql.org/postgresql/ \
-	ftp://ftp3.tw.postgresql.org/postgresql/ \
-	ftp://ftp5.us.postgresql.org/pub/PostgreSQL/ \
-	http://ftp2.uk.postgresql.org/sites/ftp.postgresql.org/ \
-	ftp://ftp2.uk.postgresql.org/sites/ftp.postgresql.org/
+	https://ftp.postgresql.org/pub/
 
 MASTER_SITE_GENTOO+= \
 	http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/ \
