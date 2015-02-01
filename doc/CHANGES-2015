@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.535 2015/02/01 01:47:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.536 2015/02/01 01:48:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libaacs to 0.8.0 [adam 2015-01-31]
 	Updated multimedia/libbdplus to 0.1.2 [adam 2015-01-31]
 	Updated net/openntpd to 5.7p3 [wiz 2015-02-01]
+	Updated sysutils/rsnapshot to 1.3.1nb4 [wiz 2015-02-01]
