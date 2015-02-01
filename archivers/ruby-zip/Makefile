@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/06/20 02:09:43 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/01 12:46:24 taca Exp $
 
-DISTNAME=	rubyzip-1.1.4
+DISTNAME=	rubyzip-1.1.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby//}
 CATEGORIES=	archivers
 
