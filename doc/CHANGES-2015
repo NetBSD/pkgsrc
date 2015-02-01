@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.565 2015/02/01 13:45:55 taca Exp $
+$NetBSD: CHANGES-2015,v 1.566 2015/02/01 13:54:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ZenTest to 4.11.0 [taca 2015-02-01]
 	Updated devel/hoe to 3.13.0 [taca 2015-02-01]
 	Updated devel/ruby-SDL to 2.2.0 [taca 2015-02-01]
+	Updated devel/ruby-atomic to 1.1.99 [taca 2015-02-01]
