@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.590 2015/02/01 16:51:41 taca Exp $
+$NetBSD: CHANGES-2015,v 1.591 2015/02/01 18:27:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -776,3 +776,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rcsparse to 0.0.0.47 [taca 2015-02-01]
 	Updated net/pear-Net_Sieve to 1.3.4 [taca 2015-02-01]
 	Updated www/fengoffice to 3.0.5.1 [taca 2015-02-01]
+	Updated devel/p5-List-MoreUtils to 0.404 [wiz 2015-02-01]
