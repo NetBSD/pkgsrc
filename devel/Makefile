@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2040 2015/02/01 12:33:30 taca Exp $
+# $NetBSD: Makefile,v 1.2041 2015/02/01 16:24:05 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1786,6 +1786,7 @@ SUBDIR+=	ruby-pathname2
 SUBDIR+=	ruby-pkg-config
 SUBDIR+=	ruby-polyglot
 SUBDIR+=	ruby-posix-spawn
+SUBDIR+=	ruby-power_assert
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties32
