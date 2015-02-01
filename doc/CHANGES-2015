@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.588 2015/02/01 16:37:06 taca Exp $
+$NetBSD: CHANGES-2015,v 1.589 2015/02/01 16:42:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -774,3 +774,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-racc to 1.4.12 [taca 2015-02-01]
 	Updated devel/ruby-rake to 10.4.2 [taca 2015-02-01]
 	Updated devel/ruby-rcsparse to 0.0.0.47 [taca 2015-02-01]
+	Updated net/pear-Net_Sieve to 1.3.4 [taca 2015-02-01]
