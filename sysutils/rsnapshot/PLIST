@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:13 joerg Exp $
-bin/${PKGBASE}
-man/man1/${PKGBASE}.1
-share/doc/${PKGBASE}/INSTALL
-share/doc/${PKGBASE}/README
-share/examples/${PKGBASE}/${PKGBASE}.conf.default
+@comment $NetBSD: PLIST,v 1.4 2015/02/01 01:48:36 wiz Exp $
+bin/rsnapshot
+bin/rsnapshot-diff
+man/man1/rsnapshot-diff.1
+man/man1/rsnapshot.1
+share/doc/rsnapshot/INSTALL
+share/doc/rsnapshot/README
+share/examples/rsnapshot/rsnapshot.conf.default
