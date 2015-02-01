@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/12/01 12:39:17 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/01 20:02:42 wiz Exp $
 
-DISTNAME=	libnice-0.1.8
+DISTNAME=	libnice-0.1.10
 PKGNAME=	gst-plugins1-${DISTNAME}
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
