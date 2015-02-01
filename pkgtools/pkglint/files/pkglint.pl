@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.875 2015/01/01 06:10:10 dholland Exp $
+# $NetBSD: pkglint.pl,v 1.876 2015/02/01 18:33:27 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -809,7 +809,7 @@ sub load_dist_sites() {
 		} elsif ($text eq "MASTER_SITE_BACKUP?=\t\\") {
 			$ignoring = true;
 
-		} elsif ($text =~ m"^\t((?:http://|ftp://)\S+/)(?:|\s*\\)$"o) {
+		} elsif ($text =~ m"^\t((?:http://|https://|ftp://)\S+/)(?:|\s*\\)$"o) {
 			if (!$ignoring) {
 				if (defined($varname)) {
 					$url2name->{$1} = $varname;
