@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.46 2015/01/30 11:06:36 obache Exp $
+# $NetBSD: tools.SunOS.mk,v 1.47 2015/02/01 08:48:56 obache Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -211,7 +211,6 @@ TOOLS_PLATFORM.tr?=		/usr/xpg4/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/ccs/bin/tsort
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
-TOOLS_PLATFORM.unlink?=		/usr/sbin/unlink
 .if exists(/usr/bin/unzip)
 TOOLS_PLATFORM.unzip?=		/usr/bin/unzip
 .endif

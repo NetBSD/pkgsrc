@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.273 2015/01/30 11:06:36 obache Exp $
+# $NetBSD: replace.mk,v 1.274 2015/02/01 08:48:56 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1009,8 +1009,7 @@ TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 _TOOLS.coreutils=	basename cat chgrp chmod chown cp cut date	\
 		dirname echo env expr false head hostname id install	\
 		ln ls mkdir mv nice numfmt printf pwd readlink realpath \
-		rm rmdir sleep sort tail tee test touch tr true tsort	\
-		unlink wc
+		rm rmdir sleep sort tail tee test touch tr true tsort wc
 
 .for _t_ in ${_TOOLS.coreutils}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})

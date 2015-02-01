@@ -1,4 +1,4 @@
-# $NetBSD: tools.AIX.mk,v 1.18 2015/01/30 11:06:36 obache Exp $
+# $NetBSD: tools.AIX.mk,v 1.19 2015/02/01 08:48:56 obache Exp $
 #
 # System-supplied tools for the AIX operating system.
 
@@ -64,7 +64,6 @@ TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
-TOOLS_PLATFORM.unlink?=		/usr/sbin/unlink
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 
