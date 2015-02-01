@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2013/05/26 01:44:44 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2015/02/01 16:36:32 taca Exp $
 
-SHA1 (fromcvs-rcsparse-d8303aab.tar.gz) = d8078cd41c36684115e0972f40abd0cb9fddf6e6
-RMD160 (fromcvs-rcsparse-d8303aab.tar.gz) = a7733c036b322ae28be99bf1e12584ec533bb8af
-Size (fromcvs-rcsparse-d8303aab.tar.gz) = 141703 bytes
-SHA1 (patch-aa) = 4cb6e84ffa2661e8ede6dec1ef3f7bc55ea53df5
+SHA1 (rcsparse-0.0.0.47.zip) = 279d06f6c9c00a61cf0a857bb3a7b796e4c9ad59
+RMD160 (rcsparse-0.0.0.47.zip) = 6fd2694970a49b1f15ca770766cb707067270392
+Size (rcsparse-0.0.0.47.zip) = 146300 bytes
