@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 04:38:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/01 13:33:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/examples/client.rb
 ${GEM_LIBDIR}/examples/og/test.rb
@@ -8,9 +8,10 @@ ${GEM_LIBDIR}/lib/binary_reader.rb
 ${GEM_LIBDIR}/lib/binary_writer.rb
 ${GEM_LIBDIR}/lib/buffer.rb
 ${GEM_LIBDIR}/lib/byteorder.rb
-${GEM_LIBDIR}/lib/postgres-pr/1q
+${GEM_LIBDIR}/lib/pg.rb
 ${GEM_LIBDIR}/lib/postgres-pr/connection.rb
 ${GEM_LIBDIR}/lib/postgres-pr/message.rb
+${GEM_LIBDIR}/lib/postgres-pr/pg-compat.rb
 ${GEM_LIBDIR}/lib/postgres-pr/postgres-compat.rb
 ${GEM_LIBDIR}/lib/postgres-pr/typeconv/TC_conv.rb
 ${GEM_LIBDIR}/lib/postgres-pr/typeconv/array.rb
