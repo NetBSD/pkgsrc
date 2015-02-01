@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.547 2015/02/01 11:53:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.548 2015/02/01 12:24:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -733,3 +733,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-ohai to 8.0.1nb1 [taca 2015-02-01]
 	Added mail/ruby-mail25 version 2.5.4 [taca 2015-02-01]
 	Updated devel/p5-System-Command to 1.110 [mef 2015-02-01]
+	Updated mail/ruby-actionmailer32 to 3.2.21nb1 [taca 2015-02-01]
