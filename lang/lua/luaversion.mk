@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.7 2015/01/17 17:54:59 alnsn Exp $
+# $NetBSD: luaversion.mk,v 1.8 2015/02/01 11:21:23 obache Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -63,16 +63,6 @@
 
 .if !defined (LUA_LUAVERSION_MK)
 LUA_LUAVERSION_MK=	# defined
-
-# derive a Lua version from the package name if possible
-# optionally handled quoted package names
-.if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mlua[0-9][0-9]-*) || \
-    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-lua[0-9][0-9]-*)
-LUA_VERSION_REQD?= ${PKGNAME_REQD:C/(^.*-|^)lua([0-9][0-9])-.*/\2/}
-.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mlua[0-9][0-9]-*) || \
-    defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-lua[0-9][0-9]-*)
-LUA_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)lua([0-9][0-9])-.*/\2/}
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 
