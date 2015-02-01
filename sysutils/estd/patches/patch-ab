@@ -1,53 +1,52 @@
-$NetBSD: patch-ab,v 1.10 2015/01/04 18:42:50 jmcneill Exp $
+$NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
 
---- estd.c.orig	2009-10-20 16:18:28.000000000 +0000
+--- estd.c.orig	2013-03-24 19:14:06.000000000 +0000
 +++ estd.c
-@@ -55,7 +55,11 @@
- #define TECH_EST 1
+@@ -56,8 +56,11 @@
  #define TECH_POWERNOW 2
  #define TECH_ACPI 3
--#define TECH_MAX 3
-+#define TECH_INTREPID 4
+ #define TECH_INTREPID 4
+-#define TECH_MAX 4
+-
 +#define TECH_LOONGSON 5
 +#define TECH_ROCKCHIP 6
 +#define TECH_GENERIC 7
 +#define TECH_MAX 7
- 
++ 
  /* this is ugly, but... <shrug> */
  #define MAX_FREQS 32
-@@ -116,26 +120,38 @@ int             ndomains;
-  static size_t cp_time_size = sizeof(cp_time[0]) * CPUSTATES;
+ #define SYSCTLBUF 255
+@@ -118,29 +121,38 @@ int             ndomains;
+  static const size_t cp_time_max_size = sizeof(cp_time[0]) * MAX_CPUS;
  #endif
  
--static char	*techdesc[4] = {"Unknown",
+-static char	*techdesc[5] = {"Unknown",
 +static char	*techdesc[8] = {"Unknown",
  				"Enhanced SpeedStep",
  				"PowerNow",
--				"ACPI P-States"
-+				"ACPI P-States",
+ 				"ACPI P-States",
+-				"Intrepid"
 +				"Intrepid",
 +				"Loongson",
 +				"Rockchip",
 +				"Generic"
  				};
--static char	*freqctl[4] = {	"",	
+-static char	*freqctl[5] = {	"",	
 +static char	*freqctl[8] = {	"",	
  				"machdep.est.frequency.available",
  				"machdep.powernow.frequency.available",
--				"hw.acpi.cpu.px_dom0.available"
-+				"hw.acpi.cpu.px_dom0.available",
-+				"machdep.intrepid.frequency.available",
+ 				"hw.acpi.cpu.px_dom0.available",
+ 				"machdep.intrepid.frequency.available"
 +				"machdep.loongson.frequency.available",
 +				"machdep.cpu.frequency.available",
 +				"machdep.frequency.available"
  				};
--static char	*setctl[4] = {	"",
+-static char	*setctl[5] = {	"",
 +static char	*setctl[8] = {	"",
  				"machdep.est.frequency.target",
  				"machdep.powernow.frequency.target",
--				"hw.acpi.cpu.px_dom0.select"
-+				"hw.acpi.cpu.px_dom0.select",
-+				"machdep.intrepid.frequency.target",
+ 				"hw.acpi.cpu.px_dom0.select",
+ 				"machdep.intrepid.frequency.target"
 +				"machdep.loongson.frequency.target",
 +				"machdep.cpu.frequency.target",
 +				"machdep.frequency.current"
@@ -56,41 +55,43 @@ $NetBSD: patch-ab,v 1.10 2015/01/04 18:42:50 jmcneill Exp $
  void
  usage()
  {
--	printf("usage: estd [-d] [-o] [-n] [-A] [-C] [-E] [-P] [-a] [-s] [-b] [-p poll interval in us] [-g grace period] [-l low watermark percentage] [-h high watermark percentage] [-m minimum MHz] [-M maximum MHz]\n");
-+	printf("usage: estd [-d] [-o] [-n] [-A] [-C] [-E] [-P] [-I] [-L] [-R] [-G] [-a] [-s] [-b] [-p poll interval in us] [-g grace period] [-l low watermark percentage] [-h high watermark percentage] [-m minimum MHz] [-M maximum MHz]\n");
+-	printf("usage: estd [-d] [-o] [-n] [-A] [-C] [-E] [-I] [-P] [-a] [-s] [-b] [-p poll interval in us] [-g grace period] [-l low watermark percentage] [-h high watermark percentage] [-m minimum MHz] [-M maximum MHz]\n");
++	printf("usage: estd [-d] [-o] [-n] [-A] [-C] [-E] [-I] [-L] [-R] [-P] [-G] [-a] [-s] [-b] [-p poll interval in us] [-g grace period] [-l low watermark percentage] [-h high watermark percentage] [-m minimum MHz] [-M maximum MHz]\n");
  	printf("       estd -v\n");
  	printf("       estd -f\n");
  	exit(1);
-@@ -367,7 +383,7 @@ main(int argc, char *argv[])
+@@ -395,7 +407,7 @@ main(int argc, char *argv[])
  	FILE           *fexists;
  
  	/* get command-line options */
--	while ((ch = getopt(argc, argv, "vfdonACEPasbp:h:l:g:m:M:")) != -1)
-+	while ((ch = getopt(argc, argv, "vfdonACEPILGasbp:h:l:g:m:M:")) != -1)
+-	while ((ch = getopt(argc, argv, "vfdonACEIPasbp:h:l:g:m:M:")) != -1)
++	while ((ch = getopt(argc, argv, "vfdonACEGILPasbp:h:l:g:m:M:")) != -1)
  		switch (ch) {
  		case 'v':
  			version();
-@@ -400,6 +416,19 @@ main(int argc, char *argv[])
+@@ -426,12 +438,21 @@ main(int argc, char *argv[])
+ 		case 'E':
+ 			tech = TECH_EST;
  			break;
- 		case 'P':
- 			tech = TECH_POWERNOW;
++		case 'G':
++			tech = TECH_GENERIC;
 +			break;
-+		case 'I':
-+			tech = TECH_INTREPID;
-+			break;
+ 		case 'I':
+ 			tech = TECH_INTREPID;
+ 			break;
 +                case 'L':
 +                        tech = TECH_LOONGSON;
 +                        break;
+ 		case 'P':
+ 			tech = TECH_POWERNOW;
+ 			break;
 +		case 'R':
 +			tech = TECH_ROCKCHIP;
-+			break;
-+		case 'G':
-+			tech = TECH_GENERIC;
 +			break;
  		case 'a':
  			strategy = AGGRESSIVE;
  			break;
-@@ -434,8 +463,9 @@ main(int argc, char *argv[])
+@@ -466,8 +487,9 @@ main(int argc, char *argv[])
  
  	ndomains = 1;
  	domain = ecalloc(ndomains, sizeof(struct domain));
@@ -102,7 +103,7 @@ $NetBSD: patch-ab,v 1.10 2015/01/04 18:42:50 jmcneill Exp $
  	if (kinfo_get_cpus(&ncpus)) {
  		fprintf(stderr, "estd: Cannot get number of cpus\n");
  		exit(1);
-@@ -443,11 +473,18 @@ main(int argc, char *argv[])
+@@ -475,11 +497,18 @@ main(int argc, char *argv[])
  	cp_time = ecalloc(ncpus, sizeof(struct kinfo_cputime));
  	cp_old  = ecalloc(ncpus, sizeof(struct kinfo_cputime));
  	cp_time_len = ncpus * sizeof(struct kinfo_cputime);
