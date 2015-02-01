@@ -1,4 +1,4 @@
-#       $NetBSD: configure.ac,v 1.5 2015/01/19 11:15:37 obache Exp $
+#       $NetBSD: configure.ac,v 1.6 2015/02/01 08:58:52 obache Exp $
 #
 # Process this file with autoconf to produce a configure script.
 
@@ -9,7 +9,7 @@ AC_COPYRIGHT([
 Copyright (c) 1999-2014 The NetBSD Foundation, Inc.
 All rights reserved.
 ])
-AC_REVISION([$Revision: 1.5 $])
+AC_REVISION([$Revision: 1.6 $])
 
 AS_SHELL_SANITIZE()
 
@@ -41,8 +41,8 @@ AC_ARG_ENABLE([ssl],
               [AS_HELP_STRING([--enable-ssl],
                               [enable SSL support (requires --with-openssl)
                                [default=auto]])],
-              [with_ssl=$enableval],
-              [with_ssl=auto])
+              [opt_ssl=$enableval],
+              [opt_ssl=auto])
 AC_ARG_WITH([socks],
             [AS_HELP_STRING([--with-socks],
                             [enable support for (Dante) SOCKS5 proxy

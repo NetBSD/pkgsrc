@@ -3150,9 +3150,9 @@ fi
 
 # Check whether --enable-ssl was given.
 if test "${enable_ssl+set}" = set; then :
-  enableval=$enable_ssl; with_ssl=$enableval
+  enableval=$enable_ssl; opt_ssl=$enableval
 else
-  with_ssl=auto
+  opt_ssl=auto
 fi
 
 
