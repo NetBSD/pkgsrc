@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2014/03/14 16:40:41 taca Exp $
+$NetBSD: distinfo,v 1.12 2015/02/02 14:18:35 taca Exp $
 
-SHA1 (rspec-core-2.14.8.gem) = 2bb839e610746880046f5f4514167791bfd49d69
-RMD160 (rspec-core-2.14.8.gem) = 1122c019fced5bb8a2f183ac9457cf0c58e5a103
-Size (rspec-core-2.14.8.gem) = 181760 bytes
+SHA1 (rspec-core-3.1.7.gem) = caca1f6bf925406a0867d68087c4f46cf7e3993d
+RMD160 (rspec-core-3.1.7.gem) = 1d8f8e267e176d96b90b2bd7bc15cd410d875be2
+Size (rspec-core-3.1.7.gem) = 112128 bytes
