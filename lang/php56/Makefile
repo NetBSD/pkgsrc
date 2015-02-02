@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/24 15:37:08 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/02 10:54:19 sevan Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -44,6 +44,12 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
+.endif
+
+# Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
+# and lacks the zone memory allocator
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
 
 post-extract:
