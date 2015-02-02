@@ -1,0 +1,15 @@
+$NetBSD: patch-configre,v 1.1 2015/02/02 10:15:47 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2015-02-02 09:03:03.000000000 +0000
++++ configure
+@@ -16166,7 +16166,7 @@ else
+ fi
+ 
+ 
+-if test "x$platform_win32" == "xyes"; then :
++if test "x$platform_win32" = "xyes"; then :
+ 
+ else
+ 
