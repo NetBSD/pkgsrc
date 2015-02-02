@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.615 2015/02/02 12:56:20 taca Exp $
+$NetBSD: CHANGES-2015,v 1.616 2015/02/02 13:00:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -801,3 +801,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-rison to 2.0.0nb1 [taca 2015-02-02]
 	Updated www/ruby-jekyll to 1.2.0nb1 [jperkin 2015-02-02]
 	Updated databases/ruby-sequel to 4.19.0 [taca 2015-02-02]
+	Updated devel/ruby-rgl to 0.5.0 [taca 2015-02-02]
