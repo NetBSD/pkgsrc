@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.613 2015/02/02 12:27:45 taca Exp $
+$NetBSD: CHANGES-2015,v 1.614 2015/02/02 12:35:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -799,3 +799,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/librevenge to 0.0.2 [adam 2015-02-02]
 	Added net/iperf3 version 3.0.11 [he 2015-02-02]
 	Updated textproc/ruby-rison to 2.0.0nb1 [taca 2015-02-02]
+	Updated www/ruby-jekyll to 1.2.0nb1 [jperkin 2015-02-02]
