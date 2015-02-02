@@ -1,18 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/29 13:15:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/02/02 15:27:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
-${GEM_LIBDIR}/build.js
+${GEM_LIBDIR}/gemfiles/rubyracer
+${GEM_LIBDIR}/gemfiles/rubyrhino
 ${GEM_LIBDIR}/lib/es5.js
+${GEM_LIBDIR}/lib/split.js
 ${GEM_LIBDIR}/lib/uglifier.rb
+${GEM_LIBDIR}/lib/uglifier/version.rb
 ${GEM_LIBDIR}/lib/uglify.js
+${GEM_LIBDIR}/spec/source_map_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/uglifier_spec.rb
 ${GEM_LIBDIR}/uglifier.gemspec
