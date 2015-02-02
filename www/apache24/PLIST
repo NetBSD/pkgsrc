@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/07/23 10:34:02 tron Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/02/02 14:45:51 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -1245,10 +1245,10 @@ share/httpd/manual/mod/mod_env.html.fr
 share/httpd/manual/mod/mod_env.html.ja.utf8
 share/httpd/manual/mod/mod_env.html.ko.euc-kr
 share/httpd/manual/mod/mod_env.html.tr.utf8
-share/httpd/manual/mod/mod_example.html
-share/httpd/manual/mod/mod_example.html.en
-share/httpd/manual/mod/mod_example.html.fr
-share/httpd/manual/mod/mod_example.html.ko.euc-kr
+share/httpd/manual/mod/mod_example_hooks.html
+share/httpd/manual/mod/mod_example_hooks.html.en
+share/httpd/manual/mod/mod_example_hooks.html.fr
+share/httpd/manual/mod/mod_example_hooks.html.ko.euc-kr
 share/httpd/manual/mod/mod_expires.html
 share/httpd/manual/mod/mod_expires.html.en
 share/httpd/manual/mod/mod_expires.html.fr
