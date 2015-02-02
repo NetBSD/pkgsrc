@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.33 2015/02/02 12:14:56 obache Exp $
+# $NetBSD: ext.mk,v 1.34 2015/02/02 12:26:21 obache Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -67,11 +67,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 PLIST_SRC+=		${.CURDIR}/../../lang/php/PLIST.module
-.if !empty(PHP_ZEND_EXTENSION:U:M[Yy][Ye][Ss])
-MESSAGE_SRC=		${.CURDIR}/../../lang/php/MESSAGE.zend-module
-.else
 MESSAGE_SRC=		${.CURDIR}/../../lang/php/MESSAGE.module
-.endif
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
