@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2014/03/14 17:02:34 taca Exp $
+$NetBSD: distinfo,v 1.13 2015/02/02 15:30:22 taca Exp $
 
-SHA1 (ruby2ruby-2.0.7.gem) = f78830b9fe207eb5b6166177f349f94febfdc388
-RMD160 (ruby2ruby-2.0.7.gem) = 8bab128b229147de2333c221be61795cdac9fcbe
-Size (ruby2ruby-2.0.7.gem) = 23552 bytes
+SHA1 (ruby2ruby-2.1.3.gem) = b8c307cb46b63d9f8c075d2db7ad16d9fc9d5d47
+RMD160 (ruby2ruby-2.1.3.gem) = 55b11be28b489bbf743e14490fa87e35e44e119d
+Size (ruby2ruby-2.1.3.gem) = 24576 bytes
