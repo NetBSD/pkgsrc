@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2015/01/20 20:11:07 adam Exp $
+# $NetBSD: Makefile,v 1.91 2015/02/02 17:54:21 wiz Exp $
 
-DISTNAME=	sqlite-autoconf-3080801
-PKGNAME=	sqlite3-3.8.8.1
+DISTNAME=	sqlite-autoconf-3080802
+PKGNAME=	sqlite3-3.8.8.2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/2015/ \
 		http://www.sqlite.org/2015/
