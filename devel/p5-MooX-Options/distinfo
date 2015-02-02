@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/10/13 06:06:13 wen Exp $
+$NetBSD: distinfo,v 1.7 2015/02/02 15:08:50 wen Exp $
 
-SHA1 (MooX-Options-4.012.tar.gz) = 6d2c63f9a10869218d8257ef5fd83316bb5e7d88
-RMD160 (MooX-Options-4.012.tar.gz) = 16fddffdb1a8e40b11a099c75ada734810d2e3b3
-Size (MooX-Options-4.012.tar.gz) = 41617 bytes
+SHA1 (MooX-Options-4.016.tar.gz) = d932b64387a399d9ffa1cb6c39df663adf2d4597
+RMD160 (MooX-Options-4.016.tar.gz) = 053417e980fb0c006d18afe04337abba608c5c8d
+Size (MooX-Options-4.016.tar.gz) = 44472 bytes
