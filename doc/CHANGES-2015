@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.628 2015/02/02 15:24:51 adam Exp $
+$NetBSD: CHANGES-2015,v 1.629 2015/02/02 15:26:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -817,3 +817,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooX-Options to 4.016 [wen 2015-02-02]
 	Updated devel/ruby-tins to 1.3.3 [taca 2015-02-02]
 	Updated www/apache24 to 2.4.12 [adam 2015-02-02]
+	Updated devel/ruby-turn to 0.9.7 [taca 2015-02-02]
