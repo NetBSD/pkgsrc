@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.617 2015/02/02 14:11:01 taca Exp $
+$NetBSD: CHANGES-2015,v 1.618 2015/02/02 14:13:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -803,3 +803,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-sequel to 4.19.0 [taca 2015-02-02]
 	Updated devel/ruby-rgl to 0.5.0 [taca 2015-02-02]
 	Added www/ruby-rack15 version 1.5.2 [taca 2015-02-02]
+	Added devel/ruby-rspec-support version 3.1.2 [taca 2015-02-02]
