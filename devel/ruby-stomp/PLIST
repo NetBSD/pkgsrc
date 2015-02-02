@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/14 16:48:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/02 15:09:02 taca Exp $
 bin/catstomp
 bin/stompcat
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -22,6 +22,8 @@ ${GEM_LIBDIR}/examples/logexamp_ssl.rb
 ${GEM_LIBDIR}/examples/publisher.rb
 ${GEM_LIBDIR}/examples/put11conn_ex1.rb
 ${GEM_LIBDIR}/examples/putget11_rh1.rb
+${GEM_LIBDIR}/examples/ssl_ctxoptions.rb
+${GEM_LIBDIR}/examples/ssl_newparm.rb
 ${GEM_LIBDIR}/examples/ssl_uc1.rb
 ${GEM_LIBDIR}/examples/ssl_uc1_ciphers.rb
 ${GEM_LIBDIR}/examples/ssl_uc2.rb
