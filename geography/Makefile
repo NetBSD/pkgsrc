@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/01/28 14:15:22 bouyer Exp $
+# $NetBSD: Makefile,v 1.48 2015/02/02 20:42:04 bouyer Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -31,6 +31,7 @@ SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
 SUBDIR+=	opencpn
 SUBDIR+=	opencpn-plugin-gshhs
+SUBDIR+=	opencpn-plugin-weather_routing
 SUBDIR+=	p5-Geo-Coordinates-UTM
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-Mercator
