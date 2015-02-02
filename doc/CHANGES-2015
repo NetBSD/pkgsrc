@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.611 2015/02/02 11:18:32 adam Exp $
+$NetBSD: CHANGES-2015,v 1.612 2015/02/02 12:26:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/gst-plugins1-libnice to 0.1.10 [wiz 2015-02-01]
 	Updated net/libnice to 0.1.10 [wiz 2015-02-01]
 	Updated converters/librevenge to 0.0.2 [adam 2015-02-02]
+	Added net/iperf3 version 3.0.11 [he 2015-02-02]
