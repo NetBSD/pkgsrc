@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2014/04/28 12:19:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/02/02 02:45:09 mef Exp $
+share/doc/${SUBDIR}/Theora.pdf
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.xml
 share/doc/${SUBDIR}/html/annotated.html
+share/doc/${SUBDIR}/html/arrowdown.png
+share/doc/${SUBDIR}/html/arrowright.png
 share/doc/${SUBDIR}/html/bc_s.png
 share/doc/${SUBDIR}/html/bdwn.png
 share/doc/${SUBDIR}/html/classes.html
@@ -12,23 +15,13 @@ share/doc/${SUBDIR}/html/codec_8h.html
 share/doc/${SUBDIR}/html/codec_8h_source.html
 share/doc/${SUBDIR}/html/dir_000000.html
 share/doc/${SUBDIR}/html/dir_000001.html
+share/doc/${SUBDIR}/html/doc.png
 share/doc/${SUBDIR}/html/doxygen.css
 share/doc/${SUBDIR}/html/doxygen.png
 share/doc/${SUBDIR}/html/dynsections.js
 share/doc/${SUBDIR}/html/files.html
-share/doc/${SUBDIR}/html/ftv2blank.png
-share/doc/${SUBDIR}/html/ftv2doc.png
-share/doc/${SUBDIR}/html/ftv2folderclosed.png
-share/doc/${SUBDIR}/html/ftv2folderopen.png
-share/doc/${SUBDIR}/html/ftv2lastnode.png
-share/doc/${SUBDIR}/html/ftv2link.png
-share/doc/${SUBDIR}/html/ftv2mlastnode.png
-share/doc/${SUBDIR}/html/ftv2mnode.png
-share/doc/${SUBDIR}/html/ftv2node.png
-share/doc/${SUBDIR}/html/ftv2plastnode.png
-share/doc/${SUBDIR}/html/ftv2pnode.png
-share/doc/${SUBDIR}/html/ftv2splitbar.png
-share/doc/${SUBDIR}/html/ftv2vertline.png
+share/doc/${SUBDIR}/html/folderclosed.png
+share/doc/${SUBDIR}/html/folderopen.png
 share/doc/${SUBDIR}/html/functions.html
 share/doc/${SUBDIR}/html/functions_vars.html
 share/doc/${SUBDIR}/html/globals.html
@@ -49,6 +42,7 @@ share/doc/${SUBDIR}/html/nav_f.png
 share/doc/${SUBDIR}/html/nav_g.png
 share/doc/${SUBDIR}/html/nav_h.png
 share/doc/${SUBDIR}/html/open.png
+share/doc/${SUBDIR}/html/splitbar.png
 share/doc/${SUBDIR}/html/structth__comment.html
 share/doc/${SUBDIR}/html/structth__huff__code.html
 share/doc/${SUBDIR}/html/structth__img__plane.html

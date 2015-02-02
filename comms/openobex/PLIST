@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/11/23 11:33:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/02/02 02:47:02 mef Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -12,6 +12,8 @@ lib/libopenobex.so.2
 lib/pkgconfig/openobex.pc
 share/doc/openobex/html/annotated.html
 share/doc/openobex/html/api_8c.html
+share/doc/openobex/html/arrowdown.png
+share/doc/openobex/html/arrowright.png
 share/doc/openobex/html/bc_s.png
 share/doc/openobex/html/bdwn.png
 share/doc/openobex/html/classes.html
@@ -19,34 +21,24 @@ share/doc/openobex/html/closed.png
 share/doc/openobex/html/dir_000000.html
 share/doc/openobex/html/dir_000001.html
 share/doc/openobex/html/dir_000002.html
+share/doc/openobex/html/doc.png
 share/doc/openobex/html/doxygen.css
 share/doc/openobex/html/doxygen.png
 share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
-share/doc/openobex/html/ftv2blank.png
-share/doc/openobex/html/ftv2doc.png
-share/doc/openobex/html/ftv2folderclosed.png
-share/doc/openobex/html/ftv2folderopen.png
-share/doc/openobex/html/ftv2lastnode.png
-share/doc/openobex/html/ftv2link.png
-share/doc/openobex/html/ftv2mlastnode.png
-share/doc/openobex/html/ftv2mnode.png
-share/doc/openobex/html/ftv2node.png
-share/doc/openobex/html/ftv2plastnode.png
-share/doc/openobex/html/ftv2pnode.png
-share/doc/openobex/html/ftv2splitbar.png
-share/doc/openobex/html/ftv2vertline.png
+share/doc/openobex/html/folderclosed.png
+share/doc/openobex/html/folderopen.png
 share/doc/openobex/html/functions.html
 share/doc/openobex/html/functions_vars.html
 share/doc/openobex/html/globals.html
-share/doc/openobex/html/globals_f.html
-share/doc/openobex/html/globals_i.html
-share/doc/openobex/html/globals_o.html
-share/doc/openobex/html/globals_t.html
 share/doc/openobex/html/globals_defs.html
 share/doc/openobex/html/globals_enum.html
 share/doc/openobex/html/globals_eval.html
+share/doc/openobex/html/globals_f.html
 share/doc/openobex/html/globals_func.html
+share/doc/openobex/html/globals_i.html
+share/doc/openobex/html/globals_o.html
+share/doc/openobex/html/globals_t.html
 share/doc/openobex/html/globals_type.html
 share/doc/openobex/html/index.html
 share/doc/openobex/html/jquery.js
@@ -57,6 +49,7 @@ share/doc/openobex/html/obex_8h.html
 share/doc/openobex/html/obex__const_8h.html
 share/doc/openobex/html/open.png
 share/doc/openobex/html/openobex_8coverpage.html
+share/doc/openobex/html/splitbar.png
 share/doc/openobex/html/structobex__ctrans__t.html
 share/doc/openobex/html/structobex__irda__intf__t.html
 share/doc/openobex/html/structobex__usb__intf__service__t.html
