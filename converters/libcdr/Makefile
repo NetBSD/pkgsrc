@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/12/01 11:15:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/02 11:14:55 adam Exp $
 
 DISTNAME=	libcdr-0.1.1
 CATEGORIES=	converters
@@ -10,10 +10,9 @@ HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libcdr
 COMMENT=	Corel Draw file format importer library
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--without-docs
@@ -22,8 +21,8 @@ PKGCONFIG_OVERRIDE=	libcdr.pc.in
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
