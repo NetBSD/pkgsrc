@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 16:54:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/02 15:07:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
-${GEM_LIBDIR}/Appraisals
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
@@ -44,8 +44,6 @@ ${GEM_LIBDIR}/features/test_unit_groups_and_filters_complex.feature
 ${GEM_LIBDIR}/features/test_unit_groups_using_filter_class.feature
 ${GEM_LIBDIR}/features/test_unit_without_simplecov.feature
 ${GEM_LIBDIR}/features/unicode_compatiblity.feature
-${GEM_LIBDIR}/gemfiles/multi_json_legacy.gemfile
-${GEM_LIBDIR}/gemfiles/multi_json_new.gemfile
 ${GEM_LIBDIR}/lib/simplecov.rb
 ${GEM_LIBDIR}/lib/simplecov/command_guesser.rb
 ${GEM_LIBDIR}/lib/simplecov/configuration.rb
