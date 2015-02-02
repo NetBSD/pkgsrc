@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.610 2015/02/01 20:03:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.611 2015/02/02 11:18:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-twisted-docs to 15.0.0 [wiz 2015-02-01]
 	Updated net/gst-plugins1-libnice to 0.1.10 [wiz 2015-02-01]
 	Updated net/libnice to 0.1.10 [wiz 2015-02-01]
+	Updated converters/librevenge to 0.0.2 [adam 2015-02-02]
