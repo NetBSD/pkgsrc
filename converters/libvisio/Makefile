@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/02/02 11:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.31 2015/02/02 13:36:24 adam Exp $
 
 DISTNAME=	libvisio-0.1.1
 PKGREVISION=	2
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE=	libvisio.pc.in
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-#.include "../../devel/cppunit/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
