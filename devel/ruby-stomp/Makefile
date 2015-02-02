@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/03/14 16:48:30 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/02 15:09:02 taca Exp $
 
-DISTNAME=	stomp-1.3.2
+DISTNAME=	stomp-1.3.4
 CATEGORIES=	devel
 
 MAINTAINER=	imil@NetBSD.org
