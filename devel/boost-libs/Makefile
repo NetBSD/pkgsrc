@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/01/25 12:21:33 pho Exp $
+# $NetBSD: Makefile,v 1.33 2015/02/02 10:55:00 adam Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -12,7 +12,7 @@ INSTALLATION_DIRS+=	lib
 BJAM_ARGS+=		--without-python
 PLIST_VARS+=		context log long_double_math
 
-.if $(OPSYS) == "NetBSD" && (($(MACHINE_ARCH) == "i386" || $(MACHINE_ARCH) == "sparc64") || (!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))
+.if ${OPSYS} == "NetBSD" && ((${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "sparc64") || (!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))
 BJAM_ARGS+=		pch=off
 .elif !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k)
 BJAM_ARGS+=		--without-context
@@ -31,7 +31,7 @@ PLIST.log=		yes
 
 # Long double math functions are not available on Darwin. See
 # boost/math/tools/config.hpp:53
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" || !empty(MACHINE_PLATFORM:MDarwin-14.*)
 PLIST.long_double_math=	yes
 .endif
 
