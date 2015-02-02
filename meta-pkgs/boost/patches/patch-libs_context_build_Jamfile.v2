@@ -1,0 +1,53 @@
+$NetBSD: patch-libs_context_build_Jamfile.v2,v 1.5 2015/02/02 07:45:12 jdc Exp $
+
+Restore sparc/sparc64 support.
+--- libs/context/build/Jamfile.v2.orig	2015-01-30 14:27:19.000000000 +0000
++++ libs/context/build/Jamfile.v2	2015-02-01 17:42:18.000000000 +0000
+@@ -437,7 +437,6 @@
+ alias asm_context_sources
+    : [ make asm/make_sparc_sysv_elf_gas.o : asm/make_sparc_sysv_elf_gas.S : @gas32 ]
+      [ make asm/jump_sparc_sysv_elf_gas.o : asm/jump_sparc_sysv_elf_gas.S : @gas32 ]
+-     unsupported.cpp
+    : <abi>sysv
+      <address-model>32
+      <architecture>sparc
+@@ -447,7 +446,6 @@
+ alias asm_context_sources
+    : asm/make_sparc_sysv_elf_gas.S
+      asm/jump_sparc_sysv_elf_gas.S
+-     unsupported.cpp
+    : <abi>sysv
+      <address-model>32
+      <architecture>sparc
+@@ -458,7 +456,6 @@
+ alias asm_context_sources
+    : asm/make_sparc_sysv_elf_gas.S
+      asm/jump_sparc_sysv_elf_gas.S
+-     unsupported.cpp
+    : <abi>sysv
+      <address-model>32
+      <architecture>sparc
+@@ -471,7 +468,6 @@
+ alias asm_context_sources
+    : [ make asm/make_sparc64_sysv_elf_gas.o : asm/make_sparc64_sysv_elf_gas.S : @gas64 ]
+      [ make asm/jump_sparc64_sysv_elf_gas.o : asm/jump_sparc64_sysv_elf_gas.S : @gas64 ]
+-     unsupported.cpp
+    : <abi>sysv
+      <address-model>64
+      <architecture>sparc
+@@ -481,7 +477,6 @@
+ alias asm_context_sources
+    : asm/make_sparc64_sysv_elf_gas.S
+      asm/jump_sparc64_sysv_elf_gas.S
+-     unsupported.cpp
+    : <abi>sysv
+      <address-model>64
+      <architecture>sparc
+@@ -492,7 +487,6 @@
+ alias asm_context_sources
+    : asm/make_sparc64_sysv_elf_gas.S
+      asm/jump_sparc64_sysv_elf_gas.S
+-     unsupported.cpp
+    : <abi>sysv
+      <address-model>64
+      <architecture>sparc
