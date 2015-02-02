@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.631 2015/02/02 15:29:13 taca Exp $
+$NetBSD: CHANGES-2015,v 1.632 2015/02/02 15:30:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-turn to 0.9.7 [taca 2015-02-02]
 	Updated devel/ruby-uglifier to 2.7.0 [taca 2015-02-02]
 	Updated devel/ruby-uuidtools to 2.1.5 [taca 2015-02-02]
+	Updated devel/ruby2ruby to 2.1.3 [taca 2015-02-02]
