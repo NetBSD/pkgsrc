@@ -1,0 +1,1 @@
+bin/rspec @PREFIX@/bin/rspec@RUBY_SUFFIX@

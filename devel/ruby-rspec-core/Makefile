@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/03/14 16:40:41 taca Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/02 14:18:35 taca Exp $
 
-DISTNAME=	rspec-core-2.14.8
+DISTNAME=	rspec-core-3.1.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,9 @@ HOMEPAGE=	http://relishapp.com/rspec
 COMMENT=	Behaviour Driven Development framework for Ruby, core part
 LICENSE=	mit
 
-CONFLICTS+=	ruby[1-9][0-9]-rspec-core-[0-9]* ruby[1-9][0-9]-rspec<2.0
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-support>=3.1.0<3.2:../../devel/ruby-rspec-support
+
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
