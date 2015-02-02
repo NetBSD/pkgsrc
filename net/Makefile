@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1054 2015/01/27 23:02:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.1055 2015/02/02 12:25:44 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -214,6 +214,7 @@ SUBDIR+=	iodine
 SUBDIR+=	ipcalc
 SUBDIR+=	ipcheck
 SUBDIR+=	iperf
+SUBDIR+=	iperf3
 SUBDIR+=	ipgrab
 SUBDIR+=	iplog
 SUBDIR+=	ipv6calc
