@@ -1,0 +1,9 @@
+OpenCPN is a free software (GPLv2) project to create a concise chart plotter
+and navigation software, for use underway or as a planning tool. OpenCPN is
+developed by a team of active sailors using real world conditions for
+program testing and refinement.
+
+This plugin creates optimized weather routes using isochrone method and
+predictive grib data or averaged gridded Climate data based upon constraint
+settings, start and finish information, and boat performance calculated
+using boat specs or polar data
