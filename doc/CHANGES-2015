@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.635 2015/02/02 19:07:23 adam Exp $
+$NetBSD: CHANGES-2015,v 1.636 2015/02/02 20:43:14 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3 to 3.8.8.2 [wiz 2015-02-02]
 	Updated databases/sqlite3-docs to 3.8.8.2 [adam 2015-02-02]
 	Updated databases/sqlite3-tcl to 3.8.8.2 [adam 2015-02-02]
+	Added geography/opencpn-plugin-weather_routing version 20150201 [bouyer 2015-02-02]
