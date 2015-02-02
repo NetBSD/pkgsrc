@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.29 2015/02/01 13:35:41 taca Exp $
-bin/sequel
+@comment $NetBSD: PLIST,v 1.30 2015/02/02 12:55:48 taca Exp $
+bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -105,6 +105,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.15.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.16.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.17.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.18.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.19.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.2.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
@@ -292,6 +293,7 @@ ${GEM_LIBDIR}/lib/sequel/model/exceptions.rb
 ${GEM_LIBDIR}/lib/sequel/model/inflections.rb
 ${GEM_LIBDIR}/lib/sequel/model/plugins.rb
 ${GEM_LIBDIR}/lib/sequel/no_core_ext.rb
+${GEM_LIBDIR}/lib/sequel/plugins/accessed_columns.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/active_model.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/after_initialize.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_autoreloading.rb
@@ -303,6 +305,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/blacklist_security.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/boolean_readers.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/caching.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/class_table_inheritance.rb
+${GEM_LIBDIR}/lib/sequel/plugins/column_conflicts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_select.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/composition.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/constraint_validations.rb
@@ -385,6 +388,7 @@ ${GEM_LIBDIR}/spec/core/schema_spec.rb
 ${GEM_LIBDIR}/spec/core/spec_helper.rb
 ${GEM_LIBDIR}/spec/core/version_spec.rb
 ${GEM_LIBDIR}/spec/core_extensions_spec.rb
+${GEM_LIBDIR}/spec/extensions/accessed_columns_spec.rb
 ${GEM_LIBDIR}/spec/extensions/active_model_spec.rb
 ${GEM_LIBDIR}/spec/extensions/after_initialize_spec.rb
 ${GEM_LIBDIR}/spec/extensions/arbitrary_servers_spec.rb
@@ -397,6 +401,7 @@ ${GEM_LIBDIR}/spec/extensions/blank_spec.rb
 ${GEM_LIBDIR}/spec/extensions/boolean_readers_spec.rb
 ${GEM_LIBDIR}/spec/extensions/caching_spec.rb
 ${GEM_LIBDIR}/spec/extensions/class_table_inheritance_spec.rb
+${GEM_LIBDIR}/spec/extensions/column_conflicts_spec.rb
 ${GEM_LIBDIR}/spec/extensions/column_select_spec.rb
 ${GEM_LIBDIR}/spec/extensions/columns_introspection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
