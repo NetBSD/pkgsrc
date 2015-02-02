@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.636 2015/02/02 20:43:14 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.637 2015/02/02 22:25:18 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-docs to 3.8.8.2 [adam 2015-02-02]
 	Updated databases/sqlite3-tcl to 3.8.8.2 [adam 2015-02-02]
 	Added geography/opencpn-plugin-weather_routing version 20150201 [bouyer 2015-02-02]
+	Updated games/quakespasm.new to 0.90.0 [snj 2015-02-02]
