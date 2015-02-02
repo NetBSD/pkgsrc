@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/12/17 12:31:14 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/02 15:27:25 taca Exp $
 
-DISTNAME=	uglifier-1.3.0
+DISTNAME=	uglifier-2.7.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,9 +9,9 @@ COMMENT=	Ruby wrapper for UglifyJS JavaScript compressor
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-execjs>=0.3.0:../../lang/ruby-execjs
-DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.3<2:../../textproc/ruby-multi_json
+DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.8.0:../../textproc/ruby-multi_json
 
-OVERRIDE_GEMSPEC=	multi_json~>1.0
+RUBY_JSON_REQD=	1.8.0
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
