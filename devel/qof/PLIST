@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/04/28 12:14:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/02/02 02:36:48 mef Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -43,6 +43,8 @@ lib/pkgconfig/qof-1.pc
 lib/pkgconfig/qof.pc
 share/doc/qof/html/doxy/annotated.html
 share/doc/qof/html/doxy/annotated.js
+share/doc/qof/html/doxy/arrowdown.png
+share/doc/qof/html/doxy/arrowright.png
 share/doc/qof/html/doxy/backendapi.html
 share/doc/qof/html/doxy/backenderrors.html
 share/doc/qof/html/doxy/bc_s.png
@@ -62,25 +64,15 @@ share/doc/qof/html/doxy/dir_000002.html
 share/doc/qof/html/doxy/dir_000003.html
 share/doc/qof/html/doxy/dir_000004.html
 share/doc/qof/html/doxy/dir_000005.html
+share/doc/qof/html/doxy/doc.png
 share/doc/qof/html/doxy/doxygen.css
 share/doc/qof/html/doxy/doxygen.png
 share/doc/qof/html/doxy/doxygen__main__page_8c_source.html
 share/doc/qof/html/doxy/dynsections.js
 share/doc/qof/html/doxy/files.html
 share/doc/qof/html/doxy/files.js
-share/doc/qof/html/doxy/ftv2blank.png
-share/doc/qof/html/doxy/ftv2doc.png
-share/doc/qof/html/doxy/ftv2folderclosed.png
-share/doc/qof/html/doxy/ftv2folderopen.png
-share/doc/qof/html/doxy/ftv2lastnode.png
-share/doc/qof/html/doxy/ftv2link.png
-share/doc/qof/html/doxy/ftv2mlastnode.png
-share/doc/qof/html/doxy/ftv2mnode.png
-share/doc/qof/html/doxy/ftv2node.png
-share/doc/qof/html/doxy/ftv2plastnode.png
-share/doc/qof/html/doxy/ftv2pnode.png
-share/doc/qof/html/doxy/ftv2splitbar.png
-share/doc/qof/html/doxy/ftv2vertline.png
+share/doc/qof/html/doxy/folderclosed.png
+share/doc/qof/html/doxy/folderopen.png
 share/doc/qof/html/doxy/functions.html
 share/doc/qof/html/doxy/functions_vars.html
 share/doc/qof/html/doxy/globals.html
@@ -206,6 +198,7 @@ share/doc/qof/html/doxy/nav_g.png
 share/doc/qof/html/doxy/nav_h.png
 share/doc/qof/html/doxy/navtree.css
 share/doc/qof/html/doxy/navtree.js
+share/doc/qof/html/doxy/navtreedata.js
 share/doc/qof/html/doxy/navtreeindex0.js
 share/doc/qof/html/doxy/navtreeindex1.js
 share/doc/qof/html/doxy/navtreeindex2.js
@@ -363,6 +356,7 @@ share/doc/qof/html/doxy/qsf-xml_8h_source.html
 share/doc/qof/html/doxy/qsfmaps.html
 share/doc/qof/html/doxy/reference.html
 share/doc/qof/html/doxy/resize.js
+share/doc/qof/html/doxy/splitbar.png
 share/doc/qof/html/doxy/structGHashTableKVPair.html
 share/doc/qof/html/doxy/structGHashTableKVPair.js
 share/doc/qof/html/doxy/structHandlerInfo.html
