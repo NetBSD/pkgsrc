@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/17 15:32:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/02 15:24:41 taca Exp $
 bin/turn
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/History.txt
-${GEM_LIBDIR}/LICENSE-GPL2.txt
-${GEM_LIBDIR}/LICENSE-MIT.txt
-${GEM_LIBDIR}/LICENSE-RUBY.txt
+${GEM_LIBDIR}/Index.rb
 ${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/NOTICE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Release.txt
 ${GEM_LIBDIR}/Version.txt
@@ -23,6 +23,7 @@ ${GEM_LIBDIR}/lib/turn/components/suite.rb
 ${GEM_LIBDIR}/lib/turn/configuration.rb
 ${GEM_LIBDIR}/lib/turn/controller.rb
 ${GEM_LIBDIR}/lib/turn/core_ext.rb
+${GEM_LIBDIR}/lib/turn/decorators/topten_decorator.rb
 ${GEM_LIBDIR}/lib/turn/minitest.rb
 ${GEM_LIBDIR}/lib/turn/reporter.rb
 ${GEM_LIBDIR}/lib/turn/reporters/cue_reporter.rb
