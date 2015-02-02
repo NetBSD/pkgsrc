@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.9 2013/06/16 16:50:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/02/02 15:11:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPL
 ${GEM_LIBDIR}/LGPL
 ${GEM_LIBDIR}/PSFL
-${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/doc/text/how-to.md
+${GEM_LIBDIR}/doc/text/news.md
 ${GEM_LIBDIR}/lib/test-unit.rb
 ${GEM_LIBDIR}/lib/test/unit.rb
-${GEM_LIBDIR}/lib/test/unit/assertionfailederror.rb
+${GEM_LIBDIR}/lib/test/unit/assertion-failed-error.rb
 ${GEM_LIBDIR}/lib/test/unit/assertions.rb
 ${GEM_LIBDIR}/lib/test/unit/attribute-matcher.rb
 ${GEM_LIBDIR}/lib/test/unit/attribute.rb
@@ -26,7 +28,7 @@ ${GEM_LIBDIR}/lib/test/unit/color.rb
 ${GEM_LIBDIR}/lib/test/unit/data.rb
 ${GEM_LIBDIR}/lib/test/unit/diff.rb
 ${GEM_LIBDIR}/lib/test/unit/error.rb
-${GEM_LIBDIR}/lib/test/unit/exceptionhandler.rb
+${GEM_LIBDIR}/lib/test/unit/exception-handler.rb
 ${GEM_LIBDIR}/lib/test/unit/failure.rb
 ${GEM_LIBDIR}/lib/test/unit/fault-location-detector.rb
 ${GEM_LIBDIR}/lib/test/unit/fixture.rb
@@ -37,10 +39,10 @@ ${GEM_LIBDIR}/lib/test/unit/priority.rb
 ${GEM_LIBDIR}/lib/test/unit/runner/console.rb
 ${GEM_LIBDIR}/lib/test/unit/runner/emacs.rb
 ${GEM_LIBDIR}/lib/test/unit/runner/xml.rb
+${GEM_LIBDIR}/lib/test/unit/test-suite-creator.rb
 ${GEM_LIBDIR}/lib/test/unit/testcase.rb
 ${GEM_LIBDIR}/lib/test/unit/testresult.rb
 ${GEM_LIBDIR}/lib/test/unit/testsuite.rb
-${GEM_LIBDIR}/lib/test/unit/testsuitecreator.rb
 ${GEM_LIBDIR}/lib/test/unit/ui/console/outputlevel.rb
 ${GEM_LIBDIR}/lib/test/unit/ui/console/testrunner.rb
 ${GEM_LIBDIR}/lib/test/unit/ui/emacs/testrunner.rb
@@ -80,17 +82,18 @@ ${GEM_LIBDIR}/test/test-color.rb
 ${GEM_LIBDIR}/test/test-data.rb
 ${GEM_LIBDIR}/test/test-diff.rb
 ${GEM_LIBDIR}/test/test-emacs-runner.rb
+${GEM_LIBDIR}/test/test-error.rb
+${GEM_LIBDIR}/test/test-failure.rb
 ${GEM_LIBDIR}/test/test-fault-location-detector.rb
 ${GEM_LIBDIR}/test/test-fixture.rb
 ${GEM_LIBDIR}/test/test-notification.rb
 ${GEM_LIBDIR}/test/test-omission.rb
 ${GEM_LIBDIR}/test/test-pending.rb
 ${GEM_LIBDIR}/test/test-priority.rb
-${GEM_LIBDIR}/test/test-testcase.rb
-${GEM_LIBDIR}/test/test_error.rb
-${GEM_LIBDIR}/test/test_failure.rb
-${GEM_LIBDIR}/test/test_testresult.rb
-${GEM_LIBDIR}/test/test_testsuite.rb
+${GEM_LIBDIR}/test/test-test-case.rb
+${GEM_LIBDIR}/test/test-test-result.rb
+${GEM_LIBDIR}/test/test-test-suite-creator.rb
+${GEM_LIBDIR}/test/test-test-suite.rb
 ${GEM_LIBDIR}/test/testunit-test-util.rb
 ${GEM_LIBDIR}/test/ui/test_testrunmediator.rb
 ${GEM_LIBDIR}/test/util/test-method-owner-finder.rb
