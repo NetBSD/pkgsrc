@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/02 12:25:20 he Exp $
+bin/iperf3
+include/iperf_api.h
+lib/libiperf.la
+man/man1/iperf3.1
+man/man3/libiperf.3

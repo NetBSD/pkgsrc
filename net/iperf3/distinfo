@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/02/02 12:25:20 he Exp $
+
+SHA1 (iperf-3.0.11.tar.gz) = 35e31cc320e4f2264bf51f6ad1e7e0d81341135a
+RMD160 (iperf-3.0.11.tar.gz) = eb371c0879fad6f2068a279704d637123bbd9162
+Size (iperf-3.0.11.tar.gz) = 424267 bytes
+SHA1 (patch-src_cjson.c) = b195f308ea6d7652a5fc65f1031e5642da2e611b
+SHA1 (patch-src_iperf__api.h) = e84175a031c5dcde5ade975a3a63c5fad898bf97
+SHA1 (patch-src_iperf__server__api.c) = 124d2a57ad8d6694a4eea57366e9d88cc4b4a578
+SHA1 (patch-src_units.c) = 95e1e22af16b4996f6ec0e39fc14d137425003a4

@@ -1,0 +1,13 @@
+Iperf3 is a tool for active measurements of the maximum achievable
+bandwidth on IP networks.  It supports tuning of various parameters
+related to timing, protocols, and buffers.  For each test it reports
+the bandwidth, loss, and other parameters.
+
+This version, sometimes referred to as iperf3, is a redesign of an
+original version developed at NLANR/DAST.  iperf3 is a new
+implementation from scratch, with the goal of a smaller, simpler code
+base, and a library version of the functionality that can be used in
+other programs. Iperf3 also has a number of features found in other tools
+such as nuttcp and netperf, but were missing from the original iperf.
+These include, for example, a zero-copy mode and optional JSON output.
+Note that iperf3 is NOT backwards compatible with the original iperf.
