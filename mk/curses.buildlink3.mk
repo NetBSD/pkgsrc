@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.20 2014/03/12 08:38:47 obache Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.21 2015/02/02 15:16:32 pho Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -111,20 +111,19 @@ BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.curses}
 BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.curses}
 .  endif
-.elif ${CURSES_TYPE} == "ncurses"
+.else
+.  if ${CURSES_TYPE} == "ncurses"
 USE_NCURSES=			yes
-.  include "../../devel/ncurses/buildlink3.mk"
-BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.ncurses}
-BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.ncurses}
-BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.ncurses}
-.elif ${CURSES_TYPE} == "ncursesw"
-.  include "../../devel/ncursesw/buildlink3.mk"
-BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.ncursesw}
-BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.ncursesw}
-BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.ncursesw}
-.elif ${CURSES_TYPE} == "pdcurses"
-.  include "../../devel/pdcurses/buildlink3.mk"
-BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.pdcurses}
-BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.pdcurses}
-BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.pdcurses}
+.    include "../../devel/ncurses/buildlink3.mk"
+
+.  elif ${CURSES_TYPE} == "ncursesw"
+.    include "../../devel/ncursesw/buildlink3.mk"
+
+.  elif ${CURSES_TYPE} == "pdcurses"
+.    include "../../devel/pdcurses/buildlink3.mk"
+
+.  endif
+.  for _var_ in PREFIX INCDIRS LIBDIRS LIBNAME LDADD
+BUILDLINK_${_var_}.curses?=	${BUILDLINK_${_var_}.${CURSES_TYPE}}
+.  endfor
 .endif
