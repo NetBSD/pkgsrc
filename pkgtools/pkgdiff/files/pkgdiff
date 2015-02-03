@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.22 2012/09/16 18:09:53 dholland Exp $
+# $NetBSD: pkgdiff,v 1.23 2015/02/03 22:50:27 abs Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -81,18 +81,18 @@ else
 	old="$1"
 	new="$2"
 fi
-basename_new="`basename $new`"
+basename_new="`basename "$new"`"
 
 dodiff() {
 	case x"$basename_new" in
 		xconfigure)
-		@DIFF@ -I '\(echo .*as_me:[0-9][0-9]*:\|echo .*configure:[0-9][0-9]*:\|line [0-9][0-9]* "configure\)' -I '\(Avoid regenerating within pkgsrc\|exit 0\)' $*
+		@DIFF@ -I '\(echo .*as_me:[0-9][0-9]*:\|echo .*configure:[0-9][0-9]*:\|line [0-9][0-9]* "configure\)' -I '\(Avoid regenerating within pkgsrc\|exit 0\)' "$@"
 		;;
                 xMakefile*)
-                @DIFF@ -I '\(localedir.*=.*localedir\|localedir.*=.*share/locale\)' $*
+                @DIFF@ -I '\(localedir.*=.*localedir\|localedir.*=.*share/locale\)' "$@"
 		;;
 		*)
-		@DIFF@ $*
+		@DIFF@ "$@"
 	esac
 }
 
@@ -103,7 +103,7 @@ dogrep() {
 case x"$PKGDIFF_FMT" in x)
 lines=3
 PKGDIFF_FMT="-p"
-while [ `dodiff "$PKGDIFF_FMT" -U $lines "$old" "$new" | dogrep -c`  !=  0 ]
+while [ `dodiff $PKGDIFF_FMT -U $lines "$old" "$new" | dogrep -c`  !=  0 ]
 do
 	lines=`expr $lines - 1`
 	if [ $lines = 0x -a x"$PKGDIFF_FMT" = x-p ]; then
@@ -115,7 +115,7 @@ do
 	if [ $lines = 0 ]; then
 		echo "Cannot strip away RCS IDs, please handle manually!" >&2
 		echo "These are the matching lines:" >&2
-		dodiff "$PKGDIFF_FMT" -U $lines "$old" "$new" | dogrep |\
+		dodiff $PKGDIFF_FMT -U $lines "$old" "$new" | dogrep |\
 		  sed -e 's/^/   /' >&2
 		echo "Setting PKGDIFF_FMT might help." >&2
 		echo "Otherwise you may need to run diff by hand." >&2
@@ -126,7 +126,7 @@ PKGDIFF_FMT="${PKGDIFF_FMT} -U $lines"
 ;;
 esac # PKGDIFF_FMT unset or null
 
-if dodiff -q "$PKGDIFF_FMT" "$old" "$new" > /dev/null
+if dodiff -q $PKGDIFF_FMT "$old" "$new" > /dev/null
 then
 	:
 else
@@ -134,5 +134,5 @@ else
     echo ''
     # Strip out the date on the +++ line to reduce needless
     # differences in regenerated patches
-    dodiff "$PKGDIFF_FMT" "$old" "$new" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
+    dodiff $PKGDIFF_FMT "$old" "$new" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
 fi
