@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/02/11 08:55:57 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/03 13:41:49 taca Exp $
 
-DISTNAME=	afm-0.2.0
+DISTNAME=	afm-0.2.2
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
