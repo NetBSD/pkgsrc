@@ -2697,9 +2697,7 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	if (cursor->pgp->ssh) {
 		fixup_ssh_keyid(cursor->pgp, signature, "sha1");
 	}
-	if (ARRAY_COUNT(cursor->pgp->primaries) == 1) {
-		j = 0;
-	} else if ((j = find_keyid(cursor->pgp, NULL, onepass->keyid)) < 0) {
+	if ((j = find_keyid(cursor->pgp, NULL, onepass->keyid)) < 0) {
 		fmt_binary(strkeyid, sizeof(strkeyid), onepass->keyid, (unsigned)sizeof(onepass->keyid));
 		snprintf(cursor->why, sizeof(cursor->why), "Signature key id %s not found ", strkeyid);
 		return 0;
