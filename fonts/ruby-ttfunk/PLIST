@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/14 17:04:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/03 13:56:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -44,8 +44,8 @@ ${GEM_LIBDIR}/lib/ttfunk/table/os2.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/post.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/post/format10.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/post/format20.rb
-${GEM_LIBDIR}/lib/ttfunk/table/post/format25.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/post/format30.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/post/format40.rb
+${GEM_LIBDIR}/lib/ttfunk/table/sbix.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/simple.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
