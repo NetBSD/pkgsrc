@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14087 2015/02/03 15:29:59 mef Exp $
+$NetBSD: TODO,v 1.14088 2015/02/03 20:54:49 snj Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.6.7
-	o bomberclone-0.11.9
 	o boolean-7.1
 	o bos-2.5
 	o boson-0.13
