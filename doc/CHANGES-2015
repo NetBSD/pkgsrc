@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.666 2015/02/03 20:54:49 snj Exp $
+$NetBSD: CHANGES-2015,v 1.667 2015/02/03 21:14:40 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -857,3 +857,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/galculator to 2.1.3 [mef 2015-02-03]
 	Updated net/synergy to 1.6.2 [tnn 2015-02-03]
 	Updated games/bomberclone to 0.11.9 [snj 2015-02-03]
+	Updated security/libnetpgpverify to 20150203 [agc 2015-02-03]
+	Updated security/netpgpverify to 20150203 [agc 2015-02-03]
