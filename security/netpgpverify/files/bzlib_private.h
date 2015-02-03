@@ -1,4 +1,4 @@
-/*	$NetBSD: bzlib_private.h,v 1.2 2014/12/04 20:08:47 agc Exp $	*/
+/*	$NetBSD: bzlib_private.h,v 1.3 2015/02/03 21:13:17 agc Exp $	*/
 
 
 /*-------------------------------------------------------------*/
@@ -56,6 +56,10 @@ typedef unsigned short  UInt16;
 #endif 
 
 #ifndef BZ_NO_STDIO
+
+#ifndef __dead
+#define __dead
+#endif
 
 void BZ2_bz__AssertH__fail ( int errcode ) __dead;
 #define AssertH(cond,errcode) \

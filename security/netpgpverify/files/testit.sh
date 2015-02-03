@@ -1,7 +1,7 @@
 #! /bin/sh
 
 tmp=$(mktemp -d ../netpgpverify-test.XXXXXX)
-mkdir ${tmp}
+
 pax -rwpp . ${tmp}
 cat > ${tmp}/config.h <<EOF
 #ifndef CONFIG_H_
