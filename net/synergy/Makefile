@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/02/03 18:49:34 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2015/02/03 19:08:55 tnn Exp $
 #
 
 DISTNAME=		synergy-1.6.2
@@ -38,15 +38,11 @@ post-extract:
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/${PKGBASE}
 
-post-build:
-	${CP} ${WRKSRC}/doc/synergyc.man ${WRKSRC}/doc/synergyc.1
-	${CP} ${WRKSRC}/doc/synergys.man ${WRKSRC}/doc/synergys.1
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergyc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergys ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/synergyc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/synergys.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for p in synergyc synergys
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${p} ${DESTDIR}${PREFIX}/bin/${p}
+	${INSTALL_MAN} ${WRKSRC}/doc/${p}.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${p}.1
+.endfor
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 .endfor
