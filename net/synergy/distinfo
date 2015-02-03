@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.14 2014/12/23 23:08:29 khorben Exp $
+$NetBSD: distinfo,v 1.15 2015/02/03 18:49:34 tnn Exp $
 
-SHA1 (synergy-1.4.14-Source.tar.gz) = 7a656e076dc254481c66532fb599faad1cce4e91
-RMD160 (synergy-1.4.14-Source.tar.gz) = c5192e615a8a24dd4eec94c7b03df57eaeaf5f56
-Size (synergy-1.4.14-Source.tar.gz) = 4223052 bytes
-SHA1 (patch-src_lib_ipc_CIpcClientProxy.cpp) = fde36ceab778151f849604f669ae4bd71273fa4e
-SHA1 (patch-src_lib_ipc_CIpcServerProxy.cpp) = b3669add3fec67f2fbc30457fcd36ae73e1cd57b
-SHA1 (patch-src_lib_server_CClientProxy1__4.cpp) = dbaf92152e431048b229d7cecf80d0776e7653b1
-SHA1 (patch-src_lib_server_CConfig.cpp) = 14b5434c3fe33efde44f26fd14da6897229aacc9
-SHA1 (patch-src_lib_server_CConfig.h) = 6aa99efc189a3d8e067a30f4fee4d94874e4f3c6
-SHA1 (patch-tools_cryptopp562_wake.cpp) = 7e9284e49a3bdfdb7a9cec2cd6081babf78db38a
-SHA1 (patch-tools_gmock-1.6.0_configure) = 45cfbcdc8b55c1e745265ed4e2bbbfe41ef000a2
-SHA1 (patch-tools_gmock-1.6.0_include_gmock_internal_gmock-port.h) = dc526bcfab414dcd35d3d67c36998d92020bd398
-SHA1 (patch-tools_gtest-1.6.0_configure) = 35d77cab8e651bff031294f7d12570cb582aba1a
-SHA1 (patch-tools_gtest-1.6.0_include_gtest_internal_gtest-port.h) = 518067092fe4209bfc28f3bb4eb4092d1b0c1304
+SHA1 (synergy-1.6.2.tar.gz) = e3cab850da2ac63c1d7649c5a9fa0c7c204ef9a4
+RMD160 (synergy-1.6.2.tar.gz) = 861297c33477865d5a8e8027398d77efa13029c4
+Size (synergy-1.6.2.tar.gz) = 4411385 bytes
+SHA1 (patch-src_lib_ipc_CIpcClientProxy.cpp) = 0779513d0653354c775a7f04417ae214f06795da
+SHA1 (patch-src_lib_ipc_CIpcServerProxy.cpp) = 8b486ad626a9bef7d74602035f3df73c3a91e0dd
+SHA1 (patch-src_lib_server_CClientProxy1__4.cpp) = fe1e10216c102082ed43b41025cd4bac2c04b090
+SHA1 (patch-src_lib_server_CConfig.cpp) = 94c5e9a57f9880ab8fcb75320bd2dbb306540966
+SHA1 (patch-tools_cryptopp562_wake.cpp) = b16e9702cfcee3180c129e03d8e0651ab0d13425
+SHA1 (patch-tools_gmock-1.6.0_configure) = 3a10f06cba4f0af02e0175bf007d1937e3b5a25e
+SHA1 (patch-tools_gmock-1.6.0_include_gmock_internal_gmock-port.h) = 7e3b8ac2209e895f8949f35ef710300b727384ce
+SHA1 (patch-tools_gtest-1.6.0_configure) = 85386ecd2bf9ab8247ed7d244d6e96887b3c1d5d
+SHA1 (patch-tools_gtest-1.6.0_include_gtest_internal_gtest-port.h) = 2db6f0bc8a2e38b1beb56ac51428c8aaa5ef3b75

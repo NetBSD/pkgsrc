@@ -1,9 +1,9 @@
-$NetBSD: patch-tools_gtest-1.6.0_configure,v 1.1 2011/06/23 03:16:50 taca Exp $
+$NetBSD: patch-tools_gtest-1.6.0_configure,v 1.2 2015/02/03 18:49:34 tnn Exp $
 
 Fix wrong usage of test(1).
 
---- tools/gtest-1.6.0/configure.orig	2011-05-07 02:25:30.000000000 +0000
-+++ tools/gtest-1.6.0/configure
+--- ext/gtest-1.6.0/configure.orig	2011-05-07 02:25:30.000000000 +0000
++++ ext/gtest-1.6.0/configure
 @@ -14861,7 +14861,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
         have_pthreads="$acx_pthread_ok"
