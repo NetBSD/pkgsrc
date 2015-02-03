@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.644 2015/02/03 13:38:14 taca Exp $
+$NetBSD: CHANGES-2015,v 1.645 2015/02/03 13:39:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mercurial to 3.3 [wiz 2015-02-03]
 	Updated devel/p5-Test-Refcount to 0.08 [mef 2015-02-03]
 	Updated archivers/ruby-zip to 1.1.7 [taca 2015-02-03]
+	Updated devel/ruby-eventmachine to 1.0.5 [taca 2015-02-03]
