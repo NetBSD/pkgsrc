@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/04/17 20:28:12 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/02/03 13:58:32 mef Exp $
 
-SHA1 (bird-1.3.11.tar.gz) = c0a425ff2ef85bbeb17dbdf82c97c4565ebfb903
-RMD160 (bird-1.3.11.tar.gz) = f62213b07941cac4e441e8211a37b0a32fd4601b
-Size (bird-1.3.11.tar.gz) = 1108400 bytes
-SHA1 (patch-client_birdc.c) = 58da10193bbd2eeb377c01afd6b40fe7b9c11495
-SHA1 (patch-configure) = ea93a7e90caa274632159172deb53eff9739cb4b
-SHA1 (patch-lib_lists.h) = 7068c6b73841e19a540a08e822658b0455c53a77
-SHA1 (patch-tools_Makefile.in) = d16dd8b9acc4392025a478995f2efc0e36f54919
+SHA1 (bird-1.4.5.tar.gz) = 9ef3200fa9cae4e545afe55eb4a017d1fd298c7a
+RMD160 (bird-1.4.5.tar.gz) = 4b45aaac768542e2eec9451a6be4dab4b338e7cb
+Size (bird-1.4.5.tar.gz) = 1284666 bytes
+SHA1 (patch-configure) = b22044e5be530867a05406d4b32d789933993d53
+SHA1 (patch-lib_lists.h) = 1ce09f2483dc74c8c26a57c2fd959f7ffb7ff216
+SHA1 (patch-tools_Makefile.in) = 4a6ad298abbe8c42627528c9156ce581a6e07917
