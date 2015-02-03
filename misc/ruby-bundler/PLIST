@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/09/29 23:35:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/02/03 14:53:20 taca Exp $
 bin/bundle
 bin/bundler
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/bin/bundle_ruby
 ${GEM_LIBDIR}/bin/bundler
 ${GEM_LIBDIR}/bundler.gemspec
 ${GEM_LIBDIR}/lib/bundler.rb
+${GEM_LIBDIR}/lib/bundler/anonymizable_uri.rb
 ${GEM_LIBDIR}/lib/bundler/capistrano.rb
 ${GEM_LIBDIR}/lib/bundler/cli.rb
 ${GEM_LIBDIR}/lib/bundler/cli/binstubs.rb
@@ -106,6 +107,8 @@ ${GEM_LIBDIR}/lib/bundler/source/rubygems.rb
 ${GEM_LIBDIR}/lib/bundler/source_list.rb
 ${GEM_LIBDIR}/lib/bundler/spec_set.rb
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/.document
+${GEM_LIBDIR}/lib/bundler/ssl_certs/AddTrustExternalCARoot-2048.pem
+${GEM_LIBDIR}/lib/bundler/ssl_certs/AddTrustExternalCARoot.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/Class3PublicPrimaryCertificationAuthority.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
@@ -185,6 +188,7 @@ ${GEM_LIBDIR}/man/bundle-update.ronn
 ${GEM_LIBDIR}/man/bundle.ronn
 ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/index.txt
+${GEM_LIBDIR}/spec/bundler/anonymizable_uri_spec.rb
 ${GEM_LIBDIR}/spec/bundler/bundler_spec.rb
 ${GEM_LIBDIR}/spec/bundler/cli_spec.rb
 ${GEM_LIBDIR}/spec/bundler/definition_spec.rb
@@ -265,6 +269,7 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/artifice/endopint_marshal_fail_basic_authentication.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_500.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_api_forbidden.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_api_missing.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_basic_authentication.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_creds_diff_host.rb
