@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 17:10:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/03 14:09:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.hoerc
+${GEM_LIBDIR}/.minitest.rb
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Contributing.rdoc
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Licence.rdoc
 ${GEM_LIBDIR}/Manifest.txt
@@ -19,8 +23,10 @@ ${GEM_LIBDIR}/lib/color/palette/gimp.rb
 ${GEM_LIBDIR}/lib/color/palette/monocontrast.rb
 ${GEM_LIBDIR}/lib/color/rgb.rb
 ${GEM_LIBDIR}/lib/color/rgb/colors.rb
+${GEM_LIBDIR}/lib/color/rgb/contrast.rb
 ${GEM_LIBDIR}/lib/color/rgb/metallic.rb
 ${GEM_LIBDIR}/lib/color/yiq.rb
+${GEM_LIBDIR}/test/minitest_helper.rb
 ${GEM_LIBDIR}/test/test_adobecolor.rb
 ${GEM_LIBDIR}/test/test_cmyk.rb
 ${GEM_LIBDIR}/test/test_color.rb
