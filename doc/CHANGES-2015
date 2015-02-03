@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.646 2015/02/03 13:42:24 taca Exp $
+$NetBSD: CHANGES-2015,v 1.647 2015/02/03 13:57:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/ruby-zip to 1.1.7 [taca 2015-02-03]
 	Updated devel/ruby-eventmachine to 1.0.5 [taca 2015-02-03]
 	Updated fonts/ruby-afm to 0.2.2 [taca 2015-02-03]
+	Updated fonts/ruby-ttfunk to 1.4.0 [taca 2015-02-03]
