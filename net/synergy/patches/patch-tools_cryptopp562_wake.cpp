@@ -1,7 +1,7 @@
-$NetBSD: patch-tools_cryptopp562_wake.cpp,v 1.1 2014/09/10 12:23:40 joerg Exp $
+$NetBSD: patch-tools_cryptopp562_wake.cpp,v 1.2 2015/02/03 18:49:34 tnn Exp $
 
---- tools/cryptopp562/wake.cpp.orig	2014-09-08 10:35:18.000000000 +0000
-+++ tools/cryptopp562/wake.cpp
+--- ext/cryptopp562/wake.cpp.orig	2014-09-08 10:35:18.000000000 +0000
++++ ext/cryptopp562/wake.cpp
 @@ -23,15 +23,15 @@ void WAKE_Base::GenKey(word32 k0, word32
  	signed int x, z, p;	
  	// x and z were declared as "long" in Wheeler's paper, which is a signed type. I don't know if that was intentional, but it's too late to change it now. -- Wei 7/4/2010

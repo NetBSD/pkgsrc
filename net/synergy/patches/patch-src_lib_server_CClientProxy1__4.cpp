@@ -1,13 +1,23 @@
-$NetBSD: patch-src_lib_server_CClientProxy1__4.cpp,v 1.1 2014/08/25 09:58:18 obache Exp $
+$NetBSD: patch-src_lib_server_CClientProxy1__4.cpp,v 1.2 2015/02/03 18:49:34 tnn Exp $
 
---- src/lib/server/CClientProxy1_4.cpp.orig	2013-05-01 15:53:22.000000000 +0000
-+++ src/lib/server/CClientProxy1_4.cpp
-@@ -102,7 +102,7 @@ CClientProxy1_4::cryptoIv()
- 	CString data(reinterpret_cast<const char*>(iv), CRYPTO_IV_SIZE);
+g++ on sparc64 complains: ISO C++ says that these are ambiguous:
+synergy/ProtocolUtil.h:82:16: note: candidate 1: static void ProtocolUtil::writef(void*, const char*, va_list)
+  static void   writef(void*, const char* fmt, va_list);
+                ^
+synergy/ProtocolUtil.h:53:16: note: candidate 2: static void ProtocolUtil::writef(synergy::IStream*, const char*, ...)
+  static void   writef(synergy::IStream*,
+                ^
+synergy/ProtocolUtil.h:82:16: error: 'static void ProtocolUtil::writef(void*, const char*, va_list)' is private
+  static void   writef(void*, const char* fmt, va_list);
+
+--- src/lib/server/ClientProxy1_4.cpp.orig	2014-12-02 15:03:19.000000000 +0000
++++ src/lib/server/ClientProxy1_4.cpp
+@@ -83,7 +83,7 @@ ClientProxy1_4::cryptoIv()
+ 	String data(reinterpret_cast<const char*>(iv), CRYPTO_IV_SIZE);
  
  	LOG((CLOG_DEBUG2 "send crypto iv change to \"%s\"", getName().c_str()));
--	CProtocolUtil::writef(getStream(), kMsgDCryptoIv, &data);
-+	CProtocolUtil::writef(getStream(), kMsgDCryptoIv, "%s", &data);
+-	ProtocolUtil::writef(getStream(), kMsgDCryptoIv, &data);
++	ProtocolUtil::writef(getStream(), kMsgDCryptoIv, "%s", &data);
  	
  	// change IV only after we've sent the current IV, otherwise
  	// the client won't be able to decrypt the new IV.
