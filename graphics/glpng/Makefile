@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/02/16 11:18:13 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2015/02/03 22:26:50 snj Exp $
 
-DISTNAME=	glpng-1.45.20081203
-PKGREVISION=	3
+DISTNAME=	1079563a36edfe10a5f5d79ad38fe465425b989e
 CATEGORIES=	graphics
-MASTER_SITES=	#
+MASTER_SITES=	http://repo.or.cz/w/glpng.git/snapshot/
+PKGNAME=	glpng-1.46
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Load PNG images directly as OpenGL textures
