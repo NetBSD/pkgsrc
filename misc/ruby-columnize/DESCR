@@ -1,1 +1,8 @@
-Columnize is a module for printing an Array in column-sorted order.
+Columnize is a module to format an Array as an Array of String aligned
+in columns.
+
+In showing a long lists, sometimes one would prefer to see the value
+arranged aligned in columns. Some examples include listing methods
+of an object or debugger commands.
+
+See Examples in the rdoc documentation for examples.

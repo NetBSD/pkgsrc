@@ -1,19 +1,28 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/17 16:16:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/03 14:59:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/Makefile
 ${GEM_LIBDIR}/NEWS
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/THANKS
 ${GEM_LIBDIR}/columnize.gemspec
 ${GEM_LIBDIR}/lib/Makefile
 ${GEM_LIBDIR}/lib/columnize.rb
 ${GEM_LIBDIR}/lib/columnize/Makefile
+${GEM_LIBDIR}/lib/columnize/columnize.rb
+${GEM_LIBDIR}/lib/columnize/opts.rb
 ${GEM_LIBDIR}/lib/columnize/version.rb
+${GEM_LIBDIR}/test/test-columnize-array.rb
 ${GEM_LIBDIR}/test/test-columnize.rb
+${GEM_LIBDIR}/test/test-columnizer.rb
 ${GEM_LIBDIR}/test/test-hashparm.rb
 ${GEM_LIBDIR}/test/test-issue3.rb
+${GEM_LIBDIR}/test/test-min_rows_and_colwidths.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
