@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.11 2014/09/26 07:00:50 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.12 2015/02/03 02:32:05 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -48,7 +48,6 @@ BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
 
 
-
 # -----------------------------------------------------------------------------
 # The "pre-configure" hook
 #
@@ -81,24 +80,52 @@ pre-configure:
 # dependencies, otherwise the resulting binary can easily get
 # unusable.
 #
+
+# Compiler wrappers must not remove -I/-L flags for this directory
+# tree, otherwise the GHC we are going to use for building our
+# bootstraping kit will not work at all. Ideally it should be added to
+# BUILDLINK_PASSTHRU_DIRS only .if make(bootstrap), but then running
+# "${MAKE} wrapper" before "${MAKE} bootstrap" will result in a
+# cryptic error which we can't easily catch.
+BOOTSTRAP_GHC_LIBDIR_CMD=	ghc --print-libdir
+.if !defined(BOOTSTRAP_GHC_LIBDIR)
+BOOTSTRAP_GHC_LIBDIR!=		${BOOTSTRAP_GHC_LIBDIR_CMD} 2>/dev/null || ${ECHO}
+.endif
+MAKEVARS+=			BOOTSTRAP_GHC_LIBDIR
+BUILDLINK_PASSTHRU_DIRS+=	${BOOTSTRAP_GHC_LIBDIR}
+
+# Default values for BUILDLINK_INCDIRS.<pkg> are only generated in the
+# barrier. See ../../mk/buildlink3/bsd.buildlink3.mk and
+# ../../mk/bsd.pkg.barrier.mk
 .PHONY: bootstrap
-
-#BUILDLINK_PASSTHRU_DIRS=	${PREFIX}/lib/${PKGNAME_NOREV}
-
+.if make(bootstrap)
+_BARRIER_CMDLINE_TARGETS+=	bootstrap
+.endif
+.if !defined(_PKGSRC_BARRIER)
+bootstrap: barrier
+.else
 bootstrap: pre-bootstrap .WAIT ${WRKDIR}/${BOOT_ARCHIVE}
 	@${PHASE_MSG} "Done creating" ${WRKDIR}/${BOOT_ARCHIVE}
-
+.endif
 
 .PHONY: pre-bootstrap
-pre-bootstrap:
-	@${TEST} \! -f ${_COOKIE.configure} || \
-		(${ERROR_MSG} "You have already configured the package in a way\
+pre-bootstrap: wrapper
+.if empty(BOOTSTRAP_GHC_LIBDIR)
+	@if ${BOOTSTRAP_GHC_LIBDIR_CMD} 2>/dev/null 1>&2; then \
+		${ERROR_MSG} "Running \"${BOOTSTRAP_GHC_LIBDIR_CMD}\" has failed during wrapper phase."; \
+		${FAIL_MSG}  "Plase run \"${MAKE} clean\" and try again."; \
+	else \
+		${ERROR_MSG} "Failed to run \"${BOOTSTRAP_GHC_LIBDIR_CMD}\":"; \
+		${BOOTSTRAP_GHC_LIBDIR_CMD}; \
+		${ERROR_MSG} "You don't seem to have a working GHC in your PATH."; \
+		${FAIL_MSG}  "Please install one and then run \"${MAKE} clean bootstrap\"."; \
+	fi
+.endif
+	@if ${TEST} -f ${_COOKIE.configure}; then \
+		${ERROR_MSG} "You have already configured the package in a way\
 		that building bootstrapping compiler is impossible."; \
-		${FAIL_MSG}  "Please run \"${MAKE} clean patch\" first.");
-	@${TEST} -f ${_COOKIE.patch} || \
-		${FAIL_MSG} "Please run \"${MAKE} patch\" first."
-	@${DO_NADA}
-
+		${FAIL_MSG}  "Please run \"${MAKE} clean\" first."; \
+	fi
 
 ${WRKDIR}/lndir:
 	@${PHASE_MSG} "Building lndir(1) to duplicate the source tree."
@@ -116,20 +143,13 @@ ${WRKDIR}/stamp-configure-boot: ${WRKDIR}/stamp-lndir-boot
 	@${PHASE_MSG} "Configuring bootstrapping compiler ${PKGNAME_NOREV}"
 	${MKDIR} ${WRKDIR:Q}/build-boot
 	cd ${WRKDIR:Q}/build-boot && \
-		${PKGSRC_SETENV} PATH=${PATH} \
-		CONF_CC_OPTS_STAGE0=${CFLAGS:Q} \
-		CONF_GCC_LINKER_OPTS_STAGE0="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
-		CONF_LD_LINKER_OPTS_STAGE0="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib" \
-		CONF_CC_OPTS_STAGE1=${CFLAGS:Q} \
-		CONF_GCC_LINKER_OPTS_STAGE1="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
-		CONF_LD_LINKER_OPTS_STAGE1="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib" \
-		CONF_CC_OPTS_STAGE2=${CFLAGS:Q} \
-		CONF_GCC_LINKER_OPTS_STAGE2="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
-		CONF_LD_LINKER_OPTS_STAGE2="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib" \
-		${SH} ./configure && \
-		${SED} -e "s,@CURSES_INCDIR@,${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.ncurses:Uinclude},g" \
-			-e "s,@CURSES_LIBDIR@,${BUILDLINK_PREFIX.curses:Q}/lib,g" \
-			${FILESDIR:Q}/bootstrap.build.mk > mk/build.mk
+		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure ${CONFIGURE_ARGS} && \
+		${CP} -f ${FILESDIR:Q}/bootstrap.build.mk mk/build.mk && \
+		${ECHO} >> mk/build.mk && \
+		${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
+			--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
+			--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q}" \
+			>> mk/build.mk
 	${TOUCH} ${.TARGET}
 
 ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot

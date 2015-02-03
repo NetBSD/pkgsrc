@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/08/03 08:14:38 obache Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/03 02:32:05 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -60,10 +60,10 @@ USE_GNU_CONFIGURE_HOST=	no
 
 CONFIGURE_ARGS+= \
 	--with-gcc=${CC:Q} \
-	--with-gmp-includes=${BUILDLINK_PREFIX.gmp:Q}/include \
-	--with-gmp-libraries=${BUILDLINK_PREFIX.gmp:Q}/lib \
-	--with-iconv-includes=${BUILDLINK_PREFIX.iconv:Q}/include \
-	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/lib
+	--with-gmp-includes=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_INCDIRS.gmp:Q} \
+	--with-gmp-libraries=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_LIBDIRS.gmp:Q} \
+	--with-iconv-includes=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_INCDIRS.iconv:Q} \
+	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_LIBDIRS.iconv:Q}
 
 CONFIGURE_ENV+= \
 	CONF_CC_OPTS_STAGE0=${CFLAGS:Q} \
@@ -107,8 +107,9 @@ post-configure:
 # in a non-standard path. Without that, the resulting GHC tries to
 # link programs by executing ld(1) without passing it -L${PREFIX:Q}/lib.
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
-		--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/include \
-		--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/lib" >> ${WRKSRC:Q}/mk/build.mk
+		--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
+		--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q}" \
+		>> ${WRKSRC:Q}/mk/build.mk
 
 # The ghc compiler does normally split the generated asm files into small
 # parts before sending them to gcc, to enable the linker to eliminate
@@ -120,8 +121,8 @@ post-configure:
 # Disable file splitting until pkgsrc gets improved.
 	${RUN} ${ECHO} "SplitObjs         = NO" >> ${WRKSRC:Q}/mk/build.mk
 
-# If there is HsColour is in the PATH, GHC's build system tries to use
-# it without even checking if it really works. That's not what we
+# If there is HsColour in the PATH, GHC's build system tries to use it
+# without even checking if it really works. That's not what we
 # appreciate.
 	${RUN} ${ECHO} "HSCOLOUR_SRCS     = NO" >> ${WRKSRC:Q}/mk/build.mk
 
