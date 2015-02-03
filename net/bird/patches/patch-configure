@@ -1,4 +1,7 @@
-$NetBSD: patch-configure,v 1.3 2014/03/28 23:27:16 pettai Exp $
+$NetBSD: patch-configure,v 1.4 2015/02/03 13:58:32 mef Exp $
+
+date: 2013-10-21 03:00:57 +0900;  author: joerg;  state: Exp;  lines: +12 -1;  commitid: 17vYRnrUrAvnK3ax;
+Prefix rpath options with -Wl.
 
 --- configure.orig	2013-07-28 18:57:59.000000000 +0000
 +++ configure
