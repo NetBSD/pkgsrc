@@ -2190,6 +2190,7 @@ getbignum(pgpv_bignum_t *bignum, bufgap_t *bg, char *buf, const char *header)
 {
 	uint32_t	 len;
 
+	USE_ARG(header);
 	(void) bufgap_getbin(bg, &len, sizeof(len));
 	len = pgp_ntoh32(len);
 	(void) bufgap_seek(bg, sizeof(len), BGFromHere, BGByte);
@@ -2248,6 +2249,7 @@ read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
 	int			 ok;
 	int			 cc;
 
+	USE_ARG(pgp);
 	memset(primary, 0x0, sizeof(*primary));
 	(void) memset(&bg, 0x0, sizeof(bg));
 	va_start(args, fmt);
@@ -2731,6 +2733,7 @@ pgpv_read_ssh_pubkeys(pgpv_t *pgp, const void *keyring, ssize_t size)
 {
 	pgpv_primarykey_t	primary;
 
+	USE_ARG(size);
 	if (pgp == NULL) {
 		return 0;
 	}
