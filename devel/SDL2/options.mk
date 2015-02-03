@@ -1,13 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2013/08/15 10:26:16 adam Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/03 08:50:44 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_SUPPORTED_OPTIONS=	alsa arts esound nas opengl oss pulseaudio
 PKG_SUPPORTED_OPTIONS+=	x11 xcursor xim xinerama xrandr xrender xscrnsaver
-PKG_SUGGESTED_OPTIONS+=	oss
+PKG_SUGGESTED_OPTIONS+=	oss opengl
 
-.if ${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS+=	opengl
-.else
+.if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 
