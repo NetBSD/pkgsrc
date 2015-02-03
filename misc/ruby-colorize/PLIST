@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/03 14:56:32 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/colorize.gemspec
+${GEM_LIBDIR}/lib/colorize.rb
+${GEM_LIBDIR}/lib/colorize/class_methods.rb
+${GEM_LIBDIR}/lib/colorize/instance_methods.rb
+${GEM_LIBDIR}/test/test_colorize.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
