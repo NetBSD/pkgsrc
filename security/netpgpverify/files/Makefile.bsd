@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.bsd,v 1.5 2015/01/30 18:47:51 agc Exp $
+# $NetBSD: Makefile.bsd,v 1.6 2015/02/03 21:34:57 agc Exp $
 
 PROG=netpgpverify
 
@@ -34,6 +34,8 @@ tst:
 	@echo "expected failure, no valid key for verification"
 	-./${PROG} -k /dev/null NetBSD-6.0_RC1_hashes.gpg
 	@echo "dumping now"
-	./${PROG} -c dump -k pubring.gpg NetBSD-6.0_RC1_hashes.asc
+	./${PROG} -c dump -k pubring.gpg NetBSD-6.0_RC1_hashes.asc > /dev/null
 	@echo "dumping ssh now"
 	./${PROG} -c dump -S sshtest-20140202.pub data.gpg
+	@echo "testing pubring with one key"
+	./${PROG} -k 1keypubring.gpg 1keytest.gpg
