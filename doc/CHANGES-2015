@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.640 2015/02/03 06:12:12 snj Exp $
+$NetBSD: CHANGES-2015,v 1.641 2015/02/03 08:51:12 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Perl-Releases to 2.06 [mef 2015-02-03]
 	Updated devel/p5-App-perlbrew to 0.73 [mef 2015-02-03]
 	Updated www/ruby-innate to 2013.02.21nb1 [taca 2015-02-03]
+	Updated devel/SDL2 to 2.0.3nb4 [snj 2015-02-03]
