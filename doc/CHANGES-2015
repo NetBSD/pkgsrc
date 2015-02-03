@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.648 2015/02/03 13:58:30 taca Exp $
+$NetBSD: CHANGES-2015,v 1.649 2015/02/03 13:58:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/ruby-afm to 0.2.2 [taca 2015-02-03]
 	Updated fonts/ruby-ttfunk to 1.4.0 [taca 2015-02-03]
 	Updated graphics/ruby-RMagick to 2.13.4 [taca 2015-02-03]
+	Updated net/bird to 1.4.5 [mef 2015-02-03]
