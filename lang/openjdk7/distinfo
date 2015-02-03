@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2015/01/30 09:43:52 abs Exp $
+$NetBSD: distinfo,v 1.66 2015/02/03 16:50:30 tnn Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -30,9 +30,6 @@ Size (openjdk7/bootstrap-jdk7u60-bin-netbsd-7-i386-20140719.tar.bz2) = 40161195 
 SHA1 (openjdk7/bootstrap-jdk7u71-bin-freebsd-10-x86_64-20150101.tar.bz2) = 7e85c42f75f014e88eb62580979f6a0fc9b6e957
 RMD160 (openjdk7/bootstrap-jdk7u71-bin-freebsd-10-x86_64-20150101.tar.bz2) = d84d7b82205f23827ef9ce672602d0ba8a9a9c72
 Size (openjdk7/bootstrap-jdk7u71-bin-freebsd-10-x86_64-20150101.tar.bz2) = 37448005 bytes
-SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
-RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
-Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
 SHA1 (openjdk7/icedtea-2.5.3.tar.xz) = c509018b108ec6d8e5c8380c9b42d5fba426c632
 RMD160 (openjdk7/icedtea-2.5.3.tar.xz) = c386237bc07fa535b1cfd0cf95fc0bc50ab067c3
 Size (openjdk7/icedtea-2.5.3.tar.xz) = 2021560 bytes
