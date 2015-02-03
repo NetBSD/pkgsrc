@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.642 2015/02/03 11:10:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.643 2015/02/03 13:05:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -833,3 +833,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-innate to 2013.02.21nb1 [taca 2015-02-03]
 	Updated devel/SDL2 to 2.0.3nb4 [snj 2015-02-03]
 	Updated devel/py-mercurial to 3.3 [wiz 2015-02-03]
+	Updated devel/p5-Test-Refcount to 0.08 [mef 2015-02-03]
