@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.668 2015/02/03 21:35:51 agc Exp $
+$NetBSD: CHANGES-2015,v 1.669 2015/02/03 22:51:20 abs Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -861,3 +861,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/netpgpverify to 20150203 [agc 2015-02-03]
 	Updated security/libnetpgpverify to 20150204 [agc 2015-02-03]
 	Updated security/netpgpverify to 20150204 [agc 2015-02-03]
+	Updated pkgtools/pkgdiff to 1.6 [abs 2015-02-03]
