@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/02/01 13:57:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/02/03 13:39:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/fastfilereaderext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/rubyeventmachine.${RUBY_DLEXT}
@@ -140,6 +140,7 @@ ${GEM_LIBDIR}/tests/test_kb.rb
 ${GEM_LIBDIR}/tests/test_line_protocol.rb
 ${GEM_LIBDIR}/tests/test_ltp.rb
 ${GEM_LIBDIR}/tests/test_ltp2.rb
+${GEM_LIBDIR}/tests/test_many_fds.rb
 ${GEM_LIBDIR}/tests/test_next_tick.rb
 ${GEM_LIBDIR}/tests/test_object_protocol.rb
 ${GEM_LIBDIR}/tests/test_pause.rb
