@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/01/16 09:18:48 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/03 14:46:01 taca Exp $
 
-DISTNAME=	narray-0.6.0.8
-PKGREVISION=	1
+DISTNAME=	narray-0.6.1.1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

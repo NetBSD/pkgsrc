@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/03/11 09:27:27 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/02/03 14:46:01 taca Exp $
 
-SHA1 (narray-0.6.0.8.gem) = 2af0dea43c29f8fb88cb61780b0be68d6b7c59d6
-RMD160 (narray-0.6.0.8.gem) = 7ed2256ae12c489c8f40e7b1cde977186d0e3a1c
-Size (narray-0.6.0.8.gem) = 65024 bytes
+SHA1 (narray-0.6.1.1.gem) = 69a85d021f99060c47d5f4c81086da7cbb407966
+RMD160 (narray-0.6.1.1.gem) = 43d13738d88cb296dd70b675a351605d00191fd9
+Size (narray-0.6.1.1.gem) = 65024 bytes
