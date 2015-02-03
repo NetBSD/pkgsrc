@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2012/03/17 16:16:32 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/02/03 14:59:19 taca Exp $
 
-DISTNAME=	columnize-0.3.6
+DISTNAME=	columnize-0.9.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/rocky-hacks/columnize
-COMMENT=	Ruby module to print an Array in column-sorted order
+HOMEPAGE=	https://github.com/rocky/columnize
+COMMENT=	Format an Array as an Array of String aligned in columns
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-RUBY_RDOC_REQD=	2.5.8
+RUBY_VERSION_SUPPORTED=	193 200 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
