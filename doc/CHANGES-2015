@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.661 2015/02/03 14:59:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.662 2015/02/03 15:03:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-bundler to 1.7.12 [taca 2015-02-03]
 	Added misc/ruby-colorize version 0.7.5 [taca 2015-02-03]
 	Updated misc/ruby-columnize to 0.9.0 [taca 2015-02-03]
+	Updated misc/ruby-commander to 4.2.1 [taca 2015-02-03]
