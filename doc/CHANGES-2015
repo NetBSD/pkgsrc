@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.667 2015/02/03 21:14:40 agc Exp $
+$NetBSD: CHANGES-2015,v 1.668 2015/02/03 21:35:51 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -859,3 +859,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/bomberclone to 0.11.9 [snj 2015-02-03]
 	Updated security/libnetpgpverify to 20150203 [agc 2015-02-03]
 	Updated security/netpgpverify to 20150203 [agc 2015-02-03]
+	Updated security/libnetpgpverify to 20150204 [agc 2015-02-03]
+	Updated security/netpgpverify to 20150204 [agc 2015-02-03]
