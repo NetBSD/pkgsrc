@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/02/01 12:46:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/02/03 13:37:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -7,6 +7,9 @@ ${GEM_LIBDIR}/lib/zip.rb
 ${GEM_LIBDIR}/lib/zip/central_directory.rb
 ${GEM_LIBDIR}/lib/zip/compressor.rb
 ${GEM_LIBDIR}/lib/zip/constants.rb
+${GEM_LIBDIR}/lib/zip/crypto/encryption.rb
+${GEM_LIBDIR}/lib/zip/crypto/null_encryption.rb
+${GEM_LIBDIR}/lib/zip/crypto/traditional_encryption.rb
 ${GEM_LIBDIR}/lib/zip/decompressor.rb
 ${GEM_LIBDIR}/lib/zip/deflater.rb
 ${GEM_LIBDIR}/lib/zip/dos_time.rb
@@ -15,6 +18,7 @@ ${GEM_LIBDIR}/lib/zip/entry_set.rb
 ${GEM_LIBDIR}/lib/zip/errors.rb
 ${GEM_LIBDIR}/lib/zip/extra_field.rb
 ${GEM_LIBDIR}/lib/zip/extra_field/generic.rb
+${GEM_LIBDIR}/lib/zip/extra_field/ntfs.rb
 ${GEM_LIBDIR}/lib/zip/extra_field/old_unix.rb
 ${GEM_LIBDIR}/lib/zip/extra_field/universal_time.rb
 ${GEM_LIBDIR}/lib/zip/extra_field/unix.rb
@@ -46,6 +50,9 @@ ${GEM_LIBDIR}/samples/zipfind.rb
 ${GEM_LIBDIR}/test/basic_zip_file_test.rb
 ${GEM_LIBDIR}/test/central_directory_entry_test.rb
 ${GEM_LIBDIR}/test/central_directory_test.rb
+${GEM_LIBDIR}/test/crypto/null_encryption_test.rb
+${GEM_LIBDIR}/test/crypto/traditional_encryption_test.rb
+${GEM_LIBDIR}/test/data/WarnInvalidDate.zip
 ${GEM_LIBDIR}/test/data/file1.txt
 ${GEM_LIBDIR}/test/data/file1.txt.deflatedData
 ${GEM_LIBDIR}/test/data/file2.txt
@@ -55,13 +62,16 @@ ${GEM_LIBDIR}/test/data/globTest/foo/bar/baz/foo.txt
 ${GEM_LIBDIR}/test/data/globTest/food.txt
 ${GEM_LIBDIR}/test/data/mimetype
 ${GEM_LIBDIR}/test/data/notzippedruby.rb
+${GEM_LIBDIR}/test/data/ntfs.zip
 ${GEM_LIBDIR}/test/data/rubycode.zip
 ${GEM_LIBDIR}/test/data/rubycode2.zip
 ${GEM_LIBDIR}/test/data/testDirectory.bin
 ${GEM_LIBDIR}/test/data/zip64-sample.zip
 ${GEM_LIBDIR}/test/data/zipWithDirs.zip
+${GEM_LIBDIR}/test/data/zipWithEncryption.zip
 ${GEM_LIBDIR}/test/deflater_test.rb
-${GEM_LIBDIR}/test/dummy.txt
+${GEM_LIBDIR}/test/deflater_test.rb
+${GEM_LIBDIR}/test/encryption_test.rb
 ${GEM_LIBDIR}/test/entry_set_test.rb
 ${GEM_LIBDIR}/test/entry_test.rb
 ${GEM_LIBDIR}/test/errors_test.rb
