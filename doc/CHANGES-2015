@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.655 2015/02/03 14:37:36 taca Exp $
+$NetBSD: CHANGES-2015,v 1.656 2015/02/03 14:42:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ruby-oily_png to 1.1.2 [taca 2015-02-03]
 	Updated lang/ruby-coffee-script-source to 1.9.0 [taca 2015-02-03]
 	Updated lang/ruby-coffee-script to 2.3.0 [taca 2015-02-03]
+	Updated lang/ruby-execjs to 2.2.2 [taca 2015-02-03]
