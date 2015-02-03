@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/02/03 13:55:12 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2015-02-02 08:52:21.000000000 +0000
++++ configure
+@@ -23483,7 +23483,7 @@ $as_echo "$have_x11" >&6; }
+ 
+ 	# Optionally enable strict build options that are known to cause build
+ 	# failure in many/most systems
+-	if test "x$enable_strict_build" == "xhigh"; then
++	if test "x$enable_strict_build" = "xhigh"; then
+ 		# FIXME: This causes build failure because our internal
+ 		# copy of GDL uses deprecated GDK symbols.
+ 		#
