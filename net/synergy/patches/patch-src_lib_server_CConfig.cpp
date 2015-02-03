@@ -1,16 +1,16 @@
-$NetBSD: patch-src_lib_server_CConfig.cpp,v 1.2 2013/07/05 21:34:12 joerg Exp $
+$NetBSD: patch-src_lib_server_CConfig.cpp,v 1.3 2015/02/03 18:49:34 tnn Exp $
 
---- src/lib/server/CConfig.cpp.orig	2011-01-21 03:51:35.000000000 +0000
-+++ src/lib/server/CConfig.cpp
-@@ -1908,9 +1908,9 @@ CConfigReadContext::getLineNumber() cons
- 	return m_line;
- }
- 
--CConfigReadContext::operator void*() const
-+CConfigReadContext::operator bool() const
- {
--	return m_stream;
-+	return !m_stream.bad();
- }
- 
+Fix for some EOF problem. Not sure it's still required as the
+previous patch has been adapted to upstream changes.
+
+--- src/lib/server/Config.cpp.orig	2014-12-02 15:03:19.000000000 +0000
++++ src/lib/server/Config.cpp
+@@ -1931,7 +1931,7 @@ ConfigReadContext::getLineNumber() const
  bool
+ ConfigReadContext::operator!() const
+ {
+-	return !m_stream;
++	return m_stream.bad();
+ }
+ 
+ OptionValue
