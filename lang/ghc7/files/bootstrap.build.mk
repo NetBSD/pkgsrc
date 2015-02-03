@@ -29,7 +29,3 @@ INTEGER_LIBRARY    = integer-simple
 
 # We'd like to distinguish bootstrapping bindists from normal ones.
 BIN_DIST_NAME      = ghc-$(ProjectVersion)-boot
-
-libraries/terminfo_CONFIGURE_OPTS += \
-	  --configure-option=--with-curses-includes=@CURSES_INCDIR@ \
-	  --configure-option=--with-curses-libraries=@CURSES_LIBDIR@
