@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.654 2015/02/03 14:31:52 taca Exp $
+$NetBSD: CHANGES-2015,v 1.655 2015/02/03 14:37:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -845,3 +845,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/inkscape to 0.91 [adam 2015-02-03]
 	Updated graphics/ruby-mini-magick to 4.0.3 [taca 2015-02-03]
 	Updated graphics/ruby-oily_png to 1.1.2 [taca 2015-02-03]
+	Updated lang/ruby-coffee-script-source to 1.9.0 [taca 2015-02-03]
+	Updated lang/ruby-coffee-script to 2.3.0 [taca 2015-02-03]
