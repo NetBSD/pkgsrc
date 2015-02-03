@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/17 14:16:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/03 14:46:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/narray.${RUBY_DLEXT}
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/MANIFEST
-${GEM_LIBDIR}/README.en
-${GEM_LIBDIR}/README.ja
-${GEM_LIBDIR}/SPEC.en
-${GEM_LIBDIR}/SPEC.ja
+${GEM_LIBDIR}/README.ja.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/SPEC.en.txt
+${GEM_LIBDIR}/SPEC.ja.txt
 ${GEM_LIBDIR}/narray.h
 ${GEM_LIBDIR}/narray.${RUBY_DLEXT}
 ${GEM_LIBDIR}/narray_config.h
