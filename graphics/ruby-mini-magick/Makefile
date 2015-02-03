@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2014/03/14 17:11:42 taca Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/03 14:14:12 taca Exp $
 
-DISTNAME=	mini_magick-3.7.0
+DISTNAME=	mini_magick-4.0.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	graphics
 
@@ -11,7 +11,6 @@ LICENSE=	mit
 
 # MiniMagick uses mogrify(1) or gm(1) from ImageMagick.
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-DEPENDS+=	${RUBY_PKGPREFIX}-subexec>=0.2.1<0.3:../../devel/ruby-subexec
 
 pre-configure:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
