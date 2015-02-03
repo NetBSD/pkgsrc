@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.659 2015/02/03 14:53:48 taca Exp $
+$NetBSD: CHANGES-2015,v 1.660 2015/02/03 14:57:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -851,3 +851,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/ruby-narray to 0.6.1.1 [taca 2015-02-03]
 	Updated misc/ruby-ansi to 1.5.0 [taca 2015-02-03]
 	Updated misc/ruby-bundler to 1.7.12 [taca 2015-02-03]
+	Added misc/ruby-colorize version 0.7.5 [taca 2015-02-03]
