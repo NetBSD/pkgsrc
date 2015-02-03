@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.446 2015/01/30 13:50:44 mef Exp $
+# $NetBSD: Makefile,v 1.447 2015/02/03 14:57:20 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -256,6 +256,7 @@ SUBDIR+=	ruby-ansi
 SUBDIR+=	ruby-args_parser
 SUBDIR+=	ruby-bundler
 SUBDIR+=	ruby-colorator
+SUBDIR+=	ruby-colorize
 SUBDIR+=	ruby-columnize
 SUBDIR+=	ruby-commander
 SUBDIR+=	ruby-configuration
