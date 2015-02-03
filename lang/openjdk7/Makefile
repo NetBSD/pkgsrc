@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2015/01/27 12:31:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2015/02/03 16:50:30 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,10 +23,6 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 #PATCHFILES+=	jdk-7u21-20130526.diff
 #PATCH_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}
 
-CACERTS=	cacerts-20091013.tar.bz2
-DISTFILES+=	${CACERTS}
-EXTRACT_ONLY+=	${CACERTS}
-
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
@@ -38,6 +35,7 @@ MAKE_ENV+=		PKGSRC_UNZIPSFX=${TOOLS_PATH.unzip}sfx
 DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 #DEPENDS+=		ja-sazanami-ttf-[0-9]*:../../fonts/ja-sazanami-ttf
 #DEPENDS+=		baekmuk-ttf-[0-9]*:../../fonts/baekmuk-ttf
+BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -230,14 +228,18 @@ ${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
 	touch ${WRKDIR}/stage3-done
 
 ${WRKDIR}/cacerts.out:
-	for cert in ${WRKDIR}/cacerts/*.crt; do			\
-		${ECHO} yes | LD_LIBRARY_PATH=${LD_LIBRARY_PATH} \
-		  LC_ALL=C ${BUILDDIR}/bin/keytool		\
+	mkdir ${WRKDIR}/cacerts && cd ${WRKDIR}/cacerts && 		\
+		${PREFIX}/sbin/mozilla-rootcerts extract
+	for cert in ${WRKDIR}/cacerts/*.pem; do				\
+		${INFO_MSG} "Importing $$cert" &&			\
+		 ${SETENV} LD_LIBRARY_PATH=${LD_LIBRARY_PATH} LC_ALL=C	\
+		  ${BUILDDIR}/bin/keytool				\
+		  -noprompt						\
 		  -importcert						\
 		  -keystore ${.TARGET}					\
-		  -alias `${ECHO} $$cert | sed 's,.*/\\([^/]*\\)\\.crt,\\1,'` \
+		  -alias `${ECHO} $$cert | sed 's,.*/\\([^/]*\\)\\.pem,\\1,'` \
 		  -file $$cert						\
-		  -storepass pkgsrc;					\
+		  -storepass changeit;					\
 	done
 
 do-install:
