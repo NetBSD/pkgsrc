@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14085 2015/02/02 15:24:51 adam Exp $
+$NetBSD: TODO,v 1.14086 2015/02/03 14:11:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o imp-6.1.7
 	o inadyn-1.99.10 [https://github.com/troglobit/inadyn]
 	o ingo-3.1.4
-	o inkscape-0.91
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
