@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.22 2014/03/17 14:11:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2015/02/03 13:58:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Doxyfile
-${GEM_LIBDIR}/README-Mac-OSX.txt
-${GEM_LIBDIR}/README.html
-${GEM_LIBDIR}/build_tarball.rake
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/before_install_linux.sh
+${GEM_LIBDIR}/before_install_osx.sh
+${GEM_LIBDIR}/doc/.cvsignore
 ${GEM_LIBDIR}/doc/comtasks.html
 ${GEM_LIBDIR}/doc/constants.html
 ${GEM_LIBDIR}/doc/css/doc.css
@@ -166,6 +173,7 @@ ${GEM_LIBDIR}/doc/ex/images/duck7.gif
 ${GEM_LIBDIR}/doc/ex/images/duck8.gif
 ${GEM_LIBDIR}/doc/ex/images/duck9.gif
 ${GEM_LIBDIR}/doc/ex/images/graydient230x6.gif
+${GEM_LIBDIR}/doc/ex/images/image_with_profile.jpg
 ${GEM_LIBDIR}/doc/ex/images/logo400x83.gif
 ${GEM_LIBDIR}/doc/ex/images/model.miff
 ${GEM_LIBDIR}/doc/ex/images/notimplemented.gif
@@ -319,7 +327,6 @@ ${GEM_LIBDIR}/examples/rotating_text.rb
 ${GEM_LIBDIR}/examples/spinner.rb
 ${GEM_LIBDIR}/examples/thumbnail.rb
 ${GEM_LIBDIR}/examples/vignette.rb
-${GEM_LIBDIR}/ext/RMagick/MANIFEST
 ${GEM_LIBDIR}/ext/RMagick/extconf.rb
 ${GEM_LIBDIR}/ext/RMagick/rmagick.c
 ${GEM_LIBDIR}/ext/RMagick/rmagick.h
@@ -336,6 +343,9 @@ ${GEM_LIBDIR}/ext/RMagick/rmstruct.c
 ${GEM_LIBDIR}/ext/RMagick/rmutil.c
 ${GEM_LIBDIR}/lib/RMagick.rb
 ${GEM_LIBDIR}/lib/RMagick2.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/rmagick.rb
+${GEM_LIBDIR}/lib/rmagick/version.rb
+${GEM_LIBDIR}/lib/rmagick_internal.rb
 ${GEM_LIBDIR}/lib/rvg/clippath.rb
 ${GEM_LIBDIR}/lib/rvg/container.rb
 ${GEM_LIBDIR}/lib/rvg/deep_equal.rb
@@ -350,11 +360,21 @@ ${GEM_LIBDIR}/lib/rvg/stylable.rb
 ${GEM_LIBDIR}/lib/rvg/text.rb
 ${GEM_LIBDIR}/lib/rvg/transformable.rb
 ${GEM_LIBDIR}/lib/rvg/units.rb
-${GEM_LIBDIR}/metaconfig
-${GEM_LIBDIR}/post-clean.rb
-${GEM_LIBDIR}/post-install.rb
-${GEM_LIBDIR}/post-setup.rb
 ${GEM_LIBDIR}/rmagick.gemspec
-${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/uninstall.rb
+${GEM_LIBDIR}/test/Draw.rb
+${GEM_LIBDIR}/test/Image1.rb
+${GEM_LIBDIR}/test/Image2.rb
+${GEM_LIBDIR}/test/Image3.rb
+${GEM_LIBDIR}/test/ImageList1.rb
+${GEM_LIBDIR}/test/ImageList2.rb
+${GEM_LIBDIR}/test/Image_attributes.rb
+${GEM_LIBDIR}/test/Import_Export.rb
+${GEM_LIBDIR}/test/Info.rb
+${GEM_LIBDIR}/test/Magick.rb
+${GEM_LIBDIR}/test/Pixel.rb
+${GEM_LIBDIR}/test/Preview.rb
+${GEM_LIBDIR}/test/cmyk.icm
+${GEM_LIBDIR}/test/srgb.icm
+${GEM_LIBDIR}/test/test_all_basic.rb
+${GEM_LIBDIR}/test/tmpnam_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
