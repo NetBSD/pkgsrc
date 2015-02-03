@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/02 17:38:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/03 11:09:55 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -249,6 +249,7 @@ ${PYSITELIB}/mercurial/dagparser.pyo
 ${PYSITELIB}/mercurial/dagutil.py
 ${PYSITELIB}/mercurial/dagutil.pyc
 ${PYSITELIB}/mercurial/dagutil.pyo
+${PYSITELIB}/mercurial/default.d/mergetools.rc
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
 ${PYSITELIB}/mercurial/demandimport.pyo
@@ -424,6 +425,9 @@ ${PYSITELIB}/mercurial/minirst.py
 ${PYSITELIB}/mercurial/minirst.pyc
 ${PYSITELIB}/mercurial/minirst.pyo
 ${PYSITELIB}/mercurial/mpatch.so
+${PYSITELIB}/mercurial/namespaces.py
+${PYSITELIB}/mercurial/namespaces.pyc
+${PYSITELIB}/mercurial/namespaces.pyo
 ${PYSITELIB}/mercurial/node.py
 ${PYSITELIB}/mercurial/node.pyc
 ${PYSITELIB}/mercurial/node.pyo

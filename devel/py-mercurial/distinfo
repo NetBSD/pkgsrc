@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/01/03 09:26:40 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/02/03 11:09:55 wiz Exp $
 
-SHA1 (mercurial-3.2.4.tar.gz) = 6adc45a99f036a3fe3433a4d24e5641c91acb693
-RMD160 (mercurial-3.2.4.tar.gz) = 96ca807bcccd0e00d1171c0541bc9ef351aa3f3f
-Size (mercurial-3.2.4.tar.gz) = 4078698 bytes
-SHA1 (patch-tests_test-convert-cvs-branch.t) = 2d801e2e11ab64aa2788b4a31269d72d419f8991
-SHA1 (patch-tests_test-convert-cvs-detectmerge.t) = cc1a846e6fa090149a1ee5d5a91640d7ce39c19a
-SHA1 (patch-tests_test-convert-cvs-synthetic.t) = 6978a6a513f04ef1a24b1026642aa03e2d9869e6
-SHA1 (patch-tests_test-convert-cvs.t) = 69f9210d59066a2bfb8f2f6fce7642a7c9009dc1
-SHA1 (patch-tests_test-convert-cvsnt-mergepoints.t) = 4bfdeb98ece867ea1bb16c0b1dd0db65fc9412a1
-SHA1 (patch-tests_test-run-tests.t) = dbf53354652831bf67a22b60e9000356269c0ef6
+SHA1 (mercurial-3.3.tar.gz) = 9bc03b6e82ce7bccb9d2608c7a5c4023adf2290c
+RMD160 (mercurial-3.3.tar.gz) = 949f621e6581329b8732c5b3d9888b55960e6d45
+Size (mercurial-3.3.tar.gz) = 4162147 bytes
