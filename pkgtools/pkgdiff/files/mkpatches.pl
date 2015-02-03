@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.18 2014/03/12 20:28:30 asau Exp $
+# $NetBSD: mkpatches.pl,v 1.19 2015/02/03 22:50:27 abs Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -175,7 +175,7 @@ foreach (sort <HANDLE>) {
 	if ($opt_v) {
 	    print "$patchfile -> $complete\n";
 	}
-	$diff=`@PREFIX@/bin/pkgdiff $old $new 2>&1`;
+	$diff=`@PREFIX@/bin/pkgdiff "$old" "$new" 2>&1`;
 	if ($?) {
 	    print "$old: $diff";
 	}
@@ -207,7 +207,7 @@ sub analyze_old_patches
 	if (! -s $checkname) {
 	    $checkname = $filename;
 	}
-	$patch = `sed '/^\+\+\+/ q' $checkname`;
+	$patch = `sed '/^\+\+\+/ q' "$checkname"`;
 	if (!($patch =~ m/^\+\+\+ ([^\t\n]*)(\n$|\t)/m)) {
 	    warn "cannot extract filename from patch $checkname";
 	    next;
@@ -247,7 +247,7 @@ sub patch_name # filename
     }
 
     $name =~ s,_,__,g;
-    $name =~ s,/,_,g;
+    $name =~ s,[/\s],_,g;
     $name = "patch-$name";
 
     return $name;
