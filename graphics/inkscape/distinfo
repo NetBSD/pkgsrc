@@ -1,24 +1,15 @@
-$NetBSD: distinfo,v 1.54 2015/01/08 16:34:29 wiz Exp $
+$NetBSD: distinfo,v 1.55 2015/02/03 13:55:12 adam Exp $
 
-SHA1 (inkscape-0.48.5.tar.bz2) = 83ddb0c96069638f712a869039989bfd7d79c6a8
-RMD160 (inkscape-0.48.5.tar.bz2) = c05e861dd458245193373f40790035339aac3e01
-Size (inkscape-0.48.5.tar.bz2) = 19719332 bytes
-SHA1 (patch-aa) = d946236902fc6cf0d2ddcbb9dd667b4d9c6f99d4
-SHA1 (patch-ab) = b70ffa613c054c26185d4728da4133aed6d88e63
-SHA1 (patch-ac) = e6877bb4698c74622f0302328ad959b75b070ff9
-SHA1 (patch-ad) = 3136850b7d34370feb951fc8fdde8cda78d54d60
-SHA1 (patch-ae) = 2b3f06a545d3cf27f59d41619528c59ac142c758
-SHA1 (patch-af) = 5f9317fcb7a798afc569aada9683fb1c7f6ba4c7
+SHA1 (inkscape-0.91.tar.bz2) = 9941ee467af570ac71a70f965cd9c48d4993b8f3
+RMD160 (inkscape-0.91.tar.bz2) = 77421bcb96c6ad4fe17e775e86b77d576b90cf32
+Size (inkscape-0.91.tar.bz2) = 25858909 bytes
 SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
-SHA1 (patch-ah) = 6da5e0651b583f925debed97faaf6800f88463da
-SHA1 (patch-ai) = 1cd8e744848d6b52ffb4f07922e09689b5e43f61
-SHA1 (patch-aj) = 8564ee2d4e884dc31e4ad4232267f6fad09f71ee
-SHA1 (patch-ap) = 134a47053020547703906140ff744e875ca1284f
-SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
-SHA1 (patch-src_dom_io_domstream.cpp) = 6b525b8e730e4497afdf1da0ae27f0dc69bfad40
-SHA1 (patch-src_dom_io_domstream.h) = 9325fc9d211eb3349628a736283ed0c475399a8b
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 92e7ddbade362f768a8ecc8e082b4e666643ba86
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9e9e76049b9fdcc5192e225b4b477a104902894b
+SHA1 (patch-aj) = 31d6cc8bb179629023bd04bcac0fd935b2c9636d
+SHA1 (patch-ap) = 412509a03d26e925548e3371529a1273db958611
+SHA1 (patch-aq) = fb7de44d33fdc5895ce84ca8d44ff6a6c328c402
+SHA1 (patch-configure) = bda42cbbe460ab19ee3dfa6dcdf212300b1f7694
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 7a1aab18cc36756fad1cddbb18cab1ef1431f590
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = ba408f45544853f9323f8bd879bd55604072bb7a
 SHA1 (patch-src_io_inkjar.cpp) = 060d59225cfe7b66db5e9f41e76860df9ce12d01
 SHA1 (patch-src_trace_siox.cpp) = daeff4626dace6997f64ab9c96b0bfb304e724c8
-SHA1 (patch-src_ui_tool_node.h) = 6ca23dddadcef8318bc81b7a67c69580db4a7b9f
+SHA1 (patch-src_ui_tool_node.h) = 2900ab737d6b9245aabefee5e79564bdbaec57bc
