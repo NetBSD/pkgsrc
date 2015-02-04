@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/04 10:08:34 wiz Exp $
+
+SHA1 (configobj-5.0.6.tar.gz) = add3ae15e3f0d2d28d37370dcad930243cb4145c
+RMD160 (configobj-5.0.6.tar.gz) = 9b7dd0b9e08477914da104585369921c549eec01
+Size (configobj-5.0.6.tar.gz) = 33248 bytes
