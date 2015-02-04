@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.722 2015/02/04 16:18:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.723 2015/02/04 17:32:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -924,3 +924,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/ruby-net-scp to 1.2.1 [taca 2015-02-04]
 	Updated security/ruby-shadow to 2.4.1 [taca 2015-02-04]
 	Updated security/ruby-sshkit to 1.6.1 [taca 2015-02-04]
+	Added converters/libpagemaker version 0.0.2 [ryoon 2015-02-04]
