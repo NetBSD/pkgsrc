@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 19:18:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:55:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/padrino-admin.rb
 ${GEM_LIBDIR}/lib/padrino-admin/access_control.rb
-${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/accordion.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/alerts.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/badges.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/bootstrap.less
@@ -20,16 +19,18 @@ ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/close.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/code.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/component-animations.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/dropdowns.less
-${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome-ie7.less
-${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome.less
-${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/bootstrap.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/bordered-pulled.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/core.less
-${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/extras.less
-${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/font-awesome-ie7.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/fixed-width.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/font-awesome.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/icons.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/larger.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/list.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/mixins.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/path.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/rotated-flipped.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/spinning.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/stacked.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/variables.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/forms.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/glyphicons.less
@@ -68,6 +69,7 @@ ${GEM_LIBDIR}/lib/padrino-admin/generators/orm.rb
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/activerecord.rb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/couchrest.rb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/datamapper.rb.tt
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/dynamoid.rb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/minirecord.rb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/mongoid.rb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/account/mongomapper.rb.tt
@@ -98,9 +100,14 @@ ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/javascripts/bootstra
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/javascripts/bootstrap/tab.js
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/javascripts/bootstrap/tooltip.js
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/javascripts/bootstrap/transition.js
-${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/javascripts/jquery-1.9.0.min.js
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/javascripts/jquery-1.11.0.min.js
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/application.css
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/bootstrap.css
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/fonts/FontAwesome.otf
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/fonts/fontawesome-webfont.eot
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/fonts/fontawesome-webfont.svg
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/fonts/fontawesome-webfont.ttf
+${GEM_LIBDIR}/lib/padrino-admin/generators/templates/assets/stylesheets/fonts/fontawesome-webfont.woff
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/erb/app/base/index.erb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/erb/app/errors/403.erb.tt
 ${GEM_LIBDIR}/lib/padrino-admin/generators/templates/erb/app/errors/404.erb.tt
@@ -179,7 +186,6 @@ ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/tr.yml
 ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/uk.yml
 ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/zh_cn.yml
 ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/zh_tw.yml
-${GEM_LIBDIR}/lib/padrino-admin/utils/crypt.rb
 ${GEM_LIBDIR}/padrino-admin.gemspec
 ${GEM_LIBDIR}/test/fixtures/data_mapper.rb
 ${GEM_LIBDIR}/test/generators/test_account_model_generator.rb
