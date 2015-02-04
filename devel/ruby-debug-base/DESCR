@@ -1,2 +1,0 @@
-Ruby-debug is a faster implementation of the standard Ruby debugger
-debug.rb using a native extension with a new hook Ruby C API.
