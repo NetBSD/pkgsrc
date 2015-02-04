@@ -1,10 +1,8 @@
-$NetBSD: patch-src_glyphs-eimage.c,v 1.1 2012/04/27 13:53:46 hauke Exp $
+$NetBSD: patch-src_glyphs-eimage.c,v 1.2 2015/02/04 09:19:20 hauke Exp $
 
 Fix CVE-2009-2688, via <https://bugzilla.redhat.com/show_bug.cgi?id=511994>
 
-Adapt to new libpng 1.5 interfaces
-
---- src/glyphs-eimage.c.orig	2007-08-20 19:52:28.000000000 +0000
+--- src/glyphs-eimage.c.orig	2015-01-29 15:04:29.000000000 +0000
 +++ src/glyphs-eimage.c
 @@ -407,6 +407,7 @@ jpeg_instantiate (Lisp_Object image_inst
     */
@@ -44,57 +42,31 @@ Adapt to new libpng 1.5 interfaces
      unwind.eimage = (unsigned char*)
        xmalloc (width * height * 3 * unwind.giffile->ImageCount);
      if (!unwind.eimage)
-@@ -937,11 +945,15 @@ png_instantiate (Lisp_Object image_insta
-   {
-     int y;
+@@ -939,7 +947,14 @@ png_instantiate (Lisp_Object image_insta
      unsigned char **row_pointers;
--    height = info_ptr->height;
--    width = info_ptr->width;
--
+     height = png_get_image_height(png_ptr, info_ptr);
+     width = png_get_image_width(png_ptr, info_ptr);
 +    UINT_64_BIT pixels_sq;
-+    height = png_get_image_height(png_ptr, info_ptr);
-+    width = png_get_image_width(png_ptr, info_ptr);
-+
+ 
 +    pixels_sq = (UINT_64_BIT) width * (UINT_64_BIT) height;
-+    if (pixels_sq > ((size_t) -1) / 3)
-+      signal_image_error ("PNG image too large to instantiate", instantiator);
-     /* Wow, allocate all the memory.  Truly, exciting. */
--    unwind.eimage = xnew_array_and_zero (unsigned char, width * height * 3);
-+    unwind.eimage = xnew_array_and_zero (unsigned char, pixels_sq * 3);
++    if (pixels_sq > ((size_t) -1) / 3) {
++	    signal_image_error ("PNG image too large to instantiate",
++		instantiator);
++    }
++    
+     /* Wow, allocate all the memory.  Truly, exciting.
+        Well, yes, there's excitement to be had.  It turns out that libpng
+        strips in place, so the last row overruns the buffer if depth is 16
+@@ -949,7 +964,7 @@ png_instantiate (Lisp_Object image_insta
+ 
+     padding = 5 * width;
+     unwind.eimage = xnew_array_and_zero (unsigned char,
+-					 width * height * 3 + padding);
++					 pixels_sq * 3 + padding);
+ 
      /* libpng expects that the image buffer passed in contains a
         picture to draw on top of if the png has any transparencies.
-        This could be a good place to pass that in... */
-@@ -990,22 +1002,22 @@ png_instantiate (Lisp_Object image_insta
-     /* Now that we're using EImage, ask for 8bit RGB triples for any type
-        of image*/
-     /* convert palette images to full RGB */
--    if (info_ptr->color_type == PNG_COLOR_TYPE_PALETTE)
-+    if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_PALETTE)
-       png_set_expand (png_ptr);
-     /* send grayscale images to RGB too */
--    if (info_ptr->color_type == PNG_COLOR_TYPE_GRAY ||
--        info_ptr->color_type == PNG_COLOR_TYPE_GRAY_ALPHA)
-+    if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY ||
-+        png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY_ALPHA)
-       png_set_gray_to_rgb (png_ptr);
-     /* we can't handle alpha values */
--    if (info_ptr->color_type & PNG_COLOR_MASK_ALPHA)
-+    if (png_get_color_type(png_ptr, info_ptr) & PNG_COLOR_MASK_ALPHA)
-       png_set_strip_alpha (png_ptr);
-     /* tell libpng to strip 16 bit depth files down to 8 bits */
--    if (info_ptr->bit_depth == 16)
-+    if (png_get_bit_depth(png_ptr, info_ptr) == 16)
-       png_set_strip_16 (png_ptr);
-     /* if the image is < 8 bits, pad it out */
--    if (info_ptr->bit_depth < 8)
-+    if (png_get_bit_depth(png_ptr, info_ptr) < 8)
-       {
--	if (info_ptr->color_type == PNG_COLOR_TYPE_GRAY)
-+	if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY)
- 	  png_set_expand (png_ptr);
- 	else
- 	  png_set_packing (png_ptr);
-@@ -1268,6 +1280,7 @@ tiff_instantiate (Lisp_Object image_inst
+@@ -1286,6 +1301,7 @@ tiff_instantiate (Lisp_Object image_inst
  
      uint32 *raster;
      unsigned char *ep;
@@ -102,7 +74,7 @@ Adapt to new libpng 1.5 interfaces
  
      assert (!NILP (data));
  
-@@ -1290,12 +1303,16 @@ tiff_instantiate (Lisp_Object image_inst
+@@ -1308,12 +1324,16 @@ tiff_instantiate (Lisp_Object image_inst
  
      TIFFGetField (unwind.tiff, TIFFTAG_IMAGEWIDTH, &width);
      TIFFGetField (unwind.tiff, TIFFTAG_IMAGELENGTH, &height);

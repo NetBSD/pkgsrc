@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2007/02/15 14:27:48 joerg Exp $
+$NetBSD: patch-src_dired.c,v 1.1 2015/02/04 09:19:20 hauke Exp $
 
---- src/dired.c.orig	2007-02-13 18:38:12.000000000 +0000
+--- src/dired.c.orig	2015-01-29 15:04:29.000000000 +0000
 +++ src/dired.c
 @@ -21,6 +21,7 @@ Boston, MA 02111-1307, USA.  */
  /* Synched up with: FSF 19.30. */

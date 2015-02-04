@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
+$NetBSD: patch-lib-src_Makefile.in.in,v 1.1 2015/02/04 09:19:20 hauke Exp $
 
---- lib-src/Makefile.in.in.orig	Tue Aug 20 20:34:16 2002
+--- lib-src/Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
 +++ lib-src/Makefile.in.in
-@@ -237,7 +237,7 @@
+@@ -237,7 +237,7 @@ do-blessmail: $(blessmail)
  
  ## Install the internal utilities.  Until they are installed, we can
  ## just run them directly from lib-src.
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
  	@echo; echo "Installing utilities run internally by XEmacs."
  	./make-path ${archlibdir}
  	if test "`(cd ${archlibdir} && $(pwd))`" != "`$(pwd)`"; then \
-@@ -248,17 +248,23 @@
+@@ -248,17 +248,23 @@ ${archlibdir}: all
  	if test "`(cd ${archlibdir} && $(pwd))`" \
  	     != "`(cd ${srcdir}     && $(pwd))`"; then \
  	  for f in ${PRIVATE_INSTALLABLE_SCRIPTS}; do \
