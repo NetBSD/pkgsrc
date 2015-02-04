@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 19:18:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:53:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -8,10 +8,13 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/padrino-helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/asset_tag_helpers.rb
-${GEM_LIBDIR}/lib/padrino-helpers/breadcrumb_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_builder/abstract_form_builder.rb
+${GEM_LIBDIR}/lib/padrino-helpers/form_builder/deprecated_builder_methods.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_builder/standard_form_builder.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_helpers.rb
+${GEM_LIBDIR}/lib/padrino-helpers/form_helpers/errors.rb
+${GEM_LIBDIR}/lib/padrino-helpers/form_helpers/options.rb
+${GEM_LIBDIR}/lib/padrino-helpers/form_helpers/security.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/format_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/locale/cs.yml
 ${GEM_LIBDIR}/lib/padrino-helpers/locale/da.yml
@@ -43,7 +46,19 @@ ${GEM_LIBDIR}/lib/padrino-helpers/output_helpers/slim_handler.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/render_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/tag_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/translation_helpers.rb
+${GEM_LIBDIR}/lib/padrino/rendering.rb
+${GEM_LIBDIR}/lib/padrino/rendering/erubis_template.rb
+${GEM_LIBDIR}/lib/padrino/rendering/haml_template.rb
+${GEM_LIBDIR}/lib/padrino/rendering/slim_template.rb
 ${GEM_LIBDIR}/padrino-helpers.gemspec
+${GEM_LIBDIR}/test/fixtures/apps/.components
+${GEM_LIBDIR}/test/fixtures/apps/.gitignore
+${GEM_LIBDIR}/test/fixtures/apps/render.rb
+${GEM_LIBDIR}/test/fixtures/apps/views/article/comment/show.slim
+${GEM_LIBDIR}/test/fixtures/apps/views/blog/post.erb
+${GEM_LIBDIR}/test/fixtures/apps/views/layouts/specific.erb
+${GEM_LIBDIR}/test/fixtures/apps/views/test/post.erb
+${GEM_LIBDIR}/test/fixtures/layouts/layout.erb
 ${GEM_LIBDIR}/test/fixtures/markup_app/app.rb
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.erb
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.haml
@@ -91,10 +106,18 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_slim.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/_unsafe.html.builder
+${GEM_LIBDIR}/test/fixtures/render_app/views/_unsafe_object.html.builder
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engine.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_slim.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/dive_inner_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/dive_inner_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/dive_inner_slim.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/dive_outer_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/dive_outer_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/dive_outer_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_slim.slim
@@ -104,6 +127,9 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/haml/test.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_slim.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/ruby_block_capture_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/ruby_block_capture_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/ruby_block_capture_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/_user.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/haml_template.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/some_template.haml
@@ -112,13 +138,15 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/wrong_capture_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/wrong_capture_slim.slim
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_asset_tag_helpers.rb
-${GEM_LIBDIR}/test/test_breadcrumb_helpers.rb
 ${GEM_LIBDIR}/test/test_form_builder.rb
 ${GEM_LIBDIR}/test/test_form_helpers.rb
 ${GEM_LIBDIR}/test/test_format_helpers.rb
+${GEM_LIBDIR}/test/test_helpers.rb
 ${GEM_LIBDIR}/test/test_locale.rb
 ${GEM_LIBDIR}/test/test_number_helpers.rb
 ${GEM_LIBDIR}/test/test_output_helpers.rb
 ${GEM_LIBDIR}/test/test_render_helpers.rb
+${GEM_LIBDIR}/test/test_rendering.rb
+${GEM_LIBDIR}/test/test_rendering_extensions.rb
 ${GEM_LIBDIR}/test/test_tag_helpers.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
