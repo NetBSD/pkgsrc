@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.701 2015/02/04 15:08:15 taca Exp $
+$NetBSD: CHANGES-2015,v 1.702 2015/02/04 15:14:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -903,3 +903,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-padrino-mailer to 0.12.4 [taca 2015-02-04]
 	Updated www/ruby-padrino to 0.12.4 [taca 2015-02-04]
 	Updated www/ruby-padrino-contrib to 0.2.0 [taca 2015-02-04]
+	Updated www/heel to 3.1.3nb1 [taca 2015-02-04]
