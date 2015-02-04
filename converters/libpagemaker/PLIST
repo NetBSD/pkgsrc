@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/04 17:31:40 ryoon Exp $
+bin/pmd2raw
+bin/pmd2svg
+include/libpagemaker-0.0/libpagemaker/PMDocument.h
+include/libpagemaker-0.0/libpagemaker/libpagemaker.h
+lib/libpagemaker-0.0.la
+lib/pkgconfig/libpagemaker-0.0.pc
