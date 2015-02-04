@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.bsd,v 1.6 2015/02/03 21:34:57 agc Exp $
+# $NetBSD: Makefile.bsd,v 1.7 2015/02/04 17:53:39 agc Exp $
 
 PROG=netpgpverify
 
@@ -38,4 +38,6 @@ tst:
 	@echo "dumping ssh now"
 	./${PROG} -c dump -S sshtest-20140202.pub data.gpg
 	@echo "testing pubring with one key"
+	uudecode 1keytest.gpg.uu
 	./${PROG} -k 1keypubring.gpg 1keytest.gpg
+	rm -f 1keytest.gpg
