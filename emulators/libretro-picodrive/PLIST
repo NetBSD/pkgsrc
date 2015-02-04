@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/04 22:58:13 jmcneill Exp $
+lib/libretro/picodrive_libretro.so
