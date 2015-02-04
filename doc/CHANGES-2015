@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.720 2015/02/04 16:11:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.721 2015/02/04 16:15:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -922,3 +922,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/ruby-bcrypt to 3.1.10 [taca 2015-02-04]
 	Updated security/ruby-net-ssh to 2.9.2 [taca 2015-02-04]
 	Updated security/ruby-net-scp to 1.2.1 [taca 2015-02-04]
+	Updated security/ruby-shadow to 2.4.1 [taca 2015-02-04]
