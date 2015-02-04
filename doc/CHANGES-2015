@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.673 2015/02/04 06:59:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.674 2015/02/04 08:02:25 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -866,3 +866,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/balance to 3.56 [mef 2015-02-04]
 	Updated textproc/ruby-multi_json to 1.10.1 [taca 2015-02-04]
 	Updated sysutils/libpciaccess to 0.13.3 [wiz 2015-02-04]
+	Updated games/chromium-bsu to 0.9.15.1 [snj 2015-02-04]
