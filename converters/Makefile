@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2014/12/01 00:06:30 obache Exp $
+# $NetBSD: Makefile,v 1.135 2015/02/04 17:33:17 ryoon Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -42,6 +42,7 @@ SUBDIR+=	libiconv
 SUBDIR+=	libkkc
 SUBDIR+=	libmspub
 SUBDIR+=	libmwaw
+SUBDIR+=	libpagemaker
 SUBDIR+=	librevenge
 SUBDIR+=	libvisio
 SUBDIR+=	libwpd
