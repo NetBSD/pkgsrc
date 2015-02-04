@@ -1,13 +1,13 @@
-$NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.8 2015/02/04 18:19:34 ryoon Exp $
 
 * Use gstreamer under OpenBSD
 * Add FreeBSD support (GNU patch is not needed)
 * Detect pkgsrc apache-ant library
 * Fix installation directory
 
---- configure.ac.orig	2014-11-10 11:52:56.000000000 +0000
+--- configure.ac.orig	2015-01-22 20:05:28.000000000 +0000
 +++ configure.ac
-@@ -651,6 +651,8 @@ aix*)
+@@ -713,6 +713,8 @@ aix*)
  
  openbsd*)
      test_gtk=yes
@@ -16,7 +16,7 @@ $NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
      test_tde=yes
      test_kde=yes
      test_freetype=yes
-@@ -6546,7 +6548,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
+@@ -6203,7 +6205,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
  
      # Assume visibility is not broken with libc++. The below test is very much designed for libstdc++
      # only.
@@ -25,16 +25,25 @@ $NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
          dnl gcc#19664, gcc#22482, rhbz#162935
          AC_MSG_CHECKING([if STL headers are visibility safe (GCC bug 22482)])
          AC_EGREP_HEADER(visibility push, string, stlvisok=yes, stlvisok=no)
-@@ -8045,7 +8047,7 @@ no|disable)
+@@ -6695,7 +6697,7 @@ dnl ====================================
+ dnl Set target Java bytecode version
+ dnl ===================================================================
+ if test "$ENABLE_JAVA" != ""; then
+-    if test "$HAVE_JAVA9" == "TRUE"; then
++    if test "$HAVE_JAVA9" = "TRUE"; then
+         _java_target_ver="1.6"
+     else
+         _java_target_ver="1.5"
+@@ -7780,7 +7782,7 @@ no|disable)
      else
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
 -        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
 +        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
          AM_PATH_PYTHON([3.3],, [:])
-         if test "$PYTHON" = :; then
-             AC_MSG_RESULT([internal])
-@@ -8102,9 +8104,9 @@ if test $enable_python = system; then
+         if test "$PYTHON" = ":"; then
+             if test -z "$PYTHON_FOR_BUILD"; then
+@@ -7833,9 +7835,9 @@ if test $enable_python = system; then
      elif test "$cross_compiling" != yes; then
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -46,8 +55,8 @@ $NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
          python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
          python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
          python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
-@@ -9907,8 +9909,8 @@ if test -z "$PATCH"; then
-     AC_MSG_ERROR([\"patch\" not found in \$PATH, install it])
+@@ -9679,8 +9681,8 @@ if test -z "$PATCH"; then
+     AC_MSG_ERROR(["patch" not found in \$PATH, install it])
  fi
  
 -dnl On Solaris, FreeBSD or MacOS X, check if --with-gnu-patch was used
@@ -57,7 +66,7 @@ $NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
      if test -z "$with_gnu_patch"; then
          GNUPATCH=$PATCH
      else
-@@ -12173,7 +12175,7 @@ EOF
+@@ -11959,7 +11961,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -66,7 +75,7 @@ $NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -12604,7 +12606,7 @@ AC_SUBST(MANDIR)
+@@ -12378,7 +12380,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
