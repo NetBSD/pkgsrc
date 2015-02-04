@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/15 15:42:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/04 16:05:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
@@ -261,6 +261,7 @@ ${GEM_LIBDIR}/data/ruby/snmp/mibs/TRANSPORT-ADDRESS-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/TRIP-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/TRIP-TC-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/TUNNEL-MIB.yaml
+${GEM_LIBDIR}/data/ruby/snmp/mibs/UCD-SNMP-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/UDP-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/UDPLITE-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/UPS-MIB.yaml
