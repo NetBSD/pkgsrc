@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2042 2015/02/02 14:13:03 taca Exp $
+# $NetBSD: Makefile,v 1.2043 2015/02/04 10:08:49 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1549,6 +1549,7 @@ SUBDIR+=	py-checker
 SUBDIR+=	py-cheetah
 SUBDIR+=	py-click
 SUBDIR+=	py-compizconfig
+SUBDIR+=	py-configobj
 SUBDIR+=	py-coverage
 SUBDIR+=	py-cparser
 SUBDIR+=	py-curses
