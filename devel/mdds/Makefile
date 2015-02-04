@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2014/11/07 19:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.25 2015/02/04 18:01:25 ryoon Exp $
 #
 
-DISTNAME=	aa5ca9d1ed1082890835afab26400a39-mdds_0.10.3
+DISTNAME=	cb4207cb913c7a5a8bfa5b91234618ee-mdds_0.11.2
 PKGNAME=	${DISTNAME:C/[0-9a-f]*-//:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2
