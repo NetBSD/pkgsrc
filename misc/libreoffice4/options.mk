@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/06/22 23:59:35 ryoon Exp $
+# $NetBSD: options.mk,v 1.8 2015/02/04 18:19:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--without-system-beanshell \
 			--enable-scripting-beanshell \
 			--disable-scripting-javascript \
+			--disable-report-builder \
 			--with-system-hsqldb
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
