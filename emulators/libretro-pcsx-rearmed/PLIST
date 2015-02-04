@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/04 23:04:17 jmcneill Exp $
+lib/libretro/pcsx_rearmed_libretro.so
