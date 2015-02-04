@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2003/02/25 02:14:59 uebayasi Exp $
+$NetBSD: patch-Makefile.in.in,v 1.1 2015/02/04 09:19:20 hauke Exp $
 
---- Makefile.in.in.orig	Fri Nov  1 12:51:47 2002
+--- Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
 +++ Makefile.in.in
-@@ -403,7 +403,7 @@
+@@ -407,7 +407,7 @@ lwlib/config.h: ${srcdir}/lwlib/config.h
  ## all.  --cet
  
  check-features: all
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2003/02/25 02:14:59 uebayasi Exp $
  
  install-only: ${MAKE_SUBDIR} check-features install-arch-dep install-arch-indep
  
-@@ -489,8 +489,10 @@
+@@ -495,8 +495,10 @@ install-arch-indep: mkdir info
  	fi
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \

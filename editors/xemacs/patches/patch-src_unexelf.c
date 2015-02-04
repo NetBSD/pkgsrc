@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.7 2003/02/25 02:14:59 uebayasi Exp $
+$NetBSD: patch-src_unexelf.c,v 1.1 2015/02/04 09:19:20 hauke Exp $
 
---- src/unexelf.c.orig	Tue Aug 20 20:38:23 2002
+--- src/unexelf.c.orig	2015-01-29 15:04:29.000000000 +0000
 +++ src/unexelf.c
-@@ -486,7 +486,7 @@
+@@ -494,7 +494,7 @@ typedef struct {
  #  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
  # endif
  # ifndef ELFSIZE
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.7 2003/02/25 02:14:59 uebayasi Exp $
  #   define ELFSIZE 64
  #  else
  #   define ELFSIZE 32
-@@ -962,7 +962,7 @@
+@@ -970,7 +970,7 @@ unexec (char *new_name, char *old_name, 
        memcpy (NEW_SECTION_H (nn).sh_offset + new_base, src,
  	      NEW_SECTION_H (nn).sh_size);
  
