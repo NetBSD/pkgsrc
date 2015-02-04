@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.727 2015/02/04 18:20:16 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.728 2015/02/04 23:08:03 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -929,3 +929,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/libmwaw to 0.3.4 [ryoon 2015-02-04]
 	Updated net/libcmis to 0.5.0 [ryoon 2015-02-04]
 	Updated misc/libreoffice4 to 4.4.0.3 [ryoon 2015-02-04]
+	Added emulators/retroarch version 0.0.20150203 [jmcneill 2015-02-04]
+	Added emulators/libretro-fceumm version 20150204 [jmcneill 2015-02-04]
+	Added emulators/libretro-picodrive version 20150203 [jmcneill 2015-02-04]
+	Added emulators/libretro-mupen64plus version 20150204 [jmcneill 2015-02-04]
+	Added emulators/libretro-pcsx-rearmed version 20150204 [jmcneill 2015-02-04]
