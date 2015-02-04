@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.698 2015/02/04 14:47:49 taca Exp $
+$NetBSD: CHANGES-2015,v 1.699 2015/02/04 14:59:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -897,3 +897,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed textproc/ruby-json-utils [taca 2015-02-04]
 	Added www/ruby-padrino-support version 0.12.4 [taca 2015-02-04]
 	Updated www/ruby-sinatra to 1.4.5 [taca 2015-02-04]
+	Updated www/ruby-padrino-helpers to 0.12.4 [taca 2015-02-04]
+	Updated www/ruby-padrino-core to 0.12.4 [taca 2015-02-04]
+	Updated www/ruby-padrino-cache to 0.12.4 [taca 2015-02-04]
+	Updated www/ruby-padrino-gen to 0.12.4 [taca 2015-02-04]
+	Updated www/ruby-padrino-mailer to 0.12.4 [taca 2015-02-04]
+	Updated www/ruby-padrino to 0.12.4 [taca 2015-02-04]
