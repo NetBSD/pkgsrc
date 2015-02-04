@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.677 2015/02/04 10:08:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.678 2015/02/04 11:54:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/xemacs to 21.4.23 [hauke 2015-02-04]
 	Updated shells/zsh to 5.0.7nb1 [snj 2015-02-04]
 	Added devel/py-configobj version 5.0.6 [wiz 2015-02-04]
+	Added devel/py-atomicwrites version 0.1.0 [wiz 2015-02-04]
