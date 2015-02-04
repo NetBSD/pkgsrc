@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1085 2015/02/02 14:10:09 taca Exp $
+# $NetBSD: Makefile,v 1.1086 2015/02/04 14:45:14 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -703,6 +703,7 @@ SUBDIR+=	ruby-padrino-core
 SUBDIR+=	ruby-padrino-gen
 SUBDIR+=	ruby-padrino-helpers
 SUBDIR+=	ruby-padrino-mailer
+SUBDIR+=	ruby-padrino-support
 SUBDIR+=	ruby-patron
 SUBDIR+=	ruby-puma
 SUBDIR+=	ruby-pygments.rb
