@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/10/26 13:44:11 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/04 14:47:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS
@@ -9,7 +9,7 @@ ${GEM_LIBDIR}/README.de.md
 ${GEM_LIBDIR}/README.es.md
 ${GEM_LIBDIR}/README.fr.md
 ${GEM_LIBDIR}/README.hu.md
-${GEM_LIBDIR}/README.jp.md
+${GEM_LIBDIR}/README.ja.md
 ${GEM_LIBDIR}/README.ko.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/README.pt-br.md
@@ -28,6 +28,7 @@ ${GEM_LIBDIR}/lib/sinatra/main.rb
 ${GEM_LIBDIR}/lib/sinatra/show_exceptions.rb
 ${GEM_LIBDIR}/lib/sinatra/version.rb
 ${GEM_LIBDIR}/sinatra.gemspec
+${GEM_LIBDIR}/test/asciidoctor_test.rb
 ${GEM_LIBDIR}/test/base_test.rb
 ${GEM_LIBDIR}/test/builder_test.rb
 ${GEM_LIBDIR}/test/coffee_test.rb
@@ -50,6 +51,7 @@ ${GEM_LIBDIR}/test/liquid_test.rb
 ${GEM_LIBDIR}/test/mapped_error_test.rb
 ${GEM_LIBDIR}/test/markaby_test.rb
 ${GEM_LIBDIR}/test/markdown_test.rb
+${GEM_LIBDIR}/test/mediawiki_test.rb
 ${GEM_LIBDIR}/test/middleware_test.rb
 ${GEM_LIBDIR}/test/nokogiri_test.rb
 ${GEM_LIBDIR}/test/public/favicon.ico
@@ -84,6 +86,7 @@ ${GEM_LIBDIR}/test/views/error.haml
 ${GEM_LIBDIR}/test/views/error.sass
 ${GEM_LIBDIR}/test/views/explicitly_nested.str
 ${GEM_LIBDIR}/test/views/foo/hello.test
+${GEM_LIBDIR}/test/views/hello.asciidoc
 ${GEM_LIBDIR}/test/views/hello.builder
 ${GEM_LIBDIR}/test/views/hello.coffee
 ${GEM_LIBDIR}/test/views/hello.creole
@@ -93,6 +96,7 @@ ${GEM_LIBDIR}/test/views/hello.less
 ${GEM_LIBDIR}/test/views/hello.liquid
 ${GEM_LIBDIR}/test/views/hello.mab
 ${GEM_LIBDIR}/test/views/hello.md
+${GEM_LIBDIR}/test/views/hello.mediawiki
 ${GEM_LIBDIR}/test/views/hello.nokogiri
 ${GEM_LIBDIR}/test/views/hello.rabl
 ${GEM_LIBDIR}/test/views/hello.radius
