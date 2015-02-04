@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.710 2015/02/04 15:40:08 taca Exp $
+$NetBSD: CHANGES-2015,v 1.711 2015/02/04 15:46:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -912,3 +912,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-mini_portile to 0.6.2 [taca 2015-02-04]
 	Updated misc/ruby-pry to 0.10.1 [taca 2015-02-04]
 	Updated www/ruby-actionpack32 to 3.2.21nb1 [taca 2015-02-04]
+	Updated misc/ruby-sprockets to 2.12.3 [taca 2015-02-04]
