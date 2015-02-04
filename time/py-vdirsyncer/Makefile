@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2015/02/01 19:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/04 12:06:24 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	https://pypi.python.org/packages/source/v/vdirsyncer/
 
@@ -12,12 +13,14 @@ LICENSE=	mit
 
 EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
+DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=2.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-icalendar>=3.6:../../time/py-icalendar
-DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbelt
+# optional, but recommended
+DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 
 USE_LANGUAGES=	# none
 INSTALLATION_DIRS=	share/example/${PKGBASE}
