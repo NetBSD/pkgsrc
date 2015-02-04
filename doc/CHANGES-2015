@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.718 2015/02/04 16:07:55 taca Exp $
+$NetBSD: CHANGES-2015,v 1.719 2015/02/04 16:09:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -920,3 +920,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-net-ping to 1.7.7 [taca 2015-02-04]
 	Updated net/ruby-snmp to 1.2.0 [taca 2015-02-04]
 	Updated security/ruby-bcrypt to 3.1.10 [taca 2015-02-04]
+	Updated security/ruby-net-ssh to 2.9.2 [taca 2015-02-04]
