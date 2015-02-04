@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.686 2015/02/04 13:40:43 taca Exp $
+$NetBSD: CHANGES-2015,v 1.687 2015/02/04 13:49:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -881,3 +881,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/ruby-debugger-linecache version 1.2.0 [taca 2015-02-04]
 	Added devel/ruby-debugger-ruby_core_source version 1.3.8 [taca 2015-02-04]
 	Added devel/ruby-debugger version 1.6.8 [taca 2015-02-04]
+	Removed devel/ruby-debug-ide [taca 2015-02-04]
+	Removed devel/ruby-debug-extra [taca 2015-02-04]
+	Removed devel/ruby-debug [taca 2015-02-04]
+	Removed devel/ruby-debug-base [taca 2015-02-04]
