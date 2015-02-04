@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 19:18:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:56:57 taca Exp $
 bin/padrino-gen
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/mocks/rr.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/activerecord.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/couchrest.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/datamapper.rb
+${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/dynamoid.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/minirecord.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/mongoid.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/mongomapper.rb
@@ -52,6 +53,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/rspec.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/shoulda.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/steak.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/controller.rb
+${GEM_LIBDIR}/lib/padrino-gen/generators/helper.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/mailer.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/migration.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/model.rb
@@ -74,6 +76,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/gem/lib/libname/version.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/helper.rb.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/initializer.rb.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/mailer.rb.tt
+${GEM_LIBDIR}/lib/padrino-gen/generators/templates/project_bin.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/static/README.rdoc
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/static/js/dojo.js
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/static/js/ext.js
@@ -109,6 +112,7 @@ ${GEM_LIBDIR}/test/test_cli.rb
 ${GEM_LIBDIR}/test/test_component_generator.rb
 ${GEM_LIBDIR}/test/test_controller_generator.rb
 ${GEM_LIBDIR}/test/test_generator.rb
+${GEM_LIBDIR}/test/test_helper_generator.rb
 ${GEM_LIBDIR}/test/test_mailer_generator.rb
 ${GEM_LIBDIR}/test/test_migration_generator.rb
 ${GEM_LIBDIR}/test/test_model_generator.rb
