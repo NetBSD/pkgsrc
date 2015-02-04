@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/11 14:34:54 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/04 14:58:34 taca Exp $
 
 DISTNAME=	padrino-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -10,6 +10,8 @@ HOMEPAGE=	${RUBY_PADRINO_SITE}
 COMMENT=	Padrino Ruby Web framework
 LICENSE=	mit
 
+DEPENDS+=	${RUBY_PKGPREFIX}-padrino-support>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-support
+DEPENDS+=	${RUBY_PKGPREFIX}-padrino-helpers>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-helpers
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-core
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-cache>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-cache
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-gen>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-gen
