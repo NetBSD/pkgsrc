@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.common,v 1.1 2015/02/04 22:56:43 jmcneill Exp $
+
+--- Makefile.common.orig	2015-02-03 06:43:44.000000000 +0000
++++ Makefile.common
+@@ -205,9 +205,7 @@ endif
+ 
+ ifeq ($(HAVE_OSS), 1)
+    OBJ += audio/drivers/oss.o
+-endif
+-
+-ifeq ($(HAVE_OSS_BSD), 1)
++else ifeq ($(HAVE_OSS_BSD), 1)
+    OBJ += audio/drivers/oss.o
+ endif
+ 
+@@ -418,7 +416,7 @@ ifeq ($(HAVE_OPENGL), 1)
+    endif
+ 
+    ifeq ($(HAVE_X11), 1)
+-      ifeq ($(HAVE_GLES), 0)
++      ifneq ($(HAVE_GLES), 1)
+          OBJ += gfx/drivers_context/glx_ctx.o
+       endif
+       ifeq ($(HAVE_EGL), 1)
