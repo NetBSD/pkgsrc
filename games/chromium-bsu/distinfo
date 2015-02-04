@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/01 21:13:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/02/04 08:01:49 snj Exp $
 
-SHA1 (chromium-bsu-0.9.14.tar.gz) = a273318b89d68309bc812c4b06a9035e88dc26a7
-RMD160 (chromium-bsu-0.9.14.tar.gz) = ecdb542fc393404184db555d829efe32acab30a8
-Size (chromium-bsu-0.9.14.tar.gz) = 1615989 bytes
+SHA1 (chromium-bsu-0.9.15.1.tar.gz) = e4b6c6de45b348133c7ea821346ddd60ae845cba
+RMD160 (chromium-bsu-0.9.15.1.tar.gz) = ca63dfbbc18c22a56b0fa0e5728da4d64afe6c6d
+Size (chromium-bsu-0.9.15.1.tar.gz) = 1689634 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/01 21:13:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/04 08:01:49 snj Exp $
 bin/chromium-bsu
 man/man6/chromium-bsu.6
 share/applications/chromium-bsu.desktop
@@ -52,7 +52,6 @@ share/chromium-bsu/png/heroExplo02.png
 share/chromium-bsu/png/heroShields.png
 share/chromium-bsu/png/heroSuper.png
 share/chromium-bsu/png/icon32.png
-share/chromium-bsu/png/icon64.png
 share/chromium-bsu/png/life.png
 share/chromium-bsu/png/menu_back.png
 share/chromium-bsu/png/menu_updown.png
@@ -87,7 +86,14 @@ share/doc/chromium-bsu/images/powerUp01.jpg
 share/doc/chromium-bsu/images/powerUp02.jpg
 share/doc/chromium-bsu/images/useItem00.jpg
 share/doc/chromium-bsu/info.htm
+share/icons/hicolor/64x64/apps/chromium-bsu.png
 share/locale/bg/LC_MESSAGES/chromium-bsu.mo
 share/locale/de/LC_MESSAGES/chromium-bsu.mo
 share/locale/es/LC_MESSAGES/chromium-bsu.mo
-share/pixmaps/chromium-bsu.png
+share/locale/fr/LC_MESSAGES/chromium-bsu.mo
+share/locale/it/LC_MESSAGES/chromium-bsu.mo
+share/locale/ru/LC_MESSAGES/chromium-bsu.mo
+share/locale/sv/LC_MESSAGES/chromium-bsu.mo
+share/locale/tr/LC_MESSAGES/chromium-bsu.mo
+share/locale/zh_CN/LC_MESSAGES/chromium-bsu.mo
+share/locale/zh_TW/LC_MESSAGES/chromium-bsu.mo
