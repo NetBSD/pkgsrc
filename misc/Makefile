@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.447 2015/02/03 14:57:20 taca Exp $
+# $NetBSD: Makefile,v 1.448 2015/02/04 14:03:12 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -265,6 +265,7 @@ SUBDIR+=	ruby-descendants_tracker
 SUBDIR+=	ruby-equalizer
 SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-hashie
+SUBDIR+=	ruby-hashie1
 SUBDIR+=	ruby-hashie2
 SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-memoizable
