@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.716 2015/02/04 15:59:36 taca Exp $
+$NetBSD: CHANGES-2015,v 1.717 2015/02/04 16:06:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -918,3 +918,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-domain_name to 0.5.23 [taca 2015-02-04]
 	Updated net/ruby-net-ldap to 0.11 [taca 2015-02-04]
 	Updated net/ruby-net-ping to 1.7.7 [taca 2015-02-04]
+	Updated net/ruby-snmp to 1.2.0 [taca 2015-02-04]
