@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2044 2015/02/04 11:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2045 2015/02/04 13:44:22 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1718,6 +1718,9 @@ SUBDIR+=	ruby-debug
 SUBDIR+=	ruby-debug-base
 SUBDIR+=	ruby-debug-extra
 SUBDIR+=	ruby-debug-ide
+SUBDIR+=	ruby-debugger
+SUBDIR+=	ruby-debugger-linecache
+SUBDIR+=	ruby-debugger-ruby_core_source
 SUBDIR+=	ruby-delayer
 SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
