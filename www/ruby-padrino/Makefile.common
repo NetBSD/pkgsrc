@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/02/04 14:58:34 taca Exp $
 #
 # used by www/ruby-padrino/Makefile
 # used by www/ruby-padrino-admin/Makefile
 # used by www/ruby-padrino-cache/Makefile
 # used by www/ruby-padrino-core/Makefile
 # used by www/ruby-padrino-gen/Makefile
-# used by www/ruby-padrino-helper/Makefile
-# used by www/ruby-padrino-mailer/Makefile
 # used by www/ruby-padrino-helpers/Makefile
+# used by www/ruby-padrino-mailer/Makefile
+# used by www/ruby-padrino-support/Makefile
 
-RUBY_PADRINO_VERS=	0.12.0
+RUBY_PADRINO_VERS=	0.12.4
 RUBY_PADRINO_SITE=	http://www.padrinorb.com/
