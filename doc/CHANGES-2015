@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.708 2015/02/04 15:29:20 taca Exp $
+$NetBSD: CHANGES-2015,v 1.709 2015/02/04 15:33:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -910,3 +910,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-hashie to 3.4.0 [taca 2015-02-04]
 	Updated misc/ruby-launchy to 2.4.3 [taca 2015-02-04]
 	Updated misc/ruby-mini_portile to 0.6.2 [taca 2015-02-04]
+	Updated misc/ruby-pry to 0.10.1 [taca 2015-02-04]
