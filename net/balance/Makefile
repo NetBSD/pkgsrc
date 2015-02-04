@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/10/21 09:01:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/04 01:52:41 mef Exp $
 #
 
-DISTNAME=	balance-3.54
+DISTNAME=	balance-3.56
 CATEGORIES=	net
 MASTER_SITES=	http://www.inlab.de/
 
