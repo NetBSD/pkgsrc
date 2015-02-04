@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.302 2014/10/29 23:14:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.303 2015/02/04 17:37:44 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -73,6 +73,7 @@ SUBDIR+=	cgal
 SUBDIR+=	clisp-pari
 SUBDIR+=	cln
 SUBDIR+=	cloog
+SUBDIR+=	coinmp
 SUBDIR+=	crfsuite
 SUBDIR+=	dcdflib.c
 SUBDIR+=	dcdflib.f
