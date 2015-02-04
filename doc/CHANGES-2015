@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.682 2015/02/04 12:19:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.683 2015/02/04 12:20:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/py-vdirsyncer to 0.4.2nb1 [wiz 2015-02-04]
 	Updated time/khal to 0.4.0 [wiz 2015-02-04]
 	Updated security/p5-IO-Socket-SSL to 2.012 [wiz 2015-02-04]
+	Updated devel/p5-AppConfig to 1.68 [wiz 2015-02-04]
