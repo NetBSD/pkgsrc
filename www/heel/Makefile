@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2014/03/14 18:45:15 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/02/04 15:13:28 taca Exp $
 
 DISTNAME=	heel-3.1.3
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +12,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${RUBY_PKGPREFIX}-puma>=2.0<3:../../www/ruby-puma
 DEPENDS+=	${RUBY_PKGPREFIX}-coderay>=1.1<2:../../textproc/ruby-coderay
 DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.3<3:../../misc/ruby-launchy
-DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.25<2:../../mail/ruby-mime-types
+DEPENDS+=	${RUBY_PKGPREFIX}-mime-types1>=1.25<2:../../mail/ruby-mime-types1
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-heel-[0-9]* heel-[0-9]*
 
