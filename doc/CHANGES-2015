@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.689 2015/02/04 13:56:52 taca Exp $
+$NetBSD: CHANGES-2015,v 1.690 2015/02/04 14:04:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -887,3 +887,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed devel/ruby-debug-base [taca 2015-02-04]
 	Removed devel/ruby-linecache [taca 2015-02-04]
 	Removed devel/ruby-rbx-require-relative [taca 2015-02-04]
+	Added misc/ruby-hashie1 version 1.2.0 [taca 2015-02-04]
