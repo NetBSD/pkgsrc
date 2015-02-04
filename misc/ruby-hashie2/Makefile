@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/06/03 12:48:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/04 14:09:40 taca Exp $
 
-DISTNAME=	hashie-2.0.5
+DISTNAME=	hashie-2.1.2
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/hashie/hashie2/}
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
