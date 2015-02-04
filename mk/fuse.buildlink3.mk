@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.17 2014/04/30 15:06:25 gdt Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.18 2015/02/04 23:44:34 tnn Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -63,7 +63,7 @@ FUSE_PKGCFGF=	fuse.pc
 
 override-fuse-pkgconfig: override-message-fuse-pkgconfig
 override-message-fuse-pkgconfig:
-	@${STEP_MSG} "Magical transformations for fuse on NetBSD."
+	@${STEP_MSG} "Generating pkg-config file for builtin fuse package."
 
 override-fuse-pkgconfig:
 	${RUN}						\

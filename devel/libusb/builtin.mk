@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2011/10/04 14:19:47 hans Exp $
+# $NetBSD: builtin.mk,v 1.4 2015/02/04 23:44:34 tnn Exp $
 
 BUILTIN_PKG:=	libusb
 PKGCONFIG_BASE.libusb=	/usr
@@ -19,7 +19,7 @@ LIBUSB_PKGCFGF=	libusb.pc
 
 override-libusb-pkgconfig: override-message-libusb-pkgconfig
 override-message-libusb-pkgconfig:
-	@${STEP_MSG} "Magical transformations for libusb on Solaris."
+	@${STEP_MSG} "Generating pkg-config file for builtin libusb package."
 
 override-libusb-pkgconfig:
 	${RUN}						\
