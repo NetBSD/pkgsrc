@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.724 2015/02/04 17:36:58 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.725 2015/02/04 17:47:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/ruby-sshkit to 1.6.1 [taca 2015-02-04]
 	Added converters/libpagemaker version 0.0.2 [ryoon 2015-02-04]
 	Added math/coinmp version 1.7.6 [ryoon 2015-02-04]
+	Updated converters/libmwaw to 0.3.4 [ryoon 2015-02-04]
