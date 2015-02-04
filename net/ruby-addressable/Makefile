@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2013/09/13 05:56:34 taca Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/04 14:19:32 taca Exp $
 
-DISTNAME=	addressable-2.3.5
+DISTNAME=	addressable-2.3.6
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://addressable.rubyforge.org/
+HOMEPAGE=	https://github.com/sporkmonger/addressable
 COMMENT=	Replacement for the URI Implementation of standard librrary
 LICENSE=	mit
 
