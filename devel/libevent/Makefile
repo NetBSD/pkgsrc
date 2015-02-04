@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2014/02/12 23:17:48 tron Exp $
+# $NetBSD: Makefile,v 1.46 2015/02/04 08:04:34 spz Exp $
 
 .include "../../devel/libevent/Makefile.common"
 
 PKGNAME=	libevent-${LIBEVENT_VERSION}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
