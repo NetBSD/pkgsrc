@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/14 17:43:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/04 14:25:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/GPLv2
+${GEM_LIBDIR}/GPLv3
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/pdf/core.rb
 ${GEM_LIBDIR}/lib/pdf/core/annotations.rb
 ${GEM_LIBDIR}/lib/pdf/core/byte_string.rb
@@ -11,13 +17,22 @@ ${GEM_LIBDIR}/lib/pdf/core/graphics_state.rb
 ${GEM_LIBDIR}/lib/pdf/core/literal_string.rb
 ${GEM_LIBDIR}/lib/pdf/core/name_tree.rb
 ${GEM_LIBDIR}/lib/pdf/core/object_store.rb
-${GEM_LIBDIR}/lib/pdf/core/outline.rb
+${GEM_LIBDIR}/lib/pdf/core/outline_item.rb
+${GEM_LIBDIR}/lib/pdf/core/outline_root.rb
 ${GEM_LIBDIR}/lib/pdf/core/page.rb
 ${GEM_LIBDIR}/lib/pdf/core/page_geometry.rb
 ${GEM_LIBDIR}/lib/pdf/core/pdf_object.rb
 ${GEM_LIBDIR}/lib/pdf/core/reference.rb
+${GEM_LIBDIR}/lib/pdf/core/renderer.rb
 ${GEM_LIBDIR}/lib/pdf/core/stream.rb
 ${GEM_LIBDIR}/lib/pdf/core/text.rb
 ${GEM_LIBDIR}/pdf-core.gemspec
+${GEM_LIBDIR}/spec/filters_spec.rb
+${GEM_LIBDIR}/spec/name_tree_spec.rb
+${GEM_LIBDIR}/spec/object_store_spec.rb
+${GEM_LIBDIR}/spec/pdf_object_spec.rb
+${GEM_LIBDIR}/spec/reference_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/stream_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 @pkgdir lib/ruby/gems/2.0.0/build_info
