@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/02/03 02:32:05 pho Exp $
+# $NetBSD: Makefile,v 1.14 2015/02/04 06:53:18 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -45,6 +45,10 @@ DISTFILES=	${DEFAULT_DISTFILES}
 #DISTFILES+=	${BOOT_ARCHIVE}
 #.endif
 
+.for i in ${DISTFILES:M*-boot-*}
+SITES.${i}?=	${MASTER_SITE_LOCAL}
+.endfor
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # We don't want to extract all of the DISTFILEs.
@@ -56,7 +60,8 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 #
 USE_TOOLS+=			autoconf gmake perl:run
 GNU_CONFIGURE=			yes
-USE_GNU_CONFIGURE_HOST=	no
+USE_GNU_CONFIGURE_HOST=		no
+USE_LIBTOOL=			yes
 
 CONFIGURE_ARGS+= \
 	--with-gcc=${CC:Q} \
@@ -66,17 +71,21 @@ CONFIGURE_ARGS+= \
 	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_LIBDIRS.iconv:Q}
 
 CONFIGURE_ENV+= \
-	CONF_CC_OPTS_STAGE0=${CFLAGS:Q} \
-	CONF_GCC_LINKER_OPTS_STAGE0=${LDFLAGS:Q} \
-	CONF_LD_LINKER_OPTS_STAGE0=${LDFLAGS:Q} \
-	CONF_CC_OPTS_STAGE1=${CFLAGS:Q} \
-	CONF_GCC_LINKER_OPTS_STAGE1=${LDFLAGS:Q} \
-	CONF_LD_LINKER_OPTS_STAGE1=${LDFLAGS:Q} \
-	CONF_CC_OPTS_STAGE2=${CFLAGS:Q} \
-	CONF_GCC_LINKER_OPTS_STAGE2=${LDFLAGS:Q} \
-	CONF_LD_LINKER_OPTS_STAGE2=${LDFLAGS:Q} \
 	ac_cv_path_fp_prog_ar=${AR:Q} \
 	PerlCmd=${PERL5:Q}
+
+# CFLAGS and LDFLAGS are currently not honored by "./configure". Since
+# LDFLAGS contains rpath flags it's very important to force GHC to
+# honor it. Otherwise neither GHC itself nor executables it produces
+# will have any rpaths so users will have to put "${PREFIX}/lib" into
+# their "/etc/ld-elf.so.conf". See
+# http://hackage.haskell.org/trac/ghc/ticket/2933
+.for stage in 0 1 2
+CONFIGURE_ENV+= \
+	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:Q} \
+	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:Q} \
+	CONF_LD_LINKER_OPTS_STAGE${stage}=${LDFLAGS:Q}
+.endfor
 
 
 # -----------------------------------------------------------------------------
@@ -86,21 +95,19 @@ CONFIGURE_ENV+= \
 # We patch configure.ac in some directories.
 post-patch:
 	@${PHASE_MSG} "Regenerating configuration scripts for ${PKGNAME}"
+	${RUN} cd ${WRKSRC:Q}/libraries/base        && autoconf
 	${RUN} cd ${WRKSRC:Q}/libraries/integer-gmp && autoconf
 
 
 # Define the target "pre-configure" and non-standard "bootstrap".
 .include "../../lang/ghc7/bootstrap.mk"
 
-.for i in ${DISTFILES:M*-boot-*}
-SITES.${i}?=	${MASTER_SITE_LOCAL}
-.endfor
-
 # Our pre-configure phase installs a bindist of bootstrapping compiler
 # directly into TOOLS_DIR so that ./configure can find it.
 
-post-configure:
+
 # Here we generate mk/build.mk dynamically.
+post-configure:
 	${RUN} ${RM} -f ${WRKSRC:Q}/mk/build.mk
 
 # We need to tell the libraries/terminfo/configure that our ncurses is
@@ -173,10 +180,15 @@ GENERATE_PLIST+= \
 # There is an unused script which don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 
-# GHC currently *requires* ${PREFIX}/lib to be in
-# "/etc/ld-elf.so.conf". See
-# http://hackage.haskell.org/trac/ghc/ticket/2933
-CHECK_SHLIBS_SUPPORTED=	no
+# Dynamic Haskell libraries currently have no rpaths to any dependent
+# Haskell libraries so we must skip shlibs check for them. Note that
+# the situation seems to be changed in GHC 7.8.1 so we should
+# readdress this later. See
+# https://ghc.haskell.org/trac/ghc/ticket/8266 (slightly off-topic but
+# pho@ found no description for the -fuse-rpath flag.)
+.if !empty(PKGNAME:Mghc-7.6.*)
+CHECK_SHLIBS_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
+.endif
 
 
 # -----------------------------------------------------------------------------
