@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.18 2015/01/07 14:26:47 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.19 2015/02/04 23:44:34 tnn Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -96,7 +96,7 @@ EXPAT_PKGCFGF=	expat.pc
 
 override-expat-pkgconfig: override-message-expat-pkgconfig
 override-message-expat-pkgconfig:
-	@${STEP_MSG} "Magical transformations for expat on NetBSD."
+	@${STEP_MSG} "Generating pkg-config file for builtin expat package."
 
 override-expat-pkgconfig:
 	${RUN}						\
