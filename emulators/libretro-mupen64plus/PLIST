@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/04 23:02:12 jmcneill Exp $
+lib/libretro/mupen64plus_libretro.so
