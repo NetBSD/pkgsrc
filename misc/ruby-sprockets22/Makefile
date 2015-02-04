@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/11/01 14:34:54 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/04 15:37:58 taca Exp $
 
 DISTNAME=	sprockets-2.2.3
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/sprockets/sprockets22/}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rack14>=1.4<2:../../www/ruby-rack14
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.0<2:../../textproc/ruby-multi_json
 DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.1<2:../../textproc/ruby-tilt
 
-CONFLICTS+=	ruby[1-9][0-9]-sprockets>=2.3.1
+OVERRIDE_GEMSPEC=	:executables sprockets=sprockets22 \
+			:files bin/sprockets=bin/sprockets22
+RUBYGEM_OPTIONS+=	--format-executable
+
+pre-configure:
+	${TEST} -f ${WRKSRC}/bin/sprockets22 || \
+		${MV} ${WRKSRC}/bin/sprockets ${WRKSRC}/bin/sprockets22
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
