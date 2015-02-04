@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/01/24 13:40:14 mef Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/04 20:51:32 joerg Exp $
 
 DISTNAME=	BibTool-2.57
 CATEGORIES=	print
@@ -10,7 +10,13 @@ COMMENT=	Tool to manipulate BibTeX databases
 LICENSE=	gnu-gpl-v1
 
 BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+BUILD_DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
+BUILD_DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
+BUILD_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
+BUILD_DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
+BUILD_DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 
