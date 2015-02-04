@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2014/12/11 08:10:50 obache Exp $
+# $NetBSD: builtin.mk,v 1.16 2015/02/04 23:44:34 tnn Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -142,7 +142,7 @@ LIBEVENT_PKGCFGF=	libevent.pc
 
 override-libevent-pkgconfig: override-message-libevent-pkgconfig
 override-message-libevent-pkgconfig:
-	@${STEP_MSG} "Magical transformations for libevent on NetBSD."
+	@${STEP_MSG} "Generating pkg-config file for builtin libevent package."
 
 override-libevent-pkgconfig:
 	${RUN}						\
