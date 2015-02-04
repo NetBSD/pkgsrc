@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2015/02/04 12:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/02/04 12:36:38 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	https://pypi.python.org/packages/source/v/vdirsyncer/
 
@@ -23,11 +23,11 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbe
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 
 USE_LANGUAGES=	# none
-INSTALLATION_DIRS=	share/example/${PKGBASE}
+INSTALLATION_DIRS=	share/examples/${PKGBASE}
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/example.cfg ${DESTDIR}${PREFIX}/share/example/${PKGBASE}/
+	${INSTALL_DATA} ${WRKSRC}/example.cfg ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
