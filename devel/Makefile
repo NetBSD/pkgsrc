@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2046 2015/02/04 13:45:21 taca Exp $
+# $NetBSD: Makefile,v 1.2047 2015/02/04 13:53:20 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1751,7 +1751,6 @@ SUBDIR+=	ruby-io-console
 SUBDIR+=	ruby-io-like
 SUBDIR+=	ruby-kgio
 SUBDIR+=	ruby-libyajl2
-SUBDIR+=	ruby-linecache
 SUBDIR+=	ruby-little-plugger
 SUBDIR+=	ruby-locale
 SUBDIR+=	ruby-locale-rails
