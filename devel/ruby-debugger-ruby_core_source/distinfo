@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/04 13:37:18 taca Exp $
+
+SHA1 (debugger-ruby_core_source-1.3.8.gem) = b2a356d9a1e042994f8efabcd7c27bf684fde56b
+RMD160 (debugger-ruby_core_source-1.3.8.gem) = f85eb27cb92b9aad6a4a1657da46f2301cb356fa
+Size (debugger-ruby_core_source-1.3.8.gem) = 1865216 bytes
