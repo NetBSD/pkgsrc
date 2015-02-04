@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.693 2015/02/04 14:11:20 taca Exp $
+$NetBSD: CHANGES-2015,v 1.694 2015/02/04 14:20:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-userstream to 1.4.0nb1 [taca 2015-02-04]
 	Updated misc/ruby-hashie2 to 2.1.2 [taca 2015-02-04]
 	Updated sysutils/ruby-chef-zero to 3.2.1nb1 [taca 2015-02-04]
+	Updated net/ruby-addressable to 2.3.6 [taca 2015-02-04]
