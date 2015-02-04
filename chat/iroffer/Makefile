@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 00:02:38 asau Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/04 20:48:22 joerg Exp $
 #
 
 DISTNAME=	iroffer1.3.b11
@@ -15,6 +15,8 @@ INSTALLATION_DIRS=	bin
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
+
+MAKE_JOBS_SAFE=	no
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iroffer ${DESTDIR}${PREFIX}/bin
