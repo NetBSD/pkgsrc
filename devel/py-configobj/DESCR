@@ -1,0 +1,24 @@
+ConfigObj is a simple but powerful config file reader and writer:
+an ini file round tripper. Its main feature is that it is very easy to use,
+with a straightforward programmer's interface and a simple syntax for
+config files. It has lots of other features though :
+
+    * Nested sections (subsections), to any level
+    * List values
+    * Multiple line values
+    * String interpolation (substitution)
+    * Integrated with a powerful validation system
+          o including automatic type checking / conversion
+          o repeated sections
+          o and allowing default values
+    * When writing out config files, ConfigObj preserves all comments
+    and the order of members and sections
+    * Many useful methods and options for working with configuration files
+    (like the 'reload'
+    and 'merge' methods)
+    * Full Unicode support
+
+This project is also the home of validate which handles the type
+checking and conversion for ConfigObj. Support for validate is integrated
+into ConfigObj, but it can also be used on its own for reading and implementing
+validation specifications

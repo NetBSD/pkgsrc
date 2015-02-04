@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/04 10:08:34 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/_version.py
+${PYSITELIB}/_version.pyc
+${PYSITELIB}/_version.pyo
+${PYSITELIB}/configobj.py
+${PYSITELIB}/configobj.pyc
+${PYSITELIB}/configobj.pyo
+${PYSITELIB}/validate.py
+${PYSITELIB}/validate.pyc
+${PYSITELIB}/validate.pyo
