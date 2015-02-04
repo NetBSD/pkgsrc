@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/16 10:04:09 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/04 14:57:44 taca Exp $
 
 DISTNAME=	padrino-mailer-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -9,7 +9,7 @@ COMMENT=	Mailer system for padrino
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-core
-DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.5.3:../../mail/ruby-mail
+DEPENDS+=	${RUBY_PKGPREFIX}-mail25>=2.5.3<2.6:../../mail/ruby-mail25
 
 .include "../../www/ruby-padrino/Makefile.common"
 .include "../../lang/ruby/gem.mk"
