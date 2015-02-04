@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2007/02/15 14:27:48 joerg Exp $
+$NetBSD: patch-configure,v 1.1 2015/02/04 09:19:20 hauke Exp $
 
---- configure.orig	2005-01-31 03:06:14.000000000 +0000
+--- configure.orig	2015-01-29 15:04:29.000000000 +0000
 +++ configure
 @@ -1130,6 +1130,7 @@ echo "$ac_t""$configuration" 1>&6
  machine='' opsys=''
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.6 2007/02/15 14:27:48 joerg Exp $
        *-nextstep* )		opsys=nextstep ;;
        *-pc-cygwin* )		opsys=cygwin32 ;;
        *-pc-mingw* )		opsys=mingw32 ;
-@@ -3133,7 +3136,7 @@ echo "configure:3131: checking "for runt
+@@ -3132,7 +3135,7 @@ echo "configure:3130: checking "for runt
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.6 2007/02/15 14:27:48 joerg Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          
  if test "$GCC" = "yes"; then
-@@ -14091,6 +14094,41 @@ else   for feature in ncurses gpm; do
+@@ -14312,6 +14315,41 @@ else   for feature in ncurses gpm; do
      eval "with_${feature}=no"
    done
  fi 
@@ -81,7 +81,7 @@ $NetBSD: patch-aa,v 1.6 2007/02/15 14:27:48 joerg Exp $
  test "$with_x11" = "yes" -o "$with_tty" = "yes" -o "$need_event_unixoid" = "yes" && extra_objs="$extra_objs event-unixoid.o" &&  if test "$extra_verbose" = "yes"; then
     echo "    xemacs will be linked with \"event-unixoid.o\""
   fi
-@@ -16511,6 +16549,7 @@ s%@libs_xauth@%$libs_xauth%g
+@@ -16917,6 +16955,7 @@ s%@libs_xauth@%$libs_xauth%g
  s%@dnd_objs@%$dnd_objs%g
  s%@lwlib_objs@%$lwlib_objs%g
  s%@ALLOCA@%$ALLOCA%g
