@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/14 17:57:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/04 16:17:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -25,15 +25,18 @@ ${GEM_LIBDIR}/lib/sshkit/backends/local.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/netssh.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/printer.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/skipper.rb
+${GEM_LIBDIR}/lib/sshkit/color.rb
 ${GEM_LIBDIR}/lib/sshkit/command.rb
 ${GEM_LIBDIR}/lib/sshkit/command_map.rb
 ${GEM_LIBDIR}/lib/sshkit/configuration.rb
 ${GEM_LIBDIR}/lib/sshkit/coordinator.rb
 ${GEM_LIBDIR}/lib/sshkit/dsl.rb
+${GEM_LIBDIR}/lib/sshkit/exception.rb
 ${GEM_LIBDIR}/lib/sshkit/formatters/abstract.rb
 ${GEM_LIBDIR}/lib/sshkit/formatters/black_hole.rb
 ${GEM_LIBDIR}/lib/sshkit/formatters/dot.rb
 ${GEM_LIBDIR}/lib/sshkit/formatters/pretty.rb
+${GEM_LIBDIR}/lib/sshkit/formatters/simple_text.rb
 ${GEM_LIBDIR}/lib/sshkit/host.rb
 ${GEM_LIBDIR}/lib/sshkit/log_message.rb
 ${GEM_LIBDIR}/lib/sshkit/logger.rb
@@ -42,6 +45,7 @@ ${GEM_LIBDIR}/lib/sshkit/runners/group.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/null.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/parallel.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/sequential.rb
+${GEM_LIBDIR}/lib/sshkit/utils/capture_output_methods.rb
 ${GEM_LIBDIR}/lib/sshkit/version.rb
 ${GEM_LIBDIR}/sshkit.gemspec
 ${GEM_LIBDIR}/test/boxes.json
@@ -50,12 +54,15 @@ ${GEM_LIBDIR}/test/functional/backends/test_netssh.rb
 ${GEM_LIBDIR}/test/functional/test_coordinator.rb
 ${GEM_LIBDIR}/test/functional/test_ssh_server_comes_up_for_functional_tests.rb
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/support/vagrant_wrapper.rb
 ${GEM_LIBDIR}/test/unit/backends/test_connection_pool.rb
+${GEM_LIBDIR}/test/unit/backends/test_local.rb
 ${GEM_LIBDIR}/test/unit/backends/test_netssh.rb
 ${GEM_LIBDIR}/test/unit/backends/test_printer.rb
 ${GEM_LIBDIR}/test/unit/core_ext/test_string.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_dot.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_pretty.rb
+${GEM_LIBDIR}/test/unit/test_color.rb
 ${GEM_LIBDIR}/test/unit/test_command.rb
 ${GEM_LIBDIR}/test/unit/test_command_map.rb
 ${GEM_LIBDIR}/test/unit/test_configuration.rb
