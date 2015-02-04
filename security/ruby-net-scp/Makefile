@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2013/09/15 14:57:11 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/04 16:11:32 taca Exp $
 
-DISTNAME=	net-scp-1.1.2
+DISTNAME=	net-scp-1.2.1
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
