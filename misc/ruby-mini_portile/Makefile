@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/12/10 01:42:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/04 15:28:36 taca Exp $
 
-DISTNAME=	mini_portile-0.6.1
+DISTNAME=	mini_portile-0.6.2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

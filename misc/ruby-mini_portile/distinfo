@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/12/10 01:42:35 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2015/02/04 15:28:36 taca Exp $
 
-SHA1 (mini_portile-0.6.1.gem) = 349a316e007bf96afa2eee5576b6c1b5e1285271
-RMD160 (mini_portile-0.6.1.gem) = 1382c827744a990c776bc59d33037dfe090c32e0
-Size (mini_portile-0.6.1.gem) = 13824 bytes
+SHA1 (mini_portile-0.6.2.gem) = 696b940eb4ff8076a2080684046da1d2b10f41b8
+RMD160 (mini_portile-0.6.2.gem) = bd061310e779322f911e7a5569430150894e097d
+Size (mini_portile-0.6.2.gem) = 13824 bytes
