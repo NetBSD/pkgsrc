@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.704 2015/02/04 15:21:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.705 2015/02/04 15:24:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/heel to 3.1.3nb1 [taca 2015-02-04]
 	Updated mail/ruby-mime-types to 2.4.3 [taca 2015-02-04]
 	Updated mail/ruby-mail to 2.6.3 [taca 2015-02-04]
+	Removed mail/ruby-mail24 [taca 2015-02-04]
