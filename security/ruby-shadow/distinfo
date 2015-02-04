@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/07/25 16:21:26 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2015/02/04 16:14:57 taca Exp $
 
-SHA1 (ruby-shadow-2.3.3.gem) = 6c1edfd710e7d2fe82faced572a5aa972a44df42
-RMD160 (ruby-shadow-2.3.3.gem) = 82a403762814d131f05c320cc24792d6447dc321
-Size (ruby-shadow-2.3.3.gem) = 10752 bytes
-SHA1 (patch-aa) = 96e1562d9772f152c312b35c48584f0de8cecb3c
-SHA1 (patch-extconf.rb) = 69b4ba8ad0416d7219231091ce2763ca64714448
+SHA1 (ruby-shadow-2.4.1.gem) = c9d9068fc11fb509618236e9bad698fac3886bae
+RMD160 (ruby-shadow-2.4.1.gem) = 287d8e21a20fa19080ca7d7819bb1e5b1f6561d0
+Size (ruby-shadow-2.4.1.gem) = 10752 bytes
+SHA1 (patch-extconf.rb) = 72f099eb7e1bd3b5cc2b16074524d5e09431029b
