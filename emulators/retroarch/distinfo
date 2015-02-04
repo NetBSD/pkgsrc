@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/02/04 22:56:43 jmcneill Exp $
+
+SHA1 (retroarch-20150203.zip) = 46f9493f3ab09fd185345e6bab797c4e882c5262
+RMD160 (retroarch-20150203.zip) = 76c4ae4f7edb5c866f606cb23e5550a5b7c285b4
+Size (retroarch-20150203.zip) = 10043939 bytes
+SHA1 (patch-Makefile) = 1c4af8253eb3ad3c209fab8919ecd78526163b86
+SHA1 (patch-Makefile.common) = 3a2157e04dfacadc48f421106760b0194586677e
+SHA1 (patch-qb_config.libs.sh) = 4eccb74e9f31d0f8ff3eeb6c6ded03ac148b2808
+SHA1 (patch-qb_qb.libs.sh) = 00689ff9d4b6afc9313938e2921e90f01640420f
