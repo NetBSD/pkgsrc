@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.12 2015/02/03 02:32:05 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.13 2015/02/04 06:53:18 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -18,7 +18,7 @@ BOOT_ARCHIVE:=	${PKGNAME}-boot-i386-unknown-freebsd.tar.xz
 BOOT_ARCHIVE:=	${PKGNAME}-boot-i386-unknown-netbsd.tar.xz
 
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-BOOT_ARCHIVE:=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
+BOOT_ARCHIVE:=	${PKGNAME}-boot-powerpc-apple-darwin.tar.xz
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect for this platform. See ${WRKSRC}/aclocal.m4
 # (FP_LEADING_UNDERSCORE)
@@ -59,14 +59,18 @@ USE_TOOLS+=	gmake xzcat xz
 pre-configure:
 	@${TEST} -f ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE} || \
 	${FAIL_MSG}  "Put your trusted bootstrap archive as ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}"
+
 	@${PHASE_MSG} "Extracting bootstrapping compiler for ${PKGNAME}"
 	${RUN} ${MKDIR} ${WRKDIR:Q}/build-extract
 	${RUN} cd ${WRKDIR:Q}/build-extract && \
 		${EXTRACT_CMD_DEFAULT} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE}
 
+# It is important to install the stage-0 compiler with our rpath flags
+# configured, otherwise it will produce executables with no rpath and
+# fail in the configure phase.
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
 	${RUN} cd ${WRKDIR:Q}/build-extract/${PKGNAME_NOREV}-boot && \
-		${SH} ./configure \
+		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${MAKE_PROGRAM} install
 
