@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.695 2015/02/04 14:27:37 taca Exp $
+$NetBSD: CHANGES-2015,v 1.696 2015/02/04 14:34:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-addressable to 2.3.6 [taca 2015-02-04]
 	Updated print/ruby-pdf-core to 0.4.0 [taca 2015-02-04]
 	Updated print/ruby-prawn to 1.3.0 [taca 2015-02-04]
+	Removed textproc/ruby-json-utils [taca 2015-02-04]
