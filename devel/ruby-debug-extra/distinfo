@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2011/06/19 15:27:19 taca Exp $
-
-SHA1 (ruby-debug-extra-0.10.4.tar.gz) = f8274927c13282f4aa5cdaa9da6cf3417662fc83
-RMD160 (ruby-debug-extra-0.10.4.tar.gz) = dc6e017c36f103bedc73e69883c564c55d90da88
-Size (ruby-debug-extra-0.10.4.tar.gz) = 827319 bytes
-SHA1 (patch-aa) = 9c754144754dd547124a103ab8256ab1c276e0a7
