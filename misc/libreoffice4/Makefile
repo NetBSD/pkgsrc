@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2015/01/08 10:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2015/02/04 18:19:34 ryoon Exp $
 
-VERREL=		4.3.5
-VERRC=		2
+VERREL=		4.4.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +21,8 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O
 .endif
 
 CHECK_SHLIBS_SUPPORTED=	no
+# configure will be regenerated.
+CHECK_PORTABILITY_SKIP=configure
 
 DIST_SUBDIR=	libreoffice
 
@@ -53,9 +54,8 @@ MORE_DISTFILES= \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
 	3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip \
-	e8e197d628436490886d17cffa108fe3-commons-logging-1.1.3-src.tar.gz \
+	commons-logging-1.2-src.tar.gz \
 	46e92b68e31e858512b680b3b61dc4c1-mythes-1.2.3.tar.gz \
-	aa5ca9d1ed1082890835afab26400a39-mdds_0.10.3.tar.bz2 \
 	36271d3fa0d9dec1632029b6d7aac925-liblangtag-0.5.1.tar.bz2 \
 	7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz \
 	8ce2fcd72becf06c41f7201d15373ed9-librepository-1.1.6.zip \
@@ -93,10 +93,6 @@ SITES.e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip=http://www.num
 
 DISTFILES+=185d60944ea767075d27247c3162b3bc-unowinreg.dll
 SITES.185d60944ea767075d27247c3162b3bc-unowinreg.dll=http://download.go-oo.org/extern/
-
-PATCH_SITES=		http://www.linuxfromscratch.org/patches/blfs/svn/
-PATCHFILES=		libreoffice-4.3.2.2-boost_1_56_0-1.patch
-PATCH_DIST_STRIP=	-p1
 
 .include "options.mk"
 
@@ -147,14 +143,13 @@ CONFIGURE_ARGS+=	--disable-firebird-sdbc
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-gnome-vfs
 CONFIGURE_ARGS+=	--disable-odk
-CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-randr-link
 CONFIGURE_ARGS+=	--disable-systray
 # Enabling crashrep causes error. Non-official build does not need it.
 CONFIGURE_ARGS+=	--disable-crashdump
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
-CONFIGURE_ARGS+=	--enable-gstreamer
+CONFIGURE_ARGS+=	--enable-gstreamer-1-0
 CONFIGURE_ARGS+=	--enable-lockdown
 CONFIGURE_ARGS+=	--enable-python=system
 #CONFIGURE_ARGS+=	--enable-release-build
@@ -166,7 +161,6 @@ CONFIGURE_ARGS+=	--with-external-tar=${DISTDIR}/${DIST_SUBDIR}
 CONFIGURE_ARGS+=	--with-fonts
 CONFIGURE_ARGS+=	--with-lang="ALL"
 CONFIGURE_ARGS+=	--with-myspell-dicts
-# needs fixes for boost-1.56.0
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
@@ -180,7 +174,6 @@ CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-system-apache-commons
 CONFIGURE_ARGS+=	--with-system-cppunit
 CONFIGURE_ARGS+=	--with-system-libgltf
-CONFIGURE_ARGS+=	--without-system-jfreereport
 CONFIGURE_ARGS+=	--without-system-npapi-headers
 # internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
@@ -253,6 +246,7 @@ post-install:
 .include "../../converters/libfreehand/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../converters/libmspub/buildlink3.mk"
+.include "../../converters/libpagemaker/buildlink3.mk"
 .include "../../converters/libvisio/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
@@ -290,8 +284,8 @@ post-install:
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../math/coinmp/buildlink3.mk"
 .include "../../math/lp_solve/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
