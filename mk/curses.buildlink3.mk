@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.21 2015/02/02 15:16:32 pho Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.22 2015/02/04 16:35:32 pho Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -123,7 +123,7 @@ USE_NCURSES=			yes
 .    include "../../devel/pdcurses/buildlink3.mk"
 
 .  endif
-.  for _var_ in PREFIX INCDIRS LIBDIRS LIBNAME LDADD
+.  for _var_ in PKGNAME PREFIX INCDIRS LIBDIRS LIBNAME LDADD
 BUILDLINK_${_var_}.curses?=	${BUILDLINK_${_var_}.${CURSES_TYPE}}
 .  endfor
 .endif
