@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/04 13:39:43 taca Exp $
+
+SHA1 (debugger-1.6.8.gem) = af2fc1f586e1a34b0925a71b9e2ea0f56ad9c459
+RMD160 (debugger-1.6.8.gem) = b79a4885c9abb29c32f575ceafcabafd2d1bcc60
+Size (debugger-1.6.8.gem) = 318976 bytes
