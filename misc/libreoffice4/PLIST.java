@@ -1,28 +1,14 @@
-@comment $NetBSD: PLIST.java,v 1.5 2014/10/13 21:52:50 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.6 2015/02/04 18:19:34 ryoon Exp $
 ${PKGNAME}/program/classes/ScriptFramework.jar
 ${PKGNAME}/program/classes/ScriptProviderForBeanShell.jar
 ${PKGNAME}/program/classes/ScriptProviderForJava.jar
 ${PKGNAME}/program/classes/XMergeBridge.jar
 ${PKGNAME}/program/classes/bsh.jar
-${PKGNAME}/program/classes/commons-logging-1.1.3.jar
 ${PKGNAME}/program/classes/commonwizards.jar
-${PKGNAME}/program/classes/flow-engine.jar
-${PKGNAME}/program/classes/flute-1.1.6.jar
 ${PKGNAME}/program/classes/form.jar
-${PKGNAME}/program/classes/libbase-1.1.6.jar
-${PKGNAME}/program/classes/libfonts-1.1.6.jar
-${PKGNAME}/program/classes/libformula-1.1.7.jar
-${PKGNAME}/program/classes/liblayout.jar
-${PKGNAME}/program/classes/libloader-1.1.6.jar
-${PKGNAME}/program/classes/librepository-1.1.6.jar
-${PKGNAME}/program/classes/libserializer-1.1.6.jar
-${PKGNAME}/program/classes/libxml-1.1.7.jar
 ${PKGNAME}/program/classes/officebean.jar
 ${PKGNAME}/program/classes/query.jar
 ${PKGNAME}/program/classes/report.jar
-${PKGNAME}/program/classes/reportbuilder.jar
-${PKGNAME}/program/classes/reportbuilderwizard.jar
-${PKGNAME}/program/classes/sac.jar
 ${PKGNAME}/program/classes/sdbc_hsqldb.jar
 ${PKGNAME}/program/classes/smoketest.jar
 ${PKGNAME}/program/classes/table.jar
@@ -1509,7 +1495,7 @@ ${PKGNAME}/share/extensions/wiki-publisher/WikiExtension.xcu
 ${PKGNAME}/share/extensions/wiki-publisher/commons-codec-1.9.jar
 ${PKGNAME}/share/extensions/wiki-publisher/commons-httpclient-3.1.jar
 ${PKGNAME}/share/extensions/wiki-publisher/commons-lang3-3.3.1.jar
-${PKGNAME}/share/extensions/wiki-publisher/commons-logging-1.1.3.jar
+${PKGNAME}/share/extensions/wiki-publisher/commons-logging-1.2.jar
 ${PKGNAME}/share/extensions/wiki-publisher/components.rdb
 ${PKGNAME}/share/extensions/wiki-publisher/description-af.txt
 ${PKGNAME}/share/extensions/wiki-publisher/description-am.txt
@@ -2734,8 +2720,6 @@ ${PKGNAME}/share/extensions/wiki-publisher/license/THIRDPARTYLICENSEREADME.html
 ${PKGNAME}/share/extensions/wiki-publisher/mediawiki.jar
 ${PKGNAME}/share/extensions/wiki-publisher/registration/LICENSE
 ${PKGNAME}/share/extensions/wiki-publisher/templates/MediaWiki/mediawiki.ott
-${PKGNAME}/share/registry/reportbuilder.xcd
-${PKGNAME}/share/template/common/wizard/report/default.otr
 ${PKGNAME}/ure/bin/javaldx
 ${PKGNAME}/ure/lib/JREProperties.class
 ${PKGNAME}/ure/lib/libjava_uno.so
@@ -2746,7 +2730,6 @@ ${PKGNAME}/ure/lib/libjuh.so
 ${PKGNAME}/ure/lib/libjuhx.so
 ${PKGNAME}/ure/lib/libjvmaccesslo.so
 ${PKGNAME}/ure/lib/libjvmfwklo.so
-${PKGNAME}/ure/lib/libsunjavapluginlo.so
 ${PKGNAME}/ure/share/java/java_uno.jar
 ${PKGNAME}/ure/share/java/juh.jar
 ${PKGNAME}/ure/share/java/jurt.jar
