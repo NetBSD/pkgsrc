@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/01 14:43:40 taca Exp $
-bin/sprockets
+@comment $NetBSD: PLIST,v 1.5 2015/02/04 15:45:43 taca Exp $
+bin/sprockets${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
