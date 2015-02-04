@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.706 2015/02/04 15:26:14 taca Exp $
+$NetBSD: CHANGES-2015,v 1.707 2015/02/04 15:27:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -908,3 +908,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/ruby-mail to 2.6.3 [taca 2015-02-04]
 	Removed mail/ruby-mail24 [taca 2015-02-04]
 	Updated misc/ruby-hashie to 3.4.0 [taca 2015-02-04]
+	Updated misc/ruby-launchy to 2.4.3 [taca 2015-02-04]
