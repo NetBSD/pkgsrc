@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2014/12/17 01:40:51 rodent Exp $
+# $NetBSD: Makefile,v 1.218 2015/02/04 23:05:48 jmcneill Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -80,6 +80,10 @@ SUBDIR+=	kegs
 SUBDIR+=	kenigma
 SUBDIR+=	klh10
 SUBDIR+=	libdsk
+SUBDIR+=	libretro-fceumm
+SUBDIR+=	libretro-mupen64plus
+SUBDIR+=	libretro-pcsx-rearmed
+SUBDIR+=	libretro-picodrive
 SUBDIR+=	libspectrum
 SUBDIR+=	lrmi
 SUBDIR+=	m1
@@ -111,6 +115,7 @@ SUBDIR+=	qemu
 SUBDIR+=	qemu0
 SUBDIR+=	raine
 SUBDIR+=	realboy
+SUBDIR+=	retroarch
 SUBDIR+=	simh
 SUBDIR+=	simulavr
 SUBDIR+=	ski
