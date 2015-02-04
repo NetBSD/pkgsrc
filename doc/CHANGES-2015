@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.671 2015/02/04 01:52:58 mef Exp $
+$NetBSD: CHANGES-2015,v 1.672 2015/02/04 03:27:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -864,3 +864,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkgdiff to 1.6 [abs 2015-02-03]
 	Updated devel/lua-lpeg to 0.12.1 [alnsn 2015-02-03]
 	Updated net/balance to 3.56 [mef 2015-02-04]
+	Updated textproc/ruby-multi_json to 1.10.1 [taca 2015-02-04]
