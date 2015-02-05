@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/05 14:47:09 mef Exp $
 #
 
-DISTNAME=	Hash-MoreUtils-0.04
+DISTNAME=	Hash-MoreUtils-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Hash-MoreUtils
