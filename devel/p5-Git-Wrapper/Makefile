@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/05 14:09:02 mef Exp $
 
-DISTNAME=		Git-Wrapper-0.028
+DISTNAME=		Git-Wrapper-0.038
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Git/}
 
@@ -18,7 +17,7 @@ BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 DEPENDS+=		{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
-DEPENDS+=		p5-File-pushd-[0-9]*:../../devel/p5-File-pushd
+DEPENDS+=		p5-File-pushd>=1.05:../../devel/p5-File-pushd
 DEPENDS+=		{perl>=5.9.5,p5-IPC-Cmd-[0-9]*}:../../devel/p5-IPC-Cmd
 DEPENDS+=		p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
