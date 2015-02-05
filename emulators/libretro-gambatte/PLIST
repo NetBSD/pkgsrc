@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/05 01:40:45 jmcneill Exp $
+lib/libretro/gambatte_libretro.so
