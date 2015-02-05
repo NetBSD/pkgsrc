@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/14 19:21:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/05 15:51:35 taca Exp $
 bin/puma
 bin/pumactl
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -75,6 +75,7 @@ ${GEM_LIBDIR}/test/test_minissl.rb
 ${GEM_LIBDIR}/test/test_null_io.rb
 ${GEM_LIBDIR}/test/test_persistent.rb
 ${GEM_LIBDIR}/test/test_puma_server.rb
+${GEM_LIBDIR}/test/test_puma_server_ssl.rb
 ${GEM_LIBDIR}/test/test_rack_handler.rb
 ${GEM_LIBDIR}/test/test_rack_server.rb
 ${GEM_LIBDIR}/test/test_tcp_rack.rb
