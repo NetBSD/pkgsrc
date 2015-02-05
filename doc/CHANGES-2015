@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.755 2015/02/05 17:46:06 adam Exp $
+$NetBSD: CHANGES-2015,v 1.756 2015/02/05 19:47:22 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -671,7 +671,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/glu to 7.11.2nb1 [nat 2015-01-29]
 	Updated devel/bison to 3.0.4 [wiz 2015-01-30]
 	Updated misc/dialog to 1.2.20150125 [wiz 2015-01-30]
-	Added multimedia/gst-plugin1-omx version 1.2.0 [jmcneill 2015-01-29]
+	Added multimedia/gst-plugins1-omx version 1.2.0 [jmcneill 2015-01-29]
 	Added multimedia/gst-plugins1-egl-gl version 1.4.5 [jmcneill 2015-01-30]
 	Added multimedia/gst-plugins1-egl-opengl version 1.4.5 [jmcneill 2015-01-30]
 	Added devel/p5-Tie-Cycle version 1.21 [mef 2015-01-30]
