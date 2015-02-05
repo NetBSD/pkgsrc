@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/04 23:04:17 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/05 16:57:53 wiz Exp $
 
 DISTNAME=	pcsx-rearmed-libretro-20150204
 PKGNAME=	libretro-pcsx-rearmed-20150204
 CATEGORIES=	emulators
-MASTER_SITES=	http://ftp.netbsd.org/pub/NetBSD/misc/jmcneill/retroarch/
+MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
