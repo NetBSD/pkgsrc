@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.728 2015/02/04 23:08:03 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.729 2015/02/05 00:17:50 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/libretro-picodrive version 20150203 [jmcneill 2015-02-04]
 	Added emulators/libretro-mupen64plus version 20150204 [jmcneill 2015-02-04]
 	Added emulators/libretro-pcsx-rearmed version 20150204 [jmcneill 2015-02-04]
+	Added emulators/libretro-snes9x-next version 20150204 [jmcneill 2015-02-04]
