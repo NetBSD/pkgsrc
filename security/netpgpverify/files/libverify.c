@@ -2723,6 +2723,7 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	if (cursor->pgp->ssh) {
 		fixup_ssh_keyid(cursor->pgp, signature, "sha1");
 	}
+	sub = 0;
 	if ((j = find_keyid(cursor->pgp, NULL, onepass->keyid, &sub)) < 0) {
 		fmt_binary(strkeyid, sizeof(strkeyid), onepass->keyid, (unsigned)sizeof(onepass->keyid));
 		snprintf(cursor->why, sizeof(cursor->why), "Signature key id %s not found ", strkeyid);
