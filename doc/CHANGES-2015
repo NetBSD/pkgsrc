@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.729 2015/02/05 00:17:50 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.730 2015/02/05 00:23:20 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -935,3 +935,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/libretro-mupen64plus version 20150204 [jmcneill 2015-02-04]
 	Added emulators/libretro-pcsx-rearmed version 20150204 [jmcneill 2015-02-04]
 	Added emulators/libretro-snes9x-next version 20150204 [jmcneill 2015-02-04]
+	Updated security/libnetpgpverify to 20150205 [agc 2015-02-04]
+	Updated security/netpgpverify to 20150205 [agc 2015-02-04]
