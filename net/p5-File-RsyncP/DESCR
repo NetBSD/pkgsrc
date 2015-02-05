@@ -1,0 +1,4 @@
+File::RsyncP is a perl implementation of an Rsync client.  It is
+compatible with Rsync 2.x (protocol versions up to 28).  It can send
+or receive files, either by running rsync on the remote machine, or
+connecting to an rsyncd deamon on the remote machine.
