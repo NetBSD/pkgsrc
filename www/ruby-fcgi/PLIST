@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/17 14:37:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/02/05 15:46:57 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/fcgi.${RUBY_DLEXT}
-${GEM_LIBDIR}/ChangeLog
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/README.signals
+${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/ext/fcgi/MANIFEST
 ${GEM_LIBDIR}/ext/fcgi/extconf.rb
 ${GEM_LIBDIR}/ext/fcgi/fcgi.c
+${GEM_LIBDIR}/fcgi.gemspec
 ${GEM_LIBDIR}/lib/fcgi.rb
 ${GEM_LIBDIR}/lib/fcgi.${RUBY_DLEXT}
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_fcgi.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
