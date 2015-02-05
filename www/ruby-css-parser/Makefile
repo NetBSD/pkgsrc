@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/09/15 16:55:32 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/02/05 15:30:35 taca Exp $
 
-DISTNAME=	css_parser-1.3.5
+DISTNAME=	css_parser-1.3.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www
 
@@ -10,6 +10,8 @@ COMMENT=	Ruby CSS parser
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
+
+RUBY_VERSION_SUPPORTED=	200 193 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
