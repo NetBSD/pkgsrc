@@ -13,8 +13,6 @@ wip/ghc TODO
   * ``BZIP2FLAGS``
   * ``XZFLAGS``
 
-* Let ``./configure`` check for broken binutils and provide a better
-  fix for ``patch-rts_StgCRun.c``.
 * Build more bootstrapping compilers to support more platforms.
 
 
