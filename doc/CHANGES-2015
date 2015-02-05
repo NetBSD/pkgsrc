@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.735 2015/02/05 11:29:58 mef Exp $
+$NetBSD: CHANGES-2015,v 1.736 2015/02/05 13:50:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -942,3 +942,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nsd to 4.1.1 [pettai 2015-02-05]
 	Updated misc/libreoffice4 to 4.4.0.3nb1 [ryoon 2015-02-05]
 	Updated graphics/cdlabelgen to 4.3.0 [mef 2015-02-05]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.14 [mef 2015-02-05]
+	Updated devel/p5-Class-Throwable to 0.13 [mef 2015-02-05]
