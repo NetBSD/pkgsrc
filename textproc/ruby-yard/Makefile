@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/02/05 15:23:26 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/05 15:24:27 taca Exp $
 
 DISTNAME=	yard-0.8.7.6
-PKGREVISION=	1
 CATEGORIES=	ruby textproc
 
 MAINTAINER=	rodent@NetBSD.org
