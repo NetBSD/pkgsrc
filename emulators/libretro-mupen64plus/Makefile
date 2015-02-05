@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/02/05 17:33:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/05 21:02:37 wiz Exp $
 
 DISTNAME=	mupen64plus-libretro-20150204
 PKGNAME=	libretro-mupen64plus-20150204
@@ -29,17 +29,10 @@ INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
 .endif
 
-.if !empty(MACHINE_ARCH:M*arm*) || !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
-# only ARM-, i386-, and x86_64-specific options for now, and options framework
-#insists on having at least one option, so only pull it in for them
 .include "options.mk"
-.endif
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/mupen64plus_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mupen64plus_libretro.so
 
-.if empty(MACHINE_ARCH:M*arm*)
-.include "../../graphics/MesaLib/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
