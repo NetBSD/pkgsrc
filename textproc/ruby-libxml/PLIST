@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/03/17 14:34:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/02/05 15:09:25 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/libxml_ruby.${RUBY_DLEXT}
@@ -163,7 +163,6 @@ ${GEM_LIBDIR}/test/model/bands.iso-8859-1.xml
 ${GEM_LIBDIR}/test/model/bands.utf-8.xml
 ${GEM_LIBDIR}/test/model/bands.xml
 ${GEM_LIBDIR}/test/model/books.xml
-${GEM_LIBDIR}/test/model/kml_sample.xml
 ${GEM_LIBDIR}/test/model/merge_bug_data.xml
 ${GEM_LIBDIR}/test/model/ruby-lang.html
 ${GEM_LIBDIR}/test/model/rubynet.xml
@@ -174,7 +173,6 @@ ${GEM_LIBDIR}/test/model/shiporder.xml
 ${GEM_LIBDIR}/test/model/shiporder.xsd
 ${GEM_LIBDIR}/test/model/soap.xml
 ${GEM_LIBDIR}/test/model/xinclude.xml
-${GEM_LIBDIR}/test/remove_test.rb
 ${GEM_LIBDIR}/test/tc_attr.rb
 ${GEM_LIBDIR}/test/tc_attr_decl.rb
 ${GEM_LIBDIR}/test/tc_attributes.rb
@@ -186,7 +184,6 @@ ${GEM_LIBDIR}/test/tc_dtd.rb
 ${GEM_LIBDIR}/test/tc_encoding.rb
 ${GEM_LIBDIR}/test/tc_encoding_sax.rb
 ${GEM_LIBDIR}/test/tc_error.rb
-${GEM_LIBDIR}/test/tc_gc.rb
 ${GEM_LIBDIR}/test/tc_html_parser.rb
 ${GEM_LIBDIR}/test/tc_html_parser_context.rb
 ${GEM_LIBDIR}/test/tc_namespace.rb
