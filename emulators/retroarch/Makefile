@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/02/05 16:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/05 16:46:17 wiz Exp $
 
 DISTNAME=	retroarch-20150203
 PKGNAME=	retroarch-0.0.20150203
@@ -14,9 +14,13 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/RetroArch-master
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--global-config-dir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+= MAN_DIR=${PREFIX}/${PKGMANDIR}/man1/
 CONFIG_SHELL=	bash
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pkg-config gmake
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+REPLACE_PYTHON=	tools/cg2glsl.py
 
 EGDIR=		${PREFIX}/share/examples/retroarch
 CONF_FILES+=	${EGDIR}/retroarch.cfg ${PKG_SYSCONFDIR}/retroarch.cfg
@@ -45,6 +49,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
