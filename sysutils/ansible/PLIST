@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/06/15 00:15:08 rodent Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/02/05 15:22:06 pettai Exp $
 bin/ansible
 bin/ansible-doc
 bin/ansible-galaxy
@@ -298,6 +298,9 @@ ${PYSITELIB}/ansible/utils/module_docs_fragments/rackspace.pyo
 ${PYSITELIB}/ansible/utils/plugins.py
 ${PYSITELIB}/ansible/utils/plugins.pyc
 ${PYSITELIB}/ansible/utils/plugins.pyo
+${PYSITELIB}/ansible/utils/splitter.py
+${PYSITELIB}/ansible/utils/splitter.pyc
+${PYSITELIB}/ansible/utils/splitter.pyo
 ${PYSITELIB}/ansible/utils/string_functions.py
 ${PYSITELIB}/ansible/utils/string_functions.pyc
 ${PYSITELIB}/ansible/utils/string_functions.pyo
