@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/12/17 15:08:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/05 15:32:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -15,11 +15,20 @@ ${GEM_LIBDIR}/lib/csspool/css/charset.rb
 ${GEM_LIBDIR}/lib/csspool/css/declaration.rb
 ${GEM_LIBDIR}/lib/csspool/css/document.rb
 ${GEM_LIBDIR}/lib/csspool/css/document_handler.rb
+${GEM_LIBDIR}/lib/csspool/css/document_query.rb
+${GEM_LIBDIR}/lib/csspool/css/fontface_rule.rb
 ${GEM_LIBDIR}/lib/csspool/css/import_rule.rb
-${GEM_LIBDIR}/lib/csspool/css/media.rb
+${GEM_LIBDIR}/lib/csspool/css/keyframes_block.rb
+${GEM_LIBDIR}/lib/csspool/css/keyframes_rule.rb
+${GEM_LIBDIR}/lib/csspool/css/media_feature.rb
+${GEM_LIBDIR}/lib/csspool/css/media_query.rb
+${GEM_LIBDIR}/lib/csspool/css/media_query_list.rb
+${GEM_LIBDIR}/lib/csspool/css/media_type.rb
+${GEM_LIBDIR}/lib/csspool/css/namespace_rule.rb
 ${GEM_LIBDIR}/lib/csspool/css/parser.rb
 ${GEM_LIBDIR}/lib/csspool/css/parser.y
 ${GEM_LIBDIR}/lib/csspool/css/rule_set.rb
+${GEM_LIBDIR}/lib/csspool/css/supports_rule.rb
 ${GEM_LIBDIR}/lib/csspool/css/tokenizer.rb
 ${GEM_LIBDIR}/lib/csspool/css/tokenizer.rex
 ${GEM_LIBDIR}/lib/csspool/node.rb
@@ -32,7 +41,9 @@ ${GEM_LIBDIR}/lib/csspool/selectors/additional.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/attribute.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/class.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/id.rb
+${GEM_LIBDIR}/lib/csspool/selectors/pseudo.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/pseudo_class.rb
+${GEM_LIBDIR}/lib/csspool/selectors/pseudo_element.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/simple.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/type.rb
 ${GEM_LIBDIR}/lib/csspool/selectors/universal.rb
@@ -40,7 +51,9 @@ ${GEM_LIBDIR}/lib/csspool/terms.rb
 ${GEM_LIBDIR}/lib/csspool/terms/function.rb
 ${GEM_LIBDIR}/lib/csspool/terms/hash.rb
 ${GEM_LIBDIR}/lib/csspool/terms/ident.rb
+${GEM_LIBDIR}/lib/csspool/terms/math.rb
 ${GEM_LIBDIR}/lib/csspool/terms/number.rb
+${GEM_LIBDIR}/lib/csspool/terms/resolution.rb
 ${GEM_LIBDIR}/lib/csspool/terms/rgb.rb
 ${GEM_LIBDIR}/lib/csspool/terms/string.rb
 ${GEM_LIBDIR}/lib/csspool/terms/uri.rb
@@ -51,17 +64,27 @@ ${GEM_LIBDIR}/lib/csspool/visitors/iterator.rb
 ${GEM_LIBDIR}/lib/csspool/visitors/to_css.rb
 ${GEM_LIBDIR}/lib/csspool/visitors/visitor.rb
 ${GEM_LIBDIR}/test/css/test_document.rb
+${GEM_LIBDIR}/test/css/test_document_query.rb
+${GEM_LIBDIR}/test/css/test_font_face.rb
 ${GEM_LIBDIR}/test/css/test_import_rule.rb
+${GEM_LIBDIR}/test/css/test_keyframes_rule.rb
+${GEM_LIBDIR}/test/css/test_media_rule.rb
+${GEM_LIBDIR}/test/css/test_namespace_rule.rb
+${GEM_LIBDIR}/test/css/test_node_position.rb
 ${GEM_LIBDIR}/test/css/test_parser.rb
+${GEM_LIBDIR}/test/css/test_supports_rule.rb
 ${GEM_LIBDIR}/test/css/test_tokenizer.rb
+${GEM_LIBDIR}/test/css/test_variables.rb
 ${GEM_LIBDIR}/test/files/test.css
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/sac/test_parser.rb
 ${GEM_LIBDIR}/test/sac/test_properties.rb
 ${GEM_LIBDIR}/test/sac/test_terms.rb
 ${GEM_LIBDIR}/test/test_collection.rb
+${GEM_LIBDIR}/test/test_declaration.rb
 ${GEM_LIBDIR}/test/test_parser.rb
 ${GEM_LIBDIR}/test/test_selector.rb
+${GEM_LIBDIR}/test/test_term.rb
 ${GEM_LIBDIR}/test/visitors/test_children.rb
 ${GEM_LIBDIR}/test/visitors/test_comparable.rb
 ${GEM_LIBDIR}/test/visitors/test_each.rb
