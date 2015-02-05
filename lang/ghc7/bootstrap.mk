@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.13 2015/02/04 06:53:18 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.14 2015/02/05 00:26:34 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -85,18 +85,36 @@ pre-configure:
 # unusable.
 #
 
+# Gather information about packages on which bootkit depends.
+BOOT_GHC_DEPS:=		curses iconv
+BOOT_GHC_PKGSRC_DEPS:=	# empty
+.for pkg in ${BOOT_GHC_DEPS}
+
+CHECK_BUILTIN.${pkg}:=	yes
+.  if ${pkg} == "curses"
+.    include "../../mk/curses.builtin.mk"
+.  elif ${pkg} == "iconv"
+.    include "../../converters/libiconv/builtin.mk"
+.  endif
+CHECK_BUILTIN.${pkg}:=	no
+
+.  if ${PREFER.${pkg}} == "pkgsrc"
+BOOT_GHC_PKGSRC_DEPS+=	${pkg}
+.  endif
+.endfor
+
 # Compiler wrappers must not remove -I/-L flags for this directory
 # tree, otherwise the GHC we are going to use for building our
 # bootstraping kit will not work at all. Ideally it should be added to
 # BUILDLINK_PASSTHRU_DIRS only .if make(bootstrap), but then running
 # "${MAKE} wrapper" before "${MAKE} bootstrap" will result in a
 # cryptic error which we can't easily catch.
-BOOTSTRAP_GHC_LIBDIR_CMD=	ghc --print-libdir
-.if !defined(BOOTSTRAP_GHC_LIBDIR)
-BOOTSTRAP_GHC_LIBDIR!=		${BOOTSTRAP_GHC_LIBDIR_CMD} 2>/dev/null || ${ECHO}
+BOOT_GHC_LIBDIR_CMD=		ghc --print-libdir
+.if !defined(BOOT_GHC_LIBDIR)
+BOOT_GHC_LIBDIR!=		${BOOT_GHC_LIBDIR_CMD} 2>/dev/null || ${ECHO}
 .endif
-MAKEVARS+=			BOOTSTRAP_GHC_LIBDIR
-BUILDLINK_PASSTHRU_DIRS+=	${BOOTSTRAP_GHC_LIBDIR}
+MAKEVARS+=			BOOT_GHC_LIBDIR
+BUILDLINK_PASSTHRU_DIRS+=	${BOOT_GHC_LIBDIR}
 
 # Default values for BUILDLINK_INCDIRS.<pkg> are only generated in the
 # barrier. See ../../mk/buildlink3/bsd.buildlink3.mk and
@@ -108,23 +126,23 @@ _BARRIER_CMDLINE_TARGETS+=	bootstrap
 .if !defined(_PKGSRC_BARRIER)
 bootstrap: barrier
 .else
-bootstrap: pre-bootstrap .WAIT ${WRKDIR}/${BOOT_ARCHIVE}
-	@${PHASE_MSG} "Done creating" ${WRKDIR}/${BOOT_ARCHIVE}
+bootstrap: pre-bootstrap .WAIT ${WRKDIR}/${BOOT_ARCHIVE} .WAIT post-bootstrap
 .endif
 
 .PHONY: pre-bootstrap
 pre-bootstrap: wrapper
-.if empty(BOOTSTRAP_GHC_LIBDIR)
-	@if ${BOOTSTRAP_GHC_LIBDIR_CMD} 2>/dev/null 1>&2; then \
-		${ERROR_MSG} "Running \"${BOOTSTRAP_GHC_LIBDIR_CMD}\" has failed during wrapper phase."; \
+.if empty(BOOT_GHC_LIBDIR)
+	@if ${BOOT_GHC_LIBDIR_CMD} 2>/dev/null 1>&2; then \
+		${ERROR_MSG} "Running \"${BOOT_GHC_LIBDIR_CMD}\" has failed during wrapper phase."; \
 		${FAIL_MSG}  "Plase run \"${MAKE} clean\" and try again."; \
 	else \
-		${ERROR_MSG} "Failed to run \"${BOOTSTRAP_GHC_LIBDIR_CMD}\":"; \
-		${BOOTSTRAP_GHC_LIBDIR_CMD}; \
+		${ERROR_MSG} "Failed to run \"${BOOT_GHC_LIBDIR_CMD}\":"; \
+		${BOOT_GHC_LIBDIR_CMD}; \
 		${ERROR_MSG} "You don't seem to have a working GHC in your PATH."; \
 		${FAIL_MSG}  "Please install one and then run \"${MAKE} clean bootstrap\"."; \
 	fi
 .endif
+# ${_COOKIE.configure} is not defined yet so we can't use .if here.
 	@if ${TEST} -f ${_COOKIE.configure}; then \
 		${ERROR_MSG} "You have already configured the package in a way\
 		that building bootstrapping compiler is impossible."; \
@@ -170,3 +188,39 @@ ${WRKDIR}/${BOOT_TARBALL}: ${WRKDIR}/stamp-build-boot
 ${WRKDIR}/${BOOT_ARCHIVE}: ${WRKDIR}/${BOOT_TARBALL}
 	@${PHASE_MSG} "Compressing binary distribution of bootstrapping ${PKGNAME_NOREV}"
 	${XZ} --verbose -9 --extreme ${WRKDIR:Q}/${BOOT_TARBALL}
+
+.PHONY: post-bootstrap
+post-bootstrap:
+	@${ECHO} "=========================================================================="
+	@${ECHO} "Done creating ${BOOT_ARCHIVE}"
+	@${ECHO} "  in ${WRKDIR}"
+	@${ECHO}
+	@${ECHO} "Now you can copy it into ${DISTDIR}/${DIST_SUBDIR} to use it as your"
+	@${ECHO} "bootstrap kit. You may want to take a backup in case \"lintpkgsrc -r\""
+	@${ECHO} "removes it."
+	@${ECHO}
+	@${ECHO} "Your bootstrap kit has the following run-time dependencies:"
+# TODO: It may depend also on GCC runtime so we want to report that,
+# but how?
+.for pkg in ${BOOT_GHC_DEPS}
+	@${PRINTF} "  * %-8s" "${pkg}:"
+.  if !empty(USE_BUILTIN.${pkg}:M[nN][oO])
+	@${ECHO_N} " pkgsrc ${BUILDLINK_PKGNAME.${pkg}}"
+.  else
+	@${ECHO_N} " native"
+.    if empty(BUILTIN_PKG.${pkg})
+	@${ECHO_N} " (version/variant unknown)"
+.    else
+	@${ECHO_N} " ${BUILTIN_PKG.${pkg}}"
+.    endif
+.  endif
+	@${ECHO}
+.endfor
+.if !empty(BOOT_GHC_PKGSRC_DEPS)
+	@${ECHO}
+	@${ECHO} "Please note that it is generally not a good idea for a bootkit to depend"
+	@${ECHO} "on pkgsrc packages, as pkgsrc tends to move faster than operating systems"
+	@${ECHO} "so your bootkit may bitrot more quickly. You may want to rebuild it"
+	@${ECHO} "without setting PREFER_PKGSRC to \"yes\"."
+.endif
+	@${ECHO} "=========================================================================="
