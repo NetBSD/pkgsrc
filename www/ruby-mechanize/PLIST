@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/15 19:00:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/02/05 15:49:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/examples/proxy_req.rb
 ${GEM_LIBDIR}/examples/rubyforge.rb
 ${GEM_LIBDIR}/examples/spider.rb
 ${GEM_LIBDIR}/examples/wikipedia_links_to_philosophy.rb
+${GEM_LIBDIR}/lib/mechanize.rb
 ${GEM_LIBDIR}/lib/mechanize/chunked_termination_error.rb
 ${GEM_LIBDIR}/lib/mechanize/content_type_error.rb
 ${GEM_LIBDIR}/lib/mechanize/cookie.rb
@@ -23,6 +24,7 @@ ${GEM_LIBDIR}/lib/mechanize/cookie_jar.rb
 ${GEM_LIBDIR}/lib/mechanize/directory_saver.rb
 ${GEM_LIBDIR}/lib/mechanize/download.rb
 ${GEM_LIBDIR}/lib/mechanize/element_matcher.rb
+${GEM_LIBDIR}/lib/mechanize/element_not_found_error.rb
 ${GEM_LIBDIR}/lib/mechanize/file.rb
 ${GEM_LIBDIR}/lib/mechanize/file_connection.rb
 ${GEM_LIBDIR}/lib/mechanize/file_request.rb
@@ -103,7 +105,6 @@ ${GEM_LIBDIR}/lib/mechanize/unauthorized_error.rb
 ${GEM_LIBDIR}/lib/mechanize/unsupported_scheme_error.rb
 ${GEM_LIBDIR}/lib/mechanize/util.rb
 ${GEM_LIBDIR}/lib/mechanize/xml_file.rb
-${GEM_LIBDIR}/lib/mechanize.rb
 ${GEM_LIBDIR}/test/data/htpasswd
 ${GEM_LIBDIR}/test/data/server.crt
 ${GEM_LIBDIR}/test/data/server.csr
@@ -162,6 +163,7 @@ ${GEM_LIBDIR}/test/test_mechanize_cookie.rb
 ${GEM_LIBDIR}/test/test_mechanize_cookie_jar.rb
 ${GEM_LIBDIR}/test/test_mechanize_directory_saver.rb
 ${GEM_LIBDIR}/test/test_mechanize_download.rb
+${GEM_LIBDIR}/test/test_mechanize_element_not_found_error.rb
 ${GEM_LIBDIR}/test/test_mechanize_file.rb
 ${GEM_LIBDIR}/test/test_mechanize_file_connection.rb
 ${GEM_LIBDIR}/test/test_mechanize_file_request.rb
