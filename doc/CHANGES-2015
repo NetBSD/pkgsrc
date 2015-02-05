@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.741 2015/02/05 15:05:00 taca Exp $
+$NetBSD: CHANGES-2015,v 1.742 2015/02/05 15:07:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -950,3 +950,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-IO-Async to 0.64 [mef 2015-02-05]
 	Updated devel/p5-Module-CoreList to 5.20150120 [mef 2015-02-05]
 	Updated textproc/ruby-haml to 4.0.6 [taca 2015-02-05]
+	Updated textproc/ruby-json to 1.8.2 [taca 2015-02-05]
+	Updated textproc/ruby-json-pure to 1.8.2 [taca 2015-02-05]
