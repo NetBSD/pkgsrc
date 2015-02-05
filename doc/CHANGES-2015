@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.746 2015/02/05 15:24:58 taca Exp $
+$NetBSD: CHANGES-2015,v 1.747 2015/02/05 15:27:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-nokogiri to 1.6.6.2 [taca 2015-02-05]
 	Updated textproc/ruby-will-paginate to 3.0.7 [taca 2015-02-05]
 	Updated textproc/ruby-yard to 0.8.7.6 [taca 2015-02-05]
+	Updated www/ruby-capybara to 2.4.4 [taca 2015-02-05]
