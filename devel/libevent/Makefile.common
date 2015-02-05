@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2013/05/10 01:22:27 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.1.14.1 2015/02/05 23:52:36 tron Exp $
 
 # used by devel/libevent/Makefile
 # used by devel/py-libevent-rpcgen/Makefile
 
-LIBEVENT_VERSION=	2.0.21
+LIBEVENT_VERSION=	2.0.22
 
 DISTNAME=		libevent-${LIBEVENT_VERSION}-stable
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=levent/}
