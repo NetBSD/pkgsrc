@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/06/02 01:09:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/02/05 15:06:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/ext/json/ext/parser/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.c
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.h
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.rl
+${GEM_LIBDIR}/ext/json/extconf.rb
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/java/src/json/ext/ByteListTranscoder.java
 ${GEM_LIBDIR}/java/src/json/ext/Generator.java
