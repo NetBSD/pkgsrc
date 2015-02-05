@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/07/04 12:27:25 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/02/05 15:27:32 taca Exp $
 
-SHA1 (capybara-2.4.1.gem) = bf3720afed9d4277b0674335877bf3190a71aa80
-RMD160 (capybara-2.4.1.gem) = e1e8c4f16295ad95ca3596da7c783398694b0290
-Size (capybara-2.4.1.gem) = 231936 bytes
+SHA1 (capybara-2.4.4.gem) = 0f6f4b5f7f89edcef76694cbe493cc55600f4258
+RMD160 (capybara-2.4.4.gem) = d8b2bce8d7d34159903602a6be2cb7e7be344def
+Size (capybara-2.4.4.gem) = 232448 bytes
