@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.15 2015/02/05 19:40:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.16 2015/02/05 23:52:46 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -47,3 +47,6 @@ Pullup ticket #4602 - requested by snj
 shells/zsh: bug fix patch
 Pullup ticket #4603 - requested by dholland
 lang/smalltalk: build fix
+Pullup ticket #4604 - requested by sp
+devel/libevent: security update
+devel/py-libevent-rpcgen: security update
