@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2010/09/10 13:09:18 taca Exp $
+$NetBSD: distinfo,v 1.10 2015/02/05 15:46:57 taca Exp $
 
-SHA1 (fcgi-0.8.8.gem) = b45a76d1ea33430195a150002d689d3b6d247e95
-RMD160 (fcgi-0.8.8.gem) = b519e51b26b9f86ae642bdb720d797c75960aa77
-Size (fcgi-0.8.8.gem) = 13312 bytes
-SHA1 (patch-aa) = 0a4c7e25dcaad0fcc044aef96db89fae837a9067
+SHA1 (fcgi-0.9.2.1.gem) = 66d656e5e2b2da4118a9cc07394563c11e1b0a5e
+RMD160 (fcgi-0.9.2.1.gem) = fc4f4d85783b9bf1212d0fd25e63a3c38691dc76
+Size (fcgi-0.9.2.1.gem) = 15872 bytes
+SHA1 (patch-aa) = 31dc497403158c270af3892a1d98b2e037d9b7a4
