@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2013/02/16 08:56:45 shattered Exp $
+$NetBSD: distinfo,v 1.18 2015/02/05 11:29:48 mef Exp $
 
-SHA1 (cdlabelgen-4.2.0.tgz) = cbad1b9de9484a6608ef37edb60a5eaafee5c1a4
-RMD160 (cdlabelgen-4.2.0.tgz) = 7623dd451625dc872a238b3a4a24a4b1883547fa
-Size (cdlabelgen-4.2.0.tgz) = 198649 bytes
+SHA1 (cdlabelgen-4.3.0.tgz) = 1f7e1c34f7a5f409da19ca768a07778191264b19
+RMD160 (cdlabelgen-4.3.0.tgz) = d6d16361b4dd3a437f8db837182b7592c2f9f391
+Size (cdlabelgen-4.3.0.tgz) = 209771 bytes
 SHA1 (patch-aa) = 9bb28d697c5d8853df9df27f1511b0122962ba5d
-SHA1 (patch-ab) = 59a4a94b044510075cdf1e1bca365ad8eb4cae74
+SHA1 (patch-ab) = 7ec65bf5dbdcf5f4c679a9170209e6165acb158c
