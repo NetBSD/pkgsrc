@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2015/02/04 23:02:12 jmcneill Exp $
-
-.include "../../mk/bsd.prefs.mk"
+# $NetBSD: options.mk,v 1.2 2015/02/05 16:57:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libretro-mupen64plus
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(MACHINE_ARCH:M*arm*)
 PKG_SUPPORTED_OPTIONS+=	rpi dynarec
