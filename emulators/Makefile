@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2015/02/05 01:41:40 jmcneill Exp $
+# $NetBSD: Makefile,v 1.221 2015/02/05 02:24:06 jmcneill Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -80,6 +80,7 @@ SUBDIR+=	kegs
 SUBDIR+=	kenigma
 SUBDIR+=	klh10
 SUBDIR+=	libdsk
+SUBDIR+=	libretro-catsfc
 SUBDIR+=	libretro-fceumm
 SUBDIR+=	libretro-gambatte
 SUBDIR+=	libretro-mupen64plus
