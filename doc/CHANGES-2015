@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.737 2015/02/05 14:16:03 mef Exp $
+$NetBSD: CHANGES-2015,v 1.738 2015/02/05 14:47:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -946,3 +946,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-Throwable to 0.13 [mef 2015-02-05]
 	Updated devel/p5-Git-Wrapper to 0.038 [mef 2015-02-05]
 	Updated devel/p5-Guard to 1.023 [mef 2015-02-05]
+	Updated devel/p5-Hash-MoreUtils to 0.05 [mef 2015-02-05]
