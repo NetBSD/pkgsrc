@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/12/27 00:13:28 dholland Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/05 17:32:20 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.smalltalk
 PKG_SUPPORTED_OPTIONS=	cairo curses expat gdbm gtk opengl readline sdl sqlite tk
@@ -16,7 +16,7 @@ PLIST.cairo=		yes
 CONFIGURE_ARGS+=	--disable-cairo
 .endif
 
-.if !empty(PKG_OPTIONS.Mcurses)
+.if !empty(PKG_OPTIONS:Mcurses)
 PLIST.curses=		yes
 # it only searches for ncurses but seems to be ok with at least netbsd's curses
 FAKE_NCURSES=		yes
