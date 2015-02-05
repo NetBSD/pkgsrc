@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/05 00:16:25 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/05 17:15:52 jmcneill Exp $
 
 DISTNAME=	snes9x-next-libretro-20150204
 PKGNAME=	libretro-snes9x-next-20150204
@@ -15,9 +15,10 @@ USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
-SNES9X_NEXT_PLATFORM=	${MACHINE_ARCH}
 .if !empty(MACHINE_ARCH:M*arm*hf)
-SNES9X_NEXT_PLATFORM+=	-hardfloat
+SNES9X_NEXT_PLATFORM=	${MACHINE_ARCH}-hardfloat
+.else
+SNES9X_NEXT_PLATFORM=	unix
 .endif
 
 MAKE_ENV+=	platform="${SNES9X_NEXT_PLATFORM}"
