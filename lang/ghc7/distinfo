@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/02/04 06:53:18 pho Exp $
+$NetBSD: distinfo,v 1.6 2015/02/05 00:59:10 pho Exp $
 
 SHA1 (ghc-7.6.3-src.tar.bz2) = 8938e1ef08b37a4caa071fa169e79a3001d065ff
 RMD160 (ghc-7.6.3-src.tar.bz2) = 82a673ed38b7cf9a59afeb01057625fc761a822b
@@ -12,5 +12,5 @@ SHA1 (patch-libraries_integer-simple_GHC_Integer_Type.hs) = b3140e169726f78f6d3b
 SHA1 (patch-libraries_unix_System_Posix_Files.hsc) = f2e0892f9ebb9d82ddaf71b014d9af33967848dc
 SHA1 (patch-mk_config.mk.in) = 90a156f6c455d4b2c5d10fdf65b3a170dcfc4892
 SHA1 (patch-rts_Linker.c) = 39d1ca7a856a3ec25e493e97832ef255562c0719
-SHA1 (patch-rts_StgCRun.c) = dcbc883cb4826aeccac0be09647b7889c7809271
+SHA1 (patch-rts_StgCRun.c) = 5d4010dc250af25db0b5b2717c510752f4813e73
 SHA1 (patch-rts_ghc.mk) = ad6f2e7dccc3027c7770164bfdab066cbfef3a6d

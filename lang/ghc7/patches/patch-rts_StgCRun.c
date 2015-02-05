@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_StgCRun.c,v 1.1 2013/12/12 12:47:17 obache Exp $
+$NetBSD: patch-rts_StgCRun.c,v 1.2 2015/02/05 00:59:10 pho Exp $
 
 We have to make the visiblity of StgRun and StgReturn to "hidden" not
 to trigger a bug in old binutils which results in:
@@ -10,6 +10,8 @@ to trigger a bug in old binutils which results in:
 With this workaround we can no longer override those two symbols using
 LD_PRELOAD, but I think there is no reason to do so anyway.
 
+This has already been fixed in the upstream:
+https://ghc.haskell.org/trac/ghc/ticket/7813
 
 --- rts/StgCRun.c.orig	2013-01-27 13:21:52.000000000 +0000
 +++ rts/StgCRun.c
