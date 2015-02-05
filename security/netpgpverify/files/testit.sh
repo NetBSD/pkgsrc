@@ -17,5 +17,5 @@ cat > ${tmp}/config.h <<EOF
 
 #endif /* CONFIG_H_ */
 EOF
-(cd ${tmp} && make -f Makefile.bsd && make -f Makefile.bsd tst)
+(cd ${tmp} && env USETOOLS=no make -f Makefile.bsd && make -f Makefile.bsd tst)
 rm -rf ${tmp}
