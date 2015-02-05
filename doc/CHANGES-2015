@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.754 2015/02/05 16:51:54 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.755 2015/02/05 17:46:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -964,3 +964,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-mechanize to 2.7.3 [taca 2015-02-05]
 	Updated www/ruby-puma to 2.11.0 [taca 2015-02-05]
 	Added net/p5-File-RsyncP version 0.74 [tnn 2015-02-05]
+	Updated devel/cmake to 3.1.2 [wiz 2015-02-05]
