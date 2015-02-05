@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/01/28 21:51:02 rjs Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/05 21:29:59 rjs Exp $
 #
 
 DISTNAME=	libjpeg-turbo-1.4.0
@@ -12,7 +12,9 @@ LICENSE=	gnu-lgpl-v2 # OR wxWindows Library Licence, Version 3.1
 
 CONFLICTS=	jpeg-[0-9]*
 
+.if ${MACHINE_ARCH} == x86_64 || ${MACHINE_ARCH} == i386
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+.endif
 
 GNU_CONFIGURE=	yes
 # compatibility with pkgsrc/graphics/jpeg
