@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.742 2015/02/05 15:07:18 taca Exp $
+$NetBSD: CHANGES-2015,v 1.743 2015/02/05 15:09:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -952,3 +952,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-haml to 4.0.6 [taca 2015-02-05]
 	Updated textproc/ruby-json to 1.8.2 [taca 2015-02-05]
 	Updated textproc/ruby-json-pure to 1.8.2 [taca 2015-02-05]
+	Updated textproc/ruby-libxml to 2.8.0 [taca 2015-02-05]
