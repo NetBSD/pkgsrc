@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.751 2015/02/05 15:47:29 taca Exp $
+$NetBSD: CHANGES-2015,v 1.752 2015/02/05 15:50:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -961,3 +961,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-csspool to 4.0.3 [taca 2015-02-05]
 	Updated www/ruby-http to 0.7.1 [taca 2015-02-05]
 	Updated www/ruby-fcgi to 0.9.2.1 [taca 2015-02-05]
+	Updated www/ruby-mechanize to 2.7.3 [taca 2015-02-05]
