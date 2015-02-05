@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1055 2015/02/02 12:25:44 he Exp $
+# $NetBSD: Makefile,v 1.1056 2015/02/05 16:50:48 tnn Exp $
 #
 
 COMMENT=	Networking tools
@@ -405,6 +405,7 @@ SUBDIR+=	p5-DNS-LDNS
 SUBDIR+=	p5-DNS-ZoneParse
 SUBDIR+=	p5-Danga-Socket
 SUBDIR+=	p5-Data-Stream-Bulk
+SUBDIR+=	p5-File-RsyncP
 SUBDIR+=	p5-FusionInventory-Agent
 SUBDIR+=	p5-FusionInventory-Agent-Task-Network
 SUBDIR+=	p5-Geo-IP
