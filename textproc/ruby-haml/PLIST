@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/03/14 18:09:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/02/05 15:04:31 taca Exp $
 bin/haml
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
@@ -29,7 +29,6 @@ ${GEM_LIBDIR}/lib/haml/sass_rails_filter.rb
 ${GEM_LIBDIR}/lib/haml/template.rb
 ${GEM_LIBDIR}/lib/haml/template/options.rb
 ${GEM_LIBDIR}/lib/haml/template/plugin.rb
-${GEM_LIBDIR}/lib/haml/temple.rb
 ${GEM_LIBDIR}/lib/haml/util.rb
 ${GEM_LIBDIR}/lib/haml/version.rb
 ${GEM_LIBDIR}/test/engine_test.rb
@@ -42,7 +41,6 @@ ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.0.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.1.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.2.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-4.0.x
-${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-4.0.x.lock
 ${GEM_LIBDIR}/test/helper_test.rb
 ${GEM_LIBDIR}/test/markaby/standard.mab
 ${GEM_LIBDIR}/test/mocks/article.rb
