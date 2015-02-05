@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.739 2015/02/05 14:50:13 mef Exp $
+$NetBSD: CHANGES-2015,v 1.740 2015/02/05 14:54:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -948,3 +948,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Guard to 1.023 [mef 2015-02-05]
 	Updated devel/p5-Hash-MoreUtils to 0.05 [mef 2015-02-05]
 	Updated devel/p5-IO-Async to 0.64 [mef 2015-02-05]
+	Updated devel/p5-Module-CoreList to 5.20150120 [mef 2015-02-05]
