@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/12/17 15:08:28 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/05 15:32:25 taca Exp $
 
-DISTNAME=	csspool-3.0.2
+DISTNAME=	csspool-4.0.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
