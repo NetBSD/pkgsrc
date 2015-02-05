@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2014/04/28 01:18:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/02/05 15:11:35 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/nokogiri/nokogiri.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.cross_rubies
+${GEM_LIBDIR}/.editorconfig
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.ja.rdoc
@@ -143,6 +145,7 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/sax/parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/sax/parser_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/sax/push_parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/schema.rb
+${GEM_LIBDIR}/lib/nokogiri/xml/searchable.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/syntax_error.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/text.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/xpath.rb
@@ -151,8 +154,26 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
-${GEM_LIBDIR}/tasks/cross_compile.rb
-${GEM_LIBDIR}/tasks/nokogiri.org.rb
+${GEM_LIBDIR}/ports/patches/libxml2/0001-Revert-Missing-initialization-for-the-catalog-module.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0004-EXSLT-function-str-replace-is-broken-as-is.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0006-Fix-str-padding-to-work-with-UTF-8-strings.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0007-Separate-function-for-predicate-matching-in-patterns.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0008-Fix-direct-pattern-matching.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0009-Fix-certain-patterns-with-predicates.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0010-Fix-handling-of-UTF-8-strings-in-EXSLT-crypto-module.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0014-Fix-for-bug-436589.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0015-Fix-mkdir-for-mingw.patch
+${GEM_LIBDIR}/ports/patches/sort-patches-by-date
+${GEM_LIBDIR}/suppressions/README.txt
+${GEM_LIBDIR}/suppressions/nokogiri_ree-1.8.7.358.supp
+${GEM_LIBDIR}/suppressions/nokogiri_ruby-1.8.7.370.supp
+${GEM_LIBDIR}/suppressions/nokogiri_ruby-1.9.2.320.supp
+${GEM_LIBDIR}/suppressions/nokogiri_ruby-1.9.3.327.supp
 ${GEM_LIBDIR}/tasks/test.rb
 ${GEM_LIBDIR}/test/css/test_nthiness.rb
 ${GEM_LIBDIR}/test/css/test_parser.rb
@@ -162,6 +183,7 @@ ${GEM_LIBDIR}/test/decorators/test_slop.rb
 ${GEM_LIBDIR}/test/files/2ch.html
 ${GEM_LIBDIR}/test/files/address_book.rlx
 ${GEM_LIBDIR}/test/files/address_book.xml
+${GEM_LIBDIR}/test/files/atom.xml
 ${GEM_LIBDIR}/test/files/bar/bar.xsd
 ${GEM_LIBDIR}/test/files/bogus.xml
 ${GEM_LIBDIR}/test/files/dont_hurt_em_why.xml
@@ -180,6 +202,8 @@ ${GEM_LIBDIR}/test/files/saml/xenc_schema.xsd
 ${GEM_LIBDIR}/test/files/saml/xmldsig_schema.xsd
 ${GEM_LIBDIR}/test/files/shift_jis.html
 ${GEM_LIBDIR}/test/files/shift_jis.xml
+${GEM_LIBDIR}/test/files/shift_jis_no_charset.html
+${GEM_LIBDIR}/test/files/slow-xpath.xml
 ${GEM_LIBDIR}/test/files/snuggles.xml
 ${GEM_LIBDIR}/test/files/staff.dtd
 ${GEM_LIBDIR}/test/files/staff.xml
@@ -194,6 +218,7 @@ ${GEM_LIBDIR}/test/files/xinclude.xml
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser_context.rb
+${GEM_LIBDIR}/test/html/sax/test_push_parser.rb
 ${GEM_LIBDIR}/test/html/test_builder.rb
 ${GEM_LIBDIR}/test/html/test_document.rb
 ${GEM_LIBDIR}/test/html/test_document_encoding.rb
@@ -203,9 +228,12 @@ ${GEM_LIBDIR}/test/html/test_named_characters.rb
 ${GEM_LIBDIR}/test/html/test_node.rb
 ${GEM_LIBDIR}/test/html/test_node_encoding.rb
 ${GEM_LIBDIR}/test/namespaces/test_additional_namespaces_in_builder_doc.rb
+${GEM_LIBDIR}/test/namespaces/test_namespaces_aliased_default.rb
 ${GEM_LIBDIR}/test/namespaces/test_namespaces_in_builder_doc.rb
+${GEM_LIBDIR}/test/namespaces/test_namespaces_in_cloned_doc.rb
 ${GEM_LIBDIR}/test/namespaces/test_namespaces_in_created_doc.rb
 ${GEM_LIBDIR}/test/namespaces/test_namespaces_in_parsed_doc.rb
+${GEM_LIBDIR}/test/namespaces/test_namespaces_preservation.rb
 ${GEM_LIBDIR}/test/test_convert_xpath.rb
 ${GEM_LIBDIR}/test/test_css_cache.rb
 ${GEM_LIBDIR}/test/test_encoding_handler.rb

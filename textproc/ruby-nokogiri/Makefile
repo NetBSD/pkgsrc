@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2014/12/10 01:54:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.24 2015/02/05 15:11:35 taca Exp $
 
-DISTNAME=	nokogiri-1.6.1
+DISTNAME=	nokogiri-1.6.6.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-nokogiri-[0-9]*
 
-DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile>=0.5.0<0.6.2:../../misc/ruby-mini_portile
+DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile>=0.6.0<0.7:../../misc/ruby-mini_portile
 
 USE_GCC_RUNTIME=	yes
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
