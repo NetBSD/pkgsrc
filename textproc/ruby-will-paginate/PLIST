@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/12/29 12:20:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/02/05 15:21:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -45,6 +45,9 @@ ${GEM_LIBDIR}/spec/fixtures/topic.rb
 ${GEM_LIBDIR}/spec/fixtures/topics.yml
 ${GEM_LIBDIR}/spec/fixtures/user.rb
 ${GEM_LIBDIR}/spec/fixtures/users.yml
+${GEM_LIBDIR}/spec/matchers/deprecation_matcher.rb
+${GEM_LIBDIR}/spec/matchers/phrase_matcher.rb
+${GEM_LIBDIR}/spec/matchers/query_count_matcher.rb
 ${GEM_LIBDIR}/spec/page_number_spec.rb
 ${GEM_LIBDIR}/spec/per_page_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
