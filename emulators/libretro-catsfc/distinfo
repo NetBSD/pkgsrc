@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/02/05 02:23:37 jmcneill Exp $
+
+SHA1 (catsfc-libretro-20150204.zip) = 56b18085adb5c059449efba161752338dfd5fb19
+RMD160 (catsfc-libretro-20150204.zip) = 8310fbe322f07b4c5e631efb308febaaa39075f9
+Size (catsfc-libretro-20150204.zip) = 470156 bytes
+SHA1 (patch-Makefile) = 90151425f548bab3d4e30c4257af9a9a6a351470

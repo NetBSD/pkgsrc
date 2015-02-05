@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/05 02:23:37 jmcneill Exp $
+lib/libretro/catsfc_libretro.so
