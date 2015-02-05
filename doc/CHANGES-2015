@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.756 2015/02/05 19:47:22 mspo Exp $
+$NetBSD: CHANGES-2015,v 1.757 2015/02/05 21:21:57 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-puma to 2.11.0 [taca 2015-02-05]
 	Added net/p5-File-RsyncP version 0.74 [tnn 2015-02-05]
 	Updated devel/cmake to 3.1.2 [wiz 2015-02-05]
+	Updated sysutils/ansible to 1.6.10 [pettai 2015-02-05]
