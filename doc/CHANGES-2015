@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.748 2015/02/05 15:31:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.749 2015/02/05 15:32:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -958,3 +958,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-yard to 0.8.7.6 [taca 2015-02-05]
 	Updated www/ruby-capybara to 2.4.4 [taca 2015-02-05]
 	Updated www/ruby-css-parser to 1.3.6 [taca 2015-02-05]
+	Updated www/ruby-csspool to 4.0.3 [taca 2015-02-05]
