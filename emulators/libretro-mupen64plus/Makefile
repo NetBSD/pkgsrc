@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/02/05 17:17:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/05 17:22:26 wiz Exp $
 
 DISTNAME=	mupen64plus-libretro-20150204
 PKGNAME=	libretro-mupen64plus-20150204
@@ -39,4 +39,5 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/mupen64plus_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mupen64plus_libretro.so
 
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
