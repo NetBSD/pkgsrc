@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/04 23:02:12 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/02/05 17:42:06 wiz Exp $
 
 SHA1 (mupen64plus-libretro-20150204.zip) = 85599e878094348163d68fdd704c5bc7edf78e44
 RMD160 (mupen64plus-libretro-20150204.zip) = 6c08b86834a8f6d548c85eaa34ca38e779b6a0d2
 Size (mupen64plus-libretro-20150204.zip) = 3286777 bytes
+SHA1 (patch-glide2gl_src_Glide64_Util.h) = d3bceef0ba895af8309bfe9435d701d76ca31a27
