@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.14 2015/02/05 00:26:34 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.15 2015/02/05 00:38:14 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -98,6 +98,8 @@ CHECK_BUILTIN.${pkg}:=	yes
 .  endif
 CHECK_BUILTIN.${pkg}:=	no
 
+# BOOT_GHC_PKGSRC_DEPS is a list of packages whose pkgsrc version is
+# preferred over native one, either by user or ../../mk/platform
 .  if ${PREFER.${pkg}} == "pkgsrc"
 BOOT_GHC_PKGSRC_DEPS+=	${pkg}
 .  endif
