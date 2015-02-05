@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.733 2015/02/05 07:06:46 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.734 2015/02/05 09:25:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -940,3 +940,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/libretro-gambatte version 20150204 [jmcneill 2015-02-04]
 	Added emulators/libretro-catsfc version 20150204 [jmcneill 2015-02-04]
 	Updated net/nsd to 4.1.1 [pettai 2015-02-05]
+	Updated misc/libreoffice4 to 4.4.0.3nb1 [ryoon 2015-02-05]
