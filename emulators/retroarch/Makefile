@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/02/05 16:23:11 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/05 16:38:47 wiz Exp $
 
 DISTNAME=	retroarch-20150203
 PKGNAME=	retroarch-0.0.20150203
@@ -16,7 +16,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--global-config-dir=${PKG_SYSCONFDIR}
 CONFIG_SHELL=	bash
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	bash pkg-config gmake
 
 EGDIR=		${PREFIX}/share/examples/retroarch
 CONF_FILES+=	${EGDIR}/retroarch.cfg ${PKG_SYSCONFDIR}/retroarch.cfg
