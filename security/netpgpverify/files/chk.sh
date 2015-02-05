@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: chk.sh,v 1.3 2015/01/31 22:00:55 agc Exp $
+# $NetBSD: chk.sh,v 1.4 2015/02/05 00:21:57 agc Exp $
 
 # Copyright (c) 2013,2014,2015 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -103,7 +103,7 @@ if [ -x /usr/bin/netpgpverify -o -x /usr/pkg/bin/netpgpverify ]; then
 	echo "Hash: ${digest}" >> ${dir}/${name}.sig
 	echo "" >> ${dir}/${name}.sig
 	cat ${dir}/+PKG_HASH ${dir}/+PKG_GPG_SIGNATURE >> ${dir}/${name}.sig
-	(cd ${dir} && netpgpverify -k pubring.gpg ${name}.sig) || die "Bad signature"
+	(cd ${dir} && ${here}/netpgpverify -k pubring.gpg ${name}.sig) || die "Bad signature"
 else
 	echo "=== Using gpg to verify the package signature ==="
 	gpg --recv --keyserver pgp.mit.edu 0x6F3AF5E2

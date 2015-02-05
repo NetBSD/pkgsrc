@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.bsd,v 1.7 2015/02/04 17:53:39 agc Exp $
+# $NetBSD: Makefile.bsd,v 1.8 2015/02/05 00:21:57 agc Exp $
 
 PROG=netpgpverify
 
@@ -41,3 +41,5 @@ tst:
 	uudecode 1keytest.gpg.uu
 	./${PROG} -k 1keypubring.gpg 1keytest.gpg
 	rm -f 1keytest.gpg
+	@echo "testing signing with a subkey"
+	./chk.sh -k joyent-pubring.gpg digest-20121220.tgz
