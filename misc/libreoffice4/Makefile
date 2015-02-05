@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/02/05 09:24:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2015/02/05 20:25:56 wiz Exp $
 
 VERREL=		4.4.0
 VERRC=		3
@@ -105,6 +105,9 @@ EXTRACT_USING=		gtar
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 4.4.0.3
 
 # dmake scripts use relative path with -rpath-link ld arguments, which
 # is a no-go with normal pkgsrc wrappers.
