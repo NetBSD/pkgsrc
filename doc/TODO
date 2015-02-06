@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14092 2015/02/04 18:20:16 ryoon Exp $
+$NetBSD: TODO,v 1.14093 2015/02/06 15:28:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,6 +347,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o RTFM-2.4.5
 	o SOGo-2.2.15
 	o SOPE-2.2.15
+	o Sigil-0.8.3
 	o TeXmacs-1.0.7.21
 	o TiffIO-130e
 	o XaoS-3.6 [pkg/48836]
@@ -461,7 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cuisine-0.6.5
 	o cvs-fast-export-1.29
 	o cvs2p4-2.5.5 [schmonz]
-	o cwm-5.1
+	o cwm-5.6
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
 	o dante-1.4.0
@@ -641,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o goocanvas-2.0.2
 	o gossip-0.31
 	o gourmet-0.13.3
+	o gperftools-2.4 [pkg/49625]
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.1.0
@@ -801,7 +803,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mksh-49
 	o mkvtoolnix-6.8.0
-	o modular-xorg-server-1.16.3
+	o modular-xorg-server-1.17.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-3.12.0
 	o moserial-2.30.0 [GNOME 2.30]
@@ -1108,6 +1110,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vifm-0.7.7
+	o vile-9.8p
 	o vinagre-3.14.3
 	o vino-3.14.1
 	o visual-regexp-3.1
