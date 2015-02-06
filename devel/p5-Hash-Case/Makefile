@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/02/06 05:57:37 mef Exp $
 #
 
-DISTNAME=	Hash-Case-1.01
+DISTNAME=	Hash-Case-1.02
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	5
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
