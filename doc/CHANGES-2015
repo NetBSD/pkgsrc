@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.761 2015/02/06 05:49:04 mef Exp $
+$NetBSD: CHANGES-2015,v 1.762 2015/02/06 05:57:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -974,3 +974,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-MooseX-Role-Tempdir version 0.03 [mef 2015-02-06]
 	Added devel/p5-Object-Accessor version 0.48 [mef 2015-02-06]
 	Updated devel/p5-Git-CPAN-Patch to 2.0.3 [mef 2015-02-06]
+	Updated devel/p5-Hash-Case to 1.020 [mef 2015-02-06]
