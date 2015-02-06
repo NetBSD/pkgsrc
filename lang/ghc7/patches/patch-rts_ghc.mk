@@ -1,16 +1,6 @@
-$NetBSD: patch-rts_ghc.mk,v 1.4 2015/02/05 17:45:20 pho Exp $
+$NetBSD: patch-rts_ghc.mk,v 1.5 2015/02/06 01:24:48 pho Exp $
 
-Hunk #2:
-
-This is pkgsrc specific: dtrace(1) gets confused when we have gcc
-wrappers in the PATH so we have to hide them:
-
-  gcc: installation problem, cannot exec '/usr/pkgsrc/wip/ghc/work/.gcc/bin/p
-  owerpc-apple-darwin9-gcc-4.0.1': No such file or directory
-  dtrace: failed to compile script rts/RtsProbes.d: Preprocessor failed to pr
-  ocess input program
-
-Hunk #1, #3:
+This is pkgsrc specific:
 
 Install libffi.{a,la} too, so that the plist framework can deal with
 .so name being different between platforms. Note that
@@ -27,8 +17,8 @@ libraries. They should always be installed by running
 can't be achieved without a major refactoring of the GHC build system.
 And for that matter, GHC shouldn't install a local copy of libffi in
 the first place. In fact GHC 7.8 seems to have a configure option
-"--with-system-libffi" so we can hopefully remove these unpleasant
-hunks in the future.
+"--with-system-libffi" so we can hopefully remove this rather
+unpleasant patch in the future.
 
 --- rts/ghc.mk.orig	2013-04-18 21:22:47.000000000 +0000
 +++ rts/ghc.mk
@@ -42,15 +32,6 @@ hunks in the future.
  
  rts/dist/build/$(LIBFFI_DLL): libffi/build/inst/bin/$(LIBFFI_DLL)
  	cp $< $@
-@@ -484,7 +485,7 @@ endif
- 
- DTRACEPROBES_SRC = rts/RtsProbes.d
- $(DTRACEPROBES_H): $(DTRACEPROBES_SRC) includes/ghcplatform.h | $$(dir $$@)/.
--	"$(DTRACE)" $(filter -I%,$(rts_CC_OPTS)) -C $(DTRACE_FLAGS) -h -o $@ -s $<
-+	env PATH="/usr/bin" "$(DTRACE)" $(filter -I%,$(rts_CC_OPTS)) -C $(DTRACE_FLAGS) -h -o $@ -s $<
- endif
- 
- # -----------------------------------------------------------------------------
 @@ -509,7 +510,8 @@ endif
  # installing
  
