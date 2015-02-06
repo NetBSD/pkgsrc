@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/02/06 02:02:03 jmcneill Exp $
+
+SHA1 (gpsp-rpi-20150205.zip) = f7c40cdd9e450d168b0d7cf009977c5f2287012c
+RMD160 (gpsp-rpi-20150205.zip) = 5a53e210f30a69f147d5c223a18fd51ea7d47a1e
+Size (gpsp-rpi-20150205.zip) = 350074 bytes
+SHA1 (patch-arm_warm.c) = b8c4eff30767fa78f54ad4114e00e8559349b10f
+SHA1 (patch-arm_warm.h) = 94b534399319a690d0ead735837b283212d80793
+SHA1 (patch-main.c) = bc88bbec2dcdbbc38afd21a13067fbbe805c50c1
