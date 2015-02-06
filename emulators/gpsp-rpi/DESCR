@@ -1,0 +1,11 @@
+gameplaySP (gpSP for short) is a GBA emulator written completely from
+scratch. It is still pretty young (only having started a 3 months prior
+to the first release) and thus rather immature, but it does a decent
+job of playing a number of games, and is being improved upon somewhat
+regularly. It is currently somewhat minimalistic, in the sourcecode,
+presentation, and features. Its number one focus is to deliver a GBA
+gaming experience in the most playable way that PSP can manage, with
+frills being secondary (although still a consideration, at least for
+some of them).
+
+This version of gpSP is optimized for the Raspberry Pi.
