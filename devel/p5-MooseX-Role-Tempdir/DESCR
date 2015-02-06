@@ -1,0 +1,10 @@
+MooseX::Role::Tempdir - Moose role to provide temporary directories
+ ---------------
+ package My::Awesome::Package;
+        use Moose;
+        with 'MooseX::Role::Tempdir';
+
+        my $newfh;
+        open($newfh, '>', $self->tmpdir()."/newfile") or die "ohno! $!";
+        ...
+ ----------------
