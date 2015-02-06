@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/07/06 10:49:52 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/02/06 05:48:56 mef Exp $
 
-SHA1 (Git-CPAN-Patch-0.8.0.tar.gz) = 696e7d1e02b13345f7c20811fbc5c4c1df6a8af7
-RMD160 (Git-CPAN-Patch-0.8.0.tar.gz) = 8fb21053a8b06d4155a4570dbcd6dcb9d068b3b4
-Size (Git-CPAN-Patch-0.8.0.tar.gz) = 31102 bytes
+SHA1 (Git-CPAN-Patch-2.0.3.tar.gz) = f0d04bf7b9e226984aa1817ba6418bfc9d1300f0
+RMD160 (Git-CPAN-Patch-2.0.3.tar.gz) = d3605df56029313e73bdd8aa434c9d4b824ac87d
+Size (Git-CPAN-Patch-2.0.3.tar.gz) = 54477 bytes
