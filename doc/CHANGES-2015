@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.759 2015/02/06 02:04:29 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.760 2015/02/06 05:30:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -968,3 +968,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/ansible to 1.6.10 [pettai 2015-02-05]
 	Added emulators/libretro-stella version 20150205 [jmcneill 2015-02-05]
 	Added emulators/gpsp-rpi version 20150205 [jmcneill 2015-02-05]
+	Added devel/p5-CPANPLUS version 0.9152 [mef 2015-02-06]
+	Added devel/p5-Log-Message version 0.08 [mef 2015-02-06]
+	Added devel/p5-MooseX-App version 1.30 [mef 2015-02-06]
+	Added devel/p5-MooseX-Role-Tempdir version 0.03 [mef 2015-02-06]
+	Added devel/p5-Object-Accessor version 0.48 [mef 2015-02-06]
