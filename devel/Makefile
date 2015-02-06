@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2048 2015/02/04 13:55:42 taca Exp $
+# $NetBSD: Makefile,v 1.2049 2015/02/06 05:30:13 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -686,6 +686,7 @@ SUBDIR+=	p5-CPAN-ParseDistribution
 SUBDIR+=	p5-CPAN-Perl-Releases
 SUBDIR+=	p5-CPAN-Reporter
 SUBDIR+=	p5-CPAN-Uploader
+SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache
 SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Cache-FastMmap
@@ -1030,6 +1031,7 @@ SUBDIR+=	p5-Log-Dispatchouli
 SUBDIR+=	p5-Log-Handler
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Log-LogLite
+SUBDIR+=	p5-Log-Message
 SUBDIR+=	p5-Log-Report
 SUBDIR+=	p5-Log-Report-Optional
 SUBDIR+=	p5-Log-Trace
@@ -1097,6 +1099,7 @@ SUBDIR+=	p5-Moose
 SUBDIR+=	p5-Moose-Autobox
 SUBDIR+=	p5-Moose-Policy
 SUBDIR+=	p5-MooseX-Aliases
+SUBDIR+=	p5-MooseX-App
 SUBDIR+=	p5-MooseX-App-Cmd
 SUBDIR+=	p5-MooseX-Attribute-Chained
 SUBDIR+=	p5-MooseX-AttributeHelpers
@@ -1124,6 +1127,7 @@ SUBDIR+=	p5-MooseX-POE
 SUBDIR+=	p5-MooseX-Param
 SUBDIR+=	p5-MooseX-Params-Validate
 SUBDIR+=	p5-MooseX-Role-Parameterized
+SUBDIR+=	p5-MooseX-Role-Tempdir
 SUBDIR+=	p5-MooseX-Role-WithOverloading
 SUBDIR+=	p5-MooseX-SemiAffordanceAccessor
 SUBDIR+=	p5-MooseX-SetOnce
@@ -1155,6 +1159,7 @@ SUBDIR+=	p5-Net-LDAP-Server-Test
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
 SUBDIR+=	p5-OOTools
+SUBDIR+=	p5-Object-Accessor
 SUBDIR+=	p5-Object-Declare
 SUBDIR+=	p5-Object-Event
 SUBDIR+=	p5-Object-InsideOut
