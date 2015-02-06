@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2015/01/27 04:04:50 dbj Exp $
+# $NetBSD: Makefile,v 1.94 2015/02/06 07:20:14 snj Exp $
 
 DISTNAME=	pulseaudio-5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -114,7 +114,7 @@ pre-configure:
 .endif
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
