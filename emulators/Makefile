@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2015/02/05 22:39:26 jmcneill Exp $
+# $NetBSD: Makefile,v 1.223 2015/02/06 02:02:32 jmcneill Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -70,6 +70,7 @@ SUBDIR+=	gpsim
 SUBDIR+=	gpsim-devel
 SUBDIR+=	gpsim-oscilloscope
 SUBDIR+=	gpsim-ptyusart
+SUBDIR+=	gpsp-rpi
 SUBDIR+=	gxemul
 SUBDIR+=	handy_sdl
 SUBDIR+=	hatari
