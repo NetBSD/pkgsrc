@@ -1,4 +1,4 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.2 2015/02/04 23:51:26 jmcneill Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.3 2015/02/06 01:27:25 jmcneill Exp $
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/joystick/bsd/SDL_sysjoystick.c
@@ -25,7 +25,46 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.2 2015/02/04 23:51:26 jmc
  #define REP_BUF_DATA(rep) ((rep)->buf->ugd_data)
  #else
  #define REP_BUF_DATA(rep) ((rep)->buf->data)
-@@ -386,6 +388,11 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -314,6 +316,38 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+ #endif
+ 		rep->rid = -1; /* XXX */
+ 	}
++#if defined(__NetBSD__)
++	usb_device_descriptor_t udd;
++	struct usb_string_desc usd;
++	if (ioctl(fd, USB_GET_DEVICE_DESC, &udd) == -1)
++		goto desc_failed;
++
++	/* Get default language */
++	usd.usd_string_index = USB_LANGUAGE_TABLE;
++	usd.usd_language_id = 0;
++	if (ioctl(fd, USB_GET_STRING_DESC, &usd) == -1 || usd.usd_desc.bLength < 4) {
++		usd.usd_language_id = 0;
++	} else {
++		usd.usd_language_id = UGETW(usd.usd_desc.bString[0]);
++	}
++
++	usd.usd_string_index = udd.iProduct;
++	if (ioctl(fd, USB_GET_STRING_DESC, &usd) == 0) {
++		char str[128];
++		char *new_name = NULL;
++		int i;
++		for (i = 0; i < (usd.usd_desc.bLength >> 1) - 1 && i < sizeof(str) - 1; i++) {
++			str[i] = UGETW(usd.usd_desc.bString[i]);
++		}
++		str[i] = '\0';
++		asprintf(&new_name, "%s @ %s", str, path);
++		if (new_name != NULL) {
++			free(joydevnames[joy->index]);
++			joydevnames[joy->index] = new_name;
++		}
++	}
++desc_failed:
++#endif
+ 	if (report_alloc(rep, hw->repdesc, REPORT_INPUT) < 0) {
+ 		goto usberr;
+ 	}
+@@ -386,6 +420,11 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  		if (hw->axis_map[i] > 0)
  			hw->axis_map[i] = joy->naxes++;
  
