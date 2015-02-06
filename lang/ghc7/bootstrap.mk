@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.15 2015/02/05 00:38:14 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.16 2015/02/06 06:57:13 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -85,11 +85,31 @@ pre-configure:
 # unusable.
 #
 
-# Gather information about packages on which bootkit depends.
+# We don't want our bootkits to have a run-time dependency on
+# libgcc. In fact GHC's implementation of Haskell exception handling
+# does not depend on libgcc's facilities so it is attractive to do the
+# same for "normal" build... but we can't. This is because Haskell
+# programs may call C functions via FFI, and those C functions may
+# call C++ functions in turn, possibly in a different shared library.
+.include "../../mk/compiler.mk"
+.if make(bootstrap) && !empty(CC_VERSION:Mgcc-*)
+# But on some platforms, gcc automagically inserts a dependency on a
+# shared libgcc when -lpthread is given, which is seemingly
+# unavoidable.
+LDFLAGS+=	-static-libgcc
+.endif
+
+# Gather information about packages on which bootkit depends. It will
+# be used in the post-bootstrap phase.
 BOOT_GHC_DEPS:=		curses iconv
 BOOT_GHC_PKGSRC_DEPS:=	# empty
 .for pkg in ${BOOT_GHC_DEPS}
 
+# NOTE: pkglint(1) complains for including these builtin.mk files,
+# telling that we must include buildlink3.mk instead. But then how do
+# we get variables like USE_BUILTIN.${pkg} defined before including
+# ../../mk/bsd.pkg.mk, given that ../../mk/bsd.buildlink3.mk isn't
+# protected against multiple inclusion?
 CHECK_BUILTIN.${pkg}:=	yes
 .  if ${pkg} == "curses"
 .    include "../../mk/curses.builtin.mk"
@@ -105,8 +125,8 @@ BOOT_GHC_PKGSRC_DEPS+=	${pkg}
 .  endif
 .endfor
 
-# Compiler wrappers must not remove -I/-L flags for this directory
-# tree, otherwise the GHC we are going to use for building our
+# Compiler wrappers must not remove -I/-L flags for the installed
+# GHC's libdir, otherwise the GHC we are going to use for building our
 # bootstraping kit will not work at all. Ideally it should be added to
 # BUILDLINK_PASSTHRU_DIRS only .if make(bootstrap), but then running
 # "${MAKE} wrapper" before "${MAKE} bootstrap" will result in a
@@ -202,8 +222,6 @@ post-bootstrap:
 	@${ECHO} "removes it."
 	@${ECHO}
 	@${ECHO} "Your bootstrap kit has the following run-time dependencies:"
-# TODO: It may depend also on GCC runtime so we want to report that,
-# but how?
 .for pkg in ${BOOT_GHC_DEPS}
 	@${PRINTF} "  * %-8s" "${pkg}:"
 .  if !empty(USE_BUILTIN.${pkg}:M[nN][oO])
