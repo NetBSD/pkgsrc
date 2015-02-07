@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/02/02 14:18:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/02/07 14:40:27 taca Exp $
 bin/rspec${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -54,6 +54,7 @@ ${GEM_LIBDIR}/lib/rspec/core/rake_task.rb
 ${GEM_LIBDIR}/lib/rspec/core/reporter.rb
 ${GEM_LIBDIR}/lib/rspec/core/ruby_project.rb
 ${GEM_LIBDIR}/lib/rspec/core/runner.rb
+${GEM_LIBDIR}/lib/rspec/core/sandbox.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_context.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/core/test_unit_assertions_adapter.rb
