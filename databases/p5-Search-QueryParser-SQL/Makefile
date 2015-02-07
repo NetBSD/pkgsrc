@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/07 22:06:52 tnn Exp $
 
 DISTNAME=	Search-QueryParser-SQL-0.008
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
-DEPENDS+=	p5-Search-QueryParser>=0.93:../../databases/p5-Search-QueryParser/
+DEPENDS+=	p5-Search-QueryParser>=0.93:../../databases/p5-Search-QueryParser
 
 PERL5_PACKLIST=	auto/Search/QueryParser/SQL/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
