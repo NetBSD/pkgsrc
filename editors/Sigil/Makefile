@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2014/12/12 08:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2015/02/07 13:19:21 wiz Exp $
 
-DISTNAME=	Sigil-0.8.2
+DISTNAME=	Sigil-0.8.3
 CATEGORIES=	editors
 MASTER_SITES=	-https://github.com/user-none/Sigil/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -45,6 +45,7 @@ CWRAPPERS_APPEND.cxx+=	-std=c++0x
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
