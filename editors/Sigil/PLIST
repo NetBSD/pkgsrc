@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/12/12 08:52:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/02/07 13:19:21 wiz Exp $
 bin/sigil
 share/applications/sigil.desktop
 share/pixmaps/sigil.png
@@ -27,11 +27,13 @@ share/sigil/plugin_launchers/python/inputcontainer.py
 share/sigil/plugin_launchers/python/launcher.py
 share/sigil/plugin_launchers/python/opf_parser.py
 share/sigil/plugin_launchers/python/outputcontainer.py
+share/sigil/plugin_launchers/python/preferences.py
 share/sigil/plugin_launchers/python/quickparser.py
 share/sigil/plugin_launchers/python/unipath.py
 share/sigil/plugin_launchers/python/validationcontainer.py
 share/sigil/plugin_launchers/python/validationresult.py
 share/sigil/plugin_launchers/python/wrapper.py
+share/sigil/sigil-real
 share/sigil/translations/sigil_bg.qm
 share/sigil/translations/sigil_ca.qm
 share/sigil/translations/sigil_cmn.qm
