@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.772 2015/02/07 14:32:53 taca Exp $
+$NetBSD: CHANGES-2015,v 1.773 2015/02/07 14:34:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/qt5-qtwebchannel version 5.4.0 [wiz 2015-02-07]
 	Updated editors/Sigil to 0.8.3 [wiz 2015-02-07]
 	Updated devel/hoe to 3.13.1 [taca 2015-02-07]
+	Updated devel/ruby-eventmachine to 1.0.6 [taca 2015-02-07]
