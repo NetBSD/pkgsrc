@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2051 2015/02/07 09:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2052 2015/02/07 16:18:54 pettai Exp $
 #
 
 COMMENT=	Development utilities
@@ -780,6 +780,7 @@ SUBDIR+=	p5-Data-Compare
 SUBDIR+=	p5-Data-Denter
 SUBDIR+=	p5-Data-Dump
 SUBDIR+=	p5-Data-Dump-Streamer
+SUBDIR+=	p5-Data-Dumper
 SUBDIR+=	p5-Data-Dumper-Concise
 SUBDIR+=	p5-Data-Dumper-Names
 SUBDIR+=	p5-Data-GUID
