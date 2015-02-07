@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/02/07 10:13:59 adam Exp $
+# $NetBSD: options.mk,v 1.8 2015/02/07 16:04:46 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
@@ -28,7 +28,7 @@ PLIST_VARS+=	sphinx
 SPHINX_VER=	2.2.7
 DISTFILES=	${DEFAULT_DISTFILES} sphinx-${SPHINX_VER}-release${EXTRACT_SUFX}
 SITES.sphinx-2.2.7-release.tar.gz=	http://sphinxsearch.com/files/
-.if !empty(PKGPATH:Mserver)
+.if !empty(PKGPATH:Mdatabases/mysql55-server)
 MESSAGE_SRC=	${PKGDIR}/MESSAGE ${PKGDIR}/MESSAGE.sphinx
 .endif
 PLIST.sphinx=	yes
