@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.781 2015/02/07 16:01:14 mef Exp $
+$NetBSD: CHANGES-2015,v 1.782 2015/02/07 16:20:43 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Hash-Util-FieldHash-Compat to 0.08 [mef 2015-02-07]
 	Updated devel/p5-Hook-LexWrap to 0.25 [mef 2015-02-07]
 		Updated devel/p5-File-LibMagic to 1.10 [mef 2015-02-07]
+	Added devel/p5-Data-Dumper version 2.154 [pettai 2015-02-07]
