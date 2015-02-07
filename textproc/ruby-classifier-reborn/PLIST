@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/07 14:56:49 taca Exp $
+bin/bayes.rb${RUBY_SUFFIX}
+bin/summarize.rb${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.markdown
+${GEM_LIBDIR}/bin/bayes.rb
+${GEM_LIBDIR}/bin/summarize.rb
+${GEM_LIBDIR}/lib/classifier-reborn.rb
+${GEM_LIBDIR}/lib/classifier-reborn/bayes.rb
+${GEM_LIBDIR}/lib/classifier-reborn/category_namer.rb
+${GEM_LIBDIR}/lib/classifier-reborn/extensions/hasher.rb
+${GEM_LIBDIR}/lib/classifier-reborn/extensions/vector.rb
+${GEM_LIBDIR}/lib/classifier-reborn/extensions/vector_serialize.rb
+${GEM_LIBDIR}/lib/classifier-reborn/lsi.rb
+${GEM_LIBDIR}/lib/classifier-reborn/lsi/content_node.rb
+${GEM_LIBDIR}/lib/classifier-reborn/lsi/summarizer.rb
+${GEM_LIBDIR}/lib/classifier-reborn/lsi/word_list.rb
+${GEM_LIBDIR}/lib/classifier-reborn/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
