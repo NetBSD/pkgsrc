@@ -1,28 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2009/05/30 20:02:07 sno Exp $
+$NetBSD: patch-aa,v 1.5 2015/02/07 16:01:07 mef Exp $
 
-- Remove Devel::CheckLib invocation - it#s useless and won't work
-  (RT #46543, #43826)
 - Ensure we use the required ldflags for the platform.
 
---- Makefile.PL.orig	2009-05-12 13:31:06.000000000 +0000
-+++ Makefile.PL	2009-05-30 19:47:40.000000000 +0000
-@@ -4,18 +4,13 @@
- use ExtUtils::MakeMaker;
- use Config qw/%Config/;
- 
--use lib qw(inc);
--use Devel::CheckLib;
--
--check_lib_or_exit( lib => 'magic', header => 'magic.h' );
--
- WriteMakefile(
-     'NAME'		=> 'File::LibMagic',
-     'VERSION_FROM'	=> 'LibMagic.pm', # finds $VERSION
-     'PREREQ_PM'		=> { },
-     'ABSTRACT_FROM'     => 'LibMagic.pm', # retrieve abstract from module
-     'AUTHOR'            => 'Andreas Fitzner <andreas.fitzner@fv-berlin.de>',
--    'LIBS'		=> ['-lmagic -lz'], # e.g., '-lm'
-+    'LIBS'		=> [$ENV{LDFLAGS} . ' -lmagic -lz'], # e.g., '-lm'
-     'DEFINE'		=> '', # e.g., '-DHAVE_SOMETHING'
-     'INC'		=> '-I.', # e.g., '-I. -I/usr/include/other'
- 	# Un-comment this if you add C files to link with later:
+--- Makefile.PL.orig	2015-02-02 02:42:08.000000000 +0900
++++ Makefile.PL	2015-02-03 10:19:06.000000000 +0900
+@@ -22,7 +22,7 @@
+   "EXE_FILES" => [],
+   "INC" => "-I. -Ic",
+   "LDFROM" => "LibMagic\$(OBJ_EXT)",
+-  "LIBS" => "-lmagic",
++  'LIBS' => "$ENV{LDFLAGS}  -lmagic -lz", # e.g., '-lm'
+   "LICENSE" => "perl",
+   "MIN_PERL_VERSION" => "5.008",
+   "NAME" => "File::LibMagic",
