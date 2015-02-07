@@ -1,0 +1,4 @@
+Official metrics to help the development direction of Capistrano.
+
+Collects anonymous usage statistics about Capistrano to aid with platform
+support and ruby version targeting.
