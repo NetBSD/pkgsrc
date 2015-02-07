@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/07 14:48:34 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/Readme.md
+${GEM_LIBDIR}/changelog.txt
+${GEM_LIBDIR}/data/default_only.netrc
+${GEM_LIBDIR}/data/login.netrc
+${GEM_LIBDIR}/data/newlineless.netrc
+${GEM_LIBDIR}/data/password.netrc
+${GEM_LIBDIR}/data/permissive.netrc
+${GEM_LIBDIR}/data/sample.netrc
+${GEM_LIBDIR}/data/sample_multi.netrc
+${GEM_LIBDIR}/data/sample_multi_with_default.netrc
+${GEM_LIBDIR}/data/sample_with_default.netrc
+${GEM_LIBDIR}/lib/netrc.rb
+${GEM_LIBDIR}/test/test_lex.rb
+${GEM_LIBDIR}/test/test_netrc.rb
+${GEM_LIBDIR}/test/test_parse.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
