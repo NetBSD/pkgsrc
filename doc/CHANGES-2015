@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.779 2015/02/07 15:01:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.780 2015/02/07 15:14:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -998,3 +998,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/ruby-capistrano-stats version 1.1.1 [taca 2015-02-07]
 	Added textproc/ruby-classifier-reborn version 2.0.3 [taca 2015-02-07]
 	Added www/ruby-form_data version 0.1.0 [taca 2015-02-07]
+	Updated devel/p5-Hash-FieldHash to 0.14 [mef 2015-02-07]
+	Updated devel/p5-Hash-Merge to 0.200 [mef 2015-02-07]
+	Updated devel/p5-Hash-MultiValue to 0.15 [mef 2015-02-07]
+	Updated devel/p5-Hash-Util-FieldHash-Compat to 0.08 [mef 2015-02-07]
+	Updated devel/p5-Hook-LexWrap to 0.25 [mef 2015-02-07]
+	
