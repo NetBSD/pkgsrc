@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.766 2015/02/07 09:25:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.767 2015/02/07 10:14:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -979,3 +979,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Perl-MinimumVersion to 1.38 [wen 2015-02-06]
 	Added devel/p5-Git-Repository-Plugin-AUTOLOAD version 1.001 [wiz 2015-02-07]
 	Added devel/p5-List-Pairwise version 1.03 [wiz 2015-02-07]
+	Updated databases/mysql55-client to 5.5.42 [adam 2015-02-07]
+	Updated databases/mysql55-server to 5.5.42 [adam 2015-02-07]
