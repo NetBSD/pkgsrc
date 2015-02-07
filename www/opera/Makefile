@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2013/08/04 13:02:07 obache Exp $
+# $NetBSD: Makefile,v 1.106 2015/02/07 22:58:18 tnn Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -17,7 +17,6 @@ EMUL_PLATFORMS=		freebsd-i386 freebsd-x86_64 \
 .include "../../mk/bsd.prefs.mk"
 
 MASTER_SITE_OPERA+=	ftp://ftp.opera.com/pub/opera/ \
-			http://ftp.sunet.se/pub/www/clients/Opera/ \
 			ftp://ftp.task.gda.pl/pub/opera/ \
 			ftp://ftp.tuwien.ac.at/infosys/browsers/opera/ \
 			ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/ \
