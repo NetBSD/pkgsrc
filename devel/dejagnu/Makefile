@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/06/16 04:54:51 mef Exp $
+# $NetBSD: Makefile,v 1.18 2015/02/07 12:49:54 mef Exp $
 #
 
-DISTNAME=	dejagnu-1.5.1
+DISTNAME=	dejagnu-1.5.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=dejagnu/}
 
@@ -14,6 +14,7 @@ DEPENDS+=	tcl-expect>=5.32.1:../../lang/tcl-expect
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
+USE_TOOLS=	gmake
 
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
