@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.784 2015/02/07 17:13:08 he Exp $
+$NetBSD: CHANGES-2015,v 1.785 2015/02/07 19:24:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1003,7 +1003,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Hash-MultiValue to 0.15 [mef 2015-02-07]
 	Updated devel/p5-Hash-Util-FieldHash-Compat to 0.08 [mef 2015-02-07]
 	Updated devel/p5-Hook-LexWrap to 0.25 [mef 2015-02-07]
-		Updated devel/p5-File-LibMagic to 1.10 [mef 2015-02-07]
+	Updated devel/p5-File-LibMagic to 1.10 [mef 2015-02-07]
 	Added devel/p5-Data-Dumper version 2.154 [pettai 2015-02-07]
 	Added x11/py-qt5 version 5.4 [wiz 2015-02-07]
 	Updated net/iperf3 to 3.0.11nb1 [he 2015-02-07]
+	Updated databases/mysql56-client to 5.6.23 [adam 2015-02-07]
+	Updated databases/mysql56-server to 5.6.23 [adam 2015-02-07]
