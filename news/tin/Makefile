@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2014/10/07 16:47:34 adam Exp $
+# $NetBSD: Makefile,v 1.61 2015/02/07 22:58:18 tnn Exp $
 #
 
 DISTNAME=	tin-2.2.1
@@ -10,8 +10,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/ \
 		ftp://ftp.akk.uni-karlsruhe.de/pub/news/clients/tin/stable/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/ \
 		ftp://ftp.cuhk.edu.hk/pub/packages/news/tin/stable/ \
-		ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/ \
-		ftp://ftp.sunet.se/pub/news/readers/tin/stable/
+		ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

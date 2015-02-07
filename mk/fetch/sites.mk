@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.111 2015/02/01 13:40:36 wiz Exp $
+# $NetBSD: sites.mk,v 1.112 2015/02/07 22:49:31 tnn Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -19,7 +19,6 @@ MASTER_SITE_GNU+=       \
 	ftp://ftp.kddlabs.co.jp/pub/gnu/gnu/ \
 	ftp://ftp.dti.ad.jp/pub/GNU/ \
 	ftp://mirrors.kernel.org/gnu/ \
-	ftp://ftp.sunet.se/pub/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
 	http://gd.tuwien.ac.at/gnu/gnusrc/
 
@@ -66,7 +65,6 @@ MASTER_SITE_SUNSITE+=   \
 MASTER_SITE_GNOME+=     \
 	http://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.gnome.org/pub/GNOME/ \
-	ftp://ftp.sunet.se/pub/X11/GNOME/ \
 	http://ftp.tuwien.ac.at/hci/gnome.org/ \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
 	ftp://ftp.dti.ad.jp/pub/X/gnome/ \
@@ -183,8 +181,6 @@ MASTER_SITE_MYSQL+=	\
 	http://mysql.nfsi.pt/Downloads/ \
 	ftp://ftp.nfsi.pt/pub/mysql/Downloads/ \
 	http://mirrors.xservers.ro/mysql/Downloads/ \
-	http://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/ \
-	ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/ \
 	http://mysql.dataphone.se/Downloads/ \
 	ftp://mirror2.dataphone.se/pub/mysql/Downloads/ \
 	ftp://ftp.solnet.ch/mirror/mysql/Downloads/ \
@@ -272,7 +268,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.iasi.roedu.net/mirrors/openoffice.org/ \
 	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
 	ftp://ftp.saix.net/pub/OpenOffice.org/ \
-	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
@@ -316,7 +311,7 @@ MASTER_SITE_GENTOO+= \
 MASTER_SITE_XORG+= \
 	http://xorg.freedesktop.org/releases/individual/ \
 	ftp://ftp.x.org/pub/individual/ \
-	ftp://ftp.sunet.se/pub/X11/ftp.x.org/individual/
+	ftp://mirror.switch.ch/mirror/X11/pub/individual/
 
 MASTER_SITE_FREEBSD+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
