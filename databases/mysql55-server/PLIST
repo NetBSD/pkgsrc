@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2014/11/29 10:01:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2015/02/07 10:13:59 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -3918,6 +3918,7 @@ share/mysql/test/suite/rpl/r/rpl_delete_no_where.result
 share/mysql/test/suite/rpl/r/rpl_do_grant.result
 share/mysql/test/suite/rpl/r/rpl_drop.result
 share/mysql/test/suite/rpl/r/rpl_drop_db.result
+share/mysql/test/suite/rpl/r/rpl_drop_db_fail.result
 share/mysql/test/suite/rpl/r/rpl_drop_temp.result
 share/mysql/test/suite/rpl/r/rpl_drop_view.result
 share/mysql/test/suite/rpl/r/rpl_dual_pos_advance.result
@@ -4239,6 +4240,7 @@ share/mysql/test/suite/rpl/t/rpl_delete_no_where.test
 share/mysql/test/suite/rpl/t/rpl_do_grant.test
 share/mysql/test/suite/rpl/t/rpl_drop.test
 share/mysql/test/suite/rpl/t/rpl_drop_db.test
+share/mysql/test/suite/rpl/t/rpl_drop_db_fail.test
 share/mysql/test/suite/rpl/t/rpl_drop_temp-slave.opt
 share/mysql/test/suite/rpl/t/rpl_drop_temp.test
 share/mysql/test/suite/rpl/t/rpl_drop_view.test
@@ -5767,6 +5769,7 @@ share/mysql/test/t/drop.test
 share/mysql/test/t/drop_debug.test
 share/mysql/test/t/empty_table.test
 share/mysql/test/t/endspace.test
+share/mysql/test/t/error_simulation-master.opt
 share/mysql/test/t/error_simulation.test
 share/mysql/test/t/errors.test
 share/mysql/test/t/events_1.test
