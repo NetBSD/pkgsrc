@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/02/02 14:29:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/02/07 14:44:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -23,6 +23,7 @@ ${GEM_LIBDIR}/lib/generators/rspec/job/templates/job_spec.rb.erb
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/mailer_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/templates/fixture
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/templates/mailer_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/mailer/templates/preview.rb
 ${GEM_LIBDIR}/lib/generators/rspec/model/model_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/model/templates/fixtures.yml
 ${GEM_LIBDIR}/lib/generators/rspec/model/templates/model_spec.rb
@@ -39,6 +40,7 @@ ${GEM_LIBDIR}/lib/generators/rspec/view/templates/view_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/view/view_generator.rb
 ${GEM_LIBDIR}/lib/rspec-rails.rb
 ${GEM_LIBDIR}/lib/rspec/rails.rb
+${GEM_LIBDIR}/lib/rspec/rails/active_record.rb
 ${GEM_LIBDIR}/lib/rspec/rails/adapters.rb
 ${GEM_LIBDIR}/lib/rspec/rails/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example.rb
