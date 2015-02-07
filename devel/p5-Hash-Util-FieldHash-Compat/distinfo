@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/22 07:31:43 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/02/07 15:10:50 mef Exp $
 
-SHA1 (Hash-Util-FieldHash-Compat-0.03.tar.gz) = 8bb573cb778734b98a2bc885239f1d4001a81311
-RMD160 (Hash-Util-FieldHash-Compat-0.03.tar.gz) = 1446afa0e2bcca69a714db3c63b8e8e65103b800
-Size (Hash-Util-FieldHash-Compat-0.03.tar.gz) = 4702 bytes
+SHA1 (Hash-Util-FieldHash-Compat-0.08.tar.gz) = 74a97ee700292ee36a35d5c5e911efd7e98beb10
+RMD160 (Hash-Util-FieldHash-Compat-0.08.tar.gz) = 3ca2843773a420e329d7dc3ae504b101bf111283
+Size (Hash-Util-FieldHash-Compat-0.08.tar.gz) = 23064 bytes
