@@ -1,16 +1,7 @@
-$NetBSD: patch-include_cln_types.h,v 1.1 2015/02/07 19:53:41 jdc Exp $
+$NetBSD: patch-include_cln_types.h,v 1.2 2015/02/07 20:18:06 jdc Exp $
 
---- include/cln/types.h.orig	2015-02-07 18:09:17.000000000 +0000
-+++ include/cln/types.h	2015-02-07 18:43:34.000000000 +0000
-@@ -48,7 +48,7 @@
-     #undef HAVE_LONGLONG
-    #endif
-   #endif
--  #if defined(HAVE_LONGLONG) && (defined(__alpha__) || defined(__ia64__) || defined(__mips64__) || defined(__powerpc64__) || defined(__x86_64__))
-+  #if defined(HAVE_LONGLONG) && (defined(__alpha__) || defined(__ia64__) || defined(__mips64__) || defined(__powerpc64__) || defined(__x86_64__) || defined(__sparc64__))
-     // 64 bit registers in hardware
-     #define HAVE_FAST_LONGLONG
-   #endif
+--- include/cln/types.h.orig	2009-06-14 20:49:32.000000000 +0100
++++ include/cln/types.h	2015-02-07 20:03:43.000000000 +0000
 @@ -76,7 +76,7 @@
  
  // Integer type used for counters.
@@ -33,7 +24,7 @@ $NetBSD: patch-include_cln_types.h,v 1.1 2015/02/07 19:53:41 jdc Exp $
      typedef int sintD;
      typedef unsigned int uintD;
    #else  // we are not using GMP, so just guess something reasonable
--    #if (defined(HAVE_FAST_LONGLONG) && (defined(__alpha__) || defined(__ia64__) || defined(__powerpc64__) || defined(__x86_64__) || defined(__sparc64)))
+-    #if (defined(HAVE_FAST_LONGLONG) && (defined(__alpha__) || defined(__ia64__) || defined(__powerpc64__) || defined(__x86_64__)))
 +    #if (defined(HAVE_FAST_LONGLONG) && (defined(__alpha__) || defined(__ia64__) || defined(__powerpc64__) || defined(__x86_64__) || defined(__sparc64__)))
        #define intDsize 64
        typedef sint64  sintD;
