@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/16 09:18:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/02/07 12:00:00 wiz Exp $
 info/autoconf-archive.info
 share/aclocal/ax_absolute_header.m4
 share/aclocal/ax_ac_append_to_file.m4
@@ -139,6 +139,7 @@ share/aclocal/ax_check_gd.m4
 share/aclocal/ax_check_gl.m4
 share/aclocal/ax_check_glu.m4
 share/aclocal/ax_check_glut.m4
+share/aclocal/ax_check_glx.m4
 share/aclocal/ax_check_gnu_make.m4
 share/aclocal/ax_check_icu.m4
 share/aclocal/ax_check_java_home.m4
@@ -169,11 +170,17 @@ share/aclocal/ax_check_sys_siglist.m4
 share/aclocal/ax_check_typedef.m4
 share/aclocal/ax_check_uname_syscall.m4
 share/aclocal/ax_check_user.m4
+share/aclocal/ax_check_vscript.m4
 share/aclocal/ax_check_zlib.m4
 share/aclocal/ax_code_coverage.m4
 share/aclocal/ax_compare_version.m4
 share/aclocal/ax_compile_check_sizeof.m4
+share/aclocal/ax_compiler_flags.m4
+share/aclocal/ax_compiler_flags_cflags.m4
+share/aclocal/ax_compiler_flags_gir.m4
+share/aclocal/ax_compiler_flags_ldflags.m4
 share/aclocal/ax_compiler_vendor.m4
+share/aclocal/ax_compiler_version.m4
 share/aclocal/ax_compute_relative_paths.m4
 share/aclocal/ax_compute_standard_relative_paths.m4
 share/aclocal/ax_cond_with_level.m4
@@ -201,6 +208,7 @@ share/aclocal/ax_cxx_dtor_after_atexit.m4
 share/aclocal/ax_cxx_dynamic_cast.m4
 share/aclocal/ax_cxx_enum_computations.m4
 share/aclocal/ax_cxx_enum_computations_with_cast.m4
+share/aclocal/ax_cxx_erase_iterator_type.m4
 share/aclocal/ax_cxx_exceptions.m4
 share/aclocal/ax_cxx_explicit.m4
 share/aclocal/ax_cxx_explicit_instantiations.m4
@@ -336,6 +344,7 @@ share/aclocal/ax_have_qt.m4
 share/aclocal/ax_have_select.m4
 share/aclocal/ax_include_strcasecmp.m4
 share/aclocal/ax_install_files.m4
+share/aclocal/ax_is_release.m4
 share/aclocal/ax_java_check_class.m4
 share/aclocal/ax_java_options.m4
 share/aclocal/ax_jni_include_dir.m4
@@ -396,6 +405,7 @@ share/aclocal/ax_perl_ext.m4
 share/aclocal/ax_perl_ext_flags.m4
 share/aclocal/ax_perl_module_version.m4
 share/aclocal/ax_pgsql_priv_root.m4
+share/aclocal/ax_pkg_check_modules.m4
 share/aclocal/ax_pkg_mico.m4
 share/aclocal/ax_pkg_swig.m4
 share/aclocal/ax_prefix_config_h.m4
@@ -512,6 +522,7 @@ share/aclocal/ax_try_compile_java.m4
 share/aclocal/ax_try_run_java.m4
 share/aclocal/ax_type_socklen_t.m4
 share/aclocal/ax_upload.m4
+share/aclocal/ax_valgrind_check.m4
 share/aclocal/ax_var_timezone_externals.m4
 share/aclocal/ax_very_nice.m4
 share/aclocal/ax_warning_default_aclocaldir.m4
