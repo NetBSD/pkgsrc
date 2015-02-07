@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/27 23:12:14 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/07 15:02:04 darcy Exp $
 #
 
 DISTNAME=	ccxstream-1.0.15
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbplayer/}
 
 MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://www.xbmc.org/
-COMMENT=	Program for streaming multimedia content to XMBC over XBMSP protocol
+COMMENT=	Program for streaming multimedia content to XBMC over XBMSP protocol
 #LICENSE=	# TODO: (see mk/license.mk)
 
 RCD_SCRIPTS=		ccxstream
