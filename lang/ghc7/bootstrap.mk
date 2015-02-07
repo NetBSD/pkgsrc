@@ -1,7 +1,6 @@
-# $NetBSD: bootstrap.mk,v 1.16 2015/02/06 06:57:13 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.17 2015/02/07 09:35:55 pho Exp $
 # -----------------------------------------------------------------------------
-# Select a bindist of bootstrapping compiler based on a per-platform
-# basis.
+# Select a bindist of bootstrapping compiler on a per-platform basis.
 #
 # BOOT_ARCHIVE
 #   This variable is set to the name of compressed archive file of a
@@ -38,6 +37,16 @@ BOOT_ARCHIVE:=  ${PKGNAME}-boot-x86_64-unknown-solaris2.tar.xz
 
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
+.endif
+
+# FreeBSD < 10 surprisingly doesn't have a native iconv so we need to
+# use pkgsrc libiconv for this OPSYS. And if a bootkit depends on
+# pkgsrc libiconv, the "normal" build must do the same because GHC
+# always needs to link executables with libiconv, just like libgmp
+# when integer-gmp is used. For this reason it might be desirable to
+# create two separate bootkits, one for < 10 and another for >= 10.
+.if ${OPSYS} == "FreeBSD"
+USE_BUILTIN.iconv=	no
 .endif
 
 # current bootstrap binary kit for SmartOS is built with ncurses5
