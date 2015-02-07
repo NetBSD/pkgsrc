@@ -1,0 +1,2 @@
+This module adds an AUTOLOAD method to Git::Repository, enabling it to
+automagically call git commands as methods on Git::Repository objects.
