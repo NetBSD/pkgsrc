@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/07 14:52:26 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/capistrano-stats.gemspec
+${GEM_LIBDIR}/lib/capistrano-stats.rb
+${GEM_LIBDIR}/lib/capistrano-stats/metric-collector.rb
+${GEM_LIBDIR}/lib/capistrano-stats/metric-message.rb
+${GEM_LIBDIR}/lib/capistrano-stats/version.rb
+${GEM_LIBDIR}/tasks/metrics.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
