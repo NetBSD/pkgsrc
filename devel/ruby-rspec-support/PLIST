@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/02 14:12:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/07 14:39:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -12,7 +12,6 @@ ${GEM_LIBDIR}/lib/rspec/support/fuzzy_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/support/hunk_generator.rb
 ${GEM_LIBDIR}/lib/rspec/support/matcher_definition.rb
 ${GEM_LIBDIR}/lib/rspec/support/method_signature_verifier.rb
-${GEM_LIBDIR}/lib/rspec/support/os.rb
 ${GEM_LIBDIR}/lib/rspec/support/recursive_const_methods.rb
 ${GEM_LIBDIR}/lib/rspec/support/ruby_features.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec.rb
