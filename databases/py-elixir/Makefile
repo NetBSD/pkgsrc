@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/09 07:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/07 22:06:52 tnn Exp $
 
 DISTNAME=	Elixir-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	http://elixir.ematia.de/trac/wiki
 COMMENT=	Elixir is a declarative layer on top of the SQLAlchemy library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.4.0:../../databases/py-sqlalchemy/
-DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2/
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.4.0:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 
 USE_LANGUAGES=	# none
