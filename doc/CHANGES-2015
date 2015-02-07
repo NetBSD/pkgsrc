@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.767 2015/02/07 10:14:56 adam Exp $
+$NetBSD: CHANGES-2015,v 1.768 2015/02/07 12:00:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -981,3 +981,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-List-Pairwise version 1.03 [wiz 2015-02-07]
 	Updated databases/mysql55-client to 5.5.42 [adam 2015-02-07]
 	Updated databases/mysql55-server to 5.5.42 [adam 2015-02-07]
+	Updated devel/autoconf-archive to 2015.02.04 [wiz 2015-02-07]
