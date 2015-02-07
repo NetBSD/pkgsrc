@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/02/02 14:20:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/02/07 14:41:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -40,11 +40,12 @@ ${GEM_LIBDIR}/lib/rspec/matchers/built_in/output.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/raise_error.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/respond_to.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/satisfy.rb
-${GEM_LIBDIR}/lib/rspec/matchers/built_in/start_and_end_with.rb
+${GEM_LIBDIR}/lib/rspec/matchers/built_in/start_or_end_with.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/throw_symbol.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/yield.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/composable.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/dsl.rb
+${GEM_LIBDIR}/lib/rspec/matchers/expecteds_for_multiple_diffs.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/generated_descriptions.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/matcher_delegator.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/matcher_protocol.rb
