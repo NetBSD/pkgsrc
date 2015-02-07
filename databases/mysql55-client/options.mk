@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/01/03 16:07:38 fhajny Exp $
+# $NetBSD: options.mk,v 1.7 2015/02/07 10:13:59 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
@@ -25,8 +25,9 @@ CMAKE_ARGS+=		-DENABLE_DTRACE=ON
 # http://sphinxsearch.com/docs/current.html#sphinxse-overview
 PLIST_VARS+=	sphinx
 .if !empty(PKG_OPTIONS:Msphinx) || make(distinfo) || make(makesum) || make(mdi)
-SPHINX_VER=	2.2.5
+SPHINX_VER=	2.2.7
 DISTFILES=	${DEFAULT_DISTFILES} sphinx-${SPHINX_VER}-release${EXTRACT_SUFX}
+SITES.sphinx-2.2.7-release.tar.gz=	http://sphinxsearch.com/files/
 .if !empty(PKGPATH:Mserver)
 MESSAGE_SRC=	${PKGDIR}/MESSAGE ${PKGDIR}/MESSAGE.sphinx
 .endif
