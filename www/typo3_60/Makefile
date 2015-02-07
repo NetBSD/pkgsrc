@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/27 13:50:48 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/07 22:06:52 tnn Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -13,7 +13,7 @@ COMMENT=	The TYPO3 content management system, 6.0 based release
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
 VER=		6.0.14

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/17 21:17:21 imil Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/07 22:06:52 tnn Exp $
 
 DISTNAME=	SoftLayer-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/SoftLayer/softlayer/}
@@ -14,7 +14,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-prettytable>=0.7.2:../../textproc/py-prettytable
-DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.1:../../devel/py-docopt/
+DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.1:../../devel/py-docopt
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
