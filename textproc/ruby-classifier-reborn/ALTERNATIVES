@@ -1,0 +1,2 @@
+bin/bayes.rb @PREFIX@/bin/bayes.rb@RUBY_SUFFIX@
+bin/summarize.rb @PREFIX@/bin/summarize.rb@RUBY_SUFFIX@
