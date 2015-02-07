@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.764 2015/02/06 09:58:32 wen Exp $
+$NetBSD: CHANGES-2015,v 1.765 2015/02/07 09:25:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -977,3 +977,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Hash-Case to 1.020 [mef 2015-02-06]
 	Updated audio/pulseaudio to 5.0nb3 [snj 2015-02-06]
 	Updated devel/p5-Perl-MinimumVersion to 1.38 [wen 2015-02-06]
+	Added devel/p5-Git-Repository-Plugin-AUTOLOAD version 1.001 [wiz 2015-02-07]
