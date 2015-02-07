@@ -1,0 +1,5 @@
+Classifier is a general classifier module for Ruby to allow Bayesian
+and other types of classifications.
+
+Classifier Reborn is a fork of cardmagic/classifier under more active
+development.
