@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.743 2015/02/07 13:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.744 2015/02/07 16:30:51 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -363,6 +363,7 @@ SUBDIR+=	py-kde4
 SUBDIR+=	py-kiwi
 SUBDIR+=	py-qt4
 SUBDIR+=	py-qt4-qscintilla
+SUBDIR+=	py-qt5
 SUBDIR+=	py-qwt-qt4
 SUBDIR+=	py-sip
 SUBDIR+=	py-vte
