@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/07 14:54:31 mef Exp $
 #
 
-DISTNAME=	Hash-FieldHash-0.12
+DISTNAME=	Hash-FieldHash-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
@@ -16,6 +15,7 @@ DEPENDS+=	p5-Test-LeakTrace>=0:../../devel/p5-Test-LeakTrace
 
 PERL5_PACKLIST=	auto/Hash/FieldHash/.packlist
 USE_LANGUAGES=	c
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
