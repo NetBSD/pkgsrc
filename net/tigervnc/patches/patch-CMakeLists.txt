@@ -1,0 +1,21 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/02/08 19:42:09 wiz Exp $
+
+--- CMakeLists.txt.orig	2014-08-14 09:25:26.000000000 +0000
++++ CMakeLists.txt
+@@ -26,7 +26,7 @@ set(RCVERSION 1,3,1,0)
+ # Installation paths
+ set(BIN_DIR "${CMAKE_INSTALL_PREFIX}/bin")
+ set(DATA_DIR "${CMAKE_INSTALL_PREFIX}/share")
+-set(MAN_DIR "${DATA_DIR}/man")
++set(MAN_DIR "${CMAKE_INSTALL_PREFIX}/man")
+ set(LOCALE_DIR "${DATA_DIR}/locale")
+ set(DOC_DIR "${CMAKE_INSTALL_PREFIX}/share/doc/${CMAKE_PROJECT_NAME}-${VERSION}")
+ 
+@@ -269,6 +269,7 @@ if(UNIX AND NOT APPLE)
+   if(X11_Xcursor_FOUND)
+     set(FLTK_LIBRARIES ${FLTK_LIBRARIES} ${X11_Xcursor_LIB})
+   endif()
++  set(FLTK_LIBRARIES ${FLTK_LIBRARIES} -lpng -ljpeg)
+ endif()
+ 
+ if(FLTK_FOUND)
