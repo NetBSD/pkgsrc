@@ -1,0 +1,46 @@
+$NetBSD: patch-jdk_src_solaris_classes_java_lang_UNIXProcess.java.bsd,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+* Under NetBSD 5, use fork instead of posix_spawn. NetBSD 5 has no posix_spawn.
+
+--- jdk/src/solaris/classes/java/lang/UNIXProcess.java.bsd.orig	2015-02-02 15:37:12.000000000 +0000
++++ jdk/src/solaris/classes/java/lang/UNIXProcess.java.bsd
+@@ -95,16 +95,31 @@ final class UNIXProcess extends Process 
+             public LaunchMechanism run() {
+                 String javahome = System.getProperty("java.home");
+                 String osArch = System.getProperty("os.arch");
++                String osname = System.getProperty("os.name");
+ 
+                 helperpath = toCString(javahome + "/lib/" + osArch + "/jspawnhelper");
+-                String s = System.getProperty(
+-                    "jdk.lang.Process.launchMechanism", "posix_spawn");
+-
+-                try {
+-                    return LaunchMechanism.valueOf(s.toUpperCase());
+-                } catch (IllegalArgumentException e) {
+-                    throw new Error(s + " is not a supported " +
+-                        "process launch mechanism on this platform.");
++/* NetBSD 5 does not have posix_spawn. Use fork instead. */
++                String osversion = System.getProperty("os.version");
++                if (osname.startsWith("NetBSD") && osversion.startsWith("5")) {
++                    String s = System.getProperty(
++                        "jdk.lang.Process.launchMechanism", "fork");
++
++                    try {
++                        return LaunchMechanism.valueOf(s.toUpperCase());
++                    } catch (IllegalArgumentException e) {
++                        throw new Error(s + " is not a supported " +
++                            "process launch mechanism on this platform.");
++                    }
++                } else {
++                    String s = System.getProperty(
++                        "jdk.lang.Process.launchMechanism", "posix_spawn");
++
++                    try {
++                        return LaunchMechanism.valueOf(s.toUpperCase());
++                    } catch (IllegalArgumentException e) {
++                        throw new Error(s + " is not a supported " +
++                            "process launch mechanism on this platform.");
++                    }
+                 }
+             }
+         });
