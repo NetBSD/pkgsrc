@@ -8,8 +8,20 @@ https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-9029
 Also add a patch from Debian (bug #413041) to fix some heap corruption
 on malformed image input (CVE-2007-2721),
 
+Apply fix for CVE-2014-8157, taken from
+https://bugzilla.redhat.com/show_bug.cgi?id=1179282
+
 --- src/libjasper/jpc/jpc_dec.c.orig	2014-12-05 12:10:45.000000000 +0000
 +++ src/libjasper/jpc/jpc_dec.c
+@@ -489,7 +489,7 @@ static int jpc_dec_process_sot(jpc_dec_t
+ 		dec->curtileendoff = 0;
+ 	}
+ 
+-	if (JAS_CAST(int, sot->tileno) > dec->numtiles) {
++	if (JAS_CAST(int, sot->tileno) >= dec->numtiles) {
+ 		jas_eprintf("invalid tile number in SOT marker segment\n");
+ 		return -1;
+ 	}
 @@ -1069,12 +1069,12 @@ static int jpc_dec_tiledecode(jpc_dec_t 
  	/* Apply an inverse intercomponent transform if necessary. */
  	switch (tile->cp->mctid) {
