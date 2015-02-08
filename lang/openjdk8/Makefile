@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/08 08:41:25 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/08 17:19:59 tnn Exp $
 
 DISTNAME=	openjdk-1.8.31-20150207
 PKGNAME=	openjdk8-1.8.31
@@ -76,6 +76,8 @@ SUBST_FILES.libpath+=	hotspot/src/os/bsd/vm/os_bsd.cpp
 SUBST_VARS.libpath=	PREFIX
 
 .if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-return-type
+CRAPPERS_APPEND.cc+=	-Wno-return-type
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
 			-Wno-unused-value -Wno-switch-enum -Wno-switch \
