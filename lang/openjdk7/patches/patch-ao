@@ -1,12 +1,12 @@
-$NetBSD: patch-ao,v 1.4 2013/06/23 17:39:43 jperkin Exp $
+$NetBSD: patch-ao,v 1.5 2015/02/08 23:40:09 tnn Exp $
 
-Support rhino.
+- Support rhino
+- Disable SunOS multiarch
+- Building japanese manpages crashes bootstrap JVM
 
-Disable SunOS multiarch.
-
---- jdk/make/common/Release.gmk.orig	2013-06-21 13:12:13.781215177 +0000
+--- jdk/make/common/Release.gmk.orig	2015-01-26 15:20:57.000000000 +0000
 +++ jdk/make/common/Release.gmk
-@@ -67,7 +67,7 @@ EXPORTED_PRIVATE_PKGS = com.sun.servicet
+@@ -66,7 +66,7 @@ EXPORTED_PRIVATE_PKGS = com.oracle.net \
  # 64-bit solaris has a few special cases. We define the variable
  # SOLARIS64 for use in this Makefile to easily test those cases
  ifeq ($(PLATFORM), solaris)
@@ -15,7 +15,15 @@ Disable SunOS multiarch.
      SOLARIS64 = true
      IMAGE_BINDIR = bin/$(ARCH)
    endif
-@@ -227,7 +227,7 @@ endif
+@@ -193,6 +193,7 @@ for manbase in $(MANBASEDIRS:%=%/$(MAN1S
+     if [ -f $${manbase}/$${manpage} ] ; then \
+       $(CP) $${manbase}/$${manpage} $1/man/man1 ; \
+       for ja_encoding in $(JA_TARGET_ENCODINGS); do \
++	continue; \
+         ja_dir="ja"; \
+         if [ "$${ja_encoding}" != "$(JA_SOURCE_ENCODING)" ]; then \
+           ja_dir="ja_JP.$${ja_encoding}"; \
+@@ -229,7 +230,7 @@ endif
  INITIAL_IMAGE_JRE=initial-image-jre
  INITIAL_IMAGE_JDK=initial-image-jdk
  ifeq ($(PLATFORM), solaris)
@@ -24,7 +32,7 @@ Disable SunOS multiarch.
      INITIAL_IMAGE_JRE=initial-image-jre-sol64
      INITIAL_IMAGE_JDK=initial-image-jdk-sol64
    endif
-@@ -842,6 +842,7 @@ initial-image-jre:: initial-image-jre-se
+@@ -830,6 +831,7 @@ initial-image-jre:: initial-image-jre-se
  	$(CP) $(RT_JAR) $(JRE_IMAGE_DIR)/lib/rt.jar
  	$(CP) $(RESOURCES_JAR) $(JRE_IMAGE_DIR)/lib/resources.jar
  	$(CP) $(JSSE_JAR) $(JRE_IMAGE_DIR)/lib/jsse.jar
@@ -32,7 +40,15 @@ Disable SunOS multiarch.
  ifneq ($(JFR_JAR),)
  	$(CP) $(JFR_JAR) $(JRE_IMAGE_DIR)/lib/jfr.jar
  endif
-@@ -1170,7 +1171,8 @@ initial-image-jdk:: initial-image-jdk-se
+@@ -931,6 +933,7 @@ ifeq ($(PLATFORM), macosx)
+ 	$(RM) $(JDK_SERVER_BUNDLE_DIR)/Home/man/man1/javaws.1
+ else
+ 	$(RM) -r $(JDK_SERVER_IMAGE_DIR)
++	$(RM) -rf $(JDK_IMAGE_DIR)/man/ja
+ 	$(CP) -r $(JDK_IMAGE_DIR) $(JDK_SERVER_IMAGE_DIR)
+ 	$(RM) -r $(JDK_SERVER_IMAGE_DIR)/demo
+ 	$(RM) -r $(JDK_SERVER_IMAGE_DIR)/sample
+@@ -1159,7 +1162,8 @@ initial-image-jdk:: initial-image-jdk-se
  	@#
  	@# Swing BeanInfo generation
  	@#
