@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_GenerateSources.gmk,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+--- jdk/make/GenerateSources.gmk.orig	2015-02-02 15:37:11.000000000 +0000
++++ jdk/make/GenerateSources.gmk
+@@ -74,8 +74,10 @@ ifneq ($(OPENJDK_TARGET_OS), windows)
+   endif
+ 
+   ifneq ($(OPENJDK_TARGET_OS), macosx)
++   ifneq ($(BUILD_HEADLESS_ONLY), true)
+     include gensrc/GensrcX11Wrappers.gmk
+     GENSRC += $(GENSRC_X11WRAPPERS)
++   endif
+   endif
+ endif
+ 
