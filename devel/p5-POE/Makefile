@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/02/08 06:47:32 mef Exp $
+# $NetBSD: Makefile,v 1.29 2015/02/08 06:53:54 mef Exp $
 
 DISTNAME=	POE-1.366
 PKGNAME=	p5-${DISTNAME}
@@ -26,6 +26,8 @@ DEPENDS+=	p5-IO-Pipely>=0.005:../../devel/p5-IO-Pipely
 
 MAKE_PARAMS+=	--default
 PERL5_PACKLIST=	auto/POE/.packlist
+
+REPLACE_PERL=	lib/POE/Wheel/Curses.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
