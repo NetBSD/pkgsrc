@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/02/01 19:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/02/08 16:39:35 wiz Exp $
 
-DISTNAME=	virtualenv-12.0.6
+DISTNAME=	virtualenv-12.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/v/virtualenv/
