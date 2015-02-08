@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2015/02/07 22:35:24 tnn Exp $
+$NetBSD: distinfo,v 1.68 2015/02/08 05:55:29 tnn Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -43,7 +43,7 @@ SHA1 (openjdk7/rhino1_7R4.zip) = 483e097cb575c724c745edd80c9512f073bd510a
 RMD160 (openjdk7/rhino1_7R4.zip) = fba5ce71edd396a241991fb7b3ce43628b891035
 Size (openjdk7/rhino1_7R4.zip) = 6481918 bytes
 SHA1 (patch-Makefile) = a9e415d19c2a8edb96a60ffdf81c804476a8e2f6
-SHA1 (patch-aa) = d47738b934304ee0921fe56b036fc0483faa328b
+SHA1 (patch-aa) = 33197f638bb8516e3ecc465e32e15db5381c2aae
 SHA1 (patch-ab) = 35d5a4a4aa32f8b92ba82f583a2d31f2b7af7998
 SHA1 (patch-ac) = 7a7853d8d0fd451e64a6fc39c28bd2bd8173adc6
 SHA1 (patch-ae) = 843f05cfe8f18d080cae80eed92d9ad89a5c0917
