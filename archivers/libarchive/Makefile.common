@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/01/17 12:44:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/02/08 00:14:33 wiz Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
@@ -11,6 +11,7 @@ MAINTAINER?=	joerg@NetBSD.org
 HOMEPAGE=	http://www.libarchive.org/
 LICENSE=	2-clause-bsd
 
+TEST_TARGET=		check
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-expat
 CONFIGURE_ARGS+=	--without-lzo2
