@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/01/17 21:28:09 tnn Exp $
+$NetBSD: distinfo,v 1.9 2015/02/08 18:12:49 tnn Exp $
 
 SHA1 (mrxvt-0.5.4-001-fix-segfault-when-wd-empty.patch) = 62b1d128f71e463dd38239efa4d5bc0daa77e9cf
 RMD160 (mrxvt-0.5.4-001-fix-segfault-when-wd-empty.patch) = 039929a83065055abfe29e239d7760390bb54a6b
@@ -7,3 +7,5 @@ SHA1 (mrxvt-0.5.4.tar.gz) = f50e9ad2f652d4212b0ac5241b919372d9e43744
 RMD160 (mrxvt-0.5.4.tar.gz) = 175ce5c554c267ada4efde18e22704ff1b688dac
 Size (mrxvt-0.5.4.tar.gz) = 603978 bytes
 SHA1 (patch-aa) = 809be5640f60ccc8238c2b851056fd520426f6b1
+SHA1 (patch-src_init.c) = 358b46b1c03ef3cdf62b964ca435db7987c9c33d
+SHA1 (patch-src_transparent.c) = 09229a237dfc2fef6c6d76f75270ead5c75521e1
