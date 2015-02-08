@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/12/03 21:49:20 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/08 21:18:56 fhajny Exp $
 #
 
 MODNAME=	redis
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/nicolasff/phpredis
 COMMENT=	PHP extension for Redis
 LICENSE=	php
 
-WRKSRC=		${WRKDIR}/phpredis-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/phpredis-${PECL_VERSION}
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
