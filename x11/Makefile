@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.744 2015/02/07 16:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.745 2015/02/08 09:07:42 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -411,6 +411,7 @@ SUBDIR+=	qt5-qttools
 SUBDIR+=	qt5-qttranslations
 SUBDIR+=	qt5-qtwebchannel
 SUBDIR+=	qt5-qtwebkit
+SUBDIR+=	qt5-qtwebsockets
 SUBDIR+=	qt5-qtx11extras
 SUBDIR+=	qt5-qtxmlpatterns
 SUBDIR+=	qt5-sqlite3
