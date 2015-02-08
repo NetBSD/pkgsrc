@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.787 2015/02/08 00:37:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.788 2015/02/08 03:15:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1011,3 +1011,13 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql56-server to 5.6.23 [adam 2015-02-07]
 	Added misc/calibre1 version 1.48.0nb4 [wiz 2015-02-08]
 	Updated misc/calibre to 2.18.0 [wiz 2015-02-08]
+	Updated devel/p5-App-cpanminus to 1.7025 [mef 2015-02-08]
+	Updated devel/p5-File-ConfigDir to 0.016 [mef 2015-02-08]
+	Updated devel/p5-File-chdir to 0.1010 [mef 2015-02-08]
+	Updated devel/p5-IMDB-Film to 0.53 [mef 2015-02-08]
+	Updated devel/p5-IO-AIO to 4.31 [mef 2015-02-08]
+	Updated devel/p5-IO-Prompter to 0.004012 [mef 2015-02-08]
+	Updated devel/p5-IO-TieCombine to 1.004 [mef 2015-02-08]
+	Updated devel/p5-IPC-Shareable to 0.61 [mef 2015-02-08]
+	Updated devel/p5-IPC-System-Simple to 1.25 [mef 2015-02-08]
+	Updated devel/p5-Inline-C to 0.73 [mef 2015-02-08]
