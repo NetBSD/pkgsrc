@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.790 2015/02/08 07:21:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.791 2015/02/08 07:58:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1025,3 +1025,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-POE to 1.366 [mef 2015-02-08]
 	Updated devel/p5-Curses-UI-POE to 0.04000 [mef 2015-02-08]
 	Updated devel/ruby-rugged to 0.21.4 [taca 2015-02-08]
+	Updated lang/ruby-execjs to 2.3.0 [taca 2015-02-08]
