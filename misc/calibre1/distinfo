@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2015/02/08 00:32:34 wiz Exp $
+
+SHA1 (calibre-1.48.0.tar.xz) = 9a466a33f5d2076d7ed7d096b5247b89a12b1625
+RMD160 (calibre-1.48.0.tar.xz) = ff8e1bf0daa3c2ec6ace3cb9280c9bca3952c8a0
+Size (calibre-1.48.0.tar.xz) = 35126680 bytes
+SHA1 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 745f9ebf091696c0d5403ce691dc28c039d77b9e
+RMD160 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 1e7bb099d5d1cda0b663cebe207c846c8d04750d
+Size (qt-everywhere-opensource-src-4.8.5.tar.gz) = 241491467 bytes
+SHA1 (patch-setup_extensions.py) = 285ab1aff5b0d5f7c0a016f68e705d312a120d65
+SHA1 (patch-src_calibre_linux.py) = 5abce220798f9a32ffda45080227a8bc937de838
