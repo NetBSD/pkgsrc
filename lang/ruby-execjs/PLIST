@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/15 13:55:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/08 07:58:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -6,9 +6,7 @@ ${GEM_LIBDIR}/lib/execjs.rb
 ${GEM_LIBDIR}/lib/execjs/disabled_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/encoding.rb
 ${GEM_LIBDIR}/lib/execjs/external_runtime.rb
-${GEM_LIBDIR}/lib/execjs/johnson_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/module.rb
-${GEM_LIBDIR}/lib/execjs/mustang_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/ruby_racer_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/ruby_rhino_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/runtime.rb
