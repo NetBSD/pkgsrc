@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.805 2015/02/08 16:10:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.806 2015/02/08 16:11:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1046,3 +1046,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/trac to 1.0.4 [gdt 2015-02-08]
 	Updated archivers/pigz to 2.3.3 [fhajny 2015-02-08]
 	Updated devel/afl to 1.40b [wiz 2015-02-08]
+	Updated devel/global to 6.3.4 [wiz 2015-02-08]
