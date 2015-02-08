@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2015/02/08 07:32:15 tnn Exp $
+# $NetBSD: Makefile,v 1.88 2015/02/08 07:57:55 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -6,8 +6,6 @@ PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
-
-# Note: Remember to set sun-jre-jce when updating distinfo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
