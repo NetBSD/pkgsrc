@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.448 2015/02/04 14:03:12 taca Exp $
+# $NetBSD: Makefile,v 1.449 2015/02/08 00:32:51 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -24,6 +24,7 @@ SUBDIR+=	bsdstats
 SUBDIR+=	buffer
 SUBDIR+=	byobu
 SUBDIR+=	calibre
+SUBDIR+=	calibre1
 SUBDIR+=	celestia
 SUBDIR+=	chipmunk
 SUBDIR+=	chord
