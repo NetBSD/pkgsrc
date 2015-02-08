@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.182 2015/01/30 15:19:59 ryoon Exp $
+$NetBSD: distinfo,v 1.183 2015/02/08 09:36:31 martin Exp $
 
 SHA1 (firefox-35.0.1.source.tar.bz2) = cf256ee1491ee502eb4432ade5a879104ebceede
 RMD160 (firefox-35.0.1.source.tar.bz2) = ca4dc6f6c5de1e6e69133de3b8b502991d519fa7
@@ -119,6 +119,7 @@ SHA1 (patch-mfbt_Poison.cpp) = f502581db96b3e5eca25a9aa9035f436e9167503
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
 SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
 SHA1 (patch-netwerk_dns_moz.build) = 01dd7d9094ddaeffbcd6cfa296e28fb56681b0e6
+SHA1 (patch-netwerk_protocol_http_Http2Session.cpp) = 7c864e9bdeb3c76b3ff908f37c1a00a94bfeaad0
 SHA1 (patch-netwerk_wifi_moz.build) = 7c84003d442f698b030f3fef91fea2f5537b404c
 SHA1 (patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp) = d43961a396bccc6bbe1dba2b4c1f97d5017c6d6d
 SHA1 (patch-pb) = 97c9b2e4cefd524dc6ba825f71c3da2a761aa1f4
