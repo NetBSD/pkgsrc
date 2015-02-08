@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2015/02/07 22:35:24 tnn Exp $
+# $NetBSD: Makefile,v 1.86 2015/02/08 05:55:29 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -69,7 +69,6 @@ MAKE_ENV+=	SKIP_DEBUG_BUILD=yes
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
-MAKE_ENV+=	EXTRA_CFLAGS="-DDEFAULT_LIBPATH=\\\"${PREFIX}/lib/jni:${PREFIX}/lib:/lib:/usr/lib\\\""
 BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
 LD_LIBRARY_PATH=	${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
 MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
