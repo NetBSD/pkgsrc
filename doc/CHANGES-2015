@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.798 2015/02/08 14:10:32 mef Exp $
+$NetBSD: CHANGES-2015,v 1.799 2015/02/08 14:12:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/patch to 2.7.4 [mef 2015-02-08]
 	Updated devel/p5-glib2 to 1.307 [mef 2015-02-08]
 	Updated devel/p5-IO-All to 0.85 [mef 2015-02-08]
+	Updated textproc/p5-XML-LibXML to 2.0118 [wiz 2015-02-08]
