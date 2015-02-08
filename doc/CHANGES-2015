@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.808 2015/02/08 16:13:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.809 2015/02/08 16:22:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1049,3 +1049,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/global to 6.3.4 [wiz 2015-02-08]
 	Updated graphics/jhead to 3.00 [wiz 2015-02-08]
 	Updated archivers/lzo to 2.09 [wiz 2015-02-08]
+	Updated audio/musicpd to 0.19.9 [wiz 2015-02-08]
