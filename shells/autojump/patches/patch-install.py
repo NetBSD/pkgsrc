@@ -1,6 +1,7 @@
-$NetBSD: patch-install.py,v 1.1 2015/02/08 17:31:49 wiz Exp $
+$NetBSD: patch-install.py,v 1.2 2015/02/08 17:40:25 wiz Exp $
 
 Remove duplicate mkdirs.
+https://github.com/joelthelion/autojump/issues/350
 
 --- install.py.orig	2015-01-25 07:13:20.000000000 +0000
 +++ install.py
