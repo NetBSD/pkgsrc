@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/08 17:31:49 wiz Exp $
+bin/autojump
+bin/autojump_argparse.py
+bin/autojump_data.py
+bin/autojump_utils.py
+man/man1/autojump.1
+share/autojump/autojump.bash
+share/autojump/autojump.fish
+share/autojump/autojump.sh
+share/autojump/autojump.tcsh
+share/autojump/autojump.zsh
+share/autojump/icon.png

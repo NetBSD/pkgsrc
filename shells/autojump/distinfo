@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/02/08 17:31:49 wiz Exp $
+
+SHA1 (autojump-22.2.4.tar.gz) = df9ff56e128efb8a8e1af574dbac9e4b3c47c1d6
+RMD160 (autojump-22.2.4.tar.gz) = 761710ce83a67059a3abe771c577b111acb77245
+Size (autojump-22.2.4.tar.gz) = 52724 bytes
+SHA1 (patch-install.py) = 74a881c8f86cc2651768828a438d239b5553262c
