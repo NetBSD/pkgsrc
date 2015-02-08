@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.19 2013/03/15 21:50:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/02/08 16:33:11 wiz Exp $
 bin/update-mime-database
 man/man1/update-mime-database.1
 share/locale/ar/LC_MESSAGES/shared-mime-info.mo
+share/locale/as/LC_MESSAGES/shared-mime-info.mo
 share/locale/az/LC_MESSAGES/shared-mime-info.mo
 share/locale/be@latin/LC_MESSAGES/shared-mime-info.mo
 share/locale/bg/LC_MESSAGES/shared-mime-info.mo
@@ -25,6 +26,7 @@ share/locale/fo/LC_MESSAGES/shared-mime-info.mo
 share/locale/fr/LC_MESSAGES/shared-mime-info.mo
 share/locale/ga/LC_MESSAGES/shared-mime-info.mo
 share/locale/gl/LC_MESSAGES/shared-mime-info.mo
+share/locale/gu/LC_MESSAGES/shared-mime-info.mo
 share/locale/he/LC_MESSAGES/shared-mime-info.mo
 share/locale/hi/LC_MESSAGES/shared-mime-info.mo
 share/locale/hr/LC_MESSAGES/shared-mime-info.mo
@@ -35,13 +37,18 @@ share/locale/it/LC_MESSAGES/shared-mime-info.mo
 share/locale/ja/LC_MESSAGES/shared-mime-info.mo
 share/locale/ka/LC_MESSAGES/shared-mime-info.mo
 share/locale/kk/LC_MESSAGES/shared-mime-info.mo
+share/locale/kn/LC_MESSAGES/shared-mime-info.mo
 share/locale/ko/LC_MESSAGES/shared-mime-info.mo
 share/locale/lt/LC_MESSAGES/shared-mime-info.mo
 share/locale/lv/LC_MESSAGES/shared-mime-info.mo
+share/locale/ml/LC_MESSAGES/shared-mime-info.mo
+share/locale/mr/LC_MESSAGES/shared-mime-info.mo
 share/locale/ms/LC_MESSAGES/shared-mime-info.mo
 share/locale/nb/LC_MESSAGES/shared-mime-info.mo
 share/locale/nl/LC_MESSAGES/shared-mime-info.mo
 share/locale/nn/LC_MESSAGES/shared-mime-info.mo
+share/locale/oc/LC_MESSAGES/shared-mime-info.mo
+share/locale/or/LC_MESSAGES/shared-mime-info.mo
 share/locale/pa/LC_MESSAGES/shared-mime-info.mo
 share/locale/pl/LC_MESSAGES/shared-mime-info.mo
 share/locale/pt/LC_MESSAGES/shared-mime-info.mo
@@ -55,7 +62,9 @@ share/locale/sq/LC_MESSAGES/shared-mime-info.mo
 share/locale/sr/LC_MESSAGES/shared-mime-info.mo
 share/locale/sr@latin/LC_MESSAGES/shared-mime-info.mo
 share/locale/sv/LC_MESSAGES/shared-mime-info.mo
+share/locale/ta/LC_MESSAGES/shared-mime-info.mo
 share/locale/te/LC_MESSAGES/shared-mime-info.mo
+share/locale/th/LC_MESSAGES/shared-mime-info.mo
 share/locale/tr/LC_MESSAGES/shared-mime-info.mo
 share/locale/uk/LC_MESSAGES/shared-mime-info.mo
 share/locale/vi/LC_MESSAGES/shared-mime-info.mo
