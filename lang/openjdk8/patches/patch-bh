@@ -1,0 +1,16 @@
+$NetBSD: patch-bh,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+DragonFly support.
+
+--- hotspot/make/defs.make.orig	2015-02-02 15:32:37.000000000 +0000
++++ hotspot/make/defs.make
+@@ -173,6 +173,9 @@ ifeq ($(OS),)
+   ifeq ($(OS), Darwin)
+     OS=bsd
+   endif
++  ifeq ($(OS), DragonFly)
++    OS=bsd
++  endif
+   HOST := $(shell uname -n)
+ endif
+ 
