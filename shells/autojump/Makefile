@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/08 17:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/08 17:40:25 wiz Exp $
 
 VERSION=	22.2.4
 DISTNAME=	autojump-${VERSION}
@@ -19,6 +19,7 @@ do-build:
 
 # the install.py script is not friendly to destdir installation as non-root
 # cd ${WRKSRC} && ${ENV} SHELL=${BASH} ${PYTHONBIN} install.py -fs -p ${PREFIX} -d ${DESTDIR}
+# see also https://github.com/joelthelion/autojump/issues/338
 do-install:
 	cd ${WRKSRC}/bin && ${INSTALL_SCRIPT} autojump autojump_argparse.py autojump_data.py autojump_utils.py ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/bin && ${INSTALL_SCRIPT} icon.png ${DESTDIR}${PREFIX}/share/autojump
