@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2015/01/08 10:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2015/02/08 00:37:09 wiz Exp $
 
-DISTNAME=	calibre-1.48.0
-PKGREVISION=	4
+DISTNAME=	calibre-2.18.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,43 +11,38 @@ HOMEPAGE=	http://www.calibre-ebook.com/
 COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	help2man>=1.36.4:../../converters/help2man
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+#DEPENDS+=	help2man>=1.36.4:../../converters/help2man
+#DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
-DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
+#DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
+DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.9:../../textproc/py-cssutils
-# Let's depend on the ones we have in pkgsrc instead of the bundled ones.
-DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
+DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
+## Let's depend on the ones we have in pkgsrc instead of the bundled ones.
+#DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
 DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
-DEPENDS+=	${PYPKGPREFIX}-apsw-[0-9]*:../../databases/py-apsw
+#DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
+DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
 
+# dateutil>=1.4.1
+# dns>=1.6.0
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
 
-# We also need the distfile for qt4-libs to extract some private header files
-# If QTVERSION changes, the distinfo file needs to be updated too.
-QTVERSION=	4.8.5	# from ../../x11/qt4/Makefile.common
-# Including that file to avoid hardcoding the version number won't work,
-# since it will occur in the distinfo anyway.
-QTNAME=		qt-everywhere-opensource-src-${QTVERSION}
-DISTFILES+=	${QTNAME}.tar.gz
-MASTER_SITES+=	http://releases.qt-project.org/qt4/source/
 EXTRACT_USING=  bsdtar
 
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not ported as of 2.1.0; also: py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
 PYDISTUTILSPKG=	yes
 PYSETUPOPTARGS=	# empty
 PYSETUPINSTALLARGS=	--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
-WRKSRC=		${WRKDIR}/calibre
 
 INSTALLATION_DIRS=	share/applications
 INSTALLATION_DIRS=	share/icons
@@ -64,7 +58,7 @@ FIX_PYTHON_PATHS+=	*/*/*/*/*/*.py
 FIX_PYTHON_PATHS+=	*/*/*/*/*/*/*.py
 
 SUBST_CLASSES+=		prefix
-SUBST_SED.prefix=	-e "s,^QMAKE =.*,QMAKE = '${PREFIX}/qt4/bin/qmake',"
+SUBST_SED.prefix=	-e "s,^QMAKE =.*,QMAKE = '${PREFIX}/qt5/bin/qmake',"
 SUBST_MESSAGE.prefix=	Fixing path to QMAKE
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	setup/build_environment.py
@@ -91,6 +85,7 @@ MAKE_ENV+=		FC_INC_DIR=${BUILDLINK_PREFIX.fontconfig}/include/fontconfig
 MAKE_ENV+=		FC_LIB_DIR=${BUILDLINK_PREFIX.fontconfig}/lib
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
+MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 #MAKE_ENV+=		WITH_USB=no
 
 # Let's depend on the ones we have in pkgsrc instead of the bundled ones.
@@ -104,24 +99,23 @@ post-extract:
 	chmod a-x ${WRKSRC}/src/calibre/utils/Zeroconf.py
 	chmod a-x ${WRKSRC}/src/calibre/utils/smtplib.py
 
-# Get access to (some of) the Qt4 private header files (for qt_hack).
-post-wrapper:
-	cd ${WRKDIR}/.buildlink/qt4/include/QtGui && \
-	    ln -s ../../../../${QTNAME}/include/QtGui/private .
-	cd ${WRKDIR}/.buildlink/qt4/include/QtCore && \
-	    ln -s ../../../../${QTNAME}/include/QtCore/private .
-
+# not sure why libheadless installed into wrong directory
+# side effect of patch-setup_extensions.py?
 post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
 	    ${DESTDIR}${PREFIX}/share/calibre/recipes
 	cd ${WRKSRC} && pax -wr -pma Changelog* README.md \
 	    COPYRIGHT INSTALL LICENSE.* \
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
+	cd ${DESTDIR}${PREFIX} && ${MV} lib/calibre/calibre/plugins/.libs/libheadless.so lib/calibre/calibre/plugins/libheadless.so
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.chmlib+=	chmlib>=0.40
 .include "../../devel/chmlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
+.include "../../devel/libmtp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -137,12 +131,12 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 # because the setup.py is not the standard one and behaves differently.
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
 #.include "../../lang/python/extension.mk"
+BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
 .include "../../print/podofo/buildlink3.mk"
-# ??? BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
-BUILDLINK_API_DEPENDS.poppler-qt4+=	poppler-qt4>=0.12.0
-.include "../../print/poppler-qt4/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
@@ -151,10 +145,7 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-qt4+=	${PYPKGPREFIX}-qt4>=4.7.0
-.include "../../x11/py-qt4/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7.0
-.include "../../x11/qt4-tools/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-qdbus+=	qt4-qdbus>=4.7.0
-.include "../../x11/qt4-qdbus/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+BUILDLINK_API_DEPENDS.py-qt5+=	${PYPKGPREFIX}-qt5>=5.4
+.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

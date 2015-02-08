@@ -1,4 +1,4 @@
-$NetBSD: patch-src_calibre_linux.py,v 1.4 2014/07/12 15:48:02 wiz Exp $
+$NetBSD: patch-src_calibre_linux.py,v 1.5 2015/02/08 00:37:10 wiz Exp $
 
 Lifted from ArchLinux, saves mime and desktop files on disk
 instead of trying to add them directly.
@@ -7,9 +7,9 @@ See https://www.archlinux.org/packages/community/x86_64/calibre/ ->
 https://projects.archlinux.org/svntogit/community.git/tree/trunk?h=packages/calibre ->
 https://projects.archlinux.org/svntogit/community.git/plain/trunk/desktop_integration.patch?h=packages/calibre
 
---- src/calibre/linux.py.orig	2014-07-11 02:19:43.000000000 +0000
+--- src/calibre/linux.py.orig	2014-08-29 03:59:29.000000000 +0000
 +++ src/calibre/linux.py
-@@ -644,18 +644,6 @@ class PostInstall:
+@@ -691,18 +691,6 @@ class PostInstall:
              self.setup_completion()
          if islinux or isbsd:
              self.setup_desktop_integration()
@@ -28,7 +28,7 @@ https://projects.archlinux.org/svntogit/community.git/plain/trunk/desktop_integr
  
          if warn is None and self.warnings:
              self.info('\n\nThere were %d warnings\n'%len(self.warnings))
-@@ -729,56 +717,39 @@ class PostInstall:
+@@ -776,56 +764,39 @@ class PostInstall:
  
              with TemporaryDirectory() as tdir, CurrentDir(tdir), \
                                  PreserveMIMEDefaults():
@@ -99,3 +99,12 @@ https://projects.archlinux.org/svntogit/community.git/plain/trunk/desktop_integr
                  f.write(GUI)
                  write_mimetypes(f)
                  f.close()
+@@ -845,7 +816,7 @@ class PostInstall:
+ 
+                 APPDATA = get_appdata()
+                 for x in des:
+-                    cmd = ['xdg-desktop-menu', 'install', '--noupdate', './'+x]
++                    cmd = ['xdg-desktop-menu', 'install', '--noupdate', appdata + '/../applications/'+x]
+                     cc(' '.join(cmd), shell=True)
+                     self.menu_resources.append(x)
+                     ak = x.partition('.')[0]

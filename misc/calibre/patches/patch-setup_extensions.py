@@ -1,15 +1,15 @@
-$NetBSD: patch-setup_extensions.py,v 1.4 2014/04/16 17:22:30 wiz Exp $
+$NetBSD: patch-setup_extensions.py,v 1.5 2015/02/08 00:37:10 wiz Exp $
 
-Correct directory name.
+Fix build for pictureflow.
 
---- setup/extensions.py.orig	2014-04-04 02:33:40.000000000 +0000
+--- setup/extensions.py.orig	2014-08-29 03:59:29.000000000 +0000
 +++ setup/extensions.py
-@@ -567,7 +567,7 @@ class Build(Command):
-             self.check_call(qmc + ['qtcurve.pro'])
-             self.check_call([make]+([] if iswindows else ['-j%d'%(cpu_count()
-                 or 1)]))
--            src = (glob.glob('*.so') + glob.glob('release/*.dll') +
-+            src = (glob.glob('.libs/*.so') + glob.glob('release/*.dll') +
-                     glob.glob('*.dylib'))
-             ext = 'pyd' if iswindows else 'so'
-             if not os.path.exists(dest):
+@@ -602,7 +602,7 @@ class Build(Command):
+         if iswindows:
+             qmc += ['-spec', 'win32-msvc2008']
+         fext = 'dll' if iswindows else 'dylib' if isosx else 'so'
+-        name = '%s%s.%s' % ('release/' if iswindows else 'lib', sip['target'], fext)
++        name = '%s%s.%s' % ('release/' if iswindows else '.libs/lib', sip['target'], fext)
+         try:
+             os.chdir(src_dir)
+             if self.newer(dest, sip['headers'] + sip['sources'] + ext.sources + ext.headers):
