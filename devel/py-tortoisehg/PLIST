@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/11/09 16:08:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/08 16:37:33 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -199,6 +199,9 @@ ${PYSITELIB}/tortoisehg/hgqt/repomodel.pyo
 ${PYSITELIB}/tortoisehg/hgqt/reporegistry.py
 ${PYSITELIB}/tortoisehg/hgqt/reporegistry.pyc
 ${PYSITELIB}/tortoisehg/hgqt/reporegistry.pyo
+${PYSITELIB}/tortoisehg/hgqt/repotab.py
+${PYSITELIB}/tortoisehg/hgqt/repotab.pyc
+${PYSITELIB}/tortoisehg/hgqt/repotab.pyo
 ${PYSITELIB}/tortoisehg/hgqt/repotreeitem.py
 ${PYSITELIB}/tortoisehg/hgqt/repotreeitem.pyc
 ${PYSITELIB}/tortoisehg/hgqt/repotreeitem.pyo
@@ -670,6 +673,7 @@ share/pixmaps/tortoisehg/icons/scalable/status/hg-merged-p2.svg
 share/pixmaps/tortoisehg/icons/scalable/status/hg-patch-applied.svg
 share/pixmaps/tortoisehg/icons/scalable/status/hg-patch-guarded.svg
 share/pixmaps/tortoisehg/icons/scalable/status/hg-patch-unguarded.svg
+share/pixmaps/tortoisehg/icons/scalable/status/hg-sharedrepo.svg
 share/pixmaps/tortoisehg/icons/scalable/status/thg-added-subrepo.svg
 share/pixmaps/tortoisehg/icons/scalable/status/thg-error.svg
 share/pixmaps/tortoisehg/icons/scalable/status/thg-git-subrepo.svg
