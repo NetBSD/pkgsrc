@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.800 2015/02/08 14:13:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.801 2015/02/08 14:14:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-IO-All to 0.85 [mef 2015-02-08]
 	Updated textproc/p5-XML-LibXML to 2.0118 [wiz 2015-02-08]
 	Updated mail/p5-Email-Valid to 1.196 [wiz 2015-02-08]
+	Updated net/p5-Net-Domain-TLD to 1.73 [wiz 2015-02-08]
