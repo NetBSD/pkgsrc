@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1057 2015/02/07 14:49:26 taca Exp $
+# $NetBSD: Makefile,v 1.1058 2015/02/08 19:42:45 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -707,6 +707,7 @@ SUBDIR+=	tcptrace
 SUBDIR+=	tcptraceroute
 SUBDIR+=	teamspeak-client
 SUBDIR+=	teamspeak-server
+SUBDIR+=	tigervnc
 SUBDIR+=	tightvnc
 SUBDIR+=	tightvncviewer
 SUBDIR+=	tinc
