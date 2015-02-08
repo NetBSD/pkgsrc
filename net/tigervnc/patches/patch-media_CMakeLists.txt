@@ -1,0 +1,15 @@
+$NetBSD: patch-media_CMakeLists.txt,v 1.1 2015/02/08 19:42:09 wiz Exp $
+
+Don't find "convert" if it happens to be installed.
+
+--- media/CMakeLists.txt.orig	2013-02-19 09:02:25.000000000 +0000
++++ media/CMakeLists.txt
+@@ -5,7 +5,7 @@ set(ICON_FILES
+   ${CMAKE_CURRENT_SOURCE_DIR}/icons/tigervnc_32.png
+   ${CMAKE_CURRENT_SOURCE_DIR}/icons/tigervnc_48.png)
+ 
+-find_program(CONVERT_EXECUTABLE convert)
++# find_program(CONVERT_EXECUTABLE convert)
+ 
+ if(CONVERT_EXECUTABLE)
+   add_custom_target(icons DEPENDS ${ICON_FILES})
