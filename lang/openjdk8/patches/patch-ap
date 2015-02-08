@@ -1,0 +1,53 @@
+$NetBSD: patch-ap,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+Use pkgsrc fontconfig.
+
+--- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2015-02-02 15:37:12.000000000 +0000
++++ jdk/src/solaris/native/sun/awt/fontpath.c
+@@ -59,8 +59,8 @@
+ extern Display *awt_display;
+ #endif /* !HEADLESS */
+ 
+-#define FONTCONFIG_DLL_VERSIONED VERSIONED_JNI_LIB_NAME("fontconfig", "1")
+-#define FONTCONFIG_DLL JNI_LIB_NAME("fontconfig")
++#define FONTCONFIG_DLL_VERSIONED "@BUILDLINK_PREFIX.fontconfig@" JNI_LIB_NAME("fontconfig")
++#define FONTCONFIG_DLL "@BUILDLINK_PREFIX.fontconfig@" JNI_LIB_NAME("fontconfig")
+ 
+ #define MAXFDIRS 512    /* Max number of directories that contain fonts */
+ 
+@@ -154,6 +154,27 @@ static char *fullBSDFontPath[] = {
+     NULL, /* terminates the list */
+ };
+ #endif
++static char *pkgsrcFontPath[] = {
++   "@PREFIX@/share/fonts/X11/100dpi",
++   "@PREFIX@/share/fonts/X11/75dpi",
++   "@PREFIX@/share/fonts/X11/Type1",
++   "@PREFIX@/share/fonts/X11/cyrillic",
++   "@PREFIX@/share/fonts/X11/misc",
++   "@PREFIX@/share/fonts/X11/TTF",
++   "/usr/X11R7/lib/X11/fonts/100dpi",
++   "/usr/X11R7/lib/X11/fonts/75dpi",
++   "/usr/X11R7/lib/X11/fonts/Type1",
++   "/usr/X11R7/lib/X11/fonts/cyrillic",
++   "/usr/X11R7/lib/X11/fonts/misc",
++   "/usr/X11R7/lib/X11/fonts/TTF",
++   "/usr/X11R6/lib/X11/fonts/100dpi",
++   "/usr/X11R6/lib/X11/fonts/75dpi",
++   "/usr/X11R6/lib/X11/fonts/Type1",
++   "/usr/X11R6/lib/X11/fonts/cyrillic",
++   "/usr/X11R6/lib/X11/fonts/misc",
++   "/usr/X11R6/lib/X11/fonts/TTF",
++   NULL
++};
+ 
+ static char **getFontConfigLocations();
+ 
+@@ -528,6 +549,7 @@ static char *getPlatformFontPathChars(JN
+ #elif defined(_ALLBSD_SOURCE)
+     knowndirs = fullBSDFontPath;
+ #endif
++    knowndirs = pkgsrcFontPath;
+     /* REMIND: this code requires to be executed when the GraphicsEnvironment
+      * is already initialised. That is always true, but if it were not so,
+      * this code could throw an exception and the fontpath would fail to

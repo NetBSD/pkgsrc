@@ -1,0 +1,25 @@
+$NetBSD: patch-jdk_make_Images.gmk,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+Building ja_JP.UTF-8 manpages crashes the bootstrap JVM.
+
+--- jdk/make/Images.gmk.orig	2015-02-02 15:37:11.000000000 +0000
++++ jdk/make/Images.gmk
+@@ -411,12 +411,12 @@ ifneq ($(OPENJDK_TARGET_OS), windows)
+ 	$(install-file)
+ 
+   define install-ja-manpage
+-	$(MKDIR) -p $(@D)
+-	$(CAT) $< \
+-	    | $(NATIVE2ASCII) -encoding eucJP \
+-	    | $(SED) 's/@@VERSION@@/$(THIS_JDK_VERSION)/g' \
+-	    | $(NATIVE2ASCII) -reverse -encoding $1 \
+-	    > $@
++#	$(MKDIR) -p $(@D)
++#	$(CAT) $< \
++#	    | $(NATIVE2ASCII) -encoding eucJP \
++#	    | $(SED) 's/@@VERSION@@/$(THIS_JDK_VERSION)/g' \
++#	    | $(NATIVE2ASCII) -reverse -encoding $1 \
++#	    > $@
+   endef
+ 
+   $(JRE_IMAGE_DIR)/man/ja_JP.UTF-8/man1/%: $(MAN_SRC_DIR)/$(MAN1_SUBDIR)/ja/%

@@ -1,0 +1,55 @@
+$NetBSD: patch-common_autoconf_spec.gmk.in,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+--- common/autoconf/spec.gmk.in.orig	2015-02-02 15:31:06.000000000 +0000
++++ common/autoconf/spec.gmk.in
+@@ -249,7 +249,7 @@ BUILD_HOTSPOT=@BUILD_HOTSPOT@
+ 
+ # The boot jdk to use
+ BOOT_JDK:=@BOOT_JDK@
+-BOOT_JDK_JVMARGS:=@BOOT_JDK_JVMARGS@
++BOOT_JDK_JVMARGS:=@BOOT_JDK_JVMARGS@ $(PKGSRC_BOOT_JDK_JVMARGS)
+ BOOT_RTJAR:=@BOOT_RTJAR@
+ BOOT_TOOLSJAR=$(BOOT_JDK)/lib/tools.jar
+ 
+@@ -349,7 +349,8 @@ LD:=@FIXPATH@ @LD@
+ USING_BROKEN_SUSE_LD:=@USING_BROKEN_SUSE_LD@
+ 
+ # LDFLAGS used to link the jdk native libraries (C-code)
+-LDFLAGS_JDKLIB:=@LDFLAGS_JDKLIB@
++# Do not use -Wl,-R here. The build system chokes on "," in LDFLAGS. -Xlinker works.
++LDFLAGS_JDKLIB:=-Xlinker -R@prefix@/java/openjdk8/jre/lib@OPENJDK_TARGET_CPU_LIBDIR@ -Xlinker -R@prefix@/java/openjdk8/jre/lib@OPENJDK_TARGET_CPU_LIBDIR@/server @LDFLAGS_JDKLIB@
+ LDFLAGS_JDKLIB_SUFFIX:=@LDFLAGS_JDKLIB_SUFFIX@
+ 
+ # On some platforms the linker cannot be used to create executables, thus
+@@ -436,24 +437,24 @@ OBJ_SUFFIX:=@OBJ_SUFFIX@
+ POST_STRIP_CMD:=@POST_STRIP_CMD@
+ POST_MCS_CMD:=@POST_MCS_CMD@
+ 
+-JAVA_FLAGS:=@BOOT_JDK_JVMARGS@
++JAVA_FLAGS:=@BOOT_JDK_JVMARGS@ $(PKGSRC_BOOT_JDK_JVMARGS)
+ 
+ JAVA=@FIXPATH@ $(BOOT_JDK)/bin/java $(JAVA_FLAGS)
+ 
+ JAVAC=@FIXPATH@ $(BOOT_JDK)/bin/javac
+ # Hotspot sets this variable before reading the SPEC when compiling sa-jdi.jar. Avoid
+ # overriding that value by using ?=.
+-JAVAC_FLAGS?=@JAVAC_FLAGS@
++JAVAC_FLAGS?=@JAVAC_FLAGS@ -encoding UTF-8
+ 
+-JAVAH=@FIXPATH@ $(BOOT_JDK)/bin/javah
++JAVAH=@FIXPATH@ $(BOOT_JDK)/bin/javah $(PKGSRC_BOOT_JDK_TOOLARGS)
+ 
+-JAR=@FIXPATH@ $(BOOT_JDK)/bin/jar
++JAR=@FIXPATH@ $(BOOT_JDK)/bin/jar $(PKGSRC_BOOT_JDK_TOOLARGS)
+ 
+-RMIC=@FIXPATH@ $(BOOT_JDK)/bin/rmic
++RMIC=@FIXPATH@ $(BOOT_JDK)/bin/rmic $(PKGSRC_BOOT_JDK_TOOLARGS)
+ 
+-NATIVE2ASCII=@FIXPATH@ $(BOOT_JDK)/bin/native2ascii
++NATIVE2ASCII=@FIXPATH@ $(BOOT_JDK)/bin/native2ascii $(PKGSRC_BOOT_JDK_TOOLARGS)
+ 
+-JARSIGNER=@FIXPATH@ $(BOOT_JDK)/bin/jarsigner
++JARSIGNER=@FIXPATH@ $(BOOT_JDK)/bin/jarsigner $(PKGSRC_BOOT_JDK_TOOLARGS)
+ 
+ # You run the new javac using the boot jdk with $(BOOT_JDK)/bin/java $(NEW_JAVAC) ...
+ BOOTSTRAP_JAVAC_JAR:=$(LANGTOOLS_OUTPUTDIR)/dist/bootstrap/lib/javac.jar

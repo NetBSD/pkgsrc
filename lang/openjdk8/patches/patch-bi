@@ -1,0 +1,45 @@
+$NetBSD: patch-bi,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+DragonFly support.
+
+--- hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp.orig	2015-02-02 15:32:37.000000000 +0000
++++ hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp
+@@ -96,7 +96,7 @@
+ #define SPELL_REG_FP "ebp"
+ #endif // AMD64
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ # define context_trapno uc_mcontext.mc_trapno
+ # ifdef AMD64
+ #  define context_pc uc_mcontext.mc_rip
+@@ -283,13 +283,8 @@ address os::current_stack_pointer() {
+   register void *esp;
+   __asm__("mov %%"SPELL_REG_SP", %0":"=r"(esp));
+   return (address) esp;
+-#elif defined(SPARC_WORKS)
+-  register void *esp;
+-  __asm__("mov %%"SPELL_REG_SP", %0":"=r"(esp));
+-  return (address) ((char*)esp + sizeof(long)*2);
+ #else
+-  register void *esp __asm__ (SPELL_REG_SP);
+-  return (address) esp;
++  return (address)__builtin_frame_address(0);
+ #endif
+ }
+ 
+@@ -366,13 +361,7 @@ frame os::get_sender_for_C_frame(frame* 
+ }
+ 
+ intptr_t* _get_previous_fp() {
+-#if defined(SPARC_WORKS) || defined(__clang__) || defined(__llvm__)
+-  register intptr_t **ebp;
+-  __asm__("mov %%"SPELL_REG_FP", %0":"=r"(ebp));
+-#else
+-  register intptr_t **ebp __asm__ (SPELL_REG_FP);
+-#endif
+-  return (intptr_t*) *ebp;   // we want what it points to.
++  return (intptr_t *)__builtin_frame_address(1);
+ }
+ 
+ 

@@ -1,0 +1,47 @@
+$NetBSD: patch-al,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+DragonFly support.
+
+--- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2015-02-02 15:37:12.000000000 +0000
++++ jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java
+@@ -27,6 +27,8 @@ package sun.nio.fs;
+ 
+ import java.nio.file.spi.FileSystemProvider;
+ import java.security.AccessController;
++import java.util.Set;
++import java.util.HashSet;
+ import sun.security.action.GetPropertyAction;
+ 
+ /**
+@@ -36,6 +38,14 @@ import sun.security.action.GetPropertyAc
+ public class DefaultFileSystemProvider {
+     private DefaultFileSystemProvider() { }
+ 
++    private static final Set<String> validFileSystemProviders
++        = new HashSet<String>();
++    static {
++        validFileSystemProviders.add("sun.nio.fs.SolarisFileSystemProvider");
++        validFileSystemProviders.add("sun.nio.fs.LinuxFileSystemProvider");
++        validFileSystemProviders.add("sun.nio.fs.BsdFileSystemProvider");
++    }
++
+     @SuppressWarnings("unchecked")
+     private static FileSystemProvider createProvider(String cn) {
+         Class<FileSystemProvider> c;
+@@ -57,11 +67,15 @@ public class DefaultFileSystemProvider {
+     public static FileSystemProvider create() {
+         String osname = AccessController
+             .doPrivileged(new GetPropertyAction("os.name"));
++       String fileSystemProvider = System
++           .getProperty("java.nio.file.spi.DefaultFileSystemProvider");
++       if (validFileSystemProviders.contains(fileSystemProvider))
++           return createProvider(fileSystemProvider);
+         if (osname.equals("SunOS"))
+             return createProvider("sun.nio.fs.SolarisFileSystemProvider");
+         if (osname.equals("Linux"))
+             return createProvider("sun.nio.fs.LinuxFileSystemProvider");
+-        if (osname.endsWith("BSD"))
++        if (osname.endsWith("BSD") || osname.equals("DragonFly"))
+             return createProvider("sun.nio.fs.BsdFileSystemProvider");
+         if (osname.contains("OS X"))
+             return createProvider("sun.nio.fs.MacOSXFileSystemProvider");

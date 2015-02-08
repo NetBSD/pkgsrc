@@ -1,0 +1,15 @@
+$NetBSD: patch-ba,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+DragonFly support.
+
+--- hotspot/src/share/vm/utilities/macros.hpp.orig	2015-02-02 15:32:37.000000000 +0000
++++ hotspot/src/share/vm/utilities/macros.hpp
+@@ -278,7 +278,7 @@
+ #define NOT_WINDOWS(code) code
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+ #define BSD_ONLY(code) code
+ #define NOT_BSD(code)
+ #else
