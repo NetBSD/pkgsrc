@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.785 2015/02/07 19:24:31 adam Exp $
+$NetBSD: CHANGES-2015,v 1.786 2015/02/08 00:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1009,3 +1009,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/iperf3 to 3.0.11nb1 [he 2015-02-07]
 	Updated databases/mysql56-client to 5.6.23 [adam 2015-02-07]
 	Updated databases/mysql56-server to 5.6.23 [adam 2015-02-07]
+	Added misc/calibre1 version 1.48.0nb4 [wiz 2015-02-08]
