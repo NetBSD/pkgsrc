@@ -1,0 +1,40 @@
+$NetBSD: patch-unix_vncserver,v 1.1 2015/02/08 19:42:09 wiz Exp $
+
+--- unix/vncserver.orig	2014-08-14 09:28:16.000000000 +0000
++++ unix/vncserver
+@@ -88,6 +88,8 @@ if (-d "/etc/X11/fontpath.d") {
+ }
+ 
+ @fontpaths = ('/usr/share/X11/fonts', '/usr/share/fonts', '/usr/share/fonts/X11/');
++if (! -l "@PREFIX@/share/fonts/X11") {push(@fontpaths, '@PREFIX@/share/fonts/X11');}
++if (! -l "@X11BASE@/lib/X11/fonts") {push(@fontpaths, '@X11BASE@/lib/X11/fonts');}
+ if (! -l "/usr/lib/X11") {push(@fontpaths, '/usr/lib/X11/fonts');}
+ if (! -l "/usr/X11") {push(@fontpaths, '/usr/X11/lib/X11/fonts');}
+ if (! -l "/usr/X11R6") {push(@fontpaths, '/usr/X11R6/lib/X11/fonts');}
+@@ -337,7 +339,7 @@ if (-e "/tmp/.X11-unix/X$displayNumber"
+ }
+ $ENV{VNCDESKTOP}= $desktopName;
+ 
+-system($exedir."vncconfig -iconic >> " . &quotedString($desktopLog) . " 2>&1 &");
++system($exedir."vncconfig -nowin >> " . &quotedString($desktopLog) . " 2>&1 &");
+ 
+ if ($opt{'-fg'}) {
+     system("$vncUserDir/xstartup >> " . &quotedString($desktopLog) . " 2>&1");
+@@ -414,7 +416,7 @@ sub CheckDisplayNumber
+ 
+     socket(S, $AF_INET, $SOCK_STREAM, 0) || die "$prog: socket failed: $!\n";
+     eval 'setsockopt(S, &SOL_SOCKET, &SO_REUSEADDR, pack("l", 1))';
+-    if (!bind(S, pack('S n x12', $AF_INET, 6000 + $n))) {
++    if (!bind(S, sockaddr_in(6000 + $n, &INADDR_ANY))) {
+ 	close(S);
+ 	return 0;
+     }
+@@ -422,7 +424,7 @@ sub CheckDisplayNumber
+ 
+     socket(S, $AF_INET, $SOCK_STREAM, 0) || die "$prog: socket failed: $!\n";
+     eval 'setsockopt(S, &SOL_SOCKET, &SO_REUSEADDR, pack("l", 1))';
+-    if (!bind(S, pack('S n x12', $AF_INET, 5900 + $n))) {
++    if (!bind(S, sockaddr_in(5900 + $n, &INADDR_ANY))) {
+ 	close(S);
+ 	return 0;
+     }
