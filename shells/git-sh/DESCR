@@ -1,0 +1,17 @@
+git-sh is a customized bash shell suitable for git work.
+
+The git-sh command starts an interactive bash shell tweaked for
+heavy git interaction:
+
+* All git commands available at top-level (checkout master = git
+  checkout master)
+* All git aliases defined in the [alias] section of ~/.gitconfig
+  available at top-level.
+* Shawn O. Pearce's excellent bash completion strapped onto all
+  core commands and git aliases.
+* Custom prompt with current branch, repository, and work tree
+  dirty indicator.
+* Customizable via /etc/gitshrc and ~/.gitshrc config files; for
+  creating aliases, changing the prompt, etc.
+* Runs on top of normal bash (~/.bashrc) and readline (~/.inputrc)
+  configurations.
