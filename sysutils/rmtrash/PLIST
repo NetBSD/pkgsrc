@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/08 16:59:56 wiz Exp $
+bin/rmdirtrash
+bin/rmtrash
+share/doc/rmtrash/README.md
