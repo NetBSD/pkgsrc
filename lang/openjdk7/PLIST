@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/01/27 12:31:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/02/08 04:13:23 tnn Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -340,8 +340,8 @@ java/openjdk7/include/jni.h
 java/openjdk7/include/jni_md.h
 java/openjdk7/include/jvmti.h
 java/openjdk7/include/jvmticmlr.h
-java/openjdk7/include/netbsd/jawt_md.h
-java/openjdk7/include/netbsd/jni_md.h
+java/openjdk7/include/${LOWER_OPSYS}/jawt_md.h
+java/openjdk7/include/${LOWER_OPSYS}/jni_md.h
 java/openjdk7/jre/ASSEMBLY_EXCEPTION
 java/openjdk7/jre/LICENSE
 java/openjdk7/jre/THIRD_PARTY_README
