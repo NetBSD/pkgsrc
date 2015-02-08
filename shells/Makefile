@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2015/02/08 16:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2015/02/08 17:32:08 wiz Exp $
 #
 
 COMMENT=	Shells
 
 SUBDIR+=	ast-ksh
+SUBDIR+=	autojump
 SUBDIR+=	bash
 SUBDIR+=	bash-completion
 SUBDIR+=	bash2
