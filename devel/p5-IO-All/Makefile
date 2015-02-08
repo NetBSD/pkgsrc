@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/05/29 23:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/02/08 13:44:24 mef Exp $
 
-DISTNAME=	IO-All-0.61
+DISTNAME=	IO-All-0.85
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
 MODULE_DIR=	modules/by-module
