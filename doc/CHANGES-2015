@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.813 2015/02/08 16:37:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.814 2015/02/08 16:38:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-tornado to 4.1 [wiz 2015-02-08]
 	Updated databases/shared-mime-info to 1.4 [wiz 2015-02-08]
 	Updated devel/py-tortoisehg to 3.3 [wiz 2015-02-08]
+	Updated security/py-keyring to 5.0 [wiz 2015-02-08]
