@@ -1,0 +1,53 @@
+$NetBSD: patch-bn,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+Use pkgsrc fonts.
+
+--- jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties.orig	2015-02-02 15:37:12.000000000 +0000
++++ jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
+@@ -167,26 +167,26 @@ sequence.fallback=chinese-big5,chinese-g
+ # Font File Names
+ 
+ ## FIXME: Should not hardcode /usr/local
+-filename.DejaVu_Sans=/usr/local/lib/X11/fonts/dejavu/DejaVuSans.ttf
+-filename.DejaVu_Sans_Bold=/usr/local/lib/X11/fonts/dejavu/DejaVuSans-Bold.ttf
+-filename.DejaVu_Sans_Oblique=/usr/local/lib/X11/fonts/dejavu/DejaVuSans-Oblique.ttf
+-filename.DejaVu_Sans_Bold_Oblique=/usr/local/lib/X11/fonts/dejavu/DejaVuSans-BoldOblique.ttf
++filename.DejaVu_Sans=@PREFIX@/share/fonts/X11/TTF/DejaVuSans.ttf
++filename.DejaVu_Sans_Bold=@PREFIX@/share/fonts/X11/TTF/DejaVuSans-Bold.ttf
++filename.DejaVu_Sans_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSans-Oblique.ttf
++filename.DejaVu_Sans_Bold_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSans-BoldOblique.ttf
+ 
+-filename.DejaVu_Sans_Mono=/usr/local/lib/X11/fonts/dejavu/DejaVuSansMono.ttf
+-filename.DejaVu_Sans_Mono_Bold=/usr/local/lib/X11/fonts/dejavu/DejaVuSansMono-Bold.ttf
+-filename.DejaVu_Sans_Mono_Oblique=/usr/local/lib/X11/fonts/dejavu/DejaVuSansMono-Oblique.ttf
+-filename.DejaVu_Sans_Mono_Bold_Oblique=/usr/local/lib/X11/fonts/dejavu/DejaVuSansMono-BoldOblique.ttf
++filename.DejaVu_Sans_Mono=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono.ttf
++filename.DejaVu_Sans_Mono_Bold=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono-Bold.ttf
++filename.DejaVu_Sans_Mono_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono-Oblique.ttf
++filename.DejaVu_Sans_Mono_Bold_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono-BoldOblique.ttf
+ 
+-filename.DejaVu_Serif=/usr/local/lib/X11/fonts/dejavu/DejaVuSerif.ttf
+-filename.DejaVu_Serif_Bold=/usr/local/lib/X11/fonts/dejavu/DejaVuSerif-Bold.ttf
+-filename.DejaVu_Serif_Italic=/usr/local/lib/X11/fonts/dejavu/DejaVuSerif-Italic.ttf
+-filename.DejaVu_Serif_Bold_Italic=/usr/local/lib/X11/fonts/dejavu/DejaVuSerif-BoldItalic.ttf
++filename.DejaVu_Serif=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif.ttf
++filename.DejaVu_Serif_Bold=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif-Bold.ttf
++filename.DejaVu_Serif_Italic=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif-Italic.ttf
++filename.DejaVu_Serif_Bold_Italic=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif-BoldItalic.ttf
+ 
+-filename.Sazanami_Gothic=/usr/local/share/font-sazanami/sazanami-gothic.ttf
+-filename.Sazanami_Mincho=/usr/local/share/font-sazanami/sazanami-mincho.ttf
+-filename.AR_PL_ShanHeiSun_Uni=/usr/local/share/fonts/TrueType/uming.ttc
+-filename.AR_PL_ZenKai_Uni=/usr/local/share/fonts/TrueType/ukai.ttc
+-filename.NanumGothic=/usr/local/lib/X11/fonts/nanum-ttf/NanumGothic.ttf
+-filename.NanumGothic_Bold=/usr/local/lib/X11/fonts/nanum-ttf/NanumGothicBold.ttf
+-filename.NanumMyeongjo=/usr/local/lib/X11/fonts/nanum-ttf/NanumMyeongjo.ttf
+-filename.NanumMyeongjo_Bold=/usr/local/lib/X11/fonts/nanum-ttf/NanumMyeongjoBold.ttf
++filename.Sazanami_Gothic=@PREFIX@/share/fonts/X11/TTF/sazanami-gothic.ttf
++filename.Sazanami_Mincho=@PREFIX@/share/fonts/X11/TTF/sazanami-mincho.ttf
++filename.AR_PL_ShanHeiSun_Uni=@PREFIX@/share/fonts/X11/TTF/uming.ttc
++filename.AR_PL_ZenKai_Uni=@PREFIX@/share/fonts/X11/TTF/ukai.ttc
++filename.NanumGothic=@PREFIX@/share/fonts/X11/TTF/NanumGothic.ttf
++filename.NanumGothic_Bold=@PREFIX@/share/fonts/X11/TTF/NanumGothicBold.ttf
++filename.NanumMyeongjo=@PREFIX@/share/fonts/X11/TTF/NanumMyeongjo.ttf
++filename.NanumMyeongjo_Bold=@PREFIX@/share/fonts/X11/TTF/NanumMyeongjoBold.ttf

@@ -1,0 +1,13 @@
+$NetBSD: patch-langtools_make_BuildLangtools.gmk,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+--- langtools/make/BuildLangtools.gmk.orig	2015-02-02 15:31:46.000000000 +0000
++++ langtools/make/BuildLangtools.gmk
+@@ -36,7 +36,7 @@ $(eval $(call SetupJavaCompiler,BOOT_JAV
+     JAVAC := $(JAVAC), \
+     SERVER_DIR := $(SJAVAC_SERVER_DIR), \
+     SERVER_JVM := $(SJAVAC_SERVER_JAVA), \
+-    FLAGS := -XDignore.symbol.file=true -g -Xlint:all$(COMMA)-deprecation -Werror))
++    FLAGS := $(PKGSRC_BOOT_JDK_TOOLARGS) -XDignore.symbol.file=true -g -Xlint:all$(COMMA)-deprecation -Werror))
+ 
+ # javax.tools.JavaCompilerTool isn't really a suffix but this gets the file copied.
+ RESOURCE_SUFFIXES := .gif .xml .css .js javax.tools.JavaCompilerTool

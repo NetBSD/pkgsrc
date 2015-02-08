@@ -1,0 +1,24 @@
+$NetBSD: patch-langtools_make_build.xml,v 1.1 2015/02/08 08:41:25 tnn Exp $
+
+* Avoid *.orig files.
+
+--- langtools/make/build.xml.orig	2015-02-02 15:31:46.000000000 +0000
++++ langtools/make/build.xml
+@@ -237,7 +237,8 @@
+         </chmod>
+         <mkdir dir="${dist.lib.dir}"/>
+         <jar file="${dist.lib.dir}/classes.jar" basedir="${build.classes.dir}"/>
+-        <zip file="${dist.lib.dir}/src.zip" basedir="${src.classes.dir}"/>
++        <zip file="${dist.lib.dir}/src.zip" basedir="${src.classes.dir}"
++             excludes="**/*.orig"/>
+     </target>
+ 
+     <target name="build-bootstrap-tools"
+@@ -922,6 +923,7 @@
+                 <copy todir="@{classes.dir}" includeemptydirs="false">
+                     <fileset dir="${src.classes.dir}" includes="@{includes}" excludes="@{excludes}">
+                         <exclude name="**/*.java"/>
++                        <exclude name="**/*.orig"/>
+                         <exclude name="**/*.properties"/>
+                         <exclude name="**/*-template"/>
+                         <exclude name="**/*.rej"/>
