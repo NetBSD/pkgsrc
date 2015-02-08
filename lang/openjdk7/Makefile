@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2015/02/08 07:57:55 tnn Exp $
+# $NetBSD: Makefile,v 1.89 2015/02/08 23:40:09 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -15,12 +15,6 @@ LICENSE=	gnu-gpl-v2
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-# diff between distfile and bsd-port branch. To check out, use:
-# "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
-#PATCH_DIST_STRIP=	-p1
-#PATCHFILES+=	jdk-7u21-20130526.diff
-#PATCH_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}
-
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
@@ -30,9 +24,6 @@ MAKE_ENV+=		PKGSRC_ZIPEXE=${TOOLS_PATH.zip}
 MAKE_ENV+=		PKGSRC_UNZIP=${TOOLS_PATH.unzip}
 MAKE_ENV+=		PKGSRC_UNZIPSFX=${TOOLS_PATH.unzip}sfx
 
-DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
-#DEPENDS+=		ja-sazanami-ttf-[0-9]*:../../fonts/ja-sazanami-ttf
-#DEPENDS+=		baekmuk-ttf-[0-9]*:../../fonts/baekmuk-ttf
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 NO_CONFIGURE=		yes
@@ -40,6 +31,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pax unzip:run zip:run # patch
 UNLIMIT_RESOURCES=	datasize stacksize
 WRKSRC=			${WRKDIR}/openjdk
+PLIST_SRC+=		${PLIST_SRC_DFLT}
 
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 PREPEND_PATH+=			${ALT_BOOTDIR}/bin
@@ -51,7 +43,6 @@ MAKE_ENV+=	ALT_FREETYPE_HEADERS_PATH=${BUILDLINK_PREFIX.freetype2}/include
 MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${BUILDLINK_PREFIX.cups}/include
 MAKE_ENV+=	ALT_COMPILER_PATH=${WRAPPER_DIR}/bin
 MAKE_ENV+=	ALT_PACKAGE_PATH=${PREFIX}
-MAKE_ENV+=	ALT_X11_PATH=${X11BASE}
 MAKE_ENV+=	RHINO_JAR=${WRKDIR}/${RHINO}/js.jar
 
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS:U1}
@@ -60,8 +51,6 @@ MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
 MAKE_ENV+=	HOTSPOT_BUILD_USER=pkgsrc
 MAKE_ENV+=	NO_DOCS=true
 MAKE_ENV+=	SKIP_COMPARE_IMAGES=true
-MAKE_ENV+=	SKIP_FASTDEBUG_BUILD=yes
-MAKE_ENV+=	SKIP_DEBUG_BUILD=yes
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
@@ -163,12 +152,9 @@ SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
 SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
 
-PLIST_VARS+=	i386 jce manja
+PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"
 PLIST.i386=	yes
-.endif
-.if ${OPSYS} != "SunOS"
-PLIST.manja=	yes
 .endif
 
 PLIST_VARS+=	sctp alsa
@@ -209,7 +195,7 @@ do-build: ${WRKDIR}/stage3-done
 
 # stage 1 builds a native JDK using the bootstrap binaries
 ${WRKDIR}/stage1-done:
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${JDK_MAKE_TARGET}
 	rm -rf ${ALT_BOOTDIR}
 	cd ${BUILDDIR} && mv j2sdk-image ${ALT_BOOTDIR}
 	mv ${BUILDDIR} ${BUILDDIR}-stage1
@@ -217,7 +203,7 @@ ${WRKDIR}/stage1-done:
 
 # stage 2 rebuilds the JDK using native tools
 ${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${JDK_MAKE_TARGET}
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
 	touch ${WRKDIR}/stage2-done
 
