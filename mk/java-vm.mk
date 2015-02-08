@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.95 2014/09/03 12:47:37 tron Exp $
+# $NetBSD: java-vm.mk,v 1.96 2015/02/08 17:48:33 tnn Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -9,7 +9,7 @@
 # PKG_JVM_DEFAULT
 #	The JVM that should be used if nothing particular is specified.
 #
-#	Possible values: kaffe openjdk7 openjdk7-bin
+#	Possible values: kaffe openjdk7 openjdk7-bin openjdk8
 #		sun-jdk6 sun-jdk7 jdk15 jdk16
 #	Default value: (platform-dependent)
 #
@@ -29,7 +29,7 @@
 #	should be set to "yes". It can also be set to "1.4", "1.5", "6"
 #	or "7" require an even more recent implementation.
 #
-#	Possible values: yes no 1.4 1.5 6 7
+#	Possible values: yes no 1.4 1.5 6 7 8
 #	Default value: no
 #
 # PKG_JVMS_ACCEPTED
@@ -70,7 +70,8 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
-_PKG_JVMS.7=		openjdk7 openjdk7-bin sun-jdk7
+_PKG_JVMS.8=		openjdk8
+_PKG_JVMS.7=		${_PKG_JVMS.8} openjdk7 openjdk7-bin sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6 jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5}
@@ -122,7 +123,7 @@ _ONLY_FOR_PLATFORMS.jdk16= \
 	NetBSD-[2-9].*-i386 NetBSD-[4-9].*-x86_64
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k \
-	*-*-mipsel* *-*-sparc *-*-powerpc 
+	*-*-mipsel* *-*-sparc *-*-powerpc
 # exclude *-*-x86_64 from kaffe list as it apparently doesn't work
 _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
@@ -140,13 +141,19 @@ _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	SunOS-5.11-x86_64
 _ONLY_FOR_PLATFORMS.openjdk7= \
 	DragonFly-*-* \
-	NetBSD-[4-9]*-i386 \
+	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
-	SunOS-5.11-i386 \
-	SunOS-5.11-x86_64
+	SunOS-*-i386 \
+	SunOS-*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk7-bin= \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64
+_ONLY_FOR_PLATFORMS.openjdk8= \
+	DragonFly-*-* \
+	NetBSD-[5-9]*-i386 \
+	NetBSD-[5-9]*-x86_64 \
+	SunOS-*-i386 \
+	SunOS-*-x86_64
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
 	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
@@ -179,6 +186,7 @@ _JAVA_PKGBASE.jdk16=		jdk16
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk7-bin=	openjdk7-bin
+_JAVA_PKGBASE.openjdk8=		openjdk8
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
 _JAVA_PKGBASE.sun-jdk7=		sun-jre7
 
@@ -188,6 +196,7 @@ _JAVA_NAME.jdk14=		jdk14
 _JAVA_NAME.kaffe=		kaffe
 _JAVA_NAME.openjdk7=		openjdk7
 _JAVA_NAME.openjdk7-bin=	openjdk7-bin
+_JAVA_NAME.openjdk8=		openjdk8
 _JAVA_NAME.sun-jdk6=		sun6
 _JAVA_NAME.sun-jdk7=		sun7
 
@@ -242,6 +251,7 @@ BUILDLINK_API_DEPENDS.jdk16?=		jdk16-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk7-bin?=	openjdk7-bin-[0-9]*
+BUILDLINK_API_DEPENDS.openjdk8?=	openjdk8-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
@@ -252,6 +262,7 @@ _JRE.jdk16=		jdk16
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk7-bin=	openjdk7-bin
+_JRE.openjdk8=		openjdk8
 _JRE.sun-jdk6=		sun-jre6
 _JRE.sun-jdk7=		sun-jre7
 
@@ -277,6 +288,10 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7
 _JDK_PKGSRCDIR=		../../lang/openjdk7-bin
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7-bin
+.elif ${_PKG_JVM} == "openjdk8"
+_JDK_PKGSRCDIR=		../../lang/openjdk8
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk8
 .elif ${_PKG_JVM} == "sun-jdk6"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk6
 _JRE_PKGSRCDIR=		../../lang/sun-jre6
