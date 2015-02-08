@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/07/16 08:56:34 imil Exp $
+$NetBSD: distinfo,v 1.2 2015/02/08 21:08:21 imil Exp $
 
-SHA1 (httpie-0.8.0.tar.gz) = 46e2cb5c7f8ec6a92c62fd3851789ed8f3726da1
-RMD160 (httpie-0.8.0.tar.gz) = c598d0666dd604725abaf03d5402936a98eea572
-Size (httpie-0.8.0.tar.gz) = 68946 bytes
+SHA1 (753a8d04e4499505140a67442ae3e21f608b377f.tar.gz) = c8b5d9db503eca2eb4e08707f00732a453652ef3
+RMD160 (753a8d04e4499505140a67442ae3e21f608b377f.tar.gz) = 47e827383f5058210cc78f1efdd66be392922532
+Size (753a8d04e4499505140a67442ae3e21f608b377f.tar.gz) = 528755 bytes
