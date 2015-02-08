@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/07/22 12:41:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/08 16:31:48 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,6 +117,9 @@ ${PYSITELIB}/tornado/test/__init__.pyo
 ${PYSITELIB}/tornado/test/__main__.py
 ${PYSITELIB}/tornado/test/__main__.pyc
 ${PYSITELIB}/tornado/test/__main__.pyo
+${PYSITELIB}/tornado/test/asyncio_test.py
+${PYSITELIB}/tornado/test/asyncio_test.pyc
+${PYSITELIB}/tornado/test/asyncio_test.pyo
 ${PYSITELIB}/tornado/test/auth_test.py
 ${PYSITELIB}/tornado/test/auth_test.pyc
 ${PYSITELIB}/tornado/test/auth_test.pyo

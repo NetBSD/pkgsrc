@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/09/14 17:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/08 16:31:48 wiz Exp $
 
-DISTNAME=	tornado-4.0.2
+DISTNAME=	tornado-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/t/tornado/
