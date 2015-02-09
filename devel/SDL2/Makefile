@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/02/03 08:50:44 snj Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/09 08:27:07 snj Exp $
 
 DISTNAME=	SDL2-2.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -11,8 +11,9 @@ COMMENT=	Simple DirectMedia Layer is a cross-platform multimedia library
 LICENSE=	zlib
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
+USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 
@@ -21,12 +22,6 @@ PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 .if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
-
-SUBST_CLASSES+=		prefix
-SUBST_FILES.prefix=	build/cmake_install.cmake
-SUBST_MESSAGE.prefix=	Fixing PREFIX path.
-SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
-SUBST_STAGE.prefix=	pre-install
 
 .include "options.mk"
 
