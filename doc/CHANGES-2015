@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.832 2015/02/09 15:44:12 mef Exp $
+$NetBSD: CHANGES-2015,v 1.833 2015/02/09 18:53:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1074,3 +1074,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MetaCPAN-API to 0.50 [mef 2015-02-09]
 	Updated devel/p5-Mixin-ExtraFields to 0.140.002 [mef 2015-02-09]
 	Updated devel/p5-Mixin-ExtraFields-Param to 0.021 [mef 2015-02-09]
+	Updated devel/py-hgtools to 6.3 [wiz 2015-02-09]
