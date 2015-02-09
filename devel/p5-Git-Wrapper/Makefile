@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/02/05 14:09:02 mef Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/09 21:46:01 wiz Exp $
 
 DISTNAME=		Git-Wrapper-0.038
 PKGNAME=		p5-${DISTNAME}
@@ -17,6 +17,7 @@ BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 DEPENDS+=		{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+DEPENDS+=		p5-Devel-CheckBin-[0-9]*:../../devel/p5-Devel-CheckBin
 DEPENDS+=		p5-File-pushd>=1.05:../../devel/p5-File-pushd
 DEPENDS+=		{perl>=5.9.5,p5-IPC-Cmd-[0-9]*}:../../devel/p5-IPC-Cmd
 DEPENDS+=		p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions
