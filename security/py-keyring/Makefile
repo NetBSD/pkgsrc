@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/08 16:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/02/09 18:55:45 wiz Exp $
 
 DISTNAME=	keyring-5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/keyring
 COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5.0:../../devel/py-hgtools
 
 REPLACE_PYTHON+=	keyring/cli.py
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
