@@ -1,0 +1,13 @@
+$NetBSD: patch-jaxws_build.xml,v 1.1 2015/02/09 00:42:17 tnn Exp $
+
+--- jaxws/build.xml.orig	2015-01-26 15:22:17.000000000 +0000
++++ jaxws/build.xml
+@@ -145,6 +145,8 @@
+              source="${javac.source}"
+ 	     debug="${javac.debug}"
+              target="${javac.target}">
++            <compilerarg value="-J-XX:+UseSerialGC"/>
++            <compilerarg value="-J-Xmx768M"/>
+             <compilerarg value="-J-Xbootclasspath/p:${javac.jar}"/>
+             <compilerarg line="${javac.version.opt} ${javac.lint.opts} ${javac.no.jdk.warnings}"/>
+             <src refid="src.dir.id"/>
