@@ -14,7 +14,7 @@ use Getopt::Std;
 use File::Find;
 
 my(%HASH);	  		# referenced -> referer relation hash, referer is delimitted by ;
-my($PKGSRCDIR) = '/usr/pkgsrc';	# /usr/pkgsrc path, usually /usr/pkgsrc
+my($PKGSRCDIR);			# /usr/pkgsrc path, usually /usr/pkgsrc
 
 my($TABLE) = 'commonbump';	# name of file, list-of-files to process
 my(@TABLE);			# contents of file above
@@ -211,6 +211,12 @@ sub CheckAll() {
 sub main() {
     my($check_all) = 0;
     my($prefix);
+
+    $PKGSRCDIR = $ENV{PKGSRCDIR};
+    if (! $PKGSRCDIR) {
+        $PKGSRCDIR = "/usr/pkgsrc";
+    }
+
     getopts('ahp:T:', \%opts);
 
     if ($opts{'a'}) { $check_all = 1;  }
