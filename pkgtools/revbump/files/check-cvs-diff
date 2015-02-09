@@ -34,11 +34,16 @@ HELP
 }    
 
 sub main() {
-    my ($PKGSRCDIR) =  '/usr/pkgsrc';
+    my ($PKGSRCDIR);
     my ($CVS_DIFF)  = 'cvs-diff';
     my ($file_to_edit);
     my ($stay, $mod) = (0,0);
     my ($Makefile, $buildlink3, $other) = (0, 0, 0);
+
+    $PKGSRCDIR = $ENV{PKGSRCDIR};
+    if (! $PKGSRCDIR) {
+        $PKGSRCDIR = "/usr/pkgsrc";
+    }
 
     getopts('hvp:',\%opts);
     if ($ARGV[0])   { $CVS_DIFF = $ARGV[0]}
