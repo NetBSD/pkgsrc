@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/19 22:27:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/09 07:20:10 fhajny Exp $
 
 DISTNAME=	luaposix-release-v31
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/:S/release-v//}
@@ -12,6 +12,7 @@ COMMENT=	POSIX library (including curses) for lua
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c99
 USE_TOOLS+=	perl:build
 USE_LIBTOOL=	yes
 
