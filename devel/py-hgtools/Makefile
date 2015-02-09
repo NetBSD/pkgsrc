@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/11/18 02:25:37 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/02/09 18:53:03 wiz Exp $
 
-HGTVERS=	2.0.2
+HGTVERS=	6.3
 DISTNAME=	hgtools-${HGTVERS}
 PKGNAME=	${PYPKGPREFIX}-hgtools-${HGTVERS}
 CATEGORIES=	devel python
@@ -10,8 +9,8 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/packages/source/h/hgtools/
-COMMENT=	Classes and setuptools plugin for Mercurial repositories
-LICENSE=	gnu-gpl-v1
+COMMENT=	Classes and setuptools plugin for Mercurial and Git repositories
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
