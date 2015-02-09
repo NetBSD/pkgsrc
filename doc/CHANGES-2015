@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.829 2015/02/09 13:31:46 adam Exp $
+$NetBSD: CHANGES-2015,v 1.830 2015/02/09 13:40:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -585,7 +585,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-File-ShareDir to 1.000005 [mef 2015-01-28]
 	Updated devel/p5-Test-Harness to 3.35 [mef 2015-01-28]
 	Updated devel/p5-ExtUtils-Manifest to 1.70 [mef 2015-01-28]
-	Updated devel/p5-ExtUtils-MakeMaker to 7.05.10 [mef 2015-01-28]
 	Updated devel/p5-Module-ExtractUse to 0.33 [mef 2015-01-28]
 	Updated devel/p5-Config-Auto to 0.44 [mef 2015-01-28]
 	Updated devel/p5-Config-AutoConf to 0.309 [mef 2015-01-28]
