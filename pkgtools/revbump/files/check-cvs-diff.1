@@ -1,4 +1,4 @@
-.\"	$NetBSD: check-cvs-diff.1,v 1.2 2014/12/16 11:38:54 wiz Exp $
+.\"	$NetBSD: check-cvs-diff.1,v 1.3 2015/02/09 00:58:44 snj Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005 The NetBSD Foundation, Inc.
 .\"
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd December 14, 2014
+.Dd February 9, 2015
 .Dt CHECK-CVS-DIFF 1
 .Os
 .Sh NAME
@@ -73,6 +73,11 @@ prints the package name
 (in
 .Ar category/package
 form) on stdout for each package where it failed, but usually none.
+.Sh ENVIRONMENT
+.Ev PKGSRCDIR
+pkgsrc root directory.
+Defaults to
+.Pa /usr/pkgsrc .
 .Sh SEE ALSO
 .Xr finddepends 1 ,
 .Xr replace-commonbump 1 ,
