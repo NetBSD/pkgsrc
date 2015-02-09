@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/02 02:45:09 mef Exp $
-share/doc/${SUBDIR}/Theora.pdf
+@comment $NetBSD: PLIST,v 1.8 2015/02/09 21:56:49 wiz Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
