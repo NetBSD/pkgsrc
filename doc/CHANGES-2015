@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.826 2015/02/09 09:51:43 snj Exp $
+$NetBSD: CHANGES-2015,v 1.827 2015/02/09 10:08:40 nils Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1067,3 +1067,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/neverball to 1.6.0 [snj 2015-02-09]
 	Updated www/py-httpie to 0.9.1 [imil 2015-02-09]
 	Updated games/defendguin to 0.0.12 [snj 2015-02-09]
+	Added security/fail2ban version 0.9.1 [nils 2015-02-09]
