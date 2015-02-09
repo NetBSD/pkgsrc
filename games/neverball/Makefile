@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2014/08/21 14:08:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2015/02/09 09:02:12 snj Exp $
 
-DISTNAME=	neverball-1.5.4
-PKGREVISION=	7
+DISTNAME=	neverball-1.6.0
 CATEGORIES=	games
 MASTER_SITES=	http://neverball.org/
 
@@ -25,7 +24,7 @@ LDFLAGS.DragonFly=	-lX11 -lm
 LDFLAGS.SunOS+=		-lX11 -lm
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/MANUAL ${WRKSRC}/README \
+	${INSTALL_DATA} ${WRKSRC}/doc/manual.txt \
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_PROGRAM} ${WRKSRC}/neverball ${WRKSRC}/neverputt \
 	    ${DESTDIR}${PREFIX}/bin
@@ -38,8 +37,7 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rwppm data ${DESTDIR}${SHAREDIR}
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
