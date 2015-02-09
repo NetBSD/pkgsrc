@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
+$NetBSD: patch-af,v 1.2 2015/02/09 21:53:10 snj Exp $
 
---- maclib/Makefile.am.orig	Fri Dec  3 04:30:11 1999
-+++ maclib/Makefile.am
-@@ -14,7 +14,7 @@
- 	applefile.h		\
+--- maclib/Makefile.am.orig	2002-10-19 21:16:13.000000000 -0700
++++ maclib/Makefile.am	2015-02-09 13:27:16.000000000 -0800
+@@ -15,7 +15,7 @@ libSDLmac_a_SOURCES =		\
+ 	macbinary.h		\
  	bitesex.h
  
--bin_PROGRAMS = macres playwave snd2wav
-+bin_PROGRAMS = macres snd2wav
+-noinst_PROGRAMS = macres playwave snd2wav
++noinst_PROGRAMS = macres snd2wav
  
  macres_SOURCES = macres.cpp
  macres_LDADD = libSDLmac.a
