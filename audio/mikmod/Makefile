@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2014/11/21 15:45:23 adam Exp $
+# $NetBSD: Makefile,v 1.50 2015/02/09 22:25:15 snj Exp $
 
 DISTNAME=	mikmod-3.2.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mikmod/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mikmod.shlomifish.org/
+HOMEPAGE=	http://mikmod.sourceforge.net/
 COMMENT=	MOD player for UNI IT XM S3M MOD MTM STM DSM MED FAR ULT 669 files
 LICENSE=	gnu-gpl-v2
 
