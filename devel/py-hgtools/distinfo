@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/11/03 13:55:16 imil Exp $
+$NetBSD: distinfo,v 1.2 2015/02/09 18:53:03 wiz Exp $
 
-SHA1 (hgtools-2.0.2.zip) = b4db6f850e2172cff5f1740c6591cd97cadec285
-RMD160 (hgtools-2.0.2.zip) = 22d7416d1b28c6b2dd8ed2652a4ef3229b9a81a8
-Size (hgtools-2.0.2.zip) = 30635 bytes
+SHA1 (hgtools-6.3.zip) = 899d33fb897e4dc6ea0f6e19f236ffa3acf8a95b
+RMD160 (hgtools-6.3.zip) = c227b01506004600cfeef7f59d023661c1db18a1
+Size (hgtools-6.3.zip) = 39805 bytes
