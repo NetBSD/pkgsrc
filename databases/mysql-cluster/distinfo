@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/01/20 11:03:51 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2015/02/09 06:46:55 jnemeth Exp $
 
-SHA1 (mysql-cluster-gpl-7.3.7.tar.gz) = c0574d48d5ee94dcc8dbcfdcc89ae581df1cbaea
-RMD160 (mysql-cluster-gpl-7.3.7.tar.gz) = 93b62e00ea24bef90644df1daddead9b339e7e99
-Size (mysql-cluster-gpl-7.3.7.tar.gz) = 42297785 bytes
+SHA1 (mysql-cluster-gpl-7.3.8.tar.gz) = f70ac7955343765146c556576c8b13dbedf9c593
+RMD160 (mysql-cluster-gpl-7.3.8.tar.gz) = fc00f5098d4808cfae2db019814a3e8893bd50ce
+Size (mysql-cluster-gpl-7.3.8.tar.gz) = 42400435 bytes
 SHA1 (patch-CMakeLists.txt) = fabc427d8e7974cb8af1ce057f994b1436628443
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
