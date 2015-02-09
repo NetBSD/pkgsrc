@@ -1,27 +1,46 @@
-$NetBSD: patch-dlls_ntdll_signal__x86__64.c,v 1.2 2014/06/29 18:11:32 dholland Exp $
+$NetBSD: patch-dlls_ntdll_signal__x86__64.c,v 1.3 2015/02/09 13:30:44 adam Exp $
 
-Teach this how to set %gs on NetBSD. Not actually tested as so far
-Wine doesn't actually run, but fixes a build failure.
-
---- dlls/ntdll/signal_x86_64.c~	2014-01-17 19:48:48.000000000 +0000
+--- dlls/ntdll/signal_x86_64.c.orig	2015-01-20 11:56:36.000000000 +0000
 +++ dlls/ntdll/signal_x86_64.c
-@@ -199,8 +199,9 @@ extern int arch_prctl(int func, void *pt
- #define FPU_sig(context)   ((XMM_SAVE_AREA32 *)((context)->uc_mcontext.mc_fpstate))
+@@ -694,7 +694,9 @@ struct dwarf_fde
+     unsigned int cie_offset;
+ };
  
- #elif defined(__NetBSD__)
--#include <sys/ucontext.h>
- #include <sys/types.h>
-+#include <x86/sysarch.h>
-+#include <sys/ucontext.h>
- #include <signal.h>
++#ifdef __linux__
+ extern const struct dwarf_fde *_Unwind_Find_FDE (void *, struct dwarf_eh_bases *);
++#endif
  
- #define RAX_sig(context)    ((context)->uc_mcontext.__gregs[_REG_RAX])
-@@ -2457,6 +2458,8 @@ void signal_init_thread( TEB *teb )
-     arch_prctl( ARCH_SET_GS, teb );
- #elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
-     amd64_set_gsbase( teb );
-+#elif defined (__NetBSD__)
-+    sysarch(X86_SET_GSBASE, &teb);
- #else
- # error Please define setting %gs for your architecture
- #endif
+ static unsigned char dwarf_get_u1( const unsigned char **p )
+ {
+@@ -2108,6 +2110,7 @@ static NTSTATUS call_stack_handlers( EXC
+ 
+         if (!module || (module->Flags & LDR_WINE_INTERNAL))
+         {
++#ifdef __linux__
+             struct dwarf_eh_bases bases;
+             const struct dwarf_fde *fde = _Unwind_Find_FDE( (void *)(context.Rip - 1), &bases );
+ 
+@@ -2124,6 +2127,7 @@ static NTSTATUS call_stack_handlers( EXC
+                 }
+                 goto unwind_done;
+             }
++#endif
+         }
+         else WARN( "exception data not found in %s\n", debugstr_w(module->BaseDllName.Buffer) );
+ 
+@@ -3108,6 +3112,7 @@ void WINAPI RtlUnwindEx( PVOID end_frame
+ 
+         if (!module || (module->Flags & LDR_WINE_INTERNAL))
+         {
++#ifdef __linux__
+             struct dwarf_eh_bases bases;
+             const struct dwarf_fde *fde = _Unwind_Find_FDE( (void *)(context->Rip - 1), &bases );
+ 
+@@ -3124,6 +3129,7 @@ void WINAPI RtlUnwindEx( PVOID end_frame
+                 }
+                 goto unwind_done;
+             }
++#endif
+         }
+         else WARN( "exception data not found in %s\n", debugstr_w(module->BaseDllName.Buffer) );
+ 

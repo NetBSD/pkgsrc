@@ -1,10 +1,42 @@
-$NetBSD: patch-configure,v 1.1 2014/01/19 10:58:23 adam Exp $
+$NetBSD: patch-configure,v 1.2 2015/02/09 13:30:44 adam Exp $
 
+Clang does not support __builtin_ms_va_list; make a work-around.
+Do not install 64-bit libraries into ${PREFIX}/lib64.
+Use correct -install_name on Darwin.
 Configure for OSS v3 support for NetBSD.
 
---- configure.orig	2014-01-03 19:00:47.000000000 +0000
+--- configure.orig	2015-02-07 08:14:10.000000000 +0000
 +++ configure
-@@ -12325,14 +12325,25 @@ then
+@@ -4895,6 +4894,9 @@ $as_echo_n "checking whether $CC support
+         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdarg.h>
++#ifdef __clang__
++#define __builtin_ms_va_list va_list
++#endif
+ int
+ main ()
+ {
+@@ -4968,9 +4970,6 @@ then
+     fi
+     enable_fonts=${enable_fonts:-no}
+     enable_server=${enable_server:-no}
+-elif test "x$enable_win64" = "xyes"
+-then
+-    test "x$libdir" != "x\${exec_prefix}/lib" || libdir="\${exec_prefix}/lib64"
+ fi
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the directory containing the Wine tools" >&5
+@@ -8048,7 +8047,7 @@ OBJS = \$(C_SRCS:.c=.o) \$(EXTRA_OBJS)
+ all: libwine.dylib
+ 
+ libwine.$libwine_version.dylib: \$(OBJS)
+-	\$(CC) -dynamiclib -install_name @rpath/libwine.$libwine_soversion.dylib -Wl,-rpath,@loader_path/ -compatibility_version $libwine_soversion -current_version $libwine_version \$(OBJS) \$(EXTRALIBS) \$(LDFLAGS) \$(LIBS) -o \$@
++	\$(CC) -dynamiclib -install_name \$(PREFIX)/lib/libwine.$libwine_soversion.dylib -compatibility_version $libwine_soversion -current_version $libwine_version \$(OBJS) \$(EXTRALIBS) \$(LDFLAGS) \$(LIBS) -o \$@
+ 
+ libwine.$libwine_soversion.dylib: libwine.$libwine_version.dylib
+ 	\$(RM) \$@ && \$(LN_S) libwine.$libwine_version.dylib \$@
+@@ -12593,14 +12592,25 @@ then
  if test "x$ac_cv_header_sys_soundcard_h" = xyes; then :
    ac_fn_c_check_member "$LINENO" "oss_sysinfo" "numaudioengines" "ac_cv_member_oss_sysinfo_numaudioengines" "#include <sys/soundcard.h>
  "
@@ -16,7 +48,7 @@ Configure for OSS v3 support for NetBSD.
 +#define HAVE_OSSv4 1
  _ACEOF
  
- OSS4INCL="$ac_oss_incl"
+ OSS4_CFLAGS="$ac_oss_incl"
  
 +else
 +ac_cv_member_oss_sysinfo_numaudioengines=yes
