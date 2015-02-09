@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.830 2015/02/09 13:40:32 mef Exp $
+$NetBSD: CHANGES-2015,v 1.831 2015/02/09 15:22:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1069,3 +1069,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/fail2ban version 0.9.1 [nils 2015-02-09]
 	Updated editors/Sigil to 0.8.4 [wiz 2015-02-09]
 	Updated emulators/wine-devel to 1.7.36 [adam 2015-02-09]
+	Updated devel/p5-List-UtilsBy to 0.09 [mef 2015-02-09]
+	Updated devel/p5-Locale-PO to 0.27 [mef 2015-02-09]
+	Updated devel/p5-MetaCPAN-API to 0.50 [mef 2015-02-09]
