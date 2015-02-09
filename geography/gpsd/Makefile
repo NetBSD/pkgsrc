@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2014/05/09 07:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/02/09 12:56:49 gdt Exp $
 
+# gpsd 3.11 has been released.  It has only not been updated because
+# newer versions use scons.
 DISTNAME=	gpsd-2.96
 PKGREVISION=	1
 CATEGORIES=	geography
-MASTER_SITES=	http://download.berlios.de/gpsd/
+MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://gpsd.berlios.de/
+HOMEPAGE=	https://savannah.nongnu.org/projects/gpsd
 COMMENT=	GPS information daemon
 
 LICENSE=	modified-bsd
