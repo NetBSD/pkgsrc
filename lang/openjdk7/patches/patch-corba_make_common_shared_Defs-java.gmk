@@ -1,4 +1,4 @@
-$NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.3 2014/09/22 11:54:45 joerg Exp $
+$NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.4 2015/02/09 00:42:17 tnn Exp $
 
 --- corba/make/common/shared/Defs-java.gmk.orig	2014-01-05 23:11:01.000000000 +0000
 +++ corba/make/common/shared/Defs-java.gmk
@@ -7,7 +7,7 @@ $NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.3 2014/09/22 11:54:45 
  #   and creating the hotspot.log file.
  JAVA_HOTSPOT_DISABLE_PRINT_VMOPTIONS = \
 -   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput
-+   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput -Xms512m -XX:+UseSerialGC
++   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput $(PKGSRC_BOOT_JDK_JVMARGS)
  
  # JVM options
  JAVA_JVM_FLAGS = $(JAVA_HOTSPOT_DISABLE_PRINT_VMOPTIONS)
@@ -17,8 +17,8 @@ $NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.3 2014/09/22 11:54:45 
  BOOT_JAVAC_CMD     = $(BOOTDIR)/bin/javac $(JAVAC_JVM_FLAGS) $(BOOT_JAVACFLAGS)
 -BOOT_JAR_CMD       = $(BOOTDIR)/bin/jar
 -BOOT_JARSIGNER_CMD = $(BOOTDIR)/bin/jarsigner
-+BOOT_JAR_CMD       = $(BOOTDIR)/bin/jar -J-XX:+UseSerialGC -J-mx1024m
-+BOOT_JARSIGNER_CMD = $(BOOTDIR)/bin/jarsigner -J-XX:+UseSerialGC -J-mx1024m
++BOOT_JAR_CMD       = $(BOOTDIR)/bin/jar $(PKGSRC_BOOT_JDK_TOOLARGS)
++BOOT_JARSIGNER_CMD = $(BOOTDIR)/bin/jarsigner $(PKGSRC_BOOT_JDK_TOOLARGS)
  
  # Various tools we need to run (FIXUP: Are these the right ones?)
  NATIVE2ASCII    = $(BOOTDIR)/bin/native2ascii $(JAVA_TOOLS_FLAGS:%=-J%)

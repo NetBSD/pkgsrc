@@ -1,4 +1,4 @@
-$NetBSD: patch-langtools_make_build.xml,v 1.2 2014/09/13 14:35:25 joerg Exp $
+$NetBSD: patch-langtools_make_build.xml,v 1.3 2015/02/09 00:42:17 tnn Exp $
 
 * Avoid *.orig files.
 
@@ -21,7 +21,7 @@ $NetBSD: patch-langtools_make_build.xml,v 1.2 2014/09/13 14:35:25 joerg Exp $
 -            debuglevel="${javac.debuglevel}"/>
 +            debuglevel="${javac.debuglevel}">
 +           <compilerarg value="-J-XX:+UseSerialGC"/>
-+           <compilerarg value="-J-mx1024m"/>
++           <compilerarg value="-J-Xmx768M"/>
 +        </javac>
          <java fork="true"
              jvm="${target.java.home}/bin/java"
@@ -31,7 +31,7 @@ $NetBSD: patch-langtools_make_build.xml,v 1.2 2014/09/13 14:35:25 joerg Exp $
                      <compilerarg value="-implicit:none"/>
                      <compilerarg value="-Xprefer:source"/>
 +                    <compilerarg value="-J-XX:+UseSerialGC"/>
-+                    <compilerarg value="-J-mx1024m"/>
++                    <compilerarg value="-J-Xmx768M"/>
                      <compilerarg value="-J-Xbootclasspath/p:@{javac.bootclasspath}"/>
                      <compilerarg line="@{bootclasspath.opt}"/>
                      <compilerarg line="${javac.no.jdk.warnings}"/>
@@ -50,7 +50,7 @@ $NetBSD: patch-langtools_make_build.xml,v 1.2 2014/09/13 14:35:25 joerg Exp $
 -               includeantruntime="false"/>
 +               includeantruntime="false">
 +          <compilerarg value="-J-XX:+UseSerialGC"/>
-+          <compilerarg value="-J-mx1024m"/>
++          <compilerarg value="-J-Xmx768M"/>
 +        </javac>
          <taskdef name="pcompile"
                   classname="CompilePropertiesTask"
@@ -60,7 +60,7 @@ $NetBSD: patch-langtools_make_build.xml,v 1.2 2014/09/13 14:35:25 joerg Exp $
                 includeantruntime="false">
              <compilerarg value="-Xbootclasspath/p:${build.bootstrap.dir}/classes"/>
 +            <compilerarg value="-J-XX:+UseSerialGC"/>
-+            <compilerarg value="-J-mx1024m"/>
++            <compilerarg value="-J-Xmx768M"/>
          </javac>
          <taskdef name="genstubs"
                   classname="GenStubs$$Ant"

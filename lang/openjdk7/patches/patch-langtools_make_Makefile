@@ -1,4 +1,4 @@
-$NetBSD: patch-langtools_make_Makefile,v 1.1 2014/09/13 14:35:25 joerg Exp $
+$NetBSD: patch-langtools_make_Makefile,v 1.2 2015/02/09 00:42:17 tnn Exp $
 
 --- langtools/make/Makefile.orig	2014-09-12 13:06:23.000000000 +0000
 +++ langtools/make/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-langtools_make_Makefile,v 1.1 2014/09/13 14:35:25 joerg Exp $
  
  ANT_TMPDIR = $(ABS_OUTPUTDIR)/build/ant-tmp
 -ANT_OPTS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR)'
-+ANT_OPTS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR) -XX:+UseSerialGC -mx1024m'
++ANT_OPTS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR) $(PKGSRC_BOOT_JDK_JVMARGS)'
  
  ifdef FINDBUGS_HOME
    ANT_OPTIONS += -Dfindbugs.home=$(FINDBUGS_HOME)

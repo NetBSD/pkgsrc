@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2014/09/13 14:35:25 joerg Exp $
+$NetBSD: patch-am,v 1.6 2015/02/09 00:42:17 tnn Exp $
 
 Set username to pkgsrc.
 
@@ -18,7 +18,7 @@ Set username to pkgsrc.
  
  ANT_TMPDIR = $(ABS_OUTPUTDIR)/tmp
 -ANT_WORKAROUNDS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR)' JAVA_HOME='$(BOOTDIR)'
-+ANT_WORKAROUNDS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR)'\ -XX:+UseSerialGC\ -mx1024m JAVA_HOME='$(BOOTDIR)'
++ANT_WORKAROUNDS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR)'\ -XX:+UseSerialGC\ -Xmx768M JAVA_HOME='$(BOOTDIR)'
  
  ifeq ($(ANT_HOME),)
    ANT = $(ANT_WORKAROUNDS) ant
