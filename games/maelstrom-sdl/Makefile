@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.23 2013/04/14 02:01:30 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.24 2015/02/09 21:53:10 snj Exp $
 
-DISTNAME=	Maelstrom-3.0.5
-PKGNAME=	maelstrom-sdl-3.0.5
-PKGREVISION=	8
+DISTNAME=	Maelstrom-3.0.6
+PKGNAME=	maelstrom-sdl-3.0.6
 CATEGORIES=	games x11
-MASTER_SITES=	http://www.devolution.com/~slouken/Maelstrom/src/
+MASTER_SITES=	http://www.libsdl.org/projects/Maelstrom/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.devolution.com/~slouken/Maelstrom/
+HOMEPAGE=	http://www.libsdl.org/projects/Maelstrom/
 COMMENT=	High resolution version of Asteroids (SDL version)
+
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
 
