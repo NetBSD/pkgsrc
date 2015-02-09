@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/09 15:31:25 mef Exp $
 #
 
-DISTNAME=	Mixin-ExtraFields-0.100971
-PKGNAME=	p5-Mixin-ExtraFields-0.100.971
-PKGREVISION=	5
+DISTNAME=	Mixin-ExtraFields-0.140002
+#               0.100971 -> 0.100.971, 0.140002 -> 0.140.002
+PKGNAME=	p5-${DISTNAME:C/([0-9])\.([0-9][0-9][0-9])([0-9][0-9][0-9])/\1.\2.\3/}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mixin-ExtraFields/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Mixin-ExtraFields/
