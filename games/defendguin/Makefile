@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 11:54:35 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/02/09 09:51:26 snj Exp $
 
-DISTNAME=	defendguin-0.0.10
-PKGREVISION=	7
+DISTNAME=	defendguin-0.0.12
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/defendguin/src/
+MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/defendguin/src/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.newbreedsoftware.com/defendguin/
 COMMENT=	Clone of the arcade game Defender
+
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
