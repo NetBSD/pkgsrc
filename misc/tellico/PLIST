@@ -1,6 +1,25 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/20 11:53:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/02/09 21:55:36 wiz Exp $
 bin/tellico
+share/appdata/tellico.appdata.xml
 share/applications/kde4/tellico.desktop
+share/doc/kde/HTML/ca/tellico/advanced.docbook
+share/doc/kde/HTML/ca/tellico/common
+share/doc/kde/HTML/ca/tellico/configuration.docbook
+share/doc/kde/HTML/ca/tellico/details.docbook
+share/doc/kde/HTML/ca/tellico/entry-editor5.png
+share/doc/kde/HTML/ca/tellico/faqs.docbook
+share/doc/kde/HTML/ca/tellico/fields-dialog.png
+share/doc/kde/HTML/ca/tellico/filter-dialog.png
+share/doc/kde/HTML/ca/tellico/fundamentals.docbook
+share/doc/kde/HTML/ca/tellico/general-options.png
+share/doc/kde/HTML/ca/tellico/hacking.docbook
+share/doc/kde/HTML/ca/tellico/importing-exporting.docbook
+share/doc/kde/HTML/ca/tellico/index.cache.bz2
+share/doc/kde/HTML/ca/tellico/index.docbook
+share/doc/kde/HTML/ca/tellico/menus.docbook
+share/doc/kde/HTML/ca/tellico/print-options.png
+share/doc/kde/HTML/ca/tellico/source-options.png
+share/doc/kde/HTML/ca/tellico/template-options.png
 share/doc/kde/HTML/de/tellico/advanced.docbook
 share/doc/kde/HTML/de/tellico/common
 share/doc/kde/HTML/de/tellico/configuration.docbook
@@ -202,6 +221,7 @@ share/kde/apps/tellico/data-sources/fr.allocine.py
 share/kde/apps/tellico/data-sources/fr.allocine.py.spec
 share/kde/apps/tellico/data-sources/ministerio_de_cultura.py
 share/kde/apps/tellico/data-sources/ministerio_de_cultura.py.spec
+share/kde/apps/tellico/dblp2tellico.xsl
 share/kde/apps/tellico/delicious2tellico.xsl
 share/kde/apps/tellico/discogs2tellico.xsl
 share/kde/apps/tellico/douban2tellico.xsl
@@ -269,6 +289,7 @@ share/kde/apps/tellico/pics/tellico.png
 share/kde/apps/tellico/pics/tellico.svg
 share/kde/apps/tellico/pics/tellico_mime.svg
 share/kde/apps/tellico/pics/video.png
+share/kde/apps/tellico/pics/vinoxml.png
 share/kde/apps/tellico/pics/wine.png
 share/kde/apps/tellico/pubmed2tellico.xsl
 share/kde/apps/tellico/record-logo.png
@@ -282,6 +303,7 @@ share/kde/apps/tellico/report-templates/Title_Listing_(Horizontal).xsl
 share/kde/apps/tellico/report-templates/Title_Listing_(Vertical).xsl
 share/kde/apps/tellico/report-templates/Tri-Column.xsl
 share/kde/apps/tellico/shadowAlpha.png
+share/kde/apps/tellico/springer2tellico.xsl
 share/kde/apps/tellico/srw2tellico.xsl
 share/kde/apps/tellico/tellico-by-author.xsl
 share/kde/apps/tellico/tellico-by-title.xsl
@@ -294,8 +316,9 @@ share/kde/apps/tellico/tellico2html.js
 share/kde/apps/tellico/tellico2html.xsl
 share/kde/apps/tellico/tellico2onix.xsl
 share/kde/apps/tellico/tellicoui.rc
-share/kde/apps/tellico/tmdb2tellico.xsl
+share/kde/apps/tellico/thegamesdb2tellico.xsl
 share/kde/apps/tellico/vhs-logo.png
+share/kde/apps/tellico/vinoxml2tellico.xsl
 share/kde/apps/tellico/welcome.html
 share/kde/apps/tellico/winecom2tellico.xsl
 share/kde/apps/tellico/xmp2tellico.xsl
@@ -327,7 +350,9 @@ share/locale/hu/LC_MESSAGES/tellico.mo
 share/locale/ia/LC_MESSAGES/tellico.mo
 share/locale/it/LC_MESSAGES/tellico.mo
 share/locale/ja/LC_MESSAGES/tellico.mo
+share/locale/kk/LC_MESSAGES/tellico.mo
 share/locale/lt/LC_MESSAGES/tellico.mo
+share/locale/mr/LC_MESSAGES/tellico.mo
 share/locale/ms/LC_MESSAGES/tellico.mo
 share/locale/nb/LC_MESSAGES/tellico.mo
 share/locale/nds/LC_MESSAGES/tellico.mo
@@ -339,6 +364,7 @@ share/locale/pt_BR/LC_MESSAGES/tellico.mo
 share/locale/ro/LC_MESSAGES/tellico.mo
 share/locale/ru/LC_MESSAGES/tellico.mo
 share/locale/sk/LC_MESSAGES/tellico.mo
+share/locale/sl/LC_MESSAGES/tellico.mo
 share/locale/sv/LC_MESSAGES/tellico.mo
 share/locale/tr/LC_MESSAGES/tellico.mo
 share/locale/ug/LC_MESSAGES/tellico.mo
