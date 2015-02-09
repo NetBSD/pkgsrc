@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2015/01/28 03:07:24 mef Exp $
+# $NetBSD: Makefile,v 1.34 2015/02/09 13:38:32 mef Exp $
 
-DISTNAME=	ExtUtils-MakeMaker-7.05_10
-PKGNAME=	p5-${DISTNAME:S/_/./}
+DISTNAME=	ExtUtils-MakeMaker-7.04
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BI/BINGOS/}
 
@@ -11,6 +11,7 @@ COMMENT=	Create a module Makefile
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-ExtUtils-Manifest>=1.65:../../devel/p5-ExtUtils-Manifest
+DEPENDS+=	p5-CPAN-Meta-Requirements>=2.127:../../devel/p5-CPAN-Meta-Requirements
 
 PERL5_PACKLIST=	auto/ExtUtils/MakeMaker/.packlist
 
