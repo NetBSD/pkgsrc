@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.10 2013/12/13 12:42:12 jperkin Exp $
+# $NetBSD: options.mk,v 1.11 2015/02/09 18:35:12 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
 # Common options.
-PKG_SUPPORTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh kerberos
-PKG_SUGGESTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh kerberos
+PKG_SUPPORTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh kerberos ndmp
+PKG_SUGGESTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh
 # Client options.
 PKG_SUPPORTED_OPTIONS+=	amanda-smb amanda-dump-snap
 PKG_SUGGESTED_OPTIONS+=	amanda-dump-snap
@@ -42,4 +42,16 @@ USE_BUILTIN.mit-krb5=	no
 .  endif
 CONFIGURE_ARGS+=	--with-krb5-security=${KRB5BASE:Q}
 .  include "../../mk/krb5.buildlink3.mk"
+.endif
+
+# The ndmp code fails to build on OS X >= 10.9, and upstream questions why
+# it is enabled.  So it is a disabled-by-default option.
+# http://www.redhat.com/archives/libvir-list/2013-October/msg01153.html
+PLIST_VARS+=		ndmp
+CONFIGURE_ARGS+=	--without-ndmp
+.if !empty(PKG_OPTIONS:Mndmp)
+CONFIGURE_ARGS+=	--with-ndmp
+PLIST.ndmp=		yes
+.else
+CONFIGURE_ARGS+=	--without-ndmp
 .endif
