@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.89 2014/05/17 16:10:49 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2015/02/09 03:50:20 snj Exp $
 
 DISTNAME=	openbox-3.5.2
 PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://openbox.org/dist/openbox/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://openbox.org/
 COMMENT=	Standards compliant, light-weight, and extensible window manager
 LICENSE=	gnu-gpl-v2
