@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/07 16:47:11 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/09 11:11:25 fhajny Exp $
 
 DISTNAME=	leptonica-1.71
 PKGREVISION=	1
@@ -21,6 +21,9 @@ GNU_CONFIGURE=		yes
 .if ${OPSYS} != "Linux"
 CONFIGURE_ENV+=		ac_cv_func_fmemopen=no
 .endif
+
+# Pass a SunOS that the build relies on
+CPPFLAGS.SunOS+=	-D__SOLARIS__=1
 
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
