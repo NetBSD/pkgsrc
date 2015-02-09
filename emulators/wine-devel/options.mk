@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/06/18 09:26:09 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2015/02/09 13:30:44 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups dbus esound hal ldap opengl sane ssl x11
@@ -38,15 +38,13 @@ CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-openssl
+CONFIGURE_ARGS+=	--without-gnutls
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=		yes
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
@@ -59,7 +57,6 @@ PLIST.x11=		yes
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-freetype
 CONFIGURE_ARGS+=	--without-x
 .endif
 
