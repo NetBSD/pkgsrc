@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/02/26 11:16:19 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/02/09 09:02:12 snj Exp $
 
-SHA1 (neverball-1.5.4.tar.gz) = 619c227e1958bd60738f12dbbde9b30c91dd79a7
-RMD160 (neverball-1.5.4.tar.gz) = f546b5e6c12df1a125976a7e23fa55146480241d
-Size (neverball-1.5.4.tar.gz) = 26767623 bytes
-SHA1 (patch-ab) = 15b6864e06d363698c0855af42d0d4f7b010886f
-SHA1 (patch-share_base__image.c) = c7dd953bec0a8b44e18153c17d66b2cc7169b6d0
+SHA1 (neverball-1.6.0.tar.gz) = 3faebf15fea9361358a416176b9689f966c456ea
+RMD160 (neverball-1.6.0.tar.gz) = 3489fcec1efe38c0faac62fe08573117a0f63c9f
+Size (neverball-1.6.0.tar.gz) = 37772911 bytes
+SHA1 (patch-ab) = 3cca20f42390d22c73c03171f725fe562f73cb0d
+SHA1 (patch-share_solid__draw.h) = 85b3271eb10056f19d79688fca305464063752ba
