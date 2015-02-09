@@ -1,0 +1,22 @@
+$NetBSD: patch-doc_Makefile,v 1.1 2015/02/09 10:05:25 nils Exp $
+
+removed non-working check for sphinx and corrected sphinx-build name
+
+--- doc/Makefile.orig	2014-10-28 01:49:40.000000000 +0000
++++ doc/Makefile
+@@ -3,14 +3,10 @@
+ 
+ # You can set these variables from the command line.
+ SPHINXOPTS    =
+-SPHINXBUILD   = sphinx-build2
++SPHINXBUILD   = sphinx-build
+ PAPER         =
+ BUILDDIR      = ""build
+ 
+-# User-friendly check for sphinx-build2
+-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
+-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
+-endif
+ 
+ # Internal variables.
+ PAPEROPT_a4     = -D latex_paper_size=a4
