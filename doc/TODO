@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14116 2015/02/09 21:53:28 snj Exp $
+$NetBSD: TODO,v 1.14117 2015/02/09 22:03:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,8 +338,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o Geomyidae-0.26.3 [pkg/49585]
 	o GNUMail-1.2.2
-	o Mesa-10.4.3 [do not update since it removes support for DRI features needed by NetBSD]
-	o MesaLib-10.4.3 [do not update since it removes support for DRI features needed by NetBSD]
+	o Mesa-10.4.4 [do not update since it removes support for DRI features needed by NetBSD]
+	o MesaLib-10.4.4 [do not update since it removes support for DRI features needed by NetBSD]
 	o PAM-0.99.7.1
 	o R-3.1.2
 	o RBTools-0.6.3
@@ -417,6 +417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.19
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -469,12 +470,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darktable-1.6
 	o dasher-4.11
 	o dbmail-3.2.0
+	o dbus-1.8.16
 	o dcc-1.3.147 [ask OWNER first]
 	o dd_rescue-1.45
 	o delegate-9.9.9
 	o denemo-1.2.0
 	o dhid-5.3
-	o digikam-4.6
+	o digikam-4.7.0
 	o dillo-3.0.4.1
 	o dinotrace-9.4d
 	o dk-milter-1.0.2 [wip]
@@ -538,7 +540,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flashplayer-0.4.13
 	o flightgear-2.12
 	o fltk2-2.0pre8323
-	o fluxbox-1.3.6
+	o fluxbox-1.3.7
 	o fmsx-4.0
 	o fotoxx-14.06
 	o fox-1.7.50
@@ -589,7 +591,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.4.3
+	o glu-10.4.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.14.2
@@ -879,7 +881,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pessulus-2.30.3 [GNOME 2.28]
 	o phonon-4.8.3
 	o php-jpgraph-3.0.6
-	o php-owncloud-7
+	o php-owncloud-8
 	o php-tiki6-6.10
 	o php-tt-rss-1.15.3
 	o picp-0.6.8
@@ -897,6 +899,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
+	o postfix-3.0
 	o powermanga-0.91
 	o powwow-1.2.16
 	o ppp-2.4.6
@@ -1041,7 +1044,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.41.1
-	o sudo-1.8.11p2
+	o sudo-1.8.12p1
 	o sun-jre8-8.0
 	o swapd-1.0.5
 	o swatch-3.2.3
