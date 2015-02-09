@@ -1,20 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/08 00:10:21 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2015/02/09 20:22:55 snj Exp $
 
---- Makefile.orig	2005-05-18 19:41:08.000000000 +0200
-+++ Makefile
-@@ -2,11 +2,11 @@
- SDL_CFLAGS = `sdl-config --cflags`
- SDL_LIBS = `sdl-config --libs`
- 
--DEFINES = -DSYS_LITTLE_ENDIAN
-+#DEFINES = -DSYS_LITTLE_ENDIAN
+--- Makefile.orig	2011-03-10 09:47:57.000000000 -0800
++++ Makefile	2015-02-09 11:58:27.000000000 -0800
+@@ -5,8 +5,8 @@ SDL_LIBS = `sdl-config --libs`
+ DEFINES = -DBYPASS_PROTECTION
+ #DEFINES = -DBYPASS_PROTECTION -DENABLE_PASSWORD_MENU -DNDEBUG
  
 -CXX = g++
--CXXFLAGS:= -g -O -Wall -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wimplicit
--CXXFLAGS+= -Wundef -Wreorder -Wwrite-strings -Wnon-virtual-dtor -Wno-multichar
+-CXXFLAGS := -g -O -Wall -Wuninitialized -Wshadow -Wimplicit -Wundef -Wreorder -Wnon-virtual-dtor -Wno-multichar
 +#CXX = g++
-+#CXXFLAGS:= -g -O -Wall -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wimplicit
-+#CXXFLAGS+= -Wundef -Wreorder -Wwrite-strings -Wnon-virtual-dtor -Wno-multichar
- CXXFLAGS+= $(SDL_CFLAGS) $(DEFINES)
++#CXXFLAGS := -g -O -Wall -Wuninitialized -Wshadow -Wimplicit -Wundef -Wreorder -Wnon-virtual-dtor -Wno-multichar
+ CXXFLAGS += -MMD $(SDL_CFLAGS) -DUSE_ZLIB $(DEFINES)
  
- SRCS = collision.cpp cutscene.cpp file.cpp game.cpp graphics.cpp locale.cpp \
+ SRCS = collision.cpp cutscene.cpp file.cpp fs.cpp game.cpp graphics.cpp main.cpp menu.cpp \
