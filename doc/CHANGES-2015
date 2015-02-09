@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.834 2015/02/09 20:23:18 snj Exp $
+$NetBSD: CHANGES-2015,v 1.835 2015/02/09 21:53:27 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1076,3 +1076,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Mixin-ExtraFields-Param to 0.021 [mef 2015-02-09]
 	Updated devel/py-hgtools to 6.3 [wiz 2015-02-09]
 	Updated games/REminiscence to 0.2.1 [snj 2015-02-09]
+	Updated games/maelstrom-sdl to 3.0.6 [snj 2015-02-09]
