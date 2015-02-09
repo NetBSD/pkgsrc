@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.831 2015/02/09 15:22:05 mef Exp $
+$NetBSD: CHANGES-2015,v 1.832 2015/02/09 15:44:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1072,3 +1072,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-List-UtilsBy to 0.09 [mef 2015-02-09]
 	Updated devel/p5-Locale-PO to 0.27 [mef 2015-02-09]
 	Updated devel/p5-MetaCPAN-API to 0.50 [mef 2015-02-09]
+	Updated devel/p5-Mixin-ExtraFields to 0.140.002 [mef 2015-02-09]
+	Updated devel/p5-Mixin-ExtraFields-Param to 0.021 [mef 2015-02-09]
