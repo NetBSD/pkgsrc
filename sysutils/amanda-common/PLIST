@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/07/30 07:21:11 sbd Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/09 18:35:12 gdt Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Archive.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/BigIntCompat.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/ClientService.pm
@@ -11,7 +11,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Header.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/IPC/Binary.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/IPC/LineProtocol.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/MainLoop.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Amanda/NDMP.pm
+${PLIST.ndmp}${PERL5_SUB_INSTALLVENDORLIB}/Amanda/NDMP.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Paths.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Process.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Script.pm
@@ -26,7 +26,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/Feature/libFeature.la
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/Header/libHeader.la
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/IPC/Binary/libBinary.la
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/MainLoop/libMainLoop.la
-${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/NDMP/libNDMP.la
+${PLIST.ndmp}${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/NDMP/libNDMP.la
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/Tests/libTests.la
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/Util/libUtil.la
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/Xfer/libXfer.la
@@ -35,11 +35,11 @@ lib/amanda/libamandad.la
 lib/amanda/libamar.la
 lib/amanda/libamglue.la
 lib/amanda/libamxfer.la
-lib/amanda/libndmjob.la
-lib/amanda/libndmlib.la
+${PLIST.ndmp}lib/amanda/libndmjob.la
+${PLIST.ndmp}lib/amanda/libndmlib.la
 libexec/amanda/amanda-sh-lib.sh
-libexec/amanda/amndmjob
-libexec/amanda/ndmjob
+${PLIST.ndmp}libexec/amanda/amndmjob
+${PLIST.ndmp}libexec/amanda/ndmjob
 man/man5/amanda-archive-format.5
 man/man5/amanda-client.conf.5
 man/man5/amanda.conf.5
