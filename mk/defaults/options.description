@@ -508,6 +508,7 @@ ncursesw		Enable wide character ncurses support.
 ndb-cluster		Build NDB Cluster support.
 ndbm			Use New Database Manager (ndbm).
 ndiff			Enable tool to compare Nmap scans.
+ndmp			Enable support for NDMP (direct NAS backups).
 nextstep		Enable Cocoa or GNUstep support.
 nfdump-ftconv		Build the flow-tools to nfdump converter.
 nfdump-nfprofile	Build the netflow profiler.
