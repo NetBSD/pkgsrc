@@ -1,4 +1,4 @@
-$NetBSD: patch-jdk_make_common_shared_Defs-java.gmk,v 1.1 2014/01/20 19:25:11 joerg Exp $
+$NetBSD: patch-jdk_make_common_shared_Defs-java.gmk,v 1.2 2015/02/09 00:42:17 tnn Exp $
 
 --- jdk/make/common/shared/Defs-java.gmk.orig	2014-01-05 23:07:37.000000000 +0000
 +++ jdk/make/common/shared/Defs-java.gmk
@@ -7,7 +7,7 @@ $NetBSD: patch-jdk_make_common_shared_Defs-java.gmk,v 1.1 2014/01/20 19:25:11 jo
  #   and creating the hotspot.log file.
  JAVA_HOTSPOT_DISABLE_PRINT_VMOPTIONS = \
 -   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput
-+   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput -XX:+UseSerialGC
++   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput $(PKGSRC_BOOT_JDK_JVMARGS)
  
  # JVM options
  # MMM: is headless option necessary?
