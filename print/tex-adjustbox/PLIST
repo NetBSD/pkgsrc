@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/10 02:48:09 mef Exp $
+share/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+share/texmf-dist/tex/latex/adjustbox/adjustbox.dtx
+share/texmf-dist/tex/latex/adjustbox/adjustbox.ins
+share/texmf-dist/tex/latex/adjustbox/adjustbox.pdf
+share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+share/texmf-dist/tex/latex/adjustbox/box.tex
+share/texmf-dist/tex/latex/adjustbox/compare.tex
+share/texmf-dist/tex/latex/adjustbox/margin.tex
+share/texmf-dist/tex/latex/adjustbox/margin2.tex
+share/texmf-dist/tex/latex/adjustbox/trim.tex
+share/texmf-dist/tex/latex/adjustbox/trim2.tex
+share/texmf-dist/tex/latex/adjustbox/trim3.tex
+share/texmf-dist/tex/latex/adjustbox/trimclip.sty
+share/texmf-dist/tex/latex/adjustbox/viewport.tex
+share/texmf-dist/tex/latex/adjustbox/viewport2.tex
