@@ -1,0 +1,6 @@
+'ydoc' provides macros and environments to document LaTeX packages and
+classes.  It is an alternative to the 'ltxdoc' class and 'doc' package.  It
+targets a different layout and tries to provide more modern styles (xcolor,
+hyperref, etc.).
+
+This is an alpha release. It should not be used yet for other packages.
