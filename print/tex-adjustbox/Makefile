@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/10 02:48:09 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/10 15:29:54 mef Exp $
 
 DISTNAME=	adjustbox
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -25,22 +25,31 @@ do-build:
 	(cd ${WRKSRC}; tex adjustbox.ins )
 
 do-install:
+# *.tex
 .for i in box compare margin margin2 trim trim2 trim3 viewport viewport2
 	(cd ${WRKSRC}; \
 	${INSTALL_DATA} ${i}.tex ${DESTDIR}${PREFIX}/${INSTALL_PATH} )
 .endfor
+# adjustbox.*
 .for i in dtx ins pdf
 	(cd ${WRKSRC}; \
 	${INSTALL_DATA} adjustbox.${i} ${DESTDIR}${PREFIX}/${INSTALL_PATH} )
 .endfor
+# *.sty
 .for i in adjustbox adjcalc trimclip
 	(cd ${WRKSRC}; \
 	${INSTALL_DATA} ${i}.sty ${DESTDIR}${PREFIX}/${INSTALL_PATH} )
 .endfor
+# *.def
+.for i in tc-dvips  tc-pdftex tc-pgf    tc-xetex
+	(cd ${WRKSRC}; \
+	${INSTALL_DATA} ${i}.def ${DESTDIR}${PREFIX}/${INSTALL_PATH} )
+.endfor
+
 
 # if from texlive 2014
 # TEXLIVE_REV=	26555
 # .include "../../print/texlive/package.mk"
-.include "../../print/kpathsea/texmf.mk"
+#.include "../../print/kpathsea/texmf.mk"
 
 .include "../../mk/bsd.pkg.mk"
