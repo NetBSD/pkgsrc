@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1 2015/02/08 08:41:25 tnn Exp $
+$NetBSD: patch-ap,v 1.2 2015/02/10 11:02:16 tnn Exp $
 
 Use pkgsrc fontconfig.
 
@@ -10,8 +10,8 @@ Use pkgsrc fontconfig.
  
 -#define FONTCONFIG_DLL_VERSIONED VERSIONED_JNI_LIB_NAME("fontconfig", "1")
 -#define FONTCONFIG_DLL JNI_LIB_NAME("fontconfig")
-+#define FONTCONFIG_DLL_VERSIONED "@BUILDLINK_PREFIX.fontconfig@" JNI_LIB_NAME("fontconfig")
-+#define FONTCONFIG_DLL "@BUILDLINK_PREFIX.fontconfig@" JNI_LIB_NAME("fontconfig")
++#define FONTCONFIG_DLL_VERSIONED "@BUILDLINK_PREFIX.fontconfig@/lib" JNI_LIB_NAME("fontconfig")
++#define FONTCONFIG_DLL "@BUILDLINK_PREFIX.fontconfig@/lib" JNI_LIB_NAME("fontconfig")
  
  #define MAXFDIRS 512    /* Max number of directories that contain fonts */
  
