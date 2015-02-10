@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.841 2015/02/10 15:17:14 rxg Exp $
+$NetBSD: CHANGES-2015,v 1.842 2015/02/10 17:53:19 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1085,3 +1085,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/postfix to 2.11.4 [taca 2015-02-10]
 	Updated audio/libxmp to 4.3.5 [rxg 2015-02-10]
 	Updated audio/xmp to 4.0.10 [rxg 2015-02-10]
+	Updated emulators/libretro-pcsx-rearmed to 0.22 [jmcneill 2015-02-10]
