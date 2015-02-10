@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.837 2015/02/10 02:52:28 mef Exp $
+$NetBSD: CHANGES-2015,v 1.838 2015/02/10 08:12:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1081,3 +1081,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-ydoc version 0.6alpha [mef 2015-02-10]
 	Added print/tex-adjustbox version 1.0 [mef 2015-02-10]
 	Added print/tex-collectbox version 0.4b [mef 2015-02-10]
+	Updated misc/libcarddav to 0.6.2.2.2nb7 [wiz 2015-02-10]
