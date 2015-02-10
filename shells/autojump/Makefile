@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/02/08 17:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/10 22:47:33 wiz Exp $
 
 VERSION=	22.2.4
 DISTNAME=	autojump-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	-https://github.com/joelthelion/autojump/archive/release-v${VERSION}${EXTRACT_SUFX}
 
@@ -13,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/autojump-release-v${VERSION}
 
 INSTALLATION_DIRS+=	bin share/autojump ${PKGMANDIR}/man1
+
+REPLACE_PYTHON+=	bin/autojump bin/*.py
 
 do-build:
 	# nothing
