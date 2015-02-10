@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/10/10 21:44:46 snj Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/10 22:10:33 snj Exp $
 
-DISTNAME=	tyrquake-0.61
+DISTNAME=	tyrquake-0.61_20140630
 CATEGORIES=	games x11
-MASTER_SITES=	http://disenchant.net/files/engine/
+#MASTER_SITES=	http://disenchant.net/files/engine/
+MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/snj/tyrquake/
 
 MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://disenchant.net/tyrquake/
@@ -12,18 +13,20 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
+WRKSRC=		${WRKDIR}/tyrquake
+
 LDFLAGS+=	${LIBOSSAUDIO}
 
 SUBST_CLASSES+=		audio
 SUBST_STAGE.audio=	post-patch
 SUBST_MESSAGE.audio=	Fixing path to the audio device.
-SUBST_FILES.audio=	common/snd_linux.c
+SUBST_FILES.audio=	common/snd_oss.c
 SUBST_SED.audio=	-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tyr-* ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/tyr-* ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
