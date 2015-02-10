@@ -1,4 +1,4 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.1 2015/02/08 08:41:25 tnn Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.2 2015/02/10 08:20:27 tnn Exp $
 
 --- common/autoconf/generated-configure.sh.orig	2015-02-02 15:31:06.000000000 +0000
 +++ common/autoconf/generated-configure.sh
@@ -91,6 +91,15 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.1 2015/02/08 08:41:25 
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
+@@ -34373,7 +34379,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+     FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
+   fi
+ 
+-      if test -d $FREETYPE_INCLUDE_PATH/freetype2/freetype; then
++      if test -d $FREETYPE_INCLUDE_PATH/freetype2; then
+         FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
+       else
+         FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
 @@ -34506,7 +34512,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
