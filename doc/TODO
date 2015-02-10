@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14117 2015/02/09 22:03:19 wiz Exp $
+$NetBSD: TODO,v 1.14118 2015/02/10 22:25:38 snj Exp $
 
 Suggested new packages
 ======================
@@ -1012,7 +1012,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o silc-1.1.11
 	o silc-client-1.1.11
 	o silc-server-1.1.19
-	o singularity-0.30c
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skype-4.3
