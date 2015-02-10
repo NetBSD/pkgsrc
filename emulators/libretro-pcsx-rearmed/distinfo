@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/04 23:04:17 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/02/10 17:51:37 jmcneill Exp $
 
-SHA1 (pcsx-rearmed-libretro-20150204.zip) = ffaa73f8f83ed251a0796c48d4108e152aa2e2cd
-RMD160 (pcsx-rearmed-libretro-20150204.zip) = d2ef1fdb82e7bd6ba4f55a4495efd39584d0f8e0
-Size (pcsx-rearmed-libretro-20150204.zip) = 1259484 bytes
+SHA1 (pcsx_rearmed/r22.tar.gz) = bdd2e38aa53c13e557ddc0ccac2bdcea909f9f9d
+RMD160 (pcsx_rearmed/r22.tar.gz) = ea7328498d32d12ee3e4b3504ed1685effecb9a1
+Size (pcsx_rearmed/r22.tar.gz) = 1153355 bytes
+SHA1 (patch-libpcsxcore_new__dynarec_new__dynarec.c) = 82ec36e064ae4f725379ca889eefe1f60038adc0
