@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.843 2015/02/10 22:11:00 snj Exp $
+$NetBSD: CHANGES-2015,v 1.844 2015/02/10 22:25:38 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1087,3 +1087,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/xmp to 4.0.10 [rxg 2015-02-10]
 	Updated emulators/libretro-pcsx-rearmed to 0.22 [jmcneill 2015-02-10]
 	Updated games/tyrquake to 0.61_20140630 [snj 2015-02-10]
+	Updated games/singularity to 0.30c [snj 2015-02-10]
