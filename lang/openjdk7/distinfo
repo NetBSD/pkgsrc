@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2015/02/10 14:57:35 tnn Exp $
+$NetBSD: distinfo,v 1.72 2015/02/10 19:31:53 tnn Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -108,7 +108,7 @@ SHA1 (patch-jaxws_build.xml) = 7704357c5a8b9d1a564dc8bd88be2ba7dcd1b0c2
 SHA1 (patch-jaxws_make_Makefile) = fcaa667aa1187fd4f8f639d625c22f7a43abb642
 SHA1 (patch-jdk_make_com_sun_Makefile) = 5826c64eb1971d69e8b874d6b8a60d25e0d02c5b
 SHA1 (patch-jdk_make_com_sun_java_pack_Makefile) = bb258d4c2235ea780810d980b84b90a0380f3b46
-SHA1 (patch-jdk_make_com_sun_jmx_Makefile) = 65fa2d6191311766cdb5d9933d760cae7955f664
+SHA1 (patch-jdk_make_com_sun_jmx_Makefile) = 697467f606ff6a13127ea9027018ca401d354e58
 SHA1 (patch-jdk_make_com_sun_nio_Makefile) = ab2ce3fd1a1a8ad6009d81025cc07077abe9a048
 SHA1 (patch-jdk_make_com_sun_script_Makefile) = ae6408118933387f4ac7a4f13c1fc4a73b44a2a3
 SHA1 (patch-jdk_make_common_Defs-solaris-gcc.gmk) = 32c0bbd91ec0c85eb725cd721ed759c6d6499f50
