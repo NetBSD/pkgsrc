@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/02/08 23:40:09 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2015/02/10 00:26:49 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
 PKG_SUPPORTED_OPTIONS=		debug jre-jce jdk-zero-vm x11
@@ -36,6 +36,17 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXrender/buildlink3.mk"
 .else
 MAKE_ENV+=		BUILD_HEADLESS_ONLY=true
+# We apparently still need the Xlib headers to build headless. why?
+MAKE_ENV+=		ALT_X11_PATH=${X11BASE}
+BUILDLINK_DEPMETHOD.libX11?=	build
+.include "../../x11/libX11/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+.include "../../x11/libXt/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXrender?=build
+.include "../../x11/libXrender/buildlink3.mk"
+post-configure: remove-x11-classes
+remove-x11-classes:
+	rm ${WRKSRC}/jdk/src/solaris/classes/sun/awt/X11/*.java
 .endif
 
 #
