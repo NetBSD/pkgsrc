@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.844 2015/02/10 22:25:38 snj Exp $
+$NetBSD: CHANGES-2015,v 1.845 2015/02/10 22:47:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1088,3 +1088,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/libretro-pcsx-rearmed to 0.22 [jmcneill 2015-02-10]
 	Updated games/tyrquake to 0.61_20140630 [snj 2015-02-10]
 	Updated games/singularity to 0.30c [snj 2015-02-10]
+	Updated shells/autojump to 22.2.4nb1 [wiz 2015-02-10]
