@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/02/10 08:20:27 tnn Exp $
+$NetBSD: distinfo,v 1.3 2015/02/10 11:02:16 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 98fdb66b429148ae3922a2f9b2db736a1708e337
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 4835c6361f66138d73f583c40df0e04a31257157
@@ -33,7 +33,7 @@ Size (openjdk7/openjdk-1.8.31-20150207.tar.xz) = 51853460 bytes
 SHA1 (patch-aa) = 653a22362d55de11f4fc37240a5ac945eabff8a4
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
-SHA1 (patch-ap) = da568efb582510b7867ef975cc3143646ed706d5
+SHA1 (patch-ap) = 93e01450504879a49a2bddff1d5f8699efc5e3a1
 SHA1 (patch-as) = 484ba6dd99c650ebe3df5639548ee2874c326aaa
 SHA1 (patch-at) = 736ead4b9f391c711bf1f387d87ffb9363823557
 SHA1 (patch-ba) = a54a25d4f8982ff4d2cb4e7e456fe2a44656b800
