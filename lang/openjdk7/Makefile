@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2015/02/10 00:26:49 tnn Exp $
+# $NetBSD: Makefile,v 1.92 2015/02/10 14:57:35 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -59,12 +59,15 @@ ALL_ENV+=	PKGSRC_BOOT_JDK_TOOLARGS="-J-XX:+UseSerialGC -J-Xmx768M"
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
-BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
-LD_LIBRARY_PATH=	${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
+BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}
+BUILD_ARCH=	${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/:S/sparc64/sparcv9/}
+LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/}
+BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}
+LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
 MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk7/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk7/jre/lib/${LIBDIR_ARCH}
 
-PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
+PLIST_SUBST+=	ARCH=${LIBDIR_ARCH}
 PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 
 .include "../../mk/compiler.mk"
@@ -187,7 +190,7 @@ post-extract:
 	${LN} -s ${JDK_BOOTDIR}/bin/native2ascii ${ALT_BOOTDIR}/bin
 	${LN} -s ${JDK_BOOTDIR}/bin/rmic ${ALT_BOOTDIR}/bin
 .elif ${OPSYS} == "NetBSD" && exists(${.CURDIR}/libs)
-	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
+	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
