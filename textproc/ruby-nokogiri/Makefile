@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/02/05 15:11:35 taca Exp $
+# $NetBSD: Makefile,v 1.25 2015/02/10 19:31:03 joerg Exp $
 
 DISTNAME=	nokogiri-1.6.6.2
 CATEGORIES=	textproc
@@ -13,6 +13,7 @@ CONFLICTS+=	ruby[1-9][0-9][0-9]-nokogiri-[0-9]*
 DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile>=0.6.0<0.7:../../misc/ruby-mini_portile
 
 USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		pkg-config
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 OVERRIDE_GEMSPEC=	:files ports/archives/libxml2-2.8.0.tar.gz= \
 				ports/archives/libxslt-1.1.26.tar.gz=
