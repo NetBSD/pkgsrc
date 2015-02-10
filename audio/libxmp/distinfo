@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/09/23 13:49:30 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/02/10 03:30:03 rxg Exp $
 
-SHA1 (libxmp-4.2.7.tar.gz) = cc7b1340bd8664d933311d23550ae4279abf2ecc
-RMD160 (libxmp-4.2.7.tar.gz) = 6fa2a6624dc470a8e8e8c660f1ad899039452f2a
-Size (libxmp-4.2.7.tar.gz) = 605579 bytes
+SHA1 (libxmp-4.3.5.tar.gz) = 39a5cef59e537062ae109972de95783bc2f256ab
+RMD160 (libxmp-4.3.5.tar.gz) = 8f87aeafdab4f793caec48449fee5d2bcf6fdaef
+Size (libxmp-4.3.5.tar.gz) = 617181 bytes
 SHA1 (patch-include_xmp.h) = 235dbcae39926fcacb07eea5dde4b64a6064dca9
-SHA1 (patch-src_common.h) = c6e2f51264422e7cf2bdf55cd3621c09c7000510
+SHA1 (patch-src_common.h) = ef38e204ee6cb380f44938e86bf3e623b14e0792
