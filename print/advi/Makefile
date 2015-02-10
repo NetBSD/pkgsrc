@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/01/24 07:27:46 mef Exp $
+# $NetBSD: Makefile,v 1.84 2015/02/10 21:10:14 joerg Exp $
 
 DISTNAME=		advi-1.10.2
 PKGREVISION=		1
@@ -10,6 +10,7 @@ HOMEPAGE=		http://gallium.inria.fr/advi/
 COMMENT=		Active-DVI Presenter
 LICENSE=		gnu-lgpl-v2
 
+BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 BUILD_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
 DEPENDS+=		camlimages>=4.0.0:../../graphics/camlimages
