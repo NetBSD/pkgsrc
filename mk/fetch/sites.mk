@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.112 2015/02/07 22:49:31 tnn Exp $
+# $NetBSD: sites.mk,v 1.113 2015/02/10 05:29:59 mef Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -77,7 +77,7 @@ MASTER_SITE_KDE+=	\
 	http://www.dnsbalance.ring.gr.jp/archives/X/kde/stable/ \
 	ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/ \
 	http://mirrors.isc.org/pub/kde/stable/ \
-	ftp://ftp.gtlib.cc.gatech.edu/pub/kde/stable/ \
+	ftp://ftp.gtlib.gatech.edu/pub/kde/stable/ \
 	ftp://kde.mirrors.tds.net/pub/kde/stable/ \
 	http://gd.tuwien.ac.at/kde/stable/ \
 	ftp://ftp.solnet.ch/mirror/KDE/stable/ \
@@ -177,7 +177,6 @@ MASTER_SITE_MYSQL+=	\
 	http://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	ftp://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	http://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
-	http://mysql.proserve.nl/Downloads/ \
 	http://mysql.nfsi.pt/Downloads/ \
 	ftp://ftp.nfsi.pt/pub/mysql/Downloads/ \
 	http://mirrors.xservers.ro/mysql/Downloads/ \
@@ -198,17 +197,12 @@ MASTER_SITE_MYSQL+=	\
 	ftp://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	http://mirror.trouble-free.net/mysql_mirror/Downloads/ \
 	http://mysql.llarian.net/Downloads/ \
-	ftp://mysql.llarian.net/pub/mysql/Downloads/ \
 	ftp://mirror.anl.gov/pub/mysql/Downloads/ \
-	http://mirror.services.wisc.edu/mysql/Downloads/ \
-	ftp://mirror.services.wisc.edu/mirrors/mysql/Downloads/ \
 	http://mysql.he.net/Downloads/ \
 	http://mysql.mirrors.arminco.com/Downloads/ \
 	http://mysql.spd.co.il/Downloads/ \
 	http://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
 	ftp://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
-	http://mysql.oss.eznetsols.org/Downloads/ \
-	ftp://ftp.oss.eznetsols.org/mysql/Downloads/ \
 	http://mysql.cs.pu.edu.tw/Downloads/ \
 	http://mysql.ntu.edu.tw/Downloads/ \
 	ftp://ftp.ntu.edu.tw/pub/MySQL/Downloads/ \
@@ -258,9 +252,7 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://ftp.funet.fi/pub/mirrors/openoffice.org/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/OpenOffice/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/ \
-	ftp://ftp.join.uni-muenster.de/pub/software/OpenOffice/ \
 	http://ftp.ntua.gr/pub/OpenOffice/ \
-	http://ftp.rhnet.is/pub/OpenOffice/ \
 	http://na.mirror.garr.it/mirrors/openoffice/ \
 	http://vlaai.snt.utwente.nl/pub/software/openoffice/ \
 	http://niihau.student.utwente.nl/openoffice/ \
@@ -269,7 +261,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
 	ftp://ftp.saix.net/pub/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
-	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.dnsbalance.ring.gr.jp/pub/misc/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/
