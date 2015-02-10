@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2015/02/05 17:17:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/10 17:51:37 jmcneill Exp $
 
-DISTNAME=	pcsx-rearmed-libretro-20150204
-PKGNAME=	libretro-pcsx-rearmed-20150204
+DISTNAME=	r22
+DIST_SUBDIR=	pcsx_rearmed
+PKGNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	https://github.com/notaz/pcsx_rearmed/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/pcsx_rearmed
+HOMEPAGE=	http://notaz.gp2x.de/pcsx_rearmed.php
 COMMENT=	Libretro core based on the PCSX ReARMed emulator
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/pcsx_rearmed-master
-HAS_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/pcsx_rearmed-${DISTNAME}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-
-CONFIGURE_ARGS+=--platform=libretro
+MAKE_FILE=	Makefile.libretro
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
@@ -25,9 +23,12 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_ARCH:M*arm*hf)
-CFLAGS+=	-mfloat-abi=hard
-ASFLAGS+=	-mfloat-abi=hard
+PCSX_REARMED_PLATFORM=	${MACHINE_ARCH}-hardfloat
+.else
+PCSX_REARMED_PLATFORM=	unix
 .endif
+
+MAKE_ENV+=	platform="${PCSX_REARMED_PLATFORM}"
 
 .if !empty(MACHINE_ARCH:M*arm*)
 # only ARM-specific options for now, and options framework
@@ -36,7 +37,7 @@ ASFLAGS+=	-mfloat-abi=hard
 .endif
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/libretro.so \
+	${INSTALL_LIB} ${WRKSRC}/pcsx_rearmed_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/pcsx_rearmed_libretro.so
 
 .include "../../devel/zlib/buildlink3.mk"
