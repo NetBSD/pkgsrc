@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.839 2015/02/10 14:21:18 taca Exp $
+$NetBSD: CHANGES-2015,v 1.840 2015/02/10 14:43:37 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1083,3 +1083,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-collectbox version 0.4b [mef 2015-02-10]
 	Updated misc/libcarddav to 0.6.2.2.2nb7 [wiz 2015-02-10]
 	Updated mail/postfix to 2.11.4 [taca 2015-02-10]
+	Updated audio/libxmp to 4.3.5 [rxg 2014-02-10]
+	Updated audio/xmp to 4.0.10 [rxg 2014-02-10]
