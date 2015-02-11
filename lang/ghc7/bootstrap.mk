@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.18 2015/02/07 20:08:30 joerg Exp $
+# $NetBSD: bootstrap.mk,v 1.19 2015/02/11 07:47:16 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -10,35 +10,59 @@
 #   Similar to BOOT_ARCHIVE, but "*.tar" not "*.tar.xz".
 #
 .include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "FreeBSD"
-BOOT_ARCHIVE:=	${PKGNAME}-boot-i386-unknown-freebsd.tar.xz
 
-.elif ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
-BOOT_ARCHIVE:=	${PKGNAME}-boot-i386-unknown-netbsd.tar.xz
+BOOT_ARCHIVE:=	# empty
 
-.elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-BOOT_ARCHIVE:=	${PKGNAME}-boot-powerpc-apple-darwin.tar.xz
+.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME}-boot-powerpc-apple-darwin.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect for this platform. See ${WRKSRC}/aclocal.m4
 # (FP_LEADING_UNDERSCORE)
 CONFLICTS+=	libelf-[0-9]*
+.endif
 
-.elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "Linux"
-BOOT_ARCHIVE:=	${PKGNAME}-boot-x86_64-unknown-linux.tar.xz
+.if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-i386-unknown-freebsd.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+.endif
 
-.elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "NetBSD"
-BOOT_ARCHIVE:=	${PKGNAME}-boot-x86_64-unknown-netbsd.tar.xz
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME}-boot-i386-unknown-netbsd.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+.endif
 
-.elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
-BOOT_ARCHIVE:=  ${PKGNAME}-boot-i386-unknown-solaris2.tar.xz
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME}-boot-x86_64-unknown-netbsd.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+.endif
 
-.elif !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64)
-BOOT_ARCHIVE:=  ${PKGNAME}-boot-x86_64-unknown-solaris2.tar.xz
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME}-boot-x86_64-unknown-linux.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+.endif
 
-.else
-BOOT_ARCHIVE:=	${PKGNAME}-boot-unknown.tar.xz
+.if !empty(MACHINE_PLATFORM:MSunOS-5.11-i386) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME}-boot-i386-unknown-solaris2.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64) || make(distinfo)
+BOOT_ARCHIVE=	${PKGNAME}-boot-x86_64-unknown-solaris2.tar.xz
+#DISTFILES+=	${BOOT_ARCHIVE}
+.endif
+
+.if empty(BOOT_ARCHIVE)
+BOOT_ARCHIVE=	${PKGNAME}-boot-unknown.tar.xz
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .endif
+
+.for i in ${DISTFILES:M*-boot-*}
+SITES.${i}?=	${MASTER_SITE_LOCAL}
+.endfor
+
+BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
 
 # FreeBSD < 10 surprisingly doesn't have a native iconv so we need to
 # use pkgsrc libiconv for this OPSYS. And if a bootkit depends on
@@ -54,8 +78,6 @@ USE_BUILTIN.iconv=	no
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-*) && !empty(OS_VARIANT:U:MSmartOS)
 BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 .endif
-
-BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
 
 
 # -----------------------------------------------------------------------------
