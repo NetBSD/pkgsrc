@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.848 2015/02/11 09:43:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.849 2015/02/11 11:26:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1092,3 +1092,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libcarddav to 0.6.2.2.2nb8 [wiz 2015-02-10]
 	Added emulators/libretro-mednafen-pce-fast version 20150210 [jmcneill 2015-02-10]
 	Updated x11/modular-xorg-server to 1.12.4nb8 [wiz 2015-02-11]
+	Updated graphics/freetype2 to 2.5.5 [adam 2015-02-11]
+	Updated multimedia/libass to 0.12.1 [adam 2015-02-11]
+	Updated security/gnutls to 3.2.21 [adam 2015-02-11]
