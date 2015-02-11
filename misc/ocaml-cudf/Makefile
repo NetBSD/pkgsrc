@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/10/26 14:14:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/11 14:05:18 jaapb Exp $
 
 DISTNAME=	cudf-0.7
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/33593/
 
