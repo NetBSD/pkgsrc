@@ -1,11 +1,22 @@
-$NetBSD: patch-extract.c,v 1.1 2014/12/25 16:48:33 wiz Exp $
+$NetBSD: patch-extract.c,v 1.2 2015/02/11 12:35:42 wiz Exp $
 
 Fixes for
 * https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-8139
 * https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-8140
 * http://sf.net/projects/mancha/files/sec/unzip-6.0_overflow2.diff via
   http://seclists.org/oss-sec/2014/q4/1131 and
-  http://seclists.org/oss-sec/2014/q4/507
+  http://seclists.org/oss-sec/2014/q4/507 and later version
+  http://sf.net/projects/mancha/files/sec/unzip-6.0_overflow3.diff via
+  http://www.openwall.com/lists/oss-security/2015/02/11/7
+
+By carefully crafting a corrupt ZIP archive with "extra fields" that
+purport to have compressed blocks larger than the corresponding
+uncompressed blocks in STORED no-compression mode, an attacker can
+trigger a heap overflow that can result in application crash or
+possibly have other unspecified impact.
+
+This patch ensures that when extra fields use STORED mode, the
+"compressed" and uncompressed block sizes match.
 
 --- extract.c.orig	2009-03-14 01:32:52.000000000 +0000
 +++ extract.c
@@ -52,7 +63,7 @@ Fixes for
  
          switch (ebID) {
              case EF_OS2:
-@@ -2217,14 +2230,28 @@ static int test_compr_eb(__G__ eb, eb_si
+@@ -2217,6 +2230,7 @@ static int test_compr_eb(__G__ eb, eb_si
      ulg eb_ucsize;
      uch *eb_ucptr;
      int r;
@@ -60,27 +71,17 @@ Fixes for
  
      if (compr_offset < 4)                /* field is not compressed: */
          return PK_OK;                    /* do nothing and signal OK */
+@@ -2226,6 +2240,13 @@ static int test_compr_eb(__G__ eb, eb_si
+          eb_size <= (compr_offset + EB_CMPRHEADLEN)))
+         return IZ_EF_TRUNC;               /* no compressed data! */
  
-+    /* Return no/bad-data error status if any problem is found:
-+     *    1. eb_size is too small to hold the uncompressed size
-+     *       (eb_ucsize).  (Else extract eb_ucsize.)
-+     *    2. eb_ucsize is zero (invalid).  2014-12-04 SMS.
-+     *    3. eb_ucsize is positive, but eb_size is too small to hold
-+     *       the compressed data header.
-+     */
-     if ((eb_size < (EB_UCSIZE_P + 4)) ||
--        ((eb_ucsize = makelong(eb+(EB_HEADSIZE+EB_UCSIZE_P))) > 0L &&
--         eb_size <= (compr_offset + EB_CMPRHEADLEN)))
--        return IZ_EF_TRUNC;               /* no compressed data! */
-+     ((eb_ucsize = makelong( eb+ (EB_HEADSIZE+ EB_UCSIZE_P))) == 0L) ||
-+     ((eb_ucsize > 0L) && (eb_size <= (compr_offset + EB_CMPRHEADLEN))))
-+        return IZ_EF_TRUNC;             /* no/bad compressed data! */
-+
 +    method = makeword(eb + (EB_HEADSIZE + compr_offset));
-+    if ((method == STORED) && (eb_size - compr_offset != eb_ucsize))
++    if ((method == STORED) &&
++        (eb_size - compr_offset - EB_CMPRHEADLEN != eb_ucsize))
 +	return PK_ERR;			  /* compressed & uncompressed
 +					   * should match in STORED
 +					   * method */
- 
++
      if (
  #ifdef INT_16BIT
+         (((ulg)(extent)eb_ucsize) != eb_ucsize) ||
