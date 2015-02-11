@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.847 2015/02/11 00:17:42 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.848 2015/02/11 09:43:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1091,3 +1091,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated shells/autojump to 22.2.4nb1 [wiz 2015-02-10]
 	Updated misc/libcarddav to 0.6.2.2.2nb8 [wiz 2015-02-10]
 	Added emulators/libretro-mednafen-pce-fast version 20150210 [jmcneill 2015-02-10]
+	Updated x11/modular-xorg-server to 1.12.4nb8 [wiz 2015-02-11]
