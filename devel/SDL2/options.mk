@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2015/02/11 14:00:45 jmcneill Exp $
+# $NetBSD: options.mk,v 1.5 2015/02/11 20:32:20 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
@@ -60,15 +60,11 @@ CONFIGURE_ARGS+=	--disable-oss
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-video-x11 --disable-x11-shared
 .endif
