@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.852 2015/02/11 13:45:17 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.853 2015/02/11 14:37:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/unzip to 6.0nb4 [wiz 2015-02-11]
 	Updated net/ocamlnet to 3.7.7 [jaapb 2015-02-11]
 	Updated www/ocsigen to 2.5 [jaapb 2015-02-11]
+	Updated net/miniupnpd to 1.9.20141209 [adam 2015-02-11]
