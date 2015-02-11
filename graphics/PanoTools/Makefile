@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/06 14:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.24 2015/02/11 23:17:22 tnn Exp $
 #
 
 DISTNAME=		PanoTools
@@ -17,8 +17,8 @@ EMUL_MODULES.linux=	base jpeg png tiff
 WRKSRC=			${WRKDIR}/PTLinux
 BUILD_DIRS=		# empty
 USE_JAVA=		run
+PKG_JVMS_ACCEPTED=	sun-jdk6
 
-PKG_JVM?=		sun-jdk
 PLIST_SUBST+=		JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
 
 INSTALLATION_DIRS=	bin lib ${EMULDIR}/lib libexec/PanoTools \
