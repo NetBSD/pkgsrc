@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/10/26 10:54:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/11 14:01:05 jaapb Exp $
 
 DISTNAME=	extlib-1.6.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://ocaml-extlib.googlecode.com/files/
 
