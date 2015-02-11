@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/02/11 07:47:16 pho Exp $
+# $NetBSD: Makefile,v 1.16 2015/02/11 13:38:42 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -20,7 +20,7 @@ LICENSE=	modified-bsd
 # possible. So we have to prepare stripped-down binaries sufficient to
 # bootstrap compilers for each platforms. If you want to build them
 # yourself, follow an instruction in the ./TODO file.
-ONLY_FOR_PLATFORM= \
+BROKEN_EXCEPT_ON_PLATFORM+= \
 	Darwin-*-powerpc \
 	FreeBSD-*-i386 \
 	Linux-*-x86_64 \
