@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/11/03 08:33:47 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/11 09:38:19 obache Exp $
 
-PKGNAME=	suse_mozilla-nspr-${SUSE_VERSION}
+DISTNAME=	suse_mozilla-nspr-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 RPMUPDPKGS+=	mozilla-nspr-4.10.7-16.1.${SUSE_ARCH}
