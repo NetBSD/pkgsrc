@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:43 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:18 obache Exp $
 
-PKGNAME=	suse_libsigc++2-${SUSE_VERSION}
+DISTNAME=	suse_libsigc++2-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libsigc-2_0-0-2.3.1-2.1.2.${SUSE_ARCH}
 
