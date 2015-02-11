@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/13 12:37:50 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/02/11 13:25:25 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/equeue
 @unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netcgi2-plex
 @unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netplex
@@ -638,6 +638,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/rpc-generator/rpc_generator.p.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/rpc-generator/rpc_generator.p.cmxa
 ${OCAML_SITELIB}/rpc-generator/rpcgen-packlist
 ${OCAML_SITELIB}/rpc-generator/syntax.cmi
+${OCAML_SITELIB}/rpc-generator/test_aux.mli
 ${PLIST.ssl}${OCAML_SITELIB}/rpc-ssl/META
 ${PLIST.ssl}${PLIST.ocaml-opt}${OCAML_SITELIB}/rpc-ssl/rpc_ssl.a
 ${PLIST.ssl}${OCAML_SITELIB}/rpc-ssl/rpc_ssl.cma
