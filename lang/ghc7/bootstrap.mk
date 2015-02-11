@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.20 2015/02/11 07:49:51 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.21 2015/02/11 09:38:08 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -9,60 +9,70 @@
 # BOOT_TARBALL
 #   Similar to BOOT_ARCHIVE, but "*.tar" not "*.tar.xz".
 #
+# BOOT_VERSION
+#   Version of the bootstrapping compiler to use. This can be
+#   overriden for specific platforms.
+#
 .include "../../mk/bsd.prefs.mk"
 
-BOOT_ARCHIVE:=	# empty
+# Use the same version as the package itself by default.
+BOOT_VERSION:=	${PKGNAME:C/^.*-//}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
-
-# Existence of libelf makes LeadingUnderscore being "NO", which is
-# incorrect for this platform. See ${WRKSRC}/aclocal.m4
-# (FP_LEADING_UNDERSCORE)
-CONFLICTS+=	libelf-[0-9]*
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-powerpc-apple-darwin.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-i386-unknown-freebsd.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-i386-unknown-netbsd.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-x86_64-unknown-netbsd.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-freebsd.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-x86_64-unknown-linux.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-linux.tar.xz
+#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-netbsd.tar.xz
+#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-i386) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-i386-unknown-solaris2.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-solaris2.tar.xz
+#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64) || make(distinfo)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-x86_64-unknown-solaris2.tar.xz
-#DISTFILES+=	${BOOT_ARCHIVE}
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
+#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
 .endif
 
 .if empty(BOOT_ARCHIVE)
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-unknown.tar.xz
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-unknown.tar.xz
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .endif
 
+# For package developers, please do not upload any bootkits unsafely
+# built. That is, machines shared with someone or on a cloud hosting
+# service should be avoided for building bootkits.
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
 
 BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
+
+# Existence of libelf makes LeadingUnderscore being "NO", which is
+# incorrect for this platform. See ${WRKSRC}/aclocal.m4
+# (FP_LEADING_UNDERSCORE)
+.if ${OPSYS} == "Darwin"
+CONFLICTS+=	libelf-[0-9]*
+.endif
 
 # FreeBSD < 10 surprisingly doesn't have a native iconv so we need to
 # use pkgsrc libiconv for this OPSYS. And if a bootkit depends on
