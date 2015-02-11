@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2014/12/21 16:14:05 wiz Exp $
+$NetBSD: distinfo,v 1.55.2.1 2015/02/11 21:28:03 tron Exp $
 
 SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
 RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
@@ -62,3 +62,4 @@ SHA1 (patch-test_xi2_protocol-xipassivegrabdevice.c) = 503566a73fe797a98f637fb9d
 SHA1 (patch-test_xi2_protocol-xiquerypointer.c) = 6594dff2bccac46aa4b8aec7c517d122517407ad
 SHA1 (patch-test_xi2_protocol-xiwarppointer.c) = fda57d72b963890478e8e78dfbe2864eb51971d2
 SHA1 (patch-xfixes_select.c) = 0f0dac08732a54112a2f0a7b3f1393a28fbfd8bc
+SHA1 (patch-xkb_xkb.c) = 95861e071546428ab5ada2365e2b8201f238577c
