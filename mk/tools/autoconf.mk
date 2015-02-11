@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.16 2013/05/09 23:37:27 riastradh Exp $
+# $NetBSD: autoconf.mk,v 1.17 2015/02/11 23:39:35 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,6 +63,8 @@
 # in the package Makefile:
 #
 #	AUTOMAKE_OVERRIDE=	no
+#
+# Keywords: autoconf autoreconf
 #
 
 # Only allow one of "autoconf" and "autoconf213" in USE_TOOLS.
