@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2015/02/09 08:27:07 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2015/02/11 14:00:45 jmcneill Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -32,5 +32,9 @@ pkgbase := SDL2
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .endif	# SDL2_BUILDLINK3_MK
+
+.if !empty(PKG_BUILD_OPTIONS.SDL2:Mrpi)
+.include "../../misc/raspberrypi-userland/buildlink3.mk"
+.endif
 
 BUILDLINK_TREE+=	-SDL2
