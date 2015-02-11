@@ -1,11 +1,22 @@
-# $NetBSD: options.mk,v 1.3 2015/02/09 08:27:07 snj Exp $
+# $NetBSD: options.mk,v 1.4 2015/02/11 14:00:45 jmcneill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
-PKG_SUPPORTED_OPTIONS=	alsa arts dbus esound nas opengl oss pulseaudio x11
-PKG_SUGGESTED_OPTIONS+=	oss opengl
+PKG_OPTIONS_REQUIRED_GROUPS=	gl
+PKG_SUPPORTED_OPTIONS=	alsa arts dbus esound nas oss pulseaudio x11
+PKG_OPTIONS_GROUP.gl=	opengl
+PKG_SUGGESTED_OPTIONS+=	oss
 
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	x11
+.endif
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !empty(MACHINE_ARCH:M*arm*)
+PKG_OPTIONS_GROUP.gl+=	rpi
+PKG_SUGGESTED_OPTIONS+=	rpi
+.else
+PKG_SUGGESTED_OPTIONS+=	opengl
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -60,4 +71,9 @@ CONFIGURE_ARGS+=	--disable-oss
 .include "../../x11/xproto/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-video-x11 --disable-x11-shared
+.endif
+
+.if !empty(PKG_OPTIONS:Mrpi)
+LOWER_VENDOR=	raspberry
+.include "../../misc/raspberrypi-userland/buildlink3.mk"
 .endif
