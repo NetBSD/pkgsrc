@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2014/09/07 12:26:39 obache Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/11 09:38:13 obache Exp $
 
-PKGNAME=	suse_fontconfig-${SUSE_VERSION}
+DISTNAME=	suse_fontconfig-${SUSE_VERSION}
 PKGREVISION=	7
 CATEGORIES=	emulators
 DISTFILES=	fontconfig-2.3.2.20050721-10.2.${SUSE_ARCH}.rpm

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/12/17 01:38:47 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/11 09:38:19 obache Exp $
 
-PKGNAME=	suse_sqlite3-${SUSE_VERSION}
+DISTNAME=	suse_sqlite3-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	 libsqlite3-0-3.7.17-2.1.2.${SUSE_ARCH}
 
