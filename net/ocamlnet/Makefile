@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/10/13 12:37:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2015/02/11 13:25:25 jaapb Exp $
 #
 
-DISTNAME=		ocamlnet-3.7.6
+DISTNAME=		ocamlnet-3.7.7
 PKGNAME=	${DISTNAME} # in order to avoid prefixing with ocaml-
-PKGREVISION=	1
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 
