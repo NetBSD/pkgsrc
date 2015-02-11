@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:43 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:18 obache Exp $
 
-PKGNAME=	suse_libjpeg-${SUSE_VERSION}
+DISTNAME=	suse_libjpeg-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libjpeg62-62.0.0-24.1.3.${SUSE_ARCH}
 RPMPKGS+=	libjpeg8-8.0.2-24.1.3.${SUSE_ARCH}
