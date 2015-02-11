@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/02/04 06:53:18 pho Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/11 07:47:16 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -33,22 +33,6 @@ ONLY_FOR_PLATFORM= \
 # Distfiles
 #
 DISTFILES=	${DEFAULT_DISTFILES}
-#.if make(distinfo)
-#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-freebsd.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-netbsd.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-linux.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-netbsd.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-solaris2.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-solaris2.tar.xz
-#.else
-#DISTFILES+=	${BOOT_ARCHIVE}
-#.endif
-
-.for i in ${DISTFILES:M*-boot-*}
-SITES.${i}?=	${MASTER_SITE_LOCAL}
-.endfor
-
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # We don't want to extract all of the DISTFILEs.
