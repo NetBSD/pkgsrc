@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:42 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:17 obache Exp $
 
-PKGNAME=	suse_glib2-${SUSE_VERSION}
+DISTNAME=	suse_glib2-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	gio-branding-upstream-2.38.1-1.1.noarch
 RPMPKGS+=	glib2-tools-2.38.1-1.1.${SUSE_ARCH}
