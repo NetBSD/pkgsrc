@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.849 2015/02/11 11:26:47 adam Exp $
+$NetBSD: CHANGES-2015,v 1.850 2015/02/11 12:36:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1095,3 +1095,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/freetype2 to 2.5.5 [adam 2015-02-11]
 	Updated multimedia/libass to 0.12.1 [adam 2015-02-11]
 	Updated security/gnutls to 3.2.21 [adam 2015-02-11]
+	Updated archivers/unzip to 6.0nb4 [wiz 2015-02-11]
