@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/11/03 08:13:45 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/11 09:38:19 obache Exp $
 
-PKGNAME=	suse_pulseaudio-${SUSE_VERSION}
+DISTNAME=	suse_pulseaudio-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libpulse0-4.0.git.270.g9490a-20.1.${SUSE_ARCH}

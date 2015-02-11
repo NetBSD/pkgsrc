@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/01/23 10:34:08 obache Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/11 09:38:17 obache Exp $
 
-PKGNAME=	suse_libdbus-${SUSE_VERSION}
+DISTNAME=	suse_libdbus-${SUSE_VERSION}
 PKGREVISION=	6
 CATEGORIES=	emulators
 RPMUPDPKGS+=	dbus-1-1.8.14-4.32.3.${SUSE_ARCH}

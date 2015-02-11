@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/11/03 09:25:56 obache Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/11 09:38:17 obache Exp $
 
-PKGNAME=	suse_libcurl-${SUSE_VERSION}
+DISTNAME=	suse_libcurl-${SUSE_VERSION}
 PKGREVISION=	5
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libcurl4-7.32.0-2.31.1.${SUSE_ARCH}

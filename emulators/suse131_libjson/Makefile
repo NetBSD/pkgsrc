@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/09/07 12:26:43 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/11 09:38:18 obache Exp $
 
-PKGNAME=	suse_libjson-${SUSE_VERSION}
+DISTNAME=	suse_libjson-${SUSE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libjson0-0.10-3.4.1.${SUSE_ARCH}

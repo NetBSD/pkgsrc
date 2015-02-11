@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:39 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:13 obache Exp $
 
-PKGNAME=	suse_libidn-${SUSE_VERSION}
+DISTNAME=	suse_libidn-${SUSE_VERSION}
 CATEGORIES=	emulators
 DISTFILES+=	libidn-0.5.9-5.${SUSE_ARCH}.rpm
 

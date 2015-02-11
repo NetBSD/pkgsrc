@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/12/17 01:35:07 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/11 09:38:17 obache Exp $
 
-PKGNAME=	suse_gstreamer-${SUSE_VERSION}
+DISTNAME=	suse_gstreamer-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMUPDPKGS+=	gstreamer-plugin-gstclutter-2.0.8-3.1.${SUSE_ARCH}
 RPMUPDPKGS+=	gstreamer-plugins-bad-1.0.10-2.5.4.${SUSE_ARCH}
