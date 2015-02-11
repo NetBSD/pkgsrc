@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2015/02/11 09:38:14 obache Exp $
 #
 # used by emulators/suse100_alsa/Makefile
 # used by emulators/suse100_alsa/Makefile
@@ -105,7 +105,7 @@ PATCHDIR=		${SUSE_PKGSRCDIR}/patches
 PKGDIR=			${SUSE_PKGSRCDIR}
 
 .if defined(SUSE_COMPAT32)
-PKGNAME:=		${PKGNAME:S/^suse_/suse32_/}
+PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
 COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
 LINUX_BASE=		linux32
 .else
