@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/05/29 23:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2015/02/11 15:11:48 is Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGREVISION=		3
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-threads
 .include "../../mk/bsd.prefs.mk"
 
 # have gcc without the necessary atomic ops?
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[56].*)
 
 # a machine without native ethread implementation?
 .if	empty(MACHINE_PLATFORM:M*i386)	&&\
