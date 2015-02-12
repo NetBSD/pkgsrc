@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/12 22:48:02 snj Exp $
+bin/emulationstation
+share/doc/emulationstation/README.md
+share/doc/emulationstation/GAMELISTS.md
+share/doc/emulationstation/SYSTEMS.md
+share/doc/emulationstation/THEMES.md
