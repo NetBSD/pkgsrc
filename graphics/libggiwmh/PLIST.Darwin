@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2015/02/12 17:09:21 pho Exp $
+lib/ggi/wmh/display/quartz_wmh.la
