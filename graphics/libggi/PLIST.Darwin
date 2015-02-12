@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2015/02/12 17:02:51 pho Exp $
+lib/ggi/display/quartz.la
