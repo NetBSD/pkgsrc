@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/10/22 13:49:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/02/12 06:29:40 mef Exp $
 
-SHA1 (Module-Build-WithXSpp-0.12.tar.gz) = 69ed2f576a39501cb95250ae5e1d601682c2572d
-RMD160 (Module-Build-WithXSpp-0.12.tar.gz) = 5cd37bae740caf9db16e034e655cbc0dc1c830d6
-Size (Module-Build-WithXSpp-0.12.tar.gz) = 13750 bytes
+SHA1 (Module-Build-WithXSpp-0.14.tar.gz) = fb31fb05727ba02617dfea03180668b6dffc76ab
+RMD160 (Module-Build-WithXSpp-0.14.tar.gz) = 08d0d9c62bf06c9a289930ee95d746ccb018555b
+Size (Module-Build-WithXSpp-0.14.tar.gz) = 14103 bytes
