@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2015/02/10 14:57:35 tnn Exp $
+# $NetBSD: Makefile,v 1.93 2015/02/12 06:18:17 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -61,7 +61,7 @@ MAKE_ENV+=	CLASSPATH=
 
 BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}
 BUILD_ARCH=	${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/:S/sparc64/sparcv9/}
-LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/}
+LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/}
 BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}
 LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
 MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
@@ -193,10 +193,6 @@ post-extract:
 	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
-ALL_ENV+=	LDFLAGS_LIBGCC=-lgcc_s
-.endif
-
 do-build: ${WRKDIR}/stage3-done
 
 # stage 1 builds a native JDK using the bootstrap binaries
@@ -205,17 +201,17 @@ ${WRKDIR}/stage1-done:
 	rm -rf ${ALT_BOOTDIR}
 	cd ${BUILDDIR} && mv j2sdk-image ${ALT_BOOTDIR}
 	mv ${BUILDDIR} ${BUILDDIR}-stage1
-	touch ${WRKDIR}/stage1-done
+	touch ${.TARGET}
 
 # stage 2 rebuilds the JDK using native tools
 ${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
 	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${JDK_MAKE_TARGET}
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
-	touch ${WRKDIR}/stage2-done
+	touch ${.TARGET}
 
 # stage 3 builds third party add-ons
 ${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
-	touch ${WRKDIR}/stage3-done
+	touch ${.TARGET}
 
 ${WRKDIR}/cacerts.out:
 	mkdir ${WRKDIR}/cacerts && cd ${WRKDIR}/cacerts && 		\
@@ -258,6 +254,6 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"

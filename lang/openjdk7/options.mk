@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2015/02/10 00:26:49 tnn Exp $
+# $NetBSD: options.mk,v 1.9 2015/02/12 06:18:17 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
 PKG_SUPPORTED_OPTIONS=		debug jre-jce jdk-zero-vm x11
@@ -71,9 +71,9 @@ PLIST_VARS+=		native
 .if !empty(PKG_OPTIONS:Mjdk-zero-vm)
 MAKE_ENV+=		ZERO_BUILD=true
  # valid are i386 / amd64 / sparc* / ppc32 / ppc64
-MAKE_ENV+=		ZERO_LIBARCH=${MACHINE_ARCH:S/x86_64/amd64/}
+MAKE_ENV+=		ZERO_LIBARCH=${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/}
  # valid are IA32 / AMD64 / SPARC / PPC32 / PPC64
-MAKE_ENV+=		ZERO_ARCHDEF=${MACHINE_ARCH:S/i386/IA32/:S/x86_64/AMD64/}
+MAKE_ENV+=		ZERO_ARCHDEF=${MACHINE_ARCH:S/i386/IA32/:S/x86_64/AMD64/:S/sparc64/SPARC/}
 .include "../../mk/endian.mk"
 MAKE_ENV+=		ZERO_ENDIANNESS=${MACHINE_ENDIAN}
 .include "../../devel/libffi/buildlink3.mk"
