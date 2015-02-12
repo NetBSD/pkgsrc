@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.862 2015/02/12 13:14:14 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.863 2015/02/12 13:47:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1125,3 +1125,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-FindBin-libs to 2.12 [schmonz 2015-02-12]
 	Updated security/openssl to 1.0.2 [adam 2015-02-12]
 	Updated devel/p5-Pegex to 0.60 [schmonz 2015-02-12]
+	Updated devel/xulrunner31 to 31.4.0 [ryoon 2015-02-12]
+	Updated www/firefox31 to 31.4.0 [ryoon 2015-02-12]
+	Updated www/firefox31-l10n to 31.4.0 [ryoon 2015-02-12]
