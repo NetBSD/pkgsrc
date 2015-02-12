@@ -311,7 +311,7 @@ blake2b_compress(BLAKE2_CTX *S, const uint8_t block[BLAKE2B_BLOCKBYTES])
 	int i;
 
 	for (i = 0; i < 16; ++i) {
-		m[i] = load64(block + i * sizeof(m[i]));
+		m[i] = load64(block + (sizeof(m[i]) * (uint64_t)i));
 	}
 	for (i = 0; i < 8; ++i) {
 		v[i] = S->h[i];
@@ -412,7 +412,7 @@ blake2b_final(BLAKE2_CTX *S, uint8_t *out, uint8_t outlen)
 	blake2b_compress(S, S->buf);
 	for (i = 0; i < 8; ++i) {
 		/* Output full hash to temp buffer */ 
-		store64(buffer + sizeof(S->h[i]) * i, S->h[i]);
+		store64(buffer + (sizeof(S->h[i]) * (uint64_t)i), S->h[i]);
 	}
 	memcpy(out, buffer, outlen);
 	return 0;

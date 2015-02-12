@@ -1,6 +1,6 @@
-.\" $NetBSD: libmultigest.3,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $
+.\" $NetBSD: libmultigest.3,v 1.2 2015/02/12 01:57:57 agc Exp $
 .\"
-.\" Copyright (c) 2013,2014 Alistair Crooks <agc@NetBSD.org>
+.\" Copyright (c) 2013,2014,2015 Alistair Crooks <agc@NetBSD.org>
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
 .\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 .\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd March 3, 2014
+.Dd February 11, 2015
 .Dt LIBMULTIGEST 3
 .Os
 .Sh NAME
@@ -47,7 +47,7 @@
 .Fc
 .Ft void
 .Fo multigest_update
-.Fa "multigest_t *mg" "const char *data" "size_t length"
+.Fa "multigest_t *mg" "const void *data" "size_t length"
 .Fc
 .Ft void
 .Fo multigest_final
@@ -55,7 +55,7 @@
 .Fc
 .Ft "uint8_t *"
 .Fo multigest_data
-.Fa "const char *algorithms" "const char *data" "size_t length"
+.Fa "const char *algorithms" "const void *data" "size_t length"
 .Fa "const unsigned char *rawoutput" "const char *substregex"
 .Fa "const char *replacement"
 .Fc
@@ -123,6 +123,14 @@ TIGER
 WHIRLPOOL
 .Ed
 .Pp
+In addition, a number of hash combiner functions are defined:
+.Bd -literal -offset indent
+CONCAT
+HASH
+XOR
+COMB4P
+.Ed
+.Pp
 The
 .Dv crc32c
 checksum is a simple, lightweight checksum, as found in SCTP and iSCSI.
@@ -153,6 +161,49 @@ name suggests, multiple digests can be used to calculate compound digests.
 The output from each digest is concatenated on the output.
 Digest names are provided to the initialisation function in a comma-separated
 list of names.
+.Pp
+The combiner functions define how the individual digests will be combined
+in the finalisation stage.
+They have different qualities, and different uses.
+.Pp
+The
+.Dq CONCAT
+algorithm, the default, simply concatenates the digests in the output.
+It is useful when collision resistance is needed, but not pre-image resistance,
+second pre-image resistance or PRF functionality.
+.Pp
+The
+.Dq Comb4P
+combiner should be used when collision resistance is needed,
+or as a PRF, where target-collision resistance is needed, or
+as a MAC.
+However, this combiner is not as efficient as the other combiner algorithms,
+requiring more CPU cycles.
+.Pp
+The
+.Dq XOR
+combiner xors the first two digests together.
+This is useful as a PRF, but not where
+collision resistance is needed.
+.Pp
+Finally, the
+.Dq HASH
+combiner takes the output of the second digest's
+finalisation routine, and passes that as an update to the current state of
+the first digest, and then finalises the multigest.
+This is useful where pre-image resistance is needed,
+but should not be used if collision resistance is needed.
+.Pp
+If less than two digest algorithms are provided in conjunction
+with a combiner function, a zero multigest will result.
+In addition, if the
+.Dq XOR
+combiner is given the same digest function as input, a zero
+multigest will result.
+The
+.Dq Comb4P
+combiner should be given two digests of the same size,
+or a zero multigest will result.
 .Pp
 There are two interfaces to the
 .Nm
@@ -197,6 +248,6 @@ been initialised.
 The
 .Nm
 library first appeared in
-.Nx 7.0 .
+.Nx 8.0 .
 .Sh AUTHORS
 .An Alistair Crooks Aq Mt agc@NetBSD.org .

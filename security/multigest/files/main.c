@@ -41,12 +41,12 @@
 static int
 do_input(const char *alg, uint8_t *raw, const char *pat, const char *repl)
 {
+	ssize_t	 rc;
 	size_t	 cc;
-	size_t	 rc;
 	char	*data;
 
 	if ((data = calloc(1, MB(4))) != NULL) {
-		for (cc = 0 ; cc < MB(4) ; cc += rc) {
+		for (cc = 0 ; cc < MB(4) ; cc += (size_t)rc) {
 			if ((rc = read(fileno(stdin), &data[cc], MB(4) - cc)) <= 0) {
 				break;
 			}
@@ -110,11 +110,11 @@ read_check(const char *check)
 		return 0;
 	}
 	fstat(fileno(fp), &st);
-	if ((in = calloc(1, st.st_size + 1)) == NULL) {
+	if ((in = calloc(1, (size_t)(st.st_size + 1))) == NULL) {
 		fclose(fp);
 		return 0;
 	}
-	read(fileno(fp), in, st.st_size);
+	read(fileno(fp), in, (size_t)(st.st_size));
 	in[st.st_size] = 0x0;
 	fclose(fp);
 	if (regexec(&r, in, 10, match, 0) != 0) {
@@ -129,7 +129,7 @@ read_check(const char *check)
 	getsubst(subs, from, sizeof(from), to, sizeof(to));
 	multigest_file(alg, file, raw, from, to);
 	multigest_format_hex(raw, alg, calc, sizeof(calc));
-	if ((ret = memcmp(calc, provided, match[4].rm_eo - match[4].rm_so)) != 0) {
+	if ((ret = memcmp(calc, provided, (size_t)(match[4].rm_eo - match[4].rm_so))) != 0) {
 		fprintf(stderr, "multigest: provided digest:   '%s', calculated digest: '%s'\n", provided, calc);
 	}
 	regfree(&r);

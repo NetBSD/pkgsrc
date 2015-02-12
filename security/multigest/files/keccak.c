@@ -192,9 +192,9 @@ LFSR86540(uint8_t *LFSR)
 
 	if (((*LFSR) & 0x80) != 0) {
 		/* Primitive polynomial over GF(2): x^8+x^6+x^5+x^4+1 */
-		(*LFSR) = ((*LFSR) << 1) ^ 0x71;
+		(*LFSR) = (uint8_t)((*LFSR) << 1) ^ 0x71;
 	} else {
-		(*LFSR) = (*LFSR) << 1;
+		(*LFSR) = (uint8_t)((*LFSR) << 1);
 	}
 	return result;
 }
@@ -208,7 +208,7 @@ keccak_initialise_RoundConstants(KECCAK_CTX *ctx)
 	for (i = 0; i < KECCAK_NUM_ROUNDS; i++) {
 		ctx->RoundConstants[i] = 0;
 		for (j = 0; j < 7; j++) {
-			bitPosition = (1<<j)-1; /*2^j-1 */
+			bitPosition = (unsigned)(1<<j)-1; /*2^j-1 */
 			if (LFSR86540(&LFSRstate)) {
 				ctx->RoundConstants[i] ^= (uint64_t)1<<bitPosition;
 			}
@@ -298,7 +298,7 @@ absorb(KECCAK_CTX *ctx, const uint8_t *data, uint64_t databitlen)
 				absorb_queue(ctx);
 			}
 			if (partialByte > 0) {
-				uint8_t mask = (1 << partialByte)-1;
+				uint8_t mask = (uint8_t)((1 << partialByte)-1);
 				ctx->dataQueue[ctx->bitsInQueue/8] = data[(unsigned long)i/8] & mask;
 				ctx->bitsInQueue += partialByte;
 				i += partialByte;
@@ -313,14 +313,14 @@ PadAndSwitchToSqueezingPhase(KECCAK_CTX *ctx)
 {
 	/* Note: the bits are numbered from 0=LSB to 7=MSB */
 	if (ctx->bitsInQueue + 1 == ctx->rate) {
-		ctx->dataQueue[ctx->bitsInQueue/8 ] |= 1 << (ctx->bitsInQueue % 8);
+		ctx->dataQueue[ctx->bitsInQueue/8 ] |= (uint8_t)(1 << (ctx->bitsInQueue % 8));
 		absorb_queue(ctx);
 		memset(ctx->dataQueue, 0, ctx->rate/8);
 	} else {
 		memset(ctx->dataQueue + (ctx->bitsInQueue+7)/8, 0, ctx->rate/8 - (ctx->bitsInQueue+7)/8);
-		ctx->dataQueue[ctx->bitsInQueue/8 ] |= 1 << (ctx->bitsInQueue % 8);
+		ctx->dataQueue[ctx->bitsInQueue/8 ] |= (uint8_t)(1 << (ctx->bitsInQueue % 8));
 	}
-	ctx->dataQueue[(ctx->rate-1)/8] |= 1 << ((ctx->rate-1) % 8);
+	ctx->dataQueue[(ctx->rate-1)/8] |= (uint8_t)(1 << ((ctx->rate-1) % 8));
 	absorb_queue(ctx);
 	memcpy(ctx->dataQueue, ctx->state, ctx->rate/8);
 	ctx->bitsAvailableForSqueezing = ctx->rate;
@@ -381,7 +381,7 @@ KECCAK_Init(KECCAK_CTX *ctx, int hashbitlen)
 	default:
 		return BAD_HASHLEN;
 	}
-	ctx->fixedOutputLength = hashbitlen;
+	ctx->fixedOutputLength = (uint32_t)hashbitlen;
 	return SUCCESS;
 }
 
@@ -398,7 +398,7 @@ KECCAK_Update(KECCAK_CTX *ctx, const uint8_t *data, uint64_t databitlen)
 		uint8_t lastByte; 
 
 		/* Align the last partial byte to the least significant bits */
-		lastByte = data[(unsigned long)databitlen/8] >> (8 - (databitlen % 8));
+		lastByte = (uint8_t)(data[(unsigned long)databitlen/8] >> (8 - (databitlen % 8)));
 		return absorb((KECCAK_CTX*)ctx, &lastByte, databitlen % 8);
 	}
 	return ret;

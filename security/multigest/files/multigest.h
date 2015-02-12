@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Alistair Crooks <agc@NetBSD.org>
+ * Copyright (c) 2014,2015 Alistair Crooks <agc@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,14 +23,14 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef MULTIGEST_H_
-#define MULTIGEST_H_	20140304
+#define MULTIGEST_H_	20150211
 
 #include <sys/types.h>
 
 #include <inttypes.h>
 
 typedef void	(*mg_initfunc_t)(void *);
-typedef void	(*mg_updatefunc_t)(void *, const char *, unsigned);
+typedef void	(*mg_updatefunc_t)(void *, const void *, unsigned);
 typedef void	(*mg_finalfunc_t)(uint8_t *, void *);
 
 #define MG_MAX_DIG	32
@@ -56,6 +56,8 @@ typedef struct multigest_t {
 	uint8_t		*ctx;		/* digest contexts */
 	uint32_t	 digc;		/* # of digests */
 	multigest_dig_t	 digs[MG_MAX_DIG];	/* digest algorithms being used */
+	uint32_t	 combiner;	/* when finalising, combination algorithm */
+	size_t		 outsize;	/* output size of digest - combiners may change this */
 } multigest_t;
 
 #ifndef __BEGIN_DECLS
@@ -77,12 +79,12 @@ void multigest_free(multigest_t */*s*/);
 /* low-level interface */
 int multigest_init(multigest_t */*multigest*/, const char */*alg*/);
 int multigest_add_subst(multigest_t */*multigest*/, const char */*from*/, const char */*to*/);
-void multigest_update(multigest_t */*multigest*/, const char */*data*/, size_t /*len*/);
+void multigest_update(multigest_t */*multigest*/, const void */*data*/, size_t /*len*/);
 void multigest_final(multigest_t */*multigest*/, uint8_t */*raw*/);
 uint32_t multigest_get_rawsize(multigest_t */*multigest*/);
 
 /* high-level interface */
-uint8_t *multigest_data(const char */*alg*/, const char */*data*/, size_t /*size*/, uint8_t */*raw*/, const char */*pat*/, const char */*repl*/);
+uint8_t *multigest_data(const char */*alg*/, const void */*data*/, size_t /*size*/, uint8_t */*raw*/, const char */*pat*/, const char */*repl*/);
 uint8_t *multigest_file(const char */*alg*/, const char */*f*/, uint8_t */*raw*/, const char */*pat*/, const char */*repl*/);
 uint32_t multigest_algs_rawsize(const char */*algs*/);
 
