@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.856 2015/02/12 05:47:22 mef Exp $
+$NetBSD: CHANGES-2015,v 1.857 2015/02/12 07:13:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1111,3 +1111,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Data-Peek to 0.43 [mef 2015-02-12]
 	Updated devel/p5-Glib-Object-Introspection to 0.027 [mef 2015-02-12]
 	Updated devel/p5-Gnome2 to 1.045 [mef 2015-02-12]
+	Updated devel/p5-Modern-Perl to 1.20150127 [mef 2015-02-12]
+	Updated devel/p5-Module-Build to 0.42110 [mef 2015-02-12]
+	Updated devel/p5-Module-Build-WithXSpp to 0.14 [mef 2015-02-12]
+	Updated devel/p5-Module-Build-XSUtil to 0.14 [mef 2015-02-12]
+	Updated devel/p5-Module-CPANTS-Analyse to 0.96 [mef 2015-02-12]
+	Updated devel/p5-Module-Install-ReadmeFromPod to 0.22 [mef 2015-02-12]
+	Updated devel/p5-Module-Metadata to 1.000026 [mef 2015-02-12]
+	Updated devel/p5-Module-ScanDeps to 1.18 [mef 2015-02-12]
+	Updated devel/p5-Module-Starter to 1.710 [mef 2015-02-12]
