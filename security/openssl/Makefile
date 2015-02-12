@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.201 2015/01/08 16:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2015/02/12 13:08:53 adam Exp $
 
-DISTNAME=	openssl-1.0.1k
-MASTER_SITES=	http://ftp.openssl.org/source/
+DISTNAME=	openssl-1.0.2
 CATEGORIES=	security
+MASTER_SITES=	http://ftp.openssl.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openssl.org/
@@ -26,9 +26,9 @@ MAKE_JOBS_SAFE=		no
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--install_prefix=${DESTDIR}
-CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared no-fips
 
 .if ${OPSYS} == "SunOS"
@@ -87,31 +87,27 @@ SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
 SUBST_SED.dl=		-e 's,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS:Q} ,g'
 
 .elif ${OPSYS} == "AIX"
-CONFIGURE_SCRIPT=      ./Configure
-.if defined(ABI) && ${ABI} == "64"
-.if !empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=       aix64-gcc
-.else
-CONFIGURE_ARGS+=       aix64-cc
-.endif
-.else
-.if !empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=       aix-gcc
-.else
-CONFIGURE_ARGS+=       aix-cc
-.endif
-.endif
+CONFIGURE_SCRIPT=	./Configure
+.  if defined(ABI) && ${ABI} == "64"
+.    if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=	aix64-gcc
+.    else
+CONFIGURE_ARGS+=	aix64-cc
+.    endif
+.  else
+.    if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=	aix-gcc
+.    else
+CONFIGURE_ARGS+=	aix-cc
+.    endif
+.  endif
 .elif ${OPSYS} == "Interix"
-
 SUBST_CLASSES+=		soname
 SUBST_STAGE.soname=	post-configure
 SUBST_FILES.soname=	Makefile.shared
 SUBST_SED.soname=	-e 's/-Wl,-soname=/-Wl,-h,/g'
-
 .elif ${OPSYS} == "HPUX"
-
 CONFIGURE_SCRIPT=	./Configure
-
 .  if ${ABI} == "64"
 .    if ${MACHINE_ARCH} == "hppa"
 CONFIGURE_ARGS+=	hpux64-parisc2-${CC}
