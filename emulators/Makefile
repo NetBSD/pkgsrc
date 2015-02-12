@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2015/02/11 00:16:52 jmcneill Exp $
+# $NetBSD: Makefile,v 1.225 2015/02/12 22:48:28 snj Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -52,6 +52,7 @@ SUBDIR+=	dosbox
 SUBDIR+=	dynagen
 SUBDIR+=	dynamips
 SUBDIR+=	e-uae
+SUBDIR+=	emulationstation
 SUBDIR+=	fceu
 SUBDIR+=	fmsx
 SUBDIR+=	free42
