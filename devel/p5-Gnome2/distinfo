@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/03 22:39:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/02/12 05:45:42 mef Exp $
 
-SHA1 (Gnome2-1.042.tar.gz) = 8f232afac6ca2e8f6770550e754c857142872a68
-RMD160 (Gnome2-1.042.tar.gz) = 4241b7cd96fa5ca2311d0659ceabd511ffd9c2e5
-Size (Gnome2-1.042.tar.gz) = 80062 bytes
+SHA1 (Gnome2-1.045.tar.gz) = ef6f418d10937767cc20d23d2fe6c8a994df0822
+RMD160 (Gnome2-1.045.tar.gz) = e4a5112c960ffdc68728fcc6148444c16589799f
+Size (Gnome2-1.045.tar.gz) = 79262 bytes
