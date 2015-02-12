@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.2 2015/02/12 01:57:57 agc Exp $	*/
 
 /********************************************************************\
  *
@@ -430,10 +430,10 @@ RMD160Final(uint8_t digest[20], RMD160_CTX *context)
 	if (digest != NULL) {
 		for (i = 0; i < 20; i += 4) {
 			/* extracts the 8 least significant bits. */
-			digest[i]     =  context->state[i>>2];
-			digest[i + 1] = (context->state[i>>2] >>  8);
-			digest[i + 2] = (context->state[i>>2] >> 16);
-			digest[i + 3] = (context->state[i>>2] >> 24);
+			digest[i]     =  (uint8_t)context->state[i>>2];
+			digest[i + 1] = (uint8_t)(context->state[i>>2] >>  8);
+			digest[i + 2] = (uint8_t)(context->state[i>>2] >> 16);
+			digest[i + 3] = (uint8_t)(context->state[i>>2] >> 24);
 		}
 	}
 }

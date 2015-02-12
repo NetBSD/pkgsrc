@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $	*/
+/*	$NetBSD: sha1.c,v 1.2 2015/02/12 01:57:57 agc Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -225,8 +225,8 @@ SHA1Update(SHA1_CTX *context, const uint8_t *data, size_t len)
     _DIAGASSERT(data != 0);
 
     j = context->count[0];
-    if ((context->count[0] += len << 3) < j)
-	context->count[1] += (len>>29)+1;
+    if ((context->count[0] += (uint32_t)(len << 3)) < j)
+	context->count[1] += (uint32_t)((len>>29)+1);
     j = (j >> 3) & 63;
     if ((j + len) > 63) {
 	i = 64 - j;
