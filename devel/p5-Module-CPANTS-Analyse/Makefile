@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/05/31 12:56:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/12 06:43:56 mef Exp $
 
-DISTNAME=		Module-CPANTS-Analyse-0.9002
-PKGNAME=		p5-${DISTNAME:S/9002/90.02/}
-PKGREVISION=		4
+DISTNAME=		Module-CPANTS-Analyse-0.96
+PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
 
@@ -17,6 +16,7 @@ DEPENDS+=	p5-Array-Diff>=0.04:../../devel/p5-Array-Diff
 DEPENDS+=	p5-CPAN-DistnameInfo>=0.06:../../devel/p5-CPAN-DistnameInfo
 DEPENDS+=	{perl>=5.19.1,p5-CPAN-Meta>=2.131490}:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-Class-Accessor>=0.19:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile-[0-9]*:../p5-ExtUtils-MakeMaker-CPANfile
 DEPENDS+=	p5-File-Find-Rule-VCS>=0:../../devel/p5-File-Find-Rule-VCS
 DEPENDS+=	p5-IO-Capture>=0.05:../../devel/p5-IO-Capture
 DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
@@ -37,7 +37,7 @@ BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Module/CPANTS/Analyse/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+#ERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
