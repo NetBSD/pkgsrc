@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.864 2015/02/12 13:50:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.865 2015/02/12 22:41:19 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox31 to 31.4.0 [ryoon 2015-02-12]
 	Updated www/firefox31-l10n to 31.4.0 [ryoon 2015-02-12]
 	Updated www/firefox to 35.0.1nb3 [wiz 2015-02-12]
+	Added graphics/freeimage version 3.16.0 [snj 2015-02-12]
