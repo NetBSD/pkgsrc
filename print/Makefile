@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.595 2015/02/10 04:44:01 mef Exp $
+# $NetBSD: Makefile,v 1.596 2015/02/12 05:09:34 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -181,8 +181,8 @@ SUBDIR+=	tex-acmtrans-doc
 SUBDIR+=	tex-acromake
 SUBDIR+=	tex-acromake-doc
 SUBDIR+=	tex-acronym
-SUBDIR+=	tex-adjustbox
 SUBDIR+=	tex-acronym-doc
+SUBDIR+=	tex-adjustbox
 SUBDIR+=	tex-adrconv
 SUBDIR+=	tex-adrconv-doc
 SUBDIR+=	tex-advdate
