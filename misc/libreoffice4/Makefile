@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/02/06 09:33:39 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2015/02/12 11:24:07 wiz Exp $
 
 VERREL=		4.4.0
 VERRC=		3
@@ -20,6 +20,8 @@ LICENSE=	gnu-lgpl-v3
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
 BUILDLINK_TRANSFORM+=	opt:-O2:-O
 .endif
+
+GCC_REQD+=	4.6
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
