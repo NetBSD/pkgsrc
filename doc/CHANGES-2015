@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.854 2015/02/11 15:30:27 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.855 2015/02/12 01:59:30 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1100,3 +1100,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ocsigen to 2.5 [jaapb 2015-02-11]
 	Updated net/miniupnpd to 1.9.20141209 [adam 2015-02-11]
 	Updated www/eliom to 4.1.0 [jaapb 2015-02-11]
+	Updated security/libmultigest to 20150211 [agc 2015-02-11]
+	Updated security/multigest to 20150211 [agc 2015-02-11]
