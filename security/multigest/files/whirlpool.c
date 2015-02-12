@@ -1453,7 +1453,7 @@ whirlpool_update(whirlpool_context_t *structpointer, const unsigned char *source
     /*
      * tally the length of the added data:
      */
-    u64 value = sourceBits;
+    u64 value = (u64)sourceBits;
     for (i = 31, carry = 0; i >= 0 && (carry != 0 || value != LL(0)); i--) {
         carry += bitLength[i] + ((u32)value & 0xff);
         bitLength[i] = (u8)carry;
@@ -1485,7 +1485,7 @@ whirlpool_update(whirlpool_context_t *structpointer, const unsigned char *source
              */
             bufferBits = bufferPos = 0;
         }
-        buffer[bufferPos] = b << (8 - bufferRem);
+        buffer[bufferPos] = (u8)(b << (8 - bufferRem));
         bufferBits += bufferRem;
         /*
          * proceed to remaining data:
@@ -1501,7 +1501,7 @@ whirlpool_update(whirlpool_context_t *structpointer, const unsigned char *source
         /*
          * process the remaining bits:
          */
-        buffer[bufferPos] |= b >> bufferRem;
+        buffer[bufferPos] |= (u8)(b >> bufferRem);
     } else {
         b = 0;
     }
@@ -1531,7 +1531,7 @@ whirlpool_update(whirlpool_context_t *structpointer, const unsigned char *source
              */
             bufferBits = bufferPos = 0;
         }
-        buffer[bufferPos] = b << (8 - bufferRem);
+        buffer[bufferPos] = (u8)(b << (8 - bufferRem));
         bufferBits += (int)sourceBits;
     }
     structpointer->bufferBits   = bufferBits;
@@ -1556,14 +1556,14 @@ whirlpool_finalize(char *result, whirlpool_context_t *structpointer)
     /*
      * append a '1'-bit:
      */
-    buffer[bufferPos] |= 0x80U >> (bufferBits & 7);
+    buffer[bufferPos] |= (u8)(0x80U >> (bufferBits & 7));
     bufferPos++; /* all remaining bits on the current u8 are set to zero. */
     /*
      * pad with zero bits to complete (N*WHIRLPOOL_WBLOCK_BITS - WHIRLPOOL_LENGTH_BITS) bits:
      */
     if (bufferPos > WHIRLPOOL_WBLOCK_BYTES - WHIRLPOOL_LENGTH_BYTES) {
         if (bufferPos < WHIRLPOOL_WBLOCK_BYTES) {
-            memset(&buffer[bufferPos], 0, WHIRLPOOL_WBLOCK_BYTES - bufferPos);
+            memset(&buffer[bufferPos], 0, (size_t)(WHIRLPOOL_WBLOCK_BYTES - bufferPos));
         }
         /*
          * process data block:
@@ -1575,7 +1575,7 @@ whirlpool_finalize(char *result, whirlpool_context_t *structpointer)
         bufferPos = 0;
     }
     if (bufferPos < WHIRLPOOL_WBLOCK_BYTES - WHIRLPOOL_LENGTH_BYTES) {
-        memset(&buffer[bufferPos], 0, (WHIRLPOOL_WBLOCK_BYTES - WHIRLPOOL_LENGTH_BYTES) - bufferPos);
+        memset(&buffer[bufferPos], 0, (size_t)((WHIRLPOOL_WBLOCK_BYTES - WHIRLPOOL_LENGTH_BYTES) - bufferPos));
     }
     bufferPos = WHIRLPOOL_WBLOCK_BYTES - WHIRLPOOL_LENGTH_BYTES;
     /*
@@ -1590,14 +1590,14 @@ whirlpool_finalize(char *result, whirlpool_context_t *structpointer)
      * return the completed message digest:
      */
     for (i = 0; i < WHIRLPOOL_DIGEST_BYTES/8; i++) {
-        digest[0] = (u8)(structpointer->hash[i] >> 56);
-        digest[1] = (u8)(structpointer->hash[i] >> 48);
-        digest[2] = (u8)(structpointer->hash[i] >> 40);
-        digest[3] = (u8)(structpointer->hash[i] >> 32);
-        digest[4] = (u8)(structpointer->hash[i] >> 24);
-        digest[5] = (u8)(structpointer->hash[i] >> 16);
-        digest[6] = (u8)(structpointer->hash[i] >>  8);
-        digest[7] = (u8)(structpointer->hash[i]      );
+        digest[0] = (char)(structpointer->hash[i] >> 56);
+        digest[1] = (char)(structpointer->hash[i] >> 48);
+        digest[2] = (char)(structpointer->hash[i] >> 40);
+        digest[3] = (char)(structpointer->hash[i] >> 32);
+        digest[4] = (char)(structpointer->hash[i] >> 24);
+        digest[5] = (char)(structpointer->hash[i] >> 16);
+        digest[6] = (char)(structpointer->hash[i] >>  8);
+        digest[7] = (char)(structpointer->hash[i]      );
         digest += 8;
     }
     structpointer->bufferBits   = bufferBits;

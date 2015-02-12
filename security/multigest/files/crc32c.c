@@ -540,9 +540,9 @@ crc32c_sb8_64_bit(uint32_t crc,
 			p_buf += 4;
 		} else {
 			crc ^= *p_buf++;
-			crc ^= (*p_buf++) << 8;
-			crc ^= (*p_buf++) << 16;
-			crc ^= (*p_buf++) << 24;
+			crc ^= (uint32_t)(*p_buf++) << 8;
+			crc ^= (uint32_t)(*p_buf++) << 16;
+			crc ^= (uint32_t)(*p_buf++) << 24;
 		}
 		term1 = crc_tableil8_o88[crc & 0x000000FF] ^
 		    crc_tableil8_o80[(crc >> 8) & 0x000000FF];

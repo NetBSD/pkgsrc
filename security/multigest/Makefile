@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/12 01:57:57 agc Exp $
 
-DISTNAME=		multigest-20140303
+DISTNAME=		multigest-20150211
 CATEGORIES=		security
 MASTER_SITES=		# not used
 DISTFILES=		# not used
