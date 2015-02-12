@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/09/15 21:54:19 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2015/02/12 13:09:22 schmonz Exp $
 
-SHA1 (FindBin-libs-2.11.tar.gz) = c6e43b833fe72bbf070c953aeb6c47242f1da0d9
-RMD160 (FindBin-libs-2.11.tar.gz) = 747d8dafd8af800e50f5ed593f334bed977bb832
-Size (FindBin-libs-2.11.tar.gz) = 20552 bytes
+SHA1 (FindBin-libs-2.12.tar.gz) = 495e2ef4dcaa734c5ffd6d31fdf103e834b3ec6f
+RMD160 (FindBin-libs-2.12.tar.gz) = 32bbfa5e5e389232da39798a5a1119436d0b36b1
+Size (FindBin-libs-2.12.tar.gz) = 27829 bytes
