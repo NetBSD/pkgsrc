@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14119 2015/02/10 22:59:02 wiz Exp $
+$NetBSD: TODO,v 1.14120 2015/02/12 11:55:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -482,6 +482,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dk-milter-1.0.2 [wip]
 	o doclifter-2.15
 	o dolphin-4.0.2
+	o dos2unix-7.2
 	o drivel-3.0.5
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
@@ -801,7 +802,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mksh-49
 	o mkvtoolnix-7.6.0
-	o modular-xorg-server-1.17.0
+	o modular-xorg-server-1.16.4
+	o modular-xorg-server-1.17.1
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-3.12.0
 	o moserial-2.30.0 [GNOME 2.30]
