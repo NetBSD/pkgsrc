@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/02/11 12:51:41 adam Exp $
+# $NetBSD: options.mk,v 1.7 2015/02/12 08:54:15 adam Exp $
 
 # Global and legacy options
 
@@ -79,6 +79,7 @@ CONFIGURE_ARGS+=	--disable-libopencore-amrwb
 
 # OpenSSL support
 .if !empty(PKG_OPTIONS:Mopenssl)
+CONFIGURE_ARGS+=	--enable-nonfree
 CONFIGURE_ARGS+=	--enable-openssl
 .include "../../security/openssl/buildlink3.mk"
 .else
