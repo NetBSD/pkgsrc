@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/02/12 22:40:05 snj Exp $
+
+SHA1 (FreeImage3160.zip) = a70600d288fe5bd11131e85e6f857a93bb100ad8
+RMD160 (FreeImage3160.zip) = f0dcfb1514a288bbb2bc182130469b91d575e6cd
+Size (FreeImage3160.zip) = 5669228 bytes
+SHA1 (patch-Makefile) = 719f3539d1e841761c8cf442634d71e792ea7231
+SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 4ba7924e5ce04b98c9c249bc31df600b7fbdcde3
