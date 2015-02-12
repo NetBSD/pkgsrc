@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.33 2012/10/03 22:14:03 wiz Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.34 2015/02/12 08:22:16 abs Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -102,6 +102,7 @@ usage()
 {
     echo "Usage: pkg_rolling-replace [opts]
         -h         This help
+        -B         Pass -B to pkg_chk (only applies with -u)
         -F         Fetch sources (including depends) only, don't build
         -k         Keep running, even on error
         -n         Don't actually do make replace
@@ -150,7 +151,7 @@ OPC='rr>' # continuation
 # supported.  Newer versions may or may not work (patches welcome).
 check_packages_mismatched()
 {
-    ${PKG_CHK} -u -q | while read line; do
+    ${PKG_CHK} -u -q $opt_B | while read line; do
         # duplicate output of pkg_chk to stderr (bypass $(...) or `...`)
         echo "${OPC} $line" 1>&2
 	# Look for the first thing that looks like pkg-version rather
@@ -332,13 +333,14 @@ EXCLUDE=
 MAKE_VAR="IN_PKG_ROLLING_REPLACE=1"
 MAKE_VAR_SEP=" "
 
-args=$(getopt FhknursvD:x:X:L: $*)
+args=$(getopt BFhknursvD:x:X:L: $*)
 if [ $? -ne 0 ]; then
     opt_h=1
 fi
 set -- $args
 while [ $# -gt 0 ]; do
     case "$1" in
+        -B) opt_B=-B ;;
         -F) opt_F=1 ;;
         -h) opt_h=1 ;;
         -k) opt_k=1 ;;
