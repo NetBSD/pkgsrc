@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.855 2015/02/12 01:59:30 agc Exp $
+$NetBSD: CHANGES-2015,v 1.856 2015/02/12 05:47:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1102,3 +1102,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/eliom to 4.1.0 [jaapb 2015-02-11]
 	Updated security/libmultigest to 20150211 [agc 2015-02-11]
 	Updated security/multigest to 20150211 [agc 2015-02-11]
+	Updated devel/p5-CPAN-Uploader to 0.103008 [mef 2015-02-12]
+	Updated devel/p5-Capture-Tiny to 0.28 [mef 2015-02-12]
+	Updated devel/p5-Data-Peek to 0.43 [mef 2015-02-12]
+	Updated devel/p5-Glib-Object-Introspection to 0.027 [mef 2015-02-12]
+	Updated devel/p5-CPAN-Uploader to 0.103008 [mef 2015-02-12]
+	Updated devel/p5-Capture-Tiny to 0.28 [mef 2015-02-12]
+	Updated devel/p5-Data-Peek to 0.43 [mef 2015-02-12]
+	Updated devel/p5-Glib-Object-Introspection to 0.027 [mef 2015-02-12]
+	Updated devel/p5-Gnome2 to 1.045 [mef 2015-02-12]
