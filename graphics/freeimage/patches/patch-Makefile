@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2015/02/12 22:40:05 snj Exp $
+
+--- Makefile.gnu.orig	2014-03-16 00:02:08.000000000 -0700
++++ Makefile.gnu	2015-02-12 02:12:58.000000000 -0800
+@@ -5,8 +5,8 @@ include Makefile.srcs
+ 
+ # General configuration variables:
+ DESTDIR ?= /
+-INCDIR ?= $(DESTDIR)/usr/include
+-INSTALLDIR ?= $(DESTDIR)/usr/lib
++INCDIR ?= $(DESTDIR)/$(PREFIX)/include
++INSTALLDIR ?= $(DESTDIR)/$(PREFIX)/lib
+ 
+ # Converts cr/lf to just lf
+ DOS2UNIX = dos2unix
+@@ -28,10 +28,8 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
+ CXXFLAGS += -D__ANSI__
+ CXXFLAGS += $(INCLUDE)
+ 
+-ifeq ($(shell sh -c 'uname -m 2>/dev/null || echo not'),x86_64)
+-	CFLAGS += -fPIC
+-	CXXFLAGS += -fPIC
+-endif
++CFLAGS += -fPIC
++CXXFLAGS += -fPIC
+ 
+ TARGET  = freeimage
+ STATICLIB = lib$(TARGET).a
+@@ -69,10 +67,9 @@ $(SHAREDLIB): $(MODULES)
+ 	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
+ 
+ install:
+-	install -d $(INCDIR) $(INSTALLDIR)
+-	install -m 644 -o root -g root $(HEADER) $(INCDIR)
+-	install -m 644 -o root -g root $(STATICLIB) $(INSTALLDIR)
+-	install -m 755 -o root -g root $(SHAREDLIB) $(INSTALLDIR)
++	$(BSD_INSTALL_DATA) $(HEADER) $(INCDIR)
++	$(BSD_INSTALL_DATA) $(STATICLIB) $(INSTALLDIR)
++	$(BSD_INSTALL_LIB) $(SHAREDLIB) $(INSTALLDIR)
+ 	ln -sf $(SHAREDLIB) $(INSTALLDIR)/$(VERLIBNAME)
+ 	ln -sf $(VERLIBNAME) $(INSTALLDIR)/$(LIBNAME)	
+ #	ldconfig
