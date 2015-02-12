@@ -1,6 +1,7 @@
-# $NetBSD: bootstrap.mk,v 1.1 2015/02/08 08:41:25 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2015/02/12 06:19:59 tnn Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[567].*-i386 NetBSD-[567].*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-7.*-sparc64
 ONLY_FOR_PLATFORM+=	DragonFly-[23].*-* SunOS-*-* FreeBSD-10.*-x86_64
 
 BOOT.nb5-i386=		bootstrap-jdk7u60-bin-netbsd-5-i386-20140719.tar.bz2
@@ -9,6 +10,7 @@ BOOT.nb6-i386=		bootstrap-jdk7u60-bin-netbsd-6-i386-20140719.tar.bz2
 BOOT.nb6-amd64=		bootstrap-jdk7u60-bin-netbsd-6-amd64-20140719.tar.bz2
 BOOT.nb7-i386=		bootstrap-jdk7u60-bin-netbsd-7-i386-20140719.tar.bz2
 BOOT.nb7-amd64=		bootstrap-jdk7u60-bin-netbsd-7-amd64-20140719.tar.bz2
+BOOT.nb7-sparc64=	bootstrap-jdk7u76-bin-netbsd-7-sparc64-20150212.tar.xz
 BOOT.dfly3.6-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2
 BOOT.dfly3.8-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2
 BOOT.fbsd10-amd64=	bootstrap-jdk7u71-bin-freebsd-10-x86_64-20150101.tar.bz2
@@ -41,6 +43,11 @@ EXTRACT_ONLY+=		${BOOT.nb7-i386}
 .if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-7*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-amd64}
 EXTRACT_ONLY+=		${BOOT.nb7-amd64}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-7*-sparc64) || make(distinfo)
+#DISTFILES+=		${BOOT.nb7-sparc64}
+#EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDragonFly-3.6*-x86_64) || make(distinfo)

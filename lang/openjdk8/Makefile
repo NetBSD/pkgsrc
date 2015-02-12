@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/10 11:44:32 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/12 06:19:59 tnn Exp $
 
 DISTNAME=	openjdk-1.8.31-20150207
 PKGNAME=	openjdk8-1.8.31
@@ -60,13 +60,16 @@ CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
-BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}-${MACHINE_ARCH:S/i386/x86/}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
-LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
+BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}
+BUILD_ARCH=	${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/}
+LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/}
+BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
+LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
 CONFIGURE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk8/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk8/jre/lib/${LIBDIR_ARCH}
 
-PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
+PLIST_SUBST+=	ARCH=${LIBDIR_ARCH}
 PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 
 .include "../../mk/compiler.mk"
@@ -132,7 +135,7 @@ post-extract:
 	${LN} -s ${JDK_BOOTDIR}/bin/native2ascii ${ALT_BOOTDIR}/bin
 	${LN} -s ${JDK_BOOTDIR}/bin/rmic ${ALT_BOOTDIR}/bin
 .elif ${OPSYS} == "NetBSD" && exists(${.CURDIR}/libs)
-	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
+	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}
 .endif
 
 do-build: ${WRKDIR}/stage3-done
@@ -145,16 +148,21 @@ ${WRKDIR}/stage1-done:
 .for d in corba hotspot jaxp jaxws langtools tmp
 	mv ${BUILDDIR}/${d} ${BUILDDIR}/${d}-stage1
 .endfor
-	touch ${WRKDIR}/stage1-done
+	touch ${.TARGET}
+
+# stage 1.5 reconfigures, since the bootstrap JDK major version might have changed now
+${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
+	${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
+	touch ${.TARGET}
 
 # stage 2 rebuilds the JDK using native tools
-${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} images
-	touch ${WRKDIR}/stage2-done
+${WRKDIR}/stage2-done: ${WRKDIR}/stage1_5-done
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_ENV_STAGE2} ${MAKE_PROGRAM} images
+	touch ${.TARGET}
 
 # stage 3 builds third party add-ons
 ${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
-	touch ${WRKDIR}/stage3-done
+	touch ${.TARGET}
 
 ${WRKDIR}/cacerts.out:
 	mkdir ${WRKDIR}/cacerts && cd ${WRKDIR}/cacerts && 		\
@@ -192,6 +200,6 @@ TOOLS_PLATFORM.unzip=
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"

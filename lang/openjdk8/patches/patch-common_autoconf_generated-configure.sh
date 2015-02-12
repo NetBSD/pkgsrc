@@ -1,7 +1,25 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.2 2015/02/10 08:20:27 tnn Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.3 2015/02/12 06:20:00 tnn Exp $
 
 --- common/autoconf/generated-configure.sh.orig	2015-02-02 15:31:06.000000000 +0000
 +++ common/autoconf/generated-configure.sh
+@@ -6859,7 +6859,7 @@ test -n "$target_alias" &&
+       VAR_CPU_BITS=32
+       VAR_CPU_ENDIAN=big
+       ;;
+-    sparcv9)
++    sparcv9|sparc64)
+       VAR_CPU=sparcv9
+       VAR_CPU_ARCH=sparc
+       VAR_CPU_BITS=64
+@@ -6990,7 +6990,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
+       VAR_CPU_BITS=32
+       VAR_CPU_ENDIAN=big
+       ;;
+-    sparcv9)
++    sparcv9|sparc64)
+       VAR_CPU=sparcv9
+       VAR_CPU_ARCH=sparc
+       VAR_CPU_BITS=64
 @@ -8379,9 +8379,9 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
    if test "x$MAKE" != x; then
