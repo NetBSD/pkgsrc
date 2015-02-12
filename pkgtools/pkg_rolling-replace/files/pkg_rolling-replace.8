@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.19 2010/02/01 19:06:43 sno Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.20 2015/02/12 08:22:16 abs Exp $
 .Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -7,7 +7,7 @@
 .Nd rebuild or update packages using 'make replace' in tsorted order
 .Sh SYNOPSIS
 .Nm
-.Op Fl Fhknrsuv
+.Op Fl BFhknrsuv
 .Op Fl D Ar VARIABLE=VALUE
 .Op Fl L Ar path
 .Op Fl X Ar pkgs
@@ -70,6 +70,12 @@ assuming the pkgsrc tree is more recent than the currently installed
 packages.)
 .Ss Options
 .Bl -tag -width xxxxxxxx
+.It Fl B
+Pass
+.Dq -B
+to
+.Xl pkg_chk 8
+to also mark any packages with any change in build version data.
 .It Fl D Ar VARIABLE=VALUE
 Passes VARIABLE=VALUE to each make call.
 .Dq -D
