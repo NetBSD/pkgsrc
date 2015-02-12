@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.857 2015/02/12 07:13:16 mef Exp $
+$NetBSD: CHANGES-2015,v 1.858 2015/02/12 08:23:13 abs Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1120,3 +1120,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-Metadata to 1.000026 [mef 2015-02-12]
 	Updated devel/p5-Module-ScanDeps to 1.18 [mef 2015-02-12]
 	Updated devel/p5-Module-Starter to 1.710 [mef 2015-02-12]
+        Updated pkgtools/pkg_rolling-replace to 0.24.2 [abs 2015-02-12]
