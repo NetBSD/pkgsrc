@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/02/12 06:19:59 tnn Exp $
+$NetBSD: distinfo,v 1.6 2015/02/12 11:17:17 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 98fdb66b429148ae3922a2f9b2db736a1708e337
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 4835c6361f66138d73f583c40df0e04a31257157
@@ -49,6 +49,7 @@ SHA1 (patch-hotspot_src_os_bsd_vm_osThread__bsd.cpp) = c34887b4bf0873c70a44adaaa
 SHA1 (patch-hotspot_src_os_posix_vm_os__posix.cpp) = f38d3ea8002bc8c58d1cf05e70424858dabd2991
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = aacb4e03f62f1a6f9b38de39a966c318b70b1293
 SHA1 (patch-jdk_make_CompileLaunchers.gmk) = 76bae0aab5528a6c020d2fdd5ba7c1ffa132aca2
+SHA1 (patch-jdk_make_CreateJars.gmk) = 254a82b2bebff661def331ef67c06cba4e969db0
 SHA1 (patch-jdk_make_GenerateSources.gmk) = ec1b64805afb6edca637d87529b1d3fa59d20828
 SHA1 (patch-jdk_make_Images.gmk) = 3ce8b5ee63cb9e4a7a32294f52191bb81a695723
 SHA1 (patch-jdk_make_lib_SoundLibraries.gmk) = 27c33019f28d38efc0ae2c019b3e6e44863e8253
