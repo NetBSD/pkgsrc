@@ -1,0 +1,35 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/02/13 11:12:23 jmcneill Exp $
+
+--- configure.ac.orig	2014-10-31 19:11:22.000000000 +0000
++++ configure.ac
+@@ -81,7 +81,7 @@ AC_ARG_WITH([rpi-include-path],
+ AC_ARG_WITH([rpi-lib-path],
+   [AS_HELP_STRING([--with-rpi-lib-path],
+     [location of the Raspberry Pi libraries (location of libbcm_host.so, default is auto)])],
+-  [RPI_LIBS="-L$withval"])
++  [RPI_LIBS="-Wl,-R$withval -L$withval"])
+ 
+ ## only check for the RPi API on ARM targets
+ if test "x$use_rpi" != "xno"; then
+@@ -139,7 +139,7 @@ use_adapter_detection="yes"
+ use_lockdev="no"
+ SUPPRESS_MANGLING_WARNINGS=" -Wno-psabi"
+ case "${host}" in
+-  *-*-linux*)
++  *-*-linux*|*-*-netbsd*)
+     ## search for udev if pkg-config was found
+     if test "x$HAVE_PKG_CONFIG" = "xyes" ; then
+       PKG_CHECK_MODULES([UDEV],[libudev],use_udev="yes",AC_MSG_WARN($msg_udev_missing))
+@@ -160,7 +160,11 @@ case "${host}" in
+     AC_CHECK_LIB(lockdev,dev_unlock,,[use_lockdev="no";AC_MSG_WARN($msg_lockdev_missing)])
+ 
+     AC_CHECK_HEADER(time.h,,AC_MSG_ERROR($msg_required_header_missing))
+-    AC_CHECK_HEADER(sys/prctl.h,,AC_MSG_ERROR($msg_required_header_missing))
++    case "${host}" in
++    *-*-linux*)
++      AC_CHECK_HEADER(sys/prctl.h,,AC_MSG_ERROR($msg_required_header_missing))
++      ;;
++    esac
+ 
+     ## search for the RPi API. we need to check a couple of things to see if
+     ## it's recent enough and contains the calls needed for libCEC to operate
