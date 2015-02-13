@@ -1,7 +1,9 @@
-$NetBSD: patch-src_qt_YabauseThread.cpp,v 1.1 2014/01/10 20:02:56 joerg Exp $
+$NetBSD: patch-src_qt_YabauseThread.cpp,v 1.2 2015/02/13 05:45:10 snj Exp $
 
---- src/qt/YabauseThread.cpp.orig	2014-01-10 11:41:07.000000000 +0000
-+++ src/qt/YabauseThread.cpp
+Add missing include for struct tm.
+
+--- src/qt/YabauseThread.cpp.orig	2014-11-12 09:48:47.000000000 -0800
++++ src/qt/YabauseThread.cpp	2015-02-08 22:53:26.000000000 -0800
 @@ -29,6 +29,7 @@
  #include <QDateTime>
  #include <QStringList>
