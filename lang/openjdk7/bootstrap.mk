@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.15 2015/02/12 06:18:17 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.16 2015/02/13 10:47:40 tnn Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[567].*-i386 NetBSD-[567].*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-7.*-sparc64
@@ -46,8 +46,8 @@ EXTRACT_ONLY+=		${BOOT.nb7-amd64}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-7*-sparc64) || make(distinfo)
-#DISTFILES+=		${BOOT.nb7-sparc64}
-#EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
+DISTFILES+=		${BOOT.nb7-sparc64}
+EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDragonFly-3.6*-x86_64) || make(distinfo)
