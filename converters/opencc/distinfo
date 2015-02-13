@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/01 00:05:38 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/02/13 17:07:52 jperkin Exp $
 
 SHA1 (opencc-0.4.2.tar.gz) = 1e4216e5fe21b16836063f23d0341cb54dbce97c
 RMD160 (opencc-0.4.2.tar.gz) = 9aed1e700250601d653baf2a7284b489441a08be
 Size (opencc-0.4.2.tar.gz) = 725353 bytes
+SHA1 (patch-src_symbols.cmake) = e7ef6f750532e8a6cbdc9ad003d76853336e9bd7
