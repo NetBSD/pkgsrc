@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.867 2015/02/13 03:04:56 taca Exp $
+$NetBSD: CHANGES-2015,v 1.868 2015/02/13 05:45:30 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1133,3 +1133,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/emulationstation version 2.0.0_rc1_20150210 [snj 2015-02-12]
 	Updated www/contao32 to 3.2.19 [taca 2015-02-13]
 	Updated www/contao34 to 3.4.4 [taca 2015-02-13]
+	Updated emulators/yabause to 0.9.14 [snj 2015-02-13]
