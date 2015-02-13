@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.2 2014/11/29 22:19:55 joerg Exp $ */
+/* $NetBSD: common.h,v 1.3 2015/02/13 22:18:38 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -36,6 +36,7 @@
 #include <nbcompat/queue.h>
 #include <inttypes.h>
 #include <stdio.h>
+#include <unistd.h>
 
 extern const char library_name_chars[];
 extern char *exec_path;
