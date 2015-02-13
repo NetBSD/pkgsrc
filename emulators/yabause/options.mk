@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.4 2014/01/06 15:28:35 rodent Exp $
+# $NetBSD: options.mk,v 1.5 2015/02/13 05:45:09 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yabause
 PKG_SUPPORTED_OPTIONS=	openal opengl sdl
-PKG_OPTIONS_OPTIONAL_GROUPS=	GUI #SDL
+PKG_OPTIONS_OPTIONAL_GROUPS=	GUI SDL
 PKG_OPTIONS_GROUP.GUI=		gtk qt
-#PKG_OPTIONS_GROUP.SDL=		sdl sdl2
+PKG_OPTIONS_GROUP.SDL=		sdl sdl2
 
-PKG_SUGGESTED_OPTIONS=	qt sdl
+PKG_SUGGESTED_OPTIONS=	qt sdl2
 
 .include "../../mk/bsd.options.mk"
 
@@ -44,11 +44,8 @@ CMAKE_ARGS+=	-DYAB_WANT_OPENGL=OFF
 
 .if !empty(PKG_OPTIONS:Msdl)
 .include "../../devel/SDL/buildlink3.mk"
-CMAKE_ARGS+=	-DYAB_WANT_SDL=ON
-#.elif !empty(PKG_OPTIONS:Msdl2)
-#.include "../../devel/SDL2/buildlink3.mk"
-#CMAKE_ARGS+=	-DYAB_WANT_SDL=ON
-#BUILDLINK_TRANSFORM+=	l:SDL:SDL2
-.else
-CMAKE_ARGS+=	-DYAB_WANT_SDL=OFF
+CMAKE_ARGS+=	-DYAB_WANT_SDL1=ON
+.elif !empty(PKG_OPTIONS:Msdl2)
+.include "../../devel/SDL2/buildlink3.mk"
+CMAKE_ARGS+=	-DYAB_WANT_SDL2=ON
 .endif
