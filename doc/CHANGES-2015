@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.874 2015/02/13 14:55:56 mef Exp $
+$NetBSD: CHANGES-2015,v 1.875 2015/02/13 15:43:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1153,3 +1153,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Coro to 6.42 [mef 2015-02-13]
 	Updated devel/p5-Async-Interrupt to 1.21 [mef 2015-02-13]
 	Updated devel/p5-AppConfig to 1.69 [mef 2015-02-13]
+	Updated devel/p5-MooX-Options to 4.017 [mef 2015-02-13]
