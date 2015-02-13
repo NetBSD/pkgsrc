@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2014/12/04 05:22:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.56 2015/02/13 16:28:57 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -1821,6 +1821,7 @@ lib/thunderbird/components/Webapps.js
 lib/thunderbird/components/aboutRedirector.js
 lib/thunderbird/components/addonManager.js
 lib/thunderbird/components/amContentHandler.js
+lib/thunderbird/components/amInstallTrigger.js
 lib/thunderbird/components/amWebInstallListener.js
 lib/thunderbird/components/components.manifest
 lib/thunderbird/components/contentAreaDropListener.js
