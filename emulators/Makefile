@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2015/02/12 22:48:28 snj Exp $
+# $NetBSD: Makefile,v 1.226 2015/02/13 21:21:58 snj Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -91,6 +91,7 @@ SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-snes9x-next
 SUBDIR+=	libretro-stella
+SUBDIR+=	libretro-vba-next
 SUBDIR+=	libspectrum
 SUBDIR+=	lrmi
 SUBDIR+=	m1
