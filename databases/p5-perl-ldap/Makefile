@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 13:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/02/13 13:24:53 mef Exp $
 
 DISTNAME=	perl-ldap-0.63
+PKGREVISION=	1
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
@@ -14,6 +15,7 @@ BUILD_DEFS+=	IPV6_READY
 
 DEPENDS+=	p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-IO-Socket-SSL>=0.81:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-Text-Soundex-[0-9]*:../../textproc/p5-Text-Soundex
 DEPENDS+=	{perl>=5.8.0,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-XML-SAX-Writer-[0-9]*:../../textproc/p5-XML-SAX-Writer
