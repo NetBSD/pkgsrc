@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/08/29 14:08:40 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2015/02/13 19:26:49 pho Exp $
 
 BUILDLINK_TREE+=	ghc
 
@@ -8,6 +8,12 @@ GHC_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.ghc+=	ghc>=7.6.3
 BUILDLINK_ABI_DEPENDS.ghc+=	ghc>=7.6.3nb4
 BUILDLINK_PKGSRCDIR.ghc?=	../../lang/ghc7
+
+# On FreeBSD we need pkgsrc libiconv. See bootstrap.mk for details.
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "FreeBSD"
+USE_BUILTIN.iconv=	no
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
