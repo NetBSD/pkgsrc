@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2014/08/25 20:02:32 kim Exp $
+$NetBSD: patch-ae,v 1.6 2015/02/13 04:44:40 rodent Exp $
 
 Don't pollute G1 to allow 8-bit encondings.
 
@@ -6,8 +6,8 @@ The original code made the TERMCAP env var longer than 1023 bytes,
 which causes problems.  This is a quick hack but works with our termcap.
 
 --- termcap.c.orig	2014-04-26 10:58:35.000000000 +0000
-+++ termcap.c	2014-08-25 17:55:13.000000000 +0000
-@@ -80,7 +80,7 @@
++++ termcap.c
+@@ -80,7 +80,7 @@ static const char TermcapConst[] = "\\\n
  \t:DO=\\E[%dB:LE=\\E[%dD:RI=\\E[%dC:UP=\\E[%dA:bs:bt=\\E[Z:\\\n\
  \t:cd=\\E[J:ce=\\E[K:cl=\\E[H\\E[J:cm=\\E[%i%d;%dH:ct=\\E[3g:\\\n\
  \t:do=^J:nd=\\E[C:pt:rc=\\E8:rs=\\Ec:sc=\\E7:st=\\EH:up=\\EM:\\\n\
@@ -16,7 +16,7 @@ which causes problems.  This is a quick hack but works with our termcap.
  
  char *
  gettermcapstring(s)
-@@ -826,7 +826,7 @@
+@@ -826,7 +826,7 @@ char *s;
  {
    register int n;
  

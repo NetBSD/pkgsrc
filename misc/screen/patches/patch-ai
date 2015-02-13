@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.4 2014/08/25 20:02:32 kim Exp $
+$NetBSD: patch-ai,v 1.5 2015/02/13 04:44:40 rodent Exp $
 
 This glues in the code from patch-am (see also path-al and patch-an).
 
 --- os.h.orig	2014-04-26 10:58:35.000000000 +0000
-+++ os.h	2014-08-25 17:55:13.000000000 +0000
++++ os.h
 @@ -71,9 +71,6 @@
  # undef exit
  #endif /* sun */
@@ -14,7 +14,7 @@ This glues in the code from patch-am (see also path-al and patch-an).
  #ifndef HAVE_STRERROR
  /* No macros, please */
  #undef strerror
-@@ -250,9 +247,18 @@
+@@ -250,9 +247,18 @@ extern int errno;
  #endif
  
  #if defined(UTMPOK) || defined(BUGGYGETLOGIN)

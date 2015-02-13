@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.4 2014/08/25 20:02:32 kim Exp $
+$NetBSD: patch-an,v 1.5 2015/02/13 04:44:40 rodent Exp $
 
 Remove GNU Make conditional.  @ETCSCREENRC@ appears to get
 replaced always. If it doesn't in some cases, please fix
@@ -9,8 +9,8 @@ Setting the setuid bit is handled by the package Makefile.
 Don't try to leave "screen.old" behind on install.
 
 --- Makefile.in.orig	2014-04-26 10:58:35.000000000 +0000
-+++ Makefile.in	2014-08-25 19:05:49.000000000 +0000
-@@ -26,9 +26,6 @@
++++ Makefile.in
+@@ -26,9 +26,6 @@ GIT_REV = "`git describe --always 2>/dev
  DEFS = @DEFS@ -DGIT_REV=\"$(GIT_REV)\"
  
  ETCSCREENRC = @ETCSCREENRC@
@@ -20,7 +20,7 @@ Don't try to leave "screen.old" behind on install.
  SCREENENCODINGS = $(datadir)/screen/utf8encodings
  
  CC = @CC@
-@@ -65,12 +62,12 @@
+@@ -65,12 +62,12 @@ CFILES=	screen.c ansi.c fileio.c mark.c 
  	termcap.c input.c attacher.c pty.c process.c display.c comm.c \
  	kmapdef.c acls.c braille.c braille_tsi.c logfile.c layer.c \
  	sched.c teln.c nethack.c encoding.c canvas.c layout.c viewport.c \
@@ -35,7 +35,7 @@ Don't try to leave "screen.old" behind on install.
  	sched.o teln.o nethack.o encoding.o canvas.o layout.o viewport.o
  
  all:	screen
-@@ -86,9 +83,6 @@
+@@ -86,9 +83,6 @@ install_bin: .version screen
  	-if [ -f $(DESTDIR)$(bindir)/$(SCREEN) ] && [ ! -f $(DESTDIR)$(bindir)/$(SCREEN).old ]; \
  		then mv $(DESTDIR)$(bindir)/$(SCREEN) $(DESTDIR)$(bindir)/$(SCREEN).old; fi
  	$(INSTALL_PROGRAM) screen $(DESTDIR)$(bindir)/$(SCREEN)

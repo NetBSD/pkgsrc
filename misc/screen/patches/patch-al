@@ -1,12 +1,12 @@
-$NetBSD: patch-al,v 1.3 2014/08/25 20:02:32 kim Exp $
+$NetBSD: patch-al,v 1.4 2015/02/13 04:44:40 rodent Exp $
 
 Make extra calls to remove utmp entries when utmpx is used.
 For non-login entries we only update utmpx, as it stores
 more information, and utilities are reading both.
 
 --- utmp.c.orig	2014-04-26 16:22:09.000000000 +0000
-+++ utmp.c	2014-08-25 17:55:13.000000000 +0000
-@@ -48,6 +48,12 @@
++++ utmp.c
+@@ -48,6 +48,12 @@ extern char *LoginName;
  extern int real_uid, eff_uid;
  
  
@@ -19,7 +19,7 @@ more information, and utilities are reading both.
  /*
   *  UTNOKEEP: A (ugly) hack for apollo that does two things:
   *    1) Always close and reopen the utmp file descriptor. (I don't know
-@@ -315,6 +321,9 @@
+@@ -315,6 +321,9 @@ RemoveLoginSlot()
  
    ASSERT(display);
    debug("RemoveLoginSlot: removing your logintty\n");
@@ -29,7 +29,7 @@ more information, and utilities are reading both.
    D_loginslot = TtyNameSlot(D_usertty);
    if (D_loginslot == (slot_t)0 || D_loginslot == (slot_t)-1)
      return;
-@@ -379,6 +388,9 @@
+@@ -379,6 +388,9 @@ RestoreLoginSlot()
  
    debug("RestoreLoginSlot()\n");
    ASSERT(display);
