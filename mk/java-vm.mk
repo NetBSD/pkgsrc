@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.97 2015/02/09 16:55:01 ryoon Exp $
+# $NetBSD: java-vm.mk,v 1.98 2015/02/13 10:49:39 tnn Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: kaffe openjdk7 openjdk7-bin openjdk8
-#		sun-jdk6 sun-jdk7 jdk15 jdk16
+#		sun-jdk6 sun-jdk7
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -94,12 +94,14 @@ _PKG_JVM_DEFAULT:=	${PKG_JVM}
 _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .endif
 .if !defined(_PKG_JVM_DEFAULT)
-.  if !empty(MACHINE_PLATFORM:MNetBSD-[456789].*-i386) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-x86_64)
+.  if   !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-i386) || \
+        !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-x86_64)
 _PKG_JVM_DEFAULT?=	openjdk7
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-sparc64)
+_PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-      !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
-      !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+        !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
+        !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 _PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk6
@@ -114,13 +116,6 @@ _PKG_JVM_DEFAULT?=	kaffe
 .endif
 
 # These lists are copied from the JVM package Makefiles.
-_ONLY_FOR_PLATFORMS.jdk15= \
-	DragonFly-*-* \
-	FreeBSD-8.[1-9]*-i386 FreeBSD-8.[1-9]*-x86_64 \
-	NetBSD-[2-9].*-i386 NetBSD-[4-9].*-x86_64
-_ONLY_FOR_PLATFORMS.jdk16= \
-	DragonFly-*-* \
-	NetBSD-[2-9].*-i386 NetBSD-[4-9].*-x86_64
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k \
 	*-*-mipsel* *-*-sparc *-*-powerpc
@@ -143,6 +138,7 @@ _ONLY_FOR_PLATFORMS.openjdk7= \
 	DragonFly-*-* \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
+	NetBSD-[7-9]*-sparc64 \
 	SunOS-*-i386 \
 	SunOS-*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk7-bin= \
@@ -152,6 +148,7 @@ _ONLY_FOR_PLATFORMS.openjdk8= \
 	DragonFly-*-* \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
+	NetBSD-[7-9]*-sparc64 \
 	SunOS-*-i386 \
 	SunOS-*-x86_64
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
@@ -179,10 +176,6 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 .  endfor
 .endfor
 
-_JAVA_PKGBASE.jdk=		jdk
-_JAVA_PKGBASE.jdk14=		jdk14
-_JAVA_PKGBASE.jdk15=		jdk15
-_JAVA_PKGBASE.jdk16=		jdk16
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk7-bin=	openjdk7-bin
@@ -191,8 +184,6 @@ _JAVA_PKGBASE.sun-jdk6=		sun-jre6
 _JAVA_PKGBASE.sun-jdk7=		sun-jre7
 
 # The following is copied from the respective JVM Makefiles.
-_JAVA_NAME.jdk=			jdk11
-_JAVA_NAME.jdk14=		jdk14
 _JAVA_NAME.kaffe=		kaffe
 _JAVA_NAME.openjdk7=		openjdk7
 _JAVA_NAME.openjdk7-bin=	openjdk7-bin
@@ -246,8 +237,6 @@ PKG_FAIL_REASON=	"no acceptable JVM found"
 _PKG_JVM=		"none"
 .endif
 
-BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
-BUILDLINK_API_DEPENDS.jdk16?=		jdk16-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk7-bin?=	openjdk7-bin-[0-9]*
@@ -257,8 +246,6 @@ BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
 
-_JRE.jdk15=		jdk15
-_JRE.jdk16=		jdk16
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk7-bin=	openjdk7-bin
@@ -268,15 +255,7 @@ _JRE.sun-jdk7=		sun-jre7
 
 _JAVA_BASE_CLASSES=	classes.zip
 
-.if ${_PKG_JVM} == "jdk15"
-_JDK_PKGSRCDIR=		../../wip/jdk15
-_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.5.0
-.elif ${_PKG_JVM} == "jdk16"
-_JDK_PKGSRCDIR=		../../wip/jdk16
-_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.6.0
-.elif ${_PKG_JVM} == "kaffe"
+.if ${_PKG_JVM} == "kaffe"
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
