@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/13 11:12:23 jmcneill Exp $
+bin/cec-client
+include/libcec/cec.h
+include/libcec/cecc.h
+include/libcec/cecloader.h
+include/libcec/cectypes.h
+lib/libcec.la
+lib/pkgconfig/libcec.pc
