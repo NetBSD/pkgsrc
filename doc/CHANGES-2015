@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.876 2015/02/13 15:57:17 adam Exp $
+$NetBSD: CHANGES-2015,v 1.877 2015/02/13 16:30:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1155,3 +1155,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-AppConfig to 1.69 [mef 2015-02-13]
 	Updated devel/p5-MooX-Options to 4.017 [mef 2015-02-13]
 	Updated www/py-mod_wsgi to 4.4.8 [adam 2015-02-13]
+	Updated mail/thunderbird to 31.4.0 [ryoon 2015-02-13]
+	Updated mail/thunderbird-l10n to 31.4.0 [ryoon 2015-02-13]
