@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/01/29 00:48:51 mef Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/13 14:00:02 mef Exp $
 #
 
-DISTNAME=	Coro-6.41
+DISTNAME=	Coro-6.42
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Coro/}
