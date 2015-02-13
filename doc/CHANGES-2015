@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.878 2015/02/13 17:56:18 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.879 2015/02/13 18:02:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1158,3 +1158,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/thunderbird to 31.4.0 [ryoon 2015-02-13]
 	Updated mail/thunderbird-l10n to 31.4.0 [ryoon 2015-02-13]
 	Updated converters/dos2unix to 7.2 [ryoon 2015-02-13]
+	Added sysutils/backuppc version 3.3.1 [tnn 2015-02-13]
