@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.868 2015/02/13 05:45:30 snj Exp $
+$NetBSD: CHANGES-2015,v 1.869 2015/02/13 11:14:16 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/contao32 to 3.2.19 [taca 2015-02-13]
 	Updated www/contao34 to 3.4.4 [taca 2015-02-13]
 	Updated emulators/yabause to 0.9.14 [snj 2015-02-13]
+	Added misc/libcec version 2.2.0 [jmcneill 2015-02-13]
