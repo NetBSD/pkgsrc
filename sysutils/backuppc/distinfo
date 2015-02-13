@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/02/13 17:57:36 tnn Exp $
+
+SHA1 (BackupPC-3.3.1.tar.gz) = b579d64ff2486395e8ca0a93ac964bd9d9e1a232
+RMD160 (BackupPC-3.3.1.tar.gz) = 3db4d6a54c9cde61fa434292b53f18ded73dbb83
+Size (BackupPC-3.3.1.tar.gz) = 556461 bytes
+SHA1 (patch-configure.pl) = 4935ca9916b52918869adaac063768713c7e055b

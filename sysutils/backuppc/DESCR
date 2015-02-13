@@ -1,0 +1,6 @@
+BackupPC is a high-performance, enterprise-grade system for backing up *NIX,
+Windows and MacOSX PCs and laptops to a server's disk. BackupPC is highly
+configurable and easy to install and maintain.
+
+BackupPC does not require any agent software to be installed on the client
+systems as it operates over SSH/rsync, Samba or ftp.
