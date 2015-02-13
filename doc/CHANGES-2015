@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.882 2015/02/13 22:05:46 snj Exp $
+$NetBSD: CHANGES-2015,v 1.883 2015/02/13 22:36:35 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/mlterm to 3.4.3 [tsutsui 2015-02-13]
 	Added emulators/libretro-vba-next version 20150105 [snj 2015-02-13]
 	Updated audio/nosefart to 2.9 [snj 2015-02-13]
+	Updated net/tacacs to 4.0.4.28 [he 2015-02-13]
