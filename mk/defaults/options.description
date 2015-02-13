@@ -54,7 +54,8 @@ bacula-static		Enable building of statically linked versions of the Bacula daemo
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
 bind-dig-sigchase	Enable dig(1) option +sigchase for DNSSEC signature chasing.
-bind-xml-statistics-server	Enable building in the statistics server in bind95 and later.
+bind-xml-statistics-server	Enable building in the statistics server with XML output in bind95 and later.
+bind-json-statistics-server	Enable building in the statistics server with JSON in bind95 and later.
 bittorrent		Enable bittorrent support.
 blender-exppython	Enable the Experimental Python support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
