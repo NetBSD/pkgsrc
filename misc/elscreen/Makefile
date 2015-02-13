@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2015/02/13 14:01:58 pho Exp $
+# $NetBSD: Makefile,v 1.22 2015/02/13 14:05:07 pho Exp $
 #
 
 DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/ \
 		ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/old/
