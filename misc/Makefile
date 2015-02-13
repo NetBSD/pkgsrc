@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.449 2015/02/08 00:32:51 wiz Exp $
+# $NetBSD: Makefile,v 1.450 2015/02/13 11:13:28 jmcneill Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -163,6 +163,7 @@ SUBDIR+=	less
 SUBDIR+=	libcarddav
 SUBDIR+=	libcdio
 SUBDIR+=	libcdio-paranoia
+SUBDIR+=	libcec
 SUBDIR+=	libkdeedu
 SUBDIR+=	libkgeomap
 SUBDIR+=	libkkc-data
