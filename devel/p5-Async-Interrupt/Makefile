@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/12/12 11:13:21 mef Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/13 14:03:34 mef Exp $
 
-DISTNAME=	Async-Interrupt-1.2
-PKGNAME=	p5-${DISTNAME}0
+DISTNAME=	Async-Interrupt-1.21
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Async/}
 
