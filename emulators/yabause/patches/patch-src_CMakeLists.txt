@@ -1,0 +1,44 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2015/02/13 05:45:10 snj Exp $
+
+This is needed to keep boneheaded cmake crap from picking up SDL2
+from /usr/pkg/lib if it's installed but not wanted.
+
+--- src/CMakeLists.txt.orig	2015-02-12 21:09:30.000000000 -0800
++++ src/CMakeLists.txt	2015-02-12 21:11:25.000000000 -0800
+@@ -134,23 +134,27 @@ if (YAB_WANT_OPENGL AND (YAB_RGB STREQUA
+ 	endif(OPENGL_FOUND)
+ endif ()
+ 
+-# SDL
+-option(YAB_WANT_SDL "use SDL cores if available" ON)
+-if (YAB_WANT_SDL)
+-	include(FindSDL2 OPTIONAL)
++# SDL2
++option(YAB_WANT_SDL2 "use SDL2 if available" OFF)
++if (YAB_WANT_SDL2)
++	include(FindSDL2)
+ 
+ 	if (SDL2_FOUND)
+ 		include_directories(${SDL2_INCLUDE_DIR})
+ 		set(YABAUSE_LIBRARIES ${YABAUSE_LIBRARIES} ${SDL2_LIBRARY})
+-	else()
++		add_definitions(-DHAVE_LIBSDL=1)
++		set(yabause_SOURCES ${yabause_SOURCES} persdljoy.c sndsdl.c)
++	endif()
++endif()
++
++# SDL
++option(YAB_WANT_SDL1 "use SDL1 if available" OFF)
++if (YAB_WANT_SDL1)
+ 		include(FindSDL)
++
+ 		if (SDL_FOUND)
+ 			include_directories(${SDL_INCLUDE_DIR})
+ 			set(YABAUSE_LIBRARIES ${YABAUSE_LIBRARIES} ${SDL_LIBRARY})
+-		endif()
+-	endif()
+-
+-	if (SDL_FOUND OR SDL2_FOUND)
+ 		add_definitions(-DHAVE_LIBSDL=1)
+ 		set(yabause_SOURCES ${yabause_SOURCES} persdljoy.c sndsdl.c)
+ 	endif()
