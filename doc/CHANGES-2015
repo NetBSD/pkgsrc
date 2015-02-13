@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.877 2015/02/13 16:30:44 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.878 2015/02/13 17:56:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1157,3 +1157,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-mod_wsgi to 4.4.8 [adam 2015-02-13]
 	Updated mail/thunderbird to 31.4.0 [ryoon 2015-02-13]
 	Updated mail/thunderbird-l10n to 31.4.0 [ryoon 2015-02-13]
+	Updated converters/dos2unix to 7.2 [ryoon 2015-02-13]
