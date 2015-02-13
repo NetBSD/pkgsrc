@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/02/17 19:18:07 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/13 14:01:58 pho Exp $
 #
 
 DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-#PKGREVISION=
 PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/ \
@@ -29,6 +28,14 @@ USE_LANGUAGES+=	c
 NO_BUILD=	yes
 
 EMACS_BUILDLINK=# empty
+
+# Emacs 24 or later is not supported. Try wip/elscreen-current
+# instead.
+EMACS_VERSIONS_ACCEPTED= \
+	emacs23 emacs23nox \
+	emacs22 emacs22nox \
+	emacs21 emacs21nox \
+	emacs20
 
 INSTALLATION_DIRS+= ${EMACS_LISPPREFIX}/elscreen
 INSTALLATION_DIRS+= share/doc/elscreen
