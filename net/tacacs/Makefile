@@ -1,29 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2013/12/23 11:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/13 22:36:00 he Exp $
 
-DISTNAME=	tac_plus.F4.0.4.alpha
-PKGNAME=	tacacs-4.0.4a
+VERSION=	4.0.4.28
+DISTNAME=	tacacs-F${VERSION}
+PKGNAME=	tacacs-${VERSION}
 CATEGORIES=	net security
-MASTER_SITES=	ftp://ftpeng.cisco.com/pub/tacacs/
-#		ftp://ftp.shrubbery.net/pub/tac_plus/
-EXTRACT_SUFX=	.tar.Z
+MASTER_SITES+=	ftp://ftp.shrubbery.net/pub/tac_plus/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.shrubbery.net/tac_plus/
 COMMENT=	Cisco authentication, authorization, and accounting protocol daemon
 LICENSE=	cisco-license
 
-BUILD_TARGET=	tac_plus
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	perl
+
+#CONFIGURE_ARGS+=--enable-debug
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
 MAKE_FLAGS+=	OS=-DSOLARIS OSLIBS="-lsocket -lnsl"
 .endif
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/tacacs
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/tac_plus.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/tac_plus.8
-	${INSTALL_DATA} ${WRKSRC}/users_guide ${DESTDIR}${PREFIX}/share/doc/tacacs
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS+=	share/doc/tacacs/users_guide
 
 .include "../../mk/bsd.pkg.mk"
