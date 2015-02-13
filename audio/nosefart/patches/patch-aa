@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2010/09/26 08:11:22 obache Exp $
+$NetBSD: patch-aa,v 1.4 2015/02/13 22:05:28 snj Exp $
 
---- Makefile.orig	2004-08-13 00:19:33.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2013-05-10 12:38:51.000000000 -0700
++++ Makefile	2015-02-13 14:01:53.000000000 -0800
 @@ -1,9 +1,9 @@
  ################################
  # Configuration
@@ -15,7 +15,16 @@ $NetBSD: patch-aa,v 1.3 2010/09/26 08:11:22 obache Exp $
  PREFIX = /usr
  WANT_DEBUG=TRUE
  
-@@ -83,7 +83,7 @@ $(BUILDTOP)/config.h: $(BUILDDIR) Makefi
+@@ -13,7 +13,7 @@ WANT_DEBUG=TRUE
+ # Acting on the configuration
+ 
+ NAME = nosefart
+-VERSION = 2.8-mls
++VERSION = 2.9-mls
+ 
+ BUILDTOP = nsfobj
+ BUILDDIR = $(BUILDTOP)/build
+@@ -84,7 +84,7 @@ $(BUILDTOP)/config.h: $(BUILDDIR) Makefi
  $(BUILDDIR)/dep: $(BUILDTOP)/config.h
  	$(CC) $(NSFINFO_CFLAGS) $(CFLAGS) -M $(SOURCES) > $@
  
