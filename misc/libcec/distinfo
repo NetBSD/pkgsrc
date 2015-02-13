@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/02/13 11:12:23 jmcneill Exp $
+
+SHA1 (libcec-2.2.0-repack.tar.gz) = 42e19328c5b05b5fff27bcdf80e7acc329201913
+RMD160 (libcec-2.2.0-repack.tar.gz) = a4620c45d78a8e0305fdc15e35e8b964b57f3eef
+Size (libcec-2.2.0-repack.tar.gz) = 1099286 bytes
+SHA1 (patch-configure.ac) = 6a873fd774c4c31db81c627ce009d9dec0c03c82
+SHA1 (patch-src_lib_platform_posix_os-types.h) = a7f0c9726d5a48d4706258c3edcbb41c96e90601
+SHA1 (patch-src_lib_platform_posix_serialport.cpp) = 2b47f04bf1849ed310ac29ebe9ae10bad0ded8a4
