@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/05/05 00:47:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2015/02/13 16:58:17 jperkin Exp $
 #
 
 DISTNAME=	scite339
@@ -19,6 +19,10 @@ BUILD_DIRS+=	gtk
 USE_TOOLS+=	gmake pkg-config
 MAKE_FILE=	makefile
 INSTALLATION_DIRS= share/applications share/pixmaps
+
+OPSYSVARS+=	BUILDLINK_TRANSFORM
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=lua.vers
 
 post-extract:
 	${RM} -r ${WRKDIR}/scintilla
