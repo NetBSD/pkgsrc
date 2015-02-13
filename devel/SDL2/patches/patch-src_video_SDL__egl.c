@@ -1,4 +1,4 @@
-$NetBSD: patch-src_video_SDL__egl.c,v 1.1 2015/02/11 14:00:46 jmcneill Exp $
+$NetBSD: patch-src_video_SDL__egl.c,v 1.2 2015/02/13 19:21:12 jmcneill Exp $
 
 --- src/video/SDL_egl.c.orig	2014-03-16 02:31:44.000000000 +0000
 +++ src/video/SDL_egl.c
@@ -12,8 +12,8 @@ $NetBSD: patch-src_video_SDL__egl.c,v 1.1 2015/02/11 14:00:46 jmcneill Exp $
 -#define DEFAULT_OGL_ES "/opt/vc/lib/libGLESv1_CM.so"
 +#define DEFAULT_EGL PREFIX "/lib/libEGL.so"
 +#define DEFAULT_OGL_ES2 PREFIX "/lib/libGLESv2.so"
-+#define DEFAULT_OGL_ES_PVR PREFIX "/lib/libGLES_CM.so"
-+#define DEFAULT_OGL_ES PREFIX "/lib/libGLESv1_CM.so"
++#define DEFAULT_OGL_ES_PVR PREFIX "/lib/libGLESv2.so"
++#define DEFAULT_OGL_ES PREFIX "/lib/libGLESv2.so"
  
  #elif SDL_VIDEO_DRIVER_ANDROID
  /* Android */
