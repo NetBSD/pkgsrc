@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/13 21:21:03 snj Exp $
+lib/libretro/vba_next_libretro.so
