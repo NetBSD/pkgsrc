@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/27 08:48:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/13 17:55:41 ryoon Exp $
 bin/dos2unix
 bin/mac2unix
 bin/unix2dos
@@ -36,6 +36,7 @@ share/locale/eo/LC_MESSAGES/dos2unix.mo
 share/locale/es/LC_MESSAGES/dos2unix.mo
 share/locale/fr/LC_MESSAGES/dos2unix.mo
 share/locale/hu/LC_MESSAGES/dos2unix.mo
+share/locale/ja/LC_MESSAGES/dos2unix.mo
 share/locale/nb/LC_MESSAGES/dos2unix.mo
 share/locale/nl/LC_MESSAGES/dos2unix.mo
 share/locale/pl/LC_MESSAGES/dos2unix.mo
