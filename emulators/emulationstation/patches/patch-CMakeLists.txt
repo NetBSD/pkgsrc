@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/02/13 19:47:51 jmcneill Exp $
+
+--- CMakeLists.txt.orig	2015-02-13 13:16:56.000000000 +0000
++++ CMakeLists.txt
+@@ -163,6 +163,7 @@ if(DEFINED BCMHOST)
+     LIST(APPEND COMMON_LIBRARIES
+         bcm_host
+         EGL
++	GLESv2
+         ${OPENGLES_LIBRARIES}
+     )
+ else()

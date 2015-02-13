@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/12 22:48:02 snj Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/13 19:47:51 jmcneill Exp $
 
 DISTNAME=	abba19584636c28cd98e3810e857f493cb63d06c
 PKGNAME=	emulationstation-2.0.0_rc1_20150210
@@ -39,6 +39,14 @@ SUBST_FILES.etc=	es-app/src/SystemData.cpp es-core/src/ThemeData.cpp
 SUBST_FILES.etc+=	GAMELISTS.md README.md THEMES.md
 SUBST_SED.etc=		-e "s|/etc|${PKG_SYSCONFDIR}|"
 
+SUBST_CLASSES+=		vc
+SUBST_STAGE.vc=		pre-configure
+SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries
+SUBST_FILES.vc=		CMakeLists.txt
+SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
+
+.include "options.mk"
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/GAMELISTS.md ${WRKSRC}/README.md \
 	    ${WRKSRC}/SYSTEMS.md ${WRKSRC}/THEMES.md \
@@ -46,7 +54,6 @@ post-install:
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
