@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.870 2015/02/13 13:10:52 mef Exp $
+$NetBSD: CHANGES-2015,v 1.871 2015/02/13 13:39:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1144,3 +1144,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooseX-SimpleConfig to 0.11 [mef 2015-02-13]
 	Updated devel/p5-MooseX-Types-LoadableClass to 0.013 [mef 2015-02-13]
 	Updated devel/p5-MooseX-Types-LogAny to 0.001003 [mef 2015-02-13]
+	Updated devel/p5-Net-CIDR to 0.18 [mef 2015-02-13]
+	Updated devel/p5-Net-LDAP-Server-Test to 0.19 [mef 2015-02-13]
+	Updated devel/p5-Net-LDAP-Class to 0.26 [mef 2015-02-13]
+	Updated devel/p5-Object-Realize-Later to 0.19 [mef 2015-02-13]
