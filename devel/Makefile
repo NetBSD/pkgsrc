@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2052 2015/02/07 16:18:54 pettai Exp $
+# $NetBSD: Makefile,v 1.2053 2015/02/14 04:37:16 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -303,6 +303,7 @@ SUBDIR+=	hg-git
 SUBDIR+=	hoe
 SUBDIR+=	hptools
 SUBDIR+=	hs-MonadRandom
+SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-cmdargs
