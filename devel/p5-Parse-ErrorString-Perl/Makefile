@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/14 12:14:11 mef Exp $
 #
 
-DISTNAME=	Parse-ErrorString-Perl-0.15
+DISTNAME=	Parse-ErrorString-Perl-0.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
