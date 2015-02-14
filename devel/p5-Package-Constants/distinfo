@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/07/15 20:40:48 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2015/02/14 02:44:15 mef Exp $
 
-SHA1 (Package-Constants-0.04.tar.gz) = a4c22fcb09d26a1f13a60f0b08052385c7e42f82
-RMD160 (Package-Constants-0.04.tar.gz) = dcc80651e209d39013435ace55521b04c5297fc3
-Size (Package-Constants-0.04.tar.gz) = 3582 bytes
+SHA1 (Package-Constants-0.06.tar.gz) = 61d876e9561ef8694e016f9a3cd6394138ee88de
+RMD160 (Package-Constants-0.06.tar.gz) = f8b5c0176d9ec6acf9d38b29c12f6b1e3f022b46
+Size (Package-Constants-0.06.tar.gz) = 3767 bytes
