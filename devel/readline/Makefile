@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2014/10/09 14:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2015/02/14 06:51:33 riastradh Exp $
 
 READLINE_VERSION=	6.3
 
@@ -15,6 +15,14 @@ LICENSE=	gnu-gpl-v3
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		bash_cv_wcwidth_broken=no
+.endif
+.endif
 
 BUILD_TARGET=		all-libtool examples
 INSTALL_TARGET=		install-libtool
