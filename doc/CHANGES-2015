@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.887 2015/02/14 04:36:14 pho Exp $
+$NetBSD: CHANGES-2015,v 1.888 2015/02/14 04:58:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1174,3 +1174,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-PadWalker to 2.0 [mef 2015-02-14]
 	Updated devel/hs-primitive to 0.5.4.0 [pho 2015-02-14]
 	Added devel/hs-QuickCheck version 2.7.6 [pho 2015-02-14]
+	Updated devel/hs-QuickCheck to 2.7.6nb1 [pho 2015-02-14]
