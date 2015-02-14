@@ -1,0 +1,8 @@
+Alex is a tool for generating lexical analysers in Haskell, given a
+description of the tokens to be recognised in the form of regular
+expressions. It is similar to the tools lex and flex for C/C++.
+
+Alex takes a description of tokens based on regular expressions and
+generates a Haskell module containing code for scanning text
+efficiently. Alex is designed to be familiar to exisiting lex users,
+although it does depart from lex in a number of ways.

@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/14 09:01:33 pho Exp $
+bin/alex
+man/man1/alex.1
+share/${PKGNAME}/AlexTemplate
+share/${PKGNAME}/AlexTemplate-debug
+share/${PKGNAME}/AlexTemplate-ghc
+share/${PKGNAME}/AlexTemplate-ghc-debug
+share/${PKGNAME}/AlexTemplate-ghc-nopred
+share/${PKGNAME}/AlexWrapper-basic
+share/${PKGNAME}/AlexWrapper-basic-bytestring
+share/${PKGNAME}/AlexWrapper-gscan
+share/${PKGNAME}/AlexWrapper-monad
+share/${PKGNAME}/AlexWrapper-monad-bytestring
+share/${PKGNAME}/AlexWrapper-monadUserState
+share/${PKGNAME}/AlexWrapper-monadUserState-bytestring
+share/${PKGNAME}/AlexWrapper-posn
+share/${PKGNAME}/AlexWrapper-posn-bytestring
+share/${PKGNAME}/AlexWrapper-strict-bytestring
+share/doc/${PKGNAME}/LICENSE
