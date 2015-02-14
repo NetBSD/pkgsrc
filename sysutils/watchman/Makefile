@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/08/23 20:13:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/14 22:36:53 nros Exp $
 
 DISTNAME=	watchman-${VERSION}
-PKGREVISION=	1
-VERSION=	2.9.8
+VERSION=	3.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	-https://github.com/facebook/watchman/archive/v${VERSION}.tar.gz
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/facebook/watchman/
 COMMENT=	Watches files and takes action when they change
 LICENSE=	apache-2.0
 
-USE_TOOLS+=	autoconf automake autoreconf
+USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
 # https://github.com/facebook/watchman/issues/50
 CONFIGURE_ARGS+=	--enable-lenient
