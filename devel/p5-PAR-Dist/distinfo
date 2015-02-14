@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2009/12/15 13:31:11 wiz Exp $
+$NetBSD: distinfo,v 1.13 2015/02/14 02:34:12 mef Exp $
 
-SHA1 (PAR-Dist-0.47.tar.gz) = c7842c993cd9a865c7df323ec4ebf84cbdd0feeb
-RMD160 (PAR-Dist-0.47.tar.gz) = 752c0b8a417d616f1cac091d73373c8449a3ce69
-Size (PAR-Dist-0.47.tar.gz) = 35934 bytes
+SHA1 (PAR-Dist-0.49.tar.gz) = 888d8346c992c647428405c96b766f4ab80edf0d
+RMD160 (PAR-Dist-0.49.tar.gz) = 0def4abb897715dc5a38ebdeff551b8fa3a67c85
+Size (PAR-Dist-0.49.tar.gz) = 36682 bytes
