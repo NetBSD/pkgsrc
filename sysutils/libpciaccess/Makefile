@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/02/04 06:59:46 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/14 05:52:11 riastradh Exp $
 
 DISTNAME=	libpciaccess-0.13.3
 CATEGORIES=	sysutils x11
@@ -13,16 +13,20 @@ LICENSE=	mit AND x11
 ###
 ### XXX This list is probably not exhaustive.
 ###
-ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
-ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 NetBSD-*-x86_64 OpenBSD-*-x86_64
+ONLY_FOR_PLATFORM=	FreeBSD-*-i386 OpenBSD-*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386 DragonFly-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-* Darwin-*-*
-ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64 NetBSD-*-hppa
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+
+# Harmless on x86; needed by others because the libpciaccess configure
+# script doesn't know this.
+LIBS.NetBSD+=		-lpci
 
 PKGCONFIG_OVERRIDE+=	pciaccess.pc.in
 
