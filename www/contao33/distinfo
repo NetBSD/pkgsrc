@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/11/24 13:30:49 taca Exp $
+$NetBSD: distinfo,v 1.8.2.1 2015/02/14 10:07:52 tron Exp $
 
 SHA1 (contao-3.3.7.tar.gz) = a865dcf9e18d26868d886aa15a2bc951c4ed8c2e
 RMD160 (contao-3.3.7.tar.gz) = 9f1f6bc4fa30b52c04b3bdc163296c0a5c4f3913
 Size (contao-3.3.7.tar.gz) = 11473249 bytes
+SHA1 (patch-system_modules_core_classes_Backend.php) = 84c472fdd45705cc15727297c80d018b5fa6aff7
+SHA1 (patch-system_modules_core_dca_tl__templates.php) = be277bf6d7975d7985b2bc1eb98b0964dd3c5596
+SHA1 (patch-system_modules_core_library_Contao_Validator.php) = a74ec2090929ae0551c27062bd98ba006cec1878
