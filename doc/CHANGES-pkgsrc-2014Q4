@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.19 2015/02/14 09:36:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.20 2015/02/14 10:08:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -58,3 +58,9 @@ Pullup ticket #4608 - requested by tnn
 archivers/cabextract: security update
 Pullup ticket #4612 - requested by spz
 security/sudo: security update
+Pullup ticket #4609 - requested by taca
+www/contao32: security update
+Pullup ticket #4610 - requested by taca
+www/contao34: security update
+Pullup ticket #4611 - requested by taca
+www/contao33: security patch
