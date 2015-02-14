@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/07/03 16:23:16 sno Exp $
+$NetBSD: distinfo,v 1.3 2015/02/14 12:54:38 mef Exp $
 
-SHA1 (Probe-Perl-0.02.tar.gz) = 6a7ab76ef65720e3e61623d63ce27c35035c8e2a
-RMD160 (Probe-Perl-0.02.tar.gz) = 88d57320e64960ae2783f7a69fe0f163b3be0d8c
-Size (Probe-Perl-0.02.tar.gz) = 12666 bytes
+SHA1 (Probe-Perl-0.03.tar.gz) = 7c3cdb0f5d7887d8af6fda4002eb32026518ce87
+RMD160 (Probe-Perl-0.03.tar.gz) = eaf13f0e489305507470d4ddf146e922cac7fdb3
+Size (Probe-Perl-0.03.tar.gz) = 13096 bytes
