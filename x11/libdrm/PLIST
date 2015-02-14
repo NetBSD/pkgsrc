@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2015/01/22 08:28:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/02/14 05:34:13 riastradh Exp $
+${PLIST.arm}include/freedreno/freedreno_drmif.h
+${PLIST.arm}include/freedreno/freedreno_ringbuffer.h
 include/libdrm/drm.h
 include/libdrm/drm_fourcc.h
 include/libdrm/drm_mode.h
@@ -30,10 +32,12 @@ include/libdrm/vmwgfx_drm.h
 include/xf86drm.h
 include/xf86drmMode.h
 lib/libdrm.la
+${PLIST.arm}lib/libdrm_freedreno.la
 ${PLIST.intel}lib/libdrm_intel.la
 lib/libdrm_nouveau.la
 lib/libdrm_radeon.la
 lib/pkgconfig/libdrm.pc
+${PLIST.arm}lib/pkgconfig/libdrm_freedreno.pc
 ${PLIST.intel}lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
