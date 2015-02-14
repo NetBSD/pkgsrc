@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/14 09:01:33 pho Exp $
+
+SHA1 (alex-3.1.4.tar.gz) = c9ab9bb8bbcc0cfe84086da872bb98b3fe67f946
+RMD160 (alex-3.1.4.tar.gz) = c708edb7f57eeb11b2bdb6b45bf3a1dab6de2ec8
+Size (alex-3.1.4.tar.gz) = 101827 bytes
