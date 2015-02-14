@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/14 00:54:49 mef Exp $
 #
 
 DISTNAME=		Scalar-Util-Refcount-1.0.2
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		5
 CATEGORIES=		misc perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Scalar/}
+MASTER_SITES=		http://cpan.metacpan.org/authors/id/J/JN/JNIXON/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Scalar-Util-Refcount/
+HOMEPAGE=		https://metacpan.org/pod/release/JNIXON/Scalar-Util-Refcount-${PKGVERSION_NOREV}/Refcount.pm
+HOMEPAGE=		https://metacpan.org/pod/release/JNIXON/Scalar-Util-Refcount-1.0.2/Refcount.pm
 COMMENT=		Perl module to show an object's reference count
 
 USE_LANGUAGES=		c
