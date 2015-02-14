@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14122 2015/02/13 17:56:18 ryoon Exp $
+$NetBSD: TODO,v 1.14123 2015/02/14 12:53:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -907,6 +907,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o profit-2.5.3
 	o psmisc-22.20
 	o pspp-0.8.4
+	o pulseaudio-6.0
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
