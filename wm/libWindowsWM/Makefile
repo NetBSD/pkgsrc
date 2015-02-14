@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/16 23:06:10 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/14 05:33:04 riastradh Exp $
 
 DISTNAME=	libWindowsWM-1.0.1
 CATEGORIES=	wm x11
@@ -16,6 +16,14 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gsed pkg-config
 
 PKGCONFIG_OVERRIDE+=	windowswm.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+# No harm in enabling this; the only harm might come from disabling it
+# incorrectly.
+CONFIGURE_ARGS+=	--enable-malloc0returnsnull
+.endif
 
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
