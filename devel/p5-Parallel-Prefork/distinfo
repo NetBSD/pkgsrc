@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/01/22 19:45:24 abs Exp $
+$NetBSD: distinfo,v 1.4 2015/02/14 09:58:20 mef Exp $
 
-SHA1 (Parallel-Prefork-0.13.tar.gz) = 89516f1a06601e97d7d3787e514691423a850216
-RMD160 (Parallel-Prefork-0.13.tar.gz) = 01b848cb9d24d1cf9864e12f4473b753388732d8
-Size (Parallel-Prefork-0.13.tar.gz) = 25181 bytes
+SHA1 (Parallel-Prefork-0.17.tar.gz) = b61be2b213173ee49daff0f54e49101faf0a14f2
+RMD160 (Parallel-Prefork-0.17.tar.gz) = c36f7f1c91bb27e0a49d4b8493043302aea7049a
+Size (Parallel-Prefork-0.17.tar.gz) = 26023 bytes
