@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.357 2015/02/01 11:33:08 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.358 2015/02/14 05:01:32 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -353,8 +353,8 @@ NATIVE_MACHINE_ARCH:=		${MACHINE_ARCH}
 
 NATIVE_MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${NATIVE_MACHINE_ARCH}
 MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
-MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
+MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
 # Needed to prevent an "install:" target from being created in bsd.own.mk.
 NEED_OWN_INSTALL_TARGET=no
@@ -564,8 +564,24 @@ _CROSS_DESTDIR=	${CROSS_DESTDIR}
 
 # Depends on MACHINE_ARCH override above
 .if ${OPSYS} == "NetBSD"
+# XXX NATIVE_OBJECT_FMT is a cop-out -- but seriously, who is going to
+# do cross-builds on a NetBSD host that still uses a.out?
+NATIVE_OBJECT_FMT?=	${OBJECT_FMT}
+.  if ${NATIVE_OBJECT_FMT} == "ELF" && \
+   (!empty(NATIVE-MACHINE_ARCH:Mearm*) || \
+    ${NATIVE_MACHINE_GNU_ARCH} == "arm" || \
+    ${NATIVE_MACHINE_ARCH} == "i386" || \
+    ${NATIVE_MACHINE_ARCH} == "m68k" || \
+    ${NATIVE_MACHINE_ARCH} == "m68000" || \
+    ${NATIVE_MACHINE_GNU_ARCH} == "sh" || \
+    ${NATIVE_MACHINE_GNU_ARCH} == "shle" || \
+    ${NATIVE_MACHINE_ARCH} == "sparc" || \
+    ${NATIVE_MACHINE_ARCH} == "vax")
+NATIVE_APPEND_ELF=	elf
+.  endif
 .  if ${OBJECT_FMT} == "ELF" && \
-   (${MACHINE_GNU_ARCH} == "arm" || \
+   (!empty(MACHINE_ARCH:Mearm*) || \
+    ${MACHINE_GNU_ARCH} == "arm" || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "m68k" || \
     ${MACHINE_ARCH} == "m68000" || \
@@ -574,6 +590,12 @@ _CROSS_DESTDIR=	${CROSS_DESTDIR}
     ${MACHINE_ARCH} == "sparc" || \
     ${MACHINE_ARCH} == "vax")
 APPEND_ELF=		elf
+.  endif
+.  if !empty(NATIVE_MACHINE_ARCH:Mearm*)
+NATIVE_APPEND_ABI=	-${NATIVE_MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
+.  endif
+.  if !empty(MACHINE_ARCH:Mearm*)
+APPEND_ABI=		-${MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
 .  endif
 .endif
 
