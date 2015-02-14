@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.891 2015/02/14 09:02:27 pho Exp $
+$NetBSD: CHANGES-2015,v 1.892 2015/02/14 10:00:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1224,3 +1224,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql92-upgrade to 9.2.10 [adam 2015-02-14]
 	Updated www/firefox to 35.0.1nb4 [martin 2015-02-14]
 	Added devel/alex version 3.1.4 [pho 2015-02-14]
+	Updated devel/p5-Parallel-ForkManager to 1.11 [mef 2015-02-14]
+	Added devel/p5-Signal-Mask version 0.008 [mef 2015-02-14]
+	Updated devel/p5-Parallel-Prefork to 0.17 [mef 2015-02-14]
