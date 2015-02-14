@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.893 2015/02/14 12:24:45 mef Exp $
+$NetBSD: CHANGES-2015,v 1.894 2015/02/14 12:43:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1235,3 +1235,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Parse-Method-Signatures to 1.003016 [mef 2015-02-14]
 	Updated devel/p5-Path-Class-File-Stat to 0.05 [mef 2015-02-14]
 	Updated devel/p5-Path-Dispatcher to 1.05 [mef 2015-02-14]
+	Updated devel/p5-Perl-APIReference to 0.18 [mef 2015-02-14]
+	Updated devel/p5-Perl-PrereqScanner to 1.022 [mef 2015-02-14]
+	Updated devel/p5-Perl-Version to 1.013 [mef 2015-02-14]
+	Updated devel/p5-PerlIO-utf8_strict to 0.005 [mef 2015-02-14]
