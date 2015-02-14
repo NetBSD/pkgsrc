@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.884 2015/02/14 01:30:26 pho Exp $
+$NetBSD: CHANGES-2015,v 1.885 2015/02/14 03:13:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1164,3 +1164,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/nosefart to 2.9 [snj 2015-02-13]
 	Updated net/tacacs to 4.0.4.28 [he 2015-02-13]
 	Updated lang/ghc7 to 7.6.3nb5 [pho 2015-02-14]
+	Updated devel/p5-IPC-Run to 0.94 [mef 2015-02-14]
+	Updated devel/p5-PAR-Dist to 0.49 [mef 2015-02-14]
+	Updated devel/p5-PAR to 1.008 [mef 2015-02-14]
+	Updated devel/p5-PPIx-Regexp to 0.037 [mef 2015-02-14]
+	Updated devel/p5-Package-Constants to 0.06 [mef 2015-02-14]
+	Updated devel/p5-Package-Generator to 1.106 [mef 2015-02-14]
+	Updated devel/p5-Package-Variant to 1.002002 [mef 2015-02-14]
+	Updated devel/p5-PadWalker to 2.0 [mef 2015-02-14]
