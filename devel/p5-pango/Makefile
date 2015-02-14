@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/02/14 01:17:01 mef Exp $
 #
 
-DISTNAME=	Pango-1.225
+DISTNAME=	Pango-1.226
 PKGNAME=	p5-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XA/XAOC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtk2-perl.sourceforge.net/
+HOMEPAGE=	http://search.cpan.org/~xaoc/Pango/
 COMMENT=	Perl bindings to the pango library
 LICENSE=	gnu-lgpl-v2.1
 
