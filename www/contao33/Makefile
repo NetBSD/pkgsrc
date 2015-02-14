@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/11/24 13:30:49 taca Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2015/02/14 10:07:52 tron Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${CT_MASTER_SITE}
 
