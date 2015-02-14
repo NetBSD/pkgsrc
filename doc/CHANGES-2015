@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.890 2015/02/14 07:59:43 martin Exp $
+$NetBSD: CHANGES-2015,v 1.891 2015/02/14 09:02:27 pho Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1223,3 +1223,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql92-replicationtools to 9.2.10 [adam 2015-02-14]
 	Updated databases/postgresql92-upgrade to 9.2.10 [adam 2015-02-14]
 	Updated www/firefox to 35.0.1nb4 [martin 2015-02-14]
+	Added devel/alex version 3.1.4 [pho 2015-02-14]
