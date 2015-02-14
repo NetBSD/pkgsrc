@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2053 2015/02/14 04:37:16 pho Exp $
+# $NetBSD: Makefile,v 1.2054 2015/02/14 09:03:20 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -35,6 +35,7 @@ SUBDIR+=	adocman
 SUBDIR+=	aegis
 SUBDIR+=	afl
 SUBDIR+=	ald
+SUBDIR+=	alex
 SUBDIR+=	allegro
 SUBDIR+=	anjuta
 SUBDIR+=	ant-contrib
