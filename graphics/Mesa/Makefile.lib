@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.19 2014/10/09 14:06:34 wiz Exp $
+# $NetBSD: Makefile.lib,v 1.20 2015/02/14 06:54:14 riastradh Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		automake bison flex gmake pkg-config makedepend
 
-PYTHON_FOR_BUILD_ONLY=  yes
+PYTHON_FOR_BUILD_ONLY=  tool
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 7.11.2
 .include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.libxml2?=   build
@@ -42,6 +42,22 @@ CFLAGS+=	-D__FUNCTION__=__FILE__
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "MirBSD"
 BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+# XXX This is not quite enough: we will need to patch the makefile
+# because it bogusly tries to reuse objects for native tools and target
+# libraries, and for cross-compiling the objects need to be built
+# separately.  Alternatively, we could just update Mesa to something
+# less prehistoric...
+SUBST_CLASSES+=		nativecc
+SUBST_STAGE.nativecc=	pre-configure
+SUBST_MESSAGE.nativecc=	Fix makefiles to compile tools with native cc.
+SUBST_FILES.nativecc+=	src/glsl/Makefile
+SUBST_SED.nativecc+=	-e 's,$$(CC),$$(APP_CC),g'
+SUBST_SED.nativecc+=	-e 's,$$(CXX),$$(APP_CXX),g'
+MAKE_FLAGS+=		APP_CC=${NATIVE_CC:Q}
+MAKE_FLAGS+=		APP_CXX=${NATIVE_CXX:Q}
 .endif
 
 pre-configure:
