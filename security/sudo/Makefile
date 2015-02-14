@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.144 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.144.2.1 2015/02/14 09:31:17 tron Exp $
 #
 
-DISTNAME=		sudo-1.7.10p8
+DISTNAME=		sudo-1.7.10p9
 #PKGREVISION=		0
 CATEGORIES=		security
 MASTER_SITES=		http://www.sudo.ws/dist/ \
