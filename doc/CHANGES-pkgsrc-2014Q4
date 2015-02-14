@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.18 2015/02/12 21:11:25 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.19 2015/02/14 09:36:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -56,3 +56,5 @@ Pullup ticket #4607 - requested by is
 lang/erlang: build fix
 Pullup ticket #4608 - requested by tnn
 archivers/cabextract: security update
+Pullup ticket #4612 - requested by spz
+security/sudo: security update
