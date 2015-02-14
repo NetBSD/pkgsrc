@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/14 12:21:53 mef Exp $
 #
 
-DISTNAME=	Path-Class-File-Stat-0.03
+DISTNAME=	Path-Class-File-Stat-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KA/KARMAN/}
 
