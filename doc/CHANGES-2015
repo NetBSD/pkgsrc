@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.894 2015/02/14 12:43:35 mef Exp $
+$NetBSD: CHANGES-2015,v 1.895 2015/02/14 12:44:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1235,6 +1235,37 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Parse-Method-Signatures to 1.003016 [mef 2015-02-14]
 	Updated devel/p5-Path-Class-File-Stat to 0.05 [mef 2015-02-14]
 	Updated devel/p5-Path-Dispatcher to 1.05 [mef 2015-02-14]
+<<<<<<< CHANGES-2015
+	Updated databases/postgresql91 to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-adminpack to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-client to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-datatypes to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-dblink to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-docs to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-fuzzystrmatch to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-monitoring to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-pgcrypto to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-plperl to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-plpython to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-pltcl to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-replicationtools to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-server to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql91-upgrade to 9.1.15 [adam 2015-02-14]
+	Updated databases/postgresql90 to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-adminpack to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-client to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-datatypes to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-dblink to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-docs to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-fuzzystrmatch to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-monitoring to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-pgcrypto to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-plperl to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-plpython to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-pltcl to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-replicationtools to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-server to 9.0.19 [adam 2015-02-14]
+	Updated databases/postgresql90-upgrade to 9.0.19 [adam 2015-02-14]
 	Updated devel/p5-Perl-APIReference to 0.18 [mef 2015-02-14]
 	Updated devel/p5-Perl-PrereqScanner to 1.022 [mef 2015-02-14]
 	Updated devel/p5-Perl-Version to 1.013 [mef 2015-02-14]
