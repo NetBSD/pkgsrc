@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/08/23 20:13:59 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/02/14 22:36:53 nros Exp $
 
-SHA1 (watchman-2.9.8.tar.gz) = f2ddfb5d42dce32da71dd789f63b705526fc9758
-RMD160 (watchman-2.9.8.tar.gz) = f312d38f24ce87ca251753926f73c998895234c1
-Size (watchman-2.9.8.tar.gz) = 183007 bytes
-SHA1 (patch-configure.ac) = e6893b2258351714e10e3bcc120250dda4c7031a
-SHA1 (patch-fstype.c) = f5b99113e97a22fc340d347fbf5397165d20bcd8
-SHA1 (patch-watchman.h) = 833693d8cfd782cb0ba085a48bdf4848e3696bd3
+SHA1 (watchman-3.0.0.tar.gz) = cd62a0185401536455e3b6a67c3ee146e291ac9e
+RMD160 (watchman-3.0.0.tar.gz) = 288c8262375dd5166a22c96b643d9d7fdf170148
+Size (watchman-3.0.0.tar.gz) = 199034 bytes
