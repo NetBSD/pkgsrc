@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.892 2015/02/14 10:00:04 mef Exp $
+$NetBSD: CHANGES-2015,v 1.893 2015/02/14 12:24:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1227,3 +1227,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Parallel-ForkManager to 1.11 [mef 2015-02-14]
 	Added devel/p5-Signal-Mask version 0.008 [mef 2015-02-14]
 	Updated devel/p5-Parallel-Prefork to 0.17 [mef 2015-02-14]
+	Updated devel/p5-App-cpanminus to 1.7026 [mef 2015-02-14]
+	Updated devel/p5-MooseX-App to 1.31 [mef 2015-02-14]
+	Updated devel/p5-Params-Validate to 1.18 [mef 2015-02-14]
+	Updated devel/p5-Parse-CPAN-Packages to 2.40 [mef 2015-02-14]
+	Updated devel/p5-Parse-ErrorString-Perl to 0.21 [mef 2015-02-14]
+	Updated devel/p5-Parse-Method-Signatures to 1.003016 [mef 2015-02-14]
+	Updated devel/p5-Path-Class-File-Stat to 0.05 [mef 2015-02-14]
+	Updated devel/p5-Path-Dispatcher to 1.05 [mef 2015-02-14]
