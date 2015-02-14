@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.896 2015/02/14 12:45:02 adam Exp $
+$NetBSD: CHANGES-2015,v 1.897 2015/02/14 13:10:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1269,3 +1269,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Perl-PrereqScanner to 1.022 [mef 2015-02-14]
 	Updated devel/p5-Perl-Version to 1.013 [mef 2015-02-14]
 	Updated devel/p5-PerlIO-utf8_strict to 0.005 [mef 2015-02-14]
+	Updated devel/p5-Probe-Perl to 0.03 [mef 2015-02-14]
+	Updated devel/p5-Proc-Daemon to 0.18 [mef 2015-02-14]
+	Updated devel/p5-Proc-InvokeEditor to 1.07 [mef 2015-02-14]
+	Updated devel/p5-Proc-Pidfile to 1.06 [mef 2015-02-14]
