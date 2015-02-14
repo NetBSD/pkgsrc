@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/01/22 08:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/02/14 05:34:13 riastradh Exp $
 
 DISTNAME=		libdrm-2.4.59
 CATEGORIES=		x11 graphics
@@ -27,7 +27,7 @@ SUBST_STAGE.atomic=	pre-configure
 SUBST_VARS.atomic=	ATOMIC_OPS_CHECK
 
 ATOMIC_OPS_CHECK=	0
-.if exists(/usr/include/sys/atomic.h)
+.if exists(${CROSS_DESTDIR}/usr/include/sys/atomic.h)
 ATOMIC_OPS_CHECK=	1
 .else
 .  include "../../devel/libatomic_ops/buildlink3.mk"
@@ -38,10 +38,14 @@ CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 
-PLIST_VARS+=	intel
+PLIST_VARS+=	intel arm
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 PLIST.intel=	yes
+.elif !empty(MACHINE_ARCH:Marm*) || \
+      !empty(MACHINE_ARCH:Mearm*) || \
+      !empty(MACHINE_ARCH:Maarch64)
+PLIST.arm=	yes
 #.else
 #CONFIGURE_ARGS+=	--disable-intel
 .endif
