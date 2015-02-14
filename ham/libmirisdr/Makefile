@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/01/26 07:16:36 dbj Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/14 07:25:57 dbj Exp $
 
 PKGNAME=	libmirisdr-0.1
 PKGREVISION=	2
@@ -19,7 +19,7 @@ USE_CMAKE=	yes
 # Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
 
-# Fix the shared libarary patchlevel
+# Fix the shared library patchlevel
 SHLIBPATCHLEVEL=		0
 PLIST_SUBST+=			SHLIBPATCHLEVEL=${SHLIBPATCHLEVEL:U0}
 SUBST_CLASSES+=			patchlevel
