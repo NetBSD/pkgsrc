@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.897 2015/02/14 13:10:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.898 2015/02/14 13:17:46 bad Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Proc-Daemon to 0.18 [mef 2015-02-14]
 	Updated devel/p5-Proc-InvokeEditor to 1.07 [mef 2015-02-14]
 	Updated devel/p5-Proc-Pidfile to 1.06 [mef 2015-02-14]
+	Updated net/rdesktop to 1.8.3 [bad 2015-02-14]
