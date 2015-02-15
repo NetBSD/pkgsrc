@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 11:58:31 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/02/15 01:34:12 mef Exp $
 
-SHA1 (Role-Identifiable-0.005.tar.gz) = 94aa80fda42450ba8eeed4cc194d29d1eb5c53e9
-RMD160 (Role-Identifiable-0.005.tar.gz) = 4e758343f425f238b5a95c42f5ef9eb40ce940f1
-Size (Role-Identifiable-0.005.tar.gz) = 10602 bytes
+SHA1 (Role-Identifiable-0.007.tar.gz) = 71ed8cd10cc4acf2f7b38be9987a1e2ff6c54874
+RMD160 (Role-Identifiable-0.007.tar.gz) = 85d4ed92d0c3d5ed85c4c865b96ea6f54ffc4837
+Size (Role-Identifiable-0.007.tar.gz) = 13429 bytes
