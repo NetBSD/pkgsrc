@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/02 12:52:16 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/15 18:58:40 gls Exp $
 bin/pass
 man/man1/pass.1
 share/examples/password-store/completion/pass.bash-completion
@@ -21,4 +21,5 @@ share/examples/password-store/contrib/importers/lastpass2pass.rb
 share/examples/password-store/contrib/importers/pwsafe2pass.sh
 share/examples/password-store/contrib/importers/revelation2pass.py
 share/examples/password-store/contrib/related-projects.txt
+share/examples/password-store/contrib/vim/noplaintext.vim
 share/examples/password-store/example-filter.sh
