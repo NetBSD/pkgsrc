@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2015/02/15 14:29:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2015/02/15 14:45:48 ryoon Exp $
 
-DISTNAME=	afio-2.5
-PKGREVISION=	2
+DISTNAME=	afio-2.5.1
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.ibiblio.org/pub/Linux/system/backup/
+MASTER_SITES=	http://members.chello.nl/~k.holtman/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
