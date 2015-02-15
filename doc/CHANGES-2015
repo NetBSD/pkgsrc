@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.911 2015/02/15 14:46:08 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.912 2015/02/15 17:42:43 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1298,3 +1298,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xfe to 1.40 [ryoon 2015-02-15]
 	Updated www/cgicc to 3.2.16 [ryoon 2015-02-15]
 	Updated archivers/afio to 2.5.1 [ryoon 2015-02-15]
+	Added chat/hexchat version 2.10.2 [khorben 2015-02-15]
