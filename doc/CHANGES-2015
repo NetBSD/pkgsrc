@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.904 2015/02/15 09:05:26 taca Exp $
+$NetBSD: CHANGES-2015,v 1.905 2015/02/15 10:53:10 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1290,3 +1290,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Smart-Comments to 1.000005 [mef 2015-02-15]
 	Updated devel/php-opcache to 5.6.5nb1 [taca 2015-02-15]
 	Updated devel/php-xdebug to 2.2.5nb1 [taca 2015-02-15]
+	Updated multimedia/ffmpeg1 to 1.2.12 [tnn 2015-02-15]
+	Updated multimedia/ffplay1 to 1.2.12 [tnn 2015-02-15]
