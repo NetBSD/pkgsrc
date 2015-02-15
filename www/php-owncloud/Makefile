@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2014/12/21 13:39:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2015/02/15 06:56:39 ryoon Exp $
 #
 
-DISTNAME=	owncloud-7.0.4
+DISTNAME=	owncloud-8.0.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
@@ -12,7 +12,16 @@ HOMEPAGE=	http://owncloud.org/
 COMMENT=	Web services under your control
 LICENSE=	gnu-agpl-v3
 
-EXTRACT_USING=	bsdtar
+OC_APPS_SITE=	https://apps.owncloud.com/CONTENT/content-files/
+OC_CALENDAR_APP=	168707-calendar.zip
+OC_CONTACT_APP=		168708-contacts.zip
+
+DISTFILES=	${DEFAULT_DISTFILES} \
+		${OC_CALENDAR_APP} \
+		${OC_CONTACT_APP}
+
+SITES.${OC_CALENDAR_APP}=	${OC_APPS_SITE}
+SITES.${OC_CONTACT_APP}=	${OC_APPS_SITE}
 
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
@@ -35,26 +44,28 @@ USE_TOOLS+=	bash:run pax perl:run
 OC_DIR=		share/owncloud
 INSTALLATION_DIRS=	${OC_DIR}
 
-REPLACE_BASH+=	3rdparty/doctrine/dbal/run-all.sh
+REPLACE_BASH+=	3rdparty/*/*/*/*
 REPLACE_BASH+=	apps/*/*/*
+REPLACE_BASH+=	apps/*/*/*/*
 REPLACE_BASH+=	core/img/image-optimization.sh
-REPLACE_BASH+=	l10n/init.sh
 
-REPLACE_PERL+=	3rdparty/phpdocx/pdf/lib/ttf2ufm/src/*/*
-REPLACE_PERL+=	3rdparty/phpdocx/pdf/lib/ttf2ufm/src/*/*/*
 REPLACE_PERL+=	apps/*/*/*
 REPLACE_PERL+=	l10n/l10n.pl
+
+REPLACE_PYTHON+=	3rdparty/*/*/*/*
 
 # for php interpreter
 CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/doctrine/dbal/bin/doctrine-dbal
 CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/dompdf/load_font.php
 CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/phpdocx/pdf/load_font.php
+CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/sabre/vobject/bin/*
+CHECK_INTERPRETER_SKIP+=	${OC_DIR}/apps/contacts/vendor/blueimp-tmpl/js/compile.js
 CHECK_INTERPRETER_SKIP+=	${OC_DIR}/occ
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_USER?=	www
-APACHE_GROUP?=	www
+APACHE_USER?=	nginx
+APACHE_GROUP?=	nginx
 PKG_GROUPS=	${APACHE_GROUP}
 PKG_USERS=	${APACHE_USER}:${APACHE_GROUP}
 
@@ -68,6 +79,11 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 do-install:
 	cd ${WRKDIR} && ${FIND} owncloud -type f \! -name '*.orig' -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/share
+	cd ${WRKDIR} && ${FIND} calendar -type f \! -name '*.orig' -print | \
+		pax -rw -pmp ${DESTDIR}${PREFIX}/share/owncloud/apps
+	cd ${WRKDIR} && ${FIND} contacts -type f \! -name '*.orig' -print | \
+		pax -rw -pmp ${DESTDIR}${PREFIX}/share/owncloud/apps
 
 .include "../../lang/php/phpversion.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
