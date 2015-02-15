@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
+$NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
 
 - Use standard headers.
 - Use strerror, not sys_errlist and sys_nerr.
@@ -8,32 +8,18 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
 - Build fix for makedev() on Solaris and Interix.
 - Fix bad calls to execlp() that break on 64-bit platforms.
 
---- afio.c.orig	2003-12-20 22:16:13.000000000 +0000
+--- afio.c.orig	2012-02-05 13:25:57.000000000 +0000
 +++ afio.c
-@@ -166,52 +166,40 @@ static char *ident = "$Header: /u/buhrt/
- #include <signal.h>
- #include <strings.h>
- #include <sys/wait.h>
--#define linux_tstamp 1
--/* fix SunOS errno.h not declaring what the manpage says it declares 
--   bogosity. */
-- extern int sys_nerr;
-- extern char *sys_errlist[];
--#endif
--
--#ifdef hpux
-- /* Fix that HPUX dosent have sys_nerr or sys_errlist 
--    Added by Daniel Andersson, daniel.andersson@sto.sema.se
--  */
--extern int sys_nerr;
--extern char *sys_errlist[];
- #endif
+@@ -166,7 +166,7 @@ static char *ident = "$Header: /u/buhrt/
+ #include <stdio.h>
+ #include <errno.h>
  
- #include <unistd.h>
- #include <string.h>
- #include <stdlib.h>
--#include <sys/signal.h>
-+#include <signal.h>
+-#ifdef sun
++#ifdef __sun
+ #include <sys/types.h>
+ #include <utime.h>
+ #include <signal.h>
+@@ -202,30 +202,29 @@ extern char *sys_errlist[];
  #include <sys/types.h>
  #include <sys/ioctl.h>
  #include <sys/stat.h>
@@ -44,7 +30,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
  #include "patchlevel.h"
  
  #ifdef linux
--
+ 
 -#define linux_tstamp 1
 -
 -#include <utime.h>
@@ -60,9 +46,6 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
  #include <strings.h>
  #endif
  
-+/* nothing should need this */
-+/*#define broken_utime*/
-+
  #ifndef	major
 -#ifdef sun
 +#if defined(sun) || defined(__INTERIX)
@@ -73,7 +56,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
  #else
  #include <sys/sysmacros.h>
  #endif
-@@ -1122,7 +1110,7 @@ savedirstamp (char *name, time_t mtime)
+@@ -1140,7 +1139,7 @@ savedirstamp (char *name, time_t mtime)
  STATIC void
  restoredirstamps (void)
  {
@@ -82,7 +65,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -1130,7 +1118,7 @@ restoredirstamps (void)
+@@ -1148,7 +1147,7 @@ restoredirstamps (void)
    Dir *DirP_forw;
    while(DirP!=NULL)
    {
@@ -91,7 +74,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
      tstamp.actime = DirP->d_mtime;
      tstamp.modtime = DirP->d_mtime;
      /* no error code checking on purpose */
-@@ -1212,7 +1200,7 @@ readcheck (av)
+@@ -1239,7 +1238,7 @@ readcheck (av)
    auto char name[PATHSIZE];
    auto char local[PATHSIZE];
    int sel, res;
@@ -100,7 +83,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -1241,7 +1229,7 @@ readcheck (av)
+@@ -1267,7 +1266,7 @@ readcheck (av)
        if(aflag && atime_sb_valid && ((sb.sb_mode & S_IFMT)==S_IFREG))
        {
  	  /* reset access time, this distroys the ctime btw. */
@@ -109,16 +92,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
  	  tstamp.actime = atime_sb.sb_atime;
  	  tstamp.modtime = atime_sb.sb_mtime;
  	  VOID utime (name, &tstamp);
-@@ -1585,7 +1573,7 @@ incheckdata (int fd, off_t size, char *n
- 	if(compressargs)
- 	    execvp (compressprog, compress_arg_list);
- 	else
--	    execlp (compressprog, compressprog, "-d", "-c", 0);
-+	    execlp (compressprog, compressprog, "-d", "-c", (char *)NULL);
- 	fprintf (stderr, "Could not uncompress, errno %d\n", errno);
- 	exit(1);
- 	break;
-@@ -1696,7 +1684,7 @@ inentry (name, asb)
+@@ -1758,7 +1757,7 @@ inentry (name, asb)
    reg Link *linkp;
    reg int ifd;
    reg int ofd;
@@ -127,7 +101,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -1729,7 +1717,7 @@ inentry (name, asb)
+@@ -1794,7 +1793,7 @@ inentry (name, asb)
    /* Cannot set utime on symlink (at least not under Linux) */
    if((asb->sb_mode & S_IFMT) != S_IFLNK)
    {
@@ -136,25 +110,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
        tstamp.actime = tstamp.modtime = mflag ? timenow : asb->sb_mtime;
        VOID utime (name, &tstamp);
  #else
-@@ -3004,7 +2992,7 @@ opencontrolscript (char *name)
- 	VOID dup (pfd[0]);
- 	VOID close (pfd[0]);
- 	
--        execlp (controlscript, controlscript, label, 0);
-+        execlp (controlscript, controlscript, label, (char *)NULL);
- 
- 	warnarch("Problems running control script:",(off_t)0);	       
- 	warn(controlscript,syserr());
-@@ -3266,7 +3254,7 @@ openotty (name, asb, linkp, ispass, dozf
- 		  if(compressargs)
- 		      execvp (compressprog, compress_arg_list);
- 		  else
--		      execlp (compressprog, compressprog, "-d", "-c", 0);
-+		      execlp (compressprog, compressprog, "-d", "-c", (char *)NULL);
- 		  fprintf (stderr, "Could not uncompress, errno %d\n", errno);
- 		  exit (1);
- 	      }
-@@ -3493,7 +3481,7 @@ out (av)
+@@ -3580,7 +3579,7 @@ out (av)
      auto char name[PATHSIZE];
      auto char fsname[PATHSIZE];
      auto int compression;
@@ -163,7 +119,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
      auto struct utimbuf tstamp;
  #else
      auto time_t tstamp[2];
-@@ -3638,7 +3626,7 @@ out (av)
+@@ -3750,7 +3749,7 @@ out (av)
  	if(aflag && *fsname && ((sb.sb_mode & S_IFMT)==S_IFREG))
  	{
  	    /* reset access time, this distroys the ctime btw. */
@@ -172,7 +128,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
  	    tstamp.actime = sb.sb_atime;
  	    tstamp.modtime = sb.sb_mtime;
  	    VOID utime (fsname, &tstamp);
-@@ -4133,7 +4121,7 @@ passitem (from, asb, ifd, dir)
+@@ -4251,7 +4250,7 @@ passitem (from, asb, ifd, dir)
  {
    reg int ofd;
  
@@ -181,7 +137,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -4149,7 +4137,7 @@ passitem (from, asb, ifd, dir)
+@@ -4267,7 +4266,7 @@ passitem (from, asb, ifd, dir)
  	continue;
        if (ofd > 0)
  	passdata (from, ifd, to, ofd);
@@ -190,21 +146,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
        tstamp.actime = tstamp.modtime = mflag ? timenow : asb->sb_mtime;
        VOID utime (to, &tstamp);
  #else
-@@ -4354,12 +4342,7 @@ fswrite (fd, buf, len)
- STATIC char *
- syserr ()
- {
--  static char msg[40];
--
--  if (errno > 0 && errno < sys_nerr)
--    return ((char *) sys_errlist[errno]);
--  VOID sprintf (msg, "Unknown error (errno %d)", errno);
--  return (msg);
-+  return strerror(errno);
- }
- 
- /*
-@@ -4765,7 +4748,7 @@ xwait (pid, what, compstat2)
+@@ -4901,7 +4900,7 @@ xwait (pid, what, compstat2)
       char *what;
       int compstat2;
  {
@@ -213,7 +155,7 @@ $NetBSD: patch-ac,v 1.2 2012/06/23 18:02:15 dholland Exp $
    reg Child *cp;
    reg Child **acp;
    auto char why[100];
-@@ -4782,16 +4765,16 @@ xwait (pid, what, compstat2)
+@@ -4918,16 +4917,16 @@ xwait (pid, what, compstat2)
    free ((char *) cp);
    if (status == 0)
      return (0);
