@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/02 12:52:16 imil Exp $
+$NetBSD: distinfo,v 1.2 2015/02/15 18:58:40 gls Exp $
 
-SHA1 (password-store-1.6.3.tar.xz) = 42c5d912cba614f052eae117cec47caaf75944ea
-RMD160 (password-store-1.6.3.tar.xz) = 1a1311b67942a0a490af5c20376483a4a5240101
-Size (password-store-1.6.3.tar.xz) = 52944 bytes
+SHA1 (password-store-1.6.5.tar.xz) = 7590bee627bc9d617cdaf901544996cde54f5a12
+RMD160 (password-store-1.6.5.tar.xz) = 76e50eaef02163dc23c155ade34b88e965ac6f30
+Size (password-store-1.6.5.tar.xz) = 54576 bytes
 SHA1 (patch-src_password-store.sh) = 5a1c1742b16716bbf50ef591b99f0e84d1f52062
