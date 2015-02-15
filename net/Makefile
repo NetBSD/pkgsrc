@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1058 2015/02/08 19:42:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1059 2015/02/15 06:16:40 tnn Exp $
 #
 
 COMMENT=	Networking tools
@@ -689,7 +689,6 @@ SUBDIR+=	ssync
 SUBDIR+=	stripes
 SUBDIR+=	sup
 SUBDIR+=	synergy
-SUBDIR+=	synergy1.2
 SUBDIR+=	sysmon
 SUBDIR+=	tacacs
 SUBDIR+=	tacacs-shrubbery
