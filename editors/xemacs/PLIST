@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/12/08 20:43:28 marino Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/02/15 13:13:24 hauke Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -26,6 +26,7 @@ lib/${DISTNAME}/etc/FTP
 lib/${DISTNAME}/etc/GNU
 lib/${DISTNAME}/etc/HELLO
 lib/${DISTNAME}/etc/InstallGuide
+lib/${DISTNAME}/etc/Installation
 lib/${DISTNAME}/etc/LPF
 lib/${DISTNAME}/etc/MACHINES
 lib/${DISTNAME}/etc/MAILINGLISTS

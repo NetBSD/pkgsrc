@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2010/12/23 11:44:29 dsainty Exp $
+# $NetBSD: options.mk,v 1.11 2015/02/15 13:13:24 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
-PKG_SUPPORTED_OPTIONS=		ldap xface canna x11
+PKG_SUPPORTED_OPTIONS=		ldap xface canna x11 debug
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
 PKG_OPTIONS_GROUP.toolkit=	lucid
 
@@ -138,4 +138,10 @@ CONFIGURE_ARGS+=	--with-dialogs=athena
 CONFIGURE_ARGS+=	--with-widgets=athena
 CONFIGURE_ARGS+=	--with-athena=xaw
 CONFIGURE_ARGS+=	--with-xim=xlib
+.endif
+
+PLIST_VARS+=            debug
+.if !empty(PKG_OPTIONS:Mdebug)
+CFLAGS+=                -g3
+INSTALL_UNSTRIPPED=     yes
 .endif

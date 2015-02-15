@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.112 2015/02/04 09:19:20 hauke Exp $
+# $NetBSD: Makefile,v 1.113 2015/02/15 13:13:24 hauke Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
 
 DISTNAME=	xemacs-21.4.23
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
@@ -26,7 +26,13 @@ DIST_SUBDIR=		xemacs
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
 FILES_SUBST+=		DISTNAME=${DISTNAME:Q}
 MESSAGE_SUBST+=		DISTNAME=${DISTNAME:Q}
-INFO_FILES=	yes
+INFO_FILES=		yes
+
+.if defined(MANZ)
+PLIST_SUBST+=		ELSUFX='.gz'
+.else
+PLIST_SUBST+=		ELSUFX=''
+.endif
 
 .include "options.mk"
 
@@ -36,6 +42,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--with-msw=no
+CONFIGURE_ARGS+=	--pdump
 CFLAGS+=		-Dunix
 
 # Use terminfo on NetBSD-6 and newer.
@@ -69,6 +76,9 @@ REPLACE_SH=		etc/check_cygwin_setup.sh
 LIBDIR=			${PREFIX}/lib/${DISTNAME}
 ARCHLIBDIR=		${LIBDIR}/${MACHINE_GNU_PLATFORM}
 
+# The portable dumper creates a dump file with a build ID in its name
+GENERATE_PLIST+=	${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
+
 # This list overrides variables used in the source Makefiles at install
 # time to allow for ${DESTDIR}-style installation.  This variables list
 # is pulled from the ``mkdir'' target of Makefile.in.in.
@@ -95,13 +105,10 @@ post-extract:
 pre-build:
 	rm -f ${WRKSRC}/etc/ctags.1.orig
 
-.if defined(MANZ)
-PLIST_SUBST+=		ELSUFX='.gz'
-
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/Installation ${DESTDIR}${LIBDIR}/etc/
+.if defined(MANZ)
 	find ${DESTDIR}${LIBDIR} -name "*.el" -type f -print | xargs ${GZIP_CMD}
-.else
-PLIST_SUBST+=		ELSUFX=''
 .endif
 
 .include "../../databases/gdbm/buildlink3.mk"
