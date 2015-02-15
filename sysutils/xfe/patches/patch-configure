@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2015/02/15 14:09:38 ryoon Exp $
+
+--- configure.orig	2014-12-05 14:51:58.000000000 +0000
++++ configure
+@@ -16194,7 +16194,7 @@ echo "==================================
+ 
+ 
+ # Warning message about Xft support
+-if test "x$TEST_XFT" == "x" ; then
++if test "x$TEST_XFT" = "x" ; then
+ 	echo ""
+ 	echo "==================================== Warning ================================================"
+ 	echo "Configure has detected that your FOX library was compiled without Xft support."
