@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.12 2015/02/15 02:11:03 ryoon Exp $
 
---- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2014-10-14 06:36:14.000000000 +0000
+--- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2015-02-05 04:38:37.000000000 +0000
 +++ mozilla/ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -15,8 +15,8 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2014/11/02 05:4
 +#endif
  
  #include "base/command_line.h"
- #include "base/path_service.h"
-@@ -504,7 +510,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+ #include "base/string_util.h"
+@@ -533,7 +539,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -25,7 +25,7 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2014/11/02 05:4
    base::environment_map newEnvVars;
    ChildPrivileges privs = mPrivileges;
    if (privs == base::PRIVILEGES_DEFAULT) {
-@@ -643,7 +649,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -672,7 +678,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -34,7 +34,7 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2014/11/02 05:4
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -676,7 +682,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -705,7 +711,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(childProcessType);
  
    base::LaunchApp(childArgv, mFileMap,

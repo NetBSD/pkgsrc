@@ -1,17 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.11 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.12 2015/02/15 02:11:03 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util.h.orig	2014-10-14 06:36:14.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util.h.orig	2015-02-05 04:38:37.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util.h
-@@ -13,7 +13,7 @@
- #if defined(OS_WIN)
- #include <windows.h>
- #include <tlhelp32.h>
--#elif defined(OS_LINUX) || defined(__GLIBC__)
-+#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
- #include <dirent.h>
- #include <limits.h>
- #include <sys/types.h>
-@@ -32,6 +32,9 @@
+@@ -41,6 +41,9 @@
  typedef PROCESSENTRY32 ProcessEntry;
  typedef IO_COUNTERS IoCounters;
  #elif defined(OS_POSIX)

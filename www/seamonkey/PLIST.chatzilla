@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.chatzilla,v 1.4 2015/01/02 04:26:21 ryoon Exp $
+@comment $NetBSD: PLIST.chatzilla,v 1.5 2015/02/15 02:11:03 ryoon Exp $
 lib/seamonkey/extensions/inspector@mozilla.org/chrome.manifest
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/.mkdir.done
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.ico
@@ -427,6 +427,8 @@ lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/op-symbol.png
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/secure-broken.png
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/secure.png
+lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/spbubble-off.png
+lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/spbubble-on.png
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/taskbar-irc.gif
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/voice-graphic.png
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla/skin/modern/chatzilla/images/voice-symbol.png
