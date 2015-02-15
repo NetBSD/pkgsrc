@@ -1,11 +1,19 @@
-$NetBSD: patch-as,v 1.19 2015/01/02 04:26:21 ryoon Exp $
+$NetBSD: patch-as,v 1.20 2015/02/15 02:11:03 ryoon Exp $
 
 * Fix _res is not supported for multi-threaded programs. error.
 * Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2014-12-03 06:22:48.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2015-02-05 04:38:38.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2089,8 +2089,7 @@ AC_LANG_CPLUSPLUS
+@@ -1200,7 +1200,6 @@ if test "$GNU_CC"; then
+ 
+     # Treat some warnings as errors:
+     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=address"
+-    _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=char-subscripts"
+     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=comment"
+     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=empty-body"
+     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=endif-labels"
+@@ -2180,8 +2179,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -15,7 +23,7 @@ $NetBSD: patch-as,v 1.19 2015/01/02 04:26:21 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3004,7 +3003,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3095,7 +3093,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -24,7 +32,7 @@ $NetBSD: patch-as,v 1.19 2015/01/02 04:26:21 ryoon Exp $
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3924,6 +3923,16 @@ MOZ_SUBCONFIGURE_ICU()
+@@ -3989,6 +3987,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
@@ -39,5 +47,5 @@ $NetBSD: patch-as,v 1.19 2015/01/02 04:26:21 ryoon Exp $
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
- AC_HAVE_FUNCS(setlocale)
- AC_HAVE_FUNCS(localeconv)
+ MALLOC_HEADERS="malloc.h malloc_np.h malloc/malloc.h sys/malloc.h"
+ MALLOC_H=
