@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.899 2015/02/15 01:35:04 mef Exp $
+$NetBSD: CHANGES-2015,v 1.900 2015/02/15 02:21:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1277,3 +1277,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Return-Value to 1.666.004 [mef 2015-02-15]
 	Updated devel/p5-Role-HasMessage to 0.006 [mef 2015-02-15]
 	Updated devel/p5-Role-Identifiable to 0.007 [mef 2015-02-15]
+	Updated www/seamonkey to 2.32.1 [ryoon 2015-02-15]
+	Updated www/seamonkey-l10n to 2.32.1 [ryoon 2015-02-15]
