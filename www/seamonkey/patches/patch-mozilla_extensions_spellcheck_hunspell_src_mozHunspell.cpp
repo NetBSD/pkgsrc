@@ -1,16 +1,18 @@
-$NetBSD: patch-mozilla_extensions_spellcheck_hunspell_src_mozHunspell.cpp,v 1.1 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-mozilla_extensions_spellcheck_hunspell_src_mozHunspell.cpp,v 1.2 2015/02/15 02:11:03 ryoon Exp $
 
---- mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp.orig	2013-09-16 18:26:33.000000000 +0000
+--- mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp.orig	2015-02-05 04:40:01.000000000 +0000
 +++ mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
-@@ -417,6 +417,12 @@ mozHunspell::LoadDictionaryList()
+@@ -400,6 +400,14 @@ mozHunspell::LoadDictionaryList(bool aNo
      }
    }
  
 +  // load system hunspell dictionaries
-+  nsIFile* hunDir;
++  nsCOMPtr<nsIFile> hunDir;
 +  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("@PREFIX@/share/hunspell"),
-+			true, &hunDir);
-+  LoadDictionariesFromDir(hunDir);
++                        true, getter_AddRefs(hunDir));
++  if (hunDir) {
++      LoadDictionariesFromDir(hunDir);
++  }
 +
    // find dictionaries from extensions requiring restart
    nsCOMPtr<nsISimpleEnumerator> dictDirs;
