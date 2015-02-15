@@ -1,10 +1,10 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.8 2015/01/02 04:26:21 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.9 2015/02/15 02:11:03 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2014-12-03 06:11:58.000000000 +0000
+--- mail/app/Makefile.in.orig	2015-02-05 04:28:30.000000000 +0000
 +++ mail/app/Makefile.in
-@@ -48,6 +48,10 @@ else
- 
- DEFINES += -DXPCOM_GLUE
+@@ -41,6 +41,10 @@ include $(topsrcdir)/config/rules.mk
+ else
+ # Build a binary bootstrapping with XRE_main
  
 +ifeq ($(OS_ARCH),NetBSD)
 +LIBS += -lossaudio

@@ -1,26 +1,42 @@
-$NetBSD: patch-mozilla_xpcom_base_nsStackWalk.cpp,v 1.4 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_base_nsStackWalk.cpp,v 1.5 2015/02/15 02:11:03 ryoon Exp $
 
---- mozilla/xpcom/base/nsStackWalk.cpp.orig	2014-10-14 06:36:46.000000000 +0000
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2015-02-05 04:38:49.000000000 +0000
 +++ mozilla/xpcom/base/nsStackWalk.cpp
+@@ -34,12 +34,12 @@ static CriticalAddress gCriticalAddress;
+ #define _GNU_SOURCE
+ #endif
+ 
+-#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
++#if defined(HAVE_DLOPEN) || defined(XP_DARWIN)
+ #include <dlfcn.h>
+ #endif
+ 
+-#define NSSTACKWALK_SUPPORTS_MACOSX \
+-  (defined(XP_MACOSX) && \
++#define NSSTACKWALK_SUPPORTS_DARWIN \
++  (defined(XP_DARWIN) && \
+    (defined(__i386) || defined(__ppc__) || defined(HAVE__UNWIND_BACKTRACE)))
+ 
+ #define NSSTACKWALK_SUPPORTS_LINUX \
 @@ -47,7 +47,7 @@ static CriticalAddress gCriticalAddress;
-   (defined(__sun) && \
-    (defined(__sparc) || defined(sparc) || defined(__i386) || defined(i386)))
+    ((defined(__GNUC__) && (defined(__i386) || defined(PPC))) || \
+     defined(HAVE__UNWIND_BACKTRACE)))
  
 -#if NSSTACKWALK_SUPPORTS_MACOSX
 +#if NSSTACKWALK_SUPPORTS_DARWIN
  #include <pthread.h>
  #include <CoreServices/CoreServices.h>
  
-@@ -866,7 +866,7 @@ NS_FormatCodeAddressDetails(void* aPC, c
+@@ -832,7 +832,7 @@ NS_DescribeCodeAddress(void* aPC, nsCode
+ }
  
- // WIN32 x86 stack walking code
- // i386 or PPC Linux stackwalking code or Solaris
--#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_SOLARIS || NSSTACKWALK_SUPPORTS_MACOSX)
-+#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_SOLARIS || NSSTACKWALK_SUPPORTS_DARWIN)
+ // i386 or PPC Linux stackwalking code
+-#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_MACOSX)
++#elif HAVE_DLADDR && (HAVE__UNWIND_BACKTRACE || NSSTACKWALK_SUPPORTS_LINUX || NSSTACKWALK_SUPPORTS_DARWIN)
  
  #include <stdlib.h>
  #include <string.h>
-@@ -1191,7 +1191,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -903,7 +903,7 @@ FramePointerStackWalk(NS_WalkStackCallba
          (long(next) & 3)) {
        break;
      }
@@ -29,7 +45,7 @@ $NetBSD: patch-mozilla_xpcom_base_nsStackWalk.cpp,v 1.4 2014/11/02 05:40:31 ryoo
      // ppc mac or powerpc64 linux
      void* pc = *(bp + 2);
      bp += 3;
-@@ -1221,7 +1221,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -933,7 +933,7 @@ FramePointerStackWalk(NS_WalkStackCallba
  }
  
  #define X86_OR_PPC (defined(__i386) || defined(PPC) || defined(__ppc__))
