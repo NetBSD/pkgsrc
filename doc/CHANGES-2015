@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.902 2015/02/15 07:01:32 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.903 2015/02/15 08:35:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1281,3 +1281,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey-l10n to 2.32.1 [ryoon 2015-02-15]
 	Removed net/synergy1.2 successor net/synergy [tnn 2015-02-15]
 	Updated www/php-owncloud to 8.0.0 [ryoon 2015-02-15]
+	Updated devel/p5-SVN-Class to 0.18 [mef 2015-02-15]
+	Updated devel/p5-SVN-Dump to 0.06 [mef 2015-02-15]
+	Updated devel/p5-Scope-Upper to 0.25 [mef 2015-02-15]
+	Updated devel/p5-Set-Object to 1.34 [mef 2015-02-15]
+	Updated devel/p5-Set-Scalar to 1.29 [mef 2015-02-15]
+	Updated devel/p5-Shell-Perl to 0.0023 [mef 2015-02-15]
+	Updated devel/p5-Smart-Comments to 1.000005 [mef 2015-02-15]
