@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/15 08:52:51 tron Exp $
 bin/rdesktop
 man/man1/rdesktop.1
 share/rdesktop/keymaps/ar
@@ -36,6 +36,7 @@ share/rdesktop/keymaps/pl
 share/rdesktop/keymaps/pt
 share/rdesktop/keymaps/pt-br
 share/rdesktop/keymaps/ru
+share/rdesktop/keymaps/sk
 share/rdesktop/keymaps/sl
 share/rdesktop/keymaps/sv
 share/rdesktop/keymaps/th
