@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/02/15 17:41:24 khorben Exp $
+
+SHA1 (hexchat-2.10.2.tar.xz) = 3ce831cde92f2f9999a217523d124e5b4cd08333
+RMD160 (hexchat-2.10.2.tar.xz) = a37ae7451afa0d93446dba22c38d00d02bc49a6b
+Size (hexchat-2.10.2.tar.xz) = 1529732 bytes
+SHA1 (patch-osx_launcher.sh) = 7493430921809182898aca2ebb8fd1f493dbd9d3
+SHA1 (patch-plugins_sysinfo_parse.c) = f27c7a14e61210e512e433e833e33d6603b49525
+SHA1 (patch-plugins_sysinfo_pci.c) = ddea8c85640eae7d05fee4a6cff42b368f462b9f
+SHA1 (patch-plugins_sysinfo_pci.h) = 681239a5bf99e7c4d896d3fb1f885b3c6c8d1d7d
