@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/03/16 23:41:10 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/02/15 08:34:33 mef Exp $
 
-SHA1 (Smart-Comments-1.0.4.tar.gz) = 900d402f3720e04cda26a47e9acf7fd1c759c918
-RMD160 (Smart-Comments-1.0.4.tar.gz) = f4244f1cdfcd03bd78ffb16c6f96fc693afc2e58
-Size (Smart-Comments-1.0.4.tar.gz) = 17904 bytes
+SHA1 (Smart-Comments-1.000005.tar.gz) = d692617de1cfc80692b5e38935f073b64c00b7f9
+RMD160 (Smart-Comments-1.000005.tar.gz) = 488f947ad007138aab8d497961e7f9405d1c3186
+Size (Smart-Comments-1.000005.tar.gz) = 15488 bytes
