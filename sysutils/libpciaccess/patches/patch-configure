@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.4 2015/02/15 06:05:30 tnn Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=89151
+
+--- configure.orig	2015-02-03 23:59:22.000000000 +0000
++++ configure
+@@ -18084,12 +18084,16 @@ case $host_os in
+ 	*netbsd*)
+ 		case $host in
+ 		*i3-986*)
+-			PCIACCESS_LIBS="$PCIACCESS_LIBS -li386 -lpci"
++			PCIACCESS_LIBS="$PCIACCESS_LIBS -li386"
+ 			;;
+ 		*x86_64*|*amd64*)
+-			PCIACCESS_LIBS="$PCIACCESS_LIBS -lx86_64 -lpci"
++			PCIACCESS_LIBS="$PCIACCESS_LIBS -lx86_64"
++			;;
++		*alpha*)
++			PCIACCESS_LIBS="$PCIACCESS_LIBS -lalpha"
+ 			;;
+ 		esac
++		PCIACCESS_LIBS="$PCIACCESS_LIBS -lpci"
+ 		netbsd=yes
+ 		;;
+ 	*openbsd*)
