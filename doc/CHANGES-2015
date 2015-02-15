@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.900 2015/02/15 02:21:20 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.901 2015/02/15 06:16:40 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1279,3 +1279,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Role-Identifiable to 0.007 [mef 2015-02-15]
 	Updated www/seamonkey to 2.32.1 [ryoon 2015-02-15]
 	Updated www/seamonkey-l10n to 2.32.1 [ryoon 2015-02-15]
+	Removed net/synergy1.2 successor net/synergy [tnn 2015-02-15]
