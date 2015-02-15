@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/06/23 18:02:15 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/02/15 14:45:48 ryoon Exp $
 
-SHA1 (afio-2.5.tgz) = 051765f209fded60f94944da8a76ae37c3423a23
-RMD160 (afio-2.5.tgz) = 991bdb794ee8b4b7e6a737afa85009aae925699d
-Size (afio-2.5.tgz) = 179184 bytes
+SHA1 (afio-2.5.1.tgz) = bff6b9a147dc5b0e6bd7f1a76f0b84e4dd9a7dc9
+RMD160 (afio-2.5.1.tgz) = 923981a9e6766781705ceedecd3d86afa5b9abae
+Size (afio-2.5.1.tgz) = 191765 bytes
 SHA1 (patch-aa) = e35b47c2f10a6f80d8446e4c22a7a023dae55933
-SHA1 (patch-ab) = 746c0eaf036cba60fb48e798175e055df6addd77
-SHA1 (patch-ac) = 99378318e898429153352a2d9b47008f419865af
+SHA1 (patch-ab) = a93cf92b80f2b40e30987822b144c24f3a3e5c1e
+SHA1 (patch-ac) = d589b2e37d8a81373f14e4093fe8cc2b30b5489b
