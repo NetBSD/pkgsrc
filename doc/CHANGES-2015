@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.901 2015/02/15 06:16:40 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.902 2015/02/15 07:01:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1280,3 +1280,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey to 2.32.1 [ryoon 2015-02-15]
 	Updated www/seamonkey-l10n to 2.32.1 [ryoon 2015-02-15]
 	Removed net/synergy1.2 successor net/synergy [tnn 2015-02-15]
+	Updated www/php-owncloud to 8.0.0 [ryoon 2015-02-15]
