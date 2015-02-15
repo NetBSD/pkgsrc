@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/01/05 11:32:49 imil Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/15 18:58:40 gls Exp $
 
-DISTNAME=	password-store-1.6.3
+DISTNAME=	password-store-1.6.5
 CATEGORIES=	security
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 EXTRACT_SUFX=	.tar.xz
