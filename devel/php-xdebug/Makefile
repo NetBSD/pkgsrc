@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/02/02 12:18:38 obache Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/15 09:04:39 taca Exp $
 #
 
 MODNAME=		xdebug
 PECL_VERSION=		2.2.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://xdebug.org/files/
 EXTRACT_SUFX=		.tgz
@@ -12,7 +13,7 @@ HOMEPAGE=		http://xdebug.org/
 COMMENT=		PHP extension for debugging
 LICENSE=		php
 
-.include "../../lang/php/ext.mk"
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
+PHP_ZEND_EXTENSION=	yes
 
+.include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
