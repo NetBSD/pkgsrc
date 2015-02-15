@@ -210,7 +210,8 @@ II. The pkgsrc developer's guide
         13.5. Man page compression
         13.6. Changing PLIST source with PLIST_SRC
         13.7. Platform-specific and differing PLISTs
-        13.8. Sharing directories between packages
+        13.8. Build-specific PLISTs
+        13.9. Sharing directories between packages
 
     14. Buildlink methodology
 
@@ -2911,7 +2912,8 @@ Table of Contents
     13.5. Man page compression
     13.6. Changing PLIST source with PLIST_SRC
     13.7. Platform-specific and differing PLISTs
-    13.8. Sharing directories between packages
+    13.8. Build-specific PLISTs
+    13.9. Sharing directories between packages
 
 14. Buildlink methodology
 
@@ -4156,7 +4158,8 @@ Table of Contents
 13.5. Man page compression
 13.6. Changing PLIST source with PLIST_SRC
 13.7. Platform-specific and differing PLISTs
-13.8. Sharing directories between packages
+13.8. Build-specific PLISTs
+13.9. Sharing directories between packages
 
 The PLIST file contains a package's "packing list", i.e. a list of files that
 belong to the package (relative to the ${PREFIX} directory it's been installed
@@ -4179,7 +4182,7 @@ targets" for more information on this target.
 
 13.3. Tweaking output of make print-PLIST
 
-If you have used any of the *-dirs packages, as explained in Section 13.8,
+If you have used any of the *-dirs packages, as explained in Section 13.9,
 "Sharing directories between packages", you may have noticed that make
 print-PLIST outputs a set of @comments instead of real @dirrm lines. You can
 also do this for specific directories and files, so that the results of that
@@ -4299,7 +4302,23 @@ following files:
 
   * PLIST.common_end
 
-13.8. Sharing directories between packages
+13.8. Build-specific PLISTs
+
+Some packages decide to generate hard-to-guess file names during installation
+that are hard to wire down.
+
+In such cases, you can set the GENERATE_PLIST variable to shell code terminated
+(with a semicolon) that will output PLIST entries which will be appended to the
+PLIST
+
+You can find one example in editors/xemacs:
+
+      GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
+
+
+which will append something like bin/xemacs-21.4.23-54e8ea71.dmp to the PLIST.
+
+13.9. Sharing directories between packages
 
 A "shared directory" is a directory where multiple (and unrelated) packages
 install files. These directories were problematic because you had to add
@@ -4315,6 +4334,8 @@ installation as usual, and also add an entry to the PLIST:
 
 @pkgdir path/to/empty/directory
 
+
+or take a look at MAKE_DIRS and OWN_DIRS.
 
 Chapter 14. Buildlink methodology
 
