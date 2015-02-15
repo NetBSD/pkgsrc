@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2014/11/10 15:38:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.4.2.1 2015/02/15 13:30:59 tron Exp $
 # used by multimedia/ffplay1/Makefile
 # used by multimedia/ffmpeg1/Makefile
 
-DISTNAME=	ffmpeg-1.2.10
+DISTNAME=	ffmpeg-1.2.12
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.bz2
