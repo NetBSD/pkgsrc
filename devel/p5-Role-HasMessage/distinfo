@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 11:50:48 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/02/15 01:32:03 mef Exp $
 
-SHA1 (Role-HasMessage-0.005.tar.gz) = 4e093910c01482b4c2ae9cc92ada207380528863
-RMD160 (Role-HasMessage-0.005.tar.gz) = b26b3dea861e3ed5b14e228b57e9f6d421e34bc8
-Size (Role-HasMessage-0.005.tar.gz) = 11014 bytes
+SHA1 (Role-HasMessage-0.006.tar.gz) = da31a30e67f4ca3d01722c61112c906180761a3c
+RMD160 (Role-HasMessage-0.006.tar.gz) = a491950bbb0c443f23c658f65a28acd6346cac7b
+Size (Role-HasMessage-0.006.tar.gz) = 13518 bytes
