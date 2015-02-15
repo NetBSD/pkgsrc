@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_content_media_gmp_GMPChild.cpp,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_gmp_GMPChild.cpp,v 1.2 2015/02/15 02:11:03 ryoon Exp $
 
---- mozilla/content/media/gmp/GMPChild.cpp.orig	2014-10-14 06:36:06.000000000 +0000
+--- mozilla/content/media/gmp/GMPChild.cpp.orig	2015-02-05 04:39:37.000000000 +0000
 +++ mozilla/content/media/gmp/GMPChild.cpp
-@@ -66,19 +66,11 @@ GetPluginFile(const std::string& aPlugin
+@@ -91,21 +91,14 @@ GetFileBase(const std::string& aPluginPa
    }
  #endif
  
 -  nsCOMPtr<nsIFile> parent;
--  rv = aLibFile->GetParent(getter_AddRefs(parent));
+-  rv = aFileBase->GetParent(getter_AddRefs(parent));
 -  if (NS_FAILED(rv)) {
 -    return false;
 -  }
@@ -16,12 +16,15 @@ $NetBSD: patch-mozilla_content_media_gmp_GMPChild.cpp,v 1.1 2014/11/02 05:40:31 
 -  rv = parent->GetLeafName(parentLeafName);
 -  if (NS_FAILED(rv)) {
 +  nsAutoString leafName;
-+  if (NS_FAILED(aLibFile->GetLeafName(leafName))) {
++  if (NS_FAILED(aFileBase->GetLeafName(leafName))) {
      return false;
    }
--
--  nsAutoString baseName(Substring(parentLeafName, 4, parentLeafName.Length() - 1));
-+  nsAutoString baseName(Substring(leafName, 4, leafName.Length() - 1));
  
- #if defined(XP_MACOSX)
-   nsAutoString binaryName = NS_LITERAL_STRING("lib") + baseName + NS_LITERAL_STRING(".dylib");
+-  aBaseName = Substring(parentLeafName,
++  aBaseName = Substring(leafName,
+                         4,
+-                        parentLeafName.Length() - 1);
++                        leafName.Length() - 1);
+   return true;
+ }
+ 
