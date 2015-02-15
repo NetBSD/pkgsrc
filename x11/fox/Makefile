@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2014/12/16 12:08:44 mef Exp $
+# $NetBSD: Makefile,v 1.56 2015/02/15 14:04:59 ryoon Exp $
 
-DISTNAME=	fox-1.6.33
-PKGREVISION=	11
+DISTNAME=	fox-1.6.50
 CATEGORIES=	x11
 MASTER_SITES=	ftp://www.fox-toolkit.org/pub/
 
@@ -19,14 +18,7 @@ CONFIGURE_ARGS+=	--with-shm
 CONFIGURE_ARGS+=	--with-xft
 CONFIGURE_ARGS+=	--with-x
 
-CONFIGURE_ENV+=		REAL_PTHREAD_LIBS=${PTHREAD_LIBS:Q}
-
 .include "../../mk/bsd.prefs.mk"
-
-# NetBSD < 3.0 does not have getpwnam_r() getpwuin_r()
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-2]*) || ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-threadsafe
-.endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
