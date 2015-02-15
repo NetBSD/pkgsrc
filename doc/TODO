@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14128 2015/02/15 14:22:03 ryoon Exp $
+$NetBSD: TODO,v 1.14129 2015/02/15 14:23:35 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -364,7 +364,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.9.1
 	o amaya-11.4.4 [wip]
-	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-3.14.1
 	o anope-1.8.7
