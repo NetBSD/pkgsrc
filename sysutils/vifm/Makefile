@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 19:51:29 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/15 12:50:53 ryoon Exp $
 #
 
-DISTNAME=	vifm-0.1
-PKGREVISION=	4
+DISTNAME=	vifm-0.7.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vifm.sourceforge.net/
+HOMEPAGE=	http://vifm.info/
 COMMENT=	Ncurses based file manager with vi like keybindings
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
 
-pre-configure:
+ppre-configure:
 	@${SED} -e "s/cfg.use_screen = 0/cfg.use_screen = 1/" \
 		-e "s,/usr/local,${PREFIX},g" \
 		${WRKSRC}/src/config.c > ${WRKSRC}/src/config.c.new && \
@@ -25,6 +25,6 @@ pre-configure:
 		${WRKSRC}/src/vifmrc0.1 > ${WRKSRC}/src/vifmrc0.1.new && \
 		${MV} ${WRKSRC}/src/vifmrc0.1.new ${WRKSRC}/src/vifmrc0.1
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
