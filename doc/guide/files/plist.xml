@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.19 2009/08/25 13:19:50 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.20 2015/02/15 18:50:04 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -240,6 +240,24 @@ ${PLIST.foo}@dirrm share/bar
     </itemizedlist>
   </sect1>
 
+  <sect1 id="build-plist">
+    <title>Build-specific PLISTs</title>
+
+    <para>Some packages decide to generate hard-to-guess file names
+    during installation that are hard to wire down.</para>
+    <para>In such cases, you can set the
+    <varname>GENERATE_PLIST</varname> variable to shell code
+    terminated (with a semicolon) that will output PLIST entries which
+    will be appended to the PLIST</para>
+    <para>You can find one example in editors/xemacs:</para>
+    <programlisting>
+      GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
+    </programlisting>
+    <para>which will append something like
+    <filename>bin/xemacs-21.4.23-54e8ea71.dmp</filename> to the
+    <filename>PLIST</filename>.
+    </para>
+  </sect1>
 
   <sect1 id="faq.common-dirs">
     <title>Sharing directories between packages</title>
@@ -261,6 +279,8 @@ ${PLIST.foo}@dirrm share/bar
     <programlisting>
 @pkgdir path/to/empty/directory
     </programlisting>
+    or take a look at <varname>MAKE_DIRS</varname> and
+    <varname>OWN_DIRS</varname>.
     </para>
   </sect1>
 
