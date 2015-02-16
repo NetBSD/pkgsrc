@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.55 2015/02/01 09:15:49 obache Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.56 2015/02/16 11:01:40 jperkin Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -35,6 +35,9 @@ TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*-*)
 TOOLS_PLATFORM.gawk?=		${TOOLS_PLATFORM.awk}
 .endif
+.if exists(/usr/bin/gettext)
+TOOLS_PLATFORM.gettext?=	/usr/bin/gettext
+.endif
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
 TOOLS_PLATFORM.gsoelim?=	${TOOLS_PLATFORM.soelim}	# GNUish
@@ -67,8 +70,14 @@ TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 .endif
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
+.if exists(/usr/bin/msgconv)
+TOOLS_PLATFORM.msgconv?=	/usr/bin/msgconv
+.endif
 .if exists(/usr/bin/msgfmt)
 TOOLS_PLATFORM.msgfmt?=		/usr/bin/msgfmt
+.endif
+.if exists(/usr/bin/msgmerge)
+TOOLS_PLATFORM.msgmerge?=	/usr/bin/msgmerge
 .endif
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.mv?=		/bin/mv
