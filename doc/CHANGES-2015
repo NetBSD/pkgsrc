@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.915 2015/02/16 09:58:05 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.916 2015/02/16 13:13:23 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1302,3 +1302,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/password-store to 1.6.5 [gls 2015-02-15]
 	Updated security/apg to 2.3.0bnb2 [rodent 2015-02-16]
 	Updated misc/libreoffice4 to 4.4.0.3nb2 [ryoon 2015-02-16]
+	Updated security/mozilla-rootcerts to 1.0.20141117 [tnn 2015-02-16]
