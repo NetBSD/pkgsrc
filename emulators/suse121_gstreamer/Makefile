@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:15 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:45 jperkin Exp $
 
-DISTNAME=	suse_gstreamer-${SUSE_VERSION}
+PKGNAME=	suse_gstreamer-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libgstapp-0_10-0-0.10.35-6.1.2.${SUSE_ARCH}
 RPMPKGS+=	libgstbasevideo-0_10-0-0.10.22-8.1.2.${SUSE_ARCH}

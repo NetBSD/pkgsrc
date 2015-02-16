@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/02/11 09:38:15 obache Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/16 10:15:46 jperkin Exp $
 
-DISTNAME=	suse_libtiff-${SUSE_VERSION}
+PKGNAME=	suse_libtiff-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libtiff3-3.9.5-8.17.1.${SUSE_ARCH}

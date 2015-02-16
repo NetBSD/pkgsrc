@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/02/11 09:38:16 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/16 10:15:47 jperkin Exp $
 
-DISTNAME=	suse_alsa-${SUSE_VERSION}
+PKGNAME=	suse_alsa-${SUSE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	emulators
 RPMUPDPKGS+=	alsa-1.0.27.2-3.5.1.${SUSE_ARCH}
