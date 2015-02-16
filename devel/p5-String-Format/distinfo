@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/05/19 21:06:34 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/02/16 14:27:01 mef Exp $
 
-SHA1 (String-Format-1.16.tar.gz) = 7919d902c3bd69323fd4a6b2a459b7431d18510e
-RMD160 (String-Format-1.16.tar.gz) = 5e44e462b0175583deb05f276ad60f50b75042f2
-Size (String-Format-1.16.tar.gz) = 12936 bytes
+SHA1 (String-Format-1.17.tar.gz) = bbfa7aff13c0aefbb4b24cb12ddbba4a54936c99
+RMD160 (String-Format-1.17.tar.gz) = baf50111f08559b92b4b53f68eba474e32999700
+Size (String-Format-1.17.tar.gz) = 12841 bytes
