@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.918 2015/02/16 15:03:05 mef Exp $
+$NetBSD: CHANGES-2015,v 1.919 2015/02/16 18:03:04 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1274,6 +1274,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Proc-InvokeEditor to 1.07 [mef 2015-02-14]
 	Updated devel/p5-Proc-Pidfile to 1.06 [mef 2015-02-14]
 	Updated net/rdesktop to 1.8.3 [bad 2015-02-14]
+	Updated sysutils/watchman to 3.0.0 [nros 2015-02-14]
 	Updated devel/p5-Return-Value to 1.666.004 [mef 2015-02-15]
 	Updated devel/p5-Role-HasMessage to 0.006 [mef 2015-02-15]
 	Updated devel/p5-Role-Identifiable to 0.007 [mef 2015-02-15]
@@ -1313,3 +1314,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Sub-Identify to 0.10 [mef 2015-02-16]
 	Updated devel/p5-Sub-Override to 0.09 [mef 2015-02-16]
 	Updated devel/p5-Sub-Uplevel to 0.2500 [mef 2015-02-16]
+	Added devel/p5-autovivification version 0.14 [nros 2015-02-16]
+	Updated print/tex-biblatex to 2.9a [nros 2015-02-16]
+	Updated print/tex-biblatex-doc to 2.9a [nros 2015-02-16]
