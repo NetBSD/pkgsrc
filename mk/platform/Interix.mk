@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.75 2015/02/01 11:42:59 obache Exp $
+# $NetBSD: Interix.mk,v 1.76 2015/02/16 10:42:00 jperkin Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -55,7 +55,6 @@ MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
 ###
 
 # NetBSD's faster, vfork-capable shell (not yet in pkgsrc)
-#BULK_PREREQ+=		shells/nbsh
 .if exists(${PREFIX}/bin/nbsh)
 TOOLS_SHELL?=		${PREFIX}/bin/nbsh
 WRAPPER_SHELL?=		${PREFIX}/bin/nbsh
@@ -63,12 +62,6 @@ WRAPPER_SHELL?=		${PREFIX}/bin/nbsh
 
 INSTALL?=		${PREFIX}/bin/install-sh
 SED?=			${PREFIX}/bin/nbsed
-
-.if defined(BATCH)
-BULK_PREREQ+=		lang/perl5
-USE_BULK_BROKEN_CHECK?=	no
-USE_BULK_TIMESTAMPS?=	no
-.endif
 
 ###
 ### Platform definitions common to pkgsrc/mk/platform/*.mk
