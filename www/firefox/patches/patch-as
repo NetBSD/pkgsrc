@@ -1,26 +1,10 @@
-$NetBSD: patch-as,v 1.15 2015/02/15 02:08:29 ryoon Exp $
+$NetBSD: patch-as,v 1.16 2015/02/16 16:16:17 bad Exp $
 
 Treat DragonFly like FreeBSD.
 
 --- js/src/configure.in.orig	2015-01-23 05:59:58.000000000 +0000
-+++ js/src/configure.in
-@@ -1200,7 +1200,6 @@ if test "$GNU_CC"; then
- 
-     # Treat some warnings as errors:
-     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=address"
--    _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=char-subscripts"
-     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=comment"
-     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=empty-body"
-     _WARNINGS_CFLAGS="${_WARNINGS_CFLAGS} -Werror=endif-labels"
-@@ -1299,7 +1298,6 @@ if test "$GNU_CXX"; then
-     _WARNINGS_CXXFLAGS="${_WARNINGS_CXXFLAGS} -Wtype-limits"
- 
-     # Treat some warnings as errors:
--    _WARNINGS_CXXFLAGS="${_WARNINGS_CXXFLAGS} -Werror=char-subscripts"
-     _WARNINGS_CXXFLAGS="${_WARNINGS_CXXFLAGS} -Werror=comment"
-     _WARNINGS_CXXFLAGS="${_WARNINGS_CXXFLAGS} -Werror=empty-body"
-     _WARNINGS_CXXFLAGS="${_WARNINGS_CXXFLAGS} -Werror=endif-labels"
-@@ -2180,8 +2178,7 @@ AC_LANG_CPLUSPLUS
++++ js/src/configure.in	2015-02-16 11:09:33.000000000 +0000
+@@ -2180,8 +2180,7 @@
  
  MOZ_CXX11
  
@@ -30,7 +14,7 @@ Treat DragonFly like FreeBSD.
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3095,7 +3092,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3095,7 +3094,7 @@
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -39,7 +23,7 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3989,6 +3986,16 @@ MOZ_SUBCONFIGURE_ICU()
+@@ -3989,6 +3988,16 @@
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
