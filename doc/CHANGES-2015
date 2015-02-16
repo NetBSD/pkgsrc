@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.913 2015/02/15 18:58:56 gls Exp $
+$NetBSD: CHANGES-2015,v 1.914 2015/02/16 00:26:26 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/afio to 2.5.1 [ryoon 2015-02-15]
 	Added chat/hexchat version 2.10.2 [khorben 2015-02-15]
 	Updated security/password-store to 1.6.5 [gls 2015-02-15]
+	Updated security/apg to 2.3.0bnb2 [rodent 2015-02-16]
