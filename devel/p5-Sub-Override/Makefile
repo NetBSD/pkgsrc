@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/16 14:55:35 mef Exp $
 
-DISTNAME=	Sub-Override-0.08
+DISTNAME=	Sub-Override-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 
@@ -15,7 +14,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Sub/Override/.packlist
 
 BUILD_DEPENDS+=	p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-Fatal>=0.013:../../devel/p5-Test-Fatal
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
