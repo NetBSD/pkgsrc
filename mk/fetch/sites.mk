@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.114 2015/02/16 11:03:20 jperkin Exp $
+# $NetBSD: sites.mk,v 1.115 2015/02/16 11:04:16 jperkin Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -277,7 +277,7 @@ MASTER_SITE_IFARCHIVE+= \
 	ftp://ftp.giga.or.at/pub/ifarchive/
 
 MASTER_SITE_PGSQL+=	\
-	https://ftp.postgresql.org/pub/
+	http://ftp.postgresql.org/pub/
 
 MASTER_SITE_GENTOO+= \
 	http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/ \
