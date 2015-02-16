@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2015/01/24 16:36:29 taca Exp $
+# $NetBSD: Makefile,v 1.67 2015/02/16 15:33:32 adam Exp $
 
-DISTNAME=	roundcubemail-1.0.5-dep
-PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
+DISTNAME=	roundcubemail-1.1.0
+PKGNAME=	${DISTNAME:S/mail-/-/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -79,8 +79,11 @@ CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 .endfor
 
+.include "../../mk/apache.mk"
+
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
+SUBST_MESSAGE.files=	Fixing configuration files.
 SUBST_FILES.files=	roundcube.conf
 SUBST_FILES.files+=	installer/index.php installer/rcube_install.php
 SUBST_FILES.files+=	program/include/iniset.php
@@ -88,15 +91,17 @@ SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_EXAMPLES@|${PREFIX}/share/examples/roundcube|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.files=	Fixing configuration files.
+.if ${PKG_APACHE} == "apache24"
+SUBST_SED.files+=	-e "/Order allow,deny/d"
+SUBST_SED.files+=	-e "/Order deny,allow/d"
+SUBST_SED.files+=	-e "s,Allow from all,Require all granted,g"
+SUBST_SED.files+=	-e "s,Deny from all,Require all denied,g"
+.endif
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	bin/cleandb.sh bin/decrypt.sh bin/gc.sh \
-			bin/indexcontacts.sh bin/installto.sh \
-			bin/moduserprefs.sh bin/msgexport.sh bin/msgimport.sh \
-			bin/update.sh bin/updatecss.sh bin/updatedb.sh
+REPLACE_FILES.php=	bin/*.sh
 
 REPLACE_PYTHON=		plugins/password/helpers/chpass-wrapper.py
 
@@ -143,7 +148,6 @@ do-install:
 			${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php
 .endfor
 
-.include "../../mk/apache.mk"
 .include "options.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
