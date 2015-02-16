@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2015/02/12 11:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2015/02/16 09:56:15 ryoon Exp $
 
 VERREL=		4.4.0
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -293,7 +293,7 @@ post-install:
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/libcmis/buildlink3.mk"
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
