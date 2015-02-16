@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:18 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:48 jperkin Exp $
 
-DISTNAME=	suse_libffi-${SUSE_VERSION}
+PKGNAME=	suse_libffi-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libffi4-4.8.1_20130909-3.2.1.${SUSE_ARCH}
 
