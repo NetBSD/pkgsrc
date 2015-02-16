@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2014/10/29 17:01:09 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2015/02/16 07:54:06 tnn Exp $
 
 DISTNAME=	gc-7.4.2
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
@@ -28,6 +28,9 @@ CFLAGS+=		-D_XOPEN_SOURCE
 .endif
 
 .include "options.mk"
+
+post-extract:
+	mv ${WRKSRC}/src/* ${WRKSRC}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/gc.3
