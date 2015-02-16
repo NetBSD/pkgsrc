@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2055 2015/02/14 10:02:06 mef Exp $
+# $NetBSD: Makefile,v 1.2056 2015/02/16 16:48:09 nros Exp $
 #
 
 COMMENT=	Development utilities
@@ -1460,6 +1460,7 @@ SUBDIR+=	p5-asa
 SUBDIR+=	p5-autobox
 SUBDIR+=	p5-autobox-Core
 SUBDIR+=	p5-autodie
+SUBDIR+=	p5-autovivification
 SUBDIR+=	p5-bareword-filehandles
 SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
