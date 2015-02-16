@@ -1,0 +1,13 @@
+kplex is a multitransport software data multiplexer, working with
+data conforming to the NMEA-0183 standard.
+
+Kplex multiplexes data inputs from sources such as serial lines,
+pseudo terminals and network interfaces and send to any (reasonable)
+number of similar outputs.
+
+kplex can perform filtering of inputs (so you only get the data you
+want, or don't get the data you don't want from a given source) and
+outputs (so you only send what you want where you want) and can
+perform fine-grained failover so that for any given type of data,
+you specify a priority order of the source you would like to take
+it from.
