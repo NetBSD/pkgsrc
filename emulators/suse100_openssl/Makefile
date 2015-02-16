@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/02/11 09:38:14 obache Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/16 10:15:44 jperkin Exp $
 
-DISTNAME=	suse_openssl-${SUSE_VERSION}
+PKGNAME=	suse_openssl-${SUSE_VERSION}
 PKGREVISION=	5
 CATEGORIES=	emulators
 DISTFILES=	openssl-0.9.7g-2.15.${SUSE_ARCH}.rpm

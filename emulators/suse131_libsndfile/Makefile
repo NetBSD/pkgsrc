@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/02/11 09:38:18 obache Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/16 10:15:49 jperkin Exp $
 
-DISTNAME=	suse_libsndfile-${SUSE_VERSION}
+PKGNAME=	suse_libsndfile-${SUSE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libsndfile1-1.0.25-17.4.1.${SUSE_ARCH}
