@@ -1,12 +1,12 @@
-$NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.5 2014/06/11 00:40:59 ryoon Exp $
+$NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.6 2015/02/16 16:10:22 bad Exp $
 
 * NetBSD 5 does not support posix_spawn(3)
 
 * Replace XP_MACOSX with XP_DARWIN as the former is not defined when
   the toolkit is not cocoa.
 
---- dom/system/OSFileConstants.cpp.orig	2014-05-29 23:30:40.000000000 +0000
-+++ dom/system/OSFileConstants.cpp
+--- dom/system/OSFileConstants.cpp.orig	2014-07-17 01:45:12.000000000 +0000
++++ dom/system/OSFileConstants.cpp	2014-08-19 17:41:25.000000000 +0000
 @@ -9,6 +9,10 @@
  
  #include "prsystem.h"
@@ -18,7 +18,17 @@ $NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.5 2014/06/11 00:40:59 ryoon Ex
  #if defined(XP_UNIX)
  #include "unistd.h"
  #include "dirent.h"
-@@ -26,9 +30,9 @@
+@@ -18,7 +22,9 @@
+ #define statvfs statfs
+ #else
+ #include "sys/statvfs.h"
++#if !(defined(__NetBSD__) && (__NetBSD_Version__ < 600000000))
+ #include <spawn.h>
++#endif // !NetBSD 5.*
+ #endif // defined(ANDROID)
+ #endif // defined(XP_UNIX)
+ 
+@@ -26,9 +32,9 @@
  #include <linux/fadvise.h>
  #endif // defined(XP_LINUX)
  
@@ -30,12 +40,12 @@ $NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.5 2014/06/11 00:40:59 ryoon Ex
  
  #if defined(XP_WIN)
  #include <windows.h>
-@@ -533,10 +537,10 @@ static const dom::ConstantSpec gLibcProp
+@@ -564,10 +570,10 @@
    // The size of |fsblkcnt_t|.
    { "OSFILE_SIZEOF_FSBLKCNT_T", INT_TO_JSVAL(sizeof (fsblkcnt_t)) },
  
 -#if !defined(ANDROID)
-+#if !defined(ANDROID) && (defined(__NetBSD_) && (__NetBSD_Version__ < 600000000))
++#if !defined(ANDROID) && !(defined(__NetBSD__) && (__NetBSD_Version__ < 600000000))
    // The size of |posix_spawn_file_actions_t|.
    { "OSFILE_SIZEOF_POSIX_SPAWN_FILE_ACTIONS_T", INT_TO_JSVAL(sizeof (posix_spawn_file_actions_t)) },
 -#endif // !defined(ANDROID)
@@ -43,7 +53,7 @@ $NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.5 2014/06/11 00:40:59 ryoon Ex
  
    // Defining |dirent|.
    // Size
-@@ -596,7 +600,7 @@ static const dom::ConstantSpec gLibcProp
+@@ -627,7 +633,7 @@
  
    { "OSFILE_SIZEOF_STATVFS", INT_TO_JSVAL(sizeof (struct statvfs)) },
  
