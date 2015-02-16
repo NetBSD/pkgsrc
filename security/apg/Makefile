@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2014/08/10 09:06:48 tron Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/16 00:25:45 rodent Exp $
 #
 
 DISTNAME=	apg-2.3.0b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.adel.nursat.kz/apg/download/
 
@@ -23,10 +23,10 @@ MAKE_ENV+=	APG_CS_CLIBS=${APG_CS_CLIBS:Q}
 
 INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
-.if ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rm:-lcrypt
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "OpenBSD"
+BUILDLINK_TRANSFORM+=	l:crypt:crypto
 .endif
 
 post-extract:
