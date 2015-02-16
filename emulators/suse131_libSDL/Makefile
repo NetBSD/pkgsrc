@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:17 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:48 jperkin Exp $
 
-DISTNAME=	suse_libSDL-${SUSE_VERSION}
+PKGNAME=	suse_libSDL-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libSDL-1_2-0-1.2.15-10.1.2.${SUSE_ARCH}
 RPMPKGS+=	libSDL_image-1_2-0-1.2.12-6.1.2.${SUSE_ARCH}

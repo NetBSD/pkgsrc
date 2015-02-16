@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/02/11 09:38:15 obache Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/16 10:15:45 jperkin Exp $
 
-DISTNAME=	suse_libpng-${SUSE_VERSION}
+PKGNAME=	suse_libpng-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libpng14-14-1.4.11-3.12.1.${SUSE_ARCH}
