@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2015/02/16 07:54:06 tnn Exp $
+# $NetBSD: Makefile,v 1.81 2015/02/16 08:07:20 tnn Exp $
 
 DISTNAME=	gc-7.4.2
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
@@ -29,6 +29,7 @@ CFLAGS+=		-D_XOPEN_SOURCE
 
 .include "options.mk"
 
+# https://github.com/ivmai/bdwgc/issues/65
 post-extract:
 	mv ${WRKSRC}/src/* ${WRKSRC}
 
