@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.917 2015/02/16 14:04:05 taca Exp $
+$NetBSD: CHANGES-2015,v 1.918 2015/02/16 15:03:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1304,3 +1304,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.0.3nb2 [ryoon 2015-02-16]
 	Updated security/mozilla-rootcerts to 1.0.20141117 [tnn 2015-02-16]
 	Updated lang/ruby18-base to 1.8.7.374nb2 [taca 2015-02-16]
+	Updated devel/p5-Software-License to 0.103.010 [mef 2015-02-16]
+	Updated devel/p5-Sort-Versions to 1.60 [mef 2015-02-16]
+	Updated devel/p5-Stream-Buffered to 0.03 [mef 2015-02-16]
+	Updated devel/p5-String-Format to 1.17 [mef 2015-02-16]
+	Updated devel/p5-String-Print to 0.15 [mef 2015-02-16]
+	Updated devel/p5-Sub-Exporter-GlobExporter to 0.004 [mef 2015-02-16]
+	Updated devel/p5-Sub-Identify to 0.10 [mef 2015-02-16]
+	Updated devel/p5-Sub-Override to 0.09 [mef 2015-02-16]
+	Updated devel/p5-Sub-Uplevel to 0.2500 [mef 2015-02-16]
