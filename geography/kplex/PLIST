@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/16 21:10:32 plunky Exp $
+bin/kplex
+share/doc/kplex/README
+share/doc/kplex/kplex.conf.ex
