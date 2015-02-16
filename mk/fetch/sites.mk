@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.113 2015/02/10 05:29:59 mef Exp $
+# $NetBSD: sites.mk,v 1.114 2015/02/16 11:03:20 jperkin Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -317,6 +317,11 @@ MASTER_SITE_NETLIB+= \
 	http://netlib.sandia.gov/ \
 	http://www.netlib.no/netlib/ \
 	http://www.mirrorservice.org/sites/netlib.bell-labs.com/netlib/
+
+MASTER_SITE_OPENBSD+= \
+	ftp://ftp.OpenBSD.org/pub/OpenBSD/ \
+	ftp://ftp3.usa.openbsd.org/pub/OpenBSD/ \
+	ftp://ftp.jaist.ac.jp/pub/OpenBSD/
 
 MASTER_SITE_RUBYGEMS+= \
 	http://rubygems.org/downloads/ \
