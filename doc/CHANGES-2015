@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.914 2015/02/16 00:26:26 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.915 2015/02/16 09:58:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added chat/hexchat version 2.10.2 [khorben 2015-02-15]
 	Updated security/password-store to 1.6.5 [gls 2015-02-15]
 	Updated security/apg to 2.3.0bnb2 [rodent 2015-02-16]
+	Updated misc/libreoffice4 to 4.4.0.3nb2 [ryoon 2015-02-16]
