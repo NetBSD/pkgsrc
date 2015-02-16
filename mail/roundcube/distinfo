@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.39 2015/01/24 16:36:29 taca Exp $
+$NetBSD: distinfo,v 1.40 2015/02/16 15:33:32 adam Exp $
 
-SHA1 (roundcubemail-1.0.5-dep.tar.gz) = 34cba73c21bf0fca56dba9b48053f7a8b95e5662
-RMD160 (roundcubemail-1.0.5-dep.tar.gz) = e70d3247b8cde0de298640c09f6a9d228dab8492
-Size (roundcubemail-1.0.5-dep.tar.gz) = 3756253 bytes
-SHA1 (patch-ac) = 8c9d73a505d125a9771262f6c86c533c0bb524cf
+SHA1 (roundcubemail-1.1.0.tar.gz) = 22e994db05a743ab49d47f1092b79f04ddb6dffd
+RMD160 (roundcubemail-1.1.0.tar.gz) = 2c41c6b6fac878dace1862d2fc6e3baa0513c000
+Size (roundcubemail-1.1.0.tar.gz) = 3181473 bytes
+SHA1 (patch-ac) = 235116580665d5d58edc218c063b41171a2d9227
 SHA1 (patch-af) = 1f95a7005569207469563aa37ff48da0383b7668
-SHA1 (patch-installer_check.php) = e37c25f073fad9c9fc319722116e0316924a7010
-SHA1 (patch-installer_rcube__install.php) = c978efc7fe9d695483862882e63bd468bfcd121e
+SHA1 (patch-installer_check.php) = 4f514926c16c46c9d5a678f123fb090d2038f0a0
+SHA1 (patch-program_include_rcmail__install.php) = af3532b03db2497cf00fc971aea2b124a0a69088
