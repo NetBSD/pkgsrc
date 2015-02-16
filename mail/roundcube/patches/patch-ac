@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.9 2014/06/08 13:35:25 taca Exp $
+$NetBSD: patch-ac,v 1.10 2015/02/16 15:33:32 adam Exp $
 
 Honor PKG_SYSCONFDIR.
 
---- installer/index.php.orig	2013-04-15 20:42:59.000000000 +0000
+--- installer/index.php.orig	2015-02-08 13:48:55.000000000 +0000
 +++ installer/index.php
 @@ -41,7 +41,7 @@ ini_set('display_errors', 1);
  
- define('INSTALL_PATH', realpath(dirname(__FILE__) . '/../').'/');
+ define('INSTALL_PATH', realpath(__DIR__ . '/../').'/');
  define('RCUBE_INSTALL_PATH', INSTALL_PATH);
 -define('RCUBE_CONFIG_DIR', INSTALL_PATH . 'config/');
 +define('RCUBE_CONFIG_DIR', '@PKG_SYSCONFDIR@/');
