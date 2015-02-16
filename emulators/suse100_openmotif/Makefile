@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/02/11 09:38:14 obache Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/16 10:15:44 jperkin Exp $
 
-DISTNAME=	suse_openmotif-${SUSE_VERSION}
+PKGNAME=	suse_openmotif-${SUSE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	emulators
 

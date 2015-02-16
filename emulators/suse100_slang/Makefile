@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/02/11 09:38:14 obache Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/16 10:15:44 jperkin Exp $
 
-DISTNAME=	suse_slang-${SUSE_VERSION}
+PKGNAME=	suse_slang-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 DISTFILES=	slang-1.4.9-127.${SUSE_ARCH}.rpm

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:16 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:47 jperkin Exp $
 
-DISTNAME=	suse_cyrus-sasl-${SUSE_VERSION}
+PKGNAME=	suse_cyrus-sasl-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	cyrus-sasl-2.1.25-28.1.2.${SUSE_ARCH}
 

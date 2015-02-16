@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:17 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:48 jperkin Exp $
 
-DISTNAME=	suse_libdrm-${SUSE_VERSION}
+PKGNAME=	suse_libdrm-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libdrm2-2.4.46-3.2.2.${SUSE_ARCH}
 

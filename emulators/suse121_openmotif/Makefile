@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:16 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:46 jperkin Exp $
 
-DISTNAME=	suse_openmotif-${SUSE_VERSION}
+PKGNAME=	suse_openmotif-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	openmotif-libs-2.3.2-8.1.3.${SUSE_ARCH}
 

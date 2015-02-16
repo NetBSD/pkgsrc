@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/11 09:38:19 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:49 jperkin Exp $
 
-DISTNAME=	suse_openldap-${SUSE_VERSION}
+PKGNAME=	suse_openldap-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libldap-2_4-2-2.4.33-8.1.2.${SUSE_ARCH}
 
