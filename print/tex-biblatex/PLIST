@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/22 20:15:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/16 17:27:44 nros Exp $
 share/texmf-dist/bibtex/bib/biblatex/biblatex-examples.bib
 share/texmf-dist/bibtex/bst/biblatex/biblatex.bst
 share/texmf-dist/bibtex/csf/biblatex/latin1.csf
@@ -52,7 +52,10 @@ share/texmf-dist/tex/latex/biblatex/bbx/verbose.bbx
 share/texmf-dist/tex/latex/biblatex/biblatex.cfg
 share/texmf-dist/tex/latex/biblatex/biblatex.def
 share/texmf-dist/tex/latex/biblatex/biblatex.sty
+share/texmf-dist/tex/latex/biblatex/biblatex1.sty
+share/texmf-dist/tex/latex/biblatex/biblatex2.sty
 share/texmf-dist/tex/latex/biblatex/blx-compat.def
+share/texmf-dist/tex/latex/biblatex/blx-dm.def
 share/texmf-dist/tex/latex/biblatex/blx-mcite.def
 share/texmf-dist/tex/latex/biblatex/blx-natbib.def
 share/texmf-dist/tex/latex/biblatex/cbx/alphabetic-verb.cbx
@@ -90,6 +93,9 @@ share/texmf-dist/tex/latex/biblatex/lbx/brazil.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/british.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/canadian.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/catalan.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/croatian.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/czech.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/danish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/dutch.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -97,6 +103,7 @@ share/texmf-dist/tex/latex/biblatex/lbx/finnish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/greek.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/icelandic.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/naustrian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/newzealand.lbx
@@ -104,8 +111,10 @@ share/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/norsk.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/norwegian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/nynorsk.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/portuges.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/portuguese.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/russian.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/slovene.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/swedish.lbx
