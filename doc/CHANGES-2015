@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.942 2015/02/17 14:18:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.943 2015/02/17 14:23:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1362,3 +1362,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache-tomcat7 to 7.0.59 [ryoon 2015-02-17]
 	Updated print/cups-filters to 1.0.65 [wiz 2015-02-17]
 	Updated misc/calibre to 2.19.0 [wiz 2015-02-17]
+	Updated databases/ruby-arel to 6.0.0 [taca 2015-02-17]
