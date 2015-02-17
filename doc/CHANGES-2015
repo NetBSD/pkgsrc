@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.922 2015/02/17 03:53:04 taca Exp $
+$NetBSD: CHANGES-2015,v 1.923 2015/02/17 06:09:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1320,3 +1320,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/roundcube to 1.1.0 [adam 2015-02-16]
 	Added geography/kplex version 1.2 [plunky 2015-02-16]
 	Updated mail/roundcube to 1.1.0nb1 [taca 2015-02-17]
+	Updated devel/p5-Sys-Syscall to 0.25 [mef 2015-02-17]
+	Updated devel/p5-System-Command to 1.111 [mef 2015-02-17]
+	Updated devel/p5-Term-ANSIColor to 4.03 [mef 2015-02-17]
+	Updated devel/p5-Term-Cap to 1.16 [mef 2015-02-17]
+	Updated devel/p5-Term-ProgressBar to 2.17 [mef 2015-02-17]
