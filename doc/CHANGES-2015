@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.931 2015/02/17 13:44:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.932 2015/02/17 13:48:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1351,3 +1351,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-CoreList to 5.20150214 [mef 2015-02-17]
 	Updated net/exabgp to 3.3.2nb2 [he 2015-02-17]
 	Removed meta-pkgs/gnome-admin [wiz 2015-02-17]
+	Updated sysutils/dbus to 1.8.16 [wiz 2015-02-17]
