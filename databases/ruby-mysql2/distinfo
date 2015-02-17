@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/02/01 13:04:05 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/02/17 15:06:10 taca Exp $
 
-SHA1 (mysql2-0.3.17.gem) = 967ffffe965f91d920de67a3033d6cca8b7d0773
-RMD160 (mysql2-0.3.17.gem) = 7eda7023c35e6b809db82a9415feeb3649b3e275
-Size (mysql2-0.3.17.gem) = 49152 bytes
+SHA1 (mysql2-0.3.18.gem) = 53d1a090b638f35daa8273dafce1fc613d054257
+RMD160 (mysql2-0.3.18.gem) = ca7530b008e849dd500ce78edd17f7144330b04a
+Size (mysql2-0.3.18.gem) = 50688 bytes
