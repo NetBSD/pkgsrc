@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2015/01/02 09:24:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2015/02/17 13:53:48 wiz Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -281,6 +281,76 @@ share/cups/templates/header.tmpl
 share/cups/templates/help-header.tmpl
 share/cups/templates/help-printable.tmpl
 share/cups/templates/help-trailer.tmpl
+share/cups/templates/ja/add-class.tmpl
+share/cups/templates/ja/add-printer.tmpl
+share/cups/templates/ja/add-rss-subscription.tmpl
+share/cups/templates/ja/admin.tmpl
+share/cups/templates/ja/choose-device.tmpl
+share/cups/templates/ja/choose-make.tmpl
+share/cups/templates/ja/choose-model.tmpl
+share/cups/templates/ja/choose-serial.tmpl
+share/cups/templates/ja/choose-uri.tmpl
+share/cups/templates/ja/class-added.tmpl
+share/cups/templates/ja/class-confirm.tmpl
+share/cups/templates/ja/class-deleted.tmpl
+share/cups/templates/ja/class-jobs-header.tmpl
+share/cups/templates/ja/class-modified.tmpl
+share/cups/templates/ja/class.tmpl
+share/cups/templates/ja/classes-header.tmpl
+share/cups/templates/ja/classes.tmpl
+share/cups/templates/ja/command.tmpl
+share/cups/templates/ja/edit-config.tmpl
+share/cups/templates/ja/error-op.tmpl
+share/cups/templates/ja/error.tmpl
+share/cups/templates/ja/header.tmpl
+share/cups/templates/ja/help-header.tmpl
+share/cups/templates/ja/help-printable.tmpl
+share/cups/templates/ja/help-trailer.tmpl
+share/cups/templates/ja/job-cancel.tmpl
+share/cups/templates/ja/job-hold.tmpl
+share/cups/templates/ja/job-move.tmpl
+share/cups/templates/ja/job-moved.tmpl
+share/cups/templates/ja/job-release.tmpl
+share/cups/templates/ja/job-restart.tmpl
+share/cups/templates/ja/jobs-header.tmpl
+share/cups/templates/ja/jobs.tmpl
+share/cups/templates/ja/list-available-printers.tmpl
+share/cups/templates/ja/modify-class.tmpl
+share/cups/templates/ja/modify-printer.tmpl
+share/cups/templates/ja/norestart.tmpl
+share/cups/templates/ja/option-boolean.tmpl
+share/cups/templates/ja/option-conflict.tmpl
+share/cups/templates/ja/option-header.tmpl
+share/cups/templates/ja/option-pickmany.tmpl
+share/cups/templates/ja/option-pickone.tmpl
+share/cups/templates/ja/option-trailer.tmpl
+share/cups/templates/ja/pager.tmpl
+share/cups/templates/ja/printer-accept.tmpl
+share/cups/templates/ja/printer-added.tmpl
+share/cups/templates/ja/printer-cancel-jobs.tmpl
+share/cups/templates/ja/printer-configured.tmpl
+share/cups/templates/ja/printer-confirm.tmpl
+share/cups/templates/ja/printer-default.tmpl
+share/cups/templates/ja/printer-deleted.tmpl
+share/cups/templates/ja/printer-jobs-header.tmpl
+share/cups/templates/ja/printer-modified.tmpl
+share/cups/templates/ja/printer-reject.tmpl
+share/cups/templates/ja/printer-start.tmpl
+share/cups/templates/ja/printer-stop.tmpl
+share/cups/templates/ja/printer.tmpl
+share/cups/templates/ja/printers-header.tmpl
+share/cups/templates/ja/printers.tmpl
+share/cups/templates/ja/restart.tmpl
+share/cups/templates/ja/samba-export.tmpl
+share/cups/templates/ja/samba-exported.tmpl
+share/cups/templates/ja/search.tmpl
+share/cups/templates/ja/set-printer-options-header.tmpl
+share/cups/templates/ja/set-printer-options-trailer.tmpl
+share/cups/templates/ja/subscription-added.tmpl
+share/cups/templates/ja/subscription-canceled.tmpl
+share/cups/templates/ja/test-page.tmpl
+share/cups/templates/ja/trailer.tmpl
+share/cups/templates/ja/users.tmpl
 share/cups/templates/job-cancel.tmpl
 share/cups/templates/job-hold.tmpl
 share/cups/templates/job-move.tmpl
@@ -429,10 +499,11 @@ share/doc/cups/images/smiley.jpg
 share/doc/cups/images/unsel.gif
 share/doc/cups/images/wait.gif
 share/doc/cups/index.html
+share/doc/cups/ja/index.html
 share/doc/cups/robots.txt
-${PLIST.pam}share/examples/cups/cups.pam
 share/examples/cups/cups-files.conf
 share/examples/cups/cupsd.conf
+${PLIST.pam}share/examples/cups/cups.pam
 share/examples/cups/snmp.conf
 share/locale/ca/cups_ca.po
 share/locale/cs/cups_cs.po
@@ -445,3 +516,4 @@ share/locale/ru/cups_ru.po
 @pkgdir share/cups/model
 @pkgdir share/cups/data
 @pkgdir share/cups/banners
+@pkgdir etc/cups
