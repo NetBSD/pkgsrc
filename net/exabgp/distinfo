@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2014/06/15 11:40:42 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/02/17 13:41:36 he Exp $
 
 SHA1 (exabgp-3.3.2.tar.gz) = e6a883ceb513b9c21fcf7092b720dbf13784ebf7
 RMD160 (exabgp-3.3.2.tar.gz) = 3ed5b73e244678c5b4f7f01fea4c3438e7e4d0dd
@@ -15,4 +15,5 @@ SHA1 (patch-dev_self_refresh_first) = b3b1315e9f3a5f053178f9adeb9451dfe1af736b
 SHA1 (patch-dev_self_refresh_second) = 2c3bbe93e93ac908b75842aa46b79876bb10c78f
 SHA1 (patch-dev_self_simple_first) = c5210d4b5a2d65bb9cf2e68752662a13b73b96ab
 SHA1 (patch-dev_self_simple_second) = 1dad8e64ac4cfdcb5f5bcb6457ea6f7b7099e224
+SHA1 (patch-etc_exabgp_processes_healthcheck.py) = d2c97f08be1834295744e7f9a26c9907310c6207
 SHA1 (patch-setup.py) = 95da865dfcbdb4b09c78efffa2c5f7ba9b1e31ca
