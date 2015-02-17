@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.923 2015/02/17 06:09:09 mef Exp $
+$NetBSD: CHANGES-2015,v 1.924 2015/02/17 06:57:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1325,3 +1325,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Term-ANSIColor to 4.03 [mef 2015-02-17]
 	Updated devel/p5-Term-Cap to 1.16 [mef 2015-02-17]
 	Updated devel/p5-Term-ProgressBar to 2.17 [mef 2015-02-17]
+	Updated devel/p5-Test-Differences to 0.6300 [mef 2015-02-17]
+	Updated devel/p5-Test-Inter to 1.06 [mef 2015-02-17]
+	Updated devel/p5-Test-Kwalitee to 1.22 [mef 2015-02-17]
+	Updated devel/p5-Test-LeakTrace to 0.15 [mef 2015-02-17]
+	Updated devel/p5-Test-LongString to 0.17 [mef 2015-02-17]
+	Updated devel/p5-Test-POE-Server-TCP to 1.18 [mef 2015-02-17]
+	Updated devel/p5-Test-Perl-Critic to 1.03 [mef 2015-02-17]
+	Updated textproc/p5-Pod-Spell-CommonMistakes to 1.002 [mef 2015-02-17]
+	Updated devel/p5-Test-Pod-Spelling-CommonMistakes to 1.001 [mef 2015-02-17]
