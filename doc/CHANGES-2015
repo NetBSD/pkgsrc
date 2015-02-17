@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.939 2015/02/17 14:04:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.940 2015/02/17 14:04:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1359,3 +1359,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-cython to 0.22 [wiz 2015-02-17]
 	Updated databases/py-psycopg2 to 2.6 [wiz 2015-02-17]
 	Updated sysutils/dbus-glib to 0.104 [wiz 2015-02-17]
+	Updated www/apache-tomcat7 to 7.0.59 [ryoon 2015-02-17]
