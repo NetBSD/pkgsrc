@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/12/20 07:49:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/02/17 14:03:30 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -130,6 +130,7 @@ share/tomcat/webapps/docs/config/realm.html
 share/tomcat/webapps/docs/config/resources.html
 share/tomcat/webapps/docs/config/server.html
 share/tomcat/webapps/docs/config/service.html
+share/tomcat/webapps/docs/config/sessionidgenerator.html
 share/tomcat/webapps/docs/config/systemprops.html
 share/tomcat/webapps/docs/config/valve.html
 share/tomcat/webapps/docs/connectors.html
