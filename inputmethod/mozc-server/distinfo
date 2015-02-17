@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/01/06 10:30:54 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2015/02/17 23:55:58 ryoon Exp $
 
-SHA1 (mozc-2.16.2007.102.tar.xz) = b77c44a6d8527b89c557068c66bc370ea1592b76
-RMD160 (mozc-2.16.2007.102.tar.xz) = d6183c14bfc3f6a4702d1192e07d7af73d287215
-Size (mozc-2.16.2007.102.tar.xz) = 47739136 bytes
+SHA1 (mozc-2.16.2037.102.tar.xz) = 74c088a81572588d8e60aaf25d066cc74b6fc989
+RMD160 (mozc-2.16.2037.102.tar.xz) = b26f8f58ef2e2f27e5ce42804c6559cb59d33aa9
+Size (mozc-2.16.2037.102.tar.xz) = 37548784 bytes
 SHA1 (uim-mozc-334.tar.xz) = af86ce7a04b291629bd5dc56d5c1115332954a91
 RMD160 (uim-mozc-334.tar.xz) = b988667237f65e61fabf3935f83f5d21a8059f4e
 Size (uim-mozc-334.tar.xz) = 30544 bytes
@@ -29,7 +29,7 @@ SHA1 (patch-gui_dictionary__tool_dictionary__tool.cc) = 3652713857d03f847108952f
 SHA1 (patch-gui_gui.gyp) = 70b6d78ca5a482b9e8fa697dbb191cccbdde1c6a
 SHA1 (patch-gui_qt__libraries.gypi) = e92be78947dcf66211c80169b864b7c9d057b3db
 SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 34a7cd2a99a0082f490c3f623c7c6a856c984f8b
-SHA1 (patch-gyp_common.gypi) = 4859bc46c17088f29f0addd75a0af6b4f5fc3525
+SHA1 (patch-gyp_common.gypi) = c9d93e9ff9c917f759694ed94568d3996e355c6c
 SHA1 (patch-handwriting_handwriting.gyp) = 0261aef287b34f4a3c8424fb1af44720ae00a85c
 SHA1 (patch-handwriting_zinnia.gyp) = d09ac17d17dabdbfdcb7c623193a5c72dbcacfbc
 SHA1 (patch-handwriting_zinnia__handwriting.cc) = dd9363f470bf4a27fed40602f02127cb130042b2

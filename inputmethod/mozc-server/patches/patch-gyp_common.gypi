@@ -1,17 +1,17 @@
-$NetBSD: patch-gyp_common.gypi,v 1.5 2014/06/15 13:08:34 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.6 2015/02/17 23:55:58 ryoon Exp $
 
---- gyp/common.gypi.orig	2014-05-21 10:51:27.000000000 +0000
+--- gyp/common.gypi.orig	2015-02-17 14:35:04.000000000 +0000
 +++ gyp/common.gypi
-@@ -165,7 +165,7 @@
-         'compiler_host': 'gcc',
-         'compiler_host_version_int': 406,  # GCC 4.6 or higher
+@@ -158,7 +158,7 @@
+         'compiler_host': 'clang',
+         'compiler_host_version_int': 305,  # Clang 3.5 or higher
        }],
 -      ['target_platform=="Linux"', {
 +      ['target_platform=="Linux" or target_platform=="NetBSD"', {
          # enable_gtk_renderer represents if mozc_renderer is supported on Linux
          # or not.
-         'compiler_target': 'gcc',
-@@ -217,7 +217,7 @@
+         'compiler_target': 'clang',
+@@ -206,7 +206,7 @@
  
      # server_dir represents the directory where mozc_server is
      # installed. This option is only for Linux.
@@ -20,7 +20,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.5 2014/06/15 13:08:34 ryoon Exp $
  
      # Represents the directory where the source code of protobuf is
      # extracted. This value is ignored when 'use_libprotobuf' is 1.
-@@ -311,7 +311,7 @@
+@@ -300,7 +300,7 @@
            ['channel_dev==1', {
              'defines': ['CHANNEL_DEV'],
            }],
@@ -29,7 +29,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.5 2014/06/15 13:08:34 ryoon Exp $
              'ldflags': [
                '<@(linux_ldflags)',
              ],
-@@ -505,7 +505,7 @@
+@@ -513,7 +513,7 @@
            },
          },
          'conditions': [
@@ -38,7 +38,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.5 2014/06/15 13:08:34 ryoon Exp $
              'cflags': [
                '<@(debug_extra_cflags)',
              ],
-@@ -552,7 +552,7 @@
+@@ -574,7 +574,7 @@
            },
          },
          'conditions': [
@@ -47,7 +47,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.5 2014/06/15 13:08:34 ryoon Exp $
              'cflags': [
                '<@(release_extra_cflags)',
              ],
-@@ -808,6 +808,22 @@
+@@ -793,6 +793,22 @@
            }],
          ],
        }],
