@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.921 2015/02/16 21:11:55 plunky Exp $
+$NetBSD: CHANGES-2015,v 1.922 2015/02/17 03:53:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1319,3 +1319,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-biblatex-doc to 2.9a [nros 2015-02-16]
 	Updated mail/roundcube to 1.1.0 [adam 2015-02-16]
 	Added geography/kplex version 1.2 [plunky 2015-02-16]
+	Updated mail/roundcube to 1.1.0nb1 [taca 2015-02-17]
