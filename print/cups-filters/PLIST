@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/09/07 20:43:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/17 14:07:25 wiz Exp $
+bin/foomatic-rip
 bin/ttfread
 include/cupsfilters/colord.h
 include/cupsfilters/colormanager.h

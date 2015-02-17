@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/01/18 17:15:42 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/02/17 14:07:25 wiz Exp $
 
-SHA1 (cups-filters-1.0.62.tar.xz) = 93f6b6ddadc4124bb6008428ae4cc466d9c51e1c
-RMD160 (cups-filters-1.0.62.tar.xz) = 3d2b83539bffa65c0e2bf0606f883c1e202d54b2
-Size (cups-filters-1.0.62.tar.xz) = 1329164 bytes
+SHA1 (cups-filters-1.0.65.tar.xz) = 8b5174f0265d1a640f1712eb0d8f48bca4ea1a81
+RMD160 (cups-filters-1.0.65.tar.xz) = cb348066a318874d593f83a433324b7007221edb
+Size (cups-filters-1.0.65.tar.xz) = 1333496 bytes
