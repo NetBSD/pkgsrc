@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2015/02/08 00:37:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2015/02/17 14:18:20 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -823,6 +823,7 @@ lib/calibre/calibre/gui2/dialogs/template_dialog_ui.py
 lib/calibre/calibre/gui2/dialogs/template_line_editor.py
 lib/calibre/calibre/gui2/dialogs/test_email_ui.py
 lib/calibre/calibre/gui2/dialogs/trim_image.py
+lib/calibre/calibre/gui2/dialogs/user_profiles_ui.py
 lib/calibre/calibre/gui2/dnd.py
 lib/calibre/calibre/gui2/ebook_download.py
 lib/calibre/calibre/gui2/email.py
@@ -3505,3 +3506,4 @@ share/pixmaps/calibre-ebook-edit.png
 share/pixmaps/calibre-gui.png
 share/pixmaps/calibre-lrf.png
 share/pixmaps/calibre-viewer.png
+@pkgdir lib/calibre/calibre/plugins/.libs
