@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/10/23 10:09:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/02/17 14:00:01 wiz Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -357,6 +357,7 @@ ${PYSITELIB}/Cython/Includes/posix/resource.pxd
 ${PYSITELIB}/Cython/Includes/posix/signal.pxd
 ${PYSITELIB}/Cython/Includes/posix/stat.pxd
 ${PYSITELIB}/Cython/Includes/posix/stdlib.pxd
+${PYSITELIB}/Cython/Includes/posix/strings.pxd
 ${PYSITELIB}/Cython/Includes/posix/time.pxd
 ${PYSITELIB}/Cython/Includes/posix/types.pxd
 ${PYSITELIB}/Cython/Includes/posix/unistd.pxd
@@ -442,6 +443,7 @@ ${PYSITELIB}/Cython/Tests/xmlrunner.pyc
 ${PYSITELIB}/Cython/Tests/xmlrunner.pyo
 ${PYSITELIB}/Cython/Utility/Buffer.c
 ${PYSITELIB}/Cython/Utility/Builtins.c
+${PYSITELIB}/Cython/Utility/CConvert.pyx
 ${PYSITELIB}/Cython/Utility/Capsule.c
 ${PYSITELIB}/Cython/Utility/CommonTypes.c
 ${PYSITELIB}/Cython/Utility/CppConvert.pyx
