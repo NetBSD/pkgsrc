@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.933 2015/02/17 13:53:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.934 2015/02/17 13:55:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed meta-pkgs/gnome-admin [wiz 2015-02-17]
 	Updated sysutils/dbus to 1.8.16 [wiz 2015-02-17]
 	Updated print/cups to 2.0.2 [wiz 2015-02-17]
+	Updated devel/waf to 1.8.6 [wiz 2015-02-17]
