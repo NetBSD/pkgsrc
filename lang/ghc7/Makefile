@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/02/13 19:28:40 pho Exp $
+# $NetBSD: Makefile,v 1.18 2015/02/17 09:29:17 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -94,9 +94,7 @@ post-patch:
 post-configure:
 	${RUN} ${RM} -f ${WRKSRC:Q}/mk/build.mk
 
-# We need to tell the libraries/terminfo/configure that our ncurses is
-# in a non-standard path. Without that, the resulting GHC tries to
-# link programs by executing ld(1) without passing it -L${PREFIX:Q}/lib.
+# See https://ghc.haskell.org/trac/ghc/ticket/10096
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
 		--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
 		--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q}" \
