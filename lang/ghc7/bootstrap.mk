@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.21 2015/02/11 09:38:08 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.22 2015/02/17 09:29:17 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -225,6 +225,8 @@ ${WRKDIR}/stamp-lndir-boot: ${WRKDIR}/lndir
 		${WRKDIR}/lndir -silent ../${PKGNAME_NOREV:Q}
 	${TOUCH} ${.TARGET}
 
+# For terminfo_CONFIGURE_OPTS, see
+# https://ghc.haskell.org/trac/ghc/ticket/10096
 ${WRKDIR}/stamp-configure-boot: ${WRKDIR}/stamp-lndir-boot
 	@${PHASE_MSG} "Configuring bootstrapping compiler ${PKGNAME_NOREV}"
 	${MKDIR} ${WRKDIR:Q}/build-boot
