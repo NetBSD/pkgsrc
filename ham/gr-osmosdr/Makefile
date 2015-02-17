@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/11/07 19:39:36 adam Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/17 13:56:08 mef Exp $
 
-DISTNAME=		gr-osmosdr-0.1.3
-PKGREVISION=		1
+DISTNAME=		gr-osmosdr-0.1.4
 CATEGORIES=		ham
 MASTER_SITES+=		http://git.osmocom.org/gr-osmosdr/snapshot/
 
