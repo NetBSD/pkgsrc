@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.927 2015/02/17 13:12:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.928 2015/02/17 13:31:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1337,3 +1337,13 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Error to 0.17023 [wiz 2015-02-17]
 	Updated www/p5-libwww to 6.13 [wiz 2015-02-17]
 	Updated devel/p5-List-MoreUtils to 0.405 [wiz 2015-02-17]
+	Updated devel/p5-Test-Script-Run to 0.08 [mef 2015-02-17]
+	Updated devel/p5-Test-SharedFork to 0.29 [mef 2015-02-17]
+	Updated devel/p5-Test-TempDir to 0.09 [mef 2015-02-17]
+	Updated devel/p5-Test-TinyMocker to 0.05 [mef 2015-02-17]
+	Updated devel/p5-Test-TinyMocker to 0.05 [mef 2015-02-17]
+	Updated devel/p5-Test-Trap to 0.3.0 [mef 2015-02-17]
+	Updated devel/p5-Test-UseAllModules to 0.17 [mef 2015-02-17]
+	Updated devel/p5-Test-Version to 1.004001 [mef 2015-02-17]
+	Updated devel/p5-Test-Without-Module to 0.18 [mef 2015-02-17]
+	Updated devel/p5-Test-YAML-Meta to 0.22 [mef 2015-02-17]
