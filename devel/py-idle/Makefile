@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2014/01/25 10:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/02/17 08:08:31 wiz Exp $
 
-PKGNAME=	${PYPKGPREFIX}-idle-0
-PKGREVISION=	2
+PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
