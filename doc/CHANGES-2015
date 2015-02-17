@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.943 2015/02/17 14:23:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.944 2015/02/17 14:50:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1363,3 +1363,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.65 [wiz 2015-02-17]
 	Updated misc/calibre to 2.19.0 [wiz 2015-02-17]
 	Updated databases/ruby-arel to 6.0.0 [taca 2015-02-17]
+	Updated databases/ruby-data_objects to 0.10.15 [taca 2015-02-17]
+	Updated databases/ruby-do_mysql to 0.10.15 [taca 2015-02-17]
+	Updated databases/ruby-do_postgres to 0.10.15 [taca 2015-02-17]
+	Updated databases/ruby-do_sqlite3 to 0.10.15 [taca 2015-02-17]
