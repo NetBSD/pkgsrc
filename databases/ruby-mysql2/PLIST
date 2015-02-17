@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 15:00:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/17 15:06:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/mysql2/mysql2.${RUBY_DLEXT}
-${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/examples/eventmachine.rb
 ${GEM_LIBDIR}/examples/threaded.rb
@@ -34,6 +33,7 @@ ${GEM_LIBDIR}/spec/mysql2/result_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/test_data
+${GEM_LIBDIR}/support/libmysql.def
 ${GEM_LIBDIR}/support/mysql_enc_to_ruby.rb
 ${GEM_LIBDIR}/support/ruby_enc_to_mysql.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
