@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/03 07:27:16 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/02/17 13:26:15 mef Exp $
 
-SHA1 (Test-Without-Module-0.17.tar.gz) = 77ac7124c54e2fd6e44d6baa649deb04aa3b3b15
-RMD160 (Test-Without-Module-0.17.tar.gz) = 81732267c71d8de43d277182e856d7a2dba5954a
-Size (Test-Without-Module-0.17.tar.gz) = 6709 bytes
+SHA1 (Test-Without-Module-0.18.tar.gz) = 4ea952fc92fd524ff66479a18e3ddf2ccb222d8b
+RMD160 (Test-Without-Module-0.18.tar.gz) = dcbc9ba69a50bfe59387de02d5c7731230d8062a
+Size (Test-Without-Module-0.18.tar.gz) = 10369 bytes
