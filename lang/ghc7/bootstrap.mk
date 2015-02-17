@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.22 2015/02/17 09:29:17 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.23 2015/02/17 21:12:13 joerg Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -175,7 +175,7 @@ BOOT_GHC_PKGSRC_DEPS+=	${pkg}
 # cryptic error which we can't easily catch.
 BOOT_GHC_LIBDIR_CMD=		ghc --print-libdir
 .if !defined(BOOT_GHC_LIBDIR)
-BOOT_GHC_LIBDIR!=		${BOOT_GHC_LIBDIR_CMD} 2>/dev/null || ${ECHO}
+BOOT_GHC_LIBDIR!=		(${BOOT_GHC_LIBDIR_CMD}) 2>/dev/null || ${ECHO}
 .endif
 MAKEVARS+=			BOOT_GHC_LIBDIR
 BUILDLINK_PASSTHRU_DIRS+=	${BOOT_GHC_LIBDIR}
