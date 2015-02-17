@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2015/02/09 06:46:55 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.4 2015/02/17 14:44:40 jperkin Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -59,6 +59,8 @@ CMAKE_ARGS+=		-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
 CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
+CMAKE_ARGS+=		-DWITH_LIBEVENT="system"
+CMAKE_ARGS+=		-DWITH_BUNDLED_LIBEVENT=OFF
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
@@ -127,4 +129,5 @@ CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editline}/lib/libedit.${SOEXT
 CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readline
 
 .include "../../devel/editline/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
