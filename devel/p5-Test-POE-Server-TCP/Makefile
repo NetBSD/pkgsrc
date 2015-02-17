@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/02/17 06:42:37 mef Exp $
 #
 
-DISTNAME=		Test-POE-Server-TCP-1.16
+DISTNAME=		Test-POE-Server-TCP-1.18
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
