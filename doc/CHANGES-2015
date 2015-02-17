@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.945 2015/02/17 15:06:37 taca Exp $
+$NetBSD: CHANGES-2015,v 1.946 2015/02/17 15:07:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-do_postgres to 0.10.15 [taca 2015-02-17]
 	Updated databases/ruby-do_sqlite3 to 0.10.15 [taca 2015-02-17]
 	Updated databases/ruby-mysql2 to 0.3.18 [taca 2015-02-17]
+	Updated devel/ruby-eventmachine to 1.0.7 [taca 2015-02-17]
