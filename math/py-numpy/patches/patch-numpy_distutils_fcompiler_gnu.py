@@ -1,4 +1,4 @@
-$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.5 2014/02/28 09:43:11 adam Exp $
+$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.6 2015/02/17 14:23:51 jperkin Exp $
 
 Linker needs -shared explictly (at least with GCC 4.7 on SunOS), plus
 any ABI flags as appropriate.
@@ -12,7 +12,7 @@ Do not run a shell command when it is "None".
          'compiler_f90' : None, # Use --fcompiler=gnu95 for f90 codes
          'compiler_fix' : None,
 -        'linker_so'    : [None, "-g", "-Wall"],
-+        'linker_so'    : [None, "-g", "-Wall", "-shared", "-m64"],
++        'linker_so'    : [None, "-g", "-Wall", "-shared", "@COMPILER_ABI_FLAG@"],
          'archiver'     : ["ar", "-cr"],
          'ranlib'       : ["ranlib"],
          'linker_exe'   : [None, "-g", "-Wall"]
@@ -30,7 +30,7 @@ Do not run a shell command when it is "None".
          'compiler_fix' : [None, "-Wall", "-ffixed-form",
                            "-fno-second-underscore"] + _EXTRAFLAGS,
 -        'linker_so'    : ["<F90>", "-Wall"],
-+        'linker_so'    : ["<F90>", "-Wall", "-shared", "-m64"],
++        'linker_so'    : ["<F90>", "-Wall", "-shared", "@COMPILER_ABI_FLAG@"],
          'archiver'     : ["ar", "-cr"],
          'ranlib'       : ["ranlib"],
          'linker_exe'   : [None, "-Wall"]
