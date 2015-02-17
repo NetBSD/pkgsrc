@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.2 2014/04/18 13:42:59 obache Exp $
+# $NetBSD: haskell.mk,v 1.3 2015/02/17 13:57:47 joerg Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -177,8 +177,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 # Shared libraries
 .if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
 CONFIGURE_ARGS+=	--enable-shared --enable-executable-dynamic
-CONFIGURE_ARGS+=	"--ghc-option=-optl ${COMPILER_RPATH_FLAG}"
-CONFIGURE_ARGS+=	"--ghc-option=-optl ${PREFIX}/lib/${_GHC_VERSION_FULL}/${DISTNAME}"
+CONFIGURE_ARGS+=	"--ghc-option=-optl ${COMPILER_RPATH_FLAG}${PREFIX}/lib/${_GHC_VERSION_FULL}/${DISTNAME}"
 .endif
 
 # Library profiling
