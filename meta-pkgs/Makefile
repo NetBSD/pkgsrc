@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2014/11/24 15:43:16 taca Exp $
+# $NetBSD: Makefile,v 1.77 2015/02/17 13:43:18 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -15,7 +15,6 @@ SUBDIR+=	desktop-gnome
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gimp-docs
 SUBDIR+=	gnome
-SUBDIR+=	gnome-admin
 SUBDIR+=	gnome-devtools
 SUBDIR+=	gnome-mobile
 SUBDIR+=	gnome-platform
