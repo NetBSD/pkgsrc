@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.924 2015/02/17 06:57:50 mef Exp $
+$NetBSD: CHANGES-2015,v 1.925 2015/02/17 13:09:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1334,3 +1334,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Perl-Critic to 1.03 [mef 2015-02-17]
 	Updated textproc/p5-Pod-Spell-CommonMistakes to 1.002 [mef 2015-02-17]
 	Updated devel/p5-Test-Pod-Spelling-CommonMistakes to 1.001 [mef 2015-02-17]
+	Updated devel/p5-Error to 0.17023 [wiz 2015-02-17]
