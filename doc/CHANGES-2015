@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.930 2015/02/17 13:42:17 he Exp $
+$NetBSD: CHANGES-2015,v 1.931 2015/02/17 13:44:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1350,3 +1350,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-ExtUtils-InstallPaths to 0.011 [mef 2015-02-17]
 	Updated devel/p5-Module-CoreList to 5.20150214 [mef 2015-02-17]
 	Updated net/exabgp to 3.3.2nb2 [he 2015-02-17]
+	Removed meta-pkgs/gnome-admin [wiz 2015-02-17]
