@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2014/02/20 10:17:45 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/02/17 14:03:54 wiz Exp $
 
-DISTNAME=	dbus-glib-0.102
+DISTNAME=	dbus-glib-0.104
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-glib/
 
@@ -30,9 +30,9 @@ CONFIGURE_ARGS+=	--with-xml=expat
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.2.16
+BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.8
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
