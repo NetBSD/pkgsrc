@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.937 2015/02/17 14:00:09 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.938 2015/02/17 14:02:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1357,3 +1357,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 12.1 [wiz 2015-02-17]
 	Updated ham/gr-osmosdr to 0.1.4 [mef 2015-02-17]
 	Updated devel/py-cython to 0.22 [wiz 2015-02-17]
+	Updated databases/py-psycopg2 to 2.6 [wiz 2015-02-17]
