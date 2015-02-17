@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.947 2015/02/17 15:08:55 taca Exp $
+$NetBSD: CHANGES-2015,v 1.948 2015/02/17 23:58:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1370,3 +1370,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-mysql2 to 0.3.18 [taca 2015-02-17]
 	Updated devel/ruby-eventmachine to 1.0.7 [taca 2015-02-17]
 	Updated devel/ruby-msgpack to 0.5.11 [taca 2015-02-17]
+	Updated inputmethod/mozc-server to 2.16.2037.102 [ryoon 2015-02-17]
+	Updated inputmethod/mozc-renderer to 2.16.2037.102 [ryoon 2015-02-17]
+	Updated inputmethod/mozc-tool to 2.16.2037.102 [ryoon 2015-02-17]
+	Updated inputmethod/mozc-elisp to 2.16.2037.102 [ryoon 2015-02-17]
+	Updated inputmethod/uim-mozc to 2.16.2037.102 [ryoon 2015-02-17]
