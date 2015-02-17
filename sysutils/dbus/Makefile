@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2015/01/21 13:45:18 pho Exp $
+# $NetBSD: Makefile,v 1.81 2015/02/17 13:48:24 wiz Exp $
 
-DISTNAME=	dbus-1.8.14
-PKGREVISION=	3
+DISTNAME=	dbus-1.8.16
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
