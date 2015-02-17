@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.941 2015/02/17 14:07:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.942 2015/02/17 14:18:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/dbus-glib to 0.104 [wiz 2015-02-17]
 	Updated www/apache-tomcat7 to 7.0.59 [ryoon 2015-02-17]
 	Updated print/cups-filters to 1.0.65 [wiz 2015-02-17]
+	Updated misc/calibre to 2.19.0 [wiz 2015-02-17]
