@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2015/01/06 10:30:54 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.18 2015/02/17 23:55:58 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,7 +7,7 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-2.16.2007.102
+DISTNAME=	mozc-2.16.2037.102
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
