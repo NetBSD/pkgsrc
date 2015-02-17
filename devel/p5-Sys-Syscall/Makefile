@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/17 05:33:45 mef Exp $
 #
 
-DISTNAME=	Sys-Syscall-0.23
+DISTNAME=	Sys-Syscall-0.25
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
-COMMENT=	Support lib for perlbal
+HOMEPAGE=	http://search.cpan.org/dist/Sys-Syscall/lib/Sys/Syscall.pm
+
+COMMENT=	Access system calls that Perl doesn't normally provide access to
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Sys/Syscall/.packlist
