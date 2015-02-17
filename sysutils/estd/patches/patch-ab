@@ -1,4 +1,15 @@
-$NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2015/02/17 09:59:30 abs Exp $
+
+Fix off by one error in use of TECH_MAX against freqlist which would cause a
+null pointer to be passed to sysctl
+
+Explicitly use TECH_MAX in sizes of freqlist and related arrays
+
+Add mre frequency mechanisms
+
+Add -G, -L and -R options
+
+Add NetBSD support
 
 --- estd.c.orig	2013-03-24 19:14:06.000000000 +0000
 +++ estd.c
@@ -16,12 +27,13 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
  /* this is ugly, but... <shrug> */
  #define MAX_FREQS 32
  #define SYSCTLBUF 255
-@@ -118,29 +121,38 @@ int             ndomains;
+@@ -118,29 +121,41 @@ int             ndomains;
   static const size_t cp_time_max_size = sizeof(cp_time[0]) * MAX_CPUS;
  #endif
  
 -static char	*techdesc[5] = {"Unknown",
-+static char	*techdesc[8] = {"Unknown",
++static char	*techdesc[TECH_MAX + 1] = {
++                                "Unknown",
  				"Enhanced SpeedStep",
  				"PowerNow",
  				"ACPI P-States",
@@ -32,7 +44,8 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
 +				"Generic"
  				};
 -static char	*freqctl[5] = {	"",	
-+static char	*freqctl[8] = {	"",	
++static char	*freqctl[TECH_MAX + 1] = {
++                                "",	
  				"machdep.est.frequency.available",
  				"machdep.powernow.frequency.available",
  				"hw.acpi.cpu.px_dom0.available",
@@ -42,7 +55,8 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
 +				"machdep.frequency.available"
  				};
 -static char	*setctl[5] = {	"",
-+static char	*setctl[8] = {	"",
++static char	*setctl[TECH_MAX + 1] = {
++                                "",
  				"machdep.est.frequency.target",
  				"machdep.powernow.frequency.target",
  				"hw.acpi.cpu.px_dom0.select",
@@ -60,7 +74,7 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
  	printf("       estd -v\n");
  	printf("       estd -f\n");
  	exit(1);
-@@ -395,7 +407,7 @@ main(int argc, char *argv[])
+@@ -395,7 +410,7 @@ main(int argc, char *argv[])
  	FILE           *fexists;
  
  	/* get command-line options */
@@ -69,7 +83,7 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
  		switch (ch) {
  		case 'v':
  			version();
-@@ -426,12 +438,21 @@ main(int argc, char *argv[])
+@@ -426,12 +441,21 @@ main(int argc, char *argv[])
  		case 'E':
  			tech = TECH_EST;
  			break;
@@ -91,7 +105,7 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
  		case 'a':
  			strategy = AGGRESSIVE;
  			break;
-@@ -466,8 +487,9 @@ main(int argc, char *argv[])
+@@ -466,8 +490,9 @@ main(int argc, char *argv[])
  
  	ndomains = 1;
  	domain = ecalloc(ndomains, sizeof(struct domain));
@@ -103,7 +117,7 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
  	if (kinfo_get_cpus(&ncpus)) {
  		fprintf(stderr, "estd: Cannot get number of cpus\n");
  		exit(1);
-@@ -475,11 +497,18 @@ main(int argc, char *argv[])
+@@ -475,18 +500,25 @@ main(int argc, char *argv[])
  	cp_time = ecalloc(ncpus, sizeof(struct kinfo_cputime));
  	cp_old  = ecalloc(ncpus, sizeof(struct kinfo_cputime));
  	cp_time_len = ncpus * sizeof(struct kinfo_cputime);
@@ -123,3 +137,12 @@ $NetBSD: patch-ab,v 1.11 2015/02/01 18:59:05 wiz Exp $
  
  	/* try to guess cpu-scaling technology */
  	if (tech == TECH_UNKNOWN) {
+-		for (tech = 1; tech <= TECH_MAX; tech++) {
++		for (tech = 1; tech < TECH_MAX; tech++) {
+ 			if (sysctlbyname(freqctl[tech], &frequencies, &freqsize, NULL, 0) >= 0) break;
+ 		}
+-		if (tech > TECH_MAX) {
++		if (tech >= TECH_MAX) {
+ 			fprintf(stderr, "estd: Cannot guess CPU-scaling technology. (maybe you are missing some kernel-option?)\n");
+ 			exit(1);
+ 		}
