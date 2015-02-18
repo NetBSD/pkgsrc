@@ -1,8 +1,21 @@
-$NetBSD: patch-ac,v 1.21 2014/07/21 07:50:45 richard Exp $
+$NetBSD: patch-ac,v 1.22 2015/02/18 03:10:42 sevan Exp $
+
+Allow ncurses to build with compiler from pkgsrc by dropping the use of
+-no-cpp-precomp which is specific to Apple's supplied toolchain.
+Don't rename man pages on Debian.
+Include local paths before utilising flags from build env
 
 --- configure.orig	2011-03-31 23:35:51.000000000 +0000
 +++ configure
-@@ -9640,12 +9645,7 @@ case ".$MANPAGE_RENAMES" in #(vi
+@@ -5584,7 +5584,6 @@ CF_EOF
+ 		chmod +x mk_shared_lib.sh
+ 		;;
+ 	darwin*) #(vi
+-		EXTRA_CFLAGS="-no-cpp-precomp"
+ 		CC_SHARED_OPTS="-dynamic"
+ 		MK_SHARED_LIB='${CC} ${CFLAGS} -dynamiclib -install_name ${libdir}/`basename $@` -compatibility_version ${ABI_VERSION} -current_version ${ABI_VERSION} -o $@'
+ 		test "$cf_cv_shlib_version" = auto && cf_cv_shlib_version=abi
+@@ -9640,12 +9639,7 @@ case ".$MANPAGE_RENAMES" in #(vi
  .no) #(vi
    ;;
  .|.yes)
@@ -15,7 +28,7 @@ $NetBSD: patch-ac,v 1.21 2014/07/21 07:50:45 richard Exp $
    ;;
  esac
  
-@@ -18592,7 +18592,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
+@@ -18592,7 +18586,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
  
  ### Construct the list of include-directories to be generated
  
