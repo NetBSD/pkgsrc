@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2015/02/15 17:41:24 khorben Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/18 08:47:12 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 inet6 libcanberra libnotify libpci libproxy
-PKG_SUPPORTED_OPTIONS+=	ntlm openssl perl python tests themes xft2
+PKG_SUPPORTED_OPTIONS+=	libsexy ntlm openssl perl python tests themes xft2
 PKG_SUGGESTED_OPTIONS+=	gtk2 inet6 libproxy libsexy openssl xft2
 
 PLIST_VARS+=		dbus gtk2 libpci perl python
