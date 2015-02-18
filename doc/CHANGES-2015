@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.956 2015/02/18 21:28:35 tron Exp $
+$NetBSD: CHANGES-2015,v 1.957 2015/02/18 22:29:23 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-App-cpanminus to 1.7027 [mef 2015-02-18]
 	Updated devel/p5-MooX-HandlesVia to 0.001007 [mef 2015-02-18]
 	Updated databases/phpmyadmin to 4.3.9 [tron 2015-02-18]
+	Updated meta-pkgs/bulk-large to 20150218 [jperkin 2015-02-18]
