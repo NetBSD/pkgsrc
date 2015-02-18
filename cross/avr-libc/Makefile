@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/11/10 06:31:45 mef Exp $
+# $NetBSD: Makefile,v 1.38 2015/02/18 21:47:40 joerg Exp $
 
 DISTNAME=		avr-libc-1.8.1
 CATEGORIES=		cross
@@ -12,6 +12,9 @@ LICENSE=		modified-bsd
 
 BUILD_DEPENDS+=		doxygen>=1.8.8:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
+BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
+BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
+BUILD_DEPENDS+=		tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
 USE_TOOLS+=		gmake perl
