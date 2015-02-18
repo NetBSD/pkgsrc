@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 15:12:15 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/18 22:34:05 jperkin Exp $
 
 DISTNAME=	activerecord-${RUBY_RAILS_VERSION}
 CATEGORIES=	databases
@@ -11,7 +11,7 @@ LICENSE=	mit
 # Comment out dependency in gemspec but already depends indirectly one.
 #DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-arel>=3.0.2<3.1:../../databases/ruby-arel
+DEPENDS+=	${RUBY_PKGPREFIX}-arel>=3.0.2<3.1:../../databases/ruby-arel30
 DEPENDS+=	${RUBY_PKGPREFIX}-tzinfo>=0.3.29<0.4:../../time/ruby-tzinfo
 
 RUBY_RAILS_SUPPORTED=	32
