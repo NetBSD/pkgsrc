@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/05/29 01:37:28 wen Exp $
+$NetBSD: distinfo,v 1.9 2015/02/18 12:49:40 mef Exp $
 
-SHA1 (autodie-2.25.tar.gz) = a2ec1cba47cb4f213bd07f1de9aad323bbe6fe5c
-RMD160 (autodie-2.25.tar.gz) = 934109309be639a2a8b961a81157f2991f2af8eb
-Size (autodie-2.25.tar.gz) = 87373 bytes
+SHA1 (autodie-2.26.tar.gz) = 2eb0aee9ffa1ac1255f6de81ea80a2ab5ecf47be
+RMD160 (autodie-2.26.tar.gz) = f7706f7701bb5669a7fa8b94bebc2826b4860073
+Size (autodie-2.26.tar.gz) = 90887 bytes
