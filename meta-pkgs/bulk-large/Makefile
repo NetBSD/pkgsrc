@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2014/12/02 04:26:19 snj Exp $
+# $NetBSD: Makefile,v 1.20 2015/02/18 22:29:03 jperkin Exp $
 
-DISTNAME=	bulk-large-20141120
+DISTNAME=	bulk-large-20150218
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -131,7 +131,6 @@ BUILD_DEPENDS+=	tex-collection-latex-doc-[0-9]*:../../print/tex-collection-latex
 BUILD_DEPENDS+=	deforaos-desktop-[0-9]*:../../meta-pkgs/deforaos-desktop
 BUILD_DEPENDS+=	desktop-gnome-[0-9]*:../../meta-pkgs/desktop-gnome
 BUILD_DEPENDS+=	gnome-[0-9]*:../../meta-pkgs/gnome
-BUILD_DEPENDS+=	gnome-admin-[0-9]*:../../meta-pkgs/gnome-admin
 BUILD_DEPENDS+=	gnome-platform-[0-9]*:../../meta-pkgs/gnome-platform
 BUILD_DEPENDS+=	gnustep-[0-9]*:../../meta-pkgs/gnustep
 BUILD_DEPENDS+=	kde>=3<4:../../meta-pkgs/kde3
