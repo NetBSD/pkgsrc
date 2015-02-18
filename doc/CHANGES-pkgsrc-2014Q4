@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.21 2015/02/15 13:31:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.22 2015/02/18 18:54:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -68,3 +68,8 @@ Pullup ticket #4613 - requested by tnn
 multimedia/ffmpeg2: security update
 Pullup ticket #4614 - requested by tnn
 multimedia/ffmpeg1: security update
+Pullup ticket #4616 - requested by sevan
+devel/patch: security update
+Pullup ticket #4617 - requested by sevan
+lang/php54: security patch
+lang/php55: security patch
