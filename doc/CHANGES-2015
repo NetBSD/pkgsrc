@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.949 2015/02/18 01:43:22 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.950 2015/02/18 03:26:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1376,3 +1376,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/mozc-elisp to 2.16.2037.102 [ryoon 2015-02-17]
 	Updated inputmethod/uim-mozc to 2.16.2037.102 [ryoon 2015-02-17]
 	Updated inputmethod/ibus-mozc to 2.16.2037.102 [ryoon 2015-02-18]
+	Updated devel/p5-Throwable to 0.200012 [mef 2015-02-18]
+	Updated devel/p5-Tie-Cache to 0.21 [mef 2015-02-18]
+	Updated devel/p5-Tie-Cache-LRU-Expires to 0.55 [mef 2015-02-18]
+	Updated devel/p5-Tie-IxHash to 1.23 [mef 2015-02-18]
+	Updated devel/p5-Tie-LLHash to 1.004 [mef 2015-02-18]
+	Updated devel/p5-Tie-RegexpHash to 0.17 [mef 2015-02-18]
