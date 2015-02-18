@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 22:05:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/18 20:46:48 joerg Exp $
 
 QTKEYCHAINVER=	0.4.0
 DISTNAME=	qtkeychain-${QTKEYCHAINVER}
@@ -17,4 +17,5 @@ USE_CMAKE=	yes
 
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
