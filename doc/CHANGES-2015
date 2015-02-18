@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.950 2015/02/18 03:26:44 mef Exp $
+$NetBSD: CHANGES-2015,v 1.951 2015/02/18 08:50:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Tie-IxHash to 1.23 [mef 2015-02-18]
 	Updated devel/p5-Tie-LLHash to 1.004 [mef 2015-02-18]
 	Updated devel/p5-Tie-RegexpHash to 0.17 [mef 2015-02-18]
+	Updated emulators/snes9x-gtk to 1.53.81nb23 [wiz 2015-02-18]
