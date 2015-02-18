@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.953 2015/02/18 12:26:47 mef Exp $
+$NetBSD: CHANGES-2015,v 1.954 2015/02/18 13:13:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1387,3 +1387,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated filesystems/p5-Module-Path to 0.18 [mef 2015-02-18]
 	Updated filesystems/p5-MooseX-Types-Path-Tiny to 0.011 [mef 2015-02-18]
 	Updated filesystems/p5-Path-Tiny to 0.061 [mef 2015-02-18]
+	Updated devel/p5-autobox to 2.83 [mef 2015-02-18]
+	Updated devel/p5-autobox-Core to 1.28 [mef 2015-02-18]
+	Updated devel/p5-autodie to 2.26 [mef 2015-02-18]
+	Updated devel/p5-circular-require to 0.11 [mef 2015-02-18]
+	Updated devel/p5-experimental to 0.013 [mef 2015-02-18]
+	Updated devel/p5-indirect to 0.33 [mef 2015-02-18]
+	Updated devel/p5-lib-abs to 0.93 [mef 2015-02-18]
+	Updated devel/p5-namespace-autoclean to 0.24 [mef 2015-02-18]
