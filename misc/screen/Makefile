@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2015/01/13 08:27:28 he Exp $
+# $NetBSD: Makefile,v 1.93 2015/02/18 20:01:49 joerg Exp $
 
 DISTNAME=	screen-4.2.1
 PKGREVISION=	1
@@ -9,6 +9,11 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 LICENSE=	gnu-gpl-v2
+
+# In file included from list_display.c:36:
+# In file included from ./screen.h:150:
+# ./display.h:154:19: error: use of undeclared identifier 'T_N'
+MAKE_JOBS_SAFE=	no
 
 .include "options.mk"
 
