@@ -1,148 +1,42 @@
-$NetBSD: patch-ab,v 1.12 2015/02/17 09:59:30 abs Exp $
+$NetBSD: patch-ab,v 1.13 2015/02/18 10:34:57 wiz Exp $
 
-Fix off by one error in use of TECH_MAX against freqlist which would cause a
-null pointer to be passed to sysctl
+Add a missing comma that resulted in a smaller freqctl[] and setctl[] (and so
+with a potential off-by-one error).
+Explicitly use TECH_MAX in sizes of freqlist and related arrays.
 
-Explicitly use TECH_MAX in sizes of freqlist and related arrays
-
-Add mre frequency mechanisms
-
-Add -G, -L and -R options
-
-Add NetBSD support
-
---- estd.c.orig	2013-03-24 19:14:06.000000000 +0000
+--- estd.c.orig	2015-02-15 21:12:10.000000000 +0000
 +++ estd.c
-@@ -56,8 +56,11 @@
- #define TECH_POWERNOW 2
- #define TECH_ACPI 3
- #define TECH_INTREPID 4
--#define TECH_MAX 4
--
-+#define TECH_LOONGSON 5
-+#define TECH_ROCKCHIP 6
-+#define TECH_GENERIC 7
-+#define TECH_MAX 7
-+ 
- /* this is ugly, but... <shrug> */
- #define MAX_FREQS 32
- #define SYSCTLBUF 255
-@@ -118,29 +121,41 @@ int             ndomains;
+@@ -121,7 +121,7 @@ int             ndomains;
   static const size_t cp_time_max_size = sizeof(cp_time[0]) * MAX_CPUS;
  #endif
  
--static char	*techdesc[5] = {"Unknown",
-+static char	*techdesc[TECH_MAX + 1] = {
-+                                "Unknown",
+-static char	*techdesc[8] = {"Unknown",
++static char	*techdesc[TECH_MAX + 1] = {"Unknown",
  				"Enhanced SpeedStep",
  				"PowerNow",
  				"ACPI P-States",
--				"Intrepid"
-+				"Intrepid",
-+				"Loongson",
-+				"Rockchip",
-+				"Generic"
+@@ -130,20 +130,20 @@ static char	*techdesc[8] = {"Unknown",
+ 				"Rockchip",
+ 				"Generic"
  				};
--static char	*freqctl[5] = {	"",	
-+static char	*freqctl[TECH_MAX + 1] = {
-+                                "",	
+-static char	*freqctl[8] = {	"",	
++static char	*freqctl[TECH_MAX + 1] = {	"",	
  				"machdep.est.frequency.available",
  				"machdep.powernow.frequency.available",
  				"hw.acpi.cpu.px_dom0.available",
- 				"machdep.intrepid.frequency.available"
-+				"machdep.loongson.frequency.available",
-+				"machdep.cpu.frequency.available",
-+				"machdep.frequency.available"
+-				"machdep.intrepid.frequency.available"
++				"machdep.intrepid.frequency.available",
+ 				"machdep.loongson.frequency.available",
+ 				"machdep.cpu.frequency.available",
+ 				"machdep.frequency.available"
  				};
--static char	*setctl[5] = {	"",
-+static char	*setctl[TECH_MAX + 1] = {
-+                                "",
+-static char	*setctl[8] = {	"",
++static char	*setctl[TECH_MAX + 1] = {	"",
  				"machdep.est.frequency.target",
  				"machdep.powernow.frequency.target",
  				"hw.acpi.cpu.px_dom0.select",
- 				"machdep.intrepid.frequency.target"
-+				"machdep.loongson.frequency.target",
-+				"machdep.cpu.frequency.target",
-+				"machdep.frequency.current"
- 				};
- 
- void
- usage()
- {
--	printf("usage: estd [-d] [-o] [-n] [-A] [-C] [-E] [-I] [-P] [-a] [-s] [-b] [-p poll interval in us] [-g grace period] [-l low watermark percentage] [-h high watermark percentage] [-m minimum MHz] [-M maximum MHz]\n");
-+	printf("usage: estd [-d] [-o] [-n] [-A] [-C] [-E] [-I] [-L] [-R] [-P] [-G] [-a] [-s] [-b] [-p poll interval in us] [-g grace period] [-l low watermark percentage] [-h high watermark percentage] [-m minimum MHz] [-M maximum MHz]\n");
- 	printf("       estd -v\n");
- 	printf("       estd -f\n");
- 	exit(1);
-@@ -395,7 +410,7 @@ main(int argc, char *argv[])
- 	FILE           *fexists;
- 
- 	/* get command-line options */
--	while ((ch = getopt(argc, argv, "vfdonACEIPasbp:h:l:g:m:M:")) != -1)
-+	while ((ch = getopt(argc, argv, "vfdonACEGILPasbp:h:l:g:m:M:")) != -1)
- 		switch (ch) {
- 		case 'v':
- 			version();
-@@ -426,12 +441,21 @@ main(int argc, char *argv[])
- 		case 'E':
- 			tech = TECH_EST;
- 			break;
-+		case 'G':
-+			tech = TECH_GENERIC;
-+			break;
- 		case 'I':
- 			tech = TECH_INTREPID;
- 			break;
-+                case 'L':
-+                        tech = TECH_LOONGSON;
-+                        break;
- 		case 'P':
- 			tech = TECH_POWERNOW;
- 			break;
-+		case 'R':
-+			tech = TECH_ROCKCHIP;
-+			break;
- 		case 'a':
- 			strategy = AGGRESSIVE;
- 			break;
-@@ -466,8 +490,9 @@ main(int argc, char *argv[])
- 
- 	ndomains = 1;
- 	domain = ecalloc(ndomains, sizeof(struct domain));
--	
--	#if defined(__DragonFly__)
-+
-+#if defined(__NetBSD__) || defined(__DragonFly__)
-+# if defined(__DragonFly__)
- 	if (kinfo_get_cpus(&ncpus)) {
- 		fprintf(stderr, "estd: Cannot get number of cpus\n");
- 		exit(1);
-@@ -475,18 +500,25 @@ main(int argc, char *argv[])
- 	cp_time = ecalloc(ncpus, sizeof(struct kinfo_cputime));
- 	cp_old  = ecalloc(ncpus, sizeof(struct kinfo_cputime));
- 	cp_time_len = ncpus * sizeof(struct kinfo_cputime);
-+# elif defined(__NetBSD__)
-+	size_t ncpus_len = sizeof(ncpus);
-+	if (sysctlbyname("hw.ncpu", &ncpus, &ncpus_len, NULL, 0) != 0) {
-+		fprintf(stderr, "estd: Cannot get number of cpus\n");
-+		exit(1);
-+	}
-+# endif
- 	domain[0].ncpus = ncpus;
- 	domain[0].cpus = ecalloc(ncpus, sizeof(int));
- 	for (i = 0; i < domain[0].ncpus; i++)
- 		domain[0].cpus[i] = i;
--	#endif
-+#endif
- 
- 	/* try to guess cpu-scaling technology */
- 	if (tech == TECH_UNKNOWN) {
--		for (tech = 1; tech <= TECH_MAX; tech++) {
-+		for (tech = 1; tech < TECH_MAX; tech++) {
- 			if (sysctlbyname(freqctl[tech], &frequencies, &freqsize, NULL, 0) >= 0) break;
- 		}
--		if (tech > TECH_MAX) {
-+		if (tech >= TECH_MAX) {
- 			fprintf(stderr, "estd: Cannot guess CPU-scaling technology. (maybe you are missing some kernel-option?)\n");
- 			exit(1);
- 		}
+-				"machdep.intrepid.frequency.target"
++				"machdep.intrepid.frequency.target",
+ 				"machdep.loongson.frequency.target",
+ 				"machdep.cpu.frequency.target",
+ 				"machdep.frequency.current"
