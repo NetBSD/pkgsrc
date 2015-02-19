@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/02/07 22:06:52 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2015/02/19 09:41:01 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,15 +16,15 @@ DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-VER=		4.5.39
+VER=		4.5.40
 NO_BUILD=	yes
 USE_TOOLS+=	pax
+
+PHP_VERSIONS_ACCEPTED=	53 54 55
 
 TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
 WRKSRC=		${WRKDIR}/${DISTNAME}
-
-PHP_VERSIONS_ACCEPTED=	53
 
 # maybe resides in lang/php/phpversion.mk
 REPLACE_INTERPRETER+=	php
