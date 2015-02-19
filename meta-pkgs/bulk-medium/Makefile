@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/11/20 20:49:38 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/19 14:43:35 taca Exp $
 
-DISTNAME=	bulk-medium-20141120
+DISTNAME=	bulk-medium-20150219
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -100,12 +100,10 @@ BUILD_DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 BUILD_DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 BUILD_DEPENDS+=	re-alpine-[0-9]*:../../mail/re-alpine
 BUILD_DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
-BUILD_DEPENDS+=	bind>=9.6<9.7:../../net/bind96
-BUILD_DEPENDS+=	bind>=9.8<9.9:../../net/bind98
 BUILD_DEPENDS+=	bind>=9.9<9.10:../../net/bind99
+BUILD_DEPENDS+=	bind>=9.10<9.11:../../net/bind910
 BUILD_DEPENDS+=	clive-[0-9]*:../../net/clive
 BUILD_DEPENDS+=	nmap-[0-9]*:../../net/nmap
-BUILD_DEPENDS+=	samba>=3.5<3.6:../../net/samba35
 BUILD_DEPENDS+=	samba>=3.6:../../net/samba
 BUILD_DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
 BUILD_DEPENDS+=	xymon-[0-9]*:../../net/xymon
