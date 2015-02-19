@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.972 2015/02/19 11:56:31 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.973 2015/02/19 12:24:44 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1417,3 +1417,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/mutt-devel to 1.5.23nb4 [jperkin 2015-02-19]
 	Updated www/py-django-cms to 3.0.10 [adam 2015-02-19]
 	Updated lang/erlang to 16.1.2nb4 [jperkin 2015-02-19]
+	Updated net/exabgp to 3.4.7 [he 2015-02-19]
