@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2013/05/06 14:58:20 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/02/19 14:25:12 joerg Exp $
 
 SHA1 (Botan-1.8.14.tgz) = a845a5e6d0386e0bdbd7a8cfc646d5a4cdec8649
 RMD160 (Botan-1.8.14.tgz) = 6125937c13860b67a18dbbee71c477b4d06ad5b2
@@ -6,6 +6,7 @@ Size (Botan-1.8.14.tgz) = 2632909 bytes
 SHA1 (patch-ab) = a53a3e23722d8f478c5a6c5ecf1df08d74fd21c0
 SHA1 (patch-ac) = 4f98ff086983b27ed17d048486a8afced47e7970
 SHA1 (patch-ak) = 7bf66c1faa84971b490be96efefac0ef44f97b70
+SHA1 (patch-src_build-data_arch_arm.txt) = 3355b258ac731968400008558795d6caaaf8a728
 SHA1 (patch-src_cert_cvc_cvc__ado.cpp) = 94c632fcdf6d8df903135c7abe9bb26ab194f803
 SHA1 (patch-src_cert_cvc_cvc__ado.h) = b10593175baf2787b5522a05369773877c135a8a
 SHA1 (patch-src_cert_cvc_cvc__ca.cpp) = 2bd37cbd9432d605b1306d43612e35a37565d490

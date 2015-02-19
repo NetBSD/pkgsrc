@@ -1,0 +1,15 @@
+$NetBSD: patch-src_build-data_arch_arm.txt,v 1.1 2015/02/19 14:25:12 joerg Exp $
+
+--- src/build-data/arch/arm.txt.orig	2012-07-18 19:59:04.000000000 +0000
++++ src/build-data/arch/arm.txt
+@@ -2,6 +2,10 @@ realname "ARM"
+ 
+ default_submodel arm2
+ 
++<aliases>
++evbarm # NetBSD
++</aliases>
++
+ <submodels>
+ arm2
+ arm3
