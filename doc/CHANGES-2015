@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.978 2015/02/19 14:44:24 taca Exp $
+$NetBSD: CHANGES-2015,v 1.979 2015/02/19 14:45:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1423,3 +1423,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php55 to 5.5.22 [taca 2015-02-19]
 	Updated editors/emacs21 to 21.4anb32 [wiz 2015-02-19]
 	Updated meta-pkgs/bulk-medium to 20150219 [taca 2015-02-19]
+	Updated net/nagios-plugins to 1.4.15nb10 [taca 2015-02-19]
