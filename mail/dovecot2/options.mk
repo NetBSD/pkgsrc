@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.7 2014/12/12 09:38:32 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2015/02/19 09:48:27 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gssapi kqueue ldap mysql pam pgsql sqlite
+PKG_SUPPORTED_OPTIONS=	gssapi kqueue ldap mysql pam pgsql sqlite tcpwrappers
 PKG_OPTIONS_OPTIONAL_GROUPS= ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
-PKG_SUGGESTED_OPTIONS=	pam sqlite ssl
+PKG_SUGGESTED_OPTIONS=	pam sqlite ssl tcpwrappers
 
 .if defined(PKG_HAVE_KQUEUE)
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
-PLIST_VARS+=		ssl
+PLIST_VARS+=		ssl tcpwrappers
 
 .include "../../mk/bsd.options.mk"
 
@@ -91,4 +91,13 @@ CONFIGURE_ARGS+=	--with-gssapi
 .  include "../../mk/krb5.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-gssapi
+.endif
+
+###
+### tcpwrappers support
+###
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
+CONFIGURE_ARGS+=	--with-libwrap
+.  include "../../security/tcp_wrappers/buildlink3.mk"
+PLIST.tcpwrappers=	yes
 .endif
