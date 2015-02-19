@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/01/07 18:45:54 drochner Exp $
+$NetBSD: distinfo,v 1.5 2015/02/19 00:20:47 wiz Exp $
 
-SHA1 (streamripper-1.61.27.tar.gz) = bdbf0e301c3c783e1f13c2977508afd5076328ad
-RMD160 (streamripper-1.61.27.tar.gz) = 14b55b91e3b995515d6978383f9fc618fe92bbcb
-Size (streamripper-1.61.27.tar.gz) = 1227559 bytes
-SHA1 (patch-aa) = 1150430aa345f78c58d7a207433947a4241ecf29
-SHA1 (patch-ab) = dbcdf5e2c03f4c2b2b63f23026347d15bb452c5c
+SHA1 (streamripper-1.64.6.tar.gz) = bc8a8d3ad045e0772ca691d2063c39efcc0dca45
+RMD160 (streamripper-1.64.6.tar.gz) = 3c010038f7be6959ada637b933feff2616915dba
+Size (streamripper-1.64.6.tar.gz) = 900205 bytes
+SHA1 (patch-ac) = b22e18723d4888d78f0e5e01e0db40f010b15f96
+SHA1 (patch-ad) = 583dbf02c8adf75eccdfea8c0e8aa181e89256de
+SHA1 (patch-lib_ripstream.c) = 4cc71c5d58cec36711d9c90a327dea9f466cec2a
