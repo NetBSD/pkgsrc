@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2014/12/30 13:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/02/19 13:18:10 wiz Exp $
 
-DISTNAME=		GnuPG-Interface-0.51
+DISTNAME=		GnuPG-Interface-0.52
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=GnuPG/}
