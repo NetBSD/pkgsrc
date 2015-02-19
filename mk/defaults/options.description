@@ -54,8 +54,8 @@ bacula-static		Enable building of statically linked versions of the Bacula daemo
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
 bind-dig-sigchase	Enable dig(1) option +sigchase for DNSSEC signature chasing.
-bind-xml-statistics-server	Enable building in the statistics server with XML output in bind95 and later.
 bind-json-statistics-server	Enable building in the statistics server with JSON in bind95 and later.
+bind-xml-statistics-server	Enable building in the statistics server with XML output in bind95 and later.
 bittorrent		Enable bittorrent support.
 blender-exppython	Enable the Experimental Python support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
@@ -595,6 +595,7 @@ quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
 readline		Enable use of GNU readline library.
 regexp			Enable POSIX.2 regexp support.
+rpi			Enable Raspberry Pi support.
 rrl			Enable Response Rate Limiting.
 rsaref			Use RSAREF library.
 rsound			Enable support for the RSound PCM audio library.
