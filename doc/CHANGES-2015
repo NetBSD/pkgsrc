@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.963 2015/02/19 01:16:46 taca Exp $
+$NetBSD: CHANGES-2015,v 1.964 2015/02/19 09:16:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1408,3 +1408,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/bind910 to 9.10.1pl2 [taca 2015-02-19]
 	Updated www/squid3 to 3.5.2 [taca 2015-02-19]
 	Updated databases/ruby-activerecord32 to 3.2.21nb1 [taca 2015-02-19]
+	Updated multimedia/mpv to 0.8.0 [wiz 2015-02-19]
