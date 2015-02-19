@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.964 2015/02/19 09:16:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.965 2015/02/19 09:38:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/squid3 to 3.5.2 [taca 2015-02-19]
 	Updated databases/ruby-activerecord32 to 3.2.21nb1 [taca 2015-02-19]
 	Updated multimedia/mpv to 0.8.0 [wiz 2015-02-19]
+	Updated lang/php54 to 5.4.38 [taca 2015-02-19]
