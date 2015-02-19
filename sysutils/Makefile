@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.627 2015/02/13 18:01:26 tnn Exp $
+# $NetBSD: Makefile,v 1.628 2015/02/19 21:55:47 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -23,13 +23,13 @@ SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	attr
 SUBDIR+=	augeas
+SUBDIR+=	backuppc
 SUBDIR+=	bacula
 SUBDIR+=	bacula-clientonly
 SUBDIR+=	bacula-doc
 SUBDIR+=	bacula-qt-console
 SUBDIR+=	bacula-tray-monitor
 SUBDIR+=	bacula-wx-console
-SUBDIR+=	backuppc
 SUBDIR+=	baloo
 SUBDIR+=	baloo-widgets
 SUBDIR+=	bbsload
