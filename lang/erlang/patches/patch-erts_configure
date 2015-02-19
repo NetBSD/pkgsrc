@@ -1,0 +1,16 @@
+$NetBSD: patch-erts_configure,v 1.1 2015/02/19 11:56:18 jperkin Exp $
+
+Fix for DTrace 1.11 and newer.
+
+--- erts/configure.orig	2013-09-16 18:12:18.000000000 +0000
++++ erts/configure
+@@ -37343,6 +37343,9 @@ echo "$as_me: error: Could not precompil
+                         { echo "$as_me:$LINENO: dtrace precompilation for 2-stage DTrace successful" >&5
+ echo "$as_me: dtrace precompilation for 2-stage DTrace successful" >&6;}
+                 else
++			case `dtrace -V 2>/dev/null` in
++			*"Sun D "1.1[1-9]*) DTRACE_ENABLED_2STEP=yes;;
++			esac
+                         { echo "$as_me:$LINENO: dtrace precompilation for 1-stage DTrace successful" >&5
+ echo "$as_me: dtrace precompilation for 1-stage DTrace successful" >&6;}
+                 fi

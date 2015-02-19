@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_runtime__tools_c__src_Makefile.in,v 1.1 2015/02/19 11:56:18 jperkin Exp $
+
+Avoid building empty DTrace probes, fixes D 1.11+.
+
+--- lib/runtime_tools/c_src/Makefile.in.orig	2013-09-16 18:12:18.000000000 +0000
++++ lib/runtime_tools/c_src/Makefile.in
+@@ -121,7 +121,7 @@ DTRACE_USER_HEADER=
+ endif
+ 
+ DTRACE_OBJS =
+-ifdef DTRACE_ENABLED_2STEP
++ifdef notDTRACE_ENABLED_2STEP
+ DTRACE_OBJS += $(OBJDIR)/dtrace_user.o
+ $(OBJDIR)/dtrace_user.o: $(before_DTrace_OBJS) $(OBJDIR)/dtrace_user.h
+ 	$(dtrace_verbose)dtrace -G -C \
