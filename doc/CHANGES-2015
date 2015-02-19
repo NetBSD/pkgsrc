@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.976 2015/02/19 13:36:01 taca Exp $
+$NetBSD: CHANGES-2015,v 1.977 2015/02/19 14:19:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1421,3 +1421,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-GnuPG-Interface to 0.52 [wiz 2015-02-19]
 	Updated databases/p5-DBD-postgresql to 3.5.1 [wiz 2015-02-19]
 	Updated lang/php55 to 5.5.22 [taca 2015-02-19]
+	Updated editors/emacs21 to 21.4anb32 [wiz 2015-02-19]
