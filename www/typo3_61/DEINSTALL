@@ -1,9 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2013/09/13 11:53:05 taca Exp $
-
-TYPOTEMP="${PREFIX}/@TYPO3DIR@/@SITEDIR@/typo3temp"
-
-case ${STAGE} in
-POST-DEINSTALL)
-	${RM} -fr ${TYPOTEMP}
-	;;
-esac
