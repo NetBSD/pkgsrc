@@ -1,4 +1,4 @@
-$NetBSD: patch-network.c,v 1.3 2014/02/15 15:36:35 christos Exp $
+$NetBSD: patch-network.c,v 1.4 2015/02/19 22:27:59 joerg Exp $
 
 Handle not having IP_PKTINFO
 Handle not having SO_NO_CHECK
@@ -6,9 +6,9 @@ Don't set control buf if controllen == 0
 Avoid pointer aliasing issue and fix test that was done in the wrong
 byte order
 
---- network.c.orig	2014-01-16 17:02:04.000000000 -0500
-+++ network.c	2014-02-15 10:33:31.000000000 -0500
-@@ -85,24 +85,26 @@
+--- network.c.orig	2014-01-16 22:02:04.000000000 +0000
++++ network.c
+@@ -85,24 +85,26 @@ int init_network (void)
  
  	    gconfig.ipsecsaref=0;
      }
@@ -41,7 +41,22 @@ byte order
  
  #ifdef USE_KERNEL
      if (gconfig.forceuserspace)
-@@ -160,10 +162,8 @@
+@@ -135,7 +137,7 @@ int init_network (void)
+     return 0;
+ }
+ 
+-inline void extract (void *buf, int *tunnel, int *call)
++static inline void extract (void *buf, int *tunnel, int *call)
+ {
+     /*
+      * Extract the tunnel and call #'s, and fix the order of the 
+@@ -155,15 +157,13 @@ inline void extract (void *buf, int *tun
+     }
+ }
+ 
+-inline void fix_hdr (void *buf)
++static inline void fix_hdr (void *buf)
+ {
      /*
       * Fix the byte order of the header
       */
@@ -54,7 +69,7 @@ byte order
      {
          /*
           * Control headers are always
-@@ -280,12 +280,18 @@
+@@ -280,12 +280,18 @@ void control_xmit (void *b)
  void udp_xmit (struct buffer *buf, struct tunnel *t)
  {
      struct cmsghdr *cmsg;
@@ -74,7 +89,7 @@ byte order
      int finallen;
      
      /*
-@@ -312,7 +318,7 @@
+@@ -312,7 +318,7 @@ void udp_xmit (struct buffer *buf, struc
  	
  	finallen = cmsg->cmsg_len;
      }
@@ -83,7 +98,7 @@ byte order
      if (t->my_addr.ipi_addr.s_addr){
  
  	if ( ! cmsg) {
-@@ -331,7 +337,9 @@
+@@ -331,7 +337,9 @@ void udp_xmit (struct buffer *buf, struc
  	
  	finallen += cmsg->cmsg_len;
      }
@@ -94,7 +109,7 @@ byte order
      msgh.msg_controllen = finallen;
      
      iov.iov_base = buf->start;
-@@ -426,7 +434,9 @@
+@@ -426,7 +434,9 @@ void network_thread ()
       * our network socket.  Control handling is no longer done here.
       */
      struct sockaddr_in from;
@@ -104,7 +119,7 @@ byte order
      unsigned int fromlen;
      int tunnel, call;           /* Tunnel and call */
      int recvsize;               /* Length of data received */
-@@ -506,7 +516,9 @@
+@@ -506,7 +516,9 @@ void network_thread ()
              buf->len -= PAYLOAD_BUF;
  
  	    memset(&from, 0, sizeof(from));
@@ -114,7 +129,7 @@ byte order
  	    
  	    fromlen = sizeof(from);
  	    
-@@ -557,13 +569,16 @@
+@@ -557,13 +569,16 @@ void network_thread ()
  		for (cmsg = CMSG_FIRSTHDR(&msgh);
  			cmsg != NULL;
  			cmsg = CMSG_NXTHDR(&msgh,cmsg)) {
@@ -132,7 +147,7 @@ byte order
  			&& cmsg->cmsg_type == gconfig.sarefnum) {
  				unsigned int *refp;
  				
-@@ -592,6 +607,8 @@
+@@ -592,6 +607,8 @@ void network_thread ()
  
  	    if (gconfig.packet_dump)
  	    {
@@ -141,7 +156,7 @@ byte order
  		do_packet_dump (buf);
  	    }
  	    if (!
-@@ -627,9 +644,11 @@
+@@ -627,9 +644,11 @@ void network_thread ()
  	    }
  	    else
  	    {
