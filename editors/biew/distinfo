@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2013/07/02 12:17:30 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/02/19 22:25:54 joerg Exp $
 
 SHA1 (biew-610-src.tar.bz2) = 332b45580cdee134ee42c48bec652fcba96cd99a
 RMD160 (biew-610-src.tar.bz2) = c728c8e165c2e16edcc4c25ddef063379b32049d
 Size (biew-610-src.tar.bz2) = 860517 bytes
 SHA1 (patch-aa) = 01be55a0850bce93bddea0a01de5e79d088ffe1f
+SHA1 (patch-biewlib_sysdep_generic_____config.h) = 054b3384ad1e7fc963ab19ad928cde35c2c18226
 SHA1 (patch-biewlib_sysdep_x86__64_aclib__template.c) = aa7f33ab453a1b742a8ea6c6209b66d76f758154
 SHA1 (patch-configure) = 89f8b10c4360e96c1e067ab0f386bce97428a73d
