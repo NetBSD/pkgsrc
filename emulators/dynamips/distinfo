@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/02/24 12:30:59 wiedi Exp $
+$NetBSD: distinfo,v 1.7 2015/02/19 14:18:23 joerg Exp $
 
 SHA1 (dynamips-0.2.8-RC2.tar.gz) = 349270690996a1e260b3eceb51ea90f94c25a59e
 RMD160 (dynamips-0.2.8-RC2.tar.gz) = 0447a4c0cf516bd2b63259881c7625e26d0d838f
 Size (dynamips-0.2.8-RC2.tar.gz) = 578935 bytes
 SHA1 (patch-aa) = 9dce75ed9d39e6faaf3b8af7a52fa094073d6f56
+SHA1 (patch-utils.h) = 10662fe161ba9d87615abfc6a8e1cb5bf19df3e5
