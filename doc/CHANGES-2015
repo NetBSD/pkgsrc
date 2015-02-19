@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.967 2015/02/19 09:49:01 taca Exp $
+$NetBSD: CHANGES-2015,v 1.968 2015/02/19 10:00:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1412,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php54 to 5.4.38 [taca 2015-02-19]
 	Updated www/typo3_45 to 4.5.40 [taca 2015-02-19]
 	Updated mail/dovecot2 to 2.2.15nb2 [taca 2015-02-19]
+	Updated mail/mutt-devel to 1.5.23nb3 [jperkin 2015-02-19]
