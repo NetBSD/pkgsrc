@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2006/10/22 06:31:43 rillig Exp $
+$NetBSD: distinfo,v 1.16 2015/02/19 22:25:12 joerg Exp $
 
 SHA1 (bcc.tar.gz) = 6a5c47bde0a6ddf82b65569883a5a490deb7e9b2
 RMD160 (bcc.tar.gz) = 6ce1a333bb4ffa36d9cea5c116925f74db64345e
@@ -15,10 +15,11 @@ SHA1 (patch-al) = 98c7508aeb54771385efd44e75d7ab765f3fd91e
 SHA1 (patch-am) = 4e3d440ce908ea27ddb7efb1bfb7261b8cb91d03
 SHA1 (patch-an) = 7be41aeee0d37f44783b1f3c697562c3a827646b
 SHA1 (patch-aq) = 343f318437b3690fdfa15f564522ce47047e5223
-SHA1 (patch-ar) = 94f5afcca0aeae1d8befafd304185e5b964acb46
+SHA1 (patch-ar) = 1ca0eef40c8c4c3b84ec1037bcb4c82ab639b821
 SHA1 (patch-as) = b5b52b843eeaf649342813a50a042dfde8314ffd
 SHA1 (patch-at) = 932f6c0ad2fa5372493cd6e88806e1445cdbe448
 SHA1 (patch-au) = cef1a15e3b9feba7377e55fa9ee7c812dac63e2c
 SHA1 (patch-av) = 7583906b59251aa99010616b3247728a2bea27a8
 SHA1 (patch-aw) = dc47528f06f16a835e53055135d704d166e41040
 SHA1 (patch-ax) = 4bd5b6f2de8f04584dc188ade6ecd2cef2380976
+SHA1 (patch-bcc_byteord.h) = 50e2b5ad77bfc7ea2d107e07a68e61a4bdc3b3ee

@@ -1,13 +1,42 @@
-$NetBSD: patch-ar,v 1.2 2006/10/10 06:56:05 uebayasi Exp $
+$NetBSD: patch-ar,v 1.3 2015/02/19 22:25:12 joerg Exp $
 
---- bcc/proto.h.orig	1992-11-14 16:12:34.000000000 +0100
+When this file was written, C90 was already two years old.
+No excuse to not use system headers.
+
+--- bcc/proto.h.orig	1992-11-14 15:12:34.000000000 +0000
 +++ bcc/proto.h
-@@ -381,8 +381,6 @@ void *malloc P((unsigned _nbytes));
- void *realloc P((void *_ptr, unsigned _nbytes));
+@@ -370,30 +370,7 @@ struct typestruct *tounsigned P((struct 
+ void typeinit P((void));
  
- /* library - string.h */
+ /* library - fcntl.h */
+-int creat P((const char *_path, int _mode));
+-int open P((const char *_path, int _oflag, ...));
+-
+-/* library - stdlib.h */
+-double atof P((const char *_str));
+-void exit P((int _status));
+-void free P((void *_ptr));
+-void *malloc P((unsigned _nbytes));
+-void *realloc P((void *_ptr, unsigned _nbytes));
+-
+-/* library - string.h */
 -void *memcpy P((void *_t, const void *_s, unsigned _length));
 -void *memset P((void *_s, int _c, unsigned _nbytes));
- char *strcat P((char *_target, const char *_source));
- char *strchr P((const char *_s, int _ch));
- int strcmp P((const char *_s1, const char *_s2));
+-char *strcat P((char *_target, const char *_source));
+-char *strchr P((const char *_s, int _ch));
+-int strcmp P((const char *_s1, const char *_s2));
+-char *strcpy P((char *_target, const char *_source));
+-unsigned strlen P((const char *_s));
+-char *strncpy P((char *_target, const char *_source, unsigned _maxlength));
+-char *strrchr P((const char *_s, int _ch));
+-
+-/* library - unistd.h */
+-int close P((int _fd));
+-int isatty P((int _fd));
+-long lseek P((int _fd, long _offset, int _whence));
+-int read P((int _fd, char *_buf, unsigned _nbytes));
+-int write P((int _fd, char *_buf, unsigned _nbytes));
++#include <fcntl.h>
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
