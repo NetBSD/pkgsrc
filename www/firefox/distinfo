@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.188 2015/02/17 14:59:01 bad Exp $
+$NetBSD: distinfo,v 1.189 2015/02/19 21:33:22 ryoon Exp $
 
 SHA1 (firefox-35.0.1.source.tar.bz2) = cf256ee1491ee502eb4432ade5a879104ebceede
 RMD160 (firefox-35.0.1.source.tar.bz2) = ca4dc6f6c5de1e6e69133de3b8b502991d519fa7
@@ -80,11 +80,11 @@ SHA1 (patch-js_src_jit-LIR.cpp) = 4231ab9271b12ca712492e2cdbd4e1e82e108b68
 SHA1 (patch-js_src_jit_ExecutableAllocator.h) = 24bb91e5be41cc4a7658d633c9f4f7c0dc64fd8a
 SHA1 (patch-js_src_jit_MIR.cpp) = 64071494d1aac905e95d25046f0cf1f9f96b74e9
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = c1ff7591bd9b8b4a7aea254f674d25b89345f099
-SHA1 (patch-js_src_jsapi.cpp) = 3ef2e22026708d58414061d7054af0d8b797e478
+SHA1 (patch-js_src_jsapi.cpp) = 16269342723fe9420909ea17e19d02b23ad1a70b
 SHA1 (patch-js_src_jsdate.cpp) = b09c240f3108d4e95a899405d3d301bd4d6879ba
 SHA1 (patch-js_src_jskwgen.cpp) = 34d3b92e13366d4b43ff755ad54f392c116d5c59
 SHA1 (patch-js_src_jsmath.cpp) = 7d4993ae91e9b5e6820358165603819aefb586f9
-SHA1 (patch-js_src_shell_jsoptparse.cpp) = 8e1991fe8a62723bf4dc1457069702a1b5e19f07
+SHA1 (patch-js_src_shell_jsoptparse.cpp) = f3a306fe3cf629370a671267ef0e102c1a7a226c
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = 8a15ff542c9d3fce448d9ec63706f7dfb411d926
 SHA1 (patch-media_libcubeb_AUTHORS) = 3db32086f98c2bbe16e9394bb5121d7a95cdb4af
 SHA1 (patch-media_libcubeb_src_cubeb.c) = effe8771e42adddb478ecb302352ef003bdd01db
