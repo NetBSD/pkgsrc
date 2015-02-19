@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.3 2007/08/12 21:53:42 salo Exp $
+$NetBSD: patch-configure,v 1.1.2.2 2015/02/19 21:18:52 tron Exp $
+
+Check for C99 conformance for stdbool.h, don't just test its presence.
 
 --- configure.orig	2007-01-19 21:54:48.000000000 +0000
 +++ configure	2007-08-12 20:56:30.000000000 +0000
