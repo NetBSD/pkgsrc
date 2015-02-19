@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14141 2015/02/17 14:23:13 ryoon Exp $
+$NetBSD: TODO,v 1.14142 2015/02/19 00:20:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1040,7 +1040,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stow-2.2.0
 	o strace-4.9
 	o stratagus-2.2.5.5
-	o streamripper-1.63.0
 	o subtitleeditor-0.41.1
 	o sudo-1.8.12p1
 	o sun-jre8-8.0
