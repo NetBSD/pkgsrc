@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.981 2015/02/19 15:22:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.982 2015/02/19 15:32:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1427,3 +1427,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed net/bind96 [taca 2015-02-19]
 	Removed net/bind98 [taca 2015-02-19]
 	Added www/typo3_62 version 6.2.9 [taca 2015-02-19]
+	Removed www/typo3_47 [taca 2015-02-19]
+	Removed www/typo3_60 [taca 2015-02-19]
+	Removed www/typo3_61 [taca 2015-02-19]
