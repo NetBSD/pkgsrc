@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/10/20 19:55:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/19 00:20:47 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.streamripper
 PKG_SUPPORTED_OPTIONS=	ogg
