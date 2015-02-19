@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.959 2015/02/19 00:20:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.960 2015/02/19 00:21:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1403,3 +1403,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/bulk-large to 20150218 [jperkin 2015-02-18]
 	Updated sysutils/estd to 0.11 [wiz 2015-02-19]
 	Updated audio/streamripper to 1.64.6 [wiz 2015-02-19]
+	Removed audio/streamripper-current successor audio/streamripper [wiz 2015-02-19]
