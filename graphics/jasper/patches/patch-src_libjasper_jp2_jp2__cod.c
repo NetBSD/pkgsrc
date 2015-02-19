@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2007/01/06 23:28:07 wiz Exp $
+$NetBSD: patch-src_libjasper_jp2_jp2__cod.c,v 1.1.2.2 2015/02/19 21:18:52 tron Exp $
+
+Only output debug info if debuglevel >= 1.
 
 --- src/libjasper/jp2/jp2_cod.c.orig	2006-12-08 00:23:36.000000000 +0000
 +++ src/libjasper/jp2/jp2_cod.c
