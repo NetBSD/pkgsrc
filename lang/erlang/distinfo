@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2013/10/20 18:37:49 asau Exp $
+$NetBSD: distinfo,v 1.34 2015/02/19 11:56:18 jperkin Exp $
 
 SHA1 (erlang/otp_src_R16B02.tar.gz) = 16accc21afaebf2bd9507c5a2610aecf8d6f8243
 RMD160 (erlang/otp_src_R16B02.tar.gz) = d10ad82b3bddf16d1cf52babd56965537b64faeb
@@ -10,3 +10,5 @@ SHA1 (patch-ao) = a4ee17b0a81415d541cb55d76b3c1ecc3148c2c2
 SHA1 (patch-ay) = 7d1a7f79e8c3ea909b2f4476d9ff271ed1318234
 SHA1 (patch-configure) = 8bf08197747cbca07fcb7edba6782389787d7a1f
 SHA1 (patch-configure.in) = 4a36245a6a6b6dc4804cbb899c7e824ec1fe61e0
+SHA1 (patch-erts_configure) = 614bfdc28c7dea8a34a3ae4e00ac976fa83e81e2
+SHA1 (patch-lib_runtime__tools_c__src_Makefile.in) = b7fe63a8d07612464034303cf41d97e1ea701883
