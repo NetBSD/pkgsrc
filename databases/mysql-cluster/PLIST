@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/02/09 06:46:55 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/19 09:28:49 jperkin Exp $
 bin/innochecksum
 bin/mcc_config.py
 bin/memclient
@@ -71,7 +71,7 @@ bin/resolveip
 include/mysql/big_endian.h
 include/mysql/byte_order_generic.h
 include/mysql/byte_order_generic_x86.h
-include/mysql/byte_order_generic_${MACHINE_ARCH}.h
+include/mysql/byte_order_generic_x86_64.h
 include/mysql/decimal.h
 include/mysql/errmsg.h
 include/mysql/keycache.h
