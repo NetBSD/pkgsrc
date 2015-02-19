@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/12 22:48:02 snj Exp $
+$NetBSD: distinfo,v 1.2 2015/02/19 21:56:27 wiz Exp $
 
 SHA1 (abba19584636c28cd98e3810e857f493cb63d06c.zip) = cdfef679f7b428a7cd4986e7b0f8e47965186130
 RMD160 (abba19584636c28cd98e3810e857f493cb63d06c.zip) = b70ad1a8e826c959b58eba36e73df9932104b139
 Size (abba19584636c28cd98e3810e857f493cb63d06c.zip) = 1183630 bytes
+SHA1 (patch-CMakeLists.txt) = 9b8d3f1b774e4bc35bac281f1723670707eb2435
