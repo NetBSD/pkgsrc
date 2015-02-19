@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/10/20 18:37:49 asau Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/02/19 11:56:18 jperkin Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -3413,7 +3413,6 @@ lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/include/observer_backend.h
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/dyntrace.so
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/trace_file_drv.so
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/trace_ip_drv.so
-${PLIST.dtrace}lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/obj/dtrace_user.o
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/obj/dyntrace.o
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/src/appmon_info.erl
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/src/dbg.erl
