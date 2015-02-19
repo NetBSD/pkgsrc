@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.982 2015/02/19 15:32:11 taca Exp $
+$NetBSD: CHANGES-2015,v 1.983 2015/02/19 18:47:37 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1430,3 +1430,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed www/typo3_47 [taca 2015-02-19]
 	Removed www/typo3_60 [taca 2015-02-19]
 	Removed www/typo3_61 [taca 2015-02-19]
+	Updated textproc/urlview to 0.9nb5 [snj 2015-02-19]
