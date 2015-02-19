@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2014/06/12 15:36:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.38 2015/02/19 14:45:03 taca Exp $
 #
 
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -58,7 +58,7 @@ DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 
 .if (!exists(/usr/bin/dig) && !exists(/usr/sbin/dig)) || \
     (!exists(/usr/bin/nslookup) && !exists(/usr/sbin/nslookup))
-DEPENDS+=	bind-[0-9]*:../../net/bind96
+DEPENDS+=	bind-[0-9]*:../../net/bind910
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
