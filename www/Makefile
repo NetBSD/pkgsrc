@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1087 2015/02/07 15:00:53 taca Exp $
+# $NetBSD: Makefile,v 1.1088 2015/02/19 15:21:57 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -770,6 +770,7 @@ SUBDIR+=	typo3_45
 SUBDIR+=	typo3_47
 SUBDIR+=	typo3_60
 SUBDIR+=	typo3_61
+SUBDIR+=	typo3_62
 SUBDIR+=	urlget
 SUBDIR+=	urlgrabber
 SUBDIR+=	varnish
