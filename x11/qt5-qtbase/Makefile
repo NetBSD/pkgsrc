@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/01/01 21:05:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/02/19 14:26:21 joerg Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -41,7 +41,8 @@ OPSYSVARS+=		CONFIGURE_ARGS
 .if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	-iconv
 QMAKE_CONF=		qmake.conf
-.  if ${OPSYS} != "SunOS"
+.  if ${OPSYS} != "SunOS" && \
+      (!empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64))
 CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else
