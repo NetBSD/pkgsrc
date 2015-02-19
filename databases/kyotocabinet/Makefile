@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/11/21 11:29:52 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/19 14:09:32 joerg Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.76
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://fallabs.com/kyotocabinet/pkg/
 

@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2014/11/21 11:29:52 obache Exp $
+$NetBSD: patch-configure,v 1.2 2015/02/19 14:09:32 joerg Exp $
 
 * prevent unwated overwrite variables
+* don't use cpu-specific instructions
 
 --- configure.orig	2012-05-24 11:31:45.000000000 +0000
 +++ configure
@@ -34,10 +35,11 @@ $NetBSD: patch-configure,v 1.1 2014/11/21 11:29:52 obache Exp $
  export PATH CPATH LIBRARY_PATH LD_LIBRARY_PATH PKG_CONFIG_PATH
  
  
-@@ -3977,15 +3974,6 @@ $as_echo "#define AC_APPLE_UNIVERSAL_BUI
+@@ -3976,28 +3973,6 @@ $as_echo "#define AC_APPLE_UNIVERSAL_BUI
+  esac
  
  
- # System-depending optimization
+-# System-depending optimization
 -printf 'checking for 64-bit availability... '
 -if printf 'main() {}' | $CC -xc -m64 -o config.tmp - >config.tmp 2>&1
 -then
@@ -47,6 +49,18 @@ $NetBSD: patch-configure,v 1.1 2014/11/21 11:29:52 obache Exp $
 -else
 -  printf 'no\n'
 -fi
- if test "$enable_opt" != "no"
- then
-   printf 'checking for CPU optimization availability... '
+-if test "$enable_opt" != "no"
+-then
+-  printf 'checking for CPU optimization availability... '
+-  if printf 'main() {}' | $CC -xc -march=native -o config.tmp - >config.tmp 2>&1
+-  then
+-    MYCFLAGS="-march=native $MYCFLAGS"
+-    MYCXXFLAGS="-march=native $MYCXXFLAGS"
+-    printf 'yes\n'
+-  else
+-    printf 'no\n'
+-  fi
+-fi
+ printf 'checking for useless warnings... '
+ if printf 'main() {}' | $CC -xc \
+   -Wno-unused-but-set-variable -Wno-unused-but-set-parameter -o config.tmp - >config.tmp 2>&1
