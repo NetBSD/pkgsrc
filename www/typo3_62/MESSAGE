@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/02/19 15:21:18 taca Exp $
+
+1. Set up typo3; Add below line in your httpd.conf.
+
+	Alias	/typo3	${PREFIX}/${TYPO3DIR}/${SITEDIR}
+
+   Or set DocumentRoot to ${PREFIX}/${TYPO3DIR}/${SITEDIR}.
+
+2. First, enable TYPO3 installer.
+
+    	# cp /dev/null ${PREFIX}/${TYPO3DIR}/${SITEDIR}/FIRST_INSTALL
+
+3. Access typo3 site.  You will be redirected to installer.
+
+===========================================================================

@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1 2015/02/19 15:21:18 taca Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	cd "${PREFIX}/@TYPO3DIR@/@SITEDIR@" && (
+		${LN} -s "../@TYPO3NAME@" typo3_src
+		${LN} -s typo3_src/index.php typo3_src/typo3 .
+	)
+	;;
+esac

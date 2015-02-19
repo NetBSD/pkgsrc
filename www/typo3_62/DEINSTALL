@@ -1,0 +1,14 @@
+# $NetBSD: DEINSTALL,v 1.1 2015/02/19 15:21:18 taca Exp $
+
+#TYPOTEMP="${PREFIX}/@TYPO3DIR@/@SITEDIR@/typo3temp"
+
+case ${STAGE} in
+DEINSTALL)
+	cd "${PREFIX}/@TYPO3DIR@/@SITEDIR@" && (
+		${RM} -f index.php typo3 typo3_src
+	)
+	;;
+POST-DEINSTALL)
+#	${RM} -fr ${TYPOTEMP}
+	;;
+esac
