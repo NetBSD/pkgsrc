@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2009/02/12 15:24:14 he Exp $
+$NetBSD: patch-aa,v 1.2 2015/02/19 22:26:22 joerg Exp $
 
---- libsee/dtoa_config.h.orig	2007-09-14 00:01:42.000000000 +0200
+--- libsee/dtoa_config.h.orig	2007-09-13 22:01:42.000000000 +0000
 +++ libsee/dtoa_config.h
-@@ -16,7 +16,7 @@
+@@ -16,10 +16,19 @@
  #   define IEEE_8087
  #endif
  
@@ -11,3 +11,15 @@ $NetBSD: patch-aa,v 1.1 2009/02/12 15:24:14 he Exp $
  #   define IEEE_MC68k 
  #endif
  
++#if defined(__arm__)
++#  include <sys/endian.h>
++#  if BYTE_ORDER == BIG_ENDIAN
++#  define IEEE_MC68k
++#  else
++#  define IEEE_8087
++#  endif
++#endif
++
+ #if defined(__vax__) && !defined(VAX)
+ #   define VAX
+ #endif
