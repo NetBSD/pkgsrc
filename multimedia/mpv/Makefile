@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2015/02/01 18:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/19 09:16:15 wiz Exp $
 
-DISTNAME=	mpv-0.7.3
+DISTNAME=	mpv-0.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	-https://github.com/mpv-player/mpv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://mpv.io/
 COMMENT=	Video player based on MPlayer and mplayer2
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
-BUILD_DEPENDS+=	waf>=1.8:../../devel/waf
+BUILD_DEPENDS+=	waf>=1.8.4:../../devel/waf
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
