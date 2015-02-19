@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2015/01/06 17:45:46 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2015/02/19 14:18:52 wiz Exp $
 
 Caution: the extra cpp checking (the three hunks containing "Should be
 one line") is manually hacked and not reflected in configure.in; do
@@ -10,7 +10,7 @@ started doing regrettable things with backslash-escaped newlines.
   results syntax error. Use -traditional-cpp for Makefile generation only.
 
 --- configure.orig	2003-03-18 09:19:12.000000000 -0500
-+++ configure	2015-01-05 04:09:09.000000000 -0500
++++ configure	2015-02-16 21:19:13.000000000 -0500
 @@ -821,10 +821,18 @@ case "${canonical}" in
        powerpc-*-netbsd*) machine=macppc ;;
        sparc*-*-netbsd*)	machine=sparc ;;
@@ -152,7 +152,7 @@ started doing regrettable things with backslash-escaped newlines.
  ; return 0; }
  EOF
  if { (eval echo configure:5607: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-@@ -9124,6 +9148,22 @@ EOF
+@@ -9124,6 +9148,60 @@ EOF
  fi
  
  
@@ -172,10 +172,48 @@ started doing regrettable things with backslash-escaped newlines.
 +  fi
 +fi
 +
++# XXX: handcoded test for ptyfs
++echo $ac_n "checking for ptyfs""... $ac_c" 1>&6
++echo "configure:9095: checking for ptyfs" >&5
++cat > conftest.$ac_ext <<EOF
++#include "confdefs.h"
++#include <stdlib.h>
++#include <fcntl.h>
++
++int
++main(void)
++{
++	int fd;
++
++	fd = posix_openpt(O_RDWR);
++	if (fd == -1)
++		return 1;
++	close(fd);
++	return 0;
++}
++EOF
++if { (eval echo configure:9185: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
++then
++  ac_cv_have_ptyfs=yes
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -fr conftest*
++  ac_cv_have_ptyfs=no
++fi
++rm -fr conftest*
++
++echo "$ac_t""$ac_cv_have_ptyfs" 1>&6
++if test $ac_cv_have_ptyfs = yes; then
++  cat >> confdefs.h <<\EOF
++#define HAVE_PTYFS 1
++EOF
++fi
++
  # Set up the CFLAGS for real compilation, so we can substitute it.
  CFLAGS="$REAL_CFLAGS"
  CPPFLAGS="$REAL_CPPFLAGS"
-@@ -9735,7 +9777,7 @@ echo creating lib-src/Makefile
+@@ -9735,7 +9813,7 @@ echo creating lib-src/Makefile
    sed -e '1,/start of cpp stuff/d'\
        -e 's,/\*\*/#\(.*\)$,/* \1 */,' \
        < Makefile.c > junk.c
@@ -184,7 +222,7 @@ started doing regrettable things with backslash-escaped newlines.
        sed -e 's/^ /	/' -e '/^#/d' -e '/^[ 	]*$/d' > junk2.c
    cat junk1.c junk2.c > Makefile.new
    rm -f junk.c junk1.c junk2.c
-@@ -9751,7 +9793,7 @@ echo creating src/Makefile
+@@ -9751,7 +9829,7 @@ echo creating src/Makefile
    sed -e '1,/start of cpp stuff/d'\
        -e 's,/\*\*/#\(.*\)$,/* \1 */,' \
        < Makefile.c > junk.c
