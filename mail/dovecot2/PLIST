@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2014/11/02 07:34:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.38 2015/02/19 09:48:27 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -504,6 +504,7 @@ libexec/dovecot/script
 libexec/dovecot/script-login
 libexec/dovecot/ssl-params
 libexec/dovecot/stats
+${PLIST.tcpwrappers}libexec/dovecot/tcpwrap
 libexec/dovecot/xml2text
 man/man1/deliver.1
 man/man1/doveadm-acl.1
