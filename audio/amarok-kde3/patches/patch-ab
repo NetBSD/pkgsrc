@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/02/16 08:59:13 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2015/02/19 22:22:36 joerg Exp $
 
---- configure.orig	2007-06-17 19:52:02.000000000 +0000
+--- configure.orig	2008-08-13 21:22:07.000000000 +0000
 +++ configure
-@@ -37060,7 +37060,7 @@ if test "${ac_cv_lib_tunepimp_tr_GetPUID
+@@ -37268,7 +37268,7 @@ if test "${ac_cv_lib_tunepimp_tr_GetPUID
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +11,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/02/16 08:59:13 wiz Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -37579,7 +37579,7 @@ if test "${ac_cv_lib_konqsidebarplugin__
+@@ -37781,13 +37781,13 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
+ 	;;
+      esac
+-     { echo "$as_me:$LINENO: checking for _init in -lkonqsidebarplugin" >&5
+-echo $ECHO_N "checking for _init in -lkonqsidebarplugin... $ECHO_C" >&6; }
++     { echo "$as_me:$LINENO: checking for _ZN17KonqSidebarPluginD0Ev in -lkonqsidebarplugin" >&5
++echo $ECHO_N "checking for _ZN17KonqSidebarPluginD0Ev in -lkonqsidebarplugin... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_konqsidebarplugin__init+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -20,3 +28,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/02/16 08:59:13 wiz Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
+@@ -37801,11 +37801,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char _init ();
++char _ZN17KonqSidebarPluginD0Ev();
+ int
+ main ()
+ {
+-return _init ();
++return _ZN17KonqSidebarPluginD0Ev ();
+   ;
+   return 0;
+ }
