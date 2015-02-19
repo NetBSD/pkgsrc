@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2014/12/19 20:45:52 tron Exp $
+$NetBSD: distinfo,v 1.82 2015/02/19 10:50:44 jperkin Exp $
 
 SHA1 (mutt-1.5.23.tar.gz) = 8ac821d8b1e25504a31bf5fda9c08d93a4acc862
 RMD160 (mutt-1.5.23.tar.gz) = 2476a9e202ab1cd20a512253246e37538e0aad5a
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = 857799206db0784672ad9042799eb12703711a31
 SHA1 (patch-ac) = 40d119b7efed1a4622c42badc9ee97349b504044
 SHA1 (patch-ad) = ecfa994c7c5e494b6eb7356327b96de6559146fc
 SHA1 (patch-ae) = 6534848a4c27d4a3830edd8d4e19d1181fe396d6
-SHA1 (patch-af) = 97b02bba89eed5c9b148664d96b6d665b3e6cb48
+SHA1 (patch-af) = edc107c535789919ba2cda5f81a4b640b6100b91
 SHA1 (patch-ag) = 6633e7485c948433f9122a649fdf3a548197eced
 SHA1 (patch-ah) = dfe747c30a44bb309cccaca1bd5174fccc3c2bed
 SHA1 (patch-al) = 49542905cde263b8d4c79f71cce3759024c804a3
@@ -17,3 +17,4 @@ SHA1 (patch-an) = b9cc3e957bb1650c8e22c0edf0ce112f769664a1
 SHA1 (patch-ao) = a5dddb01d30f28337ca825c6461139c2d9f288d5
 SHA1 (patch-ap) = c6f79d5c4e19efdc15e9d5a59934da52b16b7a62
 SHA1 (patch-aq) = e363d8929ced9731a31af1137b111d3476a3d05d
+SHA1 (patch-sendlib.c) = 0c14236d28f55eae88aea409acc5b8cdcb241556
