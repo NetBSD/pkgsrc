@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/02/19 22:29:18 joerg Exp $
 
 SHA1 (qtdeclarative-opensource-src-5.4.0.tar.xz) = 12c12d50c71cfb1f18c7fabfabe4ad4b364b09fe
 RMD160 (qtdeclarative-opensource-src-5.4.0.tar.xz) = b2c19c9bf472f375d78358b11042823964b42774
 Size (qtdeclarative-opensource-src-5.4.0.tar.xz) = 18401844 bytes
 SHA1 (patch-examples_quick_customitems_painteditem_painteditem.pro) = a3881ee92daae30130fa665c8686f2e1572ecc1a
+SHA1 (patch-src_3rdparty_masm_assembler_ARMAssembler.h) = fbcbe9e0fd3514d95f54a858223b20bb34f52bb2
+SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 505b2a585a7ed98e63403a3cc44d839a4f80c01d
 SHA1 (patch-src_3rdparty_masm_wtf_MathExtras.h) = 4b86cfe54867a376ea6267e53566e457b577de7b
 SHA1 (patch-src_qml_jsruntime_qv4engine.cpp) = 05c365003ae8e83a34b3a51ecb3164f55b8e8809
 SHA1 (patch-src_qml_jsruntime_qv4globalobject.cpp) = 814b0caf6356d687e96e7e4f1ffcc85e64c86348
