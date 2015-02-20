@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2013/12/14 08:26:30 dholland Exp $
+$NetBSD: patch-aa,v 1.4 2015/02/20 23:39:31 joerg Exp $
 
 - Add an extra arg to compile-hs so we can control whether -i is passed.
 This is needed for building wxcore but not wx.
@@ -13,7 +13,7 @@ happy importing wxcore interfaces while building wx.
 - Add X11BASE to the include path.
 
 --- makefile.orig	2005-04-29 09:31:37.000000000 +0000
-+++ makefile	2013-12-14 04:26:08.000000000 +0000
++++ makefile
 @@ -424,7 +424,7 @@ $(WXD-EXE): $(WXD-OBJS)
  
  # create an object file from source files.
@@ -60,7 +60,16 @@ happy importing wxcore interfaces while building wx.
  WXC-DEPS	=$(call make-deps, $(WXC-OUTDIR), $(WXC-SOURCES))
  WXC-LIBS	=$(WXWIN-LIBS)
 -WXC-CXXFLAGS	=$(WXWIN-CXXFLAGS) -I$(WXC-INCDIR)
-+WXC-CXXFLAGS	=$(WXWIN-CXXFLAGS) -I$(WXC-INCDIR) -I$(X11BASE)/include
++WXC-CXXFLAGS	=$(WXWIN-CXXFLAGS) -I$(WXC-INCDIR) -I$(X11BASE)/include -fPIC
  
  
  wxc: wxc-dirs $(WXC-LIB)
+@@ -711,7 +712,7 @@ endif
+ 
+ # dynamic link library on unix: generates single .so file
+ $(basename $(WXC-LIB)).so: $(WXC-OBJS)
+-	$(CXX) -shared -o $@ $^ $(WXC-LIBS) -Wl --soname=$(SHARED-PREFIX)$(notdir $@)
++	$(CXX) -shared -o $@ $^ $(WXC-LIBS) -Wl,--soname=$(SHARED-PREFIX)$(notdir $@)
+ 
+ # dynamic link library on macOSX: generates single .so file
+ $(basename $(WXC-LIB)).dylib: $(WXC-OBJS)
