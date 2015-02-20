@@ -1,16 +1,18 @@
-$NetBSD: patch-aa,v 1.10 2013/10/11 13:32:25 fhajny Exp $
+$NetBSD: patch-aa,v 1.11 2015/02/20 21:06:52 fhajny Exp $
 
 Fix locations; don't mess with ownership.
---- Makefile.in.orig	2013-09-27 09:19:22.000000000 +0000
+--- Makefile.in.orig	2015-02-11 23:14:57.000000000 +0000
 +++ Makefile.in
-@@ -9,13 +9,13 @@ exec_prefix = @exec_prefix@
+@@ -9,7 +9,7 @@ exec_prefix = @exec_prefix@
  DESTDIR =
  
  # /etc/ejabberd/
 -ETCDIR = $(DESTDIR)@sysconfdir@/ejabberd
 +ETCDIR = $(DESTDIR)@prefix@/share/examples/ejabberd
  
- # /sbin/
+ # /bin/
+ BINDIR = $(DESTDIR)@bindir@
+@@ -18,7 +18,7 @@ BINDIR = $(DESTDIR)@bindir@
  SBINDIR = $(DESTDIR)@sbindir@
  
  # /lib/ejabberd/
@@ -19,7 +21,7 @@ Fix locations; don't mess with ownership.
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -41,16 +41,16 @@ SODIR = $(PRIVDIR)/lib
+@@ -44,16 +44,16 @@ SODIR = $(PRIVDIR)/lib
  MSGSDIR = $(PRIVDIR)/msgs
  
  # /var/lib/ejabberd/
@@ -39,7 +41,7 @@ Fix locations; don't mess with ownership.
  
  INSTALLUSER=@INSTALLUSER@
  # if no user was enabled, don't set privileges or ownership
-@@ -61,10 +61,10 @@ ifeq ($(INSTALLUSER),)
+@@ -64,10 +64,10 @@ ifeq ($(INSTALLUSER),)
    CHOWN_OUTPUT=/dev/null
    INIT_USER=root
  else

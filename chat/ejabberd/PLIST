@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2015/01/02 09:14:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.29 2015/02/20 21:06:52 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -205,7 +205,14 @@ lib/erlang/lib/${PKGNAME}/ebin/odbc_queries.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_cache_tab.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_fsm.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_iconv.app
-lib/erlang/lib/${PKGNAME}/ebin/p1_prof.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql.app
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql_app.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql_auth.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql_conn.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql_recv.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_mysql_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_pgsql.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_server.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_sha.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_stringprep.app
@@ -222,6 +229,12 @@ lib/erlang/lib/${PKGNAME}/ebin/p1_yaml.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_yaml_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_yaml_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_zlib.app
+lib/erlang/lib/${PKGNAME}/ebin/pgsql.beam
+lib/erlang/lib/${PKGNAME}/ebin/pgsql_app.beam
+lib/erlang/lib/${PKGNAME}/ebin/pgsql_proto.beam
+lib/erlang/lib/${PKGNAME}/ebin/pgsql_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/pgsql_tcp.beam
+lib/erlang/lib/${PKGNAME}/ebin/pgsql_util.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_db_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_index.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription.beam
@@ -252,6 +265,7 @@ lib/erlang/lib/${PKGNAME}/ebin/xml_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_gen.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_stream.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/xml_util.beam
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_codec.beam
 lib/erlang/lib/${PKGNAME}/include/ELDAPv3.hrl
 lib/erlang/lib/${PKGNAME}/include/XmppAddr.hrl
@@ -274,6 +288,7 @@ lib/erlang/lib/${PKGNAME}/include/mod_privacy.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_proxy65.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_roster.hrl
 lib/erlang/lib/${PKGNAME}/include/ns.hrl
+lib/erlang/lib/${PKGNAME}/include/p1_mysql.hrl
 lib/erlang/lib/${PKGNAME}/include/pubsub.hrl
 lib/erlang/lib/${PKGNAME}/include/stun.hrl
 lib/erlang/lib/${PKGNAME}/include/xml.hrl
