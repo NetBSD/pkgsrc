@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 15:37:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/20 01:17:49 taca Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -96,6 +96,7 @@ include/php/ext/hash/php_hash_tiger.h
 include/php/ext/hash/php_hash_whirlpool.h
 include/php/ext/libxml/php_libxml.h
 include/php/ext/mysqlnd/config-win.h
+include/php/ext/mysqlnd/mysql_float_to_double.h
 include/php/ext/mysqlnd/mysqlnd.h
 include/php/ext/mysqlnd/mysqlnd_alloc.h
 include/php/ext/mysqlnd/mysqlnd_block_alloc.h
