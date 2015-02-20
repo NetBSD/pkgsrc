@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/02/12 06:19:59 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/20 09:38:00 tnn Exp $
 
 DISTNAME=	openjdk-1.8.31-20150207
 PKGNAME=	openjdk8-1.8.31
@@ -28,6 +28,7 @@ BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootc
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	common/autoconf/configure
 CONFIG_SHELL=		bash
+CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/config.sub
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run
 UNLIMIT_RESOURCES=	datasize stacksize
@@ -61,8 +62,8 @@ MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
 BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}
-BUILD_ARCH=	${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/}
-LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/}
+BUILD_ARCH=	${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
 BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
 LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
 CONFIGURE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
@@ -157,7 +158,7 @@ ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
 
 # stage 2 rebuilds the JDK using native tools
 ${WRKDIR}/stage2-done: ${WRKDIR}/stage1_5-done
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_ENV_STAGE2} ${MAKE_PROGRAM} images
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} images
 	touch ${.TARGET}
 
 # stage 3 builds third party add-ons
