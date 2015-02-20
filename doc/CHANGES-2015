@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.987 2015/02/20 12:55:35 wen Exp $
+$NetBSD: CHANGES-2015,v 1.988 2015/02/20 14:28:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1435,3 +1435,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Getopt-Long to 2.44 [wen 2015-02-20]
 	Updated www/p5-Mojolicious to 5.80 [wen 2015-02-20]
 	Updated math/p5-Test-Number-Delta to 1.06 [wen 2015-02-20]
+	Updated net/p5-IP-Country to 2.28 [mef 2015-02-20]
+	Updated net/p5-Geo-IPfree to 1.143630 [mef 2015-02-20]
+	Updated net/p5-Net to 3.05 [mef 2015-02-20]
+	Updated databases/p5-DBD-Mock to 1.45 [mef 2015-02-20]
+	Updated net/p5-Net-Amazon-S3 to 0.60 [mef 2015-02-20]
