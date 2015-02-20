@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/01 12:47:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/02/20 12:08:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/taglib_aiff.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_base.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_flac.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_id3v1.${RUBY_DLEXT}
@@ -8,6 +9,7 @@ ${GEM_EXTSDIR}/taglib_mp4.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_mpeg.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_ogg.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_vorbis.${RUBY_DLEXT}
+${GEM_EXTSDIR}/taglib_wav.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
