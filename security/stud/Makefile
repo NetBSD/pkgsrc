@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/09/23 14:26:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/20 09:32:07 fhajny Exp $
 #
 
 PKGNAME=	stud-0.3p53
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://github.com/bumptech/stud
