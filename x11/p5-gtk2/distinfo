@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2014/01/27 04:28:23 obache Exp $
+$NetBSD: distinfo,v 1.17 2015/02/20 14:52:34 wiz Exp $
 
 SHA1 (Gtk2-1.249.tar.gz) = e7e78aa3ebae975b1a8aaf35ef4d35b16aa84d38
 RMD160 (Gtk2-1.249.tar.gz) = 6a4ebb0430f20eb9f883ef718cf204baa05a76bc
 Size (Gtk2-1.249.tar.gz) = 742086 bytes
+SHA1 (patch-xs_GdkDisplay.xs) = c3693b3624a62d9d4a5ee53fc1ace829642bcc4c
