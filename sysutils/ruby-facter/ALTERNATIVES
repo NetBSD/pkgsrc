@@ -1,0 +1,1 @@
+bin/facter @PREFIX@/bin/bin/facter@RUBY_SUFFIX@
