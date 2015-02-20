@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2015/02/17 09:29:17 pho Exp $
+# $NetBSD: Makefile,v 1.19 2015/02/20 19:10:29 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-7.6.3-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -67,8 +67,14 @@ CONFIGURE_ENV+= \
 .for stage in 0 1 2
 CONFIGURE_ENV+= \
 	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:Q} \
-	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:Q} \
-	CONF_LD_LINKER_OPTS_STAGE${stage}=${LDFLAGS:Q}
+	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:Q}
+# Note that CONF_LD_LINKER_OPTS_STAGE{0,1,2} are only used for
+# creating static GHCi libraries (HS*.o). Setting them to ${LDFLAGS}
+# does more harm than good because our ${LDFLAGS} contains -Wl,*
+# flags. It's true that ../../mk/wrapper/cmd-sink-ld transforms them
+# but those flags will also be baked into the compiler (see
+# ${WRKSRC}/compiler/ghc.mk) so they cause problems when used outside
+# the buildlink.
 .endfor
 
 
