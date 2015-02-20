@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.24 2015/02/19 21:05:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.25 2015/02/20 20:19:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -81,3 +81,9 @@ Pullup ticket #4622 - requested by taca
 net/bind910: security update
 Pullup ticket #4624 - requested by taca
 graphics/jasper: security patch
+Pullup ticket #4619 - requested by taca
+sysutils/ruby-facter: security update
+Pullup ticket #4620 - requested by taca
+lang/ruby18-base: security patch
+Pullup ticket #4626 - requested by tnn
+devel/patch: build fix
