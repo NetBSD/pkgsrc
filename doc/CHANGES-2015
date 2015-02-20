@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.985 2015/02/20 10:12:18 wen Exp $
+$NetBSD: CHANGES-2015,v 1.986 2015/02/20 12:50:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1433,3 +1433,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/urlview to 0.9nb5 [snj 2015-02-19]
 	Updated lang/php56 to 5.6.6 [taca 2015-02-20]
 	Updated devel/p5-Getopt-Long to 2.44 [wen 2015-02-20]
+	Updated www/p5-Mojolicious to 5.80 [wen 2015-02-20]
