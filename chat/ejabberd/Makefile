@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2015/01/02 09:14:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.49 2015/02/20 21:06:52 fhajny Exp $
 
-DISTNAME=	ejabberd-14.12
+DISTNAME=	ejabberd-15.02
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -25,17 +25,14 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-json
 CONFIGURE_ARGS+=	--enable-lager
+CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-nif
-CONFIGURE_ARGS+=	--enable-stun
-CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
-CONFIGURE_ARGS+=	--enable-zlib
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-
-.include "../../lang/erlang/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.erlang:Miodbc) || \
-    !empty(PKG_BUILD_OPTIONS.erlang:Munixodbc)
 CONFIGURE_ARGS+=	--enable-odbc
-.endif
+CONFIGURE_ARGS+=	--enable-pgsql
+CONFIGURE_ARGS+=	--enable-zlib
+
+CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 RCD_SCRIPTS=		ejabberd
 
@@ -91,7 +88,6 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Makefile.in
 SUBST_FILES.paths+=	ejabberd.yml.example
 SUBST_FILES.paths+=	ejabberdctl.template
-SUBST_FILES.paths+=	doc/guide.tex
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
@@ -105,9 +101,6 @@ fetch-deps:
 
 post-extract:
 	${LN} -s ${WRKDIR}/deps ${WRKSRC}/
-
-post-patch:
-	${RM} -f ${WRKSRC}/doc/guide.tex.orig
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dev.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
