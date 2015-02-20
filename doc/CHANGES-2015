@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.991 2015/02/20 15:44:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.992 2015/02/20 19:11:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-CIDR-Set to 0.13 [mef 2015-02-20]
 	Updated net/p5-Net-FTPSSL to 0.26 [mef 2015-02-20]
 	Updated net/p5-Net-Frame to 1.15 [mef 2015-02-20]
+	Updated lang/ghc7 to 7.6.3nb6 [admin 2015-02-20]
