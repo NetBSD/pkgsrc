@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/02/13 22:36:00 he Exp $
+# $NetBSD: Makefile,v 1.14 2015/02/20 22:26:13 joerg Exp $
 
 VERSION=	4.0.4.28
 DISTNAME=	tacacs-F${VERSION}
 PKGNAME=	tacacs-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES+=	ftp://ftp.shrubbery.net/pub/tac_plus/
 
@@ -11,9 +12,11 @@ HOMEPAGE=	http://www.shrubbery.net/tac_plus/
 COMMENT=	Cisco authentication, authorization, and accounting protocol daemon
 LICENSE=	cisco-license
 
+MAKE_JOBS_SAFE=	no
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl bison
 
 #CONFIGURE_ARGS+=--enable-debug
 
@@ -23,6 +26,5 @@ MAKE_FLAGS+=	OS=-DSOLARIS OSLIBS="-lsocket -lnsl"
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
-INSTALLATION_DIRS+=	share/doc/tacacs/users_guide
 
 .include "../../mk/bsd.pkg.mk"

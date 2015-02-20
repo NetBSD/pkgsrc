@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:44 joerg Exp $
-sbin/tac_plus
+@comment $NetBSD: PLIST,v 1.3 2015/02/20 22:26:13 joerg Exp $
+bin/tac_pwd
+include/tacacs.h
+lib/libtacacs.la
+man/man5/tac_plus.conf.5
 man/man8/tac_plus.8
-share/doc/tacacs/users_guide
+man/man8/tac_pwd.8
+sbin/tac_plus
+share/tacacs/do_auth.py
+share/tacacs/tac_convert
+share/tacacs/users_guide
