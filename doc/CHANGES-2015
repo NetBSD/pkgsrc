@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.996 2015/02/21 09:09:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.997 2015/02/21 09:11:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1448,3 +1448,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/ejabberd to 15.02 [fhajny 2015-02-20]
 	Updated games/MyGoGrinder to 2.3.0 [wiz 2015-02-21]
 	Updated security/gnupg2 to 2.0.27 [wiz 2015-02-21]
+	Updated textproc/libunistring to 0.9.5 [wiz 2015-02-21]
