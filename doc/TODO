@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14144 2015/02/20 13:19:20 taca Exp $
+$NetBSD: TODO,v 1.14145 2015/02/21 09:02:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcombust-0.1.55
 	o gcompris-14.05
 	o gdb-7.6 [wip]
-	o gdb-7.8.2
+	o gdb-7.9
 	o gdeskcal-1.01
 	o gdl-3.14.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -624,6 +624,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnupg2-2.0.27
 	o gnustep-back-0.24.0
 	o gnustep-base-1.24.7
 	o gnustep-examples-1.4.0
@@ -750,7 +751,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
 	o libthrift-0.8.0
-	o libtool-2.4.5
+	o libtool-2.4.6
+	o libunistring-0.9.5
 	o libusb-1.0.19
 	o libuv-1.0.1 [pkg/49442]
 	o libv4l-0.8.5
@@ -806,6 +808,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mousetweaks-3.12.0 [wip]
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
+	o mpcomplex-1.0.3
 	o mpeg4ip-1.6.1
 	o mpop-1.0.29
 	o mserv-devel-0.41
