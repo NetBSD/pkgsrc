@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/02/23 15:32:10 adam Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/21 09:16:37 wiz Exp $
 
-DISTNAME=	mpc-1.0.2
+DISTNAME=	mpc-1.0.3
 PKGNAME=	${DISTNAME:S/mpc/mpcomplex/}
 CATEGORIES=	math
 MASTER_SITES=	http://www.multiprecision.org/mpc/download/ \
