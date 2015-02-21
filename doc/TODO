@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14146 2015/02/21 09:09:01 wiz Exp $
+$NetBSD: TODO,v 1.14147 2015/02/21 09:11:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -751,7 +751,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtcl-nothread-8.5.1
 	o libthrift-0.8.0
 	o libtool-2.4.6
-	o libunistring-0.9.5
 	o libusb-1.0.19
 	o libuv-1.0.1 [pkg/49442]
 	o libv4l-0.8.5
