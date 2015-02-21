@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/25 09:27:07 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2015/02/21 09:47:01 mef Exp $
 
-SHA1 (Net-Frame-Dump-1.09.tar.gz) = 31866caabbdab6119ae18e163fbcb4ed7f8988d1
-RMD160 (Net-Frame-Dump-1.09.tar.gz) = b7f0b91aed489c40bee5834199ef0aabec491c2a
-Size (Net-Frame-Dump-1.09.tar.gz) = 12718 bytes
+SHA1 (Net-Frame-Dump-1.14.tar.gz) = 897b7136c9065cf19b4f3b6a852b5b40a6925996
+RMD160 (Net-Frame-Dump-1.14.tar.gz) = 918d8954f7e073f63d7121827e07ee360b233da4
+Size (Net-Frame-Dump-1.14.tar.gz) = 19178 bytes
