@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.9 2014/05/03 21:31:10 ryoon Exp $
+# $NetBSD: xorg.libxcb,v 1.10 2015/02/21 16:51:11 jmcneill Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -283,6 +283,7 @@ lib/pkgconfig/xcb-xevie.pc
 lib/pkgconfig/xcb-xf86dri.pc
 lib/pkgconfig/xcb-xfixes.pc
 lib/pkgconfig/xcb-xinerama.pc
+lib/pkgconfig/xcb-xkb.pc
 lib/pkgconfig/xcb-xprint.pc
 lib/pkgconfig/xcb-xtest.pc
 lib/pkgconfig/xcb-xv.pc
