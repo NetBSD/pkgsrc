@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/02/21 00:12:26 joerg Exp $
 
 DISTNAME=	libmpeg2-0.5.1
 PKGNAME=	libmpeg2-0.5.1
@@ -15,6 +15,9 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libmpeg2/convert/libmpeg2convert.pc.in
 PKGCONFIG_OVERRIDE+=	libmpeg2/libmpeg2.pc.in
+
+CONFIG_GUESS_OVERRIDE+=	.auto/config.guess
+CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--disable-sdl
