@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/12/11 15:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/21 08:10:13 wiz Exp $
 
-DISTNAME=	MyGoGrinder-2.2.0
+DISTNAME=	MyGoGrinder-2.3.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mygogrinder/}
 EXTRACT_SUFX=	.zip
@@ -29,8 +29,8 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/MyGoGrinder.sh ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/*.ico ${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKSRC}/*.png ${DESTDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/icons/*.ico ${DESTDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/icons/*.png ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/Tag*.txt ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/"GNU LICENSE v.2 (1991).txt" ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
