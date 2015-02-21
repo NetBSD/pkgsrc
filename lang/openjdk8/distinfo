@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/02/21 10:13:50 tnn Exp $
+$NetBSD: distinfo,v 1.10 2015/02/21 20:24:57 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 98fdb66b429148ae3922a2f9b2db736a1708e337
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 4835c6361f66138d73f583c40df0e04a31257157
@@ -33,7 +33,7 @@ Size (openjdk7/bootstrap-jdk7u76-bin-netbsd-7-sparc64-20150212.tar.xz) = 2291411
 SHA1 (openjdk7/openjdk-1.8.31-20150207.tar.xz) = f29db4779b126c829d8385208a570c96553b88c8
 RMD160 (openjdk7/openjdk-1.8.31-20150207.tar.xz) = 09434e80bac77f6d367dbe0fe5ee051f1f12c7fe
 Size (openjdk7/openjdk-1.8.31-20150207.tar.xz) = 51853460 bytes
-SHA1 (patch-aa) = 653a22362d55de11f4fc37240a5ac945eabff8a4
+SHA1 (patch-aa) = c7ca0c2c089f6dfef2c0c5af180e686ce4c61fcf
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
 SHA1 (patch-ap) = 89114a9ee048b92d897509feb283cf9aeeac9fc5
@@ -46,7 +46,8 @@ SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_generated-configure.sh) = abfec0410c3d239a42e44d7f2619cceb02622769
 SHA1 (patch-common_autoconf_spec.gmk.in) = 0f885dd99c8199ea8f607ffbbd96b9ca74308c52
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
-SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = de9d1f2c97df16119de56abb5e900f705813e514
+SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = 6b3e2f769c754b3ee5de8c07444964414136fa81
+SHA1 (patch-hotspot_make_bsd_makefiles_gcc.make) = bb09683244c0dcd69f1b2a5d930a6b28aa5d2c3b
 SHA1 (patch-hotspot_make_bsd_makefiles_rules.make) = 4b9a92abd0a91d81b5c34b7fbc98aeaadfe06bce
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
 SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = dcd83b65a7d74e153a3e1c44f8c7980827ec20c7
