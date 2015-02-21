@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/02/20 09:38:00 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/21 09:55:47 tnn Exp $
 
 DISTNAME=	openjdk-1.8.31-20150207
 PKGNAME=	openjdk8-1.8.31
@@ -29,6 +29,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	common/autoconf/configure
 CONFIG_SHELL=		bash
 CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/config.sub
+CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/config.guess
+CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run
 UNLIMIT_RESOURCES=	datasize stacksize
