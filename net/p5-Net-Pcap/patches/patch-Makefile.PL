@@ -1,21 +1,22 @@
-$NetBSD: patch-Makefile.PL,v 1.2 2014/07/14 11:59:02 jperkin Exp $
+$NetBSD: patch-Makefile.PL,v 1.3 2015/02/21 09:43:54 mef Exp $
 
 Do not override CCFLAGS and LIBS.
 
---- Makefile.PL.orig	2007-12-23 23:06:15.000000000 +0000
-+++ Makefile.PL
-@@ -22,8 +22,8 @@ elsif ($^O eq 'cygwin') {
+--- Makefile.PL.orig	2012-11-28 08:06:02.000000000 +0900
++++ Makefile.PL	2015-02-21 18:25:18.000000000 +0900
+@@ -22,9 +22,8 @@ elsif ($^O eq 'cygwin') {
      cygwin_pcap_headers();
  }
  else {
--    $options{CCFLAGS} = '-Wall -Wwrite-strings' if $Config{ccname} eq 'gcc' and $] >= 5.006;
+-    $options{CCFLAGS} = "-Wall -Wwrite-strings"
+-        if $Config{ccname} eq "gcc" and $] >= 5.006;
 -    $options{LIBS}    = '-lpcap';
 +    $options{CCFLAGS} = "$Config{ccflags} -Wall -Wwrite-strings" if $Config{ccname} eq 'gcc' and $] >= 5.006;
 +    $options{LIBS}    = "$Config{libs} -lpcap";
  }
  
  for my $arg (@ARGV) {
-@@ -530,7 +530,7 @@ sub have_functions {
+@@ -536,7 +535,7 @@ sub have_functions {
      my @funcs = ();
      print "detecting available functions... ";
  
