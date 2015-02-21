@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/02/13 19:47:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/21 02:01:59 joerg Exp $
 
 DISTNAME=	abba19584636c28cd98e3810e857f493cb63d06c
 PKGNAME=	emulationstation-2.0.0_rc1_20150210
@@ -15,6 +15,11 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
 GCC_REQD=	4.7 # C++11
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 WRKSRC=		${WRKDIR}/EmulationStation-${DISTNAME}
 
@@ -59,6 +64,7 @@ post-install:
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
