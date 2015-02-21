@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2015/01/27 12:37:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2015/02/21 00:10:21 joerg Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE}
 NSPR_RELEASE=	4.10.8
@@ -14,6 +14,8 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+
+OVERRIDE_DIRDEPTH=	3
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBSUBDIR=nspr
