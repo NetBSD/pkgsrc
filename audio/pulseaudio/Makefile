@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2015/02/06 07:20:14 snj Exp $
+# $NetBSD: Makefile,v 1.95 2015/02/21 23:13:10 ryoon Exp $
 
-DISTNAME=	pulseaudio-5.0
-PKGREVISION=	3
+DISTNAME=	pulseaudio-6.0
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -85,7 +84,7 @@ CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
-PLIST_VARS+=		bonjour coreaudio evdev hal oss sun
+PLIST_VARS+=		bonjour coreaudio evdev oss sun
 
 .if ${OPSYS} == "SunOS"
 PLIST.sun=		yes
@@ -96,7 +95,6 @@ PLIST.oss=		yes
 PLIST.bonjour=	yes
 PLIST.coreaudio=	yes
 .else
-PLIST.hal=		yes
 PLIST.oss=		yes
 .endif
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/06/30 11:00:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/02/21 23:13:10 ryoon Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -11,12 +11,12 @@ bin/parecord
 bin/pasuspender
 ${PLIST.x11}bin/pax11publish
 bin/pulseaudio
-${PLIST.x11}bin/start-pulseaudio-kde
 ${PLIST.x11}bin/start-pulseaudio-x11
 include/pulse/cdecl.h
 include/pulse/channelmap.h
 include/pulse/context.h
 include/pulse/def.h
+include/pulse/direction.h
 include/pulse/error.h
 include/pulse/ext-device-manager.h
 include/pulse/ext-device-restore.h
@@ -232,17 +232,23 @@ man/man1/paplay.1
 man/man1/pasuspender.1
 man/man1/pax11publish.1
 man/man1/pulseaudio.1
-man/man1/start-pulseaudio-kde.1
 man/man1/start-pulseaudio-x11.1
 man/man5/default.pa.5
 man/man5/pulse-cli-syntax.5
 man/man5/pulse-client.conf.5
 man/man5/pulse-daemon.conf.5
-share/bash-completion/completions/pulseaudio-bash-completion.sh
+share/bash-completion/completions/pacat
+share/bash-completion/completions/pacmd
+share/bash-completion/completions/pactl
+share/bash-completion/completions/padsp
+share/bash-completion/completions/paplay
+share/bash-completion/completions/parec
+share/bash-completion/completions/parecord
+share/bash-completion/completions/pasuspender
+share/bash-completion/completions/pulseaudio
 share/examples/pulseaudio/client.conf
 share/examples/pulseaudio/daemon.conf
 share/examples/pulseaudio/default.pa
-${PLIST.x11}share/examples/pulseaudio/pulseaudio-kde.desktop
 share/examples/pulseaudio/pulseaudio-system.conf
 ${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 share/examples/pulseaudio/system.pa
@@ -273,16 +279,21 @@ share/locale/pl/LC_MESSAGES/pulseaudio.mo
 share/locale/pt/LC_MESSAGES/pulseaudio.mo
 share/locale/pt_BR/LC_MESSAGES/pulseaudio.mo
 share/locale/ru/LC_MESSAGES/pulseaudio.mo
+share/locale/sk/LC_MESSAGES/pulseaudio.mo
 share/locale/sr/LC_MESSAGES/pulseaudio.mo
 share/locale/sr@latin/LC_MESSAGES/pulseaudio.mo
 share/locale/sv/LC_MESSAGES/pulseaudio.mo
 share/locale/ta/LC_MESSAGES/pulseaudio.mo
 share/locale/te/LC_MESSAGES/pulseaudio.mo
+share/locale/tr/LC_MESSAGES/pulseaudio.mo
 share/locale/uk/LC_MESSAGES/pulseaudio.mo
 share/locale/zh_CN/LC_MESSAGES/pulseaudio.mo
 share/locale/zh_TW/LC_MESSAGES/pulseaudio.mo
 share/vala/vapi/libpulse-mainloop-glib.deps
 share/vala/vapi/libpulse-mainloop-glib.vapi
+share/vala/vapi/libpulse-simple.deps
+share/vala/vapi/libpulse-simple.vapi
 share/vala/vapi/libpulse.deps
 share/vala/vapi/libpulse.vapi
+share/zsh/site-functions/_pulseaudio
 @pkgdir share/examples/pulse
