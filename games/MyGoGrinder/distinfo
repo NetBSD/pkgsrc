@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/12/11 15:27:03 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/02/21 08:10:13 wiz Exp $
 
-SHA1 (MyGoGrinder-2.2.0.zip) = 61783f580a204aebd67cfd49bcd36aac0b8b9f3e
-RMD160 (MyGoGrinder-2.2.0.zip) = 1e54cbc8f55ccc83934e5164b087bff18a19d6ff
-Size (MyGoGrinder-2.2.0.zip) = 2007145 bytes
+SHA1 (MyGoGrinder-2.3.0.zip) = 98ab7fac29dee1ae497af63744c5676b21e3c687
+RMD160 (MyGoGrinder-2.3.0.zip) = cadd851602aa265ff7fb2248b06e5f90f8fce99e
+Size (MyGoGrinder-2.3.0.zip) = 2028725 bytes
