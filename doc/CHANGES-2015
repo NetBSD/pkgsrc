@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1004 2015/02/21 19:46:15 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.1005 2015/02/21 23:13:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1463,3 +1463,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/swi-prolog-lite to 6.6.6 [mef 2015-02-21]
 	Updated pkgtools/x11-links to 0.92 [jmcneill 2015-02-21]
 	Added sysutils/upower version 0.99.2 [jmcneill 2015-02-21]
+	Updated audio/pulseaudio to 6.0 [ryoon 2015-02-21]
