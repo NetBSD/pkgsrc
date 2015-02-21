@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2015/01/04 02:14:10 dholland Exp $
+# $NetBSD: Makefile,v 1.67 2015/02/21 00:09:50 joerg Exp $
 
 DISTNAME=	binutils-2.24
 PKGREVISION=	3
@@ -72,7 +72,8 @@ CFLAGS.OpenBSD+=	-Wno-bounded
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-Wno-unused-value -Wno-format-security \
 		-Wno-uninitialized -Wno-format -Wno-string-plus-int \
-		-Wno-empty-body -Wno-self-assign -Wno-unused-function
+		-Wno-empty-body -Wno-self-assign -Wno-unused-function \
+		-Wno-error=unused-const-variable
 .endif
 
 # Issue is fixed in upstream binutils, remove this when upgraded past 2.24
