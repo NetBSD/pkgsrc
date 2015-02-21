@@ -1,9 +1,22 @@
-# $NetBSD: options.mk,v 1.1 2015/02/08 08:41:25 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/21 09:36:31 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk8
-PKG_SUPPORTED_OPTIONS=		debug jre-jce jdk-zero-vm x11
+PKG_OPTIONS_OPTIONAL_GROUPS=	variant
+PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
+PKG_SUPPORTED_OPTIONS=		debug jre-jce x11
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
-.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+PKG_OPTIONS_GROUP.variant+=	jdk-zeroshark-vm
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
+PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
+#notyet
+#.elif !empty(PKGSRC_COMPILER:Mclang)
+#PKG_SUGGESTED_OPTIONS+		jdk-zeroshark-vm
+.else
 PKG_SUGGESTED_OPTIONS+=		jdk-zero-vm
 .endif
 
@@ -75,9 +88,12 @@ CONFIGURE_ARGS+=	--with-debug-level=${BUILD_DEBUG_LEVEL}
 #
 PLIST_VARS+=		native
 .if !empty(PKG_OPTIONS:Mjdk-zero-vm)
-# XXX if we have LLVM we should use zeroshark for better performance
 BUILD_VARIANT=		zero
 .include "../../devel/libffi/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mjdk-zeroshark-vm)
+BUILD_VARIANT=		zeroshark
+.include "../../devel/libffi/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
 .else
 BUILD_VARIANT=		server
 PLIST.native=		yes
