@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.999 2015/02/21 10:54:18 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.1000 2015/02/21 12:41:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1451,3 +1451,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/libunistring to 0.9.5 [wiz 2015-02-21]
 	Updated math/mpcomplex to 1.0.3 [wiz 2015-02-21]
 	Updated net/unbound to 1.5.2 [pettai 2015-02-21]
+	Updated net/p5-Net-Pcap to 0.17 [mef 2015-02-21]
+	Updated net/p5-Net-Frame-Dump to 1.14 [mef 2015-02-21]
+	Updated net/p5-Net-Frame-Simple to 1.06 [mef 2015-02-21]
+	Updated net/p5-Net-GitHub to 0.72 [mef 2015-02-21]
+	Added devel/p5-ExtUtils-MakeMaker-Coverage version 0.04 [mef 2015-02-21]
+	Updated net/p5-Net-Gnats to 0.07 [mef 2015-02-21]
+	Updated net/p5-Net-INET6Glue to 0.6.3 [mef 2015-02-21]
