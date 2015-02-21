@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/02/03 19:08:55 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2015/02/21 09:19:17 tnn Exp $
 #
 
 DISTNAME=		synergy-1.6.2
@@ -49,8 +49,10 @@ do-install:
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CXX+=	-std=c++11
-CWRAPPERS_APPEND.cxx+=	-std=c++11
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-switch -Wno-unused	\
+			-Wno-deprecated-register -Wno-tautological-compare
+CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-switch -Wno-unused	\
+			-Wno-deprecated-register -Wno-tautological-compare
 .endif
 
 # tools/cryptopp562/GNUmakefile
