@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.115 2015/02/16 11:04:16 jperkin Exp $
+# $NetBSD: sites.mk,v 1.116 2015/02/21 14:46:08 mef Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -154,8 +154,6 @@ MASTER_SITE_APACHE+=    \
 	ftp://ftp.twaren.net/Unix/Web/apache/
 
 MASTER_SITE_MYSQL+=	\
-	http://mysql.skynet.be/Downloads/ \
-	ftp://ftp.mysql.skynet.be/pub/ftp.mysql.com/Downloads/ \
 	http://mysql.mirror.kangaroot.net/Downloads/ \
 	ftp://mysql.mirror.kangaroot.net/pub/mysql/Downloads/ \
 	http://mysql.linux.cz/Downloads/ \
