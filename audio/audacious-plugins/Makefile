@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2014/11/21 22:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2015/02/21 23:35:38 ryoon Exp $
 
 DISTNAME=	audacious-plugins-3.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
