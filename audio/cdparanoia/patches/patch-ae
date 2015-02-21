@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.8 2013/12/12 16:41:32 jperkin Exp $
+$NetBSD: patch-ae,v 1.9 2015/02/21 00:09:08 joerg Exp $
 
 --- main.c.orig	2008-09-11 21:11:02.000000000 +0000
 +++ main.c
@@ -89,6 +89,19 @@ $NetBSD: patch-ae,v 1.8 2013/12/12 16:41:32 jperkin Exp $
  
  "OUTPUT SMILIES:\n"
  "  :-)   Normal operation, low/no jitter\n"
+@@ -588,10 +639,10 @@ static void callback(long inpos, int fun
+ 	    buffer[aheadposition+19]='>';
+ 	}
+    
+-	fprintf(stderr,buffer);
++	fprintf(stderr, "%s", buffer);
+        
+ 	if (logfile != NULL && function==-1) {
+-	  fprintf(logfile,buffer+1);
++	  fprintf(logfile, "%s", buffer+1);
+ 	  fprintf(logfile,"\n\n");
+ 	  fflush(logfile);
+ 	}
 @@ -606,6 +657,7 @@ static void callback(long inpos, int fun
  
  const char *optstring = "escCn:o:O:d:g:k:S:prRwafvqVQhZz::YXWBi:Tt:l::L::A";
