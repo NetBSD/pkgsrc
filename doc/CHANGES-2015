@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.994 2015/02/20 21:07:32 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.995 2015/02/21 08:10:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1446,3 +1446,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-Frame to 1.15 [mef 2015-02-20]
 	Updated lang/ghc7 to 7.6.3nb6 [pho 2015-02-20]
 	Updated chat/ejabberd to 15.02 [fhajny 2015-02-20]
+	Updated games/MyGoGrinder to 2.3.0 [wiz 2015-02-21]
