@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2015/02/08 08:41:25 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2015/02/21 20:20:03 tnn Exp $
+
+DragonFly support.
+Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 
 --- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2015-02-02 15:32:37.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
@@ -126,6 +129,15 @@ $NetBSD: patch-aa,v 1.1 2015/02/08 08:41:25 tnn Exp $
  bool Semaphore::trywait() {
    return sem_trywait(&_semaphore) == 0;
  }
+@@ -2242,7 +2274,7 @@ static void warn_fail_commit_memory(char
+ //       problem.
+ bool os::pd_commit_memory(char* addr, size_t size, bool exec) {
+   int prot = exec ? PROT_READ|PROT_WRITE|PROT_EXEC : PROT_READ|PROT_WRITE;
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+   // XXX: Work-around mmap/MAP_FIXED bug temporarily on OpenBSD
+   if (::mprotect(addr, size, prot) == 0) {
+     return true;
 @@ -2843,7 +2875,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
