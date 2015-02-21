@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2013/05/26 04:15:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2015/02/21 11:09:50 ryoon Exp $
 #
 
 DISTNAME=	open-cobol-1.1
 PKGNAME=	opencobol-1.1
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.sim-basis.de/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-cobol/}
 
 MAINTAINER=	rodo@bloerp.de
-HOMEPAGE=	http://www.sim-basis.de/
+HOMEPAGE=	https://sourceforge.net/projects/open-cobol/
 COMMENT=	Open-source COBOL compiler
 
 CONFLICTS=		opensource-cobol-[0-9]* open-cobol-ce-[0-9]*
