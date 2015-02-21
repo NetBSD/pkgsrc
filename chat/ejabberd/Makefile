@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2015/02/20 21:06:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.50 2015/02/21 11:03:53 fhajny Exp $
 
 DISTNAME=	ejabberd-15.02
 CATEGORIES=	chat
@@ -109,6 +109,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/erlang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
