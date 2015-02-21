@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/10/20 10:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/21 09:11:09 wiz Exp $
 
-DISTNAME=	libunistring-0.9.4
+DISTNAME=	libunistring-0.9.5
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/libunistring/
 
