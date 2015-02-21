@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1000 2015/02/21 12:41:13 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1001 2015/02/21 13:23:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1458,3 +1458,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-ExtUtils-MakeMaker-Coverage version 0.04 [mef 2015-02-21]
 	Updated net/p5-Net-Gnats to 0.07 [mef 2015-02-21]
 	Updated net/p5-Net-INET6Glue to 0.6.3 [mef 2015-02-21]
+	Updated lang/a60 to 0.23a [mef 2015-02-21]
+	Updated lang/a60 to 0.23a [mef 2015-02-21]
