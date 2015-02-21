@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2015/01/01 08:05:21 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2015/02/21 00:09:08 joerg Exp $
 #
 
 DISTNAME=	cdparanoia-III-10.2
 PKGNAME=	cdparanoia-3.0.10.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/cdparanoia/
 EXTRACT_SUFX=	.src.tgz
@@ -12,6 +12,9 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.xiph.org/paranoia/
 COMMENT=	CDDA reading utility with extra data verification features
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+CONFIG_GUESS_OVERRIDE=	configure.guess
+CONFIG_SUB_OVERRIDE=	configure.sub
 
 # If this is not *supportable* on other platforms, please document why here.
 BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* FreeBSD-*-* DragonFly-*-*
