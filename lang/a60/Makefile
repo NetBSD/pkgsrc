@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2014/01/02 04:09:11 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2015/02/21 13:07:02 mef Exp $
 
-DISTNAME=	a60-0.20a
-PKGREVISION=	1
+DISTNAME=	a60-0.23a
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/algol60/
+MASTER_SITES=	http://www.bertnase.de/a60/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Algol 60 interpreter
+HOMEPAGE=	http://www.bertsane.de/a60/
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
