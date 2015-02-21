@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14148 2015/02/21 09:16:45 wiz Exp $
+$NetBSD: TODO,v 1.14149 2015/02/21 11:27:23 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fox-1.7.50
 	o frama-c-20140301
 	o freeciv-2.4.0
-	o freefont-20120503
 	o freenet-0.7
 	o freesci-0.6.4
 	o freeswitch-1.2.3
