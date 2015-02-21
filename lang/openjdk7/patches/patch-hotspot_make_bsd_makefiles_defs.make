@@ -1,17 +1,15 @@
-$NetBSD: patch-hotspot_make_bsd_makefiles_defs.make,v 1.3 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-hotspot_make_bsd_makefiles_defs.make,v 1.4 2015/02/21 20:21:56 tnn Exp $
 
-64-bit support.
+Fix architecture name.
 
---- hotspot/make/bsd/makefiles/defs.make.orig	2013-05-29 03:57:57.000000000 +0000
+--- hotspot/make/bsd/makefiles/defs.make.orig	2015-01-26 15:21:52.000000000 +0000
 +++ hotspot/make/bsd/makefiles/defs.make
-@@ -30,6 +30,10 @@ SLASH_JAVA ?= /java
+@@ -29,7 +29,7 @@
+ SLASH_JAVA ?= /java
  
  # Need PLATFORM (os-arch combo names) for jdk and hotspot, plus libarch name
- ARCH:=$(shell uname -m)
-+ifeq ($(ARCH),x86_64)
-+  ARCH=amd64
-+endif
-+
+-ARCH:=$(shell uname -m)
++ARCH:=$(shell uname -m | sed -e 's,x86_64,amd64,' -e 's,.*arm.*,arm,')
  PATH_SEP = :
  ifeq ($(LP64), 1)
    ARCH_DATA_MODEL ?= 64

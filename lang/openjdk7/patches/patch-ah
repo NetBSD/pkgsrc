@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.5 2013/06/23 17:39:43 jperkin Exp $
+$NetBSD: patch-ah,v 1.6 2015/02/21 20:21:56 tnn Exp $
 
 DragonFly support.
-
 Disable SunOS multiarch.
+Add ARM support.
 
---- jdk/make/common/shared/Platform.gmk.orig	2013-06-21 13:12:13.786915027 +0000
+--- jdk/make/common/shared/Platform.gmk.orig	2015-01-26 15:20:57.000000000 +0000
 +++ jdk/make/common/shared/Platform.gmk
 @@ -119,7 +119,7 @@ ifeq ($(SYSTEM_UNAME), SunOS)
      ARCH := $(shell isainfo -n)
@@ -29,7 +29,26 @@ Disable SunOS multiarch.
  ifeq ($(SYSTEM_UNAME), Darwin)
    PLATFORM = macosx
    OS_NAME = darwin
-@@ -371,9 +378,9 @@ ifeq ($(PLATFORM), bsd)
+@@ -340,6 +347,9 @@ ifeq ($(PLATFORM), bsd)
+                 "Power Macintosh") \
+                     echo ppc \
+                     ;; \
++                *arm*) \
++                    echo arm \
++                    ;; \
+                 *) \
+                     echo $(mach) \
+                     ;; \
+@@ -348,7 +358,7 @@ ifeq ($(PLATFORM), bsd)
+   ARCH_FAMILY := $(ARCH)
+ 
+   # i586, sparc, and ppc are 32 bit, amd64 and sparc64 are 64
+-  ifneq (,$(findstring $(ARCH), i586 sparc ppc))
++  ifneq (,$(findstring $(ARCH), i586 sparc ppc arm))
+     ARCH_DATA_MODEL=32
+   else
+     ARCH_DATA_MODEL=64
+@@ -371,9 +381,9 @@ ifeq ($(PLATFORM), bsd)
    REQUIRED_FREE_SPACE=1500000
    # How much RAM does this machine have:
    ifeq ($(OS_VENDOR), OpenBSD)
