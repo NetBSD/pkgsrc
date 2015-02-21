@@ -1,9 +1,22 @@
-# $NetBSD: options.mk,v 1.9 2015/02/12 06:18:17 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2015/02/21 10:44:14 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
-PKG_SUPPORTED_OPTIONS=		debug jre-jce jdk-zero-vm x11
+PKG_OPTIONS_OPTIONAL_GROUPS=	variant
+PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
+PKG_SUPPORTED_OPTIONS=		debug jre-jce x11
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
-.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+PKG_OPTIONS_GROUP.variant+=	jdk-zeroshark-vm
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
+PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
+#notyet
+#.elif !empty(PKGSRC_COMPILER:Mclang)
+#PKG_SUGGESTED_OPTIONS+=	jdk-zeroshark-vm
+.else
 PKG_SUGGESTED_OPTIONS+=		jdk-zero-vm
 .endif
 
@@ -68,15 +81,17 @@ MAKE_ENV+=		FULL_DEBUG_SYMBOLS=0
 # Build variant. Zero VM builds a portable JVM without assembly optimization.
 #
 PLIST_VARS+=		native
-.if !empty(PKG_OPTIONS:Mjdk-zero-vm)
+.if !empty(PKG_OPTIONS:Mjdk-zero-vm) || !empty(PKG_OPTIONS:Mjdk-zeroshark-vm)
 MAKE_ENV+=		ZERO_BUILD=true
- # valid are i386 / amd64 / sparc* / ppc32 / ppc64
-MAKE_ENV+=		ZERO_LIBARCH=${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/}
- # valid are IA32 / AMD64 / SPARC / PPC32 / PPC64
-MAKE_ENV+=		ZERO_ARCHDEF=${MACHINE_ARCH:S/i386/IA32/:S/x86_64/AMD64/:S/sparc64/SPARC/}
+MAKE_ENV+=		ZERO_LIBARCH=${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+MAKE_ENV+=		ZERO_ARCHDEF=${MACHINE_ARCH:S/i386/IA32/:S/x86_64/AMD64/:S/sparc64/SPARC/:C/^e?arm.*$/ARM/}
 .include "../../mk/endian.mk"
 MAKE_ENV+=		ZERO_ENDIANNESS=${MACHINE_ENDIAN}
 .include "../../devel/libffi/buildlink3.mk"
 .else
 PLIST.native=		yes
+.endif
+.if !empty(PKG_OPTIONS:Mjdk-zeroshark-vm)
+MAKE_ENV+=		SHARK_BUILD=true
+.include "../../lang/clang/buildlink3.mk"
 .endif
