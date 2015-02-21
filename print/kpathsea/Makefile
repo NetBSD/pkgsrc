@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/01/09 22:13:13 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/21 00:12:51 joerg Exp $
 
 DISTNAME=	texlive-20140525-source
 PKGNAME=	kpathsea-6.2.0
@@ -23,6 +23,9 @@ INFO_FILES=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/kpathsea
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
 
