@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14147 2015/02/21 09:11:17 wiz Exp $
+$NetBSD: TODO,v 1.14148 2015/02/21 09:16:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mousetweaks-3.12.0 [wip]
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
-	o mpcomplex-1.0.3
 	o mpeg4ip-1.6.1
 	o mpop-1.0.29
 	o mserv-devel-0.41
