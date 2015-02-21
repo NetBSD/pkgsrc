@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.10 2015/02/21 16:51:11 jmcneill Exp $
+# $NetBSD: xorg.libxcb,v 1.11 2015/02/21 17:31:44 jmcneill Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -23,6 +23,7 @@ include/xcb/xf86dri.h
 include/xcb/xfixes.h
 include/xcb/xinerama.h
 include/xcb/xinput.h
+include/xcb/xkb.h
 include/xcb/xprint.h
 include/xcb/xproto.h
 include/xcb/xselinux.h
@@ -216,6 +217,10 @@ lib/libxcb-xinerama.so.0
 lib/libxcb-xinerama.so.0.0
 lib/libxcb-xinerama.so.0.1
 lib/libxcb-xinerama.so.1.0
+lib/libxcb-xkb.a
+lib/libxcb-xkb.so
+lib/libxcb-xkb.so.0
+lib/libxcb-xkb.so.0.1
 lib/libxcb-xprint.0.0.0.dylib
 lib/libxcb-xprint.0.dylib
 lib/libxcb-xprint.dylib
