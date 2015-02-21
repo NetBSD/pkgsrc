@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/17 01:40:44 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2015/02/21 11:34:04 mef Exp $
 
-SHA1 (Net-Frame-Layer-IPv6-1.03.tar.gz) = 7bd808323c762bf3cbbfce7612addfc5d494efcf
-RMD160 (Net-Frame-Layer-IPv6-1.03.tar.gz) = 95095e25bfe03a11b33888f64ff8ff17566f3a67
-Size (Net-Frame-Layer-IPv6-1.03.tar.gz) = 7256 bytes
+SHA1 (Net-Frame-Layer-IPv6-1.07.tar.gz) = 23e5dfecc71c5c0275e34a29a37ca34440f4f2b7
+RMD160 (Net-Frame-Layer-IPv6-1.07.tar.gz) = 1dc68b1d64a5dbe037011375bab508e7727bd739
+Size (Net-Frame-Layer-IPv6-1.07.tar.gz) = 17726 bytes
