@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/08 08:41:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/21 11:00:24 tnn Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -447,7 +447,6 @@ java/openjdk8/lib/jconsole.jar
 java/openjdk8/lib/orb.idl
 ${PLIST.native}java/openjdk8/lib/sa-jdi.jar
 java/openjdk8/lib/tools.jar
-java/openjdk8/man/ja
 java/openjdk8/man/man1/appletviewer.1
 java/openjdk8/man/man1/extcheck.1
 java/openjdk8/man/man1/idlj.1
