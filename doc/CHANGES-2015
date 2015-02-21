@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.998 2015/02/21 09:16:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.999 2015/02/21 10:54:18 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnupg2 to 2.0.27 [wiz 2015-02-21]
 	Updated textproc/libunistring to 0.9.5 [wiz 2015-02-21]
 	Updated math/mpcomplex to 1.0.3 [wiz 2015-02-21]
+	Updated net/unbound to 1.5.2 [pettai 2015-02-21]
