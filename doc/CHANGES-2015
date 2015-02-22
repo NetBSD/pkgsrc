@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1006 2015/02/22 07:12:01 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1007 2015/02/22 13:14:52 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1465,3 +1465,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/upower version 0.99.2 [jmcneill 2015-02-21]
 	Updated audio/pulseaudio to 6.0 [ryoon 2015-02-21]
 	Updated devel/capstone to 3.0.1 [mef 2015-02-22]
+	Updated lang/go to 1.4.2 [mspo 2015-02-22]
+	Updated lang/go to 1.4.2 [mspo 2015-02-22]
