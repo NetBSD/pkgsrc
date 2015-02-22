@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.19 2015/02/22 17:08:17 gdt Exp $
+$NetBSD: README.MacOSX,v 1.20 2015/02/22 17:11:34 gdt Exp $
 
 * system tools issues
 
@@ -53,36 +53,6 @@ it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
 
 X11 used to be built into Mac OS X, but as of 10.8 it is no longer
 included.  Install XQuartz from http://xquartz.macosforge.org/landing/
-
-** XL compiler
-
-[The text in this section dates from 2004-10-07!  Please update it if
-you have used XL since then.]
-
-Experimental support for IBM's XL C/C++ compiler is present (tested
-with version 6.0). To use it, set:
-
-PKGSRC_COMPILER=xlc
-
-in mk.conf. XL C uses the Apple provided libtool to create shared
-libraries, however, we must force it to call libtool with the full
-path to avoid calling the pkgsrc provided GNU libtool with arguments
-that it does not understand.
-
-edit the template configuration file /opt/ibmcmp/vac/6.0/etc/vac.base.cfg
-and set:
-
-libtool = /usr/bin/libtool
-
-then run:
-
-/opt/ibmcmp/vacpp/6.0/bin/vacpp_configure -gcc /usr -install -force
-
-as root to install the configuration.
-
-to bootstrap with xlc, you need to make sure CFLAGS contains "-ma":
-
-env CC=/opt/ibmcmp/vacpp/6.0/bin/xlc CFLAGS=-ma ./bootstrap
 
 * Mac OS X Versions
 
