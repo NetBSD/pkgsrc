@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1007 2015/02/22 13:14:52 mspo Exp $
+$NetBSD: CHANGES-2015,v 1.1008 2015/02/22 14:27:25 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/capstone to 3.0.1 [mef 2015-02-22]
 	Updated lang/go to 1.4.2 [mspo 2015-02-22]
 	Updated lang/go to 1.4.2 [mspo 2015-02-22]
+	Updated security/spiped to 1.5.0 [wiedi 2015-02-22]
