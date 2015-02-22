@@ -1,21 +1,20 @@
-$NetBSD: README.MacOSX,v 1.18 2014/08/03 01:16:41 schmonz Exp $
+$NetBSD: README.MacOSX,v 1.18.4.1 2015/02/22 02:22:42 gdt Exp $
 
 * system tools issues
 
 ** gcc vs clang
 
-Older versions of Mac OS X (with XCode, of course) provided gcc, and
+Older versions of Mac OS X (when XCode is installed) provided gcc, and
 pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present.
 (In 2014Q2 and earlier, one must explicitly bootstrap with
 "--compiler=clang".)
 
 ** i386 vs x86_64 ABI issue
 
-Mac OS X Snow Leopard (10.6) through Mavericks (10.9) supports 64-bit
-binaries on most Intel Macs and build those by default on such
-machine.  This has caused problems with packages which get confused
-because "MACHINE_ARCH" is in some OS versions set to "i386" (on a
-64-bit system!).
+Mac OS X 10.6 through 10.10 supports 64-bit binaries on most Intel
+Macs and builds those by default on such machine.  This has caused
+problems with packages which get confused because "MACHINE_ARCH" is in
+some OS versions set to "i386" (on a 64-bit system!).
   version:  uname -m : uname -p
   10.6: i386 : i386
   10.9: x86_64 : i386
@@ -52,8 +51,8 @@ it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
 
 ** X11
 
-X11 used to be built into Mac OS X, but as of 10.8 it is not.
-Install XQuartz from http://xquartz.macosforge.org/landing/
+X11 used to be built into Mac OS X, but as of 10.8 it is no longer
+included.  Install XQuartz from http://xquartz.macosforge.org/landing/
 
 ** XL compiler
 
@@ -96,34 +95,33 @@ in mind that there are no guarantees:
   SUPPORTED doesn't mean that anyone is required to fix your problem; it
   means that we agree that it is broadly desireable that such problems
   be fixed and that we therefore allow them to be listed in our issue
-  tracker.
+  tracker.  Structural breakage is unacceptable.
 
   DEPRECATED means that individual problems are not of interest, but
   pkgsrc overall working is of enough interest to be allowed to be
-  listed in the issue tracker.
+  listed in the issue tracker.  Structural breakage is undesirable,
+  but a fair topic of discussion if keeping support is painful.
+  Individual pkg PRs may be bounced to authors to retest with newer
+  versions, and closed if that doesn't happen in 14 days.
 
   IGNORED means we are not willing to expend issue tracker resources
-  (clutter for those reviewing the db) at all.
+  (clutter for those reviewing the db) at all.  PRs may be summarily
+  closed.  We are also unconcerned with whether pkgsrc works on the
+  system at all.
 
 Given the above definitions, the pkgsrc developers label versions of
 Mac OS X as follows:
 
-  10.9 (13.1.0): current, PRs may be filed.  Structurally breaking
-	pkgsrc on 10.9 is considered not ok.  [SUPPORTED]
+  10.10: current. [SUPPORTED]
 
-  10.8: somewhat old, PRs may still be filed.  Structurally breaking
-	pkgsrc on 10.8 is considered not ok.  [SUPPORTED]
+  10.9 (13.1.0): somewhat old but not that crufty.  [SUPPORTED]
 
-  10.7: old, but PRs may still be filed.  Structurally breaking pkgsrc
-	on 10.7 is considered not ok. [SUPPORTED]
+  10.8: old.  [SUPPORTED]
 
-  10.6 (10.8.0): very old, and individual pkg PRs may be bounced to
-	authors to retest with newer versions, and closed if that
-	doesn't happen in 14 days.  We will for now consider
-	structurally breaking pkgsrc on 10.6 to be undesirable.  If
-	keeping support for 10.6 causes excessive work for maintainers
-	it may be moved to IGNORED state any time, without
-	warning. [DEPRECATED]
+  10.7: old.  [SUPPORTED]
+
+  10.6 (10.8.0): very old [DEPRECATED] (But note that this is the
+  Joyent i386-mode build target.)
 
   10.5 and below: ancient, and PRs will be summarily closed.  It is
 	acceptable to give zero consideration to causing structural
@@ -135,20 +133,21 @@ they might have otherwise.  (The rationale for supporting versions
 beyond the current and previous ones has been the difficulty for users
 to upgrade.)
 
-* Bulk build suggestions and issues
+* Bulk builds
 
 Clearly, it is desirable for a bulk build to be useful on as many
 computers as possible.  The main issues are which ABI and which OS X
-version.
+version.  Targetting older versions makes a build run on more systems,
+and targetting newer versions makes the build closer to what would be
+obtained from bootstrappping on a newer version and thus avoids some
+issues.
 
 ** 10.6, --abi=32
 
-jperkin@netbsd.org provides a bulk build for quarterly branches
-(--abi=32, OSX 10.6, and therefore gcc 4.2.1, XQuartz,
-X11_TYPE=native):
-  http://www.perkin.org.uk/pages/pkgsrc-binary-packages-for-osx.html
-  http://mail-index.netbsd.org/pkgsrc-bulk/2014/01/10/msg010276.html
-which should run on any version from 10.6 to 10.9.
+Joyent provide a bulk build for quarterly branches (--abi=32, OSX
+10.6, and therefore gcc 4.2.1, XQuartz, X11_TYPE=native):
+  http://pkgsrc.joyent.com/install-on-osx/
+which should run on any version from 10.6 and up.
 
 Note that sed on 10.9 is broken, but a bootstrap on 10.6 will not
 avoid it, so while one can install this bootstrap on 10.9 and run
@@ -156,7 +155,5 @@ binary packages, building packages will not in general work.
 
 ** 10.9, --abi=64 --compiler=clang
 
-Given the 10.9 license situation, a bulk build on 10.9 (and therefore
-clang) seems reasonable, with either --abi=32 or --abi=64.  Such
-builds are almost certainly only usable on 10.9, but that is or will
-be soon a large fraction of Macs.
+Joyent provide a build build for 10.9/x86_64, at the same URL as
+above.
