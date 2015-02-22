@@ -1,4 +1,31 @@
-# $NetBSD: bootstrap.mk,v 1.16 2015/02/13 10:47:40 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.17 2015/02/22 08:40:07 tnn Exp $
+#
+# This file contains a map of available binary bootstrap toolchains
+# and which kit to use for each supported platform.
+#
+# Instructions for regenerating a bootstrap kit:
+#  1) Prepare a new chroot environment in which to build the kit
+#  2) If the running kernel version is not a release, use pkgtools/libkver
+#  3) Disable the x11 PKG_OPTION in openjdk7
+#  4) "make"
+#  5) cd $(make show-var VARNAME=BUILDDIR)
+#  6) mv j2sdk-image bootstrap
+#  7) cd bootstrap; rm -r demo man release sample src.zip
+#  8) When preparing kits for NetBSD 7 and above with gcc, copy libgcc_s.so.*
+#     and libstdc++.so.* from base to bootstrap/jre/lib/${LIBDIR_ARCH}.
+#     This will ensure that MKLLVM=yes/MKGCC=no user in the future can run
+#     the bootstrap toolchain.
+#  9) tar cf - bootstrap | xz -9c > bootstrap-xxx.tar.xz
+# 10) gpg --sign -a bootstrap-xxx.tar.xz
+# 11) Upload archive and signature to ${MASTER_SITE_LOCAL:=openjdk7/}
+#
+# All binary kits from now on MUST have an accompanying PGP signature from
+# the person who prepared the kit. Unsigned binaries on ftp will be purged.
+#
+# Initial bootstrapping on a previously non-supported architecture
+# is not trivial to do with openjdk7. It is somewhat easier with openjdk8
+# which has improved cross-compile support. Note that openjdk8 cannot be used
+# for bootstrapping openjdk7 out of the box. (It is possible with hacks.)
 
 ONLY_FOR_PLATFORM=	NetBSD-[567].*-i386 NetBSD-[567].*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-7.*-sparc64
@@ -70,7 +97,7 @@ BUILDLINK_DEPMETHOD.sun-jdk7?=	build
 .include "../../lang/sun-jdk7/buildlink3.mk"
 #NB: sun-jdk7 includes sun-jre7/buildlink3.mk
 JDK_BOOTDIR=	${BUILDLINK_JAVA_PREFIX.sun-jre7:tA}
-MAKE_ENV+=		ALT_JDK_IMPORT_PATH=${JDK_BOOTDIR}
+MAKE_ENV+=	ALT_JDK_IMPORT_PATH=${JDK_BOOTDIR}
 .endif
 
 ALT_BOOTDIR=		${WRKDIR}/bootstrap
