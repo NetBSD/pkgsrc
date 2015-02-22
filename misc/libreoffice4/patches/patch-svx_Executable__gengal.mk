@@ -1,4 +1,6 @@
-$NetBSD: patch-svx_Executable__gengal.mk,v 1.1 2015/02/04 18:19:34 ryoon Exp $
+$NetBSD: patch-svx_Executable__gengal.mk,v 1.2 2015/02/22 08:15:01 ryoon Exp $
+
+https://bugs.documentfoundation.org/show_bug.cgi?id=89551
 
 --- svx/Executable_gengal.mk.orig	2015-01-22 20:05:28.000000000 +0000
 +++ svx/Executable_gengal.mk
