@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2015/02/04 18:19:34 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2015/02/22 08:15:01 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -145,13 +145,13 @@ SHA1 (libreoffice/libreoffice-translations-4.4.0.3.tar.xz) = 52f5c37256e70373396
 RMD160 (libreoffice/libreoffice-translations-4.4.0.3.tar.xz) = bec4465b905471bb8087f1bb8ac95f52811bd99b
 Size (libreoffice/libreoffice-translations-4.4.0.3.tar.xz) = 127328724 bytes
 SHA1 (patch-configure.ac) = 271be73ef8ed5e507660098a92b98eeca85bb62f
-SHA1 (patch-desktop_Library__sofficeapp.mk) = 5fde554e5723c100fe7586e87d3a6cef55208fa6
+SHA1 (patch-desktop_Library__sofficeapp.mk) = e445b1a265fadf4f83f1c40bc541c11c26860352
 SHA1 (patch-odk_CustomTarget__classes.mk) = 991896c402d1d2505e5aacec5df78439c8e9a767
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = c6fa51c74e3be0e9d4f18e1481039d44d6c3db98
 SHA1 (patch-solenv_gbuild_Deliver.mk) = 07ffb548a24edfe64fcf370423a2124c7a32cafb
 SHA1 (patch-solenv_gbuild_Module.mk) = 729f051341b21325537a7f9902e7283caa66a456
-SHA1 (patch-svx_Executable__gengal.mk) = ee206f69444300d6696829dcc63f21fe11471ec1
-SHA1 (patch-sw_Executable__tiledrendering.mk) = 7174a632db79141435d42151948a399e67391ecc
-SHA1 (patch-vcl_Executable__ui-previewer.mk) = 1d4f16ae550ef022b2d1699a3709cb113d087755
-SHA1 (patch-vcl_Executable__vcldemo.mk) = e1e2731f6ca37ef251f6bf70c7e65303cdf9b21a
-SHA1 (patch-vcl_Library__vcl.mk) = 4515f461c6819a08ed8269b7029e3a1cb7277529
+SHA1 (patch-svx_Executable__gengal.mk) = 45de03599790cabea05539b4bb9fd01098c25eb8
+SHA1 (patch-sw_Executable__tiledrendering.mk) = a1a4c520582772526d821a78e42a23e182cdfba1
+SHA1 (patch-vcl_Executable__ui-previewer.mk) = e392b3a2e53c0f46b8ba84a0b83a6bbd9421bb9b
+SHA1 (patch-vcl_Executable__vcldemo.mk) = 4530798dec71410af0c3798461bc17f5228d53c6
+SHA1 (patch-vcl_Library__vcl.mk) = bcb400be81b7ba3f572b2f22985c967ac496ce02
