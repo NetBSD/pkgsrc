@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 08:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/23 07:33:40 wiz Exp $
 
-DISTNAME=		libXp-1.0.2
+DISTNAME=		libXp-1.0.3
 CATEGORIES=		x11 print
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -29,6 +29,8 @@ XPRINT_LIBS=	-Wl,-rpath,${X11BASE}/lib -L${X11BASE}/lib -lX11 -lXext -lXau
 CONFIGURE_ARGS+=	XPRINT_CFLAGS=${XPRINT_CFLAGS:Q} \
 			XPRINT_LIBS=${XPRINT_LIBS:Q}
 .endif
+
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
