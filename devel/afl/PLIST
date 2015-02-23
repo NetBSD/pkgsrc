@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/01 19:42:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/23 07:30:25 wiz Exp $
 bin/afl-clang
 bin/afl-clang++
 bin/afl-cmin
@@ -548,19 +548,18 @@ share/afl/testcases/archives/exotic/lzip/small_archive.lz
 share/afl/testcases/archives/exotic/lzma/small_archive.lzma
 share/afl/testcases/archives/exotic/rzip/small_archive.rz
 share/afl/testcases/archives/exotic/zoo/small_archive.zoo
-share/afl/testcases/images/bmp/hello_kitty.bmp
-share/afl/testcases/images/gif/hello_kitty.gif
-share/afl/testcases/images/ico/hello_kitty.ico
-share/afl/testcases/images/jp2/hello_kitty.jp2
-share/afl/testcases/images/jpeg/hello_kitty.jpg
-share/afl/testcases/images/jxr/hello_kitty.jxr
-share/afl/testcases/images/png/hello_kitty.png
-share/afl/testcases/images/png/hello_kitty_alpha.png
-share/afl/testcases/images/png/hello_kitty_gamma.png
-share/afl/testcases/images/png/hello_kitty_icc.png
-share/afl/testcases/images/png/hello_kitty_rle.png
-share/afl/testcases/images/tiff/hello_kitty.tif
-share/afl/testcases/images/webp/hello_kitty_lossless.webp
+share/afl/testcases/images/bmp/not_kitty.bmp
+share/afl/testcases/images/gif/not_kitty.gif
+share/afl/testcases/images/ico/not_kitty.ico
+share/afl/testcases/images/jp2/not_kitty.jp2
+share/afl/testcases/images/jpeg/not_kitty.jpg
+share/afl/testcases/images/jxr/not_kitty.jxr
+share/afl/testcases/images/png/not_kitty.png
+share/afl/testcases/images/png/not_kitty_alpha.png
+share/afl/testcases/images/png/not_kitty_gamma.png
+share/afl/testcases/images/png/not_kitty_icc.png
+share/afl/testcases/images/tiff/not_kitty.tiff
+share/afl/testcases/images/webp/not_kitty.webp
 share/afl/testcases/multimedia/h264/small_movie.mp4
 share/afl/testcases/others/elf/small_exec.elf
 share/afl/testcases/others/js/small_script.js
