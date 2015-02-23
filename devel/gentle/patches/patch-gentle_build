@@ -1,0 +1,14 @@
+$NetBSD: patch-gentle_build,v 1.1 2015/02/23 18:21:09 joerg Exp $
+
+--- gentle/build.orig	2015-02-22 19:37:35.000000000 +0000
++++ gentle/build
+@@ -3,9 +3,6 @@
+ set -e
+ set -x
+ 
+-CC=cc
+-CFLAGS=
+-
+ $CC $CFLAGS -c cyfront.c
+ $CC $CFLAGS -c main.c
+ $CC $CFLAGS -c input.c
