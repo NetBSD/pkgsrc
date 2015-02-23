@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:55 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/23 18:28:51 joerg Exp $
 #
 
 DISTNAME=	zzuf-0.13
@@ -14,6 +14,8 @@ USE_LIBTOOL=	yes
 
 BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
 SHLIBTOOL_OVERRIDE=	# empty
+CONFIG_GUESS_OVERRIDE=	.auto/config.guess
+CONFIG_SUB_OVERRIDE=	.auto/config.sub
 
 SUBST_CLASSES+=		fix-paths
 SUBST_FILES.fix-paths=	doc/libzzuf.3.in
