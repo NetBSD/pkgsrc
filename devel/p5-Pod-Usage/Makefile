@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/07/15 20:38:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/23 11:19:09 wen Exp $
 #
 
-DISTNAME=	Pod-Usage-1.64
+DISTNAME=	Pod-Usage-1.66
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
