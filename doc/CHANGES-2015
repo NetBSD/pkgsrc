@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1024 2015/02/23 11:26:04 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1025 2015/02/23 11:31:34 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Dancer to 1.3134 [wen 2015-02-23]
 	Updated devel/p5-Pod-Usage to 1.66 [wen 2015-02-23]
 	Updated devel/nasm to 2.11.08 [wen 2015-02-23]
+	Updated devel/py-requests to 2.5.1 [imil 2015-02-23]
