@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1010 2015/02/23 07:26:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1011 2015/02/23 07:27:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1459,13 +1459,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-Gnats to 0.07 [mef 2015-02-21]
 	Updated net/p5-Net-INET6Glue to 0.6.3 [mef 2015-02-21]
 	Updated lang/a60 to 0.23a [mef 2015-02-21]
-	Updated lang/a60 to 0.23a [mef 2015-02-21]
 	Updated lang/swi-prolog-lite to 6.6.6 [mef 2015-02-21]
 	Updated pkgtools/x11-links to 0.92 [jmcneill 2015-02-21]
 	Added sysutils/upower version 0.99.2 [jmcneill 2015-02-21]
 	Updated audio/pulseaudio to 6.0 [ryoon 2015-02-21]
 	Updated devel/capstone to 3.0.1 [mef 2015-02-22]
-	Updated lang/go to 1.4.2 [mspo 2015-02-22]
 	Updated lang/go to 1.4.2 [mspo 2015-02-22]
 	Updated security/spiped to 1.5.0 [wiedi 2015-02-22]
 	Updated time/py-vdirsyncer to 0.4.3 [wiz 2015-02-22]
