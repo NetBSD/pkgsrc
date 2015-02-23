@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1011 2015/02/23 07:27:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1012 2015/02/23 07:29:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1468,3 +1468,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/spiped to 1.5.0 [wiedi 2015-02-22]
 	Updated time/py-vdirsyncer to 0.4.3 [wiz 2015-02-22]
 	Updated devel/guile-www to 2.39 [gdt 2015-02-22]
+	Updated devel/py-setuptools to 12.2 [wiz 2015-02-23]
