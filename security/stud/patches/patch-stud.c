@@ -1,7 +1,8 @@
-$NetBSD: patch-stud.c,v 1.2 2015/02/20 09:32:07 fhajny Exp $
+$NetBSD: patch-stud.c,v 1.3 2015/02/23 22:27:37 fhajny Exp $
 
 SunOS fixes as per https://github.com/bumptech/stud/pull/71.
 SSL fixes as per https://github.com/bumptech/stud/pull/130.
+Fix for POSIX accept() that can also return ECONNABORTED.
 
 --- stud.c.orig	2012-08-10 23:40:19.000000000 +0000
 +++ stud.c
@@ -68,6 +69,15 @@ SSL fixes as per https://github.com/bumptech/stud/pull/130.
              shutdown_proxy(ps, SHUTDOWN_SSL);
          }
      }
+@@ -1312,7 +1335,7 @@ static void handle_accept(struct ev_loop
+             break;
+ 
+         default:
+-            assert(errno == EINTR || errno == EWOULDBLOCK || errno == EAGAIN);
++            assert(errno == EINTR || errno == EWOULDBLOCK || errno == EAGAIN || errno == ECONNABORTED);
+             break;
+         }
+         return;
 @@ -1751,24 +1774,16 @@ void daemonize () {
          exit(0);
      }
