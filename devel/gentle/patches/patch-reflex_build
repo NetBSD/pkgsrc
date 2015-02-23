@@ -1,0 +1,10 @@
+$NetBSD: patch-reflex_build,v 1.1 2015/02/23 18:21:09 joerg Exp $
+
+--- reflex/build.orig	2015-02-22 19:40:06.000000000 +0000
++++ reflex/build
+@@ -3,4 +3,4 @@
+ set -e
+ set -x
+ 
+-cc reflex.c -o reflex
++$CC $CFLAGS reflex.c -o reflex
