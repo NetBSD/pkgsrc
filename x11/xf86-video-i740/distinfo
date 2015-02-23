@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/05/16 06:14:34 richard Exp $
+$NetBSD: distinfo,v 1.7 2015/02/23 07:41:42 wiz Exp $
 
-SHA1 (xf86-video-i740-1.3.4.tar.bz2) = 5444fdb1af76dde8323ea86ca19517f27b60a2e3
-RMD160 (xf86-video-i740-1.3.4.tar.bz2) = 593fe6e1db1397240c9c0df66ff772c3d5fe3961
-Size (xf86-video-i740-1.3.4.tar.bz2) = 316654 bytes
+SHA1 (xf86-video-i740-1.3.5.tar.bz2) = ceefa37c2605d633480735f3e9ce547d482ce8e5
+RMD160 (xf86-video-i740-1.3.5.tar.bz2) = 1f4b33691d1cd653f7a39009a37025e322fb17df
+Size (xf86-video-i740-1.3.5.tar.bz2) = 321050 bytes
