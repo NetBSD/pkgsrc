@@ -6,6 +6,9 @@ wip/ghc TODO
 * Modify configure.ac and rules/build-package-data.mk to allow
   ``--with-curses-{includes,libraries}`` to be passed to the top-level
   ``configure``, and send a patch to the upstream.
+
+  -> Done: https://ghc.haskell.org/trac/ghc/ticket/10096
+
 * Add the following ``./configure`` flags to eliminate
   ``patch-Makefile`` and ``patch-ghc.mk``:
 
