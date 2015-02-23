@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 00:02:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/23 18:18:42 joerg Exp $
 #
 
 DISTNAME=	emech-3.0.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.energymech.net/files/
 
