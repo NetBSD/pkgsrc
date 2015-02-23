@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:44 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/23 18:28:52 joerg Exp $
 
 DISTNAME=	texlive-20091011-source
 PKGNAME=	pdvipsk-5.98pl1.7b
@@ -21,6 +21,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	patch
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvipsk
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
