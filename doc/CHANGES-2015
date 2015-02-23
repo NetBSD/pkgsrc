@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1020 2015/02/23 10:46:47 imil Exp $
+$NetBSD: CHANGES-2015,v 1.1021 2015/02/23 10:47:45 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1475,5 +1475,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-mga to 1.6.4 [wiz 2015-02-23]
 	Updated x11/xf86-video-tdfx to 1.4.6 [wiz 2015-02-23]
 	Updated x11/xf86-video-i740 to 1.3.5 [wiz 2015-02-23]
-	Updated net/py-apache-libcloud to 0.17.0 [imil 2015-02-23]
 	Updated net/py-apache-libcloud to 0.17.0 [imil 2015-02-23]
