@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1017 2015/02/23 07:39:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1018 2015/02/23 07:42:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1474,3 +1474,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated wip/xedit to 1.2.2 [wiz 2015-02-23]
 	Updated x11/xf86-video-mga to 1.6.4 [wiz 2015-02-23]
 	Updated x11/xf86-video-tdfx to 1.4.6 [wiz 2015-02-23]
+	Updated x11/xf86-video-i740 to 1.3.5 [wiz 2015-02-23]
