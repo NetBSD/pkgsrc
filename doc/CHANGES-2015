@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1023 2015/02/23 11:20:06 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1024 2015/02/23 11:26:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1478,3 +1478,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-apache-libcloud to 0.17.0 [imil 2015-02-23]
 	Updated www/p5-Dancer to 1.3134 [wen 2015-02-23]
 	Updated devel/p5-Pod-Usage to 1.66 [wen 2015-02-23]
+	Updated devel/nasm to 2.11.08 [wen 2015-02-23]
