@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.3 2011/08/29 01:39:11 dholland Exp $
+$NetBSD: distinfo,v 1.4 2015/02/23 18:20:21 joerg Exp $
 
 SHA1 (bin86-0.16.17.tar.gz) = 656f06b4b26d08412132e338baa25e42d713eeec
 RMD160 (bin86-0.16.17.tar.gz) = b0ae5aff632a3528214749e256f5ab498f1a7fa4
 Size (bin86-0.16.17.tar.gz) = 152400 bytes
 SHA1 (patch-aa) = f4a4fcc5cb51fb428a660d0fc70579f73e2de719
-SHA1 (patch-ab) = 31ae26539959cc1484d2754772f97dd85dc47716
-SHA1 (patch-ac) = 2f6e342013396561278bb78571148ec7ce3d32d2
+SHA1 (patch-ab) = 97fe4a9bc09b2361cea9619fccb8f9db5a0bacd1
+SHA1 (patch-ac) = f29a028cf8da780d3a2d2ccf611133fe219453a3
+SHA1 (patch-ld_dumps.c) = 9f967a127e29515919274e5495002d654beb1a4a
+SHA1 (patch-ld_objchop.c) = fe253f6b6698b5c0eb58914d660cdb99c791539c
