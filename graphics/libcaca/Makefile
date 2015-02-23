@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/02/26 01:29:28 wiedi Exp $
+# $NetBSD: Makefile,v 1.31 2015/02/23 18:28:52 joerg Exp $
 
 DISTNAME=	libcaca-0.99.beta18
 PKGNAME=	${DISTNAME:S/beta//}
@@ -19,6 +19,9 @@ INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 PKGCONFIG_OVERRIDE+=	caca/caca.pc.in
 
 CHECK_FILES_SKIP+=	${PREFIX}/lib/libcucul.*
+
+CONFIG_GUESS_OVERRIDE+=	.auto/config.guess
+CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 .include "options.mk"
 
