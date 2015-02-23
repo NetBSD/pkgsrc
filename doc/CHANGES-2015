@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1028 2015/02/23 13:37:42 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1029 2015/02/23 13:58:36 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1483,3 +1483,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/libopenmpt to 0.2.4764beta10 [wiz 2015-02-23]
 	Updated databases/elasticsearch to 1.4.4 [fhajny 2015-02-23]
 	Updated www/icedtea-web to 1.5.2 [tnn 2015-02-23]
+	Updated sysutils/salt to 2014.7.2 [imil 2015-02-23]
