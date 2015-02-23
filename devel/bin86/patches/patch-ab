@@ -1,20 +1,26 @@
-$NetBSD: patch-ab,v 1.2 2011/08/29 01:39:12 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2015/02/23 18:20:21 joerg Exp $
 
 - build on LP64
 - fix mismatched return statements, which clang dislikes
 
 --- ld/catimage.c.orig	1997-07-22 21:38:12.000000000 +0000
 +++ ld/catimage.c
-@@ -27,6 +27,8 @@
- #error "Compile error: struct exec invalid (long not 32 bit ?)"
- #endif
+@@ -21,11 +21,11 @@
+  */
  
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include "x86_aout.h"
+ 
+-#ifndef __OUT_OK
+-#error "Compile error: struct exec invalid (long not 32 bit ?)"
+-#endif
 +static void patch_bin(long, int);
-+
+ 
  unsigned long text_offt[10];	/* Locations to patch (0=don't) */
  unsigned long data_offt[10];
- 
-@@ -35,11 +37,12 @@ FILE * ofd;
+@@ -35,11 +34,12 @@ FILE * ofd;
  FILE * ifd = 0;
  struct exec header;
  
@@ -28,7 +34,7 @@ $NetBSD: patch-ab,v 1.2 2011/08/29 01:39:12 dholland Exp $
     int  image_id;
  
     if( argc < 3 || argc > 11 )
-@@ -59,8 +62,10 @@ char ** argv;
+@@ -59,8 +59,10 @@ char ** argv;
        open_obj(argv[image_id+2]);
  
        printf("File %-14s seg=0x%04lx text=0x%04lx data=0x%04lx\n",
@@ -41,7 +47,7 @@ $NetBSD: patch-ab,v 1.2 2011/08/29 01:39:12 dholland Exp $
  
        text_off = image_offset;
        if( header.a_flags & A_SEP )
-@@ -90,7 +95,7 @@ char ** argv;
+@@ -90,7 +92,7 @@ char ** argv;
     fputc('\0', ofd);
     fclose(ofd);
  
@@ -50,7 +56,7 @@ $NetBSD: patch-ab,v 1.2 2011/08/29 01:39:12 dholland Exp $
  
     if( ifd ) fclose(ifd);
     exit(0);
-@@ -139,6 +144,7 @@ long out_offset, in_offset, length;
+@@ -139,6 +141,7 @@ long out_offset, in_offset, length;
     }
  }
  
@@ -58,7 +64,7 @@ $NetBSD: patch-ab,v 1.2 2011/08/29 01:39:12 dholland Exp $
  patch_bin(file_off, value)
  long file_off;
  int value;
-@@ -162,7 +168,7 @@ read_symtable()
+@@ -162,7 +165,7 @@ read_symtable()
  {
     struct nlist item;
     int nitems;
