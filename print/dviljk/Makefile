@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/06 02:33:32 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/23 18:28:52 joerg Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	dviljk-2.6.5
@@ -19,6 +19,9 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dviljk
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \

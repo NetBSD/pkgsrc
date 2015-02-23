@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/02 20:11:38 asau Exp $
+# $NetBSD: Makefile,v 1.44 2015/02/23 18:28:52 joerg Exp $
 
 DISTNAME=	elk-3.99.8
 PKGREVISION=	1
@@ -16,6 +16,9 @@ USE_TOOLS+=		groff
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+CONFIG_GUESS_OVERRIDE+=	.auto/config.guess
+CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 .include "options.mk"
 
