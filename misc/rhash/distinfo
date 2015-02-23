@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/18 21:21:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/02/23 18:26:12 joerg Exp $
 
 SHA1 (rhash-1.3.1.tar.gz) = 2482c9d33b0f7f3d145f5df751d82a81f4a7540e
 RMD160 (rhash-1.3.1.tar.gz) = ea2058949e0f45e2a91f6bc69dc4ce9c377217cc
 Size (rhash-1.3.1.tar.gz) = 298576 bytes
+SHA1 (patch-librhash_byte__order.h) = dd49ede4ad1991a8f717faade521d0d10cf7f504
