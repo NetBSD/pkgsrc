@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/30 12:48:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/02/23 11:45:42 wiz Exp $
 bin/openmpt123
 include/libopenmpt/libopenmpt.h
 include/libopenmpt/libopenmpt.hpp
@@ -13,7 +13,7 @@ man/man1/openmpt123.1
 share/doc/libopenmpt/LICENSE
 share/doc/libopenmpt/README.md
 share/doc/libopenmpt/TODO
-share/doc/libopenmpt/libopenmpt_example_c.c
-share/doc/libopenmpt/libopenmpt_example_c_mem.c
-share/doc/libopenmpt/libopenmpt_example_c_stdout.c
-share/doc/libopenmpt/libopenmpt_example_cxx.cpp
+share/doc/libopenmpt/examples/libopenmpt_example_c.c
+share/doc/libopenmpt/examples/libopenmpt_example_c_mem.c
+share/doc/libopenmpt/examples/libopenmpt_example_c_stdout.c
+share/doc/libopenmpt/examples/libopenmpt_example_cxx.cpp
