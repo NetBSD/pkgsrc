@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/13 00:58:22 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/23 18:28:52 joerg Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	mendexk-2.6f
@@ -20,6 +20,9 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/mendexk
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
