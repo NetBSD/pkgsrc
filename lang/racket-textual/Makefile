@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/06/15 09:35:28 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/23 18:24:31 joerg Exp $
 
 PKGNAME=	racket-minimal-6.0.1
 DISTNAME=	$(PKGNAME_NOREV)-src
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--enable-pthread
 USE_LANGUAGES=	c c++
 MAKE_JOBS_SAFE=	no
 UNLIMIT_RESOURCES=	datasize
+OVERRIDE_DIRDEPTH=	3
 
 LDFLAGS.DragonFly+=	-rdynamic
 
