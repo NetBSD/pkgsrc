@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.77 2015/02/22 14:46:40 tnn Exp $
+$NetBSD: distinfo,v 1.78 2015/02/23 13:34:56 tnn Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -33,18 +33,12 @@ Size (openjdk7/bootstrap-jdk7u71-bin-freebsd-10-x86_64-20150101.tar.bz2) = 37448
 SHA1 (openjdk7/bootstrap-jdk7u76-bin-netbsd-7-sparc64-20150212.tar.xz) = b467ca8d14f1a8098cd90e3bb7ae664c1713cb8a
 RMD160 (openjdk7/bootstrap-jdk7u76-bin-netbsd-7-sparc64-20150212.tar.xz) = 152c801aca81f4db5427fe2f19f4efcb2fb6355e
 Size (openjdk7/bootstrap-jdk7u76-bin-netbsd-7-sparc64-20150212.tar.xz) = 22914116 bytes
-SHA1 (openjdk7/icedtea-2.5.3.tar.xz) = c509018b108ec6d8e5c8380c9b42d5fba426c632
-RMD160 (openjdk7/icedtea-2.5.3.tar.xz) = c386237bc07fa535b1cfd0cf95fc0bc50ab067c3
-Size (openjdk7/icedtea-2.5.3.tar.xz) = 2021560 bytes
-SHA1 (openjdk7/icedtea-web-1.5.1.tar.gz) = 5daedcc1e962eb952e5ea4b5c9698bb9d6ef700e
-RMD160 (openjdk7/icedtea-web-1.5.1.tar.gz) = a2d0ad55919a8ff5d786b56ed26c8a34ed4b259e
-Size (openjdk7/icedtea-web-1.5.1.tar.gz) = 1616344 bytes
 SHA1 (openjdk7/openjdk-1.7.76-20150127.tar.bz2) = 3210d939b5ac92f2a13c43f3616788c114958451
 RMD160 (openjdk7/openjdk-1.7.76-20150127.tar.bz2) = 683ce69d0cf0854c3ff38dd058338066e448bd62
 Size (openjdk7/openjdk-1.7.76-20150127.tar.bz2) = 52843102 bytes
-SHA1 (openjdk7/rhino1_7R4.zip) = 483e097cb575c724c745edd80c9512f073bd510a
-RMD160 (openjdk7/rhino1_7R4.zip) = fba5ce71edd396a241991fb7b3ce43628b891035
-Size (openjdk7/rhino1_7R4.zip) = 6481918 bytes
+SHA1 (openjdk7/rhino1_7R5.zip) = 39ada4cca8c7f651a68eda3f307ff9b68808f0ce
+RMD160 (openjdk7/rhino1_7R5.zip) = 04d47e3b108cfb62d8252c358b6f785c8268fc45
+Size (openjdk7/rhino1_7R5.zip) = 10227088 bytes
 SHA1 (patch-Makefile) = a9e415d19c2a8edb96a60ffdf81c804476a8e2f6
 SHA1 (patch-aa) = cd883463de83f64baf24fdb236b7ca87f9132ec3
 SHA1 (patch-ab) = 35d5a4a4aa32f8b92ba82f583a2d31f2b7af7998
@@ -59,8 +53,6 @@ SHA1 (patch-ao) = 5eba16fc16c9a54a855951a153dc9138956dcf08
 SHA1 (patch-ap) = cf1d5a79fdf57316f40a91fed30a87ae4a04d476
 SHA1 (patch-aq) = 97303ebcdcf0251406eef816ae56c82c703dab9d
 SHA1 (patch-ar) = 6544d4c7d4f30a3baeac95834e41ce8f7d41f9ec
-SHA1 (patch-as) = 0cef122fb4e8606a9f4923d44079156b89dca0c2
-SHA1 (patch-at) = fdba3bdfccab8de333de08bcc0c9c52d3469d9a3
 SHA1 (patch-ba) = 97e42aea28e4d7b63f41596690cd9f21c85622bf
 SHA1 (patch-bd) = b192cab222f76b5c05935946c6229117dd905423
 SHA1 (patch-bg) = 90328bd927c52e62d97c72fade2ceb70d42fe273
