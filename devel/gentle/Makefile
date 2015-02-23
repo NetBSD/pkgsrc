@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/01/04 02:19:37 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/23 18:21:09 joerg Exp $
 #
 
 DISTNAME=		gentle-97
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://gentle.compilertools.net/
 
@@ -15,10 +15,15 @@ BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	bin lib share/doc/gentle/html share/examples/gentle
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=return-type
+.endif
+
 do-build:
-	(cd ${WRKSRC}/gentle && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} ./build)
-	(cd ${WRKSRC}/lib && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} ./build)
-	(cd ${WRKSRC}/reflex && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} ./build)
+	(cd ${WRKSRC}/gentle && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} CFLAGS=${CFLAGS:Q} ./build)
+	(cd ${WRKSRC}/lib && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} CFLAGS=${CFLAGS:Q} ./build)
+	(cd ${WRKSRC}/reflex && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} CFLAGS=${CFLAGS:Q} ./build)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gentle/gentle ${DESTDIR}${PREFIX}/bin
