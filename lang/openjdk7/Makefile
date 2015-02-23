@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2015/02/21 10:44:14 tnn Exp $
+# $NetBSD: Makefile,v 1.95 2015/02/23 13:34:56 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+DIST_SUBDIR=	openjdk7
 
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
@@ -172,11 +174,6 @@ PLIST.alsa=	yes
 
 post-extract:
 	chmod +x ${ANT_BIN}/ant
-	cd ${WRKDIR}/${ICEDTEA_WEB}/plugin/icedteanp/java && pax -rw . \
-	  ${WRKSRC}/jdk/src/share/classes
-	cd ${WRKDIR}/${ICEDTEA_WEB}/netx && pax -rw . \
-	  ${WRKSRC}/jdk/src/share/classes
-#	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/${ICEDTEA}/patches/rhino.patch
 .if ${OPSYS} == "SunOS"
 	${MKDIR} ${ALT_BOOTDIR}/bin
 	${LN} -s ${JDK_BOOTDIR}/include ${ALT_BOOTDIR}/include
