@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2014/09/14 17:55:38 wiz Exp $
-bin/sphinx-apidoc
-bin/sphinx-autogen
-bin/sphinx-build
-bin/sphinx-quickstart
+@comment $NetBSD: PLIST,v 1.11 2015/02/24 11:07:55 markd Exp $
+bin/sphinx-apidoc${PYVERSSUFFIX}
+bin/sphinx-autogen${PYVERSSUFFIX}
+bin/sphinx-build${PYVERSSUFFIX}
+bin/sphinx-quickstart${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

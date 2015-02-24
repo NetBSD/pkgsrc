@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2014/09/14 17:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/02/24 11:07:55 markd Exp $
 
 DISTNAME=	Sphinx-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Sphinx/
 
@@ -15,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
 
 USE_LANGUAGES=	#none
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 
@@ -22,6 +25,12 @@ REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 # also needs LaTeX with additional packages (tex-mdwtools, tex-parskip)
 #do-test:
 #	cd ${WRKSRC}/tests && ${PYTHONBIN} run.py
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-autogen ${DESTDIR}${PREFIX}/bin/sphinx-autogen${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-build ${DESTDIR}${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-quickstart ${DESTDIR}${PREFIX}/bin/sphinx-quickstart${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
