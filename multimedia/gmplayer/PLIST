@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/03/08 11:41:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/02/24 08:43:31 wiz Exp $
 bin/gmplayer
 share/mplayer/skins/AlienMind/README
 share/mplayer/skins/AlienMind/VERSION
@@ -355,6 +355,7 @@ share/mplayer/skins/mentalic/play.png
 share/mplayer/skins/mentalic/pos.png
 share/mplayer/skins/mentalic/prev.png
 share/mplayer/skins/mentalic/skin
+share/mplayer/skins/mentalic/slider.png
 share/mplayer/skins/mentalic/stop.png
 share/mplayer/skins/mentalic/sub.png
 share/mplayer/skins/mentalic/symbols.fnt

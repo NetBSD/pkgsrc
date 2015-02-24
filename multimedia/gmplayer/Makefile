@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2015/02/22 09:52:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.123 2015/02/24 08:43:31 wiz Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,7 +8,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	22
+PKGREVISION=	23
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -27,24 +27,24 @@ BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 COMMENT=	Fast, cross-platform movie player with GTK2+ interface
 
 SKINS+=		AlienMind-1.2${SKIN_EXTRACT_SUFX}		\
-		Blue-1.8${SKIN_EXTRACT_SUFX}			\
+		Blue-1.10${SKIN_EXTRACT_SUFX}			\
 		BlueHeart-1.5${SKIN_EXTRACT_SUFX}		\
 		CornerMP-1.2${SKIN_EXTRACT_SUFX}		\
 		CornerMP-aqua-1.4${SKIN_EXTRACT_SUFX}		\
 		Cyrus-1.2${SKIN_EXTRACT_SUFX}			\
 		MidnightLove-1.6${SKIN_EXTRACT_SUFX}		\
 		WMP6-2.2${SKIN_EXTRACT_SUFX}			\
-		avifile-1.6${SKIN_EXTRACT_SUFX}			\
+		avifile-1.7${SKIN_EXTRACT_SUFX}			\
 		gnome-1.1${SKIN_EXTRACT_SUFX}			\
 		hayraphon-1.0${SKIN_EXTRACT_SUFX}		\
 		hwswskin-1.3${SKIN_EXTRACT_SUFX}		\
-		mentalic-1.2${SKIN_EXTRACT_SUFX}		\
-		neutron-1.5${SKIN_EXTRACT_SUFX}			\
-		phony-1.1${SKIN_EXTRACT_SUFX}			\
-		plastic-1.2${SKIN_EXTRACT_SUFX}			\
+		mentalic-1.3${SKIN_EXTRACT_SUFX}		\
+		neutron-1.6${SKIN_EXTRACT_SUFX}			\
+		phony-1.2${SKIN_EXTRACT_SUFX}			\
+		plastic-1.3${SKIN_EXTRACT_SUFX}			\
 		proton-1.2${SKIN_EXTRACT_SUFX}			\
-		slim-1.2${SKIN_EXTRACT_SUFX}			\
-		xanim-1.6${SKIN_EXTRACT_SUFX}			\
+		slim-1.3${SKIN_EXTRACT_SUFX}			\
+		xanim-1.7${SKIN_EXTRACT_SUFX}			\
 		xine-lcd-1.2${SKIN_EXTRACT_SUFX}
 
 .for skin in ${SKINS}
