@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/11/19 00:02:49 minskim Exp $
+# $NetBSD: Makefile,v 1.44 2015/02/24 21:44:35 joerg Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	dvipdfmx-20130405
@@ -22,6 +22,9 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvipdfmx
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
