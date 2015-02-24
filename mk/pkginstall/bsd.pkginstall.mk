@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.61 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.62 2015/02/24 09:46:09 wiz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -1142,7 +1142,7 @@ post-install-script:
 
 # rc.d scripts are automatically generated and installed into the rc.d
 # scripts example directory at the post-install step.  The following
-# variables are relevent to this process:
+# variables are relevant to this process:
 #
 # RCD_SCRIPTS			lists the basenames of the rc.d scripts
 #
