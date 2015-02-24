@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/02/17 14:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/02/24 10:22:22 wiz Exp $
 
 DISTNAME=	cups-filters-1.0.65
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -23,16 +24,16 @@ PKGCONFIG_OVERRIDE+=	libfontembed.pc.in
 
 REPLACE_BASH+=	filter/textonly
 
-INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
+CONFIGURE_ARGS+=	--with-rcdir=${PREFIX}/share/examples/rc.d
+CONFIGURE_ARGS+=	--with-rclevels=""
 
-INSTALLATION_DIRS=	share/examples/rc.d
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
 
 CONF_FILES=		${PREFIX}/share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf ${PKG_SYSCONFDIR}/fonts/conf.d/99pdftoopvp.conf
 CONF_FILES=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/cups/cups-browsed.conf ${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
-	${MV} ${DESTDIR}/etc/rc.d/cups-browsed ${DESTDIR}${PREFIX}/share/examples/rc.d/cups-browsed
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
