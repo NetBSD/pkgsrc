@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2013/03/25 04:11:25 agc Exp $
-#
+# $NetBSD: Makefile,v 1.25 2015/02/24 08:58:56 wiz Exp $
 
 DISTNAME=		tnftpd-20130325
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
-MAINTAINER=		lukem@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The NetBSD FTP Daemon
 LICENSE=		2-clause-bsd
 
