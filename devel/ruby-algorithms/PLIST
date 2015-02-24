@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/01 12:28:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/24 09:52:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/CBst.${RUBY_DLEXT}
+${GEM_EXTSDIR}/CDeque.${RUBY_DLEXT}
+${GEM_EXTSDIR}/CRBTreeMap.${RUBY_DLEXT}
+${GEM_EXTSDIR}/CSplayTreeMap.${RUBY_DLEXT}
+${GEM_EXTSDIR}/CString.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG.markdown
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Manifest
