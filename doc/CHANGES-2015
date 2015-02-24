@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1031 2015/02/24 07:29:38 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1032 2015/02/24 08:26:55 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1486,3 +1486,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/salt to 2014.7.2 [imil 2015-02-23]
 	Updated editors/emacs24 to 24.4nb2 [ryoon 2015-02-23]
 	Updated security/clamav to 0.98.6 [hiramatsu 2015-02-24]
+	Updated print/py-cups to 1.9.71 [markd 2015-02-24]
