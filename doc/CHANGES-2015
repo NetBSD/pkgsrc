@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1036 2015/02/24 10:28:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1037 2015/02/24 11:10:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXxf86vm to 1.1.4 [wiz 2015-02-24]
 	Updated net/samba to 3.6.25 [taca 2015-02-24]
 	Updated print/cups-filters to 1.0.65nb1 [wiz 2015-02-24]
+	Updated textproc/py-docutils to 0.12 [markd 2015-02-24]
