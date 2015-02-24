@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:37:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2015/02/24 08:58:56 wiz Exp $
 
 DISTNAME=	gpg2dot-1.5
 PKGREVISION=	3
@@ -7,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	lukem@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Converts your GnuPG keyring to a graph of associations
 
