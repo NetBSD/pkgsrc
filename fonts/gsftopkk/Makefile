@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/11/12 21:07:03 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/24 21:44:35 joerg Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	gsftopkk-1.19.2
@@ -21,6 +21,9 @@ INFO_FILES=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gs:run
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/gsftopk
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
