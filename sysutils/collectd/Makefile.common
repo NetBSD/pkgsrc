@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2015/02/02 12:02:27 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/02/24 13:14:05 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -65,6 +65,8 @@ CONFIGURE_ARGS+=	--with-lib${lib}=no
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
+
+CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
