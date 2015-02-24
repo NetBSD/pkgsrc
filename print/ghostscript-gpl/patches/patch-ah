@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.5 2014/07/18 08:56:37 ryoon Exp $
+$NetBSD: patch-ah,v 1.6 2015/02/24 08:21:07 markd Exp $
 
 (1) First chunk to fix the X11_TYPE=native problem, which
     freetype2 in /usr/X11R7/ is way old, and work around to 
@@ -57,12 +57,14 @@ $NetBSD: patch-ah,v 1.5 2014/07/18 08:56:37 ryoon Exp $
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -6474,7 +6477,7 @@ done
+@@ -6474,7 +6477,9 @@ done
                  LCUPSINCLUDE="include \$(GLSRCDIR)/lcups.mak"
                  LCUPSIINCLUDE="include \$(GLSRCDIR)/lcupsi.mak"
                  if ( test x$with_pdftoraster != xno ); then
 -                    if test "$CUPSVERSION" ">" "1.2"; then
 +                    if echo "$CUPSVERSION" | grep -q '^1\.[2-9]'; then
++                        CUPSPDFTORASTER="1"
++                    elif echo "$CUPSVERSION" | grep -q '^[2-9]\.[0-9]'; then
                          CUPSPDFTORASTER="1"
                      fi
                  fi
