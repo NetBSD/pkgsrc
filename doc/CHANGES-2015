@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1034 2015/02/24 08:46:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1035 2015/02/24 09:55:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1489,3 +1489,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/py-cups to 1.9.71 [markd 2015-02-24]
 	Updated multimedia/gmplayer to 1.1.1nb23 [wiz 2015-02-24]
 	Updated x11/libXxf86vm to 1.1.4 [wiz 2015-02-24]
+	Updated net/samba to 3.6.25 [taca 2015-02-24]
