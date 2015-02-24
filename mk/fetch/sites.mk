@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.116 2015/02/21 14:46:08 mef Exp $
+# $NetBSD: sites.mk,v 1.117 2015/02/24 03:26:44 ryoon Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -109,7 +109,6 @@ MASTER_SITE_MOZILLA_ALL+=   \
 MASTER_SITE_MOZILLA+=	\
 	http://releases.mozilla.org/pub/mozilla.org/ \
 	http://mirror.atlanticmetro.net/mozilla/ \
-	ftp://releases.mozilla.org/pub/mozilla.org/ \
 	http://mirror.yandex.ru/mozilla/ \
 	http://ftp.cvut.cz/mozilla/ \
 	http://ftp.heanet.ie/mirrors/ftp.mozilla.org/pub/mozilla.org/ \
