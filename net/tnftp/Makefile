@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/11/04 22:38:26 agc Exp $
+# $NetBSD: Makefile,v 1.38 2015/02/24 08:58:56 wiz Exp $
 
 DISTNAME=		tnftp-20141104
 CATEGORIES=		net
@@ -10,7 +10,7 @@ DISTFILES=		# empty
 CONFLICTS+=		kth-krb4-[0-9]*
 CONFLICTS+=		lukemftp-[0-9]*
 
-MAINTAINER=		lukem@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
 LICENSE=		original-bsd
 
