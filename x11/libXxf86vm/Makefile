@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 08:29:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/24 08:46:04 wiz Exp $
 
-DISTNAME=		libXxf86vm-1.1.3
+DISTNAME=		libXxf86vm-1.1.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xf86vidmodeproto/buildlink3.mk"
