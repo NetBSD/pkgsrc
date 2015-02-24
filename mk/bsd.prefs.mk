@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.359 2015/02/16 10:43:36 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.360 2015/02/24 13:26:34 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -568,7 +568,7 @@ _CROSS_DESTDIR=	${CROSS_DESTDIR}
 # do cross-builds on a NetBSD host that still uses a.out?
 NATIVE_OBJECT_FMT?=	${OBJECT_FMT}
 .  if ${NATIVE_OBJECT_FMT} == "ELF" && \
-   (!empty(NATIVE-MACHINE_ARCH:Mearm*) || \
+   (!empty(NATIVE_MACHINE_ARCH:Mearm*) || \
     ${NATIVE_MACHINE_GNU_ARCH} == "arm" || \
     ${NATIVE_MACHINE_ARCH} == "i386" || \
     ${NATIVE_MACHINE_ARCH} == "m68k" || \
