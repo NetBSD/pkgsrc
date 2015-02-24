@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.20 2013/07/28 12:47:46 wiz Exp $
-bin/rst2html.py
-bin/rst2latex.py
-bin/rst2man.py
-bin/rst2odt.py
-bin/rst2odt_prepstyles.py
-bin/rst2pseudoxml.py
-bin/rst2s5.py
-bin/rst2xetex.py
-bin/rst2xml.py
-bin/rstpep2html.py
+@comment $NetBSD: PLIST,v 1.21 2015/02/24 11:03:05 markd Exp $
+bin/rst2html-${PYVERSSUFFIX}.py
+bin/rst2latex-${PYVERSSUFFIX}.py
+bin/rst2man-${PYVERSSUFFIX}.py
+bin/rst2odt-${PYVERSSUFFIX}.py
+bin/rst2odt_prepstyles-${PYVERSSUFFIX}.py
+bin/rst2pseudoxml-${PYVERSSUFFIX}.py
+bin/rst2s5-${PYVERSSUFFIX}.py
+bin/rst2xetex-${PYVERSSUFFIX}.py
+bin/rst2xml-${PYVERSSUFFIX}.py
+bin/rstpep2html-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
