@@ -7151,8 +7151,12 @@ being enabled. Common symptoms are gcc internal errors or never finishing
 compiling a file.
 
 Typically, a workaround involves testing the MACHINE_ARCH and compiler version,
-disabling optimisation for that combination of file, MACHINE_ARCH and compiler,
-and documenting it in pkgsrc/doc/HACKS. See that file for a number of examples.
+disabling optimisation for that combination of file, MACHINE_ARCH and compiler.
+
+This used to be a big problem in the past, but is rarely needed now as compiler
+technology has matured. If you still need to add a compiler specific
+workaround, please do so in the file hacks.mk and describe the symptom and
+compiler version as detailed as possible.
 
 19.5.3. Undefined reference to "..."
 
