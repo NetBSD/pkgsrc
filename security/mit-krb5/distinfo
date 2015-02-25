@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2014/11/25 23:40:49 tez Exp $
+$NetBSD: distinfo,v 1.50 2015/02/25 22:28:58 tez Exp $
 
 SHA1 (2014-001-patch.txt) = 919402bf3b7c289e847e9adc03a7c30f26966769
 RMD160 (2014-001-patch.txt) = a39c8e12e79ab273d562b04c1e7811c414dd70e8
@@ -6,10 +6,13 @@ Size (2014-001-patch.txt) = 592 bytes
 SHA1 (krb5-1.10.7-signed.tar) = 982087d617d0b038676bbe8030047421683d508b
 RMD160 (krb5-1.10.7-signed.tar) = 16e3a2cdeb410d84d055431679eb81851ae685e9
 Size (krb5-1.10.7-signed.tar) = 11632640 bytes
+SHA1 (patch-2015-001-patch-r110) = 17343091958096cfb45caae490018e60c79430cf
 SHA1 (patch-CVE-2014-4341) = 97b316fb3c5dfc626827a13baa5dcf623d67da3c
 SHA1 (patch-CVE-2014-4343) = e7d4604d81671f71c9cd9461b65a9e87b5982baa
 SHA1 (patch-CVE-2014-4344) = b7ae530beaffcf1c095e6f94bdf608b7a140b064
 SHA1 (patch-CVE-2014-5351) = 2948e2a9f7adb97b8cb70bb8f0043c45e5822465
+SHA1 (patch-CVE-2014-5353) = 93217bb5f249b153b8dcb0be07a565ee8cca879a
+SHA1 (patch-CVE-2014-5355) = de4f540d079b88fcf2e0ecdc504d977d47d628ab
 SHA1 (patch-aa) = 941848a1773dfbe51dff3134d4b8504a850a958d
 SHA1 (patch-ad) = b56a7218007560470179dd811c84b8c690c966ac
 SHA1 (patch-ae) = c7395b9de5baf6612b8787fad55dbc051a680bfd
