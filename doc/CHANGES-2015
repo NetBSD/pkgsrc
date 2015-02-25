@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1044 2015/02/25 17:54:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1045 2015/02/25 21:20:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed net/samba35 [taca 2015-02-25]
 	Added textproc/texi2mdoc version 0.1.2 [wiz 2015-02-25]
 	Updated devel/autoconf-archive to 2015.02.24 [wiz 2015-02-25]
+	Updated net/calypso to 1.3nb1 [wiz 2015-02-25]
