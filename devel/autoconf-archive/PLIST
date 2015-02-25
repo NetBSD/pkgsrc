@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/02/07 12:00:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/02/25 16:52:08 wiz Exp $
 info/autoconf-archive.info
 share/aclocal/ax_absolute_header.m4
 share/aclocal/ax_ac_append_to_file.m4
@@ -177,6 +177,7 @@ share/aclocal/ax_compare_version.m4
 share/aclocal/ax_compile_check_sizeof.m4
 share/aclocal/ax_compiler_flags.m4
 share/aclocal/ax_compiler_flags_cflags.m4
+share/aclocal/ax_compiler_flags_cxxflags.m4
 share/aclocal/ax_compiler_flags_gir.m4
 share/aclocal/ax_compiler_flags_ldflags.m4
 share/aclocal/ax_compiler_vendor.m4
@@ -336,6 +337,7 @@ share/aclocal/ax_gcc_version.m4
 share/aclocal/ax_gcc_warn_unused_result.m4
 share/aclocal/ax_gcc_x86_avx_xgetbv.m4
 share/aclocal/ax_gcc_x86_cpuid.m4
+share/aclocal/ax_generate_changelog.m4
 share/aclocal/ax_have_adns.m4
 share/aclocal/ax_have_epoll.m4
 share/aclocal/ax_have_opengl.m4
@@ -428,6 +430,7 @@ share/aclocal/ax_prog_fc_mpi.m4
 share/aclocal/ax_prog_fig2dev.m4
 share/aclocal/ax_prog_flex.m4
 share/aclocal/ax_prog_guile_version.m4
+share/aclocal/ax_prog_haxe_version.m4
 share/aclocal/ax_prog_hla.m4
 share/aclocal/ax_prog_hla_opt.m4
 share/aclocal/ax_prog_httpd.m4
