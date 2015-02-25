@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/10/20 13:44:00 adam Exp $
+# $NetBSD: Makefile,v 1.51 2015/02/25 11:13:54 adam Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -29,10 +29,10 @@ CONFIGURE_ARGS+=	--disable-unit-tests
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
 	${MACHINE_ARCH} == "amd64"
-. if ${PKGSRC_COMPILER} == "gcc" && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
+.  if ${PKGSRC_COMPILER} == "gcc" && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
 # PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code on NetBSD & Solaris.
 GCC_REQD+=	4.4
-. endif
+.  endif
 
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
@@ -50,7 +50,9 @@ REPLACE_PERL=		build/make/ads2gas.pl
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 .  if ${MACHINE_ARCH} == "i386"
-.    if !empty(OS_VERSION:M1[2-9].*)
+.    if !empty(OS_VERSION:M1[3-9].*)
+CONFIGURE_ARGS+=	--target=x86-darwin13-gcc
+.    elif !empty(OS_VERSION:M12.*)
 CONFIGURE_ARGS+=	--target=x86-darwin12-gcc
 .    elif !empty(OS_VERSION:M11.*)
 CONFIGURE_ARGS+=	--target=x86-darwin11-gcc
@@ -62,7 +64,9 @@ CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
 .    endif
 .  elif ${MACHINE_ARCH} == "x86_64"
-.    if !empty(OS_VERSION:M1[2-9].*)
+.    if !empty(OS_VERSION:M1[3-9].*)
+CONFIGURE_ARGS+=	--target=x86_64-darwin13-gcc
+.    elif !empty(OS_VERSION:M12.*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin12-gcc
 .    elif !empty(OS_VERSION:M11.*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin11-gcc
@@ -89,10 +93,10 @@ CONFIGURE_ARGS+=	--target=x86-solaris-gcc
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11
-.if ${OPSYS} == "NetBSD"
+.  if ${OPSYS} == "NetBSD"
 # https://bugzilla.mozilla.org/show_bug.cgi?id=982693
 CFLAGS+=	-fno-integrated-as
-.endif
+.  endif
 .endif
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipsel"
