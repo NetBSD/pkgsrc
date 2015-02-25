@@ -1,10 +1,10 @@
-$NetBSD: patch-ca,v 1.21 2014/06/08 23:35:55 joerg Exp $
+$NetBSD: patch-ca,v 1.22 2015/02/25 14:56:45 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
 * Several other changes.
 
---- Configure.orig	2014-05-26 13:34:18.000000000 +0000
+--- Configure.orig	2015-01-10 12:06:37.000000000 +0000
 +++ Configure
 @@ -3372,13 +3372,14 @@ EOM
  			osvers="$3"
@@ -132,16 +132,18 @@ $NetBSD: patch-ca,v 1.21 2014/06/08 23:35:55 joerg Exp $
  		    solaris) # See [perl #66604].
  			    # On Solaris 11, gcc -m64 on amd64
  			    # appears not to understand -G.  gcc versions at
-@@ -8549,7 +8567,7 @@ if "$useshrplib"; then
+@@ -8548,6 +8566,10 @@ if "$useshrplib"; then
+ 	next)
  		# next doesn't like the default...
  		;;
- 	haiku)
--		# Haiku doesn't like the default, either.
++	haiku)
++		# Haiku doesn't like the default, either.
 +		xxx="-Wl,-rpath,$shrpdir"
- 		;;
++		;;
  	hpux*)
  		# hpux doesn't like the default, either.
-@@ -8558,6 +8576,9 @@ if "$useshrplib"; then
+ 		tmp_shrpenv="env LDOPTS=\"+s +b${shrpdir}\""
+@@ -8555,6 +8577,9 @@ if "$useshrplib"; then
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -151,7 +153,7 @@ $NetBSD: patch-ca,v 1.21 2014/06/08 23:35:55 joerg Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9633,6 +9654,13 @@ esac
+@@ -9630,6 +9655,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -165,7 +167,7 @@ $NetBSD: patch-ca,v 1.21 2014/06/08 23:35:55 joerg Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -19366,7 +19394,15 @@ RCAT(Rei,ser)
+@@ -19363,7 +19395,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
