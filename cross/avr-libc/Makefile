@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2015/02/18 21:47:40 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2015/02/25 15:46:52 mef Exp $
 
 DISTNAME=		avr-libc-1.8.1
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
@@ -10,7 +11,7 @@ HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		doxygen>=1.8.8:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.8.9.1.nb1:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
 BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
