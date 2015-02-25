@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2015/02/19 14:43:35 taca Exp $
+# $NetBSD: Makefile,v 1.22 2015/02/25 10:40:44 tnn Exp $
 
-DISTNAME=	bulk-medium-20150219
+DISTNAME=	bulk-medium-20150225
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -89,7 +89,6 @@ BUILD_DEPENDS+=	ruby193-base-[0-9]*:../../lang/ruby193-base
 BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
 BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
-BUILD_DEPENDS+=	openjdk7-bin-[0-9]*:../../lang/openjdk7-bin
 BUILD_DEPENDS+=	python26-[0-9]*:../../lang/python26
 BUILD_DEPENDS+=	python33-[0-9]*:../../lang/python33
 BUILD_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
