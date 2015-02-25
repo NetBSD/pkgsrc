@@ -1,12 +1,12 @@
-$NetBSD: patch-hints_netbsd.sh,v 1.9 2014/08/12 05:41:39 mrg Exp $
+$NetBSD: patch-hints_netbsd.sh,v 1.10 2015/02/25 14:56:45 wiz Exp $
 
 --whole-archive is a linker flag, not a compiler flag
 Better defaults for paths.
 Stop grovelling for functions we don't want to provide (*host*)
 
---- hints/netbsd.sh.orig	2014-08-11 22:30:50.000000000 -0700
-+++ hints/netbsd.sh	2014-08-11 22:32:13.000000000 -0700
-@@ -36,16 +36,6 @@
+--- hints/netbsd.sh.orig	2015-01-17 16:59:58.000000000 +0000
++++ hints/netbsd.sh
+@@ -36,16 +36,6 @@ case "$osvers" in
  		d_dlerror=$define
  		cccdlflags="-DPIC -fPIC $cccdlflags"
  		lddlflags="-shared $lddlflags"
@@ -23,44 +23,7 @@ Stop grovelling for functions we don't want to provide (*host*)
  		rpathflag="-Wl,-rpath,"
  		case "$osvers" in
  		1.[0-5]*)
-@@ -89,7 +79,9 @@
- 	;;
- esac
- case "$osvers" in
--0.9*|1.*|2.*|3.*|4.*|5.*|6.*)
-+0.8*)
-+	;;
-+*)
- 	d_getprotoent_r="$undef"
- 	d_getprotobyname_r="$undef"
- 	d_getprotobynumber_r="$undef"
-@@ -100,6 +92,12 @@
- 	d_getservbyport_r="$undef"
- 	d_setservent_r="$undef"
- 	d_endservent_r="$undef"
-+	d_gethostbyname_r="$undef"
-+	d_gethostbyaddr2_r="$undef"
-+	d_gethostbyaddr_r="$undef"
-+	d_sethostent_r="$undef"
-+	d_gethostent_r="$undef"
-+	d_endhostent_r="$undef"
- 	d_getprotoent_r_proto="0"
- 	d_getprotobyname_r_proto="0"
- 	d_getprotobynumber_r_proto="0"
-@@ -110,6 +108,12 @@
- 	d_getservbyport_r_proto="0"
- 	d_setservent_r_proto="0"
- 	d_endservent_r_proto="0"
-+	d_gethostbyname_r_proto="0"
-+	d_gethostbyaddr2_r_proto="0"
-+	d_gethostbyaddr_r_proto="0"
-+	d_sethostent_r_proto="0"
-+	d_endhostent_r_proto="0"
-+	d_gethostent_r_proto="0"
- 	;;
- esac
- 
-@@ -186,10 +190,12 @@
+@@ -200,10 +190,12 @@ esac
  EOCBU
  
  # Set sensible defaults for NetBSD: look for local software in
