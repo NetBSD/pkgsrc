@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2015/02/25 12:27:13 tnn Exp $
+# $NetBSD: Makefile,v 1.97 2015/02/25 23:40:35 ryoon Exp $
 
 DISTNAME=	pulseaudio-6.0
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ LIBTOOL_REQD=	2.4
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config bash
+USE_TOOLS+=	aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
@@ -103,9 +103,9 @@ PKG_GROUPS+=		${PULSE_GROUP_REALTIME}
 PKG_GROUPS+=		${PULSE_GROUP_ACCESS}
 PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 
-pre-configure: replace-interpreter
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -if
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} intltoolize -f
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
