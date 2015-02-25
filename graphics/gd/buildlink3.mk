@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2014/12/14 09:25:46 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2015/02/25 11:15:01 adam Exp $
 
 BUILDLINK_TREE+=	gd
 
@@ -12,10 +12,10 @@ BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 .include "../../mk/bsd.fast.prefs.mk"
 
 _GD_PRE_LIBVPX_OPTION!= \
-	if ${PKG_INFO} -qe 'gd<=2.1.0nb1'; then			\
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
+	if ${PKG_INFO} -qe 'gd<2.1.0nb1'; then	\
+		${ECHO} yes;			\
+	else					\
+		${ECHO} no;			\
 	fi
 
 pkgbase := gd
