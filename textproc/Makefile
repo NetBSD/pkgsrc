@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.821 2015/02/07 14:57:16 taca Exp $
+# $NetBSD: Makefile,v 1.822 2015/02/25 15:32:50 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -806,6 +806,7 @@ SUBDIR+=	tex-makeindex-doc
 SUBDIR+=	tex-xmltex
 SUBDIR+=	tex-xmltex-doc
 SUBDIR+=	texi2html
+SUBDIR+=	texi2mdoc
 SUBDIR+=	texi2roff
 SUBDIR+=	the_silver_searcher
 SUBDIR+=	tinyxml
