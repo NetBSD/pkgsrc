@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2014/12/21 09:17:11 obache Exp $
-lib/samba/vfs/dirsort.${LIBEXT}
-lib/samba/vfs/syncops.${LIBEXT}
