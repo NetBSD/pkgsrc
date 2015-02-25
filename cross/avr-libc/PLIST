@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/11/10 06:31:45 mef Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/02/25 15:46:52 mef Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -633,6 +633,8 @@ share/doc/avr-libc/avr-libc-user-manual/FAQ.html
 share/doc/avr-libc/avr-libc-user-manual/acks.html
 share/doc/avr-libc/avr-libc-user-manual/alloca_8h_source.html
 share/doc/avr-libc/avr-libc-user-manual/annotated.html
+share/doc/avr-libc/avr-libc-user-manual/arrowdown.png
+share/doc/avr-libc/avr-libc-user-manual/arrowright.png
 share/doc/avr-libc/avr-libc-user-manual/assembler.html
 share/doc/avr-libc/avr-libc-user-manual/assert_8h.html
 share/doc/avr-libc/avr-libc-user-manual/assert_8h_source.html
@@ -678,6 +680,7 @@ share/doc/avr-libc/avr-libc-user-manual/dir_000013.html
 share/doc/avr-libc/avr-libc-user-manual/dir_000014.html
 share/doc/avr-libc/avr-libc-user-manual/dir_000015.html
 share/doc/avr-libc/avr-libc-user-manual/dir_000016.html
+share/doc/avr-libc/avr-libc-user-manual/doc.png
 share/doc/avr-libc/avr-libc-user-manual/dox.css
 share/doc/avr-libc/avr-libc-user-manual/doxygen.png
 share/doc/avr-libc/avr-libc-user-manual/dtoa__conv_8h_source.html
@@ -689,19 +692,8 @@ share/doc/avr-libc/avr-libc-user-manual/errno_8h_source.html
 share/doc/avr-libc/avr-libc-user-manual/eu__dst_8h_source.html
 share/doc/avr-libc/avr-libc-user-manual/fdevopen_8c.html
 share/doc/avr-libc/avr-libc-user-manual/files.html
-share/doc/avr-libc/avr-libc-user-manual/ftv2blank.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2doc.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2folderclosed.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2folderopen.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2lastnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2link.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2mlastnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2mnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2node.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2plastnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2pnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2splitbar.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2vertline.png
+share/doc/avr-libc/avr-libc-user-manual/folderclosed.png
+share/doc/avr-libc/avr-libc-user-manual/folderopen.png
 share/doc/avr-libc/avr-libc-user-manual/functions.html
 share/doc/avr-libc/avr-libc-user-manual/functions_vars.html
 share/doc/avr-libc/avr-libc-user-manual/fuse_8h.html
@@ -850,6 +842,7 @@ share/doc/avr-libc/avr-libc-user-manual/signature_8h.html
 share/doc/avr-libc/avr-libc-user-manual/signature_8h_source.html
 share/doc/avr-libc/avr-libc-user-manual/sleep_8h.html
 share/doc/avr-libc/avr-libc-user-manual/sleep_8h_source.html
+share/doc/avr-libc/avr-libc-user-manual/splitbar.png
 share/doc/avr-libc/avr-libc-user-manual/stdint_8h.html
 share/doc/avr-libc/avr-libc-user-manual/stdint_8h_source.html
 share/doc/avr-libc/avr-libc-user-manual/stdio_8h.html
