@@ -1,4 +1,4 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.1 2015/02/13 23:31:06 jmcneill Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.2 2015/02/25 12:45:59 jmcneill Exp $
 
 Skip non-joystick HID devices, and give joysticks on NetBSD a human readable
 name.
@@ -53,7 +53,7 @@ name.
      if (report_alloc(rep, hw->repdesc, REPORT_INPUT) < 0) {
          goto usberr;
      }
-@@ -414,6 +446,11 @@ SDL_SYS_JoystickOpen(SDL_Joystick * joy,
+@@ -414,9 +446,19 @@ SDL_SYS_JoystickOpen(SDL_Joystick * joy,
          if (hw->axis_map[i] > 0)
              hw->axis_map[i] = joy->naxes++;
  
@@ -65,3 +65,11 @@ name.
    usbend:
      /* The poll blocks the event thread. */
      fcntl(fd, F_SETFL, O_NONBLOCK);
++#ifdef __NetBSD__
++    /* Flush pending events */
++    while (read(joy->hwdata->fd, REP_BUF_DATA(rep), rep->size) == rep->size)
++      ;
++#endif
+ 
+     return (0);
+   usberr:
