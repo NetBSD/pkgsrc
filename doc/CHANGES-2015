@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1045 2015/02/25 21:20:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1046 2015/02/25 22:31:00 tez Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1498,3 +1498,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/texi2mdoc version 0.1.2 [wiz 2015-02-25]
 	Updated devel/autoconf-archive to 2015.02.24 [wiz 2015-02-25]
 	Updated net/calypso to 1.3nb1 [wiz 2015-02-25]
+	Updated security/mit-krb5 to 1.10.7nb5 [tez 2015-02-25]
