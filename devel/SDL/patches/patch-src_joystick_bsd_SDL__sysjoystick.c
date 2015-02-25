@@ -1,4 +1,4 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.3 2015/02/06 01:27:25 jmcneill Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.4 2015/02/25 12:48:34 jmcneill Exp $
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/joystick/bsd/SDL_sysjoystick.c
@@ -64,7 +64,7 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.3 2015/02/06 01:27:25 jmc
  	if (report_alloc(rep, hw->repdesc, REPORT_INPUT) < 0) {
  		goto usberr;
  	}
-@@ -386,6 +420,11 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -386,10 +420,21 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  		if (hw->axis_map[i] > 0)
  			hw->axis_map[i] = joy->naxes++;
  
@@ -76,3 +76,13 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.3 2015/02/06 01:27:25 jmc
  usbend:
  	/* The poll blocks the event thread. */
  	fcntl(fd, F_SETFL, O_NONBLOCK);
+ 
++#ifdef __NetBSD__
++	/* Flush any pending events */
++	while (read(joy->hwdata->fd, REP_BUF_DATA(rep), rep->size) == rep->size)
++		;
++#endif
++
+ 	return (0);
+ usberr:
+ 	close(hw->fd);
