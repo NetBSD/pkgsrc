@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1039 2015/02/25 11:45:27 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1040 2015/02/25 14:56:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/py-docutils to 0.12 [markd 2015-02-24]
 	Removed lang/openjdk7-bin successor lang/openjdk7 [tnn 2015-02-25]
 	Updated www/squidanalyzer to 6.2.1 [adam 2015-02-25]
+	Updated lang/perl5 to 5.20.2 [wiz 2015-02-25]
