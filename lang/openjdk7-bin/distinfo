@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2009/05/18 22:04:28 abs Exp $
-
-SHA1 (jdk1.7.0-20090502-i386-NetBSD_5.0.tar.bz2) = 4eb77e57c4c01c92fba2eefa1c414130b0e63a3b
-RMD160 (jdk1.7.0-20090502-i386-NetBSD_5.0.tar.bz2) = 4d2546abd4e746257d4c269ed9b528fec866f314
-Size (jdk1.7.0-20090502-i386-NetBSD_5.0.tar.bz2) = 53184379 bytes
-SHA1 (jdk1.7.0-20090502-x86_64-NetBSD_5.0.tar.bz2) = b3206b4c85bd97b9c2f52cd2d4c40cadd900f7ea
-RMD160 (jdk1.7.0-20090502-x86_64-NetBSD_5.0.tar.bz2) = dbc7b6f6d85389189518e9d453e6d038e84904db
-Size (jdk1.7.0-20090502-x86_64-NetBSD_5.0.tar.bz2) = 51440396 bytes
