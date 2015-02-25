@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
+$NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
 
 * Don't assume sys/capability.h is guaranteed present on Linux.
 * Fix NetBSD detection for libatomics_ops check.
@@ -8,9 +8,18 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
   file framework will install them in the right place.
 * Avoid hardcoded SDK paths on Darwin.
 
---- configure.ac.orig	2014-02-15 08:33:32.000000000 +0000
+--- configure.ac.orig	2015-02-12 14:10:35.000000000 +0000
 +++ configure.ac
-@@ -130,7 +130,6 @@ AC_MSG_CHECKING([host operating system])
+@@ -21,7 +21,7 @@
+ 
+ AC_PREREQ(2.63)
+ 
+-AC_INIT([pulseaudio],[m4_esyscmd(./git-version-gen .tarball-version)],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
++AC_INIT([pulseaudio],[6.0],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
+ AC_CONFIG_SRCDIR([src/daemon/main.c])
+ AC_CONFIG_MACRO_DIR([m4])
+ AC_CONFIG_HEADERS([config.h])
+@@ -133,7 +133,6 @@ AC_MSG_CHECKING([host operating system])
  case "$host_os" in
      linux*)
          AC_MSG_RESULT([linux])
@@ -18,7 +27,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
          os_is_linux=1
      ;;
      freebsd*)
-@@ -251,6 +250,11 @@ else
+@@ -260,6 +259,11 @@ else
      # HW specific atomic ops stuff
      AC_MSG_CHECKING([architecture for native atomic operations])
      case $host in
@@ -30,7 +39,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
          arm*)
              AC_MSG_RESULT([arm])
              AC_MSG_CHECKING([whether we can use Linux kernel helpers])
-@@ -286,10 +290,6 @@ else
+@@ -295,10 +299,6 @@ else
                  ])
              fi
          ;;
@@ -41,7 +50,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
          *-freebsd*)
              AC_MSG_RESULT([yes])
              need_libatomic_ops=no
-@@ -478,14 +478,14 @@ AS_IF([test "$pulseaudio_cv__Bool" = "ye
+@@ -488,14 +488,14 @@ AS_IF([test "$pulseaudio_cv__Bool" = "ye
  #### Thread support ####
  
  AX_TLS
@@ -58,7 +67,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
      AC_DEFINE([_POSIX_PTHREAD_SEMANTICS], 1, [Needed on Solaris]))
  
  
-@@ -512,15 +512,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
+@@ -522,15 +522,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
  if test "x$os_is_darwin" = "x1" ; then
      AC_MSG_CHECKING([looking for Apple CoreService Framework])
      # How do I check a framework "library" - AC_CHECK_LIB prob. won't work??, just assign LIBS & hope
@@ -76,7 +85,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
      AC_DEFINE([HAVE_CLOCK_GETTIME], 1, [Using clock_gettime() replacement])
      HAVE_BONJOUR=1
  fi
-@@ -988,7 +982,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+@@ -1001,7 +995,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
  
  PA_MACHINE_ID="${sysconfdir}/machine-id"
  AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
@@ -85,7 +94,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
  AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
  	      [Fallback machine-id file])
  
-@@ -1234,9 +1228,9 @@ fi
+@@ -1309,9 +1303,9 @@ fi
  
  PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
  AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
@@ -97,7 +106,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
  AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
  
  PA_BINARY=${bindir}/pulseaudio${EXEEXT}
-@@ -1248,8 +1242,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+@@ -1323,8 +1317,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
  AC_SUBST(PA_SOEXT, [.so])
  AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
  
@@ -109,7 +118,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/01/27 04:04:50 dbj Exp $
  
  #### Mac OSX specific stuff #####
  
-@@ -1265,17 +1260,6 @@ AC_ARG_WITH(mac-sysroot,
+@@ -1340,17 +1335,6 @@ AC_ARG_WITH(mac-sysroot,
      AS_HELP_STRING([--with-mac-sysroot=<path>], [SDK basedir to use as the logical root directory for headers and libraries.]),
      mac_sysroot=$withval, mac_sysroot="/Developer/SDKs/MacOSX10.5.sdk")
  
