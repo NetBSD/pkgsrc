@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1042 2015/02/25 15:32:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1043 2015/02/25 16:52:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/perl5 to 5.20.2 [wiz 2015-02-25]
 	Removed net/samba35 [taca 2015-02-25]
 	Added textproc/texi2mdoc version 0.1.2 [wiz 2015-02-25]
+	Updated devel/autoconf-archive to 2015.02.24 [wiz 2015-02-25]
