@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2057 2015/02/21 12:03:56 mef Exp $
+# $NetBSD: Makefile,v 1.2058 2015/02/26 07:12:08 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -874,7 +874,6 @@ SUBDIR+=	p5-ExtUtils-AutoInstall
 SUBDIR+=	p5-ExtUtils-CBuilder
 SUBDIR+=	p5-ExtUtils-Command
 SUBDIR+=	p5-ExtUtils-Config
-SUBDIR+=	p5-ExtUtils-MakeMaker-Coverage
 SUBDIR+=	p5-ExtUtils-CppGuess
 SUBDIR+=	p5-ExtUtils-Depends
 SUBDIR+=	p5-ExtUtils-F77
@@ -883,6 +882,7 @@ SUBDIR+=	p5-ExtUtils-InstallPaths
 SUBDIR+=	p5-ExtUtils-LibBuilder
 SUBDIR+=	p5-ExtUtils-MakeMaker
 SUBDIR+=	p5-ExtUtils-MakeMaker-CPANfile
+SUBDIR+=	p5-ExtUtils-MakeMaker-Coverage
 SUBDIR+=	p5-ExtUtils-Manifest
 SUBDIR+=	p5-ExtUtils-ModuleMaker
 SUBDIR+=	p5-ExtUtils-ModuleMaker-TT
