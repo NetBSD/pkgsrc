@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1049 2015/02/26 10:15:53 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1050 2015/02/26 15:11:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1504,3 +1504,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django to 1.7.5 [adam 2015-02-26]
 	Updated net/bind99 to 9.9.7 [taca 2015-02-26]
 	Updated net/bind910 to 9.10.2 [taca 2015-02-26]
+	Updated net/p5-Net-Ident to 1.24 [mef 2015-02-26]
+	Updated net/p5-Net-Libdnet to 0.98 [mef 2015-02-26]
+	Updated net/p5-Net-Libdnet6 to 0.27 [mef 2015-02-26]
