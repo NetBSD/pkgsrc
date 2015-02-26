@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1048 2015/02/26 06:28:21 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1049 2015/02/26 10:15:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1502,3 +1502,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/getmail to 4.47.0 [schmonz 2015-02-26]
 	Updated lang/python34 to 3.4.3 [adam 2015-02-26]
 	Updated www/py-django to 1.7.5 [adam 2015-02-26]
+	Updated net/bind99 to 9.9.7 [taca 2015-02-26]
+	Updated net/bind910 to 9.10.2 [taca 2015-02-26]
