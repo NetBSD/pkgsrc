@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/02/26 08:55:58 markd Exp $
+# $NetBSD: Makefile,v 1.23 2015/02/26 08:57:17 markd Exp $
 #
 
 DISTNAME=	varnish-3.0.5
@@ -45,7 +45,7 @@ REPLACE_PYTHON+=	lib/libvcl/generate.py
 REPLACE_PYTHON+=	lib/libvmod_std/vmod.py
 
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
+BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 CONFIGURE_ARGS+=	--with-rst2html=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 
