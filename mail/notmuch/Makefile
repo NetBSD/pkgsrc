@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/12/18 10:52:58 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/26 12:17:04 wiz Exp $
 
 DISTNAME=	notmuch-0.19
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://notmuchmail.org/
 COMMENT=	Mail indexer
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -28,6 +28,12 @@ SUBST_STAGE.gnuld=	pre-configure
 SUBST_FILES.gnuld=	lib/Makefile.local
 SUBST_SED.gnuld=	-e 's/-Wl,--[^ ]*//g'
 .endif
+
+SUBST_CLASSES+=		docutils
+SUBST_SED.docutils+=	-e "s,rst2man.py,rst2man-${PYVERSSUFFIX}.py,"
+SUBST_FILES.docutils+=	configure doc/prerst2man.py
+SUBST_STAGE.docutils=	pre-configure
+SUBST_MESSAGE.docutils=	Fix docutils command names.
 
 LDFLAGS.SunOS+=	-lnsl
 
