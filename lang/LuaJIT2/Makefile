@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/26 13:29:53 imil Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/26 18:40:19 alnsn Exp $
 #
 
 DISTNAME=	LuaJIT-2.0.3
@@ -12,6 +12,6 @@ HOMEPAGE=	http://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake ldconfig
 
 .include "../../mk/bsd.pkg.mk"
