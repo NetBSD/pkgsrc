@@ -502,6 +502,7 @@ mutt-sidebar		Enable the mutt mailbox sidebar patch.
 mutt-smtp		Enable SMTP support in mutt.
 mysql			Enable MySQL support.
 mysqlmanager		Build mysqlmanager.
+mysqlnd			Support for MySQL Native Driver (mainly for php).
 nagios-nrpe-args	Enable argument passing via NRPE (possible security issues).
 nas			Enable usage of the Network Audio System.
 ncurses			Enable ncurses support.
