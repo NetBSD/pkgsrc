@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/02/26 16:05:11 tnn Exp $
 
 DISTNAME=	arj-3.10.22
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arj/}
 
@@ -19,11 +20,6 @@ MAKE_FLAGS+=		INSTALL_DIR=${INSTALL_PROGRAM_DIR:Q}
 
 INSTALL_UNSTRIPPED=	yes # $LOCALBASE/bin/arj must have symbol table
 ARJ_DOCSDIR=		${PREFIX}/share/doc/arj
-
-.include "../../mk/compiler.mk"
-
-_WRAP_EXTRA_ARGS.CC+=	-g -O0
-BUILDLINK_TRANSFORM+=	rm:-s
 
 pre-configure:
 	${CP} -f ${WRKSRC}/environ.c ${WRKSRC}/environ.c.1
