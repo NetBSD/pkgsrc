@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2015/01/03 15:47:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2015/02/26 06:27:06 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -61,6 +61,12 @@ ${PYSITELIB}/django/conf/locale/ar/formats.pyc
 ${PYSITELIB}/django/conf/locale/ar/formats.pyo
 ${PYSITELIB}/django/conf/locale/ast/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/ast/LC_MESSAGES/django.po
+${PYSITELIB}/django/conf/locale/az/__init__.py
+${PYSITELIB}/django/conf/locale/az/__init__.pyc
+${PYSITELIB}/django/conf/locale/az/__init__.pyo
+${PYSITELIB}/django/conf/locale/az/formats.py
+${PYSITELIB}/django/conf/locale/az/formats.pyc
+${PYSITELIB}/django/conf/locale/az/formats.pyo
 ${PYSITELIB}/django/conf/locale/az/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/az/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/be/LC_MESSAGES/django.mo
