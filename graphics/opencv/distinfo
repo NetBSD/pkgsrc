@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.27 2014/07/24 17:16:02 jperkin Exp $
+$NetBSD: distinfo,v 1.28 2015/02/26 17:52:12 tnn Exp $
 
 SHA1 (opencv-2.4.9.zip) = 4f5166e2bd22bd6167cb56dd04f2c6ed68148b2c
 RMD160 (opencv-2.4.9.zip) = 1b0b80ecb50270fa7e4b1dea6f075982b5d15d81
 Size (opencv-2.4.9.zip) = 91684751 bytes
+SHA1 (patch-cmake_OpenCVFindLibsVideo.cmake) = ffe4d102dc9e0bd467dccd8fab02f3cc2d7d7fa3
 SHA1 (patch-modules_contrib_src_inputoutput.cpp) = dc3413182c94b670823d509ab38f21ce36d4f432
 SHA1 (patch-modules_contrib_src_spinimages.cpp) = b3e465700059616be991d597230bc8dc42f15be1
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = c056068c01c417dc262f21c00324da7f86c0cd8e
