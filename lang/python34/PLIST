@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/09 09:15:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/02/26 06:23:06 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -108,8 +108,8 @@ lib/python${PY_VER_SUFFIX}/__future__.py
 lib/python${PY_VER_SUFFIX}/__future__.pyc
 lib/python${PY_VER_SUFFIX}/__future__.pyo
 lib/python${PY_VER_SUFFIX}/__phello__.foo.py
-lib/python${PY_VER_SUFFIX}/__phello__.pyc
-lib/python${PY_VER_SUFFIX}/__phello__.pyo
+lib/python${PY_VER_SUFFIX}/__phello__.foo.pyc
+lib/python${PY_VER_SUFFIX}/__phello__.foo.pyo
 lib/python${PY_VER_SUFFIX}/_bootlocale.py
 lib/python${PY_VER_SUFFIX}/_bootlocale.pyc
 lib/python${PY_VER_SUFFIX}/_bootlocale.pyo
@@ -203,6 +203,9 @@ lib/python${PY_VER_SUFFIX}/asyncio/queues.pyo
 lib/python${PY_VER_SUFFIX}/asyncio/selector_events.py
 lib/python${PY_VER_SUFFIX}/asyncio/selector_events.pyc
 lib/python${PY_VER_SUFFIX}/asyncio/selector_events.pyo
+lib/python${PY_VER_SUFFIX}/asyncio/sslproto.py
+lib/python${PY_VER_SUFFIX}/asyncio/sslproto.pyc
+lib/python${PY_VER_SUFFIX}/asyncio/sslproto.pyo
 lib/python${PY_VER_SUFFIX}/asyncio/streams.py
 lib/python${PY_VER_SUFFIX}/asyncio/streams.pyc
 lib/python${PY_VER_SUFFIX}/asyncio/streams.pyo
@@ -1312,8 +1315,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-1.5.6-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-2.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-6.0.8-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-12.0.5-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1664,9 +1667,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/run.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/tabbedpages.py
 lib/python${PY_VER_SUFFIX}/idlelib/tabbedpages.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/tabbedpages.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/testcode.py
-lib/python${PY_VER_SUFFIX}/idlelib/testcode.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/testcode.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/textView.py
 lib/python${PY_VER_SUFFIX}/idlelib/textView.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/textView.pyo
@@ -2003,6 +2003,9 @@ lib/python${PY_VER_SUFFIX}/lib2to3/refactor.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/__init__.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/__init__.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/__init__.pyo
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/__main__.py
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/__main__.pyc
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/__main__.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/README
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/bom.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/crlf.py
@@ -2775,6 +2778,7 @@ lib/python${PY_VER_SUFFIX}/test/sample_doctest_no_doctests.pyo
 lib/python${PY_VER_SUFFIX}/test/script_helper.py
 lib/python${PY_VER_SUFFIX}/test/script_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/script_helper.pyo
+lib/python${PY_VER_SUFFIX}/test/selfsigned_pythontestdotnet.pem
 lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
@@ -2898,6 +2902,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_queues.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_selector_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_selector_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_selector_events.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.pyo
@@ -4036,6 +4043,9 @@ lib/python${PY_VER_SUFFIX}/test/test_sched.pyo
 lib/python${PY_VER_SUFFIX}/test/test_scope.py
 lib/python${PY_VER_SUFFIX}/test/test_scope.pyc
 lib/python${PY_VER_SUFFIX}/test/test_scope.pyo
+lib/python${PY_VER_SUFFIX}/test/test_script_helper.py
+lib/python${PY_VER_SUFFIX}/test/test_script_helper.pyc
+lib/python${PY_VER_SUFFIX}/test/test_script_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/test_select.py
 lib/python${PY_VER_SUFFIX}/test/test_select.pyc
 lib/python${PY_VER_SUFFIX}/test/test_select.pyo
