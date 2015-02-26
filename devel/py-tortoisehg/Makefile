@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/08 16:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/02/26 09:19:30 markd Exp $
 
 DISTNAME=		tortoisehg-3.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v2
 
 REPLACE_PYTHON+=	thg
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.1.3:../../textproc/py-sphinx
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.8.1:../../devel/py-mercurial
@@ -32,7 +32,7 @@ SUBST_FILES.df=		contrib/thg.desktop
 SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 
 pre-build:
-	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
+	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build${PYVERSSUFFIX} html
 	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
 
 .include "../../lang/python/application.mk"
