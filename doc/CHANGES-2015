@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1050 2015/02/26 15:11:14 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1051 2015/02/26 15:55:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1507,3 +1507,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-Ident to 1.24 [mef 2015-02-26]
 	Updated net/p5-Net-Libdnet to 0.98 [mef 2015-02-26]
 	Updated net/p5-Net-Libdnet6 to 0.27 [mef 2015-02-26]
+	Updated lang/php5-perl to 1.0.1 [taca 2015-02-26]
