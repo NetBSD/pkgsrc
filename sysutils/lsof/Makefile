@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2014/10/09 14:06:58 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2015/02/26 17:31:23 tnn Exp $
 
 DISTNAME=		lsof_4.87
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -56,6 +56,7 @@ REAL_GROUP=		${REAL_ROOT_GROUP}
 REAL_GROUP=		kmem
 CONFIGURE_ENV+=		NETBSD_SYS="${NETBSDSRCDIR}/sys"
 CPPFLAGS+=		-D_KMEMUSER
+CPPFLAGS+=		"-DVFS_PROTOS(fsname)="
 .elif ${OPSYS} == "FreeBSD"
 BUILDLINK_PASSTHRU_DIRS+=	/usr/src/sys
 .elif ${OPSYS} == "SunOS"
