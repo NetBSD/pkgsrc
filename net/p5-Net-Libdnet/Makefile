@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/26 14:36:35 mef Exp $
 #
 
-DISTNAME=	Net-Libdnet-0.96
+DISTNAME=	Net-Libdnet-0.98
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 #MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/
