@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2015/01/25 22:14:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.50 2015/02/26 15:32:47 gdt Exp $
 #
 
 DISTNAME=	quagga-0.99.23.1
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gawk gmake perl
 USE_LIBTOOL=		YES
+
+TEST_TARGET=		check
 
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
