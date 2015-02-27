@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1061 2015/02/25 14:59:29 taca Exp $
+# $NetBSD: Makefile,v 1.1062 2015/02/27 13:09:48 mef Exp $
 #
 
 COMMENT=	Networking tools
@@ -454,6 +454,7 @@ SUBDIR+=	p5-Net-Libdnet6
 SUBDIR+=	p5-Net-MAC
 SUBDIR+=	p5-Net-NBName
 SUBDIR+=	p5-Net-OAuth
+SUBDIR+=	p5-Net-OpenID-Common
 SUBDIR+=	p5-Net-OpenID-Consumer
 SUBDIR+=	p5-Net-Packet
 SUBDIR+=	p5-Net-Pcap
