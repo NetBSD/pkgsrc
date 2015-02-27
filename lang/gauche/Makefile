@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2014/12/03 14:00:57 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2015/02/27 14:35:01 tnn Exp $
 #
 
 DISTNAME=	Gauche-0.9.4
@@ -12,8 +12,6 @@ HOMEPAGE=	http://practical-scheme.net/gauche/
 COMMENT=	R7RS Scheme implementation aimed to be a handy tool for daily works
 
 DEPENDS+=		slib-[0-9]*:../../devel/slib
-
-NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 .include "options.mk"
 
