@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/10/19 20:43:40 markd Exp $
+# $NetBSD: Makefile,v 1.65 2015/02/27 14:35:01 tnn Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX
-
-NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 CONFLICTS+=	teTeX-share-[0-9]*
 DEPENDS+=	tex-SIunits-[0-9]*:../../print/tex-SIunits

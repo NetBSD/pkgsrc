@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/06/29 04:16:51 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2015/02/27 14:35:01 tnn Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
 LICENSE=	radiance-license
-
-NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 USE_TOOLS+=	pax csh:run
 
