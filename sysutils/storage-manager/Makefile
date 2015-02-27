@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/04/06 14:22:41 rodent Exp $
+# $NetBSD: Makefile,v 1.33 2015/02/27 21:42:57 tnn Exp $
 
 DISTNAME=	sm_linux_v314_install
 PKGNAME=	storage-manager-3.14
@@ -18,7 +18,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-BUILD_DEPENDS+=	rpm>=2.5.4:../../misc/rpm
+BUILD_DEPENDS+=		rpm2cpio>=1.3:../../converters/rpm2cpio
 
 USE_TOOLS+=	pax
 USE_LIBTOOL=	yes
@@ -44,7 +44,7 @@ INSTALLATION_DIRS=	etc/rc.d sbin lib/dpt man/man8
 
 do-extract:
 	${MKDIR} ${WRKSRC}
-	cd ${WRKSRC} && rpm2cpio ${DISTDIR}/${DISTNAME}.rpm > ${DISTNAME}.cpio
+	cd ${WRKSRC} && ${PREFIX}/bin/rpm2cpio.pl ${DISTDIR}/${DISTNAME}.rpm > ${DISTNAME}.cpio
 	cd ${WRKSRC} && pax -O -d -rf ${DISTNAME}.cpio
 
 do-patch:
