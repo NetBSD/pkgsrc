@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1064 2015/02/27 13:39:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1065 2015/02/27 15:04:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1521,3 +1521,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/p5-Net-OpenID-Common version 1.19 [mef 2015-02-27]
 	Updated www/p5-Dancer2 to 0.159001 [wen 2015-02-27]
 	Updated devel/mdds to 0.12.0 [wiz 2015-02-27]
+	Updated net/p5-Net-Write to 1.09 [mef 2015-02-27]
+	Updated net/p5-Net-Packet to 3.28 [mef 2015-02-27]
+	Updated net/p5-Net-Server to 2.008 [mef 2015-02-27]
+	Updated net/p5-Net-TFTP to 0.19 [mef 2015-02-27]
+	Updated net/p5-Net-OpenID-Consumer to 1.16 [mef 2015-02-27]
+	Updated net/p5-Net-Telnet to 3.04 [mef 2015-02-27]
+	Updated net/p5-Net-Trac to 0.16 [mef 2015-02-27]
+	Updated net/p5-Net-Server-Coro to 1.3 [mef 2015-02-27]
