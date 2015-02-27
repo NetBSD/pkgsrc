@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2015/02/17 14:18:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2015/02/27 09:47:47 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -180,6 +180,7 @@ lib/calibre/calibre/ebooks/conversion/plugins/chm_input.py
 lib/calibre/calibre/ebooks/conversion/plugins/comic_input.py
 lib/calibre/calibre/ebooks/conversion/plugins/djvu_input.py
 lib/calibre/calibre/ebooks/conversion/plugins/docx_input.py
+lib/calibre/calibre/ebooks/conversion/plugins/docx_output.py
 lib/calibre/calibre/ebooks/conversion/plugins/epub_input.py
 lib/calibre/calibre/ebooks/conversion/plugins/epub_output.py
 lib/calibre/calibre/ebooks/conversion/plugins/fb2_input.py
@@ -242,6 +243,9 @@ lib/calibre/calibre/ebooks/docx/to_html.py
 lib/calibre/calibre/ebooks/docx/toc.py
 lib/calibre/calibre/ebooks/docx/writer/__init__.py
 lib/calibre/calibre/ebooks/docx/writer/container.py
+lib/calibre/calibre/ebooks/docx/writer/from_html.py
+lib/calibre/calibre/ebooks/docx/writer/styles.py
+lib/calibre/calibre/ebooks/docx/writer/utils.py
 lib/calibre/calibre/ebooks/epub/__init__.py
 lib/calibre/calibre/ebooks/epub/cfi/__init__.py
 lib/calibre/calibre/ebooks/epub/cfi/parse.py
@@ -859,6 +863,7 @@ lib/calibre/calibre/gui2/metadata/pdf_covers.py
 lib/calibre/calibre/gui2/metadata/single.py
 lib/calibre/calibre/gui2/metadata/single_download.py
 lib/calibre/calibre/gui2/notify.py
+lib/calibre/calibre/gui2/open_with.py
 lib/calibre/calibre/gui2/preferences/__init__.py
 lib/calibre/calibre/gui2/preferences/adding.py
 lib/calibre/calibre/gui2/preferences/adding_ui.py
@@ -1278,6 +1283,9 @@ lib/calibre/calibre/utils/threadpool.py
 lib/calibre/calibre/utils/titlecase.py
 lib/calibre/calibre/utils/unrar.py
 lib/calibre/calibre/utils/unsmarten.py
+lib/calibre/calibre/utils/winreg/__init__.py
+lib/calibre/calibre/utils/winreg/default_programs.py
+lib/calibre/calibre/utils/winreg/lib.py
 lib/calibre/calibre/utils/wmf/__init__.py
 lib/calibre/calibre/utils/wmf/emf.py
 lib/calibre/calibre/utils/wmf/parse.py
@@ -1300,6 +1308,12 @@ lib/calibre/calibre/web/jsbrowser/browser.py
 lib/calibre/calibre/web/jsbrowser/forms.py
 lib/calibre/calibre/web/jsbrowser/login.py
 lib/calibre/calibre/web/jsbrowser/test.py
+lib/calibre/css_selectors/__init__.py
+lib/calibre/css_selectors/errors.py
+lib/calibre/css_selectors/ordered_set.py
+lib/calibre/css_selectors/parse.py
+lib/calibre/css_selectors/select.py
+lib/calibre/css_selectors/tests.py
 lib/calibre/odf/__init__.py
 lib/calibre/odf/anim.py
 lib/calibre/odf/attrconverters.py
@@ -1866,8 +1880,6 @@ share/calibre/recipes/business_insider.recipe
 share/calibre/recipes/business_spectator.recipe
 share/calibre/recipes/business_standard.recipe
 share/calibre/recipes/businessworldin.recipe
-share/calibre/recipes/bwmagazine.recipe
-share/calibre/recipes/bwmagazine2.recipe
 share/calibre/recipes/cacm.recipe
 share/calibre/recipes/cafcaf_dergisi.recipe
 share/calibre/recipes/caijing.recipe
