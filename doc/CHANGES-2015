@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1063 2015/02/27 13:27:07 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1064 2015/02/27 13:39:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1520,3 +1520,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/mopher to 0.5.3 [gdt 2015-02-27]
 	Added net/p5-Net-OpenID-Common version 1.19 [mef 2015-02-27]
 	Updated www/p5-Dancer2 to 0.159001 [wen 2015-02-27]
+	Updated devel/mdds to 0.12.0 [wiz 2015-02-27]
