@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.4 2011/04/08 22:56:12 morr Exp $
+$NetBSD: patch-ak,v 1.5 2015/02/27 20:14:07 tnn Exp $
 
 --- gl/mountlist.c.orig	2010-07-27 20:47:15.000000000 +0000
 +++ gl/mountlist.c
@@ -39,7 +39,7 @@ $NetBSD: patch-ak,v 1.4 2011/04/08 22:56:12 morr Exp $
  # endif
  
  static char *
-+#ifdef STAT_STATVFS
++#if defined(STAT_STATVFS) && !defined(__FreeBSD__)
 +fsp_to_string (const struct statvfs *fsp)
 +#else
  fsp_to_string (const struct statfs *fsp)
@@ -54,7 +54,7 @@ $NetBSD: patch-ak,v 1.4 2011/04/08 22:56:12 morr Exp $
    {
      int numsys, counter;
      size_t bufsize;
-+#ifdef STAT_STATVFS
++#if defined(STAT_STATVFS) && !defined(__FreeBSD__)
 +    struct statvfs *stats;
 +#else
      struct statfs *stats;
