@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/09/25 10:56:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2015/02/27 21:42:57 tnn Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.rpm
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 fonts for KSC 5601 standard
 
-BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
+BUILD_DEPENDS+=	rpm2cpio>=1.3:../../converters/rpm2cpio
 
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
@@ -31,7 +31,7 @@ INSTALLATION_DIRS+= ${FONTDIR}
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${.CURDIR}/../../fonts/ko-x11fonts/files/Makefile ${WRKSRC}
-	(cd ${WRKSRC}; rpm2cpio ${_DISTDIR}/${DISTFILES} | \
+	(cd ${WRKSRC}; ${PREFIX}/bin/rpm2cpio.pl ${_DISTDIR}/${DISTFILES} | \
 	    cpio -id *.pcf.Z)
 	(cd ${WRKSRC}; for i in ${MIZI_PCF}; do \
 		${GUNZIP_CMD} -c usr/lib/X11/fonts/misc/$$i.Z > $$i; \
