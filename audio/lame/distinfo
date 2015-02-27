@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2013/10/10 10:49:30 roy Exp $
+$NetBSD: distinfo,v 1.25 2015/02/27 19:49:16 snj Exp $
 
 SHA1 (lame-3.99.5.tar.gz) = 03a0bfa85713adcc6b3383c12e2cc68a9cfbf4c4
 RMD160 (lame-3.99.5.tar.gz) = 8a0990af918b635cc79eb27a3beafc6c0ee13a9f
@@ -7,3 +7,6 @@ SHA1 (patch-ab) = e356b7614cfd4a2012f66926fe58a717dcc130f3
 SHA1 (patch-ad) = fa14817f765a61f046a96a1b556e2c8203fc27ad
 SHA1 (patch-configure) = bc2243e364a2a6397cc0d09129969274b88f6b98
 SHA1 (patch-configure.in) = 6ca01d610b94a402f2c2b351aa901a5072f3a0cb
+SHA1 (patch-frontend_get__audio.c) = c6df7a003d07e916c5129d45322c708f09b524e8
+SHA1 (patch-libmp3lame_lame.c) = bdc403ff8a1a7d5a6082b4d214fd43df99b1344e
+SHA1 (patch-libmp3lame_util.c) = b327113542f6ea7c9ec6af96a63635275335d364
