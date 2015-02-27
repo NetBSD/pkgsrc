@@ -1,0 +1,4 @@
+The Consumer and Server implementations share a few libraries which live
+with this module. This module is here largely to hold the version number
+and this documentation, though it also incorporates some utility functions
+inherited from previous versions of Net::OpenID::Consumer.
