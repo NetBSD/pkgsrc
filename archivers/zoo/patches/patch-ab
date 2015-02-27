@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2015/01/19 00:40:35 wiedi Exp $
+$NetBSD: patch-ab,v 1.8 2015/02/27 09:31:47 wiz Exp $
 
 - use standard headers
 - use standard macros for seeking
@@ -6,6 +6,7 @@ $NetBSD: patch-ab,v 1.7 2015/01/19 00:40:35 wiedi Exp $
 - use off_t
 - supply missing return value
 - on sunos ignore unsupported tm_gmtoff
+- include nixtime.i early enough, before the first call to time()
 
 --- bsd.c.orig	1993-05-01 04:21:53.000000000 +0000
 +++ bsd.c
@@ -18,7 +19,25 @@ $NetBSD: patch-ab,v 1.7 2015/01/19 00:40:35 wiedi Exp $
  #endif
  
  long ftell();
-@@ -74,24 +74,15 @@ long gettz()
+@@ -50,6 +50,17 @@ Date and time functions are standard UNI
+ #include <sys/stat.h>
+ #include <sys/time.h>
+ 
++/* Standard UNIX-compatible time routines */
++#include "nixtime.i"
++
++/* Standard UNIX-specific file attribute routines */
++#include "nixmode.i"
++
++#include <unistd.h>
++#ifndef SEEK_CUR
++# define  SEEK_CUR    1
++#endif
++
+ /* Function isadir() returns 1 if the supplied handle is a directory, 
+ else it returns 0.  
+ */
+@@ -74,46 +85,27 @@ long gettz()
  #define SEC_IN_DAY	(24L * 60L * 60L)
  #define INV_VALUE		(SEC_IN_DAY + 1L)
  	static long retval = INV_VALUE;	     /* cache, init to impossible value */
@@ -46,15 +65,18 @@ $NetBSD: patch-ab,v 1.7 2015/01/19 00:40:35 wiedi Exp $
  	retval = -tm->tm_gmtoff;
  #endif
  	return retval;
-@@ -103,6 +94,7 @@ long gettz()
- /* Standard UNIX-specific file attribute routines */
- #include "nixmode.i"
+ }
  
-+#include <unistd.h>
- #ifndef SEEK_CUR
- # define  SEEK_CUR    1
- #endif
-@@ -110,10 +102,10 @@ long gettz()
+-/* Standard UNIX-compatible time routines */
+-#include "nixtime.i"
+-
+-/* Standard UNIX-specific file attribute routines */
+-#include "nixmode.i"
+-
+-#ifndef SEEK_CUR
+-# define  SEEK_CUR    1
+-#endif
+-
  /* Truncate a file. */
  int zootrunc(f) FILE *f;
  {
