@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2059 2015/02/27 04:24:48 manu Exp $
+# $NetBSD: Makefile,v 1.2060 2015/02/27 12:11:59 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -1691,6 +1691,7 @@ SUBDIR+=	qof
 SUBDIR+=	qore-uuid-module
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
+SUBDIR+=	radare2
 SUBDIR+=	ragel
 SUBDIR+=	rainbow-delimiters-el
 SUBDIR+=	rapidsvn
