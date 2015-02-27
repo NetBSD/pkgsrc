@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2015/02/04 18:01:25 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.26 2015/02/27 13:39:41 wiz Exp $
 
-DISTNAME=	cb4207cb913c7a5a8bfa5b91234618ee-mdds_0.11.2
-PKGNAME=	${DISTNAME:C/[0-9a-f]*-//:S/_/-/}
+DISTNAME=	mdds_0.12.0
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://dev-www.libreoffice.org/src/
+MASTER_SITES=	http://kohei.us/files/mdds/src/
 EXTRACT_SUFX=	.tar.bz2
 EXTRACT_USING=	gtar
 
@@ -12,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/multidimalgorithm/
 COMMENT=	Collection of multi-dimensional data structure and indexing algorithms
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/${DISTNAME:C/[0-9a-f]*-//}
 
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
