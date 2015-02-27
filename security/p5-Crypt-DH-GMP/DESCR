@@ -1,0 +1,2 @@
+Crypt::DH::GMP is a (somewhat) portable replacement to Crypt::DH,
+implemented mostly in C.
