@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1052 2015/02/27 00:46:57 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1053 2015/02/27 01:35:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1509,3 +1509,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-Libdnet6 to 0.27 [mef 2015-02-26]
 	Updated lang/php5-perl to 1.0.1 [taca 2015-02-26]
 	Updated math/p5-Math-GMP to 2.07 [mef 2015-02-27]
+	Added security/p5-Crypt-DH-GMP version 0.00012 [mef 2015-02-27]
