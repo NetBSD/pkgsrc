@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/05/29 23:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2015/02/27 14:35:02 tnn Exp $
 
 .include "version.mk"
 
@@ -14,8 +14,6 @@ COMMENT=	Perl web server and CGI for Unix system administration
 LICENSE=        modified-bsd
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
-
-NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	# empty

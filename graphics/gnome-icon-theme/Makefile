@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2014/11/01 17:27:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.98 2015/02/27 14:35:01 tnn Exp $
 
 DISTNAME=		gnome-icon-theme-3.12.0
 CATEGORIES=		graphics gnome
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
 LICENSE=		cc-by-sa-v3.0 AND gnu-lgpl-v3
-
-NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 TOOL_DEPENDS+=		librsvg>=2.22.3:../../graphics/librsvg
 
