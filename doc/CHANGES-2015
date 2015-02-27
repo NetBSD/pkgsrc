@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1054 2015/02/27 02:55:08 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1055 2015/02/27 04:24:48 manu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1511,3 +1511,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/p5-Math-GMP to 2.07 [mef 2015-02-27]
 	Added security/p5-Crypt-DH-GMP version 0.00012 [mef 2015-02-27]
 	Updated www/p5-Mojolicious to 6.0 [wen 2015-02-27]
+	Added devel/cmocka version 1.0.0.0 [manu 2015-02-27]
