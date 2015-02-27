@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.541 2015/02/12 05:10:16 jnemeth Exp $
+# $NetBSD: Makefile,v 1.542 2015/02/27 01:35:28 mef Exp $
 #
 
 COMMENT=	Security tools
@@ -227,6 +227,7 @@ SUBDIR+=	p5-Crypt-CipherSaber
 SUBDIR+=	p5-Crypt-DES
 SUBDIR+=	p5-Crypt-DES_EDE3
 SUBDIR+=	p5-Crypt-DH
+SUBDIR+=	p5-Crypt-DH-GMP
 SUBDIR+=	p5-Crypt-DSA
 SUBDIR+=	p5-Crypt-ECB
 SUBDIR+=	p5-Crypt-Eksblowfish
