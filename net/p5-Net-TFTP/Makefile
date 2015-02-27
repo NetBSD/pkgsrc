@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 13:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/02/27 14:01:28 mef Exp $
 
-DISTNAME=	Net-TFTP-0.18
+DISTNAME=	Net-TFTP-0.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~gbarr/Net-TFTP-0.17/
 COMMENT=	Perl5 module for TFTP transfers
 LICENSE=	${PERL5_LICENSE}
+
+DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
 
 PERL5_PACKLIST=		auto/Net/TFTP/.packlist
 
