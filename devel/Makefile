@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2058 2015/02/26 07:12:08 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2059 2015/02/27 04:24:48 manu Exp $
 #
 
 COMMENT=	Development utilities
@@ -121,6 +121,7 @@ SUBDIR+=	clisp-zlib
 SUBDIR+=	cmake
 SUBDIR+=	cmake-fedora
 SUBDIR+=	cmake-mode
+SUBDIR+=	cmocka
 SUBDIR+=	cmockery2
 SUBDIR+=	cmph
 SUBDIR+=	coccinelle

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/27 04:23:43 manu Exp $
+
+SHA1 (cmocka-1.0.0.tar.xz) = c1b6bdab164b2d54c26edacef9b9308e4de154f9
+RMD160 (cmocka-1.0.0.tar.xz) = e8e79a9cd50aff9af814d0804066c92d53f1cc88
+Size (cmocka-1.0.0.tar.xz) = 184016 bytes
