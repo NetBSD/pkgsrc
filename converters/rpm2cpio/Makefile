@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:35:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/02/27 21:30:50 tnn Exp $
 
-DISTNAME=	rpm2cpio
-PKGNAME=	rpm2cpio-1.1
-PKGREVISION=	4
+DISTNAME=	rpm2cpio-1.3
 CATEGORIES=	converters
-MASTER_SITES=	http://www.iagora.com/~espel/
+MASTER_SITES=	-https://svnweb.freebsd.org/ports/head/archivers/rpm2cpio/files/rpm2cpio?revision=340851&view=co
 EXTRACT_SUFX=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.iagora.com/~espel/hacks.html
+HOMEPAGE=	https://svnweb.freebsd.org/ports/head/archivers/rpm2cpio/
 COMMENT=	Convert .rpm files for extraction with cpio, needs just perl
 
 WRKSRC=		${WRKDIR}
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	rpm2cpio
+REPLACE_PERL=	${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	bin
 
@@ -24,6 +21,6 @@ do-build:
 
 # conflicts with rpm package, which also contains a rpm2cpio
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/rpm2cpio ${DESTDIR}${PREFIX}/bin/rpm2cpio.pl
+	${INSTALL_SCRIPT} ${WRKDIR}/${PKGNAME_NOREV} ${DESTDIR}${PREFIX}/bin/rpm2cpio.pl
 
 .include "../../mk/bsd.pkg.mk"
