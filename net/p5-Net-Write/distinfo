@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/03/08 12:37:22 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/02/27 13:45:43 mef Exp $
 
-SHA1 (Net-Write-1.07.tar.gz) = b04b8208f12a91cab8e8b0db8e410888b1b0066e
-RMD160 (Net-Write-1.07.tar.gz) = 23c64c1d21af3a1c6fa2957419c860727c3b5449
-Size (Net-Write-1.07.tar.gz) = 9228 bytes
+SHA1 (Net-Write-1.09.tar.gz) = dd54f779bbf19dbad6e361814b406917fdea951e
+RMD160 (Net-Write-1.09.tar.gz) = 8ae36266c7ed95d7e31b0dfe6b9b053abaef655c
+Size (Net-Write-1.09.tar.gz) = 13216 bytes
