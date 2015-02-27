@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1056 2015/02/27 08:31:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1057 2015/02/27 09:47:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1513,3 +1513,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Mojolicious to 6.0 [wen 2015-02-27]
 	Added devel/cmocka version 1.0.0.0 [manu 2015-02-27]
 	Updated www/p5-URI to 1.67 [wiz 2015-02-27]
+	Updated misc/calibre to 2.20.0 [wiz 2015-02-27]
