@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/27 01:32:49 mef Exp $
+
+SHA1 (Crypt-DH-GMP-0.00012.tar.gz) = 0f512464b61d7a0ebdbeb56425ba62a4ea82f9c8
+RMD160 (Crypt-DH-GMP-0.00012.tar.gz) = d7ca76d9d11804d041b9810e2c11907019db6f2c
+Size (Crypt-DH-GMP-0.00012.tar.gz) = 34421 bytes
