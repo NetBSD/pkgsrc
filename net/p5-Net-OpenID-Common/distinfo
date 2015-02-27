@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/27 13:05:59 mef Exp $
+
+SHA1 (Net-OpenID-Common-1.19.tar.gz) = 7ccbdc1588e4cb1aaa28aae0e37d0da3c10586cd
+RMD160 (Net-OpenID-Common-1.19.tar.gz) = 4c03f5781845c15adfa0350a5e4a4fef9599bec1
+Size (Net-OpenID-Common-1.19.tar.gz) = 28243 bytes
