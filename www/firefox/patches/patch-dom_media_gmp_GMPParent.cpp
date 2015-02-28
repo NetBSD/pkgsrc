@@ -1,8 +1,8 @@
-$NetBSD: patch-content_media_gmp_GMPParent.cpp,v 1.2 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-dom_media_gmp_GMPParent.cpp,v 1.1 2015/02/28 04:30:55 ryoon Exp $
 
---- content/media/gmp/GMPParent.cpp.orig	2014-11-21 03:37:24.000000000 +0000
-+++ content/media/gmp/GMPParent.cpp
-@@ -90,23 +90,16 @@ GMPParent::Init(GeckoMediaPluginService 
+--- dom/media/gmp/GMPParent.cpp.orig	2015-02-17 21:40:44.000000000 +0000
++++ dom/media/gmp/GMPParent.cpp
+@@ -96,23 +96,16 @@ GMPParent::Init(GeckoMediaPluginService 
    mService = aService;
    mDirectory = aPluginDir;
  
