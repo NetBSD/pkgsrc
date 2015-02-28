@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.4 2008/06/18 21:37:31 dmcmahill Exp $
+$NetBSD: README.Linux,v 1.5 2015/02/28 18:50:46 prlw1 Exp $
 
 Please read the general README file as well.
 
@@ -13,7 +13,7 @@ grep: /lib/libattr.la: No such file or directory
 /usr/pkgsrc/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/sed: can't read /lib/libattr.la: No such file or directory
 libtool: link: `/lib/libattr.la' is not a valid libtool archive
 
-The soltion is to copy /usr/lib/libattr.la to /lib/libattr.la with:
+The solution is to copy /usr/lib/libattr.la to /lib/libattr.la with:
 
 cp -p /usr/lib/libattr.la /lib
 
