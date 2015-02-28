@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/12/04 04:55:13 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/02/28 23:47:03 joerg Exp $
 #
 
 DISTNAME=		xdaliclock-2.41
@@ -12,6 +12,9 @@ LICENSE=		mit
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/X11
 GNU_CONFIGURE=		yes
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/config.sub
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALL_MAKE_FLAGS+=	install_prefix=${DESTDIR}
