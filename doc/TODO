@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14168 2015/02/28 10:24:54 wiz Exp $
+$NetBSD: TODO,v 1.14169 2015/02/28 10:26:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -711,7 +711,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ldapsdk-6.0.7
 	o lftp-4.5.2
 	o lgeneral-1.2.3
-	o libXfont-1.5.0 [will break modular-xorg-server<1.16, so update together]
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.9
 	o libextractor-1.2 [requires shm_open()]
