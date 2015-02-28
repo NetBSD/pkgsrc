@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/06/12 13:34:14 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/28 23:47:25 joerg Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
@@ -33,6 +33,7 @@ BUILD_DEFS+=	JK_ENABLE_JNI
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+OVERRIDE_DIRDEPTH=	3
 
 SUBST_CLASSES+=		jk-lt
 SUBST_STAGE.jk-lt=	post-configure
