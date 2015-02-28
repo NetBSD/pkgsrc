@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1066 2015/02/27 21:35:14 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1067 2015/02/28 00:13:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1530,3 +1530,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-Trac to 0.16 [mef 2015-02-27]
 	Updated net/p5-Net-Server-Coro to 1.3 [mef 2015-02-27]
 	Updated converters/rpm2cpio to 1.3 [tnn 2015-02-27]
+	Updated security/gnupg to 1.4.19 [wiz 2015-02-28]
