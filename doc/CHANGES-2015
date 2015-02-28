@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1081 2015/02/28 15:12:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1082 2015/02/28 19:22:41 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-RadiusPerl to 0.22 [mef 2015-02-28]
 	Updated net/p5-Net-Z3950-ZOOM to 1.30 [mef 2015-02-28]
 	Updated net/p5-Net-XMPP to 1.05 [mef 2015-02-28]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.442 [tsutsui 2015-02-28]
