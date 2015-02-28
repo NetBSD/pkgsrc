@@ -1,8 +1,8 @@
-$NetBSD: patch-content_media_gmp_GMPChild.cpp,v 1.2 2015/01/16 22:42:09 ryoon Exp $
+$NetBSD: patch-dom_media_gmp_GMPChild.cpp,v 1.1 2015/02/28 04:30:55 ryoon Exp $
 
---- content/media/gmp/GMPChild.cpp.orig	2015-01-09 04:38:19.000000000 +0000
-+++ content/media/gmp/GMPChild.cpp
-@@ -91,21 +91,14 @@ GetFileBase(const std::string& aPluginPa
+--- dom/media/gmp/GMPChild.cpp.orig	2015-02-17 21:40:44.000000000 +0000
++++ dom/media/gmp/GMPChild.cpp
+@@ -82,21 +82,14 @@ GetFileBase(const std::string& aPluginPa
    }
  #endif
  
