@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1073 2015/02/28 10:24:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1074 2015/02/28 10:26:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1537,3 +1537,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.1.2 [ryoon 2015-02-28]
 	Updated devel/cvsps3 to 3.13 [ryoon 2015-02-28]
 	Updated devel/libsigc++ to 2.4.1 [wiz 2015-02-28]
+	Updated x11/libXfont to 1.5.0 [wiz 2015-02-28]
