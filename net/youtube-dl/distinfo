@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.48 2015/01/10 20:38:31 wiz Exp $
+$NetBSD: distinfo,v 1.49 2015/02/28 13:39:17 tron Exp $
 
-SHA1 (youtube-dl-2015.01.10.2.tar.gz) = 159ba82a551ef1fb7f75c522ad9a4c033d7d8425
-RMD160 (youtube-dl-2015.01.10.2.tar.gz) = 954d14655d789eb3a652aa4a64e7e706ec785117
-Size (youtube-dl-2015.01.10.2.tar.gz) = 1270382 bytes
+SHA1 (youtube-dl-2015.02.26.2.tar.gz) = bc134c5ac262c9323bc6029d5877a7cf8c648a12
+RMD160 (youtube-dl-2015.02.26.2.tar.gz) = be099880ba0b7f3365c443d1739ebc316593c51d
+Size (youtube-dl-2015.02.26.2.tar.gz) = 1395584 bytes
 SHA1 (patch-Makefile) = 94556225641b6cd614bb0c28c4e7d9421550e49b
