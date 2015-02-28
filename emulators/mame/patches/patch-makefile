@@ -1,12 +1,9 @@
-$NetBSD: patch-makefile,v 1.9 2015/01/29 21:48:15 wiz Exp $
+$NetBSD: patch-makefile,v 1.10 2015/02/28 11:58:53 wiz Exp $
 
 Link against pkgsrc versions of expat, zlib, flac, jpeg, and
 sqlite3, and add appropriate linker search paths.
 
-*nix: Fixed linking tools against system libraries
-https://github.com/mamedev/mame/commit/b55b45a5a99b8bce694b7ed3cd2d4a00d790f6ae
-
---- makefile.orig	2015-01-29 21:11:10.000000000 +0000
+--- makefile.orig	2015-02-28 10:39:06.000000000 +0000
 +++ makefile
 @@ -227,19 +227,19 @@ endif
  # BIGENDIAN = 1
@@ -33,7 +30,7 @@ https://github.com/mamedev/mame/commit/b55b45a5a99b8bce694b7ed3cd2d4a00d790f6ae
  
  # uncomment next line to build PortMidi as part of MAME/MESS build
  BUILD_MIDILIB = 1
-@@ -739,7 +739,7 @@ DRIVLISTOBJ = $(OBJ)/$(TARGET)/$(SUBTARG
+@@ -742,7 +742,7 @@ DRIVLISTOBJ = $(OBJ)/$(TARGET)/$(SUBTARG
  #-------------------------------------------------
  
  # start with an empty set of libs
@@ -42,19 +39,3 @@ https://github.com/mamedev/mame/commit/b55b45a5a99b8bce694b7ed3cd2d4a00d790f6ae
  
  # add expat XML library
  ifeq ($(BUILD_EXPAT),1)
-@@ -756,6 +756,7 @@ INCPATH += -I$(3RDPARTY)/zlib
- ZLIB = $(OBJ)/libz.a
- else
- LIBS += -lz
-+BASELIBS += -lz
- ZLIB =
- endif
- 
-@@ -766,6 +767,7 @@ FLAC_LIB = $(OBJ)/libflac.a
- # $(OBJ)/libflac++.a
- else
- LIBS += -lFLAC
-+BASELIBS += -lFLAC
- FLAC_LIB =
- endif
- 
