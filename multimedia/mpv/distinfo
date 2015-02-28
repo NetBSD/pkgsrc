@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/02/19 09:16:15 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/02/28 11:53:31 adam Exp $
 
-SHA1 (mpv-0.8.0.tar.gz) = 8185c54989a92d7e622850ef869180cf3e239d2f
-RMD160 (mpv-0.8.0.tar.gz) = 19e3a861d70cca9668313a069442f5254f7b63e9
-Size (mpv-0.8.0.tar.gz) = 2661713 bytes
-SHA1 (patch-waftools_waf__customizations.py) = 122b3f797f47c64e58f4d221fad291f8d53d24b6
+SHA1 (mpv-0.8.2.tar.gz) = 2b9f7978341924d0d1763de3f1d1c9dfba5d4ac0
+RMD160 (mpv-0.8.2.tar.gz) = 69d7091cf4264afef2e074ea5eefe236810e95f9
+Size (mpv-0.8.2.tar.gz) = 2663666 bytes
