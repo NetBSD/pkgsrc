@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2015/02/28 04:30:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.197 2015/02/28 22:17:59 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	36.0
@@ -10,6 +10,8 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 WRKSRC=		${WRKDIR}/mozilla-release
 #WRKSRC=		${WRKDIR}/mozilla-beta
