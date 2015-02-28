@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2015/02/25 23:40:35 ryoon Exp $
+$NetBSD: distinfo,v 1.51 2015/02/28 23:41:58 joerg Exp $
 
 SHA1 (pulseaudio-6.0.tar.xz) = 3607d523fb270d9b68463de30f5d9e17957f1088
 RMD160 (pulseaudio-6.0.tar.xz) = a3f96cabc2872646c34ba581d6044dc4a6513fd9
@@ -11,6 +11,7 @@ SHA1 (patch-src_daemon_caps.c) = e819c26cd3d91d93ae5877725ed6a1b59183d89a
 SHA1 (patch-src_daemon_main.c) = 8cdabd3c631cc5e7c7f370e364d9511b23f88668
 SHA1 (patch-src_modules_module-detect.c) = 25c803ee2d5addf9dbf522d81bd422dc201d4550
 SHA1 (patch-src_modules_oss_module-oss.c) = 399ac178ae832619253ce8dd985edbed23db86e7
+SHA1 (patch-src_pulsecore_mix__neon.c) = 6f6d33d38024d65045d637d48276e1ba92b81342
 SHA1 (patch-src_pulsecore_sample-util.h) = b6bd83cfdc1c337453d9a728f07205a2cf0af831
 SHA1 (patch-src_pulsecore_svolume__mmx.c) = c34d153e3bfdb812eb7bd70fa330a9ec674c2dc2
 SHA1 (patch-src_pulsecore_svolume__sse.c) = 47c97c1af947133f2a7b330aed38792bb0e7ef09
