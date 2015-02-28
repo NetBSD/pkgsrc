@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1079 2015/02/28 14:40:54 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1080 2015/02/28 14:53:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1544,3 +1544,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/youtube-dl to 20150226.2 [tron 2015-02-28]
 	Updated net/p5-RT-Client-REST to 0.49 [mef 2015-02-28]
 	Updated net/p5-RadiusPerl to 0.22 [mef 2015-02-28]
+	Updated net/p5-Net-Z3950-ZOOM to 1.30 [mef 2015-02-28]
