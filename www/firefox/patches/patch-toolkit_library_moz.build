@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.2 2015/01/30 07:32:24 pho Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.3 2015/02/28 04:30:55 ryoon Exp $
 
 MOZ_GSTREAMER:
   GSTREAMER_LIBS are linked to libxul on Darwin, while they are
@@ -6,9 +6,9 @@ MOZ_GSTREAMER:
   toolkit being cocoa isn't relevant at all. It's Darwin that needs
   the special handling, not Cocoa.
 
---- toolkit/library/moz.build.orig	2015-01-23 06:00:07.000000000 +0000
+--- toolkit/library/moz.build.orig	2015-02-17 21:40:48.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -219,6 +219,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
+@@ -214,6 +214,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
      ]
  
  OS_LIBS += CONFIG['MOZ_CAIRO_OSLIBS']
@@ -16,7 +16,7 @@ MOZ_GSTREAMER:
  OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
  
  if CONFIG['MOZ_NATIVE_JPEG']:
-@@ -230,6 +231,27 @@ if CONFIG['MOZ_NATIVE_PNG']:
+@@ -225,6 +226,27 @@ if CONFIG['MOZ_NATIVE_PNG']:
  if CONFIG['MOZ_NATIVE_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -44,23 +44,24 @@ MOZ_GSTREAMER:
  if CONFIG['MOZ_NATIVE_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -239,6 +261,15 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
+@@ -234,8 +256,14 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  
-+if CONFIG['MOZ_OSS']:
-+    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
-+
+-if CONFIG['MOZ_ALSA']:
+-    OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
 +if CONFIG['MOZ_NATIVE_GRAPHITE2']:
 +    OS_LIBS += CONFIG['MOZ_GRAPHITE2_LIBS']
 +
 +if CONFIG['MOZ_NATIVE_HARFBUZZ']:
 +    OS_LIBS += CONFIG['MOZ_HARFBUZZ_LIBS']
 +
- if CONFIG['MOZ_ALSA']:
-     OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
++if CONFIG['MOZ_OSS']:
++    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
  
-@@ -369,7 +400,7 @@ if CONFIG['OS_ARCH'] == 'WINNT':
+ if CONFIG['HAVE_CLOCK_MONOTONIC']:
+     OS_LIBS += CONFIG['REALTIME_LIBS']
+@@ -364,7 +392,7 @@ if CONFIG['OS_ARCH'] == 'WINNT':
  if CONFIG['MOZ_ENABLE_QT']:
      OS_LIBS += CONFIG['XEXT_LIBS']
  

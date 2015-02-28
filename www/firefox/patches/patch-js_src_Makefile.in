@@ -1,6 +1,6 @@
-$NetBSD: patch-js_src_Makefile.in,v 1.10 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-js_src_Makefile.in,v 1.11 2015/02/28 04:30:55 ryoon Exp $
 
---- js/src/Makefile.in.orig	2014-11-21 03:37:33.000000000 +0000
+--- js/src/Makefile.in.orig	2015-02-17 21:40:38.000000000 +0000
 +++ js/src/Makefile.in
 @@ -16,9 +16,6 @@ TOPLEVEL_BUILD := 1
  
@@ -12,12 +12,3 @@ $NetBSD: patch-js_src_Makefile.in,v 1.10 2014/12/01 18:11:14 ryoon Exp $
  ifdef JS_HAS_CTYPES
  ifdef MOZ_NATIVE_FFI
  LOCAL_INCLUDES = $(MOZ_FFI_CFLAGS)
-@@ -295,7 +292,7 @@ endif
- 
- ifdef HAVE_DTRACE
- $(CURDIR)/javascript-trace.h: $(srcdir)/devtools/javascript-trace.d
--	dtrace -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
-+	dtrace -x nolibs -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
- 	sed -e 's/if _DTRACE_VERSION/ifdef INCLUDE_MOZILLA_DTRACE/' \
- 	    -e '/const/!s/char \*/const char */g' \
- 	    javascript-trace.h.in > javascript-trace.h

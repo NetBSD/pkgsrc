@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libstagefright_frameworks_av_media_libstagefright_foundation_AString.cpp,v 1.1 2014/10/15 13:43:32 ryoon Exp $
+$NetBSD: patch-media_libstagefright_frameworks_av_media_libstagefright_foundation_AString.cpp,v 1.2 2015/02/28 04:30:55 ryoon Exp $
 
---- media/libstagefright/frameworks/av/media/libstagefright/foundation/AString.cpp.orig	2014-10-11 09:06:39.000000000 +0000
+--- media/libstagefright/frameworks/av/media/libstagefright/foundation/AString.cpp.orig	2015-02-23 07:39:35.000000000 +0000
 +++ media/libstagefright/frameworks/av/media/libstagefright/foundation/AString.cpp
-@@ -23,6 +23,13 @@
+@@ -23,6 +23,17 @@
  #include "ADebug.h"
  #include "AString.h"
  
@@ -11,6 +11,10 @@ $NetBSD: patch-media_libstagefright_frameworks_av_media_libstagefright_foundatio
 +# if __FreeBSD_version < 900506
 +#  undef tolower
 +# endif
++#endif
++
++#if defined(__NetBSD__) && defined(tolower)
++#undef tolower
 +#endif
 +
  namespace stagefright {

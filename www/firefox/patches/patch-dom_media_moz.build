@@ -1,12 +1,11 @@
-$NetBSD: patch-content_media_moz.build,v 1.1 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.1 2015/02/28 04:30:55 ryoon Exp $
 
---- content/media/moz.build.orig	2014-11-21 03:37:24.000000000 +0000
-+++ content/media/moz.build
-@@ -213,3 +213,24 @@ if CONFIG['ANDROID_VERSION'] > '15':
- 
+--- dom/media/moz.build.orig	2015-02-17 21:40:44.000000000 +0000
++++ dom/media/moz.build
+@@ -270,6 +270,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
  CFLAGS += CONFIG['GSTREAMER_CFLAGS']
  CXXFLAGS += CONFIG['GSTREAMER_CFLAGS']
-+
+ 
 +if CONFIG['MOZ_NATIVE_OGG']:
 +    CXXFLAGS += CONFIG['MOZ_OGG_CFLAGS']
 +
@@ -27,3 +26,7 @@ $NetBSD: patch-content_media_moz.build,v 1.1 2014/12/01 18:11:14 ryoon Exp $
 +
 +if CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
 +    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
++
+ include('/ipc/chromium/chromium-config.mozbuild')
+ 
+ FINAL_LIBRARY = 'xul'
