@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1077 2015/02/28 11:59:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1078 2015/02/28 13:39:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1541,3 +1541,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/mpv to 0.8.2 [wiz 2015-02-28]
 	Updated emulators/mame to 0.159 [wiz 2015-02-28]
 	Updated emulators/mess to 0.159 [wiz 2015-02-28]
+	Updated net/youtube-dl to 20150226.2 [tron 2015-02-28]
