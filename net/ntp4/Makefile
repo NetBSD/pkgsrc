@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2014/12/27 02:48:27 taca Exp $
+# $NetBSD: Makefile,v 1.83 2015/02/28 23:44:56 joerg Exp $
 #
 
 DISTNAME=	ntp-4.2.8
@@ -20,6 +20,8 @@ USE_TOOLS+=	pax perl:run
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=--with-locfile=loc/pkgsrc
 CONFIGURE_ENV+=	  PATH_PERL=${PERL5}
+
+OVERRIDE_DIRDEPTH=	4
 
 DOCDIR=		${DESTDIR}${PREFIX}/share/doc/ntp4
 EXAMPLESDIR=	${DESTDIR}${PREFIX}/share/examples/ntp4
