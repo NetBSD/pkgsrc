@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/01/16 16:58:28 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/02/28 23:28:19 joerg Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-gnutls/Makefile
@@ -24,6 +24,7 @@ DISTINFO_FILE=		${.CURDIR}/../../sysutils/rsyslog/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/rsyslog/patches
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+CONFIGURE_ARGS+=	RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 
 GNU_CONFIGURE=		yes
 
