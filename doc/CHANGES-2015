@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1076 2015/02/28 11:59:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1077 2015/02/28 11:59:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXfont to 1.5.0 [wiz 2015-02-28]
 	Updated multimedia/mpv to 0.8.2 [wiz 2015-02-28]
 	Updated emulators/mame to 0.159 [wiz 2015-02-28]
+	Updated emulators/mess to 0.159 [wiz 2015-02-28]
