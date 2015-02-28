@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1069 2015/02/28 04:34:37 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1070 2015/02/28 04:43:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1533,3 +1533,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnupg to 1.4.19 [wiz 2015-02-28]
 	Updated security/libgcrypt to 1.6.3 [wiz 2015-02-28]
 	Updated www/firefox to 36.0 [ryoon 2015-02-28]
+	Updated www/firefox-l10n to 36.0 [ryoon 2015-02-28]
