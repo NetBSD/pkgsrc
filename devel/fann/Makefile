@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/01/26 10:28:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/28 23:43:01 joerg Exp $
+
+PKGREVISION=		1
 
 .include "Makefile.common"
 
