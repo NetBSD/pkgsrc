@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/29 05:06:19 asau Exp $
+# $NetBSD: Makefile,v 1.45 2015/02/28 23:48:03 joerg Exp $
 
 DISTNAME=	gtkglarea-1.2.3
 PKGREVISION=	3
@@ -12,6 +12,9 @@ COMMENT=	OpenGL/Mesa widget for GTK+ GUI toolkit
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-MesaGL
+
+CONFIG_GUESS_OVERRIDE+=	.auto/config.guess
+CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 post-install:
 	${INSTALL_MAN_DIR} "${DESTDIR}${PREFIX}/share/doc/gtkglarea"
