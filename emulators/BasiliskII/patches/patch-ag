@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2007/06/12 12:51:08 joerg Exp $
+$NetBSD: patch-ag,v 1.5 2015/02/28 23:43:32 joerg Exp $
 
 --- src/Unix/sigsegv.cpp.orig	2006-03-30 22:45:49.000000000 +0000
 +++ src/Unix/sigsegv.cpp
@@ -20,7 +20,21 @@ $NetBSD: patch-ag,v 1.4 2007/06/12 12:51:08 joerg Exp $
  #if (defined(i386) || defined(__i386__))
  #define SIGSEGV_FAULT_INSTRUCTION		(((struct sigcontext *)scp)->sc_eip)
  #define SIGSEGV_REGISTER_FILE			((unsigned long *)&(((struct sigcontext *)scp)->sc_edi)) /* EDI is the first GPR (even below EIP) in sigcontext */
-@@ -451,7 +451,7 @@ static sigsegv_address_t get_fault_addre
+@@ -286,6 +286,13 @@ static void powerpc_decode_instruction(i
+ #define SIGSEGV_REGISTER_FILE			(unsigned long *)&SIGSEGV_CONTEXT_REGS[_REG_PC], (unsigned long *)&SIGSEGV_CONTEXT_REGS[_REG_R0]
+ #define SIGSEGV_SKIP_INSTRUCTION		powerpc_skip_instruction
+ #endif
++#if (defined(arm) || defined(__arm__))
++#include <sys/ucontext.h>
++#define SIGSEGV_CONTEXT_REGS			(((ucontext_t *)scp)->uc_mcontext.__gregs)
++#define SIGSEGV_FAULT_INSTRUCTION		SIGSEGV_CONTEXT_REGS[_REG_PC]
++#define SIGSEGV_REGISTER_FILE			(unsigned long *)SIGSEGV_CONTEXT_REGS
++#define SIGSEGV_SKIP_INSTRUCTION		arm_skip_instruction
++#endif
+ #endif
+ #if defined(__linux__)
+ #if (defined(i386) || defined(__i386__))
+@@ -451,7 +458,7 @@ static sigsegv_address_t get_fault_addre
  #define SIGSEGV_ALL_SIGNALS				FAULT_HANDLER(SIGSEGV)
  #endif
  #endif
@@ -29,7 +43,7 @@ $NetBSD: patch-ag,v 1.4 2007/06/12 12:51:08 joerg Exp $
  #if (defined(i386) || defined(__i386__))
  #define SIGSEGV_ALL_SIGNALS				FAULT_HANDLER(SIGBUS)
  #define SIGSEGV_FAULT_HANDLER_ARGLIST	int sig, int code, struct sigcontext *scp, char *addr
-@@ -721,10 +721,14 @@ enum {
+@@ -721,10 +728,14 @@ enum {
  #endif
  };
  #endif
@@ -45,3 +59,13 @@ $NetBSD: patch-ag,v 1.4 2007/06/12 12:51:08 joerg Exp $
  	X86_REG_EAX = 7,
  	X86_REG_ECX = 6,
  	X86_REG_EDX = 5,
+@@ -1450,6 +1461,9 @@ enum {
+ #if (defined(__linux__))
+   ARM_REG_PC = 15,
+   ARM_REG_CPSR = 16
++#elif defined(__NetBSD__)
++  ARM_REG_PC = _REG_PC,
++  ARM_REG_CPSR = _REG_CPSR
+ #endif
+ };
+ static bool arm_skip_instruction(unsigned long * regs)
