@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/03 20:28:40 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/28 23:46:03 joerg Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	xdvipdfmx-0.7.9
@@ -20,6 +20,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/xdvipdfmx
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
