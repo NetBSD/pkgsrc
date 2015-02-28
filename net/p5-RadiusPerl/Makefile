@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/28 14:37:01 mef Exp $
 #
 
-DISTNAME=	RadiusPerl-0.17
+DISTNAME=	RadiusPerl-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MANOWAR/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/RadiusPerl/
@@ -14,7 +13,7 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	p5-Data-HexDump>=0.02:../../textproc/p5-Data-HexDump
 
-WRKSRC=		${WRKDIR}/Authen-Radius-0.17
+WRKSRC=		${WRKDIR}/Authen-Radius-${PKGVERSION_NOREV}
 PERL5_PACKLIST=	auto/Authen/Radius/.packlist
 USE_LANGUAGES=	# none
 
