@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2014/05/25 18:21:31 bouyer Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2015/02/28 23:48:40 joerg Exp $
 
 BUILDLINK_TREE+=	wxGTK28
 
@@ -19,6 +19,7 @@ BUILDLINK_PKGSRCDIR.wxGTK28?=	../../x11/wxGTK28
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .endif # WXGTK28_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-wxGTK28
