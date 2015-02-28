@@ -1,6 +1,6 @@
-$NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.1 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.2 2015/02/28 04:30:55 ryoon Exp $
 
---- memory/build/mozjemalloc_compat.c.orig	2014-11-21 03:37:44.000000000 +0000
+--- memory/build/mozjemalloc_compat.c.orig	2015-02-17 21:40:46.000000000 +0000
 +++ memory/build/mozjemalloc_compat.c
 @@ -12,6 +12,8 @@
  #include "jemalloc_types.h"
@@ -77,20 +77,7 @@ $NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.1 2014/12/01 18:11:14 ryoo
  MOZ_JEMALLOC_API void
  jemalloc_stats_impl(jemalloc_stats_t *stats)
  {
-@@ -68,6 +122,12 @@ jemalloc_stats_impl(jemalloc_stats_t *st
-   size_t active, allocated, mapped, page, pdirty;
-   size_t lg_chunk;
- 
-+  // Refresh jemalloc's stats by updating its epoch, see ctl_refresh in
-+  // src/ctl.c
-+  uint64_t epoch = 0;
-+  size_t esz = sizeof(epoch);
-+  int ret = je_(mallctl)("epoch", &epoch, &esz, &epoch, esz);
-+
-   CTL_GET("arenas.narenas", narenas);
-   CTL_GET("arenas.page", page);
-   CTL_GET("stats.active", active);
-@@ -87,7 +147,8 @@ jemalloc_stats_impl(jemalloc_stats_t *st
+@@ -93,7 +147,8 @@ jemalloc_stats_impl(jemalloc_stats_t *st
    // We could get this value out of base.c::base_pages, but that really should
    // be an upstream change, so don't worry about it for now.
    stats->bookkeeping = 0;

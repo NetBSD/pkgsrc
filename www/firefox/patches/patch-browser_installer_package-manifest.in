@@ -1,19 +1,19 @@
-$NetBSD: patch-browser_installer_package-manifest.in,v 1.5 2014/07/24 14:57:12 ryoon Exp $
+$NetBSD: patch-browser_installer_package-manifest.in,v 1.6 2015/02/28 04:30:55 ryoon Exp $
 
 Limit SPARC bits to just SPARC (untested, but fixes x86).
 
---- browser/installer/package-manifest.in.orig	2014-07-17 01:45:07.000000000 +0000
+--- browser/installer/package-manifest.in.orig	2015-02-17 21:40:38.000000000 +0000
 +++ browser/installer/package-manifest.in
-@@ -575,7 +575,7 @@
- @BINPATH@/components/MozKeyboard.js
- @BINPATH@/components/InputMethod.manifest
+@@ -609,7 +609,7 @@
+ @RESPATH@/components/MozKeyboard.js
+ @RESPATH@/components/InputMethod.manifest
  
 -#ifdef MOZ_DEBUG
 +#if defined(ENABLE_TESTS) && defined(MOZ_DEBUG)
- @BINPATH@/components/TestInterfaceJS.js
- @BINPATH@/components/TestInterfaceJS.manifest
+ @RESPATH@/components/TestInterfaceJS.js
+ @RESPATH@/components/TestInterfaceJS.manifest
  #endif
-@@ -737,7 +737,7 @@
+@@ -788,7 +788,7 @@
  #endif
  
  ; for Solaris SPARC
