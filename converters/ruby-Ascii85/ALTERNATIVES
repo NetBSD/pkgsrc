@@ -1,0 +1,1 @@
+bin/ascii85 @PREFIX@/bin/ascii85@RUBY_SUFFIX@
