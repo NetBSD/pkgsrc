@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2014/12/12 08:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2015/03/01 15:02:57 wiz Exp $
 
-DISTNAME=	wget-1.16.1
+DISTNAME=	wget-1.16.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		perl pod2man
+USE_TOOLS+=		perl pod2man pkg-config
 
 GNU_CONFIGURE=		YES
 USE_OLD_DES_API=	YES
