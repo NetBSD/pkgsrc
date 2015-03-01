@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1108 2015/03/01 13:47:41 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1109 2015/03/01 14:58:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1584,3 +1584,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/fromcvs to 0.0.0.134 [taca 2015-03-01]
 	Updated devel/php-xdebug to 2.3.0 [taca 2015-03-01]
 	Updated devel/ruby-ffi-yajl to 1.4.0 [taca 2015-03-01]
+	Updated fonts/t1utils to 1.39 [wiz 2015-03-01]
