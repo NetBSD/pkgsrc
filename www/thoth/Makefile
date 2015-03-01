@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2013/02/11 04:58:17 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/01 15:38:47 taca Exp $
 
 DISTNAME=	thoth-0.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thothblog.org/
+HOMEPAGE=	# Web site has gone: http://thothblog.org/
 COMMENT=	Minimalistic blog engine
 LICENSE=	modified-bsd
 
@@ -20,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.0.3:../../textproc/ruby-redcloth
 DEPENDS+=	${RUBY_PKGPREFIX}-sequel>=2.5.0:../../databases/ruby-sequel
 DEPENDS+=	${RUBY_PKGPREFIX}-thin>=0.8.2:../../www/thin
 
-CONFLICTS+=	ruby[1-9][0-9]-thoth-[0-9]* thoth-[0-9]*
+RUBYGEM_OPTIONS+=	--format-executable
 
 OVERRIDE_GEMSPEC+= \
 	builder>=2.1.2 configuration>=0.0.5 json-pure>=1.1.3 redcloth>=4.0.3 \
