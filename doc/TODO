@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14185 2015/03/01 15:18:02 wiz Exp $
+$NetBSD: TODO,v 1.14186 2015/03/01 15:40:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -301,6 +301,10 @@ Suggested new packages
 	retroshare
 	http://retroshare.sourceforge.net/index.html
 	Decentralized social-networking/filesharing blend.
+
+	Trinity
+	https://www.trinitydesktop.org/
+	KDE3 successor
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
