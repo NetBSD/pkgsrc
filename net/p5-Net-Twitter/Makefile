@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/01 06:17:59 mef Exp $
 #
 
-DISTNAME=	Net-Twitter-3.18001
+DISTNAME=	Net-Twitter-4.01008
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -19,12 +18,14 @@ DEPENDS+=	p5-DateTime-Format-Strptime>=1.0900:../../time/p5-DateTime-Format-Strp
 DEPENDS+=	p5-Devel-StackTrace>=1.21:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
-DEPENDS+=	p5-JSON-Any>=1.21:../../converters/p5-JSON-Any
+DEPENDS+=	p5-IO-Socket-SSL>=2.005:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
+DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-Aliases-[0-9]*:../../devel/p5-MooseX-Aliases
 DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
+DEPENDS+=	p5-Net-HTTP>=6.06:../../www/p5-Net-HTTP
 DEPENDS+=	p5-Net-OAuth>=0.25:../../net/p5-Net-OAuth
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-URI>=1.40:../../www/p5-URI
@@ -35,7 +36,7 @@ BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=	auto/Net/Twitter/.packlist
 USE_LANGUAGES=	# none
-PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
