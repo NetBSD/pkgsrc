@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1112 2015/03/01 15:03:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1113 2015/03/01 15:03:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkg_summary-utils to 0.66.0 [cheusov 2015-03-01]
 	Updated www/curl to 7.41.0 [wiz 2015-03-01]
 	Updated net/wget to 1.16.2 [wiz 2015-03-01]
+	Updated devel/py-setuptools to 12.3 [wiz 2015-03-01]
