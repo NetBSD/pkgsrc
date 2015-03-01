@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1118 2015/03/01 15:14:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1119 2015/03/01 15:18:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1594,3 +1594,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-keyring to 5.3 [wiz 2015-03-01]
 	Updated audio/libmpdclient to 2.10 [wiz 2015-03-01]
 	Updated misc/dialog to 1.2.20150225 [wiz 2015-03-01]
+	Updated print/cups-filters to 1.0.66 [wiz 2015-03-01]
