@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2015/01/26 05:10:22 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/01 09:26:34 wiz Exp $
 
 DISTNAME=	Devel-PatchPerl-1.30
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -11,6 +12,7 @@ COMMENT=	Perl 5 module to patch a perl source tree
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-File-pushd>=1.00:../../devel/p5-File-pushd
+DEPENDS+=	p5-Module-Pluggable>=5.1:../../devel/p5-Module-Pluggable
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Devel/PatchPerl/.packlist
