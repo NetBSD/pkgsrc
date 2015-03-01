@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.542 2015/02/27 01:35:28 mef Exp $
+# $NetBSD: Makefile,v 1.543 2015/03/01 10:03:48 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -450,6 +450,7 @@ SUBDIR+=	sshpass
 SUBDIR+=	ssldump
 SUBDIR+=	sslproxy
 SUBDIR+=	sslscan
+SUBDIR+=	sslsplit
 SUBDIR+=	sslwrap
 SUBDIR+=	ssss
 SUBDIR+=	starttls
