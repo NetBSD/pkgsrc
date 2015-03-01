@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/21 12:02:15 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/03/01 09:46:42 mef Exp $
 
-SHA1 (ExtUtils-MakeMaker-Coverage-0.04.tar.gz) = 53472124de80ee0d89259fd8ed680458694b54b7
-RMD160 (ExtUtils-MakeMaker-Coverage-0.04.tar.gz) = 4bd6842109183f13915752b21b1e64f647c4ee37
-Size (ExtUtils-MakeMaker-Coverage-0.04.tar.gz) = 3479 bytes
+SHA1 (ExtUtils-MakeMaker-Coverage-0.05.tar.gz) = 3e424bcac5cfb53c9af138581adc785bd732e7d1
+RMD160 (ExtUtils-MakeMaker-Coverage-0.05.tar.gz) = daa568f4a49a3d7ca2cc207af4b848cb3579d88f
+Size (ExtUtils-MakeMaker-Coverage-0.05.tar.gz) = 6439 bytes
