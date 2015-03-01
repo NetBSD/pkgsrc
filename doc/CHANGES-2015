@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1085 2015/03/01 06:18:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1086 2015/03/01 08:42:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1551,3 +1551,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/suse131_base to 13.1nb8 [ryoon 2015-03-01]
 	Updated emulators/suse131_32_base to 13.1nb8 [ryoon 2015-03-01]
 	Updated net/p5-Net-Twitter to 4.01008 [mef 2015-03-01]
+	Updated time/p5-Data-ICal to 0.22 [mef 2015-03-01]
+	Updated time/p5-Time-Interval to 1.233 [mef 2015-03-01]
