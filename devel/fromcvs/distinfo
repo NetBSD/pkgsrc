@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.16 2013/05/26 01:48:42 ryoon Exp $
+$NetBSD: distinfo,v 1.17 2015/03/01 13:35:36 taca Exp $
 
-SHA1 (fromcvs-fromcvs-184311d.tar.gz) = 20bac1e4cd4b8d3b66a4d8c8ac6f7c1b2450d57a
-RMD160 (fromcvs-fromcvs-184311d.tar.gz) = d960aa5507af6b0fdcfd1748e8f451474ae6880d
-Size (fromcvs-fromcvs-184311d.tar.gz) = 32671 bytes
+SHA1 (fromcvs-0.0.0.134.zip) = ed979e5ee19613d8cb9aac31ca014116dba08bdc
+RMD160 (fromcvs-0.0.0.134.zip) = 0739cfbce3a0e0f8f27e40b211d2f546ff3afa97
+Size (fromcvs-0.0.0.134.zip) = 46593 bytes
 SHA1 (patch-aa) = 6d3f6455bc470f5462faf4d965d5842800ae3203
-SHA1 (patch-fromcvs.rb) = f39e9b918aa022b8a87dbe56072be0290ff523f6
