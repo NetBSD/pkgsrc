@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1087 2015/03/01 08:44:05 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1088 2015/03/01 09:26:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/p5-Time-Interval to 1.233 [mef 2015-03-01]
 	Updated time/planner to 0.14.6 [mef 2015-03-01]
 	Updated time/planner to 0.14.6 [mef 2015-03-01]
+	Updated devel/p5-Devel-PatchPerl to 1.30nb1 [wiz 2015-03-01]
