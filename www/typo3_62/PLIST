@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/19 15:21:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/01 15:36:58 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/.editorconfig
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
@@ -756,6 +756,16 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/preferences.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/swift_init.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/swift_required.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/swift_required_pear.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/autoload.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/ClassLoader.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_classaliasmap.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_classmap.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_namespaces.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_psr4.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_real.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/Classes/Composer/ClassAliasLoader.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/LICENSE
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/composer.json
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/videojs/video-js/LICENSE.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/videojs/video-js/README.markdown
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/videojs/video-js/controls/audio-description.js
@@ -1609,7 +1619,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/composer.json
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/ext_tables.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/README.txt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/Documentation/Index.rst
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/Documentation/typo3-adodb.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/README.md
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb-active-record.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb-active-recordx.inc.php
@@ -1933,6 +1944,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Modules/Wizards/RteWizard/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Modules/Wizards/RteWizard/index.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Modules/Wizards/TableWizard/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Modules/Wizards/TableWizard/index.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Private/Language/locallang_errors.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Private/Templates/FormEngine.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Private/Templates/alt_db_navframe.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Private/Templates/alt_doc.html
@@ -2419,6 +2431,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidFil
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidFolderException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidPathException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidTargetFolderException.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidUidException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/NotInMountPointException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/ResourceDoesNotExistException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/UploadException.php
@@ -2485,6 +2498,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/Exception/InvalidEnumerationDefinitionException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/Exception/InvalidEnumerationValueException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/Exception/InvalidValueExceptionInterface.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/File/FileInfo.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/File/ImageInfo.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Type/TypeInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/TypoScript/ConfigurationForm.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/TypoScript/ExtendedTemplateService.php
@@ -2888,6 +2903,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Collection/RecordCollectio
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Configuration/ConditionMatcherTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Configuration/ConditionMatcherUserFuncs.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Configuration/ConfigurationManagerTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Configuration/FlexForm/FlexFormToolsTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Configuration/TypoScript/ConditionMatching/AbstractConditionMatcherTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Configuration/TypoScript/ConditionMatching/Fixtures/GeneralUtilityFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Core/ApplicationContextTest.php
@@ -2950,14 +2966,18 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/AbstractFileTest.
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/BaseTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Collection/FileCollectionRegistryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/AbstractDriverTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/AbstractHierarchicalFilesystemDriverTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/DriverRegistryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/Fixtures/Dummy.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/Fixtures/LocalDriverFilenameFilter.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/LocalDriverTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FileReferenceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FileTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Filter/FileNameFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FolderTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Index/ExtractorRegistryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ProcessedFileRepositoryTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ProcessedFileTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Repository/AbstractRepositoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceCompressorTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceFactoryTest.php
@@ -2967,6 +2987,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Service/IndexerSe
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Utility/FileExtensionFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Tree/TableConfiguration/TreeDataProviderFactoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Type/EnumerationTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Type/File/FileInfoTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Type/File/ImageInfoTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Type/Fixture/Enumeration/CompleteEnumeration.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Type/Fixture/Enumeration/DuplicateConstantValueEnumeration.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Type/Fixture/Enumeration/InvalidConstantEnumeration.php
@@ -2979,6 +3001,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ArrayUtilityTest.p
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ClassNamingUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ClientUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ExtensionManagementUtilityTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/File/ExtendedFileUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/GeneralUtilityFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/MathUtilityTestClassWithStringRepresentationFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/RuntimeException.php
@@ -4808,6 +4831,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Resources/Public/JavaScript/jsfun
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Resources/Public/JavaScript/jsfunc.validateform.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Functional/ContentObject/FluidTemplateContentObjectTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/Configuration/TypoScript/ConditionMatching/ConditionMatcherTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/CaseContentObjectTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/ContentObjectRendererTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/FilesContentObjectTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/FluidTemplateContentObjectTest.php
@@ -4860,6 +4884,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/GroupFileAn
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/GroupFileAndFileReferenceItemInFlexForm/ExportTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/IrreTutorialRecords/ExportTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/PagesAndTtContent/ExportTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/PagesAndTtContent/Fixtures/Database/sys_file.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/PagesAndTtContentWithImages/ExportTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Export/PagesAndTtContentWithRteImagesAndFileLink/ExportTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Database/irre_tutorial.xml
@@ -4881,6 +4906,9 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extension
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extensions/impexp_group_files/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extensions/impexp_group_files/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extensions/impexp_group_files/ext_tables.sql
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extensions/template_extension/Resources/Public/Templates/Empty.html
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extensions/template_extension/ext_emconf.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Extensions/template_extension/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Folders/fileadmin/_processed_/csm_typo3_image2_5c2670fd59.jpg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Folders/fileadmin/user_upload/typo3_image2.jpg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Fixtures/Folders/fileadmin/user_upload/typo3_image3.jpg
@@ -4899,7 +4927,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/GroupFileAn
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/GroupFileAndFileReferenceItemInFlexForm/ImportInEmptyDatabaseTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/IrreTutorialRecords/DataSet/Assertion/importIrreRecords.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/IrreTutorialRecords/ImportInEmptyDatabaseTest.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/PagesAndTtContent/DataSet/Assertion/importSimplePagesAndRelatedTtContent.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/PagesAndTtContent/DataSet/Assertion/importPagesAndRelatedTtContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/PagesAndTtContent/ImportInEmptyDatabaseTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/PagesAndTtContentWithImages/DataSet/Assertion/importPagesAndRelatedTtContentWithDifferentImageToExistingData.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Tests/Functional/Import/PagesAndTtContentWithImages/DataSet/Assertion/importPagesAndRelatedTtContentWithImagesButWithoutStorageOnCaseInsensitiveFilesystems.csv
@@ -8504,8 +8532,10 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-open-
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-open.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-paste-after.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-paste-into.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-cleartranslationcache.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-close.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-new.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-translation.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-view.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-select.png
