@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/01/28 19:15:08 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/01 20:03:27 joerg Exp $
 #
 
 DISTNAME=	generateDS-2.14a
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
+EGG_NAME=	generateDS-${PKGVERSION}0
 CATEGORIES=	textproc
 MASTER_SITES=	https://pypi.python.org/packages/source/g/generateDS/
 
@@ -17,9 +19,9 @@ PYDISTUTILSPKG=	yes
 # TODO: explain
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
 
-REPLACE_PYTHON=	generateDS.py
+REPLACE_PYTHON=	generateDS.py libgenerateDS/gui/*.py libgenerateDS/*.py
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 # TODO: Explain why this is commented out and present.
 #.include "../../textproc/py-xml/buildlink3.mk"
