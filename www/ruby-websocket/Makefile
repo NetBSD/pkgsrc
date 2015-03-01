@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/07/16 08:37:21 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/01 15:43:39 taca Exp $
 
-DISTNAME=	websocket-1.1.4
+DISTNAME=	websocket-1.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby www
 
@@ -10,6 +10,8 @@ COMMENT=	Universal Ruby library to handle WebSocket protocol
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+RUBY_VERSION_SUPPORTED=	200 21 193
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
