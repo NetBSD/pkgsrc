@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1125 2015/03/01 15:42:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1126 2015/03/01 15:44:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1601,3 +1601,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/typo3_62 to 6.2.10 [taca 2015-03-01]
 	Updated www/thoth to 0.2.1nb4 [taca 2015-03-01]
 	Updated www/thin to 1.6.3 [taca 2015-03-01]
+	Updated www/ruby-websocket to 1.2.1 [taca 2015-03-01]
