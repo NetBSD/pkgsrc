@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2013/10/06 16:14:20 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/03/01 14:58:19 wiz Exp $
 
-SHA1 (t1utils-1.38.tar.gz) = a97ba119a2e376db49d9d4911472c0033e2fece8
-RMD160 (t1utils-1.38.tar.gz) = 94f371adc177d0f4b0e5360a9d5b585f71364f36
-Size (t1utils-1.38.tar.gz) = 174513 bytes
+SHA1 (t1utils-1.39.tar.gz) = b17ab9019f9ec289cd3dbee330082559e7fe4f73
+RMD160 (t1utils-1.39.tar.gz) = 65ab99b29c6edf722bcf0d4b0bba57cc2e6f8f40
+Size (t1utils-1.39.tar.gz) = 175047 bytes
