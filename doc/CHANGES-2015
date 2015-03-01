@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1110 2015/03/01 14:59:01 cheusov Exp $
+$NetBSD: CHANGES-2015,v 1.1111 2015/03/01 15:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1586,3 +1586,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-ffi-yajl to 1.4.0 [taca 2015-03-01]
 	Updated fonts/t1utils to 1.39 [wiz 2015-03-01]
 	Updated pkgtools/pkg_summary-utils to 0.66.0 [cheusov 2015-03-01]
+	Updated www/curl to 7.41.0 [wiz 2015-03-01]
