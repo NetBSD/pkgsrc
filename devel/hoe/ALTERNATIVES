@@ -1,1 +1,1 @@
-bin/sow @PREFIX@/bin/bin/sow@RUBY_SUFFIX@
+bin/sow @PREFIX@/bin/sow@RUBY_SUFFIX@
