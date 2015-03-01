@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/14 19:31:19 taca Exp $
-bin/thin
+@comment $NetBSD: PLIST,v 1.9 2015/03/01 15:41:36 taca Exp $
+bin/thin${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/thin_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
