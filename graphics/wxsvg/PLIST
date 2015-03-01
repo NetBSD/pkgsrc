@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/11/23 21:29:14 gls Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/03/01 12:17:57 mef Exp $
 bin/svgview
 include/wxSVG/Animated.h
 include/wxSVG/CSSStyleDeclaration.h
@@ -37,6 +37,7 @@ include/wxSVG/SVGAnimatedPreserveAspectRatio.h
 include/wxSVG/SVGAnimatedRect.h
 include/wxSVG/SVGAnimatedString.h
 include/wxSVG/SVGAnimatedTransformList.h
+include/wxSVG/SVGAnimatedType.h
 include/wxSVG/SVGAnimationElement.h
 include/wxSVG/SVGCSSRule.h
 include/wxSVG/SVGCanvas.h
