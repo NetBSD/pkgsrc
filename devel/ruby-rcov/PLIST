@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/17 14:07:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/01 15:50:01 taca Exp $
 bin/rcov${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/rcovrt.${RUBY_DLEXT}
 ${GEM_LIBDIR}/bin/rcov
 ${GEM_LIBDIR}/ext/rcovrt/1.8/callsite.c
 ${GEM_LIBDIR}/ext/rcovrt/1.8/rcovrt.c
