@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2015/02/03 01:10:56 mef Exp $
+# $NetBSD: Makefile,v 1.19 2015/03/01 09:27:41 wiz Exp $
 
 DISTNAME=	App-perlbrew-0.73
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -15,6 +16,7 @@ DEPENDS+=	p5-Devel-PatchPerl>=0.86:../../devel/p5-Devel-PatchPerl
 DEPENDS+=	p5-local-lib>=1.8.10:../../devel/p5-local-lib
 DEPENDS+=	p5-Capture-Tiny>=0.22:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-CPAN-Perl-Releases>=1.10:../../devel/p5-CPAN-Perl-Releases
+DEPENDS+=	curl-[0-9]*:../../www/curl
 
 # actually, only TEST_DEPENDS
 BUILD_DEPENDS+=	{perl>=5.13.11,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
