@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1100 2015/03/01 12:58:47 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1101 2015/03/01 13:00:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1576,3 +1576,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-Stream to 1.24 [mef 2015-03-01]
 	Updated graphics/wxsvg to 1.5.3 [mef 2015-03-01]
 	Updated archivers/ruby-xz to 0.2.1 [taca 2015-03-01]
+	Updated converters/ruby-Ascii85 to 1.0.2nb1 [taca 2015-03-01]
