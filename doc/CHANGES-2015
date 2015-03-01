@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1091 2015/03/01 10:03:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1092 2015/03/01 10:11:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1565,3 +1565,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-NYTProf to 5.07 [mef 2015-03-01]
 	Updated devel/p5-Dist-Zilla to 5.032 [mef 2015-03-01]
 	Added security/sslsplit version 0.4.10 [wiz 2015-03-01]
+	Updated devel/p5-ExtUtils-MakeMaker-Coverage to 0.05 [mef 2015-03-01]
+	Updated devel/p5-File-MimeInfo to 0.27 [mef 2015-03-01]
+	Updated devel/p5-Getopt-Long to 2.45 [mef 2015-03-01]
