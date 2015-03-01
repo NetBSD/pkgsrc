@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2011/11/28 13:04:54 hiramatsu Exp $
+$NetBSD: distinfo,v 1.11 2015/03/01 06:17:59 mef Exp $
 
-SHA1 (Net-Twitter-3.18001.tar.gz) = 629c098aacf46135c89a755b799f46fa20a899bd
-RMD160 (Net-Twitter-3.18001.tar.gz) = e811a71ffa762b52ed9023d96133e0bac24100df
-Size (Net-Twitter-3.18001.tar.gz) = 128033 bytes
+SHA1 (Net-Twitter-4.01008.tar.gz) = d317d13ea15724558e7edc3bec1afc9539544056
+RMD160 (Net-Twitter-4.01008.tar.gz) = 6cc7d920e14b98218c6ab6bdabb4a3f0557e0289
+Size (Net-Twitter-4.01008.tar.gz) = 129953 bytes
