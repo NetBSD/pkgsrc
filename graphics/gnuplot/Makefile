@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.94 2014/11/18 22:19:47 adam Exp $
+# $NetBSD: Makefile,v 1.95 2015/03/01 12:58:10 mef Exp $
 
 DISTNAME=	gnuplot-4.6.6
+API_VERSION=	${PKGVERSION:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnuplot.sourceforge.net/
 COMMENT=	Portable interactive, function plotting utility
+#LICENSE=	gnuplot + BSD
 
 CONFLICTS+=		gnuplot-nox11-[0-9]*
 
@@ -28,6 +30,7 @@ CONFIGURE_ARGS+=	--with-readline=bsd
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 
+PLIST_SUBST=		API_VERSION=${API_VERSION}
 LDFLAGS.SunOS+=		-liconv
 
 # Make this available to patch-ah so the font path can include pkgsrc fonts.
