@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1115 2015/03/01 15:07:37 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1116 2015/03/01 15:09:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1591,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 12.3 [wiz 2015-03-01]
 	Updated devel/waf to 1.8.7 [wiz 2015-03-01]
 	Updated devel/afl to 1.50b [wiz 2015-03-01]
+	Updated security/py-keyring to 5.3 [wiz 2015-03-01]
