@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.32 2013/09/09 14:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/03/01 13:35:36 taca Exp $
 
-DISTNAME=	fromcvs-fromcvs-184311d
-# Bump simply to 0.0.0.133, I am not sure...
-PKGNAME=	fromcvs-0.0.0.133
-PKGREVISION=	1
+DISTNAME=	fromcvs-${VERS}
+#PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
-MASTER_SITES=	-http://gitorious.org/fromcvs/fromcvs/archive-tarball/184311d
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	-https://github.com/corecode/fromcvs/archive/${REVISION}.zip
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	
+HOMEPAGE=	https://github.com/corecode/fromcvs/
 COMMENT=	CVS repository conversion tool
 LICENSE=	corecode-license
+
+# This is our own version.
+VERS=		0.0.0.134
+REVISION=	568b30324bc2f6871cc6da5d0750b3cb2e612af3
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rbtree>=0.2.0:../../devel/ruby-rbtree
 DEPENDS+=	${RUBY_PKGPREFIX}-rcsparse>=0.0.0.37:../../devel/ruby-rcsparse
 DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.2.1:../../databases/ruby-sqlite3
 
-WRKSRC=		${WRKDIR}/fromcvs-fromcvs
-
-RUBY_VERSION_SUPPORTED=	18
+WRKSRC=		${WRKDIR}/fromcvs-${REVISION}
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python+=	tohg.rb
@@ -28,6 +28,9 @@ SUBST_SED.python+=	-e "s!'python'!'${PYTHONBIN}'!"
 SUBST_STAGE.python=	pre-build
 
 INSTALLATION_DIRS=	bin
+
+post-extract:
+	cd ${WRKSRC}; find . -type f -exec ${CHMOD} -x {} \;
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
