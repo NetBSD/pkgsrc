@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.28 2014/09/14 16:43:44 wiz Exp $
+$NetBSD: patch-aa,v 1.29 2015/03/01 15:01:00 wiz Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2014-09-04 20:42:23.000000000 +0000
+--- configure.orig	2015-02-24 23:05:37.000000000 +0000
 +++ configure
-@@ -3640,6 +3640,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3703,6 +3703,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -13,7 +13,7 @@ the gssapi option, and need an explicit -lgss
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16618,7 +16619,7 @@ squeeze() {
+@@ -16682,7 +16683,7 @@ squeeze() {
  
  
        #
@@ -22,7 +22,7 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21039,7 +21040,12 @@ $as_echo "yes" >&6; }
+@@ -21128,7 +21129,12 @@ $as_echo "yes" >&6; }
       if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
       elif test -f "$GSSAPI_ROOT/bin/krb5-config"; then
@@ -36,7 +36,7 @@ the gssapi option, and need an explicit -lgss
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -21212,7 +21218,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21301,7 +21307,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -44,4 +44,13 @@ the gssapi option, and need an explicit -lgss
 +        LIBS="-lgssapi -lkrb5 $LIBS"
          ;;
       esac
+   fi
+@@ -24016,7 +24022,7 @@ _ACEOF
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $capath (capath)" >&5
+ $as_echo "$capath (capath)" >&6; }
+   fi
+-  if test "x$ca" == "xno" && test "x$capath" == "xno"; then
++  if test "x$ca" = "xno" && test "x$capath" = "xno"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
    fi
