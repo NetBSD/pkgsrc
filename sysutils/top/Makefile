@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/02/11 14:04:16 pho Exp $
+# $NetBSD: Makefile,v 1.40 2015/03/01 20:03:52 joerg Exp $
 
 DISTNAME=	top-3.6.1
 PKGREVISION=	1
@@ -22,7 +22,7 @@ BROKEN_ON_PLATFORM+=	Darwin-[1-9][0-9]*-*
 
 .include "../../mk/bsd.prefs.mk"
 
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+.if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 # ${WRKSRC}/configure emits an error saying "macosx module
 # unsupported" without this option.
 CONFIGURE_ARGS+=	--with-module=macosx
