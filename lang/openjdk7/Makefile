@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2015/02/23 13:34:56 tnn Exp $
+# $NetBSD: Makefile,v 1.96 2015/03/01 16:57:05 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -174,6 +174,7 @@ PLIST.alsa=	yes
 
 post-extract:
 	chmod +x ${ANT_BIN}/ant
+	${LN} -s mapfile-i586 ${WRKSRC}/jdk/make/java/main/java/mapfile-arm
 .if ${OPSYS} == "SunOS"
 	${MKDIR} ${ALT_BOOTDIR}/bin
 	${LN} -s ${JDK_BOOTDIR}/include ${ALT_BOOTDIR}/include
