@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/11/30 00:20:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/01 21:25:17 ryoon Exp $
 
-DISTNAME=	rt-4.2.9
+DISTNAME=	rt-4.2.10
 PKGNAME=	${DISTNAME:S/rt/rt4/}
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
@@ -36,7 +36,7 @@ DEPENDS+=	{perl>=5.8.1,p5-Digest-MD5>=2.27}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=	p5-Email-Address>=1.897:../../mail/p5-Email-Address
 DEPENDS+=	p5-Email-Address-List-[0-9]*:../../mail/p5-Email-Address-List
-DEPENDS+=	{perl>=5.11.3,p5-Encode>=2.39}:../../textproc/p5-Encode
+DEPENDS+=	p5-Encode>=2.64:../../textproc/p5-Encode
 # Errno is a part of perl base.
 # File::Glob is a part of perl base.
 DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir

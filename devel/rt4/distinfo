@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2014/11/30 00:20:44 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2015/03/01 21:25:17 ryoon Exp $
 
-SHA1 (rt-4.2.9.tar.gz) = f3433d388d59283b4ea28d588af69fd16f870aae
-RMD160 (rt-4.2.9.tar.gz) = 4da68de9789933d2b92d74ce98422d4dd638f88b
-Size (rt-4.2.9.tar.gz) = 7496950 bytes
+SHA1 (rt-4.2.10.tar.gz) = 92af386e9c09a0e9489ec1cd55b66c65b77d22be
+RMD160 (rt-4.2.10.tar.gz) = 43eae6a7d1a4710965e9926f57d27fcdfc3322cf
+Size (rt-4.2.10.tar.gz) = 7628431 bytes
 SHA1 (patch-Makefile.in) = d46b5cd6e9de77409ac8d6b6c172bc9dd3ed96be
 SHA1 (patch-config.layout) = 1e237d38d4e3a2ad6c240feb3e58f1345c7ff476
