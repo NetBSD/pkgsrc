@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/02/13 17:57:36 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/01 15:58:04 taca Exp $
 
 DISTNAME=	BackupPC-3.3.1
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=backuppc/}
 
@@ -11,7 +12,7 @@ COMMENT=	Fast, agentless backup system supporting *NIX, Windows and OSX clients
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
-DEPENDS+=	samba-[0-9]*:../../net/samba35
+DEPENDS+=	samba-[0-9]*:../../net/samba
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-File-Listing-[0-9]*:../../devel/p5-File-Listing
