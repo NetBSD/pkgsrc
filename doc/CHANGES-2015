@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1128 2015/03/01 21:07:21 mspo Exp $
+$NetBSD: CHANGES-2015,v 1.1129 2015/03/01 21:28:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1604,3 +1604,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-websocket to 1.2.1 [taca 2015-03-01]
 	Updated sysutils/backuppc to 3.3.1nb1 [taca 2015-03-01]
 	Added databases/lmdb version 0.9.14 [mspo 2015-03-01]
+	Updated devel/rt4 to 4.2.10 [ryoon 2015-03-01]
