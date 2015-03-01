@@ -1,0 +1,1 @@
+bin/hiera @PREFIX@/bin/hiera@RUBY_SUFFIX@

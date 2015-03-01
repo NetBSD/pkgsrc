@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 14:49:21 taca Exp $
-bin/hiera
+@comment $NetBSD: PLIST,v 1.5 2015/03/01 13:05:50 taca Exp $
+bin/hiera${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/LICENSE
