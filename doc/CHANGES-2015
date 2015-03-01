@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1111 2015/03/01 15:01:10 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1112 2015/03/01 15:03:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1587,3 +1587,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/t1utils to 1.39 [wiz 2015-03-01]
 	Updated pkgtools/pkg_summary-utils to 0.66.0 [cheusov 2015-03-01]
 	Updated www/curl to 7.41.0 [wiz 2015-03-01]
+	Updated net/wget to 1.16.2 [wiz 2015-03-01]
