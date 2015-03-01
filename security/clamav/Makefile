@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/12/06 07:31:33 khorben Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2015/03/01 14:26:41 tron Exp $
 
-DISTNAME=	clamav-0.98.5
+DISTNAME=	clamav-0.98.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
