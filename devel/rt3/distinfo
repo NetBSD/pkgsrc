@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.24 2013/05/26 16:55:53 spz Exp $
+$NetBSD: distinfo,v 1.25 2015/03/01 22:45:26 spz Exp $
 
 SHA1 (rt-3.8.17.tar.gz) = 4765c68f91a0e8e21ed0fd39397cd8e3970ca992
 RMD160 (rt-3.8.17.tar.gz) = 6da8fca56976233417bd47b26e1a7326fde5d2d0
 Size (rt-3.8.17.tar.gz) = 5728368 bytes
 SHA1 (patch-aa) = 6f78710f4460a25c75afbdf7128c0fe34914927c
 SHA1 (patch-ab) = ee455dd683c84d3a745a29a132e28903ba03144d
-SHA1 (patch-lib_RT.pm) = f72c6cb6f94acf1296076423d26d7efa4ed78293
+SHA1 (patch-lib_RT.pm) = 4a4b56128c266aeadde8f254210aa1942430744a
 SHA1 (patch-lib_RT_CustomFieldValues_External.pm) = 4404ca98c9e50687323892df1aa95c8b5a6dedd9
 SHA1 (patch-lib_RT_Interface_Email.pm) = 60d0c2c46ac3dc8172bdf16bbf43099b7dd87542
 SHA1 (patch-lib_RT_Interface_Email_Auth_GnuPG.pm) = 60d53a4dcda8f3cda14350f34f74fddc6091c3ce
 SHA1 (patch-sbin_rt-attributes-viewer) = e1c963800b76282cda4ca46e006f30d9abfc29c9
 SHA1 (patch-sbin_rt-attributes-viewer.in) = 99a15cca9a394b5743edc3929f43593f1384c8da
 SHA1 (patch-share_html_Helpers_CalPopup.html) = 3920ac6448d1d21c7ff32ef67344b19aa53616a4
+SHA1 (patch-share_html_Search_Elements_ResultsRSSView) = 62eeea9f4bea1bb98fd3509748123ecca3256185
 SHA1 (patch-t_approval_admincc.t) = 4fddf5fa844d15e8698e00fe6863daaafa661315
 SHA1 (patch-t_approval_basic.t) = 209303cc34370518a2600e28570627e1dc7e698b
