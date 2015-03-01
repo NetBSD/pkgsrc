@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/01/22 21:27:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/01 13:47:14 taca Exp $
 
-DISTNAME=	ffi-yajl-1.3.1
-PKGREVISION=	1
+DISTNAME=	ffi-yajl-1.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.5:../../devel/ruby-ffi
 DEPENDS+=	${RUBY_PKGPREFIX}-libyajl2>=1.2:../../devel/ruby-libyajl2
+
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../lang/ruby/gem.mk"
