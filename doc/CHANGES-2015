@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1121 2015/03/01 15:29:04 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1122 2015/03/01 15:35:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1597,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.66 [wiz 2015-03-01]
 	Updated devel/ruby-gettext_i18n_rails to 1.2.1 [taca 2015-03-01]
 	Updated devel/ruby-posix-spawn to 0.3.10 [taca 2015-03-01]
+	Updated devel/ruby-power_assert to 0.2.3 [taca 2015-03-01]
