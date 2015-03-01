@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1083 2015/02/28 23:10:28 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.1084 2015/03/01 04:25:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1548,3 +1548,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-XMPP to 1.05 [mef 2015-02-28]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.442 [tsutsui 2015-02-28]
 	Added benchmarks/glmark2 version 2014.03 [prlw1 2015-02-28]
+	Updated emulators/suse131_base to 13.1nb8 [ryoon 2015-03-01]
+	Updated emulators/suse131_32_base to 13.1nb8 [ryoon 2015-03-01]
