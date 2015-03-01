@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/25 13:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/01 13:42:02 taca Exp $
 
 DISTNAME=	redmine-2.6.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -69,6 +69,8 @@ DISTFILES+=	${DEFAULT_DISTFILES} \
 		websocket-1.2.1.gem \
 		xpath-2.0.0.gem \
 		yard-0.8.7.6.gem
+
+RUBY_VERSION_SUPPORTED= 193 200 21
 
 .include "options.mk"
 
