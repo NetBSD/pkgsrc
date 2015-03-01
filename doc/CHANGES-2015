@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1090 2015/03/01 09:41:33 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1091 2015/03/01 10:03:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1564,3 +1564,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Config-AutoConf to 0.310 [mef 2015-03-01]
 	Updated devel/p5-Devel-NYTProf to 5.07 [mef 2015-03-01]
 	Updated devel/p5-Dist-Zilla to 5.032 [mef 2015-03-01]
+	Added security/sslsplit version 0.4.10 [wiz 2015-03-01]
