@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/01 21:05:54 mspo Exp $
+
+SHA1 (mdb-0.9.14.tar.gz) = 672fd3b3431fe47252ae2bdc6f2c64d9e0857e8b
+RMD160 (mdb-0.9.14.tar.gz) = 9d6197d447b21403be50bc6db336c3af102339a3
+Size (mdb-0.9.14.tar.gz) = 131208 bytes
