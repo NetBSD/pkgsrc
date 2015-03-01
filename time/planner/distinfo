@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/05/07 01:34:55 dholland Exp $
+$NetBSD: distinfo,v 1.6 2015/03/01 08:40:41 mef Exp $
 
-SHA1 (planner-0.14.4.tar.bz2) = 43ba90bd18fcd271c0da31e66d2fa1294831cf28
-RMD160 (planner-0.14.4.tar.bz2) = 61fae3ac84e703d360b1cba97410a89da876a293
-Size (planner-0.14.4.tar.bz2) = 3738005 bytes
-SHA1 (patch-aa) = 5f2d0b4e8efb62efb736741fc60f4ca87a18778d
-SHA1 (patch-eds-backend_utils_create-planner-source_c) = 3677b0bdb331a3f6488bbe25e0360df17b0334e7
-SHA1 (patch-libplanner_mrp-error_c) = fc26cad50eb743ba59cb81ec3bfd96e90b8fcaf3
-SHA1 (patch-src_eel-canvas-rect_c) = 0e52572a33c7f5b255ef52831c1458e1edfd381f
+SHA1 (planner-0.14.6.tar.xz) = 3e6220aaf106d8d7e1fa6325b9a0b5f09ebf0917
+RMD160 (planner-0.14.6.tar.xz) = edfb1df0158695d918a6848b7e62ebed8830a210
+Size (planner-0.14.6.tar.xz) = 3392796 bytes
+SHA1 (patch-aa) = 769530b3b7a6cbd5fb3beefd5bbf13af5d777d5e
