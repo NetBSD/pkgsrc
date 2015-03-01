@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/12/10 23:25:33 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2015/03/01 06:24:13 markd Exp $
 
 DISTNAME=	marble-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -8,6 +8,8 @@ COMMENT=	KDE desktop globe
 MAKE_JOBS_SAFE=no
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
+
+CMAKE_ARGS+=	-DWITH_libgps:BOOL=OFF
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
