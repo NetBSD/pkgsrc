@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:38:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/01 08:40:41 mef Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -128,10 +128,14 @@ share/gnome/help/planner/eu/planner.xml
 share/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-planner.png
 share/locale/am/LC_MESSAGES/planner.mo
 share/locale/ar/LC_MESSAGES/planner.mo
+share/locale/as/LC_MESSAGES/planner.mo
+share/locale/ast/LC_MESSAGES/planner.mo
 share/locale/az/LC_MESSAGES/planner.mo
 share/locale/be/LC_MESSAGES/planner.mo
 share/locale/bg/LC_MESSAGES/planner.mo
+share/locale/bn_IN/LC_MESSAGES/planner.mo
 share/locale/ca/LC_MESSAGES/planner.mo
+share/locale/ca@valencia/LC_MESSAGES/planner.mo
 share/locale/cs/LC_MESSAGES/planner.mo
 share/locale/da/LC_MESSAGES/planner.mo
 share/locale/de/LC_MESSAGES/planner.mo
@@ -139,6 +143,7 @@ share/locale/dz/LC_MESSAGES/planner.mo
 share/locale/el/LC_MESSAGES/planner.mo
 share/locale/en_CA/LC_MESSAGES/planner.mo
 share/locale/en_GB/LC_MESSAGES/planner.mo
+share/locale/eo/LC_MESSAGES/planner.mo
 share/locale/es/LC_MESSAGES/planner.mo
 share/locale/et/LC_MESSAGES/planner.mo
 share/locale/eu/LC_MESSAGES/planner.mo
@@ -155,6 +160,7 @@ share/locale/id/LC_MESSAGES/planner.mo
 share/locale/is/LC_MESSAGES/planner.mo
 share/locale/it/LC_MESSAGES/planner.mo
 share/locale/ja/LC_MESSAGES/planner.mo
+share/locale/kk/LC_MESSAGES/planner.mo
 share/locale/kn/LC_MESSAGES/planner.mo
 share/locale/ko/LC_MESSAGES/planner.mo
 share/locale/lt/LC_MESSAGES/planner.mo
@@ -165,14 +171,17 @@ share/locale/mn/LC_MESSAGES/planner.mo
 share/locale/mr/LC_MESSAGES/planner.mo
 share/locale/ms/LC_MESSAGES/planner.mo
 share/locale/nb/LC_MESSAGES/planner.mo
+share/locale/nds/LC_MESSAGES/planner.mo
 share/locale/ne/LC_MESSAGES/planner.mo
 share/locale/nl/LC_MESSAGES/planner.mo
 share/locale/nn/LC_MESSAGES/planner.mo
 share/locale/oc/LC_MESSAGES/planner.mo
+share/locale/or/LC_MESSAGES/planner.mo
 share/locale/pa/LC_MESSAGES/planner.mo
 share/locale/pl/LC_MESSAGES/planner.mo
 share/locale/pt/LC_MESSAGES/planner.mo
 share/locale/pt_BR/LC_MESSAGES/planner.mo
+share/locale/ro/LC_MESSAGES/planner.mo
 share/locale/ru/LC_MESSAGES/planner.mo
 share/locale/rw/LC_MESSAGES/planner.mo
 share/locale/sk/LC_MESSAGES/planner.mo
