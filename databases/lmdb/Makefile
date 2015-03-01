@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.1 2015/03/01 21:05:54 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/01 21:19:29 mspo Exp $
 
 VERSION=	0.9.14
 DISTNAME=	mdb-${VERSION}
 PKGNAME=	lmdb-${VERSION}
 CATEGORIES=	databases
-MASTER_SITES=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+MASTER_SITES=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://symas.com/mdb/
 COMMENT=	Symas Lightning Memory-Mapped Database
 USE_TOOLS+=	gmake
 INSTALLATION_DIRS+=	man/man1
 INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	include
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/mdb-mdb
-BUILD_DIRS=	${WRKSRC}/libraries/liblmdb
+BUILD_DIRS=	libraries/liblmdb
 
 SUBST_CLASSES+=			makefile
 SUBST_STAGE.makefile=	pre-configure
