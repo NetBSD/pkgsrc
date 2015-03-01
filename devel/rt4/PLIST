@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/30 00:20:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/01 21:25:17 ryoon Exp $
 share/examples/rt4/RT_Config.pm
 share/examples/rt4/RT_SiteConfig.pm
 share/rt4/bin/rt
@@ -58,6 +58,7 @@ share/rt4/data/docs/schema.dot
 share/rt4/data/docs/security.pod
 share/rt4/data/docs/web_deployment.pod
 share/rt4/data/docs/writing_extensions.pod
+share/rt4/data/docs/writing_portlets.pod
 share/rt4/data/fonts/Droid.README
 share/rt4/data/fonts/DroidSans.ttf
 share/rt4/data/fonts/DroidSansFallback.ttf
@@ -1227,6 +1228,7 @@ share/rt4/etc/upgrade/4.1.8/schema.SQLite
 share/rt4/etc/upgrade/4.1.8/schema.mysql
 share/rt4/etc/upgrade/4.1.9/content
 share/rt4/etc/upgrade/4.2.1/content
+share/rt4/etc/upgrade/${PKGVERSION}/content
 share/rt4/etc/upgrade/4.2.2/content
 share/rt4/etc/upgrade/4.2.2/schema.mysql
 share/rt4/etc/upgrade/4.2.4/content
@@ -1235,12 +1237,12 @@ share/rt4/etc/upgrade/4.2.6/schema.mysql
 share/rt4/etc/upgrade/4.2.7/content
 share/rt4/etc/upgrade/4.2.8/content
 share/rt4/etc/upgrade/generate-rtaddressregexp
-share/rt4/etc/upgrade/sanity-check-stylesheets.pl
-share/rt4/etc/upgrade/shrink_cgm_table.pl
-share/rt4/etc/upgrade/shrink_transactions_table.pl
+share/rt4/etc/upgrade/sanity-check-stylesheets
+share/rt4/etc/upgrade/shrink-cgm-table
+share/rt4/etc/upgrade/shrink-transactions-table
 share/rt4/etc/upgrade/split-out-cf-categories
 share/rt4/etc/upgrade/switch-templates-to
-share/rt4/etc/upgrade/time-worked-history.pl
+share/rt4/etc/upgrade/time-worked-history
 share/rt4/etc/upgrade/upgrade-articles
 share/rt4/etc/upgrade/upgrade-mysql-schema.pl
 share/rt4/etc/upgrade/vulnerable-passwords
