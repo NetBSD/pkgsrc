@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/02/28 23:27:37 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/01 07:18:35 wiz Exp $
 
 DISTNAME=		uhd-release_003_007_002
 PKGNAME=		uhd-3.7.2
@@ -13,7 +13,7 @@ COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
 CMAKE_ARGS+=		-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 
