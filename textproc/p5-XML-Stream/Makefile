@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2014/05/29 23:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/03/01 11:49:26 mef Exp $
 #
 
-DISTNAME=	XML-Stream-1.23
+DISTNAME=	XML-Stream-1.24
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -15,6 +14,7 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	p5-Authen-SASL-[0-9]*:../../security/p5-Authen-SASL
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>0}:../../converters/p5-MIME-Base64
 
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=	auto/XML/Stream/.packlist
 
 .include "../../lang/perl5/module.mk"
