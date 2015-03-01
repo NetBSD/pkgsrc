@@ -1,0 +1,1 @@
+bin/posix-spawn-benchmark @PREFIX@/bin/posix-spawn-benchmark@RUBY_SUFFIX@
