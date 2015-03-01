@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.26 2015/02/21 12:58:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.27 2015/03/01 16:19:51 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -91,3 +91,7 @@ Pullup ticket #4623 - requested by taca
 www/squid3: security update
 Pullup ticket #4627 - requested by taca
 www/typo3_45: security update
+Pullup ticket #4630 - requested by hiramatsu
+security/clamav: security update
+Pullup ticket #4631 - requested by taca
+lang/php54: security update
