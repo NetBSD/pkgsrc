@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/28 19:15:08 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/01 20:03:27 joerg Exp $
 bin/gends_extract_simple_types.py
 bin/gends_generate_django.py
 bin/gends_run_gen_django.py
 bin/generateDS.py
 bin/generateds_gui.py
 bin/process_includes.py
-${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/generateDS-${PKGVERSION}0-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui.py
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui.pyc
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui.pyo
