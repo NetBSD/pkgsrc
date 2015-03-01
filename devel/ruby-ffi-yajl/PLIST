@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/19 20:46:23 fhajny Exp $
-bin/ffi-yajl-bench
+@comment $NetBSD: PLIST,v 1.2 2015/03/01 13:47:14 taca Exp $
+bin/ffi-yajl-bench${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/ffi_yajl/ext/encoder.${RUBY_DLEXT}
+${GEM_EXTSDIR}/ffi_yajl/ext/parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -40,6 +42,7 @@ ${GEM_LIBDIR}/lib/ffi_yajl/ffi/encoder.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/ffi/parser.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/json_gem.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/parser.rb
+${GEM_LIBDIR}/lib/ffi_yajl/platform.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/version.rb
 ${GEM_LIBDIR}/spec/ffi_yajl/encoder_spec.rb
 ${GEM_LIBDIR}/spec/ffi_yajl/json_gem_spec.rb
