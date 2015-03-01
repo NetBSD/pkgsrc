@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2014/06/08 13:21:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/01 13:24:23 taca Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAlarmsFolder.h
 include/GDLContentStore/GCSChannelManager.h
 include/GDLContentStore/GCSContext.h
-include/GDLContentStore/GCSFieldExtractor.h
 include/GDLContentStore/GCSFieldInfo.h
 include/GDLContentStore/GCSFolder.h
 include/GDLContentStore/GCSFolderManager.h
@@ -53,7 +52,6 @@ include/SOGoUI/UIxComponent.h
 include/SOGoUI/UIxJSClose.h
 lib/GNUstep/Frameworks/SOGo.framework/Headers
 lib/GNUstep/Frameworks/SOGo.framework/Resources
-lib/GNUstep/Frameworks/SOGo.framework/SOGo
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Headers/BSONCodec.h
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Headers/DOMNode+SOGo.h
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Headers/EOBitmaskQualifier.h
@@ -117,11 +115,12 @@ lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Resources/CASLogoutRequestMap.p
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Resources/DAVReportMap.plist
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Resources/Info-gnustep.plist
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Resources/SOGoDefaults.plist
-lib/GNUstep/Frameworks/SOGo.framework/Versions/2/SOGo
-lib/GNUstep/Frameworks/SOGo.framework/Versions/2/libSOGo.so
-lib/GNUstep/Frameworks/SOGo.framework/Versions/2/libSOGo.so.${PKGVERSION}
+lib/GNUstep/Frameworks/SOGo.framework/Versions/2/sogo/SOGo
+lib/GNUstep/Frameworks/SOGo.framework/Versions/2/sogo/libSOGo.so
+lib/GNUstep/Frameworks/SOGo.framework/Versions/2/sogo/libSOGo.so.${PKGVERSION}
 lib/GNUstep/Frameworks/SOGo.framework/Versions/Current
-lib/GNUstep/Frameworks/SOGo.framework/libSOGo.so
+lib/GNUstep/Frameworks/SOGo.framework/sogo/SOGo
+lib/GNUstep/Frameworks/SOGo.framework/sogo/libSOGo.so
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Africa/Abidjan.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Africa/Accra.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Africa/Addis_Ababa.ics
@@ -332,6 +331,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Antarctica/Palmer.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Antarctica/Rothera.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Antarctica/South_Pole.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Antarctica/Syowa.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Antarctica/Troll.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Antarctica/Vostok.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Arctic/Longyearbyen.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Aden.ics
@@ -348,6 +348,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Bangkok.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Beirut.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Bishkek.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Brunei.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Chita.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Choibalsan.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Chongqing.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Colombo.ics
@@ -372,6 +373,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Kamchatka.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Karachi.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Kashgar.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Kathmandu.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Khandyga.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Kolkata.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Krasnoyarsk.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Kuala_Lumpur.ics
@@ -399,6 +401,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Samarkand.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Seoul.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Shanghai.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Singapore.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Srednekolymsk.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Taipei.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Tashkent.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Tbilisi.ics
@@ -407,6 +410,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Thimphu.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Tokyo.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Ulaanbaatar.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Urumqi.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Ust-Nera.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Vientiane.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Vladivostok.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Asia/Yakutsk.ics
@@ -443,6 +447,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Bratislava.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Brussels.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Bucharest.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Budapest.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Busingen.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Chisinau.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Copenhagen.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Europe/Dublin.ics
@@ -503,6 +508,7 @@ lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Indian/Mayotte.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Indian/Reunion.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Pacific/Apia.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Pacific/Auckland.ics
+lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Pacific/Bougainville.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Pacific/Chatham.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Pacific/Chuuk.ics
 lib/GNUstep/Libraries/Resources/NGCards/TimeZones/Pacific/Easter.ics
@@ -966,9 +972,6 @@ lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Polish.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Russian.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoAppointmentFolders.toolbar
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoAppointmentObject.toolbar
-lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoAppointmentObjectAccept.toolbar
-lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoAppointmentObjectAcceptOrDecline.toolbar
-lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoAppointmentObjectDecline.toolbar
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoComponentClose.toolbar
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoEmpty.toolbar
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/SOGoTaskObject.toolbar
@@ -1016,6 +1019,7 @@ lib/GNUstep/SOGo/Templates/MailerUI/UIxMailFolderMenu.wox
 lib/GNUstep/SOGo/Templates/MailerUI/UIxMailMainFrame.wox
 lib/GNUstep/SOGo/Templates/MailerUI/UIxMailMoveToPopUp.wox
 lib/GNUstep/SOGo/Templates/MailerUI/UIxMailPopupView.wox
+lib/GNUstep/SOGo/Templates/MailerUI/UIxMailSearch.wox
 lib/GNUstep/SOGo/Templates/MailerUI/UIxMailToSelection.wox
 lib/GNUstep/SOGo/Templates/MailerUI/UIxMailUserDelegationEditor.wox
 lib/GNUstep/SOGo/Templates/MailerUI/UIxMailUserRightsEditor.wox
@@ -1140,8 +1144,6 @@ lib/GNUstep/SOGo/Templates/SOGoFolderSwedishRemovalAdvisory.wox
 lib/GNUstep/SOGo/Templates/SOGoFolderUkrainianAdditionAdvisory.wox
 lib/GNUstep/SOGo/Templates/SOGoFolderUkrainianRemovalAdvisory.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxAppointmentEditor.wox
-lib/GNUstep/SOGo/Templates/SchedulerUI/UIxAppointmentProposal.wox
-lib/GNUstep/SOGo/Templates/SchedulerUI/UIxAptTableView.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxAttendeesEditor.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxCalDateSelector.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxCalDayTable.wox
@@ -1165,7 +1167,6 @@ lib/GNUstep/SOGo/Templates/SchedulerUI/UIxRecurrenceEditor.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxReminderEditor.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxSortButton.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxTaskEditor.wox
-lib/GNUstep/SOGo/Templates/SchedulerUI/UIxTaskProposal.wox
 lib/GNUstep/SOGo/Templates/SchedulerUI/UIxTimeDateControl.wox
 lib/GNUstep/SOGo/Templates/UIxAclEditor.wox
 lib/GNUstep/SOGo/Templates/UIxJSClose.wox
@@ -1236,6 +1237,8 @@ lib/GNUstep/SOGo/WebServerResources/UIxMailEditor.css
 lib/GNUstep/SOGo/WebServerResources/UIxMailEditor.js
 lib/GNUstep/SOGo/WebServerResources/UIxMailPartExternalHTMLViewer.css
 lib/GNUstep/SOGo/WebServerResources/UIxMailPopupView.js
+lib/GNUstep/SOGo/WebServerResources/UIxMailSearch.css
+lib/GNUstep/SOGo/WebServerResources/UIxMailSearch.js
 lib/GNUstep/SOGo/WebServerResources/UIxMailToSelection.js
 lib/GNUstep/SOGo/WebServerResources/UIxMailUserDelegationEditor.css
 lib/GNUstep/SOGo/WebServerResources/UIxMailUserDelegationEditor.js
@@ -1380,10 +1383,12 @@ lib/GNUstep/SOGo/WebServerResources/dtree.css
 lib/GNUstep/SOGo/WebServerResources/dtree.js
 lib/GNUstep/SOGo/WebServerResources/edit.png
 lib/GNUstep/SOGo/WebServerResources/empty.gif
+lib/GNUstep/SOGo/WebServerResources/error.png
 lib/GNUstep/SOGo/WebServerResources/event-gradient.png
 lib/GNUstep/SOGo/WebServerResources/event-grippy-bottom.png
 lib/GNUstep/SOGo/WebServerResources/event-grippy-top.png
 lib/GNUstep/SOGo/WebServerResources/event-grippy-vertical.png
+lib/GNUstep/SOGo/WebServerResources/event7.png
 lib/GNUstep/SOGo/WebServerResources/first.gif
 lib/GNUstep/SOGo/WebServerResources/flag-col.png
 lib/GNUstep/SOGo/WebServerResources/flag.png
@@ -1573,6 +1578,7 @@ lib/GNUstep/SOGo/WebServerResources/new-event.png
 lib/GNUstep/SOGo/WebServerResources/new-list.png
 lib/GNUstep/SOGo/WebServerResources/new-task.png
 lib/GNUstep/SOGo/WebServerResources/next.gif
+lib/GNUstep/SOGo/WebServerResources/notice.png
 lib/GNUstep/SOGo/WebServerResources/offline-settings.png
 lib/GNUstep/SOGo/WebServerResources/options.png
 lib/GNUstep/SOGo/WebServerResources/plus.png
@@ -1602,6 +1608,7 @@ lib/GNUstep/SOGo/WebServerResources/status.vacation-msg.png
 lib/GNUstep/SOGo/WebServerResources/submenu-active.gif
 lib/GNUstep/SOGo/WebServerResources/submenu-disabled.gif
 lib/GNUstep/SOGo/WebServerResources/submenu.gif
+lib/GNUstep/SOGo/WebServerResources/success.png
 lib/GNUstep/SOGo/WebServerResources/tab_a_active_bg.png
 lib/GNUstep/SOGo/WebServerResources/tab_a_inactive_bg.png
 lib/GNUstep/SOGo/WebServerResources/tab_left_active.gif
@@ -1613,6 +1620,7 @@ lib/GNUstep/SOGo/WebServerResources/tab_span_inactive_bg.png
 lib/GNUstep/SOGo/WebServerResources/tablekit-sogo.js
 lib/GNUstep/SOGo/WebServerResources/tablekit-trueresize.js
 lib/GNUstep/SOGo/WebServerResources/tablekit.js
+lib/GNUstep/SOGo/WebServerResources/task.png
 lib/GNUstep/SOGo/WebServerResources/tb-ab-properties-flat-24x24.png
 lib/GNUstep/SOGo/WebServerResources/tb-compose-attach-flat-24x24.png
 lib/GNUstep/SOGo/WebServerResources/tb-compose-contacts-flat-24x24.png
@@ -1655,6 +1663,7 @@ lib/GNUstep/SOGo/WebServerResources/toolbarbtn_span_bg.png
 lib/GNUstep/SOGo/WebServerResources/unread.png
 lib/GNUstep/SOGo/WebServerResources/up-icon.png
 lib/GNUstep/SOGo/WebServerResources/upload_document.png
+lib/GNUstep/SOGo/WebServerResources/warning.png
 lib/GNUstep/SOGo/WebServerResources/week-view.png
 lib/GNUstep/SOGo/WebServerResources/write-message.png
 lib/GNUstep/SOGo/WebServerResources/write.png
@@ -1668,19 +1677,19 @@ lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/Resources/Info-gnustep.plist
 lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/SOGoElements
 lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/bundle-info.plist
 lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/stamp.make
-lib/libGDLContentStore.so
-lib/libGDLContentStore.so.4.9.0
-lib/libNGCards.so
-lib/libNGCards.so.4.9.0
-lib/libOGoContentStore.so
-lib/libOGoContentStore.so.0.9.0
-lib/libSOGo.so
-lib/libSOGo.so.${PKGVERSION}
-lib/libSOGoUI.so
-lib/libSOGoUI.so.2.2.0
+lib/sogo/libGDLContentStore.so
+lib/sogo/libGDLContentStore.so.4.9.0
+lib/sogo/libNGCards.so
+lib/sogo/libNGCards.so.4.9.0
+lib/sogo/libSOGo.so
+lib/sogo/libSOGo.so.${PKGVERSION}
+lib/sogo/libSOGoUI.so
+lib/sogo/libSOGoUI.so.2.2.0
 sbin/sogo-ealarms-notify
 sbin/sogo-slapd-sockd
 sbin/sogo-tool
 sbin/sogod
 share/examples/SOGo/SOGo.conf
 share/examples/SOGo/sogo-conf.sh
+@pkgdir lib/GNUstep/SOGo/Mailer.SOGo/Resources/WebServer
+@pkgdir lib/GNUstep/SOGo/Appointments.SOGo/Resources/WebServer
