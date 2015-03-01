@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14183 2015/03/01 15:10:04 wiz Exp $
+$NetBSD: TODO,v 1.14184 2015/03/01 15:14:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -465,7 +465,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.9
 	o denemo-1.2.0
 	o dhid-5.3
-	o dialog-1.2.20150225
 	o digikam-4.7.0
 	o dillo-3.0.4.1
 	o dinotrace-9.4d
