@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/01 20:02:27 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 
@@ -25,6 +25,8 @@ do-install:
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # sphinx detection broken as of 0.9.4
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
+
+MAKE_FLAGS+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 
 .include "../../mk/bsd.pkg.mk"
