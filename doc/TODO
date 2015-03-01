@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14174 2015/03/01 13:36:31 taca Exp $
+$NetBSD: TODO,v 1.14175 2015/03/01 14:57:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -349,6 +349,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o acpica-utils-20110623
 	o adocman-0.13
 	o aewm++-1.0.27
+	o afl-1.50b
 	o alacarte-0.13.2
 	o allegro-5.10
 	o alsa-lib-1.0.29
@@ -447,6 +448,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
+	o cups-filters-1.0.66
+	o curl-7.41.0
 	o cvs-fast-export-1.29
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.6
@@ -464,6 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.9
 	o denemo-1.2.0
 	o dhid-5.3
+	o dialog-1.2.20150225
 	o digikam-4.7.0
 	o dillo-3.0.4.1
 	o dinotrace-9.4d
@@ -577,6 +581,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.4.4
+	o gnats-4.2.0
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.14.2
@@ -724,6 +729,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
+	o libmpdclient-2.10
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
@@ -908,6 +914,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
 	o py-html2text-2015.2.18
+	o py-keyring-5.3
 	o py-lasso-2.4.0
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.3
@@ -920,6 +927,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-reportlab-3.0
 	o py-rope-0.9.4
+	o py-setuptools-12.3
 	o py-simpletal-5.1
 	o py-simpy-3.0.5
 	o py-smb-1.1.8
@@ -1030,6 +1038,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-2.101
+	o t1utils-1.39
 	o tads-3.0.16
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
@@ -1090,6 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.8.7
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
@@ -1100,6 +1110,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-1.1
 	o wesnoth-1.12.1
+	o wget-1.16.2
 	o windowlab-1.40
 	o wine-devel-1.7.37
 	o wmi-11
@@ -1127,6 +1138,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-voodoo-1.2.5 [wip]
 	o xf86-video-xgi-1.6.0 [unpackaged]
+	o xfce-4.12
 	o xfce4-4.10
 	o xfce4-volman-0.3.80
 	o xfig-3.2.5c
