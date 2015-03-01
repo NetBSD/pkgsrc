@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/08 15:37:35 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/01 15:39:43 taca Exp $
 
 DISTNAME=	thoth_flickr-0.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thothblog.org/
+HOMEPAGE=	# Web site has gone: http://thothblog.org/
 COMMENT=	Flickr plugin for the Thoth blog engine
 LICENSE=	modified-bsd
 

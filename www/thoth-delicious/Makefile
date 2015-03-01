@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/06 03:45:27 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/01 15:39:43 taca Exp $
 
 DISTNAME=	thoth_delicious-0.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thothblog.org/
+HOMEPAGE=	# Web site has gone: http://thothblog.org/
 COMMENT=	Thoth blog engine del.icio.us plugin
 LICENSE=	modified-bsd
 
