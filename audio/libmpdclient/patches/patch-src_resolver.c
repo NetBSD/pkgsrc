@@ -1,5 +1,7 @@
-$NetBSD: patch-src_resolver.c,v 1.1 2012/03/04 20:10:47 jakllsch Exp $
+$NetBSD: patch-src_resolver.c,v 1.2 2015/03/01 15:18:43 wiz Exp $
+
 Use getaddrinfo(3) even if AI_ADDRCONFIG is missing.
+http://bugs.musicpd.org/view.php?id=4326
 
 --- src/resolver.c.orig	2011-10-24 02:43:05.000000000 +0000
 +++ src/resolver.c
