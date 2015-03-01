@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1107 2015/03/01 13:40:46 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1108 2015/03/01 13:47:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1583,3 +1583,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/SOGo to 2.2.16 [taca 2015-03-01]
 	Updated devel/fromcvs to 0.0.0.134 [taca 2015-03-01]
 	Updated devel/php-xdebug to 2.3.0 [taca 2015-03-01]
+	Updated devel/ruby-ffi-yajl to 1.4.0 [taca 2015-03-01]
