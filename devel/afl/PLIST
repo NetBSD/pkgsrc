@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/02/23 07:30:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/03/01 15:07:28 wiz Exp $
 bin/afl-clang
 bin/afl-clang++
 bin/afl-cmin
@@ -536,7 +536,7 @@ share/afl/testcases/archives/common/cab/small_archive.cab
 share/afl/testcases/archives/common/compress/small_archive.Z
 share/afl/testcases/archives/common/cpio/small_archive.cpio
 share/afl/testcases/archives/common/gzip/small_archive.gz
-share/afl/testcases/archives/common/lzo/small_achive.lzo
+share/afl/testcases/archives/common/lzo/small_archive.lzo
 share/afl/testcases/archives/common/rar/small_archive.rar
 share/afl/testcases/archives/common/tar/small_archive.tar
 share/afl/testcases/archives/common/xz/small_archive.xz
