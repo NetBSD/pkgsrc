@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/10/07 16:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/01 13:24:23 taca Exp $
 #
 
-DISTNAME=	SOGo-2.2.5
-PKGREVISION=	1
+DISTNAME=	SOGo-2.2.16
 CATEGORIES=	www
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
@@ -15,6 +14,7 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=     gmake zip:run
 
 CONFIGURE_ARGS= --enable-debug --disable-strip
+MAKE_JOBS_SAFE=		no
 
 SOGOUSER?=	sogo
 SOGOGROUP?=	sogo
@@ -47,6 +47,7 @@ FILES_SUBST+=	SOGOUSER=${SOGOUSER}
 RCD_SCRIPTS=	sogod
 
 pre-install:
+	${CHMOD} -x ${WRKSRC}/UI/WebServerResources/*.png
 	${SED} -e "s|@SOGOUSER@|${SOGOUSER}|" ${FILESDIR}/sogo-conf.sh > \
 	  ${DESTDIR}${PREFIX}/share/examples/SOGo/sogo-conf.sh
 	${SED} -e "s|/usr/GNUstep/System/Library|${PREFIX}/lib/GNUstep|" \
