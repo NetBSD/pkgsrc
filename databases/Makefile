@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.481 2015/02/01 12:23:05 taca Exp $
+# $NetBSD: Makefile,v 1.482 2015/03/01 21:06:56 mspo Exp $
 
 COMMENT=	Databases
 
@@ -68,6 +68,7 @@ SUBDIR+=	libgda-postgres
 SUBDIR+=	libmongo-client
 SUBDIR+=	libpqxx
 SUBDIR+=	libpqxx-doc
+SUBDIR+=	lmdb
 SUBDIR+=	lua-sqlite
 SUBDIR+=	lua-sqlite3
 SUBDIR+=	lua-tokyocabinet
