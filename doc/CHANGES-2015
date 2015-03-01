@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1096 2015/03/01 11:46:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1097 2015/03/01 11:48:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1572,3 +1572,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Role-Tiny to 2.000000 [wiz 2015-03-01]
 	Updated devel/p5-strictures to 2.000000 [wiz 2015-03-01]
 	Updated graphics/p5-Image-Size to 3.300 [wiz 2015-03-01]
+	Updated devel/p5-MooX-Types-MooseLike to 0.28 [wiz 2015-03-01]
