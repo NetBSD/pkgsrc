@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1120 2015/03/01 15:24:45 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1121 2015/03/01 15:29:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1596,3 +1596,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/dialog to 1.2.20150225 [wiz 2015-03-01]
 	Updated print/cups-filters to 1.0.66 [wiz 2015-03-01]
 	Updated devel/ruby-gettext_i18n_rails to 1.2.1 [taca 2015-03-01]
+	Updated devel/ruby-posix-spawn to 0.3.10 [taca 2015-03-01]
