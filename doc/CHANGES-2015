@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1093 2015/03/01 11:42:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1094 2015/03/01 11:44:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1569,3 +1569,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-MimeInfo to 0.27 [mef 2015-03-01]
 	Updated devel/p5-Getopt-Long to 2.45 [mef 2015-03-01]
 	Updated net/p5-Net-DNS to 0.83 [wiz 2015-03-01]
+	Updated devel/p5-Role-Tiny to 2.000000 [wiz 2015-03-01]
