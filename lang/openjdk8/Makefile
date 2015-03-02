@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/02/21 11:02:00 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/02 03:53:26 tnn Exp $
 
 DISTNAME=	openjdk-1.8.31-20150207
 PKGNAME=	openjdk8-1.8.31
@@ -54,9 +54,6 @@ CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--with-user-release-suffix=pkgsrc_${PKGVERSION}
 CONFIGURE_ARGS+=	--with-update-version=u${PKGVERSION_NOREV:S/1.8.//}
 
-ALL_ENV+=		PKGSRC_BOOT_JDK_JVMARGS="-XX:+UseSerialGC -Xmx768M"
-ALL_ENV+=		PKGSRC_BOOT_JDK_TOOLARGS="-J-XX:+UseSerialGC -J-Xmx768M"
-
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
@@ -81,6 +78,9 @@ SUBST_CLASSES+=		libpath
 SUBST_STAGE.libpath=	pre-build
 SUBST_FILES.libpath+=	hotspot/src/os/bsd/vm/os_bsd.cpp
 SUBST_VARS.libpath=	PREFIX
+
+CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-return-type
@@ -125,20 +125,13 @@ SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
 
 post-extract:
-.if ${OPSYS} == "SunOS"
-	${MKDIR} ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/include ${ALT_BOOTDIR}/include
-	${LN} -s ${JDK_BOOTDIR}/lib ${ALT_BOOTDIR}/lib
-	${LN} -s ${JDK_BOOTDIR}/bin/java ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/javac ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/javah ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/javap ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/idlj ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/jar ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/native2ascii ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/rmic ${ALT_BOOTDIR}/bin
-.elif ${OPSYS} == "NetBSD" && exists(${.CURDIR}/libs)
-	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}
+# These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
+# MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.
+.if exists(/lib/libgcc_s.so.1)
+	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libgcc_s.so*
+.endif
+.if exists(/usr/lib/libstdc++.so.7)
+	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libstdc++.so*
 .endif
 
 do-build: ${WRKDIR}/stage3-done
