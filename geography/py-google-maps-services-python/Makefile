@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/01/30 17:35:07 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/02 13:29:16 kleink Exp $
 
-DISTNAME=	google-maps-services-python-2.1
+DISTNAME=	google-maps-services-python-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	-https://github.com/googlemaps/google-maps-services-python/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
