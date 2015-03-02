@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2015/03/02 19:34:33 tnn Exp $
+# $NetBSD: Makefile,v 1.229 2015/03/02 19:37:59 tnn Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -267,6 +267,7 @@ SUBDIR+=	suse131_32_libwrap
 SUBDIR+=	suse131_32_libxml2
 SUBDIR+=	suse131_32_libxslt
 SUBDIR+=	suse131_32_locale
+SUBDIR+=	suse131_32_lsb
 SUBDIR+=	suse131_32_motif
 SUBDIR+=	suse131_32_mozilla-nspr
 SUBDIR+=	suse131_32_mozilla-nss
@@ -313,6 +314,7 @@ SUBDIR+=	suse131_libxml2
 SUBDIR+=	suse131_libxslt
 #SUBDIR+=	suse131_linux		# only contains Makefile fragments
 SUBDIR+=	suse131_locale
+SUBDIR+=	suse131_lsb
 SUBDIR+=	suse131_motif
 SUBDIR+=	suse131_mozilla-nspr
 SUBDIR+=	suse131_mozilla-nss
