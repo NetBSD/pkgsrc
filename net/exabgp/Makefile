@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/19 12:23:52 he Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/02 23:22:01 sevan Exp $
 
 VERSION=	3.4.7
 DISTNAME=	${VERSION}
@@ -41,7 +41,7 @@ USE_LANGUAGES=  # none
 INSTALLATION_DIRS=	share/exabgp bin
 
 pre-install:
-	find work -name '*.orig' | xargs rm -f
+	find ${WRKDIR} -name "*.orig" | xargs rm -f
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
