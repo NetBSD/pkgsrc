@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1130 2015/03/02 09:44:22 imil Exp $
+$NetBSD: CHANGES-2015,v 1.1131 2015/03/02 09:59:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1606,3 +1606,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/lmdb version 0.9.14 [mspo 2015-03-01]
 	Updated devel/rt4 to 4.2.10 [ryoon 2015-03-01]
 	Updated net/py-irclib to 12.1 [imil 2015-03-02]
+	Updated archivers/xz to 5.2.1 [adam 2015-03-02]
+	Updated graphics/GraphicsMagick to 1.3.21 [adam 2015-03-02]
+	Updated graphics/p5-GraphicsMagick to 1.3.21 [adam 2015-03-02]
