@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2015/03/01 16:57:05 tnn Exp $
+# $NetBSD: Makefile,v 1.97 2015/03/02 03:53:26 tnn Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -54,9 +54,6 @@ MAKE_ENV+=	HOTSPOT_BUILD_USER=pkgsrc
 MAKE_ENV+=	NO_DOCS=true
 MAKE_ENV+=	SKIP_COMPARE_IMAGES=true
 
-ALL_ENV+=	PKGSRC_BOOT_JDK_JVMARGS="-XX:+UseSerialGC -Xmx768M"
-ALL_ENV+=	PKGSRC_BOOT_JDK_TOOLARGS="-J-XX:+UseSerialGC -J-Xmx768M"
-
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
@@ -109,6 +106,9 @@ SUBST_STAGE.mapfix2=	pre-build
 SUBST_FILES.mapfix2=	jdk/make/com/sun/java/pack/mapfile-vers
 SUBST_SED.mapfix2=	-e '/environ/d'
 .endif
+
+CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
@@ -175,20 +175,13 @@ PLIST.alsa=	yes
 post-extract:
 	chmod +x ${ANT_BIN}/ant
 	${LN} -s mapfile-i586 ${WRKSRC}/jdk/make/java/main/java/mapfile-arm
-.if ${OPSYS} == "SunOS"
-	${MKDIR} ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/include ${ALT_BOOTDIR}/include
-	${LN} -s ${JDK_BOOTDIR}/lib ${ALT_BOOTDIR}/lib
-	${LN} -s ${JDK_BOOTDIR}/bin/java ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/javac ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/javah ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/javap ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/idlj ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/jar ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/native2ascii ${ALT_BOOTDIR}/bin
-	${LN} -s ${JDK_BOOTDIR}/bin/rmic ${ALT_BOOTDIR}/bin
-.elif ${OPSYS} == "NetBSD" && exists(${.CURDIR}/libs)
-	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}
+# These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
+# MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.
+.if exists(/lib/libgcc_s.so.1)
+	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libgcc_s.so*
+.endif
+.if exists(/usr/lib/libstdc++.so.7)
+	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libstdc++.so*
 .endif
 
 do-build: ${WRKDIR}/stage3-done
