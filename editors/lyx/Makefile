@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/01/10 18:13:22 rumko Exp $
+# $NetBSD: Makefile,v 1.45 2015/03/02 19:59:06 joerg Exp $
 
 DISTNAME=		lyx-2.1.2.2
 CATEGORIES=		editors
@@ -185,6 +185,8 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+
+CXXFLAGS+= ${CLANG_NO_VALUE_PROPAGATION_PASS}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
