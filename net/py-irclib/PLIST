@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/20 12:44:01 imil Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/02 09:44:05 imil Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -15,6 +15,8 @@ ${PYSITELIB}/irc/client.pyc
 ${PYSITELIB}/irc/client.pyo
 ${PYSITELIB}/irc/connection.pyc
 ${PYSITELIB}/irc/connection.pyo
+${PYSITELIB}/irc/ctcp.pyc
+${PYSITELIB}/irc/ctcp.pyo
 ${PYSITELIB}/irc/dict.pyc
 ${PYSITELIB}/irc/dict.pyo
 ${PYSITELIB}/irc/events.pyc
@@ -35,12 +37,11 @@ ${PYSITELIB}/irc/server.pyc
 ${PYSITELIB}/irc/server.pyo
 ${PYSITELIB}/irc/strings.pyc
 ${PYSITELIB}/irc/strings.pyo
-${PYSITELIB}/irc/util.pyc
-${PYSITELIB}/irc/util.pyo
 ${PYSITELIB}/irc/bot.py
 ${PYSITELIB}/irc/buffer.py
 ${PYSITELIB}/irc/client.py
 ${PYSITELIB}/irc/connection.py
+${PYSITELIB}/irc/ctcp.py
 ${PYSITELIB}/irc/dict.py
 ${PYSITELIB}/irc/events.py
 ${PYSITELIB}/irc/features.py
@@ -63,4 +64,3 @@ ${PYSITELIB}/irc/tests/test_schedule.pyo
 ${PYSITELIB}/irc/tests/test_bot.py
 ${PYSITELIB}/irc/tests/test_client.py
 ${PYSITELIB}/irc/tests/test_schedule.py
-${PYSITELIB}/irc/util.py
