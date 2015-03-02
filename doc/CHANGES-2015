@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1137 2015/03/02 16:58:32 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1138 2015/03/02 19:34:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1619,3 +1619,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-irclib to 11.1.1 [imil 2015-03-02]
 	Added emulators/suse131_libxslt version 13.1 [tnn 2015-03-02]
 	Added emulators/suse131_32_libxslt version 13.1 [tnn 2015-03-02]
+	Added emulators/suse131_libwebp version 13.1 [tnn 2015-03-02]
+	Added emulators/suse131_32_libwebp version 13.1 [tnn 2015-03-02]
