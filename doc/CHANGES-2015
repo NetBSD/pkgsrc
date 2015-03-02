@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1135 2015/03/02 15:28:41 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1136 2015/03/02 15:54:32 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1616,3 +1616,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-flask-flatpages to 0.6 [kleink 2015-03-02]
 	Added net/vpnc-script version 20140805 [wiz 2015-03-02]
 	Added net/openconnect version 7.04 [wiz 2015-03-02]
+	Updated net/py-irclib to 11.1.1 [imil 2015-03-02]
