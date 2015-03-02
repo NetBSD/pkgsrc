@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.5 2014/12/17 01:40:51 rodent Exp $
+# $NetBSD: emulator.mk,v 1.6 2015/03/02 19:47:41 tnn Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -50,6 +50,7 @@ DEPENDS_suse-13.1.libsndfile?=	suse_libsndfile${_SUSE_VERSION_REQD}:../../emulat
 DEPENDS_suse-13.1.libssh?=	suse_libssh${_SUSE_VERSION_REQD}:../../emulators/suse131_libssh
 DEPENDS_suse-13.1.libwrap?=	suse_libwrap${_SUSE_VERSION_REQD}:../../emulators/suse131_libwrap
 DEPENDS_suse-13.1.locale?=	suse_locale${_SUSE_VERSION_REQD}:../../emulators/suse131_locale
+DEPENDS_suse-13.1.lsb?=		suse_lsb${_SUSE_VERSION_REQD}:../../emulators/suse131_lsb
 DEPENDS_suse-13.1.motif?=	suse_motif${_SUSE_VERSION_REQD}:../../emulators/suse131_motif
 DEPENDS_suse-13.1.nss?=		suse_mozilla-nss${_SUSE_VERSION_REQD}:../../emulators/suse131_mozilla-nss
 DEPENDS_suse-13.1.nspr?=	suse_mozilla-nspr${_SUSE_VERSION_REQD}:../../emulators/suse131_mozilla-nspr
@@ -61,8 +62,10 @@ DEPENDS_suse-13.1.qt4?=		suse_qt4${_SUSE_VERSION_REQD}:../../emulators/suse131_q
 DEPENDS_suse-13.1.slang?=	suse_slang${_SUSE_VERSION_REQD}:../../emulators/suse131_slang
 DEPENDS_suse-13.1.sqlite3?=	suse_sqlite3${_SUSE_VERSION_REQD}:../../emulators/suse131_sqlite3
 DEPENDS_suse-13.1.tiff?=	suse_libtiff${_SUSE_VERSION_REQD}:../../emulators/suse131_libtiff
+DEPENDS_suse-13.1.webp?=	suse_libwebp${_SUSE_VERSION_REQD}:../../emulators/suse131_libwebp
 DEPENDS_suse-13.1.x11?=		suse_x11${_SUSE_VERSION_REQD}:../../emulators/suse131_x11
 DEPENDS_suse-13.1.xml2?=	suse_libxml2${_SUSE_VERSION_REQD}:../../emulators/suse131_libxml2
+DEPENDS_suse-13.1.xslt?=	suse_libxslt${_SUSE_VERSION_REQD}:../../emulators/suse131_libxslt
 
 .if (${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")
 .  for _mod_ in ${_EMUL_MODULES}
