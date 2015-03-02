@@ -1,4 +1,4 @@
-$NetBSD: patch-jdk_test_Makefile,v 1.4 2015/02/09 00:42:17 tnn Exp $
+$NetBSD: patch-jdk_test_Makefile,v 1.5 2015/03/02 03:53:26 tnn Exp $
 
 Use tools from pkgsrc.
 
@@ -26,21 +26,3 @@ Use tools from pkgsrc.
  ifdef CONCURRENCY
    EXTRA_JTREG_OPTIONS += -concurrency:$(CONCURRENCY)
  endif
-@@ -641,7 +649,7 @@ JTREG_BASIC_OPTIONS += $(JTREG_IGNORE_OP
- JTREG_TIMEOUT_OPTION =  -timeoutFactor:4
- JTREG_BASIC_OPTIONS += $(JTREG_TIMEOUT_OPTION)
- # Boost the max memory for jtreg to avoid gc thrashing
--JTREG_MEMORY_OPTION = -J-Xmx512m
-+JTREG_MEMORY_OPTION = $(PKGSRC_BOOT_JDK_TOOLARGS)
- JTREG_BASIC_OPTIONS += $(JTREG_MEMORY_OPTION)
- 
- # Make sure jtreg exists
-@@ -825,7 +833,7 @@ endif
- 
- # The jtjck.jar utility to use to run the tests
- JTJCK_JAR = $(JCK_HOME)/lib/jtjck.jar
--JTJCK_JAVA_ARGS =  -XX:MaxPermSize=256m -Xmx512m
-+JTJCK_JAVA_ARGS =  -XX:MaxPermSize=256m $(PKGSRC_BOOT_JDK_JVMARGS)
- JTJCK_OPTIONS = -headless -v
- 
- # Default tests to run
