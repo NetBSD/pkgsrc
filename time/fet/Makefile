@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/02/21 23:35:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/02 19:59:07 joerg Exp $
 
 DISTNAME=	fet-5.25.0
 PKGREVISION=	1
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lalescu.ro/liviu/fet/
 COMMENT=	Automatically schedule timetables
 LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
+CFLAGS+=	${CLANG_NO_VALUE_PROPAGATION_PASS}
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
