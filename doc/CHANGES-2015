@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1139 2015/03/02 19:37:59 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1140 2015/03/02 20:23:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1623,3 +1623,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/suse131_32_libwebp version 13.1 [tnn 2015-03-02]
 	Added emulators/suse131_lsb version 13.1 [tnn 2015-03-02]
 	Added emulators/suse131_32_lsb version 13.1 [tnn 2015-03-02]
+	Updated net/wget to 1.16.2nb1 [tron 2015-03-02]
