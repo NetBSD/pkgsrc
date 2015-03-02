@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2014/06/18 09:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/03/02 02:20:49 khorben Exp $
 
 DISTNAME=		hplip-3.14.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -97,6 +97,7 @@ SUBST_FILES.fix-paths-1=	check.py base/codes.py base/g.py base/utils.py
 SUBST_FILES.fix-paths-1+=	installer/core_install.py
 SUBST_FILES.fix-paths-1+=	fax/backend/hpfax.py prnt/cups.py
 SUBST_FILES.fix-paths-1+=	ui/devmgr4.py ui4/devmgr5.py
+SUBST_FILES.fix-paths-1+=	prnt/filters/hpps
 SUBST_FILES.fix-paths-1+=	prnt/hpcups/HPCupsFilter.cpp prnt/hpcups/Utils.cpp
 SUBST_FILES.fix-paths-1+=	prnt/hpijs/globals.cpp prnt/hpijs/hpcupsfax.cpp
 SUBST_FILES.fix-paths-1+=	prnt/hpijs/hpijs.cpp
