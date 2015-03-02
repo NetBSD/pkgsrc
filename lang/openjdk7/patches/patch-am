@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.6 2015/02/09 00:42:17 tnn Exp $
+$NetBSD: patch-am,v 1.7 2015/03/02 03:53:26 tnn Exp $
 
 Set username to pkgsrc.
 
@@ -13,12 +13,3 @@ Set username to pkgsrc.
      USER_RELEASE_SUFFIX := $(shell $(ECHO) "$(CLEAN_USERNAME)_$(BUILD_DATE)" | $(TR) '[:upper:]' '[:lower:]' )
    endif
    export USER_RELEASE_SUFFIX
-@@ -615,7 +615,7 @@ endif
- #     To workaround this we will specify JAVA_HOME explicitly
- 
- ANT_TMPDIR = $(ABS_OUTPUTDIR)/tmp
--ANT_WORKAROUNDS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR)' JAVA_HOME='$(BOOTDIR)'
-+ANT_WORKAROUNDS = ANT_OPTS=-Djava.io.tmpdir='$(ANT_TMPDIR)'\ -XX:+UseSerialGC\ -Xmx768M JAVA_HOME='$(BOOTDIR)'
- 
- ifeq ($(ANT_HOME),)
-   ANT = $(ANT_WORKAROUNDS) ant
