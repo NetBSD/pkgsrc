@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/01/06 14:28:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2015/03/02 23:28:13 sevan Exp $
 
 DISTNAME=	opencv-2.4.9
 PKGREVISION=	2
@@ -43,7 +43,7 @@ CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
 
 PLIST_VARS+=	opencl
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
 PLIST.opencl=	yes
 .endif
 
