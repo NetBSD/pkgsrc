@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/10/18 21:27:53 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/02 23:44:43 pho Exp $
 
-DISTNAME=	vector-0.10.12.1
+DISTNAME=	vector-0.10.12.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
