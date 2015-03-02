@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/02 13:37:17 kleink Exp $
 
-DISTNAME=	Flask-FlatPages-0.5
+DISTNAME=	Flask-FlatPages-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-FlatPages/
