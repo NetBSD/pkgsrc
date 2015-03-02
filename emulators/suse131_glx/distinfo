@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2014/04/17 00:19:19 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/03/02 19:31:00 tnn Exp $
 
 SHA1 (suse131/Mesa-9.2.3-61.9.1.i586.rpm) = 5eca4e9333ce8f9d0b516b64cc606ad96ab2be34
 RMD160 (suse131/Mesa-9.2.3-61.9.1.i586.rpm) = 195bb9eeaba4f415dea4db3d4c643196b8da4555
@@ -15,6 +15,9 @@ Size (suse131/Mesa-libglapi0-9.2.3-61.9.1.i586.rpm) = 57681 bytes
 SHA1 (suse131/libGLU1-9.0.0-7.1.2.i586.rpm) = 4a09eeb15615ca5fefb5afcaec430d0644e5beb6
 RMD160 (suse131/libGLU1-9.0.0-7.1.2.i586.rpm) = b1cb25631ae2ee0819047c4758487fcfbf0b0937
 Size (suse131/libGLU1-9.0.0-7.1.2.i586.rpm) = 182794 bytes
+SHA1 (suse131/libLLVM-3.3-6.7.1.i586.rpm) = 81b159d03111fe9c4dfd664ad97ee94343d5f21b
+RMD160 (suse131/libLLVM-3.3-6.7.1.i586.rpm) = 1d0e44b20b4e3e1a00228272828bcd84c4e808b9
+Size (suse131/libLLVM-3.3-6.7.1.i586.rpm) = 4889380 bytes
 SHA1 (suse131/libgbm1-9.2.3-61.9.1.i586.rpm) = aed3bb98b2f3bb95121983156b5cb4d91b027d79
 RMD160 (suse131/libgbm1-9.2.3-61.9.1.i586.rpm) = f547288934ca805cdf47699972ef70a2b314a8e7
 Size (suse131/libgbm1-9.2.3-61.9.1.i586.rpm) = 521895 bytes
@@ -42,6 +45,9 @@ Size (suse131/Mesa-libglapi0-9.2.3-61.9.1.x86_64.rpm) = 56808 bytes
 SHA1 (suse131/libGLU1-9.0.0-7.1.2.x86_64.rpm) = 2b65aadc7af87f51e8c4032ff25bb77a2f56e343
 RMD160 (suse131/libGLU1-9.0.0-7.1.2.x86_64.rpm) = dfe9789ac61972b69def9476b0b7616af67e81c4
 Size (suse131/libGLU1-9.0.0-7.1.2.x86_64.rpm) = 186793 bytes
+SHA1 (suse131/libLLVM-3.3-6.7.1.x86_64.rpm) = 19fc53a8e006f2745cdd6128f2f9d9632633af71
+RMD160 (suse131/libLLVM-3.3-6.7.1.x86_64.rpm) = 321a83f674543a8b6e0f475a1c86b1faea66950c
+Size (suse131/libLLVM-3.3-6.7.1.x86_64.rpm) = 4863248 bytes
 SHA1 (suse131/libgbm1-9.2.3-61.9.1.x86_64.rpm) = f9837b7a2a70313b9f3b9846e949b24b28ef1744
 RMD160 (suse131/libgbm1-9.2.3-61.9.1.x86_64.rpm) = c1f9f1a25370d7798a7bd26e0a0e596c486329d7
 Size (suse131/libgbm1-9.2.3-61.9.1.x86_64.rpm) = 517606 bytes
