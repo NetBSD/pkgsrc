@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/18 09:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/02 23:27:03 sevan Exp $
 
 DISTNAME=	netatalk-2.2.5
 PKGNAME=        ${DISTNAME:C/-/22-/}
@@ -72,13 +72,14 @@ PLIST.rcd=		yes
 
 PLIST_VARS+=		ea
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
-	(${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-6].[0-8]*))
+	(${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-6].[0-8]*)) || \
+	${OPSYS} == "FreeBSD"
 PLIST.ea=		yes
 .endif
 
 PLIST_VARS+=		acl
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX" || ${OPSYS} == "IRIX" || \
-	${OPSYS} == "AIX" || ${OPSYS} == "OSF1"
+	${OPSYS} == "AIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "FreeBSD"
 PLIST.acl=		yes
 CONF_FILES+=	${EGDIR}/afp_ldap.conf ${PKG_SYSCONFDIR}/afp_ldap.conf
 .endif
