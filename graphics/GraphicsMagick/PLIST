@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/08/18 11:13:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/03/02 09:57:03 adam Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -91,7 +91,6 @@ lib/${PKGNAME}/config/type-solaris.mgk
 lib/${PKGNAME}/config/type-windows.mgk
 lib/${PKGNAME}/config/type.mgk
 lib/${PKGNAME}/modules-Q8/coders/art.la
-lib/${PKGNAME}/modules-Q8/coders/avi.la
 lib/${PKGNAME}/modules-Q8/coders/avs.la
 lib/${PKGNAME}/modules-Q8/coders/bmp.la
 lib/${PKGNAME}/modules-Q8/coders/cals.la
@@ -231,6 +230,7 @@ share/doc/GraphicsMagick/www/ChangeLog-2010.html
 share/doc/GraphicsMagick/www/ChangeLog-2011.html
 share/doc/GraphicsMagick/www/ChangeLog-2012.html
 share/doc/GraphicsMagick/www/ChangeLog-2013.html
+share/doc/GraphicsMagick/www/ChangeLog-2014.html
 share/doc/GraphicsMagick/www/Changelog.html
 share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html
