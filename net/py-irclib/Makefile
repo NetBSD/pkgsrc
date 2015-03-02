@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 21:37:03 imil Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/02 09:44:05 imil Exp $
 #
 
-IRCVERS=	8.9
+IRCVERS=	12.1
 DISTNAME=	irc-${IRCVERS}
 PKGNAME=	${PYPKGPREFIX}-irclib-${IRCVERS}
 CATEGORIES=	net python
@@ -9,7 +9,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/i/irc/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/jaraco/irc
+HOMEPAGE=	http://python-irclib.sourceforge.net/
 COMMENT=	Internet Relay Chat (IRC) protocol client library
 LICENSE=	gnu-gpl-v2
 
