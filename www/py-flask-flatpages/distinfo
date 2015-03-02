@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/01/19 17:42:04 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/03/02 13:37:17 kleink Exp $
 
-SHA1 (Flask-FlatPages-0.5.tar.gz) = 08f05c88841fd1f682906a47760b40a798283c21
-RMD160 (Flask-FlatPages-0.5.tar.gz) = 1ec36be8a08c7c97f473a623d2b5926f308b6927
-Size (Flask-FlatPages-0.5.tar.gz) = 20949 bytes
-SHA1 (patch-flask__flatpages_____init____.py) = 31209f4274ee6baf92e66829ba178f925f520541
+SHA1 (Flask-FlatPages-0.6.tar.gz) = 68e6d00d094a4009804d43c77b16cd2546d9018e
+RMD160 (Flask-FlatPages-0.6.tar.gz) = 73c9d210d72f8542c236f937ef63587321965521
+Size (Flask-FlatPages-0.6.tar.gz) = 22536 bytes
