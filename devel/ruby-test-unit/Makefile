@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/02/02 15:11:31 taca Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/02 11:05:34 joerg Exp $
 
 DISTNAME=	test-unit-3.0.9
 CATEGORIES=	devel
@@ -9,6 +9,7 @@ COMMENT=	Improved version of Test::Unit
 LICENSE=	ruby-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-power_assert>=0:../../devel/ruby-power_assert
+RUBY_VERSION_SUPPORTED=	200 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
