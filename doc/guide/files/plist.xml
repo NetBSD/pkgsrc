@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.20 2015/02/15 18:50:04 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.21 2015/03/02 16:40:54 sevan Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -131,9 +131,10 @@ PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next;
       </varlistentry>
     </variablelist>
 
-    <para>For a complete list of values which are replaced by
-    default, please look in <filename>bsd.pkg.mk</filename> (and
-    search for <varname>PLIST_SUBST</varname>).</para>
+    <para>For a list of values which are replaced by
+    default, the output of <command>make help topic=PLIST_SUBST</command> as
+well as searching the <filename>pkgsrc/mk</filename> directory with <command>grep</command> for
+<varname>PLIST_SUBST</varname> should help.</para>
 
     <para>If you want to change other variables not listed above, you
     can add variables and their expansions to this variable in the
