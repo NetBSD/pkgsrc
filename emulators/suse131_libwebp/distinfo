@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/03/02 19:18:08 tnn Exp $
+
+SHA1 (suse131/libwebp4-0.3.1-2.1.2.i586.rpm) = 81670369251de44162cc3d9f9c02a7e5d7575197
+RMD160 (suse131/libwebp4-0.3.1-2.1.2.i586.rpm) = 8fb34f7b529603998fbce94f76cd75121a3aa07e
+Size (suse131/libwebp4-0.3.1-2.1.2.i586.rpm) = 129250 bytes
+SHA1 (suse131/libwebp4-0.3.1-2.1.2.x86_64.rpm) = dc8c27c58111b59d4c3a77d38f300a91de35c530
+RMD160 (suse131/libwebp4-0.3.1-2.1.2.x86_64.rpm) = 6b844b3782e50acc426a8135b7e1195c59a90a37
+Size (suse131/libwebp4-0.3.1-2.1.2.x86_64.rpm) = 141389 bytes
