@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1062 2015/02/27 13:09:48 mef Exp $
+# $NetBSD: Makefile,v 1.1063 2015/03/02 15:24:26 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -756,6 +756,7 @@ SUBDIR+=	vnc
 SUBDIR+=	vncviewer
 SUBDIR+=	vnstat
 SUBDIR+=	vpnc
+SUBDIR+=	vpnc-script
 SUBDIR+=	vsftpd
 SUBDIR+=	vtun
 SUBDIR+=	wakeup
