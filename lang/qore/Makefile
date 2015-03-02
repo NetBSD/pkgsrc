@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/16 10:23:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/02 19:59:07 joerg Exp $
 
 DISTNAME=	qore-0.8.11
 PKGREVISION=	2
@@ -41,6 +41,9 @@ post-install:
 
 .include "application.mk"
 .include "options.mk"
+
+_WRAP_EXTRA_ARGS.CXX+=	${CLANG_NO_VALUE_PROPAGATION_PASS}
+CWRAPPERS_APPEND.cxx+=	${CLANG_NO_VALUE_PROPAGATION_PASS}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

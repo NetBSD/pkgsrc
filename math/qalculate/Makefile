@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/12/15 19:41:23 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2015/03/02 19:59:07 joerg Exp $
 
 DISTNAME=	libqalculate-0.9.7
 PKGNAME=	qalculate-0.9.7
@@ -19,6 +19,8 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/libqalculate.pc.in
 
 UNLIMIT_RESOURCES=	datasize
 
+MAKE_ENV+=	CLANG_NO_OPT=${CLANG_NO_VALUE_PROPAGATION_PASS:Q}
+
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	libqalculate.pc.in
 SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
@@ -30,11 +32,6 @@ CFLAGS.SunOS+=		-D_LCONV_C99
 
 pre-configure:
 	${RUN} cd ${WRKSRC}; autoconf
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-MAKE_ENV+=	CLANG_NO_OPT=-O0
-.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
