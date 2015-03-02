@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2015/03/02 16:58:32 tnn Exp $
+# $NetBSD: Makefile,v 1.228 2015/03/02 19:34:33 tnn Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -262,6 +262,7 @@ SUBDIR+=	suse131_32_libsigc++2
 SUBDIR+=	suse131_32_libsndfile
 SUBDIR+=	suse131_32_libssh
 SUBDIR+=	suse131_32_libtiff
+SUBDIR+=	suse131_32_libwebp
 SUBDIR+=	suse131_32_libwrap
 SUBDIR+=	suse131_32_libxml2
 SUBDIR+=	suse131_32_libxslt
@@ -306,6 +307,7 @@ SUBDIR+=	suse131_libsigc++2
 SUBDIR+=	suse131_libsndfile
 SUBDIR+=	suse131_libssh
 SUBDIR+=	suse131_libtiff
+SUBDIR+=	suse131_libwebp
 SUBDIR+=	suse131_libwrap
 SUBDIR+=	suse131_libxml2
 SUBDIR+=	suse131_libxslt
