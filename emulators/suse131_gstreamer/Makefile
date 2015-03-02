@@ -1,10 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2015/02/16 10:15:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/02 18:13:45 tnn Exp $
 
 PKGNAME=	suse_gstreamer-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
+RPMPKGS+=	libgstreamer-0_10-0-0.10.36-10.1.3.${SUSE_ARCH}
+RPMPKGS+=	gstreamer-0_10-plugins-bad-0.10.23-13.1.4.${SUSE_ARCH}
+RPMPKGS+=	gstreamer-0_10-plugins-base-0.10.36-9.1.4.${SUSE_ARCH}
+RPMPKGS+=	gstreamer-0_10-plugins-good-0.10.31-10.1.4.${SUSE_ARCH}
+RPMPKGS+=	libgstinterfaces-0_10-0-0.10.36-9.1.4.${SUSE_ARCH}
+RPMPKGS+=	libgstreamer-1_0-0-1.0.10-2.1.4.${SUSE_ARCH}
 RPMUPDPKGS+=	gstreamer-plugin-gstclutter-2.0.8-3.1.${SUSE_ARCH}
 RPMUPDPKGS+=	gstreamer-plugins-bad-1.0.10-2.5.4.${SUSE_ARCH}
 RPMUPDPKGS+=	gstreamer-plugins-base-1.0.10-2.4.1.${SUSE_ARCH}
+RPMPKGS+=	gstreamer-plugins-good-1.0.10-2.1.4.${SUSE_ARCH}
 
 MAINTAINER=	rodent@NetBSD.org
 COMMENT=	Linux compatibility package for gstreamer
