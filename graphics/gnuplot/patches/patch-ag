@@ -1,13 +1,22 @@
-$NetBSD: patch-ag,v 1.6 2012/11/07 19:22:05 he Exp $
+$NetBSD: patch-ag,v 1.7 2015/03/03 15:22:20 mef Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 
 Also get rid of a non-portable "test ... ==" instance.
 
---- configure.orig	2012-09-26 23:06:30.000000000 +0000
-+++ configure
-@@ -9197,9 +9197,9 @@ fi
+--- configure.orig	2015-01-02 04:27:52.000000000 +0900
++++ configure	2015-03-01 21:42:48.000000000 +0900
+@@ -8861,7 +8861,7 @@ $as_echo "yes" >&6; }
+ 
+ # Check whether --with-aquaterm was given.
+ if test "${with_aquaterm+set}" = set; then :
+-  withval=$with_aquaterm; if test "$withval" == yes; then
++  withval=$with_aquaterm; if test "$withval" = yes; then
+ 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Aquaterm framework presence" >&5
+ $as_echo_n "checking for Aquaterm framework presence... " >&6; }
+@@ -10164,9 +10164,9 @@ fi
  
  $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
  
@@ -19,7 +28,7 @@ Also get rid of a non-portable "test ... ==" instance.
  if test "x$ac_cv_header_editline_readline_h" = xyes; then :
    cat >>confdefs.h <<_ACEOF
  #define HAVE_EDITLINE_READLINE_H 1
-@@ -15340,7 +15340,7 @@ $as_echo "    tek40xx, tek410x, texdraw,
+@@ -16239,7 +16241,7 @@ $as_echo "    tek40xx, tek410x, texdraw,
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
  $as_echo "" >&6; }
  
@@ -27,4 +36,22 @@ Also get rid of a non-portable "test ... ==" instance.
 +if test "$with_bitmap_terminals" = yes; then
    { $as_echo "$as_me:${as_lineno-$LINENO}: result:   dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&5
  $as_echo "  dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&6; }
+ else
+@@ -16327,7 +16329,7 @@ else
+ $as_echo "  ggi terminal: no (use --with-ggi to enable, requires libggi)" >&6; }
+ fi
+ 
+-if test "$with_gpic" == yes; then
++if test "$with_gpic" = yes; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:   gpic terminal: yes" >&5
+ $as_echo "  gpic terminal: yes" >&6; }
+ else
+@@ -16335,7 +16337,7 @@ else
+ $as_echo "  gpic terminal: no   (use --with-gpic to enable)" >&6; }
+ fi
+ 
+-if test "$with_mif" == yes; then
++if test "$with_mif" = yes; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:   mif terminal: yes" >&5
+ $as_echo "  mif terminal: yes" >&6; }
  else
