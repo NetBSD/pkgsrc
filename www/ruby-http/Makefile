@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/02/05 15:36:01 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/03 13:20:18 taca Exp $
 #
 
-DISTNAME=	http-0.7.1
+DISTNAME=	http-0.7.2
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,7 +9,8 @@ HOMEPAGE=	https://github.com/tarcieri/http
 COMMENT=	Simple Ruby DSL for making HTTP requests
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-http_parser.rb>=0.6.0:../../www/ruby-http_parser.rb
+DEPENDS+=	${RUBY_PKGPREFIX}-http_parser.rb>=0.6.0<0.7:../../www/ruby-http_parser.rb
+DEPENDS+=	${RUBY_PKGPREFIX}-http-form_data>=1.0.0<1.1:../../www/ruby-http-form_data
 
 RUBY_VERSION_SUPPORTED=	200 193 21
 USE_LANGUAGES=	# none
