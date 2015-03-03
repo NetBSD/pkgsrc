@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1089 2015/02/19 15:29:06 taca Exp $
+# $NetBSD: Makefile,v 1.1090 2015/03/03 13:16:06 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -681,6 +681,7 @@ SUBDIR+=	ruby-gnome2-webkit-gtk2
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-http
 SUBDIR+=	ruby-http-cookie
+SUBDIR+=	ruby-http-form_data
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-http_router
 SUBDIR+=	ruby-httpclient
