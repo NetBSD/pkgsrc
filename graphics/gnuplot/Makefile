@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2015/03/01 12:58:10 mef Exp $
+# $NetBSD: Makefile,v 1.96 2015/03/03 15:22:20 mef Exp $
 
-DISTNAME=	gnuplot-4.6.6
+DISTNAME=	gnuplot-5.0.0
 API_VERSION=	${PKGVERSION:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
@@ -26,11 +26,15 @@ CONFIGURE_ARGS+=	--without-tutorial
 CONFIGURE_ARGS+=	ac_cv_prog_EMACS=
 INFO_FILES=		yes
 
+# to build doc/gnuplot.pdf
+BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=		tex-ucs-[0-9]*:../../print/tex-ucs
+
 CONFIGURE_ARGS+=	--with-readline=bsd
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 
-PLIST_SUBST=		API_VERSION=${API_VERSION}
+PLIST_SUBST+=		API_VERSION=${API_VERSION}
 LDFLAGS.SunOS+=		-liconv
 
 # Make this available to patch-ah so the font path can include pkgsrc fonts.
@@ -39,6 +43,13 @@ SUBST_STAGE.fontpath=	pre-configure
 SUBST_MESSAGE.fontpath=	Fixing font path.
 SUBST_FILES.fontpath=	src/variable.c
 SUBST_SED.fontpath=	-e 's,@PKGSRC_PREFIX@,"${PREFIX}",'
+
+post-build:
+	(cd ${WRKSRC}/docs; ${GMAKE} gnuplot.pdf)
+
+post-install:
+	(cd ${WRKSRC}/docs; \
+	${INSTALL_DATA} gnuplot.pdf ${DESTDIR}${PREFIX}/share/gnuplot/${API_VERSION})
 
 .include "options.mk"
 

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.18 2015/03/01 12:58:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/03/03 15:22:20 mef Exp $
 bin/gnuplot
 ${PLIST.qt4}libexec/gnuplot/${API_VERSION}/gnuplot_qt
 ${PLIST.x11}libexec/gnuplot/${API_VERSION}/gnuplot_x11
 man/man1/gnuplot.1
+man/man1/gnuplot-ja.1
 share/gnuplot/${API_VERSION}/PostScript/8859-1.ps
 share/gnuplot/${API_VERSION}/PostScript/8859-15.ps
 share/gnuplot/${API_VERSION}/PostScript/8859-2.ps
@@ -10,6 +11,7 @@ share/gnuplot/${API_VERSION}/PostScript/8859-9.ps
 share/gnuplot/${API_VERSION}/PostScript/aglfn.txt
 share/gnuplot/${API_VERSION}/PostScript/cp1250.ps
 share/gnuplot/${API_VERSION}/PostScript/cp1251.ps
+share/gnuplot/${API_VERSION}/PostScript/cp1252.ps
 share/gnuplot/${API_VERSION}/PostScript/cp437.ps
 share/gnuplot/${API_VERSION}/PostScript/cp850.ps
 share/gnuplot/${API_VERSION}/PostScript/cp852.ps
@@ -36,6 +38,7 @@ share/gnuplot/${API_VERSION}/js/grid.png
 share/gnuplot/${API_VERSION}/js/help.png
 share/gnuplot/${API_VERSION}/js/nextzoom.png
 share/gnuplot/${API_VERSION}/js/previouszoom.png
+share/gnuplot/${API_VERSION}/js/return.png
 share/gnuplot/${API_VERSION}/js/textzoom.png
 share/gnuplot/${API_VERSION}/lua/gnuplot-tikz.lua
 ${PLIST.qt4}share/gnuplot/${API_VERSION}/qt/qtgnuplot_fr.qm
