@@ -1,4 +1,4 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.4 2015/02/25 12:48:34 jmcneill Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2015/03/03 19:14:04 jmcneill Exp $
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/joystick/bsd/SDL_sysjoystick.c
@@ -25,15 +25,17 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.4 2015/02/25 12:48:34 jmc
  #define REP_BUF_DATA(rep) ((rep)->buf->ugd_data)
  #else
  #define REP_BUF_DATA(rep) ((rep)->buf->data)
-@@ -314,6 +316,38 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -314,6 +316,45 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  #endif
  		rep->rid = -1; /* XXX */
  	}
 +#if defined(__NetBSD__)
 +	usb_device_descriptor_t udd;
 +	struct usb_string_desc usd;
-+	if (ioctl(fd, USB_GET_DEVICE_DESC, &udd) == -1)
++	if (ioctl(fd, USB_GET_DEVICE_DESC, &udd) == -1) {
++		fprintf(stderr, "USB_GET_DEVICE_DESC failed: %s\n", strerror(errno));
 +		goto desc_failed;
++	}
 +
 +	/* Get default language */
 +	usd.usd_string_index = USB_LANGUAGE_TABLE;
@@ -45,7 +47,12 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.4 2015/02/25 12:48:34 jmc
 +	}
 +
 +	usd.usd_string_index = udd.iProduct;
-+	if (ioctl(fd, USB_GET_STRING_DESC, &usd) == 0) {
++	int error = ioctl(fd, USB_GET_STRING_DESC, &usd);
++	if (error != 0 && usd.usd_language_id != 0) {
++		usd.usd_language_id = 0;
++		error = ioctl(fd, USB_GET_STRING_DESC, &usd);
++	}
++	if (error == 0) {
 +		char str[128];
 +		char *new_name = NULL;
 +		int i;
@@ -64,7 +71,7 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.4 2015/02/25 12:48:34 jmc
  	if (report_alloc(rep, hw->repdesc, REPORT_INPUT) < 0) {
  		goto usberr;
  	}
-@@ -386,10 +420,21 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -386,10 +427,21 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  		if (hw->axis_map[i] > 0)
  			hw->axis_map[i] = joy->naxes++;
  
@@ -86,3 +93,112 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.4 2015/02/25 12:48:34 jmc
  	return (0);
  usberr:
  	close(hw->fd);
+@@ -459,63 +511,62 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+ 	
+ 	rep = &joy->hwdata->inreport;
+ 
+-	if (read(joy->hwdata->fd, REP_BUF_DATA(rep), rep->size) != rep->size) {
+-		return;
+-	}
++	while (read(joy->hwdata->fd, REP_BUF_DATA(rep), rep->size) == rep->size) {
+ #if defined(USBHID_NEW) || (defined(__FREEBSD__) && __FreeBSD_kernel_version >= 500111) || defined(__FreeBSD_kernel__)
+-	hdata = hid_start_parse(joy->hwdata->repdesc, 1 << hid_input, rep->rid);
++		hdata = hid_start_parse(joy->hwdata->repdesc, 1 << hid_input, rep->rid);
+ #else
+-	hdata = hid_start_parse(joy->hwdata->repdesc, 1 << hid_input);
++		hdata = hid_start_parse(joy->hwdata->repdesc, 1 << hid_input);
+ #endif
+-	if (hdata == NULL) {
+-		fprintf(stderr, "%s: Cannot start HID parser\n",
+-		    joy->hwdata->path);
+-		return;
+-	}
++		if (hdata == NULL) {
++			fprintf(stderr, "%s: Cannot start HID parser\n",
++			    joy->hwdata->path);
++			continue;
++		}
+ 
+-	for (nbutton = 0; hid_get_item(hdata, &hitem) > 0;) {
+-		switch (hitem.kind) {
+-		case hid_input:
+-			switch (HID_PAGE(hitem.usage)) {
+-			case HUP_GENERIC_DESKTOP: {
+-			    unsigned usage = HID_USAGE(hitem.usage);
+-			    int joyaxe = usage_to_joyaxe(usage);
+-			    if (joyaxe >= 0) {
+-				naxe = joy->hwdata->axis_map[joyaxe];
+-				/* scaleaxe */
+-				v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
+-							 &hitem);
+-				v -= (hitem.logical_maximum + hitem.logical_minimum + 1)/2;
+-				v *= 32768/((hitem.logical_maximum - hitem.logical_minimum + 1)/2);
+-				if (v != joy->axes[naxe]) {
+-				    SDL_PrivateJoystickAxis(joy, naxe, v);
++		for (nbutton = 0; hid_get_item(hdata, &hitem) > 0;) {
++			switch (hitem.kind) {
++			case hid_input:
++				switch (HID_PAGE(hitem.usage)) {
++				case HUP_GENERIC_DESKTOP: {
++				    unsigned usage = HID_USAGE(hitem.usage);
++				    int joyaxe = usage_to_joyaxe(usage);
++				    if (joyaxe >= 0) {
++					naxe = joy->hwdata->axis_map[joyaxe];
++					/* scaleaxe */
++					v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
++								 &hitem);
++					v -= (hitem.logical_maximum + hitem.logical_minimum + 1)/2;
++					v *= 32768/((hitem.logical_maximum - hitem.logical_minimum + 1)/2);
++					if (v != joy->axes[naxe]) {
++					    SDL_PrivateJoystickAxis(joy, naxe, v);
++					}
++				    } else if (usage == HUG_HAT_SWITCH) {
++					v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
++								 &hitem);
++					SDL_PrivateJoystickHat(joy, 0,
++						hatval_to_sdl(v)-hitem.logical_minimum);
++				    }
++				    break;
+ 				}
+-			    } else if (usage == HUG_HAT_SWITCH) {
+-				v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
+-							 &hitem);
+-				SDL_PrivateJoystickHat(joy, 0,
+-					hatval_to_sdl(v)-hitem.logical_minimum);
+-			    }
+-			    break;
+-			}
+-			case HUP_BUTTON:
+-				v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
+-				    &hitem);
+-				if (joy->buttons[nbutton] != v) {
+-					SDL_PrivateJoystickButton(joy,
+-					    nbutton, v);
++				case HUP_BUTTON:
++					v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
++					    &hitem);
++					if (joy->buttons[nbutton] != v) {
++						SDL_PrivateJoystickButton(joy,
++						    nbutton, v);
++					}
++					nbutton++;
++					break;
++				default:
++					continue;
+ 				}
+-				nbutton++;
+ 				break;
+ 			default:
+-				continue;
++				break;
+ 			}
+-			break;
+-		default:
+-			break;
+ 		}
++		hid_end_parse(hdata);
+ 	}
+-	hid_end_parse(hdata);
+ 
+ 	return;
+ }
