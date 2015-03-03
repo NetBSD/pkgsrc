@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1141 2015/03/02 23:45:05 pho Exp $
+$NetBSD: CHANGES-2015,v 1.1142 2015/03/03 01:03:16 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/suse131_32_lsb version 13.1 [tnn 2015-03-02]
 	Updated net/wget to 1.16.2nb1 [tron 2015-03-02]
 	Updated devel/hs-vector to 0.10.12.2 [pho 2015-03-02]
+	Updated x11/xf86-video-intel to 2.99.917 [khorben 2015-03-03]
