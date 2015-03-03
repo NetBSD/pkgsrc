@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1152 2015/03/03 14:59:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1153 2015/03/03 15:22:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1635,3 +1635,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/emacs24 to 24.4nb3 [ryoon 2015-03-03]
 	Updated misc/py-anita to 1.36 [gson 2015-03-13]
 	Updated devel/py-mercurial to 3.3.2 [wiz 2015-03-03]
+	Updated graphics/gnuplot to 5.0.0 [mef 2015-03-03]
