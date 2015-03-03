@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1148 2015/03/03 13:20:44 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1149 2015/03/03 13:48:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1632,3 +1632,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/ruby-http-form_data version 1.0.0 [taca 2015-03-03]
 	Renamed www/ruby-form_data to www/ruby-http-form_data [taca 2015-03-03]
 	Updated www/ruby-http to 0.7.2 [taca 2015-03-03]
+	Updated editors/emacs24 to 24.4nb3 [ryoon 2015-03-03]
