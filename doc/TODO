@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14188 2015/03/03 12:04:48 tnn Exp $
+$NetBSD: TODO,v 1.14189 2015/03/03 20:15:51 tnn Exp $
 
 Suggested new packages
 ======================
@@ -341,8 +341,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o Geomyidae-0.26.3 [pkg/49585]
 	o GNUMail-1.2.2
-	o Mesa-10.4.4 [do not update since it removes support for DRI features needed by NetBSD]
-	o MesaLib-10.4.4 [do not update since it removes support for DRI features needed by NetBSD]
+	o Mesa-10.4.4 [do not update since it removes support for DRI features needed by NetBSD. Work on updated MesaLib takes place in pkgsrc-wip.]
+	o MesaLib-10.4.4 [do not update since it removes support for DRI features needed by NetBSD. Work on updated MesaLib takes place in pkgsrc-wip.]
 	o PAM-0.99.7.1
 	o R-3.1.2
 	o RBTools-0.6.3
