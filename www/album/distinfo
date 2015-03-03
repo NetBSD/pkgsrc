@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/03/03 06:01:13 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/03/03 06:05:06 mef Exp $
 
-SHA1 (album-4.12.tar.gz) = 5522c2b47e47c17bff23459ed18456ec37235c2b
-RMD160 (album-4.12.tar.gz) = 1e22e89ffe53d5e0103b2ac8fc038d07430fbfbb
-Size (album-4.12.tar.gz) = 655509 bytes
+SHA1 (album-4.13.tar.gz) = e69c4d8f794df989253f3c9b40a6ed6aab32bde4
+RMD160 (album-4.13.tar.gz) = 8c8eb9538d819ac34b813068e68992e0a2a6695f
+Size (album-4.13.tar.gz) = 667760 bytes
 SHA1 (patch-aa) = c0d2504691615c767e48f4a80fe66e7afb49097e
