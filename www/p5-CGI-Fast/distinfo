@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/12/31 14:58:11 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/03/03 06:17:34 mef Exp $
 
-SHA1 (CGI-Fast-2.05.tar.gz) = ad1ddd35ea6522d33d53ceb638615dbec7bf99f0
-RMD160 (CGI-Fast-2.05.tar.gz) = 8f7a32ed682770fa693b59534d43761dea47220d
-Size (CGI-Fast-2.05.tar.gz) = 8072 bytes
+SHA1 (CGI-Fast-2.07.tar.gz) = b8d93cc21c94c2eb7b7627bd778126986921c8fd
+RMD160 (CGI-Fast-2.07.tar.gz) = 7858544fc6930fb2ac34192e74bc7fd4a48fd814
+Size (CGI-Fast-2.07.tar.gz) = 8626 bytes
