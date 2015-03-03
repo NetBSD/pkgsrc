@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1156 2015/03/03 18:08:09 gson Exp $
+$NetBSD: CHANGES-2015,v 1.1157 2015/03/03 21:40:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1638,3 +1638,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gnuplot to 5.0.0 [mef 2015-03-03]
 	Added devel/hs-base-unicode-symbols version 0.2.2.4 [pho 2015-03-03]
 	Updated lang/python27 to 2.7.9nb1 [snj 2015-03-03]
+	Updated misc/libreoffice4 to 4.4.1.2nb1 [ryoon 2015-03-03]
