@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1155 2015/03/03 17:45:07 snj Exp $
+$NetBSD: CHANGES-2015,v 1.1156 2015/03/03 18:08:09 gson Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1633,7 +1633,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Renamed www/ruby-form_data to www/ruby-http-form_data [taca 2015-03-03]
 	Updated www/ruby-http to 0.7.2 [taca 2015-03-03]
 	Updated editors/emacs24 to 24.4nb3 [ryoon 2015-03-03]
-	Updated misc/py-anita to 1.36 [gson 2015-03-13]
+	Updated misc/py-anita to 1.36 [gson 2015-03-03]
 	Updated devel/py-mercurial to 3.3.2 [wiz 2015-03-03]
 	Updated graphics/gnuplot to 5.0.0 [mef 2015-03-03]
 	Added devel/hs-base-unicode-symbols version 0.2.2.4 [pho 2015-03-03]
