@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/03 01:37:54 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/03 09:42:38 khorben Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_BASE_VERS}
 CATEGORIES=	meta-pkgs www
@@ -50,7 +50,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-shmop>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php
 DEPENDS+=	${PHP_PKG_PREFIX}-snmp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-snmp
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-sockets
-DEPENDS+=	${PHP_PKG_PREFIX}-ssdeep>=${PHP_BASE_VERS}<${NEXT_VERS}:../../security/php-ssdeep
 DEPENDS+=	${PHP_PKG_PREFIX}-sysvmsg>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-sysvmsg
 DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-sysvsem
 DEPENDS+=	${PHP_PKG_PREFIX}-sysvshm>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-sysvshm
