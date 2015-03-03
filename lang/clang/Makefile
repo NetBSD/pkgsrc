@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/03/03 12:04:08 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2015/03/03 16:27:33 tnn Exp $
 
 DISTNAME=	clang-3.6.0
 CATEGORIES=	lang
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
 CONFIGURE_ARGS+=	--disable-timestamps
 CONFIGURE_ARGS+=	--enable-optimized
-#CONFIGURE_ARGS+=	--enable-shared
 
 MAKE_DIRS+=		etc/llvm
 
