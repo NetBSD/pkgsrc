@@ -1,2 +1,0 @@
-Utility-belt to build form data request bodies.  Provides support for
-application/x-www-form-urlencoded and multipart/form-data types.
