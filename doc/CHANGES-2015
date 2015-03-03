@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1144 2015/03/03 06:17:59 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1145 2015/03/03 12:04:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-intel to 2.99.917 [khorben 2015-03-03]
 	Updated www/album to 4.13 [mef 2015-03-03]
 	Updated www/p5-CGI-Fast to 2.07 [mef 2015-03-03]
+	Updated lang/clang to 3.6.0 [tnn 2015-03-03]
