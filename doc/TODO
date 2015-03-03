@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14186 2015/03/01 15:40:44 wiz Exp $
+$NetBSD: TODO,v 1.14187 2015/03/03 01:20:03 khorben Exp $
 
 Suggested new packages
 ======================
@@ -1127,7 +1127,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
-	o xf86-video-intel-2.21.15
 	o xf86-video-modesetting-0.8.1 [wip]
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-voodoo-1.2.5 [wip]
