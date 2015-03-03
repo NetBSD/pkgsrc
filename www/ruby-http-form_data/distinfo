@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/03 13:14:15 taca Exp $
+
+SHA1 (http-form_data-1.0.0.gem) = e4d703eb0cf8ad95c9512bfc35503995fba65865
+RMD160 (http-form_data-1.0.0.gem) = 4de62662b391662c5fb1508e7f611780164ab9c9
+Size (http-form_data-1.0.0.gem) = 13824 bytes
