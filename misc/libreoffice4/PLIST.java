@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST.java,v 1.6 2015/02/04 18:19:34 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.7 2015/03/03 21:39:13 ryoon Exp $
 ${PKGNAME}/program/classes/ScriptFramework.jar
 ${PKGNAME}/program/classes/ScriptProviderForBeanShell.jar
 ${PKGNAME}/program/classes/ScriptProviderForJava.jar
+${PKGNAME}/program/classes/ScriptProviderForJavaScript.jar
 ${PKGNAME}/program/classes/XMergeBridge.jar
 ${PKGNAME}/program/classes/bsh.jar
 ${PKGNAME}/program/classes/commonwizards.jar
 ${PKGNAME}/program/classes/form.jar
+${PKGNAME}/program/classes/js.jar
 ${PKGNAME}/program/classes/officebean.jar
 ${PKGNAME}/program/classes/query.jar
 ${PKGNAME}/program/classes/report.jar
@@ -18,6 +20,7 @@ ${PKGNAME}/program/libhsqldb.so
 ${PKGNAME}/program/libjdbclo.so
 ${PKGNAME}/program/libofficebean.so
 ${PKGNAME}/program/services/scriptproviderforbeanshell.rdb
+${PKGNAME}/program/services/scriptproviderforjavascript.rdb
 ${PKGNAME}/share/Scripts/beanshell/Capitalise/capitalise.bsh
 ${PKGNAME}/share/Scripts/beanshell/Capitalise/parcel-descriptor.xml
 ${PKGNAME}/share/Scripts/beanshell/HelloWorld/helloworld.bsh
@@ -39,6 +42,13 @@ ${PKGNAME}/share/Scripts/java/Highlight/parcel-descriptor.xml
 ${PKGNAME}/share/Scripts/java/MemoryUsage/MemoryUsage.jar
 ${PKGNAME}/share/Scripts/java/MemoryUsage/MemoryUsage.java
 ${PKGNAME}/share/Scripts/java/MemoryUsage/parcel-descriptor.xml
+${PKGNAME}/share/Scripts/javascript/ExportSheetsToHTML/exportsheetstohtml.js
+${PKGNAME}/share/Scripts/javascript/ExportSheetsToHTML/parcel-descriptor.xml
+${PKGNAME}/share/Scripts/javascript/HelloWorld/helloworld.js
+${PKGNAME}/share/Scripts/javascript/HelloWorld/parcel-descriptor.xml
+${PKGNAME}/share/Scripts/javascript/Highlight/ButtonPressHandler.js
+${PKGNAME}/share/Scripts/javascript/Highlight/ShowDialog.js
+${PKGNAME}/share/Scripts/javascript/Highlight/parcel-descriptor.xml
 ${PKGNAME}/share/extensions/nlpsolver/EvolutionarySolver.jar
 ${PKGNAME}/share/extensions/nlpsolver/META-INF/manifest.xml
 ${PKGNAME}/share/extensions/nlpsolver/components.rdb
