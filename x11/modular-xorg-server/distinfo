@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2015/02/22 11:08:45 tnn Exp $
+$NetBSD: distinfo,v 1.58 2015/03/03 00:55:58 khorben Exp $
 
 SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
 RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
@@ -51,6 +51,8 @@ SHA1 (patch-include_dix.h) = ab0dc2debd87f29c0ac7f971a3cad4850b239c3a
 SHA1 (patch-include_regionstr.h) = c6f3e3b263593b622e7087d3ebe2b470cf9526e3
 SHA1 (patch-os_access.c) = 94ee087d68bc9ba713dbe42102f971a1b8e6a3c4
 SHA1 (patch-os_rpcauth.c) = 6617d5ef0e3cc5e9e10cd8db74f87e347e52ebe3
+SHA1 (patch-randr_randr.c) = e8d2b72f8230a2a8a6ade47f5459ec9b0849ed0b
+SHA1 (patch-randr_randrstr.h) = f634438dda61111b3bf3b77580951a638fbdea10
 SHA1 (patch-randr_rrsdispatch.c) = 13a2e819fea3ab8fa4caee7f9450a518ac41e517
 SHA1 (patch-render_picture.h) = ec7085022e2c896daaa91378632003aabd957f5e
 SHA1 (patch-render_render.c) = f86496fc392681d2fba3c50bbd37b24b78bed682
