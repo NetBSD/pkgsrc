@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2014/12/16 07:07:32 chopps Exp $
+$NetBSD: distinfo,v 1.49 2015/03/03 17:19:58 snj Exp $
 
 SHA1 (Python-2.7.9.tar.xz) = 3172f6e957713c2d9fca462cc16068222fd1b9d3
 RMD160 (Python-2.7.9.tar.xz) = 2b047c3b56987b473c3ca957ad87f5582c37d6f6
@@ -6,7 +6,9 @@ Size (Python-2.7.9.tar.xz) = 12164712 bytes
 SHA1 (patch-Include_pyerrors.h) = 3eba043c83b1d1df4918524f7b53047a6ed372ae
 SHA1 (patch-Include_pyport.h) = 971c7c548b92595712d0d70a0917a0ccc83b6c7e
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 39b967dc2ae648143d5841f22602a21063b4d5ea
+SHA1 (patch-Lib_dumbdb.py) = b4b154f511c8852e2f869653eccd7d9a1c21e734
 SHA1 (patch-Lib_multiprocessing_process.py) = b47ad4cbeddbcfb4342c08c84d0d515a793815d4
+SHA1 (patch-Lib_test_test__dumbdbm.py) = f59f0d8bbf910bac369528129b564597a77379ba
 SHA1 (patch-Modules_getaddrinfo.c) = 696c58c4c4bbb710fb1508d7d88864d0b08cfc79
 SHA1 (patch-Modules_getpath.c) = aa8a54717a85f831e3ceaad19d96c43bc38aef10
 SHA1 (patch-Modules_mmapmodule.c) = 87ea76e6d8263045c1ca794ff5c75ed631a74b6d
