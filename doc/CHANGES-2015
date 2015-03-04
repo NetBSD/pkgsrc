@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1163 2015/03/04 12:04:43 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.1164 2015/03/04 15:03:22 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1645,3 +1645,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/glyr to 1.0.8 [wiz 2015-03-04]
 	Updated www/nginx-devel to 1.7.10 [imil 2015-03-04]
 	Updated security/stud to 0.3p53nb5 [jperkin 2015-03-04]
+	Updated lang/racket to 6.1.1 [jaapb 2015-03-04]
