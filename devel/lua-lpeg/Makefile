@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/02/03 22:59:01 alnsn Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/04 19:14:10 alnsn Exp $
 #
 
-DISTNAME=	lpeg-0.12.1
+DISTNAME=	lpeg-0.12.2
 PKGNAME=	${DISTNAME:S/lpeg/${LUA_PKGPREFIX}-lpeg/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.inf.puc-rio.br/~roberto/lpeg/
