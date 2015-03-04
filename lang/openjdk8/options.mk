@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/02/21 09:36:31 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2015/03/04 17:01:02 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk8
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -93,7 +93,8 @@ BUILD_VARIANT=		zero
 .elif !empty(PKG_OPTIONS:Mjdk-zeroshark-vm)
 BUILD_VARIANT=		zeroshark
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/libLLVM/buildlink3.mk"
+CONFIGURE_ENV+=		LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else
 BUILD_VARIANT=		server
 PLIST.native=		yes
