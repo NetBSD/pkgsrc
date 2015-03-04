@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2015/02/25 10:39:50 tnn Exp $
+# $NetBSD: Makefile,v 1.402 2015/03/04 19:38:29 tnn Exp $
 #
 
 COMMENT=	Programming languages
@@ -102,6 +102,8 @@ SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
 SUBDIR+=	konoha
 SUBDIR+=	ksi
+SUBDIR+=	libLLVM
+SUBDIR+=	libLLVM34
 SUBDIR+=	librep
 SUBDIR+=	libtcl-nothread
 SUBDIR+=	likepython
