@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/03/03 12:04:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/03/04 13:57:42 tnn Exp $
 bin/FileCheck
 bin/bugpoint
 bin/c-index-test
@@ -1078,7 +1078,7 @@ include/llvm/Support/ELFRelocs/PowerPC64.def
 include/llvm/Support/ELFRelocs/Sparc.def
 include/llvm/Support/ELFRelocs/SystemZ.def
 include/llvm/Support/ELFRelocs/i386.def
-include/llvm/Support/ELFRelocs/${MACHINE_ARCH}.def
+include/llvm/Support/ELFRelocs/x86_64.def
 include/llvm/Support/Endian.h
 include/llvm/Support/EndianStream.h
 include/llvm/Support/Errc.h
