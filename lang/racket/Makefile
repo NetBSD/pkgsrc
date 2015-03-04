@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2014/10/07 16:47:28 adam Exp $
+# $NetBSD: Makefile,v 1.41 2015/03/04 15:02:36 jaapb Exp $
 
-PKGNAME=	racket-6.0.1
-PKGREVISION=	2
+PKGNAME=	racket-6.1.1
 DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
@@ -60,11 +59,11 @@ post-install:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
