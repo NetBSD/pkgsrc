@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1159 2015/03/04 08:51:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1160 2015/03/04 08:55:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.1.2nb1 [ryoon 2015-03-03]
 	Updated emulators/cmdpack to 1.03nb1 [snj 2015-03-04]
 	Updated graphics/librsvg to 2.40.8 [wiz 2015-03-04]
+	Updated x11/p5-Tk to 804.033 [wiz 2015-03-04]
