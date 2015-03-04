@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/02/24 12:29:18 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/04 05:53:52 snj Exp $
 #
 
 DISTNAME=	cmdpack-1.03-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.neillcorlett.com/downloads/
 
@@ -19,10 +20,11 @@ do-build:
 	for file in bin2iso bincomp brrrip byteshuf byteswap cdpatch ecm fakecrc hax65816 id3point pecompat rels screamf subfile uips usfv vb2rip wordadd zerofill; do \
 		${CC} -o $$file $$file.c; \
 	done
+	${LN} ${WRKSRC}/src/ecm ${WRKSRC}/src/unecm
 
 do-install:
 	cd ${WRKSRC}/src && \
-	for file in bin2iso bincomp brrrip byteshuf byteswap cdpatch ecm fakecrc hax65816 id3point pecompat rels screamf subfile uips usfv vb2rip wordadd zerofill; do \
+	for file in bin2iso bincomp brrrip byteshuf byteswap cdpatch ecm fakecrc hax65816 id3point pecompat rels screamf subfile uips unecm usfv vb2rip wordadd zerofill; do \
 		${INSTALL_PROGRAM} $$file ${DESTDIR}${PREFIX}/bin; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/doc/cmdpack.txt ${DESTDIR}${PREFIX}/share/doc/cmdpack
