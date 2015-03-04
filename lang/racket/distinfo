@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2014/06/15 09:35:28 asau Exp $
+$NetBSD: distinfo,v 1.13 2015/03/04 15:02:36 jaapb Exp $
 
-SHA1 (racket-6.0.1-src.tgz) = 13be147dc6d92fc055b2bf70ebab5703a8758735
-RMD160 (racket-6.0.1-src.tgz) = a996321eab25daaf7be6e8d792998c160d723404
-Size (racket-6.0.1-src.tgz) = 19325719 bytes
+SHA1 (racket-6.1.1-src.tgz) = be04ed6e444fbb412e48e06a62da3a9eba993b44
+RMD160 (racket-6.1.1-src.tgz) = 8ea70f137ebd1211244e0ea05f13609159c5b3df
+Size (racket-6.1.1-src.tgz) = 19746629 bytes
