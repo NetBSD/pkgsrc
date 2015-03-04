@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14189 2015/03/03 20:15:51 tnn Exp $
+$NetBSD: TODO,v 1.14190 2015/03/04 08:25:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -580,6 +580,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.4.4
+	o glyr-1.0.8 [pkg/49713]
 	o gnats-4.2.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -634,8 +635,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.1.0
-	o grilo-0.2.11
-	o grilo-plugins-0.2.13
+	o grilo-0.2.12
+	o grilo-plugins-0.2.14
 	o gsharutils-4.15
 	o gss-1.0.3
 	o gthumb-3.2.8
@@ -736,6 +737,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.16.0
 	o libreoffice4-bin-4.4.0
+	o librsvg-2.40.8
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
@@ -854,6 +856,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
+	o p5-Tk-804.033 [pkg/49712]
 	o p5-gtk2-1.300
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
