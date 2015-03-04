@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2015/02/21 10:44:14 tnn Exp $
+# $NetBSD: options.mk,v 1.11 2015/03/04 17:01:02 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -93,5 +93,5 @@ PLIST.native=		yes
 .endif
 .if !empty(PKG_OPTIONS:Mjdk-zeroshark-vm)
 MAKE_ENV+=		SHARK_BUILD=true
-.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/libLLVM/buildlink3.mk"
 .endif
