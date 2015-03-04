@@ -1,4 +1,4 @@
-@comment $NetBSD@
+@comment $NetBSD: PLIST.shlib,v 1.2 2015/03/04 09:59:57 tnn Exp $
 lib/libLLVM-3.6.0.${SOEXT}
 lib/libLLVM-3.6.${SOEXT}
 lib/libLLVMAArch64AsmParser.${SOEXT}
