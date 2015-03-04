@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1165 2015/03/04 15:03:44 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.1166 2015/03/04 19:15:00 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/stud to 0.3p53nb5 [jperkin 2015-03-04]
 	Updated lang/racket to 6.1.1 [jaapb 2015-03-04]
 	Updated lang/racket-textual to 6.1.1 [jaapb 2015-03-04]
+	Updated devel/lua-lpeg to 0.12.2 [alnsn 2015-03-04]
