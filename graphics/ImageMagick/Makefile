@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.214 2014/10/13 09:08:31 wiz Exp $
+# $NetBSD: Makefile,v 1.215 2015/03/05 11:09:36 jperkin Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
+PKGREVISION=	1
 
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	Package for display and interactive manipulation of images
@@ -10,7 +11,7 @@ COMMENT=	Package for display and interactive manipulation of images
 CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
 USE_LANGUAGES=		c c++ c99
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config:run
 CONFIGURE_ARGS+=	--disable-assert
 CONFIGURE_ARGS+=	--with-fontconfig
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
