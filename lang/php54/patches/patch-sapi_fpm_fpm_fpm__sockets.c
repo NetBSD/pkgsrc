@@ -1,4 +1,4 @@
-$NetBSD: patch-sapi_fpm_fpm_fpm__sockets.c,v 1.1 2015/03/05 09:20:47 he Exp $
+$NetBSD: patch-sapi_fpm_fpm_fpm__sockets.c,v 1.1 2015/03/05 11:16:28 he Exp $
 
 --- ./sapi/fpm/fpm/fpm_sockets.c.orig	2014-09-17 07:03:27.000000000 +0000
 +++ ./sapi/fpm/fpm/fpm_sockets.c
