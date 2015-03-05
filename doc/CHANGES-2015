@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1179 2015/03/05 14:44:57 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1180 2015/03/05 21:05:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1662,3 +1662,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-File-ShareDir-ProjectDistDir version 1.000004 [wen 2015-03-05]
 	Updated textproc/p5-Pod-Spell to 1.16 [wen 2015-03-05]
 	Updated net/dhid to 5.5 [mef 2015-03-05]
+	Updated devel/libidn to 1.30 [wiz 2015-03-05]
