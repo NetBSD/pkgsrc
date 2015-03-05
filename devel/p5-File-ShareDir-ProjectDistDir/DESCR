@@ -1,0 +1,2 @@
+File::ShareDir::ProjectDistDir simple set-and-forget using of a '/share'
+directory in your projects root.
