@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/12/05 03:34:10 gdt Exp $
-@comment $NetBSD: PLIST,v 1.18 2011/12/05 03:34:10 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/03/05 20:14:52 tnn Exp $
 bin/g-wrap-config
 include/g-wrap-wct.h
 include/g-wrap/core-runtime.h
