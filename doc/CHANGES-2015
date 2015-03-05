@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1170 2015/03/05 07:02:26 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1171 2015/03/05 07:18:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1653,3 +1653,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Date-Manip to 6.49 [wiz 2015-03-05]
 	Updated devel/p5-List-MoreUtils to 0.406 [wiz 2015-03-05]
 	Updated devel/p5-AppConfig to 1.71 [wiz 2015-03-05]
+	Updated devel/p5-Moo to 2.000000 [wiz 2015-03-05]
