@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1167 2015/03/04 19:38:28 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1168 2015/03/05 07:00:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/lua-lpeg to 0.12.2 [alnsn 2015-03-04]
 	Added lang/libLLVM version 3.6.0 [tnn 2015-03-04]
 	Added lang/libLLVM34 version 3.4.2 [tnn 2015-03-04]
+	Updated devel/p5-Date-Manip to 6.49 [wiz 2015-03-05]
