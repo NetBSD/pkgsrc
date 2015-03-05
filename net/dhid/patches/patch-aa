@@ -1,17 +1,24 @@
-$NetBSD: patch-aa,v 1.4 2014/09/23 14:59:24 jperkin Exp $
+$NetBSD: patch-aa,v 1.5 2015/03/05 14:44:33 mef Exp $
 
---- Makefile.orig	2001-09-12 10:12:02.000000000 +0000
-+++ Makefile
-@@ -29,9 +29,9 @@ CC=cc
- 
- # Add -lnsl and -lsocket to LIBS in SysV systems 
+--- Makefile.orig	2008-05-22 23:11:43.000000000 +0900
++++ Makefile	2015-03-05 23:36:46.000000000 +0900
+@@ -29,16 +29,16 @@ CC=cc
  #
+ # For password mode only (no QRC), remove the -DQRC=1 statement 
+ # CFLAGS=-I/usr/local/include -Wall 
 -CFLAGS=-I/usr/local/include -DQRC=1 -Wall 
--LFLAGS=-L/usr/local/lib
--LIBS=-lgmp
 +CFLAGS=-I${LOCALBASE}/include -DQRC=1  -DLOCALBASE=\"${LOCALBASE}\"
+ 
+-LFLAGS=-L/usr/local/lib
 +LFLAGS=-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+ 
+ # For password mode only (no QRC), comment the following line and keep LIBS 
+ # empty.
+ # Add -lnsl and -lsocket to LIBS in SysV systems (e.g. Solaris)
+ # LIBS=
+ # LIBS=-lnsl -lsocket
+-LIBS=-lgmp
 +LIBS=-lgmp ${LDFLAGS}
  
- # Use these and comment the above if you wish to compile dhid without 
- # secure public key authentication or don't have the GMP library 
+ 
+ RM=rm -f
