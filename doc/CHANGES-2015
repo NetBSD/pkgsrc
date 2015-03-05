@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1180 2015/03/05 21:05:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1181 2015/03/05 23:24:15 bad Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1663,3 +1663,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Spell to 1.16 [wen 2015-03-05]
 	Updated net/dhid to 5.5 [mef 2015-03-05]
 	Updated devel/libidn to 1.30 [wiz 2015-03-05]
+	Updated misc/libreoffice4-bin to 4.4.1.2 [bad 2015-03-06]
