@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/03/05 14:44:33 mef Exp $
+# $NetBSD: Makefile,v 1.25 2015/03/05 15:44:57 mef Exp $
 #
 
 DISTNAME=	dhid-5.5
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	Dynamic Host Information System client daemon
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 RCD_SCRIPTS=	dhid
 
