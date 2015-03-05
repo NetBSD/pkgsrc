@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/06/23 12:59:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/05 23:22:45 bad Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
@@ -20,9 +20,9 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
 
 OO_VER=			4
-OO_BASEVER=		4.2
-OO_RELEASE=		4.2.5
-OO_RELEASEV=		4.2.5.2
+OO_BASEVER=		4.4
+OO_RELEASE=		4.4.1
+OO_RELEASEV=		4.4.1.2
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -38,7 +38,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.dirs
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
 EMUL_MODULES.linux=	freetype2 x11 locale png fontconfig cups gtk2 krb5
-EMUL_MODULES.linux+=	dbus dbus-glib
+EMUL_MODULES.linux+=	dbus dbus-glib glx
 EMUL_REQD=		suse>=11.3
 
 EMUL_PKG_FMT=		rpm
@@ -67,10 +67,6 @@ MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RE
 INSTALLATION_DIRS= bin
 
 do-install:
-#	${PATCH} -d ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program < ${FILESDIR}/soffice-patch
-#	${RM} -f ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/soffice.orig
-	${PATCH} -d ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program < ${FILESDIR}/spadmin-patch
-	${RM} -f ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/spadmin.orig
 	${UNIQ} ${RPM2PKG_PLIST} | \
 		${SED} -e 's,^@exec mkdir -m 755 -p %D/,@pkgdir,' > ${WRKDIR}/PLIST
 	${RM} -f ${DESTDIR}${PREFIX}/bin/soffice
@@ -79,7 +75,7 @@ do-install:
 		-e "s|@@OO_BASEVER@@|${OO_BASEVER}|g" \
 		< ${FILESDIR}/soffice > ${DESTDIR}${PREFIX}/bin/soffice
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/soffice
-.for i in scalc sdraw simpress smath spadmin swriter
+.for i in scalc sdraw simpress smath swriter
 	${LN} -sf ../opt/libreoffice${OO_BASEVER}/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
 
