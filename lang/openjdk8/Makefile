@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/02 14:27:38 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/05 16:35:49 tnn Exp $
 
 DISTNAME=	openjdk-1.8.31-20150207
 PKGNAME=	openjdk8-1.8.31
@@ -153,7 +153,11 @@ ${WRKDIR}/stage1-done:
 
 # stage 1.5 reconfigures, since the bootstrap JDK major version might have changed now
 ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
-	${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
+.if defined(BATCH)
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} apply-va-hack
+.endif
+	@${STEP_MSG} "Reconfiguring with newly built JDK"
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
 	touch ${.TARGET}
 
 # stage 2 rebuilds the JDK using native tools
@@ -171,7 +175,7 @@ ${WRKDIR}/cacerts.out:
 	for cert in ${WRKDIR}/cacerts/*.pem; do				\
 		${INFO_MSG} "Importing $$cert" &&			\
 		 ${SETENV} LD_LIBRARY_PATH=${LD_LIBRARY_PATH} LC_ALL=C	\
-		  ${BUILDDIR}/images/j2sdk-image/bin/keytool		\
+		  ${ALT_BOOTDIR}/bin/keytool				\
 		  -noprompt						\
 		  -importcert						\
 		  -keystore ${.TARGET}					\
