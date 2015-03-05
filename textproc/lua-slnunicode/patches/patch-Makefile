@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.2 2014/05/03 13:01:24 alnsn Exp $
+$NetBSD: patch-Makefile,v 1.3 2015/03/05 14:12:18 ryoon Exp $
 
 * for pkgsrc.
 
 --- Makefile.orig	2013-09-03 15:44:50.000000000 +0000
 +++ Makefile
-@@ -1,9 +1,9 @@
+@@ -1,9 +1,11 @@
  # put next to lua-5.1.4
 -# then make -f slnunicode-1.1a/Makefile
 +# then make -f Makefile
@@ -14,6 +14,8 @@ $NetBSD: patch-Makefile,v 1.2 2014/05/03 13:01:24 alnsn Exp $
 -	lua-5.1.4/src/lua slnunicode-1.1a/unitest
 +unicode.so: slnunico.c slnudata.c
 +	gcc -I. ${CFLAGS} -shared -Wall -Os -fpic -o unicode.so slnunico.c
++
++test:
 +	${LUA_EXECUTABLE} unitest
  
  clean:
