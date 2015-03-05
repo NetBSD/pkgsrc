@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 18:17:00 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/05 22:47:55 tnn Exp $
 
 DISTNAME=		steghide-0.5.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=steghide/}
 
