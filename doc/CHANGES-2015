@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1168 2015/03/05 07:00:26 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1169 2015/03/05 07:01:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/libLLVM version 3.6.0 [tnn 2015-03-04]
 	Added lang/libLLVM34 version 3.4.2 [tnn 2015-03-04]
 	Updated devel/p5-Date-Manip to 6.49 [wiz 2015-03-05]
+	Updated devel/p5-List-MoreUtils to 0.406 [wiz 2015-03-05]
