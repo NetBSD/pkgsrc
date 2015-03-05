@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1174 2015/03/05 13:14:31 gson Exp $
+$NetBSD: CHANGES-2015,v 1.1175 2015/03/05 13:30:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ImageMagick to 6.9.0.5nb1 [jperkin 2015-03-05]
 	Updated textproc/the_silver_searcher to 0.29.1 [wiz 2015-03-05]
 	Updated misc/py-anita to 1.37 [gson 2015-03-05]
+	Updated www/firefox to 36.0nb1 [ryoon 2015-03-05]
