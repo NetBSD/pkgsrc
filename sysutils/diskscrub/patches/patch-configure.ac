@@ -1,13 +1,13 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/12/11 19:07:47 prlw1 Exp $
+$NetBSD: patch-configure.ac,v 1.2 2015/03/05 21:29:20 sevan Exp $
 
 - Make unimplemented getsize() function match prototype in getsize.h.
 - Use ioctl names (feature tests) rather than OS names.
   XXX for SIOC_CAPACITY consider using SIOC_STORAGE_CAPACITY.
 - Implement getsize() based on DIOCGDISKINFO ioctl.
 
---- configure.ac.orig	2013-12-11 17:23:58.000000000 +0000
+--- configure.ac.orig	2012-06-20 22:00:27.000000000 +0000
 +++ configure.ac
-@@ -43,7 +43,14 @@ AC_HEADER_STDC
+@@ -43,7 +43,15 @@ AC_HEADER_STDC
  AC_CHECK_HEADERS( \
    getopt.h \
    stdbool.h \
@@ -19,10 +19,11 @@ $NetBSD: patch-configure.ac,v 1.1 2013/12/11 19:07:47 prlw1 Exp $
 +  sys/dkio.h \
 +  sys/ioctl.h \
 +  sys/scsi.h \
++  sys/mman.h \
  )
  
  AC_PROG_LIBTOOL
-@@ -56,6 +63,12 @@ AC_C_BIGENDIAN
+@@ -56,6 +64,12 @@ AC_C_BIGENDIAN
  AC_C_CONST
  
  ##
