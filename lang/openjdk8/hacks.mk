@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2015/03/05 13:02:38 tnn Exp $
+# $NetBSD: hacks.mk,v 1.4 2015/03/05 13:08:18 tnn Exp $
 
 .if !defined(OPENJDK8_HACKS_MK)
 OPENJDK8_HACKS_MK=	# empty
@@ -11,6 +11,13 @@ post-wrapper:
 	${RM} -f ${BUILDLINK_DIR}/include/jerror.h
 	${RM} -f ${BUILDLINK_DIR}/include/jmorecfg.h
 	${RM} -f ${BUILDLINK_DIR}/include/jpeglib.h
+
+# Unlimit virtual memory. Needs at least 3G of VA space to build on 64-bit
+# hosts due to -XX:CompressedClassSpaceSize being 1G by default.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+UNLIMIT_RESOURCES+=		vmemorysize
+ULIMIT_CMD_vmemorysize?=	ulimit -v `ulimit -H -v`
+.endif
 
 # Workaround incorrect constant folding of subnormals in javac when the FPU
 # does not handle subnormal arithmetic, like on ARM in Flush-to-zero mode.
