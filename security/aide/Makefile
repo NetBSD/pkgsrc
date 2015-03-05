@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/02/22 19:59:07 shattered Exp $
+# $NetBSD: Makefile,v 1.36 2015/03/05 22:47:55 tnn Exp $
 #
 
 DISTNAME=	aide-0.15.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
@@ -9,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://aide.sourceforge.net/
 COMMENT=	Free intrusion detection system for checking file integrity
 LICENSE=	artistic
-
-BUILDLINK_API_DEPENDS.mhash?=	mhash>=0.8.17
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex gmake
