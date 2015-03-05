@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.6 2014/05/03 13:00:44 alnsn Exp $
+# $NetBSD: module.mk,v 1.7 2015/03/05 14:15:45 ryoon Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua modules.
@@ -52,5 +52,7 @@ PLIST_SUBST+=	LUA_DOCDIR=${LUA_DOCDIR}
 
 LUA_EXAMPLESDIR=	share/examples/${PKGBASE}
 PLIST_SUBST+=		LUA_EXAMPLESDIR=${LUA_EXAMPLESDIR}
+
+LDFLAGS.Cygwin+=	-llua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
 .endif  # LUA_MODULE_MK
