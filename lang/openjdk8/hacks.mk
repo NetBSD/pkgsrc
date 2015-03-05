@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2015/03/05 13:08:18 tnn Exp $
+# $NetBSD: hacks.mk,v 1.5 2015/03/05 16:35:49 tnn Exp $
 
 .if !defined(OPENJDK8_HACKS_MK)
 OPENJDK8_HACKS_MK=	# empty
@@ -12,12 +12,33 @@ post-wrapper:
 	${RM} -f ${BUILDLINK_DIR}/include/jmorecfg.h
 	${RM} -f ${BUILDLINK_DIR}/include/jpeglib.h
 
-# Unlimit virtual memory. Needs at least 3G of VA space to build on 64-bit
-# hosts due to -XX:CompressedClassSpaceSize being 1G by default.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-UNLIMIT_RESOURCES+=		vmemorysize
-ULIMIT_CMD_vmemorysize?=	ulimit -v `ulimit -H -v`
+# Don't reserve more memory than we need.
+# Fixes build in artificially VA constrained environment.
+#
+VA_HACK_ARGS=	-XX:ReservedCodeCacheSize=128M
+VA_HACK_ARGS+=	-XX:MaxMetaspaceSize=768M
+.if ${MACHINE_ARCH} == "x86_64"
+VA_HACK_ARGS+=	-XX:CompressedClassSpaceSize=128M
 .endif
+.PHONY: apply-va-hack
+apply-va-hack:
+	@${STEP_MSG} "Bulk build: reducing VA usage for tools in ${ALT_BOOTDIR}"
+.  for t in bin/java
+	@test -f ${ALT_BOOTDIR}/${t}.real ||	\
+		mv ${ALT_BOOTDIR}/${t} ${ALT_BOOTDIR}/${t}.real
+	@echo '#!/bin/sh' > ${ALT_BOOTDIR}/${t}	&& \
+	 echo 'exec ${ALT_BOOTDIR}/${t}.real ${VA_HACK_ARGS:M*} "$$@"' >> \
+		${ALT_BOOTDIR}/${t}	&& \
+	 chmod +x ${ALT_BOOTDIR}/${t}
+.  endfor
+.  for t in bin/jar bin/jarsigner bin/javac bin/javah bin/javap bin/keytool bin/native2ascii bin/rmic
+	@test -f ${ALT_BOOTDIR}/${t}.real ||	\
+		mv ${ALT_BOOTDIR}/${t} ${ALT_BOOTDIR}/${t}.real
+	@echo '#!/bin/sh' > ${ALT_BOOTDIR}/${t}	&& \
+	 echo 'exec ${ALT_BOOTDIR}/${t}.real ${VA_HACK_ARGS:C/^/-J/} "$$@"' >> \
+		${ALT_BOOTDIR}/${t}	&& \
+	 chmod +x ${ALT_BOOTDIR}/${t}
+.  endfor
 
 # Workaround incorrect constant folding of subnormals in javac when the FPU
 # does not handle subnormal arithmetic, like on ARM in Flush-to-zero mode.
