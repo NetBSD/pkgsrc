@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2015/02/28 14:30:56 tnn Exp $
+# $NetBSD: hacks.mk,v 1.3 2015/03/05 13:02:38 tnn Exp $
 
 .if !defined(OPENJDK8_HACKS_MK)
 OPENJDK8_HACKS_MK=	# empty
@@ -29,9 +29,18 @@ SUBST_FILES.fpu=	langtools/src/share/classes/com/sun/tools/javac/jvm/Items.java
 SUBST_FILES.fpu+=	langtools/src/share/classes/com/sun/tools/javac/parser/JavacParser.java
 SUBST_FILES.fpu+=	jdk/src/share/classes/sun/misc/DoubleConsts.java
 SUBST_FILES.fpu+=	jdk/src/share/classes/sun/misc/FloatConsts.java
-# {Double,Float}Consts.java: Replace problematic MIN_NORMAL literals with alternative representation
-SUBST_SED.fpu=		-e 's|2.2250738585072014E-308|0x1.0p-1022|g'
-SUBST_SED.fpu+=		-e 's|1.17549435E-38f|0x1.0p-126f|g'
+SUBST_FILES.fpu+=	jdk/src/share/classes/java/lang/Double.java
+SUBST_FILES.fpu+=	jdk/src/share/classes/java/lang/Float.java
+# Double{,Consts}.java: Replace problematic literals with binary representation
+SUBST_SED.fpu=		-e 's|2.2250738585072014e-308d*|Double.longBitsToDouble(0x10000000000000L)|ig'	# MIN_NORMAL
+SUBST_SED.fpu+=		-e 's|0x1.0p-1022d*|Double.longBitsToDouble(0x10000000000000L)|ig'		# MIN_NORMAL
+SUBST_SED.fpu+=		-e 's|4.9e-324d*|Double.longBitsToDouble(0x1L)|ig'				# MIN_VALUE
+SUBST_SED.fpu+=		-e 's|0x0.0000000000001p-1022d*|Double.longBitsToDouble(0x1L)|ig'		# MIN_VALUE
+# Float{,Consts}.java: Replace problematic literals with binary representation
+SUBST_SED.fpu+=		-e 's|1.17549435e-38f*|Float.intBitsToFloat(0x800000)|ig'	# MIN_NORMAL
+SUBST_SED.fpu+=		-e 's|0x1.0p-126f*|Float.intBitsToFloat(0x800000)|ig'		# MIN_NORMAL
+SUBST_SED.fpu+=		-e 's|1.4e-45f*|Float.intBitsToFloat(0x1)|ig'			# MIN_VALUE
+SUBST_SED.fpu+=		-e 's|0x0.000002P-126f*|Float.intBitsToFloat(0x1)|ig'		# MIN_VALUE
 # JavacParser.java: avoid bogus "fp.number.too.small" error parsing literals representing Double.MIN_VALUE
 SUBST_SED.fpu+=		-e 's|n.floatValue() == 0.0f && !isZero(proper)|& \&\& Float.floatToIntBits(n) != 0x1|'
 SUBST_SED.fpu+=		-e 's|n.doubleValue() == 0.0d && !isZero(proper)|& \&\& Double.doubleToLongBits(n) != 0x1L|'
