@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/03 23:43:45 sevan Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/06 01:18:04 sevan Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	cmdliner-0.9.4
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c
 OCAML_SITELIBDIR=	${PREFIX}/lib/ocaml/site-lib
 INSTALLATION_DIRS=	lib/ocaml/site-lib/cmdliner
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
