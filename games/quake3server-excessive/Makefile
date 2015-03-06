@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2015/01/04 06:19:05 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/06 19:54:09 tnn Exp $
 
 DISTNAME=	excessive_q3_server_003
 PKGNAME=	quake3server-excessive-003
 PKGREVISION=	1
 CATEGORIES=	games net
-MASTER_SITES=	ftp://ftp.fr.FreeBSD.org/pub/FreeBSD/distfiles/
+MASTER_SITES=	http://distcache.FreeBSD.org/ports-distfiles/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	david@silicium.ath.cx
