@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2015/01/04 08:22:20 dholland Exp $
+# $NetBSD: Makefile,v 1.38 2015/03/06 23:56:47 ryoon Exp $
 
-DISTNAME=		gforth-0.7.0
-PKGREVISION=		7
+DISTNAME=		gforth-0.7.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
 MASTER_SITES+=		http://www.complang.tuwien.ac.at/forth/gforth/
@@ -17,6 +16,8 @@ LICENSE=		gnu-gpl-v3
 # processors as long as they have IEEE floats. So, we'll explicitly
 # exclude vax and allow anything else.
 NOT_FOR_PLATFORM=	*-*-vax
+
+EXTRACT_USING=		bsdtar
 
 INFO_FILES=		yes
 
