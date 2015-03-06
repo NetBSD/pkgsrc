@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 19:51:08 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/06 21:54:56 tnn Exp $
 
 DISTNAME=	ipw2100-fw-1.2
 PKGNAME=	ipw-firmware-1.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://damien.bergamini.free.fr/ipwfw/
+MASTER_SITES=	http://damien.bergamini.free.fr/ipwfw/ \
+		http://firmware.openbsd.org/firmware-dist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	Damien.Bergamini@Free.FR
