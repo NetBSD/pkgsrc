@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2015/01/07 21:39:24 wiedi Exp $
+$NetBSD: distinfo,v 1.101 2015/03/06 13:22:03 tnn Exp $
 
 SHA1 (qemu-2.2.0.tar.bz2) = 9a16623775a92fd25334f4eced4e6a56ab536233
 RMD160 (qemu-2.2.0.tar.bz2) = 9a156bdefd8fad72154eee1b10ed53a0e4c1c9a2
@@ -14,4 +14,4 @@ SHA1 (patch-hw_ppc_mac__oldworld.c) = 46322c77c87be6d517c43466325c344db99cd463
 SHA1 (patch-memory.c) = 14df9c835ca318fc79a8d3a46bb94d2f229277cc
 SHA1 (patch-slirp_tcp__subr.c) = cfc8289384fa987289e32b64532c13a83a890820
 SHA1 (patch-tests_Makefile) = 81fe639ce1b04302f53024343fdf1f6fd5d5fedb
-SHA1 (patch-user-exec.c) = eb83832c7c9e5f69313f8cad2c2f77b304072556
+SHA1 (patch-user-exec.c) = 9090d368b31c70a81af4e8b08d0267c597ff248e
