@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.121 2015/03/06 20:15:19 tnn Exp $
+# $NetBSD: sites.mk,v 1.122 2015/03/06 20:58:17 tnn Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -327,6 +327,7 @@ MASTER_SITE_HASKELL_HACKAGE+=	\
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
+	ftp://ftp.fr.NetBSD.org/pub/pkgsrc/distfiles/ \
+	http://ftp.fr.NetBSD.org/pub/pkgsrc/distfiles/ \
 	ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/ \
 	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/ \
-	ftp://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/
