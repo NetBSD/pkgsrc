@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1183 2015/03/06 21:04:15 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1184 2015/03/06 22:30:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1666,3 +1666,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4-bin to 4.4.1.2 [bad 2015-03-06]
 	Removed cad/lc [dmcmahill 2015-03-06]
 	Updated shells/fish to 2.1.2 [ryoon 2015-03-06]
+	Updated www/firefox31 to 31.5.0 [ryoon 2015-03-06]
+	Updated www/firefox31-l10n to 31.5.0 [ryoon 2015-03-06]
+	Updated mail/thunderbird to 31.5.0 [ryoon 2015-03-06]
+	Updated mail/thunderbird-l10n to 31.5.0 [ryoon 2015-03-06]
+	Updated devel/xulrunner31 to 31.5.0 [ryoon 2015-03-06]
