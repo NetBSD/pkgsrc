@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1181 2015/03/05 23:24:15 bad Exp $
+$NetBSD: CHANGES-2015,v 1.1182 2015/03/06 20:49:03 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1664,3 +1664,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dhid to 5.5 [mef 2015-03-05]
 	Updated devel/libidn to 1.30 [wiz 2015-03-05]
 	Updated misc/libreoffice4-bin to 4.4.1.2 [bad 2015-03-06]
+	Removed cad/lc [dmcmahill 2015-03-06]
