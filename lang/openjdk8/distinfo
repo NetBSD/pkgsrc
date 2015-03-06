@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/03/02 14:27:38 tnn Exp $
+$NetBSD: distinfo,v 1.15 2015/03/06 12:11:54 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -18,6 +18,9 @@ Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-6-i386-20150301.tar.xz) = 26972860 by
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = e56a0334417146a4db8c23938a0c19ada3e3847d
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = e9a88901ed05bec37c63f235cc7c4b09aaaf1ba3
 Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = 26955712 bytes
+SHA1 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz) = 629f8d98530067dc78ba6521f37195ab819dc0d7
+RMD160 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz) = 95fca1e15af0f48b529b525262f84b7a3c4f76fd
+Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz) = 23104564 bytes
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz) = ff3a3e65c8317017b7f83d688a19630f928e86c7
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz) = 627914b2c853da7a2d86e8a8b24fef1e36f25251
 Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz) = 27615992 bytes

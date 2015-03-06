@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.18 2015/03/02 03:53:26 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.19 2015/03/06 12:11:54 tnn Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -24,7 +24,7 @@
 # the person who prepared the kit. Unsigned binaries on ftp will be purged.
 
 ONLY_FOR_PLATFORM=	NetBSD-[567].*-i386 NetBSD-[567].*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-7.*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-7.*-sparc64 NetBSD-7.*-earmv[67]hf
 ONLY_FOR_PLATFORM+=	DragonFly-[34].*-* SunOS-*-* FreeBSD-10.*-x86_64
 
 BOOT.nb5-i386=		bootstrap-jdk-1.7.76-netbsd-5-i386-20150301.tar.xz
@@ -34,7 +34,9 @@ BOOT.nb6-amd64=		bootstrap-jdk-1.7.76-netbsd-6-amd64-20150301.tar.xz
 BOOT.nb7-i386=		bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz
 BOOT.nb7-amd64=		bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz
 BOOT.nb7-sparc64=	bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz
+BOOT.nb7-earmv6hf=	bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz
 BOOT.fbsd10-amd64=	bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz
+
 #XXX should be regenerated
 BOOT.dfly3.6-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2
 BOOT.dfly3.8-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2
@@ -59,19 +61,24 @@ DISTFILES+=		${BOOT.nb6-amd64}
 EXTRACT_ONLY+=		${BOOT.nb6-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || !empty(MACHINE_PLATFORM:MNetBSD-7*-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || !empty(MACHINE_PLATFORM:MNetBSD-7.*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-i386}
 EXTRACT_ONLY+=		${BOOT.nb7-i386}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-7*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-7.*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-amd64}
 EXTRACT_ONLY+=		${BOOT.nb7-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-7*-sparc64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-7.*-sparc64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-sparc64}
 EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-7.*-earmv[67]hf) || make(distinfo)
+DISTFILES+=		${BOOT.nb7-earmv6hf}
+EXTRACT_ONLY+=		${BOOT.nb7-earmv6hf}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDragonFly-3.6*-x86_64) || make(distinfo)
