@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1184 2015/03/06 22:30:17 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1185 2015/03/06 23:57:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/thunderbird to 31.5.0 [ryoon 2015-03-06]
 	Updated mail/thunderbird-l10n to 31.5.0 [ryoon 2015-03-06]
 	Updated devel/xulrunner31 to 31.5.0 [ryoon 2015-03-06]
+	Updated lang/gforth to 0.7.3 [ryoon 2015-03-06]
