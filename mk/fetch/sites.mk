@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.123 2015/03/06 20:58:47 tnn Exp $
+# $NetBSD: sites.mk,v 1.124 2015/03/06 21:11:09 tnn Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -301,12 +301,10 @@ MASTER_SITE_XORG+= \
 	ftp://mirror.switch.ch/mirror/X11/pub/individual/
 
 MASTER_SITE_FREEBSD+= \
-	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
-	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/distfiles/
+	http://distcache.FreeBSD.org/ports-distfiles/
 
 MASTER_SITE_FREEBSD_LOCAL+= \
-	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/ \
-	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/
+	http://distcache.FreeBSD.org/local-distfiles/
 
 MASTER_SITE_NETLIB+= \
 	http://netlib.org/ \
