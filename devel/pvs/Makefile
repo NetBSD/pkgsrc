@@ -1,5 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2013/02/17 19:18:00 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2015/03/06 19:36:33 tnn Exp $
 #
+
+# This package is very outdated and should be built from sources
+# rather than using Linux binaries.
+#
+# Sources are now distributed here: https://github.com/samowre/PVS
 
 DISTNAME=		pvs-${VERSION}
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
