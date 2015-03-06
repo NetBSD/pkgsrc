@@ -1,15 +1,15 @@
-$NetBSD: patch-proc.h,v 1.1 2012/12/12 13:21:42 wiz Exp $
+$NetBSD: patch-proc.h,v 1.2 2015/03/06 21:03:20 ryoon Exp $
 
 Fix missing include
 
---- proc.h.orig	2009-03-08 14:46:47.000000000 +0000
+--- proc.h.orig	2015-02-16 19:07:12.000000000 +0000
 +++ proc.h
-@@ -16,6 +16,8 @@
- #include <unistd.h>
+@@ -17,6 +17,8 @@
  #include <sys/time.h>
+ #include <list>
  
 +#include <termios.h>
 +
  #include "util.h"
  #include "io.h"
- 
+ #include "common.h"
