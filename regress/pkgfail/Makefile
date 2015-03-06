@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2004/08/28 00:19:17 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/06 23:26:26 tnn Exp $
 #
 
 DISTNAME=	regress-pkgfail-0.0
+DISTFILES=	# empty
 CATEGORIES=	regress
 
 MAINTAINER=	gavan@NetBSD.org
