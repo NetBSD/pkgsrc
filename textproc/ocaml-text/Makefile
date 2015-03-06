@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/03/04 15:31:34 sevan Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/06 01:19:30 sevan Exp $
 #
 
 DISTNAME=	ocaml-text-0.6
@@ -22,7 +22,7 @@ SUBST_MESSAGE.destdir=	Changing install location to DESTDIR
 SUBST_FILES.destdir=	setup.ml
 SUBST_SED.destdir=	-e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
