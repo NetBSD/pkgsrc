@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.2 2013/10/20 17:53:26 joerg Exp $
+$NetBSD: patch-configure,v 1.3 2015/03/06 21:03:20 ryoon Exp $
 
 Expand variable where it's defined
 
---- configure.orig	2009-03-08 14:46:47.000000000 +0000
+--- configure.orig	2015-02-24 18:17:38.000000000 +0000
 +++ configure
-@@ -740,7 +740,7 @@ sharedstatedir='${prefix}/com'
+@@ -814,7 +814,7 @@ sharedstatedir='${prefix}/com'
  localstatedir='${prefix}/var'
  includedir='${prefix}/include'
  oldincludedir='/usr/include'
@@ -13,12 +13,3 @@ Expand variable where it's defined
  infodir='${datarootdir}/info'
  htmldir='${docdir}'
  dvidir='${docdir}'
-@@ -1848,7 +1848,7 @@ echo $ECHO_N "checking for $i/lib librar
- 	if test -d $i/lib; then
- 		{ echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
--		LDFLAGS="$LDFLAGS -L$i/lib/ -R$i/lib/"
-+		LDFLAGS="$LDFLAGS -L$i/lib/ ${COMPILER_RPATH_FLAG}$i/lib/"
- 	else
- 		{ echo "$as_me:$LINENO: result: no" >&5
- echo "${ECHO_T}no" >&6; }
