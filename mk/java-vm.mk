@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.99 2015/02/25 10:39:50 tnn Exp $
+# $NetBSD: java-vm.mk,v 1.100 2015/03/06 12:24:43 tnn Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -97,7 +97,8 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .  if   !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-i386) || \
         !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-x86_64)
 _PKG_JVM_DEFAULT?=	openjdk7
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64)
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) \\
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
 _PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
         !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
@@ -139,6 +140,7 @@ _ONLY_FOR_PLATFORMS.openjdk7= \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
 	NetBSD-[7-9]*-sparc64 \
+	NetBSD-[7-9]*-earmv[67]hf \
 	SunOS-*-i386 \
 	SunOS-*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk8= \
@@ -146,6 +148,7 @@ _ONLY_FOR_PLATFORMS.openjdk8= \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
 	NetBSD-[7-9]*-sparc64 \
+	NetBSD-[7-9]*-earmv[67]hf \
 	SunOS-*-i386 \
 	SunOS-*-x86_64
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
