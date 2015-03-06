@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.119 2015/02/24 03:30:07 ryoon Exp $
+# $NetBSD: sites.mk,v 1.120 2015/03/06 18:01:28 tnn Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -122,6 +122,7 @@ MASTER_SITE_MOZILLA_ESR+=	\
 	ftp://ftp.mozilla.org/pub/mozilla.org/
 
 MASTER_SITE_XEMACS+=    \
+	http://ftp.xemacs.org/pub/xemacs/ \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
 	ftp://ftp.dti.ad.jp/pub/unix/editor/xemacs/ \
 	ftp://ftp.pasteur.fr/pub/computing/xemacs/ \
