@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.2 2015/03/07 15:31:52 tnn Exp $
+# $NetBSD: github.mk,v 1.3 2015/03/07 16:17:42 tnn Exp $
 #
 # github.com master site handling
 #
@@ -18,19 +18,18 @@
 # GH_TYPE	overrides the autodetected MASTER_SITE URL scheme:
 #
 # "tag"
-# This is the default when GH_TAGNAME is set. Exampe URL:
-# http://www.github.com/acct/proj/archive/{GH_TAGNAME}.tar.gz
+# This is the default when GH_TAGNAME is set or no type was specified. Exampe URL:
+# http://github.com/acct/proj/archive/{GH_TAGNAME}.tar.gz
 #
 # "release"
 # This is the default when GH_RELEASE is set. Example URL:
-# http://www.github.com/acct/proj/releases/download/${GH_RELEASE}/${DISTNAME}${EXTRACT_SUFX}
+# http://github.com/acct/proj/releases/download/${GH_RELEASE}/${DISTNAME}.tar.gz
 #
 # "commit"
-# This is the default when GH_TAGNAME and GH_COMMIT are empty.
-# -${MASTER_SITE_GITHUB}${GH_ACCOUNT}/{GH_PROJECT}/releases/download/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+# This is the default when GH_COMMIT is set. Example URL:
+# http://github.com/acct/proj/archive/${GH_COMMIT}.tar.gz
 #
 # Keywords: github
-
 
 .if defined(USE_GITHUB) && !empty(USE_GITHUB:M[yY][eE][sS])
 
