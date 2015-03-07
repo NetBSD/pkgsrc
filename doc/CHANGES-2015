@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1194 2015/03/07 07:42:26 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1195 2015/03/07 11:11:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1680,3 +1680,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-GitHub to 0.73 [mef 2015-03-07]
 	Updated net/flickcurl to 1.26 [mef 2015-03-07]
 	Updated net/flodo to 5.0 [mef 2015-03-07]
+	Updated fonts/takao-fonts-ttf to 003.03.01 [ryoon 2015-03-07]
