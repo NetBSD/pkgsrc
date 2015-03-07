@@ -1,19 +1,27 @@
-@comment $NetBSD: PLIST,v 1.10 2011/07/14 21:11:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/03/07 00:43:51 ryoon Exp $
 bin/waei
-include/libwaei/dictinfo.h
-include/libwaei/dictinfolist.h
-include/libwaei/dictinst.h
-include/libwaei/dictinstlist.h
-include/libwaei/engine.h
-include/libwaei/historylist.h
+include/libwaei/definitions.h
+include/libwaei/dictionary-callbacks.h
+include/libwaei/dictionary-installer.h
+include/libwaei/dictionary.h
+include/libwaei/dictionarylist.h
+include/libwaei/edictionary.h
+include/libwaei/exampledictionary.h
+include/libwaei/history.h
 include/libwaei/io.h
+include/libwaei/kanjidictionary.h
 include/libwaei/libwaei.h
+include/libwaei/morphology.h
 include/libwaei/preferences.h
-include/libwaei/queryline.h
+include/libwaei/query.h
+include/libwaei/range.h
 include/libwaei/regex.h
-include/libwaei/resultline.h
-include/libwaei/searchitem.h
+include/libwaei/result.h
+include/libwaei/search.h
+include/libwaei/unknowndictionary.h
 include/libwaei/utilities.h
+include/libwaei/vocabulary.h
+include/libwaei/word.h
 lib/libwaei.la
 man/man1/waei.1
 share/doc/gwaei/COPYING
@@ -27,3 +35,4 @@ share/locale/fr/LC_MESSAGES/gwaei.mo
 share/locale/it/LC_MESSAGES/gwaei.mo
 share/locale/ja/LC_MESSAGES/gwaei.mo
 share/locale/tr/LC_MESSAGES/gwaei.mo
+share/locale/vi/LC_MESSAGES/gwaei.mo
