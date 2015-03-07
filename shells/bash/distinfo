@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2014/11/23 00:43:57 dholland Exp $
+$NetBSD: distinfo,v 1.40 2015/03/07 22:40:48 rodent Exp $
 
 SHA1 (bash-4.3.tar.gz) = 45ac3c5727e7262334f4dfadecdf601b39434e84
 RMD160 (bash-4.3.tar.gz) = cd21a9f51ea7780994d4e2c9c7d16d5eb000f845
@@ -93,11 +93,11 @@ Size (bash43-029) = 1824 bytes
 SHA1 (bash43-030) = ad1e978c051ef58584343ad24f165e614ed2a184
 RMD160 (bash43-030) = 9634eb9f937b10507fb5b750633b0d7ea17c3456
 Size (bash43-030) = 63206 bytes
-SHA1 (patch-af) = dfd1d1be3d822cfc3ae0fd21bb2bbd3e35b11f0d
-SHA1 (patch-ag) = 4da0a43f6b890482affff46b18eef4be67770e48
-SHA1 (patch-aj) = 8b3c52c2aee9cf53ee5a9ce64ead243d0970305e
-SHA1 (patch-builtins_ulimit.def) = d4cb59bedc6a6199f9a99a3530c99374e428baeb
-SHA1 (patch-configure) = ae72a864325761bfbdde85761fd849e49968dff0
+SHA1 (patch-af) = 31cb0d8af1e9e83bf1cc9094475c710792ca2a1c
+SHA1 (patch-ag) = 61573c7b068b1e9df886655efb3d89c89643f25e
+SHA1 (patch-aj) = 2e4c15afd9b50d44967ee8e1f85bdc908c0eeeb0
+SHA1 (patch-builtins_ulimit.def) = 2106ed5b76f8bccb8d82f9ada70b336675bf6672
+SHA1 (patch-configure) = c4e1ab53a1ee85f3e6121047f0aca8ceb85e6e5d
 SHA1 (patch-lib_readline_colors.c) = f2f47e7aa0b5c1e999368109de10f80e39fd4438
-SHA1 (patch-shell.c) = 08e55c3fa57a9e8eb6366c4eba91aa70f487acb2
-SHA1 (patch-variables.c) = 55472b2c79451cd1bc7bd4bf097c9b697f95f521
+SHA1 (patch-shell.c) = daa07914d4c318cd72463f80344f4f7c364809cd
+SHA1 (patch-variables.c) = d300318230e5d2c31b15bc0ee8d8416a6b6e8ee1
