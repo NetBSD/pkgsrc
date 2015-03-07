@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.128 2015/02/24 17:11:28 tnn Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.129 2015/03/07 15:14:27 tnn Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -777,6 +777,52 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     Furthermore, a mail to the package's authors seems appropriate
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</para>
+  </sect2>
+  <sect2 id="build.fetch.github">
+    <title>Packages hosted on github.com</title>
+    <para>Helper methods exist for packages hosted on github.com. You do not need to specify <varname>MASTER_SITE</varname> but should instead use one of the three supported methods from below.</para>
+    <sect3 id="build.fetch.github.tag">
+      <title>Fetch based on a tagged release</title>
+      <para>
+        If your distfile URL looks similar to <literal>http://github.com/username/exampleproject/archive/v1.0.zip</literal>, then you are packaging a tagged release.
+      </para>
+      <programlisting>
+DISTNAME=       exampleproject-1.0
+USE_GITHUB=     yes
+GH_ACCOUNT=     username
+#GH_PROJECT=    # can be omitted if same as DISTNAME
+GH_TAGNAME=     v1.0
+EXTRACT_SUFX=   .zip
+</programlisting>
+    </sect3>
+    <sect3 id="build.fetch.github.commit">
+      <title>Fetch based on a specific commit</title>
+      <para>
+        If your distfile URL looks similar to <literal>http://github.com/example/example/archive/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>, then you are packaging a specific commit not tied to a release.
+      </para>
+      <programlisting>
+DISTNAME=       example-1.0
+USE_GITHUB=     yes
+#GH_ACCOUNT=    # can be omitted if same as DISTNAME
+#GH_PROJECT=    # can be omitted if same as DISTNAME
+GH_COMMIT=      988881adc9fc3655077dc2d4d757d480b5ea0e11
+      </programlisting>
+
+    </sect3>
+    <sect3 id="build.fetch.github.release">
+      <title>Fetch based on release</title>
+      <para>
+        If your distfile URL looks similar to <literal>http://github.com/username/exampleproject/releases/download/rel-1.6/offensive-1.6.zip</literal>, then you are packaging a release.
+      </para>
+      <programlisting>
+PKGNAME=	${DISTNAME:S/offensive/proper/}
+DISTNAME=       offensive-1.6
+USE_GITHUB=     yes
+GH_ACCOUNT=     username
+GH_PROJECT=     exampleproject
+GH_RELEASE=     rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
+      </programlisting>
+    </sect3>
   </sect2>
 </sect1>
 
