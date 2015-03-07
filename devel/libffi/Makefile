@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/11/19 13:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/03/07 16:37:51 tnn Exp $
 
 DISTNAME=	libffi-3.2.1
 CATEGORIES=	devel
@@ -49,4 +49,5 @@ USE_TOOLS+=		bash gmake
 MAKE_FLAGS+=		SHELL=${TOOLS_DIR}/bin/bash
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
