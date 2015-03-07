@@ -6842,9 +6842,9 @@ changing the file names is not good practice.
 
 19.2.3. Packages hosted on github.com
 
-Helper methods exist for packages hosted on github.com. You do not need to
-specify MASTER_SITE but should instead use one of the three supported methods
-from below.
+Helper methods exist for packages hosted on github.com which will often have
+distfile names that clash with other packages, for example 1.0.tar.gz. Use one
+of the three recipes from below:
 
 19.2.3.1. Fetch based on a tagged release
 
@@ -6852,10 +6852,9 @@ If your distfile URL looks similar to http://github.com/username/exampleproject
 /archive/v1.0.zip, then you are packaging a tagged release.
 
 DISTNAME=       exampleproject-1.0
-USE_GITHUB=     yes
-GH_ACCOUNT=     username
-#GH_PROJECT=    # can be omitted if same as DISTNAME
-GH_TAGNAME=     v1.0
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
+#GITHUB_PROJECT=        # can be omitted if same as DISTNAME
+GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
 
 19.2.3.2. Fetch based on a specific commit
@@ -6865,10 +6864,9 @@ If your distfile URL looks similar to http://github.com/example/example/archive
 specific commit not tied to a release.
 
 DISTNAME=       example-1.0
-USE_GITHUB=     yes
-#GH_ACCOUNT=    # can be omitted if same as DISTNAME
-#GH_PROJECT=    # can be omitted if same as DISTNAME
-GH_COMMIT=      988881adc9fc3655077dc2d4d757d480b5ea0e11
+MASTER_SITES=   ${MASTER_SITE_GITHUB:example/}
+#GITHUB_PROJECT=        # can be omitted if same as DISTNAME
+GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 
 
 19.2.3.3. Fetch based on release
@@ -6876,12 +6874,12 @@ GH_COMMIT=      988881adc9fc3655077dc2d4d757d480b5ea0e11
 If your distfile URL looks similar to http://github.com/username/exampleproject
 /releases/download/rel-1.6/offensive-1.6.zip, then you are packaging a release.
 
-PKGNAME=        ${DISTNAME:S/offensive/proper/}
 DISTNAME=       offensive-1.6
-USE_GITHUB=     yes
-GH_ACCOUNT=     username
-GH_PROJECT=     exampleproject
-GH_RELEASE=     rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
+PKGNAME=        ${DISTNAME:S/offensive/proper/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
+GITHUB_PROJECT= exampleproject
+GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
+EXTRACT_SUFX=   .zip
 
 
 19.3. Fixing problems in the configure phase
