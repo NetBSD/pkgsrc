@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/05/18 21:26:02 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/03/07 18:32:44 wiz Exp $
 
-SHA1 (xman-1.1.3.tar.bz2) = 9d83b14869ffadfda3407a2ab3b5fee13f667366
-RMD160 (xman-1.1.3.tar.bz2) = 5d91362017c52d73b3c8ec594e25e9265264f796
-Size (xman-1.1.3.tar.bz2) = 184340 bytes
-SHA1 (patch-handler.c) = 5ff7e08a97421663376a149f32c8de8cdb004533
+SHA1 (xman-1.1.4.tar.bz2) = b64516dab2b1c407b28ce3822a98b93178e29f02
+RMD160 (xman-1.1.4.tar.bz2) = cb4e3a9444c27c9bd0a7388802db491e32cc96db
+Size (xman-1.1.4.tar.bz2) = 188259 bytes
