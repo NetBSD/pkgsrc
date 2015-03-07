@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2010 2015/03/07 14:17:51 tnn Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2011 2015/03/07 21:14:32 tnn Exp $
 #
 # This file is in the public domain.
 #
@@ -96,12 +96,8 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 .endif
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 TOOL_DEPENDS?=		# empty
-.if defined(USE_GITHUB) && !empty(USE_GITHUB:M[yY][eE][sS]) && \
-	defined(GH_COMMIT) && !empty(GH_COMMIT)
-WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${GH_COMMIT}
-.elif defined(USE_GITHUB) && !empty(USE_GITHUB:M[yY][eE][sS]) && \
-	defined(GH_TAGNAME) && !empty(GH_TAGNAME)
-WRKSRC?=	${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME:C/^v//}
+.if defined(GITHUB_TAG)
+WRKSRC?=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG:C/^v//}
 .else
 WRKSRC?=		${WRKDIR}/${DISTNAME:U${PKGNAME_NOREV}}
 .endif

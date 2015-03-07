@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/03/07 17:15:11 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/07 21:14:32 tnn Exp $
 
 DISTNAME=	glmark2-2014.03
 CATEGORIES=	benchmarks
-USE_GITHUB=	yes
-GH_COMMIT=	499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
+GITHUB_TAG=	499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2
