@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/03/07 05:10:45 mef Exp $
 bin/gr_constellation_plot
 bin/gr_psd_plot_b
 bin/gr_psd_plot_c
 bin/gr_psd_plot_f
 bin/gr_psd_plot_i
 bin/gr_psd_plot_s
+bin/gr_spectrogram_plot
 bin/gr_spectrogram_plot_b
 bin/gr_spectrogram_plot_c
 bin/gr_spectrogram_plot_f
@@ -17,7 +18,6 @@ bin/gr_time_plot_i
 bin/gr_time_plot_s
 bin/gr_time_raster_b
 bin/gr_time_raster_f
-share/examples/gnuradio/conf.d/gr-qtgui.conf
 include/gnuradio/qtgui/CMakeLists.txt
 include/gnuradio/qtgui/ConstellationDisplayPlot.h
 include/gnuradio/qtgui/DisplayPlot.h
@@ -109,6 +109,7 @@ ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.py
 ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.pyc
 ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.pyo
 share/doc/gnuradio-${PKGVERSION}/README.qtgui
+share/examples/gnuradio/conf.d/gr-qtgui.conf
 share/gnuradio/examples/qt-gui/alt.qss
 share/gnuradio/examples/qt-gui/dark.qss
 share/gnuradio/examples/qt-gui/pyqt_const_c.py
