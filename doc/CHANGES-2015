@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1193 2015/03/07 07:26:11 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1194 2015/03/07 07:42:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1679,3 +1679,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/httping to 2.4 [mef 2015-03-07]
 	Updated net/p5-Net-GitHub to 0.73 [mef 2015-03-07]
 	Updated net/flickcurl to 1.26 [mef 2015-03-07]
+	Updated net/flodo to 5.0 [mef 2015-03-07]
