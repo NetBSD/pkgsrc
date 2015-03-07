@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2013/02/06 19:30:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/07 07:42:16 mef Exp $
 #
 
-DISTNAME=		flodo-v4
-PKGNAME=		flodo-4.20040907
-PKGREVISION=		1
+DISTNAME=		flodo-v5
+# 12-Mar-2008 17:59
+PKGNAME=		flodo-5.0
 CATEGORIES=		net
 MASTER_SITES=		http://arctic.org/~dean/flodo/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,8 +18,6 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.libpcap}/include
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libpcap}/lib
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
-
-CONFLICTS+=		flodo-4-[0-9]*
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o flodo flodo.c hash.c local_mac.c -lpcap
