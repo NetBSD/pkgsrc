@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/07 11:11:05 ryoon Exp $
 #
 
-DISTNAME=	takao-fonts-ttf-003.02.01
-PKGREVISION=	1
+DISTNAME=	TakaoFonts_00303.01
+PKGNAME=	takao-fonts-ttf-003.03.01
 CATEGORIES=	fonts japanese
-MASTER_SITES=	http://launchpad.net/takao-fonts/003.02/003.02.01/+download/
+MASTER_SITES=	https://launchpad.net/takao-fonts/trunk/15.03/+download/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/takao-fonts
@@ -23,9 +24,7 @@ INSTALLATION_DIRS=	share/fonts/X11/TTF \
 FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALL_FONTS=	TakaoExGothic.ttf \
-		TakaoExMincho.ttf \
-		TakaoGothic.ttf \
+INSTALL_FONTS=	TakaoGothic.ttf \
 		TakaoMincho.ttf \
 		TakaoPGothic.ttf \
 		TakaoPMincho.ttf
