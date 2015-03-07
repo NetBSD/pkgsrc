@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2011/03/12 15:26:45 wiz Exp $
+$NetBSD: patch-af,v 1.7 2015/03/07 22:40:48 rodent Exp $
 
---- builtins/printf.def.orig	2010-11-23 15:02:55.000000000 +0000
+--- builtins/printf.def.orig	2014-01-03 15:35:33.000000000 +0000
 +++ builtins/printf.def
-@@ -90,6 +90,11 @@ $END
+@@ -95,6 +95,11 @@ $END
  #  undef PRIdMAX
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD: patch-af,v 1.6 2011/03/12 15:26:45 wiz Exp $
  #if !defined (PRIdMAX)
  #  if HAVE_LONG_LONG
  #    define PRIdMAX	"lld"
-@@ -97,6 +102,13 @@ $END
+@@ -102,6 +107,13 @@ $END
  #    define PRIdMAX	"ld"
  #  endif
  #endif
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.6 2011/03/12 15:26:45 wiz Exp $
  
  #if !defined (errno)
  extern int errno;
-@@ -571,7 +583,11 @@ printf_builtin (list)
+@@ -594,7 +606,11 @@ printf_builtin (list)
  		p = pp = getintmax ();
  		if (p != pp)
  		  {
@@ -40,7 +40,7 @@ $NetBSD: patch-af,v 1.6 2011/03/12 15:26:45 wiz Exp $
  		    PF (f, pp);
  		  }
  		else
-@@ -598,7 +614,11 @@ printf_builtin (list)
+@@ -621,7 +637,11 @@ printf_builtin (list)
  		p = pp = getuintmax ();
  		if (p != pp)
  		  {
