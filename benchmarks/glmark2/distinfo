@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/28 23:09:27 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2015/03/07 14:27:15 tnn Exp $
 
-SHA1 (499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = 2cedb183b5ee5cb1a4448200a63835862a2796a7
-RMD160 (499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = d20f6500c02b3eda2ae7d0f04910a79b977be6c0
-Size (499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = 7811333 bytes
+SHA1 (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = 2cedb183b5ee5cb1a4448200a63835862a2796a7
+RMD160 (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = d20f6500c02b3eda2ae7d0f04910a79b977be6c0
+Size (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = 7811333 bytes
