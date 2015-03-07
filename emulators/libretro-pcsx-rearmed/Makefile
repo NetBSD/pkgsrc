@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/03/07 14:29:35 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/07 21:14:32 tnn Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
-USE_GITHUB=	yes
-GH_ACCOUNT=	notaz
-GH_PROJECT=	pcsx_rearmed
-GH_TAGNAME=	r22
+MASTER_SITES=	${MASTER_SITE_GITHUB:=notaz/}
+GITHUB_PROJECT=	pcsx_rearmed
+GITHUB_TAG=	r22
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://notaz.gp2x.de/pcsx_rearmed.php
