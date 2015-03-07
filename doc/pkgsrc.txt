@@ -316,6 +316,7 @@ II. The pkgsrc developer's guide
             19.2.1. Packages whose distfiles aren't available for plain
                 downloading
             19.2.2. How to handle modified distfiles with the 'old' name
+            19.2.3. Packages hosted on github.com
 
         19.3. Fixing problems in the configure phase
 
@@ -3017,6 +3018,7 @@ Table of Contents
 
         19.2.1. Packages whose distfiles aren't available for plain downloading
         19.2.2. How to handle modified distfiles with the 'old' name
+        19.2.3. Packages hosted on github.com
 
     19.3. Fixing problems in the configure phase
 
@@ -4236,8 +4238,9 @@ ${OPSYS}, ${LOWER_OPSYS}, ${OS_VERSION}
 
       + ${OS_VERSION} - "uname -r"
 
-For a complete list of values which are replaced by default, please look in
-bsd.pkg.mk (and search for PLIST_SUBST).
+For a list of values which are replaced by default, the output of make help
+topic=PLIST_SUBST as well as searching the pkgsrc/mk directory with grep for
+PLIST_SUBST should help.
 
 If you want to change other variables not listed above, you can add variables
 and their expansions to this variable in the following way, similar to
@@ -6215,6 +6218,7 @@ Table of Contents
 
     19.2.1. Packages whose distfiles aren't available for plain downloading
     19.2.2. How to handle modified distfiles with the 'old' name
+    19.2.3. Packages hosted on github.com
 
 19.3. Fixing problems in the configure phase
 
@@ -6835,6 +6839,50 @@ DIST_SUBDIR path in the filenames. Also, increase the PKGREVISION if the
 installed package is different. Furthermore, a mail to the package's authors
 seems appropriate telling them that changing distfiles after releases without
 changing the file names is not good practice.
+
+19.2.3. Packages hosted on github.com
+
+Helper methods exist for packages hosted on github.com. You do not need to
+specify MASTER_SITE but should instead use one of the three supported methods
+from below.
+
+19.2.3.1. Fetch based on a tagged release
+
+If your distfile URL looks similar to http://github.com/username/exampleproject
+/archive/v1.0.zip, then you are packaging a tagged release.
+
+DISTNAME=       exampleproject-1.0
+USE_GITHUB=     yes
+GH_ACCOUNT=     username
+#GH_PROJECT=    # can be omitted if same as DISTNAME
+GH_TAGNAME=     v1.0
+EXTRACT_SUFX=   .zip
+
+19.2.3.2. Fetch based on a specific commit
+
+If your distfile URL looks similar to http://github.com/example/example/archive
+/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz, then you are packaging a
+specific commit not tied to a release.
+
+DISTNAME=       example-1.0
+USE_GITHUB=     yes
+#GH_ACCOUNT=    # can be omitted if same as DISTNAME
+#GH_PROJECT=    # can be omitted if same as DISTNAME
+GH_COMMIT=      988881adc9fc3655077dc2d4d757d480b5ea0e11
+
+
+19.2.3.3. Fetch based on release
+
+If your distfile URL looks similar to http://github.com/username/exampleproject
+/releases/download/rel-1.6/offensive-1.6.zip, then you are packaging a release.
+
+PKGNAME=        ${DISTNAME:S/offensive/proper/}
+DISTNAME=       offensive-1.6
+USE_GITHUB=     yes
+GH_ACCOUNT=     username
+GH_PROJECT=     exampleproject
+GH_RELEASE=     rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
+
 
 19.3. Fixing problems in the configure phase
 
