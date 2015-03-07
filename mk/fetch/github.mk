@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.3 2015/03/07 16:17:42 tnn Exp $
+# $NetBSD: github.mk,v 1.4 2015/03/07 16:54:28 tnn Exp $
 #
 # github.com master site handling
 #
@@ -34,7 +34,7 @@
 .if defined(USE_GITHUB) && !empty(USE_GITHUB:M[yY][eE][sS])
 
 # maybe move this to sites.mk
-MASTER_SITE_GITHUB?=		http://github.com/
+MASTER_SITE_GITHUB?=		https://github.com/
 
 GH_ACCOUNT?=	${PKGBASE}
 GH_PROJECT?=	${PKGBASE}
