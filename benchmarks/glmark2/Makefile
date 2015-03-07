@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/07 14:27:15 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/07 17:15:11 tnn Exp $
 
 DISTNAME=	glmark2-2014.03
 CATEGORIES=	benchmarks
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
-
-WRKSRC=		${WRKDIR}/glmark2-${GHCOMMIT}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .if empty(BUILTIN_LIB_FOUND.dl:M[yY][eE][sS])
