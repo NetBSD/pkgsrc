@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1190 2015/03/07 06:24:16 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1191 2015/03/07 06:26:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1675,6 +1675,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/gwaei to 3.6.2 [ryoon 2015-03-07]
 	Updated fonts/kanjistrokeorders-ttf to 3.001 [ryoon 2015-03-07]
 	Updated graphics/p5-SVG to 2.63 [mef 2015-03-07]
-	Updated ham/gnuradio-core to 3.7.6 [mef 2015-03-07]
 	Updated ham/gnuradio-core to 3.7.6 [mef 2015-03-07]
 	Updated net/httping to 2.4 [mef 2015-03-07]
