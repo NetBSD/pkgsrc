@@ -1,10 +1,10 @@
-$NetBSD: patch-shell.c,v 1.1 2014/09/25 20:28:32 christos Exp $
+$NetBSD: patch-shell.c,v 1.2 2015/03/07 22:40:48 rodent Exp $
 
 Add flag to disable importing of function unless explicitly enabled
 
---- shell.c.christos	2014-01-14 08:04:32.000000000 -0500
-+++ shell.c	2014-09-25 16:11:51.000000000 -0400
-@@ -229,6 +229,7 @@
+--- shell.c.orig	2014-01-14 13:04:32.000000000 +0000
++++ shell.c
+@@ -229,6 +229,7 @@ int posixly_correct = 1;	/* Non-zero mea
  #else
  int posixly_correct = 0;	/* Non-zero means posix.2 superset. */
  #endif
@@ -12,7 +12,7 @@ Add flag to disable importing of function unless explicitly enabled
  
  /* Some long-winded argument names.  These are obviously new. */
  #define Int 1
-@@ -248,6 +249,7 @@
+@@ -248,6 +249,7 @@ static const struct {
    { "help", Int, &want_initial_help, (char **)0x0 },
    { "init-file", Charp, (int *)0x0, &bashrc_file },
    { "login", Int, &make_login_shell, (char **)0x0 },

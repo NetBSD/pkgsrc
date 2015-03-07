@@ -1,8 +1,8 @@
-$NetBSD: patch-variables.c,v 1.2 2014/09/29 12:08:12 wiz Exp $
+$NetBSD: patch-variables.c,v 1.3 2015/03/07 22:40:48 rodent Exp $
 
 Only read functions from environment if flag is set.
 
---- variables.c.orig	2014-09-29 12:04:58.000000000 +0000
+--- variables.c.orig	2015-03-07 22:36:12.000000000 +0000
 +++ variables.c
 @@ -110,6 +110,7 @@ extern time_t shell_start_time;
  extern int assigning_in_environment;

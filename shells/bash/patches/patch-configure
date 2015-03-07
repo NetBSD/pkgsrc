@@ -1,10 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2014/11/23 00:43:57 dholland Exp $
+$NetBSD: patch-configure,v 1.2 2015/03/07 22:40:48 rodent Exp $
 
 Use -Wl,-R instead of just -R to avoid breaking the build on FreeBSD.
 From Dennis Lindroos in PR 49375.
 
---- configure~	2014-02-11 15:38:00.000000000 +0000
+--- configure.orig	2014-02-11 15:38:00.000000000 +0000
 +++ configure
+@@ -8047,7 +8047,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBICONV="${LTLIBICONV}${LTLIBICONV:+ }-R$found_dir"
++      LTLIBICONV="${LTLIBICONV}${LTLIBICONV:+ }-Wl,-R$found_dir"
+     done
+   fi
+ 
 @@ -8837,7 +8837,7 @@ fi
    fi
    if test "X$ltrpathdirs" != "X"; then
