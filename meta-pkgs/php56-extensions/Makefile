@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/24 15:42:58 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/07 23:01:58 rodent Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_BASE_VERS}
 CATEGORIES=	meta-pkgs www
@@ -47,6 +47,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_BASE_VERS}<${NEXT_VERS}:../../data
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-pspell>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-pspell
+DEPENDS+=	${PHP_PKG_PREFIX}-pthreads>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-pthreads
 DEPENDS+=	${PHP_PKG_PREFIX}-shmop>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-shmop
 DEPENDS+=	${PHP_PKG_PREFIX}-snmp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-snmp
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-soap
