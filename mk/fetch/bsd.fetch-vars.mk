@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.16 2014/03/02 08:54:41 obache Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.17 2015/03/07 14:17:52 tnn Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -37,7 +37,11 @@ _SYS_VARS.fetch=	DEFAULT_DISTFILES
 
 _DISTDIR=		${DISTDIR}/${DIST_SUBDIR}
 .if defined(DISTNAME) && !empty(DISTNAME)
+.  if defined(GH_COMMIT) && !empty(GH_COMMIT)
+DEFAULT_DISTFILES=	${DISTNAME}-${GH_COMMIT}${EXTRACT_SUFX}
+.  else
 DEFAULT_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+.  endif
 .endif
 DISTFILES?=		${DEFAULT_DISTFILES}
 
