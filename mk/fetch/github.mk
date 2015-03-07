@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.1 2015/03/07 14:17:52 tnn Exp $
+# $NetBSD: github.mk,v 1.2 2015/03/07 15:31:52 tnn Exp $
 #
 # github.com master site handling
 #
@@ -28,6 +28,8 @@
 # "commit"
 # This is the default when GH_TAGNAME and GH_COMMIT are empty.
 # -${MASTER_SITE_GITHUB}${GH_ACCOUNT}/{GH_PROJECT}/releases/download/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+#
+# Keywords: github
 
 
 .if defined(USE_GITHUB) && !empty(USE_GITHUB:M[yY][eE][sS])
