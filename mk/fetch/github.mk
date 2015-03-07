@@ -1,69 +1,68 @@
-# $NetBSD: github.mk,v 1.4 2015/03/07 16:54:28 tnn Exp $
+# $NetBSD: github.mk,v 1.5 2015/03/07 21:14:32 tnn Exp $
 #
 # github.com master site handling
 #
 # To use, set in Makefile:
 #
 # DISTNAME=	exampleproject-1.2
-# USE_GITHUB=	YES
+# MASTER_SITES=	${MASTER_SITE_GITHUB:=accountname/}
 #
-# The following variables alter USE_GITHUB behavior:
+# The following variables alter github.mk behavior:
 #
-# GH_ACCOUNT	defaults to PKGBASE
-# GH_PROJECT	defaults to PKGBASE
-# GH_TAGNAME	defaults to PKGVERSION_NOREV
-#		(sometimes you want to override with v${PKGVERSION_NOREV})
-# GH_COMMIT	explicit commit hash if no tag is available
-# GH_RELEASE	default empty, may be set to ${DISTNAME} for example
-# GH_TYPE	overrides the autodetected MASTER_SITE URL scheme:
+# GITHUB_PROJECT	defaults to PKGBASE
+# GITHUB_TAG		defaults to PKGVERSION_NOREV
+#			sometimes you want to override with v${PKGVERSION_NOREV}
+#			SHA-1 commit ids are also acceptable
+# GITHUB_RELEASE	defaults to not defined, set this to ${DISTNAME}
+#			when packaging a release not based on a git tag.
+# GITHUB_TYPE		overrides the autodetected MASTER_SITE URL scheme:
 #
 # "tag"
-# This is the default when GH_TAGNAME is set or no type was specified. Exampe URL:
-# http://github.com/acct/proj/archive/{GH_TAGNAME}.tar.gz
+# This is the default when GITHUB_RELEASE is not defined. Example URL:
+# http://github.com/acct/${GITHUB_PROJECT}/archive/{GITHUB_TAG}.tar.gz
 #
 # "release"
-# This is the default when GH_RELEASE is set. Example URL:
-# http://github.com/acct/proj/releases/download/${GH_RELEASE}/${DISTNAME}.tar.gz
-#
-# "commit"
-# This is the default when GH_COMMIT is set. Example URL:
-# http://github.com/acct/proj/archive/${GH_COMMIT}.tar.gz
+# This is the default when GITHUB_RELEASE is set. Example URL:
+# http://github.com/acct/${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/${DISTNAME}.tar.gz
 #
 # Keywords: github
 
-.if defined(USE_GITHUB) && !empty(USE_GITHUB:M[yY][eE][sS])
+# xxx move this to sites.mk
+MASTER_SITE_GITHUB?=	https://github.com/
 
-# maybe move this to sites.mk
-MASTER_SITE_GITHUB?=		https://github.com/
+.if defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://github.com/[a-zA-Z0-9]*/$,match,:Mmatch)
+_USE_GITHUB=		YES
+.endif
 
-GH_ACCOUNT?=	${PKGBASE}
-GH_PROJECT?=	${PKGBASE}
-GH_TAGNAME?=	${PKGVERSION_NOREV}
+.if (defined(GITHUB_TAG) || defined(GITHUB_RELEASE)) && !defined(_USE_GITHUB)
+PKG_FAIL_REASON+=	"MASTER_SITES must match https://github.com/account/"	\
+			"when GITHUB_TAG or GITHUB_RELEASE is in use."		\
+			"For more information: make help topic=github"
+.endif
 
-.  if !empty(GH_TAGNAME:Mmaster)
-PKG_FAIL_REASON+=	"master is not a valid tag name, use an explicit commit hash (hint: set GH_COMMIT)"
+.if defined(_USE_GITHUB) && !empty(_USE_GITHUB:M[yY][eE][sS])
+
+GITHUB_PROJECT?=	${PKGBASE}
+GITHUB_TAG?=		${PKGVERSION_NOREV}
+
+.  if !empty(GITHUB_TAG:Mmaster)
+PKG_FAIL_REASON+=	"master is not a valid tag name, use an explicit commit hash"
 .  endif
 
-.  if !defined(GH_TYPE)
-.    if defined(GH_COMMIT) && !empty(GH_COMMIT:M*)
-GH_TYPE=	commit
-.  elif defined(GH_RELEASE) && !empty(GH_RELEASE:M*)
-GH_TYPE=	release
-.  else
-GH_TYPE=	tag
+.  if !defined(GITHUB_TYPE)
+.    if defined(GITHUB_RELEASE) && !empty(GITHUB_RELEASE)
+GITHUB_TYPE=	release
+.    else
+GITHUB_TYPE=	tag
 .    endif
 .  endif
 
-.if !empty(GH_TYPE:Mrelease)
-MASTER_SITES?=	${MASTER_SITE_GITHUB}${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${GH_RELEASE}/
-.endif
+.  if !empty(GITHUB_TYPE:Mrelease)
+MASTER_SITES:=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+.  endif
 
-.if !empty(GH_TYPE:Mcommit)
-MASTER_SITES?=	-${MASTER_SITE_GITHUB}${GH_ACCOUNT}/${GH_PROJECT}/archive/${GH_COMMIT}${EXTRACT_SUFX}
-.endif
-
-.if !empty(GH_TYPE:Mtag)
-MASTER_SITES?=	-${MASTER_SITE_GITHUB}${GH_ACCOUNT}/${GH_PROJECT}/archive/${GH_TAGNAME}${EXTRACT_SUFX}
-.endif
+.  if !empty(GITHUB_TYPE:Mtag)
+MASTER_SITES:=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/${GITHUB_TAG}${EXTRACT_SUFX}}
+.  endif
 
 .endif
