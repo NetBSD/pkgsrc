@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1189 2015/03/07 05:11:28 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1190 2015/03/07 06:24:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/p5-SVG to 2.63 [mef 2015-03-07]
 	Updated ham/gnuradio-core to 3.7.6 [mef 2015-03-07]
 	Updated ham/gnuradio-core to 3.7.6 [mef 2015-03-07]
+	Updated net/httping to 2.4 [mef 2015-03-07]
