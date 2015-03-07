@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.253 2014/11/02 17:59:01 khorben Exp $
+# $NetBSD: Makefile,v 1.254 2015/03/07 12:14:08 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -187,6 +187,7 @@ SUBDIR+=	sourcesans-fonts
 SUBDIR+=	symbola-ttf
 SUBDIR+=	t1lib
 SUBDIR+=	t1utils
+SUBDIR+=	takao-ex-fonts-ttf
 SUBDIR+=	takao-fonts-ttf
 SUBDIR+=	tamsyn-font
 SUBDIR+=	terminus-font
