@@ -327,6 +327,7 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
+<dt><span class="sect2"><a href="#build.fetch.github">19.2.3. Packages hosted on github.com</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
 <dd><dl>
@@ -3459,6 +3460,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
+<dt><span class="sect2"><a href="#build.fetch.github">19.2.3. Packages hosted on github.com</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
 <dd><dl>
@@ -4975,9 +4977,10 @@ PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next;
 </ul></div>
 </dd>
 </dl></div>
-<p>For a complete list of values which are replaced by
-    default, please look in <code class="filename">bsd.pkg.mk</code> (and
-    search for <code class="varname">PLIST_SUBST</code>).</p>
+<p>For a list of values which are replaced by
+    default, the output of <span class="command"><strong>make help topic=PLIST_SUBST</strong></span> as
+well as searching the <code class="filename">pkgsrc/mk</code> directory with <span class="command"><strong>grep</strong></span> for
+<code class="varname">PLIST_SUBST</code> should help.</p>
 <p>If you want to change other variables not listed above, you
     can add variables and their expansions to this variable in the
     following way, similar to <code class="varname">MESSAGE_SUBST</code> (see <a class="xref" href="#components.optional" title="11.5. Optional files">Section 11.5, &#8220;Optional files&#8221;</a>):</p>
@@ -7359,7 +7362,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm73133136"></a><dl>
+<a name="idm73132112"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7378,7 +7381,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm73132752"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm73131728"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7388,7 +7391,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm73131728"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm73130704"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7399,7 +7402,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm73130704"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm73129680"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7440,6 +7443,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
+<dt><span class="sect2"><a href="#build.fetch.github">19.2.3. Packages hosted on github.com</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
 <dd><dl>
@@ -8153,6 +8157,55 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     Furthermore, a mail to the package's authors seems appropriate
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="build.fetch.github"></a>19.2.3. Packages hosted on github.com</h3></div></div></div>
+<p>Helper methods exist for packages hosted on github.com. You do not need to specify <code class="varname">MASTER_SITE</code> but should instead use one of the three supported methods from below.</p>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="build.fetch.github.tag"></a>19.2.3.1. Fetch based on a tagged release</h4></div></div></div>
+<p>
+        If your distfile URL looks similar to <code class="literal">http://github.com/username/exampleproject/archive/v1.0.zip</code>, then you are packaging a tagged release.
+      </p>
+<pre class="programlisting">
+DISTNAME=       exampleproject-1.0
+USE_GITHUB=     yes
+GH_ACCOUNT=     username
+#GH_PROJECT=    # can be omitted if same as DISTNAME
+GH_TAGNAME=     v1.0
+EXTRACT_SUFX=   .zip
+</pre>
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="build.fetch.github.commit"></a>19.2.3.2. Fetch based on a specific commit</h4></div></div></div>
+<p>
+        If your distfile URL looks similar to <code class="literal">http://github.com/example/example/archive/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</code>, then you are packaging a specific commit not tied to a release.
+      </p>
+<pre class="programlisting">
+DISTNAME=       example-1.0
+USE_GITHUB=     yes
+#GH_ACCOUNT=    # can be omitted if same as DISTNAME
+#GH_PROJECT=    # can be omitted if same as DISTNAME
+GH_COMMIT=      988881adc9fc3655077dc2d4d757d480b5ea0e11
+      </pre>
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="build.fetch.github.release"></a>19.2.3.3. Fetch based on release</h4></div></div></div>
+<p>
+        If your distfile URL looks similar to <code class="literal">http://github.com/username/exampleproject/releases/download/rel-1.6/offensive-1.6.zip</code>, then you are packaging a release.
+      </p>
+<pre class="programlisting">
+PKGNAME=	${DISTNAME:S/offensive/proper/}
+DISTNAME=       offensive-1.6
+USE_GITHUB=     yes
+GH_ACCOUNT=     username
+GH_PROJECT=     exampleproject
+GH_RELEASE=     rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
+      </pre>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -9497,7 +9550,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm74678480"></a><dl>
+<a name="idm74671184"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9542,7 +9595,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm74678096"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm74670800"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9558,7 +9611,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm74674000"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm74666704"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9576,7 +9629,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm74669648"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm74662352"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9594,7 +9647,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm74665424"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm74658128"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9607,7 +9660,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm74663248"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm74655952"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9623,7 +9676,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm74660176"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm74652880"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9647,7 +9700,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm74652112"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm74644816"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9672,7 +9725,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm74648272"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm74640976"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9720,7 +9773,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm74641744"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm74634448"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
