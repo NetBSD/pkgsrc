@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/28 23:09:27 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/07 14:27:15 tnn Exp $
 
-GHCOMMIT=	499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc
-DISTNAME=	${GHCOMMIT}
-PKGNAME=	glmark2-2014.03
+DISTNAME=	glmark2-2014.03
 CATEGORIES=	benchmarks
-MASTER_SITES=	https://github.com/glmark2/glmark2/archive/
+USE_GITHUB=	yes
+GH_COMMIT=	499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2

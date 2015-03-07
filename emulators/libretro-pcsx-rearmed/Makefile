@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2015/02/10 17:51:37 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/07 14:29:35 tnn Exp $
 
-DISTNAME=	r22
-DIST_SUBDIR=	pcsx_rearmed
-PKGNAME=	libretro-pcsx-rearmed-0.22
+DISTNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
-MASTER_SITES=	https://github.com/notaz/pcsx_rearmed/archive/
+USE_GITHUB=	yes
+GH_ACCOUNT=	notaz
+GH_PROJECT=	pcsx_rearmed
+GH_TAGNAME=	r22
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://notaz.gp2x.de/pcsx_rearmed.php
 COMMENT=	Libretro core based on the PCSX ReARMed emulator
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/pcsx_rearmed-${DISTNAME}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/03/07 12:19:10 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/07 14:33:08 tnn Exp $
 
 DISTNAME=	inadyn-1.96.2
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	-http://github.com/troglobit/inadyn/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+USE_GITHUB=	yes
+GH_ACCOUNT=	troglobit
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
