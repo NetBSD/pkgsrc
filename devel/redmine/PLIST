@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/03 18:55:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/08 23:26:40 joerg Exp $
 share/examples/redmine/additional_environment.rb.example
 share/examples/redmine/configuration.yml.example
 share/examples/redmine/database.yml.example
@@ -3141,10 +3141,10 @@ ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/fork_exec_process.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/io.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/lib.rb
-${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/platform/${MACHINE_ARCH}-linux.rb
-${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/platform/${MACHINE_ARCH}-macosx.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/platform/i386-linux.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/platform/i386-solaris.rb
+${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/platform/x86_64-linux.rb
+${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/platform/x86_64-macosx.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/posix_spawn_process.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/unix/process.rb
 ${GEM_HOME}/gems/childprocess-0.5.5/lib/childprocess/version.rb
@@ -3574,14 +3574,6 @@ ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/library.rb
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/managedstruct.rb
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/memorypointer.rb
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform.rb
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-cygwin/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-darwin/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-freebsd/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-linux/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-netbsd/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-openbsd/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-solaris/types.conf
-${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/${MACHINE_ARCH}-windows/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/arm-linux/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/i386-cygwin/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/i386-darwin/types.conf
@@ -3603,6 +3595,14 @@ ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/s390x-linux/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/sparc-linux/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/sparc-solaris/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/sparcv9-solaris/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-cygwin/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-darwin/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-freebsd/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-linux/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-netbsd/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-openbsd/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-solaris/types.conf
+${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/platform/x86_64-windows/types.conf
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/pointer.rb
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/struct.rb
 ${GEM_HOME}/gems/ffi-1.9.6/lib/ffi/struct_layout_builder.rb
