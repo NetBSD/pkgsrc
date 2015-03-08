@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14200 2015/03/07 00:44:19 ryoon Exp $
+$NetBSD: TODO,v 1.14201 2015/03/08 12:38:20 mef Exp $
 
 Suggested new packages
 ======================
@@ -664,7 +664,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o html2wml-0.4.11
 	o htmldoc-1.8.28
 	o htop-1.0.3
-	o httptunnel-3.3
 	o hugin-2012.0.0
 	o hwloc-1.10.0
 	o icc11-13.0
