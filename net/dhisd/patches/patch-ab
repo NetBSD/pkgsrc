@@ -1,24 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2004/01/11 14:49:19 cjep Exp $
+$NetBSD: patch-ab,v 1.3 2015/03/08 01:01:52 mef Exp $
 
---- dhisd.h.orig	2001-04-01 00:24:33.000000000 +0100
-+++ dhisd.h
-@@ -47,7 +47,6 @@
- #include<sys/signal.h>
- #include<sys/wait.h>
- #include<syslog.h>
--#include<varargs.h>
+Adjust PATH to pkgsrc, see SUBST in Makefile
+
+--- dhisd.h.orig	2008-05-22 21:47:51.000000000 +0900
++++ dhisd.h	2015-03-05 23:55:32.000000000 +0900
+@@ -49,8 +49,8 @@
+ // #include<varargs.h>
  #include<gmp.h>
  
- #define	BOURNE_SHELL		"/bin/sh"
-@@ -64,9 +63,9 @@
- #define	CHECK_FAILS	3		/* maximum check fails */
+-#define	DHISD_CONF_FILE		"/usr/local/etc/dhisd.conf"
+-#define	DHISD_DB_FILE		"/usr/local/etc/dhis.db"
++#define	DHISD_CONF_FILE		"${PREFIX}/etc/dhisd.conf"
++#define	DHISD_DB_FILE		"@VARBASE@/db/dhis.db"
  
- #define	DHISD_PORT	58800
--#define	DHISD_PID	"/etc/dhis/pid/dhisd.pid"
-+#define	DHISD_PID	"/var/run/dhisd.pid"
- #define	DHISD_DB	"/etc/dhis/db/dhis.db"
--#define	DHISD_LOG	"/etc/dhis/log/dhisd.log"
-+#define	DHISD_LOG	"/var/log/dhisd.log"
- #define	DHISD_SERVICES	"/etc/dhis/db/services.db"
- 
- #define	MAX_HOSTNAME	64
+ #define	DHISD_PID		"/var/run/dhis/dhisd.pid"
+ #define	DHISD_LOG		"/var/log/dhis/dhisd.log"

@@ -1,43 +1,51 @@
-# $NetBSD: Makefile,v 1.16 2014/09/23 17:57:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/08 01:01:52 mef Exp $
 #
 
-DISTNAME=	dhisd-5.1
-PKGREVISION=	1
+DISTNAME=	dhisd-5.5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	DynDNS server
+LICENSE=	2-clause-bsd
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/examples/dhisd share/doc/dhisd
-PKG_DESTDIR_SUPPORT=	destdir
+
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	Makefile
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Convert /usr/local to ${PREFIX}
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|;'
+SUBST_SED.prefix+=	-e '/LFLAGS/s|${PREFIX}|${PREFIX}/lib -Wl,-rpath=${PREFIX}|;'
+
+SUBST_CLASSES+=		varbase
+SUBST_FILES.varbase=	dhisd.h README
+SUBST_STAGE.varbase=	pre-configure
+SUBST_MESSAGE.varbase=	Adapt VARBASE and PREFIX
+SUBST_VARS.varbase+=	VARBASE PREFIX
+
+SPECIAL_PERMS+=         bin/dhisd-genkeys ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700 \
+                        bin/dhisd	  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 do-install:
 		${INSTALL_DATA} \
-			${WRKSRC}/*db.sample \
+			${WRKSRC}/*.sample \
 			${DESTDIR}${PREFIX}/share/examples/dhisd
 		${INSTALL_DATA} \
 			${WRKSRC}/CONTRIBUTORS  \
 			${WRKSRC}/COPYRIGHT  \
 			${WRKSRC}/INSTALL  \
-			${WRKSRC}/MODULES  \
 			${WRKSRC}/README  \
 			${DESTDIR}${PREFIX}/share/doc/dhisd
 		${INSTALL_PROGRAM} \
 			${WRKSRC}/dhisd \
 			${DESTDIR}${PREFIX}/bin
 		${INSTALL_PROGRAM} \
-			${WRKSRC}/genkeys \
+			${WRKSRC}/dhisgenkeys \
 			${DESTDIR}${PREFIX}/bin/dhisd-genkeys
-		${CHOWN} ${ROOT_USER} \
-			${DESTDIR}${PREFIX}/bin/dhisd-genkeys \
-			${DESTDIR}${PREFIX}/bin/dhisd
-		${CHMOD} 700 \
-			${DESTDIR}${PREFIX}/bin/dhisd-genkeys \
-			${DESTDIR}${PREFIX}/bin/dhisd
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
