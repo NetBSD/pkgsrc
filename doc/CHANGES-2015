@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1219 2015/03/08 15:31:11 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1220 2015/03/08 15:33:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/ruby-gsl to 1.16.0.4 [taca 2015-03-08]
 	Updated textproc/ruby-ferret to 0.11.8.6 [taca 2015-03-08]
 	Updated textproc/ruby-redcarpet to 3.2.2 [taca 2015-03-08]
+	Updated www/ruby-puma to 2.11.1 [taca 2015-03-08]
