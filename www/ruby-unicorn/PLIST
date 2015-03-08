@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/26 13:45:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/03/08 15:35:47 taca Exp $
 bin/unicorn
 bin/unicorn_rails
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/unicorn_http.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.CHANGELOG.old
 ${GEM_LIBDIR}/.document
@@ -36,6 +37,8 @@ ${GEM_LIBDIR}/SIGNALS
 ${GEM_LIBDIR}/Sandbox
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/TUNING
+${GEM_LIBDIR}/archive/.gitignore
+${GEM_LIBDIR}/archive/slrnpull.conf
 ${GEM_LIBDIR}/bin/unicorn
 ${GEM_LIBDIR}/bin/unicorn_rails
 ${GEM_LIBDIR}/examples/big_app_gc.rb
@@ -106,7 +109,6 @@ ${GEM_LIBDIR}/t/oob_gc_path.ru
 ${GEM_LIBDIR}/t/pid.ru
 ${GEM_LIBDIR}/t/preread_input.ru
 ${GEM_LIBDIR}/t/rack-input-tests.ru
-${GEM_LIBDIR}/t/sslgen.sh
 ${GEM_LIBDIR}/t/t0000-http-basic.sh
 ${GEM_LIBDIR}/t/t0001-reload-bad-config.sh
 ${GEM_LIBDIR}/t/t0002-config-conflict.sh
@@ -141,7 +143,6 @@ ${GEM_LIBDIR}/t/t0116-client_body_buffer_size.sh
 ${GEM_LIBDIR}/t/t0116.ru
 ${GEM_LIBDIR}/t/t0200-rack-hijack.sh
 ${GEM_LIBDIR}/t/t0300-no-default-middleware.sh
-${GEM_LIBDIR}/t/t0600-https-server-basic.sh
 ${GEM_LIBDIR}/t/t9000-preread-input.sh
 ${GEM_LIBDIR}/t/t9001-oob_gc.sh
 ${GEM_LIBDIR}/t/t9002-oob_gc-path.sh

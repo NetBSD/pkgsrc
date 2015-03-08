@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/03/13 11:08:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/08 15:35:47 taca Exp $
 
-DISTNAME=	unicorn-4.6.3
+DISTNAME=	unicorn-4.8.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc@NetBSD.org
