@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/01 14:33:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/kgio_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
