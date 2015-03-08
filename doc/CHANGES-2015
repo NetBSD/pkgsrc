@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1227 2015/03/08 17:04:28 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1228 2015/03/08 17:57:56 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1732,3 +1732,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/ruby22 version 2.2.1 [taca 2015-03-08]
 	Updated sysutils/ruby-facter to 2.4.1nb1 [taca 2015-03-08]
 	Updated www/ap-php to 5.4.38nb2 [taca 2015-03-08]
+	Updated pkgtools/pkgin to 0.8.0 [imil 2015-03-08]
