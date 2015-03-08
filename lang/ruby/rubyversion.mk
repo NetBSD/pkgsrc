@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.133 2015/03/08 14:21:45 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.134 2015/03/08 14:35:33 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -322,6 +322,8 @@ RUBY_RDOC_VERSION=	4.1.0
 RUBY_RAKE_VERSION=	10.1.0
 RUBY_JSON_VERSION=	1.8.1
 
+RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
 .elif ${RUBY_VER} == "22"
 RUBY_VERSION=		${RUBY22_VERSION}
 RUBY_VERSION_FULL=	${RUBY_VERSION}
@@ -331,6 +333,8 @@ RUBY_GEMS_VERSION=	2.4.5
 RUBY_RDOC_VERSION=	4.2.0
 RUBY_RAKE_VERSION=	10.4.2
 RUBY_JSON_VERSION=	1.8.1
+
+RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
 .else
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
@@ -377,8 +381,12 @@ RUBY_PKGPREFIX?=	${RUBY_NAME}
 
 .if ${RUBY_VER} == "18"
 RUBY_VER_DIR=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
-.else
+.else 
+. if ${RUBY_VER} == "193" || ${RUBY_VER} == "200"
 RUBY_VER_DIR=		${RUBY_VERSION}
+. else
+RUBY_VER_DIR=		${RUBY_API_VERSION}
+. endif
 .endif
 
 .if empty(RUBY_NOVERSION:M[nN][oO])
