@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1204 2015/03/08 03:41:55 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1205 2015/03/08 08:24:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1695,3 +1695,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dtcp to 20130602 [mef 2015-03-08]
 	Updated net/dtcpclient to 20090812 [mef 2015-03-08]
 	Updated net/dnstracer to 1.10 [mef 2015-03-08]
+	Updated multimedia/ffmpeg2 to 2.6 [adam 2015-03-08]
+	Updated multimedia/ffplay2 to 2.6 [adam 2015-03-08]
+	Updated devel/git to 2.3.2 [adam 2015-03-08]
+	Updated devel/git-base to 2.3.2 [adam 2015-03-08]
+	Updated devel/git-docs to 2.3.2 [adam 2015-03-08]
+	Updated devel/git-gitk to 2.3.2 [adam 2015-03-08]
+	Updated devel/git-svn to 2.3.2 [adam 2015-03-08]
+	Updated www/gitweb to 2.3.2 [adam 2015-03-08]
+	Updated www/py-django-cms to 3.0.12 [adam 2015-03-08]
