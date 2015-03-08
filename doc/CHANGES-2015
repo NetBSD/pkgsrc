@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1225 2015/03/08 16:33:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1226 2015/03/08 16:58:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1163,7 +1163,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Net-LDAP-Server-Test to 0.19 [mef 2015-02-13]
 	Updated devel/p5-Net-LDAP-Class to 0.26 [mef 2015-02-13]
 	Updated devel/p5-Object-Realize-Later to 0.19 [mef 2015-02-13]
-	Updated sysutils/ruby-facter to 2.4.1 [taca 2015-02-13]
 	Updated devel/p5-IO-AIO to 4.32 [mef 2015-02-13]
 	Updated devel/p5-Coro to 6.42 [mef 2015-02-13]
 	Updated devel/p5-Async-Interrupt to 1.21 [mef 2015-02-13]
@@ -1731,3 +1730,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ruby21 to 2.1.5nb1 [taca 2015-03-08]
 	Added lang/ruby22-base version 2.2.1 [taca 2015-03-08]
 	Added lang/ruby22 version 2.2.1 [taca 2015-03-08]
+	Updated sysutils/ruby-facter to 2.4.1nb1 [taca 2015-03-08]
