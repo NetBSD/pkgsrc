@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2013/09/10 14:28:14 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/03/08 02:45:35 mef Exp $
 
-SHA1 (dtcpclient-20060526.tar.gz) = bcafcfbc90a64dbb8f9f3104ebcacd43a3222aa7
-RMD160 (dtcpclient-20060526.tar.gz) = 60c4d85cb71af8514cf3ab50dcc4a5bb47994e4b
-Size (dtcpclient-20060526.tar.gz) = 13571 bytes
+SHA1 (dtcpclient-20090812.tar.gz) = beca8811f4b699fd675db634b7743fd4ee85babf
+RMD160 (dtcpclient-20090812.tar.gz) = 9697e311e8c16e1ebc04ae26955ef4501879cc5e
+Size (dtcpclient-20090812.tar.gz) = 13711 bytes
 SHA1 (patch-aa) = a93a99918f7724e0a101fccf84ad7e6811c8e30c
-SHA1 (patch-ab) = 235e037b7fee523e3039ed94497136885eb43277
 SHA1 (patch-ac) = a0445b2b86accb3c3a1212e08eb217cc05e9caca
