@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2014/03/13 17:06:42 taca Exp $
+# $NetBSD: Makefile,v 1.56 2015/03/08 16:32:32 taca Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION_FULL}
@@ -14,6 +14,8 @@ CONFLICTS=	pkg_alternatives-[0-9]*
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+RUBY_VERSION_SUPPORTED= 22 21 200 193 18
 
 .include "../../lang/ruby/rubyversion.mk"
 
