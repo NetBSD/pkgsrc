@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2014/11/07 19:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.44 2015/03/08 16:04:51 taca Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=thrift/${THRIFT_VERSION}/}
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://incubator.apache.org/thrift/
