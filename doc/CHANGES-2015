@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1223 2015/03/08 16:12:42 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1224 2015/03/08 16:23:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1728,3 +1728,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-unicorn to 4.8.3 [taca 2015-03-08]
 	Updated www/thin to 1.6.3nb1 [taca 2015-03-08]
 	Updated databases/ruby-sequel to 4.20.0 [taca 2015-03-08]
+	Updated lang/ruby21 to 2.1.5nb1 [taca 2015-03-08]
