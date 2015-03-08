@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/17 14:33:31 taca Exp $
-bin/ferret-browser
+@comment $NetBSD: PLIST,v 1.6 2015/03/08 15:24:55 taca Exp $
+bin/ferret-browser${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ferret_ext.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README
