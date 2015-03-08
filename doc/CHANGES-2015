@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1200 2015/03/08 01:17:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1201 2015/03/08 01:43:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1689,3 +1689,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p5-Archive-Zip to 1.45 [mef 2015-03-08]
 	Updated archivers/p5-Compress-Bzip2 to 2.22 [mef 2015-03-08]
 	Updated archivers/pbzip2 to 1.1.12 [mef 2015-03-08]
+	Updated net/p5-Net-Write to 1.10 [mef 2015-03-08]
+	Updated net/p5-Test-TCP to 2.07 [mef 2015-03-08]
+	Updated net/p5-WebService-Google-Reader to 0.22 [mef 2015-03-08]
