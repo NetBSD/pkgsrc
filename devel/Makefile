@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2062 2015/03/07 22:57:39 rodent Exp $
+# $NetBSD: Makefile,v 1.2063 2015/03/08 16:22:59 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -923,6 +923,7 @@ SUBDIR+=	p5-File-Policy
 SUBDIR+=	p5-File-Save-Home
 SUBDIR+=	p5-File-ShareDir
 SUBDIR+=	p5-File-ShareDir-Install
+SUBDIR+=	p5-File-ShareDir-ProjectDistDir
 SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Slurp-Tiny
 SUBDIR+=	p5-File-Temp
