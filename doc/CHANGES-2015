@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1213 2015/03/08 14:49:29 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1214 2015/03/08 14:54:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1712,3 +1712,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001028 [wen 2015-03-08]
 	Updated misc/rubygems to 2.4.6 [taca 2015-03-08]
 	Updated databases/p5-DBIx-Class-Helpers to 2.025001 [wen 2015-03-08]
+	Updated lang/ruby193-base to 1.9.3p551nb1 [taca 2015-03-08]
