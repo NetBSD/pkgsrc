@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/02/01 19:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/03/08 01:39:42 tnn Exp $
 
 DISTNAME=	help2man-1.46.5
 CATEGORIES=	converters
@@ -46,4 +46,5 @@ post-patch:
 	${TOUCH} -r ${WRKSRC}/help2man.PL.orig ${WRKSRC}/help2man.PL
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
