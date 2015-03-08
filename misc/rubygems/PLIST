@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/01/25 16:13:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2015/03/08 14:44:16 taca Exp $
 bin/gem${RUBY_SUFFIX}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rubygems.rb
@@ -93,6 +93,8 @@ ${RUBY_VENDORLIB}/rubygems/request/https_pool.rb
 ${RUBY_VENDORLIB}/rubygems/request_set.rb
 ${RUBY_VENDORLIB}/rubygems/request_set/gem_dependency_api.rb
 ${RUBY_VENDORLIB}/rubygems/request_set/lockfile.rb
+${RUBY_VENDORLIB}/rubygems/request_set/lockfile/parser.rb
+${RUBY_VENDORLIB}/rubygems/request_set/lockfile/tokenizer.rb
 ${RUBY_VENDORLIB}/rubygems/requirement.rb
 ${RUBY_VENDORLIB}/rubygems/resolver.rb
 ${RUBY_VENDORLIB}/rubygems/resolver/activation_request.rb
