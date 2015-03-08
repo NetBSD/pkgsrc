@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/03/13 17:06:43 taca Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/08 03:02:44 mef Exp $
 #
 
 DISTNAME=	dnsdoctor-1.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.dnsdoctor.org/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dnsdoctor.org/
+HOMEPAGE=	http://freecode.com/projects/dnsdoctor
 COMMENT=	DNS zones misconfigurations or inconsistencies diagnostic tool
 LICENSE=	gnu-gpl-v2
 
