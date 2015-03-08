@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/17 14:09:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/08 15:17:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/thrift_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/InstalledFiles

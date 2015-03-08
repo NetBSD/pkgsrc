@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2015/02/05 15:11:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/03/08 15:17:21 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nokogiri/nokogiri.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.cross_rubies

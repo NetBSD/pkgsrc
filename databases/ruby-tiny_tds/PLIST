@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/21 03:06:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/tiny_tds/tiny_tds.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/compile/rake-compiler-dev-box.patch

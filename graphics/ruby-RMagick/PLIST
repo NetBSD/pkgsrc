@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2015/02/03 13:58:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/03/08 15:17:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml

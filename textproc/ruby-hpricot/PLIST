@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/25 16:18:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/03/08 15:17:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/fast_xs.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/hpricot_scan.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2015/03/01 15:41:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/03/08 15:17:22 taca Exp $
 bin/thin${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/thin_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README.md
