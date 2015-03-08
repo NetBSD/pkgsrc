@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1203 2015/03/08 03:40:37 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1204 2015/03/08 03:41:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1694,5 +1694,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-WebService-Google-Reader to 0.22 [mef 2015-03-08]
 	Updated net/dtcp to 20130602 [mef 2015-03-08]
 	Updated net/dtcpclient to 20090812 [mef 2015-03-08]
-	Updated net/dnstracer to 1.10 [mef 2015-03-08]
 	Updated net/dnstracer to 1.10 [mef 2015-03-08]
