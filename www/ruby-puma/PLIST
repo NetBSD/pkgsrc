@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/05 15:51:35 taca Exp $
-bin/puma
-bin/pumactl
+@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:33:01 taca Exp $
+bin/puma${RUBY_SUFFIX}
+bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/puma/puma_http11.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/DEPLOYMENT.md

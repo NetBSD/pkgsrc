@@ -1,0 +1,2 @@
+bin/puma @PREFIX@/bin/puma@RUBY_SUFFIX@
+bin/pumactl @PREFIX@/bin/pumactl@RUBY_SUFFIX@
