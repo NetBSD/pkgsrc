@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/02/05 15:51:35 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/08 15:33:01 taca Exp $
 
-DISTNAME=	puma-2.11.0
+DISTNAME=	puma-2.11.1
 CATEGORIES=	www
 
 MAINTAINER=	taca@NetBSD.org
@@ -10,8 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.2<2:../../www/ruby-rack
 
-CONFLICTS+=	ruby[1-9][0-9][0-9]-puma-[0-9]*
-
+RUBYGEM_OPTIONS+=	--format-executable
 USE_GCC_RUNTIME=	yes
 
 .include "../../lang/ruby/gem.mk"
