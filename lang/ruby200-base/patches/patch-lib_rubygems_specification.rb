@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_specification.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
+$NetBSD: patch-lib_rubygems_specification.rb,v 1.3 2015/03/08 14:59:12 taca Exp $
 
 * Changes for pkgsrc environment:
 
@@ -49,23 +49,13 @@ Rubygem 1.8.25.
      end
  
      unless nil_attributes.empty? then
-@@ -2472,10 +2495,15 @@ class Gem::Specification
-       raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
-     end
+@@ -2474,8 +2474,7 @@ class Gem::Specification
  
--    if homepage and not homepage.empty? and
--       homepage !~ /\A[a-z][a-z\d+.-]*:/i then
+     if homepage and not homepage.empty? and
+        homepage !~ /\A[a-z][a-z\d+.-]*:/i then
 -      raise Gem::InvalidSpecificationException,
 -            "\"#{homepage}\" is not a URI"
-+    if homepage and not homepage.empty?
-+      if @homepage =~ /\A[a-z][a-z\d+.-]*/i and
-+          @homepage !~ /\A[a-z][a-z\d+.-]*:/i
-+        @homepage = "http://" + @homepage
-+      end
-+      if homepage !~ /\A[a-z][a-z\d+.-]*:/i then
-+        raise Gem::InvalidSpecificationException,
-+              "\"#{homepage}\" is not a URI"
-+      end
++      wann "\"#{homepage}\" is not a URI"
      end
  
      # Warnings

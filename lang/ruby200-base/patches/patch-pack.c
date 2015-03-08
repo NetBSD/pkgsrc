@@ -1,10 +1,10 @@
-$NetBSD: patch-pack.c,v 1.2 2014/10/02 08:59:26 taca Exp $
+$NetBSD: patch-pack.c,v 1.3 2015/03/08 14:59:12 taca Exp $
 
 Fix for CVE-2014-4975 from revision #46806 in ruby_2_1 branch.
 
---- pack.c.orig	2012-10-19 13:13:32.000000000 +0000
+--- pack.c.orig	2015-01-30 07:42:52.000000000 +0000
 +++ pack.c
-@@ -1063,7 +1063,8 @@ static const char b64_table[] =
+@@ -1088,7 +1088,8 @@ static const char b64_table[] =
  static void
  encodes(VALUE str, const char *s, long len, int type, int tail_lf)
  {
@@ -14,7 +14,7 @@ Fix for CVE-2014-4975 from revision #46806 in ruby_2_1 branch.
      long i = 0;
      const char *trans = type == 'u' ? uu_table : b64_table;
      char padding;
-@@ -1076,7 +1077,7 @@ encodes(VALUE str, const char *s, long l
+@@ -1101,7 +1102,7 @@ encodes(VALUE str, const char *s, long l
  	padding = '=';
      }
      while (len >= 3) {
@@ -23,7 +23,7 @@ Fix for CVE-2014-4975 from revision #46806 in ruby_2_1 branch.
              buff[i++] = trans[077 & (*s >> 2)];
              buff[i++] = trans[077 & (((*s << 4) & 060) | ((s[1] >> 4) & 017))];
              buff[i++] = trans[077 & (((s[1] << 2) & 074) | ((s[2] >> 6) & 03))];
-@@ -1084,7 +1085,7 @@ encodes(VALUE str, const char *s, long l
+@@ -1109,7 +1110,7 @@ encodes(VALUE str, const char *s, long l
              s += 3;
              len -= 3;
          }
@@ -32,7 +32,7 @@ Fix for CVE-2014-4975 from revision #46806 in ruby_2_1 branch.
              rb_str_buf_cat(str, buff, i);
              i = 0;
          }
-@@ -1104,6 +1105,7 @@ encodes(VALUE str, const char *s, long l
+@@ -1129,6 +1130,7 @@ encodes(VALUE str, const char *s, long l
      }
      if (tail_lf) buff[i++] = '\n';
      rb_str_buf_cat(str, buff, i);

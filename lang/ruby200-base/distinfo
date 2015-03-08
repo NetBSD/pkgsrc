@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.20 2015/01/07 10:37:10 taca Exp $
+$NetBSD: distinfo,v 1.21 2015/03/08 14:59:12 taca Exp $
 
-SHA1 (ruby-2.0.0-p598.tar.bz2) = 992416657832c775ff41452af81c962981ddbde2
-RMD160 (ruby-2.0.0-p598.tar.bz2) = 76f2f261236f820adbe7dcedda9b9714eaf8e178
-Size (ruby-2.0.0-p598.tar.bz2) = 10758882 bytes
-SHA1 (patch-configure) = ed31eee4192457aeba3ded9d42b1ed755a6d0acf
+SHA1 (ruby-2.0.0-p643.tar.bz2) = d1d7d324a1f2530d67d54464fe09646583e4dda1
+RMD160 (ruby-2.0.0-p643.tar.bz2) = 5ae5f1548547fe7bcce12d996419e2ac293bea9f
+Size (ruby-2.0.0-p643.tar.bz2) = 10772113 bytes
+SHA1 (patch-configure) = 47db420cdef6b4b001a973c972a01613ea065587
 SHA1 (patch-defs_default__gems) = 28a47952e27c22055bac6ad151d092572b96b1ec
 SHA1 (patch-ext_dbm_extconf.rb) = 7322637de769b7d01650e1ed566e891801ce3e92
 SHA1 (patch-ext_tk_extconf.rb) = b5141d995afc455e4d64b578200f01d9dc75c310
@@ -19,7 +19,6 @@ SHA1 (patch-ext_tk_tcltklib.c) = fda2652b0a3acc0047004cc43077a393f93c5554
 SHA1 (patch-lib_rdoc_ri_driver.rb) = 53ce4055b4c008c8ee13d38a81334d4846debdbc
 SHA1 (patch-lib_rubygems.rb) = 0f0b8f14745998f5ed0ade9b0b5cdefc8f30d988
 SHA1 (patch-lib_rubygems_commands_setup__command.rb) = 46991d63256d0d3cc2f707fb286d1691331ad40e
-SHA1 (patch-lib_rubygems_commands_uninstall__command.rb) = f39435fbdbbfcc8c756e54fcbec89a4ff796ee2d
 SHA1 (patch-lib_rubygems_commands_unpack__command.rb) = 58af5f0d1a185183ff9a4b4828ef1ca9fc074e05
 SHA1 (patch-lib_rubygems_config__file.rb) = 0d863d3f886c1ed83585d96064725e7db7bec1bc
 SHA1 (patch-lib_rubygems_defaults.rb) = 1af4161a83c0bf5b894c4ab3f4a77d4ee4183985
@@ -27,12 +26,11 @@ SHA1 (patch-lib_rubygems_dependency__installer.rb) = f4e40727d231b336c1d4c2303ac
 SHA1 (patch-lib_rubygems_install__update__options.rb) = 22cfafe090db72211253b8528937e5be0e677ebf
 SHA1 (patch-lib_rubygems_installer.rb) = 7ce68eaa5893c83780f7b4e1af44a88ae63a39cf
 SHA1 (patch-lib_rubygems_platform.rb) = 135f2e9d6c0c529da9ffcea4b96507675cdf1f16
-SHA1 (patch-lib_rubygems_specification.rb) = 3e9e95178127da862add4141665b80d965874f21
-SHA1 (patch-lib_rubygems_uninstaller.rb) = cb4db78829af11d6294b15d1e81066227e3ea3bb
+SHA1 (patch-lib_rubygems_specification.rb) = 2a283cb7854580616df2b35357281c0a881cedf1
 SHA1 (patch-man_erb.1) = 1fe6ce4f4fe6418bfabb5e132a63596562030116
 SHA1 (patch-man_irb.1) = 2bf807b4c1b1c68d1f518caa054cfd900e0fedb7
 SHA1 (patch-man_ri.1) = af855135020f18c361cc55af676adc75e26bf4d3
-SHA1 (patch-man_ruby.1) = 5bc1e2e7c4c640659e33d0131d0982ce4e0d9fe0
-SHA1 (patch-pack.c) = d127a8887c685fa057c768e217a4cd8271998ad4
+SHA1 (patch-man_ruby.1) = 499c2d5525498845b2ede651b7830e15c784b765
+SHA1 (patch-pack.c) = e2d005512c18b2fae32c1620f223b6c365023424
 SHA1 (patch-test_rubygems_test__gem.rb) = 32ba1a7a2e9f6174297de969fc0b7cdcd083c764
 SHA1 (patch-tool_rbinstall.rb) = 287064ed2bc90e92cdc1b38fc4031d65819d3843

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/27 16:20:16 taca Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/08 14:59:12 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -129,13 +129,20 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 #
 CONFIGURE_ENV+= MKDIR_P=${MKDIR:Q}
 
-DOCS=		COPYING COPYING.ja ChangeLog NEWS README \
-		README.EXT README.EXT.ja README.ja \
-		doc/ChangeLog-1.8.0 doc/ChangeLog-1.9.3 doc/ChangeLog-YARV \
-		doc/NEWS-1.8.7 doc/NEWS-1.9.1 doc/NEWS-1.9.2 doc/NEWS-1.9.3 \
-		doc/etc.rd.ja doc/forwardable.rd.ja doc/globals.rdoc \
-		doc/irb/irb-tools.rd.ja doc/irb/irb.rd.ja \
-		doc/pty/README.expect.ja doc/pty/README.ja  doc/shell.rd.ja
+DOCS=	\
+	COPYING COPYING.ja ChangeLog LEGAL NEWS README README.EXT \
+	README.EXT.ja README.ja doc/ChangeLog-1.8.0 doc/ChangeLog-1.9.3 \
+	doc/ChangeLog-YARV doc/NEWS-1.8.7 doc/NEWS-1.9.1 doc/NEWS-1.9.2 \
+	doc/NEWS-1.9.3 doc/etc.rd.ja doc/forwardable.rd.ja doc/globals.rdoc \
+	doc/images/boottime-classes.png doc/irb/irb-tools.rd.ja \
+	doc/irb/irb.rd.ja doc/pty/README.expect.ja doc/pty/README.ja \
+	doc/re.rdoc doc/security.rdoc doc/shell.rd.ja \
+	doc/standard_library.rdoc doc/syntax/assignment.rdoc \
+	doc/syntax/calling_methods.rdoc doc/syntax/control_expressions.rdoc \
+	doc/syntax/exceptions.rdoc doc/syntax/literals.rdoc \
+	doc/syntax/methods.rdoc doc/syntax/miscellaneous.rdoc \
+	doc/syntax/modules_and_classes.rdoc doc/syntax/precedence.rdoc \
+	doc/syntax/refinements.rdoc doc/syntax.rdoc
 EXT_DOCS=	syslog/syslog.txt
 
 BIGDECIMAL_EXAMPLES=	linear.rb nlsolve.rb pi.rb
@@ -146,9 +153,9 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 REPLACE_RUBY=		bin/erb bin/gem bin/irb bin/rake bin/rdoc \
 			bin/ri bin/testrb
 REPLACE_RUBY_DIRS=	ext lib sample
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${RUBY_DOC}/images \
 			${RUBY_DOC}/irb ${RUBY_DOC}/pty ${RUBY_DOC}/ripper \
-			${RUBY_DOC}/stringio \
+			${RUBY_DOC}/stringio ${RUBY_DOC}/syntax \
 			${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
 # ${RUBY_ARCHINC} ${RUBY_ARCHLIB}
 EMPTY_DIRS=		generator/template markup/simple_markup
