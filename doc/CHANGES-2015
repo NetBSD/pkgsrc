@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1198 2015/03/07 22:56:33 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1199 2015/03/08 01:02:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1684,3 +1684,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/takao-ex-fonts-ttf version 002.01.01 [ryoon 2015-03-07]
 	Updated x11/xman to 1.1.4 [wiz 2015-03-07]
 	Added devel/php-pthreads version 2.0.10 [rodent 2015-03-07]
+	Updated net/dhisd to 5.5 [mef 2015-03-08]
