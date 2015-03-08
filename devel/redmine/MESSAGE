@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/01/03 18:55:43 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2015/03/08 21:39:22 rodent Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
 
@@ -72,7 +72,7 @@ To use Redmine with nginx, you will need to perform the following steps.
 
 7. Start Redmine with Unicorn.
 
-	# ${RCD_SCRIPTS_DIR}/redmine_unicode start
+	# ${RCD_SCRIPTS_DIR}/redmine_unicorn start
 
 8. Start nginx.
 
