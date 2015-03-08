@@ -18,3 +18,5 @@ again update the databases to an offline state.
 Alternatively the server may receive an OFFLINE_REQ packet from
 the client, in which case the DNS record is updated at once and
 the online state dropped.
+
+see ${PREFIX}/share/doc/dhisd/README for info.
