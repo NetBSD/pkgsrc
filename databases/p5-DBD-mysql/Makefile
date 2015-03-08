@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2014/10/09 13:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2015/03/08 09:57:03 wen Exp $
 
-DISTNAME=	DBD-mysql-4.027
+DISTNAME=	DBD-mysql-4.031
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
@@ -11,9 +10,11 @@ HOMEPAGE=	http://search.cpan.org/dist/DBD-mysql/
 COMMENT=	Perl DBI/DBD driver for MySQL databases
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Data-ShowTable>=3.3:../../devel/p5-Data-ShowTable
+#DEPENDS+=	p5-Data-ShowTable>=3.3:../../devel/p5-Data-ShowTable
 
 PERL5_PACKLIST=		auto/DBD/mysql/.packlist
+
+REPLACE_PERL=		lib/DBD/mysql.pm
 
 MAKE_PARAMS+=		--nocatchstderr
 
