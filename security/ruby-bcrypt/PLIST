@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/14 17:53:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/bcrypt_ext.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml

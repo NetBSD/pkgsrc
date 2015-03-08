@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/17 14:37:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/ruby_http_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
