@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/03/26 14:27:23 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/08 15:30:27 taca Exp $
 
-DISTNAME=	redcarpet-3.1.1
+DISTNAME=	redcarpet-3.2.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
