@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1217 2015/03/08 15:19:50 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1218 2015/03/08 15:25:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ruby200 to 2.0.0p643 [taca 2015-03-08]
 	Updated lang/ruby21-base to 2.1.5nb2 [taca 2015-03-08]
 	Updated math/ruby-gsl to 1.16.0.4 [taca 2015-03-08]
+	Updated textproc/ruby-ferret to 0.11.8.6 [taca 2015-03-08]
