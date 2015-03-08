@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.34 2015/01/25 16:09:16 taca Exp $
+# $NetBSD: gem.mk,v 1.35 2015/03/08 14:41:12 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -127,9 +127,6 @@ GEM_BUILD?=	gemspec
 
 OVERRIDE_GEMSPEC?=	# default is empty
 
-RUBYGEM_LANG?=	en_US.UTF-8
-RUBYGEM_ENV?=	LANG=${RUBYGEM_LANG} LC_CTYPE=${RUBYGEM_LANG}
-
 .if !empty(OVERRIDE_GEMSPEC)
 UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 .endif
@@ -149,24 +146,7 @@ USE_RAKE?=		YES
 # If we're using rake to build the local gem, then include it as a
 # build tool.
 #
-
-FIND_PREFIX+=	RUBYGEM_PREFIX=${RUBY_BASE}
-.include "../../mk/find-prefix.mk"
-RUBYGEM=	${RUBYGEM_PREFIX}/bin/${RUBYGEM_NAME}
-
-RUBY_GEMS_VERSION?=	${RUBY_GEMS_PKGSRC_VERS}
-
-_RUBYGEMS_MAJOR=	${RUBY_GEMS_VERSION:C/\.[0-9\.]+$//}
-_RUBYGEMS_MINORS=	${RUBY_GEMS_VERSION:C/^([0-9]+)\.*//}
-
-.if ${RUBY_VER} == "18"
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.1.0:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
-.endif # !ruby18
-
-.if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2
-GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VER_DIR}/${GEM_NAME}
-.endif
+.include "../../lang/ruby/gem-vars.mk"
 
 CATEGORIES+=	ruby
 MASTER_SITES?=	${MASTER_SITE_RUBYGEMS}
@@ -180,12 +160,6 @@ DISTFILES?=	${DISTNAME}${EXTRACT_SUFX}
 .if !empty(DISTFILES:M*.gem)
 EXTRACT_ONLY?=	# empty
 .endif
-
-# Specify GEM_PATH
-GEM_PATH?=	${PREFIX}/${GEM_HOME}
-
-# Base directory for Gems
-MAKE_ENV+=	GEM_PATH=${GEM_PATH}
 
 # Directory for the Gem to install
 GEM_NAME?=	${DISTNAME}
@@ -207,12 +181,6 @@ CHECK_PERMS_SKIP+=		${GEM_LIBDIR}/*
 PLIST_SUBST+=		GEM_NAME=${GEM_NAME}
 PLIST_SUBST+=		GEM_LIBDIR=${GEM_LIBDIR}
 PLIST_SUBST+=		GEM_DOCDIR=${GEM_DOCDIR}
-
-.if !empty(GEM_EXTSDIR)
-PLIST_SUBST+=		GEM_EXTSDIR=${GEM_EXTSDIR}
-.else
-PLIST_SUBST+=		GEM_EXTSDIR="@comment "
-.endif
 
 # Add indirect support for print-PLIST
 _RUBY_PRINT_PLIST_GEM=	/${GEM_NAME}\.info$$/ \
@@ -237,27 +205,7 @@ _RUBY_PRINT_PLIST_GEM+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
 		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
 			print; next; }
 
-###
-### gem-extract
-###
-### The gem-extract target extracts a standard gem file.  It is an
-### automatic dependency for the post-extract target so it doesn't
-### disturb the usual do-extract actions.
-###
-GEM_SPECFILE?=	${WRKDIR}/${DISTNAME}.gemspec
-
-.PHONY: gem-extract
-post-extract: gem-extract
-.if !target(gem-extract)
-gem-extract: fake-home
-.  for _gem_ in ${DISTFILES:M*.gem}
-	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
-		${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
-	${RUN} cd ${WRKDIR} && \
-		${SETENV} ${MAKE_ENV} TZ=UTC ${RUBYGEM_ENV} \
-		${RUBYGEM} spec --ruby ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
-.  endfor
-.endif
+.include "../../lang/ruby/gem-extract.mk"
 
 ###
 ### gem-build
@@ -267,8 +215,9 @@ gem-extract: fake-home
 ### The local gem is then installed into a special build root under
 ### ${WRKDIR} (${RUBYGEM_INSTALL_ROOT}), possibly compiling any extensions.
 ###
+GEM_SPECFILE?=			${WRKDIR}/${DISTNAME}.gemspec
 GEM_CLEANBUILD?=		ext/*
-GEM_CLEANBUILD_EXTENSIONS+=	gem.build_complete *.out *.log
+GEM_CLEANBUILD_EXTENSIONS+=	*.out *.log
 
 .if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
 PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
