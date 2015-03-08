@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2012/02/17 14:09:05 hans Exp $
+$NetBSD: patch-aa,v 1.9 2015/03/08 02:20:59 mef Exp $
+
+Honor PKGMANDIR. Add DESTDIR.
 
 --- Makefile.orig	2006-01-24 11:51:58.000000000 -0800
 +++ Makefile	2006-01-24 11:52:30.000000000 -0800
