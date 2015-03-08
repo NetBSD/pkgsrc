@@ -1,0 +1,1 @@
+bin/ferret-browser @PREFIX@/bin/ferret-browser@RUBY_SUFFIX@
