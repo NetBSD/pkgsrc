@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1208 2015/03/08 12:38:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1209 2015/03/08 13:00:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1707,3 +1707,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBD-mysql to 4.031 [wen 2015-03-08]
 	Updated lang/lua52 to 5.2.4 [alnsn 2015-03-08]
 	Updated net/httptunnel to 3.3 [mef 2015-03-08]
+	Updated net/connect to 1.104 [mef 2015-03-08]
