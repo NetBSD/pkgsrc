@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2015/01/25 10:09:34 imil Exp $
+# $NetBSD: Makefile,v 1.52 2015/03/08 17:57:42 imil Exp $
 
-GHCOMMIT=		70928282ab5c09848e04a58b96fcca4c961701e6
+GHCOMMIT=		2e1630265953c9c01836a4b62acfa8397579346a
 DISTNAME=		${GHCOMMIT}
-PKGNAME=		pkgin-0.7.0
+PKGNAME=		pkgin-0.8.0
 CATEGORIES=		pkgtools
 MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
 
@@ -78,6 +78,8 @@ do-install:
 .endif
 	${INSTALL_DATA} ${WRKSRC}/repositories.conf			\
 		${DESTDIR}${EGDIR}/repositories.conf.example
+	${INSTALL_DATA} ${WRKSRC}/preferred.conf			\
+		${DESTDIR}${EGDIR}/preferred.conf.example
 
 # libfetch has no builtin.mk and is included in NetBSD>=5
 .if ${OPSYS} != "NetBSD" || \
