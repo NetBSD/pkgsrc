@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2014/03/31 12:32:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.26 2015/03/08 01:16:36 mef Exp $
 #
 
-DISTNAME=		pbzip2-1.1.8
+DISTNAME=		pbzip2-1.1.12
 CATEGORIES=		archivers
 MASTER_SITES=		http://compression.ca/pbzip2/
+MASTER_SITES=		https://launchpad.net/pbzip2/1.1/1.1.12/+download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://compression.ca/pbzip2/
