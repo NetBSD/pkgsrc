@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1211 2015/03/08 14:40:49 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1212 2015/03/08 14:44:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1710,3 +1710,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/connect to 1.104 [mef 2015-03-08]
 	Updated graphics/gimp-ufraw to 0.21 [gdt 2015-03-08]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001028 [wen 2015-03-08]
+	Updated misc/rubygems to 2.4.6 [taca 2015-03-08]
