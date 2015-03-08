@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2015/01/17 12:10:01 wiedi Exp $
+# $NetBSD: Makefile,v 1.78 2015/03/08 23:29:23 joerg Exp $
 
 DISTNAME=	groff-1.22.3
 CATEGORIES=	textproc
@@ -13,6 +13,7 @@ CONFLICTS=		mdocml<1.12.0nb3 ja-groff-[0-9]*
 
 CHECK_PERMS=		NO
 MAKE_JOBS_SAFE=		NO
+OVERRIDE_DIRDEPTH=	4
 
 INSTALLATION_DIRS=	share/groff/site-tmac
 
