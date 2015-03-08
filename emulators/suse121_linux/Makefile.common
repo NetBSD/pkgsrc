@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2015/02/16 10:15:46 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.9 2015/03/08 19:03:32 tnn Exp $
 #
 # used by emulators/suse121_alsa/Makefile
 # used by emulators/suse121_alsa/Makefile
@@ -128,6 +128,17 @@ FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 # Makefile fragment if it exists.
 #
 .sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
+
+.if make(distinfo) || make(makedistinfo) || make(mdi) || make(makesum)
+.  if defined(RPMPKGS) && !empty(RPMPKGS)
+RPMPKGS:=	${RPMPKGS:S/${EMUL_ARCH}/i586/}		\
+		${RPMPKGS:S/${EMUL_ARCH}/x86_64/}
+.  endif
+.  if defined(RPMUPDPKGS) && !empty(RPMUPDPKGS)
+RPMUPDPKGS:=	${RPMUPDPKGS:S/${EMUL_ARCH}/i586/}	\
+		${RPMUPDPKGS:S/${EMUL_ARCH}/x86_64/}
+.  endif
+.endif
 
 .if defined(RPMPKGS) && !empty(RPMPKGS)
 .  for distfile in ${RPMPKGS}
