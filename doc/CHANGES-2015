@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1232 2015/03/09 06:10:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1233 2015/03/09 06:25:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/intltool to 0.51.0 [wiz 2015-03-09]
 	Updated textproc/p5-Text-Balanced to 2.03 [wiz 2015-03-09]
 	Updated devel/p5-Date-Calc to 6.4 [wiz 2015-03-09]
+	Updated pkgtools/pkglint to 4.152 [wiz 2015-03-09]
