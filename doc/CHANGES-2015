@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1248 2015/03/09 14:11:45 nils Exp $
+$NetBSD: CHANGES-2015,v 1.1249 2015/03/09 14:52:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1755,3 +1755,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/php-zendopcache version 7.0.4 [imil 2015-03-09]
 	Removed www/php-zendoptimizerplus successor www/php-zendopcache [imil 2015-03-09]
 	Updated net/cacti to 0.8.8bnb4 [nils 2015-03-09]
+	Added textproc/cwdiff version 0.2.6 [mef 2015-03-09]
