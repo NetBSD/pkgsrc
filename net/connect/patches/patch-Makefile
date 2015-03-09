@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2015/03/09 09:24:35 mef Exp $
+
+Not to overwrite pkgsrc settings, thanks tron@
+
+--- Makefile~	2014-09-24 11:11:37.000000000 +0900
++++ Makefile	2015-03-09 18:18:30.000000000 +0900
+@@ -7,9 +7,9 @@
+ UNAME := $(shell uname -s)
+ WINVER := $(shell ver)
+ 
+-CC=gcc
+-CFLAGS=
+-LDLIBS=
++#CC=gcc
++#CFLAGS=
++#LDLIBS=
+ 
+ ## for Mac OS X environment, use one of options
+ ifeq ($(UNAME), Darwin)

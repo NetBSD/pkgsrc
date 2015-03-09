@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/03/08 13:00:15 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/03/09 09:24:35 mef Exp $
 
 SHA1 (connect/1.104.tar.gz) = bc10d4558ffae89d632cf4c46fb8b81b0c769492
 RMD160 (connect/1.104.tar.gz) = 6925bd378372e7f75d6da25e0d2cff8f12867ecd
 Size (connect/1.104.tar.gz) = 40655 bytes
+SHA1 (patch-Makefile) = 4d16d18b313e420407a5c80920df6075cd78a599
