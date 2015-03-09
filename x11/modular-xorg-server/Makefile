@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2015/03/09 19:54:44 tnn Exp $
+# $NetBSD: Makefile,v 1.91 2015/03/09 21:24:40 tnn Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
@@ -104,17 +104,17 @@ INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=5.0
-BUILDLINK_API_DEPENDS.damageproto+=     damageproto>=1.1
-BUILDLINK_API_DEPENDS.xcmiscproto+=     xcmiscproto>=1.2.0
-BUILDLINK_API_DEPENDS.xtrans+=      	xtrans>=1.2.2
-BUILDLINK_API_DEPENDS.bigreqsproto+=    bigreqsproto>=1.1.0
-BUILDLINK_API_DEPENDS.xproto+=      	xproto>=7.0.22
-BUILDLINK_API_DEPENDS.xextproto+=      	xextproto>=7.1.99
-BUILDLINK_API_DEPENDS.recordproto+=     recordproto>=1.13.99.1
-BUILDLINK_API_DEPENDS.scrnsaverproto+=  scrnsaverproto>=1.1
-BUILDLINK_API_DEPENDS.resourceproto+=   resourceproto>=1.2.0
-BUILDLINK_API_DEPENDS.dri+=      	dri>=7.8
-BUILDLINK_API_DEPENDS.xfont+=      	xfont>=1.4.2
+BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
+BUILDLINK_API_DEPENDS.xcmiscproto+=	xcmiscproto>=1.2.0
+BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
+BUILDLINK_API_DEPENDS.bigreqsproto+=	bigreqsproto>=1.1.0
+BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.22
+BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
+BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.99.1
+BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
+BUILDLINK_API_DEPENDS.resourceproto+=	resourceproto>=1.2.0
+BUILDLINK_API_DEPENDS.dri+=		dri>=7.8
+BUILDLINK_API_DEPENDS.xfont+=		xfont>=1.4.2
 BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.16
 BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.1.99.6
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
