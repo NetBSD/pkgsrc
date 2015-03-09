@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/09 13:33:18 imil Exp $
+
+SHA1 (php-zendopcache/zendopcache-7.0.4.tgz) = 42e67f02d76113f9e9ec947aea49d36a95642d3c
+RMD160 (php-zendopcache/zendopcache-7.0.4.tgz) = 84c46a4bac9cefb31a5be91e5524d16d68ed0553
+Size (php-zendopcache/zendopcache-7.0.4.tgz) = 96340 bytes
