@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14205 2015/03/09 00:59:43 hiramatsu Exp $
+$NetBSD: TODO,v 1.14206 2015/03/09 03:32:31 mef Exp $
 
 Suggested new packages
 ======================
@@ -880,7 +880,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o postfix-3.0
 	o powermanga-0.91
 	o powwow-1.2.16
-	o ppp-2.4.6
+	o pppd-2.4.7
 	o profit-2.5.3
 	o psmisc-22.20
 	o pspp-0.8.4
