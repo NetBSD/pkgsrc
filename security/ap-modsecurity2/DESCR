@@ -3,3 +3,5 @@ web applications (or a web application firewall). Operating as an Apache Web
 server module or standalone, the purpose of ModSecurity is to increase web
 application security, protecting web applications from known and unknown
 attacks.
+
+This version is usable with apache 2.2 and 2.4.
