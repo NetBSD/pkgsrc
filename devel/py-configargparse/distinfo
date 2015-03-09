@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/09 09:14:19 wiz Exp $
+
+SHA1 (ConfigArgParse-0.9.3.tar.gz) = a7ff95d3bc5de8a00d2fa8118182cfca871028bd
+RMD160 (ConfigArgParse-0.9.3.tar.gz) = d8ecc734b0a4e63a7a5061533eb404e6ca54ab74
+Size (ConfigArgParse-0.9.3.tar.gz) = 18983 bytes
