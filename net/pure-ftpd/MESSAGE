@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2012/02/07 21:00:54 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2015/03/09 12:44:06 pettai Exp $
 
 To use pure-ftpd, you will need to perform the following steps:
 
@@ -7,6 +7,7 @@ To use pure-ftpd, you will need to perform the following steps:
    ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/pure_ftpd to /etc/rc.d/pure_ftpd and add
 
 	pure_ftpd=YES
+	pure_ftpd_flags="<any pure-ftpd flags>"
 
    to /etc/rc.conf. Other FTP servers should be disabled.
 
