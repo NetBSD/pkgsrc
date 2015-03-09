@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1245 2015/03/09 09:14:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1246 2015/03/09 09:18:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/wireshark to 1.10.13 [tron 2015-03-09]
 	Updated net/py-netlib to 0.11.2 [wiz 2015-03-09]
 	Added devel/py-configargparse version 0.9.3 [wiz 2015-03-09]
+	Updated net/mitmproxy to 0.11.3 [wiz 2015-03-09]
