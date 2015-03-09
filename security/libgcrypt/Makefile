@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2014/10/09 14:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.68.2.1 2015/03/09 19:37:10 tron Exp $
 
-DISTNAME=	libgcrypt-1.6.2
-PKGREVISION=	2
+DISTNAME=	libgcrypt-1.6.3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
