@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14215 2015/03/09 09:02:02 wiz Exp $
+$NetBSD: TODO,v 1.14216 2015/03/09 09:18:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mit-krb5-1.12.1
-	o mitmproxy-0.11.3
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-7.6.0
 	o modular-xorg-server-1.16.4
