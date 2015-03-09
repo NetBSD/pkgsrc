@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/11/09 13:12:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/03/09 08:14:23 wiz Exp $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
@@ -11,7 +11,6 @@ lib/pkgconfig/vorbisfile.pc
 share/aclocal/vorbis.m4
 share/doc/${PKGNAME}/doxygen-build.stamp
 share/doc/${PKGNAME}/eightphase.png
-share/doc/${PKGNAME}/evenlsp.png
 share/doc/${PKGNAME}/fish_xiph_org.png
 share/doc/${PKGNAME}/floor1_inverse_dB_table.html
 share/doc/${PKGNAME}/floorval.png
@@ -64,8 +63,6 @@ share/doc/${PKGNAME}/libvorbis/vorbis_synthesis_read.html
 share/doc/${PKGNAME}/libvorbis/vorbis_synthesis_restart.html
 share/doc/${PKGNAME}/libvorbis/vorbis_synthesis_trackonly.html
 share/doc/${PKGNAME}/libvorbis/vorbis_version_string.html
-share/doc/${PKGNAME}/lspmap.png
-share/doc/${PKGNAME}/oddlsp.png
 share/doc/${PKGNAME}/oggstream.html
 share/doc/${PKGNAME}/programming.html
 share/doc/${PKGNAME}/rfc5215.txt
@@ -77,7 +74,6 @@ share/doc/${PKGNAME}/v-comment.html
 share/doc/${PKGNAME}/vorbis-clip.txt
 share/doc/${PKGNAME}/vorbis-errors.txt
 share/doc/${PKGNAME}/vorbis-fidelity.html
-share/doc/${PKGNAME}/vorbis.html
 share/doc/${PKGNAME}/vorbisenc/changes.html
 share/doc/${PKGNAME}/vorbisenc/examples.html
 share/doc/${PKGNAME}/vorbisenc/index.html
@@ -149,6 +145,3 @@ share/doc/${PKGNAME}/vorbisfile/seekingexample.html
 share/doc/${PKGNAME}/vorbisfile/style.css
 share/doc/${PKGNAME}/vorbisfile/threads.html
 share/doc/${PKGNAME}/vorbisfile/vorbisfile_example_c.html
-share/doc/${PKGNAME}/vorbisword2.png
-share/doc/${PKGNAME}/wait.png
-share/doc/${PKGNAME}/white-xifish.png
