@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2015/01/08 10:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2015/03/09 09:02:20 wiz Exp $
 #
 
 .include "../../print/evince/Makefile.common"
-PKGREVISION=	39
+PKGREVISION=	40
 
 COMMENT=		Document viewer
 
