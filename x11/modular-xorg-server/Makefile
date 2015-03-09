@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2015/03/03 00:55:58 khorben Exp $
+# $NetBSD: Makefile,v 1.90 2015/03/09 19:54:44 tnn Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -135,6 +135,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
+BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
