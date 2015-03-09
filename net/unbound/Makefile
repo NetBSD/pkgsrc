@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/02/21 10:53:40 pettai Exp $
+# $NetBSD: Makefile,v 1.35 2015/03/09 11:59:26 pettai Exp $
 
 DISTNAME=	unbound-1.5.2
 CATEGORIES=	net
@@ -9,13 +9,14 @@ HOMEPAGE=	http://www.unbound.net/
 COMMENT=	DNS resolver and recursive server
 LICENSE=	modified-bsd
 
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=	VARBASE UNBOUND_USER UNBOUND_GROUP
+FILES_SUBST+=	UNBOUND_USER=${UNBOUND_USER} UNBOUND_GROUP=${UNBOUND_GROUP}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
-CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound.pid
+CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--enable-allsymbols
 
