@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.6 2015/03/09 13:10:45 tnn Exp $
+# $NetBSD: github.mk,v 1.7 2015/03/09 15:50:18 tnn Exp $
 #
 # github.com master site handling
 #
@@ -54,12 +54,20 @@ GITHUB_TYPE=	tag
 .    endif
 .  endif
 
+.  if defined(GITHUB_TAG) && !empty(GITHUB_TAG:M[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]*)
+# If the github tag is a git hash (7 or more hex digits), encode it in the
+# distfile name.
+_GITHUB_DEFAULT_DISTFILES=	${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX}
+.  else
+_GITHUB_DEFAULT_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+.  endif
+
 .  if !empty(GITHUB_TYPE:Mrelease)
-MASTER_SITES:=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+SITES.${_GITHUB_DEFAULT_DISTFILES}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 .  endif
 
 .  if !empty(GITHUB_TYPE:Mtag)
-MASTER_SITES:=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/${GITHUB_TAG}${EXTRACT_SUFX}}
+SITES.${_GITHUB_DEFAULT_DISTFILES}=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/${GITHUB_TAG}${EXTRACT_SUFX}}
 .  endif
 
 .endif
