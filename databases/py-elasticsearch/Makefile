@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/08/14 16:53:00 imil Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/09 15:56:33 imil Exp $
 
-DISTNAME=	elasticsearch-1.2.0
+DISTNAME=	elasticsearch-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	https://pypi.python.org/packages/source/e/elasticsearch/
