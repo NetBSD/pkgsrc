@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1231 2015/03/09 06:09:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1232 2015/03/09 06:10:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/varnish to 3.0.6nb1 [mspo 2015-03-09]
 	Updated textproc/intltool to 0.51.0 [wiz 2015-03-09]
 	Updated textproc/p5-Text-Balanced to 2.03 [wiz 2015-03-09]
+	Updated devel/p5-Date-Calc to 6.4 [wiz 2015-03-09]
