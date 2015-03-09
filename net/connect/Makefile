@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/03/08 13:00:15 mef Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/09 09:24:35 mef Exp $
 
 DISTNAME=	1.104
 PKGNAME=	connect-${DISTNAME}
@@ -21,7 +21,7 @@ LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/doc/connect
 
-post-patch:
+pre-patch:
 	(cd ${WRKDIR}; ${MV} gotoh-connect-* gotoh-${PKGNAME_NOREV})
 
 do-install:
