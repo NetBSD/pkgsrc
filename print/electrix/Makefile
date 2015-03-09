@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/01/08 10:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/03/09 09:02:20 wiz Exp $
 #
 
 DISTNAME=	electrix-0.2.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=electrix/}
 EXTRACT_SUFX=	.tar.bz2
