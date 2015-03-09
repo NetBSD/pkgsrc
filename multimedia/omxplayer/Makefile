@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/09 16:10:04 jmcneill Exp $
 
 DISTNAME=	omxplayer-20150118
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.invisible.ca/packages/distfiles/
 EXTRACT_SUFX=	.zip
@@ -21,9 +22,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-earm*hf
 
 CFLAGS+=	-DPREFIX=\"${PREFIX}\"
 CFLAGS+=	-Dfopen64=fopen -Dfseeko64=fseeko -Dftello64=ftello
-
-# Remove this when raspberrypi-userland is updated with anaglyph support
-CFLAGS+=	-DOLD_RASPBERRYPI_USERLAND
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/omxplayer.bin ${DESTDIR}${PREFIX}/bin
