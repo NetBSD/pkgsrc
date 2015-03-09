@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/02/15 11:15:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2015/03/09 09:02:21 wiz Exp $
 #
 
 DISTNAME=	pdfgrep-1.3.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdfgrep/}
 
