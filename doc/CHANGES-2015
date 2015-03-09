@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1252 2015/03/09 16:53:17 imil Exp $
+$NetBSD: CHANGES-2015,v 1.1253 2015/03/09 16:57:18 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1759,3 +1759,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-urllib3 to 1.10.1 [imil 2015-03-09]
 	Updated databases/py-elasticsearch to 1.4.0 [imil 2015-03-09]
 	Updated www/py-httpie to 0.9.2 [imil 2015-03-09]
+	Updated devel/py-requests to 2.5.3 [imil 2015-03-09]
