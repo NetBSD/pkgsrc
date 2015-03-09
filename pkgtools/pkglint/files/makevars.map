@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.260 2015/03/09 06:15:17 wiz Exp $
+# $NetBSD: makevars.map,v 1.261 2015/03/09 06:24:10 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -369,6 +369,10 @@ GAMES_USER		UserGroupName [$system]
 GCC_REQD		List of Version [$package_list]
 GENERATE_PLIST		List of ShellWord [$package_list]
 # ^^ List of Shellcommand, terminated with a semicolon
+GITHUB_PROJECT		Identifier [$package]
+GITHUB_TAG		Identifier [$package]
+GITHUB_RELEASE		Filename [$package]
+GITHUB_TYPE		{ tag release } [$package]
 GNU_ARCH		{ mips }
 GNU_CONFIGURE		Yes [c:s,m:s]
 GNU_CONFIGURE_INFODIR	Pathname [m:s,c:s]
