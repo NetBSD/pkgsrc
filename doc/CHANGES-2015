@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1242 2015/03/09 09:02:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1243 2015/03/09 09:04:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1748,3 +1748,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xterm to 316 [wiz 2015-03-09]
 	Updated www/ap-php to 5.6.6nb3 [taca 2015-03-09]
 	Updated print/poppler to 0.32.0 [wiz 2015-03-09]
+	Updated net/wireshark to 1.10.13 [tron 2015-03-09]
