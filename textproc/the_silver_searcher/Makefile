@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2015/03/05 11:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/09 23:36:20 tnn Exp $
 
 DISTNAME=	the_silver_searcher-0.29.1
 CATEGORIES=	textproc
-MASTER_SITES=	-https://github.com/ggreer/the_silver_searcher/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ggreer/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ggreer/the_silver_searcher
 COMMENT=	Attempt to improve on ack, which itself is better than grep
 LICENSE=	apache-2.0
-
-WRKSRC= ${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	LZMA_CFLAGS=-I${BUILDLINK_PREFIX.xz}/include
