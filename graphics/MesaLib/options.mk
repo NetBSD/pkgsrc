@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2014/03/14 07:19:36 obache Exp $
+# $NetBSD: options.mk,v 1.27 2015/03/09 19:54:44 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -48,6 +48,7 @@ PKG_SUGGESTED_OPTIONS+=		dri
 .if !empty(PKG_OPTIONS:Mdri)
 CONFIGURE_ARGS+=        --with-driver=dri
 PLIST.dri=	yes
+BUILDLINK_DEPMETHOD.libpciaccess=	full
 .  include "../../sysutils/libpciaccess/buildlink3.mk"
 USE_BUILTIN.MesaLib=	no
 .  include "../../graphics/MesaLib/dri.mk"
