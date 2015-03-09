@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/02/08 21:08:21 imil Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/09 16:52:45 imil Exp $
 
-GHCOMMIT=	753a8d04e4499505140a67442ae3e21f608b377f
-DISTNAME=	${GHCOMMIT}
-EGG_NAME=	httpie-0.9.1
+DISTNAME=	0.9.2
+EGG_NAME=	httpie-${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/jakubroztocil/httpie/archive/
@@ -12,7 +11,7 @@ HOMEPAGE=	https://github.com/jakubroztocil/httpie
 COMMENT=	Human-friendly command line HTTP client
 LICENSE=	original-bsd
 
-WRKSRC=		${WRKDIR}/httpie-${GHCOMMIT}
+WRKSRC=		${WRKDIR}/httpie-${DISTNAME}
 
 USE_LANGUAGES=	# none
 
