@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2014/10/09 14:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2015/03/09 08:14:23 wiz Exp $
 
-DISTNAME=	libvorbis-1.3.4
+DISTNAME=	libvorbis-1.3.5
 CATEGORIES=	devel audio
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
 EXTRACT_SUFX=	.tar.xz
