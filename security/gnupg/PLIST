@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2014/06/24 07:35:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27.6.1 2015/03/09 19:06:32 tron Exp $
 bin/gpg
 bin/gpg-zip
 bin/gpgsplit
@@ -11,7 +11,6 @@ ${PLIST.ldap}libexec/gnupg/gpgkeys_ldap
 man/man1/gpg-zip.1
 man/man1/gpg.1
 man/man1/gpgv.1
-man/man7/gnupg.7
 share/gnupg/DETAILS
 share/gnupg/FAQ
 share/gnupg/options.skel
