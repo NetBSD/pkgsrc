@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.51 2014/10/26 19:46:48 bsiegert Exp $
+$NetBSD: distinfo,v 1.51.2.1 2015/03/09 19:31:21 tron Exp $
 
 SHA1 (icu4c-54_1-src.tgz) = 8c752490bbf31cea26e20246430cee67d48abe34
 RMD160 (icu4c-54_1-src.tgz) = b1440e1a3330b12336742c881863a8de6a6d2235
 Size (icu4c-54_1-src.tgz) = 25485678 bytes
+SHA1 (patch-CVE-2014-7923+7926) = cb5e355c6e5b4860c581a9743706b800d56dadf2
 SHA1 (patch-aa) = fd5c513e75ca17a46be4ed010455bda63731afff
 SHA1 (patch-ab) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
