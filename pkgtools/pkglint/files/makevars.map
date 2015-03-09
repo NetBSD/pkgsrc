@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.259 2015/01/01 06:10:10 dholland Exp $
+# $NetBSD: makevars.map,v 1.260 2015/03/09 06:15:17 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -465,6 +465,7 @@ MASTER_SITE_DEBIAN	List of URL [$system]
 MASTER_SITE_FREEBSD	List of URL [$system]
 MASTER_SITE_FREEBSD_LOCAL	List of URL [$system]
 MASTER_SITE_GENTOO	List of URL [$system]
+MASTER_SITE_GITHUB	List of URL [$system]
 MASTER_SITE_GNOME	List of URL [$system]
 MASTER_SITE_GNU		List of URL [$system]
 MASTER_SITE_GNUSTEP	List of URL [$system]
