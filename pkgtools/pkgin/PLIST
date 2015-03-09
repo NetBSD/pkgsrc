@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 17:57:42 imil Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/09 11:45:08 jperkin Exp $
 bin/pkgin
+man/cat1/pkgin.0
 man/man1/pkgin.1
 share/examples/pkgin/preferred.conf.example
 share/examples/pkgin/repositories.conf.example
