@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.124 2015/03/06 21:11:09 tnn Exp $
+# $NetBSD: sites.mk,v 1.125 2015/03/09 13:10:45 tnn Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -21,6 +21,9 @@ MASTER_SITE_GNU+=       \
 	ftp://mirrors.kernel.org/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
 	http://gd.tuwien.ac.at/gnu/gnusrc/
+
+MASTER_SITE_GITHUB+=    \
+	https://github.com/
 
 MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/
