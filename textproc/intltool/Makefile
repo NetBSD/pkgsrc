@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2014/10/09 14:07:02 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.63 2015/03/09 05:51:26 wiz Exp $
 
-DISTNAME=		intltool-0.50.2
-PKGREVISION=		3
+DISTNAME=		intltool-0.51.0
 CATEGORIES=		textproc devel gnome
 MASTER_SITES=		https://launchpad.net/intltool/trunk/${PKGVERSION_NOREV}/+download/ \
 			http://launchpadlibrarian.net/94524169/
