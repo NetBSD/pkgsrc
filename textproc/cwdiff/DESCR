@@ -1,0 +1,8 @@
+cwdiff is a part of cj-overlay, and it has three modes, with
+(textproc/) wdiff, diff, or without them, stand alone.
+
+With wdiff or diff, it wraps output of those commands to
+support directories and colorize the output.
+
+  cwdiff -h or cwdiff --help
+will tell you how to use it, and command line examples.

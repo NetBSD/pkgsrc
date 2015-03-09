@@ -1,0 +1,15 @@
+$NetBSD: patch-cwdiff,v 1.1 2015/03/09 14:49:24 mef Exp $
+
+Correct typo
+
+--- cwdiff.orig	2015-03-09 23:29:16.000000000 +0900
++++ cwdiff	2015-03-09 23:29:31.000000000 +0900
+@@ -78,7 +78,7 @@
+ $usage
+ 
+ OPTIONS:
+--f, --filter        Act as a wdiff color filter only and don't excute diff/wdiff
++-f, --filter        Act as a wdiff color filter only and don't execute diff/wdiff
+                     internally, just colorize input (no ARGS = read from stdin)
+ -d, --diff          Preprocess input with diff and before giving it to wdiff
+                     (very useful for dirs). Option can be used in combination
