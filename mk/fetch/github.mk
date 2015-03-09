@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.5 2015/03/07 21:14:32 tnn Exp $
+# $NetBSD: github.mk,v 1.6 2015/03/09 13:10:45 tnn Exp $
 #
 # github.com master site handling
 #
@@ -26,9 +26,6 @@
 # http://github.com/acct/${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/${DISTNAME}.tar.gz
 #
 # Keywords: github
-
-# xxx move this to sites.mk
-MASTER_SITE_GITHUB?=	https://github.com/
 
 .if defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://github.com/[a-zA-Z0-9]*/$,match,:Mmatch)
 _USE_GITHUB=		YES
