@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1250 2015/03/09 15:51:03 imil Exp $
+$NetBSD: CHANGES-2015,v 1.1251 2015/03/09 15:56:47 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1757,3 +1757,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/cacti to 0.8.8bnb4 [nils 2015-03-09]
 	Added textproc/cwdiff version 0.2.6 [mef 2015-03-09]
 	Updated www/py-urllib3 to 1.10.1 [imil 2015-03-09]
+	Updated databases/py-elasticsearch to 1.4.0 [imil 2015-03-09]
