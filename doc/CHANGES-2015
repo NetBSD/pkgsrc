@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1240 2015/03/09 08:17:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1241 2015/03/09 08:57:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1746,3 +1746,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 14.0 [wiz 2015-03-09]
 	Updated audio/libvorbis to 1.3.5 [wiz 2015-03-09]
 	Updated x11/xterm to 316 [wiz 2015-03-09]
+	Updated www/ap-php to 5.6.6nb3 [taca 2015-03-09]
