@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/02/14 05:34:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.53 2015/03/09 19:47:54 tnn Exp $
 
 DISTNAME=		libdrm-2.4.59
 CATEGORIES=		x11 graphics
@@ -40,6 +40,8 @@ CONFIGURE_ARGS+=	--disable-manpages
 
 PLIST_VARS+=	intel arm
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
+# libpciaccess is needed to build support for the intel KMS API,
+# libdrm_intel.so.
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 PLIST.intel=	yes
 .elif !empty(MACHINE_ARCH:Marm*) || \
