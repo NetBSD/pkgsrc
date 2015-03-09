@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/09 14:49:24 mef Exp $
+bin/cwdiff
+share/examples/cwdiff/cwdiff.rc
