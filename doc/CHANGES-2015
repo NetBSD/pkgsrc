@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1247 2015/03/09 13:40:30 imil Exp $
+$NetBSD: CHANGES-2015,v 1.1248 2015/03/09 14:11:45 nils Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1754,3 +1754,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mitmproxy to 0.11.3 [wiz 2015-03-09]
 	Added www/php-zendopcache version 7.0.4 [imil 2015-03-09]
 	Removed www/php-zendoptimizerplus successor www/php-zendopcache [imil 2015-03-09]
+	Updated net/cacti to 0.8.8bnb4 [nils 2015-03-09]
