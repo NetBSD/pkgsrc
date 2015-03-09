@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:20 tron Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/09 10:07:40 mef Exp $
 #
 
 DISTNAME=		ftplibpp-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		net devel
 MASTER_SITES=		http://download.berlios.de/kasablanca/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kasablanca.berlios.de/ftplibpp/
+HOMEPAGE=		https://github.com/mkulke/ftplibpp
 COMMENT=		C++ class providing ftp client functionality
 
 USE_TOOLS+=		gmake
