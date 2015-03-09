@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14204 2015/03/08 17:04:45 taca Exp $
+$NetBSD: TODO,v 1.14205 2015/03/09 00:59:43 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -187,10 +187,6 @@ Suggested new packages
 	crm114 [pkg/31969]
 	http://crm114.sourceforge.net/
 	Controllable Regex Mutilator
-
-	sysjail [pkg/34123, pkgsrc-wip]
-	http://sysjail.bsd.lv/
-	userland virtualisation system
 
 	Raster3D [pkg/34225]
 	http://skuld.bmsc.washington.edu/raster3d/
