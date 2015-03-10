@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/10 12:00:13 mef Exp $
 #
 
-DISTNAME=		Net-Dict-2.08
+DISTNAME=		Net-Dict-2.19
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		net textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -18,6 +17,11 @@ CONFLICTS=		dict-client-[0-9]*
 
 DEPENDS+=		p5-AppConfig-Std-[0-9]*:../../devel/p5-AppConfig-Std
 DEPENDS+=		p5-Tk-[0-9]*:../../x11/p5-Tk
+# only for make test
+DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+
+REPLACE_PERL+=		dict
+REPLACE_PERL+=		tkdict
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
