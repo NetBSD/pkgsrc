@@ -1,21 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2013/08/04 09:59:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.37 2015/03/10 16:24:57 taca Exp $
 
-DISTNAME=	swig-1.3.36
-PKGREVISION=	4
+DISTNAME=	swig-1.3.38
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
-#
-# 1.3.37 has a bug where .py files are written to the directory of the
-# .i file instead of where the output is supposed to go, and this
-# breaks gnuradio.  Please try to contact gdt@netbsd.org before
-# updating to 1.3.37.  See message on discuss-gnuradio:
-# Message-Id: <FA0E4567-C660-4C30-B604-2FA000330874@alum.mit.edu>
-# As of 2012-10, gnuradio is known to work with swig 2.
-#
-# x11/ruby-wxruby-2.0.1 requires 1.3.32 for Ruby 1.8 and 1.3.37 for
-# Ruby 1.9.  And SWIG 1.3.39 introduced some incompatibility with
-# wxRuby, sigh.
+# x11/ruby-wxruby-2.0.1 requires 1.3.37 for Ruby 1.9.  But SWIG 1.3.39
+# introduced some incompatibility with wxRuby, sigh.
 #
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
