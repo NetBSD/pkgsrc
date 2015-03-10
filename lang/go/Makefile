@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2015/02/22 13:28:30 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2015/03/10 13:11:36 jperkin Exp $
 
 .include "version.mk"
 
 DISTNAME=	go${GO_VERSION}.src
 PKGNAME=	go-${GO_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
@@ -18,14 +19,6 @@ USE_TOOLS+=	bash:run perl:run pax
 
 # uses ulimit -T
 BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
-
-PLIST_VARS+=	cgo zsyscall
-
-.if ${OPSYS} == "SunOS"
-PLIST.zsyscall=	yes
-.else
-PLIST.cgo=	yes
-.endif
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
@@ -93,7 +86,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
 	cd ${WRKDIR} && pax -rw go ${DESTDIR}${PREFIX}
-	find ${DESTDIR}${PREFIX}/go/src -name \*.orig -exec rm {} \;
+	find ${DESTDIR}${PREFIX}/go -name \*.orig -exec rm {} \;
 .for cmd in go gofmt
 	cd ${DESTDIR}${PREFIX}/bin && ln -sf ../go/bin/${cmd} ${cmd}
 .endfor
