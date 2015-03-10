@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1258 2015/03/10 09:07:55 manu Exp $
+$NetBSD: CHANGES-2015,v 1.1259 2015/03/10 12:00:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1765,3 +1765,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/wesnoth to 1.12.1 [mef 2015-03-10]
 	Updated x11/libX11 to 1.6.3 [wiz 2015-03-10]
 	Added sysutils/lastfss version 0.1 [manu 2015-03-10]
+	Updated textproc/p5-Net-Dict to 2.19 [mef 2015-03-10]
