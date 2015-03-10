@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/12/02 20:22:14 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/03/10 16:46:51 gdt Exp $
 include/quagga/buffer.h
 include/quagga/checksum.h
 include/quagga/command.h
@@ -52,12 +52,14 @@ lib/libospf.la
 lib/libzebra.la
 man/man1/vtysh.1
 man/man8/bgpd.8
+man/man8/isisd.8
 man/man8/ospfd.8
 man/man8/ripd.8
 man/man8/watchquagga.8
 man/man8/zebra.8
 sbin/babeld
 sbin/bgpd
+sbin/isisd
 sbin/ospfd
 sbin/ripd
 sbin/watchquagga
@@ -71,6 +73,7 @@ share/doc/quagga/mpls/ospfd.conf
 share/examples/quagga/babeld.conf.sample
 share/examples/quagga/bgpd.conf.sample
 share/examples/quagga/bgpd.conf.sample2
+share/examples/quagga/isisd.conf.sample
 share/examples/quagga/log_syslog.conf
 share/examples/quagga/ospfd.conf.sample
 share/examples/quagga/ripd.conf.sample
