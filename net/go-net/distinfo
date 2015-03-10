@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/10 21:28:45 bsiegert Exp $
+
+SHA1 (net-6dc0abcce2.tar.gz) = 3fadce9dae347b684bbf6d2209cc68c794eeb5fd
+RMD160 (net-6dc0abcce2.tar.gz) = bf1544c3e00ff11c80308839a06e2bbf2c7ecbbd
+Size (net-6dc0abcce2.tar.gz) = 447714 bytes
