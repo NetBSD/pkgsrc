@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1260 2015/03/10 13:11:46 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.1261 2015/03/10 16:14:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1767,3 +1767,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/lastfss version 0.1 [manu 2015-03-10]
 	Updated textproc/p5-Net-Dict to 2.19 [mef 2015-03-10]
 	Updated lang/go to 1.4.2nb1 [jperkin 2015-03-10]
+	Removed devel/rubyforge [taca 2015-03-10]
