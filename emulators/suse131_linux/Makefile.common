@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2015/03/08 19:03:32 tnn Exp $
+# $NetBSD: Makefile.common,v 1.13 2015/03/10 01:42:13 tnn Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -122,14 +122,7 @@ FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 .sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
 
 .if make(distinfo) || make(makedistinfo) || make(mdi) || make(makesum)
-.  if defined(RPMPKGS) && !empty(RPMPKGS)
-RPMPKGS:=	${RPMPKGS:S/${EMUL_ARCH}/i586/}		\
-		${RPMPKGS:S/${EMUL_ARCH}/x86_64/}
-.  endif
-.  if defined(RPMUPDPKGS) && !empty(RPMUPDPKGS)
-RPMUPDPKGS:=	${RPMUPDPKGS:S/${EMUL_ARCH}/i586/}	\
-		${RPMUPDPKGS:S/${EMUL_ARCH}/x86_64/}
-.  endif
+PKG_FAIL_REASON=	"please use make emul-fetch or make emul-distinfo"
 .endif
 
 .if defined(RPMPKGS) && !empty(RPMPKGS)
