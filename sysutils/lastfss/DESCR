@@ -1,0 +1,2 @@
+lastfss maintains an ephemeral snapshot for a few hours. It is meant to be
+started from cron so that user-deleted files can be retreived quicky.
