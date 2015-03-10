@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14217 2015/03/09 23:23:16 tnn Exp $
+$NetBSD: TODO,v 1.14218 2015/03/10 05:17:59 mef Exp $
 
 Suggested new packages
 ======================
@@ -1091,7 +1091,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.690
 	o websvn-2.3.2
 	o weechat-1.1
-	o wesnoth-1.12.1
 	o windowlab-1.40
 	o wine-devel-1.7.38
 	o wmi-11
