@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/02/22 13:14:09 mspo Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/03/10 13:11:36 jperkin Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -515,7 +515,7 @@ go/pkg/${GO_PLATFORM}/regexp.a
 go/pkg/${GO_PLATFORM}/regexp/syntax.a
 go/pkg/${GO_PLATFORM}/runtime.a
 go/pkg/${GO_PLATFORM}/runtime.h
-${PLIST.cgo}go/pkg/${GO_PLATFORM}/runtime/cgo.a
+go/pkg/${GO_PLATFORM}/runtime/cgo.a
 go/pkg/${GO_PLATFORM}/runtime/debug.a
 go/pkg/${GO_PLATFORM}/runtime/pprof.a
 go/pkg/${GO_PLATFORM}/runtime/race.a
@@ -2570,6 +2570,7 @@ go/src/runtime/cgo/gcc_netbsd_arm.c
 go/src/runtime/cgo/gcc_openbsd_386.c
 go/src/runtime/cgo/gcc_openbsd_amd64.c
 go/src/runtime/cgo/gcc_setenv.c
+go/src/runtime/cgo/gcc_solaris_amd64.c
 go/src/runtime/cgo/gcc_util.c
 go/src/runtime/cgo/gcc_windows_386.c
 go/src/runtime/cgo/gcc_windows_amd64.c
