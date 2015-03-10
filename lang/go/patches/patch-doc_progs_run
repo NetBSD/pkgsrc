@@ -1,0 +1,17 @@
+$NetBSD: patch-doc_progs_run,v 1.1 2015/03/10 13:11:36 jperkin Exp $
+
+Support cgo on illumos.
+
+--- doc/progs/run.orig	2014-12-11 01:18:10.000000000 +0000
++++ doc/progs/run
+@@ -50,6 +50,10 @@ fi
+ if [ "$goos" == "openbsd" ]; then
+ 	c_go_cgo="cgo1 cgo2"
+ fi
++# cgo3 and cgo4 don't run on illumos, since cgo cannot handle stdout correctly
++if [ "$goos" == "solaris" ]; then
++	c_go_cgo="cgo1 cgo2"
++fi
+ if [ "$CGO_ENABLED" != 1 ]; then
+ 	c_go_cgo=""
+ fi
