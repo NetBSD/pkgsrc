@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2065 2015/03/09 09:14:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2066 2015/03/10 16:12:37 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1854,7 +1854,6 @@ SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
 SUBDIR+=	ruby-wmi-lite
 SUBDIR+=	ruby2ruby
-SUBDIR+=	rubyforge
 SUBDIR+=	rudiments
 SUBDIR+=	rvm
 SUBDIR+=	rx
