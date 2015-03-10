@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1254 2015/03/09 19:02:30 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1255 2015/03/10 01:10:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1761,3 +1761,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-httpie to 0.9.2 [imil 2015-03-09]
 	Updated devel/py-requests to 2.5.3 [imil 2015-03-09]
 	Updated www/py-django to 1.7.6 [adam 2015-03-09]
+	Updated textproc/cwdiff to 0.2.7 [mef 2015-03-10]
