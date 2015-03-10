@@ -1,0 +1,12 @@
+$NetBSD: patch-data_tools_castle-clutter_mk_all-castles_sh,v 1.1 2015/03/10 05:16:28 mef Exp $
+
+Add missing ! on shebang line (to be processed by REPLACE_BASH)
+
+--- data/tools/castle-cutter/mk-all-castles.sh~	2015-01-24 06:21:14.000000000 +0900
++++ data/tools/castle-cutter/mk-all-castles.sh	2015-03-10 12:39:34.000000000 +0900
+@@ -1,4 +1,4 @@
+-#/bin/bash
++#!/bin/bash
+ 
+ ./mk-castle.sh -b castle -c cutout.png -o castle -t castle-walls.tmpl castle.png
+ 
