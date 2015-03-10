@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/07 16:47:10 adam Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/10 15:20:17 joerg Exp $
 
 DISTNAME=	pyzy-0.1.0
 PKGREVISION=	2
@@ -20,6 +20,12 @@ PKGCONFIG_OVERRIDE+=	pyzy-1.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-db-android
 CONFIGURE_ARGS+=	--enable-db-open-phrase
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# Reduce noise to a level that real warnings can be seen
+CXXFLAGS+=	-Wno-gnu-designator
+.endif
 
 # taken from ${WRKSRC}/data/db/open-phrase/Makefile.am
 DBVER=		1.0.0
