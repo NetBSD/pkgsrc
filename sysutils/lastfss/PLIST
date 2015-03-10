@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/10 09:06:04 manu Exp $
+sbin/lastfss
+man/man8/lastfss.8
