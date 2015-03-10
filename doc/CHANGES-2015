@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1264 2015/03/10 16:56:08 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.1265 2015/03/10 21:08:39 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-debugger-ruby_core_source to 1.3.8nb1 [taca 2015-03-10]
 	Updated devel/ruby-debugger to 1.6.8nb1 [taca 2015-03-10]
 	Updated net/quagga to 0.99.24.1 [gdt 2015-03-10]
+	Updated lang/sbcl to 1.2.9 [asau 2015-03-10]
