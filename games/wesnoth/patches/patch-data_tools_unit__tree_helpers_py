@@ -1,0 +1,11 @@
+$NetBSD: patch-data_tools_unit__tree_helpers_py,v 1.1 2015/03/10 05:16:28 mef Exp $
+
+Add shebang (to match REPLACE.python.old=     .*python[^ ]*)
+
+--- data/tools/unit_tree/helpers.py~	2015-01-24 06:21:14.000000000 +0900
++++ data/tools/unit_tree/helpers.py	2015-03-10 12:15:24.000000000 +0900
+@@ -1,3 +1,4 @@
++#!@python
+ """
+ Various helpers for use by the wmlunits tool.
+ """
