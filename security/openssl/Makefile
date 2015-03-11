@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2015/02/12 13:08:53 adam Exp $
+# $NetBSD: Makefile,v 1.203 2015/03/11 22:49:40 tnn Exp $
 
 DISTNAME=	openssl-1.0.2
 CATEGORIES=	security
@@ -76,8 +76,6 @@ CONFIGURE_ARGS+=	darwin-ppc-cc
 .  else
 CONFIGURE_ARGS+=	darwin-${MACHINE_ARCH}-cc
 .  endif
-
-.include "../../mk/dlopen.buildlink3.mk"
 
 SUBST_CLASSES+=		dl
 SUBST_MESSAGE.dl=	Adding dynamic link compatibility library.
@@ -158,4 +156,5 @@ INSTALLATION_DIRS+=	share/examples/openssl
 pre-configure:
 	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
