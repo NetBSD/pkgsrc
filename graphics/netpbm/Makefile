@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2015/01/12 11:47:59 is Exp $
+# $NetBSD: Makefile,v 1.201 2015/03/11 23:02:50 tnn Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
@@ -63,7 +63,7 @@ MAKE_FLAGS+=	NETWORKLD="-lsocket -lnsl"
 MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
 .endif
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/netpbm
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 share/netpbm
 
 post-extract:
 	cd ${WRKSRC} && ${CP} config.mk.in config.mk
