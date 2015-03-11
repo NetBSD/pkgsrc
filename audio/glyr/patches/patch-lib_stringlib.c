@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_stringlib.c,v 1.1 2014/09/11 06:45:45 dholland Exp $
+$NetBSD: patch-lib_stringlib.c,v 1.2 2015/03/11 08:40:31 wiz Exp $
 
 Use <ctype.h> correctly.
+https://github.com/sahib/glyr/issues/61
 
 --- lib/stringlib.c~	2014-02-08 11:06:45.000000000 +0000
 +++ lib/stringlib.c
