@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1273 2015/03/11 15:08:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1274 2015/03/11 15:19:34 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1781,3 +1781,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/moodle to 2.8.5 [wen 2015-03-11]
 	Updated devel/p5-Future to 0.32 [wen 2015-03-11]
 	Updated net/wget to 1.16.3 [wiz 2015-03-11]
+	Updated mail/nullmailer to 1.13nb1 [wiedi 2015-03-11]
