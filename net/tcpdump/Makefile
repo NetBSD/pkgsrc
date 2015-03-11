@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2014/12/13 14:31:10 mef Exp $
+# $NetBSD: Makefile,v 1.38 2015/03/11 21:07:46 tnn Exp $
 
-DISTNAME=	tcpdump-4.6.2
+DISTNAME=	tcpdump-4.7.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcpdump.org/release/
 
