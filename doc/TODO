@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14220 2015/03/11 11:16:20 wiz Exp $
+$NetBSD: TODO,v 1.14221 2015/03/11 15:08:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1090,7 +1090,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.690
 	o websvn-2.3.2
 	o weechat-1.1
-	o wget-1.16.3
 	o windowlab-1.40
 	o wine-devel-1.7.38
 	o wmi-11
