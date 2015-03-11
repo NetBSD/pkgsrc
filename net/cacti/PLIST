@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/16 21:10:00 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/11 07:39:15 nils Exp $
 bin/cacti-poller
 share/cacti/LICENSE
 share/cacti/README
@@ -224,7 +224,6 @@ share/cacti/images/uninstall_icon.gif
 share/cacti/images/view_none.gif
 share/cacti/include/auth.php
 share/cacti/include/bottom_footer.php
-share/cacti/include/config.php
 share/cacti/include/global.php
 share/cacti/include/global_arrays.php
 share/cacti/include/global_constants.php
@@ -445,6 +444,7 @@ share/cacti/lib/utility.php
 share/cacti/lib/variables.php
 share/cacti/lib/xml.php
 share/cacti/log/.htaccess
+share/cacti/log/cacti.log
 share/cacti/logout.php
 share/cacti/plugins.php
 share/cacti/plugins/index.php
@@ -496,4 +496,5 @@ share/cacti/templates_import.php
 share/cacti/tree.php
 share/cacti/user_admin.php
 share/cacti/utilities.php
+share/examples/cacti/config.php
 share/examples/cacti/httpd-cacti.conf
