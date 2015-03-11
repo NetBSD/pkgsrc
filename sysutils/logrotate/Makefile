@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/11 21:34:16 nils Exp $
 
-DISTNAME=		logrotate-3.8.7
+DISTNAME=		logrotate-3.8.9
 CATEGORIES=		sysutils
 MASTER_SITES=		https://fedorahosted.org/releases/l/o/logrotate/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		https://fedorahosted.org/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
