@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2009/12/15 19:43:16 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2015/03/11 01:31:02 mef Exp $
 
---- src/Makefile.am.orig	2008-06-12 15:23:02.000000000 +0000
-+++ src/Makefile.am
+--- src/Makefile.am.orig	2013-04-26 17:04:59.000000000 +0900
++++ src/Makefile.am	2015-03-11 10:19:38.000000000 +0900
 @@ -20,7 +20,7 @@
  
  ## Process this file with automake to produce Makefile.in
@@ -11,12 +11,12 @@ $NetBSD: patch-aa,v 1.6 2009/12/15 19:43:16 drochner Exp $
  
  EXTRA_DIST = Manifest
  
-@@ -31,7 +31,7 @@ libexec_PROGRAMS = dirmngr_ldap
- AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" 
- AM_CPPFLAGS += -DDIRMNGR_SYSCONFDIR="\"$(sysconfdir)/@PACKAGE@\"" 
+@@ -31,7 +31,7 @@
+ AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\"
+ AM_CPPFLAGS += -DDIRMNGR_SYSCONFDIR="\"$(sysconfdir)/@PACKAGE@\""
  AM_CPPFLAGS += -DDIRMNGR_LIBEXECDIR="\"$(libexecdir)\""
 -AM_CPPFLAGS += -DDIRMNGR_DATADIR="\"$(localstatedir)/lib/@PACKAGE@\""
-+AM_CPPFLAGS += -DDIRMNGR_DATADIR="\"$(datadir)/@PACKAGE@\""
++AM_CPPFLAGS += -DDIRMNGR_DATADIR="\"$(datadir)/lib/@PACKAGE@\""
  AM_CPPFLAGS += -DDIRMNGR_CACHEDIR="\"$(localstatedir)/cache/@PACKAGE@\""
  AM_CPPFLAGS += -DDIRMNGR_SOCKETDIR="\"$(localstatedir)/run/@PACKAGE@\""
  
