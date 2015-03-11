@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/09/02 16:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/11 22:30:42 tnn Exp $
 
 DISTNAME=	orc-0.4.18
 CATEGORIES=	devel
@@ -16,4 +16,5 @@ USE_TOOLS=	gmake
 PKGCONFIG_OVERRIDE+=	orc.pc.in
 TEST_TARGET=	check
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
