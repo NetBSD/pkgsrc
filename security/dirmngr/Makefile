@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2015/01/09 16:30:57 rumko Exp $
+# $NetBSD: Makefile,v 1.52 2015/03/11 01:31:02 mef Exp $
 
-DISTNAME=	dirmngr-1.1.0
-PKGREVISION=	9
+DISTNAME=	dirmngr-1.1.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/dirmngr/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/aegypten2/
 COMMENT=	X509 certificate and CRL downloader
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 DIRMNGR_USER?=		dirmngr
 DIRMNGR_GROUP?=		dirmngr
