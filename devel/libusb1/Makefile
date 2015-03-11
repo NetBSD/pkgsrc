@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/01/04 02:50:42 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/11 22:28:35 tnn Exp $
 
 DISTNAME=	libusb-1.0.9
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -25,4 +25,5 @@ PKGCONFIG_OVERRIDE+=	libusb-1.0.pc.in
 
 CONFLICTS=	libusbx-[0-9]*
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
