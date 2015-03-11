@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2014/12/15 11:07:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.135 2015/03/11 22:53:10 tnn Exp $
 
 DISTNAME=	libxml2-2.9.2
 PKGREVISION=	1
@@ -50,5 +50,6 @@ LDFLAGS.SCO_SV+=	-lm
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
