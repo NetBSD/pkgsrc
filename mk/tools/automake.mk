@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.26 2015/02/16 10:59:39 jperkin Exp $
+# $NetBSD: automake.mk,v 1.27 2015/03/11 19:24:44 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -69,6 +69,8 @@
 # in the package Makefile:
 #
 #	AUTOMAKE_OVERRIDE=    no
+#
+# Keywords: automake
 #
 
 # Only allow one of "automake" and "automake14" in USE_TOOLS.
