@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/03/04 09:01:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/03/11 08:40:31 wiz Exp $
 
 SHA1 (glyr/1.0.8.tar.gz) = e39ff25bea823f8a65df6b6e6b10347b0886b71b
 RMD160 (glyr/1.0.8.tar.gz) = 63aceb30e021a39fb7778a7b2a68a92d1b642d26
 Size (glyr/1.0.8.tar.gz) = 425073 bytes
-SHA1 (patch-lib_stringlib.c) = 7186ba26f007d348f33880b3175d94fe66829c3f
+SHA1 (patch-lib_stringlib.c) = 98cdef23e473915a1710391a75dbc2573ed07d52
