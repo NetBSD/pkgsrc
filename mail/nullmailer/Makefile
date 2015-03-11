@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2013/09/03 17:50:27 shattered Exp $
+# $NetBSD: Makefile,v 1.37 2015/03/11 15:18:51 wiedi Exp $
 
 DISTNAME=		nullmailer-1.13
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE:Q}
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -58,6 +59,8 @@ SUBST_STAGE.paths=	post-configure
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} share/examples/${PKGBASE}
 BUILD_DEFS+=		VARBASE
+
+.include "options.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
