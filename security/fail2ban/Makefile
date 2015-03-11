@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2015/02/09 10:05:25 nils Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/11 20:45:52 nils Exp $
 #
 
 DISTNAME=	fail2ban-0.9.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	-https://github.com/fail2ban/fail2ban/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	ahp-nils@users.sourceforge.net
+MAINTAINER=	nils@netbsd.org
 HOMEPAGE=	http://www.fail2ban.org/
 COMMENT=	Scans log files and bans IP that makes too many password failures
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
 USE_TOOLS+=	make:build
 
@@ -95,7 +96,7 @@ post-extract:
 	${CP} ${FILESDIR}/paths-pkgsrc.conf ${WRKSRC}/config/paths-pkgsrc.conf
 
 post-build:
-	        cd ${WRKSRC}/doc/ && make text
+	        cd ${WRKSRC}/doc/ && make SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX} text
 
 post-install:
 .for manfile1 in ${MANPAGES1}
