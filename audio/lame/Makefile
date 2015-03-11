@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/02/27 19:49:16 snj Exp $
+# $NetBSD: Makefile,v 1.77 2015/03/11 22:24:00 tnn Exp $
 
 DISTNAME=	lame-3.99.5
 PKGREVISION=	2
@@ -38,5 +38,5 @@ CONFIGURE_ARGS+=	--enable-nasm
 CONFIGURE_ENV+=		ac_cv_header_xmmintrin_h=no
 .endif
 
-.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
