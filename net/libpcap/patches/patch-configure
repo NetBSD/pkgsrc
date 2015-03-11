@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2013/06/21 13:35:06 jperkin Exp $
+$NetBSD: patch-configure,v 1.4 2015/03/11 21:05:09 tnn Exp $
 
 Ensure consistent manual page locations.
 
---- configure.orig	2013-03-25 14:51:40.000000000 +0000
+--- configure.orig	2015-03-09 19:22:07.000000000 +0000
 +++ configure
-@@ -9986,8 +9985,6 @@ fi
+@@ -6857,8 +6857,6 @@ fi
  # Individual cases can override this.
  #
  DYEXT="none"
@@ -13,7 +13,7 @@ Ensure consistent manual page locations.
  case "$host_os" in
  
  aix*)
-@@ -10255,6 +10252,9 @@ fi
+@@ -7133,6 +7131,9 @@ fi
  
  test "x$enable_shared" = "xno" && DYEXT="none"
  
@@ -23,3 +23,12 @@ Ensure consistent manual page locations.
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
  set dummy ${ac_tool_prefix}ranlib; ac_word=$2
+@@ -8125,7 +8126,7 @@ else
+ fi
+ 
+ 
+-		if test "x$ac_lbl_bluetooth_available" == "xno" ; then
++		if test "x$ac_lbl_bluetooth_available" = "xno" ; then
+ 		    if test "x$enable_bluetooth" = "xyes" ; then
+ 			as_fn_error $? "Bluetooth sniffing is not supported; install bluez-lib devel to enable it" "$LINENO" 5
+ 		    else
