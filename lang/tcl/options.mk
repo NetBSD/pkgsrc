@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/08/22 22:03:17 marino Exp $
+# $NetBSD: options.mk,v 1.3 2015/03/11 22:32:08 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tcl
 PKG_SUPPORTED_OPTIONS=	threads debug
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--enable-symbols=mem
 
 .if !empty(PKG_OPTIONS:Mthreads)
 CONFIGURE_ARGS+=	--enable-threads
+.include "../../mk/pthread.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-threads
 .endif
