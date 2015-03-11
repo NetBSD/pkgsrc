@@ -1,0 +1,8 @@
+# $NetBSD: pkg-config.help,v 1.1 2015/03/11 19:24:44 rillig Exp $
+
+#	Packages that use pkg-config for managing shared libraries must
+#	declare:
+#
+#		USE_TOOLS+=	pkg-config
+#
+# Keywords: pkg-config pc

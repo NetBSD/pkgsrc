@@ -1,0 +1,7 @@
+# $NetBSD: libtool.help,v 1.1 2015/03/11 19:24:44 rillig Exp $
+
+# USE_LIBTOOL
+#	Packages that use libtool for building shared libraries must set
+#	this variable to "yes".
+#
+# Keywords: libtool
