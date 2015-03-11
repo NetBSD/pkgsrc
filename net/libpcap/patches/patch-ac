@@ -1,17 +1,20 @@
-$NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
+$NetBSD: patch-ac,v 1.9 2015/03/11 21:05:09 tnn Exp $
 
---- Makefile.in.orig	2012-03-29 12:57:32.000000000 +0000
+Add libtoolization
+Fix manpage installation
+
+--- Makefile.in.orig	2015-03-09 19:22:07.000000000 +0000
 +++ Makefile.in
-@@ -45,7 +45,7 @@ VPATH = @srcdir@
+@@ -43,7 +43,7 @@ VPATH = @srcdir@
  #
  
  LD = /usr/bin/ld
 -CC = @CC@
 +CC = ${LIBTOOL} --mode=compile @CC@
  AR = @AR@
- CCOPT = @V_CCOPT@
- INCLS = -I. @V_INCLS@
-@@ -78,7 +78,8 @@ YACC = @V_YACC@
+ LN_S = @LN_S@
+ MKDEP = @MKDEP@
+@@ -80,7 +80,8 @@ YACC = @V_YACC@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -21,7 +24,7 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  	@rm -f $@
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
  
-@@ -89,13 +90,13 @@ CSRC =	pcap.c inet.c gencode.c optimize.
+@@ -91,13 +92,13 @@ CSRC =	pcap.c inet.c gencode.c optimize.
  	savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \
  	bpf_image.c bpf_dump.c
  GENSRC = scanner.c grammar.c bpf_filter.c version.c
@@ -37,7 +40,7 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  PUBHDR = \
  	pcap.h \
  	pcap-bpf.h \
-@@ -345,12 +346,10 @@ EXTRA_DIST = \
+@@ -358,12 +359,10 @@ EXTRA_DIST = \
  	Win32/Src/inet_net.c \
  	Win32/Src/inet_pton.c
  
@@ -53,9 +56,9 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  
  shared: libpcap.$(DYEXT)
  
-@@ -434,10 +433,10 @@ scanner.c: $(srcdir)/scanner.l
- 	@rm -f $@
- 	$(srcdir)/runlex.sh $(LEX) -o$@ $<
+@@ -450,10 +449,10 @@ scanner.c: $(srcdir)/scanner.l
+ 	cat $@.top $@.bottom > $@
+ 	@rm $@.bottom
  
 -scanner.o: scanner.c tokdefs.h
 +scanner.lo: scanner.c tokdefs.h
@@ -66,7 +69,7 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  
  tokdefs.h: grammar.c
  grammar.c: $(srcdir)/grammar.y
-@@ -446,17 +445,17 @@ grammar.c: $(srcdir)/grammar.y
+@@ -462,17 +461,17 @@ grammar.c: $(srcdir)/grammar.y
  	mv y.tab.c grammar.c
  	mv y.tab.h tokdefs.h
  
@@ -88,7 +91,7 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  	@rm -f $@
  	if grep GIT ${srcdir}/VERSION >/dev/null; then \
  		read ver <${srcdir}/VERSION; \
-@@ -473,7 +472,7 @@ version.c: $(srcdir)/VERSION
+@@ -489,7 +488,7 @@ version.c: $(srcdir)/VERSION
  # so we make the version string static and return it from
  # a function, which does work.
  #
@@ -97,7 +100,7 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  	@rm -f $@
  	if grep GIT ${srcdir}/VERSION >/dev/null; then \
  		read ver <${srcdir}/VERSION; \
-@@ -487,7 +486,7 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
+@@ -503,7 +502,7 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
  	rm -f bpf_filter.c
  	ln -s $(srcdir)/bpf/net/bpf_filter.c bpf_filter.c
  
@@ -106,16 +109,16 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
  	$(CC) $(FULL_CFLAGS) -c bpf_filter.c
  
  #
-@@ -530,7 +529,7 @@ opentest: tests/opentest.c libpcap.a
- selpolltest: tests/selpolltest.c libpcap.a
- 	$(CC) $(FULL_CFLAGS) -I. -L. -o selpolltest $(srcdir)/tests/selpolltest.c libpcap.a $(LIBS)
+@@ -549,7 +548,7 @@ selpolltest: tests/selpolltest.c libpcap
+ valgrindtest: tests/valgrindtest.c libpcap.a
+ 	$(CC) $(FULL_CFLAGS) -I. -L. -o valgrindtest $(srcdir)/tests/valgrindtest.c libpcap.a $(LIBS)
  
 -install: install-shared install-archive pcap-config
 +install: libpcap.la pcap-config
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -545,57 +544,58 @@ install: install-shared install-archive 
+@@ -564,56 +563,73 @@ install: install-shared install-archive 
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -140,42 +143,41 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
 +	for i in $(MAN3PCAP_EXPAND:.3pcap.in=.3); do \
 +		$(INSTALL_DATA) $${i}pcap \
  		    $(DESTDIR)$(mandir)/man3/$$i; done
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_name.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_dump_open.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_freealldevs.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_findalldevs.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_freealldevs.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_perror.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_geterr.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_perror.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_inject.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_free_datalinks.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_list_datalinks.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_free_datalinks.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_free_tstamp_types.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_list_tstamp_types.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_free_tstamp_types.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_dispatch.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_loop.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_dispatch.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_minor_version.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_major_version.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_minor_version.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_next.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_next_ex.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_next.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3pcap
--	rm -f $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3pcap
--	ln $(DESTDIR)$(mandir)/man3/pcap_setnonblock.3pcap \
--		 $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3pcap
+-	(cd $(DESTDIR)$(mandir)/man3 && \
+-	rm -f pcap_datalink_val_to_description.3pcap && \
+-	$(LN_S) pcap_datalink_val_to_name.3pcap \
+-		 pcap_datalink_val_to_description.3pcap && \
+-	rm -f pcap_dump_fopen.3pcap && \
+-	$(LN_S) pcap_dump_open.3pcap pcap_dump_fopen.3pcap && \
+-	rm -f pcap_freealldevs.3pcap && \
+-	$(LN_S) pcap_findalldevs.3pcap pcap_freealldevs.3pcap && \
+-	rm -f pcap_perror.3pcap && \
+-	$(LN_S) pcap_geterr.3pcap pcap_perror.3pcap && \
+-	rm -f pcap_sendpacket.3pcap && \
+-	$(LN_S) pcap_inject.3pcap pcap_sendpacket.3pcap && \
+-	rm -f pcap_free_datalinks.3pcap && \
+-	$(LN_S) pcap_list_datalinks.3pcap pcap_free_datalinks.3pcap && \
+-	rm -f pcap_free_tstamp_types.3pcap && \
+-	$(LN_S) pcap_list_tstamp_types.3pcap pcap_free_tstamp_types.3pcap && \
+-	rm -f pcap_dispatch.3pcap && \
+-	$(LN_S) pcap_loop.3pcap pcap_dispatch.3pcap && \
+-	rm -f pcap_minor_version.3pcap && \
+-	$(LN_S) pcap_major_version.3pcap pcap_minor_version.3pcap && \
+-	rm -f pcap_next.3pcap && \
+-	$(LN_S) pcap_next_ex.3pcap pcap_next.3pcap && \
+-	rm -f pcap_open_dead_with_tstamp_precision.3pcap && \
+-	$(LN_S) pcap_open_dead.3pcap \
+-		 pcap_open_dead_with_tstamp_precision.3pcap && \
+-	rm -f pcap_open_offline_with_tstamp_precision.3pcap && \
+-	$(LN_S) pcap_open_offline.3pcap pcap_open_offline_with_tstamp_precision.3pcap && \
+-	rm -f pcap_fopen_offline.3pcap && \
+-	$(LN_S) pcap_open_offline.3pcap pcap_fopen_offline.3pcap && \
+-	rm -f pcap_fopen_offline_with_tstamp_precision.3pcap && \
+-	$(LN_S) pcap_open_offline.3pcap pcap_fopen_offline_with_tstamp_precision.3pcap && \
+-	rm -f pcap_tstamp_type_val_to_description.3pcap && \
+-	$(LN_S) pcap_tstamp_type_val_to_name.3pcap pcap_tstamp_type_val_to_description.3pcap && \
+-	rm -f pcap_getnonblock.3pcap && \
+-	$(LN_S) pcap_setnonblock.3pcap pcap_getnonblock.3pcap)
 +	rm -f $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_name.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3
@@ -206,9 +208,24 @@ $NetBSD: patch-ac,v 1.8 2013/02/06 18:07:04 jperkin Exp $
 +	rm -f $(DESTDIR)$(mandir)/man3/pcap_next.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_next_ex.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_next.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_open_dead_with_tstamp_precision.3
++	ln $(DESTDIR)$(mandir)/man3/pcap_open_dead.3 \
++		 $(DESTDIR)$(mandir)/man3/pcap_open_dead_with_tstamp_precision.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_open_offline_with_tstamp_precision.3
++	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
++		 $(DESTDIR)$(mandir)/man3/pcap_open_offline_with_tstamp_precision.3
 +	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline_with_tstamp_precision.3
++	ln $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3 \
++		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline_with_tstamp_precision.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
++	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
++		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_tstamp_type_val_to_description.3
++	ln $(DESTDIR)$(mandir)/man3/pcap_tstamp_type_val_to_name.3 \
++		 $(DESTDIR)$(mandir)/man3/pcap_tstamp_type_val_to_description.3
 +	rm -f $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_setnonblock.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3

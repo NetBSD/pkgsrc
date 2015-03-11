@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/06/15 21:01:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/03/11 21:05:09 tnn Exp $
 bin/pcap-config
 include/pcap-bpf.h
 include/pcap-int.h
@@ -8,6 +8,7 @@ include/pcap/bluetooth.h
 include/pcap/bpf.h
 include/pcap/ipnet.h
 include/pcap/namedb.h
+include/pcap/nflog.h
 include/pcap/pcap.h
 include/pcap/sll.h
 include/pcap/usb.h
@@ -37,11 +38,13 @@ man/man3/pcap_file.3
 man/man3/pcap_fileno.3
 man/man3/pcap_findalldevs.3
 man/man3/pcap_fopen_offline.3
+man/man3/pcap_fopen_offline_with_tstamp_precision.3
 man/man3/pcap_free_datalinks.3
 man/man3/pcap_free_tstamp_types.3
 man/man3/pcap_freealldevs.3
 man/man3/pcap_freecode.3
 man/man3/pcap_get_selectable_fd.3
+man/man3/pcap_get_tstamp_precision.3
 man/man3/pcap_geterr.3
 man/man3/pcap_getnonblock.3
 man/man3/pcap_inject.3
@@ -58,16 +61,20 @@ man/man3/pcap_next.3
 man/man3/pcap_next_ex.3
 man/man3/pcap_offline_filter.3
 man/man3/pcap_open_dead.3
+man/man3/pcap_open_dead_with_tstamp_precision.3
 man/man3/pcap_open_live.3
 man/man3/pcap_open_offline.3
+man/man3/pcap_open_offline_with_tstamp_precision.3
 man/man3/pcap_perror.3
 man/man3/pcap_sendpacket.3
 man/man3/pcap_set_buffer_size.3
 man/man3/pcap_set_datalink.3
+man/man3/pcap_set_immediate_mode.3
 man/man3/pcap_set_promisc.3
 man/man3/pcap_set_rfmon.3
 man/man3/pcap_set_snaplen.3
 man/man3/pcap_set_timeout.3
+man/man3/pcap_set_tstamp_precision.3
 man/man3/pcap_set_tstamp_type.3
 man/man3/pcap_setdirection.3
 man/man3/pcap_setfilter.3
@@ -77,6 +84,7 @@ man/man3/pcap_stats.3
 man/man3/pcap_statustostr.3
 man/man3/pcap_strerror.3
 man/man3/pcap_tstamp_type_name_to_val.3
+man/man3/pcap_tstamp_type_val_to_description.3
 man/man3/pcap_tstamp_type_val_to_name.3
 man/man5/pcap-savefile.5
 man/man7/pcap-filter.7

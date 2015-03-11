@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.6 2013/02/06 18:07:04 jperkin Exp $
+$NetBSD: patch-ad,v 1.7 2015/03/11 21:05:09 tnn Exp $
 
 * Re-order includes to avoid bpf_program re-definition.
 
---- fad-getad.c.orig	2012-03-29 12:57:32.000000000 +0000
+--- fad-getad.c.orig	2014-11-13 08:58:52.000000000 +0000
 +++ fad-getad.c
-@@ -54,12 +54,6 @@ static const char rcsid[] _U_ =
+@@ -49,12 +49,6 @@
  #include <string.h>
  #include <ifaddrs.h>
  
@@ -14,12 +14,12 @@ $NetBSD: patch-ad,v 1.6 2013/02/06 18:07:04 jperkin Exp $
 -#include "os-proto.h"
 -#endif
 -
- #ifdef AF_PACKET
- # ifdef HAVE_NETPACKET_PACKET_H
- /* Solaris 11 and later, Linux distributions with newer glibc */
-@@ -77,6 +71,12 @@ static const char rcsid[] _U_ =
+ /*
+  * We don't do this on Solaris 11 and later, as it appears there aren't
+  * any AF_PACKET addresses on interfaces, so we don't need this, and
+@@ -78,6 +72,12 @@
  # endif /* HAVE_NETPACKET_PACKET_H */
- #endif /* AF_PACKET */
+ #endif /* (defined(linux) || defined(__Lynx__)) && defined(AF_PACKET) */
  
 +#include "pcap-int.h"
 +
