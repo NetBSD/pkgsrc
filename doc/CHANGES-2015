@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1268 2015/03/11 01:31:13 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1269 2015/03/11 04:18:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1776,3 +1776,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 36.0.1 [ryoon 2015-03-11]
 	Updated security/flawfinder to 1.31 [mef 2015-03-11]
 	Updated security/dirmngr to 1.1.1 [mef 2015-03-11]
+	Updated www/firefox-l10n to 36.0.1 [ryoon 2015-03-11]
