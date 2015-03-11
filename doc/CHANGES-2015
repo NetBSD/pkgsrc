@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1276 2015/03/11 21:09:52 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1277 2015/03/11 21:34:33 nils Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1785,3 +1785,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/fail2ban to 0.9.1nb1 [nils 2015-03-11]
 	Updated net/libpcap to 1.7.2 [tnn 2015-03-11]
 	Updated net/tcpdump to 4.7.3 [tnn 2015-03-11]
+	Updated sysutils/logrotate to 3.8.9 [nils 2015-03-11]
