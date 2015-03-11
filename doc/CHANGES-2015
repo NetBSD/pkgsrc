@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1270 2015/03/11 14:08:32 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1271 2015/03/11 14:18:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1778,3 +1778,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/dirmngr to 1.1.1 [mef 2015-03-11]
 	Updated www/firefox-l10n to 36.0.1 [ryoon 2015-03-11]
 	Updated net/cacti to 0.8.8c [adam 2015-03-11]
+	Updated www/moodle to 2.8.5 [wen 2015-03-11]
