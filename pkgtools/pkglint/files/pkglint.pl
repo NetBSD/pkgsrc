@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.876 2015/02/01 18:33:27 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.877 2015/03/11 19:05:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4051,7 +4051,18 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			}
 		},
 
+		FetchURL => sub {
+			checkline_mk_vartype_basic($line, $varname, "URL", $op, $value, $comment, $list_context, $is_guessed);
 
+			my $sites = get_dist_sites();
+			foreach my $site (keys(%{$sites})) {
+				if (index($value, $site) == 0) {
+					my $subdir = substr($value, length($site));
+					$line->log_warning(sprintf("Please use \${%s:=%s} instead of \"%s\".", $sites->{$site}, $subdir, $value));
+					last;
+				}
+			}
+		},
 
 		Filename => sub {
 			if ($value_novar =~ m"/") {
@@ -4470,18 +4481,9 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 			} elsif ($value =~ m"^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:=?\@A-Z_a-z~]|#)*$") {
 				my ($proto, $host, $port, $path) = ($1, $2, $3, $4);
-				my $sites = get_dist_sites();
 
 				if ($host =~ m"\.NetBSD\.org$"i && $host !~ m"\.NetBSD\.org$") {
 					$line->log_warning("Please write NetBSD.org instead of ${host}.");
-				}
-
-				foreach my $site (keys(%{$sites})) {
-					if (index($value, $site) == 0) {
-						my $subdir = substr($value, length($site));
-						$line->log_warning(sprintf("Please use \${%s:=%s} instead of \"%s\".", $sites->{$site}, $subdir, $value));
-						last;
-					}
 				}
 
 			} elsif ($value =~ m"^([0-9A-Za-z]+)://([^/]+)(.*)$") {
