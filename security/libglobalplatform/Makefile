@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/12 21:23:11 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/12 19:41:30 tnn Exp $
 
 DISTNAME=	globalplatform-6.0.0
 PKGNAME=	lib${DISTNAME}
@@ -21,6 +21,7 @@ USE_LANGUAGES+=	c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/pcsc-lite/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
