@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/05 20:50:29 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2015/03/12 16:57:52 tnn Exp $
 
---- doc/fftw.texi.orig	Sat Mar  3 16:17:10 2001
+Unbreak build with gtexinfo-5.2
+
+--- doc/fftw.texi.orig	2003-03-16 23:43:18.000000000 +0000
 +++ doc/fftw.texi
 @@ -5,6 +5,11 @@
  @settitle FFTW
@@ -14,3 +16,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/06/05 20:50:29 wiz Exp $
  @include version.texi
  @setchapternewpage odd
  @c define constant index (ct)
+@@ -46,10 +51,10 @@ approved by the Free Software Foundation
+ @titlepage
+ @sp 10
+ @comment The title is printed in a large font.
+-@title{FFTW User's Manual}
++@title FFTW User's Manual
+ @subtitle For version @value{VERSION}, @value{UPDATED}
+-@author{Matteo Frigo}
+-@author{Steven G. Johnson}
++@author Matteo Frigo
++@author Steven G. Johnson
+ 
+ @c The following two commands start the copyright page.
+ @page
