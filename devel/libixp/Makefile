@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/05/17 19:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/12 15:34:16 tnn Exp $
 
 DISTNAME=		libixp-0.4
 CATEGORIES=		devel
@@ -18,4 +18,5 @@ REPLACE_SH+=		util/compile
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.SunOS+=		-lsocket
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
