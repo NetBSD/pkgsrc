@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/07 15:04:28 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/12 17:27:50 tnn Exp $
 
 DISTNAME=	mm-common-0.9.6
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Provides build infrastructure utilities for GNOME C++ libraries
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gzip pkg-config
 USE_LANGUAGES=	c++
 
 PKGCONFIG_OVERRIDE+=	doctags/mm-common-libstdc++-uninstalled.pc.in
