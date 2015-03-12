@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 14:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/03/12 16:38:09 tnn Exp $
 
 DISTNAME=	eb-4.3
 PKGREVISION=	5
@@ -49,7 +49,7 @@ EXTRACT_ONLY=	${EB_DISTFILES}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake gzip perl
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
