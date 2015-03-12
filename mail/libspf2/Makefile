@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/12 08:17:50 tron Exp $
+# $NetBSD: Makefile,v 1.13 2015/03/12 17:45:50 tnn Exp $
 
 DISTNAME=	libspf2-1.2.10
 PKGREVISION=	1
@@ -15,4 +15,5 @@ USE_LIBTOOL=	YES
 
 CONFLICTS+=	libspf_alt-[0-9]*
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
