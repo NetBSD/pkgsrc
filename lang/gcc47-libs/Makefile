@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/03/12 14:53:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/12 14:57:36 jperkin Exp $
 
 GCC_PKGNAME=	gcc47
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -50,9 +50,9 @@ GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
 	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
 
 ${LIBRARY_FILES}:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC47_DIST_VERSION}*' |		\
+	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC47_DIST_VERSION}*' |	\
 	${SED} -n -e's,^${LIBGCC_PREFIX}/,,' -e'/libexec\//d'		\
-		-e'/libgij/d;/libgcj/d;/libjvm/d'			\
+		-e'/libgcj/d;/libgij/d;/libgo\./d;/libjvm/d'		\
 		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
 
 do-install: ${LIBRARY_FILES}
