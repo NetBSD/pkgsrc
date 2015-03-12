@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 19:30:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/12 16:48:40 tnn Exp $
 
 DISTNAME=	dynamips-0.2.8-RC2
 PKGNAME=	${DISTNAME:S/-RC/rc/}
@@ -33,5 +33,6 @@ do-install:
 
 .include "../../devel/libelf/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
