@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/05/29 23:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/03/12 14:07:11 tnn Exp $
 
 DISTNAME=	autogen-5.12
 PKGREVISION=	4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://autogen.sourceforge.net/
 COMMENT=	The Automated Text and Program Generation Tool
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		gmake makeinfo perl:run
+USE_TOOLS+=		gmake gzip makeinfo perl:run
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
