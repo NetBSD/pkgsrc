@@ -1,0 +1,84 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/03/12 13:54:30 nros Exp $
+* support in-source builds.
+* fix build with Qt5 (fixed upstream)
+* remove apple specific stuff to make it behave correct on MacOSX
+--- CMakeLists.txt.orig	2014-07-05 14:29:03.000000000 +0000
++++ CMakeLists.txt
+@@ -1,9 +1,9 @@
+ PROJECT(bibletime CXX C)
+ CMAKE_MINIMUM_REQUIRED(VERSION 2.8.9)
+ 
+-IF("${CMAKE_CURRENT_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
+-  MESSAGE(FATAL_ERROR "You probably didn't mean to run CMake from this directory. Now you have all messed up! You'd better delete CMakeFiles/ and CMakeCache.txt or things will break!")
+-ENDIF()
++#IF("${CMAKE_CURRENT_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
++#  MESSAGE(FATAL_ERROR "You probably didn't mean to run CMake from this directory. Now you have all messed up! You'd better delete CMakeFiles/ and CMakeCache.txt or things will break!")
++#ENDIF()
+ 
+ SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+ 
+@@ -90,13 +90,8 @@ IF(MSVC)
+ ENDIF()
+ 
+ # SET INSTALLATION PATHS
+-IF(APPLE)
+-  SET(BT_DESTINATION "../MacOS")
+-  SET(BT_SHARE_PATH "../share")
+-ELSE()
+   SET(BT_DESTINATION "bin")
+   SET(BT_SHARE_PATH "share")
+-ENDIF()
+ 
+ IF(NOT BT_FORCE_USE_QT4)
+   # Automatically use Qt5 if available
+@@ -106,6 +101,7 @@ ENDIF()
+ # Find required packages
+ IF(Qt5Core_FOUND)
+   FIND_PACKAGE(Qt5LinguistTools REQUIRED)
++  FIND_PACKAGE(Qt5PrintSupport REQUIRED)
+   FIND_PACKAGE(Qt5Widgets REQUIRED)
+   FIND_PACKAGE(Qt5DBus QUIET)
+   IF(Qt5DBus_FOUND AND NOT APPLE)
+@@ -156,8 +152,6 @@ ENDIF()
+ 
+ IF(${BIBLETIME_FRONTEND} STREQUAL "MOBILE")
+   SET_TARGET_PROPERTIES("bibletime" PROPERTIES OUTPUT_NAME "btm")
+-ELSEIF(APPLE)
+-  SET_TARGET_PROPERTIES("bibletime" PROPERTIES OUTPUT_NAME "BibleTime")
+ ELSE()
+   SET_TARGET_PROPERTIES("bibletime" PROPERTIES OUTPUT_NAME "bibletime")
+ ENDIF()
+@@ -175,9 +169,9 @@ IF(Qt5Core_FOUND)
+     qt5_use_modules("bibletime" Widgets Qml Quick Network)
+   ELSE()
+     IF(BT_Use_DBus)
+-      qt5_use_modules("bibletime" DBus Widgets WebKit WebKitWidgets Xml Network)
++      qt5_use_modules("bibletime" DBus Widgets WebKit WebKitWidgets Xml Network PrintSupport)
+     ELSE()
+-      qt5_use_modules("bibletime" Widgets WebKit WebKitWidgets Xml Network)
++      qt5_use_modules("bibletime" Widgets WebKit WebKitWidgets Xml Network PrintSupport)
+     ENDIF()
+   ENDIF()
+ ELSE()
+@@ -267,21 +261,12 @@ IF(MSVC)
+   ENDIF()
+ ENDIF()
+ 
+-IF(APPLE)
+-  # sword locale information, needed for DMG image
+-  FILE(GLOB INSTALL_SWORD_LOCALE_LIST "${Sword_INCLUDE_DIRS}/../../share/sword/locales.d/*")
+-  INSTALL(FILES ${INSTALL_SWORD_LOCALE_LIST}
+-          DESTINATION "${BT_SHARE_PATH}/sword/locales.d/")
+-ENDIF()
+ 
+ INCLUDE("${CMAKE_CURRENT_SOURCE_DIR}/cmake/BTDocumentation.cmake")
+ 
+ IF(WIN32 AND NOT UNIX)
+   INCLUDE("${CMAKE_CURRENT_SOURCE_DIR}/cmake/BTBinaryPackageWindows.cmake")
+ ENDIF()
+-IF(APPLE)
+-  INCLUDE("${CMAKE_CURRENT_SOURCE_DIR}/cmake/BTBinaryPackageMacOS.cmake")
+-ENDIF()
+ 
+ ######################################################
+ # "make uninstall" target; see http://www.cmake.org/Wiki/CMake_FAQ#Can_I_do_.22make_uninstall.22_with_CMake.3F
