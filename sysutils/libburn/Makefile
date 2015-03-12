@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/19 11:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/12 18:43:38 tnn Exp $
 
 DISTNAME=	libburn-1.3.8
 #PKGNAME=	${DISTNAME:S/.pl/pl/}
@@ -17,4 +17,5 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libburn-1.pc.in
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
