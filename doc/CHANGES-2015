@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1281 2015/03/12 13:34:55 nros Exp $
+$NetBSD: CHANGES-2015,v 1.1282 2015/03/12 13:37:41 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1789,4 +1789,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/capstone to 3.0.2 [mef 2015-03-12]
 	Updated www/thttpd to 2.26 [hiramatsu 2015-03-12]
 	Updated misc/libreoffice4 to 4.4.1.2nb3 [ryoon 2015-03-12]
-	Added misc/sword version 1.7.4 [root 2015-03-12]
+	Added misc/sword version 1.7.4 [nros 2015-03-12]
