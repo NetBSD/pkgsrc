@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.450 2015/02/13 11:13:28 jmcneill Exp $
+# $NetBSD: Makefile,v 1.451 2015/03/12 14:00:14 nros Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -16,6 +16,7 @@ SUBDIR+=	basket
 SUBDIR+=	bbappconf
 SUBDIR+=	bbdb
 SUBDIR+=	bbweather
+SUBDIR+=	bibletime
 SUBDIR+=	blccc
 SUBDIR+=	bottlerocket
 SUBDIR+=	brs
@@ -301,6 +302,7 @@ SUBDIR+=	stellarium
 SUBDIR+=	step
 SUBDIR+=	superkaramba
 SUBDIR+=	sweeper
+SUBDIR+=	sword
 SUBDIR+=	taskjuggler
 SUBDIR+=	tds
 SUBDIR+=	team
