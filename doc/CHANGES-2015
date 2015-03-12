@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1285 2015/03/12 14:46:37 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1286 2015/03/12 14:53:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1793,3 +1793,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-atomicwrites to 0.1.4 [wiz 2015-03-12]
 	Added misc/bibletime version 2.10.1nb2 [nros 2015-03-12]
 	Updated pkgtools/x11-links to 0.93 [ryoon 2015-03-12]
+	Updated lang/gcc47 to 4.7.4 [ryoon 2015-03-12]
+	Updated lang/gcc47-libs to 4.7.4nb1 [ryoon 2015-03-12]
