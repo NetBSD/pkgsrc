@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.63 2015/03/09 09:02:20 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2015/03/12 02:59:04 ryoon Exp $
 
 VERREL=		4.4.1
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -228,21 +228,21 @@ post-extract:
 #	mkdir ${WRKSRC}/${OBJDIR}
 
 do-install:
-	cd ${WRKSRC} && make DESTDIR="${DESTDIR}" install
+	cd ${WRKSRC} && make DESTDIR="${DESTDIR}" PREFIXDIR="${PREFIX}" distro-pack-install
 # make install cleans ${DESTDIR}${PREFIX}/*, so bin etc. are removed.
 .for d in ${INSTALLATION_DIRS}
 	cd ${DESTDIR}${PREFIX} && \
 		${MKDIR} ${d}
 .endfor
 
-post-install:
-.for f in ${LO_PROGRAMS}
-	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../${PKGNAME_NOREV}/program/${f}
-.endfor
-	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/soffice ${DESTDIR}${PREFIX}/bin/libreoffice
-.for f in ${LO_DESKTOP_FILES}
-	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
-.endfor
+#post-install:
+#.for f in ${LO_PROGRAMS}
+#	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../${PKGNAME_NOREV}/program/${f}
+#.endfor
+#	${LN} -s ${DESTDIR}${PREFIX}/bin/soffice ${DESTDIR}${PREFIX}/bin/libreoffice
+#.for f in ${LO_DESKTOP_FILES}
+#	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
+#.endfor
 
 .include "../../converters/libabw/buildlink3.mk"
 .include "../../converters/libcdr/buildlink3.mk"
