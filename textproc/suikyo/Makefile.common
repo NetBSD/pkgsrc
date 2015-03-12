@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/03/12 14:59:57 taca Exp $
 #
 # used by textproc/ruby-suikyo/Makefile
 # used by textproc/suikyo-docs/Makefile
@@ -20,3 +20,5 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
+
+RUBY_VERSION_SUPPORTED= 18
