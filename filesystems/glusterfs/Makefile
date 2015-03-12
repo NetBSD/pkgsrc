@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/01/11 23:07:01 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2015/03/12 16:35:39 tnn Exp $
 
 DISTNAME=	glusterfs-3.6.0
 #PKGREVISION=	1
@@ -102,6 +102,7 @@ PLIST.mmx=	yes
 .endif
 
 #.include "../../devel/argp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
