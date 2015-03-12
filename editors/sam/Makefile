@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/04/06 12:04:00 rodent Exp $
+# $NetBSD: Makefile,v 1.41 2015/03/12 17:32:58 tnn Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -24,7 +24,9 @@ MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q}
 INSTALLATION_DIRS=	bin include lib/X11/app-defaults \
 	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man4 ${PKGMANDIR}/man6
 
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} X11PREFIX=${DESTDIR}${X11PREFIX}
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX:Q}		\
+			X11PREFIX=${DESTDIR}${X11PREFIX:Q}	\
+			MAN=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
