@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/03/12 13:54:30 nros Exp $
+
+SHA1 (bibletime-2.10.1.tar.xz) = 94f6f98f27ccfceee88c985bc393777b6a81d3f9
+RMD160 (bibletime-2.10.1.tar.xz) = a605ce0b04a33edd48fe33caf1ac41d017aca497
+Size (bibletime-2.10.1.tar.xz) = 3252680 bytes
+SHA1 (patch-CMakeLists.txt) = a6a992a57ee51edab2e8583c6805a017a252d7b2
