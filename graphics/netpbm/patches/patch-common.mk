@@ -1,4 +1,4 @@
-$NetBSD: patch-common.mk,v 1.2 2015/03/11 23:19:58 tnn Exp $
+$NetBSD: patch-common.mk,v 1.3 2015/03/12 12:35:42 tnn Exp $
 
 Simplify install target.
 --- common.mk.orig	2014-09-08 21:26:50.000000000 +0000
@@ -12,12 +12,3 @@ Simplify install target.
    $(PKGMANSUBDIRS:%=$(PKGMANDIR)/%)
  
  $(PKGSUBDIRS:%=$(PKGDIR)/%):
-@@ -510,7 +510,7 @@ install.man: install.man1 install.man3 i
- 
- MANUALS1 = $(BINARIES) $(SCRIPTS)
- 
--PKGMANDIR = man
-+PKGMANDIR? = man
- 
- install.man1: $(MANUALS1:%=%_installman1)
- 
