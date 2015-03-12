@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/19 11:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/12 18:40:37 tnn Exp $
 
 DISTNAME=	libisofs-1.3.8
 CATEGORIES=	sysutils
@@ -15,5 +15,6 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libisofs-1.pc.in
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
