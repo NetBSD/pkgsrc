@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/02/22 07:11:48 mef Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/12 00:27:07 mef Exp $
 
-DISTNAME=	capstone-3.0.1
+DISTNAME=	capstone-3.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.capstone-engine.org/download/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
