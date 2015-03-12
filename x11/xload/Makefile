@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/08/04 07:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/03/12 14:00:58 tnn Exp $
 
 DISTNAME=	xload-1.1.2
 CATEGORIES=	x11
@@ -16,5 +16,6 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
