@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/05/29 23:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/03/12 17:35:06 tnn Exp $
 
 DISTNAME=		udunits-1.12.1
 PKGREVISION=		8
@@ -12,7 +12,7 @@ COMMENT=		Library and program for manipulating units of physical quantities
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl soelim
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 
 GNU_CONFIGURE=		yes
