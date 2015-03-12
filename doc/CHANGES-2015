@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1286 2015/03/12 14:53:54 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1287 2015/03/12 14:56:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1795,3 +1795,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/x11-links to 0.93 [ryoon 2015-03-12]
 	Updated lang/gcc47 to 4.7.4 [ryoon 2015-03-12]
 	Updated lang/gcc47-libs to 4.7.4nb1 [ryoon 2015-03-12]
+	Updated lang/gcc48 to 4.8.4 [ryoon 2015-03-12]
+	Updated lang/gcc48-libs to 4.8.4nb1 [ryoon 2015-03-12]
