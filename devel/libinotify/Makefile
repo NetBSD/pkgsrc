@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:16 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/12 14:54:14 tnn Exp $
 #
 
 DISTNAME=	libinotify-0.0
@@ -20,4 +20,5 @@ NOT_FOR_PLATFORM+=	SunOS-*-*
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fvi
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
