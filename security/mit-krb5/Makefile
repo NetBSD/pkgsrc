@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/02/25 22:28:58 tez Exp $
+# $NetBSD: Makefile,v 1.79 2015/03/12 14:26:11 tnn Exp $
 
 DISTNAME=	krb5-1.10.7
 PKGNAME=	mit-${DISTNAME}
@@ -28,7 +28,7 @@ CONFLICTS+=	kth-krb4-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gmake m4 perl yacc msgfmt
+USE_TOOLS+=		autoconf gmake gzip m4 perl yacc msgfmt
 MAKE_PROGRAM=		gmake
 GNU_CONFIGURE=		yes
 
