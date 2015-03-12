@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/12 19:17:55 tnn Exp $
 
 DISTNAME=		manual_src
 PKGNAME=		csound6-manual-${CSOUND_VERSION}
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 CSOUND_VERSION=		6.02
 WRKSRC=			${WRKDIR}/manual6
 DIST_SUBDIR=		${PKGNAME_NOREV}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 EXTRACT_USING=		bsdtar
 BUILD_TARGET=		html-dist
 
