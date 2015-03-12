@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2015/03/11 23:19:58 tnn Exp $
+# $NetBSD: Makefile,v 1.203 2015/03/12 12:35:42 tnn Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
@@ -25,7 +25,7 @@ USE_FEATURES=	snprintf
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
 		pkgdir=${STAGEDIR:Q} MACHINE=${MACHINE:Q}
-INSTALL_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
+MAKE_FLAGS+=	PKGMANDIR=${PKGMANDIR:Q}
 MAKE_FILE=	GNUmakefile
 REPLACE_PERL+=	converter/pbm/pbmtox10bm
 REPLACE_PERL+=	editor/pnmflip
