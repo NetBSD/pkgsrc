@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14223 2015/03/12 14:53:54 ryoon Exp $
+$NetBSD: TODO,v 1.14224 2015/03/12 14:56:52 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gated-3.6
 	o gaupol-0.25
 	o gbrainy-2.24
-	o gcc48-4.8.4
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-14.05
