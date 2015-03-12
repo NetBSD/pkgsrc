@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libpciaccess,v 1.3 2014/05/08 02:31:50 obache Exp $
+# $NetBSD: xorg.libpciaccess,v 1.4 2015/03/12 14:46:09 ryoon Exp $
 #
 include/pciaccess.h
 lib/libpciaccess.a
@@ -8,5 +8,6 @@ lib/libpciaccess.so.0
 lib/libpciaccess.so.0.0
 lib/libpciaccess.so.0.1
 lib/libpciaccess.so.0.2
+lib/libpciaccess.so.0.3
 lib/libpciaccess.so.2.0
 lib/pkgconfig/pciaccess.pc
