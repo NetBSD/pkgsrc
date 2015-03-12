@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1277 2015/03/11 21:34:33 nils Exp $
+$NetBSD: CHANGES-2015,v 1.1278 2015/03/12 00:27:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/libpcap to 1.7.2 [tnn 2015-03-11]
 	Updated net/tcpdump to 4.7.3 [tnn 2015-03-11]
 	Updated sysutils/logrotate to 3.8.9 [nils 2015-03-11]
+	Updated devel/capstone to 3.0.2 [mef 2015-03-12]
