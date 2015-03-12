@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/03/10 19:57:18 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/03/12 20:55:48 tnn Exp $
 
-SHA1 (text-d1927f6997.tar.gz) = 2162e660512da00c58f3e9263b473799f34691ee
-RMD160 (text-d1927f6997.tar.gz) = 7ad5877f4ee68773d145dccd870f94b0a5c90ce5
-Size (text-d1927f6997.tar.gz) = 3477748 bytes
+SHA1 (go-text-20150310-d1927f6997.tar.gz) = 2162e660512da00c58f3e9263b473799f34691ee
+RMD160 (go-text-20150310-d1927f6997.tar.gz) = 7ad5877f4ee68773d145dccd870f94b0a5c90ce5
+Size (go-text-20150310-d1927f6997.tar.gz) = 3477748 bytes
