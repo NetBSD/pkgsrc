@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/04/18 12:01:52 obache Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/03/12 17:50:30 tnn Exp $
 #
 # used by security/dsniff/Makefile
 # used by security/dsniff-nox11/Makefile
@@ -25,6 +25,7 @@ SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet10}/include/libnet10|
 SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet10}/lib/libnet10|g"
 SUBST_MESSAGE.conf=	Fixing configuration script.
 
-.include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libnids/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
