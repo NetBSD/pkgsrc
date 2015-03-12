@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.23 2014/05/03 21:31:10 ryoon Exp $
+# $NetBSD: xorg,v 1.24 2015/03/12 14:46:09 ryoon Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -387,6 +387,7 @@ lib/libXi.so.6
 lib/libXi.so.6.0
 lib/libXi.so.7
 lib/libXi.so.7.0
+lib/libXi.so.7.1
 lib/libXi.so.10.1
 lib/libXi.so.11.0
 lib/libXi.so.11.1

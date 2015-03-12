@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.11 2015/02/21 17:31:44 jmcneill Exp $
+# $NetBSD: xorg.libxcb,v 1.12 2015/03/12 14:46:09 ryoon Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -83,7 +83,6 @@ lib/libxcb-glx.la
 lib/libxcb-glx.so
 lib/libxcb-glx.so.0
 lib/libxcb-glx.so.0.0
-lib/libxcb-glx.so.0.1
 lib/libxcb-glx.so.0.1
 lib/libxcb-glx.so.0.2
 lib/libxcb-glx.so.1.0
@@ -170,6 +169,7 @@ lib/libxcb-sync.so.0
 lib/libxcb-sync.so.0.0
 lib/libxcb-sync.so.0.1
 lib/libxcb-sync.so.0.2
+lib/libxcb-sync.so.1
 lib/libxcb-sync.so.1.0
 lib/libxcb-wm.0.0.0.dylib
 lib/libxcb-wm.0.dylib
@@ -266,6 +266,8 @@ lib/libxcb.la
 lib/libxcb.so
 lib/libxcb.so.1
 lib/libxcb.so.1.1
+lib/libxcb.so.2
+lib/libxcb.so.2.0
 lib/libxcb.so.2.2
 lib/libxcb.so.2.3
 lib/libxcb.so.2.4
