@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/12/10 13:36:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/12 14:10:28 tnn Exp $
 
 DISTNAME=	redis-2.8.18
 CATEGORIES=	databases
@@ -67,4 +67,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SH} runtest
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
