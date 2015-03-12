@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1279 2015/03/12 01:01:06 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1280 2015/03/12 03:00:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/logrotate to 3.8.9 [nils 2015-03-11]
 	Updated devel/capstone to 3.0.2 [mef 2015-03-12]
 	Updated www/thttpd to 2.26 [hiramatsu 2015-03-12]
+	Updated misc/libreoffice4 to 4.4.1.2nb3 [ryoon 2015-03-12]
