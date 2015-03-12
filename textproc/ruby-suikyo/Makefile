@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/08 14:07:43 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/12 14:59:57 taca Exp $
 #
 
 .include "../../textproc/suikyo/Makefile.common"
@@ -17,8 +17,6 @@ DEPENDS+=	suikyo-docs>=${SUIKYO_VER}:../../textproc/suikyo-docs
 #
 CONFLICTS+=	ruby[1-9][0-9]-suikyo-*
 BUILD_DIRS+=	ruby
-
-RUBY_VERSION_SUPPORTED= 18
 
 CONFIGURE_ARGS+=	--with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
 
