@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/01/17 08:06:07 pho Exp $
+# $NetBSD: Makefile,v 1.34 2015/03/12 15:32:05 tnn Exp $
 
 DISTNAME=	libgii-1.0.2.src
 PKGREVISION=	1
@@ -38,6 +38,7 @@ PLIST.ggtick=		yes
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
