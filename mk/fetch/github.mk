@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.7 2015/03/09 15:50:18 tnn Exp $
+# $NetBSD: github.mk,v 1.8 2015/03/12 21:00:01 tnn Exp $
 #
 # github.com master site handling
 #
@@ -27,7 +27,7 @@
 #
 # Keywords: github
 
-.if defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://github.com/[a-zA-Z0-9]*/$,match,:Mmatch)
+.if defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://github.com/[-a-zA-Z0-9]*/$,match,:Mmatch)
 _USE_GITHUB=		YES
 .endif
 
