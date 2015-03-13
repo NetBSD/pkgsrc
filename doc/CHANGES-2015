@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1332 2015/03/13 16:19:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1333 2015/03/13 16:25:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1846,3 +1846,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-maruku to 0.7.2 [taca 2015-03-13]
 	Updated textproc/ruby-multi_json to 1.11.0 [taca 2015-03-13]
 	Updated textproc/ruby-safe_yaml to 1.0.4 [taca 2015-03-13]
+	Updated textproc/ruby-textpow to 1.4.0 [taca 2015-03-13]
