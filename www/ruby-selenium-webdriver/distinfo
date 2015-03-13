@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/08/18 03:41:50 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/03/13 17:59:44 taca Exp $
 
-SHA1 (selenium-webdriver-2.42.0.gem) = b427a8615eec68e7a0608a230ca1b09bc8bc3e32
-RMD160 (selenium-webdriver-2.42.0.gem) = 79c939cbc461ae60de824fa9e7a6fd4a40e31d39
-Size (selenium-webdriver-2.42.0.gem) = 2780160 bytes
+SHA1 (selenium-webdriver-2.45.0.gem) = 587bd9ef036dd633de0197a0a8a668dcf2bece3c
+RMD160 (selenium-webdriver-2.45.0.gem) = 06011312aada29428451d6afcb3d13fcfe451c88
+Size (selenium-webdriver-2.45.0.gem) = 2918912 bytes
