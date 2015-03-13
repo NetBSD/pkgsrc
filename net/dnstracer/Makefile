@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/03/08 03:39:28 mef Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/13 18:23:02 tnn Exp $
 
 DISTNAME=		dnstracer-1.10
 CATEGORIES=		net
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_FEATURES+=		inet6
 WRKSRC=			${WRKDIR}/${PKGBASE}
 AUTO_MKDIRS=		yes
-USE_TOOLS+=		tar
+USE_TOOLS+=		gzip tar
 
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 
