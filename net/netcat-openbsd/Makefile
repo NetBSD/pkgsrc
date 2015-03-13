@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/13 16:10:08 tnn Exp $
 
-PKGNAME=	netcat-openbsd-1
+DISTNAME=	netcat-openbsd-20131208
 CATEGORIES=	net
-DISTNAME=	msporleder-netcat-openbsd-126d9bb
-MASTER_SITES=	-https://codeload.github.com/msporleder/netcat-openbsd/legacy.tar.gz/126d9bb
-#FETCH_OUTPUT_ARGS=	${DISTNAME}
-LICENSE=		modified-bsd
+MASTER_SITES=	${MASTER_SITE_GITHUB:=msporleder/}
+GITHUB_TAG=	126d9bbdca6afb45d9c2d38e4313d2a1a59e35e9
+LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openbsd.org/
