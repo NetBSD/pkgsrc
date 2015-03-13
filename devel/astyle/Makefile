@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/08/13 20:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/13 17:08:14 tnn Exp $
 
 DISTNAME=	astyle_2.04_linux
 PKGNAME=	${DISTNAME:S/_linux//:S/_/-/}
@@ -22,4 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/gcc/bin/astyle ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${DESTDIR}${HTMLDIR}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
