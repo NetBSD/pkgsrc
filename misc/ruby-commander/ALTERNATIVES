@@ -1,0 +1,1 @@
+bin/commander @PREFIX@/bin/commander@RUBY_SUFFIX@
