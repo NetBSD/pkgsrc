@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/02/02 12:35:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/13 16:53:12 taca Exp $
 
-DISTNAME=	jekyll-1.2.0
-PKGREVISION=	1
+DISTNAME=	jekyll-2.5.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,20 +8,23 @@ HOMEPAGE=	https://github.com/mojombo/jekyll
 COMMENT=	Blog-aware, static site generator in Ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-liquid>=2.5.1<2.6:../../www/ruby-liquid
-DEPENDS+=	${RUBY_PKGPREFIX}-classifier>=1.3.2<2:../../textproc/ruby-classifier
-DEPENDS+=	${RUBY_PKGPREFIX}-directory-watcher>=1.5.1:../../sysutils/ruby-directory-watcher
-DEPENDS+=	${RUBY_PKGPREFIX}-maruku>=0.5<1:../../textproc/ruby-maruku
-DEPENDS+=	${RUBY_PKGPREFIX}-kramdown>=0.14<1:../../textproc/ruby-kramdown
-DEPENDS+=	${RUBY_PKGPREFIX}-pygments.rb>=0.5<0.6:../../www/ruby-pygments.rb
-DEPENDS+=	${RUBY_PKGPREFIX}-commander>=4.1.3<4.2:../../misc/ruby-commander
-DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=0.7.0:../../textproc/ruby-safe_yaml
+DEPENDS+=	${RUBY_PKGPREFIX}-liquid>=2.6.1<2.7:../../www/ruby-liquid
+DEPENDS+=	${RUBY_PKGPREFIX}-kramdown>=1.3<2:../../textproc/ruby-kramdown
+DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.3.3<0.4:../../devel/ruby-mercenary
+DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=1.0<2:../../textproc/ruby-safe_yaml
 DEPENDS+=	${RUBY_PKGPREFIX}-colorator>=0.1<1:../../misc/ruby-colorator
-DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.0.0:../../textproc/ruby-redcarpet
+DEPENDS+=	${RUBY_PKGPREFIX}-pygments.rb>=0.6.0<0.7:../../www/ruby-pygments.rb
+DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.1<4:../../textproc/ruby-redcarpet
+DEPENDS+=	${RUBY_PKGPREFIX}-toml>=0.1.0<0.2:../../textproc/ruby-toml
+DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-paginate>=1.0<2:../../www/ruby-jekyll-paginate
+DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-gist>=1.0<2:../../www/ruby-jekyll-gist
+DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-coffeescript>=1.0<2:../../www/ruby-jekyll-coffeescript
+DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-sass-converter>=1.0<2:../../www/ruby-jekyll-sass-converter
+DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=1.1<2:../../www/ruby-jekyll-watch
+DEPENDS+=	${RUBY_PKGPREFIX}-classifier-reborn>=2.0<3:../../textproc/ruby-classifier-reborn
 
 RUBY_VERSION_SUPPORTED=	200 193 21
-
-OVERRIDE_GEMSPEC= directory_watcher>=1.5.1 safe_yaml>=0.9.5 redcarpet>=3.0.0
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
