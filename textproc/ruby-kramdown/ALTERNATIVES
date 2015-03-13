@@ -1,0 +1,1 @@
+bin/kramdown @PREFIX@/bin/kramdown${RUBY_SUFFIX}
