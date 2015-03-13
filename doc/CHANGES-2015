@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1349 2015/03/13 17:40:18 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1350 2015/03/13 17:46:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1875,3 +1875,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-rack-test to 0.6.3 [taca 2015-03-13]
 	Updated www/ruby-rest-client to 1.7.3 [taca 2015-03-13]
 	Updated www/ruby-sass to 3.4.13 [taca 2015-03-13]
+	Updated www/termtter to 2.2.1nb1 [taca 2015-03-13]
