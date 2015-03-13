@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1342 2015/03/13 17:21:44 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1343 2015/03/13 17:23:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1868,3 +1868,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-patron to 0.4.20 [taca 2015-03-13]
 	Updated www/ruby-pygments.rb to 0.6.2 [taca 2015-03-13]
 	Updated www/ruby-rack to 1.6.0 [taca 2015-03-13]
+	Updated www/ruby-rack-contrib to 1.2.0 [taca 2015-03-13]
