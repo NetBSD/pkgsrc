@@ -1,25 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/14 16:13:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/13 16:22:58 taca Exp $
 bin/plist2syntax
 bin/plist2yaml
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
-${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/README.rdoc
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/plist2syntax
 ${GEM_LIBDIR}/bin/plist2yaml
-${GEM_LIBDIR}/examples/benchmark_js.rb
-${GEM_LIBDIR}/examples/jquery.js
 ${GEM_LIBDIR}/lib/textpow.rb
 ${GEM_LIBDIR}/lib/textpow/debug_processor.rb
 ${GEM_LIBDIR}/lib/textpow/recording_processor.rb
 ${GEM_LIBDIR}/lib/textpow/score_manager.rb
 ${GEM_LIBDIR}/lib/textpow/syntax.rb
 ${GEM_LIBDIR}/lib/textpow/syntax/broken/markdown.syntax
-${GEM_LIBDIR}/lib/textpow/syntax/broken/php.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/buggy/nemerle.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/old/YAML.yaml
 ${GEM_LIBDIR}/lib/textpow/syntax/old/txt2tags.yaml
@@ -94,6 +86,7 @@ ${GEM_LIBDIR}/lib/textpow/syntax/source.pascal.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/source.pascal.vectorscript.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/source.perl.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/source.php.cake.syntax
+${GEM_LIBDIR}/lib/textpow/syntax/source.php.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/source.plist.tm-grammar.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/source.postscript.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/source.processing.syntax
@@ -183,13 +176,4 @@ ${GEM_LIBDIR}/lib/textpow/syntax/text.xml.strict.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/text.xml.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/text.xml.xsl.syntax
 ${GEM_LIBDIR}/lib/textpow/version.rb
-${GEM_LIBDIR}/spec/fixtures/objeck.plist
-${GEM_LIBDIR}/spec/fixtures/objeck.tmSyntax
-${GEM_LIBDIR}/spec/fixtures/utf8.txt
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/textpow/score_manager_spec.rb
-${GEM_LIBDIR}/spec/textpow/syntax_files_spec.rb
-${GEM_LIBDIR}/spec/textpow/syntax_spec.rb
-${GEM_LIBDIR}/spec/textpow_spec.rb
-${GEM_LIBDIR}/textpow.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
