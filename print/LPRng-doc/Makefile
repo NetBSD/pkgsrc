@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 13:45:34 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/03/13 16:41:47 tnn Exp $
 
 DISTNAME=	LPRng_DOC-3.6.13
 PKGNAME=	LPRng-doc-3.6.13
@@ -14,7 +14,7 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	gzip pax
 
 INSTALLATION_DIRS=	share/doc/LPRng
 
