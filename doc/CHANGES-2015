@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1333 2015/03/13 16:25:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1334 2015/03/13 16:36:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1847,3 +1847,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-multi_json to 1.11.0 [taca 2015-03-13]
 	Updated textproc/ruby-safe_yaml to 1.0.4 [taca 2015-03-13]
 	Updated textproc/ruby-textpow to 1.4.0 [taca 2015-03-13]
+	Added www/ruby-compass-core version 1.0.3 [taca 2015-03-13]
+	Added www/ruby-compass-import-once version 1.0.5 [taca 2015-03-13]
