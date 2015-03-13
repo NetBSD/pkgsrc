@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1320 2015/03/13 15:27:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1321 2015/03/13 15:31:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1834,3 +1834,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-twitter to 5.14.0 [taca 2015-03-13]
 	Updated print/ruby-pdf-core to 0.5.1 [taca 2015-03-13]
 	Updated print/ruby-prawn to 2.0.0 [taca 2015-03-13]
+	Updated security/ruby-ruby-openid to 2.7.0 [taca 2015-03-13]
