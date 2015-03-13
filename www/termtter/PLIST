@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2014/09/17 10:41:22 obache Exp $
-bin/termtter
-bin/termtter_frame
+@comment $NetBSD: PLIST,v 1.7 2015/03/13 17:43:43 taca Exp $
+bin/termtter${RUBY_SUFFIX}
+bin/termtter_frame${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
