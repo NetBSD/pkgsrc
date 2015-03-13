@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1294 2015/03/13 13:34:38 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1295 2015/03/13 13:38:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1805,3 +1805,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added time/ruby-timers version 4.0.1 [taca 2015-03-13]
 	Added devel/ruby-celluloid version 0.16.0 [taca 2015-03-13]
 	Updated devel/ruby-docile to 1.1.5 [taca 2015-03-13]
+	Updated devel/ruby-i18n to 0.7.0 [taca 2015-03-13]
