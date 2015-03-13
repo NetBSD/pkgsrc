@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1296 2015/03/13 13:42:26 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1297 2015/03/13 13:46:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-docile to 1.1.5 [taca 2015-03-13]
 	Updated devel/ruby-i18n to 0.7.0 [taca 2015-03-13]
 	Updated devel/ruby-parser to 3.6.5 [taca 2015-03-13]
+	Updated devel/ruby-rspec-core to 3.2.2 [taca 2015-03-13]
