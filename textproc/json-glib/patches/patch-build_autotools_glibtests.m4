@@ -1,6 +1,7 @@
-$NetBSD: patch-build_autotools_glibtests.m4,v 1.1 2014/04/20 09:36:29 obache Exp $
+$NetBSD: patch-build_autotools_glibtests.m4,v 1.2 2015/03/13 11:21:39 prlw1 Exp $
 
 * test(1) portability fix
+  https://bugzilla.gnome.org/show_bug.cgi?id=746143
 
 --- build/autotools/glibtests.m4.orig	2013-11-22 17:36:08.000000000 +0000
 +++ build/autotools/glibtests.m4
