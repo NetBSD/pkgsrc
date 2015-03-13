@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1346 2015/03/13 17:32:15 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1347 2015/03/13 17:33:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1872,3 +1872,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-rack-protection to 1.5.3 [taca 2015-03-13]
 	Updated www/ruby-rack-rewrite to 1.5.1 [taca 2015-03-13]
 	Updated www/ruby-rack-ssl to 1.4.1 [taca 2015-03-13]
+	Updated www/ruby-rack-test to 0.6.3 [taca 2015-03-13]
