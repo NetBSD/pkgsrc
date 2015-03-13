@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/17 13:00:00 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/03/13 14:41:31 taca Exp $
 
-SHA1 (thread_safe-0.1.3.gem) = 0cfdc031e7d4223ec39b03426689189b12206c8f
-RMD160 (thread_safe-0.1.3.gem) = 95d2e9cc239c28cf9bb4bdb0d9ae65e943ddc916
-Size (thread_safe-0.1.3.gem) = 136704 bytes
+SHA1 (thread_safe-0.3.5.gem) = c8d37f72d2c0f7949c89f62a47ad2daebf1f5311
+RMD160 (thread_safe-0.3.5.gem) = 94b3b2b7b427dae928dbea5e5f8edb5bc11d56db
+Size (thread_safe-0.3.5.gem) = 120832 bytes

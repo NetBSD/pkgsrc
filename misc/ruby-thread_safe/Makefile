@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 13:00:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/13 14:41:31 taca Exp $
 #
 
-DISTNAME=	thread_safe-0.1.3
+DISTNAME=	thread_safe-0.3.5
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
