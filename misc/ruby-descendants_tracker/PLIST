@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/17 12:54:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/13 14:45:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rvmrc
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.ruby-gemset
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.devtools
 ${GEM_LIBDIR}/Guardfile
