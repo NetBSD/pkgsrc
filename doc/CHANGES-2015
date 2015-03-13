@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1301 2015/03/13 13:51:44 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1302 2015/03/13 14:01:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1812,3 +1812,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rspec-support to 3.2.2 [taca 2015-03-13]
 	Updated devel/ruby-rspec-rails to 3.2.1 [taca 2015-03-13]
 	Updated devel/ruby-sexp-processor to 4.5.0 [taca 2015-03-13]
+	Updated devel/ruby-simplecov-html to 0.9.0 [taca 2015-03-13]
+	Updated devel/ruby-simplecov to 0.9.2 [taca 2015-03-13]
