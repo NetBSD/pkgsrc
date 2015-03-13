@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1288 2015/03/12 21:35:00 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1289 2015/03/13 09:09:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1798,3 +1798,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/gcc48 to 4.8.4 [ryoon 2015-03-12]
 	Updated lang/gcc48-libs to 4.8.4nb1 [ryoon 2015-03-12]
 	Updated audio/fdk-aac to 0.1.4 [adam 2015-03-12]
+	Updated emulators/qemu to 2.2.1 [ryoon 2015-03-13]
