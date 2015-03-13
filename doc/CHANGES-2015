@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1312 2015/03/13 14:46:20 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1313 2015/03/13 14:53:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1825,3 +1825,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-daemons to 1.2.1 [taca 2015-03-13]
 	Updated misc/ruby-thread_safe to 0.3.5 [taca 2015-03-13]
 	Updated misc/ruby-descendants_tracker to 0.0.4 [taca 2015-03-13]
+	Updated misc/ruby-commander to 4.3.0 [taca 2015-03-13]
+	Updated misc/ruby-memoizable to 0.4.2 [taca 2015-03-13]
