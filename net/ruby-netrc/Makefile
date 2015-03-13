@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/02/07 14:48:34 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/13 15:09:52 taca Exp $
 
-DISTNAME=	netrc-0.10.2
+DISTNAME=	netrc-0.10.3
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
