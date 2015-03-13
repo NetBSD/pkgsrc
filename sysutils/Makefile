@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.630 2015/03/10 09:07:55 manu Exp $
+# $NetBSD: Makefile,v 1.631 2015/03/13 15:59:08 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -445,6 +445,7 @@ SUBDIR+=	ruby-listen
 SUBDIR+=	ruby-notify
 SUBDIR+=	ruby-quota
 SUBDIR+=	ruby-rb-appscript
+SUBDIR+=	ruby-rb-inotify
 SUBDIR+=	safetynet
 SUBDIR+=	salt
 SUBDIR+=	salt-docs
