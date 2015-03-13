@@ -1,0 +1,5 @@
+Celluloid provides a simple and natural way to build fault-tolerant concurrent
+programs in Ruby. With Celluloid, you can build systems out of concurrent
+objects just as easily as you build sequential programs out of regular
+objects.  Recommended for any developer, including novices, Celluloid should
+help ease your worries about building multithreaded Ruby programs.
