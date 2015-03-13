@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.41 2014/08/15 16:09:16 taca Exp $
+# $NetBSD: Makefile.php,v 1.42 2015/03/13 17:05:22 manu Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts suhosin readline
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts suhosin readline calendar
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -96,6 +96,10 @@ CONFIGURE_ARGS+=	--enable-maintainer-zts
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .else
 CONFIGURE_ARGS+=	--without-readline
+.endif
+
+.if !empty(PKG_OPTIONS:Mcalendar)
+CONFIGURE_ARGS+=	--enable-calendar
 .endif
 
 DL_AUTO_VARS=		yes
