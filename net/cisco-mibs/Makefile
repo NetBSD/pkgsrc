@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:14 asau Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/13 17:58:39 tnn Exp $
 
 DISTNAME=	cisco-mibs-20050210
 PKGREVISION=	1
@@ -21,7 +21,7 @@ DIST_SUBDIR=	${PKGBASE}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
-USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar gzip
 
 MIBDIR=		${PREFIX}/share/cisco-mibs
 
