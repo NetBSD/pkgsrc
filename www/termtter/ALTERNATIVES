@@ -1,0 +1,2 @@
+bin/termtter @PREFIX@/bin/termtter${RUBY_SUFFIX}
+bin/termtter_frame @PREFIX@/bin/termtter_frame${RUBY_SUFFIX}
