@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/06 14:54:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/13 17:17:11 tnn Exp $
 
 DISTNAME=	autonet-0.22
 CATEGORIES=	net
@@ -11,6 +11,7 @@ COMMENT=	Automatically configure network interface & WEP keys
 ONLY_FOR_PLATFORM= NetBSD-*-*
 
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	groff
 NO_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
