@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/29 13:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/13 18:05:59 tnn Exp $
 
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.corel.com/akdlm/6763/downloads/AfterShotPro/1/PF/
@@ -17,7 +17,7 @@ NO_BIN_ON_FTP=  ${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax tar
+USE_TOOLS+=	pax tar gzip
 
 EMUL_PLATFORMS=		linux-i386 # linux-x86_64
 EMUL_MODULES.linux=	drm fontconfig freetype2 glx gtk2 png x11
