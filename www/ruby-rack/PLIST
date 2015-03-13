@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.12 2013/03/10 09:25:56 taca Exp $
-bin/rackup15
+@comment $NetBSD: PLIST,v 1.13 2015/03/13 17:21:19 taca Exp $
+bin/rackup16${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/KNOWN-ISSUES
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SPEC
-${GEM_LIBDIR}/bin/rackup15
+${GEM_LIBDIR}/bin/rackup16
 ${GEM_LIBDIR}/contrib/rack.png
 ${GEM_LIBDIR}/contrib/rack.svg
 ${GEM_LIBDIR}/contrib/rack_logo.svg
@@ -76,6 +76,7 @@ ${GEM_LIBDIR}/lib/rack/session/pool.rb
 ${GEM_LIBDIR}/lib/rack/showexceptions.rb
 ${GEM_LIBDIR}/lib/rack/showstatus.rb
 ${GEM_LIBDIR}/lib/rack/static.rb
+${GEM_LIBDIR}/lib/rack/tempfile_reaper.rb
 ${GEM_LIBDIR}/lib/rack/urlmap.rb
 ${GEM_LIBDIR}/lib/rack/utils.rb
 ${GEM_LIBDIR}/lib/rack/utils/okjson.rb
@@ -106,6 +107,7 @@ ${GEM_LIBDIR}/test/multipart/empty
 ${GEM_LIBDIR}/test/multipart/fail_16384_nofile
 ${GEM_LIBDIR}/test/multipart/file1.txt
 ${GEM_LIBDIR}/test/multipart/filename_and_modification_param
+${GEM_LIBDIR}/test/multipart/filename_and_no_name
 ${GEM_LIBDIR}/test/multipart/filename_with_escaped_quotes
 ${GEM_LIBDIR}/test/multipart/filename_with_escaped_quotes_and_modification_param
 ${GEM_LIBDIR}/test/multipart/filename_with_percent_escaped_quotes
@@ -114,6 +116,7 @@ ${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages2
 ${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages3
 ${GEM_LIBDIR}/test/multipart/filename_with_unescaped_quotes
 ${GEM_LIBDIR}/test/multipart/ie
+${GEM_LIBDIR}/test/multipart/invalid_character
 ${GEM_LIBDIR}/test/multipart/mixed_files
 ${GEM_LIBDIR}/test/multipart/nested
 ${GEM_LIBDIR}/test/multipart/none
@@ -165,6 +168,7 @@ ${GEM_LIBDIR}/test/spec_session_pool.rb
 ${GEM_LIBDIR}/test/spec_showexceptions.rb
 ${GEM_LIBDIR}/test/spec_showstatus.rb
 ${GEM_LIBDIR}/test/spec_static.rb
+${GEM_LIBDIR}/test/spec_tempfile_reaper.rb
 ${GEM_LIBDIR}/test/spec_thin.rb
 ${GEM_LIBDIR}/test/spec_urlmap.rb
 ${GEM_LIBDIR}/test/spec_utils.rb
