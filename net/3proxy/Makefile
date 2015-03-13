@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:07 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/13 16:35:39 tnn Exp $
 #
 
 DISTNAME=	3proxy-0.5.3k
@@ -33,4 +33,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/3proxy.cfg.3 \
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/3proxy.cfg.5
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
