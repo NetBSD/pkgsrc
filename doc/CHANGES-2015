@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1318 2015/03/13 15:14:49 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1319 2015/03/13 15:23:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1832,3 +1832,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-addressable to 2.3.7 [taca 2015-03-13]
 	Updated net/ruby-netrc to 0.10.3 [taca 2015-03-13]
 	Updated net/ruby-twitter to 5.14.0 [taca 2015-03-13]
+	Updated print/ruby-pdf-core to 0.5.1 [taca 2015-03-13]
