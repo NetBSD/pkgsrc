@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/04 14:26:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/13 15:27:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
@@ -7,7 +7,6 @@ ${GEM_LIBDIR}/GPLv3
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/data/encodings/win_ansi.txt
 ${GEM_LIBDIR}/data/fonts/Courier-Bold.afm
 ${GEM_LIBDIR}/data/fonts/Courier-BoldOblique.afm
 ${GEM_LIBDIR}/data/fonts/Courier-Oblique.afm
@@ -40,6 +39,7 @@ ${GEM_LIBDIR}/data/images/license.md
 ${GEM_LIBDIR}/data/images/page_white_text.alpha
 ${GEM_LIBDIR}/data/images/page_white_text.color
 ${GEM_LIBDIR}/data/images/page_white_text.png
+${GEM_LIBDIR}/data/images/pal_bk.png
 ${GEM_LIBDIR}/data/images/pigs.jpg
 ${GEM_LIBDIR}/data/images/prawn.png
 ${GEM_LIBDIR}/data/images/ruport.png
@@ -173,6 +173,7 @@ ${GEM_LIBDIR}/manual/outline/add_subsection_to.rb
 ${GEM_LIBDIR}/manual/outline/insert_section_after.rb
 ${GEM_LIBDIR}/manual/outline/outline.rb
 ${GEM_LIBDIR}/manual/outline/sections_and_pages.rb
+${GEM_LIBDIR}/manual/repeatable_content/alternate_page_numbering.rb
 ${GEM_LIBDIR}/manual/repeatable_content/page_numbering.rb
 ${GEM_LIBDIR}/manual/repeatable_content/repeatable_content.rb
 ${GEM_LIBDIR}/manual/repeatable_content/repeater.rb
