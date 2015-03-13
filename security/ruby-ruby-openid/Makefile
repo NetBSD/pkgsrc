@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/07/16 08:37:20 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/13 15:30:58 taca Exp $
 
-DISTNAME=	ruby-openid-2.5.0
+DISTNAME=	ruby-openid-2.7.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby security
 
