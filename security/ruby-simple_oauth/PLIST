@@ -1,20 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2013/01/05 05:23:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/13 15:47:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/simple_oauth.rb
 ${GEM_LIBDIR}/lib/simple_oauth/header.rb
 ${GEM_LIBDIR}/simple_oauth.gemspec
-${GEM_LIBDIR}/spec/helper.rb
-${GEM_LIBDIR}/spec/simple_oauth/header_spec.rb
-${GEM_LIBDIR}/spec/support/fixtures/rsa-private-key
-${GEM_LIBDIR}/spec/support/rsa.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
