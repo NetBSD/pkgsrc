@@ -1,0 +1,3 @@
+bin/sass @PREFIX@/bin/sass@RUBY_SUFFIX@
+bin/sass-convert @PREFIX@/bin/sass-convert@RUBY_SUFFIX@
+bin/scss @PREFIX@/bin/scss@RUBY_SUFFIX@
