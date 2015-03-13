@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/13 15:58:33 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/rb-inotify.rb
+${GEM_LIBDIR}/lib/rb-inotify/event.rb
+${GEM_LIBDIR}/lib/rb-inotify/native.rb
+${GEM_LIBDIR}/lib/rb-inotify/native/flags.rb
+${GEM_LIBDIR}/lib/rb-inotify/notifier.rb
+${GEM_LIBDIR}/lib/rb-inotify/watcher.rb
+${GEM_LIBDIR}/rb-inotify.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
