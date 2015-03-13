@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/13 16:34:26 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile_sass_3_2
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/compass-import-once.gemspec
+${GEM_LIBDIR}/lib/compass-import-once.rb
+${GEM_LIBDIR}/lib/compass/import-once.rb
+${GEM_LIBDIR}/lib/compass/import-once/activate.rb
+${GEM_LIBDIR}/lib/compass/import-once/engine.rb
+${GEM_LIBDIR}/lib/compass/import-once/importer.rb
+${GEM_LIBDIR}/lib/compass/import-once/version.rb
+${GEM_LIBDIR}/test/diff_as_string.rb
+${GEM_LIBDIR}/test/fixtures/_simple_partial.scss
+${GEM_LIBDIR}/test/fixtures/basic.css
+${GEM_LIBDIR}/test/fixtures/basic.scss
+${GEM_LIBDIR}/test/fixtures/force_import.css
+${GEM_LIBDIR}/test/fixtures/force_import.scss
+${GEM_LIBDIR}/test/fixtures/with_globbing.css
+${GEM_LIBDIR}/test/fixtures/with_globbing.scss
+${GEM_LIBDIR}/test/import_once_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
