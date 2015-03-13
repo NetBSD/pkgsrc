@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/02/08 07:58:05 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/13 14:26:36 taca Exp $
 
-DISTNAME=	execjs-2.3.0
+DISTNAME=	execjs-2.4.0
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
