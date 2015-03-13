@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2015/02/04 15:07:02 taca Exp $
-bin/commander
+@comment $NetBSD: PLIST,v 1.7 2015/03/13 14:48:44 taca Exp $
+bin/commander${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/DEVELOPMENT
 ${GEM_LIBDIR}/Gemfile
@@ -15,6 +18,7 @@ ${GEM_LIBDIR}/commander.gemspec
 ${GEM_LIBDIR}/lib/commander.rb
 ${GEM_LIBDIR}/lib/commander/blank.rb
 ${GEM_LIBDIR}/lib/commander/command.rb
+${GEM_LIBDIR}/lib/commander/configure.rb
 ${GEM_LIBDIR}/lib/commander/core_ext.rb
 ${GEM_LIBDIR}/lib/commander/core_ext/array.rb
 ${GEM_LIBDIR}/lib/commander/core_ext/object.rb
@@ -28,14 +32,17 @@ ${GEM_LIBDIR}/lib/commander/help_formatters/terminal_compact.rb
 ${GEM_LIBDIR}/lib/commander/help_formatters/terminal_compact/command_help.erb
 ${GEM_LIBDIR}/lib/commander/help_formatters/terminal_compact/help.erb
 ${GEM_LIBDIR}/lib/commander/import.rb
+${GEM_LIBDIR}/lib/commander/methods.rb
 ${GEM_LIBDIR}/lib/commander/platform.rb
 ${GEM_LIBDIR}/lib/commander/runner.rb
 ${GEM_LIBDIR}/lib/commander/user_interaction.rb
 ${GEM_LIBDIR}/lib/commander/version.rb
 ${GEM_LIBDIR}/spec/command_spec.rb
+${GEM_LIBDIR}/spec/configure_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/array_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/object_spec.rb
 ${GEM_LIBDIR}/spec/help_formatters/terminal_spec.rb
+${GEM_LIBDIR}/spec/methods_spec.rb
 ${GEM_LIBDIR}/spec/runner_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/ui_spec.rb
