@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1292 2015/03/13 13:29:40 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1293 2015/03/13 13:33:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1803,3 +1803,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/keychain to 2.7.1nb2 [roy 2015-03-13]
 	Added time/ruby-hitimes version 1.2.2 [taca 2015-03-13]
 	Added time/ruby-timers version 4.0.1 [taca 2015-03-13]
+	Added devel/ruby-celluloid version 0.16.0 [taca 2015-03-13]
