@@ -1,5 +1,6 @@
-kramdown is a free GPL-licensed Ruby library for parsing and
-converting a superset of Markdown.  It is completely written in Ruby,
-supports standard Markdown (with some minor modifications) and various
-extensions that have been made popular by the PHP Markdown Extra
-package and Maruku.
+kramdown is yet-another-markdown-parser but fast, pure Ruby, using a strict
+syntax definition and supporting several common extensions.
+
+kramdown was originally licensed under the GPL until the 1.0.0
+release. However, due to the many requests it is now released under the
+MIT license and therefore can easily be used in commercial projects, too.
