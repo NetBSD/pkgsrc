@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1310 2015/03/13 14:36:46 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1311 2015/03/13 14:42:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1823,3 +1823,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/ruby-spreadsheet to 1.0.3 [taca 2015-03-13]
 	Updated misc/ruby-bundler to 1.8.5 [taca 2015-03-13]
 	Updated misc/ruby-daemons to 1.2.1 [taca 2015-03-13]
+	Updated misc/ruby-thread_safe to 0.3.5 [taca 2015-03-13]
