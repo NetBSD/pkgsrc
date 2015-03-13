@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2015/03/13 22:38:08 gendalia Exp $
+# $NetBSD: Makefile,v 1.72 2015/03/13 23:00:49 wiz Exp $
 
 DISTNAME=	libgcrypt-1.6.3
 CATEGORIES=	security
@@ -43,7 +43,7 @@ CFLAGS+=		-fheinous-gnu-extensions
 
 .include "options.mk"
 
-BUILDLINK_API_DPENDS.libgpg-error+= libgpg-error>=1.11:../../security/libgpg-error
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.11
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
