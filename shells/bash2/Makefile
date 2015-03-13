@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2014/10/25 14:09:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2015/03/13 17:25:52 tnn Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -21,6 +21,7 @@ CONFLICTS=	static-bash-[0-9]*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-readline
+USE_TOOLS+=		yacc
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:${LOCALBASE}/bin:/usr/local/bin\""
 TEST_TARGET=		test
