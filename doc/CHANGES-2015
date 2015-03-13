@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1337 2015/03/13 16:53:37 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1338 2015/03/13 16:55:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1856,3 +1856,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/ruby-jekyll-sass-converter version 1.3.0 [taca 2015-03-13]
 	Added www/ruby-jekyll-watch version 1.2.1 [taca 2015-03-13]
 	Updated www/ruby-jekyll to 2.5.3 [taca 2015-03-13]
+	Updated www/ruby-jquery-rails to 3.1.2 [taca 2015-03-13]
