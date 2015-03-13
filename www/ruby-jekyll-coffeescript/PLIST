@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/13 16:43:44 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/jekyll-coffeescript.rb
+${GEM_LIBDIR}/lib/jekyll-coffeescript/version.rb
+${GEM_LIBDIR}/lib/jekyll/converters/coffeescript.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
