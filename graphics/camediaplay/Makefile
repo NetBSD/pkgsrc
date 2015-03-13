@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:10:43 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/13 17:45:50 tnn Exp $
 
 DISTNAME=	camediaplay-20010211
 CATEGORIES=	graphics
@@ -24,4 +24,5 @@ do-install:
 			${DESTDIR}${PREFIX}/share/doc/camediaplay; \
 	done
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
