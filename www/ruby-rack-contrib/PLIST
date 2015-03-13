@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 13:30:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/13 17:23:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/rack/contrib/mailexceptions.rb
 ${GEM_LIBDIR}/lib/rack/contrib/nested_params.rb
 ${GEM_LIBDIR}/lib/rack/contrib/not_found.rb
 ${GEM_LIBDIR}/lib/rack/contrib/post_body_content_type_parser.rb
+${GEM_LIBDIR}/lib/rack/contrib/printout.rb
 ${GEM_LIBDIR}/lib/rack/contrib/proctitle.rb
 ${GEM_LIBDIR}/lib/rack/contrib/profiler.rb
 ${GEM_LIBDIR}/lib/rack/contrib/relative_redirect.rb
