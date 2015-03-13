@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 13:01:09 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/13 14:53:30 taca Exp $
 #
 
-DISTNAME=	memoizable-0.4.0
+DISTNAME=	memoizable-0.4.2
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/dkubb/memoizable
 COMMENT=	Memoize method return values
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-thread_safe>=0.1.3:../../misc/ruby-thread_safe
+DEPENDS+=	${RUBY_PKGPREFIX}-thread_safe>=0.3.1:../../misc/ruby-thread_safe
 
 USE_LANGUAGES=	# none
 
