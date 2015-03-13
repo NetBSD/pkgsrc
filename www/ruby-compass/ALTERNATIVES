@@ -1,0 +1,1 @@
+bin/compass @PREFIX@/bin/compass@RUBY_SUFFIX@
