@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1323 2015/03/13 15:49:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1324 2015/03/13 15:52:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1837,3 +1837,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/ruby-ruby-openid to 2.7.0 [taca 2015-03-13]
 	Updated security/ruby-simple_oauth to 0.3.1 [taca 2015-03-13]
 	Updated security/ruby-sshkit to 1.7.1 [taca 2015-03-13]
+	Updated graphics/libsixel to 1.4.10 [ryoon 2015-03-13]
