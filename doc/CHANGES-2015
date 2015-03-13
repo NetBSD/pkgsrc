@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1351 2015/03/13 17:58:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1352 2015/03/13 18:00:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-sass to 3.4.13 [taca 2015-03-13]
 	Updated www/termtter to 2.2.1nb1 [taca 2015-03-13]
 	Updated graphics/rabbit to 2.1.6 [taca 2015-03-13]
+	Updated www/ruby-selenium-webdriver to 2.45.0 [taca 2015-03-13]
