@@ -1,14 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/14 16:46:52 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/14 21:19:22 rodent Exp $
+bin/pbr${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pbr/__init__.py
 ${PYSITELIB}/pbr/__init__.pyc
 ${PYSITELIB}/pbr/__init__.pyo
+${PYSITELIB}/pbr/builddoc.py
+${PYSITELIB}/pbr/builddoc.pyc
+${PYSITELIB}/pbr/builddoc.pyo
+${PYSITELIB}/pbr/cmd/__init__.py
+${PYSITELIB}/pbr/cmd/__init__.pyc
+${PYSITELIB}/pbr/cmd/__init__.pyo
+${PYSITELIB}/pbr/cmd/main.py
+${PYSITELIB}/pbr/cmd/main.pyc
+${PYSITELIB}/pbr/cmd/main.pyo
 ${PYSITELIB}/pbr/core.py
 ${PYSITELIB}/pbr/core.pyc
 ${PYSITELIB}/pbr/core.pyo
@@ -18,6 +29,9 @@ ${PYSITELIB}/pbr/extra_files.pyo
 ${PYSITELIB}/pbr/find_package.py
 ${PYSITELIB}/pbr/find_package.pyc
 ${PYSITELIB}/pbr/find_package.pyo
+${PYSITELIB}/pbr/git.py
+${PYSITELIB}/pbr/git.pyc
+${PYSITELIB}/pbr/git.pyo
 ${PYSITELIB}/pbr/hooks/__init__.py
 ${PYSITELIB}/pbr/hooks/__init__.pyc
 ${PYSITELIB}/pbr/hooks/__init__.pyo
@@ -36,9 +50,15 @@ ${PYSITELIB}/pbr/hooks/files.pyo
 ${PYSITELIB}/pbr/hooks/metadata.py
 ${PYSITELIB}/pbr/hooks/metadata.pyc
 ${PYSITELIB}/pbr/hooks/metadata.pyo
+${PYSITELIB}/pbr/options.py
+${PYSITELIB}/pbr/options.pyc
+${PYSITELIB}/pbr/options.pyo
 ${PYSITELIB}/pbr/packaging.py
 ${PYSITELIB}/pbr/packaging.pyc
 ${PYSITELIB}/pbr/packaging.pyo
+${PYSITELIB}/pbr/pbr_json.py
+${PYSITELIB}/pbr/pbr_json.pyc
+${PYSITELIB}/pbr/pbr_json.pyo
 ${PYSITELIB}/pbr/testr_command.py
 ${PYSITELIB}/pbr/testr_command.pyc
 ${PYSITELIB}/pbr/testr_command.pyo
