@@ -1,19 +1,42 @@
-$NetBSD: patch-asmrun_signals_osdep.h,v 1.3 2015/01/26 14:46:51 jaapb Exp $
+$NetBSD: patch-asmrun_signals_osdep.h,v 1.4 2015/03/14 15:17:15 gdt Exp $
 
 Use correct data structures for power architecture; also do signal
-handling correctly for i386
+handling correctly for i386/NetBSD.
+
+First hunk taken from upstream tracker at:
+  http://caml.inria.fr/mantis/view.php?id=6772
+
 --- asmrun/signals_osdep.h.orig	2014-09-28 19:46:24.000000000 +0000
 +++ asmrun/signals_osdep.h
-@@ -161,7 +161,7 @@
+@@ -163,14 +163,24 @@
  
- /****************** I386, BSD_ELF */
+ #elif defined(TARGET_i386) && defined(SYS_bsd_elf)
  
--#elif defined(TARGET_i386) && defined(SYS_bsd_elf)
-+#elif defined(TARGET_i386) && defined(SYS_bsd_elf) && !defined(__NetBSD__)
+- #define DECLARE_SIGNAL_HANDLER(name) \
+- static void name(int sig, siginfo_t * info, struct sigcontext * context)
++ #if defined (__NetBSD__)
++  #include <ucontext.h>
++  #define DECLARE_SIGNAL_HANDLER(name) \
++  static void name(int sig, siginfo_t * info, ucontext_t * context)
++ #else
++  #define DECLARE_SIGNAL_HANDLER(name) \
++  static void name(int sig, siginfo_t * info, struct sigcontext * context)
++ #endif
  
-  #define DECLARE_SIGNAL_HANDLER(name) \
-  static void name(int sig, siginfo_t * info, struct sigcontext * context)
-@@ -278,12 +278,21 @@
+  #define SET_SIGACT(sigact,name) \
+  sigact.sa_sigaction = (void (*)(int,siginfo_t *,void *)) (name); \
+  sigact.sa_flags = SA_SIGINFO
+ 
+- #define CONTEXT_PC (context->sc_eip)
++ #if defined (__NetBSD__)
++  #define CONTEXT_PC (_UC_MACHINE_PC(context))
++ #else
++  #define CONTEXT_PC (context->sc_eip)
++ #endif
+  #define CONTEXT_FAULTING_ADDRESS ((char *) info->si_addr)
+ 
+ /****************** I386, BSD */
+@@ -278,12 +294,21 @@
       sigact.sa_handler = (void (*)(int)) (name); \
       sigact.sa_flags = 0
  
