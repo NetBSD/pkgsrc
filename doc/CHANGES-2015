@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1381 2015/03/14 21:20:22 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1382 2015/03/14 21:28:03 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1908,3 +1908,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/php-xcache version 3.2.0 [rodent 2015-03-14]
 	Updated net/haproxy to 1.5.11 [rodent 2015-03-14]
 	Updated devel/py-pbr to 0.10.8 [rodent 2015-03-14]
+	Updated textproc/p5-HTML-FormatText-WithLinks to 0.15 [rodent 2015-03-14]
