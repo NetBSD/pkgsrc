@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1373 2015/03/14 15:00:36 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.1374 2015/03/14 15:09:53 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1900,3 +1900,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/mdocml to 1.13.3 [wiz 2015-03-14]
 	Updated mail/dovecot2 to 2.2.16 [adam 2015-03-14]
 	Updated x11/mlterm to 3.4.5 [tsutsui 2015-03-14]
+	Updated games/onscripter to 20150208 [tsutsui 2015-03-14]
