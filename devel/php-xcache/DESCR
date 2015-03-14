@@ -1,0 +1,6 @@
+XCache is a fast, stable PHP opcode cacher that has been proven and is now
+running on production servers under high load. It is tested (on Linux) and
+supported on all of the PHP release branches, such as PHP 5.1 to PHP 5.6.
+ThreadSafe/Windows is also perfectly supported. XCache overcomes many of the
+problems found with other opcachers such as being able to run with new PHP
+versions.
