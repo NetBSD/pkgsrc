@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/12/12 08:32:42 mef Exp $
+# $NetBSD: Makefile,v 1.34 2015/03/14 14:24:48 tnn Exp $
 #
 
 DISTNAME=	CSSC-1.4.0
@@ -26,4 +26,5 @@ INFO_FILES=	yes
 CXXFLAGS+=	-std=c++11
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
