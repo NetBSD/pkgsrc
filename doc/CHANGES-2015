@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1375 2015/03/14 16:15:11 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1376 2015/03/14 16:37:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1902,3 +1902,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/mlterm to 3.4.5 [tsutsui 2015-03-14]
 	Updated games/onscripter to 20150208 [tsutsui 2015-03-14]
 	Updated multimedia/ffmpeg010 to 20150312.0.10.16 [tnn 2015-03-14]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.451 [tnn 2015-03-14]
