@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2014/11/23 06:39:36 markd Exp $
+# $NetBSD: Makefile,v 1.116 2015/03/14 20:00:18 tnn Exp $
 #
 # Please, also update databases/ruby-rrdtool
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config perl msgfmt intltool
+USE_TOOLS+=		gmake pkg-config perl msgfmt intltool groff nroff
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
