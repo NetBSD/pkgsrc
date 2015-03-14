@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/06/03 13:58:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/14 07:48:10 taca Exp $
 
-DISTNAME=	slop-3.5.0
+DISTNAME=	slop-3.6.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
