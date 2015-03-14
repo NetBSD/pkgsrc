@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1380 2015/03/14 20:37:03 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1381 2015/03/14 21:20:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1907,3 +1907,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed multimedia/adobe-flash-plugin successor multimedia/adobe-flash-plugin11 [tnn 2015-03-14]
 	Added devel/php-xcache version 3.2.0 [rodent 2015-03-14]
 	Updated net/haproxy to 1.5.11 [rodent 2015-03-14]
+	Updated devel/py-pbr to 0.10.8 [rodent 2015-03-14]
