@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1382 2015/03/14 21:28:03 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1383 2015/03/14 23:38:47 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1909,3 +1909,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/haproxy to 1.5.11 [rodent 2015-03-14]
 	Updated devel/py-pbr to 0.10.8 [rodent 2015-03-14]
 	Updated textproc/p5-HTML-FormatText-WithLinks to 0.15 [rodent 2015-03-14]
+	Updated audio/sox to 14.4.2 [tnn 2015-03-14]
+	Updated net/synergy to 1.7.0 [tnn 2015-03-14]
