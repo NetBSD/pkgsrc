@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2015/02/19 11:53:59 joerg Exp $
+# $NetBSD: Makefile,v 1.120 2015/03/14 18:21:24 tnn Exp $
 
 DISTNAME=	doxygen-1.8.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -73,9 +73,7 @@ PLIST.cs=		yes	# case-sensitive
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}
-.endif
 
 post-patch:
 	touch ${WRKSRC}/src/doxytag.l
