@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/13 17:53:44 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/14 13:47:44 tnn Exp $
 
 DISTNAME=	cgit-0.10.2
 CATEGORIES=	www
@@ -48,4 +48,5 @@ do-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
