@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/24 02:20:36 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/14 07:55:32 ryoon Exp $
 bin/buildhash
 bin/defmt-c
 bin/defmt-sh
@@ -17,5 +17,4 @@ man/man1/findaffix.1
 man/man1/ispell.1
 man/man1/munchlist.1
 man/man1/tryaffix.1
-man/man5/english.5
 man/man5/ispell.5
