@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/03/13 16:53:40 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2015/03/14 13:33:46 tnn Exp $
 #
 
 DISTNAME=		angband-283
@@ -16,7 +16,7 @@ CONFLICTS=		angband-x11-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-USE_TOOLS+=	pax
+USE_TOOLS+=		gzip pax
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}

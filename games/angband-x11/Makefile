@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/01/14 15:36:10 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2015/03/14 13:33:46 tnn Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -18,7 +18,7 @@ CONFLICTS=	angband-tty-[0-9]*
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	gzip pax
 USE_GAMESGROUP=	yes
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
