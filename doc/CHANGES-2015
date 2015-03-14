@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1365 2015/03/14 07:59:03 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1366 2015/03/14 08:01:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1891,3 +1891,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-tilt to 1.4.1nb1 [taca 2015-03-14]
 	Updated textproc/ispell to 3.4.00 [ryoon 2015-03-14]
 	Updated www/ruby-liquid to 2.6.2 [taca 2015-03-14]
+	Updated www/ruby-rack14 to 1.4.5nb1 [taca 2015-03-14]
