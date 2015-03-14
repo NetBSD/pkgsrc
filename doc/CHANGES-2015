@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1377 2015/03/14 17:59:24 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.1378 2015/03/14 18:06:03 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/ffmpeg010 to 20150312.0.10.16 [tnn 2015-03-14]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.451 [tnn 2015-03-14]
 	Updated geography/proj to 4.9.1 [gdt 2015-03-14]
+	Removed multimedia/adobe-flash-plugin successor multimedia/adobe-flash-plugin11 [tnn 2015-03-14]
