@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/03/14 13:52:45 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2015/03/14 13:56:49 tnn Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		10
@@ -16,6 +16,8 @@ USE_TOOLS+=		cat bzip2:run date gtar:run gzip:run perl:run
 CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}
 CONFIGURE_ENV+=		DATE=${TOOLS_DATE:Q}
 CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
+CONFIGURE_ENV+=		ac_cv_path_BZIP=${TOOLS_PATH.bzip2:Q}
+CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_PATH.gzip:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
