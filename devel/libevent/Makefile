@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/02/04 08:04:34 spz Exp $
+# $NetBSD: Makefile,v 1.47 2015/03/14 17:43:57 tnn Exp $
 
 .include "../../devel/libevent/Makefile.common"
 
@@ -33,4 +33,5 @@ CPPFLAGS+=		-Dstrtoll=__strtoll
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
