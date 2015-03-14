@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/08 22:52:04 christos Exp $
+# $NetBSD: Makefile,v 1.27 2015/03/14 14:12:52 tnn Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -50,4 +50,5 @@ pre-configure:
 	${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h
 	${CP} ${WRKSRC}/${PLAT_MAKEFILE} ${WRKSRC}/Makefile
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
