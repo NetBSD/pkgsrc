@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2014/05/29 23:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2015/03/14 14:48:46 tnn Exp $
 
 DISTNAME=	Eterm-0.9.5
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -45,5 +45,7 @@ SPECIAL_PERMS=		${PREFIX}/bin/Eterm ${SETUID_ROOT_PERMS}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+BUILDLINK_DEPMETHOD.iconv?=	build
 
 .include "../../mk/bsd.pkg.mk"
