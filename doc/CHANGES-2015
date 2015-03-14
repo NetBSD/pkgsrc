@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1360 2015/03/14 07:45:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1361 2015/03/14 07:47:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/evince3 to 3.14.2 [prlw1 2015-03-14]
 	Updated devel/ruby-railties32 to 3.2.21nb1 [taca 2015-03-14]
 	Updated devel/ruby-debugger to 1.6.8nb1 [taca 2015-03-14]
+	Updated devel/ruby-debugger-ruby_core_source to 1.3.8nb1 [taca 2015-03-14]
