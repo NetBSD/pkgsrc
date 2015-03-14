@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/03 13:58:10 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/03/14 07:48:10 taca Exp $
 
-SHA1 (slop-3.5.0.gem) = 3a9322f9841c27cd394803277d0317d866637688
-RMD160 (slop-3.5.0.gem) = 8913004df2a05e671ca403c867124746bedc3571
-Size (slop-3.5.0.gem) = 23552 bytes
+SHA1 (slop-3.6.0.gem) = fce6f7eb3df08e7d50fde060eaedd1b451bb1962
+RMD160 (slop-3.6.0.gem) = 6fbe4298c5ef158c9b3a9109321894ab9f8fbfc3
+Size (slop-3.6.0.gem) = 23552 bytes
