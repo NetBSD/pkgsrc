@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/10/15 15:54:25 roy Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/14 08:15:51 ryoon Exp $
 #
 
-DISTNAME=	ispell-3.3.02
+DISTNAME=	ispell-3.4.00
 PKGNAME=	${DISTNAME:S/-/-${DICT_LANG}-/1}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
 
@@ -13,6 +12,9 @@ COMMENT=	British dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-british-[0-9]*
 DEPENDS+=	ispell>=3.3.02:../../textproc/ispell
+
+PATCHDIR=	${.CURDIR}/../../textproc/ispell/patches
+DISTINFO_FILE=	${.CURDIR}/../../textproc/ispell/distinfo
 
 BUILD_TARGET=	config.sh all-languages
 
