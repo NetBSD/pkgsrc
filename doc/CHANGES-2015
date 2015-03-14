@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1368 2015/03/14 08:16:53 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1369 2015/03/14 08:18:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1894,3 +1894,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-rack14 to 1.4.5nb1 [taca 2015-03-14]
 	Updated sysutils/capistrano to 3.4.0 [taca 2015-03-14]
 	Updated textproc/ispell-en_GB to 3.4.00 [ryoon 2015-03-14]
+	Updated math/pear-Numbers_Words to 0.18.0 [taca 2015-03-14]
