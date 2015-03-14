@@ -1,0 +1,2 @@
+bin/cap @PREFIX@/bin/cap@RUBY_SUFFIX@
+bin/capify @PREFIX@/bin/capify@RUBY_SUFFIX@
