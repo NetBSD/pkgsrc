@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1356 2015/03/14 00:39:38 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.1357 2015/03/14 01:25:20 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1882,3 +1882,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/gedit3 to 3.14.3 [prlw1 2015-03-13]
 	Updated net/get_iplayer to 2.92 [prlw1 2015-03-14]
 	Updated x11/gtk2 to 2.24.27 [prlw1 2015-03-14]
+	Updated devel/glib2 to 2.42.2 [prlw1 2015-03-14]
