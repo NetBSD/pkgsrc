@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 11:54:57 asau Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/14 17:53:55 tnn Exp $
 #
 
 DISTNAME=	tscp181
 PKGNAME=	tscp-1.81
 PKGREVISION=	3
 CATEGORIES=	games benchmarks
-MASTER_SITES=	http://www.tckerrigan.com/Chess/TSCP/attachments/
+MASTER_SITES=	http://www.tckerrigan.com/Chess/TSCP/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	abs@NetBSD.org
