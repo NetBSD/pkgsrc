@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/03/14 18:52:30 rodent Exp $
+
+  For details on configuring XCache, see:
+  http://xcache.lighttpd.net/wiki/InstallingAsPhpExtension
+
+  For details on configuring the admin pages, see:
+  http://xcache.lighttpd.net/wiki/InstallAdministration
+
+  The web-interface files have been installed in:
+
+      ${PREFIX}/share/php-xcache
+
+===========================================================================
