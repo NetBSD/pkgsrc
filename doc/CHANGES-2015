@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1358 2015/03/14 01:47:33 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.1359 2015/03/14 07:43:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1884,3 +1884,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/gtk2 to 2.24.27 [prlw1 2015-03-14]
 	Updated devel/glib2 to 2.42.2 [prlw1 2015-03-14]
 	Updated print/evince3 to 3.14.2 [prlw1 2015-03-14]
+	Updated devel/ruby-railties32 to 3.2.21nb1 [taca 2015-03-14]
