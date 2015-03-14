@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/14 17:59:10 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/14 18:52:30 tnn Exp $
 
 VERSION_BASE=	4.9.1
 VERSION=	${VERSION_BASE}
@@ -32,4 +32,5 @@ DATUMGRID_FILES= 							\
 post-extract:
 	cd ${WRKDIR} &&	${LN} ${DATUMGRID_FILES} ${WRKSRC}/nad
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
