@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/14 17:11:43 tnn Exp $
 #
 
 DISTNAME=	libical-1.0
@@ -28,4 +28,5 @@ DEPENDS+= zonetab-[0-9]*:../../time/zonetab
 USE_LANGUAGES=	c c++
 #TEST_TARGET=	check
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
