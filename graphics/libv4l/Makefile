@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 14:11:06 asau Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/14 22:05:28 tnn Exp $
 
 DISTNAME=	libv4l-0.4.3
 PKGREVISION=	2
@@ -35,4 +35,5 @@ PLIST_VARS=	needs_videoio
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
