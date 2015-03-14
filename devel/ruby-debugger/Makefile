@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/03/10 16:40:18 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/14 07:44:43 taca Exp $
 
 DISTNAME=	debugger-1.6.8
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
