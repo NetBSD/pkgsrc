@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/14 19:06:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/03/14 07:58:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/lib/liquid/tags/unless.rb
 ${GEM_LIBDIR}/lib/liquid/template.rb
 ${GEM_LIBDIR}/lib/liquid/utils.rb
 ${GEM_LIBDIR}/lib/liquid/variable.rb
+${GEM_LIBDIR}/lib/liquid/version.rb
 ${GEM_LIBDIR}/test/liquid/assign_test.rb
 ${GEM_LIBDIR}/test/liquid/block_test.rb
 ${GEM_LIBDIR}/test/liquid/capture_test.rb
@@ -46,6 +47,7 @@ ${GEM_LIBDIR}/test/liquid/drop_test.rb
 ${GEM_LIBDIR}/test/liquid/error_handling_test.rb
 ${GEM_LIBDIR}/test/liquid/file_system_test.rb
 ${GEM_LIBDIR}/test/liquid/filter_test.rb
+${GEM_LIBDIR}/test/liquid/hash_ordering_test.rb
 ${GEM_LIBDIR}/test/liquid/module_ex_test.rb
 ${GEM_LIBDIR}/test/liquid/output_test.rb
 ${GEM_LIBDIR}/test/liquid/parsing_quirks_test.rb
