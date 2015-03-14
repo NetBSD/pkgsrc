@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2015/02/21 09:19:17 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2015/03/14 23:37:54 tnn Exp $
 #
 
-DISTNAME=		synergy-1.6.2
+DISTNAME=		synergy-1.7.0
 CATEGORIES=		net x11
-MASTER_SITES=		-https://github.com/synergy/synergy/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=synergy/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synergy-project.org/
@@ -13,7 +13,16 @@ LICENSE=		gnu-gpl-v2
 EXTRACT_USING=		bsdtar
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		unzip
+# Main configuration is cmake, but subdirectories are gnu configure.
+# We need to set GNU_CONFIGURE=yes for config.{guess,sub} overrides to kick in.
+# Fortunately for us, cmake seems to take precedence in infrastructure.
 USE_CMAKE=		yes
+GNU_CONFIGURE=		yes
+
+CONFIG_SUB_OVERRIDE+=	ext/gmock-1.6.0/build-aux/config.sub
+CONFIG_SUB_OVERRIDE+=	ext/gmock-1.6.0/build-aux/config.sub
+CONFIG_GUESS_OVERRIDE+=	ext/gtest-1.6.0/build-aux/config.guess
+CONFIG_GUESS_OVERRIDE+=	ext/gtest-1.6.0/build-aux/config.guess
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
@@ -29,8 +38,6 @@ SUBST_SED.fix-paths=		-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 BUILDLINK_TRANSFORM+=		rm:-march=native
 
 post-extract:
-	${MKDIR} ${WRKSRC}/ext/cryptopp562
-	cd ${WRKSRC}/ext/cryptopp562 && unzip -aqo ../cryptopp562.zip
 	${MKDIR} ${WRKSRC}/ext/gmock-1.6.0
 	cd ${WRKSRC}/ext/gmock-1.6.0 && unzip -aqo ../gmock-1.6.0.zip
 	${MKDIR} ${WRKSRC}/ext/gtest-1.6.0
@@ -55,10 +62,9 @@ CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare
 .endif
 
-# tools/cryptopp562/GNUmakefile
-.include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-6].*-i386)
-CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
+# XXX surely there exists a better way to do this
+.if ${OPSYS} != "Linux"
+BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
 .include "../../www/curl/buildlink3.mk"
@@ -69,5 +75,6 @@ CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .endif
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
