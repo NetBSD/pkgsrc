@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/11/21 09:26:24 he Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/14 14:41:07 tnn Exp $
 
 VERSION=	1.6.17
 DISTNAME=	ldns-${VERSION}
@@ -15,7 +15,8 @@ USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-ldns=${PREFIX}
+CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/drill
 
