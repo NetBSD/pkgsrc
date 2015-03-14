@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.36 2015/01/05 13:21:17 jperkin Exp $
+$NetBSD: distinfo,v 1.37 2015/03/14 10:24:38 wiz Exp $
 
-SHA1 (mdocml-1.13.2.tar.gz) = 0d3c4e72214f73ee81c02e9b8863db0bc8f85aaf
-RMD160 (mdocml-1.13.2.tar.gz) = 656085be209cd17738e5e7e27fcbfe375dbac5f3
-Size (mdocml-1.13.2.tar.gz) = 348464 bytes
-SHA1 (patch-compat_fts.c) = 2b028df04122d0f793ed58e6b83b5040aa965333
-SHA1 (patch-roff.7) = f9e973594d14dc9189a15c99ce768572df35e4f5
+SHA1 (mdocml-1.13.3.tar.gz) = 3ccfbb492a477b84343c97de743b3dd5bd3c763b
+RMD160 (mdocml-1.13.3.tar.gz) = 47d1096708b45b15d8f198404fd6608d164bb66a
+Size (mdocml-1.13.3.tar.gz) = 358971 bytes
+SHA1 (patch-roff.7) = 22335024f83abc347ca39aabf7ab8d9cb38f7db2
