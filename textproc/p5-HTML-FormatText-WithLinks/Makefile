@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/14 21:27:18 rodent Exp $
 #
 
-DISTNAME=	HTML-FormatText-WithLinks-0.14
+DISTNAME=	HTML-FormatText-WithLinks-0.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
