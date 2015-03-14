@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/01/14 21:48:10 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/03/14 12:21:31 nros Exp $
 
 DISTNAME=	cppcheck-1.68
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://cppcheck.wiki.sourceforge.net/
+HOMEPAGE=	http://cppcheck.sourceforge.net/
 COMMENT=	Tool for static C/C++ code analysis
 LICENSE=	gnu-gpl-v3
 
@@ -27,7 +27,9 @@ MAKE_FLAGS+=		CFGDIR=${PREFIX}/share/cppcheck/cfg
 MAKE_FLAGS+=		HAVE_RULES=yes
 
 # use pkgsrc tinyxml2 instead of included copy
-MAKE_FLAGS+=		TINYXML=
+MAKE_FLAGS+=		TINYXML= INCLUDE_FOR_LIB=-Ilib 
+MAKE_FLAGS+=		INCLUDE_FOR_CLI=-Ilib
+MAKE_FLAGS+=		INCLUDE_FOR_TEST=-Ilib\ -Icli
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.tinyxml2}/include
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinyxml2}/lib -L${BUILDLINK_PREFIX.tinyxml2}/lib -ltinyxml2
 
@@ -38,6 +40,11 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinyxml2}/lib -L${BUILDLINK_
 CPPFLAGS+=		-DNO_UNIX_BACKTRACE_SUPPORT=1
 .else
 LDFLAGS+=		-lexecinfo
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-4.[0-5]*) || !empty(CC_VERSION:Mgcc-3.*)
+CXXFLAGS+= -include lib/cxx11emu.h
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
