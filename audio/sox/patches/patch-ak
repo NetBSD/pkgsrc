@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.3 2013/10/02 14:21:27 drochner Exp $
+$NetBSD: patch-ak,v 1.4 2015/03/14 22:56:00 tnn Exp $
 
 * On DragonFly, FILE is hidden, only allowed to modify in __FILE_public.
 
 * Disable file-type pipe detection on 64-bit Solaris.
 
---- src/formats.c.orig	2013-01-13 19:57:39.000000000 +0000
+--- src/formats.c.orig	2014-10-27 02:55:50.000000000 +0000
 +++ src/formats.c
-@@ -407,17 +407,22 @@ static void UNUSED rewind_pipe(FILE * fp
+@@ -411,18 +411,23 @@ static void UNUSED rewind_pipe(FILE * fp
  /* _FSTDIO is for Torek stdio (i.e. most BSD-derived libc's)
   * In theory, we no longer need to check _NEWLIB_VERSION or __APPLE__ */
  #if defined _FSTDIO || defined _NEWLIB_VERSION || defined __APPLE__
@@ -20,8 +20,9 @@ $NetBSD: patch-ak,v 1.3 2013/10/02 14:21:27 drochner Exp $
 +#  endif
  #elif defined __GLIBC__
    fp->_IO_read_ptr = fp->_IO_read_base;
--#elif defined _MSC_VER || defined _WIN32 || defined _WIN64 || defined _ISO_STDIO_ISO_H
-+#elif defined _MSC_VER || defined _WIN32 || defined _WIN64 || (defined _ISO_STDIO_ISO_H && !(defined(__sun) && defined(_LP64)))
+ #elif defined _MSC_VER || defined _WIN32 || defined _WIN64 || \
+-      defined _ISO_STDIO_ISO_H || defined __sgi
++      (defined _ISO_STDIO_ISO_H && !(defined(__sun) && defined(_LP64))) || defined __sgi
    fp->_ptr = fp->_base;
  #else
    /* To fix this #error, either simply remove the #error line and live without
