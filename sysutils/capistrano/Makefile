@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2014/03/26 13:29:09 taca Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/14 08:03:55 taca Exp $
 
-DISTNAME=	capistrano-3.1.0
+DISTNAME=	capistrano-3.4.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,10 +10,11 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-sshkit>=1.3:../../security/ruby-sshkit
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0:../../devel/ruby-i18n
+DEPENDS+=	${RUBY_PKGPREFIX}-capistrano-stats>=1.1.0<1.2:../../sysutils/ruby-capistrano-stats
 
 USE_RAKE=	YES
 
-CONFLICTS+=	ruby[1-9][0-9]-capistrano-[0-9]* capistrano-[0-9]*
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
