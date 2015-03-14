@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1371 2015/03/14 10:52:59 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1372 2015/03/14 14:37:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1773,6 +1773,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-debugger to 1.6.8nb1 [taca 2015-03-10]
 	Updated net/quagga to 0.99.24.1 [gdt 2015-03-10]
 	Updated lang/sbcl to 1.2.9 [asau 2015-03-10]
+	Added textproc/go-text version 20150310 [bsiegert 2015-03-10]
+	Added net/go-net version 20150310 [bsiegert 2015-03-10]
 	Updated www/firefox to 36.0.1 [ryoon 2015-03-11]
 	Updated security/flawfinder to 1.31 [mef 2015-03-11]
 	Updated security/dirmngr to 1.1.1 [mef 2015-03-11]
