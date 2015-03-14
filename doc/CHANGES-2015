@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1372 2015/03/14 14:37:10 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.1373 2015/03/14 15:00:36 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/pear-Numbers_Words to 0.18.0 [taca 2015-03-14]
 	Updated textproc/mdocml to 1.13.3 [wiz 2015-03-14]
 	Updated mail/dovecot2 to 2.2.16 [adam 2015-03-14]
+	Updated x11/mlterm to 3.4.5 [tsutsui 2015-03-14]
