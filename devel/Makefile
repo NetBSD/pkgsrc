@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2067 2015/03/13 13:38:55 taca Exp $
+# $NetBSD: Makefile,v 1.2068 2015/03/14 18:55:47 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1524,6 +1524,7 @@ SUBDIR+=	php-shmop
 SUBDIR+=	php-sysvmsg
 SUBDIR+=	php-sysvsem
 SUBDIR+=	php-sysvshm
+SUBDIR+=	php-xcache
 SUBDIR+=	php-xdebug
 SUBDIR+=	physfs
 SUBDIR+=	picp
