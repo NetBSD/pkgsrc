@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2014/12/23 02:30:32 obache Exp $
+# $NetBSD: Makefile,v 1.48 2015/03/14 10:24:38 wiz Exp $
 
-DISTNAME=	mdocml-1.13.2
+DISTNAME=	mdocml-1.13.3
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
@@ -24,13 +24,13 @@ SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
 post-extract:
 	${ECHO} PREFIX=${PREFIX} > ${WRKSRC}/configure.local
 	${ECHO} MANDIR=${PREFIX}/${PKGMANDIR} >> ${WRKSRC}/configure.local
-	${ECHO} "CFLAGS=${CFLAGS:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} CFLAGS=\"${CFLAGS:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} DBLIB=\"${LDFLAGS} -lsqlite3\" >> ${WRKSRC}/configure.local
-	${ECHO} "INSTALL=${INSTALL:Q}" >> ${WRKSRC}/configure.local
-	${ECHO} "INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}" >> ${WRKSRC}/configure.local
-	${ECHO} "INSTALL_LIB=${INSTALL_DATA:Q}" >> ${WRKSRC}/configure.local
-	${ECHO} "INSTALL_MAN=${INSTALL_MAN:Q}" >> ${WRKSRC}/configure.local
-	${ECHO} "INSTALL_DATA=${INSTALL_DATA:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} INSTALL=\"${INSTALL:Q}\" >> ${WRKSRC}/configure.local
+	${ECHO} INSTALL_PROGRAM=\"${INSTALL_PROGRAM:Q}\" >> ${WRKSRC}/configure.local
+	${ECHO} INSTALL_LIB=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
+	${ECHO} INSTALL_MAN=\"${INSTALL_MAN:Q}\" >> ${WRKSRC}/configure.local
+	${ECHO} INSTALL_DATA=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} MANM_ROFF="mandoc-roff" >> ${WRKSRC}/configure.local
 # Mac OS X and Solaris 10 and newer do not support static binaries.
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
