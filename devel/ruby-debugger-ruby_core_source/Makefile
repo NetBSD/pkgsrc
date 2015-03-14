@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/03/10 16:40:18 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/14 07:46:36 taca Exp $
 
 DISTNAME=	debugger-ruby_core_source-1.3.8
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
