@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14225 2015/03/14 01:52:09 prlw1 Exp $
+$NetBSD: TODO,v 1.14226 2015/03/14 07:56:38 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
-	o ispell-3.4.00
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
