@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1378 2015/03/14 18:06:03 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1379 2015/03/14 18:53:18 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1905,3 +1905,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.451 [tnn 2015-03-14]
 	Updated geography/proj to 4.9.1 [gdt 2015-03-14]
 	Removed multimedia/adobe-flash-plugin successor multimedia/adobe-flash-plugin11 [tnn 2015-03-14]
+	Added devel/php-xcache version 3.2.0 [rodent 2015-03-14]
