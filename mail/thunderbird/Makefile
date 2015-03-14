@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.146 2015/03/07 10:25:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.147 2015/03/14 23:02:52 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
 TB_VER=		31.5.0
+PKGREVISION=	1
 #LIGHTNINGVER=	1.9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
