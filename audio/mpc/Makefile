@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/06/09 12:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/03/14 21:05:56 tnn Exp $
 
 DISTNAME=		mpc-0.26
 CATEGORIES=		audio
@@ -17,7 +17,7 @@ USE_TOOLS+=		pkg-config
 
 REPLACE_SH=		doc/*.sh
 
-LIBS.SunOS+=		${BUILDLINK_LDADD.iconv}
+LIBS+=			${BUILDLINK_LDADD.iconv}
 
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
