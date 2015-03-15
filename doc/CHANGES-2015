@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1400 2015/03/15 14:13:26 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1401 2015/03/15 14:35:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1967,3 +1967,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-sqlalchemy to 0.9.9 [adam 2015-03-15]
 	Updated devel/p5-File-LibMagic to 1.12 [mef 2015-03-15]
 	Updated devel/p5-Git-Wrapper to 0.040 [mef 2015-03-15]
+	Copied devel/gdb to devel/gdb5 [bsiegert 2015-03-15]
