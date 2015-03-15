@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/02/27 14:35:01 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2015/03/15 19:09:44 tnn Exp $
 
 DISTNAME=	rayshade.4.0.6
 PKGNAME=	rayshade-4.0.6
@@ -12,6 +12,7 @@ COMMENT=	Extensible system for creating ray-traced images
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
+USE_TOOLS+=		lex yacc
 BUILD_TARGET=
 INSTALLATION_DIRS=	bin lib share/doc/rayshade share/examples/rayshade
 WRKSRC=		${WRKDIR}/rayshade.4.0
