@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14232 2015/03/15 20:36:51 wiz Exp $
+$NetBSD: TODO,v 1.14233 2015/03/15 20:41:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -527,7 +527,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.7
 	o fmsx-4.0
-	o font-util-1.3.1
 	o fotoxx-14.06
 	o frama-c-20140301
 	o freeciv-2.4.0
