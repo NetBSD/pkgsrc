@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:17:58 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/03/15 00:17:34 rodent Exp $
 bin/trytond${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/trytond/__init__.py
 ${PYSITELIB}/trytond/__init__.pyc
@@ -108,6 +108,7 @@ ${PYSITELIB}/trytond/ir/locale/cs_CZ.po
 ${PYSITELIB}/trytond/ir/locale/de_DE.po
 ${PYSITELIB}/trytond/ir/locale/es_AR.po
 ${PYSITELIB}/trytond/ir/locale/es_CO.po
+${PYSITELIB}/trytond/ir/locale/es_EC.po
 ${PYSITELIB}/trytond/ir/locale/es_ES.po
 ${PYSITELIB}/trytond/ir/locale/fr_FR.po
 ${PYSITELIB}/trytond/ir/locale/nl_NL.po
@@ -218,6 +219,8 @@ ${PYSITELIB}/trytond/ir/view/model_access_form.xml
 ${PYSITELIB}/trytond/ir/view/model_access_list.xml
 ${PYSITELIB}/trytond/ir/view/model_button_form.xml
 ${PYSITELIB}/trytond/ir/view/model_button_list.xml
+${PYSITELIB}/trytond/ir/view/model_data_form.xml
+${PYSITELIB}/trytond/ir/view/model_data_list.xml
 ${PYSITELIB}/trytond/ir/view/model_field_access_form.xml
 ${PYSITELIB}/trytond/ir/view/model_field_access_list.xml
 ${PYSITELIB}/trytond/ir/view/model_field_form.xml
@@ -335,6 +338,9 @@ ${PYSITELIB}/trytond/model/fields/sha.pyo
 ${PYSITELIB}/trytond/model/fields/text.py
 ${PYSITELIB}/trytond/model/fields/text.pyc
 ${PYSITELIB}/trytond/model/fields/text.pyo
+${PYSITELIB}/trytond/model/match.py
+${PYSITELIB}/trytond/model/match.pyc
+${PYSITELIB}/trytond/model/match.pyo
 ${PYSITELIB}/trytond/model/model.py
 ${PYSITELIB}/trytond/model/model.pyc
 ${PYSITELIB}/trytond/model/model.pyo
@@ -350,6 +356,9 @@ ${PYSITELIB}/trytond/model/modelstorage.pyo
 ${PYSITELIB}/trytond/model/modelview.py
 ${PYSITELIB}/trytond/model/modelview.pyc
 ${PYSITELIB}/trytond/model/modelview.pyo
+${PYSITELIB}/trytond/model/union.py
+${PYSITELIB}/trytond/model/union.pyc
+${PYSITELIB}/trytond/model/union.pyo
 ${PYSITELIB}/trytond/model/workflow.py
 ${PYSITELIB}/trytond/model/workflow.pyc
 ${PYSITELIB}/trytond/model/workflow.pyo
@@ -409,6 +418,7 @@ ${PYSITELIB}/trytond/res/locale/cs_CZ.po
 ${PYSITELIB}/trytond/res/locale/de_DE.po
 ${PYSITELIB}/trytond/res/locale/es_AR.po
 ${PYSITELIB}/trytond/res/locale/es_CO.po
+${PYSITELIB}/trytond/res/locale/es_EC.po
 ${PYSITELIB}/trytond/res/locale/es_ES.po
 ${PYSITELIB}/trytond/res/locale/fr_FR.po
 ${PYSITELIB}/trytond/res/locale/nl_NL.po
@@ -424,8 +434,8 @@ ${PYSITELIB}/trytond/res/view/group_form.xml
 ${PYSITELIB}/trytond/res/view/group_list.xml
 ${PYSITELIB}/trytond/res/view/sequence_type_form.xml
 ${PYSITELIB}/trytond/res/view/user_config_start_form.xml
-${PYSITELIB}/trytond/res/view/user_form.xml
 ${PYSITELIB}/trytond/res/view/user_form_preferences.xml
+${PYSITELIB}/trytond/res/view/user_form.xml
 ${PYSITELIB}/trytond/res/view/user_list.xml
 ${PYSITELIB}/trytond/res/view/user_warning_form.xml
 ${PYSITELIB}/trytond/res/view/user_warning_tree.xml
@@ -453,6 +463,9 @@ ${PYSITELIB}/trytond/tests/copy_.pyo
 ${PYSITELIB}/trytond/tests/export_data.py
 ${PYSITELIB}/trytond/tests/export_data.pyc
 ${PYSITELIB}/trytond/tests/export_data.pyo
+${PYSITELIB}/trytond/tests/field_context.py
+${PYSITELIB}/trytond/tests/field_context.pyc
+${PYSITELIB}/trytond/tests/field_context.pyo
 ${PYSITELIB}/trytond/tests/history.py
 ${PYSITELIB}/trytond/tests/history.pyc
 ${PYSITELIB}/trytond/tests/history.pyo
@@ -470,9 +483,6 @@ ${PYSITELIB}/trytond/tests/run-tests.py
 ${PYSITELIB}/trytond/tests/run-tests.pyc
 ${PYSITELIB}/trytond/tests/run-tests.pyo
 ${PYSITELIB}/trytond/tests/sequence.xml
-${PYSITELIB}/trytond/tests/test.py
-${PYSITELIB}/trytond/tests/test.pyc
-${PYSITELIB}/trytond/tests/test.pyo
 ${PYSITELIB}/trytond/tests/test_access.py
 ${PYSITELIB}/trytond/tests/test_access.pyc
 ${PYSITELIB}/trytond/tests/test_access.pyo
@@ -485,6 +495,9 @@ ${PYSITELIB}/trytond/tests/test_copy.pyo
 ${PYSITELIB}/trytond/tests/test_exportdata.py
 ${PYSITELIB}/trytond/tests/test_exportdata.pyc
 ${PYSITELIB}/trytond/tests/test_exportdata.pyo
+${PYSITELIB}/trytond/tests/test_field_context.py
+${PYSITELIB}/trytond/tests/test_field_context.pyc
+${PYSITELIB}/trytond/tests/test_field_context.pyo
 ${PYSITELIB}/trytond/tests/test_fields.py
 ${PYSITELIB}/trytond/tests/test_fields.pyc
 ${PYSITELIB}/trytond/tests/test_fields.pyo
@@ -506,6 +519,9 @@ ${PYSITELIB}/trytond/tests/test_modelsql.pyo
 ${PYSITELIB}/trytond/tests/test_mptt.py
 ${PYSITELIB}/trytond/tests/test_mptt.pyc
 ${PYSITELIB}/trytond/tests/test_mptt.pyo
+${PYSITELIB}/trytond/tests/test_protocols.py
+${PYSITELIB}/trytond/tests/test_protocols.pyc
+${PYSITELIB}/trytond/tests/test_protocols.pyo
 ${PYSITELIB}/trytond/tests/test_pyson.py
 ${PYSITELIB}/trytond/tests/test_pyson.pyc
 ${PYSITELIB}/trytond/tests/test_pyson.pyo
@@ -524,6 +540,9 @@ ${PYSITELIB}/trytond/tests/test_trigger.pyo
 ${PYSITELIB}/trytond/tests/test_tryton.py
 ${PYSITELIB}/trytond/tests/test_tryton.pyc
 ${PYSITELIB}/trytond/tests/test_tryton.pyo
+${PYSITELIB}/trytond/tests/test_union.py
+${PYSITELIB}/trytond/tests/test_union.pyc
+${PYSITELIB}/trytond/tests/test_union.pyo
 ${PYSITELIB}/trytond/tests/test_user.py
 ${PYSITELIB}/trytond/tests/test_user.pyc
 ${PYSITELIB}/trytond/tests/test_user.pyo
@@ -533,6 +552,9 @@ ${PYSITELIB}/trytond/tests/test_wizard.pyo
 ${PYSITELIB}/trytond/tests/test_workflow.py
 ${PYSITELIB}/trytond/tests/test_workflow.pyc
 ${PYSITELIB}/trytond/tests/test_workflow.pyo
+${PYSITELIB}/trytond/tests/test.py
+${PYSITELIB}/trytond/tests/test.pyc
+${PYSITELIB}/trytond/tests/test.pyo
 ${PYSITELIB}/trytond/tests/trigger.py
 ${PYSITELIB}/trytond/tests/trigger.pyc
 ${PYSITELIB}/trytond/tests/trigger.pyo
@@ -545,9 +567,6 @@ ${PYSITELIB}/trytond/tests/workflow.py
 ${PYSITELIB}/trytond/tests/workflow.pyc
 ${PYSITELIB}/trytond/tests/workflow.pyo
 ${PYSITELIB}/trytond/tests/workflow.xml
-${PYSITELIB}/trytond/tools/StringMatcher.py
-${PYSITELIB}/trytond/tools/StringMatcher.pyc
-${PYSITELIB}/trytond/tools/StringMatcher.pyo
 ${PYSITELIB}/trytond/tools/__init__.py
 ${PYSITELIB}/trytond/tools/__init__.pyc
 ${PYSITELIB}/trytond/tools/__init__.pyo
@@ -560,6 +579,9 @@ ${PYSITELIB}/trytond/tools/misc.pyo
 ${PYSITELIB}/trytond/tools/singleton.py
 ${PYSITELIB}/trytond/tools/singleton.pyc
 ${PYSITELIB}/trytond/tools/singleton.pyo
+${PYSITELIB}/trytond/tools/StringMatcher.py
+${PYSITELIB}/trytond/tools/StringMatcher.pyc
+${PYSITELIB}/trytond/tools/StringMatcher.pyo
 ${PYSITELIB}/trytond/transaction.py
 ${PYSITELIB}/trytond/transaction.pyc
 ${PYSITELIB}/trytond/transaction.pyo
@@ -578,6 +600,7 @@ ${PYSITELIB}/trytond/webdav/locale/cs_CZ.po
 ${PYSITELIB}/trytond/webdav/locale/de_DE.po
 ${PYSITELIB}/trytond/webdav/locale/es_AR.po
 ${PYSITELIB}/trytond/webdav/locale/es_CO.po
+${PYSITELIB}/trytond/webdav/locale/es_EC.po
 ${PYSITELIB}/trytond/webdav/locale/es_ES.po
 ${PYSITELIB}/trytond/webdav/locale/fr_FR.po
 ${PYSITELIB}/trytond/webdav/locale/nl_NL.po

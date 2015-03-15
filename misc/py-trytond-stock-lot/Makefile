@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/06/25 06:07:57 richard Exp $
-
+# $NetBSD: Makefile,v 1.6 2015/03/15 00:17:36 rodent Exp $
+TRYTON_MODULE_NAME=	trytond_stock_lot
 .include "../../devel/py-trytond/Makefile.common"
-DISTNAME=	trytond_stock_lot-${TRYTOND_VERSION}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	misc python
-MASTER_SITES=	${TRYTON_SITES}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/

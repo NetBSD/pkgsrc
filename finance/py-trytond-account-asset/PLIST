@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/25 06:03:37 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:34 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -25,6 +25,7 @@ ${PYSITELIB}/trytond/modules/account_asset/locale/ca_ES.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_CO.po
+${PYSITELIB}/trytond/modules/account_asset/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_ES.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/fr_FR.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/sl_SI.po
@@ -38,6 +39,7 @@ ${PYSITELIB}/trytond/modules/account_asset/purchase.pyo
 ${PYSITELIB}/trytond/modules/account_asset/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_asset/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_asset/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/account_asset/tests/scenario_account_asset.rst
 ${PYSITELIB}/trytond/modules/account_asset/tests/test_account_asset.py
 ${PYSITELIB}/trytond/modules/account_asset/tests/test_account_asset.pyc
 ${PYSITELIB}/trytond/modules/account_asset/tests/test_account_asset.pyo

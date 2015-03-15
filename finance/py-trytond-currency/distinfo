@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/05/03 13:26:52 rodent Exp $
+$NetBSD: distinfo,v 1.3 2015/03/15 00:17:35 rodent Exp $
 
-SHA1 (trytond_currency-3.2.0.tar.gz) = 687839c5d3d64d3cb1767cf5f26aaae34a241ba1
-RMD160 (trytond_currency-3.2.0.tar.gz) = 6b42baa1813c5b05f8fe8ca0b18f1c777dcb2390
-Size (trytond_currency-3.2.0.tar.gz) = 56818 bytes
+SHA1 (tryton-3.4/trytond_currency-3.4.1.tar.gz) = 120919cf2129f5d852ff85a0a8c67ad2edf8ed78
+RMD160 (tryton-3.4/trytond_currency-3.4.1.tar.gz) = 2d8f7a8a994846e1cbdf06de974e6613b5c21144
+Size (tryton-3.4/trytond_currency-3.4.1.tar.gz) = 58587 bytes
