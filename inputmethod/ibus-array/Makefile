@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/01/20 11:24:33 obache Exp $
+# $NetBSD: Makefile,v 1.13 2015/03/15 18:46:56 hiramatsu Exp $
 
 DISTNAME=	ibus-array-0.1.0
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus-array.googlecode.com/svn/tarballs/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus-array/
 COMMENT=	Array 30 Input Method for iBus
 LICENSE=	gnu-gpl-v3
