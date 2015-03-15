@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.233 2015/03/15 19:23:26 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.234 2015/03/15 21:18:32 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -991,14 +991,6 @@ _CWRAPPERS_TRANSFORM+=	R:${BUILDLINK_X11_DIR}:${X11BASE}
 .for _dir_ in ${_BLNK_PASSTHRU_DIRS} ${_BLNK_PASSTHRU_RPATHDIRS}
 _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 _CWRAPPERS_TRANSFORM+=	R:${_dir_}:${_dir_}
-.endfor
-#
-# Protect /usr/lib/* as they're all allowed to be specified for the
-# runtime library search path.
-#
-.for _dir_ in ${SYSTEM_DEFAULT_RPATH:S/:/ /g}
-_BLNK_TRANSFORM+=	sub-rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir}}
-_CWRAPPERS_TRANSFORM+=	R:/usr/lib:/usr/lib
 .endfor
 #
 # Convert direct paths to static libraries and libtool archives in
