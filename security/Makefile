@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.543 2015/03/01 10:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.544 2015/03/15 00:55:56 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -34,6 +34,7 @@ SUBDIR+=	ccid
 SUBDIR+=	cfs
 SUBDIR+=	chkrootkit
 SUBDIR+=	clamav
+SUBDIR+=	clamav-doc
 SUBDIR+=	clusterssh
 SUBDIR+=	courier-authlib
 SUBDIR+=	crack
