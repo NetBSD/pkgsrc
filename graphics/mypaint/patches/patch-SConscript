@@ -1,0 +1,13 @@
+$NetBSD: patch-SConscript,v 1.1 2015/03/15 04:51:31 ryoon Exp $
+
+--- SConscript.orig	2012-12-31 17:03:38.000000000 +0000
++++ SConscript
+@@ -19,7 +19,7 @@ except OSError:
+ 
+ def burn_python_version(target, source, env):
+     # make sure we run the python version that we built the extension modules for
+-    s =  '#!/usr/bin/env ' + env['python_binary'] + '\n'
++    s =  '#! @PYTHONBIN@' + '\n'
+     s += 5*'#\n'
+     s += '# DO NOT EDIT - edit %s instead\n' % source[0]
+     s += 5*'#\n'
