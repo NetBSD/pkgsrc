@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/20 08:17:09 he Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/15 19:10:28 tnn Exp $
 
 DISTNAME=	radsecproxy-1.6.6
 CATEGORIES=	net
@@ -23,4 +23,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/radsecproxy.conf-example \
 		${DESTDIR}${EGDIR}/${CONF}
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
