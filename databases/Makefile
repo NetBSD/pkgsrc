@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2015/03/01 21:06:56 mspo Exp $
+# $NetBSD: Makefile,v 1.483 2015/03/15 14:51:36 taca Exp $
 
 COMMENT=	Databases
 
@@ -218,7 +218,6 @@ SUBDIR+=	pear-MDB2
 SUBDIR+=	pear-MDB2_Driver_mysql
 SUBDIR+=	pear-MDB2_Driver_mysqli
 SUBDIR+=	pear-MDB2_Driver_pgsql
-SUBDIR+=	pear-MDB2_Driver_sqlite
 SUBDIR+=	percona-toolkit
 SUBDIR+=	pgadmin3
 SUBDIR+=	pgbouncer
@@ -241,7 +240,6 @@ SUBDIR+=	php-pdo_pgsql
 SUBDIR+=	php-pdo_sqlite
 SUBDIR+=	php-pgsql
 SUBDIR+=	php-redis
-SUBDIR+=	php-sqlite
 SUBDIR+=	php-sqlrelay
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
