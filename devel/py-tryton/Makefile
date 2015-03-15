@@ -1,11 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/09/10 12:05:38 richard Exp $
-
-TRYTON_CLIENT_REVISION=3
+# $NetBSD: Makefile,v 1.13 2015/03/15 00:17:34 rodent Exp $
+TRYTON_MODULE_NAME=	tryton
 .include "../../devel/py-trytond/Makefile.common"
-DISTNAME=	tryton-${TRYTON_VERSION}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://downloads.tryton.org/3.2/
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/

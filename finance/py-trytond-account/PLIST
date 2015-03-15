@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/01 19:14:22 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:34 rodent Exp $
 ${PYSITELIB}/trytond/modules/account/__init__.py
 ${PYSITELIB}/trytond/modules/account/__init__.pyc
 ${PYSITELIB}/trytond/modules/account/__init__.pyo
@@ -28,6 +28,7 @@ ${PYSITELIB}/trytond/modules/account/locale/cs_CZ.po
 ${PYSITELIB}/trytond/modules/account/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/account/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/account/locale/es_CO.po
+${PYSITELIB}/trytond/modules/account/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/account/locale/es_ES.po
 ${PYSITELIB}/trytond/modules/account/locale/fr_FR.po
 ${PYSITELIB}/trytond/modules/account/locale/nl_NL.po
@@ -52,6 +53,8 @@ ${PYSITELIB}/trytond/modules/account/tax.xml
 ${PYSITELIB}/trytond/modules/account/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/account/tests/scenario_account_reconciliation.rst
+${PYSITELIB}/trytond/modules/account/tests/scenario_move_cancel.rst
 ${PYSITELIB}/trytond/modules/account/tests/test_account.py
 ${PYSITELIB}/trytond/modules/account/tests/test_account.pyc
 ${PYSITELIB}/trytond/modules/account/tests/test_account.pyo
@@ -108,7 +111,6 @@ ${PYSITELIB}/trytond/modules/account/view/open_balance_sheet_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/open_chart_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/open_income_statement_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/open_journal_ask_form.xml
-${PYSITELIB}/trytond/modules/account/view/open_reconcile_lines_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/open_third_party_balance_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/party_form.xml
 ${PYSITELIB}/trytond/modules/account/view/party_tree.xml
@@ -118,6 +120,7 @@ ${PYSITELIB}/trytond/modules/account/view/print_general_journal_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/print_general_legder_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/print_trial_balance_start_form.xml
 ${PYSITELIB}/trytond/modules/account/view/reconcile_lines_writeoff_form.xml
+${PYSITELIB}/trytond/modules/account/view/reconcile_show_form.xml
 ${PYSITELIB}/trytond/modules/account/view/tax_code_form.xml
 ${PYSITELIB}/trytond/modules/account/view/tax_code_list.xml
 ${PYSITELIB}/trytond/modules/account/view/tax_code_open_chart_start_form.xml
