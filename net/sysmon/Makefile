@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/12 23:18:26 tron Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/15 18:23:46 tnn Exp $
 #
 
 DISTNAME=		sysmon-0.92.2
@@ -45,4 +45,6 @@ post-install:
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/sysmon.8
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
