@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2015/03/15 14:55:51 taca Exp $
+# $NetBSD: Makefile,v 1.405 2015/03/15 15:00:17 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -148,7 +148,6 @@ SUBDIR+=	perl5
 SUBDIR+=	pfe
 SUBDIR+=	pforth
 #SUBDIR+=	php		# only contains Makefile fragments
-SUBDIR+=	php53
 SUBDIR+=	php54
 SUBDIR+=	php55
 SUBDIR+=	php56
