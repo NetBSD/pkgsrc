@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1411 2015/03/15 16:05:28 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1412 2015/03/15 16:33:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/dk-milter to 1.0.2 [mef 2015-03-15]
 	Updated meta-pkgs/bulk-medium to 20150315 [taca 2015-03-15]
 	Updated devel/ruby-ffi to 1.9.8 [taca 2015-03-15]
+	Updated www/php-sugarcrm to 6.5.20 [taca 2015-03-15]
