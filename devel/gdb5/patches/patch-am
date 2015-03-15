@@ -1,0 +1,52 @@
+$NetBSD: patch-am,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- gdb/i386bsd-nat.c.orig	2007-07-11 14:32:16.000000000 +0200
++++ gdb/i386bsd-nat.c
+@@ -395,7 +395,7 @@ _initialize_i386bsd_nat (void)
+      system header files and sysctl(3) to get at the relevant
+      information.  */
+ 
+-#if defined (__FreeBSD_version) && __FreeBSD_version >= 400011
++#if defined(__DragonFly__) || (defined (__FreeBSD_version) && __FreeBSD_version >= 400011)
+   extern int i386fbsd4_sc_pc_offset;
+   extern int i386fbsd4_sc_sp_offset;
+ #define SC_PC_OFFSET i386fbsd4_sc_pc_offset
+@@ -419,26 +419,30 @@ _initialize_i386bsd_nat (void)
+ 
+   /* Override the default value for the offset of the program counter
+      in the sigcontext structure.  */
+-  sc_pc_offset = offsetof (struct sigcontext, sc_pc);
++#if defined(__DragonFly__)
++  sc_pc_offset = offsetof (ucontext_t, uc_mcontext.mc_eip);
++#else
++  sc_pc_offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_EIP]);
++#endif
+ 
+   if (SC_PC_OFFSET != sc_pc_offset)
+     {
+-      warning ("\
+-offsetof (struct sigcontext, sc_pc) yields %d instead of %d.\n\
+-Please report this to <bug-gdb@gnu.org>.",
++      warning ("sc_pc_offset is %d instead of %d.",
+ 	       sc_pc_offset, SC_PC_OFFSET);
+     }
+ 
+   SC_PC_OFFSET = sc_pc_offset;
+ 
+   /* Likewise for the stack pointer.  */
+-  sc_sp_offset = offsetof (struct sigcontext, sc_sp);
++#if defined(__DragonFly__)
++  sc_sp_offset = offsetof (ucontext_t, uc_mcontext.mc_esp);
++#else
++  sc_sp_offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_UESP]);
++#endif
+ 
+   if (SC_SP_OFFSET != sc_sp_offset)
+     {
+-      warning ("\
+-offsetof (struct sigcontext, sc_sp) yields %d instead of %d.\n\
+-Please report this to <bug-gdb@gnu.org>.",
++      warning ("sc_sp_offset is %d instead of %d.",
+ 	       sc_sp_offset, SC_SP_OFFSET);
+     }
+ 

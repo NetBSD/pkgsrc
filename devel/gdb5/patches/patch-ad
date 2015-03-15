@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- etc/Makefile.in.orig	2002-01-26 21:35:45.000000000 +0000
++++ etc/Makefile.in
+@@ -67,20 +67,8 @@ info:
+ 	  fi; \
+ 	done
+ 
+-install-info: info
+-	$(SHELL) $(srcdir)/../mkinstalldirs $(infodir)
+-	if test ! -f standards.info; then cd $(srcdir); fi; \
+-	if test -f standards.info; then \
+-	  for i in standards.info*; do \
+-	    $(INSTALL_DATA) $$i $(infodir)/$$i; \
+-	  done; \
+-	fi
+-	if test ! -f configure.info; then cd $(srcdir); fi; \
+-	if test -f configure.info; then \
+-	  for i in configure.info*; do \
+-	    $(INSTALL_DATA) $$i $(infodir)/$$i; \
+-	  done; \
+-	fi
++install-info:
++	true
+ 
+ dvi:
+ 	for f in $(DVIFILES); do \

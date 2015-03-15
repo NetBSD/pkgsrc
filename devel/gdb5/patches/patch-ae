@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- opcodes/Makefile.am.orig	2002-08-28 10:38:50.000000000 +0000
++++ opcodes/Makefile.am
+@@ -312,8 +312,8 @@ install_libopcodes: $(bfdlib_LTLIBRARIES
+ 	$(mkinstalldirs) $(DESTDIR)$(bfdincludedir)
+ 	@list='$(bfdlib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
++	    echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+ 	$(INSTALL_DATA) $(INCDIR)/dis-asm.h $(DESTDIR)$(bfdincludedir)/dis-asm.h

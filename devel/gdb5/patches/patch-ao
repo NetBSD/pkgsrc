@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- gdb/config/djgpp/djconfig.sh.orig	2002-02-25 17:09:45.000000000 +0100
++++ gdb/config/djgpp/djconfig.sh	2006-10-22 09:54:26.000000000 +0200
+@@ -76,7 +76,7 @@ TMPFILE="${TMPDIR-.}/cfg.tmp"
+ 
+ # We need to skip the build directory if it is a subdirectory of $srcdir,
+ # otherwise we will have an infinite recursion on our hands...
+-if test "`pwd`" == "${srcdir}" ; then
++if test "`pwd`" = "${srcdir}" ; then
+   SKIPDIR=""
+   SKIPFILES=""
+ else
