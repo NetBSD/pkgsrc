@@ -1,13 +1,15 @@
-$NetBSD: patch-ak,v 1.4 2007/08/02 15:03:10 taca Exp $
+$NetBSD: patch-ak,v 1.5 2015/03/15 01:00:12 taca Exp $
 
---- mkchadic/Makefile.in.orig	2007-07-03 15:55:27.000000000 +0900
+Fix path for pkgsrc.
+
+--- mkchadic/Makefile.in.orig	2012-06-25 22:37:25.000000000 +0000
 +++ mkchadic/Makefile.in
-@@ -184,7 +184,7 @@ LDADD = $(top_builddir)/lib/libchasen.la
- LINK = $(LIBTOOL) --mode=link \
+@@ -160,7 +160,7 @@ LINK = $(LIBTOOL) --mode=link \
  $(CXX) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+ 
  
 -pkglibexecdir = ${libexecdir}/chasen
 +pkglibexecdir = ${sbindir}
+ pkglibexec_PROGRAMS = makemat makeda
+ 
  makemat_SOURCES = makemat.c
- makeda_SOURCES = translate.c dumpdic.c
- all: all-am
