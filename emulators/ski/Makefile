@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/06/16 23:41:51 asau Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/15 18:40:53 tnn Exp $
 #
 
 DISTNAME=	ski-1.3.2
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+= --prefix=${PREFIX}
 
 CPPFLAGS+=	-I${PREFIX}/include/libelf -L ${PREFIX}/lib
 
-USE_TOOLS+=	pkg-config aclocal autoconf automake autoreconf
+USE_TOOLS+=	pkg-config aclocal autoconf automake autoreconf yacc
 USE_LIBTOOL=	yes
 USE_NCURSES=	yes
 
