@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/25 06:03:37 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:35 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -17,6 +17,7 @@ ${PYSITELIB}/trytond/modules/bank/locale/ca_ES.po
 ${PYSITELIB}/trytond/modules/bank/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/bank/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/bank/locale/es_CO.po
+${PYSITELIB}/trytond/modules/bank/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/bank/locale/es_ES.po
 ${PYSITELIB}/trytond/modules/bank/locale/fr_FR.po
 ${PYSITELIB}/trytond/modules/bank/locale/sl_SI.po
