@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/12 23:02:57 wiedi Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/15 16:45:04 tnn Exp $
 #
 
 DISTNAME=	validns-0.8
@@ -36,4 +36,5 @@ do-install:
 
 .include "../../devel/libjudy/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
