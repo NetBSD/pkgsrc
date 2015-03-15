@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/03/15 01:02:42 tnn Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	5
@@ -66,10 +66,7 @@ post-install:
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/readline/buildlink3.mk"
-# DragonFly does not have built-in gettext
-.if ${OPSYS} == "DragonFly"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.endif
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
