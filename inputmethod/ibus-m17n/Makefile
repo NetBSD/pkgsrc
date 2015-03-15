@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/05/05 00:48:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2015/03/15 17:47:14 hiramatsu Exp $
 #
 
 DISTNAME=	ibus-m17n-1.3.4
@@ -6,7 +6,7 @@ PKGREVISION=	15
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	M17N engine for IBus platform
 LICENSE=	gnu-gpl-v2
