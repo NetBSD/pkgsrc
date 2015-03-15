@@ -1,17 +1,17 @@
-$NetBSD: patch-build_rpmfc.c,v 1.1 2013/09/13 12:41:32 ryoon Exp $
+$NetBSD: patch-build_rpmfc.c,v 1.2 2015/03/15 05:34:56 ryoon Exp $
 
 * basemname(3) requires libgen.h on NetBSD.
 
---- build/rpmfc.c.orig	2013-06-10 15:55:10.000000000 +0000
+--- build/rpmfc.c.orig	2014-08-26 09:49:39.000000000 +0000
 +++ build/rpmfc.c
-@@ -16,6 +16,10 @@
- #include <rpm/rpmfi.h>
- #include <rpm/rpmstrpool.h>
+@@ -7,6 +7,10 @@
+ #include <magic.h>
+ #include <regex.h>
  
 +#if defined(__NetBSD__)
 +#include <libgen.h>
 +#endif
 +
- #include "build/rpmbuild_internal.h"
- 
- #include "debug.h"
+ #include <rpm/header.h>
+ #include <rpm/argv.h>
+ #include <rpm/rpmfc.h>

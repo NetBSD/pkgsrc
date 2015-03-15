@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2014/12/11 22:13:08 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2015/03/15 05:34:56 ryoon Exp $
 
-DISTNAME=	rpm-4.11.1
-PKGREVISION=	2
+DISTNAME=	rpm-4.12.0.1
 CATEGORIES=	misc
-MASTER_SITES=	http://rpm.org/releases/rpm-4.11.x/
+MASTER_SITES=	http://rpm.org/releases/rpm-4.12.x/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -77,6 +76,7 @@ SUBST_MESSAGE.mkd=	Fixing workdir tools references in macros file
 SUBST_FILES.mkd=	macros
 SUBST_SED.mkd+=		-e 's,${TOOLS_CMD.mkdir},${TOOLS_PATH.mkdir},'
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
