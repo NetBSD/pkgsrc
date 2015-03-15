@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/02/13 17:16:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2015/03/15 17:25:55 hiramatsu Exp $
 
 DISTNAME=	scim-python-0.1.13rc1
 PKGREVISION=	22
@@ -6,7 +6,7 @@ CATEGORIES=	inputmethod python
 MASTER_SITES=	http://scim-python.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/scim-python/
 COMMENT=	Python wrapper for Smart Common Input Method platform
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
