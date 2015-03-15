@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/05/29 23:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/03/15 21:10:07 hiramatsu Exp $
 #
 
 DISTNAME=	tokyocabinet-perl-1.34
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE:S/perldoc/perlpkg/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fallabs.com/tokyocabinet/perldoc/
 COMMENT=	Perl binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
