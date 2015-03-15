@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1397 2015/03/15 09:54:09 nros Exp $
+$NetBSD: CHANGES-2015,v 1.1398 2015/03/15 13:58:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1950,3 +1950,17 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/rpm to 4.12.0.1 [ryoon 2015-03-15]
 	Updated devel/fossil to 1.32 [wiz 2015-03-15]
 	Updated textproc/tinyxml2 to 2.2.0 [nros 2015-03-15]
+	Updated devel/p5-Any-Moose to 0.26 [mef 2015-03-15]
+	Updated devel/p5-AnyEvent to 7.08 [mef 2015-03-15]
+	Updated devel/p5-CPAN to 2.1000 [mef 2015-03-15]
+	Updated devel/p5-CPAN-Meta to 2.150001 [mef 2015-03-15]
+	Updated devel/p5-Class-MethodMaker to 2.23 [mef 2015-03-15]
+	Updated devel/p5-Class-Virtual to 0.07 [mef 2015-03-15]
+	Updated devel/p5-Config-MVP to 2.200009 [mef 2015-03-15]
+	Updated devel/p5-Data-Munge to 0.094 [mef 2015-03-15]
+	Updated devel/p5-Data-ShowTable to 4.6 [mef 2015-03-15]
+	Updated devel/p5-Date-Calc-XS to 6.4 [mef 2015-03-15]
+	Updated devel/p5-Devel-CheckOS to 1.76 [mef 2015-03-15]
+	Updated devel/p5-Devel-PPPort to 3.31 [mef 2015-03-15]
+	Updated devel/p5-Expect to 1.32 [mef 2015-03-15]
+	Updated devel/p5-ExtUtils-ModuleMaker to 0.54 [mef 2015-03-15]
