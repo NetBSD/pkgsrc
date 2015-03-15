@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2014/11/17 19:04:49 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2015/03/15 19:11:22 hiramatsu Exp $
 #
 
 DISTNAME=		scim-tables-0.5.14.1
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
-MAINTAINER=		obache@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scim-im.org/
 COMMENT=		Data files for SCIM Generic Table Input Method module
 LICENSE=		gnu-gpl-v2
