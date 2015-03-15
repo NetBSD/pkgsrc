@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/15 17:30:24 hiramatsu Exp $
 #
 
 DISTNAME=	lzmalib-0.0.1
 CATEGORIES=	archivers
 MASTER_SITES=	http://tokyocabinet.sourceforge.net/misc/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tokyocabinet.sourceforge.net/misc/
 COMMENT=	Thin wrapper library of LZMA
 #LICENSE=	gnu-lgpl-?
