@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.137 2015/03/08 16:17:01 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.138 2015/03/15 14:00:57 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -402,6 +402,8 @@ RDOC?=			${PREFIX}/bin/rdoc${RUBY_SUFFIX}
 
 RUBY_ARCH?= ${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
+RUBY_MAJOR_MINOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+
 #
 # Ruby shared and static library version handling.
 #
@@ -576,7 +578,8 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_SHLIBALIAS=${RUBY_SHLIBALIAS:Q} \
 			RUBY_STATICLIB=${RUBY_STATICLIB:Q} \
 			RUBY_ARCH=${RUBY_ARCH:Q} \
-			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",}
+			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",} \
+			RUBY_MAJOR_MINOR=${RUBY_MAJOR_MINOR}
 
 #
 # make dynamic PLIST
