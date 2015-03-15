@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2015/01/31 12:49:45 obache Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/15 18:31:52 hiramatsu Exp $
 
 DISTNAME=	faraday-0.9.1
 CATEGORIES=	www
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lostisland/faraday
 COMMENT=	HTTP/REST API client library
 LICENSE=	mit

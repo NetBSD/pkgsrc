@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/15 18:31:53 hiramatsu Exp $
 
 DISTNAME=	tegaki-train-0.3.1
 PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Train Tegaki with your own handwriting
 LICENSE=	gnu-gpl-v2
