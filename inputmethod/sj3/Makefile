@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/15 15:35:05 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 17:56:16 hiramatsu Exp $
 #
 
 .include "version.mk"
@@ -7,7 +7,7 @@ DISTNAME=	sj3-${SJ3_VERSION}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://sj3.googlecode.com/files/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/sj3/
 COMMENT=	SJ3 Japanese input method
 
