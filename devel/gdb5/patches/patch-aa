@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- Makefile.in.orig	2002-12-10 21:30:40.000000000 +0000
++++ Makefile.in
+@@ -75,10 +75,10 @@ PWD = $${PWDCMD-pwd}
+ # cygwin host.
+ INSTALL_PROGRAM_ARGS =
+ 
+-INSTALL = $(SHELL) $$s/install-sh -c
+-INSTALL_PROGRAM = $(INSTALL) $(INSTALL_PROGRAM_ARGS)
+-INSTALL_SCRIPT = $(INSTALL)
+-INSTALL_DATA = $(INSTALL) -m 644
++INSTALL = $(BSD_INSTALL)
++INSTALL_PROGRAM = $(BSD_INSTALL_PROGRAM)
++INSTALL_SCRIPT = $(BSD_INSTALL_SCRIPT)
++INSTALL_DATA = $(BSD_INSTALL_DATA)
+ 
+ INSTALL_DOSREL = install-dosrel-fake
+ 
+@@ -372,6 +372,7 @@ BASE_FLAGS_TO_PASS = \
+ 	"CXXFLAGS_FOR_TARGET=$(CXXFLAGS_FOR_TARGET)" \
+ 	"CXX_FOR_TARGET=$(CXX_FOR_TARGET)" \
+ 	"DLLTOOL_FOR_TARGET=$(DLLTOOL_FOR_TARGET)" \
++	"DESTDIR=$(DESTDIR)" \
+ 	"INSTALL=$(INSTALL)" \
+ 	"INSTALL_DATA=$(INSTALL_DATA)" \
+ 	"INSTALL_PROGRAM=$(INSTALL_PROGRAM)" \
+@@ -707,7 +708,6 @@ INSTALL_MODULES = \
+ 	install-perl \
+ 	install-prms \
+ 	install-rcs \
+-	install-readline \
+ 	install-recode \
+ 	install-sed \
+ 	install-send-pr \

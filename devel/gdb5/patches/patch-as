@@ -1,0 +1,28 @@
+$NetBSD: patch-as,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- gdb/i386nbsd-tdep.c.orig	2007-07-11 14:31:00.000000000 +0200
++++ gdb/i386nbsd-tdep.c
+@@ -31,6 +31,8 @@
+ 
+ #include "solib-svr4.h"
+ 
++#include <sys/param.h>
++
+ /* Map a GDB register number to an offset in the reg structure.  */
+ static int regmap[] =
+ {
+@@ -238,9 +240,14 @@ i386nbsd_pc_in_sigtramp (CORE_ADDR pc, c
+ 	  || i386nbsd_sigtramp_offset (pc) >= 0);
+ }
+ 
++#if __NetBSD_Prereq__(2,0,0)
+ /* From <machine/signal.h>.  */
+ int i386nbsd_sc_pc_offset = 44;
+ int i386nbsd_sc_sp_offset = 56;
++#else
++int i386nbsd_sc_pc_offset = 92;
++int i386nbsd_sc_sp_offset = 104;
++#endif
+ 
+ static void 
+ i386nbsd_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
