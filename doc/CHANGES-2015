@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1421 2015/03/15 21:05:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1422 2015/03/15 21:06:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1989,3 +1989,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXvMC to 1.0.9 [wiz 2015-03-15]
 	Updated print/cups-filters to 1.0.67 [wiz 2015-03-15]
 	Updated graphics/cairo to 1.14.2 [wiz 2015-03-15]
+	Updated graphics/cairo-gobject to 1.14.2 [wiz 2015-03-15]
