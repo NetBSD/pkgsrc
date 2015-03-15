@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 17:00:02 cube Exp $
+$NetBSD: distinfo,v 1.2 2015/03/15 13:25:26 mef Exp $
 
-SHA1 (Class-Virtual-0.06.tar.gz) = f5ce5323a7ace3f837ad7ff1ceb55da0f2d321d9
-RMD160 (Class-Virtual-0.06.tar.gz) = 3037c6f16efa950e3c33ffc40ce33cd2a5f71df9
-Size (Class-Virtual-0.06.tar.gz) = 5770 bytes
+SHA1 (Class-Virtual-0.07.tar.gz) = e722d36273e0267165fe98641f16f3a14b1de2cb
+RMD160 (Class-Virtual-0.07.tar.gz) = e4ce333acebee4e99eb84f00a2bdc40e2ac460e5
+Size (Class-Virtual-0.07.tar.gz) = 6357 bytes
