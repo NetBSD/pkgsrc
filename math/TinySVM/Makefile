@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 23:04:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 17:25:55 hiramatsu Exp $
 #
 
 DISTNAME=	TinySVM-0.09
 CATEGORIES=	math
 MASTER_SITES=	http://www.chasen.org/~taku/software/TinySVM/src/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chasen.org/~taku/software/TinySVM/
 COMMENT=	Tiny Support Vector Machines
 LICENSE=	gnu-lgpl-v2.1

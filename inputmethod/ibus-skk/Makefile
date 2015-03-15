@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2014/09/10 09:46:00 obache Exp $
+# $NetBSD: Makefile,v 1.29 2015/03/15 17:20:19 hiramatsu Exp $
 #
 
 DISTNAME=	ibus-skk-1.4.2
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	https://github.com/ueno/ibus-skk/releases/download/${DISTNAME}/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/ueno/ibus-skk/
 COMMENT=	Japanese SKK input engine for IBus
 LICENSE=	gnu-gpl-v2
