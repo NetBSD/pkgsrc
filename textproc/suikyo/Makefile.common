@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/03/12 14:59:57 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/03/15 21:41:46 hiramatsu Exp $
 #
 # used by textproc/ruby-suikyo/Makefile
 # used by textproc/suikyo-docs/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=	http://prime.sourceforge.jp/src/
 DISTINFO_FILE=	${.CURDIR}/../../textproc/suikyo/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/suikyo/patches
 
-MAINTAINER?=	obache@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://taiyaki.org/suikyo/
 LICENSE=	gnu-gpl-v2
 
