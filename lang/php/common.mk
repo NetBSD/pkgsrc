@@ -1,5 +1,4 @@
-# $NetBSD: common.mk,v 1.2 2014/06/13 02:58:19 obache Exp $
-# used by lang/php53/Makefile.common
+# $NetBSD: common.mk,v 1.3 2015/03/15 15:25:09 taca Exp $
 # used by lang/php54/Makefile.common
 # used by lang/php55/Makefile.common
 # 
