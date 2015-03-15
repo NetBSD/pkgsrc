@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/14 22:36:53 nros Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/15 15:28:24 tnn Exp $
 
 DISTNAME=	watchman-${VERSION}
 VERSION=	3.0.0
@@ -21,4 +21,5 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
