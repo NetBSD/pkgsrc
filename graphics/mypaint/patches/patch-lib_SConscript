@@ -1,12 +1,13 @@
-$NetBSD: patch-lib_SConscript,v 1.1 2014/10/17 22:01:25 joerg Exp $
+$NetBSD: patch-lib_SConscript,v 1.2 2015/03/15 04:51:31 ryoon Exp $
 
---- lib/SConscript.orig	2014-10-17 20:31:31.000000000 +0000
+--- lib/SConscript.orig	2012-12-31 17:03:38.000000000 +0000
 +++ lib/SConscript
-@@ -17,6 +17,6 @@ if sys.platform == "win32": # there 's a
- elif sys.platform == "darwin":
-     module = env.SharedLibrary('_mypaintlib', Split(src), SHLIBPREFIX="", SHLIBSUFFIX=".so")
- else:
--    module = env.SharedLibrary('_mypaintlib', Split(src), SHLIBPREFIX="")
-+    module = env.SharedLibrary('_mypaintlib', Split(src), SHLIBPREFIX="", CCFLAGS = ['-O2', '-fPIC'])
- 
- Return('module')
+@@ -18,7 +18,7 @@ env = mypaintlib_env
+ # I have given up. Scons just can't get the dependencies right with those
+ # code generators. Let's give scons a "normal" c++ project to dependency-scan.
+ swig_opts = '-DHAVE_GEGL' if env['enable_gegl'] else ''
+-if env.Execute('swig -o mypaintlib_wrap.cpp -noproxydel -python -c++ %s mypaintlib.i' % swig_opts):
++if env.Execute('swig2.0 -o mypaintlib_wrap.cpp -noproxydel -python -c++ %s mypaintlib.i' % swig_opts):
+     Exit(1)
+ env.Clean('.', 'mypaintlib_wrap.cpp')
+ env.Clean('.', 'mypaintlib.py')
