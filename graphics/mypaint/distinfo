@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2014/10/17 22:01:25 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/03/15 04:51:31 ryoon Exp $
 
-SHA1 (mypaint-1.0.0.tar.bz2) = 5f9221304bb8becd642b00d94af947edf1e18844
-RMD160 (mypaint-1.0.0.tar.bz2) = 6d3ff0f5c16e18b006f6449e9591067bd29ed3c5
-Size (mypaint-1.0.0.tar.bz2) = 36748957 bytes
-SHA1 (patch-SConstruct) = 374416991833fd3cb4f99f66cefee96e45e45161
-SHA1 (patch-lib_SConscript) = f075c48ffa1fcc7671f080f7125c186c9cc4392a
+SHA1 (mypaint-1.1.0.tar.bz2) = 9e4f0bc2cee6c369f1a40d7c24435b7c26cc3795
+RMD160 (mypaint-1.1.0.tar.bz2) = c34aaf96c66fd62117379b6f2553645c94501fae
+Size (mypaint-1.1.0.tar.bz2) = 37416388 bytes
+SHA1 (patch-SConscript) = a1027dc48d9ccde6e8c273e7b28611bc9338534c
+SHA1 (patch-SConstruct) = 11111493804031c54b62f36b7eb290fae49d3630
+SHA1 (patch-brushlib_SConscript) = afab91876d916f5497017b3a4280d9d26afd280b
+SHA1 (patch-lib_SConscript) = 4f476bb0daf8bbb21a6a11cf1acc662c023f4140
 SHA1 (patch-lib_colorchanger__crossed__bowl.hpp) = b64b8695fe8b787df94ddc588a714b991954084b

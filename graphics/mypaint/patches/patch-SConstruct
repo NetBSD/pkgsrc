@@ -1,9 +1,9 @@
-$NetBSD: patch-SConstruct,v 1.2 2012/12/19 11:25:31 ryoon Exp $
+$NetBSD: patch-SConstruct,v 1.3 2015/03/15 04:51:31 ryoon Exp $
 
 * Set python interpreter
 * From http://dev.gentoo.org/~vapier/scons-blows.txt, to respect LDFLAGS
 
---- SConstruct.orig	2011-11-22 20:27:03.000000000 +0000
+--- SConstruct.orig	2012-12-31 17:03:38.000000000 +0000
 +++ SConstruct
 @@ -1,4 +1,5 @@
  import os, sys
@@ -11,22 +11,35 @@ $NetBSD: patch-SConstruct,v 1.2 2012/12/19 11:25:31 ryoon Exp $
  from os.path import join, basename
  from SCons.Script.SConscript import SConsEnvironment
  
-@@ -72,6 +73,9 @@ if env['debug']:
-     env.Append(CPPDEFINES='HEAVY_DEBUG')
-     env.Append(CCFLAGS='-O0', LINKFLAGS='-O0')
+@@ -39,7 +40,7 @@ opts.Add('python_config', 'python-config
+ 
+ tools = ['default', 'textfile']
+ 
+-env = Environment(ENV=os.environ, options=opts, tools=tools)
++env = Environment(ENV=os.environ, options=opts, tools=tools, **dict((k, v.split()) for k, v in ARGUMENTS.iteritems()))
+ print('building for %r (use scons python_binary=xxx to change)' % env['python_binary'])
+ print('using %r (use scons python_config=xxx to change)' % env['python_config'])
+ if sys.platform == "win32":
+@@ -47,9 +48,9 @@ if sys.platform == "win32":
+     env = Environment(tools=tools + ['mingw'], ENV=os.environ, options=opts)
+ opts.Update(env)
+ 
+-env.Append(CXXFLAGS=' -Wall -Wno-sign-compare -Wno-write-strings')
+-env.Append(CCFLAGS='-Wall')
+-env.Append(CFLAGS='-std=c99')
++env.Append(CXXFLAGS=['-Wall', '-Wno-sign-compare', '-Wno-write-strings'])
++env.Append(CCFLAGS=['-Wall'])
++env.Append(CFLAGS=['-std=c99'])
+ 
+ # Define strdup() in string.h under glibc >= 2.10 (POSIX.1-2008)
+ env.Append(CFLAGS='-D_POSIX_C_SOURCE=200809L')
+@@ -67,6 +68,9 @@ else:
+ if env['enable_profiling'] or env['debug']:
+     env.Append(CCFLAGS='-g')
  
 +if os.environ.has_key('LDFLAGS'):
 +    env['LINKFLAGS'] += SCons.Util.CLVar(os.environ['LDFLAGS'])
 +
  #env.Append(CCFLAGS='-fno-inline', LINKFLAGS='-fno-inline')
  
- Export('env', 'python')
-@@ -81,7 +85,7 @@ languages = SConscript('po/SConscript')
- 
- def burn_python_version(target, source, env):
-     # make sure we run the python version that we built the extension modules for
--    s =  '#!/usr/bin/env ' + python + '\n'
-+    s =  '#!%PYTHONBIN%\n'
-     s += 5*'#\n'
-     s += '# DO NOT EDIT - edit %s instead\n' % source[0]
-     s += 5*'#\n'
+ # Look up libraries dependencies relative to the library
