@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/02/09 21:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 14:10:36 mef Exp $
 
-DISTNAME=		Git-Wrapper-0.038
+DISTNAME=		Git-Wrapper-0.040
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Git/}
