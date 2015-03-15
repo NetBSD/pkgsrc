@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1428 2015/03/15 21:32:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1429 2015/03/15 22:28:02 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1996,3 +1996,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tortoisehg to 3.3.2 [wiz 2015-03-15]
 	Updated misc/calibre to 2.21.0 [wiz 2015-03-15]
 	Updated devel/py-requests to 2.5.3nb1 [wiz 2015-03-15]
+	Updated mail/opendmarc to 1.3.1 [pettai 2015-03-15]
