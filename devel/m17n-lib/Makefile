@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2014/12/14 07:53:53 obache Exp $
+# $NetBSD: Makefile,v 1.29 2015/03/15 20:13:23 hiramatsu Exp $
 #
 
 DISTNAME=	m17n-lib-1.7.0
 CATEGORIES=	devel converters editors inputmethod textproc time
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/m17n/
 COMMENT=	Multilingualization library
 LICENSE=	gnu-lgpl-v2.1
