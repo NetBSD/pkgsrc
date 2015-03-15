@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/01/26 21:37:13 adam Exp $
+# $NetBSD: Makefile,v 1.36 2015/03/15 15:08:30 tnn Exp $
 #
 
 DISTNAME=		xisp-2.7p4
@@ -22,6 +22,7 @@ MESSAGE_SUBST+=		DIALER_GROUP=${DIALER_GROUP}
 
 INSTALLATION_DIRS+=	share/doc/xisp
 PKG_DESTDIR_SUPPORT=	destdir
+NOT_FOR_UNPRIVILEGED=	yes
 
 CFLAGS.SunOS+=		-DSUNOS5x
 LDFLAGS.SunOS+=		-lsocket -lnsl
