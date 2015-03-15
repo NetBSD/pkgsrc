@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1383 2015/03/14 23:38:47 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1384 2015/03/15 00:22:37 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1911,3 +1911,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-HTML-FormatText-WithLinks to 0.15 [rodent 2015-03-14]
 	Updated audio/sox to 14.4.2 [tnn 2015-03-14]
 	Updated net/synergy to 1.7.0 [tnn 2015-03-14]
+	Added devel/py-proteus version 3.4.2 [rodent 2015-03-15]
