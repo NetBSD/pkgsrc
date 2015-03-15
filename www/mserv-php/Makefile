@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:23 asau Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 11:52:31 taca Exp $
 #
 
 DISTNAME=	mserv-php-090
 PKGNAME=	mserv-php-0.90
 PKGREVISION=	1
 CATEGORIES=	audio www
-MASTER_SITES=	http://dougiamas.com/mserv/src/
+MASTER_SITES=	# 404: http://dougiamas.com/mserv/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	abs@absd.org
-HOMEPAGE=	http://dougiamas.com/mserv/
+HOMEPAGE=	# 404: http://dougiamas.com/mserv/
 COMMENT=	Quick web interface to mserv audio jukebox
 
 DEPENDS+=       mserv-[0-9]*:../../audio/mserv
-DEPENDS+=	php>=4.0.6:../../lang/php53
+DEPENDS+=	php>=${PHP_BASE_VERS}:${PHPPKGSRCDIR}
 
 WRKSRC=		${WRKDIR}/mserv-php
 
@@ -42,4 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT.GPL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README-0.90 ${DESTDIR}${DOCDIR}
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
