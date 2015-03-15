@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2013/04/08 11:17:15 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/15 17:25:56 hiramatsu Exp $
 #
 
 DISTNAME=	prime-1.0.0.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://prime.sourceforge.jp/src/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/
 COMMENT=	Japanese PRedictive Input Method Editor
 LICENSE=	gnu-gpl-v2

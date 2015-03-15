@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 00:20:11 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/15 17:25:56 hiramatsu Exp $
 
 DISTNAME=	kcc
 PKGNAME=	kcc-2.3
@@ -6,7 +6,7 @@ CATEGORIES=	japanese converters
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/os/linux/JE/sources/base/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Kanji code converter with auto encoding detection
 LICENSE=	gnu-gpl-v2
