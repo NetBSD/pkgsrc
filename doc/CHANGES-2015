@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1404 2015/03/15 14:57:01 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1405 2015/03/15 14:58:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed databases/pear-MDB2_Driver_sqlite [taca 2015-03-15]
 	Removed databases/php-sqlite [taca 2015-03-15]
 	Removed lang/php5-perl [taca 2015-03-15]
+	Removed www/php-eaccelerator [taca 2015-03-15]
