@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2015/02/14 04:44:43 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.25 2015/03/15 00:47:59 taca Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -17,7 +17,7 @@ LICENSE=		isc
 
 CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
 
-VERSION=		4.3.1
+VERSION=		4.3.2
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -85,7 +85,7 @@ BIND_CONFIGURE_ARGS+=	--with-export-includedir=${WRKSRC}/bind/include
 BIND_CONFIGURE_ARGS+=	--with-export-libdir=${WRKSRC}/bind/lib
 BIND_CONFIGURE_ARGS+=	--with-gssapi=no
 
-BIND_WRKSRC=		${WRKSRC}/bind/bind-9.9.5-P1
+BIND_WRKSRC=		${WRKSRC}/bind/bind-9.9.7
 
 post-configure:
 	${RUN}${_ULIMIT_CMD}					\
