@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- gdb/target.c.orig	2006-02-27 15:13:18.000000000 +0000
++++ gdb/target.c
+@@ -36,8 +36,6 @@
+ #include <signal.h>
+ #include "regcache.h"
+ 
+-extern int errno;
+-
+ static void target_info (char *, int);
+ 
+ static void cleanup_target (struct target_ops *);

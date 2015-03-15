@@ -1,0 +1,25 @@
+$NetBSD: patch-ob,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+gcc4 complained:
+gdbtypes.c:2961: error: invalid lvalue in increment
+
+--- include/obstack.h.orig	2001-01-21 00:02:00.000000000 +0000
++++ include/obstack.h	2007-11-30 21:04:44.000000000 +0000
+@@ -421,7 +421,7 @@ __extension__								\
+ ({ struct obstack *__o = (OBSTACK);					\
+    if (__o->next_free + sizeof (void *) > __o->chunk_limit)		\
+      _obstack_newchunk (__o, sizeof (void *));				\
+-   *((void **)__o->next_free)++ = ((void *)datum);			\
++   *((*(void ***)&(__o->next_free)))++ = ((void *)datum);		\
+    (void) 0; })
+ 
+ # define obstack_int_grow(OBSTACK,datum)				\
+@@ -429,7 +429,7 @@ __extension__								\
+ ({ struct obstack *__o = (OBSTACK);					\
+    if (__o->next_free + sizeof (int) > __o->chunk_limit)		\
+      _obstack_newchunk (__o, sizeof (int));				\
+-   *((int *)__o->next_free)++ = ((int)datum);				\
++   *((*(int **)&(__o->next_free)))++ = ((int)datum);			\
+    (void) 0; })
+ 
+ # define obstack_ptr_grow_fast(h,aptr) (*((void **) (h)->next_free)++ = (void *)aptr)

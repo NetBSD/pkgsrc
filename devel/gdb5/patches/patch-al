@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- gdb/rdi-share/unixcomm.c.orig	2006-02-27 14:51:31.000000000 +0000
++++ gdb/rdi-share/unixcomm.c
+@@ -36,7 +36,7 @@
+ #include <sys/types.h>
+ #include <sys/time.h>
+ 
+-#if defined (__FreeBSD__) || defined (__NetBSD__) || defined (__OpenBSD__) || defined (bsdi)
++#if defined (__FreeBSD__) || defined (__NetBSD__) || defined (__OpenBSD__) || defined (bsdi) || defined(__DragonFly__)
+ #undef BSD
+ #include <sys/ioctl.h>
+ #endif
