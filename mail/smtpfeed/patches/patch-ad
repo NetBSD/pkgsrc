@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.1 2006/07/23 15:00:41 taca Exp $
+$NetBSD: patch-ad,v 1.2 2015/03/15 15:07:47 mef Exp $
 
---- common.h.orig	2002-01-20 23:20:44.000000000 +0900
-+++ common.h
-@@ -425,3 +425,9 @@
+--- common.h.orig	2012-06-07 14:45:48.000000000 +0900
++++ common.h	2015-03-12 11:27:47.000000000 +0900
+@@ -253,7 +253,7 @@ struct host_map {
+ struct domain {
+ 	char			*name;		/* domain part of mail addr */
+ 	int			stat;		/* error status for MX query */
+-	char			*response;	/* error response */
++	const char			*response;	/* error response */
+ 	struct mx		*firstmx;	/* first MX */
+ 	struct mx		*curmx;		/* working MX */
+ 	int			checked;	/* temporary local flag */
+@@ -284,7 +284,7 @@ struct recipient {
+ 	int			stat;		/* current status */
+ 	int			result;		/* final result */
+ 	int			again;		/* try the same MX again */
+-	char			*response;	/* final response */
++	const char			*response;	/* final response */
+ 	struct domain		*domain;	/* domain part */
+ 	struct host		*final;
+ 	struct recipient	*next;		/* next recipient */
+@@ -427,3 +427,9 @@ union SockAddrUnion {
  #endif
  };
  typedef union SockAddrUnion SockAddr;
