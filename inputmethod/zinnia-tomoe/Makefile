@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:22 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 19:31:44 hiramatsu Exp $
 #
 
 DISTNAME=	zinnia-tomoe-0.6.0-20080911
@@ -7,7 +7,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zinnia/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zinnia.sourceforge.net/
 COMMENT=	Zinna recognition models traned with Tomoe data
 #LICENSE=	# Tomoe's

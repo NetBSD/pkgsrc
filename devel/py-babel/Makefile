@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/04/18 13:15:36 obache Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/15 19:31:45 hiramatsu Exp $
 
 DISTNAME=	Babel-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/B/Babel/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://babel.pocoo.org/
 COMMENT=	Collection of tools for internationalizing Python applications
 LICENSE=	modified-bsd
