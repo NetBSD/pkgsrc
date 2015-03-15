@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1384 2015/03/15 00:22:37 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1385 2015/03/15 00:30:20 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1911,4 +1911,26 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-HTML-FormatText-WithLinks to 0.15 [rodent 2015-03-14]
 	Updated audio/sox to 14.4.2 [tnn 2015-03-14]
 	Updated net/synergy to 1.7.0 [tnn 2015-03-14]
+	Updated devel/py-tryton to 3.4.2 [rodent 2015-03-15]
+	Updated devel/py-tryton/patches to 3.4.2 [rodent 2015-03-15]
+	Updated devel/py-trytond to 3.4.2 [rodent 2015-03-15]
+	Updated finance/py-trytond-account to 3.4.1 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-asset to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-fr to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-invoice to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-payment to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-payment-sepa to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-product to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-account-statement to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-analytic-account to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-bank to 3.4.0 [rodent 2015-03-15]
+	Updated finance/py-trytond-currency to 3.4.1 [rodent 2015-03-15]
+	Updated geography/py-trytond-country to 3.4.1 [rodent 2015-03-15]
+	Updated misc/py-trytond-company to 3.4.1 [rodent 2015-03-15]
+	Updated misc/py-trytond-party to 3.4.1 [rodent 2015-03-15]
+	Updated misc/py-trytond-party-siret to 3.4.1 [rodent 2015-03-15]
+	Updated misc/py-trytond-product to 3.4.1 [rodent 2015-03-15]
+	Updated misc/py-trytond-stock to 3.4.1 [rodent 2015-03-15]
+	Updated misc/py-trytond-stock-lot to 3.4.1 [rodent 2015-03-15]
+	Updated time/py-trytond-calendar to 3.4.0 [rodent 2015-03-15]
 	Added devel/py-proteus version 3.4.2 [rodent 2015-03-15]
