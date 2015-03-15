@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2015/02/17 13:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2015/03/15 14:49:28 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -36,7 +36,6 @@ SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
 SUBDIR+=	p5-gnome-bindings
-SUBDIR+=	php53-extensions
 SUBDIR+=	php54-extensions
 SUBDIR+=	php55-extensions
 SUBDIR+=	php56-extensions
