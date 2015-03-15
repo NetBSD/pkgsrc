@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1420 2015/03/15 20:53:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1421 2015/03/15 21:05:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/randrproto to 1.4.1 [wiz 2015-03-15]
 	Updated x11/libXvMC to 1.0.9 [wiz 2015-03-15]
 	Updated print/cups-filters to 1.0.67 [wiz 2015-03-15]
+	Updated graphics/cairo to 1.14.2 [wiz 2015-03-15]
