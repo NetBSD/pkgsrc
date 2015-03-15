@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:41 asau Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/15 15:06:23 tnn Exp $
 #
 
 DISTNAME=	xjdic24
@@ -60,4 +60,5 @@ do-install:
 		< ${WRKSRC}/.xjdicrc.skel \
 		> ${DESTDIR}${PREFIX}/share/doc/xjdic/.xjdicrc
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
