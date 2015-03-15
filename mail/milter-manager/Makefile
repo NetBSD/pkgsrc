@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2014/12/11 09:05:07 obache Exp $
+# $NetBSD: Makefile,v 1.41 2015/03/15 20:13:24 hiramatsu Exp $
 #
 
 DISTNAME=	milter-manager-2.0.5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://milter-manager.sourceforge.net/
 COMMENT=	Milter to use milters effectively
 
