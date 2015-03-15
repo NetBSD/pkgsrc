@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.8 2013/10/20 17:56:02 joerg Exp $
+$NetBSD: patch-ag,v 1.9 2015/03/15 23:07:20 joerg Exp $
 
 Add --enable-pkgsrc-libtool option
 
---- config/shlib.conf.orig	2013-06-05 22:53:29.000000000 +0000
+--- config/shlib.conf.orig	2013-11-06 20:52:23.000000000 +0000
 +++ config/shlib.conf
 @@ -22,6 +22,7 @@ SHLIBVEXT=.so.v-nobuild
  SHLIBSEXT=.so.s-nobuild
@@ -20,16 +20,97 @@ Add --enable-pkgsrc-libtool option
  # Default for systems w/o shared libraries
  CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
  CXX_LINK_STATIC='$(CXX) $(PROG_LIBPATH) $(CXXFLAGS) $(LDFLAGS)'
-@@ -274,7 +276,7 @@ mips-*-netbsd*)
+@@ -51,6 +53,9 @@ INIT_FINI_PREP=:
+ default_static=no
+ default_shared=yes
+ 
++SHLIB_RPATH_FLAGS='${defined(SHLIB_RDIRS):? ${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS) :}'
++PROG_RPATH_FLAGS='${defined(PROG_RPATH):? $(RPATH_FLAG)$(PROG_RPATH) :}'
++
+ # Set up architecture-specific variables.
+ case $krb5_cv_host in
+ alpha*-dec-osf*)
+@@ -65,11 +70,9 @@ alpha*-dec-osf*)
+ 	use_linker_init_option=yes
+ 	use_linker_fini_option=yes
+ 	EXTRA_FILES="$EXTRA_FILES export"
+-	SHLIB_RPATH_FLAGS='-rpath $(SHLIB_RDIRS)'
+ 	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 	PROFFLAGS=-pg
+ 	RPATH_FLAG='-Wl,-rpath -Wl,'
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(PTHREAD_CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(PTHREAD_CFLAGS) $(LDFLAGS)'
+ 	if test "$ac_cv_c_compiler_gnu" = yes \
+@@ -127,16 +130,13 @@ alpha*-dec-osf*)
+ 	RPATH_FLAG='-Wl,+b,'
+ 	if test "$ac_cv_c_compiler_gnu" = yes; then
+ 		PICFLAGS=-fPIC
+-		SHLIB_RPATH_FLAGS='-Wl,+b,$(SHLIB_RDIRS)'
+ 		SHLIB_EXPFLAGS='-Wl,+s $(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 		LDCOMBINE='gcc -fPIC -shared -Wl,+h,$(LIBPREFIX)$(LIBBASE)$(SHLIBSEXT) -Wl,-c,hpux10.exports'
+ 	else
+ 		PICFLAGS=+z
+-		SHLIB_RPATH_FLAGS='+b $(SHLIB_RDIRS)'
+ 		SHLIB_EXPFLAGS='+s $(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 		LDCOMBINE='ld -b +h $(LIBPREFIX)$(LIBBASE)$(SHLIBSEXT) -c hpux10.exports'
+ 	fi
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) -Wl,+s $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) -Wl,+s $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -166,12 +166,10 @@ mips-sgi-irix6.3)	# This is a Kludge; se
+ 	else
+ 		LDCOMBINE='ld -shared -ignore_unresolved -update_registry $(BUILDTOP)/so_locations -soname $(LIBPREFIX)$(LIBBASE)$(SHLIBSEXT)'
+ 	fi
+-	SHLIB_RPATH_FLAGS='-rpath $(SHLIB_RDIRS)'
+ 	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 	# no gprof for Irix...
+ 	PROFFLAGS=-p
+ 	RPATH_FLAG='-Wl,-rpath -Wl,'
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -215,12 +213,10 @@ mips-sgi-irix*)
+ 		opts=''
+ 	fi
+ 	LDCOMBINE='$(CC) -shared '$opts' -Wl,-soname -Wl,$(LIBPREFIX)$(LIBBASE)$(SHLIBSEXT) $$initfini'
+-	SHLIB_RPATH_FLAGS='-rpath $(SHLIB_RDIRS)'
+ 	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 	# no gprof for Irix...
+ 	PROFFLAGS=-p
+ 	RPATH_FLAG='-Wl,-rpath -Wl,'
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -252,13 +248,11 @@ mips-sni-sysv4)
+ 		PICFLAGS=-Kpic
+ 		LDCOMBINE='$(CC) -G -h $(LIBPREFIX)$(LIBBASE)$(SHLIBSEXT)'
+ 	fi
+-	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
+ 	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 	SHLIBEXT=.so
+ 	SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
+ 	SHLIBSEXT='.so.$(LIBMAJOR)'
+ 	RPATH_FLAG=-R
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -274,10 +268,8 @@ mips-*-netbsd*)
  	SHLIBSEXT='.so.$(LIBMAJOR)'
  	SHLIBEXT=.so
  	LDCOMBINE='ld -shared -soname $(LIBPREFIX)$(LIBBASE)$(SHLIBSEXT)'
 -	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
-+	SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
  	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
  	RPATH_FLAG='-Wl,-rpath -Wl,'
- 	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
-@@ -287,14 +289,14 @@ mips-*-netbsd*)
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -287,15 +279,13 @@ mips-*-netbsd*)
  	PROFFLAGS=-pg
  	;;
  
@@ -40,35 +121,39 @@ Add --enable-pkgsrc-libtool option
  	SHLIBEXT=.so
  	LDCOMBINE='$(CC) -shared'
 -	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
-+	SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
  	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
 -	RPATH_FLAG=-R
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
 +	RPATH_FLAG=${COMPILER_RPATH_FLAG}
- 	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
  	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
-@@ -324,7 +326,7 @@ mips-*-netbsd*)
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -319,12 +309,10 @@ mips-*-netbsd*)
+ 		RPATH_FLAG=-R
+ 		SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
+ 	fi
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
  	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
  	SHLIBEXT=.so
  	LDCOMBINE='ld -Bshareable'
 -	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
-+	SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
  	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
  	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
  	CXX_LINK_STATIC='$(CXX) $(PROG_LIBPATH) $(CXXFLAGS) $(LDFLAGS)'
-@@ -338,9 +340,9 @@ mips-*-netbsd*)
+@@ -338,10 +326,8 @@ mips-*-netbsd*)
  	SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
  	SHLIBEXT=.so
  	LDCOMBINE='ld -Bshareable'
 -	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
-+	SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
  	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
 -	RPATH_FLAG=-R
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
 +	RPATH_FLAG=${COMPILER_RPATH_FLAG}
- 	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
  	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
-@@ -367,7 +369,7 @@ mips-*-netbsd*)
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -367,7 +353,7 @@ mips-*-netbsd*)
  	for lib in libkrb5support.1.1.dylib libkadm5srv.5.1.dylib libkdb5.4.0.dylib; do
  	    LDCOMBINE_TAIL="$LDCOMBINE_TAIL -dylib_file \"\$(KRB5_LIBDIR)/$lib\":\$(TOPLIBD)/$lib"
  	done
@@ -77,38 +162,52 @@ Add --enable-pkgsrc-libtool option
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) -dynamic $(CFLAGS) $(LDFLAGS)'
  	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
  	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) -dynamic $(CXXFLAGS) $(LDFLAGS)'
-@@ -399,10 +401,10 @@ mips-*-netbsd*)
+@@ -399,11 +385,9 @@ mips-*-netbsd*)
  	SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
  	SHLIBSEXT='.so.$(LIBMAJOR)'
  	SHLIBEXT=.so
 -	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
-+	SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
  	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
  	PROFFLAGS=-pg
 -	RPATH_FLAG=-R
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
 +	RPATH_FLAG=${COMPILER_RPATH_FLAG}
- 	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
  	CC_LINK_SHARED='$(PURE) $(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
  	CC_LINK_STATIC='$(PURE) $(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
-@@ -454,7 +456,7 @@ mips-*-netbsd*)
+ 	CXX_LINK_SHARED='$(PURE) $(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -426,10 +410,8 @@ mips-*-netbsd*)
+ 	RPATH_FLAG='-Wl,--enable-new-dtags -Wl,-rpath -Wl,'
+ 	# For cases where we do have dependencies on other libraries
+ 	# built in this tree...
+-	SHLIB_RPATH_FLAGS='$(RPATH_FLAG)$(SHLIB_RDIRS)'
+ 	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
+ 	PROFFLAGS=-pg
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
+ 	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -454,9 +436,7 @@ mips-*-netbsd*)
  	SHLIBVEXT='.so.$(LIBMAJOR)'
  	SHLIBEXT=.so
  	LDCOMBINE='ld -Bshareable'
 -	SHLIB_RPATH_FLAGS='-R$(SHLIB_RDIRS)'
-+	SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
  	SHLIB_EXPFLAGS='$(SHLIB_RPATH_FLAGS) $(SHLIB_DIRS) $(SHLIB_EXPLIBS)'
- 	PROG_RPATH_FLAGS='-Wl,-rpath,$(PROG_RPATH)'
+-	PROG_RPATH_FLAGS='-Wl,-rpath,$(PROG_RPATH)'
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS)'
-@@ -486,7 +488,7 @@ mips-*-netbsd*)
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS)'
+@@ -486,9 +466,8 @@ mips-*-netbsd*)
  	# Assume initialization always delayed.
  	INIT_FINI_PREP="wl=${wl_prefix}; "'i=1; initfini=; for f in . $(LIBFINIFUNC); do if test $$f != .; then initfini="$$initfini $${wl}-binitfini::$$f:$$i"; else :; fi; i=`expr $$i + 1`; done'
  	use_linker_fini_option=yes
 -	MAKE_SHLIB_COMMAND="${INIT_FINI_PREP} && ${LDCOMBINE}"
 +	MAKE_SHLIB_COMMAND="${INIT_FINI_PREP} && ${LIBTOOL} --mode=link ${LDCOMBINE}"
  	RPATH_TAIL=:/usr/lib:/lib
- 	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH):'"$RPATH_TAIL"
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH):'"$RPATH_TAIL"
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
-@@ -523,8 +525,8 @@ mips-*-netbsd*)
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -523,10 +502,9 @@ mips-*-netbsd*)
  	# Assume initialization always delayed.
  	INIT_FINI_PREP="wl=${wl_prefix}; "'i=1; initfini=; for f in . $(LIBFINIFUNC); do if test $$f != .; then initfini="$$initfini $${wl}-binitfini::$$f:$$i"; else :; fi; i=`expr $$i + 1`; done'
  	use_linker_fini_option=yes
@@ -117,9 +216,11 @@ Add --enable-pkgsrc-libtool option
 +	MAKE_SHLIB_COMMAND="${INIT_FINI_PREP} && ${LIBTOOL} --mode=link ${LDCOMBINE}"' && ar cq $@ shr.o.$(LIBMAJOR).$(LIBMINOR) && chmod +x $@ && rm -f shr.o.$(LIBMAJOR).$(LIBMINOR)'
 +	MAKE_DYNOBJ_COMMAND="${INIT_FINI_PREP} && ${LIBTOOL} --mode=link ${LDCOMBINE_DYN}"
  	RPATH_TAIL=:/usr/lib:/lib
- 	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH):'"$RPATH_TAIL"
+-	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH):'"$RPATH_TAIL"
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
-@@ -539,8 +541,14 @@ esac
+ 	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
+ 	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CXXFLAGS) $(LDFLAGS)'
+@@ -539,8 +517,14 @@ esac
  
  if test "${MAKE_SHLIB_COMMAND}" = "x" ; then
    if test "${INIT_FINI_PREP}" != ":"; then
