@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2068 2015/03/14 18:55:47 rodent Exp $
+# $NetBSD: Makefile,v 1.2069 2015/03/15 00:23:55 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1646,6 +1646,7 @@ SUBDIR+=	py-pip
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-pretend
+SUBDIR+=	py-proteus
 SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
