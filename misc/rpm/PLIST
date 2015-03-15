@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2013/09/20 17:26:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/03/15 05:34:56 ryoon Exp $
 bin/gendiff
 bin/rpm
+bin/rpm2archive
 bin/rpm2cpio
 bin/rpmbuild
 bin/rpmdb
@@ -12,6 +13,7 @@ bin/rpmspec
 bin/rpmverify
 include/rpm/argv.h
 include/rpm/header.h
+include/rpm/rpmarchive.h
 include/rpm/rpmbase64.h
 include/rpm/rpmbuild.h
 include/rpm/rpmcallback.h
@@ -20,6 +22,7 @@ include/rpm/rpmdb.h
 include/rpm/rpmds.h
 include/rpm/rpmfc.h
 include/rpm/rpmfi.h
+include/rpm/rpmfiles.h
 include/rpm/rpmfileutil.h
 include/rpm/rpmio.h
 include/rpm/rpmkeyring.h
@@ -50,7 +53,8 @@ lib/librpmbuild.la
 lib/librpmio.la
 lib/librpmsign.la
 lib/pkgconfig/rpm.pc
-lib/rpm-plugins/exec.la
+lib/rpm-plugins/syslog.la
+lib/rpm/appdata.prov
 lib/rpm/brp-compress
 lib/rpm/brp-java-gcjcompile
 lib/rpm/brp-python-bytecompile
@@ -67,6 +71,7 @@ lib/rpm/check-rpaths-worker
 lib/rpm/config.guess
 lib/rpm/config.sub
 lib/rpm/desktop-file.prov
+lib/rpm/fileattrs/appdata.attr
 lib/rpm/fileattrs/desktop.attr
 lib/rpm/fileattrs/elf.attr
 lib/rpm/fileattrs/font.attr
@@ -135,8 +140,10 @@ man/pl/man8/rpmgraph.8
 man/ru/man8/rpm.8
 man/ru/man8/rpm2cpio.8
 man/sk/man8/rpm.8
+share/locale/ar/LC_MESSAGES/rpm.mo
 share/locale/br/LC_MESSAGES/rpm.mo
 share/locale/ca/LC_MESSAGES/rpm.mo
+share/locale/cmn/LC_MESSAGES/rpm.mo
 share/locale/cs/LC_MESSAGES/rpm.mo
 share/locale/da/LC_MESSAGES/rpm.mo
 share/locale/de/LC_MESSAGES/rpm.mo
@@ -164,6 +171,6 @@ share/locale/sv/LC_MESSAGES/rpm.mo
 share/locale/te/LC_MESSAGES/rpm.mo
 share/locale/tr/LC_MESSAGES/rpm.mo
 share/locale/uk/LC_MESSAGES/rpm.mo
+share/locale/vi/LC_MESSAGES/rpm.mo
 share/locale/zh_CN/LC_MESSAGES/rpm.mo
 share/locale/zh_TW/LC_MESSAGES/rpm.mo
-@pkgdir var/tmp
