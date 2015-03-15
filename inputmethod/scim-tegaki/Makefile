@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 17:56:16 hiramatsu Exp $
 
 DISTNAME=	scim-tegaki-0.1
 PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/0.1/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Tegaki integration in SCIM
 LICENSE=	gnu-gpl-v2

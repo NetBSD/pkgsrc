@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2015/01/20 10:36:19 obache Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/15 17:56:15 hiramatsu Exp $
 
 DISTNAME=	blockdiag-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/b/blockdiag/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blockdiag.com/
 COMMENT=	Generate block-diagram image file from spec-text file
 LICENSE=	apache-2.0
