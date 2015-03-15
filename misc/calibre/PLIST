@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2015/02/27 09:47:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2015/03/15 21:23:47 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -6,6 +6,7 @@ bin/calibre-debug
 bin/calibre-parallel
 bin/calibre-server
 bin/calibre-smtp
+bin/calibre-uninstall
 bin/calibredb
 bin/ebook-convert
 bin/ebook-device
@@ -789,7 +790,6 @@ lib/calibre/calibre/gui2/dialogs/drm_error_ui.py
 lib/calibre/calibre/gui2/dialogs/duplicates.py
 lib/calibre/calibre/gui2/dialogs/edit_authors_dialog.py
 lib/calibre/calibre/gui2/dialogs/edit_authors_dialog_ui.py
-lib/calibre/calibre/gui2/dialogs/job_view_ui.py
 lib/calibre/calibre/gui2/dialogs/jobs_ui.py
 lib/calibre/calibre/gui2/dialogs/match_books.py
 lib/calibre/calibre/gui2/dialogs/match_books_ui.py
@@ -827,7 +827,6 @@ lib/calibre/calibre/gui2/dialogs/template_dialog_ui.py
 lib/calibre/calibre/gui2/dialogs/template_line_editor.py
 lib/calibre/calibre/gui2/dialogs/test_email_ui.py
 lib/calibre/calibre/gui2/dialogs/trim_image.py
-lib/calibre/calibre/gui2/dialogs/user_profiles_ui.py
 lib/calibre/calibre/gui2/dnd.py
 lib/calibre/calibre/gui2/ebook_download.py
 lib/calibre/calibre/gui2/email.py
@@ -1250,6 +1249,10 @@ lib/calibre/calibre/utils/mem.py
 lib/calibre/calibre/utils/monotonic.py
 lib/calibre/calibre/utils/mreplace.py
 lib/calibre/calibre/utils/network.py
+lib/calibre/calibre/utils/open_with/__init__.py
+lib/calibre/calibre/utils/open_with/linux.py
+lib/calibre/calibre/utils/open_with/osx.py
+lib/calibre/calibre/utils/open_with/windows.py
 lib/calibre/calibre/utils/opensearch/__init__.py
 lib/calibre/calibre/utils/opensearch/description.py
 lib/calibre/calibre/utils/opensearch/query.py
@@ -1311,7 +1314,7 @@ lib/calibre/calibre/web/jsbrowser/test.py
 lib/calibre/css_selectors/__init__.py
 lib/calibre/css_selectors/errors.py
 lib/calibre/css_selectors/ordered_set.py
-lib/calibre/css_selectors/parse.py
+lib/calibre/css_selectors/parser.py
 lib/calibre/css_selectors/select.py
 lib/calibre/css_selectors/tests.py
 lib/calibre/odf/__init__.py
@@ -1382,10 +1385,6 @@ ${PYSITELIB}/init_calibre.py
 share/appdata/calibre-ebook-edit.appdata.xml
 share/appdata/calibre-ebook-viewer.appdata.xml
 share/appdata/calibre-gui.appdata.xml
-share/applications/calibre-ebook-edit.desktop
-share/applications/calibre-ebook-viewer.desktop
-share/applications/calibre-gui.desktop
-share/applications/calibre-lrfviewer.desktop
 share/bash-completion/completions/calibre
 share/calibre/builtin_recipes.xml
 share/calibre/builtin_recipes.zip
@@ -2807,6 +2806,7 @@ share/calibre/recipes/pagina_12_print_ed.recipe
 share/calibre/recipes/pajama.recipe
 share/calibre/recipes/palmtop_pl.recipe
 share/calibre/recipes/pambianco.recipe
+share/calibre/recipes/pandodaily.recipe
 share/calibre/recipes/panorama.recipe
 share/calibre/recipes/paperli_topic.recipe
 share/calibre/recipes/parlamentni_listy.recipe
@@ -3514,8 +3514,4 @@ share/doc/calibre/Changelog.yaml
 share/doc/calibre/INSTALL
 share/doc/calibre/LICENSE.rtf
 share/doc/calibre/README.md
-share/pixmaps/calibre-ebook-edit.png
-share/pixmaps/calibre-gui.png
-share/pixmaps/calibre-lrf.png
-share/pixmaps/calibre-viewer.png
 @pkgdir lib/calibre/calibre/plugins/.libs
