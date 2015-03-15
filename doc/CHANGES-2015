@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1413 2015/03/15 16:37:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1414 2015/03/15 17:09:00 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-ffi to 1.9.8 [taca 2015-03-15]
 	Updated www/php-sugarcrm to 6.5.20 [taca 2015-03-15]
 	Updated www/php-piwigo to 2.7.4 [taca 2015-03-15]
+	Updated www/py-flask-admin to 1.1.0 [kleink 2015-03-15]
