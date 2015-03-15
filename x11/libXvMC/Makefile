@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/06/14 07:41:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/15 20:44:12 wiz Exp $
 
-DISTNAME=		libXvMC-1.0.8
+DISTNAME=		libXvMC-1.0.9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
