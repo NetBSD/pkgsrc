@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/03/13 15:47:53 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 17:30:24 hiramatsu Exp $
 
 DISTNAME=	simple_oauth-0.3.1
 CATEGORIES=	security
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/laserlemon/simple_oauth
 COMMENT=	Simple builds and verifies OAuth headers
 LICENSE=	mit
