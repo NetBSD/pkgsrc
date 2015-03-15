@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1395 2015/03/15 05:35:29 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1396 2015/03/15 07:54:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1948,3 +1948,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/namazu to 2.0.21nb4 [taca 2015-03-15]
 	Updated graphics/mypaint to 1.1.0 [ryoon 2015-03-15]
 	Updated misc/rpm to 4.12.0.1 [ryoon 2015-03-15]
+	Updated devel/fossil to 1.32 [wiz 2015-03-15]
