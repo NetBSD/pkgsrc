@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2014/11/15 13:05:52 mef Exp $
+# $NetBSD: Makefile,v 1.138 2015/03/15 21:05:37 wiz Exp $
 
 .include "../../graphics/cairo/Makefile.common"
-PKGREVISION=			1
 
 TEST_TARGET=			check
 
