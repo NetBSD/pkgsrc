@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.89 2015/03/15 11:50:53 taca Exp $
+# $NetBSD: phpversion.mk,v 1.90 2015/03/15 15:25:57 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -10,7 +10,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 53 54 55 56
+#	Possible: 54 55 56
 #	Default: 54
 #
 # === Infrastructure variables ===
@@ -27,12 +27,12 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 53 54 55 56
-#	Default: 54 53
+#	Possible: 54 55 56
+#	Default: 54
 #
 # PHP_CHECK_INSTALLED
-#	Check installed version of PHP.  Should be used lang/php53,
-#	lang/php54, lang/php55 and lang/php56 only.
+#	Check installed version of PHP.  Should be used by lang/php54,
+#	lang/php55 and lang/php56 only.
 #
 #	Possible: Yes No
 #	Default: Yes
@@ -42,7 +42,7 @@
 # PKG_PHP_VERSION
 #	The selected PHP version.
 #
-#	Possible: 53 54 55 56
+#	Possible: 54 55 56
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PHP_BASE_VERS
@@ -66,7 +66,7 @@
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
 #
-#	Example: php53, php54, php55 php56
+#	Example: php54, php55 php56
 #
 # PHP_EXTENSION_DIR
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
@@ -81,13 +81,11 @@
 PHPVERSION_MK=	defined
 
 # Define each PHP's version.
-PHP53_VERSION=	5.3.29
 PHP54_VERSION=	5.4.38
 PHP55_VERSION=	5.5.22
 PHP56_VERSION=	5.6.6
 
 # Define initial release of major version.
-PHP53_RELDATE=	20090630
 PHP54_RELDATE=	20120301
 PHP55_RELDATE=	20130620
 PHP56_RELDATE=	20140828
@@ -101,7 +99,7 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 .include "../../mk/bsd.prefs.mk"
 
 PHP_VERSION_DEFAULT?=		54
-PHP_VERSIONS_ACCEPTED?=		54 55 56 53
+PHP_VERSIONS_ACCEPTED?=		54 55 56
 
 # transform the list into individual variables
 .for pv in ${PHP_VERSIONS_ACCEPTED}
@@ -117,9 +115,6 @@ _PHP_VERSION_55_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/20120301)
 _PHP_VERSION_54_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.elif exists(${LOCALBASE}/lib/php/20090626) || exists(${LOCALBASE}/include/php/Zend/zend_gc.h)
-_PHP_VERSION_53_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .endif
 
@@ -189,13 +184,7 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 #
 # set variables for the version we decided to use:
 #
-.if ${_PHP_VERSION} == "53"
-PHPPKGSRCDIR=		../../lang/php53
-PHP_VERSION=		${PHP53_VERSION}
-PHP_INITIAL_TEENY=	2
-PHP_PKG_PREFIX=		php53
-PHP_EXTENSION_DIR=	lib/php/${PHP53_RELDATE}
-.elif ${_PHP_VERSION} == "54"
+.if ${_PHP_VERSION} == "54"
 PHPPKGSRCDIR=		../../lang/php54
 PHP_VERSION=		${PHP54_VERSION}
 PHP_INITIAL_TEENY=	4
