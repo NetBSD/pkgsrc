@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2014/12/09 22:37:11 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2015/03/15 18:12:13 tnn Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -16,7 +16,7 @@ COMMENT=		The Machine Emulator
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl:run pkg-config
+USE_TOOLS+=		gmake perl:run pkg-config yacc
 
 CONFIGURE_ARGS+=	--disable-debug
 
