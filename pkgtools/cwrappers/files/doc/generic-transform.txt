@@ -1,4 +1,4 @@
-$NetBSD: generic-transform.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+$NetBSD: generic-transform.txt,v 1.2 2015/03/15 19:16:45 joerg Exp $
 
 The third phase of the wrapper processing is the general transformation
 phase.  This phase is the core of the wrapper framework and implements
@@ -16,11 +16,13 @@ rules are matched is unspecified.
 3. For the remaining -I, -Wl,-rpath and -L options a corresponding
 transform rule (transform=I:src:dst, transform=R:src:dst,
 transform=L:src:dst) rule is searched for, so that the path is equal to
-or below src.  If this is a -Wl,-rpath option and the path ends in /.libs,
-it is assume be to handled by libtool internally and implicitly allowed.
-If no such rule is found or dst is empty, the argument is dropped.  
-Otherwise the src part of the path name is replaced with dst. 
-No further transformation is done for this argument in this phase.
+or below src.  Trailing '/' are ignored for this search.  If src ends
+with a '/', path must be equal to src.  If this is a -Wl,-rpath option
+and the path ends in /.libs, it is assume be to handled by libtool
+internally and implicitly allowed.  If no such rule is found or dst is
+empty, the argument is dropped.  Otherwise the src part of the path name
+is replaced with dst.  No further transformation is done for this
+argument in this phase.
 
 4. libtool/shlibtool wrapper only:
 For -l options search for the matching libtool archive, e.g. for -ldst

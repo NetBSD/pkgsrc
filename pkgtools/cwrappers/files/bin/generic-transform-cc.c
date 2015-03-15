@@ -1,4 +1,4 @@
-/* $NetBSD: generic-transform-cc.c,v 1.1 2014/09/17 12:40:56 joerg Exp $ */
+/* $NetBSD: generic-transform-cc.c,v 1.2 2015/03/15 19:16:45 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -424,7 +424,17 @@ generic_transform_cc(struct arglist *args)
 		if (*path != '/')
 			continue;
 
+		while (len > 1 && path[len - 1] == '/')
+			--len;
+
 		TAILQ_FOREACH(rule, ruleset, link) {
+			if (rule->src[rule->src_len - 1] == '/') {
+				if (rule->src_len - 1 != len)
+					continue;
+				if (memcmp(path, rule->src, len) != 0)
+					continue;
+				break;
+			}
 			if (rule->src_len > len)
 				continue;
 			if (path[rule->src_len] != '\0' &&
