@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/01/21 09:12:41 obache Exp $
+# $NetBSD: Makefile,v 1.18 2015/03/15 14:47:36 tnn Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		1
@@ -25,4 +25,5 @@ CONFIGURE_ENV+=		INDENT=${TRUE:Q}
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
