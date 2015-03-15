@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 19:47:00 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/15 17:56:15 hiramatsu Exp $
 #
 
 DISTNAME=	bz2-0.2.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://rubyforge.org/frs/download.php/56889/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/bz2/
 COMMENT=	Ruby interface to the library libbzip2
 LICENSE=	ruby-license
