@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/02/09 16:36:44 rhaen Exp $
+$NetBSD: distinfo,v 1.7 2015/03/15 13:54:37 mef Exp $
 
-SHA1 (Expect-1.21.tar.gz) = 76d7fe713f9c66b68f3bf22101f71512cd57bb58
-RMD160 (Expect-1.21.tar.gz) = 687a217438fd95962988542410abf384757bbd22
-Size (Expect-1.21.tar.gz) = 53881 bytes
+SHA1 (Expect-1.32.tar.gz) = 2e581f81b20b0b63847b26b0580f6bdec212e9ca
+RMD160 (Expect-1.32.tar.gz) = f59f69705929904bf60ee00907f0c2ed2e8215a5
+Size (Expect-1.32.tar.gz) = 61592 bytes
