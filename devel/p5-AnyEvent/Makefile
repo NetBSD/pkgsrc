@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2014/07/29 03:34:56 wen Exp $
+# $NetBSD: Makefile,v 1.33 2015/03/15 13:09:15 mef Exp $
 
-DISTNAME=	AnyEvent-7.07
+DISTNAME=	AnyEvent-7.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AnyEvent/}
 
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://software.schmorp.de/pkg/AnyEvent.html
