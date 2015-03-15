@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1425 2015/03/15 21:10:24 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1426 2015/03/15 21:13:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 14.2 [wiz 2015-03-15]
 	Updated devel/py-cffi to 0.9.2 [wiz 2015-03-15]
 	Updated security/py-cryptography to 0.8 [wiz 2015-03-15]
+	Updated devel/py-tortoisehg to 3.3.2 [wiz 2015-03-15]
