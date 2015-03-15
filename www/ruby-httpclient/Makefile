@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2015/01/20 11:47:17 obache Exp $
+# $NetBSD: Makefile,v 1.18 2015/03/15 20:13:24 hiramatsu Exp $
 #
 
 DISTNAME=	httpclient-2.6.0.1
 CATEGORIES=	www
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nahi/httpclient
 COMMENT=	HTTP accessing library for Ruby
 LICENSE=	ruby-license

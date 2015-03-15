@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/12/04 12:03:28 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 20:03:24 hiramatsu Exp $
 
 DISTNAME=	opencc-0.4.2
 CATEGORIES=	converters chinese
 MASTER_SITES=	http://dl.bintray.com/byvoid/opencc/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opencc.byvoid.com/
 COMMENT=	Convertion between Traditional and Simplified Chinese
 LICENSE=	apache-2.0

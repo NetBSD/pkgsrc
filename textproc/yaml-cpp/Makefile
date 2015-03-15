@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2014/11/24 11:27:52 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/15 20:03:24 hiramatsu Exp $
 #
 
 DISTNAME=	yaml-cpp-0.5.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://yaml-cpp.googlecode.com/files/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/yaml-cpp/
 COMMENT=	YAML parser and emitter for C++
 LICENSE=	mit
