@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/10/19 22:27:46 alnsn Exp $
+# $NetBSD: Makefile,v 1.30 2015/03/15 17:30:24 hiramatsu Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.5.0
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	Chinese Pinyin and Bopomofo engines for IBus input platform
 LICENSE=	gnu-gpl-v2

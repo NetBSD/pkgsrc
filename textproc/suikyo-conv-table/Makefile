@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:02 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 17:30:24 hiramatsu Exp $
 #
 
 .include "../../textproc/suikyo/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-conv-table-/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/suikyo/elisp/index.html
 COMMENT=	Suikyo conversion table
 
