@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/03/02 11:05:34 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 18:46:55 hiramatsu Exp $
 
 DISTNAME=	test-unit-notify-1.0.4
 CATEGORIES=	devel
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://test-unit.rubyforge.org/
 COMMENT=	Test result notify extension for Ruby Test::Util
 LICENSE=	gnu-lgpl-v2.1 # or later
