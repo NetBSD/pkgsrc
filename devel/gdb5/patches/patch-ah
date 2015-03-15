@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- bfd/configure.orig	2006-02-27 14:42:54.000000000 +0000
++++ bfd/configure
+@@ -5104,7 +5104,7 @@ if test "${target}" = "${host}"; then
+ 	COREFILE=trad-core.lo
+ 	TRAD_HEADER='"hosts/i386bsd.h"'
+ 	;;
+-  i[3456]86-*-freebsd*)
++  i[3456]86-*-freebsd* | i[3456]86-*-dragonfly*)
+ 	COREFILE=''
+ 	TRAD_HEADER='"hosts/i386bsd.h"'
+ 	;;
+@@ -6180,6 +6180,7 @@ do
+     i386coff_vec)		tb="$tb coff-i386.lo cofflink.lo" ;;
+     i386dynix_vec)		tb="$tb i386dynix.lo aout32.lo" ;;
+     i386freebsd_vec)		tb="$tb i386freebsd.lo aout32.lo" ;;
++    i386dragonfly_vec)		tb="$tb i386freebsd.lo aout32.lo" ;;
+     i386linux_vec)		tb="$tb i386linux.lo aout32.lo" ;;
+     i386lynx_aout_vec)		tb="$tb i386lynx.lo lynx-core.lo aout32.lo" ;;
+     i386lynx_coff_vec)		tb="$tb cf-i386lynx.lo cofflink.lo lynx-core.lo" ;;
