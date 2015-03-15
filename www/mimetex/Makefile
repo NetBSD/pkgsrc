@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:22 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 16:56:49 hiramatsu Exp $
 #
 
 DISTNAME=	mimetex
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.forkosh.com/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.forkosh.com/mimetex.html
 COMMENT=	CGI to convert LaTeX math expression to GIF image
 LICENSE=	gnu-gpl-v3
