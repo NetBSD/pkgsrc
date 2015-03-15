@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2014/10/19 22:27:46 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/15 19:51:08 hiramatsu Exp $
 
 DISTNAME=	ibus-libpinyin-1.6.92
 PKGREVISION=	2
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libpinyin/ibus-libpinyin/
 COMMENT=	Intelligent Pinyin engine based on libpinyin for IBus
 LICENSE=	gnu-gpl-v2
