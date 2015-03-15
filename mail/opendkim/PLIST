@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2013/06/15 19:19:25 pettai Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/03/15 23:02:34 pettai Exp $
 include/opendkim/dkim.h
 lib/libopendkim.la
 lib/pkgconfig/opendkim.pc
 man/man8/opendkim-genkey.8
 man/man8/opendkim-genzone.8
-man/man8/opendkim-testadsp.8
 man/man8/opendkim-testkey.8
 man/man8/opendkim-testmsg.8
 sbin/opendkim-genkey
 sbin/opendkim-genzone
-sbin/opendkim-testadsp
 sbin/opendkim-testkey
 sbin/opendkim-testmsg
 share/doc/opendkim/FEATURES
@@ -19,7 +17,6 @@ share/doc/opendkim/LICENSE.Sendmail
 share/doc/opendkim/README
 share/doc/opendkim/README.LDAP
 share/doc/opendkim/README.SQL
-share/doc/opendkim/README.opendkim-reportstats
 share/doc/opendkim/README.specs.html
 share/doc/opendkim/RELEASE_NOTES.Sendmail
 share/doc/opendkim/authheaders-check-setup-hook.lua
@@ -67,9 +64,6 @@ share/doc/opendkim/dkim_geterror.html
 share/doc/opendkim/dkim_getid.html
 share/doc/opendkim/dkim_getmode.html
 share/doc/opendkim/dkim_getpartial.html
-share/doc/opendkim/dkim_getpolicystr.html
-share/doc/opendkim/dkim_getpresult.html
-share/doc/opendkim/dkim_getpresultstr.html
 share/doc/opendkim/dkim_getresultstr.html
 share/doc/opendkim/dkim_getsighdr.html
 share/doc/opendkim/dkim_getsighdr_d.html
@@ -88,17 +82,7 @@ share/doc/opendkim/dkim_minbody.html
 share/doc/opendkim/dkim_ohdrs.html
 share/doc/opendkim/dkim_options.html
 share/doc/opendkim/dkim_param_t.html
-share/doc/opendkim/dkim_policy.html
-share/doc/opendkim/dkim_policy_getdnssec.html
-share/doc/opendkim/dkim_policy_getqueries.html
-share/doc/opendkim/dkim_policy_getreportinfo.html
-share/doc/opendkim/dkim_policy_state_free.html
-share/doc/opendkim/dkim_policy_state_new.html
-share/doc/opendkim/dkim_policy_syntax.html
-share/doc/opendkim/dkim_policy_t.html
-share/doc/opendkim/dkim_presult.html
 share/doc/opendkim/dkim_privkey_load.html
-share/doc/opendkim/dkim_pstate.html
 share/doc/opendkim/dkim_qi_getname.html
 share/doc/opendkim/dkim_qi_gettype.html
 share/doc/opendkim/dkim_query_t.html
@@ -108,7 +92,6 @@ share/doc/opendkim/dkim_set_dns_callback.html
 share/doc/opendkim/dkim_set_final.html
 share/doc/opendkim/dkim_set_key_lookup.html
 share/doc/opendkim/dkim_set_margin.html
-share/doc/opendkim/dkim_set_policy_lookup.html
 share/doc/opendkim/dkim_set_prescreen.html
 share/doc/opendkim/dkim_set_signature_handle.html
 share/doc/opendkim/dkim_set_signature_handle_free.html
@@ -166,4 +149,5 @@ share/doc/opendkim/opendkim.service
 share/doc/opendkim/opendkim.spec.in
 share/doc/opendkim/opendkim.xml
 share/doc/opendkim/overview.html
+share/doc/opendkim/repute.py
 share/doc/opendkim/stats.lua
