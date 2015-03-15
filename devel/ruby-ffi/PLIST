@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/03/08 15:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/03/15 16:04:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -347,6 +347,7 @@ ${GEM_LIBDIR}/lib/ffi/library.rb
 ${GEM_LIBDIR}/lib/ffi/managedstruct.rb
 ${GEM_LIBDIR}/lib/ffi/memorypointer.rb
 ${GEM_LIBDIR}/lib/ffi/platform.rb
+${GEM_LIBDIR}/lib/ffi/platform/aarch64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/arm-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-cygwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-darwin/types.conf
@@ -359,10 +360,12 @@ ${GEM_LIBDIR}/lib/ffi/platform/i386-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-windows/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/ia64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/mips-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/mips64el-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/mipsel-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-aix/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/powerpc64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/s390-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/s390x-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-linux/types.conf
@@ -417,36 +420,21 @@ ${GEM_LIBDIR}/spec/ffi/enum_spec.rb
 ${GEM_LIBDIR}/spec/ffi/errno_spec.rb
 ${GEM_LIBDIR}/spec/ffi/ffi_spec.rb
 ${GEM_LIBDIR}/spec/ffi/fixtures/Benchmark.c
-${GEM_LIBDIR}/spec/ffi/fixtures/Benchmark.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/BoolTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/BoolTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/BufferTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/BufferTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/ClosureTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/ClosureTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/EnumTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/EnumTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/FunctionTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/FunctionTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/GNUmakefile
 ${GEM_LIBDIR}/spec/ffi/fixtures/GlobalVariable.c
-${GEM_LIBDIR}/spec/ffi/fixtures/GlobalVariable.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/LastErrorTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/LastErrorTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/NumberTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/NumberTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/PointerTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/PointerTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/ReferenceTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/ReferenceTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/StringTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/StringTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/StructTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/StructTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/UnionTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/UnionTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/VariadicTest.c
-${GEM_LIBDIR}/spec/ffi/fixtures/VariadicTest.o
 ${GEM_LIBDIR}/spec/ffi/fixtures/classes.rb
 ${GEM_LIBDIR}/spec/ffi/function_spec.rb
 ${GEM_LIBDIR}/spec/ffi/io_spec.rb
