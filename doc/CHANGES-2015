@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1386 2015/03/15 00:35:39 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1387 2015/03/15 00:43:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1935,3 +1935,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/py-trytond-calendar to 3.4.0 [rodent 2015-03-15]
 	Added devel/py-proteus version 3.4.2 [rodent 2015-03-15]
 	Updated security/php-suhosin to 0.9.37.1 [taca 2015-03-15]
+	Updated devel/php-xdebug to 2.3.1 [taca 2015-03-15]
