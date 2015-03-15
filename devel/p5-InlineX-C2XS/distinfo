@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/04 12:28:17 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/03/15 23:22:57 mef Exp $
 
-SHA1 (InlineX-C2XS-0.22.tar.gz) = 40251d55ed604c98b979aa27c6a85fedec14c4ba
-RMD160 (InlineX-C2XS-0.22.tar.gz) = 9562e3546d380143cdbd02b25b4f88100e8f1665
-Size (InlineX-C2XS-0.22.tar.gz) = 27294 bytes
+SHA1 (InlineX-C2XS-0.24.tar.gz) = 2a59571f535196ccc7b8a3ac91cb7ca13cc0a1fe
+RMD160 (InlineX-C2XS-0.24.tar.gz) = ffb2c1944f695ee091ec2f013bd6672a38b4e387
+Size (InlineX-C2XS-0.24.tar.gz) = 30590 bytes
