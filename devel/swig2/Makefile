@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/22 07:36:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 15:30:57 taca Exp $
 
 DISTNAME=	swig-2.0.12
 PKGNAME=	${DISTNAME:S/swig-/swig2-/}
@@ -51,7 +51,7 @@ TEST_TARGET=	check
 # Tests require lots of other dependencies.  There should be a better
 # way to encode this, but for now they are commented out -gdt.
 #.include "../../lang/python/extension.mk"
-#.include "../../lang/php53/buildlink3.mk"
+#.include "../../lang/php54/buildlink3.mk"
 #.include "../../devel/boost-libs/buildlink3.mk"
 
 post-install:
