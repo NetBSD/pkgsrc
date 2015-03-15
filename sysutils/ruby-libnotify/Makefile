@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/05 00:48:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 19:31:44 hiramatsu Exp $
 
 DISTNAME=	ruby-libnotify-0.5.1
 PKGNAME=	${DISTNAME:S/ruby/${RUBY_PKGPREFIX}/}
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	-https://github.com/vargolo/ruby-libnotify/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/vargolo/ruby-libnotify
 COMMENT=	Ruby binding for libnotify
 LICENSE=	gnu-lgpl-v2.1
