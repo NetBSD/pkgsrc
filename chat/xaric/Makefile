@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/06/29 06:23:28 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2015/03/15 15:15:30 tnn Exp $
 #
 
 DISTNAME=	xaric-0.13.6
@@ -16,5 +16,6 @@ USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=	--enable-optimize
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
