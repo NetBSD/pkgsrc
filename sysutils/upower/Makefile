@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/21 19:44:55 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/15 16:48:17 tnn Exp $
 
 DISTNAME=	upower-0.99.2
 CATEGORIES=	sysutils
@@ -11,7 +11,7 @@ COMMENT=	Power management system message bus service
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config intltool
+USE_TOOLS+=	gmake pkg-config intltool xgettext msgmerge msgfmt
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
