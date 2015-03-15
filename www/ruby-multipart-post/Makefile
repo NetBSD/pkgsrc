@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/03/26 14:27:23 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/15 20:13:24 hiramatsu Exp $
 
 DISTNAME=	multipart-post-2.0.0
 CATEGORIES=	www
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/nicksieger/multipart-post
 COMMENT=	Multipart form post accessory for Net::HTTP
 LICENSE=	mit

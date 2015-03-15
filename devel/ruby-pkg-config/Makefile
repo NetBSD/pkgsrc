@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2014/11/14 11:23:38 obache Exp $
+# $NetBSD: Makefile,v 1.13 2015/03/15 19:57:40 hiramatsu Exp $
 
 DISTNAME=	pkg-config-1.1.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_RUBYGEMS}
 EXTRACT_SUFX=	.gem
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/ruby-gnome2/pkg-config
 COMMENT=	Pure Ruby implementation of pkg-config
 LICENSE=	gnu-lgpl-v2.1

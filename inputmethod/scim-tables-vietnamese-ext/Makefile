@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 20:03:23 hiramatsu Exp $
 #
 
 DISTNAME=	${PKGNAME:S/pl/-/}
@@ -6,7 +6,7 @@ PKGNAME=	scim-tables-vietnamese-ext-0.5.6pl17
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://scim-tables-vietnamese-ext.googlecode.com/files/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/scim-tables-vietnamese-ext/
 COMMENT=	Scim table for Telex/VNI Vietnamese Input Method
 LICENSE=	gnu-gpl-v2 OR artistic # ${PERL_LICENSE}

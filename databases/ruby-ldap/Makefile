@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2015/01/16 09:18:47 taca Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/15 20:13:24 hiramatsu Exp $
 
 DISTNAME=	ruby-ldap-0.9.16
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
 PKGREVISION=	1
 CATEGORIES=	databases ruby
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/alexey-chebotar/ruby-ldap
 COMMENT=	LDAP extension module for Ruby
 LICENSE=	modified-bsd
