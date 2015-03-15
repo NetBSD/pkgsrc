@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2015/01/29 21:54:33 jnemeth Exp $
+# $NetBSD: Makefile,v 1.119 2015/03/15 22:26:26 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -19,7 +19,7 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=	NO
 
 # known to have issues on i386, block the package until the bug is fixed
-NOT_FOR_PLATFORM=	NetBSD-*-i386
+BROKEN_ON_PLATFORM=	NetBSD-*-i386
 
 CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
