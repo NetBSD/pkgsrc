@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/11/13 08:36:21 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/03/15 23:32:33 mef Exp $
 
-SHA1 (Module-Runtime-Conflicts-0.001.tar.gz) = db0e3ef300997d1448b097754568d9aeabe1dffb
-RMD160 (Module-Runtime-Conflicts-0.001.tar.gz) = c6684939444620f5a21fac81f3a29f3552e723a5
-Size (Module-Runtime-Conflicts-0.001.tar.gz) = 23538 bytes
+SHA1 (Module-Runtime-Conflicts-0.002.tar.gz) = 11cf59638e00aac5db97748931abfc5e97ef88ff
+RMD160 (Module-Runtime-Conflicts-0.002.tar.gz) = d001fc513891e0c2f613c3fc93d9a17bf380d0ac
+Size (Module-Runtime-Conflicts-0.002.tar.gz) = 24802 bytes
