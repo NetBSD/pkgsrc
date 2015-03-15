@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1393 2015/03/15 01:21:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1394 2015/03/15 04:52:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1946,3 +1946,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/chasen-base to 2.4.5 [taca 2015-03-15]
 	Updated textproc/chasen to 2.4.5 [taca 2015-03-15]
 	Updated textproc/namazu to 2.0.21nb4 [taca 2015-03-15]
+	Updated graphics/mypaint to 1.1.0 [ryoon 2015-03-15]
