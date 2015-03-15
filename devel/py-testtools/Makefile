@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2014/12/13 08:43:37 obache Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/15 19:11:21 hiramatsu Exp $
 
 DISTNAME=	testtools-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/t/testtools/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/testing-cabal/testtools
 COMMENT=	Extensions to the Python standard library unit testing framework
 LICENSE=	mit AND python-software-foundation
