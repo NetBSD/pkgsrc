@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/08/11 23:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/15 17:04:44 hiramatsu Exp $
 
 DISTNAME=	libdlna-0.2.4
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://libdlna.geexbox.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libdlna.geexbox.org/
 COMMENT=	Reference DLNA open-source implementation
 LICENSE=	gnu-lgpl-v2.1

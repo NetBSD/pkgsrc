@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/02/17 19:17:59 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 17:00:30 hiramatsu Exp $
 #
 
 DISTNAME=	mell-1.0.0
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://taiyaki.org/elisp/mell/src/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/elisp/mell/
 COMMENT=	M Emacs Lisp Library
 

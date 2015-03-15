@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2014/12/31 13:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/15 17:00:29 hiramatsu Exp $
 
 DISTNAME=	ibus-tegaki-0.3.1
 PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Tegaki integration in ibus
 LICENSE=	gnu-gpl-v2

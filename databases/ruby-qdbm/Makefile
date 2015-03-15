@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/31 07:28:57 obache Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/15 17:00:30 hiramatsu Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=	${RUBY_PKGPREFIX}-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases ruby
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fallabs.com/qdbm/rbspex.html
 COMMENT=	Ruby interface of QDBM
 LICENSE=	gnu-lgpl-v2.1
