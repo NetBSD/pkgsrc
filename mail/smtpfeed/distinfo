@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.9 2014/09/25 14:14:47 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2015/03/15 15:07:47 mef Exp $
 
-SHA1 (smtpfeed-1.20.tar.gz) = f055984526865200339557e5fa809f968decbcfd
-RMD160 (smtpfeed-1.20.tar.gz) = aa3c586f2c5b2907caa0d7a50257c4e5273cc25d
-Size (smtpfeed-1.20.tar.gz) = 141144 bytes
-SHA1 (patch-aa) = e0ba34dd816d349ecedbc2a76cef9e70b396c655
-SHA1 (patch-ac) = d5b33823fa1ad9910ec97719f47c4265acf1dccc
-SHA1 (patch-ad) = 4ecd4ae9ba72997ed617158862e8801a9977472a
-SHA1 (patch-ae) = 7e97d0bcfb76221a1b0d4a2264eba8169ce8687c
-SHA1 (patch-af) = 2fd2dfa124a0ab842b739e85998e4b4a32e5eb71
-SHA1 (patch-ag) = a0956209ee563f73f3398d0fc0ee69cb57240cd5
-SHA1 (patch-ah) = d53b829ff765b7d555a6dda743a9496497679aa7
-SHA1 (patch-ai) = 2e29b595c1a946ea68186886a80bd5371b697e4e
+SHA1 (smtpfeed-1.23.tar.gz) = 42b3f7ce55dc9f932de8573477d3497b4670e7b1
+RMD160 (smtpfeed-1.23.tar.gz) = 5411b3a363673052e92fbbc218ac55469cc4b061
+Size (smtpfeed-1.23.tar.gz) = 152178 bytes
+SHA1 (patch-aa) = 32d1850db968c28190346c90653d1fa2f55aebbc
+SHA1 (patch-ad) = 1523e0e55798c3868a48a86218597a785cebe850
+SHA1 (patch-ag) = fdf0caff3d90d0b1de8f0dc558e0410aa08be0f1
+SHA1 (patch-ai) = 915b1b68d081deec4fd68735729a5dd548bfd47c
 SHA1 (patch-aj) = f26af3988350e0df29fa7e97ea7c308ac6699125
 SHA1 (patch-ak) = 206286eb6872876fc4b67a6ad413229124b8bb80
-SHA1 (patch-al) = 9a4674777b1a7fef6f29c6e5aa1b7e04c1eb2f87
-SHA1 (patch-am) = 63c35492d1cd9f01e9de901b7816e6f5d3e28c91
+SHA1 (patch-al) = d01080e3debb3e2f756a5f33cf20fa6320905d09
+SHA1 (patch-am) = 56241227527f674bc1237bb3ac2c5ffb3f76db37
 SHA1 (patch-configure) = 61f92773f797660e7b51f6b70ea88f3f949c5191
+SHA1 (patch-dns.c) = eb72a165e5d00f1e594764e2310e10ca519941aa
