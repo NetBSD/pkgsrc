@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/06/01 18:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/03/15 15:18:17 tnn Exp $
 
 DISTNAME=	suite3270-3.3.14ga11-src
 PKGNAME=	x3270-3.3.14ga11
@@ -29,6 +29,7 @@ EGDIR=			${PREFIX}/share/examples/x3270
 CONF_FILES=		${EGDIR}/ibm_hosts ${PKG_SYSCONFDIR}/ibm_hosts
 INSTALLATION_DIRS+=	${EGDIR}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
