@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/01/07 14:55:21 kleink Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/15 17:05:01 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,6 +29,12 @@ ${PYSITELIB}/flask_admin/consts.pyo
 ${PYSITELIB}/flask_admin/contrib/__init__.py
 ${PYSITELIB}/flask_admin/contrib/__init__.pyc
 ${PYSITELIB}/flask_admin/contrib/__init__.pyo
+${PYSITELIB}/flask_admin/contrib/appengine/__init__.py
+${PYSITELIB}/flask_admin/contrib/appengine/__init__.pyc
+${PYSITELIB}/flask_admin/contrib/appengine/__init__.pyo
+${PYSITELIB}/flask_admin/contrib/appengine/view.py
+${PYSITELIB}/flask_admin/contrib/appengine/view.pyc
+${PYSITELIB}/flask_admin/contrib/appengine/view.pyo
 ${PYSITELIB}/flask_admin/contrib/fileadmin.py
 ${PYSITELIB}/flask_admin/contrib/fileadmin.pyc
 ${PYSITELIB}/flask_admin/contrib/fileadmin.pyo
@@ -255,6 +261,12 @@ ${PYSITELIB}/flask_admin/static/vendor/select2/select2.css
 ${PYSITELIB}/flask_admin/static/vendor/select2/select2.min.js
 ${PYSITELIB}/flask_admin/static/vendor/select2/select2.png
 ${PYSITELIB}/flask_admin/static/vendor/select2/select2x2.png
+${PYSITELIB}/flask_admin/static/vendor/x-editable/css/bootstrap2-editable-1.5.1.css
+${PYSITELIB}/flask_admin/static/vendor/x-editable/css/bootstrap3-editable-1.5.1.css
+${PYSITELIB}/flask_admin/static/vendor/x-editable/img/clear.png
+${PYSITELIB}/flask_admin/static/vendor/x-editable/img/loading.gif
+${PYSITELIB}/flask_admin/static/vendor/x-editable/js/bootstrap2-editable-1.5.1.min.js
+${PYSITELIB}/flask_admin/static/vendor/x-editable/js/bootstrap3-editable-1.5.1.min.js
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/actions.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/base.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/file/edit.html
@@ -377,6 +389,8 @@ ${PYSITELIB}/flask_admin/tools.pyo
 ${PYSITELIB}/flask_admin/translations/__init__.py
 ${PYSITELIB}/flask_admin/translations/__init__.pyc
 ${PYSITELIB}/flask_admin/translations/__init__.pyo
+${PYSITELIB}/flask_admin/translations/ca_ES/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/ca_ES/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/cs/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/cs/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/de/LC_MESSAGES/admin.mo
@@ -391,27 +405,27 @@ ${PYSITELIB}/flask_admin/translations/pt/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/pt/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.po
-${PYSITELIB}/flask_admin/translations/zh_CN/LC_MESSAGES/admin.mo
-${PYSITELIB}/flask_admin/translations/zh_CN/LC_MESSAGES/admin.po
-${PYSITELIB}/flask_admin/translations/zh_TW/LC_MESSAGES/admin.mo
-${PYSITELIB}/flask_admin/translations/zh_TW/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/zh_Hans_CN/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/zh_Hans_CN/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/zh_Hant_TW/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/zh_Hant_TW/LC_MESSAGES/admin.po
 ${EGDIR}/__init__.py
 ${EGDIR}/auth/__init__.py
 ${EGDIR}/auth/app.py
 ${EGDIR}/forms/__init__.py
 ${EGDIR}/forms/app.py
-${EGDIR}/layout/__init__.py
-${EGDIR}/layout/app.py
 ${EGDIR}/layout-bootstrap3/__init__.py
 ${EGDIR}/layout-bootstrap3/app.py
+${EGDIR}/layout/__init__.py
+${EGDIR}/layout/app.py
 ${EGDIR}/quickstart/__init__.py
 ${EGDIR}/quickstart/app.py
 ${EGDIR}/quickstart/app2.py
 ${EGDIR}/quickstart/app3.py
 ${EGDIR}/simple/__init__.py
 ${EGDIR}/simple/app.py
+${EGDIR}/sqla-custom-filter/__init__.py
+${EGDIR}/sqla-custom-filter/app.py
 ${EGDIR}/sqla/__init__.py
 ${EGDIR}/sqla/app.py
 ${EGDIR}/sqla/app2.py
-${EGDIR}/sqla-custom-filter/__init__.py
-${EGDIR}/sqla-custom-filter/app.py
