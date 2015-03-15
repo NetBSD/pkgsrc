@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/03/09 08:11:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 21:08:00 wiz Exp $
 
-DISTNAME=	cffi-0.9.1
+DISTNAME=	cffi-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/c/cffi/
