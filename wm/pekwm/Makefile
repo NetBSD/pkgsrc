@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2015/03/15 19:51:05 tnn Exp $
 
 DISTNAME=	pekwm-0.1.17
 CATEGORIES=	wm
@@ -25,6 +25,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
