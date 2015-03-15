@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/03/01 20:04:27 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/15 18:22:11 tnn Exp $
 
 VERSION=	4.0.4.28
 DISTNAME=	tacacs-F${VERSION}
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	perl:run bison
+USE_TOOLS+=	perl:run flex bison
 
 CONFIGURE_ARGS+=	ac_cv_path_PERLV_PATH=${TOOLS_PATH.perl}
 #CONFIGURE_ARGS+=--enable-debug
