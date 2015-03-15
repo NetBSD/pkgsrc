@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1401 2015/03/15 14:35:10 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.1402 2015/03/15 14:50:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1968,3 +1968,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-LibMagic to 1.12 [mef 2015-03-15]
 	Updated devel/p5-Git-Wrapper to 0.040 [mef 2015-03-15]
 	Copied devel/gdb to devel/gdb5 [bsiegert 2015-03-15]
+	Removed meta-pkgs/php53-extensions [taca 2015-03-15]
