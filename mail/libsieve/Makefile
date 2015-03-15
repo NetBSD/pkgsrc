@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2014/12/05 08:48:49 obache Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/15 19:11:21 hiramatsu Exp $
 #
 
 DISTNAME=		libsieve-2.3.1
 CATEGORIES=		mail
 MASTER_SITES=		https://github.com/downloads/sodabrew/libsieve/
 
-MAINTAINER=		obache@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sodabrew.com/libsieve/
 COMMENT=		Library for parsing, sorting and filtering mail
 LICENSE=		gnu-lgpl-v2.1
