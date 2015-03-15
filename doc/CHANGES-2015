@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1408 2015/03/15 15:07:59 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1409 2015/03/15 15:29:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1976,3 +1976,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/gdb to 7.9 [bsiegert 2015-03-15]
 	Removed lang/php53 [taca 2015-03-15]
 	Updated mail/smtpfeed to 1.23 [mef 2015-03-15]
+	Updated mail/dk-milter to 1.0.2 [mef 2015-03-15]
