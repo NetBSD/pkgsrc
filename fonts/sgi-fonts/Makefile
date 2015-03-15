@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/03/15 18:42:12 tnn Exp $
 #
 
 DISTNAME=	sgi-fonts-1.0-457.src
@@ -19,7 +19,7 @@ USE_X11BASE=	yes
 FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/misc/sgi
 
 USE_IMAKE=	yes
-USE_TOOLS+=	bdftopcf bzcat tar pax
+USE_TOOLS+=	bdftopcf bzcat tar pax gzip
 
 INSTALLATION_DIRS=	share/fonts/X11/misc/sgi
 
