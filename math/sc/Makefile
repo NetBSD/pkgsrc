@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/11 23:04:33 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/15 18:51:14 tnn Exp $
 
 DISTNAME=               sc-6.21
 PKGREVISION=		2
@@ -14,4 +14,5 @@ USE_TOOLS+=		yacc
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
