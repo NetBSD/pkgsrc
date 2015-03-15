@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2014/07/20 01:16:48 obache Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/15 17:41:58 hiramatsu Exp $
 
 DISTNAME=	twitter-stream-0.1.16
 PKGREVISION=	2
 CATEGORIES=	net
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/voloko/twitter-stream
 COMMENT=	Twitter realtime API client
 LICENSE=	mit
