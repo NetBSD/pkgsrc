@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2015/02/17 13:37:30 mef Exp $
+# $NetBSD: Makefile,v 1.56 2015/03/15 23:25:43 mef Exp $
 #
 
-DISTNAME=	Module-CoreList-5.20150214
+DISTNAME=	Module-CoreList-5.20150220
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
