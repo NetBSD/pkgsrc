@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1389 2015/03/15 00:49:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1390 2015/03/15 00:53:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1941,3 +1941,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/isc-dhclient4 to 4.3.2 [taca 2015-03-15]
 	Updated net/isc-dhcpd4 to 4.3.2 [taca 2015-03-15]
 	Updated net/isc-dhcrelay4 to 4.3.2 [taca 2015-03-15]
+	Updated security/clamav to 0.98.6nb1 [taca 2015-03-15]
