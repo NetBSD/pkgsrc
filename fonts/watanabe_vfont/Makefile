@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/03/11 11:42:46 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/15 15:29:46 tnn Exp $
 #
 
 DISTNAME=	watanabe-vf
@@ -15,7 +15,7 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_TOOLS+=	tar
+USE_TOOLS+=	gzip tar
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fonts/watanabe_font
