@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/12/29 07:03:46 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2015/03/15 14:52:05 tnn Exp $
 #
 
 DISTNAME=		xorp-1.6
@@ -34,4 +34,5 @@ pre-build:
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
