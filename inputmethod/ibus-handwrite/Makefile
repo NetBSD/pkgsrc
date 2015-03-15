@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/08/28 10:27:28 obache Exp $
+# $NetBSD: Makefile,v 1.32 2015/03/15 17:09:00 hiramatsu Exp $
 #
 
 DISTNAME=	ibus-handwrite-3.0.0
@@ -6,7 +6,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/microcai/ibus-handwrite/releases/download/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus-handwrite/
 COMMENT=	Handwrite recognizer for ibus
 LICENSE=	gnu-gpl-v3
