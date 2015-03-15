@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.common,v 1.1 2015/03/15 00:52:53 taca Exp $
+#
+# used by clamav/Makefile
+# used by clamav-doc/Makefile
+
+CLAMAV_VERSION=	0.98.6
+DISTINFO_FILE=	${.CURDIR}/../../security/clamav/distinfo

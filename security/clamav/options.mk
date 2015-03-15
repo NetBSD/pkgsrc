@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2013/10/02 18:30:13 adam Exp $
+# $NetBSD: options.mk,v 1.3 2015/03/15 00:52:53 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
-PKG_SUPPORTED_OPTIONS=	milter clamav-experimental
+PKG_SUPPORTED_OPTIONS=	milter clamav-experimental unit-test
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,4 +23,14 @@ CONFIGURE_ENV+=		ac_cv_header_libmilter_mfapi_h=no
 
 .if !empty(PKG_OPTIONS:Mclamav-experimental)
 CONFIGURE_ARGS+=	--enable-experimental
+.endif
+
+# Enable unit test. 
+.if !empty(PKG_OPTIONS:Munit-test)
+CONFIGURE_ARGS+=		--enable-check
+TEST_TARGET=			check
+# unit test's Makefile depends on gmake.
+USE_TOOLS=			gmake
+BUILDLINK_DEPMETHOD.check=	build
+.  include "../../devel/check/buildlink3.mk"
 .endif
