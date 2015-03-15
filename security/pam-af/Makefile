@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 18:16:47 asau Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/15 18:31:52 hiramatsu Exp $
 
 DISTNAME=	pam_af-1.0.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://mbsd.msk.ru/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mbsd.msk.ru/stas/pam_af.html
 COMMENT=	Anti-bruteforce PAM module
 LICENSE=	2-clause-bsd
