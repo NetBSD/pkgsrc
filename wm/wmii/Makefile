@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/05/29 14:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/03/15 15:24:24 tnn Exp $
 
 DISTNAME=		wmii-3.6
 PKGREVISION=		4
@@ -45,6 +45,7 @@ post-build:
 	mv ${WRKSRC}/man/wmii.1 ${WRKSRC}/man/wmii.tbl
 	${TBL} ${WRKSRC}/man/wmii.tbl > ${WRKSRC}/man/wmii.1
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libixp/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
