@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 13:01:28 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/15 19:08:23 tnn Exp $
 #
 
 DISTNAME=	regxml-${SNAPSHOT_DATE}-${SNAPSHOT_HASH:C/(......).*/\1/}
@@ -37,7 +37,7 @@ HOMEPAGE=	http://git.huoc.org/?p=regxml.git;a=summary
 COMMENT=	Command line utilities for XML stream manipulation
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake yacc
 MAKE_FILE=	GNUmakefile
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
