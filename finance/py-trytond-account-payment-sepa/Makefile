@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/09/10 15:09:36 richard Exp $
-TRYTOND_MODULE_REVISION=	2
+# $NetBSD: Makefile,v 1.3 2015/03/15 00:17:35 rodent Exp $
+TRYTON_MODULE_NAME=	trytond_account_payment_sepa
 .include "../../devel/py-trytond/Makefile.common"
-DISTNAME=	trytond_account_payment_sepa-${TRYTOND_VERSION}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	finance python
-MASTER_SITES=	${TRYTON_SITES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/

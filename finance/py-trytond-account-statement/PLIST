@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/25 06:03:37 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:35 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -22,11 +22,13 @@ ${PYSITELIB}/trytond/modules/account_statement/locale/cs_CZ.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/es_CO.po
+${PYSITELIB}/trytond/modules/account_statement/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/es_ES.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/fr_FR.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/nl_NL.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/ru_RU.po
 ${PYSITELIB}/trytond/modules/account_statement/locale/sl_SI.po
+${PYSITELIB}/trytond/modules/account_statement/statement.odt
 ${PYSITELIB}/trytond/modules/account_statement/statement.py
 ${PYSITELIB}/trytond/modules/account_statement/statement.pyc
 ${PYSITELIB}/trytond/modules/account_statement/statement.pyo
