@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2012/10/08 12:19:31 asau Exp $
+# $NetBSD: Makefile,v 1.37 2015/03/15 15:07:47 mef Exp $
 
-DISTNAME=	smtpfeed-1.20
+DISTNAME=	smtpfeed-1.23
 CATEGORIES=	mail
 MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/smtpfeed/
 
