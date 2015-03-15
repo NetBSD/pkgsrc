@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/07 16:47:12 adam Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/15 17:47:15 hiramatsu Exp $
 #
 
 DISTNAME=	libchewing-0.4.0
@@ -7,7 +7,7 @@ CATEGORIES=	chinese inputmethod
 MASTER_SITES=	https://github.com/chewing/libchewing/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://chewing.im/
 COMMENT=	The intelligent phonetic input method library
 LICENSE=	gnu-lgpl-v2.1

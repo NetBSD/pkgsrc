@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/01/05 06:48:53 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/15 17:41:59 hiramatsu Exp $
 #
 
 DISTNAME=	typed-array-0.1.2
 CATEGORIES=	misc
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yaauie/typed-array
 COMMENT=	Provides methods for creating type-enforced Arrays
 LICENSE=	mit

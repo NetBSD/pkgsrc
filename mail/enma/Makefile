@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/02/12 23:18:07 tron Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/15 17:41:58 hiramatsu Exp $
 #
 
 DISTNAME=	enma-1.2.0
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://enma.sourceforge.net/
 COMMENT=	Sender authentication milter supporting SPF and Sender ID
 LICENSE=	2-clause-bsd
