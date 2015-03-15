@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/03/10 16:15:58 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/15 19:42:33 hiramatsu Exp $
 #
 
 DISTNAME=	prime-dict-1.0.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://prime.sourceforge.jp/src/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/
 COMMENT=	Japanese PRedictive Input Method Editor (dictionary)
 LICENSE=	gnu-gpl-v2

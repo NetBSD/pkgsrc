@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/12/11 22:07:47 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/15 19:42:33 hiramatsu Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mooedit/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://medit.bitbucket.org/
 COMMENT=	Programming and around-programming text editor
 LICENSE=	gnu-lgpl-v2.1
