@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:56 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 19:42:34 hiramatsu Exp $
 #
 
 DISTNAME=	escape-0.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.a-k-r.org/escape/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.a-k-r.org/escape/
 COMMENT=	HTML/URI/shell escaping utilities for Ruby
 LICENSE=	modified-bsd

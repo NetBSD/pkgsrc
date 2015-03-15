@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.53 2015/03/02 19:59:07 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2015/03/15 19:42:33 hiramatsu Exp $
 #
 
 DISTNAME=	groonga-4.1.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://groonga.org/
 COMMENT=	Fulltext search engine and column store
 LICENSE=	gnu-lgpl-v2.1
