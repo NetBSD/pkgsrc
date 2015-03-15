@@ -1,27 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2013/12/08 22:34:33 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/15 00:35:14 taca Exp $
 #
 
 MODNAME=		suhosin
 DISTNAME=		suhosin-${PECL_VERSION}
-PECL_VERSION=		0.9.33
+PECL_VERSION=		0.9.37.1
 PECL_LEGACY_VERSION_SCHEME=	yes
 CATEGORIES=		www
-MASTER_SITES=		http://download.suhosin.org/
+MASTER_SITES=		https://download.suhosin.org/
+# Do not remove EXTRACT_SUFX.
+EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		cg@cgall.de
-HOMEPAGE=		http://www.hardened-php.net/suhosin/index.html
+HOMEPAGE=		http://www.suhosin.org/
 COMMENT=		Advanced protection system for PHP installations
-
-# There is no patch for PHP 5.4 yet(?).
-PHP_VERSIONS_ACCEPTED=	53
 
 CONFIGURE_ARGS=		--enable-${MODNAME}
 
 .include "../../lang/php/ext.mk"
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang) && ${_PHP_VERSION} == "53"
-CFLAGS+=	-Wno-error=return-type
-.endif
-
 .include "../../mk/bsd.pkg.mk"
