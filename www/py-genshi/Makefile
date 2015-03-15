@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2014/01/18 08:08:59 obache Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/15 19:51:08 hiramatsu Exp $
 
 DISTNAME=	Genshi-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://ftp.edgewall.com/pub/genshi/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://genshi.edgewall.org/
 COMMENT=	Python toolkit for generation of output for the web
 LICENSE=	modified-bsd

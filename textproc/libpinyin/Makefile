@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/12/04 12:06:10 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/15 19:51:08 hiramatsu Exp $
 
 DISTNAME=	libpinyin-1.0.0
 CATEGORIES=	textproc chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libpinyin/libpinyin/
 COMMENT=	Library to deal with pinyin
 LICENSE=	gnu-gpl-v2
