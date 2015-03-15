@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/08/10 02:30:00 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/15 19:51:08 hiramatsu Exp $
 
 DISTNAME=	ibus-kkc-1.5.21
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	https://bitbucket.org/libkkc/ibus-kkc/downloads/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/libkkc/ibus-kkc/
 COMMENT=	Japanese KKC input method for ibus
 LICENSE=	gnu-gpl-v2
