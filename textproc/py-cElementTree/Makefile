@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2014/03/13 11:08:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/15 19:42:33 hiramatsu Exp $
 
 PKGNAME=	${PYPKGPREFIX}-cElementTree-${PY_DISTVERSION}
 CATEGORIES=	textproc python
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.effbot.org/zone/celementtree.htm
 COMMENT=	C implementation of Python ElementTree API
 
