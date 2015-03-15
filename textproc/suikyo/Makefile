@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2013/02/17 19:18:10 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 16:47:19 hiramatsu Exp $
 #
 
 .include "Makefile.common"
 
 PKGREVISION=	1
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Romaji-Kana conversion library
 
 DEPENDS+=	suikyo-conv-table>=${SUIKYO_VER}:../../textproc/suikyo-conv-table
