@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2014/08/08 12:27:44 obache Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 16:47:19 hiramatsu Exp $
 #
 
 DISTNAME=	msgpack-0.5.9
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/msgpack/msgpack-c/releases/download/cpp-${PKGVERSION_NOREV}/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://msgpack.org/
 COMMENT=	Binary-based efficient object serialization library
 LICENSE=	apache-2.0
