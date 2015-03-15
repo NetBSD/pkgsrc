@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2014/11/07 11:56:04 obache Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/15 17:25:55 hiramatsu Exp $
 #
 
 DISTNAME=	ibus-hangul-1.5.0
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	https://github.com/choehwanjin/ibus-hangul/releases/download/${PKGVERSION_NOREV}/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	Hangul engine for IBus input platform
 LICENSE=	gnu-gpl-v2
