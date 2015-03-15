@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/07/25 14:18:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/15 16:51:17 tnn Exp $
 
 DISTNAME=	uftp-4.1.2
 PKGREVISION=	1
@@ -20,4 +20,5 @@ INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1
 MAKE_ENV+=	LIB="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib"
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
