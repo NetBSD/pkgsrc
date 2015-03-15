@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/08/08 12:48:44 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/15 17:15:02 hiramatsu Exp $
 
 DISTNAME=	roman-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://pypi.python.org/packages/source/r/roman/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/roman/
 COMMENT=	Integer to Roman numerals converter for Python
 LICENSE=	python-software-foundation

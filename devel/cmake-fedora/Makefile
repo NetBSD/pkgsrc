@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/08/24 06:14:55 obache Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 17:15:02 hiramatsu Exp $
 #
 
 DISTNAME=	cmake-fedora-2.1.3-modules-only
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/-modules-only//}
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fedorahosted.org/cmake-fedora/
 COMMENT=	Set of cmake modules for fedora developers
 LICENSE=	modified-bsd
