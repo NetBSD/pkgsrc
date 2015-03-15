@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/03/15 23:06:00 mef Exp $
 
-DISTNAME=	Config-Tiny-2.20
+DISTNAME=	Config-Tiny-2.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 EXTRACT_SUFX=	.tgz
