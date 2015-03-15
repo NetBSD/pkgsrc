@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/03/27 09:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.21 2015/03/15 19:51:08 hiramatsu Exp $
 #
 
 DISTNAME=	x11rec-0.3
@@ -7,7 +7,7 @@ PKGREVISION=	9
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://0xcc.net/x11rec/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0xcc.net/x11rec/
 COMMENT=	Very ad hoc X11 recorder which create a movie
 LICENSE=	gnu-gpl-v2

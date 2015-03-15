@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/08/14 08:55:49 obache Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 19:51:08 hiramatsu Exp $
 
 DISTNAME=	notify-0.5.2
 CATEGORIES=	sysutils
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/jugyo/notify
 COMMENT=	Ruby notification function for cross platfoms
 LICENSE=	mit
