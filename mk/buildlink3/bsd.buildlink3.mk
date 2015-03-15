@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.232 2014/12/30 15:13:19 wiz Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.233 2015/03/15 19:23:26 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -811,6 +811,14 @@ _BLNK_PASSTHRU_DIRS+=	${BUILDLINK_PASSTHRU_DIRS}
 #
 .for _dir_ in ${COMPILER_LIB_DIRS} ${COMPILER_INCLUDE_DIRS} ${LOCALBASE} ${X11BASE}
 _BLNK_PASSTHRU_DIRS:=	${_BLNK_PASSTHRU_DIRS:N${_dir_}}
+.endfor
+# For cwrappers, drop compiler specific search directories, but keep subdirectories.
+# E.g. /usr/include/openssl should be kept, but /usr/include must be dropped.
+.for _dir_ in ${COMPILER_LIB_DIRS}
+_CWRAPPERS_TRANSFORM+=	L:${_dir_}/:
+.endfor
+.for _dir_ in ${COMPILER_INCLUDE_DIRS}
+_CWRAPPERS_TRANSFORM+=	I:${_dir_}/:
 .endfor
 #
 # Allow all directories in the library subdirectories listed for each

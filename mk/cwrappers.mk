@@ -1,8 +1,8 @@
-# $NetBSD: cwrappers.mk,v 1.20 2014/12/12 10:50:17 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.21 2015/03/15 19:23:26 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
-BUILD_DEPENDS+=		cwrappers>=20141129:../../pkgtools/cwrappers
+BUILD_DEPENDS+=		cwrappers>=20150314:../../pkgtools/cwrappers
 
 # XXX This should be PREFIX, but USE_CROSSBASE overrides it.
 CWRAPPERS_SRC_DIR=	${LOCALBASE}/libexec/cwrappers
