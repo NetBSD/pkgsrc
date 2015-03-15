@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/09/11 23:04:36 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/03/15 14:54:19 tnn Exp $
 #
 
 DISTNAME=	xlife-5.0
@@ -24,6 +24,7 @@ post-install:
 	done
 .endfor
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
