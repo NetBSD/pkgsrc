@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.16 2015/02/24 07:28:59 hiramatsu Exp $
+$NetBSD: distinfo,v 1.17 2015/03/15 00:52:53 taca Exp $
 
 SHA1 (clamav-0.98.6.tar.gz) = 03cb9a20a08aba9176b1f58d5527d06ec8261f9c
 RMD160 (clamav-0.98.6.tar.gz) = 48d5fbbdb183e61309212c6bc69f777f99346bd5
 Size (clamav-0.98.6.tar.gz) = 15148292 bytes
-SHA1 (patch-Makefile.in) = 070fe734113de9fc6ce5f02de088b10281913b00
-SHA1 (patch-aa) = 8539a90ac5591c86f7e9f6b8c073f36523f221a5
-SHA1 (patch-ab) = fea995ea944c2ae0f51a41e1a1076badf65c6c8b
-SHA1 (patch-af) = d217633ed33c72b6d01a9aeef03f0f5dd33b4336
-SHA1 (patch-ag) = cf4a0040a53c81402e8d15478407bc854af6fb30
-SHA1 (patch-etc_clamd.conf.sample) = 69bed1c88cf60f699e64fd361091621728b9f9d1
-SHA1 (patch-etc_freshclam.conf.sample) = 520ffbca5421ef2dc270e3c5a13cfb36a469e676
