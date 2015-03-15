@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/01 20:12:32 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:36 rodent Exp $
 ${PYSITELIB}/trytond/modules/calendar/__init__.py
 ${PYSITELIB}/trytond/modules/calendar/__init__.pyc
 ${PYSITELIB}/trytond/modules/calendar/__init__.pyo
@@ -15,6 +15,7 @@ ${PYSITELIB}/trytond/modules/calendar/locale/cs_CZ.po
 ${PYSITELIB}/trytond/modules/calendar/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/calendar/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/calendar/locale/es_CO.po
+${PYSITELIB}/trytond/modules/calendar/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/calendar/locale/es_ES.po
 ${PYSITELIB}/trytond/modules/calendar/locale/fr_FR.po
 ${PYSITELIB}/trytond/modules/calendar/locale/nl_NL.po

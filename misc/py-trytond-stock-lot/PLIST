@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/01 22:51:36 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:36 rodent Exp $
 ${PYSITELIB}/trytond/modules/stock_lot/__init__.py
 ${PYSITELIB}/trytond/modules/stock_lot/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock_lot/__init__.pyo
@@ -8,6 +8,7 @@ ${PYSITELIB}/trytond/modules/stock_lot/locale/cs_CZ.po
 ${PYSITELIB}/trytond/modules/stock_lot/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/stock_lot/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/stock_lot/locale/es_CO.po
+${PYSITELIB}/trytond/modules/stock_lot/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/stock_lot/locale/es_ES.po
 ${PYSITELIB}/trytond/modules/stock_lot/locale/fr_FR.po
 ${PYSITELIB}/trytond/modules/stock_lot/locale/nl_NL.po
