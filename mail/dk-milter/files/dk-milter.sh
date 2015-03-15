@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dk-milter.sh,v 1.5 2005/07/21 16:22:04 tv Exp $
+# $NetBSD: dk-milter.sh,v 1.6 2015/03/15 15:28:58 mef Exp $
 #
 # PROVIDE: dkmilter
 # REQUIRE: DAEMON

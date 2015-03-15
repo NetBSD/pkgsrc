@@ -1,34 +1,35 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/07/20 19:42:50 tv Exp $
+$NetBSD: patch-aa,v 1.2 2015/03/15 15:28:58 mef Exp $
 
---- dk-filter/Makefile.m4.orig	2005-07-20 14:55:01.000000000 -0400
-+++ dk-filter/Makefile.m4
-@@ -4,10 +4,10 @@ include(confBUILDTOOLSDIR`/M4/switch.m4'
- define(`confMT', `TRUE')
- define(`confREQUIRE_LIBSM', `true')
- 
--APPENDDEF(`confLIBS', `-lssl -lcrypto')
-+APPENDDEF(`confLIBS', `-lssl -lcrypto @PTHREAD_LDFLAGS@ ')
- dnl Enable and edit these paths as needed:
+--- site.config.m4.dist.orig	2007-05-31 20:57:51.000000000 +0200
++++ site.config.m4.dist	2007-08-06 21:27:46.000000000 +0200
+@@ -17,7 +17,7 @@ dnl libar -- asynchronous resolver libra
+ dnl
+ dnl If you want to use the asynchronous resolver library, enable this
+ dnl next line by deleting the "dnl" at the front of it.
+-dnl define(`bld_USE_ARLIB', `true')
++@ARLIB@ define(`bld_USE_ARLIB', `true')
+ dnl 
+ dnl libar normally uses res_init() or res_ninit() to load the contents
+ dnl of resolv.conf for its use.  If neither of these work on your system
+@@ -53,8 +53,8 @@ dnl
+ dnl DK requires several algorithms provided by this library.  If necessary,
+ dnl enable these lines by deleting "dnl" from the front of them and edit
+ dnl paths as needed.
 -dnl APPENDDEF(`confINCDIRS', `-I/usr/local/ssl/include ')
 -dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/ssl/lib ')
 +APPENDDEF(`confINCDIRS', `-I@SSLBASE@/include -I@PTHREAD@/include ')
 +APPENDDEF(`confLIBDIRS', `-L@SSLBASE@/lib -L@PTHREAD@/lib ')
  
- dnl To use the asynchronous resolver library provided, enable this line:
- dnl bldPUSH_SMLIB(`ar')
-@@ -19,12 +19,12 @@ bldPUSH_SMLIB(`sm')
+ dnl Code For Future Release (FFRs):
+ dnl
+@@ -74,8 +74,8 @@ dnl
+ dnl This must be in the search rules for your compile.  If necessary,
+ dnl adjust the paths below and enable the lines by deleting "dnl" from the
+ dnl front of them.
+-dnl APPENDDEF(`bld_dk_filter_INCDIRS', `-I/usr/local/sendmail/include')
+-dnl APPENDDEF(`bld_dk_filter_LIBDIRS', `-L/usr/local/sendmail/lib')
++APPENDDEF(`bld_dk_filter_INCDIRS', `-I@LMBASE@/include')
++APPENDDEF(`bld_dk_filter_LIBDIRS', `-L@LMBASE@/lib')
  
- dnl Enable these next line if needed to specify the locations of libmilter.a
- dnl and the libmilter include files:
--dnl APPENDDEF(`confINCDIRS', `-I/usr/local/sendmail/include')
--dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/sendmail/lib')
-+APPENDDEF(`confINCDIRS', `-I@LMBASE@/include ')
-+APPENDDEF(`confLIBDIRS', `-L@LMBASE@/lib')
- 
- 
- dnl Enable for IPv6 support:
--dnl APPENDDEF(`confENVDEF', `-DNETINET6 ')
-+@INET6@ APPENDDEF(`confENVDEF', `-DNETINET6 ')
- 
- dnl Compile time options, especially FFRs:
- dnl APPENDDEF(`confENVDEF', `-D_FFR_EXTERNAL_IGNORE_LIST ')
+ dnl smfi_addheader() -- older versions of libmilter
+ dnl
