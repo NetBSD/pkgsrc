@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2013/09/20 17:26:14 ryoon Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2015/03/15 05:34:56 ryoon Exp $
 lib/rpm/platform/aarch64--gnu/macros
 lib/rpm/platform/alpha--gnu/macros
 lib/rpm/platform/alphaev5--gnu/macros
@@ -12,7 +12,10 @@ lib/rpm/platform/armv4b--gnu/macros
 lib/rpm/platform/armv4l--gnu/macros
 lib/rpm/platform/armv5tejl--gnu/macros
 lib/rpm/platform/armv5tel--gnu/macros
+lib/rpm/platform/armv6hl--gnu/macros
 lib/rpm/platform/armv6l--gnu/macros
+lib/rpm/platform/armv7hl--gnu/macros
+lib/rpm/platform/armv7hnl--gnu/macros
 lib/rpm/platform/armv7l--gnu/macros
 lib/rpm/platform/athlon--gnu/macros
 lib/rpm/platform/geode--gnu/macros
@@ -22,6 +25,7 @@ lib/rpm/platform/i586--gnu/macros
 lib/rpm/platform/i686--gnu/macros
 lib/rpm/platform/ia32e--gnu/macros
 lib/rpm/platform/ia64--gnu/macros
+lib/rpm/platform/m68k--gnu/macros
 lib/rpm/platform/noarch--gnu/macros
 lib/rpm/platform/pentium3--gnu/macros
 lib/rpm/platform/pentium4--gnu/macros
@@ -29,6 +33,7 @@ lib/rpm/platform/ppc--gnu/macros
 lib/rpm/platform/ppc32dy4--gnu/macros
 lib/rpm/platform/ppc64--gnu/macros
 lib/rpm/platform/ppc64iseries--gnu/macros
+lib/rpm/platform/ppc64le--gnu/macros
 lib/rpm/platform/ppc64p7--gnu/macros
 lib/rpm/platform/ppc64pseries--gnu/macros
 lib/rpm/platform/ppc8260--gnu/macros
