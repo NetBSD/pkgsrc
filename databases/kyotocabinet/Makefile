@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/02/19 14:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 20:03:24 hiramatsu Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.76
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://fallabs.com/kyotocabinet/pkg/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fallabs.com/kyotocabinet/
 COMMENT=	Straightforward implementation of DBM
 LICENSE=	gnu-gpl-v3

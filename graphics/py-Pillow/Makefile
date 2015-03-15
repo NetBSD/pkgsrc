@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/01/03 15:46:00 adam Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/15 19:57:40 hiramatsu Exp $
 
 DISTNAME=	Pillow-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/Pillow/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://python-pillow.github.io/
 COMMENT=	Python Imaging Library (Fork)
 

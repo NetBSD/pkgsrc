@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2014/12/04 12:06:58 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 20:03:24 hiramatsu Exp $
 
 DISTNAME=	librime-1.0
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://rimeime.googlecode.com/files/
 #MASTER_SITES=	http://dl.bintray.com/lotem/rime/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/rimeime/
 COMMENT=	Rime input method engine
 LICENSE=	gnu-gpl-v3

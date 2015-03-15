@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2014/11/03 08:47:15 obache Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/03/15 20:13:24 hiramatsu Exp $
 #
 # used by inputmethod/ibus/Makefile
 # used by inputmethod/ibus-python/Makefile
@@ -10,6 +10,6 @@ MASTER_SITES=	https://github.com/ibus/ibus/releases/download/${PKGVERSION_NOREV}
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/ibus/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/ibus/patches
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 LICENSE=	gnu-lgpl-v2.1

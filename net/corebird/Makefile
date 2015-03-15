@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/12/11 22:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/15 20:03:24 hiramatsu Exp $
 
 DISTNAME=	corebird-0.9
 CATEGORIES=	net
 MASTER_SITES=	-https://github.com/baedert/corebird/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://corebird.baedert.org/
 COMMENT=	Native Gtk+ Twitter Client
 LICENSE=	gnu-gpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/15 20:13:24 hiramatsu Exp $
 #
 
 DISTNAME=		user-cygwin-20130712
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		obache@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Limited NetBSD-compatible useradd/groupadd commands
 
 ONLY_FOR_PLATFORM=	Cygwin-*-*
