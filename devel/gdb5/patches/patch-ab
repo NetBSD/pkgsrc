@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- bfd/Makefile.am.orig	2002-08-30 08:11:44.000000000 +0000
++++ bfd/Makefile.am
+@@ -724,8 +724,8 @@ install_libbfd: $(bfdlib_LTLIBRARIES) $(
+ 	$(mkinstalldirs) $(DESTDIR)$(bfdincludedir)
+ 	@list='$(bfdlib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
++	    echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+ 	$(INSTALL_DATA) $(BFD_H) $(DESTDIR)$(bfdincludedir)/bfd.h

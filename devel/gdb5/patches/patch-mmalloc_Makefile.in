@@ -1,0 +1,19 @@
+$NetBSD: patch-mmalloc_Makefile.in,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+* destdir installation support.
+
+--- mmalloc/Makefile.in.orig	2002-11-28 16:48:37.000000000 +0000
++++ mmalloc/Makefile.in
+@@ -156,9 +156,9 @@ check: test1.c
+ #	./a.out
+ 
+ install:	all install-info
+-		$(INSTALL_DATA) $(TARGETLIB) $(libdir)/$(TARGETLIB)n
+-		$(RANLIB) $(libdir)/$(TARGETLIB)n
+-		mv -f $(libdir)/$(TARGETLIB)n $(libdir)/$(TARGETLIB)
++		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(TARGETLIB)n
++		$(RANLIB) $(DESTDIR)$(libdir)/$(TARGETLIB)n
++		mv -f $(DESTDIR)$(libdir)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(TARGETLIB)
+ 
+ uninstall:	uninstall-info
+ 

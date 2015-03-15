@@ -1,0 +1,15 @@
+$NetBSD: patch-gdb_gdbserver_Makefile.in,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- gdb/gdbserver/Makefile.in.orig	2002-08-20 21:32:18.000000000 +0000
++++ gdb/gdbserver/Makefile.in
+@@ -145,8 +145,8 @@ install: all install-only
+ install-only: 
+ 	n=`echo gdbserver | sed '$(program_transform_name)'`; \
+ 	if [ x$$n = x ]; then n=gdbserver; else true; fi; \
+-	$(INSTALL_PROGRAM) gdbserver $(bindir)/$$n; \
+-	$(INSTALL_DATA) $(srcdir)/gdbserver.1 $(man1dir)/$$n.1
++	$(INSTALL_PROGRAM) gdbserver $(DESTDIR)$(bindir)/$$n; \
++	$(INSTALL_DATA) $(srcdir)/gdbserver.1 $(DESTDIR)$(man1dir)/$$n.1
+ 
+ uninstall: force
+ 	n=`echo gdbserver | sed '$(program_transform_name)'`; \
