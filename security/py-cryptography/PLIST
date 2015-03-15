@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/01/03 16:00:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/15 21:10:16 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -230,6 +230,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dh.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dh.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dh.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dsa.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dsa.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dsa.pyo
@@ -269,9 +272,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/hashes.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.py
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyo
-${PYSITELIB}/cryptography/hazmat/primitives/interfaces.py
-${PYSITELIB}/cryptography/hazmat/primitives/interfaces.pyc
-${PYSITELIB}/cryptography/hazmat/primitives/interfaces.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/interfaces/__init__.py
+${PYSITELIB}/cryptography/hazmat/primitives/interfaces/__init__.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/interfaces/__init__.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyo
@@ -289,6 +292,8 @@ ${PYSITELIB}/cryptography/hazmat/primitives/serialization.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/src/constant_time.c
 ${PYSITELIB}/cryptography/hazmat/primitives/src/constant_time.h
+${PYSITELIB}/cryptography/hazmat/primitives/src/padding.c
+${PYSITELIB}/cryptography/hazmat/primitives/src/padding.h
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.pyo
