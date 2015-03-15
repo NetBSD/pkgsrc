@@ -1,8 +1,9 @@
-$NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
+$NetBSD: patch-al,v 1.3 2015/03/15 15:07:47 mef Exp $
 
---- smtp.c.orig	2003-08-21 16:04:44.000000000 +0900
-+++ smtp.c	2012-06-28 18:47:24.000000000 +0900
-@@ -49,32 +49,42 @@
+
+--- smtp.c.orig	2015-02-17 23:00:08.000000000 +0900
++++ smtp.c	2015-03-12 11:30:45.000000000 +0900
+@@ -49,8 +49,14 @@ static	time_t Now;
  static	int FirstRead, FirstWrite;
  static	int Terminate, NewTransCheck, NeedTrimDomain, MoreFreeSlot;
  
@@ -14,77 +15,36 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
 +
  static void
 -sig_alarm()
-+sig_alarm(dummy)
-+	int dummy;
++sig_alarm(int dummy)
  {
  	errno = ETIMEDOUT;
  	if (cnf.debug & DEBUG_EVENT)
--	log(LOG_DEBUG, "alarm clock");
-+	mylog(LOG_DEBUG, "alarm clock");
+@@ -58,21 +64,21 @@ sig_alarm()
  }
  
  static void
 -sig_int()
-+sig_int(dummy)
-+	int dummy;
++sig_int(int dummy)
  {
--	log(LOG_INFO, "SIGINT received: internal states dumped");
-+	mylog(LOG_INFO, "SIGINT received: internal states dumped");
+ 	logg(LOG_INFO, "SIGINT received: internal states dumped");
  	dump_internal();
  }
  
  static void
 -sig_hup()
-+sig_hup(dummy)
-+	int dummy;
++sig_hup(int dummy)
  {
--	log(LOG_INFO, "SIGHUP received: graceful termination");
-+	mylog(LOG_INFO, "SIGHUP received: graceful termination");
+ 	logg(LOG_INFO, "SIGHUP received: graceful termination");
  	forced_terminate();
  }
  
  static void
 -sig_term()
-+sig_term(dummy)
-+	int dummy;
++sig_term(int dummy)
  {
--	log(LOG_INFO, "SIGTERM received: semi graceful termination");
-+	mylog(LOG_INFO, "SIGTERM received: semi graceful termination");
+ 	logg(LOG_INFO, "SIGTERM received: semi graceful termination");
  	markstatus(env.rcpt_list, SMTP_TEMPFAIL(51),
- 		"Aborted by INT signal", 1);
- 	longjmp(jmp_env, 1);
-@@ -87,10 +97,10 @@
- 	int s;
- 
- 	while((s = dup(0)) < 253);
--	log(LOG_DEBUG, "descriptor reserved till %d", s);
-+	mylog(LOG_DEBUG, "descriptor reserved till %d", s);
- #endif
- 
--	log(LOG_INFO, "from=%s size=%d nrcpt=%d msgid=%s",
-+	mylog(LOG_INFO, "from=%s size=%d nrcpt=%d msgid=%s",
- 		env.sender, env.realsize, sti.nrcpt,
- 		(env.mid == NULL)?"none":env.mid);
- 
-@@ -99,7 +109,7 @@
- 		FILE *fp;
- 
- 		if (cnf.debug & DEBUG_TRANS)
--			log(LOG_DEBUG, "searching sender address %s in %s",
-+			mylog(LOG_DEBUG, "searching sender address %s in %s",
- 				env.sender, cnf.src_mod_path);
- 		if ((fp = fopen(cnf.src_mod_path, "r")) == NULL)
- 		{
-@@ -127,7 +137,7 @@
- 			fclose(fp);
- 			if (found)
- 			{
--				log(LOG_INFO,
-+				mylog(LOG_INFO,
- 					"recipients/transaction changed to 1");
- 				cnf.rcpts_trans = 1;
- 			}
-@@ -207,15 +217,53 @@
+@@ -207,15 +213,53 @@ deliver()
  	resource_usage("finalstatus done");
  }
  
@@ -114,7 +74,7 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
 +
 +static int new_transaction P((void));
 +static void process_connection P((fd_set *, fd_set *, int, int));
-+static void markstatus P((struct recipient *, int, char *, int));
++static void markstatus P((struct recipient *, int, const char *, int));
 +static struct connection *open_transaction P((struct recipient *));
 +static void close_transaction P((struct connection *, int));
 +static void trim_rcpts P((struct domain *));
@@ -145,351 +105,47 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
  	time_t tout;
  	char *name;
  } state_tbl[] = {
-@@ -357,13 +405,13 @@
- 		if (rcptp->domain == NULL)
- 		{
- 			rcptp->stat = RCPT_DONE;
--			log(LOG_NOTICE, "no domain for %s", rcptp->address);
-+			mylog(LOG_NOTICE, "no domain for %s", rcptp->address);
- 			continue;
+@@ -338,7 +382,7 @@ smtp()
+ 	int i, fds, rc, in_use, burst, true_terminate;
+ 	int all_done = 0;
+ 	int bad_state = 0;
+-	char *msg;
++	const char *msg;
+ 
+ 	/* initialize work pointers */
+ 	for (rcptp = env.rcpt_list; rcptp != NULL; rcptp = rcptp->next)
+@@ -645,7 +689,7 @@ new_transaction()
  		}
- 		if (rcptp->domain->firstmx == NULL)
+ 		if (domp->curmx == NULL)
  		{
- 			rcptp->stat = RCPT_DONE;
--			log(LOG_NOTICE, "no MX for %s", rcptp->address);
-+			mylog(LOG_NOTICE, "no MX for %s", rcptp->address);
- 			continue;
- 		}
- 	}
-@@ -376,7 +424,7 @@
- 		if (domp->rcpt_top == NULL)
- 			continue;
- 		if (cnf.debug & DEBUG_TRANS)
--		log(LOG_DEBUG, "pick up domain: %s", domp->name);
-+		mylog(LOG_DEBUG, "pick up domain: %s", domp->name);
- 		if (wdomp == NULL)
- 			env.work_domain = domp;
- 		else
-@@ -396,7 +444,7 @@
- 		{
- 			/* all recipients had been processed */
- 			if (cnf.debug & DEBUG_CONNECT)
--			log(LOG_DEBUG, "closing all sockets");
-+			mylog(LOG_DEBUG, "closing all sockets");
- 			all_done = 1;
- 			for (i = 0; i < cnf.sd_max; i++)
- 			{
-@@ -425,7 +473,7 @@
- 			}
+-			char *msg = domp->response;
++			const char *msg = domp->response;
  
- 			if (cnf.debug & DEBUG_TRANS)
--			log(LOG_DEBUG, "in_use=%d, max_sock=%d, min_sock=%d",
-+			mylog(LOG_DEBUG, "in_use=%d, max_sock=%d, min_sock=%d",
- 				in_use, max_sock, sti.minsock);
+ 			if (msg == NULL)
+ 				if (no_addr)
+@@ -869,15 +913,15 @@ int timeout_only, true_term;
+ }
  
- 			if (in_use > (max_sock - sti.minsock))
-@@ -440,7 +488,7 @@
- 					if (connwork[i].host->state != STAT_SENT)
- 						continue;
- 					if (cnf.debug & DEBUG_CONNECT)
--					log(LOG_DEBUG, "%d/%d: closing idle socket",
-+					mylog(LOG_DEBUG, "%d/%d: closing idle socket",
- 						connwork[i].seq,
- 						connwork[i].socket);
- 					smtp_quit_s(&connwork[i]);
-@@ -459,7 +507,7 @@
- 				if (!connwork[i].reuse)
- 					break;
- 				if (cnf.debug & DEBUG_CONNECT)
--				log(LOG_DEBUG, "%d/%d: closing idle socket",
-+				mylog(LOG_DEBUG, "%d/%d: closing idle socket",
- 					connwork[i].seq,
- 					connwork[i].socket);
- 				smtp_quit_s(&connwork[i]);
-@@ -480,7 +528,7 @@
- 			}
- #if 1
- 			if (cnf.debug & DEBUG_TRANS)
--			log(LOG_DEBUG, "new transaction: trans=%d, sock=%d",
-+			mylog(LOG_DEBUG, "new transaction: trans=%d, sock=%d",
- 				num_trans, num_sock);
- #endif
- 			if (new_transaction() < 0)
-@@ -515,7 +563,7 @@
- 		if (all_done && fds < 0)
- 		{
- 			if (cnf.debug & DEBUG_CONNECT)
--			log(LOG_DEBUG, "all sockets are closed");
-+			mylog(LOG_DEBUG, "all sockets are closed");
- #if 0
- 			dump_internal();
- #endif
-@@ -524,7 +572,7 @@
- 
- 		if (fds < 0)	/* XXX */
- 		{
--			log(LOG_INFO, "No active sockets");
-+			mylog(LOG_INFO, "No active sockets");
- 			if (bad_state++ > 5)
- 			{
- 				markstatus(env.rcpt_list, SMTP_TEMPFAIL(51),
-@@ -562,12 +610,12 @@
- 		{
- 			/* time up */
- 			forced_terminate();
--			log(LOG_INFO, "total processing timed out (%d sec)",
-+			mylog(LOG_INFO, "total processing timed out (%d sec)",
- 				cnf.t_timeout);
- 		}
- 		if (rc < 0)
- 		{
--			log(LOG_INFO, "select returns %d (fds=%d, errno=%d)",
-+			mylog(LOG_INFO, "select returns %d (fds=%d, errno=%d)",
- 				rc, fds, errno);
- 			sleep(1);
- 		}
-@@ -595,7 +643,7 @@
- 	{ 
- #if 1
- 		if (cnf.debug & DEBUG_TRANS)
--		log(LOG_DEBUG, "checking domain: %s", domp->name);
-+		mylog(LOG_DEBUG, "checking domain: %s", domp->name);
- #endif
- 		/* first time for the domain? */
- #if 1
-@@ -616,7 +664,7 @@
- 		      || domp->curmx->host->addr == NULL))))
- 		{
- 			if (domp->curmx->host == NULL)
--				log(LOG_INFO, "skipping bad MX: %s for %s",
-+				mylog(LOG_INFO, "skipping bad MX: %s for %s",
- 					domp->curmx->name, domp->name);
- 			else
- 			{
-@@ -698,7 +746,7 @@
- 	}
- #if 1
- 	if (cnf.debug & DEBUG_TRANS)
--	log(LOG_DEBUG, "no new transaction");
-+	mylog(LOG_DEBUG, "no new transaction");
- #endif
- 	NewTransCheck = 0;
- 	return -1;	/* no new transaction */
-@@ -722,7 +770,7 @@
- 
- 		snprintf(msgbuf, sizeof(msgbuf),
- 			"No address known for %s", conn->host->name);
--		log(LOG_INFO, msgbuf, conn->host->name);
-+		mylog(LOG_INFO, msgbuf, conn->host->name);
- 
- 		rcode = SMTP_TEMPFAIL(52);
- 		if (cnf.absentAok)
-@@ -799,7 +847,7 @@
- 			/* timeout! */
- 			sti.ntimeout++;
- 			if (cnf.debug & DEBUG_CONNECT)
--			log(LOG_DEBUG, "%d/%d: timeout (%s)", conn->seq,
-+			mylog(LOG_DEBUG, "%d/%d: timeout (%s)", conn->seq,
- 				conn->socket, STATE(st));
- 			if (st == STAT_DTERMSENT)
- 			{
-@@ -815,7 +863,7 @@
- 		if (FD_ISSET(conn->socket, w_fds))
- 		{
- 			if (cnf.debug & DEBUG_EVENT)
--			log(LOG_DEBUG, "%d/%d: writable (%s)",
-+			mylog(LOG_DEBUG, "%d/%d: writable (%s)",
- 				conn->seq, conn->socket, STATE(st));
- 			if (state_tbl[st].send != NULL)
- 			{
-@@ -826,14 +874,14 @@
- 			if (conn->host == NULL)
- 			{
- 				if (cnf.debug & DEBUG_EVENT)
--				log(LOG_DEBUG, "%d/%d: state %s -> NULL",
-+				mylog(LOG_DEBUG, "%d/%d: state %s -> NULL",
- 					conn->seq, conn->socket, STATE(st));
- 			}
- 			else if (st != conn->host->state)
- 			{
- 				conn->host->time = Now;
- 				if (cnf.debug & DEBUG_EVENT)
--				log(LOG_DEBUG, "%d/%d: state %s -> %s",
-+				mylog(LOG_DEBUG, "%d/%d: state %s -> %s",
- 					conn->seq, conn->socket, STATE(st),
- 					STATE(conn->host->state));
- 			}
-@@ -842,7 +890,7 @@
- 		if (FD_ISSET(conn->socket, r_fds))
- 		{
- 			if (cnf.debug & DEBUG_EVENT)
--			log(LOG_DEBUG, "%d/%d: readable (%s)",
-+			mylog(LOG_DEBUG, "%d/%d: readable (%s)",
- 				conn->seq, conn->socket, STATE(st));
- 			if (state_tbl[st].recv != NULL)
- 			{
-@@ -853,14 +901,14 @@
- 			if (conn->host == NULL)
- 			{
- 				if (cnf.debug & DEBUG_EVENT)
--				log(LOG_DEBUG, "%d/%d: state %s -> NULL",
-+				mylog(LOG_DEBUG, "%d/%d: state %s -> NULL",
- 					conn->seq, conn->socket, STATE(st));
- 			}
- 			else if (st != conn->host->state)
- 			{
- 				conn->host->time = Now;
- 				if (cnf.debug & DEBUG_EVENT)
--				log(LOG_DEBUG, "%d/%d: state %s -> %s",
-+				mylog(LOG_DEBUG, "%d/%d: state %s -> %s",
- 					conn->seq, conn->socket, STATE(st),
- 					STATE(conn->host->state));
- 			}
-@@ -885,7 +933,7 @@
- 	if (rcptp == NULL)
- 	{
- 		if (cnf.debug & DEBUG_TRANS)
--		log(LOG_DEBUG, "markstatus: rcptp is NULL");
-+		mylog(LOG_DEBUG, "markstatus: rcptp is NULL");
- 		return;
- 	}
- 
-@@ -1047,7 +1095,7 @@
- 		{
- 			/* buffer may be full */
- 			strcat(addrbuf+addrlen, ",(more...)");
--			log(LOG_INFO, "(%d+%d+%d+%d/%d) relay=%s to=%s proto=%s delay=%d code=%d (%s)",
-+			mylog(LOG_INFO, "(%d+%d+%d+%d/%d) relay=%s to=%s proto=%s delay=%d code=%d (%s)",
- 				sti.nsent, sti.ndeferred, sti.nnsfailed,
- 				sti.nsmtpfailed, sti.nrcpt, hostname,
- 				addrbuf, proto, delay, rcode,
-@@ -1069,7 +1117,7 @@
- 			{
- 				rcptp->stat = RCPT_RETRY;
- 				if (cnf.debug & DEBUG_TRANS)
--				log(LOG_DEBUG, "tempfail; retry: %s",
-+				mylog(LOG_DEBUG, "tempfail; retry: %s",
- 					rcptp->address);
- 			}
- 			else if (!Terminate && mxp != NULL
-@@ -1079,7 +1127,7 @@
- 			{
- 				rcptp->stat = RCPT_RETRY;
- 				if (cnf.debug & DEBUG_TRANS)
--				log(LOG_DEBUG, "tempfail; next avail: %s",
-+				mylog(LOG_DEBUG, "tempfail; next avail: %s",
- 					rcptp->address);
- 			}
- 			else
-@@ -1087,7 +1135,7 @@
- 				sti.ndeferred++;
- 				rcptp->stat = RCPT_DONE;
- 				if (cnf.debug & DEBUG_TRANS)
--				log(LOG_DEBUG, "tempfail; done: %s",
-+				mylog(LOG_DEBUG, "tempfail; done: %s",
- 					rcptp->address);
- 			}
- 		}
-@@ -1116,7 +1164,7 @@
- 	}
- 	if (addrlen > 0)
- 	{
--		log(LOG_INFO, "(%d+%d+%d+%d/%d) relay=%s to=%s proto=%s delay=%d code=%d (%s)",
-+		mylog(LOG_INFO, "(%d+%d+%d+%d/%d) relay=%s to=%s proto=%s delay=%d code=%d (%s)",
- 			sti.nsent, sti.ndeferred, sti.nnsfailed,
- 			sti.nsmtpfailed, sti.nrcpt, hostname,
- 			addrbuf, proto, delay, rcode,
-@@ -1156,7 +1204,7 @@
- 
- #if 1
- 	if (cnf.debug & DEBUG_TRANS)
--	log(LOG_DEBUG, "num_trans=%d, num_sock=%d, max_sock=%d, min_sock=%d",
-+	mylog(LOG_DEBUG, "num_trans=%d, num_sock=%d, max_sock=%d, min_sock=%d",
- 		num_trans, num_sock, max_sock, sti.minsock);
- #endif
- 	if (num_trans > (max_sock - sti.minsock))
-@@ -1171,7 +1219,7 @@
- 
- #if 1
- 	if (cnf.debug & DEBUG_TRANS)
--	log(LOG_DEBUG, "open transaction for %s", rcptp->address);
-+	mylog(LOG_DEBUG, "open transaction for %s", rcptp->address);
- #endif
- 
- 	if (rcptp->domain->curmx->host->state == STAT_SENT)
-@@ -1183,7 +1231,7 @@
- 				break;
- 		}
- 		if (cnf.debug & DEBUG_TRANS)
--		log(LOG_DEBUG, "reusing: slot=%d", i);
-+		mylog(LOG_DEBUG, "reusing: slot=%d", i);
- 	}
- 	else
- 	{
-@@ -1203,7 +1251,7 @@
- 	{
- #if 0
- 		if (cnf.debug & DEBUG_TRANS)
--		log(LOG_DEBUG, "no free slot");
-+		mylog(LOG_DEBUG, "no free slot");
- #endif
- 		/* sleep (1); */
- 		return NULL;	/* XXX socket slot is full */
-@@ -1212,7 +1260,7 @@
- 	sti.ntrans++;
- 
- 	if (cnf.debug & DEBUG_TRANS)
--	log(LOG_DEBUG, "%d/-: open transaction for %s, slot=%d",
-+	mylog(LOG_DEBUG, "%d/-: open transaction for %s, slot=%d",
- 		sti.ntrans, rcptp->address, i);
- 
- 	/* initialize transaction */
-@@ -1246,7 +1294,7 @@
- 		domp = mxp->domain;
- 		if (domp == NULL)
- 		{
--			log(LOG_NOTICE, "Oops, mxp->domain for %s is NULL",
-+			mylog(LOG_NOTICE, "Oops, mxp->domain for %s is NULL",
- 				mxp->name);
- 			goto next_domain;
- 		}
-@@ -1269,7 +1317,7 @@
- 				if (rcpts + 1 > cnf.rcpts_trans)
- #else
- 				if (cnf.debug & DEBUG_TRANS)
--				log(LOG_DEBUG, "check count of rcpts (domain:%s, max rcpts:%d, count:%d)",
-+				mylog(LOG_DEBUG, "check count of rcpts (domain:%s, max rcpts:%d, count:%d)",
- 					rcptp2->domain->name,
- 					rcptp2->domain->rcpts,
- 					rcpts);
-@@ -1282,7 +1330,7 @@
- 				}
- 				rcpts++;
- 				if (cnf.debug & DEBUG_TRANS)
--				log(LOG_DEBUG, "%d/-: with %s",
-+				mylog(LOG_DEBUG, "%d/-: with %s",
- 					sti.ntrans, rcptp2->address);
- 				rcptp2->stat = RCPT_WORK;
- 				rcptp2->chain = NULL;
-@@ -1323,7 +1371,7 @@
- #endif
- 
- 	if (cnf.debug & DEBUG_TRANS)
--	log(LOG_DEBUG, "%d/%d: close transaction", conn->seq, conn->socket);
-+	mylog(LOG_DEBUG, "%d/%d: close transaction", conn->seq, conn->socket);
- 
- 	NewTransCheck = 1;		/* do not skip new_transaction() */
- 	env.work_dom_ptr = NULL;	/* retry from the top of list */
-@@ -1388,7 +1436,7 @@
- 			if (domp->curmx != NULL)
- 			{
- 				if (cnf.debug & DEBUG_TRANS)
--				log(LOG_DEBUG, "%d/-: switching to next MX: %s",
-+				mylog(LOG_DEBUG, "%d/-: switching to next MX: %s",
- 					conn->seq, domp->curmx->name);
- 			}
- 		}
-@@ -1429,7 +1477,7 @@
+ static void
+-markstatus(rcptp, rcode, response, tracechain)
+-struct recipient *rcptp;
+-int rcode;
+-char *response;
+-int tracechain;
++markstatus (struct recipient *rcptp,
++	    int rcode,
++	    const char *response,
++	    int tracechain)
+ {
+ 	char hbuf[MAXLINE], rbuf[MAXLINE], pbuf[64];
+ 	char addrbuf[SYSLOG_BUFSIZE];
+-	char *hostname, *proto, *responsep;
++	char *hostname, *proto;
++	const char *responsep;
+ 	struct host *hostp;
+ 	int delay, addrlen, estconst, estlen, n;
+ 	static int PrevPCT = -1;
+@@ -1434,7 +1478,7 @@ int next;	/* true: forward MX for next t
  	num_trans--;
  }
  
@@ -498,16 +154,7 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
  trim_rcpts(domp)
  struct domain *domp;
  {
-@@ -1446,7 +1494,7 @@
- 		{
- 			/* remove recipient from working chain */
- 			if (cnf.debug & DEBUG_TRANS)
--			log(LOG_DEBUG, "removing recipient: %s",
-+			mylog(LOG_DEBUG, "removing recipient: %s",
- 				rcptp->address);
- 			if (rcptp == domp->rcpt_top)
- 			{
-@@ -1469,7 +1517,7 @@
+@@ -1474,7 +1518,7 @@ struct domain *domp;
  		NeedTrimDomain = 1;
  }
  
@@ -516,16 +163,7 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
  trim_domain()
  {
  	struct domain *domp, *domtmp;
-@@ -1483,7 +1531,7 @@
- 		{
- 			/* remove from working domain chain */
- 			if (cnf.debug & DEBUG_TRANS)
--			log(LOG_DEBUG, "removing domain: %s",
-+			mylog(LOG_DEBUG, "removing domain: %s",
- 				domp->name);
- 			if (domp == env.work_domain)
- 			{
-@@ -1510,7 +1558,7 @@
+@@ -1515,7 +1559,7 @@ trim_domain()
  	return 0;
  }
  
@@ -534,159 +172,7 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
  forced_terminate()
  {
  	struct recipient *rcptp;
-@@ -1538,7 +1586,7 @@
- 
- 	if (conn->host == NULL)
- 	{
--		log(LOG_NOTICE, "smtp_connect called with NULL host");
-+		mylog(LOG_NOTICE, "smtp_connect called with NULL host");
- 		return -1;
- 	}
- 
-@@ -1552,7 +1600,7 @@
- 	}
- 
- 	if (cnf.debug & DEBUG_CONNECT)
--	log(LOG_DEBUG, "%d/-: connecting to %s",
-+	mylog(LOG_DEBUG, "%d/-: connecting to %s",
- 		conn->seq, conn->host->name);
- 
- 	bzero((char *)&rsin, sizeof(rsin));
-@@ -1589,7 +1637,7 @@
- 			socksize = sizeof(struct sockaddr_in);
- 
- 			if (cnf.debug & DEBUG_CONNECT)
--			log(LOG_DEBUG, "%d/-: destination=%s/%d", conn->seq,
-+			mylog(LOG_DEBUG, "%d/-: destination=%s/%d", conn->seq,
- 				inet_ntoa(rsin.in.sin_addr), cnf.dst_port);
- 			found = 1;
- 			break;
-@@ -1619,7 +1667,7 @@
- 
- 				inet_ntop(AF_INET6, &rsin.in6.sin6_addr,
- 					buf, sizeof(buf));
--				log(LOG_DEBUG, "%d/-: destination=%s/%d",
-+				mylog(LOG_DEBUG, "%d/-: destination=%s/%d",
- 					conn->seq, buf, cnf.dst_port);
- 			}
- 			found = 1;
-@@ -1657,7 +1705,7 @@
- 
- 	if (sd > MAX_SOCK)
- 	{
--		log(LOG_NOTICE, "%d/%d: can not manage such a big file descriptor number with select()",
-+		mylog(LOG_NOTICE, "%d/%d: can not manage such a big file descriptor number with select()",
- 			conn->seq, sd);
- 		close(sd);
- 		if (max_sock > MAX_SOCK)
-@@ -1670,7 +1718,7 @@
- 
- 	if (sd < 0){
- 		/* no more socket resource */
--		log(LOG_NOTICE, "socket allocation failed for %s: %s (may be max=%d, current=%d/%d/%d)",
-+		mylog(LOG_NOTICE, "socket allocation failed for %s: %s (may be max=%d, current=%d/%d/%d)",
- 			conn->host->name, smtpstrerror(errno), sti.maxsock,
- 			max_sock, num_sock, sti.minsock);
- 		if (max_sock > NOFILE)
-@@ -1689,14 +1737,14 @@
- 	}
- 
- 	if (cnf.debug & DEBUG_CONNECT)
--	log(LOG_DEBUG, "%d/%d: socket allocated", conn->seq, sd);
-+	mylog(LOG_DEBUG, "%d/%d: socket allocated", conn->seq, sd);
- 
- #ifdef SO_SNDBUF
- 	if (cnf.sendbufsize > 0)
- 	{
- 		if (setsockopt(sd, SOL_SOCKET, SO_SNDBUF,
- 		    (char *)&cnf.sendbufsize, sizeof(cnf.sendbufsize)) < 0)
--			log(LOG_NOTICE, "%d/%d: setsockopt(SO_SNDBUF) failed for %s: %s",
-+			mylog(LOG_NOTICE, "%d/%d: setsockopt(SO_SNDBUF) failed for %s: %s",
- 				conn->seq, sd, conn->host->name,
- 				smtpstrerror(errno));
- 		/* ignore error */
-@@ -1761,7 +1809,7 @@
- 				    case AF_INET:
- 					bcopy(addrp->address,
- 						&lsin.in.sin_addr, addrp->len);
--					log(LOG_INFO,
-+					mylog(LOG_INFO,
- 						"using %s as source IP address",
- 						inet_ntoa(lsin.in.sin_addr));
- 					break;
-@@ -1773,7 +1821,7 @@
- 
- 					inet_ntop(AF_INET6, &lsin.in6.sin6_addr,
- 						buf, sizeof(buf));
--					log(LOG_INFO, "using %s as source IP address", buf);
-+					mylog(LOG_INFO, "using %s as source IP address", buf);
- 					break;
- #endif
- 				}
-@@ -1791,7 +1839,7 @@
- 				p = NULL;
- 		}
- 		if (!found)
--			log(LOG_INFO, "sourceIP (%s) ignored", cnf.sourceIP);
-+			mylog(LOG_INFO, "sourceIP (%s) ignored", cnf.sourceIP);
- 	}
- 	if (!found)
- 	{
-@@ -1840,7 +1888,7 @@
- 	{
- 		if (bind(sd, (struct sockaddr *)&lsin, socksize) < 0)
- 		{
--			log(LOG_NOTICE, "%d/%d: bind failed for %s: %s", 
-+			mylog(LOG_NOTICE, "%d/%d: bind failed for %s: %s", 
- 				conn->seq, sd, conn->host->name,
- 				smtpstrerror(errno));
- 			conn->host->state = STAT_FAIL;
-@@ -1857,7 +1905,7 @@
- 
- 	if (ioctl (sd, FIONBIO, &res) < 0)
- 	{
--		log(LOG_NOTICE, "%d/%d: FIONBIO failed for %s: %s",
-+		mylog(LOG_NOTICE, "%d/%d: FIONBIO failed for %s: %s",
- 			conn->seq, sd, conn->host->name, smtpstrerror(errno));
- 		conn->host->state = STAT_FAIL;
- 		close (sd);
-@@ -1868,7 +1916,7 @@
- #else
- 	if ((res = fcntl(sd, F_GETFL, 0)) == -1)
- 	{
--		log(LOG_NOTICE, "%d/%d: F_GETFL failed for %s: %s",
-+		mylog(LOG_NOTICE, "%d/%d: F_GETFL failed for %s: %s",
- 			conn->seq, sd, conn->host->name, smtpstrerror(errno));
- 		conn->host->state = STAT_FAIL;
- 		close (sd);
-@@ -1883,7 +1931,7 @@
- # endif
- 	if (fcntl(sd, F_SETFL, res) == -1)
- 	{
--		log(LOG_NOTICE, "%d/%d: F_SETFL failed for %s: %s",
-+		mylog(LOG_NOTICE, "%d/%d: F_SETFL failed for %s: %s",
- 			conn->seq, sd, conn->host->name, smtpstrerror(errno));
- 		conn->host->state = STAT_FAIL;
- 		close (sd);
-@@ -1899,7 +1947,7 @@
- 	 && errno != EINPROGRESS && errno != EINTR)	/* XXX */
- 	{
- 		alarm(0);
--		log(LOG_DEBUG, "%d/%d: connect failed for %s: %s",
-+		mylog(LOG_DEBUG, "%d/%d: connect failed for %s: %s",
- 			conn->seq, sd, conn->host->name, smtpstrerror(errno));
- 		conn->host->current->stat = EX_TEMPFAIL;
- 		close (sd);
-@@ -1931,7 +1979,7 @@
- 		}
- 		sti.minsock = sd;
- 		if (cnf.debug & DEBUG_CONNECT)
--		log(LOG_DEBUG, "minsock=%d", sti.minsock);
-+		mylog(LOG_DEBUG, "minsock=%d", sti.minsock);
- 	}
- 	num_sock++;
- 	return 0;
-@@ -1951,11 +1999,11 @@
+@@ -1956,7 +2000,7 @@ struct connection *conn;
  {
  	SockAddr cin;
  	int len = sizeof(SockAddr);
@@ -695,75 +181,7 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
  
  	if (getpeername(conn->socket, (struct sockaddr *)&cin, &len) < 0)
  	{
--		log(LOG_INFO, "%d/%d: getpeername failed for %s: %s",
-+		mylog(LOG_INFO, "%d/%d: getpeername failed for %s: %s",
- 			conn->seq, conn->socket, conn->host->name,
- 			smtpstrerror(errno));
- 		if (conn->host->current != NULL) /* XXX for safe access */
-@@ -2004,7 +2052,7 @@
- 	conn->outlen = 0;
- 	if (conn->inbuf == NULL || conn->outbuf == NULL)
- 	{
--		log(LOG_NOTICE, "out of memory (SMTP buffer allocation)");
-+		mylog(LOG_NOTICE, "out of memory (SMTP buffer allocation)");
- 		if (conn->host->current != NULL) /* XXX for safe access */
- 		{
- 			conn->host->current->stat = EX_TEMPFAIL;
-@@ -2048,7 +2096,7 @@
- 			if (n == 0)
- 			{
- 				if (cnf.debug & DEBUG_CONNECT)
--				log(LOG_DEBUG, "%d/%d: closed by foreign host",
-+				mylog(LOG_DEBUG, "%d/%d: closed by foreign host",
- 					conn->seq, conn->socket);
- 				errno = E_SF_IO;
- 				return -1;
-@@ -2066,7 +2114,7 @@
- #endif
- 				return 0;
- 			  default:
--				log(LOG_DEBUG, "%d/%d: read failed for %s: ret=%d, errno=%d",
-+				mylog(LOG_DEBUG, "%d/%d: read failed for %s: ret=%d, errno=%d",
- 					conn->seq, conn->socket,
- 					conn->host->name, n, errno);
- 				return n;
-@@ -2132,7 +2180,7 @@
- 			if (n == 0)
- 			{
- 				if (cnf.debug & DEBUG_CONNECT)
--				log(LOG_DEBUG,
-+				mylog(LOG_DEBUG,
- 					"%d/%d: closed by foreign host (%s)",
- 					conn->seq, conn->socket,
- 					conn->host->name);
-@@ -2152,7 +2200,7 @@
- #endif
- 				return 0;
- 			  default:
--				log(LOG_DEBUG,
-+				mylog(LOG_DEBUG,
- 					"%d/%d: write failed for %s: ret=%d, errno=%d",
- 					conn->seq, conn->socket,
- 					conn->host->name, n, errno);
-@@ -2187,7 +2235,7 @@
- 			if (n == 0)
- 			{
- 				if (cnf.debug & DEBUG_CONNECT)
--				log(LOG_DEBUG,
-+				mylog(LOG_DEBUG,
- 					"%d/%d: closed by foreign host (%s)",
- 					conn->seq, conn->socket,
- 					conn->host->name);
-@@ -2205,7 +2253,7 @@
- #endif
- 				return size;
- 			  default:
--				log(LOG_DEBUG,
-+				mylog(LOG_DEBUG,
- 					"%d/%d: write failed for %s: ret=%d, errno=%d",
- 					conn->seq, conn->socket,
- 					conn->host->name, n, errno);
-@@ -2256,7 +2304,7 @@
+@@ -2261,7 +2305,7 @@ struct connection *conn;
  static int
  smtp_get_reply(conn, func, firstline, size, rest)
  struct connection *conn;
@@ -772,214 +190,3 @@ $NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
  char firstline[];
  int size;
  int *rest;
-@@ -2301,7 +2349,7 @@
- 			cbuf[--len] = '\0';
- 		}
- 		if (cnf.debug & DEBUG_SMTP)
--		log(LOG_DEBUG, "%d/%d: >>> %s", conn->seq, conn->socket, cbuf);
-+		mylog(LOG_DEBUG, "%d/%d: >>> %s", conn->seq, conn->socket, cbuf);
- 		if (func != NULL)
- 			(*func)(conn, cbuf);
- 		if (!isdigit(cbuf[0]) || !isdigit(cbuf[1]) || !isdigit(cbuf[2])
-@@ -2358,7 +2406,7 @@
- 	int len = strlen(buf);
- 
- 	if (cnf.debug & DEBUG_SMTP)
--	log(LOG_DEBUG, "%d/%d: <<< %s", conn->seq, conn->socket, buf);
-+	mylog(LOG_DEBUG, "%d/%d: <<< %s", conn->seq, conn->socket, buf);
- 	if (len + 2 < size)
- 	{
- 		strcat(buf, CRLF);
-@@ -2432,7 +2480,7 @@
- {
- 	char buf[MAXLINE];
- 	int rcode, savestate;
--	const char *errmsg;
-+	char *errmsg;
- 
- 	errno = 0;
- 	savestate = conn->host->state;
-@@ -2473,7 +2521,7 @@
- 			errmsg = "Unexpected Error";
- 			break;
- 		}
--		log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+		mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 			conn->seq, conn->socket, conn->host->name,
- 			smtpstrerror(errno), STATE(savestate));
- 		if (conn->host->current != NULL) /* XXX for safe access */
-@@ -2620,7 +2668,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, smtpstrerror(errno),
- 				conn->host->name, STATE(savestate));
- 		}
-@@ -2876,7 +2924,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, conn->host->name,
- 				smtpstrerror(errno), STATE(savestate));
- 		}
-@@ -3056,7 +3104,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, conn->host->name,
- 				smtpstrerror(errno), STATE(savestate));
- 		}
-@@ -3208,7 +3256,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, conn->host->name,
- 				smtpstrerror(errno), STATE(savestate));
- 		}
-@@ -3323,7 +3371,7 @@
- 		len = strlen(altbuf);
- 		rcode = smtp_write(conn, altbuf, len, 0);
- 		if (rcode != len)	/* XXX */
--			log(LOG_NOTICE,
-+			mylog(LOG_NOTICE,
- 			    "Header of sent message will be corrupted: %s",
- 			    altbuf);
- 	}
-@@ -3395,7 +3443,7 @@
- 		return 0;
- 
- 	if (cnf.debug & DEBUG_CONNECT)
--	log(LOG_DEBUG, "reusability check: %s", conn->host->name);
-+	mylog(LOG_DEBUG, "reusability check: %s", conn->host->name);
- 
- 	/* check possibility of reuse connection */
- 	for (rmxp = conn->host->mx_ref; rmxp != NULL; rmxp = rmxp->mx_ref)
-@@ -3417,7 +3465,7 @@
- 			}
- 		}
- 		if (cnf.debug & DEBUG_CONNECT)
--		log(LOG_DEBUG, "on domain: %s = %d", domp->name, reused);
-+		mylog(LOG_DEBUG, "on domain: %s = %d", domp->name, reused);
- 
- 		if (reused == 0)
- 			continue;
-@@ -3429,7 +3477,7 @@
- 			if (mxp == rmxp)
- 			{
- 				if (cnf.debug & DEBUG_CONNECT)
--				log(LOG_DEBUG, "%d/%d: may be reused: %s",
-+				mylog(LOG_DEBUG, "%d/%d: may be reused: %s",
- 					conn->seq, conn->socket,
- 					conn->host->name);
- 				return 1;
-@@ -3455,7 +3503,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, conn->host->name,
- 				smtpstrerror(errno), STATE(savestate));
- 		}
-@@ -3552,7 +3600,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, conn->host->name,
- 				smtpstrerror(errno), STATE(savestate));
- 		}
-@@ -3629,7 +3677,7 @@
- 	{
- 		if (errno > 0)
- 		{
--			log(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
-+			mylog(LOG_INFO, "%d/%d: failed for %s: %s (%s)",
- 				conn->seq, conn->socket, conn->host->name,
- 				smtpstrerror(errno), STATE(savestate));
- 		}
-@@ -3691,7 +3739,7 @@
- 			markstatus(conn->rcpt, SMTP_TEMPFAIL(52),
- 				newstr(buf), 1);
- 		else
--			log(LOG_INFO, "Trying next address of %s",
-+			mylog(LOG_INFO, "Trying next address of %s",
- 			    conn->host->name);
- 		if (conn->host->current != NULL) /* XXX for safe access */
- 			conn->host->current = conn->host->current->next;
-@@ -3717,7 +3765,7 @@
- 		{
- 			conn->host->state = STAT_CLOSED;
- 			conn->host->current->stat = EX_TEMPFAIL;
--			log(LOG_INFO, "Trying next address of %s",
-+			mylog(LOG_INFO, "Trying next address of %s",
- 			    conn->host->name);
- 		}
- 		else
-@@ -3744,17 +3792,17 @@
- 	struct recipient *rcptp;
- 	int i;
- 
--	log(LOG_INFO, "=== dumping internal information ===");
-+	mylog(LOG_INFO, "=== dumping internal information ===");
- 
- 	for (rcptp = env.rcpt_list; rcptp != NULL; rcptp = rcptp->next)
- 	{
- 		switch (rcptp->stat)
- 		{
- 		    case RCPT_NOOP:
--			log(LOG_INFO, "rcpt=%s stat=noop", rcptp->address);
-+			mylog(LOG_INFO, "rcpt=%s stat=noop", rcptp->address);
- 			break;
- 		    case RCPT_WORK:
--			log(LOG_INFO, "rcpt=%s stat=working mx=%s st=%s",
-+			mylog(LOG_INFO, "rcpt=%s stat=working mx=%s st=%s",
- 				rcptp->address,
- 				(rcptp->domain->curmx == NULL)?"none":
- 				rcptp->domain->curmx->name,
-@@ -3763,18 +3811,18 @@
- 			break;
- 		    case RCPT_RETRY:
- 			if (rcptp->domain->curmx != NULL)
--				log(LOG_INFO,
-+				mylog(LOG_INFO,
- 				    "rcpt=%s stat=retry code=%d mx=%s st=%s",
- 				    rcptp->address, rcptp->result,
- 				    rcptp->domain->curmx->name,
- 				    STATE(rcptp->domain->curmx->host->state));
- 			else
--				log(LOG_INFO,
-+				mylog(LOG_INFO,
- 					"rcpt=%s stat=retry code=%d mx=none",
- 					rcptp->address, rcptp->result);
- 			break;
- 		    case RCPT_DONE:
--			log(LOG_INFO, "rcpt=%s stat=done code=%d",
-+			mylog(LOG_INFO, "rcpt=%s stat=done code=%d",
- 				rcptp->address, rcptp->result);
- 			break;
- 		}
-@@ -3784,12 +3832,12 @@
- 	{
- 		if (connwork[i].host == NULL)
- 			continue;
--		log(LOG_INFO, "slot=%d host=%s stat=%s", i,
-+		mylog(LOG_INFO, "slot=%d host=%s stat=%s", i,
- 			connwork[i].host->name,
- 			STATE(connwork[i].host->state));
- 	}
- 
--	log(LOG_INFO, "=== end of internal information ===");
-+	mylog(LOG_INFO, "=== end of internal information ===");
- }
- 
- static char *
