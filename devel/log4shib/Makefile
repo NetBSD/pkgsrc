@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/16 10:01:00 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/15 01:07:20 tnn Exp $
 #
 
 DISTNAME=	log4shib-1.0.6
@@ -23,4 +23,5 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	log4shib.pc.in
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
