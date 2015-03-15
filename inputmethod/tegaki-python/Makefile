@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/15 17:41:58 hiramatsu Exp $
 
 DISTNAME=	tegaki-python-0.3.1
 PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Base Python library for the Tegaki project
 LICENSE=	gnu-gpl-v2
