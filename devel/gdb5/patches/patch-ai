@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
+
+--- bfd/config.bfd.orig	2002-09-05 20:34:35.000000000 +0000
++++ bfd/config.bfd
+@@ -398,7 +398,7 @@ case "${targ}" in
+     targ_selvecs=i386bsd_vec
+     targ_underscore=yes
+     ;;
+-  i[3456]86-*-freebsd*)
++  i[3456]86-*-freebsd* | i[3456]86-*-dragonfly*)
+     targ_defvec=bfd_elf32_i386_vec
+     targ_selvecs=i386coff_vec
+     ;;
