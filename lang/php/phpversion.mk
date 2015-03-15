@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.88 2015/02/20 01:17:49 taca Exp $
+# $NetBSD: phpversion.mk,v 1.89 2015/03/15 11:50:53 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -191,28 +191,37 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 #
 .if ${_PHP_VERSION} == "53"
 PHPPKGSRCDIR=		../../lang/php53
-PHP_BASE_VERS=		${PHP53_VERSION}
+PHP_VERSION=		${PHP53_VERSION}
+PHP_INITIAL_TEENY=	2
 PHP_PKG_PREFIX=		php53
 PHP_EXTENSION_DIR=	lib/php/${PHP53_RELDATE}
 .elif ${_PHP_VERSION} == "54"
 PHPPKGSRCDIR=		../../lang/php54
-PHP_BASE_VERS=		${PHP54_VERSION}
+PHP_VERSION=		${PHP54_VERSION}
+PHP_INITIAL_TEENY=	4
 PHP_PKG_PREFIX=		php54
 PHP_EXTENSION_DIR=	lib/php/${PHP54_RELDATE}
 .elif ${_PHP_VERSION} == "55"
 PHPPKGSRCDIR=		../../lang/php55
-PHP_BASE_VERS=		${PHP55_VERSION}
+PHP_VERSION=		${PHP55_VERSION}
+PHP_INITIAL_TEENY=	1
 PHP_PKG_PREFIX=		php55
 PHP_EXTENSION_DIR=	lib/php/${PHP55_RELDATE}
 .elif ${_PHP_VERSION} == "56"
 PHPPKGSRCDIR=		../../lang/php56
-PHP_BASE_VERS=		${PHP56_VERSION}
+PHP_VERSION=		${PHP56_VERSION}
+PHP_INITIAL_TEENY=	3
 PHP_PKG_PREFIX=		php56
 PHP_EXTENSION_DIR=	lib/php/${PHP56_RELDATE}
 .else
 # force an error
 PKG_FAIL_REASON+=	"${PKG_PHP} is not a valid package"
 .endif
+
+_PHP_VER_MAJOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
+_PHP_VER_MINOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
+
+PHP_BASE_VERS=	${_PHP_VER_MAJOR}.${_PHP_VER_MINOR}.${PHP_INITIAL_TEENY}
 
 #
 # check installed version aginst required:
