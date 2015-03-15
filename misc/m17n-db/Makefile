@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2014/12/14 07:56:04 obache Exp $
+# $NetBSD: Makefile,v 1.22 2015/03/15 18:46:55 hiramatsu Exp $
 #
 
 DISTNAME=	m17n-db-1.7.0
 CATEGORIES=	misc
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/m17n/
 COMMENT=	The m17n database used by the m17n library
 LICENSE=	gnu-lgpl-v2.1
