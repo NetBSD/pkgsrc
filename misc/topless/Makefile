@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/15 17:15:02 hiramatsu Exp $
 #
 
 DISTNAME=	topless-1.52
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	misc sysutils
 MASTER_SITES=	http://people.freebsd.org/~daichi/src/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bloghome.lovepeers.org/daymemo2/files/2005/0613/topless.html
 COMMENT=	Display command output on the whole screen like ``top''
 LICENSE=	2-clause-bsd

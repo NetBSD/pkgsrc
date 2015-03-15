@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/11/21 08:07:55 obache Exp $
+# $NetBSD: Makefile,v 1.23 2015/03/15 17:09:00 hiramatsu Exp $
 #
 
 DISTNAME=		libupnp-1.6.19
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		obache@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pupnp.sourceforge.net/
 COMMENT=		Portable Universal Plug and Play (UPnP) SDK
 LICENSE=		modified-bsd
