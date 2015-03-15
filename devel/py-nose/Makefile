@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/15 17:50:58 adam Exp $
 
-DISTNAME=	nose-1.3.0
+DISTNAME=	nose-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-#MASTER_SITES=	http://python-nose.googlecode.com/files/
-#MASTER_SITES=	http://somethingaboutorange.com/mrl/projects/nose/
 MASTER_SITES=	http://pypi.python.org/packages/source/n/nose/
 EXTRACT_USING=	bsdtar
 
