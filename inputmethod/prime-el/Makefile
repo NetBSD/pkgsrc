@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/02/17 19:18:04 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/15 17:56:15 hiramatsu Exp $
 #
 
 DISTNAME=	prime-el-1.5.1.3
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://prime.sourceforge.jp/src/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/emacs/
 COMMENT=	PRIME client for emacsen
 LICENSE=	gnu-gpl-v2
