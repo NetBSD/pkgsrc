@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/05 00:48:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2015/03/15 18:46:55 hiramatsu Exp $
 #
 
 DISTNAME=	m17n-im-config-0.9.0
@@ -6,7 +6,7 @@ PKGREVISION=	24
 CATEGORIES=	inputmethod devel
 MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/common/im-config/index.html
 COMMENT=	Configuration input methods of the m17n library
 LICENSE=	gnu-gpl-v2

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2014/08/24 06:46:24 obache Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/15 18:46:56 hiramatsu Exp $
 #
 
 DISTNAME=	ibus-table-chinese-1.8.2
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	-https://github.com/definite/ibus-table-chinese/archive/${PKGVERSION_NOREV}.tar.gz
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	Chinese tables for IBus-Table
 LICENSE=	gnu-gpl-v3
