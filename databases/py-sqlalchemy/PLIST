@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2014/10/17 11:10:21 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/03/15 14:04:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlalchemy/__init__.py
 ${PYSITELIB}/sqlalchemy/__init__.pyc
@@ -156,6 +157,9 @@ ${PYSITELIB}/sqlalchemy/dialects/sqlite/__init__.pyo
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.py
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.pyc
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.pyo
+${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.py
+${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.pyc
+${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.pyo
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlite.py
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlite.pyc
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlite.pyo
