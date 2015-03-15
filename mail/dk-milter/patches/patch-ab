@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/07/20 19:42:50 tv Exp $
+$NetBSD: patch-ab,v 1.2 2015/03/15 15:28:58 mef Exp $
 
---- libdk/Makefile.m4.orig	2004-09-03 16:39:01.000000000 -0400
-+++ libdk/Makefile.m4
-@@ -9,7 +9,7 @@ dnl APPENDDEF(`confENVDEF', `-DUSE_ARLIB
- dnl APPENDDEF(`confINCDIRS', `-I../libar/ ')
+--- dk-filter/Makefile.m4.orig	2007-05-31 22:31:01.000000000 +0200
++++ dk-filter/Makefile.m4	2007-08-01 10:37:46.000000000 +0200
+@@ -9,7 +9,9 @@
+ define(`confMT', `TRUE')
+ define(`confREQUIRE_LIBSM', `true')
  
- dnl Enable and edit this as appropriate for your system:
--dnl APPENDDEF(`confINCDIRS', `-I/usr/local/ssl/include ')
-+APPENDDEF(`confINCDIRS', `-I@SSLBASE@/include ')
+-APPENDDEF(`confLIBS', `-lssl -lcrypto')
++APPENDDEF(`confLIBS', `-lssl -lcrypto @PTHREAD_LDFLAGS@ ')
++define(`confLDOPTS', `${LDFLAGS}')
++@INET6@ APPENDDEF(`confENVDEF', `-DNETINET6 ')
  
+ ifdef(`bld_USE_ARLIB', `bldPUSH_SMLIB(`ar')', `')
  
- define(`confMT', `true')
