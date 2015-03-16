@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2014/11/24 15:37:08 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/03/16 00:26:31 taca Exp $
 # used by lang/php56/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php56-extensions/Makefile
 
 PHP_VERSION_REQD=	56
-PHP_BASE_VERS=		${PHP56_VERSION}
 
 .include "../../lang/php/common.mk"
 
