@@ -1,4 +1,9 @@
-$NetBSD: CHANGES-2015,v 1.1431 2015/03/15 23:59:46 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1432 2015/03/16 00:12:37 agc Exp $
+
+[PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
+2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
+OR MAKE ANY CHANGES TO THE INFRASTRUCTURE. IF IN DOUBT, PLEASE
+ASK. THANKS - agc]
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2015,3 +2020,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Parallel-ForkManager to 1.12 [mef 2015-03-15]
 	Updated devel/p5-Path-Dispatcher to 1.06 [mef 2015-03-15]
 	Updated devel/p5-Perl-Critic to 1.125 [mef 2015-03-15]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q1 branch [agc 2015-03-15]
