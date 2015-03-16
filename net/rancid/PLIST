@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2014/06/14 23:43:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/16 22:36:58 pettai Exp $
 bin/agmrancid
 bin/alogin
 bin/anlogin
-bin/anrancid
 bin/arancid
 bin/arrancid
 bin/avologin
@@ -39,9 +38,9 @@ bin/nlogin
 bin/nrancid
 bin/nslogin
 bin/nsrancid
-bin/nxrancid
+bin/panlogin
 bin/par
-bin/prancid
+bin/plogin
 bin/rancid
 bin/rancid-cvs
 bin/rancid-fe
@@ -51,14 +50,14 @@ bin/rivrancid
 bin/rrancid
 bin/srancid
 bin/tlogin
-bin/tntlogin
-bin/tntrancid
 bin/trancid
+bin/wlogin
 bin/xilogin
 bin/xirancid
 bin/xrancid
 bin/zrancid
 lib/rancid/arbor.pm
+lib/rancid/ciscowlc.pm
 lib/rancid/dell.pm
 lib/rancid/eos.pm
 lib/rancid/foundry.pm
@@ -66,6 +65,8 @@ lib/rancid/ios.pm
 lib/rancid/iosxr.pm
 lib/rancid/junos.pm
 lib/rancid/mrv.pm
+lib/rancid/nxos.pm
+lib/rancid/panos.pm
 lib/rancid/rancid.pm
 man/man1/agmrancid.1
 man/man1/alogin.1
@@ -107,7 +108,9 @@ man/man1/nrancid.1
 man/man1/nslogin.1
 man/man1/nsrancid.1
 man/man1/nxrancid.1
+man/man1/panlogin.1
 man/man1/par.1
+man/man1/plogin.1
 man/man1/prancid.1
 man/man1/rancid-cvs.1
 man/man1/rancid-run.1
@@ -118,9 +121,8 @@ man/man1/rivrancid.1
 man/man1/rrancid.1
 man/man1/srancid.1
 man/man1/tlogin.1
-man/man1/tntlogin.1
-man/man1/tntrancid.1
 man/man1/trancid.1
+man/man1/wlogin.1
 man/man1/xilogin.1
 man/man1/xirancid.1
 man/man1/xrancid.1
@@ -153,3 +155,4 @@ share/doc/rancid/rtrfilter
 share/examples/rancid/lg.conf.sample
 share/examples/rancid/rancid.conf.sample
 share/examples/rancid/rancid.types.base
+@pkgdir etc/rancid
