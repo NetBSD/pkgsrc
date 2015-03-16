@@ -9,5 +9,5 @@ the computer : DVDs, VCDs, MPEG and DivX files and from a satellite
 card. It is multi-plaform : Linux, Windows, Mac OS X, BeOS, BSD, Solaris,
 QNX, iPaq... The VideoLAN Client and Server now have a full IPv6 support.
 
-This version has been superceded upstream and should probably not be
-used.
+This version is the last version with support for OSSv3, which is the
+OSS version implemented in NetBSD before NetBSD 7.
