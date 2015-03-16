@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.38 2015/03/15 15:25:57 taca Exp $
+# $NetBSD: ext.mk,v 1.39 2015/03/16 09:21:11 taca Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -32,7 +32,7 @@ PLIST_SUBST+=		MODNAME=${PKGMODNAME}
 
 .if !defined(PECL_VERSION)
 # bundled extension
-PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-${PHP_BASE_VERS}
+PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-${PHP_VERSION}
 EXTRACT_ELEMENTS?=	${DISTNAME}/ext/${PKGMODNAME}
 WRKSRC?=		${WRKDIR}/${EXTRACT_ELEMENTS}
 DISTINFO_FILE=		${.CURDIR}/${PHPPKGSRCDIR}/distinfo
