@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2015/03/15 21:23:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2015/03/16 22:28:38 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -6,7 +6,6 @@ bin/calibre-debug
 bin/calibre-parallel
 bin/calibre-server
 bin/calibre-smtp
-bin/calibre-uninstall
 bin/calibredb
 bin/ebook-convert
 bin/ebook-device
