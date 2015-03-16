@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/02/02 10:55:00 adam Exp $
+# $NetBSD: Makefile,v 1.34 2015/03/16 14:07:41 jperkin Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -36,6 +36,11 @@ PLIST.long_double_math=	yes
 .endif
 
 UNLIMIT_RESOURCES+=	stacksize
+
+MAKE_ENV+=	BZIP2_INCLUDE=${BUILDLINK_PREFIX.bzip2}/include
+MAKE_ENV+=	BZIP2_LIBPATH=${BUILDLINK_PREFIX.bzip2}/lib
+MAKE_ENV+=	ZLIB_INCLUDE=${BUILDLINK_PREFIX.zlib}/include
+MAKE_ENV+=	ZLIB_LIBPATH=${BUILDLINK_PREFIX.zlib}/lib
 
 .include "../../devel/boost-jam/bjam.mk"
 
