@@ -1,11 +1,11 @@
-# $NetBSD: common.mk,v 1.3 2015/03/15 15:25:09 taca Exp $
+# $NetBSD: common.mk,v 1.4 2015/03/16 00:26:31 taca Exp $
 # used by lang/php54/Makefile.common
 # used by lang/php55/Makefile.common
 # 
 .if !defined(PHPCOMMON_MK)
 PHPCOMMON_MK=	defined
 
-DISTNAME?=		php-${PHP_BASE_VERS}
+DISTNAME?=		php-${PHP_VERSION}
 
 .if !defined(PECL_VERSION)
 MASTER_SITES?=		http://www.php.net/distributions/ \
