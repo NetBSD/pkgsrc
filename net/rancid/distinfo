@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2014/09/19 08:31:26 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/03/16 22:36:58 pettai Exp $
 
-SHA1 (rancid-3.1.tar.gz) = 5e5bdf84634c958ad4cd413c3e31c348340ebd05
-RMD160 (rancid-3.1.tar.gz) = e0f74b5886f876abe48b6d14cf3c8d4b10a6576e
-Size (rancid-3.1.tar.gz) = 435045 bytes
+SHA1 (rancid-3.2.tar.gz) = 8396cf695e79a4f4c526f2452603929678139bf8
+RMD160 (rancid-3.2.tar.gz) = 9182028556a0b5fd4dd9172a7a8ca54deeea64a4
+Size (rancid-3.2.tar.gz) = 470336 bytes
 SHA1 (patch-etc_Makefile.in) = 5400aa7c2a55ecb09577984e86e9f4dbc117f00d
