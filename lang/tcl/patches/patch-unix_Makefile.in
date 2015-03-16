@@ -1,6 +1,8 @@
-$NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.9 2015/03/16 13:30:02 jperkin Exp $
 
---- unix/Makefile.in.orig	2013-09-19 20:17:13.000000000 +0000
+Honour LDFLAGS.
+
+--- unix/Makefile.in.orig	2014-11-12 02:36:22.000000000 +0000
 +++ unix/Makefile.in
 @@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
@@ -28,6 +30,15 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
+@@ -189,7 +192,7 @@ DLTEST_TARGETS		= dltest.marker
+ # run-time. The first symbol is for use when creating a binary with cc, and
+ # the second is for use when running ld directly.
+ CC_SEARCH_FLAGS	= @CC_SEARCH_FLAGS@
+-LD_SEARCH_FLAGS	= @LD_SEARCH_FLAGS@
++LD_SEARCH_FLAGS	= @LD_SEARCH_FLAGS@ @LDFLAGS@
+ 
+ # The following symbol is defined to "$(DLTEST_TARGETS)" if dynamic loading is
+ # available; this causes everything in the "dltest" subdirectory to be built
 @@ -200,6 +203,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
  #BUILD_DLTEST		=
  
@@ -36,7 +47,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  #TCL_LIB_FILE		= libtcl.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -613,7 +617,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
+@@ -614,7 +618,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
  
  all: binaries libraries doc packages
  
@@ -45,7 +56,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  
  libraries:
  
-@@ -630,6 +634,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+@@ -633,6 +637,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f $@
  	@MAKE_STUB_LIB@
  
@@ -57,7 +68,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  # Make target which outputs the list of the .o contained in the Tcl lib useful
  # to build a single big shared library containing Tcl and other extensions.
  # Used for the Tcl Plugin.  -- dl
-@@ -796,9 +805,16 @@ install-binaries: binaries
+@@ -799,9 +808,16 @@ install-binaries: binaries
  	    done;
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -75,7 +86,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)/tclConfig.sh"
  	@echo "Installing tclooConfig.sh to $(CONFIG_INSTALL_DIR)/"
-@@ -822,7 +838,7 @@ install-libraries: libraries
+@@ -825,7 +841,7 @@ install-libraries: libraries
  		else true; \
  		fi; \
  	    done;
@@ -84,7 +95,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  	    do \
  	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
-@@ -843,6 +859,8 @@ install-libraries: libraries
+@@ -846,6 +862,8 @@ install-libraries: libraries
  	    done;
  	@echo "Installing package http 2.8.8 as a Tcl Module";
  	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.6/http-2.8.8.tm;
@@ -93,7 +104,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
  	@for i in $(TOP_DIR)/library/opt/*.tcl ; \
  	    do \
-@@ -850,13 +868,21 @@ install-libraries: libraries
+@@ -853,13 +871,21 @@ install-libraries: libraries
  	    done;
  	@echo "Installing package msgcat 1.5.2 as a Tcl Module";
  	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/msgcat-1.5.2.tm;
@@ -115,7 +126,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  
  	@echo "Installing encoding files to $(SCRIPT_INSTALL_DIR)/encoding/";
  	@for i in $(TOP_DIR)/library/encoding/*.enc ; do \
-@@ -941,7 +967,7 @@ install-doc: doc
+@@ -944,7 +970,7 @@ install-doc: doc
  	done
  
  install-headers:
@@ -124,7 +135,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2014/10/31 21:11:18 adam Exp $
  	    do \
  	    if [ ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -950,13 +976,17 @@ install-headers:
+@@ -953,13 +979,17 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";

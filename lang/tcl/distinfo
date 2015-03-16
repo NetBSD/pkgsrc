@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2014/11/22 15:57:17 adam Exp $
+$NetBSD: distinfo,v 1.64 2015/03/16 13:30:02 jperkin Exp $
 
 SHA1 (tcl8.6.3-src.tar.gz) = 026b4b6330205bdc49af12332ee17c2b01f76d37
 RMD160 (tcl8.6.3-src.tar.gz) = 7d798ddba4e0b2fce9228f2d654e2cfeef015aca
@@ -15,7 +15,7 @@ SHA1 (patch-pkgs_tdbcpostgres1.0.2_configure) = 81f5bf3aecf3deee1df9c7e4a4624e77
 SHA1 (patch-pkgs_thread2.7.1_configure) = f722be8d70eb16c34acd9685d5b594665d811b76
 SHA1 (patch-tests_load.test) = 438695ab76e01646e49aadc01c44344a5495eabb
 SHA1 (patch-tests_pkgMkIndex.test) = 70d1042c1f4743052c5fa191fa7c4732a08e28a2
-SHA1 (patch-unix_Makefile.in) = bac1e1140becda4cd032506ca8aaf699a9380faa
+SHA1 (patch-unix_Makefile.in) = 70cd193ca4bf93a0dc635c4ea0681686699277bf
 SHA1 (patch-unix_configure) = abe7ec2bccea451d69d2df2587d3189971f17d9a
 SHA1 (patch-unix_tclConfig.sh.in) = 341ac4f1bbfb29551dea87ade98b3b7b59652a31
 SHA1 (patch-unix_tclUnixCompat.c) = 7ffa40a1a56345f5b86cd896e8e3b0d5748d8c5e
