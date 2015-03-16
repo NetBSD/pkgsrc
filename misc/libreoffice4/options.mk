@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/03/03 21:39:13 ryoon Exp $
+# $NetBSD: options.mk,v 1.10 2015/03/16 18:16:26 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3
@@ -9,12 +9,12 @@ PKG_SUGGESTED_OPTIONS=	java
 .endif
 
 .include "../../mk/bsd.options.mk"
-.include "../../mk/java-env.mk"
-.include "../../mk/java-vm.mk"
 
 PLIST_VARS+=	java kde4 gtk3
 
 .if !empty(PKG_OPTIONS:Mjava)
+.include "../../mk/java-env.mk"
+.include "../../mk/java-vm.mk"
 USE_JAVA=		yes
 USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
