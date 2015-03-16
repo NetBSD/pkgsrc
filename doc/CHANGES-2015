@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1435 2015/03/16 22:28:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1436 2015/03/16 22:37:17 pettai Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2024,3 +2024,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-requests to 2.6.0 [wiz 2015-03-16]
 	Updated sysutils/amtterm to 1.3nb16 [tron 2015-03-16]
 	Updated misc/calibre to 2.21.0nb1 [wiz 2015-03-16]
+	Updated net/rancid to 3.2 [pettai 2015-03-16]
