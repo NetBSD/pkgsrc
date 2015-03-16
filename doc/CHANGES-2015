@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1432 2015/03/16 00:12:37 agc Exp $
+$NetBSD: CHANGES-2015,v 1.1433 2015/03/16 13:58:46 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2021,3 +2021,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Path-Dispatcher to 1.06 [mef 2015-03-15]
 	Updated devel/p5-Perl-Critic to 1.125 [mef 2015-03-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q1 branch [agc 2015-03-15]
+	Updated devel/py-requests to 2.6.0 [wiz 2015-03-16]
