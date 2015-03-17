@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2013/06/16 18:56:05 sno Exp $
+# $NetBSD: Makefile.common,v 1.14 2015/03/17 21:30:27 joerg Exp $
 
 # used by graphics/evas-buffer/Makefile
 # used by graphics/evas-edb/Makefile
@@ -10,7 +10,6 @@
 # used by graphics/evas-sdl/Makefile
 # used by graphics/evas-sdl-16/Makefile
 # used by graphics/evas-software-x11/Makefile
-# used by graphics/evas-svg/Makefile
 # used by graphics/evas-tiff/Makefile
 # used by graphics/evas-xpm/Makefile
 
