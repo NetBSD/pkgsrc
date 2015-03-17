@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1436 2015/03/16 22:37:17 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.1437 2015/03/17 08:57:13 taca Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2025,3 +2025,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/amtterm to 1.3nb16 [tron 2015-03-16]
 	Updated misc/calibre to 2.21.0nb1 [wiz 2015-03-16]
 	Updated net/rancid to 3.2 [pettai 2015-03-16]
+	Updated security/clamav to 0.98.6nb2 [taca 2015-03-17]
