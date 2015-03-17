@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1440 2015/03/17 18:40:12 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.1441 2015/03/17 19:51:21 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/yelp3 to 3.14.1 [prlw1 2015-03-17]
 	Updated x11/libXfont to 1.5.1 [tnn 2015-03-17]
 	Updated pkgtools/cwrappers to 20150317 [jperkin 2015-03-17]
+	Updated www/seamonkey to 2.33 [ryoon 2015-03-17]
