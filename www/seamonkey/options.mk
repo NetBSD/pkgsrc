@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.30 2015/01/02 04:26:21 ryoon Exp $
+# $NetBSD: options.mk,v 1.31 2015/03/17 19:50:42 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
-PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome mozilla-enigmail
+PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc mozilla-enigmail # gnome
 PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
