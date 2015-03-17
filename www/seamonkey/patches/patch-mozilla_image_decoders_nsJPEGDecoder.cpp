@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+$NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.2 2015/03/17 19:50:42 ryoon Exp $
 
---- mozilla/image/decoders/nsJPEGDecoder.cpp.orig	2013-05-03 03:07:56.000000000 +0000
+--- mozilla/image/decoders/nsJPEGDecoder.cpp.orig	2015-03-09 05:34:16.000000000 +0000
 +++ mozilla/image/decoders/nsJPEGDecoder.cpp
-@@ -19,13 +19,28 @@
+@@ -21,13 +21,28 @@
  
  extern "C" {
  #include "iccjpeg.h"
@@ -32,26 +32,26 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.1 2013/05/23 13:25:3
  
  static void cmyk_convert_rgb(JSAMPROW row, JDIMENSION width);
  
-@@ -338,6 +353,7 @@ nsJPEGDecoder::WriteInternal(const char 
-       case JCS_GRAYSCALE:
-       case JCS_RGB:
-       case JCS_YCbCr:
+@@ -358,6 +373,7 @@ nsJPEGDecoder::WriteInternal(const char*
+         case JCS_GRAYSCALE:
+         case JCS_RGB:
+         case JCS_YCbCr:
 +#ifdef JCS_EXTENSIONS
-         // if we're not color managing we can decode directly to
-         // MOZ_JCS_EXT_NATIVE_ENDIAN_XRGB
-         if (mCMSMode != eCMSMode_All) {
-@@ -346,6 +362,9 @@ nsJPEGDecoder::WriteInternal(const char 
-         } else {
-             mInfo.out_color_space = JCS_RGB;
-         }
+           // if we're not color managing we can decode directly to
+           // MOZ_JCS_EXT_NATIVE_ENDIAN_XRGB
+           if (mCMSMode != eCMSMode_All) {
+@@ -366,6 +382,9 @@ nsJPEGDecoder::WriteInternal(const char*
+           } else {
+               mInfo.out_color_space = JCS_RGB;
+           }
 +#else
-+        mInfo.out_color_space = JCS_RGB;
++          mInfo.out_color_space = JCS_RGB;
 +#endif
-         break;
-       case JCS_CMYK:
-       case JCS_YCCK:
-@@ -413,6 +432,15 @@ nsJPEGDecoder::WriteInternal(const char 
-       return; /* I/O suspension */
+           break;
+         case JCS_CMYK:
+         case JCS_YCCK:
+@@ -424,6 +443,15 @@ nsJPEGDecoder::WriteInternal(const char*
+       return; // I/O suspension
      }
  
 +#ifndef JCS_EXTENSIONS
@@ -64,10 +64,10 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.1 2013/05/23 13:25:3
 +    }
 +#endif
  
-     /* If this is a progressive JPEG ... */
-     mState = mInfo.buffered_image ? JPEG_DECOMPRESS_PROGRESSIVE : JPEG_DECOMPRESS_SEQUENTIAL;
-@@ -558,7 +586,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
-       uint32_t *imageRow = ((uint32_t*)mImageData) +
+     // If this is a progressive JPEG ...
+     mState = mInfo.buffered_image ?
+@@ -596,7 +624,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
+       uint32_t* imageRow = ((uint32_t*)mImageData) +
                             (mInfo.output_scanline * mInfo.output_width);
  
 +#ifdef JCS_EXTENSIONS
@@ -75,10 +75,10 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.1 2013/05/23 13:25:3
 +#else
 +      if (mInfo.cconvert->color_convert == ycc_rgb_convert_argb) {
 +#endif
-         /* Special case: scanline will be directly converted into packed ARGB */
+         // Special case: scanline will be directly converted into packed ARGB
          if (jpeg_read_scanlines(&mInfo, (JSAMPARRAY)&imageRow, 1) != 1) {
-           *suspend = true; /* suspend */
-@@ -868,6 +900,282 @@ term_source (j_decompress_ptr jd)
+           *suspend = true; // suspend
+@@ -911,6 +943,282 @@ term_source (j_decompress_ptr jd)
  } // namespace mozilla
  
  
@@ -358,6 +358,6 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.1 2013/05/23 13:25:3
 +#endif
 +
 +
- /**************** Inverted CMYK -> RGB conversion **************/
- /*
-  * Input is (Inverted) CMYK stored as 4 bytes per pixel.
+ ///*************** Inverted CMYK -> RGB conversion *************************
+ /// Input is (Inverted) CMYK stored as 4 bytes per pixel.
+ /// Output is RGB stored as 3 bytes per pixel.
