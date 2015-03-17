@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/03/15 14:08:05 mef Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/17 00:34:55 mef Exp $
 
 DISTNAME=	File-LibMagic-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,10 @@ COMMENT=	Perlwrapper for libmagic
 LICENSE=	${PERL5_LICENSE}
 
 BUILDLINK_API_DEPENDS.file+=	file>=5.00
+
+# necessary for test
+#DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+
 # cannot open LibMagic.xs: No such file or directory
 MAKE_JOBS_SAFE=	no
 
