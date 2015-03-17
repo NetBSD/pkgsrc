@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2015/03/14 15:17:14 gdt Exp $
+$NetBSD: distinfo,v 1.82 2015/03/17 14:14:43 jperkin Exp $
 
 SHA1 (ocaml-4.02.1.tar.gz) = 6af8c67f2badece81d8e1d1ce70568a16e42313e
 RMD160 (ocaml-4.02.1.tar.gz) = fcb30200e9675d92e402b4b7101a032f918f80c1
@@ -13,7 +13,7 @@ SHA1 (patch-asmrun_signals_osdep.h) = 0ff83333dd75ecfe8f262b7523231832169986a7
 SHA1 (patch-byterun_Makefile) = 2b88b35e5ffcccc315542cb814b9e826126acb54
 SHA1 (patch-config_auto__aux_gethostbyaddr.c) = ce724831e93081d3e51a122fef14b17543c3221c
 SHA1 (patch-config_auto__aux_gethostbyname.c) = f05a6026a18ca7557558383103c6a2fc08caee28
-SHA1 (patch-configure) = 546e422e15087be02001c20e6cf582fc6017564a
+SHA1 (patch-configure) = 58669c040539b40cd2ec5b3f110e5239eea284da
 SHA1 (patch-debugger_Makefile.shared) = 9acaa17f22a66311859b6ac4a0c047e6693fce33
 SHA1 (patch-driver_compenv.ml) = cb6197cee99ab77fd1b8aadca7cef613c0e35a31
 SHA1 (patch-driver_main.ml) = ed7a63d0678214efed7871b41575c34464c7272a
