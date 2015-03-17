@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/02/20 19:10:29 pho Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/17 21:15:28 tnn Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -42,7 +42,7 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 # -----------------------------------------------------------------------------
 # Tools
 #
-USE_TOOLS+=			autoconf gmake perl:run
+USE_TOOLS+=			autoconf gmake gzip perl:run
 GNU_CONFIGURE=			yes
 USE_GNU_CONFIGURE_HOST=		no
 USE_LIBTOOL=			yes
