@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/02 20:11:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/17 14:08:48 jperkin Exp $
 
 DISTNAME=	ficl-4.1.0
 CATEGORIES=	lang
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ficl/}
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://ficl.sourceforge.net/
 COMMENT=	Forth Inspired Command Language
+
+USE_GCC_RUNTIME=	yes
 
 BUILD_TARGET=	ficl
 
