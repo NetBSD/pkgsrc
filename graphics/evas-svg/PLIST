@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/09 15:33:08 joerg Exp $
-lib/evas/modules/loaders/svg/${MODULE_ARCH}/module.la
