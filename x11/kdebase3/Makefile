@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2014/08/22 11:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2015/03/17 14:08:01 tnn Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	37
@@ -20,7 +20,7 @@ SITES.NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 UNLIMIT_RESOURCES=	datasize
-USE_TOOLS+=		pkg-config mkfontdir bdftopcf
+USE_TOOLS+=		gzip pkg-config mkfontdir bdftopcf
 
 FONTS_DIRS.x11+=	${PREFIX}/share/kde/apps/konsole/fonts
 REQD_DIRS+=		${PREFIX}/share/kde/apps/konsole
