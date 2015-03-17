@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1444 2015/03/17 21:29:25 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.1445 2015/03/17 23:15:08 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey-l10n to 2.33 [ryoon 2015-03-17]
 	Updated fonts/umefont-ttf to 0.480 [ryoon 2015-03-17]
 	Removed graphics/evas-svg [joerg 2015-03-17]
+	Updated textproc/py-relatorio to 0.6.1 [rodent 2015-03-17]
