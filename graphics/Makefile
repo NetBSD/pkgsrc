@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2015/02/12 22:40:31 snj Exp $
+# $NetBSD: Makefile,v 1.699 2015/03/17 21:30:01 joerg Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -94,7 +94,6 @@ SUBDIR+=	evas-jpeg
 SUBDIR+=	evas-pmaps
 SUBDIR+=	evas-png
 SUBDIR+=	evas-software-x11
-SUBDIR+=	evas-svg
 SUBDIR+=	evas-tiff
 SUBDIR+=	evas-xpm
 SUBDIR+=	ewipe
