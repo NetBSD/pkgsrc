@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_media_libtheora_moz.build,v 1.1 2015/01/02 04:26:21 ryoon Exp $
+$NetBSD: patch-mozilla_media_libtheora_moz.build,v 1.2 2015/03/17 19:50:42 ryoon Exp $
 
---- mozilla/media/libtheora/moz.build.orig	2014-12-03 06:23:09.000000000 +0000
+--- mozilla/media/libtheora/moz.build.orig	2015-03-09 05:34:24.000000000 +0000
 +++ mozilla/media/libtheora/moz.build
-@@ -6,3 +6,5 @@
- 
- DIRS += ['include', 'lib']
+@@ -93,3 +93,5 @@ if CONFIG['GNU_AS']:
+         if CONFIG['OS_TARGET'] == 'Android':
+             DEFINES['__linux__'] = True
  
 +if CONFIG['MOZ_NATIVE_OGG']:
 +    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']

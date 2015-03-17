@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.19 2015/01/02 04:26:21 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.20 2015/03/17 19:50:42 ryoon Exp $
 lib/seamonkey/extensions/quitter@mozilla.org/chrome.manifest
 lib/seamonkey/extensions/quitter@mozilla.org/chrome/.mkdir.done
 lib/seamonkey/extensions/quitter@mozilla.org/chrome/quitter/content/contentscript.js
@@ -350,6 +350,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/wind
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-daypicker.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-attendees.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-toolbar-aero.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-toolbar-inverted.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-toolbar-small.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-toolbar.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog.css
@@ -373,6 +374,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/wind
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/datetimepickers/datetimepickers.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/ok-cancel.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/tasks-actions-aero.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/tasks-actions-inverted.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/tasks-actions.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/today-pane.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/toolbar-aero-inverted.png
@@ -457,6 +459,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calRecur
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageHelpers.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageUpgrade.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calUtils.jsm
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calViewUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calXMLUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/ical.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/timezones.sqlite
