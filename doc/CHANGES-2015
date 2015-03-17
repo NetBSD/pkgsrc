@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1439 2015/03/17 17:40:30 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1440 2015/03/17 18:40:12 jperkin Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2028,3 +2028,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/clamav to 0.98.6nb2 [taca 2015-03-17]
 	Updated misc/yelp3 to 3.14.1 [prlw1 2015-03-17]
 	Updated x11/libXfont to 1.5.1 [tnn 2015-03-17]
+	Updated pkgtools/cwrappers to 20150317 [jperkin 2015-03-17]
