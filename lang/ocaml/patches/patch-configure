@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.9 2015/01/20 14:12:25 jaapb Exp $
+$NetBSD: patch-configure,v 1.10 2015/03/17 14:14:43 jperkin Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
+
 --- configure.orig	2014-10-03 19:25:46.000000000 +0000
 +++ configure
 @@ -318,11 +318,11 @@ TOOLCHAIN="cc"
@@ -127,15 +128,16 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    armv6*-*-linux-gnueabihf)     arch=arm; model=armv6; system=linux_eabihf;;
    arm*-*-linux-gnueabihf)       arch=arm; system=linux_eabihf;;
    armv7*-*-linux-gnueabi)       arch=arm; model=armv7; system=linux_eabi;;
-@@ -835,6 +840,7 @@ case "$target" in
+@@ -835,6 +840,8 @@ case "$target" in
    x86_64-*-gnu*)                arch=amd64; system=gnu;;
    x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
    x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
 +  x86_64-*-dragonfly*)          arch=amd64; system=dragonfly;;
++  x86_64-*-solaris*)            arch=amd64; system=solaris;;
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
-@@ -874,7 +880,7 @@ case "$arch,$nativecc,$system,$target" i
+@@ -874,7 +881,7 @@ case "$arch,$nativecc,$system,$target" i
                         if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    *,gcc*,cygwin,*)     nativecccompopts="$gcc_warnings -U_WIN32";;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -144,7 +146,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    *,gcc*,*,*)          nativecccompopts="$gcc_warnings";;
  esac
  
-@@ -891,7 +897,7 @@ case "$arch,$system" in
+@@ -891,7 +898,7 @@ case "$arch,$system" in
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
    i386,solaris)   as="${TOOLPREF}as"
@@ -153,7 +155,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    power,elf)      as="${TOOLPREF}as -u -m ppc"
                    aspp="${TOOLPREF}gcc -c";;
    power,rhapsody) as="${TOOLPREF}as -arch $model"
-@@ -930,6 +936,7 @@ case "$arch,$system" in
+@@ -930,6 +937,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -161,7 +163,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    *) profiling='noprof';;
  esac
  
-@@ -1434,6 +1441,8 @@ fi
+@@ -1434,6 +1442,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -170,7 +172,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1480,6 +1489,7 @@ if test "$x11_include" = "not found"; th
+@@ -1480,6 +1490,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -178,7 +180,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1537,6 +1547,7 @@ if test "$x11_include" = "not found"; th
+@@ -1537,6 +1548,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -186,7 +188,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1558,18 +1569,16 @@ if test "$x11_include" = "not found"; th
+@@ -1558,18 +1570,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
