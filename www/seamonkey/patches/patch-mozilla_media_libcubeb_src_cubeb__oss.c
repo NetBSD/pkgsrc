@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.2 2015/01/02 04:26:21 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42 ryoon Exp $
 
---- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2015-01-01 17:44:53.000000000 +0000
+--- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2015-03-16 18:51:31.000000000 +0000
 +++ mozilla/media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,404 @@
+@@ -0,0 +1,402 @@
 +/*
 + * Copyright © 2014 Mozilla Foundation
 + *
@@ -11,8 +11,6 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.2 2015/01/02 04:26:21
 + */
 +#if defined(HAVE_SYS_SOUNDCARD_H)
 +#include <sys/soundcard.h>
-+#elif defined(HAVE_LINUX_SOUNDCARD_H)
-+#include <linux/soundcard.h>
 +#else
 +#include <soundcard.h>
 +#endif
