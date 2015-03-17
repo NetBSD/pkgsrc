@@ -143,7 +143,7 @@ static struct transformation fixed_transforms[] = {
 	{ "-kpic", 5, transform_replace, "-fPIC" },
 	{ "-KPIC", 5, transform_replace, "-fPIC" },
 	{ "-kPIC", 5, transform_replace, "-fPIC" },
-	{ "-mt", 3, transform_replace, "-threads" },
+	{ "-mt", 3, transform_discard, NULL },
 	{ "-64", 3, transform_replace, "-m64" },
 };
 
