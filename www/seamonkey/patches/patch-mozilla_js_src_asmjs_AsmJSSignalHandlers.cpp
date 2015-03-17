@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_asmjs_AsmJSSignalHandlers.cpp,v 1.1 2015/02/15 02:11:03 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_asmjs_AsmJSSignalHandlers.cpp,v 1.2 2015/03/17 19:50:42 ryoon Exp $
 
---- mozilla/js/src/asmjs/AsmJSSignalHandlers.cpp.orig	2015-02-05 04:38:37.000000000 +0000
+--- mozilla/js/src/asmjs/AsmJSSignalHandlers.cpp.orig	2015-03-09 05:34:25.000000000 +0000
 +++ mozilla/js/src/asmjs/AsmJSSignalHandlers.cpp
-@@ -524,17 +524,62 @@ AsmJSExceptionHandler(LPEXCEPTION_POINTE
+@@ -504,8 +504,38 @@ AsmJSFaultHandler(LPEXCEPTION_POINTERS e
  #elif defined(XP_MACOSX)
  # include <mach/exc.h>
  
@@ -40,40 +40,9 @@ $NetBSD: patch-mozilla_js_src_asmjs_AsmJSSignalHandlers.cpp,v 1.1 2015/02/15 02:
 -ContextToPC(x86_thread_state_t &state)
 +ContextToPC(moz_platform_thread_state_t &state)
  {
--# if defined(JS_CODEGEN_X64)
--    JS_STATIC_ASSERT(sizeof(state.uts.ts64.__rip) == sizeof(void*));
--    return reinterpret_cast<uint8_t**>(&state.uts.ts64.__rip);
--# elif defined(JS_CODEGEN_NONE)
--    MOZ_CRASH();
-+#if defined(ARM_THREAD_STATE)
-+    JS_STATIC_ASSERT(sizeof(state.REG_FIELD(pc)) == sizeof(void*));
-+    return reinterpret_cast<uint8_t**>(&state.REG_FIELD(pc));
-+
-+#elif defined(PPC_THREAD_STATE) || defined(PPC_THREAD_STATE64)
-+    JS_STATIC_ASSERT(sizeof(state.REG_FIELD(srr0)) == sizeof(void*));
-+    return reinterpret_cast<uint8_t**>(&state.REG_FIELD(srr0));
-+
-+#elif defined(x86_THREAD_STATE)
-+    switch (state.tsh.flavor) {
-+    case x86_THREAD_STATE32:
-+        JS_STATIC_ASSERT(sizeof(state.uts.ts32.REG_FIELD(eip)) == sizeof(void*));
-+        return reinterpret_cast<uint8_t**>(&state.uts.ts32.REG_FIELD(eip));
-+
-+    case x86_THREAD_STATE64:
-+        JS_STATIC_ASSERT(sizeof(state.uts.ts64.REG_FIELD(rip)) == sizeof(void*));
-+        return reinterpret_cast<uint8_t**>(&state.uts.ts64.REG_FIELD(rip));
-+
-+    default:
-+        MOZ_CRASH("Unknown thread state flavor");
-+    }
- # else
--    JS_STATIC_ASSERT(sizeof(state.uts.ts32.__eip) == sizeof(void*));
--    return reinterpret_cast<uint8_t**>(&state.uts.ts32.__eip);
-+#  error Instruction address register unknown for this platform
- # endif
- }
- 
-@@ -637,10 +682,11 @@ HandleMachException(JSRuntime *rt, const
+ # if defined(JS_CPU_X64)
+     static_assert(sizeof(state.uts.ts64.__rip) == sizeof(void*),
+@@ -617,10 +647,11 @@ HandleMachException(JSRuntime *rt, const
      mach_port_t rtThread = request.body.thread.name;
  
      // Read out the JSRuntime thread's register state.
@@ -87,13 +56,4 @@ $NetBSD: patch-mozilla_js_src_asmjs_AsmJSSignalHandlers.cpp,v 1.1 2015/02/15 02:
 +    kret = thread_get_state(rtThread, flavor, (thread_state_t)&state, &count);
      if (kret != KERN_SUCCESS)
          return false;
- 
-@@ -682,7 +728,7 @@ HandleMachException(JSRuntime *rt, const
-         module.unprotectCode(rt);
- 
-         // Update the thread state with the new pc.
--        kret = thread_set_state(rtThread, x86_THREAD_STATE, (thread_state_t)&state, x86_THREAD_STATE_COUNT);
-+        kret = thread_set_state(rtThread, flavor, (thread_state_t)&state, count);
-         return kret == KERN_SUCCESS;
-     }
  
