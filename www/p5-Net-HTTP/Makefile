@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/08/14 14:45:21 wen Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/17 06:21:04 mef Exp $
 
 DISTNAME=	Net-HTTP-6.07
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-HTTP/
 COMMENT=	Perl 5 module for low-level HTTP connections (client)
 LICENSE=	${PERL5_LICENSE}
+
+#necessary for test
+# DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 CONFLICTS+=	p5-libwww<6.00
 
