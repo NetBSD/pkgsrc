@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/05/29 23:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/03/17 19:54:12 tnn Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -6,7 +6,8 @@ PKGNAME=	${DISTNAME:S/HandBrake/handbrake/}
 PKGREVISION=	26
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.m0k.org/handbrake/releases/ \
-		http://download.m0k.org/handbrake/contrib/
+		http://download.m0k.org/handbrake/contrib/ \
+		${MASTER_SITE_FREEBSD:=handbrake/}
 
 DIST_SUBDIR=	handbrake
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
