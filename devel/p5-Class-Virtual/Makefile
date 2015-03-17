@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/03/15 13:25:26 mef Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/17 00:27:28 mef Exp $
 
 DISTNAME=	Class-Virtual-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Virtual/
 COMMENT=	Base class for virtual base classes
 LICENSE=	${PERL5_LICENSE}
+
+# necessary for test
+#DEPENDS+=	p5-Carp-Assert-[0-9]*:../../devel/p5-Carp-Assert
 
 PERL5_PACKLIST=		auto/Class/Virtual/.packlist
 
