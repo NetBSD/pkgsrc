@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/01/29 01:17:20 mef Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/17 12:48:25 mef Exp $
 
 DISTNAME=	Data-Section-0.200006
 PKGNAME=	p5-Data-Section-0.200.006
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-MRO-Compat>=0.09:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Sub-Exporter>=0.979:../../devel/p5-Sub-Exporter
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
 
 PERL5_PACKLIST=		auto/Data/Section/.packlist
 
