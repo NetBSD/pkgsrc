@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/02/12 06:27:59 mef Exp $
+# $NetBSD: Makefile,v 1.44 2015/03/17 01:08:56 mef Exp $
 
 DISTNAME=	Module-Build-0.4211
 PKGNAME=	p5-${DISTNAME}0
@@ -14,6 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 #DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:../../devel/p5-ExtUtils-ParseXS
 # needed for tests
 #DEPENDS+=	p5-CPAN-Meta>=2.141170:../../devel/p5-CPAN-Meta
+# one test not skipped if,
+#DEPENDS+=	p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
 
 .include "options.mk"
 
