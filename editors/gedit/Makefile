@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2014/12/29 04:37:44 dholland Exp $
+# $NetBSD: Makefile,v 1.132 2015/03/17 14:05:42 tnn Exp $
 #
 
 DISTNAME=		gedit-2.30.4
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 CONFLICTS+=		gedit>=3
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		gmake gzip intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
