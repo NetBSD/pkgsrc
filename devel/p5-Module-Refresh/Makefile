@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/17 12:09:22 mef Exp $
 #
 
 DISTNAME=	Module-Refresh-0.17
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Refresh/
 COMMENT=	Perl5 module providing %INC files refreshing when updated on disk
 LICENSE=	${PERL5_LICENSE}
+
+# Following line are really for 'make test', as an interim solution
+BUILD_DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 
 PERL5_PACKLIST=		auto/Module/Refresh/.packlist
 
