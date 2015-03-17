@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/12 11:41:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/17 14:24:43 jperkin Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.0_source
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lpsolve.sourceforge.net/
 COMMENT=	Mixed Integer Linear Programming (MILP) solver
 #LICENSE=	LGPL, unclear which version (see lp_lib.h)
+
+USE_GCC_RUNTIME=	yes
 
 WRKSRC=		${WRKDIR}/lp_solve_5.5
 
