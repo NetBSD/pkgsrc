@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/31 21:46:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/17 18:29:17 tnn Exp $
 
 DISTNAME=	libaacs-0.8.0
 CATEGORIES=	multimedia
@@ -11,7 +11,7 @@ COMMENT=	Advanced Access Content System specification implementation
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bison pkg-config
+USE_TOOLS+=		flex bison pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-optimizations
 PKGCONFIG_OVERRIDE+=	src/libaacs.pc.in
