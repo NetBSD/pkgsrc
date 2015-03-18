@@ -1,0 +1,14 @@
+$NetBSD: patch-ori_SConscript,v 1.1 2015/03/18 10:26:53 joerg Exp $
+
+--- ori/SConscript.orig	2015-03-18 00:34:23.000000000 +0000
++++ ori/SConscript
+@@ -41,9 +41,6 @@ src = [
+ 
+ libs = [
+ 	"crypto",
+-	"stdc++",
+-	"event_core",
+-	"event_extra",
+ ]
+ 
+ if sys.platform != "darwin":

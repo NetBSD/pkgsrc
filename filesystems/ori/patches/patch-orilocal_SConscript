@@ -1,0 +1,14 @@
+$NetBSD: patch-orilocal_SConscript,v 1.1 2015/03/18 10:26:53 joerg Exp $
+
+--- orilocal/SConscript.orig	2015-03-18 00:34:30.000000000 +0000
++++ orilocal/SConscript
+@@ -40,9 +40,6 @@ src = [
+ 
+ libs = [
+ 	"crypto",
+-	"stdc++",
+-	"event_core",
+-	"event_extra",
+ ]
+ 
+ if sys.platform != "darwin":
