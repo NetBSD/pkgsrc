@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 17:23:46 adam Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/18 15:06:17 joerg Exp $
 
 DISTNAME=	qtmacextras-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmacextras-${QTVERSION}
@@ -7,6 +7,8 @@ COMMENT=	Qt5 module for Mac extras
 BUILD_TARGET=		sub-src
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
+
+ONLY_FOR_PLATFORM=	Darwin-*-*
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
