@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/03/01 09:46:42 mef Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/18 02:34:08 mef Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-Coverage-0.05
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://cpan.metacpan.org/authors/id/S/SM/SMPETERS/
 
