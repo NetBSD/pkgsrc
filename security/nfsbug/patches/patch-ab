@@ -1,13 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
+$NetBSD: patch-ab,v 1.4 2015/03/18 13:21:36 joerg Exp $
 
---- nfsshell.c.orig	2007-01-02 19:29:27.000000000 -0800
+--- nfsshell.c.orig	2015-03-18 00:18:15.000000000 +0000
 +++ nfsshell.c
 @@ -1,3 +1,4 @@
 +/* URL: http://www.asmodeus.com/archive/Xnix/nfsShell */
  /*
   * Copyright, 1991, 1992, by Leendert van Doorn (leendert@cs.vu.nl)
   *
-@@ -21,14 +22,21 @@
+@@ -10,6 +11,7 @@
+ /*
+  * nfs - A shell that provides access to NFS file systems
+  */
++#include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <ctype.h>
+@@ -21,14 +23,47 @@
  #include <sys/ioctl.h>
  #include <sys/socket.h>
  #include <sys/vnode.h>
@@ -23,15 +31,72 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
  #include "mount.h"
  #include "nfs_prot.h"
  
-+int getline(char *buf, int bufsize, int *argc, char **argv, int argvsize);
-+AUTH * MYauthunix_create_default(uid, gid);
++static void close_nfs(void);
++static void do_handle(int argc, char **argv);
++static void do_setid(int *var, int argc, char **argv);
++static void printfilestatus(char *name);
++static void do_cat(int argc, char **argv);
++static void do_chown(int argc, char **argv);
++static void do_chmod(int argc, char **argv);
++static void do_cd(int argc, char **argv);
++static void do_df(int argc, char **argv);
++static void do_dump(int argc, char **argv);
++static void do_export(int argc, char **argv);
++static void do_get(int argc, char **argv);
++static void do_help(int argc, char **argv);
++static void do_host(int argc, char **argv);
++static void do_ln(int argc, char **argv);
++static void do_ls(int argc, char **argv);
++static void do_mkdir(int argc, char **argv);
++static void do_mknod(int argc, char **argv);
++static void do_mount(int argc, char **argv);
++static void do_mv(int argc, char **argv);
++static void do_put(int argc, char **argv);
++static void do_rm(int argc, char **argv);
++static void do_rmdir(int argc, char **argv);
++static void do_status(int argc, char **argv);
++static void do_umount(int argc, char **argv);
++static void do_umountall(int argc, char **argv);
++int nfsbug_getline(char *buf, int bufsize, int *argc, char **argv, int argvsize);
++static AUTH * MYauthunix_create_default(int uid, int gid);
 +static int determine_transfersize();
 +
 +
  /*
   * Fundamental constants
   */
-@@ -284,8 +292,11 @@ getline(buf, bufsize, argc, argv, argvsi
+@@ -128,13 +163,8 @@ jmp_buf intenv;			/* where to go in inte
+ 
+ fhstatus *pmap_mnt();
+ 
+-char *malloc();
+-char *calloc();
+-char *realloc();
+ char *strsave();
+-char *strchr();
+ char *nfs_error();
+-char *getenv();
+ void interrupt();
+ 
+ main(argc, argv)
+@@ -164,7 +194,7 @@ main(argc, argv)
+ 
+     /* interpreter's main command loop */
+     if (setjmp(intenv)) putchar('\n');
+-    while (getline(buffer, BUFSIZ, &argcount, argvec, NARGVEC)) {
++    while (nfsbug_getline(buffer, BUFSIZ, &argcount, argvec, NARGVEC)) {
+ 	if (argcount == 0) continue;
+ 	if ((cmd = command(argvec[0])) == CMD_QUIT)
+ 	    break;
+@@ -277,15 +307,18 @@ interrupt()
+  * it up into an argument vector.
+  */
+ int
+-getline(buf, bufsize, argc, argv, argvsize)
++nfsbug_getline(buf, bufsize, argc, argv, argvsize)
+     char *buf, **argv;
+     int bufsize, *argc, argvsize;
+ {
      register char *p;
  
      if (interact) printf("nfs> ");
@@ -44,7 +109,26 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
      *argc = 0;
      for (p = buf; *p == ' ' || *p == '\t'; p++)
  	/* skip white spaces */;
-@@ -340,7 +351,7 @@ do_setid(var, argc, argv)
+@@ -320,9 +353,7 @@ command(cmd)
+  * Set remote host and initialize RPC channel
+  * to mount daemon.
+  */
+-do_host(argc, argv)
+-    int argc;
+-    char **argv;
++void do_host(int argc, char **argv)
+ {
+     if (argc != 2)
+ 	fprintf(stderr, "Usage: host <host>\n");
+@@ -333,23 +364,19 @@ do_host(argc, argv)
+ /*
+  * Set user or group id (updating RPC authentication info)
+  */
+-do_setid(var, argc, argv)
+-    int *var, argc;
+-    char **argv;
++static void do_setid(int *var, int argc, char **argv)
+ {
      *var = argc == 2 ? atoi(argv[1]) : -2;
      if (nfsclient && nfsclient->cl_auth) {
  	auth_destroy(nfsclient->cl_auth);
@@ -53,18 +137,175 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
      }
  }
  
-@@ -509,8 +520,7 @@ do_ls(argc, argv)
+ /*
+  * Change remote working directory
+  */
+-do_cd(argc, argv)
+-    int argc;
+-    char **argv;
++void do_cd(int argc, char **argv)
+ {
+     register char *p;
+     char *component;
+@@ -421,9 +448,7 @@ do_lcd(argc, argv)
+ /*
+  * Display a remote file
+  */
+-do_cat(argc, argv)
+-    int argc;
+-    char **argv;
++void do_cat(int argc, char **argv)
+ {
+     diropargs dargs;
+     diropres *dres;
+@@ -476,9 +501,7 @@ do_cat(argc, argv)
+ /*
+  * List remote directory
+  */
+-do_ls(argc, argv)
+-    int argc;
+-    char **argv;
++void do_ls(int argc, char **argv)
+ {
+     char **table, **ptr, **p;
+     int lflag = 0;
+@@ -509,8 +532,7 @@ do_ls(argc, argv)
  /*
   * Print long listing of a files, much in the way ``ls -l'' does
   */
 -printfilestatus(name)
 -    char *name;
-+printfilestatus(char *name)
++void printfilestatus(char *name)
  {
      diropargs args;
      diropres *res;
-@@ -1160,7 +1170,7 @@ do_handle(argc, argv)
-         return 0;
+@@ -615,9 +637,7 @@ writefiledate(d)
+ /*
+  * Get remote files
+  */
+-do_get(argc, argv)
+-    int argc;
+-    char **argv;
++void do_get(int argc, char **argv)
+ {
+     char **table, **ptr, **p;
+     char answer[512];
+@@ -698,9 +718,7 @@ do_get(argc, argv)
+  * Show file system information
+  */
+ /* ARGUSED */
+-do_df(argc, argv)
+-    int argc;
+-    char **argv;
++void do_df(int argc, char **argv)
+ {
+     statfsres *res;
+ 
+@@ -734,9 +752,7 @@ do_df(argc, argv)
+ /*
+  * Delete a remote file
+  */
+-do_rm(argc, argv)
+-    int argc;
+-    char **argv;
++void do_rm(int argc, char **argv)
+ {
+     diropargs args;
+     nfsstat *res;
+@@ -764,9 +780,7 @@ do_rm(argc, argv)
+ /*
+  * Link a file
+  */
+-do_ln(argc, argv)
+-    int argc;
+-    char **argv;
++void do_ln(int argc, char **argv)
+ {
+     diropargs dargs;
+     linkargs largs;
+@@ -810,9 +824,7 @@ do_ln(argc, argv)
+ /*
+  * Move a file or directory
+  */
+-do_mv(argc, argv)
+-    int argc;
+-    char **argv;
++void do_mv(int argc, char **argv)
+ {
+     renameargs args;
+     nfsstat *res;
+@@ -842,9 +854,7 @@ do_mv(argc, argv)
+ /*
+  * Make remote directory
+  */
+-do_mkdir(argc, argv)
+-    int argc;
+-    char **argv;
++void do_mkdir(int argc, char **argv)
+ {
+     createargs args;
+     diropres *res;
+@@ -882,9 +892,7 @@ do_mkdir(argc, argv)
+ /*
+  * Remove remote directory
+  */
+-do_rmdir(argc, argv)
+-    int argc;
+-    char **argv;
++void do_rmdir(int argc, char **argv)
+ {
+     diropargs args;
+     nfsstat *res;
+@@ -913,9 +921,7 @@ do_rmdir(argc, argv)
+ /*
+  * Change mode of remote file or directory
+  */
+-do_chmod(argc, argv)
+-    int argc;
+-    char **argv;
++void do_chmod(int argc, char **argv)
+ {
+     sattrargs aargs;
+     diropargs dargs;
+@@ -970,9 +976,7 @@ do_chmod(argc, argv)
+ /*
+  * Change owner (and group) of remote file or directory
+  */
+-do_chown(argc, argv)
+-    int argc;
+-    char **argv;
++void do_chown(int argc, char **argv)
+ {
+     sattrargs aargs;
+     diropargs dargs;
+@@ -1030,9 +1034,7 @@ do_chown(argc, argv)
+ /*
+  * Put file from local to remote
+  */
+-do_put(argc, argv)
+-    int argc;
+-    char **argv;
++void do_put(int argc, char **argv)
+ {
+     createargs cargs;
+     diropargs dargs;
+@@ -1122,9 +1124,7 @@ do_put(argc, argv)
+ /*
+  * Get/set file handle
+  */
+-do_handle(argc, argv)
+-    int argc;
+-    char **argv;
++void do_handle(int argc, char **argv)
+ {
+     register char *p;
+     register int i;
+@@ -1157,10 +1157,10 @@ do_handle(argc, argv)
+     if ((nfsclient = clntudp_create(&nfsserver_addr, NFS_PROGRAM,
+       NFS_VERSION, timeout, &sock)) == NULL) {
+         clnt_pcreateerror("nfs clntudp_create");
+-        return 0;
++        return;
      }
      clnt_control(nfsclient, CLSET_TIMEOUT, &timeout);
 -    nfsclient->cl_auth = authunix_create_default(uid, gid);
@@ -72,7 +313,18 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
  
      /* provide some generic name for it */
      if ((mountpath = malloc(8 + 1)) == NULL) {
-@@ -1235,7 +1245,7 @@ do_mroot(var, argc, argv)
+@@ -1183,9 +1183,7 @@ do_handle(argc, argv)
+ /*
+  * Create a character device
+  */
+-do_mknod(argc, argv)
+-    int argc;
+-    char **argv;
++void do_mknod(int argc, char **argv)
+ 
+ {
+     createargs cargs;
+@@ -1235,7 +1233,7 @@ do_mroot(var, argc, argv)
      *var = 0x00100000;
      if (nfsclient && nfsclient->cl_auth) {
  	auth_destroy(nfsclient->cl_auth);
@@ -81,7 +333,84 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
      }
  /*
   * Put in some type of code here
-@@ -1493,7 +1503,7 @@ open_mount(host)
+@@ -1272,9 +1270,7 @@ xtoa(s)
+  * Set up a channel to the NFS server and
+  * mount remote file system.
+  */
+-do_mount(argc, argv)
+-    int argc;
+-    char **argv;
++void do_mount(int argc, char **argv)
+ {
+     char *host, *path;
+     int umount = 0, portmap = 0;
+@@ -1313,9 +1309,7 @@ do_mount(argc, argv)
+  * RPC channel.
+  */
+ /* ARGUSED */
+-do_umount(argc, argv)
+-    int argc;
+-    char **argv;
++void do_umount(int argc, char **argv)
+ {
+     if (argc != 1) {
+ 	fprintf(stderr, "Usage: umount\n");
+@@ -1331,9 +1325,7 @@ do_umount(argc, argv)
+  * Unmount all remote file system from this host
+  */
+ /* ARGUSED */
+-do_umountall(argc, argv)
+-    int argc;
+-    char **argv;
++void do_umountall(int argc, char **argv)
+ {
+     if (argc != 1) {
+ 	fprintf(stderr, "Usage: umountall\n");
+@@ -1351,9 +1343,7 @@ do_umountall(argc, argv)
+  * Display all exported file systems on remote system
+  */
+ /* ARGUSED */
+-do_export(argc, argv)
+-    int argc;
+-    char **argv;
++void do_export(int argc, char **argv)
+ {
+     exports ex, *exp;
+     groups gr;
+@@ -1389,9 +1379,7 @@ do_export(argc, argv)
+  * Display all remote mounted file systems
+  */
+ /* ARGUSED */
+-do_dump(argc, argv)
+-    int argc;
+-    char **argv;
++void do_dump(int argc, char **argv)
+ {
+     mountlist ml, *mlp;
+ 
+@@ -1415,9 +1403,7 @@ do_dump(argc, argv)
+  * Generic status report
+  */
+ /* ARGUSED */
+-do_status(argc, argv)
+-    int argc;
+-    char **argv;
++void do_status(int argc, char **argv)
+ {
+     if (argc != 1) {
+ 	fprintf(stderr, "Usage: status\n");
+@@ -1436,9 +1422,7 @@ do_status(argc, argv)
+  * Simple on-line help facility
+  */
+ /* ARGUSED */
+-do_help(argc, argv)
+-    int argc;
+-    char **argv;
++void do_help(int argc, char **argv)
+ {
+     register int i;
+ 
+@@ -1493,7 +1477,7 @@ open_mount(host)
          return 0;
      }
      clnt_control(mntclient, CLSET_TIMEOUT, &timeout);
@@ -90,7 +419,7 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
      if (verbose)
  	printf("Open %s (%s)\n",
  	    remotehost, inet_ntoa(server_addr.sin_addr));
-@@ -1540,7 +1550,7 @@ open_nfs(path, umount, portmap)
+@@ -1540,7 +1524,7 @@ open_nfs(path, umount, portmap)
          return 0;
      }
      clnt_control(nfsclient, CLSET_TIMEOUT, &timeout);
@@ -99,7 +428,7 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
  
      /*
       * Get file handle for this path from the mount daemon. There
-@@ -1634,7 +1644,7 @@ privileged()
+@@ -1634,7 +1618,7 @@ privileged()
  	return RPC_ANYSOCK;
      for (;;) {
  	sin.sin_port = htons((u_short)lport);
@@ -108,13 +437,22 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
  	    (void)ioctl(s, FIONBIO, (char *) &dontblock);
  	    if (verbose)
  		fprintf(stderr, "Using a privileged port (%d)\n", lport);
-@@ -1672,14 +1682,14 @@ close_nfs()
+@@ -1654,7 +1638,7 @@ privileged()
+ /*
+  * Close an NFS mounted file system
+  */
+-close_nfs()
++void close_nfs(void)
+ {
+     if (mountpath == NULL) return;
+     if (verbose) printf("Unmount `%s'\n", mountpath);
+@@ -1672,14 +1656,13 @@ close_nfs()
   * syscalls.
   */
  AUTH *
 -authunix_create_default(uid, gid)
-+MYauthunix_create_default(uid, gid)
-     int uid, gid;
+-    int uid, gid;
++MYauthunix_create_default(int uid, int gid)
  {
      char machname[MAX_MACHINE_NAME + 1];
      int gids[1];
@@ -125,7 +463,7 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
  	exit(1);
      }
      machname[MAX_MACHINE_NAME] = 0;
-@@ -1858,8 +1868,7 @@ umatchpattern(s, p)
+@@ -1858,8 +1841,7 @@ umatchpattern(s, p)
   * NFS errors
   */
  char *
@@ -135,7 +473,7 @@ $NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
  {
      switch (nfsstat) {
      case NFS_OK:
-@@ -1903,4 +1912,3 @@ nfs_error(nfsstat)
+@@ -1903,4 +1885,3 @@ nfs_error(nfsstat)
      }
  }
  
