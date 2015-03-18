@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc-rules,v 1.1 2014/09/17 12:40:56 joerg Exp $
+# $NetBSD: transform-gcc-rules,v 1.2 2015/03/18 14:54:53 joerg Exp $
 #
 # Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -167,6 +167,5 @@
 -kpic ==> -fPIC
 -KPIC ==> -fPIC
 -kPIC ==> -fPIC
--mt ==> -threads
 -64 ==> -m64
 -* ==!
