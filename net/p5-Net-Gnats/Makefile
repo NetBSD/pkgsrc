@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/02/21 12:27:59 mef Exp $
+# $NetBSD: Makefile,v 1.18 2015/03/18 02:39:56 mef Exp $
 #
 
 DISTNAME=	Net-Gnats-0.07
@@ -11,6 +11,9 @@ HOMEPAGE=	http://gnatsperl.sourceforge.net/
 #HOMEPAGE=	http://search.cpan.org/dist/Net-Gnats/
 COMMENT=	Perl interface to the gnatsd daemon
 LICENSE=	${PERL5_LICENSE}
+
+DEPENDS+=	p5-ExtUtils-MakeMaker-Coverage-[0-9]*:../../devel/p5-ExtUtils-MakeMaker-Coverage
+DEPENDS+=	p5-Object-Accessor-[0-9]*:../../devel/p5-Object-Accessor
 
 PERL5_PACKLIST=		auto/Net/Gnats/.packlist
 
