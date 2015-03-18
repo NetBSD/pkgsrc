@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc-rules,v 1.2 2015/03/18 14:54:53 joerg Exp $
+# $NetBSD: transform-gcc-rules,v 1.3 2015/03/18 15:01:21 joerg Exp $
 #
 # Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -162,6 +162,8 @@
 # Options specific to Objective C
 -fconstant-string-class=*
 -fgnu-runtime
+# Solaris compilers used this for threading
+-mt ==|
 # Compatibility with other compilers
 -Kpic ==> -fPIC
 -kpic ==> -fPIC
