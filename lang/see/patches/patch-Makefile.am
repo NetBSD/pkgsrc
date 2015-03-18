@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.am,v 1.1 2013/03/28 21:30:49 joerg Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2015/03/18 17:46:32 dholland Exp $
+
+Don't build own libltdl.
 
 --- Makefile.am.orig	2007-09-13 22:01:46.000000000 +0000
 +++ Makefile.am
