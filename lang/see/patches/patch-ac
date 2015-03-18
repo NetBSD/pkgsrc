@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2009/06/03 06:03:50 hasso Exp $
+$NetBSD: patch-ac,v 1.2 2015/03/18 17:46:32 dholland Exp $
+
+Fix detection of isnan.
 
 --- libsee/math.c.orig	2009-06-03 06:31:41 +0300
 +++ libsee/math.c	2009-06-03 06:33:02 +0300

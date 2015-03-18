@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2013/03/28 21:30:49 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2015/03/18 17:46:32 dholland Exp $
 
 First chunk: automake-1.13 compat.
-Rest: ?
+Second chunk: use pkgsrc libltdl
+Third chunk (about dtoa): ? (XXX)
+Fourth chunk: fix detection of isnan
 
 --- configure.ac.orig	2008-02-10 10:31:33.000000000 +0000
 +++ configure.ac
