@@ -1,0 +1,14 @@
+$NetBSD: patch-orisync_SConscript,v 1.1 2015/03/18 10:26:53 joerg Exp $
+
+--- orisync/SConscript.orig	2015-03-18 00:34:37.000000000 +0000
++++ orisync/SConscript
+@@ -23,9 +23,6 @@ libs = [
+     "ori",
+     "fastlz",
+     "crypto",
+-    "stdc++",
+-    "event_core",
+-    "event_extra",
+ ]
+ 
+ if sys.platform != "darwin":
