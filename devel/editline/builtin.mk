@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2014/06/09 00:26:19 obache Exp $
+# $NetBSD: builtin.mk,v 1.7 2015/03/18 19:17:39 tron Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -48,6 +48,9 @@ BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
 .  endif
 
 .  if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
+.    if defined(OSX_SDK_PATH) && exists(${OSX_SDK_PATH}/usr/include/readline)
+BUILDLINK_PREFIX.editline=	${OSX_SDK_PATH}/usr
+.    endif
 .    if !empty(H_EDITLINE:M*/editline/readline.h)
 BUILDLINK_TARGETS+=	buildlink-readline-readline-h
 BUILDLINK_TARGETS+=	buildlink-readline-history-h
