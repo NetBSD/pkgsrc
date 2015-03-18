@@ -1,4 +1,4 @@
-/* $NetBSD: fixup-libtool.c,v 1.4 2014/12/30 15:13:20 wiz Exp $ */
+/* $NetBSD: fixup-libtool.c,v 1.5 2015/03/18 15:05:36 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -390,8 +390,9 @@ fixup_libtool_la(const char *lafile, int in_lai)
 	}
 	free(line);
 
-	fclose(fp);
-	if (ferror(fp) || fclose(output) || rename(tmp_name, lafile)) {
+	if (ferror(fp) || fclose(fp) ||
+	    ferror(output) || fclose(output) ||
+	    rename(tmp_name, lafile)) {
 		unlink(tmp_name);
 		err(255, "output processing failed");
 	}		
