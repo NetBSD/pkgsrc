@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1454 2015/03/19 15:46:58 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1455 2015/03/19 16:17:12 gdt Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/drupal7 to 7.35 [taca 2015-03-19]
 	Updated www/fengoffice to 3.1.2.2 [taca 2015-03-19]
 	Updated mail/roundcube to 1.1.1 [taca 2015-03-19]
+	Updated geography/py-proj to 1.9.4 [gdt 2015-03-19]
