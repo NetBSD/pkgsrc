@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2015/02/01 16:51:12 taca Exp $
+# $NetBSD: Makefile,v 1.33 2015/03/19 15:38:24 taca Exp $
 #
 
-DISTNAME=	fengoffice-3.0.5.1
+DISTNAME=	fengoffice-3.1.2.2
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
@@ -40,12 +40,6 @@ PRINT_PLIST_AWK+= \
 		/^${FO_DIR:S|/|\\/|g}/ \
 		{ gsub(/${FO_DIR:S|/|\\/|g}/, "$${FO_DIR}"); \
 		print; next; }
-
-REPLACE_INTERPRETER+=	sh
-REPLACE.sh.old=		bash
-REPLACE.sh.new=		/bin/sh
-REPLACE_FILES.sh= \
-	public/assets/javascript/ckeditor/_samples/adobeair/run.sh
 
 .include "../../mk/bsd.prefs.mk"
 
