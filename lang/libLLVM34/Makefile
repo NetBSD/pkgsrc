@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/04 20:33:38 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/19 19:14:48 joerg Exp $
 
 DISTNAME=	llvm-${PKGVERSION_NOREV}.src
 PKGNAME=	libLLVM34-3.4.2
@@ -19,6 +19,7 @@ USE_TOOLS+=		gmake
 PYTHON_FOR_BUILD_ONLY=	yes
 GCC_REQD+=		4.7 4.8
 GNU_CONFIGURE=		yes
+OVERRIDE_DIRDEPTH=	3
 CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings
 CONFIGURE_ARGS+=	--disable-timestamps
