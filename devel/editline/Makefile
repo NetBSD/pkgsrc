@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/07/02 13:57:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/19 19:58:28 tron Exp $
 #
 
 DISTNAME=		libedit-20140620-3.1
@@ -19,7 +19,12 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		automake autoreconf
 CONFIGURE_ARGS+=	--enable-widec
 
+.include "../../mk/bsd.prefs.mk"
+
 pre-configure:
+.if ${OPSYS} == "SunOS" && !exists(/usr/include/err.h)
+	${CP} ${FILESDIR}/err.h ${BUILDLINK_DIR}/include
+.endif
 	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/termcap.buildlink3.mk"
