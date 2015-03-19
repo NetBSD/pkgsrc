@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2014/12/30 08:39:13 plunky Exp $
+$NetBSD: distinfo,v 1.14 2015/03/19 19:16:31 joerg Exp $
 
 SHA1 (bluez-5.27.tar.xz) = c1707e8ae38b299c07e6c18ff3c26a4b928d03bf
 RMD160 (bluez-5.27.tar.xz) = 21cec0a67c70215cc6972a0bfd5679b1a5fa8fac
@@ -18,6 +18,6 @@ SHA1 (patch-tools_hcidump.c) = ca6871ca562bc218ce445edf8b364f528d260d4e
 SHA1 (patch-tools_parser_Makefile) = 5f3e3c3b73a88756e485318d4b00e64d42366fa3
 SHA1 (patch-tools_parser_bnep.c) = efbbe5f4cd47dcb0bf72c16bd67d9d93ba7cd43a
 SHA1 (patch-tools_parser_lmp.c) = f410be55cf07f6d7f7d3b1466b7fbe708b1a6de5
-SHA1 (patch-tools_parser_parser.h) = f644764b717fa8d1ae7935cc83b4199e6cd69159
+SHA1 (patch-tools_parser_parser.h) = 19ff1cdd8d7af71d9ae86497d3e1f49ae9db9a2a
 SHA1 (patch-tools_parser_rfcomm.h) = 917dd10203c62de7679909fc014a69ccd2a5185d
 SHA1 (patch-tools_parser_tcpip.c) = e06881372e8edf23f22c1a0a61c9bc346381a0e3
