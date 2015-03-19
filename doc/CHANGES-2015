@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1450 2015/03/19 09:48:52 manu Exp $
+$NetBSD: CHANGES-2015,v 1.1451 2015/03/19 09:58:35 adam Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2039,3 +2039,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/phpmyadmin to 4.3.12 [tron 2015-03-18]
 	Updated net/exabgp to 3.4.9 [he 2015-03-19]
 	Updated net/nagios-plugin-dotpid to 0.3 [manu 2015-03-19]
+	Updated www/py-django to 1.7.7 [adam 2015-03-19]
+	Updated www/py-django14 to 1.4.20 [adam 2015-03-19]
