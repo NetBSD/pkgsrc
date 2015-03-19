@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.30 2014/06/25 08:38:37 wiz Exp $
+$NetBSD: patch-ac,v 1.31 2015/03/19 12:34:37 jperkin Exp $
 
-First chunks:
+First chunk:
+Don't use _POSIX_C_SOURCE on SunOS with c99.
+
+Next chunks:
 Use a compile test, not a run test, for whether various rlimit values
 are equivalent.  A compile test is sufficient because zsh uses these
 values in switch cases, so they must be compile-time, if not
@@ -14,9 +17,19 @@ Last chunk:
 Use -shared instead of -G on SunOS.
 Fixes 64-bit package.
 
---- configure.orig	2012-09-15 20:13:14.000000000 +0000
+--- configure.orig	2014-09-23 18:56:57.000000000 +0000
 +++ configure
-@@ -10011,9 +10047,6 @@ $as_echo_n "checking if RLIMIT_VMEM and 
+@@ -7645,7 +7645,9 @@ if ${zsh_cv_type_sigset_t+:} false; then
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#ifndef __sun
+ #define _POSIX_C_SOURCE 200809L
++#endif
+ #include <sys/types.h>
+ #include <signal.h>
+ int
+@@ -10233,9 +10235,6 @@ $as_echo_n "checking if RLIMIT_VMEM and
  if ${zsh_cv_rlimit_vmem_is_rss+:} false; then :
    $as_echo_n "(cached) " >&6
  else
@@ -26,7 +39,7 @@ Fixes 64-bit package.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -10022,43 +10055,33 @@ else
+@@ -10244,43 +10243,33 @@ else
  #include <sys/time.h>
  #endif
  #include <sys/resource.h>
@@ -77,7 +90,7 @@ Fixes 64-bit package.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -10067,43 +10090,33 @@ else
+@@ -10289,43 +10278,33 @@ else
  #include <sys/time.h>
  #endif
  #include <sys/resource.h>
@@ -128,7 +141,7 @@ Fixes 64-bit package.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -10112,28 +10125,23 @@ else
+@@ -10334,28 +10313,23 @@ else
  #include <sys/time.h>
  #endif
  #include <sys/resource.h>
@@ -164,7 +177,7 @@ Fixes 64-bit package.
  if test x$zsh_cv_rlimit_rss_is_as = xyes; then
    $as_echo "#define RLIMIT_RSS_IS_AS 1" >>confdefs.h
  
-@@ -11630,6 +11638,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
+@@ -11852,6 +11826,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
          DLLD="${DLLD=$CC}"
          DLLDARG=""
        ;;
@@ -175,7 +188,7 @@ Fixes 64-bit package.
        * )
  	DLLD="${DLLD=ld}"
  	DLLDARG=""
-@@ -11659,7 +11699,7 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
+@@ -11881,7 +11859,7 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
      sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
      sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
      aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
