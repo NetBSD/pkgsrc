@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/19 20:00:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/19 16:16:58 gdt Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pyproj/__init__.py
 ${PYSITELIB}/pyproj/__init__.pyc
@@ -47,4 +47,4 @@ ${PYSITELIB}/pyproj/data/world
 ${PYSITELIB}/pyproj/datadir.py
 ${PYSITELIB}/pyproj/datadir.pyc
 ${PYSITELIB}/pyproj/datadir.pyo
-share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/README.md
