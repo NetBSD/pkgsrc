@@ -1,15 +1,22 @@
-$NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
+$NetBSD: patch-af,v 1.3 2015/03/19 08:34:53 dholland Exp $
 
---- src/fstools/ffs.c.orig	2001-09-15 13:45:56.000000000 -0700
+Add NetBSD support.
+
+--- src/fstools/ffs.c.orig	2001-09-15 20:45:56.000000000 +0000
 +++ src/fstools/ffs.c
-@@ -28,6 +28,16 @@
+@@ -28,6 +28,21 @@
  #include "mymalloc.h"
  #include "error.h"
  
-+#if defined(NETBSD2)
++#if defined(NETBSD2) || defined(NETBSD7)
 +#define MY_DINODE ufs1_dinode
 +#define MY_SBOFF SBLOCK_UFS1
 +#define MY_FS_MAGIC FS_UFS1_MAGIC
++#if defined(NETBSD7)
++#define ROOTINO UFS_ROOTINO
++#define NDADDR UFS_NDADDR
++#define NIADDR UFS_NIADDR
++#endif
 +#else
 +#define MY_DINODE dinode
 +#define MY_SBOFF SBOFF
@@ -19,7 +26,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
   /*
    * Structure of a fast file system handle.
    */
-@@ -36,7 +46,7 @@ typedef struct {
+@@ -36,7 +51,7 @@ typedef struct {
      struct fs *fs;			/* super block buffer */
      FS_BUF *cg_buf;			/* cylinder block buffer */
      FS_BUF *dino_buf;			/* inode block buffer */
@@ -28,7 +35,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
  } FFS_INFO;
  
  /* ffs_cgroup_lookup - look up cached cylinder group info */
-@@ -84,7 +94,7 @@ static void ffs_cgroup_free(FFS_INFO *ff
+@@ -84,7 +99,7 @@ static void ffs_cgroup_free(FFS_INFO *ff
  
  /* ffs_dinode_lookup - look up cached disk inode */
  
@@ -37,7 +44,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
  {
      DADDR_T addr;
      int     offs;
-@@ -109,9 +119,9 @@ static struct dinode *ffs_dinode_lookup(
+@@ -109,9 +124,9 @@ static struct dinode *ffs_dinode_lookup(
       * Copy the inode, in order to avoid alignment problems when accessing
       * structure members.
       */
@@ -49,7 +56,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
      return (&ffs->dinode);
  }
  
-@@ -125,7 +135,7 @@ static void ffs_dinode_free(FFS_INFO *ff
+@@ -125,7 +140,7 @@ static void ffs_dinode_free(FFS_INFO *ff
  
  /* ffs_copy_inode - copy disk inode to generic inode */
  
@@ -58,7 +65,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
  {
      int     i;
  
-@@ -151,7 +161,7 @@ static FS_INODE *ffs_inode_lookup(FS_INF
+@@ -151,7 +166,7 @@ static FS_INODE *ffs_inode_lookup(FS_INF
  {
      FFS_INFO *ffs = (FFS_INFO *) fs;
      FS_INODE *fs_inode = fs_inode_alloc(NDADDR, NIADDR);
@@ -67,7 +74,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
  
      ffs_copy_inode(dino, fs_inode);
      return (fs_inode);
-@@ -168,7 +178,7 @@ void    ffs_inode_walk(FS_INFO *fs, INUM
+@@ -168,7 +183,7 @@ void    ffs_inode_walk(FS_INFO *fs, INUM
      struct cg *cg = 0;
      INUM_T  inum;
      unsigned char *inosused;
@@ -76,11 +83,11 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
      FS_INODE *fs_inode = fs_inode_alloc(NDADDR, NIADDR);
      int     myflags;
      INUM_T  ibase;
-@@ -193,7 +203,12 @@ void    ffs_inode_walk(FS_INFO *fs, INUM
+@@ -193,7 +208,12 @@ void    ffs_inode_walk(FS_INFO *fs, INUM
  	cg_num = INO_TO_CG(ffs->fs, inum);
  	if (cg == 0 || cg->cg_cgx != cg_num) {
  	    cg = ffs_cgroup_lookup(ffs, cg_num);
-+#if defined(NETBSD1) || defined(NETBSD2)
++#if defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD7)
 +	    /* BYTE_SWAPPED filesystems can come later */
 +	    inosused = (unsigned char *) cg_inosused(cg, 0);
 +#else
@@ -89,11 +96,11 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
  	    ibase = cg_num * ffs->fs->fs_ipg;
  	}
  
-@@ -290,7 +305,12 @@ void    ffs_block_walk(FS_INFO *fs, DADD
+@@ -290,7 +310,12 @@ void    ffs_block_walk(FS_INFO *fs, DADD
  	cg_num = dtog(ffs->fs, addr);
  	if (cg == 0 || cg->cg_cgx != cg_num) {
  	    cg = ffs_cgroup_lookup(ffs, cg_num);
-+#if defined(NETBSD1) || defined(NETBSD2)
++#if defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD7)
 +	    /* BYTE_SWAPPED filesystems can come later */
 +	    freeblocks = (unsigned char *) cg_blksfree(cg, 0);
 +#else
@@ -102,7 +109,7 @@ $NetBSD: patch-af,v 1.2 2005/01/22 15:59:58 ben Exp $
  	    dbase = cgbase(ffs->fs, cg_num);
  	    dmin = cgdmin(ffs->fs, cg_num);
  	    sblock = cgsblock(ffs->fs, cg_num);
-@@ -390,11 +410,11 @@ FS_INFO *ffs_open(const char *name)
+@@ -390,11 +415,11 @@ FS_INFO *ffs_open(const char *name)
       */
      len = roundup(sizeof(struct fs), DEV_BSIZE);
      ffs->fs = (struct fs *) mymalloc(len);

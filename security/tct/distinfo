@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.7 2010/03/08 01:21:24 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/03/19 08:34:53 dholland Exp $
 
 SHA1 (tct-1.09.tar.gz) = fffb6ae1f389cfdfad95a9a81f6eaba115c9dfc0
 RMD160 (tct-1.09.tar.gz) = ee4ddc286a2564f9b1daaa41f35e3d0fe8d6ea71
 Size (tct-1.09.tar.gz) = 314134 bytes
-SHA1 (patch-aa) = 6b91f920a42fc33dfd535bcf910407b612bb9c4e
-SHA1 (patch-ab) = 5db53f9015c1362e20a1591859652fc121cd639b
-SHA1 (patch-ac) = 18cf7490310cbf1831f4fcc77fb9c414191542dc
-SHA1 (patch-ad) = 747a0eb789933bd3f7e840a3dc28bd2dd6929819
-SHA1 (patch-ae) = 6403b5788edabd7e9146450282aad2460e83bc7e
-SHA1 (patch-af) = bbf402d8d4c5c6118e158d70f4e1814f0e179c8d
-SHA1 (patch-ag) = 9767ae8b3ed7f940c8350f944c363ac10694f7f4
-SHA1 (patch-ah) = 6a4b473141ffbced2f5491b215b30cbf4fc9bfd1
-SHA1 (patch-ai) = 8bc7f949bed634b1c5e0ee78295e80a0b8ce6e0a
-SHA1 (patch-aj) = fc67eefa3f92ceb8f4703b6a00ad7fe3777c3357
-SHA1 (patch-ak) = 040fcaf2151c06b655e56305941b1dec3c8ae17d
-SHA1 (patch-al) = 4d01407b6566d16d7f5c0fb718644e90aa2b9094
-SHA1 (patch-am) = 2a45fcdfb88c0340e46419bcd76eef7c7202a9f9
-SHA1 (patch-an) = ee3ed219467a4e3212a8ff7345e4d6a6c2163b17
-SHA1 (patch-ao) = 243091eb5dc20955f82b4707947ee7f09a5a3c20
+SHA1 (patch-aa) = a35aa034a081ff37ce56192f1f25d2cd2f15d46a
+SHA1 (patch-ab) = c58443c20afd70e00f61e76fc3f2a453b5508f7f
+SHA1 (patch-ac) = db01162b2394a086c6e878dc5587320448ccbe45
+SHA1 (patch-ad) = 12bad749062032c88b9ddcbb5c30aed0f4409e3b
+SHA1 (patch-ae) = bfecf9be7cdcc078f8c9ff5bd2141e43f46ede90
+SHA1 (patch-af) = d5629a143ee190b64df298f22dfd2e8ba8928d52
+SHA1 (patch-ag) = 4f03bdc2ae7f1bf36a705a3543f9925fcc037c11
+SHA1 (patch-ah) = dedb464b3050b5c7dafe620d75743ef9525e7696
+SHA1 (patch-ai) = a706e9265552d4864b765c7700ee80cd61a19edf
+SHA1 (patch-aj) = 736eb7f1cb1c1a3eb7f7ce69019e8f4a61753b40
+SHA1 (patch-ak) = 03cb4b36878386c3200b37a0f9092f80f6813bcd
+SHA1 (patch-al) = e29ba1b2846f63c2847072f6e0c37b58a94a76e9
+SHA1 (patch-am) = 57531cca621df787c4aa59e4a2ddd2d538f3933a
+SHA1 (patch-an) = 27c7d503841bcb58ae141f594decc8aff3b72e7d
+SHA1 (patch-ao) = ba87c403613154a091cdbe91c8fa43335d2bfe50
 SHA1 (patch-ap) = 1587d7b4e4da1226a2943a4f98b9fa20bd83c79d
