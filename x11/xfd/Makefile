@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/03/12 14:31:08 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/19 12:49:47 jperkin Exp $
 
 DISTNAME=	xfd-1.1.2
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Display all the characters in an X font
+
+BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config xgettext
