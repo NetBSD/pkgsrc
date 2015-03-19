@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: unbound.sh,v 1.3 2015/03/09 11:59:26 pettai Exp $
+# $NetBSD: unbound.sh,v 1.4 2015/03/19 22:37:06 pettai Exp $
 #
 # PROVIDE: unbound
 # REQUIRE: DAEMON
@@ -12,7 +12,7 @@ name="unbound"
 rcvar=${name}
 
 command=@PREFIX@/sbin/${name}
-pidfile=/var/run/${name}.pid
+pidfile=/var/run/${name}/${name}.pid
 required_files="@PKG_SYSCONFDIR@/unbound.conf"
 extra_commands="reload"
 start_precmd="unbound_precmd"
