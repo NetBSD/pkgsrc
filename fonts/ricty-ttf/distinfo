@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/11/15 22:15:30 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2015/03/19 23:39:21 ryoon Exp $
 
-SHA1 (Ricty-3.2.3.zip) = e92277c14519b21ee105597040fdf61c379d38c3
-RMD160 (Ricty-3.2.3.zip) = ddc61e717037e4ce10a175a49488950a834c0d5b
-Size (Ricty-3.2.3.zip) = 18610 bytes
+SHA1 (Ricty-3.2.4.tar.gz) = 7fc8adcc74656d9e2e1acd325de82f0f08a6d222
+RMD160 (Ricty-3.2.4.tar.gz) = aab65f2d871fcb76c57152b6ad922668197617d6
+Size (Ricty-3.2.4.tar.gz) = 256796 bytes

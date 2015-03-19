@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.17 2014/12/06 03:45:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2015/03/19 23:39:21 ryoon Exp $
 
-RICTYVER=	3.2.3
-DISTNAME=	Ricty-${RICTYVER}
-PKGNAME=	ricty-ttf-${RICTYVER}
-PKGREVISION=	1
+DISTNAME=	Ricty-3.2.4
+PKGNAME=	${DISTNAME:S/Ricty/ricty-ttf/}
+GITHUB_PROJECT=		Ricty
+GITHUB_TAG=             ${PKGVERSION_NOREV}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	-https://github.com/yascentur/Ricty/archive/${RICTYVER}.zip
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=yascentur/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
+HOMEPAGE=	https://github.com/yascentur/Ricty
 COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND ofl-v1.1 AND public-domain
 
 BUILD_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
 BUILD_DEPENDS+=		migu-ttf-[0-9]*:../../fonts/migu-ttf
 BUILD_DEPENDS+=		inconsolata-ttf-[0-9]*:../../fonts/inconsolata-ttf
-
-USE_TOOLS+=		bash
 
 # LICESE of generated TTF fonts is "ipafont AND open-font-license",
 # but OPEN FONT LICENSE version 1.1 section 5) require to distribute entirely
