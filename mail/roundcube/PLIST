@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2015/02/16 15:33:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/03/19 15:46:26 taca Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README.md
@@ -1788,6 +1788,7 @@ share/roundcube/program/steps/addressbook/list.inc
 share/roundcube/program/steps/addressbook/mailto.inc
 share/roundcube/program/steps/addressbook/move.inc
 share/roundcube/program/steps/addressbook/photo.inc
+share/roundcube/program/steps/addressbook/print.inc
 share/roundcube/program/steps/addressbook/save.inc
 share/roundcube/program/steps/addressbook/search.inc
 share/roundcube/program/steps/addressbook/show.inc
@@ -1938,6 +1939,7 @@ share/roundcube/skins/classic/templates/compose.html
 share/roundcube/skins/classic/templates/contact.html
 share/roundcube/skins/classic/templates/contactadd.html
 share/roundcube/skins/classic/templates/contactedit.html
+share/roundcube/skins/classic/templates/contactprint.html
 share/roundcube/skins/classic/templates/contactsearch.html
 share/roundcube/skins/classic/templates/error.html
 share/roundcube/skins/classic/templates/folderedit.html
@@ -2016,6 +2018,7 @@ share/roundcube/skins/larry/templates/addressbook.html
 share/roundcube/skins/larry/templates/compose.html
 share/roundcube/skins/larry/templates/contact.html
 share/roundcube/skins/larry/templates/contactedit.html
+share/roundcube/skins/larry/templates/contactprint.html
 share/roundcube/skins/larry/templates/contactsearch.html
 share/roundcube/skins/larry/templates/error.html
 share/roundcube/skins/larry/templates/folderedit.html
