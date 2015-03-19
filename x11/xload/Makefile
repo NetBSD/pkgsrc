@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/03/12 14:00:58 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/19 12:45:16 jperkin Exp $
 
 DISTNAME=	xload-1.1.2
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	System load average display for X
+
+BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config xgettext
