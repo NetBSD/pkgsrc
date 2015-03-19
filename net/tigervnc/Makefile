@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/08 19:42:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/19 13:24:13 jperkin Exp $
 
 DISTNAME=	tigervnc-1.3.1
 CATEGORIES=	net
@@ -22,6 +22,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
+
+LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
 CONFIGURE_ENV+=	ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 OVERRIDE_GNU_CONFIG_SCRIPTS= yes
@@ -58,6 +60,7 @@ pre-configure:
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
