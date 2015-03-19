@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.203 2015/03/11 22:49:40 tnn Exp $
+# $NetBSD: Makefile,v 1.204 2015/03/19 22:11:22 tron Exp $
 
-DISTNAME=	openssl-1.0.2
+DISTNAME=	openssl-1.0.2a
 CATEGORIES=	security
-MASTER_SITES=	http://ftp.openssl.org/source/
+MASTER_SITES=	http://www.openssl.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openssl.org/
