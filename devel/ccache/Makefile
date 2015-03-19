@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2015/03/19 18:33:43 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2015/03/19 23:01:15 tnn Exp $
 
 DISTNAME=	ccache-3.2.1
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://samba.org/ftp/ccache/
-EXTRACT_SUFX=	.tar.xz
+# do not use xz distfile here, xz needs gettext-lib which leads to circular
+# dependencies on some platforms.
+#EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ccache.samba.org/
