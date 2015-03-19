@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1455 2015/03/19 16:17:12 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.1456 2015/03/19 20:24:13 tron Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/fengoffice to 3.1.2.2 [taca 2015-03-19]
 	Updated mail/roundcube to 1.1.1 [taca 2015-03-19]
 	Updated geography/py-proj to 1.9.4 [gdt 2015-03-19]
+	Updated security/openssh to 6.6.1nb5 [tron 2015-03-19]
