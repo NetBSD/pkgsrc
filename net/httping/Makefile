@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/03/07 06:24:10 mef Exp $
+# $NetBSD: Makefile,v 1.23 2015/03/19 14:33:35 gdt Exp $
 
 DISTNAME=	httping-2.4
 CATEGORIES=	net
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--with-openssl
 
 .include "../../mk/bsd.prefs.mk"
 
+LDFLAGS.Darwin=		-lintl
 LDFLAGS.NetBSD=		-lintl
 LDFLAGS.SunOS=		-lnsl -lsocket -lresolv -lintl
 
