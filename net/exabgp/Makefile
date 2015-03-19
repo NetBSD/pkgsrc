@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/03/02 23:22:01 sevan Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/19 09:20:30 he Exp $
 
-VERSION=	3.4.7
+VERSION=	3.4.9
 DISTNAME=	${VERSION}
 PKGNAME=	exabgp-${VERSION}
 EGG_NAME=	exabgp-${VERSION}
@@ -20,14 +20,12 @@ USE_TOOLS+=	perl:run
 DEPENDS+=	${PYPKGPREFIX}-ipaddr>=0:../../devel/py-ipaddr
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-REPLACE_PERL=		etc/exabgp/processes/dynamic-1.pl
+REPLACE_PERL+=		etc/exabgp/processes/dynamic-1.pl
 REPLACE_PERL+=		etc/exabgp/processes/watchdog-1.pl
-REPLACE_PYTHON=		lib/exabgp/application/bmp.py
-REPLACE_PYTHON+=	lib/exabgp/bgp/message/update/nlri/eor.py
+REPLACE_PYTHON+=	lib/exabgp/application/bmp.py
+REPLACE_PYTHON+=	lib/exabgp/application/cli.py
+REPLACE_PYTHON+=	lib/exabgp/netlink/route.py
 REPLACE_PYTHON+=	lib/exabgp/reactor/api/encoding.py
-REPLACE_PYTHON+=	lib/netlink/route.py
-REPLACE_PYTHON+=	lib/netlink/test/get.py
-REPLACE_PYTHON+=	lib/netlink/test/route.py
 REPLACE_PYTHON+=	etc/exabgp/processes/healthcheck.py
 REPLACE_PYTHON+=	etc/exabgp/processes/read-write.py
 REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
@@ -38,10 +36,16 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2.19
 
 USE_LANGUAGES=  # none
 
-INSTALLATION_DIRS=	share/exabgp bin
+INSTALLATION_DIRS=	share/exabgp bin man/man1 man/man5
 
 pre-install:
 	find ${WRKDIR} -name "*.orig" | xargs rm -f
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/doc/man/exabgp.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/exabgp.conf.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
