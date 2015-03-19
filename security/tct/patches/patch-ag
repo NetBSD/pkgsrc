@@ -1,4 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2010/03/08 01:21:25 dholland Exp $
+$NetBSD: patch-ag,v 1.4 2015/03/19 08:34:53 dholland Exp $
+
+Fix Linux off_t handling.
+Add NetBSD support.
 
 --- src/fstools/fs_tools.h.orig	2001-09-07 10:06:57.000000000 -0700
 +++ src/fstools/fs_tools.h
@@ -28,7 +31,7 @@ $NetBSD: patch-ag,v 1.3 2010/03/08 01:21:25 dholland Exp $
  #endif
  #endif
  
-+#if defined(NETBSD1) || defined(NETBSD2)
++#if defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD7)
 +#define SUPPORTED
 +#define HAVE_UFS_FFS
 +#include <sys/vnode.h>
