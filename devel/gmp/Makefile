@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2014/09/10 10:41:13 richard Exp $
+# $NetBSD: Makefile,v 1.76 2015/03/19 20:40:31 tnn Exp $
 
 DISTNAME=	gmp-6.0.0a
 CATEGORIES=	devel math
@@ -57,8 +57,8 @@ PKG_SUPPORTED_OPTIONS=	gmp-fat mmx simd
 PKG_SUGGESTED_OPTIONS=	gmp-fat
 .    include "../../mk/bsd.options.mk"
 ###
-### Support for a "fat" binary on i386.  There's CPU autodetection,
-### so we'll be safe and filter out -march/-mcpu, et. al.
+### Support for a "fat" binary on i386, with CPU autodetection.
+### XXX this option should be provided for amd64 too!
 ###
 ### XXX	Currently, the 'mmx' and 'simd' options imply the same thing,
 ###	as cpu detection is done at runtime.  Is there a more elegant
@@ -70,8 +70,6 @@ PKG_OPTIONS+=	gmp-fat
 .    endif
 .    if !empty(PKG_OPTIONS:Mgmp-fat)
 CONFIGURE_ARGS+=	--enable-fat
-BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
-BUILDLINK_TRANSFORM+=	rm:-mmmx rm:-msse rm:-msse2 rm:-msse3 rm:-m3dnow
 .    endif
 .  endif
 .endif
