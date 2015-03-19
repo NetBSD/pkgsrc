@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1451 2015/03/19 09:58:35 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1452 2015/03/19 15:37:27 taca Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2041,3 +2041,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nagios-plugin-dotpid to 0.3 [manu 2015-03-19]
 	Updated www/py-django to 1.7.7 [adam 2015-03-19]
 	Updated www/py-django14 to 1.4.20 [adam 2015-03-19]
+	Updated www/drupal6 to 6.35 [taca 2015-03-19]
+	Updated www/drupal7 to 7.35 [taca 2015-03-19]
