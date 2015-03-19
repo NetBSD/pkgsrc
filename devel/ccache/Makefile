@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/03/19 18:09:17 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2015/03/19 18:33:43 tnn Exp $
 
 DISTNAME=	ccache-3.2.1
 PKGREVISION=	1
@@ -16,10 +16,6 @@ GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
-
-CCACHE_DEFAULT_MAXSIZE?=	1048576
-BUILD_DEFS+=			CCACHE_DEFAULT_MAXSIZE
-CPPFLAGS+=			-DDEFAULT_MAXSIZE=${CCACHE_DEFAULT_MAXSIZE}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
