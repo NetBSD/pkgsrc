@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/15 21:18:49 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/03/19 22:15:52 pettai Exp $
+${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Config.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Locale.pm
@@ -19,6 +20,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Nameserver.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/SOA.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Zone.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/config.yaml
+${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/cz.yaml
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/en.yaml
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/nl.yaml
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/policy.yaml
@@ -28,7 +30,9 @@ ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-12hourmailer
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-dispatcher
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-dnssecmailer
+${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-enqueue
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-hostsyntax
+${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-packetcheck
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-preflight
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-zonediff
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-12hourmailer.1
@@ -57,4 +61,5 @@ ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Mail.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Nameserver.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::SOA.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Zone.3
-@pkgdir share/examples/dnscheck
+share/examples/dnscheck/config/config.yaml
+share/examples/dnscheck/config/policy.yaml
