@@ -1,0 +1,338 @@
+$NetBSD: patch-configure,v 1.1 2015/03/19 19:17:18 joerg Exp $
+
+Don't create broken or non-portable binaries. This code isn't even
+performance critical.
+
+--- configure.orig	2015-03-19 00:03:08.000000000 +0000
++++ configure
+@@ -7779,330 +7779,6 @@ $as_echo_n "checking for preferred warni
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${warnflags}" >&5
+ $as_echo "${warnflags}" >&6; }
+ 
+-
+-
+-	case " ${CFLAGS} ${EXTRA_CFLAGS}" in
+-	(*" -O"0-9)
+-		;;
+-	(*)
+-			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -O3" >&5
+-$as_echo_n "checking whether C compiler accepts -O3... " >&6; }
+-
+-	## store werror status, then turn -Werror on
+-	save_ac_c_werror_flag="${ac_c_werror_flag}"
+-
+-ac_c_werror_flag=yes
+-
+-	if ${sxe_cv_c_flag__O3+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  		sxe_save_FLAGS="${CFLAGS}"
+-		CFLAGS="-O3"
+-		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-  eval sxe_cv_c_flag__O3="yes"
+-else
+-  eval sxe_cv_c_flag__O3="no"
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-		CFLAGS="${sxe_save_FLAGS}"
+-
+-fi
+-
+-	eval sxe_check_flag=$sxe_cv_c_flag__O3
+-	ac_c_werror_flag="${save_ac_c_werror_flag}"
+-
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${sxe_check_flag}" >&5
+-$as_echo "${sxe_check_flag}" >&6; }
+-	if test "${sxe_check_flag}" = "yes"; then
+-		:
+-
+-			optiflags="${optiflags} -O3"
+-	else
+-		:
+-
+-	fi
+-
+-		;;
+-	esac
+-
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -ipo256" >&5
+-$as_echo_n "checking whether C compiler accepts -ipo256... " >&6; }
+-
+-	## store werror status, then turn -Werror on
+-	save_ac_c_werror_flag="${ac_c_werror_flag}"
+-
+-ac_c_werror_flag=yes
+-
+-	if ${sxe_cv_c_flag__ipo256+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  		sxe_save_FLAGS="${CFLAGS}"
+-		CFLAGS="-ipo256"
+-		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-  eval sxe_cv_c_flag__ipo256="yes"
+-else
+-  eval sxe_cv_c_flag__ipo256="no"
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-		CFLAGS="${sxe_save_FLAGS}"
+-
+-fi
+-
+-	eval sxe_check_flag=$sxe_cv_c_flag__ipo256
+-	ac_c_werror_flag="${save_ac_c_werror_flag}"
+-
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${sxe_check_flag}" >&5
+-$as_echo "${sxe_check_flag}" >&6; }
+-	if test "${sxe_check_flag}" = "yes"; then
+-		:
+-
+-		optiflags="${optiflags} -ipo256"
+-	else
+-		:
+-
+-	fi
+-
+-
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -ipo-jobs256" >&5
+-$as_echo_n "checking whether C compiler accepts -ipo-jobs256... " >&6; }
+-
+-	## store werror status, then turn -Werror on
+-	save_ac_c_werror_flag="${ac_c_werror_flag}"
+-
+-ac_c_werror_flag=yes
+-
+-	if ${sxe_cv_c_flag__ipo_jobs256+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  		sxe_save_FLAGS="${CFLAGS}"
+-		CFLAGS="-ipo-jobs256"
+-		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-  eval sxe_cv_c_flag__ipo_jobs256="yes"
+-else
+-  eval sxe_cv_c_flag__ipo_jobs256="no"
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-		CFLAGS="${sxe_save_FLAGS}"
+-
+-fi
+-
+-	eval sxe_check_flag=$sxe_cv_c_flag__ipo_jobs256
+-	ac_c_werror_flag="${save_ac_c_werror_flag}"
+-
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${sxe_check_flag}" >&5
+-$as_echo "${sxe_check_flag}" >&6; }
+-	if test "${sxe_check_flag}" = "yes"; then
+-		:
+-
+-		optiflags="${optiflags} -ipo-jobs256"
+-	else
+-		:
+-
+-	fi
+-
+-
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -no-prec-div" >&5
+-$as_echo_n "checking whether C compiler accepts -no-prec-div... " >&6; }
+-
+-	## store werror status, then turn -Werror on
+-	save_ac_c_werror_flag="${ac_c_werror_flag}"
+-
+-ac_c_werror_flag=yes
+-
+-	if ${sxe_cv_c_flag__no_prec_div+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  		sxe_save_FLAGS="${CFLAGS}"
+-		CFLAGS="-no-prec-div"
+-		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-  eval sxe_cv_c_flag__no_prec_div="yes"
+-else
+-  eval sxe_cv_c_flag__no_prec_div="no"
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-		CFLAGS="${sxe_save_FLAGS}"
+-
+-fi
+-
+-	eval sxe_check_flag=$sxe_cv_c_flag__no_prec_div
+-	ac_c_werror_flag="${save_ac_c_werror_flag}"
+-
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${sxe_check_flag}" >&5
+-$as_echo "${sxe_check_flag}" >&6; }
+-	if test "${sxe_check_flag}" = "yes"; then
+-		:
+-
+-		optiflags="${optiflags} -no-prec-div"
+-	else
+-		:
+-
+-	fi
+-
+-
+-	## -fast implies -static which is a dream but
+-	## packager prefer dynamic binaries
+-
+-	## auto-vectorisation
+-
+-	case " ${CFLAGS} ${EXTRA_CFLAGS}" in
+-	(*" -mtune"*)
+-		## don't tune
+-		;;
+-	(*" -march"*)
+-		## don't set march
+-		;;
+-	(*" -m32 "*)
+-		## don't bother
+-		;;
+-	(*" -m64 "*)
+-		## don't bother
+-		;;
+-	(*)
+-			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -xHost" >&5
+-$as_echo_n "checking whether C compiler accepts -xHost... " >&6; }
+-
+-	## store werror status, then turn -Werror on
+-	save_ac_c_werror_flag="${ac_c_werror_flag}"
+-
+-ac_c_werror_flag=yes
+-
+-	if ${sxe_cv_c_flag__xHost+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  		sxe_save_FLAGS="${CFLAGS}"
+-		CFLAGS="-xHost"
+-		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-  eval sxe_cv_c_flag__xHost="yes"
+-else
+-  eval sxe_cv_c_flag__xHost="no"
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-		CFLAGS="${sxe_save_FLAGS}"
+-
+-fi
+-
+-	eval sxe_check_flag=$sxe_cv_c_flag__xHost
+-	ac_c_werror_flag="${save_ac_c_werror_flag}"
+-
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${sxe_check_flag}" >&5
+-$as_echo "${sxe_check_flag}" >&6; }
+-	if test "${sxe_check_flag}" = "yes"; then
+-		:
+-
+-			optiflags="${optiflags} -xHost"
+-	else
+-		:
+-
+-			## non-icc
+-				{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -mtune=native -march=native" >&5
+-$as_echo_n "checking whether C compiler accepts -mtune=native -march=native... " >&6; }
+-
+-	## store werror status, then turn -Werror on
+-	save_ac_c_werror_flag="${ac_c_werror_flag}"
+-
+-ac_c_werror_flag=yes
+-
+-	if { as_var=`$as_echo "sxe_cv_c_flag_-mtune=native -march=native" | $as_tr_sh`; eval \${$as_var+:} false; }; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  		sxe_save_FLAGS="${CFLAGS}"
+-		CFLAGS="-mtune=native -march=native"
+-		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-  eval `$as_echo "sxe_cv_c_flag_-mtune=native -march=native" | $as_tr_sh`="yes"
+-else
+-  eval `$as_echo "sxe_cv_c_flag_-mtune=native -march=native" | $as_tr_sh`="no"
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-		CFLAGS="${sxe_save_FLAGS}"
+-
+-fi
+-
+-	eval sxe_check_flag=$`$as_echo "sxe_cv_c_flag_-mtune=native -march=native" | $as_tr_sh`
+-	ac_c_werror_flag="${save_ac_c_werror_flag}"
+-
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${sxe_check_flag}" >&5
+-$as_echo "${sxe_check_flag}" >&6; }
+-	if test "${sxe_check_flag}" = "yes"; then
+-		:
+-
+-				optiflags="${optiflags} -mtune=native -march=native"
+-	else
+-		:
+-
+-	fi
+-
+-
+-	fi
+-
+-		;;
+-	esac
+-
+ 	SXE_CFLAGS="${SXE_CFLAGS} ${debugflags} ${optiflags} ${warnflags}"
+ 
+ 		## default flags for needed features
