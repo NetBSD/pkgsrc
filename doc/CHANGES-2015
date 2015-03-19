@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1448 2015/03/18 21:25:49 tron Exp $
+$NetBSD: CHANGES-2015,v 1.1449 2015/03/19 09:21:13 he Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2037,3 +2037,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/typo3_62 to 6.2.11 [taca 2015-03-18]
 	Updated pkgtools/cwrappers to 20150318 [jperkin 2015-03-18]
 	Updated databases/phpmyadmin to 4.3.12 [tron 2015-03-18]
+	Updated net/exabgp to 3.4.9 [he 2015-03-19]
