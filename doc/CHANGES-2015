@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1458 2015/03/19 22:37:29 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.1459 2015/03/19 23:41:40 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/openssh to 6.6.1nb5 [tron 2015-03-19]
 	Updated security/openssl to 1.0.2a [tron 2015-03-19]
 	Updated net/unbound to 1.5.3 [pettai 2015-03-19]
+	Updated fonts/ricty-ttf to 3.2.4 [ryoon 2015-03-19]
