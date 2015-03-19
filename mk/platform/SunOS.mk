@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.62 2014/09/10 15:59:33 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.63 2015/03/19 19:15:23 tron Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -68,6 +68,9 @@ _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF		# shared lib type
 _OPSYS_MISSING_FEATURES=asprintf
+.if !exists(/usr/include/err.h)
+_OPSYS_MISSING_FEATURES+=err
+.endif
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes		# add rpath to LDFLAGS
