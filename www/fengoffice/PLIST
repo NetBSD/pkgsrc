@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/02/01 16:51:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/03/19 15:38:24 taca Exp $
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
 ${FO_DIR}/application/controllers/AccountController.class.php
@@ -517,7 +517,6 @@ ${FO_DIR}/application/views/account/edit_avatar.php
 ${FO_DIR}/application/views/account/edit_password.php
 ${FO_DIR}/application/views/account/edit_profile.php
 ${FO_DIR}/application/views/account/index.php
-${FO_DIR}/application/views/account/old_user_permissions_control.php
 ${FO_DIR}/application/views/account/system_permissions.php
 ${FO_DIR}/application/views/account/update_permissions.php
 ${FO_DIR}/application/views/account/user_permissions_control.php
@@ -2432,9 +2431,6 @@ ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.M
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/info.ini
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/CSS/4.1.1,801ad73acbcf9d3127e1d01768d26453,1.ser
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/HTML/4.1.1,ddc9b993d7fc8d4a185e8dbf5b9a0996,1.ser
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/URI/4.1.1,05c766101e813c246917b022f97b5e6e,1.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/dummy.php
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/EntityLookup/entities.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/Filter/ExtractStyleBlocks.php
@@ -3242,7 +3238,6 @@ ${FO_DIR}/plugins/core_dimensions/language/zh_tw/lang.php
 ${FO_DIR}/plugins/core_dimensions/public/assets/javascript/core_dimensions.js
 ${FO_DIR}/plugins/core_dimensions/templates/quickadd_extra_fields.php
 ${FO_DIR}/plugins/core_dimensions/update.php
-${FO_DIR}/plugins/index.html
 ${FO_DIR}/plugins/mail/CHANGELOG.txt
 ${FO_DIR}/plugins/mail/application/controllers/MailController.class.php
 ${FO_DIR}/plugins/mail/application/helpers/MailUtilities.class.php
@@ -4425,8 +4420,11 @@ ${FO_DIR}/public/assets/javascript/og/overrides/TreeNode.js
 ${FO_DIR}/public/assets/javascript/og/overrides/TreePanel.js
 ${FO_DIR}/public/assets/javascript/og/overrides/extfix.js
 ${FO_DIR}/public/assets/javascript/og/swfobject.js
+${FO_DIR}/public/assets/javascript/og/tasks/AjaxTasks.js
+${FO_DIR}/public/assets/javascript/og/tasks/GroupsCache.js
 ${FO_DIR}/public/assets/javascript/og/tasks/TaskPopUp.js
 ${FO_DIR}/public/assets/javascript/og/tasks/TasksBottomToolbar.js
+${FO_DIR}/public/assets/javascript/og/tasks/TasksCache.js
 ${FO_DIR}/public/assets/javascript/og/tasks/TasksTopToolbar.js
 ${FO_DIR}/public/assets/javascript/og/tasks/addTask.js
 ${FO_DIR}/public/assets/javascript/og/tasks/drawing.js
@@ -5566,6 +5564,7 @@ ${FO_DIR}/public/tools/translate.php
 ${FO_DIR}/public/upgrade/assets/style.css
 ${FO_DIR}/public/upgrade/complete_migration.php
 ${FO_DIR}/public/upgrade/console.php
+${FO_DIR}/public/upgrade/helpers/rebuild_tasks_tree.php
 ${FO_DIR}/public/upgrade/include.php
 ${FO_DIR}/public/upgrade/index.php
 ${FO_DIR}/public/upgrade/library/classes/ChecklistItem.class.php
@@ -5577,6 +5576,7 @@ ${FO_DIR}/public/upgrade/library/classes/ScriptUpgrader.class.php
 ${FO_DIR}/public/upgrade/library/classes/ScriptUpgraderScript.class.php
 ${FO_DIR}/public/upgrade/library/classes/Template.class.php
 ${FO_DIR}/public/upgrade/library/functions.php
+${FO_DIR}/public/upgrade/scripts/ArazaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/AsadoUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/BondiolaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChinchulinUpgradeScript.class.php
@@ -5627,6 +5627,7 @@ ${FO_DIR}/public/webservices/TagsServices.php
 ${FO_DIR}/public/webservices/WebServicesBase.php
 ${FO_DIR}/public/webservices/WorkspaceServices.php
 ${FO_DIR}/readme.txt
+${FO_DIR}/rebuild_contact_member_cahe.php
 ${FO_DIR}/rebuild_sharing_table.php
 ${FO_DIR}/revision.php
 ${FO_DIR}/robots.txt
