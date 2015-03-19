@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/01/01 11:12:26 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/19 19:15:37 joerg Exp $
 
 PKGNAME=	gridscheduler-2011.11
 DISTNAME=	GE2011.11
@@ -17,6 +17,8 @@ BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:run
+
+OVERRIDE_DIRDEPTH=	6
 
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge
