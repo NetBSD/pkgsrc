@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_parser_parser.h,v 1.1 2014/12/30 08:39:13 plunky Exp $
+$NetBSD: patch-tools_parser_parser.h,v 1.2 2015/03/19 19:16:31 joerg Exp $
 
 the device ID is a string on netbt stack
 
@@ -21,7 +21,7 @@ the device ID is a string on netbt stack
 +					tm.tm_hour, tm.tm_min, tm.tm_sec, (unsigned long)f->ts.tv_usec);
  			} else
 -				printf("%8lu.%06lu ", f->ts.tv_sec, f->ts.tv_usec);
-+				printf("%8lu.%06lu ", f->ts.tv_sec, (unsigned long)f->ts.tv_usec);
++				printf("%8ju.%06lu ", (uintmax_t)f->ts.tv_sec, (unsigned long)f->ts.tv_usec);
  		}
  		printf("%c ", (f->in ? '>' : '<'));
  		parser.state = 1;
