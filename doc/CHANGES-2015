@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1461 2015/03/20 10:14:12 martin Exp $
+$NetBSD: CHANGES-2015,v 1.1462 2015/03/20 16:34:12 taca Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2052,3 +2052,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/ricty-ttf to 3.2.4 [ryoon 2015-03-19]
 	Updated mail/dovecot2-pigeonhole to 0.4.7 [taca 2015-03-20]
 	Updated www/firefox to 36.0.1nb1 [martin 2015-03-20]
+	Updated lang/php54 to 5.4.39 [taca 2015-03-20]
+	Updated lang/php55 to 5.5.23 [taca 2015-03-20]
+	Updated lang/php56 to 5.6.7 [taca 2015-03-20]
