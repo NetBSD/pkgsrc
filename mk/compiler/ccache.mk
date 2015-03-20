@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.34 2013/05/09 23:37:25 riastradh Exp $
+# $NetBSD: ccache.mk,v 1.35 2015/03/20 17:53:14 tnn Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,7 +70,24 @@ CCACHE_DIR?=	${WRKDIR}/.ccache-cache
 
 _USE_CCACHE=	yes
 
-.if ${CCACHE_BASE} == ${LOCALBASE} && (${PKGPATH} == "devel/ccache" || ${PKGPATH} == "devel/patch" || ${PKGPATH} == "pkgtools/digest")
+# List of packages that ccache may directly or indirectly depend upon,
+# and thus cannot inversely depend on ccache.
+_CCACHE_CIRCULAR_DEPENDENCY_PACKAGES=	\
+	archivers/gzip			\
+	devel/ccache			\
+	devel/distcc			\
+	devel/libtool-base		\
+	devel/nbpatch			\
+	devel/zlib			\
+	net/tnftp			\
+	pkgtools/cwrappers		\
+	pkgtools/digest			\
+	pkgtools/pkg_install-info	\
+	sysutils/checkperms
+
+# break circular dependencies
+.if ${CCACHE_BASE} == ${LOCALBASE} &&	\
+	!empty(_CCACHE_CIRCULAR_DEPENDENCY_PACKAGES:M${PKGPATH})
 _USE_CCACHE=	no
 MAKEFLAGS+=	_USE_CCACHE=${_USE_CCACHE}
 .endif
