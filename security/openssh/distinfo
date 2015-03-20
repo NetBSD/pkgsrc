@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.89 2015/03/20 02:34:32 taca Exp $
+$NetBSD: distinfo,v 1.90 2015/03/20 22:41:19 rodent Exp $
 
 SHA1 (openssh-6.6p1-hpnssh14v4.diff.gz) = 1cb86c7151ea4c805cfb1197eac13844cd8f2f2c
 RMD160 (openssh-6.6p1-hpnssh14v4.diff.gz) = 292cea7880ff66040d915f2d5957dd27d0835984
@@ -19,7 +19,7 @@ SHA1 (patch-configure) = 3015dda57a5626667cf5c15c7c7be25f8844cfc6
 SHA1 (patch-configure.ac) = 996a3bcf133a0832b9d7fa35cc0983562d9fa60a
 SHA1 (patch-defines.h) = 4f4f4c8dc54aa86275192edf230b36737b1c0cf6
 SHA1 (patch-includes.h) = 0a899d3b38ef3de7f5b08fec022696b4e998b54e
-SHA1 (patch-loginrec.c) = 3b42ea96935a69316233eb2c65d810e46a3e5d76
+SHA1 (patch-loginrec.c) = 111530a4895c8f88c464c7495cee0dba1952d9ce
 SHA1 (patch-openbsd-compat_bsd-openpty.c) = a1318cf691f0ad844a8761a77e3bb32a9e20c695
 SHA1 (patch-openbsd-compat_openbsd-compat.h) = 1cafbe8f226c16443d2cfd003166923f33352eb0
 SHA1 (patch-openbsd-compat_port-tun.c) = 8288e2b9336ea1fcc1129d8a2ab5e55816b2ccbf
