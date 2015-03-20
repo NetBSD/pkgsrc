@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2014/02/12 23:18:24 tron Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/20 16:33:28 taca Exp $
 
 MODNAME=		ftp
-PKGREVISION=		1
 CATEGORIES+=		net
 COMMENT=		PHP extension for FTP access
 
