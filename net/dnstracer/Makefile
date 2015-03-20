@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/03/13 18:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2015/03/20 15:19:46 mef Exp $
 
 DISTNAME=		dnstracer-1.10
 CATEGORIES=		net
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_FEATURES+=		inet6
 WRKSRC=			${WRKDIR}/${PKGBASE}
 AUTO_MKDIRS=		yes
-USE_TOOLS+=		gzip tar
+USE_TOOLS+=		gzip tar perl:run pod2man
 
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 
