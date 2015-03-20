@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.193 2015/03/11 00:22:27 ryoon Exp $
+$NetBSD: distinfo,v 1.194 2015/03/20 10:13:57 martin Exp $
 
 SHA1 (firefox-36.0.1.source.tar.bz2) = cde80f5aee704827da43b9ca94a138a6c8a6c553
 RMD160 (firefox-36.0.1.source.tar.bz2) = 924bce1b25fd55ca690b3b989cf27d73f119d192
@@ -39,6 +39,8 @@ SHA1 (patch-dom_system_OSFileConstants.cpp) = 4fe5d4ecf6116c7163ee6d2322db8b1b78
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 11f6e6f64e1d2515854a5704b896e402daaec0b9
 SHA1 (patch-gfx_graphite2_moz-gr-update.sh) = b987dad1bd4513b8a04fb280bd1c5280a03af746
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
+SHA1 (patch-gfx_layers_basic_BasicCompositor.cpp) = 10d825f91d4160abbbaeecb018db8921e00727a2
+SHA1 (patch-gfx_layers_basic_BasicLayerManager.cpp) = cd4300bdef4de3cdd11487921f2c051041d87359
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
 SHA1 (patch-gfx_skia_generate__mozbuild.py) = e0bf45842ae74f896678b1c29d97606165cf5914
 SHA1 (patch-gfx_skia_moz.build) = ce83717ec6e386d52af75a0f5592fa866b83b3bc
@@ -75,6 +77,7 @@ SHA1 (patch-js__src__vm__SPSProfiler.cpp) = 989ba25e4c5308d21d07baa802decce13609
 SHA1 (patch-js_src_Makefile.in) = 77d2e7cb651b9f30ebf6458fd07678416cdecbcc
 SHA1 (patch-js_src_asmjs_AsmJSSignalHandlers.cpp) = 367ad8cba3053867e3c7403845fff756f07a69bd
 SHA1 (patch-js_src_ctypes_CTypes.h) = 768a084239f92a424c1c7dc9eaaf9be9456ca9f0
+SHA1 (patch-js_src_dtoa.c) = e4050e94664960617c311f924b34979ba2e2aba4
 SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e339bfbc
 SHA1 (patch-js_src_gc_Memory.cpp) = f2ee54f0a05d870651a3235b95bbb346586f3c3c
 SHA1 (patch-js_src_gc_Statistics.cpp) = 227d047f5befeff2a619e8bec9e98d69a78adf5c
@@ -82,6 +85,7 @@ SHA1 (patch-js_src_jit-LIR.cpp) = 4231ab9271b12ca712492e2cdbd4e1e82e108b68
 SHA1 (patch-js_src_jit_ExecutableAllocator.h) = cfcf810b25adeeb13eaed8c1405ed286565941cd
 SHA1 (patch-js_src_jit_MIR.cpp) = 64071494d1aac905e95d25046f0cf1f9f96b74e9
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = 7352da6b9850bbfef68893d9a120c9e513492518
+SHA1 (patch-js_src_jit_none_Lowering-none.h) = 0cbbaae57ddea272b442b6298ee562c412f552f3
 SHA1 (patch-js_src_jsapi.cpp) = 16269342723fe9420909ea17e19d02b23ad1a70b
 SHA1 (patch-js_src_jsdate.cpp) = 0e577aefa24693c7941ead0365c58b2b4b41dc8c
 SHA1 (patch-js_src_jskwgen.cpp) = 34d3b92e13366d4b43ff755ad54f392c116d5c59
