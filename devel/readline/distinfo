@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2014/08/13 09:28:37 markd Exp $
+$NetBSD: distinfo,v 1.25 2015/03/20 14:46:47 ryoon Exp $
 
 SHA1 (readline-6.3.tar.gz) = 017b92dc7fd4e636a2b5c9265a77ccc05798c9e1
 RMD160 (readline-6.3.tar.gz) = 986262d811d9dbe1e38bc9d714853272967dca7e
@@ -10,5 +10,6 @@ SHA1 (patch-colors.c) = 42ffd2766a808a670a445a8ac34740cf4bdf02d5
 SHA1 (patch-display.c) = 8dc455e5cb3ad4208834518f55f93d1d60f52087
 SHA1 (patch-examples_Makefile.in) = d8268b7de6d548f673b23eb0718394245e56ab1f
 SHA1 (patch-patchlevel) = 04d5af0e90455d7dcbc1917c07b30656afc725a5
+SHA1 (patch-posixjmp.h) = e2be68635c49a85d03417904338ce6376d8a9a99
 SHA1 (patch-readline.c) = ad9aef8a3e9a199d2b9a1a32fc3f715784136c89
 SHA1 (patch-util.c) = b7c22aa43cbd1d0225099e2ee1d4d1772d402b5f
