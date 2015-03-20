@@ -1,6 +1,6 @@
-$NetBSD: patch-loginrec.c,v 1.2 2014/03/29 09:38:11 taca Exp $
+$NetBSD: patch-loginrec.c,v 1.3 2015/03/20 22:41:19 rodent Exp $
 
-Interix support and related fixes
+Interix support and related fixes. Fix build on FreeBSD.
 
 --- loginrec.c.orig	2014-01-17 01:23:24.000000000 +0000
 +++ loginrec.c
@@ -44,16 +44,20 @@ Interix support and related fixes
  	if (li->type == LTYPE_LOGOUT)
  		return;
  
-@@ -774,6 +770,8 @@ construct_utmpx(struct logininfo *li, st
+@@ -774,6 +770,12 @@ construct_utmpx(struct logininfo *li, st
  	 * for logouts.
  	 */
  
 +	/* strncpy(): Don't necessarily want null termination */
++#if defined(__FreeBSD__)
++	strncpy(utx->ut_user, li->username, MIN_SIZEOF(utx->ut_user, li->username));
++#else
 +	strncpy(utx->ut_name, li->username, MIN_SIZEOF(utx->ut_name, li->username));
++#endif
  # ifdef HAVE_HOST_IN_UTMPX
  	strncpy(utx->ut_host, li->hostname,
  	    MIN_SIZEOF(utx->ut_host, li->hostname));
-@@ -1409,7 +1407,7 @@ wtmpx_get_entry(struct logininfo *li)
+@@ -1409,7 +1411,7 @@ wtmpx_get_entry(struct logininfo *li)
   ** Low-level libutil login() functions
   **/
  
