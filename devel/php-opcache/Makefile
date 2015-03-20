@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/02/15 09:03:15 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/20 16:33:28 taca Exp $
 
 MODNAME=		opcache
-PKGREVISION=		1
 CATEGORIES+=		devel
 COMMENT=		PHP extension for opcode caching
 
