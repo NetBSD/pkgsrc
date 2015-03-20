@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.88 2015/03/19 20:23:55 tron Exp $
+$NetBSD: distinfo,v 1.89 2015/03/20 02:34:32 taca Exp $
 
+SHA1 (openssh-6.6p1-hpnssh14v4.diff.gz) = 1cb86c7151ea4c805cfb1197eac13844cd8f2f2c
+RMD160 (openssh-6.6p1-hpnssh14v4.diff.gz) = 292cea7880ff66040d915f2d5957dd27d0835984
+Size (openssh-6.6p1-hpnssh14v4.diff.gz) = 23417 bytes
 SHA1 (openssh-6.6p1.tar.gz) = b850fd1af704942d9b3c2eff7ef6b3a59b6a6b6e
 RMD160 (openssh-6.6p1.tar.gz) = e19ed34e240001898b6665bb4356b868bba5513d
 Size (openssh-6.6p1.tar.gz) = 1282502 bytes
