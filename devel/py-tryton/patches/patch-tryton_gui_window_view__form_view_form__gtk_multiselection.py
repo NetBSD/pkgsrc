@@ -1,10 +1,12 @@
-$NetBSD: patch-tryton_gui_window_view__form_view_form__gtk_multiselection.py,v 1.1 2014/06/06 12:48:00 joerg Exp $
+$NetBSD: patch-tryton_gui_window_view__form_view_form__gtk_multiselection.py,v 1.2 2015/03/20 00:58:38 tnn Exp $
 
---- tryton/gui/window/view_form/view/form_gtk/multiselection.py.orig	2014-06-06 12:01:50.000000000 +0000
-+++ tryton/gui/window/view_form/view/form_gtk/multiselection.py
-@@ -6,11 +6,11 @@ import gobject
- from .interface import WidgetInterface
- from tryton.common.selection import SelectionMixin
+Fixes python 2.6 support. Patch can go away when python26 does.
+
+--- tryton/common/treeviewcontrol.py.orig	2015-02-09 23:43:55.000000000 +0000
++++ tryton/common/treeviewcontrol.py
+@@ -3,11 +3,11 @@
+ import gtk
+ import gobject
  
 -MOVEMENT_KEYS = {gtk.keysyms.Up, gtk.keysyms.Down, gtk.keysyms.space,
 +MOVEMENT_KEYS = set((gtk.keysyms.Up, gtk.keysyms.Down, gtk.keysyms.space,
@@ -14,5 +16,5 @@ $NetBSD: patch-tryton_gui_window_view__form_view_form__gtk_multiselection.py,v 1
 -    gtk.keysyms.End, gtk.keysyms.KP_End}
 +    gtk.keysyms.End, gtk.keysyms.KP_End))
  
+ __all__ = ['TreeViewControl']
  
- class MultiSelection(WidgetInterface, SelectionMixin):
