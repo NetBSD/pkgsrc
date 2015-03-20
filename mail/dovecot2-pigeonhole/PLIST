@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/02 07:36:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/03/20 01:25:31 taca Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
@@ -8,6 +8,7 @@ include/dovecot/sieve/pigeonhole-config.h
 include/dovecot/sieve/pigeonhole-version.h
 include/dovecot/sieve/program-client-private.h
 include/dovecot/sieve/program-client.h
+include/dovecot/sieve/realpath.h
 include/dovecot/sieve/rfc2822.h
 include/dovecot/sieve/sieve-actions.h
 include/dovecot/sieve/sieve-address-parts.h
@@ -63,6 +64,7 @@ lib/dovecot/settings/libpigeonhole_settings.la
 lib/dovecot/sieve/lib90_sieve_extprograms_plugin.la
 libexec/dovecot/managesieve
 libexec/dovecot/managesieve-login
+man/man1/doveadm-sieve.1
 man/man1/sieve-dump.1
 man/man1/sieve-filter.1
 man/man1/sieve-test.1
