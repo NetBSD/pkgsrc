@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1467 2015/03/21 16:18:20 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1468 2015/03/21 18:48:36 bsiegert Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 36.0.3 [ryoon 2015-03-21]
 	Updated www/php-basercms to 3.0.7 [ryoon 2015-03-21]
 	Updated devel/pth to 2.0.7nb4 [wiz 2015-03-21]
+	Updated devel/tcllib to 1.15nb1 [bsiegert 2015-03-21]
