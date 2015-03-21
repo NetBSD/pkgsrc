@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2015/02/28 23:44:56 joerg Exp $
+# $NetBSD: Makefile,v 1.84 2015/03/21 20:49:28 bsiegert Exp $
 #
 
-DISTNAME=	ntp-4.2.8
+DISTNAME=	ntp-4.2.8p1
 PKGNAME=	${DISTNAME:S/-dev-/-/}
-PKGREVISION=	1
 CATEGORIES=	net time
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
 
@@ -23,7 +22,7 @@ CONFIGURE_ENV+=	  PATH_PERL=${PERL5}
 
 OVERRIDE_DIRDEPTH=	4
 
-DOCDIR=		${DESTDIR}${PREFIX}/share/doc/ntp4
+DOCDIR=		${DESTDIR}${PREFIX}/share/doc/ntp
 EXAMPLESDIR=	${DESTDIR}${PREFIX}/share/examples/ntp4
 ALL_NTP_DOCS=	${DOCDIR} ${EXAMPLESDIR}
 
