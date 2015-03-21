@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/29 12:26:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/03/21 08:03:09 ryoon Exp $
 share/basercms/.htaccess
 share/basercms/.travis.yml
 share/basercms/CONTRIBUTING.md
@@ -60,6 +60,7 @@ share/basercms/app/webroot/index.php
 share/basercms/app/webroot/js/empty
 share/basercms/app/webroot/test.php
 share/basercms/app/webroot/theme/empty
+share/basercms/composer.json
 share/basercms/index.php
 share/basercms/lib/.htaccess
 share/basercms/lib/Baser/Config/Schema/contents.php
@@ -266,7 +267,7 @@ share/basercms/lib/Baser/Config/theme/nada-icons/css/colorbox/colorbox.css
 share/basercms/lib/Baser/Config/theme/nada-icons/css/colorbox/images/controls.png
 share/basercms/lib/Baser/Config/theme/nada-icons/css/colorbox/images/loading.gif
 share/basercms/lib/Baser/Config/theme/nada-icons/css/config.css
-share/basercms/lib/Baser/Config/theme/nada-icons/css/html5reset-1.6.1.css
+share/basercms/lib/Baser/Config/theme/nada-icons/css/html5reset-1.${OS_VERSION}.css
 share/basercms/lib/Baser/Config/theme/nada-icons/css/smartphone/style.css
 share/basercms/lib/Baser/Config/theme/nada-icons/css/style.css
 share/basercms/lib/Baser/Config/theme/nada-icons/img/fax_icon.png
@@ -406,7 +407,7 @@ share/basercms/lib/Baser/Config/theme/skelton/css/colorbox/colorbox.css
 share/basercms/lib/Baser/Config/theme/skelton/css/colorbox/images/controls.png
 share/basercms/lib/Baser/Config/theme/skelton/css/colorbox/images/loading.gif
 share/basercms/lib/Baser/Config/theme/skelton/css/editor.css
-share/basercms/lib/Baser/Config/theme/skelton/css/html5reset-1.6.1.css
+share/basercms/lib/Baser/Config/theme/skelton/css/html5reset-1.${OS_VERSION}.css
 share/basercms/lib/Baser/Config/theme/skelton/css/smartphone/style.css
 share/basercms/lib/Baser/Config/theme/skelton/css/style.css
 share/basercms/lib/Baser/Config/theme/skelton/img/empty
@@ -418,6 +419,7 @@ share/basercms/lib/Baser/Config/update/3.0.2/alter_plugins.php
 share/basercms/lib/Baser/Config/update/3.0.2/updater.php
 share/basercms/lib/Baser/Config/update/3.0.6/config.php
 share/basercms/lib/Baser/Config/update/3.0.6/updater.php
+share/basercms/lib/Baser/Configure/BcThemeConfigReader.php
 share/basercms/lib/Baser/Console/Command/BaserTestShell.php
 share/basercms/lib/Baser/Console/Command/BcAppShell.php
 share/basercms/lib/Baser/Console/Command/BcManagerShell.php
@@ -468,6 +470,7 @@ share/basercms/lib/Baser/Event/BcViewEventListener.php
 share/basercms/lib/Baser/Event/CakeEventManager.php
 share/basercms/lib/Baser/HACK.txt
 share/basercms/lib/Baser/LICENSE.txt
+share/basercms/lib/Baser/Lib/BcAgent.php
 share/basercms/lib/Baser/Lib/BcUtil.php
 share/basercms/lib/Baser/Lib/TestSuite/BaserTestCase.php
 share/basercms/lib/Baser/Lib/TestSuite/BaserTestLoader.php
@@ -552,13 +555,14 @@ share/basercms/lib/Baser/Plugin/Blog/Model/BlogConfig.php
 share/basercms/lib/Baser/Plugin/Blog/Model/BlogContent.php
 share/basercms/lib/Baser/Plugin/Blog/Model/BlogPost.php
 share/basercms/lib/Baser/Plugin/Blog/Model/BlogTag.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogCategoryFixture.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogCommentFixture.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogConfigFixture.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogContentFixture.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogPostFixture.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogPostsBlogTagFixture.php
-share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/BlogTagFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Case/BlogAllTest.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogCategoryFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogCommentFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogConfigFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogContentFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogPostFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogPostsBlogTagFixture.php
+share/basercms/lib/Baser/Plugin/Blog/Test/Fixture/Default/BlogTagFixture.php
 share/basercms/lib/Baser/Plugin/Blog/View/Blog/default/archives.php
 share/basercms/lib/Baser/Plugin/Blog/View/Blog/default/index.php
 share/basercms/lib/Baser/Plugin/Blog/View/Blog/default/posts.php
@@ -663,6 +667,11 @@ share/basercms/lib/Baser/Plugin/Feed/Model/Feed.php
 share/basercms/lib/Baser/Plugin/Feed/Model/FeedAppModel.php
 share/basercms/lib/Baser/Plugin/Feed/Model/FeedConfig.php
 share/basercms/lib/Baser/Plugin/Feed/Model/FeedDetail.php
+share/basercms/lib/Baser/Plugin/Feed/Test/Case/FeedAllModelTest.php
+share/basercms/lib/Baser/Plugin/Feed/Test/Case/FeedAllTest.php
+share/basercms/lib/Baser/Plugin/Feed/Test/Case/Model/FeedTest.php
+share/basercms/lib/Baser/Plugin/Feed/Test/Fixture/Default/FeedConfigFixture.php
+share/basercms/lib/Baser/Plugin/Feed/Test/Fixture/Default/FeedDetailFixture.php
 share/basercms/lib/Baser/Plugin/Feed/Vendor/simplepie/.gitignore
 share/basercms/lib/Baser/Plugin/Feed/Vendor/simplepie/.travis.yml
 share/basercms/lib/Baser/Plugin/Feed/Vendor/simplepie/LICENSE.txt
@@ -759,11 +768,11 @@ share/basercms/lib/Baser/Plugin/Mail/Test/Case/Model/MailContentTest.php
 share/basercms/lib/Baser/Plugin/Mail/Test/Case/Model/MailFieldTest.php
 share/basercms/lib/Baser/Plugin/Mail/Test/Case/Model/MessageTest.php
 share/basercms/lib/Baser/Plugin/Mail/Test/Case/View/Helper/empty
-share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/MailConfigFixture.php
-share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/MailContentFixture.php
-share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/MailFieldFixture.php
-share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/MessageFixture.php
-share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/empty
+share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/Default/ContactMessageFixture.php
+share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/Default/MailConfigFixture.php
+share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/Default/MailContentFixture.php
+share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/Default/MailFieldFixture.php
+share/basercms/lib/Baser/Plugin/Mail/Test/Fixture/Default/MessageFixture.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/admin/helps/mail_configs_form.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/admin/helps/mail_contents_form.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/admin/helps/mail_contents_index.php
@@ -823,6 +832,7 @@ share/basercms/lib/Baser/Plugin/Mail/webroot/css/style.css
 share/basercms/lib/Baser/Plugin/Mail/webroot/js/admin/mail_fields/form.js
 share/basercms/lib/Baser/Routing/Filter/BcAssetDispatcher.php
 share/basercms/lib/Baser/Routing/Filter/BcCacheDispatcher.php
+share/basercms/lib/Baser/Routing/Filter/BcRequestFilter.php
 share/basercms/lib/Baser/VERSION.txt
 share/basercms/lib/Baser/Vendor/CKEditorStyleParser.php
 share/basercms/lib/Baser/Vendor/Imageresizer.php
@@ -1101,6 +1111,8 @@ share/basercms/lib/Baser/View/Users/admin/form.php
 share/basercms/lib/Baser/View/Users/admin/index.php
 share/basercms/lib/Baser/View/Users/admin/login.php
 share/basercms/lib/Baser/View/Users/admin/reset_password.php
+share/basercms/lib/Baser/View/Users/login.php
+share/basercms/lib/Baser/View/Users/reset_password.php
 share/basercms/lib/Baser/View/WidgetAreas/admin/ajax_index.php
 share/basercms/lib/Baser/View/WidgetAreas/admin/form.php
 share/basercms/lib/Baser/View/WidgetAreas/admin/index.php
@@ -1114,7 +1126,7 @@ share/basercms/lib/Baser/webroot/css/admin/colorbox/images/loading.gif
 share/basercms/lib/Baser/webroot/css/admin/colpick.css
 share/basercms/lib/Baser/webroot/css/admin/contents.css
 share/basercms/lib/Baser/webroot/css/admin/default.css
-share/basercms/lib/Baser/webroot/css/admin/html5reset-1.6.1.css
+share/basercms/lib/Baser/webroot/css/admin/html5reset-1.${OS_VERSION}.css
 share/basercms/lib/Baser/webroot/css/admin/import.css
 share/basercms/lib/Baser/webroot/css/admin/jquery-ui/images/ui-bg_flat_0_aaaaaa_40x100.png
 share/basercms/lib/Baser/webroot/css/admin/jquery-ui/images/ui-bg_flat_75_ffffff_40x100.png

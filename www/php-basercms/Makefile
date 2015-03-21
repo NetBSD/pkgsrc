@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/01/08 13:35:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/21 08:03:09 ryoon Exp $
 
-BASERVER=	3.0.6.1
+BASERVER=	3.0.7
 DISTNAME=	basercms-${BASERVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-http://basercms.net/packages/download/basercms/${BASERVER}
 EXTRACT_SUFX=	.zip
