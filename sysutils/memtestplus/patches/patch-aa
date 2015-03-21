@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2013/12/08 00:35:28 jakllsch Exp $
+$NetBSD: patch-aa,v 1.6 2015/03/21 02:18:39 tnn Exp $
 
 --- Makefile.orig	2013-08-10 02:01:58.000000000 +0000
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2013/12/08 00:35:28 jakllsch Exp $
  
  AS=as -32
  CC=gcc
-@@ -20,8 +20,7 @@ OBJS= head.o reloc.o main.o test.o init.
+@@ -20,22 +20,24 @@ OBJS= head.o reloc.o main.o test.o init.
        smp.o vmem.o random.o
        
  
@@ -21,7 +21,14 @@ $NetBSD: patch-aa,v 1.5 2013/12/08 00:35:28 jakllsch Exp $
  
  # Link it statically once so I know I don't have undefined
  # symbols and then link it dynamically so I have full
-@@ -34,8 +33,11 @@ memtest_shared: $(OBJS) memtest_shared.l
+ # relocation information
+ memtest_shared: $(OBJS) memtest_shared.lds Makefile
+-	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds \
++	$(LD) --allow-multiple-definition --warn-constructors --warn-common -static -T memtest_shared.lds \
+ 	 -o $@ $(OBJS) && \
+-	$(LD) -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
++	$(LD) --allow-multiple-definition -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
+ 
  memtest_shared.bin: memtest_shared
  	objcopy -O binary $< memtest_shared.bin
  
