@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1465 2015/03/21 06:33:41 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1466 2015/03/21 08:03:33 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/php-ja-wordpress to 4.1.1 [ryoon 2015-03-21]
 	Updated www/firefox to 36.0.3 [ryoon 2015-03-21]
 	Updated www/firefox-l10n to 36.0.3 [ryoon 2015-03-21]
+	Updated www/php-basercms to 3.0.7 [ryoon 2015-03-21]
