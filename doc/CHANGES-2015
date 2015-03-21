@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1469 2015/03/21 19:10:49 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.1470 2015/03/21 20:05:35 bsiegert Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2062,3 +2062,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/pth to 2.0.7nb4 [wiz 2015-03-21]
 	Updated devel/tcllib to 1.15nb1 [bsiegert 2015-03-21]
 	Updated audio/vorbis-tools to 1.4.0nb5 [bsiegert 2015-03-21]
+	Updated net/lftp to 4.4.6nb4 [bsiegert 2015-03-21]
