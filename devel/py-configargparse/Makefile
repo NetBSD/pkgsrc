@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/09 09:14:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/21 19:25:23 joerg Exp $
 
 VERSION=	0.9.3
 DISTNAME=	ConfigArgParse-${VERSION}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/bw2/ConfigArgParse
 COMMENT=	Argparse-like with config files or environment variables support
 LICENSE=	mit
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 USE_LANGUAGES=	# none
 
