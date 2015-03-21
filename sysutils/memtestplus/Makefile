@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/06/04 16:07:34 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/21 02:18:39 tnn Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -38,6 +38,10 @@ SUBST_SED.delcr=	-e 's/.$$//g'
 
 .if !empty(CC_VERSION:Mgcc-3.*)
 BUILDLINK_TRANSFORM+=	rm:-fno-stack-protector
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+BROKEN+=	${PKGNAME} does not produce a working binary with clang
 .endif
 
 do-install:
