@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2007/02/18 11:40:10 wiz Exp $
+$NetBSD: patch-ad,v 1.7 2015/03/21 16:18:12 wiz Exp $
+
+Fix syscall names on NetBSD.
 
 --- pth_syscall.c.orig	2006-06-08 17:54:03.000000000 +0000
 +++ pth_syscall.c
@@ -18,7 +20,7 @@ $NetBSD: patch-ad,v 1.6 2007/02/18 11:40:10 wiz Exp $
  
  /* internal data structures */
  #if cpp
-@@ -157,13 +159,18 @@ intern pth_syscall_fct_tab_t pth_syscall
+@@ -157,15 +159,28 @@ intern pth_syscall_fct_tab_t pth_syscall
  #define PTH_SCF_sendto        19
  #define PTH_SCF_pread         20
  #define PTH_SCF_pwrite        21
@@ -26,7 +28,11 @@ $NetBSD: patch-ad,v 1.6 2007/02/18 11:40:10 wiz Exp $
      { "fork",        NULL },
      { "waitpid",     NULL },
      { "system",      NULL },
++#if defined(__NetBSD__) && defined(SYS___nanosleep50)
++    { "__nanosleep50",      NULL },
++#else
      { "nanosleep",   NULL },
++#endif
      { "usleep",      NULL },
      { "sleep",       NULL },
 +#if defined(__NetBSD__)
@@ -35,26 +41,47 @@ $NetBSD: patch-ad,v 1.6 2007/02/18 11:40:10 wiz Exp $
      { "sigprocmask", NULL },
 +#endif
      { "sigwait",     NULL },
++#if defined(__NetBSD__) && defined(SYS___select50)
++    { "__select50",      NULL },
++#else
      { "select",      NULL },
++#endif
      { "poll",        NULL },
-@@ -179,6 +186,7 @@ intern pth_syscall_fct_tab_t pth_syscall
+     { "connect",     NULL },
+     { "accept",      NULL },
+@@ -179,6 +194,11 @@ intern pth_syscall_fct_tab_t pth_syscall
      { "sendto",      NULL },
      { "pread",       NULL },
      { "pwrite",      NULL },
++#if defined(__NetBSD__) && defined(SYS___wait450)
++    { "__wait450",      NULL },
++#else
 +    { "wait4",       NULL },
++#endif
      { NULL,          NULL }
  };
  #endif
-@@ -405,6 +413,8 @@ intern pid_t pth_sc_waitpid(pid_t wpid, 
+@@ -405,6 +425,10 @@ intern pid_t pth_sc_waitpid(pid_t wpid, 
                 (wpid, status, options);
  #if defined(HAVE_SYSCALL) && defined(SYS_waitpid)
      else return (pid_t)syscall(SYS_waitpid, wpid, status, options);
 +#elif defined(HAVE_SYSCALL) && defined(SYS_wait4)
 +    else return (pid_t)syscall(SYS_wait4, wpid, status, options, (struct rusage *) NULL);
++#elif defined(HAVE_SYSCALL) && defined(SYS___wait450)
++    else return (pid_t)syscall(SYS___wait450, wpid, status, options, (struct rusage *) NULL);
  #else
      else PTH_SYSCALL_ERROR(-1, ENOSYS, "waitpid");
  #endif
-@@ -721,5 +731,27 @@ intern ssize_t pth_sc_sendto(int fd, con
+@@ -491,6 +515,8 @@ intern int pth_sc_select(int nfds, fd_se
+     else return (int)syscall(SYS__newselect, nfds, readfds, writefds, exceptfds, timeout);
+ #elif defined(HAVE_SYSCALL) && defined(SYS_select)
+     else return (int)syscall(SYS_select, nfds, readfds, writefds, exceptfds, timeout);
++#elif defined(HAVE_SYSCALL) && defined(SYS___select50)
++    else return (int)syscall(SYS___select50, nfds, readfds, writefds, exceptfds, timeout);
+ #else
+     else PTH_SYSCALL_ERROR(-1, ENOSYS, "accept");
+ #endif
+@@ -721,5 +747,29 @@ intern ssize_t pth_sc_sendto(int fd, con
  #endif
  }
  
@@ -75,6 +102,8 @@ $NetBSD: patch-ad,v 1.6 2007/02/18 11:40:10 wiz Exp $
 +               (wpid, status, options, rusage);
 +#if defined(HAVE_SYSCALL) && defined(SYS_wait4)
 +    else return (pid_t)syscall(SYS_wait4, wpid, status, options, rusage);
++#elif defined(HAVE_SYSCALL) && defined(SYS___wait450)
++    else return (pid_t)syscall(SYS___wait450, wpid, status, options, rusage);
 +#else
 +    else PTH_SYSCALL_ERROR(-1, ENOSYS, "wait4");
 +#endif
