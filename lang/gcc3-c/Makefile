@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 20:11:40 asau Exp $
+# $NetBSD: Makefile,v 1.28 2015/03/21 01:17:08 tnn Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 PKGREVISION=	1
@@ -17,8 +17,10 @@ MAKE_ENV+=	ALL_GCC_CCC=${ALL_GCCXX_C:Q}
 
 .include "../../mk/compiler.mk"
 
-.if empty(CC_VERSION:Mgcc-*)
+.if empty(PKGSRC_COMPILER:Mgcc)
 BUILD_TARGET=	bootstrap
+# make it find it's own libgcc_s.so.1, the system might not provide it
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/gcc
 .endif
 
 post-build:
