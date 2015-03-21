@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/03/14 18:52:30 rodent Exp $
+$NetBSD: MESSAGE,v 1.2 2015/03/21 21:35:07 rodent Exp $
 
   For details on configuring XCache, see:
   http://xcache.lighttpd.net/wiki/InstallingAsPhpExtension
@@ -9,6 +9,6 @@ $NetBSD: MESSAGE,v 1.1 2015/03/14 18:52:30 rodent Exp $
 
   The web-interface files have been installed in:
 
-      ${PREFIX}/share/php-xcache
+      ${PREFIX}/share/${PHP_PKG_PREFIX}-xcache
 
 ===========================================================================

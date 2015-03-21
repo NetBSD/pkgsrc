@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/03/14 18:52:30 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/21 21:35:07 rodent Exp $
 
 MODNAME=	xcache
 PECL_VERSION=	3.2.0
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://xcache.lighttpd.net/pub/Releases/${PECL_VERSION}/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,16 +19,18 @@ USE_TOOLS+=		gawk gm4 gsed pax
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 USE_LIBTOOL=		yes
 
-EGDIR=		share/examples/php-xcache
+EGDIR=		share/examples/${PHP_PKG_PREFIX}-xcache
 CONF_FILES=	${EGDIR}/xcache.ini ${PKG_SYSCONFDIR}/xcache.ini
 
-XCACHE_DIR=		share/php-xcache
+XCACHE_DIR=		share/${PHP_PKG_PREFIX}-xcache
 INSTALLATION_DIRS+=	${EGDIR} ${XCACHE_DIR}/cacher/lang
 INSTALLATION_DIRS+=	${XCACHE_DIR}/cacher/sub ${XCACHE_DIR}/common/lang
 INSTALLATION_DIRS+=	${XCACHE_DIR}/coverager/lang
 INSTALLATION_DIRS+=	${XCACHE_DIR}/diagnosis/lang
 
 PLIST_SRC+=		PLIST
+PLIST_SUBST=		PHP_PKG_PREFIX=${PHP_PKG_PREFIX}
+MESSAGE_SUBST=		PHP_PKG_PREFIX=${PHP_PKG_PREFIX}
 
 .include "options.mk"
 
