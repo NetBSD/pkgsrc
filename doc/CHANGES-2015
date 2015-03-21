@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1462 2015/03/20 16:34:12 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1463 2015/03/21 04:15:47 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2055,3 +2055,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php54 to 5.4.39 [taca 2015-03-20]
 	Updated lang/php55 to 5.5.23 [taca 2015-03-20]
 	Updated lang/php56 to 5.6.7 [taca 2015-03-20]
+	Updated www/php-ja-wordpress to 4.1.1 [ryoon 2015-03-21]
