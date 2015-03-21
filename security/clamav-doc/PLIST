@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/15 00:55:06 taca Exp $
-share/doc/clamav/clamav-mirror-howto.pdf
+@comment $NetBSD: PLIST,v 1.2 2015/03/21 21:51:20 taca Exp $
 share/doc/clamav/clamdoc.pdf
+share/doc/clamav/html/WARNINGS
 share/doc/clamav/html/clam.png
 share/doc/clamav/html/clamdoc.css
 share/doc/clamav/html/clamdoc.html
@@ -10,6 +10,8 @@ share/doc/clamav/html/img1.png
 share/doc/clamav/html/img2.png
 share/doc/clamav/html/img3.png
 share/doc/clamav/html/img4.png
+share/doc/clamav/html/img5.png
+share/doc/clamav/html/img6.png
 share/doc/clamav/html/index.html
 share/doc/clamav/html/next.png
 share/doc/clamav/html/next_g.png
@@ -72,6 +74,12 @@ share/doc/clamav/html/node6.html
 share/doc/clamav/html/node60.html
 share/doc/clamav/html/node61.html
 share/doc/clamav/html/node62.html
+share/doc/clamav/html/node63.html
+share/doc/clamav/html/node64.html
+share/doc/clamav/html/node65.html
+share/doc/clamav/html/node66.html
+share/doc/clamav/html/node67.html
+share/doc/clamav/html/node68.html
 share/doc/clamav/html/node7.html
 share/doc/clamav/html/node8.html
 share/doc/clamav/html/node9.html
