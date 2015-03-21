@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2014/07/28 11:02:11 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2015/03/21 16:24:51 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
-PKG_SUPPORTED_OPTIONS=	gnupg2-gpgsm
+PKG_SUPPORTED_OPTIONS=	gnupg2-gpgsm libusb
 PKG_SUGGESTED_OPTIONS=	gnupg2-gpgsm
 
 # remove after 2014Q3
@@ -26,4 +26,9 @@ CONFIGURE_ARGS+=	--enable-gpgsm
 CONFIGURE_ARGS+=	--with-dirmngr-pgm=${BUILDLINK_PREFIX.dirmngr}/bin/dirmngr
 PLIST_SRC+=	${.CURDIR}/PLIST.gpgsm
 .  include "../../security/dirmngr/buildlink3.mk"
+.endif
+
+.if empty(PKG_OPTIONS:Mlibusb)
+USE_TOOLS+=	pkg-config
+.  include "../../devel/libusb/buildlink3.mk"
 .endif
