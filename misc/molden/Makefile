@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/03/21 19:27:23 joerg Exp $
 
 DISTNAME=	molden4.6
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -33,6 +33,11 @@ do-install:
 			${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/molden/$${d} ; \
 		done ; \
 	done
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-return-type
+.endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
