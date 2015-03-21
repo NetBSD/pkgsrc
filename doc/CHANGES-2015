@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1471 2015/03/21 20:42:48 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.1472 2015/03/21 20:50:56 bsiegert Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2064,3 +2064,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/vorbis-tools to 1.4.0nb5 [bsiegert 2015-03-21]
 	Updated net/lftp to 4.4.6nb4 [bsiegert 2015-03-21]
 	Updated x11/mlterm to 3.4.5nb1 [tsutsui 2015-03-21]
+	Updated net/ntp4 to 4.2.8p1 [bsiegert 2015-03-21]
