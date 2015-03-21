@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/03/08 01:01:52 mef Exp $
+# $NetBSD: Makefile,v 1.18 2015/03/21 17:31:47 joerg Exp $
 #
 
 DISTNAME=	dhisd-5.5
@@ -19,7 +19,7 @@ SUBST_FILES.prefix=	Makefile
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Convert /usr/local to ${PREFIX}
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|;'
-SUBST_SED.prefix+=	-e '/LFLAGS/s|${PREFIX}|${PREFIX}/lib -Wl,-rpath=${PREFIX}|;'
+SUBST_SED.prefix+=	-e '/LFLAGS/s|${PREFIX}|${PREFIX}/lib -Wl,-rpath,${PREFIX}|;'
 
 SUBST_CLASSES+=		varbase
 SUBST_FILES.varbase=	dhisd.h README
