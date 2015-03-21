@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/07/02 22:13:56 marino Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2015/03/21 01:06:49 tnn Exp $
 
 Add DESTDIR support to xmlada
 
@@ -105,7 +105,7 @@ Add DESTDIR support to xmlada
 +	${BSD_INSTALL_DATA} distrib/xmlada_schema.gpr  ${DESTDIR}${prefix}/lib/gnat/
 +	${BSD_INSTALL_DATA} distrib/xmlada_unicode.gpr ${DESTDIR}${prefix}/lib/gnat/
 +	${BSD_INSTALL_SCRIPT} xmlada-config  ${DESTDIR}${bindir}
-+	-$(CP) -r docs/_build/html/* ${DESTDIR}$(datadir)/doc/xmlada/ 2>/dev/null
++	-$(CP) -r docs/_build/html/* ${DESTDIR}$(datadir)/doc/xmlada/
 +	${BSD_INSTALL_DATA} distrib/xmlada_gps.py ${DESTDIR}${datadir}/gps/plug-ins/
  
  ## Do the installation for an explicit target
