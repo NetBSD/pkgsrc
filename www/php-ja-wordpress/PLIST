@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/01 18:44:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/21 04:15:19 ryoon Exp $
 share/doc/ja-wordpress/license.txt
 share/doc/ja-wordpress/readme.html
 share/examples/ja-wordpress/ja-wordpress.conf
 share/examples/ja-wordpress/wp-config-sample.php
 share/ja-wordpress/index.php
-share/ja-wordpress/readme-ja.html
 share/ja-wordpress/wp-activate.php
 share/ja-wordpress/wp-admin/about.php
 share/ja-wordpress/wp-admin/admin-ajax.php
