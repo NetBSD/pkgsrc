@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.16 2015/02/09 13:30:44 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.17 2015/03/21 02:20:52 tnn Exp $
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
@@ -7,20 +7,20 @@ bin/regsvr32
 bin/widl
 ${PLIST.wine32}bin/wine
 ${PLIST.wine64}bin/wine64
-${PLIST.wine32}bin/wineboot
-${PLIST.wine32}bin/winebuild
-${PLIST.wine32}bin/winecfg
-${PLIST.wine32}bin/wineconsole
-${PLIST.wine32}bin/winecpp
-${PLIST.wine32}bin/winedbg
-${PLIST.wine32}bin/winedump
-${PLIST.wine32}bin/winefile
-${PLIST.wine32}bin/wineg++
-${PLIST.wine32}bin/winegcc
-${PLIST.wine32}bin/winemaker
-${PLIST.wine32}bin/winemine
-${PLIST.wine32}bin/winepath
-${PLIST.wine32}bin/wineserver
+bin/wineboot
+bin/winebuild
+bin/winecfg
+bin/wineconsole
+bin/winecpp
+bin/winedbg
+bin/winedump
+bin/winefile
+bin/wineg++
+bin/winegcc
+bin/winemaker
+bin/winemine
+bin/winepath
+bin/wineserver
 bin/wmc
 bin/wrc
 include/wine/debug.h
