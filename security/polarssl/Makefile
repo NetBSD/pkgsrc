@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/11/14 11:21:12 obache Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/21 19:39:44 jperkin Exp $
 #
 
 DISTNAME=		polarssl-1.2.12-gpl
@@ -17,5 +17,7 @@ USE_TOOLS+=		gmake perl
 REPLACE_PERL=		tests/scripts/*.pl
 USE_LANGUAGES=		c
 TEST_TARGET=		check
+
+MAKE_ENV+=		RANLIB=${RANLIB:Q}
 
 .include "../../mk/bsd.pkg.mk"
