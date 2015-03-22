@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2015/02/21 23:35:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.180 2015/03/22 20:06:32 joerg Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		50
@@ -27,6 +27,9 @@ CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 PLIST_VARS+=		x86simd altivec v4l2
+
+# Incompatible with current versions
+CONFIGURE_ARGS+=	--disable-live555
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -121,7 +124,6 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../net/liblive/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
