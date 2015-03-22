@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2013/11/28 10:12:25 martin Exp $
+@comment $NetBSD: PLIST,v 1.55 2015/03/22 20:06:32 joerg Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -191,7 +191,6 @@ lib/vlc/plugins/demux/libdirac_plugin.la
 lib/vlc/plugins/demux/libes_plugin.la
 lib/vlc/plugins/demux/libflacsys_plugin.la
 lib/vlc/plugins/demux/libh264_plugin.la
-lib/vlc/plugins/demux/liblive555_plugin.la
 lib/vlc/plugins/demux/libmjpeg_plugin.la
 lib/vlc/plugins/demux/libmkv_plugin.la
 lib/vlc/plugins/demux/libmp4_plugin.la

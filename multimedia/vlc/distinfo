@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2014/11/17 11:38:10 prlw1 Exp $
+$NetBSD: distinfo,v 1.65 2015/03/22 20:06:32 joerg Exp $
 
 SHA1 (vlc-1.1.13.tar.bz2) = 05bbc7ff427f3b919b29a45ce014caff9ba92648
 RMD160 (vlc-1.1.13.tar.bz2) = c5aa438a9085ddbf28e849df442b75475693290d
@@ -24,6 +24,6 @@ SHA1 (patch-modules_codec_flac.c) = 962783164f505a8b9e5c1be18e162dfdc7917cb3
 SHA1 (patch-modules_misc_freetype.c) = c362cdb0c1223398b14dd1a08525140c646668a7
 SHA1 (patch-modules_misc_rtsp.c) = 586e0228cf21ca2f976451e61e4390278afb6fee
 SHA1 (patch-modules_visualization_projectm.cpp) = 8e3c6ec0d9588f432c5baa75e36c1c2248780b6b
-SHA1 (patch-src_config_file.c) = f6938d98f0f9b14cd13f8020807aac3c818c58d1
+SHA1 (patch-src_config_file.c) = dfec35d5655722e624ed524fc27adc9e72f60552
 SHA1 (patch-src_misc_messages.c) = 855e82349ec80f7d68404da6b40f367776a74327
 SHA1 (patch-src_text_charset.c) = b8dfc376f23655565f671849971293d8527f5e3e
