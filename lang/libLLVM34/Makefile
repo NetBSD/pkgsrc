@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/19 19:14:48 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/22 16:07:59 tnn Exp $
 
 DISTNAME=	llvm-${PKGVERSION_NOREV}.src
 PKGNAME=	libLLVM34-3.4.2
@@ -76,5 +76,6 @@ PLIST_SUBST+=		SOEXT="so"
 
 BUILDLINK_TRANSFORM+=	l:LLVMMipsDesc:LLVMMipsAsmPrinter:LLVMMipsDesc
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
