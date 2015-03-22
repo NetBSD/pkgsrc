@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.31 2015/03/15 16:31:52 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.32 2015/03/22 15:58:08 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -111,3 +111,5 @@ Pullup ticket #4641 - requested by tnn
 multimedia/ffmpeg010: security update
 Pullup ticket #4642 - requested by tnn
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4639 - requested by tron
+net/wireshark: security update
