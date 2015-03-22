@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.9 2015/03/15 23:07:20 joerg Exp $
+$NetBSD: patch-ag,v 1.10 2015/03/22 20:09:09 joerg Exp $
 
 Add --enable-pkgsrc-libtool option
 
@@ -24,8 +24,8 @@ Add --enable-pkgsrc-libtool option
  default_static=no
  default_shared=yes
  
-+SHLIB_RPATH_FLAGS='${defined(SHLIB_RDIRS):? ${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS) :}'
-+PROG_RPATH_FLAGS='${defined(PROG_RPATH):? $(RPATH_FLAG)$(PROG_RPATH) :}'
++SHLIB_RPATH_FLAGS='${COMPILER_RPATH_FLAG}$(SHLIB_RDIRS)'
++PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
 +
  # Set up architecture-specific variables.
  case $krb5_cv_host in
