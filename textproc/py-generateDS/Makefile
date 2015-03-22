@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/03/01 20:03:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/22 20:09:28 joerg Exp $
 #
 
 DISTNAME=	generateDS-2.14a
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-EGG_NAME=	generateDS-${PKGVERSION}0
+EGG_NAME=	generateDS-${PKGVERSION_NOREV}0
 CATEGORIES=	textproc
 MASTER_SITES=	https://pypi.python.org/packages/source/g/generateDS/
 
