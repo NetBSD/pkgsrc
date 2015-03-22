@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2015/03/11 22:53:10 tnn Exp $
+# $NetBSD: Makefile,v 1.136 2015/03/22 05:53:12 tnn Exp $
 
 DISTNAME=	libxml2-2.9.2
 PKGREVISION=	1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-html-subdir=libxml2
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
 CONFIGURE_ARGS+=	--without-python
 
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
