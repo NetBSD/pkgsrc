@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2015/03/10 05:16:28 mef Exp $
+$NetBSD: distinfo,v 1.53 2015/03/22 20:05:28 joerg Exp $
 
 SHA1 (wesnoth-1.12.1.tar.bz2) = 081f0d839ccbd011a672ba7e134431a32eb8791c
 RMD160 (wesnoth-1.12.1.tar.bz2) = 961689d065a5f5c0076673e8028305e3dcc8e5b2
@@ -11,3 +11,4 @@ SHA1 (patch-data_tools_addon__manager_html_py) = 5cacb24b3441916d3e8832f9d9a6e96
 SHA1 (patch-data_tools_castle-clutter_mk_all-castles_sh) = 0c05566e6cf361199031d2104608e5e78e807a9e
 SHA1 (patch-data_tools_unit__tree_helpers_py) = 79de075b33eb7d6d30a8d69635de7f48c19a8c30
 SHA1 (patch-data_tools_wesnoth_campaignserver__client_py) = b7591e23b4c049ee22e080ea20160d82dd631722
+SHA1 (patch-src_game__config__manager.cpp) = 362f017cc8cbdfcaaea4f43fa11c5af0d8b58105
