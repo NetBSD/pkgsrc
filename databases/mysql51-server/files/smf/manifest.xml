@@ -10,7 +10,7 @@
     <dependency name='net' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/network/loopback' />
     </dependency>
-    <method_context project='mysql' working_directory='@MYSQL_DATADIR@'>
+    <method_context working_directory='@MYSQL_DATADIR@'>
       <method_credential user='@MYSQL_USER@' group='@MYSQL_GROUP@' />
       <method_environment>
         <envvar name='LD_PRELOAD_32' value='/usr/lib/extendedFILE.so.1' />

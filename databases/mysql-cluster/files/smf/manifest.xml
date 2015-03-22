@@ -11,7 +11,7 @@
     <dependency name='config' grouping='require_all' restart_on='none' type='path'>
       <service_fmri value='file://@PKG_SYSCONFDIR@/my.cnf'/>
     </dependency>
-    <method_context project='mysql' resource_pool=':default' working_directory='@MYSQL_DATADIR@'>
+    <method_context resource_pool=':default' working_directory='@MYSQL_DATADIR@'>
       <method_credential user='@MYSQL_USER@' group='@MYSQL_GROUP@' limit_privileges=':default' privileges=':default' supp_groups=':default'/>
       <method_environment>
         <envvar name='LD_PRELOAD_32' value='/usr/lib/extendedFILE.so.1' />
