@@ -1,7 +1,16 @@
-$NetBSD: patch-src_config_file.c,v 1.1 2013/09/08 16:28:27 joerg Exp $
+$NetBSD: patch-src_config_file.c,v 1.2 2015/03/22 20:06:32 joerg Exp $
 
---- src/config/file.c.orig	2013-05-15 20:27:58.000000000 +0000
+--- src/config/file.c.orig	2010-04-15 16:56:14.000000000 +0000
 +++ src/config/file.c
+@@ -135,7 +135,7 @@ static FILE *config_OpenConfigFile( vlc_
+ }
+ 
+ 
+-static int strtoi (const char *str)
++static int my_strtoi (const char *str)
+ {
+     char *end;
+     long l;
 @@ -187,8 +187,10 @@ int config_LoadConfigFile( vlc_object_t 
      section[0] = '\0';
  
@@ -13,6 +22,15 @@ $NetBSD: patch-src_config_file.c,v 1.1 2013/09/08 16:28:27 joerg Exp $
  
      vlc_rwlock_wrlock (&config_lock);
      while (fgets (line, 1024, file) != NULL)
+@@ -270,7 +272,7 @@ int config_LoadConfigFile( vlc_object_t 
+                 case CONFIG_ITEM_BOOL:
+                 case CONFIG_ITEM_INTEGER:
+                 {
+-                    long l = strtoi (psz_option_value);
++                    long l = my_strtoi (psz_option_value);
+                     if (errno)
+                         msg_Warn (p_this, "Integer value (%s) for %s: %m",
+                                   psz_option_value, psz_option_name);
 @@ -282,7 +284,7 @@ int config_LoadConfigFile( vlc_object_t 
                  case CONFIG_ITEM_FLOAT:
                      if( !*psz_option_value )
