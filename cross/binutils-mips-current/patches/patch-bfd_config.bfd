@@ -1,15 +1,15 @@
-$NetBSD: patch-bfd_config.bfd,v 1.1 2014/07/03 20:31:16 martin Exp $
+$NetBSD: patch-bfd_config.bfd,v 1.2 2015/03/23 16:01:28 martin Exp $
 
 Add support for a few missing abi variants
 
---- bfd/config.bfd.orig	2013-11-04 16:33:37.000000000 +0100
-+++ bfd/config.bfd	2014-07-03 22:06:48.000000000 +0200
-@@ -960,7 +960,7 @@
+--- bfd/config.bfd.orig	2014-10-14 09:32:02.000000000 +0200
++++ bfd/config.bfd	2015-03-23 14:42:17.000000000 +0100
+@@ -969,7 +969,7 @@
  #ifdef BFD64
    mips*el-*-netbsd*)
-     targ_defvec=bfd_elf32_tradlittlemips_vec
--    targ_selvecs="bfd_elf32_tradbigmips_vec bfd_elf64_tradbigmips_vec bfd_elf64_tradlittlemips_vec ecoff_little_vec ecoff_big_vec"
-+    targ_selvecs="bfd_elf32_ntradlittlemips_vec bfd_elf32_tradbigmips_vec bfd_elf32_ntradbigmips_vec bfd_elf64_tradbigmips_vec bfd_elf64_tradlittlemips_vec ecoff_little_vec ecoff_big_vec"
+     targ_defvec=mips_elf32_trad_le_vec
+-    targ_selvecs="mips_elf32_trad_be_vec mips_elf64_trad_be_vec mips_elf64_trad_le_vec mips_ecoff_le_vec mips_ecoff_be_vec"
++    targ_selvecs="mips_elf32_ntrad_le_vec mips_elf32_ntrad_be_vec mips_elf32_trad_be_vec mips_elf64_trad_be_vec mips_elf64_trad_le_vec mips_ecoff_le_vec mips_ecoff_be_vec"
      ;;
    mips*-*-netbsd*)
-     targ_defvec=bfd_elf32_tradbigmips_vec
+     targ_defvec=mips_elf32_trad_be_vec
