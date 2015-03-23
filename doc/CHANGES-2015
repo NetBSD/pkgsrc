@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1477 2015/03/22 17:26:05 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.1478 2015/03/23 09:16:39 nros Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2070,3 +2070,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 36.0.4 [ryoon 2015-03-22]
 	Updated sysutils/file to 5.22 [bsiegert 2015-03-22]
 	Updated lang/lua51 to 5.1.5nb2 [bsiegert 2015-03-22]
+	Updated security/libssh2 to 1.5.0 [nros 2015-03-23]
