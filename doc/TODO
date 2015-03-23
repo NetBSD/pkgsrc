@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14247 2015/03/22 20:17:04 wiz Exp $
+$NetBSD: TODO,v 1.14248 2015/03/23 09:54:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,6 +383,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aspell-nb-2.0.10
 	o asymptote-2.32
 	o aterm-1.0.1
+	o atk-2.16.0
 	o aubio-0.4.0
 	o audacity-2.0.5 [wip (audacity-devel)]
 	o autoconvert-0.3.16
@@ -412,6 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.22.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -638,6 +640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
+	o gtk3-3.16.0
 	o gtkglarea-2.1.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtl-3.6
@@ -850,7 +853,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GTop-0.18
 	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
+	o p5-JSON-MaybeXS-1.003004 [pkg/49771]
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
+	o p5-Sereal-Decoder-3.005 [pkg/49772]
+	o p5-Sereal-Encoder-3.005 [pkg/49773]
+	o p5-Unicode-Collate-1.12 [pkg/49774]
 	o p5-gtk2-1.300
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
