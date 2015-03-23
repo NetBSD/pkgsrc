@@ -1,0 +1,66 @@
+$NetBSD: patch-lib_Makefile,v 1.1 2015/03/23 22:24:11 fhajny Exp $
+
+Make portable, use pkgsrc install scripts.
+--- lib/Makefile.orig	2014-12-19 08:51:32.000000000 +0000
++++ lib/Makefile
+@@ -33,9 +33,9 @@
+ 
+ # Version numbers
+ VERSION ?= 126
+-LIBVER_MAJOR=`sed -n '/define LZ4_VERSION_MAJOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < lz4.h`
+-LIBVER_MINOR=`sed -n '/define LZ4_VERSION_MINOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < lz4.h`
+-LIBVER_PATCH=`sed -n '/define LZ4_VERSION_RELEASE/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < lz4.h`
++LIBVER_MAJOR=`awk '$$2=="LZ4_VERSION_MAJOR" {print $$3}' < lz4.h`
++LIBVER_MINOR=`awk '$$2=="LZ4_VERSION_MINOR" {print $$3}' < lz4.h`
++LIBVER_PATCH=`awk '$$2=="LZ4_VERSION_RELEASE" {print $$3}' < lz4.h`
+ LIBVER=$(LIBVER_MAJOR).$(LIBVER_MINOR).$(LIBVER_PATCH)
+ 
+ DESTDIR?=
+@@ -80,28 +80,24 @@ clean:
+ 	@echo Cleaning library completed
+ 
+ 
+-#------------------------------------------------------------------------
+-#make install is validated only for Linux, OSX, kFreeBSD and Hurd targets
+-ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU))
+-
+ liblz4.pc: liblz4.pc.in Makefile
+ 	@echo creating pkgconfig
+-	@sed -e 's|@PREFIX@|$(PREFIX)|' \
+-            -e 's|@LIBDIR@|$(LIBDIR)|' \
+-            -e 's|@INCLUDEDIR@|$(INCLUDEDIR)|' \
+-            -e 's|@VERSION@|$(VERSION)|' \
++	@sed -e 's|@PREFIX@|$(PREFIX)|g' \
++            -e 's|@LIBDIR@|$(LIBDIR)|g' \
++            -e 's|@INCLUDEDIR@|$(INCLUDEDIR)|g' \
++            -e 's|@VERSION@|$(VERSION)|g' \
+              $< >$@
+ 
+ install: liblz4 liblz4.pc
+-	@install -d -m 755 $(DESTDIR)$(LIBDIR)/pkgconfig/ $(DESTDIR)$(INCLUDEDIR)/
+-	@install -m 755 liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(LIBDIR)/liblz4.$(SHARED_EXT_VER)
+-	@cp -a liblz4.$(SHARED_EXT_MAJOR) $(DESTDIR)$(LIBDIR)
+-	@cp -a liblz4.$(SHARED_EXT) $(DESTDIR)$(LIBDIR)
+-	@cp -a liblz4.pc $(DESTDIR)$(LIBDIR)/pkgconfig/
+-	@install -m 644 liblz4.a $(DESTDIR)$(LIBDIR)/liblz4.a
+-	@install -m 644 lz4.h $(DESTDIR)$(INCLUDEDIR)/lz4.h
+-	@install -m 644 lz4hc.h $(DESTDIR)$(INCLUDEDIR)/lz4hc.h
+-	@install -m 644 lz4frame.h $(DESTDIR)$(INCLUDEDIR)/lz4frame.h
++	$(BSD_INSTALL_DATA_DIR) -d -m 755 $(DESTDIR)$(LIBDIR)/pkgconfig/ $(DESTDIR)$(INCLUDEDIR)/
++	$(BSD_INSTALL_LIB) -m 755 liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(LIBDIR)/liblz4.$(SHARED_EXT_VER)
++	@ln -sf liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(LIBDIR)/liblz4.$(SHARED_EXT_MAJOR)
++	@ln -sf liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(LIBDIR)/liblz4.$(SHARED_EXT)
++	$(BSD_INSTALL_DATA) liblz4.pc $(DESTDIR)$(LIBDIR)/pkgconfig/
++	$(BSD_INSTALL_LIB) -m 644 liblz4.a $(DESTDIR)$(LIBDIR)/liblz4.a
++	$(BSD_INSTALL_DATA) -m 644 lz4.h $(DESTDIR)$(INCLUDEDIR)/lz4.h
++	$(BSD_INSTALL_DATA) -m 644 lz4hc.h $(DESTDIR)$(INCLUDEDIR)/lz4hc.h
++	$(BSD_INSTALL_DATA) -m 644 lz4frame.h $(DESTDIR)$(INCLUDEDIR)/lz4frame.h
+ 	@echo lz4 static and shared library installed
+ 
+ uninstall:
+@@ -113,5 +109,3 @@ uninstall:
+ 	@[ -f $(DESTDIR)$(INCLUDEDIR)/lz4.h ] && rm -f $(DESTDIR)$(INCLUDEDIR)/lz4.h
+ 	@[ -f $(DESTDIR)$(INCLUDEDIR)/lz4hc.h ] && rm -f $(DESTDIR)$(INCLUDEDIR)/lz4hc.h
+ 	@echo lz4 libraries successfully uninstalled
+-
+-endif
