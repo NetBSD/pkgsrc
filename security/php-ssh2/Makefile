@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/10/01 12:13:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/23 09:24:50 nros Exp $
 #
 
 MODNAME=		ssh2
 PECL_VERSION=		0.12
+PKGREVISION=		1
 CATEGORIES+=		security
 
 MAINTAINER=		filip@joyent.com
