@@ -1,15 +1,16 @@
-$NetBSD: patch-programs_frametest.c,v 1.2 2014/12/12 11:20:56 fhajny Exp $
+$NetBSD: patch-programs_frametest.c,v 1.3 2015/03/23 22:24:11 fhajny Exp $
 
---- programs/frametest.c.orig	2014-11-06 18:39:42.000000000 +0000
+Make portable.
+--- programs/frametest.c.orig	2014-12-19 08:51:32.000000000 +0000
 +++ programs/frametest.c
 @@ -42,7 +42,7 @@
  **************************************/
- #include <stdlib.h>
+ #include <stdlib.h>     // free
  #include <stdio.h>      // fgets, sscanf
 -#include <sys/timeb.h>  // timeb
 +#include <sys/time.h>  // timeb
  #include <string.h>     // strcmp
- #include "lz4frame.h"
+ #include "lz4frame_static.h"
  #include "xxhash.h"     // XXH64
 @@ -113,11 +113,9 @@ static U32 pause = 0;
  *********************************************************/
