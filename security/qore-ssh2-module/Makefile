@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 16:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/23 09:24:50 nros Exp $
 
 DISTNAME=	qore-ssh2-module-0.9.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
