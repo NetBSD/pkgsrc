@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14249 2015/03/23 14:49:53 taca Exp $
+$NetBSD: TODO,v 1.14250 2015/03/23 16:49:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -301,6 +301,22 @@ Suggested new packages
 	Trinity
 	https://www.trinitydesktop.org/
 	KDE3 successor
+
+	Phabricator
+	http://phabricator.org/
+	Software engineering platform.
+
+	Geogebra
+	http://www.geogebra.org/
+	Simple and powerful geometry application
+
+	Baikal
+	http://baikal-server.com/
+	Lightweight CalDAV and CardDAV server
+
+	Gitlab
+	https://gitlab.com/gitlab-org/gitlab-ce
+	Git repository management tool with code review and tracker/wiki
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
