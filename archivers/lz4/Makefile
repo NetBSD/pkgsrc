@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/12/12 11:20:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/23 22:24:11 fhajny Exp $
 
-DISTNAME=	lz4-r124
+DISTNAME=	lz4-r127
 PKGNAME=	${DISTNAME:S/-r/-/}
 CATEGORIES=	archivers
 MASTER_SITES=	-https://github.com/Cyan4973/lz4/archive/${DISTNAME:S/lz4-//}${EXTRACT_SUFX}
