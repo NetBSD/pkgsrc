@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.46 2014/09/23 13:13:49 jperkin Exp $
+# $NetBSD: options.mk,v 1.47 2015/03/23 10:15:46 jperkin Exp $
 
 # Global and legacy options
 
@@ -46,8 +46,9 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .  include "../../mk/curses.buildlink3.mk"
 .  if ${OPSYS} == "SunOS"
 BUILDLINK_PASSTHRU_DIRS+=	/usr/xpg4
-CONFIGURE_ARGS+=		--with-curses=/usr/xpg4
-LDFLAGS+=			${COMPILER_RPATH_FLAG}/usr/xpg4/lib
+CONFIGURE_ARGS+=	--with-curses=/usr/xpg4
+LDFLAGS+=		-L/usr/xpg4/lib${LIBABISUFFIX}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
 .  endif
 .endif
 
