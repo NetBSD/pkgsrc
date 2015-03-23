@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2014/07/03 20:31:16 martin Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/23 16:01:28 martin Exp $
 #
 # GNU binutils snapshot, configured to target MIPS (NetBSD/playstation2)
 
-BINUTILS_VER=		2.24
+BINUTILS_VER=		2.25
 
 DISTNAME=		binutils-${BINUTILS_VER}
-PKGREVISION=		3
+#PKGREVISION=		1
 PKGNAME=		binutils-mips-${BINUTILS_VER}
 CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
@@ -19,7 +19,7 @@ LICENSE=		gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-USE_TOOLS+=		gm4 pod2man yacc
+USE_TOOLS+=		gm4 pod2man yacc gmake
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
