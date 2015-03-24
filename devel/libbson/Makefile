@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/03/12 15:25:24 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/24 13:21:43 fhajny Exp $
 
-DISTNAME=	libbson-1.0.2
+DISTNAME=	libbson-1.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://github.com/mongodb/libbson/releases/download/${PKGVERSION_NOREV}/
 
