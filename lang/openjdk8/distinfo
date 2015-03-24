@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/03/06 12:11:54 tnn Exp $
+$NetBSD: distinfo,v 1.16 2015/03/24 14:24:38 joerg Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -54,6 +54,7 @@ SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba43
 SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = dcd83b65a7d74e153a3e1c44f8c7980827ec20c7
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = e87224f8b67dc78fa411d30beff82ce5ccbb4cc5
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_orderAccess__bsd__zero.inline.hpp) = 6311d68db9064afc470f1d9fd37e63011899659a
+SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp) = 4fa018be66fad39aa0a922dfb86c79661a7379f2
 SHA1 (patch-hotspot_src_os_bsd_vm_osThread__bsd.cpp) = c34887b4bf0873c70a44adaaa9be38614603e1d4
 SHA1 (patch-hotspot_src_os_posix_vm_os__posix.cpp) = f38d3ea8002bc8c58d1cf05e70424858dabd2991
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = aacb4e03f62f1a6f9b38de39a966c318b70b1293
