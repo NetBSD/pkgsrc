@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1481 2015/03/23 22:24:24 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1482 2015/03/24 12:15:31 fhajny Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2074,3 +2074,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated cross/binutils-mips-current to 2.25 [martin 2015-03-23]
 	Updated cross/gcc-mips-current to 4.9.2 [martin 2015-03-23]
 	Updated archivers/lz4 to 127 [fhajny 2015-03-23]
+	Updated net/rabbitmq to 3.5.0 [fhajny 2015-03-24]
