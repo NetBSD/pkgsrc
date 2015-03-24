@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/15 14:14:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/24 15:04:11 ryoon Exp $
 bin/bldlvlck
 bin/cckd2ckd
 bin/cckdcdsk
@@ -50,6 +50,7 @@ lib/libhercd.la
 lib/libhercs.la
 lib/libherct.la
 lib/libhercu.la
+lib/libsoftfloat.la
 man/man1/cckddiag.1
 man/man1/dasdseq.1
 man/man1/hercules.1
