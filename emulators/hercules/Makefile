@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/03/24 15:04:11 ryoon Exp $
 
-DISTNAME=		hercules-3.09
-PKGREVISION=		1
+DISTNAME=		hercules-3.11
 CATEGORIES=		emulators
 MASTER_SITES=		http://downloads.hercules-390.eu/
 
