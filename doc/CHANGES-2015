@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1487 2015/03/24 14:35:49 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1488 2015/03/24 15:05:12 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2080,3 +2080,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mongo-c-driver to 1.1.2 [fhajny 2015-03-24]
 	Updated devel/lua-filesystem to 1.6.3 [fhajny 2015-03-24]
 	Updated emulators/aranym to 1.0.2 [ryoon 2015-03-24]
+	Updated emulators/hercules to 3.11 [ryoon 2015-03-24]
