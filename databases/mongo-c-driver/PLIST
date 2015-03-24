@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/02 10:23:23 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/03/24 13:22:09 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-array-private.h
+include/libmongoc-1.0/mongoc-b64-private.h
 include/libmongoc-1.0/mongoc-buffer-private.h
 include/libmongoc-1.0/mongoc-bulk-operation-private.h
 include/libmongoc-1.0/mongoc-bulk-operation.h
+include/libmongoc-1.0/mongoc-client-pool-private.h
 include/libmongoc-1.0/mongoc-client-pool.h
 include/libmongoc-1.0/mongoc-client-private.h
 include/libmongoc-1.0/mongoc-client.h
@@ -16,6 +18,7 @@ include/libmongoc-1.0/mongoc-counters.defs
 include/libmongoc-1.0/mongoc-cursor-array-private.h
 include/libmongoc-1.0/mongoc-cursor-cursorid-private.h
 include/libmongoc-1.0/mongoc-cursor-private.h
+include/libmongoc-1.0/mongoc-cursor-transform-private.h
 include/libmongoc-1.0/mongoc-cursor.h
 include/libmongoc-1.0/mongoc-database-private.h
 include/libmongoc-1.0/mongoc-database.h
@@ -46,18 +49,18 @@ include/libmongoc-1.0/mongoc-read-prefs-private.h
 include/libmongoc-1.0/mongoc-read-prefs.h
 include/libmongoc-1.0/mongoc-rpc-private.h
 include/libmongoc-1.0/mongoc-sasl-private.h
+include/libmongoc-1.0/mongoc-scram-private.h
 include/libmongoc-1.0/mongoc-socket.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-ssl.h
 include/libmongoc-1.0/mongoc-ssl-private.h
 include/libmongoc-1.0/mongoc-stream-buffered.h
 include/libmongoc-1.0/mongoc-stream-file.h
 include/libmongoc-1.0/mongoc-stream-gridfs.h
 include/libmongoc-1.0/mongoc-stream-private.h
 include/libmongoc-1.0/mongoc-stream-socket.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls.h
 include/libmongoc-1.0/mongoc-stream.h
 include/libmongoc-1.0/mongoc-thread-private.h
 include/libmongoc-1.0/mongoc-trace.h
+include/libmongoc-1.0/mongoc-uri-private.h
 include/libmongoc-1.0/mongoc-uri.h
 include/libmongoc-1.0/mongoc-util-private.h
 include/libmongoc-1.0/mongoc-version.h
@@ -78,7 +81,6 @@ lib/libmongoc-1.0.la
 lib/libmongoc-priv.la
 lib/pkgconfig/libmongoc-1.0.pc
 lib/pkgconfig/libmongoc-priv.pc
-${PLIST.ssl}lib/pkgconfig/libmongoc-ssl-1.0.pc
 man/man3/mongoc_bulk_operation_delete.3
 man/man3/mongoc_bulk_operation_delete_one.3
 man/man3/mongoc_bulk_operation_destroy.3
@@ -122,6 +124,7 @@ man/man3/mongoc_collection_aggregate.3
 man/man3/mongoc_collection_command.3
 man/man3/mongoc_collection_command_simple.3
 man/man3/mongoc_collection_count.3
+man/man3/mongoc_collection_count_with_opts.3
 man/man3/mongoc_collection_create_bulk_operation.3
 man/man3/mongoc_collection_create_index.3
 man/man3/mongoc_collection_delete.3
@@ -131,6 +134,7 @@ man/man3/mongoc_collection_drop_index.3
 man/man3/mongoc_collection_ensure_index.3
 man/man3/mongoc_collection_find.3
 man/man3/mongoc_collection_find_and_modify.3
+man/man3/mongoc_collection_find_indexes.3
 man/man3/mongoc_collection_get_last_error.3
 man/man3/mongoc_collection_get_name.3
 man/man3/mongoc_collection_get_read_prefs.3
@@ -162,6 +166,7 @@ man/man3/mongoc_database_command_simple.3
 man/man3/mongoc_database_create_collection.3
 man/man3/mongoc_database_destroy.3
 man/man3/mongoc_database_drop.3
+man/man3/mongoc_database_find_collections.3
 man/man3/mongoc_database_get_collection.3
 man/man3/mongoc_database_get_collection_names.3
 man/man3/mongoc_database_get_name.3
@@ -221,6 +226,10 @@ man/man3/mongoc_matcher_match.3
 man/man3/mongoc_matcher_new.3
 man/man3/mongoc_matcher_t.3
 man/man3/mongoc_query_flags_t.3
+man/man3/mongoc_rand.3
+man/man3/mongoc_rand_add.3
+man/man3/mongoc_rand_seed.3
+man/man3/mongoc_rand_status.3
 man/man3/mongoc_read_mode_t.3
 man/man3/mongoc_read_prefs_add_tag.3
 man/man3/mongoc_read_prefs_copy.3
@@ -276,6 +285,7 @@ man/man3/mongoc_stream_tls_do_handshake.3
 man/man3/mongoc_stream_tls_new.3
 man/man3/mongoc_stream_tls_t.3
 man/man3/mongoc_stream_uncork.3
+man/man3/mongoc_stream_write.3
 man/man3/mongoc_stream_writev.3
 man/man3/mongoc_update_flags_t.3
 man/man3/mongoc_uri_copy.3
