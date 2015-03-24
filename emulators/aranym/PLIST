@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/05/23 05:03:26 dholland Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/03/24 14:34:57 ryoon Exp $
 bin/aranym
 ${PLIST.aratapif}bin/aratapif
 man/man1/aranym-jit.1
@@ -12,6 +12,7 @@ share/aranym/atari/mmusetup.cnf
 share/aranym/atari/network/README
 share/aranym/atari/network/eth0-config.sh
 share/aranym/atari/newdesk.inf
+share/aranym/atari/nfosmesa/README
 share/aranym/atari/sound/README
 share/aranym/atari/tools/README
 share/aranym/atari/tools/pc101us.kbd.bz2

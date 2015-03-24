@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.2 2012/10/06 12:46:12 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2015/03/24 14:34:57 ryoon Exp $
 
---- configure.ac.orig	2012-07-27 18:51:58.000000000 +0000
+--- configure.ac.orig	2014-10-17 14:09:28.000000000 +0000
 +++ configure.ac
-@@ -277,10 +277,13 @@ AC_CHECK_HEADERS(termios.h termio.h allo
+@@ -286,10 +286,13 @@ AC_CHECK_HEADERS(termios.h termio.h allo
  AC_CHECK_HEADERS(sys/types.h sys/stat.h sys/vfs.h utime.h sys/param.h)
- AC_CHECK_HEADERS(sys/mount.h types.h stat.h)
+ AC_CHECK_HEADERS(sys/mount.h types.h stat.h ext2fs/ext2_fs.h)
  AC_CHECK_HEADERS(sys/socket.h)
 -AC_CHECK_HEADERS(linux/if.h linux/if_tun.h net/if.h net/if_tun.h, [], [], [
 +AC_CHECK_HEADERS(linux/if.h linux/if_tun.h net/if.h net/if_tun.h net/if_tap.h, [], [], [
@@ -17,7 +17,7 @@ $NetBSD: patch-configure.ac,v 1.2 2012/10/06 12:46:12 ryoon Exp $
  ])
  AC_CHECK_HEADERS(net/bpf.h)
  
-@@ -437,8 +440,14 @@ AC_CACHE_CHECK([whether TUN/TAP is suppo
+@@ -475,8 +478,14 @@ AC_CACHE_CHECK([whether TUN/TAP is suppo
      #include <linux/if_tun.h>
      #endif
      #if defined(HAVE_NET_IF_H) && defined(HAVE_NET_IF_TUN_H)
@@ -32,7 +32,7 @@ $NetBSD: patch-configure.ac,v 1.2 2012/10/06 12:46:12 ryoon Exp $
      #endif
    ], [
      struct ifreq ifr;
-@@ -1032,7 +1041,7 @@ if [[ "x$WANT_EXSIGSEGV" = "xyes" ]]; th
+@@ -1134,7 +1143,7 @@ if [[ "x$WANT_EXSIGSEGV" = "xyes" ]]; th
          AC_MSG_ERROR([Sorry, extended segfault handler not supported on your platform])
        fi
        ;;
@@ -41,12 +41,12 @@ $NetBSD: patch-configure.ac,v 1.2 2012/10/06 12:46:12 ryoon Exp $
        if [[ "x$HAVE_I386" = "xyes" ]]; then
          SYSSRCS="$SYSSRCS Unix/xbsd/sigsegv_xbsd.cpp"
        else
-@@ -1437,7 +1446,7 @@ fi
- dnl Check for SDL
- SDL_CFLAGS=
+@@ -1645,7 +1654,7 @@ SDL_CFLAGS=
  SDL_LIBS=
--if test "x$OS_TYPE" == "xdarwin" -a "x$WITH_FINK" = "xno"; then
-+if test "x$OS_TYPE" = "xdarwin" -a "x$WITH_FINK" = "xno"; then
+ no_sdl=yes
+ no_sdl2=yes
+-if test "$OS_TYPE" == darwin -a "$WITH_FINK" = no; then
++if test "$OS_TYPE" = darwin -a "$WITH_FINK" = no; then
  	ARANYM_CHECK_FRAMEWORK(SDL, [])
- fi
- if test "x$have_framework_SDL" = "xyes" ; then
+ 	if test "$have_framework_SDL" = yes ; then
+ 		ARANYM_CHECK_FRAMEWORK_LOCATION(SDL)
