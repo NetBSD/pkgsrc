@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2015/03/21 16:24:51 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2015/03/24 08:36:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
 PKG_SUPPORTED_OPTIONS=	gnupg2-gpgsm libusb
@@ -28,7 +28,7 @@ PLIST_SRC+=	${.CURDIR}/PLIST.gpgsm
 .  include "../../security/dirmngr/buildlink3.mk"
 .endif
 
-.if empty(PKG_OPTIONS:Mlibusb)
+.if !empty(PKG_OPTIONS:Mlibusb)
 USE_TOOLS+=	pkg-config
 .  include "../../devel/libusb/buildlink3.mk"
 .endif
