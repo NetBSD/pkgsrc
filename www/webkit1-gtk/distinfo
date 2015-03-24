@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2014/08/03 22:07:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/03/24 14:30:29 joerg Exp $
 
 SHA1 (webkitgtk-1.10.2.tar.xz) = 733ca23157eb8dd072d57becf325799c00bde630
 RMD160 (webkitgtk-1.10.2.tar.xz) = 91e6b8bcd4bb8234271dd6c6ebdba63dd1c0840e
@@ -20,6 +20,7 @@ SHA1 (patch-Source_WebCore_Modules_webaudio_AudioContext.h) = 121b67efd25af6982f
 SHA1 (patch-Source_WebCore_Modules_webaudio_AudioNode.h) = 1d22889087504d8fd42f38f72bde777850a4e767
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = b331ad70a9c6a133c854b65452bad4ae3558e2e6
 SHA1 (patch-Source_WebCore_editing_Editor.h) = 43562577dd6432a86fd8ee0a1e7bb0db31f07d2d
+SHA1 (patch-Source_WebCore_platform_graphics_filters_arm_FELightingNEON.cpp) = 3bad001958c4af5447f95f15c75e4121c6d690e3
 SHA1 (patch-Source_WebCore_platform_gtk_FileSystemGtk.cpp) = 76e6e3e662edcfb7e327f2e475709a105d146e50
 SHA1 (patch-Source_WebCore_platform_network_DNSResolveQueue.h) = ba2960eeda95189a85744112b2533e66599eb4b7
 SHA1 (patch-Source_WebCore_platform_sql_SQLiteDatabase.cpp) = 0f33b188b242166584d5725060c5c430a819be61
