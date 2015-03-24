@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1485 2015/03/24 13:22:20 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1486 2015/03/24 13:36:06 fhajny Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/sphinxsearch to 2.2.8 [fhajny 2015-03-24]
 	Updated devel/libbson to 1.1.2 [fhajny 2015-03-24]
 	Updated databases/mongo-c-driver to 1.1.2 [fhajny 2015-03-24]
+	Updated devel/lua-filesystem to 1.6.3 [fhajny 2015-03-24]
