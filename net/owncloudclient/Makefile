@@ -1,39 +1,31 @@
-# $NetBSD: Makefile,v 1.12 2014/12/31 08:41:43 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2015/03/25 20:12:04 ryoon Exp $
 
-DISTNAME=	mirall-1.7.1
+DISTNAME=	owncloudclient-1.8.0
 CATEGORIES=	net
-MASTER_SITES=	http://download.owncloud.com/desktop/stable/
+MASTER_SITES=	https://download.owncloud.com/desktop/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://owncloud.org/sync-clients/
-COMMENT=	Graphical file synchronization program for OwnCloud
+HOMEPAGE=	https://owncloud.com/
+COMMENT=	Synchronization program for ownCloud
 LICENSE=	gnu-gpl-v2
 
 # Do not use libocsync.so from net/ocsync.
 CONFLICTS=	ocsync-[0-9]*
-
-USE_LANGUAGES=	c c++
+CONFLICTS=	mirall-[0-9]*
 
 USE_CMAKE=	yes
-OBJDIR=		../build
-CONFIGURE_DIRS=	${OBJDIR}
-CMAKE_ARG_PATH=	../${DISTNAME}
-
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+USE_LANGUAGES=	c c++
 
 # I have no idea about CMake...
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/owncloud
 
 ETCDIR=			etc/ownCloud
 MAKE_DIRS+=		${ETCDIR}
-EGDIR=		${PREFIX}/share/examples/mirall
-INSTALLATION_DIRS=	${ETCDIR} share/examples/mirall
-CONF_FILES+=	${EGDIR}/sync-exclude.lst \
-		${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst
-
-pre-configure:
-	cd ${WRKSRC} && mkdir ${OBJDIR}
+EGDIR=			${PREFIX}/share/examples/owncloud
+INSTALLATION_DIRS=	${ETCDIR} share/examples/owncloud
+CONF_FILES+=		${EGDIR}/sync-exclude.lst \
+			${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst
 
 post-install:
 	mv ${DESTDIR}${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst \

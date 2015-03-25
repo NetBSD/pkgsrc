@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2014/12/30 22:11:44 ryoon Exp $
-
-SHA1 (mirall-1.7.1.tar.bz2) = 8b9f85033032747293b1ee91da1307ad2310b0d3
-RMD160 (mirall-1.7.1.tar.bz2) = 2766e6655b9596156085460bb67c9f99c1e07348
-Size (mirall-1.7.1.tar.bz2) = 12668153 bytes
-SHA1 (patch-src_CMakeLists.txt) = 4ca3edba3f94fdf00d817035fde8354794adbb0c
-SHA1 (patch-src_mirall_utility.cpp) = 8387a78fc46d1f2fe4de4f0633670091b031f7a9
