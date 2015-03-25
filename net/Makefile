@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1065 2015/03/10 21:28:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1066 2015/03/25 20:12:03 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -303,7 +303,6 @@ SUBDIR+=	microdc2
 SUBDIR+=	mikutter
 SUBDIR+=	mimms
 SUBDIR+=	miniupnpd
-SUBDIR+=	mirall
 SUBDIR+=	miredo
 SUBDIR+=	mirror
 SUBDIR+=	mitmproxy
@@ -400,6 +399,7 @@ SUBDIR+=	openvpn-nagios
 SUBDIR+=	openwbem
 SUBDIR+=	ortp
 SUBDIR+=	overnet
+SUBDIR+=	owncloudclient
 SUBDIR+=	p5-Cisco-Abbrev
 SUBDIR+=	p5-DNS-LDNS
 SUBDIR+=	p5-DNS-ZoneParse
