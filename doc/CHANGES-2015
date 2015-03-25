@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1493 2015/03/25 12:45:26 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1494 2015/03/25 19:48:39 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2086,3 +2086,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qt4-libs to 4.8.6nb4 [bsiegert 2015-03-24]
 	Updated comms/deforaos-phone to 0.4.2 [khorben 2015-03-25]
 	Updated devel/quilt to 0.64 [ryoon 2015-03-25]
+	Removed chat/navi2ch [ryoon 2015-03-25]
