@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/30 04:21:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/25 12:45:02 ryoon Exp $
 bin/guards
 bin/quilt
 man/man1/guards.1
@@ -19,6 +19,7 @@ share/quilt/applied
 share/quilt/compat/cp
 share/quilt/compat/date
 share/quilt/compat/getopt
+share/quilt/compat/md5sum
 share/quilt/compat/patch
 share/quilt/compat/sed
 share/quilt/compat/sendmail
@@ -46,7 +47,7 @@ share/quilt/revert
 share/quilt/scripts/backup-files
 share/quilt/scripts/dependency-graph
 share/quilt/scripts/edmail
-share/quilt/scripts/inspect
+share/quilt/scripts/inspect-wrapper
 share/quilt/scripts/patchfns
 share/quilt/scripts/remove-trailing-ws
 share/quilt/scripts/utilfns
@@ -56,4 +57,3 @@ share/quilt/snapshot
 share/quilt/top
 share/quilt/unapplied
 share/quilt/upgrade
-share/quilt/wrapper/patch
