@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2015/03/21 00:36:08 tnn Exp $
-
-SHA1 (navi2ch-1.8.4.tar.gz) = fd2c31d6a318fd3b7ef9a4324f101467341d9b5c
-RMD160 (navi2ch-1.8.4.tar.gz) = 12f5619dbac7ce00837e2333a2e7a7e1d7f1d462
-Size (navi2ch-1.8.4.tar.gz) = 470499 bytes
-SHA1 (patch-elisp-comp) = 7abe4599c9c82c1c7cb65051d03c1966300ae9d9
