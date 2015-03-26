@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2011/02/23 08:31:13 adam Exp $
+$NetBSD: distinfo,v 1.15 2015/03/26 21:02:31 bsiegert Exp $
 
-SHA1 (xerces-c-3.1.1.tar.gz) = 177ec838c5119df57ec77eddec9a29f7e754c8b2
-RMD160 (xerces-c-3.1.1.tar.gz) = bbb7ceac470db901d77926cdf21a254df0d8d1db
-Size (xerces-c-3.1.1.tar.gz) = 5051308 bytes
+SHA1 (xerces-c-3.1.2.tar.gz) = 3f9ecc4956df069c1d95b885fc687eb4e474a4ad
+RMD160 (xerces-c-3.1.2.tar.gz) = d7ff0e69be8805ec0efa792aafd5d3e513397ded
+Size (xerces-c-3.1.2.tar.gz) = 6959894 bytes
