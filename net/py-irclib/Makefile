@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/02 15:54:17 imil Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/26 15:57:12 joerg Exp $
 #
 
 PYIRCVERS=	11.1.1
@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-irclib-${PYIRCVERS}
 CATEGORIES=	net python
 MASTER_SITES=	http://pypi.python.org/packages/source/i/irc/
 EXTRACT_SUFX=	.zip
+EXTRACT_OPTS_ZIP=-aa -q -o
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://python-irclib.sourceforge.net/
