@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1499 2015/03/26 20:43:10 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1500 2015/03/26 20:44:11 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2092,3 +2092,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/libzip to 0.11.2nb1 [wiz 2015-03-26]
 	Updated misc/esniper to 2.31.0 [jperkin 2015-03-26]
 	Updated www/seamonkey to 2.33.1 [ryoon 2015-03-26]
+	Updated www/seamonkey-l10n to 2.33.1 [ryoon 2015-03-26]
