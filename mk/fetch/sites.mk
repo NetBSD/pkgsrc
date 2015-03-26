@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.125 2015/03/09 13:10:45 tnn Exp $
+# $NetBSD: sites.mk,v 1.126 2015/03/26 07:54:51 dsainty Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -133,12 +133,13 @@ MASTER_SITE_XEMACS+=    \
 	ftp://mirror.cict.fr/xemacs/ \
 	ftp://ftp.dnsbalance.ring.gr.jp/pub/text/xemacs/
 
+# http://www.ibiblio.org/pub/mirrors/apache/ returns 200 for missing
+# files, which is incompatible with resuming transfers.
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
 	http://www.eu.apache.org/dist/ \
 	http://apache.mirror.aussiehq.net.au/ \
 	http://apache.oregonstate.edu/ \
-	http://www.ibiblio.org/pub/mirrors/apache/ \
 	http://mirror.nyi.net/apache/ \
 	http://apache.mirrors.tds.net/ \
 	http://ftp.unicamp.br/pub/apache/ \
@@ -244,7 +245,6 @@ MASTER_SITE_DEBIAN+= \
 MASTER_SITE_OPENOFFICE+=	\
 	http://mirrors.isc.org/pub/openoffice/ \
 	http://openoffice.mirrors.ilisys.com.au/ \
-	http://www.ibiblio.org/pub/mirrors/openoffice/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
 	http://gd.tuwien.ac.at/office/openoffice/ \
 	http://ftp.sh.cvut.cz/MIRRORS/OpenOffice/ \
