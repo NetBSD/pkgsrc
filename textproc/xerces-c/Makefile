@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2014/10/09 14:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/03/26 21:02:31 bsiegert Exp $
 
-DISTNAME=	xerces-c-3.1.1
+DISTNAME=	xerces-c-3.1.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=xerces/c/3/sources/}
 
