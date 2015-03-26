@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.42 2014/06/05 12:16:06 wiz Exp $
+# $NetBSD: builtin.mk,v 1.43 2015/03/26 08:05:02 dholland Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -32,6 +32,7 @@ BUILTIN_VERSION.openssl!=						\
 	${AWK} 'BEGIN { hex="0123456789abcdef";				\
 			alpha="abcdefghijklmnopqrstuvwxyz";	\
 		}							\
+		/\#[ 	]+define/ { sub("\#[ \\t]+define", "\#define", $$0); } \
 		/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
 			major = index(hex, substr($$3, 3, 1)) - 1;	\
 			i = 16 * (index(hex, substr($$3, 4, 1)) - 1);	\
