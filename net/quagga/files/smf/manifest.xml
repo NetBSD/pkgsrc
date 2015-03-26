@@ -89,7 +89,7 @@
         <service_fmri value='svc:/network/routing-setup' />
       </dependency>
       <!-- ensure that restart of zebra is propogated to daemon -->
-      <dependency name='zebra' grouping='optional_all' restart_on='restart' type='service'>
+      <dependency name='zebra' grouping='require_all' restart_on='restart' type='service'>
         <service_fmri value='svc:/@SMF_PREFIX@/quagga:zebra' />
       </dependency>
       <exec_method type='method' name='start' exec='@PREFIX@/@PKG_SMF_METHOD_DIR@/quagga ripd' timeout_seconds='60'>
@@ -161,7 +161,7 @@
         <service_fmri value='svc:/network/routing-setup' />
       </dependency>
       <!-- ensure that restart of zebra is propogated to daemon -->
-      <dependency name='zebra' grouping='optional_all' restart_on='restart' type='service'>
+      <dependency name='zebra' grouping='require_all' restart_on='restart' type='service'>
         <service_fmri value='svc:/@SMF_PREFIX@/quagga:zebra' />
       </dependency>
       <exec_method type='method' name='start' exec='@PREFIX@/@PKG_SMF_METHOD_DIR@/quagga ripngd' timeout_seconds='60'>
@@ -232,7 +232,7 @@
         <service_fmri value='svc:/network/routing-setup' />
       </dependency>
       <!-- ensure that restart of zebra is propogated to daemon -->
-      <dependency name='zebra' grouping='optional_all' restart_on='restart' type='service'>
+      <dependency name='zebra' grouping='require_all' restart_on='restart' type='service'>
         <service_fmri value='svc:/@SMF_PREFIX@/quagga:zebra' />
       </dependency>
       <exec_method type='method' name='start' exec='@PREFIX@/@PKG_SMF_METHOD_DIR@/quagga ospfd' timeout_seconds='60'>
@@ -305,7 +305,7 @@
         <service_fmri value='svc:/network/routing-setup' />
       </dependency>
       <!-- ensure that restart of zebra is propogated to daemon -->
-      <dependency name='zebra' grouping='optional_all' restart_on='restart' type='service'>
+      <dependency name='zebra' grouping='require_all' restart_on='restart' type='service'>
         <service_fmri value='svc:/@SMF_PREFIX@/quagga:zebra' />
       </dependency>
       <exec_method type='method' name='start' exec='@PREFIX@/@PKG_SMF_METHOD_DIR@/quagga ospf6d' timeout_seconds='60'>
@@ -377,7 +377,7 @@
         <service_fmri value='svc:/network/routing-setup' />
       </dependency>
       <!-- ensure that restart of zebra is propogated to daemon -->
-      <dependency name='zebra' grouping='optional_all' restart_on='restart' type='service'>
+      <dependency name='zebra' grouping='require_all' restart_on='restart' type='service'>
         <service_fmri value='svc:/@SMF_PREFIX@/quagga:zebra' />
       </dependency>
       <exec_method type='method' name='start' exec='@PREFIX@/@PKG_SMF_METHOD_DIR@/quagga bgpd' timeout_seconds='60'>
