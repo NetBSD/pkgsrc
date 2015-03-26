@@ -1,11 +1,37 @@
-$NetBSD: patch-configure,v 1.3 2014/04/25 09:27:37 wiz Exp $
+$NetBSD: patch-configure,v 1.4 2015/03/26 10:16:14 jperkin Exp $
 
 Remove -Werror from default flags since different compilers
 have very different warnings.
 
---- configure.orig	2012-02-25 19:58:48.000000000 +0000
+Ensure DTrace tests include valid probes.
+
+--- configure.orig	2015-01-01 07:53:30.000000000 +0000
 +++ configure
-@@ -6261,7 +6261,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
+@@ -4918,13 +4918,21 @@ fi
+ $as_echo "#define ENABLE_DTRACE 1" >>confdefs.h
+ 
+     build_dtrace=yes
++    $as_echo "provider conftest { probe fire(); };" >conftest_provider.d
++    $DTRACE -h -o conftest_provider.h -s conftest_provider.d >/dev/null 2>/dev/null
++    cat <<_ACEOF >conftest.$ac_ext
++#include "conftest_provider.h"
++int main (void) { CONFTEST_FIRE(); return 0; }
++_ACEOF
++    ac_fn_c_try_compile "$LINENO"
+     # DTrace on MacOSX does not use -G option
+-    $DTRACE -G -o conftest.$$ -s memcached_dtrace.d 2>/dev/zero
++    $DTRACE -G -o conftest.$$ -s conftest_provider.d conftest.$ac_objext 2>/dev/null
+     if test $? -eq 0
+     then
+         dtrace_instrument_obj=yes
+-        rm conftest.$$
+     fi
++    rm -f core conftest.err conftest.$ac_objext \
++        conftest$ac_exeext conftest.$ac_ext conftest.$$
+ 
+     if test "`which tr`" = "/usr/ucb/tr"; then
+         as_fn_error $? "Please remove /usr/ucb from your path. See man standards for more info" "$LINENO" 5
+@@ -6435,7 +6443,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
  elif test "$GCC" = "yes"
  then
    GCC_VERSION=`$CC -dumpversion`
