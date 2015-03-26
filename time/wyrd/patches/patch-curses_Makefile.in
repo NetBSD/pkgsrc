@@ -1,0 +1,12 @@
+$NetBSD: patch-curses_Makefile.in,v 1.1 2015/03/26 15:59:08 joerg Exp $
+
+--- curses/Makefile.in.orig	2015-03-22 16:58:53.000000000 +0000
++++ curses/Makefile.in
+@@ -15,6 +15,7 @@ LDFLAGS = @LDFLAGS@
+ RANLIB = @RANLIB@
+ LIBINSTALL_FILES = $(wildcard *.mli *.cmi *.cma *.cmxa *.a *.so)
+ OCAMLDOCFLAGS = -stars
++OCAMLMKLIB_FLAGS+= ${LDFLAGS}
+ 
+ all: byte
+ 
