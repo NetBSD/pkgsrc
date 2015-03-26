@@ -1,9 +1,19 @@
-$NetBSD: patch-rake_rakewx.rb,v 1.1.1.1 2011/08/13 02:12:35 taca Exp $
+$NetBSD: patch-rake_rakewx.rb,v 1.2 2015/03/26 19:46:19 joerg Exp $
 
 * Tweak to use vendorlibdir/vendorarchdir instead of sitelbdir/sitearchdir.
+* wx-config --ld ends in "-o" already, so use that.
 
 --- rake/rakewx.rb.orig	2009-09-08 20:36:50.000000000 +0000
 +++ rake/rakewx.rb
+@@ -98,7 +98,7 @@ end
+ # Target to run the linker to create a final .so/.dll wxruby2 library
+ file TARGET_LIB => all_obj_files do | t |
+   objs = $extra_objs + " " + all_obj_files.join(' ')
+-  sh "#{$ld} #{$ldflags} #{objs} #{$libs} #{$link_output_flag}#{t.name}"
++  sh "#{$ld}#{t.name} #{$ldflags} #{objs} #{$libs}"
+ end
+ 
+ # The main source module - which needs to initialize all the other modules
 @@ -162,10 +162,16 @@ end
  
  desc "Install the WxRuby library to Ruby's lib directories"
