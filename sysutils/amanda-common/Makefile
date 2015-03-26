@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.69 2015/02/09 18:35:12 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2015/03/26 15:57:34 joerg Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 PKGREVISION=		7
 
 COMMENT=		Common libraries and binaries for Amanda
+
+# genversion.c:37:10: fatal error: 'genversion.h' file not found
+MAKE_JOBS_SAFE=		no
 
 .include "../../sysutils/amanda-common/Makefile.common"
 
