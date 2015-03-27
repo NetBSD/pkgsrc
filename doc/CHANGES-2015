@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1505 2015/03/27 12:41:27 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1506 2015/03/27 14:22:58 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2098,3 +2098,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ragel to 6.9 [rodent 2015-03-27]
 	Updated sysutils/intel-microcode-netbsd to 20150121 [msaitoh 2015-03-27]
 	Updated net/tor to 0.2.5.11 [wiz 2015-03-27]
+	Updated security/crypto++ to 5.6.2nb3 [rodent 2015-03-27]
