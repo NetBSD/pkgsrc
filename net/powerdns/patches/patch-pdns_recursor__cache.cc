@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_recursor__cache.cc,v 1.2 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_recursor__cache.cc,v 1.3 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
---- pdns/recursor_cache.cc.orig	2014-10-30 10:18:22.000000000 +0000
+--- pdns/recursor_cache.cc.orig	2015-03-02 13:17:12.000000000 +0000
 +++ pdns/recursor_cache.cc
 @@ -53,7 +53,7 @@ DNSResourceRecord String2DNSRR(const str
        rr.content=".";

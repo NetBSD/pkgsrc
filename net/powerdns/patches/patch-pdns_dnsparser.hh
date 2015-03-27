@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_dnsparser.hh,v 1.2 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_dnsparser.hh,v 1.3 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
---- pdns/dnsparser.hh.orig	2014-04-25 09:42:01.000000000 +0000
+--- pdns/dnsparser.hh.orig	2015-03-02 13:17:09.000000000 +0000
 +++ pdns/dnsparser.hh
 @@ -183,7 +183,7 @@ public:
      return record;
