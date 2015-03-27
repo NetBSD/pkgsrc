@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2015/01/15 08:46:59 msaitoh Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/27 07:14:35 msaitoh Exp $
 #
 
-DISTNAME=	microcode-20150107
-PKGNAME=	intel-microcode-netbsd-20150107
+DISTNAME=	microcode-20150121
+PKGNAME=	intel-microcode-netbsd-20150121
 CATEGORIES=	sysutils
-MASTER_SITES=	http://downloadmirror.intel.com/24616/eng/
+MASTER_SITES=	http://downloadmirror.intel.com/24661/eng/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://downloadcenter.intel.com/Detail_Desc.aspx?DwnldID=24616
+HOMEPAGE=	http://downloadcenter.intel.com/Detail_Desc.aspx?DwnldID=24661
 COMMENT=	Firmware updates for Intel x86 processors
 #LICENSE=	# TODO: (see mk/license.mk)
 
