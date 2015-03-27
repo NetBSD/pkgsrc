@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/01/15 08:46:59 msaitoh Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/03/27 07:14:35 msaitoh Exp $
 libdata/firmware/cpu_x86_intel1/00000650-0
 libdata/firmware/cpu_x86_intel1/00000650-1
 libdata/firmware/cpu_x86_intel1/00000650-3
