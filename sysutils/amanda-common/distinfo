@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2014/07/28 15:53:44 jperkin Exp $
+$NetBSD: distinfo,v 1.16 2015/03/27 23:45:29 gdt Exp $
 
 SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
 RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
@@ -9,19 +9,21 @@ SHA1 (patch-application-src_Makefile.am) = 3a5f256ab7e2439c2e19c4f75234d3a677707
 SHA1 (patch-client-src_Makefile.am) = 641ef76fd1ea413b416704e1e52e25a93a596442
 SHA1 (patch-client-src_sendbackup-dump.c) = aea1aca0bbcdab0c393b012a592cbc5ca458acec
 SHA1 (patch-client-src_sendsize.c) = 32a1627c250b6413e4695a610bba59796c6e7ed6
-SHA1 (patch-common-src_Makefile.in) = 422e4d519d8797e686d62cfeca8cda2e8a4a8bb3
 SHA1 (patch-common-src_glib-util.c) = 8b62499f6730843fbf9e872adc80978b77b5573f
 SHA1 (patch-common-src_glib-util.h) = 6d5b14acd7a44b17a52ebc697f5354db2a4b04f9
 SHA1 (patch-common-src_security-util.h) = c628cc19a624da2cfabdb7d488bc2cd2d4b955a4
 SHA1 (patch-config_amanda_dumpers.m4) = 3d0cf6133b003de53e05929d2ce04eaa0f614819
 SHA1 (patch-config_amanda_krb5-security.m4) = c82af0e106e49b59994b40f12ed5b1c165a8497f
+SHA1 (patch-config_amanda_tape.m4) = ac8da578326756eeadd935bdeddb202ea990c006
 SHA1 (patch-config_macro-archive_xsltproc.m4) = 20324db1ce3db016fa89fe39df5a8133c7766693
 SHA1 (patch-device-src_Makefile.am) = 29fd554033ff0ff7b1d98a08306f157ced7324c5
+SHA1 (patch-device-src_device.c) = 31cb823dcce0f7f3d9de8f9def1a0f025ab10876
 SHA1 (patch-example_Makefile.am) = 8d2dac1abdc473fbf94489bcb620a42a665fd27a
 SHA1 (patch-ndmp-src_ndmp2__xdr.c) = 9ae6d78c2192ece83a1aa141cb04c9761969ca5b
 SHA1 (patch-ndmp-src_ndmp3__xdr.c) = a080c7337ede4fe75f9735fb3355d0aa16b0af6c
 SHA1 (patch-ndmp-src_ndmp4__xdr.c) = 339b0d539754127446acf6456fb385f00b1fbcc3
 SHA1 (patch-oldrecover-src_Makefile.am) = 9127c1523937da3955662cc0b0921d05bca75248
+SHA1 (patch-perl_Amanda_Report_human.pm) = 83e7955b264dfe54ac4f9645b9a690cffa72b5db
 SHA1 (patch-perl_Amanda_Xfer.pm) = 7389672ce0ed08d8b5f6548a6bb466ef4e18ab1d
 SHA1 (patch-perl_Makefile.am) = 7b09e5cc30c9b441dae03b06bef5c757c93ff9f7
 SHA1 (patch-perl_amglue_Makefile.am) = 051e456a5d34dd19a11ccd45c32f078e72d16e6f
