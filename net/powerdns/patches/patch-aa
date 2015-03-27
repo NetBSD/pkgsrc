@@ -1,9 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-aa,v 1.5 2015/03/27 23:37:52 rodent Exp $
+
+Handle CONF_FILES. `hostname -f` is not portable.
 
 Installation destination for example config file.
---- pdns/Makefile.in.orig	2014-10-30 10:18:39.000000000 +0000
+--- pdns/Makefile.in.orig	2015-03-02 13:17:27.000000000 +0000
 +++ pdns/Makefile.in
-@@ -1627,18 +1627,18 @@ clean-libtool:
+@@ -1176,7 +1176,7 @@ misc.cc unix_utility.cc qtype.cc
+ pdns_control_LDFLAGS = $(THREADFLAGS)
+ @UNIT_TESTS_TRUE@TESTS_ENVIRONMENT = env BOOST_TEST_LOG_LEVEL=message
+ build_date = $(shell LC_TIME=C date '+%Y%m%d%H%M%S')
+-build_host = $(shell id -u -n)@$(shell hostname -f)
++build_host = $(shell id -u -n)@$(shell hostname)
+ # Do the test in shell, so we don't confuse automake with ifeq/ifneq.
+ @RELEASE_BUILD_FALSE@pdns_version = $(shell test -z "$(git_version)" && echo UNKNOWN || echo "git-$(git_version)")
+ @RELEASE_BUILD_TRUE@pdns_version = $(PACKAGE_VERSION)
+@@ -1632,18 +1632,18 @@ clean-libtool:
  	-rm -rf .libs _libs
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
