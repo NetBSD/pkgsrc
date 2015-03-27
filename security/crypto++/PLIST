@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/06/12 12:00:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/27 14:14:26 rodent Exp $
 bin/cryptest
 include/cryptopp/3way.h
 include/cryptopp/adler32.h
@@ -136,5 +136,6 @@ include/cryptopp/zdeflate.h
 include/cryptopp/zinflate.h
 include/cryptopp/zlib.h
 lib/libcryptopp.a
+lib/libcryptopp.so
 share/doc/cryptopp/License
 share/doc/cryptopp/README
