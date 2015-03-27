@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/10/07 16:47:26 adam Exp $
+# $NetBSD: Makefile,v 1.51 2015/03/27 23:05:46 joerg Exp $
 
 DISTNAME=	darktable-1.2.3
 PKGREVISION=	8
@@ -37,6 +37,9 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
 
 # NetBSD 6 libm is the first with exp2f(3)
 #NOT_FOR_PLATFORM= NetBSD-4*-* NetBSD-5.[0-8]*-*
+
+# Hard-coded use of SSE2
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${MACHINE_ARCH} == "i386"
