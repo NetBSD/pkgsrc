@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1509 2015/03/27 23:39:30 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1510 2015/03/27 23:40:00 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/cabextract to 1.6 [bsiegert 2015-03-27]
 	Updated security/polarssl to 1.3.9 [rodent 2015-03-27]
 	Updated net/powerdns to 3.4.3 [rodent 2015-03-27]
+	Updated net/powerdns-ldap to 3.4.3 [rodent 2015-03-27]
