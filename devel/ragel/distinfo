@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/06/10 18:56:05 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/03/27 03:50:55 rodent Exp $
 
-SHA1 (ragel-6.7.tar.gz) = bf12b634f5a25e5ba305edfee59a455069ed3b0a
-RMD160 (ragel-6.7.tar.gz) = 003a29121bd44cdcdddd0721524fe90cf421c05d
-Size (ragel-6.7.tar.gz) = 1182734 bytes
-SHA1 (patch-aapl_avlcommon.h) = b0023b24e2ead4e196f2cacb58b9cd5b0b02b655
-SHA1 (patch-aapl_bstcommon.h) = 2d672f350c72a332de62396ef05cd05482a82b31
-SHA1 (patch-aapl_bubblesort.h) = 05233121bf82b91c4fdb65a2a2b7589ff27b820e
-SHA1 (patch-aapl_mergesort.h) = 42fc0fa8eadd476f599ee05b83f150a04993ad76
-SHA1 (patch-ragel_javacodegen.cpp) = f5095d5b36d795bf1b1a50626bd057296254dc8b
+SHA1 (ragel-6.9.tar.gz) = 70a7fe77aee8423be610fa14c3fa1f96b3119e1d
+RMD160 (ragel-6.9.tar.gz) = 67c7b1f39956f9707742201a1a681c164cff84ab
+Size (ragel-6.9.tar.gz) = 1226871 bytes
+SHA1 (patch-aapl_bstcommon.h) = 540e74d2ff3ace21d3fb0cd817027cf18837bc98
+SHA1 (patch-ragel_javacodegen.cpp) = 3fc6b892b18993a769c7eb80bb89bbef63d71c7d
