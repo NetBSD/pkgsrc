@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2015/02/04 12:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/27 16:12:22 wiz Exp $
 
 DISTNAME=		khal-0.4.0
 CATEGORIES=		time net
-MASTER_SITES=		-https://github.com/geier/khal/archive/${DISTNAME:S/khal-/v/}${EXTRACT_SUFX}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=geier/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/geier/khal
 COMMENT=		CLI calendar application built around CalDAV
 LICENSE=		mit
 
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
