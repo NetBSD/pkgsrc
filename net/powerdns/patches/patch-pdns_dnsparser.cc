@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_dnsparser.cc,v 1.2 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_dnsparser.cc,v 1.3 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
---- pdns/dnsparser.cc.orig	2014-08-29 14:33:20.000000000 +0000
+--- pdns/dnsparser.cc.orig	2015-03-02 13:17:09.000000000 +0000
 +++ pdns/dnsparser.cc
 @@ -109,7 +109,7 @@ static const string EncodeDNSLabel(const
  }
