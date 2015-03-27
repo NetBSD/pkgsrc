@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2013/06/12 12:00:08 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/03/27 14:14:26 rodent Exp $
 
 BUILDLINK_TREE+=	cryptopp
 
@@ -6,7 +6,6 @@ BUILDLINK_TREE+=	cryptopp
 CRYPTOPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cryptopp+=	cryptopp>=5.6.2
-BUILDLINK_DEPMETHOD.cryptopp?=	build
 BUILDLINK_ABI_DEPENDS.cryptopp+=	cryptopp>=5.6.2
 BUILDLINK_PKGSRCDIR.cryptopp?=	../../security/crypto++
 .endif # CRYPTOPP_BUILDLINK3_MK
