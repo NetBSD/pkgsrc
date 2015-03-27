@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/12/10 14:50:08 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/03/27 23:37:52 rodent Exp $
 ${PLIST.tools}bin/dnsbulktest
 ${PLIST.tools}bin/dnsdist
 ${PLIST.tools}bin/dnsreplay
@@ -22,14 +22,15 @@ ${PLIST.remote}lib/pdns/pdns/libremotebackend.la
 ${PLIST.sqlite}lib/pdns/pdns/libgsqlite3backend.la
 ${PLIST.tools}man/man1/dnsdist.1
 ${PLIST.tools}man/man1/dnstcpbench.1
-${PLIST.tools}man/man8/dnsreplay.8
-${PLIST.tools}man/man8/dnsscope.8
-${PLIST.tools}man/man8/dnswasher.8
-man/man8/pdns_control.8
-man/man8/pdns_server.8
-man/man8/pdnssec.8
-man/man8/zone2ldap.8
-man/man8/zone2sql.8
+${PLIST.tools}man/man1/dnsreplay.1
+${PLIST.tools}man/man1/dnsscope.1
+${PLIST.tools}man/man1/dnstcpbench.1
+${PLIST.tools}man/man1/dnswasher.1
+man/man1/pdns_control.1
+man/man1/pdns_server.1
+man/man1/pdnssec.1
+man/man1/zone2ldap.1
+man/man1/zone2sql.1
 sbin/pdns_server
 ${PLIST.sqlite}share/doc/pdns/dnssec-3.x_to_3.4.0_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/nodnssec-3.x_to_3.4.0_schema.sqlite3.sql

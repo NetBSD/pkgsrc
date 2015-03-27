@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_nameserver.cc,v 1.3 2014/12/15 12:56:41 fhajny Exp $
+$NetBSD: patch-pdns_nameserver.cc,v 1.4 2015/03/27 23:37:52 rodent Exp $
 
 Do not use IP_PKTINFO on NetBSD.
---- pdns/nameserver.cc.orig	2014-10-30 10:18:22.000000000 +0000
+--- pdns/nameserver.cc.orig	2015-03-02 13:17:12.000000000 +0000
 +++ pdns/nameserver.cc
 @@ -81,7 +81,7 @@ extern StatBag S;
      The main() of PowerDNS can be found in receiver.cc - start reading there for further insights into the operation of the nameserver

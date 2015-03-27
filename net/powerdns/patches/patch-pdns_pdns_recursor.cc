@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_pdns_recursor.cc,v 1.3 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_pdns_recursor.cc,v 1.4 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
---- pdns/pdns_recursor.cc.orig	2014-10-30 10:18:22.000000000 +0000
+--- pdns/pdns_recursor.cc.orig	2015-03-02 13:17:12.000000000 +0000
 +++ pdns/pdns_recursor.cc
 @@ -80,9 +80,9 @@ uint64_t g_latencyStatSize;
  bool g_logCommonErrors;

@@ -1,9 +1,9 @@
-$NetBSD: patch-pdns_dnspacket.cc,v 1.3 2015/01/12 11:40:43 jperkin Exp $
+$NetBSD: patch-pdns_dnspacket.cc,v 1.4 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
 Avoid ambiguous abs() call.
 
---- pdns/dnspacket.cc.orig	2014-10-30 10:18:22.000000000 +0000
+--- pdns/dnspacket.cc.orig	2015-03-02 13:17:09.000000000 +0000
 +++ pdns/dnspacket.cc
 @@ -312,7 +312,7 @@ void DNSPacket::wrapup()
            pos->content=".";
