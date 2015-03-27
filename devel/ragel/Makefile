@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:37 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/27 03:50:55 rodent Exp $
 
-DISTNAME=	ragel-6.7
+DISTNAME=	ragel-6.9
 CATEGORIES=	devel
-MASTER_SITES=	http://www.complang.org/ragel/
+MASTER_SITES=	http://www.colm.net/files/ragel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.complang.org/ragel/
+HOMEPAGE=	http://www.colm.net/open-source/ragel/
 COMMENT=	State machine compiler
 LICENSE=	gnu-gpl-v2
 
