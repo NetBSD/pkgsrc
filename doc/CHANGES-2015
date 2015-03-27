@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1511 2015/03/27 23:40:37 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1512 2015/03/27 23:42:05 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2104,3 +2104,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/powerdns to 3.4.3 [rodent 2015-03-27]
 	Updated net/powerdns-ldap to 3.4.3 [rodent 2015-03-27]
 	Updated net/powerdns-mysql to 3.4.3 [rodent 2015-03-27]
+	Updated net/powerdns-pgsql to 3.4.3 [rodent 2015-03-27]
