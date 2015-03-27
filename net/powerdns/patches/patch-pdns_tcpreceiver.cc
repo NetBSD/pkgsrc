@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_tcpreceiver.cc,v 1.2 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_tcpreceiver.cc,v 1.3 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
---- pdns/tcpreceiver.cc.orig	2014-10-21 11:31:14.000000000 +0000
+--- pdns/tcpreceiver.cc.orig	2015-03-02 13:17:13.000000000 +0000
 +++ pdns/tcpreceiver.cc
 @@ -173,7 +173,7 @@ void connectWithTimeout(int fd, struct s
    ;

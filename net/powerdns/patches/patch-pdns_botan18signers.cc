@@ -1,7 +1,7 @@
-$NetBSD: patch-pdns_botan18signers.cc,v 1.1 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_botan18signers.cc,v 1.2 2015/03/27 23:37:52 rodent Exp $
 
 Resolve boost symbol ambiguity.
---- pdns/botan18signers.cc.orig	2013-04-26 19:54:34.000000000 +0000
+--- pdns/botan18signers.cc.orig	2015-03-02 13:17:09.000000000 +0000
 +++ pdns/botan18signers.cc
 @@ -36,8 +36,8 @@ public:
  
