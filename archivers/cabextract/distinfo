@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/01/29 13:28:28 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/03/27 16:49:55 bsiegert Exp $
 
-SHA1 (cabextract-1.5.tar.gz) = 7ddb31072590a807bef09234f46f940e1ba51067
-RMD160 (cabextract-1.5.tar.gz) = a1f673aee26b13911eba14fca3b892f8f9cad501
-Size (cabextract-1.5.tar.gz) = 241010 bytes
-SHA1 (patch-mspack_system.h) = e997f6ea664e8fbf7b03ff9fb10fb8adc06d8779
+SHA1 (cabextract-1.6.tar.gz) = 64f6d5056d3e417a943648c23cb22218b7079ced
+RMD160 (cabextract-1.6.tar.gz) = 6b693c30aa4d6821b5e83b63a8dc9d58968268b7
+Size (cabextract-1.6.tar.gz) = 241731 bytes
