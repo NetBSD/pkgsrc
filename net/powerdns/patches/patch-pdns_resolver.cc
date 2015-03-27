@@ -1,10 +1,10 @@
-$NetBSD: patch-pdns_resolver.cc,v 1.3 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_resolver.cc,v 1.4 2015/03/27 23:37:52 rodent Exp $
 
 Limit inclusion of boost headers to only those necessary to avoid conflicting
 types errors on Solaris.
 Resolve boost symbol ambiguity.
 
---- pdns/resolver.cc.orig	2014-10-30 10:18:22.000000000 +0000
+--- pdns/resolver.cc.orig	2015-03-02 13:17:12.000000000 +0000
 +++ pdns/resolver.cc
 @@ -33,7 +33,7 @@
  #include <cstring>

@@ -1,9 +1,9 @@
-$NetBSD: patch-pdns_receiver.cc,v 1.2 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-pdns_receiver.cc,v 1.3 2015/03/27 23:37:52 rodent Exp $
 
 Limit inclusion of boost headers to only those necessary to avoid conflicting
 types errors on Solaris.
 
---- pdns/receiver.cc.orig	2014-09-02 08:02:05.000000000 +0000
+--- pdns/receiver.cc.orig	2015-03-02 13:17:12.000000000 +0000
 +++ pdns/receiver.cc
 @@ -42,7 +42,7 @@
  #include <sys/mman.h>

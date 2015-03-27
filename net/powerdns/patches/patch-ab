@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2014/12/10 14:50:09 fhajny Exp $
+$NetBSD: patch-ab,v 1.5 2015/03/27 23:37:52 rodent Exp $
 
 Default paths.
---- pdns/pdns.conf-dist.orig	2014-10-28 10:41:09.000000000 +0000
+--- pdns/pdns.conf-dist.orig	2015-03-02 13:17:12.000000000 +0000
 +++ pdns/pdns.conf-dist
-@@ -52,7 +52,7 @@
+@@ -57,7 +57,7 @@
  #################################
  # config-dir	Location of configuration directory (pdns.conf)
  #
@@ -12,7 +12,7 @@ Default paths.
  
  #################################
  # config-name	Name of this virtual configuration - will rename the binary image
-@@ -287,7 +287,7 @@
+@@ -292,7 +292,7 @@
  #################################
  # module-dir	Default directory for modules
  #
