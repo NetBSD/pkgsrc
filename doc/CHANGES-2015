@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1502 2015/03/27 01:21:38 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.1503 2015/03/27 03:51:30 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2095,3 +2095,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey-l10n to 2.33.1 [ryoon 2015-03-26]
 	Updated textproc/xerces-c to 3.1.2 [bsiegert 2015-03-26]
 	Updated games/hitori to 3.14.3 [prlw1 2015-03-27]
+	Updated devel/ragel to 6.9 [rodent 2015-03-27]
