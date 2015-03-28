@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/25 17:07:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/28 04:21:42 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.6/ace.js
@@ -3408,6 +3408,7 @@ ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/tables/_scaf
 ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_ellipsis.scss
 ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_nowrap.scss
 ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_replacement.scss
+${CT_WEBDIR}/vendor/leafo/scssphp/.gitignore
 ${CT_WEBDIR}/vendor/leafo/scssphp/.travis.yml
 ${CT_WEBDIR}/vendor/leafo/scssphp/LICENSE.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/Makefile
@@ -3418,6 +3419,8 @@ ${CT_WEBDIR}/vendor/leafo/scssphp/composer.json
 ${CT_WEBDIR}/vendor/leafo/scssphp/package.sh
 ${CT_WEBDIR}/vendor/leafo/scssphp/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/leafo/scssphp/scss.inc.php
+${CT_WEBDIR}/vendor/leafo/scssphp/site/.gitignore
+${CT_WEBDIR}/vendor/leafo/scssphp/site/www/.gitignore
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Colors.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Compiler.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter.php
@@ -3438,6 +3441,7 @@ ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/MarkdownInterface.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Readme.md
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Readme.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/composer.json
+${CT_WEBDIR}/vendor/oyejorge/less.php/.gitignore
 ${CT_WEBDIR}/vendor/oyejorge/less.php/.travis.yml
 ${CT_WEBDIR}/vendor/oyejorge/less.php/LICENSE
 ${CT_WEBDIR}/vendor/oyejorge/less.php/README.md
@@ -3521,6 +3525,7 @@ ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/Renderer/Html/SideBySide.php
 ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/Renderer/Text/Context.php
 ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/Renderer/Text/Unified.php
 ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/SequenceMatcher.php
+${CT_WEBDIR}/vendor/simplepie/simplepie/.gitignore
 ${CT_WEBDIR}/vendor/simplepie/simplepie/.travis.yml
 ${CT_WEBDIR}/vendor/simplepie/simplepie/LICENSE.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/README.markdown
@@ -3530,6 +3535,7 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/build/compile.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/build/header.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/composer.json
 ${CT_WEBDIR}/vendor/simplepie/simplepie/db.sql
+${CT_WEBDIR}/vendor/simplepie/simplepie/demo/cache/.gitignore
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/LICENCE
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/ReadMe.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/idna_convert.class.php
@@ -3568,6 +3574,7 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Source.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/XML/Declaration/Parser.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/gzdecode.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/phpunit.xml.dist
+${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitignore
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.travis.yml
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/CHANGES
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/LICENSE
@@ -3787,6 +3794,7 @@ ${CT_WEBDIR}/vendor/tecnick.com/tcpdf/tcpdf_parser.php
 ${CT_WEBDIR}/vendor/tecnick.com/tcpdf/tools/.htaccess
 ${CT_WEBDIR}/vendor/tecnick.com/tcpdf/tools/convert_fonts_examples.txt
 ${CT_WEBDIR}/vendor/tecnick.com/tcpdf/tools/tcpdf_addfont.php
+${CT_WEBDIR}/vendor/true/punycode/.gitignore
 ${CT_WEBDIR}/vendor/true/punycode/.travis.yml
 ${CT_WEBDIR}/vendor/true/punycode/CHANGELOG.md
 ${CT_WEBDIR}/vendor/true/punycode/LICENSE
