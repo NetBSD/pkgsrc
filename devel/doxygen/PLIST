@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2015/01/27 13:49:12 mef Exp $
+@comment $NetBSD: PLIST,v 1.40 2015/03/28 15:23:14 gdt Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
@@ -293,7 +293,6 @@ ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/graph_legend.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/hierarchy.html
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/index.html
 ${PLIST.pangocairo}${PLIST.latex}share/doc/doxygen/examples/diagrams/html/inherit_graph_0.map
-${PLIST.nopangocairo}share/doc/doxygen/examples/diagrams/html/inherit_graph_0.dot
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/inherit_graph_0.md5
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/inherit_graph_0.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/inherits.html
