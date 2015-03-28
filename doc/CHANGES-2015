@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1516 2015/03/28 04:32:42 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1517 2015/03/28 17:08:08 bsiegert Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2109,3 +2109,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/contao32 to 3.2.20 [taca 2015-03-28]
 	Updated www/contao34 to 3.4.5 [taca 2015-03-28]
 	Updated www/ruby-http to 0.7.3 [taca 2015-03-28]
+	Updated x11/qt5-qtbase to 5.4.0nb1 [bsiegert 2015-03-28]
