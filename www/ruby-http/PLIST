@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/05 15:36:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/28 04:32:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -55,8 +55,14 @@ ${GEM_LIBDIR}/spec/lib/http/response/status_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response_spec.rb
 ${GEM_LIBDIR}/spec/lib/http_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/black_hole.rb
 ${GEM_LIBDIR}/spec/support/capture_warning.rb
+${GEM_LIBDIR}/spec/support/create_certs.rb
+${GEM_LIBDIR}/spec/support/dummy_server.rb
+${GEM_LIBDIR}/spec/support/dummy_server/servlet.rb
 ${GEM_LIBDIR}/spec/support/example_server.rb
 ${GEM_LIBDIR}/spec/support/example_server/servlet.rb
 ${GEM_LIBDIR}/spec/support/proxy_server.rb
+${GEM_LIBDIR}/spec/support/servers/config.rb
+${GEM_LIBDIR}/spec/support/servers/runner.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
