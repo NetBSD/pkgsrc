@@ -1,4 +1,4 @@
-# $NetBSD: enigmail.mk,v 1.16 2015/03/26 20:41:53 ryoon Exp $
+# $NetBSD: enigmail.mk,v 1.17 2015/03/28 22:12:27 ryoon Exp $
 #
 # This Makefile fragment hooks the Enigmail OpenPGP extension
 # (see http://www.mozilla-enigmail.org/ ) into the build.
@@ -12,7 +12,10 @@ DISTFILES+=		${ENIGMAIL_DIST}
 SITES.${ENIGMAIL_DIST}=	http://www.mozilla-enigmail.org/download/source/
 #SITES.${ENIGMAIL_DIST}=	https://dev.gentoo.org/~polynomial-c/mozilla/
 
-DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
+DEPENDS+=		gnupg2-[0-9]*:../../security/gnupg2
+FIND_PREFIX:=		GNUPG2DIR=gnupg2
+.include "../../mk/find-prefix.mk"
+
 PLIST_SRC+=		PLIST.enigmail
 
 TARGET_XPCOM_ABI=	${MACHINE_ARCH:S/i386/x86/}-gcc3
@@ -21,6 +24,12 @@ PLIST_SUBST+=		TARGET_XPCOM_ABI=${TARGET_XPCOM_ABI}
 USE_TOOLS+=		patch pax
 
 REPLACE_PERL+=		${WRKSRC}/${OBJDIR}/mailnews/extensions/enigmail/util/fixlang.pl
+
+SUBST_CLASSES+=		gpg2
+SUBST_STAGE.gpg2=	pre-configure
+SUBST_MESSAGE.gpg2=	Setting GnuPG2 command
+SUBST_FILES.gpg2+=	${WRKSRC}/${OBJDIR}/mailnews/extensions/enigmail/package/prefs/enigmail.js
+SUBST_SED.gpg2+=          -e 's|"extensions.enigmail.agentPath","|"extensions.enigmail.agentPath","${GNUPG2DIR}/bin/gpg2"|'
 
 post-extract: enigmail-post-extract
 .PHONY: enigmail-post-extract
