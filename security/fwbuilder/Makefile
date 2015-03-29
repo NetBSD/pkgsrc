@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2014/02/12 23:18:31 tron Exp $
+# $NetBSD: Makefile,v 1.42 2015/03/29 15:28:43 rodent Exp $
 
-DISTNAME=	fwbuilder-4.1.3
-PKGREVISION=	18
+DISTNAME=	fwbuilder-5.1.0.3599
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 
@@ -16,8 +15,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		aclocal autoconf automake gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--mandir=${P}
-CONFIGURE_ARGS+=	--without-distcc
+CONFIGURE_ARGS+=	--mandir=${P} --without-distcc
 #UNLIMIT_RESOURCES+=	datasize
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
@@ -38,6 +36,13 @@ SUBST_SED.fix-endl=	-e '/script <<.*endl/s/endl/"\n"/g'
 pre-configure:
 	cd ${WRKSRC} && libtoolize -c -f -i && aclocal && autoconf
 
+.include "../../mk/resolv.buildlink3.mk"
+.include "../../net/net-snmp/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../security/libfwbuilder/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"

@@ -1,6 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2011/04/12 13:44:03 adam Exp $
+$NetBSD: patch-ae,v 1.5 2015/03/29 15:28:43 rodent Exp $
 
---- doc/doc.pro.orig	2010-12-06 00:29:02.000000000 +0000
+Use libtool.
+
+--- doc/doc.pro.orig	2012-03-23 06:10:54.000000000 +0000
 +++ doc/doc.pro
 @@ -17,6 +17,7 @@ win32 {
    QMAKE_RUN_CC  = @echo > /dev/null

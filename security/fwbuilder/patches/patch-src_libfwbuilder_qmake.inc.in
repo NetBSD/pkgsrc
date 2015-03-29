@@ -1,0 +1,15 @@
+$NetBSD: patch-src_libfwbuilder_qmake.inc.in,v 1.1 2015/03/29 15:28:43 rodent Exp $
+
+LIBDIR does not expand.
+
+--- src/libfwbuilder/qmake.inc.in.orig	2012-03-23 06:10:54.000000000 +0000
++++ src/libfwbuilder/qmake.inc.in
+@@ -43,7 +43,7 @@ unix {
+     exec_prefix = @EXEC_PREFIX@
+     DESTDIR =
+ 
+-    target.path = @LIBDIR@
++    target.path = @libdir@
+     dtd.path = @RES_DIR@/
+     migration.path = @RES_DIR@/migration
+     doc.path = @DOCDIR@

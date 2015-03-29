@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.in,v 1.1 2011/04/12 13:44:03 adam Exp $
+$NetBSD: patch-configure.in,v 1.2 2015/03/29 15:28:43 rodent Exp $
 
 Fix MANDIR and DEFAULT_RES_DIR.
 
---- configure.in.orig	2011-04-12 06:15:34.000000000 +0000
+--- configure.in.orig	2012-03-23 06:10:54.000000000 +0000
 +++ configure.in
-@@ -325,15 +325,15 @@ case ${host} in
+@@ -490,15 +490,15 @@ case ${host} in
    *-*-darwin*)
      OS=MacOSX
      OS_MACOSX=1
@@ -23,7 +23,7 @@ Fix MANDIR and DEFAULT_RES_DIR.
      AC_MSG_RESULT(Solaris)
      DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder-${VERSION}"
      ;;
-@@ -362,7 +362,7 @@ case ${host} in
+@@ -527,7 +527,7 @@ case ${host} in
      else
         DISTRO="Unknown"
      fi
@@ -32,7 +32,7 @@ Fix MANDIR and DEFAULT_RES_DIR.
      AC_MSG_RESULT($DISTRO GNU/kFreeBSD)
      DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder-${VERSION}"
      ;;
-@@ -388,7 +388,7 @@ case ${host} in
+@@ -553,7 +553,7 @@ case ${host} in
      else
  	DISTRO="Unknown"
      fi
@@ -41,7 +41,7 @@ Fix MANDIR and DEFAULT_RES_DIR.
      ICONSDIR="${DATADIR}/icons/hicolor/"
      AC_MSG_RESULT($DISTRO Linux)
      ;;
-@@ -397,7 +397,7 @@ case ${host} in
+@@ -562,7 +562,7 @@ case ${host} in
      OS=Unknown
      OS_UNKNOWN=1
      DISTRO=Unknown
