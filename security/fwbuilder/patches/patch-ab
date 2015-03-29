@@ -1,28 +1,36 @@
-$NetBSD: patch-ab,v 1.3 2011/04/12 13:44:03 adam Exp $
+$NetBSD: patch-ab,v 1.4 2015/03/29 15:28:43 rodent Exp $
 
---- qmake.inc.in.orig	2010-12-06 00:29:02.000000000 +0000
+Don't build with debugging symbols by default nor hardcode compiler flags.
+
+--- qmake.inc.in.orig	2012-03-23 06:10:54.000000000 +0000
 +++ qmake.inc.in
-@@ -26,7 +26,6 @@ unix {
+@@ -17,7 +17,7 @@ CPPUNIT_LIBS = @CPPUNIT_LIBS@
  
-     QMAKE_CXX = @CCACHE@ @DISTCC@ $$QMAKE_CXX
+ # CONFIG -= nostrip
+ # CONFIG += release
+-CONFIG += debug
++#CONFIG += debug
+ 
+ unix {
+     PREFIX = @PREFIX@
+@@ -36,11 +36,10 @@ unix {
+     OBJECTS_DIR = .obj
+ 
+     QMAKE_CFLAGS_DEBUG += -Wno-unused-parameter
+-    QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
++    QMAKE_CFLAGS_RELEASE += @CXXFLAGS@
+     QMAKE_CXXFLAGS_DEBUG += -Wno-unused-parameter
+-    QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
++    QMAKE_CXXFLAGS_RELEASE += @CXXFLAGS@
  
 -    !macx {
  
-         UI_DIR = .ui
-         MOC_DIR = .moc
-@@ -62,13 +61,12 @@ unix {
+         exec_prefix = @EXEC_PREFIX@
+         DESTDIR =
+@@ -68,7 +67,6 @@ unix {
+         CONFIG += warn_on
  
-         LIBS += $$LIBS_FWBUILDER @LIBS@
- 
--        CONFIG += warn_on debug
-+        CONFIG += warn_on
-         QMAKE_CFLAGS_DEBUG += -Wno-unused-parameter
--        QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
-+        QMAKE_CFLAGS_RELEASE += @CXXFLAGS@
-         QMAKE_CXXFLAGS_DEBUG += -Wno-unused-parameter
--        QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
-+        QMAKE_CXXFLAGS_RELEASE += @CXXFLAGS@@
- 
+ #		DEFINES += __STDC_FORMAT_MACROS
 -    }
  }
  
