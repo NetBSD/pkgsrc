@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1521 2015/03/29 13:10:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1522 2015/03/29 15:29:50 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2114,3 +2114,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/redmine to 3.0.1 [ryoon 2015-03-29]
 	Updated devel/exctags to 5.8nb1 [bsiegert 2015-03-29]
 	Updated security/libtasn1 to 4.4 [wiz 2015-03-29]
+	Updated security/fwbuilder to 5.1.0.3599 [rodent 2015-03-29]
