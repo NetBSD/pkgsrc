@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/03/29 18:00:31 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/29 18:49:02 rodent Exp $
 
 DISTNAME=	redmine-3.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -12,54 +12,28 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 RUBY_VERSION_SUPPORTED= 200 193 21 22
 
-GEMS_DISTFILES+=bundler-1.9.1.gem \
-		i18n-0.7.0.gem \
-		json-1.8.2.gem \
-		minitest-5.5.1.gem \
-		thread_safe-0.3.5.gem \
-		tzinfo-1.2.2.gem \
-		activesupport-4.2.0.gem \
-		builder-3.2.2.gem \
-		erubis-2.7.0.gem \
-		mini_portile-0.6.2.gem \
-		nokogiri-1.6.6.2.gem \
-		rails-deprecated_sanitizer-1.0.3.gem \
-		rails-dom-testing-1.0.6.gem \
-		loofah-2.0.1.gem \
-		rails-html-sanitizer-1.0.2.gem \
-		actionview-4.2.0.gem \
-		rack-1.6.0.gem \
-		rack-test-0.6.3.gem \
-		actionpack-4.2.0.gem \
-		globalid-0.3.3.gem \
-		activejob-4.2.0.gem \
-		mime-types-2.4.3.gem \
-		mail-2.6.3.gem \
-		actionmailer-4.2.0.gem \
-		actionpack-action_caching-1.1.1.gem \
-		actionpack-xml_parser-1.0.1.gem \
-		activemodel-4.2.0.gem \
-		arel-6.0.0.gem \
-		activerecord-4.2.0.gem \
-		coderay-1.1.0.gem \
-		hike-1.2.3.gem \
-		thor-0.19.1.gem \
-		railties-4.2.0.gem \
-		jquery-rails-3.1.2.gem \
-		multi_json-1.11.0.gem \
-		net-ldap-0.3.1.gem \
-		protected_attributes-1.0.9.gem \
-		ruby-openid-2.3.0.gem \
-		rack-openid-1.4.2.gem \
-		tilt-1.4.1.gem \
-		sprockets-2.12.3.gem \
-		sprockets-rails-2.2.4.gem \
-		rails-4.2.0.gem \
-		rbpdf-1.18.5.gem \
-		redcarpet-3.1.2.gem \
-		request_store-1.0.5.gem \
-		rmagick-2.13.4.gem \
-		rake-10.4.2.gem
+GEMS_DISTFILES+=	actionmailer-4.2.0.gem actionpack-4.2.0.gem
+GEMS_DISTFILES+=	actionpack-action_caching-1.1.1.gem
+GEMS_DISTFILES+=	actionpack-xml_parser-1.0.1.gem actionview-4.2.0.gem
+GEMS_DISTFILES+=	activejob-4.2.0.gem activemodel-4.2.0.gem
+GEMS_DISTFILES+=	activerecord-4.2.0.gem activesupport-4.2.0.gem
+GEMS_DISTFILES+=	arel-6.0.0.gem builder-3.2.2.gem bundler-1.9.1.gem
+GEMS_DISTFILES+=	coderay-1.1.0.gem erubis-2.7.0.gem globalid-0.3.3.gem
+GEMS_DISTFILES+=	hike-1.2.3.gem i18n-0.7.0.gem jquery-rails-3.1.2.gem
+GEMS_DISTFILES+=	json-1.8.2.gem loofah-2.0.1.gem mail-2.6.3.gem
+GEMS_DISTFILES+=	mime-types-2.4.3.gem mini_portile-0.6.2.gem
+GEMS_DISTFILES+=	minitest-5.5.1.gem multi_json-1.11.0.gem
+GEMS_DISTFILES+=	net-ldap-0.3.1.gem nokogiri-1.6.6.2.gem
+GEMS_DISTFILES+=	protected_attributes-1.0.9.gem rack-1.6.0.gem
+GEMS_DISTFILES+=	rack-openid-1.4.2.gem rack-test-0.6.3.gem
+GEMS_DISTFILES+=	rails-4.2.0.gem rails-deprecated_sanitizer-1.0.3.gem
+GEMS_DISTFILES+=	rails-dom-testing-1.0.6.gem
+GEMS_DISTFILES+=	rails-html-sanitizer-1.0.2.gem railties-4.2.0.gem
+GEMS_DISTFILES+=	rake-10.4.2.gem rbpdf-1.18.5.gem redcarpet-3.1.2.gem
+GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.13.4.gem
+GEMS_DISTFILES+=	ruby-openid-2.3.0.gem sprockets-2.12.3.gem
+GEMS_DISTFILES+=	sprockets-rails-2.2.4.gem thor-0.19.1.gem
+GEMS_DISTFILES+=	thread_safe-0.3.5.gem tilt-1.4.1.gem tzinfo-1.2.2.gem
 
 DISTFILES+=	${DEFAULT_DISTFILES}
 
