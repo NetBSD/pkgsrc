@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/03/28 19:00:28 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/29 22:25:20 jperkin Exp $
 #
 
 DISTNAME=		polarssl-1.3.9-gpl
@@ -24,6 +24,8 @@ TEST_TARGET=		check
 
 CMAKE_ARGS+=		-DUSE_SHARED_POLARSSL_LIBRARY=ON
 MAKE_ENV+=		RANLIB=${RANLIB:Q}
+
+LDFLAGS.SunOS+=		-lsocket
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libpolarssl.a
