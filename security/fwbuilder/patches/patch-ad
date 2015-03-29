@@ -1,6 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2011/04/12 13:44:03 adam Exp $
+$NetBSD: patch-ad,v 1.6 2015/03/29 15:28:43 rodent Exp $
 
---- src/tools/tools.pro.orig	2010-12-06 00:29:02.000000000 +0000
+Use libtool.
+
+--- src/tools/tools.pro.orig	2012-03-23 06:10:54.000000000 +0000
 +++ src/tools/tools.pro
 @@ -13,6 +13,7 @@ unix {
  	QMAKE_RUN_CC  = @true
