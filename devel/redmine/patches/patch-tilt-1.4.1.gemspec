@@ -1,4 +1,6 @@
-$NetBSD: patch-tilt-1.4.1.gemspec,v 1.1 2015/03/29 08:30:02 ryoon Exp $
+$NetBSD: patch-tilt-1.4.1.gemspec,v 1.2 2015/03/29 18:00:31 rodent Exp $
+
+Don't depend on ruby-rdoc.
 
 --- tilt-1.4.1.gemspec.orig	2015-03-29 02:21:01.000000000 +0000
 +++ tilt-1.4.1.gemspec
