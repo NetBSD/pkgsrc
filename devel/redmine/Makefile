@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/29 08:30:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/29 18:00:31 rodent Exp $
 
 DISTNAME=	redmine-3.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RUBY_VERSION_SUPPORTED= 200 193 21
+RUBY_VERSION_SUPPORTED= 200 193 21 22
 
 GEMS_DISTFILES+=bundler-1.9.1.gem \
 		i18n-0.7.0.gem \
@@ -60,7 +60,6 @@ GEMS_DISTFILES+=bundler-1.9.1.gem \
 		request_store-1.0.5.gem \
 		rmagick-2.13.4.gem \
 		rake-10.4.2.gem
-		
 
 DISTFILES+=	${DEFAULT_DISTFILES}
 
@@ -76,77 +75,54 @@ RUBY_VERSION_SUPPORTED= 22
 WRKSRC=		${WRKDIR}
 RM_DIR=		share/redmine
 
-USE_TOOLS+=	pax pkg-config
+USE_TOOLS+=	bash:run pax pkg-config
 
-REPLACE_RUBY+=	builder-*/lib/*
-REPLACE_RUBY+=	builder-*/lib/builder/*
-REPLACE_RUBY+=	builder-*/test/*
-REPLACE_RUBY+=	bundler-*/lib/bundler/templates/*/*/*
-REPLACE_RUBY+=	bundler-*/bin/*
-REPLACE_RUBY+=	erubis-*/benchmark/bench.rb
-REPLACE_RUBY+=	ffi-*/ext/ffi_c/extconf.rb
-REPLACE_RUBY+=	rbpdf-*/test/test_helper.rb
-REPLACE_RUBY+=	rmagick-*/doc/ex/*
-REPLACE_RUBY+=	rmagick-*/examples/*
-REPLACE_RUBY+=	rmagick-*/test/*
-REPLACE_RUBY+=	ruby-openid-*/examples/*
-REPLACE_RUBY+=	ruby-openid-*/examples/rails_openid/*
-REPLACE_RUBY+=	ruby-openid-*/examples/rails_openid/*/*
-REPLACE_RUBY+=	ruby-openid-*/examples/rails_openid/*/*/*
-REPLACE_RUBY+=	rubyzip-*/test/data/*
-REPLACE_RUBY+=	redmine-*/*
-REPLACE_RUBY+=	redmine-*/bin/*
-REPLACE_RUBY+=	redmine-*/app/*
-REPLACE_RUBY+=	redmine-*/extra/mail_handler/rdm-mailhandler.rb
-REPLACE_RUBY+=	redmine-*/extra/svn/reposman.rb
-REPLACE_RUBY+=	redmine-*/public/dispatch.fcgi.example
-REPLACE_RUBY+=	redmine-*/script/*
-REPLACE_RUBY+=	coderay-*/bin/coderay
-REPLACE_RUBY+=	erubis-*/bin/*
-REPLACE_RUBY+=	erubis-*/contrib/*
-REPLACE_RUBY+=	mocha-*/bin/build-matrix
-REPLACE_RUBY+=	nokogiri-*/*
-REPLACE_RUBY+=	nokogiri-*/bin/*
-REPLACE_RUBY+=	nokogiri-*/test/*
-REPLACE_RUBY+=	rack-*/bin/*
-REPLACE_RUBY+=	rack-*/test/*
-REPLACE_RUBY+=	rack-*/test/cgi/*
-REPLACE_RUBY+=	railties-*/bin/*
-REPLACE_RUBY+=	railties-*/guides/code/getting_started/*
-REPLACE_RUBY+=	railties-*/guides/code/getting_started/script/*
-REPLACE_RUBY+=	railties-*/lib/rails/generators/rails/app/templates/Rakefile
-REPLACE_RUBY+=	railties-*/lib/rails/generators/rails/plugin_new/templates/Rakefile
-REPLACE_RUBY+=	rake-*/bin/rake
-REPLACE_RUBY+=	redcarpet-*/bin/redcarpet
-REPLACE_RUBY+=	rmagick-*/doc/ex/*
-REPLACE_RUBY_DIRS+=	ruby-openid-*
-REPLACE_RUBY+=	rubyzip-*/*/*
-REPLACE_RUBY+=	shoulda-context-*/bin/*
-REPLACE_RUBY+=	sprockets-*/bin/*
-REPLACE_RUBY+=	thor-*/bin/*
-REPLACE_RUBY+=	tilt-*/bin/*
-REPLACE_RUBY+=	treetop-*/bin/*
-REPLACE_RUBY+=	yard-*/bin/*
-REPLACE_RUBY+=	pg-*/*
-REPLACE_RUBY+=	pg-*/lib/*
-REPLACE_RUBY+=	pg-*/lib/pg/*
-REPLACE_RUBY+=	pg-*/sample/*
-REPLACE_RUBY+=	json-*/*
-REPLACE_RUBY+=	json-*/tests/*
-REPLACE_RUBY+=	json-*/tools/*
-REPLACE_RUBY+=	rdoc-*/bin/*
-REPLACE_RUBY+=	unicorn-*/*
-REPLACE_RUBY+=	unicorn-*/bin/*
-REPLACE_RUBY+=	unicorn-*/script/*
-REPLACE_RUBY+=	unicorn-*/t/bin/*
-REPLACE_RUBY+=	unicorn-*/test/*
-REPLACE_RUBY+=	raindrops-*/examples/*
-REPLACE_RUBY+=	thread_safe-*/examples/*
+REPLACE_RUBY+=	builder-3.2.2/lib/*.rb builder-3.2.2/lib/builder/*.rb
+REPLACE_RUBY+=	builder-3.2.2/rakelib/tags.rake builder-3.2.2/test/*.rb
+REPLACE_RUBY+=	bundler-1.9.1/bin/*
+REPLACE_RUBY+=	bundler-1.9.1/lib/bundler/templates/newgem/bin/console.tt
+REPLACE_RUBY+=	bundler-1.9.1/lib/bundler/templates/newgem/exe/newgem.tt
+REPLACE_RUBY+=	coderay-1.1.0/bin/coderay coderay-1.1.0/test/functional/basic.rb
+REPLACE_RUBY+=	erubis-2.7.0/benchmark/bench.rb erubis-2.7.0/bin/erubis
+REPLACE_RUBY+=	erubis-2.7.0/contrib/erubis erubis-2.7.0/contrib/inline-require
+REPLACE_RUBY+=	erubis-2.7.0/setup.rb json-1.8.2/install.rb
+REPLACE_RUBY+=	json-1.8.2/tests/*.rb json-1.8.2/tools/server.rb
+REPLACE_RUBY+=	loofah-2.0.1/benchmark/benchmark.rb
+REPLACE_RUBY+=	mini_portile-0.6.2/lib/mini_portile.rb
+REPLACE_RUBY+=	nokogiri-1.6.6.2/bin/nokogiri
+REPLACE_RUBY+=	nokogiri-1.6.6.2/ports/patches/sort-patches-by-date
+REPLACE_RUBY+=	rack-1.6.0/bin/rackup rack-1.6.0/test/cgi/rackup_stub.rb
+REPLACE_RUBY+=	rack-1.6.0/test/cgi/test rack-1.6.0/test/cgi/test.fcgi
+REPLACE_RUBY+=	rails-4.2.0/guides/rails_guides/kindle.rb
+REPLACE_RUBY+=	rails-4.2.0/guides/source/initialization.md
+REPLACE_RUBY+=	railties-4.2.0/bin/rails
+REPLACE_RUBY+=	raindrops-0.13.0/examples/linux-listener-stats.rb
+REPLACE_RUBY+=	rake-10.4.2/bin/rake rake-10.4.2/doc/proto_rake.rdoc
+REPLACE_RUBY+=	rake-10.4.2/test/test_rake_file_utils.rb
+REPLACE_RUBY+=	rbpdf-1.18.5/test/test_helper.rb redcarpet-3.1.2/bin/redcarpet
+REPLACE_RUBY+=	redmine-3.0.1/bin/*
+REPLACE_RUBY+=	redmine-3.0.1/extra/mail_handler/rdm-mailhandler.rb
+REPLACE_RUBY+=	redmine-3.0.1/extra/svn/reposman.rb
+REPLACE_RUBY+=	redmine-3.0.1/public/dispatch.fcgi.example
+REPLACE_RUBY+=	redmine-3.0.1/script/* rmagick-2.13.4/doc/ex/*.rb
+REPLACE_RUBY+=	rmagick-2.13.4/doc/usage.html rmagick-2.13.4/examples/*.rb
+REPLACE_RUBY+=	rmagick-2.13.4/test/*.rb ruby-openid-2.3.0/examples/discover
+REPLACE_RUBY+=	ruby-openid-2.3.0/examples/rails_openid/public/dispatch.cgi
+REPLACE_RUBY+=	ruby-openid-2.3.0/examples/rails_openid/public/dispatch.fcgi
+REPLACE_RUBY+=	ruby-openid-2.3.0/examples/rails_openid/public/dispatch.rb
+REPLACE_RUBY+=	ruby-openid-2.3.0/examples/rails_openid/script/rails
+REPLACE_RUBY+=	sprockets-2.12.3/bin/sprockets thor-0.19.1/bin/thor
+REPLACE_RUBY+=	thread_safe-0.3.5/examples/bench_cache.rb tilt-1.4.1/bin/tilt
+REPLACE_RUBY+=	unicorn-4.8.3/GIT-VERSION-GEN
+REPLACE_RUBY+=	unicorn-4.8.3/bin/unicorn*
+REPLACE_RUBY+=	unicorn-4.8.3/script/isolate_for_tests
+REPLACE_RUBY+=	unicorn-4.8.3/t/bin/content-md5-put
+REPLACE_RUBY+=	unicorn-4.8.3/t/bin/sha1sum.rb unicorn-4.8.3/t/bin/unused_listen
+REPLACE_RUBY+=	unicorn-4.8.3/test/aggregate.rb
 
 CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/bundler-*/lib/bundler/templates/*
 CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/rack-*/test/cgi/test.ru
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/pg-*/spec/*
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/pg-*/spec/pg/*
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/json-1.8.2/json-java.gemspec
 CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/nokogiri-1.6.6.2/ports/patches/sort-patches-by-date
 CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/loofah-2.0.1/benchmark/benchmark.rb
 
@@ -155,10 +131,15 @@ CHECK_SHLIBS_SUPPORTED=	no
 
 SUBST_CLASSES+=		rake
 SUBST_STAGE.rake=	pre-configure
-SUBST_MESSAGE.rake=	Replace rake
-SUBST_FILES.rake=	${REPLACE_RUBY}
+SUBST_MESSAGE.rake=	Replacing path to rake programme.
+SUBST_FILES.rake=	redmine-3.0.1/Rakefile
+SUBST_FILES.rake+=	actionpack-action_caching-1.1.1/Rakefile
+SUBST_FILES.rake+=	ruby-openid-2.3.0/examples/rails_openid/Rakefile
 SUBST_SED.rake=		-e 's,/usr/bin/env rake,${PREFIX}/${RM_DIR}/gems/bin/rake,g'
-SUBST_SED.rake+=	-e 's,/usr/bin/env bash,/bin/sh,g'
+
+REPLACE_BASH+=	nokogiri-1.6.6.2/build_all nokogiri-1.6.6.2/test_all
+REPLACE_BASH+=	bundler-1.9.1/lib/bundler/templates/newgem/bin/setup.tt
+REPLACE_BASH+=	unicorn-4.8.3/local.mk.sample
 
 GEM_HOME=	${RM_DIR}/gems
 PLIST_SUBST=	GEM_HOME=${GEM_HOME}
@@ -239,7 +220,7 @@ post-install: unicorn-post-install
 		${DESTDIR}${PREFIX}/share/examples/redmine
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/config/additional_environment.rb.example \
 		${DESTDIR}${PREFIX}/share/examples/redmine
-
+	find ${DESTDIR} -type f -print0 | xargs -0 chmod g+r,-x
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
