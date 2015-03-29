@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2015/03/29 08:30:01 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2015/03/29 18:00:31 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite3 none
+PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite3
 PKG_SUPPORTED_OPTIONS+=		unicorn
 
 PKG_SUGGESTED_OPTIONS=	mysql unicorn
@@ -30,6 +30,8 @@ PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.mysql
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DISTFILES+=	${PGSQL_DISTFILE}
 .include "../../mk/pgsql.buildlink3.mk"
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/pg-*/spec/*
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/pg-*/spec/pg/*
 PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.pgsql
 .elif !empty(PKG_OPTIONS:Msqlite3)
 DISTFILES+=	${SQLITE3_DISTFILE}

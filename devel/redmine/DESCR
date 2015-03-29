@@ -1,13 +1,8 @@
-Redmine is a flexible project management web application. Written
-using the Ruby on Rails framework, it is cross-platform and
-cross-database.
+Redmine is a flexible project management web application. Written using the Ruby
+on Rails framework, it is cross-platform and cross-database.
 
-Redmine is open source and released under the terms of the GNU
-General Public License v2 (GPL).
-
-Features
-
-Some of the main features of Redmine are:
+Redmine is open source and released under the terms of the GNU General Public
+License v2 (GPL). Some of the main features of Redmine are:
 
    Multiple projects support
    Flexible role based access control
