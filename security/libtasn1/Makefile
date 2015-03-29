@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2014/10/10 11:38:54 adam Exp $
+# $NetBSD: Makefile,v 1.63 2015/03/29 13:10:49 wiz Exp $
 
-DISTNAME=	libtasn1-4.2
+DISTNAME=	libtasn1-4.4
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libtasn1/}
 
