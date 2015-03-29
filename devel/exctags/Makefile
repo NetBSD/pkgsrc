@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/03/29 09:19:06 bsiegert Exp $
 #
 
 DISTNAME=	ctags-5.8
 PKGNAME=	ex${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctags/}
 
