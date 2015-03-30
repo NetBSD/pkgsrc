@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/25 15:39:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/30 11:08:11 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/-gpl//}
 PKGREVISION=		2
@@ -8,6 +8,7 @@ CONFLICTS=		mysql*-{client,server}-[0-9]*
 
 .include "Makefile.common"
 
+PKG_GROUPS=			${MYSQL_GROUP}
 PKG_USERS=			${MYSQL_USER}:${MYSQL_GROUP}
 PKG_GECOS.${MYSQL_USER}=	MySQL database administrator
 PKG_HOME.${MYSQL_USER}=		${MYSQL_DATADIR}
