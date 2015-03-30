@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/29 18:49:02 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/30 22:06:58 ryoon Exp $
 
 DISTNAME=	redmine-3.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -41,8 +41,6 @@ DISTFILES+=	${DEFAULT_DISTFILES}
 DISTFILES+=	${_gem_}
 SITES.${_gem_}=	https://rubygems.org/downloads/
 .endfor
-
-RUBY_VERSION_SUPPORTED= 22
 
 .include "options.mk"
 
