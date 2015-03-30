@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/04/27 09:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/30 11:53:49 wiz Exp $
 
 DISTNAME=	v1.0.1
 PKGNAME=	${DISTNAME:S/v/libebur128-/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/jiixyj/libebur128/archive/
 
@@ -17,4 +18,5 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
 .include "../../audio/speex/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
