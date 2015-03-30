@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/03/19 20:40:31 tnn Exp $
+# $NetBSD: Makefile,v 1.77 2015/03/30 18:48:08 gdt Exp $
 
 DISTNAME=	gmp-6.0.0a
 CATEGORIES=	devel math
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmplib.org/
 COMMENT=	Library for arbitrary precision arithmetic
-LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2
 
 INFO_FILES=		yes
 USE_LANGUAGES=		c c++ c99
