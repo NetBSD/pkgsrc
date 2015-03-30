@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1524 2015/03/30 09:22:30 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.1525 2015/03/30 11:32:53 schmonz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2117,3 +2117,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/fwbuilder to 5.1.0.3599 [rodent 2015-03-29]
 	Updated devel/py-astor to 0.4.1 [rodent 2015-03-30]
 	Updated net/freeradius2 to 2.2.0nb10 [jperkin 2015-03-30]
+	Updated www/ikiwiki to 3.20150329 [schmonz 2015-03-30]
