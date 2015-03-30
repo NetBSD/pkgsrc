@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2014/11/02 05:55:43 obache Exp $
+# $NetBSD: Makefile,v 1.38 2015/03/30 09:21:24 jperkin Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -129,16 +129,9 @@ CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 
 .for d in ${EGDIRS}
 INSTALLATION_DIRS+=	${EGDIR}/${d}
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/${d} ${RADIUS_USER} \
+			${RADIUS_GROUP} 750
 .endfor
-
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs ${RADIUS_USER} \
-			${RADIUS_GROUP} 750
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs/demoCA ${RADIUS_USER} \
-			${RADIUS_GROUP} 750
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/modules ${RADIUS_USER} \
-			${RADIUS_GROUP} 750
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/sites-enabled ${RADIUS_USER} \
-			${RADIUS_GROUP} 750
 
 .include "../../mk/pthread.buildlink3.mk"
 
