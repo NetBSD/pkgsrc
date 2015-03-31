@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.6 2013/05/25 16:49:03 shattered Exp $
+$NetBSD: distinfo,v 1.7 2015/03/31 15:20:53 joerg Exp $
 
 SHA1 (dgen-sdl-1.32.tar.gz) = 68ab5dcdc29e5172bc760a13724afb35e8ca4378
 RMD160 (dgen-sdl-1.32.tar.gz) = fcc0bf27a2360d6d26eec48da1483e4f99271e69
 Size (dgen-sdl-1.32.tar.gz) = 885601 bytes
+SHA1 (patch-cyclone_Cyclone.h) = 80922337ccb228b701a1f08a45d44f91a2f2da7b
+SHA1 (patch-cyclone_Ea.cpp) = 51314ba86c0f91f7a2e4f4f2e05dec8ec8847096
+SHA1 (patch-cyclone_Main.cpp) = 568c4515b78882b3a8601ca15c7ad883dfe432c1
+SHA1 (patch-cyclone_OpArith.cpp) = 9113408463bdb19c219e2c0207689d4ea2dbe1b7
+SHA1 (patch-cyclone_OpBranch.cpp) = 0e4dc6c1cfa973405e0a5b22905ca19b90b6ab0d
+SHA1 (patch-cyclone_OpLogic.cpp) = abb1e6433e04a7a3c3c6dbf0395df28bf0e44bc3
+SHA1 (patch-drz80_drz80.h) = 0758e21069346ab2712e707cdc4b7188ff4681f2
+SHA1 (patch-drz80_drz80.s) = d87a121797eb8ba4e330376bb6229850f09f91ab
