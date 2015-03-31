@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/03/31 15:15:02 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2015/03/31 15:20:53 joerg Exp $
 #
 
 DISTNAME=	dgen-sdl-1.32
@@ -13,6 +13,12 @@ COMMENT=	Genesis/Megadrive emulator for Unix platforms
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+.endif
+
+PLIST_VARS+=	arm
+
+.if ${MACHINE_CPU:U} == "arm"
+PLIST_VAR.arm=	yes
 .endif
 
 USE_LANGUAGES=	c c++
