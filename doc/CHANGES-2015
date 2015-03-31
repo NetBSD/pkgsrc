@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1528 2015/03/31 11:00:27 martin Exp $
+$NetBSD: CHANGES-2015,v 1.1529 2015/03/31 20:34:31 adam Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2121,3 +2121,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/libebur128 to 1.0.1nb1 [wiz 2015-03-30]
 	Updated textproc/py-phonenumbers to 7.0.4 [rodent 2015-03-31]
 	Updated www/firefox to 36.0.4nb1 [martin 2015-03-31]
+	Updated devel/subversion to 1.8.13 [adam 2015-03-31]
+	Updated devel/subversion-base to 1.8.13 [adam 2015-03-31]
+	Updated devel/java-subversion to 1.8.13 [adam 2015-03-31]
+	Updated devel/p5-subversion to 1.8.13 [adam 2015-03-31]
+	Updated devel/py-subversion to 1.8.13 [adam 2015-03-31]
+	Updated devel/ruby-subversion to 1.8.13 [adam 2015-03-31]
+	Updated www/ap2-subversion to 1.8.13 [adam 2015-03-31]
