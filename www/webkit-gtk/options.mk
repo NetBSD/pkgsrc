@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/09/17 17:35:23 macallan Exp $
+# $NetBSD: options.mk,v 1.8 2015/03/31 15:55:44 joerg Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -33,9 +33,11 @@ CONFIGURE_ARGS+=	--disable-jit
 # debug support
 #
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--enable-debug \
+			--disable-optimizations
 .else
-CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-debug \
+			--enable-optimizations
 .endif
 
 #
