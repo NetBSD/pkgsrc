@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile,v 1.10 2015/02/28 11:58:53 wiz Exp $
+$NetBSD: patch-makefile,v 1.11 2015/03/31 16:35:29 joerg Exp $
 
 Link against pkgsrc versions of expat, zlib, flac, jpeg, and
 sqlite3, and add appropriate linker search paths.
@@ -30,6 +30,15 @@ sqlite3, and add appropriate linker search paths.
  
  # uncomment next line to build PortMidi as part of MAME/MESS build
  BUILD_MIDILIB = 1
+@@ -527,7 +527,7 @@ CFLAGS = $(CCOMFLAGS) $(CPPONLYFLAGS) $(
+ 
+ # we compile C-only to C89 standard with GNU extensions
+ # we compile C++ code to C++98 standard with GNU extensions
+-CONLYFLAGS += -std=gnu89
++CONLYFLAGS += -std=gnu99
+ ifdef CPP11
+ CPPONLYFLAGS += -x c++ -std=gnu++11
+ else
 @@ -742,7 +742,7 @@ DRIVLISTOBJ = $(OBJ)/$(TARGET)/$(SUBTARG
  #-------------------------------------------------
  
