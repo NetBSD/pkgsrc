@@ -1,0 +1,15 @@
+$NetBSD: patch-package_konoha.io_CMakeLists.txt,v 1.1 2015/03/31 15:44:47 joerg Exp $
+
+--- package/konoha.io/CMakeLists.txt.orig	2015-03-28 23:09:49.000000000 +0000
++++ package/konoha.io/CMakeLists.txt
+@@ -1,9 +1,7 @@
+ cmake_minimum_required(VERSION 2.6)
+ set(CMAKE_BUILD_TYPE ${KONOHA_BUILD_TYPE})
+ 
+-if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86_64")
+-	set(CMAKE_C_FLAGS "-fPIC")
+-endif()
++set(CMAKE_C_FLAGS "-fPIC")
+ 
+ project(io)
+ set(PACKAGE_SOURCE_CODE src/io.c src/base64.c ./src/digest.c ./src/msgpack.c)
