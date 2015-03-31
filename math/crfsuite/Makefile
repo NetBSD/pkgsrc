@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/31 00:54:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/31 15:49:15 joerg Exp $
 
 DISTNAME=	0.12
 PKGNAME=	crfsuite-${DISTNAME}
@@ -25,6 +25,12 @@ USE_TOOLS+=	autoconf autoreconf automake
 CONFIGURE_ARGS+=	--with-liblbfgs=${PREFIX}
 
 REPLACE_PYTHON=		example/*.py
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
+CONFIGURE_ARGS+=	--disable-sse2
+.endif
 
 pre-configure:
 	set -e; cd ${WRKSRC}; autoreconf -sif
