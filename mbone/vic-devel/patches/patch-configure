@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1.1.1 2008/12/16 19:35:46 sborrill Exp $
+$NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
 
 - Portability fixes
 - pkgsrc ffmpeg includes path
@@ -387,7 +387,19 @@ $NetBSD: patch-configure,v 1.1.1.1 2008/12/16 19:35:46 sborrill Exp $
  	;;
  *-*-freebsd*)
  	V_STATIC=""
-@@ -7077,7 +7085,8 @@
+@@ -6900,7 +6908,10 @@ fi
+ 
+ 
+ 
+-V_DEFINE="$V_DEFINE $V_SHM $V_H261AS $V_DV $V_XV $V_CPUDETECT -D$V_ARCH"
++V_DEFINE="$V_DEFINE $V_SHM $V_H261AS $V_DV $V_XV $V_CPUDETECT"
++if test -n "${V_ARCH}"; then
++	V_DEFINE="$V_DEFINE -D$V_ARCH"
++fi
+ 
+ 
+ # tcl7.5 needs a dynamic loading library (unless built with the
+@@ -7077,7 +7088,8 @@ fi
  
  # various include hacks
  dirs="/usr/src/local/include-fixes \
