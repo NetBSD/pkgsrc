@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.pgsql,v 1.1 2015/03/29 08:30:01 ryoon Exp $
+@comment $NetBSD: PLIST.pgsql,v 1.2 2015/03/31 04:38:30 taca Exp $
 ${GEM_HOME}/cache/pg-0.18.1.gem
-${GEM_HOME}/extensions/${MACHINE_ARCH}-netbsd/2.2.0/pg-0.18.1/pg_ext.${RUBY_DLEXT}
+${GEM_EXTSDIR}/pg-0.18.1/pg_ext.${RUBY_DLEXT}
 ${GEM_HOME}/gems/pg-0.18.1/.gemtest
 ${GEM_HOME}/gems/pg-0.18.1/BSDL
 ${GEM_HOME}/gems/pg-0.18.1/ChangeLog
