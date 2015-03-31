@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/11/07 19:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.26 2015/03/31 15:48:32 joerg Exp $
 
 PKGNAME=	cgal-3.9
 DISTNAME=	CGAL-3.9
@@ -14,8 +14,8 @@ LICENSE=	gnu-lgpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-post-patch:
-	cd ${WRKSRC} && rm -f include/CGAL/Mesh_2/Do_not_refine_edges.h.orig
+pre-install:
+	cd ${WRKSRC} && rm -f include/CGAL/Mesh_2/Do_not_refine_edges.h.orig include/CGAL/config.h.orig
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
