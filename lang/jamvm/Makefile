@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/02/08 09:41:29 obache Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/31 15:43:34 joerg Exp $
 #
 
 DISTNAME=		jamvm-1.5.4
@@ -18,6 +18,11 @@ GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-classpath-install-dir=${PREFIX}/
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang) && ${MACHINE_CPU:U} == "arm"
+CFLAGS+=	-O0
+.endif
 
 JAVA_NAME=		jamvm
 JAVA_HOME=		${PREFIX}/java/jamvm
