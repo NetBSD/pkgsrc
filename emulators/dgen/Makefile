@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/05/25 16:49:03 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2015/03/31 15:15:02 joerg Exp $
 #
 
 DISTNAME=	dgen-sdl-1.32
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dgen/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dgen.sourceforge.net/
 COMMENT=	Genesis/Megadrive emulator for Unix platforms
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	nasm-[0-9]*:../../devel/nasm
