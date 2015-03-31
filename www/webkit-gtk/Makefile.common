@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2015/01/18 18:52:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2015/03/31 15:55:44 joerg Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.4.8
@@ -26,7 +26,6 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-x11-target \
 			--disable-geolocation \
-			--disable-optimizations \
 			--disable-gtk-doc-html
 
 .include "options.mk"
