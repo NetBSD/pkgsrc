@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/08/21 16:20:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2015/03/31 15:26:46 joerg Exp $
 #
 
 DISTNAME=		sms_sdl-0.9.4a-r7.1-src
@@ -19,6 +19,16 @@ INSTALLATION_DIRS=	bin
 
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm
+
+.include "../../mk/endian.mk"
+
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-DX86_ASM
+.endif
+
+.if ${MACHINE_ENDIAN} == "little"
+CFLAGS+=	-DLSB_FIRST
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sdl/sms_sdl ${DESTDIR}${PREFIX}/bin
