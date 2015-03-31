@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/27 04:23:43 manu Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/31 15:11:16 joerg Exp $
 
 DISTNAME=	cmocka-1.0.0
 CATEGORIES=	devel
@@ -13,10 +13,10 @@ LICENSE=	apache-2.0
 FETCH_USING=	curl
 
 USE_CMAKE=	yes
-WRKSRC=		${WRKDIR}/build
+WRKSRC=		${WRKDIR}/${DISTNAME}/build
 CMAKE_ARG_PATH=	${WRKDIR}/${DISTNAME}
 
-pre-configure:
+post-extract:
 		mkdir -p ${WRKSRC}
 		rm -f ${WRKDIR}/${DISTNAME}/CMakeCache.txt
 
