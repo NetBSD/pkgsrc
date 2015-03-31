@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.1 2012/03/25 05:27:43 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2015/03/31 15:22:40 joerg Exp $
 
 --- configure.ac.orig	2010-03-07 12:22:36.000000000 +0000
 +++ configure.ac
@@ -20,3 +20,12 @@ $NetBSD: patch-configure.ac,v 1.1 2012/03/25 05:27:43 ryoon Exp $
      AC_CHECK_DECLS( MTEWARN,          [hc_cv_have_mtewarn=yes],             [hc_cv_have_mtewarn=no],             [#include <sys/mtio.h>] )
  else
      hc_cv_have_mtewarn=no
+@@ -1749,7 +1749,7 @@ if test "$hc_cv_auto_optimize" = "yes"; 
+         xscale-yes|arm*-yes)
+ 
+             hc_cv_is_intel_x86_arch=no
+-            hc_cv_optimization_flags="$hc_cv_optimization_flags -mcpu=$host_cpu -mtune=$host_cpu -frename-registers"
++            hc_cv_optimization_flags="$hc_cv_optimization_flags -frename-registers"
+             ;;
+     esac
+     if test "$hc_cv_is_intel_x86_arch" = "yes"; then
