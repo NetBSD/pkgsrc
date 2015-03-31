@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/02/12 23:17:58 tron Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/31 15:39:07 joerg Exp $
 #
 
 DISTNAME=	supertuxkart-0.8.1-src
@@ -67,4 +67,5 @@ pre-build:
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
