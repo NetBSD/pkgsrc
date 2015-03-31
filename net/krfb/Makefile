@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/11/13 11:50:26 markd Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/31 15:53:19 joerg Exp $
 
 DISTNAME=	krfb-${_KDE_VERSION}
 CATEGORIES=	net
@@ -12,5 +12,6 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
