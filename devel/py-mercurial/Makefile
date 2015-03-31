@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/29 19:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/31 03:40:24 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://mercurial.selenic.com/
 COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 # with this dependency, two zip test cases start working
 # http://bz.selenic.com/show_bug.cgi?id=4483
 # http://bz.selenic.com/show_bug.cgi?id=4485
