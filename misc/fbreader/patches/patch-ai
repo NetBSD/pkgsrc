@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2013/06/27 14:21:09 ryoon Exp $
+$NetBSD: patch-ai,v 1.5 2015/03/31 15:51:11 joerg Exp $
 
 * Pass DO_ICONV_CAST
 
@@ -14,3 +14,12 @@ $NetBSD: patch-ai,v 1.4 2013/06/27 14:21:09 ryoon Exp $
  EXTERNAL_INCLUDE = $(shell pkg-config --cflags fribidi) 
  
  ifeq "$(UI_TYPE)" "qt"
+@@ -21,7 +20,7 @@ ifeq "$(UI_TYPE)" "qt"
+   QTINCLUDE = -I /usr/include/qt3
+ else
+   MOC = $(shell pkg-config QtCore --variable=moc_location)
+-  QTINCLUDE = -I $(shell pkg-config --cflags QtCore)
++  QTINCLUDE = $(shell pkg-config --cflags QtCore)
+ endif
+ 
+ GTKINCLUDE = $(shell pkg-config --cflags gtk+-2.0 libpng xft)
