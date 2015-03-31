@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/04/05 11:32:46 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/03/31 15:40:03 joerg Exp $
 
 SHA1 (ufoai-2.2.1-data.tar) = eb071333478bd6860179e12d8655301980f87d60
 RMD160 (ufoai-2.2.1-data.tar) = af91dd473f59c73e705181759059bd37ba215f62
@@ -12,3 +12,5 @@ Size (ufoai-2.2.1-source.tar.bz2) = 7640531 bytes
 SHA1 (patch-aa) = 2b196e8d94a1848b42212f32c90a259e56440382
 SHA1 (patch-ab) = 0d02436454b3dbd85b8027fcf321714be8bf05a2
 SHA1 (patch-ac) = 29069a06c2442060734e32162a9b561c19be8739
+SHA1 (patch-src_common_msg.c) = 6554364b9bdfa1040f44240da362c5c68c6d98cb
+SHA1 (patch-src_common_netpack.c) = 88fc5a66e1e9e9006b43df262190e5e1cfbfd734
