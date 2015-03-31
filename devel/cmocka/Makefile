@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/31 15:11:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/31 22:03:48 wiz Exp $
 
 DISTNAME=	cmocka-1.0.0
 CATEGORIES=	devel
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cmocka.org/files/1.0/
 COMMENT=	Unit testing framework for C supporing mock objects
 LICENSE=	apache-2.0
-
-FETCH_USING=	curl
 
 USE_CMAKE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
