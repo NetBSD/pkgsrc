@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/02/21 23:35:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2015/03/31 16:00:21 joerg Exp $
 
 DISTNAME=	qtwebkit-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
@@ -20,6 +20,10 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
 .else
 BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
+.endif
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
+LDFLAGS+=	-Wl,-no-keep-memory -Wl-reduce-memory
 .endif
 
 post-install:
