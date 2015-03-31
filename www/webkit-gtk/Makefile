@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2014/08/03 22:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2015/03/31 15:56:29 joerg Exp $
 
 .include "Makefile.common"
 
@@ -8,6 +8,10 @@ COMMENT=	GTK2 port of the WebKit browser engine
 
 CONFIGURE_ARGS+=	--with-gtk=2.0
 CONFIGURE_ARGS+=	--disable-webkit2
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
+LDFLAGS+=	-Wl,-no-keep-memory -Wl,-reduce-memory
+.endif
 
 #introspection support
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24.17nb3
