@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/02/21 23:35:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/31 16:01:36 joerg Exp $
 
 DISTNAME=	razorqt-0.5.1
 PKGREVISION=	13
@@ -31,4 +31,5 @@ CHECK_PORTABILITY_SKIP=	razorqt-session/razor-session/resources/xdg-screensaver
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/xscreensaver/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
