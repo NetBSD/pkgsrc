@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2014/12/01 12:39:17 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2015/03/31 15:46:18 joerg Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		10
@@ -104,6 +104,8 @@ do-install:
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=return-type -Wno-comment -Wno-parentheses-equality
 CWRAPPERS_APPEND.cc+=	-Wno-error=return-type -Wno-comment -Wno-parentheses-equality
 .endif
+
+UNLIMIT_RESOURCES+=	datasize
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
