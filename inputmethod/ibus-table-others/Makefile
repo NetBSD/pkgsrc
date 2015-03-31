@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/15 17:56:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.12 2015/03/31 15:41:41 joerg Exp $
 #
 
 DISTNAME=	ibus-table-others-1.3.7
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	All non-Chinese tables for IBus-Table
 LICENSE=	gnu-gpl-v3
+
+#FileExistsError: [Errno 17] File exists: '.../work/.home/.local/share/ibus-table'
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
