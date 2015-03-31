@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1526 2015/03/30 11:54:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1527 2015/03/31 01:15:26 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2119,3 +2119,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/freeradius2 to 2.2.0nb10 [jperkin 2015-03-30]
 	Updated www/ikiwiki to 3.20150329 [schmonz 2015-03-30]
 	Updated audio/libebur128 to 1.0.1nb1 [wiz 2015-03-30]
+	Updated textproc/py-phonenumbers to 7.0.4 [rodent 2015-03-31]
