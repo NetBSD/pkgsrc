@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/03/19 19:26:28 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2015/03/31 09:44:30 tnn Exp $
 #
 
 DISTNAME=		synergy-1.7.0
@@ -60,6 +60,13 @@ _WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare
 CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare
+.endif
+
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-DUSYNERGY_BIG_ENDIAN
+.else
+CFLAGS+=	-DUSYNERGY_LITTLE_ENDIAN
 .endif
 
 # XXX surely there exists a better way to do this
