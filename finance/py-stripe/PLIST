@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/26 23:46:15 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/01 03:13:10 rodent Exp $
 ${PYSITELIB}/VERSION
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/stripe/http_client.pyo
 ${PYSITELIB}/stripe/importer.py
 ${PYSITELIB}/stripe/importer.pyc
 ${PYSITELIB}/stripe/importer.pyo
+${PYSITELIB}/stripe/multipart_data_generator.py
+${PYSITELIB}/stripe/multipart_data_generator.pyc
+${PYSITELIB}/stripe/multipart_data_generator.pyo
 ${PYSITELIB}/stripe/resource.py
 ${PYSITELIB}/stripe/resource.pyc
 ${PYSITELIB}/stripe/resource.pyo
@@ -36,6 +39,9 @@ ${PYSITELIB}/stripe/test/test_http_client.pyo
 ${PYSITELIB}/stripe/test/test_integration.py
 ${PYSITELIB}/stripe/test/test_integration.pyc
 ${PYSITELIB}/stripe/test/test_integration.pyo
+${PYSITELIB}/stripe/test/test_multipart_data_generator.py
+${PYSITELIB}/stripe/test/test_multipart_data_generator.pyc
+${PYSITELIB}/stripe/test/test_multipart_data_generator.pyo
 ${PYSITELIB}/stripe/test/test_requestor.py
 ${PYSITELIB}/stripe/test/test_requestor.pyc
 ${PYSITELIB}/stripe/test/test_requestor.pyo
