@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/06/08 22:51:04 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/01 11:43:57 rodent Exp $
 
-DISTNAME=	kazoo-2.0b1
+DISTNAME=	kazoo-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/k/kazoo/

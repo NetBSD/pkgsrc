@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/08 22:51:04 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/01 11:43:57 rodent Exp $
 
-SHA1 (kazoo-2.0b1.zip) = b02122721fea496ce481e883c446eb53bf13f729
-RMD160 (kazoo-2.0b1.zip) = 56fdfeff258e9340882c8bb9a93bae471fadf19e
-Size (kazoo-2.0b1.zip) = 144969 bytes
+SHA1 (kazoo-2.0.zip) = 66f749aaeb774c34edd004c1901d58904dac716e
+RMD160 (kazoo-2.0.zip) = 55d81ebabe11b2354ae8344b49bdb7223d5ac21b
+Size (kazoo-2.0.zip) = 145663 bytes
