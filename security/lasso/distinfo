@@ -1,18 +1,8 @@
-$NetBSD: distinfo,v 1.15 2014/02/05 09:26:58 manu Exp $
+$NetBSD: distinfo,v 1.16 2015/04/01 14:05:02 manu Exp $
 
-SHA1 (lasso-2.3.6.tar.gz) = 92689a873b83e02efb4a6c3a375f040a9e75c95c
-RMD160 (lasso-2.3.6.tar.gz) = 5e1aaba807d453c1fad28be6a8f06d908159b3fe
-Size (lasso-2.3.6.tar.gz) = 3940027 bytes
-SHA1 (patch-bindings-java-wrapper_top.c) = 16f98d5edb21ca97f05a3d108a04da8be2ec2ed4
-SHA1 (patch-bindings-php5-wrapper_source_top.c) = 21c92807633ce96188f6bbdf72129d16f5784f19
-SHA1 (patch-bindings-python-wrapper_top.c) = db730c2443e1a618f0719cd190a30a2bba241961
-SHA1 (patch-configure) = ffcd1de65b3a0e66f79200ceea0ecbad29bc89a9
-SHA1 (patch-configure.ac) = 662370c81ed8da78e614ff58cee54f825974b7ae
-SHA1 (patch-docs-reference-lasso-lasso-sections.txt) = 9e6936b0c019b8fb8b9493f914241131b684cbfc
-SHA1 (patch-lasso-errors_c) = 5c0fe304cd9cce6d926362c248ffe60c2c7357c5
-SHA1 (patch-lasso-errors_c_in) = d4663edb280d38a0cb1a422d9b95b1d344012f63
-SHA1 (patch-lasso-id-ff-provider.c) = 9312c67a8e81eeea95b888745a2b9f504a36a36f
-SHA1 (patch-lasso-xml-tools.c) = 6ee2268747a4f84a0b9d3a53bfa260ab11ba8dfc
-SHA1 (patch-lasso_id-ff_lecp.c) = 90b0d3b06a6582f779706b671c497ad7a556a116
-SHA1 (patch-lasso_id-ff_session.c) = 839277d013e219c5ba91bae1ab75cef5d99d9286
-SHA1 (patch-lasso_saml-2.0_ecp.c) = cb946f383b9d3fed4ce794deb96a143077746a2c
+SHA1 (lasso-2.4.1.tar.gz) = 4596b8037932d4281828d27c3d4065522b4775dc
+RMD160 (lasso-2.4.1.tar.gz) = 7fc4855135fe662b00e353ad21b0646ce24692e3
+Size (lasso-2.4.1.tar.gz) = 4392038 bytes
+SHA1 (patch-configure) = 8acdd57ba89fea824ea0bc6b0080298b78226678
+SHA1 (patch-configure.ac) = 8cb6a7ad3aec9a7c17892ae4e0493ad3d6a8cde1
+SHA1 (patch-lasso-id-ff-provider.c) = 900532802b7243598332850683b3d16d3f579a82

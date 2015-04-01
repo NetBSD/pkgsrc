@@ -1,11 +1,24 @@
-$NetBSD: patch-configure,v 1.1 2014/02/05 09:26:58 manu Exp $
+$NetBSD: patch-configure,v 1.2 2015/04/01 14:05:02 manu Exp $
 
 Make sure _POSIX_C_SOURCE=199506 so that strtok() is defined by <string.h>
 Otherwise, compiler assumes it returns an int, which badly breaks on LP64
 
---- configure.orig	2014-02-05 08:57:10.000000000 +0000
-+++ configure	2014-02-05 08:58:04.000000000 +0000
-@@ -14461,8 +14461,9 @@
+Also use = instead of == for test(1) portability sake.
+
+--- configure.orig	2014-08-28 16:05:55.000000000 +0200
++++ configure	2015-03-25 11:43:14.000000000 +0100
+@@ -13771,9 +13771,9 @@
+   enable_java=no
+   JAVA_VERSION=""
+ fi
+ 
+-if test  "$DARWIN" == 1; then
++if test  "$DARWIN" = 1; then
+     JNI_EXTRA_LDFLAGS="-shrext .jnilib"
+ fi
+ 
+  if test "x$enable_java" = "xyes"; then
+@@ -15279,8 +15279,9 @@
  fi
  
  

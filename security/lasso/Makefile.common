@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9 2014/05/09 07:37:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/04/01 14:05:02 manu Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
 
-DISTNAME=	lasso-2.3.6
+DISTNAME=	lasso-2.4.1
 CATEGORIES=	security
-MASTER_SITES=	http://dev.entrouvert.org/lasso/
+MASTER_SITES=	https://dev.entrouvert.org/lasso/
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://lasso.entrouvert.org/
@@ -22,8 +22,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl
 
 PKGCONFIG_OVERRIDE+=	lasso.pc.in
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.3.6
 
 .include "../../lang/python/application.mk"
 
