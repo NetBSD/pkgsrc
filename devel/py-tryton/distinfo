@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/03/20 00:58:38 tnn Exp $
+$NetBSD: distinfo,v 1.10 2015/04/01 11:34:55 tnn Exp $
 
 SHA1 (tryton-3.4/tryton-3.4.2.tar.gz) = 9ee78df1ee11e22e194a5b0301ebcf87cb603dae
 RMD160 (tryton-3.4/tryton-3.4.2.tar.gz) = a4653be2e510073c360ab06cdb61404b08618bdf
 Size (tryton-3.4/tryton-3.4.2.tar.gz) = 824683 bytes
-SHA1 (patch-tryton_gui_window_view__form_view_form__gtk_multiselection.py) = 9729de7c5f58cdb0f061ab80020232e723277a0e
