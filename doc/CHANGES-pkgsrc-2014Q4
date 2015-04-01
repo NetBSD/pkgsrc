@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.36 2015/04/01 15:35:44 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.37 2015/04/01 16:43:53 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -121,3 +121,5 @@ Pullup ticket #4645 - requested by taca
 www/drupal7: security update
 Pullup ticket #4647 - requested by bsiegert
 audio/vorbis-tools: security patch
+Pullup ticket #4648 - requested by bsiegert
+net/lftp: security patch
