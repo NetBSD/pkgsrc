@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.37 2015/04/01 16:43:53 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.38 2015/04/01 18:14:52 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -123,3 +123,5 @@ Pullup ticket #4647 - requested by bsiegert
 audio/vorbis-tools: security patch
 Pullup ticket #4648 - requested by bsiegert
 net/lftp: security patch
+Pullup ticket #4649 - requested by bsiegert
+net/ntp4: security update
