@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2014/02/12 23:18:43 tron Exp $
+# $NetBSD: Makefile,v 1.29 2015/04/01 14:08:13 manu Exp $
 #
 
-PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
-DISTNAME=	mod_auth_mellon-0.6.1
+DISTNAME=	mod_auth_mellon-0.10.0
+PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
 #PKGREVISION=	1
-PKGREVISION=	2
 CATEGORIES=	www security
-MASTER_SITES=	http://modmellon.googlecode.com/files/
+MASTER_SITES=	https://github.com/UNINETT/mod_auth_mellon/releases/download/v${DISTNAME:C/.*-//}/
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/modmellon/
+HOMEPAGE=	http://modmellon.googlecode.com/files/
 COMMENT=	SAML 2.0 authentication for Apache
 LICENSE=	gnu-gpl-v2 # or later
 
@@ -21,13 +20,11 @@ USE_TOOLS+=	pkg-config
 CFLAGS+=	-DLASSO_SERVER_LOAD_METADATA_FLAG_DEFAULT=0
 
 APACHE_MODULE=	YES
-APACHE_MODULE_NAME=	auth_mellon_module
 PKG_APACHE_ACCEPTED=	apache22
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 SUBST_CLASSES+=		pthflags
-SUBST_MESSAGES=		Remove -pthread flag
 SUBST_STAGE.pthflags=	post-configure
 SUBST_FILES.pthflags=	Makefile
 SUBST_SED.pthflags=	-e 's| -pthread | |g'
