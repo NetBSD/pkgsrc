@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/02/02 19:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13.8.1 2015/04/01 03:31:54 hiramatsu Exp $
 
 DISTNAME=		tcllib-1.15
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
 EXTRACT_SUFX=		.tar.bz2
