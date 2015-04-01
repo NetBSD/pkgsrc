@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/10/05 20:34:20 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/01 03:55:34 rodent Exp $
 
-DISTNAME=	pygal-1.5.1
+DISTNAME=	pygal-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pygal/
