@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.39 2015/04/01 19:32:15 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.40 2015/04/01 20:02:52 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -127,3 +127,5 @@ Pullup ticket #4649 - requested by bsiegert
 net/ntp4: security update
 Pullup ticket #4650 - requested by bsiegert
 sysutils/file: security update
+Pullup ticket #4652 - requested by bsiegert
+devel/exctags: security patch
