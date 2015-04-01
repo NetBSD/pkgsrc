@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/01 02:19:17 rodent Exp $
 
-DISTNAME=	python-sql-0.4
+DISTNAME=	python-sql-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/python-sql/
