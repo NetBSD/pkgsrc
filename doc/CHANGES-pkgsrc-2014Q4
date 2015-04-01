@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.34 2015/04/01 12:50:31 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q4,v 1.1.2.35 2015/04/01 14:12:09 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q4 branch:
@@ -117,3 +117,5 @@ Pullup ticket #4646 - requested by bsiegert
 devel/tcllib: security update
 Pullup ticket #4644 - requested by taca
 www/drupal6: security update
+Pullup ticket #4645 - requested by taca
+www/drupal7: security update
