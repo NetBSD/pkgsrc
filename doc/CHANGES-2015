@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1539 2015/04/01 03:59:19 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1540 2015/04/01 11:44:30 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated finance/py-stripe to 1.22.1 [rodent 2015-04-01]
 	Updated graphics/py-pygal to 1.7.0 [rodent 2015-04-01]
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.539 [rodent 2015-04-01]
+	Updated sysutils/py-kazoo to 2.0 [rodent 2015-04-01]
