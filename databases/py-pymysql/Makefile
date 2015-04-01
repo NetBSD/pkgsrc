@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/08/13 22:40:19 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/01 02:16:26 rodent Exp $
 
-DISTNAME=	PyMySQL-0.6.2
+DISTNAME=	PyMySQL-0.6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/PyMySQL/
