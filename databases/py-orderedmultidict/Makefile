@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/08/13 22:41:21 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/01 02:05:51 rodent Exp $
 
-DISTNAME=	orderedmultidict-0.7.3
+DISTNAME=	orderedmultidict-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/o/orderedmultidict/
@@ -10,9 +10,14 @@ HOMEPAGE=	https://github.com/gruns/orderedmultidict
 COMMENT=	Ordered Multivalue Dictionary - omdict
 LICENSE=	unlicense
 
+DEPENDS+=	${PYPKGPREFIX}-six>=1.8.0:../../lang/py-six
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26
+
+post-install:
+	chmod -x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
