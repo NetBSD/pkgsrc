@@ -1,11 +1,24 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/02/05 09:26:58 manu Exp $
+$NetBSD: patch-configure.ac,v 1.2 2015/04/01 14:05:02 manu Exp $
 
 Make sure _POSIX_C_SOURCE=199506 so that strtok() is defined by <string.h>
 Otherwise, compiler assumes it returns an int, which badly breaks on LP64
 
---- configure.ac.orig	2014-02-05 08:56:57.000000000 +0000
-+++ configure.ac	2014-02-05 08:56:37.000000000 +0000
-@@ -781,8 +781,10 @@
+Also use = instead of == for test(1) portability sake.
+
+--- configure.ac.orig	2014-08-28 15:47:50.000000000 +0200
++++ configure.ac	2015-03-25 11:43:28.000000000 +0100
+@@ -286,9 +286,9 @@
+   JAVA_VERSION=""
+ fi
+ 
+ dnl Support JNI under MacOsX
+-if test  "$DARWIN" == 1; then
++if test  "$DARWIN" = 1; then
+     JNI_EXTRA_LDFLAGS="-shrext .jnilib"
+ fi
+ 
+ dnl Conditional java sub dir test.
+@@ -748,8 +748,10 @@
  dnl ==========================================================================
  dnl Final steps: lasso config
  dnl ==========================================================================
