@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1531 2015/04/01 02:06:21 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1532 2015/04/01 02:17:02 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2130,3 +2130,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ap2-subversion to 1.8.13 [adam 2015-03-31]
 	Updated devel/py-fann2 to 1.0.7 [rodent 2015-04-01]
 	Updated databases/py-orderedmultidict to 0.7.4 [rodent 2015-04-01]
+	Updated databases/py-pymysql to 0.6.6 [rodent 2015-04-01]
