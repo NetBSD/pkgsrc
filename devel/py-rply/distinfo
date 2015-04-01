@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/18 03:06:33 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/01 02:45:52 rodent Exp $
 
-SHA1 (rply-0.7.2.tar.gz) = a436165ea7d6c3b22aaae184bbc6303a803393cc
-RMD160 (rply-0.7.2.tar.gz) = 3128b7c9fe287d5d008ce59e8fbb0519177b0296
-Size (rply-0.7.2.tar.gz) = 14548 bytes
+SHA1 (rply-0.7.3.tar.gz) = aa88382e2e36805b2529887e31fc249adf8d2a16
+RMD160 (rply-0.7.3.tar.gz) = 193f2a20d97c4496cd6add49e70218938da761af
+Size (rply-0.7.3.tar.gz) = 16471 bytes
