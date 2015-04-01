@@ -1,8 +1,30 @@
-$NetBSD: patch-ac,v 1.9 2010/11/09 13:13:03 adam Exp $
+$NetBSD: patch-ac,v 1.9.34.1 2015/04/01 15:32:04 hiramatsu Exp $
 
+https://trac.xiph.org/changeset/19117
+oggenc: fix crash on raw file close, reported by Hanno in issue #2009. pointer
+to a non-static struct was escaping its scope.
 --- oggenc/oggenc.c.orig	2010-03-26 07:07:07.000000000 +0000
 +++ oggenc/oggenc.c
-@@ -779,6 +779,8 @@ static void parse_options(int argc, char
+@@ -97,6 +97,8 @@ int main(int argc, char **argv)
+               .3,-1,
+               0,0,0.f,
+               0, 0, 0, 0, 0};
++    input_format raw_format = {NULL, 0, raw_open, wav_close, "raw",
++	N_("RAW file reader")};
+ 
+     int i;
+ 
+@@ -239,9 +241,6 @@ int main(int argc, char **argv)
+ 
+         if(opt.rawmode)
+         {
+-            input_format raw_format = {NULL, 0, raw_open, wav_close, "raw", 
+-                N_("RAW file reader")};
+-
+             enc_opts.rate=opt.raw_samplerate;
+             enc_opts.channels=opt.raw_channels;
+             enc_opts.samplesize=opt.raw_samplesize;
+@@ -779,6 +778,8 @@ static void parse_options(int argc, char
  
                  break;
              case 'a':
@@ -11,7 +33,7 @@ $NetBSD: patch-ac,v 1.9 2010/11/09 13:13:03 adam Exp $
                  opt->artist = realloc(opt->artist, (++opt->artist_count)*sizeof(char *));
                  opt->artist[opt->artist_count - 1] = strdup(optarg);
                  break;
-@@ -791,10 +793,14 @@ static void parse_options(int argc, char
+@@ -791,10 +792,14 @@ static void parse_options(int argc, char
                  opt->comments[opt->comment_count - 1] = strdup(optarg);
                  break;
              case 'd':
@@ -26,7 +48,7 @@ $NetBSD: patch-ac,v 1.9 2010/11/09 13:13:03 adam Exp $
                  opt->genre = realloc(opt->genre, (++opt->genre_count)*sizeof(char *));
                  opt->genre[opt->genre_count - 1] = strdup(optarg);
                  break;
-@@ -803,6 +809,8 @@ static void parse_options(int argc, char
+@@ -803,6 +808,8 @@ static void parse_options(int argc, char
                  exit(0);
                  break;
              case 'l':
@@ -35,7 +57,7 @@ $NetBSD: patch-ac,v 1.9 2010/11/09 13:13:03 adam Exp $
                  opt->album = realloc(opt->album, (++opt->album_count)*sizeof(char *));
                  opt->album[opt->album_count - 1] = strdup(optarg);
                  break;
-@@ -815,6 +823,8 @@ static void parse_options(int argc, char
+@@ -815,6 +822,8 @@ static void parse_options(int argc, char
                                      opt->fixedserial = 1;
                  break;
              case 't':
