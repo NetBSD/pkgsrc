@@ -1,0 +1,3 @@
+This is a convenient way to get the "wtf" programme and also its acronyms
+database outside of NetBSD source tree. wtf is little shell script which
+translates acronyms for you.
