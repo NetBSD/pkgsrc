@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2015/03/11 22:37:18 tnn Exp $
+# $NetBSD: Makefile,v 1.95 2015/04/02 22:40:09 tnn Exp $
 
 .include "Makefile.common"
+PKGREVISION=		1
 
 #CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ARGS+=	-cc ${CC}
@@ -83,6 +84,14 @@ SUBST_STAGE.extra-rt-libs=	pre-configure
 
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
+
+post-install:
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	set -e ; cd ${DESTDIR}${PREFIX}/lib/ocaml/${PKGMANDIR}/man1;	\
+	for m in *; do							\
+	  ln -s ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$m;		\
+	done
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
