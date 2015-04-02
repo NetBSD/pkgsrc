@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/11/10 18:46:40 rodent Exp $
+$NetBSD: distinfo,v 1.4 2015/04/02 23:10:28 rodent Exp $
 
-SHA1 (WTForms-Components-0.9.6.tar.gz) = 5fac8f4438b345f81c1cc66bd81509243ec4937c
-RMD160 (WTForms-Components-0.9.6.tar.gz) = 2c6b25a091dded004abcc8f735451d228dbfe44d
-Size (WTForms-Components-0.9.6.tar.gz) = 27018 bytes
+SHA1 (WTForms-Components-0.9.7.tar.gz) = 5bfad924836133d9c80e58ff4f49766ab085f6f6
+RMD160 (WTForms-Components-0.9.7.tar.gz) = 897812adc75d83e04c2a97769e727e0e0be188f0
+Size (WTForms-Components-0.9.7.tar.gz) = 28039 bytes

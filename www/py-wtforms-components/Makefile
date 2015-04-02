@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/02 23:10:28 rodent Exp $
 
-DISTNAME=	WTForms-Components-0.9.6
+DISTNAME=	WTForms-Components-0.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/W/WTForms-Components/
