@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2015/04/01 14:05:02 manu Exp $
-#
-
-#PKGREVISION=		1
+# $NetBSD: Makefile,v 1.24 2015/04/02 16:55:09 wiz Exp $
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-php5
 CONFIGURE_ARGS+=	--disable-perl
 
-PKG_DESTDIR_SUPPORT=	destdir
-
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.4.1
 PYTHON_FOR_BUILD_ONLY=	yes
 
 EXTRACT_USING=		bsdtar
