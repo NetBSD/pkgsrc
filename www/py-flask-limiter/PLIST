@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/02 23:26:50 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flask_limiter/__init__.py
+${PYSITELIB}/flask_limiter/__init__.pyc
+${PYSITELIB}/flask_limiter/__init__.pyo
+${PYSITELIB}/flask_limiter/_version.py
+${PYSITELIB}/flask_limiter/_version.pyc
+${PYSITELIB}/flask_limiter/_version.pyo
+${PYSITELIB}/flask_limiter/errors.py
+${PYSITELIB}/flask_limiter/errors.pyc
+${PYSITELIB}/flask_limiter/errors.pyo
+${PYSITELIB}/flask_limiter/extension.py
+${PYSITELIB}/flask_limiter/extension.pyc
+${PYSITELIB}/flask_limiter/extension.pyo
+${PYSITELIB}/flask_limiter/util.py
+${PYSITELIB}/flask_limiter/util.pyc
+${PYSITELIB}/flask_limiter/util.pyo
+${PYSITELIB}/flask_limiter/version.py
+${PYSITELIB}/flask_limiter/version.pyc
+${PYSITELIB}/flask_limiter/version.pyo
