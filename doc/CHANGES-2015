@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1576 2015/04/02 22:48:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1577 2015/04/02 22:49:30 rodent Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2172,6 +2172,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/p5-Image-ExifTool to 9.90 [wiz 2015-04-02]
 	Updated mail/p5-Net-SMTP-SSL to 1.02 [wiz 2015-04-02]
 	Updated devel/p5-Sub-Name to 0.13 [wiz 2015-04-02]
+	Updated www/py-flask-debugtoolbar to 0.9.2 [rodent 2015-04-02]
 	Updated devel/p5-List-MoreUtils to 0.410 [wiz 2015-04-02]
 	Updated devel/p5-File-Which to 1.16 [wiz 2015-04-02]
 	Updated multimedia/mpv to 0.8.3 [wiz 2015-04-02]
