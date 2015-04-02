@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/02 23:22:31 rodent Exp $
+
+SHA1 (limits-1.0.4.tar.gz) = 4076cd8c2390fe8ae79b0e383ec339a90d71d1ff
+RMD160 (limits-1.0.4.tar.gz) = 124cfdffad944af8fca067d407bd825822d0e02d
+Size (limits-1.0.4.tar.gz) = 22041 bytes
