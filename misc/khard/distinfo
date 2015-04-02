@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/02 22:35:34 wiz Exp $
+
+SHA1 (khard-0.3.0.tar.gz) = 9a5e4557776aeeab2c64d099a14df0c6a635541b
+RMD160 (khard-0.3.0.tar.gz) = 758e9eca409327fb0cff860a243ba5ff5604b348
+Size (khard-0.3.0.tar.gz) = 5051405 bytes
