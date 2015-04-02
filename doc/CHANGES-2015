@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1552 2015/04/02 22:36:27 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1553 2015/04/02 22:36:51 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2153,3 +2153,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXdmcp to 1.1.2 [wiz 2015-04-02]
 	Updated graphics/png to 1.6.17 [wiz 2015-04-02]
 	Added misc/khard version 0.3.0 [wiz 2015-04-02]
+	Updated devel/afl to 1.58b [wiz 2015-04-02]
