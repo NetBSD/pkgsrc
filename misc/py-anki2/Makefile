@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2015/03/26 22:12:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/02 22:40:25 wiz Exp $
 
-DISTNAME=	anki-2.0.31
+DISTNAME=	anki-2.0.32
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/}
 CATEGORIES=	misc x11
 MASTER_SITES=	http://ankisrs.net/download/mirror/
