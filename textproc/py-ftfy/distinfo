@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/02 22:36:59 rodent Exp $
+
+SHA1 (ftfy-3.4.0.tar.gz) = 143f8eb98ae9e2f8e2c861cf654acdda023de18d
+RMD160 (ftfy-3.4.0.tar.gz) = de9d0f9cc874b6c1c18fb0a5800d3c3979b120f4
+Size (ftfy-3.4.0.tar.gz) = 26845 bytes
