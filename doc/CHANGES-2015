@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1555 2015/04/02 22:37:31 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1556 2015/04/02 22:37:41 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2156,3 +2156,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.58b [wiz 2015-04-02]
 	Updated x11/xterm to 317 [wiz 2015-04-02]
 	Added textproc/py-ftfy version 3.4.0 [rodent 2015-04-02]
+	Updated net/unison2.40 to 2.40.128 [wiz 2015-04-02]
