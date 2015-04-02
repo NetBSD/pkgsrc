@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.30 2015/03/08 08:10:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2015/04/02 22:40:04 wiz Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
-DISTNAME=	ffmpeg-2.6
+DISTNAME=	ffmpeg-2.6.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.bz2
