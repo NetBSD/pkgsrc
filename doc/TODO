@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14265 2015/04/02 22:38:07 wiz Exp $
+$NetBSD: TODO,v 1.14266 2015/04/02 22:38:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cabextract-1.6 [wiz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
-	o calibre-2.22.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
