@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/04/02 23:52:50 rodent Exp $
+
+Fix portability failure.
+
+--- configure.ac.orig	2014-12-27 12:40:45.000000000 +0000
++++ configure.ac
+@@ -28,7 +28,7 @@ AC_CHECK_MEMBER(struct tm.tm_gmtoff,
+ 
+ # test for boost anyways
+ BOOST_REQUIRE([1.36], [boost=no])
+-if test "$boost" == ""; then
++if test "$boost" = ""; then
+   BOOST_TEST
+ fi
+ 
