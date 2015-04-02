@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/09/25 20:04:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/02 22:34:39 wiz Exp $
 
-DISTNAME=	xcb-util-cursor-0.1.1
-PKGREVISION=	1
+DISTNAME=	xcb-util-cursor-0.1.2
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
