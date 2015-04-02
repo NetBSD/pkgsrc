@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2015/03/12 14:00:14 nros Exp $
+# $NetBSD: Makefile,v 1.452 2015/04/02 22:35:44 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -134,6 +134,7 @@ SUBDIR+=	kdeplasma-addons4
 SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
 SUBDIR+=	kgeography
+SUBDIR+=	khard
 SUBDIR+=	kig
 SUBDIR+=	kiten
 SUBDIR+=	klettres
