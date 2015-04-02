@@ -1,0 +1,4 @@
+Khard is an address book for the Linux console. It creates, reads,
+modifies and removes CardDAV address book entries at your local
+machine. Khard is also compatible to the email clients mutt and
+alot and the SIP client twinkle.
