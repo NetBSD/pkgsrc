@@ -1,0 +1,3 @@
+Flask-Limiter provides rate limiting features to flask routes. It has support
+for a configurable backend for storage with current implementations for in-
+memory, redis and memcache.
