@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14256 2015/04/02 15:28:34 wiz Exp $
+$NetBSD: TODO,v 1.14257 2015/04/02 15:30:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,6 +403,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o atk-2.16.0
 	o aubio-0.4.0
 	o audacity-2.0.5 [wip (audacity-devel)]
+	o audacity-2.1
 	o autoconvert-0.3.16
 	o autogen-5.18.4
 	o avidemux-2.6
@@ -416,7 +417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o benchfft-3.1
 	o binutils-2.25
 	o bitchx-1.2.1 [wip]
-	o blender-2.73
+	o blender-2.74
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -534,6 +535,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
 	o exaile-3.4.4
+	o exult-1.4.9rc1 [pkg/49800]
 	o ezmlm-idx-7.2.0 [schmonz]
 	o faces-1.7.7
 	o fakeroot-1.6.5
@@ -642,6 +644,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.6.6
 	o gnustep-back-0.24.0
 	o gnustep-base-1.24.7
 	o gnustep-examples-1.4.0
@@ -756,6 +759,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.12.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgroove-4.2.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o liblangtag-0.5.5
@@ -768,6 +772,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libraw-0.16.0
 	o libreoffice4-4.4.2
 	o libreoffice4-bin-4.4.2
+	o librsvg-2.40.9
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
@@ -826,6 +831,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-server-1.16.4
 	o modular-xorg-server-1.17.1 (see pkgsrc-wip/modular-xorg-server)
 	o molden-4.8 [after which PR 40252 can be closed]
+	o moneyguru-2.8.2
 	o mono-3.12.0
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-3.12.0 [wip]
@@ -913,6 +919,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-jpgraph-3.0.6
 	o php-tiki6-6.10
 	o php-tt-rss-1.15.3
+	o phpmyadmin-4.4
 	o picp-0.6.8
 	o picprg-3.01
 	o pim6dd-20040819a
@@ -991,9 +998,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
+	o redis-3.0.0
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
-	o rhythmbox-3.1
+	o rhythmbox-3.2
 	o rio500-0.8.1
 	o robodoc-4.99.6
 	o root-5.34.01
@@ -1050,6 +1058,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o solfege-3.22.0
 	o sope-4.6
 	o sound-juicer-3.16.0
+	o source-highlight-3.1.8
 	o sourcesans-fonts-2.0
 	o spcaview-20060501
 	o spidermonkey-1.8.5
