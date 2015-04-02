@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/09/09 22:26:16 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/04/02 22:16:47 tnn Exp $
 
 SHA1 (xf86-video-neomagic-1.2.8.tar.bz2) = 281a70cc89fb39ae91deb4a16c46026b63bbd060
 RMD160 (xf86-video-neomagic-1.2.8.tar.bz2) = 43f659053041727d9451941751f1b03213f16886
 Size (xf86-video-neomagic-1.2.8.tar.bz2) = 334223 bytes
+SHA1 (patch-src_neo__driver.c) = 63bba9d9d9a5198ab886bf43a22a258a836e68ad
