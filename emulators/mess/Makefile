@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2015/02/28 11:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/04/02 22:33:55 wiz Exp $
 
-DISTNAME=	mame0159s
+DISTNAME=	mame0160s
 PKGNAME=	${DISTNAME:S/mame0/mess-0./:S/s$//}
 MASTER_SITES=	http://mamedev.org/downloader.php?file=releases/
 
