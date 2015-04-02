@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1571 2015/04/02 22:43:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1572 2015/04/02 22:44:55 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2172,3 +2172,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/p5-Image-ExifTool to 9.90 [wiz 2015-04-02]
 	Updated mail/p5-Net-SMTP-SSL to 1.02 [wiz 2015-04-02]
 	Updated devel/p5-Sub-Name to 0.13 [wiz 2015-04-02]
+	Updated devel/p5-List-MoreUtils to 0.410 [wiz 2015-04-02]
