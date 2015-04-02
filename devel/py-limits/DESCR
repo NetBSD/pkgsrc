@@ -1,0 +1,2 @@
+The python limits package provides utilities to implement rate limiting using
+various strategies and storage backends such as redis & memcached.
