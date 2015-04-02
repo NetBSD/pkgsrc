@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14258 2015/04/02 22:23:16 tnn Exp $
+$NetBSD: TODO,v 1.14259 2015/04/02 22:34:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -803,7 +803,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.160 [wiz]
 	o manedit-1.2.1
 	o maradns-2.0.11
 	o matchbox-panel-0.9.3
