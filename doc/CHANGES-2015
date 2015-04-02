@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1582 2015/04/02 23:10:59 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1583 2015/04/02 23:13:25 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2177,3 +2177,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-orderedmultidict to 0.7.5 [rodent 2015-04-02]
 	Updated www/py-furl to 0.4.5 [rodent 2015-04-02]
 	Updated www/py-wtforms-components to 0.9.7 [rodent 2015-04-02]
+	Added games/wtf version 20150206 [rodent 2015-04-02]
