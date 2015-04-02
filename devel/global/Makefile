@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2015/02/08 16:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/04/02 22:39:45 wiz Exp $
 
-DISTNAME=	global-6.3.4
+DISTNAME=	global-6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=global/}
 
@@ -20,6 +20,8 @@ USE_TOOLS+=		perl:run sort:run
 CONF_FILES=	${PREFIX}/share/gtags/gtags.conf ${PKG_SYSCONFDIR}/gtags.conf
 
 REPLACE_PYTHON+=	plugin-factory/pygments_parser.py
+
+.include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
