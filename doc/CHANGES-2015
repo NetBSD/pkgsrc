@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1546 2015/04/02 22:30:33 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1547 2015/04/02 22:34:16 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2147,3 +2147,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libdrm to 2.4.60 [tnn 2015-04-02]
 	Updated sysutils/py-structlog to 15.1.0 [rodent 2015-04-02]
 	Updated textproc/py-colour to 0.1.1 [rodent 2015-04-02]
+	Updated emulators/mame to 0.160 [wiz 2015-04-02]
