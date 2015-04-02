@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/12/06 16:20:26 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/02 22:23:31 rodent Exp $
 
-SHA1 (structlog-0.4.2.tar.gz) = 06b628c9a17e48a9a1b25b3fd569ee6ae179d6e0
-RMD160 (structlog-0.4.2.tar.gz) = 1ab1ca727bfeba4f9002fa07fc87565f4587fa54
-Size (structlog-0.4.2.tar.gz) = 81413 bytes
+SHA1 (structlog-15.1.0.tar.gz) = ec518356f9c7dbd8922c12408b5cebbfb0f4f4ba
+RMD160 (structlog-15.1.0.tar.gz) = c0928af70e2f478fbf67cf2021f115d407ba0d9e
+Size (structlog-15.1.0.tar.gz) = 66349 bytes
