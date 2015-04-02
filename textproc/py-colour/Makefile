@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/06/14 13:43:48 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/02 22:29:54 rodent Exp $
 
-DISTNAME=	colour-0.0.5
+DISTNAME=	colour-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	https://pypi.python.org/packages/source/c/colour/

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/14 13:43:48 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/02 22:29:54 rodent Exp $
 
-SHA1 (colour-0.0.5.tar.gz) = f6e2189345033021a765dd7790f0652d1b4c232a
-RMD160 (colour-0.0.5.tar.gz) = d06157fb24bf2023d35913bf9e4e40a7d55abc04
-Size (colour-0.0.5.tar.gz) = 18911 bytes
+SHA1 (colour-0.1.1.tar.gz) = 585365b10c7685918cff154ba99b6aa2b7c9714b
+RMD160 (colour-0.1.1.tar.gz) = 4ee1e1d7efe81a41a5c41747e9ce50d43f05f0bf
+Size (colour-0.1.1.tar.gz) = 23548 bytes
