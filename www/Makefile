@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1095 2015/03/15 14:58:30 taca Exp $
+# $NetBSD: Makefile,v 1.1096 2015/04/02 23:30:05 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -595,6 +595,7 @@ SUBDIR+=	py-flask-cache
 SUBDIR+=	py-flask-debugtoolbar
 SUBDIR+=	py-flask-flatpages
 SUBDIR+=	py-flask-frozen
+SUBDIR+=	py-flask-limiter
 SUBDIR+=	py-flask-login
 SUBDIR+=	py-flask-mail
 SUBDIR+=	py-flask-principal
