@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/02 23:33:52 rodent Exp $
+include/sqlite/command.hpp
+include/sqlite/connection.hpp
+include/sqlite/database_exception.hpp
+include/sqlite/execute.hpp
+include/sqlite/ext/variant.hpp
+include/sqlite/query.hpp
+include/sqlite/result.hpp
+include/sqlite/savepoint.hpp
+include/sqlite/transaction.hpp
+include/sqlite/view.hpp
+lib/libvsqlitepp.la

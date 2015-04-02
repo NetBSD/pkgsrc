@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/02 23:33:52 rodent Exp $
+
+SHA1 (vsqlite++-0.3.13.tar.gz) = 2efc6c6fedb7d02159151a71aaefb5f138ff5962
+RMD160 (vsqlite++-0.3.13.tar.gz) = 5f09094bc8c2130541bac053cb50d89fe4e3f82a
+Size (vsqlite++-0.3.13.tar.gz) = 351834 bytes
