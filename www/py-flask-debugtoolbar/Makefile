@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/02 22:44:35 rodent Exp $
 
-DISTNAME=	Flask-DebugToolbar-0.9.0
+DISTNAME=	Flask-DebugToolbar-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-DebugToolbar/

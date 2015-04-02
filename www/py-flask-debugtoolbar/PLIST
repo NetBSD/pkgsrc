@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/03 01:24:27 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/02 22:44:35 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -194,7 +194,6 @@ ${PYSITELIB}/flask_debugtoolbar/templates/panels/logger.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/profiler.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/request_vars.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/sqlalchemy.html
-${PYSITELIB}/flask_debugtoolbar/templates/panels/sqlalchemy_explain.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/sqlalchemy_select.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/template.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/template_editor.html
