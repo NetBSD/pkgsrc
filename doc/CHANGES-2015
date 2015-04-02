@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1562 2015/04/02 22:39:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1563 2015/04/02 22:40:12 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 14.3.1 [wiz 2015-04-02]
 	Updated fonts/harfbuzz to 0.9.40 [wiz 2015-04-02]
 	Updated devel/global to 6.4 [wiz 2015-04-02]
+	Updated multimedia/ffmpeg2 to 2.6.1 [wiz 2015-04-02]
