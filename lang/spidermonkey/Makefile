@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2015/04/02 14:40:32 bsiegert Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
@@ -28,7 +28,8 @@ INSTALLATION_DIRS=	bin include lib
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
-    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD" || \
+    ${OPSYS} == "MirBSD"
 BUILDDIRPREFIX=	pkgsrc
 .elif ${OPSYS} == "Linux"
 BUILDDIRPREFIX=	Linux_All
