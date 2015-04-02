@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1541 2015/04/01 14:09:32 manu Exp $
+$NetBSD: CHANGES-2015,v 1.1542 2015/04/02 15:28:34 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2142,3 +2142,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/py-kazoo to 2.0 [rodent 2015-04-01]
 	Updated security/lasso to 2.4.1 [manu 2015-04-01]
 	Updated www/ap2-auth-mellon to 0.10.0 [manu 2015-04-01]
+	Updated devel/py-dulwich to 0.10.1a [wiz 2015-04-02]
