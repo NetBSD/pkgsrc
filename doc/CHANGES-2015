@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1579 2015/04/02 22:53:35 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1580 2015/04/02 22:58:03 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2174,3 +2174,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI to 4.14 [wiz 2015-04-02]
 	Updated devel/p5-MooX-HandlesVia to 0.001008 [wiz 2015-04-02]
 	Updated www/py-flask-bootstrap to 3.3.2.1 [rodent 2015-04-02]
+	Updated databases/py-orderedmultidict to 0.7.5 [rodent 2015-04-02]
