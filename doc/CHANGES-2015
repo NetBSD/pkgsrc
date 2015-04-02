@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1544 2015/04/02 22:24:12 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1545 2015/04/02 22:27:03 agc Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2143,5 +2143,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/lasso to 2.4.1 [manu 2015-04-01]
 	Updated www/ap2-auth-mellon to 0.10.0 [manu 2015-04-01]
 	Updated devel/py-dulwich to 0.10.1a [wiz 2015-04-02]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2015Q1 branch [agc 2015-04-02]
 	Updated x11/libdrm to 2.4.60 [tnn 2015-04-02]
 	Updated sysutils/py-structlog to 15.1.0 [rodent 2015-04-02]
