@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2015/03/09 20:12:11 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/02 22:32:05 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -34,8 +34,7 @@ DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 .else
 DEPENDS+=	xf86-video-ati6-[0-9]*:../../x11/xf86-video-ati6
 .endif
-# chips deprecated in Xorg 7.7
-#DEPENDS+=	xf86-video-chips-[0-9]*:../../x11/xf86-video-chips
+DEPENDS+=	xf86-video-chips-[0-9]*:../../x11/xf86-video-chips
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
 DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-dummy
 DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
@@ -46,9 +45,10 @@ DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
-DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
+# does not work with 1.17 server
+#DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
-DEPENDS+=       xf86-video-openchrome-[0-9]*:../../x11/xf86-video-openchrome
+DEPENDS+=	xf86-video-openchrome-[0-9]*:../../x11/xf86-video-openchrome
 DEPENDS+=	xf86-video-r128-[0-9]*:../../x11/xf86-video-r128
 DEPENDS+=	xf86-video-rendition-[0-9]*:../../x11/xf86-video-rendition
 DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
