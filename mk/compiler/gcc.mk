@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.155 2015/02/04 14:11:50 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.156 2015/04/02 23:21:01 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -668,9 +668,6 @@ _GCC_ARCHDIR!=		\
 .    if defined(MABIFLAG) && !empty(MABIFLAG)
 _GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H:H}/
 _GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:H:T}/
-.    else
-_GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H}/
-_GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:T}/
 .    endif
 .  endif
 _GCC_LIBDIRS=	${_GCC_ARCHDIR} ${_GCC_PREFIX}lib
