@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/04/01 02:05:51 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/02 22:57:19 rodent Exp $
 
-DISTNAME=	orderedmultidict-0.7.4
+DISTNAME=	orderedmultidict-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/o/orderedmultidict/
