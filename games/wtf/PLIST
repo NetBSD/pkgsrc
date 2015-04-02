@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/02 23:12:55 rodent Exp $
+bin/wtf
+man/man6/wtf.6
+share/wtf/acronyms
+share/wtf/acronyms.comp
