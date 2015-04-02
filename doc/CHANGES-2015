@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1559 2015/04/02 22:38:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1560 2015/04/02 22:39:11 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2160,3 +2160,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-cryptography to 0.8.1 [wiz 2015-04-02]
 	Updated misc/calibre to 2.22.0 [wiz 2015-04-02]
 	Updated mail/mutt-kz to 1.5.23.1rc1 [wiz 2015-04-02]
+	Updated devel/py-setuptools to 14.3.1 [wiz 2015-04-02]
