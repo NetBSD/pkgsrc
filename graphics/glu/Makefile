@@ -1,35 +1,21 @@
-# $NetBSD: Makefile,v 1.59 2015/01/29 22:38:50 nat Exp $
+# $NetBSD: Makefile,v 1.60 2015/04/02 23:03:00 tnn Exp $
 
-PKGNAME=	glu-${MESA_PKGVERSION}
+DISTNAME=	glu-9.0.0
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/glu/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://cgit.freedesktop.org/mesa/glu/
 COMMENT=	GLU polygon tessellation facility for Mesa
-PKGREVISION=	1
+LICENSE=	sgi-free-software-b-v2.0
 
-CONFLICTS+=	Mesa-glx-[0-9]*
-CONFLICTS+=	Mesa<3.2.1
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
+PKGCONFIG_OVERRIDE+=	glu.pc.in
 
-PKGCONFIG_OVERRIDE+=    src/glu/glu.pc.in
-
-CONFIGURE_ARGS+=        --enable-glu
-CONFIGURE_ARGS+=        --disable-glut
-CONFIGURE_ARGS+=        --disable-glw
-CONFIGURE_ARGS+=        --with-dri-drivers=""
-
-BUILD_DIRS=             src/glu
-BUILD_TARGET=           default
-
-INSTALL_DIRS=           src/glu
-INSTALLATION_DIRS+=     include/GL
-
-.include "../../graphics/Mesa/Makefile.lib"
-
-BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
 .include "../../graphics/MesaLib/buildlink3.mk"
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/include/GL/glu.h \
-		${DESTDIR}${PREFIX}/include/GL/glu.h
-	${INSTALL_DATA} ${WRKSRC}/include/GL/glu_mangle.h \
-		${DESTDIR}${PREFIX}/include/GL/glu_mangle.h
-
 .include "../../mk/bsd.pkg.mk"
