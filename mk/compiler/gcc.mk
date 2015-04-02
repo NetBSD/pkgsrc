@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.157 2015/04/02 23:42:15 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.158 2015/04/02 23:50:25 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -672,7 +672,7 @@ _GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:H:T}/
 .  endif
 _GCC_LIBDIRS=	${_GCC_ARCHDIR}
 .  if empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
-_GCC_LIBDIRS+=	${_GCC_PREFIX}lib
+_GCC_LIBDIRS+=	${_GCC_PREFIX}lib${LIBABISUFFIX}
 .  endif
 _GCC_LDFLAGS=	# empty
 .  for _dir_ in ${_GCC_LIBDIRS:N*not_found*}
