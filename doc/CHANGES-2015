@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1575 2015/04/02 22:47:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1576 2015/04/02 22:48:23 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2176,3 +2176,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-Which to 1.16 [wiz 2015-04-02]
 	Updated multimedia/mpv to 0.8.3 [wiz 2015-04-02]
 	Updated www/p5-CGI to 4.14 [wiz 2015-04-02]
+	Updated devel/p5-MooX-HandlesVia to 0.001008 [wiz 2015-04-02]
