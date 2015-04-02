@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/05/16 06:08:01 richard Exp $
+$NetBSD: distinfo,v 1.7 2015/04/02 22:16:46 tnn Exp $
 
 SHA1 (xf86-video-glint-1.2.8.tar.bz2) = 40f817c3aaac1b04bff28f4552bc4b4fe522013b
 RMD160 (xf86-video-glint-1.2.8.tar.bz2) = f1692d995cec5cb2f2a57471a5e2256f82d3467d
 Size (xf86-video-glint-1.2.8.tar.bz2) = 395371 bytes
+SHA1 (patch-src_glint__driver.c) = e757df21be4a5308d69366125b8d1c33ea626066

@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/05/16 06:27:55 richard Exp $
+$NetBSD: distinfo,v 1.8 2015/04/02 22:16:48 tnn Exp $
 
 SHA1 (xf86-video-sis-0.10.7.tar.bz2) = 8f8cd88fe7d3a85f6bf2b12a34fd55db35f186d7
 RMD160 (xf86-video-sis-0.10.7.tar.bz2) = d6be4d2f6ee8182e988ff52990cc680e9a2dd310
 Size (xf86-video-sis-0.10.7.tar.bz2) = 699499 bytes
+SHA1 (patch-src_sis.h) = 14050b1e2e92df60ed1280cc9c41e10190e1695e
+SHA1 (patch-src_sis__driver.c) = d5216c4f7ada646f5c6fc5fab0edd1b10fc538eb
+SHA1 (patch-src_vstruct.h) = 09eecd05572cc8a904fe0535b751daa3b0b3d5d6
