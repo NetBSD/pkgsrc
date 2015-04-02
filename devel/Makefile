@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2070 2015/03/15 14:32:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2071 2015/04/02 23:24:18 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1621,6 +1621,7 @@ SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
+SUBDIR+=	py-limits
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
 SUBDIR+=	py-logilab-astng
