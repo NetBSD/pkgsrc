@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1557 2015/04/02 22:38:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1558 2015/04/02 22:38:27 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2158,3 +2158,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/py-ftfy version 3.4.0 [rodent 2015-04-02]
 	Updated net/unison2.40 to 2.40.128 [wiz 2015-04-02]
 	Updated security/py-cryptography to 0.8.1 [wiz 2015-04-02]
+	Updated misc/calibre to 2.22.0 [wiz 2015-04-02]
