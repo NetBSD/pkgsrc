@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/03 23:00:11 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/02 22:53:02 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,7 @@ ${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.eot
 ${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.svg
 ${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.ttf
 ${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.woff
+${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.woff2
 ${PYSITELIB}/flask_bootstrap/static/jquery.js
 ${PYSITELIB}/flask_bootstrap/static/jquery.min.js
 ${PYSITELIB}/flask_bootstrap/static/jquery.min.map
@@ -27,4 +28,6 @@ ${PYSITELIB}/flask_bootstrap/static/js/npm.js
 ${PYSITELIB}/flask_bootstrap/templates/bootstrap/base.html
 ${PYSITELIB}/flask_bootstrap/templates/bootstrap/fixes.html
 ${PYSITELIB}/flask_bootstrap/templates/bootstrap/google.html
+${PYSITELIB}/flask_bootstrap/templates/bootstrap/pagination.html
+${PYSITELIB}/flask_bootstrap/templates/bootstrap/utils.html
 ${PYSITELIB}/flask_bootstrap/templates/bootstrap/wtf.html
