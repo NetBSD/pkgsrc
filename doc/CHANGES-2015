@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1550 2015/04/02 22:35:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1551 2015/04/02 22:36:04 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/mess to 0.160 [wiz 2015-04-02]
 	Updated x11/xcb-util-cursor to 0.1.2 [wiz 2015-04-02]
 	Updated x11/libXdmcp to 1.1.2 [wiz 2015-04-02]
+	Updated graphics/png to 1.6.17 [wiz 2015-04-02]
