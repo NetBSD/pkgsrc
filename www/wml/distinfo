@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2015/01/16 12:15:31 wiz Exp $
+$NetBSD: distinfo,v 1.19 2015/04/02 12:34:06 jperkin Exp $
 
 SHA1 (wml-2.0.11.tar.gz) = 14dd7c23461716171a66b65676bca6e19a593007
 RMD160 (wml-2.0.11.tar.gz) = fead82a35d116447b860d7b1c506c6de187355e8
 Size (wml-2.0.11.tar.gz) = 3115230 bytes
-SHA1 (patch-aa) = 398ddb03402c17306e259b10cf9b5d7ec774d71b
+SHA1 (patch-aa) = f05d0f06f94a0d26b987a820b924fb94fad3bfb6
 SHA1 (patch-ab) = dbd30a0a23189963aa60b06c319342fac4408a6b
 SHA1 (patch-ac) = 80863037faadf220ba1d01ef2133cdc42e08f0fa
 SHA1 (patch-ad) = 2955f349aa737f1758493897d1989a0b96220268
