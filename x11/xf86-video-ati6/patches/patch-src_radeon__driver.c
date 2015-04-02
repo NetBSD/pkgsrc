@@ -1,4 +1,4 @@
-$NetBSD: patch-src_radeon__driver.c,v 1.1 2013/10/31 00:07:24 wiz Exp $
+$NetBSD: patch-src_radeon__driver.c,v 1.2 2015/04/02 22:16:46 tnn Exp $
 
 --- src/radeon_driver.c.orig	2012-06-25 08:19:41.000000000 +0000
 +++ src/radeon_driver.c
@@ -21,3 +21,15 @@ $NetBSD: patch-src_radeon__driver.c,v 1.1 2013/10/31 00:07:24 wiz Exp $
          info->dri->pKernelDRMVersion->version_minor >= 19)
      {
        if (RADEONDRISetParam(pScrn, RADEON_SETPARAM_PCIGART_LOCATION, info->dri->pciGartOffset) < 0)
+@@ -6440,7 +6441,11 @@ static Bool RADEONCloseScreen(CLOSE_SCRE
+     if (info->dri && info->dri->pDamage) {
+ 	PixmapPtr pPix = pScreen->GetScreenPixmap(pScreen);
+ 
++#ifdef PKGSRC_LEGACY_XORG_SERVER
+ 	DamageUnregister(&pPix->drawable, info->dri->pDamage);
++#else
++	DamageUnregister(info->dri->pDamage);
++#endif
+ 	DamageDestroy(info->dri->pDamage);
+ 	info->dri->pDamage = NULL;
+     }

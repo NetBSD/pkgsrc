@@ -1,8 +1,57 @@
-$NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
+$NetBSD: patch-src_wsfb__driver.c,v 1.2 2015/04/02 22:16:49 tnn Exp $
+
+Add revision 1.15 from xsrc version:
+date: 2013-01-31 12:18:01 +0100; author: macallan; state: Exp; lines: +145 -72;
+use WSDISPLAYIO_GET_FBINFO if available
+
+Merge upstream commits for server 1.17 compatibility:
+586b722fb17b3eb0ab776c170ee21e6a66fc7f22
+fa9aabe95a65c4dd12008e16ad66d5c773a7993a
+2993b33c466793c984b0c7cfeab06a3e333a29dd
 
 --- src/wsfb_driver.c.orig	2012-01-01 15:25:08.000000000 +0000
 +++ src/wsfb_driver.c
-@@ -231,7 +231,7 @@ WsfbSetup(pointer module, pointer opts, 
+@@ -53,7 +53,6 @@
+ #include "xf86_OSproc.h"
+ 
+ #include "mipointer.h"
+-#include "mibstore.h"
+ #include "micmap.h"
+ #include "colormapst.h"
+ #include "xf86cmap.h"
+@@ -78,6 +77,8 @@
+ #include "xf86xv.h"
+ #endif
+ 
++#include "compat-api.h"
++
+ #ifdef X_PRIVSEP
+ extern int priv_open_device(const char *);
+ #else
+@@ -110,15 +111,15 @@ static const OptionInfoRec * WsfbAvailab
+ static void WsfbIdentify(int);
+ static Bool WsfbProbe(DriverPtr, int);
+ static Bool WsfbPreInit(ScrnInfoPtr, int);
+-static Bool WsfbScreenInit(int, ScreenPtr, int, char **);
+-static Bool WsfbCloseScreen(int, ScreenPtr);
++static Bool WsfbScreenInit(SCREEN_INIT_ARGS_DECL);
++static Bool WsfbCloseScreen(CLOSE_SCREEN_ARGS_DECL);
+ static void *WsfbWindowLinear(ScreenPtr, CARD32, CARD32, int, CARD32 *,
+ 			      void *);
+-static void WsfbPointerMoved(int, int, int);
+-static Bool WsfbEnterVT(int, int);
+-static void WsfbLeaveVT(int, int);
+-static Bool WsfbSwitchMode(int, DisplayModePtr, int);
+-static int WsfbValidMode(int, DisplayModePtr, Bool, int);
++static void WsfbPointerMoved(SCRN_ARG_TYPE, int, int);
++static Bool WsfbEnterVT(VT_FUNC_ARGS_DECL);
++static void WsfbLeaveVT(VT_FUNC_ARGS_DECL);
++static Bool WsfbSwitchMode(SWITCH_MODE_ARGS_DECL);
++static int WsfbValidMode(SCRN_ARG_TYPE, DisplayModePtr, Bool, int);
+ static void WsfbLoadPalette(ScrnInfoPtr, int, int *, LOCO *, VisualPtr);
+ static Bool WsfbSaveScreen(ScreenPtr, int);
+ static void WsfbSave(ScrnInfoPtr);
+@@ -231,7 +232,7 @@ WsfbSetup(pointer module, pointer opts, 
  /* Private data */
  typedef struct {
  	int			fd; /* File descriptor of open device. */
@@ -11,7 +60,16 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  	int			linebytes; /* Number of bytes per row. */
  	unsigned char*		fbstart;
  	unsigned char*		fbmem;
-@@ -426,48 +426,96 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -241,7 +242,7 @@ typedef struct {
+ 	void *			shadow;
+ 	CloseScreenProcPtr	CloseScreen;
+ 	CreateScreenResourcesProcPtr CreateScreenResources;
+-	void			(*PointerMoved)(int, int, int);
++	void			(*PointerMoved)(SCRN_ARG_TYPE, int, int);
+ 	EntityInfoPtr		pEnt;
+ 	struct wsdisplay_cmap	saved_cmap;
+ 
+@@ -426,48 +427,96 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  		return FALSE;
  	}
  
@@ -132,7 +190,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  			free(fPtr->saved_cmap.red);
  			free(fPtr->saved_cmap.green);
  			return FALSE;
-@@ -475,18 +523,18 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -475,18 +524,18 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  	}
  
  	/* Handle depth */
@@ -156,7 +214,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  		return FALSE;
  	}
  	xf86PrintDepthBpp(pScrn);
-@@ -496,17 +544,28 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -496,17 +545,28 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  		pix24bpp = xf86GetBppFromDepth(pScrn, 24);
  
  	/* Color weight */
@@ -194,7 +252,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  		} else {
  			masks.red = 0;
  			masks.green = 0;
-@@ -535,7 +594,7 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -535,7 +595,7 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  	pScrn->progClock = TRUE;
  	pScrn->rgbBits   = 8;
  	pScrn->chipset   = "wsfb";
@@ -203,7 +261,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  
  	xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Vidmem: %dk\n",
  		   pScrn->videoRam/1024);
-@@ -550,10 +609,12 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -550,10 +610,12 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  			   fPtr->Options);
  
  	/* Use shadow framebuffer by default, on depth >= 8 */
@@ -218,7 +276,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  		if (xf86ReturnOptValBool(fPtr->Options,
  					 OPTION_SHADOW_FB, FALSE)) {
  			xf86DrvMsg(pScrn->scrnIndex, X_WARNING,
-@@ -601,12 +662,12 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -601,12 +663,12 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  	mode->status = MODE_OK;
  	mode->type = M_T_BUILTIN;
  	mode->Clock = 0;
@@ -233,7 +291,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  	mode->VSyncStart = 0;
  	mode->VSyncEnd = 0;
  	mode->VTotal = 0;
-@@ -617,8 +678,8 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+@@ -617,8 +679,8 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
  		   "Ignoring mode specification from screen section\n");
  	}
  	pScrn->currentMode = pScrn->modes = mode;
@@ -244,7 +302,49 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  	pScrn->displayWidth = pScrn->virtualX;
  
  	/* Set the display resolution. */
-@@ -721,36 +782,39 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -661,10 +723,22 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+ 	return TRUE;
+ }
+ 
++static void
++wsfbUpdateRotatePacked(ScreenPtr pScreen, shadowBufPtr pBuf)
++{
++	shadowUpdateRotatePacked(pScreen, pBuf);
++}
++
++static void
++wsfbUpdatePacked(ScreenPtr pScreen, shadowBufPtr pBuf)
++{
++	shadowUpdatePacked(pScreen, pBuf);
++}
++
+ static Bool
+ WsfbCreateScreenResources(ScreenPtr pScreen)
+ {
+-	ScrnInfoPtr pScrn = xf86Screens[pScreen->myNum];
++	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
+ 	WsfbPtr fPtr = WSFBPTR(pScrn);
+ 	PixmapPtr pPixmap;
+ 	Bool ret;
+@@ -679,7 +753,7 @@ WsfbCreateScreenResources(ScreenPtr pScr
+ 	pPixmap = pScreen->GetScreenPixmap(pScreen);
+ 
+ 	if (!shadowAdd(pScreen, pPixmap, fPtr->rotate ?
+-		shadowUpdateRotatePackedWeak() : shadowUpdatePackedWeak(),
++		wsfbUpdateRotatePacked : wsfbUpdatePacked,
+ 		WsfbWindowLinear, fPtr->rotate, NULL)) {
+ 		return FALSE;
+ 	}
+@@ -702,7 +776,7 @@ WsfbShadowInit(ScreenPtr pScreen)
+ }
+ 
+ static Bool
+-WsfbScreenInit(int scrnIndex, ScreenPtr pScreen, int argc, char **argv)
++WsfbScreenInit(SCREEN_INIT_ARGS_DECL)
+ {
+ 	ScrnInfoPtr pScrn = xf86Screens[pScreen->myNum];
+ 	WsfbPtr fPtr = WSFBPTR(pScrn);
+@@ -721,36 +795,39 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
  	       pScrn->mask.red,pScrn->mask.green,pScrn->mask.blue,
  	       pScrn->offset.red,pScrn->offset.green,pScrn->offset.blue);
  #endif
@@ -296,7 +396,40 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  		return FALSE;
  	}
  	/* Switch to graphics mode - required before mmap. */
-@@ -907,10 +971,16 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -868,7 +945,7 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+ 				   "RENDER extension initialisation failed.");
+ 	}
+ 	if (fPtr->shadowFB && !WsfbShadowInit(pScreen)) {
+-		xf86DrvMsg(scrnIndex, X_ERROR,
++		xf86DrvMsg(pScrn->scrnIndex, X_ERROR,
+ 		    "shadow framebuffer initialization failed\n");
+ 		return FALSE;
+ 	}
+@@ -877,20 +954,19 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+ 	if (!fPtr->rotate)
+ 		WsfbDGAInit(pScrn, pScreen);
+ 	else
+-		xf86DrvMsg(scrnIndex, X_INFO, "Rotated display, "
++		xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Rotated display, "
+ 		    "disabling DGA\n");
+ #endif
+ 	if (fPtr->rotate) {
+-		xf86DrvMsg(scrnIndex, X_INFO, "Enabling Driver Rotation, "
++		xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Enabling Driver Rotation, "
+ 		    "disabling RandR\n");
+ 		xf86DisableRandR();
+ 		if (pScrn->bitsPerPixel == 24)
+-			xf86DrvMsg(scrnIndex, X_WARNING,
++			xf86DrvMsg(pScrn->scrnIndex, X_WARNING,
+ 			    "Rotation might be broken in 24 bpp\n");
+ 	}
+ 
+ 	xf86SetBlackWhitePixels(pScreen);
+-	miInitializeBackingStore(pScreen);
+ 	xf86SetBackingStore(pScreen);
+ 
+ 	/* Software cursor. */
+@@ -907,10 +983,16 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
  	if (!miCreateDefColormap(pScreen))
  		return FALSE;
  	flags = CMAP_RELOAD_ON_MODE_SWITCH;
@@ -314,8 +447,32 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  	if(!xf86HandleColormaps(pScreen, ncolors, 8, WsfbLoadPalette,
  				NULL, flags))
  		return FALSE;
-@@ -981,14 +1051,18 @@ WsfbWindowLinear(ScreenPtr pScreen, CARD
- 	ScrnInfoPtr pScrn = xf86Screens[pScreen->myNum];
+@@ -937,9 +1019,9 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+ }
+ 
+ static Bool
+-WsfbCloseScreen(int scrnIndex, ScreenPtr pScreen)
++WsfbCloseScreen(CLOSE_SCREEN_ARGS_DECL)
+ {
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
++	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
+ 	PixmapPtr pPixmap;
+ 	WsfbPtr fPtr = WSFBPTR(pScrn);
+ 
+@@ -971,30 +1053,34 @@ WsfbCloseScreen(int scrnIndex, ScreenPtr
+ 	/* Unwrap CloseScreen. */
+ 	pScreen->CloseScreen = fPtr->CloseScreen;
+ 	TRACE_EXIT("WsfbCloseScreen");
+-	return (*pScreen->CloseScreen)(scrnIndex, pScreen);
++	return (*pScreen->CloseScreen)(CLOSE_SCREEN_ARGS);
+ }
+ 
+ static void *
+ WsfbWindowLinear(ScreenPtr pScreen, CARD32 row, CARD32 offset, int mode,
+ 		CARD32 *size, void *closure)
+ {
+-	ScrnInfoPtr pScrn = xf86Screens[pScreen->myNum];
++	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
  	WsfbPtr fPtr = WSFBPTR(pScrn);
  
 -	if (fPtr->linebytes)
@@ -337,7 +494,79 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  }
  
  static void
-@@ -1159,11 +1233,12 @@ WsfbSave(ScrnInfoPtr pScrn)
+-WsfbPointerMoved(int index, int x, int y)
++WsfbPointerMoved(SCRN_ARG_TYPE arg, int x, int y)
+ {
+-    ScrnInfoPtr pScrn = xf86Screens[index];
++    SCRN_INFO_PTR(arg);
+     WsfbPtr fPtr = WSFBPTR(pScrn);
+     int newX, newY;
+ 
+@@ -1026,13 +1112,13 @@ WsfbPointerMoved(int index, int x, int y
+     }
+ 
+     /* Pass adjusted pointer coordinates to wrapped PointerMoved function. */
+-    (*fPtr->PointerMoved)(index, newX, newY);
++    (*fPtr->PointerMoved)(arg, newX, newY);
+ }
+ 
+ static Bool
+-WsfbEnterVT(int scrnIndex, int flags)
++WsfbEnterVT(VT_FUNC_ARGS_DECL)
+ {
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
++	SCRN_INFO_PTR(arg);
+ 
+ 	TRACE_ENTER("EnterVT");
+ 	pScrn->vtSema = TRUE;
+@@ -1041,20 +1127,20 @@ WsfbEnterVT(int scrnIndex, int flags)
+ }
+ 
+ static void
+-WsfbLeaveVT(int scrnIndex, int flags)
++WsfbLeaveVT(VT_FUNC_ARGS_DECL)
+ {
+ #if DEBUG
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
++	SCRN_INFO_PTR(arg);
+ #endif
+ 
+ 	TRACE_ENTER("LeaveVT");
+ }
+ 
+ static Bool
+-WsfbSwitchMode(int scrnIndex, DisplayModePtr mode, int flags)
++WsfbSwitchMode(SWITCH_MODE_ARGS_DECL)
+ {
+ #if DEBUG
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
++	SCRN_INFO_PTR(arg);
+ #endif
+ 
+ 	TRACE_ENTER("SwitchMode");
+@@ -1063,10 +1149,10 @@ WsfbSwitchMode(int scrnIndex, DisplayMod
+ }
+ 
+ static int
+-WsfbValidMode(int scrnIndex, DisplayModePtr mode, Bool verbose, int flags)
++WsfbValidMode(SCRN_ARG_TYPE arg, DisplayModePtr mode, Bool verbose, int flags)
+ {
+ #if DEBUG
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
++	SCRN_INFO_PTR(arg);
+ #endif
+ 
+ 	TRACE_ENTER("ValidMode");
+@@ -1132,7 +1218,7 @@ WsfbLoadPalette(ScrnInfoPtr pScrn, int n
+ static Bool
+ WsfbSaveScreen(ScreenPtr pScreen, int mode)
+ {
+-	ScrnInfoPtr pScrn = xf86Screens[pScreen->myNum];
++	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
+ 	WsfbPtr fPtr = WSFBPTR(pScrn);
+ 	int state;
+ 
+@@ -1159,11 +1245,12 @@ WsfbSave(ScrnInfoPtr pScrn)
  
  	TRACE_ENTER("WsfbSave");
  
@@ -352,7 +581,7 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  	if (ioctl(fPtr->fd, WSDISPLAYIO_GETCMAP,
  		  &(fPtr->saved_cmap)) == -1) {
  		xf86DrvMsg(pScrn->scrnIndex, X_ERROR,
-@@ -1181,7 +1256,7 @@ WsfbRestore(ScrnInfoPtr pScrn)
+@@ -1181,7 +1268,7 @@ WsfbRestore(ScrnInfoPtr pScrn)
  
  	TRACE_ENTER("WsfbRestore");
  
@@ -361,7 +590,28 @@ $NetBSD: patch-src_wsfb__driver.c,v 1.1 2014/01/20 21:25:00 is Exp $
  		/* reset colormap for text mode */
  		if (ioctl(fPtr->fd, WSDISPLAYIO_PUTCMAP,
  			  &(fPtr->saved_cmap)) == -1) {
-@@ -1305,12 +1380,12 @@ WsfbDGAAddModes(ScrnInfoPtr pScrn)
+@@ -1240,9 +1327,9 @@ WsfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
+ 		frameY0 = pScrn->frameY0;
+ 	}
+ 
+-	if (!(*pScrn->SwitchMode)(scrnIdx, pMode, 0))
++	if (!(*pScrn->SwitchMode)(SWITCH_MODE_ARGS(pScrn, pMode)))
+ 		return FALSE;
+-	(*pScrn->AdjustFrame)(scrnIdx, frameX0, frameY0, 0);
++	(*pScrn->AdjustFrame)(ADJUST_FRAME_ARGS(pScrn, frameX0, frameY0));
+ 
+ 	return TRUE;
+ }
+@@ -1250,7 +1337,7 @@ WsfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
+ static void
+ WsfbDGASetViewport(ScrnInfoPtr pScrn, int x, int y, int flags)
+ {
+-	(*pScrn->AdjustFrame)(pScrn->pScreen->myNum, x, y, flags);
++	(*pScrn->AdjustFrame)(ADJUST_FRAME_ARGS(pScrn, x, y));
+ }
+ 
+ static int
+@@ -1305,12 +1392,12 @@ WsfbDGAAddModes(ScrnInfoPtr pScrn)
  		pDGAMode->viewportWidth = pMode->HDisplay;
  		pDGAMode->viewportHeight = pMode->VDisplay;
  

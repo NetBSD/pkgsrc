@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.5 2013/05/16 06:26:56 richard Exp $
+$NetBSD: distinfo,v 1.6 2015/04/02 22:16:48 tnn Exp $
 
 SHA1 (xf86-video-siliconmotion-1.7.7.tar.bz2) = 60dc57c6ff6e0cd3f73076fce3c11d7e788ce7c1
 RMD160 (xf86-video-siliconmotion-1.7.7.tar.bz2) = c13359237e287a6318ab29aa906c9be034b13c39
 Size (xf86-video-siliconmotion-1.7.7.tar.bz2) = 385957 bytes
+SHA1 (patch-src_smi.h) = 37cb65b27e2ef800f53245ffd583e2c748387303
+SHA1 (patch-src_smi__driver.c) = 1a0f21bbd97b92c991721ca01e14ecadd3e6e5aa
+SHA1 (patch-src_smi__i2c.c) = 5b34193c40e5124f2f79d7559454efbcba10f7a2
+SHA1 (patch-src_smilynx__hw.c) = ff4df02bd80753d2b4f25f3264e920feb07073ac

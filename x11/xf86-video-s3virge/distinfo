@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/05/16 06:25:10 richard Exp $
+$NetBSD: distinfo,v 1.7 2015/04/02 22:16:47 tnn Exp $
 
 SHA1 (xf86-video-s3virge-1.10.6.tar.bz2) = c99ee4bd6253890a5be3cf246d535be4579c1b80
 RMD160 (xf86-video-s3virge-1.10.6.tar.bz2) = c0ca1f685c84182290391b2bff9a7634d54c311c
 Size (xf86-video-s3virge-1.10.6.tar.bz2) = 349790 bytes
+SHA1 (patch-src_s3v__driver.c) = b19bd7d299c2fe0f672d8000e581fde3c715ace9
