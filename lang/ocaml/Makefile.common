@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2015/01/20 14:12:25 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.41 2015/04/02 22:40:09 tnn Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
@@ -20,11 +20,9 @@ CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-libs ${LDFLAGS:Q}
 CONFIGURE_ARGS+=	-with-pthread
 CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
-CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	-mandir ${PREFIX}/lib/ocaml/${PKGMANDIR}
 CPPFLAGS+=		-DDB_DBM_HSEARCH
 
-INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX} \
-			MANDIR=${PREFIX}/${PKGMANDIR}
 DISTINFO_FILE= ${.CURDIR}/../../lang/ocaml/distinfo
 PATCHDIR= ${.CURDIR}/../../lang/ocaml/patches
 
