@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/16 06:30:28 richard Exp $
+$NetBSD: distinfo,v 1.6 2015/04/02 22:16:48 tnn Exp $
 
-SHA1 (xf86-video-trident-1.3.6.tar.bz2) = 9af5d275e6f4247cde19765178c3a797b4a7351d
-RMD160 (xf86-video-trident-1.3.6.tar.bz2) = 575aff2d952991d1ff4948e83335251affdd7525
-Size (xf86-video-trident-1.3.6.tar.bz2) = 356092 bytes
+SHA1 (xf86-video-trident-1.3.7.tar.bz2) = b8cce16caa30e6725bdea078e05ab74b4b8020e7
+RMD160 (xf86-video-trident-1.3.7.tar.bz2) = c9279cdd9708fcfd251e2928277dbe82612dafbe
+Size (xf86-video-trident-1.3.7.tar.bz2) = 376898 bytes
