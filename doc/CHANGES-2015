@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1566 2015/04/02 22:41:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1567 2015/04/02 22:42:19 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2015Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW,
@@ -2167,3 +2167,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/py-anki2 to 2.0.32 [wiz 2015-04-02]
 	Updated devel/py-test to 2.7.0 [wiz 2015-04-02]
 	Updated finance/gnucash to 2.6.6 [wiz 2015-04-02]
+	Updated devel/p5-Moo to 2.000001 [wiz 2015-04-02]
