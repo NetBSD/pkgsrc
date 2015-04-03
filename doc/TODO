@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14277 2015/04/03 07:38:26 wiz Exp $
+$NetBSD: TODO,v 1.14278 2015/04/03 09:05:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o PAM-0.99.7.1
 	o R-3.1.2
 	o RBTools-0.6.3
-	o Sigil-0.8.5
 	o TeXmacs-1.0.7.21
 	o TiffIO-130e
 	o YoSucker-81
@@ -499,7 +498,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eboard-1.1.1
 	o ebook-tools-0.2.2
 	o eclipse-3.2.0
-	o ed-1.10
+	o ed-1.11
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
