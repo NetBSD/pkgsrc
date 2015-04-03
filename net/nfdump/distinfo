@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.8 2013/01/11 13:33:59 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/04/03 10:18:53 hiramatsu Exp $
 
-SHA1 (nfdump-1.6.6.tar.gz) = f7a30c69419222f1527684fb46f02ae757b3dac0
-RMD160 (nfdump-1.6.6.tar.gz) = 63d5aec9e7f6d2ee151a88451e52ac86263996e4
-Size (nfdump-1.6.6.tar.gz) = 651348 bytes
-SHA1 (patch-bin_nf__common.c) = 2460a84a1e778ba46a64208c6d251cce285019e9
-SHA1 (patch-bin_nf__common.h) = ad44825d41b3126d7df21faaf659f5262a7eef03
-SHA1 (patch-bin_nfcapd.c) = d704b76af63547f9365dc56a65931e0df9d788fb
+SHA1 (nfdump-1.6.12.tar.gz) = 46f9e65d81f458c4699e93dac551c5e475a0eb05
+RMD160 (nfdump-1.6.12.tar.gz) = 0701f249ca8851597bcc0b64354db45957e99efe
+Size (nfdump-1.6.12.tar.gz) = 733604 bytes
+SHA1 (patch-bin_exporter.c) = 1cf6542a71a798ece69dcd9ef572093ffbd8c081
+SHA1 (patch-bin_netflow__v1.c) = 712be153222b405bb3e9939c79d413dfa6297c6f
+SHA1 (patch-bin_netflow__v5__v7.c) = 28cfde5f3c649e6ca4a20a13572ba12973a687a8
+SHA1 (patch-bin_nfcapd.c) = 9604827ef1d61727bb8c43dfa9554d777f72d78b
 SHA1 (patch-bin_sfcapd.c) = 14d9cbef9c059629606d38df5a4cfa5aa082942a
 SHA1 (patch-configure) = 02ddab9c6ee4d862b0e8f006ab3432b07923bf0b
 SHA1 (patch-configure.in) = 98d3e0db6f81cfc12b7d719189adf5f7ee8c6594
