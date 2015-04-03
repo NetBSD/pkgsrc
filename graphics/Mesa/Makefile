@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2009/04/08 23:05:45 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2015/04/03 02:29:40 tnn Exp $
 
-PKGNAME=	Mesa-${MESA_PKGVERSION}
+PKGNAME=	Mesa-7.11.2
 MASTER_SITES=	# empty
 DISTFILES=	# empty
+CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Graphics library meta package, similar to SGI's OpenGL
@@ -10,8 +11,6 @@ COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 META_PACKAGE=	# empty
 
 CONFLICTS=	Mesa-glx-[0-9]*
-
-.include "Makefile.common"
 
 # The ordering is important here as glut/buildlink3.mk sets the version
 # of Mesa required.
