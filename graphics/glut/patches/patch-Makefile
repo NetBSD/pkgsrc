@@ -1,0 +1,271 @@
+$NetBSD: patch-Makefile,v 1.1 2015/04/03 01:00:52 tnn Exp $
+
+Patch from FDO git to bring the package up to 8.0.1.
+
+--- Makefile.orig	2015-04-02 23:45:08.000000000 +0000
++++ Makefile
+@@ -0,0 +1,264 @@
++# Top-level Mesa makefile
++
++TOP = .
++
++SUBDIRS = src
++
++
++# The git command below generates an empty string when we're not
++# building in a GIT tree (i.e., building from a release tarball).
++default: $(TOP)/configs/current
++	@for dir in $(SUBDIRS) ; do \
++		if [ -d $$dir ] ; then \
++			(cd $$dir && $(MAKE)) || exit 1 ; \
++		fi \
++	done
++
++all: default
++
++
++clean:
++	-@touch $(TOP)/configs/current
++	-@for dir in $(SUBDIRS) ; do \
++		if [ -d $$dir ] ; then \
++			(cd $$dir && $(MAKE) clean) ; \
++		fi \
++	done
++	-@test -s $(TOP)/configs/current || rm -f $(TOP)/configs/current
++
++
++realclean: clean
++	-rm -rf lib*
++	-rm -f $(TOP)/configs/current
++	-rm -f $(TOP)/configs/autoconf
++	-rm -rf autom4te.cache
++	-find . '(' -name '*.o' -o -name '*.a' -o -name '*.so' -o \
++	  -name depend -o -name depend.bak ')' -exec rm -f '{}' ';'
++
++
++distclean: realclean
++
++
++install:
++	@for dir in $(SUBDIRS) ; do \
++		if [ -d $$dir ] ; then \
++			(cd $$dir && $(MAKE) install) || exit 1 ; \
++		fi \
++	done
++
++
++.PHONY: default doxygen clean realclean distclean install
++
++# If there's no current configuration file
++$(TOP)/configs/current:
++	@echo
++	@echo
++	@echo "Please choose a configuration from the following list:"
++	@ls -1 $(TOP)/configs | grep -v "current\|default\|CVS\|autoconf.*"
++	@echo
++	@echo "Then type 'make <config>' (ex: 'make linux-x86')"
++	@echo
++	@echo "Or, run './configure' then 'make'"
++	@echo "See './configure --help' for details"
++	@echo
++	@echo "(ignore the following error message)"
++	@exit 1
++
++
++# Rules to set/install a specific build configuration
++aix \
++aix-64 \
++aix-64-static \
++aix-gcc \
++aix-static \
++autoconf \
++bluegene-osmesa \
++bluegene-xlc-osmesa \
++beos \
++catamount-osmesa-pgi \
++darwin \
++darwin-fat-32bit \
++darwin-fat-all \
++freebsd \
++freebsd-dri \
++freebsd-dri-amd64 \
++freebsd-dri-x86 \
++hpux10 \
++hpux10-gcc \
++hpux10-static \
++hpux11-32 \
++hpux11-32-static \
++hpux11-32-static-nothreads \
++hpux11-64 \
++hpux11-64-static \
++hpux11-ia64 \
++hpux11-ia64-static \
++hpux9 \
++hpux9-gcc \
++irix6-64 \
++irix6-64-static \
++irix6-n32 \
++irix6-n32-static \
++irix6-o32 \
++irix6-o32-static \
++linux \
++linux-i965 \
++linux-alpha \
++linux-alpha-static \
++linux-cell \
++linux-cell-debug \
++linux-debug \
++linux-dri \
++linux-dri-debug \
++linux-dri-x86 \
++linux-dri-x86-64 \
++linux-dri-ppc \
++linux-dri-xcb \
++linux-egl \
++linux-indirect \
++linux-fbdev \
++linux-ia64-icc \
++linux-ia64-icc-static \
++linux-icc \
++linux-icc-static \
++linux-llvm \
++linux-llvm-debug \
++linux-opengl-es \
++linux-osmesa \
++linux-osmesa-static \
++linux-osmesa16 \
++linux-osmesa16-static \
++linux-osmesa32 \
++linux-ppc \
++linux-ppc-static \
++linux-profile \
++linux-sparc \
++linux-sparc5 \
++linux-static \
++linux-ultrasparc \
++linux-tcc \
++linux-x86 \
++linux-x86-debug \
++linux-x86-32 \
++linux-x86-64 \
++linux-x86-64-debug \
++linux-x86-64-profile \
++linux-x86-64-static \
++linux-x86-profile \
++linux-x86-static \
++netbsd \
++openbsd \
++osf1 \
++osf1-static \
++solaris-x86 \
++solaris-x86-gcc \
++solaris-x86-gcc-static \
++sunos4 \
++sunos4-gcc \
++sunos4-static \
++sunos5 \
++sunos5-gcc \
++sunos5-64-gcc \
++sunos5-smp \
++sunos5-v8 \
++sunos5-v8-static \
++sunos5-v9 \
++sunos5-v9-static \
++sunos5-v9-cc-g++ \
++ultrix-gcc:
++	@ if test -f configs/current -o -L configs/current; then \
++		if ! cmp configs/$@ configs/current > /dev/null; then \
++			echo "Please run 'make realclean' before changing configs" ; \
++			exit 1 ; \
++		fi ; \
++	else \
++		cd configs && rm -f current && ln -s $@ current ; \
++	fi
++	$(MAKE) default
++
++
++# Rules for making release tarballs
++
++VERSION=8.0.1
++DIRECTORY = MesaGLUT-$(VERSION)
++GLUT_NAME = MesaGLUT-$(VERSION)
++
++GLUT_FILES = \
++	$(DIRECTORY)/Makefile*						\
++	$(DIRECTORY)/configure						\
++	$(DIRECTORY)/configure.ac					\
++	$(DIRECTORY)/acinclude.m4					\
++	$(DIRECTORY)/aclocal.m4						\
++	$(DIRECTORY)/bin/config.guess					\
++	$(DIRECTORY)/bin/config.sub					\
++	$(DIRECTORY)/bin/install-sh					\
++	$(DIRECTORY)/bin/mklib						\
++	$(DIRECTORY)/bin/minstall					\
++	$(DIRECTORY)/bin/version.mk					\
++	$(DIRECTORY)/configs/[a-z]*					\
++	$(DIRECTORY)/include/GL/glut.h			\
++	$(DIRECTORY)/include/GL/glutf90.h		\
++	$(DIRECTORY)/src/glut/glx/Makefile*		\
++	$(DIRECTORY)/src/glut/glx/SConscript		\
++	$(DIRECTORY)/src/glut/glx/depend		\
++	$(DIRECTORY)/src/glut/glx/glut.pc.in		\
++	$(DIRECTORY)/src/glut/glx/*def			\
++	$(DIRECTORY)/src/glut/glx/*.[ch]		\
++	$(DIRECTORY)/src/glut/beos/*.[ch]		\
++	$(DIRECTORY)/src/glut/beos/*.cpp		\
++	$(DIRECTORY)/src/glut/beos/Makefile
++
++DEPEND_FILES = \
++	$(TOP)/src/glut/glx/depend	\
++
++
++# Everything for new a Mesa GLUT release:
++ARCHIVES = \
++	$(GLUT_NAME).tar.gz \
++	$(GLUT_NAME).tar.bz2 \
++	$(GLUT_NAME).zip
++
++tarballs: md5
++	rm -f $(GLUT_NAME).tar
++
++# Helper for autoconf builds
++ACLOCAL = aclocal
++ACLOCAL_FLAGS =
++AUTOCONF = autoconf
++AC_FLAGS =
++aclocal.m4: configure.ac acinclude.m4
++	$(ACLOCAL) $(ACLOCAL_FLAGS)
++configure: rm_depend configure.ac aclocal.m4 acinclude.m4
++	$(AUTOCONF) $(AC_FLAGS)
++
++rm_depend:
++	@for dep in $(DEPEND_FILES) ; do \
++		rm -f $$dep ; \
++		touch $$dep ; \
++	done
++
++rm_config:
++	rm -f configs/current
++	rm -f configs/autoconf
++
++$(GLUT_NAME).tar: rm_depend
++	cd .. ; tar -cf $(DIRECTORY)/$(GLUT_NAME).tar $(GLUT_FILES)
++
++$(GLUT_NAME).tar.gz: $(GLUT_NAME).tar
++	gzip --stdout --best $(GLUT_NAME).tar > $(GLUT_NAME).tar.gz
++
++$(GLUT_NAME).tar.bz2: $(GLUT_NAME).tar
++	bzip2 --stdout --best $(GLUT_NAME).tar > $(GLUT_NAME).tar.bz2
++
++$(GLUT_NAME).zip:
++	rm -f $(GLUT_NAME).zip ; \
++	cd .. ; \
++	zip -qr $(GLUT_NAME).zip $(GLUT_FILES) ; \
++	mv $(GLUT_NAME).zip $(DIRECTORY)
++
++md5: $(ARCHIVES)
++	@-md5sum $(GLUT_NAME).tar.gz
++	@-md5sum $(GLUT_NAME).tar.bz2
++	@-md5sum $(GLUT_NAME).zip
++
++.PHONY: tarballs rm_depend rm_config md5

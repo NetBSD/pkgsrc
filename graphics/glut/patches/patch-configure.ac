@@ -1,0 +1,463 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/04/03 01:00:52 tnn Exp $
+
+Patch from FDO git to bring the package up to 8.0.1.
+
+--- configure.ac.orig	2015-04-02 23:45:08.000000000 +0000
++++ configure.ac
+@@ -0,0 +1,456 @@
++dnl Process this file with autoconf to create configure.
++
++AC_PREREQ([2.59])
++
++AC_INIT([mesa-glut], [8.0.1],
++    [https://bugs.freedesktop.org/enter_bug.cgi?product=Mesa])
++AC_CONFIG_AUX_DIR([bin])
++AC_CANONICAL_HOST
++
++dnl Check for progs
++AC_PROG_CPP
++AC_PROG_CC
++AC_PROG_CXX
++AC_CHECK_PROGS([MAKE], [gmake make])
++AC_CHECK_PROGS([PYTHON2], [python2 python])
++AC_PATH_PROG([MKDEP], [makedepend])
++AC_PATH_PROG([SED], [sed])
++
++if test "x$MKDEP" = "x"; then
++    AC_MSG_ERROR([makedepend is required to build GLUT])
++fi
++
++dnl Our fallback install-sh is a symlink to minstall. Use the existing
++dnl configuration in that case.
++AC_PROG_INSTALL
++test "x$INSTALL" = "x$ac_install_sh" && INSTALL='$(MINSTALL)'
++
++dnl We need a POSIX shell for parts of the build. Assume we have one
++dnl in most cases.
++case "$host_os" in
++solaris*)
++    # Solaris /bin/sh is too old/non-POSIX compliant
++    AC_PATH_PROGS(POSIX_SHELL, [ksh93 ksh sh])
++    SHELL="$POSIX_SHELL"
++    ;;
++esac
++
++dnl clang is mostly GCC-compatible, but its version is much lower,
++dnl so we have to check for it.
++AC_MSG_CHECKING([if compiling with clang])
++
++AC_COMPILE_IFELSE(
++[AC_LANG_PROGRAM([], [[
++#ifndef __clang__
++       not clang
++#endif
++]])],
++[CLANG=yes], [CLANG=no])
++
++AC_MSG_RESULT([$CLANG])
++
++dnl If we're using GCC, make sure that it is at least version 3.3.0.  Older
++dnl versions are explictly not supported.
++if test "x$GCC" = xyes -a "x$CLANG" = xno; then
++    AC_MSG_CHECKING([whether gcc version is sufficient])
++    major=0
++    minor=0
++
++    GCC_VERSION=`$CC -dumpversion`
++    if test $? -eq 0; then
++        major=`echo $GCC_VERSION | cut -d. -f1`
++        minor=`echo $GCC_VERSION | cut -d. -f1`
++    fi
++
++    if test $major -lt 3 -o $major -eq 3 -a $minor -lt 3 ; then
++        AC_MSG_RESULT([no])
++        AC_MSG_ERROR([If using GCC, version 3.3.0 or later is required.])
++    else
++        AC_MSG_RESULT([yes])
++    fi
++fi
++
++
++MKDEP_OPTIONS=-fdepend
++dnl Ask gcc where it's keeping its secret headers
++if test "x$GCC" = xyes; then
++    for dir in include include-fixed; do
++        GCC_INCLUDES=`$CC -print-file-name=$dir`
++        if test "x$GCC_INCLUDES" != x && \
++           test "$GCC_INCLUDES" != "$dir" && \
++           test -d "$GCC_INCLUDES"; then
++            MKDEP_OPTIONS="$MKDEP_OPTIONS -I$GCC_INCLUDES"
++        fi
++    done
++fi
++AC_SUBST([MKDEP_OPTIONS])
++
++dnl Make sure the pkg-config macros are defined
++m4_ifndef([PKG_PROG_PKG_CONFIG],
++    [m4_fatal([Could not locate the pkg-config autoconf macros.
++  These are usually located in /usr/share/aclocal/pkg.m4. If your macros
++  are in a different location, try setting the environment variable
++  ACLOCAL="aclocal -I/other/macro/dir" before running autoreconf.])])
++PKG_PROG_PKG_CONFIG()
++
++dnl Get the pkg-config definitions for libGL.  We include a fallback
++dnl path for GL implementation that don't provide a .pc file
++PKG_CHECK_MODULES(GL, [gl], [], [
++		  AC_CHECK_HEADER([GL/gl.h],
++		  		  [],
++		  		  AC_MSG_ERROR([GL not found]))
++		  AC_CHECK_LIB([GL],
++			       [glBegin],
++			       [GL_LIBS=-lGL],
++			       AC_MSG_ERROR([GL required]))
++		  ])
++
++dnl LIB_DIR - library basename
++LIB_DIR=`echo $libdir | $SED 's%.*/%%'`
++AC_SUBST([LIB_DIR])
++
++dnl Cache LDFLAGS so we can add EXTRA_LIB_PATH and restore it later
++_SAVE_LDFLAGS="$LDFLAGS"
++AC_ARG_VAR([EXTRA_LIB_PATH],[Extra -L paths for the linker])
++AC_SUBST([EXTRA_LIB_PATH])
++
++dnl Cache CPPFLAGS so we can add *_INCLUDES and restore it later
++_SAVE_CPPFLAGS="$CPPFLAGS"
++AC_ARG_VAR([X11_INCLUDES],[Extra -I paths for X11 headers])
++AC_SUBST([X11_INCLUDES])
++
++dnl Compiler macros
++DEFINES=""
++AC_SUBST([DEFINES])
++case "$host_os" in
++linux*|*-gnu*|gnu*)
++    DEFINES="$DEFINES -D_GNU_SOURCE -DPTHREADS"
++    ;;
++solaris*)
++    DEFINES="$DEFINES -DPTHREADS -DSVR4"
++    ;;
++cygwin*)
++    DEFINES="$DEFINES -DPTHREADS"
++    ;;
++esac
++
++dnl Add flags for gcc and g++
++if test "x$GCC" = xyes; then
++    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -std=c99"
++    if test "x$CLANG" = "xno"; then
++       CFLAGS="$CFLAGS -ffast-math"
++    fi
++
++    # Enable -fvisibility=hidden if using a gcc that supports it
++    save_CFLAGS="$CFLAGS"
++    AC_MSG_CHECKING([whether $CC supports -fvisibility=hidden])
++    VISIBILITY_CFLAGS="-fvisibility=hidden"
++    CFLAGS="$CFLAGS $VISIBILITY_CFLAGS"
++    AC_LINK_IFELSE([AC_LANG_PROGRAM()], AC_MSG_RESULT([yes]),
++		   [VISIBILITY_CFLAGS=""; AC_MSG_RESULT([no])]);
++
++    # Restore CFLAGS; VISIBILITY_CFLAGS are added to it where needed.
++    CFLAGS=$save_CFLAGS
++
++    # Work around aliasing bugs - developers should comment this out
++    CFLAGS="$CFLAGS -fno-strict-aliasing"
++fi
++if test "x$GXX" = xyes; then
++    CXXFLAGS="$CXXFLAGS -Wall"
++
++    # Enable -fvisibility=hidden if using a gcc that supports it
++    save_CXXFLAGS="$CXXFLAGS"
++    AC_MSG_CHECKING([whether $CXX supports -fvisibility=hidden])
++    VISIBILITY_CXXFLAGS="-fvisibility=hidden"
++    CXXFLAGS="$CXXFLAGS $VISIBILITY_CXXFLAGS"
++    AC_LANG_PUSH([C++])
++    AC_LINK_IFELSE([AC_LANG_PROGRAM()], AC_MSG_RESULT([yes]),
++		   [VISIBILITY_CXXFLAGS="" ; AC_MSG_RESULT([no])]);
++    AC_LANG_POP([C++])
++
++    # Restore CXXFLAGS; VISIBILITY_CXXFLAGS are added to it where needed.
++    CXXFLAGS=$save_CXXFLAGS
++
++    # Work around aliasing bugs - developers should comment this out
++    CXXFLAGS="$CXXFLAGS -fno-strict-aliasing"
++fi
++
++dnl even if the compiler appears to support it, using visibility attributes isn't
++dnl going to do anything useful currently on cygwin apart from emit lots of warnings
++case "$host_os" in
++cygwin*)
++    VISIBILITY_CFLAGS=""
++    VISIBILITY_CXXFLAGS=""
++    ;;
++esac
++
++AC_SUBST([VISIBILITY_CFLAGS])
++AC_SUBST([VISIBILITY_CXXFLAGS])
++
++dnl These should be unnecessary, but let the user set them if they want
++AC_ARG_VAR([OPT_FLAGS], [Additional optimization flags for the compiler.
++    Default is to use CFLAGS.])
++AC_ARG_VAR([ARCH_FLAGS], [Additional architecture specific flags for the
++    compiler. Default is to use CFLAGS.])
++AC_SUBST([OPT_FLAGS])
++AC_SUBST([ARCH_FLAGS])
++
++dnl
++dnl Hacks to enable 32 or 64 bit build
++dnl
++AC_ARG_ENABLE([32-bit],
++    [AS_HELP_STRING([--enable-32-bit],
++        [build 32-bit libraries @<:@default=auto@:>@])],
++    [enable_32bit="$enableval"],
++    [enable_32bit=auto]
++)
++if test "x$enable_32bit" = xyes; then
++    if test "x$GCC" = xyes; then
++        CFLAGS="$CFLAGS -m32"
++        ARCH_FLAGS="$ARCH_FLAGS -m32"
++    fi
++    if test "x$GXX" = xyes; then
++        CXXFLAGS="$CXXFLAGS -m32"
++    fi
++fi
++AC_ARG_ENABLE([64-bit],
++    [AS_HELP_STRING([--enable-64-bit],
++        [build 64-bit libraries @<:@default=auto@:>@])],
++    [enable_64bit="$enableval"],
++    [enable_64bit=auto]
++)
++if test "x$enable_64bit" = xyes; then
++    if test "x$GCC" = xyes; then
++        CFLAGS="$CFLAGS -m64"
++    fi
++    if test "x$GXX" = xyes; then
++        CXXFLAGS="$CXXFLAGS -m64"
++    fi
++fi
++
++dnl
++dnl shared/static libraries, mimic libtool options
++dnl
++AC_ARG_ENABLE([static],
++    [AS_HELP_STRING([--enable-static],
++        [build static libraries @<:@default=disabled@:>@])],
++    [enable_static="$enableval"],
++    [enable_static=no]
++)
++case "x$enable_static" in
++xyes|xno ) ;;
++x ) enable_static=no ;;
++* )
++    AC_MSG_ERROR([Static library option '$enable_static' is not a valid])
++    ;;
++esac
++AC_ARG_ENABLE([shared],
++    [AS_HELP_STRING([--disable-shared],
++        [build shared libraries @<:@default=enabled@:>@])],
++    [enable_shared="$enableval"],
++    [enable_shared=yes]
++)
++case "x$enable_shared" in
++xyes|xno ) ;;
++x ) enable_shared=yes ;;
++* )
++    AC_MSG_ERROR([Shared library option '$enable_shared' is not a valid])
++    ;;
++esac
++
++dnl Can't have static and shared libraries, default to static if user
++dnl explicitly requested. If both disabled, set to static since shared
++dnl was explicitly requirested.
++case "x$enable_static$enable_shared" in
++xyesyes )
++    AC_MSG_WARN([Can't build static and shared libraries, disabling shared])
++    enable_shared=no
++    ;;
++xnono )
++    AC_MSG_WARN([Can't disable both static and shared libraries, enabling static])
++    enable_static=yes
++    ;;
++esac
++
++dnl
++dnl mklib options
++dnl
++AC_ARG_VAR([MKLIB_OPTIONS],[Options for the Mesa library script, mklib])
++if test "$enable_static" = yes; then
++    MKLIB_OPTIONS="$MKLIB_OPTIONS -static"
++fi
++AC_SUBST([MKLIB_OPTIONS])
++
++dnl
++dnl other compiler options
++dnl
++AC_ARG_ENABLE([debug],
++    [AS_HELP_STRING([--enable-debug],
++        [use debug compiler flags and macros @<:@default=disabled@:>@])],
++    [enable_debug="$enableval"],
++    [enable_debug=no]
++)
++if test "x$enable_debug" = xyes; then
++    DEFINES="$DEFINES -DDEBUG"
++    if test "x$GCC" = xyes; then
++        CFLAGS="$CFLAGS -g"
++    fi
++    if test "x$GXX" = xyes; then
++        CXXFLAGS="$CXXFLAGS -g"
++    fi
++fi
++
++dnl
++dnl library names
++dnl
++LIB_PREFIX_GLOB='lib'
++LIB_VERSION_SEPARATOR='.'
++if test "$enable_static" = yes; then
++    LIB_EXTENSION='a'
++else
++    case "$host_os" in
++    darwin* )
++        LIB_EXTENSION='dylib' ;;
++    cygwin* )
++        dnl prefix can be 'cyg' or 'lib'
++        LIB_PREFIX_GLOB='???'
++        LIB_VERSION_SEPARATOR='-'
++        LIB_EXTENSION='dll' ;;
++    aix* )
++        LIB_EXTENSION='a' ;;
++    * )
++        LIB_EXTENSION='so' ;;
++    esac
++fi
++
++dnl
++dnl potentially-infringing-but-nobody-knows-for-sure stuff
++dnl
++AC_ARG_ENABLE([texture-float],
++    [AS_HELP_STRING([--enable-texture-float],
++        [enable floating-point textures and renderbuffers @<:@default=disabled@:>@])],
++    [enable_texture_float="$enableval"],
++    [enable_texture_float=no]
++)
++if test "x$enable_texture_float" = xyes; then
++    AC_MSG_WARN([Floating-point textures enabled.])
++    AC_MSG_WARN([Please consult docs/patents.txt with your lawyer before building Mesa.])
++    DEFINES="$DEFINES -DTEXTURE_FLOAT_ENABLED"
++fi
++
++GL_LIB_NAME='lib$(GL_LIB).'${LIB_EXTENSION}
++GLU_LIB_NAME='lib$(GLU_LIB).'${LIB_EXTENSION}
++GLUT_LIB_NAME='lib$(GLUT_LIB).'${LIB_EXTENSION}
++
++GL_LIB_GLOB=${LIB_PREFIX_GLOB}'$(GL_LIB)'${LIB_VERSION_SEPARATOR}'*'${LIB_EXTENSION}'*'
++GLU_LIB_GLOB=${LIB_PREFIX_GLOB}'$(GLU_LIB)'${LIB_VERSION_SEPARATOR}'*'${LIB_EXTENSION}'*'
++GLUT_LIB_GLOB=${LIB_PREFIX_GLOB}'$(GLUT_LIB)'${LIB_VERSION_SEPARATOR}'*'${LIB_EXTENSION}'*'
++
++AC_SUBST([GL_LIB_NAME])
++AC_SUBST([GLU_LIB_NAME])
++AC_SUBST([GLUT_LIB_NAME])
++
++AC_SUBST([GL_LIB_GLOB])
++AC_SUBST([GLU_LIB_GLOB])
++AC_SUBST([GLUT_LIB_GLOB])
++
++dnl PIC code macro
++MESA_PIC_FLAGS
++
++dnl Check to see if dlopen is in default libraries (like Solaris, which
++dnl has it in libc), or if libdl is needed to get it.
++AC_CHECK_FUNC([dlopen], [],
++    [AC_CHECK_LIB([dl], [dlopen], [DLOPEN_LIBS="-ldl"])])
++AC_SUBST([DLOPEN_LIBS])
++
++dnl
++dnl Driver specific build directories
++dnl
++
++SRC_DIRS=""
++
++dnl
++dnl GLUT configuration
++dnl
++SRC_DIRS="$SRC_DIRS glut/glx"
++if test "$x11_pkgconfig" = yes; then
++    PKG_CHECK_MODULES([GLUT],[x11 xmu xi])
++    GLUT_PC_REQ_PRIV="x11 xmu xi"
++    GLUT_LIB_DEPS="$GLUT_LIBS"
++else
++    # should check these...
++    GLUT_LIB_DEPS="$X_LIBS -lX11 -lXmu -lXi"
++    GLUT_PC_LIB_PRIV="$GLUT_LIB_DEPS"
++    GLUT_PC_CFLAGS="$X11_INCLUDES"
++fi
++if test "x$GCC" = xyes; then
++    GLUT_CFLAGS="$GLUT_CFLAGS -fexceptions"
++fi
++GLUT_LIB_DEPS="$GLUT_LIB_DEPS -lm"
++GLUT_PC_LIB_PRIV="$GLUT_PC_LIB_PRIV -lm"
++
++# If static, empty GLUT_LIB_DEPS and add libs for programs to link
++if test "$enable_static" = no; then
++    GLUT_MESA_DEPS='-l$(GLU_LIB) -l$(GL_LIB)'
++else
++    APP_LIB_DEPS="$APP_LIB_DEPS $GLUT_LIB_DEPS"
++    GLUT_LIB_DEPS=""
++    GLUT_MESA_DEPS=""
++fi
++AC_SUBST([GLUT_LIB_DEPS])
++AC_SUBST([GLUT_MESA_DEPS])
++AC_SUBST([GLUT_CFLAGS])
++AC_SUBST([GLUT_PC_REQ_PRIV])
++AC_SUBST([GLUT_PC_LIB_PRIV])
++AC_SUBST([GLUT_PC_CFLAGS])
++
++AC_SUBST([SRC_DIRS])
++
++dnl Restore LDFLAGS and CPPFLAGS
++LDFLAGS="$_SAVE_LDFLAGS"
++CPPFLAGS="$_SAVE_CPPFLAGS"
++
++dnl Substitute the config
++AC_CONFIG_FILES([configs/autoconf])
++
++dnl Replace the configs/current symlink
++AC_CONFIG_COMMANDS([configs],[
++if test -f configs/current || test -L configs/current; then
++    rm -f configs/current
++fi
++ln -s autoconf configs/current
++])
++
++AC_OUTPUT
++
++dnl
++dnl Output some configuration info for the user
++dnl
++echo ""
++echo "        prefix:          $prefix"
++echo "        exec_prefix:     $exec_prefix"
++echo "        libdir:          $libdir"
++echo "        includedir:      $includedir"
++
++dnl Libraries
++echo ""
++echo "        Shared libs:     $enable_shared"
++echo "        Static libs:     $enable_static"
++
++dnl Compiler options
++# cleanup the CFLAGS/CXXFLAGS/DEFINES vars
++cflags=`echo $CFLAGS $OPT_FLAGS $PIC_FLAGS $ARCH_FLAGS | \
++    $SED 's/^ *//;s/  */ /;s/ *$//'`
++cxxflags=`echo $CXXFLAGS $OPT_FLAGS $PIC_FLAGS $ARCH_FLAGS | \
++    $SED 's/^ *//;s/  */ /;s/ *$//'`
++defines=`echo $DEFINES $ASM_FLAGS | $SED 's/^ *//;s/  */ /;s/ *$//'`
++echo ""
++echo "        CFLAGS:          $cflags"
++echo "        CXXFLAGS:        $cxxflags"
++echo "        Macros:          $defines"
++echo ""
++echo "        PYTHON2:         $PYTHON2"
++
++echo ""
++echo "        Run '${MAKE-make}' to build GLUT"
++echo ""
