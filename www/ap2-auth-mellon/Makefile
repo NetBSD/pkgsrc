@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/04/01 14:08:13 manu Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/03 15:53:34 manu Exp $
 #
 
 DISTNAME=	mod_auth_mellon-0.10.0
@@ -11,8 +11,6 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://modmellon.googlecode.com/files/
 COMMENT=	SAML 2.0 authentication for Apache
 LICENSE=	gnu-gpl-v2 # or later
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
