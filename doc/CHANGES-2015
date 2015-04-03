@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1589 2015/04/03 01:01:17 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1590 2015/04/03 02:05:53 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2185,3 +2185,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/fldigi to 3.22.07 [mef 2015-04-03]
 	Updated graphics/glu to 9.0.0 [tnn 2015-04-03]
 	Updated graphics/glut to 8.0.1 [tnn 2015-04-03]
+	Updated graphics/MesaDemos to 8.2.0 [tnn 2015-04-03]
+	Updated graphics/glx-utils to 8.2.0 [tnn 2015-04-03]
