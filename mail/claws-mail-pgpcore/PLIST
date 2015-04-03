@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/15 17:22:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/03 12:34:44 nros Exp $
+include/claws-mail/plugins/pgpcore/autocompletion.h
 include/claws-mail/plugins/pgpcore/passphrase.h
 include/claws-mail/plugins/pgpcore/pgp_utils.h
 include/claws-mail/plugins/pgpcore/pgp_viewer.h
 include/claws-mail/plugins/pgpcore/prefs_gpg.h
 include/claws-mail/plugins/pgpcore/select-keys.h
 include/claws-mail/plugins/pgpcore/sgpgme.h
-lib/claws-mail/plugins/pgpcore.la
