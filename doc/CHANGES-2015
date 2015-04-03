@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1613 2015/04/03 17:52:02 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1614 2015/04/03 17:52:36 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-memcached to 1.54 [rodent 2015-04-03]
 	Updated www/py-uwsgi to 2.0.10 [rodent 2015-04-03]
 	Updated net/nagios-base to 4.0.8 [rodent 2015-04-03]
+	Updated net/nagios-plugins to 2.0.3 [rodent 2015-04-03]
