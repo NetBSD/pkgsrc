@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/03 10:11:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/03 10:14:20 wiz Exp $
 
 DISTNAME=	JSON-MaybeXS-1.003004
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Use Cpanel::JSON::XS with a fallback to JSON::PP
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	{perl>=5.17.10,p5-JSON-PP>=2.27202}:../../converters/p5-JSON-PP
+# actually test dependency
+BUILD_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
 
 PERL5_PACKLIST=		auto/JSON/MaybeXS/.packlist
 
