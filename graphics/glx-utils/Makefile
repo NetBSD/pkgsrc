@@ -1,35 +1,39 @@
-# $NetBSD: Makefile,v 1.11 2013/08/10 23:02:26 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/03 02:05:02 tnn Exp $
 
-DISTNAME=	MesaDemos-${MESA_VERSION}
-PKGNAME=	glx-utils-${MESA_VERSION}
+DISTNAME=	mesa-demos-8.2.0
+PKGNAME=	${DISTNAME:S/mesa-demos/glx-utils/}
 CATEGORIES=	x11 graphics
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/8.2.0/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://cgit.freedesktop.org/mesa/demos/
 COMMENT=	OpenGL glxgears and glxinfo
+#LICENSE=	# Similar to mit but with SGI advertising clause.
 
-.include "../../graphics/Mesa/Makefile.common"
-MESA_VERSION=	7.4.4
-
-MESA_PATCHFILES=	# don't track Mesa patchlevels
+NO_CONFIGURE=	yes
+USE_LANGUAGES=	c
 
 INSTALLATION_DIRS=	bin
 LDFLAGS+=		-lX11	# ld 2.22 wants each library explicitly
 
-.include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 
 do-build:
-	cd ${WRKSRC}/progs/xdemos && \
+	cd ${WRKSRC}/src/xdemos && \
 	${SETENV} ${MAKE_ENV} ${CC} -I../../include ${CFLAGS} \
 		glxgears.c ${LDFLAGS} \
 		-L../../lib -lGLU -lGL -lm -lXext \
 		-o glxgears && \
 	${SETENV} ${MAKE_ENV} ${CC} -I../../include ${CFLAGS} \
-		glxinfo.c ${LDFLAGS} \
+		glxinfo.c glinfo_common.c ${LDFLAGS} \
 		-L../../lib -lGLU -lGL -lm -lXext -o glxinfo
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/progs/xdemos/glxgears \
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xdemos/glxgears \
 		${DESTDIR}${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/progs/xdemos/glxinfo \
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xdemos/glxinfo \
 		${DESTDIR}${PREFIX}/bin/
 
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
