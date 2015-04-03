@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1609 2015/04/03 12:56:53 nros Exp $
+$NetBSD: CHANGES-2015,v 1.1610 2015/04/03 14:09:26 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2222,3 +2222,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/claws-mail-tnef to 3.11.1 [nros 2015-04-03]
 	Updated mail/claws-mail-vcalendar to 3.11.1 [nros 2015-04-03]
 	Updated mail/claws-mail-notification to 3.11.1 [nros 2015-04-03]
+	Updated devel/gperftools to 2.4 [hiramatsu 2015-04-03]
