@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2015/03/28 17:04:50 bsiegert Exp $
+$NetBSD: distinfo,v 1.18 2015/04/03 09:28:20 mrg Exp $
 
 SHA1 (qtbase-opensource-src-5.4.0.tar.xz) = 2e3d32f32e36a92782ca66c260940824746900bd
 RMD160 (qtbase-opensource-src-5.4.0.tar.xz) = 0df3e024b331c705e895fb5bb76cacd71c6e4909
@@ -24,6 +24,7 @@ SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 0335273353daa7c980ccb4febb
 SHA1 (patch-src_platformsupport_platformsupport.pro) = 2aa60936578458cf241ca893771897f7d34fe081
 SHA1 (patch-src_plugins_platforminputcontexts_compose_compose.pro) = 86f828bd545fe53c626fde0a645213077b88ef64
 SHA1 (patch-src_plugins_platforminputcontexts_compose_generator_qtablegenerator.cpp) = 98a715ce225fcf698cc8389adef82bb67be8310d
+SHA1 (patch-src_plugins_platforms_xcb_qxcbconnection_xi2.cpp) = cee1a36f16cabaaba45815c54ee262db90df0c98
 SHA1 (patch-src_tools_bootstrap_bootstrap.pro) = 46c40c3d205fc5bffd26dac1b231d7c5a33c2dba
 SHA1 (patch-src_tools_moc_main.cpp) = d5888014ad648cb06fa8c348e52102133e6a5f4b
 SHA1 (patch-src_widgets_graphicsview_qgraphicsitem__p.h) = fd55d5ef6fde506849aab07f7ba23e856373b3a1
