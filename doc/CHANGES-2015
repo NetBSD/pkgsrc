@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1602 2015/04/03 10:09:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1603 2015/04/03 10:11:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added archivers/innoextract version 1.4 [wiz 2015-04-03]
 	Added devel/py-attic version 0.14 [wiz 2015-04-03]
 	Updated devel/py-mercurial to 3.3.3 [wiz 2015-04-03]
+	Updated converters/p5-JSON-MaybeXS to 1.003004 [wiz 2015-04-03]
