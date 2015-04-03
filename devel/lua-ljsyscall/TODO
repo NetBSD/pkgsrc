@@ -1,0 +1,3 @@
+- This package should depend on lang/LuaJIT2 or a plain Lua via
+  unpackaged luaffi (https://github.com/jmckaskill/luaffi).
+- make test. I don't know what is a best way when NO_BUILD is "yes".
