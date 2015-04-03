@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.5 2015/02/27 20:14:07 tnn Exp $
+$NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
 
---- gl/mountlist.c.orig	2010-07-27 20:47:15.000000000 +0000
+--- gl/mountlist.c.orig	2014-03-04 21:41:56.000000000 +0000
 +++ gl/mountlist.c
 @@ -52,7 +52,11 @@
  # if HAVE_STRUCT_FSSTAT_F_FSTYPENAME
@@ -26,7 +26,7 @@ $NetBSD: patch-ak,v 1.5 2015/02/27 20:14:07 tnn Exp $
  #ifdef MOUNTED_LISTMNTENT
  # include <mntent.h>
  #endif
-@@ -169,7 +177,7 @@
+@@ -223,7 +231,7 @@ me_remote (char const *fs_name, char con
  
  #if MOUNTED_GETMNTINFO
  
@@ -35,11 +35,11 @@ $NetBSD: patch-ak,v 1.5 2015/02/27 20:14:07 tnn Exp $
  static char *
  fstype_to_string (short int t)
  {
-@@ -266,9 +274,13 @@ fstype_to_string (short int t)
+@@ -320,9 +328,13 @@ fstype_to_string (short int t)
  # endif
  
  static char *
-+#if defined(STAT_STATVFS) && !defined(__FreeBSD__)
++#ifdef STAT_STATVFS
 +fsp_to_string (const struct statvfs *fsp)
 +#else
  fsp_to_string (const struct statfs *fsp)
@@ -50,21 +50,27 @@ $NetBSD: patch-ak,v 1.5 2015/02/27 20:14:07 tnn Exp $
    return (char *) (fsp->f_fstypename);
  # else
    return fstype_to_string (fsp->f_type);
-@@ -592,9 +604,17 @@ read_file_system_list (bool need_fs_type
+@@ -648,7 +660,11 @@ read_file_system_list (bool need_fs_type
    {
      int numsys, counter;
      size_t bufsize;
-+#if defined(STAT_STATVFS) && !defined(__FreeBSD__)
++#ifdef STAT_STATVFS
 +    struct statvfs *stats;
 +#else
      struct statfs *stats;
 +#endif
  
-+#ifdef STAT_STATVFS
-+    numsys = getfsstat ((struct statvfs *)0, 0L, MNT_NOWAIT);
-+#else
-     numsys = getfsstat ((struct statfs *)0, 0L, MNT_NOWAIT);
-+#endif
+     numsys = getfsstat (NULL, 0L, MNT_NOWAIT);
      if (numsys < 0)
-       return (NULL);
-     if (SIZE_MAX / sizeof *stats <= numsys)
+@@ -658,7 +674,11 @@ read_file_system_list (bool need_fs_type
+ 
+     bufsize = (1 + numsys) * sizeof *stats;
+     stats = xmalloc (bufsize);
++#ifdef STAT_STATVFS
++    numsys = getfsstat ((struct statvfs *)stats, bufsize, MNT_NOWAIT);
++#else
+     numsys = getfsstat (stats, bufsize, MNT_NOWAIT);
++#endif
+ 
+     if (numsys < 0)
+       {
