@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/26 15:55:12 manu Exp $
+$NetBSD: distinfo,v 1.2 2015/04/03 18:08:23 rodent Exp $
 
-SHA1 (check_fstab-0.1.tgz) = f78f8015a6aa484c30081077f1d58497c1daf60c
-RMD160 (check_fstab-0.1.tgz) = 5df7ecc26174acc7741739bacb7592ca2af46d48
-Size (check_fstab-0.1.tgz) = 2042 bytes
+SHA1 (check_fstab-0.2.tgz) = 9f8d79b6a6f9503381066e181aac468a7549cc83
+RMD160 (check_fstab-0.2.tgz) = 82f31af8d556b507e0f9ac1ec31990923540ed21
+Size (check_fstab-0.2.tgz) = 2841 bytes
