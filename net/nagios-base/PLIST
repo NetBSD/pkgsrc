@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2014/04/02 13:32:18 he Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/04/03 17:06:08 rodent Exp $
 bin/nagios
 bin/nagiostats
-bin/p1.pl
+libexec/nagios/cgi-bin/archivejson.cgi
 libexec/nagios/cgi-bin/avail.cgi
 libexec/nagios/cgi-bin/cmd.cgi
 libexec/nagios/cgi-bin/config.cgi
@@ -9,9 +9,11 @@ libexec/nagios/cgi-bin/extinfo.cgi
 libexec/nagios/cgi-bin/histogram.cgi
 libexec/nagios/cgi-bin/history.cgi
 libexec/nagios/cgi-bin/notifications.cgi
+libexec/nagios/cgi-bin/objectjson.cgi
 libexec/nagios/cgi-bin/outages.cgi
 libexec/nagios/cgi-bin/showlog.cgi
 libexec/nagios/cgi-bin/status.cgi
+libexec/nagios/cgi-bin/statusjson.cgi
 libexec/nagios/cgi-bin/statusmap.cgi
 libexec/nagios/cgi-bin/statuswml.cgi
 libexec/nagios/cgi-bin/statuswrl.cgi
@@ -359,9 +361,14 @@ share/nagios/includes/rss/rss_utils.inc
 share/nagios/includes/utils.inc.php
 share/nagios/index.php
 share/nagios/js/jquery-1.7.1.min.js
+share/nagios/js/jsonquery.js
+share/nagios/jsonquery.html
 share/nagios/main.php
 share/nagios/robots.txt
+share/nagios/rss-corebanner.php
+share/nagios/rss-corefeed.html
 share/nagios/rss-corefeed.php
+share/nagios/rss-newsfeed.html
 share/nagios/rss-newsfeed.php
 share/nagios/side.php
 share/nagios/stylesheets/avail.css
@@ -372,6 +379,7 @@ share/nagios/stylesheets/config.css
 share/nagios/stylesheets/extinfo.css
 share/nagios/stylesheets/histogram.css
 share/nagios/stylesheets/history.css
+share/nagios/stylesheets/jsonquery.css
 share/nagios/stylesheets/ministatus.css
 share/nagios/stylesheets/notifications.css
 share/nagios/stylesheets/outages.css
