@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/16 14:56:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/04/03 14:05:38 hiramatsu Exp $
 
-SHA1 (gperftools-2.1.tar.gz) = b799b99d9f021988bbc931db1c21b2f94826d4f0
-RMD160 (gperftools-2.1.tar.gz) = 0cf9af2502e661d3771976e943ef2afb8b749983
-Size (gperftools-2.1.tar.gz) = 1319896 bytes
-SHA1 (patch-Makefile.in) = 61dcee2b8aa4cddc9e31b4728e28aea7fd958e41
+SHA1 (gperftools-2.4.tar.gz) = 13b904d0d1f220e43e4495f3403ee280c6da26ea
+RMD160 (gperftools-2.4.tar.gz) = 19ce825850b8a3bc50db54fa022390878dd753bb
+Size (gperftools-2.4.tar.gz) = 1346075 bytes
