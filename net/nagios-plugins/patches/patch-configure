@@ -1,336 +1,130 @@
-$NetBSD: patch-configure,v 1.1 2013/01/19 09:59:12 manu Exp $
+$NetBSD: patch-configure,v 1.2 2015/04/03 17:50:27 rodent Exp $
 
-Enable check_smart_ide for NetBSD
+Disable all the plugins which are installed by the nagios-plugin-* packages.
 
---- configure.orig	2013-01-03 05:43:34.000000000 +0100
-+++ configure	2013-01-03 06:02:14.000000000 +0100
-@@ -15047,9 +15047,11 @@
- echo "$as_me: WARNING: install LDAP libs to compile this plugin (see REQUIREMENTS)." >&2;}
- fi
- LIBS="$_SAVEDLIBS"
+--- configure.orig	2014-06-26 16:17:37.000000000 +0000
++++ configure
+@@ -17188,7 +17188,7 @@ _ACEOF
  
--if test "${ac_cv_header_linux_hdreg_h+set}" = set; then
-+case $host in
-+  *linux*)
-+    if test "${ac_cv_header_linux_hdreg_h+set}" = set; then
-   { echo "$as_me:$LINENO: checking for linux/hdreg.h" >&5
- echo $ECHO_N "checking for linux/hdreg.h... $ECHO_C" >&6; }
- if test "${ac_cv_header_linux_hdreg_h+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
-@@ -15179,10 +15181,10 @@
-   FOUNDINCLUDE=no
  fi
  
+-  if test "$ac_cv_lib_radiusclient_rc_read_config" = "yes"; then
++  if false; then
+     EXTRAS="$EXTRAS check_radius\$(EXEEXT)"
+   	RADIUSLIBS="-lradiusclient"
  
--if test "$FOUNDINCLUDE" = "yes" ; then
--	if test "${ac_cv_header_linux_types_h+set}" = set; then
-+    if test "$FOUNDINCLUDE" = "yes" ; then
-+    	if test "${ac_cv_header_linux_types_h+set}" = set; then
-   { echo "$as_me:$LINENO: checking for linux/types.h" >&5
- echo $ECHO_N "checking for linux/types.h... $ECHO_C" >&6; }
- if test "${ac_cv_header_linux_types_h+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
-@@ -15312,17 +15314,299 @@
-   FOUNDINCLUDE=no
+@@ -17363,7 +17363,7 @@ _ACEOF
+ 
  fi
  
+-  if test "$ac_cv_lib_ldap_main" = "yes"; then
++  if false; then
+     LDAPLIBS="-lldap -llber"\
+     LDAPINCLUDE="-I/usr/include/ldap"
  
-+    fi
-+    if test "$FOUNDINCLUDE" = "no" ; then
-+	{ echo "$as_me:$LINENO: WARNING: Skipping check_ide_smart plugin." >&5
-+echo "$as_me: WARNING: Skipping check_ide_smart plugin." >&2;}
-+	{ echo "$as_me:$LINENO: WARNING: check_ide_smart requires linux/hdreg.h and linux/types.h." >&5
-+echo "$as_me: WARNING: check_ide_smart requires linux/hdreg.h and linux/types.h." >&2;}
-+    fi
-+  ;;
-+  *netbsd*)
-+    if test "${ac_cv_header_dev_ata_atareg_h+set}" = set; then
-+  { echo "$as_me:$LINENO: checking for dev/ata/atareg.h" >&5
-+echo $ECHO_N "checking for dev/ata/atareg.h... $ECHO_C" >&6; }
-+if test "${ac_cv_header_dev_ata_atareg_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
+@@ -18791,6 +18791,9 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ #ifdef HAVE_UNISTD_H
++#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
++#undef _FILE_OFFSET_BITS
++#endif
+ 			#include <unistd.h>
+ 			#endif
+ 			#include <netinet/in.h>
+@@ -21524,7 +21527,7 @@ elif test "$ac_cv_uname_s" = "SunOS"; th
+         ac_cv_ps_cols=9
+         { $as_echo "$as_me:$LINENO: result: using nagios-plugins internal ps command (pst3) for solaris" >&5
+ $as_echo "using nagios-plugins internal ps command (pst3) for solaris" >&6; }
+-	if test `isainfo -b` = 64 ; then
++	if test "$MACHINE_ARCH" = "x86_64" ; then
+ 		pst3_use_64bit=1
+ 		{ $as_echo "$as_me:$LINENO: using 64bit pst3" >&5
+ $as_echo "$as_me: using 64bit pst3" >&6;}
+@@ -22521,7 +22524,7 @@ fi
+ 	then
+ 		{ $as_echo "$as_me:$LINENO: checking for nslookup syntax" >&5
+ $as_echo_n "checking for nslookup syntax... " >&6; }
+-		if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep "Invalid option: sil" >/dev/null
++		if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep -F "Invalid option: sil" >/dev/null
+ 		then
+ 			ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
+ 			{ $as_echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
+@@ -22910,7 +22913,7 @@ fi
+ 
+ 
+ # Check whether --with-snmpget_command was given.
+-if test "${with_snmpget_command+set}" = set; then
++if false; then
+   withval=$with_snmpget_command; PATH_TO_SNMPGET=$withval
  fi
-+{ echo "$as_me:$LINENO: result: $ac_cv_header_dev_ata_atareg_h" >&5
-+echo "${ECHO_T}$ac_cv_header_dev_ata_atareg_h" >&6; }
-+else
-+  # Is the header compilable?
-+{ echo "$as_me:$LINENO: checking dev/ata/atareg.h usability" >&5
-+echo $ECHO_N "checking dev/ata/atareg.h usability... $ECHO_C" >&6; }
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+$ac_includes_default
-+#include <dev/ata/atareg.h>
-+_ACEOF
-+rm -f conftest.$ac_objext
-+if { (ac_try="$ac_compile"
-+case "(($ac_try" in
-+  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
-+  *) ac_try_echo=$ac_try;;
-+esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
-+  (eval "$ac_compile") 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } && {
-+	 test -z "$ac_c_werror_flag" ||
-+	 test ! -s conftest.err
-+       } && test -s conftest.$ac_objext; then
-+  ac_header_compiler=yes
-+else
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
  
--if test "$FOUNDINCLUDE" = "yes" ; then
--	EXTRAS="$EXTRAS check_ide_smart"
-+	ac_header_compiler=no
-+fi
-+
-+rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-+{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
-+echo "${ECHO_T}$ac_header_compiler" >&6; }
-+
-+# Is the header present?
-+{ echo "$as_me:$LINENO: checking dev/ata/atareg.h presence" >&5
-+echo $ECHO_N "checking dev/ata/atareg.h presence... $ECHO_C" >&6; }
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+#include <dev/ata/atareg.h>
-+_ACEOF
-+if { (ac_try="$ac_cpp conftest.$ac_ext"
-+case "(($ac_try" in
-+  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
-+  *) ac_try_echo=$ac_try;;
-+esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
-+  (eval "$ac_cpp conftest.$ac_ext") 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } >/dev/null && {
-+	 test -z "$ac_c_preproc_warn_flag$ac_c_werror_flag" ||
-+	 test ! -s conftest.err
-+       }; then
-+  ac_header_preproc=yes
-+else
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
-+
-+  ac_header_preproc=no
-+fi
-+
-+rm -f conftest.err conftest.$ac_ext
-+{ echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
-+echo "${ECHO_T}$ac_header_preproc" >&6; }
-+
-+# So?  What about this header?
-+case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-+  yes:no: )
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h: accepted by the compiler, rejected by the preprocessor!" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h: proceeding with the compiler's result" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h: proceeding with the compiler's result" >&2;}
-+    ac_header_preproc=yes
-+    ;;
-+  no:yes:* )
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h: present but cannot be compiled" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h: present but cannot be compiled" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h:     check for missing prerequisite headers?" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h:     check for missing prerequisite headers?" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h: see the Autoconf documentation" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h: see the Autoconf documentation" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h:     section \"Present But Cannot Be Compiled\"" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h:     section \"Present But Cannot Be Compiled\"" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h: proceeding with the preprocessor's result" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h: proceeding with the preprocessor's result" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ata/atareg.h: in the future, the compiler will take precedence" >&5
-+echo "$as_me: WARNING: dev/ata/atareg.h: in the future, the compiler will take precedence" >&2;}
-+
-+    ;;
-+esac
-+{ echo "$as_me:$LINENO: checking for dev/ata/atareg.h" >&5
-+echo $ECHO_N "checking for dev/ata/atareg.h... $ECHO_C" >&6; }
-+if test "${ac_cv_header_dev_ata_atareg_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+else
-+  ac_cv_header_dev_ata_atareg_h=$ac_header_preproc
-+fi
-+{ echo "$as_me:$LINENO: result: $ac_cv_header_dev_ata_atareg_h" >&5
-+echo "${ECHO_T}$ac_cv_header_dev_ata_atareg_h" >&6; }
-+
-+fi
-+if test $ac_cv_header_dev_ata_atareg_h = yes; then
-+  FOUNDINCLUDE=yes
-+else
-+  FOUNDINCLUDE=no
-+fi
-+
-+
-+    if test "$FOUNDINCLUDE" = "yes" ; then
-+    	if test "${ac_cv_header_dev_ic_wdcreg_h+set}" = set; then
-+  { echo "$as_me:$LINENO: checking for dev/ic/wdcreg.h" >&5
-+echo $ECHO_N "checking for dev/ic/wdcreg.h... $ECHO_C" >&6; }
-+if test "${ac_cv_header_dev_ic_wdcreg_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+fi
-+{ echo "$as_me:$LINENO: result: $ac_cv_header_dev_ic_wdcreg_h" >&5
-+echo "${ECHO_T}$ac_cv_header_dev_ic_wdcreg_h" >&6; }
+@@ -22921,7 +22924,7 @@ cat >>confdefs.h <<_ACEOF
+ #define PATH_TO_SNMPGET "$PATH_TO_SNMPGET"
+ _ACEOF
+ 
+-	EXTRAS="$EXTRAS check_hpjd check_snmp\$(EXEEXT)"
++	#EXTRAS="$EXTRAS check_hpjd check_snmp\$(EXEEXT)"
  else
-+  # Is the header compilable?
-+{ echo "$as_me:$LINENO: checking dev/ic/wdcreg.h usability" >&5
-+echo $ECHO_N "checking dev/ic/wdcreg.h usability... $ECHO_C" >&6; }
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+$ac_includes_default
-+#include <dev/ic/wdcreg.h>
-+_ACEOF
-+rm -f conftest.$ac_objext
-+if { (ac_try="$ac_compile"
-+case "(($ac_try" in
-+  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
-+  *) ac_try_echo=$ac_try;;
-+esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
-+  (eval "$ac_compile") 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } && {
-+	 test -z "$ac_c_werror_flag" ||
-+	 test ! -s conftest.err
-+       } && test -s conftest.$ac_objext; then
-+  ac_header_compiler=yes
-+else
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
-+
-+	ac_header_compiler=no
-+fi
-+
-+rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-+{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
-+echo "${ECHO_T}$ac_header_compiler" >&6; }
-+
-+# Is the header present?
-+{ echo "$as_me:$LINENO: checking dev/ic/wdcreg.h presence" >&5
-+echo $ECHO_N "checking dev/ic/wdcreg.h presence... $ECHO_C" >&6; }
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+#include <dev/ic/wdcreg.h>
-+_ACEOF
-+if { (ac_try="$ac_cpp conftest.$ac_ext"
-+case "(($ac_try" in
-+  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
-+  *) ac_try_echo=$ac_try;;
-+esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
-+  (eval "$ac_cpp conftest.$ac_ext") 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } >/dev/null && {
-+	 test -z "$ac_c_preproc_warn_flag$ac_c_werror_flag" ||
-+	 test ! -s conftest.err
-+       }; then
-+  ac_header_preproc=yes
-+else
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
-+
-+  ac_header_preproc=no
-+fi
-+
-+rm -f conftest.err conftest.$ac_ext
-+{ echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
-+echo "${ECHO_T}$ac_header_preproc" >&6; }
-+
-+# So?  What about this header?
-+case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-+  yes:no: )
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h: accepted by the compiler, rejected by the preprocessor!" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h: proceeding with the compiler's result" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h: proceeding with the compiler's result" >&2;}
-+    ac_header_preproc=yes
-+    ;;
-+  no:yes:* )
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h: present but cannot be compiled" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h: present but cannot be compiled" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h:     check for missing prerequisite headers?" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h:     check for missing prerequisite headers?" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h: see the Autoconf documentation" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h: see the Autoconf documentation" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h:     section \"Present But Cannot Be Compiled\"" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h:     section \"Present But Cannot Be Compiled\"" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h: proceeding with the preprocessor's result" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h: proceeding with the preprocessor's result" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: dev/ic/wdcreg.h: in the future, the compiler will take precedence" >&5
-+echo "$as_me: WARNING: dev/ic/wdcreg.h: in the future, the compiler will take precedence" >&2;}
-+
-+    ;;
-+esac
-+{ echo "$as_me:$LINENO: checking for dev/ic/wdcreg.h" >&5
-+echo $ECHO_N "checking for dev/ic/wdcreg.h... $ECHO_C" >&6; }
-+if test "${ac_cv_header_dev_ic_wdcreg_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+else
-+  ac_cv_header_dev_ic_wdcreg_h=$ac_header_preproc
-+fi
-+{ echo "$as_me:$LINENO: result: $ac_cv_header_dev_ic_wdcreg_h" >&5
-+echo "${ECHO_T}$ac_cv_header_dev_ic_wdcreg_h" >&6; }
-+
-+fi
-+if test $ac_cv_header_dev_ic_wdcreg_h = yes; then
-+  FOUNDINCLUDE=yes
-+else
-+  FOUNDINCLUDE=no
-+fi
-+
-+
-+    fi
-+    if test "$FOUNDINCLUDE" = "no" ; then
- 	{ echo "$as_me:$LINENO: WARNING: Skipping check_ide_smart plugin." >&5
- echo "$as_me: WARNING: Skipping check_ide_smart plugin." >&2;}
--	{ echo "$as_me:$LINENO: WARNING: check_ide_smart is linux specific. It requires linux/hdreg.h and linux/types.h." >&5
--echo "$as_me: WARNING: check_ide_smart is linux specific. It requires linux/hdreg.h and linux/types.h." >&2;}
-+	{ echo "$as_me:$LINENO: WARNING: check_ide_smart requires dev/ata/atareg.h and dev/ic/wdcreg.h" >&5
-+echo "$as_me: WARNING: check_ide_smart requires dev/ata/atareg.h and dev/ic/wdcreg.h" >&2;}
-+    fi
-+  ;;
-+  *)
-+    { echo "$as_me:$LINENO: WARNING: Skipping check_ide_smart plugin." >&5
-+echo "$as_me: WARNING: Skipping check_ide_smart plugin." >&2;}
-+    { echo "$as_me:$LINENO: WARNING: check_ide_smart works only on Linux and NetBSD" >&5
-+echo "$as_me: WARNING: check_ide_smart works only on Linux and NetBSD" >&2;}
-+esac
-+
-+if test "$FOUNDINCLUDE" = "yes" ; then
-+	EXTRAS="$EXTRAS check_ide_smart"
+ 	{ $as_echo "$as_me:$LINENO: WARNING: Get snmpget from http://net-snmp.sourceforge.net to make check_hpjd and check_snmp plugins" >&5
+ $as_echo "$as_me: WARNING: Get snmpget from http://net-snmp.sourceforge.net to make check_hpjd and check_snmp plugins" >&2;}
+@@ -22982,7 +22985,7 @@ _ACEOF
+ 
  fi
  
+-if ( $PERL -M"Net::SNMP 3.6" -e 'exit' 2>/dev/null  )
++if false
+ then
+ 	{ $as_echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
+ $as_echo_n "checking for Net::SNMP perl module... " >&6; }
+@@ -23134,7 +23137,7 @@ IFS=$as_save_IFS
+ esac
+ fi
+ PATH_TO_FPING=$ac_cv_path_PATH_TO_FPING
+-if test -n "$PATH_TO_FPING"; then
++if test -n "$PATH_TO_FPING" -a "$PATH_TO_FPING" != "no"; then
+   { $as_echo "$as_me:$LINENO: result: $PATH_TO_FPING" >&5
+ $as_echo "$PATH_TO_FPING" >&6; }
+ else
+@@ -23174,7 +23177,7 @@ IFS=$as_save_IFS
+ esac
+ fi
+ PATH_TO_FPING6=$ac_cv_path_PATH_TO_FPING6
+-if test -n "$PATH_TO_FPING6"; then
++if test -n "$PATH_TO_FPING6" -a "$PATH_TO_FPING6" != "no"; then
+   { $as_echo "$as_me:$LINENO: result: $PATH_TO_FPING6" >&5
+ $as_echo "$PATH_TO_FPING6" >&6; }
+ else
+@@ -23750,6 +23753,10 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
  
++#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
++#undef _FILE_OFFSET_BITS
++#endif
++
+ #ifdef HAVE_SYS_PARAM_H
+ #include <sys/param.h>
+ #endif
+@@ -23812,6 +23819,10 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
  
++#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
++#undef _FILE_OFFSET_BITS
++#endif
++
+                #include <unistd.h>
+                #include <sys/types.h>
+                #include <sys/param.h>
+@@ -24003,6 +24014,10 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
++#undef _FILE_OFFSET_BITS
++#endif
++
+                #include <sys/types.h>
+                #include <sys/param.h>
+                #include <sys/stat.h>

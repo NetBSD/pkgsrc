@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2015/02/19 14:45:03 taca Exp $
+# $NetBSD: Makefile,v 1.39 2015/04/03 17:50:27 rodent Exp $
 #
 
-PKGREVISION=	10
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	msgfmt msgmerge intltool perl:run xgettext
 
 PKG_GROUPS+=	${NAGIOS_GROUP}
 BUILD_DEFS+=	${NAGIOS_GROUP}
@@ -38,7 +37,6 @@ PLIST.NetBSD=	yes
 .endif
 
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_ide_smart \
 		${REAL_ROOT_USER} ${NAGIOS_GROUP} 4551
 .endif
@@ -61,6 +59,10 @@ DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 DEPENDS+=	bind-[0-9]*:../../net/bind910
 .endif
 
+post-install:
+	${CHMOD} -x ${DESTDIR}${PREFIX}/libexec/nagios/utils.pm
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
