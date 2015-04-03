@@ -1,8 +1,29 @@
-# $NetBSD: Makefile,v 1.98 2015/03/09 19:54:44 tnn Exp $
+# $NetBSD: Makefile,v 1.99 2015/04/03 02:24:16 tnn Exp $
 
+DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 PKGREVISION=	6
+CATEGORIES=	graphics
+MASTER_SITES=	${MESA_SITES}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.mesa3d.org/
 COMMENT=	Graphics library similar to SGI's OpenGL
+
+DISTFILES+=		MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
+DISTFILES+=		MesaGLUT-${MESA_VERSION}${EXTRACT_SUFX}
+#DISTFILES+=		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
+MESA_DISTNAME= 		MesaLib-${MESA_VERSION}
+MESA_SITES=		ftp://freedesktop.org/pub/mesa/${MESA_VERSION}/
+MESA_VERSION=		7.11.2
+MESA_PKGVERSION=	${MESA_VERSION}
+
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c99 c++
+USE_TOOLS+=		automake bison flex gmake pkg-config makedepend
+WRKSRC=			${WRKDIR}/Mesa-${MESA_VERSION}
+DIST_SUBDIR=		Mesa-${MESA_PKGVERSION}
 
 CONFLICTS+=	xf86driproto<2.0.4
 
@@ -13,12 +34,47 @@ PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/glw/glw.pc.in
 
-CONFIGURE_ARGS+=        --disable-glu
-CONFIGURE_ARGS+=        --disable-glut
-CONFIGURE_ARGS+=        --disable-motif
+CONFIGURE_ARGS+=	--disable-glu
+CONFIGURE_ARGS+=	--disable-glut
+CONFIGURE_ARGS+=	--disable-motif
+CONFIGURE_ARGS+=	--with-gallium-drivers=""
+CONFIGURE_ARGS+=	--disable-gallium-llvm
+CONFIGURE_ARGS+=	--disable-egl
 
 .include "glx-config.mk"
-.include "../../graphics/Mesa/Makefile.lib"
+
+PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 7.11.2
+
+MAKE_ENV+=		MAKE=${GMAKE:Q}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mccc)
+CFLAGS+=	-D__FUNCTION__=__FILE__
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "MirBSD"
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+# XXX This is not quite enough: we will need to patch the makefile
+# because it bogusly tries to reuse objects for native tools and target
+# libraries, and for cross-compiling the objects need to be built
+# separately.  Alternatively, we could just update Mesa to something
+# less prehistoric...
+SUBST_CLASSES+=		nativecc
+SUBST_STAGE.nativecc=	pre-configure
+SUBST_MESSAGE.nativecc=	Fix makefiles to compile tools with native cc.
+SUBST_FILES.nativecc+=	src/glsl/Makefile
+SUBST_SED.nativecc+=	-e 's,$$(CC),$$(APP_CC),g'
+SUBST_SED.nativecc+=	-e 's,$$(CXX),$$(APP_CXX),g'
+MAKE_FLAGS+=		APP_CC=${NATIVE_CC:Q}
+MAKE_FLAGS+=		APP_CXX=${NATIVE_CXX:Q}
+.endif
+
 .include "options.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
@@ -50,6 +106,9 @@ MAKE_ENV+=		PTHREAD_STUBLIB=${PTHREAD_STUBLIB:Q}
 MAKE_ENV+=	CROSS_COMPILING=yes
 .endif
 
+pre-configure:
+	cd ${WRKSRC} && ${MAKE} configure
+
 post-extract:
 .if !empty(PKG_OPTIONS:Mdri) && (${OPSYS} == "SunOS")
 	${CP} ${FILESDIR}/mapfile.externs ${WRKSRC}/src/mesa/drivers/dri/
@@ -74,4 +133,14 @@ CFLAGS+=	-no-integrated-as -fvisibility=hidden
 BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 .endif
 
+.include "../../lang/python/tool.mk"
+BUILDLINK_DEPMETHOD.libxml2?=	build
+.include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glproto+=	glproto>=1.4.11
+.include "../../x11/glproto/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
