@@ -1,10 +1,10 @@
-$NetBSD: patch-common_Makefile.in,v 1.1 2014/04/02 10:22:37 he Exp $
+$NetBSD: patch-common_Makefile.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
 
 Adjustments to build procedure.
 
---- common/Makefile.in.orig	2009-06-17 03:57:21.000000000 +0000
+--- common/Makefile.in.orig	2014-08-12 15:00:01.000000000 +0000
 +++ common/Makefile.in
-@@ -17,7 +17,7 @@ exec_prefix=@exec_prefix@
+@@ -16,7 +16,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
