@@ -1,10 +1,10 @@
-$NetBSD: patch-include_locations.h.in,v 1.1 2014/04/02 10:22:37 he Exp $
+$NetBSD: patch-include_locations.h.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
 
 Adjustments to build procedure.
 
---- include/locations.h.in.orig	2008-11-30 17:22:59.000000000 +0000
+--- include/locations.h.in.orig	2014-08-12 15:00:01.000000000 +0000
 +++ include/locations.h.in
-@@ -20,7 +20,7 @@
+@@ -19,7 +19,7 @@
  
  #define DEFAULT_TEMP_FILE			"@localstatedir@/tempfile"
  #define DEFAULT_TEMP_PATH                       "/tmp"
