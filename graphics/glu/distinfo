@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.16 2015/04/03 00:27:47 tnn Exp $
+
+SHA1 (glu-9.0.0.tar.bz2) = c2814bbaf1e60e28a75ec80f4646047c0da742bd
+RMD160 (glu-9.0.0.tar.bz2) = 567991e97a0702699d9db33f45c2dc0cef1006f1
+Size (glu-9.0.0.tar.bz2) = 493206 bytes
