@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_nfcapd.c,v 1.1 2012/07/25 21:19:30 tez Exp $
+$NetBSD: patch-bin_nfcapd.c,v 1.2 2015/04/03 10:18:53 hiramatsu Exp $
 
 use PATH_MAX instead of MAXPATHLEN if available
 
@@ -16,17 +16,17 @@ use PATH_MAX instead of MAXPATHLEN if available
   
  char	*bindhost, *filter, *datadir, pidstr[32], *launch_process;
  char	*userid, *groupid, *checkptr, *listenport, *mcastgroup, *extension_tags;
--char	*Ident, *pcap_file, pidfile[MAXPATHLEN];
-+char	*Ident, *pcap_file;
+-char	*Ident, *dynsrcdir, pidfile[MAXPATHLEN];
++char	*Ident, *dynsrcdir;
 +#ifdef PATH_MAX
 +char pidfile[PATH_MAX];
 +#else
 +char pidfile[MAXPATHLEN];
 +#endif
  struct stat fstat;
- srecord_t	*commbuff;
  packet_function_t receive_packet;
-@@ -853,18 +859,20 @@ int		c;
+ send_peer_t  peer;
+@@ -897,18 +903,20 @@ char     *pcap_file;
  				break;
  			case 'P':
  				if ( optarg[0] == '/' ) { 	// absolute path given
