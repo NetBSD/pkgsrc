@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/03 22:29:12 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/03 22:36:02 rodent Exp $
 
 GITHUB_PROJECT=	hidapi
 GITHUB_TAG=	${GITHUB_PROJECT}-0.7.0
@@ -16,8 +16,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 NO_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/hidapi-${DISTNAME}
-INSTALLATION_DIRS+=	include/hidapi lib
+WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+INSTALLATION_DIRS+=	include/${GITHUB_PROJECT} lib
 
 .include "../../mk/bsd.fast.prefs.mk"
 
