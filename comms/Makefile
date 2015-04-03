@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2014/12/06 03:20:41 rodent Exp $
+# $NetBSD: Makefile,v 1.98 2015/04/03 22:31:32 rodent Exp $
 #
 
 COMMENT=	Communication utilities
@@ -29,6 +29,7 @@ SUBDIR+=	jpilot
 SUBDIR+=	jpilot-syncmal
 SUBDIR+=	kermit
 SUBDIR+=	kyopon
+SUBDIR+=	libhidapi
 SUBDIR+=	libmal
 SUBDIR+=	libopensync
 SUBDIR+=	libopensync-plugin-evolution2
