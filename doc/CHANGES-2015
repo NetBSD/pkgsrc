@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1594 2015/04/03 07:38:26 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1595 2015/04/03 08:50:37 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2190,3 +2190,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/liblangtag to 0.5.6 [wiz 2015-04-03]
 	Updated time/py-vdirsyncer to 0.4.4 [wiz 2015-04-03]
 	Updated lang/vala to 0.28.0 [wiz 2015-04-03]
+	Added graphics/libepoxy version 1.2 [tnn 2015-04-03]
