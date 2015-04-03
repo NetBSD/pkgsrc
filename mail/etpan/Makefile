@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2014/05/29 23:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/04/03 12:09:35 nros Exp $
 
 DISTNAME=	etpan-ng-0.7.1
 PKGNAME=	${DISTNAME:S/-ng//}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libetpan/}
 
