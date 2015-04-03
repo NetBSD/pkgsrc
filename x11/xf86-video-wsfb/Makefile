@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/04/02 22:16:49 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2015/04/03 09:59:59 tnn Exp $
 
 DISTNAME=	xf86-video-wsfb-0.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
