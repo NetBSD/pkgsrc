@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14278 2015/04/03 09:05:42 wiz Exp $
+$NetBSD: TODO,v 1.14279 2015/04/03 09:07:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -489,7 +489,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dinotrace-9.4d
 	o doclifter-2.15
 	o dolphin-4.0.2
-	o dos2unix-7.2.1
 	o drivel-3.0.5
 	o duplicity-0.7.02
 	o e2fsprogs-1.42.12 [wip]
@@ -833,7 +832,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o mutt-kz-1.5.23.1
 	o mysql-5.7.6
 	o nagios-plugins-2.0.3
 	o nano-2.4.0
@@ -1111,7 +1109,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
 	o unicap-0.9.8
-	o unison2.40-2.40.128
 	o userppp-030706
 	o utilisp-1.14
 	o varnish-4.0.2
