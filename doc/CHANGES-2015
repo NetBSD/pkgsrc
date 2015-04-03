@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1592 2015/04/03 06:58:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1593 2015/04/03 07:34:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2188,3 +2188,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/MesaDemos to 8.2.0 [tnn 2015-04-03]
 	Updated graphics/glx-utils to 8.2.0 [tnn 2015-04-03]
 	Updated devel/liblangtag to 0.5.6 [wiz 2015-04-03]
+	Updated time/py-vdirsyncer to 0.4.4 [wiz 2015-04-03]
