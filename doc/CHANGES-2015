@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1600 2015/04/03 09:42:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1601 2015/04/03 09:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2196,3 +2196,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/librsvg to 2.40.9 [wiz 2015-04-03]
 	Updated finance/moneyguru to 2.8.2 [wiz 2015-04-03]
 	Added archivers/innoextract version 1.4 [wiz 2015-04-03]
+	Added devel/py-attic version 0.14 [wiz 2015-04-03]
