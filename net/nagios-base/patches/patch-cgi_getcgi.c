@@ -1,10 +1,10 @@
-$NetBSD: patch-cgi_getcgi.c,v 1.1 2014/04/02 10:22:37 he Exp $
+$NetBSD: patch-cgi_getcgi.c,v 1.2 2015/04/03 17:06:08 rodent Exp $
 
 Also include limits.h.
 
---- cgi/getcgi.c.orig	2012-10-04 18:31:47.000000000 +0200
-+++ cgi/getcgi.c	2012-10-04 18:31:57.000000000 +0200
-@@ -10,6 +10,7 @@
+--- cgi/getcgi.c.orig	2014-08-12 15:00:01.000000000 +0000
++++ cgi/getcgi.c
+@@ -9,6 +9,7 @@
  #include "../include/getcgi.h"
  #include <stdio.h>
  #include <stdlib.h>
