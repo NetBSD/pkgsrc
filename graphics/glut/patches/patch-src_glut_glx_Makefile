@@ -1,0 +1,53 @@
+$NetBSD: patch-src_glut_glx_Makefile,v 1.1 2015/04/03 01:00:52 tnn Exp $
+
+Patch from FDO git to bring the package up to 8.0.1.
+Also adds libtoolization for portability.
+
+--- src/glut/glx/Makefile.orig	2010-12-14 21:46:56.000000000 +0000
++++ src/glut/glx/Makefile
+@@ -81,7 +81,7 @@ OBJECTS = $(SOURCES:.c=.o)
+ ##### RULES #####
+ 
+ .c.o:
+-	$(CC) -c -I$(TOP)/include $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) $<
++	libtool --mode=compile $(CC) -c -I$(TOP)/include $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) $<
+ 
+ 
+ 
+@@ -92,11 +92,12 @@ default: $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NA
+ 
+ # Make the library
+ $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
+-	$(MKLIB) -o $(GLUT_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) -patch $(GLUT_TINY) \
+-		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
+-		-id $(INSTALL_LIB_DIR)/lib$(GLUT_LIB).$(GLUT_MAJOR).dylib \
+-		$(GLUT_LIB_DEPS) $(OBJECTS)
++	libtool --mode=link $(CC) -o libglut.la -rpath ${PREFIX}/lib -version-info ${GLUT_MAJOR}:0:0 $(GLUT_LIB_DEPS) $(OBJECTS:%.o=%.lo)
++#	$(MKLIB) -o $(GLUT_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
++#		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) -patch $(GLUT_TINY) \
++#		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
++#		-id $(INSTALL_LIB_DIR)/lib$(GLUT_LIB).$(GLUT_MAJOR).dylib \
++#		$(GLUT_LIB_DEPS) $(OBJECTS)
+ 
+ 
+ # glut pkgconfig file
+@@ -117,7 +118,8 @@ install: glut.pc
+ 	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)
+ 	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
+ 	$(INSTALL) -m 644 $(TOP)/include/GL/glut.h $(DESTDIR)$(INSTALL_INC_DIR)/GL
+-	$(MINSTALL) $(TOP)/$(LIB_DIR)/$(GLUT_LIB_GLOB) $(DESTDIR)$(INSTALL_LIB_DIR)
++	libtool --mode=install $(INSTALL) libglut.la $(DESTDIR)$(INSTALL_LIB_DIR)
++#	$(MINSTALL) $(TOP)/$(LIB_DIR)/$(GLUT_LIB_GLOB) $(DESTDIR)$(INSTALL_LIB_DIR)
+ 	$(INSTALL) -m 644 glut.pc $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
+ 
+ 
+@@ -135,6 +137,6 @@ depend: $(SOURCES)
+ 	@ rm -f depend
+ 	@ touch depend
+ 	@ $(MKDEP) $(MKDEP_OPTIONS) -I$(TOP)/include $(SOURCES) \
+-		$(X11_INCLUDES) > /dev/null 
++		> /dev/null 
+ 
+--include depend
++include depend
