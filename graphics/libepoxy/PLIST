@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/03 08:48:57 tnn Exp $
+include/epoxy/egl.h
+include/epoxy/egl_generated.h
+include/epoxy/gl.h
+include/epoxy/gl_generated.h
+include/epoxy/glx.h
+include/epoxy/glx_generated.h
+lib/libepoxy.la
+lib/pkgconfig/epoxy.pc
