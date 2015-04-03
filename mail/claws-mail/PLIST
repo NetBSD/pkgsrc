@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/01/15 17:19:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/04/03 12:34:44 nros Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -25,6 +25,7 @@ include/claws-mail/addrselect.h
 include/claws-mail/advsearch.h
 include/claws-mail/alertpanel.h
 include/claws-mail/autofaces.h
+include/claws-mail/avatars.h
 include/claws-mail/browseldap.h
 include/claws-mail/claws-features.h
 include/claws-mail/codeconv.h
@@ -70,6 +71,7 @@ include/claws-mail/edittags.h
 include/claws-mail/editvcard.h
 include/claws-mail/enriched.h
 include/claws-mail/etpan/etpan-errors.h
+include/claws-mail/etpan/etpan-ssl.h
 include/claws-mail/etpan/etpan-thread-manager-types.h
 include/claws-mail/etpan/etpan-thread-manager.h
 include/claws-mail/etpan/imap-thread.h
@@ -232,6 +234,7 @@ share/locale/ca/LC_MESSAGES/claws-mail.mo
 share/locale/cs/LC_MESSAGES/claws-mail.mo
 share/locale/de/LC_MESSAGES/claws-mail.mo
 share/locale/en_GB/LC_MESSAGES/claws-mail.mo
+share/locale/eo/LC_MESSAGES/claws-mail.mo
 share/locale/es/LC_MESSAGES/claws-mail.mo
 share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
@@ -241,6 +244,7 @@ share/locale/id_ID/LC_MESSAGES/claws-mail.mo
 share/locale/it/LC_MESSAGES/claws-mail.mo
 share/locale/ja/LC_MESSAGES/claws-mail.mo
 share/locale/lt/LC_MESSAGES/claws-mail.mo
+share/locale/nb/LC_MESSAGES/claws-mail.mo
 share/locale/nl/LC_MESSAGES/claws-mail.mo
 share/locale/pl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo

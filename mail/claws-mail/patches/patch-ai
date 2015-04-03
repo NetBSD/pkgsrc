@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2013/07/24 15:26:11 drochner Exp $
+$NetBSD: patch-ai,v 1.2 2015/04/03 12:34:44 nros Exp $
 
---- src/Makefile.in.orig	2013-05-06 16:32:55.000000000 +0000
+--- src/Makefile.in.orig	2014-10-27 18:59:09.000000000 +0000
 +++ src/Makefile.in
-@@ -530,7 +530,7 @@ top_srcdir = @top_srcdir@
+@@ -614,7 +614,7 @@ top_srcdir = @top_srcdir@
  @CLAWS_LIBETPAN_TRUE@etpan_dir = etpan
  @CLAWS_LIBETPAN_FALSE@etpan_library = 
  @CLAWS_LIBETPAN_TRUE@etpan_library = etpan/libclawsetpan.la
 -SUBDIRS = common gtk $(etpan_dir) . plugins 
-+SUBDIRS = common gtk $(etpan_dir) .
++SUBDIRS = common gtk $(etpan_dir) . 
  @PLATFORM_WIN32_TRUE@LTRCCOMPILE = $(LIBTOOL) --mode=compile --tag=RC $(RC) \
- @PLATFORM_WIN32_TRUE@     `echo $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) | \
+ @PLATFORM_WIN32_TRUE@     `echo $(DEFS) $(DEFAULT_INCLUDES) $(IFLAGS) | \
  @PLATFORM_WIN32_TRUE@     sed -e 's/-I/--include-dir /g;s/-D/--define /g'`
