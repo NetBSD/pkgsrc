@@ -1,0 +1,15 @@
+$NetBSD: patch-daemon-init.in,v 1.1 2015/04/03 17:06:08 rodent Exp $
+
+Fix portability failure.
+
+--- daemon-init.in.orig	2014-08-12 15:00:01.000000000 +0000
++++ daemon-init.in
+@@ -73,7 +73,7 @@ fi
+ USE_RAMDISK=${USE_RAMDISK:-0}
+ if test "$USE_RAMDISK" -ne 0 && test "$RAMDISK_SIZE"X != "X"; then
+ 	ramdisk=`mount |grep "${RAMDISK_DIR} type tmpfs"`
+-	if [ "$ramdisk"X == "X" ]; then
++	if [ "$ramdisk"X = "X" ]; then
+ 		mkdir -p -m 0755 ${RAMDISK_DIR}
+ 		mount -t tmpfs -o size=${RAMDISK_SIZE}m tmpfs ${RAMDISK_DIR}
+ 		mkdir -p -m 0755 ${RAMDISK_DIR}/checkresults
