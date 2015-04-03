@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1620 2015/04/03 18:40:52 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1621 2015/04/03 18:45:45 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2233,3 +2233,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nagios-plugin-mysql to 2.0.3 [rodent 2015-04-03]
 	Updated net/nagios-plugin-pgsql to 2.0.3 [rodent 2015-04-03]
 	Updated net/nagios-plugin-radius to 2.0.3 [rodent 2015-04-03]
+	Updated net/nagios-plugin-snmp to 2.0.3 [rodent 2015-04-03]
