@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1615 2015/04/03 18:05:38 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1616 2015/04/03 18:08:54 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2228,3 +2228,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nagios-base to 4.0.8 [rodent 2015-04-03]
 	Updated net/nagios-plugins to 2.0.3 [rodent 2015-04-03]
 	Updated net/nagios-plugin-dumpdates to 0.2 [rodent 2015-04-03]
+	Updated net/nagios-plugin-fstab to 0.2 [rodent 2015-04-03]
