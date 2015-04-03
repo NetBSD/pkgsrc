@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/03 23:35:49 rodent Exp $
+
+SHA1 (openocd-0.8.0.tar.bz2) = 10bf9eeb54e03083cb1a101785b2d69fbdf18f31
+RMD160 (openocd-0.8.0.tar.bz2) = 812755bb51ccf6bb11e4b6aac6dd1c0c674c43b7
+Size (openocd-0.8.0.tar.bz2) = 3768447 bytes
