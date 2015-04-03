@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2015/04/03 09:46:18 tnn Exp $
+
+Allow x86_64 as a SunOS arch.
+--- configure.orig	2009-10-12 05:04:15.000000000 +0000
++++ configure
+@@ -18293,7 +18293,7 @@ fi
+ 		  sparc*)
+ 			SOLARIS_INOUT_ARCH="sparcv8plus"
+ 			;;
+-		  i*86)
++		  i*86|x86_64)
+ 			if test x$SOLARIS_64 = xyes ; then
+ 				SOLARIS_INOUT_ARCH="amd64"
+ 			else
