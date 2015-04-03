@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/07/05 19:40:25 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/03 16:35:53 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
 PKG_SUPPORTED_OPTIONS=	arrow babel color furl intervals ipaddress json password
@@ -23,6 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-colour>=0.0.4:../../textproc/py-colour
 
 .if !empty(PKG_OPTIONS:Mfurl)
 DEPENDS+=	${PYPKGPREFIX}-furl>=0.3.5:../../www/py-furl
+PYTHON_VERSIONS_INCOMPATIBLE=	26 # via py-orderedmultidict
 .endif
 
 .if !empty(PKG_OPTIONS:Mintervals)
