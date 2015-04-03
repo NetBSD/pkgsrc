@@ -1,0 +1,16 @@
+$NetBSD: patch-test_Makefile.am,v 1.1 2015/04/03 09:46:18 tnn Exp $
+
+X.Org Security Advisory:  Dec. 9, 2014
+Protocol handling issues in X Window System servers
+
+--- test/Makefile.am.orig	2012-05-17 17:09:05.000000000 +0000
++++ test/Makefile.am
+@@ -4,7 +4,7 @@ noinst_PROGRAMS = list string touch
+ if XORG
+ # Tests that require at least some DDX functions in order to fully link
+ # For now, requires xf86 ddx, could be adjusted to use another
+-SUBDIRS += xi2
++SUBDIRS += xi1 xi2
+ noinst_PROGRAMS += xkb input xtest misc fixes xfree86
+ endif
+ check_LTLIBRARIES = libxservertest.la
