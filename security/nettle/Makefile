@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/11/26 09:22:19 martin Exp $
+# $NetBSD: Makefile,v 1.14 2015/04/03 18:34:14 mrg Exp $
 
 DISTNAME=	nettle-2.7.1
 PKGREVISION=	1
@@ -17,6 +17,10 @@ USE_TOOLS+=		gm4 gmake
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
 CONFIGURE_ARGS+=	--disable-openssl --disable-shared
+
+.if (${MACHINE_ARCH} == "earmv4" || ${MACHINE_ARCH} == "armv4")
+CONFIGURE_ARGS+=	--disable-assembler
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
