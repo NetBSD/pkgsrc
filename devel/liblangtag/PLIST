@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/05/07 18:44:07 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/04/03 06:58:04 wiz Exp $
 include/liblangtag/langtag.h
+include/liblangtag/lt-config.h
 include/liblangtag/lt-database.h
 include/liblangtag/lt-error.h
 include/liblangtag/lt-ext-module-data.h
@@ -38,6 +39,7 @@ share/gtk-doc/html/liblangtag/deprecated-api-index.html
 share/gtk-doc/html/liblangtag/home.png
 share/gtk-doc/html/liblangtag/index.html
 share/gtk-doc/html/liblangtag/index.sgml
+share/gtk-doc/html/liblangtag/left-insensitive.png
 share/gtk-doc/html/liblangtag/left.png
 share/gtk-doc/html/liblangtag/liblangtag-Container---Extension.html
 share/gtk-doc/html/liblangtag/liblangtag-Container---Extlang.html
@@ -65,8 +67,10 @@ share/gtk-doc/html/liblangtag/liblangtag-Module---Data.html
 share/gtk-doc/html/liblangtag/liblangtag-Strings.html
 share/gtk-doc/html/liblangtag/liblangtag.devhelp2
 share/gtk-doc/html/liblangtag/object-tree.html
+share/gtk-doc/html/liblangtag/right-insensitive.png
 share/gtk-doc/html/liblangtag/right.png
 share/gtk-doc/html/liblangtag/style.css
+share/gtk-doc/html/liblangtag/up-insensitive.png
 share/gtk-doc/html/liblangtag/up.png
 share/liblangtag/common/bcp47/calendar.xml
 share/liblangtag/common/bcp47/collation.xml
