@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2014/05/29 23:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2015/04/03 17:06:08 rodent Exp $
 #
 
-DISTNAME=		nagios-3.5.1
+DISTNAME=		nagios-4.0.8
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		2
 CATEGORIES=		net sysutils
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -82,9 +81,6 @@ SUBST_FILES.files=	nagios.conf.dist
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
-post-extract:
-	${MV} ${WRKDIR}/nagios ${WRKSRC}
-
 pre-build:
 	${CP} ${FILESDIR}/nagios.conf.dist ${WRKSRC}/nagios.conf.dist
 
@@ -99,6 +95,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/netbsd40.png \
 	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
 
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"

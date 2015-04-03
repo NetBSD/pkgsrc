@@ -1,10 +1,10 @@
-$NetBSD: patch-sample-config_nagios.cfg.in,v 1.1 2014/04/02 10:22:37 he Exp $
+$NetBSD: patch-sample-config_nagios.cfg.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
 
 Fix placement of temporary file.
 
---- sample-config/nagios.cfg.in.orig	2010-10-04 02:27:55.000000000 +0000
+--- sample-config/nagios.cfg.in.orig	2014-08-12 15:00:01.000000000 +0000
 +++ sample-config/nagios.cfg.in
-@@ -198,7 +198,7 @@ lock_file=@lockfile@
+@@ -176,7 +176,7 @@ lock_file=@lockfile@
  # is created, used, and deleted throughout the time that Nagios is
  # running.
  

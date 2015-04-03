@@ -1,8 +1,8 @@
-$NetBSD: patch-base_Makefile.in,v 1.1 2014/04/02 10:22:37 he Exp $
+$NetBSD: patch-base_Makefile.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
 
 Adjustments to build procedure.
 
---- base/Makefile.in.orig	2010-10-23 10:00:59.000000000 +0000
+--- base/Makefile.in.orig	2014-08-12 15:00:01.000000000 +0000
 +++ base/Makefile.in
 @@ -36,7 +36,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
@@ -13,7 +13,7 @@ Adjustments to build procedure.
  HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -204,9 +204,9 @@ install-unstripped:
+@@ -180,9 +180,9 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:

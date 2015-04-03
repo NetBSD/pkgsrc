@@ -1,30 +1,19 @@
-$NetBSD: distinfo,v 1.21 2014/04/15 10:16:47 obache Exp $
+$NetBSD: distinfo,v 1.22 2015/04/03 17:06:08 rodent Exp $
 
-SHA1 (nagios-3.5.1.tar.gz) = 486fd6c75db47000b96d6eebb1654c30d5e9bc72
-RMD160 (nagios-3.5.1.tar.gz) = 0ce5693a745f617c9fbf627f18af27b793de884d
-Size (nagios-3.5.1.tar.gz) = 1763584 bytes
+SHA1 (nagios-4.0.8.tar.gz) = d49586db6905a8e58a082251d8f89ef5c2cab872
+RMD160 (nagios-4.0.8.tar.gz) = b53631755e0a23aba918a99f58b7bea237fdd799
+Size (nagios-4.0.8.tar.gz) = 1805059 bytes
 SHA1 (nagios-netbsd40-icons.tar.gz) = 62919c22c5d5dc3f603c3320578431e93dfdd9fe
 RMD160 (nagios-netbsd40-icons.tar.gz) = 96ad67a107dad095213ddbf58debcfd5b46d6dee
 Size (nagios-netbsd40-icons.tar.gz) = 5659 bytes
-SHA1 (patch-Makefile.in) = 6a02bb8a9e4f10ddf19458c8485ccda813057637
-SHA1 (patch-base_Makefile.in) = 4c56192ec7d4df0b162f1fe09018902a970dd5c7
-SHA1 (patch-cgi_Makefile.in) = d8e6bb1ca4039e1f613caae8537666738f61ce08
-SHA1 (patch-cgi_avail.c) = 1ca4bbc28496ba1a4f4034284d003b8bfaed5a82
-SHA1 (patch-cgi_cmd.c) = 69b34e73dc54f99335626058e53d4e1f65313f72
-SHA1 (patch-cgi_config.c) = 9eb7887ee774e312f9254e9db38a04e41614d5e8
-SHA1 (patch-cgi_extinfo.c) = 27fada8f82a42ff80933ed8bacf6e6263ea7f3c0
-SHA1 (patch-cgi_getcgi.c) = 3aa7223473c7a961645591ee9ad46120cd7231b3
-SHA1 (patch-cgi_histogram.c) = 1d24e481a34db0d469de81ef70f079a01b704314
-SHA1 (patch-cgi_notifications.c) = 414013df5a298efd37051273d4da9aee46516241
-SHA1 (patch-cgi_outages.c) = dec955b3468b052ec988b46abb9933ff65e44505
-SHA1 (patch-cgi_status.c) = 009da866967e992fdd8f11bd9e53dbc9cbffeace
-SHA1 (patch-cgi_statusmap.c) = 73be1d14a7daf327eee253cfe66f4ebb50ae4fca
-SHA1 (patch-cgi_statuswml.c) = 027d1f7d9e246374d84804a5a4472cc70ae2edf1
-SHA1 (patch-cgi_summary.c) = 0a8c903b5eb1a9abc33af5091e97e31682cf2cb5
-SHA1 (patch-cgi_trends.c) = 49dcdb16d150268352176360197b03cbaabcc357
-SHA1 (patch-common_Makefile.in) = 9531dcc15c3a4fa953070275065d50978aeef050
-SHA1 (patch-configure) = a62a51408ac2b09176dcfdea4efab02abe652c7f
-SHA1 (patch-contrib_daemonchk.c) = c95efd621e1496f508d5938acc8f354afbb99277
-SHA1 (patch-html_Makefile.in) = 70f48e5aefe914a2c58d82dd38ec16e8b4cd8b71
-SHA1 (patch-include_locations.h.in) = 17c721da9b5d44fe159d385f3c0da2157df14231
-SHA1 (patch-sample-config_nagios.cfg.in) = c8422814bad0b19dfefe116b6db961ac7213c92f
+SHA1 (patch-Makefile.in) = 953eea6b276beba75ab5c64c14d10cdcf1ca2188
+SHA1 (patch-base_Makefile.in) = 2b0162bb4d395b1d529f5fc1fdf9eab3ddaeb161
+SHA1 (patch-cgi_Makefile.in) = 25c22914986c0b781f5dd665a7a53778e1031a63
+SHA1 (patch-cgi_getcgi.c) = 3af474de4f4281f18a306f7d618ff532d0a9ca9e
+SHA1 (patch-common_Makefile.in) = 7fa093a6109dfa03f9b97e4312d3a09e3235f00f
+SHA1 (patch-configure) = f57db3a43c1abc1aa0d6fe007308089c620624a4
+SHA1 (patch-daemon-init.in) = 1e50bb84fde9780d5b13edb4e232c0e3a90ac3f4
+SHA1 (patch-html_Makefile.in) = 4fc1745c7bffef11f63ea32c4e9a3fbb3dcaaadf
+SHA1 (patch-include_locations.h.in) = 0ee376f6737b24f0d4ea8b37781aca70147c5e70
+SHA1 (patch-lib_runcmd.c) = fb34fe5cdc39aca973c1a6e125b125867e6ed262
+SHA1 (patch-sample-config_nagios.cfg.in) = 4ad00840ad66d2e01b19c6db76c810fc3fb80795

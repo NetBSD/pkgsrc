@@ -1,8 +1,8 @@
-$NetBSD: patch-cgi_Makefile.in,v 1.1 2014/04/02 10:22:37 he Exp $
+$NetBSD: patch-cgi_Makefile.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
 
 Adjustments to build procedure.
 
---- cgi/Makefile.in.orig	2010-10-23 10:00:59.000000000 +0000
+--- cgi/Makefile.in.orig	2014-08-12 15:00:01.000000000 +0000
 +++ cgi/Makefile.in
 @@ -15,7 +15,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
