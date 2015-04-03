@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/04/03 09:46:18 tnn Exp $
+
+For the X server to run you need at least some fonts installed. The
+recommended approach is to install the entire modular-xorg-fonts
+meta-package, but failing that the minimum set required is:
+
+	fonts/font-alias
+	fonts/font-misc-misc
+	fonts/font-cursor-misc
+
+This package does *not* depend on these font packages directly as
+in some circumstances installing extra copies from pkgsrc would be
+redundant or possibly harmful.
+
+===========================================================================
