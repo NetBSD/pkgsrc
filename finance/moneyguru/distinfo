@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/09/17 22:37:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/04/03 09:17:41 wiz Exp $
 
-SHA1 (moneyguru/2.7.2.tar.gz) = 5d28f6970653ef5d3ffea0b79c04c83fbb3f4081
-RMD160 (moneyguru/2.7.2.tar.gz) = 77192c2b67400e4e9a3f1c749542048ff01d3d74
-Size (moneyguru/2.7.2.tar.gz) = 3126811 bytes
-SHA1 (patch-hscommon_sphinxgen.py) = 7fa6569d833ba57c4cd529476ad9eff0d200b5c7
+SHA1 (moneyguru-2.8.2.tar.gz) = 09598cdde924612bf37ce34c56e785d0406ba14c
+RMD160 (moneyguru-2.8.2.tar.gz) = f3a5d922ff08841727d9809ef51ee11e4f543a24
+Size (moneyguru-2.8.2.tar.gz) = 4124870 bytes
