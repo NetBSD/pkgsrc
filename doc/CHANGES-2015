@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1587 2015/04/02 23:53:23 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1588 2015/04/03 00:53:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2182,3 +2182,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/py-flask-limiter version 0.7.9 [rodent 2015-04-02]
 	Added databases/vsqlite++ version 0.3.13 [rodent 2015-04-02]
 	Updated www/yahttp to 0.1.5 [rodent 2015-04-02]
+	Updated ham/fldigi to 3.22.07 [mef 2015-04-03]
