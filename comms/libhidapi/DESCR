@@ -1,0 +1,12 @@
+HIDAPI is a multi-platform library which allows an application to interface
+with USB and Bluetooth HID-Class devices on Windows, Linux, and Mac OS X.
+On Windows, a DLL is built.  On other platforms (and optionally on Windows),
+the single source file can simply be dropped into a target application.
+
+HIDAPI has four back-ends:
+	* Windows (using hid.dll)
+	* Linux/hidraw (using the Kernel's hidraw driver)
+	* Linux/libusb (using libusb-1.0)
+	* Mac (using IOHidManager)
+
+This package includes only the libusb backend.
