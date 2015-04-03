@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/03 04:06:20 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/03 15:13:19 rodent Exp $
 
-SHA1 (python-memcached-1.53.tar.gz) = 5c08266c9d8875807ea9a5383d5ae10061e65c59
-RMD160 (python-memcached-1.53.tar.gz) = d353c699267c6f206606f70a812436eceaf8fe5b
-Size (python-memcached-1.53.tar.gz) = 35025 bytes
+SHA1 (python-memcached-1.54.tar.gz) = 1a7064f913143d0279a4bd8cfc0203e30489a47a
+RMD160 (python-memcached-1.54.tar.gz) = 9e504642b5214e0bc687fd078a48eb4d0e3569f8
+Size (python-memcached-1.54.tar.gz) = 36662 bytes
