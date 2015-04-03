@@ -1,0 +1,4 @@
+Epoxy is a library for handling OpenGL function pointer management for you.
+It hides the complexity of dlopen(), dlsym(), glXGetProcAddress(),
+eglGetProcAddress(), etc. from the app developer, with very little knowledge
+needed on their part.

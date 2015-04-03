@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/03 08:48:57 tnn Exp $
+
+SHA1 (libepoxy-1.2.tar.gz) = e700520711b9e4fa07c286aa36e431d8ad4133f5
+RMD160 (libepoxy-1.2.tar.gz) = fc5c11eacb437b437c4d6b185a79dc1d6a4467df
+Size (libepoxy-1.2.tar.gz) = 267110 bytes
