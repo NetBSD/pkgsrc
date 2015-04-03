@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1597 2015/04/03 09:07:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1598 2015/04/03 09:09:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2193,3 +2193,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added graphics/libepoxy version 1.2 [tnn 2015-04-03]
 	Updated editors/Sigil to 0.8.5 [wiz 2015-04-03]
 	Updated converters/dos2unix to 7.2.1 [wiz 2015-04-03]
+	Updated graphics/librsvg to 2.40.9 [wiz 2015-04-03]
