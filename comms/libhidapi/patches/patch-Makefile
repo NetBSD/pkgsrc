@@ -1,0 +1,44 @@
+$NetBSD: patch-Makefile,v 1.1 2015/04/03 22:29:12 rodent Exp $
+
+Makefile for libhidapi.so
+
+--- Makefile.orig	2014-01-08 11:11:31.000000000 +0000
++++ Makefile
+@@ -0,0 +1,37 @@
++###########################################
++# Simple Makefile for HIDAPI test program
++#
++# Alan Ott
++# Signal 11 Software
++# 2010-06-01
++###########################################
++
++all: libhidapi.so.0.7.0
++
++CC       ?= gcc
++CFLAGS   ?= -Wall -g
++
++CXX      ?= g++
++CXXFLAGS ?= -Wall -g
++
++COBJS     = linux/hid-libusb.o
++OBJS      = $(COBJS)
++LIBS      = `pkg-config libusb-1.0 --libs`
++INCLUDES ?= -Ihidapi `pkg-config libusb-1.0 --cflags`
++
++
++libhidapi.so.0.7.0: $(OBJS)
++	$(CC) $(CFLAGS) -shared $(LDFLAGS) $^ $(LIBS) -o libhidapi.so.0.7.0
++
++$(COBJS): %.o: %.c
++	$(CC) $(CFLAGS) -c $(INCLUDES) $< -o $@
++
++install:
++	${BSD_INSTALL_DATA} hidapi/* $(DESTDIR)$(PREFIX)/include/hidapi
++	${BSD_INSTALL_LIB} libhidapi.so.0.7.0 $(DESTDIR)$(PREFIX)/lib
++	ln -s libhidapi.so.0.7.0 $(DESTDIR)$(PREFIX)/lib/libhidapi.so.0
++	ln -s libhidapi.so.0.7.0 $(DESTDIR)$(PREFIX)/lib/libhidapi.so
++clean:
++	rm -f $(OBJS) libhidapi.so.0.7.0
++
++.PHONY: clean
