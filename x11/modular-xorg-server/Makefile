@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2015/03/09 21:24:40 tnn Exp $
+# $NetBSD: Makefile,v 1.92 2015/04/03 09:44:13 tnn Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -101,7 +101,7 @@ CONFIGURE_ENV+=		ac_cv_header_sys_event_h=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
-BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0
+BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0<10
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=5.0
 BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
