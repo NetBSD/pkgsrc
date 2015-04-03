@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1608 2015/04/03 12:07:28 nros Exp $
+$NetBSD: CHANGES-2015,v 1.1609 2015/04/03 12:56:53 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2204,3 +2204,21 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/p5-Sereal-Encoder to 3.005 [wiz 2015-04-03]
 	Updated converters/p5-Unicode-Collate to 1.12 [wiz 2015-04-03]
 	Updated mail/libetpan to 1.6 [nros 2015-04-03]
+	Updated mail/claws-mail to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-archive to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-attachwarner to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-attremover to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-bogofilter to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-fetchinfo to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-mailmbox to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-newmail to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-pgpcore to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-pgpinline to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-pgpmime to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-rssyl to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-smime to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-spamassassin to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-spamreport to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-tnef to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-vcalendar to 3.11.1 [nros 2015-04-03]
+	Updated mail/claws-mail-notification to 3.11.1 [nros 2015-04-03]
