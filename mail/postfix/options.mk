@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2011/05/10 13:38:23 taca Exp $
+# $NetBSD: options.mk,v 1.37 2015/04/03 01:15:24 hiramatsu Exp $
 
 # Global and legacy options
 
@@ -71,10 +71,8 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 ###
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-.  include "../../security/openssl/buildlink3.mk"
 CCARGS+=	-DHAS_PGSQL -I${PGSQL_PREFIX}/include/pgsql
-AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
-		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt -lssl -lcrypto
+AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq
 .endif
 
 ###
