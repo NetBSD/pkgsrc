@@ -1,44 +1,23 @@
-# $NetBSD: Makefile,v 1.36 2011/12/20 14:11:33 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/04/03 01:57:40 tnn Exp $
 
-PKGNAME=	MesaDemos-${MESA_VERSION}
+DISTNAME=	mesa-demos-8.2.0
+PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/8.2.0/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://cgit.freedesktop.org/mesa/demos/
 COMMENT=	OpenGL examples and Demos
+#LICENSE=	# Similar to mit but with SGI advertising clause.
 
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
-# We include Makefile.lib here to pull in the configuration machinery.
-#
-.include "../../graphics/Mesa/Makefile.lib"
-
-USE_TOOLS+=	pax
-BUILD_DIRS=	progs
-BUILD_TARGET=	default
-EGDIR=		${PREFIX}/share/examples/${PKGNAME_NOREV}
-
-AUTO_MKDIRS=	yes
-
-.include "../../graphics/Mesa/buildlink3.mk"
-
-pre-build:
-	cd ${WRKSRC} && ${RM} -fr src
-	${CP} ${WRKSRC}/configs/pkgsrc ${WRKSRC}/configs/current
-
-do-install:
-	cd ${WRKSRC}/progs && pax		\
-		-s ',^./.*Makefile.*,,'	\
-		-s ',^./CVS.*,,'		\
-		-s ',^./.*\.o$$,,'		\
-		-s ',^./\.libs.*,,'		\
-		-s ',^./\.deps.*,,'		\
-		-s ',^./.*\.orig$$,,'		\
-		-rw . ${DESTDIR}${EGDIR}/${dir}
-	${CHMOD} -R a+rX ${DESTDIR}${EGDIR}
-
-###
-### XXX remove this when it's unnecessary
-###
-post-install:
-	${CHMOD} -x ${DESTDIR}${EGDIR}/demos/glslnoise.c
-.include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/libXmu/buildlink3.mk"
-
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/glut/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
