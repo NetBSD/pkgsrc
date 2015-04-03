@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/03 22:29:12 rodent Exp $
+include/hidapi/hidapi.h
+lib/libhidapi.so
+lib/libhidapi.so.0
+lib/libhidapi.so.${PKGVERSION}
