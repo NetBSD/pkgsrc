@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1605 2015/04/03 10:20:44 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1606 2015/04/03 10:25:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2201,3 +2201,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/p5-JSON-MaybeXS to 1.003004 [wiz 2015-04-03]
 	Updated converters/p5-Sereal-Decoder to 3.005 [wiz 2015-04-03]
 	Updated net/nfdump to 1.6.12 [hiramatsu 2015-04-03]
+	Updated converters/p5-Sereal-Encoder to 3.005 [wiz 2015-04-03]
