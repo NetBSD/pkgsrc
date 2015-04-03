@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/02 23:52:50 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/03 22:02:54 rodent Exp $
 
 DISTNAME=	yahttp-0.1.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cmouse/}
-GITHUB_RELEASE=	v0.1.5
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=cmouse/yahttp/}
