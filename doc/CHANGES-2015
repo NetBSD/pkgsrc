@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1622 2015/04/03 19:00:25 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1623 2015/04/03 20:33:49 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2235,3 +2235,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nagios-plugin-radius to 2.0.3 [rodent 2015-04-03]
 	Updated net/nagios-plugin-snmp to 2.0.3 [rodent 2015-04-03]
 	Updated net/nagios-plugin-spamd to 1.6.0 [rodent 2015-04-03]
+	Added devel/lua-ljsyscall version 0.10 [alnsn 2015-04-03]
