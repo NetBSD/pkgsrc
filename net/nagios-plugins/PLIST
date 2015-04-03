@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/01/19 09:59:12 manu Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/04/03 17:50:27 rodent Exp $
 libexec/nagios/check_by_ssh
 libexec/nagios/check_clamd
 libexec/nagios/check_dhcp
@@ -7,6 +7,7 @@ libexec/nagios/check_disk
 libexec/nagios/check_dns
 libexec/nagios/check_dummy
 libexec/nagios/check_file_age
+libexec/nagios/check_fping
 libexec/nagios/check_ftp
 libexec/nagios/check_http
 libexec/nagios/check_icmp
@@ -23,6 +24,7 @@ libexec/nagios/check_mrtgtraf
 libexec/nagios/check_nagios
 libexec/nagios/check_nntp
 libexec/nagios/check_nntps
+libexec/nagios/check_nt
 libexec/nagios/check_ntp
 libexec/nagios/check_ntp_peer
 libexec/nagios/check_ntp_time

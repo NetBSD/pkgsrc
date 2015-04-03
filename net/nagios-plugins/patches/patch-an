@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.4 2011/04/08 22:56:12 morr Exp $
+$NetBSD: patch-an,v 1.5 2015/04/03 17:50:27 rodent Exp $
 
---- lib/Makefile.in.orig	2010-07-27 20:48:09.000000000 +0000
+--- lib/Makefile.in.orig	2014-06-26 16:17:32.000000000 +0000
 +++ lib/Makefile.in
-@@ -146,7 +146,7 @@ DEFAULT_INCLUDES = -I. -I$(top_builddir)
- depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
+@@ -153,7 +153,7 @@ depcomp = $(SHELL) $(top_srcdir)/build-a
  am__depfiles_maybe = depfiles
+ am__mv = mv -f
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 -	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 +	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CPPFLAGS_LFS)
