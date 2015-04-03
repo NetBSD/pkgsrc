@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2072 2015/04/03 09:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2073 2015/04/03 20:32:34 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -534,6 +534,7 @@ SUBDIR+=	lua-BitOp
 SUBDIR+=	lua-alt-getopt
 SUBDIR+=	lua-filesystem
 SUBDIR+=	lua-gi
+SUBDIR+=	lua-ljsyscall
 SUBDIR+=	lua-lpeg
 SUBDIR+=	lua-lrexlib
 SUBDIR+=	lua-lrexlib-onig
