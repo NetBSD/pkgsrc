@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2011/04/08 22:56:12 morr Exp $
+$NetBSD: patch-ad,v 1.5 2015/04/03 17:50:27 rodent Exp $
 
---- plugins-scripts/Makefile.in.orig	2010-07-27 20:48:10.000000000 +0000
+--- plugins-scripts/Makefile.in.orig	2014-06-26 16:17:33.000000000 +0000
 +++ plugins-scripts/Makefile.in
-@@ -963,15 +963,11 @@ top_srcdir = @top_srcdir@
+@@ -1288,15 +1288,11 @@ top_srcdir = @top_srcdir@
  with_trusted_path = @with_trusted_path@
  @RELEASE_PRESENT_TRUE@NP_VERSION = @NP_RELEASE@
  SUFFIXES = .pl .sh
