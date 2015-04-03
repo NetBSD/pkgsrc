@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1588 2015/04/03 00:53:46 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1589 2015/04/03 01:01:17 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2183,3 +2183,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/vsqlite++ version 0.3.13 [rodent 2015-04-02]
 	Updated www/yahttp to 0.1.5 [rodent 2015-04-02]
 	Updated ham/fldigi to 3.22.07 [mef 2015-04-03]
+	Updated graphics/glu to 9.0.0 [tnn 2015-04-03]
+	Updated graphics/glut to 8.0.1 [tnn 2015-04-03]
