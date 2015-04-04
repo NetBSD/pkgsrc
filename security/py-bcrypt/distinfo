@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/03 02:27:10 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/04 21:49:17 rodent Exp $
 
-SHA1 (bcrypt-1.0.2.tar.gz) = 79ee90df35a3fb6a7b4c2675af3699b25918f09c
-RMD160 (bcrypt-1.0.2.tar.gz) = 7beeb9fc116418017143504f85c4eb0375b42fec
-Size (bcrypt-1.0.2.tar.gz) = 40386 bytes
+SHA1 (bcrypt-1.1.1.tar.gz) = 38d9973aeb5f0cea17ce01e457b1b8eafdf85797
+RMD160 (bcrypt-1.1.1.tar.gz) = be0cc2e808392001c183190db5825800da1ea5ee
+Size (bcrypt-1.1.1.tar.gz) = 39714 bytes
