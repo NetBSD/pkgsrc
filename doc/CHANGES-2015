@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1629 2015/04/04 04:01:21 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1630 2015/04/04 08:00:05 snj Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2240,3 +2240,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/openocd version 0.8.0 [rodent 2015-04-04]
 	Updated databases/mysql-cluster to 7.3.8nb3 [jnemeth 2015-04-04]
 	Updated pkgtools/url2pkg to 2.21 [rodent 2015-04-04]
+	Updated net/inadyn to 1.99.13 [snj 2015-04-04]
