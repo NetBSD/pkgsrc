@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2014/02/20 14:15:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/04 13:26:38 jmcneill Exp $
 
 DISTNAME=	icewm-1.3.8
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icewm/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://example.com/
-COMMENT=	TODO: Short description of the package
+HOMEPAGE=	http://www.icewm.org/
+COMMENT=	Small, fast and light-weight window manager
 #LICENSE=	# TODO: (see mk/license.mk)
 
 CONFLICTS+=	icewm-imlib-[0-9]*
