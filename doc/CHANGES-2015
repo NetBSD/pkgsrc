@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1633 2015/04/04 17:15:10 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1634 2015/04/04 21:50:02 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/jimtcl version 0.76 [rodent 2015-04-04]
 	Added meta-pkgs/nagios version 4.0.8 [rodent 2015-04-04]
 	Added multimedia/gmp-api version 38.0 [tnn 2015-04-04]
+	Updated security/py-bcrypt to 1.1.1 [rodent 2015-04-04]
