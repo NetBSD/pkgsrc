@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1630 2015/04/04 08:00:05 snj Exp $
+$NetBSD: CHANGES-2015,v 1.1631 2015/04/04 12:54:37 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql-cluster to 7.3.8nb3 [jnemeth 2015-04-04]
 	Updated pkgtools/url2pkg to 2.21 [rodent 2015-04-04]
 	Updated net/inadyn to 1.99.13 [snj 2015-04-04]
+	Added lang/jimtcl version 0.76 [rodent 2015-04-04]
