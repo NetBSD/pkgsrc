@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ndb_mgmd.sh,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+# $NetBSD: ndb_mgmd.sh,v 1.2 2015/04/04 03:28:05 jnemeth Exp $
 #
 # PROVIDE: ndb_mgmd
 # REQUIRE: DAEMON LOGIN mountall
@@ -42,7 +42,7 @@ else
 			kill `@CAT@ ${pidfile}`
 		fi
 		;;
-	start
+	start)
 		eval ${start_cmd}
 		;;
 	esac
