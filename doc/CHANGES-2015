@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1631 2015/04/04 12:54:37 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1632 2015/04/04 16:04:44 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/url2pkg to 2.21 [rodent 2015-04-04]
 	Updated net/inadyn to 1.99.13 [snj 2015-04-04]
 	Added lang/jimtcl version 0.76 [rodent 2015-04-04]
+	Added meta-pkgs/nagios version 4.0.8 [rodent 2015-04-04]
