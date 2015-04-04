@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/04 12:54:07 rodent Exp $
+bin/build-jim-ext
+bin/jimsh
+include/jim-config.h
+include/jim-eventloop.h
+include/jim-signal.h
+include/jim-subcmd.h
+include/jim-win32compat.h
+include/jim.h
+lib/jim/README.extensions
+lib/jim/tcltest.tcl
+lib/libjim.a
+share/doc/jimtcl/Tcl.html
