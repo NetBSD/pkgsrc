@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.4 2015/03/07 12:19:10 tnn Exp $
+$NetBSD: distinfo,v 1.5 2015/04/04 07:59:33 snj Exp $
 
-SHA1 (inadyn-1.96.2.zip) = 3f42746e443b51db6c0c93bf79435d4718e8d3ee
-RMD160 (inadyn-1.96.2.zip) = d9462456866b725e93154ec1aabb5bf4bdf7ebb6
-Size (inadyn-1.96.2.zip) = 73168 bytes
-SHA1 (patch-aa) = 399adaaaa990277b9b84175850ccdc6970c349cc
-SHA1 (patch-ab) = 1c76470bc2202e5ef26b2a136ce98e0ae2684ca7
+SHA1 (inadyn-1.99.13.zip) = 1294b252979dccb6ecb926d9460d36fa54c97bfe
+RMD160 (inadyn-1.99.13.zip) = 09c4795277621128810f5342efd81a46fe555b8c
+Size (inadyn-1.99.13.zip) = 233771 bytes
+SHA1 (patch-include_ddns.h) = 3d5ae83a33eb848d755364c0d67d9e996bd0aa76
+SHA1 (patch-man_inadyn.8) = 66d66eeea6d59bd2c747083003215a124ed0b4d2
+SHA1 (patch-man_inadyn.conf.5) = 56dc41756aba768d18d057f0199d4f7a2dbc9b25
+SHA1 (patch-src_Makefile.in) = 5ef9f6cb1a6623450e7ca6f144c777f4e11d9b2e
+SHA1 (patch-src_configure.ac) = 69eabc245c47a20c067bbd5b49dda70f08011aae
+SHA1 (patch-src_os.c) = bcbcf79661fe6d3efca02a0293901fa4f1eb2819
+SHA1 (patch-src_tcp.c) = c0890430c48ac268d8545376ad80feba0b593cf1
