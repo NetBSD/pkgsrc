@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2073 2015/04/03 20:32:34 alnsn Exp $
+# $NetBSD: Makefile,v 1.2074 2015/04/04 00:28:08 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -622,6 +622,7 @@ SUBDIR+=	opal
 SUBDIR+=	open-vcdiff
 SUBDIR+=	opencm
 SUBDIR+=	opengrok
+SUBDIR+=	openocd
 SUBDIR+=	openrcs
 SUBDIR+=	orc
 SUBDIR+=	ossp-uuid
