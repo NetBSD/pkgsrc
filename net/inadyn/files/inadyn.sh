@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: inadyn.sh,v 1.1 2011/12/14 13:35:47 abs Exp $
+# $NetBSD: inadyn.sh,v 1.2 2015/04/04 07:59:33 snj Exp $
 #
 
 # PROVIDE: inadyn
@@ -10,7 +10,7 @@
 
 name="inadyn"
 rcvar=$name
-command="@PREFIX@/bin/${name}"
+command="@PREFIX@/sbin/${name}"
 required_files="@PKG_SYSCONFDIR@/inadyn.conf"
 
 load_rc_config $name
