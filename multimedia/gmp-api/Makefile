@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/04 15:45:53 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/04 16:15:05 tnn Exp $
 
 DISTNAME=	gmp-api-38.0
 CATEGORIES=	multimedia www
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla/}
 GITHUB_TAG=	2b8954c5dde595152d34dd378952e26aabb02dc3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/mozilla/gmp-api/
+HOMEPAGE=	https://wiki.mozilla.org/GeckoMediaPlugins
 COMMENT=	Headers for developing Gecko Media Plugins
 LICENSE=	modified-bsd
 
