@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1625 2015/04/03 23:36:35 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1626 2015/04/04 00:27:13 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2238,3 +2238,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/lua-ljsyscall version 0.10 [alnsn 2015-04-03]
 	Added comms/libhidapi version 0.7.0 [rodent 2015-04-03]
 	Added devel/openocr version 0.8.0 [rodent 2015-04-03]
+	Added devel/openocd version 0.8.0 [rodent 2015-04-04]
