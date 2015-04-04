@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.405 2015/03/15 15:00:17 taca Exp $
+# $NetBSD: Makefile,v 1.406 2015/04/04 12:55:28 rodent Exp $
 #
 
 COMMENT=	Programming languages
@@ -93,6 +93,7 @@ SUBDIR+=	jasmin
 SUBDIR+=	java-lang-spec
 SUBDIR+=	java-vm-spec
 SUBDIR+=	jikes
+SUBDIR+=	jimtcl
 SUBDIR+=	jini
 SUBDIR+=	joos
 SUBDIR+=	js
