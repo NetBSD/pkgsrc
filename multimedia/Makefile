@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2015/03/14 18:06:03 tnn Exp $
+# $NetBSD: Makefile,v 1.235 2015/04/04 15:46:46 tnn Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -42,6 +42,7 @@ SUBDIR+=	gecko-mediaplayer
 SUBDIR+=	ggrab
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmencoder
+SUBDIR+=	gmp-api
 SUBDIR+=	gmplayer
 SUBDIR+=	gnash
 SUBDIR+=	gnome-media
