@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/04 15:45:53 tnn Exp $
+
+SHA1 (gmp-api-38.0-2b8954c5dde595152d34dd378952e26aabb02dc3.tar.gz) = 8fe4e3ad6116c582ad35169d4d2961d718ba0509
+RMD160 (gmp-api-38.0-2b8954c5dde595152d34dd378952e26aabb02dc3.tar.gz) = 8e664a945f2b8f15516de9ddc935b8a284ea866a
+Size (gmp-api-38.0-2b8954c5dde595152d34dd378952e26aabb02dc3.tar.gz) = 16202 bytes

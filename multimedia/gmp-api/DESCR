@@ -1,0 +1,3 @@
+This package contains gmp (Gecko Media Plugin) headers to simplify building
+OpenH264 and other plugins without requiring the entire mozilla-central source
+tree.
