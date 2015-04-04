@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/03/15 14:49:28 taca Exp $
+# $NetBSD: Makefile,v 1.79 2015/04/04 16:05:34 rodent Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -32,6 +32,7 @@ SUBDIR+=	modular-xorg-libs
 SUBDIR+=	modular-xorg-protos
 SUBDIR+=	modular-xorg-utils
 SUBDIR+=	mono-gnome-bindings
+SUBDIR+=	nagios
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
