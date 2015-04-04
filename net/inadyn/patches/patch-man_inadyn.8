@@ -1,0 +1,38 @@
+$NetBSD: patch-man_inadyn.8,v 1.1 2015/04/04 07:59:34 snj Exp $
+
+Adjust /var subdirs.  /var gets replaced by VARBASE.
+
+--- man/inadyn.8.orig	2015-04-03 22:48:32.000000000 -0700
++++ man/inadyn.8	2015-04-03 22:48:20.000000000 -0700
+@@ -233,10 +233,10 @@ Set interface to check for IP. Only on U
+ External IP check is not performed
+ .It Fl P, -pidfile Ar FILE
+ Set pidfile, defaults to
+-.Pa /var/run/inadyn/inadyn.pid 
++.Pa /var/run/inadyn.pid 
+ .It Fl c, -cache-dir Ar PATH
+ Set directory for persistent cache files, defaults to
+-.Pa /var/run/inadyn
++.Pa /var/db/inadyn
+ .Pp
+ The cache files are used to keep track of which addresses have been
+ successfully sent to their respective DDNS provider and when.  The
+@@ -418,13 +418,13 @@ that
+ For convenience in sending signals,
+ .Nm
+ writes its process ID to
+-.Pa /var/run/inadyn/inadyn.pid
++.Pa /var/run/inadyn.pid
+ .Sh FILES
+-.Bl -tag -width /var/run/inadyn/inadyn.cache -compact
++.Bl -tag -width /var/db/inadyn/inadyn.cache -compact
+ .It Pa /etc/inadyn.conf
+-.It Pa /var/run/inadyn/inadyn.pid
+-.It Pa /var/run/inadyn/dyndns.org.cache
+-.It Pa /var/run/inadyn/freedns.afraid.org.cache
++.It Pa /var/run/inadyn.pid
++.It Pa /var/db/inadyn/dyndns.org.cache
++.It Pa /var/db/inadyn/freedns.afraid.org.cache
+ .It Pa ... one .cache file per DDNS provider
+ .El
+ .Sh SEE ALSO
