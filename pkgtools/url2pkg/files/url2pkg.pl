@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.26 2014/08/01 15:44:13 schmonz Exp $
+# $NetBSD: url2pkg.pl,v 1.27 2015/04/04 04:00:49 rodent Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -120,6 +120,7 @@ my ($distname, $abs_wrkdir, $abs_wrksrc);
 my (@wrksrc_files, @wrksrc_dirs);
 my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todo);
 my ($pkgname);
+my ($dist_subdir);
 
 #
 # And now to the real magic_* subroutines.
@@ -246,6 +247,7 @@ sub generate_initial_package($) {
 	my ($url) = @_;
 	my ($found, $master_site);
 	my ($master_sites, $distfile, $homepage, $dist_sufx, $category);
+	my ($gh_project, $gh_tag, $gh_release);
 
 	$found = false;
 	open(SITES, "<", "../../mk/fetch/sites.mk") or die;
@@ -302,6 +304,39 @@ sub generate_initial_package($) {
 	}
 
 	if (!$found) {
+		if ($url =~ qr"^https?://github\.com/") {
+			if ($url =~ qr"^https?://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
+				$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
+				$homepage = "\${MASTER_SITE_GITHUB:=$1/$2/}";
+				$gh_project = $2;
+				$gh_tag = $3;
+				if (index($gh_tag, $gh_project) == -1 ) {
+					$pkgname = '${GITHUB_PROJECT}-${DISTNAME}';
+					$dist_subdir = '${GITHUB_PROJECT}';
+				}
+				$distfile = "$3$4";
+				$found = true;
+			} elsif ($url =~ qr"^https?://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
+				$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
+				$homepage = "\${MASTER_SITE_GITHUB:=$1/$2/}";
+				if (index($4, $2) == -1) {
+					$gh_project = $2;
+					$dist_subdir = '${GITHUB_PROJECT}';
+				}
+				if ($3 eq $4) {
+					$gh_release = '${DISTNAME}';
+				} else {
+					$gh_release = $3;
+				}
+				$distfile = "$4$5";
+				$found = true;
+			} else {
+				die("$0: ERROR: Invalid GitHub URL: ${url}\n");
+			}
+		}
+	}
+
+	if (!$found) {
 		if ($url =~ qr"^(.*/)(.*)$") {
 			($master_sites, $distfile) = ($1, $2);
 			$homepage = $master_sites;
@@ -328,11 +363,20 @@ sub generate_initial_package($) {
 	print MF ("# \$Net" . "BSD\$\n");
 	print MF ("\n");
 	print_section(*MF, [
+		(($gh_project ne "")
+		? ["GITHUB_PROJECT", $gh_project]
+		: ()),
 		["DISTNAME", $distname],
 		["CATEGORIES", $category],
 		["MASTER_SITES", $master_sites],
+		(($gh_release ne "")
+		? ["GITHUB_RELEASE", $gh_release]
+		: ()),
 		(($dist_sufx ne ".tar.gz" && $dist_sufx ne ".gem")
 		? ["EXTRACT_SUFX", $dist_sufx]
+		: ()),
+		(($dist_subdir ne "")
+		? ["DIST_SUBDIR", $dist_subdir]
 		: ())
 	]);
 	print_section(*MF, [
