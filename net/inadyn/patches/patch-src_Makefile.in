@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/04/04 07:59:34 snj Exp $
+
+Check for dlopen using autoconf rather than hardcoding it in src/Makefile.in.
+
+--- src/Makefile.in.orig	2015-04-03 21:56:50.000000000 -0700
++++ src/Makefile.in	2015-04-03 21:56:51.000000000 -0700
+@@ -204,7 +204,6 @@ inadyn_SOURCES = main.c ddns.c cache.c e
+ 	../plugins/sitelutions.c ../plugins/tunnelbroker.c \
+ 	../plugins/tzo.c ../plugins/zoneedit.c ../plugins/zerigo.c \
+ 	../plugins/dhis.c ../plugins/duckdns.c ../plugins/dtdns.c
+-inadyn_LDADD = -ldl
+ all: all-am
+ 
+ .SUFFIXES:

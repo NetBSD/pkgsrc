@@ -1,0 +1,15 @@
+$NetBSD: patch-src_configure.ac,v 1.1 2015/04/04 07:59:34 snj Exp $
+
+Check for dlopen using autoconf rather than hardcoding it in src/Makefile.in.
+
+--- configure.ac.orig	2015-04-03 21:50:04.000000000 -0700
++++ configure.ac	2015-04-03 21:50:42.000000000 -0700
+@@ -73,5 +73,8 @@ AC_FUNC_FORK
+ AC_PROG_GCC_TRADITIONAL
+ AC_FUNC_SELECT_ARGTYPES
+ AC_CHECK_FUNCS([atexit memset poll socket strerror])
++AC_SEARCH_LIBS([dlopen], [dl dld], [], [
++  AC_MSG_ERROR([unable to find the dlopen() function])
++])
+ 
+ AC_OUTPUT

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/03/07 21:14:32 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/04 07:59:33 snj Exp $
 
-DISTNAME=	inadyn-1.96.2
-PKGREVISION=	1
+DISTNAME=	inadyn-1.99.13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troglobit/}
 EXTRACT_SUFX=	.zip
@@ -11,32 +10,36 @@ HOMEPAGE=	http://troglobit.com/inadyn.html
 COMMENT=	Dynamic DNS client
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	autoconf gmake
 RCD_SCRIPTS=	inadyn
-RCD_SCRIPT_WRK.inadyn=	${WRKDIR}/inadyn.sh
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--enable-openssl
 
 LIBS.SunOS=	-lsocket -lnsl
-MAKE_ENV+=	TARGET_ARCH=pkgsrc
-MAKE_ENV+=	LIBS=${LIBS:Q}
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-MAKE_FILE=	makefile
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	share/doc/inadyn
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+OWN_DIRS+=		${VARBASE}/db/inadyn ${VARBASE}/run
 
-pre-patch:
-	set -e && cd ${WRKSRC} &&  \
-	for f in man/inadyn.conf.5 man/inadyn.8 src/dyndns.h ; do	\
-		${SED}	-e "s|/etc|${PKG_SYSCONFDIR}|g"			\
-			$${f} > $${f}.orig;			\
-		${CP} -f $${f}.orig $${f};			\
-	done
+BUILD_DEFS+=		VARBASE
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pkgsrc/inadyn ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/inadyn.conf.5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/man/inadyn.8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+SUBST_CLASSES+=		etc
+SUBST_SED.etc=		-e "s|/etc|${PKG_SYSCONFDIR}|g"
+SUBST_FILES.etc=	man/inadyn.conf.5 man/inadyn.8 include/ddns.h
+SUBST_MESSAGE.etc=	Fixing path to configuration file
+SUBST_STAGE.etc=	pre-configure
 
+SUBST_CLASSES+=		var
+SUBST_SED.var=		-e "s|/var|${VARBASE}|"
+SUBST_FILES.var=	man/inadyn.conf.5 man/inadyn.8 include/ddns.h
+SUBST_MESSAGE.var=	Adjusting path to VARBASE
+SUBST_STAGE.var=	pre-configure
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

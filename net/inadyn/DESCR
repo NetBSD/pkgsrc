@@ -1,20 +1,12 @@
-INADYN is a dynamic DNS client. That is, it maintains the IP address of a
-host name. It periodically checks whether the IP address stored by the DNS
-server is the real current address of the machine that is running INADYN.
+Inadyn is a small and simple DDNS client with HTTPS support.  That is, it
+maintains the IP address of a host name.  It periodically checks whether
+the IP address stored by the DNS server is the real current address of the
+machine that is running Inadyn.
 
    Features:
-
-     * supports the following dynamic DNS services:
-     * dyndns.org (in all three flavors: dynamic, static, custom)
-     * freedns.afraid.org
-     * zoneedit.com
-     * no-ip.com
-     * maintains up multiple aliases of the same IP address
-     * runs as a service (Windows 2000/XP, Linux)
-     * or runs as a console application
-     * updates the correct IP address even behind a NAT router.
+     * supports the many dynamic DNS services, including DynDNS,
+       FreeDNS, ZoneEdit, No-IP, and easyDNS.
+     * maintains multiple aliases of the same IP address
+     * updates the correct IP address even behind a NAT router
      * supports access via http proxy
-     * does not perform unnecessary updates.
-     * has 'install and forget it feature'. That is, after install one can
-       completely forget about it. No maintenance required. (as long as no
-       bugs are found;-)
+     * does not perform unnecessary updates

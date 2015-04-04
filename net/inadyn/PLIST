@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:08 jperkin Exp $
-bin/inadyn
-${PKGMANDIR}/man5/inadyn.conf.5
-${PKGMANDIR}/man8/inadyn.8
+@comment $NetBSD: PLIST,v 1.4 2015/04/04 07:59:33 snj Exp $
+man/man5/inadyn.conf.5
+man/man8/inadyn.8
+sbin/inadyn
+share/doc/inadyn/AUTHORS
+share/doc/inadyn/CHANGELOG
+share/doc/inadyn/COPYING
+share/doc/inadyn/NEWS
+share/doc/inadyn/README
