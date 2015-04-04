@@ -1,0 +1,2 @@
+This is a meta package to install all the Nagios packages in a convenient
+manner without requiring any external packages like pkg_chk.
