@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/01/07 16:09:23 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/04/04 16:08:26 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-comment
@@ -497,8 +497,6 @@ ${PLIST.l10n}share/ikiwiki/locale/da/basewiki/recentchanges.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/da/basewiki/sandbox.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/da/basewiki/shortcuts.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/da/basewiki/templates.mdwn
-${PLIST.l10n}share/ikiwiki/locale/da/basewiki/templates/note.mdwn
-${PLIST.l10n}share/ikiwiki/locale/da/basewiki/templates/popup.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/da/directives/ikiwiki/directive/aggregate.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/da/directives/ikiwiki/directive/brokenlinks.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/da/directives/ikiwiki/directive/calendar.mdwn
