@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2015/04/05 17:01:37 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/05 17:02:45 tnn Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
+PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib7
 PKG_SUPPORTED_OPTIONS=
 
 # Assembler code build configurations
