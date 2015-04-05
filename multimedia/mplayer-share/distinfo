@@ -1,21 +1,22 @@
-$NetBSD: distinfo,v 1.87 2015/03/24 14:27:20 joerg Exp $
+$NetBSD: distinfo,v 1.88 2015/04/05 08:27:08 dsainty Exp $
 
 SHA1 (mplayer/MPlayer-1.1.1.tar.xz) = ba2f3bd1442d04b17b0143680850273d928689c1
 RMD160 (mplayer/MPlayer-1.1.1.tar.xz) = 745b3fdf684ba7614dbec2a7143188b7c9cca3a1
 Size (mplayer/MPlayer-1.1.1.tar.xz) = 11202492 bytes
 SHA1 (patch-CVE-2014-4610) = 855276c8e301494942a03e13712cc53615d8f4d5
-SHA1 (patch-aa) = da461823d0731624de964323ab630f6e295be7b7
+SHA1 (patch-aa) = abe6709d87c0a1b4f4da15e93a5bc4d923ed0793
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = a1d16ce7a4ff5a2071a7bac1b6836dc197b849e4
 SHA1 (patch-ffmpeg_libavcodec_arm_asm.S) = dfe8670bcbb6e6dc17b65bf6459b9550da06f73f
 SHA1 (patch-ffmpeg_libavcodec_arm_simple__idct__arm.S) = 7ffa3a0dc52afe28a6c184a72586a1392719d885
 SHA1 (patch-ffmpeg_libavutil_x86__cpu.h) = ea2c6e179840c7746930848b751b6fd1dcd67e90
-SHA1 (patch-gui_interface.c) = 25ada9d9af1e76ffa7b4b97ee07fa1f5250ac000
+SHA1 (patch-gui_interface.c) = b5b1b2da84aaa7555e9ff8b75186684e2439717d
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
 SHA1 (patch-libmpdemux_demux__gif.c) = 4efec4ea1fe395e24760530e532d3251c64a8fb8
 SHA1 (patch-libvo_vo__corevideo.h) = 2d0b1702363227363343a29060a7b027ce96b5bb
 SHA1 (patch-libvo_vo__gif89a.c) = 88e20df5ea5d5f294d312dddab08cb0e40fb8483
 SHA1 (patch-stream_dvb_tune.c) = 46cb5fb4700d7da5ed997dd468033c1edbe9be03
 SHA1 (patch-stream_dvbin.h) = ee4f74eb786100e7cc62be228d73ce29d88638d1
+SHA1 (patch-stream_stream__dvdnav.c) = 25215d7764fe481f7cec85b30dc554aeda448fd0
 SHA1 (patch-sub_osd.c) = 00dceec6ddd10d5ccb6561a18663fe1ca0635be5
 SHA1 (patch-sub_subreader.c) = dc653c1e1cc9583a7e0998b4000e87859a4753a0
