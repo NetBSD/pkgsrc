@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2014/05/05 00:48:32 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2015/04/05 17:34:07 wiz Exp $
 
 BUILDLINK_TREE+=	py-vte
 
@@ -9,7 +9,7 @@ PY_VTE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-vte+=	${PYPKGPREFIX}-vte>=0.26.0
 BUILDLINK_ABI_DEPENDS.py-vte+=	${PYPKGPREFIX}-vte>=0.28.1nb16
-BUILDLINK_PKGSRCDIR.py-vte?=	../../x11/vte
+BUILDLINK_PKGSRCDIR.py-vte?=	../../x11/py-vte
 
 .include "../../x11/vte/buildlink3.mk"
 .endif # PY_VTE_BUILDLINK3_MK
