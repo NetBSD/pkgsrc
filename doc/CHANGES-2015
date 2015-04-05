@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1639 2015/04/05 06:46:09 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1640 2015/04/05 08:30:43 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2250,3 +2250,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBD-CSV to 0.48 [wen 2015-04-05]
 	Updated filesystems/p5-Path-Tiny to 0.068 [wen 2015-04-05]
 	Updated mail/p5-Email-Abstract to 3.008 [wen 2015-04-05]
+	Updated multimedia/mplayer to 1.1.1nb6 [dsainty 2015-04-05]
+	Updated multimedia/gmplayer to 1.1.1nb24 [dsainty 2015-04-05]
