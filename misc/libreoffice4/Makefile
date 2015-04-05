@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.64 2015/03/12 02:59:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2015/04/05 13:04:30 ryoon Exp $
 
-VERREL=		4.4.1
+VERREL=		4.4.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -191,6 +190,7 @@ REPLACE_PERL=	sd/res/webview/editpic.pl
 REPLACE_PERL+=	sd/res/webview/poll.pl
 REPLACE_PERL+=	sd/res/webview/savepic.pl
 REPLACE_PERL+=	sd/res/webview/show.pl
+REPLACE_PERL+=	sd/res/webview/webcast.pl
 
 LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
 # Base depends on java, we don't install the icon
