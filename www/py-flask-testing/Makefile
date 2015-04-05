@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/05 23:26:27 rodent Exp $
 
 DISTNAME=	Flask-Testing-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,9 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 .include "options.mk"
+
+post-install:
+	${CHMOD} go-w ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
