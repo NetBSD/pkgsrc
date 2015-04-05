@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1656 2015/04/05 16:01:59 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1657 2015/04/05 17:21:40 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tortoisehg to 3.3.3 [wiz 2015-04-05]
 	Updated devel/py-astroid to 1.3.6 [wen 2015-04-05]
 	Updated devel/py-pylint to 1.4.3 [wen 2015-04-05]
+	Added graphics/MesaLib7 version 7.11.2 [tnn 2015-04-05]
