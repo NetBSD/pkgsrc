@@ -1,8 +1,8 @@
-$NetBSD: patch-dom_media_moz.build,v 1.1 2015/02/28 04:30:55 ryoon Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.2 2015/04/05 12:54:11 ryoon Exp $
 
---- dom/media/moz.build.orig	2015-02-17 21:40:44.000000000 +0000
+--- dom/media/moz.build.orig	2015-03-27 02:20:26.000000000 +0000
 +++ dom/media/moz.build
-@@ -270,6 +270,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
+@@ -276,6 +276,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
  CFLAGS += CONFIG['GSTREAMER_CFLAGS']
  CXXFLAGS += CONFIG['GSTREAMER_CFLAGS']
  
@@ -29,4 +29,4 @@ $NetBSD: patch-dom_media_moz.build,v 1.1 2015/02/28 04:30:55 ryoon Exp $
 +
  include('/ipc/chromium/chromium-config.mozbuild')
  
- FINAL_LIBRARY = 'xul'
+ # Suppress some GCC warnings being treated as errors:

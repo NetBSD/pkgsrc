@@ -1,8 +1,24 @@
-$NetBSD: patch-config_system-headers,v 1.11 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.12 2015/04/05 12:54:11 ryoon Exp $
 
---- config/system-headers.orig	2014-11-21 03:37:23.000000000 +0000
+--- config/system-headers.orig	2015-03-27 02:20:20.000000000 +0000
 +++ config/system-headers
-@@ -1267,7 +1267,6 @@ X11/Xlocale.h
+@@ -189,7 +189,6 @@ asm/signal.h
+ ASRegistry.h
+ assert.h
+ atk/atk.h
+-atk-bridge.h
+ atlcom.h
+ atlconv.h
+ atlctl.cpp
+@@ -636,6 +635,7 @@ libgnomevfs/gnome-vfs-mime-handlers.h
+ libgnomevfs/gnome-vfs-mime-utils.h
+ libgnomevfs/gnome-vfs-ops.h
+ libgnomevfs/gnome-vfs-standard-callbacks.h
++libv4l2.h
+ lib$routines.h
+ limits
+ limits.h
+@@ -1266,7 +1266,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -10,7 +26,7 @@ $NetBSD: patch-config_system-headers,v 1.11 2014/12/01 18:11:14 ryoon Exp $
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1329,10 +1328,13 @@ vorbis/codec.h
+@@ -1328,10 +1327,13 @@ vorbis/codec.h
  theora/theoradec.h
  tremor/ivorbiscodec.h
  speex/speex_resampler.h
@@ -24,7 +40,7 @@ $NetBSD: patch-config_system-headers,v 1.11 2014/12/01 18:11:14 ryoon Exp $
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1361,3 +1363,37 @@ unicode/utypes.h
+@@ -1360,3 +1362,37 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h

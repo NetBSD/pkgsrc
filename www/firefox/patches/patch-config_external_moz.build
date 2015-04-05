@@ -1,14 +1,17 @@
-$NetBSD: patch-config_external_moz.build,v 1.6 2015/01/16 22:42:09 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.7 2015/04/05 12:54:11 ryoon Exp $
 
---- config/external/moz.build.orig	2015-01-09 04:38:18.000000000 +0000
+--- config/external/moz.build.orig	2015-03-27 02:20:20.000000000 +0000
 +++ config/external/moz.build
-@@ -19,13 +19,19 @@ if CONFIG['MOZ_UPDATER']:
+@@ -19,10 +19,19 @@ if CONFIG['MOZ_UPDATER']:
  # There's no "native brotli" yet, but probably in the future...
  external_dirs += ['modules/brotli']
  
 -if CONFIG['MOZ_VORBIS']:
 +if not CONFIG['MOZ_NATIVE_OGG']:
 +    external_dirs += ['media/libogg']
++
++if not CONFIG['MOZ_NATIVE_OPUS']:
++    external_dirs += ['media/libopus']
 +
 +if not CONFIG['MOZ_NATIVE_THEORA']:
 +    external_dirs += ['media/libtheora']
@@ -20,12 +23,8 @@ $NetBSD: patch-config_external_moz.build,v 1.6 2015/01/16 22:42:09 ryoon Exp $
 +if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
      external_dirs += ['media/libtremor']
  
--if CONFIG['MOZ_OPUS']:
-+if CONFIG['MOZ_OPUS'] and not CONFIG['MOZ_NATIVE_OPUS']:
-     external_dirs += ['media/libopus']
- 
  if CONFIG['MOZ_WEBM']:
-@@ -40,14 +46,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+@@ -37,15 +46,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
  
@@ -39,6 +38,7 @@ $NetBSD: patch-config_external_moz.build,v 1.6 2015/01/16 22:42:09 ryoon Exp $
      'media/kiss_fft',
      'media/libcubeb',
 -    'media/libogg',
+-    'media/libopus',
 -    'media/libtheora',
 -    'media/libspeex_resampler',
      'media/libstagefright',

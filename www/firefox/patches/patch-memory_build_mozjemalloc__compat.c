@@ -1,35 +1,9 @@
-$NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.2 2015/02/28 04:30:55 ryoon Exp $
+$NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.3 2015/04/05 12:54:12 ryoon Exp $
 
---- memory/build/mozjemalloc_compat.c.orig	2015-02-17 21:40:46.000000000 +0000
+--- memory/build/mozjemalloc_compat.c.orig	2015-03-27 02:20:26.000000000 +0000
 +++ memory/build/mozjemalloc_compat.c
-@@ -12,6 +12,8 @@
- #include "jemalloc_types.h"
- #include "mozilla/Types.h"
- 
-+#include <stdbool.h>
-+
- #if defined(MOZ_NATIVE_JEMALLOC)
- 
- MOZ_IMPORT_API int
-@@ -47,6 +49,16 @@ je_(nallocm)(size_t *rsize, size_t size,
- 	je_(mallctlbymib)(mib, miblen, &v, &sz, NULL, 0);		\
- } while (0)
- 
-+#define	CTL_IJ_GET(n, v, i, j) do {					\
-+	size_t mib[6];							\
-+	size_t miblen = sizeof(mib) / sizeof(mib[0]);			\
-+	size_t sz = sizeof(v);						\
-+	je_(mallctlnametomib)(n, mib, &miblen);				\
-+	mib[2] = i;							\
-+	mib[4] = j;							\
-+	je_(mallctlbymib)(mib, miblen, &v, &sz, NULL, 0);			\
-+} while (0)
-+
- MOZ_MEMORY_API size_t
- malloc_good_size_impl(size_t size)
- {
-@@ -61,6 +73,48 @@ malloc_good_size_impl(size_t size)
-   return size;
+@@ -131,6 +131,48 @@ compute_bin_unused(unsigned int narenas)
+     return bin_unused;
  }
  
 +static size_t
@@ -77,13 +51,3 @@ $NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.2 2015/02/28 04:30:55 ryoo
  MOZ_JEMALLOC_API void
  jemalloc_stats_impl(jemalloc_stats_t *stats)
  {
-@@ -93,7 +147,8 @@ jemalloc_stats_impl(jemalloc_stats_t *st
-   // We could get this value out of base.c::base_pages, but that really should
-   // be an upstream change, so don't worry about it for now.
-   stats->bookkeeping = 0;
--  stats->bin_unused = 0;
-+
-+  stats->bin_unused = compute_bin_unused(narenas);
- }
- 
- MOZ_JEMALLOC_API void

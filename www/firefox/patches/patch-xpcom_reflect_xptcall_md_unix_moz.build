@@ -1,6 +1,6 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.2 2015/02/28 04:30:55 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.3 2015/04/05 12:54:12 ryoon Exp $
 
---- xpcom/reflect/xptcall/md/unix/moz.build.orig	2015-02-17 21:40:51.000000000 +0000
+--- xpcom/reflect/xptcall/md/unix/moz.build.orig	2015-03-27 02:20:33.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/moz.build
 @@ -9,7 +9,7 @@ if CONFIG['OS_ARCH'] == 'Darwin':
          'xptcinvoke_darwin.cpp',
@@ -11,20 +11,12 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.2 2015/02/28 04:30:55
          SOURCES += [
              'xptcinvoke_asm_ppc_rhapsody.s',
          ]
-@@ -19,14 +19,14 @@ if CONFIG['OS_ARCH'] == 'Darwin':
-     if '86' in CONFIG['OS_TEST'] and CONFIG['OS_TEST'] != 'x86_64':
-         DEFINES['MOZ_NEED_LEADING_UNDERSCORE'] = True
- 
--if CONFIG['OS_ARCH'] in ('NetBSD', 'GNU'):
-+if CONFIG['OS_ARCH'] in ('OpenBSD', 'GNU'):
-     if CONFIG['CPU_ARCH'] == 'x86':
-         SOURCES += [
-             'xptcinvoke_gcc_x86_unix.cpp',
+@@ -26,7 +26,7 @@ if CONFIG['OS_ARCH'] == 'GNU':
              'xptcstubs_gcc_x86_unix.cpp'
          ]
  
--if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'OpenBSD') or \
-+if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'DragonFly') or \
+-if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'OpenBSD') or \
++if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'OpenBSD', 'DragonFly') or \
     CONFIG['OS_ARCH'].startswith('GNU_'):
      if CONFIG['OS_TEST'] == 'x86_64':
          SOURCES += [
