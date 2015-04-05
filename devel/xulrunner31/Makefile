@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/04/02 19:29:38 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/05 13:08:13 ryoon Exp $
 
-MOZ_BRANCH=		31.5
-MOZ_BRANCH_MINOR=	.3esr
+MOZ_BRANCH=		31.6
+MOZ_BRANCH_MINOR=	.0esr
 MOZ_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 DISTNAME=		firefox-${MOZ_VER}.source
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${MOZ_VER}/source/}
@@ -16,7 +16,6 @@ HOMEPAGE=	http://developer.mozilla.org/en/docs/XULRunner
 COMMENT=	XML User Interface Language runtime environment
 LICENSE=	mpl-1.1
 
-DIST_SUBDIR=	firefox31-31.5.3
 WRKSRC=		${WRKDIR}/mozilla-esr31
 
 DISTINFO_FILE=	${.CURDIR}/../../www/firefox31/distinfo
