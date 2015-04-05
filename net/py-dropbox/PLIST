@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/30 00:01:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/05 22:07:31 hiramatsu Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dropbox/__init__.py
 ${PYSITELIB}/dropbox/__init__.pyc
@@ -9,6 +10,9 @@ ${PYSITELIB}/dropbox/__init__.pyo
 ${PYSITELIB}/dropbox/client.py
 ${PYSITELIB}/dropbox/client.pyc
 ${PYSITELIB}/dropbox/client.pyo
+${PYSITELIB}/dropbox/datastore.py
+${PYSITELIB}/dropbox/datastore.pyc
+${PYSITELIB}/dropbox/datastore.pyo
 ${PYSITELIB}/dropbox/rest.py
 ${PYSITELIB}/dropbox/rest.pyc
 ${PYSITELIB}/dropbox/rest.pyo
@@ -19,9 +23,6 @@ ${PYSITELIB}/dropbox/six.py
 ${PYSITELIB}/dropbox/six.pyc
 ${PYSITELIB}/dropbox/six.pyo
 ${PYSITELIB}/dropbox/trusted-certs.crt
-${PYSITELIB}/dropbox/util.py
-${PYSITELIB}/dropbox/util.pyc
-${PYSITELIB}/dropbox/util.pyo
 ${PYSITELIB}/tests/__init__.py
 ${PYSITELIB}/tests/__init__.pyc
 ${PYSITELIB}/tests/__init__.pyo
@@ -30,6 +31,9 @@ ${PYSITELIB}/tests/server.key
 ${PYSITELIB}/tests/test_client.py
 ${PYSITELIB}/tests/test_client.pyc
 ${PYSITELIB}/tests/test_client.pyo
+${PYSITELIB}/tests/test_datastore.py
+${PYSITELIB}/tests/test_datastore.pyc
+${PYSITELIB}/tests/test_datastore.pyo
 ${PYSITELIB}/tests/test_rest.py
 ${PYSITELIB}/tests/test_rest.pyc
 ${PYSITELIB}/tests/test_rest.pyo
