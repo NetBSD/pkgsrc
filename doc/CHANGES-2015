@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1635 2015/04/05 04:47:29 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1636 2015/04/05 06:32:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2246,3 +2246,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added multimedia/gmp-api version 38.0 [tnn 2015-04-04]
 	Updated security/py-bcrypt to 1.1.1 [rodent 2015-04-04]
 	Updated archivers/p5-Archive-Zip to 1.46 [mef 2015-04-05]
+	Updated multimedia/libaacs to 0.8.1 [adam 2015-04-05]
