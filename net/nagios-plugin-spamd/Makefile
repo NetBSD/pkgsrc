@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2015/04/03 18:59:52 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/05 12:59:39 rodent Exp $
 #
 
 DISTNAME=	check_spamd-1.6.0
-DISTDIR=	${.CURDIR}/files
 PKGNAME=	nagios-plugin-${DISTNAME:S/check_//1}
 CATEGORIES=	net mail
-MASTER_SITES=	# http://exchange.nagios.org/components/com_mtree/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
+		# http://exchange.nagios.org/components/com_mtree/
 EXTRACT_SUFX=	.pl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
