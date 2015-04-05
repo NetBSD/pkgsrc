@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp,v 1.6 2015/01/16 22:42:09 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp,v 1.7 2015/04/05 12:54:12 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp.orig	2015-01-09 04:38:22.000000000 +0000
+--- media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp.orig	2015-03-27 02:20:26.000000000 +0000
 +++ media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 @@ -14,6 +14,13 @@ Cygwin fix provided by:
  Scott McMurray
@@ -27,6 +27,6 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_s
 +# endif
 +#endif
 +
- namespace boost {
-   namespace detail {
-   	//This only works on unsigned data types
+ #ifdef getchar
+ #undef getchar
+ #endif
