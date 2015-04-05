@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/04/05 08:51:08 dsainty Exp $
 
-DISTNAME=	ZoneMinder-1.25.0
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
-PKGREVISION=	9
+DISTNAME=	ZoneMinder-1.28.1
 CATEGORIES=	security
-MASTER_SITES=	http://www2.zoneminder.com/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ZoneMinder/}
+GITHUB_PROJECT=	ZoneMinder
+GITHUB_TYPE=	tag
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.zoneminder.com/
@@ -55,6 +57,13 @@ CONFIGURE_ARGS+=	--with-cgidir=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
+# PolicyKit doesn't actually seem to be necessary.  This hack disables
+# configure's hunt for PolicyKit, but has no other apparent ill effects.
+CONFIGURE_ENV+=		POLKIT_CFLAGS=" " POLKIT_LIBS=" "
+
+PTHREAD_AUTO_VARS=	yes
+.include "../../mk/pthread.buildlink3.mk"
+
 CONFIGURE_ENV+=		OPT_NETPBM=yes
 CONFIGURE_ENV+=		PATH_NETPBM=${PREFIX}/bin/pnmscale
 
@@ -80,8 +89,10 @@ CFLAGS+=		-D__STDC_CONSTANT_MACROS
 # gnutls.
 CONFIGURE_ENV+=		ZM_SSL_LIB=openssl
 
-# Control where run-time state (PID file) gets stored.
-CONFIGURE_ENV+=		ZM_RUNDIR=${VARBASE}/run
+# Control where run-time state (PID file and sockets) get stored.
+# Default is "/var/run/zm", but we want to conform to VARBASE.
+CONFIGURE_ENV+=		ZM_RUNDIR=${VARBASE}/run/zm
+CONFIGURE_ENV+=		ZM_SOCKDIR=${VARBASE}/run/zm
 
 .if !empty(PKG_OPTIONS:Mapache)
 .include "../../mk/apache.mk"
@@ -101,6 +112,7 @@ CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 .endif
 
 # This directory contains state, so use OWN_DIRS instead of MAKE_DIRS.
