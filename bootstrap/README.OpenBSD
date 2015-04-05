@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.3 2007/10/09 19:19:08 martti Exp $
+$NetBSD: README.OpenBSD,v 1.4 2015/04/05 00:40:07 rodent Exp $
 
 Please read the general README file as well.
 
@@ -17,16 +17,11 @@ good idea to move them out of the way to avoid confusion, e.g.:
 	mv pkg_delete pkg_delete.orig
 	mv pkg_info pkg_info.orig
 
-3. An example /etc/mk.conf file will be placed in mk.conf.example file
-when you use the bootstrap script. OpenBSD's make program uses /etc/mk.conf
-as well. You can work around this by enclosing all the pkgsrc specific parts
-of the mk.conf file with:
-
-.ifdef BSD_PKG_MK
-# Pkgsrc stuff, e.g. insert mk.conf.example or similar here
-.else
-# OpenBSD stuff
-.endif
+3. The bootstrap script will create an example mk.conf file located in
+pkgsrc/bootstrap/work/mk.conf.example. It contains the settings you provided to 
+bootstrap. Copy it to your $sysconfdir directory. If $sysconfdir/mk.conf doesn't
+exist, the example is copied into place.
 
 bootstrap-pkgsrc has been tested on OpenBSD 3.2 and 3.5 (i386). Some testing has
-been done on 3.0 as well.
+been done on 3.0 as well and 5.6 (amd64). It has been used successfully on 5.5
+and 5.6 (sparc64).
