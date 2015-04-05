@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/05 23:17:05 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/d2to1/__init__.py
+${PYSITELIB}/d2to1/__init__.pyc
+${PYSITELIB}/d2to1/__init__.pyo
+${PYSITELIB}/d2to1/core.py
+${PYSITELIB}/d2to1/core.pyc
+${PYSITELIB}/d2to1/core.pyo
+${PYSITELIB}/d2to1/extern/__init__.py
+${PYSITELIB}/d2to1/extern/__init__.pyc
+${PYSITELIB}/d2to1/extern/__init__.pyo
+${PYSITELIB}/d2to1/extern/six.py
+${PYSITELIB}/d2to1/extern/six.pyc
+${PYSITELIB}/d2to1/extern/six.pyo
+${PYSITELIB}/d2to1/util.py
+${PYSITELIB}/d2to1/util.pyc
+${PYSITELIB}/d2to1/util.pyo
+${PYSITELIB}/d2to1/zestreleaser.py
+${PYSITELIB}/d2to1/zestreleaser.pyc
+${PYSITELIB}/d2to1/zestreleaser.pyo
