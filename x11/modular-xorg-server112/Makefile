@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/03 09:46:18 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/05 17:17:15 tnn Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
@@ -39,6 +39,12 @@ DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
 DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 
 .include "../../mk/bsd.prefs.mk"
+
+.if empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
+PKG_FAIL_REASON+=	"This is a legacy X.org server package."
+PKG_FAIL_REASON+=	"You must set USE_OLD_MODULAR_XORG_SERVER=yes in mk.conf"
+PKG_FAIL_REASON+=	"to make xf86-* drivers use the old ABI."
+.endif
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
@@ -101,7 +107,7 @@ CONFIGURE_ENV+=		ac_cv_header_sys_event_h=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
-BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0<10
+BUILDLINK_API_DEPENDS.MesaLib7+=	MesaLib7>=7.8.0<10
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=5.0
 BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
@@ -132,7 +138,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/MesaLib7/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
 BUILDLINK_DEPMETHOD.libpciaccess=	full
