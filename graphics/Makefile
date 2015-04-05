@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.700 2015/04/03 08:50:37 tnn Exp $
+# $NetBSD: Makefile,v 1.701 2015/04/05 17:21:40 tnn Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -15,6 +15,7 @@ SUBDIR+=	ImageViewer
 SUBDIR+=	Mesa
 SUBDIR+=	MesaDemos
 SUBDIR+=	MesaLib
+SUBDIR+=	MesaLib7
 SUBDIR+=	Ngraph
 SUBDIR+=	OpenRM
 SUBDIR+=	PanoTools
