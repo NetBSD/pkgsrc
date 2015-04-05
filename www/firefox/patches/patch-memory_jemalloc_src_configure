@@ -1,31 +1,13 @@
-$NetBSD: patch-memory_jemalloc_src_configure,v 1.1 2014/10/05 01:59:08 ryoon Exp $
+$NetBSD: patch-memory_jemalloc_src_configure,v 1.2 2015/04/05 12:54:12 ryoon Exp $
 
---- memory/jemalloc/src/configure.orig	2014-09-24 01:05:32.000000000 +0000
+--- memory/jemalloc/src/configure.orig	2015-03-27 02:20:26.000000000 +0000
 +++ memory/jemalloc/src/configure
-@@ -6344,7 +6344,7 @@ else
+@@ -6566,7 +6566,7 @@ else
+   LG_PAGE="detect"
  fi
  
- if test "x$have_sbrk" = "x1" ; then
--  if test "x$sbrk_deprecated" == "x1" ; then
-+  if test "x$sbrk_deprecated" = "x1" ; then
-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: Disabling dss allocation because sbrk is deprecated" >&5
- $as_echo "Disabling dss allocation because sbrk is deprecated" >&6; }
-     enable_dss="0"
-@@ -6945,7 +6945,7 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $je_cv_gcc_builtin_ffsl" >&5
- $as_echo "$je_cv_gcc_builtin_ffsl" >&6; }
- 
--if test "x${je_cv_gcc_builtin_ffsl}" == "xyes" ; then
-+if test "x${je_cv_gcc_builtin_ffsl}" = "xyes" ; then
-   $as_echo "#define JEMALLOC_INTERNAL_FFSL __builtin_ffsl" >>confdefs.h
- 
-   $as_echo "#define JEMALLOC_INTERNAL_FFS __builtin_ffs" >>confdefs.h
-@@ -6988,7 +6988,7 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $je_cv_function_ffsl" >&5
- $as_echo "$je_cv_function_ffsl" >&6; }
- 
--  if test "x${je_cv_function_ffsl}" == "xyes" ; then
-+  if test "x${je_cv_function_ffsl}" = "xyes" ; then
-     $as_echo "#define JEMALLOC_INTERNAL_FFSL ffsl" >>confdefs.h
- 
-     $as_echo "#define JEMALLOC_INTERNAL_FFS ffs" >>confdefs.h
+-if test "x$LG_PAGE" == "xdetect"; then
++if test "x$LG_PAGE" = "xdetect"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking LG_PAGE" >&5
+ $as_echo_n "checking LG_PAGE... " >&6; }
+ if ${je_cv_lg_page+:} false; then :
