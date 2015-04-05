@@ -1,0 +1,34 @@
+$NetBSD: distinfo,v 1.1 2015/04/05 17:01:37 tnn Exp $
+
+SHA1 (Mesa-7.11.2/MesaLib-7.11.2.tar.bz2) = 5981ac2de8438e5f4a1f3561f2044d700c5f0de9
+RMD160 (Mesa-7.11.2/MesaLib-7.11.2.tar.bz2) = 656ded1db6c1f6fdd15a3f2cdee1b895d393bcea
+Size (Mesa-7.11.2/MesaLib-7.11.2.tar.bz2) = 6257280 bytes
+SHA1 (patch-af) = da0bd412b81d4b826b6d9b4bb8d98ca1fe0006ba
+SHA1 (patch-bin_mklib) = 8c54bf5382541cab9d971b0e0e627035db1af468
+SHA1 (patch-configure.ac) = 0e3f9a1f21ba3a50161312683e9a0ad36f9f3e61
+SHA1 (patch-include_GL_gl.h) = a97ab309556c78d818d0b8bd867b5f2412c141b0
+SHA1 (patch-src_gallium_auxiliary_util_u__atomic.h) = 68ba9694aca506add2aa96a6892a7227481c2c11
+SHA1 (patch-src_gallium_include_pipe_p__config.h) = 34f4c2a033dd7a494dd3f51db407002a3388f84e
+SHA1 (patch-src_glsl_ir__constant__expression.cpp) = 281e281f51afed244b1a29b92942d572fc095124
+SHA1 (patch-src_glsl_ralloc.c) = 40885fac898058f8e83852a79ca50a74b61121ab
+SHA1 (patch-src_glu_sgi_glu.exports) = 66609d2ea59b02fc46b41311b0042fe4a2da517f
+SHA1 (patch-src_glu_sgi_libtess_sweep.c) = 6ee6d67b2178d23e1b7848d64eede6349f46ee96
+SHA1 (patch-src_glx_XF86dri.c) = b69b7cf5e0d617eca129f0d7f0b06c7603d00db0
+SHA1 (patch-src_mesa_drivers_dri_common_dri__util.h) = 53e63dcc6243b1872f4e4816b46e92910cf97edc
+SHA1 (patch-src_mesa_drivers_dri_common_mmio.h) = b6da48111fb2792b1c71eb7549d0f03adceec9f1
+SHA1 (patch-src_mesa_drivers_dri_i915_intel__batchbuffer.c) = fec8b1a9f6888e9a4225861ea5bda776ecc5f054
+SHA1 (patch-src_mesa_drivers_dri_i915_intel__tris.c) = 74a2ca9f9c865db9b6212087e442f65bb0621227
+SHA1 (patch-src_mesa_drivers_dri_i965_brw__draw.c) = ce12dc2d2391300d32776a06f5d0096448019c6b
+SHA1 (patch-src_mesa_drivers_dri_i965_brw__draw__upload.c) = 44162ca546072669b85093981728e635dda69e55
+SHA1 (patch-src_mesa_drivers_dri_i965_brw__misc__state.c) = d37f967dea0fc3bd32566d6a26fd434ca9564081
+SHA1 (patch-src_mesa_drivers_dri_i965_gen6__vs__state.c) = c918b5a91b339e49850d718c957d7e717c2dc130
+SHA1 (patch-src_mesa_drivers_dri_i965_gen6__wm__state.c) = a8ecf943525888b22ec99fe454b08f43c5d8a911
+SHA1 (patch-src_mesa_drivers_dri_i965_intel__batchbuffer.c) = 653c87e1123ce9a27b71221fff4119df34abe15f
+SHA1 (patch-src_mesa_drivers_dri_intel_intel__context.c) = 21d3c08a27817a6358b88101f889120869eebcce
+SHA1 (patch-src_mesa_drivers_dri_intel_intel__context.h) = 6d394e704636134768a6cb5a200ebcc7bc3f52ed
+SHA1 (patch-src_mesa_drivers_dri_mach64_mach64__context.h) = fe95c6610de4c1482c568463aca82f53ed0df900
+SHA1 (patch-src_mesa_drivers_x11_Makefile) = 17b72d2b74d89fbd8db05491cfcf253bb856b139
+SHA1 (patch-src_mesa_main_compiler.h) = b164781b541cb83b64597facbb7a7e21d8bdb686
+SHA1 (patch-src_mesa_main_context.c) = 6b6f1e3ad4ea189291fcf221d4b8bfbd650f8908
+SHA1 (patch-src_mesa_main_imports.c) = d0c50004c749e4c5c136ac2ed50a6989ca90065f
+SHA1 (patch-src_mesa_main_imports.h) = f5a96195b3a14294ca3389c9fe17a6076c46db8a

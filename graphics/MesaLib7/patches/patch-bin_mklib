@@ -1,0 +1,79 @@
+$NetBSD: patch-bin_mklib,v 1.1 2015/04/05 17:01:37 tnn Exp $
+
+Solaris ld seemingly has a hard time swallowing nested archives,
+so flatten them out as is done for linux.
+
+Also, to simplify PLIST processing, add versioned shared libraries
+for SunOS.
+
+--- bin/mklib.orig	Sat Oct 15 00:43:34 2011
++++ bin/mklib
+@@ -305,9 +305,15 @@ fi
+ #
+ # OK, make the library now
+ #
++if [ x${PATCH} = "x" ] ; then
++	VERSION="${MAJOR}.${MINOR}"
++else
++	VERSION="${MAJOR}.${MINOR}.${PATCH}"
++fi
++
+ case $ARCH in
+ 
+-    'Linux' | 'OpenBSD' | 'DragonFly' | 'GNU' | GNU/* | 'NetBSD')
++    'Linux' | 'OpenBSD' | 'DragonFly' | 'GNU' | GNU/* | 'NetBSD' | 'FreeBSD' | 'MirBSD')
+ 	# we assume gcc
+ 
+ 	if [ "x$LINK" = "x" ] ; then
+@@ -398,12 +404,6 @@ case $ARCH in
+                 OPTS=${ALTOPTS}
+             fi
+ 
+-	    if [ x${PATCH} = "x" ] ; then
+-		VERSION="${MAJOR}.${MINOR}"
+-	    else
+-		VERSION="${MAJOR}.${MINOR}.${PATCH}"
+-	    fi
+-
+             echo "mklib: Making" $ARCH "shared library: " ${LIBNAME}.so.${VERSION}
+ 
+             # rm any old libs
+@@ -426,7 +426,20 @@ case $ARCH in
+         if [ $STATIC = 1 ] ; then
+ 	    LIBNAME="lib${LIBNAME}.a"
+ 	    echo "mklib: Making SunOS static library: " ${LIBNAME}
+-	    FINAL_LIBS=`make_ar_static_lib -ruc 0 ${LIBNAME} ${OBJECTS}`
++#	    FINAL_LIBS=`make_ar_static_lib -ruc 0 ${LIBNAME} ${OBJECTS}`
++           OPTS="-rucs"
++            if [ "${ALTOPTS}" ] ; then
++                OPTS=${ALTOPTS}
++            fi
++
++            # expand .a into .o files
++            NEW_OBJECTS=`expand_archives ${LIBNAME}.obj $OBJECTS`
++
++            # make static lib
++            FINAL_LIBS=`make_ar_static_lib ${OPTS} 0 ${LIBNAME} ${NEW_OBJECTS}`
++
++            # remove temporary extracted .o files
++            rm -rf ${LIBNAME}.obj
+ 	else
+ 	    if [ $NOPREFIX = 0 ] ; then
+ 		LIBNAME="lib${LIBNAME}.so"
+@@ -517,10 +530,13 @@ case $ARCH in
+ 		${LINK} ${OPTS} ${LDFLAGS} -o ${LIBNAME} ${OBJECTS} ${DEPS}
+ 		FINAL_LIBS="${LIBNAME}"
+ 	    else
+-		rm -f ${LIBNAME}.${MAJOR} ${LIBNAME}
+-		${LINK} ${OPTS} ${LDFLAGS} -o ${LIBNAME}.${MAJOR} -h ${LIBNAME}.${MAJOR} ${OBJECTS} ${DEPS}
++        # rm any old libs
++		rm -f ${LIBNAME}.${VERSION} ${LIBNAME}.${MAJOR} ${LIBNAME}
++		${LINK} ${OPTS} ${LDFLAGS} -o ${LIBNAME}.${VERSION} -h ${LIBNAME}.${VERSION} ${OBJECTS} ${DEPS}
++
++        ln -s ${LIBNAME}.${VERSION} ${LIBNAME}.${MAJOR}
+ 		ln -s ${LIBNAME}.${MAJOR} ${LIBNAME}
+-		FINAL_LIBS="${LIBNAME}.${MAJOR} ${LIBNAME}"
++		FINAL_LIBS="${LIBNAME}.${VERSION} ${LIBNAME}.${MAJOR} ${LIBNAME}"
+ 	    fi
+ 	fi
+ 	;;
