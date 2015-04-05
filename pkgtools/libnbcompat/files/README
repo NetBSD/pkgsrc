@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.20 2014/07/25 13:26:24 jperkin Exp $
+$NetBSD: README,v 1.21 2015/04/05 03:11:00 rodent Exp $
 
  0 Introduction
  ==============
@@ -61,6 +61,7 @@ on the following operating systems:
 	IRIX-6.5/mipseb			<jschauma@NetBSD.org>
 	Linux/i386			<schwarz@NetBSD.org>
 	RHEL4 Linux 2.6/i386		<jschauma@NetBSD.org>
+	Tru64 UNIX 5.1B-2/alpha		<rodent@NetBSD.org>
 
 libnbcompat-20070507 has been tested to build and install correctly
 on the following operating systems:
@@ -90,11 +91,19 @@ on the following operating systems:
 	OpenBSD/amd64 5.3		<ryoon@NetBSD.org>
 	DragonFly/amd64 3.4.1		<ryoon@NetBSD.org>
 	Debian GNU/Linux/amd64 7.1	<ryoon@NetBSD.org>
+	CentOS Linux/amd64 6.5		<rodent@NetBSD.org>
+	OpenBSD/sparc64 5.5		<rodent@NetBSD.org>
 
 libnbcompat-20140725 has been tested to build and install correctly
 on the following operating systems:
 
 	Ubuntu GNU/Linux/amd64 12.04	<jperkin@joyent.com>
+	CentOS Linux/amd64 6.5		<rodent@NetBSD.org>
+	CentOS Linux/amd64 6.6		<rodent@NetBSD.org>
+	CentOS Linux/amd64 7.0		<rodent@NetBSD.org>
+	OpenBSD/sparc64 5.5		<rodent@NetBSD.org>
+	OpenBSD/sparc64 5.6		<rodent@NetBSD.org>
+	FreeBSD/amd64 10.1		<rodent@NetBSD.org>
 
  3 Usage
  =======
