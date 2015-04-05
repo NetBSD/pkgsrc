@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1652 2015/04/05 14:17:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1653 2015/04/05 14:20:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2265,3 +2265,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Warnings to 0.021 [wen 2015-04-05]
 	Updated devel/py-click to 4.0 [wiz 2015-04-05]
 	Updated devel/py-setuptools to 15.0 [wiz 2015-04-05]
+	Updated devel/py-requests-toolbelt to 0.4.0 [wiz 2015-04-05]
