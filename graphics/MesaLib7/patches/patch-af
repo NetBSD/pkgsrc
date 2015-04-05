@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2015/04/05 17:01:37 tnn Exp $
+
+--- src/mesa/drivers/dri/sis/sis_context.h.orig	2009-01-22 17:38:34.000000000 +0000
++++ src/mesa/drivers/dri/sis/sis_context.h
+@@ -404,7 +404,16 @@ struct sis_context
+ #define MMIO_WMB()	__asm __volatile("" : : : "memory")
+ #elif defined(__ia64__)
+ #define MMIO_WMB()	__asm __volatile("mf" : : : "memory")
++#elif defined(__sparc64__)
++#define MMIO_WMB()	__asm __volatile("membar #Sync" : : : "memory")
++#elif defined(HAVE_NETBSD_ATOMIC_H)
++#include <sys/atomic.h>
++#define MMIO_WMB()     membar_sync()   /* XXX is this adequate? */
++#elif defined(__sync_synchronize)      /* gcc built-in */
++#define MMIO_WMB()     __sync_synchronize()
+ #else
++#warning Please define MMIO_WMB for this platform
++#define MMIO_WMB()
+ #error platform needs WMB
+ #endif
+ 
