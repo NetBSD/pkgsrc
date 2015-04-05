@@ -1,16 +1,11 @@
-$NetBSD: patch-gfx_layers_basic_BasicCompositor.cpp,v 1.1 2015/03/20 10:13:57 martin Exp $
+$NetBSD: patch-gfx_layers_basic_BasicCompositor.cpp,v 1.2 2015/04/05 12:54:11 ryoon Exp $
 
 Part of the patch in https://bugzilla.mozilla.org/show_bug.cgi?id=1105087
 
 diff -git a/gfx/layers/basic/BasicCompositor.cpp b/gfx/layers/basic/BasicCompositor.cpp
---- gfx/layers/basic/BasicCompositor.cpp
+--- gfx/layers/basic/BasicCompositor.cpp.orig	2015-03-27 02:20:33.000000000 +0000
 +++ gfx/layers/basic/BasicCompositor.cpp
-@@ -12,18 +12,23 @@
- #include "gfx2DGlue.h"
- #include "mozilla/gfx/2D.h"
- #include "mozilla/gfx/Helpers.h"
- #include "gfxUtils.h"
- #include "YCbCrUtils.h"
+@@ -17,8 +17,13 @@
  #include <algorithm>
  #include "ImageContainer.h"
  #include "gfxPrefs.h"
@@ -24,17 +19,7 @@ diff -git a/gfx/layers/basic/BasicCompositor.cpp b/gfx/layers/basic/BasicComposi
  
  namespace mozilla {
  using namespace mozilla::gfx;
- 
- namespace layers {
- 
- class DataTextureSourceBasic : public DataTextureSource
-                              , public TextureSourceBasic
-@@ -163,16 +168,17 @@ DrawSurfaceWithTextureCoords(DrawTarget 
-   // Only use REPEAT if aTextureCoords is outside (0, 0, 1, 1).
-   gfx::Rect unitRect(0, 0, 1, 1);
-   ExtendMode mode = unitRect.Contains(aTextureCoords) ? ExtendMode::CLAMP : ExtendMode::REPEAT;
- 
-   FillRectWithMask(aDest, aDestRect, aSource, aFilter, DrawOptions(aOpacity),
+@@ -177,6 +182,7 @@ DrawSurfaceWithTextureCoords(DrawTarget 
                     mode, aMask, aMaskTransform, &matrix);
  }
  
@@ -42,17 +27,7 @@ diff -git a/gfx/layers/basic/BasicCompositor.cpp b/gfx/layers/basic/BasicComposi
  static SkMatrix
  Matrix3DToSkia(const gfx3DMatrix& aMatrix)
  {
-   SkMatrix transform;
-   transform.setAll(aMatrix._11,
-                    aMatrix._21,
-                    aMatrix._41,
-                    aMatrix._12,
-@@ -181,17 +187,17 @@ Matrix3DToSkia(const gfx3DMatrix& aMatri
-                    aMatrix._14,
-                    aMatrix._24,
-                    aMatrix._44);
- 
-   return transform;
+@@ -195,7 +201,7 @@ Matrix3DToSkia(const gfx3DMatrix& aMatri
  }
  
  static void
@@ -61,17 +36,7 @@ diff -git a/gfx/layers/basic/BasicCompositor.cpp b/gfx/layers/basic/BasicComposi
                DataSourceSurface* aSource,
                const gfx3DMatrix& aTransform,
                const Point& aDestOffset)
- {
-   if (aTransform.IsSingular()) {
-     return;
-   }
- 
-@@ -220,16 +226,90 @@ SkiaTransform(DataSourceSurface* aDest,
- 
-   SkPaint paint;
-   paint.setXfermodeMode(SkXfermode::kSrc_Mode);
-   paint.setAntiAlias(true);
-   paint.setFilterLevel(SkPaint::kLow_FilterLevel);
+@@ -234,6 +240,80 @@ SkiaTransform(DataSourceSurface* aDest,
    SkRect destRect = SkRect::MakeXYWH(0, 0, srcSize.width, srcSize.height);
    destCanvas.drawBitmapRectToRect(src, nullptr, destRect, &paint);
  }
@@ -152,17 +117,7 @@ diff -git a/gfx/layers/basic/BasicCompositor.cpp b/gfx/layers/basic/BasicComposi
  
  static inline IntRect
  RoundOut(Rect r)
- {
-   r.RoundOut();
-   return IntRect(r.x, r.y, r.width, r.height);
- }
- 
-@@ -364,17 +444,17 @@ BasicCompositor::DrawQuad(const gfx::Rec
-     RefPtr<SourceSurface> snapshot = dest->Snapshot();
-     RefPtr<DataSourceSurface> source = snapshot->GetDataSurface();
-     RefPtr<DataSourceSurface> temp =
-       Factory::CreateDataSourceSurface(RoundOut(transformBounds).Size(), SurfaceFormat::B8G8R8A8, true);
-     if (NS_WARN_IF(!temp)) {
+@@ -378,7 +458,7 @@ BasicCompositor::DrawQuad(const gfx::Rec
        return;
      }
  
@@ -171,8 +126,3 @@ diff -git a/gfx/layers/basic/BasicCompositor.cpp b/gfx/layers/basic/BasicComposi
  
      transformBounds.MoveTo(0, 0);
      buffer->DrawSurface(temp, transformBounds, transformBounds);
-   }
- 
-   buffer->PopClip();
- }
- 
