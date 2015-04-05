@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/03/17 18:29:17 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/05 06:31:51 adam Exp $
 
-DISTNAME=	libaacs-0.8.0
+DISTNAME=	libaacs-0.8.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libaacs/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
