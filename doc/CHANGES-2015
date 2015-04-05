@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1650 2015/04/05 13:59:47 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1651 2015/04/05 14:17:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2263,3 +2263,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-signatures to 0.11 [wen 2015-04-05]
 	Updated devel/p5-CPAN-Meta-Check to 0.011 [wen 2015-04-05]
 	Updated devel/p5-Test-Warnings to 0.021 [wen 2015-04-05]
+	Updated devel/py-click to 4.0 [wiz 2015-04-05]
