@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1642 2015/04/05 12:52:25 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1643 2015/04/05 12:54:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2254,3 +2254,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/gmplayer to 1.1.1nb24 [dsainty 2015-04-05]
 	Updated security/zoneminder to 1.28.1 [dsainty 2015-04-05]
 	Updated devel/nss to 3.18 [ryoon 2015-04-05]
+	Updated www/firefox to 37.0 [ryoon 2015-04-05]
