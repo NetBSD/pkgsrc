@@ -1,24 +1,22 @@
-$NetBSD: distinfo,v 1.4 2014/05/20 11:30:27 dsainty Exp $
+$NetBSD: distinfo,v 1.5 2015/04/05 08:51:08 dsainty Exp $
 
-SHA1 (ZoneMinder-1.25.0.tar.gz) = a93a976a5cd82f1e197f4d7bd626d3f0387c4231
-RMD160 (ZoneMinder-1.25.0.tar.gz) = 32a4f503770103e55bfe592864c1cab82e7395a6
-Size (ZoneMinder-1.25.0.tar.gz) = 1119091 bytes
-SHA1 (patch-Makefile_am) = 09b3ba7f9c292ef672506219be66f059290b6405
-SHA1 (patch-configure_ac) = 87410ce8bc8fe42e08bf0e32e40b59619f7db90d
-SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 9aa69b922c323e2ba34e37de7923e2ee97430f7f
-SHA1 (patch-scripts_zm_in) = 91809c9a179a0135c432a0ffad7c2d2ddfd512de
-SHA1 (patch-src_Makefile_am) = 84999df8b7c80b049e2dd9cb308e12f50ed8285f
-SHA1 (patch-src_zm__thread.h) = 8313d3294592fd08c775f612d70cc935e4f64d9a
-SHA1 (patch-src_zm__timer.h) = 38dae4f8573c7ae6d459adddf05260ce4b6e2088
+SHA1 (ZoneMinder-1.28.1.tar.gz) = 3e173ae1aac529b60d79a5fc668c107f0679d0a2
+RMD160 (ZoneMinder-1.28.1.tar.gz) = b3cc305656cb5b73d4ac0e21fe937c237467cdd1
+Size (ZoneMinder-1.28.1.tar.gz) = 3864811 bytes
+SHA1 (patch-Makefile_am) = ae6f2f3c6825a44be019ad5dc0b45929c85d4ba9
+SHA1 (patch-configure_ac) = 2370065080bb99a76d2581fa4538e5c70f7ec739
+SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 841d897662958698a4dfcb95dd5bc43bb5fed568
+SHA1 (patch-scripts_zm_in) = 8f59085bb9293afa7aeb268000c75988e5371c66
+SHA1 (patch-src_Makefile_am) = 0f6571c9d5a3e688544f93d687d266e1b71f0f43
+SHA1 (patch-src_zm__thread.h) = fd4fc0a5d8003a29777ce57fe928901ca50b50f7
+SHA1 (patch-src_zm__timer.h) = 7371f7dbe42f04d031276eda3b2e94bd8f24cf68
 SHA1 (patch-src_zm__utils.cpp) = f6a109296146822014d57d39094390adcc5df760
-SHA1 (patch-src_zm__utils.h) = 361a69dfd4e2c3e46cf6fea3e1470df2e5cfa446
+SHA1 (patch-src_zm__utils.h) = dbda8ba527f08b0337f6d2afa155ce4adc733e1e
 SHA1 (patch-src_zm_comms_cpp) = d40932a3d0ae4375a649f200d973995d56aa71c7
 SHA1 (patch-src_zm_comms_h) = baeb73040ff3ba862f23ad6301de7daba182456e
 SHA1 (patch-src_zm_logger_cpp) = 3b0373e9d648d25ef4e3e09429199f654f876ccb
-SHA1 (patch-src_zm_remote_camera_h) = c86b6267c295caba71ca72df02c24e6b6cba981f
-SHA1 (patch-src_zm_signal_h) = 226e96d4771921a8ad23fbe130a80a43550062d3
+SHA1 (patch-src_zm_remote_camera_h) = 0d4bd7dae0188df7e463586250ac2ed530230f3d
 SHA1 (patch-src_zm_thread_cpp) = c5f64697c3024c6c382f9ae2c5dbe9c21b529b6e
 SHA1 (patch-src_zmc_cpp) = d1046ddfad3a88bdd30501237834ec9e9fbc4c83
-SHA1 (patch-src_zmf_cpp) = 77dafa6ef6e9756b975e45b2ca41d1be85f9bf2c
 SHA1 (patch-web_Makefile.am) = ddb3815fa1b1799658034789302c8d3840f2b894
 SHA1 (patch-web_ajax_stream_php) = e8f811e63bedec03345b74db72c3d8014b3cc7f6
