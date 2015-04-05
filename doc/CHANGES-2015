@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1659 2015/04/05 21:14:20 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1660 2015/04/05 21:39:08 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2272,3 +2272,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added graphics/MesaLib7 version 7.11.2 [tnn 2015-04-05]
 	Updated editors/emacs-packages to 0.10 [jnemeth 2015-04-05]
 	Updated devel/py-filechunkio to 1.6 [hiramatsu 2015-04-05]
+	Updated net/py-boto to 2.37.0 [hiramatsu 2015-04-05]
