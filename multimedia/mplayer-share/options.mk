@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.51 2014/10/03 15:26:14 wiz Exp $
+# $NetBSD: options.mk,v 1.52 2015/04/05 08:27:08 dsainty Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -24,7 +24,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 # Options supported by both mplayer* or mencoder*.
 
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
-#PKG_SUPPORTED_OPTIONS+= dvdread dvdnav
+PKG_SUPPORTED_OPTIONS+= dvdread dvdnav
 .if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS+=	oss
 .endif
