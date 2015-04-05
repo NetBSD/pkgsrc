@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2014/10/05 16:41:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.47 2015/04/05 13:02:15 joerg Exp $
 #
 # used by audio/xfce4-mixer/Makefile
 # used by audio/xfce4-xmms-plugin/Makefile
@@ -72,9 +72,3 @@ XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-
-## # Use the latest GNU tar when the native tar is buggy
-## .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)
-## BUILD_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
-## GTAR=			${PREFIX}/bin/gtar
-## .endif
