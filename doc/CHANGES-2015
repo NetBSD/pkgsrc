@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1648 2015/04/05 13:25:31 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1649 2015/04/05 13:39:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/xulrunner31 to 31.6.0 [ryoon 2015-04-05]
 	Updated devel/p5-ShipIt to 0.60 [wen 2015-04-05]
 	Updated devel/p5-signatures to 0.11 [wen 2015-04-05]
+	Updated devel/p5-CPAN-Meta-Check to 0.011 [wen 2015-04-05]
