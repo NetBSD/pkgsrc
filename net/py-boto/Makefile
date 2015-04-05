@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2014/06/09 00:49:33 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2015/04/05 21:38:32 hiramatsu Exp $
 
-DISTNAME=	boto-2.29.1
+DISTNAME=	boto-2.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python www
 MASTER_SITES=	https://pypi.python.org/packages/source/b/boto/
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-filechunkio-[0-9]*:../../devel/py-filechunkio
 REPLACE_PYTHON+=	bin/* boto/pyami/launch_ami.py boto/services/bs.py
 REPLACE_PYTHON+=	boto/services/result.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-filechunkio
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
