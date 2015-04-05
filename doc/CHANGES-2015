@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1661 2015/04/05 22:08:25 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1662 2015/04/05 23:17:42 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-filechunkio to 1.6 [hiramatsu 2015-04-05]
 	Updated net/py-boto to 2.37.0 [hiramatsu 2015-04-05]
 	Updated net/py-dropbox to 2.2.0 [hiramatsu 2015-04-05]
+	Added devel/py-d2to1 version 0.2.11 [rodent 2015-04-05]
