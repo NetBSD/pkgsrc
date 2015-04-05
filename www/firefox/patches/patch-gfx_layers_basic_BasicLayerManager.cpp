@@ -1,17 +1,12 @@
-$NetBSD: patch-gfx_layers_basic_BasicLayerManager.cpp,v 1.1 2015/03/20 10:13:57 martin Exp $
+$NetBSD: patch-gfx_layers_basic_BasicLayerManager.cpp,v 1.2 2015/04/05 12:54:11 ryoon Exp $
 
 Part of the patch in https://bugzilla.mozilla.org/show_bug.cgi?id=1105087
 (sligthly modified to fix a compile error: PixmanTransform -> DrawTransform)
 
 diff --git a/gfx/layers/basic/BasicLayerManager.cpp b/gfx/layers/basic/BasicLayerManager.cpp
---- gfx/layers/basic/BasicLayerManager.cpp.orig
+--- gfx/layers/basic/BasicLayerManager.cpp.orig	2015-03-27 02:20:33.000000000 +0000
 +++ gfx/layers/basic/BasicLayerManager.cpp
-@@ -41,18 +41,23 @@
- #include "nsAutoPtr.h"                  // for nsRefPtr
- #include "nsCOMPtr.h"                   // for already_AddRefed
- #include "nsDebug.h"                    // for NS_ASSERTION, etc
- #include "nsISupportsImpl.h"            // for gfxContext::Release, etc
- #include "nsPoint.h"                    // for nsIntPoint
+@@ -46,8 +46,13 @@
  #include "nsRect.h"                     // for nsIntRect
  #include "nsRegion.h"                   // for nsIntRegion, etc
  #include "nsTArray.h"                   // for nsAutoTArray
@@ -25,17 +20,7 @@ diff --git a/gfx/layers/basic/BasicLayerManager.cpp b/gfx/layers/basic/BasicLaye
  class nsIWidget;
  
  namespace mozilla {
- namespace layers {
- 
- using namespace mozilla::gfx;
- 
- /**
-@@ -596,16 +601,17 @@ void
- BasicLayerManager::SetRoot(Layer* aLayer)
- {
-   NS_ASSERTION(aLayer, "Root can't be null");
-   NS_ASSERTION(aLayer->Manager() == this, "Wrong manager");
-   NS_ASSERTION(InConstruction(), "Only allowed in construction phase");
+@@ -606,6 +611,7 @@ BasicLayerManager::SetRoot(Layer* aLayer
    mRoot = aLayer;
  }
  
@@ -43,17 +28,7 @@ diff --git a/gfx/layers/basic/BasicLayerManager.cpp b/gfx/layers/basic/BasicLaye
  static SkMatrix
  BasicLayerManager_Matrix3DToSkia(const gfx3DMatrix& aMatrix)
  {
-   SkMatrix transform;
-   transform.setAll(aMatrix._11,
-                    aMatrix._21,
-                    aMatrix._41,
-                    aMatrix._12,
-@@ -614,17 +620,17 @@ BasicLayerManager_Matrix3DToSkia(const g
-                    aMatrix._14,
-                    aMatrix._24,
-                    aMatrix._44);
- 
-   return transform;
+@@ -624,7 +630,7 @@ BasicLayerManager_Matrix3DToSkia(const g
  }
  
  static void
@@ -62,17 +37,7 @@ diff --git a/gfx/layers/basic/BasicLayerManager.cpp b/gfx/layers/basic/BasicLaye
                RefPtr<DataSourceSurface> aSrc,
                const gfx3DMatrix& aTransform,
                gfxPoint aDestOffset)
- {
-   if (aTransform.IsSingular()) {
-     return;
-   }
- 
-@@ -653,16 +659,89 @@ SkiaTransform(const gfxImageSurface* aDe
- 
-   SkPaint paint;
-   paint.setXfermodeMode(SkXfermode::kSrc_Mode);
-   paint.setAntiAlias(true);
-   paint.setFilterLevel(SkPaint::kLow_FilterLevel);
+@@ -663,6 +669,79 @@ SkiaTransform(const gfxImageSurface* aDe
    SkRect destRect = SkRect::MakeXYWH(0, 0, srcSize.width, srcSize.height);
    destCanvas.drawBitmapRectToRect(src, nullptr, destRect, &paint);
  }
@@ -152,17 +117,7 @@ diff --git a/gfx/layers/basic/BasicLayerManager.cpp b/gfx/layers/basic/BasicLaye
  
  /**
   * Transform a surface using a gfx3DMatrix and blit to the destination if
-  * it is efficient to do so.
-  *
-  * @param aSource       Source surface.
-  * @param aDest         Desintation context.
-  * @param aBounds       Area represented by aSource.
-@@ -694,17 +773,17 @@ Transform3D(RefPtr<SourceSurface> aSourc
-                                                                        aDestRect.height),
-                                                             gfxImageFormat::ARGB32);
-   gfxPoint offset = aDestRect.TopLeft();
- 
-   // Include a translation to the correct origin.
+@@ -704,7 +783,7 @@ Transform3D(RefPtr<SourceSurface> aSourc
    gfx3DMatrix translation = gfx3DMatrix::Translation(aBounds.x, aBounds.y, 0);
  
    // Transform the content and offset it such that the content begins at the origin.
@@ -171,8 +126,3 @@ diff --git a/gfx/layers/basic/BasicLayerManager.cpp b/gfx/layers/basic/BasicLaye
  
    // If we haven't actually drawn to aDest then return our temporary image so
    // that the caller can do this.
-   return destImage.forget();
- }
- 
- void
- BasicLayerManager::PaintSelfOrChildren(PaintLayerContext& aPaintContext,
