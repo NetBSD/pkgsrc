@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.35 2014/03/06 07:34:20 uebayasi Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.36 2015/04/05 00:22:44 rodent Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -11,6 +11,8 @@ TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/bin/chgrp
 .elif exists(/usr/bin/chgrp)
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
+.elif exists(/usr/sbin/chgrp)
+TOOLS_PLATFORM.chgrp?=		/usr/sbin/chgrp
 .endif
 TOOLS_PLATFORM.chmod?=		/bin/chmod
 .if exists(/sbin/chown)
@@ -65,7 +67,11 @@ TOOLS_PLATFORM.nice?=		/usr/bin/nice
 .if exists(/usr/bin/nroff)
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 .endif
+.if exists(/usr/bin/openssl)
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
+.elif exists(/usr/sbin/openssl)
+TOOLS_PLATFORM.openssl?=	/usr/sbin/openssl
+.endif
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
@@ -89,7 +95,9 @@ TOOLS_PLATFORM.tar?=		/bin/tar
 .elif exists(/usr/bin/tar)
 TOOLS_PLATFORM.tar?=		/usr/bin/tar
 .endif
+.if exists(/usr/bin/tbl)
 TOOLS_PLATFORM.tbl?=		/usr/bin/tbl
+.endif
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
