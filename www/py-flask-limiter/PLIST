@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/02 23:26:50 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/05 23:23:13 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_limiter/__init__.py
 ${PYSITELIB}/flask_limiter/__init__.pyc

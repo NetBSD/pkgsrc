@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/02 23:26:50 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/05 23:23:13 rodent Exp $
 #
 
 DISTNAME=	Flask-Limiter-0.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-Limiter/
 
