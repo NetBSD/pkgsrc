@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/03/04 19:34:27 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/04/06 17:25:05 tnn Exp $
 
 SHA1 (llvm-3.4.2.src.tar.gz) = c5287384d0b95ecb0fd7f024be2cdfb60cd94bc9
 RMD160 (llvm-3.4.2.src.tar.gz) = 5fab44850977afccee34b21c6d339bc8dea21fce
 Size (llvm-3.4.2.src.tar.gz) = 15938155 bytes
+SHA1 (patch-tools_llvm-shlib_Makefile) = 90d0e31e486733b0d863b4b6018461ff4f7cff53
 SHA1 (patch-unittests_ExecutionEngine_MCJIT_Makefile) = 468ce096e5f312638923541ecc773435b3244407
