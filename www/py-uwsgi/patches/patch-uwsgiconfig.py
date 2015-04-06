@@ -1,10 +1,10 @@
-$NetBSD: patch-uwsgiconfig.py,v 1.9 2014/02/17 01:01:12 rodent Exp $
+$NetBSD: patch-uwsgiconfig.py,v 1.10 2015/04/06 02:35:54 rodent Exp $
 
 Disable inclusion of certain packages by default. Use options framework instead.
 
---- uwsgiconfig.py.orig	2013-12-30 08:44:59.000000000 +0000
+--- uwsgiconfig.py.orig	2015-03-17 07:34:34.000000000 +0000
 +++ uwsgiconfig.py
-@@ -68,6 +68,7 @@ report = {
+@@ -73,6 +73,7 @@ report = {
      'timer': False,
      'filemonitor': False,
      'pcre': False,
@@ -12,7 +12,7 @@ Disable inclusion of certain packages by default. Use options framework instead.
      'routing': False,
      'capabilities': False,
      'yaml': False,
-@@ -816,6 +817,8 @@ class uConf(object):
+@@ -851,6 +852,8 @@ class uConf(object):
          if locking_mode == 'auto':
              if uwsgi_os == 'Linux' or uwsgi_os == 'SunOS':
                  locking_mode = 'pthread_mutex'
@@ -21,7 +21,7 @@ Disable inclusion of certain packages by default. Use options framework instead.
              # FreeBSD umtx is still not ready for process shared locking
              # starting from FreeBSD 9 posix semaphores can be shared between processes
              elif uwsgi_os in ('FreeBSD', 'GNU/kFreeBSD'):
-@@ -1019,10 +1022,11 @@ class uConf(object):
+@@ -1054,10 +1057,11 @@ class uConf(object):
              self.libs.append('-lcap')
              report['capabilities'] = True
  

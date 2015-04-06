@@ -1,10 +1,10 @@
-$NetBSD: patch-uwsgi.h,v 1.5 2014/01/23 14:47:05 wiz Exp $
+$NetBSD: patch-uwsgi.h,v 1.6 2015/04/06 02:35:54 rodent Exp $
 
 Avoid clash with sys/user.h inclusion in logging.c on DragonFly BSD.
 
---- uwsgi.h.orig	2013-12-30 08:44:59.000000000 +0000
+--- uwsgi.h.orig	2015-03-17 07:34:34.000000000 +0000
 +++ uwsgi.h
-@@ -323,6 +323,10 @@ extern int pivot_root(const char *new_ro
+@@ -327,6 +327,10 @@ extern int pivot_root(const char *new_ro
  #elif defined(__CYGWIN__)
  #elif defined(__HURD__)
  #else
