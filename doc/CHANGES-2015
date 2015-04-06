@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1664 2015/04/06 01:52:25 dsainty Exp $
+$NetBSD: CHANGES-2015,v 1.1665 2015/04/06 02:27:53 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2277,3 +2277,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-d2to1 version 0.2.11 [rodent 2015-04-05]
 	Updated www/py-flask-limiter to 0.7.9nb1 [rodent 2015-04-05]
 	Updated net/get-flash-videos to 0.0.20150331 [dsainty 2015-04-06]
+	Updated net/3proxy to 0.7.1.2 [rodent 2015-04-06]
