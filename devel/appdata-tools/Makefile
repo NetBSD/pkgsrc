@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/10/07 16:47:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/06 08:17:24 adam Exp $
 
 DISTNAME=	appdata_tools_0_1_7
 PKGNAME=	${DISTNAME:S/appdata_tools_/appdata-tools-/:S/_/./g}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/hughsie/appdata-tools/archive/
 
