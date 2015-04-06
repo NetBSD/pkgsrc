@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/03/29 22:25:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/06 04:00:34 rodent Exp $
 #
 
 DISTNAME=		polarssl-1.3.9-gpl
@@ -19,6 +19,7 @@ USE_CMAKE=		yes
 REPLACE_PERL=		tests/scripts/*.pl
 USE_LANGUAGES=		c
 TEST_TARGET=		check
+GCC_REQD=		4.4
 
 .include "options.mk"
 
