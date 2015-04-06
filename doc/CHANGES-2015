@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1666 2015/04/06 08:18:34 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1667 2015/04/06 10:51:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/get-flash-videos to 0.0.20150331 [dsainty 2015-04-06]
 	Updated net/3proxy to 0.7.1.2 [rodent 2015-04-06]
 	Updated textproc/icu to 55.1 [adam 2015-04-06]
+	Updated www/firefox to 37.0.1 [tron 2015-04-06]
