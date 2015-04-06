@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1671 2015/04/06 15:41:44 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1672 2015/04/06 20:59:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ImageMagick to 6.9.1.1 [he 2015-04-06]
 	Updated www/mediawiki to 1.24.2 [wen 2015-04-06]
 	Updated www/p5-Plack to 1.0034 [wen 2015-04-06]
+	Updated multimedia/x265 to 1.6 [adam 2015-04-06]
