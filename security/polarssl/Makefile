@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/06 04:00:34 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/06 04:18:52 rodent Exp $
 #
 
 DISTNAME=		polarssl-1.3.9-gpl
@@ -32,5 +32,4 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libpolarssl.a
 
 .include "../../mk/pthread.buildlink3.mk"
-#.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
