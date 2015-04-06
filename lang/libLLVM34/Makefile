@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/03/22 16:07:59 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/06 17:25:05 tnn Exp $
 
 DISTNAME=	llvm-${PKGVERSION_NOREV}.src
 PKGNAME=	libLLVM34-3.4.2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 
@@ -25,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-bindings
 CONFIGURE_ARGS+=	--disable-timestamps
 CONFIGURE_ARGS+=	--enable-optimized
 CONFIGURE_ARGS+=	--enable-shared
-MAKE_ENV+=		SHARED_LIBRARY=1
+MAKE_ENV+=		ENABLE_PIC=1
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/Release/lib
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm \
@@ -73,8 +74,6 @@ PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST_SUBST+=		SOEXT="so"
 .endif
-
-BUILDLINK_TRANSFORM+=	l:LLVMMipsDesc:LLVMMipsAsmPrinter:LLVMMipsDesc
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
