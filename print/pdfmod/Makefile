@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/10/07 16:47:34 adam Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/06 08:17:36 adam Exp $
 
 DISTNAME=	pdfmod-0.9.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pdfmod/0.9/}
 EXTRACT_SUFX=	.tar.bz2

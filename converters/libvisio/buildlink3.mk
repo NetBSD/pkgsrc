@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/02/02 11:34:39 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2015/04/06 08:17:13 adam Exp $
 
 BUILDLINK_TREE+=	libvisio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libvisio
 LIBVISIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvisio+=	libvisio>=0.0.15
-BUILDLINK_ABI_DEPENDS.libvisio+=	libvisio>=0.1.0
+BUILDLINK_ABI_DEPENDS.libvisio+=	libvisio>=0.1.1nb3
 BUILDLINK_PKGSRCDIR.libvisio?=		../../converters/libvisio
 
 .include "../../converters/librevenge/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2014/10/07 16:47:11 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2015/04/06 08:17:14 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
@@ -9,7 +9,7 @@ BUILDLINK_TREE+=	subversion-base
 SUBVERSION_BASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.subversion-base+=	subversion-base>=1.5.2nb1
-BUILDLINK_ABI_DEPENDS.subversion-base+=	subversion-base>=1.8.10
+BUILDLINK_ABI_DEPENDS.subversion-base+=	subversion-base>=1.8.13nb1
 BUILDLINK_PKGSRCDIR.subversion-base?=	../../devel/subversion-base
 
 BUILDLINK_FILES.subversion-base+=	bin/svn-config
