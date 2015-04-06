@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2014/10/07 16:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.18 2015/04/06 08:17:37 adam Exp $
 #
 
 PKGNAME=		libpreludedb-sqlite3-${VERSION}
-PKGREVISION=		14
+PKGREVISION=		15
 COMMENT=		Sqlite3 plugin for LibPreludeDB
 
 .include "../../security/libpreludedb/Makefile.common"

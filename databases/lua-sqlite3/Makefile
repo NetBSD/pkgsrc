@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/10/19 22:27:43 alnsn Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/06 08:17:23 adam Exp $
 
 DISTNAME=	lua-sqlite3-0.4.1
 PKGNAME=	${LUA_PKGPREFIX}-sqlite3-0.4.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	http://www.mroth.net/lua-sqlite3/
 EXTRACT_SUFX=	.tar.bz2

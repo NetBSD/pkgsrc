@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2014/10/07 16:47:17 adam Exp $
+# $NetBSD: Makefile,v 1.26 2015/04/06 08:17:20 adam Exp $
 #
 
 DISTNAME=	cdplayer-0.5.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 EXTRACT_SUFX=	.tar.bz2

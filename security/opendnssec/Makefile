@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2014/12/04 15:58:21 he Exp $
+# $NetBSD: Makefile,v 1.50 2015/04/06 08:17:37 adam Exp $
 #
 
 DISTNAME=	opendnssec-1.4.7
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
