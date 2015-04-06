@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14299 2015/04/05 14:23:58 wiz Exp $
+$NetBSD: TODO,v 1.14300 2015/04/06 02:27:54 rodent Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,6 @@ Suggested package updates
 =========================
 For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 
-	o 3proxy-0.7.1.1
 	o CSP-0.34
 	o Canna-3.7p3
 	o Chinput-3.0.1
