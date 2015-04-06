@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/03/04 19:33:09 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/06 17:25:05 tnn Exp $
 
 PKGNAME=		${DISTNAME:S/clang/libLLVM/}
+PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--enable-shared
-MAKE_ENV+=		SHARED_LIBRARY=1
+MAKE_ENV+=		ENABLE_PIC=1
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/Release/lib
 
 BUILD_TARGET=		libs-only
@@ -31,10 +32,5 @@ SUBST_SED.fix-cnf+=	-e 's|"-L" << ActiveLibDir|"${COMPILER_RPATH_FLAG}" << Activ
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/libLLVM
 
 INSTALLATION_DIRS+=	lib/libLLVM
-
-BUILDLINK_TRANSFORM+=	l:LLVMMipsDesc:LLVMMipsAsmPrinter:LLVMMipsDesc
-BUILDLINK_TRANSFORM+=	l:LLVMARMDisassembler:LLVMARMInfo:LLVMARMDisassembler
-BUILDLINK_TRANSFORM+=	l:LLVMSystemZCodeGen:LLVMSystemZDisassembler:LLVMTarget:LLVMSystemZCodeGen
-BUILDLINK_TRANSFORM+=	l:LLVMSparcCodeGen:LLVMSparcDesc:LLVMSparcCodeGen
 
 .include "../../lang/clang/Makefile.common"
