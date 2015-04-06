@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.131 2014/10/07 16:47:23 adam Exp $
+# $NetBSD: Makefile,v 1.132 2015/04/06 08:17:25 adam Exp $
 
 DISTNAME=	kdevelop_3.5.5.orig
 PKGNAME=	kdevelop-base-3.5.5
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	devel kde
 MASTER_SITES=	http://download.opensuse.org/repositories/home:/amilcarlucas/xUbuntu_6.06/
 

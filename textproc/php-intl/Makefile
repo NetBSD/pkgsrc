@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2015/03/20 16:33:28 taca Exp $
+# $NetBSD: Makefile,v 1.18 2015/04/06 08:17:38 adam Exp $
 
 MODNAME=		intl
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for i18n
+PKGREVISION=		1
 LICENSE=		php
 
 USE_LANGUAGES=		c c++

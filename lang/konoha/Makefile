@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2015/03/31 15:44:47 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2015/04/06 08:17:30 adam Exp $
 #
 
 DISTNAME=	konoha-1.0.0-952
 PKGNAME=	konoha-1.0.0.952
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	lang
 MASTER_SITES=	http://konoha.googlecode.com/files/
 

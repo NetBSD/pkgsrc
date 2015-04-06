@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/03/15 18:46:56 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.14 2015/04/06 08:17:29 adam Exp $
 
 DISTNAME=	ibus-array-0.1.0
+PKGREVISION=	1
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus-array.googlecode.com/svn/tarballs/
 EXTRACT_SUFX=	.tgz
