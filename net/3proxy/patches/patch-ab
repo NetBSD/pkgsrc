@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2008/02/27 16:14:25 apb Exp $
+$NetBSD: patch-ab,v 1.2 2015/04/06 02:26:53 rodent Exp $
 
---- src/ntlm.c.orig	2006-10-15 10:40:04.000000000 +0200
+--- src/ntlm.c.orig	2015-02-17 13:07:21.000000000 +0000
 +++ src/ntlm.c
 @@ -43,7 +43,7 @@ int text2unicode(const char * text, char
  	buflen = ((buflen>>1)<<1);
