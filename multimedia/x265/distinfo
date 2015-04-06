@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/02/12 09:02:42 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/04/06 20:58:35 adam Exp $
 
-SHA1 (x265/1.5.tar.bz2) = a348aca6aca873728607f28fa69428ae28b19bd0
-RMD160 (x265/1.5.tar.bz2) = 236a5fdf81b424f731158118fc3fe7c7f89a5d6c
-Size (x265/1.5.tar.bz2) = 588263 bytes
+SHA1 (x265_1.6.tar.gz) = a3d568e39e3f9cd23081a1a2c5277f87de25a22a
+RMD160 (x265_1.6.tar.gz) = cc15a52f83aa51bf8eb64b5aa056123f65d5c280
+Size (x265_1.6.tar.gz) = 788754 bytes
