@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/03/13 16:35:39 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/06 02:26:53 rodent Exp $
 #
 
-DISTNAME=	3proxy-0.5.3k
-PKGNAME=	${DISTNAME:C/k$/.11/}
-PKGREVISION=	1
+DISTNAME=	3proxy-0.7.1.2
 CATEGORIES=	net
 MASTER_SITES=	http://3proxy.ru/${DISTNAME:S/3proxy-//}/
 EXTRACT_SUFX=	.tgz
@@ -17,7 +15,7 @@ COMMENT=	Multi-protocol proxy
 # number.  3proxy-0.6.* will have a different license.
 LICENSE=	3proxy-0.5-license
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/${PKGBASE}
 MAKE_FILE=	Makefile.unix
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
