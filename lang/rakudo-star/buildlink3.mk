@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/10/07 16:47:12 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2015/04/06 08:17:15 adam Exp $
 
 BUILDLINK_TREE+=	rakudo-star
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rakudo-star
 RAKUDO_STAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rakudo-star+=		rakudo-star>=2013.08
-BUILDLINK_ABI_DEPENDS.rakudo-star+=		rakudo-star>=2013.08nb4
+BUILDLINK_ABI_DEPENDS.rakudo-star+=		rakudo-star>=2013.08nb5
 BUILDLINK_PKGSRCDIR.rakudo-star?=		../../lang/rakudo-star
 
 .include "../../lang/nqp/buildlink3.mk"
