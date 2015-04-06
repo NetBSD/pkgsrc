@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.52 2015/03/06 14:43:15 spz Exp $
+$NetBSD: distinfo,v 1.53 2015/04/06 07:22:54 adam Exp $
 
-SHA1 (icu4c-54_1-src.tgz) = 8c752490bbf31cea26e20246430cee67d48abe34
-RMD160 (icu4c-54_1-src.tgz) = b1440e1a3330b12336742c881863a8de6a6d2235
-Size (icu4c-54_1-src.tgz) = 25485678 bytes
-SHA1 (patch-CVE-2014-7923+7926) = cb5e355c6e5b4860c581a9743706b800d56dadf2
+SHA1 (icu4c-55_1-src.tgz) = 3bb301c11be0e239c653e8aa2925c53f6f4dc88d
+RMD160 (icu4c-55_1-src.tgz) = 94dcaaac13b41de3588b01f39febe1b1cbd5765d
+Size (icu4c-55_1-src.tgz) = 25600847 bytes
 SHA1 (patch-aa) = fd5c513e75ca17a46be4ed010455bda63731afff
 SHA1 (patch-ab) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
@@ -19,4 +18,4 @@ SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
 SHA1 (patch-config_mh-scoosr5) = 47703dcc184f58c0382da3225f849424ab74d472
 SHA1 (patch-configure) = 2d17823ee06693ce382745ce345eca37001a0a7c
 SHA1 (patch-configure.ac) = ea7586eb8131ff53a483b5bd7ca162886e9045f1
-SHA1 (patch-tools-toolutil-pkg_genc.c) = a38dc7f38edd5a4c743f1f1927642b12864735fe
+SHA1 (patch-tools-toolutil-pkg_genc.c) = b5a9eb679908d9f579ff095c5389ec1aa8df8e1e
