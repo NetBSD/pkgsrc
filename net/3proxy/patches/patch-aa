@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2008/02/27 16:14:25 apb Exp $
+$NetBSD: patch-aa,v 1.2 2015/04/06 02:26:53 rodent Exp $
 
---- src/3proxy.c.orig	2007-04-20 13:05:10.000000000 +0200
+--- src/3proxy.c.orig	2015-02-17 13:07:20.000000000 +0000
 +++ src/3proxy.c
-@@ -1276,7 +1276,7 @@ int readconfig(FILE * fp){
+@@ -1550,7 +1550,7 @@ static int h_ace(int argc, unsigned char
+ 			unsigned long lim;
  
+ 			tl->comment = ( char *)argv[1];
+-			while(isdigit(*tl->comment))tl->comment++;
++			while(isdigit((unsigned char)*tl->comment))tl->comment++;
+ 			if(*tl->comment== '/')tl->comment++;
+ 			tl->comment = mystrdup(tl->comment);
  
- 				tl->comment = mystrdup((char *)ch->argv[1]);
--				while(isdigit(*tl->comment))tl->comment++;
-+				while(isdigit((unsigned char)*tl->comment))tl->comment++;
- 				if(*tl->comment== '/')tl->comment++;
- 
- 				sscanf((char *)ch->argv[1], "%u", &tl->number);

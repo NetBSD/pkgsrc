@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2008/02/27 16:14:25 apb Exp $
+$NetBSD: patch-ac,v 1.2 2015/04/06 02:26:53 rodent Exp $
 
---- src/webadmin.c.orig	2006-03-10 21:36:33.000000000 +0200
+--- src/webadmin.c.orig	2015-02-17 13:07:21.000000000 +0000
 +++ src/webadmin.c
-@@ -311,12 +311,12 @@ void * adminchild(void * data) {
+@@ -375,12 +375,12 @@ void * adminchild(struct clientparam* pa
  		sb = strchr(buf, ':');
  		if(!sb)continue;
  		++sb;
@@ -17,7 +17,7 @@ $NetBSD: patch-ac,v 1.1 2008/02/27 16:14:25 apb Exp $
  		i = de64((unsigned char *)sb, (unsigned char *)username, 255);
  		if(i<=0)continue;
  		username[i] = 0;
-@@ -332,12 +332,12 @@ void * adminchild(void * data) {
+@@ -396,12 +396,12 @@ void * adminchild(struct clientparam* pa
  	}
  	else if(i > 15 && (!strncasecmp(buf, "content-length:", 15))){
  		sb = buf + 15;
