@@ -1,8 +1,18 @@
-$NetBSD: patch-ae,v 1.1 2008/02/27 23:50:29 apb Exp $
+$NetBSD: patch-ae,v 1.2 2015/04/06 02:26:53 rodent Exp $
 
---- src/proxy.h.orig	2006-09-21 14:32:05.000000000 +0200
+--- src/proxy.h.orig	2015-02-17 13:07:21.000000000 +0000
 +++ src/proxy.h
-@@ -95,6 +95,8 @@
+@@ -22,7 +22,9 @@
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#if !(defined(__OpenBSD__) || !defined(__Bitrig__))
+ #include <sys/timeb.h>
++#endif
+ #include <fcntl.h>
+ #include <time.h>
+ 
+@@ -101,6 +103,8 @@
  #endif
  #define daemonize() daemon(1,1)
  #define SLEEPTIME 1000
