@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1669 2015/04/06 15:28:14 he Exp $
+$NetBSD: CHANGES-2015,v 1.1670 2015/04/06 15:31:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2282,3 +2282,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 37.0.1 [tron 2015-04-06]
 	Updated print/ghostscript-agpl to 9.16 [adam 2015-04-06]
 	Updated graphics/ImageMagick to 6.9.1.1 [he 2015-04-06]
+	Updated www/mediawiki to 1.24.2 [wen 2015-04-06]
