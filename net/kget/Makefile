@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/11/30 03:11:12 markd Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/06 08:17:35 adam Exp $
 
 DISTNAME=	kget-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	download manager for KDE
 
