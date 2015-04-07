@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.91 2015/04/05 08:27:08 dsainty Exp $
+$NetBSD: distinfo,v 1.92 2015/04/07 09:22:40 martin Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -63,8 +63,6 @@ Size (mplayer/xanim-1.7.tar.bz2) = 94526 bytes
 SHA1 (mplayer/xine-lcd-1.2.tar.bz2) = 2fa7811e0dc7316d0c996b0a5bc37f5c97d1dd18
 RMD160 (mplayer/xine-lcd-1.2.tar.bz2) = 785f6826d49eddabd7ebc431db77139771f208f5
 Size (mplayer/xine-lcd-1.2.tar.bz2) = 172270 bytes
-SHA1 (patch-.._MPlayer-1.1.1_ffmpeg_libavcodec_arm_asm.S) = 33085da1b4a2b235c02ea645f7950e2be26e8c60
-SHA1 (patch-.._MPlayer-1.1.1_ffmpeg_libavcodec_arm_simple__idct__arm.S) = ae43f230cc19896d1284e46d5b219dcdcc74d6e7
 SHA1 (patch-CVE-2014-4610) = 855276c8e301494942a03e13712cc53615d8f4d5
 SHA1 (patch-aa) = abe6709d87c0a1b4f4da15e93a5bc4d923ed0793
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
