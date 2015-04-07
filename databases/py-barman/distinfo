@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/04 12:56:14 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/04/07 09:42:55 fhajny Exp $
 
-SHA1 (barman-1.3.3.tar.gz) = 6f8ff87332d58f1228b741c3a2ad5ea6c88f2da7
-RMD160 (barman-1.3.3.tar.gz) = affebf135e6eaa26a3ce56658064fc17c1d4b9f1
-Size (barman-1.3.3.tar.gz) = 111462 bytes
-SHA1 (patch-barman_backup.py) = c6755e60fba308518afcb7f884353b689256c900
+SHA1 (barman-1.4.0.tar.gz) = bdeab227133bf58005b1b7b3812ffbd52cb3fd18
+RMD160 (barman-1.4.0.tar.gz) = 77bcccac32158f7dffd022a99bfce270758e0ae6
+Size (barman-1.4.0.tar.gz) = 120590 bytes
+SHA1 (patch-barman_backup.py) = 552ce149f700aca35487144d8bc9ba0063bcacf5
