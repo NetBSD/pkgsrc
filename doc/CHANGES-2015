@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1681 2015/04/07 11:19:49 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1682 2015/04/07 11:23:43 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2294,3 +2294,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-barman to 1.4.0 [fhajny 2015-04-07]
 	Updated databases/py-peewee to 2.5.1 [fhajny 2015-04-07]
 	Updated devel/php-raphf to 1.0.4nb1 [rodent 2015-04-07]
+	Added devel/php-igbinary version 1.2.1 [rodent 2015-04-07]
