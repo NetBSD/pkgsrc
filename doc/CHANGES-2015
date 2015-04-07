@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1674 2015/04/07 00:22:12 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1675 2015/04/07 08:07:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2287,3 +2287,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/x265 to 1.6 [adam 2015-04-06]
 	Updated pkgtools/url2pkg to 2.22 [rodent 2015-04-07]
 	Added devel/php-raphf version 1.0.4 [rodent 2015-04-07]
+	Updated www/p5-Apache2-AuthCookieDBI to 2.17nb1 [he 2015-04-07]
