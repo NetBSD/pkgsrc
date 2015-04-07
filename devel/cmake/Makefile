@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.95 2015/02/13 14:03:48 adam Exp $
+# $NetBSD: Makefile,v 1.96 2015/04/07 20:53:48 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.3
+DISTNAME=	cmake-${CMAKE_API}.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
-CMAKE_API=	3.1
+CMAKE_API=	3.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_NCURSES=		wsyncup
+USE_NCURSES=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--system-libs
+# jsoncpp requires cmake to build, so use the one provided with cmake
+CONFIGURE_ARGS+=	--no-system-jsoncpp
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
@@ -58,11 +60,10 @@ pre-configure:
 	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
 	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
 
-BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8.4
+BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
