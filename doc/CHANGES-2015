@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1679 2015/04/07 09:43:09 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1680 2015/04/07 09:51:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2292,3 +2292,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/rabbitmq-c to 0.6.0 [fhajny 2015-04-07]
 	Updated multimedia/gmplayer to 1.1.1nb25 [martin 2015-04-07]
 	Updated databases/py-barman to 1.4.0 [fhajny 2015-04-07]
+	Updated databases/py-peewee to 2.5.1 [fhajny 2015-04-07]
