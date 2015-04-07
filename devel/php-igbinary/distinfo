@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2015/04/07 11:23:09 rodent Exp $
+
+SHA1 (php-igbinary/igbinary-1.2.1.tgz) = f27c09a964fdb85762b7f11ae49b6a0b0adb2a44
+RMD160 (php-igbinary/igbinary-1.2.1.tgz) = edb9a5175c87a04146968331c0dc059c033e74b7
+Size (php-igbinary/igbinary-1.2.1.tgz) = 36869 bytes
+SHA1 (patch-acinclude.m4) = 9e9c433e4cb96e469f7cf14b2064a0f41fc4568a
+SHA1 (patch-aclocal.m4) = 46f192351e541453b1e32299acd1b4cfefc93cb2
+SHA1 (patch-build_libtool.m4) = 3811edd697fd21eadc4f65cba35c6297141e8ff2
+SHA1 (patch-configure) = e81731b426b31656de72a4e4b3ad341b5ac34f82
+SHA1 (patch-ext_gd_config.m4) = 91c9798333d4776856a0a9e20196986856b758b2
+SHA1 (patch-ext_imap_config.m4) = 01681e8b54ee586ec4db72a5da2d0aec3fa89fcc
+SHA1 (patch-ext_mssql_php__mssql.c) = 4ef1837850443e9db2e71620a3ddaed5ab5c435b
+SHA1 (patch-ext_opcache_config.m4) = 7c0d98feaeec8a0ca61f6f77a1906aa2d601be3f
+SHA1 (patch-ext_pdo__mysql_config.m4) = 3526e737da25129710218e7141d5a05ae0a51390
+SHA1 (patch-ext_pdo_config.m4) = 26a4ad02e5c6b7a54c3c54a6d026a3ccfed62c59
+SHA1 (patch-ext_phar_Makefile.frag) = f8e3f7b7c3e93765d019e5614a884df6185d0436
+SHA1 (patch-ext_phar_phar_phar.php) = 011f2d68048dbc63f5efcab4e23062daa9e8e08c
+SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = b384b9daa466f2a8a3e6cfd4ea6cff81f9342941
+SHA1 (patch-ext_standard_basic__functions.c) = f2a44998145306c2cb2d2f3822c0e7cc70c778b4
+SHA1 (patch-makedist) = 3f6b0621d30264824f2cb4c2903d15ba95be3937
+SHA1 (patch-php.ini-development) = 4fc40f0af5f6e58b614794e066a5738694dc8ef8
+SHA1 (patch-php.ini-production) = 47c1b14ee78fbcaa084a58d2c0c3e843104072be
+SHA1 (patch-run-tests.php) = ff80b8ad52d7c0a43fa318ed9bffca9d7b3e688d
+SHA1 (patch-sapi_cgi_Makefile.frag) = 3784758c085066d1088ae1420b0f9bcf98f74de9
+SHA1 (patch-sapi_fpm_fpm_events_port.c) = ad45bcebadf923ee8cb3f2ad4d78d21dd178a8e3
+SHA1 (patch-sapi_fpm_fpm_fpm__sockets.c) = 3a43488f79fa778abb25b0e29579166d436cb4c3
+SHA1 (patch-sapi_fpm_php-fpm.conf.in) = 2369bb6a426a7fb47dc73c88f0daa0f6fa67b593
