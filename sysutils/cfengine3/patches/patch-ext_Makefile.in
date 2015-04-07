@@ -1,14 +1,14 @@
-$NetBSD: patch-ext_Makefile.in,v 1.1 2013/02/17 16:15:42 fhajny Exp $
+$NetBSD: patch-ext_Makefile.in,v 1.2 2015/04/07 08:43:35 fhajny Exp $
 
 No use for rpmvercmp.
 
---- ext/Makefile.in.orig	2013-01-11 12:54:49.000000000 +0000
-+++ ext/Makefile.in	2013-02-16 12:23:25.950062742 +0000
-@@ -35,7 +35,6 @@ POST_UNINSTALL = :
+--- ext/Makefile.in.orig	2015-04-03 10:59:08.525934907 +0000
++++ ext/Makefile.in
+@@ -79,7 +79,6 @@ POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
  target_triplet = @target@
 -sbin_PROGRAMS = rpmvercmp$(EXEEXT)
  subdir = ext
- DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
+ 	$(top_srcdir)/depcomp
