@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1689 2015/04/07 22:09:25 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1690 2015/04/07 22:14:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2302,3 +2302,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-input-keyboard to 1.8.1 [wiz 2015-04-07]
 	Updated devel/cmake to 3.2.1 [adam 2015-04-07]
 	Updated archivers/gsharutils to 4.15 [hiramatsu 2015-04-07]
+	Updated math/py-rpy to 2.5.6 [wiz 2015-04-07]
