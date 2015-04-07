@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/01/01 09:11:09 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/07 05:13:45 sevan Exp $
 
 MPG123_MODULE=	oss
 
 # this is builtin with ../mpg123 on all other architectures
-ONLY_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* DragonFly-*-*
-ONLY_FOR_PLATFORM+=	SunOS-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* DragonFly-*-* SunOS-*-*
 
 .include "../../audio/mpg123/Makefile.common"
 
