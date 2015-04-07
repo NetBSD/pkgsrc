@@ -1,13 +1,19 @@
-@comment $NetBSD: PLIST,v 1.11 2013/07/21 09:03:19 shattered Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/04/07 22:08:36 hiramatsu Exp $
 bin/gshar
 bin/gunshar
+bin/guudecode
+bin/guuencode
 gnu/bin/shar
 gnu/bin/unshar
 gnu/man/man1/shar.1
 gnu/man/man1/unshar.1
 info/sharutils.info
+lib/charset.alias
 man/man1/gshar.1
 man/man1/gunshar.1
+man/man1/guudecode.1
+man/man1/guuencode.1
+man/man5/guuencode.5
 share/locale/bg/LC_MESSAGES/sharutils.mo
 share/locale/ca/LC_MESSAGES/sharutils.mo
 share/locale/cs/LC_MESSAGES/sharutils.mo
@@ -27,6 +33,7 @@ share/locale/it/LC_MESSAGES/sharutils.mo
 share/locale/ja/LC_MESSAGES/sharutils.mo
 share/locale/nl/LC_MESSAGES/sharutils.mo
 share/locale/pl/LC_MESSAGES/sharutils.mo
+share/locale/pt_BR/LC_MESSAGES/sharutils.mo
 share/locale/ru/LC_MESSAGES/sharutils.mo
 share/locale/sr/LC_MESSAGES/sharutils.mo
 share/locale/sv/LC_MESSAGES/sharutils.mo
