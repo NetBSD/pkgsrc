@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/04/05 08:51:08 dsainty Exp $
+# $NetBSD: Makefile,v 1.15 2015/04/07 12:32:59 dsainty Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -12,6 +12,9 @@ MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
+
+# NetBSD tar: Invalid header, starting valid header search.
+EXTRACT_USING=  gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
