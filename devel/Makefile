@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2075 2015/04/05 23:18:39 rodent Exp $
+# $NetBSD: Makefile,v 1.2076 2015/04/07 00:23:21 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1523,6 +1523,7 @@ SUBDIR+=	php-opcache
 SUBDIR+=	php-pcntl
 SUBDIR+=	php-posix
 SUBDIR+=	php-pthreads
+SUBDIR+=	php-raphf
 SUBDIR+=	php-shmop
 SUBDIR+=	php-sysvmsg
 SUBDIR+=	php-sysvsem
