@@ -426,6 +426,7 @@ links-xz		Enable lzma support for the links WWW browser.
 links-zlib		Enable zlib support for the links WWW browser.
 lirc			Enable LIRC receiving and sending IR signals support.
 live			Enable live555 support.
+lmdb			Enable lmdb support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
 lsof-less-secure-sockets	If 'lsof-more-secure' is set, allow all sockets to be viewed at all times.
