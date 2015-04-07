@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1673 2015/04/07 00:11:03 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1674 2015/04/07 00:22:12 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Plack to 1.0034 [wen 2015-04-06]
 	Updated multimedia/x265 to 1.6 [adam 2015-04-06]
 	Updated pkgtools/url2pkg to 2.22 [rodent 2015-04-07]
+	Added devel/php-raphf version 1.0.4 [rodent 2015-04-07]
