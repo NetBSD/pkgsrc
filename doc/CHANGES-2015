@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1672 2015/04/06 20:59:23 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1673 2015/04/07 00:11:03 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2285,3 +2285,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/mediawiki to 1.24.2 [wen 2015-04-06]
 	Updated www/p5-Plack to 1.0034 [wen 2015-04-06]
 	Updated multimedia/x265 to 1.6 [adam 2015-04-06]
+	Updated pkgtools/url2pkg to 2.22 [rodent 2015-04-07]
