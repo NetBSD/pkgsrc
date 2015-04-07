@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2015/04/05 08:27:08 dsainty Exp $
+# $NetBSD: Makefile,v 1.125 2015/04/07 09:22:40 martin Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,7 +8,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	24
+PKGREVISION=	25
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -69,6 +69,14 @@ do-install:
 	@${ECHO_MSG} "Installing skin ${skin}..."
 	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${skin} |	\
 	  ${GTAR} xCmf ${DESTDIR}${PREFIX}/share/mplayer/skins -
+.endfor
+.for skin in ${SKINS:C,-[0-9]+\.[0-9]+${SKIN_EXTRACT_SUFX},,}
+	${MV} ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin \
+	  ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin.orig
+	${SED} -e 's/pimage/potmeter/' -e 's/rpotmeter/;rpotmeter/' \
+	  < ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin.orig \
+	  > ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin
+	${RM} ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin.orig
 .endfor
 	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/mplayer/skins
 	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/skins/default
