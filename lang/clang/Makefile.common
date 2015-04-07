@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2015/03/22 16:07:59 tnn Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/04/07 22:05:36 tnn Exp $
 #
 # used by lang/clang/Makefile
 # used by lang/libLLVM/Makefile
@@ -82,6 +82,15 @@ SUBST_SED.fix-paths+=		-e 's,getToolChain().GetProgramPath("ld"),"/usr/ccs/bin/l
 .  if ${TEST_ILLUMOS_3849}
 SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 .  endif
+.endif
+
+# patch NetBSD::GetCXXStdlibType
+.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)
+SUBST_CLASSES+=			libcxx
+SUBST_STAGE.libcxx=		pre-configure
+SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ as we're using GCC
+SUBST_FILES.libcxx=		tools/clang/lib/Driver/ToolChains.cpp
+SUBST_SED.libcxx=		-e 's,Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49) || Major == 0,false,'
 .endif
 
 post-extract:
