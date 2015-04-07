@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1684 2015/04/07 14:24:13 yyamano Exp $
+$NetBSD: CHANGES-2015,v 1.1685 2015/04/07 14:48:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/php-igbinary version 1.2.1 [rodent 2015-04-07]
 	Updated sysutils/collectd to 5.4.2 [fhajny 2015-04-07]
 	Updated lang/scala to 2.11.6 [yyamano 2015-04-07]
+	Updated sysutils/liblognorm to 1.1.1 [fhajny 2015-04-07]
