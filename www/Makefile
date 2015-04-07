@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1097 2015/04/02 23:54:26 rodent Exp $
+# $NetBSD: Makefile,v 1.1098 2015/04/07 23:57:43 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -532,6 +532,7 @@ SUBDIR+=	php-ja-wordpress
 SUBDIR+=	php-owncloud
 SUBDIR+=	php-phrasea2
 SUBDIR+=	php-piwigo
+SUBDIR+=	php-propro
 SUBDIR+=	php-soycms
 SUBDIR+=	php-sugarcrm
 SUBDIR+=	php-tidy
