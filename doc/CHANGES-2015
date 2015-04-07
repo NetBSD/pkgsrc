@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1687 2015/04/07 15:36:43 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1688 2015/04/07 20:54:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2300,3 +2300,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/liblognorm to 1.1.1 [fhajny 2015-04-07]
 	Updated sysutils/rsyslog to 8.9.0 [fhajny 2015-04-07]
 	Updated x11/xf86-input-keyboard to 1.8.1 [wiz 2015-04-07]
+	Updated devel/cmake to 3.2.1 [adam 2015-04-07]
