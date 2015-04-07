@@ -1,9 +1,9 @@
-$NetBSD: patch-src_network.c,v 1.2 2014/06/14 12:21:02 fhajny Exp $
+$NetBSD: patch-src_network.c,v 1.3 2015/04/07 13:20:41 fhajny Exp $
 
 Remove libgcrypt deprecation logic. Patch by joerg.
---- src/network.c.orig	2014-01-26 08:09:23.000000000 +0000
+--- src/network.c.orig	2015-02-26 11:49:16.681659031 +0000
 +++ src/network.c
-@@ -58,25 +58,7 @@
+@@ -58,27 +58,7 @@
  #endif
  
  #if HAVE_LIBGCRYPT
@@ -25,11 +25,13 @@ Remove libgcrypt deprecation logic. Patch by joerg.
 -/* Re enable deprecation warnings */
 -#  pragma GCC diagnostic warning "-Wdeprecated-declarations"
 -# endif
+-# if GCRYPT_VERSION_NUMBER < 0x010600
 -GCRY_THREAD_OPTION_PTHREAD_IMPL;
+-# endif
  #endif
  
  #ifndef IPV6_ADD_MEMBERSHIP
-@@ -501,17 +483,9 @@ static void network_init_gcrypt (void) /
+@@ -503,19 +483,9 @@ static void network_init_gcrypt (void) /
    if (gcry_control (GCRYCTL_ANY_INITIALIZATION_P))
      return;
  
@@ -40,7 +42,9 @@ Remove libgcrypt deprecation logic. Patch by joerg.
 -  * above doesn't count, as it doesn't implicitly initalize Libgcrypt.
 -  *
 -  * tl;dr: keep all these gry_* statements in this exact order please. */
+-# if GCRYPT_VERSION_NUMBER < 0x010600
 -  gcry_control (GCRYCTL_SET_THREAD_CBS, &gcry_threads_pthread);
+-# endif
    gcry_check_version (NULL);
    gcry_control (GCRYCTL_INIT_SECMEM, 32768);
 -  gcry_control (GCRYCTL_INITIALIZATION_FINISHED);

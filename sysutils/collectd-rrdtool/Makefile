@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/05 00:48:19 ryoon Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.3 2015/04/07 13:20:41 fhajny Exp $
 
 COLLECTD_PACKAGE=	rrdtool
 COLLECTD_PLUGINS=	rrdtool rrdcached

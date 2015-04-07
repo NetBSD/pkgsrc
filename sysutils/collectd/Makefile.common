@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/02/24 13:14:05 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/04/07 13:20:41 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -13,7 +13,7 @@
 # used by sysutils/collectd-rrdtool/Makefile
 # used by sysutils/collectd-snmp/Makefile
 
-DISTNAME=	collectd-5.4.1
+DISTNAME=	collectd-5.4.2
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 
