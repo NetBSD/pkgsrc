@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2014/05/13 17:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2015/04/07 22:14:18 wiz Exp $
 
-DISTNAME=	rpy2-2.3.0
+DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rpy/}
+MASTER_SITES=	https://pypi.python.org/packages/source/r/rpy2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rpy.sourceforge.net/
@@ -18,7 +18,7 @@ LDFLAGS.SunOS+=		-mimpure-text
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/R/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

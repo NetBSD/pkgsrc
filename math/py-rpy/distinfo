@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2014/01/19 22:50:43 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/04/07 22:14:18 wiz Exp $
 
-SHA1 (rpy2-2.3.0.tar.gz) = 57756415b343bfb960f319b53e6387ddbd0e0d08
-RMD160 (rpy2-2.3.0.tar.gz) = f2c70f8f7b242686e04d19c055090d3eb08005a9
-Size (rpy2-2.3.0.tar.gz) = 178022 bytes
+SHA1 (rpy2-2.5.6.tar.gz) = d4a664b21b61b12608d9ff6714a087b43039e89e
+RMD160 (rpy2-2.5.6.tar.gz) = ea13cf5379c025bbd7f8654c2cad0037196cf7a1
+Size (rpy2-2.5.6.tar.gz) = 165070 bytes
