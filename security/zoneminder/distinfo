@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2015/04/05 08:51:08 dsainty Exp $
+$NetBSD: distinfo,v 1.6 2015/04/07 12:54:36 dsainty Exp $
 
 SHA1 (ZoneMinder-1.28.1.tar.gz) = 3e173ae1aac529b60d79a5fc668c107f0679d0a2
 RMD160 (ZoneMinder-1.28.1.tar.gz) = b3cc305656cb5b73d4ac0e21fe937c237467cdd1
 Size (ZoneMinder-1.28.1.tar.gz) = 3864811 bytes
 SHA1 (patch-Makefile_am) = ae6f2f3c6825a44be019ad5dc0b45929c85d4ba9
-SHA1 (patch-configure_ac) = 2370065080bb99a76d2581fa4538e5c70f7ec739
+SHA1 (patch-configure_ac) = 110a7a10506ba931369904d777dec5cc2185f556
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 841d897662958698a4dfcb95dd5bc43bb5fed568
 SHA1 (patch-scripts_zm_in) = 8f59085bb9293afa7aeb268000c75988e5371c66
 SHA1 (patch-src_Makefile_am) = 0f6571c9d5a3e688544f93d687d266e1b71f0f43
