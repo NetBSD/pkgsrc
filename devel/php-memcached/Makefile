@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/03/26 03:32:33 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/07 23:09:39 rodent Exp $
 #
 
 MODNAME=		memcached
 PECL_VERSION=		2.2.0
+PKGREVISION=		1
 CATEGORIES+=		devel
 
 MAINTAINER=		filip@joyent.com
