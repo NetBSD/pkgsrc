@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1686 2015/04/07 14:49:17 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1687 2015/04/07 15:36:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/scala to 2.11.6 [yyamano 2015-04-07]
 	Updated sysutils/liblognorm to 1.1.1 [fhajny 2015-04-07]
 	Updated sysutils/rsyslog to 8.9.0 [fhajny 2015-04-07]
+	Updated x11/xf86-input-keyboard to 1.8.1 [wiz 2015-04-07]
