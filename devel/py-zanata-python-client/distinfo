@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/01 07:00:00 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/04/08 18:48:54 ryoon Exp $
 
-SHA1 (zanata-python-client-1.3.18.tar.gz) = 3130cefe8c9a1047fea2aaef3e17f4c5162a0103
-RMD160 (zanata-python-client-1.3.18.tar.gz) = 2c6860ee34d0339a46a8020edc54c04a753e989b
-Size (zanata-python-client-1.3.18.tar.gz) = 57552 bytes
+SHA1 (zanata-python-client-1.3.21.tar.gz) = d9f3fa020d8435ab0b7e3bc8a6c252b9d1c10fea
+RMD160 (zanata-python-client-1.3.21.tar.gz) = 1a2ed03669be4f8b81b0f191f33d3da5c44ea5bf
+Size (zanata-python-client-1.3.21.tar.gz) = 57580 bytes
 SHA1 (patch-VERSION-GEN) = 3ce2abadc697b163980c8c927fdb3e3d3ab458f3
