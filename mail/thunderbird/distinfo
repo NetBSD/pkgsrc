@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.156 2015/03/14 23:02:52 tnn Exp $
+$NetBSD: distinfo,v 1.157 2015/04/08 18:25:15 ryoon Exp $
 
-SHA1 (thunderbird-31.5.0/enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
-RMD160 (thunderbird-31.5.0/enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
-Size (thunderbird-31.5.0/enigmail-1.7.2.tar.gz) = 1420346 bytes
-SHA1 (thunderbird-31.5.0/thunderbird-31.5.0.source.tar.bz2) = a0565a2d29fee09660041d04ea2bd73f6bc3fd05
-RMD160 (thunderbird-31.5.0/thunderbird-31.5.0.source.tar.bz2) = 443bcd3a3a9af8d115716300740ca54e6039312c
-Size (thunderbird-31.5.0/thunderbird-31.5.0.source.tar.bz2) = 171097061 bytes
+SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
+RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
+Size (enigmail-1.7.2.tar.gz) = 1420346 bytes
+SHA1 (thunderbird-31.6.0.source.tar.bz2) = 147ba0f3c7da29a7814ee9ce4265fb107744559e
+RMD160 (thunderbird-31.6.0.source.tar.bz2) = 0f4025f36376b1f8c5e72bc64fff388207960287
+Size (thunderbird-31.6.0.source.tar.bz2) = 171089774 bytes
 SHA1 (patch-aa) = 764c6e8955d371d0869a9b145211f0a9d8709708
 SHA1 (patch-ak) = b47277baa1137a7610445b7c4dd147b331d5c5e6
 SHA1 (patch-al) = 81a733e9b13a47abfef818ecd10d7ef18a191855

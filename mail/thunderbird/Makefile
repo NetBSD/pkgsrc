@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.148 2015/04/06 08:17:32 adam Exp $
+# $NetBSD: Makefile,v 1.149 2015/04/08 18:25:15 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		31.5.0
-PKGREVISION=	2
+TB_VER=		31.6.0
 #LIGHTNINGVER=	1.9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
@@ -15,8 +14,6 @@ DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/comm-esr31
