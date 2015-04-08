@@ -1,18 +1,23 @@
-$NetBSD: patch-aa,v 1.7 2013/08/20 11:07:13 shattered Exp $
+$NetBSD: patch-aa,v 1.8 2015/04/08 01:43:33 rodent Exp $
 
---- Makefile.in.orig	2013-03-16 14:36:24.000000000 +0000
+Don't install Linux init.d files nor CONF_FILES.
+
+--- Makefile.in.orig	2014-07-26 09:50:18.000000000 +0000
 +++ Makefile.in
-@@ -155,8 +155,7 @@ am__installdirs = "$(DESTDIR)$(sbindir)"
- 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(sysscriptdir)" \
+@@ -182,11 +182,10 @@ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+ CONFIG_CLEAN_VPATH_FILES =
+-am__installdirs = "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(examplesdir)" \
++am__installdirs = "$(DESTDIR)$(sbindir)" \
+ 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(smartdscriptdir)" \
  	"$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man8dir)" \
- 	"$(DESTDIR)$(attributelogdir)" "$(DESTDIR)$(docsdir)" \
--	"$(DESTDIR)$(drivedbdir)" "$(DESTDIR)$(examplesdir)" \
--	"$(DESTDIR)$(initddir)" "$(DESTDIR)$(savestatesdir)" \
-+	"$(DESTDIR)$(drivedbdir)" "$(DESTDIR)$(savestatesdir)" \
+ 	"$(DESTDIR)$(docsdir)" "$(DESTDIR)$(drivedbdir)" \
+-	"$(DESTDIR)$(examplesdir)" "$(DESTDIR)$(initddir)" \
  	"$(DESTDIR)$(sysconfdir)" "$(DESTDIR)$(systemdsystemunitdir)"
  PROGRAMS = $(sbin_PROGRAMS)
  am__smartctl_SOURCES_DIST = smartctl.cpp smartctl.h atacmdnames.cpp \
-@@ -499,8 +498,7 @@ docs_DATA = \
+@@ -585,8 +584,7 @@ docs_DATA = \
          NEWS \
          README \
          TODO \
@@ -22,12 +27,12 @@ $NetBSD: patch-aa,v 1.7 2013/08/20 11:07:13 shattered Exp $
  
  examplesdir = $(exampledir)
  examples_DATA = \
-@@ -1620,7 +1618,7 @@ info-am:
+@@ -1666,7 +1664,7 @@ info-am:
  
- install-data-am: install-attributelogDATA install-docsDATA \
+ install-data-am: install-data-local install-docsDATA \
  	install-drivedbDATA install-examplesDATA \
 -	install-examplesSCRIPTS install-initdDATA install-man \
 +	install-examplesSCRIPTS install-man \
- 	install-savestatesDATA install-sysscriptSCRIPTS \
- 	install-systemdsystemunitDATA
+ 	install-smartdscriptSCRIPTS install-systemdsystemunitDATA
  
+ install-dvi: install-dvi-am
