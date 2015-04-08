@@ -1,4 +1,13 @@
-$NetBSD: patch-ab,v 1.31 2015/01/26 23:26:48 wiz Exp $
+$NetBSD: patch-ab,v 1.32 2015/04/08 05:35:39 wiz Exp $
+
+Please note that this patch cannot be regenerated automatically. What would be
+the first hunk has manually been split into two and the context reduced for the
+second half because the managesieve patch changes the line
+        # Protocols we want to be serving: imap imaps pop3 pop3s
+into
+        # Protocols we want to be serving: imap imaps pop3 pop3s managesieve
+and the patch needs to apply to both versions. So this line must be kept out of
+the context.
 
 --- dovecot-example.conf.orig	2009-06-01 05:21:42.000000000 +0200
 +++ dovecot-example.conf
