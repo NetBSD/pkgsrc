@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:16 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/04/08 01:43:32 rodent Exp $
 man/man5/smartd.conf.5
 man/man8/smartctl.8
 man/man8/smartd.8
+man/man8/update-smart-drivedb.8
 sbin/smartctl
 sbin/smartd
 sbin/update-smart-drivedb
@@ -18,7 +19,10 @@ share/doc/smartmontools/examplescripts/Example1
 share/doc/smartmontools/examplescripts/Example2
 share/doc/smartmontools/examplescripts/Example3
 share/doc/smartmontools/examplescripts/Example4
+share/doc/smartmontools/examplescripts/Example5
+share/doc/smartmontools/examplescripts/Example6
 share/doc/smartmontools/examplescripts/README
 share/examples/smartmontools/smartd.conf
 share/examples/smartmontools/smartd_warning.sh
 share/smartmontools/drivedb.h
+@pkgdir share/examples/smartmontools/smartd_warning.d
