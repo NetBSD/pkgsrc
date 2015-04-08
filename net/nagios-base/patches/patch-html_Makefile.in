@@ -1,4 +1,4 @@
-$NetBSD: patch-html_Makefile.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
+$NetBSD: patch-html_Makefile.in,v 1.3 2015/04/08 23:25:25 rodent Exp $
 
 Adjustments to build procedure.
 
@@ -13,7 +13,7 @@ Adjustments to build procedure.
  HTMLDIR=@datadir@
  datarootdir=@datarootdir@
  INSTALL=@INSTALL@
-@@ -35,21 +35,22 @@ distclean: clean
+@@ -35,21 +35,21 @@ distclean: clean
  devclean: distclean
  
  install:
@@ -32,7 +32,6 @@ Adjustments to build procedure.
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/ssi
 -	$(INSTALL) -m 664 $(INSTALL_OPTS) robots.txt $(DESTDIR)$(HTMLDIR)
 -#	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
-+	$(BSD_INSTALL_DATA_DIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/media
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/stylesheets
@@ -51,7 +50,7 @@ Adjustments to build procedure.
  # Remove old HTML files (PHP files are used now)
  	rm -f $(DESTDIR)$(HTMLDIR)/index.html
  	rm -f $(DESTDIR)$(HTMLDIR)/main.html
-@@ -58,35 +59,35 @@ install:
+@@ -58,35 +58,35 @@ install:
  	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-corefeed.html $(DESTDIR)$(HTMLDIR)
  	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-newsfeed.html $(DESTDIR)$(HTMLDIR)
  	for file in *.php; \
