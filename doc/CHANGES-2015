@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1695 2015/04/08 05:26:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1696 2015/04/08 05:32:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2308,3 +2308,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/smartmontools to 6.3 [rodent 2015-04-08]
 	Updated net/ntp4 to 4.2.8p2 [taca 2015-04-08]
 	Updated net/tor to 0.2.5.12 [wiz 2015-04-08]
+	Updated mail/msmtp to 1.6.1 [wiz 2015-04-08]
