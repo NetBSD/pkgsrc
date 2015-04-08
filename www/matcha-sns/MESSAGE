@@ -1,0 +1,79 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/04/08 19:11:09 ryoon Exp $
+
+To use Matcha SNS with Apache httpd 2.2, you will need to perform
+the following steps.
+
+1. Install www/apache22 and www/ap-php .
+
+2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
+   If your machine are located in Tokyo, Japan, you should get the following.
+
+	# cat ${PREFIX}/etc/php.ini | grep date.timezone
+	date.timezone = "Asia/Tokyo"
+
+3. Install MySQL database server.
+
+	# cd databases/mysql55-server
+	# make install
+
+4. Start MySQL server, and setup MySQL server
+
+	# ${RCD_SCRIPTS_DIR}/mysqld start
+	And see messages.
+
+5. Add MySQL user, matchasns
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create user matchasns identified by 'matchasns_user_password';
+	> quit
+
+6. Create database for Sencha SNS
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create database matchasns_db;
+	> grant SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER
+	on matchasns_db.* to matchasns@localhost identified by 'matchasns_password';
+	> quit
+
+7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	extension=gd.so
+	extension=mbstring.so
+	extension=mysql.so
+
+8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	LoadModule rewrite_module lib/httpd/mod_rewrite.so
+	DocumentRoot "${PREFIX}/share/matcha-sns"
+	LoadModule php5_module lib/httpd/mod_php5.so
+	AddType application/x-httpd-php .php
+	<Directory ${PREFIX}/share/matcha-sns>
+		DirectoryIndex index.php
+		Options All
+		Allow from All
+		AllowOverride All
+		Require all granted
+	</Directory>
+
+9. Start Apache httpd 2.2
+
+        # ${RCD_SCRIPTS_DIR}/apache start
+
+10. Set salt and seed in ${PREFIX}/share/matcha-sns/app/config/core.php
+
+	Replace DYhG93b0qyIfIxfs2guVoUubWwvniR2G0FgaC9mi with the output of
+	$ cat /dev/urandom | tr -dc "a-zA-Z0-9" | fold -w 40 | head -n 1
+	and
+	Replace 76859309657198048034862324894 with the output of
+	$ cat /dev/urandom | tr -dc "0-9" | fold -w 30 | head -n 1
+
+11. Access http://localhost/matcha-sns/index.php
+   And setup with the following information.
+
+	database name:	matchasns_db
+	user name:	matchasns
+	password:	matchasns_password
+===========================================================================
