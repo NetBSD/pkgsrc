@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/04/06 08:17:19 adam Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/08 10:31:28 nros Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -83,7 +83,7 @@ LDFLAGS+=		-lresolv
 .  endif
 .elif ${OPSYS} == "Linux"
 LDFLAGS+=		-ldl
-.elif ${OPSYS} == "NetBSD"
+.elif ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 .  if exists(/usr/lib/libexecinfo.so)
 LDFLAGS+=		-lexecinfo
 .  endif
