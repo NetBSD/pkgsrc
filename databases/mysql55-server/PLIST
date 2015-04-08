@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2015/02/07 10:13:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/04/08 10:38:01 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -4119,6 +4119,7 @@ share/mysql/test/suite/rpl/r/rpl_sp.result
 share/mysql/test/suite/rpl/r/rpl_sp004.result
 share/mysql/test/suite/rpl/r/rpl_sp_effects.result
 share/mysql/test/suite/rpl/r/rpl_spec_variables.result
+share/mysql/test/suite/rpl/r/rpl_special_charset.result
 share/mysql/test/suite/rpl/r/rpl_sporadic_master.result
 share/mysql/test/suite/rpl/r/rpl_ssl.result
 share/mysql/test/suite/rpl/r/rpl_ssl1.result
@@ -4522,6 +4523,9 @@ share/mysql/test/suite/rpl/t/rpl_sp_effects-slave.opt
 share/mysql/test/suite/rpl/t/rpl_sp_effects.test
 share/mysql/test/suite/rpl/t/rpl_spec_variables-slave.opt
 share/mysql/test/suite/rpl/t/rpl_spec_variables.test
+share/mysql/test/suite/rpl/t/rpl_special_charset-master.opt
+share/mysql/test/suite/rpl/t/rpl_special_charset-slave.opt
+share/mysql/test/suite/rpl/t/rpl_special_charset.test
 share/mysql/test/suite/rpl/t/rpl_sporadic_master-master.opt
 share/mysql/test/suite/rpl/t/rpl_sporadic_master.test
 share/mysql/test/suite/rpl/t/rpl_ssl.test
@@ -4641,8 +4645,6 @@ share/mysql/test/suite/sys_vars/inc/range_alloc_block_size_basic.inc
 share/mysql/test/suite/sys_vars/inc/rpl_recovery_rank_basic.inc
 share/mysql/test/suite/sys_vars/inc/slave_transaction_retries_basic.inc
 share/mysql/test/suite/sys_vars/inc/sort_buffer_size_basic.inc
-share/mysql/test/suite/sys_vars/inc/transaction_alloc_block_size_basic.inc
-share/mysql/test/suite/sys_vars/inc/transaction_prealloc_size_basic.inc
 share/mysql/test/suite/sys_vars/r/all_vars.result
 share/mysql/test/suite/sys_vars/r/auto_increment_increment_basic.result
 share/mysql/test/suite/sys_vars/r/auto_increment_increment_func.result
@@ -5090,10 +5092,8 @@ share/mysql/test/suite/sys_vars/r/timestamp_func.result
 share/mysql/test/suite/sys_vars/r/timestamp_sysdate_is_now_func.result
 share/mysql/test/suite/sys_vars/r/tmp_table_size_basic.result
 share/mysql/test/suite/sys_vars/r/tmpdir_basic.result
-share/mysql/test/suite/sys_vars/r/transaction_alloc_block_size_basic_32.result
-share/mysql/test/suite/sys_vars/r/transaction_alloc_block_size_basic_64.result
-share/mysql/test/suite/sys_vars/r/transaction_prealloc_size_basic_32.result
-share/mysql/test/suite/sys_vars/r/transaction_prealloc_size_basic_64.result
+share/mysql/test/suite/sys_vars/r/transaction_alloc_block_size_basic.result
+share/mysql/test/suite/sys_vars/r/transaction_prealloc_size_basic.result
 share/mysql/test/suite/sys_vars/r/tx_isolation_basic.result
 share/mysql/test/suite/sys_vars/r/tx_isolation_func.result
 share/mysql/test/suite/sys_vars/r/unique_checks_basic.result
@@ -5602,10 +5602,8 @@ share/mysql/test/suite/sys_vars/t/timestamp_sysdate_is_now_func-master.opt
 share/mysql/test/suite/sys_vars/t/timestamp_sysdate_is_now_func.test
 share/mysql/test/suite/sys_vars/t/tmp_table_size_basic.test
 share/mysql/test/suite/sys_vars/t/tmpdir_basic.test
-share/mysql/test/suite/sys_vars/t/transaction_alloc_block_size_basic_32.test
-share/mysql/test/suite/sys_vars/t/transaction_alloc_block_size_basic_64.test
-share/mysql/test/suite/sys_vars/t/transaction_prealloc_size_basic_32.test
-share/mysql/test/suite/sys_vars/t/transaction_prealloc_size_basic_64.test
+share/mysql/test/suite/sys_vars/t/transaction_alloc_block_size_basic.test
+share/mysql/test/suite/sys_vars/t/transaction_prealloc_size_basic.test
 share/mysql/test/suite/sys_vars/t/tx_isolation_basic.test
 share/mysql/test/suite/sys_vars/t/tx_isolation_func-master.opt
 share/mysql/test/suite/sys_vars/t/tx_isolation_func.test
