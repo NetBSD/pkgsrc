@@ -1,10 +1,10 @@
-$NetBSD: patch-os__netbsd.cpp,v 1.1 2012/07/20 12:35:00 taca Exp $
+$NetBSD: patch-os__netbsd.cpp,v 1.2 2015/04/08 01:43:33 rodent Exp $
 
 Use a raw disk device file on NetBSD.
 
---- os_netbsd.cpp.orig	2009-07-15 19:59:19.000000000 +0000
+--- os_netbsd.cpp.orig	2013-03-29 20:17:03.000000000 +0000
 +++ os_netbsd.cpp
-@@ -55,7 +55,7 @@ printwarning(int msgNo, const char *extr
+@@ -57,7 +57,7 @@ printwarning(int msgNo, const char *extr
    return;
  }
  
