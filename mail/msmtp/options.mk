@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.13 2012/06/12 15:45:58 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2015/04/08 05:31:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 
-PKG_SUPPORTED_OPTIONS=	gnome-keyring gsasl idn inet6 scripts
+PKG_SUPPORTED_OPTIONS=	gsasl idn inet6 scripts secret
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -48,14 +48,14 @@ CONFIGURE_ARGS+=	--without-libidn
 .endif
 
 ###
-### GNOME keyring support
+### GNOME keyring support (via libsecret)
 ###
-.if !empty(PKG_OPTIONS:Mgnome-keyring)
-.  include "../../security/gnome-keyring/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gnome-keyring
+.if !empty(PKG_OPTIONS:Msecret)
+.  include "../../security/libsecret/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libsecret
 USE_TOOLS+=		pkg-config
 .else
-CONFIGURE_ARGS+=	--without-gnome-keyring
+CONFIGURE_ARGS+=	--without-libsecret
 .endif
 
 ###
@@ -65,7 +65,6 @@ CONFIGURE_ARGS+=	--without-gnome-keyring
 CHECK_INTERPRETER_SKIP+=	share/msmtp/find_alias/find_alias_for_msmtp.sh \
 				share/msmtp/msmtpq/msmtp-queue \
 				share/msmtp/msmtpq/msmtpq \
-				share/msmtp/msmtp-gnome-tool/msmtp-gnome-tool.py \
 				share/msmtp/msmtpqueue/msmtp-enqueue.sh \
 				share/msmtp/msmtpqueue/msmtp-listqueue.sh \
 				share/msmtp/msmtpqueue/msmtp-runqueue.sh \
@@ -75,7 +74,7 @@ USE_TOOLS+=		pax
 INSTALLATION_DIRS+=	share/msmtp
 install-msmtp-scripts:
 	cd ${WRKSRC}/scripts && \
-		pax -rw find_alias msmtp-gnome-tool msmtpq msmtpqueue \
+		pax -rw find_alias msmtpq msmtpqueue \
 			set_sendmail vim \
 			${DESTDIR}${PREFIX}/share/msmtp
 .else
