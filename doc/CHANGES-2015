@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1693 2015/04/08 01:44:15 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1694 2015/04/08 03:32:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/php-memcached to 2.2.0nb1 [rodent 2015-04-07]
 	Added www/php-propro version 1.0.0 [rodent 2015-04-07]
 	Updated sysutils/smartmontools to 6.3 [rodent 2015-04-08]
+	Updated net/ntp4 to 4.2.8p2 [taca 2015-04-08]
