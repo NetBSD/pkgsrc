@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/01/20 16:23:59 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/08 05:43:48 wiz Exp $
 
 DISTNAME=	pgfplots
-PKGNAME=	tex-${DISTNAME}-1.4.1
-TEXLIVE_REV=	19839
+PKGNAME=	tex-${DISTNAME}-1.12
+TEXLIVE_REV=	36178
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX package to create normal/logarithmic plots
