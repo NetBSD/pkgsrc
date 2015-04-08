@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1697 2015/04/08 05:44:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1698 2015/04/08 06:48:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2311,3 +2311,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/msmtp to 1.6.1 [wiz 2015-04-08]
 	Updated print/tex-pgfplots to 1.12 [wiz 2015-04-08]
 	Updated print/tex-pgfplots-doc to 1.12 [wiz 2015-04-08]
+	Updated www/p5-Mojolicious to 6.07 [wen 2015-04-08]
