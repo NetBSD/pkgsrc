@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/04/03 09:28:20 mrg Exp $
+$NetBSD: distinfo,v 1.19 2015/04/08 10:31:28 nros Exp $
 
 SHA1 (qtbase-opensource-src-5.4.0.tar.xz) = 2e3d32f32e36a92782ca66c260940824746900bd
 RMD160 (qtbase-opensource-src-5.4.0.tar.xz) = 0df3e024b331c705e895fb5bb76cacd71c6e4909
@@ -18,7 +18,7 @@ SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = c206e4bea1a25b9c8dc301b0cc7a66
 SHA1 (patch-src_corelib_global_qsystemdetection.h) = 9bdf20f66818ca1dd2a825a749109ad5fbcb2180
 SHA1 (patch-src_corelib_io_io.pri) = c4bb37370849bfbc994809825ff94090d71a7116
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = 7732cae95975af17e0618667b979c3b84d51adae
-SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 271f12fc32ffea7c72e62e8add20abf6939b275a
+SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 0bdd882056e4015cd2277c5b53451c563895b3e7
 SHA1 (patch-src_gui_image_qbmphandler.cpp) = 1e540711365f056657100ec84b22789e60443c98
 SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 0335273353daa7c980ccb4febb6eed11b452e50d
 SHA1 (patch-src_platformsupport_platformsupport.pro) = 2aa60936578458cf241ca893771897f7d34fe081
