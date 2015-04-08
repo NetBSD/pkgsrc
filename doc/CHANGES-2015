@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1701 2015/04/08 16:24:15 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1702 2015/04/08 18:25:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql56-client to 5.6.24 [adam 2015-04-08]
 	Updated databases/mysql56-server to 5.6.24 [adam 2015-04-08]
 	Updated devel/cfitsio to 3.370 [hiramatsu 2015-04-08]
+	Updated mail/thunderbird to 31.6.0 [ryoon 2015-04-08]
