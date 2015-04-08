@@ -1,6 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.1 2015/04/02 22:24:11 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.2 2015/04/08 02:58:16 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
 
 Created pkgsrc-2015Q1 branch [agc 2015-04-02 22:06 UTC]
+
+Pullup ticket #4655 - requested by he
+graphics/ImageMagick: security update
