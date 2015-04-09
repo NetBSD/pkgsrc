@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/01/15 09:37:05 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/04/09 10:40:12 wiz Exp $
 
 SHA1 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = 7b0ba199a95aba9648be1f08bbaa66d39aa1ae67
 RMD160 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = a6f7fc419dc7655689c25be5c24c697321f3f614
@@ -84,3 +84,9 @@ Size (suse131/pango-tools-1.36.0-1.1.i586.rpm) = 44314 bytes
 SHA1 (suse131/pango-tools-1.36.0-1.1.x86_64.rpm) = 34652818830481e6fe223d479a7ff53c6d3859b6
 RMD160 (suse131/pango-tools-1.36.0-1.1.x86_64.rpm) = aad59424604ceddc324ac988799efe4b74335ea7
 Size (suse131/pango-tools-1.36.0-1.1.x86_64.rpm) = 44764 bytes
+SHA1 (suse131/shared-mime-info-1.1-2.1.3.i586.rpm) = 7eff3da3a6b87c94e828fbd94ab10477b49aecf3
+RMD160 (suse131/shared-mime-info-1.1-2.1.3.i586.rpm) = 9a742342dd01b64bb6057f86653955ce8b7ca93e
+Size (suse131/shared-mime-info-1.1-2.1.3.i586.rpm) = 361539 bytes
+SHA1 (suse131/shared-mime-info-1.1-2.1.3.x86_64.rpm) = cef21855332613e6a2692ac133e15a8652ff80a6
+RMD160 (suse131/shared-mime-info-1.1-2.1.3.x86_64.rpm) = 0a5c9a9a8225fe309eaf3d31ca1f5b1a7e99f794
+Size (suse131/shared-mime-info-1.1-2.1.3.x86_64.rpm) = 362041 bytes
