@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1711 2015/04/09 06:36:07 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1712 2015/04/09 09:35:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Git-Repository to 1.313 [mef 2015-04-09]
 	Updated devel/p5-Git-Wrapper to 0.044 [mef 2015-04-09]
 	Updated chat/ejabberd to 15.03 [fhajny 2015-04-09]
+	Added textproc/heirloom-doctools version 150406 [wiz 2015-04-09]
