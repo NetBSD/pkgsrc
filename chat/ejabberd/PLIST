@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2015/02/20 21:06:52 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.30 2015/04/09 06:35:53 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -37,6 +37,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_hooks.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_bind.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_poll.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_ws.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_listener.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_local.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_logger.beam
@@ -55,6 +56,9 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_in.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_out.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_service.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_mnesia.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_odbc.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_redis.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_socket.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_stun.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sup.beam
@@ -63,6 +67,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_tmp_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_update.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_web.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_web_admin.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_websocket.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_xmlrpc.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejd2odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/eldap.beam
@@ -85,6 +90,7 @@ lib/erlang/lib/${PKGNAME}/ebin/esip_tmp_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/esip_transaction.beam
 lib/erlang/lib/${PKGNAME}/ebin/esip_transport.beam
 lib/erlang/lib/${PKGNAME}/ebin/esip_udp_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/ext_mod.beam
 lib/erlang/lib/${PKGNAME}/ebin/extauth.beam
 lib/erlang/lib/${PKGNAME}/ebin/ezlib.beam
 lib/erlang/lib/${PKGNAME}/ebin/ezlib_app.beam
@@ -275,6 +281,7 @@ lib/erlang/lib/${PKGNAME}/include/ejabberd_commands.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_ctl.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_http.hrl
+lib/erlang/lib/${PKGNAME}/include/ejabberd_sm.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_web_admin.hrl
 lib/erlang/lib/${PKGNAME}/include/eldap.hrl
 lib/erlang/lib/${PKGNAME}/include/esip.hrl
@@ -294,6 +301,8 @@ lib/erlang/lib/${PKGNAME}/include/stun.hrl
 lib/erlang/lib/${PKGNAME}/include/xml.hrl
 lib/erlang/lib/${PKGNAME}/include/xml_gen.hrl
 lib/erlang/lib/${PKGNAME}/priv/bin/captcha.sh
+lib/erlang/lib/${PKGNAME}/priv/bin/joincluster
+lib/erlang/lib/${PKGNAME}/priv/bin/leavecluster
 lib/erlang/lib/${PKGNAME}/priv/jiffy.so
 lib/erlang/lib/${PKGNAME}/priv/lib/esip_drv.so
 lib/erlang/lib/${PKGNAME}/priv/lib/expat_erl.so
