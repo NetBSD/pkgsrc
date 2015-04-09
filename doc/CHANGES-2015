@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1713 2015/04/09 10:17:25 hiramatsu Exp $
+$NetBSD: CHANGES-2015,v 1.1714 2015/04/09 10:40:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2355,3 +2355,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/ejabberd to 15.03 [fhajny 2015-04-09]
 	Added textproc/heirloom-doctools version 150406 [wiz 2015-04-09]
 	Updated sysutils/duplicity to 0.6.25 [hiramatsu 2015-04-09]
+	Updated emulators/suse131_gtk2 to 13.1nb6 [wiz 2015-04-09]
