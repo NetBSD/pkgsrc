@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2015/03/12 16:35:39 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2015/04/09 15:20:47 manu Exp $
 
-DISTNAME=	glusterfs-3.6.0
+DISTNAME=	glusterfs-3.6.2
 #PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
@@ -95,11 +95,6 @@ CONFIGURE_ARGS+=	--enable-debug
 #LIBS+=-lgc
 
 .include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=	mmx
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PLIST.mmx=	yes
-.endif
 
 #.include "../../devel/argp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
