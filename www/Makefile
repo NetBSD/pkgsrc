@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1100 2015/04/08 19:12:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.1101 2015/04/09 06:16:32 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -805,8 +805,8 @@ SUBDIR+=	wordpress
 SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
-SUBDIR+=	yaws
 SUBDIR+=	yahttp
+SUBDIR+=	yaws
 SUBDIR+=	zopeedit
 
 .include "../mk/misc/category.mk"
