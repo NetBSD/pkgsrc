@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1709 2015/04/08 19:57:34 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1710 2015/04/09 01:39:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2333,3 +2333,22 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed www/sencha-sns [ryoon 2015-04-08]
 	Added www/matcha-sns version 1.3.6 [ryoon 2015-04-08]
 	Updated www/php-http to 2.4.3 [fhajny 2015-04-08]
+	Updated devel/p5-CPAN-Meta-YAML to 0.014 [mef 2015-04-09]
+	Updated devel/p5-CPAN-Perl-Releases to 2.12 [mef 2015-04-09]
+	Updated devel/p5-CPAN-Reporter to 1.2014 [mef 2015-04-09]
+	Updated devel/p5-Class-MethodMaker to 2.24 [mef 2015-04-09]
+	Updated devel/p5-Config-AutoConf to 0.311 [mef 2015-04-09]
+	Updated devel/p5-Config-MVP to 2.200010 [mef 2015-04-09]
+	Updated devel/p5-Data-Integer to 0.005 [mef 2015-04-09]
+	Updated devel/p5-Data-Peek to 0.44 [mef 2015-04-09]
+	Updated devel/p5-Devel-Cover to 1.18 [mef 2015-04-09]
+	Updated devel/p5-Devel-Declare to 0.006018 [mef 2015-04-09]
+	Updated devel/p5-Devel-NYTProf to 6.01 [mef 2015-04-09]
+	Updated devel/p5-Devel-PatchPerl to 1.32 [mef 2015-04-09]
+	Updated devel/p5-Devel-Size to 0.80 [mef 2015-04-09]
+	Updated devel/p5-Dist-Zilla to 5.034 [mef 2015-04-09]
+	Updated devel/p5-File-BaseDir to 0.06 [mef 2015-04-09]
+	Updated devel/p5-File-Find-Rule-Perl to 1.15 [mef 2015-04-09]
+	Updated devel/p5-FileHandle-Unget to 0.1625 [mef 2015-04-09]
+	Updated devel/p5-Git-Repository to 1.313 [mef 2015-04-09]
+	Updated devel/p5-Git-Wrapper to 0.044 [mef 2015-04-09]
