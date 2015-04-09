@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1 2013/12/05 11:42:15 obache Exp $
+# $NetBSD: INSTALL,v 1.2 2015/04/09 10:40:12 wiz Exp $
 #
 # Initialize gtk/pango module configuration.
 #
@@ -14,6 +14,7 @@ POST-INSTALL)
 	${GNOME_BINDIR}/gdk-pixbuf-query-loaders@BINSUFFIX@ --update-cache
 	${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ --update-cache
 	${GNOME_BINDIR}/gio-querymodules@BINSUFFIX@ ${GNOME_LIBDIR}/gio/modules
+	${GNOME_BINDIR}/update-mime-database ${GNOME_LIBDIR}/../share/mime
 	${MKDIR} -p ${PKG_PREFIX}/@EMULSUBDIR@/var/lock
 	;;
 esac
