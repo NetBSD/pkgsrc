@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/21 10:05:45 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2015/04/09 01:05:02 mef Exp $
 
-SHA1 (Data-Integer-0.004.tar.gz) = 9d3c8fc0ceb11b80a19bf14364072a0479caa6a5
-RMD160 (Data-Integer-0.004.tar.gz) = 5e274484755fd5ea9650a93111105b931ae6f2e2
-Size (Data-Integer-0.004.tar.gz) = 24515 bytes
+SHA1 (Data-Integer-0.005.tar.gz) = c6ca718ff8e9cfd7defcbd76a6df8debf224e259
+RMD160 (Data-Integer-0.005.tar.gz) = 62267d1663a83d8369ecaa338edfeda1ba95303d
+Size (Data-Integer-0.005.tar.gz) = 24695 bytes
