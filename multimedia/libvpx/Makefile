@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/04/09 17:09:01 tron Exp $
+# $NetBSD: Makefile,v 1.53 2015/04/09 17:44:01 tron Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -96,7 +96,7 @@ CXXFLAGS+=	-std=c++11
 .  if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
 # https://bugzilla.mozilla.org/show_bug.cgi?id=982693
 SUBST_CLASSES+=		clang
-SUBST_STAGE.clang=	post-patch
+SUBST_STAGE.clang=	pre-configure
 SUBST_FILES.clang=	build/make/Makefile
 SUBST_SED.clang=	-e 's/-DINLINE_ASM/-DINLINE_ASM -fno-integrated-as/'
 .  endif
