@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2014/05/12 20:39:33 riz Exp $
+# $NetBSD: Makefile,v 1.29 2015/04/09 10:16:35 hiramatsu Exp $
 
-DISTNAME=		duplicity-0.6.24
+DISTNAME=		duplicity-0.6.25
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://code.launchpad.net/duplicity/0.6-series/${PKGVERSION_NOREV}/+download/
 
