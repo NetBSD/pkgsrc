@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/02/16 10:15:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/09 10:40:12 wiz Exp $
 
 PKGNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 RPMPKGS+=	libcairo2-1.12.16-3.1.3.${SUSE_ARCH}
 RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.30.1-20.1.${SUSE_ARCH}
@@ -17,11 +17,12 @@ RPMPKGS+=	libpango-1_0-0-1.36.0-1.1.${SUSE_ARCH}
 RPMPKGS+=	libpangox-1_0-0-0.0.2-4.1.3.${SUSE_ARCH}
 RPMPKGS+=	libharfbuzz0-0.9.21-1.3.${SUSE_ARCH}
 RPMPKGS+=	libgraphite2-3-1.2.0-6.1.2.${SUSE_ARCH}
+RPMPKGS+=	shared-mime-info-1.1-2.1.3.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for GTK+-2.x
 
-EMUL_MODULES.linux=	fontconfig freetype2 glib2 glx jpeg png tiff x11
+EMUL_MODULES.linux=	fontconfig freetype2 glib2 glx jpeg xml2 png tiff x11
 
 # These files are managed by the +INSTALL/+DEINSTALL scripts.
 CHECK_FILES_SKIP+=	${EMULDIR}/lib${ABISUFFIX}/gtk-2.0/2.10.0/gtk.immodules
