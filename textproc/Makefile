@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.825 2015/04/02 22:38:37 rodent Exp $
+# $NetBSD: Makefile,v 1.826 2015/04/09 09:35:21 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -191,6 +191,7 @@ SUBDIR+=	heirloom-col
 SUBDIR+=	heirloom-comm
 SUBDIR+=	heirloom-cut
 SUBDIR+=	heirloom-diff3
+SUBDIR+=	heirloom-doctools
 SUBDIR+=	heirloom-ed
 SUBDIR+=	heirloom-fmt
 SUBDIR+=	heirloom-fold
