@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1710 2015/04/09 01:39:31 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1711 2015/04/09 06:36:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2352,3 +2352,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-FileHandle-Unget to 0.1625 [mef 2015-04-09]
 	Updated devel/p5-Git-Repository to 1.313 [mef 2015-04-09]
 	Updated devel/p5-Git-Wrapper to 0.044 [mef 2015-04-09]
+	Updated chat/ejabberd to 15.03 [fhajny 2015-04-09]
