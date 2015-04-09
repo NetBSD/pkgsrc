@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2015/02/21 11:03:53 fhajny Exp $
+# $NetBSD: Makefile,v 1.51 2015/04/09 06:35:53 fhajny Exp $
 
-DISTNAME=	ejabberd-15.02
+DISTNAME=	ejabberd-15.03
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 DISTFILES=	${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
 SITES.${DISTNAME}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
