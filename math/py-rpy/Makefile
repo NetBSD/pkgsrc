@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/04/07 22:14:18 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/04/10 08:36:30 wiz Exp $
 
 DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -15,6 +15,19 @@ USE_LANGUAGES+=		c fortran77
 BUILDLINK_API_DEPENDS.R+= R>=2.11.0
 
 LDFLAGS.SunOS+=		-mimpure-text
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26 # doesn't find R
+
+.include "../../lang/python/pyversion.mk"
+
+PLIST_VARS=	sd
+.if ${PYPKGPREFIX} == "py26" || ${PYPKGPREFIX} == "py27" || ${PYPKGPREFIX} == "py33"
+PLIST.sd=	yes
+DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
+.endif
+.if ${PYPKGPREFIX} == "py26"
+DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
+.endif
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
