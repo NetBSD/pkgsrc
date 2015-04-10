@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/09/02 09:41:56 pho Exp $
+# $NetBSD: Makefile,v 1.18 2015/04/10 22:01:43 rodent Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -13,6 +13,7 @@ COMMENT=		GNU Compiler Collection 4.5
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 USE_TOOLS+=		awk:run bash:run chmod gmake:run makeinfo sed:run
+GCC_REQD+=		4.4
 
 GCC_VERSION=		4.5.3
 
