@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/04/07 12:32:59 dsainty Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/10 02:53:20 dsainty Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -70,9 +70,9 @@ PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ENV+=		OPT_NETPBM=yes
 CONFIGURE_ENV+=		PATH_NETPBM=${PREFIX}/bin/pnmscale
 
-.include "../../multimedia/ffmpeg010/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg010}
-CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg010}/bin/ffmpeg010
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
+CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg2}/bin/ffmpeg2
 CONFIGURE_ENV+=		OPT_FFMPEG=yes
 
 # The backtrace requires Linux's unportable <execinfo.h> header.
