@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/01/26 19:38:09 rhaen Exp $
+$NetBSD: distinfo,v 1.6 2015/04/10 01:34:01 mef Exp $
 
-SHA1 (Net-Netmask-1.9016.tar.gz) = f645722c09a1fcccdc6059623147a895f9f165d7
-RMD160 (Net-Netmask-1.9016.tar.gz) = a42da72aecc28df3cd93a23645e389ce311efaeb
-Size (Net-Netmask-1.9016.tar.gz) = 17911 bytes
+SHA1 (Net-Netmask-1.9021.tar.gz) = 2b395b10b51cdef2b224085fd0009fbb17724771
+RMD160 (Net-Netmask-1.9021.tar.gz) = 41417de89369098ec6376456b858af2b8d9de105
+Size (Net-Netmask-1.9021.tar.gz) = 18655 bytes
