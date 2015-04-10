@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/03/12 14:56:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/10 00:32:08 rodent Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -25,6 +25,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo sed:run
 GNU_CONFIGURE=		yes
+GCC_REQD+=		4.4
 ## Build outside ${WRKSRC}
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
