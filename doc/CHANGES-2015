@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1718 2015/04/10 01:48:45 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1719 2015/04/10 01:55:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2372,3 +2372,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-PPIx-Regexp to 0.039 [mef 2015-04-10]
 	Updated devel/p5-Perl-PrereqScanner to 1.023 [mef 2015-04-10]
 	Updated mail/dnsbl-milter to 6.45 [mef 2015-04-10]
+	Updated math/isl to 0.14.1 [mef 2015-04-10]
