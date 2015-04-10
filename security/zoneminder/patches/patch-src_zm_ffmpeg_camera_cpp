@@ -1,0 +1,18 @@
+$NetBSD: patch-src_zm_ffmpeg_camera_cpp,v 1.1 2015/04/10 02:58:49 dsainty Exp $
+
+Replace the non-portable pthread_tryjoin_np() with pthread_join(), assessed
+as a reasonable patch by the original author.
+
+https://github.com/ZoneMinder/ZoneMinder/commit/7534557533a7347f4901a139c2b698e76aaf164d
+
+--- src/zm_ffmpeg_camera.cpp.orig	2015-04-09 12:31:49.987117639 +1200
++++ src/zm_ffmpeg_camera.cpp	2015-04-09 14:40:54.059009480 +1200
+@@ -120,7 +120,7 @@
+         void *retval = 0;
+         int ret;
+         
+-        ret = pthread_tryjoin_np(mReopenThread, &retval);
++        ret = pthread_join(mReopenThread, &retval);
+         if (ret != 0){
+             Error("Could not join reopen thread.");
+         }
