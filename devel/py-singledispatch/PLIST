@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/10 08:25:31 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/singledispatch.py
+${PYSITELIB}/singledispatch.pyc
+${PYSITELIB}/singledispatch.pyo
+${PYSITELIB}/singledispatch_helpers.py
+${PYSITELIB}/singledispatch_helpers.pyc
+${PYSITELIB}/singledispatch_helpers.pyo
