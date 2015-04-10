@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/11/22 03:07:12 mef Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/10 01:48:37 mef Exp $
 #
 
-VERSION=	6.44
+VERSION=	6.45
 PKGNAME=	dnsbl-milter-${VERSION}
 DISTNAME=	dnsbl-${VERSION}
 CATEGORIES=	mail
