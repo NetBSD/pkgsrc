@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1725 2015/04/10 08:41:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1726 2015/04/10 14:25:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2379,3 +2379,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 37.0.1nb1 [martin 2015-04-10]
 	Added devel/py-singledispatch version 3.4.0.3 [wiz 2015-04-10]
 	Updated math/py-rpy to 2.5.6nb1 [wiz 2015-04-10]
+	Updated misc/calibre to 2.24.0 [wiz 2015-04-10]
