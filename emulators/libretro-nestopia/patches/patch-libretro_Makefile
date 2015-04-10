@@ -1,0 +1,16 @@
+$NetBSD: patch-libretro_Makefile,v 1.1 2015/04/10 03:16:18 snj Exp $
+
+Don't pass -O3 unconditionally.
+
+--- libretro/Makefile.orig	2015-04-09 20:00:41.000000000 -0700
++++ libretro/Makefile	2015-04-09 20:00:50.000000000 -0700
+@@ -196,9 +196,6 @@ ifeq ($(DEBUG), 1)
+ else ifeq ($(platform), ps3)
+ 	CFLAGS += -O2
+ 	CXXFLAGS += -O2
+-else
+-	CFLAGS += -O3
+-	CXXFLAGS += -O3
+ endif
+ 
+ CORE_DIR = ..
