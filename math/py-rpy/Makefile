@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2015/04/10 08:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2015/04/10 08:41:42 wiz Exp $
 
 DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/r/rpy2/
 
@@ -17,6 +18,7 @@ BUILDLINK_API_DEPENDS.R+= R>=2.11.0
 LDFLAGS.SunOS+=		-mimpure-text
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 # doesn't find R
+REPLACE_PYTHON=			rpy/tests.py
 
 .include "../../lang/python/pyversion.mk"
 
@@ -31,6 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/R/buildlink3.mk"
