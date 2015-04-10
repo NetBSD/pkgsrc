@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1720 2015/04/10 02:51:08 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1721 2015/04/10 03:13:49 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2374,3 +2374,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/dnsbl-milter to 6.45 [mef 2015-04-10]
 	Updated math/isl to 0.14.1 [mef 2015-04-10]
 	Updated devel/hdf5 to 1.8.14 [wen 2015-04-10]
+	Updated security/zoneminder to 1.28.1nb1 [dsainty 2015-04-10]
