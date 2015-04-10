@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2077 2015/04/07 11:25:02 rodent Exp $
+# $NetBSD: Makefile,v 1.2078 2015/04/10 08:25:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1674,6 +1674,7 @@ SUBDIR+=	py-rply
 SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_trial
+SUBDIR+=	py-singledispatch
 SUBDIR+=	py-speaklater
 SUBDIR+=	py-spwd
 SUBDIR+=	py-stompclient
