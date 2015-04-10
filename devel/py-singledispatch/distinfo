@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/10 08:25:31 wiz Exp $
+
+SHA1 (singledispatch-3.4.0.3.tar.gz) = f93241b06754a612af8bb7aa208c4d1805637022
+RMD160 (singledispatch-3.4.0.3.tar.gz) = 295bbb6dfbd20607ec73869f6ad4ba1b2cd8157d
+Size (singledispatch-3.4.0.3.tar.gz) = 9529 bytes
