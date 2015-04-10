@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1716 2015/04/09 15:35:01 manu Exp $
+$NetBSD: CHANGES-2015,v 1.1717 2015/04/10 01:42:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2358,3 +2358,16 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/suse131_gtk2 to 13.1nb6 [wiz 2015-04-09]
 	Updated emulators/suse131_32_gtk2 to 13.1nb6 [wiz 2015-04-09]
 	Updated filesystems/glusterfs to 3.6.2 [manu 2015-04-09]
+	Updated devel/p5-IO-Multiplex to 1.15 [mef 2015-04-10]
+	Updated devel/p5-Lexical-SealRequireHints to 0.009 [mef 2015-04-10]
+	Updated devel/p5-Log-Any to 1.03.2 [mef 2015-04-10]
+	Updated devel/p5-Mixin-Linewise to 0.108 [mef 2015-04-10]
+	Updated devel/p5-Module-CoreList to 5.20150320 [mef 2015-04-10]
+	Updated devel/p5-MooX-Log-Any to 0.004002 [mef 2015-04-10]
+	Updated devel/p5-MooseX-App to 1.32 [mef 2015-04-10]
+	Updated devel/p5-MooseX-Types-Common to 0.001013 [mef 2015-04-10]
+	Updated devel/p5-MooseX-Types-Structured to 0.33 [mef 2015-04-10]
+	Updated devel/p5-MouseX-Getopt to 0.36 [mef 2015-04-10]
+	Updated devel/p5-Net-Netmask to 1.9021 [mef 2015-04-10]
+	Updated devel/p5-PPIx-Regexp to 0.039 [mef 2015-04-10]
+	Updated devel/p5-Perl-PrereqScanner to 1.023 [mef 2015-04-10]
