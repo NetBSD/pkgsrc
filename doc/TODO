@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14307 2015/04/10 02:51:02 rodent Exp $
+$NetBSD: TODO,v 1.14308 2015/04/10 02:52:47 wen Exp $
 
 Suggested new packages
 ======================
@@ -676,7 +676,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hanzim-3.5
 	o haskell-mode-1.45
 	o hdf-4.2.8
-	o hdf5-1.8.14
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.5
