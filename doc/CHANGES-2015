@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1724 2015/04/10 08:25:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1725 2015/04/10 08:41:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/libretro-nestopia version 20150319 [snj 2015-04-10]
 	Updated www/firefox to 37.0.1nb1 [martin 2015-04-10]
 	Added devel/py-singledispatch version 3.4.0.3 [wiz 2015-04-10]
+	Updated math/py-rpy to 2.5.6nb1 [wiz 2015-04-10]
