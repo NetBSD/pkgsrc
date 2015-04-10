@@ -1,17 +1,15 @@
-$NetBSD: patch-hl_examples_Makefile.in,v 1.1 2011/10/07 10:38:52 alnsn Exp $
-
-Fix paths to examples.
-
---- hl/examples/Makefile.in.orig	2011-05-10 14:20:48.000000000 +0000
+$NetBSD: patch-hl_examples_Makefile.in,v 1.2 2015/04/10 02:49:56 wen Exp $
+Fix EXAMPLEDIR
+--- hl/examples/Makefile.in.orig	2015-04-10 09:53:27.000000000 +0000
 +++ hl/examples/Makefile.in
-@@ -362,8 +362,8 @@ CHECK_CLEANFILES = *.chkexe *.chklog *.c
+@@ -614,8 +614,8 @@ CHECK_CLEANFILES = *.chkexe *.chklog *.c
  
  # Example directory
  # Note: no '/' after DESTDIR.  Explanation in commence.am
 -EXAMPLEDIR = ${DESTDIR}$(exec_prefix)/share/hdf5_examples/hl/c
 -EXAMPLETOPDIR = ${DESTDIR}$(exec_prefix)/share/hdf5_examples/hl
-+EXAMPLEDIR = ${DESTDIR}$(prefix)/share/examples/hdf5/hl/c
-+EXAMPLETOPDIR = ${DESTDIR}$(prefix)/share/examples/hdf5/hl
++EXAMPLEDIR = ${DESTDIR}$(prefix)/share/hdf5_examples/hl/c
++EXAMPLETOPDIR = ${DESTDIR}$(prefix)/share/hdf5_examples/hl
+ INSTALL_SCRIPT_FILES = run-hlc-ex.sh
+ INSTALL_TOP_SCRIPT_FILES = run-hl-ex.sh
  
- # Example programs.
- # Don't tell automake about them, because if it knew they were programs,
