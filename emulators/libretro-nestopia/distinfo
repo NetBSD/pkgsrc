@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/04/10 03:16:18 snj Exp $
+
+SHA1 (2c586b592597751f015ac30e05d2a180a1ffd723.zip) = e1d97ba63472ab41afd7439cd1b839ce8704bf9b
+RMD160 (2c586b592597751f015ac30e05d2a180a1ffd723.zip) = 1b61cf3f745d84f748222fe4de9b1985f4a7d9f9
+Size (2c586b592597751f015ac30e05d2a180a1ffd723.zip) = 2161787 bytes
+SHA1 (patch-libretro_Makefile) = b9ab72caf2b42158e8adbf705cede20cd9ceb42b
+SHA1 (patch-libretro_libretro.cpp) = c8887390e4d0ac4b82ddfa87154303778f1567d6
