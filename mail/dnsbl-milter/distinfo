@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/11/22 03:07:12 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/04/10 01:48:37 mef Exp $
 
-SHA1 (dnsbl-6.44.tar.gz) = 4aee4bf10da893d4257e353096d4a5e3acaedf91
-RMD160 (dnsbl-6.44.tar.gz) = 97e609ab3f496156e5c425773957863256dcfb3a
-Size (dnsbl-6.44.tar.gz) = 611334 bytes
+SHA1 (dnsbl-6.45.tar.gz) = 15d79ce492f195439a29f14492941d5fec5264c9
+RMD160 (dnsbl-6.45.tar.gz) = b5b9e553373e0912f59b46f7cb43685a6d9f7e0f
+Size (dnsbl-6.45.tar.gz) = 617954 bytes
 SHA1 (patch-src_context.cpp) = 9cfd237be9ac059acd741e4430f43c4152001fd8
 SHA1 (patch-src_dnsbl.cpp) = c5b7cfdd4656472f170c32c452e71741e9715323
 SHA1 (patch-src_tokenizer.cpp) = 3f628ffabcddd7c9a90118c8165b90f468d4a1b7
