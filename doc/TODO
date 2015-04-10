@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14308 2015/04/10 02:52:47 wen Exp $
+$NetBSD: TODO,v 1.14309 2015/04/10 03:33:20 rodent Exp $
 
 Suggested new packages
 ======================
@@ -8,6 +8,12 @@ Suggested new packages
 
 	Any complete, polished packages in pkgsrc-wip (ditto)
 	http://pkgsrc-wip.sourceforge.net/
+
+	Any interesting packages in FreeBSD's ports.
+	http://freshports.org/
+
+	Any interesting packages in OpenBSD's ports.
+	http://openports.se/
 
 	bacula-rescue
 	Scripts used to help create rescue boot CDs for bare metal
@@ -1322,3 +1328,14 @@ Suggested cleanups in pkgsrc
 	  or deinstall many tex-* packages, you should be able to run
 	  mktexlsr once at the end of the entire operation, not once per
 	  package.
+
+	o Run pkglint recursively against the whole tree and fix any
+	  issues identified. This adds very little value to pkgsrc other
+	  than ensuring the pkgsrc files are lint-free and the files pass
+	  the code review tool (pkglint). It can annoy some team members,
+	  so choose your commits wisely.
+
+	o Review bulk build reports and fix packages broken on any
+	  platform. Ideally, successful build counts would be similar
+	  across supported platforms.
+	  http://mail-index.netbsd.org/pkgsrc-bulk/
