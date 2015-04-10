@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/04/02 22:16:46 tnn Exp $
+$NetBSD: distinfo,v 1.7 2015/04/10 16:04:10 tnn Exp $
 
 SHA1 (xf86-video-ati-6.14.6.tar.bz2) = b30383c7e5487c1df403a3af19fce8626d617a8d
 RMD160 (xf86-video-ati-6.14.6.tar.bz2) = e285bff97a23f6e6f8553f1c010c840e6df882a8
@@ -13,10 +13,11 @@ SHA1 (patch-src_r6xx__accel.c) = d998da9a9a02770005b708213eabe8808c8c3581
 SHA1 (patch-src_radeon__accelfuncs.c) = f9d0ba2a0b7f62a56eecea117c4339f0e18b1e52
 SHA1 (patch-src_radeon__crtc.c) = c22e5a9c4119a4c6aa3f64f83b326effe270c96c
 SHA1 (patch-src_radeon__dri.c) = 479f58f8493543220b931182ab105309f8c035ab
-SHA1 (patch-src_radeon__driver.c) = e6fead10db8c13fdff531aaa01bfd40e95906172
+SHA1 (patch-src_radeon__driver.c) = 63f0fe13ea5b75a303c1a9f7d807815a96960d8f
 SHA1 (patch-src_radeon__exa.c) = d031dac6fcbcccff6534a04ebdf492dd6a5450e6
 SHA1 (patch-src_radeon__exa__funcs.c) = 9a508251f04a26e857e4290de5a6b48f868df7d9
 SHA1 (patch-src_radeon__exa__render.c) = e3f7d2d0bb15d28224366e11d96c984bf0fdaa93
+SHA1 (patch-src_radeon__kms.c) = 7a3eb0e4c485377d64a4f05d5679ebaf0199a065
 SHA1 (patch-src_radeon__mm__i2c.c) = 25703e33ea93306fa09eeb3ada636d55d2c70537
 SHA1 (patch-src_radeon__render.c) = 919c108ba8bafdcdb4e0fba80da621674a62de8c
 SHA1 (patch-src_radeon__textured__video.c) = 409a187b286a228f632e391d68ee71a14289c574
