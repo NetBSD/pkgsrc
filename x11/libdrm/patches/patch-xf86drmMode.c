@@ -1,11 +1,25 @@
-$NetBSD: patch-xf86drmMode.c,v 1.1 2014/10/26 10:20:10 wiz Exp $
+$NetBSD: patch-xf86drmMode.c,v 1.2 2015/04/11 10:02:11 sevan Exp $
 
---- xf86drmMode.c.orig	2014-08-27 18:04:46.000000000 +0000
+Disable checking for hw.dri.%d.modesetting.
+This sysctl is only available if a KMS module is loaded. But the libdrm
+check happens before X got a chance of loading the KMS module.
+
+--- xf86drmMode.c.orig	2015-03-18 17:33:36.000000000 +0000
 +++ xf86drmMode.c
-@@ -806,6 +806,19 @@ int drmCheckModesettingSupported(const c
- 			return -EINVAL;
- 		return (modesetting ? 0 : -ENOSYS);
- 	}
+@@ -771,38 +771,20 @@ int drmCheckModesettingSupported(const c
+ 	if (found)
+ 		return 0;
+ #elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
+-	char kbusid[1024], sbusid[1024];
+-	char oid[128];
+-	int domain, bus, dev, func;
+-	int i, modesetting, ret;
+-	size_t len;
+-
+-	ret = sscanf(busid, "pci:%04x:%02x:%02x.%d", &domain, &bus, &dev,
+-	    &func);
+-	if (ret != 4)
++	return 0;
 +#elif defined(__NetBSD__)
 +	int fd;
 +	static const struct drm_mode_card_res zero_res;
@@ -14,7 +28,29 @@ $NetBSD: patch-xf86drmMode.c,v 1.1 2014/10/26 10:20:10 wiz Exp $
 + 
 +	fd = drmOpen(NULL, busid);
 +	if (fd == -1)
-+		return -EINVAL;
+ 		return -EINVAL;
+-	snprintf(kbusid, sizeof(kbusid), "pci:%04x:%02x:%02x.%d", domain, bus,
+-	    dev, func);
+-
+-	/* How many GPUs do we expect in the machine ? */
+-	for (i = 0; i < 16; i++) {
+-		snprintf(oid, sizeof(oid), "hw.dri.%d.busid", i);
+-		len = sizeof(sbusid);
+-		ret = sysctlbyname(oid, sbusid, &len, NULL, 0);
+-		if (ret == -1) {
+-			if (errno == ENOENT)
+-				continue;
+-			return -EINVAL;
+-		}
+-		if (strcmp(sbusid, kbusid) != 0)
+-			continue;
+-		snprintf(oid, sizeof(oid), "hw.dri.%d.modesetting", i);
+-		len = sizeof(modesetting);
+-		ret = sysctlbyname(oid, &modesetting, &len, NULL, 0);
+-		if (ret == -1 || len != sizeof(modesetting))
+-			return -EINVAL;
+-		return (modesetting ? 0 : -ENOSYS);
+-	}
 +	ret = drmIoctl(fd, DRM_IOCTL_MODE_GETRESOURCES, &res);
 +	drmClose(fd);
 +	if (ret == 0)
@@ -22,7 +58,7 @@ $NetBSD: patch-xf86drmMode.c,v 1.1 2014/10/26 10:20:10 wiz Exp $
  #elif defined(__DragonFly__)
  	return 0;
  #endif
-@@ -908,7 +921,7 @@ int drmModePageFlip(int fd, uint32_t crt
+@@ -907,7 +889,7 @@ int drmModePageFlip(int fd, uint32_t crt
  
  int drmModeSetPlane(int fd, uint32_t plane_id, uint32_t crtc_id,
  		    uint32_t fb_id, uint32_t flags,
