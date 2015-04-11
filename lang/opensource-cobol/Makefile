@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/03/16 04:52:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/11 00:44:34 ryoon Exp $
 
-DISTNAME=	opensource-cobol-1.3.2J-utf8
+DISTNAME=	opensource-cobol-1.4.0J-utf8
 PKGNAME=	${DISTNAME:S/-utf8//}
 CATEGORIES=	lang
-MASTER_SITES=	-http://www.osscons.jp/osscobol/files/?action=cabinet_action_main_download&block_id=414&room_id=21&cabinet_id=11&file_id=193&upload_id=388
+MASTER_SITES=	-http://www.osscons.jp/osscobol/files/?action=cabinet_action_main_download&block_id=414&room_id=21&cabinet_id=11&file_id=289&upload_id=564
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.osscons.jp/osscobol/
@@ -11,8 +11,6 @@ COMMENT=	UTF-8 version of opensource COBOL, OpenCOBOL with Japanese extensions
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=		opencobol-[0-9]* open-cobol-ce-[0-9]*
-
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 BDB_ACCEPTED=		db4
 
