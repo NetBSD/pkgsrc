@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/05/29 23:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/11 02:01:55 mef Exp $
 
-DISTNAME=	aspell-da-1.7.30
-PKGREVISION=	2
+DISTNAME=	aspell-da-1.7.42
 CATEGORIES=	textproc
 MASTER_SITES=	http://da.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,12 +8,19 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://da.speling.org/
 COMMENT=	Danish language support for aspell
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	aspell-danish-[0-9]*
 USE_TOOLS+=	perl
 REPLACE_PERL=	unsq
 
 INSTALLATION_DIRS+=	lib/aspell share/aspell
+
+SUBST_CLASSES+=			avoid_patch
+SUBST_MESSAGE.avoid_patch=	Adjust before patch to absorb versioning (or avoid manual edit)
+SUBST_FILES.avoid_patch+=	Makefile
+SUBST_STAGE.avoid_patch=	pre-patch
+SUBST_SED.avoid_patch+=		-e 's/${PKGVERSION_NOREV}/@@PKGVERSION_NOREV@@/'
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
