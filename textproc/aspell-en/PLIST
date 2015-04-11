@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:40 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/11 02:07:41 mef Exp $
+lib/aspell/american-variant_0.alias
+lib/aspell/american-variant_1.alias
 lib/aspell/american-w_accents.alias
 lib/aspell/american-wo_accents.alias
 lib/aspell/american.alias
@@ -8,9 +10,13 @@ lib/aspell/british-ise.alias
 lib/aspell/british-ize-w_accents.alias
 lib/aspell/british-ize-wo_accents.alias
 lib/aspell/british-ize.alias
+lib/aspell/british-variant_0.alias
+lib/aspell/british-variant_1.alias
 lib/aspell/british-w_accents.alias
 lib/aspell/british-wo_accents.alias
 lib/aspell/british.alias
+lib/aspell/canadian-variant_0.alias
+lib/aspell/canadian-variant_1.alias
 lib/aspell/canadian-w_accents.alias
 lib/aspell/canadian-wo_accents.alias
 lib/aspell/canadian.alias
@@ -21,9 +27,15 @@ lib/aspell/en-variant_1.multi
 lib/aspell/en-variant_1.rws
 lib/aspell/en-variant_2.multi
 lib/aspell/en-variant_2.rws
+lib/aspell/en-w_accents-only.rws
 lib/aspell/en-w_accents.multi
+lib/aspell/en-wo_accents-only.rws
 lib/aspell/en-wo_accents.multi
 lib/aspell/en.multi
+lib/aspell/en_CA-variant_0.multi
+lib/aspell/en_CA-variant_0.rws
+lib/aspell/en_CA-variant_1.multi
+lib/aspell/en_CA-variant_1.rws
 lib/aspell/en_CA-w_accents-only.rws
 lib/aspell/en_CA-w_accents.multi
 lib/aspell/en_CA-wo_accents-only.rws
@@ -39,9 +51,15 @@ lib/aspell/en_GB-ize-w_accents.multi
 lib/aspell/en_GB-ize-wo_accents-only.rws
 lib/aspell/en_GB-ize-wo_accents.multi
 lib/aspell/en_GB-ize.multi
+lib/aspell/en_GB-variant_0.multi
+lib/aspell/en_GB-variant_0.rws
+lib/aspell/en_GB-variant_1.multi
+lib/aspell/en_GB-variant_1.rws
 lib/aspell/en_GB-w_accents.multi
 lib/aspell/en_GB-wo_accents.multi
 lib/aspell/en_GB.multi
+lib/aspell/en_US-variant_0.multi
+lib/aspell/en_US-variant_1.multi
 lib/aspell/en_US-w_accents-only.rws
 lib/aspell/en_US-w_accents.multi
 lib/aspell/en_US-wo_accents-only.rws
