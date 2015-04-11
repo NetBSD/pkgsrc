@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.7 2014/10/28 12:43:21 wiz Exp $
+# $NetBSD: version.mk,v 1.8 2015/04/11 08:51:05 wiz Exp $
 
 _EMACS_FLAVOR=	emacs
-_EMACS_REQD=	emacs24>=24.1<24.4.50
+_EMACS_REQD=	emacs24>=24.1<24.5.50
 
 _EMACS_VERSION_MAJOR=	24
-_EMACS_VERSION_MINOR=	4
+_EMACS_VERSION_MINOR=	5
