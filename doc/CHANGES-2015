@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1735 2015/04/11 08:51:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1736 2015/04/11 11:59:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/c++-gtk-utils to 2.2.11 [ryoon 2015-04-11]
 	Updated editors/emacs24 to 24.5 [wiz 2015-04-11]
 	Updated editors/emacs24-nox11 to 24.5 [wiz 2015-04-11]
+	Updated net/lldpd to 0.7.14 [mef 2015-04-11]
