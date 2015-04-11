@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/04/11 10:44:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57 2015/04/11 18:27:32 bsiegert Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -11,7 +11,6 @@ CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--disable-c++
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
-USE_TOOLS+=		autoconf
 
 CFLAGS+=		${CFLAGS.${ICONV_TYPE}-iconv}
 CFLAGS.gnu-iconv+=	-DHAVE_GNU_ICONV
@@ -26,9 +25,6 @@ LOCALEDIR=		${PREFIX}/${PKGLOCALEDIR}/locale
 
 REQD_DIRS+=		${LOCALEDIR}
 REQD_FILES+=		${EGDIR}/locale.alias ${LOCALEDIR}/locale.alias
-
-post-patch:
-	cd ${WRKSRC}/gettext-runtime && autoconf
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

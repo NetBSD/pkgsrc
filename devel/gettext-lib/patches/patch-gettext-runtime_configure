@@ -1,0 +1,16 @@
+$NetBSD: patch-gettext-runtime_configure,v 1.1 2015/04/11 18:27:32 bsiegert Exp $
+
+Only run libasprintf configure when its build has been selected.
+http://savannah.gnu.org/bugs/index.php?44808
+
+--- gettext-runtime/configure.orig	Wed Dec 24 07:00:41 2014
++++ gettext-runtime/configure
+@@ -31734,7 +31734,7 @@ fi
+ 
+ 
+ 
+-subdirs="$subdirs libasprintf"
++subdirs="$subdirs $SUBDIR_libasprintf"
+ 
+ 
+ ac_config_files="$ac_config_files Makefile"
