@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2005/12/08 17:11:58 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2015/04/11 16:16:54 schwarz Exp $
 
---- port.h.orig	2005-12-08 17:07:17.000000000 +0000
-+++ port.h
+--- port.h.orig	2014-08-02 20:04:01.000000000 +0200
++++ port.h	2015-04-11 17:53:12.000000000 +0200
 @@ -1,6 +1,6 @@
  /* port.h - portability defines */
  
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.1 2005/12/08 17:11:58 joerg Exp $
  # define OS_FreeBSD
  # define ARCH "FreeBSD"
  #elif defined(__OpenBSD__)
-@@ -39,7 +39,7 @@
- # define HAVE_INT64T
+@@ -40,7 +40,7 @@
+ # define HAVE_SRANDOMDEV
  # ifdef SO_ACCEPTFILTER
  #  define HAVE_ACCEPT_FILTERS
 -#  if ( __FreeBSD_version >= 411000 )
