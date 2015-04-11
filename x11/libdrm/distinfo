@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2015/04/03 16:09:37 tnn Exp $
+$NetBSD: distinfo,v 1.52 2015/04/11 10:02:10 sevan Exp $
 
 SHA1 (libdrm-2.4.60.tar.bz2) = 4e041a5ff22b2b9132b216eb0574638bf252b7a9
 RMD160 (libdrm-2.4.60.tar.bz2) = 01b3dde0786dea020850a35058ee2be507829293
@@ -12,5 +12,5 @@ SHA1 (patch-libkms_vmwgfx.c) = d49c046a70e5c0edbdb0a424473324cc2a3b6243
 SHA1 (patch-radeon_radeon__bo__gem.c) = 4924fde172b2a2a713d47bf7b60a6b52851d7a8f
 SHA1 (patch-radeon_radeon__cs__gem.c) = 516b5dd6408c10a4f33f2815b3719e34a16d863a
 SHA1 (patch-xf86atomic.h) = 49fce331dc287a26fc4c9de4a1d121d83a68d883
-SHA1 (patch-xf86drmMode.c) = bb453075acd6e2ac8dcc588048c1d642defbf248
+SHA1 (patch-xf86drmMode.c) = 508a1e4bae40243c5445ec51084e760279d35ba6
 SHA1 (patch-xf86drmMode.h) = a28b02887389be8670193c119f711901af61a6b2
