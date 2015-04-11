@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/11 14:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/11 03:10:43 rodent Exp $
 #
 
 DISTNAME=	TclOO1.0.1
@@ -29,5 +29,5 @@ SUBST_SED.manpages=		-e "/^\\.so /d"
 post-build:
 	${MV} ${WRKSRC}/doc/class.n ${WRKSRC}/doc/tclOO-class.n
 
-.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl85/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
