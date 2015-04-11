@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/03/13 15:56:20 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/11 03:46:00 rodent Exp $
 
-DISTNAME=	childprocess-0.5.5
+DISTNAME=	childprocess-0.5.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby sysutils
 
