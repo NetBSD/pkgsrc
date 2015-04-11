@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/28 12:43:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/11 08:51:05 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1706,8 +1706,6 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/warnings.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/warnings.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lock.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/crisp.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/crisp.elc
 share/emacs/${EMACS_VERSION}/lisp/emulation/cua-base.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emulation/cua-base.elc
 share/emacs/${EMACS_VERSION}/lisp/emulation/cua-gmrk.el.gz
@@ -1726,16 +1724,6 @@ share/emacs/${EMACS_VERSION}/lisp/emulation/edt.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emulation/edt.elc
 share/emacs/${EMACS_VERSION}/lisp/emulation/keypad.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emulation/keypad.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/tpu-edt.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/tpu-edt.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/tpu-extras.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/tpu-extras.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/tpu-mapper.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/tpu-mapper.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/vi.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/vi.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/vip.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/vip.elc
 share/emacs/${EMACS_VERSION}/lisp/emulation/viper-cmd.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emulation/viper-cmd.elc
 share/emacs/${EMACS_VERSION}/lisp/emulation/viper-ex.el.gz
@@ -1752,8 +1740,6 @@ share/emacs/${EMACS_VERSION}/lisp/emulation/viper-util.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emulation/viper-util.elc
 share/emacs/${EMACS_VERSION}/lisp/emulation/viper.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emulation/viper.elc
-share/emacs/${EMACS_VERSION}/lisp/emulation/ws-mode.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emulation/ws-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/env.el.gz
 share/emacs/${EMACS_VERSION}/lisp/env.elc
 share/emacs/${EMACS_VERSION}/lisp/epa-dired.el.gz
@@ -2328,6 +2314,7 @@ share/emacs/${EMACS_VERSION}/lisp/international/titdic-cnv.elc
 share/emacs/${EMACS_VERSION}/lisp/international/ucs-normalize.el.gz
 share/emacs/${EMACS_VERSION}/lisp/international/ucs-normalize.elc
 share/emacs/${EMACS_VERSION}/lisp/international/uni-bidi.el
+share/emacs/${EMACS_VERSION}/lisp/international/uni-brackets.el
 share/emacs/${EMACS_VERSION}/lisp/international/uni-category.el
 share/emacs/${EMACS_VERSION}/lisp/international/uni-combining.el
 share/emacs/${EMACS_VERSION}/lisp/international/uni-comment.el
@@ -2906,10 +2893,14 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/assoc.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/bruce.el
+share/emacs/${EMACS_VERSION}/lisp/obsolete/cc-compat.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/cc-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/crisp.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/crisp.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cust-print.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cust-print.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/erc-hecomplete.el.gz
@@ -2988,8 +2979,20 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/sym-comp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sym-comp.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/terminal.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/terminal.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/tpu-edt.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/tpu-edt.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/tpu-extras.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/tpu-extras.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/tpu-mapper.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/tpu-mapper.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/vc-mcvs.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/vi.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/vi.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/vip.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/vip.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/ws-mode.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/ws-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/xesam.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/xesam.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/yow.el.gz
@@ -3309,8 +3312,6 @@ share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-bytecomp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-bytecomp.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-cmds.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-cmds.elc
-share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-compat.el.gz
-share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-defs.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-defs.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-engine.el.gz
@@ -3910,3 +3911,4 @@ share/icons/hicolor/32x32/apps/emacs.png
 share/icons/hicolor/48x48/apps/emacs.png
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
+@pkgdir share/emacs/${EMACS_VERSION}/lisp/emacs-parallel
