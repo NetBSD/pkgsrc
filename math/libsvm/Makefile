@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/10/19 22:11:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/11 03:25:43 rodent Exp $
 #
 
-DISTNAME=	libsvm-3.18
-PKGREVISION=	2
+DISTNAME=	libsvm-3.20
 CATEGORIES=	math
 MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
@@ -12,6 +11,7 @@ COMMENT=	Library for Support Vector Machines
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
 
 BUILD_TARGET=	all lib
 AUTO_MKDIRS=	yes
@@ -19,14 +19,14 @@ AUTO_MKDIRS=	yes
 REPLACE_PYTHON=		tools/*.py
 
 SUBST_CLASSES+=         paths
-SUBST_SED.paths=	-e 's,[.][.]/svm-train,${PREFIX}/bin/svm-train,' \
-			-e 's,[.][.]/svm-scale,${PREFIX}/bin/svm-scale,' \
-			-e 's,[.][.]/svm-predict,${PREFIX}/bin/svm-predict,' \
-			-e 's,"[.]/grid[.]py,"${PREFIX}/bin/svm-grid,' \
-			-e 's,/usr/bin/gnuplot,${PREFIX}/bin/gnuplot,'
-SUBST_FILES.paths=     tools/grid.py tools/easy.py
-SUBST_STAGE.paths=     pre-build
-SUBST_MESSAGE.paths=   Fixing hardcoded paths.
+SUBST_SED.paths=	-e 's,[.][.]/svm-train,${PREFIX}/bin/svm-train,'
+SUBST_SED.paths+=	-e 's,[.][.]/svm-scale,${PREFIX}/bin/svm-scale,'
+SUBST_SED.paths+=	-e 's,[.][.]/svm-predict,${PREFIX}/bin/svm-predict,'
+SUBST_SED.paths+=	-e 's,"[.]/grid[.]py,"${PREFIX}/bin/svm-grid,'
+SUBST_SED.paths+=	-e 's,/usr/bin/gnuplot,${PREFIX}/bin/gnuplot,'
+SUBST_FILES.paths=	tools/grid.py tools/easy.py
+SUBST_STAGE.paths=	pre-build
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/svm-predict ${DESTDIR}${PREFIX}/bin
