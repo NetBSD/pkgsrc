@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1732 2015/04/11 03:47:00 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1733 2015/04/11 05:42:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ctemplate to 2.3 [rodent 2015-04-11]
 	Updated math/libsvm to 3.20 [rodent 2015-04-11]
 	Updated sysutils/ruby-childprocess to 0.5.6 [rodent 2015-04-11]
+	Updated x11/c++-gtk-utils to 2.2.11 [ryoon 2015-04-11]
