@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/11/13 19:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/11 02:26:02 mef Exp $
 
 DISTNAME=		enca-1.15
 CATEGORIES=		converters
@@ -6,7 +6,7 @@ MASTER_SITES=		http://dl.cihar.com/enca/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gitorious.org/enca
+HOMEPAGE=		https://github.com/nijel/enca
 COMMENT=		Extremely Naive Charset Analyser
 LICENSE=		gnu-gpl-v2
 
