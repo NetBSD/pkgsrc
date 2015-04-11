@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2015/03/02 13:34:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2015/04/11 12:42:06 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -216,6 +216,7 @@ share/doc/sqlite3/footprint.html
 share/doc/sqlite3/foreignkeys.html
 share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
+share/doc/sqlite3/fts5.html
 share/doc/sqlite3/getthecode.html
 share/doc/sqlite3/howtocompile.html
 share/doc/sqlite3/howtocorrupt.html
@@ -334,6 +335,10 @@ share/doc/sqlite3/images/fts3_interior_node.png
 share/doc/sqlite3/images/fts3_interior_node.svg
 share/doc/sqlite3/images/fts3_leaf_node.png
 share/doc/sqlite3/images/fts3_leaf_node.svg
+share/doc/sqlite3/images/fts5_formula.odf
+share/doc/sqlite3/images/fts5_formula1.png
+share/doc/sqlite3/images/fts5_formula2.png
+share/doc/sqlite3/images/fts5_formula3.png
 share/doc/sqlite3/images/fullscanb.gif
 share/doc/sqlite3/images/harmony.gif
 share/doc/sqlite3/images/index-ex1-x-b.gif
@@ -639,6 +644,7 @@ share/doc/sqlite3/releaselog/3_8_8.html
 share/doc/sqlite3/releaselog/3_8_8_1.html
 share/doc/sqlite3/releaselog/3_8_8_2.html
 share/doc/sqlite3/releaselog/3_8_8_3.html
+share/doc/sqlite3/releaselog/3_8_9.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/rescode.html
