@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1728 2015/04/11 00:45:00 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1729 2015/04/11 02:16:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2382,3 +2382,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.24.0 [wiz 2015-04-10]
 	Updated www/firefox-l10n to 37.0.1 [ryoon 2015-04-10]
 	Updated lang/opensource-cobol to 1.4.0J [ryoon 2015-04-11]
+	Updated textproc/aspell-da to 1.7.42 [mef 2015-04-11]
+	Updated textproc/aspell-en to 7.1.0 [mef 2015-04-11]
