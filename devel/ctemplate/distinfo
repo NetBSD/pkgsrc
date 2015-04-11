@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/04/21 11:23:38 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/04/11 03:05:26 rodent Exp $
 
-SHA1 (ctemplate-2.2.tar.gz) = b00a35291bc5c5bb8493a68bbf76d6a9cfa5c117
-RMD160 (ctemplate-2.2.tar.gz) = fb5cf475f47b9bd651d05418f5dc01c039b50070
-Size (ctemplate-2.2.tar.gz) = 889458 bytes
-SHA1 (patch-src_ctemplate_template__string.h.in) = 55510338a7df8486e1f9502336c65fd06de2b4fc
+SHA1 (ctemplate-2.3.tar.gz) = be6ba46bf64287887f9b806719a851af50f79acd
+RMD160 (ctemplate-2.3.tar.gz) = 329f503a80566c1293a811b5b79eb879c59b8091
+Size (ctemplate-2.3.tar.gz) = 720717 bytes
 SHA1 (patch-src_tests_template__regtest.cc) = 234fce61f0ebc72238276df21002dbe1397dbac2
