@@ -1,52 +1,60 @@
-$NetBSD: patch-aa,v 1.3 2009/07/07 19:05:23 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2015/04/11 16:16:54 schwarz Exp $
 
---- Makefile.orig	Fri Nov  1 23:02:57 2002
-+++ Makefile
-@@ -14,21 +14,23 @@ CRYPT_LIB =    -lcrypt
+--- Makefile.orig	2014-10-19 08:33:43.000000000 +0200
++++ Makefile	2015-04-11 18:09:33.000000000 +0200
+@@ -7,26 +7,29 @@
+ # CONFIGURE: Some systems don't need -lcrypt, and indeed they get an
+ # error if you try to link with it.  If you get an error about libcrypt
+ # not found, try commenting out this definition.
+-CRYPT_LIB =    -lcrypt
++#CRYPT_LIB =    -lcrypt
+ 
+ # CONFIGURE: If you want to compile in support for https, uncomment these
+ # definitions.  You will need to have already built OpenSSL, available at
  # http://www.openssl.org/  Make sure the SSL_TREE definition points to the
  # tree with your OpenSSL installation - depending on how you installed it,
  # it may be in /usr/local instead of /usr/local/ssl.
 -#SSL_TREE =	/usr/local/ssl
 -#SSL_DEFS =	-DUSE_SSL
--#SSL_INC =	-I${SSL_TREE}/include
--#SSL_LIBS =	-L${SSL_TREE}/lib -lssl -lcrypto
+-#SSL_INC =	-I$(SSL_TREE)/include
+-#SSL_LIBS =	-L$(SSL_TREE)/lib -lssl -lcrypto
 +SSL_TREE =	${PREFIX}
 +SSL_DEFS =	-DUSE_SSL
-+SSL_INC =	-I${SSL_TREE}/include
-+SSL_LIBS =	-L${SSL_TREE}/lib -lssl -lcrypto
++SSL_INC =	-I$(SSL_TREE)/include
++SSL_LIBS =	-L$(SSL_TREE)/lib -lssl -lcrypto
  
  
 -BINDIR =	/usr/local/sbin
 -MANDIR =	/usr/local/man
+-CC =		cc
 +BINDIR =	${PREFIX}/sbin
 +MANDIR =	${PREFIX}/${PKGMANDIR}
- CC =		gcc
- CDEFS =		${SSL_DEFS} ${SSL_INC}
--CFLAGS =	-O ${CDEFS}
-+#CFLAGS =	-O ${CDEFS}
- #CFLAGS =	-g ${CDEFS}
++#CC =		cc
+ CDEFS =		$(SSL_DEFS) $(SSL_INC)
+-CFLAGS =	-O $(CDEFS) -ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
 -LDFLAGS =	-s
+-LDLIBS =	$(CRYPT_LIB) $(SSL_LIBS) $(SYSV_LIBS)
++#CFLAGS =	-O $(CDEFS) -ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
 +CFLAGS =	${PKG_CFLAGS} ${CDEFS}
 +#LDFLAGS =	-s
- #LDFLAGS =	-g
--LDLIBS =	${SSL_LIBS} ${SYSV_LIBS} ${CRYPT_LIB}
 +LDFLAGS =	${PKG_LDFLAGS}
++#LDLIBS =	$(CRYPT_LIB) $(SSL_LIBS) $(SYSV_LIBS)
 +LDLIBS =	${SSL_LIBS} ${SYSV_LIBS} ${CRYPT_LIB} ${PKG_LIBS}
  
  all:		mini_httpd htpasswd
  
-@@ -72,14 +74,13 @@ mini_httpd.pem:	mini_httpd.cnf
+@@ -70,14 +73,13 @@
  
  
  install:	all
--	rm -f ${BINDIR}/mini_httpd ${BINDIR}/htpasswd
--	-mkdir -p ${BINDIR}
--	cp mini_httpd htpasswd ${BINDIR}
--	rm -f ${MANDIR}/man8/mini_httpd.8 ${MANDIR}/man1/htpasswd.1
--	-mkdir -p ${MANDIR}/man8
--	cp mini_httpd.8 ${MANDIR}/man8
--	-mkdir -p ${MANDIR}/man1
--	cp htpasswd.1 ${MANDIR}/man1
+-	rm -f $(BINDIR)/mini_httpd $(BINDIR)/htpasswd
+-	-mkdir -p $(BINDIR)
+-	cp mini_httpd htpasswd $(BINDIR)
+-	rm -f $(MANDIR)/man8/mini_httpd.8 $(MANDIR)/man1/htpasswd.1
+-	-mkdir -p $(MANDIR)/man8
+-	cp mini_httpd.8 $(MANDIR)/man8
+-	-mkdir -p $(MANDIR)/man1
+-	cp htpasswd.1 $(MANDIR)/man1
 +	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${BINDIR}
 +	${BSD_INSTALL_PROGRAM} mini_httpd ${DESTDIR}${BINDIR}/mini_httpd
 +	${BSD_INSTALL_PROGRAM} htpasswd ${DESTDIR}${BINDIR}/mhtpasswd
@@ -57,3 +65,8 @@ $NetBSD: patch-aa,v 1.3 2009/07/07 19:05:23 joerg Exp $
  
  clean:
  	rm -f mini_httpd mime_encodings.h mime_types.h htpasswd mini_httpd.rnd *.o core core.* *.core
+@@ -92,3 +94,4 @@
+ 	  tar cf $$name.tar $$name ; \
+ 	  rm -rf $$name ; \
+ 	  gzip $$name.tar
++

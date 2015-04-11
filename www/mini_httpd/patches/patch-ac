@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2007/01/18 16:28:08 reed Exp $
+$NetBSD: patch-ac,v 1.2 2015/04/11 16:16:54 schwarz Exp $
 
---- mini_httpd.c.orig	2006-12-31 03:00:18.000000000 +0900
-+++ mini_httpd.c	2007-01-05 11:40:35.000000000 +0900
-@@ -822,6 +822,10 @@
+--- mini_httpd.c.orig	2014-10-19 08:33:10.000000000 +0200
++++ mini_httpd.c	2015-04-11 17:54:03.000000000 +0200
+@@ -833,6 +833,10 @@
  	    if ( errno == EPROTO )
  		continue;	/* try again */
  #endif /* EPROTO */
