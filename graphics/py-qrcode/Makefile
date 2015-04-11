@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/09 16:52:14 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/11 03:12:51 rodent Exp $
 
 DISTNAME=	qrcode-5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://pypi.python.org/packages/source/q/qrcode/
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	https://github.com/lincolnloop/python-qrcode
+HOMEPAGE=	${MASTER_SITE_GITHUB:=lincolnloop/python-qrcode}
 COMMENT=	Python QR Code image generator
 LICENSE=	modified-bsd
 
