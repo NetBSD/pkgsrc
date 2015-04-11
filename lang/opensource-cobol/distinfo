@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/03/16 04:52:42 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/04/11 00:44:34 ryoon Exp $
 
-SHA1 (opensource-cobol-1.3.2J-utf8.tar.gz) = d2accfa0b7dc0efce48c06ff1be98c267c1a0ab4
-RMD160 (opensource-cobol-1.3.2J-utf8.tar.gz) = cfdc3f3892bcd75ca83215e4346e5a3e37e28763
-Size (opensource-cobol-1.3.2J-utf8.tar.gz) = 1204733 bytes
-SHA1 (patch-bin_Makefile.in) = fa71482bedd5bf6fade229db0c464691109fd6be
+SHA1 (opensource-cobol-1.4.0J-utf8.tar.gz) = 24b8dd2b1ea8269f296889351fcfd906da84b207
+RMD160 (opensource-cobol-1.4.0J-utf8.tar.gz) = 2c48df0c04f20a19ef801e9da212fb0bf2fa50e3
+Size (opensource-cobol-1.4.0J-utf8.tar.gz) = 1709635 bytes
