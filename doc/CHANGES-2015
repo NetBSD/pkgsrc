@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1729 2015/04/11 02:16:46 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1730 2015/04/11 03:06:01 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2384,3 +2384,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/opensource-cobol to 1.4.0J [ryoon 2015-04-11]
 	Updated textproc/aspell-da to 1.7.42 [mef 2015-04-11]
 	Updated textproc/aspell-en to 7.1.0 [mef 2015-04-11]
+	Updated devel/ctemplate to 2.3 [rodent 2015-04-11]
