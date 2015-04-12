@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14311 2015/04/11 13:04:04 rodent Exp $
+$NetBSD: TODO,v 1.14312 2015/04/12 14:20:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -372,6 +372,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o acpica-utils-20110623
 	o adocman-0.13
 	o aewm++-1.0.27
+	o afl-1.64b
 	o alacarte-0.13.2
 	o allegro-5.10
 	o alsa-lib-1.0.29
@@ -454,6 +455,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cloog-0.18.3
 	o clutter-1.22.0
 	o clutter-gst-3.0.2
+	o coinmp-1.8.1
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -749,6 +751,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.12.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgpg-error-1.19
 	o libgroove-4.2.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
@@ -830,6 +833,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
+	o mupdf-1.7
 	o muse-0.9.2
 	o mysql-5.7.6
 	o nano-2.4.0
@@ -903,6 +907,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o picprg-3.01
 	o pim6dd-20040819a
 	o pim6sd-20040824a
+	o pinentry-0.9.1
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
@@ -928,13 +933,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-PasteDeploy-1.5.2
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
+	o py-atomicwrites-0.1.5
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
+	o py-cryptography-0.8.2
 	o py-datapkg-0.9
 	o py-django-1.8
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
+	o py-enum34-1.0.4
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
@@ -959,6 +967,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-trytond-account-3.4.1	
 	o py-trytond-stock-3.4.0
+	o py-virtualenv-12.1.1
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
@@ -1123,6 +1132,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.8.8
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
