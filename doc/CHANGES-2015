@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1750 2015/04/12 14:22:10 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1751 2015/04/12 14:24:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-TAP-Harness-Archive to 0.17 [mef 2015-04-12]
 	Updated devel/p5-Mouse to 2.4.2 [mef 2015-04-12]
 	Updated devel/waf to 1.8.8 [wiz 2015-04-12]
+	Updated devel/afl to 1.64b [wiz 2015-04-12]
