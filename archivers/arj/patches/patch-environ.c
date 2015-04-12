@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2014/05/11 20:56:16 rodent Exp $
+$NetBSD: patch-environ.c,v 1.1 2015/04/12 15:45:00 tnn Exp $
 
 Add support for various OSes.
 

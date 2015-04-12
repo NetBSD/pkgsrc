@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2014/05/11 20:56:16 rodent Exp $
+$NetBSD: patch-arjdata.c,v 1.1 2015/04/12 15:45:00 tnn Exp $
+
+Add DragonFly support.
 
 --- arjdata.c.orig	2004-04-17 11:44:46.000000000 +0000
 +++ arjdata.c

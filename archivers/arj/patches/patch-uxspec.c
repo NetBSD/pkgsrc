@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2014/05/11 20:56:16 rodent Exp $
+$NetBSD: patch-uxspec.c,v 1.1 2015/04/12 15:45:00 tnn Exp $
+
+Fix build on systems without lchown.
 
 --- uxspec.c.orig	2004-04-17 11:39:42.000000000 +0000
 +++ uxspec.c
