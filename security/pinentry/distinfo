@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2014/12/12 15:04:16 mef Exp $
+$NetBSD: distinfo,v 1.16 2015/04/12 14:50:43 wiz Exp $
 
-SHA1 (pinentry-0.9.0.tar.bz2) = f8e5c774c35fbb91d84e82559baf76f6b4513236
-RMD160 (pinentry-0.9.0.tar.bz2) = 957284ded6dcc9a3302b498bfdf95d2378e8f6e0
-Size (pinentry-0.9.0.tar.bz2) = 464272 bytes
-SHA1 (patch-qt4_pinentryconfirm_moc) = b48ed080f78a4a465d3e56139d69c9fbfcb8fcc2
+SHA1 (pinentry-0.9.1.tar.bz2) = 01e62c45435496ff0e011255fb0ac1879a3bc177
+RMD160 (pinentry-0.9.1.tar.bz2) = 8e66b4d96b918a6c9abf5fd8a62852dffa8203a5
+Size (pinentry-0.9.1.tar.bz2) = 482295 bytes
