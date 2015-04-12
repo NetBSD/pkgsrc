@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14319 2015/04/12 14:42:38 wiz Exp $
+$NetBSD: TODO,v 1.14320 2015/04/12 14:50:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -905,7 +905,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o picprg-3.01
 	o pim6dd-20040819a
 	o pim6sd-20040824a
-	o pinentry-0.9.1
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
