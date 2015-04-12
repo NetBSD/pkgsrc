@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1754 2015/04/12 14:29:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1755 2015/04/12 14:30:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2422,3 +2422,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libgpg-error to 1.19 [wiz 2015-04-12]
 	Updated devel/py-atomicwrites to 0.1.5 [wiz 2015-04-12]
 	Updated devel/py-enum34 to 1.0.4 [wiz 2015-04-12]
+	Updated devel/py-virtualenv to 12.1.1 [wiz 2015-04-12]
