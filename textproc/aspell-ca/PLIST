@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:37 rodent Exp $
-lib/aspell/ca.multi
-lib/aspell/ca.rws
+@comment $NetBSD: PLIST,v 1.2 2015/04/12 08:47:30 mef Exp $
+lib/aspell/ca-common.rws
+lib/aspell/ca-general.multi
+lib/aspell/ca-valencia-mes.rws
+lib/aspell/ca-valencia.multi
+lib/aspell/ca.alias
+lib/aspell/catalan-general.alias
+lib/aspell/catalan-valencia.alias
 lib/aspell/catalan.alias
 share/aspell/ca.dat
 share/aspell/ca_affix.dat
