@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/03/09 08:07:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/04/12 14:24:20 wiz Exp $
 bin/afl-clang
 bin/afl-clang++
 bin/afl-cmin
@@ -12,6 +12,7 @@ bin/afl-tmin
 bin/afl-whatsup
 lib/afl/afl-as
 lib/afl/as
+share/afl/testcases/README.testcases
 share/afl/testcases/_extras/gif/header_87a
 share/afl/testcases/_extras/gif/header_89a
 share/afl/testcases/_extras/gif/header_gif
@@ -569,7 +570,6 @@ share/afl/testcases/others/rtf/small_document.rtf
 share/afl/testcases/others/sql/simple_queries.sql
 share/afl/testcases/others/text/hello_world.txt
 share/afl/testcases/others/xml/small_document.xml
-share/afl/testcases/testcases_readme.txt
 share/doc/afl/ChangeLog
 share/doc/afl/README
 share/doc/afl/env_variables.txt
