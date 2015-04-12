@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/02/14 13:00:36 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/04/12 09:49:18 mef Exp $
 
-SHA1 (Proc-Daemon-0.18.tar.gz) = 107cedee16b5994076e94826df85801f1ee26168
-RMD160 (Proc-Daemon-0.18.tar.gz) = 1f7e722eb8786e77be20d8b0c17da271ec54eab3
-Size (Proc-Daemon-0.18.tar.gz) = 15471 bytes
+SHA1 (Proc-Daemon-0.19.tar.gz) = f618f3982a05dfd036ed0d6638cbe6ec6be30137
+RMD160 (Proc-Daemon-0.19.tar.gz) = a9ed82885f76e22ef63469944be60b79b18c0529
+Size (Proc-Daemon-0.19.tar.gz) = 22500 bytes
