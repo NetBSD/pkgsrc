@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1740 2015/04/12 03:16:46 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1741 2015/04/12 03:35:58 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2397,3 +2397,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/mini_httpd to 1.21 [schwarz 2015-04-11]
 	Updated graphics/libsixel to 1.4.11 [ryoon 2015-04-11]
 	Updated www/p5-Dancer2 to 0.159003 [wen 2015-04-12]
+	Updated comms/asterisk18 to 1.8.32.3 [jnemeth 2015-04-12]
