@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14317 2015/04/12 14:29:03 wiz Exp $
+$NetBSD: TODO,v 1.14318 2015/04/12 14:30:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -963,7 +963,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-trytond-account-3.4.1	
 	o py-trytond-stock-3.4.0
-	o py-virtualenv-12.1.1
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
