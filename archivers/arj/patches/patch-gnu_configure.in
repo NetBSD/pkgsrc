@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2014/05/11 20:56:16 rodent Exp $
+$NetBSD: patch-gnu_configure.in,v 1.1 2015/04/12 15:45:00 tnn Exp $
 
 --- gnu/configure.in.orig	2005-06-21 18:27:20.000000000 +0000
 +++ gnu/configure.in

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2008/06/21 20:24:08 joerg Exp $
+$NetBSD: patch-gnu_makefile.in,v 1.1 2015/04/12 15:45:00 tnn Exp $
 
 --- gnu/makefile.in.orig	2004-04-17 11:28:06.000000000 +0000
 +++ gnu/makefile.in
