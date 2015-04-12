@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2015/04/02 22:40:04 wiz Exp $
+$NetBSD: distinfo,v 1.31 2015/04/12 09:15:26 adam Exp $
 
-SHA1 (ffmpeg-2.6.1.tar.bz2) = dfcd13e7c3e65a59cbe4cab85718ae84da824c5b
-RMD160 (ffmpeg-2.6.1.tar.bz2) = afc79afe41f1596e4b8b4dd663db6527602db703
-Size (ffmpeg-2.6.1.tar.bz2) = 7802246 bytes
+SHA1 (ffmpeg-2.6.2.tar.bz2) = 65470c9b967485f72f81758a7bad44cf7a1763db
+RMD160 (ffmpeg-2.6.2.tar.bz2) = 597cebd3192da7cae0efebf38fb32dd7dc44b758
+Size (ffmpeg-2.6.2.tar.bz2) = 7803179 bytes
 SHA1 (patch-Makefile) = ff8a7a5fdfd4987ef2835bd7360a78efd4310253
 SHA1 (patch-configure) = 580e744f44bc6b7622a21d27fcf14f934a280179
 SHA1 (patch-libavcodec_x86_ac3dsp_init.c) = 8634661d76bc3bce43437caa4244b4f52237709f
