@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1741 2015/04/12 03:35:58 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.1742 2015/04/12 06:24:47 martin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/libsixel to 1.4.11 [ryoon 2015-04-11]
 	Updated www/p5-Dancer2 to 0.159003 [wen 2015-04-12]
 	Updated comms/asterisk18 to 1.8.32.3 [jnemeth 2015-04-12]
+	Updated www/firefox to 37.0.1nb2 [martin 2015-04-12]
