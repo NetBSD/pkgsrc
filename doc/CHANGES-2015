@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1746 2015/04/12 10:04:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1747 2015/04/12 10:21:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2404,3 +2404,14 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/ffmpeg2 to 2.6.2 [adam 2015-04-12]
 	Updated multimedia/ffplay2 to 2.6.2 [adam 2015-04-12]
 	Updated math/py-rpy to 2.5.6nb2 [wiz 2015-04-12]
+	Updated devel/p5-CPAN-Checksums to 2.10 [mef 2015-04-12]
+	Updated devel/p5-ExtUtils-CppGuess to 0.09 [mef 2015-04-12]
+	Updated devel/p5-IO-Multiplex to 1.16 [mef 2015-04-12]
+	Updated devel/p5-Module-Metadata to 1.000027 [mef 2015-04-12]
+	Updated devel/p5-Perl6-Junction to 1.60000 [mef 2015-04-12]
+	Updated devel/p5-Perl6-Slurp to 0.051005 [mef 2015-04-12]
+	Updated devel/p5-PerlIO-gzip to 0.19 [mef 2015-04-12]
+	Updated devel/p5-Proc-Daemon to 0.19 [mef 2015-04-12]
+	Updated devel/p5-SVN-Notify to 2.84 [mef 2015-04-12]
+	Updated devel/p5-Scope-Upper to 0.27 [mef 2015-04-12]
+	Updated devel/p5-Syntax-Keyword-Junction to 0.003008 [mef 2015-04-12]
