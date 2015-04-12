@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/04/17 12:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/12 14:28:55 wiz Exp $
 
-DISTNAME=	enum34-0.9.23
+DISTNAME=	enum34-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/e/enum34/
