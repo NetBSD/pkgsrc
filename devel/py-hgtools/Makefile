@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/02/09 18:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/12 14:16:28 wiz Exp $
 
 HGTVERS=	6.3
 DISTNAME=	hgtools-${HGTVERS}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/h/hgtools/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/packages/source/h/hgtools/
+HOMEPAGE=	https://pypi.python.org/pypi/hgtools
 COMMENT=	Classes and setuptools plugin for Mercurial and Git repositories
 LICENSE=	mit
 
