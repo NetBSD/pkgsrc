@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14315 2015/04/12 14:25:35 wiz Exp $
+$NetBSD: TODO,v 1.14316 2015/04/12 14:27:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -931,7 +931,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-PasteDeploy-1.5.2
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
-	o py-atomicwrites-0.1.5
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
 	o py-cryptography-0.8.2
