@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2015/02/26 16:05:11 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/12 16:09:27 tnn Exp $
 
 DISTNAME=	arj-3.10.22
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arj/}
 
