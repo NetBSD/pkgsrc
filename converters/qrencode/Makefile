@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/06/09 13:48:50 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/12 16:25:06 tnn Exp $
 #
 
-DISTNAME=	qrencode-3.4.2
+DISTNAME=	qrencode-3.4.4
 CATEGORIES=	converters
 MASTER_SITES=	http://fukuchi.org/works/qrencode/
 EXTRACT_SUFX=	.tar.bz2
