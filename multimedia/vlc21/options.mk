@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/12/13 11:15:45 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/12 10:43:25 jmcneill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad skins sdl pulseaudio x11
@@ -6,6 +6,11 @@ PKG_SUPPORTED_OPTIONS+=		gnome dts rtsp
 # XXX broken
 #PKG_SUPPORTED_OPTIONS+=	dbus
 PKG_SUGGESTED_OPTIONS=		faad x11 rtsp
+
+.if !empty(MACHINE_ARCH:M*earm*)
+PKG_SUPPORTED_OPTIONS+=		rpi
+PKG_SUGGESTED_OPTIONS+=		rpi
+.endif
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
@@ -176,4 +181,12 @@ PLIST.lirc=	yes
 .include "../../comms/lirc/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-lirc
+.endif
+
+## Raspberry Pi support
+.if !empty(PKG_OPTIONS:Mrpi)
+CONFIGURE_ARGS+=	--enable-rpi-omxil
+.include "../../misc/raspberrypi-userland/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-rpi-omxil
 .endif
