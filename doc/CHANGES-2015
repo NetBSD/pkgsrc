@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1744 2015/04/12 08:47:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1745 2015/04/12 09:16:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2401,3 +2401,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 37.0.1nb2 [martin 2015-04-12]
 	Updated devel/scmcvs to 1.12.13nb3 [dsainty 2015-04-12]
 	Updated textproc/aspell-ca to 2.1.5.1 [mef 2015-04-12]
+	Updated multimedia/ffmpeg2 to 2.6.2 [adam 2015-04-12]
+	Updated multimedia/ffplay2 to 2.6.2 [adam 2015-04-12]
