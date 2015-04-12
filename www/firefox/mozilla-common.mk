@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.52 2015/04/05 12:54:11 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.53 2015/04/12 09:02:39 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -9,6 +9,10 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
+
+test:
+	cd ${WRKSRC}/${OBJDIR}/dist/bin &&	\
+	     ./run-mozilla.sh ${WRKSRC}/mach check-spidermonkey
 
 .include "../../mk/bsd.prefs.mk"
 # tar(1) of OpenBSD 5.5 has no --exclude command line option.
