@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/01/31 12:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/12 10:43:12 mef Exp $
 
-DISTNAME=	TAP-Harness-Archive-0.16
+DISTNAME=	TAP-Harness-Archive-0.17
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=TAP/}
