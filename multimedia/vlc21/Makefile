@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/02/21 23:35:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/12 10:43:25 jmcneill Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		4
@@ -103,6 +103,12 @@ SUBST_STAGE.fnt=	pre-configure
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/text_renderer/freetype.c
 SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
+
+SUBST_CLASSES+=		vc
+SUBST_STAGE.vc=		pre-configure
+SUBST_SED.vc=		-e "s,/opt/vc,${LOCALBASE},g"
+SUBST_FILES.vc+=	modules/codec/omxil/omxil_core.c
+SUBST_MESSAGE.vc=	Fixing hardcoded videocore library paths. 
 
 # VLC embeds the build environment info to help debuging.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
