@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/17 12:27:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/12 14:28:55 wiz Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/enum/LICENSE
 ${PYSITELIB}/enum/README
 ${PYSITELIB}/enum/__init__.py
 ${PYSITELIB}/enum/__init__.pyc
 ${PYSITELIB}/enum/__init__.pyo
-${PYSITELIB}/enum/doc/enum.pdf
 ${PYSITELIB}/enum/doc/enum.rst
 ${PYSITELIB}/enum/enum.py
 ${PYSITELIB}/enum/enum.pyc
