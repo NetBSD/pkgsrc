@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2015/04/02 22:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/12 14:42:30 wiz Exp $
 
-DISTNAME=	cryptography-0.8.1
+DISTNAME=	cryptography-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/cryptography/
