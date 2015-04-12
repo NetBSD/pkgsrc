@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1747 2015/04/12 10:21:45 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1748 2015/04/12 10:58:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2415,3 +2415,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-SVN-Notify to 2.84 [mef 2015-04-12]
 	Updated devel/p5-Scope-Upper to 0.27 [mef 2015-04-12]
 	Updated devel/p5-Syntax-Keyword-Junction to 0.003008 [mef 2015-04-12]
+	Updated devel/p5-TAP-Harness-Archive to 0.17 [mef 2015-04-12]
