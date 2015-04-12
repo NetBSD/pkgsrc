@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1739 2015/04/11 21:12:01 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1740 2015/04/12 03:16:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2396,3 +2396,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-tcl to 3.8.9 [adam 2015-04-11]
 	Updated www/mini_httpd to 1.21 [schwarz 2015-04-11]
 	Updated graphics/libsixel to 1.4.11 [ryoon 2015-04-11]
+	Updated www/p5-Dancer2 to 0.159003 [wen 2015-04-12]
