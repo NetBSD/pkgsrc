@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2015/03/01 15:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/12 14:22:01 wiz Exp $
 
-DISTNAME=	waf-1.8.7
+DISTNAME=	waf-1.8.8
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.waf.io/pub/release/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/waf/
+HOMEPAGE=	https://waf.io/
 COMMENT=	Framework for configuring, compiling and installing applications
 LICENSE=	modified-bsd
 
