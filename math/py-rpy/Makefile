@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2015/04/10 08:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/04/12 10:04:08 wiz Exp $
 
 DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/r/rpy2/
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rpy.sourceforge.net/
 COMMENT=	R interface for Python
 LICENSE=	mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
+
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 USE_LANGUAGES+=		c fortran77
 
