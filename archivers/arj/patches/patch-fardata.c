@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.3 2014/05/11 20:56:16 rodent Exp $
+$NetBSD: patch-fardata.c,v 1.1 2015/04/12 15:45:00 tnn Exp $
+
+Rename strnlen -> _strnlen to avoid conflict in systems having strnlen.
 
 --- fardata.c.orig	2004-04-17 11:39:42.000000000 +0000
 +++ fardata.c
