@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/04/03 17:06:08 rodent Exp $
+# $NetBSD: Makefile,v 1.57 2015/04/12 23:33:06 rodent Exp $
 #
 
 DISTNAME=		nagios-4.0.8
@@ -94,6 +94,9 @@ post-install:
 	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
 	${INSTALL_DATA} ${WRKDIR}/netbsd40.png \
 	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/share/nagios/jsonquery.html
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/share/nagios/rss-corefeed.html
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/share/nagios/rss-newsfeed.html
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
