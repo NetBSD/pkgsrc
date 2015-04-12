@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1752 2015/04/12 14:25:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1753 2015/04/12 14:27:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2420,3 +2420,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/waf to 1.8.8 [wiz 2015-04-12]
 	Updated devel/afl to 1.64b [wiz 2015-04-12]
 	Updated security/libgpg-error to 1.19 [wiz 2015-04-12]
+	Updated devel/py-atomicwrites to 0.1.5 [wiz 2015-04-12]
