@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/13 11:15:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/12 10:43:25 jmcneill Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -183,6 +183,8 @@ lib/vlc/plugins/codec/liblibass_plugin.la
 lib/vlc/plugins/codec/liblibmpeg2_plugin.la
 lib/vlc/plugins/codec/liblpcm_plugin.la
 lib/vlc/plugins/codec/libmpeg_audio_plugin.la
+${PLIST.rpi}lib/vlc/plugins/codec/libomxil_plugin.la
+${PLIST.rpi}lib/vlc/plugins/codec/libomxil_vout_plugin.la
 lib/vlc/plugins/codec/libopus_plugin.la
 lib/vlc/plugins/codec/libpng_plugin.la
 lib/vlc/plugins/codec/librawvideo_plugin.la
@@ -200,7 +202,7 @@ lib/vlc/plugins/codec/libtheora_plugin.la
 lib/vlc/plugins/codec/libuleaddvaudio_plugin.la
 lib/vlc/plugins/codec/libvorbis_plugin.la
 lib/vlc/plugins/codec/libx264_plugin.la
-lib/vlc/plugins/codec/libxwd_plugin.la
+${PLIST.x11}lib/vlc/plugins/codec/libxwd_plugin.la
 lib/vlc/plugins/control/libdummy_plugin.la
 lib/vlc/plugins/control/libgestures_plugin.la
 ${PLIST.x11}lib/vlc/plugins/control/libglobalhotkeys_plugin.la
@@ -377,8 +379,8 @@ lib/vlc/plugins/video_filter/libtransform_plugin.la
 lib/vlc/plugins/video_filter/libwall_plugin.la
 lib/vlc/plugins/video_filter/libwave_plugin.la
 lib/vlc/plugins/video_filter/libyuvp_plugin.la
-lib/vlc/plugins/video_output/libgl_plugin.la
-lib/vlc/plugins/video_output/libglx_plugin.la
+${PLIST.x11}lib/vlc/plugins/video_output/libgl_plugin.la
+${PLIST.x11}lib/vlc/plugins/video_output/libglx_plugin.la
 lib/vlc/plugins/video_output/libvdummy_plugin.la
 lib/vlc/plugins/video_output/libvmem_plugin.la
 ${PLIST.sdl}lib/vlc/plugins/video_output/libvout_sdl_plugin.la
