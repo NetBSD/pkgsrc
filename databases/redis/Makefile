@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/03/12 14:10:28 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/13 11:33:35 fhajny Exp $
 
-DISTNAME=	redis-2.8.18
+DISTNAME=	redis-3.0.0
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -46,7 +46,7 @@ FILES_SUBST+=		REDIS_GROUP=${REDIS_GROUP}
 FILES_SUBST+=		REDIS_DATADIR=${REDIS_DATADIR}
 
 SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	post-patch
+SUBST_STAGE.fix-paths=	pre-configure
 SUBST_MESSAGE.fix-paths= Fixing paths.
 SUBST_FILES.fix-paths=	redis.conf
 SUBST_VARS.fix-paths=	REDIS_DATADIR REDIS_LOGDIR REDIS_PIDDIR
