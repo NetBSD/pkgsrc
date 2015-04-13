@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/04 17:36:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/13 08:17:41 wiz Exp $
 bin/cbc
 bin/clp
 include/coin/CbcBranchActual.hpp
@@ -37,6 +37,7 @@ include/coin/CbcGeneral.hpp
 include/coin/CbcGeneralDepth.hpp
 include/coin/CbcHeuristic.hpp
 include/coin/CbcHeuristicDINS.hpp
+include/coin/CbcHeuristicDW.hpp
 include/coin/CbcHeuristicDive.hpp
 include/coin/CbcHeuristicDiveCoefficient.hpp
 include/coin/CbcHeuristicDiveFractional.hpp
@@ -63,6 +64,7 @@ include/coin/CbcObject.hpp
 include/coin/CbcObjectUpdateData.hpp
 include/coin/CbcOrClpParam.cpp
 include/coin/CbcOrClpParam.hpp
+include/coin/CbcParam.hpp
 include/coin/CbcPartialNodeInfo.hpp
 include/coin/CbcSOS.hpp
 include/coin/CbcSimpleInteger.hpp
@@ -191,6 +193,7 @@ include/coin/CoinPresolveTighten.hpp
 include/coin/CoinPresolveTripleton.hpp
 include/coin/CoinPresolveUseless.hpp
 include/coin/CoinPresolveZeros.hpp
+include/coin/CoinRational.hpp
 include/coin/CoinSearchTree.hpp
 include/coin/CoinShallowPackedVector.hpp
 include/coin/CoinSignal.hpp
@@ -231,6 +234,7 @@ lib/libCbc.la
 lib/libCbcSolver.la
 lib/libCgl.la
 lib/libClp.la
+lib/libClpSolver.la
 lib/libCoinMP.la
 lib/libCoinUtils.la
 lib/libOsi.la
@@ -256,6 +260,8 @@ share/coin/Data/Sample/app0110R.stoch
 share/coin/Data/Sample/app0110R.time
 share/coin/Data/Sample/atm_5_10_1.block
 share/coin/Data/Sample/atm_5_10_1.mps
+share/coin/Data/Sample/block_milp.dec
+share/coin/Data/Sample/block_milp.lp
 share/coin/Data/Sample/brandy.mps
 share/coin/Data/Sample/bug.cor
 share/coin/Data/Sample/bug.stoch
