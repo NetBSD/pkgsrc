@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2013/08/16 08:30:20 hannken Exp $
+$NetBSD: patch-examples_chrony.keys.example,v 1.1 2015/04/13 10:03:21 hannken Exp $
 
 Prepare for SUBST, not processed by configure.
 
---- examples/chrony.keys.example.orig	2013-08-08 13:58:07.000000000 +0000
+--- examples/chrony.keys.example.orig	2015-04-07 14:35:16.000000000 +0000
 +++ examples/chrony.keys.example
 @@ -1,6 +1,6 @@
  #######################################################################
