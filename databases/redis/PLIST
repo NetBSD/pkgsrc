@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2014/07/18 09:33:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/04/13 11:33:35 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
 bin/redis-cli
+bin/redis-sentinel
 bin/redis-server
 share/doc/redis/00-RELEASENOTES
 share/doc/redis/BUGS
@@ -12,12 +13,30 @@ share/examples/redis/redis.conf.example
 share/examples/redis/tests/assets/default.conf
 share/examples/redis/tests/assets/encodings.rdb
 share/examples/redis/tests/assets/hash-zipmap.rdb
+share/examples/redis/tests/cluster/cluster.tcl
+share/examples/redis/tests/cluster/run.tcl
+share/examples/redis/tests/cluster/tests/00-base.tcl
+share/examples/redis/tests/cluster/tests/01-faildet.tcl
+share/examples/redis/tests/cluster/tests/02-failover.tcl
+share/examples/redis/tests/cluster/tests/03-failover-loop.tcl
+share/examples/redis/tests/cluster/tests/04-resharding.tcl
+share/examples/redis/tests/cluster/tests/05-slave-selection.tcl
+share/examples/redis/tests/cluster/tests/06-slave-stop-cond.tcl
+share/examples/redis/tests/cluster/tests/07-replica-migration.tcl
+share/examples/redis/tests/cluster/tests/08-update-msg.tcl
+share/examples/redis/tests/cluster/tests/09-pubsub.tcl
+share/examples/redis/tests/cluster/tests/10-manual-failover.tcl
+share/examples/redis/tests/cluster/tests/11-manual-takeover.tcl
+share/examples/redis/tests/cluster/tests/helpers/onlydots.tcl
+share/examples/redis/tests/cluster/tests/includes/init-tests.tcl
+share/examples/redis/tests/cluster/tmp/.gitignore
 share/examples/redis/tests/helpers/bg_complex_data.tcl
 share/examples/redis/tests/helpers/gen_write_load.tcl
 share/examples/redis/tests/instances.tcl
 share/examples/redis/tests/integration/aof-race.tcl
 share/examples/redis/tests/integration/aof.tcl
 share/examples/redis/tests/integration/convert-zipmap-hash-on-load.tcl
+share/examples/redis/tests/integration/logging.tcl
 share/examples/redis/tests/integration/rdb.tcl
 share/examples/redis/tests/integration/redis-cli.tcl
 share/examples/redis/tests/integration/replication-2.tcl
@@ -34,6 +53,7 @@ share/examples/redis/tests/sentinel/tests/04-slave-selection.tcl
 share/examples/redis/tests/sentinel/tests/05-manual.tcl
 share/examples/redis/tests/sentinel/tests/includes/init-tests.tcl
 share/examples/redis/tests/sentinel/tmp/.gitignore
+share/examples/redis/tests/support/cluster.tcl
 share/examples/redis/tests/support/redis.tcl
 share/examples/redis/tests/support/server.tcl
 share/examples/redis/tests/support/test.tcl
@@ -72,11 +92,17 @@ share/examples/redis/tests/unit/type/list.tcl
 share/examples/redis/tests/unit/type/set.tcl
 share/examples/redis/tests/unit/type/zset.tcl
 share/examples/redis/utils/build-static-symbols.tcl
+share/examples/redis/utils/cluster_fail_time.tcl
+share/examples/redis/utils/create-cluster/.gitignore
+share/examples/redis/utils/create-cluster/README
+share/examples/redis/utils/create-cluster/create-cluster
 share/examples/redis/utils/generate-command-help.rb
 share/examples/redis/utils/hyperloglog/.gitignore
 share/examples/redis/utils/hyperloglog/hll-err.rb
 share/examples/redis/utils/hyperloglog/hll-gnuplot-graph.rb
 share/examples/redis/utils/install_server.sh
+share/examples/redis/utils/lru/README
+share/examples/redis/utils/lru/test-lru.rb
 share/examples/redis/utils/mkrelease.sh
 share/examples/redis/utils/redis-copy.rb
 share/examples/redis/utils/redis-sha1.rb
