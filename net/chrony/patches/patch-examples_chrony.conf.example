@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2013/08/16 08:30:20 hannken Exp $
+$NetBSD: patch-examples_chrony.conf.example,v 1.1 2015/04/13 10:03:21 hannken Exp $
 
 Prepare for SUBST, not processed by configure.
 
---- examples/chrony.conf.example.orig	2013-08-08 13:58:07.000000000 +0000
+--- examples/chrony.conf.example.orig	2015-04-07 14:35:16.000000000 +0000
 +++ examples/chrony.conf.example
 @@ -1,7 +1,7 @@
  #######################################################################
@@ -31,7 +31,7 @@ Prepare for SUBST, not processed by configure.
  
  # Tell chronyd which numbered key in the file is used as the password
  # for chronyc. (You can pick any integer up to 2**32-1.  '1' is just a
-@@ -129,7 +129,7 @@ commandkey 1
+@@ -132,7 +132,7 @@ generatecommandkey
  # still running and bail out.  If you want to change the path to the PID
  # file, uncomment this line and edit it.  The default path is shown.
  
