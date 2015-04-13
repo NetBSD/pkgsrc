@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2014/08/11 19:42:46 adam Exp $
+$NetBSD: patch-aa,v 1.10 2015/04/13 18:45:46 jperkin Exp $
 
 Shell portability fix: see
 https://savannah.nongnu.org/bugs/index.php?22222
+Ensure asm instructions are checked correctly.
 
 --- configure.orig	2014-08-10 04:48:26.000000000 +0000
 +++ configure
@@ -14,6 +15,19 @@ https://savannah.nongnu.org/bugs/index.php?22222
  
  
  
+@@ -17584,10 +17584,10 @@ main ()
+                  int n   = 0;
+                  int eax = 0;
+                  int edx = 0;
+-                 __asm__(
++                 __asm__ volatile (
+                      "xgetbv     \n"
+                      "vzeroupper  "
+-                     : "=a"(eax), "=d"(edx) : "c"(n) : );
++                     : "=a"(eax), "=d"(edx) : "c"(n) );
+              #else
+                  #error No GCC style inline asm supported for AVX instructions
+              #endif
 @@ -17631,7 +17631,7 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  { $as_echo "$as_me:$LINENO: result: $gcc_inline_asm_avx" >&5
