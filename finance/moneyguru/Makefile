@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/04/03 09:17:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/13 23:12:42 rodent Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
@@ -24,7 +24,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c
 USE_TOOLS=	pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27 # 3.x only
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # 3.x only
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=	cocoa/waf
