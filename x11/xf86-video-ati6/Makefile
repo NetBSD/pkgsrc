@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/03 09:59:56 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/13 14:03:15 tnn Exp $
 
 DISTNAME=	xf86-video-ati-6.14.6
 PKGNAME=	${DISTNAME:S/ati/ati6/}
@@ -31,6 +31,7 @@ pre-configure:
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
