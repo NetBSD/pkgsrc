@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1763 2015/04/13 12:34:28 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1764 2015/04/13 12:44:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/mencoder to 1.1.1nb5 [dsainty 2015-04-13]
 	Updated databases/redis to 3.0.0 [fhajny 2015-04-13]
 	Updated misc/less to 475 [tnn 2015-04-13]
+	Updated databases/py-cassandra-driver to 2.5.0 [fhajny 2015-04-13]
