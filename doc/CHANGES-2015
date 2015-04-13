@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1760 2015/04/13 08:17:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1761 2015/04/13 09:14:00 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/qrencode to 3.4.4 [tnn 2015-04-12]
 	Updated www/bluefish to 2.2.7 [mef 2015-04-13]
 	Updated math/coinmp to 1.8.1 [wiz 2015-04-13]
+	Updated multimedia/mencoder to 1.1.1nb5 [dsainty 2015-04-13]
