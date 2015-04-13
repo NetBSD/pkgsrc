@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/12 11:45:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:40 rodent Exp $
 
 DISTNAME=	argcomplete-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://github.com/kislyuk/argcomplete/
 COMMENT=	Bash tab completion for argparse
 LICENSE=	apache-2.0
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 USE_LANGUAGES=	# none
 

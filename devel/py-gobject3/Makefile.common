@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/10/25 11:27:09 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/04/13 23:12:41 rodent Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
@@ -22,8 +22,6 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject3/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/py-gobject3/patches
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 PKGCONFIG_OVERRIDE+=	pygobject-3.0.pc.in
 PY_PATCHPLIST=		yes
