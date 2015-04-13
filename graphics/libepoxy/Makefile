@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/03 08:48:57 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/13 13:54:17 tnn Exp $
 
 DISTNAME=	libepoxy-1.2
 CATEGORIES=	graphics
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/anholt/libepoxy/
 COMMENT=	Library for OpenGL function pointer management
 LICENSE=	mit
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_TOOLS+=	pkg-config autoconf autoreconf automake
 USE_LIBTOOL=	yes
