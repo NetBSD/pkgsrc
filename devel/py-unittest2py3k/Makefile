@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/23 10:50:43 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:41 rodent Exp $
 
 DISTNAME=		unittest2py3k-0.5.1
 # to match python-2.x name
@@ -12,7 +12,7 @@ HOMEPAGE=		http://pypi.python.org/pypi/unittest2py3k
 COMMENT=		Unittest features for Python 2.7 (Python 3.x version)
 LICENSE=		original-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}

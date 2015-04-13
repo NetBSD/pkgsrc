@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/09/03 13:25:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.41 2015/04/13 23:12:42 rodent Exp $
 
 DISTNAME=		v3.9
 PKGNAME=		rss2email-3.9
@@ -17,7 +17,7 @@ DEPENDS+=		${PYPKGPREFIX}-html2text>=2014.4.5:../../textproc/py-html2text
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=		yes

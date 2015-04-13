@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/03/19 09:53:45 adam Exp $
+# $NetBSD: Makefile,v 1.62 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	Django-1.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,7 +18,6 @@ USE_LANGUAGES=		# empty
 REPLACE_PYTHON=		${WRKSRC}/django/bin/django-admin.py
 REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/manage.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 PYTHON_VERSIONED_DEPENDENCIES=	flup
 
 post-install:

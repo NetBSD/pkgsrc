@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/20 12:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/13 23:12:42 rodent Exp $
 
 DISTNAME=	ephem-3.7.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyephem/ephem/}
@@ -14,7 +14,7 @@ do-test:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} ${MAKE_ENV} \
 	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "test")
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	src/ephem/tests/test_angles.py
 REPLACE_PYTHON+=	src/ephem/tests/test_bodies.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/03 09:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/13 23:12:41 rodent Exp $
 
 DISTNAME=	Attic-0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:

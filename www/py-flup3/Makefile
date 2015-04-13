@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/16 13:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	cc23b715b120
 PKGNAME=	${PYPKGPREFIX}-flup-1.0.3pre1
@@ -15,7 +15,7 @@ EGG_NAME=	flup-1.0.3.dev0
 WRKSRC=		${WRKDIR}/flup-py3-0-${DISTNAME}
 
 USE_LANGUAGES=	# empty
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

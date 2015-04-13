@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/03/13 23:10:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2015/04/13 23:12:41 rodent Exp $
 
 DISTNAME=	gedit-3.14.3
 CATEGORIES=	editors gnome
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=	plugins/externaltools/data/send-to-fpaste.tool.in
 
 CONFIGURE_ARGS+=	--disable-updater

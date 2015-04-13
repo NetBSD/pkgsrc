@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/01 02:16:26 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/13 23:12:40 rodent Exp $
 
 DISTNAME=	PyMySQL-0.6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,8 +9,6 @@ MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/PyMySQL/PyMySQL/
 COMMENT=	Pure-Python MySQL driver
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 USE_LANGUAGES=	# none
 

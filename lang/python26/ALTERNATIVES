@@ -1,4 +1,0 @@
-bin/2to3 @PREFIX@/bin/2to3-2.6
-bin/pydoc @PREFIX@/bin/pydoc2.6
-bin/python @PREFIX@/bin/python2.6
-bin/smtpd.py @PREFIX@/bin/smtpd2.6.py
