@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/04 17:36:34 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/04/13 08:17:41 wiz Exp $
 
-SHA1 (CoinMP-1.7.6.tgz) = f52c74abcbf55c72cd89f709db658ea33ed45154
-RMD160 (CoinMP-1.7.6.tgz) = b1634d966a201a94a0ace4769b0216aa7189d8dd
-Size (CoinMP-1.7.6.tgz) = 10343849 bytes
+SHA1 (CoinMP-1.8.1.tgz) = f5f8623b76ddbbbc7a46578c2db273ac34779842
+RMD160 (CoinMP-1.8.1.tgz) = ddddf71bde494c8427f0ca2596f629ba46b40682
+Size (CoinMP-1.8.1.tgz) = 10632857 bytes
