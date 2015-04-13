@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2013/08/16 08:30:20 hannken Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/13 10:03:21 hannken Exp $
 
-DISTNAME=	chrony-1.29
+DISTNAME=	chrony-1.31.1
 CATEGORIES=	net
 MASTER_SITES=	http://download.tuxfamily.org/chrony/
 
@@ -32,8 +32,8 @@ SUBST_STAGE.paths=	post-patch
 
 post-install:
 	set -e; for file in ${EGFILES}; do			\
-		${INSTALL_DATA} ${WRKSRC}/examples/$${file}	\
-			${DESTDIR}${EGDIR}/$${file};		\
+		${INSTALL_DATA} "${WRKSRC}/examples/$${file}"	\
+			"${DESTDIR}${EGDIR}/$${file}";		\
 	done
 
 .include "../../mk/readline.buildlink3.mk"
