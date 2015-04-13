@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.18 2014/12/14 02:34:52 obache Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.19 2015/04/13 23:12:44 rodent Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -34,7 +34,7 @@ type:=	${pattern:C/[^:]*//}
 .for name py2dir py3dir in ${_SUPPORTED_PACKAGES}
 .if "${pkg}" == "${name}"
 _PKG_MATCHED=	yes
-.if ${PYPKGPREFIX} == "py26" || ${PYPKGPREFIX} == "py27"
+.if ${PYPKGPREFIX} == "py27"
 dir:=	${py2dir}
 .else
 dir:=	${py3dir}

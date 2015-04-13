@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/02/16 15:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	google-api-python-client-py3-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-py3//}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.8:../../www/py-httplib2
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27 # won't CONFLICT with the 2.x version
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # won't CONFLICT with the 2.x version
 
 REPLACE_PYTHON+=	apiclient/*.py oauth2client/*.py
 
