@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2015/04/06 08:17:40 adam Exp $
+# $NetBSD: Makefile,v 1.93 2015/04/13 23:12:44 rodent Exp $
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
@@ -25,12 +25,11 @@ PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
 
 .include "../../lang/python/pyversion.mk"
 
-# The "real" value here is: 27 26
+# The "real" value here is: 27
 # but because of single-version deps of gnome bits this will only
 # ever work for the python version those gnome bits were built with.
-PYTHON_VERSIONS_REALLY_ACCEPTED=27 26
+PYTHON_VERSIONS_REALLY_ACCEPTED=27
 PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT:M27}
-PYTHON_VERSIONS_ACCEPTED+=	${PYTHON_VERSION_DEFAULT:M26}
 
 .include "options.mk"
 

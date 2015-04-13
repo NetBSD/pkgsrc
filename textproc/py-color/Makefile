@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/05 21:17:58 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	color-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

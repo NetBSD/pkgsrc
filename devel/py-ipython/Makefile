@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/04/20 13:16:28 imil Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/13 23:12:41 rodent Exp $
 
 DISTNAME=	ipython-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=14.0.1:../../net/py-zmq
 
 PYTHON_SELF_CONFLICT=	yes
 # requires Python >= 2.7.2 or >= 3.3.0
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 USE_LANGUAGES=	# none
 

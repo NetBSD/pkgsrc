@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/15 18:31:53 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/13 23:12:41 rodent Exp $
 #
 
 DISTNAME=	ordereddict-1.1
@@ -12,8 +12,6 @@ COMMENT=	Drop-in substitute for Py2.7's new collections.OrderedDict
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED=              26
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

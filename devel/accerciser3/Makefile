@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/08 00:03:05 prlw1 Exp $
+# $NetBSD: Makefile,v 1.15 2015/04/13 23:12:40 rodent Exp $
 
 DISTNAME=	accerciser-3.14.0
 CATEGORIES=	devel gnome
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>=1.2.1:../../devel/py-ipython
 # dependencies to keep package's configure script happy:
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/at-spi2-core/buildlink3.mk"

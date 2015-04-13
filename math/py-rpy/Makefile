@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/04/12 10:04:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/04/13 23:12:42 rodent Exp $
 
 DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -19,7 +19,6 @@ BUILDLINK_API_DEPENDS.R+= R>=2.11.0
 
 LDFLAGS.SunOS+=		-mimpure-text
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 # doesn't find R
 REPLACE_PYTHON=			rpy/tests.py
 
 .include "../../lang/python/pyversion.mk"

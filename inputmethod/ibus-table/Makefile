@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/03/15 17:30:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/13 23:12:42 rodent Exp $
 
 DISTNAME=	ibus-table-1.9.2
 CATEGORIES=	inputmethod
@@ -24,7 +24,7 @@ SUBST_FILES.prefix=	engine/tabcreatedb.py
 SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 
 REPLACE_PYTHON+=	engine/tabcreatedb.py
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

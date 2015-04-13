@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	jsonlib-python3-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python3//}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

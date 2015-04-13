@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/01/07 14:53:41 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	django-tastypie-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-biplist-[0-9]*:../../textproc/py-biplist
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_LANGUAGES=	# none

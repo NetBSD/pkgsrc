@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	junos-eznc-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/junos-eznc/
 COMMENT=	Python library to manage JunOS devices
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_ACCEPTED=	27 26
+PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools>0.6:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko

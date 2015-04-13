@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/11 13:52:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:43 rodent Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	csvkit-${DISTNAME}
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-jdcal>=0.9.3:../../time/py-jdcal
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.3:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
 #DEPENDS+=		${PYPKGPREFIX}-tox>=1.3:../../*/py-tox
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 # csvkit publishes files like "0.9.0.tar.gz"
 DIST_SUBDIR=	${PKGNAME_NOREV}
