@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
+$NetBSD: patch-ak,v 1.7 2015/04/13 03:59:41 rodent Exp $
 
 --- gl/mountlist.c.orig	2014-03-04 21:41:56.000000000 +0000
 +++ gl/mountlist.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
  #  define FS_TYPE(Ent) ((Ent).f_fstypename)
  # else
 -#  define FS_TYPE(Ent) mnt_names[(Ent).f_type]
-+#  ifdef STAT_STATVFS
++#  if defined(STAT_STATVFS)
 +#   define FS_TYPE(Ent) mnt_names[(Ent).f_fsid]
 +#  else
 +#   define FS_TYPE(Ent) mnt_names[(Ent).f_type]
@@ -19,7 +19,7 @@ $NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
  # include <sys/statfs.h>
  #endif
  
-+#ifdef HAVE_SYS_STATVFS_H
++#if defined(HAVE_SYS_STATVFS_H)
 +#include <sys/statvfs.h>
 +#endif
 +
@@ -39,14 +39,14 @@ $NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
  # endif
  
  static char *
-+#ifdef STAT_STATVFS
++#if defined(STAT_STATVFS) && !defined(__FreeBSD__)
 +fsp_to_string (const struct statvfs *fsp)
 +#else
  fsp_to_string (const struct statfs *fsp)
 +#endif
  {
 -# if HAVE_STRUCT_STATFS_F_FSTYPENAME
-+# if defined HAVE_STRUCT_STATFS_F_FSTYPENAME || defined STAT_STATVFS
++# if defined(HAVE_STRUCT_STATFS_F_FSTYPENAME) || defined(STAT_STATVFS)
    return (char *) (fsp->f_fstypename);
  # else
    return fstype_to_string (fsp->f_type);
@@ -54,7 +54,7 @@ $NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
    {
      int numsys, counter;
      size_t bufsize;
-+#ifdef STAT_STATVFS
++#if defined(STAT_STATVFS) && !defined(__FreeBSD__)
 +    struct statvfs *stats;
 +#else
      struct statfs *stats;
@@ -66,7 +66,7 @@ $NetBSD: patch-ak,v 1.6 2015/04/03 17:50:27 rodent Exp $
  
      bufsize = (1 + numsys) * sizeof *stats;
      stats = xmalloc (bufsize);
-+#ifdef STAT_STATVFS
++#if defined(STAT_STATVFS)
 +    numsys = getfsstat ((struct statvfs *)stats, bufsize, MNT_NOWAIT);
 +#else
      numsys = getfsstat (stats, bufsize, MNT_NOWAIT);
