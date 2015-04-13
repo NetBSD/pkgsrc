@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1758 2015/04/12 16:25:38 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1759 2015/04/13 07:50:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2426,3 +2426,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-cryptography to 0.8.2 [wiz 2015-04-12]
 	Updated security/pinentry to 0.9.1 [wiz 2015-04-12]
 	Updated converters/qrencode to 3.4.4 [tnn 2015-04-12]
+	Updated www/bluefish to 2.2.7 [mef 2015-04-13]
