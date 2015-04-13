@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.Linux3,v 1.1 2011/10/28 10:38:07 dsainty Exp $
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.py
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyc
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyo

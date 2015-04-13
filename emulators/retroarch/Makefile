@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/05 16:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/13 23:12:42 rodent Exp $
 
 DISTNAME=	retroarch-20150203
 PKGNAME=	retroarch-0.0.20150203
@@ -19,7 +19,7 @@ CONFIG_SHELL=	bash
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pkg-config gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON=	tools/cg2glsl.py
 
 EGDIR=		${PREFIX}/share/examples/retroarch
