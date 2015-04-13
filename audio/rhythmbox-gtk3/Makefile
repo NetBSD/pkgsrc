@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/04/06 08:17:21 adam Exp $
+# $NetBSD: Makefile,v 1.24 2015/04/13 23:12:40 rodent Exp $
 
 DISTNAME=	rhythmbox-3.0.1
 PKGREVISION=	5
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-browser-plugin
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-fm-radio
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # option?
 .include "../../net/grilo/buildlink3.mk"

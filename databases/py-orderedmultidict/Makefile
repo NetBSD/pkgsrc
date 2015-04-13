@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/02 22:57:19 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/13 23:12:40 rodent Exp $
 
 DISTNAME=	orderedmultidict-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	unlicense
 DEPENDS+=	${PYPKGPREFIX}-six>=1.8.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 post-install:
 	chmod -x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*

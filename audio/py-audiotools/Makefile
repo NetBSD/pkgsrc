@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/11/11 15:38:24 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/13 23:12:40 rodent Exp $
 
 DISTNAME=	audiotools-2.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ REPLACE_PYTHON+=	audiotools/*.py
 REPLACE_PYTHON+=	audiotools/py_decoders/*.py
 REPLACE_PYTHON+=	audiotools/py_encoders/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # not yet ported as of 2.20 or rejected
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.20 or rejected
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
