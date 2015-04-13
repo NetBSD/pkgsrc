@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/07/06 13:53:12 ryoon Exp $
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
+# $NetBSD: Makefile,v 1.28 2015/04/13 23:12:41 rodent Exp $
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
 # https://bugzilla.gnome.org/show_bug.cgi?id=707196
