@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2015/03/15 00:55:56 taca Exp $
+# $NetBSD: Makefile,v 1.545 2015/04/14 13:28:25 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -215,6 +215,7 @@ SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-Authen-PAM
 SUBDIR+=	p5-Authen-PluggableCaptcha
 SUBDIR+=	p5-Authen-SASL
+SUBDIR+=	p5-Authen-SASL-Authd
 SUBDIR+=	p5-Authen-SASL-Cyrus
 SUBDIR+=	p5-Authen-Simple
 SUBDIR+=	p5-Authen-TacacsPlus
