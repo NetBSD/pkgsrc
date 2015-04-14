@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.631 2015/03/13 15:59:08 taca Exp $
+# $NetBSD: Makefile,v 1.632 2015/04/14 11:28:38 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -381,6 +381,7 @@ SUBDIR+=	p5-UPS-Nut
 SUBDIR+=	p5-Unix-ConfigFile
 SUBDIR+=	p5-Unix-Statgrab
 SUBDIR+=	p5-Unix-Syslog
+SUBDIR+=	p5-collectd
 SUBDIR+=	pciutils
 SUBDIR+=	pcmanfm
 SUBDIR+=	pcvt-utils
@@ -400,6 +401,7 @@ SUBDIR+=	puppet
 SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	py-augeas
+SUBDIR+=	py-collectd
 SUBDIR+=	py-dbus
 SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-kazoo
