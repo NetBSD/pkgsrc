@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1773 2015/04/14 13:28:12 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1774 2015/04/14 15:51:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2441,3 +2441,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/py-collectd version 5.4.2 [fhajny 2015-04-14]
 	Removed lang/py26-html-docs [wiz 2015-04-14]
 	Added security/p5-Authen-SASL-Authd version 0.04 [fhajny 2015-04-14]
+	Updated net/aria2 to 1.18.10 [ryoon 2015-04-14]
