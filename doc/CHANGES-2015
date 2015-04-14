@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1774 2015/04/14 15:51:18 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1775 2015/04/14 17:35:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2442,3 +2442,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed lang/py26-html-docs [wiz 2015-04-14]
 	Added security/p5-Authen-SASL-Authd version 0.04 [fhajny 2015-04-14]
 	Updated net/aria2 to 1.18.10 [ryoon 2015-04-14]
+	Updated databases/percona-toolkit to 2.2.14 [fhajny 2015-04-14]
