@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.34 2015/02/12 08:22:16 abs Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.35 2015/04/14 11:40:31 wiz Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -453,7 +453,7 @@ while [ -n "$REPLACE_TODO" ]; do
     # Set PKGNAME_REQD to give underlying make processes a chance to
     # set options derived from the package name.  For example,
     # the appropriate version of Python can be derived from the
-    # package name (so, when building py26-foo, use python-2.6,
+    # package name (so, when building py34-foo, use python-3.4,
     # not python-2.7).
     MAKE_SET_VARS="PKGNAME_REQD=${pkg}-*"
 
