@@ -1,4 +1,4 @@
-/*	$NetBSD: stdlib.h,v 1.4 2008/10/06 12:36:20 joerg Exp $	*/
+/*	$NetBSD: stdlib.h,v 1.5 2015/04/14 09:23:48 jperkin Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -43,6 +43,10 @@
  * Declare functions and macros that may be missing in <stdlib.h> and
  * <alloca.h>.
  */
+
+#if !HAVE_SETENV
+int	setenv(const char *, const char *, int);
+#endif
 
 #if !HAVE_MKSTEMP
 int	mkstemp(char *);
