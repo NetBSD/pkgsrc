@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/04/07 13:20:41 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/04/14 11:27:30 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -12,6 +12,8 @@
 # used by sysutils/collectd-postgresql/Makefile
 # used by sysutils/collectd-rrdtool/Makefile
 # used by sysutils/collectd-snmp/Makefile
+# used by sysutils/p5-collectd/Makefile
+# used by sysutils/py-collectd/Makefile
 
 DISTNAME=	collectd-5.4.2
 MASTER_SITES=	http://collectd.org/files/
