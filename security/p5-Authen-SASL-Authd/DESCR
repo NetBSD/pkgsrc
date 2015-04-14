@@ -1,0 +1,2 @@
+Authen::SASL::Authd - Client authentication via Cyrus saslauthd or
+Dovecot authentication daemon.
