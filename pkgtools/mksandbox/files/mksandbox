@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.6 2013/07/24 22:16:26 jperkin Exp $
+# $NetBSD: mksandbox,v 1.7 2015/04/14 08:55:07 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -247,7 +247,7 @@ r3() {
 fses="\\
 EOS
 
-if [ ! -z "$kernel" ]; then
+if [ -n "$kernel" -a -f "$kernel" ]; then
 	echo "Copying the kernel"
 	$cpprog $kernel $sandbox
 fi
