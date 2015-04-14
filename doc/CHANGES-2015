@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1766 2015/04/14 02:21:42 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1767 2015/04/14 08:55:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2434,3 +2434,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-cassandra-driver to 2.5.0 [fhajny 2015-04-13]
 	Removed lang/python26 [rodent 2015-04-13]
 	Updated www/emacs-w3m-snapshot to 1.4.538.20141022 [mef 2015-04-14]
+	Updated pkgtools/mksandbox to 1.4 [jperkin 2015-04-14]
