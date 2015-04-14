@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:43 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/14 11:25:37 wiz Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	csvkit-${DISTNAME}
@@ -32,7 +32,4 @@ EGG_NAME=	${PKGNAME}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.if ${PYPKGPREFIX} == "py26"
-DEPENDS+=	${PYPKGPREFIX}-ordereddict>=1.1:../../devel/py-ordereddict
-.endif
 .include "../../mk/bsd.pkg.mk"
