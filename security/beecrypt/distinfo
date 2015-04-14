@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/01/26 06:05:04 sbd Exp $
+$NetBSD: distinfo,v 1.7 2015/04/14 14:23:14 joerg Exp $
 
 SHA1 (beecrypt-4.1.1.tar.gz) = 5731fd4c6f960a5e9474f1f87611f88667cf98da
 RMD160 (beecrypt-4.1.1.tar.gz) = f284c702ef7b0fe703a669c7a18f0a89eaaa6f93
 Size (beecrypt-4.1.1.tar.gz) = 774424 bytes
-SHA1 (patch-configure) = c0986fe4d454466fc5df600a489b18d776ce3632
+SHA1 (patch-acinclude.m4) = c35fe6952cda843d26a9d75cfe001a4d49431167
+SHA1 (patch-configure) = 80baba5bdb2848abb9bd451aeca959a3ae81f842
 SHA1 (patch-configure.ac) = a1154ecad02465b85384944b53e18d3fbbb9e9d8
