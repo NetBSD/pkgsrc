@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1767 2015/04/14 08:55:16 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.1768 2015/04/14 09:23:58 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed lang/python26 [rodent 2015-04-13]
 	Updated www/emacs-w3m-snapshot to 1.4.538.20141022 [mef 2015-04-14]
 	Updated pkgtools/mksandbox to 1.4 [jperkin 2015-04-14]
+	Updated pkgtools/libnbcompat to 20150414 [jperkin 2015-04-14]
