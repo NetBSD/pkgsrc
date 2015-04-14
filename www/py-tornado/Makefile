@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/08 16:31:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/14 11:40:32 wiz Exp $
 
 DISTNAME=	tornado-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ do-test:
 
 .include "../../lang/python/pyversion.mk"
 
-.if "${PYPKGPREFIX}" == "py26" || "${PYPKGPREFIX}" == "py27
+.if "${PYPKGPREFIX}" == "py27"
 DEPENDS+=	${PYPKGPREFIX}-backports.ssl_match_hostname-[0-9]*:../../security/py-backports.ssl_match_hostname
 .endif
 

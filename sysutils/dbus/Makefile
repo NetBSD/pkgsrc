@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2015/02/17 13:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2015/04/14 11:40:32 wiz Exp $
 
 DISTNAME=	dbus-1.8.16
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ COMMENT=	Message bus system
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	dbus-glib<0.71
-CONFLICTS+=	py26-dbus<0.71
 CONFLICTS+=	py27-dbus<0.71
 
 GNU_CONFIGURE=		YES

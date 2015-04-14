@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/01/27 18:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/04/14 11:40:32 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
@@ -35,11 +35,5 @@ CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/twisted/plugins/dropin.cache
 # egg.mk restricts the Python version list
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
-
-# With python 2.6, twisted builds an additional object.
-PLIST_VARS+=		initgroups
-.if ${PYPKGPREFIX} == "py26"
-PLIST.initgroups=	YES
-.endif
 
 .include "../../mk/bsd.pkg.mk"
