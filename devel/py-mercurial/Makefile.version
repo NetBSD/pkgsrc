@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.16 2015/04/03 10:09:15 wiz Exp $
+# $NetBSD: Makefile.version,v 1.17 2015/04/14 11:40:31 wiz Exp $
 
 VERSION=	3.3.3
 
@@ -10,6 +10,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.9
 # for python-3.x
 #.include "../../lang/python/pyversion.mk"
 #
-#.if ("${PYPKGPREFIX}" != "py26") && ("${PYPKGPREFIX}" != "py27")
+#.if "${PYPKGPREFIX}" != "py27"
 #PYSETUPARGS+=	--c2to3
 #.endif
