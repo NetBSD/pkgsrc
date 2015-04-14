@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/04/12 14:42:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/04/14 11:40:31 wiz Exp $
 
 DISTNAME=	cryptography-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0.8:../../devel/py-test
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py26" || ${PYPKGPREFIX} == "py27" || ${PYPKGPREFIX} == "py33"
+.if ${PYPKGPREFIX} == "py27" || ${PYPKGPREFIX} == "py33"
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
