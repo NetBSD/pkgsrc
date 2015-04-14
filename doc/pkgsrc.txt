@@ -3199,7 +3199,7 @@ If some Python versions are not supported by the software, set the
 PYTHON_VERSIONS_INCOMPATIBLE variable to the Python versions that are not
 supported, e.g.
 
-PYTHON_VERSIONS_INCOMPATIBLE=       26
+PYTHON_VERSIONS_INCOMPATIBLE=       27
 
 If the packaged software is a Python module, include "../../lang/python/
 extension.mk". In this case, the package directory should be called "
