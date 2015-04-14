@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2014/03/29 04:15:09 ryoon Exp $
+# $NetBSD: options.mk,v 1.16 2015/04/14 15:50:38 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.aria2
 
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--with-openssl
 CONFIGURE_ARGS+=	--with-gnutls=no
 .  include "../../security/openssl/buildlink3.mk"
+USE_TOOLS+=		pkg-config
 .else
 CONFIGURE_ARGS+=	--with-gnutls
 CONFIGURE_ARGS+=	--with-openssl=no
