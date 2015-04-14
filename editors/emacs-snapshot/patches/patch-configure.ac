@@ -1,4 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/04/16 21:02:19 joerg Exp $
+$NetBSD: patch-configure.ac,v 1.2 2015/04/14 03:39:49 mef Exp $
+
+Kill a substitution that /bin/sh on NetBSD objects to.
+./configure.lineno: 3557: Syntax error: Bad substitution
 
 --- configure.ac.orig	2014-04-16 19:32:38.000000000 +0000
 +++ configure.ac
