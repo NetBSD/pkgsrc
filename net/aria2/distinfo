@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2014/12/31 01:38:11 ryoon Exp $
+$NetBSD: distinfo,v 1.37 2015/04/14 15:50:38 ryoon Exp $
 
-SHA1 (aria2-1.18.8.tar.bz2) = b6ad7064b1ea769e78f6a7dc9787a12cfc1e153f
-RMD160 (aria2-1.18.8.tar.bz2) = 076a72fc4a35c91e5c85c2daee328976cadf9bda
-Size (aria2-1.18.8.tar.bz2) = 2150587 bytes
+SHA1 (aria2-1.18.10.tar.bz2) = 7f1e3dc40699e9d09f31778147628e312d22f6c9
+RMD160 (aria2-1.18.10.tar.bz2) = fbe824a1a1f806057fd7114f42638e26cded4d7f
+Size (aria2-1.18.10.tar.bz2) = 2147093 bytes
