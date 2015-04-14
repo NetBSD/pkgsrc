@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/03/15 17:56:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/14 11:25:37 wiz Exp $
 
 DISTNAME=	blockdiag-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,8 +26,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/egg.mk"
-.if ${PYPKGPREFIX} == "py26"
-DEPENDS+=	${PYPKGPREFIX}-ordereddict-[0-9]*:../../devel/py-ordereddict
-.endif
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 .include "../../mk/bsd.pkg.mk"
