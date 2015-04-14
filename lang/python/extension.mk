@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.38 2015/04/13 23:12:44 rodent Exp $
+# $NetBSD: extension.mk,v 1.39 2015/04/14 11:40:31 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -53,6 +53,7 @@ do-test:
 # appears to be that creating egg info files was new in Python 2.5.
 PY_NO_EGG?=		yes
 .if !empty(PY_NO_EGG:M[yY][eE][sS])
+# see python*/patches/patch-av
 INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
 .endif
 
