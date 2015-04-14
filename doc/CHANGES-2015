@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1771 2015/04/14 11:29:22 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1772 2015/04/14 11:36:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed devel/py-ordereddict [wiz 2015-04-14]
 	Added sysutils/p5-collectd version 5.4.2 [fhajny 2015-04-14]
 	Added sysutils/py-collectd version 5.4.2 [fhajny 2015-04-14]
+	Removed lang/py26-html-docs [wiz 2015-04-14]
