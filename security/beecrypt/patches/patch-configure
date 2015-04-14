@@ -1,8 +1,21 @@
-$NetBSD: patch-configure,v 1.1 2012/01/26 06:05:04 sbd Exp $
+$NetBSD: patch-configure,v 1.2 2015/04/14 14:23:14 joerg Exp $
 
 --- configure.orig	2004-11-19 12:33:58.000000000 +0000
 +++ configure
-@@ -31826,7 +31826,7 @@ case $target_os in
+@@ -6930,7 +6930,11 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   (exit $ac_status); }; }; then
+ 
+       bc_cv_as_noexecstack=yes
+-      bc_gnu_stack='.section .note.GNU-stack,"",@progbits; .previous'
++      if [ $bc_target_arch = arm ]; then
++        bc_gnu_stack='.section .note.GNU-stack,"",%progbits; .previous'
++      else
++        bc_gnu_stack='.section .note.GNU-stack,"",@progbits; .previous'
++      fi
+ 
+ else
+   echo "$as_me: failed program was:" >&5
+@@ -31826,7 +31830,7 @@ case $target_os in
  linux*)
    case $bc_target_arch in
    powerpc64 | s390x | x86_64)
