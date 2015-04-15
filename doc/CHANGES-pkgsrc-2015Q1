@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.7 2015/04/15 19:57:16 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.8 2015/04/15 21:14:52 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -20,3 +20,5 @@ misc/less - security fix
 Pullup ticket #4663 - requested by joerg
 emulators/dgen - ARM build fix
 
+Pullup ticket #4660 - requested by hannken
+net/chrony: security update
