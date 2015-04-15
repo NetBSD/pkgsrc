@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2013/08/16 08:30:20 hannken Exp $
+$NetBSD: patch-conf.c,v 1.1.2.2 2015/04/15 21:13:51 tron Exp $
 
 Prepare for SUBST, not processed by configure.
 
