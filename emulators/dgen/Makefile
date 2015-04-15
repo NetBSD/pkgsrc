@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/03/31 15:20:53 joerg Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2015/04/15 19:54:12 bsiegert Exp $
 #
 
 DISTNAME=	dgen-sdl-1.32
@@ -18,7 +18,7 @@ DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 PLIST_VARS+=	arm
 
 .if ${MACHINE_CPU:U} == "arm"
-PLIST_VAR.arm=	yes
+PLIST.arm=	yes
 .endif
 
 USE_LANGUAGES=	c c++
