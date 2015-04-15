@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2014/12/08 00:55:58 rodent Exp $
+$NetBSD: distinfo,v 1.14.4.1 2015/04/15 19:36:46 bsiegert Exp $
 
-SHA1 (less-470.tar.gz) = 167c0b65bb086895b2a9583a52b6a74e10d5e933
-RMD160 (less-470.tar.gz) = c24bd0994b597b953b55d8e928136ccb76f3c88c
-Size (less-470.tar.gz) = 316014 bytes
-SHA1 (patch-ac) = d50886aff976d81f23684cd96b5c9e7f94554b93
+SHA1 (less-475.tar.gz) = 8232220364ce95fe2397fd717cad4ecffa6bcbce
+RMD160 (less-475.tar.gz) = a1404028b0d17492a1f8f28a2e4638de0975e6dd
+Size (less-475.tar.gz) = 316345 bytes
