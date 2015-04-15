@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2014/03/10 13:01:17 fhajny Exp $
+$NetBSD: patch-aa,v 1.5 2015/04/15 14:05:46 nros Exp $
 
 Fix installation directories and scripts
---- Makefile.orig	2014-01-12 11:41:40.000000000 +0000
+--- Makefile.orig	2015-03-24 19:18:04.000000000 +0000
 +++ Makefile
 @@ -3,10 +3,11 @@ include config.unix
  
  BIN = $(DESTDIR)$(PREFIX)/bin
  CONFIG = $(DESTDIR)$(SYSCONFDIR)
 +EGDIR = $(DESTDIR)@EGDIR@
- MODULES = $(DESTDIR)$(PREFIX)/lib/prosody/modules
- SOURCE = $(DESTDIR)$(PREFIX)/lib/prosody
+ MODULES = $(DESTDIR)$(LIBDIR)/prosody/modules
+ SOURCE = $(DESTDIR)$(LIBDIR)/prosody
  DATA = $(DESTDIR)$(DATADIR)
 -MAN = $(DESTDIR)$(PREFIX)/share/man
 +MAN = $(DESTDIR)$(PREFIX)/$(PKGMANDIR)
  
- INSTALLEDSOURCE = $(PREFIX)/lib/prosody
+ INSTALLEDSOURCE = $(LIBDIR)/prosody
  INSTALLEDCONFIG = $(SYSCONFDIR)
 @@ -22,26 +23,39 @@ ifeq ($(EXCERTS),yes)
  endif
