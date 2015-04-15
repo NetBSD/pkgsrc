@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1776 2015/04/15 11:29:03 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1777 2015/04/15 14:08:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/aria2 to 1.18.10 [ryoon 2015-04-14]
 	Updated databases/percona-toolkit to 2.2.14 [fhajny 2015-04-14]
 	Updated devel/cmake to 3.2.2 [adam 2015-04-15]
+	Updated mail/p5-Mail-SPF to 2.9.0 [wiz 2015-04-15]
