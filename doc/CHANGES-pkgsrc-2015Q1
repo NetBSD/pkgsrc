@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.5 2015/04/14 19:06:59 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.6 2015/04/15 19:36:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -15,4 +15,6 @@ Pullup ticket #4659 - requested by tnn
 graphics/gd - security fix
 Pullup ticket #4661 - requested by tnn
 sysutils/coreutils - security fix
+Pullup ticket #4662 - requested by tnn
+misc/less - security fix
 
