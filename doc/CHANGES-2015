@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1775 2015/04/14 17:35:39 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1776 2015/04/15 11:29:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2443,3 +2443,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/p5-Authen-SASL-Authd version 0.04 [fhajny 2015-04-14]
 	Updated net/aria2 to 1.18.10 [ryoon 2015-04-14]
 	Updated databases/percona-toolkit to 2.2.14 [fhajny 2015-04-14]
+	Updated devel/cmake to 3.2.2 [adam 2015-04-15]
