@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.69 2015/04/07 20:53:48 adam Exp $
+$NetBSD: distinfo,v 1.70 2015/04/15 11:28:18 adam Exp $
 
-SHA1 (cmake-3.2.1.tar.gz) = 53c1fe2aaae3b2042c0fe5de177f73ef6f7b267f
-RMD160 (cmake-3.2.1.tar.gz) = 8c102bce34d3c9ccb328ec8b629dcc91142a7243
-Size (cmake-3.2.1.tar.gz) = 6437801 bytes
+SHA1 (cmake-3.2.2.tar.gz) = d22be01828508027617494c8b59d5999d4c1490e
+RMD160 (cmake-3.2.2.tar.gz) = 48eb3d047b6bf9671fcf8ef79908a09b710bffeb
+Size (cmake-3.2.2.tar.gz) = 6438736 bytes
 SHA1 (patch-Modules_FindX11.cmake) = 07a831744fc1de15d2fe4f57399339200e572dc5
 SHA1 (patch-Modules_Platform_SCO__SV.cmake) = 3ed230b3a06ea693812db8f57bc73aebec12b99f
 SHA1 (patch-Modules_Platform_SunOS.cmake) = 7a53ae3c902dd69ee22ef9fe0ae2a022d5284f16
