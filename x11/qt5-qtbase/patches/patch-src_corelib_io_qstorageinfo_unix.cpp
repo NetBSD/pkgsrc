@@ -1,7 +1,9 @@
-$NetBSD: patch-src_corelib_io_qstorageinfo_unix.cpp,v 1.3 2015/04/08 10:31:28 nros Exp $
+$NetBSD: patch-src_corelib_io_qstorageinfo_unix.cpp,v 1.4 2015/04/15 14:10:15 nros Exp $
 * make statvfs available on non-NetBSD BSD platforms
 * NetBSD uses struct statvfs as first argument to getmntinfo
 * fix build on SunOS
+* filed and commited upstream: http://codereview.qt-project.org/110257
+  everything here is fixed in QT 5.5
 --- src/corelib/io/qstorageinfo_unix.cpp.orig	2014-12-05 16:24:37.000000000 +0000
 +++ src/corelib/io/qstorageinfo_unix.cpp
 @@ -52,6 +52,7 @@
@@ -12,26 +14,15 @@ $NetBSD: patch-src_corelib_io_qstorageinfo_unix.cpp,v 1.3 2015/04/08 10:31:28 nr
  #elif defined(Q_OS_ANDROID)
  #  include <sys/mount.h>
  #  include <sys/vfs.h>
-@@ -63,6 +64,8 @@
+@@ -63,6 +64,7 @@
  #  include <sys/statvfs.h>
  #elif defined(Q_OS_SOLARIS)
  #  include <sys/mnttab.h>
-+#  include <sys/types.h>
 +#  include <sys/statvfs.h>
  #endif
  
  #if defined(Q_OS_BSD4)
-@@ -74,6 +77,9 @@
- #  if !defined(ST_RDONLY)
- #    define ST_RDONLY 1 // hack for missing define on Android
- #  endif
-+#elif defined(Q_OS_SOLARIS)
-+#  define QT_STATFSBUF struct statvfs
-+#  define QT_STATFS    ::statvfs
- #else
- #  if defined(QT_LARGEFILE_SUPPORT)
- #    define QT_STATFSBUF struct statvfs64
-@@ -118,7 +124,11 @@ public:
+@@ -118,7 +120,11 @@ public:
      inline QByteArray device() const;
  private:
  #if defined(Q_OS_BSD4)
@@ -44,7 +35,7 @@ $NetBSD: patch-src_corelib_io_qstorageinfo_unix.cpp,v 1.3 2015/04/08 10:31:28 nr
      int entryCount;
      int currentIndex;
  #elif defined(Q_OS_SOLARIS)
-@@ -196,22 +206,22 @@ inline bool QStorageIterator::isValid() 
+@@ -196,22 +202,22 @@ inline bool QStorageIterator::isValid() 
  
  inline bool QStorageIterator::next()
  {
