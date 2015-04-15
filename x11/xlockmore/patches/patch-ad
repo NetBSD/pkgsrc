@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2007/10/28 16:15:21 joerg Exp $
+$NetBSD: patch-ad,v 1.9 2015/04/15 07:31:15 spz Exp $
 
---- xmlock/Makefile.in.orig	2007-09-16 20:16:51.000000000 +0200
+--- xmlock/Makefile.in.orig	2010-04-19 13:33:29.000000000 +0000
 +++ xmlock/Makefile.in
-@@ -118,14 +118,14 @@ install_xmlock : install-program install
+@@ -119,14 +119,14 @@ install_xmlock : install-program install
  	@ $(ECHO) ""
  
  install-program : xmlock
