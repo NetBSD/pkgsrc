@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $	*/
+/*	$NetBSD: job.c,v 1.14 2015/04/16 11:40:43 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.14 2015/04/16 11:40:43 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $");
+__RCSID("$NetBSD: job.c,v 1.14 2015/04/16 11:40:43 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -142,6 +142,7 @@ __RCSID("$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $");
 #include <sys/time.h>
 #include "wait.h"
 
+#include <assert.h>
 #include <errno.h>
 #include <fcntl.h>
 #if !defined(USE_SELECT) && defined(HAVE_POLL_H)
@@ -1892,18 +1893,10 @@ end_loop:
 		(void)fflush(stdout);
 	    }
 	}
-	if (i < max - 1) {
-	    /* shift the remaining characters down */
-	    (void)memcpy(job->outBuf, &job->outBuf[i + 1], max - (i + 1));
-	    job->curPos = max - (i + 1);
-
-	} else {
-	    /*
-	     * We have written everything out, so we just start over
-	     * from the start of the buffer. No copying. No nothing.
-	     */
-	    job->curPos = 0;
-	}
+	assert(i < max);
+	/* shift the remaining characters down */
+	(void)memmove(job->outBuf, &job->outBuf[i + 1], max - (i + 1));
+	job->curPos = max - (i + 1);
     }
     if (finish) {
 	/*

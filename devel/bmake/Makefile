@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2014/03/14 21:59:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2015/04/16 11:40:43 joerg Exp $
 
 DISTNAME=	bmake-20140314
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
