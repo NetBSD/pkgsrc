@@ -1,47 +1,55 @@
-$NetBSD: patch-Makefile,v 1.6 2014/04/04 20:20:42 ryoon Exp $
+$NetBSD: patch-Makefile,v 1.7 2015/04/16 23:05:07 ryoon Exp $
 
 * Add "all" target.
 * Use ${PREFIX} variable.
 * Install man pages in ${PREFIX}/${PKGMANDIR}, not ${PREFIX}/share/man.
 
---- Makefile.orig	2014-03-28 09:49:47.000000000 +0000
+--- Makefile.orig	2015-04-02 12:54:25.000000000 +0000
 +++ Makefile
-@@ -6,12 +6,12 @@
+@@ -9,11 +9,12 @@
+ VERSION=1.30
  
- VERSION=1.10
- 
+ .PATH: $(.PARSEDIR)
 -prefix?=/usr/local
 +prefix?=$(PREFIX)
  target=$(DESTDIR)$(prefix)
- 
- INSTALL = install
- YACC = bison -y
--LEX = flex
+ parsedir:=$(.PARSEDIR)
+ srcdir=$(dir $(abspath $(firstword $(MAKEFILE_LIST))))$(parsedir)
+ VPATH=$(srcdir)
 +mandir=$(PKGMANDIR)
  
- GCC_WARNINGS1=-Wall -Wpointer-arith -Wstrict-prototypes
- GCC_WARNINGS2=-Wmissing-prototypes -Wmissing-declarations
-@@ -38,6 +38,8 @@ OBJS=gram.o lex.o rbtree.o main.o cvsuti
- 	revlist.o atom.o revcvs.o generate.o export.o \
- 	nodehash.o tags.o authormap.o graph.o utils.o
+ INSTALL = install
+ 
+@@ -31,7 +32,7 @@ CFLAGS += -pthread
+ CPPFLAGS += -DTHREADS
+ 
+ # Optimizing for speed. Comment this out for distribution builds
+-CFLAGS += -march=native
++#CFLAGS += -march=native
+ 
+ # To enable debugging of the Yacc grammar, uncomment the following line
+ #CPPFLAGS += -DYYDEBUG=1
+@@ -89,6 +90,8 @@ dump.o export.o graph.o main.o merge.o r
+ 
+ BISON ?= bison
  
 +all: cvs-fast-export cvs-fast-export.1
 +
- cvs-fast-export: $(OBJS)
- 	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $@ 
- 
-@@ -77,11 +79,11 @@ check: cvs-fast-export
- 
- install: cvs-fast-export man
+ gram.h gram.c: gram.y
+ 	$(BISON)  $(YFLAGS) --defines=gram.h --output-file=gram.c $(srcdir)/gram.y
+ lex.h lex.c: lex.l
+@@ -129,10 +132,10 @@ install-bin: cvs-fast-export cvssync cvs
  	$(INSTALL) -d "$(target)/bin"
+ 	$(INSTALL) $^ "$(target)/bin"
+ install-man: man
 -	$(INSTALL) -d "$(target)/share/man/man1"
-+	$(INSTALL) -d "$(target)/$(mandir)/man1"
- 	$(INSTALL) cvs-fast-export "$(target)/bin"
- 	$(INSTALL) cvssync "$(target)/bin"
 -	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/share/man/man1"
 -	$(INSTALL) -m 644 cvssync.1 "$(target)/share/man/man1"
-+	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/$(mandir)/man1"
-+	$(INSTALL) -m 644 cvssync.1 "$(target)/$(mandir)/man1"
+-	$(INSTALL) -m 644 cvsconvert.1 "$(target)/share/man/man1"
++	$(INSTALL) -d "$(target)/${PKGMANDIR}/man1"
++	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/${PKGMANDIR}/man1"
++	$(INSTALL) -m 644 cvssync.1 "$(target)/${PKGMANDIR}/man1"
++	$(INSTALL) -m 644 cvsconvert.1 "$(target)/${PKGMANDIR}/man1"
  
  PROFILE_REPO = ~/software/groff-conversion/groff-mirror/groff
  gmon.out: cvs-fast-export
