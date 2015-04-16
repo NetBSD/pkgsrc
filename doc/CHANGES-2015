@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1778 2015/04/16 08:04:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1779 2015/04/16 08:39:33 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2445,4 +2445,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/percona-toolkit to 2.2.14 [fhajny 2015-04-14]
 	Updated devel/cmake to 3.2.2 [adam 2015-04-15]
 	Updated mail/p5-Mail-SPF to 2.9.0 [wiz 2015-04-15]
+	Updated chat/prosody to 0.9.8 [nros 2015-04-15]
 	Updated devel/py-attic to 0.15 [wiz 2015-04-16]
