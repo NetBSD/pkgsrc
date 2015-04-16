@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1783 2015/04/16 20:22:49 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1784 2015/04/16 23:05:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2455,3 +2455,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-PDF-Reuse to 0.36 [wiz 2015-04-16]
 	Added databases/mariadb55-client version 5.5.42 [ryoon 2015-04-16]
 	Added databases/mariadb55-server version 5.5.42 [ryoon 2015-04-16]
+	Updated devel/cvs-fast-export to 1.30 [ryoon 2015-04-16]
