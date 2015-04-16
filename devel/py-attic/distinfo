@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/04/03 09:43:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/04/16 08:04:37 wiz Exp $
 
-SHA1 (Attic-0.14.tar.gz) = f76df257c86f89eb973f88dba53166997fb8fbf1
-RMD160 (Attic-0.14.tar.gz) = 1fef1993c5964adb1a5c90ef39b101607c2d05b5
-Size (Attic-0.14.tar.gz) = 233837 bytes
-SHA1 (patch-attic_platform.py) = 1d8aaf58f1e0edad13a0fbb9a93c092eadc035f4
-SHA1 (patch-attic_testsuite_archiver.py) = 1fb19c1ee64505b2b73d44d556623fe8f8315016
-SHA1 (patch-attic_xattr.py) = 69ea74cef7e9e67398ad4a95a49fcfd2f7b3debe
+SHA1 (Attic-0.15.tar.gz) = 07b604e4c0a00e163122855403a3f0e70b7d1cd4
+RMD160 (Attic-0.15.tar.gz) = ccb2bd574b921eb1078e23cc5b3f5197336a11de
+Size (Attic-0.15.tar.gz) = 232371 bytes
