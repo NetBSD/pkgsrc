@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2015/04/02 23:35:50 rodent Exp $
+# $NetBSD: Makefile,v 1.485 2015/04/16 20:23:31 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -74,6 +74,8 @@ SUBDIR+=	lua-sqlite3
 SUBDIR+=	lua-tokyocabinet
 SUBDIR+=	luma
 SUBDIR+=	maatkit
+SUBDIR+=	mariadb55-client
+SUBDIR+=	mariadb55-server
 SUBDIR+=	metakit-lib
 SUBDIR+=	mongo-c-driver
 SUBDIR+=	myodbc
