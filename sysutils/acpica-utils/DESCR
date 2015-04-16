@@ -4,4 +4,7 @@ managing hardware and events. The following utilities are provided:
 
     * ASL Compiler & Disassembler
     * ACPI Simulator (AcpiExec)
-    * ACPI Table Extractor
+    * ACPI Table Extractor (AcpiXtract)
+    * ACPI Help (AcpiHelp)
+    * ACPI Source Code Converter (AcpiSrc)
+    * ACPI Example Namespace Dump (AcpiNames)
