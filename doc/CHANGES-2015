@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1780 2015/04/16 14:10:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1781 2015/04/16 14:21:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2451,3 +2451,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-DistManifest to 1.014 [mef 2015-04-16]
 	Updated devel/p5-Test-Exception to 0.38 [mef 2015-04-16]
 	Updated devel/p5-Test-Expect to 0.33 [mef 2015-04-16]
+	Updated sysutils/acpica-utils to 20150410 [wiz 2015-04-16]
