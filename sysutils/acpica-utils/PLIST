@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2010/10/19 14:33:19 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/16 14:21:01 wiz Exp $
+bin/acpibin
+bin/acpidump
+bin/acpiexamples
 bin/acpiexec
-bin/acpi-iasl
+bin/acpihelp
+bin/acpinames
 bin/acpisrc
 bin/acpixtract
 bin/iasl
-share/doc/acpica-utils/LICENSE
-share/doc/acpica-utils/README
