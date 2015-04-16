@@ -1,0 +1,15 @@
+$NetBSD: patch-BUILD_compile-pentium-gcov,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+
+* Don't use "==" in test(1).
+
+--- BUILD/compile-pentium-gcov.orig	2015-02-13 12:07:00.000000000 +0000
++++ BUILD/compile-pentium-gcov
+@@ -22,7 +22,7 @@ CCACHE_GCOV_VERSION_ENABLED=0
+ if ccache -V > /dev/null 2>&1
+ then
+   CCACHE_VER=`ccache -V | head -1 | sed s/"ccache version "//`
+-  if test "$CCACHE_VER" == "2.4-gcov"
++  if test "$CCACHE_VER" = "2.4-gcov"
+   then
+     CCACHE_GCOV_VERSION_ENABLED=1
+   else
