@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.94 2015/04/05 12:54:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.95 2015/04/16 23:36:24 hiramatsu Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2419,7 +2419,6 @@ lib/firefox/components/interfaces.xpt
 lib/firefox/components/jsconsole-clhandler.js
 ${PLIST.gnome}lib/firefox/components/libdbusservice.so
 lib/firefox/components/libmozgnome.so
-${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/marionettecomponent.js
 lib/firefox/components/messageWakeupService.js
 lib/firefox/components/multiprocessShims.js
