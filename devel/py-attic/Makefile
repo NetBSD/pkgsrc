@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 23:12:41 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/16 08:04:37 wiz Exp $
 
-DISTNAME=	Attic-0.14
+DISTNAME=	Attic-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/A/Attic/
