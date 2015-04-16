@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+
+To use the ``mysqlhotcopy'' script, you'll have to install the following
+package:
+
+	databases/p5-DBD-mysql
+
+===========================================================================
