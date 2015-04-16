@@ -1,0 +1,56 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+
+Split configuration between mysql-client and mysql-server.
+Build with newer DTrace.
+
+--- CMakeLists.txt.orig	2015-02-13 12:07:00.000000000 +0000
++++ CMakeLists.txt
+@@ -154,6 +154,7 @@ IF(DISABLE_SHARED)
+   SET(WITHOUT_DYNAMIC_PLUGINS 1)
+ ENDIF()
+ OPTION(ENABLED_PROFILING "Enable profiling" ON)
++OPTION(ENABLED_DTRACE "Include support for DTrace probes" OFF)
+ OPTION(CYBOZU "" OFF)
+ OPTION(BACKUP_TEST "" OFF)
+ OPTION(WITHOUT_SERVER OFF)
+@@ -380,22 +381,24 @@ IF(NOT WITHOUT_SERVER)
+  CONFIGURE_PLUGINS()
+ ENDIF()
+ 
+-ADD_SUBDIRECTORY(include)
+ ADD_SUBDIRECTORY(dbug)
+ ADD_SUBDIRECTORY(strings)
+ ADD_SUBDIRECTORY(vio)
+ ADD_SUBDIRECTORY(regex)
+ ADD_SUBDIRECTORY(mysys)
+-ADD_SUBDIRECTORY(libmysql)
+-ADD_SUBDIRECTORY(client)
+ ADD_SUBDIRECTORY(extra)
+ ADD_SUBDIRECTORY(libservices)
+-ADD_SUBDIRECTORY(scripts)
+ ADD_SUBDIRECTORY(sql/share)
+ ADD_SUBDIRECTORY(support-files)
+ 
+-IF(NOT WITHOUT_SERVER)
++IF(WITHOUT_SERVER)
++  ADD_SUBDIRECTORY(include)
++  ADD_SUBDIRECTORY(libmysql)
++  ADD_SUBDIRECTORY(client)
++  ADD_SUBDIRECTORY(scripts)
++  ADD_SUBDIRECTORY(man)
+   ADD_SUBDIRECTORY(tests)
++ELSE()
+   ADD_SUBDIRECTORY(sql)
+   OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
+   IF(WITH_EMBEDDED_SERVER) 
+@@ -413,10 +416,6 @@ IF(NOT WITHOUT_SERVER)
+   ADD_SUBDIRECTORY(packaging/rpm-oel)
+ ENDIF()
+ 
+-IF(UNIX)
+-  ADD_SUBDIRECTORY(man)
+-ENDIF()
+-
+ INCLUDE(cmake/abi_check.cmake)
+ INCLUDE(cmake/tags.cmake)
+ 
