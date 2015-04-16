@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 22:03:37 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/04/16 14:23:57 wiz Exp $
 
-SHA1 (PDF-Reuse-0.35.tar.gz) = 1c781ff9ad97a226eb09e15a2db353846e48d476
-RMD160 (PDF-Reuse-0.35.tar.gz) = e539cdaf61af20d8fe354c8f5e7a2eef124ff73a
-Size (PDF-Reuse-0.35.tar.gz) = 62248 bytes
+SHA1 (PDF-Reuse-0.36.tar.gz) = f4cefb6f8a7f1251e343b30c6dcb57e26f3f0dfa
+RMD160 (PDF-Reuse-0.36.tar.gz) = 04548a30f9560edb3f54513c8c1a3bea2d976774
+Size (PDF-Reuse-0.36.tar.gz) = 62521 bytes
