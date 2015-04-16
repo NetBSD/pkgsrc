@@ -1,53 +1,54 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/16 14:21:01 wiz Exp $
 #
 
-DISTNAME=	acpica-unix-${ACPICA_UTILS_VERSION}
-PKGNAME=	acpica-utils-${ACPICA_UTILS_VERSION}
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	http://www.acpica.org/download/
+DISTNAME=	acpica-unix2-20150410
+PKGNAME=	${DISTNAME:S/-unix2-/-utils-/}
+CATEGORIES=	sysutils devel
+MASTER_SITES=	https://acpica.org/sites/acpica/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.acpica.org/
 COMMENT=	Intel ACPI CA Unix utilities
+LICENSE=	modified-bsd OR gnu-gpl-v2
 
-ACPICA_UTILS_VERSION=	20090625
+TESTS_DISTNAME=	${DISTNAME:S/acpica-unix2-/acpitests-unix-/}
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	${TESTS_DISTNAME}${EXTRACT_SUFX}
 
-INSTALLATION_DIRS=	bin share/doc/acpica-utils
+USE_TOOLS+=	bison flex gm4 gmake bash
 
-USE_TOOLS+=	bison flex gm4 gmake
+REPLACE_BASH+=	tests/aapits/bin/aapitsrun
+REPLACE_BASH+=	tests/aapits/bin/cadir
+REPLACE_BASH+=	tests/aapits/bin/run1
+REPLACE_BASH+=	tests/aslts.sh
+REPLACE_BASH+=	tests/aslts/bin/Do
+REPLACE_BASH+=	tests/aslts/bin/asltsdiffres
+REPLACE_BASH+=	tests/aslts/bin/asltsrun
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemosconc
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemossum
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemostabs
+REPLACE_BASH+=	tests/aslts/bin/bugstate/parsebuglist
+REPLACE_BASH+=	tests/aslts/bin/common
+REPLACE_BASH+=	tests/aslts/bin/diffproc
+REPLACE_BASH+=	tests/aslts/bin/settings
+REPLACE_BASH+=	tests/templates/templates.sh
 
-LICENSE=	gnu-gpl-v2 # OR intel-acpica-license
-# According to http://www.acpica.org/documentation/faq.php:
-#   "Under what licensing is the ACPICA source released?
-#      ACPICA can be licensed under the GNU General Public License or via a
-#      separate license that may be more favorable to commercial OSVs. Please
-#      see the source code license header for specifics.
+post-extract:
+	${RUN}rm -rf ${WRKSRC}/tests
+	${RUN}mv ${WRKDIR}/${TESTS_DISTNAME}/tests ${WRKSRC}
 
-# Don't have sem_timedwait()
-CFLAGS.NetBSD+=	-DACPI_USE_ALTERNATE_TIMEOUT
-CFLAGS.DragonFly+=	-DACPI_USE_ALTERNATE_TIMEOUT
-
-do-build:
-	cd ${WRKSRC}/tools/acpiexec && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	cp -f ${WRKSRC}/tools/acpiexec/acpiexec ${WRKSRC}
-	cd ${WRKSRC}/tools/acpiexec && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} clean
-	cd ${WRKSRC}/compiler && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/tools/acpisrc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/tools/acpixtract && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/compiler/iasl \
-		${DESTDIR}${PREFIX}/bin/iasl
-	ln -s iasl ${DESTDIR}${PREFIX}/bin/acpi-iasl
-	${INSTALL_PROGRAM} ${WRKSRC}/acpiexec ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/acpixtract/acpixtract \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/acpisrc/acpisrc \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README \
-		${DESTDIR}${PREFIX}/share/doc/acpica-utils
-	${INSTALL_DATA} ${FILESDIR}/LICENSE \
-		${DESTDIR}${PREFIX}/share/doc/acpica-utils
+do-test:
+# ACPICA Tests rely on non-zero exit
+## ASL tests
+	cd ${WRKSRC}/tests && ./aslts.sh -u
+## API tests
+	cd ${WRKSRC}/tests/aapits && gmake
+	cd ${WRKSRC}/tests/aapits/asl && \
+	ASL=${WRKSRC}/generate/unix/bin/iasl gmake
+# This one needs to be fixed
+#	cd ${WRKSRC}/tests/aapits/bin && ./aapitsrun
+## Template tests
+# This test is broken too
+#	cd ${WRKSRC}/tests/templates && gmake
 
 .include "../../mk/bsd.pkg.mk"
