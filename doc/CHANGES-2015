@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1794 2015/04/17 07:01:41 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1795 2015/04/17 07:04:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2470,3 +2470,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/x11perf to 1.6.0 [wiz 2015-04-17]
 	Updated x11/xcompmgr to 1.1.7 [wiz 2015-04-17]
 	Updated x11/xdpyinfo to 1.3.2 [wiz 2015-04-17]
+	Updated x11/xdriinfo to 1.0.5 [wiz 2015-04-17]
