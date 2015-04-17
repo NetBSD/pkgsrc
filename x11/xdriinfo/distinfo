@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/05/16 05:45:57 richard Exp $
+$NetBSD: distinfo,v 1.4 2015/04/17 07:04:05 wiz Exp $
 
-SHA1 (xdriinfo-1.0.4.tar.bz2) = 723482b3fc627d7cc6124fec43dd1c21d102daaa
-RMD160 (xdriinfo-1.0.4.tar.bz2) = 63e3d43739e1409c2df485f260f77099b062ab94
-Size (xdriinfo-1.0.4.tar.bz2) = 104296 bytes
+SHA1 (xdriinfo-1.0.5.tar.bz2) = 0c2c0a369c3a63f28622ddefd84e964c14625f25
+RMD160 (xdriinfo-1.0.5.tar.bz2) = bbc971ea2eafd1856fba88dc199b5974f59668fe
+Size (xdriinfo-1.0.5.tar.bz2) = 121276 bytes
