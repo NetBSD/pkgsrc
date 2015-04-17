@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/06/06 09:37:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/04/17 07:09:48 wiz Exp $
 
-SHA1 (xkbevd-1.1.3.tar.bz2) = 543963ba22b019b4e059e8605eb418f8a712b76e
-RMD160 (xkbevd-1.1.3.tar.bz2) = 3365156fadb15231300a7e84b9e201ff82e5a11a
-Size (xkbevd-1.1.3.tar.bz2) = 147027 bytes
+SHA1 (xkbevd-1.1.4.tar.bz2) = 629fea940692f9d971dfae36cd697b13337caaba
+RMD160 (xkbevd-1.1.4.tar.bz2) = 90983b91244ef1ec985702d2e113d08f4ca20083
+Size (xkbevd-1.1.4.tar.bz2) = 151991 bytes
