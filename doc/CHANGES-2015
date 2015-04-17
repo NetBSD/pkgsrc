@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1785 2015/04/17 00:43:31 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1786 2015/04/17 00:50:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2457,3 +2457,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/mariadb55-server version 5.5.42 [ryoon 2015-04-16]
 	Updated devel/cvs-fast-export to 1.30 [ryoon 2015-04-16]
 	Updated math/py-numpy to 1.9.2 [wen 2015-04-17]
+	Updated math/py-scipy to 0.15.1 [wen 2015-04-17]
