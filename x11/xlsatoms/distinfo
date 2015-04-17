@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/28 03:00:36 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/17 07:12:15 wiz Exp $
 
-SHA1 (xlsatoms-1.1.1.tar.bz2) = 271880bf9dcd37b85b08e5f4a43e6015747b45e1
-RMD160 (xlsatoms-1.1.1.tar.bz2) = 7424ed666e43899b881876604c7ab64f0dae096c
-Size (xlsatoms-1.1.1.tar.bz2) = 116501 bytes
+SHA1 (xlsatoms-1.1.2.tar.bz2) = 0946410a2cd02b0dee7809fd75be090fb3961e9c
+RMD160 (xlsatoms-1.1.2.tar.bz2) = 8a8eb6cde356590449be2b917f2fee1df6a589a3
+Size (xlsatoms-1.1.2.tar.bz2) = 123157 bytes

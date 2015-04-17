@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/05/28 03:47:57 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/04/17 07:12:15 wiz Exp $
 
-DISTNAME=	xlsatoms-1.1.1
+DISTNAME=	xlsatoms-1.1.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
