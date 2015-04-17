@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1801 2015/04/17 07:09:07 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1802 2015/04/17 07:09:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2477,3 +2477,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xgamma to 1.0.6 [wiz 2015-04-17]
 	Updated graphics/xgc to 1.0.5 [wiz 2015-04-17]
 	Updated x11/xhost to 1.0.7 [wiz 2015-04-17]
+	Updated x11/xkbevd to 1.1.4 [wiz 2015-04-17]
