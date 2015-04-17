@@ -1,8 +1,8 @@
-$NetBSD: patch-numpy_distutils_fcompiler_g95.py,v 1.2 2014/02/28 09:43:11 adam Exp $
+$NetBSD: patch-numpy_distutils_fcompiler_g95.py,v 1.3 2015/04/17 00:41:38 wen Exp $
 
 Band aid to make sure that pic_flags is actually used.
 
---- numpy/distutils/fcompiler/g95.py.orig	2010-04-18 10:06:17.000000000 +0000
+--- numpy/distutils/fcompiler/g95.py.orig	2014-10-26 14:36:14.000000000 +0000
 +++ numpy/distutils/fcompiler/g95.py
 @@ -19,9 +19,9 @@ class G95FCompiler(FCompiler):
  
