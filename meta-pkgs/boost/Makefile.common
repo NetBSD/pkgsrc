@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2015/04/14 09:06:32 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.51 2015/04/17 14:04:47 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -9,7 +9,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.57.0
+BOOST_VERSION=		1.58.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -76,10 +76,14 @@ post-wrapper:
 	${RM} -f ${WRAPPER_BINDIR}/libtool ${CWRAPPERS_BIN_DIR}/libtool
 .    if exists(/Developer/usr/bin/libtool)
 	${LN} -s /Developer/usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.      if !empty(CWRAPPERS_BIN_DIR)
 	${LN} -s /Developer/usr/bin/libtool ${CWRAPPERS_BIN_DIR}/libtool
+.      endif
 .    else
 	${LN} -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.      if !empty(CWRAPPERS_BIN_DIR)
 	${LN} -s /usr/bin/libtool ${CWRAPPERS_BIN_DIR}/libtool
+.      endif
 .    endif
 .  endif
 
