@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/02/19 11:07:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/04/17 15:16:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -1220,6 +1220,12 @@ ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0001_initia
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0002_charpksexample.py
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0002_charpksexample.pyc
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0002_charpksexample.pyo
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0003_example1_publish.py
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0003_example1_publish.pyc
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0003_example1_publish.pyo
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0004_auto_20150415_1913.py
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0004_auto_20150415_1913.pyc
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0004_auto_20150415_1913.pyo
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/__init__.py
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/__init__.pyc
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/__init__.pyo
