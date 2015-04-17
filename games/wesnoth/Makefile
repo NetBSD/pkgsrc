@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2015/03/10 05:16:28 mef Exp $
+# $NetBSD: Makefile,v 1.112 2015/04/17 15:02:43 adam Exp $
 
-DISTNAME=	wesnoth-1.12.1
+DISTNAME=	wesnoth-1.12.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,7 +36,7 @@ REPLACE_PYTHON+=	data/tools/*.py
 REPLACE_PYTHON+=	data/tools/wesnoth/*.py
 REPLACE_PYTHON+=	data/tools/wml*
 REPLACE_PYTHON+=	data/tools/about_cfg_to_wiki
-REPLACE_PYTHON+=        data/tools/addon_manager/html.py
+REPLACE_PYTHON+=	data/tools/addon_manager/html.py
 REPLACE_PYTHON+=	data/tools/extractbindings
 REPLACE_PYTHON+=	data/tools/imgcheck
 REPLACE_PYTHON+=	data/tools/journeylifter
@@ -45,7 +45,7 @@ REPLACE_PYTHON+=	data/tools/trackplacer
 REPLACE_PYTHON+=	data/tools/unit_tree/helpers.py
 REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager
 REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager/html.py
-REPLACE_PYTHON+=        data/tools/wesnoth/campaignserver_client.py
+REPLACE_PYTHON+=	data/tools/wesnoth/campaignserver_client.py
 REPLACE_PYTHON+=	data/tools/unit_tree/TeamColorizer
 REPLACE_PYTHON+=	data/tools/unit_tree/overview.py
 REPLACE_PYTHON+=	utils/ai_test/*.py
