@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2015/03/09 09:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2015/04/17 15:53:14 adam Exp $
 
 DISTNAME=	okular-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 COMMENT=	KDE universal document viewer
 

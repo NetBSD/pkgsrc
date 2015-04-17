@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2014/12/27 02:03:19 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/17 15:52:59 adam Exp $
 #
 
 V=		20140214
 DISTNAME=	kicad-stable-${V}
 PKGNAME=	kicad-${V}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	cad
 MASTER_SITES=	http://ftp.fr.NetBSD.org/~bouyer/kicad/
 
