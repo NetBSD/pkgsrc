@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2015/04/06 08:17:31 adam Exp $
+# $NetBSD: Makefile,v 1.281 2015/04/17 02:22:52 hiramatsu Exp $
 
 DISTNAME=	postfix-2.11.4
 PKGREVISION=	1
@@ -36,9 +36,14 @@ BUILD_DEFS+=		VARBASE POSTFIX_DATA_DIR POSTFIX_QUEUE_DIR
 
 # CCARGS is a list of options to pass to the preprocessor/compiler.
 # AUXLIBS is a list of options to pass to the linker.
-#
-CCARGS=		-DUSE_SASL_AUTH
+CCARGS=		#defined
 AUXLIBS=	${LDFLAGS}
+
+# Enable Dovecot SASL
+CCARGS+=	-DUSE_SASL_AUTH
+# Enable Berkeley DB map type. BDB_LIBS is defined in mk/bdb.buildlink3.mk.
+CCARGS+=       -DHAS_DB
+AUXLIBS+=      ${BDB_LIBS}
 
 # Set some default paths to override ${WRKSRC}/src/global/mail_params.h.
 CCARGS+=	-DDEF_DATA_DIR=\"${POSTFIX_DATA_DIR}\"
@@ -175,4 +180,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man1/qshape.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
