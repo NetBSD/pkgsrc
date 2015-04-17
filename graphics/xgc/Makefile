@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/06/09 12:12:26 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/04/17 07:08:17 wiz Exp $
 
-DISTNAME=	xgc-1.0.4
+DISTNAME=	xgc-1.0.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
