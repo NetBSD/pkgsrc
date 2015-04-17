@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/09/09 09:39:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/17 07:15:15 wiz Exp $
 
-DISTNAME=		xmodmap-1.0.8
+DISTNAME=		xmodmap-1.0.9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
