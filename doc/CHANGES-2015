@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1813 2015/04/17 16:43:45 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1814 2015/04/17 18:22:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php54 to 5.4.40 [taca 2015-04-17]
 	Updated lang/php55 to 5.5.24 [taca 2015-04-17]
 	Updated lang/php56 to 5.6.8 [taca 2015-04-17]
+	Updated net/youtube-dl to 20150417 [wiz 2015-04-17]
