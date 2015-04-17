@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1815 2015/04/17 19:57:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1816 2015/04/17 20:00:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.8 [taca 2015-04-17]
 	Updated net/youtube-dl to 20150417 [wiz 2015-04-17]
 	Added x11/libXpresent version 1.0.0 [wiz 2015-04-17]
+	Updated meta-pkgs/modular-xorg-libs to 1.2 [wiz 2015-04-17]
