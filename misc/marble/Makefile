@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2015/03/01 06:24:13 markd Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/17 15:52:57 adam Exp $
 
 DISTNAME=	marble-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	KDE desktop globe
 

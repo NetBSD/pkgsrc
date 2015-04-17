@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/03/01 07:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/17 15:53:09 adam Exp $
 
 DISTNAME=		uhd-release_003_007_002
 PKGNAME=		uhd-3.7.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		ham
 MASTER_SITES=		-https://github.com/EttusResearch/uhd/archive/${DISTNAME:S/uhd-//}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
