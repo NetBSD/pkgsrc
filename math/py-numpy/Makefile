@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2014/02/28 09:43:10 adam Exp $
+# $NetBSD: Makefile,v 1.28 2015/04/17 00:41:38 wen Exp $
 
-DISTNAME=	numpy-1.8.0
+DISTNAME=	numpy-1.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
@@ -18,6 +18,7 @@ REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	numpy/*.py
 REPLACE_PYTHON+=	numpy/compat/*.py
 REPLACE_PYTHON+=	numpy/core/*.py
+REPLACE_PYTHON+=	numpy/core/tests/*.py
 REPLACE_PYTHON+=	numpy/distutils/*.py
 REPLACE_PYTHON+=	numpy/distutils/tests/*.py
 REPLACE_PYTHON+=	numpy/distutils/tests/f2py_ext/*.py
@@ -33,11 +34,6 @@ REPLACE_PYTHON+=	numpy/matrixlib/*.py
 REPLACE_PYTHON+=	numpy/random/mtrand/*.py
 REPLACE_PYTHON+=	numpy/testing/*.py
 
-SUBST_CLASSES+=		numpy
-SUBST_STAGE.numpy=	post-patch
-SUBST_FILES.numpy=	numpy/f2py/setup.py
-SUBST_SED.numpy=	-e 's:%(os.path.basename(sys.executable))::'
-
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
@@ -52,13 +48,6 @@ PYSETUPBUILDARGS+=	--fcompiler=gnu
 # This package bypasses the wrappers and calls the compilers directly when
 # linking, so ensure that we pass through requisite options.
 LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
-
-# This package also does its own linking of dependent packages, so we need
-# to ensure that linker is called with the correct arguments.
-SUBST_CLASSES+=		linkabi
-SUBST_STAGE.linkabi=	post-patch
-SUBST_FILES.linkabi=	numpy/distutils/fcompiler/gnu.py
-SUBST_SED.linkabi=	-e 's,@COMPILER_ABI_FLAG@,${_COMPILER_ABI_FLAG.${ABI}},'
 
 .include "../../mk/bsd.prefs.mk"
 
