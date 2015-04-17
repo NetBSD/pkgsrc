@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1797 2015/04/17 07:05:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1798 2015/04/17 07:06:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xdriinfo to 1.0.5 [wiz 2015-04-17]
 	Updated x11/xditview to 1.0.4 [wiz 2015-04-17]
 	Updated x11/xev to 1.2.2 [wiz 2015-04-17]
+	Updated net/xfindproxy to 1.0.4 [wiz 2015-04-17]
