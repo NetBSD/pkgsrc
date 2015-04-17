@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/09/08 08:25:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/17 07:06:43 wiz Exp $
 
-DISTNAME=	xfindproxy-1.0.3
+DISTNAME=	xfindproxy-1.0.4
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
