@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2014/11/14 08:49:38 markd Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/17 15:53:03 adam Exp $
 
 DISTNAME=	kanagram-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	KDE letter order game
 
