@@ -74,6 +74,7 @@ catalog-mysql		Store Bacula catalog in MySQL database.
 catalog-pgsql		Store Bacula catalog in PostgreSQL database.
 catalog-sqlite		Store Bacula catalog in SQLite database.
 catalog-sqlite3		Store Bacula catalog in SQLite 3 database.
+cdb			Enable CDB support.
 cdparanoia		Use cdparanoia to rip CDDA media.
 cg			Add support for the Cg compiler.
 cgi			Enable CGI support.
