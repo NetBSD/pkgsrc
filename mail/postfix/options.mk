@@ -1,24 +1,12 @@
-# $NetBSD: options.mk,v 1.37 2015/04/03 01:15:24 hiramatsu Exp $
+# $NetBSD: options.mk,v 1.38 2015/04/17 02:22:52 hiramatsu Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	bdb ldap mysql pcre pgsql sasl sqlite tls cdb
+PKG_SUPPORTED_OPTIONS=	ldap mysql pcre pgsql sasl sqlite tls cdb
 PKG_SUGGESTED_OPTIONS=	tls
 
 .include "../../mk/bsd.options.mk"
-
-###
-### Support "hash" (Berkeley DB) map type.
-###
-.if empty(PKG_OPTIONS:Mbdb)
-PKG_OPTIONS+=	bdb		# "hash" map type is mandatory
-.endif
-.if !empty(PKG_OPTIONS:Mbdb)
-.  include "../../mk/bdb.buildlink3.mk"
-CCARGS+=	-DHAS_DB
-AUXLIBS+=	${BDB_LIBS}
-.endif
 
 ###
 ### STARTTLS support
