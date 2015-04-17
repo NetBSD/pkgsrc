@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.746 2015/04/03 10:02:42 tnn Exp $
+# $NetBSD: Makefile,v 1.747 2015/04/17 19:54:59 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -288,6 +288,7 @@ SUBDIR+=	libXinerama
 SUBDIR+=	libXmu
 SUBDIR+=	libXp
 SUBDIR+=	libXpm
+SUBDIR+=	libXpresent
 SUBDIR+=	libXprintUtil
 SUBDIR+=	libXrandr
 SUBDIR+=	libXrender
