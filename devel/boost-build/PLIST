@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/11/07 19:28:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/04/17 14:04:47 adam Exp $
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
 share/boost-build/build/__init__.py
@@ -33,12 +33,14 @@ share/boost-build/build/toolset.py
 share/boost-build/build/type.jam
 share/boost-build/build/type.py
 share/boost-build/build/version.jam
+share/boost-build/build/version.py
 share/boost-build/build/virtual-target.jam
 share/boost-build/build/virtual_target.py
 share/boost-build/build_system.py
 share/boost-build/contrib/__init__.py
 share/boost-build/contrib/boost.jam
 share/boost-build/contrib/boost.py
+share/boost-build/contrib/modular.jam
 share/boost-build/contrib/tntnet.jam
 share/boost-build/contrib/wxFormBuilder.jam
 share/boost-build/exceptions.py
