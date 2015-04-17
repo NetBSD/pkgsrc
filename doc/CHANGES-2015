@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1811 2015/04/17 15:18:34 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1812 2015/04/17 15:50:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2497,3 +2497,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/py-Pillow to 2.8.1 [adam 2015-04-17]
 	Updated www/py-django-reversion to 1.8.6 [adam 2015-04-17]
 	Updated www/py-django-cms to 3.0.13 [adam 2015-04-17]
+	Updated www/py-django-mptt to 0.7.1 [adam 2015-04-17]
+	Updated www/py-django-classy-tags to 0.6.1 [adam 2015-04-17]
