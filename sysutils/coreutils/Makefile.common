@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/01/29 21:58:34 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/04/17 12:46:00 manu Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
@@ -24,6 +24,9 @@ USE_PKGLOCALEDIR=	YES
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+
+# Otherwise configure aborts when ran by root
+CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=yes
 
 .if ${OPSYS} == "Interix"
 CONFIGURE_ENV+=		ac_list_mounted_fs=found
