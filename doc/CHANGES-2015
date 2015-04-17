@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1810 2015/04/17 13:12:21 schwarz Exp $
+$NetBSD: CHANGES-2015,v 1.1811 2015/04/17 15:18:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2486,3 +2486,14 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/mupdf to 1.7 [wiz 2015-04-17]
 	Updated lang/ocaml to 4.02.1nb2 [jaapb 2015-04-17]
 	Updated mail/sylpheed to 3.4.2 [schwarz 2015-04-17]
+	Updated devel/boost-jam to 1.58.0 [adam 2015-04-17]
+	Updated devel/boost-headers to 1.58.0 [adam 2015-04-17]
+	Updated devel/boost-libs to 1.58.0 [adam 2015-04-17]
+	Updated devel/boost-docs to 1.58.0 [adam 2015-04-17]
+	Updated devel/boost-build to 1.58.0 [adam 2015-04-17]
+	Updated devel/boost-python to 1.58.0 [adam 2015-04-17]
+	Updated meta-pkgs/boost to 1.58.0 [adam 2015-04-17]
+	Updated games/wesnoth to 1.12.2 [adam 2015-04-17]
+	Updated graphics/py-Pillow to 2.8.1 [adam 2015-04-17]
+	Updated www/py-django-reversion to 1.8.6 [adam 2015-04-17]
+	Updated www/py-django-cms to 3.0.13 [adam 2015-04-17]
