@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2014/11/07 19:39:28 adam Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/17 15:53:00 adam Exp $
 #
 
 DISTNAME=	exempi-2.1.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel graphics
 MASTER_SITES=	http://libopenraw.freedesktop.org/download/
 

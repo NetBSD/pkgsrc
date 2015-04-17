@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/11/14 08:03:30 markd Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/17 15:53:00 adam Exp $
 
 DISTNAME=	kde-dev-scripts-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Scripts useful during development of KDE software
 
