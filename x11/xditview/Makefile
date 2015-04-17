@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/06/09 12:12:27 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/04/17 07:05:02 wiz Exp $
 
-DISTNAME=	xditview-1.0.3
+DISTNAME=	xditview-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2

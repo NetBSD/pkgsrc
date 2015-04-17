@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/28 02:15:35 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/17 07:05:02 wiz Exp $
 
-SHA1 (xditview-1.0.3.tar.bz2) = 38eb96a186d9e0507291be30a9b9b65de667635b
-RMD160 (xditview-1.0.3.tar.bz2) = 66139f2e4ab9eafda694a31d021bf453fcba36f5
-Size (xditview-1.0.3.tar.bz2) = 143012 bytes
+SHA1 (xditview-1.0.4.tar.bz2) = 5fa4247f75bc1d10e78a4c215c8bd3b9c4651dfb
+RMD160 (xditview-1.0.4.tar.bz2) = 7c660aa1aa8a91e07306985d4a87f6ea21f57fa2
+Size (xditview-1.0.4.tar.bz2) = 148842 bytes
