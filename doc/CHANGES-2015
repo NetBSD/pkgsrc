@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1809 2015/04/17 09:13:16 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.1810 2015/04/17 13:12:21 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2485,3 +2485,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xmodmap to 1.0.9 [wiz 2015-04-17]
 	Updated print/mupdf to 1.7 [wiz 2015-04-17]
 	Updated lang/ocaml to 4.02.1nb2 [jaapb 2015-04-17]
+	Updated mail/sylpheed to 3.4.2 [schwarz 2015-04-17]
