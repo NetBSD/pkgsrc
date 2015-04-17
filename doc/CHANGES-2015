@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1805 2015/04/17 07:13:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1806 2015/04/17 07:13:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xkbprint to 1.0.4 [wiz 2015-04-17]
 	Updated x11/xlsatoms to 1.1.2 [wiz 2015-04-17]
 	Updated x11/xlsfonts to 1.0.5 [wiz 2015-04-17]
+	Updated x11/xmag to 1.0.6 [wiz 2015-04-17]
