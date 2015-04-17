@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1788 2015/04/17 01:55:33 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1789 2015/04/17 02:04:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2464,3 +2464,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Simple to 1.001014 [mef 2015-04-17]
 	Updated devel/p5-Test-Trap to 0.3.2 [mef 2015-04-17]
 	Updated ham/xnec2c to 3.3 [mef 2015-04-17]
+	Updated cad/gtkwave to 3.3.65 [mef 2015-04-17]
