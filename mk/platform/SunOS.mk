@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.63 2015/03/19 19:15:23 tron Exp $
+# $NetBSD: SunOS.mk,v 1.64 2015/04/17 08:21:01 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -48,7 +48,6 @@ KRB5_DEFAULT?=		mit-krb5
 
 # Builtin defaults which make sense for this platform.
 _OPSYS_PREFER.libexecinfo?=	native
-_OPSYS_PREFER.mit-krb5?=	native
 _OPSYS_PREFER.openssl?=		pkgsrc
 _OPSYS_PREFER.solaris-pam?=	native
 
