@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/03 18:01:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/04/17 06:55:57 wiz Exp $
 
-SHA1 (setxkbmap-1.3.0.tar.bz2) = d10885d6215b06789961c67557df46406f99c2b7
-RMD160 (setxkbmap-1.3.0.tar.bz2) = e77e139f96b7135b062ea9a86ee179b9e0788774
-Size (setxkbmap-1.3.0.tar.bz2) = 125844 bytes
+SHA1 (setxkbmap-1.3.1.tar.bz2) = 560a02cf6f7db1f79739a4f2bd4f8050c7eb6f43
+RMD160 (setxkbmap-1.3.1.tar.bz2) = e625f4c402516448c3b27a57def90e8948e5d1fe
+Size (setxkbmap-1.3.1.tar.bz2) = 133817 bytes
