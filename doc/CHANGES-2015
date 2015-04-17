@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1812 2015/04/17 15:50:33 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1813 2015/04/17 16:43:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2499,3 +2499,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django-cms to 3.0.13 [adam 2015-04-17]
 	Updated www/py-django-mptt to 0.7.1 [adam 2015-04-17]
 	Updated www/py-django-classy-tags to 0.6.1 [adam 2015-04-17]
+	Updated lang/php54 to 5.4.40 [taca 2015-04-17]
+	Updated lang/php55 to 5.5.24 [taca 2015-04-17]
+	Updated lang/php56 to 5.6.8 [taca 2015-04-17]
