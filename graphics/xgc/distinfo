@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/28 02:53:13 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/17 07:08:17 wiz Exp $
 
-SHA1 (xgc-1.0.4.tar.bz2) = 1406624f697988df232b9434794af02841488900
-RMD160 (xgc-1.0.4.tar.bz2) = 38772843e6f93bb100a9929e7328ff5923becb8a
-Size (xgc-1.0.4.tar.bz2) = 180138 bytes
+SHA1 (xgc-1.0.5.tar.bz2) = 642f9a286bac77ccb20ee42d03920028f6f5894b
+RMD160 (xgc-1.0.5.tar.bz2) = f34421d234b03e7ddf1d95a2aa12de6fa39e2846
+Size (xgc-1.0.5.tar.bz2) = 188307 bytes
