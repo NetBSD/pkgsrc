@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:11 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2015/04/17 07:07:27 wiz Exp $
 
-DISTNAME=		xgamma-1.0.5
+DISTNAME=		xgamma-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
