@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/09/09 09:39:52 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/04/17 07:15:15 wiz Exp $
 
-SHA1 (xmodmap-1.0.8.tar.bz2) = 44ebb0a1047fc9391422108007c30c64cc0782bc
-RMD160 (xmodmap-1.0.8.tar.bz2) = 7f00a783fdf865aa0de22c90cdf379ed33fe38a8
-Size (xmodmap-1.0.8.tar.bz2) = 141026 bytes
+SHA1 (xmodmap-1.0.9.tar.bz2) = fe735c8bbba68d7eb50f82d4e092fdcadf161314
+RMD160 (xmodmap-1.0.9.tar.bz2) = ebee944d841a0d6c5eea6a8d21413cee25f11aaa
+Size (xmodmap-1.0.9.tar.bz2) = 142565 bytes
