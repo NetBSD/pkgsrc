@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2015/04/17 13:12:21 schwarz Exp $
+# $NetBSD: Makefile,v 1.157 2015/04/18 20:14:58 schwarz Exp $
 
 DISTNAME=	sylpheed-3.4.2
 CATEGORIES=	mail news x11
