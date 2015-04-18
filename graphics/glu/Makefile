@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2015/04/02 23:03:00 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2015/04/18 17:44:12 tnn Exp $
 
 DISTNAME=	glu-9.0.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/glu/
 EXTRACT_SUFX=	.tar.bz2
