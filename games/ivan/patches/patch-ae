@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2008/07/27 21:44:47 dholland Exp $
+$NetBSD: patch-ae,v 1.2 2015/04/18 20:42:39 joerg Exp $
 
---- FeLib/Include/save.h~	2004-10-26 15:35:45.000000000 -0400
-+++ FeLib/Include/save.h	2008-07-27 16:24:25.000000000 -0400
-@@ -36,7 +36,7 @@
+--- FeLib/Include/save.h.orig	2004-10-26 19:35:45.000000000 +0000
++++ FeLib/Include/save.h
+@@ -36,7 +36,7 @@ class outputfile
    void Put(char What) { fputc(What, Buffer); }
    void Write(const char* Offset, long Size)
    { fwrite(Offset, 1, Size, Buffer); }
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1 2008/07/27 21:44:47 dholland Exp $
    void Close() { fclose(Buffer); }
    void Flush() { fflush(Buffer); }
    void ReOpen();
-@@ -58,7 +58,7 @@
+@@ -58,7 +58,7 @@ class inputfile
    rect ReadRect();
    int Get() { return fgetc(Buffer); }
    void Read(char* Offset, long Size) { fread(Offset, 1, Size, Buffer); }
@@ -20,3 +20,34 @@ $NetBSD: patch-ae,v 1.1 2008/07/27 21:44:47 dholland Exp $
    truth Eof() { return feof(Buffer); }
    void ClearFlags() { clearerr(Buffer); }
    void SeekPosBegin(long Offset) { fseek(Buffer, Offset, SEEK_SET); }
+@@ -220,6 +220,30 @@ inline inputfile& operator>>(inputfile& 
+   return SaveFile;
+ }
+ 
++inline outputfile& operator<<(outputfile& SaveFile, long long Value)
++{
++  SaveFile.Write(reinterpret_cast<char*>(&Value), sizeof(Value));
++  return SaveFile;
++}
++
++inline inputfile& operator>>(inputfile& SaveFile, long long& Value)
++{
++  SaveFile.Read(reinterpret_cast<char*>(&Value), sizeof(Value));
++  return SaveFile;
++}
++
++inline outputfile& operator<<(outputfile& SaveFile, unsigned long long Value)
++{
++  SaveFile.Write(reinterpret_cast<char*>(&Value), sizeof(Value));
++  return SaveFile;
++}
++
++inline inputfile& operator>>(inputfile& SaveFile, unsigned long long& Value)
++{
++  SaveFile.Read(reinterpret_cast<char*>(&Value), sizeof(Value));
++  return SaveFile;
++}
++
+ inline outputfile& operator<<(outputfile& SaveFile, unsigned Value)
+ {
+   SaveFile.Write(reinterpret_cast<char*>(&Value), sizeof(Value));
