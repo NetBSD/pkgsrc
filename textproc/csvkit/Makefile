@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/04/14 11:25:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/18 18:27:16 cheusov Exp $
 
 DISTNAME=	0.9.0
+PKGREVISION=	1
 PKGNAME=	csvkit-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/onyxfish/csvkit/archive/
@@ -28,7 +29,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	# none
 
-EGG_NAME=	${PKGNAME}
+EGG_NAME=	${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
