@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/17 19:18:00 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/18 20:40:46 joerg Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -22,6 +22,11 @@ INSTALLATION_DIRS=	bin
 MAKE_FLAGS+=		LEX=${LEX}
 
 MAKE_JOBS_SAFE=		no
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=		-Wno-return-type
+.endif
 
 post-extract:
 	${CP} ${FILESDIR}/path.el ${WRKSRC}
