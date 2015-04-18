@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1820 2015/04/18 10:05:44 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.1821 2015/04/18 11:52:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2509,3 +2509,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ccrtp to 2.1.2 [rodent 2015-04-18]
 	Updated net/libzrtpcpp to 4.4.0 [rodent 2015-04-18]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.457 [tsutsui 2015-04-18]
+	Updated devel/p5-Moose to 2.1404 [wen 2015-04-18]
