@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/17 00:54:16 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/18 03:11:47 rodent Exp $
 include/ccrtp/CryptoContext.h
 include/ccrtp/CryptoContextCtrl.h
 include/ccrtp/base.h
@@ -15,6 +15,7 @@ include/ccrtp/rtcppkt.h
 include/ccrtp/rtp.h
 include/ccrtp/rtppkt.h
 include/ccrtp/sources.h
-info/ccrtp.info
-lib/libccrtp.la
+lib/libccrtp.so
+lib/libccrtp.so.SOVERSION
 lib/pkgconfig/libccrtp.pc
+info/ccrtp.info

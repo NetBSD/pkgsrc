@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/04/05 13:55:59 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/04/18 03:11:47 rodent Exp $
 
-SHA1 (ccrtp-2.0.8.tar.gz) = e26eb4a97871fd9844e5d12fe07e06bf5fd5d144
-RMD160 (ccrtp-2.0.8.tar.gz) = 3ee14ec8198c20c436f581b60801cde182457b3e
-Size (ccrtp-2.0.8.tar.gz) = 751694 bytes
-SHA1 (patch-src_ccrtp_crypto_gcrypt_InitializeGcrypt.cpp) = 150315c24f4c578b8cf045b9050e188d54e0fc8a
+SHA1 (ccrtp-2.1.2.tar.gz) = ecad8c17c5ed61e1c9fb1b785592958c678b7c4b
+RMD160 (ccrtp-2.1.2.tar.gz) = b3b2cb2f6822e08422b19fcd1528f976ca10ad66
+Size (ccrtp-2.1.2.tar.gz) = 764869 bytes
+SHA1 (patch-src_ccrtp_crypto_gcrypt_InitializeGcrypt.cpp) = 407f3a7f6536028a1b727a826183133dfe3ce4d6
