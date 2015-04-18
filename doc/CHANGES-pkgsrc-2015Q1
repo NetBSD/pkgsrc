@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.10 2015/04/18 14:53:02 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.11 2015/04/18 22:51:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -25,3 +25,13 @@ Pullup ticket #4665 - requested by joerg
 inputmethod/librime - build fix
 Pullup ticket #4668 - requested by manu
 www/ap2-auth-mellon - apache24 support
+Pullup ticket #4664 - requested by joerg
+security/beecrypt: build fix
+Pullup ticket #4666 - requested by joerg
+devel/gperftools: build fix
+Pullup ticket #4671 - requested by joerg
+devel/spin: build fix
+Pullup ticket #4672 - requested by joerg
+devel/st: build fix
+Pullup ticket #4673 - requested by joerg
+games/ivan: build fix
