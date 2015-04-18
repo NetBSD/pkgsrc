@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1817 2015/04/18 02:43:36 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1818 2015/04/18 03:12:51 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2506,3 +2506,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/libXpresent version 1.0.0 [wiz 2015-04-17]
 	Updated meta-pkgs/modular-xorg-libs to 1.2 [wiz 2015-04-17]
 	Updated devel/ucommon to 6.3.1 [rodent 2015-04-18]
+	Updated net/ccrtp to 2.1.2 [rodent 2015-04-18]
