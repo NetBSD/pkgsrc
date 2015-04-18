@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.23 2013/09/04 15:14:45 jperkin Exp $
+# $NetBSD: HPUX.mk,v 1.24 2015/04/18 22:56:19 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -26,7 +26,7 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
-# Fix broken system headers by using pkgtools/posix_headers
+# Fix broken system headers by using pkgtools/compat_headers
 FIX_SYSTEM_HEADERS?=	yes
 
 _OPSYS_EMULDIR.hpux=	# empty
