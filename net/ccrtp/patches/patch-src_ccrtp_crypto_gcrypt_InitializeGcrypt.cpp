@@ -1,4 +1,6 @@
-$NetBSD: patch-src_ccrtp_crypto_gcrypt_InitializeGcrypt.cpp,v 1.1 2014/02/21 20:30:27 joerg Exp $
+$NetBSD: patch-src_ccrtp_crypto_gcrypt_InitializeGcrypt.cpp,v 1.2 2015/04/18 03:11:47 rodent Exp $
+
+Fix build with newer libgcrypt.
 
 --- src/ccrtp/crypto/gcrypt/InitializeGcrypt.cpp.orig	2012-06-18 15:19:04.000000000 +0000
 +++ src/ccrtp/crypto/gcrypt/InitializeGcrypt.cpp
