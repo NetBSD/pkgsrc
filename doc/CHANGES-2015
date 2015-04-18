@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1824 2015/04/18 12:43:15 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1825 2015/04/18 14:09:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2513,3 +2513,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-C3 to 0.28 [wen 2015-04-18]
 	Updated fonts/tamsyn-font to 1.11 [mef 2015-04-18]
 	Updated fonts/lohit-fonts to 2.3.8 [mef 2015-04-18]
+	Updated textproc/py-html2text to 2015.4.14 [schmonz 2015-04-18]
