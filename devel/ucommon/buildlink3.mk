@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2015/04/18 02:43:24 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2015/04/18 02:48:50 rodent Exp $
 
 BUILDLINK_TREE+=	ucommon
 
@@ -13,12 +13,10 @@ pkgbase := ucommon
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.ucommon:Mgnutls)
-BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.0.0
 .include "../../security/gnutls/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.ucommon:Mopenssl)
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
