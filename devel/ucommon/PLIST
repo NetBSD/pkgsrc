@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/10 02:32:50 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/18 02:43:24 rodent Exp $
 bin/args
 bin/car
 bin/commoncpp-config
@@ -18,6 +18,7 @@ include/commoncpp/exception.h
 include/commoncpp/export.h
 include/commoncpp/file.h
 include/commoncpp/mime.h
+include/commoncpp/misc.h
 include/commoncpp/numbers.h
 include/commoncpp/object.h
 include/commoncpp/pointer.h
@@ -63,15 +64,18 @@ include/ucommon/ucommon.h
 include/ucommon/unicode.h
 include/ucommon/vector.h
 include/ucommon/xml.h
-lib/libcommoncpp.so
-lib/libcommoncpp.so.6
-lib/libcommoncpp.so.${PKGVERSION}
-lib/libucommon.so
-lib/libucommon.so.6
-lib/libucommon.so.${PKGVERSION}
-lib/libusecure.so
-lib/libusecure.so.6
-lib/libusecure.so.${PKGVERSION}
+${PLIST.static}lib/libcommoncpp.a
+${PLIST.dynamic}lib/libcommoncpp.so
+${PLIST.dynamic}lib/libcommoncpp.so.7
+${PLIST.dynamic}lib/libcommoncpp.so.7.0.5
+${PLIST.static}lib/libucommon.a
+${PLIST.dynamic}lib/libucommon.so
+${PLIST.dynamic}lib/libucommon.so.7
+${PLIST.dynamic}lib/libucommon.so.7.0.5
+${PLIST.static}lib/libusecure.a
+${PLIST.dynamic}lib/libusecure.so
+${PLIST.dynamic}lib/libusecure.so.7
+${PLIST.dynamic}lib/libusecure.so.7.0.5
 lib/pkgconfig/commoncpp.pc
 lib/pkgconfig/ucommon.pc
 man/man1/args.1
@@ -84,3 +88,5 @@ man/man1/scrub-files.1
 man/man1/sockaddr.1
 man/man1/ucommon-config.1
 man/man1/zerofill.1
+share/ucommon/cmake/CapeConfig.cmake
+share/ucommon/cmake/CapeMakeTargets.cmake
