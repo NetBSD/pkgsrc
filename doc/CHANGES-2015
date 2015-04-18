@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1826 2015/04/18 20:14:58 schwarz Exp $
+$NetBSD: CHANGES-2015,v 1.1827 2015/04/18 21:26:36 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2514,4 +2514,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/tamsyn-font to 1.11 [mef 2015-04-18]
 	Updated fonts/lohit-fonts to 2.3.8 [mef 2015-04-18]
 	Updated textproc/py-html2text to 2015.4.14 [schmonz 2015-04-18]
+	Updated security/mozilla-rootcerts to 1.0.20141117nb1 [dholland 2015-04-18]
+	Added security/mozilla-rootcerts-openssl version 1 [dholland 2015-04-18]
 	Updated mail/sylpheed to 3.4.2 [schwarz 2015-04-18]
+	Removed www/kazehakase [dholland 2015-04-18]
