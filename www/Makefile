@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1101 2015/04/09 06:16:32 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1102 2015/04/18 21:25:34 dholland Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -147,7 +147,6 @@ SUBDIR+=	jalbum
 SUBDIR+=	jetty7
 SUBDIR+=	kahua
 SUBDIR+=	kannel
-SUBDIR+=	kazehakase
 SUBDIR+=	kdewebdev3
 SUBDIR+=	kdewebdev4
 SUBDIR+=	lhs
