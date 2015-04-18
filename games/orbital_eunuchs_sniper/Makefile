@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:49 asau Exp $
+# $NetBSD: Makefile,v 1.23 2015/04/18 20:43:19 joerg Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.30
@@ -24,10 +24,14 @@ REPLACE_FILES.bash=	src/snipe2d.in
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "x86_64" && ${OPSYS} != "DragonFly"
-PLIST_SUBST+=		CPU=amd64
+CPU=			amd64
+.elif ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
+CPU!=			uname -m
 .else
-PLIST_SUBST+=		CPU=${MACHINE_ARCH}
+CPU=			${MACHINE_ARCH}
 .endif
+
+PLIST_SUBST+=		CPU=${CPU:Q}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
