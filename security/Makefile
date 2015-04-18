@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.545 2015/04/14 13:28:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.546 2015/04/18 21:20:51 dholland Exp $
 #
 
 COMMENT=	Security tools
@@ -178,6 +178,7 @@ SUBDIR+=	mit-krb5
 SUBDIR+=	mit-krb5-appl
 SUBDIR+=	mixminion
 SUBDIR+=	mozilla-rootcerts
+SUBDIR+=	mozilla-rootcerts-openssl
 SUBDIR+=	msu
 SUBDIR+=	msudir
 SUBDIR+=	multigest
