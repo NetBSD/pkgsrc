@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2015/04/17 13:12:21 schwarz Exp $
+$NetBSD: distinfo,v 1.82 2015/04/18 20:14:58 schwarz Exp $
 
 SHA1 (sylpheed-3.4.2.tar.bz2) = 609e74dc7ec5d4d8904453455d9e561b8ebd5af1
 RMD160 (sylpheed-3.4.2.tar.bz2) = 96bd262108fbf22ee1991a4b0b664cb542c84dbc
