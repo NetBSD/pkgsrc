@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2014/04/07 04:11:22 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/18 03:36:23 rodent Exp $
 
-DISTNAME=	V4.2.0
+GITHUB_TAG=	V4.4.0
+DISTNAME=	${GITHUB_TAG}
 PKGNAME=	libzrtpcpp${DISTNAME:S/V/-/1}
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/wernerd/ZRTPCPP/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wernerd/}
+GITHUB_PROJECT=	ZRTPCPP
 DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://wiki.gnutelephony.org/
+HOMEPAGE=	http://www.gnutelephony.org/index.php/GNU_ZRTP
 COMMENT=	ZRTP extension for GNU ccRTP
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/ZRTPCPP-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 USE_PKGLOCALEDIR=	yes
 GCC_REQD+=		4.7
@@ -22,8 +24,10 @@ USE_CMAKE=		yes
 PKG_DESTDIR_SUPPORT=	destdir
 CMAKE_ARGS+=		-DLIBDIRNAME=lib
 
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7i
-BUILDLINK_DEPMETHOD.openssl=	build
+.include "options.mk"
+
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.8
+#BUILDLINK_DEPMETHOD.openssl=	build
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
