@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.8 2015/01/27 13:54:10 jperkin Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.9 2015/04/18 20:11:35 dholland Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -22,15 +22,17 @@
 self="@LOCALBASE@/sbin/mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
 certdir="/etc/ssl/certs"
+destdir=
 
 usage()
 {
-	${ECHO} 1>&2 "usage: $self [-f certfile] extract|rehash|install"
+	${ECHO} 1>&2 "usage: $self [-d destdir] [-f certfile] extract|rehash|install"
 	exit $1
 }
 
 while [ $# -gt 0 ]; do
 	case "$1" in
+	-d)	destdir="$2"; shift 2;;
 	-f)	certfile="$2"; shift 2 ;;
 	--)	shift; break ;;
 	-*)	${ECHO} 1>&2 "$self: unknown option -- $1"
@@ -181,24 +183,24 @@ extract)
 	}'
 	;;
 install)
-	if [ ! -d $SSLDIR ]; then
-		${ECHO} 1>&2 "ERROR: $SSLDIR does not exist, aborting."
+	if [ ! -d $destdir$SSLDIR ]; then
+		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR does not exist, aborting."
 		exit 1
 	fi
-	cd $SSLDIR
+	cd $destdir$SSLDIR
 	if [ -n "`${LS}`" ]; then
-		${ECHO} 1>&2 "ERROR: $SSLDIR already contains certificates, aborting."
+		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR already contains certificates, aborting."
 		exit 1
 	fi
 	set -e
 	$self extract
 	$self rehash
 	set +e
-	if [ -d $certdir ]; then
-		${ECHO} 1>&2 "ERROR: $certdir already exists, aborting."
+	if [ -d $destdir$certdir ]; then
+		${ECHO} 1>&2 "ERROR: $destdir$certdir already exists, aborting."
 		exit 1
 	fi
 	set -e
-	$MKDIR $certdir
-	cat $SSLDIR/*.pem > $certdir/ca-certificates.crt
+	$MKDIR $destdir$certdir
+	cat $destdir$SSLDIR/*.pem > $destdir$certdir/ca-certificates.crt
 esac
