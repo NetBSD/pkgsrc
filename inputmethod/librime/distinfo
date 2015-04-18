@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/11/29 09:31:49 obache Exp $
+$NetBSD: distinfo,v 1.1.4.1 2015/04/18 12:02:41 bsiegert Exp $
 
 SHA1 (librime-1.0.tar.gz) = 5fd6db95b039e08dadfe547e3e63962aeaa97d8c
 RMD160 (librime-1.0.tar.gz) = 0e5972bfcf179d464a8e58f9ddce3bf55708865b
 Size (librime-1.0.tar.gz) = 2576401 bytes
 SHA1 (patch-CMakeLists.txt) = 3e478dda0da10ecfc31f1cb7849a5fd0bd21a065
+SHA1 (patch-src_dict_table.cc) = 259704b015c1f6cffd7a5918c1a93c77384e4be7
