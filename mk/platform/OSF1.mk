@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.34 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: OSF1.mk,v 1.35 2015/04/18 22:56:19 tnn Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -26,7 +26,7 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
-# Fix broken system headers by using pkgtools/posix_headers
+# Fix broken system headers by using pkgtools/compat_headers
 FIX_SYSTEM_HEADERS?=    yes
 
 _OPSYS_EMULDIR.osf1=	# empty
