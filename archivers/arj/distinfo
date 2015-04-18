@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/04/12 16:09:27 tnn Exp $
+$NetBSD: distinfo,v 1.21 2015/04/18 12:39:05 rodent Exp $
 
 SHA1 (arj-3.10.22.tar.gz) = e8470f480e9eee14906e5485a8898e5c24738c8b
 RMD160 (arj-3.10.22.tar.gz) = 80f8a1a8cd203f73def8e957d96563a4dba80153
@@ -16,4 +16,5 @@ SHA1 (patch-gnu_configure.in) = 062f3dc1eee6f009dfdfa432bb3c138a9c28a829
 SHA1 (patch-gnu_makefile.in) = db8a0afa61f49242e9fd601d5fc3167cf75f748b
 SHA1 (patch-integr.c) = fade32219b21ac3382028bf23ee4171d8d095b5f
 SHA1 (patch-register.c) = 8d81e663b499a45f7faa52b16a6cee47394cd09c
+SHA1 (patch-resource_resource.txt) = ea7044dc8a6e4fed213f00f8db9f6c1ab5df6f72
 SHA1 (patch-uxspec.c) = 24a22fa2822704e620b38df12b76ef88fe908863
