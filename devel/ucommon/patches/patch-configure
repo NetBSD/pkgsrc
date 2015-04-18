@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/04/18 02:43:24 rodent Exp $
+
+Fix portability failure.
+
+--- configure.orig	2015-03-24 23:44:16.000000000 +0000
++++ configure
+@@ -16782,7 +16782,7 @@ if test "${enable_utils+set}" = set; the
+   enableval=$enable_utils;
+ fi
+ 
+-if test x"$enable_utils" == "xno"; then
++if test x"$enable_utils" = "xno"; then
+      if false; then
+   BUILD_UTILS_TRUE=
+   BUILD_UTILS_FALSE='#'

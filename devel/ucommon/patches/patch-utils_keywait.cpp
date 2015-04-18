@@ -1,10 +1,10 @@
-$NetBSD: patch-utils_keywait.cpp,v 1.1 2014/01/26 04:00:19 rodent Exp $
+$NetBSD: patch-utils_keywait.cpp,v 1.2 2015/04/18 02:43:24 rodent Exp $
 
 Fix unportable cfmakeraw() for SunOS.
 
---- utils/keywait.cpp.orig	2014-01-04 17:31:43.000000000 +0000
+--- utils/keywait.cpp.orig	2015-03-24 23:42:51.000000000 +0000
 +++ utils/keywait.cpp
-@@ -122,7 +122,15 @@ PROGRAM_MAIN(argc, argv)
+@@ -123,7 +123,15 @@ int main(int argc, char **argv)
      shell::exiting(&cleanup);
  
      tcgetattr(0, &current);
