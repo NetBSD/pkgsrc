@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1818 2015/04/18 03:12:51 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1819 2015/04/18 03:36:36 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2507,3 +2507,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/modular-xorg-libs to 1.2 [wiz 2015-04-17]
 	Updated devel/ucommon to 6.3.1 [rodent 2015-04-18]
 	Updated net/ccrtp to 2.1.2 [rodent 2015-04-18]
+	Updated net/libzrtpcpp to 4.4.0 [rodent 2015-04-18]
