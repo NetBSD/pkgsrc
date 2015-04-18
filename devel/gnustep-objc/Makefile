@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2014/05/05 01:53:29 rh Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/18 07:23:18 manu Exp $
 
 DISTNAME=	libobjc2-1.6.1
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	http://download.gna.org/gnustep/
 EXTRACT_SUFX=	.tar.bz2
