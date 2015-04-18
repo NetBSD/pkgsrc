@@ -1,0 +1,7 @@
+This is a hack for managing the certificate files installed into
+the OpenSSL certs directory by the mozilla-rootcerts package.
+
+For native OpenSSL it operates directly in /etc/ssl/certs (because it
+has to) and not under the pkgsrc prefix, and even for pkgsrc OpenSSL
+it still scribbles in $PREFIX/etc/ssl/certs where packages normally
+shouldn't. Be advised.
