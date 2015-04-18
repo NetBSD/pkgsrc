@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14329 2015/04/17 15:18:34 adam Exp $
+$NetBSD: TODO,v 1.14330 2015/04/18 02:56:51 rodent Exp $
 
 Suggested new packages
 ======================
@@ -961,6 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
 	o qnetwalk-1.4
+	o rabbitmq-3.5.1
 	o radiance-4.1
 	o rails-4.1.5
 	o rainbowcrack-1.5
