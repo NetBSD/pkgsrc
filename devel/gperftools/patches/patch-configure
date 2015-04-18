@@ -1,0 +1,12 @@
+$NetBSD: patch-configure,v 1.1.2.2 2015/04/18 22:02:11 tron Exp $
+
+--- configure.orig	2015-01-10 20:20:33.000000000 +0000
++++ configure
+@@ -17334,6 +17334,7 @@ $as_echo_n "checking how to access the p
+    pc_fields="$pc_fields uc_mcontext.mc_rip"           # FreeBSD (x86_64 [untested])
+    pc_fields="$pc_fields uc_mcontext.__gregs[_REG_EIP]"  # NetBSD (i386)
+    pc_fields="$pc_fields uc_mcontext.__gregs[_REG_RIP]"  # NetBSD (x86_64)
++   pc_fields="$pc_fields uc_mcontext.__gregs[_REG_PC]"   # NetBSD (arm)
+    pc_fields="$pc_fields uc_mcontext->ss.eip"          # OS X (i386, <=10.4)
+    pc_fields="$pc_fields uc_mcontext->__ss.__eip"      # OS X (i386, >=10.5)
+    pc_fields="$pc_fields uc_mcontext->ss.rip"          # OS X (x86_64)
