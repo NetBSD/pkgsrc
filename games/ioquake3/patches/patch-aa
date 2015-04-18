@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2009/03/23 09:57:37 hasso Exp $
+$NetBSD: patch-aa,v 1.3 2015/04/18 20:44:08 joerg Exp $
 
---- code/qcommon/q_platform.h.orig	2009-01-12 19:28:35 +0200
-+++ code/qcommon/q_platform.h	2009-03-23 11:14:03 +0200
-@@ -170,7 +170,7 @@ Foundation, Inc., 51 Franklin St, Fifth 
+--- code/qcommon/q_platform.h.orig	2009-03-02 17:29:30.000000000 +0000
++++ code/qcommon/q_platform.h
+@@ -163,6 +163,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
+ #define ARCH_STRING "mips"
+ #elif defined __sh__
+ #define ARCH_STRING "sh"
++#elif defined __arm__
++#define ARCH_STRING "arm"
+ #endif
+ 
+ #if __FLOAT_WORD_ORDER == __BIG_ENDIAN
+@@ -177,7 +179,7 @@ Foundation, Inc., 51 Franklin St, Fifth 
  
  //=================================================================== BSD ===
  
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2009/03/23 09:57:37 hasso Exp $
  
  #include <sys/types.h>
  #include <machine/endian.h>
-@@ -185,6 +185,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
+@@ -192,6 +194,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
  #define OS_STRING "openbsd"
  #elif defined(__NetBSD__)
  #define OS_STRING "netbsd"
@@ -20,12 +29,14 @@ $NetBSD: patch-aa,v 1.2 2009/03/23 09:57:37 hasso Exp $
  #endif
  
  #define ID_INLINE inline
-@@ -194,6 +196,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
+@@ -201,6 +205,10 @@ Foundation, Inc., 51 Franklin St, Fifth 
  #define ARCH_STRING "i386"
  #elif defined __axp__
  #define ARCH_STRING "alpha"
 +#elif defined __x86_64__
 +#define ARCH_STRING "x86_64"
++#elif defined __arm__
++#define ARCH_STRING "arm"
  #endif
  
  #if BYTE_ORDER == BIG_ENDIAN
