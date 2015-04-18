@@ -1,15 +1,17 @@
-$NetBSD: patch-md_h,v 1.1 2012/12/17 01:58:55 dholland Exp $
+$NetBSD: patch-md_h,v 1.1.20.1 2015/04/18 22:30:04 tron Exp $
 
-Add amd64 support on NetBSD by cribbing from existing OpenBSD support.
+Support for NetBSD/amd64 and NetBSD/arm.
 
 --- md.h~	2007-03-14 02:53:10.000000000 +0000
 +++ md.h
-@@ -482,6 +482,8 @@ extern void _st_md_cxt_restore(jmp_buf e
+@@ -482,6 +482,10 @@ extern void _st_md_cxt_restore(jmp_buf e
  #define MD_JB_SP   0
  #elif defined(__vax__)
  #define MD_JB_SP   2
 +#elif defined(__amd64__)
-+#define MD_JB_SP   6
++#define MD_JB_SP   _JB_RSP
++#elif defined(__arm__)
++#define MD_JB_SP   _JB_REG_R13
  #else
  #error Unknown CPU architecture
  #endif
