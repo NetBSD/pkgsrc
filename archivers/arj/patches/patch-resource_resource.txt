@@ -1,0 +1,15 @@
+$NetBSD: patch-resource_resource.txt,v 1.1 2015/04/18 12:39:05 rodent Exp $
+
+Fix build on SunOS.
+
+--- resource/resource.txt.orig	2005-06-23 13:21:56.000000000 +0000
++++ resource/resource.txt
+@@ -334,7 +334,7 @@
+  */
+ 
+ {NULL}     {M_CMD_TABLE}            {MSG_ARJ}                            {*}                     {}  {*}                  {F} {"ABCDEFGIJKLMNOPQRSTUVWXYZ"}
+-{NULL}     {M_SW_TABLE}             {MSG_ARJ}                            {*}                     {}  {*}                  {F} {"JHABCDEFGIKLMNOPQRSTUVWXYZ?!$+#&*@@2_"}
++{NULL}     {M_SW_TABLE}             {MSG_ARJ}                            {*}                     {}  {*}                  {F} {"JHABCDEFGIKLMNOPQRSTUVWXYZ?!$+#&*@2_"}
+ {NULL}     {M_SW_PARAMS}            {MSG_ARJ}                            {*}                     {}  {*}                  {F} {"001502130600400100313000000000102000"}
+ {NULL}     {M_JSW_TABLE}            {MSG_ARJ}                            {*}                     {}  {*}                  {F} {"JABCDEFGHIKLMNOPQRSTUVWXYZ#$"}
+ {NULL}     {M_JSW_PARAMS}           {MSG_ARJ}                            {*}                     {}  {*}                  {F} {"0130111100001010020301000040"}
