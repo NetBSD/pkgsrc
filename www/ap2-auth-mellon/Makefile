@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/04/01 14:08:13 manu Exp $
+# $NetBSD: Makefile,v 1.29.2.1 2015/04/18 14:52:51 bsiegert Exp $
 #
 
 DISTNAME=	mod_auth_mellon-0.10.0
@@ -20,7 +20,7 @@ USE_TOOLS+=	pkg-config
 CFLAGS+=	-DLASSO_SERVER_LOAD_METADATA_FLAG_DEFAULT=0
 
 APACHE_MODULE=	YES
-PKG_APACHE_ACCEPTED=	apache22
+PKG_APACHE_ACCEPTED=	apache22 apache24
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
