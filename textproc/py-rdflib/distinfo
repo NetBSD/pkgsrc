@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/19 22:03:29 rodent Exp $
+
+SHA1 (rdflib-4.2.0.tar.gz) = 826962b53383c243f2fd4a35198c06456a9c6072
+RMD160 (rdflib-4.2.0.tar.gz) = 4ba31aee0d3ba558b83da1cbeea296afd5283db1
+Size (rdflib-4.2.0.tar.gz) = 881424 bytes
