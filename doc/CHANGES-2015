@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1865 2015/04/19 23:23:22 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1866 2015/04/19 23:37:23 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2565,3 +2565,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added audio/lv2 version 1.12.0 [rodent 2015-04-19]
 	Added textproc/serd version 0.20.0 [rodent 2015-04-19]
 	Added textproc/sord version 0.12.2 [rodent 2015-04-19]
+	Added wm/trayer version 1.1.6 [cheusov 2015-04-19]
