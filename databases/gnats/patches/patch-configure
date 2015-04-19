@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/04/19 19:35:00 spz Exp $
+
+'=' compat fix
+
+--- configure.orig	2015-02-27 02:10:23.000000000 +0000
++++ configure
+@@ -6349,7 +6349,7 @@ fi
+ if test "$LEX" = :; then
+   LEX=${am_missing_run}flex
+ fi
+-if test "x$LEX" == "flex" ; then
++if test "x$LEX" = "flex" ; then
+ 	# Lex options - use -X
+ 	FLEX_LFLAGS="-X"
+ 	FLEX_CFLAGS="-D_POSIX_SOURCE=1"
