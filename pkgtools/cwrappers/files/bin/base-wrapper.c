@@ -1,4 +1,4 @@
-/* $NetBSD: base-wrapper.c,v 1.1 2014/09/17 12:40:56 joerg Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.2 2015/04/19 14:30:07 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,8 +31,9 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
 #include <sys/wait.h>
-#include <err.h>
+#include <nbcompat/err.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
