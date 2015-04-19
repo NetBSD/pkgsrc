@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/19 23:45:06 rodent Exp $
+include/sratom-0/sratom/sratom.h
+lib/libsratom-0.so
+lib/libsratom-0.so.0
+lib/libsratom-0.so.${PKGVERSION}
+lib/pkgconfig/sratom-0.pc
+${PLIST.doc}man/man3/sratom.3
+${PLIST.doc}share/doc/sratom-0/html/index.html
+${PLIST.doc}share/doc/sratom-0/html/style.css
