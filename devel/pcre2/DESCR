@@ -1,0 +1,8 @@
+PCRE2 is a re-working of the original PCRE library to provide an entirely new
+API.
+
+PCRE2 is written in C, and it has its own API. There are three sets of
+functions, one for the 8-bit library, which processes strings of bytes, one for
+the 16-bit library, which processes strings of 16-bit values, and one for the
+32-bit library, which processes strings of 32-bit values. There are no C++
+wrappers.
