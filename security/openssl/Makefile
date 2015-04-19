@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2015/03/19 22:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.205 2015/04/19 09:02:02 tnn Exp $
 
 DISTNAME=	openssl-1.0.2a
 CATEGORIES=	security
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-cc
 .  endif
 .elif ${OPSYS} == "IRIX"
 CONFIGURE_ARGS+=	no-asm
-.  if ${ABI} == "64"
+.  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_SCRIPT=	./Configure
 .    if !empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	irix64-mips4-gcc
@@ -106,7 +106,7 @@ SUBST_FILES.soname=	Makefile.shared
 SUBST_SED.soname=	-e 's/-Wl,-soname=/-Wl,-h,/g'
 .elif ${OPSYS} == "HPUX"
 CONFIGURE_SCRIPT=	./Configure
-.  if ${ABI} == "64"
+.  if defined(ABI) && ${ABI} == "64"
 .    if ${MACHINE_ARCH} == "hppa"
 CONFIGURE_ARGS+=	hpux64-parisc2-${CC}
 .    else
