@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2015/04/02 23:14:36 rodent Exp $
+# $NetBSD: Makefile,v 1.382 2015/04/19 19:36:11 wiz Exp $
 #
 
 COMMENT=	Games
@@ -82,6 +82,7 @@ SUBDIR+=	exchess
 SUBDIR+=	exchess-book-medium
 SUBDIR+=	exchess-book-small
 SUBDIR+=	exult
+SUBDIR+=	exult-audio
 SUBDIR+=	falcons-eye
 SUBDIR+=	fillets-ng
 SUBDIR+=	fillets-ng-data
