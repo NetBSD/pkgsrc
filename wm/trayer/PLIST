@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2015/04/19 23:37:11 cheusov Exp $
+bin/trayer
+share/doc/trayer/README
