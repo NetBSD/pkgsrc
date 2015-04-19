@@ -1,8 +1,10 @@
-$NetBSD: patch-ae,v 1.3 2005/08/27 22:24:02 recht Exp $
+$NetBSD: patch-gnats_ds-file_rmcat.sh,v 1.1 2015/04/19 19:35:00 spz Exp $
 
---- gnats/rmcat.sh.orig	2001-07-30 20:42:04.000000000 +0200
-+++ gnats/rmcat.sh
-@@ -25,7 +25,8 @@ if [ $# -eq 0 ]; then
+call query-pr with full path
+
+--- gnats/ds-file/rmcat.sh.orig	2014-12-28 19:02:36.000000000 +0000
++++ gnats/ds-file/rmcat.sh
+@@ -28,7 +28,8 @@ if [ $# -eq 0 ]; then
    exit 1
  fi
  
@@ -12,7 +14,7 @@ $NetBSD: patch-ae,v 1.3 2005/08/27 22:24:02 recht Exp $
  
  if [ ! -d "$GNATS_DB_DIR" ]
  then
-@@ -34,7 +35,7 @@ then
+@@ -37,7 +38,7 @@ then
  fi
  
  for i in "$@"; do

@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.14 2013/12/01 23:27:11 bsiegert Exp $
+$NetBSD: distinfo,v 1.15 2015/04/19 19:35:00 spz Exp $
 
-SHA1 (gnats-4.1.0.tar.gz) = 7f8ce7fbb7594698c5ba71421cad3cbc7e079003
-RMD160 (gnats-4.1.0.tar.gz) = b16bfa3ffa4f1c7dc351d1c5639061c358c64afd
-Size (gnats-4.1.0.tar.gz) = 1221364 bytes
-SHA1 (patch-aa) = 46ee888dd1726d7c7178247dd8c11c3bc8790911
-SHA1 (patch-ab) = 605e0caaed659405fff46af6c610d52c9dca948e
-SHA1 (patch-ac) = f6fdd1c2353961d47bd0e58866b56ac6f0d6173a
-SHA1 (patch-ad) = ffacd88288036eb74eccd6687292c5a456e2f027
-SHA1 (patch-ae) = ff99ebd3f6d2d1aa75b32ead56db0082eeb69753
-SHA1 (patch-ah) = 1a21ef20bbc4a2e8ed2559687a2cd8983d1c3f5f
-SHA1 (patch-gnats_configure) = 6f7daa160a13bc05bb59a362f89f05044b1fedd9
-SHA1 (patch-gnats_gnats_h) = 08cb25700672bddda30075c9a7a01443afcd5199
-SHA1 (patch-makefile_in) = a32d9f3f93cb4ec9d82d4ce204a12cd43e7a88c0
+SHA1 (gnats-4.2.0.tar.gz) = 1f277bba896ee0941f3cd8b16788efd8f0f273cc
+RMD160 (gnats-4.2.0.tar.gz) = 4dc473a242f8047bbe547f7b38a820e48a74bf90
+Size (gnats-4.2.0.tar.gz) = 1264845 bytes
+SHA1 (patch-aa) = 484254c68f456cc78986af3cefaea6724c4eff81
+SHA1 (patch-configure) = e31b335643fa2b2cfbbdd11e299183b3e93ce59c
+SHA1 (patch-gnats_ds-file_mkcat.sh) = b3eff03ae12e9bf3e4e33c3fa8f6d62dbe9ec49c
+SHA1 (patch-gnats_ds-file_mkdb.sh) = 40dd8276d9e43cd48c7ef1011f84049c29670a79
+SHA1 (patch-gnats_ds-file_rmcat.sh) = 63eee5890e09311c0d986cff081b131f2d350d11
+SHA1 (patch-gnats_edit-pr.sh) = 7f7244975dd70d13714d48a14ec82ddc63cde7b3
+SHA1 (patch-gnats_gnats_h) = e6838f94a8f83551efc8808c9b7ba64f5b506f29
