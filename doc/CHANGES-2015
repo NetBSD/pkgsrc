@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1838 2015/04/19 17:29:32 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1839 2015/04/19 18:08:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2538,3 +2538,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ruby22 to 2.2.2 [taca 2015-04-19]
 	Updated devel/ruby-mode to 2.2.2 [taca 2015-04-19]
 	Added audio/libsbsms version 2.0.2 [rodent 2015-04-19]
+	Updated games/lgogdownloader to 2.21 [wiz 2015-04-19]
