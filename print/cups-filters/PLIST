@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/17 14:07:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/04/19 18:44:25 wiz Exp $
 bin/foomatic-rip
 bin/ttfread
 include/cupsfilters/colord.h
@@ -84,6 +84,7 @@ share/ppd/cupsfilters/Fuji_Xerox-DocuPrint_CM305_df-PDF.ppd
 share/ppd/cupsfilters/Generic-PDF_Printer-PDF.ppd
 share/ppd/cupsfilters/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
 share/ppd/cupsfilters/HP-PhotoSmart_Pro_B8300-hpijs-pdftoijs.ppd
+share/ppd/cupsfilters/Ricoh-PDF_Printer-PDF.ppd
 share/ppd/cupsfilters/pxlcolor.ppd
 share/ppd/cupsfilters/pxlmono.ppd
 share/ppd/cupsfilters/textonly.ppd
