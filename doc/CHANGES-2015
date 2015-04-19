@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1858 2015/04/19 19:30:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1859 2015/04/19 19:36:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/pcre2 version 10.10 [wiz 2015-04-19]
 	Updated net/Geomyidae to 0.26.3 [wiz 2015-04-19]
 	Updated games/exult to 1.4.9rc1 [wiz 2015-04-19]
+	Added games/exult-audio version 1.0 [wiz 2015-04-19]
