@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.24 2015/04/18 22:56:19 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.25 2015/04/19 12:02:15 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -16,7 +16,7 @@ CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
-NOLOGIN?=		/etc/nologin
+NOLOGIN?=		/usr/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
