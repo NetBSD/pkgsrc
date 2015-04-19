@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/19 17:29:21 rodent Exp $
+include/sbsms.h
+lib/libsbsms.la
+lib/pkgconfig/sbsms.pc

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/19 17:29:21 rodent Exp $
+
+SHA1 (libsbsms-2.0.2.tar.gz) = 1842d0eae3cf5ac355d754e68fcdfd9391cd2fb7
+RMD160 (libsbsms-2.0.2.tar.gz) = ea3c48311f991e8f97ccb922b88eedc1d2f05d14
+Size (libsbsms-2.0.2.tar.gz) = 450170 bytes
