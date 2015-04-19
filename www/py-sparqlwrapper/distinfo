@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/19 22:20:48 rodent Exp $
+
+SHA1 (SPARQLWrapper-1.6.4.tar.gz) = 7809b80be9c7d1ddfb418b4d87a69919d861201d
+RMD160 (SPARQLWrapper-1.6.4.tar.gz) = 2b31a6be55c7a399c5ed965ece473d683b0ac059
+Size (SPARQLWrapper-1.6.4.tar.gz) = 27467 bytes
