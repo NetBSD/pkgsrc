@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.19 2013/06/04 22:16:04 tron Exp $
-#
+# $NetBSD: Makefile,v 1.20 2015/04/19 19:30:12 wiz Exp $
 
-DISTNAME=		exult-1.2
-PKGREVISION=		10
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=exult/}
+DISTNAME=	exult-1.4.9rc1
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exult/exult-all-versions/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://exult.sourceforge.net/
-COMMENT=		Open-source Ultima 7 engine
+MAINTAINER=	nikkohigashi@gmail.com
+HOMEPAGE=	http://exult.sourceforge.net/
+COMMENT=	Open-source Ultima 7 engine
+LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		yacc
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+CFLAGS+=	-fpermissive
+LDFLAGS+=	-lz
+CONFIGURE_ARGS+=	--disable-sdltest --disable-oggtest --disable-vorbistest
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
