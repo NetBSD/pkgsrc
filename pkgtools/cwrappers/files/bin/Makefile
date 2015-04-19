@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/18 19:31:47 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/19 13:30:35 tnn Exp $
 #
 PROGS=	as-wrapper cc-wrapper c++-wrapper cpp-wrapper f77-wrapper \
 	imake-wrapper ld-wrapper libtool-wrapper shlibtool-wrapper
@@ -10,10 +10,6 @@ LIB_SRCS=	alloc.c cleanup-cc.c common.c reorder-cc.c
 .ifdef NEED_MI_VECTOR_HASH
 LIB_SRCS+=	mi_vector_hash.c
 CPPFLAGS+=	-DNEED_MI_VECTOR_HASH
-.endif
-.ifdef NEED_GETLINE
-LIB_SRCS+=	getline.c
-CPPFLAGS+=	-DNEED_GETLINE
 .endif
 
 LDADD+=		-lnbcompat
