@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1864 2015/04/19 23:11:03 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1865 2015/04/19 23:23:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2564,3 +2564,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/py-sparqlwrapper version 1.6.4 [rodent 2015-04-19]
 	Added audio/lv2 version 1.12.0 [rodent 2015-04-19]
 	Added textproc/serd version 0.20.0 [rodent 2015-04-19]
+	Added textproc/sord version 0.12.2 [rodent 2015-04-19]
