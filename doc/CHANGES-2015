@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1862 2015/04/19 22:20:58 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1863 2015/04/19 22:52:15 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2562,3 +2562,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added time/py-isodate version 0.5.1 [rodent 2015-04-19]
 	Added textproc/py-rdflib version 4.2.0 [rodent 2015-04-19]
 	Added www/py-sparqlwrapper version 1.6.4 [rodent 2015-04-19]
+	Added audio/lv2 version 1.12.0 [rodent 2015-04-19]
