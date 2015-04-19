@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.3 2014/11/29 22:19:55 joerg Exp $ */
+/* $NetBSD: common.c,v 1.4 2015/04/19 13:30:35 tnn Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -32,6 +32,7 @@
 #include <nbcompat.h>
 #include <sys/wait.h>
 #include <nbcompat/err.h>
+#include <nbcompat/stdio.h>
 #include <nbcompat/stdlib.h>
 #include <string.h>
 #include <unistd.h>
