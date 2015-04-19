@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:06 jperkin Exp $
-man/man8/Geomyidae.8
-sbin/Geomyidae
-share/doc/Geomyidae/LICENSE
-share/doc/Geomyidae/README
-share/examples/Geomyidae/index.gph
+@comment $NetBSD: PLIST,v 1.4 2015/04/19 19:21:15 wiz Exp $
+man/man8/geomyidae.8
+sbin/geomyidae
+share/doc/geomyidae/CGI
+share/doc/geomyidae/LICENSE
+share/doc/geomyidae/README
+share/examples/geomyidae/index.gph
+share/examples/geomyidae/rc.d/Archlinux.conf.d
+share/examples/geomyidae/rc.d/Archlinux.rc.d
+share/examples/geomyidae/rc.d/Gentoo.conf.d
+share/examples/geomyidae/rc.d/Gentoo.init.d
+share/examples/geomyidae/rc.d/NetBSD.rc.d
+share/examples/geomyidae/rc.d/README
