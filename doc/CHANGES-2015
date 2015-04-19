@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1833 2015/04/19 15:33:18 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1834 2015/04/19 16:16:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2524,3 +2524,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/libnbcompat to 20150419 [tnn 2015-04-19]
 	Updated chat/jabberd2 to 2.3.3 [gdt 2015-04-19]
 	Updated mail/postfix to 2.11.5 [taca 2015-04-19]
+	Updated lang/ruby200-base to 2.0.0p645 [taca 2015-04-19]
+	Updated databases/ruby-gdbm to 2.0.0p645 [taca 2015-04-19]
+	Updated devel/ruby-curses to 2.0.0p645nb1 [taca 2015-04-19]
+	Updated devel/ruby-fiddle to 2.0.0p645 [taca 2015-04-19]
+	Updated devel/ruby-readline to 2.0.0p645nb1 [taca 2015-04-19]
+	Updated x11/ruby-tk to 2.0.0p645nb4 [taca 2015-04-19]
+	Updated lang/ruby200 to 2.0.0p645 [taca 2015-04-19]
+	Updated lang/ruby to 2.0.0p645 [taca 2015-04-19]
