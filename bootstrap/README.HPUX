@@ -1,4 +1,4 @@
-$NetBSD: README.HPUX,v 1.4 2015/04/19 19:21:39 tnn Exp $
+$NetBSD: README.HPUX,v 1.5 2015/04/19 19:29:44 tnn Exp $
 
 Prerequisite patches (downloadable from HP itrc)
 ------------------------------------------------
@@ -9,6 +9,8 @@ Compiler
 --------
 Prebuilt GCC toolchains suitable for use with pkgsrc can be downloaded from
 ftp://ftp.NetBSD.org/pub/pkgsrc/misc/tnn/ .
+
+Installation instructions can be found in the file "README.gcc".
 
 Selecting which ABI to use
 --------------------------
