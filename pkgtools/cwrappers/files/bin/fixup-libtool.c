@@ -1,4 +1,4 @@
-/* $NetBSD: fixup-libtool.c,v 1.6 2015/04/19 13:30:35 tnn Exp $ */
+/* $NetBSD: fixup-libtool.c,v 1.7 2015/04/19 14:30:07 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -32,7 +32,7 @@
 #include <nbcompat.h>
 #include <nbcompat/stdio.h>
 #include <sys/stat.h>
-#include <err.h>
+#include <nbcompat/err.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>

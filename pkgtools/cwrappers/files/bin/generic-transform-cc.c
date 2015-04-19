@@ -1,4 +1,4 @@
-/* $NetBSD: generic-transform-cc.c,v 1.2 2015/03/15 19:16:45 joerg Exp $ */
+/* $NetBSD: generic-transform-cc.c,v 1.3 2015/04/19 14:30:07 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -33,7 +33,8 @@
 #include <sys/stat.h>
 #endif
 
-#include <err.h>
+#include <nbcompat.h>
+#include <nbcompat/err.h>
 #include <stdlib.h>
 #include <string.h>
 #include "common.h"

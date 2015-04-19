@@ -1,4 +1,4 @@
-/* $NetBSD: normalise-cc.c,v 1.1 2014/09/17 12:40:56 joerg Exp $ */
+/* $NetBSD: normalise-cc.c,v 1.2 2015/04/19 14:30:07 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -30,7 +30,8 @@
  */
 
 
-#include <err.h>
+#include <nbcompat.h>
+#include <nbcompat/err.h>
 #include <stdlib.h>
 #include <string.h>
 #include "common.h"
