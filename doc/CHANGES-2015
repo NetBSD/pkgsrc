@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1831 2015/04/19 12:25:23 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1832 2015/04/19 12:48:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-flask-user to 0.6.1nb3 [rodent 2015-04-19]
 	Updated devel/py-trytond to 3.4.2nb1 [rodent 2015-04-19]
 	Updated pkgtools/libnbcompat to 20150419 [tnn 2015-04-19]
+	Updated chat/jabberd2 to 2.3.3 [gdt 2015-04-19]
