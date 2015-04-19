@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.3 2015/02/13 22:18:38 jperkin Exp $ */
+/* $NetBSD: common.h,v 1.4 2015/04/19 13:30:35 tnn Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -103,9 +103,6 @@ void	fixup_libtool(struct arglist *);
 
 #ifdef NEED_MI_VECTOR_HASH
 void	mi_vector_hash(const void *, size_t, uint32_t, uint32_t[3]);
-#endif
-#ifdef NEED_GETLINE
-ssize_t	getline(char **, size_t *, FILE *);
 #endif
 
 #endif
