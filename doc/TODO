@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14343 2015/04/19 18:44:34 wiz Exp $
+$NetBSD: TODO,v 1.14344 2015/04/19 18:58:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,6 +436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.25
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -605,7 +606,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnats-4.2.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.16
+	o gnome-3.16.1
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
@@ -795,6 +796,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o maradns-2.0.11
 	o matchbox-panel-0.9.3
 	o mawk-1.3.4.20141206
+	o maxima-5.36.0
 	o mbuf-20141227
 	o mc-4.8.14
 	o mcsim-5.5.0
@@ -891,6 +893,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcb-20140316 [pkg/49383]
 	o pcc-1.1.0
 	o pcmanfm-0.5.2 [pkg/42451]
+	o pcre-8.37
 	o pdmenu-1.2.87
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
@@ -1110,7 +1113,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o varnish-4.0.2
 	o vbetool-1.1
 	o verilog-current-20130827 [wip]
-	o veusz-1.22
+	o veusz-1.23
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8p
@@ -1135,7 +1138,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-1.1
 	o windowlab-1.40
-	o wine-devel-1.7.40
+	o wine-devel-1.7.41
 	o wireshark-1.12.4
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
