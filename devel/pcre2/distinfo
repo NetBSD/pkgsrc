@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/19 19:18:22 wiz Exp $
+
+SHA1 (pcre2-10.10.tar.bz2) = a27c0beb6bfb828586d22769f5111183122ab42d
+RMD160 (pcre2-10.10.tar.bz2) = 0b1c4554c312faeca3e207ebd0ad60f9cf5d9f1f
+Size (pcre2-10.10.tar.bz2) = 1339199 bytes
