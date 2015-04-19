@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1829 2015/04/19 00:50:55 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1830 2015/04/19 00:57:05 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2520,3 +2520,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed www/kazehakase [dholland 2015-04-18]
 	Added security/py-py-bcrypt version 0.4 [rodent 2015-04-19]
 	Updated www/py-flask-user to 0.6.1nb3 [rodent 2015-04-19]
+	Updated devel/py-trytond to 3.4.2nb1 [rodent 2015-04-19]
