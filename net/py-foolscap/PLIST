@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/01 11:43:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/19 18:22:00 wiz Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -55,9 +55,6 @@ ${PYSITELIB}/foolscap/crypto.pyo
 ${PYSITELIB}/foolscap/eventual.py
 ${PYSITELIB}/foolscap/eventual.pyc
 ${PYSITELIB}/foolscap/eventual.pyo
-${PYSITELIB}/foolscap/hashutil.py
-${PYSITELIB}/foolscap/hashutil.pyc
-${PYSITELIB}/foolscap/hashutil.pyo
 ${PYSITELIB}/foolscap/ipb.py
 ${PYSITELIB}/foolscap/ipb.pyc
 ${PYSITELIB}/foolscap/ipb.pyo
@@ -163,9 +160,6 @@ ${PYSITELIB}/foolscap/slicers/unicode.pyo
 ${PYSITELIB}/foolscap/slicers/vocab.py
 ${PYSITELIB}/foolscap/slicers/vocab.pyc
 ${PYSITELIB}/foolscap/slicers/vocab.pyo
-${PYSITELIB}/foolscap/sslverify.py
-${PYSITELIB}/foolscap/sslverify.pyc
-${PYSITELIB}/foolscap/sslverify.pyo
 ${PYSITELIB}/foolscap/storage.py
 ${PYSITELIB}/foolscap/storage.pyc
 ${PYSITELIB}/foolscap/storage.pyo
