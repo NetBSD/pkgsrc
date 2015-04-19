@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2015/04/19 17:30:17 rodent Exp $
+# $NetBSD: Makefile,v 1.521 2015/04/19 22:53:04 rodent Exp $
 #
 
 COMMENT=	Audio tools
@@ -279,6 +279,7 @@ SUBDIR+=	libxmp
 SUBDIR+=	libxspf
 SUBDIR+=	liteamp
 SUBDIR+=	liveice
+SUBDIR+=	lv2
 SUBDIR+=	lmms
 SUBDIR+=	mac
 SUBDIR+=	mad
