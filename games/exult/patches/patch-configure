@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2015/04/19 19:30:13 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2010-10-21 18:26:56.000000000 +0000
++++ configure
+@@ -21550,7 +21550,7 @@ fi
+ # ---------------------------------------------------------------------
+ # Black magic for static linking.
+ # ---------------------------------------------------------------------
+-if test x$ARCH == xmacosx; then
++if test x$ARCH = xmacosx; then
+ 
+ # Check whether --with-macosx-static-lib-path was given.
+ if test "${with_macosx_static_lib_path+set}" = set; then
+@@ -22170,7 +22170,7 @@ if test x$enable_zip_support = xyes ; th
+ 	# if test x$GCC = xyes ; then
+ 	#	ZLIB_LIBS="-Wl,-Bstatic -lz -Wl,-Bdynamic"
+ 	# else
+-	if test x$enable_static_libs == xno -o x$ARCH != xmacosx; then
++	if test x$enable_static_libs = xno -o x$ARCH != xmacosx; then
+ 		ZLIB_LIBS="-lz"
+ 	fi
+ 	# fi
