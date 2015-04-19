@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/12/31 13:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/19 00:50:42 rodent Exp $
 
 DISTNAME=	Flask-User-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-User/
 DIST_SUBDIR=	${PKGBASE:tl:S/${PYPKGPREFIX}/py/1}
@@ -13,7 +13,7 @@ COMMENT=	Customizable user account management for Flask
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
-DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-py-bcrypt-[0-9]*:../../security/py-py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-babel-[0-9]*:../../www/py-flask-babel
