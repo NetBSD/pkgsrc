@@ -1,4 +1,6 @@
-$NetBSD: patch-boost_context_detail_config.hpp,v 1.1 2015/04/19 12:12:16 ryoon Exp $
+$NetBSD: patch-boost_context_detail_config.hpp,v 1.2 2015/04/19 12:18:44 wiz Exp $
+
+Fix build with gcc-4.8.4, which does not support index_sequence (from C++14).
 
 --- boost/context/detail/config.hpp.orig	2015-04-04 17:31:00.000000000 +0000
 +++ boost/context/detail/config.hpp
