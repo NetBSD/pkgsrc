@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1845 2015/04/19 18:20:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1846 2015/04/19 18:22:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2545,3 +2545,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xterm to 318 [wiz 2015-04-19]
 	Updated devel/talloc to 2.1.2 [wiz 2015-04-19]
 	Updated audio/libopenmpt to 0.2.4954beta12 [wiz 2015-04-19]
+	Updated net/py-foolscap to 0.8.0 [wiz 2015-04-19]
