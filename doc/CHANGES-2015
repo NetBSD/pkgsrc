@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1860 2015/04/19 21:28:09 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1861 2015/04/19 22:03:39 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2560,3 +2560,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/exult to 1.4.9rc1 [wiz 2015-04-19]
 	Added games/exult-audio version 1.0 [wiz 2015-04-19]
 	Added time/py-isodate version 0.5.1 [rodent 2015-04-19]
+	Added textproc/py-rdflib version 4.2.0 [rodent 2015-04-19]
