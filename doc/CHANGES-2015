@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1866 2015/04/19 23:37:23 cheusov Exp $
+$NetBSD: CHANGES-2015,v 1.1867 2015/04/19 23:45:16 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/serd version 0.20.0 [rodent 2015-04-19]
 	Added textproc/sord version 0.12.2 [rodent 2015-04-19]
 	Added wm/trayer version 1.1.6 [cheusov 2015-04-19]
+	Added converters/sratom version 0.4.6 [rodent 2015-04-19]
