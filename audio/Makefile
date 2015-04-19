@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2015/02/19 00:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.520 2015/04/19 17:30:17 rodent Exp $
 #
 
 COMMENT=	Audio tools
@@ -260,6 +260,7 @@ SUBDIR+=	libopenspc
 SUBDIR+=	libopus
 SUBDIR+=	libreplaygain
 SUBDIR+=	libsamplerate
+SUBDIR+=	libsbsms
 SUBDIR+=	libshout
 SUBDIR+=	libsidplay
 SUBDIR+=	libsidplay2
