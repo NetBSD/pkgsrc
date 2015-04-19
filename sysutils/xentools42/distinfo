@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/03/13 09:43:41 spz Exp $
+$NetBSD: distinfo,v 1.16 2015/04/19 13:13:21 spz Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -25,6 +25,8 @@ SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = a693a79a1f1c16548f62f7da1fa58fa28
 SHA1 (patch-.._docs_man_xm.pod.1) = 975b7570da4bf9fd9cb79539fbd36b8dfbcbd571
 SHA1 (patch-.._docs_man_xmdomain.cfg.pod.5) = 5563a72e203e789a86f4166c71ddb3fcff5215c6
 SHA1 (patch-CVE-2015-2152) = 676339abef9e79595f6c40de31ca740f8284c7a2
+SHA1 (patch-CVE-2015-2752) = fdc83a758c34581d91586f24815952a4b7145af7
+SHA1 (patch-CVE-2015-2756) = 73223969ce65688e9226c485f0f444c69ee23bf3
 SHA1 (patch-Makefile) = 37fbcd6d2f0279d4c04c91085b0e7f5611a5b92a
 SHA1 (patch-Rules.mk) = 51a2804e9a2a509a428392c0eb11243884bb7f22
 SHA1 (patch-blktap_drivers_Makefile) = 0906a5ec3a7450fc987b01289e2560e60966d00d

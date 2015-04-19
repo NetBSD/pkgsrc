@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2015/03/10 20:27:16 spz Exp $
+$NetBSD: distinfo,v 1.36 2015/04/19 13:13:20 spz Exp $
 
 SHA1 (xen-4.1.6.1.tar.gz) = e5f15feb0821578817a65ede16110c6eac01abd0
 RMD160 (xen-4.1.6.1.tar.gz) = bff11421fc44a26f2cc3156713267abcb36d7a19
@@ -28,6 +28,8 @@ SHA1 (patch-CVE-2014-9030) = f52c302585b0f4b074f7562e6b8cddacb26deee4
 SHA1 (patch-CVE-2015-2044) = 00d32273d0a9f51927ff94a13f916382c3126e60
 SHA1 (patch-CVE-2015-2045) = e1874bbde0cce7db4ee9260440f5280d404027d7
 SHA1 (patch-CVE-2015-2151) = aed92f50d162febc3074f7edecaf6ca418d0b42c
+SHA1 (patch-CVE-2015-2752) = 37f44989a3b3c69dea8e9de9fc34ffd5c2e8b087
+SHA1 (patch-CVE-2015-2756) = b3b133d42229ecc8c308644b17e5317cd77f9a98
 SHA1 (patch-Config.mk) = a43ed1b3304d6383dc093acd128a7f373d0ca266
 SHA1 (patch-xen_Makefile) = d1c7e4860221f93d90818f45a77748882486f92b
 SHA1 (patch-xen_arch_x86_Rules.mk) = 6b9b4bfa28924f7d3f6c793a389f1a7ac9d228e2
