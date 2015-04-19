@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.826 2015/04/09 09:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.827 2015/04/19 22:04:57 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -684,6 +684,7 @@ SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pyquery
+SUBDIR+=	py-rdflib
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-theme-cloud
