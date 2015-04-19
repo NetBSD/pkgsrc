@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/19 23:23:10 rodent Exp $
+bin/sord_validate
+bin/sordi
+include/sord-0/sord/sord.h
+include/sord-0/sord/sordmm.hpp
+lib/libsord-0.so
+lib/libsord-0.so.0
+lib/libsord-0.so.${PKGVERSION}
+lib/pkgconfig/sord-0.pc
+man/man1/sord_validate.1
+man/man1/sordi.1
+${PLIST.doc}man/man3/sord.3
+${PLIST.doc}share/doc/sord-0/html/index.html
+${PLIST.doc}share/doc/sord-0/html/style.css
