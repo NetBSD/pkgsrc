@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 22:52:04 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/19 22:54:55 rodent Exp $
 
 DISTNAME=	lv2-1.12.0
 CATEGORIES=	audio
@@ -9,8 +9,6 @@ MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://lv2plug.in/
 COMMENT=	Open standard for audio plugins, used by hundreds of plugins
 LICENSE=	isc
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-rdflib-[0-9]*:../../textproc/py-rdflib
 
 USE_TOOLS+=	pkg-config
 
