@@ -1,11 +1,12 @@
-/*	$NetBSD: stdio.h,v 1.6 2015/04/19 12:22:14 tnn Exp $	*/
+/*	$NetBSD: getline.c,v 1.1 2015/04/19 12:22:14 tnn Exp $	*/
+/*	$NetBSD-src: getline.c,v 1.2 2014/09/16 17:23:50 christos Exp $	*/
 
 /*-
- * Copyright (c) 2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 2011 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Johnny C. Lam.
+ * by Christos Zoulas.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -29,49 +30,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _NBCOMPAT_STDIO_H_
-#define _NBCOMPAT_STDIO_H_
-
-#if HAVE_STDARG_H
-# include <stdarg.h>
-#endif
-
-#if HAVE_STDIO_H
-# include <stdio.h>
-#endif
-
-/*
- * Declare functions and macros that may be missing in <stdio.h>.
- */
-
-#if !HAVE_FCLOSE_D
-int	fclose(FILE *);
-#endif
-
-#if !HAVE_PCLOSE_D
-int	pclose(FILE *);
-#endif
-
-#if !HAVE_FGETLN
-char	*fgetln(FILE *, size_t *);
-#endif
-
-#if !HAVE_GETDELIM
-ssize_t	getdelim(char **, size_t *, int, FILE *);
-#endif
+#include <nbcompat.h>
+#include <nbcompat/stdio.h>
 
 #if !HAVE_GETLINE
-ssize_t	getline(char **, size_t *, FILE *);
-#endif
 
-#if !HAVE_DECL_SNPRINTF
-int	snprintf(char *, size_t, const char *, ...);
-int	vsnprintf(char *, size_t, const char *, va_list);
-#endif
+ssize_t
+getline(char **buf, size_t *bufsiz, FILE *fp)
+{
+	return getdelim(buf, bufsiz, '\n', fp);
+}
 
-#if !HAVE_DECL_VASPRINTF
-int	asprintf(char **, const char *, ...);
-int	vasprintf(char **, const char *, va_list);
 #endif
-
-#endif	/* !_NBCOMPAT_STDIO_H_ */
