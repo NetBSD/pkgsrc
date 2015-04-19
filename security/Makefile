@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2015/04/18 21:20:51 dholland Exp $
+# $NetBSD: Makefile,v 1.547 2015/04/19 00:48:47 rodent Exp $
 #
 
 COMMENT=	Security tools
@@ -377,6 +377,7 @@ SUBDIR+=	py-openid
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-prewikka
+SUBDIR+=	py-py-bcrypt
 SUBDIR+=	py-pydeep
 SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-rsa
