@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/19 23:10:52 rodent Exp $
+bin/serdi
+include/serd-0/serd/serd.h
+lib/libserd-0.so
+lib/libserd-0.so.0
+lib/libserd-0.so.${PKGVERSION}
+lib/pkgconfig/serd-0.pc
+man/man1/serdi.1
+${PLIST.doc}man/man3/serd.3
+${PLIST.doc}share/doc/serd-0/html/index.html
+${PLIST.doc}share/doc/serd-0/html/style.css
