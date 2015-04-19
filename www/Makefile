@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1102 2015/04/18 21:25:34 dholland Exp $
+# $NetBSD: Makefile,v 1.1103 2015/04/19 22:22:09 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -637,6 +637,7 @@ SUBDIR+=	py-recaptcha
 SUBDIR+=	py-rss2gen
 SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
+SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-static
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-tornado
