@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1847 2015/04/19 18:24:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1848 2015/04/19 18:25:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/libopenmpt to 0.2.4954beta12 [wiz 2015-04-19]
 	Updated net/py-foolscap to 0.8.0 [wiz 2015-04-19]
 	Updated textproc/py-lxml to 3.4.3 [wiz 2015-04-19]
+	Updated devel/py-setuptools to 15.1 [wiz 2015-04-19]
