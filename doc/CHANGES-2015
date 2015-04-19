@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1849 2015/04/19 18:27:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1850 2015/04/19 18:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/py-lxml to 3.4.3 [wiz 2015-04-19]
 	Updated devel/py-setuptools to 15.1 [wiz 2015-04-19]
 	Updated net/py-twisted to 15.1.0 [wiz 2015-04-19]
+	Updated net/py-twisted-docs to 15.1.0 [wiz 2015-04-19]
