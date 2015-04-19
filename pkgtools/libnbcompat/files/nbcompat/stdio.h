@@ -1,4 +1,4 @@
-/*	$NetBSD: stdio.h,v 1.5 2014/06/07 19:17:42 cheusov Exp $	*/
+/*	$NetBSD: stdio.h,v 1.6 2015/04/19 12:22:14 tnn Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -54,6 +54,14 @@ int	pclose(FILE *);
 
 #if !HAVE_FGETLN
 char	*fgetln(FILE *, size_t *);
+#endif
+
+#if !HAVE_GETDELIM
+ssize_t	getdelim(char **, size_t *, int, FILE *);
+#endif
+
+#if !HAVE_GETLINE
+ssize_t	getline(char **, size_t *, FILE *);
 #endif
 
 #if !HAVE_DECL_SNPRINTF
