@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1841 2015/04/19 18:12:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1842 2015/04/19 18:13:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2541,3 +2541,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/lgogdownloader to 2.21 [wiz 2015-04-19]
 	Updated textproc/p5-Net-IDN-Encode to 2.202 [wiz 2015-04-19]
 	Updated devel/p5-Package-DeprecationManager to 0.14 [wiz 2015-04-19]
+	Updated devel/afl to 1.70b [wiz 2015-04-19]
