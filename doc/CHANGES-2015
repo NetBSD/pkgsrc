@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1843 2015/04/19 18:15:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1844 2015/04/19 18:17:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2543,3 +2543,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Package-DeprecationManager to 0.14 [wiz 2015-04-19]
 	Updated devel/afl to 1.70b [wiz 2015-04-19]
 	Updated x11/xterm to 318 [wiz 2015-04-19]
+	Updated devel/talloc to 2.1.2 [wiz 2015-04-19]
