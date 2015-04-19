@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1832 2015/04/19 12:48:34 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.1833 2015/04/19 15:33:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2523,3 +2523,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-trytond to 3.4.2nb1 [rodent 2015-04-19]
 	Updated pkgtools/libnbcompat to 20150419 [tnn 2015-04-19]
 	Updated chat/jabberd2 to 2.3.3 [gdt 2015-04-19]
+	Updated mail/postfix to 2.11.5 [taca 2015-04-19]
