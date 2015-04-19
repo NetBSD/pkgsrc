@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/01/09 14:34:20 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.7 2015/04/19 19:02:35 wiz Exp $
 
-DISTNAME=	v1.16
-PKGNAME=	sslh-1.16
+DISTNAME=	sslh-1.17
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/yrutschle/sslh/archive/
-EXTRACT_SUFX=	.zip
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
+GITHUB_TAG=	v${PKGVERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rutschle.net/tech/sslh.shtml
