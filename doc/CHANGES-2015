@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1850 2015/04/19 18:27:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1851 2015/04/19 18:41:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2550,3 +2550,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 15.1 [wiz 2015-04-19]
 	Updated net/py-twisted to 15.1.0 [wiz 2015-04-19]
 	Updated net/py-twisted-docs to 15.1.0 [wiz 2015-04-19]
+	Updated security/caff to 2.0 [wiz 2015-04-19]
