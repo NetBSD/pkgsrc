@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/03/18 15:05:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/19 13:30:35 tnn Exp $
 
 PKGNAME=		cwrappers-20150318
 CATEGORIES=		pkgtools sysutils
@@ -20,9 +20,6 @@ CHECK_PERMS=		no
 
 .if ${OPSYS} != "NetBSD" || !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
 MAKE_ENV+=	NEED_MI_VECTOR_HASH=1
-.endif
-.if !empty(MACHINE_PLATFORM:MDarwin-9.*) || !empty(MACHINE_PLATFORM:MDarwin-10.*)
-MAKE_ENV+=	NEED_GETLINE=1
 .endif
 
 CFLAGS.FreeBSD+=	-D_WITH_GETLINE
