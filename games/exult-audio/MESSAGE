@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/04/19 19:35:53 wiz Exp $
+
+Don't forget to enable the beautiful music and sfx in Exult via the program
+menu or ~/.exult.cfg .
+
+===========================================================================
