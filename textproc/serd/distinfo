@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/19 23:10:52 rodent Exp $
+
+SHA1 (serd-0.20.0.tar.bz2) = 38c0c8600270e38d99bc87b0ceb14b25c4c0cea3
+RMD160 (serd-0.20.0.tar.bz2) = 097ae78907780c79ea96e3c518deecca2d8fd099
+Size (serd-0.20.0.tar.bz2) = 363807 bytes
