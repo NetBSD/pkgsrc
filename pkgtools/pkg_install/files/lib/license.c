@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.38 2014/05/15 09:59:09 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.39 2015/04/19 22:19:15 rodent Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -82,6 +82,7 @@ const char *default_acceptable_licenses =
     "sgi-free-software-b-v2.0 "
     "sleepycat-public "
     "unlicense "
+    "w3c "
     "x11 "
     "zlib "
     "zpl";
