@@ -1,10 +1,10 @@
-$NetBSD: patch-gnats_gnats_h,v 1.1 2011/08/01 05:19:12 dholland Exp $
+$NetBSD: patch-gnats_gnats_h,v 1.2 2015/04/19 19:35:00 spz Exp $
 
 Remove redundant and improperly protected copy of private asprintf decl.
 
---- gnats/gnats.h~	2005-02-24 20:35:55.000000000 +0000
+--- gnats/gnats.h.orig	2015-02-26 04:26:41.000000000 +0000
 +++ gnats/gnats.h
-@@ -137,9 +137,6 @@ char *alloca ();
+@@ -146,9 +146,6 @@ char *alloca ();
  # define ATTRIBUTE_UNUSED __attribute__ ((__unused__))
  #endif
  
