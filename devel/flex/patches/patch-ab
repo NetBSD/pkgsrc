@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2014/08/23 07:46:38 obache Exp $
+$NetBSD: patch-ab,v 1.8 2015/04/19 00:05:44 tnn Exp $
 
 * XXX:
 * Prevent libfi to be linked with libintl.
@@ -6,15 +6,6 @@ $NetBSD: patch-ab,v 1.7 2014/08/23 07:46:38 obache Exp $
 
 --- Makefile.in.orig	2014-03-26 18:58:57.000000000 +0000
 +++ Makefile.in
-@@ -165,7 +165,7 @@ am_flex_OBJECTS = ccl.$(OBJEXT) dfa.$(OB
- 	options.$(OBJEXT) scanopt.$(OBJEXT) buf.$(OBJEXT) \
- 	tables.$(OBJEXT) tables_shared.$(OBJEXT) filter.$(OBJEXT) \
- 	regex.$(OBJEXT)
--flex_OBJECTS = $(am_flex_OBJECTS)
-+flex_OBJECTS = $(am_flex_OBJECTS) $(LIBOBJS)
- flex_LDADD = $(LDADD)
- flex_DEPENDENCIES = lib/libcompat.la
- DEFAULT_INCLUDES = -I.@am__isrc@
 @@ -304,7 +304,7 @@ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
  LIBICONV = @LIBICONV@
  LIBINTL = @LIBINTL@
