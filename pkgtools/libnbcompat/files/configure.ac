@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.83 2014/07/25 13:26:24 jperkin Exp $
+dnl $NetBSD: configure.ac,v 1.84 2015/04/19 12:22:14 tnn Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20120702], [joerg@NetBSD.org])
+AC_INIT([libnbcompat], [20150419], [joerg@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -297,10 +297,11 @@ darwin*)
 	;;
 esac
 
-AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getenv isblank \
-	lchflags lchmod lchown lutimes mkdtemp mkstemp setenv setgroupent \
-	setpassent setprogname shquote snprintf statvfs strdup strerror \
-	strlcat strlcpy strmode strsep strtoll unsetenv usleep utimes warn
+AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getdelim getenv \
+	getline isblank lchflags lchmod lchown lutimes mkdtemp mkstemp setenv \
+	setgroupent setpassent setprogname shquote snprintf statvfs strdup \
+	strerror strlcat strlcpy strmode strsep strtoll unsetenv usleep \
+	utimes warn
 ])
 
 AC_SEARCH_LIBS(socket, [socket network])
