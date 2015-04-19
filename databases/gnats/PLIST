@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:43:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/04/19 19:35:00 spz Exp $
 bin/edit-pr
 bin/getclose
 bin/install-sid
@@ -11,6 +11,7 @@ libexec/gnats/check-db
 libexec/gnats/delete-pr
 libexec/gnats/diff-prs
 libexec/gnats/file-pr
+libexec/gnats/gen-closed-date
 libexec/gnats/gen-index
 libexec/gnats/gnats-pwconv
 libexec/gnats/gnatsd
@@ -27,6 +28,7 @@ man/man1/query-pr.1
 man/man1/send-pr.1
 man/man5/databases.5
 man/man5/dbconfig.5
+man/man5/send-pr.conf.5
 man/man7/gnats.7
 man/man8/delete-pr.8
 man/man8/file-pr.8
@@ -47,7 +49,6 @@ share/gnats/defaults/addresses
 share/gnats/defaults/categories
 share/gnats/defaults/classes
 share/gnats/defaults/dbconfig
-share/gnats/defaults/gnatsd.user_access
 share/gnats/defaults/responsible
 share/gnats/defaults/states
 share/gnats/defaults/submitters

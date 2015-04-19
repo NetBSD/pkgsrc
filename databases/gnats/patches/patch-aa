@@ -1,145 +1,111 @@
-$NetBSD: patch-aa,v 1.4 2005/08/28 12:36:42 recht Exp $
+$NetBSD: patch-aa,v 1.5 2015/04/19 19:35:00 spz Exp $
 
---- gnats/Makefile.in.orig	2005-02-24 21:35:55.000000000 +0100
-+++ gnats/Makefile.in	2005-08-28 14:24:22.000000000 +0200
-@@ -93,7 +93,7 @@
+pkgsrcification
+
+--- gnats/Makefile.in.orig	2015-02-27 02:10:23.000000000 +0000
++++ gnats/Makefile.in
+@@ -574,11 +574,10 @@ CLEANFILES = $(bin_SCRIPTS) $(pkglibexec
  
- INSTALL = $(srcdir)/../install-sh -c
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
--INSTALL_SCRIPT = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
- INSTALL_DATA = @INSTALL_DATA@
  
- SUB_INSTALL = `echo $(INSTALL) | sed 's,^\([^/]\),../\1,'`
-@@ -250,7 +250,7 @@
+ # Data files
+-dist_pkgdata_DATA = addresses categories classes gnatsd.host_access \
+-	gnatsd.user_access responsible states submitters \
+-	databases send-pr.conf
++dist_pkgdata_DATA = addresses categories classes dbconfig \
++	responsible states submitters
  
- mkcat: mkcat.sh Makefile
- 	@echo Creating mkcat...
--	@cat $(srcdir)/mkcat.sh > $@-t
-+	@sed -e 's,xBINDIRx,$(bindir),g' $(srcdir)/mkcat.sh > $@-t
- 	@mv $@-t $@
- 	@chmod a+x $@
+-pkgdata_DATA = dbconfig
++pkgdata_DATA = databases gnatsd.host_access gnatsd.user_access send-pr.conf
+ all: $(BUILT_SOURCES) autoconf.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
-@@ -265,7 +265,7 @@
- 
- rmcat: rmcat.sh Makefile
- 	@echo Creating rmcat...
--	@cat $(srcdir)/rmcat.sh > $@-t
-+	@sed -e 's,xBINDIRx,$(bindir),g' $(srcdir)/rmcat.sh > $@-t
- 	@mv $@-t $@
- 	@chmod a+x $@
- 
-@@ -369,7 +369,7 @@
- 
- install-tools-arch-indep: all-tools
- 	$(SHELL) $(srcdir)/../mkinstalldirs $(DESTDIR)$(datadir)/gnats
--	$(SHELL) $(srcdir)/../mkinstalldirs $(DESTDIR)$(sysconfdir)/gnats/defaults
-+	$(SHELL) $(srcdir)/../mkinstalldirs %%GNATS_DEFAULTS%%
- 	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
- 	  echo "chown $(GNATS_USER) $(DESTDIR)$(datadir)/gnats" ; \
- 	  chown $(GNATS_USER) $(DESTDIR)$(datadir)/gnats ; \
-@@ -379,9 +379,9 @@
- 	$(INSTALL_DATA) $(srcdir)/gnats.el $(DESTDIR)$(lispdir)/gnats.el
- 	for i in categories submitters responsible gnatsd.user_access addresses states classes dbconfig ; do \
- 	    if [ -f "$$i" ] ; then \
--		$(INSTALL_DATA) $$i $(DESTDIR)$(sysconfdir)/gnats/defaults/$$i ; \
-+		$(INSTALL_DATA) $$i %%GNATS_DEFAULTS%%/$$i ; \
- 	    else \
--		$(INSTALL_DATA) $(srcdir)/$$i $(DESTDIR)$(sysconfdir)/gnats/defaults/$$i ; \
-+		$(INSTALL_DATA) $(srcdir)/$$i %%GNATS_DEFAULTS%%/$$i ; \
- 	    fi ; \
+@@ -881,18 +880,18 @@ distclean-compile:
+ 	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h `echo $@ | $(am__yacc_c2h)` y.output $*.output -- $(YACCCOMPILE)
+ install-dist_lispDATA: $(dist_lisp_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_lisp_DATA)'; test -n "$(lispdir)" || list=; \
++	@list='$(dist_lisp_DATA)'; test -n "%%GNATS_DEFAULTS%%" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(lispdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(lispdir)" || exit 1; \
++	  echo " $(MKDIR_P) '%%GNATS_DEFAULTS%%'"; \
++	  $(MKDIR_P) "%%GNATS_DEFAULTS%%" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lispdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lispdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%GNATS_DEFAULTS%%/..'"; \
++	  $(INSTALL_DATA) $$files "%%GNATS_DEFAULTS%%/.." || exit $$?; \
  	done
  
-@@ -391,17 +391,9 @@
- 	$(INSTALL_SCRIPT) edit-pr $(DESTDIR)$(bindir)/edit-pr
- 	$(INSTALL_SCRIPT) diff-prs $(DESTDIR)$(libexecdir)/gnats/diff-prs
- 	$(INSTALL_SCRIPT) mail-agent $(DESTDIR)$(libexecdir)/gnats/mail-agent
--	$(INSTALL_PROGRAM) file-pr $(DESTDIR)$(libexecdir)/gnats/file-pr
-+	$(INSTALL_SCRIPT) file-pr $(DESTDIR)$(libexecdir)/gnats/file-pr
- 	$(INSTALL_PROGRAM) pr-age $(DESTDIR)$(libexecdir)/gnats/pr-age
- 	$(INSTALL_PROGRAM) pr-edit $(DESTDIR)$(libexecdir)/gnats/pr-edit
--	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
--	  echo "chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/pr-edit" ; \
--	  echo "chmod 4555 $(DESTDIR)$(libexecdir)/gnats/pr-edit" ; \
--	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/pr-edit ; \
--	  chmod 4555 $(DESTDIR)$(libexecdir)/gnats/pr-edit ; \
--        else \
--	  echo "*** Warning: Must make pr-edit suid $(DESTDIR)$(GNATS_USER)" ; \
--	fi
+ uninstall-dist_lispDATA:
+@@ -902,18 +901,18 @@ uninstall-dist_lispDATA:
+ 	dir='$(DESTDIR)$(lispdir)'; $(am__uninstall_files_from_dir)
+ install-dist_pkgdataDATA: $(dist_pkgdata_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
++	@list='$(dist_pkgdata_DATA)'; test -n "%%GNATS_DEFAULTS%%" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
++	  echo " $(MKDIR_P) '%%GNATS_DEFAULTS%%'"; \
++	  $(MKDIR_P) "%%GNATS_DEFAULTS%%" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%GNATS_DEFAULTS%%'"; \
++	  $(INSTALL_DATA) $$files "%%GNATS_DEFAULTS%%" || exit $$?; \
+ 	done
  
- EXTRA_INSTALL =
+ uninstall-dist_pkgdataDATA:
+@@ -925,16 +924,16 @@ install-pkgdataDATA: $(pkgdata_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	@list='$(pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
++	  echo " $(MKDIR_P) '%%EGDIR%%"; \
++	  $(MKDIR_P) "%%EGDIR%%" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%EGDIR%%"; \
++	  $(INSTALL_DATA) $$files "%%EGDIR%%" || exit $$?; \
+ 	done
  
-@@ -409,29 +401,42 @@
- install-gnats-arch-dep: install-gnats-bin $(EXTRA_INSTALL)
+ uninstall-pkgdataDATA:
+@@ -1304,18 +1303,9 @@ mail-query: mail-query.sh Makefile
+ send-pr: send-pr.sh Makefile
+ 	$(do_subst) < $(srcdir)/send-pr.sh > send-pr
  
- install-gnats-arch-indep: all-gnats install-tools-arch-indep
--	@if [ -f $(DESTDIR)$(GLOBAL_DB_LIST_FILE) ]; then \
--	  echo "Not putting gnats-databases file in $(DESTDIR)$(GLOBAL_DB_LIST_FILE), it's already there." ; \
-+	@if [ -f %%EGDIR%%/databases ]; then \
-+	  echo "Not putting gnats-databases file in %%EGDIR%%/databases, it's already there." ; \
- 	  true ; \
- 	else \
- 	  if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
- 	    $(INSTALL_DATA) -o $(GNATS_USER) gnats-databases \
--	                    $(DESTDIR)$(GLOBAL_DB_LIST_FILE) ; \
-+	                    %%EGDIR%%/databases ; \
- 	  else \
--	    $(INSTALL_DATA) gnats-databases $(DESTDIR)$(GLOBAL_DB_LIST_FILE) ; \
--	    echo "*** Warning: Must chown $(GNATS_USER) $(DESTDIR)$(GLOBAL_DB_LIST_FILE)" ; \
-+	    $(INSTALL_DATA) gnats-databases %%EGDIR%%/databases ; \
-+	    echo "*** Warning: Must chown $(GNATS_USER) %%EGDIR%%/databases" ; \
- 	  fi \
- 	fi
--	@if [ -f $(DESTDIR)$(GNATSD_HOST_ACCESS_FILE) ]; then \
--	   echo "Not putting gnats.host_access file in $(DESTDIR)$(GNATSD_HOST_ACCESS_FILE), it's already there." ; \
-+	@if [ -f %%EGDIR%%/gnatsd.host_access ]; then \
-+	   echo "Not putting gnats.host_access file in %%EGDIR%%/gnatsd.host_access, it's already there." ; \
- 	   true ; \
- 	else \
- 	  if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
- 	    $(INSTALL_DATA) -o $(GNATS_USER) $(srcdir)/gnatsd.host_access \
--	                    $(DESTDIR)$(GNATSD_HOST_ACCESS_FILE) ; \
-+	                    %%EGDIR%%/gnatsd.host_access ; \
-           else \
- 	    $(INSTALL_DATA) $(srcdir)/gnatsd.host_access \
--	                    $(DESTDIR)$(GNATSD_HOST_ACCESS_FILE) ; \
--	    echo "*** Warning: Must chown $(GNATS_USER) $(DESTDIR)$(GNATSD_HOST_ACCESS_FILE)" ; \
-+	                    %%EGDIR%%/gnatsd.host_access ; \
-+	    echo "*** Warning: Must chown $(GNATS_USER) %%EGDIR%%/gnatsd.host_access" ; \
-+	  fi \
-+	fi
-+	@if [ -f %%EGDIR%%/gnatsd.user_access ]; then \
-+	   echo "Not putting gnats.user_access file in %%EGDIR%%/gnatsd.user_access, it's already there." ; \
-+	   true ; \
-+	else \
-+	  if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
-+	    $(INSTALL_DATA) -o $(GNATS_USER) $(srcdir)/gnatsd.user_access \
-+	                    %%EGDIR%%/gnatsd.user_access ; \
-+          else \
-+	    $(INSTALL_DATA) $(srcdir)/gnatsd.user_access \
-+	                    %%EGDIR%%/gnatsd.user_access ; \
-+	    echo "*** Warning: Must chown $(GNATS_USER) %%EGDIR%%/gnatsd.user_access" ; \
- 	  fi \
- 	fi
- 	@echo "*** If you're a first-time user, you'll want to create a new database";
-@@ -450,20 +455,6 @@
- 	$(INSTALL_PROGRAM) gen-index $(DESTDIR)$(libexecdir)/gnats/gen-index
- 	$(INSTALL_SCRIPT) mail-query $(DESTDIR)$(libexecdir)/gnats/mail-query
- 	$(INSTALL_PROGRAM) gnats-pwconv $(DESTDIR)$(libexecdir)/gnats/gnats-pwconv
--	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
--	  echo "chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/queue-pr $(DESTDIR)$(libexecdir)/gnats/file-pr $(DESTDIR)$(libexecdir)/gnats/gen-index" ; \
--	  echo "chmod 4555 $(DESTDIR)$(libexecdir)/gnats/queue-pr $(DESTDIR)$(libexecdir)/gnats/file-pr $(DESTDIR)$(libexecdir)/gnats/gen-index" ; \
--	  echo "chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/gnatsd" ; \
--	  echo "chmod 555 $(DESTDIR)$(libexecdir)/gnats/gnatsd" ; \
--	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/queue-pr ; \
--	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/gen-index ; \
--	  chmod 4555 $(DESTDIR)$(libexecdir)/gnats/queue-pr ; \
--	  chmod 4555 $(DESTDIR)$(libexecdir)/gnats/gen-index ; \
--	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/gnatsd ; \
--	  chmod 555 $(DESTDIR)$(libexecdir)/gnats/gnatsd ; \
--	else \
--	  echo "*** Warning: must make queue-pr and gen-index suid $(GNATS_USER)." ; \
--	fi
+-# We need to link in defaults database config files for for mkdb
++# this gets done by the pkgsrc framework
+ install-data-hook:
+-	-mkdir -p $(DESTDIR)/$(sysconfdir)/$(PACKAGE)/defaults && \
+-	for i in $(dist_pkgdata_DATA) $(pkgdata_DATA) ; do \
+-		ln -s $(pkgdatadir)/$$i \
+-			$(DESTDIR)/$(sysconfdir)/$(PACKAGE)/defaults || true; \
+-	done
+-	for i in databases gnatsd.user_access gnatsd.host_access send-pr.conf ; do \
+-		if [ ! -e $(DESTDIR)/$(sysconfdir)/$(PACKAGE)/$$i ] ; then \
+-			${INSTALL_DATA} $(DESTDIR)$(pkgdatadir)/$$i $(DESTDIR)/$(sysconfdir)/$(PACKAGE); \
+-		fi; \
+-	done
++	:
  
- # regex.c is pretty badly broken, and I don't feel like fixing it.
- regex.o: $(srcdir)/regex.c
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
