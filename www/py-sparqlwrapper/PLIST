@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/19 22:20:48 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.py
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyc
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyo
+${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.py
+${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.pyc
+${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.pyo
+${PYSITELIB}/SPARQLWrapper/SPARQLUtils.py
+${PYSITELIB}/SPARQLWrapper/SPARQLUtils.pyc
+${PYSITELIB}/SPARQLWrapper/SPARQLUtils.pyo
+${PYSITELIB}/SPARQLWrapper/SmartWrapper.py
+${PYSITELIB}/SPARQLWrapper/SmartWrapper.pyc
+${PYSITELIB}/SPARQLWrapper/SmartWrapper.pyo
+${PYSITELIB}/SPARQLWrapper/Wrapper.py
+${PYSITELIB}/SPARQLWrapper/Wrapper.pyc
+${PYSITELIB}/SPARQLWrapper/Wrapper.pyo
+${PYSITELIB}/SPARQLWrapper/__init__.py
+${PYSITELIB}/SPARQLWrapper/__init__.pyc
+${PYSITELIB}/SPARQLWrapper/__init__.pyo
+${PYSITELIB}/SPARQLWrapper/jsonlayer.py
+${PYSITELIB}/SPARQLWrapper/jsonlayer.pyc
+${PYSITELIB}/SPARQLWrapper/jsonlayer.pyo
