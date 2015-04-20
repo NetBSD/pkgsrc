@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/12/31 13:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/04/20 07:30:56 wiz Exp $
 
 VERSION=	1.10.0
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	allmydata-tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
 CATEGORIES=	filesystems
@@ -42,6 +42,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
+DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
 
@@ -64,6 +65,7 @@ post-extract:
 
 REPLACE_PYTHON+= src/allmydata/reliability.py
 REPLACE_PYTHON+= src/allmydata/storage/shares.py
+REPLACE_PYTHON+= src/buildtest/test_build_with_fake_dist.py
 
 PKG_GROUPS=	tahoes
 PKG_USERS=	tahoes:tahoes
