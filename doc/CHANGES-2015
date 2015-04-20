@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1877 2015/04/20 19:39:20 alnsn Exp $
+$NetBSD: CHANGES-2015,v 1.1878 2015/04/20 20:21:41 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2577,3 +2577,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/audacity to 2.1.0 [rodent 2015-04-20]
 	Updated misc/libreoffice4-bin to 4.4.2 [bad 2015-04-20]
 	Added devel/py-lupa version 1.1 [alnsn 2015-04-20]
+	Added x11/xrootconsole version 0.6nb2 [cheusov 2015-04-20]
