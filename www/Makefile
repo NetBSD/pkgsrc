@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1103 2015/04/19 22:22:09 rodent Exp $
+# $NetBSD: Makefile,v 1.1104 2015/04/20 07:28:23 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -620,6 +620,7 @@ SUBDIR+=	py-gunicorn
 SUBDIR+=	py-http-parser
 SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
+SUBDIR+=	py-idna
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-mechanize
 SUBDIR+=	py-mezzanine
