@@ -1,10 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/10/03 16:57:03 sborrill Exp $
+$NetBSD: MESSAGE,v 1.2 2015/04/20 08:05:30 sborrill Exp $
 
 These tools are only useful when NetBSD is running as a paravirtualised
 guest within XenServer.
 
 Your domU kernel must provide /kern/xen/xenbus. Support was added to NetBSD
 HEAD and netbsd-5 source trees on 23rd September 2011.
+
+Please update your xenguest rc.d script after upgrading to v6.5.0 of this
+package (or later).
 
 ===========================================================================

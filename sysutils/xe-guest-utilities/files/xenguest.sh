@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xenguest.sh,v 1.4 2012/06/05 12:58:53 sborrill Exp $
+# $NetBSD: xenguest.sh,v 1.5 2015/04/20 08:05:30 sborrill Exp $
 #
 # PROVIDE: xenguest
 # REQUIRE: DAEMON
@@ -36,26 +36,24 @@ xenguest_precmd()
 		echo "${name}: Do not run on dom0, this is for domU use only."
 		exit 1
 	fi
-	if [ ! -f $XE_LINUX_DISTRIBUTION_CACHE ]; then
-		os_distro="$(uname -s)"
-		os_uname="$(uname -r)"
-		os_name="$(uname -s) $(uname -r)"
-		if [ -n "$xenguest_osappend" ]; then
-			os_name="${os_name} ${xenguest_osappend}"
-		fi
-		os_majorver="${os_uname%%.*}"
-		os_minorver="${os_uname#*.}"
-		os_minorver="${os_minorver%%.*}"
+	os_distro="$(uname -s)"
+	os_uname="$(uname -r)"
+	os_name="$(uname -s) $(uname -r)"
+	if [ -n "$xenguest_osappend" ]; then
+		os_name="${os_name} ${xenguest_osappend}"
+	fi
+	os_majorver="${os_uname%%.*}"
+	os_minorver="${os_uname#*.}"
+	os_minorver="${os_minorver%%.*}"
 
-		mkdir -p @VARBASE@/cache
-		cat << EOF > $XE_LINUX_DISTRIBUTION_CACHE
+	mkdir -p @VARBASE@/cache
+	cat << EOF > $XE_LINUX_DISTRIBUTION_CACHE
 os_distro="$os_distro"
 os_uname="$os_uname"
 os_name="$os_name"
 os_majorver="$os_majorver"
 os_minorver="$os_minorver"
 EOF
-	fi
 }
 
 xenguest_start()
