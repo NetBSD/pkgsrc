@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14349 2015/04/19 19:30:21 wiz Exp $
+$NetBSD: TODO,v 1.14350 2015/04/20 13:39:45 rodent Exp $
 
 Suggested new packages
 ======================
@@ -405,8 +405,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aterm-1.0.1
 	o atk-2.16.0
 	o aubio-0.4.0
-	o audacity-2.0.5 [wip (audacity-devel)]
-	o audacity-2.1
 	o autoconvert-0.3.16
 	o autogen-5.18.4
 	o avidemux-2.6
