@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/20 07:28:00 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/idna/__init__.py
+${PYSITELIB}/idna/__init__.pyc
+${PYSITELIB}/idna/__init__.pyo
+${PYSITELIB}/idna/codec.py
+${PYSITELIB}/idna/codec.pyc
+${PYSITELIB}/idna/codec.pyo
+${PYSITELIB}/idna/compat.py
+${PYSITELIB}/idna/compat.pyc
+${PYSITELIB}/idna/compat.pyo
+${PYSITELIB}/idna/core.py
+${PYSITELIB}/idna/core.pyc
+${PYSITELIB}/idna/core.pyo
+${PYSITELIB}/idna/idnadata.py
+${PYSITELIB}/idna/idnadata.pyc
+${PYSITELIB}/idna/idnadata.pyo
