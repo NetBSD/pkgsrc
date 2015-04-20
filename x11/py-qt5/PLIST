@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/07 16:30:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/20 06:45:53 wiz Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
@@ -523,6 +523,9 @@ share/sip/PyQt5/QtTest/qtestkeyboard.sip
 share/sip/PyQt5/QtTest/qtestmouse.sip
 share/sip/PyQt5/QtTest/qtestsystem.sip
 share/sip/PyQt5/QtTest/qtesttouch.sip
+share/sip/PyQt5/QtWebChannel/QtWebChannelmod.sip
+share/sip/PyQt5/QtWebChannel/qwebchannel.sip
+share/sip/PyQt5/QtWebChannel/qwebchannelabstracttransport.sip
 share/sip/PyQt5/QtWebKit/QtWebKitmod.sip
 share/sip/PyQt5/QtWebKit/qwebdatabase.sip
 share/sip/PyQt5/QtWebKit/qwebelement.sip
