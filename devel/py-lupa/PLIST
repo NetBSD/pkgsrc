@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2015/04/20 19:34:47 alnsn Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/lupa/__init__.py
+${PYSITELIB}/lupa/__init__.pyc
+${PYSITELIB}/lupa/__init__.pyo
+${PYSITELIB}/lupa/_lupa.so
+${PYSITELIB}/lupa/version.py
+${PYSITELIB}/lupa/version.pyc
+${PYSITELIB}/lupa/version.pyo
