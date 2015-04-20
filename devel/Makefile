@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2081 2015/04/20 07:29:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2082 2015/04/20 19:38:03 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1634,6 +1634,7 @@ SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
+SUBDIR+=	py-lupa
 SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-mccabe
