@@ -1,0 +1,2 @@
+Add luajit option (setup.py --no-luajit) and make sure it works
+with all Lua versions.
