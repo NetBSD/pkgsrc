@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/20 03:21:58 rodent Exp $
+bin/lilv-bench
+bin/lv2bench
+bin/lv2info
+bin/lv2ls
+include/lilv-0/lilv/lilv.h
+include/lilv-0/lilv/lilvmm.hpp
+lib/liblilv-0.so
+lib/liblilv-0.so.0
+lib/liblilv-0.so.${PKGVERSION}
+lib/pkgconfig/lilv-0.pc
+man/man1/lv2info.1
+man/man1/lv2ls.1
+${PLIST.doc}man/man3/lilv.3
+${PLIST.doc}share/doc/lilv-0/html/index.html
+${PLIST.doc}share/doc/lilv-0/html/style.css
+share/examples/lilv/lilv
