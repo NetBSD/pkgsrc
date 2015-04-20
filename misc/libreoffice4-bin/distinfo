@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/03/05 23:22:45 bad Exp $
+$NetBSD: distinfo,v 1.9 2015/04/20 15:24:40 bad Exp $
 
-SHA1 (LibreOffice_4.4.1_Linux_x86-64_rpm.tar.gz) = d70444159342e65aea72a4a3373b397dc3371917
-RMD160 (LibreOffice_4.4.1_Linux_x86-64_rpm.tar.gz) = cea55fdc6b98b54569e51ffb38a1ae2b4e59b1dc
-Size (LibreOffice_4.4.1_Linux_x86-64_rpm.tar.gz) = 229333956 bytes
-SHA1 (LibreOffice_4.4.1_Linux_x86_rpm.tar.gz) = 7fc7f82aeb537e5f5b6b923cdabff764949871cc
-RMD160 (LibreOffice_4.4.1_Linux_x86_rpm.tar.gz) = 6c35dc87cdfd5e5a52e93447518c8fe82fe1c3df
-Size (LibreOffice_4.4.1_Linux_x86_rpm.tar.gz) = 212722282 bytes
+SHA1 (LibreOffice_4.4.2_Linux_x86-64_rpm.tar.gz) = 0e0a9c340532e857ccd7f3bb5731c1a3a8f0e949
+RMD160 (LibreOffice_4.4.2_Linux_x86-64_rpm.tar.gz) = 9fb1488d750181394726627dd197822da8ce63d3
+Size (LibreOffice_4.4.2_Linux_x86-64_rpm.tar.gz) = 229351534 bytes
+SHA1 (LibreOffice_4.4.2_Linux_x86_rpm.tar.gz) = b02899971ba6ebbdcd95bbe822a52b6b8747ebcb
+RMD160 (LibreOffice_4.4.2_Linux_x86_rpm.tar.gz) = 0bb54790fcb7e37df0ca42386892a0e4c2574146
+Size (LibreOffice_4.4.2_Linux_x86_rpm.tar.gz) = 212737430 bytes
