@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2015/04/20 20:21:32 cheusov Exp $
+
+--- Makefile.orig	2004-02-20 21:53:28.000000000 +0000
++++ Makefile
+@@ -34,6 +34,9 @@
+ 
++PREFIX ?= /usr/local
++X11BASE ?= /usr/X11R7
++
+ EXEC = xrootconsole
+-BINDIR = /usr/local/bin
++BINDIR = $(PREFIX)/bin
+ MANFILE = xrootconsole.1
+-MANDIR = /usr/local/share/man/man1
++MANDIR = $(PREFIX)/man/man1
+ 
+@@ -46,15 +49,13 @@ VERSION = $(shell tag=$$(echo '$$Name: R
+ CC = gcc
+-CPPFLAGS =
++CPPFLAGS += -I $(X11BASE)/include
++LDFLAGS  += -L $(X11BASE)/lib
++LIBS     += -lX11 -lutil
+ 
+ # for production
+-CFLAGS = -O2 -DNDEBUG -Wall "-DXROOTCONSOLE_VERSION=\"$(VERSION)\"" \
+-    -I /usr/X11R6/include
+-LDFLAGS = -s
++CFLAGS += -O2 -DNDEBUG -Wall "-DXROOTCONSOLE_VERSION=\"$(VERSION)\""
++LDFLAGS += -s
+ 
+ # for testing
+-#CFLAGS = -g -Wall "-DXROOTCONSOLE_VERSION=\"$(VERSION) (debug build)\"" \
+-    -I /usr/X11R6/include
+-#LDFLAGS = 
+-
+-LIBS = -L/usr/X11R6/lib -lX11 -lutil
++#CFLAGS += -g -Wall "-DXROOTCONSOLE_VERSION=\"$(VERSION) (debug build)\""
++#LDFLAGS += 
+ 
+@@ -78,3 +79,3 @@ realclean:
+ install: $(EXEC)
+-	cp $(EXEC) $(BINDIR)
+-	cp $(MANFILE) $(MANDIR)
++	cp $(EXEC) $(DESTDIR)$(BINDIR)
++	cp $(MANFILE) $(DESTDIR)$(MANDIR)
