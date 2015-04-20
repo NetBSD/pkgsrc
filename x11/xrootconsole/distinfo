@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/04/20 20:21:32 cheusov Exp $
+
+SHA1 (xrootconsole-0.6.tar.gz) = 6c4bdbe979ce15d00c2e1efde672a6a99228ceb4
+RMD160 (xrootconsole-0.6.tar.gz) = 3dd6058316fd72f428fbef9fd5385e75c82a9683
+Size (xrootconsole-0.6.tar.gz) = 15951 bytes
+SHA1 (patch-aa) = 50b6b87b2bb29bb3e6087082f5af84ad8cb29437
