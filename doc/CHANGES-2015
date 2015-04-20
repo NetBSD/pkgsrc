@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1872 2015/04/20 07:31:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1873 2015/04/20 07:35:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2572,3 +2572,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-characteristic version 14.3.0 [wiz 2015-04-20]
 	Added security/py-service_identity version 14.0.0 [wiz 2015-04-20]
 	Updated filesystems/tahoe-lafs to 1.10.0nb3 [wiz 2015-04-20]
+	Updated devel/cgdb to 0.6.8 [wiz 2015-04-20]
