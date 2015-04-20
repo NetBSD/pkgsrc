@@ -1,65 +1,19 @@
-$NetBSD: patch-xe-update-guest-attrs,v 1.2 2012/03/15 14:06:08 sborrill Exp $
+$NetBSD: patch-xe-update-guest-attrs,v 1.3 2015/04/20 08:05:30 sborrill Exp $
 
---- xe-update-guest-attrs.orig	2011-09-23 15:39:33.000000000 +0100
-+++ xe-update-guest-attrs	2011-09-23 15:44:30.000000000 +0100
-@@ -35,11 +35,11 @@
- export LANG
- 
- 
--XE_LINUX_DISTRIBUTION_CACHE=/var/cache/xe-linux-distribution
-+XE_LINUX_DISTRIBUTION_CACHE=@VARBASE@/cache/xe-linux-distribution
+Patch for pkgsrc and NetBSD ifconfig
+
+--- xe-update-guest-attrs.orig	2010-12-20 15:34:07.000000000 +0000
++++ xe-update-guest-attrs	2015-04-18 20:24:10.000000000 +0100
+@@ -39,7 +39,7 @@
  
  IPADDR_RE="\([[:digit:]]\{1,3\}\.\)\{3\}[[:digit:]]\{1,3\}"
  
 -export PATH=/usr/sbin:/usr/bin:/sbin:/bin
-+export PATH=/usr/sbin:/usr/bin:/sbin:/bin:@PREFIX@/sbin:@PREFIX@/bin
++export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/pkg/sbin:/usr/pkg/bin
  XENSTORE=${XENSTORE:-xenstore}
  
  XENSTORE_UPDATED=0
-@@ -56,7 +56,7 @@
- 
- xenstore_write_cached() {
-     key="$1" newval="$2"
--    cache=/var/cache/xenstore/$key
-+    cache=@VARBASE@/cache/xenstore/$key
-     if [ -f $cache ] ; then
- 	# cache exists
- 	oldval=$(cat "$cache")
-@@ -84,13 +84,13 @@
- 
- # If we detect a domain change then delete our cache and force a refresh
- domid=$(xenstore-read "domid")
--cache=/var/cache/xenstore/unique-domain-id
-+cache=@VARBASE@/cache/xenstore/unique-domain-id
- newval=$(xenstore-read "/local/domain/${domid}/unique-domain-id")
- if [ -e $cache ]; then
-     oldval=$(cat "$cache")
-     if [ "$oldval" != "$newval" ]; then
- 	# domain changed
--	rm -rf /var/cache/xenstore
-+	rm -rf @VARBASE@/cache/xenstore
-     fi
- fi
- mkdir -p $(dirname "$cache")
-@@ -98,7 +98,7 @@
- 
- xenstore_rm_cached() {
-     key="$1"
--    cache=/var/cache/xenstore/$key
-+    cache=@VARBASE@/cache/xenstore/$key
-     if [ ! -e $cache ] ; then
- 	return 1
-     fi
-@@ -112,7 +112,7 @@
- }
- 
- xenstore_list_interfaces_cached() {
--    topdir=/var/cache/xenstore/attr
-+    topdir=@VARBASE@/cache/xenstore/attr
-     if [ -d $topdir ] ; then
- 	cd $topdir 
- 	for dir in * ; do 
-@@ -133,49 +133,45 @@
+@@ -133,49 +133,50 @@
  
  
  
@@ -111,6 +65,7 @@ $NetBSD: patch-xe-update-guest-attrs,v 1.2 2012/03/15 14:06:08 sborrill Exp $
 +#	enabled=0
 +#	address: 0e:7e:86:20:7b:82
 +#	inet 192.168.1.109 netmask 0xffffff00 broadcast 192.168.1.255
++#	inet alias 10.20.30.40 netmask 0xffffff00 broadcast 10.20.30.255
 +#	inet6 fe80::c7e:86ff:fe20:7b82%xennet0 prefixlen 64 scopeid 0x1
 +#lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 33184
 +#	inet 127.0.0.1 netmask 0xff000000
@@ -130,25 +85,29 @@ $NetBSD: patch-xe-update-guest-attrs,v 1.2 2012/03/15 14:06:08 sborrill Exp $
 +				sub(":.*", "", current)
 +				sub("xennet", "eth", current)
 +				iflist = iflist " " current
++				ifs[current] = ""
 +			} else {
 +				current =""
 +			}
 +		}
-+		if ($1 == "inet" && current != "") {
-+			ifs[current] = $2
-+			current = ""
++		if (($1 == "inet" || $1 == "inet6") && current != "") {
++			if ($2 == "alias") ip = $3
++			else ip = $2
++			if ($1 == "inet6") sub("%.*", "", ip)
++			if (ifs[current] != "") ifs[current] = ifs[current] ", " ip
++			else ifs[current] = ip
 +		}
 +	}
 +	END {
 +		sub("^ ", "", iflist)
 +		printf "ifs=%c%s%c\n", 39, iflist, 39
 +		for (i in ifs)
-+			printf "inet_%s=%s\n", i, ifs[i]
++			printf "inet_%s=%c%s%c\n", i, 39, ifs[i], 39
 +	}')
  
  # network
  for if in $ifs ; do
-@@ -206,16 +202,18 @@
+@@ -206,16 +207,18 @@
  fi
  
  # whether I support ballooning or not
