@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2015/04/03 09:59:57 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2015/04/20 13:38:59 khorben Exp $
 
 DISTNAME=	xf86-video-intel-2.99.917
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
