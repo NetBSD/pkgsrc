@@ -1,0 +1,52 @@
+# $NetBSD: Makefile,v 1.1 2015/04/20 03:21:58 rodent Exp $
+
+DISTNAME=	lilv-0.20.0
+CATEGORIES=	audio
+MASTER_SITES=	http://download.drobilla.net/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	rodent@NetBSD.org
+HOMEPAGE=	http://drobilla.net/software/lilv/
+COMMENT=	C library to make the use of LV2 plugins as simple as possible
+LICENSE=	isc
+
+#BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig2 # python --bindings BROKEN
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gsed pkg-config
+
+PKGCONFIG_OVERRIDE+=	lilv.pc.in
+CONFIGURE_ENV+=		LV2_PATH=${BUILDLINK_PREFIX.lv2}/lib/lv2
+EGDIR=			share/examples/lilv
+CONF_FILES=		${EGDIR}/lilv ${PKG_SYSCONFDIR}/bash_completion.d/lilv
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/bash_completion.d ${EGDIR}
+
+.include "options.mk"
+
+BUILD_OPTIONS=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS} # --bindings BROKEN
+
+do-configure:
+	cd ${WRKSRC} && \
+		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
+			--destdir=${DESTDIR} --mandir=${PREFIX}/${PKGMANDIR} \
+				--default-lv2-path=${BUILDLINK_PREFIX.lv2}/lib/lv2 \
+					${BUILD_OPTIONS}
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./waf build
+
+do-install:
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
+	${INSTALL_DATA} ${WRKSRC}/utils/lilv.bash_completion \
+		${DESTDIR}${PREFIX}/${EGDIR}/lilv
+	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/bash_completion.d/lilv
+
+BUILDLINK_API_DEPENDS.sratom+=	sratom>=0.4.0
+.include "../../converters/sratom/buildlink3.mk"
+BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.8.0
+.include "../../audio/lv2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sord+=	sord>=0.12.0
+.include "../../textproc/sord/buildlink3.mk"
+BUILDLINK_API_DEPENDS.serd+=	serd>=0.14.0
+.include "../../textproc/serd/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../mk/bsd.pkg.mk"
