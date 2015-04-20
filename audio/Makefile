@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.521 2015/04/19 22:53:04 rodent Exp $
+# $NetBSD: Makefile,v 1.522 2015/04/20 03:23:17 rodent Exp $
 #
 
 COMMENT=	Audio tools
@@ -277,6 +277,7 @@ SUBDIR+=	libvorbis
 SUBDIR+=	libwildmidi
 SUBDIR+=	libxmp
 SUBDIR+=	libxspf
+SUBDIR+=	lilv
 SUBDIR+=	liteamp
 SUBDIR+=	liveice
 SUBDIR+=	lv2
