@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1876 2015/04/20 15:25:44 bad Exp $
+$NetBSD: CHANGES-2015,v 1.1877 2015/04/20 19:39:20 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2576,3 +2576,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xe-guest-utilities to 6.5.0 [sborrill 2015-04-20]
 	Updated audio/audacity to 2.1.0 [rodent 2015-04-20]
 	Updated misc/libreoffice4-bin to 4.4.2 [bad 2015-04-20]
+	Added devel/py-lupa version 1.1 [alnsn 2015-04-20]
