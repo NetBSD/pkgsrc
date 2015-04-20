@@ -1,24 +1,26 @@
-$NetBSD: patch-ba,v 1.1 2009/01/13 12:38:49 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2015/04/20 13:38:23 rodent Exp $
 
---- lib-src/allegro/strparse.cpp.orig	2006-11-15 05:12:11.000000000 +0100
-+++ lib-src/allegro/strparse.cpp
-@@ -16,8 +16,9 @@ char String_parse::peek()
+Bounds checking.
+
+--- lib-src/portsmf/strparse.cpp.orig	2015-03-02 01:07:05.000000000 +0000
++++ lib-src/portsmf/strparse.cpp
+@@ -19,8 +19,9 @@ char String_parse::peek()
  }
  
  
--void String_parse::get_nonspace_quoted(char *field)
-+void String_parse::get_nonspace_quoted(char *field, int flen)
+-void String_parse::get_nonspace_quoted(string &field)
++void String_parse::get_nonspace_quoted(string &field, int flen)
  {
 +    char *ofield = field;
+     field.clear();
      skip_space();
      bool quoted = false;
-     if (string[pos] == '"') {
-@@ -25,7 +26,7 @@ void String_parse::get_nonspace_quoted(c
-         *field++ = '"';
+@@ -29,7 +30,7 @@ void String_parse::get_nonspace_quoted(s
+         field.append(1, '"');
          pos = pos + 1;
      }
--    while (string[pos] && (quoted || !isspace(string[pos]))) {
-+    while (string[pos] && (quoted || !isspace(string[pos])) && (field - ofield) < (flen - 2)) {
-         if (string[pos] == '"') {
+-    while ((*str)[pos] && (quoted || !isspace((*str)[pos]))) {
++    while ((*str)[pos] && (quoted || !isspace((*str)[pos])) && (field - ofield) < (flen - 2)) {
+         if ((*str)[pos] == '"') {
              if (quoted) {
-                 *field++ = '"';
+                 field.append(1, '"');

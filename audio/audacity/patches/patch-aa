@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2004/04/20 18:02:16 ben Exp $
+$NetBSD: patch-aa,v 1.5 2015/04/20 13:38:23 rodent Exp $
 
---- lib-src/libnyquist/cmt/cext.h.orig	Sat Mar  6 16:02:24 2004
-+++ lib-src/libnyquist/cmt/cext.h
+Undefine NEED_ULONG.
+
+--- lib-src/libnyquist/nyquist/cmt/cext.h.orig	2015-03-02 01:07:22.000000000 +0000
++++ lib-src/libnyquist/nyquist/cmt/cext.h
 @@ -52,6 +52,8 @@ EXIT(n)  -- calls exit(n) after shutting
  
  #if HAS_SYS_TYPES_H

@@ -1,27 +1,12 @@
-$NetBSD: distinfo,v 1.23 2013/12/10 14:23:44 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2015/04/20 13:38:23 rodent Exp $
 
-SHA1 (audacity-src-1.2.6.tar.gz) = 1bfdd119fdc09d1aa334aee21d4831ef6e939fce
-RMD160 (audacity-src-1.2.6.tar.gz) = f59ca075ae430a518b77ce2ed08441abe2b67a0c
-Size (audacity-src-1.2.6.tar.gz) = 4882379 bytes
-SHA1 (patch-aa) = 5494f3fb6035f15a4447556f8cf4a0a2404a2259
-SHA1 (patch-ab) = 8630488f5a89b1542ac2a9f01080c36f1eac7c7d
-SHA1 (patch-ac) = 2baaf1650c9bdc627000e8676f0ac6ec16b6ec26
-SHA1 (patch-ad) = 820e5321a6558063d04ee8da11fc606d59e33046
-SHA1 (patch-ae) = 628a6353b37418d182f3edd9f26bcea7b5f779d4
-SHA1 (patch-af) = 05c1c345ef9b92410fbe4d8b4b46ab4b7ba7a226
-SHA1 (patch-ag) = 68bcbd932cd4440bc9090c6afc369cfcae54a16b
-SHA1 (patch-ah) = fa0c240f7e20299a6ed26692d443dfb95c0b7eb9
-SHA1 (patch-ai) = 625cd6337d8a246d1a9c388279efa0ade34a2093
-SHA1 (patch-aj) = 34b4cdd266345f04954983cc14e4b762f09f4df8
-SHA1 (patch-ak) = 5f012eb47c832a8f11bcfbdcaf0ab2e876abd04e
-SHA1 (patch-al) = 224437cc76e1f25d600e859d278ad73bbf261efa
-SHA1 (patch-am) = 3210d8632ee9f5361008277e2c887f24d87205a1
-SHA1 (patch-ba) = c27676c7110bf6ef2fcd448d68402b7bfd21b631
-SHA1 (patch-bb) = 050c6edc0a174e2496ef0b572002eca185bd38de
-SHA1 (patch-bc) = 8a08526c37e025a89a747fa2c7a48668fe797572
-SHA1 (patch-bd) = dc24c670cdf078f08c29318c5c5dc8efed398f59
-SHA1 (patch-lib-src_soundtouch_source_SoundTouch_FIRFilter.cpp) = 4d4aee4af18a5211074bdce7cc30507b42337941
-SHA1 (patch-lib-src_soundtouch_source_SoundTouch_Makefile.in) = 882de67691e6b7b4b611ead0e1fe20ebafa57d40
-SHA1 (patch-lib_src_portmixer_px__unix__oss_px__unix__oss.c) = 4c78a5b39ea0fc1d022c8bfabd68a77989b33a54
-SHA1 (patch-src_AudioIO.cpp) = 79af6045ae0a9ff754ae0ea30d987f47363df18f
-SHA1 (patch-src_effects_NoiseRemoval.cpp) = 1487650a4784feb5d57ee0ceeda3346fb4abf8de
+SHA1 (audacity-minsrc-2.1.0.tar.xz) = a53bce0276240bb56f2e3fd1bf235a4ef688caa3
+RMD160 (audacity-minsrc-2.1.0.tar.xz) = 16b0e91222b91b47eeb533d4725b68e5548c057f
+Size (audacity-minsrc-2.1.0.tar.xz) = 5104924 bytes
+SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
+SHA1 (patch-am) = 23ffc055ee81fad7b3aab8f7dd447e641644be96
+SHA1 (patch-ba) = 4fca5002ba31e9831f7f7447ac909bd865543f76
+SHA1 (patch-bb) = 29dfe1333ac6428d9b3d40a54a996b12d8766932
+SHA1 (patch-bc) = a19ccf7e7ae048f430d59e1fc17bc9e8ff80b0da
+SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
+SHA1 (patch-src_effects_VST_VSTEffect.cpp) = 76a55afd7977505801dd129e139c9782bfd8dfcb
