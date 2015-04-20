@@ -1,30 +1,36 @@
-$NetBSD: patch-bc,v 1.1 2009/01/13 12:38:49 drochner Exp $
+$NetBSD: patch-bc,v 1.2 2015/04/20 13:38:23 rodent Exp $
 
---- ./lib-src/allegro/allegrord.cpp.orig	2006-11-15 05:12:11.000000000 +0100
-+++ ./lib-src/allegro/allegrord.cpp
-@@ -109,10 +109,10 @@ bool Allegro_reader::parse()
-         bool new_note_flag = false;  // "A"-"G" syntax
-         int new_note = 0;
-         Parameters_ptr attributes = NULL;
--        line_parser.get_nonspace_quoted(field);
-+        line_parser.get_nonspace_quoted(field, field_max);
-         char pk = line_parser.peek();
-         if (pk && !isspace(pk)) {
--            line_parser.get_nonspace_quoted(field + strlen(field));
-+            line_parser.get_nonspace_quoted(field + strlen(field), field_max - strlen(field));
-         }
-         while (field[0]) {
-             // print "field", "|";field;"|", "|";line_parser.string;"|", line_parser.pos
-@@ -203,10 +203,10 @@ bool Allegro_reader::parse()
-             if (error_flag) {
-                 field[0] = 0; // exit the loop
-             } else {
--                line_parser.get_nonspace_quoted(field);
-+                line_parser.get_nonspace_quoted(field, field_max);
-                 pk = line_parser.peek();
-                 if (pk && !isspace(pk)) {
--                    line_parser.get_nonspace_quoted(field + strlen(field));
-+                    line_parser.get_nonspace_quoted(field + strlen(field), field_max - strlen(field));
+Bounds checking.
+
+--- lib-src/portsmf/allegrord.cpp.orig	2015-03-02 01:07:05.000000000 +0000
++++ lib-src/portsmf/allegrord.cpp
+@@ -169,9 +169,9 @@ bool Alg_reader::parse()
+         Alg_parameters_ptr attributes = NULL;
+         if (line_parser.peek() == '#') {
+             // look for #track
+-            line_parser.get_nonspace_quoted(field);
++            line_parser.get_nonspace_quoted(field, field_max);
+             if (streql(field.c_str(), "#track")) {
+-                line_parser.get_nonspace_quoted(field); // number
++                line_parser.get_nonspace_quoted(field, field_max - strlen(field)); // number
+                 field.insert(0, " "); // need char at beginning because
+                 // parse_int ignores the first character of the argument
+                 track_num = parse_int(field);
+@@ -204,7 +204,7 @@ bool Alg_reader::parse()
+                     parse_error(field, 0, "#offset specified twice");
                  }
-             }
-         }
+                 offset_found = true;
+-                line_parser.get_nonspace_quoted(field); // number
++                line_parser.get_nonspace_quoted(field, field_max); // number
+                 field.insert(0, " "); // need char at beginning because
+                 // parse_real ignores first character in the argument
+                 offset = parse_real(field);
+@@ -212,7 +212,7 @@ bool Alg_reader::parse()
+         } else {
+             // we must have a track to insert into
+             if (seq->tracks() == 0) seq->add_track(0);
+-            line_parser.get_nonspace_quoted(field);
++            line_parser.get_nonspace_quoted(field, field_max - strlen(field));
+             char pk = line_parser.peek();
+             // attributes are parsed as two adjacent nonspace_quoted tokens
+             // so we have to conditionally call get_nonspace_quoted() again
