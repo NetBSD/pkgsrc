@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1875 2015/04/20 13:39:45 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.1876 2015/04/20 15:25:44 bad Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2575,3 +2575,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cgdb to 0.6.8 [wiz 2015-04-20]
 	Updated sysutils/xe-guest-utilities to 6.5.0 [sborrill 2015-04-20]
 	Updated audio/audacity to 2.1.0 [rodent 2015-04-20]
+	Updated misc/libreoffice4-bin to 4.4.2 [bad 2015-04-20]
