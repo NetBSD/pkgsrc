@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.3 2014/10/27 11:58:36 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.4 2015/04/20 02:36:05 hiramatsu Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -84,6 +84,10 @@ CONFIGURE_ARGS+=	--override is_native false
 OCAML_SITELIBDIR=	lib/ocaml/site-lib
 MAKE_ENV+=	OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
 PLIST_SUBST+=	OCAML_SITELIB="${OCAML_SITELIBDIR}"
+
+PRINT_PLIST_AWK+=	{ gsub(/${OCAML_SITELIBDIR:S|/|\\/|g}/, \
+			"$${OCAML_SITELIB}"); \
+			print; next; }
 
 .if ${OCAML_USE_FINDLIB} == "yes"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
