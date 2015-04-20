@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/20 07:29:44 wiz Exp $
+
+SHA1 (service_identity-14.0.0.tar.gz) = 10d7e29937f22d516659533f83af1e1427afdbd0
+RMD160 (service_identity-14.0.0.tar.gz) = 234a0b1ef7231d8e1215332f383b9d3073b4052b
+Size (service_identity-14.0.0.tar.gz) = 26033 bytes

@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/20 07:29:44 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/service_identity/__init__.py
+${PYSITELIB}/service_identity/__init__.pyc
+${PYSITELIB}/service_identity/__init__.pyo
+${PYSITELIB}/service_identity/_common.py
+${PYSITELIB}/service_identity/_common.pyc
+${PYSITELIB}/service_identity/_common.pyo
+${PYSITELIB}/service_identity/_compat.py
+${PYSITELIB}/service_identity/_compat.pyc
+${PYSITELIB}/service_identity/_compat.pyo
+${PYSITELIB}/service_identity/exceptions.py
+${PYSITELIB}/service_identity/exceptions.pyc
+${PYSITELIB}/service_identity/exceptions.pyo
+${PYSITELIB}/service_identity/pyopenssl.py
+${PYSITELIB}/service_identity/pyopenssl.pyc
+${PYSITELIB}/service_identity/pyopenssl.pyo
