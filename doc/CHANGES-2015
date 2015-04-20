@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1870 2015/04/20 07:29:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1871 2015/04/20 07:30:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2570,3 +2570,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added audio/lilv version 0.20.0 [rodent 2015-04-20]
 	Added www/py-idna version 1.1 [wiz 2015-04-20]
 	Added devel/py-characteristic version 14.3.0 [wiz 2015-04-20]
+	Added security/py-service_identity version 14.0.0 [wiz 2015-04-20]
