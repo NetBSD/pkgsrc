@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 19:49:32 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 23:44:51 markd Exp $
 
 DISTNAME=	pst-3dplot.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.94
-TEXLIVE_REV=	21588
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.01
+TEXLIVE_REV=	35042
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pst-3dplot
