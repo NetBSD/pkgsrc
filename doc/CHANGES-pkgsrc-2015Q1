@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.11 2015/04/18 22:51:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.12 2015/04/21 19:07:46 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -35,3 +35,9 @@ Pullup ticket #4672 - requested by joerg
 devel/st: build fix
 Pullup ticket #4673 - requested by joerg
 games/ivan: build fix
+Pullup ticket #4669 - requested by manu
+databases/php-ldap: build fix
+Pullup ticket #4674 - requested by joerg
+games/orbital_eunuchs_sniper: packaging fix
+Pullup ticket #4675 - requested by joerg
+games/ioquake3: build fix
