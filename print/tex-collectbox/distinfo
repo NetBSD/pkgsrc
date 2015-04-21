@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/10 02:48:23 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 22:29:43 markd Exp $
 
-SHA1 (collectbox.zip) = 6b49f1772ead9758958cba78b00a4e2392c0a452
-RMD160 (collectbox.zip) = bc30597bafa878d0d1f6b8f023943b4e181c806b
-Size (collectbox.zip) = 277611 bytes
+SHA1 (tex-collectbox-26557/collectbox.tar.xz) = 626c3f8b549dbac781a1b6372206559527d9a172
+RMD160 (tex-collectbox-26557/collectbox.tar.xz) = 7552c1e407529eba5401a87252dc36e76b75de2d
+Size (tex-collectbox-26557/collectbox.tar.xz) = 2828 bytes
