@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/03/21 20:49:28 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.17.2.1 2015/04/21 21:44:22 tron Exp $
 bin/sntp
 man/man1/sntp.1
 man/man5/ntp.conf.5
@@ -486,6 +486,7 @@ share/doc/ntp/sitemap.html
 share/doc/ntp/sntp.html
 share/doc/ntp/stats.html
 share/doc/ntp/tickadj.html
+share/doc/ntp/update-leap.html
 share/doc/ntp/warp.html
 share/doc/ntp/xleave.html
 share/doc/sntp/sntp.html
