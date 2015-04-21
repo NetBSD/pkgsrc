@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.599 2015/04/21 22:19:38 markd Exp $
+# $NetBSD: Makefile,v 1.600 2015/04/21 22:40:19 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -183,6 +183,7 @@ SUBDIR+=	tex-acromake-doc
 SUBDIR+=	tex-acronym
 SUBDIR+=	tex-acronym-doc
 SUBDIR+=	tex-adjustbox
+SUBDIR+=	tex-adjustbox-doc
 SUBDIR+=	tex-adrconv
 SUBDIR+=	tex-adrconv-doc
 SUBDIR+=	tex-advdate
@@ -282,6 +283,7 @@ SUBDIR+=	tex-cjkutils-doc
 SUBDIR+=	tex-clrscode
 SUBDIR+=	tex-clrscode-doc
 SUBDIR+=	tex-collectbox
+SUBDIR+=	tex-collectbox-doc
 SUBDIR+=	tex-collection-basic
 SUBDIR+=	tex-collection-basic-doc
 SUBDIR+=	tex-collection-genericrecommended
@@ -779,6 +781,7 @@ SUBDIR+=	tex-xtab-doc
 SUBDIR+=	tex-xunicode
 SUBDIR+=	tex-xunicode-doc
 SUBDIR+=	tex-ydoc
+SUBDIR+=	tex-ydoc-doc
 SUBDIR+=	tex-yfonts
 SUBDIR+=	tex-yfonts-doc
 #SUBDIR+=	texlive				# place holder directory
