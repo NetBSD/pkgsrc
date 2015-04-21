@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/03/15 23:08:38 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/04/21 13:24:56 mef Exp $
 
-SHA1 (IO-Async-0.65.tar.gz) = d375fea923a6bc9c52cd99c253a6462292405344
-RMD160 (IO-Async-0.65.tar.gz) = 3b984bfd3cad422975b2934409919f5a6818d362
-Size (IO-Async-0.65.tar.gz) = 233644 bytes
+SHA1 (IO-Async-0.66.tar.gz) = 743091a0bf148eadf2471364c3fbdd74f1cb52af
+RMD160 (IO-Async-0.66.tar.gz) = 9274a2620f8a00ff201cc31fca0c907f978f37e7
+Size (IO-Async-0.66.tar.gz) = 236162 bytes
