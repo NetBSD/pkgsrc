@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2004/03/20 20:21:22 kristerw Exp $
+$NetBSD: patch-am,v 1.2 2015/04/21 17:15:20 joerg Exp $
 
---- SrcShared/Hardware/EmRegsVZ.cpp.orig	Sat Mar 20 20:28:32 2004
-+++ SrcShared/Hardware/EmRegsVZ.cpp	Sat Mar 20 20:30:42 2004
-@@ -270,7 +270,7 @@
+--- SrcShared/Hardware/EmRegsVZ.cpp.orig	2002-03-29 13:11:19.000000000 +0000
++++ SrcShared/Hardware/EmRegsVZ.cpp
+@@ -270,7 +270,7 @@ static const HwrM68VZ328Type	kInitial68V
  	{ 0 },		// UInt8									___filler28a[0xA00-0x91E];
  
  	0x00000000,	// UInt32	lcdStartAddr;				// $A00: Screen Starting Address Register
@@ -11,7 +11,7 @@ $NetBSD: patch-am,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0xFF,		// UInt8	lcdPageWidth;				// $A05: Virtual Page Width Register
  	{ 0 },		// UInt8									___filler30[2];
  	0x03F0,		// UInt16	lcdScreenWidth;				// $A08: Screen Width Register
-@@ -279,29 +279,29 @@
+@@ -279,29 +279,29 @@ static const HwrM68VZ328Type	kInitial68V
  	0x0000,		// UInt16	lcdCursorXPos;				// $A18: Cursor X Position
  	0x0000,		// UInt16	lcdCursorYPos;				// $A1A: Cursor Y Position
  	0x0101,		// UInt16	lcdCursorWidthHeight;		// $A1C: Cursor Width and Height
@@ -49,3 +49,98 @@ $NetBSD: patch-am,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0x0000,		// UInt16	lcdContrastControlPWM;		// $A36: Contrast Control
  	0x00,		// UInt8	lcdRefreshModeControl;		// $A38: Refresh Mode Control Register
  	0x62,		// UInt8	lcdDMAControl;				// $A39: DMA Control Register
+@@ -1685,7 +1685,7 @@ uint32 EmRegsVZ::uart1Read (emuptr addre
+ {
+ 	// If this is a full read, get the next byte from the FIFO.
+ 
+-	Bool	refreshRxData = (address == addressof (uReceive)) && (size == 2);
++	Bool	refreshRxData = (address == my_addressof (uReceive)) && (size == 2);
+ 
+ 	// See if there's anything new ("Put the data on the bus")
+ 
+@@ -1705,7 +1705,7 @@ uint32 EmRegsVZ::uart2Read (emuptr addre
+ {
+ 	// If this is a full read, get the next byte from the FIFO.
+ 
+-	Bool	refreshRxData = (address == addressof (u2Receive)) && (size == 2);
++	Bool	refreshRxData = (address == my_addressof (u2Receive)) && (size == 2);
+ 
+ 	// See if there's anything new ("Put the data on the bus")
+ 
+@@ -1887,7 +1887,7 @@ void EmRegsVZ::intStatusHiWrite (emuptr 
+ 	// accessing the upper byte, just return. If we're accessing the lower
+ 	// byte, we can treat it as a 2-byte access.
+ 
+-	else if (size == 1 && address == addressof (intStatusHi))
++	else if (size == 1 && address == my_addressof (intStatusHi))
+ 		return;
+ 
+ 	// Now we can treat the rest of this function as a word-write to intStatusHi.
+@@ -2181,8 +2181,8 @@ void EmRegsVZ::uart1Write(emuptr address
+ 	// be transmitted.
+ 
+ 	Bool	sendTxData =
+-				((address == addressof (uTransmit)) && (size == 2)) ||
+-				((address == addressof (uTransmit) + 1) && (size == 1));
++				((address == my_addressof (uTransmit)) && (size == 2)) ||
++				((address == my_addressof (uTransmit) + 1) && (size == 1));
+ 
+ 	// React to any changes.
+ 
+@@ -2204,8 +2204,8 @@ void EmRegsVZ::uart2Write(emuptr address
+ 	// be transmitted.
+ 
+ 	Bool	sendTxData =
+-				((address == addressof (u2Transmit)) && (size == 2)) ||
+-				((address == addressof (u2Transmit) + 1) && (size == 1));
++				((address == my_addressof (u2Transmit)) && (size == 2)) ||
++				((address == my_addressof (u2Transmit) + 1) && (size == 1));
+ 
+ 	// React to any changes.
+ 
+@@ -2229,15 +2229,15 @@ void EmRegsVZ::lcdRegisterWrite (emuptr 
+ 
+ 	// Note what changed.
+ 
+-	if (address == addressof (lcdScreenWidth))
++	if (address == my_addressof (lcdScreenWidth))
+ 	{
+ 		EmScreen::InvalidateAll ();
+ 	}
+-	else if (address == addressof (lcdScreenHeight))
++	else if (address == my_addressof (lcdScreenHeight))
+ 	{
+ 		EmScreen::InvalidateAll ();
+ 	}
+-	else if (address == addressof (lcdPanelControl))
++	else if (address == my_addressof (lcdPanelControl))
+ 	{
+ 		// hwrVZ328LcdPanelControlGrayScale is incorrectly defined as 0x01,
+ 		// so use the hard-coded value of 0x03 here.
+@@ -2248,7 +2248,7 @@ void EmRegsVZ::lcdRegisterWrite (emuptr 
+ 			EmScreen::InvalidateAll ();
+ 		}
+ 	}
+-	else if (address == addressof (lcdStartAddr))
++	else if (address == my_addressof (lcdStartAddr))
+ 	{
+ 		// Make sure the low-bit is always zero.
+ 		// Make sure bits 31-29 are always zero.
+@@ -2258,7 +2258,7 @@ void EmRegsVZ::lcdRegisterWrite (emuptr 
+ 
+ 		EmScreen::InvalidateAll ();
+ 	}
+-	else if (address == addressof (lcdPageWidth))
++	else if (address == my_addressof (lcdPageWidth))
+ 	{
+ 		if (value != oldValue)
+ 		{
+@@ -2297,7 +2297,7 @@ void EmRegsVZ::rtcIntStatusWrite (emuptr
+ 	// doing a byte-write to the lower byte, this extension will happen
+ 	// automatically.
+ 
+-	if (address == addressof (rtcIntStatus) && size == 1)
++	if (address == my_addressof (rtcIntStatus) && size == 1)
+ 		value <<= 8;
+ 
+ 	// Get the current value.
