@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/12/03 22:44:48 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/21 23:37:00 markd Exp $
 
 DISTNAME=	metapost
-PKGNAME=	tex-${DISTNAME}-1.803
-TEXLIVE_REV=	31860
+PKGNAME=	tex-${DISTNAME}-1.803pl34194
+TEXLIVE_REV=	34194
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Development of MetaFont for creating graphics
