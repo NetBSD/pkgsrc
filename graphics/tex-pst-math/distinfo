@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:39:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 23:58:12 markd Exp $
 
-SHA1 (tex-pst-math-20176/pst-math.tar.xz) = 72efaf82d8dd13dfa7238a15352a4fbb50518a98
-RMD160 (tex-pst-math-20176/pst-math.tar.xz) = 7e5ca04a25892cc6b0834035759900a8d2adf570
-Size (tex-pst-math-20176/pst-math.tar.xz) = 4460 bytes
+SHA1 (tex-pst-math-34786/pst-math.tar.xz) = 45c440af5fc6d88272376ec6f12224a4171a7d0a
+RMD160 (tex-pst-math-34786/pst-math.tar.xz) = a7997ddd06cc361ea29a42eaec169b46143b5269
+Size (tex-pst-math-34786/pst-math.tar.xz) = 4452 bytes
