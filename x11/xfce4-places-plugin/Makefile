@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2014/05/05 00:48:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2015/04/21 08:56:45 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.0.0
-
-DISTNAME=	xfce4-places-plugin-${XFCE4_VERSION}
-PKGREVISION=	24
+DISTNAME=	xfce4-places-plugin-1.6.0
 CATEGORIES=	x11
-MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-places-plugin/
+MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.6/
+
+HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin
 COMMENT=	Xfce Places plugin
 
-.include "../../sysutils/xfce4-thunar/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
+.include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.36 2014/05/05 00:48:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2015/04/21 08:56:39 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-appfinder-${XFCE4_VERSION}
-PKGREVISION=	23
 CATEGORIES=	sysutils
+
+HOMEPAGE=	http://docs.xfce.org/xfce/xfce4-appfinder/start
 COMMENT=	Xfce application finder
 
-.include "../../devel/xfconf/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/xfce4-thunar/buildlink3.mk"
-.include "../../x11/libxfce4gui/buildlink3.mk"
-.include "../../x11/libxfce4menu/buildlink3.mk"
-.include "../../x11/libxfce4util/buildlink3.mk"
+.include "../../x11/libxfce4ui/buildlink3.mk"
+.include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
