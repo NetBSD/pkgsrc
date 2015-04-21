@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 06:29:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 23:00:46 markd Exp $
 share/texmf-dist/makeindex/base/din.ist
 share/texmf-dist/makeindex/base/icase.ist
 share/texmf-dist/makeindex/base/latex.ist
@@ -6,3 +6,4 @@ share/texmf-dist/makeindex/base/math.ist
 share/texmf-dist/makeindex/base/mkind.ist
 share/texmf-dist/makeindex/base/puncts.ist
 share/texmf-dist/makeindex/base/tex.ist
+share/texmf-dist/tex/plain/makeindex/idxmac.tex
