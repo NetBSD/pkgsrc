@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:37:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 23:51:58 markd Exp $
 share/texmf-dist/doc/generic/pst-circ/Changes
 share/texmf-dist/doc/generic/pst-circ/README
-share/texmf-dist/doc/generic/pst-circ/more_docs/dtk03-3.pdf
 share/texmf-dist/doc/generic/pst-circ/pst-circ-doc.bib
 share/texmf-dist/doc/generic/pst-circ/pst-circ-doc.pdf
 share/texmf-dist/doc/generic/pst-circ/pst-circ-doc.tex
