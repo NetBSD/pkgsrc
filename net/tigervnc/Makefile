@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/22 20:07:46 joerg Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2015/04/21 21:39:41 tron Exp $
 
 DISTNAME=	tigervnc-1.3.1
 PKGREVISION=	1
@@ -70,6 +70,7 @@ pre-configure:
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xcmiscproto/buildlink3.mk"
