@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/05 19:37:53 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 23:48:03 markd Exp $
 
-SHA1 (tex-pst-barcode-21716/pst-barcode.tar.xz) = 4b5ba55c3f0927323fb237f39639d34a3e8beb1b
-RMD160 (tex-pst-barcode-21716/pst-barcode.tar.xz) = a359960aaf37583ebe98959569cfb00eee335e3e
-Size (tex-pst-barcode-21716/pst-barcode.tar.xz) = 77852 bytes
+SHA1 (tex-pst-barcode-32004/pst-barcode.tar.xz) = 1cf1e9cd71895d0306754515e00e0c3cbb1ed2e2
+RMD160 (tex-pst-barcode-32004/pst-barcode.tar.xz) = 390ce21971ed15c01ecda268c4dde661b336c697
+Size (tex-pst-barcode-32004/pst-barcode.tar.xz) = 169828 bytes
