@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1886 2015/04/21 13:34:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1887 2015/04/21 22:21:00 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2653,3 +2653,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nss to 3.18.1 [ryoon 2015-04-21]
 	Updated devel/p5-IO-Async to 0.66 [mef 2015-04-21]
 	Updated devel/p5-Module-Install to 1.15 [mef 2015-04-21]
+	Added print/tex-dashbox-doc version 1.14 [markd 2015-04-21]
+	Added print/tex-dashbox version 1.14 [markd 2015-04-21]
+	Added print/tex-lkproof version 3.1 [markd 2015-04-21]
+	Added print/tex-lkproof-doc version 3.1 [markd 2015-04-21]
