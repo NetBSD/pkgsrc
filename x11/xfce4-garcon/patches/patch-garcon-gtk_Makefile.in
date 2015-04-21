@@ -1,0 +1,14 @@
+$NetBSD: patch-garcon-gtk_Makefile.in,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+
+Adjust config path.
+--- garcon-gtk/Makefile.in.orig	2015-02-28 15:11:27.000000000 +0000
++++ garcon-gtk/Makefile.in
+@@ -425,7 +425,7 @@ AM_CPPFLAGS = \
+ 	-DGARCON_COMPILATION \
+ 	-DGARCON_VERSION_API=\"$(GARCON_VERSION_API)\" \
+ 	-DG_LOG_DOMAIN=\"garcon\" \
+-	-DSYSCONFIGDIR=\"$(sysconfdir)/xdg\" \
++	-DSYSCONFIGDIR=\"$(datadir)/examples/xfce4\" \
+ 	$(PLATFORM_CFLAGS)
+ 
+ lib_LTLIBRARIES = \

@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
-libexec/xfce4/panel-plugins/xfce4-dict-plugin
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 08:56:42 jperkin Exp $
+bin/xfce4-popup-dict
+libexec/xfce4/panel/plugins/xfce4-dict-plugin
 share/icons/hicolor/scalable/apps/dict-icon.svg
 share/locale/ca/LC_MESSAGES/xfce4-dict-plugin.mo
 share/locale/cs/LC_MESSAGES/xfce4-dict-plugin.mo
 share/locale/de/LC_MESSAGES/xfce4-dict-plugin.mo
+share/locale/en_GB/LC_MESSAGES/xfce4-dict-plugin.mo
+share/locale/eu/LC_MESSAGES/xfce4-dict-plugin.mo
 share/locale/fr/LC_MESSAGES/xfce4-dict-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-dict-plugin.mo
+share/locale/lv/LC_MESSAGES/xfce4-dict-plugin.mo
+share/locale/pl/LC_MESSAGES/xfce4-dict-plugin.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-dict-plugin.mo
-share/xfce4/panel-plugins/dict.desktop
+share/locale/pt_PT/LC_MESSAGES/xfce4-dict-plugin.mo
+share/locale/uk/LC_MESSAGES/xfce4-dict-plugin.mo
+share/locale/ur/LC_MESSAGES/xfce4-dict-plugin.mo
+share/xfce4/panel/plugins/dict.desktop

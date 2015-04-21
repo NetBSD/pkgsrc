@@ -1,0 +1,23 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/04/21 08:56:42 jperkin Exp $
+
+Adjust config path.
+--- src/Makefile.in.orig	2014-06-04 22:42:33.000000000 +0000
++++ src/Makefile.in
+@@ -298,7 +298,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-plugindir = $(libexecdir)/xfce4/panel-plugins
++plugindir = $(libexecdir)/xfce4/panel/plugins
+ 
+ # deprecated?
+ #plugin_LTLIBRARIES =							\
+@@ -337,7 +337,7 @@ desktop_in_in_files = \
+ 	xfce4-timer.desktop.in.in
+ 
+ desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_DATA = xfce4-timer.desktop
+ EXTRA_DIST = \
+ 	$(desktop_in_in_files)

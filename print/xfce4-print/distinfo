@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.18 2009/09/16 01:15:34 reed Exp $
-
-SHA1 (xfprint-4.6.1.tar.bz2) = 4ce98c49d49b2d4c1a8fb5d76597b8e9ab9a51e8
-RMD160 (xfprint-4.6.1.tar.bz2) = 8df81375cbc72eabd95911997210c8fa864bcf0b
-Size (xfprint-4.6.1.tar.bz2) = 842675 bytes
-SHA1 (patch-aa) = 825cc96436a358b94883c9c5ef232fd8c12ceb4f
-SHA1 (patch-ab) = 8cdda358cff094ace2f8acd06b85ebd66c817478

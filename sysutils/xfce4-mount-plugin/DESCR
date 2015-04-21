@@ -1,0 +1,4 @@
+Add it to the panel, close the appearing options dialog and simply click
+the new hard disk icon in your panel. You will see a menu containing all
+items from fstab, i.e. any partitions and removable media, that is
+currently inserted.

@@ -1,0 +1,20 @@
+$NetBSD: patch-scripts_Makefile.in,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+
+Adjust config path.
+--- scripts/Makefile.in.orig	2013-05-05 15:33:59.000000000 +0000
++++ scripts/Makefile.in
+@@ -329,12 +329,12 @@ edit = $(SED) \
+ 	-e "s,@_docdir_\@,$$(dirname $(docdir)),g" \
+ 	-e "s,@_sysconfdir_\@,$(sysconfdir),g"
+ 
+-conffilesdir = @sysconfdir@/xdg/xfce4
++conffilesdir = $(datadir)/examples/xfce4
+ conffiles_DATA = \
+ 	xinitrc \
+ 	Xft.xrdb
+ 
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/examples/xfce4/autostart
+ autostart_in_files = xscreensaver.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ EXTRA_DIST = \
