@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1885 2015/04/21 11:38:57 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1886 2015/04/21 13:34:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2651,3 +2651,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 37.0.2 [ryoon 2015-04-21]
 	Updated www/firefox-l10n to 37.0.2 [ryoon 2015-04-21]
 	Updated devel/nss to 3.18.1 [ryoon 2015-04-21]
+	Updated devel/p5-IO-Async to 0.66 [mef 2015-04-21]
+	Updated devel/p5-Module-Install to 1.15 [mef 2015-04-21]
