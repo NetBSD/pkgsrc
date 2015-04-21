@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/13 23:12:42 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/21 16:48:38 joerg Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
@@ -35,6 +35,15 @@ REPLACE_PYTHON+=	run_template_cocoa.py
 REPLACE_PYTHON+=	run_template_qt.py
 
 INSTALLATION_DIRS=	bin share/applications share/moneyguru
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
+BASE_ARCH!=	uname -m
+.else
+BASE_ARCH=	${MACHINE_ARCH}
+.endif
+
+PLIST_SUBST+=	BASE_ARCH=${BASE_ARCH:Q}
 
 do-configure:
 	cd ${WRKSRC} && ${PYTHONBIN} configure.py
