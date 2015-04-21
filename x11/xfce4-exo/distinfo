@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/08/16 06:45:12 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/04/21 08:56:44 jperkin Exp $
 
-SHA1 (exo-0.3.101.tar.bz2) = 74194f58278a2b9d963264806f142e5d6d05336c
-RMD160 (exo-0.3.101.tar.bz2) = 92dfc1e8f0bfa8ca74f151a2283f6988ce703649
-Size (exo-0.3.101.tar.bz2) = 1793815 bytes
-SHA1 (patch-ad) = af08127aad06a5e9d8e8055dff1f55982666d8d9
-SHA1 (patch-ae) = 18a95737a6eaef8697224d4c099625c18be7ddfb
-SHA1 (patch-af) = 86aee9fdf075c2de36deeebbb7594193e92cde95
-SHA1 (patch-exo-mount-notify_main.c) = 99892d72b240e90faa75bc91ae32308aceeb0b17
+SHA1 (exo-0.10.4.tar.bz2) = 85847a06182c316c42222b8cfcfab3a710fa96cc
+RMD160 (exo-0.10.4.tar.bz2) = a4ab860d6df42476c7f71e5cc1e8662c27a62db6
+Size (exo-0.10.4.tar.bz2) = 1219342 bytes
+SHA1 (patch-af) = 3c2a9313fab9b31797100eba2c88c0b01375e847
+SHA1 (patch-exo-helper_helpers_helpers.rc) = 85c19a3e034031e4c85aa61a27ea1c6500c290cf

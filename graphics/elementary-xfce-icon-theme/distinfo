@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/21 08:56:38 jperkin Exp $
+
+SHA1 (47f947becd85583da089c0132b86011d0ecd3d60.tar.gz) = efc0dbd3fb706d7c3fc3fbf410bdc64dd50b9959
+RMD160 (47f947becd85583da089c0132b86011d0ecd3d60.tar.gz) = 376ce3f8c90bc373a0f1174ff87a3df15c3ac437
+Size (47f947becd85583da089c0132b86011d0ecd3d60.tar.gz) = 7467318 bytes
