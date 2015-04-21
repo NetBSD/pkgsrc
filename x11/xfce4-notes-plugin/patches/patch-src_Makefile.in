@@ -1,0 +1,34 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+
+Adjust config path.
+--- src/Makefile.in.orig	2010-11-07 11:27:13.000000000 +0000
++++ src/Makefile.in
+@@ -404,8 +404,8 @@ xfce4_notes_settings_LDADD = \
+ @MAINTAINER_MODE_TRUE@BUILT_SOURCES = main-panel-plugin.c \
+ @MAINTAINER_MODE_TRUE@	main-panel-plugin-47.c \
+ @MAINTAINER_MODE_TRUE@	main-status-icon.c
+-@HAVE_LIBXFCE4PANEL47_FALSE@plugindir = $(libexecdir)/xfce4/panel-plugins
+-@HAVE_LIBXFCE4PANEL47_TRUE@plugindir = $(libdir)/xfce4/panel-plugins
++@HAVE_LIBXFCE4PANEL47_FALSE@plugindir = $(libexecdir)/xfce4/panel/plugins
++@HAVE_LIBXFCE4PANEL47_TRUE@plugindir = $(libdir)/xfce4/panel/plugins
+ @HAVE_LIBXFCE4PANEL47_TRUE@plugin_LTLIBRARIES = libnotes.la
+ @HAVE_LIBXFCE4PANEL47_TRUE@libnotes_la_SOURCES = \
+ @HAVE_LIBXFCE4PANEL47_TRUE@	main-panel-plugin-47.c
+@@ -476,7 +476,7 @@ xfce4_notes_LDADD = \
+ #
+ # Plugin desktop file
+ #
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_in_in_files = \
+ 	xfce4-notes-plugin-47.desktop.in				\
+ 	xfce4-notes-plugin.desktop.in.in
+@@ -495,7 +495,7 @@ applications_DATA = $(applications_in_fi
+ #
+ # Autostart desktop file
+ #
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/examples/xfce4/autostart
+ autostart_in_files = xfce4-notes-autostart.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ 

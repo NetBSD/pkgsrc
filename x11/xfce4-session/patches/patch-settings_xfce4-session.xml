@@ -1,0 +1,14 @@
+$NetBSD: patch-settings_xfce4-session.xml,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+
+Look for the right thunar binary.
+--- settings/xfce4-session.xml.orig	2013-05-05 15:33:55.000000000 +0000
++++ settings/xfce4-session.xml
+@@ -21,7 +21,7 @@
+       </property>
+       <property name="Client2_PerScreen" type="bool" value="false"/>
+       <property name="Client3_Command" type="array">
+-        <value type="string" value="Thunar"/>
++        <value type="string" value="thunar"/>
+         <value type="string" value="--daemon"/>
+       </property>
+       <property name="Client3_PerScreen" type="bool" value="false"/>

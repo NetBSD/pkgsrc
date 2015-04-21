@@ -1,42 +1,30 @@
-# $NetBSD: Makefile,v 1.37 2014/05/29 23:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/04/21 08:56:44 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.3.101
-
-DISTNAME=	exo-${XFCE4_VERSION}
-PKGNAME=	xfce4-exo-${XFCE4_VERSION}
-PKGREVISION=	26
+VERSION=	0.10.4
+DISTNAME=	exo-${VERSION}
+PKGNAME=	xfce4-exo-${VERSION}
 CATEGORIES=	x11
+MASTER_SITES=	http://archive.xfce.org/src/xfce/exo/0.10/
+
+HOMEPAGE=	http://docs.xfce.org/xfce/exo/start
 COMMENT=	Xfce extension library
+
+USE_TOOLS+=		perl:run
+REPLACE_PERL=		exo-helper/helpers/exo-compose-mail-1
 
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
-PKGCONFIG_OVERRIDE+=	exo/exo-0.3.pc.in exo-hal/exo-hal-0.3.pc.in
-
-CONFIGURE_ARGS+=	--disable-python
-
-USE_TOOLS+=		perl:run
-REPLACE_PERL+=		exo-helper/helpers/exo-compose-mail-0.3
+PKGCONFIG_OVERRIDE+=	exo/exo-1.pc.in
 
 PKG_SYSCONFSUBDIR=	xdg/xfce4
 EGDIR=			${XFCE4_EGBASE}
 
-MAKE_DIRS+=	${SYSCONFDIR}
-MAKE_DIRS+=	${EGDIR} ${PREFIX}/share/xfce4 ${PREFIX}/share/xfce4/doc
-.for f in C es fr id ja pt_BR tr
-MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/${f}
-MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/${f}/images
-.endfor
-
 CONF_FILES=		${EGDIR}/helpers.rc ${PKG_SYSCONFDIR}/helpers.rc
 OWN_DIRS+=		${EGDIR}
 
-.include "options.mk"
-
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/libxfce4util/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../x11/libxfce4ui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

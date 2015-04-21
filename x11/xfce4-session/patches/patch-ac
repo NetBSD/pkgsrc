@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2009/09/16 01:15:33 reed Exp $
+$NetBSD: patch-ac,v 1.2 2015/04/21 08:56:45 jperkin Exp $
 
---- settings/Makefile.in.orig	2009-02-25 20:29:49.000000000 +0000
+Adjust config path.
+--- settings/Makefile.in.orig	2013-05-05 15:33:59.000000000 +0000
 +++ settings/Makefile.in
-@@ -334,7 +334,7 @@ xfce4_session_settings_LDADD = \
+@@ -418,7 +418,7 @@ xfce4_session_settings_LDADD = \
  xfce4_session_settings_DEPENDENCIES = \
  	$(top_builddir)/libxfsm/libxfsm-4.6.la
  

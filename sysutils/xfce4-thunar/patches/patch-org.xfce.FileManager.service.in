@@ -1,0 +1,10 @@
+$NetBSD: patch-org.xfce.FileManager.service.in,v 1.1 2015/04/21 08:56:41 jperkin Exp $
+
+Our installed thunar is all lower-case.
+--- org.xfce.FileManager.service.in.orig	2013-07-30 05:44:48.000000000 +0000
++++ org.xfce.FileManager.service.in
+@@ -1,3 +1,3 @@
+ [D-BUS Service]
+ Name=org.xfce.FileManager
+-Exec=@bindir@/Thunar --daemon
++Exec=@bindir@/thunar --daemon
