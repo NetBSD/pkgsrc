@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/27 18:05:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 23:41:27 markd Exp $
 
-SHA1 (tex-pdfcrop-23499/pdfcrop.doc.tar.xz) = 09c9c7d79f626ea764b6d8d7f44e05f27e0f252d
-RMD160 (tex-pdfcrop-23499/pdfcrop.doc.tar.xz) = 8a34852c1f953a9aa0df7f877340a5a221ee5ff9
-Size (tex-pdfcrop-23499/pdfcrop.doc.tar.xz) = 4100 bytes
+SHA1 (tex-pdfcrop-29348/pdfcrop.doc.tar.xz) = 25ab67149046f76dba4834ba3a4fcc5ae9028cf4
+RMD160 (tex-pdfcrop-29348/pdfcrop.doc.tar.xz) = 69cfef3d3a0fc3e335f4c45d9a4ecdb17e141372
+Size (tex-pdfcrop-29348/pdfcrop.doc.tar.xz) = 4300 bytes
