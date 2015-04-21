@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2015/04/02 23:06:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.208 2015/04/21 00:28:19 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -151,8 +151,10 @@ LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
     ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
 LIBS+=		${LIBARCHIVE_LIBS:sh}
 
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess \
+			${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub \
+			${WRKSRC}/config.sub
 
 .  if ${OPSYS} == "Cygwin"
 CPPFLAGS+=	-DLIBARCHIVE_STATIC
