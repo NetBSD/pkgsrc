@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:37 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/21 17:02:51 joerg Exp $
 
 DISTNAME=	FlightGear-data-2.8.0
 PKGNAME=	${DISTNAME:tl}
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.flightgear.org/
 COMMENT=	FlightGear Simulator data files
 LICENSE=	gnu-gpl-v2
+
+UNLIMIT_RESOURCES+=	cputime
 
 WRKSRC=			${WRKDIR}/data
 NO_BUILD=		yes
