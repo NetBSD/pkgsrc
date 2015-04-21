@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/24 13:22:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/21 07:59:39 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-array-private.h
 include/libmongoc-1.0/mongoc-b64-private.h
@@ -45,18 +45,22 @@ include/libmongoc-1.0/mongoc-matcher-private.h
 include/libmongoc-1.0/mongoc-matcher.h
 include/libmongoc-1.0/mongoc-opcode.h
 include/libmongoc-1.0/mongoc-queue-private.h
+${PLIST.ssl}include/libmongoc-1.0/mongoc-rand-private.h
+${PLIST.ssl}include/libmongoc-1.0/mongoc-rand.h
 include/libmongoc-1.0/mongoc-read-prefs-private.h
 include/libmongoc-1.0/mongoc-read-prefs.h
 include/libmongoc-1.0/mongoc-rpc-private.h
 include/libmongoc-1.0/mongoc-sasl-private.h
 include/libmongoc-1.0/mongoc-scram-private.h
 include/libmongoc-1.0/mongoc-socket.h
+${PLIST.ssl}include/libmongoc-1.0/mongoc-ssl.h
 include/libmongoc-1.0/mongoc-ssl-private.h
 include/libmongoc-1.0/mongoc-stream-buffered.h
 include/libmongoc-1.0/mongoc-stream-file.h
 include/libmongoc-1.0/mongoc-stream-gridfs.h
 include/libmongoc-1.0/mongoc-stream-private.h
 include/libmongoc-1.0/mongoc-stream-socket.h
+${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls.h
 include/libmongoc-1.0/mongoc-stream.h
 include/libmongoc-1.0/mongoc-thread-private.h
 include/libmongoc-1.0/mongoc-trace.h
@@ -81,6 +85,7 @@ lib/libmongoc-1.0.la
 lib/libmongoc-priv.la
 lib/pkgconfig/libmongoc-1.0.pc
 lib/pkgconfig/libmongoc-priv.pc
+${PLIST.ssl}lib/pkgconfig/libmongoc-ssl-1.0.pc
 man/man3/mongoc_bulk_operation_delete.3
 man/man3/mongoc_bulk_operation_delete_one.3
 man/man3/mongoc_bulk_operation_destroy.3
