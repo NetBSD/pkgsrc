@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 13:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/21 00:48:06 mef Exp $
 
 DISTNAME=	Test-Output-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Capture-Tiny>=0.17:../../devel/p5-Capture-Tiny
-DEPENDS+=	p5-Test-Tester>=0.107:../../devel/p5-Test-Tester
+DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Test/Output/.packlist
 
