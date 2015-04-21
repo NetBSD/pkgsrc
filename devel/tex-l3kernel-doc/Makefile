@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/05 15:44:49 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 23:11:56 markd Exp $
 
 DISTNAME=	l3kernel.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.2900
-TEXLIVE_REV=	24256
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.5547
+TEXLIVE_REV=	36423
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-l3kernel
