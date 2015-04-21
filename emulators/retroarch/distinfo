@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.2 2015/02/05 16:46:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/04/21 17:18:01 joerg Exp $
 
 SHA1 (retroarch-20150203.zip) = 46f9493f3ab09fd185345e6bab797c4e882c5262
 RMD160 (retroarch-20150203.zip) = 76c4ae4f7edb5c866f606cb23e5550a5b7c285b4
 Size (retroarch-20150203.zip) = 10043939 bytes
 SHA1 (patch-Makefile) = 41a8de7bc2d992cae1799935c5d3a61774c6be88
 SHA1 (patch-Makefile.common) = 3a2157e04dfacadc48f421106760b0194586677e
+SHA1 (patch-audio_audio__utils.c) = a489e8862d10e8dde77a7d22becafb690fb61f89
+SHA1 (patch-audio_audio__utils.h) = e6cb0d7897eee6908d62bb46a98d7a28398d9e14
+SHA1 (patch-audio_drivers__resampler_cc__resampler.c) = 2ec89750a7bad2eb4b799d389d0e995b316ccd82
+SHA1 (patch-audio_drivers__resampler_sinc.c) = 5747731b8aec14b6a5e1359e80698f121fe9f337
+SHA1 (patch-performance.c) = 1881d32968babc58686c88bfdeb021d18a222fe8
 SHA1 (patch-qb_config.libs.sh) = 4eccb74e9f31d0f8ff3eeb6c6ded03ac148b2808
 SHA1 (patch-qb_qb.libs.sh) = 00689ff9d4b6afc9313938e2921e90f01640420f
