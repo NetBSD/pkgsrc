@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/03/05 14:35:14 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 00:56:46 mef Exp $
 
-SHA1 (File-ShareDir-ProjectDistDir-1.000004.tar.gz) = c2483ea49192dd106277b247832339a29e868fc9
-RMD160 (File-ShareDir-ProjectDistDir-1.000004.tar.gz) = 413e6f3a8a74a5e489a5dd2e33079c82aacf047d
-Size (File-ShareDir-ProjectDistDir-1.000004.tar.gz) = 42137 bytes
+SHA1 (File-ShareDir-ProjectDistDir-1.000005.tar.gz) = e63e29bdd4731ea627e53aa4b00e495f0969f5d8
+RMD160 (File-ShareDir-ProjectDistDir-1.000005.tar.gz) = 0a9f03c8e0820a1d16f976c35d113d7065b402b1
+Size (File-ShareDir-ProjectDistDir-1.000005.tar.gz) = 39487 bytes
