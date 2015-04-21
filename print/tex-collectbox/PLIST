@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/10 02:48:23 mef Exp $
-share/texmf-dist/tex/latex/collectbox/collectbox.dtx
-share/texmf-dist/tex/latex/collectbox/collectbox.ins
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 22:29:43 markd Exp $
 share/texmf-dist/tex/latex/collectbox/collectbox.sty
