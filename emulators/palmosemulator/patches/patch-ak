@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
+$NetBSD: patch-ak,v 1.2 2015/04/21 17:15:20 joerg Exp $
 
---- SrcShared/Hardware/EmRegs328.cpp.orig	Sat Mar 20 17:48:57 2004
-+++ SrcShared/Hardware/EmRegs328.cpp	Sat Mar 20 18:11:46 2004
-@@ -141,13 +141,13 @@
+--- SrcShared/Hardware/EmRegs328.cpp.orig	2002-03-29 13:11:18.000000000 +0000
++++ SrcShared/Hardware/EmRegs328.cpp
+@@ -141,13 +141,13 @@ const HwrM68328Type	kInitial68328Registe
  	0x2400,		//	Word		pllControl;					// $200: PLL Control Register
  	0x0123,		//	Word		pllFreqSel;					// $202: PLL Frequency Select Register
  	0x0000,		//	Word		pllTest;					// $204: PLL Test Register
@@ -18,7 +18,7 @@ $NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0x0000,		//	Word		intControl;					// $302: Interrupt Control Register
  	0x00FF,		//	Word		intMaskHi;					// $304: Interrupt Mask Register/HIGH word
  	0xFFFF,		//	Word		intMaskLo;					// $306: Interrupt Mask Register/LOW word
-@@ -162,21 +162,21 @@
+@@ -162,21 +162,21 @@ const HwrM68328Type	kInitial68328Registe
  
  	0x00,		//	Byte		portADir;					// $400: Port A Direction Register
  	0x00,		//	Byte		portAData;					// $401: Port A Data Register
@@ -43,7 +43,7 @@ $NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0x00,		//	Byte		portCSelect;				// $413: Port C Select Register
  
  	{ 0 },		//	Byte										___filler10[4];
-@@ -184,10 +184,10 @@
+@@ -184,10 +184,10 @@ const HwrM68328Type	kInitial68328Registe
  	0x00,		//	Byte		portDDir;					// $418: Port D Direction Register
  	0x00,		//	Byte		portDData;					// $419: Port D Data Register
  	0xFF,		//	Byte		portDPullupEn;				// $41A: Port D Pull-up Enable
@@ -56,7 +56,7 @@ $NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0x00,		//	Byte		portDIntEdge;				// $41F: Port D IRQ Edge Register
  
  	0x00,		//	Byte		portEDir;					// $420: Port E Direction Register
-@@ -213,7 +213,7 @@
+@@ -213,7 +213,7 @@ const HwrM68328Type	kInitial68328Registe
  
  	0x00,		//	Byte		portJDir;					// $438: Port J Direction Register
  	0x00,		//	Byte		portJData;					// $439: Port J Data Register
@@ -65,7 +65,7 @@ $NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0x00,		//	Byte		portJSelect;				// $43B: Port J Select Register
  
  	{ 0 },		//	Byte										___filler19a[4];
-@@ -279,7 +279,7 @@
+@@ -279,7 +279,7 @@ const HwrM68328Type	kInitial68328Registe
  	{ 0 },		//	Byte										___filler28[0xA00-0x90A];
  
  	0x00000000,	//	DWord		lcdStartAddr;				// $A00: Screen Starting Address Register
@@ -74,7 +74,7 @@ $NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0xFF,		//	Byte		lcdPageWidth;				// $A05: Virtual Page Width Register
  	{ 0 },		//	Byte										___filler30[2];
  	0x03FF,		//	Word		lcdScreenWidth;				// $A08: Screen Width Register
-@@ -288,7 +288,7 @@
+@@ -288,7 +288,7 @@ const HwrM68328Type	kInitial68328Registe
  	0x0000,		//	Word		lcdCursorXPos;				// $A18: Cursor X Position
  	0x0000,		//	Word		lcdCursorYPos;				// $A1A:	Cursor Y Position
  	0x0101,		//	Word		lcdCursorWidthHeight;		// $A1C: Cursor Width and Height
@@ -83,3 +83,77 @@ $NetBSD: patch-ak,v 1.1 2004/03/20 20:21:22 kristerw Exp $
  	0x7F,		//	Byte		lcdBlinkControl;			// $A1F: Blink Control Register
  	0x00,		//	Byte		lcdPanelControl;			// $A20: Panel Interface Control Register
  	0x00,		//	Byte		lcdPolarity;				// $A21: Polarity Config Register
+@@ -1592,7 +1592,7 @@ uint32 EmRegs328::uartRead (emuptr addre
+ {
+ 	// If this is a full read, get the next byte from the FIFO.
+ 
+-	Bool	refreshRxData = (address == addressof (uReceive)) && (size == 2);
++	Bool	refreshRxData = (address == my_addressof (uReceive)) && (size == 2);
+ 
+ 	// See if there's anything new ("Put the data on the bus")
+ 
+@@ -1753,7 +1753,7 @@ void EmRegs328::intStatusHiWrite (emuptr
+ 	// accessing the upper byte, just return. If we're accessing the lower
+ 	// byte, we can treat it as a 2-byte access.
+ 
+-	else if (size == 1 && address == addressof (intStatusHi))
++	else if (size == 1 && address == my_addressof (intStatusHi))
+ 		return;
+ 
+ 	// Now we can treat the rest of this function as a word-write to intStatusHi.
+@@ -2000,8 +2000,8 @@ void EmRegs328::uartWrite(emuptr address
+ 	// be transmitted.
+ 
+ 	Bool	sendTxData =
+-				((address == addressof (uTransmit)) && (size == 2)) ||
+-				((address == addressof (uTransmit) + 1) && (size == 1));
++				((address == my_addressof (uTransmit)) && (size == 2)) ||
++				((address == my_addressof (uTransmit) + 1) && (size == 1));
+ 
+ 	// React to any changes.
+ 
+@@ -2025,22 +2025,22 @@ void EmRegs328::lcdRegisterWrite(emuptr 
+ 
+ 	// Note what changed.
+ 
+-	if (address == addressof (lcdScreenWidth))
++	if (address == my_addressof (lcdScreenWidth))
+ 	{
+ 		EmScreen::InvalidateAll ();
+ 	}
+-	else if (address == addressof (lcdScreenHeight))
++	else if (address == my_addressof (lcdScreenHeight))
+ 	{
+ 		EmScreen::InvalidateAll ();
+ 	}
+-	else if (address == addressof (lcdPanelControl))
++	else if (address == my_addressof (lcdPanelControl))
+ 	{
+ 		if (((value ^ oldValue) & hwr328LcdPanelControlGrayScale) != 0)
+ 		{
+ 			EmScreen::InvalidateAll ();
+ 		}
+ 	}
+-	else if (address == addressof (lcdStartAddr))
++	else if (address == my_addressof (lcdStartAddr))
+ 	{
+ 		// Make sure the low-bit is always zero.
+ 
+@@ -2049,7 +2049,7 @@ void EmRegs328::lcdRegisterWrite(emuptr 
+ 
+ 		EmScreen::InvalidateAll ();
+ 	}
+-	else if (address == addressof (lcdPageWidth))
++	else if (address == my_addressof (lcdPageWidth))
+ 	{
+ 		if (value != oldValue)
+ 		{
+@@ -2088,7 +2088,7 @@ void EmRegs328::rtcIntStatusWrite(emuptr
+ 	// doing a byte-write to the lower byte, this extension will happen
+ 	// automatically.
+ 
+-	if (address == addressof (rtcIntStatus) && size == 1)
++	if (address == my_addressof (rtcIntStatus) && size == 1)
+ 		value <<= 8;
+ 
+ 	// Get the current value.
