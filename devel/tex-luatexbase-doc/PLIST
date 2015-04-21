@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/09 14:06:31 minskim Exp $
-share/texmf-dist/doc/luatex/luatexbase/Changes
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 23:26:35 markd Exp $
+share/texmf-dist/doc/luatex/luatexbase/NEWS
 share/texmf-dist/doc/luatex/luatexbase/README
 share/texmf-dist/doc/luatex/luatexbase/TODO
 share/texmf-dist/doc/luatex/luatexbase/luatexbase-attr.pdf

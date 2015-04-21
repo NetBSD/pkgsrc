@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/11/18 01:08:35 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/21 23:26:35 markd Exp $
 
 DISTNAME=	luatexbase
-PKGNAME=	tex-${DISTNAME}-0.31
-TEXLIVE_REV=	22560
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-0.6
+TEXLIVE_REV=	30562
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Basic resource management for LuaTeX code
