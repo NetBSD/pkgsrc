@@ -1,4 +1,4 @@
-# $NetBSD: ulimit.help,v 1.1 2009/05/10 16:10:18 rillig Exp $
+# $NetBSD: ulimit.help,v 1.2 2015/04/21 17:01:55 joerg Exp $
 #
 
 # UNLIMIT_RESOURCES
@@ -9,5 +9,6 @@
 #	* datasize
 #	* stacksize
 #	* memorysize
+#	* cputime
 #
 # Keywords: ulimit unlimit memory ENOMEM
