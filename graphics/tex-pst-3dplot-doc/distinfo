@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 19:49:32 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 23:44:51 markd Exp $
 
-SHA1 (tex-pst-3dplot-21588/pst-3dplot.doc.tar.xz) = ed4d428786062c46347a8f602efc1e034a012bbf
-RMD160 (tex-pst-3dplot-21588/pst-3dplot.doc.tar.xz) = 70516c20628cd7a5d23f72bc946a2250c1448a87
-Size (tex-pst-3dplot-21588/pst-3dplot.doc.tar.xz) = 3169252 bytes
+SHA1 (tex-pst-3dplot-35042/pst-3dplot.doc.tar.xz) = b945c442a5fc0a2947f6ad94dbd598a30eb798b3
+RMD160 (tex-pst-3dplot-35042/pst-3dplot.doc.tar.xz) = 3a18c507c78d323e53f9a85f6eae094c5b87d3e5
+Size (tex-pst-3dplot-35042/pst-3dplot.doc.tar.xz) = 2709880 bytes

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 19:49:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 23:44:51 markd Exp $
 share/texmf-dist/doc/generic/pst-3dplot/Changes
 share/texmf-dist/doc/generic/pst-3dplot/README
-share/texmf-dist/doc/generic/pst-3dplot/more_docs/tb72voss3d.pdf
 share/texmf-dist/doc/generic/pst-3dplot/pst-3dplot-doc.bib
 share/texmf-dist/doc/generic/pst-3dplot/pst-3dplot-doc.dat
 share/texmf-dist/doc/generic/pst-3dplot/pst-3dplot-doc.pdf

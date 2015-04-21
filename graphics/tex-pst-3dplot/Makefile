@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 19:49:23 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 23:44:51 markd Exp $
 
 DISTNAME=	pst-3dplot
-PKGNAME=	tex-${DISTNAME}-1.94
-TEXLIVE_REV=	21588
+PKGNAME=	tex-${DISTNAME}-2.01
+TEXLIVE_REV=	35042
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Draw 3d curves and graphs using PSTricks
+COMMENT=	Draw 3D objects in parallel projection, using PSTricks
 
 DEPENDS+=	tex-multido-[0-9]*:../../devel/tex-multido
 DEPENDS+=	tex-pst-3d-[0-9]*:../../graphics/tex-pst-3d
