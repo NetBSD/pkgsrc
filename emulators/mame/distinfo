@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.34 2015/04/02 22:33:55 wiz Exp $
+$NetBSD: distinfo,v 1.35 2015/04/21 17:20:39 joerg Exp $
 
 SHA1 (mame0160s.zip) = db3d2f10a5c9ef00f629bfd8ab5665874ef581c2
 RMD160 (mame0160s.zip) = 95a0edb499dc81a690ca13040954c87f586ec673
 Size (mame0160s.zip) = 80937878 bytes
 SHA1 (patch-makefile) = 57837dbc8571682e4fd73a2be5771df109c7225f
+SHA1 (patch-src_osd_sdl_osinline.h) = f710a75a51b603905913f2b282c2fc8b92066466
