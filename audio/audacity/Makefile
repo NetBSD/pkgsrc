@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2015/04/21 01:33:38 rodent Exp $
+# $NetBSD: Makefile,v 1.91 2015/04/21 03:22:58 rodent Exp $
 
 DISTNAME=		audacity-minsrc-2.1.0
 PKGNAME=		${DISTNAME:S/-minsrc//1}
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-vorbis=system --with-sbsms=system
 CONFIGURE_ARGS+=	--with-libsamplerate=system --with-soundtouch=system
 CONFIGURE_ARGS+=	--with-twolame=system --with-lv2=system
 CONFIGURE_ARGS+=	--with-libsndfile=system --with-portaudio=local
-CONFIGURE_ARGS+=	--enable-nyquist=yes --without-midi # portsmf is BROKEN
+CONFIGURE_ARGS+=	--enable-nyquist=yes --with-midi=local
 
 CONFIG_GUESS_OVERRIDE=		\
 	config.guess */config.guess */*/config.guess */*/*/config.guess
