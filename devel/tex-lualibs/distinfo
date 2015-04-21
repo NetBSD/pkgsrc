@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/09 13:52:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 23:22:24 markd Exp $
 
-SHA1 (tex-lualibs-21149/lualibs.tar.xz) = 2761255406fbbe5cbb064ca15e1f651e41d2310e
-RMD160 (tex-lualibs-21149/lualibs.tar.xz) = a829f6242f30454548623a3fbce12837baba7603
-Size (tex-lualibs-21149/lualibs.tar.xz) = 24812 bytes
+SHA1 (tex-lualibs-34736/lualibs.tar.xz) = 2fb8f0accfeb0252c33b77566fcb70ccf7b5f678
+RMD160 (tex-lualibs-34736/lualibs.tar.xz) = c3fe28491aec150e40abe9df9ed45775b9ccfae2
+Size (tex-lualibs-34736/lualibs.tar.xz) = 69216 bytes
