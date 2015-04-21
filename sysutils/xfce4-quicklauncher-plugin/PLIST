@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/12 09:55:17 martti Exp $
-lib/xfce4/panel-plugins/libquicklauncher.la
+@comment $NetBSD: PLIST,v 1.5 2015/04/21 08:56:41 jperkin Exp $
+lib/xfce4/panel/plugins/libquicklauncher.la
 share/locale/cs/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
 share/locale/el/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
 share/locale/eu/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
@@ -10,4 +10,4 @@ share/locale/ja/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
 share/locale/ru/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
 share/locale/vi/LC_MESSAGES/xfce4-quicklauncher-plugin.mo
-share/xfce4/panel-plugins/quicklauncher.desktop
+share/xfce4/panel/plugins/quicklauncher.desktop

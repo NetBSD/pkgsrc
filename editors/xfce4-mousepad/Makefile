@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.29 2014/05/05 00:47:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/21 08:56:38 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.2.16
-
-DISTNAME=	mousepad-${XFCE4_VERSION}
-PKGNAME=	xfce4-mousepad-${XFCE4_VERSION}
-PKGREVISION=	20
+VERSION=	0.4.0
+DISTNAME=	mousepad-${VERSION}
+PKGNAME=	xfce4-mousepad-${VERSION}
 CATEGORIES=	editors
+MASTER_SITES=	http://archive.xfce.org/src/apps/mousepad/0.4/
+
+HOMEPAGE=	http://users.xfce.org/~benny/xfce/apps.html
 COMMENT=	Xfce text editor
 
+.include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libxfce4gui/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../x11/gtksourceview2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

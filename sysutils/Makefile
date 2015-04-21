@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.632 2015/04/14 11:28:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.633 2015/04/21 08:56:39 jperkin Exp $
 #
 
 COMMENT=	System utilities
@@ -603,11 +603,14 @@ SUBDIR+=	xfce4-cpugraph-plugin
 SUBDIR+=	xfce4-diskperf-plugin
 SUBDIR+=	xfce4-fsguard-plugin
 SUBDIR+=	xfce4-genmon-plugin
+SUBDIR+=	xfce4-mount-plugin
 SUBDIR+=	xfce4-netload-plugin
 SUBDIR+=	xfce4-quicklauncher-plugin
 SUBDIR+=	xfce4-systemload-plugin
+SUBDIR+=	xfce4-taskmanager
 SUBDIR+=	xfce4-thunar
-SUBDIR+=	xfce4-volman
+SUBDIR+=	xfce4-thunar-vcs
+SUBDIR+=	xfce4-verve-plugin
 SUBDIR+=	xfce4-xarchiver
 SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xfe

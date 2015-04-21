@@ -1,0 +1,27 @@
+$NetBSD: patch-thunar_Makefile.in,v 1.1 2015/04/21 08:56:41 jperkin Exp $
+
+Don't link Thunar to thunar.
+--- thunar/Makefile.in.orig	2015-04-01 17:26:19.000000000 +0000
++++ thunar/Makefile.in
+@@ -2617,7 +2617,7 @@ install-dvi-am:
+ 
+ install-exec-am: install-binPROGRAMS install-binSCRIPTS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
++	$(MAKE) $(AM_MAKEFLAGS) #install-exec-hook
+ install-html: install-html-am
+ 
+ install-html-am:
+@@ -2681,9 +2681,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+ @INTLTOOL_DESKTOP_RULE@
+ 
+ # install symlink to 'thunar'
+-install-exec-hook:
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	-( cd $(DESTDIR)$(bindir) ; test -x Thunar || ln -sf thunar Thunar )
++#install-exec-hook:
++#	$(mkinstalldirs) $(DESTDIR)$(bindir)
++#	-( cd $(DESTDIR)$(bindir) ; test -x Thunar || ln -sf thunar Thunar )
+ 
+ clean-local:
+ 	rm -f *.core core core.*

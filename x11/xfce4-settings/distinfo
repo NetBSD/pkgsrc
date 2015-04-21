@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/08/16 07:42:55 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/04/21 08:56:45 jperkin Exp $
 
-SHA1 (xfce4-settings-4.6.5.tar.bz2) = c036cc2f3100a46b2649e678dff7c0106b219263
-RMD160 (xfce4-settings-4.6.5.tar.bz2) = a8155346285921f3087795598989df287be8abb4
-Size (xfce4-settings-4.6.5.tar.bz2) = 522389 bytes
-SHA1 (patch-aa) = 104e459ab5b7bd4ac821cacada43f2aa4da23f10
-SHA1 (patch-ab) = 4f23e05cacd765b5be2e101dec29d3c6f5cd839f
-SHA1 (patch-dialogs-keyboard-settings-xfce-keyboard-settings.c) = e011c194084458c65a7f47e27fc03cb8927287b2
-SHA1 (patch-xfce4-settings-helper_accessibility.c) = 190883186f2773ab914ef6be38d387f7aa96e9e4
+SHA1 (xfce4-settings-4.12.0.tar.bz2) = 507a66ed160e44078f81051878c8644d5a5f344e
+RMD160 (xfce4-settings-4.12.0.tar.bz2) = e778cdef17523a52d0113831734c597f5b737042
+Size (xfce4-settings-4.12.0.tar.bz2) = 973324 bytes
+SHA1 (patch-xfce4-settings-manager_Makefile.in) = 89b91e6ba1cef48dabf8dae8f2cb17c8e983eb1e
+SHA1 (patch-xfsettingsd_Makefile.in) = 68b9e1bda69df252a5e910b9b2969dc0b7f45432
+SHA1 (patch-xfsettingsd_xsettings.xml) = 182108ef2739855591ef09856020dbd036c8c5a7

@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.30 2014/05/05 00:48:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/21 08:56:42 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	orage-${XFCE4_VERSION}
-PKGNAME=	xfce4-orage-${XFCE4_VERSION}
-PKGREVISION=	23
+VERSION=	4.10.0
+DISTNAME=	orage-${VERSION}
+PKGNAME=	xfce4-orage-${VERSION}
 CATEGORIES=	time
+MASTER_SITES=	http://archive.xfce.org/src/apps/orage/4.10/
+
+HOMEPAGE=	http://www.kolumbus.fi/~w408237/orage/
 COMMENT=	Xfce time managing application
 
 CONFIGURE_ARGS+=	--disable-libxfce4mcs
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
+MAKE_DIRS+=	${PREFIX}/libexec/xfce4 ${PREFIX}/libexec/xfce4/panel-plugins
+MAKE_DIRS+=	${PREFIX}/share/xfce4 ${PREFIX}/share/xfce4/panel-plugins
+
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/libxfce4gui/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

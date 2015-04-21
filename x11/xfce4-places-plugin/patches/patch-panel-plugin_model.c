@@ -1,26 +1,36 @@
-$NetBSD: patch-panel-plugin_model.c,v 1.1 2012/04/19 21:12:42 joerg Exp $
+$NetBSD: patch-panel-plugin_model.c,v 1.2 2015/04/21 08:56:45 jperkin Exp $
 
---- panel-plugin/model.c.orig	2007-10-25 22:03:52.000000000 +0000
+Fix inline use.
+--- panel-plugin/model.c.orig	2012-09-01 17:20:59.000000000 +0000
 +++ panel-plugin/model.c
-@@ -27,7 +27,7 @@
+@@ -29,7 +29,7 @@
  
- #include <libxfce4util/libxfce4util.h>
+ /********** PlacesBookmarkAction **********/
+ 
+-inline PlacesBookmarkAction*
++PlacesBookmarkAction*
+ places_bookmark_action_create(gchar *label)
+ {
+     PlacesBookmarkAction *action;
+@@ -40,7 +40,7 @@ places_bookmark_action_create(gchar *lab
+     return action;
+ }
+ 
+-inline void
++void
+ places_bookmark_action_destroy(PlacesBookmarkAction *act)
+ {
+     g_assert(act != NULL);
+@@ -51,7 +51,7 @@ places_bookmark_action_destroy(PlacesBoo
+     g_free(act);
+ }
  
 -inline void
 +void
  places_bookmark_action_call(PlacesBookmarkAction *act)
  {
      g_assert(act != NULL);
-@@ -36,7 +36,7 @@ places_bookmark_action_call(PlacesBookma
-         act->action(act);
- }
- 
--inline void
-+void
- places_bookmark_action_free(PlacesBookmarkAction *act)
- {
-     g_assert(act != NULL);
-@@ -62,7 +62,7 @@ places_bookmark_actions_free(GList *acti
+@@ -66,7 +66,7 @@ places_bookmark_action_call(PlacesBookma
  static int bookmarks = 0;
  #endif
  
@@ -29,23 +39,34 @@ $NetBSD: patch-panel-plugin_model.c,v 1.1 2012/04/19 21:12:42 joerg Exp $
  places_bookmark_create(gchar *label)
  {
      PlacesBookmark *bookmark;
-@@ -77,7 +77,7 @@ places_bookmark_create(gchar *label)
+@@ -81,7 +81,7 @@ places_bookmark_create(gchar *label)
      return bookmark;
+ }
+ 
+-static inline void
++static void
+ places_bookmark_actions_destroy(GList *actions)
+ {
+     while(actions != NULL){
+@@ -92,7 +92,7 @@ places_bookmark_actions_destroy(GList *a
+     g_list_free(actions);
  }
  
 -inline void
 +void
- places_bookmark_free(PlacesBookmark *bookmark)
+ places_bookmark_destroy(PlacesBookmark *bookmark)
  {
      g_assert(bookmark != NULL);
-@@ -104,19 +104,19 @@ places_bookmark_free(PlacesBookmark *boo
-         g_free(bookmark);
- }
+@@ -121,7 +121,7 @@ places_bookmark_destroy(PlacesBookmark *
+ 
+ /********** PlacesBookmarkGroup **********/
  
 -inline GList*
 +GList*
  places_bookmark_group_get_bookmarks(PlacesBookmarkGroup *pbg)
  {
+     g_assert(pbg->get_bookmarks != NULL);
+@@ -129,7 +129,7 @@ places_bookmark_group_get_bookmarks(Plac
      return pbg->get_bookmarks(pbg);
  }
  
@@ -53,11 +74,22 @@ $NetBSD: patch-panel-plugin_model.c,v 1.1 2012/04/19 21:12:42 joerg Exp $
 +gboolean
  places_bookmark_group_changed(PlacesBookmarkGroup *pbg)
  {
+     g_assert(pbg->changed != NULL);
+@@ -137,7 +137,7 @@ places_bookmark_group_changed(PlacesBook
      return pbg->changed(pbg);
+ }
+ 
+-inline PlacesBookmarkGroup*
++PlacesBookmarkGroup*
+ places_bookmark_group_create(void)
+ {
+     PlacesBookmarkGroup *bookmark_group;
+@@ -146,7 +146,7 @@ places_bookmark_group_create(void)
+     return bookmark_group;
  }
  
 -inline void
 +void
- places_bookmark_group_finalize(PlacesBookmarkGroup *pbg)
+ places_bookmark_group_destroy(PlacesBookmarkGroup *pbg)
  {
-     pbg->finalize(pbg);
+     if(pbg->finalize != NULL)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2015/04/04 15:46:46 tnn Exp $
+# $NetBSD: Makefile,v 1.236 2015/04/21 08:56:39 jperkin Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -201,6 +201,7 @@ SUBDIR+=	x265
 SUBDIR+=	xanim
 SUBDIR+=	xawtv
 SUBDIR+=	xfce4-mpc-plugin
+SUBDIR+=	xfce4-thunar-media-tags
 SUBDIR+=	xfmedia
 SUBDIR+=	xine-lib
 SUBDIR+=	xine-ui

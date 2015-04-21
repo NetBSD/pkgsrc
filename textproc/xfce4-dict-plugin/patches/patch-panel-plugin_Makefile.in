@@ -1,0 +1,32 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/04/21 08:56:42 jperkin Exp $
+
+Adjust config path.
+--- panel-plugin/Makefile.in.orig	2008-03-08 16:14:44.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -266,7 +266,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-plugindir = $(libexecdir)/xfce4/panel-plugins
++plugindir = $(libexecdir)/xfce4/panel/plugins
+ xfce4_popup_dict_SOURCES = \
+ 	xfce4-popup-dict.c							\
+ 	xfce4-popup-dict.h
+@@ -299,7 +299,7 @@ xfce4_dict_plugin_LDADD = \
+ 	$(EXO_LIBS)									\
+ 	@GTHREAD_LIBS@
+ 
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_in_in_files = dict.desktop.in.in
+ desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+@@ -711,7 +711,7 @@ uninstall-am: uninstall-binPROGRAMS unin
+ inline-icon.h: $(srcdir)/dict-icon.svg
+ 	gdk-pixbuf-csource --raw --name=dict_icon_data dict-icon.svg > inline-icon.h
+ %.desktop.in: %.desktop.in.in
+-	sed -e "s,\@libexecdir\@,$(libexecdir),g" < $< > $@
++	sed -e "s,\@libexecdir\@/xfce4/panel-plugins,$(libexecdir)/xfce4/panel/plugins,g" < $< > $@
+ @INTLTOOL_DESKTOP_RULE@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

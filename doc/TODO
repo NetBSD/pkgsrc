@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14350 2015/04/20 13:39:45 rodent Exp $
+$NetBSD: TODO,v 1.14351 2015/04/21 08:56:38 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -1158,7 +1158,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-voodoo-1.2.5 [wip]
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xfce-4.12
-	o xfce4-4.10
 	o xfce4-volman-0.3.80
 	o xfig-3.2.5c
 	o xforms-1.0.93sp1

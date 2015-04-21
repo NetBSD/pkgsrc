@@ -1,0 +1,14 @@
+$NetBSD: patch-xfce4-settings-manager_Makefile.in,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+
+Adjust config path.
+--- xfce4-settings-manager/Makefile.in.orig	2015-02-28 19:10:30.000000000 +0000
++++ xfce4-settings-manager/Makefile.in
+@@ -489,7 +489,7 @@ xfce4_settings_manager_LDADD = \
+ 	$(EXO_LIBS) \
+ 	$(GARCON_LIBS)
+ 
+-menudir = $(sysconfdir)/xdg/menus
++menudir = $(datadir)/examples/xfce4/menus
+ menu_DATA = xfce-settings-manager.menu
+ desktopdir = $(datadir)/applications
+ desktop_in_files = xfce-settings-manager.desktop.in

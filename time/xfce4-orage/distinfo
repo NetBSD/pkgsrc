@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/08/16 08:14:31 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/04/21 08:56:42 jperkin Exp $
 
-SHA1 (orage-4.6.1.tar.bz2) = 2db15404197ef9aa6f588c0eebac9fc4f68426df
-RMD160 (orage-4.6.1.tar.bz2) = 7724992e2e177487c71597a15d7faf7f865bb56b
-Size (orage-4.6.1.tar.bz2) = 1937593 bytes
-SHA1 (patch-aa) = 443913928b351028d34bdd07cb6cf60006f60e25
-SHA1 (patch-src_reminder.c) = 33267e51deb1ee1ec8e01155f9422f093c073175
+SHA1 (orage-4.10.0.tar.bz2) = 1d19e097958b710005789973d385ca13338b26f9
+RMD160 (orage-4.10.0.tar.bz2) = 863c4c681dc20e4244a1b3e27707a97008505de9
+Size (orage-4.10.0.tar.bz2) = 2513559 bytes
+SHA1 (patch-panel-plugin_Makefile.in) = a437a026d2575a22568dda1fe1622458d7b1a511

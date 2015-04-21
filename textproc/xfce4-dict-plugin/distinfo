@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 08:56:42 jperkin Exp $
 
-SHA1 (xfce4-dict-plugin-0.2.1.tar.bz2) = bfaf060bf8491833640c65096c90e9473479388b
-RMD160 (xfce4-dict-plugin-0.2.1.tar.bz2) = 77471c43d5627386580d35e29101ac7a5bb64225
-Size (xfce4-dict-plugin-0.2.1.tar.bz2) = 287026 bytes
+SHA1 (xfce4-dict-plugin-0.3.0.tar.gz) = 39f1b52c79fc94f6b0200f80cbee86a3163e8db8
+RMD160 (xfce4-dict-plugin-0.3.0.tar.gz) = 9073f0f25f08acaeaeafd786a8faa9f3647fcea0
+Size (xfce4-dict-plugin-0.3.0.tar.gz) = 411422 bytes
+SHA1 (patch-panel-plugin_Makefile.in) = d77a2e913c078ee6b489e3f27662dd6cd7ec1150

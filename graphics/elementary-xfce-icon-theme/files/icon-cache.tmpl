@@ -1,0 +1,36 @@
+# $NetBSD: icon-cache.tmpl,v 1.1 2015/04/21 08:56:38 jperkin Exp $
+#
+# Rebuild the icon cache.
+#
+
+GTK_UPDATE_ICON_CACHE="@GTK_UPDATE_ICON_CACHE@"
+ICON_THEME_DIR="@ICON_THEME_DIR@"
+
+case ${STAGE} in
+POST-INSTALL)
+	for i in xfce xfce-dark xfce-darker xfce-darkest 
+	do
+	${TEST} -x ${GTK_UPDATE_ICON_CACHE} && \
+	${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR}/elementary-${i} >/dev/null 2>&1 || \
+		${TRUE}
+	done
+	;;
+DEINSTALL)
+	for i in xfce xfce-dark xfce-darker xfce-darkest
+	do
+	${TEST} "${PKGBASE}" = "elementary-xfce-icon-theme" && \
+		${RM} -f ${ICON_THEME_DIR}/elementary-${i}/icon-theme.cache
+	done
+	;;
+POST-DEINSTALL)
+	for i in xfce xfce-dark xfce-darker xfce-darkest
+	do
+	${TEST} "${PKGBASE}" != "elementary-xfce-icon-theme" && \
+		${TEST} -x ${GTK_UPDATE_ICON_CACHE} && \
+		${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR}/elemantary-${i} >/dev/null \
+			2>&1 || ${TRUE}
+	done
+	;;
+*)
+	;;
+esac

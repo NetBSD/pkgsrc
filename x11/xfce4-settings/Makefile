@@ -1,35 +1,35 @@
-# $NetBSD: Makefile,v 1.29 2014/05/05 00:48:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/21 08:56:45 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=		4.6.5
-
 DISTNAME=		xfce4-settings-${XFCE4_VERSION}
-PKGREVISION=		23
 CATEGORIES=		x11
-COMMENT=		Xfce settings manager
 
-MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-settings/4.6/
+HOMEPAGE=	http://docs.xfce.org/xfce/xfce4-settings/start
+COMMENT=		Xfce settings manager
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--enable-sound-settings
 
-EGDIR=			${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml
 PKG_SYSCONFSUBDIR=	xdg
 
-MAKE_DIRS+=	${XFCE4_EGBASE:Q} ${XFCE4_EGBASE:Q}/xfconf ${EGDIR}
+CONF_FILES=	${XFCE4_EGBASE}/menus/xfce-settings-manager.menu \
+		${PKG_SYSCONFDIR}/menus/xfce-settings-manager.menu \
+		${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml/xsettings.xml \
+		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml \
+		${XFCE4_EGBASE}/autostart/xfsettingsd.desktop \
+		${PKG_SYSCONFDIR}/autostart/xfsettingsd.desktop
 
-CONF_FILES=	${EGDIR}/xsettings.xml \
-	${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
+		${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml \
+		${XFCE4_EGBASE}/autostart \
+		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml
 
-CONF_FILES+=	\
-	${XFCE4_EGBASE:Q}/autostart/xfce4-settings-helper-autostart.desktop \
-	${PKG_SYSCONFDIR}/autostart/xfce4-settings-helper-autostart.desktop
-
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/xfconf/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
@@ -37,8 +37,10 @@ CONF_FILES+=	\
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libxfce4gui/buildlink3.mk"
-.include "../../x11/libxfce4util/buildlink3.mk"
+.include "../../x11/libxfce4ui/buildlink3.mk"
+.include "../../devel/xfce4-conf/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
+.include "../../x11/xfce4-garcon/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
