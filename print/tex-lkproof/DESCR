@@ -1,0 +1,2 @@
+The package defines a pair of commands \infer and \deduce, that
+are used in constructing LK proof diagrams.
