@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/04/09 01:28:23 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/04/21 01:02:20 mef Exp $
 
-SHA1 (FileHandle-Unget-0.1625.tar.gz) = bd8d5bcbd931bf056db50bef97a67a35275eb220
-RMD160 (FileHandle-Unget-0.1625.tar.gz) = 495fb83fbaef773cc93111878ee47609cd8c4e88
-Size (FileHandle-Unget-0.1625.tar.gz) = 37286 bytes
+SHA1 (FileHandle-Unget-0.1627.tar.gz) = 57d11fe7425f8df19d9326319b247e49f79afcf1
+RMD160 (FileHandle-Unget-0.1627.tar.gz) = ffac3b4c1083d9acbe090151326689176906ae44
+Size (FileHandle-Unget-0.1627.tar.gz) = 40139 bytes
