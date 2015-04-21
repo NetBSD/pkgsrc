@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+
+SHA1 (garcon-0.4.0.tar.bz2) = 9978c7f3181f7d8fd930cce74293d2a360743182
+RMD160 (garcon-0.4.0.tar.bz2) = 2fda30580280f9e00b1cdfe932158a553ce9091a
+Size (garcon-0.4.0.tar.bz2) = 466118 bytes
+SHA1 (patch-data_xfce_Makefile.in) = f4c247f103669e3b78bb58fe7775372a390af7c1
+SHA1 (patch-garcon-gtk_Makefile.in) = 182a1df29c27ec1b13e4892c259a009b45ad0058
+SHA1 (patch-garcon_Makefile.in) = f180fcd4e7991268017218cb3ce3964566861ec1

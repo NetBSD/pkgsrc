@@ -1,0 +1,23 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/04/21 08:56:43 jperkin Exp $
+
+Adjust config path
+--- panel-plugin/Makefile.in.orig	2014-05-31 17:03:00.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -565,7 +565,7 @@ libclipman_la_LIBADD = \
+ #
+ # XML Actions File
+ #
+-actionsdir = $(sysconfdir)/xdg/xfce4/panel
++actionsdir = $(datadir)/examples/xfce4/panel
+ actions_in_files = xfce4-clipman-actions.xml.in
+ actions_DATA = $(actions_in_files:.xml.in=.xml)
+ 
+@@ -582,7 +582,7 @@ apps_DATA = $(apps_in_files:.desktop.in=
+ #
+ # Autostart File
+ #
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/examples/xfce4/autostart
+ autostart_in_files = xfce4-clipman-plugin-autostart.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ 
