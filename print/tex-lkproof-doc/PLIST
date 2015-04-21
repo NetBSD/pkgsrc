@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/21 22:17:23 markd Exp $
+share/texmf-dist/doc/latex/lkproof/lkproof-doc.pdf
+share/texmf-dist/doc/latex/lkproof/lkproof-doc.tex
+share/texmf-dist/doc/latex/lkproof/proofeg.tex
