@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.11 2014/09/03 10:03:31 jperkin Exp $
+# $NetBSD: inplace.mk,v 1.12 2015/04/21 00:26:48 joerg Exp $
 #
 # This file should not be included directly. Use USE_FEATURES instead.
 #
@@ -28,8 +28,12 @@ post-extract: libnbcompat-extract
 .PHONY: libnbcompat-extract
 libnbcompat-extract:
 	${RUN} ${CP} -R ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
+	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.guess ${LIBNBCOMPAT_SRCDIR}/config.guess
+	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.sub ${LIBNBCOMPAT_SRCDIR}/config.sub
 .if !empty(LIBNBCOMPAT_USE_PIC:M[Yy][Ee][Ss])
 	${RUN} ${CP} -R ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_PICDIR}
+	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.guess ${LIBNBCOMPAT_PICDIR}/config.guess
+	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.sub ${LIBNBCOMPAT_PICDIR}/config.sub
 .endif
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
