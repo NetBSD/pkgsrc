@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1880 2015/04/21 02:14:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1881 2015/04/21 07:58:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2587,3 +2587,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Dist-Zilla to 5.035 [mef 2015-04-21]
 	Updated devel/p5-File-ShareDir-ProjectDistDir to 1.000005 [mef 2015-04-21]
 	Updated devel/p5-FileHandle-Unget to 0.1627 [mef 2015-04-21]
+	Updated devel/libbson to 1.1.4 [fhajny 2015-04-21]
