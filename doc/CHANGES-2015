@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1889 2015/04/21 22:48:37 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1890 2015/04/21 22:49:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2660,5 +2660,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-adjustbox-doc version 1.0 [markd 2015-04-21]
 	Added print/tex-collectbox-doc version 0.4b [markd 2015-04-21]
 	Added print/tex-ydoc-doc version 0.6alpha [markd 2015-04-21]
-	Updated devel/p5-Tie-Cache-LRU to 20150301 [mef 2015-04-21]
 	Updated devel/p5-Tie-Cache-LRU to 20150301 [mef 2015-04-21]
