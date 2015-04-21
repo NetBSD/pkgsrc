@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/04/20 13:38:23 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/21 03:34:22 rodent Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.audacity
 PKG_SUPPORTED_OPTIONS=		alsa debug jack ladspa nls
@@ -30,7 +30,6 @@ BROKEN=				gtk3 option needs work
 
 .if !empty(PKG_OPTIONS:Mjack)
 .include "../../audio/jack/buildlink3.mk"
-BROKEN=				Fails to build with jack support
 .endif
 
 .if !empty(PKG_OPTIONS:Mladspa)
