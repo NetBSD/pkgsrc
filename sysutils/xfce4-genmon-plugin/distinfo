@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 08:56:40 jperkin Exp $
 
-SHA1 (xfce4-genmon-plugin-3.1.tar.bz2) = afec76670999efd8a17db791451aa26bf62ce58d
-RMD160 (xfce4-genmon-plugin-3.1.tar.bz2) = 7b082dd130a889e17e9f1c9ab30dca6cea34502c
-Size (xfce4-genmon-plugin-3.1.tar.bz2) = 117704 bytes
+SHA1 (xfce4-genmon-plugin-3.4.0.tar.bz2) = 6c249521394ee97704f2d10d0b5dd18bbb171f64
+RMD160 (xfce4-genmon-plugin-3.4.0.tar.bz2) = 9198decdcc9918ae068292e7bf98bfeb04d70a1f
+Size (xfce4-genmon-plugin-3.4.0.tar.bz2) = 307493 bytes
+SHA1 (patch-panel-plugin_cmdspawn.c) = 7611155db0de99ba45a6d8e94b94b75e8cac8c96

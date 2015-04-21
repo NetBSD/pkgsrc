@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.48 2014/05/05 00:48:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2015/04/21 08:56:45 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=		xfce4-session-${XFCE4_VERSION}
-PKGREVISION=		21
+DISTNAME=		xfce4-session-4.10.1
 CATEGORIES=		x11
+MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-session/4.10/
+
+HOMEPAGE=	http://docs.xfce.org/xfce/xfce4-session/start
 COMMENT=		Xfce session manager
 
 PKGCONFIG_OVERRIDE+=	libxfsm/xfce4-session-2.0.pc.in
@@ -28,18 +30,27 @@ MAKE_DIRS+=	${PREFIX}/share/xfce4 ${PREFIX}/share/xfce4/doc
 MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/C ${PREFIX}/share/xfce4/doc/C/images
 MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/fr ${PREFIX}/share/xfce4/doc/fr/images
 
+#CONF_FILES=	${EGDIR}/applications/xfce-session-settings.desktop \
+		${PKG_SYSCONFDIR}/applications/xfce-session-settings.desktop
+#CONF_FILES+=	${EGDIR}/applications/xfce4-session-logout.desktop \
+		${PKG_SYSCONFDIR}/applications/xfce4-session-logout.desktop
+CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop \
+		${PKG_SYSCONFDIR}/autostart/xscreensaver.desktop
 CONF_FILES=	${EGDIR}/xfconf/xfce-perchannel-xml/xfce4-session.xml \
-	${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-CONF_FILES+=	${EGDIR}/autostart/xfce4-tips-autostart.desktop \
-		${PKG_SYSCONFDIR}/autostart/xfce4-tips-autostart.desktop
+		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
+CONF_FILES+=	${EGDIR}/Xft.xrdb \
+		${PKG_SYSCONFDIR}/xfce4/Xft.xrdb
+CONF_FILES+=	${EGDIR}/xinitrc \
+		${PKG_SYSCONFDIR}/xfce4/xinitrc
+
+.if !empty(Darwin-*-*)
+.include "../../sysutils/consolekit/buildlink3.mk"
+.endif
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/xfconf/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libxfce4gui/buildlink3.mk"
-.include "../../x11/libxfce4util/buildlink3.mk"
+.include "../../x11/libxfce4ui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

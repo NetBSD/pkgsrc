@@ -1,0 +1,15 @@
+$NetBSD: patch-defaults_defaults,v 1.1 2015/04/21 08:56:43 jperkin Exp $
+
+Use a more pleasing theme by default. It would be even better
+if we could use one from the extra themes.
+--- defaults/defaults.orig	2015-02-28 19:17:44.000000000 +0000
++++ defaults/defaults
+@@ -52,7 +52,7 @@ snap_to_border=true
+ snap_to_windows=false
+ snap_width=10
+ sync_to_vblank=false
+-theme=Default
++theme=Daloa
+ tile_on_move=true
+ title_alignment=center
+ title_font=Sans Bold 9
