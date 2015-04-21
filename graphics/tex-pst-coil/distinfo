@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:01 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 23:55:28 markd Exp $
 
-SHA1 (tex-pst-coil-16895/pst-coil.tar.xz) = 9c60e07148a262ecb7bdd1f7078063df4c7d3497
-RMD160 (tex-pst-coil-16895/pst-coil.tar.xz) = 5969c08cd15317d995cf77db8fad62832aa61bde
-Size (tex-pst-coil-16895/pst-coil.tar.xz) = 3144 bytes
+SHA1 (tex-pst-coil-24020/pst-coil.tar.xz) = d703022d0fe3b2f12ccc25b9030b0bde1724829f
+RMD160 (tex-pst-coil-24020/pst-coil.tar.xz) = d425675b313185186d2625bb78a7644cf530b51e
+Size (tex-pst-coil-24020/pst-coil.tar.xz) = 3892 bytes
