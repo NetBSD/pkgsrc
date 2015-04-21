@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/10 02:47:54 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/04/21 22:26:06 markd Exp $
 
-SHA1 (ydoc-0.6alpha/ydoc.tds.zip) = 4aeee82e708bc06552283d0877af01cc337f99ca
-RMD160 (ydoc-0.6alpha/ydoc.tds.zip) = 9c4004065ab17b190b55b4c46e7e4195a8ebf452
-Size (ydoc-0.6alpha/ydoc.tds.zip) = 352839 bytes
+SHA1 (tex-ydoc-26202/ydoc.tar.xz) = 3cf22de1df0399b60df2ffc03518009a0fa39f22
+RMD160 (tex-ydoc-26202/ydoc.tar.xz) = 2def2fed26a9341500469c6d37996e4ec0ebd00d
+Size (tex-ydoc-26202/ydoc.tar.xz) = 9112 bytes
