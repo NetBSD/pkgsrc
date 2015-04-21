@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1884 2015/04/21 11:28:35 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1885 2015/04/21 11:38:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2650,3 +2650,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xfce4-whiskermenu-plugin version 1.5.0 [jperkin 2015-04-21]
 	Updated www/firefox to 37.0.2 [ryoon 2015-04-21]
 	Updated www/firefox-l10n to 37.0.2 [ryoon 2015-04-21]
+	Updated devel/nss to 3.18.1 [ryoon 2015-04-21]
