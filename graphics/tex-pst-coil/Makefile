@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:38:01 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 23:55:28 markd Exp $
 
 DISTNAME=	pst-coil
-PKGNAME=	tex-${DISTNAME}-1.03
-TEXLIVE_REV=	16895
+PKGNAME=	tex-${DISTNAME}-1.05
+TEXLIVE_REV=	24020
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	PSTricks package for coils, etc
