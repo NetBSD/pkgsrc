@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/10 02:47:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/21 22:26:06 markd Exp $
+share/texmf-dist/tex/generic/ydoc/ydocincl.tex
+share/texmf-dist/tex/generic/ydoc/ydocstrip.tex
 share/texmf-dist/tex/latex/ydoc/ydoc-code.sty
 share/texmf-dist/tex/latex/ydoc/ydoc-desc.sty
 share/texmf-dist/tex/latex/ydoc/ydoc-doc.sty
 share/texmf-dist/tex/latex/ydoc/ydoc-expl.sty
+share/texmf-dist/tex/latex/ydoc/ydoc.cfg
 share/texmf-dist/tex/latex/ydoc/ydoc.cls
-share/texmf-dist/tex/latex/ydoc/ydocincl.tex
-share/texmf-dist/tex/latex/ydoc/ydocstrip.tex
+share/texmf-dist/tex/latex/ydoc/ydoc.sty
