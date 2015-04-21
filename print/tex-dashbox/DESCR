@@ -1,0 +1,3 @@
+The package can draw boxes that perform like \framebox or
+\fbox, but use dashed lines. The package can also draw (an
+illusion of) vertical stacks of boxes.
