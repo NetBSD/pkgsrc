@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.45 2014/07/25 23:40:01 ryoon Exp $
+# $NetBSD: DragonFly.mk,v 1.46 2015/04/21 17:01:56 joerg Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -23,6 +23,7 @@ ROOT_GROUP?=		wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
 
 _OPSYS_EMULDIR.linux=	/compat/linux
 
