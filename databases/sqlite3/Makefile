@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2015/04/11 12:42:06 adam Exp $
+# $NetBSD: Makefile,v 1.95 2015/04/21 23:26:42 khorben Exp $
 
-DISTNAME=	sqlite-autoconf-3080900
-PKGNAME=	sqlite3-3.8.9
+DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
+PKGNAME=	sqlite3-${SQLITE3_VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/2015/ \
 		http://www.sqlite.org/2015/
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.sqlite.org/
 COMMENT=	SQL Database Engine in a C Library
 LICENSE=	public-domain
 
+.include "../../databases/sqlite3/Makefile.version"
 .include "options.mk"
 
 USE_LIBTOOL=		yes
