@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/21 22:36:37 markd Exp $
+share/texmf-dist/doc/latex/adjustbox/README
+share/texmf-dist/doc/latex/adjustbox/adjcalc.pdf
+share/texmf-dist/doc/latex/adjustbox/adjustbox.pdf
+share/texmf-dist/doc/latex/adjustbox/trimclip.pdf
