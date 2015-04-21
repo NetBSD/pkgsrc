@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/05 15:59:30 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 23:19:03 markd Exp $
 
 DISTNAME=	l3packages
-PKGNAME=	tex-${DISTNAME}-0.2900
-TEXLIVE_REV=	24257
+PKGNAME=	tex-${DISTNAME}-0.5471
+TEXLIVE_REV=	35669
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	High-level LaTeX3 concepts
