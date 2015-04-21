@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/04/13 13:23:05 adam Exp $
+# $NetBSD: options.mk,v 1.3.32.1 2015/04/21 18:55:45 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-ldap
 PKG_SUPPORTED_OPTIONS=	sasl exop
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+= --with-ldap-sasl=${PREFIX}
 
 .if !empty(PKG_OPTIONS:Mexop)
 USE_TOOLS+=	patch
-EXOP_PATCH=	${FILESDIR}/ldap-ctrl-exop.patch
+EXOP_PATCH=	${FILESDIR}/ldap-ctrl-exop${PKG_PHP_VERSION}.patch
 post-patch:
 	${PATCH} -d ${WRKSRC} -p2 --forward --quiet  < ${EXOP_PATCH}
 .endif
