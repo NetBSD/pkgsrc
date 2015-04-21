@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.598 2015/04/21 08:56:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.599 2015/04/21 22:19:38 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -304,6 +304,8 @@ SUBDIR+=	tex-cyrillic
 SUBDIR+=	tex-cyrillic-bin
 SUBDIR+=	tex-cyrillic-bin-doc
 SUBDIR+=	tex-cyrillic-doc
+SUBDIR+=	tex-dashbox
+SUBDIR+=	tex-dashbox-doc
 SUBDIR+=	tex-datatool
 SUBDIR+=	tex-datatool-doc
 SUBDIR+=	tex-datetime
@@ -498,6 +500,8 @@ SUBDIR+=	tex-listing
 SUBDIR+=	tex-listing-doc
 SUBDIR+=	tex-listings
 SUBDIR+=	tex-listings-doc
+SUBDIR+=	tex-lkproof
+SUBDIR+=	tex-lkproof-doc
 SUBDIR+=	tex-logreq
 SUBDIR+=	tex-logreq-doc
 SUBDIR+=	tex-ltxmisc
