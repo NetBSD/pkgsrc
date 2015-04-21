@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2015/02/16 17:27:44 nros Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/21 22:45:53 markd Exp $
 
-.include "Makefile.common"
+DISTNAME=	biblatex
+PKGNAME=	tex-${DISTNAME}-2.9a
+TEXLIVE_REV=	34433
+PKGREVISION=	1
 
-PKGNAME=	tex-${DISTNAME:S/.tds//}
-
+MAINTAINER=	markd@NetBSD.org
 COMMENT=	Bibliographies in LaTeX using BibTeX for sorting only
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
@@ -13,10 +16,5 @@ DEPENDS+=	tex-logreq>=1.0:../../print/tex-logreq
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	p5-biblatex-biber>=1.9:../../print/p5-biblatex-biber
 
-do-install:
-	cd ${WRKSRC} && \
-	${PAX} -rwpm bibtex ${DESTDIR}${PREFIX}/share/texmf-dist && \
-	${PAX} -rwpm tex ${DESTDIR}${PREFIX}/share/texmf-dist
-
-.include "../../print/kpathsea/texmf.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
