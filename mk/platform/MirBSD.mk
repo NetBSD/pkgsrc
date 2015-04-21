@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.10 2014/03/19 16:44:08 bsiegert Exp $
+# $NetBSD: MirBSD.mk,v 1.11 2015/04/21 17:01:56 joerg Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -26,6 +26,7 @@ ROOT_GROUP?=		wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
 
 X11_TYPE?=		modular
 
