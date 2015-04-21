@@ -1,4 +1,4 @@
-# $NetBSD: GNUkFreeBSD.mk,v 1.2 2014/02/19 17:20:23 jperkin Exp $
+# $NetBSD: GNUkFreeBSD.mk,v 1.3 2015/04/21 17:01:56 joerg Exp $
 #
 # Variable definitions for the Debian GNU/kFreeBSD operating system.
 
@@ -28,6 +28,7 @@ SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
 USERADD?=		/usr/sbin/useradd
 
 .if !empty(MACHINE_ARCH:Mx86_64)

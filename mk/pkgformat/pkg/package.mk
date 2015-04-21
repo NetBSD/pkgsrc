@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.9 2015/02/16 10:50:33 jperkin Exp $
+# $NetBSD: package.mk,v 1.10 2015/04/21 17:01:56 joerg Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -72,7 +72,7 @@ _PKG_ARGS_PACKAGE+=	-u ${REAL_ROOT_USER} -g ${REAL_ROOT_GROUP}
 ${STAGE_PKGFILE}: ${_CONTENTS_TARGETS}
 	${RUN} ${MKDIR} ${.TARGET:H}
 	@${STEP_MSG} "Creating binary package ${.TARGET}"
-	${RUN} tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};	\
+	${RUN} ${_ULIMIT_CMD} tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};	\
 	if ${PKG_CREATE} ${_PKG_ARGS_PACKAGE} "$$tmpname"; then		\
 		${MV} -f "$$tmpname" ${.TARGET};			\
 	else								\
