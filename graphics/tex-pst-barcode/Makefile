@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/05 19:37:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 23:48:03 markd Exp $
 
 DISTNAME=	pst-barcode
-PKGNAME=	tex-${DISTNAME}-0.08
-TEXLIVE_REV=	21716
+PKGNAME=	tex-${DISTNAME}-0.12
+TEXLIVE_REV=	32004
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Print barcodes using PostScript
