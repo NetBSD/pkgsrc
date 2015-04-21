@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1879 2015/04/20 21:51:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1880 2015/04/21 02:14:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2579,3 +2579,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-lupa version 1.1 [alnsn 2015-04-20]
 	Added x11/xrootconsole version 0.6nb2 [cheusov 2015-04-20]
 	Updated graphics/mng to 2.0.3 [wiz 2015-04-20]
+	Updated devel/p5-App-FatPacker to 0.010003 [mef 2015-04-20]
+	Updated devel/p5-App-cpanminus to 1.7030 [mef 2015-04-21]
+	Updated devel/p5-B-Compiling to 0.06 [mef 2015-04-21]
+	Updated devel/p5-Config-Find to 0.28 [mef 2015-04-21]
+	Updated devel/p5-Config-IniFiles to 2.86 [mef 2015-04-21]
+	Updated devel/p5-Dist-Zilla to 5.035 [mef 2015-04-21]
+	Updated devel/p5-File-ShareDir-ProjectDistDir to 1.000005 [mef 2015-04-21]
+	Updated devel/p5-FileHandle-Unget to 0.1627 [mef 2015-04-21]
