@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1883 2015/04/21 08:56:37 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.1884 2015/04/21 11:28:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2648,3 +2648,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xfce4-tumbler version 0.1.31 [jperkin 2015-04-21]
 	Removed x11/xfce4-utils [jperkin 2015-04-21]
 	Added x11/xfce4-whiskermenu-plugin version 1.5.0 [jperkin 2015-04-21]
+	Updated www/firefox to 37.0.2 [ryoon 2015-04-21]
+	Updated www/firefox-l10n to 37.0.2 [ryoon 2015-04-21]
