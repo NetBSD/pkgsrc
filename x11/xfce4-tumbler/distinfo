@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+
+SHA1 (tumbler-0.1.31.tar.bz2) = cba7b81f8269f30dd6412d133767b6044c470f2c
+RMD160 (tumbler-0.1.31.tar.bz2) = 35dc77a7e2834b57a93425e869549280d15ee4f8
+Size (tumbler-0.1.31.tar.bz2) = 550650 bytes
+SHA1 (patch-tumblerd_Makefile.in) = 0e8b939381a7bbd38603a7bd79c2ddedeb33f6a7

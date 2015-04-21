@@ -1,0 +1,11 @@
+$NetBSD: patch-exo-helper_helpers_helpers.rc,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+
+Look for thunar, not Thunar.
+--- exo-helper/helpers/helpers.rc.orig	2015-02-28 14:00:00.000000000 +0000
++++ exo-helper/helpers/helpers.rc
+@@ -7,4 +7,4 @@
+ WebBrowser=firefox
+ MailReader=thunderbird
+ TerminalEmulator=xfce4-terminal
+-FileManager=Thunar
++FileManager=thunar

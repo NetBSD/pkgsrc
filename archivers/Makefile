@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2015/04/03 09:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2015/04/21 08:56:37 jperkin Exp $
 #
 
 COMMENT=	Archivers
@@ -104,6 +104,7 @@ SUBDIR+=	unzip
 SUBDIR+=	unzoo
 SUBDIR+=	upx
 SUBDIR+=	xbin
+SUBDIR+=	xfce4-thunar-archive
 SUBDIR+=	xmill
 SUBDIR+=	xpk
 SUBDIR+=	xz

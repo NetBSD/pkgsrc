@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.35 2015/01/04 09:35:23 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2015/04/21 08:56:40 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.5.1
-
-DISTNAME=	xfce4-battery-plugin-${XFCE4_VERSION}
-PKGREVISION=	25
+VERSION=	1.0.5
+DISTNAME=	xfce4-battery-plugin-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-battery-plugin/
+MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.0/
+
+HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin
 COMMENT=	Xfce battery monitor plugin
 
 # On NetBSD/sparc64, apmvar.h is not exist in /usr/include/machine.
@@ -18,8 +18,6 @@ COMMENT=	Xfce battery monitor plugin
      !exists(/usr/include/sparc/apmio.h))
 PKG_FAIL_REASON+=	"APM is not available on ${MACHINE_PLATFORM}."
 .endif
-
-USE_TOOLS+=	perl:run
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"

@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.31 2015/01/08 10:14:38 martin Exp $
+# $NetBSD: Makefile,v 1.32 2015/04/21 08:56:38 jperkin Exp $
 #
 
-DISTNAME=	ristretto-0.0.22
-PKGREVISION=	27
+DISTNAME=	ristretto-0.8.0
+EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	graphics
-MASTER_SITES=	http://goodies.xfce.org/releases/ristretto/
+MASTER_SITES=	http://archive.xfce.org/src/apps/ristretto/0.8/
 
 MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://goodies.xfce.org/projects/applications/ristretto
 COMMENT=	Xfce image viewer
 LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -22,12 +22,15 @@ LDFLAGS.DragonFly=	-lX11
 LDFLAGS.FreeBSD=	-lX11
 LDFLAGS.SunOS=		-lX11
 
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../sysutils/xfce4-thunar/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxfce4util/buildlink3.mk"
+.include "../../x11/libxfce4ui/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2082 2015/04/20 19:38:03 alnsn Exp $
+# $NetBSD: Makefile,v 1.2083 2015/04/21 08:56:37 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -1967,8 +1967,8 @@ SUBDIR+=	wide
 SUBDIR+=	xa65
 SUBDIR+=	xdelta
 SUBDIR+=	xdelta3
+SUBDIR+=	xfce4-conf
 SUBDIR+=	xfce4-dev-tools
-SUBDIR+=	xfconf
 SUBDIR+=	xmake
 SUBDIR+=	xorg-util-macros
 SUBDIR+=	xsd

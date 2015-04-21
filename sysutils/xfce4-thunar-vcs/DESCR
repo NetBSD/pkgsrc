@@ -1,0 +1,8 @@
+Thunar vcs plugin adds Subversion actions to the context menu of thunar.
+The current features are:
+* Most of the svn action: add, checkout, cleanup, commit, copy, delete,
+  export, import, lock, log, move, properties, resolved, revert, status,
+  unlock, update.
+* Subversion info in file properties dialog.
+* Basic git actions: add, blame, branch, clean, clone, log, move, reset,
+  stash, status.

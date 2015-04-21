@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.463 2015/02/04 15:23:31 taca Exp $
+# $NetBSD: Makefile,v 1.464 2015/04/21 08:56:38 jperkin Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -347,6 +347,7 @@ SUBDIR+=	wmbiff
 SUBDIR+=	wmmail
 SUBDIR+=	xbiff
 SUBDIR+=	xbuffy
+SUBDIR+=	xfce4-mailwatch-plugin
 SUBDIR+=	xfmail
 SUBDIR+=	xmailbox
 SUBDIR+=	xmailwatcher

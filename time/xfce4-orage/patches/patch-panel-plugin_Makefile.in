@@ -1,0 +1,32 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/04/21 08:56:42 jperkin Exp $
+
+Adjust config path.
+--- panel-plugin/Makefile.in.orig	2015-03-11 12:59:39.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -279,7 +279,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-plugindir = $(libexecdir)/xfce4/panel-plugins
++plugindir = $(libexecdir)/xfce4/panel/plugins
+ xfce4_orageclock_plugin_CFLAGS = \
+ 	-DPACKAGE_DATA_DIR=\"$(datadir)\"				\
+ 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"			\
+@@ -308,7 +308,7 @@ xfce4_orageclock_plugin_SOURCES = \
+ # 
+ desktop_in_in_files = xfce4-orageclock-plugin.desktop.in.in
+ desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ EXTRA_DIST = \
+ 	$(desktop_in_in_files)
+@@ -734,7 +734,7 @@ uninstall-am: uninstall-desktopDATA unin
+ # get full path into .desktop file
+ #%.desktop.in: %.desktop.in.in
+ xfce4-orageclock-plugin.desktop.in: xfce4-orageclock-plugin.desktop.in.in
+-	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel-plugins^" \
++	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel/plugins^" \
+ 		$< > $@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.

@@ -1,0 +1,14 @@
+$NetBSD: patch-migrate_Makefile.in,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+
+Adjust config path.
+--- migrate/Makefile.in.orig	2012-04-28 20:31:39.000000000 +0000
++++ migrate/Makefile.in
+@@ -375,7 +375,7 @@ INCLUDES = \
+ 	-DXDGCONFIGDIR=\"$(sysconfdir)/xdg\" \
+ 	$(PLATFORM_CPPFLAGS)
+ 
+-confdir = $(sysconfdir)/xdg/xfce4/panel
++confdir = $(datadir)/examples/xfce4/panel
+ conf_DATA = \
+ 	default.xml
+ 

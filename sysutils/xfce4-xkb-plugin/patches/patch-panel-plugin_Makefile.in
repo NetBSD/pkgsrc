@@ -1,0 +1,32 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/04/21 08:56:42 jperkin Exp $
+
+Adjust config path.
+--- panel-plugin/Makefile.in.orig	2013-05-20 22:01:11.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -327,7 +327,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-plugindir = $(libexecdir)/xfce4/panel-plugins
++plugindir = $(libexecdir)/xfce4/panel/plugins
+ xfce4_xkb_plugin_SOURCES = \
+ 	xfce4-xkb-plugin.h								\
+ 	xfce4-xkb-plugin-private.h							\
+@@ -370,7 +370,7 @@ xfce4_xkb_plugin_LDADD = \
+ #
+ # Desktop file
+ #
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_in_in_files = xkb-plugin.desktop.in.in
+ desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+@@ -833,7 +833,7 @@ uninstall-am: uninstall-desktopDATA unin
+ 	uninstall-pluginPROGRAMS
+ 
+ %.desktop.in: %.desktop.in.in
+-	sed -e "s,\@libexecdir\@,$(libexecdir),g" < $< > $@
++	sed -e "s,\@libexecdir\@/xfce4/panel-plugins,$(libexecdir)/xfce4/panel/plugins,g" < $< > $@
+ @INTLTOOL_DESKTOP_RULE@
+ 
+ # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

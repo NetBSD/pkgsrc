@@ -1,0 +1,14 @@
+$NetBSD: patch-data_xfce_Makefile.in,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+
+Adjust config path
+--- data/xfce/Makefile.in.orig	2015-02-28 15:11:27.000000000 +0000
++++ data/xfce/Makefile.in
+@@ -354,7 +354,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-menudir = $(sysconfdir)/xdg/menus
++menudir = $(datadir)/examples/xfce4/menus
+ menu_DATA = \
+ 	xfce-applications.menu
+ 

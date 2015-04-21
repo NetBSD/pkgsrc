@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/04/21 08:56:42 jperkin Exp $
 bin/xarchiver
 libexec/thunar-archive-plugin/xarchiver.tap
 share/applications/xarchiver.desktop
@@ -45,9 +45,9 @@ share/icons/hicolor/24x24/apps/xarchiver.png
 share/icons/hicolor/48x48/apps/xarchiver.png
 share/icons/hicolor/scalable/apps/xarchiver.svg
 share/locale/bg/LC_MESSAGES/xarchiver.mo
-share/locale/da/LC_MESSAGES/xarchiver.mo
 share/locale/ca/LC_MESSAGES/xarchiver.mo
 share/locale/cs/LC_MESSAGES/xarchiver.mo
+share/locale/da/LC_MESSAGES/xarchiver.mo
 share/locale/de/LC_MESSAGES/xarchiver.mo
 share/locale/el/LC_MESSAGES/xarchiver.mo
 share/locale/en_GB/LC_MESSAGES/xarchiver.mo
@@ -61,8 +61,8 @@ share/locale/ja/LC_MESSAGES/xarchiver.mo
 share/locale/nb_NO/LC_MESSAGES/xarchiver.mo
 share/locale/nl/LC_MESSAGES/xarchiver.mo
 share/locale/pl/LC_MESSAGES/xarchiver.mo
-share/locale/pt_PT/LC_MESSAGES/xarchiver.mo
 share/locale/pt_BR/LC_MESSAGES/xarchiver.mo
+share/locale/pt_PT/LC_MESSAGES/xarchiver.mo
 share/locale/ru/LC_MESSAGES/xarchiver.mo
 share/locale/sq/LC_MESSAGES/xarchiver.mo
 share/locale/sv/LC_MESSAGES/xarchiver.mo

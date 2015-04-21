@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.39 2013/10/10 14:42:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2015/04/21 08:56:43 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	4.6.0
-DISTNAME=	xfwm4-themes-${XFCE4_VERSION}
-PKGNAME=	xfce4-wm-themes-${XFCE4_VERSION}
-PKGREVISION=	17
+VERSION=	4.10.0
+DISTNAME=	xfwm4-themes-${VERSION}
+PKGNAME=	xfce4-wm-themes-${VERSION}
 CATEGORIES=	wm
+MASTER_SITES=	http://archive.xfce.org/src/art/xfwm4-themes/4.10/
+
+HOMEPAGE=	https://wiki.xfce.org/howto/xfwm4_theme
 COMMENT=	Xfce window manager themes
 
 USE_LANGUAGES=	#empty

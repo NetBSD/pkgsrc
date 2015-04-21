@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/09/16 01:15:33 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/04/21 08:56:37 jperkin Exp $
 bin/xdt-autogen
 bin/xdt-commit
+bin/xdt-csource
 share/xfce4/dev-tools/m4macros/xdt-depends.m4
 share/xfce4/dev-tools/m4macros/xdt-features.m4
 share/xfce4/dev-tools/m4macros/xdt-i18n.m4

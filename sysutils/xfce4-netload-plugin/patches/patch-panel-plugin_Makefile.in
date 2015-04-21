@@ -1,0 +1,23 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/04/21 08:56:41 jperkin Exp $
+
+Adjust config path.
+--- panel-plugin/Makefile.in.orig	2014-11-22 21:10:32.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -355,7 +355,7 @@ commandline_LDADD = @LIBXFCE4PANEL_LIBS@
+ # 
+ desktop_in_in_files = netload.desktop.in.in
+ desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ EXTRA_DIST = \
+ 	wormulon commandline.c						\
+@@ -791,7 +791,7 @@ uninstall-am: uninstall-desktopDATA unin
+ 
+ # get full path into .desktop file
+ %.desktop.in: %.desktop.in.in
+-	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel-plugins^" \
++	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel/plugins^" \
+ 		$< > $@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.

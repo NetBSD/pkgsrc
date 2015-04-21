@@ -1,0 +1,23 @@
+$NetBSD: patch-scripts_startxfce4.in,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+
+Portability fix
+--- scripts/startxfce4.in.orig	2013-05-05 15:33:55.000000000 +0000
++++ scripts/startxfce4.in
+@@ -24,7 +24,7 @@ then
+   OPTS=""
+   for OPT in $*
+   do
+-    if test "x$OPT" == "x--help"
++    if test "x$OPT" = "x--help"
+     then
+       # print help and exit
+       echo "Usage:"
+@@ -37,7 +37,7 @@ then
+       echo
+ 
+       exit 0
+-    elif test "x$OPT" == "x--with-ck-launch"
++    elif test "x$OPT" = "x--with-ck-launch"
+     then
+       # try to launch xfce4-session with ck-launch-session in xinitrc
+       XFCE4_SESSION_WITH_CK="1"

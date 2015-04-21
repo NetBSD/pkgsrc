@@ -1,17 +1,25 @@
-# $NetBSD: Makefile,v 1.39 2014/08/21 14:33:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2015/04/21 08:56:44 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.6.0
-
-DISTNAME=	xfce4-notes-plugin-${XFCE4_VERSION}
-PKGREVISION=	21
+DISTNAME=	xfce4-notes-plugin-1.7.7
 CATEGORIES=	sysutils
-MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-notes-plugin/
+MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.7/
+
+HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin
 COMMENT=	Xfce notes plugin
 
 LDFLAGS.DragonFly=	-lm -lX11
 LDFLAGS.SunOS+=		-lm -lX11
 
+CONF_FILES=	${XFCE4_EGBASE}/autostart/xfce4-notes-autostart.desktop \
+		${PKG_SYSCONFDIR}/examples/autostart/xfce4-notes-autostart.desktop
+
+MAKE_DIRS+=	${XFCE4_EGBASE}/autostart
+
 .include "../../x11/xfce4-panel/buildlink3.mk"
+.include "../../x11/libxfce4gui/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
