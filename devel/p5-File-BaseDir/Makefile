@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/09 01:23:04 mef Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/21 04:31:06 mef Exp $
 
 DISTNAME=		File-BaseDir-0.06
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,10 @@ HOMEPAGE=		http://search.cpan.org/dist/File-BaseDir/
 COMMENT=		Perl module for the XDG Base Directory Specification
 LICENSE=		${PERL5_LICENSE}
 
+DEPENDS+=		p5-IPC-System-Simple-[0-9]*:../../devel/p5-IPC-System-Simple
+# for make test
+BUILD_DEPENDS+=		xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
+
 SHAREDIR=		${PREFIX}/share
 SHAREDIR_SPLIT=		${SHAREDIR:S/\// /g}
 SUBST_CLASSES+=		paths
@@ -19,6 +23,9 @@ SUBST_SED.paths=	-e 's|@SHAREDIR_SPLIT@|${SHAREDIR_SPLIT}|g'
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/File/BaseDir/.packlist
+
+pre-test:
+	${MKDIR} ${WRKDIR}/.home/.config/user-dirs.dirs
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
