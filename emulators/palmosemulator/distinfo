@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/06/19 20:29:34 asau Exp $
+$NetBSD: distinfo,v 1.12 2015/04/21 17:15:20 joerg Exp $
 
 SHA1 (palmosemulator/emulator_src_3.5.tar.gz) = 2debd7690736397d0af41f7b2d482df65391fc65
 RMD160 (palmosemulator/emulator_src_3.5.tar.gz) = fbb6761e4c43ecc9fb20d90d2ae0ec6ccf1c3f27
@@ -6,6 +6,22 @@ Size (palmosemulator/emulator_src_3.5.tar.gz) = 3162363 bytes
 SHA1 (palmosemulator/emulator-skins-19.tar.gz) = 70b0497061d6877a4e3c6a378fa647c64fe3e019
 RMD160 (palmosemulator/emulator-skins-19.tar.gz) = 9b4e16f50b1d2b9ad9b17e3a104c34a983d0a4ba
 Size (palmosemulator/emulator-skins-19.tar.gz) = 2443913 bytes
+SHA1 (patch-SrcShared_Hardware_EmRegs328Prv.h) = 6f60a4ef6056eee5909407f8369b3e1a21327bc6
+SHA1 (patch-SrcShared_Hardware_EmRegsASICSymbol1700.cpp) = a2154e85ad61cdaa9cc09829c6107842a0e9044b
+SHA1 (patch-SrcShared_Hardware_EmRegsEZPrv.h) = c4ecc99e5fd3a77891975c7d25af1e6a3ddbda96
+SHA1 (patch-SrcShared_Hardware_EmRegsEZTRGpro.cpp) = 319cc4f187eebdac7a46cbea5a432d4de8928f16
+SHA1 (patch-SrcShared_Hardware_EmRegsMediaQ11xx.cpp) = 66000dcb239dabaae8b6357f5b11ae9c67c21df6
+SHA1 (patch-SrcShared_Hardware_EmRegsPLDPalmVIIEZ.cpp) = c73d094601a4a4eccf4717b725469a59dd0e5add
+SHA1 (patch-SrcShared_Hardware_EmRegsSED1375.cpp) = 29fad68dcea246ec3ea75fac9eb86a95cf6f6a54
+SHA1 (patch-SrcShared_Hardware_EmRegsSED1376.cpp) = 4fe29a5caeac779843da1865898583aa49d1b534
+SHA1 (patch-SrcShared_Hardware_EmRegsUSBPhilipsPDIUSBD12.cpp) = 7d7ef982ab35214b1e27e882b9466a989ffe8418
+SHA1 (patch-SrcShared_Hardware_EmRegsUSBVisor.cpp) = dd22c6b01631ad4ecdd65b59cd7cfcaef9448334
+SHA1 (patch-SrcShared_Hardware_EmRegsVZHandEra330.cpp) = aa77709d63a9aff4faa143e8b7e38ea5b8f9aadf
+SHA1 (patch-SrcShared_Hardware_EmRegsVZPalmM505.cpp) = f242fab2da6db5273c304ad1c04d7dc28f0dddce
+SHA1 (patch-SrcShared_Hardware_EmRegsVZPrv.h) = 44c6460fd81dc3f59f1107f6584c68e8d8ed59b5
+SHA1 (patch-SrcShared_Hardware_EmRegsVZTemp.cpp) = c25b0c9ca60d16fcc04d192e13c9966e24651ea2
+SHA1 (patch-SrcShared_PreferenceMgr.cpp) = 49bf7e195c2f71cc8035b1e3faa13ca9fdeb9f8b
+SHA1 (patch-SrcShared_PreferenceMgr.h) = bcefbff3f92489a4b3699d1273d8679820e94cbc
 SHA1 (patch-SrcUnix_EmDlgFltk.cpp) = 2b8582982dc02dfaa298f20ba342eebd58098207
 SHA1 (patch-aa) = eef35ce5c3d91bf56903bb48c0c78bd333591fcc
 SHA1 (patch-ab) = 061379a827d338e411e8ea53dc071cb668a6c524
@@ -17,9 +33,9 @@ SHA1 (patch-ag) = 9d4fba5f8bef808b8a00b71484c308da613d8140
 SHA1 (patch-ah) = e3a79fa2c376711ea6479907cca923d1e872683e
 SHA1 (patch-ai) = 0cbff6b3080ee9aa7e366ba4ba368d93f0560e04
 SHA1 (patch-aj) = 958f070f7bc19f6a4c2f12a9d0ba280ed64136cb
-SHA1 (patch-ak) = d693bd15c982c95663f9f595fdcad6f80d5c2477
-SHA1 (patch-al) = 50342df4bb9d020f0b72be608d0656351dae4463
-SHA1 (patch-am) = 2790c8b567a94d86bced52d59cf62b4448b62731
+SHA1 (patch-ak) = 67fb02a1bdf657ef2d526accd6e368b38104803a
+SHA1 (patch-al) = 3603f0f1c124788910d1b3b8dcc7f9bcfd8f32d9
+SHA1 (patch-am) = 06e295c0c76e9d5691b3c6b88f4c281f22b673f5
 SHA1 (patch-an) = 93e326e3ab9f532d5bab1cc987c179e8337a823d
 SHA1 (patch-ao) = 9ace708f71d33802059db53c9242f0d89a77e4da
 SHA1 (patch-ap) = 1fe9bf4a1d70230f2abb9375b9e439a3a163b4d7
