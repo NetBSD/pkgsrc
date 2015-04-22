@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/06 21:30:32 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 10:15:29 markd Exp $
 
-SHA1 (tex-bezos-20113/bezos.doc.tar.xz) = 7853f1139e82354dffe4b977929a9bc4e1788826
-RMD160 (tex-bezos-20113/bezos.doc.tar.xz) = f730ece847b028c9f03fdd06ca8f702a17071897
-Size (tex-bezos-20113/bezos.doc.tar.xz) = 784628 bytes
+SHA1 (tex-bezos-25507/bezos.doc.tar.xz) = 40ceba837c5567e5e048674c3dcda55082a7468b
+RMD160 (tex-bezos-25507/bezos.doc.tar.xz) = be31ee48028973e6330f77caaa4d7bdda01be6ef
+Size (tex-bezos-25507/bezos.doc.tar.xz) = 943000 bytes
