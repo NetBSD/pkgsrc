@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/10/19 20:43:38 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 09:25:41 markd Exp $
 
 DISTNAME=	acronym.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.37
-TEXLIVE_REV=	28114
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.41
+TEXLIVE_REV=	36582
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-acronym
