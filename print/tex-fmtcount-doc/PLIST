@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:31:02 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 22:27:20 markd Exp $
 share/texmf-dist/doc/latex/fmtcount/CHANGES
 share/texmf-dist/doc/latex/fmtcount/README
+share/texmf-dist/doc/latex/fmtcount/fc-frlargenum.tex
 share/texmf-dist/doc/latex/fmtcount/fc-lang.tex
 share/texmf-dist/doc/latex/fmtcount/fc-samp.tex
-share/texmf-dist/doc/latex/fmtcount/fmtcount-manual.html
 share/texmf-dist/doc/latex/fmtcount/fmtcount.pdf
