@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/13 03:22:36 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 10:51:05 markd Exp $
 
 DISTNAME=	draftwatermark.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
+TEXLIVE_REV=	25045
 
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	Documentation for tex-draftwatermark
