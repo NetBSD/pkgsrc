@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:45:14 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 00:13:47 markd Exp $
 
 DISTNAME=	pstricks-add.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.51
-TEXLIVE_REV=	21290
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.77
+TEXLIVE_REV=	35772
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pstricks-add
