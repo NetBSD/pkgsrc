@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/02 17:00:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 10:08:25 markd Exp $
 
-SHA1 (tex-babelbib-1.29/babelbib.tar.xz) = caa3d8e8a05d5103b54f51282790136a07ffcc56
-RMD160 (tex-babelbib-1.29/babelbib.tar.xz) = 21c0de3ed484d2dd27704f4051451063b1bfe5b5
-Size (tex-babelbib-1.29/babelbib.tar.xz) = 23876 bytes
+SHA1 (tex-babelbib-25245/babelbib.tar.xz) = fb55ac0329e71b11bd3159392c0ab492d6f04ee0
+RMD160 (tex-babelbib-25245/babelbib.tar.xz) = 063ccd60a81eabaf2c67c8cd542946c752a6041a
+Size (tex-babelbib-25245/babelbib.tar.xz) = 26136 bytes

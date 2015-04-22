@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/02 17:01:08 minskim Exp $
-share/texmf-dist/doc/latex/babelbib/ChangeLog
-share/texmf-dist/doc/latex/babelbib/README
-share/texmf-dist/doc/latex/babelbib/babelbib.pdf
-share/texmf-dist/doc/latex/babelbib/babelbibtest.bib
-share/texmf-dist/doc/latex/babelbib/babelbibtest.tex
-share/texmf-dist/doc/latex/babelbib/tugboat-babelbib.pdf
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:08:25 markd Exp $
+share/texmf-dist/doc/bibtex/babelbib/ChangeLog
+share/texmf-dist/doc/bibtex/babelbib/Makefile
+share/texmf-dist/doc/bibtex/babelbib/README
+share/texmf-dist/doc/bibtex/babelbib/babelbib.dtx
+share/texmf-dist/doc/bibtex/babelbib/babelbib.ins
+share/texmf-dist/doc/bibtex/babelbib/babelbib.pdf
+share/texmf-dist/doc/bibtex/babelbib/babelbibtest.bib
+share/texmf-dist/doc/bibtex/babelbib/babelbibtest.tex
+share/texmf-dist/doc/bibtex/babelbib/getversion.tex
+share/texmf-dist/doc/bibtex/babelbib/tugboat-babelbib.pdf
