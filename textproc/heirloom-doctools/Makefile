@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/09 09:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 09:06:28 jperkin Exp $
 
 V=		150406
 DISTNAME=	heirloom-doctools-${V}
@@ -12,6 +12,7 @@ COMMENT=	Modernized troff implementation
 LICENSE=	cddl-1.0
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	lex yacc
 MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS =	CC="${CC}" \
