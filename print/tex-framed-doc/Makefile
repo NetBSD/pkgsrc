@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:16 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/22 22:33:25 markd Exp $
 
 DISTNAME=	framed.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.95
-TEXLIVE_REV=	17274
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.96
+TEXLIVE_REV=	26789
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-framed
