@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/11/06 08:43:32 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/22 00:16:44 markd Exp $
 
 DISTNAME=	xypic
-PKGNAME=	tex-${DISTNAME}-3.8.5
-PKGREVISION=	1
-TEXLIVE_REV=	21380
+PKGNAME=	tex-${DISTNAME}-3.8.9
+TEXLIVE_REV=	31859
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Flexible diagramming macros
