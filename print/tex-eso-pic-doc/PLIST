@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/04 22:39:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 22:20:34 markd Exp $
 share/texmf-dist/doc/latex/eso-pic/eso-article-test.tex
 share/texmf-dist/doc/latex/eso-pic/eso-ex1.tex
 share/texmf-dist/doc/latex/eso-pic/eso-ex2.tex
 share/texmf-dist/doc/latex/eso-pic/eso-ex3.tex
 share/texmf-dist/doc/latex/eso-pic/eso-ex4.tex
 share/texmf-dist/doc/latex/eso-pic/eso-ex5.tex
-share/texmf-dist/doc/latex/eso-pic/eso-ex6.tex
 share/texmf-dist/doc/latex/eso-pic/eso-memoir-test.tex
 share/texmf-dist/doc/latex/eso-pic/eso-pic.pdf
