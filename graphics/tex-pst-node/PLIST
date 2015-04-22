@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 19:04:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 00:01:16 markd Exp $
 share/texmf-dist/dvips/pst-node/pst-node.pro
+share/texmf-dist/dvips/pst-node/pst-node97.pro
 share/texmf-dist/tex/generic/pst-node/pst-node.tex
+share/texmf-dist/tex/generic/pst-node/pst-node97.tex
 share/texmf-dist/tex/latex/pst-node/pst-node.sty
