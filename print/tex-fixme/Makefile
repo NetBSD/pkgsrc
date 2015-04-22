@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/01/12 17:07:10 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/22 22:24:50 markd Exp $
 
 DISTNAME=	fixme
-PKGNAME=	tex-${DISTNAME}-4.1
-TEXLIVE_REV=	16169
+PKGNAME=	tex-${DISTNAME}-4.2
+TEXLIVE_REV=	29362
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Insert "fixme" notes into draft documents
