@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:39:22 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 00:06:15 markd Exp $
 
-SHA1 (tex-pst-poly-16460/pst-poly.doc.tar.xz) = 50789917bb007455839483b46ad197e05a380161
-RMD160 (tex-pst-poly-16460/pst-poly.doc.tar.xz) = ffbd06cb8263aadad3157b2bddca427abfd8fc2f
-Size (tex-pst-poly-16460/pst-poly.doc.tar.xz) = 144100 bytes
+SHA1 (tex-pst-poly-35062/pst-poly.doc.tar.xz) = c8ab668617e3cfa66cca3a3a921f65bb0aedb272
+RMD160 (tex-pst-poly-35062/pst-poly.doc.tar.xz) = 39d0062fd9ef3639a465690771a362d3b159c568
+Size (tex-pst-poly-35062/pst-poly.doc.tar.xz) = 141292 bytes
