@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/04/10 02:58:49 dsainty Exp $
+# $NetBSD: Makefile,v 1.18 2015/04/22 15:13:43 dsainty Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ZoneMinder/}
 GITHUB_PROJECT=	ZoneMinder
@@ -127,6 +127,7 @@ OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/events ${ROOT_USER} ${APACHE_GROUP} 775
 
 REPLACE_PERL+=	scripts/zmaudit.pl.in
+REPLACE_PERL+=	scripts/zmcamtool.pl.in
 REPLACE_PERL+=	scripts/zmcontrol.pl.in
 REPLACE_PERL+=	scripts/zmdc.pl.in
 REPLACE_PERL+=	scripts/zmfilter.pl.in
@@ -137,6 +138,30 @@ REPLACE_PERL+=	scripts/zmupdate.pl.in
 REPLACE_PERL+=	scripts/zmvideo.pl.in
 REPLACE_PERL+=	scripts/zmwatch.pl.in
 REPLACE_PERL+=	scripts/zmx10.pl.in
+
+#
+# The intention of zmsystemctl.pl is to use bin/pkexec to allow the
+# apache user to start and stop the ZoneMinder services on operating
+# systems using systemd and newer versions of Polkit than Pkgsrc
+# currently has.
+#
+# If the base OS doesn't use systemd (E.g. anything not Linux), this
+# file shouldn't be used anyway.
+#
+# In Pkgsrc we ignore the potentially absent pkexec interpreter in
+# this file.  If the base OS uses systemd, it probably also has pkexec
+# in its base installation.
+#
+
+CHECK_INTERPRETER_SKIP+=	bin/zmsystemctl.pl
+EXTRA_PERL+=			scripts/zmsystemctl.pl.in
+
+SUBST_CLASSES+=			systemd-perl
+SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
+SUBST_STAGE.systemd-perl=	pre-configure
+SUBST_FILES.systemd-perl=	scripts/zmsystemctl.pl.in
+SUBST_SED.systemd-perl=		-e 's|/usr/bin/perl|${PERL5}|g'
+
 
 SUBST_CLASSES+=			dbpaths-path
 SUBST_MESSAGE.dbpaths-path=	Adjusting default paths in configuration.
@@ -153,7 +178,7 @@ SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
 SUBST_CLASSES+=			script-path
 SUBST_MESSAGE.script-path=	Adjusting paths in scripts.
 SUBST_STAGE.script-path=	pre-configure
-SUBST_FILES.script-path=	${REPLACE_PERL}
+SUBST_FILES.script-path=	${REPLACE_PERL} ${EXTRA_PERL}
 SUBST_SED.script-path=	-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
 
 SUBST_CLASSES+=		files
