@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/13 03:22:36 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 10:51:05 markd Exp $
 
-SHA1 (tex-draftwatermark-15878/draftwatermark.doc.tar.xz) = 59746c7e35c8fb8f62fafaf8c3e3ac69a516f588
-RMD160 (tex-draftwatermark-15878/draftwatermark.doc.tar.xz) = 6dc82b7f2c82ebf165a9564ad5906f75dbd199d0
-Size (tex-draftwatermark-15878/draftwatermark.doc.tar.xz) = 18536 bytes
+SHA1 (tex-draftwatermark-25045/draftwatermark.doc.tar.xz) = fcbada157ed986267d08e87c79d59b727efde2b8
+RMD160 (tex-draftwatermark-25045/draftwatermark.doc.tar.xz) = 29b46b030e725cff0f9bf861e105a26c4186e2d2
+Size (tex-draftwatermark-25045/draftwatermark.doc.tar.xz) = 91516 bytes
