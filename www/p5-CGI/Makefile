@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2015/04/02 22:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2015/04/22 06:33:25 wiz Exp $
 
-DISTNAME=	CGI-4.14
+DISTNAME=	CGI-4.15
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=CGI/}
@@ -23,14 +23,10 @@ REPLACE_PERL+=		examples/*.cgi
 HTMLDIR=		${PREFIX}/share/doc/p5-CGI
 INSTALLATION_DIRS=	${HTMLDIR}/examples
 
-post-build:
-	cd ${WRKSRC}/examples && chmod +x *.cgi && perl make_links.pl
-
 post-install:
 	cd ${WRKSRC}/examples && \
-	${INSTALL_DATA} *.gif *.html *.txt *.xbm \
-		${DESTDIR}${HTMLDIR}/examples && \
-	${INSTALL_SCRIPT} *.cgi ${DESTDIR}${HTMLDIR}/examples
+	${INSTALL_DATA} *.gif ${DESTDIR}${HTMLDIR}/examples && \
+	${INSTALL_SCRIPT} *.cgi *.pl ${DESTDIR}${HTMLDIR}/examples
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
