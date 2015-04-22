@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 20:50:27 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/22 10:24:17 markd Exp $
 
 DISTNAME=	cite.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-5.3
-TEXLIVE_REV=	19955
+PKGNAME=	tex-${DISTNAME:S/./-/}-5.5
+TEXLIVE_REV=	36428
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-cite
