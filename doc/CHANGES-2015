@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1891 2015/04/22 00:23:09 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1892 2015/04/22 06:33:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2703,3 +2703,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/tex-pstricks-add-doc to 3.77 [markd 2015-04-22]
 	Updated graphics/tex-xypic to 3.8.9 [markd 2015-04-22]
 	Updated graphics/tex-xypic-doc to 3.8.9 [markd 2015-04-22]
+	Updated www/p5-CGI to 4.15 [wiz 2015-04-22]
