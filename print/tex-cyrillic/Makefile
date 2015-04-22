@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/16 17:55:15 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/22 10:36:41 markd Exp $
 
 DISTNAME=	cyrillic
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	20254
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	35577
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Support for Cyrillic fonts in LaTeX
