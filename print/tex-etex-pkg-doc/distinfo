@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:18:11 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/04/22 22:22:45 markd Exp $
 
-SHA1 (tex-etex-pkg-15878/etex-pkg.doc.tar.xz) = e7468722e5ee5c3b7eac6cefe6aabcaaaa8e7345
-RMD160 (tex-etex-pkg-15878/etex-pkg.doc.tar.xz) = 46e1ed6f6b7e318c6395278ae4516c1f134598f3
-Size (tex-etex-pkg-15878/etex-pkg.doc.tar.xz) = 516 bytes
+SHA1 (tex-etex-pkg-36465/etex-pkg.doc.tar.xz) = 1599ade53757dcdde7a88cd6a4c0d8bf0452183e
+RMD160 (tex-etex-pkg-36465/etex-pkg.doc.tar.xz) = 754c703519e33414e22893c3bdc09ea005fc2e15
+Size (tex-etex-pkg-36465/etex-pkg.doc.tar.xz) = 512 bytes
