@@ -1,28 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 20:58:29 minskim Exp $
-share/texmf-dist/doc/generic/babel/00readme.heb
-share/texmf-dist/doc/generic/babel/00readme.txt
-share/texmf-dist/doc/generic/babel/GreekFonts.txt
-share/texmf-dist/doc/generic/babel/announce.txt
-share/texmf-dist/doc/generic/babel/athnum.pdf
-share/texmf-dist/doc/generic/babel/babel.pdf
-share/texmf-dist/doc/generic/babel/bbcompat.pdf
-share/texmf-dist/doc/generic/babel/bbidxglo.pdf
-share/texmf-dist/doc/generic/babel/bugs.txt
-share/texmf-dist/doc/generic/babel/changes.txt
-share/texmf-dist/doc/generic/babel/fixes.txt
-share/texmf-dist/doc/generic/babel/greek-fdd.pdf
-share/texmf-dist/doc/generic/babel/greek-usage.pdf
-share/texmf-dist/doc/generic/babel/grmath.pdf
-share/texmf-dist/doc/generic/babel/grsymb.pdf
-share/texmf-dist/doc/generic/babel/howtoget.txt
-share/texmf-dist/doc/generic/babel/install.OzTeX-4
-share/texmf-dist/doc/generic/babel/install.OzTeX-pre4
-share/texmf-dist/doc/generic/babel/install.txt
-share/texmf-dist/doc/generic/babel/language.dat
-share/texmf-dist/doc/generic/babel/language.skeleton
-share/texmf-dist/doc/generic/babel/legal.bbl
-share/texmf-dist/doc/generic/babel/manifest.bbl
-share/texmf-dist/doc/generic/babel/tb1202.pdf
-share/texmf-dist/doc/generic/babel/tb1401.pdf
-share/texmf-dist/doc/generic/babel/tb1604.pdf
-share/texmf-dist/doc/generic/babel/todo.txt
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:02:03 markd Exp $
+share/texmf-dist/doc/latex/babel/CONTRIB
+share/texmf-dist/doc/latex/babel/FIXES39
+share/texmf-dist/doc/latex/babel/README
+share/texmf-dist/doc/latex/babel/babel.pdf
