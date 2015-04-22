@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/15 14:22:25 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 09:58:13 markd Exp $
 
-SHA1 (tex-arabtex-17095/arabtex.doc.tar.xz) = 68d0d1ed71748e992787a28c1eb472c6bfa18915
-RMD160 (tex-arabtex-17095/arabtex.doc.tar.xz) = 185f51664cde162802b9330294aadad5a0b0486f
-Size (tex-arabtex-17095/arabtex.doc.tar.xz) = 375476 bytes
+SHA1 (tex-arabtex-25711/arabtex.doc.tar.xz) = 35c0e6dea5614ce11487aeecb1fa3e36bcbcf190
+RMD160 (tex-arabtex-25711/arabtex.doc.tar.xz) = af572e3363c20f714e4452ca790258bff771c87e
+Size (tex-arabtex-25711/arabtex.doc.tar.xz) = 375476 bytes
