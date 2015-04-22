@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1894 2015/04/22 06:35:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1895 2015/04/22 06:40:15 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2706,3 +2706,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI to 4.15 [wiz 2015-04-22]
 	Updated time/p5-DateTime-TimeZone to 1.87 [wiz 2015-04-22]
 	Updated graphics/p5-Image-Info to 1.38 [wiz 2015-04-22]
+	Updated www/wordpress to 4.1.2 [morr 2015-04-22]
