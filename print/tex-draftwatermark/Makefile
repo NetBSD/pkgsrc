@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/13 03:21:33 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/22 10:51:05 markd Exp $
 
 DISTNAME=	draftwatermark
-PKGNAME=	tex-${DISTNAME}-1.0
-PKGREVISION=	1
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.1
+TEXLIVE_REV=	25045
 
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	Textual watermark package for LaTeX
