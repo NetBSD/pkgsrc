@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:39:22 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 00:06:15 markd Exp $
 
 DISTNAME=	pst-poly.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.61
-TEXLIVE_REV=	16460
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.63
+TEXLIVE_REV=	35062
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pst-poly
