@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/12 17:07:49 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 22:24:50 markd Exp $
 
 DISTNAME=	fixme.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.1
-TEXLIVE_REV=	16169
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.2
+TEXLIVE_REV=	29362
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-fixme
