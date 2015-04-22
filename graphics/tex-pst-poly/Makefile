@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:39:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 00:06:15 markd Exp $
 
 DISTNAME=	pst-poly
-PKGNAME=	tex-${DISTNAME}-1.61
-TEXLIVE_REV=	16460
+PKGNAME=	tex-${DISTNAME}-1.63
+TEXLIVE_REV=	35062
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Polygons with PSTricks
