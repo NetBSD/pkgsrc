@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/18 18:57:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/04/22 09:21:32 markd Exp $
 share/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf
 share/texmf-dist/doc/latex/IEEEtran/IEEEtran_bst_HOWTO.pdf
 share/texmf-dist/doc/latex/IEEEtran/IEEEtrantools_doc.txt
@@ -9,6 +9,7 @@ share/texmf-dist/doc/latex/IEEEtran/README.testflow
 share/texmf-dist/doc/latex/IEEEtran/README.tools
 share/texmf-dist/doc/latex/IEEEtran/bare_adv.tex
 share/texmf-dist/doc/latex/IEEEtran/bare_conf.tex
+share/texmf-dist/doc/latex/IEEEtran/bare_conf_compsoc.tex
 share/texmf-dist/doc/latex/IEEEtran/bare_jrnl.tex
 share/texmf-dist/doc/latex/IEEEtran/bare_jrnl_compsoc.tex
 share/texmf-dist/doc/latex/IEEEtran/bare_jrnl_transmag.tex
@@ -18,4 +19,5 @@ share/texmf-dist/doc/latex/IEEEtran/testflow.tex
 share/texmf-dist/doc/latex/IEEEtran/testflow_ctl_A4.pdf
 share/texmf-dist/doc/latex/IEEEtran/testflow_ctl_LTR.pdf
 share/texmf-dist/doc/latex/IEEEtran/testflow_doc.pdf
+share/texmf-dist/doc/latex/IEEEtran/tools/changelog.txt
 share/texmf-dist/doc/latex/IEEEtran/tux.eps
