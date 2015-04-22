@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/27 17:19:42 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 22:18:17 markd Exp $
 
-SHA1 (tex-environ-15878/environ.tar.xz) = b1828ee8e58ee77c6b4101d9898e7ad906dc6778
-RMD160 (tex-environ-15878/environ.tar.xz) = e92484d35e6e1d29be47db51c7aa5ad9e1570f88
-Size (tex-environ-15878/environ.tar.xz) = 2024 bytes
+SHA1 (tex-environ-33821/environ.tar.xz) = e35e146e501e478a5713195d678f58b014437e80
+RMD160 (tex-environ-33821/environ.tar.xz) = ce1f64094e267019321cc8aefa781b8280ccd0b0
+Size (tex-environ-33821/environ.tar.xz) = 1880 bytes
