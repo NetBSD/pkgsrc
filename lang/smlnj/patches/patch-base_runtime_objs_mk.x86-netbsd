@@ -1,0 +1,23 @@
+$NetBSD: patch-base_runtime_objs_mk.x86-netbsd,v 1.1 2015/04/22 07:41:38 dholland Exp $
+
+--- base/runtime/objs/mk.x86-netbsd.orig	2015-04-22 07:11:37.000000000 +0000
++++ base/runtime/objs/mk.x86-netbsd
+@@ -7,9 +7,10 @@ SHELL =		/bin/sh
+ 
+ MAKE =		gmake
+ 
++AS =		as --32
+ ARFLAGS =	Trcv
+ CC =		gcc -ansi
+-CFLAGS =	-O2
++CFLAGS =	-O2 -m32
+ CPP =		gcc -x assembler-with-cpp -E -P
+ #CPP =		/usr/bin/cpp -P
+ 
+@@ -23,4 +24,5 @@ VERSION =	v-x86-netbsd
+ RUNTIME =	run.x86-netbsd
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	echo '************************** schnozzbort ************************'
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
