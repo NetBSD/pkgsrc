@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/23 09:52:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:47:34 markd Exp $
 share/texmf-dist/doc/generic/dehyph-exptl/CHANGES
 share/texmf-dist/doc/generic/dehyph-exptl/INSTALL
 share/texmf-dist/doc/generic/dehyph-exptl/LICENSE
 share/texmf-dist/doc/generic/dehyph-exptl/README
 share/texmf-dist/doc/generic/dehyph-exptl/dehyph-exptl.bib
 share/texmf-dist/doc/generic/dehyph-exptl/dehyph-exptl.pdf
-share/texmf-dist/doc/generic/dehyph-exptl/projektbeschreibung.bib
-share/texmf-dist/doc/generic/dehyph-exptl/projektbeschreibung.pdf
-share/texmf-dist/doc/generic/dehyph-exptl/projektbeschreibung.tex
+share/texmf-dist/doc/generic/dehyph-exptl/dehyph-exptl.tex
