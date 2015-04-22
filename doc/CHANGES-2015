@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1896 2015/04/22 10:54:03 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1897 2015/04/22 14:35:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2757,3 +2757,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-dehyph-exptl-doc to 0.40 [markd 2015-04-22]
 	Updated print/tex-draftwatermark to 1.1 [markd 2015-04-22]
 	Updated print/tex-draftwatermark-doc to 1.1 [markd 2015-04-22]
+	Updated www/curl to 7.42.0 [jperkin 2015-04-22]
