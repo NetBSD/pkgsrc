@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/06 21:30:24 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 10:15:29 markd Exp $
 
 DISTNAME=	bezos
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	20113
+PKGNAME=	tex-${DISTNAME}-25507
+TEXLIVE_REV=	25507
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Packages by Javier Bezos
