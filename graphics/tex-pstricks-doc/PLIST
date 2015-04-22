@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/16 22:24:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/22 00:11:23 markd Exp $
 share/texmf-dist/doc/generic/pstricks/Changes
 share/texmf-dist/doc/generic/pstricks/Changes.dvips
 share/texmf-dist/doc/generic/pstricks/Changes.generic
 share/texmf-dist/doc/generic/pstricks/Changes.latex
-share/texmf-dist/doc/generic/pstricks/Makefile
 share/texmf-dist/doc/generic/pstricks/PSTricks.bib
 share/texmf-dist/doc/generic/pstricks/README
 share/texmf-dist/doc/generic/pstricks/ctandir.sty
@@ -28,18 +27,12 @@ share/texmf-dist/doc/generic/pstricks/pst-news11.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news11.tex
 share/texmf-dist/doc/generic/pstricks/pst-news12.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news12.tex
-share/texmf-dist/doc/generic/pstricks/pst-quickref.pdf
+share/texmf-dist/doc/generic/pstricks/pst-news13.pdf
+share/texmf-dist/doc/generic/pstricks/pst-news13.tex
+share/texmf-dist/doc/generic/pstricks/pst-news14.pdf
+share/texmf-dist/doc/generic/pstricks/pst-news14.tex
 share/texmf-dist/doc/generic/pstricks/pst-user.pdf
 share/texmf-dist/doc/generic/pstricks/pst-user.tgz
-share/texmf-dist/doc/generic/pstricks/pst-usrfull.pdf
-share/texmf-dist/doc/generic/pstricks/pstnews1-10.pdf
-share/texmf-dist/doc/generic/pstricks/pstnews1-10.tex
-share/texmf-dist/doc/generic/pstricks/pstnews1-11.pdf
-share/texmf-dist/doc/generic/pstricks/pstnews1-11.tex
-share/texmf-dist/doc/generic/pstricks/pstnews1-12.pdf
-share/texmf-dist/doc/generic/pstricks/pstnews1-12.tex
-share/texmf-dist/doc/generic/pstricks/pstnews97-15.pdf
-share/texmf-dist/doc/generic/pstricks/pstnews97-15.tex
 share/texmf-dist/doc/generic/pstricks/pstricks-bug.tex
 share/texmf-dist/doc/generic/pstricks/pstricks-doc.pdf
 share/texmf-dist/doc/generic/pstricks/test-pst.pdf
