@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 22:03:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 22:13:28 markd Exp $
 share/texmf-dist/doc/latex/endfloat/COPYING
-share/texmf-dist/doc/latex/endfloat/endfloat.asc
+share/texmf-dist/doc/latex/endfloat/README
 share/texmf-dist/doc/latex/endfloat/endfloat.pdf
-share/texmf-dist/doc/latex/endfloat/readme.enf
