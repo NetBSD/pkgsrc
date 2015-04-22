@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/12 17:07:49 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 22:24:50 markd Exp $
 
-SHA1 (tex-fixme-16169/fixme.doc.tar.xz) = 5cc4242560227dacce5c39372b9238a4b8827f76
-RMD160 (tex-fixme-16169/fixme.doc.tar.xz) = 7c0232182806aff359d8fe3e11217b4637be6097
-Size (tex-fixme-16169/fixme.doc.tar.xz) = 314964 bytes
+SHA1 (tex-fixme-29362/fixme.doc.tar.xz) = 370c1fd6f47112a5715c306f6ce012b03641612c
+RMD160 (tex-fixme-29362/fixme.doc.tar.xz) = 52a40424e332ec14e9b093333a590562c0f49f8f
+Size (tex-fixme-29362/fixme.doc.tar.xz) = 336080 bytes
