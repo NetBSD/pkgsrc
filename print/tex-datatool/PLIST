@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:40:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:38:59 markd Exp $
 share/texmf-dist/bibtex/bst/datatool/databib.bst
 share/texmf-dist/tex/latex/datatool/databar.sty
 share/texmf-dist/tex/latex/datatool/databib.sty
+share/texmf-dist/tex/latex/datatool/datagidx.sty
 share/texmf-dist/tex/latex/datatool/datapie.sty
 share/texmf-dist/tex/latex/datatool/dataplot.sty
+share/texmf-dist/tex/latex/datatool/datatool-base.sty
+share/texmf-dist/tex/latex/datatool/datatool-fp.sty
+share/texmf-dist/tex/latex/datatool/datatool-pgfmath.sty
 share/texmf-dist/tex/latex/datatool/datatool.sty
 share/texmf-dist/tex/latex/datatool/person.sty
