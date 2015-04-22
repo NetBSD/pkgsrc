@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1898 2015/04/22 15:18:13 dsainty Exp $
+$NetBSD: CHANGES-2015,v 1.1899 2015/04/22 22:47:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2759,3 +2759,29 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-draftwatermark-doc to 1.1 [markd 2015-04-22]
 	Updated www/curl to 7.42.0 [jperkin 2015-04-22]
 	Updated security/zoneminder to 1.28.1nb2 [dsainty 2015-04-22]
+	Updated print/tex-enctex to 2014 [markd 2015-04-22]
+	Updated print/tex-enctex-doc to 2014 [markd 2015-04-22]
+	Updated print/tex-endfloat to 2.5d [markd 2015-04-22]
+	Updated print/tex-endfloat-doc to 2.5d [markd 2015-04-22]
+	Updated print/tex-enumitem to 3.5.2 [markd 2015-04-22]
+	Updated print/tex-enumitem-doc to 3.5.2 [markd 2015-04-22]
+	Updated print/tex-environ to 0.3 [markd 2015-04-22]
+	Updated print/tex-environ-doc to 0.3 [markd 2015-04-22]
+	Updated print/tex-eso-pic to 2.0d [markd 2015-04-22]
+	Updated print/tex-eso-pic-doc to 2.0d [markd 2015-04-22]
+	Updated print/tex-etex-pkg to 2.1 [markd 2015-04-22]
+	Updated print/tex-etex-pkg-doc to 2.1 [markd 2015-04-22]
+	Updated print/tex-fixme to 4.2 [markd 2015-04-22]
+	Updated print/tex-fixme-doc to 4.2 [markd 2015-04-22]
+	Updated print/tex-fmtcount to 3.00 [markd 2015-04-22]
+	Updated print/tex-fmtcount-doc to 3.00 [markd 2015-04-22]
+	Updated print/tex-fnpara to 2012 [markd 2015-04-22]
+	Updated print/tex-fnpara-doc to 2012 [markd 2015-04-22]
+	Updated print/tex-footmisc to 5.5b [markd 2015-04-22]
+	Updated print/tex-footmisc-doc to 5.5b [markd 2015-04-22]
+	Updated print/tex-framed to 0.96 [markd 2015-04-22]
+	Updated print/tex-framed-doc to 0.96 [markd 2015-04-22]
+	Updated print/tex-glossaries to 4.15 [markd 2015-04-22]
+	Updated print/tex-glossaries-doc to 4.15 [markd 2015-04-22]
+	Updated print/tex-graphics to 1.0p [markd 2015-04-22]
+	Updated print/tex-graphics-doc to 1.0p [markd 2015-04-22]
