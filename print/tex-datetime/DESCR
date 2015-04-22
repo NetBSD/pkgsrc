@@ -3,3 +3,4 @@ Provides various different formats for the text created by the command
 any given time), in 12-hour, 24-hour or text format. The package
 overrides babel's date format, having its own library of date formats in
 different languages. The package requires the fmtcount package.
+This package is now obsolete and has been replaced by datetime2.
