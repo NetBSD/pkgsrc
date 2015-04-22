@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 23:41:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:26:50 markd Exp $
 share/texmf-dist/tex/latex/cjk/contrib/wadalab/c42goth.fd
 share/texmf-dist/tex/latex/cjk/contrib/wadalab/c42goth.fdx
 share/texmf-dist/tex/latex/cjk/contrib/wadalab/c42maru.fd
@@ -189,8 +189,6 @@ share/texmf-dist/tex/latex/cjk/texinput/UTF8/ja.cpx
 share/texmf-dist/tex/latex/cjk/texinput/UTF8/ko-Hang.cpx
 share/texmf-dist/tex/latex/cjk/texinput/UTF8/ko-Hang2.cpx
 share/texmf-dist/tex/latex/cjk/texinput/UTF8/ko-Hani.cpx
-share/texmf-dist/tex/latex/cjk/texinput/UTF8/xUTF8.chr
-share/texmf-dist/tex/latex/cjk/texinput/UTF8/xUTF8.enc
 share/texmf-dist/tex/latex/cjk/texinput/UTF8/zh-Hans.cpx
 share/texmf-dist/tex/latex/cjk/texinput/UTF8/zh-Hant.cpx
 share/texmf-dist/tex/latex/cjk/texinput/extended.chr
@@ -211,7 +209,4 @@ share/texmf-dist/tex/latex/cjk/texinput/thai/c90enc.def
 share/texmf-dist/tex/latex/cjk/texinput/thai/c90gar.fd
 share/texmf-dist/tex/latex/cjk/texinput/thai/c90nrsr.fd
 share/texmf-dist/tex/latex/cjk/texinput/thai/thaicjk.ldf
-share/texmf-dist/tex/latex/cjk/texinput/xCJK.sty
-share/texmf-dist/tex/latex/cjk/texinput/xpmC.chr
-share/texmf-dist/tex/latex/cjk/texinput/xpmC.enc
 share/texmf-dist/tex/latex/cjk/utils/pyhyphen/pinyin.ldf
