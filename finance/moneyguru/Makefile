@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/21 16:48:38 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/22 10:57:15 joerg Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
@@ -39,6 +39,8 @@ INSTALLATION_DIRS=	bin share/applications share/moneyguru
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
 BASE_ARCH!=	uname -m
+.elif ${MACHINE_ARCH} == "x86_64"
+BASE_ARCH=	amd64
 .else
 BASE_ARCH=	${MACHINE_ARCH}
 .endif
