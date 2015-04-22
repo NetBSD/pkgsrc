@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:39:31 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 00:08:28 markd Exp $
 
-SHA1 (tex-pst-slpe-15878/pst-slpe.doc.tar.xz) = 3a49f621ad756bf544e6097581ac91ebd418ff98
-RMD160 (tex-pst-slpe-15878/pst-slpe.doc.tar.xz) = 5bbec459c187586cd874204ccbf0661ad8d3c5bf
-Size (tex-pst-slpe-15878/pst-slpe.doc.tar.xz) = 244624 bytes
+SHA1 (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = bf5a9a1d0e5d274dc00a3542f3280db4ac056e68
+RMD160 (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = 62bc17503189fd9b0631598ea3b20a22c43bcab6
+Size (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = 244892 bytes
