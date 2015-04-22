@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/01/20 16:37:17 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/04/22 09:35:02 markd Exp $
 
-SHA1 (tex-amscls-20248/amscls.doc.tar.xz) = d1e530b641ad65b01c259c996c277767f352aace
-RMD160 (tex-amscls-20248/amscls.doc.tar.xz) = e734cd5be907478865b64995062ceb00c6b4a7e6
-Size (tex-amscls-20248/amscls.doc.tar.xz) = 1572212 bytes
+SHA1 (tex-amscls-34870/amscls.doc.tar.xz) = c2a90c9728cfb353f178f9ca5b70cfcfa785c8b6
+RMD160 (tex-amscls-34870/amscls.doc.tar.xz) = e7851ec2fcb4acd29b95afd4e0fad3332c1ed775
+Size (tex-amscls-34870/amscls.doc.tar.xz) = 1187848 bytes

@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/20 16:37:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/22 09:35:02 markd Exp $
 share/texmf-dist/doc/latex/amscls/00LICENSE.txt
-share/texmf-dist/doc/latex/amscls/amsart.template
-share/texmf-dist/doc/latex/amscls/amsbook.template
+share/texmf-dist/doc/latex/amscls/README
+share/texmf-dist/doc/latex/amscls/amsart-template.tex
+share/texmf-dist/doc/latex/amscls/amsbook-template.tex
+share/texmf-dist/doc/latex/amscls/amsbooka.pdf
 share/texmf-dist/doc/latex/amscls/amsclass.pdf
 share/texmf-dist/doc/latex/amscls/amsdtx.pdf
 share/texmf-dist/doc/latex/amscls/amsmidx.pdf
-share/texmf-dist/doc/latex/amscls/amsproc.template
+share/texmf-dist/doc/latex/amscls/amsproc-template.tex
 share/texmf-dist/doc/latex/amscls/amsthdoc.pdf
 share/texmf-dist/doc/latex/amscls/diffs-c.txt
 share/texmf-dist/doc/latex/amscls/instr-l.pdf
+share/texmf-dist/doc/latex/amscls/manifest.txt
 share/texmf-dist/doc/latex/amscls/thmtest.pdf
 share/texmf-dist/doc/latex/amscls/upref.pdf
