@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:18:12 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/04/22 22:31:29 markd Exp $
 
-SHA1 (tex-footmisc-15878.2010/footmisc.doc.tar.xz) = e361010d771b42d6a7a6fc121aa57dfcc351bee3
-RMD160 (tex-footmisc-15878.2010/footmisc.doc.tar.xz) = 04ff336097eff29fdd2ccd65ca6fe9758e79e660
-Size (tex-footmisc-15878.2010/footmisc.doc.tar.xz) = 179632 bytes
+SHA1 (tex-footmisc-23330/footmisc.doc.tar.xz) = 961f905aac6ab7a7d68f4c607e5081db9b6edbef
+RMD160 (tex-footmisc-23330/footmisc.doc.tar.xz) = 9876226790e2a016f0a2739a9d54c3f9aad99b9f
+Size (tex-footmisc-23330/footmisc.doc.tar.xz) = 325416 bytes
