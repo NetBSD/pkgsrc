@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.29 2015/03/01 15:01:00 wiz Exp $
+$NetBSD: patch-aa,v 1.30 2015/04/22 14:35:21 jperkin Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2015-02-24 23:05:37.000000000 +0000
+--- configure.orig	2015-04-21 07:21:35.000000000 +0000
 +++ configure
 @@ -3703,6 +3703,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
@@ -22,21 +22,19 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21128,7 +21129,12 @@ $as_echo "yes" >&6; }
-      if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
+@@ -21131,6 +21132,11 @@ $as_echo "yes" >&6; }
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
       elif test -f "$GSSAPI_ROOT/bin/krb5-config"; then
--        GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
-+		if $GSSAPI_ROOT/bin/krb5-config --cflags gssapi 2>&1 |	\
-+			   grep "Unknown option" > /dev/null ; then
-+			GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags`
-+		else
-+			GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
-+		fi
+         GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
++        if $GSSAPI_ROOT/bin/krb5-config --cflags gssapi 2>&1 | grep "Unknown option" >/dev/null; then
++            GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags`
++        else
++            GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
++        fi
+      elif test -f "$KRB5CONFIG"; then
+         GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
       elif test "$GSSAPI_ROOT" != "yes"; then
-         GSSAPI_INCS="-I$GSSAPI_ROOT/include"
-      fi
-@@ -21301,7 +21307,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21305,7 +21311,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -45,7 +43,7 @@ the gssapi option, and need an explicit -lgss
          ;;
       esac
    fi
-@@ -24016,7 +24022,7 @@ _ACEOF
+@@ -24264,7 +24270,7 @@ _ACEOF
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: $capath (capath)" >&5
  $as_echo "$capath (capath)" >&6; }
    fi
