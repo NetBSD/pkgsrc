@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:08:00 markd Exp $
-share/texmf-dist/doc/latex/answers/ansexam1.tex
-share/texmf-dist/doc/latex/answers/ansexam2.tex
-share/texmf-dist/doc/latex/answers/ansexam3.tex
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 09:51:17 markd Exp $
 share/texmf-dist/doc/latex/answers/answers.pdf
