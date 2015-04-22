@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:56:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 09:47:01 markd Exp $
 share/texmf-dist/doc/latex/amsrefs/amsrdoc.pdf
 share/texmf-dist/doc/latex/amsrefs/amsrefs.faq
 share/texmf-dist/doc/latex/amsrefs/amsrefs.pdf
 share/texmf-dist/doc/latex/amsrefs/amsxport.pdf
 share/texmf-dist/doc/latex/amsrefs/changes.pdf
-share/texmf-dist/doc/latex/amsrefs/cite-xa.pdf
 share/texmf-dist/doc/latex/amsrefs/cite-xa.tex
-share/texmf-dist/doc/latex/amsrefs/cite-xb.pdf
 share/texmf-dist/doc/latex/amsrefs/cite-xb.tex
-share/texmf-dist/doc/latex/amsrefs/cite-xh.pdf
 share/texmf-dist/doc/latex/amsrefs/cite-xh.tex
-share/texmf-dist/doc/latex/amsrefs/cite-xs.pdf
 share/texmf-dist/doc/latex/amsrefs/cite-xs.tex
 share/texmf-dist/doc/latex/amsrefs/gktest.ltb
 share/texmf-dist/doc/latex/amsrefs/ifoption.pdf
