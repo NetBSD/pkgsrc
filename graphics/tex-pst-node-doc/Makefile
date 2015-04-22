@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 19:05:00 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 00:01:16 markd Exp $
 
 DISTNAME=	pst-node.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.15
-TEXLIVE_REV=	21550
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.35
+TEXLIVE_REV=	34856
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pst-node
