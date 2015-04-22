@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2010/11/15 17:54:13 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/22 10:02:03 markd Exp $
 
 DISTNAME=	babel
-PKGNAME=	tex-${DISTNAME}-3.8l
-PKGREVISION=	2
-TEXLIVE_REV=	20253
+PKGNAME=	tex-${DISTNAME}-3.9l
+TEXLIVE_REV=	35266
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Multilingual support for Plain TeX or LaTeX
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	teTeX-texmf<=3.0nb13
 DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
