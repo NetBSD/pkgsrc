@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 23:50:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 09:30:40 markd Exp $
 share/texmf-dist/doc/latex/algorithm2e/README
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e.pdf
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e.tex
@@ -11,6 +11,8 @@ share/texmf-dist/doc/latex/algorithm2e/algorithm2e_ex06.tex
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e_ex07.tex
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exAlgoDisjdecomp.tex
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exIR.tex
+share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exProg.tex
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exfor.tex
+share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exgeneric.tex
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exrepeat.tex
 share/texmf-dist/doc/latex/algorithm2e/algorithm2e_exswitch.tex
