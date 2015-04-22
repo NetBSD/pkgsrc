@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/14 00:13:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 00:16:44 markd Exp $
 share/texmf-dist/doc/generic/xypic/CATALOG
 share/texmf-dist/doc/generic/xypic/COPYING
 share/texmf-dist/doc/generic/xypic/FONTCOPYING
@@ -9,10 +9,11 @@ share/texmf-dist/doc/generic/xypic/TRAILER
 share/texmf-dist/doc/generic/xypic/VERSIONS
 share/texmf-dist/doc/generic/xypic/Xy-logo.png
 share/texmf-dist/doc/generic/xypic/Xy-pic.html
+share/texmf-dist/doc/generic/xypic/barrdoc.pdf
 share/texmf-dist/doc/generic/xypic/support/dvitogif89a
 share/texmf-dist/doc/generic/xypic/support/install-tds
 share/texmf-dist/doc/generic/xypic/support/pnmrawtopcropwhite.c
-share/texmf-dist/doc/generic/xypic/xy385src.tar.gz
+share/texmf-dist/doc/generic/xypic/xy389src.tar.gz
 share/texmf-dist/doc/generic/xypic/xyguide.pdf
 share/texmf-dist/doc/generic/xypic/xypdf.pdf
 share/texmf-dist/doc/generic/xypic/xyrefer.pdf

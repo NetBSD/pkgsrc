@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/14 00:12:31 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 00:16:44 markd Exp $
 
-SHA1 (tex-xypic-21380/xypic.tar.xz) = 7f194377c21ac4c2fd8897842c797eaacc4f1dcb
-RMD160 (tex-xypic-21380/xypic.tar.xz) = 98f342e6363e6b045e45f774fb3b9c0729bff4f5
-Size (tex-xypic-21380/xypic.tar.xz) = 681800 bytes
+SHA1 (tex-xypic-31859/xypic.tar.xz) = 8e1ec8080a0f1189a6269174128aad890aa28b1d
+RMD160 (tex-xypic-31859/xypic.tar.xz) = 6ff486b5baf8717a8354965840e09560a2ff9dbf
+Size (tex-xypic-31859/xypic.tar.xz) = 709752 bytes
