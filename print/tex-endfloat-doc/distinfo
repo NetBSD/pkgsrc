@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/10 22:03:34 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 22:13:28 markd Exp $
 
-SHA1 (tex-endfloat-15878/endfloat.doc.tar.xz) = 65aedcecc9b9d408a0f22fd6a6cd2f63844254e8
-RMD160 (tex-endfloat-15878/endfloat.doc.tar.xz) = c83d47e10fe4e32954285d3f78fc612632ccb4da
-Size (tex-endfloat-15878/endfloat.doc.tar.xz) = 339168 bytes
+SHA1 (tex-endfloat-24962/endfloat.doc.tar.xz) = f1bb00aae9964c056d3c8d46cc23225eec650877
+RMD160 (tex-endfloat-24962/endfloat.doc.tar.xz) = f0d55f7f941a12bc2f5b38ec7f1df02463c01f48
+Size (tex-endfloat-24962/endfloat.doc.tar.xz) = 176880 bytes
