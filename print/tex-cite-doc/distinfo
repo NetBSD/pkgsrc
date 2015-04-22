@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 20:50:27 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/04/22 10:24:17 markd Exp $
 
-SHA1 (tex-cite-19955/cite.doc.tar.xz) = 94c59756067c7caf913be89e5ebd6c2516db1994
-RMD160 (tex-cite-19955/cite.doc.tar.xz) = 659ffc91b91b91af46c4f202577c2a4a521d311e
-Size (tex-cite-19955/cite.doc.tar.xz) = 279024 bytes
+SHA1 (tex-cite-36428/cite.doc.tar.xz) = f6e11c0f90c251c68c2c90092a2c490307cf3aa4
+RMD160 (tex-cite-36428/cite.doc.tar.xz) = 403b6f320bfcd31576b72bf7fcc05f63d2bc1e42
+Size (tex-cite-36428/cite.doc.tar.xz) = 221776 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 20:50:27 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/22 10:24:17 markd Exp $
 
 DISTNAME=	cite
-PKGNAME=	tex-${DISTNAME}-5.3
-TEXLIVE_REV=	19955
+PKGNAME=	tex-${DISTNAME}-5.5
+TEXLIVE_REV=	36428
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Improved citation handling in LaTeX
