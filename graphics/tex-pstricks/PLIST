@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/16 22:24:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/22 00:11:23 markd Exp $
 share/texmf-dist/dvips/pstricks/pst-algparser.pro
 share/texmf-dist/dvips/pstricks/pst-dots.pro
 share/texmf-dist/dvips/pstricks/pst-dots97.pro
-share/texmf-dist/dvips/pstricks/pst-tools.pro
 share/texmf-dist/dvips/pstricks/pstricks.pro
 share/texmf-dist/dvips/pstricks/pstricks97.pro
 share/texmf-dist/tex/generic/pstricks/config/Changes
-share/texmf-dist/tex/generic/pstricks/config/README
+share/texmf-dist/tex/generic/pstricks/config/README.cfg
 share/texmf-dist/tex/generic/pstricks/config/distiller.cfg
 share/texmf-dist/tex/generic/pstricks/config/dvips.cfg
 share/texmf-dist/tex/generic/pstricks/config/dvipsone.cfg
@@ -16,7 +15,6 @@ share/texmf-dist/tex/generic/pstricks/config/vtex.cfg
 share/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
 share/texmf-dist/tex/generic/pstricks/pst-fp.tex
 share/texmf-dist/tex/generic/pstricks/pst-key.tex
-share/texmf-dist/tex/generic/pstricks/pstPlain.tex
 share/texmf-dist/tex/generic/pstricks/pstricks.con
 share/texmf-dist/tex/generic/pstricks/pstricks.tex
 share/texmf-dist/tex/generic/pstricks/pstricks97.tex

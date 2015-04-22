@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/16 22:24:17 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/22 00:11:23 markd Exp $
 
 DISTNAME=	pstricks
-PKGNAME=	tex-${DISTNAME}-2.33
-TEXLIVE_REV=	27795
+PKGNAME=	tex-${DISTNAME}-2.60
+TEXLIVE_REV=	35439
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	PostScript macros for TeX
