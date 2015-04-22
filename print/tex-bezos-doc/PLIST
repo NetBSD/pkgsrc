@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 21:30:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:15:29 markd Exp $
 share/texmf-dist/doc/latex/bezos/README
 share/texmf-dist/doc/latex/bezos/accents.pdf
 share/texmf-dist/doc/latex/bezos/accents.tex
@@ -8,5 +8,7 @@ share/texmf-dist/doc/latex/bezos/bezos.pdf
 share/texmf-dist/doc/latex/bezos/bezos.tex
 share/texmf-dist/doc/latex/bezos/esindex.pdf
 share/texmf-dist/doc/latex/bezos/esindex.tex
+share/texmf-dist/doc/latex/bezos/soulpos.pdf
+share/texmf-dist/doc/latex/bezos/soulpos.tex
 share/texmf-dist/doc/latex/bezos/tensind.pdf
 share/texmf-dist/doc/latex/bezos/tensind.tex
