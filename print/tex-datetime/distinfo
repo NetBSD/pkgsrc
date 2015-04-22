@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/12 16:36:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 10:42:01 markd Exp $
 
-SHA1 (tex-datetime-19834/datetime.tar.xz) = d680747660823a2862861a55773243451f74fa4d
-RMD160 (tex-datetime-19834/datetime.tar.xz) = 80f271065305a5802fec5152eebc090c60a95867
-Size (tex-datetime-19834/datetime.tar.xz) = 11972 bytes
+SHA1 (tex-datetime-36650/datetime.tar.xz) = c63d0c62310f931681075154d24d11af12531acc
+RMD160 (tex-datetime-36650/datetime.tar.xz) = dad322ecd17ba9773b0957a583ccc64a3c568648
+Size (tex-datetime-36650/datetime.tar.xz) = 13588 bytes
