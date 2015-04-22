@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/11/16 14:28:42 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/22 10:32:44 markd Exp $
 
 DISTNAME=	comment.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.6
-TEXLIVE_REV=	17155
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.7
+TEXLIVE_REV=	32778
 
 MAINTAINER=	jaapb@NetBSD.org
 COMMENT=	Documentation for tex-comment
