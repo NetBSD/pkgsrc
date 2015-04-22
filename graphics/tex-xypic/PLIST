@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/14 00:12:31 minskim Exp $
-share/texmf-dist/dvips/xypic/xy385dict.pro
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 00:16:44 markd Exp $
+share/texmf-dist/dvips/xypic/xy389dict.pro
 share/texmf-dist/fonts/afm/public/xypic/xyatip10.afm
 share/texmf-dist/fonts/afm/public/xypic/xybsql10.afm
 share/texmf-dist/fonts/afm/public/xypic/xybtip10.afm
@@ -144,6 +144,7 @@ share/texmf-dist/tex/generic/xypic/xy2cell.tex
 share/texmf-dist/tex/generic/xypic/xyall.tex
 share/texmf-dist/tex/generic/xypic/xyarc.tex
 share/texmf-dist/tex/generic/xypic/xyarrow.tex
+share/texmf-dist/tex/generic/xypic/xybarr.tex
 share/texmf-dist/tex/generic/xypic/xycmactex.tex
 share/texmf-dist/tex/generic/xypic/xycmtip.tex
 share/texmf-dist/tex/generic/xypic/xycolor.tex
