@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/02 17:00:37 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:08:25 markd Exp $
 share/texmf-dist/bibtex/bst/babelbib/bababbr3-fl.bst
 share/texmf-dist/bibtex/bst/babelbib/bababbr3-lf.bst
 share/texmf-dist/bibtex/bst/babelbib/bababbr3.bst
@@ -8,16 +8,12 @@ share/texmf-dist/bibtex/bst/babelbib/bababbrv.bst
 share/texmf-dist/bibtex/bst/babelbib/babalpha-fl.bst
 share/texmf-dist/bibtex/bst/babelbib/babalpha-lf.bst
 share/texmf-dist/bibtex/bst/babelbib/babalpha.bst
-share/texmf-dist/bibtex/bst/babelbib/babalpha2.bst
 share/texmf-dist/bibtex/bst/babelbib/babamspl.bst
 share/texmf-dist/bibtex/bst/babelbib/babplai3-fl.bst
 share/texmf-dist/bibtex/bst/babelbib/babplai3-lf.bst
 share/texmf-dist/bibtex/bst/babelbib/babplai3.bst
 share/texmf-dist/bibtex/bst/babelbib/babplain-fl.bst
 share/texmf-dist/bibtex/bst/babelbib/babplain-lf.bst
-share/texmf-dist/bibtex/bst/babelbib/babplain-neu.bst
-share/texmf-dist/bibtex/bst/babelbib/babplain-orig.bst
-share/texmf-dist/bibtex/bst/babelbib/babplain-spielen.bst
 share/texmf-dist/bibtex/bst/babelbib/babplain.bst
 share/texmf-dist/bibtex/bst/babelbib/babunsrt-fl.bst
 share/texmf-dist/bibtex/bst/babelbib/babunsrt-lf.bst
@@ -26,19 +22,22 @@ share/texmf-dist/tex/latex/babelbib/afrikaans.bdf
 share/texmf-dist/tex/latex/babelbib/babelbib.sty
 share/texmf-dist/tex/latex/babelbib/bahasa.bdf
 share/texmf-dist/tex/latex/babelbib/catalan.bdf
+share/texmf-dist/tex/latex/babelbib/croatian.bdf
+share/texmf-dist/tex/latex/babelbib/czech.bdf
 share/texmf-dist/tex/latex/babelbib/danish.bdf
 share/texmf-dist/tex/latex/babelbib/dutch.bdf
 share/texmf-dist/tex/latex/babelbib/english.bdf
 share/texmf-dist/tex/latex/babelbib/esperanto.bdf
 share/texmf-dist/tex/latex/babelbib/finnish.bdf
 share/texmf-dist/tex/latex/babelbib/french.bdf
-share/texmf-dist/tex/latex/babelbib/french2.bdf
 share/texmf-dist/tex/latex/babelbib/galician.bdf
 share/texmf-dist/tex/latex/babelbib/german.bdf
 share/texmf-dist/tex/latex/babelbib/greek.bdf
 share/texmf-dist/tex/latex/babelbib/italian.bdf
 share/texmf-dist/tex/latex/babelbib/norsk.bdf
 share/texmf-dist/tex/latex/babelbib/portuguese.bdf
+share/texmf-dist/tex/latex/babelbib/romanian.bdf
 share/texmf-dist/tex/latex/babelbib/russian.bdf
+share/texmf-dist/tex/latex/babelbib/serbian.bdf
 share/texmf-dist/tex/latex/babelbib/spanish.bdf
 share/texmf-dist/tex/latex/babelbib/swedish.bdf
