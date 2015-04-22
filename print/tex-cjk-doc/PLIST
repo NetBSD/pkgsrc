@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 23:42:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:26:50 markd Exp $
 share/texmf-dist/doc/latex/cjk/ChangeLog
 share/texmf-dist/doc/latex/cjk/MANIFEST
 share/texmf-dist/doc/latex/cjk/Makefile
@@ -57,7 +57,6 @@ share/texmf-dist/doc/latex/cjk/doc/reftex.txt
 share/texmf-dist/doc/latex/cjk/doc/ruby.txt
 share/texmf-dist/doc/latex/cjk/doc/thaifont.txt
 share/texmf-dist/doc/latex/cjk/doc/vertical.txt
-share/texmf-dist/doc/latex/cjk/doc/xCJK.txt
 share/texmf-dist/doc/latex/cjk/examples/Big5.tex
 share/texmf-dist/doc/latex/cjk/examples/Big5vert.tex
 share/texmf-dist/doc/latex/cjk/examples/CEF_test.tex
@@ -99,11 +98,10 @@ share/texmf-dist/doc/latex/cjk/examples/pdf/py_test.pdf
 share/texmf-dist/doc/latex/cjk/examples/pdf/pytest.pdf
 share/texmf-dist/doc/latex/cjk/examples/pdf/rubytest.pdf
 share/texmf-dist/doc/latex/cjk/examples/pdf/thai.pdf
-share/texmf-dist/doc/latex/cjk/examples/pdf/xCJK.pdf
+share/texmf-dist/doc/latex/cjk/examples/pdf/thai_utf8.pdf
 share/texmf-dist/doc/latex/cjk/examples/py_test.tex
 share/texmf-dist/doc/latex/cjk/examples/rubytest.tex
 share/texmf-dist/doc/latex/cjk/examples/thai.tex
-share/texmf-dist/doc/latex/cjk/examples/xCJK.tex
 share/texmf-dist/doc/latex/cjk/texlive/bin-cjkutils.pl
 share/texmf-dist/doc/latex/cjk/texlive/c90.pl
 share/texmf-dist/doc/latex/cjk/texlive/cjk-build.pl
