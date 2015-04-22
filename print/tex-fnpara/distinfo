@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/26 17:25:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/22 22:29:37 markd Exp $
 
-SHA1 (tex-fnpara-2009/fnpara.tar.xz) = 3c361de6916a7619019db3d994a62a79350daa4d
-RMD160 (tex-fnpara-2009/fnpara.tar.xz) = 08ef6e2d93c6fcd856ce8f23f6299fc9ff00af16
-Size (tex-fnpara-2009/fnpara.tar.xz) = 2836 bytes
+SHA1 (tex-fnpara-25607/fnpara.tar.xz) = 096db48f6ea19b5ddad13b01d8798cf1715d6488
+RMD160 (tex-fnpara-25607/fnpara.tar.xz) = 5be228627d1d93edc86c4a52372211c6c9f2f81d
+Size (tex-fnpara-25607/fnpara.tar.xz) = 3068 bytes
