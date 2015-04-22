@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2011/01/22 23:15:17 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/22 09:47:01 markd Exp $
 
 DISTNAME=	amsrefs
-PKGNAME=	tex-${DISTNAME}-2.09
-PKGREVISION=	1
-TEXLIVE_REV=	20249
+PKGNAME=	tex-${DISTNAME}-2.14
+TEXLIVE_REV=	30646
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX-based replacement for BibTeX
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	tex-ams-[0-9]*
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
