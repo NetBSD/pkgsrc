@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.109 2014/10/13 09:08:31 wiz Exp $
+# $NetBSD: Makefile,v 1.109.4.1 2015/04/22 22:54:34 tron Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.simplesystems.org/ImageMagick/www/perl-magick.html
@@ -20,6 +21,7 @@ PERL5_PACKLIST=		auto/Image/Magick/.packlist
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 
 pre-configure:
+	${RM} ${WRKSRC}/PerlMagick/Magick.pm
 	${LN} -sf ${WRKSRC}/PerlMagick/quantum/quantum.pm ${WRKSRC}/PerlMagick/quantum/Q16.pm
 	${LN} -sf ${WRKSRC}/PerlMagick/quantum/quantum.xs ${WRKSRC}/PerlMagick/quantum/Q16.xs
 
