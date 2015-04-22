@@ -1,11 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:30:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 22:27:20 markd Exp $
+share/texmf-dist/scripts/fmtcount/fmtcount.perl
 share/texmf-dist/tex/latex/fmtcount/fc-UKenglish.def
 share/texmf-dist/tex/latex/fmtcount/fc-USenglish.def
+share/texmf-dist/tex/latex/fmtcount/fc-american.def
 share/texmf-dist/tex/latex/fmtcount/fc-british.def
 share/texmf-dist/tex/latex/fmtcount/fc-english.def
+share/texmf-dist/tex/latex/fmtcount/fc-francais.def
 share/texmf-dist/tex/latex/fmtcount/fc-french.def
+share/texmf-dist/tex/latex/fmtcount/fc-frenchb.def
 share/texmf-dist/tex/latex/fmtcount/fc-german.def
+share/texmf-dist/tex/latex/fmtcount/fc-germanb.def
 share/texmf-dist/tex/latex/fmtcount/fc-italian.def
+share/texmf-dist/tex/latex/fmtcount/fc-ngerman.def
+share/texmf-dist/tex/latex/fmtcount/fc-ngermanb.def
 share/texmf-dist/tex/latex/fmtcount/fc-portuges.def
+share/texmf-dist/tex/latex/fmtcount/fc-portuguese.def
 share/texmf-dist/tex/latex/fmtcount/fc-spanish.def
+share/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+share/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 share/texmf-dist/tex/latex/fmtcount/fmtcount.sty
