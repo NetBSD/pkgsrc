@@ -1,8 +1,8 @@
-$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.1 2013/11/17 17:12:19 minskim Exp $
+$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.2 2015/04/23 11:49:51 markd Exp $
 
 --- texmf-dist/web2c/fmtutil.cnf.orig	2013-06-26 01:19:15.000000000 +0000
 +++ texmf-dist/web2c/fmtutil.cnf
-@@ -33,96 +33,3 @@
+@@ -33,104 +33,3 @@
  # 
  # 4) usual comments start with "# ", whereas disabled configurations
  #    start with "#! " in this file.
@@ -18,7 +18,6 @@ $NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.1 2013/11/17 17:12:19 minskim Ex
 -# from context:
 -cont-en pdftex cont-usr.tex -8bit *cont-en.mkii
 -cont-en xetex cont-usr.tex -8bit *cont-en.mkii
--#! cont-de pdftex cont-usr.tex -8bit *cont-de.mkii
 -#! cont-fr pdftex cont-usr.tex -8bit *cont-fr.mkii
 -#! cont-it pdftex cont-usr.tex -8bit *cont-it.mkii
 -#! cont-nl pdftex cont-usr.tex -8bit *cont-nl.mkii
@@ -46,10 +45,19 @@ $NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.1 2013/11/17 17:12:19 minskim Ex
 -pdflatex pdftex language.dat -translate-file=cp227.tcx *pdflatex.ini
 -dvilualatex luatex language.dat,language.dat.lua dvilualatex.ini
 -lualatex luatex language.dat,language.dat.lua lualatex.ini
+-#! luajitlatex luajittex language.dat,language.dat.lua lualatex.ini
+-#
+-# from lollipop:
+-lollipop pdftex - -translate-file=cp227.tcx *lollipop.ini
+-lualollipop luatex - lualollipop.ini
+-xelollipop xetex - -etex xelollipop.ini
+-#! dvilollipop pdftex - -translate-file=cp227.tcx *lollipop.ini
+-#! dvilualollipop luatex - -translate-file=cp227.tcx lualollipop.ini
 -#
 -# from luatex:
 -luatex luatex language.def,language.dat.lua luatex.ini
 -dviluatex luatex language.def,language.dat.lua dviluatex.ini
+-luajittex luajittex language.def,language.dat.lua luatex.ini
 -#
 -# from metafont:
 -mf mf-nowin - -translate-file=cp227.tcx mf.ini

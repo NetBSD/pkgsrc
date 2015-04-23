@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2013/11/17 17:12:19 minskim Exp $
+$NetBSD: distinfo,v 1.13 2015/04/23 11:49:51 markd Exp $
 
-SHA1 (tex-kpathsea-30947/kpathsea.doc.tar.xz) = 03edea2abeafeaeaa9c5883e371214d567b4fa3d
-RMD160 (tex-kpathsea-30947/kpathsea.doc.tar.xz) = cf5a281adcc3dee794342fcbda0048218a95a3e6
-Size (tex-kpathsea-30947/kpathsea.doc.tar.xz) = 1086956 bytes
+SHA1 (tex-kpathsea-35814/kpathsea.doc.tar.xz) = 8b98b938297bb41965197e83588c7a666fa8017c
+RMD160 (tex-kpathsea-35814/kpathsea.doc.tar.xz) = 07fa3c47a8853721817486aeb6273e777ed5d9d8
+Size (tex-kpathsea-35814/kpathsea.doc.tar.xz) = 998516 bytes
