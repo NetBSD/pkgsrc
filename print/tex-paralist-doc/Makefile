@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:18 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/23 12:43:38 markd Exp $
 
 DISTNAME=	paralist.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.3b
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.4
+TEXLIVE_REV=	30992
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-paralist
