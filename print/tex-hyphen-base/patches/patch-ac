@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.8 2013/11/17 17:06:23 minskim Exp $
+$NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 
 --- tex/generic/config/language.dat.lua.orig	2013-07-08 01:19:27.000000000 +0000
 +++ tex/generic/config/language.dat.lua
-@@ -33,665 +33,4 @@ return {
+@@ -33,673 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
 --- from dehyph-exptl:
--	['german-x-2013-05-26'] = {
--		loader = 'dehypht-x-2013-05-26.tex',
+-	['german-x-2014-05-21'] = {
+-		loader = 'dehypht-x-2014-05-21.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'german-x-latest' },
 -		patterns = 'hyph-de-1901.pat.txt',
 -		hyphenation = 'hyph-de-1901.hyp.txt',
 -	},
--	['ngerman-x-2013-05-26'] = {
--		loader = 'dehyphn-x-2013-05-26.tex',
+-	['ngerman-x-2014-05-21'] = {
+-		loader = 'dehyphn-x-2014-05-21.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'ngerman-x-latest' },
@@ -444,6 +444,14 @@ $NetBSD: patch-ac,v 1.8 2013/11/17 17:06:23 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-la.pat.txt',
+-		hyphenation = '',
+-	},
+-	['classiclatin'] = {
+-		loader = 'loadhyph-la-x-classic.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-la-x-classic.pat.txt',
 -		hyphenation = '',
 -	},
 --- from hyphen-latvian:
