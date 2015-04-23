@@ -1,8 +1,16 @@
-$NetBSD: patch-configure,v 1.1 2013/10/27 20:35:16 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2015/04/23 06:50:41 dbj Exp $
 
---- configure.orig	2013-10-27 16:08:37.000000000 +0000
+--- configure.orig	2013-02-21 20:21:49.000000000 +0000
 +++ configure
-@@ -33819,7 +33819,12 @@ else
+@@ -663,6 +663,7 @@ GPERF
+ DEFAULT_PAGER
+ GNUPLOT
+ DESKTOP_FILE_INSTALL
++INSTALL_LIB
+ YFLAGS
+ YACC
+ LFLAGS
+@@ -33819,7 +33820,12 @@ else
  fi
  	  done
  	  ;;
@@ -16,3 +24,14 @@ $NetBSD: patch-configure,v 1.1 2013/10/27 20:35:16 joerg Exp $
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
+@@ -60080,7 +60086,9 @@ fi
+ 
+ 
+ 
+-INSTALL_SCRIPT='${INSTALL}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
++
++test -z "$INSTALL_LIB" && INSTALL_LIB='${INSTALL_SCRIPT}'
+ 
+ 
+ # Extract the first word of "desktop-file-install", so it can be a program name with args.
