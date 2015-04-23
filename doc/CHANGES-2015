@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1899 2015/04/22 22:47:16 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1900 2015/04/23 03:08:01 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2785,3 +2785,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-glossaries-doc to 4.15 [markd 2015-04-22]
 	Updated print/tex-graphics to 1.0p [markd 2015-04-22]
 	Updated print/tex-graphics-doc to 1.0p [markd 2015-04-22]
+	Updated games/wtf to 20150422 [rodent 2015-04-23]
