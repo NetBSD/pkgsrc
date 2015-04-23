@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/03/14 17:43:57 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2015/04/23 09:23:46 jperkin Exp $
 
 .include "../../devel/libevent/Makefile.common"
 
@@ -26,6 +26,11 @@ CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 #CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32
 
 .include "../../mk/bsd.prefs.mk"
+
+# Explicitly disable epoll on illumos, provided for Linux compat only.
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		ac_cv_func_epoll_ctl=no
+.endif
 
 .if !empty(MACHINE_PLATFORM:MHPUX-11.11-*)
 CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
