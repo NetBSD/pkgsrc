@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2011/01/22 22:49:56 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/23 12:06:26 markd Exp $
 
 DISTNAME=	listings
-PKGNAME=	tex-${DISTNAME}-1.4
-PKGREVISION=	1
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME}-1.5e
+TEXLIVE_REV=	35124
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Typeset source code listings using LaTeX
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	teTeX-texmf<=3.0nb20
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
