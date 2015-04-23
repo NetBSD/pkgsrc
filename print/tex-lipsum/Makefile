@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 04:41:57 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 12:03:40 markd Exp $
 
 DISTNAME=	lipsum
-PKGNAME=	tex-${DISTNAME}-1.2
-TEXLIVE_REV=	22098
+PKGNAME=	tex-${DISTNAME}-1.3
+TEXLIVE_REV=	34800
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easy access to the Lorem Ipsum dummy text

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 04:42:22 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 12:03:40 markd Exp $
 
 DISTNAME=	lipsum.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
-TEXLIVE_REV=	22098
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
+TEXLIVE_REV=	34800
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-lipsum
