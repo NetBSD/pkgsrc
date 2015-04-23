@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/16 20:44:38 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/23 11:57:55 markd Exp $
 
 DISTNAME=	latex
-PKGNAME=	tex-${DISTNAME}-2012
-TEXLIVE_REV=	27907
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	35577
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX macro package that defines LaTeX
