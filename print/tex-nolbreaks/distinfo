@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/25 07:33:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/23 12:38:53 markd Exp $
 
-SHA1 (tex-nolbreaks-18127/nolbreaks.tar.xz) = c3aa2b14c27ce08e9d2463f928d567d282630161
-RMD160 (tex-nolbreaks-18127/nolbreaks.tar.xz) = 422fbc0bda593c71b4663bf3fa6f2ff8bf12482f
-Size (tex-nolbreaks-18127/nolbreaks.tar.xz) = 1364 bytes
+SHA1 (tex-nolbreaks-26786/nolbreaks.tar.xz) = f0bd01d0d26e09baf0467cb56eb4ff2b48f029e5
+RMD160 (tex-nolbreaks-26786/nolbreaks.tar.xz) = a0877024d979be1e4f21664881284bc5d741387c
+Size (tex-nolbreaks-26786/nolbreaks.tar.xz) = 2584 bytes
