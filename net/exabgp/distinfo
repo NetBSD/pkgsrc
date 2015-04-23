@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/03/19 09:20:30 he Exp $
+$NetBSD: distinfo,v 1.9 2015/04/23 14:49:45 he Exp $
 
-SHA1 (exabgp/3.4.9.tar.gz) = 7d3dcd6a4cbc7ca02fc330f653a22b0ef63545de
-RMD160 (exabgp/3.4.9.tar.gz) = d89e59472202cea5479677875ba20fdcb8b1099b
-Size (exabgp/3.4.9.tar.gz) = 532690 bytes
+SHA1 (exabgp/3.4.10.tar.gz) = 1293a051167a923823a66238825320a6fac431dc
+RMD160 (exabgp/3.4.10.tar.gz) = b728d9182ec9e48faad59fd0a14865d37e4c71bc
+Size (exabgp/3.4.10.tar.gz) = 535374 bytes
 SHA1 (patch-setup.py) = 8181a726cead85e6e06d49f9b474ac97210a069c
