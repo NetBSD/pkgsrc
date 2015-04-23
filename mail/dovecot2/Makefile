@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/04/06 08:17:31 adam Exp $
+# $NetBSD: Makefile,v 1.74 2015/04/23 09:27:31 jperkin Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -20,6 +20,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
+
+OPSYSVARS+=	CONFIGURE_ENV
+
+# Explicitly disable inotify on illumos, it is provided for Linux compat only.
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
 
 .include "../../mk/bsd.prefs.mk"
 
