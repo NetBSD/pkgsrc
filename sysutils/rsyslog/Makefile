@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/16 16:58:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/23 09:30:49 jperkin Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -19,6 +19,10 @@ PLIST_VARS+=		klog solaris
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--enable-imsolaris --disable-klog
+# Explicitly disable epoll/inotify on illumos, provided for Linux compat only.
+CONFIGURE_ENV+=		ac_cv_func_epoll_create=no
+CONFIGURE_ENV+=		ac_cv_func_epoll_create1=no
+CONFIGURE_ENV+=		ac_cv_func_inotify_init=no
 PLIST.solaris=		yes
 RSYSLOG_SYSMOD=		imsolaris
 .else
