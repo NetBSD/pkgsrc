@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2010/09/14 00:18:17 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/23 12:06:26 markd Exp $
 
 DISTNAME=	listings.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.5e
+TEXLIVE_REV=	35124
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-listings
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	teTeX-texmf<=3.0nb20
 
