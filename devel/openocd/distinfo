@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/04/04 00:26:42 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/23 12:21:19 rodent Exp $
 
 SHA1 (openocd-0.8.0.tar.bz2) = 10bf9eeb54e03083cb1a101785b2d69fbdf18f31
 RMD160 (openocd-0.8.0.tar.bz2) = 812755bb51ccf6bb11e4b6aac6dd1c0c674c43b7
 Size (openocd-0.8.0.tar.bz2) = 3768447 bytes
+SHA1 (patch-src_jtag_drivers_ulink.c) = 373960ff40b4cd2b7a74e526595bf4ab9468beb3
+SHA1 (patch-src_jtag_drivers_usb__blaster_ublast2__access__libusb.c) = 5baff71502a7fc1121efd3d8d6de0bd72eae3832
