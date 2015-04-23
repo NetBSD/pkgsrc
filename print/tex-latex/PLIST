@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/14 18:16:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/23 11:57:55 markd Exp $
 share/texmf-dist/makeindex/latex/gglo.ist
 share/texmf-dist/makeindex/latex/gind.ist
 share/texmf-dist/tex/latex/base/alltt.sty
@@ -31,6 +31,7 @@ share/texmf-dist/tex/latex/base/fixltx2e.sty
 share/texmf-dist/tex/latex/base/flafter.sty
 share/texmf-dist/tex/latex/base/fleqn.clo
 share/texmf-dist/tex/latex/base/fleqn.sty
+share/texmf-dist/tex/latex/base/fltrace.sty
 share/texmf-dist/tex/latex/base/fontenc.sty
 share/texmf-dist/tex/latex/base/fontmath.cfg
 share/texmf-dist/tex/latex/base/fontmath.ltx
