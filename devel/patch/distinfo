@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/02/08 09:29:43 mef Exp $
+$NetBSD: distinfo,v 1.10 2015/04/23 08:20:45 wiz Exp $
 
-SHA1 (patch-2.7.4.tar.xz) = b2e29867263095e0f8bfd4b1319124b04102f2b0
-RMD160 (patch-2.7.4.tar.xz) = 4531f6a4f9fbae08b831e3f289946f5d4e2bfb71
-Size (patch-2.7.4.tar.xz) = 714392 bytes
+SHA1 (patch-2.7.5.tar.xz) = 8fd8f8f8ba640d871bce1bd33c7fd5e2ebe03a1e
+RMD160 (patch-2.7.5.tar.xz) = 90cba07686477e4331b30701098d896784ec5689
+Size (patch-2.7.5.tar.xz) = 727704 bytes
