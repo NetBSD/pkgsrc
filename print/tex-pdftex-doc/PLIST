@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2011/12/14 19:42:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/23 12:53:50 markd Exp $
 man/man1/pdfetex.1
-share/texmf-dist/doc/pdftex/Announcement-1.40.2
+share/texmf-dist/doc/pdftex/01-fake-interword-space/fake-interword-space.tex
 share/texmf-dist/doc/pdftex/NEWS
 share/texmf-dist/doc/pdftex/README
 share/texmf-dist/doc/pdftex/manual/ChangeLog
