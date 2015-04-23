@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/07/05 19:18:29 asau Exp $
+@comment $NetBSD: PLIST,v 1.25 2015/04/23 06:49:40 dbj Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -765,7 +765,7 @@ include/${PKGNAME}/octave/zfstream.h
 info/OctaveFAQ.info
 info/liboctave.info
 info/octave.info
-lib/charset.alias
+@comment belongs to libiconv: lib/charset.alias
 lib/octave/${PKGVERSION}/__contourc__.a
 lib/octave/${PKGVERSION}/__delaunayn__.a
 lib/octave/${PKGVERSION}/__dispatch__.a
