@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2011/03/03 22:24:02 minskim Exp $
+$NetBSD: distinfo,v 1.8 2015/04/23 11:29:01 markd Exp $
 
-SHA1 (tex-hyperref-21339/hyperref.doc.tar.xz) = 3fa4b96fb5be8060ecffc7b5cb5595195d4dde01
-RMD160 (tex-hyperref-21339/hyperref.doc.tar.xz) = 0f418158208d6b565dea361e6c07ddd9e978f884
-Size (tex-hyperref-21339/hyperref.doc.tar.xz) = 2971632 bytes
+SHA1 (tex-hyperref-28213/hyperref.doc.tar.xz) = 9fbeba2bea551c179bd79f94177a558ef649e6e0
+RMD160 (tex-hyperref-28213/hyperref.doc.tar.xz) = 066925323ca5c7e098ea31afdb27afb2d8a252fd
+Size (tex-hyperref-28213/hyperref.doc.tar.xz) = 3423912 bytes
