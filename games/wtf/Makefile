@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/04/02 23:12:55 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 03:07:46 rodent Exp $
 #
 
-DISTNAME=	wtf-20150206
+DISTNAME=	wtf-20150422
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bsdwtf/}
 
@@ -24,7 +24,10 @@ INSTALLATION_DIRS+= 	bin share/wtf ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/wtf ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/acronyms* ${DESTDIR}${PREFIX}/share/wtf
+	${INSTALL_DATA} ${WRKSRC}/acronyms ${DESTDIR}${PREFIX}/share/wtf
+	${INSTALL_DATA} ${WRKSRC}/acronyms.comp ${DESTDIR}${PREFIX}/share/wtf
+	${INSTALL_DATA} ${WRKSRC}/acronyms-o.real \
+		${DESTDIR}${PREFIX}/share/wtf/acronyms-o
 	${INSTALL_MAN} ${WRKSRC}/wtf.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 .include "../../mk/bsd.pkg.mk"
