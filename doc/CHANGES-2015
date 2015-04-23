@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1904 2015/04/23 14:50:19 he Exp $
+$NetBSD: CHANGES-2015,v 1.1905 2015/04/23 17:17:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-pdftex to 1.40.11pl36020 [markd 2015-04-23]
 	Updated print/tex-pdftex-doc to 1.40.11pl36020 [markd 2015-04-23]
 	Updated net/exabgp to 3.4.10 [he 2015-04-23]
+	Updated games/wtf to 20150206 [agc 2015-04-23]
