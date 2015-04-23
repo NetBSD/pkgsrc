@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/03/19 09:20:30 he Exp $
-bin/exabgp
+@comment $NetBSD: PLIST,v 1.7 2015/04/23 14:49:45 he Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -20,6 +19,9 @@ ${PYSITELIB}/exabgp/application/bmp.pyo
 ${PYSITELIB}/exabgp/application/cli.py
 ${PYSITELIB}/exabgp/application/cli.pyc
 ${PYSITELIB}/exabgp/application/cli.pyo
+${PYSITELIB}/exabgp/application/netlink.py
+${PYSITELIB}/exabgp/application/netlink.pyc
+${PYSITELIB}/exabgp/application/netlink.pyo
 ${PYSITELIB}/exabgp/bgp/__init__.py
 ${PYSITELIB}/exabgp/bgp/__init__.pyc
 ${PYSITELIB}/exabgp/bgp/__init__.pyo
@@ -392,9 +394,39 @@ ${PYSITELIB}/exabgp/logger.pyo
 ${PYSITELIB}/exabgp/netlink/__init__.py
 ${PYSITELIB}/exabgp/netlink/__init__.pyc
 ${PYSITELIB}/exabgp/netlink/__init__.pyo
-${PYSITELIB}/exabgp/netlink/route.py
-${PYSITELIB}/exabgp/netlink/route.pyc
-${PYSITELIB}/exabgp/netlink/route.pyo
+${PYSITELIB}/exabgp/netlink/attributes.py
+${PYSITELIB}/exabgp/netlink/attributes.pyc
+${PYSITELIB}/exabgp/netlink/attributes.pyo
+${PYSITELIB}/exabgp/netlink/firewall.py
+${PYSITELIB}/exabgp/netlink/firewall.pyc
+${PYSITELIB}/exabgp/netlink/firewall.pyo
+${PYSITELIB}/exabgp/netlink/message.py
+${PYSITELIB}/exabgp/netlink/message.pyc
+${PYSITELIB}/exabgp/netlink/message.pyo
+${PYSITELIB}/exabgp/netlink/old.py
+${PYSITELIB}/exabgp/netlink/old.pyc
+${PYSITELIB}/exabgp/netlink/old.pyo
+${PYSITELIB}/exabgp/netlink/route/__init__.py
+${PYSITELIB}/exabgp/netlink/route/__init__.pyc
+${PYSITELIB}/exabgp/netlink/route/__init__.pyo
+${PYSITELIB}/exabgp/netlink/route/address.py
+${PYSITELIB}/exabgp/netlink/route/address.pyc
+${PYSITELIB}/exabgp/netlink/route/address.pyo
+${PYSITELIB}/exabgp/netlink/route/link.py
+${PYSITELIB}/exabgp/netlink/route/link.pyc
+${PYSITELIB}/exabgp/netlink/route/link.pyo
+${PYSITELIB}/exabgp/netlink/route/neighbor.py
+${PYSITELIB}/exabgp/netlink/route/neighbor.pyc
+${PYSITELIB}/exabgp/netlink/route/neighbor.pyo
+${PYSITELIB}/exabgp/netlink/route/network.py
+${PYSITELIB}/exabgp/netlink/route/network.pyc
+${PYSITELIB}/exabgp/netlink/route/network.pyo
+${PYSITELIB}/exabgp/netlink/sequence.py
+${PYSITELIB}/exabgp/netlink/sequence.pyc
+${PYSITELIB}/exabgp/netlink/sequence.pyo
+${PYSITELIB}/exabgp/netlink/tc.py
+${PYSITELIB}/exabgp/netlink/tc.pyc
+${PYSITELIB}/exabgp/netlink/tc.pyo
 ${PYSITELIB}/exabgp/protocol/__init__.py
 ${PYSITELIB}/exabgp/protocol/__init__.pyc
 ${PYSITELIB}/exabgp/protocol/__init__.pyo
@@ -527,6 +559,9 @@ ${PYSITELIB}/exabgp/util/usage.pyo
 ${PYSITELIB}/exabgp/version.py
 ${PYSITELIB}/exabgp/version.pyc
 ${PYSITELIB}/exabgp/version.pyo
+bin/exabgp
+man/man1/exabgp.1
+man/man5/exabgp.conf.5
 share/exabgp/dynamic-1.pl
 share/exabgp/dynamic-1.sh
 share/exabgp/healthcheck.py
@@ -536,5 +571,3 @@ share/exabgp/syslog-1.py
 share/exabgp/tcp-server
 share/exabgp/watchdog-1.pl
 share/exabgp/watchdog-1.sh
-man/man1/exabgp.1
-man/man5/exabgp.conf.5
