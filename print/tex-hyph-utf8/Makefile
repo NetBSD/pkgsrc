@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/11/18 18:33:58 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/23 11:32:54 markd Exp $
 
 DISTNAME=	hyph-utf8
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	30757
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	35367
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns expressed in UTF-8
