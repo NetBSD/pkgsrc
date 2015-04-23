@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:13:38 markd Exp $
-share/texmf-dist/doc/latex/mhchem/legal.txt
+@comment $NetBSD: PLIST,v 1.2 2015/04/23 12:19:53 markd Exp $
+share/texmf-dist/doc/latex/mhchem/README
+share/texmf-dist/doc/latex/mhchem/lppl-1-3c.txt
+share/texmf-dist/doc/latex/mhchem/manifest.txt
 share/texmf-dist/doc/latex/mhchem/mhchem.pdf
+share/texmf-dist/doc/latex/mhchem/mhchem.tex
