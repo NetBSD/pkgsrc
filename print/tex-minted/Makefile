@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/22 08:10:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 12:27:54 markd Exp $
 
 DISTNAME=	minted
-PKGNAME=	tex-${DISTNAME}-1.7
-TEXLIVE_REV=	24002
+PKGNAME=	tex-${DISTNAME}-2.0
+TEXLIVE_REV=	36197
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Highlighted source code for LaTeX
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
