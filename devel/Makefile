@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2083 2015/04/21 08:56:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.2084 2015/04/23 10:47:31 nros Exp $
 #
 
 COMMENT=	Development utilities
@@ -1613,6 +1613,7 @@ SUBDIR+=	py-gobject3
 SUBDIR+=	py-gobject3-common
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
+SUBDIR+=	py-hglist
 SUBDIR+=	py-hgnested
 SUBDIR+=	py-hgtools
 SUBDIR+=	py-hgview
