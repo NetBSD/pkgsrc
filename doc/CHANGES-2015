@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1901 2015/04/23 08:20:55 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1902 2015/04/23 10:49:42 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2787,3 +2787,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-graphics-doc to 1.0p [markd 2015-04-22]
 	Updated games/wtf to 20150422 [rodent 2015-04-23]
 	Updated devel/patch to 2.7.5 [wiz 2015-04-23]
+	Added devel/py-hglist version 0.3 [nros 2015-04-23]
