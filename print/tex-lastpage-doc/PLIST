@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/28 17:47:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/23 11:52:29 markd Exp $
 share/texmf-dist/doc/latex/lastpage/README
 share/texmf-dist/doc/latex/lastpage/lastpage-example.pdf
 share/texmf-dist/doc/latex/lastpage/lastpage-example.tex
 share/texmf-dist/doc/latex/lastpage/lastpage.pdf
-share/texmf-dist/doc/latex/lastpage/ltxdoc.cfg
