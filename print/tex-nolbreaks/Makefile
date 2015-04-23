@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/25 07:33:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 12:38:52 markd Exp $
 
 DISTNAME=	nolbreaks
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	18127
+PKGNAME=	tex-${DISTNAME}-1.2
+TEXLIVE_REV=	26786
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	No line breaks in text
