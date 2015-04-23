@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/23 01:37:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 11:42:26 markd Exp $
 
 DISTNAME=	jsclasses
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	18430
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	34959
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Classes tailored for use with Japanese
