@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2009/04/17 16:19:27 abs Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/23 09:17:48 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x2vnc
 
+# Warning - breaks dragging on remote screens for some setups
 PKG_SUPPORTED_OPTIONS=	dga
-PKG_SUGGESTED_OPTIONS=	dga
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 

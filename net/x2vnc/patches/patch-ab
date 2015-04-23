@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2007/10/13 11:44:39 tnn Exp $
+$NetBSD: patch-ab,v 1.2 2015/04/23 09:17:48 abs Exp $
+
+Remember to always ungrab on exit
 
 --- x.c.orig	2006-06-14 05:34:41.000000000 +0200
 +++ x.c
