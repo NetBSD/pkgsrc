@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/01/14 21:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/23 18:23:46 joerg Exp $
 
 PKGNAME=	${DISTNAME:C/-/94-datatypes-/}
+PKGREVISION=	1
 COMMENT=	PostgreSQL data types support modules
 
 DEPENDS+=	postgresql94-server>=${PKGVERSION_NOREV}:../../databases/postgresql94-server
@@ -14,6 +15,8 @@ PLIST.uuid=		yes
 CONFIGURE_ARGS+=	--with-ossp-uuid
 BUILD_DIRS+=		contrib/uuid-ossp
 .include "../../devel/ossp-uuid/buildlink3.mk"
+
+MAKE_FLAGS+=	UUID_LIBS=-lossp-uuid
 .endif
 
 BUILD_DIRS+=		contrib/btree_gist
