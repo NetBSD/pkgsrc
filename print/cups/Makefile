@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2015/03/14 21:07:37 tnn Exp $
+# $NetBSD: Makefile,v 1.218 2015/04/23 09:29:22 jperkin Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -56,8 +56,10 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 .include "options.mk"
 
 .if ${OPSYS} == "SunOS"
-LIBS_SSP =		-lssp_nonshared -lssp
-CONFIGURE_ENV+=	LIBS_SSP=${LIBS_SSP:M*:Q}
+LIBS_SSP=		-lssp_nonshared -lssp
+CONFIGURE_ENV+=		LIBS_SSP=${LIBS_SSP:M*:Q}
+# Explicitly disable epoll on illumos, it is provided for Linux compat only.
+CONFIGURE_ENV+=		ac_cv_func_epoll_create=no
 .endif
 LIBS+=			${BUILDLINK_LDADD.iconv}
 
