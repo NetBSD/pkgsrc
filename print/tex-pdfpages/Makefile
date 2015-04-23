@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2011/05/23 18:29:45 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/23 12:48:19 markd Exp $
 
 DISTNAME=	pdfpages
-PKGNAME=	tex-${DISTNAME}-0.4n
-TEXLIVE_REV=	21680
+PKGNAME=	tex-${DISTNAME}-0.4v
+TEXLIVE_REV=	31518
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Include PDF documents in LaTeX
+LICENSE=	lppl-1.3c
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
