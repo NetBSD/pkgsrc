@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/04/02 23:12:55 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/04/23 03:07:46 rodent Exp $
 
-SHA1 (wtf-20150206.tar.gz) = 2e43ec94088fab927539e7e97be17025a8e70238
-RMD160 (wtf-20150206.tar.gz) = d5170370f5a15c2dfa2500f0bc7bac98b0adf068
-Size (wtf-20150206.tar.gz) = 23175 bytes
+SHA1 (wtf-20150422.tar.gz) = 63efe3c9ca483b74868d1123fb6d654b821f9372
+RMD160 (wtf-20150422.tar.gz) = a8182048e2ec360bf482d2ffdb9b7ee9e5df9bd6
+Size (wtf-20150422.tar.gz) = 24082 bytes
