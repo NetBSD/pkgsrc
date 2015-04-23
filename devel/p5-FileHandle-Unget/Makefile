@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/04/21 01:02:20 mef Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/23 14:16:55 mef Exp $
 
 DISTNAME=	FileHandle-Unget-0.1627
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Perl5 module providing an improved filehandle
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+
 PERL5_PACKLIST=		auto/FileHandle/Unget/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
 
