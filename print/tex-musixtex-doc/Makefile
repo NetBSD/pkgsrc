@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/12/04 02:42:07 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/23 12:33:29 markd Exp $
 
 DISTNAME=	musixtex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.15pl29752
-TEXLIVE_REV=	29752
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.16
+TEXLIVE_REV=	36401
 
 MAINTAINER=	dgriffi@cs.csubak.edu
 COMMENT=	Documentation for tex-musixtex
