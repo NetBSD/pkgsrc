@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2013/12/04 02:42:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/04/23 12:33:29 markd Exp $
 bin/musixflx
 bin/musixtex
 share/texmf-dist/dvips/musixtex/psslurs.pro
 share/texmf-dist/tex/generic/musixtex/musixadd.tex
+share/texmf-dist/tex/generic/musixtex/musixadf.tex
 share/texmf-dist/tex/generic/musixtex/musixbar.tex
 share/texmf-dist/tex/generic/musixtex/musixbbm.tex
 share/texmf-dist/tex/generic/musixtex/musixblx.tex
@@ -13,22 +14,25 @@ share/texmf-dist/tex/generic/musixtex/musixcrd.tex
 share/texmf-dist/tex/generic/musixtex/musixdat.tex
 share/texmf-dist/tex/generic/musixtex/musixdbr.tex
 share/texmf-dist/tex/generic/musixtex/musixdia.tex
+share/texmf-dist/tex/generic/musixtex/musixec.tex
 share/texmf-dist/tex/generic/musixtex/musixeng.tex
 share/texmf-dist/tex/generic/musixtex/musixesf.tex
 share/texmf-dist/tex/generic/musixtex/musixevo.tex
 share/texmf-dist/tex/generic/musixtex/musixext.tex
-share/texmf-dist/tex/generic/musixtex/musixfll.sty
 share/texmf-dist/tex/generic/musixtex/musixfll.tex
 share/texmf-dist/tex/generic/musixtex/musixgre.tex
 share/texmf-dist/tex/generic/musixtex/musixgui.tex
 share/texmf-dist/tex/generic/musixtex/musixhor.tex
 share/texmf-dist/tex/generic/musixtex/musixhou.tex
+share/texmf-dist/tex/generic/musixtex/musixhv.tex
 share/texmf-dist/tex/generic/musixtex/musixinv.tex
 share/texmf-dist/tex/generic/musixtex/musixlit.tex
 share/texmf-dist/tex/generic/musixtex/musixlyr.tex
 share/texmf-dist/tex/generic/musixtex/musixmad.tex
 share/texmf-dist/tex/generic/musixtex/musixper.tex
+share/texmf-dist/tex/generic/musixtex/musixplt.tex
 share/texmf-dist/tex/generic/musixtex/musixpoi.tex
+share/texmf-dist/tex/generic/musixtex/musixppff.tex
 share/texmf-dist/tex/generic/musixtex/musixps.tex
 share/texmf-dist/tex/generic/musixtex/musixref.tex
 share/texmf-dist/tex/generic/musixtex/musixslu.tex
@@ -42,5 +46,6 @@ share/texmf-dist/tex/generic/musixtex/musixtmr.tex
 share/texmf-dist/tex/generic/musixtex/musixtri.tex
 share/texmf-dist/tex/latex/musixtex/musixcpt.sty
 share/texmf-dist/tex/latex/musixtex/musixcrd.sty
+share/texmf-dist/tex/latex/musixtex/musixfll.sty
 share/texmf-dist/tex/latex/musixtex/musixltx.tex
 share/texmf-dist/tex/latex/musixtex/musixtex.sty
