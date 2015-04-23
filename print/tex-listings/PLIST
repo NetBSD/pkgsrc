@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/03 23:45:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/23 12:06:26 markd Exp $
+share/texmf-dist/tex/latex/listings/listings-acm.prf
+share/texmf-dist/tex/latex/listings/listings-bash.prf
+share/texmf-dist/tex/latex/listings/listings-fortran.prf
+share/texmf-dist/tex/latex/listings/listings-lua.prf
+share/texmf-dist/tex/latex/listings/listings-python.prf
 share/texmf-dist/tex/latex/listings/listings.cfg
 share/texmf-dist/tex/latex/listings/listings.sty
 share/texmf-dist/tex/latex/listings/lstdoc.sty
