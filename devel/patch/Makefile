@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2015/02/20 07:09:19 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2015/04/23 08:20:45 wiz Exp $
 
-DISTNAME=	patch-2.7.4
+DISTNAME=	patch-2.7.5
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=patch/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,9 +22,9 @@ INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 do-patch:
 .for stdhdr in sys/param.h sys/stat.h string.h
-	echo "#ifdef HAVE_${stdhdr:tu:C,[/.],_,g}" >> ${WRKSRC}/config.hin
-	echo "#include <${stdhdr}>" >> ${WRKSRC}/config.hin
-	echo "#endif" >> ${WRKSRC}/config.hin
+	${ECHO} "#ifdef HAVE_${stdhdr:tu:C,[/.],_,g}" >> ${WRKSRC}/config.hin
+	${ECHO} "#include <${stdhdr}>" >> ${WRKSRC}/config.hin
+	${ECHO} "#endif" >> ${WRKSRC}/config.hin
 .endfor
 
 SYMLINKS	= bin/gpatch ${PKGGNUDIR}bin/patch \
