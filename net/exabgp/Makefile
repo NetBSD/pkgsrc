@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/03/19 09:20:30 he Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/23 14:49:45 he Exp $
 
-VERSION=	3.4.9
+VERSION=	3.4.10
 DISTNAME=	${VERSION}
 PKGNAME=	exabgp-${VERSION}
 EGG_NAME=	exabgp-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/Exa-Networks/exabgp/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/exabgp/archive/}
 DIST_SUBDIR=	exabgp
 
 MAINTAINER=	pettai@NetBSD.org
@@ -22,21 +22,25 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 REPLACE_PERL+=		etc/exabgp/processes/dynamic-1.pl
 REPLACE_PERL+=		etc/exabgp/processes/watchdog-1.pl
-REPLACE_PYTHON+=	lib/exabgp/application/bmp.py
-REPLACE_PYTHON+=	lib/exabgp/application/cli.py
-REPLACE_PYTHON+=	lib/exabgp/netlink/route.py
-REPLACE_PYTHON+=	lib/exabgp/reactor/api/encoding.py
+
 REPLACE_PYTHON+=	etc/exabgp/processes/healthcheck.py
 REPLACE_PYTHON+=	etc/exabgp/processes/read-write.py
-REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
-REPLACE_PYTHON+=	etc/exabgp/processes/syslog-1.py
 REPLACE_PYTHON+=	etc/exabgp/processes/stderr-1.py
+REPLACE_PYTHON+=	etc/exabgp/processes/syslog-1.py
+REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
+REPLACE_PYTHON+=	lib/exabgp/application/bmp.py
+REPLACE_PYTHON+=	lib/exabgp/application/cli.py
+REPLACE_PYTHON+=	lib/exabgp/application/netlink.py
+REPLACE_PYTHON+=	lib/exabgp/netlink/old.py
+REPLACE_PYTHON+=	lib/exabgp/netlink/route.py
+REPLACE_PYTHON+=	lib/exabgp/reactor/api/encoding.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2.19
 
 USE_LANGUAGES=  # none
 
-INSTALLATION_DIRS=	share/exabgp bin man/man1 man/man5
+INSTALLATION_DIRS+=	share/exabgp bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 pre-install:
 	find ${WRKDIR} -name "*.orig" | xargs rm -f
