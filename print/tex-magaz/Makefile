@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/28 16:05:46 minskim Exp $
-# TeX Live Revision 17431
+# $NetBSD: Makefile,v 1.2 2015/04/23 12:11:48 markd Exp $
 
 DISTNAME=	magaz
-PKGNAME=	tex-${DISTNAME}-0.2
+PKGNAME=	tex-${DISTNAME}-0.4
+TEXLIVE_REV=	24694
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Magazine layout

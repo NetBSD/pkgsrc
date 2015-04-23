@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/28 16:05:46 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/23 12:11:48 markd Exp $
 
-SHA1 (tex-magaz-0.2/magaz.tar.xz) = 438c3788b43879ba2058131a394ad9a9b0c2f2cf
-RMD160 (tex-magaz-0.2/magaz.tar.xz) = 2b7d5876db9f5467fd069e7f8eff5a49a5f3dd7e
-Size (tex-magaz-0.2/magaz.tar.xz) = 2648 bytes
+SHA1 (tex-magaz-24694/magaz.tar.xz) = cdbbf6050b82cefbec5d7c4f8eb168e1c5bf866c
+RMD160 (tex-magaz-24694/magaz.tar.xz) = 8e9413ce3251143908045ffdc9ed0784d48f019e
+Size (tex-magaz-24694/magaz.tar.xz) = 4408 bytes
