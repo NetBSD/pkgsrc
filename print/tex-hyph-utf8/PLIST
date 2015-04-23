@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/11/18 18:33:58 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/04/23 11:32:54 markd Exp $
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-ec.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-il2.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-il3.tex
@@ -47,6 +47,7 @@ share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-it.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-ka.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-kmr.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-kn.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la-x-classic.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-lt.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-lv.tex
@@ -173,6 +174,7 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-it.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-ka.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-kmr.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-kn.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la-x-classic.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-lt.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-lv.tex
@@ -363,6 +365,10 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kn.chr.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kn.hyp.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kn.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kn.pat.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.pat.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.chr.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.hyp.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.lic.txt
