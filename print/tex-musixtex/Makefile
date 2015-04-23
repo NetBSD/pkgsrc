@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/12/04 02:42:07 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/23 12:33:29 markd Exp $
 
 DISTNAME=	musixtex
-PKGNAME=	tex-${DISTNAME}-1.15pl29752
-TEXLIVE_REV=	29752
+PKGNAME=	tex-${DISTNAME}-1.16
+TEXLIVE_REV=	36401
 
 MAINTAINER=	dgriffi@cs.csubak.edu
 COMMENT=	TeX macros for sophisticated music typesetting
