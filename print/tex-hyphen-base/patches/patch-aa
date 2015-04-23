@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.10 2013/11/17 17:06:23 minskim Exp $
+$NetBSD: patch-aa,v 1.11 2015/04/23 11:36:31 markd Exp $
 
 --- tex/generic/config/language.dat.orig	2013-07-08 01:19:20.000000000 +0000
 +++ tex/generic/config/language.dat
-@@ -57,153 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -57,154 +57,3 @@ english		hyphen.tex  % do not change!
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
 -% from dehyph-exptl:
--german-x-2013-05-26 dehypht-x-2013-05-26.tex
+-german-x-2014-05-21 dehypht-x-2014-05-21.tex
 -=german-x-latest
--ngerman-x-2013-05-26 dehyphn-x-2013-05-26.tex
+-ngerman-x-2014-05-21 dehyphn-x-2014-05-21.tex
 -=ngerman-x-latest
 -% from hyphen-afrikaans:
 -afrikaans loadhyph-af.tex
@@ -102,6 +102,7 @@ $NetBSD: patch-aa,v 1.10 2013/11/17 17:06:23 minskim Exp $
 -kurmanji loadhyph-kmr.tex
 -% from hyphen-latin:
 -latin loadhyph-la.tex
+-classiclatin loadhyph-la-x-classic.tex
 -% from hyphen-latvian:
 -latvian loadhyph-lv.tex
 -% from hyphen-lithuanian:
