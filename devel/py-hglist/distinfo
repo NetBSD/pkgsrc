@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/23 10:45:58 nros Exp $
+
+SHA1 (hglist-0.3.tar.gz) = aff7fdce5949c014a433ffe9adcdfe36cddc6e09
+RMD160 (hglist-0.3.tar.gz) = b63a7b93a16f9421fa47f8cbb9704326ce7bb8f9
+Size (hglist-0.3.tar.gz) = 14503 bytes
