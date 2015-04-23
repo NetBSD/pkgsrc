@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/05/14 22:11:08 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/23 12:17:14 markd Exp $
 
 DISTNAME=	memoir
-PKGNAME=	tex-${DISTNAME}-3.6gpl6.0g
-TEXLIVE_REV=	21638
+PKGNAME=	tex-${DISTNAME}-3.7c
+TEXLIVE_REV=	36449
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Typeset fiction, non-fiction and mathematical books
