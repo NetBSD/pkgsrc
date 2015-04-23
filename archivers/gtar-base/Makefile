@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2015/04/19 14:31:06 tnn Exp $
+# $NetBSD: Makefile,v 1.89 2015/04/23 09:15:19 sevan Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
@@ -41,7 +41,7 @@ PLIST_VARS+=		gtar rmt
 TEST_TARGET=		check
 
 # don't include rmt if gtar won't build it
-.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin" && ${OS_VARIANT} != "SCOOSR5"
+.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin" && ${OS_VARIANT} != "SCOOSR5" && ${OPSYS} != "AIX"
 PLIST.rmt=		yes
 .endif
 
