@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.41 2014/06/05 18:33:07 joerg Exp $
+$NetBSD: distinfo,v 1.42 2015/04/23 06:50:41 dbj Exp $
 
 SHA1 (octave-3.6.4.tar.bz2) = 3cc9366b6dbbd336eaf90fe70ad16e63705d82c4
 RMD160 (octave-3.6.4.tar.bz2) = b0356f0c5d9366b8129d72ac58bbde837fee1a95
 Size (octave-3.6.4.tar.bz2) = 15627315 bytes
-SHA1 (patch-configure) = 627b8868d2cdd3c3a44e1485c8e7c47f481ca63e
+SHA1 (patch-configure) = 5525211ee777d0c3afd55ba3f1c4d24d23b0bf4b
+SHA1 (patch-configure.ac) = 1ccb10f67fd18646ab8b6c740dffa7ca5fe33191
 SHA1 (patch-doc_interpreter_plot.txi) = b205f704ce625694a25ab57f4fad4460d1fbc0e9
 SHA1 (patch-doc_liboctave_liboctave.texi) = c53484c70adea766ba1378a1f118942c924a88a5
 SHA1 (patch-fflush-fpos_t.c) = 24ed7f95f8431b59bc5ee0dfb0e6624b8029f512
@@ -18,6 +19,7 @@ SHA1 (patch-scripts_miscellaneous_getappdata.m) = 55f9c9d5f30c85b3e8b5af82a271f1
 SHA1 (patch-scripts_miscellaneous_license.m) = 79f0f590df09a1659aea7b157ed4735ec1be55c4
 SHA1 (patch-scripts_miscellaneous_ver.m) = 62a23545f808bdd5895ffbb107ed7ca58f157f98
 SHA1 (patch-scripts_pkg_pkg.m) = e6fa838e3910d52164d7cb3ca084c748cd68abb9
+SHA1 (patch-scripts_plot_____gnuplot__drawnow____.m) = 6e93e3dd3e12daf2f6f2c6b06cb6d32e888bd3c5
 SHA1 (patch-scripts_plot_daspect.m) = 34281cae27ce447feb5ee9f1dc0d7a29e0c621a4
 SHA1 (patch-scripts_plot_legend.m) = 3932ce6e6d19c89e852be35809502afa05a6ac4c
 SHA1 (patch-scripts_plot_pbaspect.m) = 193f186be2c3e3ffc170cb0ed84900e14ab4e81b
@@ -26,5 +28,8 @@ SHA1 (patch-scripts_polynomial_polyval.m) = d6655d2b9d2755788a02720c2a28ecf2e11a
 SHA1 (patch-scripts_set_union.m) = ff976eaa4aa76d19ad73144192aee81c8e60d8bc
 SHA1 (patch-scripts_signal_freqz.m) = cc9ba19c5b1b60af64f7c7ec0906ec7eedcea8d4
 SHA1 (patch-src_DLD-FUNCTIONS_rand.cc) = 4992844f8ed53963e03e05adab2446397c2f4f02
+SHA1 (patch-src_Makefile.am) = 940da74e979e0b4b69b786b8ce8d246ced38c8a0
+SHA1 (patch-src_Makefile.in) = 65fd14523446a6c8310f123b786108a51811d057
 SHA1 (patch-src_dirfns.cc) = fad1c09d28e6b93a7d9c5de69b5b218b72d5c7c5
+SHA1 (patch-src_display.cc) = 486322373656065c3f8d0e95fa1684a6c08028ed
 SHA1 (patch-src_oct-conf.h.in) = d3fa5166db289fbd9eba355911341e891fb6d822
