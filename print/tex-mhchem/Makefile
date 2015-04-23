@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2010/11/10 22:45:58 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/23 12:19:53 markd Exp $
 
 DISTNAME=	mhchem
-PKGNAME=	tex-${DISTNAME}-3.08
-TEXLIVE_REV=	19018
+PKGNAME=	tex-${DISTNAME}-4.00
+TEXLIVE_REV=	36738
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Typeset chemical formulae/equations and Risk and Safety phrases
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-amsmath>=2.13nb1:../../print/tex-amsmath
 DEPENDS=	tex-graphics>=1.0onb1:../../print/tex-graphics
