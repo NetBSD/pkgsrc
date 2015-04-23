@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:44:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/23 12:19:53 markd Exp $
+share/texmf-dist/tex/latex/mhchem/hpstatement.sty
 share/texmf-dist/tex/latex/mhchem/mhchem.sty
 share/texmf-dist/tex/latex/mhchem/rsphrase.sty
