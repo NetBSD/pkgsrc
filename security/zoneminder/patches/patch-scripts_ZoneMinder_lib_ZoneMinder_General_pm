@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.1 2014/05/20 11:30:27 dsainty Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.1.8.1 2015/04/24 16:07:10 hiramatsu Exp $
 
 Perl doesn't really support "> /dev/null", so just capture into $output.
 
@@ -19,35 +19,35 @@ installed on the system, or not in the $PATH.
 
 Use the -m parameter to su, as ZM_WEB_USER shouldn't require a login shell.
 
---- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2014-05-13 22:59:22.229694642 +1200
-+++ scripts/ZoneMinder/lib/ZoneMinder/General.pm	2014-05-13 23:03:06.377703932 +1200
-@@ -103,7 +103,7 @@
- 	my $suffix = "";
- 	my $command = $prefix.$null_command.$suffix;
- 	Debug( "Testing \"$command\"\n" );
+--- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2015-04-01 19:40:39.708621257 +1300
++++ scripts/ZoneMinder/lib/ZoneMinder/General.pm	2015-04-01 19:50:47.372646449 +1300
+@@ -107,7 +107,7 @@
+     my $suffix = "";
+     my $command = $prefix.$null_command.$suffix;
+     Debug( "Testing \"$command\"\n" );
 -    $command .= " > /dev/null 2>&1"; 
-+	$command .= " 2>&1";
- 	my $output = qx($command);
- 	my $status = $? >> 8;
- 	if ( !$status )
-@@ -120,6 +120,7 @@
- 		$suffix = "'";
- 		$command = $prefix.$null_command.$suffix;
- 		Debug( "Testing \"$command\"\n" );
-+		$command .= " 2>&1";
- 		my $output = qx($command);
- 		my $status = $? >> 8;
- 		if ( !$status )
-@@ -132,10 +133,11 @@
- 			chomp( $output );
- 			Debug( "Test failed, '$output'\n" );
++    $command .= " 2>&1";
+     my $output = qx($command);
+     my $status = $? >> 8;
+     if ( !$status )
+@@ -124,6 +124,7 @@
+         $suffix = "'";
+         $command = $prefix.$null_command.$suffix;
+         Debug( "Testing \"$command\"\n" );
++        $command .= " 2>&1";
+         my $output = qx($command);
+         my $status = $? >> 8;
+         if ( !$status )
+@@ -136,10 +137,11 @@
+             chomp( $output );
+             Debug( "Test failed, '$output'\n" );
  
--			$prefix = "su ".ZM_WEB_USER." -c '";
-+			$prefix = "su -m ".ZM_WEB_USER." -c '";
- 			$suffix = "'";
- 			$command = $prefix.$null_command.$suffix;
- 			Debug( "Testing \"$command\"\n" );
-+			$command .= " 2>&1";
- 			$output = qx($command);
- 			$status = $? >> 8;
- 			if ( !$status )
+-            $prefix = "su ".$Config{ZM_WEB_USER}." -c '";
++            $prefix = "su -m ".$Config{ZM_WEB_USER}." -c '";
+             $suffix = "'";
+             $command = $prefix.$null_command.$suffix;
+             Debug( "Testing \"$command\"\n" );
++            $command .= " 2>&1";
+             $output = qx($command);
+             $status = $? >> 8;
+             if ( !$status )

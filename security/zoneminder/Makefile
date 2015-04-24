@@ -1,15 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13.6.1 2015/04/24 16:07:10 hiramatsu Exp $
 
-DISTNAME=	ZoneMinder-1.25.0
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
-PKGREVISION=	9
+DISTNAME=	ZoneMinder-1.28.1
+PKGREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	http://www2.zoneminder.com/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ZoneMinder/}
+GITHUB_PROJECT=	ZoneMinder
+GITHUB_TYPE=	tag
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
+
+# NetBSD tar: Invalid header, starting valid header search.
+EXTRACT_USING=  gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
@@ -55,12 +61,19 @@ CONFIGURE_ARGS+=	--with-cgidir=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
+# PolicyKit doesn't actually seem to be necessary.  This hack disables
+# configure's hunt for PolicyKit, but has no other apparent ill effects.
+CONFIGURE_ENV+=		POLKIT_CFLAGS=" " POLKIT_LIBS=" "
+
+PTHREAD_AUTO_VARS=	yes
+.include "../../mk/pthread.buildlink3.mk"
+
 CONFIGURE_ENV+=		OPT_NETPBM=yes
 CONFIGURE_ENV+=		PATH_NETPBM=${PREFIX}/bin/pnmscale
 
-.include "../../multimedia/ffmpeg010/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg010}
-CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg010}/bin/ffmpeg010
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
+CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg2}/bin/ffmpeg2
 CONFIGURE_ENV+=		OPT_FFMPEG=yes
 
 # The backtrace requires Linux's unportable <execinfo.h> header.
@@ -80,8 +93,10 @@ CFLAGS+=		-D__STDC_CONSTANT_MACROS
 # gnutls.
 CONFIGURE_ENV+=		ZM_SSL_LIB=openssl
 
-# Control where run-time state (PID file) gets stored.
-CONFIGURE_ENV+=		ZM_RUNDIR=${VARBASE}/run
+# Control where run-time state (PID file and sockets) get stored.
+# Default is "/var/run/zm", but we want to conform to VARBASE.
+CONFIGURE_ENV+=		ZM_RUNDIR=${VARBASE}/run/zm
+CONFIGURE_ENV+=		ZM_SOCKDIR=${VARBASE}/run/zm
 
 .if !empty(PKG_OPTIONS:Mapache)
 .include "../../mk/apache.mk"
@@ -101,6 +116,7 @@ CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 .endif
 
 # This directory contains state, so use OWN_DIRS instead of MAKE_DIRS.
@@ -111,6 +127,7 @@ OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/events ${ROOT_USER} ${APACHE_GROUP} 775
 
 REPLACE_PERL+=	scripts/zmaudit.pl.in
+REPLACE_PERL+=	scripts/zmcamtool.pl.in
 REPLACE_PERL+=	scripts/zmcontrol.pl.in
 REPLACE_PERL+=	scripts/zmdc.pl.in
 REPLACE_PERL+=	scripts/zmfilter.pl.in
@@ -121,6 +138,30 @@ REPLACE_PERL+=	scripts/zmupdate.pl.in
 REPLACE_PERL+=	scripts/zmvideo.pl.in
 REPLACE_PERL+=	scripts/zmwatch.pl.in
 REPLACE_PERL+=	scripts/zmx10.pl.in
+
+#
+# The intention of zmsystemctl.pl is to use bin/pkexec to allow the
+# apache user to start and stop the ZoneMinder services on operating
+# systems using systemd and newer versions of Polkit than Pkgsrc
+# currently has.
+#
+# If the base OS doesn't use systemd (E.g. anything not Linux), this
+# file shouldn't be used anyway.
+#
+# In Pkgsrc we ignore the potentially absent pkexec interpreter in
+# this file.  If the base OS uses systemd, it probably also has pkexec
+# in its base installation.
+#
+
+CHECK_INTERPRETER_SKIP+=	bin/zmsystemctl.pl
+EXTRA_PERL+=			scripts/zmsystemctl.pl.in
+
+SUBST_CLASSES+=			systemd-perl
+SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
+SUBST_STAGE.systemd-perl=	pre-configure
+SUBST_FILES.systemd-perl=	scripts/zmsystemctl.pl.in
+SUBST_SED.systemd-perl=		-e 's|/usr/bin/perl|${PERL5}|g'
+
 
 SUBST_CLASSES+=			dbpaths-path
 SUBST_MESSAGE.dbpaths-path=	Adjusting default paths in configuration.
@@ -137,7 +178,7 @@ SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
 SUBST_CLASSES+=			script-path
 SUBST_MESSAGE.script-path=	Adjusting paths in scripts.
 SUBST_STAGE.script-path=	pre-configure
-SUBST_FILES.script-path=	${REPLACE_PERL}
+SUBST_FILES.script-path=	${REPLACE_PERL} ${EXTRA_PERL}
 SUBST_SED.script-path=	-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
 
 SUBST_CLASSES+=		files
