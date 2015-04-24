@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.9 2014/05/31 12:46:28 ryoon Exp $
+$NetBSD: patch-am,v 1.10 2015/04/24 03:24:32 rodent Exp $
 
---- setup.py.orig	2014-03-09 08:40:35.000000000 +0000
+--- setup.py.orig	2014-10-12 07:03:54.000000000 +0000
 +++ setup.py
 @@ -31,7 +31,8 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
@@ -67,7 +67,7 @@ $NetBSD: patch-am,v 1.9 2014/05/31 12:46:28 ryoon Exp $
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -1138,6 +1136,30 @@ class PyBuildExt(build_ext):
+@@ -1137,6 +1135,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -98,7 +98,7 @@ $NetBSD: patch-am,v 1.9 2014/05/31 12:46:28 ryoon Exp $
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1149,7 +1171,7 @@ class PyBuildExt(build_ext):
+@@ -1148,7 +1170,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -107,7 +107,7 @@ $NetBSD: patch-am,v 1.9 2014/05/31 12:46:28 ryoon Exp $
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1477,6 +1499,10 @@ class PyBuildExt(build_ext):
+@@ -1476,6 +1498,10 @@ class PyBuildExt(build_ext):
              macros = dict()
              libraries = []
  
@@ -118,7 +118,7 @@ $NetBSD: patch-am,v 1.9 2014/05/31 12:46:28 ryoon Exp $
          else:                                   # Linux and other unices
              macros = dict()
              libraries = ['rt']
-@@ -1950,10 +1976,7 @@ class PyBuildExt(build_ext):
+@@ -1949,10 +1975,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -130,7 +130,7 @@ $NetBSD: patch-am,v 1.9 2014/05/31 12:46:28 ryoon Exp $
              libraries = []
              sources = [
                '_decimal/_decimal.c',
-@@ -2199,7 +2222,7 @@ def main():
+@@ -2198,7 +2221,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
