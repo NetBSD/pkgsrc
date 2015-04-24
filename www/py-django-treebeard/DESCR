@@ -1,0 +1,3 @@
+django-treebeard is a library that implements efficient tree implementations
+for the Django Web Framework 1.4+. It includes 3 different tree
+implementations: Adjacency List, Materialized Path and Nested Sets.
