@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
+$NetBSD: patch-al,v 1.16 2015/04/24 03:01:36 rodent Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
@@ -6,9 +6,9 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
 - honor pkgsrc LDFLAGS
 - other stuff not previously commented (XXX)
 
---- configure.orig	2014-06-30 02:05:48.000000000 +0000
+--- configure.orig	2014-12-10 16:00:00.000000000 +0000
 +++ configure
-@@ -3252,7 +3252,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3260,7 +3260,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -17,7 +17,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5351,15 +5351,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5359,15 +5359,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -34,7 +34,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -5393,6 +5388,11 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5401,6 +5396,11 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	LDLIBRARY='libpython$(VERSION).so'
  	RUNSHARED=LIBPATH=`pwd`${LIBPATH:+:${LIBPATH}}
  	;;
@@ -46,7 +46,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  
    esac
  else # shared is disabled
-@@ -6050,8 +6050,7 @@ $as_echo "$CC" >&6; }
+@@ -6058,8 +6058,7 @@ $as_echo "$CC" >&6; }
  		cur_target_minor=`sw_vers -productVersion | \
  				sed 's/\([0-9]*\)\.\([0-9]*\).*/\2/'`
  		cur_target="${cur_target_major}.${cur_target_minor}"
@@ -56,7 +56,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  		then
  		    cur_target=10.3
  		    if test ${enable_universalsdk}; then
-@@ -8209,9 +8208,9 @@ then
+@@ -8217,9 +8216,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -69,7 +69,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -8234,9 +8233,9 @@ then
+@@ -8242,9 +8241,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -82,7 +82,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -8250,7 +8249,7 @@ then
+@@ -8258,7 +8257,7 @@ then
  		;;
  	Linux*|GNU*|QNX*)
  		LDSHARED='$(CC) -shared'
@@ -91,7 +91,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -8278,6 +8277,9 @@ then
+@@ -8286,6 +8285,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -101,7 +101,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -8324,7 +8326,8 @@ then
+@@ -8332,7 +8334,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -111,7 +111,7 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8376,11 +8379,12 @@ then
+@@ -8384,11 +8387,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -125,7 +125,55 @@ $NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -10370,6 +10374,10 @@ int
+@@ -8541,6 +8545,47 @@ _ACEOF
+ 
+ fi
+ 	# Dynamic linking for HP-UX
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for RAND_egd in -lcrypto" >&5
++$as_echo_n "checking for RAND_egd in -lcrypto... " >&6; }
++if ${ac_cv_lib_crypto_RAND_egd+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lcrypto  $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char RAND_egd ();
++int
++main ()
++{
++return RAND_egd ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_lib_crypto_RAND_egd=yes
++else
++  ac_cv_lib_crypto_RAND_egd=no
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_crypto_RAND_egd" >&5
++$as_echo "$ac_cv_lib_crypto_RAND_egd" >&6; }
++if test "x$ac_cv_lib_crypto_RAND_egd" = xyes; then :
++
++$as_echo "#define HAVE_RAND_EGD 1" >>confdefs.h
++
++fi
+ 
+ # only check for sem_init if thread support is requested
+ if test "$with_threads" = "yes" -o -z "$with_threads"; then
+@@ -10378,6 +10423,10 @@ int
  main ()
  {
  int x=kqueue()
