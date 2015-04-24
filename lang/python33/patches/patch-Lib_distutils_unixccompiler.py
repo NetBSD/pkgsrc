@@ -1,6 +1,6 @@
-$NetBSD: patch-Lib_distutils_unixccompiler.py,v 1.1 2013/09/10 14:22:30 joerg Exp $
+$NetBSD: patch-Lib_distutils_unixccompiler.py,v 1.2 2015/04/24 03:24:32 rodent Exp $
 
---- Lib/distutils/unixccompiler.py.orig	2013-05-15 16:32:54.000000000 +0000
+--- Lib/distutils/unixccompiler.py.orig	2014-10-12 07:03:52.000000000 +0000
 +++ Lib/distutils/unixccompiler.py
 @@ -232,7 +232,7 @@ class UnixCCompiler(CCompiler):
          elif sys.platform[:7] == "irix646" or sys.platform[:6] == "osf1V5":

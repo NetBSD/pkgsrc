@@ -1,8 +1,18 @@
-$NetBSD: patch-pyconfig.h.in,v 1.1 2012/12/10 03:15:49 tsarna Exp $
+$NetBSD: patch-pyconfig.h.in,v 1.2 2015/04/24 03:24:32 rodent Exp $
 
---- pyconfig.h.in.orig	2011-06-11 17:46:28.000000000 +0200
-+++ pyconfig.h.in	2011-11-29 20:17:04.328552361 +0100
-@@ -1173,7 +1173,9 @@
+--- pyconfig.h.in.orig	2014-10-12 07:03:54.000000000 +0000
++++ pyconfig.h.in
+@@ -660,6 +660,9 @@
+ /* Define to 1 if you have the `pwrite' function. */
+ #undef HAVE_PWRITE
+ 
++/* Define if the libcrypto has RAND_egd */
++#undef HAVE_RAND_EGD
++
+ /* Define to 1 if you have the `readlink' function. */
+ #undef HAVE_READLINK
+ 
+@@ -1399,7 +1402,9 @@
  #undef _UINT64_T
  
  /* Define to the level of X/Open that your system supports */
