@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14351 2015/04/21 08:56:38 jperkin Exp $
+$NetBSD: TODO,v 1.14352 2015/04/24 11:43:53 rodent Exp $
 
 Suggested new packages
 ======================
@@ -721,6 +721,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kmp-0.5
 	o kmymoney2-4.6.1
 	o knights-2.5.0
+	o knot-1.6.3
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
 	o kronolith-4.1.5
