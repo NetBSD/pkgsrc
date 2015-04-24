@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1913 2015/04/24 16:06:18 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1914 2015/04/24 18:38:56 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Spec to 0.50 [mef 2015-04-24]
 	Updated devel/p5-Scalar-List-Utils to 1.42 [mef 2015-04-24]
 	Updated devel/p5-IO-stringy to 2.111 [mef 2015-04-24]
+	Added devel/rebar version 2.5.1 [reinoud 2015-04-24]
