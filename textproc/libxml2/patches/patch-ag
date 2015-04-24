@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.11 2012/09/15 10:23:38 adam Exp $
+$NetBSD: patch-ag,v 1.12 2015/04/24 11:32:29 spz Exp $
 
---- encoding.c.orig	2009-09-24 17:31:59.000000000 +0200
+--- encoding.c.orig	2014-10-03 11:53:06.000000000 +0000
 +++ encoding.c
 @@ -1433,6 +1433,9 @@ xmlInitCharEncodingHandlers(void) {
      xmlRegisterCharEncodingHandlersISO8859x ();
