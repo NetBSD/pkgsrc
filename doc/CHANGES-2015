@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1907 2015/04/24 10:56:04 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1908 2015/04/24 13:23:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/wtf to 20150206 [agc 2015-04-23]
 	Updated x11/gtk2 to 2.24.27nb1 [martin 2015-04-24]
 	Added www/py-django-treebeard version 3.0 [adam 2015-04-24]
+	Updated www/p5-Dancer to 1.3135 [wen 2015-04-24]
