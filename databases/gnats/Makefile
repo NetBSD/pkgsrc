@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2015/04/19 19:35:00 spz Exp $
+# $NetBSD: Makefile,v 1.39 2015/04/24 06:45:28 spz Exp $
 
 DISTNAME=	gnats-4.2.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gnats/}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnats/
@@ -17,12 +18,12 @@ GNU_CONFIGURE=		yes
 
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-gnats-service=service-name=${GNATS_SERVICE}
-CONFIGURE_ARGS+=	--with-gnats-user=${GNATS_USER:Q}
-CONFIGURE_ARGS+=	--with-gnatsd-user-access-file=${GNATS_USER_FILE:Q}
-CONFIGURE_ARGS+=	--with-gnatsd-host-access-file=${GNATS_HOST_FILE:Q}
-CONFIGURE_ARGS+=	--with-gnats-dblist-file=${GNATS_DB_FILE:Q}
-CONFIGURE_ARGS+=	--with-gnats-default-db=${GNATS_DBHOME:Q}
+CONFIGURE_ARGS+=	--enable-gnats-service=service-name=${GNATS_SERVICE}
+CONFIGURE_ARGS+=	--enable-gnats-user=${GNATS_USER:Q}
+CONFIGURE_ARGS+=	--enable-gnatsd-user-access-file=${GNATS_USER_FILE:Q}
+CONFIGURE_ARGS+=	--enable-gnatsd-host-access-file=${GNATS_HOST_FILE:Q}
+CONFIGURE_ARGS+=	--enable-gnats-dblist-file=${GNATS_DB_FILE:Q}
+CONFIGURE_ARGS+=	--enable-gnats-default-db=${GNATS_DBHOME:Q}
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/gnats
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
