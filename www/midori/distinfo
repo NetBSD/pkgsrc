@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.23 2014/12/02 10:07:23 snj Exp $
+$NetBSD: distinfo,v 1.24 2015/04/24 11:23:05 joerg Exp $
 
 SHA1 (midori_0.5.9_all_.tar.bz2) = 475614dcc89a214a3c2fdc2aaefc817a5fa0ca03
 RMD160 (midori_0.5.9_all_.tar.bz2) = 0436382ed629bfce63a93b2645314f5a08f2b855
 Size (midori_0.5.9_all_.tar.bz2) = 1332192 bytes
 SHA1 (patch-config_CMakeLists.txt) = 5ac4af9f980749659058fb55e7fd25ad6226861f
+SHA1 (patch-extensions_history-list.vala) = 74959c33009040b33f34da1173c8114e82434399
