@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1906 2015/04/24 09:50:27 martin Exp $
+$NetBSD: CHANGES-2015,v 1.1907 2015/04/24 10:56:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2844,3 +2844,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/exabgp to 3.4.10 [he 2015-04-23]
 	Updated games/wtf to 20150206 [agc 2015-04-23]
 	Updated x11/gtk2 to 2.24.27nb1 [martin 2015-04-24]
+	Added www/py-django-treebeard version 3.0 [adam 2015-04-24]
