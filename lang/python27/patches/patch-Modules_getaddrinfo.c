@@ -1,6 +1,6 @@
-$NetBSD: patch-Modules_getaddrinfo.c,v 1.1 2014/07/17 15:26:49 ryoon Exp $
+$NetBSD: patch-Modules_getaddrinfo.c,v 1.2 2015/04/24 03:01:36 rodent Exp $
 
---- Modules/getaddrinfo.c.orig	2014-06-30 02:05:43.000000000 +0000
+--- Modules/getaddrinfo.c.orig	2014-12-10 15:59:55.000000000 +0000
 +++ Modules/getaddrinfo.c
 @@ -66,6 +66,15 @@
  #define YES 1
