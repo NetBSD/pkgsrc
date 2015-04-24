@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 09:25:50 asau Exp $
-#
+# $NetBSD: Makefile,v 1.21 2015/04/24 12:40:15 wiz Exp $
 
-# XXX: Shouldn't this package be simply called mdp, without the "src-"?
 DISTNAME=	src-mdp-1.9a5
+PKGNAME=	${DISTNAME:S/src-//}
 PKGREVISION=	1
 CATEGORIES=	mbone
 MASTER_SITES=	http://downloads.pf.itd.nrl.navy.mil/mdp/ \
