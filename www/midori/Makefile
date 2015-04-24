@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/04/06 08:17:40 adam Exp $
+# $NetBSD: Makefile,v 1.79 2015/04/24 11:23:05 joerg Exp $
 
 DISTNAME=	midori_0.5.9_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
@@ -41,6 +41,9 @@ CONF_FILES+=	${EGDIR}/extensions/adblock/config \
 		${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock/config
 
 CONFIGURE_ENV=	VALAC=${VALAC}
+
+pre-configure:
+	${RM} ${WRKSRC}/extensions/history-list.vala.orig
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
