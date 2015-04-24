@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/24 18:37:07 reinoud Exp $
+bin/rebar
