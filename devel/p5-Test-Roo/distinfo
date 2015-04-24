@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/07/28 00:08:01 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/04/24 13:44:01 wen Exp $
 
-SHA1 (Test-Roo-1.003.tar.gz) = 4c3353f1e4e7b8a3a64bab80a01b56da6482cccc
-RMD160 (Test-Roo-1.003.tar.gz) = be4860d4419473b7d3f82e3267e83f2946475d8e
-Size (Test-Roo-1.003.tar.gz) = 28639 bytes
+SHA1 (Test-Roo-1.004.tar.gz) = 9525ab27f44e976f985e356870f1c34b07694e81
+RMD160 (Test-Roo-1.004.tar.gz) = d90e4c6cec6c4ffaa55ab85138e8ae1e233bdf09
+Size (Test-Roo-1.004.tar.gz) = 29662 bytes
