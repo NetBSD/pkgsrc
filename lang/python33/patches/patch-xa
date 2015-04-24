@@ -1,6 +1,6 @@
-$NetBSD: patch-xa,v 1.1 2013/08/09 10:54:17 drochner Exp $
+$NetBSD: patch-xa,v 1.2 2015/04/24 03:24:32 rodent Exp $
 
---- Python/thread_pthread.h.orig	2013-05-15 16:33:00.000000000 +0000
+--- Python/thread_pthread.h.orig	2014-10-12 07:03:54.000000000 +0000
 +++ Python/thread_pthread.h
 @@ -50,6 +50,9 @@
     we need to add 0 to make it work there as well. */
