@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1104 2015/04/20 07:28:23 wiz Exp $
+# $NetBSD: Makefile,v 1.1105 2015/04/24 10:54:55 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -575,6 +575,7 @@ SUBDIR+=	py-django-sekizai
 SUBDIR+=	py-django-south
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-django-tastypie
+SUBDIR+=	py-django-treebeard
 SUBDIR+=	py-django14
 SUBDIR+=	py-djangocms-admin-style
 SUBDIR+=	py-djangocms-file
