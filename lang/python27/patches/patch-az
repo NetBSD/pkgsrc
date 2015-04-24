@@ -1,6 +1,6 @@
-$NetBSD: patch-az,v 1.4 2014/11/02 13:31:11 spz Exp $
+$NetBSD: patch-az,v 1.5 2015/04/24 03:01:36 rodent Exp $
 
---- Modules/selectmodule.c.orig	2014-06-30 02:05:43.000000000 +0000
+--- Modules/selectmodule.c.orig	2014-12-10 15:59:55.000000000 +0000
 +++ Modules/selectmodule.c
 @@ -1906,7 +1906,9 @@ initselect(void)
      PyModule_AddIntConstant(m, "KQ_FILTER_NETDEV", EVFILT_NETDEV);

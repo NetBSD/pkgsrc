@@ -1,6 +1,6 @@
-$NetBSD: patch-Lib_multiprocessing_process.py,v 1.1 2014/07/17 15:26:49 ryoon Exp $
+$NetBSD: patch-Lib_multiprocessing_process.py,v 1.2 2015/04/24 03:01:36 rodent Exp $
 
---- Lib/multiprocessing/process.py.orig	2014-06-30 02:05:29.000000000 +0000
+--- Lib/multiprocessing/process.py.orig	2014-12-10 15:59:39.000000000 +0000
 +++ Lib/multiprocessing/process.py
 @@ -306,7 +306,15 @@ class _MainProcess(Process):
          self._popen = None
