@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2014/11/02 13:31:11 spz Exp $
+$NetBSD: patch-ab,v 1.4 2015/04/24 03:01:36 rodent Exp $
 
---- Lib/distutils/command/build_ext.py.orig	2014-06-30 02:05:25.000000000 +0000
+--- Lib/distutils/command/build_ext.py.orig	2014-12-10 15:59:34.000000000 +0000
 +++ Lib/distutils/command/build_ext.py
 @@ -511,8 +511,19 @@ class build_ext (Command):
          # that go into the mix.

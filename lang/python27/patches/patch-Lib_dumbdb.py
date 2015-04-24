@@ -1,9 +1,9 @@
-$NetBSD: patch-Lib_dumbdb.py,v 1.1 2015/03/03 17:19:58 snj Exp $
+$NetBSD: patch-Lib_dumbdb.py,v 1.2 2015/04/24 03:01:36 rodent Exp $
 
 http://bugs.python.org/issue22885
 
---- Lib/dumbdbm.py.orig	2015-03-03 09:05:52.000000000 -0800
-+++ Lib/dumbdbm.py	2015-03-03 09:10:02.000000000 -0800
+--- Lib/dumbdbm.py.orig	2014-12-10 15:59:35.000000000 +0000
++++ Lib/dumbdbm.py
 @@ -21,6 +21,7 @@ is read when the database is opened, and
  
  """
