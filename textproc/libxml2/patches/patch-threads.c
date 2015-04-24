@@ -1,10 +1,10 @@
-$NetBSD: patch-threads.c,v 1.4 2013/05/26 09:22:14 adam Exp $
+$NetBSD: patch-threads.c,v 1.5 2015/04/24 11:32:29 spz Exp $
 
 * Treat OpenBSD and MirBSD same as Linux to avoid linking with libpthread
 * NetBSD<4.99.36 and FreeBSD<7.0 lack pthread_equal() stub function in libc
 * pthread_once_t cast needed to avoid compilation error
 
---- threads.c.orig	2010-10-15 17:28:30.000000000 +0000
+--- threads.c.orig	2014-10-13 07:02:28.000000000 +0000
 +++ threads.c
 @@ -42,13 +42,17 @@
  #include <note.h>
