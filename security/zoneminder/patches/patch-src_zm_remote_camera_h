@@ -1,16 +1,18 @@
-$NetBSD: patch-src_zm_remote_camera_h,v 1.3 2013/04/29 21:31:13 joerg Exp $
+$NetBSD: patch-src_zm_remote_camera_h,v 1.3.16.1 2015/04/24 16:07:10 hiramatsu Exp $
 
 Declare sockaddr_in.
 
---- src/zm_remote_camera.h.orig	2009-06-02 07:59:26.000000000 +0000
-+++ src/zm_remote_camera.h
-@@ -22,8 +22,11 @@
- 
+--- src/zm_remote_camera.h.orig	2015-02-05 15:52:37.000000000 +1300
++++ src/zm_remote_camera.h	2015-04-01 17:56:10.736361360 +1300
+@@ -23,10 +23,13 @@
  #include "zm_camera.h"
+ #include "zm_rtsp_auth.h"
  
 +#include <netinet/in.h>
 +
  #include <string>
+ #include <sys/types.h>
+ #include <sys/socket.h>
  #include <netdb.h>
 +#include <time.h>
  

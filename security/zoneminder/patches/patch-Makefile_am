@@ -1,27 +1,27 @@
-$NetBSD: patch-Makefile_am,v 1.2 2013/03/24 16:47:47 joerg Exp $
+$NetBSD: patch-Makefile_am,v 1.2.18.1 2015/04/24 16:07:10 hiramatsu Exp $
 
 Disable the hacks around ownership setup so Pkgsrc can take responsibility.
 Don't install zm.conf at all - let Pkgsrc install it into EGDIR.
 
 --- Makefile.am.orig	2011-05-20 09:39:37.000000000 +0000
 +++ Makefile.am
-@@ -4,8 +4,8 @@ AUTOMAKE_OPTIONS = gnu
- webuser = @WEB_USER@
+@@ -5,8 +5,8 @@
  webgroup = @WEB_GROUP@
+ zmconfigdir = @ZM_CONFIG_DIR@
  
--sysconf_DATA = \
+-zmconfig_DATA = \
 -	zm.conf
-+#sysconf_DATA = \
++#zmconfig_DATA = \
 +#	zm.conf
  
  SUBDIRS = \
  	src \
-@@ -19,7 +19,7 @@ EXTRA_DIST = \
+@@ -20,7 +20,7 @@
  	zmconfgen.pl.in
  
  # Yes, you are correct. This is a HACK!
 -install-data-hook:
 +pkgsrc-disabled-install-data-hook:
- 	( cd $(DESTDIR)$(sysconfdir); chown $(webuser):$(webgroup) $(sysconf_DATA); chmod 600 $(sysconf_DATA) )
- 	( if ! test -e $(ZM_RUNDIR); then mkdir -p $(ZM_RUNDIR); fi; if test "$(ZM_RUNDIR)" != "/var/run"; then chown $(webuser):$(webgroup) $(ZM_RUNDIR); chmod u+w $(ZM_RUNDIR); fi )
- 	( if ! test -e $(ZM_TMPDIR); then mkdir -m 700 -p $(ZM_TMPDIR); fi; if test "$(ZM_TMPDIR)" != "/tmp"; then chown $(webuser):$(webgroup) $(ZM_TMPDIR); chmod u+w $(ZM_TMPDIR); fi )
+ 	( cd $(DESTDIR)$(zmconfigdir); chown $(webuser):$(webgroup) $(zmconfig_DATA); chmod 600 $(zmconfig_DATA) )
+ 	( if ! test -e $(DESTDIR)$(ZM_RUNDIR); then mkdir -p $(DESTDIR)$(ZM_RUNDIR); fi; if test "$(DESTDIR)$(ZM_RUNDIR)" != "/var/run"; then chown $(webuser):$(webgroup) $(DESTDIR)$(ZM_RUNDIR); chmod u+w $(DESTDIR)$(ZM_RUNDIR); fi )
+ 	( if ! test -e $(DESTDIR)$(ZM_SOCKDIR); then mkdir -p $(DESTDIR)$(ZM_SOCKDIR); fi; if test "$(DESTDIR)$(ZM_SOCKDIR)" != "/var/run"; then chown $(webuser):$(webgroup) $(DESTDIR)$(ZM_SOCKDIR); chmod u+w $(DESTDIR)$(ZM_SOCKDIR); fi )

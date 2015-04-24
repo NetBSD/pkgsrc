@@ -1,0 +1,25 @@
+$NetBSD: patch-src_zm_signal_cpp,v 1.1.2.2 2015/04/24 16:07:10 hiramatsu Exp $
+
+Don't assume machine-dependent IP register details are available for any
+platform except Linux.  Only Linux is sure to have this style of mcontext_t.
+
+Resolves build on systems that have ucontext_t but an mcontext_t that
+doesn't look like Linux.
+
+--- src/zm_signal.cpp.orig	2015-04-09 19:15:46.423693213 +1200
++++ src/zm_signal.cpp	2015-04-09 19:18:25.475699808 +1200
+@@ -66,10 +66,14 @@
+ 		ucontext_t *uc = (ucontext_t *) context;
+ #if defined(__x86_64__)
+ 		cr2 = info->si_addr;
++#if defined(__linux__)
+ 		ip = (void *)(uc->uc_mcontext.gregs[REG_RIP]);
++#endif // defined(__linux__)
+ #else
+ 		cr2 = info->si_addr;
++#if defined(__linux__)
+ 		ip = (void *)(uc->uc_mcontext.gregs[REG_EIP]);
++#endif // defined(__linux__)
+ #endif				// defined(__x86_64__)
+ 
+ 		// Print the signal address and instruction pointer if available
