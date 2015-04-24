@@ -1,9 +1,9 @@
-$NetBSD: patch-src_zm__utils.h,v 1.1 2013/03/24 16:47:47 joerg Exp $
+$NetBSD: patch-src_zm__utils.h,v 1.1.18.1 2015/04/24 16:07:10 hiramatsu Exp $
 
---- src/zm_utils.h.orig	2009-06-02 07:59:26.000000000 +0000
-+++ src/zm_utils.h
-@@ -26,7 +26,6 @@
- typedef std::vector<std::string> StringVector;
+--- src/zm_utils.h.orig	2015-04-01 17:20:39.840273017 +1300
++++ src/zm_utils.h	2015-04-01 17:28:57.376293647 +1300
+@@ -33,7 +33,6 @@
+ std::string replaceAll(std::string str, std::string from, std::string to);
  
  const std::string stringtf( const char *format, ... );
 -const std::string stringtf( const std::string &format, ... );

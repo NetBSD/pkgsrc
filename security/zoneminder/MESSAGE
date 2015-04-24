@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/03/15 02:56:56 dsainty Exp $
+$NetBSD: MESSAGE,v 1.2.18.1 2015/04/24 16:07:10 hiramatsu Exp $
 
 All documentation for ZoneMinder is now online at:
 
@@ -43,8 +43,9 @@ To enable the web interface via Apache, add the following line to httpd.conf:
 
   Include ${PREFIX}/share/examples/zoneminder/apache/zoneminder.conf
 
-Also follow the configuration instructions for www/ap-php and
-databases/php-mysql packages.  Use pkg_info to read their MESSAGE files.
+Also follow the configuration instructions for www/ap-php,
+databases/php-mysql, databases/php-pdo and databases/php-pdo_mysql packages.
+Use pkg_info to read their MESSAGE files.
 
 PHP may log warnings if the PHP date.timezone configuration is not set.
 Consider assigning a default system time zone to date.timezone in
