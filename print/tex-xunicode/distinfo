@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/01/21 18:48:08 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/04/25 05:31:06 markd Exp $
 
-SHA1 (tex-xunicode-20553/xunicode.tar.xz) = fd0b67e7d48660c097916b869dd1054f42c07b01
-RMD160 (tex-xunicode-20553/xunicode.tar.xz) = 64b4f67e1e3f181bff429b334c1d3c8c4df00de2
-Size (tex-xunicode-20553/xunicode.tar.xz) = 16780 bytes
+SHA1 (tex-xunicode-30466/xunicode.tar.xz) = bfc8b72182f4c44565553c996be27ff7d0da5101
+RMD160 (tex-xunicode-30466/xunicode.tar.xz) = 727202ec243c4bc605da38a546dde055c68c0ccb
+Size (tex-xunicode-30466/xunicode.tar.xz) = 25748 bytes
