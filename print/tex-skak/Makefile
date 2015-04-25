@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/15 11:22:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 04:39:27 markd Exp $
 
 DISTNAME=	skak
-PKGNAME=	tex-${DISTNAME}-1.5
-TEXLIVE_REV=	16453
+PKGNAME=	tex-${DISTNAME}-1.5.2
+TEXLIVE_REV=	32758
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX fonts and macros for typesetting chess games
