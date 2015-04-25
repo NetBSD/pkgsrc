@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2014/09/25 09:32:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2015/04/25 14:23:26 tnn Exp $
 
 DISTNAME=		stalin-0.9
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.ecn.purdue.edu/qobi/
 EXTRACT_SUFX=		.tgz

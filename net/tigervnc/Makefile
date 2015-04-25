@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/04/18 20:44:47 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/25 14:23:47 tnn Exp $
 
 DISTNAME=	tigervnc-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tigervnc/}
 XORG_SERVER_FILE=	xorg-server-1.12.4

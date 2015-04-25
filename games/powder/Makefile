@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/06 11:54:50 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 14:23:02 tnn Exp $
 #
 
 DISTNAME=	powder117_src
 PKGNAME=	${DISTNAME:S/_src//:S/powder/powder-/}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.zincland.com/powder/release/
 
