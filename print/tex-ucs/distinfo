@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/10/18 20:30:59 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/04/25 05:20:08 markd Exp $
 
-SHA1 (tex-ucs-17090/ucs.tar.xz) = 336f72715e4bfebca75a08e10e31278eef577989
-RMD160 (tex-ucs-17090/ucs.tar.xz) = d99da9e72d22158a6810e214732dcd830f7c4fce
-Size (tex-ucs-17090/ucs.tar.xz) = 231204 bytes
+SHA1 (tex-ucs-35853/ucs.tar.xz) = ee90347339254f0133e108b78996980afac85ff2
+RMD160 (tex-ucs-35853/ucs.tar.xz) = 00af13054ec95d30d82a984dee4b5f74e96663ed
+Size (tex-ucs-35853/ucs.tar.xz) = 268840 bytes
