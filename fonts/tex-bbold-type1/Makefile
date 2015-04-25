@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/05/09 21:02:03 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 05:39:28 markd Exp $
 
 DISTNAME=	bbold-type1
-PKGNAME=	tex-${DISTNAME}-2011
-PKGREVISION=	1
-TEXLIVE_REV=	20524
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	33143
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Adobe Type 1 format version of the bbold font
