@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:19:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 05:17:08 markd Exp $
 share/texmf-dist/doc/latex/tpslifonts/00readme.txt
-share/texmf-dist/doc/latex/tpslifonts/0install.txt
-share/texmf-dist/doc/latex/tpslifonts/__TPslifonts.tex
+share/texmf-dist/doc/latex/tpslifonts/01install.txt
+share/texmf-dist/doc/latex/tpslifonts/Makefile
 share/texmf-dist/doc/latex/tpslifonts/slifontsexample.tex

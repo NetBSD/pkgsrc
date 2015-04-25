@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/10 21:19:39 markd Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.2 2015/04/25 05:17:08 markd Exp $
 
 DISTNAME=	tpslifonts.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.6d
+TEXLIVE_REV=	27464
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-tpslifonts
+LICENSE=	gnu-gpl-v2
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
