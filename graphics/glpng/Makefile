@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/02/03 22:26:50 snj Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 14:23:11 tnn Exp $
 
 DISTNAME=	1079563a36edfe10a5f5d79ad38fe465425b989e
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://repo.or.cz/w/glpng.git/snapshot/
 PKGNAME=	glpng-1.46

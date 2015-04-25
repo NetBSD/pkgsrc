@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/04 09:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/04/25 14:23:06 tnn Exp $
 #
 
 DISTNAME=		vis5d+-1.2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		geography x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vis5d/}
 

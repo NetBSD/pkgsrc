@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2014/10/23 11:42:14 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2015/04/25 14:23:02 tnn Exp $
 
 DISTNAME=	puzzles-20141021.r10286
+PKGREVISION=	1
 CATEGORIES=	games
 # distfile changes daily
 MASTER_SITES=	# http://www.chiark.greenend.org.uk/~sgtatham/puzzles/

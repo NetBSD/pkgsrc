@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/12 08:04:04 marino Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:40 tnn Exp $
 
 DISTNAME=		mpeg4ip-1.5.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mpeg4ip/}
 

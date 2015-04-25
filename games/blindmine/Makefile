@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2014/05/09 07:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/04/25 14:22:52 tnn Exp $
 
 DISTNAME=	blindmine-0.3-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	games python
 MASTER_SITES=	http://kldp.net/frs/download.php/3097/
 EXTRACT_SUFX=	.zip

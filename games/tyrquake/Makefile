@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/02/10 22:10:33 snj Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 14:23:04 tnn Exp $
 
 DISTNAME=	tyrquake-0.61_20140630
+PKGREVISION=	1
 CATEGORIES=	games x11
 #MASTER_SITES=	http://disenchant.net/files/engine/
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/snj/tyrquake/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2014/02/08 22:54:45 wiedi Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:20 tnn Exp $
 #
 
 DISTNAME=		vp-1.8
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://elfga.com/~erik/files/
 

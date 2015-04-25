@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2014/10/09 14:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/25 14:23:11 tnn Exp $
 #
 
 DISTNAME=	gle-3.1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gle/}		\
 		http://www.linas.org/gle/pub/

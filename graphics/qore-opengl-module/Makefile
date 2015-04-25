@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 15:57:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:23:18 tnn Exp $
 
 DISTNAME=	qore-opengl-module-0.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 

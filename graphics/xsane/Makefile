@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.113 2015/01/16 09:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2015/04/25 14:23:20 tnn Exp $
 
 DISTNAME=	xsane-0.999
 PKGNAME=	xsane-0.99.9
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.xsane.org/download/
 

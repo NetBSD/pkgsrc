@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2015/04/06 08:17:35 adam Exp $
+# $NetBSD: Makefile,v 1.34 2015/04/25 14:23:46 tnn Exp $
 
 DISTNAME=	libdmapsharing-2.1.9
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net
 MASTER_SITES=	http://www.flyn.org/projects/libdmapsharing/
 

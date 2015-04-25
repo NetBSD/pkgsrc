@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2015/04/03 01:57:40 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2015/04/25 14:23:06 tnn Exp $
 
 DISTNAME=	mesa-demos-8.2.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/8.2.0/
 EXTRACT_SUFX=	.tar.bz2
