@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/07/20 02:16:08 minskim Exp $
+$NetBSD: distinfo,v 1.7 2015/04/25 08:30:26 markd Exp $
 
-SHA1 (tex-times-21993/times.tar.xz) = 995f941ff9524f3620700793bbfe64c6a2abd1cc
-RMD160 (tex-times-21993/times.tar.xz) = dac94a26197528024add0f5d637b7ec1b528d9b9
-Size (tex-times-21993/times.tar.xz) = 333244 bytes
+SHA1 (tex-times-35058/times.tar.xz) = 4991b6c7c1258cf5992b061205cbec9c189c16e2
+RMD160 (tex-times-35058/times.tar.xz) = 8c619a598e9979f32b26b5f91d1d9abef6492ab2
+Size (tex-times-35058/times.tar.xz) = 287044 bytes
