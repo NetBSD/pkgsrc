@@ -1,0 +1,34 @@
+$NetBSD: patch-gcc_java_Make-lang.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- gcc/java/Make-lang.in.orig	1999-06-25 08:26:23.000000000 +0000
++++ gcc/java/Make-lang.in
+@@ -144,20 +144,20 @@ java.install-normal:
+ java.install-common:
+ 	-if [ -f $(GCJ)$(exeext) ]; then \
+ 	  if [ -f $(GCJ)-cross$(exeext) ]; then \
+-	    rm -f $(bindir)/$(JAVA_CROSS_NAME)$(exeext); \
+-	    $(INSTALL_PROGRAM) $(GCJ)-cross$(exeext) $(bindir)/$(JAVA_CROSS_NAME)$(exeext); \
+-	    chmod a+x $(bindir)/$(JAVA_CROSS_NAME)$(exeext); \
++	    rm -f $(DESTDIR)$(bindir)/$(JAVA_CROSS_NAME)$(exeext); \
++	    $(INSTALL_PROGRAM) $(GCJ)-cross$(exeext) $(DESTDIR)$(bindir)/$(JAVA_CROSS_NAME)$(exeext); \
++	    chmod a+x $(DESTDIR)$(bindir)/$(JAVA_CROSS_NAME)$(exeext); \
+ 	  else \
+-	    rm -f $(bindir)/$(JAVA_INSTALL_NAME)$(exeext); \
+-	    $(INSTALL_PROGRAM) $(GCJ)$(exeext) $(bindir)/$(JAVA_INSTALL_NAME)$(exeext); \
+-	    chmod a+x $(bindir)/$(JAVA_INSTALL_NAME)$(exeext); \
++	    rm -f $(DESTDIR)$(bindir)/$(JAVA_INSTALL_NAME)$(exeext); \
++	    $(INSTALL_PROGRAM) $(GCJ)$(exeext) $(DESTDIR)$(bindir)/$(JAVA_INSTALL_NAME)$(exeext); \
++	    chmod a+x $(DESTDIR)$(bindir)/$(JAVA_INSTALL_NAME)$(exeext); \
+ 	  fi ; \
+ 	fi ; \
+         for tool in $(JAVA_TARGET_INDEPENDENT_BIN_TOOLS); do \
+           if [ -f $$tool$(exeext) ]; then \
+-	    rm -f $(bindir)/$$tool$(exeext); \
+-	    $(INSTALL_PROGRAM) $$tool$(exeext) $(bindir)/$$tool$(exeext); \
+-	    chmod a+x $(bindir)/$$tool$(exeext); \
++	    rm -f $(DESTDIR)$(bindir)/$$tool$(exeext); \
++	    $(INSTALL_PROGRAM) $$tool$(exeext) $(DESTDIR)$(bindir)/$$tool$(exeext); \
++	    chmod a+x $(DESTDIR)$(bindir)/$$tool$(exeext); \
+           fi ; \
+        done
+ 
