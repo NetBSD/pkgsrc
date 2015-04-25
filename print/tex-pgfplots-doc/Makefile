@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/08 05:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/25 03:56:15 markd Exp $
 
 DISTNAME=	pgfplots.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.12
