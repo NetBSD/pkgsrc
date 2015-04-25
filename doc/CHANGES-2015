@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1923 2015/04/25 13:43:39 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1924 2015/04/25 13:45:01 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3016,3 +3016,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/dvipsk to 5.994 [markd 2015-04-25]
 	Updated print/dvipdfmx to 20140525 [markd 2015-04-25]
 	Removed print/xdvipdfmx [markd 2015-04-25]
+	Updated lang/coq to 8.4pl6 [jaapb 2015-04-25]
