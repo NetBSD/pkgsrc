@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/08 04:52:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:13:22 markd Exp $
 share/texmf-dist/mft/base/README
 share/texmf-dist/mft/base/cmbase.mft
-share/texmf-dist/mft/base/e.mft
 share/texmf-dist/mft/base/mplain.mft
-share/texmf-dist/mft/base/pl.mft
 share/texmf-dist/mft/base/plain.mft
