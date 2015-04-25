@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/21 17:19:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 05:25:39 markd Exp $
 share/texmf-dist/tex/generic/xetexconfig/unicode-letters.tex
 share/texmf-dist/tex/xelatex/xetexconfig/crop.cfg
-share/texmf-dist/tex/xelatex/xetexconfig/hyperref.cfg
