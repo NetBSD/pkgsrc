@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2085 2015/04/24 18:37:07 reinoud Exp $
+# $NetBSD: Makefile,v 1.2086 2015/04/25 10:45:13 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1663,6 +1663,45 @@ SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pyev
 SUBDIR+=	py-pylint
+SUBDIR+=	py-pyobjc
+SUBDIR+=	py-pyobjc-core
+SUBDIR+=	py-pyobjc-framework-Accounts
+SUBDIR+=	py-pyobjc-framework-AddressBook
+SUBDIR+=	py-pyobjc-framework-AppleScriptKit
+SUBDIR+=	py-pyobjc-framework-AppleScriptObjC
+SUBDIR+=	py-pyobjc-framework-Automator
+SUBDIR+=	py-pyobjc-framework-CalendarStore
+SUBDIR+=	py-pyobjc-framework-CFNetwork
+SUBDIR+=	py-pyobjc-framework-Cocoa
+SUBDIR+=	py-pyobjc-framework-Collaboration
+SUBDIR+=	py-pyobjc-framework-CoreData
+SUBDIR+=	py-pyobjc-framework-CoreLocation
+SUBDIR+=	py-pyobjc-framework-CoreText
+SUBDIR+=	py-pyobjc-framework-CoreWLAN
+SUBDIR+=	py-pyobjc-framework-DictionaryServices
+SUBDIR+=	py-pyobjc-framework-DiskArbitration
+SUBDIR+=	py-pyobjc-framework-EventKit
+SUBDIR+=	py-pyobjc-framework-ExceptionHandling
+SUBDIR+=	py-pyobjc-framework-FSEvents
+SUBDIR+=	py-pyobjc-framework-InputMethodKit
+SUBDIR+=	py-pyobjc-framework-InstallerPlugins
+SUBDIR+=	py-pyobjc-framework-InstantMessage
+SUBDIR+=	py-pyobjc-framework-LatentSemanticMapping
+SUBDIR+=	py-pyobjc-framework-LaunchServices
+SUBDIR+=	py-pyobjc-framework-OpenDirectory
+SUBDIR+=	py-pyobjc-framework-PreferencePanes
+SUBDIR+=	py-pyobjc-framework-PubSub
+SUBDIR+=	py-pyobjc-framework-QTKit
+SUBDIR+=	py-pyobjc-framework-Quartz
+SUBDIR+=	py-pyobjc-framework-ScreenSaver
+SUBDIR+=	py-pyobjc-framework-ScriptingBridge
+SUBDIR+=	py-pyobjc-framework-SearchKit
+SUBDIR+=	py-pyobjc-framework-ServiceManagement
+SUBDIR+=	py-pyobjc-framework-Social
+SUBDIR+=	py-pyobjc-framework-StoreKit
+SUBDIR+=	py-pyobjc-framework-SyncServices
+SUBDIR+=	py-pyobjc-framework-SystemConfiguration
+SUBDIR+=	py-pyobjc-framework-WebKit
 SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
