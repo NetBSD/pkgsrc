@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2015/04/19 19:09:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2015/04/25 11:35:35 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -246,6 +246,7 @@ lib/calibre/calibre/ebooks/docx/writer/container.py
 lib/calibre/calibre/ebooks/docx/writer/fonts.py
 lib/calibre/calibre/ebooks/docx/writer/from_html.py
 lib/calibre/calibre/ebooks/docx/writer/images.py
+lib/calibre/calibre/ebooks/docx/writer/lists.py
 lib/calibre/calibre/ebooks/docx/writer/styles.py
 lib/calibre/calibre/ebooks/docx/writer/tables.py
 lib/calibre/calibre/ebooks/docx/writer/utils.py
@@ -920,7 +921,6 @@ lib/calibre/calibre/gui2/search_box.py
 lib/calibre/calibre/gui2/search_restriction_mixin.py
 lib/calibre/calibre/gui2/shortcuts.py
 lib/calibre/calibre/gui2/shortcuts_ui.py
-lib/calibre/calibre/gui2/splash.py
 lib/calibre/calibre/gui2/store/__init__.py
 lib/calibre/calibre/gui2/store/basic_config.py
 lib/calibre/calibre/gui2/store/basic_config_widget_ui.py
@@ -2055,6 +2055,7 @@ share/calibre/recipes/dilbert.recipe
 share/calibre/recipes/dilemaveche.recipe
 share/calibre/recipes/dingoo_a320.recipe
 share/calibre/recipes/discover_magazine.recipe
+share/calibre/recipes/discover_magazine_monthly.recipe
 share/calibre/recipes/disinformatico.recipe
 share/calibre/recipes/divahair.recipe
 share/calibre/recipes/dn_se.recipe
@@ -2614,7 +2615,6 @@ share/calibre/recipes/mediapart.recipe
 share/calibre/recipes/medscape.recipe
 share/calibre/recipes/melbourne_herald_sun.recipe
 share/calibre/recipes/men24_gr.recipe
-share/calibre/recipes/menorca.recipe
 share/calibre/recipes/mens_health.recipe
 share/calibre/recipes/merco_press.recipe
 share/calibre/recipes/mesec.recipe
