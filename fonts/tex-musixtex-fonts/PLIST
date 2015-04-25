@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/04 02:18:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:17:00 markd Exp $
 share/texmf-dist/fonts/map/dvips/musixtex-fonts/musix.map
 share/texmf-dist/fonts/source/public/musixtex-fonts/musexgen.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/musix11.mf
@@ -12,6 +12,13 @@ share/texmf-dist/fonts/source/public/musixtex-fonts/musixgen.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/musixsps.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/musixspx.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/mxsk.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadf11.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadf13.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadf16.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadf20.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadf24.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadf29.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xadfgen.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xdrawsl.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xdrawzl.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xgreg11.mf
@@ -22,6 +29,8 @@ share/texmf-dist/fonts/source/public/musixtex-fonts/xgreg24.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xgreg25.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xgreg29.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xgreggen.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xppff10.mf
+share/texmf-dist/fonts/source/public/musixtex-fonts/xppffgen.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xsld11.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xsld11d.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xsld13.mf
@@ -97,12 +106,19 @@ share/texmf-dist/fonts/tfm/public/musixtex-fonts/musix29.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/musixsps.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/musixspx.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/mxsk.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xadf11.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xadf13.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xadf16.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xadf20.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xadf24.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xadf29.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xgreg11.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xgreg13.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xgreg16.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xgreg20.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xgreg24.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xgreg29.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/xppff10.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xsld11.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xsld11d.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xsld13.tfm
@@ -170,12 +186,19 @@ share/texmf-dist/fonts/type1/public/musixtex-fonts/musix29.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/musixsps.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/musixspx.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/mxsk.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xadf11.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xadf13.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xadf16.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xadf20.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xadf24.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xadf29.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xgreg11.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xgreg13.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xgreg16.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xgreg20.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xgreg24.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xgreg29.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/xppff10.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xsld11.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xsld11d.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/xsld13.pfb
