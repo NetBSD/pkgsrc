@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2015/04/17 15:52:59 adam Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/25 14:20:27 tnn Exp $
 #
 
 DISTNAME=	LibreCAD-LibreCAD-v1.0.2-0-ga6826ad
 PKGNAME=	librecad-1.0.2
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	cad
 MASTER_SITES=	-http://nodeload.github.com/LibreCAD/LibreCAD/legacy.tar.gz/v1.0.2
 

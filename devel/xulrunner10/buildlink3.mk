@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2014/05/05 00:47:47 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2015/04/25 14:20:40 tnn Exp $
 
 BUILDLINK_TREE+=	xulrunner10
 
@@ -11,7 +11,7 @@ xulrunner10-preconfigure:
 	cp ${PREFIX}/lib/xulrunner10/pkgconfig/* ${BUILDLINK_DIR}/lib/pkgconfig
 
 BUILDLINK_API_DEPENDS.xulrunner10+=	xulrunner10>=10.0.2
-BUILDLINK_ABI_DEPENDS.xulrunner10+=	xulrunner10>=10.0.12nb18
+BUILDLINK_ABI_DEPENDS.xulrunner10+=	xulrunner10>=10.0.12nb24
 BUILDLINK_PKGSRCDIR.xulrunner10?=	../../devel/xulrunner10
 
 BUILDLINK_INCDIRS.xulrunner10+=		lib/xulrunner10-sdk/include

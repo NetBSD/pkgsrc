@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2015/01/01 09:01:37 dholland Exp $
+# $NetBSD: Makefile,v 1.35 2015/04/25 14:20:24 tnn Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
 PKGNAME=		spiralsynth-2.0.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/Software/SpiralSynth/dload/
 
