@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/10/26 23:53:43 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/04/25 04:13:37 markd Exp $
 
-SHA1 (tex-pkfix-18835/pkfix.tar.xz) = 855d84a8d4b400dc8f544b043b6af0e2468d3616
-RMD160 (tex-pkfix-18835/pkfix.tar.xz) = c79472ee4ca1e6ba32b908b6d720a37c21c5cb0f
-Size (tex-pkfix-18835/pkfix.tar.xz) = 7440 bytes
+SHA1 (tex-pkfix-26032/pkfix.tar.xz) = 24af1caa7112f4f51e1a5976291e24890173409b
+RMD160 (tex-pkfix-26032/pkfix.tar.xz) = 8b92fa12b498c82e53d5d08a676796b12b9efdc2
+Size (tex-pkfix-26032/pkfix.tar.xz) = 7548 bytes
 SHA1 (patch-aa) = 7cba03d89d4757ac985be4649d6bb7e0a29cb963
