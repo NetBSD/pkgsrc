@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_fmtutil-sys,v 1.1 2012/10/13 22:38:20 minskim Exp $
+$NetBSD: patch-bin_fmtutil-sys,v 1.2 2015/04/25 20:26:37 markd Exp $
 
---- bin/fmtutil-sys.orig	2012-10-09 17:39:16.000000000 +0000
+--- bin/fmtutil-sys.orig	2014-11-23 18:10:07.000000000 +0000
 +++ bin/fmtutil-sys
-@@ -19,11 +19,11 @@ unset RUNNING_BSH
- test -n "${ZSH_VERSION+set}" && alias -g '${1+"$@"}'='"$@"'
- export PATH
+@@ -21,11 +21,11 @@ mydir=`echo "$0" | sed 's,/[^/]*$,,'`
+ mydir=`cd "$mydir" && pwd`
+ PATH="$mydir:$PATH"; export PATH
  
 -v=`kpsewhich -var-value TEXMFSYSVAR`
 -c=`kpsewhich -var-value TEXMFSYSCONFIG`
