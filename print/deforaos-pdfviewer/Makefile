@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/03/09 09:02:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/04/25 14:24:45 tnn Exp $
 #
 
 DISTNAME=	PDFViewer-0.0.1
 PKGNAME=	deforaos-pdfviewer-0.0.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	print
 MASTER_SITES=	http://www.defora.org/os/download/download/3686/
 

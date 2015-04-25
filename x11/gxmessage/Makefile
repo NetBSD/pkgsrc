@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/05/05 00:48:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/25 14:25:07 tnn Exp $
 #
 
 DISTNAME=	gxmessage-2.20.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	http://homepages.ihug.co.nz/~trmusson/stuff/
 MASTER_SITES+=	${MASTER_SITE_GNU:=gxmessage/}

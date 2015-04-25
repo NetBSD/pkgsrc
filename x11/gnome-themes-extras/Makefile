@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2014/05/05 00:48:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2015/04/25 14:25:05 tnn Exp $
 #
 
 DISTNAME=	gnome-themes-extras-2.22.0
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-themes-extras/2.22/}
 EXTRACT_SUFX=	.tar.bz2
