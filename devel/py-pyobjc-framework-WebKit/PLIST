@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/25 10:40:51 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/JavaScriptCore/__init__.py
+${PYSITELIB}/JavaScriptCore/__init__.pyc
+${PYSITELIB}/JavaScriptCore/__init__.pyo
+${PYSITELIB}/JavaScriptCore/_metadata.pyc
+${PYSITELIB}/JavaScriptCore/_metadata.pyo
+${PYSITELIB}/JavaScriptCore/_util.pyc
+${PYSITELIB}/JavaScriptCore/_util.pyo
+${PYSITELIB}/JavaScriptCore/_metadata.py
+${PYSITELIB}/JavaScriptCore/_util.py
+${PYSITELIB}/WebKit/__init__.py
+${PYSITELIB}/WebKit/__init__.pyc
+${PYSITELIB}/WebKit/__init__.pyo
+${PYSITELIB}/WebKit/_WebKit.so
+${PYSITELIB}/WebKit/_metadata.py
+${PYSITELIB}/WebKit/_metadata.pyc
+${PYSITELIB}/WebKit/_metadata.pyo

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+
+SHA1 (pyobjc-framework-LaunchServices-3.0.4.tar.gz) = e10bfd4c350fa74f4fa7f56eb9c3073ba65473f0
+RMD160 (pyobjc-framework-LaunchServices-3.0.4.tar.gz) = 3179b25f62a1a41cef1062c7dede1f37c5fbd7d4
+Size (pyobjc-framework-LaunchServices-3.0.4.tar.gz) = 69165 bytes
