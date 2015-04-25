@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/11/17 16:51:49 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 04:49:50 markd Exp $
 
 DISTNAME=	texconfig
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	29764
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	34642
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Configuration utility for TeX
