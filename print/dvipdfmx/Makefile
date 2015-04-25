@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/04/25 13:07:05 markd Exp $
+# $NetBSD: Makefile,v 1.46 2015/04/25 13:08:52 markd Exp $
 
 DISTNAME=	texlive-20140525-source
 PKGNAME=	dvipdfmx-20140525
@@ -12,6 +12,7 @@ COMMENT=	DVI to PDF converter with CID-keyed font support
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
+CONFLICTS+=	xdvipdfm-[0-9]*
 DEPENDS+=	tex-dvipdfmx-[0-9]*:../../print/tex-dvipdfmx
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
