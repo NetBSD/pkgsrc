@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/03/04 01:20:21 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 04:26:47 markd Exp $
 
 DISTNAME=	ptex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.2
-TEXLIVE_REV=	25342
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.2pl36135
+TEXLIVE_REV=	36135
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-ptex
