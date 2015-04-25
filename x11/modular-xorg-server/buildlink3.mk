@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2015/04/05 19:46:07 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2015/04/25 11:47:03 tnn Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -7,8 +7,7 @@ MODULAR_XORG_SERVER_BUILDLINK3_MK:=
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# default to yes until the dust settles
-USE_OLD_MODULAR_XORG_SERVER?=	yes
+USE_OLD_MODULAR_XORG_SERVER?=	no
 
 .if !empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.12.4nb12<1.17
