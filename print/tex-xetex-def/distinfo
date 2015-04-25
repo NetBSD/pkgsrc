@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/22 07:58:12 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/04/25 05:22:39 markd Exp $
 
-SHA1 (tex-xetex-def-16192/xetex-def.tar.xz) = f7cb78bbb3c494cccd95eccb2b82417559315743
-RMD160 (tex-xetex-def-16192/xetex-def.tar.xz) = 67cff6da8556f93f1151363828086850bf6e6a4c
-Size (tex-xetex-def-16192/xetex-def.tar.xz) = 4792 bytes
+SHA1 (tex-xetex-def-36646/xetex-def.tar.xz) = 8fea83acf452074da2b5d1fef9d11f7870eee903
+RMD160 (tex-xetex-def-36646/xetex-def.tar.xz) = 6d48d322026f5524c65267efd29e681151a89188
+Size (tex-xetex-def-36646/xetex-def.tar.xz) = 5668 bytes
