@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/07/20 02:09:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/25 07:56:24 markd Exp $
 share/texmf-dist/dvips/helvetic/config.uhv
 share/texmf-dist/fonts/afm/adobe/helvetic/phvb8a.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvb8an.afm
@@ -67,26 +67,6 @@ share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8tn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvron.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvrrn.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvb8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbn8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbnc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbo8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbon8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvr8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvrc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvrn8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvrnc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvro8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvron8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvb.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvbo.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvbon.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvbrn.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvr.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvro.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvron.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvrrn.tfm
 share/texmf-dist/fonts/tfm/monotype/helvetic/arb10u.tfm
 share/texmf-dist/fonts/tfm/monotype/helvetic/arb2n.tfm
 share/texmf-dist/fonts/tfm/monotype/helvetic/arb7j.tfm
@@ -175,8 +155,6 @@ share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfm
 share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfm
-share/texmf-dist/fonts/type1/urw/helvetic/uhvboc8a.pfb
-share/texmf-dist/fonts/type1/urw/helvetic/uhvbrc8a.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a-105.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfm
@@ -187,8 +165,6 @@ share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfm
 share/texmf-dist/fonts/type1/urw/helvetic/uhvro8ac.pfb
 share/texmf-dist/fonts/type1/urw/helvetic/uhvro8ac.pfm
-share/texmf-dist/fonts/type1/urw/helvetic/uhvroc8a.pfb
-share/texmf-dist/fonts/type1/urw/helvetic/uhvrrc8a.pfb
 share/texmf-dist/fonts/vf/adobe/helvetic/phvb.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvb7tn.vf
@@ -231,18 +207,6 @@ share/texmf-dist/fonts/vf/adobe/helvetic/phvro8t.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvro8tn.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvron.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvrrn.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvb8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvbc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvbn8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvbnc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvbo8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvbon8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvr8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvrc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvrn8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvrnc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvro8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/helvetic/phvron8z.vf
 share/texmf-dist/fonts/vf/monotype/helvetic/mhvb.vf
 share/texmf-dist/fonts/vf/monotype/helvetic/mhvb8t.vf
 share/texmf-dist/fonts/vf/monotype/helvetic/mhvbi.vf
