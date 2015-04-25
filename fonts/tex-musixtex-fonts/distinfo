@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/12/04 02:18:42 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/25 08:17:00 markd Exp $
 
-SHA1 (tex-musixtex-fonts-28934/musixtex-fonts.tar.xz) = d552a51581356d4b0508267bded534a0f6b19b84
-RMD160 (tex-musixtex-fonts-28934/musixtex-fonts.tar.xz) = 253d2f82ce8ea52acabc7e265b8970119908284f
-Size (tex-musixtex-fonts-28934/musixtex-fonts.tar.xz) = 4480172 bytes
+SHA1 (tex-musixtex-fonts-36414/musixtex-fonts.tar.xz) = fb86348c71de2c2106f6be0b8570cde2283cc3a3
+RMD160 (tex-musixtex-fonts-36414/musixtex-fonts.tar.xz) = 84cee1b01d233c1438177f5b93d28eb334c2f08e
+Size (tex-musixtex-fonts-36414/musixtex-fonts.tar.xz) = 4537484 bytes
