@@ -1,9 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2009/07/10 23:36:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/25 05:28:37 markd Exp $
 share/texmf-dist/tex/generic/xkeyval/keyval.tex
 share/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
 share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+share/texmf-dist/tex/generic/xkeyval/xkvex1.tex
+share/texmf-dist/tex/generic/xkeyval/xkvex2.tex
+share/texmf-dist/tex/generic/xkeyval/xkvex3.tex
+share/texmf-dist/tex/generic/xkeyval/xkvex4.tex
 share/texmf-dist/tex/generic/xkeyval/xkvtxhdr.tex
+share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 share/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
 share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+share/texmf-dist/tex/latex/xkeyval/xkveca.cls
+share/texmf-dist/tex/latex/xkeyval/xkvecb.cls
+share/texmf-dist/tex/latex/xkeyval/xkvesa.sty
+share/texmf-dist/tex/latex/xkeyval/xkvesb.sty
+share/texmf-dist/tex/latex/xkeyval/xkvesc.sty
 share/texmf-dist/tex/latex/xkeyval/xkvltxp.sty
 share/texmf-dist/tex/latex/xkeyval/xkvview.sty
