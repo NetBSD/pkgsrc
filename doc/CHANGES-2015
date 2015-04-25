@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1927 2015/04/25 22:09:08 brook Exp $
+$NetBSD: CHANGES-2015,v 1.1928 2015/04/25 23:35:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3020,3 +3020,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-bcrypt to 1.1.1nb1 [wiz 2015-04-25]
 	Added lang/newsqueak version 20000211 [dholland 2015-04-25]
 	Added pkgtools/R2pkg version 0.2 [brook 2015-04-25]
+	Updated sysutils/tdir to 1.71 [mef 2015-04-25]
