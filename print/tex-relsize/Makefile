@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/12/25 05:55:53 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 04:31:54 markd Exp $
 
 DISTNAME=	relsize
-PKGNAME=	tex-${DISTNAME}-3.1
-TEXLIVE_REV=	20018
+PKGNAME=	tex-${DISTNAME}-4.1
+TEXLIVE_REV=	30707
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Set the font size relative to the current font size
