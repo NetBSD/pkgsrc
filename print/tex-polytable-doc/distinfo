@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/17 17:48:30 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/04/25 04:19:00 markd Exp $
 
-SHA1 (tex-polytable-20331/polytable.doc.tar.xz) = 113f778df26d00daa7a4e7a1262871c323197556
-RMD160 (tex-polytable-20331/polytable.doc.tar.xz) = 49021976c4feb2154ba4871d9d41d2dedafb45e8
-Size (tex-polytable-20331/polytable.doc.tar.xz) = 287296 bytes
+SHA1 (tex-polytable-31235/polytable.doc.tar.xz) = 2b860acef33065948f23be50a5e195bcb09c8dd6
+RMD160 (tex-polytable-31235/polytable.doc.tar.xz) = 9c1dab0e86e7c40f82e1b8739daa3c59de6deea8
+Size (tex-polytable-31235/polytable.doc.tar.xz) = 287440 bytes
