@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/09/07 23:24:56 rodent Exp $
+# $NetBSD: Makefile,v 1.33 2015/04/25 23:31:23 dholland Exp $
 
 DISTNAME=	socat-1.7.2.4
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	"netcat++" (extended design, new implementation)
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
-ONLY_FOR_COMPILER=	gcc	# uses -Werror in the configure script
+ONLY_FOR_COMPILER=	gcc clang	# uses -Werror in the configure script
 
 .include "../../mk/bsd.prefs.mk"
 
