@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/03 19:14:05 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 07:52:01 markd Exp $
 
 DISTNAME=	cmextra
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	14075
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	32831
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extra Computer Modern fonts
