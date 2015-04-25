@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/01/05 22:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:23:04 tnn Exp $
 #
 
 DISTNAME=	toppler-1.1.6
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=toppler/}
 

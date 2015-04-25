@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/10/06 11:54:53 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:03 tnn Exp $
 #
 
 DISTNAME=	sarien-0.7.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarien/}
 
