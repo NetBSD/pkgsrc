@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/11/17 17:48:30 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 04:19:00 markd Exp $
 
 DISTNAME=	polytable
-PKGNAME=	tex-${DISTNAME}-0.8.2
-PKGREVISION=	1
-TEXLIVE_REV=	20331
+PKGNAME=	tex-${DISTNAME}-0.8.5
+TEXLIVE_REV=	31235
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tabular-like environments with named columns
