@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/03/04 01:20:20 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 04:26:47 markd Exp $
 
 DISTNAME=	ptex
-PKGNAME=	tex-${DISTNAME}-3.2
-TEXLIVE_REV=	25342
+PKGNAME=	tex-${DISTNAME}-3.2pl36135
+TEXLIVE_REV=	36135
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX system for publishing in Japanese
@@ -20,13 +20,9 @@ DEPENDS+=	web2c>=2010nb5:../../print/web2c
 
 PKG_SYSCONFSUBDIR=	texmf
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/tex/ptexgeneric/config
-CONF_FILES+=	${PREFIX}/share/texmf-dist/tex/ptexgeneric/config/language.ptx \
-		${PKG_SYSCONFDIR}/tex/ptexgeneric/config/language.ptx
-
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=		"ptex ptex - ptex.ini\\neptex eptex language.def *eptex.ini\\nplatex eptex language.ptx *platex.ini\\n"
+TEX_FORMATS+=		"ptex ptex - ptex.ini\\neptex eptex language.def *eptex.ini\\nplatex eptex language.dat *platex.ini\\n"
 TEX_KANJIMAP_FILES+=	morisawa.map
 TEX_KANJIMAP_FILES+=	ptex-@kanjiEmbed@@kanjiVariant@.map
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
