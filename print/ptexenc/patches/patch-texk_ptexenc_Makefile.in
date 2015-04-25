@@ -1,0 +1,14 @@
+$NetBSD: patch-texk_ptexenc_Makefile.in,v 1.1 2015/04/25 09:53:16 markd Exp $
+
+--- Makefile.in.orig	2013-12-25 15:37:50.000000000 +0000
++++ Makefile.in
+@@ -381,7 +381,8 @@ libptexenc_la_SOURCES = \
+ libptexenc_la_LIBADD = $(KPATHSEA_LIBS)
+ nobase_include_HEADERS = \
+ 	ptexenc/ptexenc.h \
+-	ptexenc/unicode.h
++	ptexenc/unicode.h \
++	ptexenc/unicode-jp.h
+ 
+ EXTRA_DIST = COPYRIGHT ChangeLog.jp
+ 
