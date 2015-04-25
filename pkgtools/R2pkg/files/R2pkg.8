@@ -1,0 +1,149 @@
+.\"	$NetBSD: R2pkg.8,v 1.1 2015/04/25 22:06:34 brook Exp $
+.\"
+.\" Copyright (c) 2014,2015
+.\"	Brook Milligan.  All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. Neither the name of the author nor the names of any contributors
+.\"    may be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\"
+.Dd April 25, 2015
+.Dt R2pkg 8
+.Os
+.Sh NAME
+.Nm R2pkg
+.Nd create a pkgsrc package for an R package
+.Sh SYNOPSIS
+.Nm
+.Op Fl DVehqv
+.Op Fl E Ar editor
+.Op Ar package
+.Sh DESCRIPTION
+.Nm
+takes the name of an R
+.Ar package
+that should be turned into a
+.Xr pkgsrc 7
+package in the current directory.  The generated package includes a
+.Pa Makefile
+and a mostly complete set of files to get the package going.  However, the files should be reviewed and perhaps adjusted manually after 
+.Nm
+has finished its job.  To help with this, the original versions of files created by
+.Nm
+are preserved for reference.
+.Pp
+.Nm
+is intended to help the process of creating a package but is not
+intended to fly on autopilot.
+.Pp
+The
+.Pa Makefile
+contains all of the variables required for an R package, with information being taken from the package's
+.Pa DESCRIPTION
+file on CRAN, which is automatically fetched by
+.Nm .
+Likewise, the
+.Pa DESCR
+file is populated with information from the same file.  After
+.Pa Makefile 
+and
+.Pa DESCR
+are completed,
+.Nm
+fetches the package and computes its checksum via the
+.Ic makesum
+target.  Then the package is extracted via the
+.Ic extract
+target.
+.Pp
+If the user does not supply the
+.Ar package
+on the command line, then
+.Nm
+will prompt for it.
+.Pp
+The following options are available:
+.Bl -tag -width indent
+.It Fl D
+Write the package's description into
+.Pa DESCRIPTION .
+This may be useful for verifying the information obtained from CRAN.  However, this file must be removed as it is not part of a
+.Xr pkgsrc 7
+package.
+.It Fl E Ar editor
+Use
+.Ar editor 
+instead of the user's default editor.
+.It Fl V
+Print the version.
+.It Fl e
+Do not edit Makefile and DESCR.
+.It Fl h
+Produce a short help message.
+.It Fl q
+Do not produce status messages along the way.
+.It Fl v
+Generate verbose output.  This may be repeated to increase the verbosity.
+.El
+.Sh ENVIRONMENT
+The following environment variables affect the execution of
+.Nm :
+.Bl -tag -width BLOCKSIZE
+.It Ev PKGEDITOR, EDITOR
+Editor used for editing
+.Pa Makefile
+and
+.Pa DESCR .
+.It Ev CRAN_URL
+The URL to the CRAN mirror for downloading the package's DESCRIPTION
+file.  By default,
+.Pa ftp://cran.r-project.org .
+.El
+.Sh EXAMPLES
+Use the following commands to create a
+.Xr pkgsrc 7
+package for the R package
+.Ar foo :
+.Dl cd pkgsrc/math
+.Dl mkdir R-foo
+.Dl cd R-foo
+.Dl R2pkg foo
+Remember to test the resulting package and remove any extra files created by
+.Nm .
+.Sh BUGS
+.Nm
+does not create a finished package; instead, it facilitates the task.
+However, the resulting files must be reviewed and possibly edited by
+hand.  Although dependencies are included in the generated
+.Pa Makefile ,
+they are only comments; no attempt is made to find corresponding
+packages within 
+.Xr pkgsrc 7 .
+As a consequence, the category of dependencies is also not determined.
+.Sh SEE ALSO
+.Xr pkgsrc 7
+.Sh AUTHORS
+.Nm
+was written by
+.An Brook Milligan Aq Mt brook@NetBSD.org .
