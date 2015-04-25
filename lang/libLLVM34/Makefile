@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/06 17:25:05 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/25 20:20:32 tnn Exp $
 
 DISTNAME=	llvm-${PKGVERSION_NOREV}.src
 PKGNAME=	libLLVM34-3.4.2
@@ -74,6 +74,21 @@ PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST_SUBST+=		SOEXT="so"
 .endif
+
+# XXX temporary band-aid for wrapper reordering bug until we have a proper fix
+#
+# Wrappers incorrectly reorder:
+#
+# -Wl,--whole-archive -lmystaticlib -Wl,--no-whole-archive
+#
+# to
+#
+# -Wl,--whole-archive -Wl,--no-whole-archive -lmystaticlib
+#
+# Which nullies the effect of --whole-archive.
+# Kludge around this by removing --no-whole-archive from the command line.
+# It happens to be safe in this particular case, as far as I can tell.
+BUILDLINK_TRANSFORM+=	rm:-Wl,--no-whole-archive
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
