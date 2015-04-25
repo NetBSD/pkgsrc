@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/15 11:22:05 wiz Exp $
-share/texmf-dist/doc/latex/skak/README
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:39:27 markd Exp $
+share/texmf-dist/doc/latex/skak/ChangeLog.md
+share/texmf-dist/doc/latex/skak/LICENSE
+share/texmf-dist/doc/latex/skak/README.md
+share/texmf-dist/doc/latex/skak/THANKS
 share/texmf-dist/doc/latex/skak/WC-2004-S-00007.tex
 share/texmf-dist/doc/latex/skak/_region_.tex
 share/texmf-dist/doc/latex/skak/andreas_wilm_1.tex
@@ -10,22 +13,22 @@ share/texmf-dist/doc/latex/skak/fen_with_black.tex
 share/texmf-dist/doc/latex/skak/font.tex
 share/texmf-dist/doc/latex/skak/font2.tex
 share/texmf-dist/doc/latex/skak/hightest.tex
-share/texmf-dist/doc/latex/skak/informator.pdf
+share/texmf-dist/doc/latex/skak/informator.ps
 share/texmf-dist/doc/latex/skak/informator.tex
 share/texmf-dist/doc/latex/skak/ingo-bug1.tex
-share/texmf-dist/doc/latex/skak/lambda.tex
+share/texmf-dist/doc/latex/skak/longmove_king_bug.tex
 share/texmf-dist/doc/latex/skak/longmoves.tex
 share/texmf-dist/doc/latex/skak/makefile
 share/texmf-dist/doc/latex/skak/promotion_problem_Ulrike.tex
-share/texmf-dist/doc/latex/skak/refman.pdf
+share/texmf-dist/doc/latex/skak/refman.ps
 share/texmf-dist/doc/latex/skak/refman.tex
 share/texmf-dist/doc/latex/skak/show.tex
-share/texmf-dist/doc/latex/skak/skakdoc.pdf
+share/texmf-dist/doc/latex/skak/skakdoc.ps
 share/texmf-dist/doc/latex/skak/skakdoc.tex
 share/texmf-dist/doc/latex/skak/special.map
 share/texmf-dist/doc/latex/skak/syntax.tex
 share/texmf-dist/doc/latex/skak/test1.tex
 share/texmf-dist/doc/latex/skak/test2.tex
 share/texmf-dist/doc/latex/skak/test_capture.tex
-share/texmf-dist/doc/latex/skak/tuggame.pdf
+share/texmf-dist/doc/latex/skak/tuggame.ps
 share/texmf-dist/doc/latex/skak/tuggame.tex
