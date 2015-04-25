@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/09 14:12:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:04:12 markd Exp $
+man/man1/luaotfload-tool.1
+man/man5/luaotfload.conf.5
+share/texmf-dist/doc/luatex/luaotfload/COPYING
 share/texmf-dist/doc/luatex/luaotfload/NEWS
 share/texmf-dist/doc/luatex/luaotfload/README
+share/texmf-dist/doc/luatex/luaotfload/filegraph.pdf
+share/texmf-dist/doc/luatex/luaotfload/luaotfload.conf.example
 share/texmf-dist/doc/luatex/luaotfload/luaotfload.pdf
+share/texmf-dist/doc/luatex/luaotfload/valgrind-kpse-suppression.sup
