@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/04/25 23:05:11 wiz Exp $
+
+Original Ultima 7: The Black Gate or Ultima 7 part 2: The Serpent Isle
+game distributions should be copied from floppies or CDs to relevant
+subdirs in ${PREFIX}/share/exult .
+
+For example, after extraction the game distribution archive
+ultima-vii-the-black-gate.zip, you want to put the contents of U7
+directory in ${PREFIX}/share/exult/blackgate
+
+You may wish to download exult audio data files to enable SFX and music.
+
+===========================================================================
