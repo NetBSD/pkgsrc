@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/03 19:14:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 07:52:01 markd Exp $
+share/texmf-dist/fonts/source/public/cmextra/bible12.mf
 share/texmf-dist/fonts/source/public/cmextra/cmbxcd10.mf
 share/texmf-dist/fonts/source/public/cmextra/cmbxti12.mf
 share/texmf-dist/fonts/source/public/cmextra/cmbxti7.mf
@@ -6,12 +7,23 @@ share/texmf-dist/fonts/source/public/cmextra/cmcscsl10.mf
 share/texmf-dist/fonts/source/public/cmextra/cmfibs8.mf
 share/texmf-dist/fonts/source/public/cmextra/cmitt12.mf
 share/texmf-dist/fonts/source/public/cmextra/cmitt9.mf
+share/texmf-dist/fonts/source/public/cmextra/cmman.mf
+share/texmf-dist/fonts/source/public/cmextra/cmntex10.mf
+share/texmf-dist/fonts/source/public/cmextra/cmntt10.mf
 share/texmf-dist/fonts/source/public/cmextra/cmsl6.mf
 share/texmf-dist/fonts/source/public/cmextra/cmsltt9.mf
 share/texmf-dist/fonts/source/public/cmextra/cmssbxo10.mf
 share/texmf-dist/fonts/source/public/cmextra/cmsslu30.mf
 share/texmf-dist/fonts/source/public/cmextra/cmssu30.mf
+share/texmf-dist/fonts/source/public/cmextra/cmsytt10.mf
+share/texmf-dist/fonts/source/public/cmextra/cmtim.mf
 share/texmf-dist/fonts/source/public/cmextra/cmvtti10.mf
+share/texmf-dist/fonts/source/public/cmextra/diam12.mf
+share/texmf-dist/fonts/source/public/cmextra/gen.mf
+share/texmf-dist/fonts/source/public/cmextra/gen10.mf
+share/texmf-dist/fonts/source/public/cmextra/gen8.mf
+share/texmf-dist/fonts/source/public/cmextra/gen9.mf
+share/texmf-dist/fonts/tfm/public/cmextra/bible12.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmbxcd10.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmbxti12.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmbxti7.tfm
@@ -19,9 +31,18 @@ share/texmf-dist/fonts/tfm/public/cmextra/cmcscsl10.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmfibs8.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmitt12.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmitt9.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmman.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmntex10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmntt10.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmsl6.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmsltt9.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmssbxo10.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmsslu30.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmssu30.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmsytt10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmtim.tfm
 share/texmf-dist/fonts/tfm/public/cmextra/cmvtti10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/diam12.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/gen10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/gen8.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/gen9.tfm
