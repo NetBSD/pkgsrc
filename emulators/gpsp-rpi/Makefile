@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/06 02:02:03 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:20:45 tnn Exp $
 
 DISTNAME=	gpsp-rpi-20150205
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/rpi/
 EXTRACT_SUFX=	.zip

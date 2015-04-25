@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2015/01/01 10:18:42 dholland Exp $
+# $NetBSD: Makefile,v 1.46 2015/04/25 14:20:48 tnn Exp $
 
 DISTNAME=	zsnes151src
 PKGNAME=	zsnes-1.51
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsnes/}
 EXTRACT_SUFX=	.tar.bz2

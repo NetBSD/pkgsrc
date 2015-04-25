@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2014/05/05 00:47:45 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2015/04/25 14:20:37 tnn Exp $
 
 BUILDLINK_TREE+=	libsexymm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsexymm
 LIBSEXYMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsexymm+=	libsexymm>=0.1.9
-BUILDLINK_ABI_DEPENDS.libsexymm+=	libsexymm>=0.1.9nb22
+BUILDLINK_ABI_DEPENDS.libsexymm+=	libsexymm>=0.1.9nb23
 BUILDLINK_PKGSRCDIR.libsexymm?=	../../devel/libsexymm
 
 .include "../../x11/gtkmm/buildlink3.mk"

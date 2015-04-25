@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/10/02 23:48:15 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/04/25 14:20:25 tnn Exp $
 #
 
 DISTNAME=		xmms-meta-input-0.4
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		http://www.corbac.com/Data/Sources/
 

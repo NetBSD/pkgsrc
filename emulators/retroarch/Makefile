@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/04/13 23:12:42 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/25 14:20:47 tnn Exp $
 
 DISTNAME=	retroarch-20150203
 PKGNAME=	retroarch-0.0.20150203
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
 EXTRACT_SUFX=	.zip

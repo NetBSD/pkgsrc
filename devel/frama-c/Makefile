@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2015/04/06 08:17:24 adam Exp $
+# $NetBSD: Makefile,v 1.53 2015/04/25 14:20:33 tnn Exp $
 #
 
 DISTNAME=	frama-c-Oxygen-20120901
 PKGNAME=	${DISTNAME:S/-Oxygen//}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	devel
 MASTER_SITES=	http://frama-c.com/download/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/05/07 01:53:20 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/04/25 14:20:32 tnn Exp $
 
 BUILDLINK_TREE+=	SDLmm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDLmm
 SDLMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDLmm+=	SDLmm>=0.1.8nb1
-BUILDLINK_ABI_DEPENDS.SDLmm+=	SDLmm>=0.1.8nb6
+BUILDLINK_ABI_DEPENDS.SDLmm+=	SDLmm>=0.1.8nb7
 BUILDLINK_PKGSRCDIR.SDLmm?=	../../devel/SDLmm
 
 .include "../../devel/SDL/buildlink3.mk"

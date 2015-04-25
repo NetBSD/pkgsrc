@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2012/10/03 12:55:08 asau Exp $
+# $NetBSD: Makefile,v 1.36 2015/04/25 14:20:43 tnn Exp $
 
 DISTNAME=	BasiliskII_src_01052006
 PKGNAME=	BasiliskII-1.0.20060501
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	http://gwenole.beauchesne.info/projects/basilisk2/files/
 EXTRACT_SUFX=	.tar.bz2

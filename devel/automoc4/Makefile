@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2014/02/12 23:17:45 tron Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/25 14:20:32 tnn Exp $
 
 DISTNAME=	automoc4-0.9.88
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=automoc4/0.9.88/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/07/21 14:13:45 shattered Exp $
+# $NetBSD: Makefile,v 1.40 2015/04/25 14:20:31 tnn Exp $
 
 DISTNAME=	SDL_gfx-2.0.24
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlgfx/}
 
