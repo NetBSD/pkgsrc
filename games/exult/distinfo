@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/04/19 19:30:12 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/04/25 00:56:03 joerg Exp $
 
 SHA1 (exult-1.4.9rc1.tar.gz) = 259f778d6b8b5e9c9466e2f4967b6352435b6792
 RMD160 (exult-1.4.9rc1.tar.gz) = 8c6fce2bc17ff59709c5827c5dd70f2e2a473914
 Size (exult-1.4.9rc1.tar.gz) = 5452640 bytes
 SHA1 (patch-configure) = 0812526182ffa1746c45fd5a005ca8b10fd50093
+SHA1 (patch-imagewin_manip.h) = 1d79feccbd17633a5053197ebbf1c98a6e9d4de3
+SHA1 (patch-istring.h) = c6c236714e03c4da64afac79a4707e02d8d140cc
+SHA1 (patch-usecode_compiler_ucstmt.cc) = ca404dcb3e5ba8f318c35fa95b7fb6b31a7f5fe9
