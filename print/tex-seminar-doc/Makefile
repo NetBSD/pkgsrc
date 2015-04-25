@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/18 00:41:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 04:34:21 markd Exp $
 
 DISTNAME=	seminar.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.5
-TEXLIVE_REV=	18322
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.61
+TEXLIVE_REV=	34011
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-seminar
