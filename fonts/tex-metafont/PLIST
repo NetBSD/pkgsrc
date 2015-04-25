@@ -1,19 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/24 18:15:51 minskim Exp $
-share/texmf-dist/metafont/base/expr.mf
-share/texmf-dist/metafont/base/io.mf
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:11:35 markd Exp $
 share/texmf-dist/metafont/base/mf.mf
-share/texmf-dist/metafont/base/null.mf
 share/texmf-dist/metafont/base/plain.mf
 share/texmf-dist/metafont/config/cmmf.ini
 share/texmf-dist/metafont/config/mf.ini
-share/texmf-dist/metafont/misc/3test.mf
-share/texmf-dist/metafont/misc/6test.mf
 share/texmf-dist/metafont/misc/mode2dpi.mf
 share/texmf-dist/metafont/misc/mode2dpixy.mf
 share/texmf-dist/metafont/misc/modename.mf
 share/texmf-dist/metafont/misc/modes.mf
 share/texmf-dist/metafont/misc/ps2mfbas.mf
-share/texmf-dist/metafont/misc/rtest.mf
-share/texmf-dist/metafont/misc/test.mf
-share/texmf-dist/metafont/misc/waits.mf
-share/texmf-dist/metafont/misc/ztest.mf
