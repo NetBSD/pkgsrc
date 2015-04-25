@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2015/04/25 11:19:18 tnn Exp $
+
+Make sure toolchain can assemble SSE stuff in addition to having intrinsics.
+
+--- configure.orig	2015-03-28 18:43:34.000000000 +0000
++++ configure
+@@ -19578,7 +19578,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #include <smmintrin.h>
+ int main () {
+     __m128i a = _mm_set1_epi32 (0), b = _mm_set1_epi32 (0), c;
+-    c = _mm_max_epu32(a, b);
++    c = _mm_max_epu32(a, b); asm volatile ("movntdqa (%esi),%xmm3\n");
+     return 0;
+ }
+ _ACEOF
+@@ -23563,7 +23563,7 @@ if test "x$enable_nine" = xyes; then
+     if ! echo "$with_gallium_drivers" | grep -q 'swrast'; then
+         as_fn_error $? "nine requires the gallium swrast driver" "$LINENO" 5
+     fi
+-    if test "x$with_gallium_drivers" == xswrast; then
++    if test "x$with_gallium_drivers" = xswrast; then
+         as_fn_error $? "nine requires at least one non-swrast gallium driver" "$LINENO" 5
+     fi
+     if test "x$enable_dri3" = xno; then

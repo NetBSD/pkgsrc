@@ -1,10 +1,10 @@
-$NetBSD: patch-src_mesa_main_context.c,v 1.1 2014/08/06 10:25:14 wiz Exp $
+$NetBSD: patch-src_mesa_main_context.c,v 1.2 2015/04/25 11:19:18 tnn Exp $
 
 * Fix exit time segfault of qt5 application with modular xorg
 
---- src/mesa/main/context.c.orig	2011-10-15 00:43:58.000000000 +0000
+--- src/mesa/main/context.c.orig	2015-03-28 18:20:39.000000000 +0000
 +++ src/mesa/main/context.c
-@@ -383,10 +383,10 @@ _glthread_DECLARE_STATIC_MUTEX(OneTimeLo
+@@ -378,10 +378,10 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
   *
   * \sa _math_init().
   */
@@ -14,11 +14,11 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.1 2014/08/06 10:25:14 wiz Exp $
  {
 -   static GLbitfield api_init_mask = 0x0;
  
-    _glthread_LOCK_MUTEX(OneTimeLock);
+    mtx_lock(&OneTimeLock);
  
-@@ -441,14 +441,16 @@ one_time_init( struct gl_context *ctx )
+@@ -428,14 +428,16 @@ one_time_init( struct gl_context *ctx )
  
-    _glthread_UNLOCK_MUTEX(OneTimeLock);
+    mtx_unlock(&OneTimeLock);
  
 -   /* Hopefully atexit() is widely available.  If not, we may need some
 -    * #ifdef tests here.

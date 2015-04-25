@@ -1,0 +1,15 @@
+$NetBSD: patch-src_mesa_drivers_dri_Makefile.in,v 1.1 2015/04/25 11:19:18 tnn Exp $
+
+DRI drivers need explicit linkage to glapi. FDO bug 57702. We only need to do
+this for the "mega" drivers since that's where final linking takes place.
+
+--- src/mesa/drivers/dri/Makefile.in.orig	2015-03-28 18:43:41.000000000 +0000
++++ src/mesa/drivers/dri/Makefile.in
+@@ -581,6 +581,7 @@ mesa_dri_drivers_la_LIBADD = \
+         common/libdricommon.la \
+         $(MEGADRIVERS_DEPS) \
+         $(DRI_LIB_DEPS) \
++         $(top_srcdir)/src/mapi/shared-glapi/libglapi.la \
+         $()
+ 
+ @NEED_MEGADRIVER_TRUE@dri_LTLIBRARIES = mesa_dri_drivers.la
