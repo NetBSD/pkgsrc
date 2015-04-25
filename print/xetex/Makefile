@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2015/04/06 08:17:37 adam Exp $
+# $NetBSD: Makefile,v 1.37 2015/04/25 11:24:54 markd Exp $
 
-DISTNAME=	texlive-20130530-source
-PKGNAME=	xetex-0.9999.3
-PKGREVISION=	9
+DISTNAME=	texlive-20140525-source
+PKGNAME=	xetex-0.99991
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -26,6 +25,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--disable-luatex --disable-mf --disable-mf-nowin \
+			--disable-luajittex \
 			--disable-mp \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \
