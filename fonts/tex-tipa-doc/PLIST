@@ -1,10 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 18:39:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:33:07 markd Exp $
 share/texmf-dist/doc/fonts/tipa/00README
+share/texmf-dist/doc/fonts/tipa/00README.doc
 share/texmf-dist/doc/fonts/tipa/Makefile
+share/texmf-dist/doc/fonts/tipa/Makefile.doc
+share/texmf-dist/doc/fonts/tipa/Manifest.txt
 share/texmf-dist/doc/fonts/tipa/boxchar.sty
 share/texmf-dist/doc/fonts/tipa/codelist.sty
+share/texmf-dist/doc/fonts/tipa/gentfm.sh
+share/texmf-dist/doc/fonts/tipa/gentipa.sh
+share/texmf-dist/doc/fonts/tipa/gentipx.sh
+share/texmf-dist/doc/fonts/tipa/genxipa.sh
+share/texmf-dist/doc/fonts/tipa/genxipx.sh
+share/texmf-dist/doc/fonts/tipa/mktipapk.sh
+share/texmf-dist/doc/fonts/tipa/mkxipapk.sh
 share/texmf-dist/doc/fonts/tipa/tipa.bib
-share/texmf-dist/doc/fonts/tipa/tipaman.bbl
 share/texmf-dist/doc/fonts/tipa/tipaman.pdf
 share/texmf-dist/doc/fonts/tipa/tipaman.sty
 share/texmf-dist/doc/fonts/tipa/tipaman.tex
@@ -13,4 +22,5 @@ share/texmf-dist/doc/fonts/tipa/tipaman1.tex
 share/texmf-dist/doc/fonts/tipa/tipaman2.tex
 share/texmf-dist/doc/fonts/tipa/tipaman3.tex
 share/texmf-dist/doc/fonts/tipa/tipaman4.tex
+share/texmf-dist/doc/fonts/tipa/vowel.pdf
 share/texmf-dist/doc/fonts/tipa/vowel.tex

@@ -1,12 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 18:37:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:33:07 markd Exp $
 share/texmf-dist/fonts/map/dvips/tipa/tipa.map
-share/texmf-dist/fonts/source/public/tipa/gentfm.sh
-share/texmf-dist/fonts/source/public/tipa/gentipa.sh
-share/texmf-dist/fonts/source/public/tipa/gentipx.sh
-share/texmf-dist/fonts/source/public/tipa/genxipa.sh
-share/texmf-dist/fonts/source/public/tipa/genxipx.sh
-share/texmf-dist/fonts/source/public/tipa/mktipapk.sh
-share/texmf-dist/fonts/source/public/tipa/mkxipapk.sh
 share/texmf-dist/fonts/source/public/tipa/tipa.mf
 share/texmf-dist/fonts/source/public/tipa/tipa10.mf
 share/texmf-dist/fonts/source/public/tipa/tipa12.mf
