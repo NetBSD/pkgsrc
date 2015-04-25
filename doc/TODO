@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14356 2015/04/25 11:35:46 wiz Exp $
+$NetBSD: TODO,v 1.14357 2015/04/25 11:50:06 tnn Exp $
 
 Suggested new packages
 ======================
@@ -357,8 +357,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
 	o GNUMail-1.2.2
-	o Mesa-10.5.2 [do not update since it removes support for DRI features needed by NetBSD. Work on updated MesaLib takes place in pkgsrc-wip.]
-	o MesaLib-10.5.2 [do not update since it removes support for DRI features needed by NetBSD. Work on updated MesaLib takes place in pkgsrc-wip.]
 	o PAM-0.99.7.1
 	o R-3.1.2
 	o RBTools-0.6.3
@@ -806,8 +804,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mksh-50e
 	o mkvtoolnix-7.6.0
-	o modular-xorg-server-1.16.4
-	o modular-xorg-server-1.17.1 (see pkgsrc-wip/modular-xorg-server)
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-4.0.0
 	o moserial-2.30.0 [GNOME 2.30]
