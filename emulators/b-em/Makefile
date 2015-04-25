@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/07/06 22:32:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 14:20:44 tnn Exp $
 
 DISTNAME=	B-emv2.2Linux
 PKGNAME=	b-em-2.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://b-em.bbcmicro.com/
 
