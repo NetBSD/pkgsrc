@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/04/25 11:24:54 markd Exp $
+# $NetBSD: Makefile,v 1.38 2015/04/25 13:15:41 markd Exp $
 
 DISTNAME=	texlive-20140525-source
 PKGNAME=	xetex-0.99991
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.tug.org/xetex/
 COMMENT=	TeX system with Unicode and modern font technologies
 
 CONFLICTS+=	web2c<=7.5.7
-DEPENDS+=	xdvipdfmx-[0-9]*:../../print/xdvipdfmx
+DEPENDS+=	dvipdfmx>=20140525:../../print/dvipdfmx
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/graphite2 \
