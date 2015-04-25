@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile,v 1.1 2015/04/25 19:58:32 dholland Exp $
+
+Configure for pkgsrc, and use bsd make.
+Don't set -g; do set -fno-strict-aliasing.
+Pass in PREFIX.
+
+--- Makefile.orig	2000-02-11 17:04:11.000000000 +0000
++++ Makefile
+@@ -1,12 +1,11 @@
+-DIRS	=	lib9 libbio squint
++DIRS=		lib9 libbio squint
+ 
+-CFLAGS	= -g -Wall $(INCLUDES)
++#CFLAGS+=	-g
++CFLAGS+=	-Wall $(INCLUDES)
++CFLAGS+=	-fno-strict-aliasing	# required in squint/var.c
++CFLAGS+=	-DPREFIX=\"$(PREFIX)\"
+ 
+-all:
+-	for i in $(DIRS); do cd $$i; CFLAGS="$(CFLAGS)" make -$(MAKEFLAGS); cd ..; done
+-
+-clean:
+-	for i in $(DIRS); do cd $$i; CFLAGS="$(CFLAGS)" make -$(MAKEFLAGS) clean; cd ..; done
+-
+-%:
+-	for i in $(DIRS); do cd $$i; CFLAGS="$(CFLAGS)" make -$(MAKEFLAGS) $@; cd ..; done
++all depend clean:
++.for D in $(DIRS)
++	(cd $D && CFLAGS=$(CFLAGS:Q) $(MAKE) $@) || exit 1
++.endfor
