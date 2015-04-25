@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/09/12 21:31:39 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/25 14:20:22 tnn Exp $
 #
 
 DISTNAME=	milkytracker-0.90.86
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://milkytracker.org/files/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/04/20 03:21:58 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:20:22 tnn Exp $
 
 DISTNAME=	lilv-0.20.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2

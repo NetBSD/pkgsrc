@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/03/08 23:25:39 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/25 14:20:26 tnn Exp $
 
 DISTNAME=	glmark2-2014.03
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
 GITHUB_TAG=	499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc

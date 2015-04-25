@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 12:55:13 asau Exp $
+# $NetBSD: Makefile,v 1.14 2015/04/25 14:20:45 tnn Exp $
 #
 
 DISTNAME=	generator-0.35-cbiere-r4
 PKGNAME=	generator-cbiere-0.35r4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.squish.net/generator/cbiere/generator/
 EXTRACT_SUFX=	.tar.bz2

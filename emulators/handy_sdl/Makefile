@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 12:55:14 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/25 14:20:45 tnn Exp $
 #
 
 DISTNAME=	handy_sdl-0.5-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.xs4all.nl/~shalafi/
 EXTRACT_SUFX=	.tar.bz2

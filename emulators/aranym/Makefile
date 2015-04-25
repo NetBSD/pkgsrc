@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2015/03/24 14:34:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2015/04/25 14:20:44 tnn Exp $
 #
 
 ETVER=				0.9.4
 DISTNAME=			aranym_1.0.2.orig
 PKGNAME=			${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=			1
 CATEGORIES=			emulators
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=aranym/}
 SITES.emutos-512k-${ETVER}.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2014/02/12 23:17:49 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2015/04/25 14:20:38 tnn Exp $
 
 BUILDLINK_TREE+=	opal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opal
 OPAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opal+=	opal>=3.6.1
-BUILDLINK_ABI_DEPENDS.opal+=	opal>=3.6.6nb7
+BUILDLINK_ABI_DEPENDS.opal+=	opal>=3.6.6nb9
 BUILDLINK_PKGSRCDIR.opal?=	../../devel/opal
 
 .include "../../audio/speex/buildlink3.mk"
