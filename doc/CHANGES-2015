@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1925 2015/04/25 13:48:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1926 2015/04/25 20:00:23 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3018,3 +3018,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed print/xdvipdfmx [markd 2015-04-25]
 	Updated lang/coq to 8.4pl6 [jaapb 2015-04-25]
 	Updated security/py-bcrypt to 1.1.1nb1 [wiz 2015-04-25]
+	Added lang/newsqueak version 20000211 [dholland 2015-04-25]
