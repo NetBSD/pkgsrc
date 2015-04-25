@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2014/02/12 23:17:37 tron Exp $
+# $NetBSD: Makefile,v 1.81 2015/04/25 13:40:39 tnn Exp $
 
 DISTNAME=	psi-0.15
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,8 +31,8 @@ CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca2}/lib
 CONFIGURE_ARGS+=	--with-qca-inc=${BUILDLINK_PREFIX.qca2}/include
 
 #
-# a group of scripts that aren't to be installed, and aren't
-# used by the pkgsrc system.  But they all have the non-standard
+# a group of scripts that aren't to be installed, and aren't used
+# by the pkgsrc system.  But they all have the non-standard
 # "==" in them. (silly linux developers thinking [ bash = sh ].
 #
 CHECK_PORTABILITY_SKIP=	    admin/build/devconfig.sh \
