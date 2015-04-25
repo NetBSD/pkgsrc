@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/07/09 14:12:20 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 08:04:12 markd Exp $
 
 DISTNAME=	luaotfload.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.26
-TEXLIVE_REV=	26718
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.5.4
+TEXLIVE_REV=	35328
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-luaotfload
