@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/04/25 08:20:01 mef Exp $
 #
 
-DISTNAME=	Tree-Simple-1.23
+DISTNAME=	Tree-Simple-1.25
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tree/}
 EXTRACT_SUFX=	.tgz
