@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2015/04/21 22:40:19 markd Exp $
+# $NetBSD: Makefile,v 1.601 2015/04/25 13:23:30 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -788,7 +788,6 @@ SUBDIR+=	tex-yfonts-doc
 SUBDIR+=	transfig
 SUBDIR+=	web2c
 SUBDIR+=	xdvik
-SUBDIR+=	xdvipdfmx
 SUBDIR+=	xetex
 SUBDIR+=	xpdf
 SUBDIR+=	xpdf-arabic
