@@ -1,10 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/18 00:41:42 minskim Exp $
-share/texmf-dist/doc/latex/seminar/read-me.2e
-share/texmf-dist/doc/latex/seminar/sem-read.me
-share/texmf-dist/doc/latex/seminar/sem-user.pdf
-share/texmf-dist/doc/latex/seminar/sem-user.tex
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:34:21 markd Exp $
+share/texmf-dist/doc/latex/seminar/Changes
+share/texmf-dist/doc/latex/seminar/README
+share/texmf-dist/doc/latex/seminar/run.sh
+share/texmf-dist/doc/latex/seminar/sem-code.tex
+share/texmf-dist/doc/latex/seminar/sem-make.tex
+share/texmf-dist/doc/latex/seminar/seminar-doc.pdf
+share/texmf-dist/doc/latex/seminar/seminar-doc.tex
+share/texmf-dist/doc/latex/seminar/seminar.bg3
+share/texmf-dist/doc/latex/seminar/seminar.con
+share/texmf-dist/doc/latex/seminar/seminar.doc
+share/texmf-dist/doc/latex/seminar/semlayer.doc
+share/texmf-dist/doc/latex/seminar/semsamp1.pdf
 share/texmf-dist/doc/latex/seminar/semsamp1.tex
+share/texmf-dist/doc/latex/seminar/semsamp2.pdf
 share/texmf-dist/doc/latex/seminar/semsamp2.tex
-share/texmf-dist/doc/latex/seminar/tvz-code.sty
-share/texmf-dist/doc/latex/seminar/tvz-hax.sty
-share/texmf-dist/doc/latex/seminar/tvz-user.sty
+share/texmf-dist/doc/latex/seminar/semsamp3.pdf
+share/texmf-dist/doc/latex/seminar/semsamp3.tex
+
