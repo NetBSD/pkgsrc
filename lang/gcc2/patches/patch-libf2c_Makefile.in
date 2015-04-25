@@ -1,0 +1,19 @@
+$NetBSD: patch-libf2c_Makefile.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- libf2c/Makefile.in.orig	1999-08-07 05:36:10.000000000 +0000
++++ libf2c/Makefile.in
+@@ -197,10 +197,10 @@ check:
+ 	cd libU77; $(MAKE) G77DIR=../../../gcc/ check
+ 
+ install: all
+-	$(INSTALL_DATA) $(LIBG2C) $(libsubdir)/$(MULTISUBDIR)/$(LIBG2C).n
+-	( cd $(libsubdir)/$(MULTISUBDIR) ; $(RANLIB) $(LIBG2C).n )
+-	mv -f $(libsubdir)/$(MULTISUBDIR)/$(LIBG2C).n $(libsubdir)/$(MULTISUBDIR)/$(LIBG2C)
+-	$(INSTALL_DATA) g2c.h $(libsubdir)/include/g2c.h
++	$(INSTALL_DATA) $(LIBG2C) $(DESTDIR)$(libsubdir)/$(MULTISUBDIR)/$(LIBG2C).n
++	( cd $(DESTDIR)$(libsubdir)/$(MULTISUBDIR) ; $(RANLIB) $(LIBG2C).n )
++	mv -f $(DESTDIR)$(libsubdir)/$(MULTISUBDIR)/$(LIBG2C).n $(DESTDIR)$(libsubdir)/$(MULTISUBDIR)/$(LIBG2C)
++	$(INSTALL_DATA) g2c.h $(DESTDIR)$(libsubdir)/include/g2c.h
+ 	@if [ -f f2c-install-ok -o -f $(srcdir)/f2c-install-ok ]; then \
+ 	  echo ''; \
+ 	  echo 'Warning: g77 no longer installs libf2c.a or f2c.h.'; \

@@ -1,0 +1,31 @@
+$NetBSD: patch-libio_Makefile.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- libio/Makefile.in.orig	2011-07-15 08:16:38.000000000 +0000
++++ libio/Makefile.in
+@@ -113,19 +113,19 @@ install:
+ 	if [ -z "$(MULTISUBDIR)" ]; then \
+ 	  if [ "$(_G_CONFIG_H)" != "" ]; then \
+ 	    if [ x$(enable_version_specific_runtime_libs) = xyes ]; then \
+-	      rm -f $(gxx_include_dir)/_G_config.h ; \
+-	      $(INSTALL_DATA) _G_config.h $(gxx_include_dir)/_G_config.h || exit 1; \
++	      rm -f $(DESTDIR)$(gxx_include_dir)/_G_config.h ; \
++	      $(INSTALL_DATA) _G_config.h $(DESTDIR)$(gxx_include_dir)/_G_config.h || exit 1; \
+ 	    else \
+-	      rm -f $(tooldir)/include/_G_config.h ; \
+-	      $(INSTALL_DATA) _G_config.h $(tooldir)/include/_G_config.h || exit 1; \
++	      rm -f $(DESTDIR)$(tooldir)/include/_G_config.h ; \
++	      $(INSTALL_DATA) _G_config.h $(DESTDIR)$(tooldir)/include/_G_config.h || exit 1; \
+ 	    fi; \
+ 	  else true; \
+ 	  fi ; \
+ 	  cd $(srcdir); \
+ 	  for FILE in $(USER_INCLUDES); do if [ $$FILE != _G_config.h ]; then \
+-	    rm -f $(gxx_include_dir)/$$FILE ; \
+-	    $(INSTALL_DATA) $$FILE $(gxx_include_dir)/$$FILE ; \
+-	    chmod a-x $(gxx_include_dir)/$$FILE ; \
++	    rm -f $(DESTDIR)$(gxx_include_dir)/$$FILE ; \
++	    $(INSTALL_DATA) $$FILE $(DESTDIR)$(gxx_include_dir)/$$FILE ; \
++	    chmod a-x $(DESTDIR)$(gxx_include_dir)/$$FILE ; \
+ 	  else true; fi; done ; \
+ 	else true; \
+ 	fi

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- gcc/f/com.c.orig	2010-10-12 22:37:49.000000000 +0000
++++ gcc/f/com.c
+@@ -11539,7 +11539,7 @@ ffecom_get_invented_identifier (const ch
+   return decl;
+ }
+ 
+-ffeinfoBasictype
++ffeinfoKindtype
+ ffecom_gfrt_basictype (ffecomGfrt gfrt)
+ {
+   assert (gfrt < FFECOM_gfrt);

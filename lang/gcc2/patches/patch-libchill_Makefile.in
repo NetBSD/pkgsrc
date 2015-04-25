@@ -1,0 +1,19 @@
+$NetBSD: patch-libchill_Makefile.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- libchill/Makefile.in.orig	1999-08-07 05:36:10.000000000 +0000
++++ libchill/Makefile.in
+@@ -217,10 +217,10 @@ ${srcdir}/configure: configure.in
+ 	cd ${srcdir} && autoconf
+ 
+ install: all
+-	$(INSTALL_DATA) libchill.a $(libsubdir)$(MULTISUBDIR)/libchill.a.n
+-	$(RANLIB) $(libsubdir)$(MULTISUBDIR)/libchill.a.n
+-	mv $(libsubdir)$(MULTISUBDIR)/libchill.a.n $(libsubdir)$(MULTISUBDIR)/libchill.a
+-	$(INSTALL_DATA) chillrt0.o $(libsubdir)$(MULTISUBDIR)/chillrt0.o
++	$(INSTALL_DATA) libchill.a $(DESTDIR)$(libsubdir)$(MULTISUBDIR)/libchill.a.n
++	$(RANLIB) $(DESTDIR)$(libsubdir)$(MULTISUBDIR)/libchill.a.n
++	mv $(DESTDIR)$(libsubdir)$(MULTISUBDIR)/libchill.a.n $(DESTDIR)$(libsubdir)$(MULTISUBDIR)/libchill.a
++	$(INSTALL_DATA) chillrt0.o $(DESTDIR)$(libsubdir)$(MULTISUBDIR)/chillrt0.o
+ 	@rootme=`pwd`/ ; export rootme ; \
+ 	$(MULTIDO) $(FLAGS_TO_PASS) multi-do DO=install
+ 

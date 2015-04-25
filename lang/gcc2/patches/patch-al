@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- gcc/ch/expr.c.orig	2010-10-12 22:47:21.000000000 +0000
++++ gcc/ch/expr.c
+@@ -3490,7 +3490,7 @@ compare_records (exp0, exp1)
+ 
+ int
+ compare_int_csts (op, val1, val2)
+-     enum tree_code op;
++     enum chill_tree_code op;
+      tree val1, val2;
+ {
+   int result;
