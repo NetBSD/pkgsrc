@@ -1,19 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 05:28:55 minskim Exp $
-share/texmf-dist/doc/fonts/marvosym/LICENSE
-share/texmf-dist/doc/fonts/marvosym/PROBLEMS
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:07:19 markd Exp $
+share/texmf-dist/doc/fonts/marvosym/FONTLOG.txt
+share/texmf-dist/doc/fonts/marvosym/Makefile
+share/texmf-dist/doc/fonts/marvosym/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/marvosym/OFL.txt
 share/texmf-dist/doc/fonts/marvosym/README
-share/texmf-dist/doc/fonts/marvosym/mac/docs/obsolete/tex-me.tex
-share/texmf-dist/doc/fonts/marvosym/mac/docs/textures
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/configs/addmarvo
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/dvips/inputs/config.fmv
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/dvips/inputs/fmv.map
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/ps-files/marvosym.afm
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/ps-files/marvosym.pfa
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/ps-files/readme.txt
-share/texmf-dist/doc/fonts/marvosym/mac/oztex/tex-font/misc/fmvr8x.tfm
-share/texmf-dist/doc/fonts/marvosym/mac/readme.txt
-share/texmf-dist/doc/fonts/marvosym/mac/the_font.bin
 share/texmf-dist/doc/fonts/marvosym/marvodoc.pdf
 share/texmf-dist/doc/fonts/marvosym/marvodoc.tex
-share/texmf-dist/doc/fonts/marvosym/vtex/install.txt
-share/texmf-dist/doc/fonts/marvosym/vtex/marvosym.ali
+share/texmf-dist/doc/fonts/marvosym/marvosym-doc.pdf
+share/texmf-dist/doc/fonts/marvosym/marvosym-doc.tex
