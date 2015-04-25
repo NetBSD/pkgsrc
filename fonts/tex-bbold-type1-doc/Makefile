@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/08 18:00:16 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 05:39:28 markd Exp $
 
 DISTNAME=	bbold-type1.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2011
-TEXLIVE_REV=	20524
+PKGNAME=	tex-${DISTNAME:S/./-/}-2014
+TEXLIVE_REV=	33143
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-bbold-type1
