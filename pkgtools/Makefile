@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.107 2014/09/17 12:41:50 joerg Exp $
+# $NetBSD: Makefile,v 1.108 2015/04/25 22:08:40 brook Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
 
+SUBDIR+=	R2pkg
 SUBDIR+=	autoswc
 SUBDIR+=	binpatch
 SUBDIR+=	bootstrap-extras
