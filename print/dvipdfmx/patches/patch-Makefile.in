@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/04/25 13:07:05 markd Exp $
+
+--- Makefile.in.orig	2015-04-25 12:22:13.000000000 +0000
++++ Makefile.in
+@@ -2137,8 +2137,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-dist_cmapdataDATA install-dist_configdataDATA \
+-	install-dist_glyphlistdataDATA install-dist_mapdataDATA \
++install-data-am: install-dist_configdataDATA \
+ 	install-man
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
