@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/07 23:15:15 minskim Exp $
-share/texmf-dist/doc/latex/preprint/00readme.txt
-share/texmf-dist/doc/latex/preprint/00readme.unix
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:21:21 markd Exp $
+share/texmf-dist/doc/latex/preprint/README
 share/texmf-dist/doc/latex/preprint/authblk.pdf
 share/texmf-dist/doc/latex/preprint/balance.pdf
 share/texmf-dist/doc/latex/preprint/figcaps.pdf
