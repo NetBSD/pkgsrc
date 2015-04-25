@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:17:00 minskim Exp $
-share/texmf-dist/tex/latex/sttools/boundbox.sty
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:41:51 markd Exp $
 share/texmf-dist/tex/latex/sttools/cuted.sty
 share/texmf-dist/tex/latex/sttools/floatpag.sty
 share/texmf-dist/tex/latex/sttools/flushend.sty
