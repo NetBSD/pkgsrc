@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/10 23:25:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 05:28:37 markd Exp $
 share/texmf-dist/doc/latex/xkeyval/README
+share/texmf-dist/doc/latex/xkeyval/xkeyval.bib
 share/texmf-dist/doc/latex/xkeyval/xkeyval.pdf
+share/texmf-dist/doc/latex/xkeyval/xkvpream.ble
