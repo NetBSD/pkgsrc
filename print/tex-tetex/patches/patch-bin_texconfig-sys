@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_texconfig-sys,v 1.1 2012/10/13 22:38:20 minskim Exp $
+$NetBSD: patch-bin_texconfig-sys,v 1.2 2015/04/25 20:26:37 markd Exp $
 
---- bin/texconfig-sys.orig	2012-10-09 17:39:16.000000000 +0000
+--- bin/texconfig-sys.orig	2014-07-13 00:07:52.000000000 +0000
 +++ bin/texconfig-sys
-@@ -21,8 +21,8 @@ export PATH
- # hack around a bug in zsh:
- test -n "${ZSH_VERSION+set}" && alias -g '${1+"$@"}'='"$@"'
+@@ -23,8 +23,8 @@ mydir=`echo "$0" | sed 's,/[^/]*$,,'`
+ mydir=`cd "$mydir" && pwd`
+ PATH="$mydir:$PATH"; export PATH
  
 -v=`kpsewhich -var-value TEXMFSYSVAR`
 -c=`kpsewhich -var-value TEXMFSYSCONFIG`
