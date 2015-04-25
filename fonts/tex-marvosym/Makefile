@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/11/06 08:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 08:07:19 markd Exp $
 
 DISTNAME=	marvosym
-PKGNAME=	tex-${DISTNAME}-2.1
-PKGREVISION=	1
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-2.2a
+TEXLIVE_REV=	29349
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Martin Vogel's Symbols font
