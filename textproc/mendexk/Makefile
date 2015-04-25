@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/02/23 18:28:52 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 10:03:52 markd Exp $
 
-DISTNAME=	texlive-20130530-source
+DISTNAME=	texlive-20140525-source
 PKGNAME=	mendexk-2.6f
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -32,5 +32,6 @@ CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-ptexenc-libdir=${BUILDLINK_PREFIX.ptexenc}/lib
 
 .include "../../print/kpathsea/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ptexenc+= ptexenc>=1.3.2
 .include "../../print/ptexenc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
