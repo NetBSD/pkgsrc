@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 04:13:37 markd Exp $
 
 DISTNAME=	pkfix
-PKGNAME=	tex-${DISTNAME}-1.5
-PKGREVISION=	3
-TEXLIVE_REV=	18835
+PKGNAME=	tex-${DISTNAME}-1.7
+TEXLIVE_REV=	26032
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Script to replace pk fonts in PostScript with Type 1 fonts
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	tex-bin-dvipsk<=2008.12898
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
