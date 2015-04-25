@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/04/08 05:43:48 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/04/25 03:56:15 markd Exp $
 
 SHA1 (tex-pgfplots-36178/pgfplots.tar.xz) = aca06597a7bf2e6bd6e52c0b080da69539cfbd8e
 RMD160 (tex-pgfplots-36178/pgfplots.tar.xz) = 1d32d83ffdbb43cc1aff921bc907baac4933d51a
