@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/11/30 23:18:45 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/25 08:13:22 markd Exp $
 
 DISTNAME=	mfware
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	29764
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	36017
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supporting tools for use with MetaFont
