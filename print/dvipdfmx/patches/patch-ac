@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2010/01/16 03:52:41 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2015/04/25 13:07:05 markd Exp $
 
---- src/dvipdft.orig	2009-06-03 15:54:21.000000000 -0700
-+++ src/dvipdft
+--- dvipdft.orig	2009-06-03 15:54:21.000000000 -0700
++++ dvipdft
 @@ -98,8 +98,8 @@ dvipdfm ${1+"$@"} -z0 "$dvifile"
  
  # run gs
