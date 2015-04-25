@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/25 13:25:38 schwarz Exp $
 #
 
 DISTNAME=	nrg2iso-0.4
@@ -8,6 +8,7 @@ MASTER_SITES=	http://gregory.kokanosky.free.fr/v4/linux/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gregory.kokanosky.free.fr/v4/linux/nrg2iso.en.html
 COMMENT=	Converts Nero Burning Roms to ISO images
+LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	bin
 
