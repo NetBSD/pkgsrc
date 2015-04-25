@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/06 17:25:05 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 20:20:32 tnn Exp $
 
 PKGNAME=		${DISTNAME:S/clang/libLLVM/}
 PKGREVISION=		1
@@ -32,5 +32,20 @@ SUBST_SED.fix-cnf+=	-e 's|"-L" << ActiveLibDir|"${COMPILER_RPATH_FLAG}" << Activ
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/libLLVM
 
 INSTALLATION_DIRS+=	lib/libLLVM
+
+# XXX temporary band-aid for wrapper reordering bug until we have a proper fix
+#
+# Wrappers incorrectly reorder:
+#
+# -Wl,--whole-archive -lmystaticlib -Wl,--no-whole-archive
+#
+# to
+#
+# -Wl,--whole-archive -Wl,--no-whole-archive -lmystaticlib
+#
+# Which nullies the effect of --whole-archive.
+# Kludge around this by removing --no-whole-archive from the command line.
+# It happens to be safe in this particular case, as far as I can tell.
+BUILDLINK_TRANSFORM+=	rm:-Wl,--no-whole-archive
 
 .include "../../lang/clang/Makefile.common"
