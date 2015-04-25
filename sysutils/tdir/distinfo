@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/10/17 16:47:41 shattered Exp $
+$NetBSD: distinfo,v 1.4 2015/04/25 23:34:57 mef Exp $
 
-SHA1 (tdir-1.69.tar.gz) = ebbf962cbdca584f18adbe236c3ff387e184a8a5
-RMD160 (tdir-1.69.tar.gz) = 52bef04382287e646ba217d5665c806c9398b67c
-Size (tdir-1.69.tar.gz) = 6843 bytes
+SHA1 (tdir-1.71.tar.gz) = 013aa5f25363558f360cea570a1b92123a8a507d
+RMD160 (tdir-1.71.tar.gz) = 1594a2c1b67418cb6f0aeedc47372eeed81c291c
+Size (tdir-1.71.tar.gz) = 7513 bytes
