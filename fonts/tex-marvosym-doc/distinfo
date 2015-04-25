@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/12 09:30:47 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/04/25 08:07:19 markd Exp $
 
-SHA1 (tex-marvosym-15878/marvosym.doc.tar.xz) = 30f9acefe5f6d05a7ce76d5a254ae69d107219a5
-RMD160 (tex-marvosym-15878/marvosym.doc.tar.xz) = bd42235829cd0879faf12041c98e9c0889780b52
-Size (tex-marvosym-15878/marvosym.doc.tar.xz) = 236716 bytes
+SHA1 (tex-marvosym-29349/marvosym.doc.tar.xz) = 7cb423f1a446ac335103c03c349b93b1c2a4472c
+RMD160 (tex-marvosym-29349/marvosym.doc.tar.xz) = 21bbfcbc1750b9d4f6ab28ffcdd7b8897fe779e5
+Size (tex-marvosym-29349/marvosym.doc.tar.xz) = 426612 bytes
