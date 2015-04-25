@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2014/05/05 00:48:21 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2015/04/25 14:24:52 tnn Exp $
 
 BUILDLINK_TREE+=	gnome-vfsmm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-vfsmm
 GNOME_VFSMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-vfsmm+=	gnome-vfsmm>=2.10.0
-BUILDLINK_ABI_DEPENDS.gnome-vfsmm+=	gnome-vfsmm>=2.26.0nb25
+BUILDLINK_ABI_DEPENDS.gnome-vfsmm+=	gnome-vfsmm>=2.26.0nb26
 BUILDLINK_PKGSRCDIR.gnome-vfsmm?=	../../sysutils/gnome-vfsmm
 
 .include "../../devel/glibmm/buildlink3.mk"

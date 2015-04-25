@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2014/12/30 08:58:57 plunky Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/25 14:24:50 tnn Exp $
 
 DISTNAME=		btpin-qt-1.5
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.NetBSD.org/~plunky/
 

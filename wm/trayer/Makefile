@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/04/19 23:37:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:25:00 tnn Exp $
 
 PKGNAME=	trayer-1.1.6
+PKGREVISION=	1
 DISTNAME=	trayer-srg-${PKGNAME}
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sargon/trayer-svg/archive/}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2014/08/22 11:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/04/25 14:25:13 tnn Exp $
 
 DISTNAME=	kmessage-0.1
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	x11 kde
 MASTER_SITES=	http://soliton.wins.uva.nl/~wijnhout/kmessage/
 

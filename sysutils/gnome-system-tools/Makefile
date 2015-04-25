@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/04/25 14:24:52 tnn Exp $
 #
 
 DISTNAME=		gnome-system-tools-2.22.2
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-system-tools/2.22/}
 EXTRACT_SUFX=		.tar.bz2

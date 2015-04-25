@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/06 08:17:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/25 14:25:01 tnn Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}esr
 # Also update MOZ_BRANCH= in devel/xulrunner31/Makefile
@@ -7,7 +7,7 @@ MOZ_BRANCH_MINOR=	.0
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox31-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}

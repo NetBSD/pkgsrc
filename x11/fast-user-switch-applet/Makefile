@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2015/04/06 08:17:40 adam Exp $
+# $NetBSD: Makefile,v 1.67 2015/04/25 14:25:03 tnn Exp $
 #
 
 DISTNAME=	fast-user-switch-applet-2.24.0
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/fast-user-switch-applet/2.24/}
 EXTRACT_SUFX=	.tar.bz2
