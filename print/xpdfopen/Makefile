@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/12 04:21:28 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 10:21:27 markd Exp $
 
-DISTNAME=	texlive-20130530-source
-PKGNAME=	xpdfopen-0.83
+DISTNAME=	texlive-20140525-source
+PKGNAME=	xpdfopen-0.84
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
