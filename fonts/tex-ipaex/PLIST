@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 01:11:24 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 07:58:45 markd Exp $
 share/texmf-dist/fonts/truetype/public/ipaex/ipaexg.ttf
 share/texmf-dist/fonts/truetype/public/ipaex/ipaexm.ttf
 share/texmf-dist/fonts/truetype/public/ipaex/ipag.ttf
+share/texmf-dist/fonts/truetype/public/ipaex/ipagp.ttf
 share/texmf-dist/fonts/truetype/public/ipaex/ipam.ttf
+share/texmf-dist/fonts/truetype/public/ipaex/ipamp.ttf
