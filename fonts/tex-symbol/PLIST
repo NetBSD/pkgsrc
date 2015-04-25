@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/30 05:06:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:27:13 markd Exp $
 share/texmf-dist/dvips/symbol/config.usy
 share/texmf-dist/fonts/afm/adobe/symbol/psyb.afm
 share/texmf-dist/fonts/afm/adobe/symbol/psyr.afm
 share/texmf-dist/fonts/afm/urw/symbol/usyr.afm
 share/texmf-dist/fonts/map/dvips/symbol/usy.map
 share/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/symbol/rpsyr.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/symbol/rpsyro.tfm
 share/texmf-dist/fonts/tfm/monotype/symbol/msyr.tfm
 share/texmf-dist/fonts/tfm/urw35vf/symbol/usyr.tfm
 share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
