@@ -7260,10 +7260,11 @@ this problem you can try to tell the package to disable inlining of functions.
 
 Sometimes packages fail to build because the compiler runs into an operating
 system specific soft limit. With the UNLIMIT_RESOURCES variable pkgsrc can be
-told to unlimit the resources. Currently, the allowed values are "datasize" and
-"stacksize" (or both). Setting this variable is similar to running the shell
-builtin ulimit command to raise the maximum data segment size or maximum stack
-size of a process, respectively, to their hard limits.
+told to unlimit the resources. Currently, the allowed values are any
+combination of "cputime", "datasize", "memorysize", and "stacksize". Setting
+this variable is similar to running the shell builtin ulimit command to raise
+the maximum data segment size or maximum stack size of a process, respectively,
+to their hard limits.
 
 19.6. Fixing problems in the install phase
 
