@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/07 00:19:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/04/25 05:11:25 markd Exp $
 
-SHA1 (tex-tocloft-20084/tocloft.tar.xz) = 83a21386c1e08f52cc57660c2673c5d5f864e6f6
-RMD160 (tex-tocloft-20084/tocloft.tar.xz) = 9198ec37eaf9ee864aba73993165f0f4f46447db
-Size (tex-tocloft-20084/tocloft.tar.xz) = 5688 bytes
+SHA1 (tex-tocloft-30209/tocloft.tar.xz) = 00044b961fc0bdf2a45c154d32b67b71a45678c3
+RMD160 (tex-tocloft-30209/tocloft.tar.xz) = 90d71f51a76076a4a4c72251ffd9e34e0cdbb7db
+Size (tex-tocloft-30209/tocloft.tar.xz) = 5788 bytes
