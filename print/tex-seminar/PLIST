@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/18 00:41:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:34:21 markd Exp $
 share/texmf-dist/tex/latex/seminar/npsfont.sty
 share/texmf-dist/tex/latex/seminar/sem-a4.sty
+share/texmf-dist/tex/latex/seminar/sem-dem.sty
 share/texmf-dist/tex/latex/seminar/sem-page.sty
 share/texmf-dist/tex/latex/seminar/semcolor.sty
 share/texmf-dist/tex/latex/seminar/semhelv.sty
@@ -12,3 +13,6 @@ share/texmf-dist/tex/latex/seminar/semlayer.sty
 share/texmf-dist/tex/latex/seminar/semlcmss.sty
 share/texmf-dist/tex/latex/seminar/semrot.sty
 share/texmf-dist/tex/latex/seminar/slidesec.sty
+share/texmf-dist/tex/latex/seminar/tvz-code.sty
+share/texmf-dist/tex/latex/seminar/tvz-hax.sty
+share/texmf-dist/tex/latex/seminar/tvz-user.sty
