@@ -1,8 +1,8 @@
-$NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
+$NetBSD: patch-bin_fmtutil,v 1.2 2015/04/25 20:26:37 markd Exp $
 
---- bin/fmtutil.orig	2012-10-09 17:39:16.000000000 +0000
+--- bin/fmtutil.orig	2014-11-23 18:10:07.000000000 +0000
 +++ bin/fmtutil
-@@ -213,7 +213,7 @@ getmatch()
+@@ -215,7 +215,7 @@ getmatch()
  initTexmfMain()
  {
    case $MT_TEXMFMAIN in
@@ -11,8 +11,8 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
    esac
    export MT_TEXMFMAIN
  }
-@@ -225,14 +225,14 @@ initTexmfMain()
- ###############################################################################
+@@ -227,14 +227,14 @@ initTexmfMain()
+ #
  cache_vars()
  {
 -  : ${MT_VARTEXFONTS=`kpsewhich --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
@@ -34,7 +34,7 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
    export MT_VARTEXFONTS MT_MKTEXNAM MT_MKTEXNAM_OPT MT_MKTEXDIR
    export MT_MKTEXDIR_OPT MT_MKTEXUPD MT_MKTEX_CNF MT_MKTEX_OPT
  }
-@@ -574,7 +574,7 @@ main()
+@@ -579,7 +579,7 @@ main()
  
    # set up destdir:
    if test -z "$destdir"; then
@@ -43,7 +43,7 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
      destdir=$MT_TEXMFVAR/web2c
    fi
    test -d "$destdir" || mktexdir "$destdir" >/dev/null 2>&1
-@@ -683,7 +683,7 @@ parse_line()
+@@ -686,7 +686,7 @@ parse_line()
    inifile=`echo $lastarg | sed 's%^\*%%'`
  
    # See if we can find $inifile for return code:
@@ -52,8 +52,8 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
  }
  
  ###############################################################################
-@@ -696,7 +696,7 @@ find_hyphenfile()
-   format="$1"; hyphenation="`echo $2 | sed 's/,/ /g'`"
+@@ -700,7 +700,7 @@ find_hyphenfile()
+   hyphenation="`echo $2 | sed 's/,/ /g'`"
    case $hyphenation in
      -) ;;
 -    *) kpsewhich -progname="$format" -format=tex $hyphenation;;
@@ -61,7 +61,7 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
    esac
  }
  
-@@ -727,7 +727,7 @@ run_initex()
+@@ -729,7 +729,7 @@ run_initex()
    poolfile=
    tcxflag=
    test -n "$pool" \
@@ -70,7 +70,7 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
    if test -n "$poolfile" && test -f "$poolfile"; then
      verboseMsg "$progname: attempting to create localized format using pool=$pool and tcx=$tcx."
      cp "$poolfile" $engine.pool
-@@ -886,7 +886,7 @@ recreate_by_fmt()
+@@ -907,7 +907,7 @@ recreate_by_fmt()
  create_missing()
  {
    # match_cmd='test ! -f $destdir/$fmtfile'
@@ -79,8 +79,8 @@ $NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
    recreate_loop
  }
  
-@@ -896,7 +896,7 @@ create_missing()
- ###############################################################################
+@@ -916,7 +916,7 @@ create_missing()
+ #
  recreate_existing()
  {
 -  match_cmd='test -f "`kpsewhich -engine=$texengine -progname=$format $fmtfile`"'
