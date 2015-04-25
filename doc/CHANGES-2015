@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1914 2015/04/24 18:38:56 reinoud Exp $
+$NetBSD: CHANGES-2015,v 1.1915 2015/04/25 01:31:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2854,3 +2854,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Scalar-List-Utils to 1.42 [mef 2015-04-24]
 	Updated devel/p5-IO-stringy to 2.111 [mef 2015-04-24]
 	Added devel/rebar version 2.5.1 [reinoud 2015-04-24]
+	Updated devel/p5-MooseX-App to 1.33 [mef 2015-04-25]
+	Updated devel/p5-Module-Build-XSUtil to 0.15 [mef 2015-04-25]
+	Updated devel/p5-App-cpanminus to 1.7031 [mef 2015-04-25]
+	Updated devel/p5-CPAN-Perl-Releases to 2.14 [mef 2015-04-25]
+	Updated devel/p5-Config-Any to 0.25 [mef 2015-04-25]
+	Updated devel/p5-File-BaseDir to 0.07 [mef 2015-04-25]
