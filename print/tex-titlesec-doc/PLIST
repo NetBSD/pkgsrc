@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:24:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:57:52 markd Exp $
+share/texmf-dist/doc/latex/titlesec/CHANGES
 share/texmf-dist/doc/latex/titlesec/README
+share/texmf-dist/doc/latex/titlesec/titleps.pdf
+share/texmf-dist/doc/latex/titlesec/titleps.tex
 share/texmf-dist/doc/latex/titlesec/titlesec.pdf
 share/texmf-dist/doc/latex/titlesec/titlesec.tex
+

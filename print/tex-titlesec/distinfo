@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:18:20 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/04/25 04:57:52 markd Exp $
 
-SHA1 (tex-titlesec-15878.2010/titlesec.tar.xz) = 854aee2bcedb6a5804a124174482d421fe6adb0c
-RMD160 (tex-titlesec-15878.2010/titlesec.tar.xz) = 913c22d8b03f5dc52d149e1440eeb3cd6225dcaf
-Size (tex-titlesec-15878.2010/titlesec.tar.xz) = 21520 bytes
+SHA1 (tex-titlesec-24852/titlesec.tar.xz) = 3a9237372ca5c0c836f5df7942d335ca36869c25
+RMD160 (tex-titlesec-24852/titlesec.tar.xz) = af58c6b36960bec838ecbd5bd93a0b00a5007f29
+Size (tex-titlesec-24852/titlesec.tar.xz) = 20520 bytes
