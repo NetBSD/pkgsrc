@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 01:11:34 minskim Exp $
-share/texmf-dist/doc/fonts/ipaex/Copyright
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 07:58:45 markd Exp $
 share/texmf-dist/doc/fonts/ipaex/README
+share/texmf-dist/doc/fonts/ipaex/IPA_Font_License_Agreement_v1.0.txt
+share/texmf-dist/doc/fonts/ipaex/Readme_IPAexfont00201.txt
+share/texmf-dist/doc/fonts/ipaex/Readme_IPAfont00303.txt
+
