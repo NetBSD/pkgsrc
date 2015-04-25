@@ -1,10 +1,10 @@
-$NetBSD: patch-src_glsl_ralloc.c,v 1.2 2014/08/06 10:25:14 wiz Exp $
+$NetBSD: patch-src_glsl_ralloc.c,v 1.3 2015/04/25 11:19:18 tnn Exp $
 
 * Fix exit time segfault of qt5 application with modular xorg
 
---- src/glsl/ralloc.c.orig	2011-10-15 00:43:58.000000000 +0000
-+++ src/glsl/ralloc.c
-@@ -272,7 +272,7 @@ ralloc_parent(const void *ptr)
+--- src/util/ralloc.c.orig	2014-10-03 03:59:51.000000000 +0000
++++ src/util/ralloc.c
+@@ -285,7 +285,7 @@ ralloc_parent(const void *ptr)
  
  static void *autofree_context = NULL;
  
@@ -13,7 +13,7 @@ $NetBSD: patch-src_glsl_ralloc.c,v 1.2 2014/08/06 10:25:14 wiz Exp $
  autofree(void)
  {
     ralloc_free(autofree_context);
-@@ -283,7 +283,6 @@ ralloc_autofree_context(void)
+@@ -296,7 +296,6 @@ ralloc_autofree_context(void)
  {
     if (unlikely(autofree_context == NULL)) {
        autofree_context = ralloc_context(NULL);
