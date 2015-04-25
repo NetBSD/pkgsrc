@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/03/08 23:29:22 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/25 12:14:16 markd Exp $
 
-DISTNAME=	texlive-20130530-source
+DISTNAME=	texlive-20140525-source
 PKGNAME=	cjkutils-4.8.3
+PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
