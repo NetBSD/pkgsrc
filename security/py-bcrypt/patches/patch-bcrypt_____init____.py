@@ -1,4 +1,6 @@
-$NetBSD: patch-bcrypt_____init____.py,v 1.1 2015/04/25 13:48:50 wiz Exp $
+$NetBSD: patch-bcrypt_____init____.py,v 1.2 2015/04/25 13:49:49 wiz Exp $
+
+Fix soname so cffi doesn't invent one for each python version + platform.
 
 --- bcrypt/__init__.py.orig	2015-03-14 02:18:59.000000000 +0000
 +++ bcrypt/__init__.py
