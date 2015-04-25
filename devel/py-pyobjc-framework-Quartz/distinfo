@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:42:24 adam Exp $
+
+SHA1 (pyobjc-framework-Quartz-3.0.4.tar.gz) = 9be768c97dcc3ff018ed77cc2df61d79f30e7cd3
+RMD160 (pyobjc-framework-Quartz-3.0.4.tar.gz) = 7509318b3a5e40079ae09d4b708ceb393adfb732
+Size (pyobjc-framework-Quartz-3.0.4.tar.gz) = 3201747 bytes

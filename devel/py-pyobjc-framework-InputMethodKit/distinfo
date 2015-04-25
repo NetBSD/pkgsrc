@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+
+SHA1 (pyobjc-framework-InputMethodKit-3.0.4.tar.gz) = 28b50ca870762f49d08cd15a46b6d717989667e7
+RMD160 (pyobjc-framework-InputMethodKit-3.0.4.tar.gz) = 652933f8f2c08df6b357ee035ceb55af5f379643
+Size (pyobjc-framework-InputMethodKit-3.0.4.tar.gz) = 15411 bytes

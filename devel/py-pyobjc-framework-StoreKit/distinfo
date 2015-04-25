@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:51 adam Exp $
+
+SHA1 (pyobjc-framework-StoreKit-3.0.4.tar.gz) = 27700c6a898eb15504a1e098a11af0740a713842
+RMD160 (pyobjc-framework-StoreKit-3.0.4.tar.gz) = 7b158796c9de6952df9c1f7664c0cfae9454a44a
+Size (pyobjc-framework-StoreKit-3.0.4.tar.gz) = 10978 bytes

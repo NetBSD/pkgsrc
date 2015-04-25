@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+
+SHA1 (pyobjc-framework-PubSub-3.0.4.tar.gz) = 4ea9bf20b611067538ccc6832349302aaa20bcb0
+RMD160 (pyobjc-framework-PubSub-3.0.4.tar.gz) = c5521a47961f902326d90b8269b5c5b623f5469b
+Size (pyobjc-framework-PubSub-3.0.4.tar.gz) = 14119 bytes

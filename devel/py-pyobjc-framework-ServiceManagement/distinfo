@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:51 adam Exp $
+
+SHA1 (pyobjc-framework-ServiceManagement-3.0.4.tar.gz) = 18fa5d2ae636789cdfc503a5e14ffe815be7d9a6
+RMD160 (pyobjc-framework-ServiceManagement-3.0.4.tar.gz) = 3e2af66672ab08dd5f7b95718e5563804a46cf9f
+Size (pyobjc-framework-ServiceManagement-3.0.4.tar.gz) = 10419 bytes

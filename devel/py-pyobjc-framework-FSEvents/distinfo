@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+
+SHA1 (pyobjc-framework-FSEvents-3.0.4.tar.gz) = 95e9fa5a845c2d72f8ac965c99120b9e2a86589c
+RMD160 (pyobjc-framework-FSEvents-3.0.4.tar.gz) = 3221afb058d70b8751d6a1c663bfbc37d25828b3
+Size (pyobjc-framework-FSEvents-3.0.4.tar.gz) = 16717 bytes

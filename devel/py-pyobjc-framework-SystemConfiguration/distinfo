@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:51 adam Exp $
+
+SHA1 (pyobjc-framework-SystemConfiguration-3.0.4.tar.gz) = bca24c2c6a399bbc744033b296860e550c191dbd
+RMD160 (pyobjc-framework-SystemConfiguration-3.0.4.tar.gz) = c412f1ad9bbfa6129a91d0696d3456d753a437ab
+Size (pyobjc-framework-SystemConfiguration-3.0.4.tar.gz) = 65600 bytes

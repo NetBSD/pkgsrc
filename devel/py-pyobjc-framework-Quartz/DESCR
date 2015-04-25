@@ -1,0 +1,15 @@
+The PyObjC project aims to provide a bridge between the Python and Objective-C
+programming languages. The bridge is intended to be fully bidirectional,
+allowing the Python programmer to take full advantage of the power provided by
+various Objective-C based toolkits and the Objective-C programmer transparent
+access to Python based functionality.
+
+This package contains wrappers for frameworks 'CoreGraphics', 'ImageIO',
+'QuartzCore', 'ImageKit', 'PDFKit', and 'CoreVideo'.
+
+All frameworks can be accessed by importing the 'Quartz' module.
+
+These wrappers don't include documentation, please check Apple's documention
+for information on how to use this framework and PyObjC's documentation
+for general tips and tricks regarding the translation between Python
+and (Objective-)C frameworks.

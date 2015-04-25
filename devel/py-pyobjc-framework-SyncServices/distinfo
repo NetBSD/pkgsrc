@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:51 adam Exp $
+
+SHA1 (pyobjc-framework-SyncServices-3.0.4.tar.gz) = 7656b1aae930790054117879a9d52a4b66a17044
+RMD160 (pyobjc-framework-SyncServices-3.0.4.tar.gz) = 0a712ce1f66378094f58c4a49eb1c913db5e9f0b
+Size (pyobjc-framework-SyncServices-3.0.4.tar.gz) = 33934 bytes
