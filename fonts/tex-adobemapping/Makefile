@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/07/15 19:33:53 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 05:34:54 markd Exp $
 
 DISTNAME=	adobemapping
-PKGNAME=	tex-${DISTNAME}-2010.21940
+PKGNAME=	tex-${DISTNAME}-2014
 CATEGORIES=	fonts
-TEXLIVE_REV=	21940
+TEXLIVE_REV=	28079
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Adobe cmap and pdfmapping files
