@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 04:52:49 markd Exp $
 
 DISTNAME=	texdoc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2013
-PKGREVISION=	1
-TEXLIVE_REV=	29764
+PKGNAME=	tex-${DISTNAME:S/./-/}-2014
+TEXLIVE_REV=	34180
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation access for TeX distributions
