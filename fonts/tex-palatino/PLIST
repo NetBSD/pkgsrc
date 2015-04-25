@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:13:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/04/25 08:22:13 markd Exp $
 share/texmf-dist/dvips/palatino/config.upl
 share/texmf-dist/fonts/afm/adobe/palatino/pplb8a.afm
 share/texmf-dist/fonts/afm/adobe/palatino/pplbi8a.afm
@@ -90,21 +90,6 @@ share/texmf-dist/fonts/tfm/adobe/palatino/zppler7m.tfm
 share/texmf-dist/fonts/tfm/adobe/palatino/zppler7t.tfm
 share/texmf-dist/fonts/tfm/adobe/palatino/zppler7v.tfm
 share/texmf-dist/fonts/tfm/adobe/palatino/zppler7y.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/pplb8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/pplbc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/pplbi8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/pplr8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/pplrc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/pplri8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplb.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplbi.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplbu.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplr.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplri.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplro.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplrre.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplrrn.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplru.tfm
 share/texmf-dist/fonts/tfm/urw35vf/palatino/uplb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/palatino/uplb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/palatino/uplb8r.tfm
@@ -206,12 +191,6 @@ share/texmf-dist/fonts/vf/adobe/palatino/zppler7m.vf
 share/texmf-dist/fonts/vf/adobe/palatino/zppler7t.vf
 share/texmf-dist/fonts/vf/adobe/palatino/zppler7v.vf
 share/texmf-dist/fonts/vf/adobe/palatino/zppler7y.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/palatino/pplb8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/palatino/pplbc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/palatino/pplbi8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/palatino/pplr8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/palatino/pplrc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/palatino/pplri8z.vf
 share/texmf-dist/fonts/vf/urw35vf/palatino/uplb7t.vf
 share/texmf-dist/fonts/vf/urw35vf/palatino/uplb8c.vf
 share/texmf-dist/fonts/vf/urw35vf/palatino/uplb8t.vf
