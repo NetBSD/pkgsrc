@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:00:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/04/25 05:36:21 markd Exp $
 share/texmf-dist/dvips/avantgar/config.uag
 share/texmf-dist/fonts/afm/adobe/avantgar/pagd8a.afm
 share/texmf-dist/fonts/afm/adobe/avantgar/pagdo8a.afm
@@ -39,16 +39,6 @@ share/texmf-dist/fonts/tfm/adobe/avantgar/pagko7t.tfm
 share/texmf-dist/fonts/tfm/adobe/avantgar/pagko8c.tfm
 share/texmf-dist/fonts/tfm/adobe/avantgar/pagko8r.tfm
 share/texmf-dist/fonts/tfm/adobe/avantgar/pagko8t.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/pagd8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/pagdc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/pagdo8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/pagk8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/pagkc8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/pagko8z.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagd.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagdo.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagk.tfm
-share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagko.tfm
 share/texmf-dist/fonts/tfm/urw35vf/avantgar/uagb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/avantgar/uagb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/avantgar/uagb8r.tfm
@@ -127,12 +117,6 @@ share/texmf-dist/fonts/vf/adobe/avantgar/pagko.vf
 share/texmf-dist/fonts/vf/adobe/avantgar/pagko7t.vf
 share/texmf-dist/fonts/vf/adobe/avantgar/pagko8c.vf
 share/texmf-dist/fonts/vf/adobe/avantgar/pagko8t.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/avantgar/pagd8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/avantgar/pagdc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/avantgar/pagdo8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/avantgar/pagk8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/avantgar/pagkc8z.vf
-share/texmf-dist/fonts/vf/cspsfonts-adobe/avantgar/pagko8z.vf
 share/texmf-dist/fonts/vf/urw35vf/avantgar/uagb7t.vf
 share/texmf-dist/fonts/vf/urw35vf/avantgar/uagb8c.vf
 share/texmf-dist/fonts/vf/urw35vf/avantgar/uagb8t.vf
