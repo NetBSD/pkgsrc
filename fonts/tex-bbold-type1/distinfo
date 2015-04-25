@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/05/09 21:02:03 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/04/25 05:39:28 markd Exp $
 
-SHA1 (tex-bbold-type1-20524/bbold-type1.tar.xz) = a5c20fb1a1be184abe98a37db160c62ffd54b25a
-RMD160 (tex-bbold-type1-20524/bbold-type1.tar.xz) = 5a25f4da173db6a6e281bc54c948ef1470b5418d
-Size (tex-bbold-type1-20524/bbold-type1.tar.xz) = 70008 bytes
-SHA1 (patch-fonts_map_dvips_bbold-type1_bbold.map) = acd7f73a581426d82b13d461a066e458814b0382
+SHA1 (tex-bbold-type1-33143/bbold-type1.tar.xz) = ed2487ca03aaf9d7b9da4c0f2802a2a976c1b679
+RMD160 (tex-bbold-type1-33143/bbold-type1.tar.xz) = 0afb0a8bdd214cdbdc7eb935960f9460946e61de
+Size (tex-bbold-type1-33143/bbold-type1.tar.xz) = 69980 bytes
