@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2013/10/15 09:24:22 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/25 03:53:52 markd Exp $
 
 DISTNAME=	pgf
-PKGNAME=	tex-${DISTNAME}-2.10
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-3.0.0
 CATEGORIES=	print graphics
-TEXLIVE_REV=	20236
+TEXLIVE_REV=	33057
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	PostScript and PDF graphics systems for TeX
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
