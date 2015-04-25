@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.5 2003/07/04 16:11:55 seb Exp $
-
-To use ${PKGNAME} include
-"${PREFIX}/share/examples/${DISTNAME}/mk.conf"
-in your BSD style makefile.
-
-===========================================================================
