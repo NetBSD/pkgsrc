@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1920 2015/04/25 11:35:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1921 2015/04/25 11:36:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2876,9 +2876,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-svn to 2.3.6 [adam 2015-04-25]
 	Updated www/gitweb to 2.3.6 [adam 2015-04-25]
 	Updated net/p5-Net to 3.06 [mef 2015-04-25]
-<<<<<<< CHANGES-2015
 	Renamed lang/gcc to lang/gcc2 [wiz 2015-04-25]
-=======
 	Added devel/py-pyobjc version 3.0.4 [adam 2015-04-25]
 	Added devel/py-pyobjc-core version 3.0.4 [adam 2015-04-25]
 	Added devel/py-pyobjc-framework-Accounts version 3.0.4 [adam 2015-04-25]
@@ -2918,5 +2916,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-pyobjc-framework-SyncServices version 3.0.4 [adam 2015-04-25]
 	Added devel/py-pyobjc-framework-SystemConfiguration version 3.0.4 [adam 2015-04-25]
 	Added devel/py-pyobjc-framework-WebKit version 3.0.4 [adam 2015-04-25]
->>>>>>> 1.1919
 	Updated misc/calibre to 2.26.0 [wiz 2015-04-25]
