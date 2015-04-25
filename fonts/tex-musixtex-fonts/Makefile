@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/12/04 02:18:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 08:17:00 markd Exp $
 
 DISTNAME=	musixtex-fonts
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	28934
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	36414
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fonts used by MusixTeX
