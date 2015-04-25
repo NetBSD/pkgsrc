@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1921 2015/04/25 11:36:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1922 2015/04/25 11:50:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2917,3 +2917,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-pyobjc-framework-SystemConfiguration version 3.0.4 [adam 2015-04-25]
 	Added devel/py-pyobjc-framework-WebKit version 3.0.4 [adam 2015-04-25]
 	Updated misc/calibre to 2.26.0 [wiz 2015-04-25]
+	Updated graphics/MesaLib to 10.5.3 [tnn 2015-04-25]
+	Updated x11/modular-xorg-server to 1.17.1 [tnn 2015-04-25]
