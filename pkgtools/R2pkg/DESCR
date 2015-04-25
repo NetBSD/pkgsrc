@@ -1,0 +1,3 @@
+The R2pkg program, which is modeled after url2pkg, creates a new
+pkgsrc package for the corresponding R package.  It is intended to
+help pkgsrc developers create new R packages quickly and easily.
