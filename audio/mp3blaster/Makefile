@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/10/15 09:44:06 roy Exp $
+# $NetBSD: Makefile,v 1.35 2015/04/25 14:20:22 tnn Exp $
 
 DISTNAME=	mp3blaster-3.2.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3blaster/}
 
