@@ -1,0 +1,22 @@
+$NetBSD: patch-lib9_Makefile,v 1.1 2015/04/25 19:58:32 dholland Exp $
+
+Configure for pkgsrc.
+
+--- lib9/Makefile~	2000-02-11 17:04:14.000000000 +0000
++++ lib9/Makefile
+@@ -15,12 +15,13 @@ INCLUDES=-I../include
+ 
+ CFLAGS += $(INCLUDES)
+ 
+-CC=gcc
++CC?=gcc
+ 
+ all: $(LIB)
+ 
+ $(LIB): $(OFILES)
+-	ar r $(LIB) $(OFILES)
++	rm -f $(LIB)
++	$(AR) cq $(LIB) $(OFILES)
+ 
+ clean:
+ 	rm -rf $(OFILES)

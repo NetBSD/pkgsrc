@@ -1,0 +1,60 @@
+$NetBSD: patch-squint_Makefile,v 1.1 2015/04/25 19:58:32 dholland Exp $
+
+Configure for pkgsrc; honor LDFLAGS, CC, and YACC.
+Add explicit "all" target to simplify parent makefile.
+Don't require that . is in $PATH.
+Prune trailing tab line in make recipe.
+
+--- squint/Makefile.orig	2000-02-11 17:04:38.000000000 +0000
++++ squint/Makefile
+@@ -2,10 +2,10 @@ TARG		= squint
+ INCLUDES	= -I../include
+ LIBDIR		= ../lib
+ LIBS9		= -lbio -l9
+-LIBS		= $(LIBS9) -lm
+-LDFLAGS		= -L$(LIBDIR)
+-CC		= gcc
+-LD		= gcc
++LIBS		+= $(LIBS9) -lm
++LDFLAGS		+= -L$(LIBDIR)
++CC		?= gcc
++CCLD		?= $(CC)
+ 
+ CFLAGS += $(INCLUDES)
+ 
+@@ -22,11 +22,13 @@ LIBO=libio.o liblib.o
+ 
+ OFILES		= $(FO) $(CO) $(SO) $(LIBO)
+ 
++all: $(TARG)
++
+ $(TARG): $(FO) $(CO) $(SO) $(LIBO) $(LIBDIR)/*.a
+-	$(LD) $(LDFLAGS) -o $@ $(FO) $(CO) $(SO) $(LIBO) $(LIBS)
++	$(CCLD) $(LDFLAGS) -o $@ $(FO) $(CO) $(SO) $(LIBO) $(LIBS)
+ 
+ y.tab.h squint.c:	squint.y
+-	yacc -d squint.y
++	$(YACC) -d squint.y
+ 	mv y.tab.c squint.c
+ 
+ ydefs.h:	y.tab.h
+@@ -36,8 +38,8 @@ slib.h:	sliblib.h slibio.h
+ 	cat $< > slib.h
+ 
+ nodenames.h typenames.h:	node.h enumtoname
+-	enumtoname Ntype < node.h > nodenames.h
+-	enumtoname Ttype < node.h > typenames.h
++	./enumtoname Ntype < node.h > nodenames.h
++	./enumtoname Ttype < node.h > typenames.h
+ 
+ inst.h insttab.h:	inst
+ 	( echo 'typedef enum Inst{' ; \
+@@ -52,7 +54,7 @@ inst.h insttab.h:	inst
+ 	  sed 's/.\(.*\)/	{i\1, "&"},/' inst ; \
+ 	  echo '};' ; \
+ 	) > insttab.h
+-	
++
+ inst:	$(CODE)
+ 	cat $(CODE) | grep '^i.*(Proc \*proc)' | sed 's/^i/I/; s/(.*//; s/.*/&/' | sort > ninst
+ 	cmp -s inst ninst || mv ninst inst

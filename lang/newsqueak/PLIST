@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/25 19:58:32 dholland Exp $
+bin/squint
+share/squint/include/arrow.h
+share/squint/include/bitmapio.h
+share/squint/include/box.h
+share/squint/include/fio.h
+share/squint/include/gnot.h
+share/squint/include/gnotio.h
+share/squint/include/layer.h
+share/squint/include/lib.h
+share/squint/include/lmenu.h
+share/squint/include/menu.h
+share/squint/include/nspace.h
+share/squint/include/sight.h
+share/squint/include/sys.h
+share/squint/include/whitearrow.h

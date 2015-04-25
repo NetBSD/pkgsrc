@@ -1,0 +1,15 @@
+$NetBSD: patch-squint_progs_npowser,v 1.1 2015/04/25 19:58:32 dholland Exp $
+
+remove another reference to Rob's homedir
+
+--- squint/progs/npowser~	2000-02-11 17:04:28.000000000 +0000
++++ squint/progs/npowser
+@@ -7,7 +7,7 @@ type rat: struct of {
+ };
+ type item:rat;
+ 
+-include "/usr/rob/src/squint/progs/drat"
++include "progs/drat"
+ 
+ type PS: dch;	# power series
+ type PS2: array[2] of dch; # pair of power series
