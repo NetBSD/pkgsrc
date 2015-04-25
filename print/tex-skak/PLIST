@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/15 11:22:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:39:27 markd Exp $
 share/texmf-dist/fonts/source/public/skak/skak10.mf
 share/texmf-dist/fonts/source/public/skak/skak15.mf
 share/texmf-dist/fonts/source/public/skak/skak20.mf
@@ -15,7 +15,6 @@ share/texmf-dist/fonts/tfm/public/skak/skak30.tfm
 share/texmf-dist/fonts/tfm/public/skak/skakf10.tfm
 share/texmf-dist/fonts/tfm/public/skak/skakf10b.tfm
 share/texmf-dist/tex/latex/skak/chess-workshop-symbols.sty
-share/texmf-dist/tex/latex/skak/lambda.sty
 share/texmf-dist/tex/latex/skak/skak.fd
 share/texmf-dist/tex/latex/skak/skak.sty
 share/texmf-dist/tex/latex/skak/uskak.fd
