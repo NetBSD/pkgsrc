@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/27 17:14:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 04:23:29 markd Exp $
 
 DISTNAME=	preview.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-11.86
-TEXLIVE_REV=	17118
+PKGNAME=	tex-${DISTNAME:S/./-/}-11.88
+TEXLIVE_REV=	35488
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-preview
