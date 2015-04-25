@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/07/20 02:11:23 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/04/25 08:20:35 markd Exp $
 
-SHA1 (tex-ncntrsbk-21993/ncntrsbk.tar.xz) = 402b30e308272cdca6c68919d29f77480e2c17cb
-RMD160 (tex-ncntrsbk-21993/ncntrsbk.tar.xz) = fc9441a4a939df80639f45df011eb97bc21a9181
-Size (tex-ncntrsbk-21993/ncntrsbk.tar.xz) = 300164 bytes
+SHA1 (tex-ncntrsbk-31835/ncntrsbk.tar.xz) = d250fac9d87cbfcab3a5e915bd7eebab953e7d56
+RMD160 (tex-ncntrsbk-31835/ncntrsbk.tar.xz) = 6891a66c070f6b3320ca15de859de60a593aa27f
+Size (tex-ncntrsbk-31835/ncntrsbk.tar.xz) = 290884 bytes
