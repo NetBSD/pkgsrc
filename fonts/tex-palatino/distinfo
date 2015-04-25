@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/07/20 02:13:53 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/04/25 08:22:13 markd Exp $
 
-SHA1 (tex-palatino-21993/palatino.tar.xz) = 9bbe9c9148a0d908d723ec243b4754c0d581c4d0
-RMD160 (tex-palatino-21993/palatino.tar.xz) = 13bed296c0bdcda20b01a11088b6ea52eb774c7b
-Size (tex-palatino-21993/palatino.tar.xz) = 335608 bytes
+SHA1 (tex-palatino-31835/palatino.tar.xz) = 6983eff22742cf06cc82b13843f7f07c3cc3833e
+RMD160 (tex-palatino-31835/palatino.tar.xz) = 650569ea21644620af312b5aebccf3ae8cf96d48
+Size (tex-palatino-31835/palatino.tar.xz) = 326000 bytes
