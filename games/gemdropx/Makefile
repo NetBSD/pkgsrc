@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2014/12/19 06:50:16 mef Exp $
+# $NetBSD: Makefile,v 1.22 2015/04/25 14:22:55 tnn Exp $
 #
 
 DISTNAME=	gemdropx-0.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/gemdropx/src/
 

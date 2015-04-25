@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 22:16:06 tron Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/25 14:22:56 tnn Exp $
 #
 
 DISTNAME=	hex-a-hop-1.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hexahop/}
 
