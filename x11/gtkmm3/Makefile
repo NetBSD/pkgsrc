@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/01/26 18:38:44 adam Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/25 14:25:07 tnn Exp $
 
 DISTNAME=	gtkmm-3.14.0
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/3.14/}
 EXTRACT_SUFX=	.tar.xz
