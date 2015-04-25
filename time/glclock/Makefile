@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 13:04:18 asau Exp $
+# $NetBSD: Makefile,v 1.25 2015/04/25 14:24:57 tnn Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 graphics time
 MASTER_SITES=		http://www.daionet.gr.jp/~masa/archives/
 
