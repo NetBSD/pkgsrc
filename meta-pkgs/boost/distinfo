@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2015/04/19 12:18:44 wiz Exp $
+$NetBSD: distinfo,v 1.80 2015/04/25 19:02:06 tnn Exp $
 
 SHA1 (boost_1_58_0.tar.bz2) = 2fc96c1651ac6fe9859b678b165bd78dc211e881
 RMD160 (boost_1_58_0.tar.bz2) = efc78b2b1a5d33ed72fcfa6688564c2fcd56772a
@@ -23,3 +23,5 @@ SHA1 (patch-libs_context_build_Jamfile.v2) = befc2ae62e893ac665e88405d6aca79712f
 SHA1 (patch-libs_context_src_asm_make__ppc32__sysv__macho__gas.S) = 7f598bc270fcfa8babd99e1180248f04b50c2e46
 SHA1 (patch-libs_filesystem_src_unique_path.cpp) = 4693ea11cf464d82168cecaa143b48affa94563b
 SHA1 (patch-libs_log_src_timestamp.cpp) = b6bb7a29467c64f81dafd06039ab3a1842844845
+SHA1 (patch-tools_build_src_tools_gcc.jam) = b0a7ea7b64561ddb68b0dbf6d0276037273b2239
+SHA1 (patch-tools_build_src_tools_gcc.py) = 9e1c6663b060a4cbc3933998ba99bc3dd1fa4a98
