@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/10/06 11:54:31 asau Exp $
+# $NetBSD: Makefile,v 1.29 2015/04/25 14:22:52 tnn Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games x11
 MASTER_SITES=	#
 

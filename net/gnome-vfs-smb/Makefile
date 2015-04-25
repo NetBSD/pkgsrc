@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2014/02/12 23:18:20 tron Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/25 14:23:44 tnn Exp $
 #
 
 GNOME_VFS_NAME=		smb
 GNOME_VFS_FLAG=		samba
-PKGREVISION=		20
+PKGREVISION=		21
 CATEGORIES=		net
 
 EGFILES+=		modules/smb-module.conf
