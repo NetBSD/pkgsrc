@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/04 01:13:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 08:01:05 markd Exp $
 
 DISTNAME=	japanese-otf
-PKGNAME=	tex-${DISTNAME}-1.7b4
+PKGNAME=	tex-${DISTNAME}-1.7b6
 CATEGORIES=	fonts
-TEXLIVE_REV=	25453
+TEXLIVE_REV=	32233
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Advanced font selection for platex and its friends
