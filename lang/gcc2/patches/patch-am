@@ -1,0 +1,20 @@
+$NetBSD: patch-am,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- gcc/java/parse.c.orig	2001-03-16 14:13:48.000000000 +0000
++++ gcc/java/parse.c
+@@ -12818,6 +12818,7 @@ resolve_type_during_patch (type)
+ }
+ /* 5.5 Casting Conversion. error_mark_node is returned if an error is
+    found. Otherwise NODE or something meant to replace it is returned.  */
++static tree convert_narrow ();
+ 
+ static tree
+ patch_cast (node, wfl_operator)
+@@ -12836,7 +12837,6 @@ patch_cast (node, wfl_operator)
+   /* Check on cast that are proven correct at compile time */
+   if (JNUMERIC_TYPE_P (cast_type) && JNUMERIC_TYPE_P (op_type))
+     {
+-      static tree convert_narrow ();
+       /* Same type */
+       if (cast_type == op_type)
+ 	return node;

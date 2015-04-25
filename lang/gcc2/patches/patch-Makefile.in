@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- Makefile.in.orig	1999-06-22 22:44:42.000000000 +0000
++++ Makefile.in
+@@ -1670,8 +1670,8 @@ install-target: $(INSTALL_TARGET_MODULES
+ ### other supporting targets
+ 
+ MAKEDIRS= \
+-	$(prefix) \
+-	$(exec_prefix)
++	$(DESTDIR)$(prefix) \
++	$(DESTDIR)$(exec_prefix)
+ .PHONY: installdirs
+ installdirs: mkinstalldirs
+ 	$(SHELL) $(srcdir)/mkinstalldirs $(MAKEDIRS)

@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- gcc/java/parse.y.orig	2010-10-12 22:33:34.000000000 +0000
++++ gcc/java/parse.y
+@@ -10164,6 +10164,7 @@ resolve_type_during_patch (type)
+ }
+ /* 5.5 Casting Conversion. error_mark_node is returned if an error is
+    found. Otherwise NODE or something meant to replace it is returned.  */
++static tree convert_narrow ();
+ 
+ static tree
+ patch_cast (node, wfl_operator)
+@@ -10182,7 +10183,6 @@ patch_cast (node, wfl_operator)
+   /* Check on cast that are proven correct at compile time */
+   if (JNUMERIC_TYPE_P (cast_type) && JNUMERIC_TYPE_P (op_type))
+     {
+-      static tree convert_narrow ();
+       /* Same type */
+       if (cast_type == op_type)
+ 	return node;
