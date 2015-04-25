@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.130 2015/03/07 21:31:15 tnn Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.131 2015/04/25 11:31:01 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1366,8 +1366,9 @@ of functions.</para>
     <para>Sometimes packages fail to build because the compiler runs
     into an operating system specific soft limit.  With the
     <varname>UNLIMIT_RESOURCES</varname> variable pkgsrc can be told
-    to unlimit the resources.  Currently, the allowed values are
-    <quote>datasize</quote> and <quote>stacksize</quote> (or both).
+    to unlimit the resources.  Currently, the allowed values are any combination of
+    <quote>cputime</quote>, <quote>datasize</quote>,
+    <quote>memorysize</quote>, and <quote>stacksize</quote>.
     Setting this variable is similar to running the shell builtin
     <command>ulimit</command> command to raise the maximum data
     segment size or maximum stack size of a process, respectively, to
