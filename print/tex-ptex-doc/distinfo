@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/03/04 01:20:21 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/04/25 04:26:47 markd Exp $
 
-SHA1 (tex-ptex-25342/ptex.doc.tar.xz) = 1e407f2529ea3bb24c73349d367f8ff962412f87
-RMD160 (tex-ptex-25342/ptex.doc.tar.xz) = eb76d5b1c5248d415ab8d40392a044f2d233649c
-Size (tex-ptex-25342/ptex.doc.tar.xz) = 1795648 bytes
+SHA1 (tex-ptex-36135/ptex.doc.tar.xz) = 90c156f9a915d976585121a2c66c380904ec6243
+RMD160 (tex-ptex-36135/ptex.doc.tar.xz) = ae773122db8e7043dd20189867912d30a738e16c
+Size (tex-ptex-36135/ptex.doc.tar.xz) = 1798592 bytes
