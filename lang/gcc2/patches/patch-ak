@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2015/04/25 10:32:07 wiz Exp $
+
+--- gcc/ch/decl.c.orig	2010-10-12 22:41:57.000000000 +0000
++++ gcc/ch/decl.c
+@@ -4446,7 +4446,7 @@ complete_array_type (type, initial_value
+ 
+ tree
+ start_struct (code, name)
+-     enum chill_tree_code code;
++     enum tree_code code;
+      tree name ATTRIBUTE_UNUSED;
+ {
+   /* If there is already a tag defined at this binding level
