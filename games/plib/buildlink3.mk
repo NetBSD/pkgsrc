@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2012/05/07 01:53:30 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2015/04/25 14:23:02 tnn Exp $
 
 BUILDLINK_TREE+=	plib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plib
 PLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plib+=	plib>=1.8.5nb2
-BUILDLINK_ABI_DEPENDS.plib+=	plib>=1.6.0nb3
+BUILDLINK_ABI_DEPENDS.plib+=	plib>=1.8.5nb4
 BUILDLINK_PKGSRCDIR.plib?=	../../games/plib
 BUILDLINK_DEPMETHOD.plib?=	build
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2015/02/09 09:51:26 snj Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/25 14:22:54 tnn Exp $
 
 DISTNAME=	defendguin-0.0.12
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/defendguin/src/
 
