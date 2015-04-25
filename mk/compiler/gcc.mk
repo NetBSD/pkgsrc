@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.159 2015/04/18 19:53:59 joerg Exp $
+# $NetBSD: gcc.mk,v 1.160 2015/04/25 10:33:29 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -338,16 +338,16 @@ CFLAGS+=	-Wno-import
 
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
 #
-# We require gcc-2.x in the lang/gcc directory.
+# We require gcc-2.x in the lang/gcc2 directory.
 #
-_GCC_PKGBASE=		gcc
-.  if !empty(PKGPATH:Mlang/gcc)
+_GCC_PKGBASE=		gcc2
+.  if !empty(PKGPATH:Mlang/gcc2)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc
-_GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
+_GCC_PKGSRCDIR=		../../lang/gcc2
+_GCC_DEPENDENCY=	gcc2>=${_GCC_REQD}:../../lang/gcc2
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
