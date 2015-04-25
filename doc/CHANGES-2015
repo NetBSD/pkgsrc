@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1917 2015/04/25 09:09:03 adam Exp $
+$NetBSD: CHANGES-2015,v 1.1918 2015/04/25 09:09:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2875,3 +2875,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-gitk to 2.3.6 [adam 2015-04-25]
 	Updated devel/git-svn to 2.3.6 [adam 2015-04-25]
 	Updated www/gitweb to 2.3.6 [adam 2015-04-25]
+	Updated net/p5-Net to 3.06 [mef 2015-04-25]
