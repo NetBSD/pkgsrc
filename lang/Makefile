@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.409 2015/04/25 10:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.410 2015/04/25 19:59:10 dholland Exp $
 #
 
 COMMENT=	Programming languages
@@ -125,6 +125,7 @@ SUBDIR+=	moscow_ml
 SUBDIR+=	mpd
 SUBDIR+=	nawk
 SUBDIR+=	newlisp
+SUBDIR+=	newsqueak
 SUBDIR+=	nhc98
 SUBDIR+=	nodejs
 SUBDIR+=	nqp
