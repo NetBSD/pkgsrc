@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:42:24 adam Exp $
+
+SHA1 (pyobjc-framework-Cocoa-3.0.4.tar.gz) = 4b9767451877447fd6504822887fa2924226626b
+RMD160 (pyobjc-framework-Cocoa-3.0.4.tar.gz) = f3055447c484aecd164891c9200710e74c352153
+Size (pyobjc-framework-Cocoa-3.0.4.tar.gz) = 3101204 bytes

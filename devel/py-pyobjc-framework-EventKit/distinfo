@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+
+SHA1 (pyobjc-framework-EventKit-3.0.4.tar.gz) = 06567378242aefab1fbbba07dcfab1b42160f2e1
+RMD160 (pyobjc-framework-EventKit-3.0.4.tar.gz) = bcb0203d608345fb05e7d1d505eebb4a8bd5a713
+Size (pyobjc-framework-EventKit-3.0.4.tar.gz) = 14573 bytes

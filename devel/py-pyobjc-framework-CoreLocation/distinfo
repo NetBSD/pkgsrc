@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 10:40:49 adam Exp $
+
+SHA1 (pyobjc-framework-CoreLocation-3.0.4.tar.gz) = a42e36ef4780614ed97d70bf8b6d26db0479bd74
+RMD160 (pyobjc-framework-CoreLocation-3.0.4.tar.gz) = d3a5222d0940b759f6e277f15f5f67c3b383e2c6
+Size (pyobjc-framework-CoreLocation-3.0.4.tar.gz) = 31299 bytes

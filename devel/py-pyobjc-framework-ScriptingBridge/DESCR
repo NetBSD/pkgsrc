@@ -1,0 +1,7 @@
+The PyObjC project aims to provide a bridge between the Python and Objective-C
+programming languages. The bridge is intended to be fully bidirectional,
+allowing the Python programmer to take full advantage of the power provided by
+various Objective-C based toolkits and the Objective-C programmer transparent
+access to Python based functionality.
+
+This package contains wrappers for framework 'ScriptingBridge'.

@@ -1,0 +1,49 @@
+# $NetBSD: Makefile.common,v 1.1 2015/04/25 10:40:48 adam Exp $
+# used by devel/py-pyobjc-core/Makefile
+# used by devel/py-pyobjc-framework-Accounts/Makefile
+# used by devel/py-pyobjc-framework-AddressBook/Makefile
+# used by devel/py-pyobjc-framework-AppleScriptKit/Makefile
+# used by devel/py-pyobjc-framework-AppleScriptObjC/Makefile
+# used by devel/py-pyobjc-framework-Automator/Makefile
+# used by devel/py-pyobjc-framework-CalendarStore/Makefile
+# used by devel/py-pyobjc-framework-CFNetwork/Makefile
+# used by devel/py-pyobjc-framework-Cocoa/Makefile
+# used by devel/py-pyobjc-framework-Collaboration/Makefile
+# used by devel/py-pyobjc-framework-CoreData/Makefile
+# used by devel/py-pyobjc-framework-CoreLocation/Makefile
+# used by devel/py-pyobjc-framework-CoreText/Makefile
+# used by devel/py-pyobjc-framework-CoreWLAN/Makefile
+# used by devel/py-pyobjc-framework-DictionaryServices/Makefile
+# used by devel/py-pyobjc-framework-DiskArbitration/Makefile
+# used by devel/py-pyobjc-framework-EventKit/Makefile
+# used by devel/py-pyobjc-framework-ExceptionHandling/Makefile
+# used by devel/py-pyobjc-framework-FSEvents/Makefile
+# used by devel/py-pyobjc-framework-InputMethodKit/Makefile
+# used by devel/py-pyobjc-framework-InstallerPlugins/Makefile
+# used by devel/py-pyobjc-framework-InstantMessage/Makefile
+# used by devel/py-pyobjc-framework-LatentSemanticMapping/Makefile
+# used by devel/py-pyobjc-framework-LaunchServices/Makefile
+# used by devel/py-pyobjc-framework-OpenDirectory/Makefile
+# used by devel/py-pyobjc-framework-PreferencePanes/Makefile
+# used by devel/py-pyobjc-framework-PubSub/Makefile
+# used by devel/py-pyobjc-framework-QTKit/Makefile
+# used by devel/py-pyobjc-framework-Quartz/Makefile
+# used by devel/py-pyobjc-framework-ScreenSaver/Makefile
+# used by devel/py-pyobjc-framework-ScriptingBridge/Makefile
+# used by devel/py-pyobjc-framework-SearchKit/Makefile
+# used by devel/py-pyobjc-framework-ServiceManagement/Makefile
+# used by devel/py-pyobjc-framework-Social/Makefile
+# used by devel/py-pyobjc-framework-StoreKit/Makefile
+# used by devel/py-pyobjc-framework-SyncServices/Makefile
+# used by devel/py-pyobjc-framework-SystemConfiguration/Makefile
+# used by devel/py-pyobjc-framework-WebKit/Makefile
+
+PYOBJC_VERS=	3.0.4
+
+ONLY_FOR_PLATFORM=	Darwin-*-*
+
+SUBST_CLASSES+=		fix-setup
+SUBST_STAGE.fix-setup=	pre-configure
+SUBST_MESSAGE.fix-setup=Avoiding a hack in pyobjc_setup.py.
+SUBST_FILES.fix-setup=	pyobjc_setup.py
+SUBST_SED.fix-setup=	-e 's,[a-z]*flags.extend.*-isysroot.*,pass,'
