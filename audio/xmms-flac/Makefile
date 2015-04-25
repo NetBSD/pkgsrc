@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2012/10/02 23:48:15 asau Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/25 14:20:25 tnn Exp $
 #
 
 DISTNAME=	flac-1.1.3
 PKGNAME=	xmms-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2014/01/06 23:42:38 dholland Exp $
+# $NetBSD: Makefile,v 1.45 2015/04/25 14:20:47 tnn Exp $
 
 STELLA_VERSION=	3.9.2
 DISTNAME=	stella-${STELLA_VERSION}-src
 PKGNAME=	stella-${STELLA_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stella/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 23:45:06 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:20:30 tnn Exp $
 
 DISTNAME=	sratom-0.4.6
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
