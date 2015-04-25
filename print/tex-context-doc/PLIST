@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/17 01:43:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/25 03:39:07 markd Exp $
 man/man1/context.1
-man/man1/ctxtools.1
 man/man1/luatools.1
 man/man1/mtx-babel.1
 man/man1/mtx-base.1
+man/man1/mtx-bibtex.1
 man/man1/mtx-cache.1
 man/man1/mtx-chars.1
 man/man1/mtx-check.1
@@ -32,14 +32,19 @@ man/man1/mtx-tools.1
 man/man1/mtx-unzip.1
 man/man1/mtx-update.1
 man/man1/mtx-watch.1
+man/man1/mtx-youless.1
 man/man1/mtxrun.1
-man/man1/pstopdf.1
 man/man1/texexec.1
 man/man1/texmfstart.1
 share/texmf-dist/doc/context/document/general/manuals/mreadme.pdf
 share/texmf-dist/doc/context/document/general/manuals/tiptrick.pdf
 share/texmf-dist/doc/context/manuals/allkind/mcommon.tex
+share/texmf-dist/doc/context/manuals/allkind/mkiv-publications-graph.bib
+share/texmf-dist/doc/context/manuals/allkind/mkiv-publications.bib
+share/texmf-dist/doc/context/manuals/allkind/mkiv-publications.pdf
+share/texmf-dist/doc/context/manuals/allkind/mkiv-publications.tex
 share/texmf-dist/doc/context/manuals/allkind/mreadme.tex
+share/texmf-dist/doc/context/manuals/allkind/publications-en.xml
 share/texmf-dist/doc/context/scripts/mkii/ctxtools.html
 share/texmf-dist/doc/context/scripts/mkii/ctxtools.man
 share/texmf-dist/doc/context/scripts/mkii/ctxtools.xml
@@ -87,6 +92,9 @@ share/texmf-dist/doc/context/scripts/mkiv/mtx-babel.xml
 share/texmf-dist/doc/context/scripts/mkiv/mtx-base.html
 share/texmf-dist/doc/context/scripts/mkiv/mtx-base.man
 share/texmf-dist/doc/context/scripts/mkiv/mtx-base.xml
+share/texmf-dist/doc/context/scripts/mkiv/mtx-bibtex.html
+share/texmf-dist/doc/context/scripts/mkiv/mtx-bibtex.man
+share/texmf-dist/doc/context/scripts/mkiv/mtx-bibtex.xml
 share/texmf-dist/doc/context/scripts/mkiv/mtx-cache.html
 share/texmf-dist/doc/context/scripts/mkiv/mtx-cache.man
 share/texmf-dist/doc/context/scripts/mkiv/mtx-cache.xml
@@ -171,6 +179,9 @@ share/texmf-dist/doc/context/scripts/mkiv/mtx-update.xml
 share/texmf-dist/doc/context/scripts/mkiv/mtx-watch.html
 share/texmf-dist/doc/context/scripts/mkiv/mtx-watch.man
 share/texmf-dist/doc/context/scripts/mkiv/mtx-watch.xml
+share/texmf-dist/doc/context/scripts/mkiv/mtx-youless.html
+share/texmf-dist/doc/context/scripts/mkiv/mtx-youless.man
+share/texmf-dist/doc/context/scripts/mkiv/mtx-youless.xml
 share/texmf-dist/doc/context/scripts/mkiv/mtxrun.html
 share/texmf-dist/doc/context/scripts/mkiv/mtxrun.man
 share/texmf-dist/doc/context/scripts/mkiv/mtxrun.xml
