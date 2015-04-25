@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/06/04 22:16:26 tron Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 14:23:18 tnn Exp $
 #
 
 DISTNAME=	quesoglc-0.7.1-free
 PKGNAME=	${DISTNAME:S/-free$//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quesoglc/}
 EXTRACT_SUFX=	.tar.bz2

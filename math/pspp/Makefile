@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2014/05/29 23:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2015/04/25 14:23:30 tnn Exp $
 #
 
 DISTNAME=	pspp-0.6.2
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=pspp/}
 

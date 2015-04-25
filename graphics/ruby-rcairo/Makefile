@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2015/03/15 20:13:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.42 2015/04/25 14:23:19 tnn Exp $
 
 DISTNAME=		rcairo-1.14.1
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
 

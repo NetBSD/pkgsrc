@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/02/02 20:41:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/25 14:23:06 tnn Exp $
 #
 
 VERSION=	20150201
 DISTNAME=	weather_routing_pi-${VERSION}
 PKGNAME=	opencpn-plugin-weather_routing-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://ftp.fr.netbsd.org/~bouyer/
 

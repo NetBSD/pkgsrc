@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/08/07 03:03:32 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/25 14:23:25 tnn Exp $
 
 PKGNAME=	uim-${DISTNAME}
+PKGREVISION=	1
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} uim-mozc-334.tar.xz
 SITES.uim-mozc-334.tar.xz=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}

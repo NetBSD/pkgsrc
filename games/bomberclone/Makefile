@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2015/02/03 20:54:19 snj Exp $
+# $NetBSD: Makefile,v 1.35 2015/04/25 14:22:52 tnn Exp $
 
 DISTNAME=		bomberclone-0.11.9
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bomberclone/}
 

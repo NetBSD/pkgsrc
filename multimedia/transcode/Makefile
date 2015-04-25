@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2014/10/07 16:47:31 adam Exp $
+# $NetBSD: Makefile,v 1.95 2015/04/25 14:23:42 tnn Exp $
 
 DISTNAME=	transcode-1.1.7
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	multimedia
 #MASTER_SITES=	http://download.berlios.de/tcforge/
 MASTER_SITES=	http://bitbucket.org/france/transcode-tcforge/downloads/

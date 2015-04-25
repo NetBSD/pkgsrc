@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2011/02/21 16:01:17 taca Exp $
+# $NetBSD: Makefile,v 1.32 2015/04/25 14:23:19 tnn Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	taca@NetBSD.org

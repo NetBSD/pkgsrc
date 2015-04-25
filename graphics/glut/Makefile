@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2015/04/03 01:34:42 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2015/04/25 14:23:11 tnn Exp $
 
 DISTNAME=	MesaGLUT-7.9.2
 # we have the autoconf patches from git, so call it 8.0.1.
 PKGNAME=	glut-8.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/glut/
 EXTRACT_SUFX=	.tar.bz2

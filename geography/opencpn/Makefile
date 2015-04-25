@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/01/22 12:34:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 14:23:06 tnn Exp $
 #
 
 VERSION=	4.0.0
 DISTNAME=	OpenCPN-${VERSION}-Source
 PKGNAME=	opencpn-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencpn/${VERSION}/}
 

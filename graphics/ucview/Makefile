@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/25 14:23:19 tnn Exp $
 
 DISTNAME=	ucview-0.22
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	graphics
 MASTER_SITES=	http://unicap-imaging.org/downloads/
 

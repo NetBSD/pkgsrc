@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:24:37 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/04/25 14:23:07 tnn Exp $
 
 BUILDLINK_TREE+=	cal3d
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cal3d
 CAL3D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cal3d+=	cal3d>=0.9.1
-BUILDLINK_ABI_DEPENDS.cal3d+=	cal3d>=0.9.1nb2
+BUILDLINK_ABI_DEPENDS.cal3d+=	cal3d>=0.9.1nb3
 BUILDLINK_PKGSRCDIR.cal3d?=	../../graphics/cal3d
 
 .include "../../graphics/Mesa/buildlink3.mk"
