@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/02/23 18:28:52 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/25 09:36:43 markd Exp $
 
-DISTNAME=	texlive-20130530-source
-PKGNAME=	ptexenc-1.3.1
+DISTNAME=	texlive-20140525-source
+PKGNAME=	ptexenc-1.3.2
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
