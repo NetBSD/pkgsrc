@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/04 01:20:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/25 04:26:47 markd Exp $
 bin/platex
 share/texmf-dist/fonts/map/dvipdfmx/ptex/morisawa.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex/ptex-noEmbed.map
 share/texmf-dist/fonts/source/ptex/ascgrp/ascgrp.mf
 share/texmf-dist/fonts/source/ptex/ascgrp/ascii.mf
 share/texmf-dist/fonts/source/ptex/ascgrp/ascii10.mf
@@ -242,8 +241,3 @@ share/texmf-dist/tex/ptex/base/kinsoku.tex
 share/texmf-dist/tex/ptex/base/ptex.tex
 share/texmf-dist/tex/ptex/config/eptex.ini
 share/texmf-dist/tex/ptex/config/ptex.ini
-share/texmf-dist/tex/ptexgeneric/config/language.ptx
-share/texmf-dist/tex/ptexgeneric/hyphen/grahyph5.tex
-share/texmf-dist/tex/ptexgeneric/hyphen/grmhyph5.tex
-share/texmf-dist/tex/ptexgeneric/hyphen/grphyph5.tex
-share/texmf-dist/tex/ptexgeneric/hyphen/ibyhyph.tex
