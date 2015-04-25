@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2013/11/17 16:54:41 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/25 11:49:17 markd Exp $
 
-DISTNAME=	texlive-20130530-source
-PKGNAME=	dvipsk-5.993
+DISTNAME=	texlive-20140525-source
+PKGNAME=	dvipsk-5.994
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
