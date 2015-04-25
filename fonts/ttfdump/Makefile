@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/02/23 18:28:51 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 13:29:37 markd Exp $
 
-DISTNAME=	texlive-20130530-source
+DISTNAME=	texlive-20140525-source
 PKGNAME=	ttfdump-0.5.5
+PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
