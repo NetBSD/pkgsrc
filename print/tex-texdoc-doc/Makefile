@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/11/17 17:13:29 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 04:52:49 markd Exp $
 
 DISTNAME=	texdoc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2013
-TEXLIVE_REV=	29764
+PKGNAME=	tex-${DISTNAME:S/./-/}-2014
+TEXLIVE_REV=	34180
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-texdoc
