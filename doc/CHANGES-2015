@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1926 2015/04/25 20:00:23 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.1927 2015/04/25 22:09:08 brook Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3019,3 +3019,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/coq to 8.4pl6 [jaapb 2015-04-25]
 	Updated security/py-bcrypt to 1.1.1nb1 [wiz 2015-04-25]
 	Added lang/newsqueak version 20000211 [dholland 2015-04-25]
+	Added pkgtools/R2pkg version 0.2 [brook 2015-04-25]
