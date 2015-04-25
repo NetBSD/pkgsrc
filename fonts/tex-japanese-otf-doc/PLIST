@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 01:13:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:01:05 markd Exp $
 share/texmf-dist/doc/fonts/japanese-otf/COPYRIGHT
+share/texmf-dist/doc/fonts/japanese-otf/fontmap.zip
+share/texmf-dist/doc/fonts/japanese-otf/otf-script-gteb.diff
 share/texmf-dist/doc/fonts/japanese-otf/readme.en.txt
 share/texmf-dist/doc/fonts/japanese-otf/readme.txt
+share/texmf-dist/doc/fonts/japanese-otf/test/brsgtest.tex
+share/texmf-dist/doc/fonts/japanese-otf/test/jis2004.tex
+share/texmf-dist/doc/fonts/japanese-otf/test/koreanexample.tex
+share/texmf-dist/doc/fonts/japanese-otf/test/otftest.tex
+share/texmf-dist/doc/fonts/japanese-otf/test/pkanatest.tex
+share/texmf-dist/doc/fonts/japanese-otf/test/pkanatest2.tex
