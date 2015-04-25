@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1915 2015/04/25 01:31:44 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1916 2015/04/25 08:38:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -2860,3 +2860,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Perl-Releases to 2.14 [mef 2015-04-25]
 	Updated devel/p5-Config-Any to 0.25 [mef 2015-04-25]
 	Updated devel/p5-File-BaseDir to 0.07 [mef 2015-04-25]
+	Updated devel/p5-File-ShareDir-ProjectDistDir to 1.000007 [mef 2015-04-25]
+	Updated devel/p5-Module-CoreList to 5.20150420 [mef 2015-04-25]
+	Updated devel/p5-PAR to 1.009 [mef 2015-04-25]
+	Updated devel/p5-Sub-Name to 0.14 [mef 2015-04-25]
+	Updated devel/p5-Tree-Simple to 1.25 [mef 2015-04-25]
+	Updated devel/p5-UNIVERSAL-require to 0.18 [mef 2015-04-25]
+	Updated devel/p5-Variable-Magic to 0.57 [mef 2015-04-25]
+	Updated devel/p5-Want to 0.25 [mef 2015-04-25]
+	Updated devel/p5-indirect to 0.35 [mef 2015-04-25]
