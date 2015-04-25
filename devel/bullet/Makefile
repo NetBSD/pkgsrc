@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:43 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 14:20:32 tnn Exp $
 #
 
 DISTNAME=	bullet-2.76
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://bullet.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
