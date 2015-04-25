@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 19:58:32 dholland Exp $
+
+SHA1 (newsqueak.tar.gz) = 085cc8248be5b6145f57b8517e0f22469e5047c1
+RMD160 (newsqueak.tar.gz) = 56f6fcf95a58d141efc57cedbf1a49574ea8b777
+Size (newsqueak.tar.gz) = 265358 bytes
+SHA1 (patch-Makefile) = 1c71432e17f2e146c6b077cf23e8dc13a65356d5
+SHA1 (patch-include_lib9.h) = 0988b189b5b3e6666cdc4f04b31b5410af63aca9
+SHA1 (patch-include_u.h) = ffb1752ebbcb600850e196e630592063827e32c9
+SHA1 (patch-lib9_Makefile) = 5e48c9cdca6d560cd7c8d9b92e729f7fbb5fa999
+SHA1 (patch-lib9_doprint.c) = c94bee65440c0a697ba426549740a4df3aa3e809
+SHA1 (patch-lib9_nan.c) = 3c7067d47d9a7a1f98f41f466dd346d1593994bb
+SHA1 (patch-lib9_wait.c) = a8574632f483ea9da2f83597a165605b3bc3b2b6
+SHA1 (patch-libbio_Makefile) = 0272c0953ede97a9805a5668035938c18c9932f1
+SHA1 (patch-squint_Makefile) = ae117cb88ead5924207f03c85358a3a4baeaba90
+SHA1 (patch-squint_compile.c) = 9f4c5684a04b62ed61bb9155853d921ec870231a
+SHA1 (patch-squint_error.c) = 1f7402b91c485037f154adb7346b5fa0c4bb1793
+SHA1 (patch-squint_inst) = ec4add4193884e4ae402ebbc539dcc2bacd553d8
+SHA1 (patch-squint_lex.c) = 08f503be33aac0db29295077af1e56ceb38d8ae3
+SHA1 (patch-squint_main.c) = 33afa209ca89d89c23d5cf4d225b1d0eeedf53a9
+SHA1 (patch-squint_proc.c) = 1650bb984ff237589d2d5cc83cb60e9c81cbb631
+SHA1 (patch-squint_progs_npowser) = b65ec5c6bb354bcccfaa01912f9498da031e6c07
+SHA1 (patch-squint_var.c) = 8a79fbbe4acba76214437707e1baee31e746f69c
+SHA1 (patch-squint_xec.c) = 6b040eb1189233852adbe698e902946b367884c3
