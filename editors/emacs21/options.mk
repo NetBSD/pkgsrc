@@ -1,19 +1,19 @@
-# $NetBSD: options.mk,v 1.4 2014/05/31 15:56:26 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2015/04/26 05:54:30 mef Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif xaw
+PKG_OPTIONS_GROUP.toolkit=	motif xaw xaw3d
 PKG_SUGGESTED_OPTIONS=		x11
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Treat "emacs-xaw3d" as a special case of "xaw".
+### Treat "xaw3d" as a special case of "xaw".
 ###
-.if !empty(PKG_OPTIONS:Memacs-xaw3d)
+.if !empty(PKG_OPTIONS:Mxaw3d)
 XAW_TYPE=		3d
-PKG_OPTIONS:=		${PKG_OPTIONS:Nemacs-xaw3d}
+PKG_OPTIONS:=		${PKG_OPTIONS:Nxaw3d}
 PKG_OPTIONS+=		xaw
 .endif
 
