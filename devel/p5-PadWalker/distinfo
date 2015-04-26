@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/02/14 03:10:18 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/04/26 03:14:07 mef Exp $
 
-SHA1 (PadWalker-2.0.tar.gz) = 0480bbce6b2aaaf2d4ee517aecd920ca2972d880
-RMD160 (PadWalker-2.0.tar.gz) = 6f232ca696b520d7a56d89fe9cf053ae640e73b1
-Size (PadWalker-2.0.tar.gz) = 15689 bytes
+SHA1 (PadWalker-2.1.tar.gz) = f1c2a009a85df5bdca0ba59fb2967ef3096a307e
+RMD160 (PadWalker-2.1.tar.gz) = 2a1c373d79903dbd37b145af7b915b4a6afa7742
+Size (PadWalker-2.1.tar.gz) = 16096 bytes
