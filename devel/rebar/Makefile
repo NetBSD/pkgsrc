@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/24 18:37:07 reinoud Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/26 11:52:19 ryoon Exp $
 
 DISTNAME=	2.5.1
 PKGNAME=	rebar-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rebar/rebar/archive/}
 
