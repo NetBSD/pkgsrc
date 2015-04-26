@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 21:47:27 markd Exp $
+share/texmf-dist/doc/latex/verbatimbox/README
+share/texmf-dist/doc/latex/verbatimbox/verbatimbox.pdf
+share/texmf-dist/doc/latex/verbatimbox/verbatimbox.tex
