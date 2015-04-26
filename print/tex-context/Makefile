@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 03:39:06 markd Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/26 00:54:04 markd Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2014
+PKGREVISION=	1
 TEXLIVE_REV=	35839
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,8 +10,8 @@ COMMENT=	The ConTeXt macro package
 
 CONFLICTS+=	teTeX-bin<=3.0nb44
 DEPENDS+=	tex-lm>=2.004nb1:../../fonts/tex-lm
-DEPENDS+=	tex-manfnt>=2009:../../fonts/tex-manfnt
-DEPENDS+=	tex-mflogo>=2009:../../fonts/tex-mflogo
+DEPENDS+=	tex-manfnt-font>=2014:../../fonts/tex-manfnt-font
+DEPENDS+=	tex-mflogo-font>=1.002:../../fonts/tex-mflogo-font
 DEPENDS+=	tex-luatex>=0.70.1pl30581nb1:../../print/tex-luatex
 DEPENDS+=	tex-metapost>=1.211:../../graphics/tex-metapost
 DEPENDS+=	tex-mptopdf>=2010:../../graphics/tex-mptopdf
