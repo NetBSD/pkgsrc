@@ -1,4 +1,4 @@
-# $NetBSD: gem-vars.mk,v 1.1 2015/03/08 14:41:12 taca Exp $
+# $NetBSD: gem-vars.mk,v 1.2 2015/04/26 16:51:26 rodent Exp $
 #
 # This Makefile fragment defines various make(1) variables for Ruby gems
 # support.
@@ -33,7 +33,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
 GEM_EXTSDIR_NEEDS_SUBDIR?=	yes
 RUBY_GEM_ARCH!=	${RUBYGEM} environment platform | ${SED} -e 's|.*:||'
 
-.if !empty(GEM_EXTSDIR_NEEDS_SUBDIR:M[nB][oO])
+.if !empty(GEM_EXTSDIR_NEEDS_SUBDIR:M[nN][oO])
 GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_GEM_ARCH}/${RUBY_VER_DIR}
 .else
 GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_GEM_ARCH}/${RUBY_VER_DIR}/${GEM_NAME}
