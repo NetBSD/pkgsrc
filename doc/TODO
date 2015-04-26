@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14361 2015/04/26 08:01:39 wiz Exp $
+$NetBSD: TODO,v 1.14362 2015/04/26 19:23:40 spz Exp $
 
 Suggested new packages
 ======================
@@ -548,7 +548,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fotoxx-14.06
 	o fox-1.7.51
 	o frama-c-20140301
-	o freeciv-2.5.0
 	o freenet-0.7
 	o freesci-0.6.4
 	o freeswitch-1.2.3
