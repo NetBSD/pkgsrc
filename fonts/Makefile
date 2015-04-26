@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2015/04/26 02:33:13 markd Exp $
+# $NetBSD: Makefile,v 1.258 2015/04/26 03:17:07 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -309,6 +309,7 @@ SUBDIR+=	tex-stmaryrd-doc
 SUBDIR+=	tex-symbol
 SUBDIR+=	tex-tex-gyre
 SUBDIR+=	tex-tex-gyre-doc
+SUBDIR+=	tex-tex-gyre-math
 SUBDIR+=	tex-times
 SUBDIR+=	tex-tipa
 SUBDIR+=	tex-tipa-doc
@@ -324,6 +325,7 @@ SUBDIR+=	tex-wadalab
 SUBDIR+=	tex-wadalab-doc
 SUBDIR+=	tex-wasy
 SUBDIR+=	tex-wasy-doc
+SUBDIR+=	tex-wasy2-ps
 SUBDIR+=	tex-wasysym
 SUBDIR+=	tex-wasysym-doc
 SUBDIR+=	tex-zapfchan
