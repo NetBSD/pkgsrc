@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/03/15 15:28:24 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/26 05:38:18 mef Exp $
 
 DISTNAME=	watchman-${VERSION}
-VERSION=	3.0.0
+VERSION=	3.1
+MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
+GITHUB_PROJECT=	watchman
+GITHUB_TAG=	v3.1
 CATEGORIES=	sysutils
-MASTER_SITES=	-https://github.com/facebook/watchman/archive/v${VERSION}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/facebook/watchman/
@@ -16,6 +18,16 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-lenient
 CONFIGURE_ARGS+=	--enable-conffile=${PKG_SYSCONFDIR}/watchman.json
 CONFIGURE_ARGS+=	--with-pcre
+
+BUILD_DEFS+=		VARBASE
+
+SUBST_CLASSES+=		varbase
+SUBST_MESSAGE.varbase=	set WATCHMAN_STATE_DIR to ${VARBASE}/run/watchman
+SUBST_STAGE.varbase=	pre-configure
+SUBST_FILES.varbase=	configure.ac
+SUBST_SED.varbase=	-e '/^WATCHMAN_STATE_DIR/s,\\$$(prefix)/var/,${DESTDIR}${VARBASE}/,'
+
+PLIST_SUBST+=		API_VERSION=${PKGNAME}.0
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
