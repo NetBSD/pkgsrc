@@ -1,28 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:48 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/26 21:24:33 markd Exp $
 
 DISTNAME=	splitbib
-PKGNAME=	tex-${DISTNAME}-20051222
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
-EXTRACT_SUFX=	.zip
+PKGNAME=	tex-${DISTNAME}-1.17
+TEXLIVE_REV=	15878
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://www.ctan.org/tex-archive/macros/latex/contrib/splitbib/
 COMMENT=	Split and reorder your bibliography
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
-NO_BUILD=	yes
-
-INSTALLATION_DIRS=	share/texmf-dist/doc/latex/splitbib \
-			share/texmf-dist/tex/latex/splitbib
-
-.include "../../print/kpathsea/texmf.mk"
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/splitbib.sty \
-		${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/splitbib/
-	${INSTALL_DATA} ${WRKSRC}/splitbib.pdf \
-		${DESTDIR}${PREFIX}/share/texmf-dist/doc/latex/splitbib/
-
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
