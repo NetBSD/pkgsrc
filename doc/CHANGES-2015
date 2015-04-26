@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1929 2015/04/26 03:05:26 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1930 2015/04/26 03:16:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3022,3 +3022,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added pkgtools/R2pkg version 0.2 [brook 2015-04-25]
 	Updated sysutils/tdir to 1.71 [mef 2015-04-25]
 	Updated ham/fldigi to 3.22.08 [mef 2015-04-26]
+	Updated devel/p5-Devel-PatchPerl to 1.34 [mef 2015-04-26]
+	Updated devel/p5-PadWalker to 2.1 [mef 2015-04-26]
+	Updated devel/p5-Role-Tiny to 2.000001 [mef 2015-04-26]
