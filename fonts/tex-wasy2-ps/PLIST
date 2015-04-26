@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 03:15:12 markd Exp $
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasy10.afm
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasy5.afm
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasy6.afm
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasy7.afm
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasy8.afm
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasy9.afm
+share/texmf-dist/fonts/afm/public/wasy2-ps/wasyb10.afm
+share/texmf-dist/fonts/map/dvips/wasy2-ps/wasy.map
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfm
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy5.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy5.pfm
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy6.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy6.pfm
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy7.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy7.pfm
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy8.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy8.pfm
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy9.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasy9.pfm
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasyb10.pfb
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasyb10.pfm
