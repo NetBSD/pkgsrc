@@ -1,0 +1,4 @@
+The package provides the language definition file for support
+of English in babel. Care is taken to select british
+hyphenation patterns for British English and Australian text,
+and default ('american') patterns for Canadian and USA text.
