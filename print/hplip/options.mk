@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2015/03/26 22:13:14 jperkin Exp $
+# $NetBSD: options.mk,v 1.6 2015/04/26 13:29:12 joerg Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hplip
 PKG_SUPPORTED_OPTIONS=	fax sane qt
-PKG_SUGGESTED_OPTIONS=	fax sane
+PKG_SUGGESTED_OPTIONS=	fax
 PKG_OPTIONS_LEGACY_OPTS+=	scan:sane
 PKG_OPTIONS_LEGACY_OPTS+=	gui:qt
 
