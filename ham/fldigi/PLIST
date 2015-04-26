@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2014/12/11 22:11:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/04/26 03:04:59 mef Exp $
 bin/flarq
 bin/fldigi
-bin/fldigi-shell
 man/man1/flarq.1
-man/man1/fldigi-shell.1
 man/man1/fldigi.1
 share/applications/flarq.desktop
 share/applications/fldigi.desktop
@@ -14,8 +12,8 @@ share/fldigi/station_table.txt
 share/locale/de/LC_MESSAGES/fldigi.mo
 share/locale/es/LC_MESSAGES/fldigi.mo
 share/locale/fr/LC_MESSAGES/fldigi.mo
-share/locale/nl/LC_MESSAGES/fldigi.mo
 share/locale/it/LC_MESSAGES/fldigi.mo
+share/locale/nl/LC_MESSAGES/fldigi.mo
 share/locale/pl/LC_MESSAGES/fldigi.mo
 share/pixmaps/flarq.xpm
 share/pixmaps/fldigi.xpm
