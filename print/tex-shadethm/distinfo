@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/09/12 16:00:31 is Exp $
+$NetBSD: distinfo,v 1.2 2015/04/26 21:20:06 markd Exp $
 
-SHA1 (shadethm.zip) = b5b3a0a583ab5c00ad1f4f2d6d3d1b5f5bbe7d93
-RMD160 (shadethm.zip) = dbf0c37d0f62b7df18d67dfa5f6cb248d918539b
-Size (shadethm.zip) = 366983 bytes
+SHA1 (tex-shadethm-20319/shadethm.tar.xz) = fcc36feae67871adc896f0e0235f7e0d56e4f78e
+RMD160 (tex-shadethm-20319/shadethm.tar.xz) = 52641f35ef1b273d22325dacd90e85657ce9b944
+Size (tex-shadethm-20319/shadethm.tar.xz) = 7368 bytes
