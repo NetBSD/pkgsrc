@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 03:39:03 markd Exp $
+share/texmf-dist/doc/generic/apnum/README
+share/texmf-dist/doc/generic/apnum/apnum.d
+share/texmf-dist/doc/generic/apnum/apnum.pdf
