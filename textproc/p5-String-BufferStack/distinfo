@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/02/22 14:17:34 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/04/26 13:02:49 mef Exp $
 
-SHA1 (String-BufferStack-1.15.tar.gz) = b025f980bebc620f4f376dd6ecaa6992b3484559
-RMD160 (String-BufferStack-1.15.tar.gz) = c61af741727f77136770329188fdbf3b92ab4d57
-Size (String-BufferStack-1.15.tar.gz) = 23462 bytes
+SHA1 (String-BufferStack-1.16.tar.gz) = cc3d7374984fb732eebc758035b08efaf6570282
+RMD160 (String-BufferStack-1.16.tar.gz) = 21250d918a76366cd437137711c8bb608cf5c5db
+Size (String-BufferStack-1.16.tar.gz) = 26214 bytes
