@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 04:03:22 markd Exp $
+share/texmf-dist/tex/generic/babel-german/austrian.ldf
+share/texmf-dist/tex/generic/babel-german/german.ldf
+share/texmf-dist/tex/generic/babel-german/germanb.ldf
+share/texmf-dist/tex/generic/babel-german/naustrian.ldf
+share/texmf-dist/tex/generic/babel-german/ngerman.ldf
+share/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+share/texmf-dist/tex/generic/babel-german/nswissgerman.ldf
+share/texmf-dist/tex/generic/babel-german/swissgerman.ldf
