@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:26 asau Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/26 11:52:19 ryoon Exp $
 
 PERDITION_COMMENT=	UnixODBC user database module
 PERDITION_PKGNAME=	odbc
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFIGURE_ARGS+=	--with-odbc-includes=${BUILDLINK_PREFIX.unixodbc}/include
 CONFIGURE_ARGS+=	--with-odbc-libs=${BUILDLINK_PREFIX.unixodbc}/lib
