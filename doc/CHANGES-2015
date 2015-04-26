@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1934 2015/04/26 07:48:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1935 2015/04/26 07:58:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3054,3 +3054,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/watchman to 3.1 [mef 2015-04-26]
 	Updated textproc/p5-XML-LibXML to 2.0119 [wiz 2015-04-26]
 	Updated time/p5-DateTime-TimeZone to 1.88 [wiz 2015-04-26]
+	Updated devel/afl to 1.72b [wiz 2015-04-26]
