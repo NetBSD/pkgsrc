@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2010/06/21 07:53:14 spz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/26 19:19:42 spz Exp $
 bin/freeciv-server
 lib/libfreeciv-srv.la
+share/appdata/freeciv-server.appdata.xml
 share/applications/freeciv-server.desktop

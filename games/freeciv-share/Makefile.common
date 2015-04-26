@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.44 2015/03/17 14:05:01 tnn Exp $
+# $NetBSD: Makefile.common,v 1.45 2015/04/26 19:19:42 spz Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
 # used by games/freeciv-server/Makefile
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.3.2
+FC_VERS=	2.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeciv/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,7 @@ SUBST_SED.data+=	-e "s|@CLIENT_GUI_XAW_TRUE@||g"
 SUBST_SED.data+=	-e "s|@CLIENT_GUI_GTK_2_0_TRUE@||g"
 SUBST_MESSAGE.data=	Fixing installation of data files.
 
+.include "../../www/curl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
