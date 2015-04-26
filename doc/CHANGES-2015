@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1937 2015/04/26 08:01:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1938 2015/04/26 09:06:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3057,3 +3057,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.72b [wiz 2015-04-26]
 	Updated devel/py-cparser to 2.12 [wiz 2015-04-26]
 	Updated textproc/py-lxml to 3.4.4 [wiz 2015-04-26]
+	Updated textproc/p5-Encode to 2.73 [mef 2015-04-26]
+	Updated textproc/p5-Lingua-EN-Number-IsOrdinal to 0.05 [mef 2015-04-26]
+	Updated textproc/p5-Lingua-EN-Sentence to 0.27 [mef 2015-04-26]
+	Updated textproc/p5-Lingua-EN-Tagger to 0.25 [mef 2015-04-26]
+	Updated textproc/p5-PDF-API2 to 2.023 [mef 2015-04-26]
+	Updated textproc/p5-PDF-Create to 1.10 [mef 2015-04-26]
+	Updated textproc/p5-PDF-Table to 0.9.7 [mef 2015-04-26]
+	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200002 [mef 2015-04-26]
+	Updated textproc/p5-Pod-Parser to 1.63 [mef 2015-04-26]
