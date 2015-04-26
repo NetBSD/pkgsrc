@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 21:09:11 markd Exp $
+share/texmf-dist/doc/latex/ifnextok/README
+share/texmf-dist/doc/latex/ifnextok/RELEASEs.txt
+share/texmf-dist/doc/latex/ifnextok/SRCFILEs.txt
+share/texmf-dist/doc/latex/ifnextok/ifnextok.pdf
+share/texmf-dist/doc/latex/ifnextok/testIfNT.pdf
