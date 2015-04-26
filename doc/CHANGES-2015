@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1944 2015/04/26 19:23:40 spz Exp $
+$NetBSD: CHANGES-2015,v 1.1945 2015/04/26 21:52:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3085,3 +3085,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/freeciv-share to 2.5.0 [spz 2015-04-26]
 	Updated games/freeciv-server to 2.5.0 [spz 2015-04-26]
 	Updated games/freeciv-client to 2.5.0 [spz 2015-04-26]
+	Added print/tex-ifnextok-doc version 0.3 [markd 2015-04-26]
+	Added print/tex-readarray-doc version 1.2 [markd 2015-04-26]
+	Updated print/tex-shadethm to 20120818 [markd 2015-04-26]
+	Updated print/tex-splitbib to 1.17 [markd 2015-04-26]
+	Added print/tex-tabu-doc version 2.8 [markd 2015-04-26]
+	Updated print/tex-undolabl to 1.0l [markd 2015-04-26]
+	Added print/tex-varwidth-doc version 0.92 [markd 2015-04-26]
+	Added print/tex-verbatimbox-doc version 3.13 [markd 2015-04-26]
