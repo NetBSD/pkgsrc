@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1939 2015/04/26 11:37:33 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1940 2015/04/26 12:10:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200002 [mef 2015-04-26]
 	Updated textproc/p5-Pod-Parser to 1.63 [mef 2015-04-26]
 	Updated databases/unixodbc to 2.3.2 [ryoon 2015-04-26]
+	Updated fonts/tex-wasysym to 2.0nb1 [ryoon 2015-04-26]
