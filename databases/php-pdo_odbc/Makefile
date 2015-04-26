@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2013/03/01 10:34:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/26 11:52:19 ryoon Exp $
 
 MODNAME=		pdo_odbc
 CATEGORIES+=		databases
 COMMENT=		PHP ODBC v3 Interface driver for PDO
+PKGREVISION=		1
 
 USE_PHP_EXT_PATCHES=	yes
 

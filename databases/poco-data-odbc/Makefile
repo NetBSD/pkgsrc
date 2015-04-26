@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/02/12 23:17:40 tron Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/26 11:52:18 ryoon Exp $
 #
 
 PKGNAME=	poco-data-odbc-${POCO_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ ODBC RDBMS Accessor libraries
