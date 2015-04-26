@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.603 2015/04/26 04:05:24 markd Exp $
+# $NetBSD: Makefile,v 1.604 2015/04/26 21:50:26 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -462,6 +462,7 @@ SUBDIR+=	tex-ifluatex-doc
 SUBDIR+=	tex-ifmtarg
 SUBDIR+=	tex-ifmtarg-doc
 SUBDIR+=	tex-ifnextok
+SUBDIR+=	tex-ifnextok-doc
 SUBDIR+=	tex-ifplatform
 SUBDIR+=	tex-ifplatform-doc
 SUBDIR+=	tex-iftex
@@ -625,6 +626,7 @@ SUBDIR+=	tex-ptex-doc
 SUBDIR+=	tex-rcsinfo
 SUBDIR+=	tex-rcsinfo-doc
 SUBDIR+=	tex-readarray
+SUBDIR+=	tex-readarray-doc
 SUBDIR+=	tex-realscripts
 SUBDIR+=	tex-realscripts-doc
 SUBDIR+=	tex-relsize
@@ -687,6 +689,7 @@ SUBDIR+=	tex-t2-doc
 SUBDIR+=	tex-tabls
 SUBDIR+=	tex-tabls-doc
 SUBDIR+=	tex-tabu
+SUBDIR+=	tex-tabu-doc
 SUBDIR+=	tex-tetex
 SUBDIR+=	tex-tetex-doc
 SUBDIR+=	tex-tex
@@ -749,9 +752,11 @@ SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
 SUBDIR+=	tex-varwidth
+SUBDIR+=	tex-varwidth-doc
 SUBDIR+=	tex-verbasef
 SUBDIR+=	tex-verbasef-doc
 SUBDIR+=	tex-verbatimbox
+SUBDIR+=	tex-verbatimbox-doc
 SUBDIR+=	tex-verbdef
 SUBDIR+=	tex-verbdef-doc
 SUBDIR+=	tex-version
