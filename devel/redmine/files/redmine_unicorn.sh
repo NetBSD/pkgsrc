@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: redmine_unicorn.sh,v 1.1 2015/01/03 18:55:43 ryoon Exp $
+# $NetBSD: redmine_unicorn.sh,v 1.2 2015/04/26 15:45:36 rodent Exp $
 #
 
 # PROVIDE: redmine_unicorn
@@ -19,6 +19,7 @@ redmine_unicorn_start()
 	cd @PREFIX@/share/redmine/app
 	GEM_HOME=@PREFIX@/share/redmine/gems \
 	GEM_PATH=@PREFIX@/share/redmine/gems \
+		@RUBY@ \
 		@PREFIX@/share/redmine/gems/bin/bundle exec unicorn \
 		-c @PREFIX@/share/redmine/app/config/unicorn.rb \
 		-E production -D
