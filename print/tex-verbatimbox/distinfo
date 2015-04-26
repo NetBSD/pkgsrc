@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/10/01 19:59:24 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/04/26 21:45:14 markd Exp $
 
-SHA1 (tex-verbatimbox-3.13/verbatimbox.zip) = 174508b17fdf1953d55ef19195909aadb15f33ee
-RMD160 (tex-verbatimbox-3.13/verbatimbox.zip) = b468c36ee2f97b467deda144583569235209f8c4
-Size (tex-verbatimbox-3.13/verbatimbox.zip) = 250342 bytes
+SHA1 (tex-verbatimbox-33197/verbatimbox.tar.xz) = 35a48f8438772f990f8dc7077c3d387ca85bfef0
+RMD160 (tex-verbatimbox-33197/verbatimbox.tar.xz) = e4e382e2d6dbd2dc083c70f3e04cd4546c968992
+Size (tex-verbatimbox-33197/verbatimbox.tar.xz) = 3448 bytes
