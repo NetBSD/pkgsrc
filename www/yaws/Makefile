@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/26 11:52:19 ryoon Exp $
 #
 
 DISTNAME=		yaws-1.97
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		http://yaws.hyber.org/download/
 
