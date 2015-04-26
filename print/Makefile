@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.601 2015/04/25 13:23:30 markd Exp $
+# $NetBSD: Makefile,v 1.602 2015/04/26 01:09:07 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -462,6 +462,8 @@ SUBDIR+=	tex-ifmtarg-doc
 SUBDIR+=	tex-ifnextok
 SUBDIR+=	tex-ifplatform
 SUBDIR+=	tex-ifplatform-doc
+SUBDIR+=	tex-iftex
+SUBDIR+=	tex-iftex-doc
 SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-ifxetex-doc
 SUBDIR+=	tex-igo
