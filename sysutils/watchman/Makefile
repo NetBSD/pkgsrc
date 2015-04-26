@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/26 05:38:18 mef Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/26 09:39:06 mef Exp $
 
 DISTNAME=	watchman-${VERSION}
 VERSION=	3.1
@@ -27,7 +27,7 @@ SUBST_STAGE.varbase=	pre-configure
 SUBST_FILES.varbase=	configure.ac
 SUBST_SED.varbase=	-e '/^WATCHMAN_STATE_DIR/s,\\$$(prefix)/var/,${DESTDIR}${VARBASE}/,'
 
-PLIST_SUBST+=		API_VERSION=${PKGNAME}.0
+PLIST_SUBST+=		API_VERSION=${PKGNAME_NOREV}.0
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
