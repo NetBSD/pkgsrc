@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2015/04/26 01:34:22 markd Exp $
+# $NetBSD: Makefile,v 1.257 2015/04/26 02:33:13 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -258,6 +258,8 @@ SUBDIR+=	tex-ipaex
 SUBDIR+=	tex-ipaex-doc
 SUBDIR+=	tex-japanese-otf
 SUBDIR+=	tex-japanese-otf-doc
+SUBDIR+=	tex-knuth-lib
+SUBDIR+=	tex-knuth-local
 SUBDIR+=	tex-kotex-base
 SUBDIR+=	tex-kotex-base-doc
 SUBDIR+=	tex-latex-fonts
