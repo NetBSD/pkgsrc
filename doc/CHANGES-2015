@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1941 2015/04/26 13:13:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1942 2015/04/26 14:00:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3075,3 +3075,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-String-BufferStack to 1.16 [mef 2015-04-26]
 	Updated textproc/p5-String-Compare-ConstantTime to 0.310 [mef 2015-04-26]
 	Updated textproc/p5-String-Errf to 0.007 [mef 2015-04-26]
+	Updated textproc/p5-String-Flogger to 1.101245 [mef 2015-04-26]
+	Updated textproc/p5-String-Formatter to 0.102084 [mef 2015-04-26]
+	Updated textproc/p5-String-RewritePrefix to 0.007 [mef 2015-04-26]
+	Updated textproc/p5-String-ToIdentifier-EN to 0.11 [mef 2015-04-26]
+	Updated textproc/p5-String-Truncate to 1.100602 [mef 2015-04-26]
+	Updated textproc/p5-Syntax-Highlight-Engine-Kate to 0.09 [mef 2015-04-26]
