@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 00:47:41 markd Exp $
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logo10.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logo8.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logo9.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logobf10.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logod10.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logosl10.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logosl8.afm
+share/texmf-dist/fonts/afm/hoekwater/mflogo-font/logosl9.afm
+share/texmf-dist/fonts/map/dvips/mflogo-font/mflogo.map
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logo10.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logo8.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logo9.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logobf10.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logod10.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logosl10.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logosl8.pfb
+share/texmf-dist/fonts/type1/hoekwater/mflogo-font/logosl9.pfb
