@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2015/04/25 11:19:18 tnn Exp $
+# $NetBSD: options.mk,v 1.29 2015/04/26 08:00:40 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=
 	${MACHINE_ARCH} == "sparc64" ||			\
 	${MACHINE_ARCH} == "powerpc" ||			\
 	!empty(MACHINE_ARCH:M*arm*))
-PKG_SUGGESTED_OPTIONS+=		llvm
+#PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
 .if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
