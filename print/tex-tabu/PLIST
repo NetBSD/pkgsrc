@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/01 19:58:54 joerg Exp $
-share/texmf-dist/doc/latex/tabu/tabu.pdf
+@comment $NetBSD: PLIST,v 1.2 2015/04/26 21:27:07 markd Exp $
 share/texmf-dist/tex/latex/tabu/tabu.sty

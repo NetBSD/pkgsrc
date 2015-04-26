@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/10/01 19:58:54 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/04/26 21:27:07 markd Exp $
 
-SHA1 (tex-tabu-2.8/tabu.zip) = 4b27037f26f3019e7f024f0907a3f0b00796a570
-RMD160 (tex-tabu-2.8/tabu.zip) = 5158c29ea37a2cdaefc336e45d88616ab127570b
-Size (tex-tabu-2.8/tabu.zip) = 1592455 bytes
+SHA1 (tex-tabu-21534/tabu.tar.xz) = aa2cfc4a26d130de054de713fa822728b6c9431e
+RMD160 (tex-tabu-21534/tabu.tar.xz) = 2828089f41c1154a8706209ff9febdd21d1a980d
+Size (tex-tabu-21534/tabu.tar.xz) = 23572 bytes
