@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2012/10/08 13:45:39 asau Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/26 13:28:23 joerg Exp $
 
 DISTNAME=	hpijs-2.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
 
@@ -16,7 +16,6 @@ GNU_CONFIGURE=		yes
 CPPFLAGS+=		-DAPDK_BUFFER_SEND
 
 USE_TOOLS+=		gzip
-ONLY_FOR_COMPILER=	gcc
 INSTALLATION_DIRS=	bin share/ppd share/doc/html/hpijs
 
 do-install:
