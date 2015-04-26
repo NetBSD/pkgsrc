@@ -1,19 +1,17 @@
-$NetBSD: distinfo,v 1.11 2011/03/11 15:18:43 drochner Exp $
+$NetBSD: distinfo,v 1.12 2015/04/26 11:37:07 ryoon Exp $
 
-SHA1 (unixODBC-2.3.0.tar.gz) = b2839b5210906e3ee286a4b621f177db9c7be7a8
-RMD160 (unixODBC-2.3.0.tar.gz) = 166a96c31fe013ced6b6ef93da5871f672cfe456
-Size (unixODBC-2.3.0.tar.gz) = 1804749 bytes
-SHA1 (patch-aa) = afca440d5765170a33abcb3356f9a21f0f8eec0a
+SHA1 (unixODBC-2.3.2.tar.gz) = f84520fd58143625b614fde551435178a558ee2e
+RMD160 (unixODBC-2.3.2.tar.gz) = 023122427bd8bdabdbfddf727d16210bb32c60f3
+Size (unixODBC-2.3.2.tar.gz) = 1849173 bytes
+SHA1 (patch-aa) = b0c9295a16207176eb01fa7fbbed8790d9f9dbb8
 SHA1 (patch-ac) = 8925e66b81fa8896badcafda6af5dae9edbda753
 SHA1 (patch-ad) = b2e695d8c8c682c99af80e362369b0295070c1ab
-SHA1 (patch-af) = e011c95867a10ae52a9362d0ebdf2fcdc2a92f8a
 SHA1 (patch-ag) = 1be22add8724176cf97c2e7c78fc069638c3c386
-SHA1 (patch-ah) = 1e34c499331dfda64b47b1eda27c6485d0d43fb9
-SHA1 (patch-ai) = 9b147d7a751b10795b5685249c7d8430dcf15936
-SHA1 (patch-aj) = 538c4335791e913a91e7541f2d2780b162a53848
+SHA1 (patch-ah) = c41fa43603565129ada33fca55929c5ce6c14835
+SHA1 (patch-ai) = 0d7486a67cfab18ae78127e2b9ec8b5de9196ad8
+SHA1 (patch-aj) = fbb9a619ce1cb648abc3441ac0b214d0cd256474
 SHA1 (patch-ak) = c5b3b0d7c8888f18b7534dfd787d9c90fecbf943
 SHA1 (patch-al) = 350c2562cad9b72e41a5f3cb38df39e4f5624199
 SHA1 (patch-am) = 095ed0aa4e5882160fbf50d53c09ea23eafe1589
 SHA1 (patch-an) = e3ce589f9dd7e97fa1dac43b9fbe981a352e8f0b
 SHA1 (patch-ao) = db7d39c31e478162afa48e3effde2d60f0f6cc46
-SHA1 (patch-ap) = 7947cb0491235190961a04257add4b29e45a5e0e
