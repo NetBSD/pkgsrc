@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/10/01 19:58:19 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/04/26 21:40:25 markd Exp $
 
-SHA1 (tex-varwidth-0.92/varwidth.zip) = 0fcf51887dfdae1a3df7a5bc6e220e38c8eaf458
-RMD160 (tex-varwidth-0.92/varwidth.zip) = 8f48c1b10bff1470b8dea0b6fc78fe21aefb182f
-Size (tex-varwidth-0.92/varwidth.zip) = 30674 bytes
+SHA1 (tex-varwidth-24104/varwidth.tar.xz) = 51fb7c09d52b56750ce60069a5bebef0c0a0ebe4
+RMD160 (tex-varwidth-24104/varwidth.tar.xz) = 58f668cdb91a6236825fbe6f3e5290d8995d507a
+Size (tex-varwidth-24104/varwidth.tar.xz) = 4124 bytes
