@@ -154,7 +154,6 @@ elinks-fastmem		Allow direct use of system memory allocation functions.
 elinks-html-highlight	Enable HTML highlighting using DOM engine.
 elinks-root-exec	Allow elinks to run as root.
 emacs-w3m		W3m browser extention.
-emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 embedded-server		Enable embedded server support for MySQL.
 enchant			Add spell checking support using enchant.
 enchant-zemberek	Add spell checking support for Turkish.
@@ -778,6 +777,7 @@ x265			Enable x265 support.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xaw			Enable Xaw support.
+xaw3d			Emacs should use Xaw3D for the scrollbar.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
 xcb			Enable XCB (libxcb) support.
 xcursor			Enable Xcursor support.
