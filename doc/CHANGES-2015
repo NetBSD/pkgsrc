@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1940 2015/04/26 12:10:36 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1941 2015/04/26 13:13:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3068,3 +3068,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Parser to 1.63 [mef 2015-04-26]
 	Updated databases/unixodbc to 2.3.2 [ryoon 2015-04-26]
 	Updated fonts/tex-wasysym to 2.0nb1 [ryoon 2015-04-26]
+	Updated textproc/p5-Pod-Simple to 3.30 [mef 2015-04-26]
+	Updated textproc/p5-Pod-Spell to 1.17 [mef 2015-04-26]
+	Updated textproc/p5-Pod-Weaver to 4.011 [mef 2015-04-26]
+	Updated textproc/p5-Search-Indexer to 0.77 [mef 2015-04-26]
+	Updated textproc/p5-String-BufferStack to 1.16 [mef 2015-04-26]
+	Updated textproc/p5-String-Compare-ConstantTime to 0.310 [mef 2015-04-26]
+	Updated textproc/p5-String-Errf to 0.007 [mef 2015-04-26]
