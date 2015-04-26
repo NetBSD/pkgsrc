@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2015/03/07 12:14:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.255 2015/04/26 00:49:09 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -273,6 +273,7 @@ SUBDIR+=	tex-luaotfload-doc
 SUBDIR+=	tex-ly1
 SUBDIR+=	tex-ly1-doc
 SUBDIR+=	tex-manfnt
+SUBDIR+=	tex-manfnt-font
 SUBDIR+=	tex-marvosym
 SUBDIR+=	tex-marvosym-doc
 SUBDIR+=	tex-mathdesign
@@ -282,6 +283,8 @@ SUBDIR+=	tex-mathpazo-doc
 SUBDIR+=	tex-metafont
 SUBDIR+=	tex-mflogo
 SUBDIR+=	tex-mflogo-doc
+SUBDIR+=	tex-mflogo-font
+SUBDIR+=	tex-mflogo-font-doc
 SUBDIR+=	tex-mfware
 SUBDIR+=	tex-musixtex-fonts
 SUBDIR+=	tex-musixtex-fonts-doc
