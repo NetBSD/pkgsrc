@@ -1,0 +1,8 @@
+The basic operations (addition, subtraction, multiplication,
+division, power to an integer) are implemented by TeX macros in
+this package. Operands may be numbers with arbitrary numbers of
+digits; scientific notation is allowed. The expression scanner
+is also provided. Exhaustive documentation (including detailed
+TeXnical documentation) is included. The macro includes many
+optimizations and uses only TeX primitives (from classic TeX)
+and \newcount macro.
