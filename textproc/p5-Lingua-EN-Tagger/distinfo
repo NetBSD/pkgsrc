@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/01/26 14:25:49 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/04/26 08:34:32 mef Exp $
 
-SHA1 (Lingua-EN-Tagger-0.24.tar.gz) = 5129827eeace258cfc5cdba2a7d68af53a12c958
-RMD160 (Lingua-EN-Tagger-0.24.tar.gz) = df16c1ee42f140d40d0439547e83a8f570e4326c
-Size (Lingua-EN-Tagger-0.24.tar.gz) = 262706 bytes
+SHA1 (Lingua-EN-Tagger-0.25.tar.gz) = 0b402b1e8870aa13f1892b4f4e11d12f9fe06fcf
+RMD160 (Lingua-EN-Tagger-0.25.tar.gz) = 018b711d26ad37024fa33dee89ce5d7cfb9e74bf
+Size (Lingua-EN-Tagger-0.25.tar.gz) = 262812 bytes
