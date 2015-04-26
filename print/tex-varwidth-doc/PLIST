@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 21:42:47 markd Exp $
+share/texmf-dist/doc/latex/varwidth/miscdoc.sty
+share/texmf-dist/doc/latex/varwidth/varwidth-doc.pdf
+share/texmf-dist/doc/latex/varwidth/varwidth-doc.tex
