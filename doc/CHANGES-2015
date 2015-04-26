@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1928 2015/04/25 23:35:05 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1929 2015/04/26 03:05:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3021,3 +3021,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/newsqueak version 20000211 [dholland 2015-04-25]
 	Added pkgtools/R2pkg version 0.2 [brook 2015-04-25]
 	Updated sysutils/tdir to 1.71 [mef 2015-04-25]
+	Updated ham/fldigi to 3.22.08 [mef 2015-04-26]
