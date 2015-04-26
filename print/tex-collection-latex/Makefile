@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/01/20 17:21:24 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/26 04:09:11 markd Exp $
 
 DISTNAME=	collection-latex
-PKGNAME=	tex-${DISTNAME}-2010
+PKGNAME=	tex-${DISTNAME}-2014
 CATEGORIES=	print
-TEXLIVE_REV=	18674
+TEXLIVE_REV=	33055
 MASTER_SITES=	# empty
 
 MAINTAINER=	minskim@NetBSD.org
@@ -14,6 +14,7 @@ DEPENDS+=	tex-ae>=1.4:../../fonts/tex-ae
 DEPENDS+=	tex-amscls>=2010.20248:../../print/tex-amscls
 DEPENDS+=	tex-amsmath>=2.13nb1:../../print/tex-amsmath
 DEPENDS+=	tex-babel>=3.8lnb2:../../print/tex-babel
+DEPENDS+=	tex-babel-english>=3.3p:../../print/tex-babel-english
 DEPENDS+=	tex-babelbib>=1.29:../../print/tex-babelbib
 DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
 DEPENDS+=	tex-colortbl>=0.1nb1:../../print/tex-colortbl
@@ -36,6 +37,7 @@ DEPENDS+=	tex-pslatex>=2009:../../print/tex-pslatex
 DEPENDS+=	tex-psnfss>=9.2anb1:../../fonts/tex-psnfss
 DEPENDS+=	tex-pspicture>=2009:../../print/tex-pspicture
 DEPENDS+=	tex-tools>=2009:../../print/tex-tools
+DEPENDS+=	tex-url>=3.4:../../print/tex-url
 DEPENDS+=	tex-collection-basic>=2010:../../print/tex-collection-basic
 
 META_PACKAGE=	yes
