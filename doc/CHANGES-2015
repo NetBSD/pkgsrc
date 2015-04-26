@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1931 2015/04/26 04:32:21 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1932 2015/04/26 05:38:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3051,3 +3051,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-babel-english version 3.3p [markd 2015-04-26]
 	Added print/tex-babel-german version 2.7b [markd 2015-04-26]
 	Updated print/tex-collection-latex to 2014 [markd 2015-04-26]
+	Updated sysutils/watchman to 3.1 [mef 2015-04-26]
