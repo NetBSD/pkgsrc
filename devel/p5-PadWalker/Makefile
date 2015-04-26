@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/02/14 03:10:18 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/26 03:14:07 mef Exp $
 
-DISTNAME=	PadWalker-2.0
+DISTNAME=	PadWalker-2.1
 PKGNAME=	p5-${DISTNAME:S/96/9.6/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RO/ROBIN/}
