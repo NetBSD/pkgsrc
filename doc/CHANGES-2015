@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1943 2015/04/26 14:38:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1944 2015/04/26 19:23:40 spz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3082,3 +3082,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-String-Truncate to 1.100602 [mef 2015-04-26]
 	Updated textproc/p5-Syntax-Highlight-Engine-Kate to 0.09 [mef 2015-04-26]
 	Updated sysutils/tits to 1.3.0 [mef 2015-04-26]
+	Updated games/freeciv-share to 2.5.0 [spz 2015-04-26]
+	Updated games/freeciv-server to 2.5.0 [spz 2015-04-26]
+	Updated games/freeciv-client to 2.5.0 [spz 2015-04-26]
