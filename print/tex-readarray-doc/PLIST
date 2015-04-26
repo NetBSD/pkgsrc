@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 21:15:26 markd Exp $
+share/texmf-dist/doc/latex/readarray/README
+share/texmf-dist/doc/latex/readarray/readarray.pdf
+share/texmf-dist/doc/latex/readarray/readarray.tex
