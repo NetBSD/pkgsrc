@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/30 17:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/26 07:58:49 wiz Exp $
 
-DISTNAME=	pycparser-2.10
+DISTNAME=	pycparser-2.12
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	lang
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pycparser/
