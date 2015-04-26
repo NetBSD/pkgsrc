@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2015/04/25 14:24:51 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2015/04/26 13:30:58 joerg Exp $
 #
 
 DISTNAME=		dvdisaster-0.72.4
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		sysutils
 MASTER_SITES=		http://dvdisaster.net/downloads/
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +19,6 @@ BUILD_DEPENDS+=		gettext-tools>=0.14:../../devel/gettext-tools
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
-ONLY_FOR_COMPILER=	gcc
 USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash gmake pkg-config
