@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2006/01/29 01:51:23 gavan Exp $
+$NetBSD: distinfo,v 1.10 2015/04/26 13:28:23 joerg Exp $
 
 SHA1 (hpijs-2.1.4.tar.gz) = 8b8baa2d410f8918ae2b8381811983c923b29703
 RMD160 (hpijs-2.1.4.tar.gz) = b498a578d89bdd2dcc12d2df846f9950df67db8d
@@ -6,3 +6,7 @@ Size (hpijs-2.1.4.tar.gz) = 1928371 bytes
 SHA1 (patch-aa) = 1d89574d8f54cec6493304a663c0f546bd8df111
 SHA1 (patch-ab) = cf2224faf7bb81b6d656a3fe19c668413a54707c
 SHA1 (patch-ac) = b6bd6df7a30152df93d579e12d2b465f15c130c8
+SHA1 (patch-djgenericvip.cpp) = 1ad602d1086c7972e240646e5eaed199b60c63a5
+SHA1 (patch-hpijs.cpp) = 0be9dce9ba7470ff5ddf1d74a02e058aaea6605e
+SHA1 (patch-ldlencap.h) = e768093c0208f850ca0500259f8539dcf028be91
+SHA1 (patch-ljfastraster.cpp) = 34860e7daafcd47ae5a8506b477e320ee3f7eb2e
