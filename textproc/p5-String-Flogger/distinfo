@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 13:42:47 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/04/26 13:30:43 mef Exp $
 
-SHA1 (String-Flogger-1.101242.tar.gz) = 0ad18df5797ebc03389aa7890f5ee5f4677ddfa0
-RMD160 (String-Flogger-1.101242.tar.gz) = c08f0ed19d0ecf038c59cfbec6a94e93d243bcee
-Size (String-Flogger-1.101242.tar.gz) = 11113 bytes
+SHA1 (String-Flogger-1.101245.tar.gz) = 9d5700b9cb02b7d54485cba26d5da926b8f5c2b2
+RMD160 (String-Flogger-1.101245.tar.gz) = 680cff1a4bb55d650d5bce8fdf874c98a265760b
+Size (String-Flogger-1.101245.tar.gz) = 14438 bytes
