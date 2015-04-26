@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/26 03:14:23 markd Exp $
+share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrebonum-math.otf
+share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.otf
+share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyreschola-math.otf
+share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyretermes-math.otf
