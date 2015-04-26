@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2013/11/30 23:42:15 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/26 02:41:07 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	tex-${DISTNAME}-2013
+PKGNAME=	tex-${DISTNAME}-2014
 CATEGORIES=	print
 MASTER_SITES=	# empty
-TEXLIVE_REV=	30372
+TEXLIVE_REV=	33040
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -26,6 +26,8 @@ DEPENDS+=	tex-hyph-utf8>=2013:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyphen-base>=2013:../../print/tex-hyphen-base
 DEPENDS+=	tex-ifluatex>=1.3pl26725:../../print/tex-ifluatex
 DEPENDS+=	tex-ifxetex>=0.6:../../print/tex-ifxetex
+DEPENDS+=	tex-knuth-lib>=2014:../../fonts/tex-knuth-lib
+DEPENDS+=	tex-knuth-local>=2014:../../fonts/tex-knuth-local
 DEPENDS+=	tex-kpathsea>=2013:../../print/tex-kpathsea
 DEPENDS+=	${LUA_PKGPREFIX}-alt-getopt>=0.7.0nb1:../../devel/lua-alt-getopt
 DEPENDS+=	tex-luatex>=0.70.1pl30581:../../print/tex-luatex
@@ -33,7 +35,6 @@ DEPENDS+=	tex-makeindex>=2.12nb1:../../textproc/tex-makeindex
 DEPENDS+=	tex-metafont>=2013:../../fonts/tex-metafont
 DEPENDS+=	tex-mflogo>=2009nb1:../../fonts/tex-mflogo
 DEPENDS+=	tex-mfware>=2013:../../fonts/tex-mfware
-DEPENDS+=	tex-misc>=2012:../../print/tex-misc
 DEPENDS+=	tex-pdftex>=1.40.11pl32132:../../print/tex-pdftex
 DEPENDS+=	tex-plain>=3.141592653.26647:../../print/tex-plain
 DEPENDS+=	tex-tetex>=3.0.32132:../../print/tex-tetex
