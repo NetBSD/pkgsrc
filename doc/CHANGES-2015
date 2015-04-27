@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1950 2015/04/27 08:56:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1951 2015/04/27 09:05:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-input-void to 1.4.1 [wiz 2015-04-27]
 	Updated devel/meld to 3.13.1 [wiz 2015-04-27]
 	Updated devel/py-cparser to 2.12nb1 [wiz 2015-04-27]
+	Updated sysutils/cdrtools to 3.01alpha28 [wiz 2015-04-27]
