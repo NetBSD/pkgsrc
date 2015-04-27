@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2015/04/27 11:13:39 markd Exp $
+# $NetBSD: Makefile,v 1.607 2015/04/27 12:36:48 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -583,6 +583,7 @@ SUBDIR+=	tex-optional
 SUBDIR+=	tex-optional-doc
 SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
+SUBDIR+=	tex-overpic
 SUBDIR+=	tex-pageslts
 SUBDIR+=	tex-paralist
 SUBDIR+=	tex-paralist-doc
