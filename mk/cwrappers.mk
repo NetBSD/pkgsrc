@@ -1,12 +1,17 @@
-# $NetBSD: cwrappers.mk,v 1.22 2015/03/17 18:41:20 jperkin Exp $
+# $NetBSD: cwrappers.mk,v 1.23 2015/04/27 19:59:07 jperkin Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
+.include "../../mk/buildlink3/bsd.buildlink3.mk"
+
 BUILD_DEPENDS+=		cwrappers>=20150314:../../pkgtools/cwrappers
+
+# Public variables used by pkgsrc infrastructure and packages.
+WRAPPER_DIR=		${WRKDIR}/.cwrapper
+WRAPPER_BINDIR=		${WRAPPER_DIR}/bin
 
 # XXX This should be PREFIX, but USE_CROSSBASE overrides it.
 CWRAPPERS_SRC_DIR=	${LOCALBASE}/libexec/cwrappers
-CWRAPPERS_BIN_DIR=	${WRKDIR}/.cwrapper/bin
 CWRAPPERS_CONFIG_DIR=	${WRKDIR}/.cwrapper/config
 CONFIGURE_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
 MAKE_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
@@ -57,15 +62,17 @@ CWRAPPERS_APPEND.imake+=	${IMAKEOPTS}
 
 .PHONY: generate-cwrappers
 
-do-wrapper: generate-cwrappers
+.for _target_ in ${WRAPPER_TARGETS}
+generate-cwrappers: ${_target_}
+.endfor
 
 generate-cwrappers:
-	${RUN}${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${CWRAPPERS_BIN_DIR}
+	${RUN}${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${WRAPPER_BINDIR}
 .for wrappee in as cxx cc cpp f77 imake ld libtool shlibtool
 	${RUN}echo worklog=${WRKLOG:Q} > ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo wrksrc=${WRKSRC:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}case ${wrappee} in *libtool) ;; *) echo path=${_PATH_ORIG:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}};; esac
-	${RUN}echo exec_path=${CWRAPPERS_BIN_DIR}/${CWRAPPERS_ALIASES.${wrappee}:[1]} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
+	${RUN}echo exec_path=${WRAPPER_BINDIR}/${CWRAPPERS_ALIASES.${wrappee}:[1]} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo exec=${CWRAPPERS_WRAPPEE.${wrappee}:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  for cmd in ${WRAPPER_REORDER_CMDS}
 	${RUN}echo reorder=${cmd:S/^reorder://:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
@@ -80,12 +87,70 @@ generate-cwrappers:
 	${RUN}echo unwrap=${cmd:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  endfor
 .  for alias in ${CWRAPPERS_ALIASES.${wrappee}}
-	${RUN}ln -s ${CWRAPPERS_SRC_DIR}/${CWRAPPERS_CONFIG.${wrappee}}-wrapper ${CWRAPPERS_BIN_DIR}/${alias}
+	${RUN}ln -s ${CWRAPPERS_SRC_DIR}/${CWRAPPERS_CONFIG.${wrappee}}-wrapper ${WRAPPER_BINDIR}/${alias}
 .  endfor
 .endfor
 
 .if defined(USE_LIBTOOL)
-_LIBTOOL=		${CWRAPPERS_BIN_DIR}/libtool
-_SHLIBTOOL=		${CWRAPPERS_BIN_DIR}/shlibtool
+_LIBTOOL=		${WRAPPER_BINDIR}/libtool
+_SHLIBTOOL=		${WRAPPER_BINDIR}/shlibtool
 .endif
-PREPEND_PATH+=		${CWRAPPERS_BIN_DIR}
+PREPEND_PATH+=		${WRAPPER_BINDIR}
+
+_COOKIE.wrapper=	${WRKDIR}/.wrapper_done
+
+.PHONY: wrapper
+.if !target(wrapper)
+.  if exists(${_COOKIE.wrapper})
+wrapper:
+	@${DO_NADA}
+.  elif defined(_PKGSRC_BARRIER)
+wrapper: check-vulnerable patch acquire-wrapper-lock ${_COOKIE.wrapper} release-wrapper-lock
+.  else
+wrapper: barrier
+.  endif
+.endif
+
+.PHONY: acquire-wrapper-lock release-wrapper-lock
+acquire-wrapper-lock: acquire-lock
+release-wrapper-lock: release-lock
+
+.if exists(${_COOKIE.wrapper})
+${_COOKIE.wrapper}:
+	@${DO_NADA}
+.else
+${_COOKIE.wrapper}: real-wrapper
+.endif
+
+.PHONY: real-wrapper
+real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
+
+.PHONY: wrapper-message
+
+wrapper-message:
+	@${PHASE_MSG} "Creating toolchain wrappers for ${PKGNAME}"
+
+.PHONY: pre-wrapper do-wrapper post-wrapper
+
+do-wrapper: generate-cwrappers
+
+.if !target(do-wrapper)
+do-wrapper:
+	@${DO_NADA}
+.endif
+
+.if !target(pre-wrapper)
+pre-wrapper:
+	@${DO_NADA}
+.endif
+
+.if !target(post-wrapper)
+post-wrapper:
+	@${DO_NADA}
+.endif
+
+.PHONY: wrapper-cookie
+wrapper-cookie:
+	${RUN} [ ! -f ${_COOKIE.wrapper} ]
+	${RUN} ${MKDIR} ${_COOKIE.wrapper:H}
+	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.wrapper}
