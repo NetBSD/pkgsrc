@@ -1,0 +1,7 @@
+Module::Install::GithubMeta is a Module::Install extension to include
+GitHub http://github.com meta information in META.yml.
+
+It automatically detects if the distribution directory is under git version
+control and whether the origin is a GitHub repository and will set the
+repository and homepage meta in META.yml to the appropriate URLs for
+GitHub.
