@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2014/11/03 07:50:50 wen Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/27 01:50:59 mef Exp $
 
 DISTNAME=	MooseX-Traits-Pluggable-0.12
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -16,7 +17,7 @@ DEPENDS+=	p5-MooseX-Traits>=0.06:../../devel/p5-MooseX-Traits
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-use-ok-[0-9]*:../../devel/p5-Test-use-ok
+BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Traits/Pluggable/.packlist
