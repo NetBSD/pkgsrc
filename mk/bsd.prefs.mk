@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.362 2015/04/19 01:37:55 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.363 2015/04/27 10:33:49 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -281,9 +281,12 @@ LOWER_VENDOR?=		dec
 
 .elif ${OPSYS} == "HPUX"
 OS_VERSION:=		${OS_VERSION:C/^B.//}
-.if ${MACHINE_ARCH} == "9000"
-MACHINE_ARCH=		hppa
-.endif
+.  if ${MACHINE_ARCH} == "9000"
+ABI?=			32
+MACHINE_ARCH.32=	hppa
+MACHINE_ARCH.64=	hppa64
+MACHINE_ARCH=		${MACHINE_ARCH.${ABI}}
+.  endif
 LOWER_OPSYS?=		hpux
 LOWER_OPSYS_VERSUFFIX?=	${OS_VERSION}
 LOWER_VENDOR?=		hp
@@ -417,9 +420,12 @@ OBJECT_FMT=	XCOFF
 .elif ${OPSYS} == "OSF1"
 OBJECT_FMT=	ECOFF
 .elif ${OPSYS} == "HPUX"
-.  if ${MACHINE_ARCH} == "ia64" || (defined(ABI) && ${ABI} == "64")
+.  if ${MACHINE_ARCH} == "ia64"
 OBJECT_FMT=	ELF
-.  else
+.  elif ${MACHINE_ARCH} == "hppa64"
+# it is ELF but for most purposes behaves like SOM (.sl suffix, ...)
+OBJECT_FMT=	SOM
+.  else # hppa
 OBJECT_FMT=	SOM
 .  endif
 .elif ${OPSYS} == "Cygwin"
