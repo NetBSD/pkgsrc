@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 07:09:42 markd Exp $
+share/texmf-dist/tex/latex/lineno/ednmath0.sty
+share/texmf-dist/tex/latex/lineno/edtable.sty
+share/texmf-dist/tex/latex/lineno/fnlineno.sty
+share/texmf-dist/tex/latex/lineno/lineno.sty
+share/texmf-dist/tex/latex/lineno/vplref.sty
