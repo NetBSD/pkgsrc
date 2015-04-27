@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1947 2015/04/27 08:29:08 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1948 2015/04/27 08:47:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3107,3 +3107,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-rcs version 2.10 [markd 2015-04-27]
 	Added print/tex-thumbpdf version 3.16 [markd 2015-04-27]
 	Added print/tex-collection-latexrecommended version 2014 [markd 2015-04-27]
+	Updated x11/xf86-input-void to 1.4.1 [wiz 2015-04-27]
