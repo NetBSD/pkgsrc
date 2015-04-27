@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2086 2015/04/25 10:45:13 adam Exp $
+# $NetBSD: Makefile,v 1.2087 2015/04/27 07:05:58 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -1962,6 +1962,7 @@ SUBDIR+=	teem
 SUBDIR+=	tet3
 SUBDIR+=	tex-etoolbox
 SUBDIR+=	tex-etoolbox-doc
+SUBDIR+=	tex-l3experimental
 SUBDIR+=	tex-l3kernel
 SUBDIR+=	tex-l3kernel-doc
 SUBDIR+=	tex-l3packages
