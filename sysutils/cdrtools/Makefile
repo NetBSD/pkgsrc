@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.110 2015/03/13 17:51:15 tnn Exp $
+# $NetBSD: Makefile,v 1.111 2015/04/27 09:05:11 wiz Exp $
 
-DISTNAME=	cdrtools-3.01a24
+DISTNAME=	cdrtools-3.01a28
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdrtools/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://cdrecord.berlios.de/old/private/cdrecord.html
+HOMEPAGE=	http://cdrtools.sourceforge.net/private/cdrecord.html
 COMMENT=	Software for creating ISO9660 images and writing CD/DVD/Blu-ray
 #LICENSE=	CDDL.Schily.txt AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]* cdrkit-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a[0-9]*//}
+
+MAKE_JOBS_SAFE=	no # makefiles.5
 
 .include "../../mk/bsd.prefs.mk"
 
