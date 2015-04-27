@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 00:47:58 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/27 13:52:01 jperkin Exp $
 
 DISTNAME=	py-bcrypt-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,9 @@ COMMENT=	Provides bcrypt password hashing and key derivation in python
 LICENSE=	isc AND modified-bsd AND original-bsd
 
 CONFLICTS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
+
+CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
