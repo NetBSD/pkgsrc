@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2014/09/06 21:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/27 09:17:17 wiz Exp $
 
-DISTNAME=	bup-0.26
+DISTNAME=	bup-0.27
 CATEGORIES=	sysutils
 MASTER_SITES=	# https://github.com/bup/bup/releases/
-# doc tarball: switch to "man" branch before downloading
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
+# doc: switch to "man" branch before downloading
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}.zip
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://github.com/bup/bup
@@ -18,7 +18,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-fuse-bindings
 
-DOCDIR=		${WRKDIR}/bup-0.26
+DOCDIR=		${WRKDIR}/bup-man
 
 TEST_TARGET=	test
 
@@ -37,6 +37,7 @@ REPLACE_PYTHON+=	cmd/fsck-cmd.py
 REPLACE_PYTHON+=	cmd/ftp-cmd.py
 REPLACE_PYTHON+=	cmd/fuse-cmd.py
 REPLACE_PYTHON+=	cmd/help-cmd.py
+REPLACE_PYTHON+=	cmd/import-duplicity-cmd.py
 REPLACE_PYTHON+=	cmd/index-cmd.py
 REPLACE_PYTHON+=	cmd/init-cmd.py
 REPLACE_PYTHON+=	cmd/join-cmd.py
