@@ -1,0 +1,11 @@
+A package providing corner marks for camera alignment as well
+as for trimming paper stacks, and additional page information
+on every page if required. Most macros are easily adaptable to
+personal preferences. An option is provided for selectively
+suppressing graphics or text, which may be useful for printing
+just colour graphics on a colour laser printer and the rest on
+a cheap mono laser printer. A page info line contains the time
+and a new cropmarks index and is printed at the top of the
+page. A configuration command is provided for the info line
+font. Options for better collaboration with dvips, pdftex and
+vtex are provided.
