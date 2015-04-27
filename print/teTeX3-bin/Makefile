@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2014/05/29 23:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2015/04/27 07:36:13 markd Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	56
+PKGREVISION=	57
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -18,6 +18,7 @@ DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
 DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
+DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
 DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
 
 INFO_FILES=	yes
