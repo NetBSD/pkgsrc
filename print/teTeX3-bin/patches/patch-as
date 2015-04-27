@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.15 2014/07/16 02:56:52 dholland Exp $
+$NetBSD: patch-as,v 1.16 2015/04/27 07:36:13 markd Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
@@ -18,7 +18,7 @@ $NetBSD: patch-as,v 1.15 2014/07/16 02:56:52 dholland Exp $
  
  PERLWRAPPED = fdf2tan fdf2tex makempy texfind texfont texshow texutil \
 -  thumbpdf pdfcrop uniqleaf
-+  thumbpdf uniqleaf
++  uniqleaf
  
  manpgs = \
 -  allcm allec allneeded dvi2fax dvired e2pall epstopdf fdf2tex fontinst \
