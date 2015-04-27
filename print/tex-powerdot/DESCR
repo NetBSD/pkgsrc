@@ -1,0 +1,7 @@
+Powerdot is a presentation class for LaTeX that allows for the
+quick and easy development of professional presentations. It
+comes with many tools that enhance presentations and aid the
+presenter. Examples are automatic overlays, personal notes and
+a handout mode. To view a presentation, DVI, PS or PDF output
+can be used. A powerful template system is available to easily
+develop new styles. A LyX layout file is provided.

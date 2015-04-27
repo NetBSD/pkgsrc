@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 07:15:44 markd Exp $
+share/texmf-dist/tex/latex/powerdot/powerdot-aggie.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-bframe.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-ciment.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-default.ps
+share/texmf-dist/tex/latex/powerdot/powerdot-default.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-elcolors.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-fyma.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-horatio.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-husky.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-ikeda.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-jefka.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-klope.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-paintings.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-pazik.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-sailor.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-simple.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-tycja.sty
+share/texmf-dist/tex/latex/powerdot/powerdot-upen.sty
+share/texmf-dist/tex/latex/powerdot/powerdot.cls
