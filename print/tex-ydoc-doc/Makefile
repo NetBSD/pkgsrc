@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/21 22:38:46 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/27 16:06:16 joerg Exp $
 
 DISTNAME=	ydoc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.6alpha
+PKGREVISION=	1
 TEXLIVE_REV=	26202
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
