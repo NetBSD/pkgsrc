@@ -1,0 +1,4 @@
+Adds line numbers to selected paragraphs with reference
+possible through the LaTeX \ref and \pageref cross reference
+mechanism. Line numbering may be extended to footnote lines,
+using the fnlineno package.
