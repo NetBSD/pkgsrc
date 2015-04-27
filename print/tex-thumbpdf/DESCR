@@ -1,0 +1,6 @@
+A Perl script that provides support for thumbnails in pdfTeX
+and dvips/ps2pdf. The script uses ghostscript to generate the
+thumbnails which get represented in a TeX readable file that is
+read by the package thumbpdf.sty to automatically include the
+thumbnails. This arrangement works with both plain TeX and
+LaTeX.
