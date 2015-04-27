@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2015/03/02 03:53:26 tnn Exp $
+# $NetBSD: Makefile,v 1.98 2015/04/27 19:24:17 jperkin Exp $
 
 DISTNAME=	openjdk-1.7.76-20150127
 PKGNAME=	openjdk7-1.7.76
@@ -46,6 +46,9 @@ MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${BUILDLINK_PREFIX.cups}/include
 MAKE_ENV+=	ALT_COMPILER_PATH=${WRAPPER_DIR}/bin
 MAKE_ENV+=	ALT_PACKAGE_PATH=${PREFIX}
 MAKE_ENV+=	RHINO_JAR=${WRKDIR}/${RHINO}/js.jar
+
+MAKE_ENV+=	BUILDLINK_PREFIX.iconv=${BUILDLINK_PREFIX.iconv:Q}
+MAKE_ENV+=	ZLIB_LIBS="-L${BUILDLINK_PREFIX.zlib}/lib -lz"
 
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS:U1}
 MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
@@ -242,6 +245,7 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build

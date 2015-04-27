@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2015/03/31 15:45:40 joerg Exp $
+$NetBSD: distinfo,v 1.83 2015/04/27 19:24:17 jperkin Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -116,15 +116,15 @@ SHA1 (patch-jdk_make_common_shared_Compiler-gcc.gmk) = e180383490d6c0a8bec4626ed
 SHA1 (patch-jdk_make_common_shared_Defs-utils.gmk) = d0ae37a032be6bf60da4be11bd38185e89d4ee91
 SHA1 (patch-jdk_make_common_shared_Defs-versions.gmk) = 20a9492180db88cf78bc107f1e2fc4a9101d2eab
 SHA1 (patch-jdk_make_java_Makefile) = c670455f8979b14fe44f0a285d0adfb2666d0005
-SHA1 (patch-jdk_make_java_instrument_Makefile) = ddd552847d384ebbceff3b4561551d204c4e9d5a
+SHA1 (patch-jdk_make_java_instrument_Makefile) = 62490121b7e934568542f44cd6e2ae1352b1ce0c
 SHA1 (patch-jdk_make_java_net_FILES__c.gmk) = 31aefe6781989d98bdb23433fc5b6ed6ab559d0d
 SHA1 (patch-jdk_make_java_nio_Makefile) = d4b8b830ce73841ae107f8485400ab6116b9ca3c
-SHA1 (patch-jdk_make_java_npt_Makefile) = f79db8f4bc1388ce95dd5adfd54ba13665bebe47
+SHA1 (patch-jdk_make_java_npt_Makefile) = 91903de199e8546bb17c8dc30ae616eeb7c8b906
 SHA1 (patch-jdk_make_sun_awt_Makefile) = 981082d4dfda204f09a66b9fc452bea218d3ce6a
 SHA1 (patch-jdk_make_sun_awt_mawt.gmk) = aa694522a6b75a5ac30d7fe3a530e3feb6563d30
 SHA1 (patch-jdk_make_sun_rmi_rmi_Makefile) = ef42db5c61e940b66dfead0e9fcf328d125b3460
 SHA1 (patch-jdk_make_sun_security_ec_Makefile) = 30e35128a763b8d70e02e302f2e3ae5b7a24a99b
-SHA1 (patch-jdk_make_sun_splashscreen_Makefile) = fa6e9a60c1e0908c9c31761608a25bffc8093a60
+SHA1 (patch-jdk_make_sun_splashscreen_Makefile) = 43a2ffd403570ca681b817f13ea429698e9783b9
 SHA1 (patch-jdk_make_sun_xawt_Makefile) = 735cf251798c2b6a638fc57dc90fe0750433f26d
 SHA1 (patch-jdk_src_share_classes_com_sun_script_javascript_ExternalScriptable.java) = 9e9c0254740742cd103c0cb33d3aa564ad7de01f
 SHA1 (patch-jdk_src_share_classes_com_sun_script_javascript_JSAdapter.java) = 85ddae5aa955ef951b2a9964b5f475f559c3c335
