@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 07:00:10 markd Exp $
+share/texmf-dist/tex/latex/jknapltx/greekctr.sty
+share/texmf-dist/tex/latex/jknapltx/holtpolt.sty
+share/texmf-dist/tex/latex/jknapltx/latin1jk.def
+share/texmf-dist/tex/latex/jknapltx/latin2jk.def
+share/texmf-dist/tex/latex/jknapltx/latin3jk.def
+share/texmf-dist/tex/latex/jknapltx/mathbbol.sty
+share/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+share/texmf-dist/tex/latex/jknapltx/parboxx.sty
+share/texmf-dist/tex/latex/jknapltx/sans.sty
+share/texmf-dist/tex/latex/jknapltx/semtrans.sty
+share/texmf-dist/tex/latex/jknapltx/sgmlcmpt.sty
+share/texmf-dist/tex/latex/jknapltx/smartmn.sty
+share/texmf-dist/tex/latex/jknapltx/tccompat.sty
+share/texmf-dist/tex/latex/jknapltx/ursfs.fd
+share/texmf-dist/tex/latex/jknapltx/ustmary.fd
+share/texmf-dist/tex/latex/jknapltx/young.sty
