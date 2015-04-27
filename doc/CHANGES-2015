@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1954 2015/04/27 12:46:52 markd Exp $
+$NetBSD: CHANGES-2015,v 1.1955 2015/04/27 14:42:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3116,3 +3116,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed print/tex-mh [markd 2015-04-27]
 	Removed print/tex-mh-doc [markd 2015-04-27]
 	Added print/tex-overpic version 0.53 [markd 2015-04-27]
+	Updated textproc/p5-Template-Declare to 0.47 [mef 2015-04-27]
+	Updated textproc/p5-Template-Plugin-Autoformat to 2.77 [mef 2015-04-27]
+	Added devel/p5-Test-NoTabs version 1.4 [mef 2015-04-27]
+	Added devel/p5-Module-Install-GithubMeta version 0.30 [mef 2015-04-27]
+	Added devel/p5-Module-Install-ManifestSkip version 0.24 [mef 2015-04-27]
