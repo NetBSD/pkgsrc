@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 07:12:52 markd Exp $
+share/texmf-dist/tex/latex/mathtools/empheq.sty
+share/texmf-dist/tex/latex/mathtools/mathtools.sty
+share/texmf-dist/tex/latex/mathtools/mhsetup.sty
+
