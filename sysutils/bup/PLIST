@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/09/06 21:29:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/04/27 09:17:17 wiz Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -31,6 +31,7 @@ lib/bup/cmd/bup-fsck
 lib/bup/cmd/bup-ftp
 lib/bup/cmd/bup-fuse
 lib/bup/cmd/bup-help
+lib/bup/cmd/bup-import-duplicity
 lib/bup/cmd/bup-import-rdiff-backup
 lib/bup/cmd/bup-import-rsnapshot
 lib/bup/cmd/bup-index
@@ -67,6 +68,7 @@ man/man1/bup-fsck.1
 man/man1/bup-ftp.1
 man/man1/bup-fuse.1
 man/man1/bup-help.1
+man/man1/bup-import-duplicity.1
 man/man1/bup-import-rdiff-backup.1
 man/man1/bup-import-rsnapshot.1
 man/man1/bup-index.1
