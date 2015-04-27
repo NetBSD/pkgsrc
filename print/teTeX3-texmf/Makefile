@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2015/02/27 14:35:01 tnn Exp $
+# $NetBSD: Makefile,v 1.66 2015/04/27 07:33:18 markd Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -36,6 +36,7 @@ DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
 DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
 DEPENDS+=	tex-braket-[0-9]*:../../print/tex-braket
 DEPENDS+=	tex-breakcites-[0-9]*:../../print/tex-breakcites
+DEPENDS+=	tex-breqn-[0-9]*:../../print/tex-breqn
 DEPENDS+=	tex-cancel-[0-9]*:../../print/tex-cancel
 DEPENDS+=	tex-capt-of-[0-9]*:../../print/tex-capt-of
 DEPENDS+=	tex-captdef-[0-9]*:../../print/tex-captdef
@@ -47,6 +48,7 @@ DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
 DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
 DEPENDS+=	tex-circle-[0-9]*:../../print/tex-circle
 DEPENDS+=	tex-cite-[0-9]*:../../print/tex-cite
+DEPENDS+=	tex-cmap-[0-9]*:../../print/tex-cmap
 DEPENDS+=	tex-cmcyr>=2009:../../fonts/tex-cmcyr
 DEPENDS+=	tex-collection-fontsrecommended>=2010:../../fonts/tex-collection-fontsrecommended
 DEPENDS+=	tex-collection-genericrecommended>=2010:../../print/tex-collection-genericrecommended
@@ -54,6 +56,7 @@ DEPENDS+=	tex-collection-latex>=2010:../../print/tex-collection-latex
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-comment-[0-9]*:../../print/tex-comment
 DEPENDS+=	tex-context>=2009:../../print/tex-context
+DEPENDS+=	tex-crop-[0-9]*:../../print/tex-crop
 DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
 DEPENDS+=	tex-cyrillic>=2009:../../print/tex-cyrillic
 DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
@@ -118,16 +121,17 @@ DEPENDS+=	tex-kix-[0-9]*:../../print/tex-kix
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
 DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
+DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-listing-[0-9]*:../../print/tex-listing
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
 DEPENDS+=	tex-lh>=3.5g:../../fonts/tex-lh
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
 DEPENDS+=	tex-magaz-[0-9]*:../../print/tex-magaz
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
+DEPENDS+=	tex-mathtools-[0-9]*:../../print/tex-mathtools
 DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
 DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
-DEPENDS+=	tex-mh-[0-9]*:../../print/tex-mh
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
 DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
 DEPENDS+=	tex-misc209-[0-9]*:../../print/tex-misc209
@@ -190,6 +194,7 @@ DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
 DEPENDS+=	tex-t2-[0-9]*:../../print/tex-t2
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
+DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
@@ -295,6 +300,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/generic/multido
 	rm -rf ${WRKSRC}/doc/generic/pstricks
 	rm -rf ${WRKSRC}/doc/generic/tex-ps
+	rm -rf ${WRKSRC}/doc/generic/thumbpdf
 	rm -rf ${WRKSRC}/doc/generic/u*
 	rm -rf ${WRKSRC}/doc/generic/x*
 	rm -rf ${WRKSRC}/doc/latex/SIunits
@@ -308,6 +314,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/changebar
 	rm -rf ${WRKSRC}/doc/latex/comment
+	rm -rf ${WRKSRC}/doc/latex/crop
 	rm -rf ${WRKSRC}/doc/latex/c[v-z]*
 	rm -rf ${WRKSRC}/doc/latex/e[d-n]*
 	rm -rf ${WRKSRC}/doc/latex/eso-pic
@@ -323,6 +330,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/jurabib
 	rm -rf ${WRKSRC}/doc/latex/k*
 	rm -rf ${WRKSRC}/doc/latex/lastpage
+	rm -rf ${WRKSRC}/doc/latex/lineno
 	rm -rf ${WRKSRC}/doc/latex/lis*
 	rm -rf ${WRKSRC}/doc/latex/m[b-o]*
 	rm -rf ${WRKSRC}/doc/latex/ms
@@ -460,6 +468,7 @@ post-extract:
 	rm -rf ${WRKSRC}/omega/ocp/misc
 	rm -rf ${WRKSRC}/omega/otp/misc
 	rm -rf ${WRKSRC}/scripts/context
+	rm -rf ${WRKSRC}/scripts/thumbpdf
 	rm -rf ${WRKSRC}/tex/context
 	rm -rf ${WRKSRC}/tex/generic/[a-b]*
 	rm -rf ${WRKSRC}/tex/generic/con*
@@ -474,6 +483,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/generic/ruhyphen
 	rm -rf ${WRKSRC}/tex/generic/tex-ps
 	rm -rf ${WRKSRC}/tex/generic/texnames
+	rm -rf ${WRKSRC}/tex/generic/thumbpdf
 	rm -rf ${WRKSRC}/tex/generic/ukrhyph
 	rm -rf ${WRKSRC}/tex/generic/x*
 	rm -rf ${WRKSRC}/tex/lambda
@@ -492,9 +502,11 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/changebar
 	rm -rf ${WRKSRC}/tex/latex/chngpage
 	rm -rf ${WRKSRC}/tex/latex/cite
+	rm -rf ${WRKSRC}/tex/latex/cmap
 	rm -rf ${WRKSRC}/tex/latex/comment
 	rm -rf ${WRKSRC}/tex/latex/concrete
 	rm -rf ${WRKSRC}/tex/latex/con[f-z]*
+	rm -rf ${WRKSRC}/tex/latex/crop
 	rm -rf ${WRKSRC}/tex/latex/c[v-z]*
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
 	rm -rf ${WRKSRC}/tex/latex/e[d-n]*
@@ -517,6 +529,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/jurabib
 	rm -rf ${WRKSRC}/tex/latex/k*
 	rm -rf ${WRKSRC}/tex/latex/lastpage
+	rm -rf ${WRKSRC}/tex/latex/lineno
 	rm -rf ${WRKSRC}/tex/latex/lis*
 	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym

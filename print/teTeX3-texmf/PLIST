@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2013/10/19 20:43:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.40 2015/04/27 07:33:18 markd Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/dk-bib/dk-abbrv.bst
 share/texmf-dist/bibtex/bst/dk-bib/dk-alpha.bst
@@ -160,7 +160,6 @@ share/texmf-dist/doc/generic/tap/tapxamp2.tex
 share/texmf-dist/doc/generic/texdraw/ChangeLog
 share/texmf-dist/doc/generic/texdraw/texdraw.ps
 share/texmf-dist/doc/generic/texdraw/txdexamp.latex
-share/texmf-dist/doc/generic/thumbpdf/readme.txt
 share/texmf-dist/doc/generic/vntex/README
 share/texmf-dist/doc/generic/vntex/TODO
 share/texmf-dist/doc/generic/vntex/testbookmarks.tex
@@ -2574,7 +2573,6 @@ share/texmf-dist/doc/latex/ccfonts/ccfonts.dvi
 share/texmf-dist/doc/latex/ccfonts/readme
 share/texmf-dist/doc/latex/chappg/chappg.txt
 share/texmf-dist/doc/latex/concmath/concmath.dvi
-share/texmf-dist/doc/latex/crop/crop.dvi
 share/texmf-dist/doc/latex/currvita/README
 share/texmf-dist/doc/latex/currvita/currvita.dvi
 share/texmf-dist/doc/latex/currvita/cvtest.tex
@@ -2664,11 +2662,6 @@ share/texmf-dist/doc/latex/leftidx/leftidx.dvi
 share/texmf-dist/doc/latex/lettrine/00README
 share/texmf-dist/doc/latex/lettrine/demo.pdf
 share/texmf-dist/doc/latex/lettrine/lettrine.dvi
-share/texmf-dist/doc/latex/lineno/CHANGES.txt
-share/texmf-dist/doc/latex/lineno/COPYING.txt
-share/texmf-dist/doc/latex/lineno/README.txt
-share/texmf-dist/doc/latex/lineno/lineno.dvi
-share/texmf-dist/doc/latex/lineno/ulineno.dvi
 share/texmf-dist/doc/latex/ltabptch/README
 share/texmf-dist/doc/latex/mathcomp/mathcomp.dvi
 share/texmf-dist/doc/latex/mathtime/0readme
@@ -5939,7 +5932,6 @@ share/texmf-dist/omega/otp/uni2char/out88591.otp
 share/texmf-dist/omega/otp/uni2char/oututf8.otp
 share/texmf-dist/release-tetex-texmf.txt
 share/texmf-dist/scripts/pdfcrop/pdfcrop.pl
-share/texmf-dist/scripts/thumbpdf/thumbpdf.pl
 share/texmf-dist/scripts/uniqleaf/uniqleaf.pl
 share/texmf-dist/tex/amstex/base/amsppt.sty
 share/texmf-dist/tex/amstex/base/amsppt1.tex
@@ -6146,8 +6138,6 @@ share/texmf-dist/tex/generic/texdraw/texdraw.sty
 share/texmf-dist/tex/generic/texdraw/texdraw.tex
 share/texmf-dist/tex/generic/texdraw/txdps.tex
 share/texmf-dist/tex/generic/texdraw/txdtools.tex
-share/texmf-dist/tex/generic/thumbpdf/thumbpdf.sty
-share/texmf-dist/tex/generic/thumbpdf/thumbpdf.tex
 share/texmf-dist/tex/latex/antp/antpolt.sty
 share/texmf-dist/tex/latex/antp/lqxantp.fd
 share/texmf-dist/tex/latex/antp/ot4antp.fd
@@ -6206,12 +6196,6 @@ share/texmf-dist/tex/latex/ccfonts/t1ccr.fd
 share/texmf-dist/tex/latex/ccfonts/ts1ccr.fd
 share/texmf-dist/tex/latex/chappg/chappg.sty
 share/texmf-dist/tex/latex/citesort/citesort.sty
-share/texmf-dist/tex/latex/cmap/cmap.sty
-share/texmf-dist/tex/latex/cmap/t1.cmap
-share/texmf-dist/tex/latex/cmap/t2a.cmap
-share/texmf-dist/tex/latex/cmap/t2b.cmap
-share/texmf-dist/tex/latex/cmap/t2c.cmap
-share/texmf-dist/tex/latex/cmap/t5.cmap
 share/texmf-dist/tex/latex/cmbright/cmbright.sty
 share/texmf-dist/tex/latex/cmbright/omlcmbr.fd
 share/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
@@ -6232,7 +6216,6 @@ share/texmf-dist/tex/latex/concmath/omxccex.fd
 share/texmf-dist/tex/latex/concmath/ot1ccr.fd
 share/texmf-dist/tex/latex/concmath/ucca.fd
 share/texmf-dist/tex/latex/concmath/uccb.fd
-share/texmf-dist/tex/latex/crop/crop.sty
 share/texmf-dist/tex/latex/cslatex/il2cmdh.fd
 share/texmf-dist/tex/latex/cslatex/il2cmfib.fd
 share/texmf-dist/tex/latex/cslatex/il2cmfr.fd
@@ -6322,9 +6305,6 @@ share/texmf-dist/tex/latex/layouts/layouts.sty
 share/texmf-dist/tex/latex/leftidx/leftidx.sty
 share/texmf-dist/tex/latex/lettrine/lettrine.cfg
 share/texmf-dist/tex/latex/lettrine/lettrine.sty
-share/texmf-dist/tex/latex/lineno/ednmath0.sty
-share/texmf-dist/tex/latex/lineno/edtable.sty
-share/texmf-dist/tex/latex/lineno/lineno.sty
 share/texmf-dist/tex/latex/ltabptch/ltabptch.sty
 share/texmf-dist/tex/latex/lucida/ly1hlce.fd
 share/texmf-dist/tex/latex/lucida/ly1hlcf.fd
