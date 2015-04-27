@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2015/04/27 07:41:58 markd Exp $
+# $NetBSD: Makefile,v 1.606 2015/04/27 11:13:39 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -536,8 +536,6 @@ SUBDIR+=	tex-metalogo
 SUBDIR+=	tex-metalogo-doc
 SUBDIR+=	tex-mfnfss
 SUBDIR+=	tex-mfnfss-doc
-SUBDIR+=	tex-mh
-SUBDIR+=	tex-mh-doc
 SUBDIR+=	tex-mhchem
 SUBDIR+=	tex-mhchem-doc
 SUBDIR+=	tex-microtype
