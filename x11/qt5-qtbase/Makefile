@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:25:17 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2015/04/27 10:38:04 wiz Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -48,6 +48,11 @@ CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else
 QMAKE_CONF=		qmake.conf.mac
+.endif
+
+PLIST_VARS+=		egl
+.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+PLIST.egl=		yes
 .endif
 
 .include "../../mk/compiler.mk"
