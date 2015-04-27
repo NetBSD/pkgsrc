@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/04/06 08:17:25 adam Exp $
+# $NetBSD: Makefile,v 1.52 2015/04/27 15:00:34 jperkin Exp $
 
 DISTNAME=	global-6.4
 PKGREVISION=	1
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-posix-sort=${SORT:Q}
 
 INFO_FILES=		YES
+USE_LANGUAGES=		c99
 USE_LIBTOOL=		YES
 USE_TOOLS+=		perl:run sort:run
 
