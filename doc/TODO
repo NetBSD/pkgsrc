@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14362 2015/04/26 19:23:40 spz Exp $
+$NetBSD: TODO,v 1.14363 2015/04/27 03:02:59 mef Exp $
 
 Suggested new packages
 ======================
@@ -357,6 +357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
 	o GNUMail-1.2.2
+	o JBidwatcher-2.5.6 [wants launch4j]
 	o PAM-0.99.7.1
 	o R-3.2
 	o RBTools-0.6.3
