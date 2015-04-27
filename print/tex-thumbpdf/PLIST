@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 07:22:44 markd Exp $
+bin/thumbpdf
+share/texmf-dist/tex/generic/thumbpdf/thumbpdf.sty
+share/texmf-dist/tex/generic/thumbpdf/thumbpdf.tex
