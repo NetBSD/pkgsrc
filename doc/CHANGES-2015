@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1946 2015/04/27 06:05:11 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1947 2015/04/27 08:29:08 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3094,3 +3094,16 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-varwidth-doc version 0.92 [markd 2015-04-26]
 	Added print/tex-verbatimbox-doc version 3.13 [markd 2015-04-26]
 	Updated devel/p5-LDAP to 1.4.1 [mef 2015-04-27]
+	Added print/tex-breqn version 0.98c [markd 2015-04-27]
+	Added print/tex-cmap version 1.0h [markd 2015-04-27]
+	Added print/tex-crop version 1.5 [markd 2015-04-27]
+	Added print/tex-ctable version 1.29 [markd 2015-04-27]
+	Added print/tex-fancyref version 0.9c [markd 2015-04-27]
+	Added print/tex-jknapltx version 2014 [markd 2015-04-27]
+	Added devel/tex-l3experimental version 0.5471 [markd 2015-04-27]
+	Added print/tex-lineno version 4.41 [markd 2015-04-27]
+	Added print/tex-mathtools version 1.15 [markd 2015-04-27]
+	Added print/tex-powerdot version 1.5 [markd 2015-04-27]
+	Added print/tex-rcs version 2.10 [markd 2015-04-27]
+	Added print/tex-thumbpdf version 3.16 [markd 2015-04-27]
+	Added print/tex-collection-latexrecommended version 2014 [markd 2015-04-27]
