@@ -1,0 +1,9 @@
+Miscellaneous macros by Jorg Knappen, including: represent
+counters in greek; Maxwell's non-commutative division;
+latin1jk, latin2jk and latin3jk, which are their inputenc
+definition files that allow verbatim input in the respective
+ISO Latin codes; blackboard bold fonts in maths; use of RSFS
+fonts in maths; extra alignments for \parboxes; swap Roman and
+Sans fonts; transliterate semitic languages; patches to make
+(La)TeX formulae embeddable in SGML; use maths "minus" in text
+as appropriate; simple Young tableaux.
