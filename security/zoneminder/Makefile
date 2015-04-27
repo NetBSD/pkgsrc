@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/04/22 15:13:43 dsainty Exp $
+# $NetBSD: Makefile,v 1.19 2015/04/27 23:55:28 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -27,7 +27,7 @@ PKG_SUGGESTED_OPTIONS=	apache
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	aclocal autoconf autoheader automake gmake perl
+USE_TOOLS+=	aclocal autoconf autoheader automake gmake perl pkg-config
 
 # MIME::Entity is needed from p5-MIME-tools
 # LWP::UserAgent is needed from p5-libwww
@@ -192,6 +192,10 @@ PLIST_VARS+=		rcd
 
 .if ${INIT_SYSTEM} == "rc.d"
 PLIST.rcd=		yes
+.endif
+
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LIBS+=		-lexecinfo
 .endif
 
 post-extract:
