@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.92 2015/04/27 19:38:03 jperkin Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.93 2015/04/27 19:59:07 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,9 +56,7 @@
 # Prepend ${WRAPPER_BINDIR} to the PATH so that the wrappers are found
 # first when searching for executables.
 #
-.if ${USE_CWRAPPERS:tl} == "no"
 PREPEND_PATH+=		${WRAPPER_BINDIR}
-.endif
 
 ###
 ### BEGIN: after the barrier
