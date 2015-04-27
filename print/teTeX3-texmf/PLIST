@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2015/04/27 07:33:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.41 2015/04/27 12:39:22 markd Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/dk-bib/dk-abbrv.bst
 share/texmf-dist/bibtex/bst/dk-bib/dk-alpha.bst
@@ -2654,8 +2654,6 @@ share/texmf-dist/doc/latex/images/change_begin.gif
 share/texmf-dist/doc/latex/images/change_end.gif
 share/texmf-dist/doc/latex/images/new.gif
 share/texmf-dist/doc/latex/images/redball.gif
-share/texmf-dist/doc/latex/jknappen/mathbbol.rme
-share/texmf-dist/doc/latex/jknappen/mathrsfs.rme
 share/texmf-dist/doc/latex/labels/labels.dvi
 share/texmf-dist/doc/latex/layouts/layman.dvi
 share/texmf-dist/doc/latex/leftidx/leftidx.dvi
@@ -2682,9 +2680,6 @@ share/texmf-dist/doc/latex/ntheorem/ntheorem.pdf
 share/texmf-dist/doc/latex/onlyamsmath/README
 share/texmf-dist/doc/latex/onlyamsmath/onlyamsmath.dvi
 share/texmf-dist/doc/latex/onlyamsmath/onlyamsmathtest.tex
-share/texmf-dist/doc/latex/overpic/README
-share/texmf-dist/doc/latex/overpic/opic-abs.tex
-share/texmf-dist/doc/latex/overpic/opic-rel.tex
 share/texmf-dist/doc/latex/pb-diagram/COPYING
 share/texmf-dist/doc/latex/pb-diagram/README
 share/texmf-dist/doc/latex/pb-diagram/pb-examples.tex
@@ -6291,14 +6286,6 @@ share/texmf-dist/tex/latex/graphics/textures.def
 share/texmf-dist/tex/latex/graphics/vtex.def
 share/texmf-dist/tex/latex/greek/iso-8859-7.def
 share/texmf-dist/tex/latex/import/import.sty
-share/texmf-dist/tex/latex/jknappen/greekctr.sty
-share/texmf-dist/tex/latex/jknappen/latin1jk.def
-share/texmf-dist/tex/latex/jknappen/latin2jk.def
-share/texmf-dist/tex/latex/jknappen/latin3jk.def
-share/texmf-dist/tex/latex/jknappen/mathbbol.sty
-share/texmf-dist/tex/latex/jknappen/mathrsfs.sty
-share/texmf-dist/tex/latex/jknappen/ubbold.fd
-share/texmf-dist/tex/latex/jknappen/ursfs.fd
 share/texmf-dist/tex/latex/labels/labels.sty
 share/texmf-dist/tex/latex/labels/olabels.sty
 share/texmf-dist/tex/latex/layouts/layouts.sty
@@ -6376,7 +6363,6 @@ share/texmf-dist/tex/latex/mwcls/mwbk12.clo
 share/texmf-dist/tex/latex/mwcls/mwrep.cls
 share/texmf-dist/tex/latex/oberdiek/vpe.sty
 share/texmf-dist/tex/latex/onlyamsmath/onlyamsmath.sty
-share/texmf-dist/tex/latex/overpic/overpic.sty
 share/texmf-dist/tex/latex/palatcm/omlpplcm.fd
 share/texmf-dist/tex/latex/palatcm/omspplcm.fd
 share/texmf-dist/tex/latex/palatcm/omxpplcm.fd
