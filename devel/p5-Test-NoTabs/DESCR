@@ -1,0 +1,5 @@
+Test::NoTabs lets you check the presence of tabs in your perl code.
+It reports its results in standard Test::Simple fashion:
+
+  use Test::NoTabs tests => 1;
+  notabs_ok( 'lib/Module.pm', 'Module is tab free');
