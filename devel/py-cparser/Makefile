@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/26 07:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/27 08:56:40 wiz Exp $
 
 DISTNAME=	pycparser-2.12
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pycparser/
 
@@ -10,5 +11,5 @@ HOMEPAGE=	https://pypi.python.org/pypi/pycparser
 COMMENT=	C parser in Python
 LICENSE=	modified-bsd
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
