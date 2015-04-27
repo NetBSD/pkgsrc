@@ -1,0 +1,10 @@
+This module generates a MANIFEST.SKIP file for you (using
+Module::Manifest::Skip) that contains the common files that people do not
+want in their MANIFEST files. The SKIP file is generated each time that you
+(the module author) run Makefile.PL.
+
+You can add your own custom entries at the top of the MANIFEST file. Just
+put a blank line after your entries, and they will be left alone.
+
+This module also adds 'MANIFEST' to the clean_files() list so that make
+clean will remove your MANIFEST.
