@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.234 2015/03/15 21:18:32 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.235 2015/04/27 19:38:03 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,7 +77,7 @@
 .if ${PKG_DEBUG_LEVEL} > 0
 ECHO_BUILDLINK_MSG?=	${ECHO}
 .else
-ECHO_BUILDLINK_MSG?=	${ECHO_WRAPPER_MSG}
+ECHO_BUILDLINK_MSG?=	${TRUE}
 .endif
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
 BUILDLINK_BINDIR=	${BUILDLINK_DIR}/bin
