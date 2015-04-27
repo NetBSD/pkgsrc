@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1955 2015/04/27 14:42:54 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1956 2015/04/27 14:55:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3121,3 +3121,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Test-NoTabs version 1.4 [mef 2015-04-27]
 	Added devel/p5-Module-Install-GithubMeta version 0.30 [mef 2015-04-27]
 	Added devel/p5-Module-Install-ManifestSkip version 0.24 [mef 2015-04-27]
+	Added devel/p5-Test-Spelling version 0.20 [mef 2015-04-27]
