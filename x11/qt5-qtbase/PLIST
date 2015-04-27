@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/30 17:23:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/04/27 08:36:02 wiz Exp $
 lib/pkgconfig/Qt5Bootstrap.pc
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
@@ -2277,9 +2277,11 @@ qt5/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
 ${PLIST.mac}qt5/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
@@ -2831,7 +2833,9 @@ qt5/plugins/imageformats/libqico.la
 qt5/plugins/imageformats/libqjpeg.la
 ${PLIST.unix}qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.la
 ${PLIST.mac}qt5/plugins/platforms/libqcocoa.la
+qt5/plugins/platforms/libqeglfs.la
 qt5/plugins/platforms/libqminimal.la
+qt5/plugins/platforms/libqminimalegl.la
 qt5/plugins/platforms/libqoffscreen.la
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.la
 ${PLIST.mac}qt5/plugins/printsupport/libcocoaprintersupport.la
