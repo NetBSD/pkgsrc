@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 09:23:06 wiz Exp $
+include/xcb/xcb_errors.h
+lib/libxcb-errors.la
+lib/pkgconfig/xcb-errors.pc
