@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.84 2014/08/23 05:38:22 wiz Exp $
+$NetBSD: distinfo,v 1.85 2015/04/27 09:05:11 wiz Exp $
 
-SHA1 (cdrtools-3.01a24.tar.bz2) = b49b01b6269280336ef3ca89aa41538db3a9b2dc
-RMD160 (cdrtools-3.01a24.tar.bz2) = 6afd625f0b04f861592a82caf6bf78109dfee726
-Size (cdrtools-3.01a24.tar.bz2) = 2075400 bytes
-SHA1 (patch-mkisofs_mkisofs.c) = 94fbc4abd559852f20c307e1dcf8070a02520f2d
+SHA1 (cdrtools-3.01a28.tar.bz2) = 081b1daa9c86f33483213a8d8d0fd75caec51ead
+RMD160 (cdrtools-3.01a28.tar.bz2) = 84ad3ddbaea67a59a057d5338f3a683bffb49c1f
+Size (cdrtools-3.01a28.tar.bz2) = 2081108 bytes
