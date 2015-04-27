@@ -1,4 +1,4 @@
-$NetBSD: patch-jdk_make_sun_splashscreen_Makefile,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+$NetBSD: patch-jdk_make_sun_splashscreen_Makefile,v 1.2 2015/04/27 19:24:17 jperkin Exp $
 
 GCC support.
 
@@ -10,7 +10,7 @@ GCC support.
    endif
 +  ifeq ($(PLATFORM), solaris)
 +    ifeq ($(CC_VERSION), gcc)
-+      OTHER_LDLIBS += -liconv
++      OTHER_LDLIBS += -L${BUILDLINK_PREFIX.iconv}/lib -liconv
 +    endif
 +  endif
    CPPFLAGS += -I$(OPENWIN_HOME)/include -I$(OPENWIN_HOME)/include/X11/extensions
