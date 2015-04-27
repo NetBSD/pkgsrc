@@ -1,0 +1,5 @@
+Provides fancy cross-referencing support, based on the
+package's reference commands (\fref and \Fref) that recognise
+what sort of object is being referenced. So, for example, the
+label for a \section would be expected to be of the form
+'sec:foo': the package would recognise the 'sec:' part.
