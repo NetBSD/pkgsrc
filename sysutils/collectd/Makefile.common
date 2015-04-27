@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2015/04/14 11:27:30 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.8 2015/04/27 16:07:00 joerg Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -72,8 +72,8 @@ CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-Wno-error=tautological-pointer-compare
-
+CFLAGS+=	-Wno-error=tautological-pointer-compare \
+		-Wno-error=pointer-bool-conversion
 .endif
 
 .include "../../devel/libltdl/buildlink3.mk"
