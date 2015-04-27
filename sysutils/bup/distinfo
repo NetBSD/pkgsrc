@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2014/09/06 21:29:45 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/04/27 09:17:17 wiz Exp $
 
-SHA1 (bup-0.26.tar.gz) = 86e636818590fe40e1074c67545bb74de6e8306b
-RMD160 (bup-0.26.tar.gz) = 206d301677a359b3e904e89d5a12e82829d12565
-Size (bup-0.26.tar.gz) = 342754 bytes
-SHA1 (bup-man-0.26.tar.gz) = 17dc3136b56cd7427c1668681f86565e42ff1a74
-RMD160 (bup-man-0.26.tar.gz) = ff8cfc15609134055c651679ad7b6609a3959c23
-Size (bup-man-0.26.tar.gz) = 4410896 bytes
+SHA1 (bup-0.27.tar.gz) = f082fcda2d60d9cdb6a788fb85c171925d2a1e28
+RMD160 (bup-0.27.tar.gz) = 52a7893008cfd99fbb7088d4f801cf9c0af27af6
+Size (bup-0.27.tar.gz) = 351733 bytes
+SHA1 (bup-man-0.27.zip) = 278b5ab581043f0a40a35a1eb30ac2200f05ff62
+RMD160 (bup-man-0.27.zip) = b6c25e55dea3f2ae9006a052c3c004e6e5cf3b0e
+Size (bup-man-0.27.zip) = 43244 bytes
 SHA1 (patch-Makefile) = 3208d663af3e5e129499282d14e10abd94f56805
 SHA1 (patch-config_configure) = 9360a8be2cef559d93f1a5301f1f397f31da7d72
