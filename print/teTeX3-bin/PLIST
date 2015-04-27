@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2013/12/18 02:30:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/04/27 07:36:13 markd Exp $
 bin/fdf2tan
 bin/fdf2tex
 bin/lamed
@@ -7,7 +7,6 @@ bin/texfind
 bin/texfont
 bin/texshow
 bin/texutil
-bin/thumbpdf
 bin/uniqleaf
 info/latex.info
 man/man1/fdf2tex.1
