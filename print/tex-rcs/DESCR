@@ -1,0 +1,12 @@
+The rcs package utilizes the inclusion of RCS supplied data in
+LaTeX documents. It's upward compatible to *all* rcs styles I
+know of. In particular, you can easily access values of every
+RCS field in your document put the checkin date on the
+titlepage put RCS fields in a footline You can typeset revision
+logs. Not in verbatim -- real LaTeX text! But you need a
+configurable RCS for that. Refer to the user manual for more
+detailed information. You can also configure the rcs package
+easily to do special things for any keyword. This bundle comes
+with a user manual, an internal interface description, full
+documentation of the implementation, style information for AUC-
+TeX, and test cases.
