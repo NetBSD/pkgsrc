@@ -1,0 +1,6 @@
+Provides commands to typeset centered, left- or right-aligned
+table and (multiple-)figure floats, with footnotes. Instead of
+an environment, a command with 4 arguments is used; the first
+is optional and is used for key,value pairs generating
+variations on the defaults and offering a route for future
+extensions.
