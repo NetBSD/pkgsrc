@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/04/03 12:04:30 nros Exp $
+$NetBSD: distinfo,v 1.17 2015/04/27 13:34:05 jperkin Exp $
 
 SHA1 (libetpan-1.6.tar.gz) = a5514139a8c5ee94d0337a89db8141cb3c557fa9
 RMD160 (libetpan-1.6.tar.gz) = f625263df1fcab97d010d25743803e5d4164745b
 Size (libetpan-1.6.tar.gz) = 6144117 bytes
 SHA1 (patch-aa) = e783adf544c9a63df584815ee4b033249cecf0ff
 SHA1 (patch-configure.ac) = 16636e8656018179d62b59ea75fe4a1a753768a2
+SHA1 (patch-src_low-level_smtp_mailsmtp.c) = c6658435ae8e2124a4878ec3ef2ce0a2aa7be7fe
