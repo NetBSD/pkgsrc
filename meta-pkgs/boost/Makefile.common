@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2015/04/17 14:04:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.52 2015/04/27 20:01:27 jperkin Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -73,17 +73,11 @@ BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 # Prevent using a pkgsrc libtool in OS X because the darwin toolset needs
 # the native libtool from /Developer/usr/bin or /usr/bin.
 post-wrapper:
-	${RM} -f ${WRAPPER_BINDIR}/libtool ${CWRAPPERS_BIN_DIR}/libtool
+	${RM} -f ${WRAPPER_BINDIR}/libtool
 .    if exists(/Developer/usr/bin/libtool)
 	${LN} -s /Developer/usr/bin/libtool ${WRAPPER_BINDIR}/libtool
-.      if !empty(CWRAPPERS_BIN_DIR)
-	${LN} -s /Developer/usr/bin/libtool ${CWRAPPERS_BIN_DIR}/libtool
-.      endif
 .    else
 	${LN} -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
-.      if !empty(CWRAPPERS_BIN_DIR)
-	${LN} -s /usr/bin/libtool ${CWRAPPERS_BIN_DIR}/libtool
-.      endif
 .    endif
 .  endif
 
