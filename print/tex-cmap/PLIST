@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/27 06:46:59 markd Exp $
+share/texmf-dist/tex/latex/cmap/cmap.sty
+share/texmf-dist/tex/latex/cmap/lae.cmap
+share/texmf-dist/tex/latex/cmap/lfe.cmap
+share/texmf-dist/tex/latex/cmap/lgr.cmap
+share/texmf-dist/tex/latex/cmap/ot1.cmap
+share/texmf-dist/tex/latex/cmap/ot1tt.cmap
+share/texmf-dist/tex/latex/cmap/ot6.cmap
+share/texmf-dist/tex/latex/cmap/t1.cmap
+share/texmf-dist/tex/latex/cmap/t2a.cmap
+share/texmf-dist/tex/latex/cmap/t2b.cmap
+share/texmf-dist/tex/latex/cmap/t2c.cmap
+share/texmf-dist/tex/latex/cmap/t5.cmap
