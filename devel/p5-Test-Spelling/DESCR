@@ -1,0 +1,3 @@
+Test::Spelling lets you check the spelling of a POD file, and report its
+results in standard Test::More fashion. This module requires a spellcheck
+program such as spell, aspell, ispell, or hunspell.
