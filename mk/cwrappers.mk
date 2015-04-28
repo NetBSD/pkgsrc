@@ -1,14 +1,11 @@
-# $NetBSD: cwrappers.mk,v 1.24 2015/04/28 21:08:34 jperkin Exp $
+# $NetBSD: cwrappers.mk,v 1.25 2015/04/28 21:15:01 jperkin Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
+.include "../../mk/wrapper/wrapper-defs.mk"
 .include "../../mk/buildlink3/bsd.buildlink3.mk"
 
 BUILD_DEPENDS+=		cwrappers>=20150314:../../pkgtools/cwrappers
-
-# Public variables used by pkgsrc infrastructure and packages.
-WRAPPER_DIR=		${WRKDIR}/.cwrapper
-WRAPPER_BINDIR=		${WRAPPER_DIR}/bin
 
 # XXX This should be PREFIX, but USE_CROSSBASE overrides it.
 CWRAPPERS_SRC_DIR=	${LOCALBASE}/libexec/cwrappers
