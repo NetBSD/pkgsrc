@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/25 14:23:40 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/28 06:54:40 tnn Exp $
 #
 
 DISTNAME=	libva-1.1.0
@@ -30,6 +30,11 @@ PKGCONFIG_OVERRIDE+=	libva-glx.pc.in
 PKGCONFIG_OVERRIDE+=	libva-tpi.pc.in
 PKGCONFIG_OVERRIDE+=	libva-x11.pc.in
 PKGCONFIG_OVERRIDE+=	libva.pc.in
+
+PLIST_VARS+=		egl
+.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+PLIST.egl=		yes
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
