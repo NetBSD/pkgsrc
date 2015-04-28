@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1957 2015/04/27 15:07:39 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1958 2015/04/28 00:49:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3123,3 +3123,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Module-Install-ManifestSkip version 0.24 [mef 2015-04-27]
 	Added devel/p5-Test-Spelling version 0.20 [mef 2015-04-27]
 	Updated print/p5-LaTeX-Driver to 0.200.4 [mef 2015-04-27]
+	Updated devel/p5-File-ConfigDir to 0.017 [mef 2015-04-28]
+	Updated devel/p5-MooX-ConfigFromFile to 0.007 [mef 2015-04-28]
