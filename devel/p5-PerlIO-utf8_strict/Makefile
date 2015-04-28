@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/14 12:42:44 mef Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/28 06:59:22 mef Exp $
 
 DISTNAME=	PerlIO-utf8_strict-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,9 @@ HOMEPAGE=	http://search.cpan.org/dist/PerlIO-utf8_strict/
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES+=	c
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/PerlIO/utf8_strict/.packlist
