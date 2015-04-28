@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2091 2015/04/27 14:55:54 mef Exp $
+# $NetBSD: Makefile,v 1.2092 2015/04/28 06:54:55 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1044,6 +1044,7 @@ SUBDIR+=	p5-Log-Handler
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Log-LogLite
 SUBDIR+=	p5-Log-Message
+SUBDIR+=	p5-Log-Message-Simple
 SUBDIR+=	p5-Log-Report
 SUBDIR+=	p5-Log-Report-Optional
 SUBDIR+=	p5-Log-Trace
