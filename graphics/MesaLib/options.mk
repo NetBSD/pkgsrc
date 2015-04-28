@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2015/04/26 08:00:40 tnn Exp $
+# $NetBSD: options.mk,v 1.30 2015/04/28 21:06:32 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -36,10 +36,6 @@ PLIST.dri=	yes
 BUILDLINK_DEPMETHOD.libpciaccess=      full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../graphics/MesaLib/dri.mk"
-
-.if ${OPSYS} == "Linux"
-.include "../../multimedia/libva/buildlink3.mk"
-.endif
 
 DRI_DRIVERS=		#
 PLIST.swrast_dri=	yes
