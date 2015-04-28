@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1968 2015/04/28 15:07:20 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1969 2015/04/28 18:17:20 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/erlang-man to 17.5 [fhajny 2015-04-28]
 	Updated lang/erlang-doc to 17.5 [fhajny 2015-04-28]
 	Updated print/lilypond to 2.18.2nb4 [wiz 2015-04-28]
+	Updated wm/i3 to 4.10.2 [nros 2015-04-28]
