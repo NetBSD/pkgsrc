@@ -1,10 +1,10 @@
-$NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.2 2015/04/28 12:06:34 joerg Exp $
 
 * Support NetBSD/amd64 and DragonFly/amd64.
 
 * OS_TEST can never be powerpc.
 
---- xpcom/reflect/xptcall/src/md/unix/moz.build.orig	2014-05-06 22:56:39.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/moz.build.orig	2015-03-21 03:27:27.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/moz.build
 @@ -9,7 +9,7 @@ if CONFIG['OS_ARCH'] == 'Darwin':
          'xptcinvoke_darwin.cpp',
@@ -32,3 +32,14 @@ $NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.1 2014/11/03 12:1
     CONFIG['OS_ARCH'].startswith('GNU_'):
      if CONFIG['OS_TEST'] == 'x86_64':
          SOURCES += [
+@@ -102,8 +102,8 @@ if CONFIG['CPU_ARCH'] == 'arm' or CONFIG
+         CXXFLAGS += ['-O2']
+     elif CONFIG['OS_ARCH'] == 'NetBSD':
+         SOURCES += [
+-            'xptcinvoke_arm_netbsd.cpp',
+-            'xptcstubs_arm_netbsd.cpp',
++            'xptcinvoke_arm.cpp',
++            'xptcstubs_arm.cpp',
+         ]
+ 
+ if CONFIG['CPU_ARCH'] == 'arm' and CONFIG['OS_ARCH'] == 'OpenBSD':
