@@ -1,0 +1,18 @@
+NOTE: This module is mostly intended for module packaging frameworks to
+share a common, up-to-date MANIFEST.SKIP base. For example,
+Module::Install::ManifestSkip, uses this module to get the actual SKIP
+content. However this module may be useful for any module author.
+
+CPAN module authors use a MANIFEST.SKIP file to exclude certain well known
+files from getting put into a generated MANIFEST file, which would cause
+them to go into the final distribution package.
+
+The packaging tools try to automatically skip things for you, but if you
+add one of your own entries, you have to add all the common ones
+yourself. This module attempts to make all of this boring process as simple
+and reliable as possible.
+
+Module::Manifest::Skip can create or update a MANIFEST.SKIP file for
+you. You can add your own entries, and it will leave them alone. You can
+even tell it to not skip certain entries that it normally skips, although
+this is rarely needed.
