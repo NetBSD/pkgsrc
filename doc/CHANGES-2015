@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1964 2015/04/28 13:25:22 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1965 2015/04/28 14:34:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Module-Manifest-Skip version 0.23 [mef 2015-04-28]
 	Updated www/p5-Dancer2 to 0.160000 [wen 2015-04-28]
 	Updated math/p5-Math-FFT to 1.32 [wen 2015-04-28]
+	Updated lang/erlang to 17.5 [fhajny 2015-04-28]
