@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2009/12/15 12:09:20 asau Exp $
+# $NetBSD: hacks.mk,v 1.2 2015/04/28 14:34:20 fhajny Exp $
 
 .if !defined(ERLANG_HACKS_MK)
 ERLANG_HACKS_MK=	# empty
@@ -16,7 +16,7 @@ BUILDLINK_TRANSFORM+=	opt:-O3:-O2
 .if (${OPSYS} == "NetBSD"  || \
      ${OPSYS} == "OpenBSD" || \
      ${OPSYS} == "FreeBSD" || \
-     ${OPSYS} == "Solaris")
+     ${OPSYS} == "SunOS")
 CFLAGS+=	-DMMAP_MAP_FIXED
 .endif
 

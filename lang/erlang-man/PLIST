@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2013/10/20 18:37:49 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/04/28 14:34:20 fhajny Exp $
+lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
-lib/erlang/man/man1/diameter_compile.1
+lib/erlang/man/man1/diameterc.1
 lib/erlang/man/man1/epmd.1
 lib/erlang/man/man1/erl.1
 lib/erlang/man/man1/erl_call.1
@@ -82,7 +83,6 @@ lib/erlang/man/man3/Module_Interface.3
 lib/erlang/man/man3/alarm_handler.3
 lib/erlang/man/man3/any.3
 lib/erlang/man/man3/application.3
-lib/erlang/man/man3/appmon.3
 lib/erlang/man/man3/array.3
 lib/erlang/man/man3/asn1ct.3
 lib/erlang/man/man3/asn1rt.3
@@ -114,6 +114,7 @@ lib/erlang/man/man3/ct_ftp.3
 lib/erlang/man/man3/ct_hooks.3
 lib/erlang/man/man3/ct_master.3
 lib/erlang/man/man3/ct_netconfc.3
+lib/erlang/man/man3/ct_property_test.3
 lib/erlang/man/man3/ct_rpc.3
 lib/erlang/man/man3/ct_slave.3
 lib/erlang/man/man3/ct_snmp.3
@@ -243,6 +244,7 @@ lib/erlang/man/man3/lname.3
 lib/erlang/man/man3/lname_component.3
 lib/erlang/man/man3/log_mf_h.3
 lib/erlang/man/man3/make.3
+lib/erlang/man/man3/maps.3
 lib/erlang/man/man3/math.3
 lib/erlang/man/man3/megaco.3
 lib/erlang/man/man3/megaco_codec_meas.3
@@ -280,13 +282,14 @@ lib/erlang/man/man3/ordsets.3
 lib/erlang/man/man3/os.3
 lib/erlang/man/man3/os_mon_mib.3
 lib/erlang/man/man3/os_sup.3
+lib/erlang/man/man3/ose.3
+lib/erlang/man/man3/ose_erl_driver.3
 lib/erlang/man/man3/otp_mib.3
 lib/erlang/man/man3/overload.3
 lib/erlang/man/man3/percept.3
 lib/erlang/man/man3/percept_profile.3
 lib/erlang/man/man3/pg.3
 lib/erlang/man/man3/pg2.3
-lib/erlang/man/man3/pman.3
 lib/erlang/man/man3/pool.3
 lib/erlang/man/man3/prettypr.3
 lib/erlang/man/man3/proc_lib.3
@@ -354,15 +357,14 @@ lib/erlang/man/man3/string.3
 lib/erlang/man/man3/supervisor.3
 lib/erlang/man/man3/supervisor_bridge.3
 lib/erlang/man/man3/sys.3
+lib/erlang/man/man3/system_information.3
 lib/erlang/man/man3/systools.3
 lib/erlang/man/man3/tags.3
 lib/erlang/man/man3/test_server.3
 lib/erlang/man/man3/test_server_ctrl.3
 lib/erlang/man/man3/tftp.3
 lib/erlang/man/man3/timer.3
-lib/erlang/man/man3/toolbar.3
 lib/erlang/man/man3/ttb.3
-lib/erlang/man/man3/tv.3
 lib/erlang/man/man3/unicode.3
 lib/erlang/man/man3/unix_telnet.3
 lib/erlang/man/man3/user.3
@@ -372,6 +374,7 @@ lib/erlang/man/man3/wrap_log_reader.3
 lib/erlang/man/man3/wx.3
 lib/erlang/man/man3/wxAcceleratorEntry.3
 lib/erlang/man/man3/wxAcceleratorTable.3
+lib/erlang/man/man3/wxActivateEvent.3
 lib/erlang/man/man3/wxArtProvider.3
 lib/erlang/man/man3/wxAuiDockArt.3
 lib/erlang/man/man3/wxAuiManager.3
@@ -474,6 +477,7 @@ lib/erlang/man/man3/wxIconizeEvent.3
 lib/erlang/man/man3/wxIdleEvent.3
 lib/erlang/man/man3/wxImage.3
 lib/erlang/man/man3/wxImageList.3
+lib/erlang/man/man3/wxInitDialogEvent.3
 lib/erlang/man/man3/wxJoystickEvent.3
 lib/erlang/man/man3/wxKeyEvent.3
 lib/erlang/man/man3/wxLayoutAlgorithm.3
@@ -484,6 +488,7 @@ lib/erlang/man/man3/wxListItem.3
 lib/erlang/man/man3/wxListItemAttr.3
 lib/erlang/man/man3/wxListView.3
 lib/erlang/man/man3/wxListbook.3
+lib/erlang/man/man3/wxLocale.3
 lib/erlang/man/man3/wxLogNull.3
 lib/erlang/man/man3/wxMDIChildFrame.3
 lib/erlang/man/man3/wxMDIClientWindow.3
@@ -516,6 +521,8 @@ lib/erlang/man/man3/wxPanel.3
 lib/erlang/man/man3/wxPasswordEntryDialog.3
 lib/erlang/man/man3/wxPen.3
 lib/erlang/man/man3/wxPickerBase.3
+lib/erlang/man/man3/wxPopupTransientWindow.3
+lib/erlang/man/man3/wxPopupWindow.3
 lib/erlang/man/man3/wxPostScriptDC.3
 lib/erlang/man/man3/wxPreviewCanvas.3
 lib/erlang/man/man3/wxPreviewControlBar.3
@@ -612,6 +619,7 @@ lib/erlang/man/man6/erl_docgen.6
 lib/erlang/man/man6/kernel.6
 lib/erlang/man/man6/observer.6
 lib/erlang/man/man6/os_mon.6
+lib/erlang/man/man6/ose.6
 lib/erlang/man/man6/runtime_tools.6
 lib/erlang/man/man6/sasl.6
 lib/erlang/man/man6/snmp.6
