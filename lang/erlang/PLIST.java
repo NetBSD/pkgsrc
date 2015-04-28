@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.9 2011/04/14 19:34:07 asau Exp $
+@comment $NetBSD: PLIST.java,v 1.10 2015/04/28 14:34:20 fhajny Exp $
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Any.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHelper.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHolder.java
@@ -28,6 +28,8 @@ lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TermHelper.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TermHolder.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TypeCode.java
 lib/erlang/lib/ic-${VERSION.ic}/priv/ic.jar
+lib/erlang/lib/jinterface-${VERSION.jinterface}/ebin/jinterface.app
+lib/erlang/lib/jinterface-${VERSION.jinterface}/ebin/jinterface.appup
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/AbstractConnection.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/AbstractNode.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/GenericQueue.java
@@ -54,6 +56,7 @@ lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangList.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangLong.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangObject.java
+lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangMap.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangPid.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangPort.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangRangeException.java
