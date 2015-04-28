@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/01/28 02:02:24 mef Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/28 04:14:04 mef Exp $
 
 DISTNAME=		Test-CleanNamespaces-0.18
 PKGNAME=		p5-${DISTNAME}
@@ -16,6 +16,12 @@ DEPENDS+=	p5-Role-Tiny>=0:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-Package-Stash-XS>=0:../../devel/p5-Package-Stash-XS
 
 BUILD_DEPENDS+=	p5-Test-Warnings>=0:../../devel/p5-Test-Warnings
+# for make test
+BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Sub-Identify-[0-9]*:../../devel/p5-Sub-Identify
+#UILD_DEPENDS+=	p5-Class-MOP-[0-9]*:../../devel/p5-Class-MOP
 
 PERL5_PACKLIST=		auto/Test/CleanNamespaces/.packlist
 
