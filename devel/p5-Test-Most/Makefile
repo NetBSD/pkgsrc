@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/11/23 14:29:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2015/04/28 06:59:22 mef Exp $
 #
 
 DISTNAME=	Test-Most-0.34
@@ -21,6 +21,9 @@ DEPENDS+=	p5-Test-Warn>=0.23:../../devel/p5-Test-Warn
 
 # recommended
 DEPENDS+=	p5-Data-Dumper-Names>=0.03:../../devel/p5-Data-Dumper-Names
+
+# for make test
+BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Most/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/09 15:20:32 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/28 06:59:22 mef Exp $
 
 DISTNAME=	MetaCPAN-API-0.50
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,9 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-TinyMocker-[0-9]*:../../devel/p5-Test-TinyMocker
+
+# for make test
+BUILD_DEPENDS+=	p5-Types-Starndard-[0-9]*:../../devel/p5-Types-Standard
 
 PERL5_PACKLIST=		auto/MetaCPAN/API/.packlist
 
