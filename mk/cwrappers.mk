@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.23 2015/04/27 19:59:07 jperkin Exp $
+# $NetBSD: cwrappers.mk,v 1.24 2015/04/28 21:08:34 jperkin Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -67,7 +67,6 @@ generate-cwrappers: ${_target_}
 .endfor
 
 generate-cwrappers:
-	${RUN}${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${WRAPPER_BINDIR}
 .for wrappee in as cxx cc cpp f77 imake ld libtool shlibtool
 	${RUN}echo worklog=${WRKLOG:Q} > ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo wrksrc=${WRKSRC:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
@@ -123,12 +122,15 @@ ${_COOKIE.wrapper}: real-wrapper
 .endif
 
 .PHONY: real-wrapper
-real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
+real-wrapper: wrapper-message wrapper-dirs wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
 
 .PHONY: wrapper-message
-
 wrapper-message:
 	@${PHASE_MSG} "Creating toolchain wrappers for ${PKGNAME}"
+
+.PHONY: wrapper-dirs
+wrapper-dirs:
+	${RUN}${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${WRAPPER_BINDIR}
 
 .PHONY: pre-wrapper do-wrapper post-wrapper
 
