@@ -1,0 +1,8 @@
+Modules often have optional requirements, for example dependencies that are
+useful for (optional) tests, but not required for the module to work
+properly.
+
+Usually you want all developers of a project to have these optional modules
+installed. However, simply telling everyone or printing diagnostic messages
+if optional dependencies are missing often isn't enough to make sure all
+authors have all optional modules installed.
