@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2092 2015/04/28 06:54:55 mef Exp $
+# $NetBSD: Makefile,v 1.2093 2015/04/28 12:21:23 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1076,6 +1076,7 @@ SUBDIR+=	p5-Module-Find
 SUBDIR+=	p5-Module-Implementation
 SUBDIR+=	p5-Module-Install
 SUBDIR+=	p5-Module-Install-AuthorTests
+SUBDIR+=	p5-Module-Install-AuthorRequires
 SUBDIR+=	p5-Module-Install-GithubMeta
 SUBDIR+=	p5-Module-Install-ManifestSkip
 SUBDIR+=	p5-Module-Install-PadrePlugin
@@ -1086,6 +1087,7 @@ SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Install-XSUtil
 SUBDIR+=	p5-Module-Load
 SUBDIR+=	p5-Module-Manifest
+SUBDIR+=	p5-Module-Manifest-Skip
 SUBDIR+=	p5-Module-Metadata
 SUBDIR+=	p5-Module-Pluggable
 SUBDIR+=	p5-Module-Refresh
