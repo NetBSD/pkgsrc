@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1966 2015/04/28 14:35:17 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1967 2015/04/28 14:35:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3134,3 +3134,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/p5-Math-FFT to 1.32 [wen 2015-04-28]
 	Updated lang/erlang to 17.5 [fhajny 2015-04-28]
 	Updated lang/erlang-man to 17.5 [fhajny 2015-04-28]
+	Updated lang/erlang-doc to 17.5 [fhajny 2015-04-28]
