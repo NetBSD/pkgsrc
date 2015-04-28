@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/10/18 11:41:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/28 14:34:20 fhajny Exp $
 
-DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
-PKGNAME=		erlang-doc-${ERLANG_VERSION}
+DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
+PKGNAME=		${DISTNAME:S/otp_doc_html_/erlang-doc-/}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -12,7 +12,7 @@ COMMENT=		Documentation for Erlang, a concurrent functional programming language
 DIST_SUBDIR=		erlang
 
 # needs erlang installed for its directory structure
-DEPENDS+=		erlang-${ERLANG_VERSION}{,nb*}:../../lang/erlang
+DEPENDS+=		erlang-${PKGVERSION_NOREV}{,nb*}:../../lang/erlang
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
