@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1958 2015/04/28 00:49:00 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1959 2015/04/28 01:08:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3125,3 +3125,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/p5-LaTeX-Driver to 0.200.4 [mef 2015-04-27]
 	Updated devel/p5-File-ConfigDir to 0.017 [mef 2015-04-28]
 	Updated devel/p5-MooX-ConfigFromFile to 0.007 [mef 2015-04-28]
+	Updated shells/posh to 0.12.4 [mef 2015-04-28]
