@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/04/09 01:10:30 mef Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/28 06:59:22 mef Exp $
 
 DISTNAME=	Devel-Declare-0.006018
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 BUILD_DEPENDS+= p5-B-Compiling-[0-9]*:../../devel/p5-B-Compiling # t/lines.t
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+= p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+# for make test
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Devel/Declare/.packlist
