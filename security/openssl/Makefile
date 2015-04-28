@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2015/04/19 09:02:02 tnn Exp $
+# $NetBSD: Makefile,v 1.206 2015/04/28 14:38:45 tnn Exp $
 
 DISTNAME=	openssl-1.0.2a
 CATEGORIES=	security
@@ -107,7 +107,7 @@ SUBST_SED.soname=	-e 's/-Wl,-soname=/-Wl,-h,/g'
 .elif ${OPSYS} == "HPUX"
 CONFIGURE_SCRIPT=	./Configure
 .  if defined(ABI) && ${ABI} == "64"
-.    if ${MACHINE_ARCH} == "hppa"
+.    if ${MACHINE_ARCH} == "hppa64"
 CONFIGURE_ARGS+=	hpux64-parisc2-${CC}
 .    else
 CONFIGURE_ARGS+=	hpux64-ia64-${CC}
