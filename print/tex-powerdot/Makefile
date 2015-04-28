@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/04/27 07:15:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/28 20:08:35 markd Exp $
 
 DISTNAME=	powerdot
 PKGNAME=	tex-${DISTNAME}-1.5
 TEXLIVE_REV=	32549
 
-MAINTAINER=	pkgsrc-users@NetBSD,org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	A presentation class
 LICENSE=	lppl-1.3c
 
