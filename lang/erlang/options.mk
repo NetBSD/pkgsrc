@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/04/24 18:25:54 hiramatsu Exp $
+# $NetBSD: options.mk,v 1.8 2015/04/28 14:34:20 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -23,6 +23,7 @@ PKG_SUPPORTED_OPTIONS+=	dtrace
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_SRC=	${PLIST_SRC_DFLT}
 PLIST_VARS+=	odbc dtrace
 
 .if !empty(PKG_OPTIONS:Mjava)

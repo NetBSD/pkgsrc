@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2015/04/26 11:52:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2015/04/28 14:34:20 fhajny Exp $
 
-DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
-PKGREVISION=		5
-PKGNAME=		erlang-${ERLANG_VERSION}
+DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
+PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -12,9 +11,6 @@ COMMENT=		Concurrent functional programming language
 LICENSE=		erlang-public-license
 
 DIST_SUBDIR=		erlang
-WRKSRC=			$(WRKDIR)/otp_src_${DIST_VERSION_MAJOR}
-
-MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
@@ -50,13 +46,13 @@ REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
 REPLACE.escript.new=	${LOCALBASE}/bin/escript
 REPLACE_FILES.escript=	\
-	lib/reltool/examples/display_args \
-	lib/reltool/examples/mnesia_core_dump_viewer \
-	lib/snmp/src/compile/snmpc.src \
+	lib/diameter/bin/diameterc \
 	lib/erl_docgen/priv/bin/codeline_preprocessing.escript \
 	lib/erl_docgen/priv/bin/xml_from_edoc.escript \
+	lib/reltool/examples/display_args \
+	lib/reltool/examples/mnesia_core_dump_viewer \
 	lib/snmp/bin/snmpc \
-	lib/diameter/bin/diameterc
+	lib/snmp/src/compile/snmpc.src
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
@@ -69,12 +65,6 @@ TEST_MAKE_FLAGS=	ERL_TOP=${WRKSRC}
 REPLACE_PERL+=		make/make_emakefile
 
 SMF_NAME=		epmd
-
-PLIST_SRC=		PLIST
-
-.if exists(${.CURDIR}/PLIST.${OPSYS})
-PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
-.endif
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-sctp
