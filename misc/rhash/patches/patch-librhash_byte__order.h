@@ -1,4 +1,7 @@
-$NetBSD: patch-librhash_byte__order.h,v 1.1 2015/02/23 18:26:12 joerg Exp $
+$NetBSD: patch-librhash_byte__order.h,v 1.2 2015/04/28 01:17:11 mef Exp $
+
+Use bswap builtins for clang. Prefer builtin over inline assembler.
+Recognize BSDish endian macros.
 
 --- librhash/byte_order.h.orig	2015-02-22 21:07:44.000000000 +0000
 +++ librhash/byte_order.h
