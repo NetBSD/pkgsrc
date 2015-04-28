@@ -40,3 +40,12 @@ Libtool:
 
 - Drop -L, -l, -Wl,* if not in link mode
   -> see first point
+
+rpath aggregation:
+
+- OSF1 and HP-UX ld(1) do not support multiple -rpath or +b. Any such instances
+  need to be transformed to a colon-separated list. Example:
+
+  -Wl,-rpath -Wl,/dir1 -Wl,-rpath -Wl,/dir2 --> -Wl,+b -Wl,/dir1:/dir2
+
+  See cmd-sink-{hpux,osf1}-{ld,cc} in classic wrappers for more information.
