@@ -1,0 +1,18 @@
+$NetBSD: patch-mozglue_build_Makefile.in,v 1.1 2015/04/28 12:06:34 joerg Exp $
+
+--- mozglue/build/Makefile.in.orig	2015-04-11 09:28:37.000000000 +0000
++++ mozglue/build/Makefile.in
+@@ -83,13 +83,6 @@ ifeq (android, $(MOZ_WIDGET_TOOLKIT))
+ EXTRA_DSO_LDOPTS += -Wl,--wrap=pthread_atfork
+ endif
+ 
+-ifdef MOZ_LINKER
+-ifeq (arm, $(TARGET_CPU))
+-EXTRA_DSO_LDOPTS += -Wl,-version-script,$(srcdir)/arm-eabi-filter
+-endif
+-
+-endif
+-
+ ifeq (Android, $(OS_TARGET))
+ WRAP_LDFLAGS := $(filter -Wl%,$(WRAP_LDFLAGS))
+ endif
