@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/02/13 11:12:23 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/28 01:27:40 mef Exp $
 
 DISTNAME=	libcec-2.2.0-repack
-PKGNAME=	libcec-2.2.0
+PKGNAME=	${DISTNAME:S/-repack//}
 CATEGORIES=	misc
-MASTER_SITES=	https://github.com/Pulse-Eight/libcec/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Pulse-Eight/}
+GITHUB_PROJECT=	libcec
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcec.pulse-eight.com/
