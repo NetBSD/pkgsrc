@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.21 2015/04/29 18:41:54 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.22 2015/04/29 21:27:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -81,3 +81,18 @@ Pullup ticket #4702 - requested by manu
 devel/gnustep-make: build fix
 Pullup ticket #4706 - requested by roy
 net/dnsmasq: security patch
+Pullup ticket #4696 - requested by spz
+textproc/libxml2: security patch
+Pullup ticket #4697 - requested by spz
+x11/xlockmore: security update
+x11/xlockmore-lite: security update
+Pullup ticket #4698 - requested by spz
+sysutils/xenkernel41: security patch
+sysutils/xenkernel42: security patch
+sysutils/xenkernel45: security patch
+Pullup ticket #4699 - requested by spz
+sysutils/xenkernel45: security patch
+Pullup ticket #4703 - requested by spz
+databases/gnats: security update
+Pullup ticket #4705 - requested by spz
+www/curl: security update
