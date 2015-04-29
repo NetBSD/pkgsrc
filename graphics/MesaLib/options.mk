@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2015/04/28 21:06:32 tnn Exp $
+# $NetBSD: options.mk,v 1.31 2015/04/29 14:36:36 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -33,9 +33,22 @@ PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 CONFIGURE_ARGS+=	--disable-glx-tls
 
 PLIST.dri=	yes
+
 BUILDLINK_DEPMETHOD.libpciaccess=      full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../graphics/MesaLib/dri.mk"
+
+# Linux supports dri3
+.if ${OPSYS} == "Linux"
+.include "../../x11/dri3proto/buildlink3.mk"
+.include "../../x11/presentproto/buildlink3.mk"
+.include "../../x11/libxshmfence/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dri3
+# DRI on Linux needs either sysfs or udev
+CONFIGURE_ARGS+=	--enable-sysfs
+.else
+CONFIGURE_ARGS+=	--disable-dri3
+.endif
 
 DRI_DRIVERS=		#
 PLIST.swrast_dri=	yes
