@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1976 2015/04/29 15:55:46 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.1977 2015/04/29 20:31:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/p5-LaTeX-Encode to 0.091.6 [mef 2015-04-29]
 	Updated textproc/p5-Text-CSV_XS to 1.17 [mef 2015-04-29]
 	Added x11/libxshmfence version 1.2 [tnn 2015-04-29]
+	Updated emulators/qemu to 2.3.0 [ryoon 2015-04-29]
