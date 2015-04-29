@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1971 2015/04/29 10:04:11 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1972 2015/04/29 11:24:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3139,3 +3139,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated wm/i3 to 4.10.2 [nros 2015-04-28]
 	Updated time/ocaml-calendar to 2.04 [jaapb 2015-04-29]
 	Updated chat/ejabberd to 15.04 [fhajny 2015-04-29]
+	Updated devel/pcre to 8.37 [mef 2015-04-29]
