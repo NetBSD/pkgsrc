@@ -1,10 +1,20 @@
-$NetBSD: patch-ab,v 1.2 2014/12/08 14:04:57 mef Exp $
+$NetBSD: patch-ab,v 1.3 2015/04/29 15:55:47 christos Exp $
 
-Add NetBSD Path
+Add NetBSD Path, and include stdlib.h for everyone (malloc)
 
---- chklastlog.c.orig	2014-05-06 19:12:14.000000000 +0900
-+++ chklastlog.c	2014-12-08 22:32:03.000000000 +0900
-@@ -59,6 +59,10 @@
+--- chklastlog.c.orig	2014-05-06 06:12:14.000000000 -0400
++++ chklastlog.c	2015-04-29 10:23:02.000000000 -0400
+@@ -37,9 +37,7 @@
+ int main () { return 0; }
+ #else
+ #include <stdio.h>
+-#ifdef __linux__
+ #include <stdlib.h>
+-#endif
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <string.h>
+@@ -59,6 +57,10 @@
  #define WTMP_FILENAME "/var/log/wtmp"
  #define LASTLOG_FILENAME "/var/log/lastlog"
  #endif
