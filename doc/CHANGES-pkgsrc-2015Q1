@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.19 2015/04/27 22:02:58 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.20 2015/04/29 15:41:36 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -73,3 +73,9 @@ Pullup ticket #4688 - requested by joerg
 print/pdf2djvu: build fix
 Pullup ticket #4689 - requested by dholland
 net/socat: build fix
+Pullup ticket #4700 - requested by manu
+sysutils/coreutils: build fix
+Pullup ticket #4701 - requested by manu
+devel/gnustep-objc: build fix
+Pullup ticket #4702 - requested by manu
+devel/gnustep-make: build fix
