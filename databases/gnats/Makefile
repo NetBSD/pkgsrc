@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/04/29 07:51:50 spz Exp $
+# $NetBSD: Makefile,v 1.41 2015/04/29 21:21:22 tron Exp $
 
 DISTNAME=	gnats-4.2.0
 CATEGORIES=	databases
@@ -15,6 +15,7 @@ USE_TOOLS+=		gm4 gmake makeinfo bison
 TEXINFO_REQD+=		4.6
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
