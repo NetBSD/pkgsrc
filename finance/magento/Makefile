@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/12 12:52:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/29 14:11:09 fhajny Exp $
 
 DISTNAME=	magento-1.9.1.0
+PKGREVISION=	1
 CATEGORIES=	www finance
 MASTER_SITES=	http://www.magentocommerce.com/downloads/assets/${PKGVERSION_NOREV}/
 
@@ -8,6 +9,11 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.magentocommerce.com/
 COMMENT=	Feature-rich eCommerce platform
 LICENSE=	osl
+
+DIST_SUBDIR=	magento
+PATCH_SITES=	http://www.magentocommerce.com/downloads/assets/ce_patches/
+PATCHFILES=	PATCH_SUPEE-4829_EE_1.14.1.0_v1.sh
+PATCHFILES+=	PATCH_SUPEE-5344_CE_1.8.0.0_v1.sh
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
@@ -23,7 +29,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 WRKSRC=		${WRKDIR}/magento
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax
+USE_TOOLS+=	date pax
 NO_BUILD=	yes
 
 .include "../../lang/php/phpversion.mk"
@@ -49,6 +55,9 @@ MODULEFILES=	Cm_RedisSession.xml Mage_All.xml Mage_Api.xml Mage_Api2.xml	\
 		Mage_Persistent.xml Mage_Weee.xml Mage_Widget.xml		\
 		Mage_XmlConnect.xml Phoenix_Moneybookers.xml
 
+CONF_FILES_PERMS+=	share/examples/magento/applied.patches.list		\
+			${PKG_SYSCONFDIR}/applied.patches.list			\
+			${MAGENTO_OWN} ${MAGENTO_GRP} 0640
 CONF_FILES_PERMS+=	share/examples/magento/local.xml.template		\
 			${PKG_SYSCONFDIR}/local.xml.template			\
 			${MAGENTO_OWN} ${MAGENTO_GRP} 0640
@@ -67,6 +76,13 @@ PKG_SYSCONFSUBDIR=	magento
 PKG_SYSCONFDIR_PERMS=	${MAGENTO_OWN} ${MAGENTO_GRP} 0750
 MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/modules ${MAGENTO_OWN} ${MAGENTO_GRP} 0750
 OWN_DIRS_PERMS+=	${MAGENTO_DIR} ${MAGENTO_OWN} ${MAGENTO_GRP} 0750
+
+# Make note of the patches applied, same way the upstream patch scripts do
+post-patch:
+.for file in ${PATCHFILES}
+	${ECHO_N} `${DATE} -u +"%F %T UTC"`' | ' >> ${WRKSRC}/app/etc/applied.patches.list
+	${GREP} '^SUPEE-' ${DISTDIR}/${DIST_SUBDIR}/${file} >> ${WRKSRC}/app/etc/applied.patches.list
+.endfor
 
 do-install:
 	cd ${WRKSRC} && pax -rw -p pp * ${DESTDIR}${PREFIX}/share/magento
