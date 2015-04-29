@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.102 2015/03/13 09:09:12 ryoon Exp $
+$NetBSD: distinfo,v 1.103 2015/04/29 20:30:53 ryoon Exp $
 
-SHA1 (qemu-2.2.1.tar.bz2) = 4d1cefc9861fb90979497e8c0bffd223103aa240
-RMD160 (qemu-2.2.1.tar.bz2) = 53430a4cc637f6579cce2e29cb72f3af292c793b
-Size (qemu-2.2.1.tar.bz2) = 24483500 bytes
+SHA1 (qemu-2.3.0.tar.bz2) = 373d74bfafce1ca45f85195190d0a5e22b29299e
+RMD160 (qemu-2.3.0.tar.bz2) = cb203bf3faa316c9eb4ceeb975441deab6f9b2f7
+Size (qemu-2.3.0.tar.bz2) = 24683085 bytes
 SHA1 (patch-configure) = 2d0d2549056c9f53a932b236ed4d69a5ee58a856
 SHA1 (patch-ef) = 6e57de87f91067e8a9a1388c91133a31b3582b3a
 SHA1 (patch-et) = 036e1a254ce40df635dfb6107d2707879467e127
@@ -13,5 +13,4 @@ SHA1 (patch-hw_ppc_mac__newworld.c) = 9a0ec3ba0b6da2879fdaba6a7937fb16a02685f5
 SHA1 (patch-hw_ppc_mac__oldworld.c) = 46322c77c87be6d517c43466325c344db99cd463
 SHA1 (patch-memory.c) = 14df9c835ca318fc79a8d3a46bb94d2f229277cc
 SHA1 (patch-slirp_tcp__subr.c) = cfc8289384fa987289e32b64532c13a83a890820
-SHA1 (patch-tests_Makefile) = 81fe639ce1b04302f53024343fdf1f6fd5d5fedb
-SHA1 (patch-user-exec.c) = 9090d368b31c70a81af4e8b08d0267c597ff248e
+SHA1 (patch-tests_Makefile) = 44ec206f8061274d0c0a7ca0d4a3e2dbe936fafa
