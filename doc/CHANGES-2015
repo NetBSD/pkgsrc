@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1969 2015/04/28 18:17:20 nros Exp $
+$NetBSD: CHANGES-2015,v 1.1970 2015/04/29 09:37:59 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3137,3 +3137,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/erlang-doc to 17.5 [fhajny 2015-04-28]
 	Updated print/lilypond to 2.18.2nb4 [wiz 2015-04-28]
 	Updated wm/i3 to 4.10.2 [nros 2015-04-28]
+	Updated time/ocaml-calendar to 2.04 [jaapb 2015-04-29]
