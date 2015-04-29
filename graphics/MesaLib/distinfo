@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.90 2015/04/25 11:19:18 tnn Exp $
+$NetBSD: distinfo,v 1.91 2015/04/29 14:12:54 sevan Exp $
 
 SHA1 (mesa-10.5.3.tar.xz) = 16ae80abe85b29fa118e1910a224c883964ae6c0
 RMD160 (mesa-10.5.3.tar.xz) = 017492351cb3956d3b36eb7c22ad99846b77f7a2
@@ -16,7 +16,7 @@ SHA1 (patch-src_gallium_include_pipe_p__config.h) = 1698482bb7b468c6fa5f9bb553f9
 SHA1 (patch-src_gallium_targets_dri_Makefile.in) = a9a8265d97297040a3e3260b362ca920ec852280
 SHA1 (patch-src_gallium_winsys_radeon_drm_radeon__drm__winsys.c) = 2358b7d5ea89e28cb3ac07a408b18e8bf55e057a
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen.c) = 4b2ae565377b1a0396c8bf6b2663c261592b8e5e
-SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = 2cc53b390af6ba71dc6b5acaf30c158729e0a784
+SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = f889b19d2ef080a82502fffc4da87fbe7d079745
 SHA1 (patch-src_gbm_main_gbm.c) = 70225ab7352f123c9efc68b6d4ff0d9675b6f9dc
 SHA1 (patch-src_glsl_ralloc.c) = 7443d00ff05ee1e1dcfa2b76972b55abadebcad8
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = c722ce4a22911d9a3d04e1a4fd6ab1a5ddd81cf0
