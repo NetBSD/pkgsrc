@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2012 2015/04/27 19:59:07 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2013 2015/04/29 14:23:23 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -407,7 +407,7 @@ ${FAKEHOMEDIR}:
 	${RUN} ${MKDIR} ${.TARGET}
 
 # Use C-based wrappers or legacy shell versions.
-.if ${USE_CWRAPPERS:tl} != "no"
+.if ${_USE_CWRAPPERS} == "yes"
 .include "cwrappers.mk"
 .else
 .include "wrapper/bsd.wrapper.mk"
