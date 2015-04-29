@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2014/11/23 13:16:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.26.4.1 2015/04/29 18:40:55 spz Exp $
 #
 
 DISTNAME=		dnsmasq-2.67
-PKGREVISION=		1
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
-MAINTAINER=		roy@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.thekelleys.org.uk/dnsmasq/doc.html
 COMMENT=		Lightweight, easy to configure DNS forwarder
 LICENSE=		gnu-gpl-v3
