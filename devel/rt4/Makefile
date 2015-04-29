@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/03/01 21:25:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2015/04/29 07:59:53 manu Exp $
 
 DISTNAME=	rt-4.2.10
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -181,7 +181,6 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--enable-layout=pkgsrc
 CONFIGURE_ARGS+=	--with-db-type=${RT_DB_TYPE}
-CONFIGURE_ARGS+=	--with-my-user-group
 
 RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
 
