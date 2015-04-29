@@ -1,4 +1,4 @@
-# $NetBSD: wrapper-defs.mk,v 1.4 2015/04/28 21:15:01 jperkin Exp $
+# $NetBSD: wrapper-defs.mk,v 1.5 2015/04/29 14:23:23 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,7 +37,7 @@
 .if !defined(WRAPPER_DEFS_MK)
 WRAPPER_DEFS_MK=	defined
 
-.if ${USE_CWRAPPERS:tl} != "no"
+.if ${_USE_CWRAPPERS} == "yes"
 WRAPPER_DIR=		${WRKDIR}/.cwrapper
 WRAPPER_BINDIR=		${WRAPPER_DIR}/bin
 .else
