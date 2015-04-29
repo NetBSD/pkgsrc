@@ -1,4 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2013/06/16 10:11:58 shattered Exp $
+$NetBSD: patch-ad,v 1.3 2015/04/29 15:55:47 christos Exp $
+
+- Add NetBSD to the list of OS's
+- Handle a false positive for NetBSD's netstat
 
 --- chkrootkit.orig	2009-07-30 14:10:54.000000000 +0000
 +++ chkrootkit
@@ -20,3 +23,18 @@ $NetBSD: patch-ad,v 1.2 2013/06/16 10:11:58 shattered Exp $
        files=""
        if [ "${QUIET}" != "t" ];then printn "Searching for OBSD rk v1... "; fi
        files=`${find} ${ROOTDIR}usr/lib/security 2>/dev/null`
+@@ -1599,7 +1599,13 @@
+ 
+ chk_netstat () {
+     STATUS=${NOT_INFECTED}
+-NETSTAT_I_L="/dev/hdl0/dev/xdta|/dev/ttyoa|/dev/pty[pqrsx]|/dev/cui|/dev/hdn0|/dev/cui221|/dev/dszy|/dev/ddth3|/dev/caca|^/prof|/dev/tux|grep|addr\.h|__bzero"
++NETSTAT_I_L="/dev/hdl0/dev/xdta|/dev/ttyoa|/dev/pty[pqrsx]|/dev/cui|/dev/hdn0|/dev/cui221|/dev/dszy|/dev/ddth3|/dev/caca|^/prof|/dev/tux|addr\.h|__bzero"
++
++    case "${SYSTEM}"  in
++    NetBSD)	;;	# NetBSD contains "mobile_regreply"
++    *)	NETSTAT_I_L="${NETSTAT_I_L}|grep";;
++    esac
++
+     CMD=`loc netstat netstat $pth`
+ 
+     if [ "${EXPERT}" = "t" ]; then
