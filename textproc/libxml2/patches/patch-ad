@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.17 2005/07/12 21:15:21 recht Exp $
+$NetBSD: patch-ad,v 1.17.82.1 2015/04/29 20:35:49 tron Exp $
 
---- xmlcatalog.c.orig	2005-01-04 15:49:48.000000000 +0100
+--- xmlcatalog.c.orig	2014-10-03 11:28:06.000000000 +0000
 +++ xmlcatalog.c
 @@ -43,7 +43,7 @@ static char *filename = NULL;
  
