@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2015/04/25 11:47:03 tnn Exp $
+# $NetBSD: options.mk,v 1.11 2015/04/29 15:11:02 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	dri inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dri dtrace
+PLIST_VARS+=		dri dri3 dtrace
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
@@ -20,6 +20,15 @@ PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx
+# Linux supports dri3
+.  if ${OPSYS} == "Linux"
+PLIST.dri3=		yes
+.include "../../x11/dri3proto/buildlink3.mk"
+.include "../../x11/libxshmfence/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dri3
+.  else
+CONFIGURE_ARGS+=	--disable-dri3
+.  endif
 .else
 ###
 ### XXX Perhaps we should allow for a built-in glx without dri enabled?
