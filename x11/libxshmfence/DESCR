@@ -1,0 +1,12 @@
+This library offers a CPU-based synchronization primitive compatible
+with the X SyncFence objects that can be shared between processes
+using file descriptor passing.
+
+There are three underlying implementations:
+
+ 1) On Linux, the library uses futexes
+
+ 2) On FreeBSD, the library uses umtx
+
+ 3) On other systems, the library uses posix mutexes and condition
+    variables.
