@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2012/08/12 17:40:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/29 09:37:40 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/calendar
 lib/ocaml/site-lib/calendar/META
 lib/ocaml/site-lib/calendar/calendar.mli
 lib/ocaml/site-lib/calendar/calendarLib.a
-${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cma
+${PLIST.ocaml-opt}lib/ocaml/site-lib/calendar/calendarLib.cma
 lib/ocaml/site-lib/calendar/calendarLib.cmi
 lib/ocaml/site-lib/calendar/calendarLib.cmo
-${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cmx
-${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cmxa
-${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cmxs
-${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.o
+${PLIST.ocaml-opt}lib/ocaml/site-lib/calendar/calendarLib.cmx
+${PLIST.ocaml-opt}lib/ocaml/site-lib/calendar/calendarLib.cmxa
+${PLIST.ocaml-opt}lib/ocaml/site-lib/calendar/calendarLib.cmxs
+${PLIST.ocaml-opt}lib/ocaml/site-lib/calendar/calendarLib.o
 lib/ocaml/site-lib/calendar/calendar_builder.mli
 lib/ocaml/site-lib/calendar/calendar_sig.mli
 lib/ocaml/site-lib/calendar/date.mli
