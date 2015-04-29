@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2015/04/09 06:35:53 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.31 2015/04/29 10:03:58 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -36,7 +36,6 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_frontend_socket.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_hooks.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_bind.beam
-lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_poll.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_ws.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_listener.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_local.beam
@@ -51,6 +50,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_regexp.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_riak_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router_multicast.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_in.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_out.beam
@@ -143,6 +143,7 @@ lib/erlang/lib/${PKGNAME}/ebin/lager_transform.beam
 lib/erlang/lib/${PKGNAME}/ebin/lager_trunc_io.beam
 lib/erlang/lib/${PKGNAME}/ebin/lager_util.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_adhoc.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_admin_extra.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps.beam
@@ -160,8 +161,10 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_irc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_irc_connection.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_last.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_muc_admin.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc_log.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc_room.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_multicast.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_offline.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_ping.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_pres_counter.beam
@@ -173,7 +176,6 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_service.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_sm.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_stream.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_pubsub.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_pubsub_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register_web.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_roster.beam
@@ -243,6 +245,7 @@ lib/erlang/lib/${PKGNAME}/ebin/pgsql_tcp.beam
 lib/erlang/lib/${PKGNAME}/ebin/pgsql_util.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_db_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_index.beam
+lib/erlang/lib/${PKGNAME}/ebin/pubsub_migrate.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/randoms.beam
