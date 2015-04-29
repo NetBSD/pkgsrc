@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1974 2015/04/29 14:11:25 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.1975 2015/04/29 15:21:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3144,3 +3144,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-FindDependencies to 2.43 [mef 2015-04-29]
 	Updated devel/p5-Want to 0.26 [mef 2015-04-29]
 	Updated finance/magento to 1.9.1.0nb1 [fhajny 2015-04-29]
+	Updated textproc/p5-Text-Autoformat to 1.669006 [mef 2015-04-29]
+	Updated textproc/p5-Text-CSV to 1.33 [mef 2015-04-29]
+	Updated print/p5-LaTeX-Encode to 0.091.6 [mef 2015-04-29]
+	Updated textproc/p5-Text-CSV_XS to 1.17 [mef 2015-04-29]
