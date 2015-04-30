@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1984 2015/04/30 05:04:49 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1985 2015/04/30 08:16:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3166,3 +3166,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-SharedFork to 0.31 [mef 2015-04-30]
 	Updated textproc/p5-Text-Format to 0.59 [mef 2015-04-30]
 	Updated textproc/p5-Text-Hunspell to 2.10 [mef 2015-04-30]
+	Updated databases/py-mysql-connector to 2.0.4 [adam 2015-04-30]
