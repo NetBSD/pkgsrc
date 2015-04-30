@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2014/11/29 03:23:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/30 00:18:23 ryoon Exp $
 
-GLVER=		3.6.2
+GLVER=		3.6.3
 DISTNAME=	gitolite-${GLVER}
 CATEGORIES=	devel net
-MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v${GLVER}.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=sitaramc/}
+GITHUB_PROJECT=	gitolite
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sitaramc/gitolite/wiki
