@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/30 04:40:29 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/30 04:41:51 mef Exp $
 
 DISTNAME=	MetaCPAN-Client-1.013000
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MICKEY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/MetaCPAN::Client
-COMMENT=	A comprehensive, DWIM-featured client to the MetaCPAN API
+COMMENT=	Comprehensive, DWIM-featured client to the MetaCPAN API
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
