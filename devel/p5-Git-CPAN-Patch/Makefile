@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/02/06 05:48:56 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/30 04:51:02 mef Exp $
 
-DISTNAME=	Git-CPAN-Patch-2.0.3
+DISTNAME=	Git-CPAN-Patch-2.0.4
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
@@ -11,8 +11,6 @@ COMMENT=	Patch CPAN modules using Git
 LICENSE=	${PERL5_LICENSE}
 
 REPLACE_PERL=	bin/git-cpan
-
-PERL5_MODULE_TYPE=	Module::Build
 
 DEPENDS+=	p5-Archive-Any-[0-9]*:../../archivers/p5-Archive-Any
 DEPENDS+=	p5-BackPAN-Index>=0.39:../../devel/p5-BackPAN-Index
@@ -35,6 +33,13 @@ DEPENDS+=	p5-MooseX-Role-Tempdir-[0-9]*:../../devel/p5-MooseX-Role-Tempdir
 DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww # LWP::UserAgent
+
+# for make test
+BUILD_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+BUILD_DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
+BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+BUILD_DEPENDS+=	p5-MetaCPAN-Client-[0-9]*:../../devel/p5-MetaCPAN-Client
+BUILD_DEPENDS+=	p5-Data-Printer-[0-9]*:../../devel/p5-Data-Printer
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Git/CPAN/Patch/.packlist
