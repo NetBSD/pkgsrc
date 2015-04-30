@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.607 2015/04/27 12:36:48 markd Exp $
+# $NetBSD: Makefile,v 1.608 2015/04/30 08:41:37 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -190,6 +190,7 @@ SUBDIR+=	tex-advdate
 SUBDIR+=	tex-advdate-doc
 SUBDIR+=	tex-aeguill
 SUBDIR+=	tex-aeguill-doc
+SUBDIR+=	tex-aleph
 SUBDIR+=	tex-algorithm2e
 SUBDIR+=	tex-algorithm2e-doc
 SUBDIR+=	tex-algorithmicx
@@ -425,6 +426,7 @@ SUBDIR+=	tex-hyphen-croatian
 SUBDIR+=	tex-hyphen-czech
 SUBDIR+=	tex-hyphen-danish
 SUBDIR+=	tex-hyphen-dutch
+SUBDIR+=	tex-hyphen-english
 SUBDIR+=	tex-hyphen-esperanto
 SUBDIR+=	tex-hyphen-estonian
 SUBDIR+=	tex-hyphen-farsi
@@ -456,7 +458,6 @@ SUBDIR+=	tex-hyphen-slovenian
 SUBDIR+=	tex-hyphen-spanish
 SUBDIR+=	tex-hyphen-swedish
 SUBDIR+=	tex-hyphen-turkish
-SUBDIR+=	tex-hyphen-ukenglish
 SUBDIR+=	tex-hyphen-ukrainian
 SUBDIR+=	tex-hyphen-uppersorbian
 SUBDIR+=	tex-hyphen-welsh
