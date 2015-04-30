@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2014/05/09 07:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/30 11:48:45 markd Exp $
 
 DISTNAME=	mftrace-1.2.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://lilypond.org/download/sources/mftrace/
 
@@ -14,6 +14,7 @@ DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
 DEPENDS+=	potrace>=1.5:../../graphics/potrace
 DEPENDS+=	fontforge>=20041115:../../fonts/fontforge
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
+DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -39,5 +40,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tfm.pyc ${DESTDIR}${PREFIX}/${PYSITELIB}
 
 .include "../../lang/python/application.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
