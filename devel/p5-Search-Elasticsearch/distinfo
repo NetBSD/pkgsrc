@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/30 04:24:41 mef Exp $
+
+SHA1 (Search-Elasticsearch-1.19.tar.gz) = 87dd77ae9dbca70d8f01f361f671ca30c0183f90
+RMD160 (Search-Elasticsearch-1.19.tar.gz) = 101f0c6c8010d97dcd1f58796e9b72bb8c733ae5
+Size (Search-Elasticsearch-1.19.tar.gz) = 116143 bytes
