@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/29 03:23:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/04/30 00:18:23 ryoon Exp $
 bin/gitolite
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Cache.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Common.pm
@@ -24,6 +24,7 @@ ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Motd.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/RefexExpr.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/RepoUmask.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Shell.pm
+${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/TProxy.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Writable.pm
 libexec/gitolite/VREF/COUNT
 libexec/gitolite/VREF/EMAIL-CHECK
@@ -37,6 +38,7 @@ libexec/gitolite/VREF/partial-copy
 libexec/gitolite/VREF/refex-expr
 libexec/gitolite/commands/D
 libexec/gitolite/commands/access
+libexec/gitolite/commands/config
 libexec/gitolite/commands/create
 libexec/gitolite/commands/creator
 libexec/gitolite/commands/desc
@@ -50,6 +52,7 @@ libexec/gitolite/commands/list-dangling-repos
 libexec/gitolite/commands/lock
 libexec/gitolite/commands/mirror
 libexec/gitolite/commands/motd
+libexec/gitolite/commands/option
 libexec/gitolite/commands/owns
 libexec/gitolite/commands/perms
 libexec/gitolite/commands/print-default-rc
