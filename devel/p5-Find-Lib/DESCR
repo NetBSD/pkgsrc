@@ -1,0 +1,5 @@
+The purpose of this module is to replace
+    use FindBin;
+    use lib "$FindBin::Bin/../bootstrap/lib";
+with something shorter. This is specially useful if your project has a
+lot of scripts (For instance tests scripts).
