@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/30 08:15:22 adam Exp $
 
-DISTNAME=	mysql-connector-python-2.0.2
+DISTNAME=	mysql-connector-python-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-Python/}
