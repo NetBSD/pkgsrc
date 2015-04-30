@@ -1,0 +1,16 @@
+Hijk is a fast & minimal low-level HTTP client intended to be used
+where you control both the client and the server, e.g. for talking to
+some internal service from a frontend user-facing web application.
+
+It is NOT a general HTTP user agent, it doesn't support redirects,
+proxies, SSL and any number of other advanced HTTP features like (in
+roughly descending order of feature completeness) LWP::UserAgent,
+WWW::Curl, HTTP::Tiny, HTTP::Lite or Furl. This library is basically
+one step above manually talking HTTP over sockets.
+
+Having said that it's lightning fast and extensively used in
+production at Booking.com where it's used as the go-to transport layer
+for talking to internal services. It uses non-blocking sockets and
+correctly handles all combinations of connect/read timeouts and other
+issues you might encounter from various combinations of parts of your
+system going down or becoming otherwise unavailable.
