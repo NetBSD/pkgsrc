@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1990 2015/04/30 15:05:34 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.1991 2015/04/30 15:07:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Proxy to 0.303 [wen 2015-04-30]
 	Updated shells/mksh to R50f [wen 2015-04-30]
 	Updated lang/nodejs to 0.12.2 [ryoon 2015-04-30]
+	Updated security/libtasn1 to 4.5 [wiz 2015-04-30]
