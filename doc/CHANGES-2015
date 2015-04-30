@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1980 2015/04/30 03:28:43 taca Exp $
+$NetBSD: CHANGES-2015,v 1.1981 2015/04/30 03:35:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3153,6 +3153,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/source-highlight to 3.1.8 [mef 2015-04-30]
 	Updated devel/gitolite to 3.6.3 [ryoon 2015-04-30]
 	Updated lang/ruby193-base to 1.9.3p551nb2 [taca 2015-04-30]
-	Updated lang/ruby200-base to 2.0.0p645nb1 [taca 2015-04-30]
 	Updated lang/ruby21-base to 2.1.6nb1 [taca 2015-04-30]
 	Updated lang/ruby22-base to 2.2.2nb1 [taca 2015-04-30]
