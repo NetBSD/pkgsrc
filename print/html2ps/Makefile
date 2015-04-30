@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2014/05/29 23:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/04/30 06:35:13 markd Exp $
 #
 
 DISTNAME=	html2ps-1.0b7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	http://user.it.uu.se/~jan/
 
@@ -15,7 +15,7 @@ DEPENDS+=	ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
+DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	weblint-[0-9]*:../../www/weblint
 
