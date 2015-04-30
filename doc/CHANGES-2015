@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1982 2015/04/30 04:45:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.1983 2015/04/30 04:56:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3162,3 +3162,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/p5-Any-URI-Escape version 0.01 [mef 2015-04-30]
 	Added www/p5-WWW-Mechanize-Cached version 1.48 [mef 2015-04-30]
 	Added devel/p5-MetaCPAN-Client version 1.013000 [mef 2015-04-30]
+	Updated devel/p5-Git-CPAN-Patch to 2.0.4 [mef 2015-04-30]
+	Updated devel/p5-Test-SharedFork to 0.31 [mef 2015-04-30]
