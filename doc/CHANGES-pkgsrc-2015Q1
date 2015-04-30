@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.22 2015/04/29 21:27:25 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.23 2015/04/30 01:48:57 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -96,3 +96,5 @@ Pullup ticket #4703 - requested by spz
 databases/gnats: security update
 Pullup ticket #4705 - requested by spz
 www/curl: security update
+Pullup ticket #4690 - requested by joerg
+sysutils/dvdisaster: build fix
