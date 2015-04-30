@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/30 08:35:38 markd Exp $
+bin/lamed
