@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2015/04/27 07:36:13 markd Exp $
+# $NetBSD: Makefile,v 1.79 2015/04/30 08:44:22 markd Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	57
+PKGREVISION=	58
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -16,6 +16,7 @@ DEPENDS+=	teTeX-texmf>=3.0nb14:../../print/teTeX3-texmf
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
 DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
+DEPENDS+=	tex-aleph-[0-9]*:../../print/tex-aleph
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
@@ -63,8 +64,6 @@ INSTALLATION_DIRS+=	${PKGINFODIR} share/texmf/fmtutil
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
 
-TEX_FORMATS=	"aleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\n"
-
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
 .include "../../print/tex-tetex/format.mk"
@@ -73,8 +72,5 @@ REPLACE_PERL=	texk/tetex/texdoctk
 
 post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
-
-post-install:
-	${LN} -sf aleph ${DESTDIR}${PREFIX}/bin/lamed
 
 .include "../../mk/bsd.pkg.mk"
