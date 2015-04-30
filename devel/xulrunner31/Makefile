@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/25 14:20:40 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/30 11:37:16 joerg Exp $
 
 MOZ_BRANCH=		31.6
 MOZ_BRANCH_MINOR=	.0esr
@@ -53,6 +53,9 @@ CHECK_INTERPRETER_SKIP+=lib/xulrunner31/sdk/bin/xpt.py
 
 .include "../../www/firefox31/mozilla-common.mk"
 .include "../../www/firefox31/options.mk"
+
+post-extract:
+	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
