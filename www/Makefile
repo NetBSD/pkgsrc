@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1105 2015/04/24 10:54:55 adam Exp $
+# $NetBSD: Makefile,v 1.1106 2015/04/30 06:22:33 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -203,6 +203,7 @@ SUBDIR+=	opera
 SUBDIR+=	opera-acroread7
 SUBDIR+=	opera-plugins
 SUBDIR+=	p5-Alien-GvaScript
+SUBDIR+=	p5-Any-URI-Escape
 SUBDIR+=	p5-AnyEvent-HTTP
 SUBDIR+=	p5-AnyEvent-HTTPD
 SUBDIR+=	p5-AnyEvent-ReverseHTTP
@@ -312,6 +313,7 @@ SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-Client
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-File-Mork
+SUBDIR+=	p5-Hijk
 SUBDIR+=	p5-HTML-Clean
 SUBDIR+=	p5-HTML-Element-Extended
 SUBDIR+=	p5-HTML-Email-Obfuscate
@@ -503,6 +505,7 @@ SUBDIR+=	p5-WWW-CSRF
 SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	p5-WWW-Facebook-API
 SUBDIR+=	p5-WWW-Mechanize
+SUBDIR+=	p5-WWW-Mechanize-Cached
 SUBDIR+=	p5-WWW-Mechanize-GZip
 SUBDIR+=	p5-WWW-Mechanize-Timed
 SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
