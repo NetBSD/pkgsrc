@@ -1,0 +1,6 @@
+Additional hyphenation patterns for American and British
+English in ASCII encoding.  The American English patterns
+(usenglishmax) greatly extend the standard patterns from Knuth
+to find many additional hyphenation points.  British English
+hyphenation is completely different from US English, so has its
+own set of patterns.
