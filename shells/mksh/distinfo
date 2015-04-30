@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2014/10/07 18:51:02 bsiegert Exp $
+$NetBSD: distinfo,v 1.27 2015/04/30 13:32:59 wen Exp $
 
-SHA1 (mksh-R50d.tgz) = 0066c260e0ae6736c56189f481607d8306449c53
-RMD160 (mksh-R50d.tgz) = 473417750fe50ed0f947076752677432aa9fbd82
-Size (mksh-R50d.tgz) = 374014 bytes
-SHA1 (patch-mksh.1) = 0b3ad407b3963cc92944724658d63c898728e335
+SHA1 (mksh-R50f.tgz) = 0dca39e7c9cc25cf400a5f7e6d6fc629e4f5e7ce
+RMD160 (mksh-R50f.tgz) = e0de1dd07e6ca02830407b9db43de8f5c98d800f
+Size (mksh-R50f.tgz) = 377797 bytes
+SHA1 (patch-mksh.1) = 6bf9ab1c8d6c5202f4ae906798eb3ffcfb915b90
