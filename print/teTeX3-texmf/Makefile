@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2015/04/27 12:39:22 markd Exp $
+# $NetBSD: Makefile,v 1.68 2015/04/30 08:13:11 markd Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -76,6 +76,7 @@ DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-fncylab-[0-9]*:../../print/tex-fncylab
 DEPENDS+=	tex-fnpara-[0-9]*:../../print/tex-fnpara
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
+DEPENDS+=	tex-fontinst-[0-9]*:../../fonts/tex-fontinst
 DEPENDS+=	tex-fp-[0-9]*:../../math/tex-fp
 DEPENDS+=	tex-framed-[0-9]*:../../print/tex-framed
 DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
@@ -286,6 +287,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/context
 	rmdir ${WRKSRC}/doc/generic/pdfcrop
 	rm -rf ${WRKSRC}/doc/etex
+	rm -rf ${WRKSRC}/doc/fontinst
 	rm -rf ${WRKSRC}/doc/fonts/ae*
 	rm -rf ${WRKSRC}/doc/fonts/am*
 	rm -rf ${WRKSRC}/doc/fonts/cm
@@ -474,6 +476,7 @@ post-extract:
 	rm -rf ${WRKSRC}/scripts/context
 	rm -rf ${WRKSRC}/scripts/thumbpdf
 	rm -rf ${WRKSRC}/tex/context
+	rm -rf ${WRKSRC}/tex/fontinst
 	rm -rf ${WRKSRC}/tex/generic/[a-b]*
 	rm -rf ${WRKSRC}/tex/generic/con*
 	rm -rf ${WRKSRC}/tex/generic/enctex
@@ -522,6 +525,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/float
 	rm -rf ${WRKSRC}/tex/latex/fnpara
 	rm -rf ${WRKSRC}/tex/latex/footmisc
+	rm -rf ${WRKSRC}/tex/latex/fontinst
 	rm -rf ${WRKSRC}/tex/latex/fp
 	rm -rf ${WRKSRC}/tex/latex/framed
 	rm -rf ${WRKSRC}/tex/latex/geo*
