@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2093 2015/04/28 12:21:23 mef Exp $
+# $NetBSD: Makefile,v 1.2094 2015/04/30 06:22:33 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -940,6 +940,7 @@ SUBDIR+=	p5-File-pushd
 SUBDIR+=	p5-FileHandle-Fmode
 SUBDIR+=	p5-FileHandle-Unget
 SUBDIR+=	p5-Filesys-Notify-Simple
+SUBDIR+=	p5-Find-Lib
 SUBDIR+=	p5-FindBin-libs
 SUBDIR+=	p5-Format-Human-Bytes
 SUBDIR+=	p5-FreezeThaw
@@ -1056,6 +1057,7 @@ SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Memoize-Memcached
 SUBDIR+=	p5-MetaCPAN-API
+SUBDIR+=	p5-MetaCPAN-Client
 SUBDIR+=	p5-Method-Signatures
 SUBDIR+=	p5-Method-Signatures-Simple
 SUBDIR+=	p5-Mixin-ExtraFields
@@ -1288,6 +1290,7 @@ SUBDIR+=	p5-Scalar-Util-Refcount
 SUBDIR+=	p5-Schedule-RateLimiter
 SUBDIR+=	p5-Scope-Guard
 SUBDIR+=	p5-Scope-Upper
+SUBDIR+=	p5-Search-Elasticsearch
 SUBDIR+=	p5-Set-Array
 SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Object

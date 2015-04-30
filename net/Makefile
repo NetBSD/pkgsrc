@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1066 2015/03/25 20:12:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.1067 2015/04/30 06:22:33 mef Exp $
 #
 
 COMMENT=	Networking tools
@@ -497,6 +497,7 @@ SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Test-DNS
+SUBDIR+=	p5-Test-RequiresInternet
 SUBDIR+=	p5-Test-TCP
 SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-WebService-Google-Reader
