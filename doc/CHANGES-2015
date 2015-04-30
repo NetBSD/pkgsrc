@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1988 2015/04/30 12:57:45 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1989 2015/04/30 13:34:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3173,3 +3173,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed print/tex-hyphen-ukenglish successor print/tex-hyphen-english [markd 2015-04-30]
 	Updated devel/p5-Config-Any to 0.26 [wen 2015-04-30]
 	Updated www/p5-HTTP-Proxy to 0.303 [wen 2015-04-30]
+	Updated shells/mksh to R50f [wen 2015-04-30]
