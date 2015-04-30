@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/04/25 01:30:20 mef Exp $
+# $NetBSD: Makefile,v 1.23 2015/04/30 01:43:08 mef Exp $
 
 DISTNAME=		File-BaseDir-0.07
 PKGNAME=		p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=		p5-IPC-System-Simple-[0-9]*:../../devel/p5-IPC-System-Simple
 # for make test
 BUILD_DEPENDS+=		xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
+BUILD_DEPENDS+=		p5-File-Which-[0-9]*:../../devel/p5-File-Which
 
 SHAREDIR=		${PREFIX}/share
 SHAREDIR_SPLIT=		${SHAREDIR:S/\// /g}
