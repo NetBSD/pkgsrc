@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.28 2015/04/27 07:36:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.29 2015/04/30 08:44:22 markd Exp $
 bin/fdf2tan
 bin/fdf2tex
-bin/lamed
 bin/makempy
 bin/texfind
 bin/texfont
