@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/04/25 14:23:19 tnn Exp $
+# $NetBSD: Makefile,v 1.84 2015/04/30 11:37:42 joerg Exp $
 
 DISTNAME=	tuxpaint-0.9.22
 PKGREVISION=	1
@@ -52,6 +52,9 @@ LIBS+=			-liconv
 LIBS+=			-lpng
 LIBS.SunOS+=		-lsocket -lnsl
 LDFLAGS.SunOS+=		-lsocket
+
+pre-build:
+	${MKDIR} ${WRKSRC}/trans
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/tuxpaint/fonts/locale/zh_tw_docs/maketuxfont.py
