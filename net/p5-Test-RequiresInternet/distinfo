@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/30 04:27:04 mef Exp $
+
+SHA1 (Test-RequiresInternet-0.04.tar.gz) = 7b1f32b34ab3ec8181a82eab0f2d1de26b0a01a3
+RMD160 (Test-RequiresInternet-0.04.tar.gz) = 88dd933f564a8776f945409946806e744a23dfe8
+Size (Test-RequiresInternet-0.04.tar.gz) = 10934 bytes
