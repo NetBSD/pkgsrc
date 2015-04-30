@@ -1,0 +1,7 @@
+Uses the Cache::Cache hierarchy by default to implement a caching
+Mech. This lets one perform repeated requests without hammering a
+server impolitely.
+  Please note that Cache::Cache has been superceded by CHI, but the
+default has not been changed here for reasons of backwards
+compatibility. For this reason, you are encouraged to provide your own
+CHI caching object to override the default.
