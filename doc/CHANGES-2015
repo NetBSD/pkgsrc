@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1991 2015/04/30 15:07:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1992 2015/04/30 15:10:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3176,3 +3176,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated shells/mksh to R50f [wen 2015-04-30]
 	Updated lang/nodejs to 0.12.2 [ryoon 2015-04-30]
 	Updated security/libtasn1 to 4.5 [wiz 2015-04-30]
+	Updated multimedia/mpv to 0.9.0 [wiz 2015-04-30]
