@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1993 2015/04/30 15:11:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.1994 2015/05/01 00:50:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libtasn1 to 4.5 [wiz 2015-04-30]
 	Updated multimedia/mpv to 0.9.0 [wiz 2015-04-30]
 	Updated mail/msmtp to 1.6.2 [wiz 2015-04-30]
+	Updated databases/p5-Jifty-DBI to 0.78 [wen 2015-05-01]
