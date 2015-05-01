@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:07:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/01 08:34:56 wiz Exp $
 
-DISTNAME=		libFS-1.0.6
+DISTNAME=		libFS-1.0.7
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
