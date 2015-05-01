@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/04 09:52:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/05/01 02:31:10 wen Exp $
 
-SHA1 (Geo-ShapeFile-2.52.tar.gz) = 40e66ca398803b38af08d7ef13b7cd0f795ae753
-RMD160 (Geo-ShapeFile-2.52.tar.gz) = cea86ad88ea291dd8f023a58cbfaad2bfb1d1acd
-Size (Geo-ShapeFile-2.52.tar.gz) = 278581 bytes
+SHA1 (Geo-ShapeFile-2.60.tar.gz) = 7b46492fc6318079d819ef7c36aceb6a65927135
+RMD160 (Geo-ShapeFile-2.60.tar.gz) = 1280ad08cfd91d3b52265156bae7e20a498afcee
+Size (Geo-ShapeFile-2.60.tar.gz) = 331941 bytes
