@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2009 2015/05/01 08:45:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2010 2015/05/01 08:46:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXrender to 0.9.9 [wiz 2015-05-01]
 	Updated x11/libXt to 1.1.5 [wiz 2015-05-01]
 	Updated x11/kbproto to 1.0.7 [wiz 2015-05-01]
+	Updated x11/xvinfo to 1.1.3 [wiz 2015-05-01]
