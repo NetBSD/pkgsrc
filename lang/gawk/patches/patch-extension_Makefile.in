@@ -1,11 +1,11 @@
-$NetBSD: patch-extension_Makefile.in,v 1.2 2014/06/06 23:24:10 ryoon Exp $
+$NetBSD: patch-extension_Makefile.in,v 1.3 2015/05/01 02:02:40 wen Exp $
 
 Install into a separate directory, otherwise these shadow e.g. time(3).
 Install *.la file for extensions, reduce PLIST divergence.
 
---- extension/Makefile.in.orig	2014-04-08 16:13:03.000000000 +0000
+--- extension/Makefile.in.orig	2015-05-01 09:36:09.000000000 +0000
 +++ extension/Makefile.in
-@@ -300,7 +300,7 @@ am__can_run_installinfo = \
+@@ -291,7 +291,7 @@ am__can_run_installinfo = \
      n|no|NO) false;; \
      *) (install-info --version) >/dev/null 2>&1;; \
    esac
@@ -14,7 +14,7 @@ Install *.la file for extensions, reduce PLIST divergence.
  NROFF = nroff
  MANS = $(dist_man_MANS)
  RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-@@ -1154,7 +1154,6 @@ info-am:
+@@ -1152,7 +1152,6 @@ info-am:
  
  install-data-am: install-man install-pkgextensionLTLIBRARIES
  	@$(NORMAL_INSTALL)
@@ -22,7 +22,7 @@ Install *.la file for extensions, reduce PLIST divergence.
  install-dvi: install-dvi-recursive
  
  install-dvi-am:
-@@ -1217,7 +1216,7 @@ uninstall-man: uninstall-man3
+@@ -1215,7 +1214,7 @@ uninstall-man: uninstall-man3
  	distclean-hdr distclean-libtool distclean-tags distcleancheck \
  	distdir distuninstallcheck dvi dvi-am html html-am info \
  	info-am install install-am install-data install-data-am \
@@ -31,15 +31,3 @@ Install *.la file for extensions, reduce PLIST divergence.
  	install-exec-am install-html install-html-am install-info \
  	install-info-am install-man install-man3 install-pdf \
  	install-pdf-am install-pkgextensionLTLIBRARIES install-ps \
-@@ -1229,11 +1228,6 @@ uninstall-man: uninstall-man3
- 	uninstall-man3 uninstall-pkgextensionLTLIBRARIES
- 
- 
--install-data-hook:
--	for i in $(pkgextension_LTLIBRARIES) ; do \
--		$(RM) $(pkgextensiondir)/$$i ; \
--	done
--
- # Keep the uninstall check working:
- uninstall-so:
- 	$(RM) $(pkgextensiondir)/*.so
