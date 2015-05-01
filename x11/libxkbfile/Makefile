@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/10/29 05:06:38 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2015/05/01 08:41:32 wiz Exp $
 
-DISTNAME=		libxkbfile-1.0.8
+DISTNAME=		libxkbfile-1.0.9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
