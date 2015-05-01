@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/06/14 07:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/05/01 08:43:00 wiz Exp $
 
-DISTNAME=		libXrender-0.9.8
+DISTNAME=		libXrender-0.9.9
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../x11/renderproto/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libX11+=  libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 
