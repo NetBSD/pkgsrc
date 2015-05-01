@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/04/09 15:20:47 manu Exp $
+@comment $NetBSD: PLIST,v 1.23 2015/05/01 12:19:07 joerg Exp $
 ${PYSITELIB}/gluster/__init__.py
 ${PYSITELIB}/gluster/__init__.pyc
 ${PYSITELIB}/gluster/__init__.pyo
@@ -21,6 +21,8 @@ lib/glusterfs/3.6.2/rpc-transport/socket.la
 lib/glusterfs/3.6.2/xlator/cluster/afr.la
 lib/glusterfs/3.6.2/xlator/cluster/dht.la
 lib/glusterfs/3.6.2/xlator/cluster/distribute.so
+${PLIST.ec}lib/glusterfs/3.6.2/xlator/cluster/disperse.so
+${PLIST.ec}lib/glusterfs/3.6.2/xlator/cluster/ec.la
 lib/glusterfs/3.6.2/xlator/cluster/nufa.la
 lib/glusterfs/3.6.2/xlator/cluster/pump.la
 lib/glusterfs/3.6.2/xlator/cluster/replicate.so
