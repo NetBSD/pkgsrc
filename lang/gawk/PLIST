@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/06/06 23:24:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2015/05/01 02:02:40 wen Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
@@ -48,11 +48,13 @@ share/awk/libintl.awk
 share/awk/noassign.awk
 share/awk/ord.awk
 share/awk/passwd.awk
+share/awk/processarray.awk
 share/awk/quicksort.awk
 share/awk/readable.awk
 share/awk/readfile.awk
 share/awk/rewind.awk
 share/awk/round.awk
+share/awk/shellquote.awk
 share/awk/strtonum.awk
 share/awk/walkarray.awk
 share/awk/zerofile.awk
