@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1997 2015/05/01 02:16:24 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1998 2015/05/01 02:22:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-Data-Table to 1.72 [wen 2015-05-01]
 	Updated lang/gawk to 4.1.2 [wen 2015-05-01]
 	Updated devel/p5-aliased to 0.34 [wen 2015-05-01]
+	Updated geography/p5-Geo-Coordinates-UTM to 0.11 [wen 2015-05-01]
