@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1994 2015/05/01 00:50:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.1995 2015/05/01 00:58:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/mpv to 0.9.0 [wiz 2015-04-30]
 	Updated mail/msmtp to 1.6.2 [wiz 2015-04-30]
 	Updated databases/p5-Jifty-DBI to 0.78 [wen 2015-05-01]
+	Updated databases/p5-Data-Table to 1.72 [wen 2015-05-01]
