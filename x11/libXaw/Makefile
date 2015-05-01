@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2013/09/08 08:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/01 08:40:12 wiz Exp $
 
-DISTNAME=		libXaw-1.0.12
+DISTNAME=		libXaw-1.0.13
 CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
