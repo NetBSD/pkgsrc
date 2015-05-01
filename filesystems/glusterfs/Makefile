@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2015/04/09 15:20:47 manu Exp $
+# $NetBSD: Makefile,v 1.50 2015/05/01 12:19:07 joerg Exp $
 
 DISTNAME=	glusterfs-3.6.2
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -85,6 +85,13 @@ post-install:
 	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
 	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST_VARS+=ec
+PLIST.ec=yes
+.endif
+
 # Debug
 CFLAGS+=		-g
 INSTALL_UNSTRIPPED=	yes
@@ -93,8 +100,6 @@ CONFIGURE_ARGS+=	--enable-debug
 #CFLAGS+=-DGC_DEBUG
 #CFLAGS+=-include gc.h
 #LIBS+=-lgc
-
-.include "../../mk/bsd.prefs.mk"
 
 #.include "../../devel/argp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
