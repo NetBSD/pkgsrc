@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2000 2015/05/01 02:36:32 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2001 2015/05/01 02:43:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/p5-Geo-Coordinates-UTM to 0.11 [wen 2015-05-01]
 	Updated geography/p5-Geo-ShapeFile to 2.60 [wen 2015-05-01]
 	Updated security/p5-Digest-MD2 to 2.04 [wen 2015-05-01]
+	Updated security/p5-Digest-CRC to 0.21 [wen 2015-05-01]
