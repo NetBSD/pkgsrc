@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2003 2015/05/01 08:36:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2004 2015/05/01 08:38:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3188,3 +3188,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Digest-CRC to 0.21 [wen 2015-05-01]
 	Updated x11/libFS to 1.0.7 [wiz 2015-05-01]
 	Updated fonts/libfontenc to 1.1.3 [wiz 2015-05-01]
+	Updated sysutils/libpciaccess to 0.13.4 [wiz 2015-05-01]
