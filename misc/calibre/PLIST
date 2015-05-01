@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/04/25 11:35:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/05/01 14:25:41 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -246,6 +246,7 @@ lib/calibre/calibre/ebooks/docx/writer/container.py
 lib/calibre/calibre/ebooks/docx/writer/fonts.py
 lib/calibre/calibre/ebooks/docx/writer/from_html.py
 lib/calibre/calibre/ebooks/docx/writer/images.py
+lib/calibre/calibre/ebooks/docx/writer/links.py
 lib/calibre/calibre/ebooks/docx/writer/lists.py
 lib/calibre/calibre/ebooks/docx/writer/styles.py
 lib/calibre/calibre/ebooks/docx/writer/tables.py
@@ -1653,7 +1654,6 @@ share/calibre/images/plus.png
 share/calibre/images/plusplus.png
 share/calibre/images/polish.png
 share/calibre/images/previous.png
-share/calibre/images/print-preview.png
 share/calibre/images/print.png
 share/calibre/images/publisher.png
 share/calibre/images/random.png
@@ -1715,6 +1715,7 @@ share/calibre/mime.types
 share/calibre/quick_start/deu.epub
 share/calibre/quick_start/eng.epub
 share/calibre/quick_start/fra.epub
+share/calibre/quick_start/ita.epub
 share/calibre/recipes/10minutos.recipe
 share/calibre/recipes/180.recipe
 share/calibre/recipes/20_minutos.recipe
