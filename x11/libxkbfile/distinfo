@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/11/25 15:05:15 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/05/01 08:41:32 wiz Exp $
 
-SHA1 (libxkbfile-1.0.8.tar.bz2) = 05139829837c26e3a14a40a700f058c018bc71f5
-RMD160 (libxkbfile-1.0.8.tar.bz2) = f60f49551ecff5fc40c7e51a96984fa60adfe3da
-Size (libxkbfile-1.0.8.tar.bz2) = 335788 bytes
-SHA1 (patch-src_cout.c) = 1f2741e22195fc0ea42deedb536ee35c1b2c3487
+SHA1 (libxkbfile-1.0.9.tar.bz2) = d708d3415212febbc67d4d996d02d7e3218e13ad
+RMD160 (libxkbfile-1.0.9.tar.bz2) = b1fe8ac27b5d69640e0e76fa2b372b2746f2f7ed
+Size (libxkbfile-1.0.9.tar.bz2) = 348009 bytes
