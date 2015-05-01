@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.1999 2015/05/01 02:32:10 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2000 2015/05/01 02:36:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3184,3 +3184,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-aliased to 0.34 [wen 2015-05-01]
 	Updated geography/p5-Geo-Coordinates-UTM to 0.11 [wen 2015-05-01]
 	Updated geography/p5-Geo-ShapeFile to 2.60 [wen 2015-05-01]
+	Updated security/p5-Digest-MD2 to 2.04 [wen 2015-05-01]
