@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2025 2015/05/02 15:00:45 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2026 2015/05/02 20:30:05 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3200,6 +3200,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.27.0 [wiz 2015-05-01]
 	Updated textproc/p5-XML-LibXML to 2.0120 [mef 2015-05-02]
 	Updated textproc/p5-XML-LibXML-Simple to 0.95 [mef 2015-05-02]
+	Added print/tex-texinfo version 5.1 [markd 2015-05-02]
 	Updated misc/py-anita to 1.38 [gson 2015-05-02]
 	Updated x11/xf86-video-r128 to 6.10.0 [wiz 2015-05-02]
 	Added databases/mongodb version 3.0.2 [ryoon 2015-05-02]
