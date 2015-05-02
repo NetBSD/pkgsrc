@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2015/03/05 13:13:25 gson Exp $
+# $NetBSD: Makefile,v 1.37 2015/05/02 07:54:11 gson Exp $
 
-DISTNAME=	anita-1.37
+DISTNAME=	anita-1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.gson.org/netbsd/anita/download/
