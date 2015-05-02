@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2019 2015/05/02 13:33:19 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2020 2015/05/02 13:33:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/mongodb version 3.0.2 [ryoon 2015-05-02]
 	Updated devel/libmtp to 1.1.9 [ryoon 2015-05-02]
 	Added fonts/tex-antt-doc version 2.08 [wiz 2015-05-02]
+	Added fonts/tex-antt version 2.08 [wiz 2015-05-02]
