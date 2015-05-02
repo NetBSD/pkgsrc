@@ -1,0 +1,8 @@
+Texinfo is the preferred format for documentation in the GNU
+project; the format may be used to produce online or printed
+output from a single source. The Texinfo macros may be used to
+produce printable output using TeX; other programs in the
+distribution offer online interactive use (with hypertext
+linkages in some cases). Note that a developers' snapshot of
+the latest release of the Texinfo macros may be found in the
+Texinfo 'latest' package.
