@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/09/19 11:24:51 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/05/02 14:57:57 mef Exp $
 
-SHA1 (XML-SAX-Writer-0.53.tar.gz) = c2e9d8f0292b3f525ab84ab275a0f6fbc72d1ffe
-RMD160 (XML-SAX-Writer-0.53.tar.gz) = 5cc613962d1f3882fe0cb605e09d78e7835067d7
-Size (XML-SAX-Writer-0.53.tar.gz) = 30754 bytes
+SHA1 (XML-SAX-Writer-0.56.tar.gz) = fdf134a39ef3064dcc828dbc082aa0dcd2328e7a
+RMD160 (XML-SAX-Writer-0.56.tar.gz) = ffd93dd1486fe80328f6ffeed8d651fc6f7720ab
+Size (XML-SAX-Writer-0.56.tar.gz) = 21484 bytes
