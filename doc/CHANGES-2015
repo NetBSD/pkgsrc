@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2018 2015/05/02 10:43:58 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2019 2015/05/02 13:33:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3204,3 +3204,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-r128 to 6.10.0 [wiz 2015-05-02]
 	Added databases/mongodb version 3.0.2 [ryoon 2015-05-02]
 	Updated devel/libmtp to 1.1.9 [ryoon 2015-05-02]
+	Added fonts/tex-antt-doc version 2.08 [wiz 2015-05-02]
