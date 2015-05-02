@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2015/05/02 13:33:09 wiz Exp $
+# $NetBSD: Makefile,v 1.260 2015/05/02 14:00:56 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -306,6 +306,7 @@ SUBDIR+=	tex-pxfonts
 SUBDIR+=	tex-pxfonts-doc
 SUBDIR+=	tex-rsfs
 SUBDIR+=	tex-rsfs-doc
+SUBDIR+=	tex-sauter
 SUBDIR+=	tex-stmaryrd
 SUBDIR+=	tex-stmaryrd-doc
 SUBDIR+=	tex-symbol
