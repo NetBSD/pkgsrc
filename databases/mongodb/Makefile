@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/02 08:10:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/02 16:46:26 fhajny Exp $
 
 DISTNAME=	mongodb-src-r3.0.2
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -15,9 +15,11 @@ USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
+GCC_REQD+=	4.8.2
+
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
-SCONS_ARGS=	--c++11=on
+SCONS_ARGS+=	--c++11=on
 SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC:Q}
 SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX:Q}
 SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
