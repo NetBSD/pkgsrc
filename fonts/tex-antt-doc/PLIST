@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/02 13:32:54 wiz Exp $
+share/texmf-dist/doc/fonts/antt/AntykwaTorunska-doc-en-2_03.pdf
+share/texmf-dist/doc/fonts/antt/AntykwaTorunska-doc-pl-2_03.pdf
+share/texmf-dist/doc/fonts/antt/AntykwaTorunska-doc-src-2_03.zip
+share/texmf-dist/doc/fonts/antt/GUST-FONT-NOSOURCE-LICENSE.txt
+share/texmf-dist/doc/fonts/antt/MANIFEST.txt
+share/texmf-dist/doc/fonts/antt/README
+share/texmf-dist/doc/fonts/antt/antt-latex-cyr.tex
+share/texmf-dist/doc/fonts/antt/antt-latex-math.tex
+share/texmf-dist/doc/fonts/antt/antt-latex-pl.tex
+share/texmf-dist/doc/fonts/antt/antt-latex-t2a.tex
+share/texmf-dist/doc/fonts/antt/antt-latex-t5.tex
+share/texmf-dist/doc/fonts/antt/antt-mathtest.tex
+share/texmf-dist/doc/fonts/antt/antt-table.tex
+share/texmf-dist/doc/latex/antt/README
