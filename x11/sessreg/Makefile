@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/01/20 09:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/05/02 10:27:31 wiz Exp $
 
 DISTNAME=	sessreg-1.1.0
 CATEGORIES=	x11
@@ -23,6 +23,6 @@ CONFIGURE_ARGS+=--localstatedir=${VARBASE:Q}
 #CPPFLAGS+=	-DNO_COLON_ZERO_IN_UTMP
 #.endif
 
-
+BUILDLINK_API_DEPENDS.xproto+=	xproto>=7.0.25
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
