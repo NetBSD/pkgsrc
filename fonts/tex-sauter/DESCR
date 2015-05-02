@@ -1,0 +1,6 @@
+Extensions, originally to the CM fonts, providing a parameterization
+scheme to build METAFONT fonts at true design sizes, for a large
+range of sizes.
+
+The scheme has now been extended to a range of other fonts, including
+the AMS fonts, bbm, bbold, rsfs and wasy fonts.
