@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2014/05/29 23:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2015/05/02 05:36:15 markd Exp $
 
 DISTNAME=		TeXmacs-1.0.6.15-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/targz/
@@ -18,7 +18,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 # XXX workaround for bug in configure
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
-TEX_ACCEPTED=		teTeX3
+#TEX_ACCEPTED=		teTeX3
 
 REPLACE_PYTHON=	plugins/python/bin/tm_python
 REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
@@ -62,7 +62,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/tex.buildlink3.mk"
+#.include "../../mk/tex.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
