@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2023 2015/05/02 14:29:27 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2024 2015/05/02 14:29:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3209,3 +3209,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-sauter version 2.4 [wiz 2015-05-02]
 	Added fonts/tex-cbfonts-fd version 1.0 [wiz 2015-05-02]
 	Added fonts/tex-cmbright-doc version 8.1 [wiz 2015-05-02]
+	Added fonts/tex-cmbright version 8.1 [wiz 2015-05-02]
