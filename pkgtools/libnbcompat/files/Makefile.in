@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.38 2015/05/02 11:59:05 ryoon Exp $
+# $NetBSD: Makefile.in,v 1.39 2015/05/02 12:52:59 joerg Exp $
 #
 
 srcdir=		@srcdir@
@@ -71,7 +71,8 @@ WITH_DB=	@WITH_DB@
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
 
-all: nbcompat/nbconfig.h $(LIB)
+all: $(LIB)
+all $(OBJS): nbcompat/nbconfig.h
 
 .c.o:
 	$(COMPILE) $(DEFS) -c $<
