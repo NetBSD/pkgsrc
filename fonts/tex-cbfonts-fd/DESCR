@@ -1,0 +1,3 @@
+The package provides font description files for all the many shapes
+available from the cbfonts collection. The files provide the means
+whereby the NFSS knows which fonts a LaTeX user is requesting.
