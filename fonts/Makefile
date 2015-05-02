@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2015/05/02 14:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.261 2015/05/02 14:08:18 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -208,6 +208,7 @@ SUBDIR+=	tex-bbold-type1-doc
 SUBDIR+=	tex-bera
 SUBDIR+=	tex-bera-doc
 SUBDIR+=	tex-bookman
+SUBDIR+=	tex-cbfonts-fd
 SUBDIR+=	tex-charter
 SUBDIR+=	tex-charter-doc
 SUBDIR+=	tex-cm
