@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.485 2015/04/16 20:23:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.486 2015/05/02 08:13:05 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -78,6 +78,7 @@ SUBDIR+=	mariadb55-client
 SUBDIR+=	mariadb55-server
 SUBDIR+=	metakit-lib
 SUBDIR+=	mongo-c-driver
+SUBDIR+=	mongodb
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-cluster
 SUBDIR+=	mysql-connector-c++
