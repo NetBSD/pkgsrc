@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/02 14:08:04 wiz Exp $
+share/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrcmro.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrcmss.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrcmtt.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrlcmss.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrlcmtt.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrlmr.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrlmro.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrlmss.fd
+share/texmf-dist/tex/latex/cbfonts-fd/lgrlmtt.fd
