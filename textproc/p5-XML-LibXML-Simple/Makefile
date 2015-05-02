@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/05/02 03:10:51 mef Exp $
 #
 
-DISTNAME=	XML-LibXML-Simple-0.93
+DISTNAME=	XML-LibXML-Simple-0.95
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 
-DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+DEPENDS+=	p5-File-Slurp-Tiny-[0-9]*:../../devel/p5-File-Slurp-Tiny
 DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML
 
 EXTRACT_USING=	gtar
