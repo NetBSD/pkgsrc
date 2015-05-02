@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2015/04/30 08:13:11 markd Exp $
+# $NetBSD: Makefile,v 1.69 2015/05/02 05:51:47 markd Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -196,6 +196,7 @@ DEPENDS+=	tex-subfig-[0-9]*:../../print/tex-subfig
 DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
 DEPENDS+=	tex-t2-[0-9]*:../../print/tex-t2
+DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
 DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
@@ -596,6 +597,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/plain/[r-u]*
 	rm -rf ${WRKSRC}/tex/plain/[w-z]*
 	rm -rf ${WRKSRC}/tex/platex
+	rm -rf ${WRKSRC}/tex/texinfo
 
 do-install:
 	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist
