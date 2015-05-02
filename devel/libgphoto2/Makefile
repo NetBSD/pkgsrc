@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/03/15 13:15:07 obache Exp $
+# $NetBSD: Makefile,v 1.60 2015/05/02 08:45:23 ryoon Exp $
 
 DISTNAME=	libgphoto2-2.4.14
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gphoto.sourceforge.net/proj/libgphoto2/
+HOMEPAGE=	http://gphoto.sourceforge.net/
 COMMENT=	Digital camera access library
 LICENSE=	gnu-lgpl-v2
 
