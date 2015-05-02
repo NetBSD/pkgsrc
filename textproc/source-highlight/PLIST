@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/11/23 18:29:14 gls Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/05/02 14:56:45 schmonz Exp $
 bin/check-regexp
 bin/cpp2html
 bin/java2html
@@ -230,6 +230,7 @@ share/source-highlight/changelog.lang
 share/source-highlight/clike_vardeclaration.lang
 share/source-highlight/clipper.lang
 share/source-highlight/cobol.lang
+share/source-highlight/coffeescript.lang
 share/source-highlight/conf.lang
 share/source-highlight/cpp.lang
 share/source-highlight/cpp2html.css
@@ -252,16 +253,24 @@ share/source-highlight/esc256.style
 share/source-highlight/extreme_comment.lang
 share/source-highlight/extreme_comment2.lang
 share/source-highlight/extreme_comment3.lang
+share/source-highlight/feature.lang
 share/source-highlight/fixed-fortran.lang
 share/source-highlight/flex.lang
 share/source-highlight/fortran.lang
 share/source-highlight/function.lang
 share/source-highlight/glsl.lang
+share/source-highlight/go.lang
+share/source-highlight/groff_man.outlang
+share/source-highlight/groff_mm.outlang
+share/source-highlight/groff_mm_color.outlang
+share/source-highlight/groovy.lang
 share/source-highlight/haskell.lang
 share/source-highlight/haskell_literate.lang
 share/source-highlight/haxe.lang
 share/source-highlight/html.lang
 share/source-highlight/html.outlang
+share/source-highlight/html5.outlang
+share/source-highlight/html5_common.outlang
 share/source-highlight/html_common.outlang
 share/source-highlight/html_notfixed.outlang
 share/source-highlight/html_ref.outlang
@@ -275,6 +284,8 @@ share/source-highlight/javadoc.outlang
 share/source-highlight/javalog.lang
 share/source-highlight/javalog.style
 share/source-highlight/javascript.lang
+share/source-highlight/json.lang
+share/source-highlight/json.style
 share/source-highlight/key_string.lang
 share/source-highlight/lang.map
 share/source-highlight/langdef.lang
@@ -312,10 +323,14 @@ share/source-highlight/prolog.lang
 share/source-highlight/properties.lang
 share/source-highlight/proto.lang
 share/source-highlight/python.lang
+share/source-highlight/r.lang
+share/source-highlight/r.style
 share/source-highlight/ruby.lang
+share/source-highlight/s.lang
 share/source-highlight/scala.lang
 share/source-highlight/scheme.lang
 share/source-highlight/script_comment.lang
+share/source-highlight/sexp.outlang
 share/source-highlight/sh.lang
 share/source-highlight/sh_acid.css
 share/source-highlight/sh_berries-dark.css
@@ -394,3 +409,4 @@ share/source-highlight/xhtmlcss.outlang
 share/source-highlight/xhtmltable.outlang
 share/source-highlight/xml.lang
 share/source-highlight/xorg.lang
+share/source-highlight/zsh.lang
