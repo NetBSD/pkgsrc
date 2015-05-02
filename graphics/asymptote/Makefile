@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/09/24 23:10:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2015/05/02 05:56:07 markd Exp $
 #
 
 DISTNAME=	asymptote-2.15
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz
@@ -14,9 +14,15 @@ COMMENT=	Powerful descriptive vector graphics language for technical drawings
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
+BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 BUILD_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
-#BUILD_DEPENDS+=ghostscript-[0-9]*:../../print/ghostscript
+BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../wip/tex-texinfo
+BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 USE_TOOLS+=	gs
 
 UNLIMIT_RESOURCES=	datasize
@@ -61,5 +67,4 @@ BUILD_DEPENDS+=         gtexinfo-[0-9]*:../../devel/gtexinfo
 # recognized, but makes asy dump core during creation of documentation
 #.include "../../graphics/glut/buildlink3.mk"
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
