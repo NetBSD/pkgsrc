@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2016 2015/05/02 08:00:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2017 2015/05/02 08:12:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3202,3 +3202,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-LibXML-Simple to 0.95 [mef 2015-05-02]
 	Updated misc/py-anita to 1.38 [gson 2015-05-02]
 	Updated x11/xf86-video-r128 to 6.10.0 [wiz 2015-05-02]
+	Added databases/mongodb version 3.0.2 [ryoon 2015-05-02]
