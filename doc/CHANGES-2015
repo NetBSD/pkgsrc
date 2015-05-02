@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2014 2015/05/02 03:11:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2015 2015/05/02 07:55:28 gson Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3200,3 +3200,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.27.0 [wiz 2015-05-01]
 	Updated textproc/p5-XML-LibXML to 2.0120 [mef 2015-05-02]
 	Updated textproc/p5-XML-LibXML-Simple to 0.95 [mef 2015-05-02]
+	Updated misc/py-anita to 1.38 [gson 2015-05-02]
