@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2020 2015/05/02 13:33:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2021 2015/05/02 14:01:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3206,3 +3206,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libmtp to 1.1.9 [ryoon 2015-05-02]
 	Added fonts/tex-antt-doc version 2.08 [wiz 2015-05-02]
 	Added fonts/tex-antt version 2.08 [wiz 2015-05-02]
+	Added fonts/tex-sauter version 2.4 [wiz 2015-05-02]
