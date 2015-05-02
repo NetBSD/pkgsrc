@@ -1,0 +1,31 @@
+The GUST Font Source License (GFSL)
+
+This is a preliminary version, barring acceptance from the LaTeX
+Project Team and other feedback, of the GUST Font Source License.
+This license is for use with free fonts distributed with source
+code.
+
+For the most recent version of this license see
+http://www.gust.org.pl/fonts/licenses/GUST-FONT-SOURCE-LICENSE.txt
+or http://tug.org/fonts/licenses/GUST-FONT-SOURCE-LICENSE.txt
+
+This work may be distributed and/or modified under the conditions
+of the LaTeX Project Public License, either version 1.3a of this
+license or (at your option) any later version, provided that the
+following additional clauses are observed:
+
+1. Due to the nature of fonts, clause 6a of the LaTeX Project Public
+   License, version 1.3a, does not apply. A later version of the
+   LaTeX Project Public License may number or word this clause
+   differently; it is the substance that is important.
+
+2. It is requested, but not legally required, that derived works
+   be distributed only after changing the names of the fonts comprising
+   this work and given in the accompanying file MANIFEST.txt, and
+   that the files comprising the Work, as listed in MANIFEST.txt
+   also be given new names. Any exceptions to this request are also
+   given in MANIFEST.txt.
+
+The latest version of the LaTeX Project Public License is in
+http://www.latex-project.org/lppl.txt and version 1.3a or later is
+part of all distributions of LaTeX version 2004/10/01 or later.
