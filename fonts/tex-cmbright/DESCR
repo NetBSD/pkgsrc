@@ -1,0 +1,10 @@
+A family of sans serif fonts for TeX and LaTeX, based on Donald
+Knuth's CM fonts. It comprises OT1, T1 and TS1 encoded text fonts
+of various shapes as well as all the fonts necessary for mathematical
+typesetting, including AMS symbols. This collection provides all
+the necessary files for using the fonts with LaTeX.
+
+A commercial-quality Adobe Type 1 version of these fonts is available
+from Micropress. Free versions are available, in the cm-super font
+bundle (the T1 and TS1 encoded part of the set), and in the hfbright
+package (the OT1 encoded part, and the maths fonts).
