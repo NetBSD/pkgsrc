@@ -1,0 +1,11 @@
+Import databases/mongodb 3.0.2 from pkgsrc-wip/mongodb
+
+Packged by jafour1 and updated by some users.
+
+
+Mongo (from "humongous") is a high-performance, open source, schema-free,
+document-oriented database. It features: document data model with dynamic
+schemas; full, flexible index support and rich queries; auto-Sharding for
+horizontal scalability; built-in replication for high availability; text
+search; advanced security; aggregation Framework and MapReduce; large media
+storage with GridFS.
