@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/04/30 08:13:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/05/02 05:51:47 markd Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/dk-bib/dk-abbrv.bst
 share/texmf-dist/bibtex/bst/dk-bib/dk-alpha.bst
@@ -6438,17 +6438,3 @@ share/texmf-dist/tex/plain/vietnam/plainenc.tex
 share/texmf-dist/tex/plain/vietnam/plnfss.tex
 share/texmf-dist/tex/plain/vietnam/t5cmr.pfd
 share/texmf-dist/tex/plain/vietnam/t5code.tex
-share/texmf-dist/tex/texinfo/texinfo.ini
-share/texmf-dist/tex/texinfo/texinfo.tex
-share/texmf-dist/tex/texinfo/txi-cs.tex
-share/texmf-dist/tex/texinfo/txi-de.tex
-share/texmf-dist/tex/texinfo/txi-en.tex
-share/texmf-dist/tex/texinfo/txi-es.tex
-share/texmf-dist/tex/texinfo/txi-fr.tex
-share/texmf-dist/tex/texinfo/txi-it.tex
-share/texmf-dist/tex/texinfo/txi-nl.tex
-share/texmf-dist/tex/texinfo/txi-no.tex
-share/texmf-dist/tex/texinfo/txi-pl.tex
-share/texmf-dist/tex/texinfo/txi-pt.tex
-share/texmf-dist/tex/texinfo/txi-tr.tex
-share/texmf-dist/tex/texinfo/vntexinfo.tex
