@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2038 2015/05/03 10:14:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2039 2015/05/03 12:11:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3226,3 +3226,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 15.2 [wiz 2015-05-03]
 	Updated converters/help2man to 1.46.6 [wiz 2015-05-03]
 	Updated devel/waf to 1.8.9 [wiz 2015-05-03]
+	Updated archivers/libzip to 1.0 [wiz 2015-05-03]
