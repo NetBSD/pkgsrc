@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2068 2015/05/03 20:25:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2069 2015/05/03 21:01:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3229,6 +3229,16 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/libzip to 1.0 [wiz 2015-05-03]
 	Updated emulators/ckmame to 0.12 [wiz 2015-05-03]
 	Updated mail/spamdyke to 5.0.1 [schmonz 2015-05-03]
+	Added graphics/tex-graphics-pln version 2014 [markd 2015-05-03]
+	Added graphics/tex-graphics-pln-doc version 2014 [markd 2015-05-03]
+	Added print/tex-dk-bib version 0.6 [markd 2015-05-03]
+	Added print/tex-dk-bib-doc version 0.6 [markd 2015-05-03]
+	Added print/tex-germbib version 2014 [markd 2015-05-03]
+	Added print/tex-germbib-doc version 2014 [markd 2015-05-03]
+	Added print/tex-revtex4 version 4.0 [markd 2015-05-03]
+	Added print/tex-revtex4-doc version 4.0 [markd 2015-05-03]
+	Added print/tex-revtex version 4.1r [markd 2015-05-03]
+	Added print/tex-revtex-doc version 4.1r [markd 2015-05-03]
 	Updated pkgtools/pkglint to 4.154 [bsiegert 2015-05-03]
 	Added print/tex-vntex-doc version 3.2 [wiz 2015-05-03]
 	Added print/tex-vntex version 3.2 [wiz 2015-05-03]
