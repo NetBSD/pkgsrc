@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:25:09 markd Exp $
+share/texmf-dist/doc/latex/dk-bib/COPYRIGHT
+share/texmf-dist/doc/latex/dk-bib/README
+share/texmf-dist/doc/latex/dk-bib/dk-bib.ltx
+share/texmf-dist/doc/latex/dk-bib/dk-bib.pdf
