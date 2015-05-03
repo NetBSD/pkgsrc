@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:29:39 markd Exp $
+share/texmf-dist/bibtex/bst/revtex/aipauth4-1.bst
+share/texmf-dist/bibtex/bst/revtex/aipnum4-1.bst
+share/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst
+share/texmf-dist/bibtex/bst/revtex/apsrmp4-1.bst
+share/texmf-dist/tex/latex/revtex/aip4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps11pt4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps12pt4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps4-1.rtx
+share/texmf-dist/tex/latex/revtex/apsrmp4-1.rtx
+share/texmf-dist/tex/latex/revtex/ltxdocext.sty
+share/texmf-dist/tex/latex/revtex/ltxfront.sty
+share/texmf-dist/tex/latex/revtex/ltxgrid.sty
+share/texmf-dist/tex/latex/revtex/ltxutil.sty
+share/texmf-dist/tex/latex/revtex/reftest4-1.tex
+share/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+share/texmf-dist/tex/latex/revtex/revtex4-1.cls
