@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/05/03 19:47:05 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.14 2015/05/03 20:25:50 wiz Exp $
 
 DISTNAME=	LaTeX-Driver-0.200.4
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 
@@ -15,9 +15,11 @@ USE_TOOLS+=	gs:run
 
 DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-File-pushd-[0-9]*:../../devel/p5-File-pushd
 DEPENDS+=	p5-Module-Install-ReadmeFromPod-[0-9]*:../../devel/p5-Module-Install-ReadmeFromPod
 DEPENDS+=	p5-Module-Install-AuthorRequires-[0-9]*:../../devel/p5-Module-Install-AuthorRequires
 DEPENDS+=	p5-Module-Install-AuthorTests-[0-9]*:../../devel/p5-Module-Install-AuthorTests
+DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
 DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
 DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
@@ -25,6 +27,8 @@ DEPENDS+=	p5-Test-Spelling-[0-9]*:../../devel/p5-Test-Spelling
 DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
+DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
