@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 18:44:59 wiz Exp $
+share/texmf-dist/tex/latex/ccfonts/ccfonts.sty
+share/texmf-dist/tex/latex/ccfonts/t1ccr.fd
+share/texmf-dist/tex/latex/ccfonts/ts1ccr.fd
