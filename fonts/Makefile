@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2015/05/03 19:08:03 wiz Exp $
+# $NetBSD: Makefile,v 1.267 2015/05/03 19:13:06 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -306,6 +306,8 @@ SUBDIR+=	tex-nanumtype1
 SUBDIR+=	tex-nanumtype1-doc
 SUBDIR+=	tex-ncntrsbk
 SUBDIR+=	tex-norasi-c90
+SUBDIR+=	tex-ocherokee
+SUBDIR+=	tex-ocherokee-doc
 SUBDIR+=	tex-ocr-b
 SUBDIR+=	tex-ocr-b-doc
 SUBDIR+=	tex-palatino
