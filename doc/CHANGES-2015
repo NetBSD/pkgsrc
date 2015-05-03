@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2056 2015/05/03 19:17:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2057 2015/05/03 19:17:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-pl-mf-doc version 1.09 [wiz 2015-05-03]
 	Added print/tex-ocherokee version 2014 [wiz 2015-05-03]
 	Added print/tex-ocherokee-doc version 2014 [wiz 2015-05-03]
+	Added print/tex-oinuit version 2014 [wiz 2015-05-03]
