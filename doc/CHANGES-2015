@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2069 2015/05/03 21:01:15 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2070 2015/05/03 21:09:33 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3265,3 +3265,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-cbfonts-doc version 2014 [wiz 2015-05-03]
 	Added fonts/tex-cbfonts-fd-doc version 1.0 [wiz 2015-05-03]
 	Updated print/p5-LaTeX-Driver to 0.200.4nb1 [wiz 2015-05-03]
+	Updated net/nsd to 4.1.2 [pettai 2015-05-03]
