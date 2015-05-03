@@ -1,0 +1,5 @@
+A development of the (old) german.sty, this bundle provides
+German packages, BibTeX styles and documentary examples, for
+writing documents with bibliographies. The author has since
+developed the babelbib bundle, which (he asserts) supersedes
+germbib.
