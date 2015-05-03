@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:27:20 markd Exp $
+share/texmf-dist/bibtex/bst/germbib/gerabbrv.bst
+share/texmf-dist/bibtex/bst/germbib/geralpha.bst
+share/texmf-dist/bibtex/bst/germbib/gerapali.bst
+share/texmf-dist/bibtex/bst/germbib/gerplain.bst
+share/texmf-dist/bibtex/bst/germbib/gerunsrt.bst
+share/texmf-dist/tex/latex/germbib/bibgerm.sty
+share/texmf-dist/tex/latex/germbib/mynormal.sty
