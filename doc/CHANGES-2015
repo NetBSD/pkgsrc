@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2036 2015/05/03 10:12:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2037 2015/05/03 10:13:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3224,3 +3224,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-IO-Socket-SSL to 2.013 [wiz 2015-05-03]
 	Updated www/curl to 7.42.1 [wiz 2015-05-03]
 	Updated devel/py-setuptools to 15.2 [wiz 2015-05-03]
+	Updated converters/help2man to 1.46.6 [wiz 2015-05-03]
