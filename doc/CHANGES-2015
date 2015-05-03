@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2031 2015/05/03 02:26:13 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2032 2015/05/03 09:49:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3219,3 +3219,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-RPC-XML to 0.79 [mef 2015-05-03]
 	Updated databases/p5-DBIx-Class-Helpers to 2.026000 [wen 2015-05-03]
 	Updated textproc/p5-Template-Plugin-Number-Format to 1.06 [mef 2015-05-03]
+	Updated devel/py-mercurial to 3.4 [wiz 2015-05-03]
