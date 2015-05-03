@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/03 19:12:38 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2015/05/03 19:17:00 wiz Exp $
 
 DISTNAME=	ocherokee
 PKGNAME=	tex-${DISTNAME}-2014

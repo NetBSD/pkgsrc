@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:12:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:17:00 wiz Exp $
 share/texmf-dist/fonts/afm/public/ocherokee/Cherokee-Bold.afm
 share/texmf-dist/fonts/afm/public/ocherokee/Cherokee.afm
 share/texmf-dist/fonts/map/dvips/ocherokee/cherokee.map
