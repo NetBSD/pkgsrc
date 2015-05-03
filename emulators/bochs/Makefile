@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2014/05/05 00:47:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.79.8.1 2015/05/03 06:23:24 hiramatsu Exp $
 
 DISTNAME=		bochs-2.6.2
 PKGREVISION=		3
@@ -17,7 +17,6 @@ USE_TOOLS+=		gmake gunzip gzip
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-ONLY_FOR_COMPILER=	gcc
 CXXFLAGS+=		-DPARANOID
 
 CONFIGURE_ARGS+=	--enable-cdrom
