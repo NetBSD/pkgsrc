@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.25 2015/05/01 19:37:18 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.26 2015/05/03 04:54:15 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -102,3 +102,5 @@ Pullup ticket #4691 - requested by joerg
 multimedia/libmpeg3: build fix
 Pullup ticket #4692 - requested by joerg
 print/hplip: build fix
+Pullup ticket #4693 - requested by joerg
+print/hpijs: build fix
