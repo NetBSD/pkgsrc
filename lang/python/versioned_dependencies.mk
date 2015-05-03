@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.19 2015/04/13 23:12:44 rodent Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.20 2015/05/03 16:22:26 bsiegert Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -20,6 +20,7 @@ _SUPPORTED_PACKAGES+=Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=cairo graphics/py-cairo graphics/py-cairo3
 _SUPPORTED_PACKAGES+=dateutil time/py-dateutil time/py-dateutil
+_SUPPORTED_PACKAGES+=dialog devel/py-dialog2 devel/py-dialog
 _SUPPORTED_PACKAGES+=dns net/py-dns net/py-dns3
 _SUPPORTED_PACKAGES+=ephem math/py-ephem math/py-ephem3
 _SUPPORTED_PACKAGES+=flup www/py-flup www/py-flup3
