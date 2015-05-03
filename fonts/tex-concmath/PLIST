@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 18:57:26 wiz Exp $
+share/texmf-dist/tex/latex/concmath/concmath.sty
+share/texmf-dist/tex/latex/concmath/omlccm.fd
+share/texmf-dist/tex/latex/concmath/omlccr.fd
+share/texmf-dist/tex/latex/concmath/omsccr.fd
+share/texmf-dist/tex/latex/concmath/omsccsy.fd
+share/texmf-dist/tex/latex/concmath/omxccex.fd
+share/texmf-dist/tex/latex/concmath/ot1ccr.fd
+share/texmf-dist/tex/latex/concmath/ucca.fd
+share/texmf-dist/tex/latex/concmath/uccb.fd
