@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/04/12 23:33:06 rodent Exp $
+# $NetBSD: Makefile,v 1.58 2015/05/03 19:46:35 joerg Exp $
 #
 
 DISTNAME=		nagios-4.0.8
@@ -13,6 +13,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nagios.org/
 COMMENT=		Network monitor
 LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../net/nagios-base/Makefile.common"
@@ -48,6 +50,8 @@ BUILD_DEFS+=		NAGIOSDIR
 
 PKG_GROUPS+=		${NAGIOS_GROUP}
 PKG_GROUPS+=		${NAGIOSCMD_GROUP}
+
+USERGROUP_PHASE+=	pre-install
 
 PKG_USERS+=		${NAGIOS_USER}:${NAGIOS_GROUP}
 
