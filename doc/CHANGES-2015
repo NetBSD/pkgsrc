@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2043 2015/05/03 17:44:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2044 2015/05/03 17:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3231,3 +3231,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/spamdyke to 5.0.1 [schmonz 2015-05-03]
 	Updated pkgtools/pkglint to 4.154 [bsiegert 2015-05-03]
 	Added print/tex-vntex-doc version 3.2 [wiz 2015-05-03]
+	Added print/tex-vntex version 3.2 [wiz 2015-05-03]
