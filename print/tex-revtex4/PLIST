@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:31:57 markd Exp $
+share/texmf-dist/bibtex/bib/revtex4/apssamp.bib
+share/texmf-dist/bibtex/bst/revtex4/apsrev.bst
+share/texmf-dist/bibtex/bst/revtex4/apsrmp.bst
+share/texmf-dist/tex/latex/revtex4/10pt.rtx
+share/texmf-dist/tex/latex/revtex4/11pt.rtx
+share/texmf-dist/tex/latex/revtex4/12pt.rtx
+share/texmf-dist/tex/latex/revtex4/aps.rtx
+share/texmf-dist/tex/latex/revtex4/docs.sty
+share/texmf-dist/tex/latex/revtex4/revsymb.sty
+share/texmf-dist/tex/latex/revtex4/revtex4.cls
+share/texmf-dist/tex/latex/revtex4/rmp.rtx
