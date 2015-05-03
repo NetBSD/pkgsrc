@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2061 2015/05/03 19:26:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2062 2015/05/03 19:27:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3248,3 +3248,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-otibet version 2014 [wiz 2015-05-03]
 	Added print/tex-otibet-doc version 2014 [wiz 2015-05-03]
 	Added print/tex-ethiop version 0.7 [wiz 2015-05-03]
+	Added print/tex-ethiop-doc version 0.7 [wiz 2015-05-03]
