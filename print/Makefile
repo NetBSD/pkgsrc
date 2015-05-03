@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2015/05/02 05:49:14 markd Exp $
+# $NetBSD: Makefile,v 1.611 2015/05/03 10:35:51 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -324,6 +324,8 @@ SUBDIR+=	tex-dblfloatfix
 SUBDIR+=	tex-dblfloatfix-doc
 SUBDIR+=	tex-dehyph-exptl
 SUBDIR+=	tex-dehyph-exptl-doc
+SUBDIR+=	tex-dk-bib
+SUBDIR+=	tex-dk-bib-doc
 SUBDIR+=	tex-draftwatermark
 SUBDIR+=	tex-draftwatermark-doc
 SUBDIR+=	tex-dvipdfmx
@@ -396,6 +398,8 @@ SUBDIR+=	tex-geometry
 SUBDIR+=	tex-geometry-doc
 SUBDIR+=	tex-german
 SUBDIR+=	tex-german-doc
+SUBDIR+=	tex-germbib
+SUBDIR+=	tex-germbib-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-glossaries-doc
 SUBDIR+=	tex-graphics
@@ -642,6 +646,10 @@ SUBDIR+=	tex-realscripts
 SUBDIR+=	tex-realscripts-doc
 SUBDIR+=	tex-relsize
 SUBDIR+=	tex-resume
+SUBDIR+=	tex-revtex
+SUBDIR+=	tex-revtex-doc
+SUBDIR+=	tex-revtex4
+SUBDIR+=	tex-revtex4-doc
 SUBDIR+=	tex-romanneg
 SUBDIR+=	tex-romanneg-doc
 SUBDIR+=	tex-rotating
