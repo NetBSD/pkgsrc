@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:10 tron Exp $
+# $NetBSD: Makefile,v 1.34 2015/05/03 14:22:08 schmonz Exp $
 #
 
-DISTNAME=		spamdyke-5.0.0
-PKGREVISION=		1
+DISTNAME=		spamdyke-5.0.1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}releases/
 EXTRACT_SUFX=		.tgz
@@ -16,6 +15,9 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/${PKGBASE}
 
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		${PKGBASE}
+
+# anonymous inner functions
+ONLY_FOR_COMPILER=	gcc
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	spamdyke.h
