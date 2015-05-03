@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:26:54 wiz Exp $
+share/texmf-dist/doc/latex/ethiop/MANIFEST
+share/texmf-dist/doc/latex/ethiop/README
+share/texmf-dist/doc/latex/ethiop/codeetha.tex
+share/texmf-dist/doc/latex/ethiop/codeethb.tex
+share/texmf-dist/doc/latex/ethiop/ethiodoc.pdf
+share/texmf-dist/doc/latex/ethiop/ethiodoc.tex
