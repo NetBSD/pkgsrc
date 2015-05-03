@@ -1,0 +1,7 @@
+This package supplies the shared library files needed to run dynamically
+linked executables compiled under NetBSD 6.1 on a later NetBSD.
+The shared libraries for 'native' X11 are in a separate package.
+
+This package is bridging the gap to NetBSD 7; since the latter is
+still in beta at the time of creating this package, the package may
+be incomplete.
