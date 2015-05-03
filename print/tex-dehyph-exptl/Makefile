@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/04/22 10:47:33 markd Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/03 17:55:17 wiz Exp $
 
 DISTNAME=	dehyph-exptl
 PKGNAME=	tex-${DISTNAME}-0.40
+PKGREVISION=	1
 TEXLIVE_REV=	34459
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,10 +14,10 @@ TEX_HYPHEN_DAT+=	german-x-2014-05-21 dehypht-x-2014-05-21.tex
 TEX_HYPHEN_DAT+=	= german-x-latest
 TEX_HYPHEN_DAT+=	ngerman-x-2014-05-21 dehyphn-x-2014-05-21.tex
 TEX_HYPHEN_DAT+=	= ngerman-x-latest
-TEX_HYPHEN_DEF+=	\addlanguage{german-x-2014-05-21}{dehypht-x-2014-05-21.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{german-x-latest}{dehypht-x-2014-05-21.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{ngerman-x-2014-05-21}{dehyphn-x-2014-05-21.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{ngerman-x-latest}{dehyphn-x-2014-05-21.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{german-x-2014-05-21}{dehypht-x-2014-05-21.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{german-x-latest}{dehypht-x-2014-05-21.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{ngerman-x-2014-05-21}{dehyphn-x-2014-05-21.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{ngerman-x-latest}{dehyphn-x-2014-05-21.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['german-x-2014-05-21']={ \
 			  loader='dehypht-x-2014-05-21.tex', \
 			  lefthyphenmin=2, \
