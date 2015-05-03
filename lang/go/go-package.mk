@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.3 2015/03/10 21:52:10 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.4 2015/05/03 15:35:54 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -32,6 +32,10 @@ INSTALLATION_DIRS+=	bin gopkg
 USE_TOOLS+=		pax
 
 GOTOOLDIR=		${PREFIX}/go/pkg/tool/${LOWER_OPSYS}_${GOARCH}
+
+PRINT_PLIST_AWK+=	{ gsub(/${GO_PLATFORM}/, \
+			"$${GO_PLATFORM}"); \
+			print; next; }
 
 post-extract:
 	${MKDIR} ${WRKSRC}
