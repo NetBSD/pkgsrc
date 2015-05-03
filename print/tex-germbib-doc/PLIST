@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:27:20 markd Exp $
+share/texmf-dist/doc/bibtex/germbib/README.bibgerm
+share/texmf-dist/doc/bibtex/germbib/apalike.doc
+share/texmf-dist/doc/bibtex/germbib/apalike.germbib_sty
+share/texmf-dist/doc/bibtex/germbib/apalike.tex
+share/texmf-dist/doc/bibtex/germbib/btxdoc.tex
+share/texmf-dist/doc/bibtex/germbib/btxhak.tex
+share/texmf-dist/doc/bibtex/germbib/gerbibtx.bib
+share/texmf-dist/doc/bibtex/germbib/gerbibtx.tex
+share/texmf-dist/doc/bibtex/germbib/gerxampl.bib
+share/texmf-dist/doc/bibtex/germbib/schaum.bib
+share/texmf-dist/doc/bibtex/germbib/testbibgerm.tex
+share/texmf-dist/doc/bibtex/germbib/testgerb.tex
+share/texmf-dist/doc/bibtex/germbib/xampl.bib
