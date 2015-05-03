@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2014/07/31 19:53:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2015/05/03 02:07:06 mef Exp $
 
-DISTNAME=	RPC-XML-0.78
+DISTNAME=	RPC-XML-0.79
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RPC/}
 
@@ -15,6 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	{perl>=5.10,p5-PathTools>=0.8}:../../devel/p5-PathTools
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Utils
 #DEPENDS+=	p5-Module-Load>=0.24:../../devel/p5-Module-Load
+# if Net::Server exists, t/60 may fail due to more test items
+# t/60_net_server.t ............... skipped: Net::Server not available
+#EPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 DEPENDS+=	p5-XML-LibXML>=1.85:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-Parser>=2.31:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-libwww>=5.834:../../www/p5-libwww
