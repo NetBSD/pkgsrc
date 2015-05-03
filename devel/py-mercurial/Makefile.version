@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.version,v 1.17 2015/04/14 11:40:31 wiz Exp $
+# $NetBSD: Makefile.version,v 1.18 2015/05/03 09:49:24 wiz Exp $
 
-VERSION=	3.3.3
+VERSION=	3.4
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.9
 # see also http://mercurial.selenic.com/wiki/SupportedPythonVersions
