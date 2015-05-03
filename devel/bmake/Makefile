@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2015/04/16 11:40:43 joerg Exp $
+# $NetBSD: Makefile,v 1.69 2015/05/03 14:23:09 sevan Exp $
 
 DISTNAME=	bmake-20140314
 PKGREVISION=	1
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-*) && exists(/usr/bin/bash)
 CONFIGURE_ARGS+=	--with-defshell=/usr/bin/bash
-.elif ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "IRIX"
+.elif ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "IRIX" || ${OPSYS} == "AIX"
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
 .endif
