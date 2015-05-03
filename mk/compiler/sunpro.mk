@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.48 2013/04/06 18:09:43 tez Exp $
+# $NetBSD: sunpro.mk,v 1.49 2015/05/03 23:16:41 joerg Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -16,7 +16,7 @@ COMPILER_SUNPRO_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 SUNWSPROBASE?=		/opt/SUNWspro
-.if !exists($SUNWSPROBASE)
+.if !exists(${SUNWSPROBASE})
 SUNWSPROBASE!=         /bin/ls -d /opt/solstudio*
 .endif
 
