@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:34 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/03 17:52:41 wiz Exp $
 
 DISTNAME=	hyphen-portuguese
 PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,8 +13,8 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 
 TEX_HYPHEN_DAT+=	portuguese loadhyph-pt.tex
 TEX_HYPHEN_DAT+=	= portuges
-TEX_HYPHEN_DEF+=	\addlanguage{portuguese}{loadhyph-pt.tex}{}{2}{3}
-TEX_HYPHEN_DEF+=	\addlanguage{portuges}{loadhyph-pt.tex}{}{2}{3}
+TEX_HYPHEN_DEF+=	\\addlanguage{portuguese}{loadhyph-pt.tex}{}{2}{3}
+TEX_HYPHEN_DEF+=	\\addlanguage{portuges}{loadhyph-pt.tex}{}{2}{3}
 TEX_HYPHEN_LUA+=	['portuguese']={ \
 			  loader='loadhyph-pt.tex', \
 			  lefthyphenmin=2, \

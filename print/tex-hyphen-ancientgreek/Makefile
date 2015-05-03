@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/11/17 17:25:40 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/03 17:52:38 wiz Exp $
 
 DISTNAME=	hyphen-ancientgreek
 PKGNAME=	tex-${DISTNAME}-2013
+PKGREVISION=	1
 TEXLIVE_REV=	29725
 
 MAINTAINER=	minskim@NetBSD.org
@@ -12,8 +13,8 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 
 TEX_HYPHEN_DAT+=	ancientgreek loadhyph-grc.tex
 TEX_HYPHEN_DAT+=	ibycus ibyhyph.tex
-TEX_HYPHEN_DEF+=	\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
-TEX_HYPHEN_DEF+=	\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
+TEX_HYPHEN_DEF+=	\\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['ancientgreek']={ \
 			  loader='loadhyph-grc.tex', \
 			  lefthyphenmin=1, \
