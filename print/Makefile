@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2015/05/03 19:18:05 wiz Exp $
+# $NetBSD: Makefile,v 1.615 2015/05/03 19:23:18 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -591,6 +591,8 @@ SUBDIR+=	tex-oinuit
 SUBDIR+=	tex-oinuit-doc
 SUBDIR+=	tex-optional
 SUBDIR+=	tex-optional-doc
+SUBDIR+=	tex-otibet
+SUBDIR+=	tex-otibet-doc
 SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
 SUBDIR+=	tex-overpic
