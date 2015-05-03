@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:25:09 markd Exp $
+share/texmf-dist/bibtex/bib/dk-bib/litteratur.bib
+share/texmf-dist/bibtex/bst/dk-bib/dk-abbrv.bst
+share/texmf-dist/bibtex/bst/dk-bib/dk-alpha.bst
+share/texmf-dist/bibtex/bst/dk-bib/dk-apali.bst
+share/texmf-dist/bibtex/bst/dk-bib/dk-plain.bst
+share/texmf-dist/bibtex/bst/dk-bib/dk-unsrt.bst
+share/texmf-dist/bibtex/csf/dk-bib/88591-dk.csf
+share/texmf-dist/bibtex/csf/dk-bib/cp850-dk.csf
+share/texmf-dist/bibtex/csf/dk-bib/mac-dk.csf
+share/texmf-dist/bibtex/csf/dk-bib/utf8-dk.csf
+share/texmf-dist/tex/latex/dk-bib/dk-apali.sty
+share/texmf-dist/tex/latex/dk-bib/dk-bib.sty
