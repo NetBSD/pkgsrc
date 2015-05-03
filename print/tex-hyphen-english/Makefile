@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/30 07:26:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/03 17:52:39 wiz Exp $
 
 DISTNAME=	hyphen-english
 PKGNAME=	tex-${DISTNAME}-2014
+PKGREVISION=	1
 TEXLIVE_REV=	25990
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,10 +15,10 @@ TEX_HYPHEN_DAT+=	usenglishmax loadhyph-en-us.tex
 TEX_HYPHEN_DAT+=	ukenglish loadhyph-en-gb.tex
 TEX_HYPHEN_DAT+=	= british
 TEX_HYPHEN_DAT+=	= UKenglish
-TEX_HYPHEN_DEF+=	\addlanguage{usenglishmax}{loadhyph-en-us.tex}{}{2}{3}
-TEX_HYPHEN_DEF+=	\addlanguage{ukenglish}{loadhyph-en-gb.tex}{}{2}{3}
-TEX_HYPHEN_DEF+=	\addlanguage{british}{loadhyph-en-gb.tex}{}{2}{3}
-TEX_HYPHEN_DEF+=	\addlanguage{UKenglish}{loadhyph-en-gb.tex}{}{2}{3}
+TEX_HYPHEN_DEF+=	\\addlanguage{usenglishmax}{loadhyph-en-us.tex}{}{2}{3}
+TEX_HYPHEN_DEF+=	\\addlanguage{ukenglish}{loadhyph-en-gb.tex}{}{2}{3}
+TEX_HYPHEN_DEF+=	\\addlanguage{british}{loadhyph-en-gb.tex}{}{2}{3}
+TEX_HYPHEN_DEF+=	\\addlanguage{UKenglish}{loadhyph-en-gb.tex}{}{2}{3}
 
 TEX_HYPHEN_LUA+=	['usenglishmax']={ \
 			  loader='loadhyph-en-us.tex', \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:33 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/03 17:52:40 wiz Exp $
 
 DISTNAME=	hyphen-norwegian
 PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,10 +16,10 @@ TEX_HYPHEN_DAT+=	bokmal loadhyph-nb.tex
 TEX_HYPHEN_DAT+=	= norwegian
 TEX_HYPHEN_DAT+=	= norsk
 TEX_HYPHEN_DAT+=	nynorsk loadhyph-nn.tex
-TEX_HYPHEN_DEF+=	\addlanguage{bokmal}{loadhyph-nb.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{bokmal}{loadhyph-nb.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['bokmal']={ \
 			  loader='loadhyph-nb.tex', \
 			  lefthyphenmin=2, \
