@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2015/05/03 17:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.613 2015/05/03 19:17:00 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -583,6 +583,8 @@ SUBDIR+=	tex-ntheorem
 SUBDIR+=	tex-ntheorem-doc
 SUBDIR+=	tex-oberdiek
 SUBDIR+=	tex-oberdiek-doc
+SUBDIR+=	tex-ocherokee
+SUBDIR+=	tex-ocherokee-doc
 SUBDIR+=	tex-octavo
 SUBDIR+=	tex-octavo-doc
 SUBDIR+=	tex-optional
