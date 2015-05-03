@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2053 2015/05/03 19:07:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2054 2015/05/03 19:12:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3241,3 +3241,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-concmath-doc version 19990318 [wiz 2015-05-03]
 	Added fonts/tex-pl-mf version 1.09 [wiz 2015-05-03]
 	Added fonts/tex-pl-mf-doc version 1.09 [wiz 2015-05-03]
+	Added fonts/tex-ocherokee version 2014 [wiz 2015-05-03]
