@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:37:21 wiz Exp $
+share/texmf-dist/doc/fonts/cbfonts-fd/README
+share/texmf-dist/doc/fonts/cbfonts-fd/cbfonts-fd.pdf
+share/texmf-dist/doc/fonts/cbfonts-fd/manifest.txt
