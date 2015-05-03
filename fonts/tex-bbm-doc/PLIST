@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:31:12 wiz Exp $
+share/texmf-dist/doc/fonts/bbm/README
+share/texmf-dist/doc/fonts/bbm/gfbatch.batch
+share/texmf-dist/doc/fonts/bbm/mfbatch.batch
+share/texmf-dist/doc/fonts/bbm/test.tex
