@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/03 11:09:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/05/03 09:49:24 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -12,6 +12,9 @@ ${PYSITELIB}/hgext/blackbox.pyo
 ${PYSITELIB}/hgext/bugzilla.py
 ${PYSITELIB}/hgext/bugzilla.pyc
 ${PYSITELIB}/hgext/bugzilla.pyo
+${PYSITELIB}/hgext/censor.py
+${PYSITELIB}/hgext/censor.pyc
+${PYSITELIB}/hgext/censor.pyo
 ${PYSITELIB}/hgext/children.py
 ${PYSITELIB}/hgext/children.pyc
 ${PYSITELIB}/hgext/children.pyo
@@ -243,6 +246,9 @@ ${PYSITELIB}/mercurial/context.pyo
 ${PYSITELIB}/mercurial/copies.py
 ${PYSITELIB}/mercurial/copies.pyc
 ${PYSITELIB}/mercurial/copies.pyo
+${PYSITELIB}/mercurial/crecord.py
+${PYSITELIB}/mercurial/crecord.pyc
+${PYSITELIB}/mercurial/crecord.pyo
 ${PYSITELIB}/mercurial/dagparser.py
 ${PYSITELIB}/mercurial/dagparser.pyc
 ${PYSITELIB}/mercurial/dagparser.pyo
@@ -567,6 +573,8 @@ ${PYSITELIB}/mercurial/templates/gitweb/search.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/shortlog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/summary.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/tags.tmpl
+${PYSITELIB}/mercurial/templates/json/changelist.tmpl
+${PYSITELIB}/mercurial/templates/json/map
 ${PYSITELIB}/mercurial/templates/map-cmdline.bisect
 ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
