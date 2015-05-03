@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:22:56 wiz Exp $
+share/texmf-dist/doc/latex/otibet/README
+share/texmf-dist/doc/latex/otibet/allbasic-mule.tex
+share/texmf-dist/doc/latex/otibet/allbasic.dvi
+share/texmf-dist/doc/latex/otibet/allbasic.tex
+share/texmf-dist/doc/latex/otibet/otibet-mule.tex
+share/texmf-dist/doc/latex/otibet/testtib.tex
+share/texmf-dist/doc/latex/otibet/tiblatex.dvi
+share/texmf-dist/doc/latex/otibet/tiblatex.tex
+share/texmf-dist/doc/latex/otibet/unidoc.dvi
+share/texmf-dist/doc/latex/otibet/unidoc.tex
+share/texmf-dist/doc/latex/otibet/yugpacan.dvi
+share/texmf-dist/doc/latex/otibet/yugpacan.tex
