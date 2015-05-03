@@ -1,0 +1,6 @@
+The Plain TeX graphics package is mostly a thin shell around
+the LaTeX graphicx and color packages, with support of the
+LaTeX-isms in those packages provided by miniltx (which is the
+largest part of the bundle). The bundle also contains a file
+"picture.tex", which is a wrapper around the autopict.sty, and
+provides the LaTeX picture mode to Plain TeX users.
