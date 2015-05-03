@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2064 2015/05/03 19:31:20 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2065 2015/05/03 19:34:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-ethiop-doc version 0.7 [wiz 2015-05-03]
 	Added fonts/tex-bbm version 2014 [wiz 2015-05-03]
 	Added fonts/tex-bbm-doc version 2014 [wiz 2015-05-03]
+	Added fonts/tex-cbfonts version 2014 [wiz 2015-05-03]
