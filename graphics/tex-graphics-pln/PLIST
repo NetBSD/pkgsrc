@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:01:03 markd Exp $
+share/texmf-dist/tex/plain/graphics-pln/autopict.sty
+share/texmf-dist/tex/plain/graphics-pln/color.tex
+share/texmf-dist/tex/plain/graphics-pln/graphicx.tex
+share/texmf-dist/tex/plain/graphics-pln/miniltx.tex
+share/texmf-dist/tex/plain/graphics-pln/picture.tex
+share/texmf-dist/tex/plain/graphics-pln/psfrag.tex
