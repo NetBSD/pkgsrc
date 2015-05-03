@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2041 2015/05/03 14:22:43 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.2042 2015/05/03 15:21:38 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3229,3 +3229,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/libzip to 1.0 [wiz 2015-05-03]
 	Updated emulators/ckmame to 0.12 [wiz 2015-05-03]
 	Updated mail/spamdyke to 5.0.1 [schmonz 2015-05-03]
+	Updated pkgtools/pkglint to 4.154 [bsiegert 2015-05-03]
