@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/11/17 17:20:53 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/03 17:52:40 wiz Exp $
 
 DISTNAME=	hyphen-greek
 PKGNAME=	tex-${DISTNAME}-5
-PKGREVISION=	2
+PKGREVISION=	3
 TEXLIVE_REV=	29725
 
 MAINTAINER=	minskim@NetBSD.org
@@ -14,9 +14,9 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	monogreek loadhyph-el-monoton.tex
 TEX_HYPHEN_DAT+=	greek loadhyph-el-polyton.tex
 TEX_HYPHEN_DAT+=	= polygreek
-TEX_HYPHEN_DEF+=	\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
-TEX_HYPHEN_DEF+=	\addlanguage{greek}{loadhyph-el-polyton.tex}{}{1}{1}
-TEX_HYPHEN_DEF+=	\addlanguage{polygreek}{loadhyph-el-polyton.tex}{}{1}{1}
+TEX_HYPHEN_DEF+=	\\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
+TEX_HYPHEN_DEF+=	\\addlanguage{greek}{loadhyph-el-polyton.tex}{}{1}{1}
+TEX_HYPHEN_DEF+=	\\addlanguage{polygreek}{loadhyph-el-polyton.tex}{}{1}{1}
 TEX_HYPHEN_LUA+=	['monogreek']={ \
 			  loader='loadhyph-el-monoton.tex', \
 			  lefthyphenmin=1, \
