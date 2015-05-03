@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 18:51:14 wiz Exp $
+share/texmf-dist/doc/fonts/concmath-fonts/CATALOGUE
+share/texmf-dist/doc/fonts/concmath-fonts/Makefile
+share/texmf-dist/doc/fonts/concmath-fonts/README
