@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/29 14:11:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/03 10:59:44 fhajny Exp $
 
 DISTNAME=	magento-1.9.1.0
 PKGREVISION=	1
@@ -83,6 +83,9 @@ post-patch:
 	${ECHO_N} `${DATE} -u +"%F %T UTC"`' | ' >> ${WRKSRC}/app/etc/applied.patches.list
 	${GREP} '^SUPEE-' ${DISTDIR}/${DIST_SUBDIR}/${file} >> ${WRKSRC}/app/etc/applied.patches.list
 .endfor
+
+pre-install:
+	${FIND} ${WRKSRC} -type f -name "*.orig_dist" | ${XARGS} ${RM} -f
 
 do-install:
 	cd ${WRKSRC} && pax -rw -p pp * ${DESTDIR}${PREFIX}/share/magento
