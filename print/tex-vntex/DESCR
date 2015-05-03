@@ -1,0 +1,5 @@
+The vntex bundle provides fonts, Plain TeX, texinfo and LaTeX
+macros for typesetting documents in Vietnamese. Users of the
+fonts (in both Metafont and Adobe Type 1 format) of this bundle
+may alternatively use the lm fonts bundle, for which map files
+are available to provide a Vietnamese version.
