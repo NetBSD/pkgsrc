@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/01/10 16:19:48 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2015/05/03 14:37:33 sevan Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -33,6 +33,11 @@ USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Cygwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,--disable-auto-import
+.endif
+
+.if ${OPSYS} == "AIX"
+#bug 20453 in bug-gzip list, passed onto gnulib
+CONFIGURE_ENV+= ac_cv_header_wctype_h=no
 .endif
 
 post-install:
