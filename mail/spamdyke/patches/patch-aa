@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.11 2012/01/05 00:53:20 schmonz Exp $
+$NetBSD: patch-aa,v 1.12 2015/05/03 14:22:08 schmonz Exp $
 
 Substitute paths.
 
---- spamdyke.h.orig	2012-01-04 17:46:13.000000000 +0000
+--- spamdyke.h.orig	2015-04-30 00:53:36.000000000 +0000
 +++ spamdyke.h
-@@ -94,7 +94,7 @@
+@@ -104,7 +104,7 @@
  #define STRINGIFY(X)                    _STRINGIFY(X)
  
  #define DEFAULT_REMOTE_IP               "0.0.0.0"
