@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/04/27 15:07:30 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/05/03 19:47:05 joerg Exp $
 #
 
 DISTNAME=	LaTeX-Driver-0.200.4
@@ -19,6 +19,8 @@ DEPENDS+=	p5-Module-Install-ReadmeFromPod-[0-9]*:../../devel/p5-Module-Install-R
 DEPENDS+=	p5-Module-Install-AuthorRequires-[0-9]*:../../devel/p5-Module-Install-AuthorRequires
 DEPENDS+=	p5-Module-Install-AuthorTests-[0-9]*:../../devel/p5-Module-Install-AuthorTests
 DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
+DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 DEPENDS+=	p5-Test-Spelling-[0-9]*:../../devel/p5-Test-Spelling
 DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
