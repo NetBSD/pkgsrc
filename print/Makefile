@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2015/05/03 10:35:51 markd Exp $
+# $NetBSD: Makefile,v 1.612 2015/05/03 17:43:53 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -783,6 +783,8 @@ SUBDIR+=	tex-verbdef-doc
 SUBDIR+=	tex-version
 SUBDIR+=	tex-version-doc
 SUBDIR+=	tex-vertbars
+SUBDIR+=	tex-vntex
+SUBDIR+=	tex-vntex-doc
 SUBDIR+=	tex-vruler
 SUBDIR+=	tex-vruler-doc
 SUBDIR+=	tex-wallpaper
