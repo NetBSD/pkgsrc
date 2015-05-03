@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2015/05/03 18:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.266 2015/05/03 19:08:03 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -309,6 +309,8 @@ SUBDIR+=	tex-norasi-c90
 SUBDIR+=	tex-ocr-b
 SUBDIR+=	tex-ocr-b-doc
 SUBDIR+=	tex-palatino
+SUBDIR+=	tex-pl-mf
+SUBDIR+=	tex-pl-mf-doc
 SUBDIR+=	tex-psnfss
 SUBDIR+=	tex-psnfss-doc
 SUBDIR+=	tex-pxfonts
