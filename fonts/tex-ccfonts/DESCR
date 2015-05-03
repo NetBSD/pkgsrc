@@ -1,0 +1,4 @@
+LaTeX font definition files for the Concrete fonts and a LaTeX
+package for typesetting documents using Concrete as the default
+font family. The files support OT1, T1, TS1, and Concrete
+mathematics including AMS fonts (Ulrik Vieth's concmath).
