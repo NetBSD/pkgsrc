@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2028 2015/05/03 02:01:46 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2029 2015/05/03 02:07:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3216,3 +3216,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-SemanticDiff to 1.0004 [mef 2015-05-02]
 	Updated editors/joe to 4.0 [wen 2015-05-03]
 	Updated databases/p5-DBIx-Class-Candy to 0.003001 [wen 2015-05-03]
+	Updated net/p5-RPC-XML to 0.79 [mef 2015-05-03]
