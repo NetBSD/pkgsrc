@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.18 2011/04/11 21:16:10 roy Exp $
+$NetBSD: distinfo,v 1.19 2015/05/03 01:45:32 wen Exp $
 
-SHA1 (joe-3.7.tar.gz) = 54398578886d4a3d325aece52c308a939d31101d
-RMD160 (joe-3.7.tar.gz) = 7e2c72a750c6aac4732cf4369bceee5333460f15
-Size (joe-3.7.tar.gz) = 696036 bytes
-SHA1 (patch-aa) = 18bf5044cf546c0080df5387719715735389f8cc
-SHA1 (patch-ab) = bd416192e0273b596db6ecc280ad743efd9ed421
-SHA1 (patch-main.c) = d5b8fee6e814ccbc3df048dcd2d31be5cb5f4225
+SHA1 (joe-4.0.tar.gz) = a51827c8c61c3cb09a038d8f6670efe84e144927
+RMD160 (joe-4.0.tar.gz) = 6d9195eedd6116ab51efd0d6b8adfa5d86cf3546
+Size (joe-4.0.tar.gz) = 838783 bytes
+SHA1 (patch-aa) = fa3b48b82c37d8eb0623b0a4f8d527eb80fe1a5b
+SHA1 (patch-ab) = c892db0e7675b25103dbb21762abe69b104f8be3
