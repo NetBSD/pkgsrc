@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/03/10 13:11:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2015/05/03 15:32:02 bsiegert Exp $
 
 .include "version.mk"
 
@@ -46,8 +46,6 @@ REPLACE_BASH+=	misc/makerelease/darwin/scripts/preinstall
 REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_arm_exec
-REPLACE_BASH+=	misc/vim/ftplugin/go/test.sh
-REPLACE_BASH+=	misc/xcode/4/go4xcode.sh
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/androidtest.bash
 REPLACE_BASH+=	src/clean.bash
@@ -65,10 +63,7 @@ REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
 REPLACE_BASH+=	test/bench/shootout/timing.sh
 REPLACE_BASH+=	test/run
 
-REPLACE_PERL+=	misc/pprof
-REPLACE_PERL+=	misc/xcode/4/go4xcode.sh
 REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
-REPLACE_PERL+=	src/pkg/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/syscall/*.pl
 REPLACE_PERL+=	test/errchk
