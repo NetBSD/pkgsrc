@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/05/03 19:43:21 joerg Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
 PKGNAME=	gnucap-20060708
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	http://www.gnucap.org/devel/ \
 		http://www.geda.seul.org/dist/
@@ -12,7 +12,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.gnucap.org/
 COMMENT=	General purpose circuit simulator
 
-BUILD_DEPENDS+=	dvipdfmx>=20100328:../../print/dvipdfmx
+BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=	tex-hyperref>=6.81pnb2:../../print/tex-hyperref
 
 CONFLICTS+=	gnucap-2006-07-[0-9]*
