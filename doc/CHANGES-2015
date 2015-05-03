@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2045 2015/05/03 18:03:49 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2046 2015/05/03 18:45:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-vntex-doc version 3.2 [wiz 2015-05-03]
 	Added print/tex-vntex version 3.2 [wiz 2015-05-03]
 	Updated devel/py-hgview to 1.8.2nb2 [bsiegert 2015-05-03]
+	Added fonts/tex-ccfonts-doc version 1.1 [wiz 2015-05-03]
