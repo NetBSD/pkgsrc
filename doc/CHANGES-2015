@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2066 2015/05/03 19:34:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2067 2015/05/03 19:37:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3253,3 +3253,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-bbm-doc version 2014 [wiz 2015-05-03]
 	Added fonts/tex-cbfonts version 2014 [wiz 2015-05-03]
 	Added fonts/tex-cbfonts-doc version 2014 [wiz 2015-05-03]
+	Added fonts/tex-cbfonts-fd-doc version 1.0 [wiz 2015-05-03]
