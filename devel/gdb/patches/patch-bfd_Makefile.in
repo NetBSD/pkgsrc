@@ -1,0 +1,12 @@
+$NetBSD: patch-bfd_Makefile.in,v 1.1 2015/05/03 19:44:38 joerg Exp $
+
+--- bfd/Makefile.in.orig	2015-05-03 13:26:51.000000000 +0000
++++ bfd/Makefile.in
+@@ -1035,6 +1035,7 @@ OPTIONAL_BACKENDS_CFILES = \
+ 	hpux-core.c \
+ 	irix-core.c \
+ 	lynx-core.c \
++	netbsd-core.c \
+ 	osf-core.c \
+ 	rs6000-core.c \
+ 	sco5-core.c \
