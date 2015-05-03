@@ -1,0 +1,4 @@
+The fonts are derived from the computer modern mathematics
+fonts and from Knuth's Concrete Roman fonts; they are
+distributed as Metafont source. LaTeX support is offered by the
+concmath package.
