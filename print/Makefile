@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.615 2015/05/03 19:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.616 2015/05/03 19:27:15 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -353,6 +353,8 @@ SUBDIR+=	tex-etex
 SUBDIR+=	tex-etex-doc
 SUBDIR+=	tex-etex-pkg
 SUBDIR+=	tex-etex-pkg-doc
+SUBDIR+=	tex-ethiop
+SUBDIR+=	tex-ethiop-doc
 SUBDIR+=	tex-euler
 SUBDIR+=	tex-euler-doc
 SUBDIR+=	tex-everypage
