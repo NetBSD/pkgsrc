@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 17:43:36 wiz Exp $
+share/texmf-dist/doc/generic/vntex/INSTALL
+share/texmf-dist/doc/generic/vntex/ReleaseNotes.pdf
+share/texmf-dist/doc/generic/vntex/vn-fonts-print.pdf
+share/texmf-dist/doc/generic/vntex/vn-fonts.pdf
+share/texmf-dist/doc/generic/vntex/vn-min-print.pdf
+share/texmf-dist/doc/generic/vntex/vn-min.pdf
+share/texmf-dist/doc/generic/vntex/vntex-man-print.pdf
+share/texmf-dist/doc/generic/vntex/vntex-man.pdf
+share/texmf-dist/doc/generic/vntex/vntex-print.pdf
+share/texmf-dist/doc/generic/vntex/vntex-update-maps
+share/texmf-dist/doc/generic/vntex/vntex.pdf
