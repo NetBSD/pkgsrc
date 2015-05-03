@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/03/26 09:30:01 wiz Exp $
+$NetBSD: distinfo,v 1.16 2015/05/03 12:11:42 wiz Exp $
 
-SHA1 (libzip-0.11.2.tar.xz) = da86a7b4bb2b7ab7c8c5fb773f8a48a5adc7a405
-RMD160 (libzip-0.11.2.tar.xz) = 4f94874c2f1d06c8c3020f22f17c9ef6da388051
-Size (libzip-0.11.2.tar.xz) = 413352 bytes
-SHA1 (patch-lib_zip__dirent.c) = e6d63693b29a3818943ed39ccd5353c146a2a7fc
+SHA1 (libzip-1.0.tar.xz) = f086b90607270f22cc7eeecfc32b34a7adb16fcd
+RMD160 (libzip-1.0.tar.xz) = 0e06174fdae0118f0709f736de1f0005aef9ecd7
+Size (libzip-1.0.tar.xz) = 446524 bytes
