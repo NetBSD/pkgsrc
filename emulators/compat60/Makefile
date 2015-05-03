@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/17 17:24:09 spz Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/03 15:01:11 spz Exp $
 
 COMPAT_PKG=		compat60	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		6.0
@@ -10,7 +10,7 @@ LICENSE=		2-clause-bsd AND modified-bsd AND isc AND mit AND zlib \
 			AND gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-gpl-v2 \
 			AND gnu-lgpl-v3 AND gnu-gpl-v3
 
-DIST_SUBDIR=		20130213
+DIST_SUBDIR=		20150428
 
 EMUL_PLATFORMS=		netbsd-alpha netbsd-arm netbsd-i386 netbsd-m68k	\
 			netbsd-mipseb netbsd-mipsel netbsd-powerpc	\
@@ -23,10 +23,9 @@ ONLY_FOR_PLATFORM=	NetBSD-6.[1-9]*-* NetBSD-[7-9]*-* NetBSD-[1-9][0-9]*-*
 DISTNAME=		compat60-${EMUL_ARCH}-${COMPAT_VERSION}
 COMPAT_VERSION=		6.0
 
-# when 6.1 is out
-#.if empty(OS_VERSION:M[0-5].*) && empty(OS_VERSION:M6.0*)
-#DEPENDS+=	compat61>=6.1:../../emulators/compat61
-#.endif
+.if empty(OS_VERSION:M[0-5].*) && empty(OS_VERSION:M6.[0-1]*)
+DEPENDS+=	compat61>=6.1:../../emulators/compat61
+.endif
 
 .include "options.mk"
 
