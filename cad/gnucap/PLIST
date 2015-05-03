@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:35:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/05/03 19:43:21 joerg Exp $
 bin/gnucap
 bin/gnucap-modelgen
 man/man1/gnucap-ibis.1
@@ -51,7 +51,6 @@ share/gnucap/examples/opamp.doc
 share/gnucap/examples/runall
 share/gnucap/examples/runall.out
 share/gnucap/examples/sc18.ckt
-share/gnucap/manual/gnucap-man.dvi
 share/gnucap/manual/gnucap-man.pdf
 share/gnucap/manual/html/gnucap-man.css
 share/gnucap/manual/html/gnucap-man001.html

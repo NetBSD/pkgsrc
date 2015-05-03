@@ -1,0 +1,55 @@
+$NetBSD: patch-man_Makefile.in,v 1.1 2015/05/03 19:43:21 joerg Exp $
+
+--- man/Makefile.in.orig	2015-05-03 14:03:53.000000000 +0000
++++ man/Makefile.in
+@@ -76,7 +76,6 @@ CXXFLAGS = @CXXFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DEFS = @DEFS@
+ DEPDIR = @DEPDIR@
+-DVIPDFM = @DVIPDFM@
+ ECHO_C = @ECHO_C@
+ ECHO_N = @ECHO_N@
+ ECHO_T = @ECHO_T@
+@@ -153,7 +152,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ pkgmanualdir = ${pkgdatadir}/manual
+-dist_pkgmanual_DATA = gnucap-man.pdf gnucap-man.dvi
++dist_pkgmanual_DATA = gnucap-man.pdf
+ EXTRA_DIST = ${TEXSRCS} README
+ TEXSRCS = \
+ 	addmodel.tex behavior.tex circuit.tex commands.tex copying.tex \
+@@ -165,7 +164,7 @@ DISTCLEANFILES = \
+ 	gnucap-man.toc
+ 
+ MAINTAINERCLEANFILES = \
+-	gnucap-man.dvi gnucap-man.pdf
++	gnucap-man.pdf
+ 
+ TEXDIRS = Addmodel Behavior Circuit Commands Tech
+ TEXFILES = ${TEXSRCS} $(foreach __tmp__,$(TEXDIRS),$(wildcard \
+@@ -344,21 +343,9 @@ uninstall-am: uninstall-dist_pkgmanualDA
+ 	uninstall-dist_pkgmanualDATA uninstall-info-am
+ 
+ 
+-gnucap-man.pdf: gnucap-man.dvi
+-@MISSING_DVIPDFM_TRUE@	@echo "WARNING:  dvipdfm was not found on your system but"
+-@MISSING_DVIPDFM_TRUE@	@echo "          $@ is out of date and needs to be"
+-@MISSING_DVIPDFM_TRUE@	@echo "          rebuilt.  Changes to gnucap-man.dvi"
+-@MISSING_DVIPDFM_TRUE@	@echo "          will be ignored."
+-@MISSING_DVIPDFM_FALSE@	${DVIPDFM} gnucap-man
+-
+-# run it twice to fix the toc.
+-gnucap-man.dvi: $(TEXFILES)
+-@MISSING_LATEX_TRUE@	@echo "WARNING:  latex was not found on your system but"
+-@MISSING_LATEX_TRUE@	@echo "          $@ is out of date and needs to be"
+-@MISSING_LATEX_TRUE@	@echo "          rebuilt from the LaTeX .tex files. Changes to"
+-@MISSING_LATEX_TRUE@	@echo "          the .tex files will be ignored."
+-@MISSING_LATEX_FALSE@	env TEXINPUTS=$(srcdir): ${LATEX} $(srcdir)/gnucap-man
+-@MISSING_LATEX_FALSE@	env TEXINPUTS=$(srcdir): ${LATEX} $(srcdir)/gnucap-man
++gnucap-man.pdf: $(TEXFILES)
++	env TEXINPUTS=$(srcdir): pdflatex $(srcdir)/gnucap-man
++	env TEXINPUTS=$(srcdir): pdflatex $(srcdir)/gnucap-man
+ 
+ html/index.html: $(TEXFILES)
+ @MISSING_HEVEA_TRUE@	${HEVEA} -fix -o html/gnucap-man $(srcdir)/gnucap-man.tex
