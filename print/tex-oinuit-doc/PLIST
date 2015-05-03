@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:17:54 wiz Exp $
+share/texmf-dist/doc/fonts/oinuit/README.1ST
+share/texmf-dist/doc/fonts/oinuit/README.TEXLIVE
+share/texmf-dist/doc/fonts/oinuit/Table.eps
+share/texmf-dist/doc/fonts/oinuit/book.tex
+share/texmf-dist/doc/fonts/oinuit/inuit.tex
+share/texmf-dist/doc/fonts/oinuit/taqtu.tex
