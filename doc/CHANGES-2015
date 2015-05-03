@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2070 2015/05/03 21:09:33 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2071 2015/05/03 21:09:52 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3266,3 +3266,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-cbfonts-fd-doc version 1.0 [wiz 2015-05-03]
 	Updated print/p5-LaTeX-Driver to 0.200.4nb1 [wiz 2015-05-03]
 	Updated net/nsd to 4.1.2 [pettai 2015-05-03]
+	Updated mail/mimedefang to 2.78 [pettai 2015-05-03]
