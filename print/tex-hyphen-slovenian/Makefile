@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:35 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/03 17:52:41 wiz Exp $
 
 DISTNAME=	hyphen-slovenian
 PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,8 +13,8 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 
 TEX_HYPHEN_DAT+=	slovenian loadhyph-sl.tex
 TEX_HYPHEN_DAT+=	= slovene
-TEX_HYPHEN_DEF+=	\addlanguage{slovenian}{loadhyph-sl.tex}{}{2}{2}
-TEX_HYPHEN_DEF+=	\addlanguage{slovene}{loadhyph-sl.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{slovenian}{loadhyph-sl.tex}{}{2}{2}
+TEX_HYPHEN_DEF+=	\\addlanguage{slovene}{loadhyph-sl.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['slovenian']={ \
 			  loader='loadhyph-sl.tex', \
 			  lefthyphenmin=2, \
