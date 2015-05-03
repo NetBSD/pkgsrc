@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.215 2014/12/04 10:36:02 jperkin Exp $
+# $NetBSD: bootstrap,v 1.216 2015/05/03 14:26:57 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -498,6 +498,7 @@ AIX)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
+	need_ksh=yes
 	need_fixed_strip=yes
 	set_opsys=no
 	machine_arch=`get_machine_arch_aix`
