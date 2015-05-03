@@ -1,0 +1,6 @@
+Blackboard variants of Computer Modern fonts. The fonts are
+distributed as Metafont source (only); LaTeX support is
+available with the bbm-macros package. The Sauter font package
+has Metafont parameter source files for building the fonts at
+more sizes than you could reasonably imagine. A sample of these
+fonts appears in the blackboard bold sampler.
