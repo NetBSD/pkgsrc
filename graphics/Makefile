@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.702 2015/04/21 08:56:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.703 2015/05/03 10:03:07 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -480,6 +480,8 @@ SUBDIR+=	tex-eepic
 SUBDIR+=	tex-eepic-doc
 SUBDIR+=	tex-epstopdf
 SUBDIR+=	tex-epstopdf-doc
+SUBDIR+=	tex-graphics-pln
+SUBDIR+=	tex-graphics-pln-doc
 SUBDIR+=	tex-metapost
 SUBDIR+=	tex-metapost-doc
 SUBDIR+=	tex-mptopdf
