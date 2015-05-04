@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2015/03/13 11:29:33 roy Exp $
+# $NetBSD: Makefile,v 1.33 2015/05/04 21:02:58 roy Exp $
 
 DISTNAME=	keychain-2.7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
