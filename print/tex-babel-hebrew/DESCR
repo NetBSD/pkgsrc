@@ -1,0 +1,5 @@
+The package provides the language definition file for support
+of Hebrew in babel. Macros to control the use of text direction
+control of TeX--XeT and e-TeX are provided (and may be used
+elsewhere). Some shortcuts are defined, as well as translations
+to Hebrew of standard "LaTeX names".
