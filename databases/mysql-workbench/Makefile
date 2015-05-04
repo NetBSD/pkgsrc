@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2015/04/25 14:20:30 tnn Exp $
+# $NetBSD: Makefile,v 1.46 2015/05/04 21:14:24 wiz Exp $
 
 DISTNAME=	mysql-workbench-gpl-5.2.33b-src
 PKGNAME=	${DISTNAME:S/-gpl//:S/b-src$//}
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQLGUITools/}
 
