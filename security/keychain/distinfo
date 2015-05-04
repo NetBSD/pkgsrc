@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2010/05/18 06:29:32 pettai Exp $
+$NetBSD: distinfo,v 1.18 2015/05/04 21:02:58 roy Exp $
 
 SHA1 (keychain-2.7.1.tar.bz2) = e7ad7da374ba81e57792bb2695eb6c352f769de7
 RMD160 (keychain-2.7.1.tar.bz2) = bbeaf7f8c1c6dc0b3847aa9b7fc272ebb0743482
 Size (keychain-2.7.1.tar.bz2) = 51379 bytes
+SHA1 (patch-keychain) = 0e1b2ecabbbbef53dacbd8d141ea3ea7f3e8d08b
