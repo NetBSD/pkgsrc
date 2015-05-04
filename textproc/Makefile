@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.829 2015/04/19 23:23:53 rodent Exp $
+# $NetBSD: Makefile,v 1.830 2015/05/04 09:53:18 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -812,6 +812,7 @@ SUBDIR+=	tex-makeindex
 SUBDIR+=	tex-makeindex-doc
 SUBDIR+=	tex-xmltex
 SUBDIR+=	tex-xmltex-doc
+SUBDIR+=	tex-xmltexconfig
 SUBDIR+=	texi2html
 SUBDIR+=	texi2mdoc
 SUBDIR+=	texi2roff
