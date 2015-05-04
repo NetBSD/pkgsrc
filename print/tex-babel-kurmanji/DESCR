@@ -1,0 +1,7 @@
+The package provides the language definition file for support
+of Kurmanji in babel. Kurmanji belongs to the family of Kurdish
+languages. Some shortcuts are defined, as well as translations
+to Kurmanji of standard "LaTeX names". Note that the package is
+dealing with 'Northern' Kurdish, written using a Latin-based
+alphabet. The arabxetex package offers support for Kurdish
+written in Arabic script.
