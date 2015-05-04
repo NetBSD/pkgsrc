@@ -1,0 +1,3 @@
+The package provides the language definition file for support
+of Polish in babel. Some shortcuts are defined, as well as
+translations to Polish of standard "LaTeX names".
