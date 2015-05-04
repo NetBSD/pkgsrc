@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2072 2015/05/04 07:43:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2073 2015/05/04 09:14:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3268,3 +3268,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nsd to 4.1.2 [pettai 2015-05-03]
 	Updated mail/mimedefang to 2.78 [pettai 2015-05-03]
 	Updated textproc/mdoclint to 1.33 [wiz 2015-05-04]
+	Updated www/squid3 to 3.5.4 [adam 2015-05-04]
