@@ -1,0 +1,7 @@
+The package provides the language definition file for support
+of North Sami in babel. (Several Sami dialects/languages are
+spoken in Finland, Norway, Sweden and on the Kola Peninsula of
+Russia). Not all use the same alphabet, and no attempt is made
+to support any other than North Sami here. Some shortcuts are
+defined, as well as translations to Norsk of standard "LaTeX
+names".
