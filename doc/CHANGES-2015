@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2073 2015/05/04 09:14:23 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2074 2015/05/04 11:43:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3269,3 +3269,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/mimedefang to 2.78 [pettai 2015-05-03]
 	Updated textproc/mdoclint to 1.33 [wiz 2015-05-04]
 	Updated www/squid3 to 3.5.4 [adam 2015-05-04]
+	Updated archivers/par2 to 0.6.12 [adam 2015-05-04]
+	Updated audio/py-audiotools to 3.0 [adam 2015-05-04]
