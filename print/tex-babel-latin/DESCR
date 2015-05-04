@@ -1,0 +1,5 @@
+The package provides the language definition file for support
+of Latin in babel. Translations to Latin (in both modern and
+medieval spelling) of standard "LaTeX names", and some
+shortcuts, are provided. Apart from the modern vs. medieval
+setting, a further switch permits addition of prosodic marks.
