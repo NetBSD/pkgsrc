@@ -1,0 +1,3 @@
+The package provides the language definition file for support
+of Gaidhlig (Scottish Gaelic) in babel. Some shortcuts are
+defined, as well as translations of standard "LaTeX names".
