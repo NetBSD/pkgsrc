@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/27 12:11:20 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/04 21:14:24 wiz Exp $
 
 DISTNAME=	radare2-0.9.8
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.radare.org/get/
 EXTRACT_SUFX=	.tar.xz
