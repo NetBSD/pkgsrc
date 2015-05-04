@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2013/11/24 04:59:28 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/04 09:58:26 markd Exp $
 
 DISTNAME=	xmltex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.8
-PKGREVISION=	2
-TEXLIVE_REV=	18835
+PKGREVISION=	3
+TEXLIVE_REV=	35755
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-xmltex
+LICENSE=	lppl-1.3c
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
