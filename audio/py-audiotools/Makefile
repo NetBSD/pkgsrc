@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2015/04/14 11:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/04 11:41:31 adam Exp $
 
-DISTNAME=	audiotools-2.22
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	audiotools-3.0
+PKGNAME=	${PYPKGPREFIX}-audiotools-${DISTNAME}
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audiotools/2.18/}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audiotools/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tuffy/}
+GITHUB_PROJECT=	python-audio-tools
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://audiotools.sourceforge.net/
@@ -12,13 +15,11 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
 REPLACE_PYTHON+=	audiotools/*.py
 REPLACE_PYTHON+=	audiotools/py_decoders/*.py
 REPLACE_PYTHON+=	audiotools/py_encoders/*.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.20
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
