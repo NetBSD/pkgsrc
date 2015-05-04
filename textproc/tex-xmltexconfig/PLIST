@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/04 09:52:16 markd Exp $
+share/texmf-dist/tex/xmltex/xmltexconfig/pdfxmltex.ini
+share/texmf-dist/tex/xmltex/xmltexconfig/xmltex.ini
