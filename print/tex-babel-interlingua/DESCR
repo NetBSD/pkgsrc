@@ -1,0 +1,6 @@
+The package provides the language definition file for support
+of Interlingua in babel. Translations to Interlingua of
+standard "LaTeX names" (no shortcuts are provided). Interlingua
+itself is an auxiliary language, built from the common
+vocabulary of Spanish/Portuguese, English, Italian and French,
+with some normalisation of spelling.
