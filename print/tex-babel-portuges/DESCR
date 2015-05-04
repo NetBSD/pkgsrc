@@ -1,0 +1,4 @@
+The package provides the language definition file for support
+of Portuguese and Brazilian Portuguese in babel. Some shortcuts
+are defined, as well as translations to Portuguese of standard
+"LaTeX names".
