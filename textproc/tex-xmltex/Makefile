@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2011/03/14 18:53:31 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/04 09:58:25 markd Exp $
 
 DISTNAME=	xmltex
 PKGNAME=	tex-${DISTNAME}-1.9
-PKGREVISION=	8
-TEXLIVE_REV=	18835
+PKGREVISION=	9
+TEXLIVE_REV=	35755
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.dcarlisle.demon.co.uk/xmltex/manual.html
 COMMENT=	Non-validating XML parser implemented in TeX
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	tex-bin-xmltex-[0-9]*
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-latexconfig-[0-9]*:../../print/tex-latexconfig
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+DEPENDS+=	tex-xmltexconfig-[0-9]*:../../textproc/tex-xmltexconfig
 
 INSTALLATION_DIRS=	bin
 

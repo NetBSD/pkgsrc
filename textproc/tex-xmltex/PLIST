@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/01/30 16:00:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/05/04 09:58:25 markd Exp $
 bin/pdfxmltex
 bin/xmltex
 share/texmf-dist/tex/xmltex/base/iso-8859-1.xmt
@@ -11,5 +11,3 @@ share/texmf-dist/tex/xmltex/base/utf-16.xmt
 share/texmf-dist/tex/xmltex/base/windows-1250.xmt
 share/texmf-dist/tex/xmltex/base/xmltex.cfg
 share/texmf-dist/tex/xmltex/base/xmltex.tex
-share/texmf-dist/tex/xmltex/config/pdfxmltex.ini
-share/texmf-dist/tex/xmltex/config/xmltex.ini

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/01/17 22:31:53 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/05/04 09:58:26 markd Exp $
 
-SHA1 (tex-xmltex-18835/xmltex.doc.tar.xz) = b732645d47219e5db14d8c312892adf51d958796
-RMD160 (tex-xmltex-18835/xmltex.doc.tar.xz) = cf0bf98caf0f7fff34a791101a5f72e10d203283
-Size (tex-xmltex-18835/xmltex.doc.tar.xz) = 17004 bytes
+SHA1 (tex-xmltex-35755/xmltex.doc.tar.xz) = 96ce5017537904ee92ecc564b811e6b4ab34ba14
+RMD160 (tex-xmltex-35755/xmltex.doc.tar.xz) = ce5532a251e96583f67b8f0b1948b540fba3d01f
+Size (tex-xmltex-35755/xmltex.doc.tar.xz) = 17004 bytes
