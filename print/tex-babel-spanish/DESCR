@@ -1,0 +1,4 @@
+This bundle provides the means to typeset Spanish text, with
+the support provided by the LaTeX standard package babel. Note
+that separate support is provided for those who wish to typeset
+Spanish as written in Mexico.
