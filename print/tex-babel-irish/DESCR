@@ -1,0 +1,3 @@
+The package provides the language definition file for support
+of Irish Gaelic in babel. The principal content is translations
+to Irish of standard "LaTeX names". (No shortcuts are defined.)
