@@ -1,0 +1,3 @@
+The package provides the language definition file for support
+of Slovenian in babel. Several shortcuts are defined, as well
+as translations to Slovenian of standard "LaTeX names".
