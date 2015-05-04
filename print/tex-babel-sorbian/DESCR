@@ -1,0 +1,4 @@
+The package provides language definitions file for support of
+both Upper and Lower Sorbian, in babel. Some shortcuts are
+defined, as well as translations to the relevant language of
+standard "LaTeX names".
