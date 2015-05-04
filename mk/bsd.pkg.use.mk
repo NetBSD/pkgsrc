@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.58 2014/12/30 15:13:19 wiz Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.59 2015/05/04 19:23:19 joerg Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -80,10 +80,8 @@ BUILD_DEFS+=		KERBEROS
 
 #
 # PKG_LIBTOOL is the path to the libtool script installed by libtool-base.
-# _LIBTOOL is the path the libtool used by the build, which could be the
-#	path to a libtool wrapper script.
 # LIBTOOL is the publicly-readable variable that should be used by
-#	Makefiles to invoke the proper libtool.
+#	Makefiles to invoke the proper (wrapped) libtool.
 #
 .if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran) || \
     defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran77)
@@ -106,10 +104,8 @@ PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
 PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
 .  endif
 .endif
-_LIBTOOL?=		${PKG_LIBTOOL}
-_SHLIBTOOL?=		${PKG_SHLIBTOOL}
-LIBTOOL?=		${PKG_LIBTOOL}
-SHLIBTOOL?=		${PKG_SHLIBTOOL}
+LIBTOOL?=		${WRAPPER_BINDIR}/libtool
+SHLIBTOOL?=		${WRAPPER_BINDIR}/shlibtool
 .if defined(USE_LIBTOOL)
 LIBTOOL_REQD?=		2.2.6bnb3
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])

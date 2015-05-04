@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.10 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: libtool-override.mk,v 1.11 2015/05/04 19:23:19 joerg Exp $
 
 ######################################################################
 ### {libtool,shlibtool}-override (PRIVATE)
@@ -14,8 +14,8 @@ do-configure-post-hook: shlibtool-override
 OVERRIDE_DIRDEPTH.libtool?=	${OVERRIDE_DIRDEPTH}
 OVERRIDE_DIRDEPTH.shlibtool?=	${OVERRIDE_DIRDEPTH}
 
-_OVERRIDE_PATH.libtool=		${_LIBTOOL}
-_OVERRIDE_PATH.shlibtool=	${_SHLIBTOOL}
+_OVERRIDE_PATH.libtool=		${LIBTOOL}
+_OVERRIDE_PATH.shlibtool=	${SHLIBTOOL}
 
 .for _script_ in libtool shlibtool
 _SCRIPT.${_script_}-override=						\
