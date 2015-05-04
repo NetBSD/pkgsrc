@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.42 2014/03/18 22:36:30 miod Exp $
-# $NetBSD: mdoclint,v 1.51 2015/01/01 05:54:21 jnemeth Exp $
+# $NetBSD: mdoclint,v 1.52 2015/05/04 07:43:41 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -205,7 +205,8 @@ my $valid_date_re;
 	if (NETBSD) {
 		@arches =
 		    (qw(acorn26 acorn32 algor alpha amiga arc atari
-		    bebox cats cesfic cobalt dreamcast evbarm evbmips evbppc
+		    bebox cats cesfic cobalt dreamcast
+		    emips evbarm evbmips evbppc
 		    evbsh3 evbsh5 hp300 hpcarm hpcmips hpcsh hppa
 		    i386 ibmnws luna68k mac68k macppc mipsco mmeye
 		    mvme68k mvmeppc netwinder news68k newsmips next68k
