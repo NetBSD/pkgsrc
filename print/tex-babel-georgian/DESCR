@@ -1,0 +1,3 @@
+The package provides support for use of Babel in documents
+written in Georgian. The package is adapted for use both under
+'traditional' TeX engines, and under XeTeX and LuaTeX.
