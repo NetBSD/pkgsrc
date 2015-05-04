@@ -1,0 +1,4 @@
+The package provides support for use of Babel in documents
+written in Russian (in both "traditional" and modern forms).
+The support is adapted for use both under 'traditional' TeX
+engines, and under XeTeX and LuaTeX.
