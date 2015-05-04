@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/04/02 22:16:47 tnn Exp $
+$NetBSD: distinfo,v 1.6 2015/05/04 20:30:01 wiz Exp $
 
-SHA1 (xf86-video-mach64-6.9.4.tar.bz2) = 59ef55e9962d6ff2d9f4583d95fdffc37cbcde86
-RMD160 (xf86-video-mach64-6.9.4.tar.bz2) = 6e227c92813c6fefe51faec55c81ac6bd4234fff
-Size (xf86-video-mach64-6.9.4.tar.bz2) = 517239 bytes
-SHA1 (patch-src_atimach64probe.c) = 48ee19c7793d59dd745b0c00e4f9aa3475583e5e
-SHA1 (patch-src_atipreinit.c) = b5aa92706e7effba6f66aebba89d409c37571e7d
+SHA1 (xf86-video-mach64-6.9.5.tar.bz2) = 0ba2d51752a62808286937cf3c6a95794fa5cb29
+RMD160 (xf86-video-mach64-6.9.5.tar.bz2) = da9f300ccd028850505b7a474fdecbaf09ea50b2
+Size (xf86-video-mach64-6.9.5.tar.bz2) = 520883 bytes
