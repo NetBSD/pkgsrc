@@ -1,0 +1,4 @@
+The file provides modes for monotonic (single-diacritic) and
+polytonic (multiple-diacritic) modes of writing. Provision is
+made for Greek function names in mathematics, and for classical-
+era symbols.
