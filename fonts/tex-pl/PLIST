@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/03 19:07:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:51:25 wiz Exp $
 share/texmf-dist/dvips/pl/config.pl
 share/texmf-dist/fonts/afm/public/pl/plb10.afm
 share/texmf-dist/fonts/afm/public/pl/plbsy10.afm
