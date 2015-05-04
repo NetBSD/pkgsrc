@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:30:42 markd Exp $
+share/texmf-dist/tex/generic/babel-georgian/georgian.ldf
+share/texmf-dist/tex/generic/babel-georgian/georgian.sty
+share/texmf-dist/tex/generic/babel-georgian/georgiancaps.tex
