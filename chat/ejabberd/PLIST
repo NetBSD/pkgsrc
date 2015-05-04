@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2015/04/29 10:03:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.32 2015/05/04 14:40:38 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -300,6 +300,7 @@ lib/erlang/lib/${PKGNAME}/include/mod_roster.hrl
 lib/erlang/lib/${PKGNAME}/include/ns.hrl
 lib/erlang/lib/${PKGNAME}/include/p1_mysql.hrl
 lib/erlang/lib/${PKGNAME}/include/pubsub.hrl
+lib/erlang/lib/${PKGNAME}/include/sqlite3.hrl
 lib/erlang/lib/${PKGNAME}/include/stun.hrl
 lib/erlang/lib/${PKGNAME}/include/xml.hrl
 lib/erlang/lib/${PKGNAME}/include/xml_gen.hrl
@@ -343,6 +344,7 @@ lib/erlang/lib/${PKGNAME}/priv/msgs/uk.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/vi.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/wa.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/zh.msg
+lib/erlang/lib/${PKGNAME}/priv/sql/lite.sql
 sbin/ejabberdctl
 share/doc/ejabberd/COPYING
 share/doc/ejabberd/dev.html
