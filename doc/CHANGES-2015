@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2076 2015/05/04 12:59:58 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2077 2015/05/04 19:49:02 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3317,3 +3317,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-babel-turkish version 1.3b [markd 2015-05-04]
 	Added print/tex-babel-vietnamese version 1.3 [markd 2015-05-04]
 	Added print/tex-babel-welsh version 1.0d [markd 2015-05-04]
+	Updated www/wordpress to 4.2.1 [morr 2015-05-04]
