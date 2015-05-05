@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2082 2015/05/05 07:51:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2083 2015/05/05 09:33:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3323,3 +3323,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-BDD-Cucumber to 0.34 [schmonz 2015-05-05]
 	Updated textproc/p5-Swim to 0.1.39 [schmonz 2015-05-05]
 	Updated pkgtools/x11-links to 0.94 [wiz 2015-05-05]
+	Updated math/octave to 3.6.4nb8 [wiz 2015-05-05]
