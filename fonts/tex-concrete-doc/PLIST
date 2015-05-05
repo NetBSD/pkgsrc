@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 14:52:05 wiz Exp $
+share/texmf-dist/doc/fonts/concrete/CATALOGUE
+share/texmf-dist/doc/fonts/concrete/Makefile
+share/texmf-dist/doc/fonts/concrete/README
