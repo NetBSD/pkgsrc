@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2095 2015/05/05 14:40:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2096 2015/05/05 14:44:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3336,3 +3336,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-omega-doc version 2014 [wiz 2015-05-05]
 	Added graphics/tex-pictex version 1.1 [wiz 2015-05-05]
 	Added graphics/tex-pictex-doc version 1.1 [wiz 2015-05-05]
+	Updated www/p5-HTTP-Body to 1.22 [wen 2015-05-05]
