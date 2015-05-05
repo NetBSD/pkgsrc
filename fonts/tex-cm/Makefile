@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 07:50:27 markd Exp $
+# $NetBSD: Makefile,v 1.8 2015/05/05 16:44:41 wiz Exp $
 
 DISTNAME=	cm
 PKGNAME=	tex-${DISTNAME}-2014
@@ -6,7 +6,9 @@ CATEGORIES=	fonts
 TEXLIVE_REV=	32865
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/cm
 COMMENT=	Computer Modern fonts
+#LICENSE=	knuth
 
 CONFLICTS+=	teTeX-texmf<=3.0nb11
 
