@@ -1,0 +1,6 @@
+A development of TeX, which deals in multi-octet Unicode
+characters, to enable native treatment of a wide range of
+languages without changing character-set. Work on Omega seems,
+more or less, to have ceased: its immediate successor was to be
+the aleph project (though that too has stalled). Projects
+developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
