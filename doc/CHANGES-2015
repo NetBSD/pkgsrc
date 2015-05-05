@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2089 2015/05/05 13:49:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2090 2015/05/05 13:50:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3330,3 +3330,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache-tomcat7 to 7.0.61 [ryoon 2015-05-05]
 	Added www/apache-tomcat8 version 8.0.21 [ryoon 2015-05-05]
 	Added print/tex-bbm-macros version 2014 [wiz 2015-05-05]
+	Added print/tex-bbm-macros-doc version 2014 [wiz 2015-05-05]
