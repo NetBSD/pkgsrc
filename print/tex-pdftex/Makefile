@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2015/04/23 12:53:50 markd Exp $
+# $NetBSD: Makefile,v 1.20 2015/05/05 18:36:58 wiz Exp $
 
 DISTNAME=	pdftex
 PKGNAME=	tex-${DISTNAME}-1.40.11pl36020
 TEXLIVE_REV=	36020
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pdftex
 COMMENT=	TeX extension for direct creation of PDF
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	teTeX-bin<=3.0nb29
 DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
