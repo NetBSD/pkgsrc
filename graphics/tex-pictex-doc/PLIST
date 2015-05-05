@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 14:40:41 wiz Exp $
+share/texmf-dist/doc/generic/pictex/00index
+share/texmf-dist/doc/generic/pictex/README
+share/texmf-dist/doc/generic/pictex/pictexzusatz.txt
+share/texmf-dist/doc/generic/pictex/readme.errorbars
