@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2102 2015/05/05 14:52:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2103 2015/05/05 14:53:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-concrete version 2014 [wiz 2015-05-05]
 	Added fonts/tex-concrete-doc version 2014 [wiz 2015-05-05]
 	Added print/tex-concprog version 2014 [wiz 2015-05-05]
+	Added print/tex-concprog-doc version 2014 [wiz 2015-05-05]
