@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/13 18:19:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/05/05 19:05:57 wiz Exp $
 share/texmf-dist/doc/texlive/index.html
 share/texmf-dist/doc/texlive/texlive-common/examples/ex5.tex
 share/texmf-dist/doc/texlive/texlive-common/examples/ex6.tex
@@ -6,6 +6,7 @@ share/texmf-dist/doc/texlive/texlive-common/examples/ex6a.tex
 share/texmf-dist/doc/texlive/texlive-common/examples/ex6b.tex
 share/texmf-dist/doc/texlive/texlive-common/examples/ex6c.tex
 share/texmf-dist/doc/texlive/texlive-common/install-lnx-main.png
+share/texmf-dist/doc/texlive/texlive-common/nsis_installer.png
 share/texmf-dist/doc/texlive/texlive-common/psview.png
 share/texmf-dist/doc/texlive/texlive-common/stdcoll.png
 share/texmf-dist/doc/texlive/texlive-common/tlmgr-general-options.png
