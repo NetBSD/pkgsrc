@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/11/13 18:36:14 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/05 20:22:56 wiz Exp $
 
 DISTNAME=	texlive-docindex
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	32131
+PKGNAME=	tex-${DISTNAME}-2014
+TEXLIVE_REV=	36749
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Top-level TeX Live doc.html, etc
