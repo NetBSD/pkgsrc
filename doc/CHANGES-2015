@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2093 2015/05/05 14:36:10 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2094 2015/05/05 14:40:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-cs version 2014 [wiz 2015-05-05]
 	Added print/tex-omega version 2014 [wiz 2015-05-05]
 	Added print/tex-omega-doc version 2014 [wiz 2015-05-05]
+	Added graphics/tex-pictex version 1.1 [wiz 2015-05-05]
