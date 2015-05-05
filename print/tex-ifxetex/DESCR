@@ -1,4 +1,4 @@
-This simple TeX package defines the \ifxetex boolean for testing
-whether the TeX-variant XeTeX is being used for typesetting.  Also
-provides the \RequireXeTeX command which throws an error if XeTeX
-is not the engine in use.
+A simple package which provides an \ifxetex conditional, so
+that other code can determine that it is running under XeTeX.
+The package requires the e-TeX extensions to the TeX primitive
+set.
