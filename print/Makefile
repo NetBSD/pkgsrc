@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.618 2015/05/05 13:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.619 2015/05/05 14:36:48 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -263,6 +263,7 @@ SUBDIR+=	tex-babel-swedish
 SUBDIR+=	tex-babel-thai
 SUBDIR+=	tex-babel-turkish
 SUBDIR+=	tex-babel-vietnamese
+SUBDIR+=	tex-babel-welsh
 SUBDIR+=	tex-babelbib
 SUBDIR+=	tex-babelbib-doc
 SUBDIR+=	tex-bagpipetex
@@ -637,6 +638,8 @@ SUBDIR+=	tex-octavo
 SUBDIR+=	tex-octavo-doc
 SUBDIR+=	tex-oinuit
 SUBDIR+=	tex-oinuit-doc
+SUBDIR+=	tex-omega
+SUBDIR+=	tex-omega-doc
 SUBDIR+=	tex-optional
 SUBDIR+=	tex-optional-doc
 SUBDIR+=	tex-otibet
