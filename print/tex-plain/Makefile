@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2015/04/25 04:16:35 markd Exp $
+# $NetBSD: Makefile,v 1.10 2015/05/05 18:39:01 wiz Exp $
 
 DISTNAME=	plain
 PKGNAME=	tex-${DISTNAME}-3.141592653.35821
 TEXLIVE_REV=	35821
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/plain
 COMMENT=	The Plain TeX format
+#LICENSE=	knuth
 
 CONFLICTS+=	teTeX-texmf<=3.0nb11
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
