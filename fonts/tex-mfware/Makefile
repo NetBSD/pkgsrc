@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 08:13:22 markd Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/05 18:33:51 wiz Exp $
 
 DISTNAME=	mfware
 PKGNAME=	tex-${DISTNAME}-2014
 TEXLIVE_REV=	36017
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/mfware
 COMMENT=	Supporting tools for use with MetaFont
+#LICENSE=	knuth
 
 CONFLICTS+=	teTeX-texmf<=3.0nb22
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
