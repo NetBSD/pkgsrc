@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.1 2015/05/02 08:10:33 ryoon Exp $
+$NetBSD: patch-SConstruct,v 1.2 2015/05/05 15:54:49 joerg Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
 --- SConstruct.orig	2015-04-08 20:28:08.000000000 +0000
@@ -26,33 +26,41 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif platform.startswith( "openbsd" ):
      openbsd = True
  elif "win32" == platform:
-@@ -848,6 +854,12 @@ elif solaris:
+@@ -571,6 +577,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                CONFIGUREDIR=sconsDataDir.Dir('sconf_temp'),
+                CONFIGURELOG=sconsDataDir.File('config.log'),
+                INSTALL_DIR=installDir,
++               ENV = os.environ
+                )
+ 
+ if windows:
+@@ -848,6 +855,12 @@ elif solaris:
       env.Append( CPPDEFINES=[ "__sunos__" ] )
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
++    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
 +
  elif freebsd:
      env.Append( LIBS=[ "kvm" ] )
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
-@@ -855,6 +867,12 @@ elif freebsd:
+@@ -855,6 +868,12 @@ elif freebsd:
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
++    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
 +
  elif openbsd:
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
      env.Append( EXTRALIBPATH=[ "/usr/local/lib" ] )
-@@ -1020,8 +1038,11 @@ if nix:
+@@ -1020,8 +1039,11 @@ if nix:
              env.Append( CCFLAGS=["-Werror"] )
  
      env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
@@ -64,7 +72,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -2163,7 +2184,7 @@ def doConfigure(myenv):
+@@ -2163,7 +2185,7 @@ def doConfigure(myenv):
          Exit(1)
  
      # requires ports devel/libexecinfo to be installed
@@ -73,7 +81,7 @@ Add support for NetBSD/Dragonfly, fix locations.
          if not conf.CheckLib("execinfo"):
              print("Cannot find libexecinfo, please install devel/libexecinfo.")
              Exit(1)
-@@ -2409,7 +2430,7 @@ Export("mongoCodeVersion")
+@@ -2409,7 +2431,7 @@ Export("mongoCodeVersion")
  Export("usev8")
  Export("v8version v8suffix")
  Export("boostSuffix")
