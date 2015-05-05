@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 14:36:02 wiz Exp $
+share/texmf-dist/doc/omega/base/doc-1.8.tex
+share/texmf-dist/doc/omega/base/torture.ps
+share/texmf-dist/doc/omega/base/torture.tex
