@@ -1,3 +1,4 @@
-EncTeX is a TeX extension allowing you flexible input/output
-reencoding by new encTeX primitives.  It allows full UTF-8 processing
-in standard 8-bit TeX.
+EncTeX is (another) tex extension, written at the change-file
+level. It provides means of translating input on the way into
+TeX. It allows, for example, translation of multibyte
+sequences, such as utf-8 encoding.
