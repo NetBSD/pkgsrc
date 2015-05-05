@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2013/11/17 18:49:37 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2015/05/05 16:18:35 wiz Exp $
 
 DISTNAME=	amsfonts
 PKGNAME=	tex-${DISTNAME}-3.04
 TEXLIVE_REV=	29208
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/amsfonts
 COMMENT=	TeX fonts from the American Mathematical Society
 LICENSE=	ofl-v1.1
 
