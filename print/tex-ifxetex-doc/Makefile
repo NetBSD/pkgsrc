@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/05/05 18:09:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/05 21:22:58 wiz Exp $
 
 DISTNAME=	ifxetex.doc
-# actually, revision 19685 is version 0.5
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
 TEXLIVE_REV=	19685
 
