@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/17 16:55:27 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/05/05 20:31:59 wiz Exp $
 
-SHA1 (tex-xdvi-30339/xdvi.tar.xz) = 27a6cca01fdf5bd771265e3767391a945cb23c51
-RMD160 (tex-xdvi-30339/xdvi.tar.xz) = 59f8a970963d01a2b05e2856ceb05303c3916418
-Size (tex-xdvi-30339/xdvi.tar.xz) = 6832 bytes
+SHA1 (tex-xdvi-33736/xdvi.tar.xz) = ec4c22f90829f8de7354e27271bf6bffc3af5389
+RMD160 (tex-xdvi-33736/xdvi.tar.xz) = c406b1d586fc51cde175d4fd5c02eeb05c9ff1de
+Size (tex-xdvi-33736/xdvi.tar.xz) = 6832 bytes
