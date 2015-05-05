@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 14:45:22 wiz Exp $
+share/texmf-dist/doc/fonts/gothic/00readme_fraktur.msg
+share/texmf-dist/doc/fonts/gothic/README.sueterlin
+share/texmf-dist/doc/fonts/gothic/README.yinit
+share/texmf-dist/doc/fonts/gothic/suet.pdf
+share/texmf-dist/doc/fonts/gothic/suet.tex
+share/texmf-dist/doc/fonts/gothic/yinit.pdf
