@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2015/05/05 14:29:48 wiz Exp $
+# $NetBSD: Makefile,v 1.273 2015/05/05 14:45:26 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -270,6 +270,8 @@ SUBDIR+=	tex-fpl
 SUBDIR+=	tex-fpl-doc
 SUBDIR+=	tex-garuda-c90
 SUBDIR+=	tex-glyphlist
+SUBDIR+=	tex-gothic
+SUBDIR+=	tex-gothic-doc
 SUBDIR+=	tex-helvetic
 SUBDIR+=	tex-ipaex
 SUBDIR+=	tex-ipaex-doc
