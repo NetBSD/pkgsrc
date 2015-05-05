@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 13:49:44 wiz Exp $
+share/texmf-dist/tex/latex/bbm-macros/bbm.sty
+share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+share/texmf-dist/tex/latex/bbm-macros/ubbmss.fd
+share/texmf-dist/tex/latex/bbm-macros/ubbmtt.fd
