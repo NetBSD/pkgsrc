@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2085 2015/05/05 12:39:28 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2086 2015/05/05 13:11:27 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3326,3 +3326,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/octave to 3.6.4nb8 [wiz 2015-05-05]
 	Updated net/dhcpcd to 6.8.2 [roy 2015-05-05]
 	Added devel/cobol-mode version 0.0.20150505 [ryoon 2015-05-05]
+	Updated misc/udfclient to 0.8 [reinoud 2015-05-05]
