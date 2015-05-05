@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2015/05/03 10:37:36 markd Exp $
+# $NetBSD: Makefile,v 1.71 2015/05/05 14:26:25 wiz Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -25,6 +25,8 @@ DEPENDS+=	tex-antt-[0-9]*:../../fonts/tex-antt
 DEPENDS+=	tex-anysize-[0-9]*:../../print/tex-anysize
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
+DEPENDS+=	tex-bbm-[0-9]*:../../fonts/tex-bbm
+DEPENDS+=	tex-bbm-macros-[0-9]*:../../print/tex-bbm-macros
 DEPENDS+=	tex-bbold-[0-9]*:../../fonts/tex-bbold
 DEPENDS+=	tex-beamer-[0-9]*:../../print/tex-beamer
 DEPENDS+=	tex-bezos-[0-9]*:../../print/tex-bezos
@@ -43,6 +45,9 @@ DEPENDS+=	tex-capt-of-[0-9]*:../../print/tex-capt-of
 DEPENDS+=	tex-captdef-[0-9]*:../../print/tex-captdef
 DEPENDS+=	tex-caption-[0-9]*:../../print/tex-caption
 DEPENDS+=	tex-cases-[0-9]*:../../print/tex-cases
+DEPENDS+=	tex-cbfonts-[0-9]*:../../fonts/tex-cbfonts
+DEPENDS+=	tex-cbfonts-fd-[0-9]*:../../fonts/tex-cbfonts-fd
+DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
 DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
 DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
 DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
@@ -57,6 +62,8 @@ DEPENDS+=	tex-collection-genericrecommended>=2010:../../print/tex-collection-gen
 DEPENDS+=	tex-collection-latex>=2010:../../print/tex-collection-latex
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-comment-[0-9]*:../../print/tex-comment
+DEPENDS+=	tex-concmath-[0-9]*:../../fonts/tex-concmath
+DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 DEPENDS+=	tex-context>=2009:../../print/tex-context
 DEPENDS+=	tex-crop-[0-9]*:../../print/tex-crop
 DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
@@ -70,6 +77,7 @@ DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
+DEPENDS+=	tex-ethiop-[0-9]*:../../print/tex-ethiop
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 DEPENDS+=	tex-extsizes-[0-9]*:../../print/tex-extsizes
@@ -151,11 +159,15 @@ DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
 DEPENDS+=	tex-nomencl-[0-9]*:../../print/tex-nomencl
 DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
 DEPENDS+=	tex-ntheorem-[0-9]*:../../print/tex-ntheorem
+DEPENDS+=	tex-ocherokee-[0-9]*:../../print/tex-ocherokee
+DEPENDS+=	tex-oinuit-[0-9]*:../../print/tex-oinuit
+DEPENDS+=	tex-otibet-[0-9]*:../../print/tex-otibet
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 DEPENDS+=	tex-overpic-[0-9]*:../../print/tex-overpic
 DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
 DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 DEPENDS+=	tex-picinpar-[0-9]*:../../print/tex-picinpar
+DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
@@ -191,6 +203,7 @@ DEPENDS+=	tex-relsize-[0-9]*:../../print/tex-relsize
 DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-sansmath-[0-9]*:../../print/tex-sansmath
+DEPENDS+=	tex-sauter-[0-9]*:../../fonts/tex-sauter
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
 DEPENDS+=	tex-selectp-[0-9]*:../../print/tex-selectp
 DEPENDS+=	tex-seminar-[0-9]*:../../print/tex-seminar
@@ -217,6 +230,7 @@ DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-verbdef-[0-9]*:../../print/tex-verbdef
 DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
 DEPENDS+=	tex-vertbars-[0-9]*:../../print/tex-vertbars
+DEPENDS+=	tex-vntex-[0-9]*:../../print/tex-vntex
 DEPENDS+=	tex-vruler-[0-9]*:../../print/tex-vruler
 DEPENDS+=	tex-wrapfig-[0-9]*:../../print/tex-wrapfig
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
@@ -258,16 +272,13 @@ TEX_MAP_FILES+=		qhv.map
 TEX_MAP_FILES+=		qpl.map
 TEX_MAP_FILES+=		qtm.map
 TEX_MAP_FILES+=		qzc.map
-TEX_MAP_FILES+=		contnav.map
 TEX_MAP_FILES+=		mathpple.map
 TEX_MAP_FILES+=		omega.map
 TEX_MAP_FILES+=		xypic.map
 TEX_MAP_FILES+=		urwvn.map
 TEX_MAP_FILES+=		dstroke.map
 TEX_MIXEDMAP_FILES+=	cs.map
-TEX_MIXEDMAP_FILES+=	pl.map
 TEX_MIXEDMAP_FILES+=	ccpl.map
-TEX_MIXEDMAP_FILES+=	vnr.map
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/tex-tetex/map.mk"
@@ -280,12 +291,13 @@ post-extract:
 	rm -rf ${WRKSRC}/bibtex/bst/[p-z]*
 	rm -rf ${WRKSRC}/doc/bibtex/base
 	rm -rf ${WRKSRC}/doc/context
-	rmdir ${WRKSRC}/doc/generic/pdfcrop
+	-rmdir ${WRKSRC}/doc/generic/pdfcrop
 	rm -rf ${WRKSRC}/doc/etex
 	rm -rf ${WRKSRC}/doc/fontinst
 	rm -rf ${WRKSRC}/doc/fonts/ae*
 	rm -rf ${WRKSRC}/doc/fonts/am*
 	rm -rf ${WRKSRC}/doc/fonts/antt
+	rm -rf ${WRKSRC}/doc/fonts/cbgreek
 	rm -rf ${WRKSRC}/doc/fonts/cm
 	rm -rf ${WRKSRC}/doc/fonts/cmbright
 	rm -rf ${WRKSRC}/doc/fonts/ec
@@ -294,6 +306,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/fonts/l[a-t]*
 	rm -rf ${WRKSRC}/doc/fonts/mar*
 	rm -rf ${WRKSRC}/doc/fonts/mathp*
+	rm -rf ${WRKSRC}/doc/fonts/polish/pl
 	rm -rf ${WRKSRC}/doc/fonts/pxfonts
 	rm -rf ${WRKSRC}/doc/fonts/t*
 	rm -rf ${WRKSRC}/doc/generic/[a-f]*
@@ -302,19 +315,21 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/generic/pstricks
 	rm -rf ${WRKSRC}/doc/generic/tex-ps
 	rm -rf ${WRKSRC}/doc/generic/thumbpdf
-	rm -rf ${WRKSRC}/doc/generic/u*
-	rm -rf ${WRKSRC}/doc/generic/x*
+	rm -rf ${WRKSRC}/doc/generic/[u-z]*
 	rm -rf ${WRKSRC}/doc/latex/SIunits
 	rm -rf ${WRKSRC}/doc/latex/a*
 	rm -rf ${WRKSRC}/doc/latex/appendix
 	rm -rf ${WRKSRC}/doc/latex/base
+	rm -rf ${WRKSRC}/doc/latex/bbm
 	rm -rf ${WRKSRC}/doc/latex/bbold
 	rm -rf ${WRKSRC}/doc/latex/be*
 	rm -rf ${WRKSRC}/doc/latex/bib*
 	rm -rf ${WRKSRC}/doc/latex/booktabs
 	rm -rf ${WRKSRC}/doc/latex/ca*
+	rm -rf ${WRKSRC}/doc/latex/ccfonts
 	rm -rf ${WRKSRC}/doc/latex/changebar
 	rm -rf ${WRKSRC}/doc/latex/comment
+	rm -rf ${WRKSRC}/doc/latex/concmath
 	rm -rf ${WRKSRC}/doc/latex/crop
 	rm -rf ${WRKSRC}/doc/latex/c[v-z]*
 	rm -rf ${WRKSRC}/doc/latex/dk-bib
@@ -368,24 +383,28 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/pdftex
 	rm -rf ${WRKSRC}/dvips/antt
 	rm -rf ${WRKSRC}/dvips/[b-n]*
+	rm -rf ${WRKSRC}/dvips/pl
 	rm -rf ${WRKSRC}/dvips/ps*
 	rm -rf ${WRKSRC}/dvips/[r-z]*
 	rm -rf ${WRKSRC}/fonts/afm/[a-o]*
 	rm -rf ${WRKSRC}/fonts/afm/public/antt
 	rm -rf ${WRKSRC}/fonts/afm/public/[b-n]*
+	rm -rf ${WRKSRC}/fonts/afm/public/pl
 	rm -rf ${WRKSRC}/fonts/afm/public/pxfonts
 	rm -rf ${WRKSRC}/fonts/afm/public/[r-z]*
 	rm -rf ${WRKSRC}/fonts/afm/urw
-	rmdir ${WRKSRC}/fonts/cmap
+	-rmdir ${WRKSRC}/fonts/cmap
 	rm -rf ${WRKSRC}/fonts/enc/dvipdfm/tetex
 	rm -rf ${WRKSRC}/fonts/enc/dvips/antt
 	rm -rf ${WRKSRC}/fonts/enc/dvips/base
 	rm -rf ${WRKSRC}/fonts/enc/dvips/context
 	rm -rf ${WRKSRC}/fonts/enc/dvips/lm
+	rm -rf ${WRKSRC}/fonts/enc/dvips/pl
 	rm -rf ${WRKSRC}/fonts/enc/dvips/tetex
-	rmdir ${WRKSRC}/fonts/lig
+	rm -rf ${WRKSRC}/fonts/enc/dvips/vntex
+	-rmdir ${WRKSRC}/fonts/lig
 	rm -f ${WRKSRC}/fonts/map/dvipdfm/tetex/cm-dvipdfm-fix.map
-	rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
+	-rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
 	rm -rf ${WRKSRC}/fonts/map/dvips/ams
 	rm -rf ${WRKSRC}/fonts/map/dvips/antt
 	rm -rf ${WRKSRC}/fonts/map/dvips/context
@@ -393,6 +412,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/map/dvips/misc/cmcyr.map
 	rm -f ${WRKSRC}/fonts/map/dvips/misc/eurosym.map
 	rm -f ${WRKSRC}/fonts/map/dvips/misc/marvosym.map
+	rm -rf ${WRKSRC}/fonts/map/dvips/pl
 	rm -rf ${WRKSRC}/fonts/map/dvips/psnfss
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/pxfonts.map
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/b*
@@ -401,27 +421,43 @@ post-extract:
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/pdftex35.map
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/ps2pk35.map
 	rm -rf ${WRKSRC}/fonts/map/dvips/tetex/t*
-	rmdir ${WRKSRC}/fonts/map/dvips/updmap
+	-rmdir ${WRKSRC}/fonts/map/dvips/updmap
+	rm -rf ${WRKSRC}/fonts/map/dvips/vntex
 	rm -rf ${WRKSRC}/fonts/map/dvips/xypic
 	rm -rf ${WRKSRC}/fonts/map/fontname
-	rmdir ${WRKSRC}/fonts/map/pdftex/updmap
-	rmdir ${WRKSRC}/fonts/misc
-	rmdir ${WRKSRC}/fonts/opentype
-	rmdir ${WRKSRC}/fonts/pk
-	rmdir ${WRKSRC}/fonts/sfd
+	-rmdir ${WRKSRC}/fonts/map/pdftex/updmap
+	-rmdir ${WRKSRC}/fonts/misc
+	rm -rf ${WRKSRC}/fonts/ofm/public/ethiop
+	rm -rf ${WRKSRC}/fonts/ofm/public/ocherokee
+	rm -rf ${WRKSRC}/fonts/ofm/public/otibet
+	rm -rf ${WRKSRC}/fonts/ofm/public/oinuit
+	-rmdir ${WRKSRC}/fonts/opentype
+	rm -rf ${WRKSRC}/fonts/ovf/public/ethiop
+	rm -rf ${WRKSRC}/fonts/ovf/public/ocherokee
+	rm -rf ${WRKSRC}/fonts/ovf/public/oinuit
+	rm -rf ${WRKSRC}/fonts/ovf/public/otibet
+	rm -rf ${WRKSRC}/fonts/ovp/public/ethiop
+	rm -rf ${WRKSRC}/fonts/ovp/public/ocherokee
+	rm -rf ${WRKSRC}/fonts/ovp/public/oinuit
+	rm -rf ${WRKSRC}/fonts/ovp/public/otibet
+	-rmdir ${WRKSRC}/fonts/pk
+	-rmdir ${WRKSRC}/fonts/sfd
 	rm -rf ${WRKSRC}/fonts/source/ams
-	rm -rf ${WRKSRC}/fonts/source/jknappen/[a-r]*
+	rm -rf ${WRKSRC}/fonts/source/jknappen/[a-s]*
 	rm -rf ${WRKSRC}/fonts/source/lh
+	rm -rf ${WRKSRC}/fonts/source/public/bbm
 	rm -rf ${WRKSRC}/fonts/source/public/bbold
+	rm -rf ${WRKSRC}/fonts/source/public/cbgreek
 	rm -rf ${WRKSRC}/fonts/source/public/cm
 	rm -rf ${WRKSRC}/fonts/source/public/cmbright
 	rm -rf ${WRKSRC}/fonts/source/public/cmextra
+	rm -rf ${WRKSRC}/fonts/source/public/concmath
 	rm -rf ${WRKSRC}/fonts/source/public/esint
 	rm -rf ${WRKSRC}/fonts/source/public/eurosym
 	rm -rf ${WRKSRC}/fonts/source/public/latex
 	rm -rf ${WRKSRC}/fonts/source/public/mflogo
-	rm -f ${WRKSRC}/fonts/source/public/misc/[0-9b-w]*.mf
-	rm -f ${WRKSRC}/fonts/source/public/misc/z*.mf
+	rm -f ${WRKSRC}/fonts/source/public/misc/[0-9b-wz]*.mf
+	rm -rf ${WRKSRC}/fonts/source/public/pl
 	rm -rf ${WRKSRC}/fonts/source/public/[r-s]*
 	rm -rf ${WRKSRC}/fonts/source/public/w*
 	rm -rf ${WRKSRC}/fonts/source/public/xypic
@@ -435,10 +471,12 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/[d-o]*
 	rm -rf ${WRKSRC}/fonts/tfm/public/antt
 	rm -rf ${WRKSRC}/fonts/tfm/public/ae*
+	rm -rf ${WRKSRC}/fonts/tfm/public/bbm
 	rm -rf ${WRKSRC}/fonts/tfm/public/bbold
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm
 	rm -rf ${WRKSRC}/fonts/tfm/public/cmbright
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm[c-z]*
+	rm -rf ${WRKSRC}/fonts/tfm/public/concmath
 	rm -rf ${WRKSRC}/fonts/tfm/public/eurosym
 	rm -rf ${WRKSRC}/fonts/tfm/public/latex
 	rm -rf ${WRKSRC}/fonts/tfm/public/lm
@@ -446,23 +484,25 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/public/mflogo
 	rm -f ${WRKSRC}/fonts/tfm/public/misc/[b-q]*.tfm
 	rm -rf ${WRKSRC}/fonts/tfm/public/pazo
+	rm -rf ${WRKSRC}/fonts/tfm/public/pl
 	rm -rf ${WRKSRC}/fonts/tfm/public/pxfonts
 	rm -rf ${WRKSRC}/fonts/tfm/public/[r-t]*
 	rm -rf ${WRKSRC}/fonts/tfm/public/w*
 	rm -rf ${WRKSRC}/fonts/tfm/public/xypic
 	rm -rf ${WRKSRC}/fonts/tfm/yandy/times
-	rmdir ${WRKSRC}/fonts/truetype
+	-rmdir ${WRKSRC}/fonts/truetype
 	rm -rf ${WRKSRC}/fonts/type1/[a-o]*
 	rm -rf ${WRKSRC}/fonts/type1/public/antt
 	rm -rf ${WRKSRC}/fonts/type1/public/cmcyr
 	rm -rf ${WRKSRC}/fonts/type1/public/[e-n]*
+	rm -rf ${WRKSRC}/fonts/type1/public/pl
 	rm -rf ${WRKSRC}/fonts/type1/public/pxfonts
 	rm -rf ${WRKSRC}/fonts/type1/public/t*
 	rm -rf ${WRKSRC}/fonts/type1/public/xypic
 	rm -rf ${WRKSRC}/fonts/type1/urw
 	rm -rf ${WRKSRC}/fonts/type1/xypic
-	rmdir ${WRKSRC}/fonts/type3
-	rmdir ${WRKSRC}/fonts/type42
+	-rmdir ${WRKSRC}/fonts/type3
+	-rmdir ${WRKSRC}/fonts/type42
 	rm -rf ${WRKSRC}/fonts/vf/adobe/[a-ln-z]*
 	rm -rf ${WRKSRC}/fonts/vf/bitstrea
 	rm -rf ${WRKSRC}/fonts/vf/public/ae*
@@ -479,8 +519,15 @@ post-extract:
 	rm -rf ${WRKSRC}/metapost/misc
 	rm -rf ${WRKSRC}/metapost/support
 	rm -rf ${WRKSRC}/mft
+	rm -rf ${WRKSRC}/omega/ocp/ethiop
 	rm -rf ${WRKSRC}/omega/ocp/misc
+	rm -rf ${WRKSRC}/omega/ocp/ocherokee
+	rm -rf ${WRKSRC}/omega/ocp/oinuit
+	rm -rf ${WRKSRC}/omega/ocp/otibet
+	rm -rf ${WRKSRC}/omega/otp/ethiop
 	rm -rf ${WRKSRC}/omega/otp/misc
+	rm -rf ${WRKSRC}/omega/otp/ocherokee
+	rm -rf ${WRKSRC}/omega/otp/otibet
 	rm -rf ${WRKSRC}/scripts/context
 	rm -rf ${WRKSRC}/scripts/thumbpdf
 	rm -rf ${WRKSRC}/tex/context
@@ -509,18 +556,21 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/antt
 	rm -rf ${WRKSRC}/tex/latex/appendix
 	rm -rf ${WRKSRC}/tex/latex/base
+	rm -rf ${WRKSRC}/tex/latex/bbm
 	rm -rf ${WRKSRC}/tex/latex/bbold
 	rm -rf ${WRKSRC}/tex/latex/be*
 	rm -rf ${WRKSRC}/tex/latex/bib*
 	rm -rf ${WRKSRC}/tex/latex/bo*
 	rm -rf ${WRKSRC}/tex/latex/ca[m-z]*
 	rm -rf ${WRKSRC}/tex/latex/carlisle
+	rm -rf ${WRKSRC}/tex/latex/ccfonts
 	rm -rf ${WRKSRC}/tex/latex/cmbright
 	rm -rf ${WRKSRC}/tex/latex/changebar
 	rm -rf ${WRKSRC}/tex/latex/chngpage
 	rm -rf ${WRKSRC}/tex/latex/cite
 	rm -rf ${WRKSRC}/tex/latex/cmap
 	rm -rf ${WRKSRC}/tex/latex/comment
+	rm -rf ${WRKSRC}/tex/latex/concmath
 	rm -rf ${WRKSRC}/tex/latex/concrete
 	rm -rf ${WRKSRC}/tex/latex/con[f-z]*
 	rm -rf ${WRKSRC}/tex/latex/crop
