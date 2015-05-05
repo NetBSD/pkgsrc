@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2108 2015/05/05 20:30:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2109 2015/05/05 20:31:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-texlive-common-doc to 2014 [wiz 2015-05-05]
 	Updated print/tex-texlive-docindex to 2014 [wiz 2015-05-05]
 	Updated print/tex-texlive-docindex-doc to 2014 [wiz 2015-05-05]
+	Updated print/tex-texlive-en-doc to 2014 [wiz 2015-05-05]
