@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2013/11/17 16:55:27 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/05 20:31:59 wiz Exp $
 
 DISTNAME=	xdvi
-PKGNAME=	tex-${DISTNAME}-22.86
-TEXLIVE_REV=	30339
+PKGNAME=	tex-${DISTNAME}-22.87
+TEXLIVE_REV=	33736
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/xdvi
 COMMENT=	Configuration file for xdvik
 
 CONFLICTS+=	teTeX-bin<3.0nb25
