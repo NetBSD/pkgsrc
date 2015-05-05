@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2015/05/04 12:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2015/05/05 14:29:48 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -240,6 +240,7 @@ SUBDIR+=	tex-concmath-doc
 SUBDIR+=	tex-concmath-fonts
 SUBDIR+=	tex-concmath-fonts-doc
 SUBDIR+=	tex-courier
+SUBDIR+=	tex-cs
 SUBDIR+=	tex-ec
 SUBDIR+=	tex-ec-doc
 SUBDIR+=	tex-eco
