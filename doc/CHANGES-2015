@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2099 2015/05/05 14:48:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2100 2015/05/05 14:52:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-gothic version 2014 [wiz 2015-05-05]
 	Added fonts/tex-gothic-doc version 2014 [wiz 2015-05-05]
 	Added fonts/tex-euxm version 2014 [wiz 2015-05-05]
+	Added fonts/tex-concrete version 2014 [wiz 2015-05-05]
