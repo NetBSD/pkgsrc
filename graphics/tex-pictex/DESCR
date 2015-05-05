@@ -1,0 +1,10 @@
+PicTeX is an early, and very comprehensive drawing package,
+that mostly draws by placing myriads of small dots to make up
+pictures. It has a tendency to run out of space, most
+especially of allowable dimensions registers; packages m-pictex
+and pictexwd deal with the register problem, in different ways.
+Note that full documentation may be bought via the PC-TeX site,
+though a command summary is available as free software.
+Alternatively, a front-end package such as mathsPiC, which
+covers all of PicTeX and has a complete and free manual, could
+be used.
