@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2104 2015/05/05 16:33:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2105 2015/05/05 16:41:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3345,3 +3345,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-concprog version 2014 [wiz 2015-05-05]
 	Added print/tex-concprog-doc version 2014 [wiz 2015-05-05]
 	Updated print/tex-bibtex to 0.99dnb2 [wiz 2015-05-05]
+	Updated print/tex-bibtex-doc to 0.99dnb1 [wiz 2015-05-05]
