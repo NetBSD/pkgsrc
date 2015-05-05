@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.21 2015/02/10 00:26:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.22 2015/05/05 17:07:39 abs Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
 bin/openjdk7-javadoc
 bin/openjdk7-javah
 bin/openjdk7-javap
+bin/openjdk7-jps
 bin/openjdk7-keytool
 bin/openjdk7-orbd
 bin/openjdk7-policytool
