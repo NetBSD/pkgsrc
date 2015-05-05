@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/13 18:36:14 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/05/05 20:30:40 wiz Exp $
 
-SHA1 (tex-texlive-docindex-32131/texlive-docindex.doc.tar.xz) = af591ba17daac6c0eb60fcbd617d70f96ae7dd8c
-RMD160 (tex-texlive-docindex-32131/texlive-docindex.doc.tar.xz) = 34c9cd38dc80fd9167623db3ee5cab3ce6fb58d6
-Size (tex-texlive-docindex-32131/texlive-docindex.doc.tar.xz) = 93904 bytes
+SHA1 (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = d277545a83f2f7dbab0b3f370100fe5cc43d14b7
+RMD160 (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = 52adfbeb3ad84485e58973127733f03d733d289f
+Size (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = 105852 bytes
