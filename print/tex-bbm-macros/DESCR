@@ -1,0 +1,4 @@
+Provides LaTeX support for Blackboard variants of Computer
+Modern fonts. Declares a font family bbm so you can in
+principle write running text in blackboard bold, and lots of
+math alphabets for using the fonts within maths.
