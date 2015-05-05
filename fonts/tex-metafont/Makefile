@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2015/04/25 08:11:35 markd Exp $
+# $NetBSD: Makefile,v 1.10 2015/05/05 18:25:36 wiz Exp $
 
 DISTNAME=	metafont
+# should be this instead:
+#PKGNAME=	tex-${DISTNAME}-2.7182818.20140107
 PKGNAME=	tex-${DISTNAME}-2014
 CATEGORIES=	fonts
 TEXLIVE_REV=	35821
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/metafont
 COMMENT=	METAFONT system for specifying fonts
+#LICENSE=	knuth
 
 CONFLICTS+=	teTeX-bin<=3.0nb32
 CONFLICTS+=	teTeX-texmf<=3.0nb13

@@ -1,4 +1,10 @@
-METAFONT is a powerful tool for font creation, which was used by
-Donald Knuth to create the Computer Modern fonts, used as standard by
-TeX and LaTeX, and now the standard fonts used for scientific
-publication.
+The program takes a semi-algorithmic specification of a font,
+and produces a bitmap font (whose properties are defined by a
+set of parameters of the target device), and a set metrics for
+use by TeX. The bitmap output may be converted into a format
+directly usable by a device driver, etc., by the tools provided
+in the parallel mfware distribution. (Third parties have
+developed tools to convert the bitmap output to outline fonts.)
+The distribution includes the source of Knuth's Metafont book;
+this source is there to read, as an example of writing TeX --
+it should not be processed without Knuth's direct permission.
