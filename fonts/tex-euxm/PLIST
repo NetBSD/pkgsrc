@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 14:48:44 wiz Exp $
+share/texmf-dist/fonts/source/public/euxm/eubase.mf
+share/texmf-dist/fonts/source/public/euxm/eusmch.mf
+share/texmf-dist/fonts/source/public/euxm/euxm10.mf
+share/texmf-dist/fonts/source/public/euxm/euxm5.mf
+share/texmf-dist/fonts/source/public/euxm/euxm7.mf
+share/texmf-dist/fonts/source/public/euxm/euxmch.mf
+share/texmf-dist/fonts/tfm/public/euxm/euxm10.tfm
+share/texmf-dist/fonts/tfm/public/euxm/euxm5.tfm
+share/texmf-dist/fonts/tfm/public/euxm/euxm7.tfm
