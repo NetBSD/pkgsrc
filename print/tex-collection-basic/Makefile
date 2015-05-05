@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/04/26 02:41:07 markd Exp $
+# $NetBSD: Makefile,v 1.10 2015/05/05 20:32:33 wiz Exp $
 
 DISTNAME=	collection-basic
 PKGNAME=	tex-${DISTNAME}-2014
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	# empty
 TEXLIVE_REV=	33040
@@ -40,10 +41,10 @@ DEPENDS+=	tex-plain>=3.141592653.26647:../../print/tex-plain
 DEPENDS+=	tex-tetex>=3.0.32132:../../print/tex-tetex
 DEPENDS+=	tex-tex>=3.1415926:../../print/tex-tex
 DEPENDS+=	tex-texconfig>=2013:../../print/tex-texconfig
-DEPENDS+=	tex-texlive-docindex>=2013:../../print/tex-texlive-docindex
+DEPENDS+=	tex-texlive-docindex>=2014:../../print/tex-texlive-docindex
 # texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts>=2013:../../print/tex-texlive-scripts
-DEPENDS+=	tex-xdvi>=22.86:../../print/tex-xdvi
+DEPENDS+=	tex-xdvi>=22.87:../../print/tex-xdvi
 
 META_PACKAGE=	yes
 
