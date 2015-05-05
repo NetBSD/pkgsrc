@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.617 2015/05/04 12:57:47 markd Exp $
+# $NetBSD: Makefile,v 1.618 2015/05/05 13:50:31 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -266,6 +266,8 @@ SUBDIR+=	tex-babel-vietnamese
 SUBDIR+=	tex-babelbib
 SUBDIR+=	tex-babelbib-doc
 SUBDIR+=	tex-bagpipetex
+SUBDIR+=	tex-bbm-macros
+SUBDIR+=	tex-bbm-macros-doc
 SUBDIR+=	tex-beamer
 SUBDIR+=	tex-beamer-doc
 SUBDIR+=	tex-beton
