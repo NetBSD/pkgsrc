@@ -1,0 +1,8 @@
+Concrete Roman fonts, designed by Donald E. Knuth, originally
+for use with Euler mathematics fonts. Alternative mathematics
+fonts, based on the concrete 'parameter set' are available as
+the concmath fonts bundle. LaTeX support is offered by the
+beton, concmath and ccfonts packages. T1- and TS1-encoded
+versions of the fonts are available in the ecc bundle, and
+Adobe Type 1 versions of the ecc fonts are part of the cm-super
+bundle.
