@@ -1,2 +1,3 @@
-The file plain.tex is used to build the Plain TeX format, as described
-in the TeXbook.
+Contains files used to build the Plain TeX format, as described
+in the TeXbook, together with various supporting files (some
+also discussed in the book).
