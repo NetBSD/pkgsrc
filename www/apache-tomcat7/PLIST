@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/02/17 14:03:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/05/05 13:21:42 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -30,7 +30,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-4.4.jar
+share/tomcat/lib/ecj-4.4.2.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -382,8 +382,8 @@ share/tomcat/webapps/examples/WEB-INF/jsp/applet/Clock2.java
 share/tomcat/webapps/examples/WEB-INF/jsp/debug-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp/example-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp2/jsp2-example-taglib.tld
-share/tomcat/webapps/examples/WEB-INF/lib/jstl.jar
-share/tomcat/webapps/examples/WEB-INF/lib/standard.jar
+share/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar
+share/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar
 share/tomcat/webapps/examples/WEB-INF/tags/displayProducts.tag
 share/tomcat/webapps/examples/WEB-INF/tags/helloWorld.tag
 share/tomcat/webapps/examples/WEB-INF/tags/panel.tag
