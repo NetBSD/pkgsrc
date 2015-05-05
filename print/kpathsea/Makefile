@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/02/21 00:12:51 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2015/05/05 18:15:07 wiz Exp $
 
 DISTNAME=	texlive-20140525-source
 PKGNAME=	kpathsea-6.2.0
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.tug.org/kpathsea/
+HOMEPAGE=	http://ctan.org/pkg/kpathsea
 COMMENT=	Path searching library for TeX-related files
 LICENSE=	gnu-lgpl-v2.1
 
