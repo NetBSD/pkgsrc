@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/05 12:38:50 ryoon Exp $
+${EMACS_LISPPREFIX}/cobol-mode/cobol-mode.el

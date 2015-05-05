@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/05/05 12:38:50 ryoon Exp $
+
+To enable COBOL mode, add the following to your ~/.emacs .
+
+;;; COBOL mode
+(setq auto-mode-alist (append auto-mode-alist
+    '(("\\.cob$" . cobol-mode))))
+(autoload 'cobol-mode "cobol-mode"
+    "A major mode for editing ANSI Cobol/Scobol files." t nil)
+===========================================================================
