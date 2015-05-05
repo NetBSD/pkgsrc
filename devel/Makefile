@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2095 2015/05/01 06:09:47 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2096 2015/05/05 12:40:08 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -124,6 +124,7 @@ SUBDIR+=	cmake-mode
 SUBDIR+=	cmocka
 SUBDIR+=	cmockery2
 SUBDIR+=	cmph
+SUBDIR+=	cobol-mode
 SUBDIR+=	coccinelle
 SUBDIR+=	coconut
 SUBDIR+=	codeville
