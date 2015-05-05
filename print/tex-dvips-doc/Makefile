@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2015/04/25 03:49:23 markd Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/05 16:59:23 wiz Exp $
 
 DISTNAME=	dvips.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	36020
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/dvips
 COMMENT=	Documentation for tex-dvips
 LICENSE=	gnu-gpl-v2
 
