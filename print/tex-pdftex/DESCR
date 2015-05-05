@@ -1,5 +1,6 @@
-An extension of TeX which can be configured to directly generate PDF
-documents instead of DVI.  All current free TeX distributions
-including TeX live, MacTeX, and MiKTeX include pdfTeX (Plain TeX) and
-pdfLaTeX (LaTeX).  ConTeXt was designed around use of pdfTeX (though
-it is now migrating towards LuaTeX).
+An extension of TeX which can be configured to directly
+generate PDF documents instead of DVI. All current free TeX
+distributionsm including TeX live, MacTeX and MiKTeX include
+pdfTeX (Plain TeX) and pdfLaTeX (LaTeX). ConTeXt was designed
+around use of pdfTeX (though it is now migrating towards
+LuaTeX).
