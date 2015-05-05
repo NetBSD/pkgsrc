@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/05/03 20:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/05 13:24:37 mef Exp $
 
 DISTNAME=	LaTeX-Driver-0.200.4
 PKGNAME=	p5-${DISTNAME}
@@ -31,6 +31,12 @@ DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
+# t/20-complexdoc.t requires following package
+BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 
 PERL5_MODULE_TYPE=	Module::Install
 PERL5_PACKLIST=		auto/LaTeX/Driver/.packlist
