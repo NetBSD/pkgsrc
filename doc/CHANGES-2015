@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2139 2015/05/06 08:59:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2140 2015/05/06 09:11:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3387,3 +3387,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-xskak-doc version 1.4 [wiz 2015-05-06]
 	Added print/tex-schulschriften version 4 [wiz 2015-05-06]
 	Added print/tex-schulschriften-doc version 4 [wiz 2015-05-06]
+	Added print/tex-go version 2014 [wiz 2015-05-06]
