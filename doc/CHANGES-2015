@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2141 2015/05/06 09:11:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2142 2015/05/06 09:20:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3389,3 +3389,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-schulschriften-doc version 4 [wiz 2015-05-06]
 	Added print/tex-go version 2014 [wiz 2015-05-06]
 	Added print/tex-go-doc version 2014 [wiz 2015-05-06]
+	Added print/tex-fontch version 2.2 [wiz 2015-05-06]
