@@ -1,0 +1,4 @@
+The package provides an experiment in using XML (specifically
+DocBook 5) to mark up and maintain LaTeX classes and packages.
+XSLT 2 styleheets generate the .dtx and .ins distribution files
+expected by end users.
