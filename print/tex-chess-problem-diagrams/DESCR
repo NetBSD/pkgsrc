@@ -1,0 +1,3 @@
+This package provides macros to typeset chess problem diagrams
+including fairy chess problems (mostly using rotated images of
+pieces) and other boards.
