@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:09:18 wiz Exp $
+share/texmf-dist/doc/generic/knuth/errata/cm85.bug
+share/texmf-dist/doc/generic/knuth/errata/errata.pdf
+share/texmf-dist/doc/generic/knuth/errata/errorlog.pdf
+share/texmf-dist/doc/generic/knuth/errata/mf84.bug
+share/texmf-dist/doc/generic/knuth/errata/tex82.bug
+share/texmf-dist/doc/generic/knuth/etc/vftovp.pdf
+share/texmf-dist/doc/generic/knuth/etc/vptovf.pdf
+share/texmf-dist/doc/generic/knuth/mf/mf.pdf
+share/texmf-dist/doc/generic/knuth/mf/trapman.pdf
+share/texmf-dist/doc/generic/knuth/mfware/gftodvi.pdf
+share/texmf-dist/doc/generic/knuth/mfware/gftopk.pdf
+share/texmf-dist/doc/generic/knuth/mfware/gftype.pdf
+share/texmf-dist/doc/generic/knuth/mfware/mft.pdf
+share/texmf-dist/doc/generic/knuth/tex/glue.pdf
+share/texmf-dist/doc/generic/knuth/tex/tex.pdf
+share/texmf-dist/doc/generic/knuth/tex/tripman.pdf
+share/texmf-dist/doc/generic/knuth/texware/dvitype.pdf
+share/texmf-dist/doc/generic/knuth/texware/pltotf.pdf
+share/texmf-dist/doc/generic/knuth/texware/pooltype.pdf
+share/texmf-dist/doc/generic/knuth/texware/tftopl.pdf
+share/texmf-dist/doc/generic/knuth/web/tangle.pdf
+share/texmf-dist/doc/generic/knuth/web/weave.pdf
+share/texmf-dist/doc/generic/knuth/web/webman.pdf
