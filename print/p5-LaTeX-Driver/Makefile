@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/05/05 13:24:37 mef Exp $
+# $NetBSD: Makefile,v 1.16 2015/05/06 06:53:20 mef Exp $
 
 DISTNAME=	LaTeX-Driver-0.200.4
 PKGNAME=	p5-${DISTNAME}
@@ -34,9 +34,12 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 # for make test
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
 # t/20-complexdoc.t requires following package
 BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+
+# xelatex is necessary for FORMATTER_TESTING
+#EST_ENV+=	FORMATTER_TESTING=yes
+TEST_ENV+=	BIBTEX_TESTS=yes
 
 PERL5_MODULE_TYPE=	Module::Install
 PERL5_PACKLIST=		auto/LaTeX/Driver/.packlist
