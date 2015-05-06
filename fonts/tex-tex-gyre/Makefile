@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/06 08:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/06 09:33:38 wiz Exp $
 
 DISTNAME=	tex-gyre
 PKGNAME=	tex-${DISTNAME}-2.004
@@ -6,7 +6,9 @@ PKGREVISION=	1
 TEXLIVE_REV=	18651
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/tex-gyre
 COMMENT=	TeX Fonts extending freely available URW fonts
+LICENSE=	gfsl
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
