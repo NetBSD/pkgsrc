@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2118 2015/05/06 06:10:08 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2119 2015/05/06 07:31:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3366,3 +3366,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-MicroTemplate to 0.23 [mef 2015-05-06]
 	Updated textproc/p5-Template-Plugin-Latex to 3.06 [mef 2015-05-06]
 	Updated net/dnsmasq to 2.72 [mef 2015-05-06]
+	Updated devel/p5-Test-Output to 1.03nb3 [wiz 2015-05-06]
