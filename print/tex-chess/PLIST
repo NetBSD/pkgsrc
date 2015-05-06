@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:40:42 wiz Exp $
+share/texmf-dist/fonts/source/public/chess/README.mf
+share/texmf-dist/fonts/source/public/chess/chess10.mf
+share/texmf-dist/fonts/source/public/chess/chess20.mf
+share/texmf-dist/fonts/source/public/chess/chess30.mf
+share/texmf-dist/fonts/source/public/chess/chessbase.mf
+share/texmf-dist/fonts/source/public/chess/chessdiag.mf
+share/texmf-dist/fonts/source/public/chess/chessf10.mf
+share/texmf-dist/fonts/source/public/chess/chesspieces.mf
+share/texmf-dist/fonts/source/public/chess/empty.mf
+share/texmf-dist/fonts/tfm/public/chess/chess10.tfm
+share/texmf-dist/fonts/tfm/public/chess/chess20.tfm
+share/texmf-dist/fonts/tfm/public/chess/chess30.tfm
+share/texmf-dist/fonts/tfm/public/chess/chessf10.tfm
+share/texmf-dist/fonts/tfm/public/chess/chessfig10.tfm
+share/texmf-dist/tex/latex/chess/chess.sty

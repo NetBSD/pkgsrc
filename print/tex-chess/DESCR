@@ -1,0 +1,4 @@
+The original (and now somewhat dated) TeX chess font package.
+Potential users should consider skak (for alternative fonts,
+and notation support), texmate (for alternative notation
+support), or chessfss (for flexible font choices).
