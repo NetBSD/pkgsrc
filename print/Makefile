@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.626 2015/05/06 18:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.627 2015/05/06 18:06:42 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -215,6 +215,8 @@ SUBDIR+=	tex-arabi
 SUBDIR+=	tex-arabi-doc
 SUBDIR+=	tex-arabtex
 SUBDIR+=	tex-arabtex-doc
+SUBDIR+=	tex-arsclassica
+SUBDIR+=	tex-arsclassica-doc
 SUBDIR+=	tex-babel
 SUBDIR+=	tex-babel-albanian
 SUBDIR+=	tex-babel-bahasa
