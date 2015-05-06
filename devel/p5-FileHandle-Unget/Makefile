@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2015/04/23 14:16:55 mef Exp $
+# $NetBSD: Makefile,v 1.21 2015/05/06 02:47:04 mef Exp $
 
-DISTNAME=	FileHandle-Unget-0.1627
+DISTNAME=	FileHandle-Unget-0.1628
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FileHandle/}
@@ -14,7 +14,6 @@ DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/FileHandle/Unget/.packlist
-#PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 # for tests:
 USE_TOOLS+=	perl
