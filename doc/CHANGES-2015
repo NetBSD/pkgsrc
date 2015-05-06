@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2137 2015/05/06 08:52:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2138 2015/05/06 08:58:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-schwalbe-chess-doc version 2.0 [wiz 2015-05-06]
 	Added print/tex-xskak version 1.4 [wiz 2015-05-06]
 	Added print/tex-xskak-doc version 1.4 [wiz 2015-05-06]
+	Added print/tex-schulschriften version 4 [wiz 2015-05-06]
