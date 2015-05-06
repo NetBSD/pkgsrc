@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:47:07 wiz Exp $
+share/texmf-dist/doc/latex/schwalbe-chess/README
+share/texmf-dist/doc/latex/schwalbe-chess/schwalbe.pdf
