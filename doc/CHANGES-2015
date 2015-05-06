@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2148 2015/05/06 11:09:15 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2149 2015/05/06 17:02:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3453,3 +3453,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added meta-pkgs/texlive-collection-publishers version 2014pre1 [markd 2015-05-06]
 	Added meta-pkgs/texlive-collection-science version 2014pre1 [markd 2015-05-06]
 	Added meta-pkgs/texlive-collection-xetex version 2014pre1 [markd 2015-05-06]
+	Updated net/filezilla to 3.10.3 [wiz 2015-05-06]
