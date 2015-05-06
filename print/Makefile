@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.624 2015/05/06 09:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.625 2015/05/06 10:56:27 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -342,13 +342,6 @@ SUBDIR+=	tex-clrscode-doc
 SUBDIR+=	tex-cmap
 SUBDIR+=	tex-collectbox
 SUBDIR+=	tex-collectbox-doc
-SUBDIR+=	tex-collection-basic
-SUBDIR+=	tex-collection-basic-doc
-SUBDIR+=	tex-collection-genericrecommended
-SUBDIR+=	tex-collection-genericrecommended-doc
-SUBDIR+=	tex-collection-latex
-SUBDIR+=	tex-collection-latex-doc
-SUBDIR+=	tex-collection-latexrecommended
 SUBDIR+=	tex-colortbl
 SUBDIR+=	tex-colortbl-doc
 SUBDIR+=	tex-comment
