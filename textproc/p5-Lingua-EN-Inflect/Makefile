@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:07:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/05/06 02:59:42 mef Exp $
 
-DISTNAME=	Lingua-EN-Inflect-1.895
+DISTNAME=	Lingua-EN-Inflect-1.897
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 
@@ -14,7 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 REPLACE_PERL+=	demo/demo*.pl
 
 PERL5_PACKLIST=	auto/Lingua/EN/Inflect/.packlist
-#PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
