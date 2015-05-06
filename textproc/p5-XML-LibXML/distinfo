@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2015/05/02 02:31:22 mef Exp $
+$NetBSD: distinfo,v 1.35 2015/05/06 07:43:04 wiz Exp $
 
-SHA1 (XML-LibXML-2.0120.tar.gz) = 9a5c9c918d5de597b4d9aa7c50ea035b54212316
-RMD160 (XML-LibXML-2.0120.tar.gz) = 13f995cc83acca36501822367f26f54f66963521
-Size (XML-LibXML-2.0120.tar.gz) = 464446 bytes
+SHA1 (XML-LibXML-2.0121.tar.gz) = acba14e43f136c39eee5ea5475dbbb8f32903e52
+RMD160 (XML-LibXML-2.0121.tar.gz) = 32e9e1981dcd30663e037cca61a57e9923ad2186
+Size (XML-LibXML-2.0121.tar.gz) = 464562 bytes
 SHA1 (patch-Makefile.PL) = e98a4d8667fa792ebb535a7611fecccf2b608402
