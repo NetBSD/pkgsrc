@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:51:59 wiz Exp $
+share/texmf-dist/tex/latex/xskak/xskak-keys.sty
+share/texmf-dist/tex/latex/xskak/xskak-nagdef.sty
+share/texmf-dist/tex/latex/xskak/xskak.sty
