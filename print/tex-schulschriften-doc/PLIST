@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:59:19 wiz Exp $
+share/texmf-dist/doc/fonts/schulschriften/README
+share/texmf-dist/doc/fonts/schulschriften/schulschriften.pdf
+share/texmf-dist/doc/fonts/schulschriften/schulschriften.tex
+share/texmf-dist/doc/fonts/schulschriften/schulschriften_ltx.tex
+share/texmf-dist/doc/fonts/schulschriften/schulschriften_xpl.tex
+share/texmf-dist/doc/fonts/schulschriften/wedn_fonttabelle.eps
+share/texmf-dist/doc/fonts/schulschriften/wela_fonttabelle.eps
+share/texmf-dist/doc/fonts/schulschriften/wesa_fonttabelle.eps
+share/texmf-dist/doc/fonts/schulschriften/wesu_fonttabelle.eps
+share/texmf-dist/doc/fonts/schulschriften/weva_fonttabelle.eps
