@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.621 2015/05/06 08:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.622 2015/05/06 08:59:48 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -319,6 +319,12 @@ SUBDIR+=	tex-chbibref
 SUBDIR+=	tex-chbibref-doc
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-chemarrow-doc
+SUBDIR+=	tex-chess
+SUBDIR+=	tex-chess-doc
+SUBDIR+=	tex-chess-problem-diagrams
+SUBDIR+=	tex-chess-problem-diagrams-doc
+SUBDIR+=	tex-chessboard
+SUBDIR+=	tex-chessboard-doc
 SUBDIR+=	tex-chessfss
 SUBDIR+=	tex-chessfss-doc
 SUBDIR+=	tex-chngcntr
@@ -719,6 +725,10 @@ SUBDIR+=	tex-sansmath
 SUBDIR+=	tex-sansmath-doc
 SUBDIR+=	tex-sauerj
 SUBDIR+=	tex-sauerj-doc
+SUBDIR+=	tex-schulschriften
+SUBDIR+=	tex-schulschriften-doc
+SUBDIR+=	tex-schwalbe-chess
+SUBDIR+=	tex-schwalbe-chess-doc
 SUBDIR+=	tex-secdot
 SUBDIR+=	tex-secdot-doc
 SUBDIR+=	tex-section
@@ -868,6 +878,8 @@ SUBDIR+=	tex-xkeyval
 SUBDIR+=	tex-xkeyval-doc
 SUBDIR+=	tex-xltxtra
 SUBDIR+=	tex-xltxtra-doc
+SUBDIR+=	tex-xskak
+SUBDIR+=	tex-xskak-doc
 SUBDIR+=	tex-xtab
 SUBDIR+=	tex-xtab-doc
 SUBDIR+=	tex-xunicode
