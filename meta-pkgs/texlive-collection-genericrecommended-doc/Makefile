@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:10:28 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/06 10:18:59 markd Exp $
 
 DISTNAME=	collection-genericrecommended-doc
 PKGNAME=	texlive-${DISTNAME}-2013
@@ -8,7 +8,7 @@ TEXLIVE_REV=	30396
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
-COMMENT=	Documentation for tex-collection-genericrecommended
+COMMENT=	Documentation for texlive-collection-genericrecommended
 
 DEPENDS+=	texlive-collection-basic-doc-[0-9]*:../../meta-pkgs/texlive-collection-basic-doc
 

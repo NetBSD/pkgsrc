@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:12:01 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/06 10:16:50 markd Exp $
 
 DISTNAME=	collection-fontsrecommended-doc
 PKGNAME=	texlive-${DISTNAME}-2010
@@ -8,7 +8,7 @@ TEXLIVE_REV=	19478
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
-COMMENT=	Documentation for tex-collection-fontsrecommended
+COMMENT=	Documentation for texlive-collection-fontsrecommended
 
 DEPENDS+=	texlive-collection-basic-doc>=2010:../../meta-pkgs/texlive-collection-basic-doc
 
