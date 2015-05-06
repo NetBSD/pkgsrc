@@ -1,3 +1,5 @@
+$NetBSD: patch-src_rfc1035.c,v 1.2 2015/05/06 06:08:48 mef Exp $
+
 From ad4a8ff7d9097008d7623df8543df435bfddeac8 Mon Sep 17 00:00:00 2001
 From: Simon Kelley <simon@thekelleys.org.uk>
 Date: Thu, 9 Apr 2015 21:48:00 +0100
