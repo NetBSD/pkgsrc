@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/06 18:28:54 wiz Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -29,7 +29,7 @@ DEPENDS+=	tex-acmconf-[0-9]*:../../print/tex-acmconf
 # depend apa
 # depend apa6
 # depend apa6e
-# depend arsclassica
+DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend articleingud
 # depend asaetr
 # depend ascelike
