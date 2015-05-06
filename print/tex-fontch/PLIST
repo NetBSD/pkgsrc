@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 09:20:42 wiz Exp $
+share/texmf-dist/tex/plain/fontch/DSmac.tex
+share/texmf-dist/tex/plain/fontch/TS1mac.tex
+share/texmf-dist/tex/plain/fontch/bsymbols.tex
+share/texmf-dist/tex/plain/fontch/fontch.tex
+share/texmf-dist/tex/plain/fontch/fontch_doc.tex
