@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:42:14 wiz Exp $
+share/texmf-dist/doc/latex/chess-problem-diagrams/README
+share/texmf-dist/doc/latex/chess-problem-diagrams/diagram.pdf
