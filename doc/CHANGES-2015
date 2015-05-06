@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2114 2015/05/05 21:42:58 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2115 2015/05/06 02:37:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3355,3 +3355,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-misc to 2012nb1 [wiz 2015-05-05]
 	Updated print/teTeX3-texmf to 3.0nb50 [wiz 2015-05-05]
 	Updated devel/nss to 3.19 [ryoon 2015-05-05]
+	Updated devel/p5-AnyEvent to 7.09 [mef 2015-05-06]
+	Updated devel/p5-App-cpanminus to 1.7033 [mef 2015-05-06]
+	Updated devel/p5-Devel-CheckBin to 0.03 [mef 2015-05-06]
