@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2126 2015/05/06 08:37:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2127 2015/05/06 08:37:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3374,3 +3374,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-IO-Socket-SSL to 2.014 [wiz 2015-05-06]
 	Added print/tex-knuth-doc version 2014 [wiz 2015-05-06]
 	Added fonts/tex-bartel-chess-fonts version 2014 [wiz 2015-05-06]
+	Added fonts/tex-bartel-chess-fonts-doc version 2014 [wiz 2015-05-06]
