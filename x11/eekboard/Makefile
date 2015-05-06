@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:25:03 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2015/05/06 08:54:49 mef Exp $
 
 DISTNAME=	eekboard-1.0.8
 PKGREVISION=	5
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=ueno/}
+GITHUB_PROJECT= eekboard
+GITHUB_TAG=     ${DISTNAME}
 CATEGORIES=	x11
-MASTER_SITES=	http://cloud.github.com/downloads/ueno/eekboard/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/eekboard/
+HOMEPAGE=	https://github.com/ueno/eekboard
 COMMENT=	Virtual keyboard for GNOME
 LICENSE=	gnu-gpl-v3
 
@@ -15,10 +17,12 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt msgmerge xgettext
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
 PKGCONFIG_OVERRIDE+=	eek/eek-0.90.pc.in
 PKGCONFIG_OVERRIDE+=	eek/eek-gtk-0.90.pc.in
 PKGCONFIG_OVERRIDE+=	eek/eek-xkl-0.90.pc.in
-PKGCONFIG_OVERRIDE+=	eekboard/eekboard-0.90.pc.in
+#KGCONFIG_OVERRIDE+=	eekboard/eekboard-0.90.pc.in
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
