@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 18:05:45 wiz Exp $
+share/texmf-dist/doc/latex/arsclassica/ArsClassica.pdf
+share/texmf-dist/doc/latex/arsclassica/ArsClassica.tex
+share/texmf-dist/doc/latex/arsclassica/Bibliography.bib
+share/texmf-dist/doc/latex/arsclassica/CHANGES
+share/texmf-dist/doc/latex/arsclassica/Chapters/Code.tex
+share/texmf-dist/doc/latex/arsclassica/Chapters/Fundamentals.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Abstract+Sommario.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Acknowledgements.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Bibliography.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Contents.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Index.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Titleback.tex
+share/texmf-dist/doc/latex/arsclassica/FrontBackMatter/Titlepage.tex
+share/texmf-dist/doc/latex/arsclassica/Graphics/Birds.jpg
+share/texmf-dist/doc/latex/arsclassica/Graphics/Example_1.jpg
+share/texmf-dist/doc/latex/arsclassica/Graphics/Example_2.jpg
+share/texmf-dist/doc/latex/arsclassica/Graphics/Example_3.jpg
+share/texmf-dist/doc/latex/arsclassica/Graphics/Example_4.jpg
+share/texmf-dist/doc/latex/arsclassica/README
+share/texmf-dist/doc/latex/arsclassica/arsclassica-settings.tex
