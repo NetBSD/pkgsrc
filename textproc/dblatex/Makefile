@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2015/04/27 12:42:47 markd Exp $
+# $NetBSD: Makefile,v 1.20 2015/05/06 10:25:40 markd Exp $
 
 DISTNAME=	dblatex-0.3.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-DEPENDS+=	tex-collection-latex-[0-9]*:../../print/tex-collection-latex
+DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 DEPENDS+=	tex-anysize-[0-9]*:../../print/tex-anysize
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
