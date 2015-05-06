@@ -1,23 +1,22 @@
-$NetBSD: patch-aa,v 1.10 2010/03/15 21:00:57 tonio Exp $
+$NetBSD: patch-Makefile,v 1.1 2015/05/06 20:45:43 tonio Exp $
 
---- Makefile.orig	2007-06-11 15:23:08.000000000 +0000
-+++ Makefile
-@@ -1,16 +1,16 @@
+Modify Makefile appropriately for pkgsrc.
+
+--- Makefile.orig	2014-09-23 07:03:10.000000000 +0000
++++ Makefile	2015-05-06 15:27:05.000000000 +0000
+@@ -1,14 +1,14 @@
  #### Standard configuration parameters
  # Compile using ocamlopt, to use ocamlc set TARGET=byte
 -TARGET=opt
 +#TARGET=opt
  # Install prefix
--PREFIX=/usr/local
-+#PREFIX=/usr/local
+-PREFIX?=/usr/local
++#PREFIX?=/usr/local
  # Library directory of hevea
 -LIBDIR=$(PREFIX)/lib/hevea
 +LIBDIR=$(PREFIX)/share/hevea
  # Where to install programms
  BINDIR=$(PREFIX)/bin
- # Install prefix prefix
--DESTDIR=
-+#DESTDIR=
  #Where to install hevea.sty
 -LATEXLIBDIR=$(PREFIX)/lib/hevea
 +LATEXLIBDIR=$(LIBDIR)

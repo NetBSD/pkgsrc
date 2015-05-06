@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.20 2012/10/25 06:55:53 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/05/06 20:45:43 tonio Exp $
 
-DISTNAME=	hevea-1.10
+DISTNAME=	hevea-2.23
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/moscova/hevea/
+MASTER_SITES=	http://hevea.inria.fr/distri/
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://pauillac.inria.fr/~maranget/hevea/
+HOMEPAGE=	http://hevea.inria.fr/
 COMMENT=	LaTeX to HTML translator
+LICENSE=	qpl-v1.0
 
-BUILD_DEPENDS+=	ocaml>=3.07:../../lang/ocaml
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
+BUILD_DEPENDS+=	ocaml>=3.12:../../lang/ocaml
 MAKE_ENV+=	TARGET=opt
 .else
+DEPENDS+=	ocaml>=3.12:../../lang/ocaml
 MAKE_ENV+=	TARGET=byte
 .endif
 
