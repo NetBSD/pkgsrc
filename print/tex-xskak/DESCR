@@ -1,0 +1,5 @@
+Xskak, as its prime function, saves information about a chess
+game for later use (e.g., to loop through a game to make an
+animated board). The package also extends the input that the
+parsing commands can handle and offers an interface to define
+and switch between indefinite levels of styles.
