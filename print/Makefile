@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2015/05/06 08:59:48 wiz Exp $
+# $NetBSD: Makefile,v 1.623 2015/05/06 09:12:04 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -459,6 +459,8 @@ SUBDIR+=	tex-germbib
 SUBDIR+=	tex-germbib-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-glossaries-doc
+SUBDIR+=	tex-go
+SUBDIR+=	tex-go-doc
 SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-doc
 SUBDIR+=	tex-guide-to-latex
