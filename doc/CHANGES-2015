@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2153 2015/05/06 18:05:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2154 2015/05/06 18:06:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3458,3 +3458,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-classpack-doc version 0.77 [wiz 2015-05-06]
 	Updated meta-pkgs/texlive-collection-htmlxml to 2014pre2 [wiz 2015-05-06]
 	Added print/tex-arsclassica version 4.0.3 [wiz 2015-05-06]
+	Added print/tex-arsclassica-doc version 4.0.3 [wiz 2015-05-06]
