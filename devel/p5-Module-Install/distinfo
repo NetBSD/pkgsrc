@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2015/04/21 13:30:45 mef Exp $
+$NetBSD: distinfo,v 1.24 2015/05/06 02:50:06 mef Exp $
 
-SHA1 (Module-Install-1.15.tar.gz) = b925d571409f06a27e752575bdb0bdda9424adee
-RMD160 (Module-Install-1.15.tar.gz) = 8da34c5190b7c791d99b21bdbb03f29ef0ce49a6
-Size (Module-Install-1.15.tar.gz) = 129023 bytes
+SHA1 (Module-Install-1.16.tar.gz) = fd0ad651247e6fb932925f4d7e270ec442a066e1
+RMD160 (Module-Install-1.16.tar.gz) = ce2c6fa1cd15c5cdfdf2133a29de9bcbf7177658
+Size (Module-Install-1.16.tar.gz) = 113004 bytes
