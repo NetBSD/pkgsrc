@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2129 2015/05/06 08:41:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2130 2015/05/06 08:41:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-bartel-chess-fonts-doc version 2014 [wiz 2015-05-06]
 	Added print/tex-chess version 1.2 [wiz 2015-05-06]
 	Added print/tex-chess-doc version 1.2 [wiz 2015-05-06]
+	Added print/tex-chess-problem-diagrams version 1.11.1 [wiz 2015-05-06]
