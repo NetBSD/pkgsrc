@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2116 2015/05/06 02:55:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2117 2015/05/06 04:12:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3362,3 +3362,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-FileHandle-Unget to 0.1628 [mef 2015-05-06]
 	Updated devel/p5-PerlIO-utf8_strict to 0.006 [mef 2015-05-06]
 	Updated devel/p5-Sort-Versions to 1.61 [mef 2015-05-06]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.897 [mef 2015-05-06]
+	Updated textproc/p5-Text-MicroTemplate to 0.23 [mef 2015-05-06]
+	Updated textproc/p5-Template-Plugin-Latex to 3.06 [mef 2015-05-06]
