@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2146 2015/05/06 09:37:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2147 2015/05/06 10:04:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-poltawski version 1.101 [wiz 2015-05-06]
 	Added print/tex-poltawski-doc version 1.101 [wiz 2015-05-06]
 	Added fonts/tex-tex-gyre-math-doc version 2014 [wiz 2015-05-06]
+	Updated print/teTeX3-texmf to 3.0nb51 [wiz 2015-05-06]
