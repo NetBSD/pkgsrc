@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:41:03 wiz Exp $
+share/texmf-dist/doc/fonts/chess/board.epsf
+share/texmf-dist/doc/fonts/chess/boards.ltx
+share/texmf-dist/doc/fonts/chess/changes12
+share/texmf-dist/doc/fonts/chess/chessdiag.Xmf
+share/texmf-dist/doc/fonts/chess/copyright
+share/texmf-dist/doc/fonts/chess/dutch-tt.ltx
+share/texmf-dist/doc/fonts/chess/dutch-tt.tex
+share/texmf-dist/doc/fonts/chess/installation
+share/texmf-dist/doc/fonts/chess/kasparov.ltx
+share/texmf-dist/doc/fonts/chess/makefile
+share/texmf-dist/doc/fonts/chess/readme
+share/texmf-dist/doc/fonts/chess/schaakmaatje.ltx
+share/texmf-dist/doc/fonts/chess/symbols.ltx
+share/texmf-dist/doc/fonts/chess/symbols.tex
+share/texmf-dist/doc/fonts/chess/tal.ltx
+share/texmf-dist/doc/fonts/chess/tal.tex
+share/texmf-dist/doc/fonts/chess/tugboat.ltx
+share/texmf-dist/doc/fonts/chess/tuggame.ltx
