@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/02/18 22:29:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2015/05/06 10:23:42 markd Exp $
 
 DISTNAME=	bulk-large-20150218
 CATEGORIES=	meta-pkgs
@@ -113,17 +113,17 @@ BUILD_DEPENDS+=	mit-krb5-[0-9]*:../../security/mit-krb5
 #
 # 4. TeX
 #
-BUILD_DEPENDS+=	tex-collection-fontsrecommended-[0-9]*:../../fonts/tex-collection-fontsrecommended
-BUILD_DEPENDS+=	tex-collection-fontsrecommended-doc-[0-9]*:../../fonts/tex-collection-fontsrecommended-doc
+BUILD_DEPENDS+=	texlive-collection-fontsrecommended-[0-9]*:../../meta-pkgs/texlive-collection-fontsrecommended
+BUILD_DEPENDS+=	texlive-collection-fontsrecommended-doc-[0-9]*:../../meta-pkgs/texlive-collection-fontsrecommended-doc
 BUILD_DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
 BUILD_DEPENDS+=	teTeX-bin>=3:../../print/teTeX3-bin
 BUILD_DEPENDS+=	teTeX-texmf>=3:../../print/teTeX3-texmf
-BUILD_DEPENDS+=	tex-collection-basic-[0-9]*:../../print/tex-collection-basic
-BUILD_DEPENDS+=	tex-collection-basic-doc-[0-9]*:../../print/tex-collection-basic-doc
-BUILD_DEPENDS+=	tex-collection-genericrecommended-[0-9]*:../../print/tex-collection-genericrecommended
-BUILD_DEPENDS+=	tex-collection-genericrecommended-doc-[0-9]*:../../print/tex-collection-genericrecommended-doc
-BUILD_DEPENDS+=	tex-collection-latex-[0-9]*:../../print/tex-collection-latex
-BUILD_DEPENDS+=	tex-collection-latex-doc-[0-9]*:../../print/tex-collection-latex-doc
+BUILD_DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
+BUILD_DEPENDS+=	texlive-collection-basic-doc-[0-9]*:../../meta-pkgs/texlive-collection-basic-doc
+BUILD_DEPENDS+=	texlive-collection-genericrecommended-[0-9]*:../../meta-pkgs/texlive-collection-genericrecommended
+BUILD_DEPENDS+=	texlive-collection-genericrecommended-doc-[0-9]*:../../meta-pkgs/texlive-collection-genericrecommended-doc
+BUILD_DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
+BUILD_DEPENDS+=	texlive-collection-latex-doc-[0-9]*:../../meta-pkgs/texlive-collection-latex-doc
 
 #
 # 5. Desktops
