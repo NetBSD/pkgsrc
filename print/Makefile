@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2015/05/06 09:12:04 wiz Exp $
+# $NetBSD: Makefile,v 1.624 2015/05/06 09:21:07 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -440,6 +440,8 @@ SUBDIR+=	tex-fncylab-doc
 SUBDIR+=	tex-fnpara
 SUBDIR+=	tex-fnpara-doc
 SUBDIR+=	tex-foiltex
+SUBDIR+=	tex-fontch
+SUBDIR+=	tex-fontch-doc
 SUBDIR+=	tex-footmisc
 SUBDIR+=	tex-footmisc-doc
 SUBDIR+=	tex-forloop
