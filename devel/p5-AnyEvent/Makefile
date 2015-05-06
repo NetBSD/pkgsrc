@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2015/03/15 13:11:26 mef Exp $
+# $NetBSD: Makefile,v 1.35 2015/05/06 02:23:59 mef Exp $
 
-DISTNAME=	AnyEvent-7.08
+DISTNAME=	AnyEvent-7.09
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AnyEvent/}
@@ -19,6 +19,13 @@ DEPENDS+= p5-JSON-XS>=2.200:../../converters/p5-JSON-XS
 DEPENDS+= p5-EV>=4:../../devel/p5-EV
 DEPENDS+= p5-Guard>=1.020:../../devel/p5-Guard
 DEPENDS+= p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
+
+# setup for make test (expecting PASS with several skipping items)
+BUILD_DEPENDS+=	p5-AnyEvent-AIO-[0-9]*:../../devel/p5-AnyEvent-AIO
+BUILD_DEPENDS+=	p5-IO-Async-[0-9]*:../../devel/p5-IO-Async
+
+TEST_ENV+=	PERL_ANYEVENT_LOOP_TESTS=true
+TEST_ENV+=	PERL_ANYEVENT_NET_TESTS=true
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
