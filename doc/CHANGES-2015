@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2121 2015/05/06 07:37:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2122 2015/05/06 07:41:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3369,3 +3369,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Output to 1.03nb3 [wiz 2015-05-06]
 	Updated www/p5-Test-WWW-Declare to 0.02nb6 [wiz 2015-05-06]
 	Removed devel/p5-Test-Tester successor devel/p5-Test-Simple [wiz 2015-05-06]
+	Updated mail/p5-MIME-tools to 5.506 [wiz 2015-05-06]
