@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2015/05/06 10:56:27 markd Exp $
+# $NetBSD: Makefile,v 1.626 2015/05/06 18:00:00 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -337,6 +337,8 @@ SUBDIR+=	tex-cjk
 SUBDIR+=	tex-cjk-doc
 SUBDIR+=	tex-cjkutils
 SUBDIR+=	tex-cjkutils-doc
+SUBDIR+=	tex-classpack
+SUBDIR+=	tex-classpack-doc
 SUBDIR+=	tex-clrscode
 SUBDIR+=	tex-clrscode-doc
 SUBDIR+=	tex-cmap
@@ -682,6 +684,8 @@ SUBDIR+=	tex-placeins
 SUBDIR+=	tex-placeins-doc
 SUBDIR+=	tex-placeins-plain
 SUBDIR+=	tex-plain
+SUBDIR+=	tex-poltawski
+SUBDIR+=	tex-poltawski-doc
 SUBDIR+=	tex-polytable
 SUBDIR+=	tex-polytable-doc
 SUBDIR+=	tex-powerdot
