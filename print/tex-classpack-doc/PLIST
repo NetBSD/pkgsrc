@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/06 17:58:46 wiz Exp $
+share/texmf-dist/doc/support/classpack/MANIFEST
+share/texmf-dist/doc/support/classpack/README
+share/texmf-dist/doc/support/classpack/classpack.pdf
+share/texmf-dist/doc/support/classpack/db2bibtex.xsl
+share/texmf-dist/doc/support/classpack/db2dtx.xsl
+share/texmf-dist/doc/support/classpack/db2plaintext.xsl
+share/texmf-dist/doc/support/classpack/decommentbbl.awk
+share/texmf-dist/doc/support/classpack/doctexbook.dtd
+share/texmf-dist/doc/support/classpack/getgis.sh
+share/texmf-dist/doc/support/classpack/lppl.xml
+share/texmf-dist/doc/support/classpack/prepost.xml
+share/texmf-dist/doc/support/classpack/readme.xml
+share/texmf-dist/doc/support/classpack/test.sh
