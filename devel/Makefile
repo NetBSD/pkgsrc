@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2096 2015/05/05 12:40:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.2097 2015/05/06 07:37:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1423,7 +1423,6 @@ SUBDIR+=	p5-Test-Spelling
 SUBDIR+=	p5-Test-SubCalls
 SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-TempDir
-SUBDIR+=	p5-Test-Tester
 SUBDIR+=	p5-Test-TinyMocker
 SUBDIR+=	p5-Test-Trap
 SUBDIR+=	p5-Test-Unit
