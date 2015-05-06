@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2155 2015/05/06 20:47:01 tonio Exp $
+$NetBSD: CHANGES-2015,v 1.2156 2015/05/06 21:28:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3460,3 +3460,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-arsclassica version 4.0.3 [wiz 2015-05-06]
 	Added print/tex-arsclassica-doc version 4.0.3 [wiz 2015-05-06]
 	Updated textproc/hevea to 2.23 [tonio 2015-05-06]
+	Updated x11/xf86-video-cirrus to 1.5.3 [wiz 2015-05-06]
