@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2151 2015/05/06 17:59:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2152 2015/05/06 18:01:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/filezilla to 3.10.3 [wiz 2015-05-06]
 	Added print/tex-classpack version 0.77 [wiz 2015-05-06]
 	Added print/tex-classpack-doc version 0.77 [wiz 2015-05-06]
+	Updated meta-pkgs/texlive-collection-htmlxml to 2014pre2 [wiz 2015-05-06]
