@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.620 2015/05/05 14:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.621 2015/05/06 08:09:45 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -544,6 +544,7 @@ SUBDIR+=	tex-jurabib
 SUBDIR+=	tex-jurabib-doc
 SUBDIR+=	tex-kix
 SUBDIR+=	tex-kix-doc
+SUBDIR+=	tex-knuth-doc
 SUBDIR+=	tex-koma-script
 SUBDIR+=	tex-kotex
 SUBDIR+=	tex-kotex-dev
