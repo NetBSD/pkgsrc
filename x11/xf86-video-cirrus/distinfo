@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/04/02 22:16:46 tnn Exp $
+$NetBSD: distinfo,v 1.7 2015/05/06 21:28:41 wiz Exp $
 
-SHA1 (xf86-video-cirrus-1.5.2.tar.bz2) = 722800029e816f453031a851bf4a816c796d7bde
-RMD160 (xf86-video-cirrus-1.5.2.tar.bz2) = 6597f6fbec0d30254d04070debd8aa3bc2075201
-Size (xf86-video-cirrus-1.5.2.tar.bz2) = 327547 bytes
-SHA1 (patch-src_alp__driver.c) = 1dc9dc624f653dd219e259a26b9f18d79f8718c3
-SHA1 (patch-src_cir.h) = de21ad50143fd1bbbf2727149b32d7a35909aa4d
-SHA1 (patch-src_lg__driver.c) = 1e25605cf8435fa6a2b43f71f8e72be402c6bd70
+SHA1 (xf86-video-cirrus-1.5.3.tar.bz2) = 545cbedb42e5a5ce6bdf0b9bc30a826908f284e5
+RMD160 (xf86-video-cirrus-1.5.3.tar.bz2) = 18402fcf23c67d0719e637a835a922e2c8fa1cd7
+Size (xf86-video-cirrus-1.5.3.tar.bz2) = 338930 bytes
