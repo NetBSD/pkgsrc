@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2143 2015/05/06 09:21:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2144 2015/05/06 09:26:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3391,3 +3391,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-go-doc version 2014 [wiz 2015-05-06]
 	Added print/tex-fontch version 2.2 [wiz 2015-05-06]
 	Added print/tex-fontch-doc version 2.2 [wiz 2015-05-06]
+	Added print/tex-poltawski version 1.101 [wiz 2015-05-06]
