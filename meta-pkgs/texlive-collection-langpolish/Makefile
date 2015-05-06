@@ -1,0 +1,35 @@
+# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+
+DISTNAME=	collection-langpolish
+PKGNAME=	texlive-${DISTNAME}-2014pre1
+CATEGORIES=	meta-pkgs
+MASTER_SITES=	# empty
+TEXLIVE_REV=	30372
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.tug.org/texlive/
+COMMENT=	Polish TeX packages
+
+DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
+DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
+
+DEPENDS+=	tex-babel-polish-[0-9]*:../../print/tex-babel-polish
+# depend cc-pl
+DEPENDS+=	tex-gustlib-[0-9]*:../../print/tex-gustlib
+# depend gustprog
+DEPENDS+=	tex-hyphen-polish-[0-9]*:../../print/tex-hyphen-polish
+# depend lshort-polish
+# depend mex
+# depend mwcls
+DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
+# depend polski
+# depend przechlewski-book
+# depend qpxqtx
+# depend tap
+# depend tex-virtual-academy-pl
+# depend texlive-pl
+# depend utf8mex
+
+META_PACKAGE=	yes
+
+.include "../../mk/bsd.pkg.mk"

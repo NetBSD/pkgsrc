@@ -1,0 +1,5 @@
+Packages supporting a combination of Chinese, Japanese, Korean,
+including macros, fonts, documentation.  Also Thai in the c90
+encoding, since there is some overlap in those fonts; standard
+Thai support is in collection-langother.  Additional packages
+for CJK are in their individual language collections.
