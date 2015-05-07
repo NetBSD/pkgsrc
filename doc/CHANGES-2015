@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2160 2015/05/07 12:45:45 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2161 2015/05/07 12:46:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3466,3 +3466,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libdrm to 2.4.61 [wiz 2015-05-07]
 	Moved devel/py-attic to sysutils/py-attic [wiz 2015-05-07]
 	Updated databases/mariadb55-client to 5.5.43 [fhajny 2015-05-07]
+	Updated databases/mariadb55-server to 5.5.43 [fhajny 2015-05-07]
