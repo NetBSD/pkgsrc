@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14383 2015/05/04 19:49:02 morr Exp $
+$NetBSD: TODO,v 1.14384 2015/05/07 00:26:31 mef Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o compiz-0.8.10
 	o cone-0.92
 	o cook-2.31
-	o coreutils-8.23
 	o courier-0.74.2
 	o courier-authlib-0.66.2
 	o courier-imap-4.16.1
