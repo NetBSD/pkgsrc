@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2097 2015/05/06 07:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2098 2015/05/07 12:26:12 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1576,7 +1576,6 @@ SUBDIR+=	py-astroid
 SUBDIR+=	py-at-spi
 SUBDIR+=	py-at-spi2
 SUBDIR+=	py-atomicwrites
-SUBDIR+=	py-attic
 SUBDIR+=	py-babel
 SUBDIR+=	py-blinker
 SUBDIR+=	py-buildbot

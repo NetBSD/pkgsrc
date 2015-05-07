@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/03 09:43:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/05/07 12:26:12 wiz Exp $
 bin/attic${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
