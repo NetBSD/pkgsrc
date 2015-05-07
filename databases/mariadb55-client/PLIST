@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/07 12:45:28 fhajny Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_client_test
@@ -105,7 +105,7 @@ include/mysql/private/mysqld_default_groups.h
 include/mysql/private/mysys_err.h
 include/mysql/private/password.h
 include/mysql/private/probes_mysql.h
-include/mysql/private/probes_mysql_dtrace.h
+${PLIST.dtrace}include/mysql/private/probes_mysql_dtrace.h
 include/mysql/private/probes_mysql_nodtrace.h
 include/mysql/private/queues.h
 include/mysql/private/rijndael.h
