@@ -1,1 +1,1 @@
-bin/attic bin/attic@PYVERSSUFFIX@
+bin/attic @PREFIX@/bin/attic@PYVERSSUFFIX@
