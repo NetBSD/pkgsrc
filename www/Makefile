@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1107 2015/05/05 13:30:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.1108 2015/05/07 10:29:43 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -314,7 +314,6 @@ SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-Client
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-File-Mork
-SUBDIR+=	p5-Hijk
 SUBDIR+=	p5-HTML-Clean
 SUBDIR+=	p5-HTML-Element-Extended
 SUBDIR+=	p5-HTML-Email-Obfuscate
@@ -387,6 +386,7 @@ SUBDIR+=	p5-HTTP-Server-Simple-Static
 SUBDIR+=	p5-HTTP-Tiny
 SUBDIR+=	p5-HTTPD-User-Manage
 SUBDIR+=	p5-Handel
+SUBDIR+=	p5-Hijk
 SUBDIR+=	p5-I18N-AcceptLanguage
 SUBDIR+=	p5-JSON-RPC
 SUBDIR+=	p5-JavaScript-Value-Escape
