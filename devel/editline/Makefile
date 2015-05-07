@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/03/19 19:58:28 tron Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/07 14:07:49 ryoon Exp $
 #
 
-DISTNAME=		libedit-20140620-3.1
-PKGNAME=		editline-3.1.20140620
+DISTNAME=		libedit-20150325-3.1
+PKGNAME=		editline-3.1.20150325
 CATEGORIES=		devel
 MASTER_SITES=		http://thrysoee.dk/editline/
 
