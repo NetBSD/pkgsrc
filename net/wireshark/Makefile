@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2015/04/25 14:23:48 tnn Exp $
+# $NetBSD: Makefile,v 1.132 2015/05/07 21:40:43 roy Exp $
 
 DISTNAME=	wireshark-1.10.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -56,6 +56,9 @@ REPLACE_PYTHON+=	tools/rdps.py
 .if !empty(MACHINE_PLATFORM:MDarwin-[567].*-*)
 USE_BUILTIN.libpcap=	no
 .endif
+
+# Extra post install targets are in options.mk
+post-install: ${POST_INSTALL_TARGETS}
 
 # wireshark no longer builds with NetBSD 3.x provided zlib
 BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
