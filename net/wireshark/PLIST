@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2013/07/04 21:33:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2015/05/07 21:40:43 roy Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -39,6 +39,21 @@ man/man1/text2pcap.1
 man/man1/tshark.1
 ${PLIST.gtk2}man/man1/wireshark.1
 man/man4/wireshark-filter.4
+${PLIST.gtk2}share/applications/wireshark.desktop
+${PLIST.icons}share/icons/locolor/16x16/apps/wireshark.png
+${PLIST.icons}share/icons/locolor/32x32/apps/wireshark.png
+${PLIST.icons}share/icons/locolor/48x48/apps/wireshark.png
+${PLIST.icons}share/icons/hicolor/16x16/apps/wireshark.png
+${PLIST.icons}share/icons/hicolor/32x32/apps/wireshark.png
+${PLIST.icons}share/icons/hicolor/48x48/apps/wireshark.png
+${PLIST.icons}share/icons/hicolor/scalable/apps/wireshark.svg
+${PLIST.icons}share/icons/hicolor/16x16/mimetypes/application-vnd.tcpdump.pcap.png
+${PLIST.icons}share/icons/hicolor/24x24/mimetypes/application-vnd.tcpdump.pcap.png
+${PLIST.icons}share/icons/hicolor/32x32/mimetypes/application-vnd.tcpdump.pcap.png
+${PLIST.icons}share/icons/hicolor/48x48/mimetypes/application-vnd.tcpdump.pcap.png
+${PLIST.icons}share/icons/hicolor/64x64/mimetypes/application-vnd.tcpdump.pcap.png
+${PLIST.icons}share/icons/hicolor/128x128/mimetypes/application-vnd.tcpdump.pcap.png
+${PLIST.icons}share/icons/hicolor/256x256/mimetypes/application-vnd.tcpdump.pcap.png
 share/wireshark/AUTHORS-SHORT
 share/wireshark/COPYING
 share/wireshark/capinfos.html
