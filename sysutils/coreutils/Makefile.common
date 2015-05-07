@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2015/04/17 12:46:00 manu Exp $
+# $NetBSD: Makefile.common,v 1.11 2015/05/07 00:24:59 mef Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
-DISTNAME=	coreutils-8.22
+DISTNAME=	coreutils-8.23
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +20,13 @@ DISTINFO_FILE=		${.CURDIR}/../../sysutils/coreutils/distinfo
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		msgfmt msgmerge perl xgettext
 USE_PKGLOCALEDIR=	YES
+
+# --- man/chroot.1 ---
+#   GEN      man/chroot.1
+# help2man: can't get `--help' info from chroot.td/chroot
+# Try `--no-discard-stderr' if option outputs to stderr
+# *** [man/chroot.1] Error code 127
+MAKE_JOBS_SAFE=		NO
 
 TEST_TARGET=		check
 
