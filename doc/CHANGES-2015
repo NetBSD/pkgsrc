@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2157 2015/05/07 00:26:31 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2158 2015/05/07 06:31:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3463,3 +3463,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-cirrus to 1.5.3 [wiz 2015-05-06]
 	Updated sysutils/coreutils to 8.23 [mef 2015-05-07]
 	Updated misc/gnuls to 8.23 [mef 2015-05-07]
+	Updated x11/libdrm to 2.4.61 [wiz 2015-05-07]
