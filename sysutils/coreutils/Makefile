@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2015/04/13 12:05:08 tnn Exp $
+# $NetBSD: Makefile,v 1.65 2015/05/07 00:24:59 mef Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
-PKGREVISION=		2
 CONFIGURE_ARGS+=	--without-gmp
 
 CONFLICTS=	fileutils-[0-9]* gnuls-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
