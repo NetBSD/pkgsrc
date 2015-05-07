@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2015/03/30 11:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/07 14:07:02 mef Exp $
 
-DISTNAME=	v1.0.1
-PKGNAME=	${DISTNAME:S/v/libebur128-/}
+DISTNAME=	libebur128-1.0.1
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	https://github.com/jiixyj/libebur128/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jiixyj/}
+GITHUB_PROJECT=	libebur128
+GITHUB_TAG=	${DISTNAME:S/libebur128-/v/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jiixyj/libebur128/
 COMMENT=	EBU R128 loudness standard implementation
 LICENSE=	mit
 
-DIST_SUBDIR=	libebur128
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
