@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/16 20:21:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/07 12:45:29 fhajny Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -10,11 +10,11 @@ bin/myisam_ftdump
 bin/myisamchk
 bin/myisamlog
 bin/myisampack
-bin/mysql_client_test_embedded
-bin/mysql_embedded
+${PLIST.embedded}bin/mysql_client_test_embedded
+${PLIST.embedded}bin/mysql_embedded
 bin/mysql_tzinfo_to_sql
 bin/mysql_waitpid
-bin/mysqltest_embedded
+${PLIST.embedded}bin/mysqltest_embedded
 bin/perror
 bin/replace
 bin/resolve_stack_dump
@@ -29,7 +29,7 @@ include/mysql/private/debug_sync.h
 include/mysql/private/derror.h
 include/mysql/private/des_key_file.h
 include/mysql/private/discover.h
-include/mysql/private/embedded_priv.h
+${PLIST.embedded}include/mysql/private/embedded_priv.h
 include/mysql/private/event_data_objects.h
 include/mysql/private/event_db_repository.h
 include/mysql/private/event_parse_data.h
@@ -187,9 +187,9 @@ include/mysql/private/tzfile.h
 include/mysql/private/tztime.h
 include/mysql/private/unireg.h
 include/mysql/private/winservice.h
-lib/libmysqld.a
-lib/libmysqld.so
-lib/libmysqld.so.18
+${PLIST.embedded}lib/libmysqld.a
+${PLIST.embedded}lib/libmysqld.so
+${PLIST.embedded}lib/libmysqld.so.18
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth_0x0100.so
@@ -523,6 +523,7 @@ share/mariadb/test/include/ctype_like_range_f1f2.inc
 share/mariadb/test/include/ctype_numconv.inc
 share/mariadb/test/include/ctype_regex.inc
 share/mariadb/test/include/ctype_str_to_date.inc
+share/mariadb/test/include/ctype_utf8_ilseq.inc
 share/mariadb/test/include/ctype_utf8_table.inc
 share/mariadb/test/include/ctype_utf8mb4.inc
 share/mariadb/test/include/daemon_example_bad_format.ini
@@ -1122,6 +1123,7 @@ share/mariadb/test/r/ctype_recoding.result
 share/mariadb/test/r/ctype_sjis.result
 share/mariadb/test/r/ctype_tis620.result
 share/mariadb/test/r/ctype_uca.result
+share/mariadb/test/r/ctype_uca_innodb.result
 share/mariadb/test/r/ctype_ucs.result
 share/mariadb/test/r/ctype_ucs2_def.result
 share/mariadb/test/r/ctype_ucs2_query_cache.result
@@ -1183,6 +1185,7 @@ share/mariadb/test/r/failed_auth_3909.result
 share/mariadb/test/r/failed_auth_unixsocket.result
 share/mariadb/test/r/features.result
 share/mariadb/test/r/file_contents.result
+share/mariadb/test/r/filesort_bad_i_s-7585.result
 share/mariadb/test/r/filesort_debug.result
 share/mariadb/test/r/fix_priv_tables.result
 share/mariadb/test/r/flush-innodb.result
@@ -1433,6 +1436,7 @@ share/mariadb/test/r/mysql_protocols.result
 share/mariadb/test/r/mysql_tzinfo_to_sql_symlink.result
 share/mariadb/test/r/mysql_upgrade.result
 share/mariadb/test/r/mysql_upgrade_ssl.result
+share/mariadb/test/r/mysql_upgrade_view.result
 share/mariadb/test/r/mysqladmin.result
 share/mariadb/test/r/mysqlbinlog-innodb.result
 share/mariadb/test/r/mysqlbinlog.result
@@ -1707,6 +1711,7 @@ share/mariadb/test/r/system_mysql_db_fix50117.result
 share/mariadb/test/r/system_mysql_db_refs.result
 share/mariadb/test/r/table_elim.result
 share/mariadb/test/r/table_elim_debug.result
+share/mariadb/test/r/table_keyinfo-6838.result
 share/mariadb/test/r/table_options.result
 share/mariadb/test/r/tablelock.result
 share/mariadb/test/r/tablespace.result
@@ -1753,6 +1758,7 @@ share/mariadb/test/r/udf_query_cache.result
 share/mariadb/test/r/udf_skip_grants.result
 share/mariadb/test/r/union.result
 share/mariadb/test/r/union_crash-714.result
+share/mariadb/test/r/uniques_crash-7912.result
 share/mariadb/test/r/unsafe_binlog_innodb.result
 share/mariadb/test/r/update.result
 share/mariadb/test/r/update_ignore_216.result
@@ -1876,6 +1882,14 @@ share/mariadb/test/std_data/mdev5029_1.frm
 share/mariadb/test/std_data/mdev5029_2.MAD
 share/mariadb/test/std_data/mdev5029_2.MAI
 share/mariadb/test/std_data/mdev5029_2.frm
+share/mariadb/test/std_data/mysql_upgrade/event.MYD
+share/mariadb/test/std_data/mysql_upgrade/event.MYI
+share/mariadb/test/std_data/mysql_upgrade/event.frm
+share/mariadb/test/std_data/mysql_upgrade/v1.frm
+share/mariadb/test/std_data/mysql_upgrade/v1badcheck.frm
+share/mariadb/test/std_data/mysql_upgrade/v2.frm
+share/mariadb/test/std_data/mysql_upgrade/v3.frm
+share/mariadb/test/std_data/mysql_upgrade/v4.frm
 share/mariadb/test/std_data/ndb_backup50/BACKUP-1-0.1.Data
 share/mariadb/test/std_data/ndb_backup50/BACKUP-1-0.2.Data
 share/mariadb/test/std_data/ndb_backup50/BACKUP-1.1.ctl
@@ -2041,6 +2055,7 @@ share/mariadb/test/suite/binlog/r/binlog_truncate_myisam.result
 share/mariadb/test/suite/binlog/r/binlog_unsafe.result
 share/mariadb/test/suite/binlog/r/binlog_write_error.result
 share/mariadb/test/suite/binlog/r/load_data_stm_view.result
+share/mariadb/test/suite/binlog/r/temptable_uservar_disconnect-7938.result
 share/mariadb/test/suite/binlog/std_data/binlog_old_version_4_1.000001
 share/mariadb/test/suite/binlog/std_data/bug32407.001
 share/mariadb/test/suite/binlog/std_data/update-full-row.binlog
@@ -2150,6 +2165,7 @@ share/mariadb/test/suite/binlog/t/binlog_unsafe-master.opt
 share/mariadb/test/suite/binlog/t/binlog_unsafe.test
 share/mariadb/test/suite/binlog/t/binlog_write_error.test
 share/mariadb/test/suite/binlog/t/load_data_stm_view.test
+share/mariadb/test/suite/binlog/t/temptable_uservar_disconnect-7938.test
 share/mariadb/test/suite/csv/csv.result
 share/mariadb/test/suite/csv/csv.test
 share/mariadb/test/suite/csv/csv_alter_table.result
@@ -3507,7 +3523,6 @@ share/mariadb/test/suite/innodb/r/innodb-fk.result
 share/mariadb/test/suite/innodb/r/innodb-index.result
 share/mariadb/test/suite/innodb/r/innodb-index_ucs2.result
 share/mariadb/test/suite/innodb/r/innodb-lock.result
-share/mariadb/test/suite/innodb/r/innodb-mdev-7055.result
 share/mariadb/test/suite/innodb/r/innodb-mdev-7513.result
 share/mariadb/test/suite/innodb/r/innodb-replace.result
 share/mariadb/test/suite/innodb/r/innodb-semi-consistent.result
@@ -3638,7 +3653,6 @@ share/mariadb/test/suite/innodb/t/innodb-index.test
 share/mariadb/test/suite/innodb/t/innodb-index_ucs2.test
 share/mariadb/test/suite/innodb/t/innodb-lock.test
 share/mariadb/test/suite/innodb/t/innodb-master.opt
-share/mariadb/test/suite/innodb/t/innodb-mdev-7055.test
 share/mariadb/test/suite/innodb/t/innodb-mdev-7513.test
 share/mariadb/test/suite/innodb/t/innodb-replace.test
 share/mariadb/test/suite/innodb/t/innodb-semi-consistent-master.opt
@@ -5141,6 +5155,7 @@ share/mariadb/test/suite/rpl/r/rpl_sp.result
 share/mariadb/test/suite/rpl/r/rpl_sp004.result
 share/mariadb/test/suite/rpl/r/rpl_sp_effects.result
 share/mariadb/test/suite/rpl/r/rpl_spec_variables.result
+share/mariadb/test/suite/rpl/r/rpl_special_charset.result
 share/mariadb/test/suite/rpl/r/rpl_sporadic_master.result
 share/mariadb/test/suite/rpl/r/rpl_ssl.result
 share/mariadb/test/suite/rpl/r/rpl_ssl1.result
@@ -5197,6 +5212,7 @@ share/mariadb/test/suite/rpl/r/rpl_variables_stm.result
 share/mariadb/test/suite/rpl/r/rpl_view.result
 share/mariadb/test/suite/rpl/r/rpl_view_multi.result
 share/mariadb/test/suite/rpl/r/semisync_memleak_4066.result
+share/mariadb/test/suite/rpl/r/show_status_stop_slave_race-7126.result
 share/mariadb/test/suite/rpl/rpl_1slave_base.cnf
 share/mariadb/test/suite/rpl/t/failed_create_view-6409.test
 share/mariadb/test/suite/rpl/t/kill_hard-6290.test
@@ -5561,6 +5577,8 @@ share/mariadb/test/suite/rpl/t/rpl_sp_effects-slave.opt
 share/mariadb/test/suite/rpl/t/rpl_sp_effects.test
 share/mariadb/test/suite/rpl/t/rpl_spec_variables-slave.opt
 share/mariadb/test/suite/rpl/t/rpl_spec_variables.test
+share/mariadb/test/suite/rpl/t/rpl_special_charset.opt
+share/mariadb/test/suite/rpl/t/rpl_special_charset.test
 share/mariadb/test/suite/rpl/t/rpl_sporadic_master-master.opt
 share/mariadb/test/suite/rpl/t/rpl_sporadic_master.test
 share/mariadb/test/suite/rpl/t/rpl_ssl.test
@@ -5629,6 +5647,7 @@ share/mariadb/test/suite/rpl/t/rpl_variables_stm.test
 share/mariadb/test/suite/rpl/t/rpl_view.test
 share/mariadb/test/suite/rpl/t/rpl_view_multi.test
 share/mariadb/test/suite/rpl/t/semisync_memleak_4066.test
+share/mariadb/test/suite/rpl/t/show_status_stop_slave_race-7126.test
 share/mariadb/test/suite/sphinx/my.cnf
 share/mariadb/test/suite/sphinx/sphinx.result
 share/mariadb/test/suite/sphinx/sphinx.test
@@ -7303,6 +7322,7 @@ share/mariadb/test/t/ctype_recoding.test
 share/mariadb/test/t/ctype_sjis.test
 share/mariadb/test/t/ctype_tis620.test
 share/mariadb/test/t/ctype_uca.test
+share/mariadb/test/t/ctype_uca_innodb.test
 share/mariadb/test/t/ctype_ucs.test
 share/mariadb/test/t/ctype_ucs2_def-master.opt
 share/mariadb/test/t/ctype_ucs2_def.test
@@ -7374,6 +7394,7 @@ share/mariadb/test/t/failed_auth_3909.test
 share/mariadb/test/t/failed_auth_unixsocket.test
 share/mariadb/test/t/features.test
 share/mariadb/test/t/file_contents.test
+share/mariadb/test/t/filesort_bad_i_s-7585.test
 share/mariadb/test/t/filesort_debug.test
 share/mariadb/test/t/fix_priv_tables.test
 share/mariadb/test/t/flush-innodb.test
@@ -7644,6 +7665,7 @@ share/mariadb/test/t/mysql_protocols.test
 share/mariadb/test/t/mysql_tzinfo_to_sql_symlink.test
 share/mariadb/test/t/mysql_upgrade.test
 share/mariadb/test/t/mysql_upgrade_ssl.test
+share/mariadb/test/t/mysql_upgrade_view.test
 share/mariadb/test/t/mysqladmin.test
 share/mariadb/test/t/mysqlbinlog-innodb.test
 share/mariadb/test/t/mysqlbinlog-master.opt
@@ -7932,6 +7954,7 @@ share/mariadb/test/t/system_mysql_db_fix50117.test
 share/mariadb/test/t/system_mysql_db_refs.test
 share/mariadb/test/t/table_elim.test
 share/mariadb/test/t/table_elim_debug.test
+share/mariadb/test/t/table_keyinfo-6838.test
 share/mariadb/test/t/table_options.test
 share/mariadb/test/t/tablelock.test
 share/mariadb/test/t/tablespace.test
@@ -7982,6 +8005,7 @@ share/mariadb/test/t/udf_skip_grants.test
 share/mariadb/test/t/union-master.opt
 share/mariadb/test/t/union.test
 share/mariadb/test/t/union_crash-714.test
+share/mariadb/test/t/uniques_crash-7912.test
 share/mariadb/test/t/unsafe_binlog_innodb-master.opt
 share/mariadb/test/t/unsafe_binlog_innodb.test
 share/mariadb/test/t/update.test
