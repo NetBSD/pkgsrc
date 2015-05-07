@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2015/05/07 12:45:29 fhajny Exp $
 
 Split configuration between mysql-client and mysql-server.
 Build with newer DTrace.
@@ -9,7 +9,7 @@ Build with newer DTrace.
    SET(WITHOUT_DYNAMIC_PLUGINS 1)
  ENDIF()
  OPTION(ENABLED_PROFILING "Enable profiling" ON)
-+OPTION(ENABLED_DTRACE "Include support for DTrace probes" OFF)
++OPTION(ENABLE_DTRACE "Include support for DTrace probes" OFF)
  OPTION(CYBOZU "" OFF)
  OPTION(BACKUP_TEST "" OFF)
  OPTION(WITHOUT_SERVER OFF)

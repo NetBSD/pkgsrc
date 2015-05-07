@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/05/07 12:45:28 fhajny Exp $
 #
 # used by databases/mariadb55-client/Makefile
 # used by databases/mariadb55-server/Makefile
 
-DISTNAME=	mariadb-5.5.42
+DISTNAME=	mariadb-5.5.43
 CATEGORIES=	databases
-MASTER_SITES=	https://downloads.mariadb.org/f/mariadb-5.5.42/source/
+MASTER_SITES=	https://downloads.mariadb.org/f/${DISTNAME}/source/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mariadb.org/

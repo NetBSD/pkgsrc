@@ -1,7 +1,7 @@
-$NetBSD: patch-cmake_readline.cmake,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+$NetBSD: patch-cmake_readline.cmake,v 1.2 2015/05/07 12:45:29 fhajny Exp $
 
-* Fix cmake's check build error. Borrowed from mysql56's readline.cmake.
-
+Fix cmake's check build error. Borrowed from mysql56's readline.cmake.
+Fi build with pkgsrc readline>=6 that removed some deprecated symbols.
 --- cmake/readline.cmake.orig	2015-02-13 12:07:00.000000000 +0000
 +++ cmake/readline.cmake
 @@ -132,7 +132,7 @@ MACRO (MYSQL_FIND_SYSTEM_READLINE)
@@ -22,7 +22,27 @@ $NetBSD: patch-cmake_readline.cmake,v 1.1 2015/04/16 20:20:15 ryoon Exp $
      #if RL_VERSION_MAJOR > 5
      #error
      #endif
-@@ -180,8 +180,11 @@ MACRO (MYSQL_FIND_SYSTEM_LIBEDIT)
+@@ -152,6 +152,19 @@ MACRO (MYSQL_FIND_SYSTEM_READLINE)
+     }"
+     READLINE_V5)
+ 
++    CHECK_C_SOURCE_COMPILES("
++    #include <stdio.h>
++    #include <readline/readline.h>
++    #if RL_VERSION_MAJOR < 6
++    #error
++    #endif
++    int main(int argc, char **argv)
++    {
++      return 0;
++    }"
++    READLINE_V6)
++    SET(USE_READLINE_V6 ${READLINE_V6})
++
+     IF(NEW_READLINE_INTERFACE)
+       IF (READLINE_V5)
+         SET(USE_NEW_READLINE_INTERFACE 1)
+@@ -180,8 +193,11 @@ MACRO (MYSQL_FIND_SYSTEM_LIBEDIT)
      #include <readline.h>
      int main(int argc, char **argv)
      {
@@ -35,7 +55,7 @@ $NetBSD: patch-cmake_readline.cmake,v 1.1 2015/04/16 20:20:15 ryoon Exp $
      }"
      LIBEDIT_INTERFACE)
      SET(USE_LIBEDIT_INTERFACE ${LIBEDIT_INTERFACE})
-@@ -195,32 +198,13 @@ MACRO (MYSQL_CHECK_READLINE)
+@@ -195,32 +211,13 @@ MACRO (MYSQL_CHECK_READLINE)
      SET(WITH_READLINE OFF CACHE BOOL "Use bundled readline")
      FIND_CURSES()
  
