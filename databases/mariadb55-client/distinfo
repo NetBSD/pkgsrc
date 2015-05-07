@@ -1,22 +1,25 @@
-$NetBSD: distinfo,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/05/07 12:45:28 fhajny Exp $
 
-SHA1 (mariadb-5.5.42.tar.gz) = df5164df0ff3f21fac4400932dc075864b0fac98
-RMD160 (mariadb-5.5.42.tar.gz) = d9633171d9184498dba14837d1cf307fd4342079
-Size (mariadb-5.5.42.tar.gz) = 45586372 bytes
+SHA1 (mariadb-5.5.43.tar.gz) = 80223c91ecda64ec30a5056af225eee39a3782fd
+RMD160 (mariadb-5.5.43.tar.gz) = 93296e8d9e14949d47d4d0195f566891ba83bc76
+Size (mariadb-5.5.43.tar.gz) = 45651398 bytes
 SHA1 (sphinx-2.2.7-release.tar.gz) = dedae28c0deafda90109745230dacbe0dc441e1a
 RMD160 (sphinx-2.2.7-release.tar.gz) = d9f0150f6779b43457e30c77be50aa9bc658b03a
 Size (sphinx-2.2.7-release.tar.gz) = 2969037 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = 02b414235a2cdfc1d5c95946010e0cdbada76c5d
-SHA1 (patch-CMakeLists.txt) = cc69f38e761ee5956dde27745377acde1728d63b
+SHA1 (patch-CMakeLists.txt) = 9c56523626837ab83ecef26f1c0609e084976fa7
 SHA1 (patch-client_completion_hash.cc) = 810dab31e17a19804323059d38f5ec7f0d55c3ab
-SHA1 (patch-client_mysql.cc) = a5296801f6960f77da12eeb749cc32a86f6bc545
+SHA1 (patch-client_mysql.cc) = bb50cbd627ce71bcc792ad285016e0269dbc741c
 SHA1 (patch-client_mysqladmin.cc) = ab05c6944d50c9b22365426656f0b61a5906d632
 SHA1 (patch-client_mysqlbinlog.cc) = 00146dfd7d0a6e0bb1a8c30395bc707af3b4a6c7
 SHA1 (patch-client_mysqlshow.c) = 82ddfb98ab85b3e96e56b5ecc0df25cc315b8dbc
+SHA1 (patch-cmake_dtrace.cmake) = 460799dee4d7f9d6c1e3b2dbf0412f8576297991
 SHA1 (patch-cmake_libutils.cmake) = 0c3f25f8e73ab0a062b539a8d551342a6ddf57c4
 SHA1 (patch-cmake_plugin.cmake) = b7566d25c80c2492a96c5617b96f9b6212b0fe93
-SHA1 (patch-cmake_readline.cmake) = 5b975b817c5c62712e061b121056816425368e92
+SHA1 (patch-cmake_readline.cmake) = eeadad96a6c8f042c82134b5488956f8094ba4ac
+SHA1 (patch-config.h.cmake) = 75d4c09eb34353057c6a8e36523f55d1bfdace59
 SHA1 (patch-include_CMakeLists.txt) = 9ce9db088fda6ed76039b818c27b74d584bae151
+SHA1 (patch-include_my__context.h) = 2f74d458d10c24261fdd532d197b84c44719c552
 SHA1 (patch-include_my_compare.h) = 9d04f444d56d705f3a57add7ad5f8fc5c7ce8341
 SHA1 (patch-include_my_net.h) = b6361a0871afdf66feabc82c5ad3559ff5b34c37
 SHA1 (patch-include_my_pthread.h) = 6d4ec91f90e717b0a075133fea535ee62d64d3ef
