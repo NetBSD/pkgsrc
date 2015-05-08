@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:38 wiz Exp $
+share/texmf-dist/doc/fonts/drm/CHANGES
+share/texmf-dist/doc/fonts/drm/OFL.txt
+share/texmf-dist/doc/fonts/drm/README
+share/texmf-dist/doc/fonts/drm/allcomp.sh
+share/texmf-dist/doc/fonts/drm/allfonts.sh
+share/texmf-dist/doc/fonts/drm/chartscript.sh
+share/texmf-dist/doc/fonts/drm/convert.sh
+share/texmf-dist/doc/fonts/drm/drm.pdf
+share/texmf-dist/doc/fonts/drm/drm_font_tables.pdf
+share/texmf-dist/doc/fonts/drm/drmfilelist.txt
+share/texmf-dist/doc/fonts/drm/fontconvert.sh
+share/texmf-dist/doc/fonts/drm/gpl-3.0.txt
+share/texmf-dist/doc/fonts/drm/lppl-1-3c.tex
+share/texmf-dist/doc/fonts/drm/ofl_v1-1.tex
+share/texmf-dist/doc/fonts/drm/small_specimen.pdf
+share/texmf-dist/doc/fonts/drm/small_specimen.tex
+share/texmf-dist/doc/fonts/drm/specimen.pdf
+share/texmf-dist/doc/fonts/drm/specimen.tex

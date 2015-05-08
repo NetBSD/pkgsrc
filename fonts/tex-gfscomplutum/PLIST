@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:43 wiz Exp $
+share/texmf-dist/fonts/afm/public/gfscomplutum/GFSComplutum-Regular.afm
+share/texmf-dist/fonts/enc/dvips/gfscomplutum/gpcomplutum.enc
+share/texmf-dist/fonts/map/dvips/gfscomplutum/gfscomplutum.map
+share/texmf-dist/fonts/opentype/public/gfscomplutum/GFSPolyglot.otf
+share/texmf-dist/fonts/tfm/public/gfscomplutum/gcomplutum8a.tfm
+share/texmf-dist/fonts/tfm/public/gfscomplutum/gcomplutum8r.tfm
+share/texmf-dist/fonts/tfm/public/gfscomplutum/gcomplutumo8a.tfm
+share/texmf-dist/fonts/tfm/public/gfscomplutum/gcomplutumo8r.tfm
+share/texmf-dist/fonts/type1/public/gfscomplutum/GFSComplutum-Regular.pfb
+share/texmf-dist/fonts/vf/public/gfscomplutum/gcomplutum8a.vf
+share/texmf-dist/fonts/vf/public/gfscomplutum/gcomplutumo8a.vf
+share/texmf-dist/tex/latex/gfscomplutum/gfscomplutum.sty
+share/texmf-dist/tex/latex/gfscomplutum/lgrcomplutum.fd

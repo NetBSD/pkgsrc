@@ -1,0 +1,6 @@
+The font provides the Ogham alphabet, which is found on a
+number of Irish and Pictish carvings dating from the 4th
+century AD. The font is distributed as Metafont source, which
+has been patched (with the author's permission) for stability
+at different output device resolutions. (Thanks are due to
+Peter Flynn and Dan Luecking.)

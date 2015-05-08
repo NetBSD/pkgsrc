@@ -1,0 +1,5 @@
+The epsdice package defines a single command \epsdice that
+takes a numeric argument (in the range 1-6), and selects a face
+image from a file that contains each of the 6 possible die
+faces. The graphic file is provided in both Encapsulated
+PostScript and PDF formats.

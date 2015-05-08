@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:29 wiz Exp $
+share/texmf-dist/doc/fonts/almfixed/README
+share/texmf-dist/doc/fonts/almfixed/Unibook_0600.pdf
+share/texmf-dist/doc/fonts/almfixed/Unibook_0750.pdf
+share/texmf-dist/doc/fonts/almfixed/Unibook_08A0.pdf
+share/texmf-dist/doc/fonts/almfixed/Unibook_FB50-1.pdf
+share/texmf-dist/doc/fonts/almfixed/Unibook_FB50-2.pdf
+share/texmf-dist/doc/fonts/almfixed/Unibook_FB50-3.pdf
+share/texmf-dist/doc/fonts/almfixed/Unibook_FE70.pdf
+share/texmf-dist/doc/fonts/almfixed/almfixed-dtk.pdf
+share/texmf-dist/doc/fonts/almfixed/almfixed-dtk.tex
+share/texmf-dist/doc/fonts/almfixed/almmono10-sample-crop.pdf
+share/texmf-dist/doc/fonts/almfixed/aristoteles.pdf
+share/texmf-dist/doc/fonts/almfixed/fawaid-427-crop.pdf
+share/texmf-dist/doc/fonts/almfixed/ilahiyyat-1.pdf
+share/texmf-dist/doc/fonts/almfixed/sc-unipad.pdf
+share/texmf-dist/doc/fonts/almfixed/wa.pdf

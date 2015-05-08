@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:35 wiz Exp $
+share/texmf-dist/doc/fonts/clearsans/LICENSE-2.0.txt
+share/texmf-dist/doc/fonts/clearsans/README
+share/texmf-dist/doc/fonts/clearsans/clear-samples.pdf
+share/texmf-dist/doc/fonts/clearsans/clear-samples.tex
+share/texmf-dist/doc/fonts/clearsans/clearsans.png

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:47 wiz Exp $
+share/texmf-dist/doc/fonts/kpfonts/Kpfonts-Doc-French.pdf
+share/texmf-dist/doc/fonts/kpfonts/Kpfonts-Doc-French.tex
+share/texmf-dist/doc/fonts/kpfonts/christophe.cls
+share/texmf-dist/doc/fonts/kpfonts/kpfonts-abstract.pdf
+share/texmf-dist/doc/fonts/kpfonts/kpfonts-abstract.tex
+share/texmf-dist/doc/fonts/kpfonts/kpfonts-math-symbols-tables.pdf
+share/texmf-dist/doc/fonts/kpfonts/kpfonts-math-symbols-tables.tex
+share/texmf-dist/doc/fonts/kpfonts/kpfonts.pdf
+share/texmf-dist/doc/fonts/kpfonts/kpfonts.tex
+share/texmf-dist/doc/fonts/kpfonts/readme.txt

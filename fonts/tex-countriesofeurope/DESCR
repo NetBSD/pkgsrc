@@ -1,0 +1,5 @@
+The bundle provides a font "CountriesOfEurope" (in Adobe Type 1
+format) and the necessary metrics, together with LaTeX macros
+for its use. The font provides glyphs with a filled outline of
+the shape of each country; each glyph is at the same
+cartographic scale.

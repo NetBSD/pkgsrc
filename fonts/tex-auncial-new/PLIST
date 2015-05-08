@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/fonts/afm/public/auncial-new/auncl10.afm
+share/texmf-dist/fonts/afm/public/auncial-new/aunclb10.afm
+share/texmf-dist/fonts/map/dvips/auncial-new/auncial.map
+share/texmf-dist/fonts/tfm/public/auncial-new/auncl10.tfm
+share/texmf-dist/fonts/tfm/public/auncial-new/aunclb10.tfm
+share/texmf-dist/fonts/type1/public/auncial-new/auncl10.pfb
+share/texmf-dist/fonts/type1/public/auncial-new/aunclb10.pfb
+share/texmf-dist/tex/latex/auncial-new/allauncl.sty
+share/texmf-dist/tex/latex/auncial-new/auncial.sty
+share/texmf-dist/tex/latex/auncial-new/b1auncl.fd

@@ -1,0 +1,6 @@
+Feyn may be used to produce relatively simple Feynman diagrams
+within equations in a LaTeX document. While the feynmf package
+is good at drawing large diagrams for figures, the present
+package and its fonts allow diagrams within equations or text,
+at a matching size. The fonts are distributed as Metafont
+source, and macros for their use are also provided.

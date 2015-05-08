@@ -1,0 +1,13 @@
+The well-known Euler fonts are suitable for typsetting
+mathematics in conjunction with a variety of text fonts which
+do not provide mathematical character sets of their own. Euler-
+VM is a set of virtual mathematics fonts based on Euler and CM.
+This approach has several advantages over immediately using the
+real Euler fonts: Most noticeably, less TeX resources are
+consumed, the quality of various math symbols is improved and a
+usable \hslash symbol can be provided. The virtual fonts are
+accompanied by a LaTeX package which makes them easy to use,
+particularly in conjunction with Type1 PostScript text fonts.
+They are compatible with amsmath. A package option allows the
+fonts to be loaded at 95% of their nominal size, thus blending
+better with certain text fonts, e.g., Minion.

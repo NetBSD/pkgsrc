@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:29 wiz Exp $
+share/texmf-dist/fonts/tfm/public/aecc/aeccr10.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccr5.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccr6.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccr7.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccr8.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccr9.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccsc10.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccsl10.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccsl9.tfm
+share/texmf-dist/fonts/tfm/public/aecc/aeccti10.tfm
+share/texmf-dist/fonts/vf/public/aecc/aeccr10.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccr5.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccr6.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccr7.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccr8.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccr9.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccsc10.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccsl10.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccsl9.vf
+share/texmf-dist/fonts/vf/public/aecc/aeccti10.vf
+share/texmf-dist/tex/latex/aecc/aecc.sty
+share/texmf-dist/tex/latex/aecc/t1aeccr.fd

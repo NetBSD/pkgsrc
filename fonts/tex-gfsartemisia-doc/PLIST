@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:43 wiz Exp $
+share/texmf-dist/doc/fonts/gfsartemisia/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/gfsartemisia/OFL.txt
+share/texmf-dist/doc/fonts/gfsartemisia/README
+share/texmf-dist/doc/fonts/gfsartemisia/README.TEXLIVE
+share/texmf-dist/doc/fonts/gfsartemisia/gfsartemisia.pdf
+share/texmf-dist/doc/fonts/gfsartemisia/gfsartemisia.tex

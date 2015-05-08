@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:49 wiz Exp $
+share/texmf-dist/doc/fonts/mintspirit/MintSpirit-Cat.pdf
+share/texmf-dist/doc/fonts/mintspirit/OFL.txt
+share/texmf-dist/doc/fonts/mintspirit/README
+share/texmf-dist/doc/fonts/mintspirit/mintspirit-samples.pdf
+share/texmf-dist/doc/fonts/mintspirit/mintspirit-samples.tex
+share/texmf-dist/doc/fonts/mintspirit/mintspirit2-samples.pdf
+share/texmf-dist/doc/fonts/mintspirit/mintspirit2-samples.tex

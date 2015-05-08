@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+share/texmf-dist/doc/fonts/cabin/OFL.txt
+share/texmf-dist/doc/fonts/cabin/README
+share/texmf-dist/doc/fonts/cabin/samples-condensed.pdf
+share/texmf-dist/doc/fonts/cabin/samples.pdf
+share/texmf-dist/doc/fonts/cabin/samples.tex

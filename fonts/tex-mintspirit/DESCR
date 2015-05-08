@@ -1,0 +1,5 @@
+The package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the MintSpirit and MintSpiritNo2 families of fonts,
+designed by Hirwen Harendal. MintSpirit was originally designed
+for use as a system font on a Linux Mint system. The No. 2
+variant provides more conventional shapes for some glyphs.

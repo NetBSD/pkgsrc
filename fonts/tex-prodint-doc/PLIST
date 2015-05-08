@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
+share/texmf-dist/doc/fonts/prodint/README
+share/texmf-dist/doc/fonts/prodint/config.prodint
+share/texmf-dist/doc/fonts/prodint/prodint.bma
+share/texmf-dist/doc/fonts/prodint/prodint.mt1
+share/texmf-dist/doc/fonts/prodint/prodint.pdf
+share/texmf-dist/doc/fonts/prodint/prodint.pfa
+share/texmf-dist/doc/fonts/prodint/prodint.sit.hqx
+share/texmf-dist/doc/fonts/prodint/prodint.tex

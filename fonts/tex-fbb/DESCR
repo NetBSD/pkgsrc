@@ -1,0 +1,7 @@
+The package provides a Bembo-like font package based on Cardo
+but with many modifications, adding Bold Italic, small caps in
+all styles, six figure choices in all styles, updated kerning
+tables, added figure tables and corrected f-ligatures. Both
+OpenType and Adobe Type 1 versions are provided; all necessary
+support files are provided. The font works well with
+newtxmath's libertine option.

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:34 wiz Exp $
+share/texmf-dist/fonts/afm/public/carolmin-ps/cmin10.afm
+share/texmf-dist/fonts/afm/public/carolmin-ps/cmin17.afm
+share/texmf-dist/fonts/afm/public/carolmin-ps/cmin7.afm
+share/texmf-dist/fonts/afm/public/carolmin-ps/cminb10.afm
+share/texmf-dist/fonts/afm/public/carolmin-ps/cminb17.afm
+share/texmf-dist/fonts/afm/public/carolmin-ps/cminb7.afm
+share/texmf-dist/fonts/map/dvips/carolmin-ps/cmin.map
+share/texmf-dist/fonts/type1/public/carolmin-ps/cmin10.pfb
+share/texmf-dist/fonts/type1/public/carolmin-ps/cmin17.pfb
+share/texmf-dist/fonts/type1/public/carolmin-ps/cmin7.pfb
+share/texmf-dist/fonts/type1/public/carolmin-ps/cminb10.pfb
+share/texmf-dist/fonts/type1/public/carolmin-ps/cminb17.pfb
+share/texmf-dist/fonts/type1/public/carolmin-ps/cminb7.pfb

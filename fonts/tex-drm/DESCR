@@ -1,0 +1,11 @@
+The package provides access to the DRM (Don's Revised Modern)
+family of fonts, which includes a variety of optical sizes in
+Roman (in four weights), italic, and small caps, among other
+shapes, along with a set of symbols and ornaments. It is
+intended to be a full-body text font, but its larger sizes can
+also be used for simple display purposes, and its significant
+body of symbols can stand on its own. It comes complete with
+textual ("old-style") and lining figures, and even has small-
+caps figures. It also comes with extensible decorative rules to
+be used with ornaments from itself or other fonts, along with
+an extremely flexible ellipsis package.

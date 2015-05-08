@@ -1,0 +1,2 @@
+For each font, at least an .pfb and .tfm file is provided, with
+a .fd file for use with LaTeX.

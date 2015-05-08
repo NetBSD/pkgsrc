@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
+share/texmf-dist/fonts/map/dvips/pigpen/pigpen.map
+share/texmf-dist/fonts/source/public/pigpen/pigpen.mf
+share/texmf-dist/fonts/tfm/public/pigpen/pigpen.tfm
+share/texmf-dist/fonts/type1/public/pigpen/pigpen.pfa
+share/texmf-dist/tex/latex/pigpen/pigpen.sty
+share/texmf-dist/tex/latex/pigpen/pigpen.tex

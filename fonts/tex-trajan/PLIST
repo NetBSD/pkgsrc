@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:56 wiz Exp $
+share/texmf-dist/fonts/afm/public/trajan/trjnr10.afm
+share/texmf-dist/fonts/afm/public/trajan/trjnsl10.afm
+share/texmf-dist/fonts/map/dvips/trajan/trajan.map
+share/texmf-dist/fonts/tfm/public/trajan/trjnr10.tfm
+share/texmf-dist/fonts/tfm/public/trajan/trjnsl10.tfm
+share/texmf-dist/fonts/type1/public/trajan/trjnr10.pfb
+share/texmf-dist/fonts/type1/public/trajan/trjnsl10.pfb
+share/texmf-dist/tex/latex/trajan/t1trjn.fd
+share/texmf-dist/tex/latex/trajan/trajan.sty

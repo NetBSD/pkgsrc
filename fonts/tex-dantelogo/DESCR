@@ -1,0 +1,4 @@
+The DANTE font for the logo of DANTE (http://www.dante.de), the
+German speaking TeX users group. The font includes only the
+five characters d, a, n, t, and e. dantelogo.sty provides an
+interface for LuaLaTeX/XeLaTeX/pdfLaTeX.

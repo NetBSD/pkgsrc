@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+share/texmf-dist/fonts/map/dvips/fge/fge.map
+share/texmf-dist/fonts/source/public/fge/fgebase.mf
+share/texmf-dist/fonts/source/public/fge/fgeit.mf
+share/texmf-dist/fonts/source/public/fge/fgeit10.mf
+share/texmf-dist/fonts/source/public/fge/fgerm.mf
+share/texmf-dist/fonts/source/public/fge/fgerm10.mf
+share/texmf-dist/fonts/tfm/public/fge/fgeit10.tfm
+share/texmf-dist/fonts/tfm/public/fge/fgerm10.tfm
+share/texmf-dist/fonts/type1/public/fge/fgeit10.pfb
+share/texmf-dist/fonts/type1/public/fge/fgerm10.pfb
+share/texmf-dist/tex/latex/fge/Ufgeit.fd
+share/texmf-dist/tex/latex/fge/Ufgerm.fd
+share/texmf-dist/tex/latex/fge/fge.cfg
+share/texmf-dist/tex/latex/fge/fge.sty

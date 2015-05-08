@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:59 wiz Exp $
+share/texmf-dist/doc/fonts/romande/COPYING
+share/texmf-dist/doc/fonts/romande/NOTICE.txt
+share/texmf-dist/doc/fonts/romande/README
+share/texmf-dist/doc/fonts/romande/manifest.txt
+share/texmf-dist/doc/fonts/romande/romandeadf.pdf
+share/texmf-dist/doc/fonts/romande/romandeadf.tex

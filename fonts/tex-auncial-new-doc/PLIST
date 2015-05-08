@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/doc/fonts/auncial-new/README
+share/texmf-dist/doc/fonts/auncial-new/auncial.pdf
+share/texmf-dist/doc/fonts/auncial-new/tryauncial.pdf
+share/texmf-dist/doc/fonts/auncial-new/tryauncial.tex

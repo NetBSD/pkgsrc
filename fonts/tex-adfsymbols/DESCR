@@ -1,0 +1,6 @@
+The package provides Arkandis foundry's ArrowsADF and
+BulletsADF fonts in Adobe Type 1 format, together with
+TeX/LaTeX support files. The fonts are licensed under GPL v2 or
+later with font exception. (See NOTICE, COPYING, README.) The
+TeX/LaTeX support is licensed under LPPL. (See README,
+manifest.txt.)

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:47 wiz Exp $
+share/texmf-dist/doc/fonts/junicode/Junicode.pdf
+share/texmf-dist/doc/fonts/junicode/Junicode.tex
+share/texmf-dist/doc/fonts/junicode/README
+share/texmf-dist/doc/fonts/junicode/aelfric_job.pdf
+share/texmf-dist/doc/fonts/junicode/aelfric_job.tex
+share/texmf-dist/doc/fonts/junicode/fleurons
+share/texmf-dist/doc/fonts/junicode/homer_sample.pdf
+share/texmf-dist/doc/fonts/junicode/homer_sample.tex
+share/texmf-dist/doc/fonts/junicode/replacements

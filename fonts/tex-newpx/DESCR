@@ -1,0 +1,7 @@
+This package, initially based on pxfonts, provides many fixes
+and enhancements to that package, and splits it in two parts
+(newpxtext and newpxmath) which may be run independently of one
+another. It provides scaling, improved metrics, and other
+options. For proper operation, the packages require that the
+packages newtxmath, pxfonts, and TeXGyrePagella be installed
+and their map files enabled.

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/doc/latex/augie/README.augie
+share/texmf-dist/doc/latex/augie/augie.txt
+share/texmf-dist/doc/latex/augie/other/Augie___.pfm
+share/texmf-dist/doc/latex/augie/other/augie___.inf
+share/texmf-dist/doc/latex/augie/vtex/augie.ali

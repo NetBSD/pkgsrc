@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:34 wiz Exp $
+share/texmf-dist/doc/fonts/ccicons/FONTLOG.txt
+share/texmf-dist/doc/fonts/ccicons/OFL.txt
+share/texmf-dist/doc/latex/ccicons/ccicons.pdf

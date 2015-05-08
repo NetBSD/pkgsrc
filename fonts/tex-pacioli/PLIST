@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:52 wiz Exp $
+share/texmf-dist/fonts/source/public/pacioli/cpclig.mf
+share/texmf-dist/fonts/source/public/pacioli/cpcpunct.mf
+share/texmf-dist/fonts/source/public/pacioli/cpcr10.mf
+share/texmf-dist/fonts/source/public/pacioli/cpcromanp.mf
+share/texmf-dist/fonts/source/public/pacioli/cpcromanu.mf
+share/texmf-dist/fonts/source/public/pacioli/cpcsl10.mf
+share/texmf-dist/fonts/source/public/pacioli/cpctitle.mf
+share/texmf-dist/fonts/tfm/public/pacioli/cpcr10.tfm
+share/texmf-dist/fonts/tfm/public/pacioli/cpcsl10.tfm
+share/texmf-dist/tex/latex/pacioli/ot1cpc.fd
+share/texmf-dist/tex/latex/pacioli/pacioli.sty
+share/texmf-dist/tex/latex/pacioli/t1cpc.fd

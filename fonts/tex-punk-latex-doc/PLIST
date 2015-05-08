@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
+share/texmf-dist/doc/latex/punk-latex/README
+share/texmf-dist/doc/latex/punk-latex/punk.pdf
+share/texmf-dist/doc/latex/punk-latex/punk.tex

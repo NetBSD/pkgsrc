@@ -1,0 +1,8 @@
+The package provides "mid-level" access to tengwar fonts,
+providing good quality output. Each tengwar sign is represented
+by a command, which will place the sign nicely in relation to
+previous signs. A transcription package is available from the
+package's home page: writing all those tengwar commands would
+quickly become untenable. The package supports the use of a
+wide variety of tengwar fonts that are available from the net;
+metric and map files are provided for all the supported fonts.

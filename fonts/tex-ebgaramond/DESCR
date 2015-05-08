@@ -1,0 +1,4 @@
+EB Garamond is a revival by Georg Duffner of the 16th century
+fonts designed by Claude Garamond. The LaTeX support package
+works for (pdf)LaTeX, xeLaTeX and luaLaTeX users; configuration
+files for use with microtype are provided.

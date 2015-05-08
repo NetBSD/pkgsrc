@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:56 wiz Exp $
+share/texmf-dist/fonts/map/dvips/staves/icelandic.map
+share/texmf-dist/fonts/tfm/public/staves/icelandic.tfm
+share/texmf-dist/fonts/type1/public/staves/icelandic.pfb
+share/texmf-dist/tex/latex/staves/staves.sty

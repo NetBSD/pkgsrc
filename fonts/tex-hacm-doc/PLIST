@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:45 wiz Exp $
+share/texmf-dist/doc/fonts/hacm/README
+share/texmf-dist/doc/fonts/hacm/hacmdoc.pdf
+share/texmf-dist/doc/fonts/hacm/hacmdoc.tex

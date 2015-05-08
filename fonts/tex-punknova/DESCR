@@ -1,0 +1,6 @@
+The font was generated from a MetaPost version of the sources
+of the 'original' punk font. Knuth's original fonts generated
+different shapes at random. This isn't actually possible in an
+OpenType font; rather, the font contains several variants of
+each glyph, and uses the OpenType randomize function to select
+a variant for each invocation.

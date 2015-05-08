@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
+share/texmf-dist/fonts/afm/public/fouriernc/fourier-mcl.afm
+share/texmf-dist/fonts/afm/public/fouriernc/fourier-ml.afm
+share/texmf-dist/fonts/afm/public/fouriernc/fourier-mlb.afm
+share/texmf-dist/fonts/afm/public/fouriernc/fourier-mlit.afm
+share/texmf-dist/fonts/afm/public/fouriernc/fourier-mlitb.afm
+share/texmf-dist/fonts/afm/public/fouriernc/fourier-ms.afm
+share/texmf-dist/fonts/tfm/public/fouriernc/fncmi.tfm
+share/texmf-dist/fonts/tfm/public/fouriernc/fncmib.tfm
+share/texmf-dist/fonts/tfm/public/fouriernc/fncmii.tfm
+share/texmf-dist/fonts/tfm/public/fouriernc/fncmiib.tfm
+share/texmf-dist/fonts/tfm/public/fouriernc/fncsy.tfm
+share/texmf-dist/fonts/vf/public/fouriernc/fncmi.vf
+share/texmf-dist/fonts/vf/public/fouriernc/fncmib.vf
+share/texmf-dist/fonts/vf/public/fouriernc/fncmii.vf
+share/texmf-dist/fonts/vf/public/fouriernc/fncmiib.vf
+share/texmf-dist/fonts/vf/public/fouriernc/fncsy.vf
+share/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
+share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
+share/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
+share/texmf-dist/tex/latex/fouriernc/fouriernc.sty
+share/texmf-dist/tex/latex/fouriernc/t1fnc.fd
+share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd

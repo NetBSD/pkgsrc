@@ -1,0 +1,3 @@
+A development of the karta font, offering more mathematical
+stability in Metafont. A version that will produce the glyphs
+as Encapsulated PostScript, using MetaPost, is also provided.

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:47 wiz Exp $
+share/texmf-dist/fonts/truetype/public/junicode/Junicode-Bold.ttf
+share/texmf-dist/fonts/truetype/public/junicode/Junicode-BoldItalic.ttf
+share/texmf-dist/fonts/truetype/public/junicode/Junicode-Italic.ttf
+share/texmf-dist/fonts/truetype/public/junicode/Junicode.ttf
+share/texmf-dist/tex/latex/junicode/mt-Junicode.cfg

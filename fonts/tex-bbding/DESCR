@@ -1,0 +1,4 @@
+A symbol font (distributed as Metafont source) that contains
+many of the symbols of the Zapf dingbats set, together with an
+NFSS interface for using the font. An Adobe Type 1 version of
+the fonts is available in the niceframe fonts bundle.

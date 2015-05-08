@@ -1,0 +1,4 @@
+This package contains all the necessary tools to typeset the
+"magical" Icelandic staves plus the runic letters used in
+Iceland. Included are a font in Adobe Type 1 format and LaTeX
+support.

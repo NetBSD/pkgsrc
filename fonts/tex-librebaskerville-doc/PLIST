@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:48 wiz Exp $
+share/texmf-dist/doc/fonts/librebaskerville/FONTLOG.txt
+share/texmf-dist/doc/fonts/librebaskerville/OFL.txt
+share/texmf-dist/doc/fonts/librebaskerville/README
+share/texmf-dist/doc/fonts/librebaskerville/librebaskerville-samples.pdf
+share/texmf-dist/doc/fonts/librebaskerville/librebaskerville-samples.tex

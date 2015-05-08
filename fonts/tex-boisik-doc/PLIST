@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/doc/fonts/boisik/README
+share/texmf-dist/doc/fonts/boisik/example/boisik-idiot.pdf
+share/texmf-dist/doc/fonts/boisik/example/boisik-idiot.tex
+share/texmf-dist/doc/fonts/boisik/example/boisik.pdf
+share/texmf-dist/doc/fonts/boisik/example/boisik.tex
+share/texmf-dist/doc/fonts/boisik/example/bskrlogo10.mf
+share/texmf-dist/doc/fonts/boisik/example/table.pdf
+share/texmf-dist/doc/fonts/boisik/example/table.tex
+share/texmf-dist/doc/fonts/boisik/example/testfont.pdf
+share/texmf-dist/doc/fonts/boisik/example/testfont.tex

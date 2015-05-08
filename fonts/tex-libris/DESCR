@@ -1,0 +1,6 @@
+LibrisADF is a sans-serif family designed to mimic Lydian. The
+bundle includes: fonts, in Adobe Type 1, TrueType and OpenType
+formats, and LaTeX support macros, for use with the Type 1
+versions of the fonts. The LaTeX macros depend on the nfssext-
+cfr bundle. GPL licensing applies the fonts themselves; the
+support macros are distributed under LPPL licensing.

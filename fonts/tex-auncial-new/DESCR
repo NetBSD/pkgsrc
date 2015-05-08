@@ -1,0 +1,10 @@
+The auncial-new bundle provides packages and fonts for a script
+based on the Artificial Uncial manuscript book-hand used
+between the 6th & 10th century AD. The script consists of
+minuscules and digits, with some appropriate period punctuation
+marks. Both normal and bold versions are provided, and the font
+is distributed in Adobe Type 1 format. This is an experimental
+new version of the auncial bundle, which is one of a series of
+bookhand fonts. The font follows the B1 encoding developed for
+bookhands. Access to the encoding is essential. The encoding
+mainly follows the standard T1 encoding.

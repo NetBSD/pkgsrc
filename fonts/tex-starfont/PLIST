@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:55 wiz Exp $
+share/texmf-dist/fonts/afm/public/starfont/starfont.afm
+share/texmf-dist/fonts/afm/public/starfont/strfnser.afm
+share/texmf-dist/fonts/map/dvips/starfont/starfont.map
+share/texmf-dist/fonts/tfm/public/starfont/fstr8x.tfm
+share/texmf-dist/fonts/tfm/public/starfont/fsts8x.tfm
+share/texmf-dist/fonts/type1/public/starfont/starfont.pfb
+share/texmf-dist/fonts/type1/public/starfont/strfnser.pfb
+share/texmf-dist/tex/latex/starfont/starfont.sty

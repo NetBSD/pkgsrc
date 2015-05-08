@@ -1,0 +1,4 @@
+This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the UniversalisADFStd family of fonts, designed by
+Hirwin Harendal. The font is suitable as an alternative to
+fonts such as Adrian Frutiger's Univers and Frutiger.

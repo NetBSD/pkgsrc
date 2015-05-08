@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/doc/fonts/adforn/COPYING
+share/texmf-dist/doc/fonts/adforn/NOTICE
+share/texmf-dist/doc/fonts/adforn/README
+share/texmf-dist/doc/fonts/adforn/adforn.pdf
+share/texmf-dist/doc/fonts/adforn/adforn.tex
+share/texmf-dist/doc/fonts/adforn/manifest.txt

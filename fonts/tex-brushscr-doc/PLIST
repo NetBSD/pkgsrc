@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+share/texmf-dist/doc/fonts/brushscr/AAA_readme.tex
+share/texmf-dist/doc/fonts/brushscr/Makefile
+share/texmf-dist/doc/fonts/brushscr/README
+share/texmf-dist/doc/fonts/brushscr/example.tex
+share/texmf-dist/doc/fonts/brushscr/generate.tex
+share/texmf-dist/doc/fonts/brushscr/kern.txt
+share/texmf-dist/doc/fonts/brushscr/sample.tex

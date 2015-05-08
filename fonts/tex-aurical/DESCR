@@ -1,0 +1,7 @@
+The package that implements a set (AuriocusKalligraphicus) of
+three calligraphic fonts derived from the author's handwriting
+in Adobe Type 1 Format, T1 encoding for use with LaTeX:
+Auriocus Kalligraphicus; Lukas Svatba; and Jana Skrivana. Each
+font features oldstyle digits and (machine-generated) boldface
+and slanted versions. A variant of Lukas Svatba offers a 'long
+s'.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:45 wiz Exp $
+share/texmf-dist/doc/fonts/grotesq/grotesq.txt
+share/texmf-dist/doc/fonts/grotesq/readme.grotesq
+share/texmf-dist/doc/fonts/grotesq/ugq.txt

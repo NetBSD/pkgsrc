@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+share/texmf-dist/doc/fonts/newtx/MANIFEST-newtx.txt
+share/texmf-dist/doc/fonts/newtx/README
+share/texmf-dist/doc/fonts/newtx/implementation.pdf
+share/texmf-dist/doc/fonts/newtx/implementation.tex
+share/texmf-dist/doc/fonts/newtx/mathnotes.pdf
+share/texmf-dist/doc/fonts/newtx/mathnotes.tex
+share/texmf-dist/doc/fonts/newtx/newtxdoc.pdf
+share/texmf-dist/doc/fonts/newtx/newtxdoc.tex
+share/texmf-dist/doc/fonts/newtx/sample-lib-crop.pdf
+share/texmf-dist/doc/fonts/newtx/sample-libmtp-crop.pdf
+share/texmf-dist/doc/fonts/newtx/sample-mtp-crop.pdf
+share/texmf-dist/doc/fonts/newtx/sample-ntx-crop.pdf
+share/texmf-dist/doc/fonts/newtx/sample-ptmx-crop.pdf
+share/texmf-dist/doc/fonts/newtx/sample-tx-crop.pdf

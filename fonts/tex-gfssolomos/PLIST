@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:44 wiz Exp $
+share/texmf-dist/fonts/afm/public/gfssolomos/GFSSolomos-Regular.afm
+share/texmf-dist/fonts/enc/dvips/gfssolomos/gpsolomos.enc
+share/texmf-dist/fonts/map/dvips/gfssolomos/gfssolomos.map
+share/texmf-dist/fonts/opentype/public/gfssolomos/GFSSolomos.otf
+share/texmf-dist/fonts/tfm/public/gfssolomos/gsolomos8a.tfm
+share/texmf-dist/fonts/tfm/public/gfssolomos/gsolomos8r.tfm
+share/texmf-dist/fonts/type1/public/gfssolomos/GFSSolomos-Regular.pfb
+share/texmf-dist/fonts/vf/public/gfssolomos/gsolomos8a.vf
+share/texmf-dist/tex/latex/gfssolomos/gfssolomos.sty
+share/texmf-dist/tex/latex/gfssolomos/lgrsolomos.fd

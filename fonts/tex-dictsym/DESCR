@@ -1,0 +1,5 @@
+This directory contains the DictSym Type1 font designed by
+Georg Verweyen and all files required to use it with LaTeX on
+the Unix or PC platforms. The font provides a number of symbols
+commonly used in dictionaries. The accompanying macro package
+makes the symbols accessible as LaTeX commands.

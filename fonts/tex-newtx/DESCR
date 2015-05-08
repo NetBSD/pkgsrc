@@ -1,0 +1,10 @@
+The bundle splits txfonts.sty (from the TX fonts distribution)
+into two independent packages, ntxtext.sty and ntxmath.sty,
+each with fixes and enhancements. Ntxmath's metrics have been
+re-evaluated to provide a less tight appearance, and to provide
+a libertine option that substitutes Libertine italic and Greek
+letter for the existing math italic and Greek glyphs, making a
+mathematics package that matches Libertine text quite well.
+Ntxmath can also use the maths italic font provided with the
+garamondx package, thus offering a garamond-alike text-with-
+maths combination.

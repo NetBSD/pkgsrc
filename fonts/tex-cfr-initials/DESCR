@@ -1,0 +1,8 @@
+This is a set of 23 tiny packages designed to make it easier to
+use fonts from the initials package in LaTeX, e.g. with the
+lettrine package. It is a response to comments on an answer at
+TeX Stack Exchange (http://tex.stackexchange.com/a/236410/)
+requesting sample package files for others to copy. I had
+previously assumed these were too trivial to be of interest,
+but if they would be useful, then I would prefer them to be
+generally available via CTAN.

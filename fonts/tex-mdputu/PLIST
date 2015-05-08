@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:49 wiz Exp $
+share/texmf-dist/fonts/tfm/public/mdputu/mdputubi7t.tfm
+share/texmf-dist/fonts/tfm/public/mdputu/mdputubi8t.tfm
+share/texmf-dist/fonts/tfm/public/mdputu/mdputuri7t.tfm
+share/texmf-dist/fonts/tfm/public/mdputu/mdputuri8t.tfm
+share/texmf-dist/fonts/vf/public/mdputu/mdputubi7t.vf
+share/texmf-dist/fonts/vf/public/mdputu/mdputubi8t.vf
+share/texmf-dist/fonts/vf/public/mdputu/mdputuri7t.vf
+share/texmf-dist/fonts/vf/public/mdputu/mdputuri8t.vf
+share/texmf-dist/tex/latex/mdputu/mdputu.sty
+share/texmf-dist/tex/latex/mdputu/ot1mdputu.fd
+share/texmf-dist/tex/latex/mdputu/t1mdputu.fd

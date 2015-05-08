@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:46 wiz Exp $
+share/texmf-dist/doc/fonts/iwona/00readme.eng
+share/texmf-dist/doc/fonts/iwona/00readme.pol
+share/texmf-dist/doc/fonts/iwona/GUST-FONT-LICENSE.txt
+share/texmf-dist/doc/fonts/iwona/iwona-info-src.zip
+share/texmf-dist/doc/fonts/iwona/iwona-info.pdf
+share/texmf-dist/doc/fonts/iwona/iwona-latex-cyr.tex
+share/texmf-dist/doc/fonts/iwona/iwona-latex-math.tex
+share/texmf-dist/doc/fonts/iwona/iwona-latex-pl.tex
+share/texmf-dist/doc/fonts/iwona/iwona-latex-t2a.tex
+share/texmf-dist/doc/fonts/iwona/iwona-latex-t5.tex
+share/texmf-dist/doc/fonts/iwona/iwona-mathtest.tex
+share/texmf-dist/doc/fonts/iwona/iwona-table.tex
+share/texmf-dist/doc/fonts/iwona/manifest.txt

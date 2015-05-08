@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:40 wiz Exp $
+share/texmf-dist/fonts/source/public/elvish/cirth.mf
+share/texmf-dist/fonts/source/public/elvish/teng10.mf
+share/texmf-dist/fonts/source/public/elvish/tengdev.mf
+share/texmf-dist/fonts/source/public/elvish/tengmacs.mf
+share/texmf-dist/fonts/source/public/elvish/tengmain.mf
+share/texmf-dist/fonts/source/public/elvish/tengsecs.mf
+share/texmf-dist/fonts/source/public/elvish/tengteht.mf
+share/texmf-dist/fonts/tfm/public/elvish/cirth.tfm
+share/texmf-dist/fonts/tfm/public/elvish/teng10.tfm

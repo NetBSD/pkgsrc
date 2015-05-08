@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+share/texmf-dist/doc/fonts/newpx/MANIFEST-newpx.txt
+share/texmf-dist/doc/fonts/newpx/README
+share/texmf-dist/doc/fonts/newpx/newpxdoc.pdf
+share/texmf-dist/doc/fonts/newpx/newpxdoc.tex
+share/texmf-dist/doc/fonts/newpx/newpxeg-crop.pdf
+share/texmf-dist/doc/fonts/newpx/pxfontseg-crop.pdf

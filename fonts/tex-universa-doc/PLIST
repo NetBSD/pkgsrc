@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:57 wiz Exp $
+share/texmf-dist/doc/fonts/universa/README.uni
+share/texmf-dist/doc/fonts/universa/copyright.tex
+share/texmf-dist/doc/fonts/universa/unidoc.sty

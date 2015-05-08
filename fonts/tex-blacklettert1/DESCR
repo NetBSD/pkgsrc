@@ -1,0 +1,5 @@
+This package contains virtual fonts that offer T1-alike encoded
+variants of Yannis Haralambous's old German fonts Gothic,
+Schwabacher and Fraktur (which are also available in Adobe type
+1 format). The package includes LaTeX macros to embed the fonts
+into the LaTeX font selection scheme.

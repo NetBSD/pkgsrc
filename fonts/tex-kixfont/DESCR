@@ -1,0 +1,6 @@
+The KIX code is a barcode-like format used by the Dutch PTT to
+encode country codes, zip codes and street numbers in a
+machine-readable format. If printed below the address line on
+bulk mailings, a discount can be obtained. The font is
+distributed in Metafont format, and covers the numbers and
+upper-case letters.

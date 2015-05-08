@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
+share/texmf-dist/doc/fonts/punknova/Makefile
+share/texmf-dist/doc/fonts/punknova/NEWS
+share/texmf-dist/doc/fonts/punknova/README
+share/texmf-dist/doc/fonts/punknova/documentation/documentation-sources/sample.tex
+share/texmf-dist/doc/fonts/punknova/documentation/sample.pdf
+share/texmf-dist/doc/fonts/punknova/source/punkfont-bold.mp
+share/texmf-dist/doc/fonts/punknova/source/punkfont-boldslanted.mp
+share/texmf-dist/doc/fonts/punknova/source/punkfont-regular.mp
+share/texmf-dist/doc/fonts/punknova/source/punkfont-slanted.mp
+share/texmf-dist/doc/fonts/punknova/tools/build.py

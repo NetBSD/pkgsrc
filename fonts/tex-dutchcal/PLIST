@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:39 wiz Exp $
+share/texmf-dist/fonts/afm/public/dutchcal/DutchCalBold.afm
+share/texmf-dist/fonts/afm/public/dutchcal/DutchCalReg.afm
+share/texmf-dist/fonts/map/dvips/dutchcal/dutchcal.map
+share/texmf-dist/fonts/tfm/public/dutchcal/dutchcal-b.tfm
+share/texmf-dist/fonts/tfm/public/dutchcal/dutchcal-r.tfm
+share/texmf-dist/fonts/tfm/public/dutchcal/rdutchcalb.tfm
+share/texmf-dist/fonts/tfm/public/dutchcal/rdutchcalr.tfm
+share/texmf-dist/fonts/type1/public/dutchcal/DutchCalBold.pfb
+share/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.pfb
+share/texmf-dist/fonts/vf/public/dutchcal/dutchcal-b.vf
+share/texmf-dist/fonts/vf/public/dutchcal/dutchcal-r.vf
+share/texmf-dist/tex/latex/dutchcal/dutchcal.sty
+share/texmf-dist/tex/latex/dutchcal/udutchcal.fd

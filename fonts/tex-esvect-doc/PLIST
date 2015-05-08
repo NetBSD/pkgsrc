@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+share/texmf-dist/doc/latex/esvect/README
+share/texmf-dist/doc/latex/esvect/esvect.pdf

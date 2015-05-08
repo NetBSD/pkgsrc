@@ -1,0 +1,10 @@
+The Droid typeface family was designed in the fall of 2006 by
+Steve Matteson, as a commission from Google to create a set of
+system fonts for its Android platform. The goal was to provide
+optimal quality and comfort on a mobile handset when rendered
+in application menus, web browsers and for other screen text.
+The Droid family consists of Droid Serif, Droid Sans and Droid
+Sans Mono fonts, licensed under the Apache License Version 2.0.
+The bundle includes the fonts in both TrueType and Adobe Type 1
+formats. The package does not support the Droid Pro family of
+fonts, available for purchase from the Ascender foundry.

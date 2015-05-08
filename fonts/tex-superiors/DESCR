@@ -1,0 +1,5 @@
+The package allows the attachment of an arbitrary superior
+figures font to a font family that lacks one. (Superior figures
+are commonly used as footnote markers.) Two superior figures
+fonts are provided--one matching Times, the other matching
+Libertine.

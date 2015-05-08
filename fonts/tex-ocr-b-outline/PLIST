@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:51 wiz Exp $
+share/texmf-dist/fonts/map/dvips/ocr-b-outline/ocrb.map
+share/texmf-dist/fonts/opentype/public/ocr-b-outline/ocrb10.otf
+share/texmf-dist/fonts/opentype/public/ocr-b-outline/ocrb5.otf
+share/texmf-dist/fonts/opentype/public/ocr-b-outline/ocrb6.otf
+share/texmf-dist/fonts/opentype/public/ocr-b-outline/ocrb7.otf
+share/texmf-dist/fonts/opentype/public/ocr-b-outline/ocrb8.otf
+share/texmf-dist/fonts/opentype/public/ocr-b-outline/ocrb9.otf
+share/texmf-dist/fonts/type1/public/ocr-b-outline/ocrb10.pfb
+share/texmf-dist/fonts/type1/public/ocr-b-outline/ocrb5.pfb
+share/texmf-dist/fonts/type1/public/ocr-b-outline/ocrb6.pfb
+share/texmf-dist/fonts/type1/public/ocr-b-outline/ocrb7.pfb
+share/texmf-dist/fonts/type1/public/ocr-b-outline/ocrb8.pfb
+share/texmf-dist/fonts/type1/public/ocr-b-outline/ocrb9.pfb

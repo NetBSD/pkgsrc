@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/fonts/tfm/public/blacklettert1/tfrak.tfm
+share/texmf-dist/fonts/tfm/public/blacklettert1/tfrakls.tfm
+share/texmf-dist/fonts/tfm/public/blacklettert1/tgoth.tfm
+share/texmf-dist/fonts/tfm/public/blacklettert1/tswab.tfm
+share/texmf-dist/fonts/vf/public/blacklettert1/tfrak.vf
+share/texmf-dist/fonts/vf/public/blacklettert1/tfrakls.vf
+share/texmf-dist/fonts/vf/public/blacklettert1/tgoth.vf
+share/texmf-dist/fonts/vf/public/blacklettert1/tswab.vf
+share/texmf-dist/tex/latex/blacklettert1/t1yfrak.fd

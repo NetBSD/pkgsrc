@@ -1,0 +1,4 @@
+The fonts (ark10 and dingbat) are specified in Metafont;
+support macros are provided for use in LaTeX. An Adobe Type 1
+version of the fonts is available in the niceframe fonts
+bundle.

@@ -1,0 +1,6 @@
+Inconsolata is a monospaced font designed by Raph Levien. This
+package contains the font (in both Adobe Type 1 and OpenType
+formats) in regular and bold weights, with additional glyphs
+and options to control slashed zero, upright quotes and a
+shapelier lower-case L, plus metric files for use with TeX, and
+LaTeX font definition and other relevant files.

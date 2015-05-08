@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:36 wiz Exp $
+share/texmf-dist/fonts/source/public/cmtiup/cmtiup10.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiup12.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiup7.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiup8.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiup9.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiupgn.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiuplg.mf
+share/texmf-dist/fonts/source/public/cmtiup/cmtiupp.mf
+share/texmf-dist/fonts/tfm/public/cmtiup/cmtiup10.tfm
+share/texmf-dist/fonts/tfm/public/cmtiup/cmtiup12.tfm
+share/texmf-dist/fonts/tfm/public/cmtiup/cmtiup7.tfm
+share/texmf-dist/fonts/tfm/public/cmtiup/cmtiup8.tfm
+share/texmf-dist/fonts/tfm/public/cmtiup/cmtiup9.tfm
+share/texmf-dist/fonts/vf/public/cmtiup/cmtiup10.vf
+share/texmf-dist/fonts/vf/public/cmtiup/cmtiup12.vf
+share/texmf-dist/fonts/vf/public/cmtiup/cmtiup7.vf
+share/texmf-dist/fonts/vf/public/cmtiup/cmtiup8.vf
+share/texmf-dist/fonts/vf/public/cmtiup/cmtiup9.vf
+share/texmf-dist/tex/latex/cmtiup/cmtiup.sty

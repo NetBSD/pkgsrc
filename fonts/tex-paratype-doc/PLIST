@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:52 wiz Exp $
+share/texmf-dist/doc/fonts/paratype/CHANGELOG
+share/texmf-dist/doc/fonts/paratype/OT_TT_Install_E.txt
+share/texmf-dist/doc/fonts/paratype/OT_TT_Install_R.txt
+share/texmf-dist/doc/fonts/paratype/PT_Free_Font_License_eng_1.3.txt
+share/texmf-dist/doc/fonts/paratype/PT_Free_Font_License_rus_1.3.txt
+share/texmf-dist/doc/fonts/paratype/README
+share/texmf-dist/doc/fonts/paratype/manifest.txt
+share/texmf-dist/doc/fonts/paratype/paratype-sample.pdf
+share/texmf-dist/doc/fonts/paratype/paratype-sample.tex
+share/texmf-dist/doc/fonts/paratype/paratype.pdf
+share/texmf-dist/doc/fonts/paratype/paratype.tex

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:30 wiz Exp $
+share/texmf-dist/fonts/source/public/astro/astrosym.cal
+share/texmf-dist/fonts/source/public/astro/astrosym.cmn
+share/texmf-dist/fonts/source/public/astro/astrosym.mac
+share/texmf-dist/fonts/source/public/astro/astrosym.mf
+share/texmf-dist/fonts/source/public/astro/astrosym.uni
+share/texmf-dist/fonts/source/public/astro/astrosym.xtr
+share/texmf-dist/fonts/tfm/public/astro/astrosym.tfm

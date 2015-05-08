@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/doc/fonts/xits/FONTLOG.txt
+share/texmf-dist/doc/fonts/xits/Makefile
+share/texmf-dist/doc/fonts/xits/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/xits/OFL.txt
+share/texmf-dist/doc/fonts/xits/README
+share/texmf-dist/doc/fonts/xits/build.py
+share/texmf-dist/doc/fonts/xits/fontcoverage.py
+share/texmf-dist/doc/fonts/xits/postprocess.py
+share/texmf-dist/doc/fonts/xits/user-guide.pdf
+share/texmf-dist/doc/fonts/xits/user-guide.tex
+share/texmf-dist/doc/fonts/xits/xits-math.lfg
+share/texmf-dist/doc/fonts/xits/xits-specimen.pdf
+share/texmf-dist/doc/fonts/xits/xits-specimen.tex
