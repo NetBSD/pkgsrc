@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.27 2015/05/03 06:26:35 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.28 2015/05/08 08:00:23 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -106,3 +106,5 @@ Pullup ticket #4693 - requested by joerg
 print/hpijs: build fix
 Pullup ticket #4694 - requested by joerg
 emulators/bochs: build fix
+Pullup ticket #4695 - requested by joerg
+devel/tavrasm: build fix
