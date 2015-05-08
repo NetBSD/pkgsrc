@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:38 wiz Exp $
+share/texmf-dist/doc/metapost/epsincl/0info.txt
+share/texmf-dist/doc/metapost/epsincl/README
+share/texmf-dist/doc/metapost/epsincl/epsincl.awk
+share/texmf-dist/doc/metapost/epsincl/epsincl.bat
+share/texmf-dist/doc/metapost/epsincl/testinc0.eps
+share/texmf-dist/doc/metapost/epsincl/testincl.bat
+share/texmf-dist/doc/metapost/epsincl/testincl.mp
+share/texmf-dist/doc/metapost/epsincl/testincl.sh

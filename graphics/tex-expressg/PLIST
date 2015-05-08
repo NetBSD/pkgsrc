@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:38 wiz Exp $
+share/texmf-dist/metapost/expressg/aam.mp
+share/texmf-dist/metapost/expressg/expeg.mp
+share/texmf-dist/metapost/expressg/expressg.mp
