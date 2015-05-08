@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:41 wiz Exp $
+share/texmf-dist/metapost/mpcolornames/mpcolornames-spec-dvipsnam-def.mp
+share/texmf-dist/metapost/mpcolornames/mpcolornames-spec-plain-mp.mp
+share/texmf-dist/metapost/mpcolornames/mpcolornames-spec-svgnam-def.mp
+share/texmf-dist/metapost/mpcolornames/mpcolornames-spec-x11nam-def.mp
+share/texmf-dist/metapost/mpcolornames/mpcolornames-spec-xcolor-sty.mp
+share/texmf-dist/metapost/mpcolornames/mpcolornames.mp

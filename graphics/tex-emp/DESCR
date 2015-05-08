@@ -1,0 +1,10 @@
+Emp is a package for encapsulating MetaPost figures in LaTeX:
+the package provides environments where you can place MetaPost
+commands, and means of using that code as fragments for
+building up figures to include in your document. So, with emp,
+the procedure is to run your document with LaTeX, run MetaPost,
+and then complete running your document in the normal way. Emp
+is therefore useful for keeping illustrations in synchrony with
+the text. It also frees you from inventing descriptive names
+for PostScript files that fit into the confines of file system
+conventions.
