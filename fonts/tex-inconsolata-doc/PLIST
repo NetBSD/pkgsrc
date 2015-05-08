@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:46 wiz Exp $
+share/texmf-dist/doc/fonts/inconsolata/OFL.txt
+share/texmf-dist/doc/fonts/inconsolata/README
+share/texmf-dist/doc/fonts/inconsolata/afmcmds.txt
+share/texmf-dist/doc/fonts/inconsolata/inconsolata-doc.pdf
+share/texmf-dist/doc/fonts/inconsolata/inconsolata-doc.tex
+share/texmf-dist/doc/fonts/inconsolata/novarqu-crop.pdf
+share/texmf-dist/doc/fonts/inconsolata/novarqu-noupq-crop.pdf
+share/texmf-dist/doc/fonts/inconsolata/varqu-noupq-crop.pdf

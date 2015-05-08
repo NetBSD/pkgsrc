@@ -1,0 +1,6 @@
+The cmtiup fonts address a problem with the appearance of
+punctuation in italic text in mathematical documents. To
+achieve this, all punctuation characters are upright, and
+kerning between letters and punctuation is adjusted to allow
+for the italic correction. The fonts are implemented as a set
+of vf files; a package for support in LaTeX 2e is provided.

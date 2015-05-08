@@ -1,0 +1,4 @@
+Extends and modifies the BaskervaldADF font (a Baskerville
+substitute) with more accented glyphs, with small caps and
+oldstyle figures in all shapes. Includes OpenType and
+PostScript fonts, as well as LaTeX support files.

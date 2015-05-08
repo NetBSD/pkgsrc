@@ -1,0 +1,4 @@
+The font is an open-source Monospaced development from Adobe.
+The package provides fonts (in both Adobe Type 1 and OpenType
+formats) and macros supporting their use in LaTeX (Type 1) and
+XeLaTeX/LuaLaTeX (OTF).

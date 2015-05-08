@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
+share/texmf-dist/doc/fonts/playfair/OFL.txt
+share/texmf-dist/doc/fonts/playfair/Playfair_Display_A4_specimen.pdf
+share/texmf-dist/doc/fonts/playfair/README
+share/texmf-dist/doc/fonts/playfair/playfair-samples.pdf
+share/texmf-dist/doc/fonts/playfair/playfair-samples.tex

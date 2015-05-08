@@ -1,0 +1,5 @@
+The fonts extend the utopia set with Cyrillic glyphs,
+additional figure styles, ligatures and Small Caps in Regular
+style only. Macro support, and maths fonts that match the
+Utopia family, are provided by the Fourier and the Mathdesign
+font packages.

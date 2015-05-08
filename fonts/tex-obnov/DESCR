@@ -1,0 +1,6 @@
+The Obyknovennaya Novaya (Ordinary New Face) typeface was
+widely used in the USSR for scientific and technical
+publications, as well as textbooks. The fonts are encoded to
+KOI8-R (which is a long-established Russian font encoding,
+rather than a TeX/LaTeX encoding). To use the fonts, the user
+needs Cyrillic font support.

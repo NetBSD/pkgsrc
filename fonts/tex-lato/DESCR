@@ -1,0 +1,9 @@
+Lato is a sanserif typeface family designed in the Summer 2010
+by Warsaw-based designer Lukasz Dziedzic for the tyPoland
+foundry. This font, which includes five weights (hairline,
+light, regular, bold and black), is available from the Google
+Font Directory as TrueType files under the Open Font License
+version 1.1. The package provides support for this font in
+LaTeX. It includes the original TrueType fonts, as well as Type
+1 versions, converted for this package using FontForge for full
+support with Dvips.

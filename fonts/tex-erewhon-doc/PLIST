@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:40 wiz Exp $
+share/texmf-dist/doc/fonts/erewhon/FontLog.txt
+share/texmf-dist/doc/fonts/erewhon/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/erewhon/OFL.txt
+share/texmf-dist/doc/fonts/erewhon/README
+share/texmf-dist/doc/fonts/erewhon/erewhon-doc.pdf
+share/texmf-dist/doc/fonts/erewhon/erewhon-doc.tex

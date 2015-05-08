@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:40 wiz Exp $
+share/texmf-dist/fonts/map/dvips/esvect/esvect.map
+share/texmf-dist/fonts/source/public/esvect/mathvec.mf
+share/texmf-dist/fonts/source/public/esvect/vecsym.mf
+share/texmf-dist/fonts/source/public/esvect/vect10.mf
+share/texmf-dist/fonts/source/public/esvect/vect5.mf
+share/texmf-dist/fonts/source/public/esvect/vect6.mf
+share/texmf-dist/fonts/source/public/esvect/vect7.mf
+share/texmf-dist/fonts/source/public/esvect/vect8.mf
+share/texmf-dist/fonts/source/public/esvect/vect9.mf
+share/texmf-dist/fonts/source/public/esvect/vsymbol.mf
+share/texmf-dist/fonts/tfm/public/esvect/vect10.tfm
+share/texmf-dist/fonts/tfm/public/esvect/vect5.tfm
+share/texmf-dist/fonts/tfm/public/esvect/vect6.tfm
+share/texmf-dist/fonts/tfm/public/esvect/vect7.tfm
+share/texmf-dist/fonts/tfm/public/esvect/vect8.tfm
+share/texmf-dist/fonts/tfm/public/esvect/vect9.tfm
+share/texmf-dist/fonts/type1/public/esvect/vect10.pfb
+share/texmf-dist/fonts/type1/public/esvect/vect5.pfb
+share/texmf-dist/fonts/type1/public/esvect/vect6.pfb
+share/texmf-dist/fonts/type1/public/esvect/vect7.pfb
+share/texmf-dist/fonts/type1/public/esvect/vect8.pfb
+share/texmf-dist/fonts/type1/public/esvect/vect9.pfb
+share/texmf-dist/tex/latex/esvect/esvect.sty
+share/texmf-dist/tex/latex/esvect/uesvect.fd

@@ -1,0 +1,5 @@
+The package contains StarFontSans and StarFontSerif, two
+public-domain astrological fonts designed by Anthony I.P. Owen,
+and the appropriate macros to use them with TeX and LaTeX. The
+fonts are supplied both in the original TrueType Format and in
+Adobe Type 1 format.

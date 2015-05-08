@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:48 wiz Exp $
+share/texmf-dist/fonts/afm/public/linearA/LinearA.afm
+share/texmf-dist/fonts/afm/public/linearA/LinearACmplxSigns.afm
+share/texmf-dist/fonts/map/dvips/linearA/linearA.map
+share/texmf-dist/fonts/tfm/public/linearA/LinearA.tfm
+share/texmf-dist/fonts/tfm/public/linearA/LinearACmplxSigns.tfm
+share/texmf-dist/fonts/type1/public/linearA/LinearA.pfb
+share/texmf-dist/fonts/type1/public/linearA/LinearACmplxSigns.pfb
+share/texmf-dist/tex/latex/linearA/linearA.sty

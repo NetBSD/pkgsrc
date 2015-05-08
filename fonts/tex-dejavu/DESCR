@@ -1,0 +1,7 @@
+The package contains LaTeX support for the DejaVu fonts, which
+are derived from the Vera fonts but contain more characters and
+styles. The fonts are included in the original TrueType format,
+and in converted Type 1 format. The (currently) supported
+encodings are: OT1, T1, IL2, TS1, T2*, X2, QX, and LGR. The
+package doesn't (currently) support mathematics. More encodings
+and/or features are expected.

@@ -1,0 +1,6 @@
+The STIX fonts are a suite of unicode OpenType fonts containing
+a complete set of mathematical glyphs. The CTAN package is a
+copy of the fonts' official release, organised as specified by
+the TeX Directory Structure, for inclusion in standard TeX
+distributions. A Type 1-only distribution of the fonts is
+available in the esstix bundle.
