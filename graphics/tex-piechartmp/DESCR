@@ -1,0 +1,6 @@
+The piechartmp package is an easy way to draw pie-charts with
+MetaPost. The package implements an interface that enables
+users with little MetaPost experience to draw charts. A
+highlight of the package is the possibility of suppressing some
+segments of the chart, thus creating the possibility of several
+charts from the same data.

@@ -1,0 +1,7 @@
+The MetaPost format plain.mp provides only five built-in colour
+names (variables), all of which are defined in the RGB model:
+red, green and blue for the primary colours and black and
+white. The package makes more than 500 colour names from
+different colour sets in different colour models available to
+MetaPost. Colour sets include X11, SVG, DVIPS and xcolor
+specifications.

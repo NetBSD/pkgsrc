@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:39 wiz Exp $
+share/texmf-dist/doc/metapost/expressg/README
+share/texmf-dist/doc/metapost/expressg/aamfigs.pdf
+share/texmf-dist/doc/metapost/expressg/aamfigs.tex
+share/texmf-dist/doc/metapost/expressg/expeg.pdf
+share/texmf-dist/doc/metapost/expressg/expeg.tex
+share/texmf-dist/doc/metapost/expressg/expressg.pdf
+share/texmf-dist/doc/metapost/expressg/n2mps.sh
+share/texmf-dist/doc/metapost/expressg/n2mpsprl.prl

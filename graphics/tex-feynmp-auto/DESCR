@@ -1,0 +1,4 @@
+The package takes care of running Metapost on the output files
+produced by the feynmp package, so that the compiled pictures
+will be available in the next run of LaTeX. The package honours
+options that apply to feynmp.

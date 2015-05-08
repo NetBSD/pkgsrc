@@ -1,0 +1,8 @@
+The feynmf package provides an interface to Metafont (inspired
+by the facilities of mfpic) to use simple structure
+specifications to produce relatively complex diagrams. (The
+feynmp package, also part of this bundle, uses MetaPost in the
+same way.) While the package was designed for Feynman diagrams,
+it could in principle be used for diagrams in graph and similar
+theories, where the structure is semi-algorithmically
+determined.

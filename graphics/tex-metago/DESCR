@@ -1,0 +1,4 @@
+The package allows you to draw Go game positions with MetaPost.
+Two methods of usage are provided, either using the package
+programmatically, or using the package via a script (which may
+produce several images).
