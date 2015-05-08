@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+share/texmf-dist/doc/fonts/feyn/LICENCE
+share/texmf-dist/doc/fonts/feyn/README
+share/texmf-dist/doc/fonts/feyn/VERSION
+share/texmf-dist/doc/fonts/feyn/exercise-font.pdf
+share/texmf-dist/doc/fonts/feyn/exercise-font.tex
+share/texmf-dist/doc/fonts/feyn/feyn.pdf
+share/texmf-dist/doc/fonts/feyn/overheads.pdf
+share/texmf-dist/doc/fonts/feyn/overheads.tex

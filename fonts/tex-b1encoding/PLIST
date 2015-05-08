@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/fonts/enc/dvips/b1encoding/TeXB1.enc
+share/texmf-dist/tex/latex/b1encoding/b1cmr.fd
+share/texmf-dist/tex/latex/b1encoding/b1enc.def

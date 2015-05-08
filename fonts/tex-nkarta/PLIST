@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+share/texmf-dist/fonts/source/public/nkarta/nkarta.mf
+share/texmf-dist/fonts/source/public/nkarta/nkarta15.mf
+share/texmf-dist/fonts/source/public/nkarta/nkchars.mf
+share/texmf-dist/fonts/tfm/public/nkarta/nkarta15.tfm
+share/texmf-dist/metapost/nkarta/nkarta.mp
+share/texmf-dist/metapost/nkarta/nkchars.mp

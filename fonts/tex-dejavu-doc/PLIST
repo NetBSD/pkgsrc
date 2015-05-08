@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:37 wiz Exp $
+share/texmf-dist/doc/fonts/dejavu/AUTHORS
+share/texmf-dist/doc/fonts/dejavu/BUGS
+share/texmf-dist/doc/fonts/dejavu/CHANGELOG
+share/texmf-dist/doc/fonts/dejavu/LICENSE
+share/texmf-dist/doc/fonts/dejavu/NEWS
+share/texmf-dist/doc/fonts/dejavu/README-font
+share/texmf-dist/doc/fonts/dejavu/README.doc
+share/texmf-dist/doc/fonts/dejavu/dejavu-sample.pdf
+share/texmf-dist/doc/fonts/dejavu/dejavu-sample.tex
+share/texmf-dist/doc/fonts/dejavu/dejavu.pdf
+share/texmf-dist/doc/fonts/dejavu/dejavu.tex
+share/texmf-dist/doc/fonts/dejavu/extrakerns.zip
+share/texmf-dist/doc/fonts/dejavu/langcover.txt
+share/texmf-dist/doc/fonts/dejavu/manifest.txt
+share/texmf-dist/doc/fonts/dejavu/status.txt
+share/texmf-dist/doc/fonts/dejavu/unicover.txt

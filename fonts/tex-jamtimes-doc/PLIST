@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:46 wiz Exp $
+share/texmf-dist/doc/latex/jamtimes/README
+share/texmf-dist/doc/latex/jamtimes/jamtimes.bib
+share/texmf-dist/doc/latex/jamtimes/jamtimes.dtx
+share/texmf-dist/doc/latex/jamtimes/jamtimes.ins
+share/texmf-dist/doc/latex/jamtimes/jamtimes.pdf
+share/texmf-dist/doc/latex/jamtimes/mathsample.pdf
+share/texmf-dist/doc/latex/jamtimes/mathsample.tex
+share/texmf-dist/doc/latex/jamtimes/mathsample_ps.pdf
+share/texmf-dist/doc/latex/jamtimes/textsample.pdf
+share/texmf-dist/doc/latex/jamtimes/textsample.tex
+share/texmf-dist/doc/latex/jamtimes/textsample_ps.pdf

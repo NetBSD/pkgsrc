@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:44 wiz Exp $
+share/texmf-dist/doc/fonts/gfssolomos/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/gfssolomos/OFL.txt
+share/texmf-dist/doc/fonts/gfssolomos/README
+share/texmf-dist/doc/fonts/gfssolomos/gfssolomos.pdf
+share/texmf-dist/doc/fonts/gfssolomos/gfssolomos.tex

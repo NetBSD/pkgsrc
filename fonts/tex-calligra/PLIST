@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+share/texmf-dist/fonts/source/public/calligra/callig15.mf
+share/texmf-dist/fonts/source/public/calligra/calligra.mf
+share/texmf-dist/fonts/tfm/public/calligra/callig15.tfm

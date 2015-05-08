@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:43 wiz Exp $
+share/texmf-dist/doc/fonts/gfsbodoni/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/gfsbodoni/OFL.txt
+share/texmf-dist/doc/fonts/gfsbodoni/README
+share/texmf-dist/doc/fonts/gfsbodoni/README.TEXLIVE
+share/texmf-dist/doc/fonts/gfsbodoni/gfsbodoni.pdf

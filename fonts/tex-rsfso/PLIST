@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:54 wiz Exp $
+share/texmf-dist/fonts/map/dvips/rsfso/rsfso.map
+share/texmf-dist/fonts/tfm/public/rsfso/rrsfso10.tfm
+share/texmf-dist/fonts/tfm/public/rsfso/rrsfso5.tfm
+share/texmf-dist/fonts/tfm/public/rsfso/rrsfso7.tfm
+share/texmf-dist/fonts/tfm/public/rsfso/rsfso10.tfm
+share/texmf-dist/fonts/tfm/public/rsfso/rsfso5.tfm
+share/texmf-dist/fonts/tfm/public/rsfso/rsfso7.tfm
+share/texmf-dist/fonts/vf/public/rsfso/rsfso10.vf
+share/texmf-dist/fonts/vf/public/rsfso/rsfso5.vf
+share/texmf-dist/fonts/vf/public/rsfso/rsfso7.vf
+share/texmf-dist/tex/latex/rsfso/rsfso.sty
+share/texmf-dist/tex/latex/rsfso/ursfso.fd

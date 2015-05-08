@@ -1,0 +1,21 @@
+The package supports a number of features of the Latin Modern
+fonts which are not easily accessible via the default (La)TeX
+support provided in the official distribution. In particular,
+the package supports the use of the various styles of digits
+available, small-caps and upright italic shapes, and
+alternative weights and widths. It also supports variable width
+typewriter and the "quotation" font. Version 2.004 of the Latin
+Modern fonts is supported. By default, the package uses
+proportional oldstyle digits and variable width typewriter but
+this can be changed by passing appropriate options to the
+package. The package also supports using (for example)
+different styles of digits within a document so it is possible
+to use proportional oldstyle digits by default, say, but
+tabular lining digits within a particular table. The package
+requires the official Latin Modern distribution, including its
+(La)TeX support. The package relies on the availability of both
+the fonts themselves and the official font support files. The
+package also makes use of the nfssext-cfr package. Only the T1
+and TS1 encodings are supported for text fonts. The set up of
+fonts for mathematics is identical to that provided by Latin
+Modern.
