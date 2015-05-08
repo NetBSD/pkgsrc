@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:38 wiz Exp $
+share/texmf-dist/fonts/source/public/dingbat/ark10.mf
+share/texmf-dist/fonts/source/public/dingbat/dingbat.mf
+share/texmf-dist/fonts/tfm/public/dingbat/ark10.tfm
+share/texmf-dist/fonts/tfm/public/dingbat/dingbat.tfm
+share/texmf-dist/tex/latex/dingbat/dingbat.sty
+share/texmf-dist/tex/latex/dingbat/uark.fd
+share/texmf-dist/tex/latex/dingbat/udingbat.fd

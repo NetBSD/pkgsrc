@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:37 wiz Exp $
+share/texmf-dist/fonts/source/public/dice/dice3d.mf
+share/texmf-dist/fonts/tfm/public/dice/dice3d.tfm

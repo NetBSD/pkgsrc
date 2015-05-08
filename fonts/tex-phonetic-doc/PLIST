@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:52 wiz Exp $
+share/texmf-dist/doc/fonts/phonetic/Doc/209/phonetic-table.tex
+share/texmf-dist/doc/fonts/phonetic/Doc/209/phonetic.sty
+share/texmf-dist/doc/fonts/phonetic/Doc/README
+share/texmf-dist/doc/fonts/phonetic/README
+share/texmf-dist/doc/fonts/phonetic/makefile
+share/texmf-dist/doc/fonts/phonetic/phonetic-table.pdf
+share/texmf-dist/doc/fonts/phonetic/phonetic-table.tex

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:51 wiz Exp $
+share/texmf-dist/doc/fonts/oldlatin/README
+share/texmf-dist/doc/fonts/oldlatin/oldlatin.pdf
+share/texmf-dist/doc/fonts/oldlatin/oldlatin.tex
+share/texmf-dist/doc/fonts/oldlatin/test_alphabet.tex
+share/texmf-dist/doc/fonts/oldlatin/test_ol_all.pdf
+share/texmf-dist/doc/fonts/oldlatin/test_ol_all.tex
+share/texmf-dist/doc/fonts/oldlatin/test_ol_bf.pdf
+share/texmf-dist/doc/fonts/oldlatin/test_ol_bf.tex
+share/texmf-dist/doc/fonts/oldlatin/test_ol_rm.pdf
+share/texmf-dist/doc/fonts/oldlatin/test_ol_rm.tex
+share/texmf-dist/doc/fonts/oldlatin/test_ol_sl.pdf
+share/texmf-dist/doc/fonts/oldlatin/test_ol_sl.tex
+share/texmf-dist/doc/fonts/oldlatin/test_ol_ss.pdf
+share/texmf-dist/doc/fonts/oldlatin/test_ol_ss.tex
+share/texmf-dist/doc/fonts/oldlatin/test_ol_tt.pdf
+share/texmf-dist/doc/fonts/oldlatin/test_ol_tt.tex

@@ -1,0 +1,5 @@
+The package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the Carlito family of sans serif fonts, designed by
+Lukasz Dziedzic of the tyPoland foundry and adopted by Google
+for ChromeOS as a font-metric compatible replacement for
+Calibri.

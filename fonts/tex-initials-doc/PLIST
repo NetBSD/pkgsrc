@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:46 wiz Exp $
+share/texmf-dist/doc/fonts/initials/Acorn.tex
+share/texmf-dist/doc/fonts/initials/AnnSton.tex
+share/texmf-dist/doc/fonts/initials/ArtNouv.tex
+share/texmf-dist/doc/fonts/initials/ArtNouvc.tex
+share/texmf-dist/doc/fonts/initials/Carrickc.tex
+share/texmf-dist/doc/fonts/initials/Eichenla.tex
+share/texmf-dist/doc/fonts/initials/Eileen.tex
+share/texmf-dist/doc/fonts/initials/EileenBl.tex
+share/texmf-dist/doc/fonts/initials/Elzevier.tex
+share/texmf-dist/doc/fonts/initials/GotIn.tex
+share/texmf-dist/doc/fonts/initials/GoudyIn.tex
+share/texmf-dist/doc/fonts/initials/Kinigcap.tex
+share/texmf-dist/doc/fonts/initials/Konanur.tex
+share/texmf-dist/doc/fonts/initials/Kramer.tex
+share/texmf-dist/doc/fonts/initials/MorrisIn.tex
+share/texmf-dist/doc/fonts/initials/Nouveaud.tex
+share/texmf-dist/doc/fonts/initials/README
+share/texmf-dist/doc/fonts/initials/Romantik.tex
+share/texmf-dist/doc/fonts/initials/Rothdn.tex
+share/texmf-dist/doc/fonts/initials/RoyalIn.tex
+share/texmf-dist/doc/fonts/initials/Sanremo.tex
+share/texmf-dist/doc/fonts/initials/Starburst.tex
+share/texmf-dist/doc/fonts/initials/Typocaps.tex
+share/texmf-dist/doc/fonts/initials/Zallman.tex

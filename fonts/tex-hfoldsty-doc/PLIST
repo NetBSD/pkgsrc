@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:45 wiz Exp $
+share/texmf-dist/doc/fonts/hfoldsty/ChangeLog
+share/texmf-dist/doc/fonts/hfoldsty/Makefile
+share/texmf-dist/doc/fonts/hfoldsty/README
+share/texmf-dist/doc/fonts/hfoldsty/TODO
+share/texmf-dist/doc/fonts/hfoldsty/gpl.txt
+share/texmf-dist/doc/fonts/hfoldsty/hfoldsty.pdf
+share/texmf-dist/doc/fonts/hfoldsty/hfoldsty.xml
+share/texmf-dist/doc/fonts/hfoldsty/test-eco-hfo.tex
+share/texmf-dist/doc/fonts/hfoldsty/test-eco.tex
+share/texmf-dist/doc/fonts/hfoldsty/test-hfo.tex

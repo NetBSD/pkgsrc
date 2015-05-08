@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/doc/fonts/wsuipa/LICENCE-wsuipa.txt
+share/texmf-dist/doc/fonts/wsuipa/README
+share/texmf-dist/doc/fonts/wsuipa/changes.dec93
+share/texmf-dist/doc/fonts/wsuipa/changes.jun91
+share/texmf-dist/doc/fonts/wsuipa/changes.mar91
+share/texmf-dist/doc/fonts/wsuipa/changes.may92
+share/texmf-dist/doc/fonts/wsuipa/changes.nov90
+share/texmf-dist/doc/fonts/wsuipa/compilefonts
+share/texmf-dist/doc/fonts/wsuipa/ipamacs.tex
+share/texmf-dist/doc/fonts/wsuipa/ipaman.ps
+share/texmf-dist/doc/fonts/wsuipa/latex209/ipalman.tex
+share/texmf-dist/doc/fonts/wsuipa/latex209/lipaman.tex
+share/texmf-dist/doc/fonts/wsuipa/latex2e/ipaman.tex
+share/texmf-dist/doc/fonts/wsuipa/text1/ipaman.tex

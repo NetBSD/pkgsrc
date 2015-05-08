@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:38 wiz Exp $
+share/texmf-dist/fonts/source/public/duerer/cdb10.mf
+share/texmf-dist/fonts/source/public/duerer/cdi10.mf
+share/texmf-dist/fonts/source/public/duerer/cdr10.mf
+share/texmf-dist/fonts/source/public/duerer/cdsl10.mf
+share/texmf-dist/fonts/source/public/duerer/cdss10.mf
+share/texmf-dist/fonts/source/public/duerer/cdtt10.mf
+share/texmf-dist/fonts/source/public/duerer/dromani.mf
+share/texmf-dist/fonts/source/public/duerer/dromanu.mf
+share/texmf-dist/fonts/source/public/duerer/dtitle.mf
+share/texmf-dist/fonts/tfm/public/duerer/cdb10.tfm
+share/texmf-dist/fonts/tfm/public/duerer/cdi10.tfm
+share/texmf-dist/fonts/tfm/public/duerer/cdr10.tfm
+share/texmf-dist/fonts/tfm/public/duerer/cdsl10.tfm
+share/texmf-dist/fonts/tfm/public/duerer/cdss10.tfm
+share/texmf-dist/fonts/tfm/public/duerer/cdtt10.tfm

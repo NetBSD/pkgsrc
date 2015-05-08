@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/fonts/source/public/barcodes/wlc11.mf
+share/texmf-dist/fonts/source/public/barcodes/wlc128.mf
+share/texmf-dist/fonts/source/public/barcodes/wlc39.mf
+share/texmf-dist/fonts/source/public/barcodes/wlc93.mf
+share/texmf-dist/fonts/source/public/barcodes/wlcr39.mf
+share/texmf-dist/fonts/source/public/barcodes/wlean.mf
+share/texmf-dist/fonts/tfm/public/barcodes/wlc11.tfm
+share/texmf-dist/fonts/tfm/public/barcodes/wlc128.tfm
+share/texmf-dist/fonts/tfm/public/barcodes/wlc39.tfm
+share/texmf-dist/fonts/tfm/public/barcodes/wlc93.tfm
+share/texmf-dist/fonts/tfm/public/barcodes/wlcr39.tfm
+share/texmf-dist/tex/latex/barcodes/barcodes.sty

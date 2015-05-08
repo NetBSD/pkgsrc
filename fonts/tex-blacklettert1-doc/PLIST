@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/doc/fonts/blacklettert1/COPYING
+share/texmf-dist/doc/fonts/blacklettert1/INSTALL
+share/texmf-dist/doc/fonts/blacklettert1/README
+share/texmf-dist/doc/fonts/blacklettert1/blacklettert1.pdf

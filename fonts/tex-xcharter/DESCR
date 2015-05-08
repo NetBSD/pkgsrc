@@ -1,0 +1,5 @@
+The package presents an extension of Bitstream Charter, which
+provides small caps, oldstyle figures and superior figures in
+all four styles, accompanied by LaTeX font support files. The
+fonts themselves are provided in both Adobe Type 1 and OTF
+formats, with supporting files as necessary.

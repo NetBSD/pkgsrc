@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:51 wiz Exp $
+share/texmf-dist/doc/fonts/obnov/README
+share/texmf-dist/doc/fonts/obnov/example_obn.pdf
+share/texmf-dist/doc/fonts/obnov/example_obn.tex

@@ -1,0 +1,4 @@
+Sans serif maths (produced by the beamer class or the sfmath
+package) often has accents positioned incorrectly. The package
+fixes the positioning of such accents when the default font
+(cmssi) is used for sans serif maths.

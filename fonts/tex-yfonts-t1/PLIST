@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/dvips/yfonts-t1/config.yfrak
+share/texmf-dist/fonts/afm/public/yfonts-t1/yfrak.afm
+share/texmf-dist/fonts/afm/public/yfonts-t1/ygoth.afm
+share/texmf-dist/fonts/afm/public/yfonts-t1/yswab.afm
+share/texmf-dist/fonts/map/dvips/yfonts-t1/yfrak.map
+share/texmf-dist/fonts/type1/public/yfonts-t1/yfrak.pfb
+share/texmf-dist/fonts/type1/public/yfonts-t1/ygoth.pfb
+share/texmf-dist/fonts/type1/public/yfonts-t1/yswab.pfb

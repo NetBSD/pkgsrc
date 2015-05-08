@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:57 wiz Exp $
+share/texmf-dist/doc/fonts/venturisadf/LICENSE-utopia.txt
+share/texmf-dist/doc/fonts/venturisadf/LIST-Venturis.txt
+share/texmf-dist/doc/fonts/venturisadf/README
+share/texmf-dist/doc/fonts/venturisadf/manifest.txt
+share/texmf-dist/doc/fonts/venturisadf/venturisadf.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturisadf.tex

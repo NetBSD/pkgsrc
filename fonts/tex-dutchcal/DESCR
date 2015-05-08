@@ -1,0 +1,5 @@
+This package reworks the mathematical calligraphic font
+ESSTIX13, adding a bold version. LaTeX support files are
+included. The new fonts may also be accessed from the most
+recent version of mathalfa. The fonts themselves are subject to
+the SIL OPEN FONT LICENSE, version 1.1.

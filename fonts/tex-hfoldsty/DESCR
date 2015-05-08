@@ -1,0 +1,6 @@
+The hfoldsty package provides virtual fonts for using oldstyle
+(0123456789) figures with the European Computer Modern fonts.
+It does a similar job as the eco package by Sebastian Kirsch
+but includes a couple of improvements, i.e., better kerning
+with guillemets, and support for character protruding using the
+pdfcprot package.

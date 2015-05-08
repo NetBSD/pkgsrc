@@ -1,0 +1,3 @@
+The package and .fd file provide support for Knuth's punk
+fonts. That bundle also offers support within LaTeX; the
+present package is to be preferred.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+share/texmf-dist/doc/fonts/newtxtt/README
+share/texmf-dist/doc/fonts/newtxtt/newtxtt-doc.pdf
+share/texmf-dist/doc/fonts/newtxtt/newtxtt-doc.tex

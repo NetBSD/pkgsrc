@@ -1,0 +1,6 @@
+The package provides the Libertine and Biolinum fonts in both
+Type 1 and OTF styles, together with support macros for their
+use. Monospaced and display fonts, and the "keyboard" set are
+also included, in OTF style, only. The mweights package is used
+to manage the selection of font weights. The package supersedes
+both the libertineotf and the libertine-legacy packages.

@@ -1,0 +1,6 @@
+These fonts represent translation to PostScript Type 1 of the
+ESSTIX fonts. ESSTIX seem to have been a precursor to the STIX
+project, and were donated by Elsevier to that project. The
+accompanying virtual fonts with customized metrics and LaTeX
+support files allow their use as calligraphic, fraktur and
+double-struck (blackboard bold) in maths mode.

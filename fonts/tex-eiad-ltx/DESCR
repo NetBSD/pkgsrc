@@ -1,0 +1,3 @@
+The package provides macros to support use of the eiad fonts in
+OT1 encoding. Also offered are a couple of Metafont files
+described in the font package, but not provided there.

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/doc/fonts/baskervaldx/COPYING
+share/texmf-dist/doc/fonts/baskervaldx/NOTICE.txt
+share/texmf-dist/doc/fonts/baskervaldx/README
+share/texmf-dist/doc/fonts/baskervaldx/baskervaldx-doc.pdf
+share/texmf-dist/doc/fonts/baskervaldx/baskervaldx-doc.tex
+share/texmf-dist/doc/fonts/baskervaldx/baskervaldxmatheg-crop.pdf

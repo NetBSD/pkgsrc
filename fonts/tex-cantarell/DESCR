@@ -1,0 +1,7 @@
+Cantarell is a contemporary Humanist sans serif designed by
+Dave Crossland and Jakub Steiner. This font, delivered under
+the OFL version 1.1, is available on the GNOME download server.
+The present package provides support for this font in LaTeX. It
+includes Type 1 versions of the fonts, converted for this
+package using FontForge from its sources, for full support with
+Dvips.

@@ -1,0 +1,6 @@
+This package allows the user to produce Braille documents on
+paper for the blind without knowing Braille (which can take
+years to learn). Python scripts grade1.py and grade2.py convert
+ordinary text to grade 1 and 2 Braille tags; then, the LaTeX
+package takes the tags and prints out corresponding Braille
+symbols.

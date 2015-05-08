@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/fonts/opentype/public/xits/xits-bold.otf
+share/texmf-dist/fonts/opentype/public/xits/xits-bolditalic.otf
+share/texmf-dist/fonts/opentype/public/xits/xits-italic.otf
+share/texmf-dist/fonts/opentype/public/xits/xits-math.otf
+share/texmf-dist/fonts/opentype/public/xits/xits-mathbold.otf
+share/texmf-dist/fonts/opentype/public/xits/xits-regular.otf

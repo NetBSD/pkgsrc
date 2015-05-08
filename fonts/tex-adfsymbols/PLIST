@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:29 wiz Exp $
+share/texmf-dist/fonts/afm/arkandis/adfsymbols/ArrowsADF.afm
+share/texmf-dist/fonts/afm/arkandis/adfsymbols/BulletsADF.afm
+share/texmf-dist/fonts/enc/dvips/adfsymbols/SymbolsADF.enc
+share/texmf-dist/fonts/map/dvips/adfsymbols/ArrowsADF.map
+share/texmf-dist/fonts/map/dvips/adfsymbols/BulletsADF.map
+share/texmf-dist/fonts/tfm/arkandis/adfsymbols/ArrowsADF.tfm
+share/texmf-dist/fonts/tfm/arkandis/adfsymbols/BulletsADF.tfm
+share/texmf-dist/fonts/type1/arkandis/adfsymbols/ArrowsADF.pfb
+share/texmf-dist/fonts/type1/arkandis/adfsymbols/BulletsADF.pfb
+share/texmf-dist/tex/latex/adfsymbols/adfarrows.sty
+share/texmf-dist/tex/latex/adfsymbols/adfbullets.sty
+share/texmf-dist/tex/latex/adfsymbols/uarrowsadf.fd
+share/texmf-dist/tex/latex/adfsymbols/ubulletsadf.fd

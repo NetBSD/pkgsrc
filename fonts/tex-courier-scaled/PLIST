@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:36 wiz Exp $
+share/texmf-dist/tex/latex/courier-scaled/8rpcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/couriers.sty
+share/texmf-dist/tex/latex/courier-scaled/il2pcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/ly1pcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/omlpcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/omspcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/ot1pcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/t5pcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/ts1pcrs.fd
+share/texmf-dist/tex/latex/courier-scaled/xl2pcrs.fd

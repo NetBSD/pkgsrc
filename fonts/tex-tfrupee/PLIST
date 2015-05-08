@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:56 wiz Exp $
+share/texmf-dist/fonts/afm/public/tfrupee/tfrupee.afm
+share/texmf-dist/fonts/map/dvips/tfrupee/tfrupee.map
+share/texmf-dist/fonts/tfm/public/tfrupee/tfrupee.tfm
+share/texmf-dist/fonts/type1/public/tfrupee/tfrupee.pfb
+share/texmf-dist/tex/latex/tfrupee/tfrupee.sty

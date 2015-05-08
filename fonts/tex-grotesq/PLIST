@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:45 wiz Exp $
+share/texmf-dist/fonts/afm/urw/grotesq/ugqb8a.afm
+share/texmf-dist/fonts/afm/urw/grotesq/ugqb8a.afm.org
+share/texmf-dist/fonts/map/dvips/grotesq/ugq.map
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqb7t.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqb8a.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqb8c.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqb8r.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqb8t.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqbo7t.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqbo8c.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqbo8r.tfm
+share/texmf-dist/fonts/tfm/urw/grotesq/ugqbo8t.tfm
+share/texmf-dist/fonts/type1/urw/grotesq/ugqb8a.pfb
+share/texmf-dist/fonts/type1/urw/grotesq/ugqb8a.pfm
+share/texmf-dist/fonts/vf/urw/grotesq/ugqb7t.vf
+share/texmf-dist/fonts/vf/urw/grotesq/ugqb8c.vf
+share/texmf-dist/fonts/vf/urw/grotesq/ugqb8t.vf
+share/texmf-dist/fonts/vf/urw/grotesq/ugqbo7t.vf
+share/texmf-dist/fonts/vf/urw/grotesq/ugqbo8c.vf
+share/texmf-dist/fonts/vf/urw/grotesq/ugqbo8t.vf
+share/texmf-dist/tex/latex/grotesq/ot1ugq.fd
+share/texmf-dist/tex/latex/grotesq/t1ugq.fd
+share/texmf-dist/tex/latex/grotesq/ts1ugq.fd

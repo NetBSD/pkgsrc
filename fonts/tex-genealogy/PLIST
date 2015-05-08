@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:43 wiz Exp $
+share/texmf-dist/fonts/source/public/genealogy/drgen.mf
+share/texmf-dist/fonts/source/public/genealogy/drgen10.mf
+share/texmf-dist/fonts/tfm/public/genealogy/drgen10.tfm

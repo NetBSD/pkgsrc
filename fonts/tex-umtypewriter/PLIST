@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:57 wiz Exp $
+share/texmf-dist/fonts/opentype/public/umtypewriter/UMTypewriter-Bold.otf
+share/texmf-dist/fonts/opentype/public/umtypewriter/UMTypewriter-BoldItalic.otf
+share/texmf-dist/fonts/opentype/public/umtypewriter/UMTypewriter-Italic.otf
+share/texmf-dist/fonts/opentype/public/umtypewriter/UMTypewriter-Oblique.otf
+share/texmf-dist/fonts/opentype/public/umtypewriter/UMTypewriter-Regular.otf

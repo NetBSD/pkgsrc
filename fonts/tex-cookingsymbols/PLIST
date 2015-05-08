@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:36 wiz Exp $
+share/texmf-dist/fonts/source/public/cookingsymbols/cookingsymbols.mf
+share/texmf-dist/fonts/tfm/public/cookingsymbols/cookingsymbols.tfm
+share/texmf-dist/tex/latex/cookingsymbols/cookingsymbols.sty

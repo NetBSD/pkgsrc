@@ -1,0 +1,3 @@
+The package contains the IPAex Fonts converted into Unicode
+subfonts in Type1 format, which is most suitable for use with
+the CJK package. Font conversion was done with ttf2pt1.

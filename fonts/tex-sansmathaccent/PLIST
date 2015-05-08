@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:54 wiz Exp $
+share/texmf-dist/fonts/map/dvips/sansmathaccent/sansmathaccent.map
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi10.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi12.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi17.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi9.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi10.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi12.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi17.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi8.tfm
+share/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi9.tfm
+share/texmf-dist/fonts/vf/public/sansmathaccent/mathkerncmssxi10.vf
+share/texmf-dist/fonts/vf/public/sansmathaccent/mathkerncmssxi12.vf
+share/texmf-dist/fonts/vf/public/sansmathaccent/mathkerncmssxi17.vf
+share/texmf-dist/fonts/vf/public/sansmathaccent/mathkerncmssxi8.vf
+share/texmf-dist/fonts/vf/public/sansmathaccent/mathkerncmssxi9.vf
+share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+share/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty

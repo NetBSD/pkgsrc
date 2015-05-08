@@ -1,0 +1,13 @@
+The package arev provides type 1 and virtual fonts, together
+with LaTeX packages for using Arev Sans in both text and
+mathematics. Arev Sans is a derivative of Bitstream Vera Sans
+created by Tavmjong Bah, adding support for Greek and Cyrillic
+characters. Bah also added a few variant letters that are more
+appropriate for mathematics. The primary purpose for using Arev
+Sans in LaTeX is presentations, particularly when using a
+computer projector. In such a context, Arev Sans is quite
+readable, with large x-height, "open letters", wide spacing,
+and thick stems. The style is very similar to the SliTeX font
+lcmss, but heavier. Arev is one of a very small number of sans-
+font mathematics support packages. Others are cmbright, hvmath
+and kerkis.

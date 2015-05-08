@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:52 wiz Exp $
+share/texmf-dist/doc/fonts/pacioli/README
+share/texmf-dist/doc/fonts/pacioli/tryfont.ps
+share/texmf-dist/doc/fonts/pacioli/tryfont.tex

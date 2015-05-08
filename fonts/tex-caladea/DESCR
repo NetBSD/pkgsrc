@@ -1,0 +1,5 @@
+This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the Caladea family of fonts, designed by Carolina
+Giovagnoli and Andres Torresi of the Huerta Tipografica foundry
+and adopted by Google for ChromeOS as a font-metric compatible
+replacement for Cambria.

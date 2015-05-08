@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:34 wiz Exp $
+share/texmf-dist/doc/fonts/carlito/Carlito-Regular.pdf
+share/texmf-dist/doc/fonts/carlito/LICENSE
+share/texmf-dist/doc/fonts/carlito/README
+share/texmf-dist/doc/fonts/carlito/samples.pdf
+share/texmf-dist/doc/fonts/carlito/samples.tex

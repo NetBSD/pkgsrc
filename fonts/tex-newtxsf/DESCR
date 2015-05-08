@@ -1,0 +1,4 @@
+The package provides a maths support that amounts to
+modifications of the STIX sans serif Roman and Greek letters
+with most symbols taken from newtxmath (which must of course be
+installed and its map file enabled).

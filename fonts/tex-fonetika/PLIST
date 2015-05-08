@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
+share/texmf-dist/fonts/afm/public/fonetika/FonetikaDaniaIwonaeBold.afm
+share/texmf-dist/fonts/afm/public/fonetika/FonetikaDaniaIwonaeRegular.afm
+share/texmf-dist/fonts/afm/public/fonetika/FonetikaDaniaPallaeBold.afm
+share/texmf-dist/fonts/afm/public/fonetika/FonetikaDaniaPallaeRegular.afm
+share/texmf-dist/fonts/map/dvips/fonetika/fonetika.map
+share/texmf-dist/fonts/tfm/public/fonetika/fonetika.tfm
+share/texmf-dist/fonts/tfm/public/fonetika/fonetikabold.tfm
+share/texmf-dist/fonts/tfm/public/fonetika/fonetikasans.tfm
+share/texmf-dist/fonts/tfm/public/fonetika/fonetikasansbold.tfm
+share/texmf-dist/fonts/truetype/public/fonetika/FonetikaDaniaIwonaeBold.ttf
+share/texmf-dist/fonts/truetype/public/fonetika/FonetikaDaniaIwonaeRegular.ttf
+share/texmf-dist/fonts/truetype/public/fonetika/FonetikaDaniaPallaeBold.ttf
+share/texmf-dist/fonts/truetype/public/fonetika/FonetikaDaniaPallaeRegular.ttf
+share/texmf-dist/fonts/type1/public/fonetika/FonetikaDaniaIwonaeBold.pfb
+share/texmf-dist/fonts/type1/public/fonetika/FonetikaDaniaIwonaeRegular.pfb
+share/texmf-dist/fonts/type1/public/fonetika/FonetikaDaniaPallaeBold.pfb
+share/texmf-dist/fonts/type1/public/fonetika/FonetikaDaniaPallaeRegular.pfb
+share/texmf-dist/tex/latex/fonetika/fonetika.sty
+share/texmf-dist/tex/latex/fonetika/t1fonetika.fd

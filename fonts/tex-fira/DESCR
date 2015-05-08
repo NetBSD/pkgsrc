@@ -1,0 +1,5 @@
+This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the Fira Sans family of fonts (version 3.111),
+designed by Erik Spiekermann and Ralph du Carrois of Carrois
+Type Design. Fira Sans is available in eleven weights with
+corresponding italics: light, regular, medium, bold, ...

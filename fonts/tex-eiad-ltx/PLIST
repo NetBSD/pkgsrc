@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:40 wiz Exp $
+share/texmf-dist/fonts/source/public/eiad-ltx/Fbf10.mf
+share/texmf-dist/fonts/source/public/eiad-ltx/Fr10.mf
+share/texmf-dist/tex/latex/eiad-ltx/eiad.sty

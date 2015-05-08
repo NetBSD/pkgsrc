@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:34 wiz Exp $
+share/texmf-dist/fonts/enc/dvips/ccicons/ccicons-u.enc
+share/texmf-dist/fonts/map/dvips/ccicons/ccicons.map
+share/texmf-dist/fonts/opentype/public/ccicons/ccicons.otf
+share/texmf-dist/fonts/tfm/public/ccicons/ccicons.tfm
+share/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb
+share/texmf-dist/tex/latex/ccicons/ccicons.sty

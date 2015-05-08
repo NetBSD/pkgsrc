@@ -1,0 +1,3 @@
+The package provides the means to typeset Creative Commons
+icons, in documents licensed under CC licences. A font (in
+Adobe Type 1 format) and LaTeX support macros are provided.

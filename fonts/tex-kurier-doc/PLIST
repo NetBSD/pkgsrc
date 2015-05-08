@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:47 wiz Exp $
+share/texmf-dist/doc/fonts/kurier/00readme.eng
+share/texmf-dist/doc/fonts/kurier/00readme.pol
+share/texmf-dist/doc/fonts/kurier/GUST-FONT-LICENSE.txt
+share/texmf-dist/doc/fonts/kurier/kurier-info-src.zip
+share/texmf-dist/doc/fonts/kurier/kurier-info.pdf
+share/texmf-dist/doc/fonts/kurier/kurier-latex-cyr.tex
+share/texmf-dist/doc/fonts/kurier/kurier-latex-math.tex
+share/texmf-dist/doc/fonts/kurier/kurier-latex-pl.tex
+share/texmf-dist/doc/fonts/kurier/kurier-latex-t2a.tex
+share/texmf-dist/doc/fonts/kurier/kurier-latex-t5.tex
+share/texmf-dist/doc/fonts/kurier/kurier-mathtest.tex
+share/texmf-dist/doc/fonts/kurier/kurier-table.tex
+share/texmf-dist/doc/fonts/kurier/manifest.txt

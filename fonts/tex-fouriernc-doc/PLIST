@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
+share/texmf-dist/doc/fonts/fouriernc/README
+share/texmf-dist/doc/fonts/fouriernc/build-fouriernc.tex
+share/texmf-dist/doc/fonts/fouriernc/mathit.mtx
+share/texmf-dist/doc/fonts/fouriernc/mathsy.mtx
+share/texmf-dist/doc/fonts/fouriernc/omlgutop.etx
+share/texmf-dist/doc/fonts/fouriernc/omsgutop.etx
+share/texmf-dist/doc/fonts/fouriernc/setxheight.mtx
+share/texmf-dist/doc/fonts/fouriernc/specialkernings.mtx
+share/texmf-dist/doc/fonts/fouriernc/specialkerningsital.mtx
+share/texmf-dist/doc/fonts/fouriernc/substitutes.zip
+share/texmf-dist/doc/fonts/fouriernc/test_fouriernc.pdf
+share/texmf-dist/doc/fonts/fouriernc/unset0.mtx
+share/texmf-dist/doc/fonts/fouriernc/unset0A.mtx
+share/texmf-dist/doc/fonts/fouriernc/unsetAlph.mtx
+share/texmf-dist/doc/fonts/fouriernc/unsetUCgreek.mtx
+share/texmf-dist/doc/fonts/fouriernc/unsetfontparams.mtx
+share/texmf-dist/doc/fonts/fouriernc/unsetmu.mtx
+share/texmf-dist/doc/fonts/fouriernc/unsetpar.mtx
+share/texmf-dist/doc/fonts/fouriernc/zrmhax.mtx
+share/texmf-dist/doc/fonts/fouriernc/zrykernx.mtx

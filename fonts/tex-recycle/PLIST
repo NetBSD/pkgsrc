@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:54 wiz Exp $
+share/texmf-dist/fonts/map/dvips/recycle/recycle.map
+share/texmf-dist/fonts/source/public/recycle/recycle.mf
+share/texmf-dist/fonts/tfm/public/recycle/recycle.tfm
+share/texmf-dist/fonts/type1/public/recycle/recycle.pfb
+share/texmf-dist/tex/latex/recycle/recycle.sty

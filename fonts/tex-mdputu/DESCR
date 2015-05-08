@@ -1,0 +1,5 @@
+The Annals of Mathematics uses italics for theorems. However,
+slanted digits and parentheses look disturbing when surrounded
+by (upright) mathematics. This package provides virtual fonts
+with italics and upright digits and punctuation, as an
+extension to Mathdesign's Utopia bundle.

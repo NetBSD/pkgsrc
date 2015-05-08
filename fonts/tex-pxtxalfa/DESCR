@@ -1,0 +1,3 @@
+The package provides virtual math alphabets based on pxfonts
+and txfonts, with LaTeX support files and adjusted metrics. The
+mathalfa package offers support for this collection.

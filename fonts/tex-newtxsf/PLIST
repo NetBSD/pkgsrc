@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+share/texmf-dist/fonts/map/dvips/newtxsf/newtxsf.map
+share/texmf-dist/fonts/tfm/public/newtxsf/ntxsfbmi.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/ntxsfbmia.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/ntxsfmi.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/ntxsfmia.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/zsfmi-bol.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/zsfmi-reg.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/zsfmia-bol.tfm
+share/texmf-dist/fonts/tfm/public/newtxsf/zsfmia-reg.tfm
+share/texmf-dist/fonts/type1/public/newtxsf/zsfmi-bol.pfb
+share/texmf-dist/fonts/type1/public/newtxsf/zsfmi-reg.pfb
+share/texmf-dist/fonts/type1/public/newtxsf/zsfmia-bol.pfb
+share/texmf-dist/fonts/type1/public/newtxsf/zsfmia-reg.pfb
+share/texmf-dist/fonts/vf/public/newtxsf/ntxsfbmi.vf
+share/texmf-dist/fonts/vf/public/newtxsf/ntxsfbmia.vf
+share/texmf-dist/fonts/vf/public/newtxsf/ntxsfmi.vf
+share/texmf-dist/fonts/vf/public/newtxsf/ntxsfmia.vf
+share/texmf-dist/tex/latex/newtxsf/newtxsf.sty
+share/texmf-dist/tex/latex/newtxsf/omlntxsfmi.fd
+share/texmf-dist/tex/latex/newtxsf/untxsfmia.fd

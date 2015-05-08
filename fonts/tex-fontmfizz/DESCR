@@ -1,0 +1,5 @@
+The MFizz font provides scalable vector icons representing
+programming languages, operating systems, software engineering,
+and technology. It can be seen as an extension to FontAwesome.
+This package requires the fontspec package and either the
+Xe(La)TeX or Lua(La)TeX engine to load the included ttf font.

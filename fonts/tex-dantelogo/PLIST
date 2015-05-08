@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:37 wiz Exp $
+share/texmf-dist/fonts/enc/dvips/dantelogo/dante.enc
+share/texmf-dist/fonts/map/dvips/dantelogo/dante.map
+share/texmf-dist/fonts/opentype/public/dantelogo/DANTE-Bold-Italic.otf
+share/texmf-dist/fonts/opentype/public/dantelogo/DANTE-Bold.otf
+share/texmf-dist/fonts/opentype/public/dantelogo/DANTE-Italic.otf
+share/texmf-dist/fonts/opentype/public/dantelogo/DANTE.otf
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Bold--texnansx--base.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Bold--texnansx.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Bold-Italic--texnansx--base.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Bold-Italic--texnansx.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Bold.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Italic--texnansx--base.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE-Italic--texnansx.tfm
+share/texmf-dist/fonts/tfm/public/dantelogo/DANTE.tfm
+share/texmf-dist/fonts/type1/public/dantelogo/DANTE-Bold-Italic.pfb
+share/texmf-dist/fonts/type1/public/dantelogo/DANTE-Bold.pfb
+share/texmf-dist/fonts/type1/public/dantelogo/DANTE-Italic.pfb
+share/texmf-dist/fonts/type1/public/dantelogo/DANTE.pfb
+share/texmf-dist/fonts/vf/public/dantelogo/DANTE-Bold--texnansx.vf
+share/texmf-dist/fonts/vf/public/dantelogo/DANTE-Bold-Italic--texnansx.vf
+share/texmf-dist/fonts/vf/public/dantelogo/DANTE-Italic--texnansx.vf
+share/texmf-dist/tex/latex/dantelogo/dantelogo.sty
+share/texmf-dist/tex/latex/dantelogo/ot1dante.fd
+share/texmf-dist/tex/latex/dantelogo/t1dante.fd

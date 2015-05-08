@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/fonts/source/public/bbding/bbding10.mf
+share/texmf-dist/fonts/tfm/public/bbding/bbding10.tfm
+share/texmf-dist/tex/latex/bbding/Uding.fd
+share/texmf-dist/tex/latex/bbding/bbding.sty

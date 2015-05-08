@@ -1,0 +1,5 @@
+The package allows (the URW clone of) Zapf Chancery to function
+as a maths alphabet, the target of \mathcal or \mathscr, with
+accents appearing where they should, and other spacing
+parameters set to reasonable (not very tight) values. This
+package supersedes the pzccal package.

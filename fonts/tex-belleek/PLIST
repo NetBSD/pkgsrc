@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/fonts/map/dvips/belleek/belleek.map
+share/texmf-dist/fonts/truetype/public/belleek/blex.ttf
+share/texmf-dist/fonts/truetype/public/belleek/blsy.ttf
+share/texmf-dist/fonts/truetype/public/belleek/rblmi.ttf
+share/texmf-dist/fonts/type1/public/belleek/blex.pfb
+share/texmf-dist/fonts/type1/public/belleek/blsy.pfb
+share/texmf-dist/fonts/type1/public/belleek/rblmi.pfb

@@ -1,0 +1,3 @@
+This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the Roboto, RobotoCondensed and RobotoSlab families
+of fonts, designed by Christian Robertson for Google.

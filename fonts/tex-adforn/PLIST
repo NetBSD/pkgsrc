@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/fonts/afm/arkandis/adforn/OrnementsADF.afm
+share/texmf-dist/fonts/enc/dvips/adforn/OrnementsADF.enc
+share/texmf-dist/fonts/map/dvips/adforn/OrnementsADF.map
+share/texmf-dist/fonts/tfm/arkandis/adforn/OrnementsADF.tfm
+share/texmf-dist/fonts/type1/arkandis/adforn/OrnementsADF.pfb
+share/texmf-dist/fonts/type1/arkandis/adforn/OrnementsADF.pfm
+share/texmf-dist/tex/latex/adforn/adforn.sty
+share/texmf-dist/tex/latex/adforn/uornementsadf.fd

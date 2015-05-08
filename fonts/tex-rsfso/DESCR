@@ -1,0 +1,5 @@
+The package provides virtual fonts and LaTeX support files for
+mathematical calligraphic fonts based on the rsfs Adobe Type 1
+fonts (which must also be present for successful installation,
+with the slant substantially reduced. The output is quite
+similar to that from the Adobe Mathematical Pi script font.

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:37 wiz Exp $
+share/texmf-dist/doc/fonts/cyklop/00readme
+share/texmf-dist/doc/fonts/cyklop/00readme-pl
+share/texmf-dist/doc/fonts/cyklop/GUST-FONT-LICENSE.txt
+share/texmf-dist/doc/fonts/cyklop/MANIFEST.txt
+share/texmf-dist/doc/fonts/cyklop/cyklop-info.pdf

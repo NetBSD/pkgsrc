@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+share/texmf-dist/dvips/brushscr/config.pbsi
+share/texmf-dist/fonts/afm/public/brushscr/BrushScriptX-Italic.afm
+share/texmf-dist/fonts/map/dvips/brushscr/pbsi.map
+share/texmf-dist/fonts/tfm/public/brushscr/pbsi.tfm
+share/texmf-dist/fonts/tfm/public/brushscr/pbsi8r.tfm
+share/texmf-dist/fonts/tfm/public/brushscr/pbsi8t.tfm
+share/texmf-dist/fonts/type1/public/brushscr/BrushScriptX-Italic.pfa
+share/texmf-dist/fonts/vf/public/brushscr/pbsi8t.vf
+share/texmf-dist/tex/latex/brushscr/pbsi.sty
+share/texmf-dist/tex/latex/brushscr/t1pbsi.fd

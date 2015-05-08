@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+share/texmf-dist/fonts/source/public/feyn/feyn.mf
+share/texmf-dist/fonts/source/public/feyn/feyn10.mf
+share/texmf-dist/fonts/source/public/feyn/feyn11.mf
+share/texmf-dist/fonts/source/public/feyn/feyn12.mf
+share/texmf-dist/fonts/source/public/feyn/feyn18.mf
+share/texmf-dist/fonts/source/public/feyn/feyn24.mf
+share/texmf-dist/fonts/source/public/feyn/feynmac.mf
+share/texmf-dist/fonts/source/public/feyn/feyntext10.mf
+share/texmf-dist/fonts/source/public/feyn/feyntext11.mf
+share/texmf-dist/fonts/source/public/feyn/feyntext12.mf
+share/texmf-dist/fonts/source/public/feyn/feyntext18.mf
+share/texmf-dist/fonts/source/public/feyn/feyntext24.mf
+share/texmf-dist/fonts/tfm/public/feyn/feyn10.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyn11.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyn12.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyn18.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyn24.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyntext10.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyntext11.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyntext12.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyntext18.tfm
+share/texmf-dist/fonts/tfm/public/feyn/feyntext24.tfm
+share/texmf-dist/tex/latex/feyn/feyn.sty

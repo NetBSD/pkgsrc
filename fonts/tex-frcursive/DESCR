@@ -1,0 +1,4 @@
+A hand-writing font in the style of the French academic
+running-hand. The font was written in Metafont and and has been
+converted to Adobe Type 1 format. LaTeX support (NFFS fd files,
+and a package) and font maps are provided.

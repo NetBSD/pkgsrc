@@ -1,0 +1,5 @@
+The Pigpen cipher package provides the font and the necessary
+wrappers (style file, etc.) in order to write Pigpen ciphers, a
+simple substitution cipher. The package provides a font
+(available both as Metafont source, and as an Adobe Type 1
+file), and macros for its use.

@@ -1,0 +1,7 @@
+Bodoni's Greek fonts in the 18th century broke, for the first
+time, with the Byzantine cursive tradition of Greek fonts. GFS
+Bodoni resurrects his work for general use. The font family
+supports both Greek and Latin letters. LaTeX support of the
+fonts is provided, offering OT1, T1 and LGR encodings. The
+fonts themselves are provided in Adobe Type 1 and OpenType
+formats.

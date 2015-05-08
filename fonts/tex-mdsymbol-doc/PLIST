@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:49 wiz Exp $
+share/texmf-dist/doc/fonts/mdsymbol/FONTLOG.txt
+share/texmf-dist/doc/fonts/mdsymbol/OFL.txt
+share/texmf-dist/doc/latex/mdsymbol/mdsymbol.pdf

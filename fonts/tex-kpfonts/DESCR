@@ -1,0 +1,15 @@
+The family contains text fonts in roman, sans-serif and
+monospaced shapes, with true small caps and old-style numbers;
+the package offers full support of the textcomp package. The
+mathematics fonts include all the AMS fonts, in both normal and
+bold weights. Each of the font types is available in two main
+versions: default and 'light'. Each version is available in
+four variants: default; oldstyle numbers; oldstyle numbers with
+old ligatures such as ct and st, and long-tailed capital Q; and
+veryoldstyle with long s. Other variants include small caps as
+default or 'large small caps', and for mathematics both upright
+and slanted shapes for Greek letters, as well as default and
+narrow versions of multiple integrals. The fonts were
+originally derived from URW Palladio (with URW's agreement)
+though the fonts are very clearly different in appearance from
+their parent.

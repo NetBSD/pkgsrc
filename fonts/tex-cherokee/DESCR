@@ -1,0 +1,11 @@
+The Cherokee script was designed in 1821 by Segwoya. The
+alphabet is essentially syllabic, only 6 characters (a e i o s
+u) correspond to Roman letters: the font encodes these to the
+corresponding roman letter. The remaining 79 characters have
+been arbitrarily encoded in the range 38-122; the cherokee
+package provides commands that map each such syllable to the
+appropriate character; for example, Segwoya himself would be
+represented \Cse\Cgwo\Cya. The font is distributed as Metafont
+source; it works very poorly in modern environments, and could
+do with expert attention (if you are interested, please contact
+the CTAN team for details).

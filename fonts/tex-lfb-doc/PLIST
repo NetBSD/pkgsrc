@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:47 wiz Exp $
+share/texmf-dist/doc/fonts/lfb/README
+share/texmf-dist/doc/fonts/lfb/example.pdf
+share/texmf-dist/doc/fonts/lfb/example.tex
+share/texmf-dist/doc/fonts/lfb/lfb.make
+share/texmf-dist/doc/fonts/lfb/lfbacc.tex

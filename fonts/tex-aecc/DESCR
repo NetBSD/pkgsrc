@@ -1,0 +1,6 @@
+The package provides a set of virtual fonts (built from the
+standard Concrete fonts) providing a set of fonts that almost
+cover the T1 encoding. The main characters missing, of those
+specified in the T1 specification are eth, thorn, and the Sami
+letter eng. Sometimes the PS (pound sterling) character is also
+missing. For the typewriter fonts, the situation is worse.

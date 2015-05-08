@@ -1,0 +1,7 @@
+The NeoHellenic style evolved in academic circles in the 19th
+and 20th century; the present font follows a cut commissioned
+from Monotype in 1927. The present version was provided by the
+Greek Font Society. The font supports both Greek and Latin
+characters, and has been adjusted to work well with the
+cmbright fonts for mathematics support. LaTeX support of the
+fonts is provided, offering OT1, T1 and LGR encodings.

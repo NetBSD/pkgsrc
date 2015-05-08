@@ -1,0 +1,4 @@
+The package provides LaTeX support for the (Indian) Rupee
+symbol font, created by TechFat. The original font has been
+converted to Adobe Type 1 format, and simple LaTeX support
+written for its use.

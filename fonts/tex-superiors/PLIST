@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:56 wiz Exp $
+share/texmf-dist/fonts/enc/dvips/superiors/sups.enc
+share/texmf-dist/fonts/map/dvips/superiors/superiors.map
+share/texmf-dist/fonts/tfm/public/superiors/libertinesups.tfm
+share/texmf-dist/fonts/type1/public/superiors/libertinesups.pfb
+share/texmf-dist/tex/latex/superiors/superiors.sty

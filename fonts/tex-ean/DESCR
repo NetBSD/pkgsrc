@@ -1,0 +1,3 @@
+Provides EAN-8 and EAN-13 forms. The package needs the ocr-b
+fonts; note that the fonts are not available under a free
+licence, as the macros are.
