@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:51 wiz Exp $
+share/texmf-dist/doc/plain/epsf-dvipdfmx/README
+share/texmf-dist/doc/plain/epsf-dvipdfmx/testepdpx.eps
+share/texmf-dist/doc/plain/epsf-dvipdfmx/testepdpx.tex

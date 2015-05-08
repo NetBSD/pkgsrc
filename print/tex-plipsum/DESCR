@@ -1,0 +1,4 @@
+The package provides a paragraph generator designed for use in
+Plain TeX documents. The paragraphs generated contain many 'f-
+groups' (ff, fl etc.) so the text can act as a test of the
+ligatures of the font in use.

@@ -1,0 +1,5 @@
+The bundle provides macros that the author uses when writing
+documentation (for example, that of the texapi and yax
+packages). The tools could be used by anyone, but there is no
+documentation, and the macros are subject to change without
+notice.

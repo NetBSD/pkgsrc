@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:54 wiz Exp $
+share/texmf-dist/tex/plain/varisize/10point.tex
+share/texmf-dist/tex/plain/varisize/10pointss.tex
+share/texmf-dist/tex/plain/varisize/11point.tex
+share/texmf-dist/tex/plain/varisize/12point.tex
+share/texmf-dist/tex/plain/varisize/14point.tex
+share/texmf-dist/tex/plain/varisize/17point.tex
+share/texmf-dist/tex/plain/varisize/20point.tex
+share/texmf-dist/tex/plain/varisize/7point.tex
+share/texmf-dist/tex/plain/varisize/8point.tex
+share/texmf-dist/tex/plain/varisize/9point.tex

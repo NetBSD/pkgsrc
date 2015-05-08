@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
+share/texmf-dist/tex/plain/js-misc/cassette.tex
+share/texmf-dist/tex/plain/js-misc/idverb.tex
+share/texmf-dist/tex/plain/js-misc/js-misc.tex
+share/texmf-dist/tex/plain/js-misc/schild.tex
+share/texmf-dist/tex/plain/js-misc/sperr.tex
+share/texmf-dist/tex/plain/js-misc/xfig.tex

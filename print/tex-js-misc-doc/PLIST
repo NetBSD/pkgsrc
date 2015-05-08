@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
+share/texmf-dist/doc/plain/js-misc/History
+share/texmf-dist/doc/plain/js-misc/INSTALL
+share/texmf-dist/doc/plain/js-misc/Imakefile
+share/texmf-dist/doc/plain/js-misc/License
+share/texmf-dist/doc/plain/js-misc/Makefile
+share/texmf-dist/doc/plain/js-misc/README
+share/texmf-dist/doc/plain/js-misc/TODO
+share/texmf-dist/doc/plain/js-misc/deutsch.doc
+share/texmf-dist/doc/plain/js-misc/deutsch.tex
+share/texmf-dist/doc/plain/js-misc/idverb.doc
+share/texmf-dist/doc/plain/js-misc/names.sty
+share/texmf-dist/doc/plain/js-misc/xfig/text-2.1-doc.tex
+share/texmf-dist/doc/plain/js-misc/xfig/text-2.1.fig
+share/texmf-dist/doc/plain/js-misc/xfig/text-2.1.latex
+share/texmf-dist/doc/plain/js-misc/xfig/text-3.1-doc.tex
+share/texmf-dist/doc/plain/js-misc/xfig/text-3.1.latex

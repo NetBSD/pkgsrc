@@ -1,0 +1,3 @@
+A series of files, each of which defines a size-change macro.
+Note that 10point.tex is by convention called by one of the
+other files, so that there's always a "way back".

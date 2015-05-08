@@ -1,0 +1,3 @@
+A highly-configurable package, with nice output and simple
+input. The macros use a radix sort mechanism so that the order
+of input is not critical.

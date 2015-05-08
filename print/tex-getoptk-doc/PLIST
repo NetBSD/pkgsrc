@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
+share/texmf-dist/doc/plain/getoptk/COPYING
+share/texmf-dist/doc/plain/getoptk/COPYING-FR
+share/texmf-dist/doc/plain/getoptk/README
+share/texmf-dist/doc/plain/getoptk/guide.pdf

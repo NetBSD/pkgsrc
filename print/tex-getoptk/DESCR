@@ -1,0 +1,5 @@
+The package provides a means of defining macros whose options
+are taken from a dictionary, which includes options which
+themselves have arguments. The package was designed for use
+with Plain TeX; its syntax derives from that of the \hbox,
+\hrule, etc., TeX primitives.
