@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2164 2015/05/08 06:55:38 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2165 2015/05/08 06:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/editline to 3.1.20150325 [ryoon 2015-05-07]
 	Added print/tex4ht version 0.0.20120725.1936 [wiz 2015-05-08]
 	Added print/tex-tex4ht version 2014 [wiz 2015-05-08]
+	Added print/tex-tex4ht-doc version 2014 [wiz 2015-05-08]
