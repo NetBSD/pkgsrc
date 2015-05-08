@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/12/12 10:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.20.20.1 2015/05/08 07:59:16 hiramatsu Exp $
 #
 
 DISTNAME=	tavrasm
@@ -19,7 +19,6 @@ MAKE_FILE=	makefile
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-ONLY_FOR_COMPILER=	gcc
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
