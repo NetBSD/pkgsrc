@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2099 2015/05/08 15:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2100 2015/05/08 15:09:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1489,6 +1489,7 @@ SUBDIR+=	p5-constant-def
 SUBDIR+=	p5-enum
 SUBDIR+=	p5-ex-lib
 SUBDIR+=	p5-experimental
+SUBDIR+=	p5-forks
 SUBDIR+=	p5-gettext
 SUBDIR+=	p5-glib2
 SUBDIR+=	p5-indirect
