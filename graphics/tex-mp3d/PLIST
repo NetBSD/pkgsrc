@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:41 wiz Exp $
+share/texmf-dist/metapost/mp3d/3d.mp
+share/texmf-dist/metapost/mp3d/3danim.mp
+share/texmf-dist/metapost/mp3d/3dgeom.mp
+share/texmf-dist/metapost/mp3d/3dpoly.mp
+share/texmf-dist/metapost/mp3d/3dutil.mp
+share/texmf-dist/metapost/mp3d/animpoly.mp

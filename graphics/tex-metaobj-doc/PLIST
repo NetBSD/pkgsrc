@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:40 wiz Exp $
+share/texmf-dist/doc/metapost/metaobj/README
+share/texmf-dist/doc/metapost/metaobj/license.txt
+share/texmf-dist/doc/metapost/metaobj/momanual.pdf
