@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.71 2014/05/31 21:08:50 asau Exp $ -->
+<!-- $NetBSD: build.xml,v 1.72 2015/05/08 20:26:19 bsiegert Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -924,6 +924,26 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       </varlistentry>
 
       <varlistentry>
+	<term>install-clean</term>
+
+	<listitem>
+	  <para>This target removes the state files for the "install" and later
+	  phases so that the "install" target may be re-invoked. This can be
+	  used after editing the PLIST to install the package without
+	  rebuilding it.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>build-clean</term>
+
+	<listitem>
+	  <para>This target removes the state files for the "build" and later
+	  phases so that the "build" target may be re-invoked.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
 	<term>update</term>
 
 	<listitem>
@@ -1249,6 +1269,24 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  the current package's <varname>DEPENDS</varname>. Useful
 	  if out of date dependencies are causing build
 	  problems.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>print-build-depends-list</term>
+
+	<listitem>
+	  <para>This target shows the list of packages that the current package
+	    depends on for building.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>print-run-depends-list</term>
+
+	<listitem>
+	  <para>This target shows the list of packages that the current package
+	    depends on for running.</para>
 	</listitem>
       </varlistentry>
 
