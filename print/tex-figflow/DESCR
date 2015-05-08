@@ -1,0 +1,7 @@
+Provides a Plain TeX macro \figflow that allows one to insert a
+figure into an area inset into a paragraph. Command arguments
+are width and height of the figure, and the figure (and its
+caption) itself. Usage details are to be found in the TeX file
+itself. The package does not work with LaTeX; packages such as
+wrapfig, floatflt and picins support the needs of LaTeX users
+in this area.

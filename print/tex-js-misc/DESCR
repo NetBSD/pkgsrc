@@ -1,0 +1,3 @@
+A bunch of packages, including: idverb.tex, for 'short
+verbatim'; xfig.tex, for including xfig/transfig output in a
+TeX document; and cassette.tex for setting cassette labels.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:54 wiz Exp $
+share/texmf-dist/doc/plain/treetex/epodd.tex
+share/texmf-dist/doc/plain/treetex/readme
+share/texmf-dist/doc/plain/treetex/tree_doc.tex

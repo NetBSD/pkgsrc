@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:53 wiz Exp $
+share/texmf-dist/doc/plain/plipsum/README
+share/texmf-dist/doc/plain/plipsum/compile.sh
+share/texmf-dist/doc/plain/plipsum/plipsum-doc.pdf
+share/texmf-dist/doc/plain/plipsum/plipsum.nw
+share/texmf-dist/doc/plain/plipsum/pliptest.tex
+share/texmf-dist/doc/plain/plipsum/stripc
