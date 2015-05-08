@@ -1,0 +1,7 @@
+The font contains a single character: the Begriffsschrift
+quantifier (in several sizes), as used to set the
+Begriffsschrift (concept notation) of Frege. The font is not
+intended for end users; instead it is expected that it will be
+used by other packages which implement the Begriffsschrift. An
+(unofficial) modified version of Josh Parsons' begriff is
+included as an example of implementation.

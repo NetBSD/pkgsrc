@@ -1,0 +1,3 @@
+The font (defined in Metafont) defines a single character, a
+black solid skull. A package is supplied to make this character
+available as a symbol in maths mode.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:43 wiz Exp $
+share/texmf-dist/doc/fonts/frcursive/COPYING
+share/texmf-dist/doc/fonts/frcursive/README
+share/texmf-dist/doc/fonts/frcursive/frcursive.pdf

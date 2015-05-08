@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+share/texmf-dist/doc/latex/braille/README
+share/texmf-dist/doc/latex/braille/braille.html
+share/texmf-dist/doc/latex/braille/braillegif1.gif
+share/texmf-dist/doc/latex/braille/braillegif2.gif
+share/texmf-dist/doc/latex/braille/grade1.py
+share/texmf-dist/doc/latex/braille/grade2.py
+share/texmf-dist/doc/latex/braille/summary.pdf
+share/texmf-dist/doc/latex/braille/summary.tex

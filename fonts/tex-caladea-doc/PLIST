@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:59 wiz Exp $
+share/texmf-dist/doc/fonts/caladea/Caladea-Regular.pdf
+share/texmf-dist/doc/fonts/caladea/LICENSE-2.0
+share/texmf-dist/doc/fonts/caladea/README
+share/texmf-dist/doc/fonts/caladea/samples.pdf
+share/texmf-dist/doc/fonts/caladea/samples.tex

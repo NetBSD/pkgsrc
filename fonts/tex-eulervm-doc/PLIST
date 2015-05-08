@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+share/texmf-dist/doc/latex/eulervm/README.eulervm
+share/texmf-dist/doc/latex/eulervm/eulervm.pdf
+share/texmf-dist/doc/latex/eulervm/manifest.txt

@@ -1,0 +1,5 @@
+XITS is a Times-like font for scientific typesetting with
+proper mathematical support for modern, Unicode and OpenType
+capable TeX engines, namely LuaTeX and XeTeX. For use with
+LuaLaTeX or XeLaTeX, support is available from the fontspec and
+unicode-math packages.

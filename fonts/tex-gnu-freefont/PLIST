@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:44 wiz Exp $
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeMono.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeMonoBold.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeMonoBoldOblique.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeMonoOblique.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSans.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSansBold.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSansBoldOblique.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSansOblique.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSerif.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSerifBold.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSerifBoldItalic.otf
+share/texmf-dist/fonts/opentype/public/gnu-freefont/FreeSerifItalic.otf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeMono.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeMonoBold.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeMonoBoldOblique.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeMonoOblique.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSans.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSansBold.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSansBoldOblique.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSansOblique.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSerif.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSerifBold.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSerifBoldItalic.ttf
+share/texmf-dist/fonts/truetype/public/gnu-freefont/FreeSerifItalic.ttf

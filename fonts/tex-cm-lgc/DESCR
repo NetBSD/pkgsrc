@@ -1,0 +1,10 @@
+The fonts are converted from Metafont sources of the Computer
+Modern font families, using textrace. Supported encodings are:
+T1 (Latin), T2A (Cyrillic), LGR (Greek) and TS1. The package
+also includes Unicode virtual fonts for use with Omega. The
+font set is not a replacement for any of the other Computer
+Modern-based font sets (for example, cm-super for Latin and
+Cyrillic, or cbgreek for Greek), since it is available at a
+single size only; it offers a compact set for 'general'
+working. The fonts themselves are encoded to external
+standards, and virtual fonts are provided for use with TeX.

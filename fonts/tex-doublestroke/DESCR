@@ -1,0 +1,7 @@
+A font based on Computer Modern Roman useful for typesetting
+the mathematical symbols for the natural numbers (N), whole
+numbers (Z), rational numbers (Q), real numbers (R) and complex
+numbers (C); coverage includes all Roman capital letters, '1',
+'h' and 'k'. The font is available both as Metafont source and
+in Adobe Type 1 format, and LaTeX macros for its use are
+provided. The fonts appear in the blackboard bold sampler.

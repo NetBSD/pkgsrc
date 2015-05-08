@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:55 wiz Exp $
+share/texmf-dist/doc/fonts/starfont/COPYING
+share/texmf-dist/doc/fonts/starfont/Makefile
+share/texmf-dist/doc/fonts/starfont/README
+share/texmf-dist/doc/fonts/starfont/STRFNSAN.TTF
+share/texmf-dist/doc/fonts/starfont/STRFNSER.TTF
+share/texmf-dist/doc/fonts/starfont/starfont.pdf
+share/texmf-dist/doc/fonts/starfont/starfont.tex
+share/texmf-dist/doc/fonts/starfont/table.pdf
