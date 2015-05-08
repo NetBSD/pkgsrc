@@ -1,0 +1,3 @@
+Acme::Damn provides a single routine, damn(), which takes a blessed
+reference (a Perl object), and *unblesses* it, to return the original
+reference.
