@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+share/texmf-dist/doc/fonts/newtxsf/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/newtxsf/OFL.txt
+share/texmf-dist/doc/fonts/newtxsf/README
+share/texmf-dist/doc/fonts/newtxsf/newtxsf-doc.pdf
+share/texmf-dist/doc/fonts/newtxsf/newtxsf-doc.tex

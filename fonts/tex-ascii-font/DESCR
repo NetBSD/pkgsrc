@@ -1,0 +1,5 @@
+The package provides glyph and font access commands so that
+LaTeX users can use the ASCII glyphs in their documents. The
+ASCII font is encoded according to the IBM PC Code Page 437 C0
+Graphics. This package replaces any early LaTeX 2.09 package
+and "font" by R. Ramasubramanian and R.W.D. Nickalls.

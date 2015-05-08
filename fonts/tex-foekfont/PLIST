@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
+share/texmf-dist/fonts/map/dvips/foekfont/foekfont.map
+share/texmf-dist/fonts/tfm/public/foekfont/foekfont.tfm
+share/texmf-dist/fonts/type1/public/foekfont/FoekFont.pfb
+share/texmf-dist/tex/latex/foekfont/foekfont.sty
+share/texmf-dist/tex/latex/foekfont/ot1foekfont.fd
+share/texmf-dist/tex/latex/foekfont/t1foekfont.fd

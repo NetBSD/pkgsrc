@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:34 wiz Exp $
+share/texmf-dist/doc/fonts/cfr-lm/README
+share/texmf-dist/doc/fonts/cfr-lm/cfr-lm.pdf
+share/texmf-dist/doc/fonts/cfr-lm/cfr-lm.tex
+share/texmf-dist/doc/fonts/cfr-lm/clm-test.pdf
+share/texmf-dist/doc/fonts/cfr-lm/clm-test.tex
+share/texmf-dist/doc/fonts/cfr-lm/manifest.txt

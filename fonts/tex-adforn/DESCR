@@ -1,0 +1,5 @@
+The bundle provides the Ornements ADF font in PostScript type 1
+format with TeX/LaTeX support files. The font is licensed under
+GPL v2 or later with font exception. (See NOTICE, COPYING,
+README.) The TeX/LaTeX support is licensed under LPPL. (See
+README, manifest.txt.)

@@ -1,0 +1,5 @@
+A simple compilation of the genealogical symbols found in the
+wasy and gen fonts, adding the male and female symbols to
+Knuth's 'gen' font, and so avoiding loading two fonts when you
+need only genealogical symbols. The font is distributed as
+Metafont source.

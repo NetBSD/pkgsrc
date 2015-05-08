@@ -1,0 +1,6 @@
+Serif and sans serif complete text font families, in both Adobe
+Type 1 and OpenType formats for publication. The family is
+based on Utopia family, and has been modified and developed by
+the Arkandis Digital foundry. Support for using the fonts, in
+LaTeX, is also provided (and makes use of the nfssext-cfr
+package).

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:56 wiz Exp $
+share/texmf-dist/doc/latex/tengwarscript/COPYING
+share/texmf-dist/doc/latex/tengwarscript/README
+share/texmf-dist/doc/latex/tengwarscript/install-tengwar-scripts.sh
+share/texmf-dist/doc/latex/tengwarscript/quetta.eps
+share/texmf-dist/doc/latex/tengwarscript/quetta.pdf
+share/texmf-dist/doc/latex/tengwarscript/tengfonts.pdf
+share/texmf-dist/doc/latex/tengwarscript/tengfonts.tex
+share/texmf-dist/doc/latex/tengwarscript/tengtest.pdf
+share/texmf-dist/doc/latex/tengwarscript/tengtest.tex
+share/texmf-dist/doc/latex/tengwarscript/tengwarscript.pdf

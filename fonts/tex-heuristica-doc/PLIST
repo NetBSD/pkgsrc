@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:45 wiz Exp $
+share/texmf-dist/doc/fonts/heuristica/FontLog.txt
+share/texmf-dist/doc/fonts/heuristica/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/heuristica/OFL.txt
+share/texmf-dist/doc/fonts/heuristica/README
+share/texmf-dist/doc/fonts/heuristica/heuristica-doc.pdf
+share/texmf-dist/doc/fonts/heuristica/heuristica-doc.tex

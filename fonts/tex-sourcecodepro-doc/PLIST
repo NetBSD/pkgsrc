@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:55 wiz Exp $
+share/texmf-dist/doc/latex/sourcecodepro/LICENSE.txt
+share/texmf-dist/doc/latex/sourcecodepro/sourcecodepro-otf-specimen.pdf
+share/texmf-dist/doc/latex/sourcecodepro/sourcecodepro-otf-specimen.tex
+share/texmf-dist/doc/latex/sourcecodepro/sourcecodepro-type1-specimen.pdf
+share/texmf-dist/doc/latex/sourcecodepro/sourcecodepro-type1-specimen.tex
+share/texmf-dist/doc/latex/sourcecodepro/sourcecodepro.pdf
+share/texmf-dist/doc/latex/sourcecodepro/sourcecodepro.tex

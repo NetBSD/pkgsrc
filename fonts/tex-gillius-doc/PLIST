@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:44 wiz Exp $
+share/texmf-dist/doc/fonts/gillius/COPYING
+share/texmf-dist/doc/fonts/gillius/Gillius-cat.pdf
+share/texmf-dist/doc/fonts/gillius/README
+share/texmf-dist/doc/fonts/gillius/gillius-samples.pdf
+share/texmf-dist/doc/fonts/gillius/gillius-samples.tex
+share/texmf-dist/doc/fonts/gillius/gillius2-samples.pdf
+share/texmf-dist/doc/fonts/gillius/gillius2-samples.tex
