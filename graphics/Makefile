@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.704 2015/05/05 14:40:55 wiz Exp $
+# $NetBSD: Makefile,v 1.705 2015/05/08 13:17:37 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -484,6 +484,8 @@ SUBDIR+=	tex-graphics-pln
 SUBDIR+=	tex-graphics-pln-doc
 SUBDIR+=	tex-metapost
 SUBDIR+=	tex-metapost-doc
+SUBDIR+=	tex-mfpic
+SUBDIR+=	tex-mfpic-doc
 SUBDIR+=	tex-mptopdf
 SUBDIR+=	tex-mptopdf-doc
 SUBDIR+=	tex-pdfcrop
