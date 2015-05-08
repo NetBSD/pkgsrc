@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/08 13:24:18 wiz Exp $
 
 DISTNAME=	collection-metapost
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -35,7 +35,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend metaplot
 DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
 # depend metauml
-# depend mfpic
+DEPENDS+=	tex-mfpic-[0-9]*:../../graphics/tex-mfpic
 # depend mfpic4ode
 # depend mp3d
 # depend mpcolornames
