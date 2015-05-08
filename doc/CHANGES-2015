@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2163 2015/05/08 06:55:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2164 2015/05/08 06:55:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3469,3 +3469,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mariadb55-server to 5.5.43 [fhajny 2015-05-07]
 	Updated devel/editline to 3.1.20150325 [ryoon 2015-05-07]
 	Added print/tex4ht version 0.0.20120725.1936 [wiz 2015-05-08]
+	Added print/tex-tex4ht version 2014 [wiz 2015-05-08]
