@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2174 2015/05/08 13:17:38 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2175 2015/05/08 13:21:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3867,3 +3867,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-savage to 2.3.8 [wiz 2015-05-08]
 	Added graphics/tex-mfpic version 1.10 [wiz 2015-05-08]
 	Added graphics/tex-mfpic-doc version 1.10 [wiz 2015-05-08]
+	Updated print/teTeX3-texmf to 3.0nb54 [wiz 2015-05-08]
