@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:41 wiz Exp $
+share/texmf-dist/doc/metapost/mpcolornames/CHANGES
+share/texmf-dist/doc/metapost/mpcolornames/LICENSE
+share/texmf-dist/doc/metapost/mpcolornames/README
+share/texmf-dist/doc/metapost/mpcolornames/expl-array-index.mp
+share/texmf-dist/doc/metapost/mpcolornames/fig-clash-svg-dvips.mp
+share/texmf-dist/doc/metapost/mpcolornames/mpcolornames.pdf
+share/texmf-dist/doc/metapost/mpcolornames/mpcolornames.tex
+share/texmf-dist/doc/metapost/mpcolornames/proof-mpcolornames.mp
+share/texmf-dist/doc/metapost/mpcolornames/proof-spec-dvipsnam-def.mp
+share/texmf-dist/doc/metapost/mpcolornames/proof-spec-plain-mp.mp
+share/texmf-dist/doc/metapost/mpcolornames/proof-spec-svgnam-def.mp
+share/texmf-dist/doc/metapost/mpcolornames/proof-spec-x11nam-def.mp
+share/texmf-dist/doc/metapost/mpcolornames/proof-spec-xcolor-sty.mp
+share/texmf-dist/doc/metapost/mpcolornames/tab-clash-svg-dvips.tex
+share/texmf-dist/doc/metapost/mpcolornames/tab-spec-dvipsnam-def.tex
+share/texmf-dist/doc/metapost/mpcolornames/tab-spec-plain-mp.tex
+share/texmf-dist/doc/metapost/mpcolornames/tab-spec-svgnam-def.tex
+share/texmf-dist/doc/metapost/mpcolornames/tab-spec-x11nam-def.tex
+share/texmf-dist/doc/metapost/mpcolornames/tab-spec-xcolor-sty.tex
