@@ -1,0 +1,5 @@
+The BrushScript font simulates hand-written characters; it is
+distributed in Adobe Type 1 format (but is available in italic
+shape only). The package includes the files needed by LaTeX in
+order to use that font. The file AAA_readme.tex fully describes
+the package and sample.tex illustrates its use.

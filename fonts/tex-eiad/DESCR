@@ -1,0 +1,8 @@
+In both lower and upper case 32 letters are defined (18 'plain'
+ones, 5 long vowels and 9 aspirated consonants). The ligature
+'agus' is also made available. The remaining characters
+(digits, punctuation and accents) are inherited from the
+Computer Modern family of fonts. The font definitions use code
+from the sauter fonts, so those fonts have to be installed
+before using eiad. OT1*.fd files are provided for use with
+LaTeX.

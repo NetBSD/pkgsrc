@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:47 wiz Exp $
+share/texmf-dist/fonts/source/public/knuthotherfonts/committee/font1.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/committee/font1base.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/halftone/aphalf.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/halftone/ddhalf.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/halftone/ddralf.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/halftone/halftone.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/halftone/imhalf.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/halftone/imralf.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/mfbook/logobase.mf
+share/texmf-dist/fonts/source/public/knuthotherfonts/mfbook/metafon.mf

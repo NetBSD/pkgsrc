@@ -1,0 +1,8 @@
+The package offers LaTeX support for the fonts PT Sans, PT
+Serif and PT Mono developed by ParaType for the project "Public
+Types of Russian Federation", and released under an open user
+license. The fonts themselves are provided in both the TrueType
+and Type 1 formats, both created by ParaType). The fonts
+provide encodings OT1, T1, IL2, TS1, T2* and X2. The package
+provides a convenient replacement of the two packages ptsans
+and ptserif.

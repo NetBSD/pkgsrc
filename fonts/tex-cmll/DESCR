@@ -1,0 +1,6 @@
+This is a very small font set that contain some symbols useful
+in linear logic, which are apparently not available elsewhere.
+Variants are included for use with Computer Modern serif and
+sans-serif and with the AMS Euler series. The font is provided
+both as Metafont source, and in Adobe Type 1 format. LaTeX
+support is provided. format.

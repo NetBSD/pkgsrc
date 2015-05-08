@@ -1,0 +1,4 @@
+Write vectors using an arrow which is different to the Computer
+Modern one. You have the choice between several kinds of
+arrows. The package consists of the relevant Metafont code and
+a package to use it.

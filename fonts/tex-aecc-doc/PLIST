@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:29 wiz Exp $
+share/texmf-dist/doc/fonts/aecc/COPYING
+share/texmf-dist/doc/fonts/aecc/MANIFEST
+share/texmf-dist/doc/fonts/aecc/README
+share/texmf-dist/doc/fonts/aecc/aeccfonts.tex
+share/texmf-dist/doc/fonts/aecc/aefonts.mtx
+share/texmf-dist/doc/fonts/aecc/aehax5.mtx
+share/texmf-dist/doc/fonts/aecc/aehaxit.mtx
+share/texmf-dist/doc/fonts/aecc/aehaxrm.mtx
+share/texmf-dist/doc/fonts/aecc/aehaxsc.mtx
+share/texmf-dist/doc/fonts/aecc/aehaxsl.mtx
+share/texmf-dist/doc/fonts/aecc/aehaxss.mtx
+share/texmf-dist/doc/fonts/aecc/aelatin.mtx
+share/texmf-dist/doc/fonts/aecc/aelatint.mtx
+share/texmf-dist/doc/fonts/aecc/aesample.tex
+share/texmf-dist/doc/fonts/aecc/aet1.etx
+share/texmf-dist/doc/fonts/aecc/bxittest.tex
+share/texmf-dist/doc/fonts/aecc/clean
+share/texmf-dist/doc/fonts/aecc/germtest.tex
+share/texmf-dist/doc/fonts/aecc/go
+share/texmf-dist/doc/fonts/aecc/install
+share/texmf-dist/doc/fonts/aecc/makepl
+share/texmf-dist/doc/fonts/aecc/ot1tt.etx
+share/texmf-dist/doc/fonts/aecc/slitest.tex

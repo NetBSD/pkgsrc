@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:49 wiz Exp $
+share/texmf-dist/fonts/map/dvips/mathabx-type1/mathabx.map
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathastrotest10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb12.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb5.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb6.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb7.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb8.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathb9.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathc10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathu10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathux10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx12.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx5.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx6.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx7.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx8.pfb
+share/texmf-dist/fonts/type1/public/mathabx-type1/mathx9.pfb

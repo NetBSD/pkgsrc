@@ -1,0 +1,4 @@
+The package contains OCR-B fonts in Type1 and OpenType formats.
+They were generated from the Metafont sources of the OCR-B
+fonts. The metric files are not included here, so that original
+ocr-b package should also be installed.

@@ -1,0 +1,5 @@
+The package contains a number of PostScript fonts derived from
+the STIX OpenType fonts, that may be used in maths mode in
+regular and bold weights for calligraphic, fraktur and double-
+struck alphabets. Virtual fonts with metrics suitable for maths
+mode are provided, as are LaTeX support files.

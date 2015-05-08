@@ -1,0 +1,22 @@
+Arabic-Latin Modern Fixed is an extension of TeX-Gyre Latin
+Modern Mono 10 Regular. Every glyph and opentype feature of the
+Latin Modern Mono has been retained, with minor improvements.
+On the other hand, we have changed the vertical metrics of the
+font. Although the Arabic script is designed to use the same x-
+size as Latin Modern Mono, the former script needs greater
+ascender and descender space. Every Arabic glyph in each
+Unicode-code block is supported (up to Unicode 7.0): Arabic,
+Arabic Supplement, Arabic Extended, Arabic Presentation-Forms
+A, and Arabic Presentation-Forms B. There are two versions of
+the font: otf and ttf. The opentype version is for print
+applications (and usually the default for TeX). The TrueType
+version is for on-screen applications such as text editors.
+Hinting in the ttf version is much better for on-screen, at
+least on Microsoft Windows. The most unique feature of Arabic-
+Latin Modern is in its treatment of vowels and diacritics. Each
+vowel and diacritic (ALM Fixed contains a total of 68 such
+glyphs) can now be edited horizontally within any text editor
+or processor. The author believes this is the very first
+opentype Arabic font ever to have this capability. Editing
+complex Arabic texts will now be much easier to input and to
+proofread.

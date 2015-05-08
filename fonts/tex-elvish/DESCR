@@ -1,0 +1,3 @@
+The bundle provides fonts for Cirth (cirth.mf, etc.) and for
+Tengwar (teng10.mf). The Tengwar fonts are supported by macros
+in teng.tex, or by the (better documented) tengtex package.

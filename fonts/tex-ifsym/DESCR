@@ -1,0 +1,6 @@
+A set of symbol fonts, written in Metafont, offering
+(respectively) clock-face symbols, geometrical symbols, weather
+symbols, mountaineering symbols, electronic circuit symbols and
+a set of miscellaneous symbols. A LaTeX package is provided,
+that allows the user to load only those symbols needed in a
+document.

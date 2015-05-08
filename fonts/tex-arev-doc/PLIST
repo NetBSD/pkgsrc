@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:30 wiz Exp $
+share/texmf-dist/doc/fonts/arev/ArevSansLicense.txt
+share/texmf-dist/doc/fonts/arev/BitstreamVeraLicense.txt
+share/texmf-dist/doc/fonts/arev/ChangeLog
+share/texmf-dist/doc/fonts/arev/GPLv2.txt
+share/texmf-dist/doc/fonts/arev/LPPLv1-3a.txt
+share/texmf-dist/doc/fonts/arev/Makefile
+share/texmf-dist/doc/fonts/arev/README
+share/texmf-dist/doc/fonts/arev/arevdoc.lyx
+share/texmf-dist/doc/fonts/arev/arevdoc.pdf
+share/texmf-dist/doc/fonts/arev/arevdoc.tex
+share/texmf-dist/doc/fonts/arev/fontsample.tex
+share/texmf-dist/doc/fonts/arev/mathtesty.pdf
+share/texmf-dist/doc/fonts/arev/mathtesty.tex
+share/texmf-dist/doc/fonts/arev/prosper-arev.tex
+share/texmf-dist/doc/fonts/arev/prosper-cmbright.tex
+share/texmf-dist/doc/fonts/arev/prosper-cmss.tex
+share/texmf-dist/doc/fonts/arev/prosper-header.tex
+share/texmf-dist/doc/fonts/arev/prosper-helvetica.tex
+share/texmf-dist/doc/fonts/arev/prosper-kerkis.tex
+share/texmf-dist/doc/fonts/arev/prosper-lcmss.tex
+share/texmf-dist/doc/fonts/arev/prosper-text.tex

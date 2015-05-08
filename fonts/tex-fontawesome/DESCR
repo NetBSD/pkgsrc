@@ -1,0 +1,3 @@
+The package offers access to the large number of web-related
+icons provided by the included font. The package requires the
+package, fontspec, running under XeTeX or LuaTeX.

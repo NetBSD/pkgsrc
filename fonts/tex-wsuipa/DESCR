@@ -1,0 +1,3 @@
+The package provides a 7-bit IPA font, as Metafont source, and
+macros for support under TeXt1 and LaTeX. The fonts (and
+macros) are now largely superseded by the tipa fonts.

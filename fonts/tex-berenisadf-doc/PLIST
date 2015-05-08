@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/doc/fonts/berenisadf/COPYING
+share/texmf-dist/doc/fonts/berenisadf/COPYING.unix
+share/texmf-dist/doc/fonts/berenisadf/Makefile.source
+share/texmf-dist/doc/fonts/berenisadf/NOTICE.txt
+share/texmf-dist/doc/fonts/berenisadf/README.doc
+share/texmf-dist/doc/fonts/berenisadf/berenisadf.pdf
+share/texmf-dist/doc/fonts/berenisadf/berenisadf.tex
+share/texmf-dist/doc/fonts/berenisadf/cfr.gwneud.cyhoeddus
+share/texmf-dist/doc/fonts/berenisadf/ff-ybd.pe
+share/texmf-dist/doc/fonts/berenisadf/manifest.txt
+share/texmf-dist/doc/fonts/berenisadf/ybd-8t.lig
+share/texmf-dist/doc/fonts/berenisadf/ybd-8y.lig
+share/texmf-dist/doc/fonts/berenisadf/ybd.nam

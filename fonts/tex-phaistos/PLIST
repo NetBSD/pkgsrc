@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:52 wiz Exp $
+share/texmf-dist/fonts/afm/public/phaistos/phaistos.afm
+share/texmf-dist/fonts/map/dvips/phaistos/phaistos.map
+share/texmf-dist/fonts/opentype/public/phaistos/Phaistos.otf
+share/texmf-dist/fonts/tfm/public/phaistos/phaistos.tfm
+share/texmf-dist/fonts/type1/public/phaistos/phaistos.pfb
+share/texmf-dist/tex/latex/phaistos/phaistos.sty

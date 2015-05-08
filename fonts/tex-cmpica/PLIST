@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:36 wiz Exp $
+share/texmf-dist/fonts/source/public/cmpica/cmpica.mf
+share/texmf-dist/fonts/source/public/cmpica/cmpicab.mf
+share/texmf-dist/fonts/source/public/cmpica/cmpicati.mf
+share/texmf-dist/fonts/source/public/cmpica/pcpunct.mf
+share/texmf-dist/fonts/source/public/cmpica/pica.mf
+share/texmf-dist/fonts/tfm/public/cmpica/cmpica.tfm
+share/texmf-dist/fonts/tfm/public/cmpica/cmpicab.tfm
+share/texmf-dist/fonts/tfm/public/cmpica/cmpicati.tfm

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
+share/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf
+share/texmf-dist/tex/latex/fontawesome/fontawesome.sty
