@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2015/05/08 08:35:01 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2015/05/08 11:36:07 wiz Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
@@ -164,7 +164,7 @@ DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
 DEPENDS+=	tex-nomencl-[0-9]*:../../print/tex-nomencl
 DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
 DEPENDS+=	tex-ntheorem-[0-9]*:../../print/tex-ntheorem
-DEPENDS+=	tex-ocherokee-[0-9]*:../../print/tex-ocherokee
+DEPENDS+=	tex-ocherokee-[0-9]*:../../fonts/tex-ocherokee
 DEPENDS+=	tex-oinuit-[0-9]*:../../print/tex-oinuit
 DEPENDS+=	tex-omega-[0-9]*:../../print/tex-omega
 DEPENDS+=	tex-otibet-[0-9]*:../../print/tex-otibet
