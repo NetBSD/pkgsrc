@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2178 2015/05/08 15:01:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2179 2015/05/08 15:09:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3975,3 +3975,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-xii-doc version 2014 [wiz 2015-05-08]
 	Updated meta-pkgs/texlive-collection-plainextra to 2014 [wiz 2015-05-08]
 	Added devel/p5-Acme-Damn version 0.06 [wiz 2015-05-08]
+	Added devel/p5-forks version 0.36 [wiz 2015-05-08]
