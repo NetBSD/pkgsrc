@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:41 wiz Exp $
+share/texmf-dist/doc/metapost/piechartmp/INSTALL
+share/texmf-dist/doc/metapost/piechartmp/LEGAL
+share/texmf-dist/doc/metapost/piechartmp/README
+share/texmf-dist/doc/metapost/piechartmp/README.TEXLIVE
+share/texmf-dist/doc/metapost/piechartmp/examples/wec-mfun.mp
+share/texmf-dist/doc/metapost/piechartmp/examples/wec-mfun.pdf
+share/texmf-dist/doc/metapost/piechartmp/examples/wec.mp
+share/texmf-dist/doc/metapost/piechartmp/examples/wec.pdf
+share/texmf-dist/doc/metapost/piechartmp/examples/worldmap.jpg

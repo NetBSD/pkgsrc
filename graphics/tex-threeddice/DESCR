@@ -1,0 +1,4 @@
+The package provides MetaPost code to create all possible
+symmetrical views (up to rotation) of a right-handed die.
+Configuration is possible by editing the source code, following
+the guidance in the documentation.

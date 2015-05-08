@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:42 wiz Exp $
+share/texmf-dist/doc/metapost/slideshow/slideshow.txt
+share/texmf-dist/doc/metapost/slideshow/sshowex.pdf
+share/texmf-dist/doc/metapost/slideshow/sshowex2.pdf
+share/texmf-dist/doc/metapost/slideshow/sshowex3.pdf
+share/texmf-dist/doc/metapost/slideshow/sshowintro.pdf

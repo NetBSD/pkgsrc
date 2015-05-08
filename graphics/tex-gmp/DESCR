@@ -1,0 +1,4 @@
+The package allows integration between MetaPost pictures and
+LaTeX. The main feature is that passing parameters to the
+MetaPost pictures is possible and the picture code can be put
+inside arguments to commands, including \newcommand.

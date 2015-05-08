@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:37 wiz Exp $
+share/texmf-dist/metapost/bbcard/bbcard.mp
+share/texmf-dist/metapost/bbcard/breakwidth.mp
+share/texmf-dist/metapost/bbcard/calendar.mp
+share/texmf-dist/metapost/bbcard/scorecard.mp

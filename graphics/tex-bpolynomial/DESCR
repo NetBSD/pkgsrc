@@ -1,0 +1,6 @@
+This MetaPost package helps plotting polynomial and root
+functions up to order three. The package provides macros to
+calculate Bezier curves exactly matching a given constant,
+linear, quadratic or cubic polynomial, or square or cubic root
+function. In addition, tangents on all functions and
+derivatives of polynomials can be calculated.

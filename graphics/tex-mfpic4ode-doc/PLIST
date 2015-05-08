@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:41 wiz Exp $
+share/texmf-dist/doc/latex/mfpic4ode/README
+share/texmf-dist/doc/latex/mfpic4ode/demo/demo-plain.pdf
+share/texmf-dist/doc/latex/mfpic4ode/demo/demo-plain.tex
+share/texmf-dist/doc/latex/mfpic4ode/demo/demo.pdf
+share/texmf-dist/doc/latex/mfpic4ode/demo/demo.tex
+share/texmf-dist/doc/latex/mfpic4ode/mfpic4ode.pdf

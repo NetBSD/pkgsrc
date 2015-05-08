@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:39 wiz Exp $
+share/texmf-dist/doc/metapost/exteps/LICENSE
+share/texmf-dist/doc/metapost/exteps/README
+share/texmf-dist/doc/metapost/exteps/delfin
+share/texmf-dist/doc/metapost/exteps/exteps.pdf
+share/texmf-dist/doc/metapost/exteps/exteps.tex

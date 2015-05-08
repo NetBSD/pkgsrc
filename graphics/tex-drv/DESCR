@@ -1,0 +1,4 @@
+A set of MetaPost macros for typesetting derivation trees (such
+as used in sequent calculus, type inference, programming
+language semantics...). No MetaPost knowledge is needed to use
+these macros.

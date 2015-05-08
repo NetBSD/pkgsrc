@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:40 wiz Exp $
+share/texmf-dist/doc/latex/metaplot/README
+share/texmf-dist/doc/latex/metaplot/examples/cap1.cc
+share/texmf-dist/doc/latex/metaplot/examples/cap1.mp
+share/texmf-dist/doc/latex/metaplot/examples/capillary.cc
+share/texmf-dist/doc/latex/metaplot/examples/cpoint.cc
+share/texmf-dist/doc/latex/metaplot/examples/cpoint.h
+share/texmf-dist/doc/latex/metaplot/examples/figure_1.mp
+share/texmf-dist/doc/latex/metaplot/examples/figures_2-7.mp
+share/texmf-dist/doc/latex/metaplot/examples/figures_8-9.mp
+share/texmf-dist/doc/latex/metaplot/examples/gpl.txt
+share/texmf-dist/doc/latex/metaplot/examples/mc2.mp
+share/texmf-dist/doc/latex/metaplot/examples/metacontour.cc
+share/texmf-dist/doc/latex/metaplot/examples/metacontour.h
+share/texmf-dist/doc/latex/metaplot/examples/metacontour_main.cc
+share/texmf-dist/doc/latex/metaplot/metaplot_preprint.pdf

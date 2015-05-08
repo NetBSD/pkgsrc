@@ -1,0 +1,4 @@
+MetaUML is a MetaPost library for typesetting UML diagrams,
+which provides a usable, human-friendly textual notation for
+UML, offering now support for class, package, activity, state,
+and use case diagrams.

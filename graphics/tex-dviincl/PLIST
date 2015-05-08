@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:38 wiz Exp $
+share/texmf-dist/metapost/dviincl/fix_brks.mp
+share/texmf-dist/metapost/dviincl/fix_page.mp
