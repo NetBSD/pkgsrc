@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:17:29 wiz Exp $
+share/texmf-dist/doc/generic/mfpic/README
+share/texmf-dist/doc/generic/mfpic/changes.txt
+share/texmf-dist/doc/generic/mfpic/coil.mps
+share/texmf-dist/doc/generic/mfpic/examples/data.dat
+share/texmf-dist/doc/generic/mfpic/examples/forfun.tex
+share/texmf-dist/doc/generic/mfpic/examples/lapictures.tex
+share/texmf-dist/doc/generic/mfpic/examples/pictures.tex
+share/texmf-dist/doc/generic/mfpic/install.txt
+share/texmf-dist/doc/generic/mfpic/lcheadings.ist
+share/texmf-dist/doc/generic/mfpic/mfpcard.pdf
+share/texmf-dist/doc/generic/mfpic/mfpcard.tex
+share/texmf-dist/doc/generic/mfpic/mfpdoc.sty
+share/texmf-dist/doc/generic/mfpic/mfpguide.pdf
+share/texmf-dist/doc/generic/mfpic/mfpguide.tex
+share/texmf-dist/doc/generic/mfpic/mfpic-doc.pdf
+share/texmf-dist/doc/generic/mfpic/mfpic-doc.tex
