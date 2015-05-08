@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.61 2015/04/21 17:01:56 joerg Exp $
+# $NetBSD: Linux.mk,v 1.62 2015/05/08 20:28:30 sevan Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -108,6 +108,11 @@ _OPSYS_MAX_CMDLEN_CMD?=	/usr/bin/getconf ARG_MAX
 .endif
 
 .if ${MACHINE_ARCH} == "x86_64"
+ABI?=		64
+LIBABISUFFIX?=	64
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc64le"
 ABI?=		64
 LIBABISUFFIX?=	64
 .endif
