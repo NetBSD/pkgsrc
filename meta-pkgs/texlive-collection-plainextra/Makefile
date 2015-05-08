@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/08 14:20:11 wiz Exp $
 
 DISTNAME=	collection-plainextra
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	35575
@@ -12,29 +12,30 @@ COMMENT=	Plain TeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
-# depend epsf-dvipdfmx
-# depend figflow
-# depend fixpdfmag
-# depend font-change
+DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
+DEPENDS+=	tex-figflow-[0-9]*:../../print/tex-figflow
+DEPENDS+=	tex-fixpdfmag-[0-9]*:../../print/tex-fixpdfmag
+DEPENDS+=	tex-font-change-[0-9]*:../../print/tex-font-change
 DEPENDS+=	tex-fontch-[0-9]*:../../print/tex-fontch
-# depend getoptk
+DEPENDS+=	tex-getoptk-[0-9]*:../../print/tex-getoptk
 DEPENDS+=	tex-graphics-pln-[0-9]*:../../graphics/tex-graphics-pln
-# depend hyplain
-# depend js-misc
-# depend mkpattern
-# depend newsletr
-# depend pitex
+DEPENDS+=	tex-hyplain-[0-9]*:../../print/tex-hyplain
+DEPENDS+=	tex-js-misc-[0-9]*:../../print/tex-js-misc
+DEPENDS+=	tex-mkpattern-[0-9]*:../../print/tex-mkpattern
+DEPENDS+=	tex-newsletr-[0-9]*:../../print/tex-newsletr
+DEPENDS+=	tex-pitex-[0-9]*:../../print/tex-pitex
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
-# depend plipsum
-# depend plnfss
-# depend plstmary
-# depend present
-# depend resumemac
+DEPENDS+=	tex-plipsum-[0-9]*:../../print/tex-plipsum
+DEPENDS+=	tex-plnfss-[0-9]*:../../print/tex-plnfss
+DEPENDS+=	tex-plstmary-[0-9]*:../../print/tex-plstmary
+DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
+DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
 DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
-# depend timetable
-# depend treetex
-# depend varisize
-# depend xii
+DEPENDS+=	tex-timetable-[0-9]*:../../print/tex-timetable
+DEPENDS+=	tex-treetex-[0-9]*:../../print/tex-treetex
+DEPENDS+=	tex-varisize-[0-9]*:../../print/tex-varisize
+# xii is a "fun" package and the only files are in tex-xii-doc
+#DEPENDS+=	tex-xii-[0-9]*:../../print/tex-xii
 
 META_PACKAGE=	yes
 
