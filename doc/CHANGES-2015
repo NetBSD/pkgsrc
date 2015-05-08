@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2168 2015/05/08 11:32:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2169 2015/05/08 11:36:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-electrum-doc version 1.005.b [wiz 2015-05-08]
 	Added fonts/tex-romande version 1.008.v7.sc [wiz 2015-05-08]
 	Added fonts/tex-romande-doc version 1.008.v7.sc [wiz 2015-05-08]
+	Updated meta-pkgs/texlive-collection-fontsextra to 2014 [wiz 2015-05-08]
