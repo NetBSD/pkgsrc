@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:17:14 wiz Exp $
+share/texmf-dist/metafont/mfpic/grafbase.mf
+share/texmf-dist/metapost/mfpic/dvipsnam.mp
+share/texmf-dist/metapost/mfpic/grafbase.mp
+share/texmf-dist/tex/generic/mfpic/mfpic.sty
+share/texmf-dist/tex/generic/mfpic/mfpic.tex
+share/texmf-dist/tex/generic/mfpic/mfpicdef.tex
