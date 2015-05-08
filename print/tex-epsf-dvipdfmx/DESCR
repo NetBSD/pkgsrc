@@ -1,0 +1,5 @@
+epsf-dvipdfmx.tex is a plain TeX file to be \input after
+epsf.tex when using plain TeX with dvipdfmx. As in: \input epsf
+\input epsf-dvipdfmx It is needed when an .eps file has
+anything except the origin (0,0) for the lower-left of its
+bounding box.

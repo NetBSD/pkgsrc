@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
+share/texmf-dist/tex/plain/pitex/base.ptxlua
+share/texmf-dist/tex/plain/pitex/blocks.ptx
+share/texmf-dist/tex/plain/pitex/files.ptx
+share/texmf-dist/tex/plain/pitex/fonts.ptx
+share/texmf-dist/tex/plain/pitex/fonts.ptxlua
+share/texmf-dist/tex/plain/pitex/inserts.ptx
+share/texmf-dist/tex/plain/pitex/lua.ptx
+share/texmf-dist/tex/plain/pitex/output.ptx
+share/texmf-dist/tex/plain/pitex/pitex.tex
+share/texmf-dist/tex/plain/pitex/references.ptx
+share/texmf-dist/tex/plain/pitex/sections.ptx
+share/texmf-dist/tex/plain/pitex/verbatim.ptx

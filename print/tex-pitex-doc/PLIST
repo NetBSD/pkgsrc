@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
+share/texmf-dist/doc/plain/pitex/README
+share/texmf-dist/doc/plain/pitex/foundry-settings.lua
+share/texmf-dist/doc/plain/pitex/i-pitex.lua
+share/texmf-dist/doc/plain/pitex/pitex-doc.pdf
+share/texmf-dist/doc/plain/pitex/pitex-doc.tex
+share/texmf-dist/doc/plain/pitex/pitex-doc.txt

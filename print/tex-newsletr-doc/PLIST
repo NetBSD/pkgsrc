@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
+share/texmf-dist/doc/plain/newsletr/italic.tex
+share/texmf-dist/doc/plain/newsletr/lodriver.tex
+share/texmf-dist/doc/plain/newsletr/losample.tex
+share/texmf-dist/doc/plain/newsletr/newsletr.txt
+share/texmf-dist/doc/plain/newsletr/newssamp.pdf
+share/texmf-dist/doc/plain/newsletr/newssamp.tex
+share/texmf-dist/doc/plain/newsletr/quote.tex
+share/texmf-dist/doc/plain/newsletr/read.me
+share/texmf-dist/doc/plain/newsletr/sample.pdf
