@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.627 2015/05/06 18:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.628 2015/05/08 06:56:01 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -785,6 +785,8 @@ SUBDIR+=	tex-tabu-doc
 SUBDIR+=	tex-tetex
 SUBDIR+=	tex-tetex-doc
 SUBDIR+=	tex-tex
+SUBDIR+=	tex-tex4ht
+SUBDIR+=	tex-tex4ht-doc
 SUBDIR+=	tex-texconfig
 SUBDIR+=	tex-texconfig-doc
 SUBDIR+=	tex-texdoc
@@ -891,6 +893,7 @@ SUBDIR+=	tex-ydoc
 SUBDIR+=	tex-ydoc-doc
 SUBDIR+=	tex-yfonts
 SUBDIR+=	tex-yfonts-doc
+SUBDIR+=	tex4ht
 #SUBDIR+=	texlive				# place holder directory
 SUBDIR+=	transfig
 SUBDIR+=	web2c
