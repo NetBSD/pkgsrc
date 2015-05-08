@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2098 2015/05/07 12:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2099 2015/05/08 15:04:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -627,6 +627,7 @@ SUBDIR+=	openocd
 SUBDIR+=	openrcs
 SUBDIR+=	orc
 SUBDIR+=	ossp-uuid
+SUBDIR+=	p5-Acme-Damn
 SUBDIR+=	p5-Acme-PlayCode
 SUBDIR+=	p5-Algorithm-Annotate
 SUBDIR+=	p5-Algorithm-C3
