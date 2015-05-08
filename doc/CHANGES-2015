@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2175 2015/05/08 13:21:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2176 2015/05/08 13:49:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added graphics/tex-mfpic version 1.10 [wiz 2015-05-08]
 	Added graphics/tex-mfpic-doc version 1.10 [wiz 2015-05-08]
 	Updated print/teTeX3-texmf to 3.0nb54 [wiz 2015-05-08]
+	Updated meta-pkgs/texlive-collection-metapost to 2014 [wiz 2015-05-08]
