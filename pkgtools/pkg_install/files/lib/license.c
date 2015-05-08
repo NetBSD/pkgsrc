@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.40 2015/05/02 13:21:37 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.41 2015/05/08 10:37:32 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -65,7 +65,7 @@ const char *default_acceptable_licenses =
     "ibm-public-license-1.0 "
     "ipafont "
     "isc "
-    "lppl-1.3c "
+    "lppl-1.2 lppl-1.3c "
     "lucent "
     "miros "
     "mit "
