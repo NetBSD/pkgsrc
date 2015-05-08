@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2179 2015/05/08 15:09:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2180 2015/05/08 19:36:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3976,3 +3976,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-plainextra to 2014 [wiz 2015-05-08]
 	Added devel/p5-Acme-Damn version 0.06 [wiz 2015-05-08]
 	Added devel/p5-forks version 0.36 [wiz 2015-05-08]
+	Updated devel/cppcheck to 1.69 [bsiegert 2015-05-08]
