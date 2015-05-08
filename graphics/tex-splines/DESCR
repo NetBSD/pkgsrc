@@ -1,0 +1,6 @@
+This is a small package of macros for creating cubic spline
+interpolants in MetaPost or Metafont. Given a list of points
+the macros can produce a closed or a relaxed spline joining
+them. Given a list of function values y_j at x_j, the result
+would define the graph of a cubic spline interpolating function
+y=f(x), which is either periodic or relaxed.

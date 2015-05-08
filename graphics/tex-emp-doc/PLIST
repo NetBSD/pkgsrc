@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:38 wiz Exp $
+share/texmf-dist/doc/latex/emp/COPYING
+share/texmf-dist/doc/latex/emp/Makefile
+share/texmf-dist/doc/latex/emp/README
+share/texmf-dist/doc/latex/emp/emp.pdf
+share/texmf-dist/doc/latex/emp/empman.pdf

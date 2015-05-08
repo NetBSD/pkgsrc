@@ -1,0 +1,3 @@
+This MetaPost package provides macros to typeset text along a
+free path with the help of LaTeX, thereby preserving kerning
+and allowing for 8-bit input (accented characters).

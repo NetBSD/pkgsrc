@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:40 wiz Exp $
+share/texmf-dist/metapost/metaobj/connections.mp
+share/texmf-dist/metapost/metaobj/metaobj.mp
+share/texmf-dist/metapost/metaobj/mobjstandard.mp
+share/texmf-dist/metapost/metaobj/proofex.mp
+share/texmf-dist/metapost/metaobj/pstricksex1.mp
+share/texmf-dist/metapost/metaobj/pstricksex2.mp
+share/texmf-dist/metapost/metaobj/pstricksex3.mp
+share/texmf-dist/metapost/metaobj/pstricksex4.mp
