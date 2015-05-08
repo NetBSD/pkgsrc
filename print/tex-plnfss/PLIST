@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:53 wiz Exp $
+share/texmf-dist/tex/plain/plnfss/MIKmathf.tex
+share/texmf-dist/tex/plain/plnfss/ams.pfd
+share/texmf-dist/tex/plain/plnfss/il2cm.pfd
+share/texmf-dist/tex/plain/plnfss/il2cmr.pfd
+share/texmf-dist/tex/plain/plnfss/ly1lm.pfd
+share/texmf-dist/tex/plain/plnfss/ot1cm.pfd
+share/texmf-dist/tex/plain/plnfss/ot1cmr.pfd
+share/texmf-dist/tex/plain/plnfss/ot4cm.pfd
+share/texmf-dist/tex/plain/plnfss/plnfss.tex
+share/texmf-dist/tex/plain/plnfss/qxlm.pfd
+share/texmf-dist/tex/plain/plnfss/t1lm.pfd
+share/texmf-dist/tex/plain/plnfss/t5cm.pfd
+share/texmf-dist/tex/plain/plnfss/t5cmr.pfd
+share/texmf-dist/tex/plain/plnfss/t5lm.pfd
+share/texmf-dist/tex/plain/plnfss/ts1lm.pfd
