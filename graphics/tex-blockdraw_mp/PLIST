@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:37 wiz Exp $
+share/texmf-dist/metapost/blockdraw_mp/blockdraw.mp
+share/texmf-dist/metapost/blockdraw_mp/bonddemo.mp
+share/texmf-dist/metapost/blockdraw_mp/bondgraph.mp
+share/texmf-dist/metapost/blockdraw_mp/cascadedemo.mp
+share/texmf-dist/metapost/blockdraw_mp/docblockprefs.mp
+share/texmf-dist/metapost/blockdraw_mp/shiftoff.mp

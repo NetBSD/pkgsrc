@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:38 wiz Exp $
+share/texmf-dist/doc/metapost/dviincl/0czytaj.sla
+share/texmf-dist/doc/metapost/dviincl/0dviincl.inf
+share/texmf-dist/doc/metapost/dviincl/README
+share/texmf-dist/doc/metapost/dviincl/README.pl
+share/texmf-dist/doc/metapost/dviincl/storyx.tex
+share/texmf-dist/doc/metapost/dviincl/test-bop.mp
+share/texmf-dist/doc/metapost/dviincl/test-bop.tex
+share/texmf-dist/doc/metapost/dviincl/testit.bat
+share/texmf-dist/doc/metapost/dviincl/testit.sh

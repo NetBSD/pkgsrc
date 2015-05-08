@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:41 wiz Exp $
+share/texmf-dist/doc/metapost/mpattern/README
+share/texmf-dist/doc/metapost/mpattern/README.PL
+share/texmf-dist/doc/metapost/mpattern/mpattern_test.pdf
+share/texmf-dist/doc/metapost/mpattern/mpattern_test.tex
+share/texmf-dist/doc/metapost/mpattern/test.mp

@@ -1,0 +1,6 @@
+A MetaPost package providing facilities to assist in drawing
+diagrams that consist of boxes, lines, and annotations.
+Particular support is provided for creating EXPRESS-G diagrams,
+for example IDEF1X, OMT, Shlaer-Mellor, and NIAM diagrams. The
+package may also be used to create UML and most other Box-Line-
+Annotation charts, but not Gantt charts directly.

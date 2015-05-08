@@ -1,0 +1,9 @@
+The package is a small set of macros for drawing direction
+fields, phase portraits and trajectories of differential
+equations and two dimensional autonomous systems. The Euler,
+Runge-Kutta and 4th order Runge-Kutta algorithms are available
+to solve the ODEs. The picture is translated into mfpic macros
+and MetaPost is used to create the final drawing. The package
+is was designed for use with LaTeX, but it can be used in plain
+TeX as well. Online demonstration of the mfpic4ode macros is
+available on the Mfpic Previewer as Example 6.

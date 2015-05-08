@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:37 wiz Exp $
+share/texmf-dist/doc/metapost/automata/README
+share/texmf-dist/doc/metapost/automata/example.mp
+share/texmf-dist/doc/metapost/automata/example.pdf
+share/texmf-dist/doc/metapost/automata/example.tex

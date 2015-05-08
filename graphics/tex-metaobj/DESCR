@@ -1,0 +1,6 @@
+METAOBJ is a large metapost package providing high-level
+objects. It implements many of PSTricks' features for node
+connections, but also trees, matrices, and many other things.
+It more or less contains boxes.mp and rboxes.mp. There is a
+large (albeit not complete) documentation distributed with the
+package. It is easily extensible with new objects.

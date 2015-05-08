@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:38 wiz Exp $
+share/texmf-dist/doc/metapost/drv/README
+share/texmf-dist/doc/metapost/drv/doc/drv-guide.mp
+share/texmf-dist/doc/metapost/drv/doc/drv-guide.tex
+share/texmf-dist/doc/metapost/drv/doc/drv.mp
+share/texmf-dist/doc/metapost/drv/doc/makefile
+share/texmf-dist/doc/metapost/drv/doc/readme.sh
+share/texmf-dist/doc/metapost/drv/drv-guide.pdf
+share/texmf-dist/doc/metapost/drv/sample/coq-sample.mp
+share/texmf-dist/doc/metapost/drv/sample/coq-sample.tex
+share/texmf-dist/doc/metapost/drv/sample/drv.mp
+share/texmf-dist/doc/metapost/drv/sample/makefile
+share/texmf-dist/doc/metapost/drv/sample/readme.sh
+share/texmf-dist/doc/metapost/drv/template/drv.mp
+share/texmf-dist/doc/metapost/drv/template/makefile
+share/texmf-dist/doc/metapost/drv/template/readme.sh
+share/texmf-dist/doc/metapost/drv/template/template.mp
+share/texmf-dist/doc/metapost/drv/template/template.tex

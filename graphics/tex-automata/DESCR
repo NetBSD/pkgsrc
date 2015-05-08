@@ -1,0 +1,6 @@
+The package offers a collection of macros for MetaPost to make
+easier to draw finite-state machines, automata, labelled
+graphs, etc. The user defines nodes, which may be isolated or
+arranged into matrices or trees; edges connect pairs of nodes
+through arbitrary paths. Parameters, that specify the shapes of
+nodes and the styles of edges, may be adjusted.

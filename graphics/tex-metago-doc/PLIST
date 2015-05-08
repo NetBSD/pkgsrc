@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:40 wiz Exp $
+share/texmf-dist/doc/metapost/metago/README
+share/texmf-dist/doc/metapost/metago/example-program.mp
+share/texmf-dist/doc/metapost/metago/example-program.pdf
+share/texmf-dist/doc/metapost/metago/example-script-1.pdf
+share/texmf-dist/doc/metapost/metago/example-script-2.pdf
+share/texmf-dist/doc/metapost/metago/example-script-3.pdf
+share/texmf-dist/doc/metapost/metago/example-script-4.pdf
+share/texmf-dist/doc/metapost/metago/example-script-5.pdf
+share/texmf-dist/doc/metapost/metago/example-script-6.pdf
+share/texmf-dist/doc/metapost/metago/example-script-7.pdf
+share/texmf-dist/doc/metapost/metago/example-script-8.pdf
+share/texmf-dist/doc/metapost/metago/example-script.mp
+share/texmf-dist/doc/metapost/metago/script.go

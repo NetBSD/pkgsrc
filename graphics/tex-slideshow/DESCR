@@ -1,0 +1,4 @@
+The package provides a means of creating presentations in
+MetaPost, without intervention from other utilities (except a
+distiller). Such an arrangement has its advantages (though
+there are disadvantages too).

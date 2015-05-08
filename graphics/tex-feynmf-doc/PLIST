@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:39 wiz Exp $
+share/texmf-dist/doc/latex/feynmf/Announce
+share/texmf-dist/doc/latex/feynmf/COPYING
+share/texmf-dist/doc/latex/feynmf/Feynman.Diagrams
+share/texmf-dist/doc/latex/feynmf/README
+share/texmf-dist/doc/latex/feynmf/Tutorial
+share/texmf-dist/doc/latex/feynmf/fmfman.pdf
+share/texmf-dist/doc/latex/feynmf/manpics.1
+share/texmf-dist/doc/latex/feynmf/manpics.2
+share/texmf-dist/doc/latex/feynmf/manpics.3
+share/texmf-dist/doc/latex/feynmf/template.tex
