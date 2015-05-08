@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2170 2015/05/08 11:37:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2171 2015/05/08 11:43:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-romande version 1.008.v7.sc [wiz 2015-05-08]
 	Added fonts/tex-romande-doc version 1.008.v7.sc [wiz 2015-05-08]
 	Updated meta-pkgs/texlive-collection-fontsextra to 2014 [wiz 2015-05-08]
+	Updated x11/xf86-video-neomagic to 1.2.9 [wiz 2015-05-08]
