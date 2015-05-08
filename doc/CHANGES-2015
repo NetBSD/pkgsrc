@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2169 2015/05/08 11:36:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2170 2015/05/08 11:37:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3756,8 +3756,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-nkarta-doc version 0.2 [wiz 2015-05-08]
 	Added fonts/tex-obnov version 0.11 [wiz 2015-05-08]
 	Added fonts/tex-obnov-doc version 0.11 [wiz 2015-05-08]
-	Added fonts/tex-ocherokee version 2014 [wiz 2015-05-08]
-	Added fonts/tex-ocherokee-doc version 2014 [wiz 2015-05-08]
+	Moved print/tex-ocherokee to fonts/tex-ocherokee [wiz 2015-05-08]
+	Moved print/tex-ocherokee to fonts/tex-ocherokee-doc [wiz 2015-05-08]
 	Added fonts/tex-ocr-b-outline version 2014 [wiz 2015-05-08]
 	Added fonts/tex-ocr-b-outline-doc version 2014 [wiz 2015-05-08]
 	Added fonts/tex-ogham version 2014 [wiz 2015-05-08]
