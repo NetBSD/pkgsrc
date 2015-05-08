@@ -1,0 +1,9 @@
+Mfpic is a scheme for producing pictures from (La)TeX commands.
+Commands \mfpic and \endmfpic (in LaTeX, the mfpic environment)
+enclose a group in which drawing commands may be placed. The
+commands generate a Meta-language file, which may be processed
+by Metapost (or even Metafont). The resulting image file will
+be read back in to the document to place the picture at the
+point where the original (La)TeX commands appeared. Note that
+the ability to use Metapost here means that the package works
+equally well in LaTeX and PDFLaTeX.
