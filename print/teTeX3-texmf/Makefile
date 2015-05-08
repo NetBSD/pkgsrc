@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2015/05/08 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2015/05/08 13:22:52 wiz Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
@@ -256,7 +256,6 @@ DEPENDS+=	tex-yfonts-[0-9]*:../../print/tex-yfonts
 
 EXTRACT_ELEMENTS+=	bibtex
 EXTRACT_ELEMENTS+=	fonts
-EXTRACT_ELEMENTS+=	metafont
 EXTRACT_ELEMENTS+=	scripts
 EXTRACT_ELEMENTS+=	tex
 
@@ -352,9 +351,6 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/vf/cg/[h-k]*
 	rm -rf ${WRKSRC}/fonts/vf/cg/times
 	rm -rf ${WRKSRC}/fonts/vf/yandy/times
-	rm -rf ${WRKSRC}/metafont/[a-l]*
-	rm -f ${WRKSRC}/metafont/misc/[a-w]*
-	rm -rf ${WRKSRC}/metafont/mfpic
 	rm -rf ${WRKSRC}/scripts/context
 	rm -rf ${WRKSRC}/scripts/thumbpdf
 	rm -rf ${WRKSRC}/tex/context

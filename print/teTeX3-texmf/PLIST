@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2015/05/08 13:21:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.50 2015/05/08 13:22:52 wiz Exp $
 share/texmf-dist/bibtex/bst/norbib/norabbrv.bst
 share/texmf-dist/bibtex/bst/norbib/noralpha.bst
 share/texmf-dist/bibtex/bst/norbib/norplain.bst
@@ -1047,7 +1047,6 @@ share/texmf-dist/fonts/vf/yandy/mathplus/mtmu.vf
 share/texmf-dist/fonts/vf/yandy/mathplus/mtmub.vf
 share/texmf-dist/fonts/vf/yandy/mathplus/mtmuh.vf
 share/texmf-dist/fonts/vf/yandy/mathtime/mtmi.vf
-share/texmf-dist/metafont/misc/x.mf
 share/texmf-dist/scripts/pdfcrop/pdfcrop.pl
 share/texmf-dist/scripts/uniqleaf/uniqleaf.pl
 share/texmf-dist/tex/amstex/base/amsppt.sty
