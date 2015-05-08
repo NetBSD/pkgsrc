@@ -1,0 +1,6 @@
+Mkpattern is a general purpose program for the generation of
+hyphenation patterns, with definition of letter sets and
+template-like constructions. It also provides an easy way to
+handle different input and output encodings, and featgures
+generation of clean UTF-8 patterns. The package was used for
+the creation of the Galician patterns.

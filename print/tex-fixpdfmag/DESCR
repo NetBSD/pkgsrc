@@ -1,0 +1,4 @@
+A recent change to PDFTeX has caused magnification to apply to
+page dimensions. This small package changes the values set in
+the page dimension variables from pt to truept, thus evading
+the effects of \mag.
