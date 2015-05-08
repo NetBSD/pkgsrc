@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:59 wiz Exp $
+share/texmf-dist/doc/fonts/electrum/COPYING
+share/texmf-dist/doc/fonts/electrum/NOTICE.txt
+share/texmf-dist/doc/fonts/electrum/README
+share/texmf-dist/doc/fonts/electrum/electrumadf.pdf
+share/texmf-dist/doc/fonts/electrum/electrumadf.tex
+share/texmf-dist/doc/fonts/electrum/manifest.txt

@@ -1,0 +1,5 @@
+The UMTypewriter font family is a monospaced font family that
+was built from glyphs from the CB Greek fonts, the CyrTUG
+Cyrillic alphabet fonts ("LH"), and the standard Computer
+Modern font family. It contains four OpenType fonts which are
+required for use of the xgreek package for XeLaTeX.

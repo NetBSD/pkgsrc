@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:39 wiz Exp $
+share/texmf-dist/doc/fonts/eiad/Leigh_me.txt
+share/texmf-dist/doc/fonts/eiad/amhrawn.pdf
+share/texmf-dist/doc/fonts/eiad/amhrawn.tex
+share/texmf-dist/doc/fonts/eiad/evening.pdf
+share/texmf-dist/doc/fonts/eiad/evening.tex
+share/texmf-dist/doc/fonts/eiad/micheal.ps
+share/texmf-dist/doc/fonts/eiad/micheal.tex
+share/texmf-dist/doc/fonts/eiad/recreat.pdf
+share/texmf-dist/doc/fonts/eiad/recreat.tex

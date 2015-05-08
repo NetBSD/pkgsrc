@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:39 wiz Exp $
+share/texmf-dist/fonts/enc/dvips/ebgaramond-maths/a_42pejf.enc
+share/texmf-dist/fonts/map/dvips/ebgaramond-maths/EBGaramond-Maths.map
+share/texmf-dist/fonts/tfm/public/ebgaramond-maths/EBGaramond12-Italic--oml-ebgaramond.tfm
+share/texmf-dist/tex/latex/ebgaramond-maths/OMLEBGaramond-Maths.fd
+share/texmf-dist/tex/latex/ebgaramond-maths/ebgaramond-maths.sty

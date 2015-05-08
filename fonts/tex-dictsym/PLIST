@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:37 wiz Exp $
+share/texmf-dist/fonts/afm/public/dictsym/dictsym.afm
+share/texmf-dist/fonts/map/dvips/dictsym/dictsym.map
+share/texmf-dist/fonts/tfm/public/dictsym/dictsym.tfm
+share/texmf-dist/fonts/type1/public/dictsym/dictsym.pfb
+share/texmf-dist/fonts/type1/public/dictsym/dictsym.pfm
+share/texmf-dist/tex/latex/dictsym/dictsym.sty

@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:40 wiz Exp $
+share/texmf-dist/doc/fonts/esstix/ESSTIX10.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX11.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX12.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX13.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX14.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX15.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX16.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX17.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX1_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX2_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX3_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX4_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX5_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX6_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX7_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX8_.tfm
+share/texmf-dist/doc/fonts/esstix/ESSTIX9_.tfm
+share/texmf-dist/doc/fonts/esstix/Esstix.pdf
+share/texmf-dist/doc/fonts/esstix/Esstix.tex
+share/texmf-dist/doc/fonts/esstix/README
+share/texmf-dist/doc/fonts/esstix/esstixOther.map

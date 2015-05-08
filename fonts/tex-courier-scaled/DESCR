@@ -1,0 +1,3 @@
+This package sets the default typewriter font to Courier with a
+possible scale factor (in the same way as the helvet package
+for Helvetica works for sans serif).

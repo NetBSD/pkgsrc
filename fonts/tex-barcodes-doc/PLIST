@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:31 wiz Exp $
+share/texmf-dist/doc/latex/barcodes/README
+share/texmf-dist/doc/latex/barcodes/bcfaq.tex
+share/texmf-dist/doc/latex/barcodes/changes
+share/texmf-dist/doc/latex/barcodes/code39.tex
+share/texmf-dist/doc/latex/barcodes/codean.pl
+share/texmf-dist/doc/latex/barcodes/eandoc.pdf
+share/texmf-dist/doc/latex/barcodes/eandoc.tex
+share/texmf-dist/doc/latex/barcodes/examples.tex
+share/texmf-dist/doc/latex/barcodes/install.bat
+share/texmf-dist/doc/latex/barcodes/wlcdb.vpl
+share/texmf-dist/doc/latex/barcodes/wlcf39.vpl
+share/texmf-dist/doc/latex/barcodes/wlitf.vpl

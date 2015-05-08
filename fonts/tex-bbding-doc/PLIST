@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+share/texmf-dist/doc/latex/bbding/README
+share/texmf-dist/doc/latex/bbding/bbding.pdf
+share/texmf-dist/doc/latex/bbding/bbding10.org

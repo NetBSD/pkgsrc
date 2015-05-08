@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:58 wiz Exp $
+share/texmf-dist/tex/latex/zlmtt/il2zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/il2zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/l7xzlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/l7xzlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/ly1zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/ly1zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/ot1zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/ot1zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/ot4zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/ot4zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/qxzlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/qxzlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/t1zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/t1zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/t5zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/t5zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/ts1zlmtt.fd
+share/texmf-dist/tex/latex/zlmtt/ts1zlmvtt.fd
+share/texmf-dist/tex/latex/zlmtt/zlmtt.sty

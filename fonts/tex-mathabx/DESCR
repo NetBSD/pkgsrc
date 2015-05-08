@@ -1,0 +1,6 @@
+Mathabx is a set of 3 mathematical symbols font series: matha,
+mathb and mathx. They are defined by Metafont code and should
+be of reasonable quality (bitmap output). Things change from
+time to time, so there is no claim of stability (encoding,
+metrics, design). The package includes Plain TeX and LaTeX
+support macros.

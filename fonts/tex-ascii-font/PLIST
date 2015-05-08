@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:30 wiz Exp $
+share/texmf-dist/fonts/map/dvips/ascii-font/ascii.map
+share/texmf-dist/fonts/tfm/public/ascii-font/ASCII.tfm
+share/texmf-dist/fonts/type1/public/ascii-font/ASCII.pfb
+share/texmf-dist/tex/latex/ascii-font/ascii.sty

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
+share/texmf-dist/doc/fonts/punk/punk.sty
+share/texmf-dist/doc/fonts/punk/punktest.tex

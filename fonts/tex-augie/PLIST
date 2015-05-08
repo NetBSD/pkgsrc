@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:30 wiz Exp $
+share/texmf-dist/fonts/afm/public/augie/augie___.afm
+share/texmf-dist/fonts/map/dvips/augie/augie.map
+share/texmf-dist/fonts/tfm/public/augie/augie7t.tfm
+share/texmf-dist/fonts/tfm/public/augie/augie8c.tfm
+share/texmf-dist/fonts/tfm/public/augie/augie8r.tfm
+share/texmf-dist/fonts/tfm/public/augie/augie8t.tfm
+share/texmf-dist/fonts/tfm/public/augie/augie___.tfm
+share/texmf-dist/fonts/type1/public/augie/augie___.pfb
+share/texmf-dist/fonts/vf/public/augie/augie7t.vf
+share/texmf-dist/fonts/vf/public/augie/augie8c.vf
+share/texmf-dist/fonts/vf/public/augie/augie8t.vf
+share/texmf-dist/tex/latex/augie/ot1augie.fd
+share/texmf-dist/tex/latex/augie/t1augie.fd
+share/texmf-dist/tex/latex/augie/ts1augie.fd
