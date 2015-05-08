@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/08 14:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/08 14:23:24 wiz Exp $
 
 DISTNAME=	collection-plainextra
 PKGNAME=	texlive-${DISTNAME}-2014
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Plain TeX packages
 
-DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
+DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
 DEPENDS+=	tex-figflow-[0-9]*:../../print/tex-figflow
