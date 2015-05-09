@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.28 2014/12/30 15:13:20 wiz Exp $	*/
+/*	$NetBSD: main.c,v 1.28.2.1 2015/05/09 15:17:50 tron Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.28 2014/12/30 15:13:20 wiz Exp $");
+__RCSID("$NetBSD: main.c,v 1.28.2.1 2015/05/09 15:17:50 tron Exp $");
 
 /*
  *
@@ -62,9 +62,9 @@ int	ReplaceSame = 0;
 static void
 usage(void)
 {
-	(void) fprintf(stderr, "%s\n%s\n%s\n%s\n",
+	(void) fprintf(stderr, "%s\n%s\n%s\n",
 	    "usage: pkg_add [-AfhInRuVv] [-C config] [-P destdir] [-K pkg_dbdir]",
-	    "               [-m machine] [-p prefix] [-s verification-type]\n",
+	    "               [-m machine] [-p prefix] [-s verification-type]",
 	    "               [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...");
 	exit(1);
 }
