@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/09 22:21:52 markd Exp $
+share/texmf-dist/doc/fonts/mxedruli/README
+share/texmf-dist/doc/fonts/mxedruli/alphabets.tex
+share/texmf-dist/doc/fonts/mxedruli/mxeddoc.pdf
+share/texmf-dist/doc/fonts/mxedruli/mxeddoc.tex
+share/texmf-dist/doc/fonts/mxedruli/ossetic.tex
+share/texmf-dist/doc/fonts/mxedruli/vepxis.tex
