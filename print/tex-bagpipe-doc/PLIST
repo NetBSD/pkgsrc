@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/09 22:44:22 markd Exp $
+share/texmf-dist/doc/generic/bagpipe/BlackDonald.pdf
+share/texmf-dist/doc/generic/bagpipe/BlackDonald.tex
+share/texmf-dist/doc/generic/bagpipe/Bonnets.pdf
+share/texmf-dist/doc/generic/bagpipe/Bonnets.tex
+share/texmf-dist/doc/generic/bagpipe/Green.pdf
+share/texmf-dist/doc/generic/bagpipe/Green.tex
+share/texmf-dist/doc/generic/bagpipe/GreenTwo.pdf
+share/texmf-dist/doc/generic/bagpipe/GreenTwo.tex
+share/texmf-dist/doc/generic/bagpipe/README
+share/texmf-dist/doc/generic/bagpipe/Washer.pdf
+share/texmf-dist/doc/generic/bagpipe/Washer.tex
+share/texmf-dist/doc/generic/bagpipe/bagdoc.pdf
+share/texmf-dist/doc/generic/bagpipe/bagdoc.tex
+share/texmf-dist/doc/generic/bagpipe/quickref.pdf
+share/texmf-dist/doc/generic/bagpipe/quickref.tex
