@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:10:27 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 20:39:13 markd Exp $
 
 DISTNAME=	collection-basic
 PKGNAME=	texlive-${DISTNAME}-2014
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	33040
@@ -44,6 +45,7 @@ DEPENDS+=	tex-texlive-docindex>=2014:../../print/tex-texlive-docindex
 # texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts>=2013:../../print/tex-texlive-scripts
 DEPENDS+=	tex-xdvi>=22.87:../../print/tex-xdvi
+DEPENDS+=	xdvik>=22.87:../../print/xdvik
 
 META_PACKAGE=	yes
 
