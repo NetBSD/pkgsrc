@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langspanish
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -22,7 +22,7 @@ DEPENDS+=	tex-hyphen-spanish-[0-9]*:../../print/tex-hyphen-spanish
 # depend l2tabu-spanish
 # depend latex2e-help-texinfo-spanish
 # depend latexcheat-esmx
-# depend lshort-spanish
+# lshort-spanish is documentation only
 # depend spanish-mx
 
 META_PACKAGE=	yes
