@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/13 05:35:03 wen Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	MooX-Types-MooseLike-Numeric-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,11 @@ HOMEPAGE=	http://search.cpan.org/dist/MooX-Types-MooseLike-Numeric/
 COMMENT=	Moo types for numbers
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-MooX-Types-MooseLike>=0.23:../../devel/p5-Moo
+#DEPENDS+=	p5-MooX-Types-MooseLike>=0.23:../../devel/p5-Moo
+# for make test
+BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+BUILD_DEPENDS+=	p5-MooX-Types-MooseLike-[0-9]*:../../devel/p5-MooX-Types-MooseLike
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=	auto/MooX/Types/MooseLike/Numeric/.packlist
 

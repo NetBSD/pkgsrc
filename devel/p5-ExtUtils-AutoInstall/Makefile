@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:16 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	ExtUtils-AutoInstall-0.63
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,9 @@ DEPENDS+=	p5-Sort-Versions>=1.2:../../devel/p5-Sort-Versions
 
 MAKE_ENV+=		PERL_EXTUTILS_AUTOINSTALL=--skip
 PERL5_PACKLIST=		auto/ExtUtils/AutoInstall/.packlist
+
+# getting infinite loop
+TEST_TARGET?=	# empty = means make test fails
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
