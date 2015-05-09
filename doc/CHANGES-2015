@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2185 2015/05/09 02:21:19 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2186 2015/05/09 04:00:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3983,3 +3983,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added graphics/tex-animate version 2014 [markd 2015-05-09]
 	Added graphics/tex-animate-doc version 2014 [markd 2015-05-09]
 	Updated meta-pkgs/texlive-collection-latexextra to 2014pre2 [markd 2015-05-09]
+	Updated x11/xscreensaver to 5.32 [mef 2015-05-09]
+	Updated x11/xscreensaver-demo to 5.32 [mef 2015-05-09]
