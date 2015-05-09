@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langpolish
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -18,7 +18,7 @@ DEPENDS+=	tex-babel-polish-[0-9]*:../../print/tex-babel-polish
 DEPENDS+=	tex-gustlib-[0-9]*:../../print/tex-gustlib
 # depend gustprog
 DEPENDS+=	tex-hyphen-polish-[0-9]*:../../print/tex-hyphen-polish
-# depend lshort-polish
+# lshort-polish is documentation only
 # depend mex
 # depend mwcls
 DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl

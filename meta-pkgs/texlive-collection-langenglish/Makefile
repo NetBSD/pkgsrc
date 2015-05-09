@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langenglish
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -42,7 +42,7 @@ DEPENDS+=	tex-guide-to-latex-[0-9]*:../../print/tex-guide-to-latex
 # depend latexcheat
 # depend latexcourse-rug
 # depend latexfileinfo-pkgs
-# depend lshort-english
+# lshort-english is documentation only
 # depend macros2e
 # depend math-e
 # depend memdesign
