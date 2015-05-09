@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2191 2015/05/09 15:05:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2192 2015/05/09 22:27:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3992,3 +3992,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-tcl to 3.8.10 [adam 2015-05-09]
 	Updated devel/p5-Test-DependentModules to 0.20 [mef 2015-05-09]
 	Updated x11/xf86-video-siliconmotion to 1.7.8 [wiz 2015-05-09]
+	Added print/tex-antomega version 0.8 [markd 2015-05-09]
+	Added print/tex-antomega-doc version 0.8 [markd 2015-05-09]
+	Added fonts/tex-mxedruli version 3.3c [markd 2015-05-09]
+	Added fonts/tex-mxedruli-doc version 3.3c [markd 2015-05-09]
+	Updated meta-pkgs/texlive-collection-omega to 2014 [markd 2015-05-09]
