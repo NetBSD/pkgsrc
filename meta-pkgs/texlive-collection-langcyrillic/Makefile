@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:52 markd Exp $
 
 DISTNAME=	collection-langcyrillic
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -34,10 +34,10 @@ DEPENDS+=	tex-hyphen-ukrainian-[0-9]*:../../print/tex-hyphen-ukrainian
 DEPENDS+=	tex-lcyw-[0-9]*:../../fonts/tex-lcyw
 DEPENDS+=	tex-lh-[0-9]*:../../fonts/tex-lh
 # depend lhcyr
-# depend lshort-bulgarian
-# depend lshort-mongol
-# depend lshort-russian
-# depend lshort-ukr
+# lshort-bulgarian is documentation only
+# lshort-mongol is documentation only
+# lshort-russian is documentation only
+# lshort-ukr is documentation only
 # depend mongolian-babel
 # depend montex
 # depend mpman-ru
