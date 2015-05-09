@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2189 2015/05/09 09:33:49 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2190 2015/05/09 14:20:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3990,3 +3990,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3 to 3.8.10 [adam 2015-05-09]
 	Updated databases/sqlite3-docs to 3.8.10 [adam 2015-05-09]
 	Updated databases/sqlite3-tcl to 3.8.10 [adam 2015-05-09]
+	Updated devel/p5-Test-DependentModules to 0.20 [mef 2015-05-09]
