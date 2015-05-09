@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2015/05/08 11:28:35 wiz Exp $
+# $NetBSD: Makefile,v 1.280 2015/05/09 22:23:11 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -590,6 +590,8 @@ SUBDIR+=	tex-mnsymbol
 SUBDIR+=	tex-mnsymbol-doc
 SUBDIR+=	tex-musixtex-fonts
 SUBDIR+=	tex-musixtex-fonts-doc
+SUBDIR+=	tex-mxedruli
+SUBDIR+=	tex-mxedruli-doc
 SUBDIR+=	tex-nanumtype1
 SUBDIR+=	tex-nanumtype1-doc
 SUBDIR+=	tex-ncntrsbk
