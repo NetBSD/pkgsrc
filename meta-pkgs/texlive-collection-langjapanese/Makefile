@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langjapanese
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -22,7 +22,7 @@ DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
 # depend japanese-otf-uptex
 # depend jfontmaps
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
-# depend lshort-japanese
+# lshort-japanese is documentation only
 # depend luatexja
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 # depend ptex2pdf

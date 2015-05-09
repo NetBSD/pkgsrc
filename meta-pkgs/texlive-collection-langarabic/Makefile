@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:52 markd Exp $
 
 DISTNAME=	collection-langarabic
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -21,7 +21,7 @@ DEPENDS+=	tex-arabtex-[0-9]*:../../print/tex-arabtex
 DEPENDS+=	tex-hyphen-arabic-[0-9]*:../../print/tex-hyphen-arabic
 DEPENDS+=	tex-hyphen-farsi-[0-9]*:../../print/tex-hyphen-farsi
 # depend imsproc
-# depend lshort-persian
+# lshort-persian is documentation only
 # depend persian-bib
 # depend simurgh
 # depend tram

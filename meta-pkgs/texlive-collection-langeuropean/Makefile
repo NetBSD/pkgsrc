@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langeuropean
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -64,10 +64,10 @@ DEPENDS+=	tex-hyphen-turkish-[0-9]*:../../print/tex-hyphen-turkish
 DEPENDS+=	tex-hyphen-uppersorbian-[0-9]*:../../print/tex-hyphen-uppersorbian
 DEPENDS+=	tex-hyphen-welsh-[0-9]*:../../print/tex-hyphen-welsh
 # depend lithuanian
-# depend lshort-dutch
-# depend lshort-finnish
-# depend lshort-slovenian
-# depend lshort-turkish
+# lshort-dutch is documentation only
+# lshort-finnish is documentation only
+# lshort-slovenian is documentation only
+# lshort-turkish is documentation only
 # depend swebib
 # depend turkmen
 
