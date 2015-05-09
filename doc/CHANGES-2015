@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2180 2015/05/08 19:36:48 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2181 2015/05/09 00:05:14 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3877,8 +3877,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Added graphics/tex-blockdraw_mp-doc version 2014 [wiz 2015-05-08]
 	Added graphics/tex-bpolynomial version 0.5 [wiz 2015-05-08]
 	Added graphics/tex-bpolynomial-doc version 0.5 [wiz 2015-05-08]
-	Added graphics/tex-cmarrows version v0.9 [wiz 2015-05-08]
-	Added graphics/tex-cmarrows-doc version v0.9 [wiz 2015-05-08]
+	Added graphics/tex-cmarrows version 0.9 [wiz 2015-05-08]
+	Added graphics/tex-cmarrows-doc version 0.9 [wiz 2015-05-08]
 	Added graphics/tex-drv version 0.97 [wiz 2015-05-08]
 	Added graphics/tex-drv-doc version 0.97 [wiz 2015-05-08]
 	Added graphics/tex-dviincl version 1.00 [wiz 2015-05-08]
