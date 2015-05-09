@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/11/23 14:24:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	Test-Class-0.48
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,9 @@ DEPENDS+=	p5-MRO-Compat>=0.11:../../devel/p5-MRO-Compat
 DEPENDS+=	{perl>=5.20.0,p5-Test-Simple>=1.001002}:../../devel/p5-Test-Simple
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.25:../../devel/p5-Test-Exception
+# for make test
+BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+BUILD_DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Class/.packlist

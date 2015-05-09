@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/01/18 12:24:46 wen Exp $
+# $NetBSD: Makefile,v 1.44 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	Log-Dispatch-2.44
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,9 @@ DEPENDS+=	p5-Devel-GlobalDestruction>=0:../../devel/p5-Devel-GlobalDestruction
 DEPENDS+=	p5-Dist-CheckConflicts>=0.02:../../devel/p5-Dist-CheckConflicts
 DEPENDS+=	p5-Params-Validate>=0.15:../../devel/p5-Params-Validate
 # Sys::Syslog >= 0.25 is in Perl core since 5.10.1
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=		auto/Log/Dispatch/.packlist
 

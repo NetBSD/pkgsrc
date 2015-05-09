@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/30 04:41:51 mef Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	MetaCPAN-Client-1.013000
 PKGNAME=	p5-${DISTNAME}
@@ -21,6 +21,8 @@ BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Any-URI-Escape-[0-9]*:../../www/p5-Any-URI-Escape
 BUILD_DEPENDS+=	p5-WWW-Mechanize-Cached-[0-9]*:../../www/p5-WWW-Mechanize-Cached
 
+# for make test
+BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 # TODO: Look for the dependencies in Build.PL.
 
 PERL5_MODULE_TYPE=	Module::Build
