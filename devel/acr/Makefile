@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/01/01 19:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/05/09 05:32:42 mef Exp $
 
 DISTNAME=		acr-0.9.9
 CATEGORIES=		devel
-MASTER_SITES=		-https://github.com/radare/${PKGBASE}/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=radare/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
