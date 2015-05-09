@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 00:03:56 markd Exp $
 
 DISTNAME=	cmarrows.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-v0.9
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.9
 TEXLIVE_REV=	24378
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
