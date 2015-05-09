@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langczechslovak
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -24,8 +24,8 @@ DEPENDS+=	tex-cs-[0-9]*:../../print/tex-cs
 DEPENDS+=	tex-hyphen-czech-[0-9]*:../../print/tex-hyphen-czech
 DEPENDS+=	tex-hyphen-slovak-[0-9]*:../../print/tex-hyphen-slovak
 # depend vlna
-# depend lshort-czech
-# depend lshort-slovak
+# lshort-czech is documentation only
+# lshort-slovak is documentation only
 # depend texlive-cz
 
 META_PACKAGE=	yes
