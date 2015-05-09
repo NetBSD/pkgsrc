@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2187 2015/05/09 07:00:16 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2188 2015/05/09 07:39:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3986,3 +3986,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xscreensaver to 5.32 [mef 2015-05-09]
 	Updated x11/xscreensaver-demo to 5.32 [mef 2015-05-09]
 	Updated devel/capstone to 3.0.3 [mef 2015-05-09]
+	Updated devel/easygit to 1.7.5.2 [mef 2015-05-09]
