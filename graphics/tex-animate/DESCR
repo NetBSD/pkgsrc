@@ -1,0 +1,5 @@
+The package provides an interface to create portable,
+JavaScript driven PDF animations from sets of graphics files or
+from inline graphics, such as LaTeX picture environment,
+PSTricks or pgf/TikZ generated pictures, or just from typeset
+text.
