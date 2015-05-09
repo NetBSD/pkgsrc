@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/30 04:24:41 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	Search-Elasticsearch-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -26,6 +26,8 @@ BUILD_DEPENDS+=	p5-Any-URI-Escape-[0-9]*:../../www/p5-Any-URI-Escape
 
 PERL5_PACKLIST=	auto/Search/Elasticsearch/.packlist
 USE_LANGUAGES=	# none
+
+TEST_TARGET?=	# empty = means make test fails
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

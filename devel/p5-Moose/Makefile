@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2015/04/18 11:51:15 wen Exp $
+# $NetBSD: Makefile,v 1.83 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	Moose-2.1404
 PKGNAME=	p5-${DISTNAME}
@@ -73,6 +73,10 @@ BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 #BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod # xt/author/pod.t
 #BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 #BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+# for make test
+BUILD_DEPENDS+=		p5-Module-Metadata>=1.000023:../../devel/p5-Module-Metadata
+BUILD_DEPENDS+=		p5-Test-DependentModules-[0-9]*:../../devel/p5-Test-DependentModules
+
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake
