@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2182 2015/05/09 00:57:52 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2183 2015/05/09 01:05:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3978,3 +3978,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-forks version 0.36 [wiz 2015-05-08]
 	Updated devel/cppcheck to 1.69 [bsiegert 2015-05-08]
 	Updated devel/p5-Test-Cmd to 1.08 [wen 2015-05-09]
+	Updated devel/p5-version to 0.9912 [wen 2015-05-09]
