@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
 
 DISTNAME=	collection-langkorean
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -17,7 +17,7 @@ DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-l
 # depend kotex-plain
 # depend kotex-utf
 # depend kotex-utils
-# depend lshort-korean
+# lshort-korean is documentation only
 DEPENDS+=	tex-nanumtype1-[0-9]*:../../fonts/tex-nanumtype1
 DEPENDS+=	tex-uhc-[0-9]*:../../fonts/tex-uhc
 
