@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2181 2015/05/09 00:05:14 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2182 2015/05/09 00:57:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Acme-Damn version 0.06 [wiz 2015-05-08]
 	Added devel/p5-forks version 0.36 [wiz 2015-05-08]
 	Updated devel/cppcheck to 1.69 [bsiegert 2015-05-08]
+	Updated devel/p5-Test-Cmd to 1.08 [wen 2015-05-09]
