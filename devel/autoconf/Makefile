@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/10/09 14:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2015/05/09 23:12:20 mef Exp $
 #
 # When updating this package, please update mk/gnu-config/config.guess,
 # mk/gnu-config/config.sub, and mk/gnu-config/missing as well.
@@ -37,6 +37,10 @@ AUTOMAKE_OVERRIDE=	NO
 
 # [GNU Autoconf 2.67] testsuite: 213 268 269 failed
 # 213?; other two ok because of buildlink
+# [GNU Autoconf 2.69] testsuite: 281 282 failed
+# 281: AC_NO_EXECUTABLES (working linker)              FAILED (c.at:221)
+# 282: AC_NO_EXECUTABLES (broken linker)               FAILED (c.at:231)
+
 TEST_TARGET=		check
 
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autoconf/autoconf.m4f

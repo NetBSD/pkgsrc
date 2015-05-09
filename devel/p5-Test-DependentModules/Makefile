@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/09 14:20:15 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 23:12:20 mef Exp $
 
 DISTNAME=	Test-DependentModules-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -11,14 +11,18 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 COMMENT=	Test all modules which depend on your module
 LICENSE=	artistic-2.0
 
+# for make test
 BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Module-Build-Tiny-[0-9]*:../../devel/p5-Module-Build-Tiny
 BUILD_DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
 BUILD_DEPENDS+=	p5-IO-Handle-Util-[0-9]*:../../devel/p5-IO-Handle-Util
 BUILD_DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 BUILD_DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
+BUILD_DEPENDS+=	p5-Module-Build-Tiny-[0-9]*:../../devel/p5-Module-Build-Tiny
+BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 BUILD_DEPENDS+=	p5-MetaCPAN-Client-[0-9]*:../../devel/p5-MetaCPAN-Client
+BUILD_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
 BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 BUILD_DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
 
 PERL5_PACKLIST=	auto/Test/DependentModules/.packlist
