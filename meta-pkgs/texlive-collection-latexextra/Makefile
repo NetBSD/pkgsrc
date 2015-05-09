@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 02:17:44 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -39,7 +39,7 @@ DEPENDS+=	tex-advdate-[0-9]*:../../print/tex-advdate
 # depend alterqcm
 # depend altfont
 # depend amsaddr
-# depend animate
+DEPENDS+=	tex-animate-[0-9]*:../../graphics/tex-animate
 DEPENDS+=	tex-anonchap-[0-9]*:../../print/tex-anonchap
 DEPENDS+=	tex-answers-[0-9]*:../../print/tex-answers
 # depend anyfontsize
