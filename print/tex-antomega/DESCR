@@ -1,0 +1,4 @@
+A language support package for Omega/Lambda. This replaces the
+original omega package for use with Lambda, and provides extra
+facilities (including Babel-like language switching, which
+eases porting of LaTeX documents to Lambda).
