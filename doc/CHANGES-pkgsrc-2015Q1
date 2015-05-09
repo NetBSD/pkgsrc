@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.29 2015/05/08 18:34:32 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.30 2015/05/09 15:18:15 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -110,3 +110,5 @@ Pullup ticket #4695 - requested by joerg
 devel/tavrasm: build fix
 Pullup ticket #4707 - requested by joerg
 pkgtools/libnbcompat: build fix
+Pullup ticket #4709 - requested by agc
+pkgtools/pkg_install: bug fix update
