@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2015/03/02 23:44:43 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2015/05/09 11:22:26 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-vector
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-vector
 HS_VECTOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-vector+=	hs-vector>=0.10.12
-BUILDLINK_ABI_DEPENDS.hs-vector+=	hs-vector>=0.10.12.2
+BUILDLINK_ABI_DEPENDS.hs-vector+=	hs-vector>=0.10.12.2nb1
 BUILDLINK_PKGSRCDIR.hs-vector?=	../../devel/hs-vector
 
 .include "../../devel/hs-primitive/buildlink3.mk"
