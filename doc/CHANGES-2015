@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2192 2015/05/09 22:27:40 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2193 2015/05/09 22:49:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3997,3 +3997,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-mxedruli version 3.3c [markd 2015-05-09]
 	Added fonts/tex-mxedruli-doc version 3.3c [markd 2015-05-09]
 	Updated meta-pkgs/texlive-collection-omega to 2014 [markd 2015-05-09]
+	Removed print/tex-bagpipetex successor print/tex-bagpipe [markd 2015-05-09]
+	Added print/tex-bagpipe version 3.02 [markd 2015-05-09]
+	Added print/tex-bagpipe-doc version 3.02 [markd 2015-05-09]
+	Updated meta-pkgs/texlive-collection-music to 2014pre2 [markd 2015-05-09]
