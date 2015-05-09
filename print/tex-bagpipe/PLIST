@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/09 22:44:22 markd Exp $
+share/texmf-dist/tex/generic/bagpipe/bagpipe.ini
+share/texmf-dist/tex/generic/bagpipe/bagpipe.tex
+share/texmf-dist/tex/generic/bagpipe/bagpipex.ini
