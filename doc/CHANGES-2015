@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2184 2015/05/09 01:37:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2185 2015/05/09 02:21:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -3980,3 +3980,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Cmd to 1.08 [wen 2015-05-09]
 	Updated devel/p5-version to 0.9912 [wen 2015-05-09]
 	Updated x11/xmon to 1.5.6 [mef 2015-05-09]
+	Added graphics/tex-animate version 2014 [markd 2015-05-09]
+	Added graphics/tex-animate-doc version 2014 [markd 2015-05-09]
+	Updated meta-pkgs/texlive-collection-latexextra to 2014pre2 [markd 2015-05-09]
