@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/09 22:26:45 markd Exp $
 
 DISTNAME=	collection-omega
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30388
@@ -14,11 +14,11 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 
 DEPENDS+=	tex-aleph-[0-9]*:../../print/tex-aleph
-# depend antomega
+DEPENDS+=	tex-antomega-[0-9]*:../../print/tex-antomega
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
-# depend mxedruli
+DEPENDS+=	tex-mxedruli-[0-9]*:../../fonts/tex-mxedruli
 DEPENDS+=	tex-omega-[0-9]*:../../print/tex-omega
-# depend omegaware
+# omegaware is entirely included in web2c
 DEPENDS+=	tex-otibet-[0-9]*:../../print/tex-otibet
 
 META_PACKAGE=	yes
