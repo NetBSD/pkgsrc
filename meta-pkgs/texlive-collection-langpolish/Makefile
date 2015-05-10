@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
 
 DISTNAME=	collection-langpolish
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -27,7 +27,7 @@ DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
 # depend qpxqtx
 # depend tap
 # depend tex-virtual-academy-pl
-# depend texlive-pl
+# texlive-pl is documentation only
 # depend utf8mex
 
 META_PACKAGE=	yes

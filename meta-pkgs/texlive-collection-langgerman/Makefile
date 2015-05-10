@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
 
 DISTNAME=	collection-langgerman
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -43,7 +43,7 @@ DEPENDS+=	tex-hyphen-german-[0-9]*:../../print/tex-hyphen-german
 # depend r_und_s
 # depend templates-fenn
 # depend templates-sommer
-# depend texlive-de
+# texlive-de is documentation only
 # depend tipa-de
 # depend translation-arsclassica-de
 # depend translation-biblatex-de
