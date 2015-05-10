@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/10 01:13:22 markd Exp $
 
 DISTNAME=	collection-langcjk
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	34022
@@ -13,15 +13,15 @@ COMMENT=	Chinese/Japanese/Korean (base) TeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-adobemapping-[0-9]*:../../fonts/tex-adobemapping
-# depend c90
+DEPENDS+=	tex-c90-[0-9]*:../../print/tex-c90
 DEPENDS+=	tex-cjk-[0-9]*:../../print/tex-cjk
-# depend cjkpunct
+DEPENDS+=	tex-cjkpunct-[0-9]*:../../print/tex-cjkpunct
 DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
-# depend dnp
+DEPENDS+=	tex-dnp-[0-9]*:../../print/tex-dnp
 DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
 DEPENDS+=	tex-norasi-c90-[0-9]*:../../fonts/tex-norasi-c90
-# depend xcjk2uni
-# depend zxjafont
+DEPENDS+=	tex-xcjk2uni-[0-9]*:../../print/tex-xcjk2uni
+DEPENDS+=	tex-zxjafont-[0-9]*:../../print/tex-zxjafont
 
 META_PACKAGE=	yes
 
