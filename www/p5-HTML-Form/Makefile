@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/05/10 02:43:37 mef Exp $
 #
 
 DISTNAME=		HTML-Form-6.03
@@ -15,6 +15,10 @@ LICENSE=		${PERL5_LICENSE}
 CONFLICTS+=		p5-libwww<6.00
 
 DEPENDS+=		p5-HTTP-Date>=6.00:../../www/p5-HTTP-Date
+# for make test
+BUILD_DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
+BUILD_DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+BUILD_DEPENDS+=		p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 
 USE_LANGUAGES=		# empty
 
