@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/10/14 14:43:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2015/05/10 15:15:06 mef Exp $
 
-DISTNAME=		CGI-FormBuilder-3.0501
-PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
+DISTNAME=		CGI-FormBuilder-3.09
+PKGNAME=		p5-${DISTNAME}00
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 EXTRACT_SUFX=		.tgz
@@ -20,6 +19,8 @@ DEPENDS+=		p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 
 post-extract:
 	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
+# garbage in the archive ?
+	(cd ${WRKSRC}; ${RM} -r PaxHeader )
 
 pre-configure:
 	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
