@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.632 2015/05/09 22:46:38 markd Exp $
+# $NetBSD: Makefile,v 1.633 2015/05/10 01:08:02 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -302,6 +302,8 @@ SUBDIR+=	tex-braket-doc
 SUBDIR+=	tex-breakcites
 SUBDIR+=	tex-breakcites-doc
 SUBDIR+=	tex-breqn
+SUBDIR+=	tex-c90
+SUBDIR+=	tex-c90-doc
 SUBDIR+=	tex-cancel
 SUBDIR+=	tex-cancel-doc
 SUBDIR+=	tex-capt-of
@@ -340,6 +342,8 @@ SUBDIR+=	tex-cite
 SUBDIR+=	tex-cite-doc
 SUBDIR+=	tex-cjk
 SUBDIR+=	tex-cjk-doc
+SUBDIR+=	tex-cjkpunct
+SUBDIR+=	tex-cjkpunct-doc
 SUBDIR+=	tex-cjkutils
 SUBDIR+=	tex-cjkutils-doc
 SUBDIR+=	tex-classpack
@@ -381,6 +385,7 @@ SUBDIR+=	tex-dehyph-exptl
 SUBDIR+=	tex-dehyph-exptl-doc
 SUBDIR+=	tex-dk-bib
 SUBDIR+=	tex-dk-bib-doc
+SUBDIR+=	tex-dnp
 SUBDIR+=	tex-draftwatermark
 SUBDIR+=	tex-draftwatermark-doc
 SUBDIR+=	tex-dvipdfmx
@@ -903,6 +908,8 @@ SUBDIR+=	tex-wrapfig
 SUBDIR+=	tex-wrapfig-doc
 SUBDIR+=	tex-xargs
 SUBDIR+=	tex-xargs-doc
+SUBDIR+=	tex-xcjk2uni
+SUBDIR+=	tex-xcjk2uni-doc
 SUBDIR+=	tex-xcolor
 SUBDIR+=	tex-xcolor-doc
 SUBDIR+=	tex-xcomment
@@ -929,6 +936,8 @@ SUBDIR+=	tex-ydoc
 SUBDIR+=	tex-ydoc-doc
 SUBDIR+=	tex-yfonts
 SUBDIR+=	tex-yfonts-doc
+SUBDIR+=	tex-zxjafont
+SUBDIR+=	tex-zxjafont-doc
 SUBDIR+=	tex4ht
 #SUBDIR+=	texlive				# place holder directory
 SUBDIR+=	transfig
