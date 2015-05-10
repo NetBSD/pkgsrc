@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/29 23:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/05/10 02:43:37 mef Exp $
 
 DISTNAME=	LWP-Protocol-https-6.06
 PKGNAME=	p5-${DISTNAME}
@@ -15,11 +15,13 @@ CONFLICTS+=	p5-libwww<6.02
 
 DEPENDS+=	p5-IO-Socket-SSL>=1.38:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Mozilla-CA>=20110101:../../security/p5-Mozilla-CA
-# needed for tests, but p5-libwww depends on this package
+# needed for tests (as LWP::UserAgent), but p5-libwww depends on this package
 #DEPENDS+=	p5-libwww>=6.06:../../www/p5-libwww
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/LWP/Protocol/https/.packlist
+
+TEST_TARGET?=	# to skip make test (but can be enabled by 'env TEST_TARGET=test make test')
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

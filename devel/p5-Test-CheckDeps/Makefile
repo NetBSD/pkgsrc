@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/01/28 01:57:41 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/05/10 02:43:38 mef Exp $
 #
 
 DISTNAME=	Test-CheckDeps-0.010
@@ -13,6 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta>=2.120920}:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
+
+# make test
+BUILD_DEPENDS+=	p5-Module-Metadata>=1.000023:../../devel/p5-Module-Metadata
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/CheckDeps/.packlist
