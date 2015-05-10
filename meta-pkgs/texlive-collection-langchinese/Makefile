@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:52 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:15 markd Exp $
 
 DISTNAME=	collection-langchinese
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -24,7 +24,7 @@ DEPENDS+=	tex-hyphen-chinese-[0-9]*:../../print/tex-hyphen-chinese
 # depend impatient-cn
 # depend latex-notes-zh-cn
 # lshort-chinese is documentation only
-# depend texlive-zh-cn
+# texlive-zh-cn is documentation only
 # depend xpinyin
 # depend zhmetrics
 # depend zhnumber

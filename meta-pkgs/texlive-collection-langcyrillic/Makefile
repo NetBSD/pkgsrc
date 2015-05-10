@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:52 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
 
 DISTNAME=	collection-langcyrillic
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -49,8 +49,8 @@ DEPENDS+=	tex-ruhyphen-[0-9]*:../../print/tex-ruhyphen
 # depend serbian-def-cyr
 # depend serbian-lig
 DEPENDS+=	tex-t2-[0-9]*:../../print/tex-t2
-# depend texlive-ru
-# depend texlive-sr
+# texlive-ru is documentation only
+# texlive-sr is documentation only
 DEPENDS+=	tex-ukrhyph-[0-9]*:../../print/tex-ukrhyph
 
 META_PACKAGE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
 
 DISTNAME=	collection-langfrench
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -35,7 +35,7 @@ DEPENDS+=	tex-hyphen-french-[0-9]*:../../print/tex-hyphen-french
 # depend mafr
 # depend tabvar
 # depend tdsfrmath
-# depend texlive-fr
+# texlive-fr is documentation only
 # depend translation-array-fr
 # depend translation-dcolumn-fr
 # depend translation-natbib-fr
