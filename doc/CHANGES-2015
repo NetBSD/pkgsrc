@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2194 2015/05/10 01:14:09 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2195 2015/05/10 02:26:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-zxjafont version 0.2 [markd 2015-05-10]
 	Added print/tex-zxjafont-doc version 0.2 [markd 2015-05-10]
 	Updated meta-pkgs/texlive-collection-langcjk to 2014 [markd 2015-05-10]
+	Added textproc/p5-Unicode-CaseFold version 1.00 [mef 2015-05-10]
