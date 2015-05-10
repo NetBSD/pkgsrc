@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/03/03 03:30:55 obache Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/10 19:47:03 joerg Exp $
 #
 
-PKGNAME=	pkgsurvey-0.0
+PKGNAME=	pkgsurvey-1.0
 CATEGORIES=	pkgtools
 
 MAINTAINER=	agc@pkgsrc.org
