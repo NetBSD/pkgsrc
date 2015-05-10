@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2198 2015/05/10 03:18:23 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2199 2015/05/10 07:34:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-Wrapper to 1.05 [mef 2015-05-10]
 	Updated textproc/p5-XML-TreePP to 0.43 [mef 2015-05-10]
 	Updated textproc/p5-XML-Writer to 0.625 [mef 2015-05-10]
+	Updated mail/dovecot2 to 2.2.16nb2 [taca 2015-05-10]
