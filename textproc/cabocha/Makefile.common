@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2015/03/15 17:00:29 hiramatsu Exp $
+# $NetBSD: Makefile.common,v 1.9 2015/05/10 13:27:11 mef Exp $
 # used by textproc/cabocha/Makefile
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
@@ -13,7 +13,8 @@ DISTINFO_FILE=	${.CURDIR}/../../textproc/cabocha/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/cabocha/patches
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/cabocha/
+# (Japanese only page ?)
+HOMEPAGE=	http://taku910.github.io/cabocha/
 LICENSE=	gnu-lgpl-v2.1 OR modified-bsd
 
 RESTRICTED=	Included model is not re-distributed without prior permission.
