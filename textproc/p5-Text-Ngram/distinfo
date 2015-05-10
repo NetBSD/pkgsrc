@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/24 09:40:06 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/05/10 02:29:41 mef Exp $
 
-SHA1 (Text-Ngram-0.14.tar.gz) = aefd9b21399c72686cc58ec6b35b6dd99108b1a2
-RMD160 (Text-Ngram-0.14.tar.gz) = 83d88c2d1c8c9553d1dbdcce5b17fe151906b6cd
-Size (Text-Ngram-0.14.tar.gz) = 22264 bytes
+SHA1 (Text-Ngram-0.15.tar.gz) = 642e1df08121f4cf99a1b2668d0ab8ab79f0f210
+RMD160 (Text-Ngram-0.15.tar.gz) = 98f1b648924c91f595db1ac139a11e611f01a397
+Size (Text-Ngram-0.15.tar.gz) = 22396 bytes
