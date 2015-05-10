@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2015/01/20 23:49:52 wiz Exp $
+# $NetBSD: options.mk,v 1.34 2015/05/10 12:55:03 ryoon Exp $
 
 # Recommended package options for various setups:
 #
@@ -78,7 +78,7 @@ CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 ###
-### Access Control List support.
+### File Alteration Monitor support.
 ###
 PLIST_VARS+=		fam
 .if !empty(PKG_OPTIONS:Mfam)
