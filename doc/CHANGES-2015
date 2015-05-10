@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2199 2015/05/10 07:34:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2200 2015/05/10 08:12:11 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4023,3 +4023,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-TreePP to 0.43 [mef 2015-05-10]
 	Updated textproc/p5-XML-Writer to 0.625 [mef 2015-05-10]
 	Updated mail/dovecot2 to 2.2.16nb2 [taca 2015-05-10]
+	Updated net/youtube-dl to 2015.05.04 [bsiegert 2015-05-10]
