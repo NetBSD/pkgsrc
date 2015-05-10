@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2193 2015/05/09 22:49:56 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2194 2015/05/10 01:14:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4001,3 +4001,13 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-bagpipe version 3.02 [markd 2015-05-09]
 	Added print/tex-bagpipe-doc version 3.02 [markd 2015-05-09]
 	Updated meta-pkgs/texlive-collection-music to 2014pre2 [markd 2015-05-09]
+	Added print/tex-c90 version 2014 [markd 2015-05-10]
+	Added print/tex-c90-doc version 2014 [markd 2015-05-10]
+	Added print/tex-dnp version 2014 [markd 2015-05-10]
+	Added print/tex-cjkpunct version 4.8.1.2 [markd 2015-05-10]
+	Added print/tex-cjkpunct-doc version 4.8.1.2 [markd 2015-05-10]
+	Added print/tex-xcjk2uni version 0.4 [markd 2015-05-10]
+	Added print/tex-xcjk2uni-doc version 0.4 [markd 2015-05-10]
+	Added print/tex-zxjafont version 0.2 [markd 2015-05-10]
+	Added print/tex-zxjafont-doc version 0.2 [markd 2015-05-10]
+	Updated meta-pkgs/texlive-collection-langcjk to 2014 [markd 2015-05-10]
