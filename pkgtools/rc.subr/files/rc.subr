@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.11 2014/06/04 14:16:00 ryoon Exp $
+# $NetBSD: rc.subr,v 1.12 2015/05/10 19:20:09 bsiegert Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,6 +67,9 @@ _RCARG_su="-m"
 _osname=$(uname -s)
 _osrelease=$(uname -r)
 case $_osname in
+	Darwin)
+		_RCCMD_echo="/bin/echo"
+		;;
 	SunOS)
 		_RCCMD_chown="/bin/chown"
 #		_RCCMD_ci="/usr/bin/ci"			# not in Solaris 9
