@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2196 2015/05/10 02:38:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2197 2015/05/10 03:05:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4015,3 +4015,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Weaver to 4.012 [mef 2015-05-10]
 	Updated textproc/p5-Text-Ngram to 0.15 [mef 2015-05-10]
 	Updated textproc/p5-Text-Quoted to 2.09 [mef 2015-05-10]
+	Updated textproc/p5-Text-SpellChecker to 0.14 [mef 2015-05-10]
+	Updated textproc/p5-Text-TabularDisplay to 1.38 [mef 2015-05-10]
+	Updated textproc/p5-Text-Trac to 0.18 [mef 2015-05-10]
+	Updated textproc/p5-Text-Unidecode to 1.23 [mef 2015-05-10]
+	Updated textproc/p5-Text-Wrapper to 1.05 [mef 2015-05-10]
