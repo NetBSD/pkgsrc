@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/04/21 04:16:06 mef Exp $
+# $NetBSD: Makefile,v 1.10 2015/05/10 01:21:58 mef Exp $
 
 DISTNAME=	Test-Warnings-0.021
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
 # for make test
-BUILD_DEPENDS=	p5-Module-Metadata>=1.000023:../../devel/p5-Module-Metadata
+BUILD_DEPENDS+=	p5-Module-Metadata>=1.000023:../../devel/p5-Module-Metadata
 
 PERL5_PACKLIST=		auto/Test/Warnings/.packlist
 
