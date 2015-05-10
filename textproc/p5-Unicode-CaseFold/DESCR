@@ -1,0 +1,16 @@
+What is Case-Folding?
+
+In non-Unicode contexts, a common idiom to compare two strings
+case-insensitively is lc($this) eq lc($that). Before comparing two strings
+we normalize them to an all-lowercase version. "Hello", "HELLO", and
+"HeLlO" all have the same lowercase form ("hello"), so it doesn't matter
+which one we start with; they are all equal to one another after lc.
+
+In Unicode, things aren't so simple. A Unicode character might have
+mappings for uppercase, lowercase, and titlecase, and the lowercase mapping
+of the uppercase mapping of a given character might not be the character
+that you started with! For example lc(uc("\N{LATIN SMALL LETTER SHARP S"))
+is "ss", not the eszett we started off with! Case-folding is a part of the
+Unicode standard that allows any two strings that differ from one another
+only by case to map to the same "case-folded" form, even when those strings
+include characters with complex case-mappings.
