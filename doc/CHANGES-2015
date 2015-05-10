@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2201 2015/05/10 14:34:01 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2202 2015/05/10 15:16:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4025,3 +4025,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/dovecot2 to 2.2.16nb2 [taca 2015-05-10]
 	Updated net/youtube-dl to 2015.05.04 [bsiegert 2015-05-10]
 	Updated www/p5-App-Nopaste to 1.004 [mef 2015-05-10]
+	Updated www/p5-CGI-Compile to 0.19 [mef 2015-05-10]
+	Updated www/p5-CGI-Fast to 2.09 [mef 2015-05-10]
+	Updated www/p5-CGI-FormBuilder to 3.0900 [mef 2015-05-10]
