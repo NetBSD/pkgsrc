@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2204 2015/05/11 05:18:22 morr Exp $
+$NetBSD: CHANGES-2015,v 1.2205 2015/05/11 10:39:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI-FormBuilder to 3.0900 [mef 2015-05-10]
 	Updated pkgtools/rc.subr to 20150510 [bsiegert 2015-05-10]
 	Updated www/wordpress to 4.2.2 [morr 2015-05-11]
+	Updated net/sslh to 1.17nb1 [wiz 2015-05-11]
