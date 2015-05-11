@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2210 2015/05/11 14:46:21 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2211 2015/05/11 21:43:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/go-oauth2 version 20150508 [bsiegert 2015-05-11]
 	Added devel/google-api-go-client version 20150507 [bsiegert 2015-05-11]
 	Added devel/go-tools version 20150504 [bsiegert 2015-05-11]
+	Updated graphics/MesaLib to 10.5.5 [tnn 2015-05-11]
