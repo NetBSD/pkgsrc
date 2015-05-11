@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/05/09 05:47:44 mef Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/11 14:24:51 joerg Exp $
 
 DISTNAME=	appdata_tools-0.1.7
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_PROJECT=	appdata-tools
 # -0.1.7 into _0_1_7
-GITHUB_TAG=	${DISTNAME:S/./_/gS/-/_/}
+GITHUB_TAG=	${DISTNAME:S/./_/g:S/-/_/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hughsie/appdata-tools/
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-WRKSRC=		${WRKDIR}/appdata-tools-${DISTNAME}
+WRKSRC=		${WRKDIR}/appdata-tools-${GITHUB_TAG}
 USE_TOOLS+=	autoconf automake autoreconf gmake intltool intltoolize
 USE_TOOLS+=	pkg-config xgettext
 GNU_CONFIGURE=	yes
