@@ -1,28 +1,10 @@
-$NetBSD: patch-configure,v 1.5 2015/01/22 11:38:58 obache Exp $
+$NetBSD: patch-configure,v 1.5.2.1 2015/05/11 19:42:27 tron Exp $
 
-* int64_t GNU atomic operations are used, check them instead.
 * Portability fix.
 
---- configure.orig	2015-01-13 12:54:26.000000000 +0000
+--- configure.orig	2015-05-01 11:29:25.000000000 +0000
 +++ configure
-@@ -20128,8 +20128,14 @@ $as_echo "cross-compiler cant tell" >&6;
- else
-   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
--
--    int n = 0;
-+$ac_includes_default
-+#ifdef HAVE_INTTYPES_H
-+# include <inttypes.h>
-+#endif
-+#ifdef HAVE_STDINT_H
-+# include <stdint.h>
-+#endif
-+    int64_t n = 0;
- 
- int
- main ()
-@@ -32600,7 +32606,7 @@ done
+@@ -32733,7 +32733,7 @@ done
  ## Please see the COPYING and CONTRIBUTORS files for details.
  ##
  
@@ -31,12 +13,12 @@ $NetBSD: patch-configure,v 1.5 2015/01/22 11:38:58 obache Exp $
    BUILD_HELPER="kerberos"
  fi
  
-@@ -33141,7 +33147,7 @@ done
+@@ -33292,7 +33292,7 @@ done
  ## Please see the COPYING and CONTRIBUTORS files for details.
  ##
  
 -if test "x$with_krb5" == "xyes"; then
 +if test "x$with_krb5" = "xyes"; then
    BUILD_HELPER="kerberos_ldap_group"
- 
-   squid_cv_check_sasl="auto"
+   if test "x$with_apple_krb5" = "xyes" ; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lresolv" >&5
