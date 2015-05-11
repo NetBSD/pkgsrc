@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/11 13:02:21 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/google.golang.org/cloud/compute/metadata.a
+gopkg/pkg/${GO_PLATFORM}/google.golang.org/cloud/internal.a
+gopkg/src/google.golang.org/cloud/compute/metadata/go13.go
+gopkg/src/google.golang.org/cloud/compute/metadata/metadata.go
+gopkg/src/google.golang.org/cloud/container/container.go
+gopkg/src/google.golang.org/cloud/internal/cloud.go
