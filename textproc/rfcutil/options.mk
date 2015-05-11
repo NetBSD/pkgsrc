@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2009/01/04 15:37:07 hubertf Exp $
+# $NetBSD: options.mk,v 1.2 2015/05/11 14:07:44 bsiegert Exp $
 
 PKG_OPTIONS_VAR=			PKG_OPTIONS.rfcutil
 PKG_OPTIONS_OPTIONAL_GROUPS=		rfcutil-browser
 PKG_OPTIONS_GROUP.rfcutil-browser=	links lynx w3m
-PKG_SUGGESTED_OPTIONS=			links
+PKG_SUGGESTED_OPTIONS=			lynx
 
 .include "../../mk/bsd.options.mk"
 
