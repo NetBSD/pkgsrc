@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2208 2015/05/11 13:28:39 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2209 2015/05/11 14:30:02 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4034,3 +4034,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/the_silver_searcher to 0.30.0 [wiz 2015-05-11]
 	Added net/gcloud-golang-metadata version 20150310 [bsiegert 2015-05-11]
 	Added security/go-oauth2 version 20150508 [bsiegert 2015-05-11]
+	Added devel/google-api-go-client version 20150507 [bsiegert 2015-05-11]
