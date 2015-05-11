@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/15 18:31:52 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/11 14:58:24 mef Exp $
 #
 
 DISTNAME=	CRF++-0.58
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://crfpp.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/crfpp
+HOMEPAGE=	http://taku910.github.io/crfpp/
 COMMENT=	Yet Another CRF toolkit
 LICENSE=	gnu-lgpl-v2.1 OR 2-clause-bsd
 
