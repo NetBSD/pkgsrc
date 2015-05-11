@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1067 2015/04/30 06:22:33 mef Exp $
+# $NetBSD: Makefile,v 1.1068 2015/05/11 13:02:21 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -145,6 +145,7 @@ SUBDIR+=	freerdp
 SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	gated
+SUBDIR+=	gcloud-golang-metadata
 SUBDIR+=	get-flash-videos
 SUBDIR+=	get_iplayer
 SUBDIR+=	gethost
