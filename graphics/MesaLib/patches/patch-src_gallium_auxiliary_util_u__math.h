@@ -1,20 +1,22 @@
-$NetBSD: patch-src_gallium_auxiliary_util_u__math.h,v 1.1 2015/04/25 11:19:18 tnn Exp $
+$NetBSD: patch-src_gallium_auxiliary_util_u__math.h,v 1.2 2015/05/11 21:33:58 tnn Exp $
 
 The C99 "restrict" keyword is not valid in C++, but most compilers will
 understand __restrict.
 
---- src/gallium/auxiliary/util/u_math.h.orig	2015-03-28 18:20:39.000000000 +0000
+--- src/gallium/auxiliary/util/u_math.h.orig   2015-03-28 18:20:39.000000000 +0000
 +++ src/gallium/auxiliary/util/u_math.h
-@@ -531,6 +531,9 @@ unsigned ffs( unsigned u )
- #elif defined(__MINGW32__) || defined(PIPE_OS_ANDROID)
- #define ffs __builtin_ffs
- #define ffsll __builtin_ffsll
+@@ -528,7 +528,10 @@ unsigned ffs( unsigned u )
+ 
+    return i;
+ }
+-#elif defined(__MINGW32__) || defined(PIPE_OS_ANDROID)
 +#elif defined(__NetBSD__)
 +#include <sys/bitops.h>
 +#define ffsll ffs64
++#elif defined(__GNUC__)
+ #define ffs __builtin_ffs
+ #define ffsll __builtin_ffsll
  #endif
- 
- #endif /* FFS_DEFINED */
 @@ -821,6 +824,11 @@ util_bswap16(uint16_t n)
            (n << 8);
  }

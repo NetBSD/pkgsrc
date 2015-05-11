@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.91 2015/04/29 14:12:54 sevan Exp $
+$NetBSD: distinfo,v 1.92 2015/05/11 21:33:58 tnn Exp $
 
 SHA1 (mesa-10.5.3.tar.xz) = 16ae80abe85b29fa118e1910a224c883964ae6c0
 RMD160 (mesa-10.5.3.tar.xz) = 017492351cb3956d3b36eb7c22ad99846b77f7a2
@@ -6,7 +6,7 @@ Size (mesa-10.5.3.tar.xz) = 6988300 bytes
 SHA1 (patch-configure) = 3fc150370e36fc49382b491d907608f00cf99a72
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43440ab131b8807f6840975
-SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = a48959f10f09decfaf66180bd69c84ac518cd9d9
+SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = b126390d4a8ee495edfb4c3b1dfdab981445969e
 SHA1 (patch-src_gallium_auxiliary_util_u__network.c) = 283f505af780071dc9fd7914f8065e3fb7d8a4fd
 SHA1 (patch-src_gallium_auxiliary_util_u__network.h) = c6106d67b4fa9db0d790474182d6e0ce0c5da677
 SHA1 (patch-src_gallium_drivers_nouveau_codegen_nv50__ir__peephole.cpp) = 5fc2ef7eafac3006896af96bac8176c79b17cfdc
