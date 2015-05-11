@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/04/19 19:02:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/05/11 10:39:26 wiz Exp $
 
 DISTNAME=	sslh-1.17
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
 GITHUB_TAG=	v${PKGVERSION}
@@ -31,7 +32,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sslh-fork ${DESTDIR}${PREFIX}/sbin/sslh
 	${INSTALL_PROGRAM} ${WRKSRC}/sslh-select ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/sslh.8.gz ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/scripts/* ${DESTDIR}${EGDIR}/scripts
+	${INSTALL_DATA} ${WRKSRC}/scripts/*.* ${DESTDIR}${EGDIR}/scripts
+	${INSTALL_DATA} ${WRKSRC}/scripts/fail2ban/* ${DESTDIR}${EGDIR}/scripts/fail2ban
 	${INSTALL_DATA} ${WRKSRC}/example.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/basic.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
