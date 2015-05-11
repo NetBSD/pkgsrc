@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2015/05/04 19:48:00 morr Exp $
+@comment $NetBSD: PLIST,v 1.25 2015/05/11 05:16:31 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -482,7 +482,6 @@ share/wordpress/wp-content/themes/twentyfifteen/genericons/Genericons.ttf
 share/wordpress/wp-content/themes/twentyfifteen/genericons/Genericons.woff
 share/wordpress/wp-content/themes/twentyfifteen/genericons/LICENSE.txt
 share/wordpress/wp-content/themes/twentyfifteen/genericons/README.md
-share/wordpress/wp-content/themes/twentyfifteen/genericons/example.html
 share/wordpress/wp-content/themes/twentyfifteen/genericons/genericons.css
 share/wordpress/wp-content/themes/twentyfifteen/header.php
 share/wordpress/wp-content/themes/twentyfifteen/image.php
@@ -531,7 +530,6 @@ share/wordpress/wp-content/themes/twentyfourteen/genericons/COPYING.txt
 share/wordpress/wp-content/themes/twentyfourteen/genericons/Genericons-Regular.otf
 share/wordpress/wp-content/themes/twentyfourteen/genericons/LICENSE.txt
 share/wordpress/wp-content/themes/twentyfourteen/genericons/README.txt
-share/wordpress/wp-content/themes/twentyfourteen/genericons/example.html
 share/wordpress/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.eot
 share/wordpress/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.svg
 share/wordpress/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.ttf
@@ -593,7 +591,6 @@ share/wordpress/wp-content/themes/twentythirteen/genericons/COPYING.txt
 share/wordpress/wp-content/themes/twentythirteen/genericons/Genericons-Regular.otf
 share/wordpress/wp-content/themes/twentythirteen/genericons/LICENSE.txt
 share/wordpress/wp-content/themes/twentythirteen/genericons/README.txt
-share/wordpress/wp-content/themes/twentythirteen/genericons/example.html
 share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.eot
 share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.svg
 share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.ttf
