@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2102 2015/05/11 14:28:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2103 2015/05/11 14:45:31 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -273,6 +273,7 @@ SUBDIR+=	gnustep-examples
 SUBDIR+=	gnustep-make
 SUBDIR+=	gnustep-objc
 SUBDIR+=	gnustep-objc-lf2
+SUBDIR+=	go-tools
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	google-api-go-client
