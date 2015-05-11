@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/05/02 05:56:07 markd Exp $
+# $NetBSD: Makefile,v 1.18 2015/05/11 10:32:54 wiz Exp $
 #
 
 DISTNAME=	asymptote-2.15
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 BUILD_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
-BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../wip/tex-texinfo
+BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 USE_TOOLS+=	gs
