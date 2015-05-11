@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2206 2015/05/11 11:09:07 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2207 2015/05/11 13:12:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4032,3 +4032,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/wordpress to 4.2.2 [morr 2015-05-11]
 	Updated net/sslh to 1.17nb1 [wiz 2015-05-11]
 	Updated textproc/the_silver_searcher to 0.30.0 [wiz 2015-05-11]
+	Added net/gcloud-golang-metadata version 20150310 [bsiegert 2015-05-11]
