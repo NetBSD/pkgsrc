@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/11 10:35:19 wiz Exp $
 
 DISTNAME=	collection-langczechslovak
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -16,7 +16,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	tex-babel-czech-[0-9]*:../../print/tex-babel-czech
 DEPENDS+=	tex-babel-slovak-[0-9]*:../../print/tex-babel-slovak
 # depend cnbwp
-DEPENDS+=	tex-cs-[0-9]*:../../print/tex-cs
+DEPENDS+=	tex-cs-[0-9]*:../../fonts/tex-cs
 # depend csbulletin
 # depend cslatex
 # depend csplain
