@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/03/09 23:36:20 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/05/11 11:08:56 wiz Exp $
 
-DISTNAME=	the_silver_searcher-0.29.1
+DISTNAME=	the_silver_searcher-0.30.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggreer/}
 
