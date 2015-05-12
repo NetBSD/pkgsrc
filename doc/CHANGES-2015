@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2214 2015/05/12 14:02:08 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2215 2015/05/12 15:46:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/icecast to 2.4.2 [kim 2015-05-12]
 	Added net/samba4 version 4.2.1 [ryoon 2015-05-12]
 	Updated lang/mawk to 1.3.4.150503 [wen 2015-05-12]
+	Updated sysutils/pv to 1.6.0 [bsiegert 2015-05-12]
