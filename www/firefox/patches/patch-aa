@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2015-03-27 02:20:20.000000000 +0000
+--- configure.in.orig	2015-05-04 00:43:23.000000000 +0000
 +++ configure.in
-@@ -1767,7 +1767,13 @@ Linux)
+@@ -1794,7 +1794,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1871,7 +1877,7 @@ case "$host" in
+@@ -1898,7 +1904,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -1995,7 +2001,6 @@ case "$target" in
+@@ -2022,7 +2028,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2615,8 +2620,7 @@ MOZ_CXX11
+@@ -2641,8 +2646,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3648,6 +3652,14 @@ if test -n "$YASM"; then
+@@ -3663,6 +3667,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3675,11 +3687,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3690,11 +3702,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -105,7 +105,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
      MOZ_GTK3_CFLAGS="-I${_topsrcdir}/widget/gtk/compat-gtk3 $MOZ_GTK3_CFLAGS"
      dnl Contrary to MOZ_GTK2_LIBS, MOZ_GTK3_LIBS needs to be literally added to TK_LIBS instead
      dnl of a make reference because of how TK_LIBS is mangled in toolkit/library/moz.build
-@@ -5137,6 +5149,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5149,6 +5161,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -115,7 +115,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5240,6 +5255,223 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5252,6 +5267,157 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -170,87 +170,21 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
 +AC_SUBST(MOZ_NATIVE_TREMOR)
 +
 +dnl ========================================================
-+dnl Check for libopus
++dnl Check for libcelt
 +dnl ========================================================
 +
-+MOZ_ARG_WITH_BOOL(system-opus,
-+[  --with-system-opus      Use system libopus (located with pkgconfig)],
-+MOZ_NATIVE_OPUS=1,
-+MOZ_NATIVE_OPUS=)
++MOZ_ARG_WITH_BOOL(system-celt,
++[  --with-system-celt      Use system libcelt (located with pkgconfig)],
++MOZ_NATIVE_CELT=1,
++MOZ_NATIVE_CELT=)
 +
-+if test -n "$MOZ_NATIVE_OPUS"; then
-+    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
++if test -n "$MOZ_NATIVE_CELT"; then
++    PKG_CHECK_MODULES(MOZ_CELT, celt)
 +else
-+    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
++    MOZ_CELT_CFLAGS='-I$(topsrcdir)/media/libopus'
 +fi
 +
-+AC_SUBST(MOZ_NATIVE_OPUS)
-+
-+dnl ========================================================
-+dnl Check for libtheora
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-theora,
-+[  --with-system-theora    Use system libtheora (located with pkgconfig)],
-+MOZ_NATIVE_THEORA=1,
-+MOZ_NATIVE_THEORA=)
-+
-+if test -n "$MOZ_NATIVE_THEORA"; then
-+    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_THEORA)
-+
-+dnl ========================================================
-+dnl Check for libspeex resampler
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-speex,
-+[  --with-system-speex     Use system libspeex (located with pkgconfig)],
-+MOZ_NATIVE_SPEEX=1,
-+MOZ_NATIVE_SPEEX=)
-+
-+if test -n "$MOZ_NATIVE_SPEEX"; then
-+    PKG_CHECK_MODULES(MOZ_SPEEX, speexdsp >= 1.2)
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_SPEEX)
-+
-+dnl ========================================================
-+dnl Check for libsoundtouch
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-soundtouch,
-+[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
-+MOZ_NATIVE_SOUNDTOUCH=1,
-+MOZ_NATIVE_SOUNDTOUCH=)
-+
-+if test -n "$MOZ_NATIVE_SOUNDTOUCH"; then
-+    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.8.0)
-+
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-+    _SAVE_CXXFLAGS=$CXXFLAGS
-+    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
-+    AC_CACHE_CHECK(for soundtouch sample type,
-+                   ac_cv_soundtouch_sample_type,
-+                   [AC_TRY_COMPILE([#include <SoundTouch.h>
-+                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
-+                                    #error soundtouch expects float samples
-+                                    #endif],
-+                                   [],
-+                                   [ac_cv_soundtouch_sample_type=short],
-+                                   [ac_cv_soundtouch_sample_type=float])])
-+    CXXFLAGS=$_SAVE_CXXFLAGS
-+    AC_LANG_RESTORE
-+
-+    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
-+         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
-+        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
-+    fi
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
++AC_SUBST(MOZ_NATIVE_CELT)
 +
 +dnl ========================================================
 +dnl Check for libopus
@@ -339,7 +273,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5594,6 +5826,67 @@ fi
+@@ -5606,6 +5772,67 @@ fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -407,7 +341,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5607,12 +5900,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+@@ -5619,12 +5846,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
     MOZ_ALSA=1,
     MOZ_ALSA=)
  
@@ -419,7 +353,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  if test -n "$MOZ_ALSA"; then
      PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
           [echo "$MOZ_ALSA_PKG_ERRORS"
-           AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
+           AC_MSG_ERROR([Need alsa for audio output on Linux. (On Ubuntu, you might try installing the package libasound2-dev.)])])
  fi
  
 +if test -n "$DISABLE_LIBASOUND_DLOPEN"; then
@@ -431,7 +365,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
  AC_SUBST(MOZ_ALSA)
  
  dnl ========================================================
-@@ -6036,7 +6340,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -6046,7 +6284,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -442,7 +376,7 @@ $NetBSD: patch-aa,v 1.36 2015/04/05 12:54:11 ryoon Exp $
          ;;
      WINNT)
          MOZ_GAMEPAD_BACKEND=windows
-@@ -8033,6 +8339,49 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8066,6 +8306,49 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
