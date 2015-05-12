@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type='manifest' name='@SMF_NAME@'>
+<service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+	<dependency name='fs-root' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/system/filesystem/root' />
+	</dependency>
+	<dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/network/service'/>
+	</dependency>
+
+	<instance name='smbd' enabled='false'>
+		<exec_method name='start'   type='method' exec='@PREFIX@/sbin/smbd -D' timeout_seconds='0'/>
+		<exec_method name='stop'    type='method' exec=':kill'      timeout_seconds='30'/>
+		<exec_method name='refresh' type='method' exec=':kill -HUP' timeout_seconds='0'/>
+		<template>
+			<common_name>
+				<loctext xml:lang='C'>Samba SMB/CIFS services</loctext>
+			</common_name>
+			<documentation>
+				<manpage title='smbd' section='8' manpath='man'/>
+			</documentation>
+		</template>
+	</instance>
+
+	<instance name='nmbd' enabled='false'>
+		<exec_method name='start'   type='method' exec='@PREFIX@/sbin/nmbd -D' timeout_seconds='0'/>
+		<exec_method name='stop'    type='method' exec=':kill'      timeout_seconds='30'/>
+		<exec_method name='refresh' type='method' exec=':kill -HUP' timeout_seconds='0'/>
+		<template>
+			<common_name>
+				<loctext xml:lang='C'>Samba NetBIOS name server</loctext>
+			</common_name>
+			<documentation>
+				<manpage title='nmbd' section='8' manpath='man'/>
+			</documentation>
+		</template>
+	</instance>
+
+	<stability value='Unstable'/>
+</service>
+</service_bundle>
