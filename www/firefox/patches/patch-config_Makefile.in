@@ -1,8 +1,8 @@
-$NetBSD: patch-config_Makefile.in,v 1.4 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-config_Makefile.in,v 1.5 2015/05/12 22:48:54 ryoon Exp $
 
---- config/Makefile.in.orig	2014-04-18 02:02:39.000000000 +0000
+--- config/Makefile.in.orig	2015-05-04 00:43:23.000000000 +0000
 +++ config/Makefile.in
-@@ -77,6 +77,15 @@ export:: $(export-preqs)
+@@ -77,6 +77,16 @@ export:: $(export-preqs)
  		-DMOZ_NATIVE_LIBEVENT=$(MOZ_NATIVE_LIBEVENT) \
  		-DMOZ_NATIVE_LIBVPX=$(MOZ_NATIVE_LIBVPX) \
  		-DMOZ_NATIVE_ICU=$(MOZ_NATIVE_ICU) \
@@ -12,6 +12,7 @@ $NetBSD: patch-config_Makefile.in,v 1.4 2014/04/30 15:07:18 ryoon Exp $
 +		-DMOZ_NATIVE_THEORA=$(MOZ_NATIVE_THEORA) \
 +		-DMOZ_NATIVE_VORBIS=$(MOZ_NATIVE_VORBIS) \
 +		-DMOZ_NATIVE_TREMOR=$(MOZ_NATIVE_TREMOR) \
++		-DMOZ_NATIVE_CELT=$(MOZ_NATIVE_CELT) \
 +		-DMOZ_NATIVE_OPUS=$(MOZ_NATIVE_OPUS) \
 +		-DMOZ_NATIVE_SPEEX=$(MOZ_NATIVE_SPEEX) \
 +		-DMOZ_NATIVE_SOUNDTOUCH=$(MOZ_NATIVE_SOUNDTOUCH) \

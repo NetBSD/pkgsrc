@@ -1,6 +1,6 @@
-$NetBSD: patch-accessible_atk_Platform.cpp,v 1.1 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-accessible_atk_Platform.cpp,v 1.2 2015/05/12 22:48:54 ryoon Exp $
 
---- accessible/atk/Platform.cpp.orig	2015-03-27 02:20:15.000000000 +0000
+--- accessible/atk/Platform.cpp.orig	2015-05-04 00:43:17.000000000 +0000
 +++ accessible/atk/Platform.cpp
 @@ -18,8 +18,9 @@
  #include <dbus/dbus.h>
@@ -55,7 +55,7 @@ $NetBSD: patch-accessible_atk_Platform.cpp,v 1.1 2015/04/05 12:54:11 ryoon Exp $
  
  void
  a11y::PlatformInit()
-@@ -175,13 +180,17 @@ a11y::PlatformInit()
+@@ -175,14 +180,17 @@ a11y::PlatformInit()
  
    // Init atk-bridge now
    PR_SetEnv("NO_AT_BRIDGE=0");
@@ -63,23 +63,24 @@ $NetBSD: patch-accessible_atk_Platform.cpp,v 1.1 2015/04/05 12:54:11 ryoon Exp $
 -  rv = LoadGtkModule(sAtkBridge);
 -  if (NS_SUCCEEDED(rv)) {
 -    (*sAtkBridge.init)();
+-  }
+-#else
+-  atk_bridge_adaptor_init(nullptr, nullptr);
 +#if (MOZ_WIDGET_GTK == 3)
 +  if (atk_bridge_adaptor_init) {
 +    atk_bridge_adaptor_init(nullptr, nullptr);
-+  } else {
-+#endif
-+    rv = LoadGtkModule(sAtkBridge);
++  } else
+ #endif
++  {
++    nsresult rv = LoadGtkModule(sAtkBridge);
 +    if (NS_SUCCEEDED(rv)) {
 +      (*sAtkBridge.init)();
 +    }
-+#if (MOZ_WIDGET_GTK == 3)
-   }
--#else
--  atk_bridge_adaptor_init(nullptr, nullptr);
- #endif
++  }
  
    if (!sToplevel_event_hook_added) {
-@@ -210,7 +219,6 @@ a11y::PlatformShutdown()
+     sToplevel_event_hook_added = true;
+@@ -210,7 +218,6 @@ a11y::PlatformShutdown()
                                      sToplevel_hide_hook);
      }
  
@@ -87,7 +88,7 @@ $NetBSD: patch-accessible_atk_Platform.cpp,v 1.1 2015/04/05 12:54:11 ryoon Exp $
      if (sAtkBridge.lib) {
          // Do not shutdown/unload atk-bridge,
          // an exit function registered will take care of it
-@@ -221,6 +229,7 @@ a11y::PlatformShutdown()
+@@ -221,6 +228,7 @@ a11y::PlatformShutdown()
          sAtkBridge.init = nullptr;
          sAtkBridge.shutdown = nullptr;
      }
