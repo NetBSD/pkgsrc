@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/05/11 21:43:19 tnn Exp $
+# $NetBSD: Makefile,v 1.102 2015/05/12 17:10:30 nros Exp $
 
 DISTNAME=	mesa-10.5.5
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -76,6 +76,9 @@ BUILDLINK_TRANSFORM+=   l:pthread:pthread:c
 CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
 CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
 .endif
+
+#Needed to get ERESTART from errno.h on DragonFlyBSD
+CPPFLAGS.DragonFly+=-D_KERNEL_STRUCTURES
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
