@@ -1,10 +1,7 @@
-$NetBSD: patch-netwerk_base_public_nsNetUtil.h,v 1.1 2015/02/14 07:59:24 martin Exp $
+$NetBSD: patch-netwerk_base_nsNetUtil.h,v 1.1 2015/05/12 22:48:54 ryoon Exp $
 
-https://bugzilla.mozilla.org/show_bug.cgi?id=1130822
-Fix obivous alignment issues (causing crashes on some architectures).
-
---- netwerk/base/public/nsNetUtil.h.orig	2015-01-23 07:00:06.000000000 +0100
-+++ netwerk/base/public/nsNetUtil.h	2015-02-13 08:51:18.000000000 +0100
+--- netwerk/base/nsNetUtil.h.orig	2015-05-04 00:43:34.000000000 +0000
++++ netwerk/base/nsNetUtil.h
 @@ -13,6 +13,7 @@
  #include "nsMemory.h"
  #include "nsCOMPtr.h"
@@ -13,7 +10,7 @@ Fix obivous alignment issues (causing crashes on some architectures).
  #include "nsHashKeys.h"
  
  #include "plstr.h"
-@@ -2717,6 +2718,26 @@
+@@ -2828,6 +2829,26 @@ NS_IsSrcdocChannel(nsIChannel *aChannel)
  bool NS_IsReasonableHTTPHeaderValue(const nsACString& aValue);
  
  /**
