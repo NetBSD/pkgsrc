@@ -1,6 +1,6 @@
-$NetBSD: patch-config_system-headers,v 1.12 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.13 2015/05/12 22:48:54 ryoon Exp $
 
---- config/system-headers.orig	2015-03-27 02:20:20.000000000 +0000
+--- config/system-headers.orig	2015-05-04 00:43:23.000000000 +0000
 +++ config/system-headers
 @@ -189,7 +189,6 @@ asm/signal.h
  ASRegistry.h
@@ -40,7 +40,7 @@ $NetBSD: patch-config_system-headers,v 1.12 2015/04/05 12:54:11 ryoon Exp $
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1360,3 +1362,37 @@ unicode/utypes.h
+@@ -1360,3 +1362,43 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
@@ -65,6 +65,12 @@ $NetBSD: patch-config_system-headers,v 1.12 2015/04/05 12:54:11 ryoon Exp $
 +#endif
 +#if MOZ_NATIVE_TREMOR==1
 +tremor/ivorbiscodec.h
++#endif
++#if MOZ_NATIVE_CELT==1
++celt.h
++celt_header.h
++celt/celt.h
++celt/celt_header.h
 +#endif
 +#if MOZ_NATIVE_OPUS==1
 +opus.h

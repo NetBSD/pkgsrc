@@ -1,6 +1,6 @@
-$NetBSD: patch-config_external_moz.build,v 1.7 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.8 2015/05/12 22:48:54 ryoon Exp $
 
---- config/external/moz.build.orig	2015-03-27 02:20:20.000000000 +0000
+--- config/external/moz.build.orig	2015-05-04 00:43:23.000000000 +0000
 +++ config/external/moz.build
 @@ -19,10 +19,19 @@ if CONFIG['MOZ_UPDATER']:
  # There's no "native brotli" yet, but probably in the future...
@@ -10,7 +10,7 @@ $NetBSD: patch-config_external_moz.build,v 1.7 2015/04/05 12:54:11 ryoon Exp $
 +if not CONFIG['MOZ_NATIVE_OGG']:
 +    external_dirs += ['media/libogg']
 +
-+if not CONFIG['MOZ_NATIVE_OPUS']:
++if not CONFIG['MOZ_NATIVE_CELT'] or not CONFIG['MOZ_NATIVE_OPUS']:
 +    external_dirs += ['media/libopus']
 +
 +if not CONFIG['MOZ_NATIVE_THEORA']:
