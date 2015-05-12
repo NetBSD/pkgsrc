@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2216 2015/05/12 22:49:44 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2217 2015/05/12 23:07:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/mawk to 1.3.4.150503 [wen 2015-05-12]
 	Updated sysutils/pv to 1.6.0 [bsiegert 2015-05-12]
 	Updated www/firefox to 38.0 [ryoon 2015-05-12]
+	Updated www/firefox-l10n to 38.0 [ryoon 2015-05-12]
