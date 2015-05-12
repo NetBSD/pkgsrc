@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.5 2008/08/10 11:09:01 kim Exp $
+$NetBSD: patch-aa,v 1.6 2015/05/12 07:49:16 kim Exp $
 
---- Makefile.in.orig	2008-05-30 02:58:59.000000000 +0300
-+++ Makefile.in	2008-06-21 13:05:29.000000000 +0300
-@@ -236,7 +236,7 @@
+Do not build conf (installed "manually" by pkgsrc Makefile),
+win32 (not needed) or examples (not wanted).
+
+--- Makefile.in.orig	2015-04-08 10:11:17.000000000 +0000
++++ Makefile.in	2015-05-12 07:15:38.000000000 +0000
+@@ -386,7 +386,7 @@
  top_srcdir = @top_srcdir@
  AUTOMAKE_OPTIONS = foreign dist-zip
  ACLOCAL_AMFLAGS = -I m4
--SUBDIRS = src conf debian doc web admin win32 examples
+-SUBDIRS = src conf doc web admin win32 examples
 +SUBDIRS = src doc web admin
  EXTRA_DIST = HACKING m4/acx_pthread.m4 m4/ogg.m4 \
      m4/theora.m4 m4/vorbis.m4 m4/speex.m4 \
