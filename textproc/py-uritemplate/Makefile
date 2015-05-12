@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/05/12 14:32:23 mef Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/12 14:33:29 mef Exp $
 
 DISTNAME=	uri-template-py-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-template-py/template/}
 CATEGORIES=	textproc www python
-MASTER_SITES=	https://github.com/uri-templates/uritemplate-py/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uri-templates/}
 GITHUB_PROJECT=	uritemplate-py
 GITHUB_TAG=	${DISTNAME}
