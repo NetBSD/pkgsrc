@@ -1,8 +1,17 @@
-$NetBSD: patch-widget_gtk_nsNativeThemeGTK.cpp,v 1.3 2015/04/05 12:54:12 ryoon Exp $
+$NetBSD: patch-widget_gtk_nsNativeThemeGTK.cpp,v 1.4 2015/05/12 22:48:54 ryoon Exp $
 
---- widget/gtk/nsNativeThemeGTK.cpp.orig	2015-03-27 02:20:33.000000000 +0000
+--- widget/gtk/nsNativeThemeGTK.cpp.orig	2015-05-04 00:43:35.000000000 +0000
 +++ widget/gtk/nsNativeThemeGTK.cpp
-@@ -1528,9 +1528,15 @@ nsNativeThemeGTK::GetWidgetTransparency(
+@@ -761,6 +761,8 @@ nsNativeThemeGTK::GetExtraSizeForWidget(
+         return false;
+ 
+       gint gap_height = moz_gtk_get_tab_thickness();
++      if (!gap_height)
++        return false;
+ 
+       int32_t extra = gap_height - GetTabMarginPixels(aFrame);
+       if (extra <= 0)
+@@ -1528,9 +1530,15 @@ nsNativeThemeGTK::GetWidgetTransparency(
    case NS_THEME_MENUPOPUP:
    case NS_THEME_WINDOW:
    case NS_THEME_DIALOG:
