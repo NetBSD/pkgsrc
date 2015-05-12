@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2013/10/22 19:27:52 drochner Exp $
+$NetBSD: patch-ac,v 1.5 2015/05/12 07:49:16 kim Exp $
 
---- configure.orig	2012-06-11 17:03:18.000000000 +0000
-+++ configure
-@@ -13214,7 +13214,7 @@ else
+Fix bashisms. Only doing configure, to avoid regen from configure.in.
+
+--- configure.orig	2015-04-08 09:30:42.000000000 +0000
++++ configure	2015-05-12 07:01:52.000000000 +0000
+@@ -13435,7 +13435,7 @@
    have_kate=no
  fi
  
@@ -11,7 +13,7 @@ $NetBSD: patch-ac,v 1.4 2013/10/22 19:27:52 drochner Exp $
  then
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for kate_ogg_decode_headerin in -loggkate" >&5
  $as_echo_n "checking for kate_ogg_decode_headerin in -loggkate... " >&6; }
-@@ -13258,7 +13258,7 @@ else
+@@ -13479,7 +13479,7 @@
    have_kate=no
  fi
  
