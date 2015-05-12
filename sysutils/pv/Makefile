@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/09/01 06:32:11 obache Exp $
+# $NetBSD: Makefile,v 1.25 2015/05/12 15:45:21 bsiegert Exp $
 #
 
-DISTNAME=		pv-0.9.6
-PKGREVISION=		1
+DISTNAME=		pv-1.6.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ivarch.com/programs/sources/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
@@ -10,28 +9,18 @@ MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ivarch.com/programs/pv.shtml
 COMMENT=		Monitor the progress of data through a pipeline
+LICENSE=		artistic-2.0
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
-INFO_FILES=		yes
-
-# Don't gzip the installed info file and man pages.
-CONFIGURE_ENV+=		DO_GZIP=${TOOLS_CMD.true}
 
 REPLACE_LOCALEDIR_PATTERNS+=	vars.mk
 
 DOCDIR=			${PREFIX}/share/doc/pv
 INSTALLATION_DIRS=	${DOCDIR}
 
-# Grab list of files to install from the PLIST.
 post-install:
-	dir=${DOCDIR:S/^${PREFIX}\///:Q}; cd ${WRKSRC}/doc;		\
-	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
-	while read file; do						\
-		${TEST} ! -f "$$file" ||					\
-			${INSTALL_DATA} "$$file" ${DESTDIR}${PREFIX}/$$dir; \
-	done
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
