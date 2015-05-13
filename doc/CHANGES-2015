@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2218 2015/05/12 23:17:37 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2219 2015/05/13 12:48:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4044,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 38.0 [ryoon 2015-05-12]
 	Updated www/firefox-l10n to 38.0 [ryoon 2015-05-12]
 	Updated misc/libreoffice4 to 4.4.3.2 [ryoon 2015-05-12]
+	Updated math/R to 3.2.0 [ryoon 2015-05-13]
