@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.19 2013/10/22 19:27:52 drochner Exp $
+$NetBSD: distinfo,v 1.19.12.1 2015/05/13 18:33:59 tron Exp $
 
-SHA1 (icecast-2.3.3.tar.gz) = 61cf1bd5b4ed491aad488dc6cf1ca2d8eb657363
-RMD160 (icecast-2.3.3.tar.gz) = be8e45623c065e7beffbe6266a8bbf7bc9fe93d8
-Size (icecast-2.3.3.tar.gz) = 1161774 bytes
-SHA1 (patch-aa) = 2d85cabe25cf3860e42110eaf3fa5e2b1775e0cf
-SHA1 (patch-ab) = 96fb7e5b569dc69d272b38064dee5937bb2f467a
-SHA1 (patch-ac) = 2dc9423ed461bb9da95aaa4bc5384966bfbe05a0
-SHA1 (patch-ad) = 9b6388d99bae8239138689673dc26286323ae803
+SHA1 (icecast-2.4.2.tar.gz) = 57a092302ab8aa4993fa280f299c099d25e875a5
+RMD160 (icecast-2.4.2.tar.gz) = ecf6d75c722766782c8f61b9a206bb35f8dcfcff
+Size (icecast-2.4.2.tar.gz) = 2388381 bytes
+SHA1 (patch-aa) = d3f4891295143adc261b3bf076e924f4540c6030
+SHA1 (patch-ab) = f5607e7337399d356997c327f3bf89957f6e770e
+SHA1 (patch-ac) = ce0a5474a88e5b768cd1c37ee0c934895a49093a
