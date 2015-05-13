@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.58 2014/02/12 23:17:33 tron Exp $
+# $NetBSD: Makefile,v 1.58.10.1 2015/05/13 18:33:59 tron Exp $
 #
 
-DISTNAME=		icecast-2.3.3
-PKGREVISION=		2
+DISTNAME=		icecast-2.4.2
+#PKGREVISION=		0
 CATEGORIES=		audio
 MASTER_SITES=		http://downloads.xiph.org/releases/icecast/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icecast.org/
 COMMENT=		Live streaming audio server
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

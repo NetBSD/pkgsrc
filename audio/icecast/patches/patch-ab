@@ -1,11 +1,14 @@
-$NetBSD: patch-ab,v 1.9 2013/10/22 19:27:52 drochner Exp $
+$NetBSD: patch-ab,v 1.9.12.1 2015/05/13 18:33:59 tron Exp $
 
---- conf/icecast.fixme.orig	2012-06-11 16:45:19.000000000 +0000
-+++ conf/icecast.fixme
-@@ -131,14 +131,14 @@
+Allow for paths, user and group to be set via pkgsrc Makefile.
+Decrease amount of logging a little bit by default.
+
+--- conf/icecast.fixme.orig	2015-04-08 08:06:13.000000000 +0000
++++ conf/icecast.fixme	2015-05-12 07:19:45.000000000 +0000
+@@ -191,14 +191,14 @@
  
      <paths>
- 		<!-- basedir is only used if chroot is enabled -->
+         <!-- basedir is only used if chroot is enabled -->
 -        <basedir>@pkgdatadir@</basedir>
 +        <basedir>@BASEDIR@</basedir>
  
@@ -22,16 +25,16 @@ $NetBSD: patch-ab,v 1.9 2013/10/22 19:27:52 drochner Exp $
  
          <!-- Aliases: treat requests for 'source' path as being for 'dest' path
               May be made specific to a port or bound address using the "port"
-@@ -158,7 +158,7 @@
+@@ -222,7 +222,7 @@
          <accesslog>access.log</accesslog>
          <errorlog>error.log</errorlog>
          <!-- <playlistlog>playlist.log</playlistlog> -->
--      	<loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
-+      	<loglevel>2</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
-       	<logsize>10000</logsize> <!-- Max size of a logfile -->
+-        <loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
++        <loglevel>2</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
+         <logsize>10000</logsize> <!-- Max size of a logfile -->
          <!-- If logarchive is enabled (1), then when logsize is reached
               the logfile will be moved to [error|access|playlist].log.DATESTAMP,
-@@ -172,8 +172,8 @@
+@@ -236,8 +236,8 @@
          <chroot>0</chroot>
          <!--
          <changeowner>
