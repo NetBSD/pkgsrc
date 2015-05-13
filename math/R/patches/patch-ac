@@ -1,20 +1,20 @@
-$NetBSD: patch-ac,v 1.33 2014/06/26 20:34:54 asau Exp $
+$NetBSD: patch-ac,v 1.34 2015/05/13 12:48:05 ryoon Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 FreeBSD 10 is not FreeBSD 1.
 
---- configure.orig	2013-05-08 22:06:02.000000000 +0000
+--- configure.orig	2015-04-08 22:16:36.000000000 +0000
 +++ configure
-@@ -3967,7 +3967,7 @@ fi
+@@ -4012,7 +4012,7 @@ fi
  
- 
+ ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
--  LIBR="-L\$(R_HOME)/lib\$(R_ARCH) -lR"
-+  LIBR="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\$(R_HOME)/lib\$(R_ARCH) -lR"
+-  LIBR0="-L\$(R_HOME)/lib\$(R_ARCH)"
++  LIBR0="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\$(R_HOME)/lib\$(R_ARCH)"
+   LIBR1=-lR
  else
-   LIBR=
- fi
-@@ -4031,7 +4031,7 @@ fi
+   LIBR0=
+@@ -4078,7 +4078,7 @@ fi
  if test "x${want_lto}" != xno; then
    LTO=-flto
  fi
@@ -23,7 +23,7 @@ FreeBSD 10 is not FreeBSD 1.
    LTOALL=-flto
  fi
  
-@@ -19899,7 +19899,7 @@ dgux*)
+@@ -19921,7 +19921,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -32,7 +32,7 @@ FreeBSD 10 is not FreeBSD 1.
    dynamic_linker=no
    ;;
  
-@@ -20375,7 +20375,7 @@ case "${host_os}" in
+@@ -20514,7 +20514,7 @@ case "${host_os}" in
      ## look-up sequence. Such automatic override has proven to break things
      ## like system frameworks (e.g. ImageIO or OpenGL framework).
      ;;
@@ -41,7 +41,7 @@ FreeBSD 10 is not FreeBSD 1.
      for arg in ${LDFLAGS}; do
        case "${arg}" in
          -L*)
-@@ -23015,6 +23015,11 @@ fi
+@@ -23188,6 +23188,11 @@ fi
  	  done
  	  ;;
  	-[lLR]*)
@@ -53,7 +53,7 @@ FreeBSD 10 is not FreeBSD 1.
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
-@@ -23980,6 +23985,9 @@ cat > conftest.c <<EOF
+@@ -24153,6 +24158,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -63,7 +63,7 @@ FreeBSD 10 is not FreeBSD 1.
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -24075,6 +24083,9 @@ typedef struct {
+@@ -24248,6 +24256,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -73,7 +73,7 @@ FreeBSD 10 is not FreeBSD 1.
  int main () {
      Rcomplex z[3];
  
-@@ -26279,12 +26290,12 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26452,12 +26463,12 @@ $as_echo "$as_me: WARNING: Use of flat n
        SHLIB_LIBADD="-lcc_dynamic"
      fi
      ;;
@@ -89,7 +89,7 @@ FreeBSD 10 is not FreeBSD 1.
      ;;
    hpux*)
      SHLIB_EXT=".sl"
-@@ -26367,8 +26378,15 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26543,8 +26554,15 @@ $as_echo "$as_me: WARNING: Use of flat n
      fcpicflags=
      ;;
    netbsd*)
@@ -106,7 +106,7 @@ FreeBSD 10 is not FreeBSD 1.
        shlib_ldflags="-shared"
      else
        shlib_ldflags="-Bshareable"
-@@ -26390,22 +26408,22 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26566,22 +26584,22 @@ $as_echo "$as_me: WARNING: Use of flat n
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
  ## so need PIC not pic.  They are the same on other Solaris platforms.
@@ -133,7 +133,7 @@ FreeBSD 10 is not FreeBSD 1.
        cpicflags="-KPIC"
        if test "`basename ${CXX}`" = "CC" ; then
          ## Forte version 7 needs -lCstd: Forte 6 does not.
-@@ -26466,7 +26484,7 @@ fi
+@@ -26642,7 +26660,7 @@ fi
  : ${CPICFLAGS="${cpicflags}"}
  if test -z "${CPICFLAGS}"; then
    case "${host_os}" in
@@ -142,7 +142,7 @@ FreeBSD 10 is not FreeBSD 1.
        ;;
      *)
        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: I could not determine CPICFLAGS." >&5
-@@ -26984,6 +27002,14 @@ _ACEOF
+@@ -27338,6 +27356,14 @@ _ACEOF
  ## Cygwin has rintl but not nearbyintl
  for ac_func in expm1 hypot log1p log1pl log2 log10 nearbyint nearbyintl powl rint rintl
  do
@@ -157,7 +157,7 @@ FreeBSD 10 is not FreeBSD 1.
  as_ac_Symbol=`$as_echo "ac_cv_have_decl_$ac_func" | $as_tr_sh`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $ac_func exists and is declared" >&5
  $as_echo_n "checking whether $ac_func exists and is declared... " >&6; }
-@@ -26993,24 +27019,12 @@ else
+@@ -27347,24 +27373,12 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <math.h>
@@ -184,7 +184,7 @@ FreeBSD 10 is not FreeBSD 1.
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
-@@ -29657,6 +29671,15 @@ cat > conftest.c <<EOF
+@@ -30274,6 +30288,15 @@ cat > conftest.c <<EOF
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
  
@@ -200,7 +200,7 @@ FreeBSD 10 is not FreeBSD 1.
  int main () {
    int iflag;
    F77_SYMBOL(test1)(&iflag);
-@@ -29721,6 +29744,14 @@ else
+@@ -30338,6 +30361,14 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -215,7 +215,7 @@ FreeBSD 10 is not FreeBSD 1.
  void F77_SYMBOL(xerbla)(char *srname, int *info)
  {}
  void blas_set () {
-@@ -38085,7 +38116,7 @@ case "${host_os}" in
+@@ -38953,7 +38984,7 @@ case "${host_os}" in
      r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
      ;;
    solaris*)
