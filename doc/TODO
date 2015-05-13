@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14395 2015/05/13 12:48:49 ryoon Exp $
+$NetBSD: TODO,v 1.14396 2015/05/13 15:47:04 mef Exp $
 
 Suggested new packages
 ======================
@@ -511,6 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emacs-muse-3.20
 	o emerillon-0.1.90
 	o enlightenment-0.18
+	o entr-3.2
 	o eog-plugins-3.6.1
 	o epiphany-3.16.0
 	o epiphany-extensions-3.2.0
