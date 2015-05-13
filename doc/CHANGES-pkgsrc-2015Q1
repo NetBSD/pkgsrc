@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.31 2015/05/11 19:42:38 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.32 2015/05/13 18:38:53 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -114,3 +114,7 @@ Pullup ticket #4709 - requested by agc
 pkgtools/pkg_install: bug fix update
 Pullup ticket #4711 - requested by taca
 www/squid3: security update
+Pullup ticket #4712 - requested by kim
+audio/icecast: security update
+Pullup ticket #4713 - requested by hiramatsu
+x11/xproto: packaging fix
