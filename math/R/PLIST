@@ -1,13 +1,6 @@
-@comment $NetBSD: PLIST,v 1.20 2014/05/03 22:29:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/05/13 12:48:05 ryoon Exp $
 bin/R
 bin/Rscript
-info/R-FAQ.info.gz
-info/R-admin.info.gz
-info/R-data.info.gz
-info/R-exts.info.gz
-info/R-intro.info.gz
-info/R-ints.info.gz
-info/R-lang.info.gz
 lib/R/COPYING
 lib/R/SVN-REVISION
 lib/R/bin/BATCH
@@ -65,13 +58,6 @@ lib/R/doc/html/packages-head-utf8.html
 lib/R/doc/html/resources.html
 lib/R/doc/html/right.jpg
 lib/R/doc/html/up.jpg
-lib/R/doc/manual/R-FAQ.html
-lib/R/doc/manual/R-admin.html
-lib/R/doc/manual/R-data.html
-lib/R/doc/manual/R-exts.html
-lib/R/doc/manual/R-intro.html
-lib/R/doc/manual/R-ints.html
-lib/R/doc/manual/R-lang.html
 lib/R/doc/manual/images/QQ.png
 lib/R/doc/manual/images/ecdf.png
 lib/R/doc/manual/images/fig11.png
@@ -210,6 +196,7 @@ lib/R/library/Matrix/Meta/nsInfo.rds
 lib/R/library/Matrix/Meta/package.rds
 lib/R/library/Matrix/Meta/vignette.rds
 lib/R/library/Matrix/NAMESPACE
+lib/R/library/Matrix/NEWS.Rd
 lib/R/library/Matrix/R/Matrix
 lib/R/library/Matrix/R/Matrix.rdb
 lib/R/library/Matrix/R/Matrix.rdx
@@ -265,7 +252,9 @@ lib/R/library/Matrix/po/de/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/de/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/po/en@quot/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/en@quot/LC_MESSAGES/R-Matrix.mo
+lib/R/library/Matrix/po/fr/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/fr/LC_MESSAGES/R-Matrix.mo
+lib/R/library/Matrix/po/ko/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/test-tools-1.R
@@ -746,6 +735,18 @@ lib/R/library/mgcv/help/paths.rds
 lib/R/library/mgcv/html/00Index.html
 lib/R/library/mgcv/html/R.css
 lib/R/library/mgcv/libs/mgcv.so
+lib/R/library/mgcv/po/de/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/de/LC_MESSAGES/mgcv.mo
+lib/R/library/mgcv/po/en@quot/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/en@quot/LC_MESSAGES/mgcv.mo
+lib/R/library/mgcv/po/fr/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/fr/LC_MESSAGES/mgcv.mo
+lib/R/library/mgcv/po/ko/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/ko/LC_MESSAGES/mgcv.mo
+lib/R/library/mgcv/po/pl/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/pl/LC_MESSAGES/mgcv.mo
+lib/R/library/mgcv/po/po/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/po/LC_MESSAGES/mgcv.mo
 lib/R/library/nlme/CITATION
 lib/R/library/nlme/DESCRIPTION
 lib/R/library/nlme/INDEX
@@ -906,6 +907,7 @@ lib/R/library/spatial/libs/spatial.so
 lib/R/library/spatial/po/de/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/en@quot/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/fr/LC_MESSAGES/R-spatial.mo
+lib/R/library/spatial/po/ko/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/pl/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/ppdata/agter.dat
 lib/R/library/spatial/ppdata/caveolae.dat
@@ -1007,6 +1009,7 @@ lib/R/library/survival/Meta/package.rds
 lib/R/library/survival/Meta/vignette.rds
 lib/R/library/survival/NAMESPACE
 lib/R/library/survival/NEWS.Rd
+lib/R/library/survival/NEWS.Rd.orig
 lib/R/library/survival/R/survival
 lib/R/library/survival/R/survival.rdb
 lib/R/library/survival/R/survival.rdx
@@ -1017,8 +1020,13 @@ lib/R/library/survival/data/datalist
 lib/R/library/survival/doc/adjcurve.R
 lib/R/library/survival/doc/adjcurve.Rnw
 lib/R/library/survival/doc/adjcurve.pdf
+lib/R/library/survival/doc/compete.R
+lib/R/library/survival/doc/compete.Rnw
+lib/R/library/survival/doc/compete.pdf
 lib/R/library/survival/doc/index.html
-lib/R/library/survival/doc/sourcecode.pdf
+lib/R/library/survival/doc/splines.R
+lib/R/library/survival/doc/splines.Rnw
+lib/R/library/survival/doc/splines.pdf
 lib/R/library/survival/doc/tests.R
 lib/R/library/survival/doc/tests.Rnw
 lib/R/library/survival/doc/tests.pdf
@@ -1078,6 +1086,8 @@ lib/R/library/tools/Meta/links.rds
 lib/R/library/tools/Meta/nsInfo.rds
 lib/R/library/tools/Meta/package.rds
 lib/R/library/tools/NAMESPACE
+lib/R/library/tools/R/sysdata.rdb
+lib/R/library/tools/R/sysdata.rdx
 lib/R/library/tools/R/tools
 lib/R/library/tools/R/tools.rdb
 lib/R/library/tools/R/tools.rdx
@@ -1398,12 +1408,12 @@ lib/R/modules/R_X11.so
 lib/R/modules/R_de.so
 lib/R/modules/internet.so
 lib/R/modules/lapack.so
-lib/R/modules/vfonts.so
 lib/R/share/R/REMOVE.R
 lib/R/share/R/examples-footer.R
 lib/R/share/R/examples-header.R
 lib/R/share/R/nspackloader.R
 lib/R/share/R/tests-startup.R
+lib/R/share/Rd/macros/system.Rd
 lib/R/share/dictionaries/en_stats.rds
 lib/R/share/encodings/Adobe-glyphlist
 lib/R/share/encodings/character-sets
