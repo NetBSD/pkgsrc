@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2227 2015/05/14 17:38:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2228 2015/05/14 18:29:42 bad Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4098,3 +4098,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-fc version 1.4 [wiz 2015-05-14]
 	Added fonts/tex-fc-doc version 1.4 [wiz 2015-05-14]
 	Updated meta-pkgs/texlive-collection-langafrican to 2014pre2 [wiz 2015-05-14]
+	Updated misc/libreoffice4-bin to 4.4.3.2 [bad 2015-05-14]
