@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/tex/latex/r_und_s/eng_rs.sty
+share/texmf-dist/tex/latex/r_und_s/eng_rs.tex
+share/texmf-dist/tex/latex/r_und_s/fr_rs.sty
+share/texmf-dist/tex/latex/r_und_s/fr_rs.tex
+share/texmf-dist/tex/latex/r_und_s/nl_rs.sty
+share/texmf-dist/tex/latex/r_und_s/nl_rs.tex
+share/texmf-dist/tex/latex/r_und_s/r_und_s.sty
+share/texmf-dist/tex/latex/r_und_s/r_und_s.tex

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/doc/latex/templates-fenn/diabetes.tex
+share/texmf-dist/doc/latex/templates-fenn/dinbrief.tex
+share/texmf-dist/doc/latex/templates-fenn/kbrief.tex
+share/texmf-dist/doc/latex/templates-fenn/scrlttr2.tex
+share/texmf-dist/doc/latex/templates-fenn/scrlttr2en.tex
+share/texmf-dist/doc/latex/templates-fenn/templates-fenn-de.txt
+share/texmf-dist/doc/latex/templates-fenn/templates-fenn-en.txt
+share/texmf-dist/doc/latex/templates-fenn/vermerk.tex

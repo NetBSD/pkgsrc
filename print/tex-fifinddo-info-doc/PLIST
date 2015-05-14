@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:34 wiz Exp $
+share/texmf-dist/doc/latex/fifinddo-info/LIESMICH.txt
+share/texmf-dist/doc/latex/fifinddo-info/README
+share/texmf-dist/doc/latex/fifinddo-info/SrcFILEs.txt
+share/texmf-dist/doc/latex/fifinddo-info/dante-mv45-lueck.pdf
+share/texmf-dist/doc/latex/fifinddo-info/dantev45.htm
+share/texmf-dist/doc/latex/fifinddo-info/mdoccorr.pdf
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-1180-clean.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-1180-com.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-768-com.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-768-exact-frame.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-768-exact-show.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-768-filltype-show.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-992-com.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-992-exact-frame.html
+share/texmf-dist/doc/latex/fifinddo-info/variants/dantev45-992-exact.html

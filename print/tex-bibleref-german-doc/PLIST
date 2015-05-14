@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:33 wiz Exp $
+share/texmf-dist/doc/latex/bibleref-german/CHANGES
+share/texmf-dist/doc/latex/bibleref-german/LIESMICH
+share/texmf-dist/doc/latex/bibleref-german/README
+share/texmf-dist/doc/latex/bibleref-german/bibleref-german-preamble.tex
+share/texmf-dist/doc/latex/bibleref-german/bibleref-german-print.tex
+share/texmf-dist/doc/latex/bibleref-german/bibleref-german-screen.tex
+share/texmf-dist/doc/latex/bibleref-german/de-bibleref-german.pdf
+share/texmf-dist/doc/latex/bibleref-german/de-bibleref-german.tex
+share/texmf-dist/doc/latex/bibleref-german/en-bibleref-german.pdf
+share/texmf-dist/doc/latex/bibleref-german/en-bibleref-german.tex

@@ -1,0 +1,6 @@
+The r_und_s package decodes the german 'R- und S-Satze', which
+are numerically coded security advice for chemical substances
+into plain text. This is, e.g., used to compose security sheets
+or lab protocols and especially useful for students of
+chemistry. There are four packages, giving texts in German,
+English, French and Dutch.

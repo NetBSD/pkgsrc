@@ -1,0 +1,10 @@
+A set of templates for using LaTeX packages that the author
+uses, comprising: - scrlttr2.tex: a letter, written with
+scrlttr2.cls from the KOMA-Script bundle; - dinbrief.tex: a
+letter according to the German (DIN) standards, written with
+dinbrief.cls; - kbrief.tex: a brief memo ('Kurzbrief') to
+accompany enclosures, as used in German offices, again based on
+dinbrief; - vermerk.tex: a general form for taking down notes
+on events in the office; and - diabetes.tex: a diary for the
+basis-bolus insulin therapy of diabetes mellitus, using
+scrartcl.cls from the KOMA-Script bundle.
