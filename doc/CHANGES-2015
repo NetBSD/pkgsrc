@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2221 2015/05/14 09:13:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2222 2015/05/14 13:24:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R to 3.2.0 [ryoon 2015-05-13]
 	Updated www/apache-tomcat8 to 8.0.22 [ryoon 2015-05-13]
 	Updated www/p5-HTML-Lint to 2.22 [mef 2015-05-14]
+	Updated net/unison to 2.48.3nb4 [jperkin 2015-05-14]
