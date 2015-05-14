@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2228 2015/05/14 18:29:42 bad Exp $
+$NetBSD: CHANGES-2015,v 1.2229 2015/05/14 22:18:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-fc-doc version 1.4 [wiz 2015-05-14]
 	Updated meta-pkgs/texlive-collection-langafrican to 2014pre2 [wiz 2015-05-14]
 	Updated misc/libreoffice4-bin to 4.4.3.2 [bad 2015-05-14]
+	Updated textproc/ruby-redcarpet to 3.2.3 [taca 2015-05-14]
