@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:36:40 wiz Exp $
+share/texmf-dist/doc/fonts/fc/fc.bug
+share/texmf-dist/doc/fonts/fc/fc.rme
+share/texmf-dist/doc/fonts/fc/fclfont.sty_old
+share/texmf-dist/doc/fonts/fc/fctugbot.tex
+share/texmf-dist/doc/fonts/fc/fontdef.fc_old
+share/texmf-dist/doc/fonts/fc/licence.gnu
