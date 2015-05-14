@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2229 2015/05/14 22:18:13 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2230 2015/05/14 22:35:16 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4100,3 +4100,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-langafrican to 2014pre2 [wiz 2015-05-14]
 	Updated misc/libreoffice4-bin to 4.4.3.2 [bad 2015-05-14]
 	Updated textproc/ruby-redcarpet to 3.2.3 [taca 2015-05-14]
+	Updated lang/LuaJIT2 to 2.0.4 [alnsn 2015-05-14]
