@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2225 2015/05/14 17:11:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2226 2015/05/14 17:21:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4092,3 +4092,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-udesoftec-doc version 1.4.5 [wiz 2015-05-14]
 	Added print/tex-voss-mathcol-doc version 0.1 [wiz 2015-05-14]
 	Updated meta-pkgs/texlive-collection-langgerman to 2014 [wiz 2015-05-14]
+	Updated sysutils/dbus to 1.8.18 [wiz 2015-05-14]
