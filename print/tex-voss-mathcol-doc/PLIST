@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:37 wiz Exp $
+share/texmf-dist/doc/latex/voss-mathcol/Changes
+share/texmf-dist/doc/latex/voss-mathcol/mathCol.bib
+share/texmf-dist/doc/latex/voss-mathcol/mathCol.ltx
+share/texmf-dist/doc/latex/voss-mathcol/mathCol.pdf
+share/texmf-dist/doc/latex/voss-mathcol/mathCol.tex
+share/texmf-dist/doc/latex/voss-mathcol/run.doc
