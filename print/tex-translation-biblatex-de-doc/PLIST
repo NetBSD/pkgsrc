@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/doc/latex/translation-biblatex-de/README
+share/texmf-dist/doc/latex/translation-biblatex-de/biblatex-de.pdf
+share/texmf-dist/doc/latex/translation-biblatex-de/biblatex-de.tex

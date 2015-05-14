@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:34 wiz Exp $
+share/texmf-dist/doc/latex/etdipa/Data/folder_description.txt
+share/texmf-dist/doc/latex/etdipa/Help/etdipa_doc_DE.pdf
+share/texmf-dist/doc/latex/etdipa/Help/etdipa_doc_DE.tex
+share/texmf-dist/doc/latex/etdipa/Help/etdipa_doc_EN.pdf
+share/texmf-dist/doc/latex/etdipa/Help/etdipa_doc_EN.tex
+share/texmf-dist/doc/latex/etdipa/Help/files.txt
+share/texmf-dist/doc/latex/etdipa/Images/ET_logo.jpg
+share/texmf-dist/doc/latex/etdipa/Images/HTL-Allgemein.jpg
+share/texmf-dist/doc/latex/etdipa/Images/HTL.png
+share/texmf-dist/doc/latex/etdipa/Images/Ordnerstruktur.pdf
+share/texmf-dist/doc/latex/etdipa/Images/bild.pdf
+share/texmf-dist/doc/latex/etdipa/Images/diplomand_erklaerung.pdf
+share/texmf-dist/doc/latex/etdipa/Images/subordner.pdf
+share/texmf-dist/doc/latex/etdipa/Images/titlepic.pdf
+share/texmf-dist/doc/latex/etdipa/README
+share/texmf-dist/doc/latex/etdipa/Textparts/abkuerzungen.tex
+share/texmf-dist/doc/latex/etdipa/Textparts/abstract.tex
+share/texmf-dist/doc/latex/etdipa/Textparts/danksagungen.tex
+share/texmf-dist/doc/latex/etdipa/Textparts/diplomanden.tex
+share/texmf-dist/doc/latex/etdipa/Textparts/literatur.tex
+share/texmf-dist/doc/latex/etdipa/Textparts/zusammenfassung.tex
+share/texmf-dist/doc/latex/etdipa/diplomarbeit.tex
+share/texmf-dist/doc/latex/etdipa/etdipa.sty

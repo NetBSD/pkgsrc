@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:34 wiz Exp $
+share/texmf-dist/doc/latex/geometry-de/README
+share/texmf-dist/doc/latex/geometry-de/README-DE
+share/texmf-dist/doc/latex/geometry-de/geometry-de.dtx
+share/texmf-dist/doc/latex/geometry-de/geometry-de.pdf
+share/texmf-dist/doc/latex/geometry-de/geometry.ins
