@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/doc/latex/translation-moreverb-de/filecontens-de.ins.txt
+share/texmf-dist/doc/latex/translation-moreverb-de/moreverb-de.dtx.pdf
+share/texmf-dist/doc/latex/translation-moreverb-de/moreverb-de.dtx.tex

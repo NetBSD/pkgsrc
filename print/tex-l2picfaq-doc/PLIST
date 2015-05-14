@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:35 wiz Exp $
+share/texmf-dist/doc/latex/l2picfaq/README
+share/texmf-dist/doc/latex/l2picfaq/ctanlion.pdf
+share/texmf-dist/doc/latex/l2picfaq/gfdl.tex
+share/texmf-dist/doc/latex/l2picfaq/l2picfaq.pdf
+share/texmf-dist/doc/latex/l2picfaq/l2picfaq.tex

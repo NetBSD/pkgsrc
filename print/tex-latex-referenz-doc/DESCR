@@ -1,0 +1,4 @@
+This bundle contains all the examples, as source, eps and pdf,
+of the author's book "LaTeX Referenz" (2nd ed.), published by
+DANTE/Lehmanns. The examples can be run, using the example
+class (ttctexa.cls) in the distribution.

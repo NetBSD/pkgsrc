@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/doc/latex/templates-sommer/Hausarbeit.bib
+share/texmf-dist/doc/latex/templates-sommer/Hausarbeit.tex
+share/texmf-dist/doc/latex/templates-sommer/Logo.jpg
+share/texmf-dist/doc/latex/templates-sommer/Psycho-Dipl.bib
+share/texmf-dist/doc/latex/templates-sommer/Psycho-Dipl.tex
+share/texmf-dist/doc/latex/templates-sommer/README.de

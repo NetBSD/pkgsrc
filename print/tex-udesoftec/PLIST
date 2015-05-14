@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:37 wiz Exp $
+share/texmf-dist/bibtex/bst/udesoftec/udesoftec.bst
+share/texmf-dist/tex/latex/udesoftec/udesoftec-bst.sty
+share/texmf-dist/tex/latex/udesoftec/udesoftec-cover-uba.pdf
+share/texmf-dist/tex/latex/udesoftec/udesoftec-cover-ude-de.pdf
+share/texmf-dist/tex/latex/udesoftec/udesoftec-cover-ude-en.pdf
+share/texmf-dist/tex/latex/udesoftec/udesoftec-extra.sty
+share/texmf-dist/tex/latex/udesoftec/udesoftec.cls

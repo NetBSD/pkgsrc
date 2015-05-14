@@ -1,0 +1,4 @@
+The package germcorr has to be loaded after the package german.
+It brings some letters like T nearer to german single and
+double quotes even when that letter wears a standard accent
+like "`\.T"'.

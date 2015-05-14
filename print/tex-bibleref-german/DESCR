@@ -1,0 +1,5 @@
+The package provides translations and various formats for the
+use of bibleref in German documents. The German naming of the
+bible books complies with the 'Loccumer Richtlinien' (Locum
+guidelines). In addition, the Vulgate (Latin bible) is
+supported.

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:34 wiz Exp $
+share/texmf-dist/doc/latex/booktabs-de/README-DE
+share/texmf-dist/doc/latex/booktabs-de/booktabs-de.dtx
+share/texmf-dist/doc/latex/booktabs-de/booktabs-de.ins
+share/texmf-dist/doc/latex/booktabs-de/booktabs-de.pdf

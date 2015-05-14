@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:34 wiz Exp $
+share/texmf-dist/tex/latex/dhua/dhua.cfg
+share/texmf-dist/tex/latex/dhua/dhua.sty
