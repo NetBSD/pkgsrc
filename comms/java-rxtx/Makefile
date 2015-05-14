@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/24 20:16:54 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/14 18:12:11 dsainty Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
@@ -25,27 +25,39 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # if the patches are also appropriately updated.
 PKG_JVMS_ACCEPTED= openjdk7 sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
 
-MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "x86_64"
 JAVA_MACHINE_ARCH=	amd64
-.elif ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
-JAVA_MACHINE_ARCH=    arm
+.elif !empty(MACHINE_CPU:Marm*)
+JAVA_MACHINE_ARCH=	arm
 .else
 JAVA_MACHINE_ARCH=     ${MACHINE_ARCH}
 .endif
 
-INSTALLATION_DIRS+=	${PKG_JAVA_HOME}/jre/lib/ext
-INSTALLATION_DIRS+=	${PKG_JAVA_HOME}/jre/lib/${JAVA_MACHINE_ARCH}
+.include "../../mk/java-vm.mk"
 
-PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
-PLIST_SUBST+=	JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
+# Inconveniently, for built-in JRE's, PKG_JAVA_HOME will be set to the native
+# directory - which we should not be messing with.  But prior to builtin.mk
+# processing, PKG_JAVA_HOME will match the Pkgsrc JRE home, which is a
+# suitable installation location for Native JRE, as well as being the
+# correct installation location for Pkgsrc JRE.
+JAVA_INSTALL_BASE:=    ${PKG_JAVA_HOME}
 
+RXTX_PATH=     ${JAVA_INSTALL_BASE}/jre/lib/${JAVA_MACHINE_ARCH}
+JHOME_PATH=    ${JAVA_INSTALL_BASE}/jre/lib/ext
+
+MAKE_ENV+=     JAVA_HOME=${PKG_JAVA_HOME:Q}
+MAKE_FLAGS+=   RXTX_PATH=${RXTX_PATH:Q}
+MAKE_FLAGS+=   JHOME=${JHOME_PATH:Q}
+ 
+INSTALLATION_DIRS+=    ${RXTX_PATH:Q} ${JHOME_PATH:Q}
+ 
+PLIST_SUBST+=  JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
+PLIST_SUBST+=  JAVA_HOME="${JAVA_INSTALL_BASE:C/^${PREFIX}\///}"
+ 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
