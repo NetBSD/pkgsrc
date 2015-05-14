@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2015/05/09 22:23:11 markd Exp $
+# $NetBSD: Makefile,v 1.281 2015/05/14 17:36:54 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -410,6 +410,8 @@ SUBDIR+=	tex-esstix
 SUBDIR+=	tex-esstix-doc
 SUBDIR+=	tex-esvect
 SUBDIR+=	tex-esvect-doc
+SUBDIR+=	tex-ethiop-t1
+SUBDIR+=	tex-ethiop-t1-doc
 SUBDIR+=	tex-euenc
 SUBDIR+=	tex-euenc-doc
 SUBDIR+=	tex-eulervm
@@ -425,6 +427,8 @@ SUBDIR+=	tex-eurosym-doc
 SUBDIR+=	tex-euxm
 SUBDIR+=	tex-fbb
 SUBDIR+=	tex-fbb-doc
+SUBDIR+=	tex-fc
+SUBDIR+=	tex-fc-doc
 SUBDIR+=	tex-fdsymbol
 SUBDIR+=	tex-fdsymbol-doc
 SUBDIR+=	tex-fetamont
