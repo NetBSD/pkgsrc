@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/doc/latex/tipa-de/LIESMICH
+share/texmf-dist/doc/latex/tipa-de/tipa.bib
+share/texmf-dist/doc/latex/tipa-de/tipaman-de.pdf
+share/texmf-dist/doc/latex/tipa-de/tipaman-de.tex
+share/texmf-dist/doc/latex/tipa-de/tipaman0-de.tex
+share/texmf-dist/doc/latex/tipa-de/tipaman1-de.tex
+share/texmf-dist/doc/latex/tipa-de/tipaman2-de.tex
+share/texmf-dist/doc/latex/tipa-de/tipaman3-de.tex
+share/texmf-dist/doc/latex/tipa-de/tipaman4-de.tex

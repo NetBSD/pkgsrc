@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:36 wiz Exp $
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/at.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/bulgarian-koi8-r.tex
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/bulgarian-utf8.tex
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/greek-utf8.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/greek-utf8.tex
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/maltese-maltese.tex
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/maltese-utf8.tex
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/minimal.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/Beispiele/minimal.tex
+share/texmf-dist/doc/latex/translation-europecv-de/europecv-de.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/europecv-de.tex
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_de.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_de.tex
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_en.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_en.tex
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_it.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_it.tex
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_pl.pdf
+share/texmf-dist/doc/latex/translation-europecv-de/templates/cv_template_pl.tex
+share/texmf-dist/doc/latex/translation-europecv-de/templates/publications.bib
