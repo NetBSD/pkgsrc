@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14396 2015/05/13 15:47:04 mef Exp $
+$NetBSD: TODO,v 1.14397 2015/05/14 13:53:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asapm-3.1
 	o asc-2.6.0
 	o aspell-nb-2.0.10
-	o asymptote-2.32
+	o asymptote-2.33
 	o aterm-1.0.1
 	o atk-2.16.0
 	o aubio-0.4.0
@@ -507,7 +507,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elftoolchain-0.6.1 [pkg/48227]
-	o elm-me-2.5plalpha35
+	o elm-me-2.5plalpha36
 	o emacs-muse-3.20
 	o emerillon-0.1.90
 	o enlightenment-0.18
@@ -571,6 +571,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-14.05
+	o gdb-7.9.1
 	o gdeskcal-1.01
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -597,7 +598,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.16.1
+	o gnome-3.16.2
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
@@ -1080,6 +1081,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tk85-8.5.16
 	o tkhylafax-3.2
 	o tkpasman-2.2b
+	o tmux-2.0
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.4.2 [GNOME 2.32]
@@ -1107,7 +1109,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8p
-	o vinagre-3.16.0
+	o vinagre-3.16.1
 	o vino-3.16.0
 	o virtuoso-7.2.0p1
 	o visual-regexp-3.1
