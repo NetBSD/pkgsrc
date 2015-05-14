@@ -1,0 +1,22 @@
+MediaInfo supplies technical and tag information about a video or audio file,
+this package provides the libmediainfo library.
+
+What information can I get from MediaInfo?
+  - General: title, author, director, album, track number, date, duration...
+  - Video: codec, aspect, fps, bitrate...
+  - Audio: codec, sample rate, channels, language, bitrate...
+  - Text: language of subtitle
+  - Chapters: number of chapters, list of chapters
+What format (container) does MediaInfo support?
+  - Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4,
+    DVD (VOB)... (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)
+  - Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...
+  - Subtitles: SRT, SSA, ASS, SAMI...
+What can I do with it?
+  - Read many video and audio file formats
+  - Different methods of viewing information (text, sheet, tree, HTML...)
+  - You can customise these views
+  - Exporting information as text, CSV, HTML...
+  - Internationalisation: Any language display on any version of your
+    operating system
+  - Localisation capability (but volunteers needed)
