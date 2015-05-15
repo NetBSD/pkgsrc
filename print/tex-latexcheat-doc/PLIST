@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:49 wiz Exp $
+share/texmf-dist/doc/latex/latexcheat/README
+share/texmf-dist/doc/latex/latexcheat/latexsheet.pdf
+share/texmf-dist/doc/latex/latexcheat/latexsheet.tex
