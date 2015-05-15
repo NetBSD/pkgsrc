@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/15 18:30:30 wiz Exp $
 
 DISTNAME=	collection-langenglish
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	34607
@@ -10,65 +10,65 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	US and UK English TeX packages
 
-DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
+DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-hyphen-english-[0-9]*:../../print/tex-hyphen-english
-# depend FAQ-en
-# depend MemoirChapStyles
-# depend Type1fonts
-# depend amslatex-primer
-# depend around-the-bend
-# depend ascii-chart
-# depend components-of-TeX
-# depend comprehensive
-# depend dickimaw
-# depend dtxtut
-# depend first-latex-doc
-# depend gentle
+# FAQ-en is documentation only
+# MemoirChapStyles is documentation only
+# Type1fonts is documentation only
+# amslatex-primer is documentation only
+# around-the-bend is documentation only
+# ascii-chart is documentation only
+# components-of-TeX is documentation only
+# comprehensive is documentation only
+# dickimaw is documentation only
+# dtxtut is documentation only
+# first-latex-doc is documentation only
+# gentle is documentation only
 DEPENDS+=	tex-guide-to-latex-[0-9]*:../../print/tex-guide-to-latex
-# depend happy4th
-# depend impatient
-# depend intro-scientific
-# depend knuth
-# depend l2tabu-english
-# depend latex-brochure
-# depend latex-course
-# depend latex-doc-ptr
-# depend latex-graphics-companion
-# depend latex-veryshortguide
-# depend latex-web-companion
-# depend latex2e-help-texinfo
-# depend latex4wp
-# depend latexcheat
-# depend latexcourse-rug
-# depend latexfileinfo-pkgs
+# happy4th is documentation only
+# impatient is documentation only
+# intro-scientific is documentation only
+# knuth is documentation only
+# l2tabu-english is documentation only
+# latex-brochure is documentation only
+# latex-course is documentation only
+# latex-doc-ptr is documentation only
+# latex-graphics-companion is documentation only
+# latex-veryshortguide is documentation only
+# latex-web-companion is documentation only
+# latex2e-help-texinfo is documentation only
+# latex4wp is documentation only
+# latexcheat is documentation only
+# latexcourse-rug is documentation only
+DEPENDS+=	tex-latexfileinfo-pkgs-[0-9]*:../../print/tex-latexfileinfo-pkgs
 # lshort-english is documentation only
-# depend macros2e
-# depend math-e
-# depend memdesign
-# depend metafont-beginners
-# depend metapost-examples
-# depend mil3
-# depend patgen2-tutorial
-# depend pictexsum
-# depend plain-doc
-# depend presentations-en
-# depend pstricks-examples-en
-# depend simplified-latex
-# depend svg-inkscape
-# depend tabulars-e
-# depend tamethebeast
-# depend tds
-# depend tex-font-errors-cheatsheet
-# depend tex-overview
-# depend tex-refs
-# depend texbytopic
-# depend titlepages
-# depend tlc2
-# depend visualfaq
-# depend voss-mathmode
-# depend webguide
-# depend xetexref
+# macros2e is documentation only
+# math-e is documentation only
+# memdesign is documentation only
+# metafont-beginners is documentation only
+# metapost-examples is documentation only
+# mil3 is documentation only
+# patgen2-tutorial is documentation only
+# pictexsum is documentation only
+# plain-doc is documentation only
+# presentations-en is documentation only
+# pstricks-examples-en is documentation only
+# simplified-latex is documentation only
+# svg-inkscape is documentation only
+# tabulars-e is documentation only
+# tamethebeast is documentation only
+# tds is documentation only
+# tex-font-errors-cheatsheet is documentation only
+# tex-overview is documentation only
+# tex-refs is documentation only
+# texbytopic is documentation only
+# titlepages is documentation only
+# tlc2 is documentation only
+# visualfaq is documentation only
+# voss-mathmode is documentation only
+# webguide is documentation only
+# xetexref is documentation only
 
 META_PACKAGE=	yes
 
