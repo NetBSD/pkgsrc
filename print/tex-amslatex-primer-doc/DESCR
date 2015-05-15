@@ -1,0 +1,9 @@
+The document aims to get you up and running with AMS-LaTeX as
+quickly as possible. These instructions (along with a template
+file template.tex) are not a substitute for the full
+documentation, but they may get you started quickly enough so
+that you will only need to refer to the main documentation
+occasionally. In addition to 'AMS-LaTeX out of the box', the
+document contains: a section describing how to draw commutative
+diagrams using Xy-pic; and a section describing how to use
+amsrefs to create a bibliography.
