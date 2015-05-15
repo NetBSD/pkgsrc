@@ -1,10 +1,10 @@
-$NetBSD: patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c,v 1.2 2015/04/29 14:12:54 sevan Exp $
+$NetBSD: patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c,v 1.3 2015/05/15 14:27:42 nros Exp $
 
 Make sure ERESTART gets defined.
 
---- src/gallium/winsys/svga/drm/vmw_screen_ioctl.c.orig	2015-03-21 00:51:18.000000000 +0000
+--- src/gallium/winsys/svga/drm/vmw_screen_ioctl.c.orig	2015-04-24 21:09:35.000000000 +0000
 +++ src/gallium/winsys/svga/drm/vmw_screen_ioctl.c
-@@ -48,6 +48,21 @@
+@@ -48,6 +48,25 @@
  
  #include "os/os_mman.h"
  
@@ -21,6 +21,10 @@ Make sure ERESTART gets defined.
 +#if !defined(ERESTART)
 +#define ERESTART -1
 +#endif
++#endif
++
++#if defined(__DragonFly__)
++#define _KERNEL_STRUCTURES 1
 +#endif
 +
  #include <errno.h>
