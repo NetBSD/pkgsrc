@@ -1,0 +1,6 @@
+This guide discusses the most common scenarios you are likely
+to encounter when installing Type 1 PostScript fonts. While the
+individual tools employed in the installation process are
+documented well, the actual difficulty most users are facing
+when trying to install new fonts is understanding how to put
+all the pieces together. This is what this guide is about.
