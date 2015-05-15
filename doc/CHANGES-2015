@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2231 2015/05/15 10:37:44 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2232 2015/05/15 10:38:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-redcarpet to 3.2.3 [taca 2015-05-14]
 	Updated lang/LuaJIT2 to 2.0.4 [alnsn 2015-05-14]
 	Updated www/firefox to 38.0.1 [ryoon 2015-05-15]
+	Updated www/firefox-l10n to 38.0.1 [ryoon 2015-05-15]
