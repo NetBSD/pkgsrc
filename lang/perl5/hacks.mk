@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.14 2014/12/15 11:46:35 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.15 2015/05/15 14:32:27 ryoon Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -73,6 +73,15 @@ BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-Os
 PKG_HACKS+=		alpha-optimisation
 #BUILDLINK_TRANSFORM+=  opt:-O[2-9]*:-O2 -fno-tree-ter
 CFLAGS+=-fno-tree-ter
+.endif
+
+### [Thu May 14 23:17:20 JST 2015 : ryoon]
+### Force to use /usr/sfw/lib/amd64/libgcc_s.co.1 instead.
+.if !empty(MACHINE_PLATFORM:MSunOS-5.10-x86_64)
+.  if !empty(CC_VERSION:Mgcc-3.4.3)
+BUILDLINK_PASSTHRU_RPATHDIRS+=	/usr/sfw/lib/amd64
+LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
+.  endif
 .endif
 
 .endif  # PERL5_HACKS_MK
