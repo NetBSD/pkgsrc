@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.72 2015/03/14 10:52:09 adam Exp $
+# $NetBSD: Makefile,v 1.72.2.1 2015/05/15 12:40:49 bsiegert Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
 # must match (see PR 49563).
 
 DISTNAME=	dovecot-2.2.16
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 
@@ -19,6 +20,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
+
+OPSYSVARS+=	CONFIGURE_ENV
+
+# Explicitly disable inotify on illumos, it is provided for Linux compat only.
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
 
 .include "../../mk/bsd.prefs.mk"
 
