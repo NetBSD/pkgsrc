@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2235 2015/05/15 18:21:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2236 2015/05/15 18:30:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4159,3 +4159,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-webguide-doc version 2014 [wiz 2015-05-15]
 	Added print/tex-xetexref-doc version 2014 [wiz 2015-05-15]
 	Updated net/wireshark to 1.10.14 [tron 2015-05-15]
+	Updated meta-pkgs/texlive-collection-langenglish to 2014 [wiz 2015-05-15]
