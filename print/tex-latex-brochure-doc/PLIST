@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/latex/latex-brochure/README
+share/texmf-dist/doc/latex/latex-brochure/README.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure-a3folderFB.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure-a3folderIN.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure-a4.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure-ledgerfolderFB.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure-ledgerfolderIN.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure-letter.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure.bib
+share/texmf-dist/doc/latex/latex-brochure/brochure.pdf
+share/texmf-dist/doc/latex/latex-brochure/brochure.sty
+share/texmf-dist/doc/latex/latex-brochure/brochure.tex
+share/texmf-dist/doc/latex/latex-brochure/build
+share/texmf-dist/doc/latex/latex-brochure/diagram-crop.eps
+share/texmf-dist/doc/latex/latex-brochure/diagram-crop.pdf
+share/texmf-dist/doc/latex/latex-brochure/fullscreen.eps
+share/texmf-dist/doc/latex/latex-brochure/fullscreen.png
+share/texmf-dist/doc/latex/latex-brochure/index.html
+share/texmf-dist/doc/latex/latex-brochure/sample-crop.eps
+share/texmf-dist/doc/latex/latex-brochure/sample-crop.pdf
+share/texmf-dist/doc/latex/latex-brochure/typo-degraded.eps
+share/texmf-dist/doc/latex/latex-brochure/typo-degraded.png
