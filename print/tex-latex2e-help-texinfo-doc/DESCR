@@ -1,0 +1,6 @@
+The manual is provided as Texinfo source (which was originally
+derived from the VMS help file in the DECUS TeX distribution of
+1990, with many subsequent changes). This is a collaborative
+development, and details of getting involved are to be found on
+the package home page. All the other formats in the
+distribution are derived from the Texinfo source, as usual.

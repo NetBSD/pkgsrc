@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:50 wiz Exp $
+share/texmf-dist/doc/bibtex/tamethebeast/CHANGES
+share/texmf-dist/doc/bibtex/tamethebeast/Makefile
+share/texmf-dist/doc/bibtex/tamethebeast/README
+share/texmf-dist/doc/bibtex/tamethebeast/idxstyle.ist
+share/texmf-dist/doc/bibtex/tamethebeast/local.bib
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.pdf
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.sec1.tex
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.sec2.tex
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.sec3.tex
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.sec4.tex
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.sec5.tex
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_en.tex
+share/texmf-dist/doc/bibtex/tamethebeast/ttb_style.sty

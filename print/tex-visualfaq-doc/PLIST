@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:51 wiz Exp $
+share/texmf-dist/doc/latex/visualfaq/README
+share/texmf-dist/doc/latex/visualfaq/source/README
+share/texmf-dist/doc/latex/visualfaq/source/anotherarticle.pdf
+share/texmf-dist/doc/latex/visualfaq/source/book-montage.png
+share/texmf-dist/doc/latex/visualfaq/source/fuzzytext.png
+share/texmf-dist/doc/latex/visualfaq/source/labelgraph.pdf
+share/texmf-dist/doc/latex/visualfaq/source/lorem-ipsum-logo.png
+share/texmf-dist/doc/latex/visualfaq/source/musixtex.png
+share/texmf-dist/doc/latex/visualfaq/source/visfaq-html.png
+share/texmf-dist/doc/latex/visualfaq/source/visualFAQ.ind
+share/texmf-dist/doc/latex/visualfaq/source/visualFAQ.ind2
+share/texmf-dist/doc/latex/visualfaq/source/visualFAQ.out
+share/texmf-dist/doc/latex/visualfaq/source/visualFAQ.tex
+share/texmf-dist/doc/latex/visualfaq/source/watermark.pdf
+share/texmf-dist/doc/latex/visualfaq/troubleshoot-vlf.pdf
+share/texmf-dist/doc/latex/visualfaq/visualFAQ.pdf

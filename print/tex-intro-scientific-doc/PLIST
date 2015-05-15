@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/latex/intro-scientific/Makefile
+share/texmf-dist/doc/latex/intro-scientific/README
+share/texmf-dist/doc/latex/intro-scientific/earth-moon.pdf
+share/texmf-dist/doc/latex/intro-scientific/scidoc.pdf
+share/texmf-dist/doc/latex/intro-scientific/scidoc.tex

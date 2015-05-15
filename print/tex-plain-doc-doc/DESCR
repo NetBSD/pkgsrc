@@ -1,0 +1,4 @@
+The document constitutes a list of every control sequence name
+(csname) described in the TeXbook, together with an indication
+of whether the csname is a primitive TeX command, or is defined
+in plain.tex

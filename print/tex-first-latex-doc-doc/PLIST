@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/latex/first-latex-doc/README
+share/texmf-dist/doc/latex/first-latex-doc/first-latex-doc.pdf
+share/texmf-dist/doc/latex/first-latex-doc/first-latex-doc.tex
+share/texmf-dist/doc/latex/first-latex-doc/latex-first.png
+share/texmf-dist/doc/latex/first-latex-doc/latex-first.tex
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-a.png
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-a.tex
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-b.png
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-b.tex
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-c.png
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-c.tex
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-d.tex
+share/texmf-dist/doc/latex/first-latex-doc/latex-second-e.tex

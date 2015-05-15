@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:47 wiz Exp $
+share/texmf-dist/doc/generic/components-of-TeX/README
+share/texmf-dist/doc/generic/components-of-TeX/etexkomp.tex
+share/texmf-dist/doc/generic/components-of-TeX/figkomp.tex
+share/texmf-dist/doc/generic/components-of-TeX/figtotal.tex
+share/texmf-dist/doc/generic/components-of-TeX/names.sty
+share/texmf-dist/doc/generic/components-of-TeX/texrep.sty

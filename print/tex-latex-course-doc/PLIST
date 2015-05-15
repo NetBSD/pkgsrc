@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/latex/latex-course/Graphics/Ross-Siegel.png
+share/texmf-dist/doc/latex/latex-course/Graphics/Thumbs.db
+share/texmf-dist/doc/latex/latex-course/Graphics/campus3.png
+share/texmf-dist/doc/latex/latex-course/LaTeX-Course.pdf
+share/texmf-dist/doc/latex/latex-course/LaTeX-Course.tex
+share/texmf-dist/doc/latex/latex-course/LaTeX-course.prj
+share/texmf-dist/doc/latex/latex-course/README
+share/texmf-dist/doc/latex/latex-course/beamercolorthemeross.sty

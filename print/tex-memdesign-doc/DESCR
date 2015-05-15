@@ -1,0 +1,6 @@
+"A Few Notes on Book Design" provides an introduction to the
+business of book design. It is an extended version of what used
+to be the first part of the memoir users' manual. Please note
+that the compiled copy, supplied in the package, uses
+commercial fonts; the README file contains instructions on how
+to compile the document without these fonts.

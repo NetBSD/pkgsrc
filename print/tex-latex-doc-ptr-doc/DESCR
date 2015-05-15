@@ -1,0 +1,5 @@
+A two-page set of recommendations for users who need on-line
+documentation of LaTeX. The document supports the need for
+documentation of LaTeX itself, in distributions. For example,
+it could be used in the command texdoc latex, in the TeX Live
+distribution.

@@ -1,0 +1,6 @@
+A showcase of chapter styles available to users of memoir: the
+six provided in the class itself, plus many from elsewhere (by
+the present author and others). The package's resources apply
+only to memoir, but the package draws from a number of sources
+relating to standard classes, including the fncychap package,
+and Vincent Zoonekynd's tutorial on headings.

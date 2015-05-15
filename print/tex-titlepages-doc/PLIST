@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:51 wiz Exp $
+share/texmf-dist/doc/latex/titlepages/README
+share/texmf-dist/doc/latex/titlepages/titlepages.pdf
+share/texmf-dist/doc/latex/titlepages/titlepages.tex
