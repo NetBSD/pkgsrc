@@ -1,0 +1,9 @@
+The document demonstrates the use of SVG images in LaTeX
+documents. Using the "PDF+LaTeX output" option of Inkscape, it
+is possible to include SVG in documents, in which LaTeX
+typesets the text. This results in uniform text style
+throughout the document, including text in images; moreover,
+LaTeX commands may be used in the image's text, providing such
+things as mathematics and references. The document also
+describes how to automate the conversion from SVG to PDF+LaTeX
+using Inkscape.

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:51 wiz Exp $
+share/texmf-dist/doc/generic/tex-refs/README
+share/texmf-dist/doc/generic/tex-refs/tex-refs-0.4.1.tar.bz2
+share/texmf-dist/doc/generic/tex-refs/tex-refs.css
+share/texmf-dist/doc/generic/tex-refs/tex-refs.epub
+share/texmf-dist/doc/generic/tex-refs/tex-refs.html
+share/texmf-dist/doc/generic/tex-refs/tex-refs.txt

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/latex/latex-veryshortguide/README
+share/texmf-dist/doc/latex/latex-veryshortguide/build
+share/texmf-dist/doc/latex/latex-veryshortguide/index.html
+share/texmf-dist/doc/latex/latex-veryshortguide/menno-a.eps
+share/texmf-dist/doc/latex/latex-veryshortguide/menno-a.jpg
+share/texmf-dist/doc/latex/latex-veryshortguide/veryshortguide-imposed.pdf
+share/texmf-dist/doc/latex/latex-veryshortguide/veryshortguide.pdf
+share/texmf-dist/doc/latex/latex-veryshortguide/veryshortguide.tex
+share/texmf-dist/doc/latex/latex-veryshortguide/vsg-1.jpg
+share/texmf-dist/doc/latex/latex-veryshortguide/vsg-2.jpg
+share/texmf-dist/doc/latex/latex-veryshortguide/vsg-3.jpg
+share/texmf-dist/doc/latex/latex-veryshortguide/vsg-4.jpg

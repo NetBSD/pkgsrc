@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:47 wiz Exp $
+share/texmf-dist/doc/generic/around-the-bend/AroundTheBend.pdf
+share/texmf-dist/doc/generic/around-the-bend/AroundTheBend.tex
+share/texmf-dist/doc/generic/around-the-bend/README

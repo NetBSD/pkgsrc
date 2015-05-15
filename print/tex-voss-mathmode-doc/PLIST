@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:51 wiz Exp $
+share/texmf-dist/doc/latex/voss-mathmode/Changes
+share/texmf-dist/doc/latex/voss-mathmode/Mathmode.bib
+share/texmf-dist/doc/latex/voss-mathmode/Mathmode.ist
+share/texmf-dist/doc/latex/voss-mathmode/Mathmode.ltx
+share/texmf-dist/doc/latex/voss-mathmode/Mathmode.pdf
+share/texmf-dist/doc/latex/voss-mathmode/Mathmode.tex
+share/texmf-dist/doc/latex/voss-mathmode/README
+share/texmf-dist/doc/latex/voss-mathmode/images/EuScript.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/amsalign.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/cm-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/cmbright-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/colArray.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/exscale.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/family.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/family0.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/family1.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/lm-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/minionpro-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/node.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/pamath-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/pazo-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/styles.pdf
+share/texmf-dist/doc/latex/voss-mathmode/images/test-crop.pdf
+share/texmf-dist/doc/latex/voss-mathmode/showexpl.cfg

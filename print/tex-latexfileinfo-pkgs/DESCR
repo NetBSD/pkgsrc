@@ -1,0 +1,6 @@
+The package provides an HTML file that lists and compares CTAN
+packages that display LaTeX source file information from
+\ProvidesClass, \ProvidesFile, and \ProvidesPackage commands in
+the LaTeX file. Five packages of the author's, and several
+other packages are discussed; revision control systems are
+mentioned briefly.

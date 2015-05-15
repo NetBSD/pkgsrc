@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:50 wiz Exp $
+share/texmf-dist/doc/latex/pictexsum/Makefile
+share/texmf-dist/doc/latex/pictexsum/README
+share/texmf-dist/doc/latex/pictexsum/a4mod.sty
+share/texmf-dist/doc/latex/pictexsum/pictexsum.pdf
+share/texmf-dist/doc/latex/pictexsum/pictexsum.tex
+share/texmf-dist/doc/latex/pictexsum/useful.sty

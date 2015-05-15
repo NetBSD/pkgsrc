@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/plain/gentle/gentle.pdf
+share/texmf-dist/doc/plain/gentle/gentle.tex

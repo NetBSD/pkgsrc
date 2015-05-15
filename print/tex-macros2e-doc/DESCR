@@ -1,0 +1,6 @@
+This document lists the internal macros defined by the LaTeX2e
+base files which can also be useful to package authors. The
+macros are hyper-linked to their description in source2e. For
+this to work both PDFs must be inside the same directory. This
+document is not yet complete in content and format and may miss
+some macros.

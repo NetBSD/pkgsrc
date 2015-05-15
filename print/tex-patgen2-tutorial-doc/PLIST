@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:50 wiz Exp $
+share/texmf-dist/doc/support/patgen2-tutorial/patgen2.pdf
+share/texmf-dist/doc/support/patgen2-tutorial/patgen2.tex

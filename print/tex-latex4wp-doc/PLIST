@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:49 wiz Exp $
+share/texmf-dist/doc/latex/latex4wp/HOW-TO-TYPESET
+share/texmf-dist/doc/latex/latex4wp/README
+share/texmf-dist/doc/latex/latex4wp/dat2tex.sh
+share/texmf-dist/doc/latex/latex4wp/exa.sty
+share/texmf-dist/doc/latex/latex4wp/gnuplot.gp
+share/texmf-dist/doc/latex/latex4wp/gnuplot.pdf
+share/texmf-dist/doc/latex/latex4wp/inkscape-tb.png
+share/texmf-dist/doc/latex/latex4wp/inkscape.png
+share/texmf-dist/doc/latex/latex4wp/latex4wp.pdf
+share/texmf-dist/doc/latex/latex4wp/latex4wp.tex
+share/texmf-dist/doc/latex/latex4wp/midifile.mid
+share/texmf-dist/doc/latex/latex4wp/tbx.eps
+share/texmf-dist/doc/latex/latex4wp/tbx.pdf
+share/texmf-dist/doc/latex/latex4wp/tbx.tex

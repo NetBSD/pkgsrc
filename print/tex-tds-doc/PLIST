@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:50 wiz Exp $
+share/texmf-dist/doc/generic/tds/ChangeLog
+share/texmf-dist/doc/generic/tds/Makefile
+share/texmf-dist/doc/generic/tds/README
+share/texmf-dist/doc/generic/tds/index.html
+share/texmf-dist/doc/generic/tds/tds.dvi
+share/texmf-dist/doc/generic/tds/tds.html
+share/texmf-dist/doc/generic/tds/tds.pdf
+share/texmf-dist/doc/generic/tds/tds.sed
+share/texmf-dist/doc/generic/tds/tds.tex
+share/texmf-dist/doc/generic/tds/tds2texi.el
+share/texmf-dist/doc/generic/tds/tdsguide.cls
