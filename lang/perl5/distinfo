@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.126 2015/02/25 14:56:45 wiz Exp $
+$NetBSD: distinfo,v 1.127 2015/05/15 14:32:27 ryoon Exp $
 
 SHA1 (perl-5.20.2.tar.bz2) = 63126c683b4c79c35008a47d56f7beae876c569f
 RMD160 (perl-5.20.2.tar.bz2) = a24d4c70846ae4332d01d8d56696a55bf492f44b
@@ -19,6 +19,7 @@ SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
 SHA1 (patch-hints_darwin.sh) = 15596f109f317ffb14c695b4196bb37699d2f34b
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
 SHA1 (patch-hints_sco.sh) = 8d43cdc0632799e1cdb5dc6fdb968052a9ae4216
+SHA1 (patch-hints_solaris__2.sh) = f054d36917c74df8219c0fc84e9b20fa312a56a3
 SHA1 (patch-install__lib.pl) = 31e9e0fc34386542dd6a60bf6ca0a607babbd4b6
 SHA1 (patch-ta) = a9d13eeec22733e4087942f217a0d47a19498a6f
 SHA1 (patch-zd) = 469602bc04b217f2d9929f5caeab43f77a74076f
