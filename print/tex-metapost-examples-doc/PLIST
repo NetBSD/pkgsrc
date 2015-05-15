@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:49 wiz Exp $
+share/texmf-dist/doc/metapost/metapost-examples/Makefile
+share/texmf-dist/doc/metapost/metapost-examples/README
+share/texmf-dist/doc/metapost/metapost-examples/data1
+share/texmf-dist/doc/metapost/metapost-examples/data2
+share/texmf-dist/doc/metapost/metapost-examples/data3
+share/texmf-dist/doc/metapost/metapost-examples/examples.mp
+share/texmf-dist/doc/metapost/metapost-examples/mp2html.pl

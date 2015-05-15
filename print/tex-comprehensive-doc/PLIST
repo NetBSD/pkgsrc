@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:47 wiz Exp $
+share/texmf-dist/doc/latex/comprehensive/README
+share/texmf-dist/doc/latex/comprehensive/SYMLIST
+share/texmf-dist/doc/latex/comprehensive/source/Makefile
+share/texmf-dist/doc/latex/comprehensive/source/lightbulb.eps
+share/texmf-dist/doc/latex/comprehensive/source/lightbulb.map
+share/texmf-dist/doc/latex/comprehensive/source/lightbulb.mf
+share/texmf-dist/doc/latex/comprehensive/source/lightbulb10.mf
+share/texmf-dist/doc/latex/comprehensive/source/lightbulb10.pfb
+share/texmf-dist/doc/latex/comprehensive/source/makefakeMnSymbol
+share/texmf-dist/doc/latex/comprehensive/source/response.eps
+share/texmf-dist/doc/latex/comprehensive/source/symbols.ist
+share/texmf-dist/doc/latex/comprehensive/source/symbols.tex
+share/texmf-dist/doc/latex/comprehensive/source/teubner-subset.sty
+share/texmf-dist/doc/latex/comprehensive/source/versicle.eps
+share/texmf-dist/doc/latex/comprehensive/symbols-a4.pdf
+share/texmf-dist/doc/latex/comprehensive/symbols-letter.pdf

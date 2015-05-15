@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:51 wiz Exp $
+share/texmf-dist/doc/plain/texbytopic/README
+share/texmf-dist/doc/plain/texbytopic/TeXbyTopic.pdf
+share/texmf-dist/doc/plain/texbytopic/TeXbyTopic.tex
+share/texmf-dist/doc/plain/texbytopic/figflow.tex
+share/texmf-dist/doc/plain/texbytopic/glossary.tex
+share/texmf-dist/doc/plain/texbytopic/tables.tex
+share/texmf-dist/doc/plain/texbytopic/tex.bib

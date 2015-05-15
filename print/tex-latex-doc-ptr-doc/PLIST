@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:48 wiz Exp $
+share/texmf-dist/doc/latex/latex-doc-ptr/Makefile
+share/texmf-dist/doc/latex/latex-doc-ptr/README
+share/texmf-dist/doc/latex/latex-doc-ptr/latex-doc-ptr.pdf
+share/texmf-dist/doc/latex/latex-doc-ptr/latex-doc-ptr.sty
+share/texmf-dist/doc/latex/latex-doc-ptr/latex-doc-ptr.tex

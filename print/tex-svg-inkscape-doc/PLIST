@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:50 wiz Exp $
+share/texmf-dist/doc/latex/svg-inkscape/InkscapePDFLaTeX.pdf
+share/texmf-dist/doc/latex/svg-inkscape/InkscapePDFLaTeX.tex
+share/texmf-dist/doc/latex/svg-inkscape/README
+share/texmf-dist/doc/latex/svg-inkscape/image-normal.pdf
+share/texmf-dist/doc/latex/svg-inkscape/image.pdf
+share/texmf-dist/doc/latex/svg-inkscape/image.pdf_tex
+share/texmf-dist/doc/latex/svg-inkscape/image.svg

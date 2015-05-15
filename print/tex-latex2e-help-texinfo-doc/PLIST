@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:49 wiz Exp $
+share/texmf-dist/doc/info/latex2e.info
+share/texmf-dist/doc/latex/latex2e-help-texinfo/ChangeLog
+share/texmf-dist/doc/latex/latex2e-help-texinfo/Makefile
+share/texmf-dist/doc/latex/latex2e-help-texinfo/NEWS
+share/texmf-dist/doc/latex/latex2e-help-texinfo/README
+share/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.dbk
+share/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.html
+share/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.pdf
+share/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.texi
+share/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.txt
+share/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.xml
+share/texmf-dist/doc/latex/latex2e-help-texinfo/ltx-help.el

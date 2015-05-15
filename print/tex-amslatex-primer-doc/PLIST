@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/15 17:51:47 wiz Exp $
+share/texmf-dist/doc/latex/amslatex-primer/README
+share/texmf-dist/doc/latex/amslatex-primer/amshelp.md5
+share/texmf-dist/doc/latex/amslatex-primer/amshelp.pdf
+share/texmf-dist/doc/latex/amslatex-primer/amshelp.tex
+share/texmf-dist/doc/latex/amslatex-primer/template.tex
