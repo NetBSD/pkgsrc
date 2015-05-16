@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2242 2015/05/16 11:31:04 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2243 2015/05/16 13:46:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4263,3 +4263,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-latexextra to 2014pre3 [markd 2015-05-16]
 	Updated meta-pkgs/texlive-collection-mathextra to 2014pre2 [markd 2015-05-16]
 	Updated meta-pkgs/texlive-collection-pictures to 2014pre2 [markd 2015-05-16]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.15 [mef 2015-05-16]
