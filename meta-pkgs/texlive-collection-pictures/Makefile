@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/16 11:26:04 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36373
@@ -32,7 +32,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend circuitikz
 # depend curve
 # depend curve2e
-# depend curves
+DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
 # depend dcpic
 # depend diagmac2
 # depend doc-pictex
@@ -73,7 +73,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend modiagram
 # depend neuralnetwork
 # depend numericplots
-# depend pb-diagram
+DEPENDS+=	tex-pb-diagram-[0-9]*:../../print/tex-pb-diagram
 # depend petri-nets
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 # depend pgf-blur
@@ -87,7 +87,7 @@ DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-pgfplots-[0-9]*:../../print/tex-pgfplots
 # depend piano
 DEPENDS+=	tex-picinpar-[0-9]*:../../print/tex-picinpar
-# depend pict2e
+DEPENDS+=	tex-pict2e-[0-9]*:../../print/tex-pict2e
 DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend pictex2
 # depend pinlabel
