@@ -1,0 +1,11 @@
+This package was described in the 2nd edition of 'LaTeX: A
+Document Preparation System', but the LaTeX project team
+declined to produce the package. For a long time, LaTeX has
+included a 'pict2e package' that merely produced an apologetic
+error message. The new package extends the existing LaTeX
+picture environment, using the familiar technique (cf. the
+graphics and color packages) of driver files (at present,
+drivers for PostScript output from LaTeX, and for use with
+PDFLaTeX are available). The package documentation has a fair
+number of examples of use, showing where things are improved by
+comparison with the LaTeX picture environment.

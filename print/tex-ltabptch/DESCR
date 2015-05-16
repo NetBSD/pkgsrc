@@ -1,0 +1,2 @@
+A patch for LaTeX bugs tools/3180 and tools/3480. The patch
+applies to version 4.11 of longtable.

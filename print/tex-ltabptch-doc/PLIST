@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:17 markd Exp $
+share/texmf-dist/doc/latex/ltabptch/README
+share/texmf-dist/doc/latex/ltabptch/ltabptch.pdf
+share/texmf-dist/doc/latex/ltabptch/ltabptch.tex
+share/texmf-dist/doc/latex/ltabptch/ltabtest.tex
