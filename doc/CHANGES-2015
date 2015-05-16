@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2245 2015/05/16 14:45:15 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2246 2015/05/16 18:47:09 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-B-Hooks-EndOfScope to 0.15 [mef 2015-05-16]
 	Updated devel/p5-autovivification to 0.15 [mef 2015-05-16]
 	Updated textproc/p5-iCal-Parser to 1.20 [mef 2015-05-16]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.460 [tsutsui 2015-05-16]
