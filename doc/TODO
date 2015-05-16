@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14398 2015/05/14 22:18:32 taca Exp $
+$NetBSD: TODO,v 1.14399 2015/05/16 17:04:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,6 +433,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.28.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -1129,7 +1130,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-1.1
 	o windowlab-1.40
-	o wine-devel-1.7.42
+	o wine-devel-1.7.43
 	o wireshark-1.12.4
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
