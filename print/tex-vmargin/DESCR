@@ -1,0 +1,8 @@
+Provides a macro to set various margins as well as dimensions
+for header/footer and page dimensions. Most common paper sizes,
+paper orientation, disabling of headers and footers, and two
+sided printing are supported. The vmargin package does not rely
+on other packages and was designed with speed and size in mind.
+Its user interface might not be very fancy, but it's fast,
+small, and gets the job done. If you are looking for something
+more elaborate try the geometry package.

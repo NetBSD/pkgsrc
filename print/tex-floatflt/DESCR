@@ -1,0 +1,4 @@
+The package can float text around figures and tables which do
+not span the full width of a page; it improves upon floatfig,
+and allows tables/figures to be set left/right or alternating
+on even/odd pages.

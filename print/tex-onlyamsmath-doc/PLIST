@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:17 markd Exp $
+share/texmf-dist/doc/latex/onlyamsmath/ChangeLog
+share/texmf-dist/doc/latex/onlyamsmath/Makefile
+share/texmf-dist/doc/latex/onlyamsmath/README
+share/texmf-dist/doc/latex/onlyamsmath/onlyamsmath-v.tex
+share/texmf-dist/doc/latex/onlyamsmath/onlyamsmath.pdf
+share/texmf-dist/doc/latex/onlyamsmath/onlyamsmathtest.tex
