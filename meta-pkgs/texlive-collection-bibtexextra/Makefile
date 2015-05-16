@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/16 11:24:59 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36325
@@ -69,14 +69,14 @@ DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
 # depend collref
 # depend compactbib
 # depend crossrefware
-# depend custom-bib
+DEPENDS+=	tex-custom-bib-[0-9]*:../../print/tex-custom-bib
 # depend din1505
 DEPENDS+=	tex-dk-bib-[0-9]*:../../print/tex-dk-bib
 # depend doipubmed
 # depend economic
 # depend fbs
 # depend figbib
-# depend footbib
+DEPENDS+=	tex-footbib-[0-9]*:../../print/tex-footbib
 # depend francais-bst
 # depend geschichtsfrkl
 DEPENDS+=	tex-harvard-[0-9]*:../../print/tex-harvard
@@ -91,7 +91,7 @@ DEPENDS+=	tex-jurabib-[0-9]*:../../print/tex-jurabib
 # depend listbib
 DEPENDS+=	tex-logreq-[0-9]*:../../print/tex-logreq
 # depend margbib
-# depend multibib
+DEPENDS+=	tex-multibib-[0-9]*:../../print/tex-multibib
 # depend multibibliography
 # depend munich
 # depend notes2bib
