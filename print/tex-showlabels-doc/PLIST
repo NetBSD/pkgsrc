@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:19 markd Exp $
+share/texmf-dist/doc/latex/showlabels/README
+share/texmf-dist/doc/latex/showlabels/VERSION
+share/texmf-dist/doc/latex/showlabels/lppl.txt
+share/texmf-dist/doc/latex/showlabels/showlabels.html
+share/texmf-dist/doc/latex/showlabels/showlabels.pdf
+share/texmf-dist/doc/latex/showlabels/style.css

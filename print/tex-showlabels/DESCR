@@ -1,0 +1,6 @@
+This package helps you keep track of all the labels you define,
+by putting the name of new labels into the margin whenever the
+\label command is used. The package allows you to do the same
+thing for other commands. The only one for which this is
+obviously useful is the \cite command, but it's easy to do it
+for others, such as the \ref or \begin commands.

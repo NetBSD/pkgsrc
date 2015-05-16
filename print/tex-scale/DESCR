@@ -1,0 +1,4 @@
+A package to scale a document by sqrt(2) (or by \magstep{2}).
+This is useful if you are preparing a document on, for example,
+A5 paper and want to print on A4 paper to achieve a better
+resolution.
