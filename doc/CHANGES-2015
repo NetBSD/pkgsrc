@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2236 2015/05/15 18:30:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2237 2015/05/16 02:59:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4160,3 +4160,15 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-xetexref-doc version 2014 [wiz 2015-05-15]
 	Updated net/wireshark to 1.10.14 [tron 2015-05-15]
 	Updated meta-pkgs/texlive-collection-langenglish to 2014 [wiz 2015-05-15]
+	Added print/tex-hyphen-ethiopic version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-armenian version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-friulan version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-kurmanji version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-latvian version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-piedmontese version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-romansh version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-indic version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-afrikaans version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-georgian version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-thai version 2014 [markd 2015-05-16]
+	Added print/tex-hyphen-turkmen version 2014 [markd 2015-05-16]
