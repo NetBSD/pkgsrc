@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/16 03:07:05 markd Exp $
 
 DISTNAME=	collection-langeuropean
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36307
@@ -40,24 +40,24 @@ DEPENDS+=	tex-babel-turkish-[0-9]*:../../print/tex-babel-turkish
 DEPENDS+=	tex-babel-welsh-[0-9]*:../../print/tex-babel-welsh
 # depend finbib
 # depend hrlatex
-# depend hyphen-armenian
+DEPENDS+=	tex-hyphen-armenian-[0-9]*:../../print/tex-hyphen-armenian
 DEPENDS+=	tex-hyphen-croatian-[0-9]*:../../print/tex-hyphen-croatian
 DEPENDS+=	tex-hyphen-danish-[0-9]*:../../print/tex-hyphen-danish
 DEPENDS+=	tex-hyphen-dutch-[0-9]*:../../print/tex-hyphen-dutch
 DEPENDS+=	tex-hyphen-estonian-[0-9]*:../../print/tex-hyphen-estonian
 DEPENDS+=	tex-hyphen-finnish-[0-9]*:../../print/tex-hyphen-finnish
-# depend hyphen-friulan
+DEPENDS+=	tex-hyphen-friulan-[0-9]*:../../print/tex-hyphen-friulan
 DEPENDS+=	tex-hyphen-hungarian-[0-9]*:../../print/tex-hyphen-hungarian
 DEPENDS+=	tex-hyphen-icelandic-[0-9]*:../../print/tex-hyphen-icelandic
 DEPENDS+=	tex-hyphen-irish-[0-9]*:../../print/tex-hyphen-irish
-# depend hyphen-kurmanji
+DEPENDS+=	tex-hyphen-kurmanji-[0-9]*:../../print/tex-hyphen-kurmanji
 DEPENDS+=	tex-hyphen-latin-[0-9]*:../../print/tex-hyphen-latin
-# depend hyphen-latvian
+DEPENDS+=	tex-hyphen-latvian-[0-9]*:../../print/tex-hyphen-latvian
 DEPENDS+=	tex-hyphen-lithuanian-[0-9]*:../../print/tex-hyphen-lithuanian
 DEPENDS+=	tex-hyphen-norwegian-[0-9]*:../../print/tex-hyphen-norwegian
-# depend hyphen-piedmontese
+DEPENDS+=	tex-hyphen-piedmontese-[0-9]*:../../print/tex-hyphen-piedmontese
 DEPENDS+=	tex-hyphen-romanian-[0-9]*:../../print/tex-hyphen-romanian
-# depend hyphen-romansh
+DEPENDS+=	tex-hyphen-romansh-[0-9]*:../../print/tex-hyphen-romansh
 DEPENDS+=	tex-hyphen-slovenian-[0-9]*:../../print/tex-hyphen-slovenian
 DEPENDS+=	tex-hyphen-swedish-[0-9]*:../../print/tex-hyphen-swedish
 DEPENDS+=	tex-hyphen-turkish-[0-9]*:../../print/tex-hyphen-turkish
