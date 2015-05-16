@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.35 2015/05/16 19:41:54 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.36 2015/05/16 19:49:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -126,3 +126,5 @@ Pullup ticket #4717 - requested by tron
 net/wireshark: security fix
 Pullup ticket #4718 - requested by joerg
 math/cln: build fix
+Pullup ticket #4719 - requested by sevan
+security/openssh: security fix
