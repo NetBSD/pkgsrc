@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:16 markd Exp $
+share/texmf-dist/doc/latex/g-brief/beispiel.pdf
+share/texmf-dist/doc/latex/g-brief/beispiel.tex
+share/texmf-dist/doc/latex/g-brief/beispiel2.pdf
+share/texmf-dist/doc/latex/g-brief/beispiel2.tex
+share/texmf-dist/doc/latex/g-brief/g-brief.pdf

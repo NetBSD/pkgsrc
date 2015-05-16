@@ -1,0 +1,8 @@
+LaTeX2e's filecontents and filecontents* environments enable a
+LaTeX source file to generate external files as it runs through
+LaTeX. However, there are two limitations of these
+environments: they refuse to overwrite existing files, and they
+can only be used in the preamble of a document. The
+filecontents package removes these limitations, letting you
+overwrite existing files and letting you use
+filecontents/filecontents* anywhere.

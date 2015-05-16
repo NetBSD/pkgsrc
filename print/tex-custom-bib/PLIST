@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:15 markd Exp $
+share/texmf-dist/tex/latex/custom-bib/catalan.mbs
+share/texmf-dist/tex/latex/custom-bib/dansk.mbs
+share/texmf-dist/tex/latex/custom-bib/dutch.mbs
+share/texmf-dist/tex/latex/custom-bib/english.mbs
+share/texmf-dist/tex/latex/custom-bib/esperant.mbs
+share/texmf-dist/tex/latex/custom-bib/finnish.mbs
+share/texmf-dist/tex/latex/custom-bib/french.mbs
+share/texmf-dist/tex/latex/custom-bib/geojour.mbs
+share/texmf-dist/tex/latex/custom-bib/geophys.tex
+share/texmf-dist/tex/latex/custom-bib/german.mbs
+share/texmf-dist/tex/latex/custom-bib/italian.mbs
+share/texmf-dist/tex/latex/custom-bib/makebst.tex
+share/texmf-dist/tex/latex/custom-bib/merlin.mbs
+share/texmf-dist/tex/latex/custom-bib/norsk.mbs
+share/texmf-dist/tex/latex/custom-bib/photjour.mbs
+share/texmf-dist/tex/latex/custom-bib/physjour.mbs
+share/texmf-dist/tex/latex/custom-bib/polski.mbs
+share/texmf-dist/tex/latex/custom-bib/portuges.mbs
+share/texmf-dist/tex/latex/custom-bib/shorthnd.tex
+share/texmf-dist/tex/latex/custom-bib/slovene.mbs
+share/texmf-dist/tex/latex/custom-bib/spanish.mbs
+share/texmf-dist/tex/latex/custom-bib/suppjour.mbs
+share/texmf-dist/tex/latex/custom-bib/svenska.mbs

@@ -1,0 +1,8 @@
+The float package provides commands to define new floats of
+various styles (plain, boxed, ruled, and userdefined ones); the
+rotating package provides new environments (sidewaysfigure and
+sidewaystable) which are rotated by 90 or 270 degrees. But what
+about new rotated floats, e.g. a rotated ruled one? This
+package makes this possible; it builds a bridge between the two
+packages and extends the commands from the float package to
+define rotated versions of the new floats, too.
