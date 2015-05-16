@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:15 markd Exp $
+share/texmf-dist/doc/latex/dinbrief/brfbody.tex
+share/texmf-dist/doc/latex/dinbrief/brfkopf.tex
+share/texmf-dist/doc/latex/dinbrief/dbold.tex
+share/texmf-dist/doc/latex/dinbrief/dinbrief.pdf
+share/texmf-dist/doc/latex/dinbrief/dinbrief.tex
+share/texmf-dist/doc/latex/dinbrief/dintab.tex
+share/texmf-dist/doc/latex/dinbrief/example.tex
+share/texmf-dist/doc/latex/dinbrief/liesmich
+share/texmf-dist/doc/latex/dinbrief/readme
+share/texmf-dist/doc/latex/dinbrief/test10.tex
+share/texmf-dist/doc/latex/dinbrief/test11.tex
+share/texmf-dist/doc/latex/dinbrief/test12.tex
+share/texmf-dist/doc/latex/dinbrief/testnorm.tex

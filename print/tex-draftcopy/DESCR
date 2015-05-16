@@ -1,0 +1,5 @@
+Places the word DRAFT (or other words) in light grey diagonally
+across the background (or at the bottom) of each (or selected)
+pages of the document. The package uses PostScript \special
+commands, and may not therefore be used with PDFLaTeX. For that
+usage, consider the wallpaper or draftwatermark packages.

@@ -1,0 +1,4 @@
+This package inhibits the usage of plain TeX and (on demand) of
+standard LaTeX mathematics environments. This is useful for
+class writers who want to encourage their users to use the
+environments provided by the amsmath package.
