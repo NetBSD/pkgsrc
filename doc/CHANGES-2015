@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2239 2015/05/16 03:14:29 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2240 2015/05/16 06:47:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4177,3 +4177,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-langeuropean to 2014pre2 [markd 2015-05-16]
 	Updated meta-pkgs/texlive-collection-langindic to 2014pre2 [markd 2015-05-16]
 	Updated meta-pkgs/texlive-collection-langother to 2014pre2 [markd 2015-05-16]
+	Updated sysutils/xfce4-thunar to 1.6.8 [wiz 2015-05-16]
