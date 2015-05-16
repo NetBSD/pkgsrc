@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2014/02/27 15:56:53 hauke Exp $
+$NetBSD: distinfo,v 1.27 2015/05/16 20:27:49 ryoon Exp $
 
-SHA1 (tmux-1.9a.tar.gz) = 815264268e63c6c85fe8784e06a840883fcfc6a2
-RMD160 (tmux-1.9a.tar.gz) = 29ae5f12aa71ee800643fb2df23573bee83f5965
-Size (tmux-1.9a.tar.gz) = 447938 bytes
-SHA1 (patch-Makefile.in) = b902156666e515e6c763eee6ffde8ba2ff4c7f98
+SHA1 (tmux-2.0.tar.gz) = 977871e7433fe054928d86477382bd5f6794dc3d
+RMD160 (tmux-2.0.tar.gz) = 5114e1e9d78667291375efcbd9be657b4f175806
+Size (tmux-2.0.tar.gz) = 455754 bytes
+SHA1 (patch-Makefile.in) = 9908c1f23603a735dd7b083b35cbfa7fc1fb4b3a
 SHA1 (patch-server-client.c) = 1cd724559d5cac935b4bbb1d02a7927ae54ae3fc
