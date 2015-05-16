@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1069 2015/05/12 12:22:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.1070 2015/05/16 03:09:29 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -306,6 +306,7 @@ SUBDIR+=	mimms
 SUBDIR+=	miniupnpd
 SUBDIR+=	miredo
 SUBDIR+=	mirror
+SUBDIR+=	miruo
 SUBDIR+=	mitmproxy
 SUBDIR+=	mldonkey
 SUBDIR+=	mldonkey-gui
