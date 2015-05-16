@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.141 2015/04/19 16:25:10 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.142 2015/05/16 11:21:00 ryoon Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -255,7 +255,7 @@ RUBY_RDOC_PKGSRC_VERS=	4.2.0
 #
 RUBY_VERSION_DEFAULT?=	200
 
-RUBY_VERSION_SUPPORTED?= 200 193 21 # 22
+RUBY_VERSION_SUPPORTED?= 200 193 21 22
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
