@@ -1,0 +1,4 @@
+Hyphenation patterns for Afrikaans in T1/EC and UTF-8
+encodings. OpenOffice includes older patterns created by a
+different author, but the patterns packaged with TeX are
+considered superior in quality.
