@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2240 2015/05/16 06:47:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2241 2015/05/16 11:20:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4178,3 +4178,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-langindic to 2014pre2 [markd 2015-05-16]
 	Updated meta-pkgs/texlive-collection-langother to 2014pre2 [markd 2015-05-16]
 	Updated sysutils/xfce4-thunar to 1.6.8 [wiz 2015-05-16]
+	Updated lang/php54 to 5.4.41 [taca 2015-05-16]
+	Updated lang/php55 to 5.5.25 [taca 2015-05-16]
+	Updated lang/php56 to 5.6.9 [taca 2015-05-16]
