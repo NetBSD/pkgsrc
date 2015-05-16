@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/05/16 03:08:11 ryoon Exp $
+
+SHA1 (miruo-0.9.6.tar.gz) = f93b472a47c65db5d1b8903df2189c1945e5b86e
+RMD160 (miruo-0.9.6.tar.gz) = dc3a856b8bcf7ac8e04515c5a1da568531f8e438
+Size (miruo-0.9.6.tar.gz) = 118783 bytes
