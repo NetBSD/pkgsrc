@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:17 markd Exp $
+share/texmf-dist/doc/latex/multibib/README
+share/texmf-dist/doc/latex/multibib/bibtexall
+share/texmf-dist/doc/latex/multibib/multibib.pdf

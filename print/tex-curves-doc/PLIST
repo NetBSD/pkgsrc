@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:15 markd Exp $
+share/texmf-dist/doc/latex/curves/README
+share/texmf-dist/doc/latex/curves/curves.pdf
+share/texmf-dist/doc/latex/curves/latex2pdf

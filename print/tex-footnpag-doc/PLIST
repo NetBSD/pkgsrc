@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:16 markd Exp $
+share/texmf-dist/doc/latex/footnpag/CATALOG
+share/texmf-dist/doc/latex/footnpag/History
+share/texmf-dist/doc/latex/footnpag/INSTALL
+share/texmf-dist/doc/latex/footnpag/Imakefile
+share/texmf-dist/doc/latex/footnpag/License
+share/texmf-dist/doc/latex/footnpag/MANIFEST
+share/texmf-dist/doc/latex/footnpag/README
+share/texmf-dist/doc/latex/footnpag/TODO
+share/texmf-dist/doc/latex/footnpag/footnpag-doc.sty
+share/texmf-dist/doc/latex/footnpag/footnpag-user.pdf
+share/texmf-dist/doc/latex/footnpag/footnpag-user.tex
+share/texmf-dist/doc/latex/footnpag/footnpag.doc
+share/texmf-dist/doc/latex/footnpag/test/Imakefile
+share/texmf-dist/doc/latex/footnpag/test/eqnarray-fnmark.tex
+share/texmf-dist/doc/latex/footnpag/test/late.tex
+share/texmf-dist/doc/latex/footnpag/test/many.tex
+share/texmf-dist/doc/latex/footnpag/test/minipage.tex
+share/texmf-dist/doc/latex/footnpag/test/report.tex
+share/texmf-dist/doc/latex/footnpag/test/title-2col.tex

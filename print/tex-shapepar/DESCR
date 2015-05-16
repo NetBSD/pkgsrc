@@ -1,0 +1,13 @@
+\shapepar is a macro to typeset paragraphs in a specific shape.
+The size is adjusted automatically so that the entire shape is
+filled with text. There may not be displayed maths or
+'\vadjust' material (no \vspace) in the argument of \shapepar.
+The macros work for both LaTeX and plain TeX. For LaTeX,
+specify \usepackage{shapepar}; for Plain, \input shapepar.sty.
+\shapepar works in terms of user-defined shapes, though the
+package does provide some predefined shapes: so you can form
+any paragraph into the form of a heart by putting
+\heartpar{sometext...} inside your document. The tedium of
+creating these polygon definitions may be alleviated by using
+the shapepatch extension to transfig which will convert xfig
+output to \shapepar polygon form.

@@ -1,0 +1,7 @@
+AMSTeX is a TeX macro package, originally written by Michael
+Spivak for the American Mathematical Society (AMS) during 1983-
+1985 and is described in the book 'The Joy of TeX'. It is based
+on Plain TeX, and provides many features for producing more
+professional-looking maths formulas with less burden on
+authors. More recently, the focus of attention has switched to
+amslatex, but AMSTeX remains as a working system.

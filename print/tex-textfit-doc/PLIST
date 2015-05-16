@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:19 markd Exp $
+share/texmf-dist/doc/latex/textfit/README
+share/texmf-dist/doc/latex/textfit/makefile
+share/texmf-dist/doc/latex/textfit/manifest
+share/texmf-dist/doc/latex/textfit/textfit.pdf

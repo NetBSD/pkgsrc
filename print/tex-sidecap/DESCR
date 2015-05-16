@@ -1,0 +1,3 @@
+Defines environments called SCfigure and SCtable (analogous to
+figure and table) to typeset captions sideways. Options include
+outercaption, innercaption, leftcaption and rightcaption.

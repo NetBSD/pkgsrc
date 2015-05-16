@@ -1,0 +1,4 @@
+The package counts the actual pages in the document (as opposed
+to reporting the number of the last page, as does lastpage).
+The counter itself may be shipped out to the DVI file. The
+package uses the everyshi package for its task.

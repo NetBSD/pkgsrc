@@ -1,0 +1,5 @@
+The lettrine package supports various dropped capitals styles,
+typically those described in the French typographic books. In
+particular, it has facilities for the paragraph text's left
+edge to follow the outline of capitals that have a regular
+shape (such as "A" and "V").

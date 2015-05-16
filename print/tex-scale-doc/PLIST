@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:18 markd Exp $
+share/texmf-dist/doc/latex/scale/COPYING
+share/texmf-dist/doc/latex/scale/README
