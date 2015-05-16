@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2237 2015/05/16 02:59:34 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2238 2015/05/16 03:11:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4172,3 +4172,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-hyphen-georgian version 2014 [markd 2015-05-16]
 	Added print/tex-hyphen-thai version 2014 [markd 2015-05-16]
 	Added print/tex-hyphen-turkmen version 2014 [markd 2015-05-16]
+	Added net/miruo version 0.9.6 [ryoon 2015-05-16]
