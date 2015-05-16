@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/14 17:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/16 03:02:15 markd Exp $
 
 DISTNAME=	collection-langafrican
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30372
@@ -15,7 +15,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 DEPENDS+=	tex-ethiop-[0-9]*:../../print/tex-ethiop
 DEPENDS+=	tex-ethiop-t1-[0-9]*:../../fonts/tex-ethiop-t1
 DEPENDS+=	tex-fc-[0-9]*:../../fonts/tex-fc
-# DEPENDS+=	tex-hyphen-ethiopic-[0-9]*:../../print/tex-hyphen-ethiopic
+DEPENDS+=	tex-hyphen-ethiopic-[0-9]*:../../print/tex-hyphen-ethiopic
 
 META_PACKAGE=	yes
 
