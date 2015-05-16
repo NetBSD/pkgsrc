@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/16 03:11:41 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	31014
@@ -25,14 +25,14 @@ DEPENDS+=	tex-babel-vietnamese-[0-9]*:../../print/tex-babel-vietnamese
 # depend cjhebrew
 # depend ctib
 DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../fonts/tex-fonts-tlwg
-# depend hyphen-afrikaans
+DEPENDS+=	tex-hyphen-afrikaans-[0-9]*:../../print/tex-hyphen-afrikaans
 DEPENDS+=	tex-hyphen-coptic-[0-9]*:../../print/tex-hyphen-coptic
 DEPENDS+=	tex-hyphen-esperanto-[0-9]*:../../print/tex-hyphen-esperanto
-# depend hyphen-georgian
+DEPENDS+=	tex-hyphen-georgian-[0-9]*:../../print/tex-hyphen-georgian
 DEPENDS+=	tex-hyphen-indonesian-[0-9]*:../../print/tex-hyphen-indonesian
 DEPENDS+=	tex-hyphen-interlingua-[0-9]*:../../print/tex-hyphen-interlingua
-# depend hyphen-thai
-# depend hyphen-turkmen
+DEPENDS+=	tex-hyphen-thai-[0-9]*:../../print/tex-hyphen-thai
+DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
 # lshort-thai is documentation only
 # lshort-vietnamese is documentation only
 # depend ntheorem-vn
