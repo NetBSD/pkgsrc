@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:18 markd Exp $
+share/texmf-dist/doc/latex/pb-diagram/COPYING
+share/texmf-dist/doc/latex/pb-diagram/README
+share/texmf-dist/doc/latex/pb-diagram/pb-examples.tex
+share/texmf-dist/doc/latex/pb-diagram/pb-manual.pdf
+share/texmf-dist/doc/latex/pb-diagram/pb-manual.tex

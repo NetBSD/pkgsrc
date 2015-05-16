@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:17 markd Exp $
+share/texmf-dist/doc/latex/lettrine/README
+share/texmf-dist/doc/latex/lettrine/W.eps
+share/texmf-dist/doc/latex/lettrine/W.pdf
+share/texmf-dist/doc/latex/lettrine/demo-de.pdf
+share/texmf-dist/doc/latex/lettrine/demo-de.tex
+share/texmf-dist/doc/latex/lettrine/demo.pdf
+share/texmf-dist/doc/latex/lettrine/demo.tex
+share/texmf-dist/doc/latex/lettrine/lettrine.pdf

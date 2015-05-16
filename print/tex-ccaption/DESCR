@@ -1,0 +1,6 @@
+A package providing commands for 'continuation captions',
+unnumbered captions, and also a non-specific legend heading for
+any environment. Methods are also provided to define captions
+for use outside float (e.g., figure and table) environments,
+and to define new float environments and Lists of Floats. Tools
+are provided for specifying your own captioning styles.

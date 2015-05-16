@@ -1,0 +1,5 @@
+The commands \import{full_path}{file} and
+\subimport{path_extension}{file} set up input through standard
+LaTeX mechanisms (\input, \include and \includegraphics) to
+load files relative to the \import-ed directory. There are also
+\includefrom, \subincludefrom, and * variants of the commands.

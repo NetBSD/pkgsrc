@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:15 markd Exp $
+share/texmf-dist/doc/latex/draftcopy/README
+share/texmf-dist/doc/latex/draftcopy/THIS-IS-VERSION-2.16
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-1.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-10.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-11.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-12.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-13.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-14.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-15.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-16.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-2.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-3.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-4.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-5.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-6.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-7.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-8.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy-test-9.tex
+share/texmf-dist/doc/latex/draftcopy/draftcopy.doc
+share/texmf-dist/doc/latex/draftcopy/draftcopy.pdf

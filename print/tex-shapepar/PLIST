@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:18 markd Exp $
+share/texmf-dist/tex/generic/shapepar/Canflagshape.def
+share/texmf-dist/tex/generic/shapepar/TeXshape.def
+share/texmf-dist/tex/generic/shapepar/candleshape.def
+share/texmf-dist/tex/generic/shapepar/dropshape.def
+share/texmf-dist/tex/generic/shapepar/shapepar.sty
+share/texmf-dist/tex/generic/shapepar/triangleshapes.def

@@ -1,0 +1,10 @@
+The package makes bibliographic references appear as footnotes.
+It defines a command \footcite which is similar to the LaTeX
+\cite command but the references cited in this way appear at
+the bottom of the pages. This 'foot bibliography' does not
+conflict with the standard one and both may exist
+simultaneously in a document. The command \cite may still be
+used to produce the standard bibliography. The foot
+bibliography uses its own style and bibliographic database
+which may be specified independently of the standard one. Any
+standard bibliography style may be used.

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:19 markd Exp $
+share/texmf-dist/doc/generic/textmerg/results.dat
+share/texmf-dist/doc/generic/textmerg/silly.dat
+share/texmf-dist/doc/generic/textmerg/textmerg.pdf
+share/texmf-dist/doc/generic/textmerg/textmerg.tex
+share/texmf-dist/doc/generic/textmerg/tmexamp1.tex
+share/texmf-dist/doc/generic/textmerg/tmexamp2.tex
+share/texmf-dist/doc/generic/textmerg/tmexampp.tex

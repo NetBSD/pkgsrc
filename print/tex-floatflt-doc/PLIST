@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:15 markd Exp $
+share/texmf-dist/doc/latex/floatflt/README
+share/texmf-dist/doc/latex/floatflt/floatexm.tex
+share/texmf-dist/doc/latex/floatflt/floatfge.tex
+share/texmf-dist/doc/latex/floatflt/floatfig.txt
+share/texmf-dist/doc/latex/floatflt/floatflt.pdf

@@ -1,0 +1,4 @@
+A package to facilitate placement of boxes at absolute
+positions on the LaTeX page. There are several reasons why this
+might be useful, an important one being to help the creation of
+large-format conference posters.

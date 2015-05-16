@@ -1,0 +1,5 @@
+Display information about a document, including: text
+positioning on a page; disposition of floats; layout of
+paragraphs, lists, footnotes, table of contents, and sectional
+headings; font boxes. Facilities are provided for a document
+designer to experiment with the layout parameters.

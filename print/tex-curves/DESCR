@@ -1,0 +1,8 @@
+The draws curves in the standard LaTeX picture environment
+using parabolas between data points with continuous slope at
+joins; for circles and arcs, it uses up to 16 parabolas. The
+package also draws symbols or dash patterns along curves. The
+package provides facilities equivalent to technical pens with
+compasses and French curves. Curves consist of short secants
+drawn by overlapping disks or line-drawing \special commands
+selected by package options.

@@ -1,0 +1,6 @@
+The package the creation of references to multiple
+bibliographies within one document. It thus provides
+complementary functionality to packages like bibunits and
+chapterbib, which allow the creation of one bibliography for
+multiple, but different parts of the document. Multibib is
+compatible with inlinebib, natbib, and koma-script.

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:20 markd Exp $
+share/texmf-dist/doc/latex/was/fixmath.pdf
+share/texmf-dist/doc/latex/was/gensymb.pdf
+share/texmf-dist/doc/latex/was/icomma.pdf
+share/texmf-dist/doc/latex/was/readme.1st
+share/texmf-dist/doc/latex/was/upgreek.pdf

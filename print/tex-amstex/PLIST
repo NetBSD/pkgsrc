@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:14 markd Exp $
+bin/amstex
+share/texmf-dist/tex/amstex/base/amsppt.sti
+share/texmf-dist/tex/amstex/base/amsppt.sty
+share/texmf-dist/tex/amstex/base/amsppt1.tex
+share/texmf-dist/tex/amstex/base/amstex.bug
+share/texmf-dist/tex/amstex/base/amstex.tex
+share/texmf-dist/tex/amstex/config/amstex.ini

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:19 markd Exp $
+share/texmf-dist/doc/latex/sidecap/README
+share/texmf-dist/doc/latex/sidecap/sc-test-common.tex
+share/texmf-dist/doc/latex/sidecap/sc-test1.tex
+share/texmf-dist/doc/latex/sidecap/sc-test2.tex
+share/texmf-dist/doc/latex/sidecap/sc-test3.tex
+share/texmf-dist/doc/latex/sidecap/sc-test4.tex
+share/texmf-dist/doc/latex/sidecap/sc-test5.tex
+share/texmf-dist/doc/latex/sidecap/sc-test6.tex
+share/texmf-dist/doc/latex/sidecap/sidecap.pdf

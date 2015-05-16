@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:17 markd Exp $
+share/texmf-dist/tex/latex/pb-diagram/lamsarrow.sty
+share/texmf-dist/tex/latex/pb-diagram/pb-diagram.sty
+share/texmf-dist/tex/latex/pb-diagram/pb-lams.sty
+share/texmf-dist/tex/latex/pb-diagram/pb-xy.sty

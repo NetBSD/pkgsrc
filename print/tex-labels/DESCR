@@ -1,0 +1,8 @@
+A LaTeX package to print a regular grid of ragged-right labels
+on a page, suitable for sheets of labels which can be fed
+through a printer. Macros are provided to allow easy input of
+names and addresses in a form free of TeX markup. Equally
+useful is a feature for making multiple copies of a single
+label, e.g., return address stickers to go with the labels.
+Rows, columns, borders can all be specified to match the label
+sheet being used.
