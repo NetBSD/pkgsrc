@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2015/03/09 18:47:18 tron Exp $
+# $NetBSD: Makefile,v 1.130.2.1 2015/05/16 19:40:20 bsiegert Exp $
 
-DISTNAME=	wireshark-1.10.13
+DISTNAME=	wireshark-1.10.14
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
