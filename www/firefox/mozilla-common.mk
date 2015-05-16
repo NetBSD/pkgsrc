@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.55 2015/05/16 04:16:04 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.56 2015/05/16 20:08:36 tsutsui Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -212,7 +212,7 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 #.include "../../audio/libopus/buildlink3.mk"
 #.include "../../audio/tremor/buildlink3.mk"
 #.include "../../audio/libvorbis/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.7.4
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.9
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
