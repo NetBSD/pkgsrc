@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/20 01:25:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/05/17 00:13:51 taca Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
@@ -71,7 +71,15 @@ man/man1/sieve-test.1
 man/man1/sievec.1
 man/man1/sieved.1
 man/man7/pigeonhole.7
-share/doc/dovecot/sieve/script-location-dict.txt
+share/doc/dovecot/sieve/extensions/duplicate.txt
+share/doc/dovecot/sieve/extensions/editheader.txt
+share/doc/dovecot/sieve/extensions/include.txt
+share/doc/dovecot/sieve/extensions/spamtest-virustest.txt
+share/doc/dovecot/sieve/extensions/vacation.txt
+share/doc/dovecot/sieve/locations/dict.txt
+share/doc/dovecot/sieve/locations/file.txt
+share/doc/dovecot/sieve/locations/ldap.txt
+share/doc/dovecot/sieve/plugins/sieve_extprograms.txt
 share/examples/dovecot/conf.d/20-managesieve.conf
 share/examples/dovecot/conf.d/90-sieve-extprograms.conf
 share/examples/dovecot/conf.d/90-sieve.conf
