@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2015/04/25 14:24:47 tnn Exp $
+# $NetBSD: Makefile,v 1.62 2015/05/17 06:45:23 tsutsui Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-poppler-${VERSION}
-PKGREVISION=		3
 COMMENT=		Ruby binding of poppler-glib
 CATEGORIES=		print
 
