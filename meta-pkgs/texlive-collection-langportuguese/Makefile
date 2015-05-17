@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/17 12:21:45 markd Exp $
 
 DISTNAME=	collection-langportuguese
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -13,14 +13,14 @@ COMMENT=	Portuguese TeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-babel-portuges-[0-9]*:../../print/tex-babel-portuges
-# depend beamer-tut-pt
-# depend cursolatex
+# beamer-tut-pt is documentation only
+# cursolatex is documentation only
 # depend feupphdteses
 DEPENDS+=	tex-hyphen-portuguese-[0-9]*:../../print/tex-hyphen-portuguese
-# depend latexcheat-ptbr
+# latexcheat-ptbr is documentation only
 # lshort-portuguese is documentation only
 # depend ordinalpt
-# depend xypic-tut-pt
+# xypic-tut-pt is documentation only
 
 META_PACKAGE=	yes
 
