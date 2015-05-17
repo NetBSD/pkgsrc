@@ -1,0 +1,8 @@
+This is a collection of dvips PostScript header and dvips
+config files. They control certain features of the printer,
+including: A4, A3, usletter, simplex, duplex / long edge,
+duplex / short edge, screen frequencies of images, black/white
+invers, select transparency / paper for tektronix 550/560,
+manual feeder, envelope feeder, and tray 1, 2 and 3, and
+printing a PostScript grid underneath the page material--very
+useful for measuring and eliminating paper feed errors!

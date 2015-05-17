@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/17 06:16:22 markd Exp $
+share/texmf-dist/doc/man/man1/dosepsbin.1
+share/texmf-dist/doc/man/man1/dosepsbin.man1.pdf
+share/texmf-dist/doc/support/dosepsbin/Makefile.in
+share/texmf-dist/doc/support/dosepsbin/README
+share/texmf-dist/doc/support/dosepsbin/clean-case.pl
+share/texmf-dist/doc/support/dosepsbin/dosepsbin.html
+share/texmf-dist/doc/support/dosepsbin/dosepsbin.ltx
+share/texmf-dist/doc/support/dosepsbin/dosepsbin.pdf
+share/texmf-dist/doc/support/dosepsbin/dosepsbin.txt
+share/texmf-dist/doc/support/dosepsbin/version.pl

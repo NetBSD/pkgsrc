@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/05/17 06:16:22 markd Exp $
+
+SHA1 (texlive-20140525-source.tar.xz) = 8cb283ad26b1fe18e1089820cf64ecc63d8224e8
+RMD160 (texlive-20140525-source.tar.xz) = c9fb954e63e700d06aa0cf40c37cdb40eaac84a2
+Size (texlive-20140525-source.tar.xz) = 41657688 bytes
