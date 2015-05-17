@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2248 2015/05/16 23:37:45 roy Exp $
+$NetBSD: CHANGES-2015,v 1.2249 2015/05/17 00:14:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4269,3 +4269,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.460 [tsutsui 2015-05-16]
 	Updated misc/tmux to 2.0 [ryoon 2015-05-16]
 	Updated net/dhcpcd to 6.9.0 [roy 2015-05-16]
+	Updated mail/dovecot2 to 2.2.18 [taca 2015-05-17]
+	Updated mail/dovecot2-pigeonhole to 0.4.8 [taca 2015-05-17]
