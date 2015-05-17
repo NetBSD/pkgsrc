@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:15 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/17 11:41:41 markd Exp $
 
 DISTNAME=	collection-langchinese
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -13,16 +13,16 @@ COMMENT=	Chinese TeX packages
 DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-langcjk
 
 DEPENDS+=	tex-arphic-[0-9]*:../../fonts/tex-arphic
-# depend asymptote-by-example-zh-cn
-# depend asymptote-faq-zh-cn
-# depend asymptote-manual-zh-cn
+# asymptote-by-example-zh-cn is documentation only
+# asymptote-faq-zh-cn is documentation only
+# asymptote-manual-zh-cn is documentation only
 DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
 # depend ctex
-# depend ctex-faq
+# ctex-faq is documentation only
 # depend fandol
 DEPENDS+=	tex-hyphen-chinese-[0-9]*:../../print/tex-hyphen-chinese
-# depend impatient-cn
-# depend latex-notes-zh-cn
+# impatient-cn is documentation only
+# latex-notes-zh-cn is documentation only
 # lshort-chinese is documentation only
 # texlive-zh-cn is documentation only
 # depend xpinyin
