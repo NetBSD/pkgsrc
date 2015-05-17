@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2254 2015/05/17 12:13:18 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2255 2015/05/17 12:22:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4310,3 +4310,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.3 [tsutsui 2015-05-17]
 	Updated textproc/ruby-diff-lcs to 1.2.5nb1 [taca 2015-05-17]
 	Updated sysutils/rmtrash to 1.11 [mef 2015-05-17]
+	Updated www/p5-Mojolicious to 6.11 [mef 2015-05-17]
