@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2014/01/27 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/05/17 12:19:42 abs Exp $
 
-DISTNAME=	dc-tools-1.4
+DISTNAME=	dc-tools-1.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mc.pp.se/dc/files/ \
-		https://github.com/abs0/dc-burn-netbsd/tarball/1.4
+		https://github.com/abs0/dc-burn-netbsd/tarball/1.5
 DIST_SUBDIR=	dc-tools
 DISTFILES=	makeip.tar.gz scramble.c ip_slave.tar.gz serial_slave.tar.gz \
 		${DCBURN_DISTFILE}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://mc.pp.se/dc/sw.html
 COMMENT=	Dreamcast bootable CDs tools (mainly from Marcus Comstedt)
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.4-0-g1004515
+DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.5-0-gae55ec9
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
 
