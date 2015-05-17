@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/08 16:59:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/05/17 12:12:49 mef Exp $
 
-SHA1 (rmtrash-1.8.tar.gz) = 7a74467c1f5bf8050abea211f5a8f49b7c42795a
-RMD160 (rmtrash-1.8.tar.gz) = 9421ee4b3c4f4e398f65249ba45e8307952ef95e
-Size (rmtrash-1.8.tar.gz) = 23765 bytes
+SHA1 (rmtrash-1.11.tar.gz) = 07a0c7165d5c827a87e034c2b82ff0e3a713211a
+RMD160 (rmtrash-1.11.tar.gz) = d51fb0114f62ad985c381cc61f74139693791b9e
+Size (rmtrash-1.11.tar.gz) = 24414 bytes
