@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/12 12:19:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/17 12:27:07 ryoon Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=	--jobs=1
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .endif
 
-# for binbind option build.
+# for winbind option build.
 LDFLAGS+=		-Wl,--allow-shlib-undefined
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${SMB_PRIVATELIB}
 
