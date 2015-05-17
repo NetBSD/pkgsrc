@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/11 10:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/17 11:50:25 markd Exp $
 
 DISTNAME=	collection-langczechslovak
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -20,7 +20,7 @@ DEPENDS+=	tex-cs-[0-9]*:../../fonts/tex-cs
 # depend csbulletin
 # depend cslatex
 # depend csplain
-# depend cstex
+# cstex is documentation only
 DEPENDS+=	tex-hyphen-czech-[0-9]*:../../print/tex-hyphen-czech
 DEPENDS+=	tex-hyphen-slovak-[0-9]*:../../print/tex-hyphen-slovak
 # depend vlna
