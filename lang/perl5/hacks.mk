@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.15 2015/05/15 14:32:27 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.16 2015/05/17 12:57:16 bsiegert Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -26,16 +26,6 @@ PKG_HACKS+=	sparc64-codegen
 CFLAGS+=	-DDEBUGGING -g -msoft-quad-float -O2
 .    endif
 .  endif
-.endif
-
-### [Sun Nov 14 02:35:50 EST 2004 : jlam]
-### On PowerPC, building with optimisation with GCC causes an "attempt
-### to free unreference scalar".  Remove optimisation flags as a
-### workaround until GCC is fixed.
-###
-.if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
-PKG_HACKS+=		powerpc-codegen
-BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .endif
 
 ### [Mon May 9 15:35:44 UTC 2005 : jlam]
