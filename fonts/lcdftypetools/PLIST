@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/17 06:16:22 markd Exp $
+bin/cfftot1
+bin/mmafm
+bin/mmpfb
+bin/otfinfo
+bin/otftotfm
+bin/t1dotlessj
+bin/t1lint
+bin/t1rawafm
+bin/t1reencode
+bin/t1testpage
+bin/ttftotype42
+man/man1/cfftot1.1
+man/man1/mmafm.1
+man/man1/mmpfb.1
+man/man1/otfinfo.1
+man/man1/otftotfm.1
+man/man1/t1dotlessj.1
+man/man1/t1lint.1
+man/man1/t1rawafm.1
+man/man1/t1reencode.1
+man/man1/t1testpage.1
+man/man1/ttftotype42.1
