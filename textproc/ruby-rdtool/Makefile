@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/03/13 23:10:13 taca Exp $
+# $NetBSD: Makefile,v 1.37 2015/05/17 12:57:18 sevan Exp $
 
 DISTNAME=	rdtool-0.6.38
 CATEGORIES=	textproc ruby
@@ -20,7 +20,7 @@ SUBST_FILES.path=	bin/rd2
 SUBST_SED.path=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|"
 SUBST_MESSAGE.path=	Fixing PKG_SYSCONFDIR paths.
 
-RUBY_VERSION_SUPPORTED= 200 193 18 21
+RUBY_VERSION_SUPPORTED= 18 193 200 21 22
 
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/ruby/modules.mk"
