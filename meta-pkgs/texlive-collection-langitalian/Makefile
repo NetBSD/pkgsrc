@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/17 12:10:06 markd Exp $
 
 DISTNAME=	collection-langitalian
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -12,21 +12,21 @@ COMMENT=	Italian TeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
-# depend amsldoc-it
-# depend amsmath-it
-# depend amsthdoc-it
+# amsldoc-it is documentation only
+# amsmath-it is documentation only
+# amsthdoc-it is documentation only
 DEPENDS+=	tex-babel-italian-[0-9]*:../../print/tex-babel-italian
 # depend codicefiscaleitaliano
-# depend fancyhdr-it
+# fancyhdr-it is documentation only
 # depend fixltxhyph
 # depend frontespizio
 DEPENDS+=	tex-hyphen-italian-[0-9]*:../../print/tex-hyphen-italian
 # depend itnumpar
-# depend l2tabu-italian
-# depend latex4wp-it
+# l2tabu-italian is documentation only
+# latex4wp-it is documentation only
 # depend layaureo
 # lshort-italian is documentation only
-# depend psfrag-italian
+# psfrag-italian is documentation only
 # texlive-it is documentation only
 
 META_PACKAGE=	yes
