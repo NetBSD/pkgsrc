@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/10 02:23:58 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/17 06:29:40 markd Exp $
 
 DISTNAME=	collection-fontutils
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36028
@@ -12,19 +12,19 @@ COMMENT=	Graphics and font utilities for TeX
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
-# depend accfonts
-# depend afm2pl
-# depend dosepsbin
+DEPENDS+=	tex-accfonts-[0-9]*:../../fonts/tex-accfonts
+DEPENDS+=	tex-afm2pl-[0-9]*:../../fonts/tex-afm2pl
+DEPENDS+=	tex-dosepsbin-[0-9]*:../../fonts/tex-dosepsbin
 DEPENDS+=	tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
 # fontware is entirely included in web2c
-# depend lcdftypetools
+DEPENDS+=	lcdftypetools-[0-9]*:../../fonts/lcdftypetools
 DEPENDS+=	ps2pkm-[0-9]*:../../fonts/ps2pkm
 DEPENDS+=	tex-pstools-[0-9]*:../../graphics/tex-pstools
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
-# depend dvipsconfig
+DEPENDS+=	tex-dvipsconfig-[0-9]*:../../fonts/tex-dvipsconfig
 DEPENDS+=	tex-fontinst-[0-9]*:../../fonts/tex-fontinst
-# depend fontools
-# depend mf2pt1
+DEPENDS+=	tex-fontools-[0-9]*:../../fonts/tex-fontools
+DEPENDS+=	tex-mf2pt1-[0-9]*:../../fonts/tex-mf2pt1
 DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils
 DEPENDS+=	tex-ttfutils-[0-9]*:../../fonts/tex-ttfutils
 
