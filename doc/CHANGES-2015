@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2259 2015/05/17 13:55:29 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2260 2015/05/17 15:50:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4315,3 +4315,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/netbsd-doc-print to 1.4 [tron 2015-05-17]
 	Updated meta-pkgs/netbsd-www to 1.9 [tron 2015-05-17]
 	Updated net/samba4 to 4.2.1nb1 [ryoon 2015-05-17]
+	Updated net/samba4 to 4.2.1nb2 [ryoon 2015-05-17]
