@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/02/03 13:37:45 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/17 13:02:56 sevan Exp $
 
 DISTNAME=	rubyzip-1.1.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby//}
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/aussiegeek/rubyzip
 COMMENT=	Ruby module for reading and writing zip files
 LICENSE=	ruby-license
 
-RUBY_VERSION_SUPPORTED=	200 193 21
+RUBY_VERSION_SUPPORTED=	193 200 21 22
 
 pre-configure:
 	${CHMOD} -R -x ${WRKSRC}/Rakefile ${WRKSRC}/lib/zip/*.rb
