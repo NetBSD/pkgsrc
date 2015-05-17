@@ -1,0 +1,18 @@
+This bundle of tools comprises: Cfftot1, which translates a
+Compact Font Format (CFF) font, or a PostScript-flavored
+OpenType font, into PostScript Type 1 format. It correctly
+handles subroutines and hints; Mmafm and mmpfb, which create
+instances of multiple-master fonts (mmafm and mmpfb were
+previously distributed in their own package, mminstance);
+Otfinfo, which reports information about OpenType fonts, such
+as the features they support and the contents of their 'size'
+optical size features; Otftotfm, which creates TeX font metrics
+and encodings that correspond to a PostScript-flavored OpenType
+font. It will interpret glyph positionings, substitutions, and
+ligatures as far as it is able. You can say which OpenType
+features should be activated; T1dotlessj, creates a Type 1 font
+whose only character is a dotless j matching the input font's
+design; T1lint, which checks a Type 1 font for correctness;
+T1reencode, which replaces a font's internal encoding with one
+you specify; and T1testpage, which creates a PostScript proof
+for a Type 1 font. It is preliminary software.

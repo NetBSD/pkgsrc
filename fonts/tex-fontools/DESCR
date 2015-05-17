@@ -1,0 +1,7 @@
+This package provides a few tools to ease using fonts
+(especially Truetype/Opentype ones) with Latex and fontinst:
+afm2afm - reencode .afm files; designed to replace fontinst's
+\reencodefont for big .afm files; autoinst - simplify the use
+of the LCDF TypeTools by creating a command file for otftotfm,
+plus .fd and .sty files; and ot2kpx - extract all kerning pairs
+from an OpenType font.

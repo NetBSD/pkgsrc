@@ -1,0 +1,13 @@
+The accfonts package contains three utilities to permit easy
+manipulation of fonts, in particular the creation of unusual
+accented characters. Mkt1font works on Adobe Type 1 fonts,
+vpl2vpl works on TeX virtual fonts and vpl2ovp transforms a TeX
+font to an Omega one. All three programs read in a font (either
+the font itself or a property list), together with a simple
+definition file containing lines such as '128 z acute'; they
+then write out a new version of the font with the requested new
+characters in the numerical slots specified. Great care is
+taken over the positioning of accents, and over the provision
+of kerning information for new characters; mkt1font also
+generates suitable "hints" to enhance quality at small sizes or
+poor resolutions. The programs are written in Perl.

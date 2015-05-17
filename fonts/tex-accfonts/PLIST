@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/17 06:16:22 markd Exp $
+bin/mkt1font
+bin/vpl2ovp
+bin/vpl2vpl
+share/texmf-dist/tex/latex/accfonts/CSX.def
+share/texmf-dist/tex/latex/accfonts/ISO-Latin1.def
+share/texmf-dist/tex/latex/accfonts/ISO-Latin2.def
+share/texmf-dist/tex/latex/accfonts/IndUni_Omega.def
+share/texmf-dist/tex/latex/accfonts/Norman.def

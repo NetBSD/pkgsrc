@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/17 06:16:22 markd Exp $
+share/texmf-dist/fonts/enc/dvips/afm2pl/afm2pl-ot1.enc
+share/texmf-dist/fonts/enc/dvips/afm2pl/afm2pl-ot1ital.enc
+share/texmf-dist/fonts/enc/dvips/afm2pl/afm2pl-ot1tt.enc
+share/texmf-dist/fonts/enc/dvips/afm2pl/afm2pl-texnanlc.enc
+share/texmf-dist/fonts/enc/dvips/afm2pl/afm2pl-texnanuc.enc
+share/texmf-dist/fonts/lig/afm2pl/accents.lig
+share/texmf-dist/fonts/lig/afm2pl/bound.lig
+share/texmf-dist/fonts/lig/afm2pl/default.lig
+share/texmf-dist/fonts/lig/afm2pl/defpost.lig
+share/texmf-dist/fonts/lig/afm2pl/defpre.lig
+share/texmf-dist/fonts/lig/afm2pl/forge.lig
+share/texmf-dist/fonts/lig/afm2pl/ligtex.lig
+share/texmf-dist/tex/fontinst/afm2pl/README
+share/texmf-dist/tex/fontinst/afm2pl/ly1.etx
+share/texmf-dist/tex/fontinst/afm2pl/ly1c.etx
+share/texmf-dist/tex/fontinst/afm2pl/makesc8y.tex

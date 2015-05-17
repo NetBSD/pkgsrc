@@ -1,0 +1,8 @@
+mf2pt1 facilitates producing PostScript Type 1 fonts from a
+Metafont source file. It is not, as the name may imply, an
+automatic converter of arbitrary Metafont fonts to Type 1
+format. mf2pt1 imposes a number of restrictions on the Metafont
+input. If these restrictions are met, mf2pt1 will produce valid
+Type 1 output with more accurate control points than can be
+reverse-engineered by TeXtrace, mftrace, and other programs
+which convert bitmaps to outline fonts.

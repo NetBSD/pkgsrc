@@ -1,0 +1,10 @@
+A Encapsulated PostScript (EPS) file may given in a special
+binary format to support the inclusion of a thumbnail. This
+file format, commonly known as DOS EPS format starts with a
+binary header that contains the positions of the possible
+sections: Postscript (PS); Windows Metafile Format (WMF); and
+Tag Image File Format (TIFF). The PS section must be present
+and either the WMF file or the TIFF file should be given. The
+package provides a Perl program that will extract any of the
+sections of such a file, in particular providing a 'text'-form
+EPS file for use with (La)TeX.

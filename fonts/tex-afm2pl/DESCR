@@ -1,0 +1,5 @@
+afm2pl is meant to be a partial replacement for afm2tfm, on which it
+is based. Its default action is to convert an afm file to a tfm
+file, with preservation of kerns and ligatures (with afm2tfm,
+preserving kerns and ligatures is possible only in a roundabout
+way).
