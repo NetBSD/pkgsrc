@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.36 2015/05/16 19:49:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.37 2015/05/17 08:17:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -128,3 +128,7 @@ Pullup ticket #4718 - requested by joerg
 math/cln: build fix
 Pullup ticket #4719 - requested by sevan
 security/openssh: security fix
+Pullup ticket #4710 - requested by bsiegert
+databases/sqlite3: security update
+Pullup ticket #4715 - requested by sevan
+archivers/libarchive: security patch
