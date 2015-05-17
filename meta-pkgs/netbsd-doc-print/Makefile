@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2013/04/24 10:06:50 sbd Exp $
-#
+# $NetBSD: Makefile,v 1.26 2015/05/17 12:32:33 tron Exp $
 
-DISTNAME=	netbsd-doc-print-1.3
-PKGREVISION=	1
+DISTNAME=	netbsd-doc-print-1.4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +12,8 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	kpathsea>=6.0.0nb2:../../print/kpathsea
 DEPENDS+=	netbsd-doc>=1.2:../../meta-pkgs/netbsd-doc
 DEPENDS+=	openjade-[0-9]*:../../textproc/openjade
-DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
+DEPENDS+=	tex-babel-french-[0-9]*:../../print/tex-babel-french
+DEPENDS+=	tex-babel-russian-[0-9]*:../../print/tex-babel-russian
 DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
 DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 DEPENDS+=	tex-german-[0-9]*:../../print/tex-german
