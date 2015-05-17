@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2252 2015/05/17 06:56:13 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.2253 2015/05/17 09:47:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4308,3 +4308,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.2.5 [tsutsui 2015-05-17]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.2.5 [tsutsui 2015-05-17]
 	Updated net/mikutter to 3.2.3 [tsutsui 2015-05-17]
+	Updated textproc/ruby-diff-lcs to 1.2.5nb1 [taca 2015-05-17]
