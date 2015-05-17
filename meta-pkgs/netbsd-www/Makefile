@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/05/17 12:34:35 tron Exp $
 
-DISTNAME=	netbsd-www-1.8
-PKGREVISION=	3
+DISTNAME=	netbsd-www-1.9
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,7 +16,7 @@ DEPENDS+=	docbook-website>=2.6.0nb1:../../textproc/docbook-website
 DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
-DEPENDS+=	netbsd-doc-print>=1.3:../../meta-pkgs/netbsd-doc-print
+DEPENDS+=	netbsd-doc-print>=1.4:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	psutils>=1.17:../../print/psutils
 DEPENDS+=	w3m>=0.4:../../www/w3m
