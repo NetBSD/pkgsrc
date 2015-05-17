@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/17 06:16:23 markd Exp $
+share/texmf-dist/doc/info/mf2pt1.info
+share/texmf-dist/doc/support/mf2pt1/ChangeLog
+share/texmf-dist/doc/support/mf2pt1/README
+share/texmf-dist/doc/support/mf2pt1/mf2pt1.pdf
+share/texmf-dist/doc/support/mf2pt1/mf2pt1.texi
