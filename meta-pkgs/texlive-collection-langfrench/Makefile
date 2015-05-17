@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/10 04:36:16 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/17 11:59:47 markd Exp $
 
 DISTNAME=	collection-langfrench
 PKGNAME=	texlive-${DISTNAME}-2014pre1
@@ -13,33 +13,33 @@ COMMENT=	French TeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-aeguill-[0-9]*:../../print/tex-aeguill
-# depend apprends-latex
+# apprends-latex is documentation only
 DEPENDS+=	tex-babel-basque-[0-9]*:../../print/tex-babel-basque
 DEPENDS+=	tex-babel-french-[0-9]*:../../print/tex-babel-french
 # depend basque-book
 # depend basque-date
 # depend bib-fr
 # depend bibleref-french
-# depend booktabs-fr
+# booktabs-fr is documentation only
 # depend droit-fr
-# depend epslatex-fr
+# epslatex-fr is documentation only
 # depend facture
 # depend frenchle
 # depend frletter
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
 DEPENDS+=	tex-hyphen-french-[0-9]*:../../print/tex-hyphen-french
-# depend impatient-fr
+# impatient-fr is documentation only
 # depend impnattypo
-# depend l2tabu-french
+# l2tabu-french is documentation only
 # lshort-french is documentation only
 # depend mafr
 # depend tabvar
 # depend tdsfrmath
 # texlive-fr is documentation only
-# depend translation-array-fr
-# depend translation-dcolumn-fr
-# depend translation-natbib-fr
-# depend translation-tabbing-fr
+# translation-array-fr is documentation only
+# translation-dcolumn-fr is documentation only
+# translation-natbib-fr is documentation only
+# translation-tabbing-fr is documentation only
 # depend variations
 
 META_PACKAGE=	yes
