@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2015/03/14 10:52:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2015/05/17 00:12:45 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -107,6 +107,7 @@ include/dovecot/fts-api.h
 include/dovecot/fts-expunge-log.h
 include/dovecot/fts-indexer.h
 include/dovecot/fts-parser.h
+include/dovecot/fts-user.h
 include/dovecot/guid.h
 include/dovecot/hash-decl.h
 include/dovecot/hash-format.h
@@ -147,6 +148,7 @@ include/dovecot/imap-envelope.h
 include/dovecot/imap-expunge.h
 include/dovecot/imap-fetch.h
 include/dovecot/imap-id.h
+include/dovecot/imap-keepalive.h
 include/dovecot/imap-list.h
 include/dovecot/imap-match.h
 include/dovecot/imap-metadata.h
@@ -217,6 +219,7 @@ include/dovecot/istream-chain.h
 include/dovecot/istream-concat.h
 include/dovecot/istream-crlf.h
 include/dovecot/istream-dot.h
+include/dovecot/istream-file-private.h
 include/dovecot/istream-fs-file.h
 include/dovecot/istream-hash.h
 include/dovecot/istream-header-filter.h
@@ -232,9 +235,11 @@ include/dovecot/istream-seekable.h
 include/dovecot/istream-sized.h
 include/dovecot/istream-tee.h
 include/dovecot/istream-timeout.h
+include/dovecot/istream-unix.h
 include/dovecot/istream-zlib.h
 include/dovecot/istream.h
 include/dovecot/json-parser.h
+include/dovecot/json-tree.h
 include/dovecot/lda-settings.h
 include/dovecot/lib-signals.h
 include/dovecot/lib.h
@@ -279,6 +284,8 @@ include/dovecot/mail-transaction-log.h
 include/dovecot/mail-types.h
 include/dovecot/mail-user-hash.h
 include/dovecot/mail-user.h
+include/dovecot/mailbox-attribute-private.h
+include/dovecot/mailbox-attribute.h
 include/dovecot/mailbox-guid-cache.h
 include/dovecot/mailbox-list-delete.h
 include/dovecot/mailbox-list-fs.h
@@ -386,6 +393,7 @@ include/dovecot/primes.h
 include/dovecot/printf-format-fix.h
 include/dovecot/priorityq.h
 include/dovecot/process-title.h
+include/dovecot/qp-decoder.h
 include/dovecot/quota-fs.h
 include/dovecot/quota-plugin.h
 include/dovecot/quota-private.h
@@ -470,6 +478,7 @@ lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_listescape_plugin.la
 lib/dovecot/lib20_mail_log_plugin.la
 lib/dovecot/lib20_mailbox_alias_plugin.la
+lib/dovecot/lib20_quota_clone_plugin.la
 lib/dovecot/lib20_replication_plugin.la
 lib/dovecot/lib20_virtual_plugin.la
 lib/dovecot/lib20_zlib_plugin.la
@@ -484,6 +493,7 @@ lib/dovecot/libdovecot-login.la
 lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
+lib/dovecot/libfs_compress.la
 ${PLIST.ssl}lib/dovecot/libssl_iostream_openssl.la
 lib/dovecot/stats/libstats_mail.la
 libexec/dovecot/aggregator
@@ -724,8 +734,13 @@ share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Install.txt
 share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Troubleshooting.txt
 share/doc/dovecot/wiki/Pigeonhole.ManageSieve.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.Dict.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.File.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.LDAP.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Examples.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Duplicate.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Editheader.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Include.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.SpamtestVirustest.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Vacation.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.txt
@@ -751,6 +766,7 @@ share/doc/dovecot/wiki/Plugins.MailFilter.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.MailboxAlias.txt
 share/doc/dovecot/wiki/Plugins.Notify.txt
+share/doc/dovecot/wiki/Plugins.QuotaClone.txt
 share/doc/dovecot/wiki/Plugins.Snarf.txt
 share/doc/dovecot/wiki/Plugins.Stats.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
@@ -788,6 +804,7 @@ share/doc/dovecot/wiki/SystemUsers.txt
 share/doc/dovecot/wiki/TestInstallation.txt
 share/doc/dovecot/wiki/TestPop3Installation.txt
 share/doc/dovecot/wiki/TimeMovedBackwards.txt
+share/doc/dovecot/wiki/Timeouts.txt
 share/doc/dovecot/wiki/Upgrading.1.0.txt
 share/doc/dovecot/wiki/Upgrading.1.1.txt
 share/doc/dovecot/wiki/Upgrading.1.2.txt
@@ -808,6 +825,9 @@ share/doc/dovecot/wiki/WhyDoesItNotWork.txt
 share/doc/dovecot/wiki/maildrop.txt
 share/doc/dovecot/wiki/mutt.txt
 share/doc/dovecot/wiki/uw2dovecot.sh.txt
+share/dovecot/stopwords/stopwords_en.txt
+share/dovecot/stopwords/stopwords_fi.txt
+share/dovecot/stopwords/stopwords_fr.txt
 share/examples/dovecot/conf.d/10-auth.conf
 share/examples/dovecot/conf.d/10-director.conf
 share/examples/dovecot/conf.d/10-logging.conf
