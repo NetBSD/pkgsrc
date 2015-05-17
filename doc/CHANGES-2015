@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2249 2015/05/17 00:14:56 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2250 2015/05/17 06:34:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4271,3 +4271,17 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dhcpcd to 6.9.0 [roy 2015-05-16]
 	Updated mail/dovecot2 to 2.2.18 [taca 2015-05-17]
 	Updated mail/dovecot2-pigeonhole to 0.4.8 [taca 2015-05-17]
+	Added fonts/tex-accfonts version 0.25 [markd 2015-05-17]
+	Added fonts/tex-accfonts-doc version 0.25 [markd 2015-05-17]
+	Added fonts/afm2pl version 0.7.1 [markd 2015-05-17]
+	Added fonts/tex-afm2pl version 0.7.1 [markd 2015-05-17]
+	Added fonts/tex-afm2pl-doc version 0.7.1 [markd 2015-05-17]
+	Added fonts/tex-dosepsbin version 1.2 [markd 2015-05-17]
+	Added fonts/tex-dosepsbin-doc version 1.2 [markd 2015-05-17]
+	Added fonts/lcdftypetools version 2.100 [markd 2015-05-17]
+	Added fonts/tex-dvipsconfig version 1.6 [markd 2015-05-17]
+	Added fonts/tex-fontools version 2014 [markd 2015-05-17]
+	Added fonts/tex-fontools-doc version 2014 [markd 2015-05-17]
+	Added fonts/tex-mf2pt1 version 2.5a [markd 2015-05-17]
+	Added fonts/tex-mf2pt1-doc version 2.5a [markd 2015-05-17]
+	Updated meta-pkgs/texlive-collection-fontutils to 2014 [markd 2015-05-17]
