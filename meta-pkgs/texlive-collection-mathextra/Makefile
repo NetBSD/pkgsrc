@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/16 11:25:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/17 03:59:36 markd Exp $
 
 DISTNAME=	collection-mathextra
 PKGNAME=	texlive-${DISTNAME}-2014pre2
@@ -15,7 +15,6 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 
 # depend 12many
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
-# depend amstex
 # depend backnaur
 # depend begriff
 # depend binomexp
@@ -41,7 +40,6 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend lpform
 # depend lplfitch
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
-# depend mathcomp
 # depend mattens
 # depend mhequ
 # depend multiobjective
