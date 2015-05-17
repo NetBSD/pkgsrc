@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/17 12:27:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/17 13:46:27 ryoon Exp $
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/
 
@@ -8,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 VERSION=	4.2.1
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
@@ -49,6 +52,7 @@ USE_TOOLS+=		gmake mktemp perl:run
 REPLACE_PERL=		script/findsmb.in
 
 USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
+BROKEN_GETTEXT_DETECTION=yes
 
 # Debugging
 #CONFIGURE_ARGS+=	-vvv
