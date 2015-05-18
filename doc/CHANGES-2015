@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2261 2015/05/18 10:41:14 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2262 2015/05/18 11:58:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4317,3 +4317,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/samba4 to 4.2.1nb1 [ryoon 2015-05-17]
 	Updated net/samba4 to 4.2.1nb2 [ryoon 2015-05-17]
 	Updated devel/ccache to 3.2.2 [adam 2015-05-18]
+	Updated multimedia/ffmpeg2 to 2.6.3 [adam 2015-05-18]
+	Updated multimedia/ffplay2 to 2.6.3 [adam 2015-05-18]
