@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/01 21:25:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/05/18 13:35:30 manu Exp $
 share/examples/rt4/RT_Config.pm
 share/examples/rt4/RT_SiteConfig.pm
 share/rt4/bin/rt
@@ -26,6 +26,7 @@ share/rt4/data/docs/customizing/styling_rt.pod
 share/rt4/data/docs/customizing/templates.pod
 share/rt4/data/docs/customizing/timezones_in_charts.pod
 share/rt4/data/docs/dashboards.pod
+share/rt4/data/docs/extensions.pod
 share/rt4/data/docs/extending/clickable_links.pod
 share/rt4/data/docs/extending/external_custom_fields.pod
 share/rt4/data/docs/extending/using_forms_widgets.pod
@@ -1236,6 +1237,7 @@ share/rt4/etc/upgrade/4.2.6/content
 share/rt4/etc/upgrade/4.2.6/schema.mysql
 share/rt4/etc/upgrade/4.2.7/content
 share/rt4/etc/upgrade/4.2.8/content
+share/rt4/etc/upgrade/4.2.10/content
 share/rt4/etc/upgrade/generate-rtaddressregexp
 share/rt4/etc/upgrade/sanity-check-stylesheets
 share/rt4/etc/upgrade/shrink-cgm-table
@@ -1411,19 +1413,10 @@ share/rt4/lib/RT/SearchBuilder/Role/Roles.pm
 share/rt4/lib/RT/SharedSetting.pm
 share/rt4/lib/RT/SharedSettings.pm
 share/rt4/lib/RT/Shredder.pm
-share/rt4/lib/RT/Shredder/ACE.pm
-share/rt4/lib/RT/Shredder/Attachment.pm
-share/rt4/lib/RT/Shredder/CachedGroupMember.pm
 share/rt4/lib/RT/Shredder/Constants.pm
-share/rt4/lib/RT/Shredder/CustomField.pm
-share/rt4/lib/RT/Shredder/CustomFieldValue.pm
 share/rt4/lib/RT/Shredder/Dependencies.pm
 share/rt4/lib/RT/Shredder/Dependency.pm
 share/rt4/lib/RT/Shredder/Exceptions.pm
-share/rt4/lib/RT/Shredder/Group.pm
-share/rt4/lib/RT/Shredder/GroupMember.pm
-share/rt4/lib/RT/Shredder/Link.pm
-share/rt4/lib/RT/Shredder/ObjectCustomFieldValue.pm
 share/rt4/lib/RT/Shredder/POD.pm
 share/rt4/lib/RT/Shredder/Plugin.pm
 share/rt4/lib/RT/Shredder/Plugin/Attachments.pm
@@ -1435,16 +1428,7 @@ share/rt4/lib/RT/Shredder/Plugin/SQLDump.pm
 share/rt4/lib/RT/Shredder/Plugin/Summary.pm
 share/rt4/lib/RT/Shredder/Plugin/Tickets.pm
 share/rt4/lib/RT/Shredder/Plugin/Users.pm
-share/rt4/lib/RT/Shredder/Principal.pm
-share/rt4/lib/RT/Shredder/Queue.pm
 share/rt4/lib/RT/Shredder/Record.pm
-share/rt4/lib/RT/Shredder/Scrip.pm
-share/rt4/lib/RT/Shredder/ScripAction.pm
-share/rt4/lib/RT/Shredder/ScripCondition.pm
-share/rt4/lib/RT/Shredder/Template.pm
-share/rt4/lib/RT/Shredder/Ticket.pm
-share/rt4/lib/RT/Shredder/Transaction.pm
-share/rt4/lib/RT/Shredder/User.pm
 share/rt4/lib/RT/Squish.pm
 share/rt4/lib/RT/Squish/CSS.pm
 share/rt4/lib/RT/Squish/JS.pm
