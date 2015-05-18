@@ -1,6 +1,8 @@
-$NetBSD: patch-src_corelib_io_qfilesystemwatcher.cpp,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-src_corelib_io_qfilesystemwatcher.cpp,v 1.2 2015/05/18 13:52:24 nros Exp $
 
 * Add NetBSD support
+* patch filed and merged upstream:
+  http://codereview.qt-project.org/#/c/111741/
 
 --- src/corelib/io/qfilesystemwatcher.cpp.orig	2014-09-11 10:48:06.000000000 +0000
 +++ src/corelib/io/qfilesystemwatcher.cpp
