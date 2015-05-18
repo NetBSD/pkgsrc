@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2262 2015/05/18 11:58:05 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2263 2015/05/18 12:11:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4319,3 +4319,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ccache to 3.2.2 [adam 2015-05-18]
 	Updated multimedia/ffmpeg2 to 2.6.3 [adam 2015-05-18]
 	Updated multimedia/ffplay2 to 2.6.3 [adam 2015-05-18]
+	Updated databases/sqlite3 to 3.8.10.1 [adam 2015-05-18]
+	Updated databases/sqlite3-docs to 3.8.10.1 [adam 2015-05-18]
+	Updated databases/sqlite3-tcl to 3.8.10.1 [adam 2015-05-18]
