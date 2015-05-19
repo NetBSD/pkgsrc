@@ -1,4 +1,4 @@
-# $Id: bsd.after-import.mk,v 1.1.1.1 2015/05/19 21:36:43 joerg Exp $
+# $Id: bsd.after-import.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
 
 # This makefile is for use when integrating bmake into a BSD build
 # system.  Use this makefile after importing bmake.

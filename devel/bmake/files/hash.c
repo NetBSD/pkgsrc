@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: hash.c,v 1.5 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: hash.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
+static char rcsid[] = "$NetBSD: hash.c,v 1.5 2015/05/19 22:01:19 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)hash.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: hash.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
+__RCSID("$NetBSD: hash.c,v 1.5 2015/05/19 22:01:19 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -221,6 +221,9 @@ Hash_FindEntry(Hash_Table *t, const char *key)
 	unsigned h;
 	const char *p;
 
+	if (t == NULL || t->bucketPtr == NULL) {
+	    return NULL;
+	}
 	for (h = 0, p = key; *p;)
 		h = (h << 5) - h + *p++;
 	p = key;

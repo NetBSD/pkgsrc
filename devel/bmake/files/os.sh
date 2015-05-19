@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.10 2014/03/14 21:59:34 ryoon Exp $
+#	$Id: os.sh,v 1.11 2015/05/19 22:01:19 joerg Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -44,7 +44,7 @@ MACHINE_ARCH=`uname -p 2>/dev/null || echo $MACHINE`
 # there is at least one case of `uname -p` outputting
 # a bunch of usless drivel
 case "$MACHINE_ARCH" in
-unknown|*[!A-Za-z0-9_-]*) MACHINE_ARCH="$MACHINE";;
+*[!A-Za-z0-9_-]*) MACHINE_ARCH="$MACHINE";;
 esac
         
 # we need this here, and it is not always available...
@@ -128,11 +128,13 @@ SunOS)
 	K=-k
 	MAILER=/usr/bin/Mail
 	LOCAL_FS=local
-	case "$-" in
-	*i*) ;;
+	: $-,$ENV
+	case "$-,$ENV" in
+	*i*,*) ;;
+	*,|*ENVFILE*) ;;
 	*) ENV=;;
 	esac
-	# NetBSD at least has good backward compatability
+	# NetBSD at least has good backward compatibility
 	# so NetBSD/i386 is good enough
 	case $OS in
 	NetBSD) SHARE_ARCH=$OS/${MACHINE_ARCH:-$MACHINE};;
@@ -189,22 +191,6 @@ Haiku)
 	BeMac)	MACHINE_ARCH=powerpc;;
 	BePC)	MACHINE_ARCH=i386;;
 	esac
-	;;
-CYGWIN_*)
-	case $MACHINE in
-	i?86)	MACHINE_ARCH=i386;;
-	esac
-	;;
-GNU/kFreeBSD)
-	MACHINE_ARCH=$MACHINE
-	;;
-FreeMiNT)
-	MACHINE_ARCH=m68k
-	;;
-SCO_SV)
-	OSREL=`uname -v`
-	OSMAJOR=`IFS=.; set $OSREL; echo $1`
-	MACHINE_ARCH=`uname -m`
 	;;
 esac
 
