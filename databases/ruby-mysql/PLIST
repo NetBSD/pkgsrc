@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:25 joerg Exp $
-${RUBY_VENDORARCHLIB}/mysql.${RUBY_DLEXT}
-${RUBY_DOC}/mysql/README.html
-${RUBY_DOC}/mysql/README_ja.html
-${RUBY_DOC}/mysql/tommy.css
-${RUBY_EG}/mysql/test.rb
+@comment $NetBSD: PLIST,v 1.8 2015/05/19 13:32:38 ryoon Exp $
+${RUBY_VENDORLIB}/mysql.rb
+${RUBY_VENDORLIB}/mysql/charset.rb
+${RUBY_VENDORLIB}/mysql/constants.rb
+${RUBY_VENDORLIB}/mysql/error.rb
+${RUBY_VENDORLIB}/mysql/packet.rb
+${RUBY_VENDORLIB}/mysql/protocol.rb
+${RUBY_VENDORARCHLIB}/ext.${RUBY_DLEXT}
+@pkgdir share/examples/${RUBY_NAME}/mysql
+@pkgdir share/doc/${RUBY_NAME}/mysql
