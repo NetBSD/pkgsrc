@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2269 2015/05/19 13:33:09 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2270 2015/05/19 14:13:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4333,3 +4333,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated comms/jpilot to 1.8.2 [bad 2015-05-19]
 	Updated editors/OmegaT to 3.4 [ryoon 2015-05-19]
 	Updated databases/ruby-mysql to 2.9.13 [ryoon 2015-05-19]
+	Updated devel/rudiments to 0.50 [ryoon 2015-05-19]
