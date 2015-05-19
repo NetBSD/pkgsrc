@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:17 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/05/19 19:33:54 spz Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -265,8 +265,8 @@ share/tomcat/webapps/examples/WEB-INF/jsp/applet/Clock2.java
 share/tomcat/webapps/examples/WEB-INF/jsp/debug-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp/example-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp2/jsp2-example-taglib.tld
-share/tomcat/webapps/examples/WEB-INF/lib/jstl.jar
-share/tomcat/webapps/examples/WEB-INF/lib/standard.jar
+share/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar
+share/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar
 share/tomcat/webapps/examples/WEB-INF/tags/displayProducts.tag
 share/tomcat/webapps/examples/WEB-INF/tags/helloWorld.tag
 share/tomcat/webapps/examples/WEB-INF/tags/panel.tag
