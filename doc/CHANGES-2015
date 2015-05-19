@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2270 2015/05/19 14:13:28 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2271 2015/05/19 14:31:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4334,3 +4334,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/OmegaT to 3.4 [ryoon 2015-05-19]
 	Updated databases/ruby-mysql to 2.9.13 [ryoon 2015-05-19]
 	Updated devel/rudiments to 0.50 [ryoon 2015-05-19]
+	Updated lang/nodejs to 0.12.3 [fhajny 2015-05-19]
