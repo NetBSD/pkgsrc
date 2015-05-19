@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2267 2015/05/19 10:59:48 bad Exp $
+$NetBSD: CHANGES-2015,v 1.2268 2015/05/19 12:49:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4331,3 +4331,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/rt4 to 4.2.11 [manu 2015-05-18]
 	Updated comms/asterisk to 11.17.1 [jnemeth 2015-05-19]
 	Updated comms/jpilot to 1.8.2 [bad 2015-05-19]
+	Updated editors/OmegaT to 3.4 [ryoon 2015-05-19]
