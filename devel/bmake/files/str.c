@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: str.c,v 1.5 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: str.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
+static char rcsid[] = "$NetBSD: str.c,v 1.5 2015/05/19 22:01:19 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char     sccsid[] = "@(#)str.c	5.8 (Berkeley) 6/1/90";
 #else
-__RCSID("$NetBSD: str.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
+__RCSID("$NetBSD: str.c,v 1.5 2015/05/19 22:01:19 joerg Exp $");
 #endif
 #endif				/* not lint */
 #endif
@@ -145,7 +145,7 @@ brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
 	const char *p;
 	int len;
 	int argmax = 50, curlen = 0;
-    	char **argv = bmake_malloc((argmax + 1) * sizeof(char *));
+    	char **argv;
 
 	/* skip leading space chars. */
 	for (; *str == ' ' || *str == '\t'; ++str)
@@ -154,6 +154,12 @@ brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
 	/* allocate room for a copy of the string */
 	if ((len = strlen(str) + 1) > curlen)
 		*buffer = bmake_malloc(curlen = len);
+
+	/*
+	 * initial argmax based on len
+	 */
+	argmax = MAX((len / 5), 50);
+	argv = bmake_malloc((argmax + 1) * sizeof(char *));
 
 	/*
 	 * copy the string; at the same time, parse backslashes,
@@ -318,6 +324,8 @@ Str_FindSubstring(const char *string, const char *substring)
  * Results: Non-zero is returned if string matches pattern, 0 otherwise. The
  * matching operation permits the following special characters in the
  * pattern: *?\[] (see the man page for details on what these mean).
+ *
+ * XXX this function does not detect or report malformed patterns.
  *
  * Side effects: None.
  */
