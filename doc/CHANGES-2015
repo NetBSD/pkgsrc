@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2273 2015/05/19 22:08:55 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.2274 2015/05/19 23:46:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/nodejs to 0.12.3 [fhajny 2015-05-19]
 	Updated devel/py-tortoisehg to 3.4 [nros 2015-05-19]
 	Updated devel/bmake to 20150505 [joerg 2015-05-19]
+	Updated www/p5-Dancer2 to 0.160001 [wen 2015-05-19]
