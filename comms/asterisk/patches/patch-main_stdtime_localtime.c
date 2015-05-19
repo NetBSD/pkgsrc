@@ -1,8 +1,17 @@
-$NetBSD: patch-main_stdtime_localtime.c,v 1.1 2013/06/14 04:26:55 jnemeth Exp $
+$NetBSD: patch-main_stdtime_localtime.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
 
---- main/stdtime/localtime.c.orig	2012-12-03 20:43:03.000000000 +0000
+--- main/stdtime/localtime.c.orig	2015-03-10 17:42:57.000000000 +0000
 +++ main/stdtime/localtime.c
-@@ -2232,6 +2232,23 @@ static struct locale_entry *find_by_name
+@@ -733,7 +733,7 @@ static void *notify_daemon(void *data)
+ 			if (st.st_mtime > cur->mtime[0] || lst.st_mtime > cur->mtime[1]) {
+ #ifdef TEST_FRAMEWORK
+ 				if (test) {
+-					ast_test_status_update(test, "Removing cached TZ entry '%s' because underlying file changed. (%ld != %ld) or (%ld != %ld)\n", name, st.st_mtime, cur->mtime[0], lst.st_mtime, cur->mtime[1]);
++					ast_test_status_update(test, "Removing cached TZ entry '%s' because underlying file changed. (%jd != %jd) or (%jd != %jd)\n", name, (intmax_t)st.st_mtime, (intmax_t)cur->mtime[0], (intmax_t)lst.st_mtime, (intmax_t)cur->mtime[1]);
+ 				} else
+ #endif
+ 				{
+@@ -2417,6 +2417,23 @@ static struct locale_entry *find_by_name
  	return NULL;
  }
  
@@ -26,7 +35,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1 2013/06/14 04:26:55 jnemeth Exp $
  static const char *store_by_locale(locale_t prevlocale)
  {
  	struct locale_entry *cur;
-@@ -2289,6 +2306,7 @@ const char *ast_setlocale(const char *lo
+@@ -2474,6 +2491,7 @@ const char *ast_setlocale(const char *lo
  	AST_LIST_UNLOCK(&localelist);
  	return store_by_locale(prevlocale);
  }
@@ -34,7 +43,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1 2013/06/14 04:26:55 jnemeth Exp $
  #else
  const char *ast_setlocale(const char *unused)
  {
-@@ -2302,7 +2320,9 @@ int ast_strftime_locale(char *buf, size_
+@@ -2487,7 +2505,9 @@ int ast_strftime_locale(char *buf, size_
  	char *format = ast_calloc(1, fmtlen), *fptr = format, *newfmt;
  	int decimals = -1, i, res;
  	long fraction;
@@ -42,9 +51,9 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1 2013/06/14 04:26:55 jnemeth Exp $
  	const char *prevlocale;
 +#endif
  
+ 	buf[0] = '\0';/* Ensure the buffer is initialized. */
  	if (!format) {
- 		return -1;
-@@ -2356,6 +2376,14 @@ defcase:	*fptr++ = *tmp;
+@@ -2542,6 +2562,14 @@ defcase:	*fptr++ = *tmp;
  	}
  	*fptr = '\0';
  #undef strftime
@@ -59,7 +68,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1 2013/06/14 04:26:55 jnemeth Exp $
  	if (locale) {
  		prevlocale = ast_setlocale(locale);
  	}
-@@ -2363,6 +2391,7 @@ defcase:	*fptr++ = *tmp;
+@@ -2549,6 +2577,7 @@ defcase:	*fptr++ = *tmp;
  	if (locale) {
  		ast_setlocale(prevlocale);
  	}
@@ -67,7 +76,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1 2013/06/14 04:26:55 jnemeth Exp $
  	ast_free(format);
  	return res;
  }
-@@ -2376,11 +2405,22 @@ char *ast_strptime_locale(const char *s,
+@@ -2562,11 +2591,22 @@ char *ast_strptime_locale(const char *s,
  {
  	struct tm tm2 = { 0, };
  	char *res;
