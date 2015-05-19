@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2265 2015/05/18 13:36:38 manu Exp $
+$NetBSD: CHANGES-2015,v 1.2266 2015/05/19 07:52:26 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4329,3 +4329,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-svn to 2.4.1 [adam 2015-05-18]
 	Updated www/gitweb to 2.4.1 [adam 2015-05-18]
 	Updated devel/rt4 to 4.2.11 [manu 2015-05-18]
+	Updated comms/asterisk to 11.17.1 [jnemeth 2015-05-19]
