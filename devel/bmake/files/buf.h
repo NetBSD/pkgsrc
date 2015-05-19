@@ -1,4 +1,4 @@
-/*	$NetBSD: buf.h,v 1.3 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: buf.h,v 1.4 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -114,5 +114,6 @@ Byte *Buf_GetAll(Buffer *, int *);
 void Buf_Empty(Buffer *);
 void Buf_Init(Buffer *, int);
 Byte *Buf_Destroy(Buffer *, Boolean);
+Byte *Buf_DestroyCompact(Buffer *);
 
 #endif /* _BUF_H */

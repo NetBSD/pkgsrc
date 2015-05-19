@@ -1,4 +1,4 @@
-.\"	$NetBSD: tutorial.ms,v 1.3 2009/09/18 21:27:25 joerg Exp $
+.\"	$NetBSD: tutorial.ms,v 1.4 2015/05/19 22:01:19 joerg Exp $
 .\" Copyright (c) 1988, 1989, 1993
 .\"	The Regents of the University of California.  All rights reserved.
 .\"
@@ -67,6 +67,16 @@
 .\"
 .EH 'PSD:12-%''PMake \*- A Tutorial'
 .OH 'PMake \*- A Tutorial''PSD:12-%'
+.\" Ix is an indexing macro similar to .IX but I've disabled it for now
+.\" Since that would require 2 passes and I am not in the mood for that.
+.de Ix
+..
+.\" Rd is section (region) define and Rm is region mention? Again disable for
+.\" now.
+.de Rd
+..
+.de Rm
+..
 .\" xH is a macro to provide numbered headers that are automatically stuffed
 .\" into a table-of-contents, properly indented, etc. If the first argument
 .\" is numeric, it is taken as the depth for numbering (as for .NH), else
@@ -114,14 +124,15 @@
 .nr g4 \\n(.s
 .sp -1
 .\" .st cf
-\D's -1u'\D't 5u'
+\D't 5u'
 .sp -1
-\h'50u'\D'l 71u 0u'\D'l 50u 50u'\D'l 0u 71u'\D'l -50u 50u'\D'l -71u 0u'\D'l -50u -50u'\D'l 0u -71u'\D'l 50u -50u'
+\h'50u'
 .sp -1
 \D't 3u'
 .sp -1
 .sp 7u
-\h'53u'\D'p 14 68u 0u 46u 46u 0u 68u -46u 46u -68u 0u -47u -46u 0u -68u 47u -46u'
+\h'53u'
+\d\D'p -0.19i 0.0i 0.0i -0.13i 0.30i 0.0i 0.0i 0.13i'
 .sp -1
 .ft R
 .ps 6
@@ -131,7 +142,7 @@
 \h'85u'\v'0.85n'\h-\w\\*(g9u/2u\&\\*(g9
 .sp |\\n(g8u
 .sp 166u
-\D't 3u'\D's -1u'
+\D't 3u'
 .br
 .po
 .rt 

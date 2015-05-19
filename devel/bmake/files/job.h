@@ -1,4 +1,4 @@
-/*	$NetBSD: job.h,v 1.7 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: job.h,v 1.8 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -243,6 +243,7 @@ typedef struct Shell {
 
 extern const char *shellPath;
 extern const char *shellName;
+extern char *shellErrFlag;
 
 extern int	jobTokensRunning; /* tokens currently "out" */
 extern int	maxJobs;	/* Max jobs we can run */
@@ -268,5 +269,6 @@ void Job_TokenReturn(void);
 Boolean Job_TokenWithdraw(void);
 void Job_ServerStart(int, int, int);
 void Job_SetPrefix(void);
+Boolean Job_RunTarget(const char *, const char *);
 
 #endif /* _JOB_H_ */

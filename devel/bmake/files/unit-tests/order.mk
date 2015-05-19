@@ -1,4 +1,4 @@
-# $NetBSD: order.mk,v 1.1.1.1 2015/05/19 21:36:45 joerg Exp $
+# $NetBSD: order.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
 
 # Test that .ORDER is handled correctly.
 # The explicit dependency the.o: the.h will make us examine the.h

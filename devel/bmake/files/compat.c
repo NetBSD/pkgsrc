@@ -1,4 +1,4 @@
-/*	$NetBSD: compat.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: compat.c,v 1.10 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: compat.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $";
+static char rcsid[] = "$NetBSD: compat.c,v 1.10 2015/05/19 22:01:19 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)compat.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: compat.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $");
+__RCSID("$NetBSD: compat.c,v 1.10 2015/05/19 22:01:19 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -133,7 +133,7 @@ Compat_Init(void)
 
     Shell_Init();		/* setup default shell */
     
-    for (cp = "#=|^(){};&<>*?[]:$`\\\n"; *cp != '\0'; cp++) {
+    for (cp = "~#=|^(){};&<>*?[]:$`\\\n"; *cp != '\0'; cp++) {
 	meta[(unsigned char) *cp] = 1;
     }
     /*
@@ -183,7 +183,10 @@ CompatInterrupt(int signo)
 	}
 
     }
-    exit(signo);
+    if (signo == SIGQUIT)
+	_exit(signo);
+    bmake_signal(signo, SIG_DFL);
+    kill(myPid, signo);
 }
 
 /*-
@@ -244,7 +247,6 @@ CompatRunCommand(void *cmdp, void *gnp)
 
     if (*cmdStart == '\0') {
 	free(cmdStart);
-	Error("%s expands to empty string", cmd);
 	return(0);
     }
     cmd = cmdStart;
@@ -278,6 +280,12 @@ CompatRunCommand(void *cmdp, void *gnp)
 
     while (isspace((unsigned char)*cmd))
 	cmd++;
+
+    /*
+     * If we did not end up with a command, just skip it.
+     */
+    if (!*cmd)
+	return (0);
 
 #if !defined(MAKE_NATIVE)
     /*
@@ -324,18 +332,23 @@ again:
 	 * We need to pass the command off to the shell, typically
 	 * because the command contains a "meta" character.
 	 */
-	static const char *shargv[4];
+	static const char *shargv[5];
+	int shargc;
 
-	shargv[0] = shellPath;
+	shargc = 0;
+	shargv[shargc++] = shellPath;
 	/*
 	 * The following work for any of the builtin shell specs.
 	 */
+	if (errCheck && shellErrFlag) {
+	    shargv[shargc++] = shellErrFlag;
+	}
 	if (DEBUG(SHELL))
-		shargv[1] = "-xc";
+		shargv[shargc++] = "-xc";
 	else
-		shargv[1] = "-c";
-	shargv[2] = cmd;
-	shargv[3] = NULL;
+		shargv[shargc++] = "-c";
+	shargv[shargc++] = cmd;
+	shargv[shargc++] = NULL;
 	av = shargv;
 	argc = 0;
 	bp = NULL;
@@ -350,7 +363,7 @@ again:
 		useShell = 1;
 		goto again;
 	}
-	av = (const char **)mav;
+	av = (void *)mav;
     }
 
     local = TRUE;
@@ -369,7 +382,6 @@ again:
 	Fatal("Could not fork");
     }
     if (cpid == 0) {
-	Check_Cwd(av);
 	Var_ExportVars();
 #ifdef USE_META
 	if (useMeta) {

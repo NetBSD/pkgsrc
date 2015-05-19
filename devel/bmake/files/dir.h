@@ -1,4 +1,4 @@
-/*	$NetBSD: dir.h,v 1.4 2014/03/14 21:59:34 ryoon Exp $	*/
+/*	$NetBSD: dir.h,v 1.5 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -75,8 +75,8 @@
 /* dir.h --
  */
 
-#ifndef	_DIR_H
-#define	_DIR_H
+#ifndef	_DIR
+#define	_DIR
 
 typedef struct Path {
     char         *name;	    	/* Name of directory */
@@ -95,7 +95,7 @@ Boolean Dir_HasWildcards(char *);
 void Dir_Expand(const char *, Lst, Lst);
 char *Dir_FindFile(const char *, Lst);
 int Dir_FindHereOrAbove(char *, char *, char *, int);
-int Dir_MTime(GNode *);
+int Dir_MTime(GNode *, Boolean);
 Path *Dir_AddDir(Lst, const char *);
 char *Dir_MakeFlags(const char *, Lst);
 void Dir_ClearPath(Lst);
@@ -105,4 +105,4 @@ void Dir_PrintPath(Lst);
 void Dir_Destroy(void *);
 void * Dir_CopyDir(void *);
 
-#endif /* _DIR_H */
+#endif /* _DIR */

@@ -1,4 +1,4 @@
-# $Id: export-all.mk,v 1.1.1.1 2015/05/19 21:36:45 joerg Exp $
+# $Id: export-all.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
 
 UT_OK=good
 UT_F=fine
