@@ -1,8 +1,25 @@
-$NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
+$NetBSD: patch-apps_app__meetme.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
 
---- apps/app_meetme.c.orig	2013-09-13 13:48:34.000000000 +0000
+--- apps/app_meetme.c.orig	2014-12-06 17:19:39.000000000 +0000
 +++ apps/app_meetme.c
-@@ -5001,6 +5001,8 @@ static int user_chan_cb(void *obj, void 
+@@ -4235,14 +4235,14 @@ bailoutandtrynormal:
+ 				"CallerIDName: %s\r\n"
+ 				"ConnectedLineNum: %s\r\n"
+ 				"ConnectedLineName: %s\r\n"
+-				"Duration: %ld\r\n",
++				"Duration: %jd\r\n",
+ 				ast_channel_name(chan), ast_channel_uniqueid(chan), conf->confno,
+ 				user->user_no,
+ 				S_COR(ast_channel_caller(user->chan)->id.number.valid, ast_channel_caller(user->chan)->id.number.str, "<unknown>"),
+ 				S_COR(ast_channel_caller(user->chan)->id.name.valid, ast_channel_caller(user->chan)->id.name.str, "<unknown>"),
+ 				S_COR(ast_channel_connected(user->chan)->id.number.valid, ast_channel_connected(user->chan)->id.number.str, "<unknown>"),
+ 				S_COR(ast_channel_connected(user->chan)->id.name.valid, ast_channel_connected(user->chan)->id.name.str, "<unknown>"),
+-				(long)(now.tv_sec - user->jointime));
++				(intmax_t)(now.tv_sec - user->jointime));
+ 		}
+ 
+ 		if (setusercount) {
+@@ -5016,6 +5016,8 @@ static int user_chan_cb(void *obj, void 
  
  /*! \brief The MeetMeadmin application 
  
@@ -11,7 +28,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
    MeetMeAdmin(confno, command, caller) */
  static int admin_exec(struct ast_channel *chan, const char *data) {
  	char *params;
-@@ -5082,7 +5084,7 @@ static int admin_exec(struct ast_channel
+@@ -5097,7 +5099,7 @@ static int admin_exec(struct ast_channel
  	case 101: /* e: Eject last user*/
  	{
  		int max_no = 0;
@@ -20,7 +37,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  
  		ao2_callback(cnf->usercontainer, OBJ_NODATA, user_max_cmp, &max_no);
  		eject_user = ao2_find(cnf->usercontainer, &max_no, 0);
-@@ -5840,10 +5842,13 @@ static void answer_trunk_chan(struct ast
+@@ -5864,10 +5866,13 @@ static void answer_trunk_chan(struct ast
  	ast_indicate(chan, -1);
  }
  
@@ -36,7 +53,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	struct ast_str *conf_name = ast_str_create(16);
  	struct ast_flags64 conf_flags = { 0 };
  	struct ast_conference *conf;
-@@ -6004,12 +6009,14 @@ static struct sla_ringing_trunk *sla_cho
+@@ -6028,12 +6033,14 @@ static struct sla_ringing_trunk *sla_cho
  	return ringing_trunk;
  }
  
@@ -52,7 +69,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  		struct sla_ringing_trunk *ringing_trunk = NULL;
  		struct run_station_args args;
  		enum ast_dial_result dial_res;
-@@ -6222,7 +6229,7 @@ static struct sla_trunk_ref *sla_find_tr
+@@ -6246,7 +6253,7 @@ static struct sla_trunk_ref *sla_find_tr
  static int sla_check_station_delay(struct sla_station *station, 
  	struct sla_ringing_trunk *ringing_trunk)
  {
@@ -61,7 +78,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	unsigned int delay = UINT_MAX;
  	int time_left, time_elapsed;
  
-@@ -6633,8 +6640,8 @@ static void *dial_trunk(void *data)
+@@ -6657,8 +6664,8 @@ static void *dial_trunk(void *data)
  	char conf_name[MAX_CONFNUM];
  	struct ast_conference *conf;
  	struct ast_flags64 conf_flags = { 0 };
@@ -72,7 +89,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	int caller_is_saved;
  	struct ast_party_caller caller;
  	int last_state = 0;
-@@ -6781,8 +6788,8 @@ static struct sla_trunk_ref *sla_choose_
+@@ -6805,8 +6812,8 @@ static struct sla_trunk_ref *sla_choose_
  static int sla_station_exec(struct ast_channel *chan, const char *data)
  {
  	char *station_name, *trunk_name;
@@ -83,7 +100,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	char conf_name[MAX_CONFNUM];
  	struct ast_flags64 conf_flags = { 0 };
  	struct ast_conference *conf;
-@@ -7000,12 +7007,14 @@ AST_APP_OPTIONS(sla_trunk_opts, BEGIN_OP
+@@ -7024,12 +7031,14 @@ AST_APP_OPTIONS(sla_trunk_opts, BEGIN_OP
  	AST_APP_OPTION_ARG('M', SLA_TRUNK_OPT_MOH, SLA_TRUNK_OPT_ARG_MOH_CLASS),
  END_OPTIONS );
  
@@ -99,7 +116,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	struct sla_ringing_trunk *ringing_trunk;
  	AST_DECLARE_APP_ARGS(args,
  		AST_APP_ARG(trunk_name);
-@@ -7101,7 +7110,7 @@ static int sla_trunk_exec(struct ast_cha
+@@ -7125,7 +7134,7 @@ static int sla_trunk_exec(struct ast_cha
  static enum ast_device_state sla_state(const char *data)
  {
  	char *buf, *station_name, *trunk_name;
@@ -108,7 +125,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	struct sla_trunk_ref *trunk_ref;
  	enum ast_device_state res = AST_DEVICE_INVALID;
  
-@@ -7262,7 +7271,7 @@ static void sla_trunk_destructor(void *o
+@@ -7286,7 +7295,7 @@ static void sla_trunk_destructor(void *o
  
  static int sla_build_trunk(struct ast_config *cfg, const char *cat)
  {
@@ -117,7 +134,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	struct ast_variable *var;
  	const char *dev;
  	int existing_trunk = 0;
-@@ -7351,7 +7360,7 @@ static int sla_build_trunk(struct ast_co
+@@ -7375,7 +7384,7 @@ static int sla_build_trunk(struct ast_co
   */
  static void sla_add_trunk_to_station(struct sla_station *station, struct ast_variable *var)
  {
@@ -126,7 +143,7 @@ $NetBSD: patch-apps_app__meetme.c,v 1.1 2013/12/23 01:34:03 jnemeth Exp $
  	struct sla_trunk_ref *trunk_ref = NULL;
  	struct sla_station_ref *station_ref;
  	char *trunk_name, *options, *cur;
-@@ -7435,7 +7444,7 @@ static void sla_add_trunk_to_station(str
+@@ -7459,7 +7468,7 @@ static void sla_add_trunk_to_station(str
  
  static int sla_build_station(struct ast_config *cfg, const char *cat)
  {

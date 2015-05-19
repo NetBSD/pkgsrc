@@ -1,6 +1,6 @@
-$NetBSD: patch-main_manager.c,v 1.4 2014/12/16 01:00:22 jnemeth Exp $
+$NetBSD: patch-main_manager.c,v 1.5 2015/05/19 07:52:14 jnemeth Exp $
 
---- main/manager.c.orig	2014-11-21 18:47:12.000000000 +0000
+--- main/manager.c.orig	2014-12-17 09:24:50.000000000 +0000
 +++ main/manager.c
 @@ -1886,7 +1886,7 @@ static char *handle_showmanconn(struct a
  	struct mansession_session *session;
@@ -22,6 +22,45 @@ $NetBSD: patch-main_manager.c,v 1.4 2014/12/16 01:00:22 jnemeth Exp $
  				session->fd,
  				session->inuse,
  				session->readperm,
+@@ -2726,9 +2726,9 @@ static int action_ping(struct mansession
+ 	astman_append(
+ 		s,
+ 		"Ping: Pong\r\n"
+-		"Timestamp: %ld.%06lu\r\n"
++		"Timestamp: %jd.%06lu\r\n"
+ 		"\r\n",
+-		(long) now.tv_sec, (unsigned long) now.tv_usec);
++		(intmax_t) now.tv_sec, (unsigned long) now.tv_usec);
+ 	return 0;
+ }
+ 
+@@ -3580,7 +3580,7 @@ static int action_status(struct mansessi
+ 	struct ast_channel *c;
+ 	char bridge[256];
+ 	struct timeval now = ast_tvnow();
+-	long elapsed_seconds = 0;
++	intmax_t elapsed_seconds = 0;
+ 	int channels = 0;
+ 	int all = ast_strlen_zero(name); /* set if we want all channels */
+ 	const char *id = astman_get_header(m, "ActionID");
+@@ -3670,7 +3670,7 @@ static int action_status(struct mansessi
+ 			"Context: %s\r\n"
+ 			"Extension: %s\r\n"
+ 			"Priority: %d\r\n"
+-			"Seconds: %ld\r\n"
++			"Seconds: %jd\r\n"
+ 			"%s"
+ 			"Uniqueid: %s\r\n"
+ 			"%s"
+@@ -3684,7 +3684,7 @@ static int action_status(struct mansessi
+ 			ast_channel_accountcode(c),
+ 			ast_channel_state(c),
+ 			ast_state2str(ast_channel_state(c)), ast_channel_context(c),
+-			ast_channel_exten(c), ast_channel_priority(c), (long)elapsed_seconds, bridge, ast_channel_uniqueid(c), ast_str_buffer(str), idText);
++			ast_channel_exten(c), ast_channel_priority(c), (intmax_t)elapsed_seconds, bridge, ast_channel_uniqueid(c), ast_str_buffer(str), idText);
+ 		} else {
+ 			astman_append(s,
+ 				"Event: Status\r\n"
 @@ -5735,11 +5735,13 @@ static void append_channel_vars(struct a
  AST_THREADSTORAGE(manager_event_buf);
  #define MANAGER_EVENT_BUF_INITSIZE   256
@@ -37,6 +76,17 @@ $NetBSD: patch-main_manager.c,v 1.4 2014/12/16 01:00:22 jnemeth Exp $
  	struct mansession_session *session;
  	struct manager_custom_hook *hook;
  	struct ast_str *auth = ast_str_alloca(MAX_AUTH_PERM_STRING);
+@@ -5765,8 +5767,8 @@ int __ast_manager_event_multichan(int ca
+ 	if (timestampevents) {
+ 		now = ast_tvnow();
+ 		ast_str_append(&buf, 0,
+-				"Timestamp: %ld.%06lu\r\n",
+-				 (long)now.tv_sec, (unsigned long) now.tv_usec);
++				"Timestamp: %jd.%06lu\r\n",
++				 (intmax_t)now.tv_sec, (unsigned long) now.tv_usec);
+ 	}
+ 	if (manager_debug) {
+ 		static int seq;
 @@ -7361,9 +7363,11 @@ static char *handle_manager_show_events(
  	return CLI_SUCCESS;
  }

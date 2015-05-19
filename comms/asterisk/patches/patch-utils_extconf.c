@@ -1,8 +1,8 @@
-$NetBSD: patch-utils_extconf.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+$NetBSD: patch-utils_extconf.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
 
---- utils/extconf.c.orig	2012-08-01 02:26:53.000000000 +0000
+--- utils/extconf.c.orig	2014-04-01 20:43:57.000000000 +0000
 +++ utils/extconf.c
-@@ -795,6 +795,10 @@ static void  __attribute__((destructor))
+@@ -797,6 +797,10 @@ static void  __attribute__((destructor))
  #include "libkern/OSAtomic.h"
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-utils_extconf.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  /*! \brief Atomically add v to *p and return * the previous value of *p.
   * This can be used to handle reference counts, and the return value
   * can be used to generate unique identifiers.
-@@ -808,12 +812,18 @@ AST_INLINE_API(int ast_atomic_fetchadd_i
+@@ -810,12 +814,18 @@ AST_INLINE_API(int ast_atomic_fetchadd_i
  #elif defined(HAVE_OSX_ATOMICS) && (SIZEOF_INT == 4)
  AST_INLINE_API(int ast_atomic_fetchadd_int(volatile int *p, int v),
  {
@@ -34,7 +34,7 @@ $NetBSD: patch-utils_extconf.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  #elif defined (__i386__) || defined(__x86_64__)
  AST_INLINE_API(int ast_atomic_fetchadd_int(volatile int *p, int v),
  {
-@@ -855,6 +865,12 @@ AST_INLINE_API(int ast_atomic_dec_and_te
+@@ -857,6 +867,12 @@ AST_INLINE_API(int ast_atomic_dec_and_te
  AST_INLINE_API(int ast_atomic_dec_and_test(volatile int *p),
  {
  	return OSAtomicAdd64( -1, (int64_t *) p) == 0;
@@ -47,3 +47,21 @@ $NetBSD: patch-utils_extconf.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  #else
  AST_INLINE_API(int ast_atomic_dec_and_test(volatile int *p),
  {
+@@ -2820,13 +2836,13 @@ static int ast_true(const char *s)
+ static struct timeval tvfix(struct timeval a)
+ {
+ 	if (a.tv_usec >= ONE_MILLION) {
+-		ast_log(LOG_WARNING, "warning too large timestamp %ld.%ld\n",
+-			(long)a.tv_sec, (long int) a.tv_usec);
++		ast_log(LOG_WARNING, "warning too large timestamp %jd.%ld\n",
++			(intmax_t)a.tv_sec, (long int) a.tv_usec);
+ 		a.tv_sec += a.tv_usec / ONE_MILLION;
+ 		a.tv_usec %= ONE_MILLION;
+ 	} else if (a.tv_usec < 0) {
+-		ast_log(LOG_WARNING, "warning negative timestamp %ld.%ld\n",
+-			(long)a.tv_sec, (long int) a.tv_usec);
++		ast_log(LOG_WARNING, "warning negative timestamp %jd.%ld\n",
++			(intmax_t)a.tv_sec, (long int) a.tv_usec);
+ 		a.tv_usec = 0;
+ 	}
+ 	return a;
