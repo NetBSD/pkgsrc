@@ -1,11 +1,18 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.12 2013/02/26 00:50:14 christos Exp $
+dnl	$Id: configure.in,v 1.13 2015/05/19 22:01:19 joerg Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
-AC_INIT([bmake], [2010505], [sjg@NetBSD.org])
-AC_CONFIG_HEADER(config.h)
+AC_PREREQ(2.50)
+AC_INIT([bmake], [20140214], [sjg@NetBSD.org])
+AC_CONFIG_HEADERS(config.h)
+
+dnl make srcdir absolute
+case "$srcdir" in
+/*) ;;
+*) srcdir=`cd $srcdir && pwd`;;
+esac
 
 dnl
 AC_ARG_WITH(defshell,
@@ -39,7 +46,7 @@ AC_ARG_WITH(filemon,
 esac],
 [
 OS=`uname -s`
-for d in "$srcdir/filemon" "$srcdir/../filemon"
+for d in "/usr/include/dev/filemon" "$prefix/include/dev/filemon" "$srcdir/filemon" "$srcdir/../filemon" "$srcdir/../../sys/dev/filemon"
 do
 	for x in "/$OS" ""
 	do
@@ -71,7 +78,20 @@ AC_PROG_GCC_TRADITIONAL
 AC_PROG_INSTALL
 dnl Executable suffix - normally empty; .exe on os2.
 AC_SUBST(ac_exe_suffix)dnl
-
+dnl
+dnl Hurd refuses to define PATH_MAX or MAXPATHLEN
+if test -x /usr/bin/getconf; then
+   bmake_path_max=`getconf PATH_MAX / 2> /dev/null`
+   # only a numeric response is useful
+   test ${bmake_path_max:-0} -gt 0 2> /dev/null || bmake_path_max=
+fi
+bmake_path_max=${bmake_path_max:-1024}
+if test $bmake_path_max -gt 1024; then
+   # this is all we expect
+   bmake_path_max=1024
+fi
+echo "Using: BMAKE_PATH_MAX=$bmake_path_max" >&6
+AC_SUBST(bmake_path_max)dnl
 dnl
 dnl AC_C_CROSS
 dnl
@@ -92,6 +112,7 @@ AC_CHECK_HEADERS( \
 	sys/mman.h \
 	sys/select.h \
 	sys/socket.h \
+	sys/sysctl.h \
 	sys/time.h \
 	sys/uio.h \
 	unistd.h \
@@ -144,7 +165,7 @@ AC_CHECK_FUNCS( \
 	select \
 	setenv \
 	setpgid \
-	setrlimit \
+	setsid \
 	sigaction \
 	sigvec \
 	snprintf \
@@ -153,6 +174,7 @@ AC_CHECK_FUNCS( \
 	strsep \
 	strtod \
 	strtol \
+	sysctl \
 	unsetenv \
 	vsnprintf \
 	wait3 \
@@ -164,7 +186,6 @@ AC_CHECK_FUNCS( \
 
 dnl functions which we may need to provide
 AC_REPLACE_FUNCS( \
-	getenv \
 	realpath \
 	dirname \
 	stresep \
@@ -183,6 +204,11 @@ dnl Structures
 dnl
 AC_HEADER_STAT
 AC_STRUCT_ST_RDEV
+dnl
+echo "checking if compiler supports __func__" >&6
+AC_LANG(C)
+AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[[const char *func = __func__;]])],,
+	AC_DEFINE(__func__, __FUNCTION__, C99 function name))
 dnl
 dnl we want this for unit-tests/Makefile
 echo $ECHO_N "checking if diff -u works... $ECHO_C" >&6
@@ -349,13 +375,13 @@ AC_SUBST(GCC)
 AC_SUBST(diff_u)
 AC_SUBST(use_meta)
 AC_SUBST(filemon_h)
-AC_OUTPUT(Makefile make-bootstrap.sh unit-tests/Makefile)
+AC_OUTPUT(makefile Makefile.config make-bootstrap.sh unit-tests/Makefile)
 
 cat <<EOF
 
 You can now run
 
-	./make-bootstrap.sh
+	sh ./make-bootstrap.sh
 
 to produce a fully functional bmake.
 

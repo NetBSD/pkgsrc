@@ -1,4 +1,4 @@
-/*	$NetBSD: make.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: make.c,v 1.6 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: make.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $";
+static char rcsid[] = "$NetBSD: make.c,v 1.6 2015/05/19 22:01:19 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)make.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: make.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $");
+__RCSID("$NetBSD: make.c,v 1.6 2015/05/19 22:01:19 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -139,7 +139,7 @@ static int MakeCheckOrder(void *, void *);
 static int MakeBuildChild(void *, void *);
 static int MakeBuildParent(void *, void *);
 
-static void
+MAKE_ATTR_DEAD static void
 make_abort(GNode *gn, int line)
 {
     static int two = 2;
@@ -221,7 +221,7 @@ Make_OODate(GNode *gn)
      * doesn't depend on their modification time...
      */
     if ((gn->type & (OP_JOIN|OP_USE|OP_USEBEFORE|OP_EXEC)) == 0) {
-	(void)Dir_MTime(gn);
+	(void)Dir_MTime(gn, 1);
 	if (DEBUG(MAKE)) {
 	    if (gn->mtime != 0) {
 		fprintf(debug_file, "modified %s...", Targ_FmtTime(gn->mtime));
@@ -406,7 +406,7 @@ MakeFindChild(void *gnp, void *pgnp)
     GNode          *gn = (GNode *)gnp;
     GNode          *pgn = (GNode *)pgnp;
 
-    (void)Dir_MTime(gn);
+    (void)Dir_MTime(gn, 0);
     Make_TimeStamp(pgn, gn);
     pgn->unmade--;
 
@@ -563,7 +563,7 @@ MakeHandleUse(void *cgnp, void *pgnp)
  *	in the comments below.
  *
  * Results:
- *	returns 0 if the gnode does not exist, or it's filesystem
+ *	returns 0 if the gnode does not exist, or its filesystem
  *	time if it does.
  *
  * Side Effects:
@@ -574,7 +574,7 @@ MakeHandleUse(void *cgnp, void *pgnp)
 time_t
 Make_Recheck(GNode *gn)
 {
-    time_t mtime = Dir_MTime(gn);
+    time_t mtime = Dir_MTime(gn, 1);
 
 #ifndef RECHECK
     /*
@@ -867,7 +867,7 @@ Make_Update(GNode *cgn)
  *-----------------------------------------------------------------------
  */
 static int
-MakeUnmark(void *cgnp, void *pgnp __unused)
+MakeUnmark(void *cgnp, void *pgnp MAKE_ATTR_UNUSED)
 {
     GNode	*cgn = (GNode *)cgnp;
 
@@ -1005,7 +1005,7 @@ Make_DoAllVar(GNode *gn)
  */
 
 static int
-MakeCheckOrder(void *v_bn, void *ignore __unused)
+MakeCheckOrder(void *v_bn, void *ignore MAKE_ATTR_UNUSED)
 {
     GNode *bn = v_bn;
 
@@ -1032,7 +1032,7 @@ MakeBuildChild(void *v_cn, void *toBeMade_next)
     if (cn->order_pred && Lst_ForEach(cn->order_pred, MakeCheckOrder, 0)) {
 	/* Can't build this (or anything else in this child list) yet */
 	cn->made = DEFERRED;
-	return 1;
+	return 0;			/* but keep looking */
     }
 
     if (DEBUG(MAKE))
@@ -1055,7 +1055,7 @@ MakeBuildChild(void *v_cn, void *toBeMade_next)
     return cn->type & OP_WAIT && cn->unmade > 0;
 }
 
-/* When a .ORDER RHS node completes we do this on each LHS */
+/* When a .ORDER LHS node completes we do this on each RHS */
 static int
 MakeBuildParent(void *v_pn, void *toBeMade_next)
 {
@@ -1336,7 +1336,7 @@ Make_ExpandUse(Lst targs)
 	    *eon = ')';
 	}
 
-	(void)Dir_MTime(gn);
+	(void)Dir_MTime(gn, 0);
 	Var_Set(TARGET, gn->path ? gn->path : gn->name, gn, 0);
 	Lst_ForEach(gn->children, MakeUnmark, gn);
 	Lst_ForEach(gn->children, MakeHandleUse, gn);
