@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.24 2013/10/14 14:33:31 joerg Exp $
+$NetBSD: distinfo,v 1.25 2015/05/19 10:58:46 bad Exp $
 
-SHA1 (jpilot-1.8.1.tar.gz) = 98a70bbb30bcccb8ba74aecb6a41b819dc8a4a3b
-RMD160 (jpilot-1.8.1.tar.gz) = 4b40d625d4582994eeb5acfa296ed0925a59b7bd
-Size (jpilot-1.8.1.tar.gz) = 1582869 bytes
-SHA1 (patch-utils.c) = 3e7551d0859820cc103a6c5cbfbac8d4ff21eee9
-SHA1 (patch-utils.h) = 950d4de9824620847ca8b7f197d788c666a69d81
+SHA1 (jpilot-1.8.2.tar.gz) = 3348bf3e49928f4b5202bac546ab62852155291c
+RMD160 (jpilot-1.8.2.tar.gz) = b162f2e2f91ef9fd4fc07026312f0f21ddbc345a
+Size (jpilot-1.8.2.tar.gz) = 1740735 bytes
+SHA1 (patch-memo.c) = 9390f307c185bdd6a7d89513de5e9e1411f9a0f0
