@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2266 2015/05/19 07:52:26 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.2267 2015/05/19 10:59:48 bad Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/gitweb to 2.4.1 [adam 2015-05-18]
 	Updated devel/rt4 to 4.2.11 [manu 2015-05-18]
 	Updated comms/asterisk to 11.17.1 [jnemeth 2015-05-19]
+	Updated comms/jpilot to 1.8.2 [bad 2015-05-19]
