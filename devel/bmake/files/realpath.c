@@ -1,5 +1,5 @@
-/* $Id: realpath.c,v 1.1.1.3 2015/05/19 21:36:44 joerg Exp $ */
-/* from: $NetBSD: realpath.c,v 1.1.1.3 2015/05/19 21:36:44 joerg Exp $	*/
+/* $Id: realpath.c,v 1.2 2015/05/19 22:01:19 joerg Exp $ */
+/* from: $NetBSD: realpath.c,v 1.2 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1989, 1991, 1993, 1995

@@ -1,4 +1,4 @@
-/*	$NetBSD: cond.c,v 1.7 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: cond.c,v 1.8 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: cond.c,v 1.7 2011/06/18 22:39:46 bsiegert Exp $";
+static char rcsid[] = "$NetBSD: cond.c,v 1.8 2015/05/19 22:01:19 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)cond.c	8.2 (Berkeley) 1/2/94";
 #else
-__RCSID("$NetBSD: cond.c,v 1.7 2011/06/18 22:39:46 bsiegert Exp $");
+__RCSID("$NetBSD: cond.c,v 1.8 2015/05/19 22:01:19 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -180,6 +180,15 @@ static Token	  condPushBack=TOK_NONE;	/* Single push-back token used in
 
 static unsigned int	cond_depth = 0;  	/* current .if nesting level */
 static unsigned int	cond_min_depth = 0;  	/* depth at makefile open */
+
+/*
+ * Indicate when we should be strict about lhs of comparisons.
+ * TRUE when Cond_EvalExpression is called from Cond_Eval (.if etc)
+ * FALSE when Cond_EvalExpression is called from var.c:ApplyModifiers
+ * since lhs is already expanded and we cannot tell if 
+ * it was a variable reference or not.
+ */
+static Boolean lhsStrict;
 
 static int
 istoken(const char *str, const char *tok, size_t len)
@@ -327,7 +336,7 @@ CondGetArg(char **linePtr, char **argPtr, const char *func)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoDefined(int argLen __unused, const char *arg)
+CondDoDefined(int argLen MAKE_ATTR_UNUSED, const char *arg)
 {
     char    *p1;
     Boolean result;
@@ -376,7 +385,7 @@ CondStrMatch(const void *string, const void *pattern)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoMake(int argLen __unused, const char *arg)
+CondDoMake(int argLen MAKE_ATTR_UNUSED, const char *arg)
 {
     return Lst_Find(create, arg, CondStrMatch) != NULL;
 }
@@ -395,7 +404,7 @@ CondDoMake(int argLen __unused, const char *arg)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoExists(int argLen __unused, const char *arg)
+CondDoExists(int argLen MAKE_ATTR_UNUSED, const char *arg)
 {
     Boolean result;
     char    *path;
@@ -428,7 +437,7 @@ CondDoExists(int argLen __unused, const char *arg)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoTarget(int argLen __unused, const char *arg)
+CondDoTarget(int argLen MAKE_ATTR_UNUSED, const char *arg)
 {
     GNode   *gn;
 
@@ -452,7 +461,7 @@ CondDoTarget(int argLen __unused, const char *arg)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoCommands(int argLen __unused, const char *arg)
+CondDoCommands(int argLen MAKE_ATTR_UNUSED, const char *arg)
 {
     GNode   *gn;
 
@@ -517,7 +526,7 @@ CondCvtArg(char *str, double *value)
  */
 /* coverity:[+alloc : arg-*2] */
 static char *
-CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
+CondGetString(Boolean doEval, Boolean *quoted, void **freeIt, Boolean strictLHS)
 {
     Buffer buf;
     char *cp;
@@ -601,6 +610,16 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
 	    condExpr--;			/* don't skip over next char */
 	    break;
 	default:
+	    if (strictLHS && !qt && *start != '$' &&
+		!isdigit((unsigned char) *start)) {
+		/* lhs must be quoted, a variable reference or number */
+		if (*freeIt) {
+		    free(*freeIt);
+		    *freeIt = NULL;
+		}
+		str = NULL;
+		goto cleanup;
+	    }
 	    Buf_AddByte(&buf, *condExpr);
 	    break;
 	}
@@ -648,7 +667,7 @@ compare_expression(Boolean doEval)
      * Parse the variable spec and skip over it, saving its
      * value in lhs.
      */
-    lhs = CondGetString(doEval, &lhsQuoted, &lhsFree);
+    lhs = CondGetString(doEval, &lhsQuoted, &lhsFree, lhsStrict);
     if (!lhs)
 	goto done;
 
@@ -709,7 +728,7 @@ compare_expression(Boolean doEval)
 	goto done;
     }
 
-    rhs = CondGetString(doEval, &rhsQuoted, &rhsFree);
+    rhs = CondGetString(doEval, &rhsQuoted, &rhsFree, FALSE);
     if (!rhs)
 	goto done;
 
@@ -790,7 +809,7 @@ done:
 }
 
 static int
-get_mpt_arg(char **linePtr, char **argPtr, const char *func __unused)
+get_mpt_arg(char **linePtr, char **argPtr, const char *func MAKE_ATTR_UNUSED)
 {
     /*
      * Use Var_Parse to parse the spec in parens and return
@@ -831,7 +850,7 @@ get_mpt_arg(char **linePtr, char **argPtr, const char *func __unused)
 }
 
 static Boolean
-CondDoEmpty(int arglen, const char *arg __unused)
+CondDoEmpty(int arglen, const char *arg MAKE_ATTR_UNUSED)
 {
     return arglen == 1;
 }
@@ -1135,13 +1154,15 @@ CondE(Boolean doEval)
  *-----------------------------------------------------------------------
  */
 int
-Cond_EvalExpression(const struct If *info, char *line, Boolean *value, int eprint)
+Cond_EvalExpression(const struct If *info, char *line, Boolean *value, int eprint, Boolean strictLHS)
 {
     static const struct If *dflt_info;
     const struct If *sv_if_info = if_info;
     char *sv_condExpr = condExpr;
     Token sv_condPushBack = condPushBack;
     int rval;
+
+    lhsStrict = strictLHS;
 
     while (*line == ' ' || *line == '\t')
 	line++;
@@ -1227,7 +1248,8 @@ do_Cond_EvalExpression(Boolean *value)
 int
 Cond_Eval(char *line)
 {
-    #define	    MAXIF	64	/* maximum depth of .if'ing */
+#define	    MAXIF      128	/* maximum depth of .if'ing */
+#define	    MAXIF_BUMP  32	/* how much to grow by */
     enum if_states {
 	IF_ACTIVE,		/* .if or .elif part active */
 	ELSE_ACTIVE,		/* .else part active */
@@ -1235,7 +1257,8 @@ Cond_Eval(char *line)
 	SKIP_TO_ELSE,           /* has been true, but not seen '.else' */
 	SKIP_TO_ENDIF		/* nothing else to execute */
     };
-    static enum if_states cond_state[MAXIF + 1] = { IF_ACTIVE };
+    static enum if_states *cond_state = NULL;
+    static unsigned int max_if_depth = MAXIF;
 
     const struct If *ifp;
     Boolean 	    isElif;
@@ -1244,7 +1267,10 @@ Cond_Eval(char *line)
     enum if_states  state;
 
     level = PARSE_FATAL;
-
+    if (!cond_state) {
+	cond_state = bmake_malloc(max_if_depth * sizeof(*cond_state));
+	cond_state[0] = IF_ACTIVE;
+    }
     /* skip leading character (the '.') and any whitespace */
     for (line++; *line == ' ' || *line == '\t'; line++)
 	continue;
@@ -1261,8 +1287,6 @@ Cond_Eval(char *line)
 	    }
 	    /* Return state for previous conditional */
 	    cond_depth--;
-	    if (cond_depth > MAXIF)
-		return COND_SKIP;
 	    return cond_state[cond_depth] <= ELSE_ACTIVE ? COND_PARSE : COND_SKIP;
 	}
 
@@ -1275,8 +1299,6 @@ Cond_Eval(char *line)
 		return COND_PARSE;
 	    }
 
-	    if (cond_depth > MAXIF)
-		return COND_SKIP;
 	    state = cond_state[cond_depth];
 	    switch (state) {
 	    case SEARCH_FOR_ELIF:
@@ -1325,9 +1347,6 @@ Cond_Eval(char *line)
 	    Parse_Error(level, "if-less elif");
 	    return COND_PARSE;
 	}
-	if (cond_depth > MAXIF)
-	    /* Error reported when we saw the .if ... */
-	    return COND_SKIP;
 	state = cond_state[cond_depth];
 	if (state == SKIP_TO_ENDIF || state == ELSE_ACTIVE) {
 	    Parse_Error(PARSE_WARNING, "extra elif");
@@ -1341,10 +1360,15 @@ Cond_Eval(char *line)
 	}
     } else {
 	/* Normal .if */
-	if (cond_depth >= MAXIF) {
-	    cond_depth++;
-	    Parse_Error(PARSE_FATAL, "Too many nested if's. %d max.", MAXIF);
-	    return COND_SKIP;
+	if (cond_depth + 1 >= max_if_depth) {
+	    /*
+	     * This is rare, but not impossible.
+	     * In meta mode, dirdeps.mk (only runs at level 0)
+	     * can need more than the default.
+	     */
+	    max_if_depth += MAXIF_BUMP;
+	    cond_state = bmake_realloc(cond_state, max_if_depth *
+		sizeof(*cond_state));
 	}
 	state = cond_state[cond_depth];
 	cond_depth++;
@@ -1356,7 +1380,7 @@ Cond_Eval(char *line)
     }
 
     /* And evaluate the conditional expresssion */
-    if (Cond_EvalExpression(ifp, line, &value, 1) == COND_INVALID) {
+    if (Cond_EvalExpression(ifp, line, &value, 1, TRUE) == COND_INVALID) {
 	/* Syntax error in conditional, error message already output. */
 	/* Skip everything to matching .endif */
 	cond_state[cond_depth] = SKIP_TO_ELSE;

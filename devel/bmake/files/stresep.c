@@ -1,4 +1,4 @@
-/*	$NetBSD: stresep.c,v 1.1.1.1 2011/06/18 22:18:07 bsiegert Exp $	*/
+/*	$NetBSD: stresep.c,v 1.2 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993

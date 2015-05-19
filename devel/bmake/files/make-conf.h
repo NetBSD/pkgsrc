@@ -1,4 +1,4 @@
-/*	$NetBSD: make-conf.h,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: make-conf.h,v 1.3 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -131,6 +131,12 @@
  */
 #define SYSVINCLUDE
 #define SYSVVARSUB
+
+/*
+ * GMAKEEXPORT
+ *	Recognize gmake like variable export directives [export <VAR>=<VALUE>]
+ */
+#define GMAKEEXPORT
 
 /*
  * SUNSHCMD
