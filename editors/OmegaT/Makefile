@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/11/03 12:42:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/19 12:48:36 ryoon Exp $
 #
 
-DISTNAME=	OmegaT_3.1.7_Beta_Source
+DISTNAME=	OmegaT_3.4_Beta_Source
 PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-/:S/_Source//:S/_Beta//:S/_/./g}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
@@ -61,7 +61,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${OMEGATDIR}
 	cd ${WRKSRC}/dist/docs && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${OMEGATDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/images/* \
+	cd ${WRKSRC}/dist/images && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${OMEGATDOCDIR}/images
 	${INSTALL_DATA} ${WRKSRC}/dist/lib/* \
 		${DESTDIR}${PREFIX}/${OMEGATDIR}/lib
