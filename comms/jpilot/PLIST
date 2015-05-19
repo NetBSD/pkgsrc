@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/10/10 10:58:38 bad Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/05/19 10:58:46 bad Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-merge
@@ -11,6 +11,7 @@ lib/jpilot/plugins/libkeyring.la
 lib/jpilot/plugins/libsynctime.la
 man/man1/jpilot-dial.1
 man/man1/jpilot-dump.1
+man/man1/jpilot-merge.1
 man/man1/jpilot-sync.1
 man/man1/jpilot.1
 share/applications/jpilot.desktop
@@ -50,7 +51,7 @@ share/jpilot/CalendarDB-PDat.pdb
 share/jpilot/ContactsDB-PAdd.pdb
 share/jpilot/DatebookDB.pdb
 share/jpilot/ExpenseDB.pdb
-share/jpilot/MañanaDB.pdb
+share/jpilot/MananaDB.pdb
 share/jpilot/Memo32DB.pdb
 share/jpilot/MemoDB.pdb
 share/jpilot/MemosDB-PMem.pdb
