@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: bmake2pkgsrc,v 1.1 2006/07/14 15:58:08 jlam Exp $
+# $NetBSD: bmake2pkgsrc,v 1.2 2015/05/19 21:49:23 joerg Exp $
 #
 # This script should be run after the import-bmake-sh script is run to
 # generate the bmake.1 manpage for the bootstrap script.
@@ -11,7 +11,7 @@
 #
 
 cd files
-( sed -e '/^.Nm/s/make/bmake/' -e '/^.Sh HISTORY/,$d' make.1
+( sed -e '/^\.Nm/s/make/bmake/' -e '/^\.Dt/s/MAKE/BMAKE/' -e '/^.Sh HISTORY/,$d' make.1
   echo ".Sh HISTORY"
   echo ".Nm"
   echo "is derived from NetBSD's"
