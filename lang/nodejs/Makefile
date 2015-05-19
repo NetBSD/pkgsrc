@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2015/05/14 17:09:29 bad Exp $
+# $NetBSD: Makefile,v 1.34 2015/05/19 14:31:16 fhajny Exp $
 
-DISTNAME=	node-v0.12.2
+DISTNAME=	node-v0.12.3
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
-PKGREVISION=	1
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://nodejs.org/
