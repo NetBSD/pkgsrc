@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.38 2015/05/17 11:50:43 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.39 2015/05/19 18:04:30 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -134,3 +134,9 @@ Pullup ticket #4715 - requested by sevan
 archivers/libarchive: security patch
 Pullup ticket #4667 - requested by joerg
 audio/pulseaudio: build fix
+Pullup ticket #4724 - requested by taca
+lang/php54: security update
+Pullup ticket #4725 - requested by taca
+lang/php55: security update
+Pullup ticket #4726 - requested by taca
+lang/php56: security update
