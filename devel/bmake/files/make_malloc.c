@@ -1,4 +1,4 @@
-/*	$NetBSD: make_malloc.c,v 1.1.1.2 2011/06/18 22:18:03 bsiegert Exp $	*/
+/*	$NetBSD: make_malloc.c,v 1.1.1.3 2015/05/19 21:36:44 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2009 The NetBSD Foundation, Inc.
@@ -28,7 +28,7 @@
 
 #ifdef MAKE_NATIVE
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: make_malloc.c,v 1.1.1.2 2011/06/18 22:18:03 bsiegert Exp $");
+__RCSID("$NetBSD: make_malloc.c,v 1.1.1.3 2015/05/19 21:36:44 joerg Exp $");
 #endif
 
 #include <stdio.h>
@@ -36,9 +36,11 @@ __RCSID("$NetBSD: make_malloc.c,v 1.1.1.2 2011/06/18 22:18:03 bsiegert Exp $");
 #include <string.h>
 #include <errno.h>
 
-#include "make_malloc.h"
+#include "make.h"
 
 #ifndef USE_EMALLOC
+static void enomem(void) MAKE_ATTR_DEAD;
+
 /*
  * enomem --
  *	die when out of memory.
@@ -46,8 +48,6 @@ __RCSID("$NetBSD: make_malloc.c,v 1.1.1.2 2011/06/18 22:18:03 bsiegert Exp $");
 static void
 enomem(void)
 {
-	extern char *progname;
-
 	(void)fprintf(stderr, "%s: %s.\n", progname, strerror(ENOMEM));
 	exit(2);
 }
