@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/05/19 13:33:04 mef Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/19 13:36:04 mef Exp $
 
 DISTNAME=	rainbow-delimiters-1.3.5
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jlr/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Fanael/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.emacswiki.org/emacs/RainbowDelimiters
+HOMEPAGE=	https://github.com/Fanael/rainbow-delimiters
 COMMENT=	Emacs mode for colorful parentheses highlighting
 
 USE_LANGUAGES=	# none
