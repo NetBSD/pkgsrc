@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/01/17 20:00:53 adam Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/19 13:08:49 ryoon Exp $
 
 DISTNAME=	libarchive-0.1.2
 CATEGORIES=	archivers
@@ -9,6 +9,9 @@ COMMENT=	Ruby bindings for Libarchive
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
+
+# Fix Ruby 2.2 build.
+CHECK_WRKREF_SKIP+=	lib/ruby/gems/2.2.0/doc/libarchive-0.1.2/ri/ext/*.ri
 
 .include "../../lang/ruby/gem.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
