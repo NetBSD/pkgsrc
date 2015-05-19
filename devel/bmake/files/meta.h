@@ -1,4 +1,4 @@
-/*      $NetBSD: meta.h,v 1.1.1.2 2015/05/19 21:36:44 joerg Exp $ */
+/*      $NetBSD: meta.h,v 1.2 2015/05/19 22:01:19 joerg Exp $ */
 
 /*
  * Things needed for 'meta' mode.

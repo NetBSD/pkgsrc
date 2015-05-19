@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: var.c,v 1.10 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $";
+static char rcsid[] = "$NetBSD: var.c,v 1.10 2015/05/19 22:01:19 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $");
+__RCSID("$NetBSD: var.c,v 1.10 2015/05/19 22:01:19 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -139,6 +139,13 @@ __RCSID("$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $");
 #include    "dir.h"
 #include    "job.h"
 
+extern int makelevel;
+/*
+ * This lets us tell if we have replaced the original environ
+ * (which we cannot free).
+ */
+char **savedEnv = NULL;
+
 /*
  * This is a harmless return value for Var_Parse that can be used by Var_Subst
  * to determine if there was an error in parsing -- easier than returning
@@ -169,6 +176,7 @@ static char	varNoError[] = "";
  * The four contexts are searched in the reverse order from which they are
  * listed.
  */
+GNode          *VAR_INTERNAL; /* variables from make itself */
 GNode          *VAR_GLOBAL;   /* variables from the makefile */
 GNode          *VAR_CMD;      /* variables defined on the command-line */
 
@@ -303,7 +311,6 @@ static char *VarGetPattern(GNode *, Var_Parse_State *,
 			   int, const char **, int, int *, int *,
 			   VarPattern *);
 static char *VarQuote(char *);
-static char *VarChangeCase(char *, int);
 static char *VarHash(char *);
 static char *VarModify(GNode *, Var_Parse_State *,
     const char *,
@@ -402,6 +409,10 @@ VarFind(const char *name, GNode *ctxt, int flags)
 	(ctxt != VAR_GLOBAL))
     {
 	var = Hash_FindEntry(&VAR_GLOBAL->context, name);
+	if ((var == NULL) && (ctxt != VAR_INTERNAL)) {
+	    /* VAR_INTERNAL is subordinate to VAR_GLOBAL */
+	    var = Hash_FindEntry(&VAR_INTERNAL->context, name);
+	}
     }
     if ((var == NULL) && (flags & FIND_ENV)) {
 	char *env;
@@ -423,6 +434,9 @@ VarFind(const char *name, GNode *ctxt, int flags)
 		   (ctxt != VAR_GLOBAL))
 	{
 	    var = Hash_FindEntry(&VAR_GLOBAL->context, name);
+	    if ((var == NULL) && (ctxt != VAR_INTERNAL)) {
+		var = Hash_FindEntry(&VAR_INTERNAL->context, name);
+	    }
 	    if (var == NULL) {
 		return NULL;
 	    } else {
@@ -524,11 +538,20 @@ void
 Var_Delete(const char *name, GNode *ctxt)
 {
     Hash_Entry 	  *ln;
-
-    ln = Hash_FindEntry(&ctxt->context, name);
+    char *cp;
+    
+    if (strchr(name, '$')) {
+	cp = Var_Subst(NULL, name, VAR_GLOBAL, 0);
+    } else {
+	cp = (char *)name;
+    }
+    ln = Hash_FindEntry(&ctxt->context, cp);
     if (DEBUG(VAR)) {
 	fprintf(debug_file, "%s:delete %s%s\n",
-	    ctxt->name, name, ln ? "" : " (not found)");
+	    ctxt->name, cp, ln ? "" : " (not found)");
+    }
+    if (cp != name) {
+	free(cp);
     }
     if (ln != NULL) {
 	Var 	  *v;
@@ -643,6 +666,15 @@ Var_ExportVars(void)
     char *val;
     int n;
 
+    /*
+     * Several make's support this sort of mechanism for tracking
+     * recursion - but each uses a different name.
+     * We allow the makefiles to update MAKELEVEL and ensure
+     * children see a correctly incremented value.
+     */
+    snprintf(tmp, sizeof(tmp), "%d", makelevel + 1);
+    setenv(MAKE_LEVEL_ENV, tmp, 1);
+
     if (VAR_EXPORTED_NONE == var_exportedVars)
 	return;
 
@@ -742,6 +774,8 @@ Var_Export(char *str, int isExport)
 /*
  * This is called when .unexport[-env] is seen.
  */
+extern char **environ;
+
 void
 Var_UnExport(char *str)
 {
@@ -760,28 +794,26 @@ Var_UnExport(char *str)
     str += 8;
     unexport_env = (strncmp(str, "-env", 4) == 0);
     if (unexport_env) {
-	extern char **environ;
-	static char **savenv;
 	char **newenv;
 
-	cp = getenv(MAKE_LEVEL);	/* we should preserve this */
-	if (environ == savenv) {
+	cp = getenv(MAKE_LEVEL_ENV);	/* we should preserve this */
+	if (environ == savedEnv) {
 	    /* we have been here before! */
 	    newenv = bmake_realloc(environ, 2 * sizeof(char *));
 	} else {
-	    if (savenv) {
-		free(savenv);
-		savenv = NULL;
+	    if (savedEnv) {
+		free(savedEnv);
+		savedEnv = NULL;
 	    }
 	    newenv = bmake_malloc(2 * sizeof(char *));
 	}
 	if (!newenv)
 	    return;
 	/* Note: we cannot safely free() the original environ. */
-	environ = savenv = newenv;
+	environ = savedEnv = newenv;
 	newenv[0] = NULL;
 	newenv[1] = NULL;
-	setenv(MAKE_LEVEL, cp, 1);
+	setenv(MAKE_LEVEL_ENV, cp, 1);
     } else {
 	for (; *str != '\n' && isspace((unsigned char) *str); str++)
 	    continue;
@@ -905,6 +937,14 @@ Var_Set(const char *name, const char *val, GNode *ctxt, int flags)
     }
     v = VarFind(name, ctxt, 0);
     if (v == NULL) {
+	if (ctxt == VAR_CMD && (flags & VAR_NO_EXPORT) == 0) {
+	    /*
+	     * This var would normally prevent the same name being added
+	     * to VAR_GLOBAL, so delete it from there if needed.
+	     * Otherwise -V name may show the wrong value.
+	     */
+	    Var_Delete(name, VAR_GLOBAL);
+	}
 	VarAdd(name, val, ctxt);
     } else {
 	Buf_Empty(&v->val);
@@ -939,22 +979,6 @@ Var_Set(const char *name, const char *val, GNode *ctxt, int flags)
 
 	Var_Append(MAKEOVERRIDES, name, VAR_GLOBAL);
     }
-    /*
-     * Another special case.
-     * Several make's support this sort of mechanism for tracking
-     * recursion - but each uses a different name.
-     * We allow the makefiles to update .MAKE.LEVEL and ensure
-     * children see a correctly incremented value.
-     */
-    if (ctxt == VAR_GLOBAL && strcmp(MAKE_LEVEL, name) == 0) {
-	char tmp[64];
-	int level;
-	
-	level = atoi(val);
-	snprintf(tmp, sizeof(tmp), "%u", level + 1);
-	setenv(MAKE_LEVEL, tmp, 1);
-    }
-	
 	
  out:
     if (expanded_name != NULL)
@@ -1133,7 +1157,7 @@ Var_Value(const char *name, GNode *ctxt, char **frp)
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarHead(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarHead(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	char *word, Boolean addSpace, Buffer *buf,
 	void *dummy)
 {
@@ -1181,7 +1205,7 @@ VarHead(GNode *ctx __unused, Var_Parse_State *vpstate,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarTail(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarTail(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	char *word, Boolean addSpace, Buffer *buf,
 	void *dummy)
 {
@@ -1223,7 +1247,7 @@ VarTail(GNode *ctx __unused, Var_Parse_State *vpstate,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarSuffix(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarSuffix(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	  char *word, Boolean addSpace, Buffer *buf,
 	  void *dummy)
 {
@@ -1264,7 +1288,7 @@ VarSuffix(GNode *ctx __unused, Var_Parse_State *vpstate,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarRoot(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarRoot(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	char *word, Boolean addSpace, Buffer *buf,
 	void *dummy)
 {
@@ -1308,7 +1332,7 @@ VarRoot(GNode *ctx __unused, Var_Parse_State *vpstate,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarMatch(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarMatch(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	 char *word, Boolean addSpace, Buffer *buf,
 	 void *pattern)
 {
@@ -1399,7 +1423,7 @@ VarSYSVMatch(GNode *ctx, Var_Parse_State *vpstate,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarNoMatch(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarNoMatch(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	   char *word, Boolean addSpace, Buffer *buf,
 	   void *pattern)
 {
@@ -1436,7 +1460,7 @@ VarNoMatch(GNode *ctx __unused, Var_Parse_State *vpstate,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarSubstitute(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarSubstitute(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	      char *word, Boolean addSpace, Buffer *buf,
 	      void *patternp)
 {
@@ -1632,7 +1656,8 @@ VarREError(int errnum, regex_t *pat, const char *str)
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarRESubstitute(GNode *ctx __unused, Var_Parse_State *vpstate __unused,
+VarRESubstitute(GNode *ctx MAKE_ATTR_UNUSED,
+		Var_Parse_State *vpstate MAKE_ATTR_UNUSED,
 		char *word, Boolean addSpace, Buffer *buf,
 		void *patternp)
 {
@@ -1772,7 +1797,8 @@ VarRESubstitute(GNode *ctx __unused, Var_Parse_State *vpstate __unused,
  *-----------------------------------------------------------------------
  */
 static Boolean
-VarLoopExpand(GNode *ctx __unused, Var_Parse_State *vpstate __unused,
+VarLoopExpand(GNode *ctx MAKE_ATTR_UNUSED,
+	      Var_Parse_State *vpstate MAKE_ATTR_UNUSED,
 	      char *word, Boolean addSpace, Buffer *buf,
 	      void *loopp)
 {
@@ -1815,7 +1841,7 @@ VarLoopExpand(GNode *ctx __unused, Var_Parse_State *vpstate __unused,
  *-----------------------------------------------------------------------
  */
 static char *
-VarSelectWords(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarSelectWords(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	       const char *str, VarSelectWords_t *seldata)
 {
     Buffer  	  buf;		    /* Buffer for the new string */
@@ -1890,9 +1916,9 @@ VarSelectWords(GNode *ctx __unused, Var_Parse_State *vpstate,
  *	if successful.
  */
 static Boolean
-VarRealpath(GNode *ctx __unused, Var_Parse_State *vpstate,
+VarRealpath(GNode *ctx MAKE_ATTR_UNUSED, Var_Parse_State *vpstate,
 	    char *word, Boolean addSpace, Buffer *buf,
-	    void *patternp __unused)
+	    void *patternp MAKE_ATTR_UNUSED)
 {
 	struct stat st;
 	char rbuf[MAXPATHLEN];
@@ -2115,7 +2141,7 @@ VarUniq(const char *str)
  *-----------------------------------------------------------------------
  */
 static char *
-VarGetPattern(GNode *ctxt, Var_Parse_State *vpstate __unused,
+VarGetPattern(GNode *ctxt, Var_Parse_State *vpstate MAKE_ATTR_UNUSED,
 	      int errnum, const char **tstr, int delim, int *flags,
 	      int *length, VarPattern *pattern)
 {
@@ -2288,9 +2314,7 @@ VarHash(char *str)
     size_t         len, len2;
     unsigned char  *ustr = (unsigned char *)str;
     uint32_t       h, k, c1, c2;
-    int            done;
 
-    done = 1;
     h  = 0x971e137bU;
     c1 = 0x95543787U;
     c2 = 0x2ad7eb25U;
@@ -2320,7 +2344,7 @@ VarHash(char *str)
 	h = (h << 13) ^ (h >> 19);
 	h = h * 5 + 0x52dce729U;
 	h ^= k;
-   } while (!done);
+   }
    h ^= len2;
    h *= 0x85ebca6b;
    h ^= h >> 13;
@@ -2333,37 +2357,6 @@ VarHash(char *str)
        h >>= 4;
    }
 
-   return Buf_Destroy(&buf, FALSE);
-}
-
-/*-
- *-----------------------------------------------------------------------
- * VarChangeCase --
- *      Change the string to all uppercase or all lowercase
- *
- * Input:
- *	str		String to modify
- *	upper		TRUE -> uppercase, else lowercase
- *
- * Results:
- *      The string with case changed
- *
- * Side Effects:
- *      None.
- *
- *-----------------------------------------------------------------------
- */
-static char *
-VarChangeCase(char *str, int upper)
-{
-   Buffer         buf;
-   int            (*modProc)(int);
-
-   modProc = (upper ? toupper : tolower);
-   Buf_Init(&buf, 0);
-   for (; *str ; str++) {
-       Buf_AddByte(&buf, modProc(*str));
-   }
    return Buf_Destroy(&buf, FALSE);
 }
 
@@ -2553,7 +2546,8 @@ ApplyModifiers(char *nstr, const char *tstr,
 	}
     apply_mods:
 	if (DEBUG(VAR)) {
-	    fprintf(debug_file, "Applying :%c to \"%s\"\n", *tstr, nstr);
+	    fprintf(debug_file, "Applying[%s] :%c to \"%s\"\n", v->name,
+		*tstr, nstr);
 	}
 	newStr = var_Error;
 	switch ((modifier = *tstr)) {
@@ -2642,7 +2636,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 			break;
 		    }
 		    free(UNCONST(pattern.rhs));
-		    newStr = var_Error;
+		    newStr = varNoError;
 		    break;
 		}
 		goto default_case; /* "::<unrecognised>" */
@@ -3042,8 +3036,16 @@ ApplyModifiers(char *nstr, const char *tstr,
 					       VarRealpath, NULL);
 			    cp = tstr + 2;
 			    termc = *cp;
-			} else if (tstr[1] == 'u' || tstr[1] == 'l') {
-			    newStr = VarChangeCase(nstr, (tstr[1] == 'u'));
+			} else if (tstr[1] == 'u') {
+			    char *dp = bmake_strdup(nstr);
+			    for (newStr = dp; *dp; dp++)
+				*dp = toupper((unsigned char)*dp);
+			    cp = tstr + 2;
+			    termc = *cp;
+			} else if (tstr[1] == 'l') {
+			    char *dp = bmake_strdup(nstr);
+			    for (newStr = dp; *dp; dp++)
+				*dp = tolower((unsigned char)*dp);
 			    cp = tstr + 2;
 			    termc = *cp;
 			} else if (tstr[1] == 'W' || tstr[1] == 'w') {
@@ -3153,8 +3155,8 @@ ApplyModifiers(char *nstr, const char *tstr,
 		    free(cp2);
 		}
 		if (DEBUG(VAR))
-		    fprintf(debug_file, "Pattern for [%s] is [%s]\n", nstr,
-			pattern);
+		    fprintf(debug_file, "Pattern[%s] for [%s] is [%s]\n",
+			v->name, nstr, pattern);
 		if (*tstr == 'M') {
 		    newStr = VarModify(ctxt, &parsestate, nstr, VarMatch,
 				       pattern);
@@ -3258,7 +3260,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 
 		termc = *--cp;
 		delim = '\0';
-		if (Cond_EvalExpression(NULL, v->name, &value, 0)
+		if (Cond_EvalExpression(NULL, v->name, &value, 0, FALSE)
 		    == COND_INVALID) {
 		    Error("Bad conditional expression `%s' in %s?%s:%s",
 			  v->name, v->name, pattern.lhs, pattern.rhs);
@@ -3509,7 +3511,8 @@ ApplyModifiers(char *nstr, const char *tstr,
 	    }
 	}
 	if (DEBUG(VAR)) {
-	    fprintf(debug_file, "Result of :%c is \"%s\"\n", modifier, newStr);
+	    fprintf(debug_file, "Result[%s] of :%c is \"%s\"\n",
+		v->name, modifier, newStr);
 	}
 
 	if (newStr != nstr) {
@@ -3596,14 +3599,13 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 				 * expanding it in a non-local context. This
 				 * is done to support dynamic sources. The
 				 * result is just the invocation, unaltered */
-    Var_Parse_State parsestate; /* Flags passed to helper functions */
+    const char     *extramodifiers; /* extra modifiers to apply first */
     char	  name[2];
 
     *freePtr = NULL;
+    extramodifiers = NULL;
     dynamic = FALSE;
     start = str;
-    parsestate.oneBigWord = FALSE;
-    parsestate.varSpace = ' ';	/* word separator */
 
     startc = str[1];
     if (startc != PROPEN && startc != BROPEN) {
@@ -3657,6 +3659,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 	}
     } else {
 	Buffer buf;	/* Holds the variable name */
+	int depth = 1;
 
 	endc = startc == PROPEN ? PRCLOSE : BRCLOSE;
 	Buf_Init(&buf, 0);
@@ -3664,10 +3667,21 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 	/*
 	 * Skip to the end character or a colon, whichever comes first.
 	 */
-	for (tstr = str + 2;
-	     *tstr != '\0' && *tstr != endc && *tstr != ':';
-	     tstr++)
+	for (tstr = str + 2; *tstr != '\0'; tstr++)
 	{
+	    /*
+	     * Track depth so we can spot parse errors.
+	     */
+	    if (*tstr == startc) {
+		depth++;
+	    }
+	    if (*tstr == endc) {
+		if (--depth == 0)
+		    break;
+	    }
+	    if (depth == 1 && *tstr == ':') {
+		break;
+	    }
 	    /*
 	     * A variable inside a variable, expand
 	     */
@@ -3687,7 +3701,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 	}
 	if (*tstr == ':') {
 	    haveModifier = TRUE;
-	} else if (*tstr != '\0') {
+	} else if (*tstr == endc) {
 	    haveModifier = FALSE;
 	} else {
 	    /*
@@ -3719,7 +3733,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 	 */
 	if ((v == NULL) && (ctxt != VAR_CMD) && (ctxt != VAR_GLOBAL) &&
 		(vlen == 2) && (str[1] == 'F' || str[1] == 'D') &&
-		strchr("@%*!<>", str[0]) != NULL) {
+		strchr("@%?*!<>", str[0]) != NULL) {
 	    /*
 	     * Well, it's local -- go look for it.
 	     */
@@ -3728,29 +3742,12 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 	    v = VarFind(name, ctxt, 0);
 
 	    if (v != NULL) {
-		/*
-		 * No need for nested expansion or anything, as we're
-		 * the only one who sets these things and we sure don't
-		 * but nested invocations in them...
-		 */
-		nstr = Buf_GetAll(&v->val, NULL);
-
 		if (str[1] == 'D') {
-		    nstr = VarModify(ctxt, &parsestate, nstr, VarHead,
-				    NULL);
-		} else {
-		    nstr = VarModify(ctxt, &parsestate, nstr, VarTail,
-				    NULL);
+			extramodifiers = "H:";
 		}
-		/*
-		 * Resulting string is dynamically allocated, so
-		 * tell caller to free it.
-		 */
-		*freePtr = nstr;
-		*lengthPtr = tstr-start+1;
-		Buf_Destroy(&buf, TRUE);
-		VarFreeEnv(v, TRUE);
-		return nstr;
+		else { /* F */
+			extramodifiers = "T:";
+		}
 	    }
 	}
 
@@ -3845,16 +3842,29 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 
     v->flags &= ~VAR_IN_USE;
 
-    if ((nstr != NULL) && haveModifier) {
+    if ((nstr != NULL) && (haveModifier || extramodifiers != NULL)) {
+	void *extraFree;
 	int used;
-	/*
-	 * Skip initial colon.
-	 */
-	tstr++;
 
-	nstr = ApplyModifiers(nstr, tstr, startc, endc,
-			      v, ctxt, errnum, &used, freePtr);
-	tstr += used;
+	extraFree = NULL;
+	if (extramodifiers != NULL) {
+		nstr = ApplyModifiers(nstr, extramodifiers, '(', ')',
+				      v, ctxt, errnum, &used, &extraFree);
+	}
+
+	if (haveModifier) {
+		/* Skip initial colon. */
+		tstr++;
+
+		nstr = ApplyModifiers(nstr, tstr, startc, endc,
+				      v, ctxt, errnum, &used, freePtr);
+		tstr += used;
+		if (extraFree) {
+			free(extraFree);
+		}
+	} else {
+		*freePtr = extraFree;
+	}
     }
     if (*tstr) {
 	*lengthPtr = tstr - start + 1;
@@ -4037,7 +4047,7 @@ Var_Subst(const char *var, const char *str, GNode *ctxt, Boolean undefErr)
 		 */
 		if (oldVars) {
 		    str += length;
-		} else if (undefErr) {
+		} else if (undefErr || val == var_Error) {
 		    /*
 		     * If variable is undefined, complain and skip the
 		     * variable. The complaint will stop us from doing anything
@@ -4075,7 +4085,7 @@ Var_Subst(const char *var, const char *str, GNode *ctxt, Boolean undefErr)
 	}
     }
 
-    return Buf_Destroy(&buf, FALSE);
+    return Buf_DestroyCompact(&buf);
 }
 
 /*-
@@ -4142,6 +4152,7 @@ Var_GetHead(char *file)
 void
 Var_Init(void)
 {
+    VAR_INTERNAL = Targ_NewGN("Internal");
     VAR_GLOBAL = Targ_NewGN("Global");
     VAR_CMD = Targ_NewGN("Command");
 

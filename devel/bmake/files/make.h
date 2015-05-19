@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.7 2014/03/14 21:59:34 ryoon Exp $	*/
+/*	$NetBSD: make.h,v 1.8 2015/05/19 22:01:19 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -98,33 +98,33 @@
 #include <unistd.h>
 #include <sys/cdefs.h>
 
-/*
- * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
- * in limits.h. PATH_MAX is defined alternatively under non-OpenServer OS,
- * and it is used in dirname.c of bmake.
- */
-#if !defined(MAXPATHLEN)
-#if defined(_SCO_DS)
-#define MAXPATHLEN	1024
-#endif
-#endif
-
-#if !defined(__GNUC_PREREQ__)
 #if defined(__GNUC__)
-#define	__GNUC_PREREQ__(x, y)						\
+#define	MAKE_GNUC_PREREQ(x, y)						\
 	((__GNUC__ == (x) && __GNUC_MINOR__ >= (y)) ||			\
 	 (__GNUC__ > (x)))
 #else /* defined(__GNUC__) */
-#define	__GNUC_PREREQ__(x, y)	0
+#define	MAKE_GNUC_PREREQ(x, y)	0
 #endif /* defined(__GNUC__) */
-#endif /* !defined(__GNUC_PREREQ__) */
 
-#if !defined(__unused)
-#if __GNUC_PREREQ__(2, 7)
-#define __unused        __attribute__((__unused__))
+#if MAKE_GNUC_PREREQ(2, 7)
+#define	MAKE_ATTR_UNUSED	__attribute__((__unused__))
 #else
-#define __unused        /* delete */
+#define	MAKE_ATTR_UNUSED	/* delete */
 #endif
+
+#if MAKE_GNUC_PREREQ(2, 5)
+#define	MAKE_ATTR_DEAD		__attribute__((__noreturn__))
+#elif defined(__GNUC__)
+#define	MAKE_ATTR_DEAD		__volatile
+#else
+#define	MAKE_ATTR_DEAD		/* delete */
+#endif
+
+#if MAKE_GNUC_PREREQ(2, 7)
+#define MAKE_ATTR_PRINTFLIKE(fmtarg, firstvararg)	\
+	    __attribute__((__format__ (__printf__, fmtarg, firstvararg)))
+#else
+#define MAKE_ATTR_PRINTFLIKE(fmtarg, firstvararg)	/* delete */
 #endif
 
 #include "sprite.h"
@@ -289,6 +289,7 @@ typedef struct GNode {
 #define OP_NOMETA	0x00080000  /* .NOMETA do not create a .meta file */
 #define OP_META		0x00100000  /* .META we _do_ want a .meta file */
 #define OP_NOMETA_CMP	0x00200000  /* Do not compare commands in .meta file */
+#define OP_SUBMAKE	0x00400000  /* Possibly a submake node */
 /* Attributes applied by PMake */
 #define OP_TRANSFORM	0x80000000  /* The node is a transformation rule */
 #define OP_MEMBER 	0x40000000  /* Target is a member of an archive */
@@ -404,6 +405,10 @@ extern Boolean	varNoExportEnv;	/* TRUE if we should not export variables
 
 extern GNode    *DEFAULT;    	/* .DEFAULT rule */
 
+extern GNode	*VAR_INTERNAL;	/* Variables defined internally by make
+				 * which should not override those set by
+				 * makefiles.
+				 */
 extern GNode    *VAR_GLOBAL;   	/* Variables defined in a global context, e.g
 				 * in the Makefile itself */
 extern GNode    *VAR_CMD;    	/* Variables defined on the command line */
@@ -424,6 +429,7 @@ extern Lst	defIncPath;	/* The default include path. */
 extern char	curdir[];	/* Startup directory */
 extern char	*progname;	/* The program name */
 extern char	*makeDependfile; /* .depend */
+extern char	**savedEnv;	 /* if we replaced environ this will be non-NULL */
 
 /*
  * We cannot vfork() in a child of vfork().
@@ -441,6 +447,9 @@ extern pid_t	myPid;
 #define MAKEFILE_PREFERENCE ".MAKE.MAKEFILE_PREFERENCE"
 #define MAKE_DEPENDFILE	".MAKE.DEPENDFILE" /* .depend */
 #define MAKE_MODE	".MAKE.MODE"
+#ifndef MAKE_LEVEL_ENV
+# define MAKE_LEVEL_ENV	"MAKELEVEL"
+#endif
 
 /*
  * debug control:
@@ -508,6 +517,10 @@ int str2Lst_Append(Lst, char *, const char *);
 #endif
 #ifndef MAX
 #define MAX(a, b) ((a > b) ? a : b)
+#endif
+
+#ifndef MAXPATHLEN
+#define MAXPATHLEN BMAKE_PATH_MAX
 #endif
 
 #endif /* _MAKE_H_ */

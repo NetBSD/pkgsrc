@@ -1,4 +1,4 @@
-# $Id: modword.mk,v 1.1.1.1 2015/05/19 21:36:45 joerg Exp $
+# $Id: modword.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
 #
 # Test behaviour of new :[] modifier
 
