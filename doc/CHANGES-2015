@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2276 2015/05/20 02:19:35 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2277 2015/05/20 04:11:17 kim Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Dancer2 to 0.160001 [wen 2015-05-19]
 	Updated www/h2o to 1.2.0 [wen 2015-05-20]
 	Updated devel/p5-CPAN-Perl-Releases to 2.16 [wen 2015-05-20]
+	Updated www/fcgi to 2.4.0nb2 [kim 2015-05-20]
