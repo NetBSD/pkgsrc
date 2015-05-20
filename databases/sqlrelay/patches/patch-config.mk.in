@@ -1,0 +1,13 @@
+$NetBSD: patch-config.mk.in,v 1.1 2015/05/20 13:26:45 ryoon Exp $
+
+--- config.mk.in.orig	2015-04-18 05:29:10.000000000 +0000
++++ config.mk.in
+@@ -778,7 +778,7 @@ MODULERENAME = $(top_builddir)/moduleren
+ 
+ 
+ # build directories
+-INSTALLSUBDIRS = install-src install-bin install-etc install-init install-man install-doc install-pkgconfig
++INSTALLSUBDIRS = install-src install-bin install-etc install-man install-doc install-pkgconfig
+ UNINSTALLSUBDIRS = uninstall-src uninstall-bin uninstall-etc uninstall-init uninstall-man uninstall-doc uninstall-pkgconfig
+ 
+ ifeq ($(SQLRELAY_ENABLE_SHARED),yes)

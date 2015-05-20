@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/22 12:50:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/20 13:26:45 ryoon Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-mysql/}
 COMMENT=		MySQL support for SQL Relay
@@ -8,8 +8,19 @@ COMMENT=		MySQL support for SQL Relay
 LICENSE=		gnu-gpl-v2
 
 CONFIGURE_ARGS+=	--with-mysql-prefix=${BUILDLINK_PREFIX.mysql-client}
+CONFIGURE_ARGS+=	--disable-postgresql
+CONFIGURE_ARGS+=	--disable-sqlite
+CONFIGURE_ARGS+=	--disable-freetds
+CONFIGURE_ARGS+=	--disable-odbc
 
-BUILD_DIRS=		src/connections/mysql
+BUILD_DIRS=		src/connections
+
+INSTALLATION_DIRS+=	libexec/sqlrelay
+
+do-install:
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${BUILD_DIRS}/sqlrconnection_mysql.la \
+		${DESTDIR}${PREFIX}/libexec/sqlrelay
 
 .include "../../databases/sqlrelay/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
