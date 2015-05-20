@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2015/03/16 09:09:19 taca Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2015/05/20 20:42:57 tron Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
-PKGREVISION=		3
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 
 CONFLICTS=		ap-php-[0-9]*
