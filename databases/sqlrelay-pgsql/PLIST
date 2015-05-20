@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/22 12:50:48 fhajny Exp $
-libexec/sqlrelay/sqlrconnection_postgresql.so
+@comment $NetBSD: PLIST,v 1.2 2015/05/20 13:26:45 ryoon Exp $
+libexec/sqlrelay/sqlrconnection_postgresql.la

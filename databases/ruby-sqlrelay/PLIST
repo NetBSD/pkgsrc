@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/22 12:50:47 fhajny Exp $
-${RUBY_VENDORLIB}/DBD/SQLRelay/SQLRelay.rb
-${RUBY_VENDORLIB}/dbd/SQLRelay.rb
+@comment $NetBSD: PLIST,v 1.2 2015/05/20 13:26:45 ryoon Exp $
 ${RUBY_VENDORARCHLIB}/sqlrelay.${RUBY_DLEXT}
