@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 12:50:11 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/05/20 02:06:29 wen Exp $
 
-SHA1 (h2o-0.9.0.tar.gz) = 37b84750900cdb56c3be574477d6f3327d92a4d7
-RMD160 (h2o-0.9.0.tar.gz) = 893012a58ca3ab9869bbe1923cedbfee3a284528
-Size (h2o-0.9.0.tar.gz) = 741011 bytes
-SHA1 (patch-lib_socketpool.c) = ea91803e8f4bdb03330221734c36bbede9b5e618
+SHA1 (h2o-1.2.0.tar.gz) = e3db95a5355227a286b4e54f7b316bc250d7f917
+RMD160 (h2o-1.2.0.tar.gz) = c6224294a98cadde0ec81a47f5065082a556c5eb
+Size (h2o-1.2.0.tar.gz) = 4155709 bytes

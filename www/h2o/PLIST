@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/30 12:50:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/20 02:06:29 wen Exp $
 bin/h2o
+share/h2o/fetch-ocsp-response
+share/h2o/start_server
