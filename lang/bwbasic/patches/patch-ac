@@ -1,17 +1,20 @@
-$NetBSD: patch-ac,v 1.3 2012/01/15 15:29:31 ryoon Exp $
+$NetBSD: patch-ac,v 1.4 2015/05/20 07:27:21 wen Exp $
 
---- bwbasic.doc.orig	2006-10-24 05:40:18.000000000 +0000
+--- bwbasic.doc.orig	2015-05-20 14:17:40.000000000 +0000
 +++ bwbasic.doc
-@@ -1,33 +1,10 @@
+@@ -1,36 +1,10 @@
 -
 -
 -
 -
--               Bywater BASIC Interpreter/Shell, version 2.10
+-               Bywater BASIC Interpreter, version 3.00
 -               ---------------------------------------------
 -
 -                    Copyright (c) 1993, Ted A. Campbell
 -                  for bwBASIC version 2.10, 11 October 1993
+-
+-                  Copyright (c) 2014-2015, Howatd Wulf, AF5NE
+-                  for bwBASIC version 3.00, 2015-04-05
 -
 -
 -CONTENTS:
@@ -43,16 +46,16 @@ $NetBSD: patch-ac,v 1.3 2012/01/15 15:29:31 ryoon Exp $
  
     The Bywater BASIC Interpreter (bwBASIC) implements a large
     superset of the ANSI Standard for Minimal BASIC (X3.60-1978)
-@@ -60,7 +37,7 @@ CONTENTS:
-    offer further shell-processing capabilities.
+@@ -53,7 +27,7 @@ CONTENTS:
+    into distinct lines as they are loaded.
  
  
 -2. TERMS OF USE:
-+.Sh TERMS OF USE
++.Sh TERMS OF USE:
  
     This version of Bywater BASIC is released under the terms of the 
     GNU General Public License (GPL), which is distributed with this 
-@@ -71,7 +48,7 @@ CONTENTS:
+@@ -64,7 +38,7 @@ CONTENTS:
     for information on which you should contact the author.
  
  
@@ -60,27 +63,27 @@ $NetBSD: patch-ac,v 1.3 2012/01/15 15:29:31 ryoon Exp $
 +.Sh QUICK REFERENCE LIST OF COMMANDS AND FUNCTIONS
  
     Be aware that many of these commands and functions will not be
-    available unless you have set certain flags in the header files
-@@ -199,7 +176,7 @@ CONTENTS:
-    WRITE [# device-number,] element [, element ]....
+    available unless you have enabled a particular dialect using
+@@ -380,7 +354,7 @@ CONTENTS:
+      WRITE [# device-number,] element [, .... ]
     
  
 -4. GENERAL NOTES ON USAGE:
-+.Sh GENERAL NOTES ON USAGE
++.Sh GENERAL NOTES ON USAGE:
  
     4.a. Interactive Environment
  
-@@ -305,7 +282,7 @@ CONTENTS:
-    aliases to allow Microsoft-style programs to be run.
- 
- 
+@@ -790,7 +764,7 @@ CONTENTS:
+    END FUNCTION
+    
+    
 -5. EXPANDED REFERENCE FOR COMMANDS AND FUNCTIONS
 +.Sh EXPANDED REFERENCE FOR COMMANDS AND FUNCTIONS
+    
+    bwBASIC provides a simple "HELP" command to assist you in
+    finding the command or function you are looking for.
+@@ -6965,7 +6939,7 @@ DESCRIPTION: For file X, sets the line w
  
-    The "Dependencies" listed in the folowing reference materials
-    refers to flags that must be set to TRUE in bwbasic.h for the
-@@ -1636,7 +1613,7 @@ CONTENTS:
-    ------------------------------------------
  
  
 -6. PREDEFINED VARIABLES
@@ -88,16 +91,16 @@ $NetBSD: patch-ac,v 1.3 2012/01/15 15:29:31 ryoon Exp $
  
     BWB.EDITOR$
     BWB.FILES$
-@@ -1669,7 +1646,7 @@ CONTENTS:
-    (specifically CLS, LOCATE, and INKEY$) may be available. 
- 
- 
+@@ -7003,7 +6977,7 @@ DESCRIPTION: For file X, sets the line w
+    return the current OPTION TERMINAL setting.
+    
+    
 -7. UNIMPLEMENTED COMMANDS AND FUNCTIONS, and AGENDA FOR DEVELOPMENT
 +.Sh UNIMPLEMENTED COMMANDS AND FUNCTIONS, and AGENDA FOR DEVELOPMENT
  
     There are some items not implemented that have been so long
     a part of standard BASICs that their absence will seem surprising.
-@@ -1853,7 +1830,7 @@ CONTENTS:
+@@ -7172,7 +7146,7 @@ DESCRIPTION: For file X, sets the line w
     ZONEWIDTH
  
  
@@ -106,13 +109,12 @@ $NetBSD: patch-ac,v 1.3 2012/01/15 15:29:31 ryoon Exp $
  
     This program was originally begun in 1982 by my grandmother, Mrs.
     Verda Spell of Beaumont, TX.  She was writing the program using
-@@ -1873,9 +1850,3 @@ CONTENTS:
-    bag and eventually managed to have it all copied over to a PC
-    diskette. I have revised it slightly prior to this release. You
+@@ -7194,7 +7168,7 @@ DESCRIPTION: For file X, sets the line w
     should know, though, that I myself am an historian, not a programmer.
--
--
+ 
+ 
 -9. COMMUNICATIONS:
--
--   email:  tcamp@delphi.com
--
++.Sh COMMUNICATIONS:
+ 
+    email:  tcamp@delphi.com
+ 
