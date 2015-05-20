@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2278 2015/05/20 07:29:13 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2279 2015/05/20 13:30:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4342,3 +4342,12 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Perl-Releases to 2.16 [wen 2015-05-20]
 	Updated www/fcgi to 2.4.0nb2 [kim 2015-05-20]
 	Updated lang/bwbasic to 3.00 [wen 2015-05-20]
+	Updated databases/sqlrelay to 0.59 [ryoon 2015-05-20]
+	Updated databases/sqlrelay-freetds to 0.59 [ryoon 2015-05-20]
+	Updated databases/sqlrelay-mysql to 0.59 [ryoon 2015-05-20]
+	Updated databases/sqlrelay-odbc to 0.59 [ryoon 2015-05-20]
+	Updated databases/sqlrelay-pgsql to 0.59 [ryoon 2015-05-20]
+	Updated databases/sqlrelay-sqlite to 0.59 [ryoon 2015-05-20]
+	Updated databases/ruby-sqlrelay to 0.59 [ryoon 2015-05-20]
+	Updated databases/py-sqlrelay to 0.59 [ryoon 2015-05-20]
+	Updated databases/p5-sqlrelay to 0.59 [ryoon 2015-05-20]
