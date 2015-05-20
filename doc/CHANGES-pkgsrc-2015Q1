@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.39 2015/05/19 18:04:30 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.40 2015/05/20 20:44:53 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -140,3 +140,7 @@ Pullup ticket #4725 - requested by taca
 lang/php55: security update
 Pullup ticket #4726 - requested by taca
 lang/php56: security update
+Pullup ticket #4728 - requested by khorben
+emulators/qemu: security patch
+Pullup ticket #4730 - requested by taca
+databases/php-ldap: packaging fix
