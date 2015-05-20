@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/09/23 12:06:49 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2015/05/20 23:08:37 khorben Exp $
 
-SHA1 (libSystem-0.2.0.tar.gz) = c264070ff4034fbdc97aae3f7e694f84e7898365
-RMD160 (libSystem-0.2.0.tar.gz) = 8159d1baee58cff3a4adf5f514a1d5c2f45aedbe
-Size (libSystem-0.2.0.tar.gz) = 60538 bytes
-SHA1 (patch-data_pkgconfig.sh) = 7c40652087c604cff593a320e97259c453633c74
-SHA1 (patch-src_Makefile) = 564623fdf246a4dc3a33bb265b6d6069bca58e29
-SHA1 (patch-tests_tests.sh) = 189b91d02ae0a83ff8e881a93b70984045456948
+SHA1 (libSystem-0.2.1.tar.gz) = a99a1a5aa5aa0c5516725263cb937a30186ee5db
+RMD160 (libSystem-0.2.1.tar.gz) = 635dfe01c777238dd60aa771bab75ef05f4d6795
+Size (libSystem-0.2.1.tar.gz) = 63274 bytes
+SHA1 (patch-src_Makefile) = 98c22cc28de9bff4517c4880711a70741f5b18f2
+SHA1 (patch-tests_tests.sh) = b28b5557303cec42c1b24a6c5328fbca9b763366
