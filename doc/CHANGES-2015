@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2279 2015/05/20 13:30:39 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2280 2015/05/20 21:16:50 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4351,3 +4351,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-sqlrelay to 0.59 [ryoon 2015-05-20]
 	Updated databases/py-sqlrelay to 0.59 [ryoon 2015-05-20]
 	Updated databases/p5-sqlrelay to 0.59 [ryoon 2015-05-20]
+	Updated security/clamav to 0.98.7 [bouyer 2015-05-20]
+	Updated security/clamav-doc to 0.98.7 [bouyer 2015-05-20]
