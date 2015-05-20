@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2012/10/02 20:11:36 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/05/20 07:28:05 wen Exp $
 
-DISTNAME=	bwbasic-2.50
+DISTNAME=	bwbasic-3.00
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bwbasic/}
 EXTRACT_SUFX=	.zip
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}
 GNU_CONFIGURE=	yes
 
 SHARE_DIR=	${PREFIX}/share/bwbasic
+
+CFLAGS+=		-DHAVE_ISNAN=1
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${SHARE_DIR}
 
