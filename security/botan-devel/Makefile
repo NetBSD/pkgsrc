@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/05/14 18:39:24 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2015/05/20 21:57:10 joerg Exp $
 
 DISTNAME=	Botan-1.11.16
 PKGNAME=	${DISTNAME:tl}
@@ -19,6 +19,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	./configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-zlib --with-boost --destdir=${DESTDIR}${PREFIX}
+
+REPLACE_PYTHON+=	*.py src/scripts/*.py
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

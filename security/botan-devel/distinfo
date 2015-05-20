@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/05/14 18:39:24 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/05/20 21:57:10 joerg Exp $
 
 SHA1 (Botan-1.11.16.tgz) = 7214da75a638a7b4a233aca4eccd94d8c688fd52
 RMD160 (Botan-1.11.16.tgz) = 7b82dd41243b7bb53d3d667db58afd7e2f948871
 Size (Botan-1.11.16.tgz) = 2843785 bytes
 SHA1 (patch-src_build-data_arch_arm.txt) = 977a5917ee94e1bafb50f467e99d0f6e1e561ec9
-SHA1 (patch-src_build-data_cc_clang.txt) = e36a85e036765d103c06eedac2d9f553a9202173
-SHA1 (patch-src_build-data_makefile_header.in) = 9ef8fba7f7a4d665d95478cdd87d58839d438f80
-SHA1 (patch-src_lib_alloc_locking__allocator_locking__allocator.cpp) = c4df20faf13b902c9fce21a0ff806b0d83c08780
-SHA1 (patch-src_lib_kdf_kdf.h) = 018dcfca7821b64b94175809aaad3fa3d578648c
+SHA1 (patch-src_lib_alloc_locking__allocator_locking__allocator.cpp) = dd051c7707d99bef32dd0f822cac0926a9f61141
