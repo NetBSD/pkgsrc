@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2015/05/20 13:26:45 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2015/05/21 15:11:57 fhajny Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -11,6 +11,7 @@
 # used by databases/sqlrelay/Makefile
 
 DISTNAME=		sqlrelay-0.59
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
@@ -44,7 +45,6 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-error=overloaded-virtual
 CWRAPPERS_APPEND.cxx+=	-Wno-error=overloaded-virtual
 .endif
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/rudiments/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
