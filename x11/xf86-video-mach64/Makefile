@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/05/04 20:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/21 20:44:06 richard Exp $
 
 DISTNAME=	xf86-video-mach64-6.9.5
 CATEGORIES=	x11
@@ -20,6 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
+CPPFLAGS+=	-D__EXTENSIONS__
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
