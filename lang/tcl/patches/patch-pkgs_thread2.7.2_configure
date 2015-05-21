@@ -1,10 +1,10 @@
-$NetBSD: patch-pkgs_thread2.7.1_configure,v 1.1 2014/10/31 21:11:18 adam Exp $
+$NetBSD: patch-pkgs_thread2.7.2_configure,v 1.1 2015/05/21 10:37:59 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/thread2.7.1/configure.orig	2014-08-14 17:08:39.000000000 +0000
-+++ pkgs/thread2.7.1/configure
-@@ -9299,7 +9299,6 @@ fi
+--- pkgs/thread2.7.2/configure.orig	2015-03-06 18:38:33.000000000 +0000
++++ pkgs/thread2.7.2/configure
+@@ -9312,7 +9312,6 @@ fi
  fi
  
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
@@ -12,7 +12,7 @@ Add support for DragonFly.
  		LDFLAGS="-Wl,-export-dynamic"
  		;;
  	    esac
-@@ -9321,8 +9320,6 @@ fi
+@@ -9334,8 +9333,6 @@ fi
  fi
  
  	    # OpenBSD doesn't do version numbers with dots.
@@ -21,7 +21,7 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -9346,7 +9343,7 @@ fi
+@@ -9359,7 +9356,7 @@ fi
  fi
  
  	    ;;
@@ -30,7 +30,7 @@ Add support for DragonFly.
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -9371,10 +9368,6 @@ fi
+@@ -9383,10 +9380,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -41,7 +41,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    ;;
-@@ -10225,7 +10218,7 @@ fi
+@@ -10237,7 +10230,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
