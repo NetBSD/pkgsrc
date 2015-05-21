@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.in,v 1.3 2014/04/25 09:27:37 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2015/05/21 14:07:10 rodent Exp $
 
 Don't build programs that won't be installed
 List test prerequisite.
 
---- Makefile.in.orig	2014-04-17 23:11:27.000000000 +0000
+--- Makefile.in.orig	2015-01-01 07:53:30.000000000 +0000
 +++ Makefile.in
-@@ -68,7 +68,7 @@ CONFIG_HEADER = config.h
+@@ -112,7 +112,7 @@ CONFIG_HEADER = config.h
  CONFIG_CLEAN_FILES =
  CONFIG_CLEAN_VPATH_FILES =
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgincludedir)"
@@ -14,7 +14,7 @@ List test prerequisite.
  am__memcached_SOURCES_DIST = memcached.c memcached.h hash.c hash.h \
  	jenkins_hash.c jenkins_hash.h murmur3_hash.c murmur3_hash.h \
  	slabs.c slabs.h items.c items.h assoc.c assoc.h thread.c \
-@@ -1372,7 +1372,7 @@ memcached_dtrace.o: $(memcached_OBJECTS)
+@@ -1478,7 +1478,7 @@ memcached_dtrace.o: $(memcached_OBJECTS)
  memcached_debug_dtrace.o: $(memcached_debug_OBJECTS)
  	$(DTRACE) $(DTRACEFLAGS) -G -o memcached_debug_dtrace.o -s ${srcdir}/memcached_dtrace.d $(memcached_debug_OBJECTS)
  
