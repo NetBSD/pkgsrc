@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/05/20 13:26:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/05/21 15:11:57 fhajny Exp $
 bin/sqlr-cachemanager
 bin/sqlr-connection
 bin/sqlr-export
@@ -630,7 +630,6 @@ share/doc/sqlrelay/programming/ruby.html
 share/doc/sqlrelay/programming/tcl.html
 share/examples/sqlrelay/sample-mssqlserver-mysql-errors.map
 share/examples/sqlrelay/sample-oracle-mysql-errors.map
-share/examples/sqlrelay/sqlrelay
 share/examples/sqlrelay/sqlrelay.conf
 share/examples/sqlrelay/sqlrelay.conf.example
 share/examples/sqlrelay/sqlrelay.dtd
