@@ -1,8 +1,10 @@
-$NetBSD: patch-mono_utils_Makefile.in,v 1.1 2014/11/30 08:40:51 spz Exp $
+$NetBSD: patch-mono_utils_Makefile.in,v 1.2 2015/05/21 14:38:08 kefren Exp $
 
---- mono/utils/Makefile.in.orig	2014-10-04 09:29:01.000000000 +0000
-+++ mono/utils/Makefile.in
-@@ -144,6 +144,7 @@ am__libmonoutils_la_SOURCES_DIST = mono-
+Add NetBSD threads
+
+--- mono/utils/Makefile.in.orig	2015-05-06 00:29:56.000000000 +0300
++++ mono/utils/Makefile.in	2015-05-11 16:26:53.000000000 +0300
+@@ -146,6 +146,7 @@ am__libmonoutils_la_SOURCES_DIST = mono-
  	mono-threads-mach.c mono-threads-mach-helper.c \
  	mono-threads-windows.c mono-threads-linux.c \
  	mono-threads-freebsd.c mono-threads-openbsd.c \
@@ -10,15 +12,16 @@ $NetBSD: patch-mono_utils_Makefile.in,v 1.1 2014/11/30 08:40:51 spz Exp $
  	mono-threads-android.c mono-threads.h mono-tls.h mono-tls.c \
  	linux_magic.h mono-memory-model.h atomic.h atomic.c \
  	mono-hwcap.h mono-hwcap.c bsearch.h bsearch.c \
-@@ -170,6 +171,7 @@ am__objects_1 = mono-md5.lo mono-sha1.lo
+@@ -174,7 +175,7 @@ am__objects_1 = mono-md5.lo mono-sha1.lo
+ 	mono-linked-list-set.lo mono-threads.lo mono-threads-posix.lo \
  	mono-threads-mach.lo mono-threads-mach-helper.lo \
  	mono-threads-windows.lo mono-threads-linux.lo \
- 	mono-threads-freebsd.lo mono-threads-openbsd.lo \
-+	mono-threads-netbsd.lo mono-threads-dragonfly.lo \
+-	mono-threads-freebsd.lo mono-threads-openbsd.lo \
++	mono-threads-freebsd.lo mono-threads-openbsd.lo mono-threads-netbsd.lo \
  	mono-threads-android.lo mono-tls.lo atomic.lo mono-hwcap.lo \
- 	bsearch.lo mono-conc-hashtable.lo sha1.lo
- @CROSS_COMPILE_FALSE@@X86_TRUE@am__objects_2 = mach-support-x86.lo
-@@ -585,6 +587,8 @@ monoutils_sources = \
+ 	bsearch.lo mono-conc-hashtable.lo sha1.lo json.lo \
+ 	networking.lo networking-posix.lo networking-fallback.lo \
+@@ -600,6 +601,8 @@ monoutils_sources = \
  	mono-threads-linux.c	\
  	mono-threads-freebsd.c	\
  	mono-threads-openbsd.c	\
@@ -27,7 +30,7 @@ $NetBSD: patch-mono_utils_Makefile.in,v 1.1 2014/11/30 08:40:51 spz Exp $
  	mono-threads-android.c	\
  	mono-threads.h	\
  	mono-tls.h	\
-@@ -726,6 +730,8 @@ distclean-compile:
+@@ -753,6 +756,8 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-mach-helper.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-mach.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-openbsd.Plo@am__quote@
