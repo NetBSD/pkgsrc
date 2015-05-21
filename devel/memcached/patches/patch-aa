@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2014/04/25 09:27:37 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2015/05/21 14:07:10 rodent Exp $
 
 time_t changes
 
---- items.c.orig	2014-04-17 22:59:33.000000000 +0000
+--- items.c.orig	2015-01-01 07:50:52.000000000 +0000
 +++ items.c
-@@ -409,9 +409,9 @@ char *do_item_cachedump(const unsigned i
+@@ -440,9 +440,9 @@ char *do_item_cachedump(const unsigned i
          /* Copy the key since it may not be null-terminated in the struct */
          strncpy(key_temp, ITEM_key(it), it->nkey);
          key_temp[it->nkey] = 0x00; /* terminate */
@@ -16,7 +16,7 @@ time_t changes
          if (bufcurr + len + 6 > memlimit)  /* 6 is END\r\n\0 */
              break;
          memcpy(buffer + bufcurr, temp, len);
-@@ -472,13 +472,13 @@ void do_item_stats(ADD_STAT add_stats, v
+@@ -506,13 +506,13 @@ void do_item_stats(ADD_STAT add_stats, v
                  continue;
              }
              APPEND_NUM_FMT_STAT(fmt, i, "number", "%u", sizes[i]);
