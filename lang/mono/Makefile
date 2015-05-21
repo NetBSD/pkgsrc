@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2015/04/06 08:17:15 adam Exp $
+# $NetBSD: Makefile,v 1.155 2015/05/21 14:38:08 kefren Exp $
 
-DISTNAME=	mono-3.10.0
-PKGREVISION=	1
+DISTNAME=	mono-4.0.1
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +10,7 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework (v3)
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
-MAKE_JOBS_SAFE=	no
+MAKE_JOBS_SAFE=	yes
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
@@ -24,7 +23,7 @@ EXTRACT_USING=	gtar
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --with-icu=yes
 CONFIGURE_ARGS+=	--with-preview=yes --with-libgdiplus=installed
-CONFIGURE_ARGS+=	--disable-dtrace
+CONFIGURE_ARGS+=	--disable-dtrace --with-gc=none
 
 .include "options.mk"
 
@@ -86,6 +85,8 @@ CONF_FILES+=	${EGDIR}/4.0/settings.map \
 			${PKG_SYSCONFDIR}/mono/4.0/settings.map
 CONF_FILES+=	${EGDIR}/4.0/web.config \
 			${PKG_SYSCONFDIR}/mono/4.0/web.config
+CONF_FILES+=	${EGDIR}/4.0/Browsers/Compat.browser \
+			${PKG_SYSCONFDIR}/mono/4.0/Browsers/Compat.browser
 CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
 			${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/4.5/machine.config \
@@ -93,6 +94,8 @@ CONF_FILES+=	${EGDIR}/4.5/machine.config \
 CONF_FILES+=	${EGDIR}/4.5/settings.map \
 			${PKG_SYSCONFDIR}/mono/4.5/settings.map
 CONF_FILES+=	${EGDIR}/4.5/web.config  ${PKG_SYSCONFDIR}/mono/4.5/web.config
+CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
+			${PKG_SYSCONFDIR}/mono/4.5/Browsers/Compat.browser
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers

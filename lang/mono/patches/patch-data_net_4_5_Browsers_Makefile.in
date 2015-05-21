@@ -1,0 +1,15 @@
+$NetBSD: patch-data_net_4_5_Browsers_Makefile.in,v 1.1 2015/05/21 14:38:08 kefren Exp $
+
+Path fix
+
+--- data/net_4_5/Browsers/Makefile.in.orig	2015-05-21 17:12:06.000000000 +0300
++++ data/net_4_5/Browsers/Makefile.in	2015-05-21 17:12:30.000000000 +0300
+@@ -355,7 +355,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-monodir = $(sysconfdir)/mono/4.5/Browsers
++monodir = $(datadir)/examples/mono/4.5/Browsers
+ EXTRA_DIST = ../../Browsers/Compat.browser
+ mono_DATA = ../../Browsers/Compat.browser
+ all: all-am
