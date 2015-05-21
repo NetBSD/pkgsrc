@@ -1,0 +1,15 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2015/05/21 14:38:08 kefren Exp $
+
+Fix monodir
+
+--- data/Makefile.in.orig	2015-05-06 00:29:54.000000000 +0300
++++ data/Makefile.in	2015-05-11 15:40:33.000000000 +0300
+@@ -434,7 +434,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = net_2_0 net_4_0 net_4_5
+-monodir = $(sysconfdir)/mono
++monodir = $(datadir)/examples/mono
+ monolldbdir = $(libdir)/mono/lldb
+ EXTRA_DIST = \
+ 	config.in \
