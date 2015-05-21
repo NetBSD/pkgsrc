@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2280 2015/05/20 21:16:50 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.2281 2015/05/21 10:41:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4353,3 +4353,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-sqlrelay to 0.59 [ryoon 2015-05-20]
 	Updated security/clamav to 0.98.7 [bouyer 2015-05-20]
 	Updated security/clamav-doc to 0.98.7 [bouyer 2015-05-20]
+	Updated lang/tcl to 8.6.4 [adam 2015-05-21]
+	Updated x11/tk to 8.6.4 [adam 2015-05-21]
+	Updated databases/sqlite3 to 3.8.10.2 [adam 2015-05-21]
+	Updated databases/sqlite3-docs to 3.8.10.2 [adam 2015-05-21]
+	Updated databases/sqlite3-tcl to 3.8.10.2 [adam 2015-05-21]
