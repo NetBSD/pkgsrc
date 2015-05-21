@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.38 2015/04/21 17:01:56 joerg Exp $
+# $NetBSD: OpenBSD.mk,v 1.39 2015/05/21 17:15:48 sevan Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -9,8 +9,6 @@ LDD_ENV?=	LD_TRACE_LOADED_OBJECTS_FMT1='\t-l%o => %p\n' \
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-# XXX: default from defaults/mk.conf.  Verify/correct for this platform
-# and remove this comment.
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 
