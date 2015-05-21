@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/01/04 23:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/05/21 22:21:08 rodent Exp $
 
 DISTNAME=	memcached-1.4.22
 CATEGORIES=	devel
@@ -47,4 +47,5 @@ post-install:
 
 .include "../../devel/libevent/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.0
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
