@@ -1,0 +1,15 @@
+$NetBSD: patch-data_net_4_5_Makefile.in,v 1.1 2015/05/21 14:38:08 kefren Exp $
+
+Path fix
+
+--- data/net_4_5/Makefile.in.orig	2015-05-21 15:22:23.000000000 +0300
++++ data/net_4_5/Makefile.in	2015-05-21 15:23:00.000000000 +0300
+@@ -416,7 +416,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = Browsers
+-monodir = $(sysconfdir)/mono/4.5
++monodir = $(datadir)/examples/mono/4.5
+ EXTRA_DIST = machine.config \
+ 	      web.config \
+ 	      DefaultWsdlHelpGenerator.aspx \

@@ -1,0 +1,13 @@
+$NetBSD: patch-mono_dis_Makefile.in,v 1.1 2015/05/21 14:38:08 kefren Exp $
+
+--- mono/dis/Makefile.in.orig	2015-05-11 16:34:26.000000000 +0300
++++ mono/dis/Makefile.in	2015-05-11 16:34:57.000000000 +0300
+@@ -428,7 +428,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CPPFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)
+-@SUPPORT_SGEN_FALSE@metadata_lib = $(top_builddir)/mono/metadata/libmonoruntime-static.a
++@SUPPORT_SGEN_FALSE@metadata_lib = $(top_builddir)/mono/metadata/libmonoruntime-static.la
+ @SUPPORT_SGEN_TRUE@metadata_lib = $(top_builddir)/mono/metadata/libmonoruntimesgen-static.la
+ @SUPPORT_SGEN_FALSE@gc_lib = $(LIBGC_STATIC_LIBS)
+ runtime_lib = \
