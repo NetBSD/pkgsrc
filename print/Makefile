@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.637 2015/05/16 10:56:00 markd Exp $
+# $NetBSD: Makefile,v 1.638 2015/05/21 03:29:41 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -511,7 +511,6 @@ SUBDIR+=	tex-fwlw
 SUBDIR+=	tex-fwlw-doc
 SUBDIR+=	tex-g-brief
 SUBDIR+=	tex-g-brief-doc
-SUBDIR+=	tex-fwlw-doc
 SUBDIR+=	tex-genmisc
 SUBDIR+=	tex-gentle-doc
 SUBDIR+=	tex-geometry
