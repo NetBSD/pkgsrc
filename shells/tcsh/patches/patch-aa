@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.13 2012/05/25 20:01:31 he Exp $
+$NetBSD: patch-aa,v 1.14 2015/05/22 08:03:43 kim Exp $
 
 Use LDFLAGS and BSD_INSTALL_*.
 
---- Makefile.in.orig	2011-02-05 17:35:31.000000000 +0000
-+++ Makefile.in
-@@ -357,7 +357,7 @@ P=
+--- Makefile.in.orig	2014-07-24 22:52:13.000000000 +0000
++++ Makefile.in	2015-05-22 07:54:35.000000000 +0000
+@@ -357,7 +357,7 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
  bindir=@bindir@
@@ -13,23 +13,22 @@ Use LDFLAGS and BSD_INSTALL_*.
  MANSECT=1
  DESTBIN=${DESTDIR}${bindir}
  DESTMAN=${DESTDIR}${mandir}/man${MANSECT}
-@@ -449,7 +449,7 @@ pure:$(P) ${OBJS} 
+@@ -449,7 +449,7 @@
  
  gethost:  gethost.c sh.err.h tc.const.h sh.h
  	rm -f gethost
--	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} $(srcdir)/gethost.c
-+	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} ${LDFLAGS} $(srcdir)/gethost.c
+-	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} ${CFLAGS} $(srcdir)/gethost.c
++	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} $(srcdir)/gethost.c
  
  tc.defs.c:	gethost host.defs
  	@rm -f $@.tmp
-@@ -596,20 +596,13 @@ vgrind:
- install-strip: install
+@@ -597,19 +597,13 @@
+ 	-strip ${DESTBIN}/tcsh$(EXEEXT)
  
  install: tcsh$(EXEEXT) install.catalogs install.man
 -	-mkdir -p ${DESTBIN}
 -	-mv -f ${DESTBIN}/tcsh$(EXEEXT)  ${DESTBIN}/tcsh.old
 -	cp tcsh$(EXEEXT) ${DESTBIN}/tcsh$(EXEEXT)
--	-strip ${DESTBIN}/tcsh$(EXEEXT)
 -	chmod 755 ${DESTBIN}/tcsh$(EXEEXT)
 +	${BSD_INSTALL_PROGRAM} tcsh${EXEEXT} ${DESTBIN}/tcsh${EXEEXT}
  

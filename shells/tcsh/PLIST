@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/01/20 11:00:32 hauke Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/05/22 08:03:43 kim Exp $
 bin/tcsh
 man/man1/tcsh.1
 share/examples/tcsh/complete.tcsh
@@ -14,4 +14,4 @@ share/locale/it/LC_MESSAGES/tcsh.cat
 share/locale/ja/LC_MESSAGES/tcsh.cat
 share/locale/pl/LC_MESSAGES/tcsh.cat
 share/locale/ru/LC_MESSAGES/tcsh.cat
-share/locale/ru_UA.koi8u/LC_MESSAGES/tcsh.cat
+share/locale/ru_UA/LC_MESSAGES/tcsh.cat
