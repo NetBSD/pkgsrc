@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2014/12/31 13:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/05/22 13:40:45 hauke Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
 PKGNAME=	${PYPKGPREFIX}-blosxom-${PYBLOXSOMVERS}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pyblosxom.github.com/download/
 
@@ -20,6 +20,8 @@ USE_LANGUAGES=	#none
 DOC_SUBDIR=     share/doc/pyblosxom
 DOCDIR=         ${PREFIX}/${DOC_SUBDIR}
 DOCFILES=       AUTHORS INSTALL LICENSE README.rst UPGRADE WHATSNEW
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
 INSTALLATION_DIRS=	${DOC_SUBDIR}
 
