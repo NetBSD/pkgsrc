@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2282 2015/05/22 08:03:51 kim Exp $
+$NetBSD: CHANGES-2015,v 1.2283 2015/05/22 08:05:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4359,3 +4359,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-docs to 3.8.10.2 [adam 2015-05-21]
 	Updated databases/sqlite3-tcl to 3.8.10.2 [adam 2015-05-21]
 	Updated shells/tcsh to 6.19.00 [kim 2015-05-22]
+	Updated graphics/jpegoptim to 1.4.3 [adam 2015-05-22]
