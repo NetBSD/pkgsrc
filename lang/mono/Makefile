@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2015/05/21 20:03:23 kefren Exp $
+# $NetBSD: Makefile,v 1.157 2015/05/22 10:21:03 kefren Exp $
 
 DISTNAME=	mono-4.0.1
 CATEGORIES=	lang
@@ -153,6 +153,12 @@ CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ARGS+=	--disable-parallel-mark
 .else
 PLIST.monodoc=		yes
+.endif
+
+.if ${MACHINE_ARCH:M*i[34]86*}
+# for gcc byte atomic builtins
+GNU_ARCH.i386=		i586
+CFLAGS+=		-march=i586
 .endif
 
 post-install:
