@@ -1,10 +1,20 @@
-$NetBSD: patch-mono_metadata_mono-perfcounters.c,v 1.1 2015/05/21 14:38:08 kefren Exp $
+$NetBSD: patch-mono_metadata_mono-perfcounters.c,v 1.2 2015/05/22 06:55:40 kefren Exp $
 
 Correct mibs initialization for NetBSD
 
---- mono/metadata/mono-perfcounters.c.orig	2015-05-11 16:12:42.000000000 +0300
-+++ mono/metadata/mono-perfcounters.c	2015-05-11 16:17:52.000000000 +0300
-@@ -473,11 +473,7 @@ mono_determine_physical_ram_available_si
+--- mono/metadata/mono-perfcounters.c.orig	2015-04-26 19:28:39.000000000 +0300
++++ mono/metadata/mono-perfcounters.c	2015-05-14 19:07:18.000000000 +0300
+@@ -33,6 +33,9 @@
+ #if defined (__NetBSD__) || defined (__APPLE__)
+ #include <sys/sysctl.h>
+ #endif
++#if defined(__NetBSD__)
++#include <sys/vmmeter.h>
++#endif
+ #include "metadata/mono-perfcounters.h"
+ #include "metadata/appdomain.h"
+ #include "metadata/object-internals.h"
+@@ -473,11 +476,7 @@ mono_determine_physical_ram_available_si
  #elif defined (__NetBSD__)
  	struct vmtotal vm_total;
  	guint64 page_size;
@@ -17,7 +27,7 @@ Correct mibs initialization for NetBSD
  		CTL_VM,
  #if defined (VM_METER)
  		VM_METER
-@@ -485,17 +481,15 @@ mono_determine_physical_ram_available_si
+@@ -485,17 +484,15 @@ mono_determine_physical_ram_available_si
  		VM_TOTAL
  #endif
  	};

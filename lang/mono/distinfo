@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.99 2015/05/21 14:38:08 kefren Exp $
+$NetBSD: distinfo,v 1.100 2015/05/22 06:55:40 kefren Exp $
 
 SHA1 (mono-4.0.1.tar.bz2) = 9c7c27caa69e6a1673753437fd6824e0d33fe2ac
 RMD160 (mono-4.0.1.tar.bz2) = 3adcb49d7da9a4d81b7f5bc2108d13c20d94ab15
@@ -42,7 +42,7 @@ SHA1 (patch-do) = 0bda0d2e482be218fb502e0c4ea945a41d078d27
 SHA1 (patch-man_mprof-report.1) = 0a80c164614cc9af5f01822005193d80f1d89946
 SHA1 (patch-mono_dis_Makefile.in) = f000112e2712faf29104489e45feae8d6fc45169
 SHA1 (patch-mono_metadata_icall.c) = 191a7fccb174855026cb11dd0f6ac450bb920ec7
-SHA1 (patch-mono_metadata_mono-perfcounters.c) = 3283b42dabff16444458287db992905534a43fdc
+SHA1 (patch-mono_metadata_mono-perfcounters.c) = 8cfbfa62fe4201a20bc07645ccf6b13487a64fc3
 SHA1 (patch-mono_metadata_mono-route.c) = 6eb741efca0a66fae894f7c49fa8f6393079e67f
 SHA1 (patch-mono_mini_mini-arm.c) = 1c4f85a6b2a49604a6b4299f65f0c93d0c01ffa3
 SHA1 (patch-mono_profiler_proflog.c) = 060e8052aeedc1ee224d33644f39b8085a6c92a2
