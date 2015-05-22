@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/05/22 14:01:16 hauke Exp $
+# $NetBSD: Makefile,v 1.19 2015/05/22 14:23:41 hauke Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
@@ -28,6 +28,10 @@ INSTALLATION_DIRS=	${DOC_SUBDIR}
 REPLACE_PYTHON=		Pyblosxom/data/pyblosxom.cgi
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+
+pre-configure:
+	cd ${WRKSRC} && ${FIND} Pyblosxom -type f -name '*.orig' \
+		-exec ${RM} -f \{\} \;
 
 # There is a set of manual files in docs/source that could be
 # converted to HTML or PDF, and installed
