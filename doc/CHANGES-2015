@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2284 2015/05/22 08:18:45 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2285 2015/05/22 09:21:20 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4361,3 +4361,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated shells/tcsh to 6.19.00 [kim 2015-05-22]
 	Updated graphics/jpegoptim to 1.4.3 [adam 2015-05-22]
 	Updated textproc/py-pygments to 2.0.2 [adam 2015-05-22]
+	Updated www/apache22 to 2.2.29nb1 [sborrill 2015-05-22]
