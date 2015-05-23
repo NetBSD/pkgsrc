@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/23 09:01:20 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/23 09:52:59 kefren Exp $
 
 DISTNAME=	3.16
+PKGREVISION=	1
 PKGNAME=	flickrnet-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samjudson/flickr-net/archive/}
@@ -10,6 +11,12 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/flickr-net-${DISTNAME}
 USE_TOOLS+=	pkg-config
+
+SUBST_CLASSES+=			fix-prefix
+SUBST_STAGE.fix-prefix=		pre-configure
+SUBST_MESSAGE.fix-prefix=	Fix pkg-config prefix
+SUBST_FILES.fix-prefix=		flickrnet.pc
+SUBST_SED.fix-prefix=		-e 's,\@prefix\@,${PREFIX},'
 
 do-build:
 	cd ${WRKSRC} && \
