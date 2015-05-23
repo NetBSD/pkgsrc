@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2015/05/23 07:01:03 kefren Exp $
+# $NetBSD: Makefile,v 1.70 2015/05/23 10:33:01 kefren Exp $
 #
 
 DISTNAME=	f-spot-0.8.2
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -55,6 +55,7 @@ GCONF_SCHEMAS=	f-spot.schemas
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/flickrnet/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
