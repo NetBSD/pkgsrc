@@ -1,0 +1,12 @@
+$NetBSD: patch-data_mono-nunit.pc.in,v 1.1 2015/05/23 06:20:20 kefren Exp $
+
+Fix nunit pkg-config path
+
+--- data/mono-nunit.pc.in.orig	2015-05-22 17:30:11.000000000 +0300
++++ data/mono-nunit.pc.in	2015-05-22 17:30:49.000000000 +0300
+@@ -6,4 +6,4 @@
+ Name: Mono NUnit
+ Description: Mono's version of NUnit
+ Version: @VERSION@
+-Libs: -r:${libdir}/mono/2.0/nunit.core.dll -r:${libdir}/mono/2.0/nunit.core.interfaces.dll -r:${libdir}/mono/2.0/nunit.core.extensions.dll -r:${libdir}/mono/2.0/nunit.framework.dll -r:${libdir}/mono/2.0/nunit.framework.extensions.dll -r:${libdir}/mono/2.0/nunit.mocks.dll -r:${libdir}/mono/2.0/nunit.util.dll -r:${libdir}/mono/2.0/nunit-console-runner.dll 
++Libs: -r:${libdir}/mono/4.5/nunit.core.dll -r:${libdir}/mono/4.5/nunit.core.interfaces.dll -r:${libdir}/mono/4.5/nunit.core.extensions.dll -r:${libdir}/mono/4.5/nunit.framework.dll -r:${libdir}/mono/4.5/nunit.framework.extensions.dll -r:${libdir}/mono/4.5/nunit.mocks.dll -r:${libdir}/mono/4.5/nunit.util.dll -r:${libdir}/mono/4.5/nunit-console-runner.dll 
