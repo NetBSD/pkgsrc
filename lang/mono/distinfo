@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2015/05/22 06:55:40 kefren Exp $
+$NetBSD: distinfo,v 1.101 2015/05/23 06:20:20 kefren Exp $
 
 SHA1 (mono-4.0.1.tar.bz2) = 9c7c27caa69e6a1673753437fd6824e0d33fe2ac
 RMD160 (mono-4.0.1.tar.bz2) = 3adcb49d7da9a4d81b7f5bc2108d13c20d94ab15
@@ -26,6 +26,7 @@ SHA1 (patch-cc) = d26c9e04f04896f0e7b2edab61cd347d76e0fcaf
 SHA1 (patch-configure) = c8364cd9da06b6b8d15a3d98c1e4cb11a29c1298
 SHA1 (patch-da) = 08c7c78aa4c6f1a1de4d34aebe05cd2ed1e7dcfd
 SHA1 (patch-data_Makefile.in) = 0c54664b1a59714c6bec02547d70eaa7dee47928
+SHA1 (patch-data_mono-nunit.pc.in) = 59e0a932727b842ac90c2d0b702481d62f72cab8
 SHA1 (patch-data_net_4_0_Browsers_Makefile.in) = ab4baa45dd75b87786cbc7d942611915d5ae1f72
 SHA1 (patch-data_net_4_5_Browsers_Makefile.in) = e4cab08ffa040020684edb3a9fbc8e448d2faf35
 SHA1 (patch-data_net_4_5_Makefile.in) = 778be615f4f21f2561e47e082302c09f02c6f8f6
