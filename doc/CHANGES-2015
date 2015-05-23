@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2287 2015/05/23 01:13:58 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2288 2015/05/23 01:23:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4377,3 +4377,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-CPAN-Meta-YAML to 0.25 [mef 2015-05-23]
 	Updated devel/p5-Test-Script to 1.10 [mef 2015-05-23]
 	Updated devel/p5-Test-TempDir to 0.10 [mef 2015-05-23]
+	Updated devel/p5-Test-Version to 2.01 [mef 2015-05-23]
+	Updated devel/p5-Tree-DAG_Node to 1.26 [mef 2015-05-23]
