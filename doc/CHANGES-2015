@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2297 2015/05/23 10:40:35 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2298 2015/05/23 11:00:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4394,3 +4394,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-CSV_XS to 1.18 [mef 2015-05-23]
 	Updated textproc/p5-Text-Hunspell to 2.11 [mef 2015-05-23]
 	Updated textproc/p5-Text-RecordParser to 1.6.5 [mef 2015-05-23]
+	Updated multimedia/libass to 0.12.2 [adam 2015-05-23]
