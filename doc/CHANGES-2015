@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2289 2015/05/23 01:51:58 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2290 2015/05/23 02:17:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4380,3 +4380,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Version to 2.01 [mef 2015-05-23]
 	Updated devel/p5-Tree-DAG_Node to 1.26 [mef 2015-05-23]
 	Updated devel/p5-Config-General to 2.58 [mef 2015-05-23]
+	Added archivers/p5-Archive-Tar-Wrapper version 0.18 [mef 2015-05-23]
