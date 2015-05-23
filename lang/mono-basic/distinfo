@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/07/05 15:06:28 schnoebe Exp $
+$NetBSD: distinfo,v 1.10 2015/05/23 06:23:43 kefren Exp $
 
-SHA1 (mono-basic-2.10.tar.bz2) = b6bd7214ff1cd4d522d13b213e2a8c2bed80d276
-RMD160 (mono-basic-2.10.tar.bz2) = 0d15240d36666f7e12c467a882dc6d03ebe7fec6
-Size (mono-basic-2.10.tar.bz2) = 1902672 bytes
-SHA1 (patch-vbnc_vbnc_Makefile) = cd1289105cb9e28fb36f7335f379caef3012af54
+SHA1 (mono-basic-4.0.1.tar.bz2) = bbcba70e240779c09be15ea2499fdd471830ff12
+RMD160 (mono-basic-4.0.1.tar.bz2) = 3da2f1ec0cc834b81bca8a3419eeeb14189eaaa8
+Size (mono-basic-4.0.1.tar.bz2) = 2063157 bytes
