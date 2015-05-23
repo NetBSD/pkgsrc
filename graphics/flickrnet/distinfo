@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/05/23 09:01:20 kefren Exp $
+
+SHA1 (3.16.tar.gz) = 51b4acbf4b29d76461bd95cdd173eece898321d1
+RMD160 (3.16.tar.gz) = 8fadc513e8a63705743a4a2308b7c5a07a113818
+Size (3.16.tar.gz) = 749444 bytes
+SHA1 (patch-flickrnet.pc) = 2dbea4d4ef4bcce6b4e75d21550eb0b23110bcba
