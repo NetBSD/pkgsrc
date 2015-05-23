@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2296 2015/05/23 09:43:39 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2297 2015/05/23 10:40:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4391,3 +4391,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Lingua-EN-Sentence to 0.28 [mef 2015-05-23]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.899 [mef 2015-05-23]
 	Updated textproc/p5-Pod-Tree to 1.23 [mef 2015-05-23]
+	Updated textproc/p5-Text-CSV_XS to 1.18 [mef 2015-05-23]
+	Updated textproc/p5-Text-Hunspell to 2.11 [mef 2015-05-23]
+	Updated textproc/p5-Text-RecordParser to 1.6.5 [mef 2015-05-23]
