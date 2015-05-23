@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2011/09/25 20:11:11 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2015/05/23 06:43:00 kefren Exp $
 
---- source/Shell/OdfConverter/Makefile.orig	2007-12-19 15:16:04.000000000 +0100
-+++ source/Shell/OdfConverter/Makefile
-@@ -54,7 +54,7 @@ OdfConverterTestStatic.exe : $(SOURCE) .
+--- source/Shell/OdfConverter/Makefile.orig	2008-09-26 21:49:32.000000000 +0300
++++ source/Shell/OdfConverter/Makefile	2015-05-23 09:10:54.000000000 +0300
+@@ -54,7 +54,7 @@
  		$(SOURCE)
  
  main.c bundle.o : OdfConverterTestStatic.exe Makefile
@@ -11,12 +11,13 @@ $NetBSD: patch-aa,v 1.5 2011/09/25 20:11:11 joerg Exp $
  
  OdfConverter$(EXEEXT) : main.c bundle.o $(ZLIBDEP) Makefile
  	rm -f $@
-@@ -64,16 +64,16 @@ ifeq ($(OS),Darwin)
+@@ -64,16 +64,17 @@
  	$(CC) -o OdfConverter -Wall `pkg-config --cflags mono` main.c \
  		`pkg-config --libs-only-L mono` -bind_at_load -all_load -lz \
  	    ../../AdditionalTools/zlib123/contrib/minizip/libzlibwapi.a \
 -		`pkg-config --libs-only-l mono` bundle.o
-+		`pkg-config --libs-only-l mono-2 gtk+-2.0 gthread-2.0` bundle.o
++		`pkg-config --libs-only-l mono-2 gtk+-2.0 gthread-2.0` \
++		`pkg-config --cflags mono-2` bundle.o
  else
 -	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono` main.c \
 +	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono-2 gtk+-2.0 gthread-2.0` main.c \
@@ -25,10 +26,10 @@ $NetBSD: patch-aa,v 1.5 2011/09/25 20:11:11 joerg Exp $
  	    $(EXPORTDYNAMIC) \
  	    -Wl,--undefined=$(ZIPOPEN) -Wl,--undefined=$(UNZOPEN) \
 -	    `pkg-config --libs-only-L mono` -L../../AdditionalTools/zlib123/contrib/minizip \
-+	    -L../../AdditionalTools/zlib123/contrib/minizip \
 -	    -Wl,-Bstatic -lmono -lzlibwapi -Wl,-Bdynamic  \
-+	    -Wl,-Bstatic -lmono-2.0 -lzlibwapi -Wl,-Bdynamic  \
 -	    `pkg-config --libs-only-l mono | sed -e "s/\-lmono //"` \
++	    -L../../AdditionalTools/zlib123/contrib/minizip \
++	    -Wl,-Bstatic -lmonoboehm-2.0 -lzlibwapi -Wl,-Bdynamic  \
 +	    `pkg-config --libs mono-2 gtk+-2.0 gthread-2.0 | sed -e "s/\-lmono-2.0 //"` \
  	    $(ZLIB) $(OTHERLIBS)
  endif
