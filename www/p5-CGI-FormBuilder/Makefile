@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/05/10 15:15:06 mef Exp $
+# $NetBSD: Makefile,v 1.24 2015/05/23 14:09:29 schmonz Exp $
 
 DISTNAME=		CGI-FormBuilder-3.09
 PKGNAME=		p5-${DISTNAME}00
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 post-extract:
 	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 # garbage in the archive ?
-	(cd ${WRKSRC}; ${RM} -r PaxHeader )
+	(cd ${WRKSRC}; ${RM} -rf PaxHeader )
 
 pre-configure:
 	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
