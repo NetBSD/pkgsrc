@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2299 2015/05/23 12:09:56 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2300 2015/05/23 13:12:01 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4398,3 +4398,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-AnyEvent-HTTP to 2.22 [mef 2015-05-23]
 	Updated www/p5-Catalyst-Action-REST to 1.19 [mef 2015-05-23]
 	Updated www/p5-Catalyst-Authentication-Store-DBIx-Class to 0.1506 [mef 2015-05-23]
+	Updated sysutils/file to 5.22nb1 [bsiegert 2015-05-23]
