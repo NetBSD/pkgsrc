@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/11/21 23:50:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2015/05/23 14:12:46 bsiegert Exp $
 #
 
 DISTNAME=	anacron-2.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anacron/}
 
@@ -29,7 +29,8 @@ SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Setting up manpages.
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	anacrontab.5 anacron.8
-SUBST_SED.man=		-e 's|/etc/anacrontab|${PKG_SYSCONFDIR}/anacrontab|g'
+SUBST_SED.man=		-e 's|/etc/anacrontab|${PKG_SYSCONFDIR}/anacrontab|g' \
+			-e 's|/var/spool/anacron|${VARBASE}/spool/anacron|g'
 
 MAKE_FLAGS+=		ANACRONTAB='${PKG_SYSCONFDIR}/anacrontab'
 MAKE_FLAGS+=		BINDIR='${PREFIX}/sbin'
@@ -40,7 +41,7 @@ MAKE_FLAGS+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_FLAGS+=		MANDIR='${PREFIX}/man'
 MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=		SHELL=${SH:Q}
-MAKE_FLAGS+=		SPOOLDIR='/var/spool/anacron'
+MAKE_FLAGS+=		SPOOLDIR='${VARBASE}/spool/anacron'
 
 EGDIR=			${PREFIX}/share/examples/anacron
 .if exists(${FILESDIR}/anacrontab.${OPSYS})
@@ -49,7 +50,7 @@ CONF_FILES=		${EGDIR}/anacrontab.${OPSYS} \
 CONF_FILES_MODE=	0600
 .endif
 
-OWN_DIRS=		/var/spool/anacron
+OWN_DIRS=		${VARBASE}/spool/anacron
 
 RCD_SCRIPTS=		anacron
 
