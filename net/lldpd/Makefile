@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/04/11 11:58:59 mef Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/23 08:24:07 mef Exp $
 
-DISTNAME=		lldpd-0.7.14
+DISTNAME=		lldpd-0.7.15
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -40,6 +40,7 @@ PKG_HOME._lldpd=	${VARBASE}/chroot/lldpd
 
 OWN_DIRS=		${VARBASE}/chroot/lldpd
 AUTO_MKDIRS=		yes
+TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/${PKGBASE}/conf
