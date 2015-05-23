@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2301 2015/05/23 13:44:59 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2302 2015/05/23 14:14:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4400,3 +4400,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-Authentication-Store-DBIx-Class to 0.1506 [mef 2015-05-23]
 	Updated sysutils/file to 5.22nb1 [bsiegert 2015-05-23]
 	Updated net/vnstat to 1.14 [rodent 2015-05-23]
+	Updated time/anacron to 2.3nb3 [bsiegert 2015-05-23]
