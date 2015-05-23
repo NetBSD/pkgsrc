@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2015/04/06 08:17:14 adam Exp $
+# $NetBSD: Makefile,v 1.29 2015/05/23 06:55:10 kefren Exp $
 
-DISTNAME=	mono-addins-1.0
-PKGREVISION=	7
+DISTNAME=	mono-addins-1.1
 CATEGORIES=	devel
-MASTER_SITES=	-http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=monoaddins&DownloadId=509482&FileTime=129948574181430000&Build=19556
+MASTER_SITES=	http://download.mono-project.com/sources/mono-addins/
 
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/Mono.Addins
@@ -15,6 +14,6 @@ USE_TOOLS+=	gmake pkg-config
 MAKE_JOBS_SAFE=	no
 ALL_ENV+=	PLATFORM=
 
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
