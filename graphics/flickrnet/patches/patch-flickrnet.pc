@@ -1,0 +1,17 @@
+$NetBSD: patch-flickrnet.pc,v 1.1 2015/05/23 09:01:20 kefren Exp $
+
+pkg-config hint
+
+--- /dev/null	2015-05-23 11:28:00.000000000 +0300
++++ flickrnet.pc	2015-05-23 11:27:39.000000000 +0300
+@@ -0,0 +1,10 @@
++prefix=/dev/null
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: flickrnet
++Description: .NET Flickr access library
++Version: 3.16
++Libs: -L${prefix}/lib/flickrnet
++Cflags: -I${includedir}
