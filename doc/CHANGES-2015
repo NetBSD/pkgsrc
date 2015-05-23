@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2293 2015/05/23 08:24:35 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2294 2015/05/23 08:39:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4384,3 +4384,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Dist-Zilla to 5.036 [mef 2015-05-23]
 	Updated devel/p5-Net-Netmask to 1.9022 [mef 2015-05-23]
 	Updated net/lldpd to 0.7.15 [mef 2015-05-23]
+	Updated devel/p5-App-cpanminus to 1.7034 [mef 2015-05-23]
+	Updated devel/p5-CPAN-Perl-Releases to 2.18 [mef 2015-05-23]
+	Updated devel/p5-signatures to 0.12 [mef 2015-05-23]
