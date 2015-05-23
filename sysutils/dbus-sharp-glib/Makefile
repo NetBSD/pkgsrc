@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/06 08:17:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/23 06:40:15 kefren Exp $
 #
 
 DISTNAME=	dbus-sharp-glib-0.5.0
@@ -16,6 +16,12 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	dbus-sharp-glib-1.0.pc.in
+
+SUBST_CLASSES+=         fix-mcs
+SUBST_STAGE.fix-mcs=    post-patch
+SUBST_MESSAGE.fix-mcs=  Fix compiler name
+SUBST_FILES.fix-mcs=    configure
+SUBST_SED.fix-mcs=      -e 's,gmcs,mcs,'
 
 .include "../../sysutils/dbus-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
