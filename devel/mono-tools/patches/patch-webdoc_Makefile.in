@@ -1,0 +1,28 @@
+$NetBSD: patch-webdoc_Makefile.in,v 1.1 2015/05/23 06:57:15 kefren Exp $
+
+--- webdoc/Makefile.in.orig	2015-05-22 18:38:05.000000000 +0300
++++ webdoc/Makefile.in	2015-05-22 18:38:53.000000000 +0300
+@@ -619,18 +619,18 @@
+ 	 $(INSTALL_DATA) $(srcdir)/App_Code/Plugins/*cs                                         $(DESTDIR)$(webdir)/App_Code/Plugins
+ 	 $(INSTALL_DATA) $(srcdir)/views/*css                                                   $(DESTDIR)$(webdir)/views
+ 	 $(INSTALL_DATA) $(srcdir)/views/*js                                                    $(DESTDIR)$(webdir)/views
+-	 $(INSTALL_DATA) $(srcdir)/views/*html                                                  $(DESTDIR)$(webdir)/views
++#	 $(INSTALL_DATA) $(srcdir)/views/*html                                                  $(DESTDIR)$(webdir)/views
+ 	 $(INSTALL_DATA) $(srcdir)/views/images/*png                                            $(DESTDIR)$(webdir)/views/images
+-	 $(INSTALL_DATA) $(srcdir)/views/images/*gif                                            $(DESTDIR)$(webdir)/views/images
++#	 $(INSTALL_DATA) $(srcdir)/views/images/*gif                                            $(DESTDIR)$(webdir)/views/images
+ 	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/header*                                  $(DESTDIR)$(webdir)/skins/mono-external
+ 	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/footer*                                  $(DESTDIR)$(webdir)/skins/mono-external
+ 	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/*css                                     $(DESTDIR)$(webdir)/skins/mono-external
+-	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/*js                                      $(DESTDIR)$(webdir)/skins/mono-external
++#	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/*js                                      $(DESTDIR)$(webdir)/skins/mono-external
+ 	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/images/*png                              $(DESTDIR)$(webdir)/skins/mono-external/images
+ 	 $(INSTALL_DATA) $(srcdir)/skins/mono-external/images/*gif                              $(DESTDIR)$(webdir)/skins/mono-external/images
+-	 $(INSTALL_DATA) $(srcdir)/plugins/iframe-plugins/*css                                  $(DESTDIR)$(webdir)/plugins/iframe-plugin
++#	 $(INSTALL_DATA) $(srcdir)/plugins/iframe-plugins/*css                                  $(DESTDIR)$(webdir)/plugins/iframe-plugin
+ 	 $(INSTALL_DATA) $(srcdir)/plugins/iframe-plugin/*js                                    $(DESTDIR)$(webdir)/plugins/iframe-plugin
+-	 $(INSTALL_DATA) $(srcdir)/plugins/iframe-plugin/*html                                  $(DESTDIR)$(webdir)/plugins/iframe-plugin
++#	 $(INSTALL_DATA) $(srcdir)/plugins/iframe-plugin/*html                                  $(DESTDIR)$(webdir)/plugins/iframe-plugin
+ 	 $(INSTALL_DATA) $(srcdir)/plugins/tooltip-plugin/*js                                    $(DESTDIR)$(webdir)/plugins/tooltip-plugin
+ 	 $(INSTALL_DATA) $(srcdir)/plugins/sidebar-plugin/*css                                  $(DESTDIR)$(webdir)/plugins/sidebar-plugin
+ 	 $(INSTALL_DATA) $(srcdir)/plugins/sidebar-plugin/*js                                   $(DESTDIR)$(webdir)/plugins/sidebar-plugin
