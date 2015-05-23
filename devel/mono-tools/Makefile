@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2015/04/25 14:20:37 tnn Exp $
+# $NetBSD: Makefile,v 1.70 2015/05/23 06:57:15 kefren Exp $
 
-DISTNAME=	mono-tools-2.10
-PKGREVISION=	39
+DISTNAME=	mono-tools-3.10
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono-tools/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://download.mono-project.com/sources/mono-tools/
 
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
@@ -20,8 +18,14 @@ MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--mandir=${PKGMANDIR}
 
+SUBST_CLASSES+=		fix-mcs
+SUBST_STAGE.fix-mcs=	post-patch
+SUBST_MESSAGE.fix-mcs=	Fix compiler name
+SUBST_FILES.fix-mcs=	configure
+SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'
+
 .include "../../graphics/libgdiplus/buildlink3.mk"
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gnome-desktop-sharp/buildlink3.mk"
