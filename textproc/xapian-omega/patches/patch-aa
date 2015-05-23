@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2014/07/06 15:21:32 schmonz Exp $
+$NetBSD: patch-aa,v 1.7 2015/05/23 18:21:16 schmonz Exp $
 
 Call it "xapian-omega" and follow hier(7).
 
---- Makefile.in.orig	2014-06-22 07:05:39.000000000 +0000
+--- Makefile.in.orig	2015-05-21 06:11:47.000000000 +0000
 +++ Makefile.in
 @@ -55,7 +55,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -13,7 +13,7 @@ Call it "xapian-omega" and follow hier(7).
  bin_PROGRAMS = omindex$(EXEEXT) scriptindex$(EXEEXT)
  check_PROGRAMS = atomparsetest$(EXEEXT) htmlparsetest$(EXEEXT) \
  	md5test$(EXEEXT) urlenctest$(EXEEXT) utf8converttest$(EXEEXT)
-@@ -461,7 +461,7 @@ AM_CPPFLAGS = \
+@@ -471,7 +471,7 @@ AM_CPPFLAGS = \
  	-DCONFIGFILE_SYSTEM=\"$(sysconfdir)/omega.conf\" \
  	-DPKGLIBBINDIR=\"$(pkglibbindir)\"
  
@@ -22,7 +22,7 @@ Call it "xapian-omega" and follow hier(7).
  dist_pkglibbin_SCRIPTS = outlookmsg2html
  dist_bin_SCRIPTS = dbi2omega htdig2omega mbox2omega
  TESTS = atomparsetest$(EXEEXT)\
-@@ -470,7 +470,7 @@ TESTS = atomparsetest$(EXEEXT)\
+@@ -480,7 +480,7 @@ TESTS = atomparsetest$(EXEEXT)\
  	urlenctest$(EXEEXT)\
  	utf8converttest$(EXEEXT)
  
@@ -31,14 +31,14 @@ Call it "xapian-omega" and follow hier(7).
  dist_omegadata_DATA = htdig2omega.script mbox2omega.script
  dist_sysconf_DATA = omega.conf
  
-@@ -716,8 +716,8 @@ htmlparsetest$(EXEEXT): $(htmlparsetest_
- md5test$(EXEEXT): $(md5test_OBJECTS) $(md5test_DEPENDENCIES) $(EXTRA_md5test_DEPENDENCIES) 
- 	@rm -f md5test$(EXEEXT)
- 	$(CXXLINK) $(md5test_OBJECTS) $(md5test_LDADD) $(LIBS)
+@@ -736,8 +736,8 @@ common/$(DEPDIR)/$(am__dirstamp):
+ 	@: > common/$(DEPDIR)/$(am__dirstamp)
+ common/str.$(OBJEXT): common/$(am__dirstamp) \
+ 	common/$(DEPDIR)/$(am__dirstamp)
 -omega$(EXEEXT): $(omega_OBJECTS) $(omega_DEPENDENCIES) $(EXTRA_omega_DEPENDENCIES) 
 -	@rm -f omega$(EXEEXT)
 +xapian-omega$(EXEEXT): $(omega_OBJECTS) $(omega_DEPENDENCIES) $(EXTRA_omega_DEPENDENCIES) 
 +	@rm -f xapian-omega$(EXEEXT)
  	$(CXXLINK) $(omega_OBJECTS) $(omega_LDADD) $(LIBS)
- omindex$(EXEEXT): $(omindex_OBJECTS) $(omindex_DEPENDENCIES) $(EXTRA_omindex_DEPENDENCIES) 
- 	@rm -f omindex$(EXEEXT)
+ common/getopt.$(OBJEXT): common/$(am__dirstamp) \
+ 	common/$(DEPDIR)/$(am__dirstamp)
