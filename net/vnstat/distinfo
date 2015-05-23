@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/17 21:35:56 gls Exp $
+$NetBSD: distinfo,v 1.3 2015/05/23 13:43:15 rodent Exp $
 
-SHA1 (vnstat-1.11.tar.gz) = 92494f38a752dcf60053af2a6d8977737da7e616
-RMD160 (vnstat-1.11.tar.gz) = c7a8602c6ed86c674b14b2b8708e97f5999fb0e5
-Size (vnstat-1.11.tar.gz) = 79075 bytes
+SHA1 (vnstat-1.14.tar.gz) = 73a3e7ad76eb0ec67473cc8ef63fc0da2d5a87ba
+RMD160 (vnstat-1.14.tar.gz) = 9cbe5d4f11d757ae19db4b38155de63a8caf6164
+Size (vnstat-1.14.tar.gz) = 103281 bytes
