@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2015/04/25 14:25:05 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2015/05/23 06:51:21 kefren Exp $
 
 BUILDLINK_TREE+=	gnome-sharp
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.gnome-sharp?=	../../x11/gnome-sharp
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"

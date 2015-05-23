@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2015/04/25 14:25:05 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2015/05/23 06:51:21 kefren Exp $
 #
 
 DISTNAME=	gnome-sharp-2.24.2
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sharp/2.24/}
 
@@ -44,7 +44,7 @@ BUILDLINK_API_DEPENDS.libart+=		libart>=2.3.20
 .include "../../graphics/libart/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomecanvas+=	libgnomecanvas>=2.20.0
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.22.0
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.13.0
