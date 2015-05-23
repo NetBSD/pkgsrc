@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2015/04/06 08:17:17 adam Exp $
+# $NetBSD: Makefile,v 1.36 2015/05/23 06:28:58 kefren Exp $
 
-DISTNAME=	xsp-2.10.2
+DISTNAME=	xsp-3.8
 PKGNAME=	mono-${DISTNAME}
-PKGREVISION=	10
 CATEGORIES=	www
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/xsp/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://download.mono-project.com/sources/xsp/
 
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/ASP.NET
@@ -25,6 +23,12 @@ SUBST_FILES.unwrap_mk=		unittests/Tests.XSP.Security/Makefile
 SUBST_SED.unwrap_mk=		-e 's,^MAKEINFO = .*,MAKEINFO = makeinfo,'
 SUBST_SED.unwrap_mk+=		-e 's,^PKG_CONFIG = .*,PKG_CONFIG = ${PREFIX}/bin/pkg-config,'
 
+SUBST_CLASSES+=         fix-mcs
+SUBST_STAGE.fix-mcs=    post-patch
+SUBST_MESSAGE.fix-mcs=  Fix compiler name
+SUBST_FILES.fix-mcs=    configure
+SUBST_SED.fix-mcs=      -e 's,gmcs,mcs,'
+
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
