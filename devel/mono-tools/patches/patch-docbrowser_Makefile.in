@@ -1,0 +1,12 @@
+$NetBSD: patch-docbrowser_Makefile.in,v 1.1 2015/05/23 06:57:15 kefren Exp $
+
+--- docbrowser/Makefile.in.orig	2015-05-22 17:16:46.000000000 +0300
++++ docbrowser/Makefile.in	2015-05-22 17:17:32.000000000 +0300
+@@ -396,6 +396,7 @@ monowebbrowserrender_sources = \
+ 
+ admin_sources = \
+ 	$(srcdir)/admin.cs		\
++	$(srcdir)/editing.cs		\
+ 	$(srcdir)/Contributions.cs
+ 
+ browser_assemblies = $(GTK_SHARP_LIBS) $(MONODOC_LIBS) $(GNOME_SHARP_LIBS) -r:System.Web.Services -r:System.Web
