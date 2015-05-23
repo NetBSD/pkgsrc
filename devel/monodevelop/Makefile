@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.77 2015/04/25 14:20:37 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2015/05/23 15:59:14 kefren Exp $
 
-DISTNAME=	monodevelop-2.4.2
-PKGREVISION=	38
+MD_VERSION=	5.0.1
+DISTNAME=	monodevelop-${MD_VERSION}-0
+PKGNAME=	monodevelop-${MD_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
+MASTER_SITES=	http://download.mono-project.com/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://monodevelop.com/
 COMMENT=	IDE for C\# and other .NET languages
+LICENSE=	gnu-lgpl-v2
 
+WRKSRC=		${WRKDIR}/monodevelop-${MD_VERSION}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake:run perl:run pkg-config bash:run msgfmt
 EXTRACT_USING=	gtar
@@ -24,7 +27,6 @@ REPLACE_BASH+=	theme-icons/icon-theme-installer
 MAKE_OVERRIDE=	src/addins/MonoDeveloperExtensions/MonoSolutionItemHandler.cs
 MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/SolutionDeployer.cs
 MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs
-MAKE_OVERRIDE+=	tests/UnitTests/MonoDevelop.Projects/PackagingTests.cs
 MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/Makefile.noauto.project.template
 MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/Makefile.solution.template
 MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/make-dist.targets
@@ -37,11 +39,17 @@ SUBST_MESSAGE.fix-gmake=	Fixing GNU make references
 SUBST_FILES.fix-gmake=		${MAKE_OVERRIDE}
 SUBST_SED.fix-gmake=		-e 's,MAKEPROGRAM,${MAKE_PROGRAM},'
 
+SUBST_CLASSES+=		fix-mcs
+SUBST_STAGE.fix-mcs=	post-patch
+SUBST_MESSAGE.fix-mcs=	Fix compiler name
+SUBST_FILES.fix-mcs=	configure
+SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'
+
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgdiplus/buildlink3.mk"
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtksourceview-sharp2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
