@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2303 2015/05/23 18:21:08 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.2304 2015/05/23 18:21:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4402,3 +4402,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/vnstat to 1.14 [rodent 2015-05-23]
 	Updated time/anacron to 2.3nb3 [bsiegert 2015-05-23]
 	Updated textproc/xapian to 1.2.21 [schmonz 2015-05-23]
+	Updated textproc/xapian-omega to 1.2.21 [schmonz 2015-05-23]
