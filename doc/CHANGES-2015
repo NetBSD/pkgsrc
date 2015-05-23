@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2295 2015/05/23 08:54:38 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2296 2015/05/23 09:43:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4388,3 +4388,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Perl-Releases to 2.18 [mef 2015-05-23]
 	Updated devel/p5-signatures to 0.12 [mef 2015-05-23]
 	Updated net/tor to 0.2.6.8 [bsiegert 2015-05-23]
+	Updated textproc/p5-Lingua-EN-Sentence to 0.28 [mef 2015-05-23]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.899 [mef 2015-05-23]
+	Updated textproc/p5-Pod-Tree to 1.23 [mef 2015-05-23]
