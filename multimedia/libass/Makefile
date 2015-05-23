@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2015/02/11 10:58:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/23 11:00:02 adam Exp $
 
-DISTNAME=	libass-0.12.1
+DISTNAME=	libass-0.12.2
 CATEGORIES=	multimedia
-MASTER_SITES=	https://github.com/libass/libass/releases/download/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libass/}
+GITHUB_PROJECT=	libass
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
