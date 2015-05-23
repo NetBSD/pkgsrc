@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/10 01:03:59 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/05/23 18:21:16 schmonz Exp $
 bin/dbi2omega
 bin/htdig2omega
 bin/mbox2omega
@@ -9,6 +9,7 @@ libexec/cgi-bin/xapian-omega
 man/man1/omindex.1
 man/man1/scriptindex.1
 share/doc/xapian-omega/cgiparams.html
+share/doc/xapian-omega/encodings.html
 share/doc/xapian-omega/index.html
 share/doc/xapian-omega/omegascript.html
 share/doc/xapian-omega/overview.html
