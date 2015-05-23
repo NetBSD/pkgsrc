@@ -1,0 +1,11 @@
+--- monodevelop.in.orig	2015-05-23 19:14:46.000000000 +0300
++++ monodevelop.in	2015-05-23 19:14:53.000000000 +0300
+@@ -10,7 +10,7 @@
+ export OXYGEN_DISABLE_INNER_SHADOWS_HACK=1
+ 
+ #this script should be in $PREFIX/bin
+-MONO_EXEC="exec -a monodevelop mono-sgen"
++MONO_EXEC="exec -a monodevelop mono"
+ EXE_PATH="${0%%/bin/monodevelop}/lib/monodevelop/bin/MonoDevelop.exe"
+ 
+ _MD_REDIRECT_LOG="${MD_REDIRECT_LOG:-${XDG_CONFIG_HOME:-$HOME/.config}/MonoDevelop/log}"
