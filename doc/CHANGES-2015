@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2285 2015/05/22 09:21:20 sborrill Exp $
+$NetBSD: CHANGES-2015,v 1.2286 2015/05/23 00:35:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4362,3 +4362,14 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/jpegoptim to 1.4.3 [adam 2015-05-22]
 	Updated textproc/py-pygments to 2.0.2 [adam 2015-05-22]
 	Updated www/apache22 to 2.2.29nb1 [sborrill 2015-05-22]
+	Updated devel/p5-Config-General to 2.57 [mef 2015-05-22]
+	Updated devel/p5-CPAN-Meta-YAML to 0.016 [mef 2015-05-22]
+	Updated devel/p5-Capture-Tiny to 0.30 [mef 2015-05-22]
+	Updated devel/p5-Class-ErrorHandler to 0.04 [mef 2015-05-22]
+	Updated devel/p5-Config-Properties to 1.80 [mef 2015-05-22]
+	Updated devel/p5-Data-Munge to 0.095 [mef 2015-05-22]
+	Updated devel/p5-Eval-Closure to 0.13 [mef 2015-05-23]
+	Updated devel/p5-List-MoreUtils to 0.412 [mef 2015-05-23]
+	Updated devel/p5-Module-Build to 0.42120 [mef 2015-05-23]
+	Updated devel/p5-MooseX-Declare to 0.41 [mef 2015-05-23]
+	Updated devel/p5-Parallel-ForkManager to 1.14 [mef 2015-05-23]
