@@ -1,12 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2014/06/25 13:08:37 drochner Exp $
+# $NetBSD: options.mk,v 1.7 2015/05/23 08:53:11 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
-PKG_SUPPORTED_OPTIONS=	threads doc
+PKG_SUPPORTED_OPTIONS=	doc
 PKG_SUGGESTED_OPTIONS+=	doc
-
-.if !empty(PTHREAD_TYPE:Mnative)
-PKG_SUGGESTED_OPTIONS+=	threads
-.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,18 +16,4 @@ BUILD_DEPENDS+=		asciidoc>=8.3.3:../../textproc/asciidoc
 CONFIGURE_ARGS+=	--enable-asciidoc
 .else
 CONFIGURE_ARGS+=	--disable-asciidoc
-.endif
-
-
-###
-### This enables new code for threaded operation on NetBSD, OpenBSD, etc.
-### I used {PTHREAD,RESOLV}_AUTO_VARS here for consistency's sake, as
-### I don't trust configure scripts to do this properly on all platforms.
-###
-.if !empty(PKG_OPTIONS:Mthreads)
-CONFIGURE_ARGS+=	--enable-threads
-PTHREAD_OPTS+=		require
-PTHREAD_AUTO_VARS=	yes
-.else
-CONFIGURE_ARGS+=	--disable-threads
 .endif
