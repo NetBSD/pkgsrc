@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/17 15:47:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/24 05:24:12 spz Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	2
@@ -89,10 +89,10 @@ CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+=	--with-system-mitkrb5
 CONFIGURE_ARGS+=	--abi-check-disable
 #CONFIGURE_ARGS+=	--bundled-libraries=!crypto,ldb,ntdb,talloc,tdb,tevent
-.if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
-CONFIGURE_ARGS+=	--jobs=1
-.else
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
+.else
+CONFIGURE_ARGS+=	--jobs=1
 .endif
 
 # for winbind option build.
