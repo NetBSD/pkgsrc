@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2309 2015/05/24 13:49:34 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2310 2015/05/24 13:51:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4408,3 +4408,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/python27 to 2.7.10 [adam 2015-05-24]
 	Updated multimedia/mpv to 0.9.2 [adam 2015-05-24]
 	Updated security/p5-Crypt-CipherSaber to 1.01 [mef 2015-05-24]
+	Updated security/p5-Crypt-Rijndael to 1.13 [mef 2015-05-24]
