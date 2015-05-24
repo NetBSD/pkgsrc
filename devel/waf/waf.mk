@@ -1,4 +1,4 @@
-# $NetBSD: waf.mk,v 1.1 2014/09/08 12:12:10 wiz Exp $
+# $NetBSD: waf.mk,v 1.2 2015/05/24 14:06:42 bsiegert Exp $
 
 WAF_ENV+=	CC=${CC:Q}
 WAF_ENV+=	CFLAGS=${CFLAGS:Q}
@@ -10,6 +10,12 @@ WAF_ENV+=	PATH=${PATH:Q}
 WAF_ENV+=	PREFIX=${PREFIX}
 .if defined(MAKE_JOBS)
 WAF_ENV+=	JOBS=${MAKE_JOBS:Q}
+.endif
+
+# Kludge to support rst2man on Mac OS X, PR pkg/49921
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+WAF_ENV+=	LC_ALL="en_US.UTF-8"
 .endif
 
 WAF_ARGS=	--mandir=${PREFIX}/${PKGMANDIR}
