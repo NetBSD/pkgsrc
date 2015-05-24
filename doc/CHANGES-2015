@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2305 2015/05/23 18:21:40 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.2306 2015/05/24 07:34:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4404,3 +4404,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/xapian to 1.2.21 [schmonz 2015-05-23]
 	Updated textproc/xapian-omega to 1.2.21 [schmonz 2015-05-23]
 	Updated textproc/p5-Search-Xapian to 1.2.21.0 [schmonz 2015-05-23]
+	Updated archivers/p5-Archive-Tar-Wrapper to 0.22 [mef 2015-05-24]
