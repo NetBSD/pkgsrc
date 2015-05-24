@@ -1,19 +1,12 @@
-$NetBSD: distinfo,v 1.50 2015/04/24 03:01:35 rodent Exp $
+$NetBSD: distinfo,v 1.51 2015/05/24 07:44:07 adam Exp $
 
-SHA1 (Python-2.7.9.tar.xz) = 3172f6e957713c2d9fca462cc16068222fd1b9d3
-RMD160 (Python-2.7.9.tar.xz) = 2b047c3b56987b473c3ca957ad87f5582c37d6f6
-Size (Python-2.7.9.tar.xz) = 12164712 bytes
-SHA1 (patch-Doc_library_ssl.rst) = f8fe95057675486bf9dbac30bad442e79ea75136
+SHA1 (Python-2.7.10.tar.xz) = ee5a50c5562e7448f037d35fdedc18d95c748b9e
+RMD160 (Python-2.7.10.tar.xz) = eb003de9bb52fc2c6a2d2e3dcb816ba0c56751d0
+Size (Python-2.7.10.tar.xz) = 12250696 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib_distutils_unixccompiler.py) = def4142633b8f6b75e905b5c57be1d5c19b42d33
-SHA1 (patch-Lib_dumbdb.py) = 56c15b68bafbdbcc009a9210019607293559dd32
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
-SHA1 (patch-Lib_socket.py) = d22b4f0721124313f031e03c36149c90dc39f714
-SHA1 (patch-Lib_ssl.py) = 33d5fde22614a4cba75159ea1c7aff92169dbfba
-SHA1 (patch-Lib_test_test__dumbdbm.py) = ec743572b23e5a7cebd2556a13bbd7d5692e639d
-SHA1 (patch-Lib_test_test__ssl.py) = 1c423632b2fe66dee0ee35e10cdc4704dba0d185
-SHA1 (patch-Modules___ssl.c) = ba5800d57cbfb1ca29dbfaf2d57ba196669f2684
 SHA1 (patch-Modules_getaddrinfo.c) = aa699d257f1bc98b9a3183a21324053e134409d1
 SHA1 (patch-Modules_getpath.c) = 9bb2c040895ad6bbe4d0b5807803723b5437d47b
 SHA1 (patch-Modules_mmapmodule.c) = 3f401b59883af3232b6c77a76a08e5feffa77044
@@ -24,7 +17,7 @@ SHA1 (patch-ab) = ea4feba4e93dbcff07050c82a00d591bb650e934
 SHA1 (patch-ad) = 96ae702995d434e2d7ec0ac62e37427a90b61d13
 SHA1 (patch-ae) = d836d77854a2b3d79fa34a06a8e2493bf0a503e6
 SHA1 (patch-ah) = 90b19239d8a7c8abc3bbc05d49408a2c5da6174d
-SHA1 (patch-al) = d605a47a8aaac7b928af88d22429ce9e557f271b
+SHA1 (patch-al) = 541936b79f281db06761f4fa6a65a04e852b02b4
 SHA1 (patch-am) = a7697dda83b151fdd30d460bdcf5ab3cc057c92b
 SHA1 (patch-an) = 9aad78714c4fe1a21cf66a6627d97d164ecea196
 SHA1 (patch-ao) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
@@ -33,6 +26,5 @@ SHA1 (patch-av) = e6aef090b444b455fe351308d251e670329b7dc3
 SHA1 (patch-aw) = d07129531ec1427669092c504c12247206408c2d
 SHA1 (patch-ax) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
 SHA1 (patch-az) = 01e113b0bd251978b555caaaa60b79c372edebce
-SHA1 (patch-configure.ac) = 88daa10dc8cdfd490c911ad9f2143f4ec6a82e12
-SHA1 (patch-pyconfig.h.in) = a52a02cbc7ce7c988e0169a92e58342762e7ce0a
+SHA1 (patch-pyconfig.h.in) = a0143ecdc2a3fb10220d0e3ee94fb9779a45e9e1
 SHA1 (patch-xa) = 517cfefc2f2e13631d22bad28c327513cdf17c10
