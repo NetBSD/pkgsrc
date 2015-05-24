@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2015/03/19 15:46:26 taca Exp $
+# $NetBSD: Makefile,v 1.71 2015/05/24 14:48:54 jym Exp $
 
 DISTNAME=	roundcubemail-1.1.1
 PKGNAME=	${DISTNAME:S/mail-/-/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -47,6 +48,7 @@ RCDIR=			${PREFIX}/share/roundcube
 EGDIR=			${PREFIX}/share/examples/roundcube
 DOCDIR=			${PREFIX}/share/doc/roundcube
 PAX_DIRS=		plugins program skins installer
+SQL_DIRS=		mssql mysql oracle postgres sqlite
 
 CONF_PLUGINS=		acl additional_message_headers help \
 			http_authentication jqueryui managesieve \
@@ -59,9 +61,11 @@ FILES_SUBST+=		RCDIR=${RCDIR}
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}
 OWN_DIRS_PERMS+=	${VARBASE}/log/roundcube \
-			${WWW_USER} ${WWW_GROUP} 0755
+			${WWW_USER} ${WWW_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/spool/roundcube \
-			${WWW_USER} ${WWW_GROUP} 0755
+			${WWW_USER} ${WWW_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/tmp/roundcube \
+			${WWW_USER} ${WWW_GROUP} 0750
 
 CONF_FILES=		${EGDIR}/roundcube.conf \
 			${PKG_SYSCONFDIR}/roundcube.conf
@@ -86,11 +90,14 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_MESSAGE.files=	Fixing configuration files.
 SUBST_FILES.files=	roundcube.conf
-SUBST_FILES.files+=	installer/index.php installer/rcube_install.php
+SUBST_FILES.files+=	config/config.inc.php.sample
+SUBST_FILES.files+=	installer/index.php
 SUBST_FILES.files+=	program/include/iniset.php
+SUBST_FILES.files+=	program/lib/Roundcube/rcube_mime.php
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_EXAMPLES@|${PREFIX}/share/examples/roundcube|g"
+SUBST_SED.files+=	-e "s|@PKG_SYSCONFBASE@|${PKG_SYSCONFBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 .if ${PKG_APACHE} == "apache24"
 SUBST_SED.files+=	-e "/Order allow,deny/d"
@@ -118,7 +125,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DESTDIR}${RCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${RCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${RCDIR}/
+
 	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${DESTDIR}${RCDIR}/SQL/
+.for i in ${SQL_DIRS}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/SQL/${i}
+	${INSTALL_DATA} ${WRKSRC}/SQL/${i}/*.sql ${DESTDIR}${RCDIR}/SQL/${i}
+.endfor
 
 	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
 		${DESTDIR}${EGDIR}/roundcube.conf

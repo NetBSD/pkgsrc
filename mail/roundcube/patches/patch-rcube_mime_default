@@ -1,0 +1,23 @@
+$NetBSD: patch-rcube_mime_default,v 1.1 2015/05/24 14:48:54 jym Exp $
+Fix path to /etc/.
+--- program/lib/Roundcube/rcube_mime.php.orig	2015-03-16 20:54:50.000000000 +0000
++++ program/lib/Roundcube/rcube_mime.php
+@@ -807,12 +807,12 @@ class rcube_mime
+             $file_paths[] = 'C:/xampp/apache/conf/mime.types.';
+         }
+         else {
+-            $file_paths[] = '/etc/mime.types';
+-            $file_paths[] = '/etc/httpd/mime.types';
+-            $file_paths[] = '/etc/httpd2/mime.types';
+-            $file_paths[] = '/etc/apache/mime.types';
+-            $file_paths[] = '/etc/apache2/mime.types';
+-            $file_paths[] = '/etc/nginx/mime.types';
++            $file_paths[] = '@PKG_SYSCONFBASE@/mime.types';
++            $file_paths[] = '@PKG_SYSCONFBASE@/httpd/mime.types';
++            $file_paths[] = '@PKG_SYSCONFBASE@/httpd2/mime.types';
++            $file_paths[] = '@PKG_SYSCONFBASE@/apache/mime.types';
++            $file_paths[] = '@PKG_SYSCONFBASE@/apache2/mime.types';
++            $file_paths[] = '@PKG_SYSCONFBASE@/nginx/mime.types';
+             $file_paths[] = '/usr/local/etc/httpd/conf/mime.types';
+             $file_paths[] = '/usr/local/etc/apache/conf/mime.types';
+         }
