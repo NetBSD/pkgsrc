@@ -1,4 +1,4 @@
-$NetBSD: patch-FlickrRemote.cs,v 1.1 2015/05/23 10:33:01 kefren Exp $
+$NetBSD: patch-FlickrRemote.cs,v 1.2 2015/05/24 06:50:14 kefren Exp $
 
 Make it compile with newer flickrnet
 
@@ -44,7 +44,7 @@ Make it compile with newer flickrnet
  
  	public ArrayList Search (string[] tags, int licenseId)
  	{
-+		var options = new PhotoSearchOptions { Tags = tags.Aggregate((a, b) => a += b + " ") };
++		var options = new PhotoSearchOptions { Tags = tags.Aggregate((a, b) => a + " " + b) };
  		ArrayList photos_url = new ArrayList ();
  		// Photos photos = flickr.PhotosSearchText (tags, licenseId);
 -		Photos photos = flickr.PhotosSearch (tags);
