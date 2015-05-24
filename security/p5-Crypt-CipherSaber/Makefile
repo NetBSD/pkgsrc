@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 13:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/05/24 13:49:19 mef Exp $
 #
 
-DISTNAME=		Crypt-CipherSaber-1.00
+DISTNAME=		Crypt-CipherSaber-1.01
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		6
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
