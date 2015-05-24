@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/03/17 08:55:57 taca Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2015/05/24 11:33:38 tron Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
-PKGREVISION=	2
+#PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
