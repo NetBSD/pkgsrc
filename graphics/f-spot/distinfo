@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2015/05/23 10:33:01 kefren Exp $
+$NetBSD: distinfo,v 1.10 2015/05/24 06:50:14 kefren Exp $
 
 SHA1 (f-spot-0.8.2.tar.bz2) = 258e30a11ac24f963a47ead19c3d14bf755816e5
 RMD160 (f-spot-0.8.2.tar.bz2) = 658f437cb336fc29a718cf021ba54ee62dbee757
 Size (f-spot-0.8.2.tar.bz2) = 3222712 bytes
 SHA1 (patch-FlickrExport.cs) = 15610c7f0e0d321d8acf4282cb04953e62180c2c
-SHA1 (patch-FlickrRemote.cs) = 63b3e8c6e57ca2c02a38c00fc2f0dcaf69825779
+SHA1 (patch-FlickrRemote.cs) = a77d7306a4ac149891d73e880ff93253584c9a29
 SHA1 (patch-FolderTreeView.cs) = 0e5804189b8c11caafe0bbcae8faa9a24fa4d5a5
 SHA1 (patch-GdkImageLoader.cs) = 945f8349af0a5cbbfd97cf73641eae268a8aed05
 SHA1 (patch-GroupSelector.cs) = bed9b5e8737f3079037bc0e68898ae765808c01e
