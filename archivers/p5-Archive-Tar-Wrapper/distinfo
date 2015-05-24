@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/23 02:11:40 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/05/24 07:33:59 mef Exp $
 
-SHA1 (Archive-Tar-Wrapper-0.18.tar.gz) = 5a68dd97dcaad781ecf6254d15ae0a387542922b
-RMD160 (Archive-Tar-Wrapper-0.18.tar.gz) = 289e3f1f8c75e22fdd6e64f0c56477b9f1eb28db
-Size (Archive-Tar-Wrapper-0.18.tar.gz) = 16051 bytes
+SHA1 (Archive-Tar-Wrapper-0.22.tar.gz) = 287fbd4290d6950cc92143a850e3616cf9275378
+RMD160 (Archive-Tar-Wrapper-0.22.tar.gz) = 9c716770c0d96de6f55c96f6e001c2d7678f9a77
+Size (Archive-Tar-Wrapper-0.22.tar.gz) = 16230 bytes
