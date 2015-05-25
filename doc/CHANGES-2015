@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2312 2015/05/25 17:33:00 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.2313 2015/05/25 17:53:11 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4411,3 +4411,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Crypt-Rijndael to 1.13 [mef 2015-05-24]
 	Updated mail/roundcube to 1.1.1nb1 [jym 2015-05-24]
 	Updated devel/deforaos-configure to 0.2.1 [khorben 2015-05-25]
+	Updated x11/deforaos-libdesktop to 0.2.0 [khorben 2015-05-25]
