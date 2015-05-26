@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2015/05/26 12:15:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.160 2015/05/26 12:19:46 jperkin Exp $
 
 DISTNAME=	mono-4.0.1
 PKGREVISION=	1
@@ -17,7 +17,7 @@ ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
 
 USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
@@ -137,6 +137,7 @@ PLIST_VARS=	monodoc
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
+CFLAGS+=		-D_XOPEN_SOURCE=600
 CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
 CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
