@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2015/05/23 06:20:20 kefren Exp $
+# $NetBSD: Makefile,v 1.159 2015/05/26 12:15:49 jperkin Exp $
 
 DISTNAME=	mono-4.0.1
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
-MAKE_JOBS_SAFE=	yes
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
