@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2015/05/26 13:56:16 jperkin Exp $
+
+Find the correct libcrypto.
+
+--- configure.in.orig	2013-11-06 20:52:23.000000000 +0000
++++ configure.in
+@@ -202,7 +202,7 @@ AC_MSG_RESULT("pkinit will use \'$withva
+ ], withval=$PKINIT_CRYPTO_IMPL)
+ case "$withval" in
+ builtin|openssl)
+-  AC_CHECK_LIB(crypto, PKCS7_get_signer_info, PKINIT_CRYPTO_IMPL_LIBS=-lcrypto)
++  AC_CHECK_LIB(crypto, PKCS7_get_signer_info, PKINIT_CRYPTO_IMPL_LIBS="-L${BUILDLINK_PREFIX_OPENSSL}/lib -lcrypto")
+   PKINIT_CRYPTO_IMPL=openssl
+   ;;
+ nss)
