@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.41 2015/04/21 17:01:56 joerg Exp $
+# $NetBSD: NetBSD.mk,v 1.42 2015/05/26 10:08:37 joerg Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -13,14 +13,8 @@ PS?=		/bin/ps
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 
-.if exists(/usr/sbin/user)
 USERADD?=	/usr/sbin/useradd
 GROUPADD?=	/usr/sbin/groupadd
-.else
-USERADD?=	${LOCALBASE}/sbin/useradd
-GROUPADD?=	${LOCALBASE}/sbin/groupadd
-_USER_DEPENDS=	user>=20000313:../../sysutils/user
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
