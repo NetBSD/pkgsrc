@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2315 2015/05/26 10:52:52 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.2316 2015/05/26 10:54:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/deforaos-libdesktop to 0.2.0 [khorben 2015-05-25]
 	Updated databases/mysql-cluster to 7.4.6 [jnemeth 2015-05-25]
 	Added print/tex-europecv version 2014 [jaapb 2015-05-26]
+	Added print/tex-europecv-doc version 2014 [jaapb 2015-05-26]
