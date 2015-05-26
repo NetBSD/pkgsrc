@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/05/24 05:24:12 spz Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/26 15:11:25 jperkin Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	2
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 VERSION=	4.2.1
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 BUILD_DEFS+=		VARBASE
 
@@ -96,8 +98,13 @@ CONFIGURE_ARGS+=	--jobs=1
 .endif
 
 # for winbind option build.
+.if ${OPSYS} != "SunOS"
 LDFLAGS+=		-Wl,--allow-shlib-undefined
+.endif
+LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${SMB_PRIVATELIB}
+
+CFLAGS.SunOS+=		-DHAVE_SOLARIS_GETGRENT_R
 
 .include "options.mk"
 
@@ -187,5 +194,6 @@ PY_PATCHPLIST=	yes
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mit-krb5+=	mit-krb5>=1.9.0
 .include "../../security/mit-krb5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
