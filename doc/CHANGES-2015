@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2316 2015/05/26 10:54:24 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.2317 2015/05/26 12:19:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4415,3 +4415,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql-cluster to 7.4.6 [jnemeth 2015-05-25]
 	Added print/tex-europecv version 2014 [jaapb 2015-05-26]
 	Added print/tex-europecv-doc version 2014 [jaapb 2015-05-26]
+	Updated www/firefox31 to 31.7.0 [ryoon 2015-05-26]
