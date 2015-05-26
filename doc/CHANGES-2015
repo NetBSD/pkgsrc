@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2320 2015/05/26 14:33:20 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2321 2015/05/26 15:19:44 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4419,3 +4419,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/thunderbird to 31.7.0 [ryoon 2015-05-26]
 	Updated www/firefox31 to 31.7.0 [ryoon 2015-05-26]
 	Updated devel/userspace-rcu to 0.8.7 [pettai 2015-05-26]
+	Updated net/samba4 to 4.2.1nb3 [jperkin 2015-05-26]
+	Updated net/samba4 to 4.2.1nb3 [jperkin 2015-05-26]

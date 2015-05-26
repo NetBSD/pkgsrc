@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14402 2015/05/19 16:37:26 nros Exp $
+$NetBSD: TODO,v 1.14403 2015/05/26 15:19:44 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -987,8 +987,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-review-1.4.0 [wip]
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.1.9
-	o samba-4.1.14
 	o sane-1.0.24
 	o sarg-2.2.5
 	o scew-0.4.0
