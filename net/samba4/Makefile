@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/05/26 15:11:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/26 15:17:56 jperkin Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/
 
@@ -154,6 +154,10 @@ SUBST_MESSAGE.logpath=	Fixing log path.
 SUBST_FILES.logpath=	examples/smb.conf.default
 SUBST_STAGE.logpath=	pre-configure
 SUBST_SED.logpath+=	-e 's,/usr/local/samba/var/log.%m,${SMB_LOGFILEBASE}/log.%m,g'
+
+.if ${INIT_SYSTEM} == "rc.d"
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.rcd
+.endif
 
 post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
