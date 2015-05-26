@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2015/05/21 03:29:41 jnemeth Exp $
+# $NetBSD: Makefile,v 1.639 2015/05/26 10:55:13 jaapb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -454,6 +454,8 @@ SUBDIR+=	tex-ethiop-doc
 SUBDIR+=	tex-etoolbox-de-doc
 SUBDIR+=	tex-euler
 SUBDIR+=	tex-euler-doc
+SUBDIR+=	tex-europecv
+SUBDIR+=	tex-europecv-doc
 SUBDIR+=	tex-everypage
 SUBDIR+=	tex-everypage-doc
 SUBDIR+=	tex-exam
