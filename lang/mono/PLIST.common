@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.22 2015/05/21 14:38:08 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.23 2015/05/26 12:14:49 jperkin Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -1086,10 +1086,12 @@ share/examples/mono/2.0/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/2.0/machine.config
 share/examples/mono/2.0/settings.map
 share/examples/mono/2.0/web.config
+share/examples/mono/4.0/Browsers/Compat.browser
 share/examples/mono/4.0/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/4.0/machine.config
 share/examples/mono/4.0/settings.map
 share/examples/mono/4.0/web.config
+share/examples/mono/4.5/Browsers/Compat.browser
 share/examples/mono/4.5/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/4.5/machine.config
 share/examples/mono/4.5/settings.map
