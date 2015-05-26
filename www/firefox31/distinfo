@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/04/28 12:06:34 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/05/26 12:18:23 ryoon Exp $
 
-SHA1 (firefox-31.6.0esr.source.tar.bz2) = 9c13012fec260c672e0e97ffb29f36fe360b02ad
-RMD160 (firefox-31.6.0esr.source.tar.bz2) = 76f216cc87609081efaa7b5de837952d06a5f2fb
-Size (firefox-31.6.0esr.source.tar.bz2) = 147767808 bytes
+SHA1 (firefox-31.7.0esr.source.tar.bz2) = d8c79d4228c15ff903e79362d2392401329e027f
+RMD160 (firefox-31.7.0esr.source.tar.bz2) = 1f04f235a3b2b0f2ac5d33951ae04e2131e5fff7
+Size (firefox-31.7.0esr.source.tar.bz2) = 147772244 bytes
 SHA1 (patch-aa) = 381ec50c3e66a2637f19401ac2c5ec4a29dc5627
 SHA1 (patch-ak) = 971ddb1f12b14bcee604c9d7e72da5e7bf47d9be
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
@@ -82,11 +82,9 @@ SHA1 (patch-ipc_ipdl_ipdl_lower.py) = 2ef9504e462d0e3db16f9b0a6303ea5971b9c2a2
 SHA1 (patch-js__src__vm__SPSProfiler.cpp) = 989ba25e4c5308d21d07baa802decce13609a475
 SHA1 (patch-js_src_Makefile.in) = 780e408dfddfd90c6013b316e2e52800c62eee5e
 SHA1 (patch-js_src_assembler_jit_ExecutableAllocator.h) = 819180c7ba72dc2641fe6cdce373f492e73cb5ff
-SHA1 (patch-js_src_builtin_TypedObject.cpp) = d44063579a0e36349d4c370a2e2cf09ebe6071e6
 SHA1 (patch-js_src_ctypes_CTypes.h) = 768a084239f92a424c1c7dc9eaaf9be9456ca9f0
-SHA1 (patch-js_src_frontend_BytecodeCompiler.cpp) = add5dee91325ee76df84beaf6b66eb7b7fed4aca
 SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e339bfbc
-SHA1 (patch-js_src_gc_Memory.cpp) = 3db31553ec6f7b1fac4fd4ce11b77be1ea4208b8
+SHA1 (patch-js_src_gc_Memory.cpp) = 872db8ab6d86ca25956bf3e1b396ab46f8573cf0
 SHA1 (patch-js_src_jit_AsmJSModule.cpp) = 7e1876ef605f783889ae811c96bbf31d766aee6e
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = 4e75d8a03c2372a3f2ccdd9e06caee11789b3acd
 SHA1 (patch-js_src_jit_arm_BaselineIC-arm.cpp) = 57ed2516904c17b7a037bb39e2d2ac2be403e313
