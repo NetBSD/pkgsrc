@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/26 10:53:48 jaapb Exp $
+share/texmf-dist/doc/latex/europecv/europecv.pdf
+share/texmf-dist/doc/latex/europecv/europecv.tex
+share/texmf-dist/doc/latex/europecv/examples/at.pdf
+share/texmf-dist/doc/latex/europecv/examples/bulgarian-koi8-r.tex
+share/texmf-dist/doc/latex/europecv/examples/bulgarian-utf8.tex
+share/texmf-dist/doc/latex/europecv/examples/greek-utf8.pdf
+share/texmf-dist/doc/latex/europecv/examples/greek-utf8.tex
+share/texmf-dist/doc/latex/europecv/examples/maltese-maltese.tex
+share/texmf-dist/doc/latex/europecv/examples/maltese-utf8.tex
+share/texmf-dist/doc/latex/europecv/examples/minimal.pdf
+share/texmf-dist/doc/latex/europecv/examples/minimal.tex
+share/texmf-dist/doc/latex/europecv/templates/cv_template_de.pdf
+share/texmf-dist/doc/latex/europecv/templates/cv_template_de.tex
+share/texmf-dist/doc/latex/europecv/templates/cv_template_en.pdf
+share/texmf-dist/doc/latex/europecv/templates/cv_template_en.tex
+share/texmf-dist/doc/latex/europecv/templates/cv_template_it.pdf
+share/texmf-dist/doc/latex/europecv/templates/cv_template_it.tex
+share/texmf-dist/doc/latex/europecv/templates/cv_template_pl.pdf
+share/texmf-dist/doc/latex/europecv/templates/cv_template_pl.tex
+share/texmf-dist/doc/latex/europecv/templates/publications.bib
