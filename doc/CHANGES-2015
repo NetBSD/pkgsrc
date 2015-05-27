@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2329 2015/05/27 12:27:40 he Exp $
+$NetBSD: CHANGES-2015,v 1.2330 2015/05/27 12:34:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache-tomcat7 to 7.0.62 [ryoon 2015-05-27]
 	Updated www/apache-tomcat8 to 8.0.23 [ryoon 2015-05-27]
 	Updated net/exabgp to 3.4.11 [he 2015-05-27]
+	Updated converters/dos2unix to 7.2.2 [ryoon 2015-05-27]
