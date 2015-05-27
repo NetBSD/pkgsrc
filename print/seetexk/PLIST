@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/27 22:13:15 markd Exp $
+bin/dvibook
+bin/dviconcat
+bin/dviselect
+bin/dvitodvi
+man/man1/dvibook.1
+man/man1/dviconcat.1
+man/man1/dviselect.1
+man/man1/dvitodvi.1
