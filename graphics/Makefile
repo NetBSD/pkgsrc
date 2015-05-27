@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.708 2015/05/23 09:02:18 kefren Exp $
+# $NetBSD: Makefile,v 1.709 2015/05/27 22:06:54 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -117,6 +117,7 @@ SUBDIR+=	fotoxx
 SUBDIR+=	frameworks
 SUBDIR+=	freeglut
 SUBDIR+=	freeimage
+SUBDIR+=	freeimageplus
 SUBDIR+=	freetype
 SUBDIR+=	freetype-lib
 SUBDIR+=	freetype-utils
