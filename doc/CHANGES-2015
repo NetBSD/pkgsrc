@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2338 2015/05/27 21:43:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2339 2015/05/27 21:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4510,3 +4510,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-IO-Socket-SSL to 2.015 [wiz 2015-05-27]
 	Updated time/p5-DateTime-Locale to 0.46 [wiz 2015-05-27]
 	Updated time/p5-DateTime-TimeZone to 1.90 [wiz 2015-05-27]
+	Updated www/p5-HTML-TableExtract to 2.13 [wiz 2015-05-27]
