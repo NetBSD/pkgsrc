@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2343 2015/05/27 22:09:50 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2344 2015/05/27 22:21:55 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4515,3 +4515,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/mupdf to 1.7a [wiz 2015-05-27]
 	Updated graphics/freeimage to 3.17.0 [markd 2015-05-27]
 	Added graphics/freeimageplus version 3.17.0 [markd 2015-05-27]
+	Added print/seetexk version 1.1 [markd 2015-05-27]
+	Added print/lacheck version 1.26 [markd 2015-05-27]
+	Updated meta-pkgs/texlive-collection-binextra to 2014pre3 [markd 2015-05-27]
