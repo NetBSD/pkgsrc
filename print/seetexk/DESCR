@@ -1,0 +1,9 @@
+The collection comprises: dvibook, which will rearrange the
+pages of a DVI file into 'signatures' as used when printing a
+book; dviconcat, for concatenating pages of DVI file(s);
+dviselect, which will select pages from one DVI file to create
+a new DVI file; dvitodvi, which will rearrange the pages of a
+DVI file to create a new file; and libtex, a library for
+manipulating the files, from the old SeeTeX project. The
+utilities are provided as C source with Imakefiles, and an MS-
+DOS version of dvibook is also provided.
