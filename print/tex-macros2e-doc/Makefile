@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/15 17:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/27 21:48:32 markd Exp $
 
 DISTNAME=	macros2e.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-v0.4
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.4
 TEXLIVE_REV=	23236
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
