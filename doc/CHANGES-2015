@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2336 2015/05/27 21:38:09 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2337 2015/05/27 21:42:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qt4-libs to 4.8.6nb6 [wiz 2015-05-27]
 	Updated x11/qt5-qtbase to 5.4.0nb4 [wiz 2015-05-27]
 	Updated security/p5-IO-Socket-SSL to 2.015 [wiz 2015-05-27]
+	Updated time/p5-DateTime-Locale to 0.46 [wiz 2015-05-27]
