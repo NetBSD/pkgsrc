@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14405 2015/05/27 06:50:09 wiz Exp $
+$NetBSD: TODO,v 1.14406 2015/05/27 13:06:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asapm-3.1
 	o asc-2.6.0
 	o aspell-nb-2.0.10
-	o asymptote-2.33
+	o asymptote-2.35
 	o aterm-1.0.1
 	o atk-2.16.0
 	o aubio-0.4.0
@@ -561,6 +561,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o frotz-2.44
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.6.1
 	o fuse-encfs-1.5.2
@@ -829,6 +830,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
+	o mupdf-1.7a [pkg/49918]
 	o muse-0.9.2
 	o mysql-5.7.6
 	o mysql-workbench-6.2.5
@@ -864,6 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o open-vm-tools-2010.09.19.301124
 	o openmortal-0.7.1
 	o openmpi-1.8.4
+	o openntpd-5.7p4 [pkg/49930]
 	o openoffice-4.1
 	o openoffice3-3.3
 	o openscad-2013.06
@@ -897,6 +900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pessulus-2.30.3 [GNOME 2.28]
 	o phonon-4.8.3
 	o php-jpgraph-3.0.6
+	o php-owncloud-8.0.3 [pkg/49916]
 	o php-tiki6-6.10
 	o php-tt-rss-1.15.3
 	o phpmyadmin-4.4
@@ -932,6 +936,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-PasteDeploy-1.5.2
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
+	o py-attic-0.16
 	o py-cassa-1.11.0
 	o py-cffi-1.0.3
 	o py-cparser-2.13
@@ -972,6 +977,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
+	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
 	o rabbitmq-3.5.1
