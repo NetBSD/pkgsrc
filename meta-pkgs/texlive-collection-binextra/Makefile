@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/10 03:05:06 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/27 22:19:42 markd Exp $
 
 DISTNAME=	collection-binextra
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2014pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36355
@@ -42,7 +42,7 @@ DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 # depend hook-pre-commit-pkg
 # depend hyphenex
 # depend installfont
-# depend lacheck
+DEPENDS+=	lacheck-[0-9]*:../../print/lacheck
 # depend latex-git-log
 # depend latex2man
 # depend latexdiff
@@ -64,7 +64,7 @@ DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
 # depend pkfix-helper
 # depend purifyeps
 # depend pythontex
-# depend seetexk
+DEPENDS+=	seetexk-[0-9]*:../../print/seetexk
 # depend sty2dtx
 # depend synctex
 # depend texcount
