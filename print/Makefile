@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2015/05/26 10:55:13 jaapb Exp $
+# $NetBSD: Makefile,v 1.640 2015/05/27 22:17:14 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -75,6 +75,7 @@ SUBDIR+=	jcabc2ps
 SUBDIR+=	kbibtex
 SUBDIR+=	kbibtex-kde3
 SUBDIR+=	kpathsea
+SUBDIR+=	lacheck
 SUBDIR+=	latex-mk
 SUBDIR+=	latexmk
 SUBDIR+=	lgrind
@@ -149,6 +150,7 @@ SUBDIR+=	ruby-pdf-writer
 SUBDIR+=	ruby-prawn
 SUBDIR+=	scribus
 SUBDIR+=	scribus-qt4
+SUBDIR+=	seetexk
 SUBDIR+=	stylewriter
 SUBDIR+=	tcl-pdflib
 SUBDIR+=	teTeX
