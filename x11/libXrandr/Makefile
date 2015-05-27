@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2014/02/05 09:42:33 obache Exp $
+# $NetBSD: Makefile,v 1.17 2015/05/27 06:44:09 wiz Exp $
 
-DISTNAME=		libXrandr-1.4.2
+DISTNAME=		libXrandr-1.5.0
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,10 +24,11 @@ PKGCONFIG_OVERRIDE+=	xrandr.pc.in
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.4
+BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
 
