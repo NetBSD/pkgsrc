@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/05/16 11:25:22 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/27 21:45:57 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2014pre3
+PKGNAME=	texlive-${DISTNAME}-2014pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -330,7 +330,7 @@ DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 # depend eukdate
 # depend europasscv
-# depend europecv
+DEPENDS+=	tex-europecv-[0-9]*:../../print/tex-europecv
 # depend everyhook
 DEPENDS+=	tex-everypage-[0-9]*:../../print/tex-everypage
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
