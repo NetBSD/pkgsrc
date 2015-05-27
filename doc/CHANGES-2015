@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2324 2015/05/27 06:46:00 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2325 2015/05/27 06:50:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4424,3 +4424,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/randrproto to 1.5.0 [wiz 2015-05-27]
 	Updated x11/libXrandr to 1.5.0 [wiz 2015-05-27]
 	Updated x11/xkeyboard-config to 2.15 [wiz 2015-05-27]
+	Updated games/lgogdownloader to 2.23 [wiz 2015-05-27]
