@@ -1,4 +1,4 @@
-# $NetBSD: setup.py,v 1.4 2013/08/09 15:18:58 adam Exp $
+# $NetBSD: setup.py,v 1.5 2015/05/27 20:46:34 wiz Exp $
 
 import distutils
 from distutils.core import setup, Extension
@@ -8,6 +8,7 @@ blincl = blprefix + '/include'
 bllib = blprefix + '/lib'
 tclrtprefix = '@TCLRTPREFIX@'
 tclrtlib = tclrtprefix + '/lib'
+tclincl = tclrtprefix + '/include/tcl/generic'
 tkrtprefix = '@TKRTPREFIX@'
 tkrtlib = tkrtprefix + '/lib'
 x11prefix = '@X11PREFIX@'
@@ -22,7 +23,7 @@ setup(
 			'_tkinter',
 			['Modules/_tkinter.c', 'Modules/tkappinit.c'],
 			define_macros=[('WITH_APPINIT', None)],
-			include_dirs=[blincl, x11incl],
+			include_dirs=[blincl, tclincl, x11incl],
 			library_dirs=[bllib, x11lib],
 			runtime_library_dirs=[tclrtlib, tkrtlib, x11rtlib],
 			libraries=['tk', 'tcl', @X11LIB@]
