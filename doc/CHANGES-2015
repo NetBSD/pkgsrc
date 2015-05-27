@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2325 2015/05/27 06:50:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2326 2015/05/27 12:20:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4425,3 +4425,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXrandr to 1.5.0 [wiz 2015-05-27]
 	Updated x11/xkeyboard-config to 2.15 [wiz 2015-05-27]
 	Updated games/lgogdownloader to 2.23 [wiz 2015-05-27]
+	Updated www/apache-tomcat7 to 7.0.62 [ryoon 2015-05-27]
