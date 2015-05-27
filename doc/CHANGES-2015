@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2342 2015/05/27 21:52:27 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2343 2015/05/27 22:09:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4513,3 +4513,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTML-TableExtract to 2.13 [wiz 2015-05-27]
 	Updated www/p5-Net-HTTP to 6.09 [wiz 2015-05-27]
 	Updated print/mupdf to 1.7a [wiz 2015-05-27]
+	Updated graphics/freeimage to 3.17.0 [markd 2015-05-27]
+	Added graphics/freeimageplus version 3.17.0 [markd 2015-05-27]
