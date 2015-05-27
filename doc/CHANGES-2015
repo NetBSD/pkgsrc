@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2339 2015/05/27 21:44:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2340 2015/05/27 21:45:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4511,3 +4511,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/p5-DateTime-Locale to 0.46 [wiz 2015-05-27]
 	Updated time/p5-DateTime-TimeZone to 1.90 [wiz 2015-05-27]
 	Updated www/p5-HTML-TableExtract to 2.13 [wiz 2015-05-27]
+	Updated www/p5-Net-HTTP to 6.09 [wiz 2015-05-27]
