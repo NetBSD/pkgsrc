@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/23 14:49:45 he Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/05/27 12:26:26 he Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/exabgp/application/bmp.pyo
 ${PYSITELIB}/exabgp/application/cli.py
 ${PYSITELIB}/exabgp/application/cli.pyc
 ${PYSITELIB}/exabgp/application/cli.pyo
+${PYSITELIB}/exabgp/application/healthcheck.py
+${PYSITELIB}/exabgp/application/healthcheck.pyc
+${PYSITELIB}/exabgp/application/healthcheck.pyo
 ${PYSITELIB}/exabgp/application/netlink.py
 ${PYSITELIB}/exabgp/application/netlink.pyc
 ${PYSITELIB}/exabgp/application/netlink.pyo
@@ -560,11 +563,11 @@ ${PYSITELIB}/exabgp/version.py
 ${PYSITELIB}/exabgp/version.pyc
 ${PYSITELIB}/exabgp/version.pyo
 bin/exabgp
+bin/healthcheck
 man/man1/exabgp.1
 man/man5/exabgp.conf.5
 share/exabgp/dynamic-1.pl
 share/exabgp/dynamic-1.sh
-share/exabgp/healthcheck.py
 share/exabgp/read-write.py
 share/exabgp/stderr-1.py
 share/exabgp/syslog-1.py
