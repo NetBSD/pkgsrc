@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/04/23 14:49:45 he Exp $
+# $NetBSD: Makefile,v 1.14 2015/05/27 12:26:26 he Exp $
 
-VERSION=	3.4.10
+VERSION=	3.4.11
 DISTNAME=	${VERSION}
 PKGNAME=	exabgp-${VERSION}
 EGG_NAME=	exabgp-${VERSION}
