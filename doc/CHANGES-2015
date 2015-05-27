@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2332 2015/05/27 13:30:02 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2333 2015/05/27 17:07:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4504,3 +4504,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql90-replicationtools to 9.0.20 [adam 2015-05-27]
 	Updated databases/postgresql90-server to 9.0.20 [adam 2015-05-27]
 	Updated databases/postgresql90-upgrade to 9.0.20 [adam 2015-05-27]
+	Updated net/synergy to 1.7.3 [tnn 2015-05-27]
