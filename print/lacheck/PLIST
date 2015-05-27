@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/27 22:15:20 markd Exp $
+bin/lacheck
+man/man1/lacheck.1
