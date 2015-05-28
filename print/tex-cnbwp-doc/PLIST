@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
+share/texmf-dist/doc/latex/cnbwp/README
+share/texmf-dist/doc/latex/cnbwp/biblio.tex
+share/texmf-dist/doc/latex/cnbwp/cnbpaper.pdf
+share/texmf-dist/doc/latex/cnbwp/cnbpaper.tex
+share/texmf-dist/doc/latex/cnbwp/cnbsample.bib
+share/texmf-dist/doc/latex/cnbwp/cnbwp-manual-cs.pdf
+share/texmf-dist/doc/latex/cnbwp/cnbwp-manual-cs.tex
+share/texmf-dist/doc/latex/cnbwp/cnbwp-manual-en.pdf
+share/texmf-dist/doc/latex/cnbwp/cnbwp-manual-en.tex
+share/texmf-dist/doc/latex/cnbwp/graph18.eps
+share/texmf-dist/doc/latex/cnbwp/graph18.gif
+share/texmf-dist/doc/latex/cnbwp/graph18.jpg
+share/texmf-dist/doc/latex/cnbwp/graph18.pdf
+share/texmf-dist/doc/latex/cnbwp/graph18.png
+share/texmf-dist/doc/latex/cnbwp/numtable.tex
+share/texmf-dist/doc/latex/cnbwp/widematrix.tex

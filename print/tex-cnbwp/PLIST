@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
+share/texmf-dist/bibtex/bst/cnbwp/abbrvcnb.bst
+share/texmf-dist/makeindex/cnbwp/cnbindex.ist
+share/texmf-dist/tex/latex/cnbwp/cnbwp-manual.sty
+share/texmf-dist/tex/latex/cnbwp/cnbwp.cls
+share/texmf-dist/tex/latex/cnbwp/cnbwpsizes.clo

@@ -1,0 +1,4 @@
+The package provides the class for articles for the CSTUG
+Bulletin (Zpravodaj Ceskoslovenskeho sdruzeni uzivatelu TeXu).
+You can see the structure of a document by looking to the
+source file of the manual.
