@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2364 2015/05/28 07:16:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2365 2015/05/28 07:17:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4538,3 +4538,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 16.0 [wiz 2015-05-28]
 	Updated devel/py-test to 2.7.1 [wiz 2015-05-28]
 	Updated net/py-twisted to 15.2.0 [wiz 2015-05-28]
+	Updated devel/py-virtualenv to 13.0.1 [wiz 2015-05-28]
