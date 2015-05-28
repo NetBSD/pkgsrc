@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/07 12:26:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/05/28 07:07:19 wiz Exp $
 
-SHA1 (Attic-0.15.tar.gz) = 07b604e4c0a00e163122855403a3f0e70b7d1cd4
-RMD160 (Attic-0.15.tar.gz) = ccb2bd574b921eb1078e23cc5b3f5197336a11de
-Size (Attic-0.15.tar.gz) = 232371 bytes
+SHA1 (Attic-0.16.tar.gz) = 7afaa64f6d546bff94494d19d9e88c02d2e94088
+RMD160 (Attic-0.16.tar.gz) = 02f14e1f5f6b002b78b581e51497c14263331214
+Size (Attic-0.16.tar.gz) = 232455 bytes
