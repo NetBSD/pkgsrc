@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:44 markd Exp $
+share/texmf-dist/doc/latex/cjk-ko/ChangeLog
+share/texmf-dist/doc/latex/cjk-ko/README
+share/texmf-dist/doc/latex/cjk-ko/cjk-ko-doc.pdf
+share/texmf-dist/doc/latex/cjk-ko/cjk-ko-doc.tex

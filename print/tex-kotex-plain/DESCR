@@ -1,0 +1,4 @@
+The package provides macros for typesetting Hangul, the native
+alphabet of the Korean language, using plain *TeX. Input Korean
+text should be encoded in UTF-8. The package is belongs to the
+ko.TeX bundle.

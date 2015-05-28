@@ -1,0 +1,4 @@
+The package typesets Hangul, which is the native alphabet of
+the Korean language; input Korean text should be encoded in
+UTF-8. The bundle (of class and associated packages) belongs to
+the ko.TeX bundle.
