@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2360 2015/05/28 07:08:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2361 2015/05/28 07:11:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4534,3 +4534,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-cffi to 1.0.3 [wiz 2015-05-28]
 	Updated sysutils/py-attic to 0.16 [wiz 2015-05-28]
 	Updated devel/py-cparser to 2.13 [wiz 2015-05-28]
+	Updated security/py-cryptography to 0.9 [wiz 2015-05-28]
