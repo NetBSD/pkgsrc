@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:20:00 markd Exp $
+share/texmf-dist/fonts/afm/public/cjhebrew/cjheblsm.afm
+share/texmf-dist/fonts/afm/public/cjhebrew/cjhebltx.afm
+share/texmf-dist/fonts/enc/dvips/cjhebrew/cjhebltx.enc
+share/texmf-dist/fonts/map/dvips/cjhebrew/cjhebrew.map
+share/texmf-dist/fonts/tfm/public/cjhebrew/cjhblsm.tfm
+share/texmf-dist/fonts/tfm/public/cjhebrew/cjhbltx.tfm
+share/texmf-dist/fonts/tfm/public/cjhebrew/cjheblsm.tfm
+share/texmf-dist/fonts/tfm/public/cjhebrew/cjhebltx.tfm
+share/texmf-dist/fonts/tfm/public/cjhebrew/rcjhblsm.tfm
+share/texmf-dist/fonts/tfm/public/cjhebrew/rcjhbltx.tfm
+share/texmf-dist/fonts/type1/public/cjhebrew/cjheblsm.pfb
+share/texmf-dist/fonts/type1/public/cjhebrew/cjhebltx.pfb
+share/texmf-dist/fonts/vf/public/cjhebrew/cjhblsm.vf
+share/texmf-dist/fonts/vf/public/cjhebrew/cjhbltx.vf
+share/texmf-dist/tex/latex/cjhebrew/cjhebrew.sty

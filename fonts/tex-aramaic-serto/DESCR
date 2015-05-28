@@ -1,0 +1,8 @@
+This package enables (La)TeX users to typeset words or phrases
+(e-TeX extensions are needed) in Syriac (Aramaic) using the
+Serto-alphabet. The package includes a preprocessor written in
+Python (>= 1.5.2) in order to deal with right-to-left
+typesetting for those who do not want to use elatex and to
+choose the correct letter depending on word context
+(initial/medial/final form). Detailed documentation and
+examples are included.
