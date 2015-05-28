@@ -1,50 +1,31 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/05/28 11:49:45 markd Exp $
 
-DISTNAME=	kotex-dist-20110504
-PKGNAME=	tex-kotex-utils-0.3
-PKGREVISION=	4
-CATEGORIES=	print
-MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/ko.TeX/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	kotexindy.pl utf8.xdy
-SITES.kotexindy.pl= \
-http://ftp.ktug.or.kr/pub/ktug/texlive/texmf-dist/scripts/kotex-util/perl/
-SITES.utf8.xdy= \
-http://ftp.ktug.or.kr/pub/ktug/texlive/texmf/xindy/modules/lang/korean/
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DISTNAME=	kotex-utils
+PKGNAME=	tex-${DISTNAME}-2.0.1
+TEXLIVE_REV=	36210
 
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
-COMMENT=	Utilities for tex-kotex
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/kotex-utils
+COMMENT=	Utility scripts and support files for typesetting Korean
+LICENSE=	lppl-1.3c
+
+DEPENDS+=	tex-kotex-utf-[0-9]*:../../print/tex-kotex-utf
 
 USE_TOOLS+=	perl:run
-WRKSRC=		${WRKDIR}
+REPLACE_PERL=	bin/jamo-normalize bin/komkindex bin/ttf2kotexfont
 
-REPLACE_PERL=	*.pl scripts/kotex-util/perl/*.pl
+INSTALLATION_DIRS+=	bin
 
-INSTALLATION_DIRS+=	bin share/texmf-dist/xindy/modules/lang/korean
+.include "../../print/texlive/package.mk"
 
-.include "../../print/kpathsea/texmf.mk"
-
-do-build:
-.for f in hbibtex hmakeindex
-	cd ${WRKSRC}/source/latex/kotex-util && \
-	${CC} ${CPPFLAGS} ${CFLAGS} -o ${f} ${f}.c
-.endfor
-
-do-install:
-.for f in hbibtex hmakeindex
-	${INSTALL_PROGRAM} ${WRKSRC}/source/latex/kotex-util/${f} \
-		${DESTDIR}${PREFIX}/bin
-.endfor
-.for f in euc-bookmark hypua2jamo insertjamofiller jamo2hypua komkindex \
-	ttf2kotexfont
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/kotex-util/perl/${f}.pl \
-		${DESTDIR}${PREFIX}/bin/${f}
-.endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/kotexindy.pl \
-		${DESTDIR}${PREFIX}/bin/kotexindy
-	${INSTALL_DATA} ${WRKSRC}/utf8.xdy \
-		${DESTDIR}${PREFIX}/share/texmf-dist/xindy/modules/lang/korean/
+post-extract:
+	${MKDIR} ${WRKSRC}/bin
+	${MV} ${WRKSRC}/texmf-dist/scripts/kotex-utils/jamo-normalize.pl \
+		${WRKSRC}/bin/jamo-normalize
+	${MV} ${WRKSRC}/texmf-dist/scripts/kotex-utils/komkindex.pl \
+		${WRKSRC}/bin/komkindex
+	${MV} ${WRKSRC}/texmf-dist/scripts/kotex-utils/ttf2kotexfont.pl \
+		${WRKSRC}/bin/ttf2kotexfont
+	${RM} -rf ${WRKSRC}/texmf-dist/scripts
 
 .include "../../mk/bsd.pkg.mk"
