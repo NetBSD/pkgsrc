@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2346 2015/05/28 00:47:24 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2347 2015/05/28 00:53:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4520,3 +4520,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-binextra to 2014pre3 [markd 2015-05-27]
 	Updated www/mediawiki to 1.25.1 [wen 2015-05-28]
 	Updated devel/p5-parent to 0.234 [wen 2015-05-28]
+	Updated devel/p5-CPAN-Uploader to 0.103009 [wen 2015-05-28]
