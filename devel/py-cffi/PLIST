@@ -1,20 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/26 14:04:49 wiz Exp $
-${PYSITELIB}/_cffi_backend.so
+@comment $NetBSD: PLIST,v 1.3 2015/05/28 07:06:32 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/_cffi_backend.so
 ${PYSITELIB}/cffi/__init__.py
 ${PYSITELIB}/cffi/__init__.pyc
 ${PYSITELIB}/cffi/__init__.pyo
+${PYSITELIB}/cffi/_cffi_include.h
 ${PYSITELIB}/cffi/api.py
 ${PYSITELIB}/cffi/api.pyc
 ${PYSITELIB}/cffi/api.pyo
 ${PYSITELIB}/cffi/backend_ctypes.py
 ${PYSITELIB}/cffi/backend_ctypes.pyc
 ${PYSITELIB}/cffi/backend_ctypes.pyo
+${PYSITELIB}/cffi/cffi_opcode.py
+${PYSITELIB}/cffi/cffi_opcode.pyc
+${PYSITELIB}/cffi/cffi_opcode.pyo
 ${PYSITELIB}/cffi/commontypes.py
 ${PYSITELIB}/cffi/commontypes.pyc
 ${PYSITELIB}/cffi/commontypes.pyo
@@ -33,6 +38,13 @@ ${PYSITELIB}/cffi/lock.pyo
 ${PYSITELIB}/cffi/model.py
 ${PYSITELIB}/cffi/model.pyc
 ${PYSITELIB}/cffi/model.pyo
+${PYSITELIB}/cffi/parse_c_type.h
+${PYSITELIB}/cffi/recompiler.py
+${PYSITELIB}/cffi/recompiler.pyc
+${PYSITELIB}/cffi/recompiler.pyo
+${PYSITELIB}/cffi/setuptools_ext.py
+${PYSITELIB}/cffi/setuptools_ext.pyc
+${PYSITELIB}/cffi/setuptools_ext.pyo
 ${PYSITELIB}/cffi/vengine_cpy.py
 ${PYSITELIB}/cffi/vengine_cpy.pyc
 ${PYSITELIB}/cffi/vengine_cpy.pyo
