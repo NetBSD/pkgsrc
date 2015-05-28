@@ -1,0 +1,7 @@
+The bundle provides files to support typesetting of texts in
+Spanish according to Mexican current practices, using babel.
+The files merge earlier work on a mexican.ldf, or may be used
+to define a configuration that will typeset all documents (that
+request babel's spanish option) to use the Mexican language
+facilities. (Note that this facility is only available with the
+recent (version >=4.2b) releases of the Spanish option.)
