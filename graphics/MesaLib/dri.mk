@@ -1,4 +1,4 @@
-# $NetBSD: dri.mk,v 1.8 2014/03/14 07:19:36 obache Exp $
+# $NetBSD: dri.mk,v 1.9 2015/05/28 21:09:07 tnn Exp $
 #
 # Currently, this is for convenience only.
 #
@@ -25,4 +25,10 @@ BUILDLINK_API_DEPENDS.libdrm+=		libdrm>=2.4.24
 .  include "../../x11/libXxf86vm/buildlink3.mk"
 .  include "../../x11/xf86driproto/buildlink3.mk"
 .  include "../../x11/xf86vidmodeproto/buildlink3.mk"
+# Linux supports dri3
+.  if ${OPSYS} == "Linux"
+.  include "../../x11/dri3proto/buildlink3.mk"
+.  include "../../x11/presentproto/buildlink3.mk"
+.  include "../../x11/libxshmfence/buildlink3.mk"
+.  endif
 .endif
