@@ -1,0 +1,6 @@
+The cjhebrew package provides Adobe Type 1 fonts for Hebrew,
+and LaTeX macros to support their use. Hebrew text can be
+vocalised, and a few accents are also available. The package
+makes it easy to include Hebrew text in other-language
+documents. The package makes use of the e-TeX extensions to
+TeX, so should be run using an "e-LaTeX".
