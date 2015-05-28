@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/05/17 12:25:00 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/28 12:30:00 markd Exp $
 
 DISTNAME=	collection-langspanish
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2014
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30372
@@ -13,7 +13,7 @@ COMMENT=	Spanish TeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-babel-catalan-[0-9]*:../../print/tex-babel-catalan
-# depend babel-galician
+DEPENDS+=	tex-babel-galician-[0-9]*:../../print/tex-babel-galician
 DEPENDS+=	tex-babel-spanish-[0-9]*:../../print/tex-babel-spanish
 # es-tex-faq is documentation only
 DEPENDS+=	tex-hyphen-catalan-[0-9]*:../../print/tex-hyphen-catalan
@@ -23,7 +23,7 @@ DEPENDS+=	tex-hyphen-spanish-[0-9]*:../../print/tex-hyphen-spanish
 # latex2e-help-texinfo-spanish is documentation only
 # latexcheat-esmx is documentation only
 # lshort-spanish is documentation only
-# depend spanish-mx
+DEPENDS+=	tex-spanish-mx-[0-9]*:../../print/tex-spanish-mx
 
 META_PACKAGE=	yes
 
