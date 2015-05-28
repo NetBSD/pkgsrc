@@ -1,0 +1,15 @@
+CSplain is a small extension of basic Plain TeX macros, the
+formats csplain and pdfcsplain can be generated. It supports:
+hyphenation of words for 50+ languages, simple and powerfull
+font loading system (various sizes of fonts), tex, pdftex,
+xetex and luatex engines, math fonts simply loaded with full
+amstex-like features, three internal encodings (IL2 for
+Czech/Slovak languages, T1 for many languages with latin
+alphabet and Unicode in new TeX engines), natural UTF-8 input
+in pdfTeX using encTeX without any active characters, Czech and
+Slovak special typesetting features. An important part of the
+package is OPmac, which implements most of LaTeX's features
+(sectioning, font selection, color, hyper reference and urls,
+bibliography, index, toc, tables,etc.) by Plain TeX macros. The
+OPmac macros can generate and bibliography without any external
+program.
