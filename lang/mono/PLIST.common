@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.24 2015/05/26 12:17:02 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.25 2015/05/28 07:33:56 jperkin Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -118,7 +118,11 @@ include/mono-2.0/mono/utils/mono-publib.h
 lib/libMonoPosixHelper.la
 lib/libMonoSupportW.la
 lib/libikvm-native.la
+lib/libmono-2.0.a
 lib/libmono-2.0.la
+lib/libmono-2.0.so
+lib/libmono-2.0.so.1
+lib/libmono-2.0.so.1.0.0
 lib/libmono-profiler-aot.la
 lib/libmono-profiler-cov.la
 lib/libmono-profiler-iomap.la
