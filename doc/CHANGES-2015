@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2349 2015/05/28 02:47:10 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2350 2015/05/28 05:31:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Uploader to 0.103009 [wen 2015-05-28]
 	Updated devel/p5-MooX-Options to 4.018nb1 [wen 2015-05-28]
 	Updated mail/p5-Email-Sender to 1.300018 [wen 2015-05-28]
+	Updated www/webkit-gtk to 2.4.9 [wiz 2015-05-28]
