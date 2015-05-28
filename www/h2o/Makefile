@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/20 02:06:29 wen Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/28 00:28:25 wen Exp $
 
 DISTNAME=	h2o-1.2.0
 CATEGORIES=	www
@@ -11,6 +11,8 @@ LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	perl:run
 
 EXTRACT_USING=	gtar
 REPLACE_PERL=	share/h2o/start_server
