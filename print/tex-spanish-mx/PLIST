@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:59:09 markd Exp $
+share/texmf-dist/tex/latex/spanish-mx/esmx.cfg
+share/texmf-dist/tex/latex/spanish-mx/spanishmx.ldf
+share/texmf-dist/tex/latex/spanish-mx/spanishmx.sty
