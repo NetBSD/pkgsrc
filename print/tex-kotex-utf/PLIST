@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:45 markd Exp $
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-cmap.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-enumerate.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-enumitem.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-gremph.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-interword.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-paralist.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-sectsty.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-setspace.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-trivcj.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-ucshyper.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/dhucsfn.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/kotex-logo.sty
+share/texmf-dist/tex/latex/kotex-utf/contrib/kotex-varioref.sty
+share/texmf-dist/tex/latex/kotex-utf/dhucs-nanumfont.sty
+share/texmf-dist/tex/latex/kotex-utf/dhucs.sty
+share/texmf-dist/tex/latex/kotex-utf/hfontspec.default
+share/texmf-dist/tex/latex/kotex-utf/kosections-utf.sty
+share/texmf-dist/tex/latex/kotex-utf/kotex.cfg
+share/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+share/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+share/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
+share/texmf-dist/tex/latex/kotex-utf/tex4ht/dhucs.4ht
+share/texmf-dist/tex/latex/kotex-utf/tex4ht/dhucs.cfg
+share/texmf-dist/tex/latex/kotex-utf/tex4ht/kosections-utf.4ht
