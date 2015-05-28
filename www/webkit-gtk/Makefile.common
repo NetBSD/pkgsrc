@@ -1,13 +1,14 @@
-# $NetBSD: Makefile.common,v 1.40 2015/03/31 15:55:44 joerg Exp $
+# $NetBSD: Makefile.common,v 1.41 2015/05/28 05:30:51 wiz Exp $
 # used by www/webkit-gtk/Makefile
 
-DISTNAME=	webkitgtk-2.4.8
+DISTNAME=	webkitgtk-2.4.9
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webkitgtk.org/
+LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../www/webkit-gtk/distinfo
 PATCHDIR=		${.CURDIR}/../../www/webkit-gtk/patches

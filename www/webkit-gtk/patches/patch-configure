@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
+$NetBSD: patch-configure,v 1.8 2015/05/28 05:30:51 wiz Exp $
 
---- configure.orig	2014-07-08 09:44:12.000000000 +0000
+--- configure.orig	2015-05-20 09:29:21.000000000 +0000
 +++ configure
-@@ -4703,7 +4703,7 @@ else
+@@ -4709,7 +4709,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -11,7 +11,7 @@ $NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4749,7 +4749,7 @@ else
+@@ -4755,7 +4755,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -20,7 +20,7 @@ $NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4773,7 +4773,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -4779,7 +4779,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -29,7 +29,7 @@ $NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4818,7 +4818,7 @@ else
+@@ -4824,7 +4824,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -38,7 +38,7 @@ $NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4842,7 +4842,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -4848,7 +4848,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -47,25 +47,7 @@ $NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4909,7 +4909,7 @@ rm -f core conftest.err conftest.$ac_obj
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
--#if !(defined(__clang__) && __clang_major__ >= 3 && __clang_minor__ >= 3)
-+#if !(defined(__clang__) && __clang_major__ >= 3 && (__clang_major__ > 3 || __clang_minor__ >= 3))
- #error Not a supported Clang compiler
- #endif
- 
-@@ -4967,7 +4967,7 @@ rm -f core conftest.err conftest.$ac_obj
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
--#if !(defined(__clang__) && __clang_major__ >= 3 && __clang_minor__ >= 3)
-+#if !(defined(__clang__) && __clang_major__ >= 3 && (__clang_major__ > 3 || __clang_minor__ >= 3))
- #error Not a supported Clang++ compiler
- #endif
- 
-@@ -17312,10 +17312,13 @@ int
+@@ -17318,10 +17318,13 @@ int
  main ()
  {
    unsigned int major, minor, micro;
@@ -80,7 +62,7 @@ $NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
       printf("%s, bad version string\n", "$min_glib_version");
       exit(1);
     }
-@@ -21110,7 +21113,7 @@ fi
+@@ -21217,7 +21220,7 @@ fi
  
  
      # On some Linux/Unix platforms, shm_* may only be available if linking against librt
