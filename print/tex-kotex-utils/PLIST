@@ -1,11 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/13 19:27:55 minskim Exp $
-bin/euc-bookmark
-bin/hbibtex
-bin/hmakeindex
-bin/hypua2jamo
-bin/insertjamofiller
-bin/jamo2hypua
+@comment $NetBSD: PLIST,v 1.4 2015/05/28 11:49:45 markd Exp $
+bin/jamo-normalize
 bin/komkindex
-bin/kotexindy
 bin/ttf2kotexfont
-share/texmf-dist/xindy/modules/lang/korean/utf8.xdy
+share/texmf-dist/makeindex/kotex-utils/kotex.ist
+share/texmf-dist/makeindex/kotex-utils/memucs-manual.ist

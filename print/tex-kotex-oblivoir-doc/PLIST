@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:44 markd Exp $
+share/texmf-dist/doc/latex/kotex-oblivoir/ChangeLog
+share/texmf-dist/doc/latex/kotex-oblivoir/README
+share/texmf-dist/doc/latex/kotex-oblivoir/doc/oblivoir-simpledoc.pdf
+share/texmf-dist/doc/latex/kotex-oblivoir/doc/oblivoir-simpledoc.tex
+share/texmf-dist/doc/latex/kotex-oblivoir/doc/oblivoir-test.tex

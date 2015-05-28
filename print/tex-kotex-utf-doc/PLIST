@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:45 markd Exp $
+share/texmf-dist/doc/latex/kotex-utf/ChangeLog
+share/texmf-dist/doc/latex/kotex-utf/README
+share/texmf-dist/doc/latex/kotex-utf/README.md
+share/texmf-dist/doc/latex/kotex-utf/fig/allowbreak-dhucs.pdf
+share/texmf-dist/doc/latex/kotex-utf/fig/fntexp.pdf
+share/texmf-dist/doc/latex/kotex-utf/fig/fntnormal.pdf
+share/texmf-dist/doc/latex/kotex-utf/fig/histkotex.jpg
+share/texmf-dist/doc/latex/kotex-utf/fig/linebreaktest.pdf
+share/texmf-dist/doc/latex/kotex-utf/fig/testdhucsallowbreak.pdf
+share/texmf-dist/doc/latex/kotex-utf/kotexdoc.pdf
+share/texmf-dist/doc/latex/kotex-utf/kotexdoc.tex
+share/texmf-dist/doc/latex/kotex-utf/sample-finemath-setup.tex
+share/texmf-dist/doc/latex/kotex-utf/yettext.tex
+share/texmf-dist/doc/latex/kotex-utf/yettext.txt

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:45 markd Exp $
+share/texmf-dist/doc/plain/kotex-plain/ChangeLog
+share/texmf-dist/doc/plain/kotex-plain/README
