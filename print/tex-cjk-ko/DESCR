@@ -1,0 +1,3 @@
+The package supports typesetting UTF-8-encoded modern Korean
+documents with the help of the LaTeX2e CJK package. The package
+requires nanumtype1 fonts.
