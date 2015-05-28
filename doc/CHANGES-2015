@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2368 2015/05/28 13:26:58 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2369 2015/05/28 18:40:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-langother to 2014 [markd 2015-05-28]
 	Updated lang/clang to 3.6.1 [adam 2015-05-28]
 	Updated lang/libLLVM to 3.6.1 [adam 2015-05-28]
+	Added net/py-ipaddress version 1.0.7 [wiz 2015-05-28]
