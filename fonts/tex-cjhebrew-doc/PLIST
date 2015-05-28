@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:20:00 markd Exp $
+share/texmf-dist/doc/fonts/cjhebrew/cjhebtst.tex
+share/texmf-dist/doc/fonts/cjhebrew/manual.pdf
