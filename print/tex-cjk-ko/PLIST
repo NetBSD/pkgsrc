@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:44 markd Exp $
+share/texmf-dist/tex/latex/cjk-ko/cjkutf8-josa.sty
+share/texmf-dist/tex/latex/cjk-ko/cjkutf8-ko.sty
+share/texmf-dist/tex/latex/cjk-ko/cjkutf8-nanummjhanja.sty
+share/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+share/texmf-dist/tex/latex/cjk-ko/konames-utf.sty
+share/texmf-dist/tex/latex/cjk-ko/kotex.sty
