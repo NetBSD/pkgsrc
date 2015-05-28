@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2352 2015/05/28 06:29:20 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2353 2015/05/28 06:35:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/webkit-gtk to 2.4.9 [wiz 2015-05-28]
 	Updated devel/afl to 1.80b [wiz 2015-05-28]
 	Updated misc/dialog to 1.2.20150513 [wiz 2015-05-28]
+	Updated lang/gawk to 4.1.3 [wiz 2015-05-28]
