@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2015/04/29 14:36:36 tnn Exp $
+# $NetBSD: options.mk,v 1.32 2015/05/28 21:09:07 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -40,9 +40,6 @@ BUILDLINK_DEPMETHOD.libpciaccess=      full
 
 # Linux supports dri3
 .if ${OPSYS} == "Linux"
-.include "../../x11/dri3proto/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
-.include "../../x11/libxshmfence/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-dri3
 # DRI on Linux needs either sysfs or udev
 CONFIGURE_ARGS+=	--enable-sysfs
