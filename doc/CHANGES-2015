@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2351 2015/05/28 05:54:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2352 2015/05/28 06:29:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4525,3 +4525,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-Email-Sender to 1.300018 [wen 2015-05-28]
 	Updated www/webkit-gtk to 2.4.9 [wiz 2015-05-28]
 	Updated devel/afl to 1.80b [wiz 2015-05-28]
+	Updated misc/dialog to 1.2.20150513 [wiz 2015-05-28]
