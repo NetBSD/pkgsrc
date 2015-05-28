@@ -1,0 +1,4 @@
+A package using a modified version of Sirlin's Tibetan font. An
+advantage of this Tibetan implementation is that all consonant
+clusters are formed by TeX and Metafont. No external
+preprocessor is needed.
