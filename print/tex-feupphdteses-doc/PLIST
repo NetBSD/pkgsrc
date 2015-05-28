@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:02:49 markd Exp $
+share/texmf-dist/doc/latex/feupphdteses/Abbs.tex
+share/texmf-dist/doc/latex/feupphdteses/Abstract.tex
+share/texmf-dist/doc/latex/feupphdteses/Acknow.tex
+share/texmf-dist/doc/latex/feupphdteses/Appendix.tex
+share/texmf-dist/doc/latex/feupphdteses/Chapter2.tex
+share/texmf-dist/doc/latex/feupphdteses/Chapter3.tex
+share/texmf-dist/doc/latex/feupphdteses/Conclusions.tex
+share/texmf-dist/doc/latex/feupphdteses/Dedicatory.tex
+share/texmf-dist/doc/latex/feupphdteses/Figures/uporto-feup.pdf
+share/texmf-dist/doc/latex/feupphdteses/IEEEtranN.bst
+share/texmf-dist/doc/latex/feupphdteses/IEEEtranSN.bst
+share/texmf-dist/doc/latex/feupphdteses/Intro.tex
+share/texmf-dist/doc/latex/feupphdteses/Publications.tex
+share/texmf-dist/doc/latex/feupphdteses/Quote.tex
+share/texmf-dist/doc/latex/feupphdteses/README
+share/texmf-dist/doc/latex/feupphdteses/References.bib
+share/texmf-dist/doc/latex/feupphdteses/Resumo.tex
+share/texmf-dist/doc/latex/feupphdteses/Template_EN.pdf
+share/texmf-dist/doc/latex/feupphdteses/Template_EN.tcp
+share/texmf-dist/doc/latex/feupphdteses/Template_EN.tex
+share/texmf-dist/doc/latex/feupphdteses/Template_EN.tps
+share/texmf-dist/doc/latex/feupphdteses/mymacros.tex

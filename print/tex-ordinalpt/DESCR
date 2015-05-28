@@ -1,0 +1,6 @@
+The package provides a counter style (like \arabic, \alph and
+others) which produces as output strings like "primeiro"
+("first" in Portuguese), "segundo" (second), and so on up to
+1999th. Separate counter commands are provided for different
+letter case variants, and for masculine and feminine gender
+inflections.
