@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 22:06:42 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/28 13:25:59 adam Exp $
 
 PKGNAME=		${DISTNAME:S/clang/libLLVM/}
-PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--enable-shared
 MAKE_ENV+=		ENABLE_PIC=1
