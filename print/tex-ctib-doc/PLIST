@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:08:03 markd Exp $
+share/texmf-dist/doc/latex/ctib/README
+share/texmf-dist/doc/latex/ctib/ctib4tex.pdf
+share/texmf-dist/doc/latex/ctib/ctib4tex.tex

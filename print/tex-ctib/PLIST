@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:08:03 markd Exp $
+share/texmf-dist/fonts/source/public/ctib/bzrsetup.mf
+share/texmf-dist/fonts/source/public/ctib/ctib.mf
+share/texmf-dist/fonts/source/public/ctib/ctibcode.mf
+share/texmf-dist/fonts/source/public/ctib/ctiblett.mf
+share/texmf-dist/fonts/source/public/ctib/ctibligs.mf
+share/texmf-dist/fonts/source/public/ctib/ctibnum.mf
+share/texmf-dist/fonts/source/public/ctib/ctibpunc.mf
+share/texmf-dist/fonts/source/public/ctib/ctibsplt.mf
+share/texmf-dist/fonts/source/public/ctib/ctibvow.mf
+share/texmf-dist/fonts/tfm/public/ctib/ctib.tfm
+share/texmf-dist/tex/latex/ctib/ctib.sty
+share/texmf-dist/tex/latex/ctib/ctib.tex
+share/texmf-dist/tex/latex/ctib/lctctib.fd
+share/texmf-dist/tex/latex/ctib/lctenc.def
