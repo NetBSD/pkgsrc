@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 18:39:43 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ipaddress.py
+${PYSITELIB}/ipaddress.pyc
+${PYSITELIB}/ipaddress.pyo
