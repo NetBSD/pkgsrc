@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/15 21:10:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/05/28 07:11:08 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -107,6 +107,9 @@ ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_hmac.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_key_derivation.py
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_key_derivation.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_key_derivation.pyo
+${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_symmetric_key_wrap.py
+${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_symmetric_key_wrap.pyc
+${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/common_symmetric_key_wrap.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/secimport.py
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/secimport.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/secimport.pyo
@@ -206,6 +209,8 @@ ${PYSITELIB}/cryptography/hazmat/bindings/openssl/rand.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/rsa.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/rsa.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/rsa.pyo
+${PYSITELIB}/cryptography/hazmat/bindings/openssl/src/osrandom_engine.c
+${PYSITELIB}/cryptography/hazmat/bindings/openssl/src/osrandom_engine.h
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/ssl.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/ssl.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/ssl.pyo
