@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2367 2015/05/28 12:43:08 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2368 2015/05/28 13:26:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4575,3 +4575,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-langspanish to 2014 [markd 2015-05-28]
 	Updated meta-pkgs/texlive-collection-langportuguese to 2014 [markd 2015-05-28]
 	Updated meta-pkgs/texlive-collection-langother to 2014 [markd 2015-05-28]
+	Updated lang/clang to 3.6.1 [adam 2015-05-28]
+	Updated lang/libLLVM to 3.6.1 [adam 2015-05-28]
