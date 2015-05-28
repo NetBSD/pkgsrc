@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
+share/texmf-dist/tex/latex/csbulletin/csbulacronym.sty
+share/texmf-dist/tex/latex/csbulletin/csbulletin.cls

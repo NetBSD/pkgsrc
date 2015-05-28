@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
+share/texmf-dist/doc/latex/csbulletin/LICENSE.txt
+share/texmf-dist/doc/latex/csbulletin/README
+share/texmf-dist/doc/latex/csbulletin/csbulletin.pdf
+share/texmf-dist/doc/latex/csbulletin/csbulletin.tex
