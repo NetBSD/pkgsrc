@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.32 2015/04/26 13:08:38 tnn Exp $
+$NetBSD: distinfo,v 1.33 2015/05/28 13:25:59 adam Exp $
 
-SHA1 (cfe-3.6.0.src.tar.xz) = 06b252867a3d118c95ca279fd3c4ac05f6730551
-RMD160 (cfe-3.6.0.src.tar.xz) = 2e04853d2f8133fea493ee12d7f05bc6b27dc988
-Size (cfe-3.6.0.src.tar.xz) = 8640776 bytes
-SHA1 (compiler-rt-3.6.0.src.tar.xz) = 771cbf0535dce1ca3a3be022377781e32fdea70e
-RMD160 (compiler-rt-3.6.0.src.tar.xz) = 716cbd5e101959b064331ad73bfe18fcb98347c5
-Size (compiler-rt-3.6.0.src.tar.xz) = 1140616 bytes
-SHA1 (libcxx-3.6.0.src.tar.xz) = 5445194366ae2291092fd2204030cb3d01ad6272
-RMD160 (libcxx-3.6.0.src.tar.xz) = 9221db789b801dde45ad89f57c7a74fd3b082cf4
-Size (libcxx-3.6.0.src.tar.xz) = 946380 bytes
-SHA1 (llvm-3.6.0.src.tar.xz) = 6eb2b7381d924bb3f267281c9058c817d825d824
-RMD160 (llvm-3.6.0.src.tar.xz) = cd2216a21871ba5be52e193e28e444bd04dacee2
-Size (llvm-3.6.0.src.tar.xz) = 12750908 bytes
+SHA1 (cfe-3.6.1.src.tar.xz) = b7221d8fdd27e3ed519d0281646e82e17b51122c
+RMD160 (cfe-3.6.1.src.tar.xz) = 2199271489c7a1c63aa41e80ff78089aeebdcd3e
+Size (cfe-3.6.1.src.tar.xz) = 8616132 bytes
+SHA1 (compiler-rt-3.6.1.src.tar.xz) = 85dccdc6ccd9675e871dfd2786b45fbf53518485
+RMD160 (compiler-rt-3.6.1.src.tar.xz) = 171af614b4656c121a6b8e58ce3e137b0495cd64
+Size (compiler-rt-3.6.1.src.tar.xz) = 1128460 bytes
+SHA1 (libcxx-3.6.1.src.tar.xz) = 7bf3a63082173eb6c42af330544d800e86b54590
+RMD160 (libcxx-3.6.1.src.tar.xz) = 3da38b89322c0ea4abf42df3823831d8033b764a
+Size (libcxx-3.6.1.src.tar.xz) = 943756 bytes
+SHA1 (llvm-3.6.1.src.tar.xz) = 01ecab99adc9030ee34e9a2e19e65dfe64e1affe
+RMD160 (llvm-3.6.1.src.tar.xz) = 9a66dc3f06078ffede1a190dcca95e071e63feb4
+Size (llvm-3.6.1.src.tar.xz) = 12798852 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
 SHA1 (patch-ac) = 0f0cc98d443ec957fc5374fb491809d27e4f9d4e
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
