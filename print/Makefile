@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2015/05/28 12:16:54 markd Exp $
+# $NetBSD: Makefile,v 1.642 2015/05/29 11:39:34 jaapb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -316,6 +316,8 @@ SUBDIR+=	tex-braket-doc
 SUBDIR+=	tex-breakcites
 SUBDIR+=	tex-breakcites-doc
 SUBDIR+=	tex-breqn
+SUBDIR+=	tex-bussproofs
+SUBDIR+=	tex-bussproofs-doc
 SUBDIR+=	tex-c90
 SUBDIR+=	tex-c90-doc
 SUBDIR+=	tex-calrsfs
