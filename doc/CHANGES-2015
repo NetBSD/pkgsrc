@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2374 2015/05/29 14:12:43 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2375 2015/05/29 14:15:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libbluray to 0.8.1 [adam 2015-05-29]
 	Updated multimedia/x265 to 1.7 [adam 2015-05-29]
 	Updated devel/xulrunner31 to 31.7.0 [ryoon 2015-05-29]
+	Updated devel/fossil to 1.33 [ryoon 2015-05-29]
