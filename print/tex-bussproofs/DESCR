@@ -1,0 +1,8 @@
+The package allows the construction of proof trees in the style
+of the sequent calculus and many other proof systems. One novel
+feature of the macros is they support the horizontal alignment
+according to some centre point specified with the command
+\fCenter. This is the style often used in sequent calculus
+proofs. The package works in a Plain TeX document, as well as
+in LaTeX; an exposition of the commands available is given in
+the package file itself.
