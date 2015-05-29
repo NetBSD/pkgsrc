@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2372 2015/05/29 11:38:46 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.2373 2015/05/29 12:04:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4581,3 +4581,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/squid3 to 3.5.5 [adam 2015-05-29]
 	Added print/tex-bussproofs version 1.1 [jaapb 2015-05-29]
 	Added print/tex-bussproofs-doc version 1.1 [jaapb 2015-05-29]
+	Updated multimedia/libbluray to 0.8.1 [adam 2015-05-29]
+	Updated multimedia/x265 to 1.7 [adam 2015-05-29]
