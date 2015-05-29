@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2369 2015/05/28 18:40:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2370 2015/05/29 07:52:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4578,3 +4578,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/clang to 3.6.1 [adam 2015-05-28]
 	Updated lang/libLLVM to 3.6.1 [adam 2015-05-28]
 	Added net/py-ipaddress version 1.0.7 [wiz 2015-05-28]
+	Updated www/squid3 to 3.5.5 [adam 2015-05-29]
