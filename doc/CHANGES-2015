@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2375 2015/05/29 14:15:56 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2376 2015/05/29 14:19:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4585,3 +4585,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/x265 to 1.7 [adam 2015-05-29]
 	Updated devel/xulrunner31 to 31.7.0 [ryoon 2015-05-29]
 	Updated devel/fossil to 1.33 [ryoon 2015-05-29]
+	Updated devel/nss to 3.19.1 [ryoon 2015-05-29]
