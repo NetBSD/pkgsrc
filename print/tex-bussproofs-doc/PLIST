@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/29 11:38:25 jaapb Exp $
+share/texmf-dist/doc/latex/bussproofs/BussGuide2.pdf
+share/texmf-dist/doc/latex/bussproofs/BussGuide2.tex
+share/texmf-dist/doc/latex/bussproofs/README.txt
+share/texmf-dist/doc/latex/bussproofs/testbp2.pdf
+share/texmf-dist/doc/latex/bussproofs/testbp2.tex
