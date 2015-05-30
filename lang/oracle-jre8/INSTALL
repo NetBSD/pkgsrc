@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${PREFIX}/bin/oracle8-java -Xshare:dump -mx128m
+	;;
+esac
