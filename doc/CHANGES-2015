@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2382 2015/05/30 09:53:04 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2383 2015/05/30 10:31:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4593,3 +4593,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added geography/py-obspy version 0.10.2 [wen 2015-05-30]
 	Added lang/oracle-jre8 version 8.0.45 [ryoon 2015-05-30]
 	Added lang/oracle-jdk8 version 8.0.45 [ryoon 2015-05-30]
+	Updated math/R-RColorBrewer to 1.1.2 [wen 2015-05-30]
