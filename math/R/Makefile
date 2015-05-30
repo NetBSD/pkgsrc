@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2015/05/13 12:48:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.156 2015/05/30 12:31:01 ryoon Exp $
 
 DISTNAME=		R-3.2.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -22,7 +23,7 @@ USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
-TEXINFO_REQD=		4.7
+TEXINFO_REQD=		5.1
 INFO_FILES=		yes
 
 PTHREAD_AUTO_VARS=	yes
