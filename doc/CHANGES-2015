@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2381 2015/05/30 03:32:35 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2382 2015/05/30 09:53:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4591,3 +4591,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-SOAP-Lite to 1.14 [wen 2015-05-30]
 	Updated net/p5-SNMP-Info to 3.27 [wen 2015-05-30]
 	Added geography/py-obspy version 0.10.2 [wen 2015-05-30]
+	Added lang/oracle-jre8 version 8.0.45 [ryoon 2015-05-30]
+	Added lang/oracle-jdk8 version 8.0.45 [ryoon 2015-05-30]
