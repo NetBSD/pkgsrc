@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2377 2015/05/30 01:56:10 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2378 2015/05/30 02:11:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4587,3 +4587,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/fossil to 1.33 [ryoon 2015-05-29]
 	Updated devel/nss to 3.19.1 [ryoon 2015-05-29]
 	Added textproc/p5-XML-Parser-Lite version 0.721 [wen 2015-05-30]
+	Added net/p5-IO-SessionData version 1.03 [wen 2015-05-30]
