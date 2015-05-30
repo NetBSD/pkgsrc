@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2015/05/30 09:51:11 ryoon Exp $
+
+SHA1 (jdk-8u45-linux-i586.tar.gz) = 14c71e523126b8415f68fdda0917350fa572aafa
+RMD160 (jdk-8u45-linux-i586.tar.gz) = 7862e6a27db6da09de3f5b8518d4dd8aa03dd421
+Size (jdk-8u45-linux-i586.tar.gz) = 174985642 bytes
+SHA1 (jdk-8u45-linux-x64.tar.gz) = 75e2fff2ed161c7de293c4408be8da8f2282b07b
+RMD160 (jdk-8u45-linux-x64.tar.gz) = bf02284355342b6856de8dedf8ffbc275a047ec7
+Size (jdk-8u45-linux-x64.tar.gz) = 173271626 bytes
+SHA1 (jdk-8u45-solaris-x64.tar.gz) = 6ffa150f9276b0c7cfb0842938d64f1e6500e4e0
+RMD160 (jdk-8u45-solaris-x64.tar.gz) = 3c21b7d6b655e150f8a98f6bd011969a071c3f9b
+Size (jdk-8u45-solaris-x64.tar.gz) = 100537403 bytes
