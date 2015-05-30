@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2379 2015/05/30 02:38:44 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2380 2015/05/30 02:50:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/p5-XML-Parser-Lite version 0.721 [wen 2015-05-30]
 	Added net/p5-IO-SessionData version 1.03 [wen 2015-05-30]
 	Updated net/p5-SOAP-Lite to 1.14 [wen 2015-05-30]
+	Updated net/p5-SNMP-Info to 3.27 [wen 2015-05-30]
