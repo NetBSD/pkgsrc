@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2398 2015/05/31 09:22:46 nat Exp $
+$NetBSD: CHANGES-2015,v 1.2399 2015/05/31 11:58:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4619,3 +4619,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed emulators/NeoPop-SDL [wiz 2015-05-31]
 	Updated devel/SDL2 to 2.0.3nb9 [nat 2015-05-31]
 	Updated devel/SDL to 1.2.15nb18 [nat 2015-05-31]
+	Updated math/R-mvtnorm to 1.0.2 [wen 2015-05-31]
