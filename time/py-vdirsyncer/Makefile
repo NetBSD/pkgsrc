@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2015/04/03 07:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/05/31 13:20:42 wiz Exp $
 
-DISTNAME=	vdirsyncer-0.4.4
+DISTNAME=	vdirsyncer-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
 MASTER_SITES=	https://pypi.python.org/packages/source/v/vdirsyncer/
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=2.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbelt
+DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbelt
 # optional, but recommended
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 
