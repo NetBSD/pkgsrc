@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2407 2015/05/31 13:04:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2408 2015/05/31 13:06:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4628,3 +4628,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Pod to 1.50 [wiz 2015-05-31]
 	Updated math/R-lmm to 1.0 [wen 2015-05-31]
 	Updated devel/p5-Data-Printer to 0.36 [wiz 2015-05-31]
+	Updated misc/dialog to 1.2.20150528 [wiz 2015-05-31]
