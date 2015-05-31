@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/05/27 21:45:57 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/31 04:52:59 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2014pre4
+PKGNAME=	texlive-${DISTNAME}-2014pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -98,7 +98,7 @@ DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
 DEPENDS+=	tex-braket-[0-9]*:../../print/tex-braket
 # depend breakurl
 # depend bullcntr
-# depend bussproofs
+DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend bxdpx-beamer
 # depend calcage
 # depend calctab
