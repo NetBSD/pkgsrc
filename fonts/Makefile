@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2015/05/28 12:21:58 markd Exp $
+# $NetBSD: Makefile,v 1.285 2015/05/31 03:10:02 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -209,7 +209,6 @@ SUBDIR+=	tex-ae-doc
 SUBDIR+=	tex-aecc
 SUBDIR+=	tex-aecc-doc
 SUBDIR+=	tex-afm2pl
-SUBDIR+=	tex-afm2pl-doc
 SUBDIR+=	tex-alegreya
 SUBDIR+=	tex-alegreya-doc
 SUBDIR+=	tex-allrunes
