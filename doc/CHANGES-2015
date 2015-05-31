@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2412 2015/05/31 13:14:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2413 2015/05/31 13:17:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4633,3 +4633,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-cffi to 1.1.0 [wiz 2015-05-31]
 	Updated devel/py-setuptools to 17.0 [wiz 2015-05-31]
 	Updated www/py-tornado to 4.2 [wiz 2015-05-31]
+	Updated net/py-twisted to 15.2.1 [wiz 2015-05-31]
