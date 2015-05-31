@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2015/05/03 15:01:11 spz Exp $
+# $NetBSD: Makefile,v 1.232 2015/05/31 08:30:47 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -8,7 +8,6 @@ SUBDIR+=	Cygne-SDL
 SUBDIR+=	DatLib
 SUBDIR+=	DatUtil
 SUBDIR+=	MAMEDiff
-SUBDIR+=	NeoPop-SDL
 SUBDIR+=	ROMBuild
 SUBDIR+=	ROMInfo
 SUBDIR+=	ZIPIdent
