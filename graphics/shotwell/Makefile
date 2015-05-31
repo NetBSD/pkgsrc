@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2015/04/25 14:23:19 tnn Exp $
+# $NetBSD: Makefile,v 1.67 2015/05/31 03:42:28 dsainty Exp $
 
 DISTNAME=		shotwell-0.20.2
 PKGREVISION=		3
@@ -14,7 +14,7 @@ LICENSE=		gnu-lgpl-v2.1
 BUILD_DEPENDS+=		gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
 
 HAS_CONFIGURE=		yes
-USE_TOOLS+=		gmake bash pkg-config msgfmt
+USE_TOOLS+=		gmake bash pkg-config m4 msgfmt
 
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
