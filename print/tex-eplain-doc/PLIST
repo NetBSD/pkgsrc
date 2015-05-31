@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:32 markd Exp $
+info/eplain.info
+man/man1/eplain.1
+share/texmf-dist/doc/eplain/AUTHORS
+share/texmf-dist/doc/eplain/COPYING
+share/texmf-dist/doc/eplain/ChangeLog
+share/texmf-dist/doc/eplain/INSTALL
+share/texmf-dist/doc/eplain/NEWS
+share/texmf-dist/doc/eplain/README
+share/texmf-dist/doc/eplain/demo/Makefile
+share/texmf-dist/doc/eplain/demo/lscommnt.tex
+share/texmf-dist/doc/eplain/demo/xhyper.tex
+share/texmf-dist/doc/eplain/eplain.html
+share/texmf-dist/doc/eplain/eplain.pdf
+share/texmf-dist/doc/eplain/lscommnt.jpg
+share/texmf-dist/doc/eplain/util/idxuniq
+share/texmf-dist/doc/eplain/util/trimsee
+share/texmf-dist/doc/eplain/xhyper.jpg
