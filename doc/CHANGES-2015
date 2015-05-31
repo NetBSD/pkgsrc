@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2395 2015/05/31 07:13:13 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2396 2015/05/31 08:31:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4616,3 +4616,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-texsis version 2.18 [markd 2015-05-31]
 	Added print/tex-texsis-doc version 2.18 [markd 2015-05-31]
 	Updated meta-pkgs/texlive-collection-formatsextra to 2014 [markd 2015-05-31]
+	Removed emulators/NeoPop-SDL [wiz 2015-05-31]
