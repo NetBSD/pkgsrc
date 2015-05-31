@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/11/01 13:31:10 wen Exp $
+# $NetBSD: Makefile,v 1.12 2015/05/31 13:01:35 wen Exp $
 #
 
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Improved procedures for linear mixed models with R
 # LICENSE=	file LICENSE
 
 R_PKGNAME=	lmm
-R_PKGVER=	0.9
+R_PKGVER=	1.0
 
 USE_LANGUAGES+=	c fortran
 
