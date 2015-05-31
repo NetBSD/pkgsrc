@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/07/07 11:32:24 wen Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/31 14:00:12 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -11,7 +11,7 @@ LICENSE=	artistic-2.0
 USE_LANGUAGES=	c++
 
 R_PKGNAME=	intervals
-R_PKGVER=	0.14.0
+R_PKGVER=	0.15.0
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
