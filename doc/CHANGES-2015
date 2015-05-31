@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2415 2015/05/31 13:22:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2416 2015/05/31 14:01:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-twisted to 15.2.1 [wiz 2015-05-31]
 	Updated time/py-vdirsyncer to 0.5.1 [wiz 2015-05-31]
 	Updated devel/waf to 1.8.10 [wiz 2015-05-31]
+	Updated math/R-intervals to 0.15.0 [wen 2015-05-31]
