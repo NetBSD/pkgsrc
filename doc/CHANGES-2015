@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2401 2015/05/31 12:46:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2402 2015/05/31 12:54:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4622,3 +4622,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R-mvtnorm to 1.0.2 [wen 2015-05-31]
 	Updated math/R-maps to 2.3.9 [wen 2015-05-31]
 	Updated devel/p5-Error to 0.17024 [wiz 2015-05-31]
+	Updated www/p5-CGI to 4.20 [wiz 2015-05-31]
