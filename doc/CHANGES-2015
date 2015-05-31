@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2394 2015/05/31 03:55:04 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2395 2015/05/31 07:13:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4603,3 +4603,16 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R-spacetime to 1.1.4 [wen 2015-05-31]
 	Updated math/R-randomForest to 4.6.10 [wen 2015-05-31]
 	Updated math/R-plyr to 1.8.2 [wen 2015-05-31]
+	Added print/tex-edmac version 3.17 [markd 2015-05-31]
+	Added print/tex-edmac-doc version 3.17 [markd 2015-05-31]
+	Added print/tex-eplain version 3.7 [markd 2015-05-31]
+	Added print/tex-eplain-doc version 3.7 [markd 2015-05-31]
+	Added print/tex-lollipop version 1.03 [markd 2015-05-31]
+	Added print/tex-lollipop-doc version 1.03 [markd 2015-05-31]
+	Added print/tex-psizzl version 0.35 [markd 2015-05-31]
+	Added print/tex-psizzl-doc version 0.35 [markd 2015-05-31]
+	Added print/tex-startex version 1.04 [markd 2015-05-31]
+	Added print/tex-startex-doc version 1.04 [markd 2015-05-31]
+	Added print/tex-texsis version 2.18 [markd 2015-05-31]
+	Added print/tex-texsis-doc version 2.18 [markd 2015-05-31]
+	Updated meta-pkgs/texlive-collection-formatsextra to 2014 [markd 2015-05-31]
