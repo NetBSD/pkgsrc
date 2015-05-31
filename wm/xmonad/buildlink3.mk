@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/11/23 12:52:33 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2015/05/31 12:59:15 szptvlfn Exp $
 
 BUILDLINK_TREE+=	xmonad
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmonad
 XMONAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmonad+=	xmonad>=0.11
-BUILDLINK_ABI_DEPENDS.xmonad+=	xmonad>=0.11nb3
+BUILDLINK_ABI_DEPENDS.xmonad+=	xmonad>=0.11nb4
 BUILDLINK_PKGSRCDIR.xmonad?=	../../wm/xmonad
 
 .include "../../x11/libX11/buildlink3.mk"
