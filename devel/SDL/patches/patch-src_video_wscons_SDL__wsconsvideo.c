@@ -1,5 +1,6 @@
-$NetBSD: patch-src_video_wscons_SDL__wsconsvideo.c,v 1.4 2015/01/29 01:56:02 jmcneill Exp $
+$NetBSD: patch-src_video_wscons_SDL__wsconsvideo.c,v 1.5 2015/05/31 09:17:53 nat Exp $
 
+#Allow video to initialize even if there is no keyboard and mouse.
 --- src/video/wscons/SDL_wsconsvideo.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/video/wscons/SDL_wsconsvideo.c
 @@ -141,12 +141,18 @@ VideoBootStrap WSCONS_bootstrap = {
@@ -66,17 +67,19 @@ $NetBSD: patch-src_video_wscons_SDL__wsconsvideo.c,v 1.4 2015/01/29 01:56:02 jmc
    } else {
      WSCONS_ReportError("Displays with 8 bpp or less are not supported");
      return -1;
-@@ -326,6 +350,9 @@ int WSCONS_VideoInit(_THIS, SDL_PixelFor
-   if (WSCONS_InitKeyboard(this) == -1) {
-     return -1;
-   }
-+  if (WSCONS_InitMouse(this) == -1) {
-+    return -1;
-+  }
+@@ -323,9 +347,8 @@ int WSCONS_VideoInit(_THIS, SDL_PixelFor
+   vformat->BitsPerPixel = private->info.depth;
+   vformat->BytesPerPixel = private->info.depth / 8;
+   
+-  if (WSCONS_InitKeyboard(this) == -1) {
+-    return -1;
+-  }
++  WSCONS_InitKeyboard(this);
++  WSCONS_InitMouse(this);
    
    return 0;
  }
-@@ -601,7 +628,12 @@ void WSCONS_VideoQuit(_THIS)
+@@ -601,7 +624,12 @@ void WSCONS_VideoQuit(_THIS)
    }
  
    WSCONS_ReleaseKeyboard(this);
