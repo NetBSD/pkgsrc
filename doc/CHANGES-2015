@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2418 2015/05/31 15:23:36 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2419 2015/05/31 20:02:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R-intervals to 0.15.0 [wen 2015-05-31]
 	Updated lang/pear to 1.9.5nb4 [taca 2015-05-31]
 	Updated audio/ruby-mp3info to 0.8.6 [taca 2015-05-31]
+	Updated www/php-ja-wordpress to 4.2.2 [ryoon 2015-05-31]
