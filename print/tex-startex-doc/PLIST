@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:33 markd Exp $
+share/texmf-dist/doc/otherformats/startex/INSTALL
+share/texmf-dist/doc/otherformats/startex/README
+share/texmf-dist/doc/otherformats/startex/README.TEXLIVE
+share/texmf-dist/doc/otherformats/startex/guide.pdf
+share/texmf-dist/doc/otherformats/startex/ideas.pdf
+share/texmf-dist/doc/otherformats/startex/startex.bib
+share/texmf-dist/doc/otherformats/startex/startex.pdf
