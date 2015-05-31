@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2403 2015/05/31 12:57:17 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.2404 2015/05/31 12:59:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4624,3 +4624,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Error to 0.17024 [wiz 2015-05-31]
 	Updated www/p5-CGI to 4.20 [wiz 2015-05-31]
 	Updated devel/hs-dlist to 0.7.1.1 [szptvlfn 2015-05-31]
+	Updated math/R-mapproj to 1.2.2 [wen 2015-05-31]
