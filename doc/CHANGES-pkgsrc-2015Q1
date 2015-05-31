@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.42 2015/05/25 01:07:54 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.43 2015/05/31 13:27:57 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -152,3 +152,5 @@ Pullup ticket #4733 - requested by sborrill
 www/apache22: security patch
 Pullup ticket #4720 - requested by taca
 lang/ruby193-base: build fix
+Pullup ticket #4734 - requested by bsiegert
+sysutils/file: security patch
