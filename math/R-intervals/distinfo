@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/07/07 11:32:24 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/05/31 14:00:12 wen Exp $
 
-SHA1 (R/intervals_0.14.0.tar.gz) = 7d81861064e220614ceb30cb1854831741105a31
-RMD160 (R/intervals_0.14.0.tar.gz) = 1cef62d1ab23fbc7c2ec09e88b306d7a6a86bcf8
-Size (R/intervals_0.14.0.tar.gz) = 321562 bytes
-SHA1 (patch-src_plot__overlap.cpp) = 1c1e6221eef6ede3e226dc80955f188747e0f762
-SHA1 (patch-src_reduce.cpp) = 8162b570b6482e9ed1f09b06268f9e1aaee0958c
-SHA1 (patch-src_which__nearest.cpp) = f7da847cf46a3ab590790b516d33da5d0af558b9
+SHA1 (R/intervals_0.15.0.tar.gz) = cfa6062725b32696bc89ebf01c4f16157822986a
+RMD160 (R/intervals_0.15.0.tar.gz) = 1d4418ba472a51fb5df70524a558cc5e8f36cbb4
+Size (R/intervals_0.15.0.tar.gz) = 393180 bytes
