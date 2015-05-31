@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/08 16:31:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/05/31 13:13:56 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc
@@ -46,6 +45,9 @@ ${PYSITELIB}/tornado/iostream.pyo
 ${PYSITELIB}/tornado/locale.py
 ${PYSITELIB}/tornado/locale.pyc
 ${PYSITELIB}/tornado/locale.pyo
+${PYSITELIB}/tornado/locks.py
+${PYSITELIB}/tornado/locks.pyc
+${PYSITELIB}/tornado/locks.pyo
 ${PYSITELIB}/tornado/log.py
 ${PYSITELIB}/tornado/log.pyc
 ${PYSITELIB}/tornado/log.pyo
@@ -94,6 +96,9 @@ ${PYSITELIB}/tornado/platform/windows.pyo
 ${PYSITELIB}/tornado/process.py
 ${PYSITELIB}/tornado/process.pyc
 ${PYSITELIB}/tornado/process.pyo
+${PYSITELIB}/tornado/queues.py
+${PYSITELIB}/tornado/queues.pyc
+${PYSITELIB}/tornado/queues.pyo
 ${PYSITELIB}/tornado/simple_httpclient.py
 ${PYSITELIB}/tornado/simple_httpclient.pyc
 ${PYSITELIB}/tornado/simple_httpclient.pyo
@@ -110,7 +115,6 @@ ${PYSITELIB}/tornado/tcpserver.pyo
 ${PYSITELIB}/tornado/template.py
 ${PYSITELIB}/tornado/template.pyc
 ${PYSITELIB}/tornado/template.pyo
-${PYSITELIB}/tornado/test/README
 ${PYSITELIB}/tornado/test/__init__.py
 ${PYSITELIB}/tornado/test/__init__.pyc
 ${PYSITELIB}/tornado/test/__init__.pyo
@@ -159,6 +163,9 @@ ${PYSITELIB}/tornado/test/iostream_test.pyo
 ${PYSITELIB}/tornado/test/locale_test.py
 ${PYSITELIB}/tornado/test/locale_test.pyc
 ${PYSITELIB}/tornado/test/locale_test.pyo
+${PYSITELIB}/tornado/test/locks_test.py
+${PYSITELIB}/tornado/test/locks_test.pyc
+${PYSITELIB}/tornado/test/locks_test.pyo
 ${PYSITELIB}/tornado/test/log_test.py
 ${PYSITELIB}/tornado/test/log_test.pyc
 ${PYSITELIB}/tornado/test/log_test.pyo
@@ -172,6 +179,9 @@ ${PYSITELIB}/tornado/test/options_test.pyo
 ${PYSITELIB}/tornado/test/process_test.py
 ${PYSITELIB}/tornado/test/process_test.pyc
 ${PYSITELIB}/tornado/test/process_test.pyo
+${PYSITELIB}/tornado/test/queues_test.py
+${PYSITELIB}/tornado/test/queues_test.pyc
+${PYSITELIB}/tornado/test/queues_test.pyo
 ${PYSITELIB}/tornado/test/resolve_test_helper.py
 ${PYSITELIB}/tornado/test/resolve_test_helper.pyc
 ${PYSITELIB}/tornado/test/resolve_test_helper.pyo
@@ -189,6 +199,9 @@ ${PYSITELIB}/tornado/test/static/robots.txt
 ${PYSITELIB}/tornado/test/tcpclient_test.py
 ${PYSITELIB}/tornado/test/tcpclient_test.pyc
 ${PYSITELIB}/tornado/test/tcpclient_test.pyo
+${PYSITELIB}/tornado/test/tcpserver_test.py
+${PYSITELIB}/tornado/test/tcpserver_test.pyc
+${PYSITELIB}/tornado/test/tcpserver_test.pyo
 ${PYSITELIB}/tornado/test/template_test.py
 ${PYSITELIB}/tornado/test/template_test.pyc
 ${PYSITELIB}/tornado/test/template_test.pyo
