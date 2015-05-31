@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2392 2015/05/31 02:39:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2393 2015/05/31 03:11:11 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4275,7 +4275,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/tex-accfonts-doc version 0.25 [markd 2015-05-17]
 	Added fonts/afm2pl version 0.7.1 [markd 2015-05-17]
 	Added fonts/tex-afm2pl version 0.7.1 [markd 2015-05-17]
-	Added fonts/tex-afm2pl-doc version 0.7.1 [markd 2015-05-17]
 	Added fonts/tex-dosepsbin version 1.2 [markd 2015-05-17]
 	Added fonts/tex-dosepsbin-doc version 1.2 [markd 2015-05-17]
 	Added fonts/lcdftypetools version 2.100 [markd 2015-05-17]
