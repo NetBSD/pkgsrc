@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2391 2015/05/31 02:33:44 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2392 2015/05/31 02:39:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4602,3 +4602,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/php-owncloud to 8.0.3 [ryoon 2015-05-31]
 	Updated www/php-concrete5 to 5.7.4.2 [ryoon 2015-05-31]
 	Updated math/R-spacetime to 1.1.4 [wen 2015-05-31]
+	Updated math/R-randomForest to 4.6.10 [wen 2015-05-31]
