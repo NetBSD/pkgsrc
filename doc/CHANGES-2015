@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2388 2015/05/30 23:45:18 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2389 2015/05/31 00:17:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R-sp to 1.1.0 [wen 2015-05-30]
 	Updated math/R to 3.2.0nb1 [ryoon 2015-05-30]
 	Updated math/R-splancs to 2.01.37 [wen 2015-05-30]
+	Updated www/php-owncloud to 8.0.3 [ryoon 2015-05-31]
