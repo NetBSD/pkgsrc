@@ -1,9 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2013/06/09 04:43:43 ryoon Exp $
+$NetBSD: MESSAGE,v 1.7 2015/05/31 02:16:11 ryoon Exp $
 
-To use concrete5 with Apache 2.4, you will need to perform the following steps.
+To use concrete5 with nginx, you will need to perform the following steps.
 
-1. Install www/apache24 and www/ap-php
+1. Install www/nginx and www/php-fpm with following in your mk.conf.
+
+	APACHE_USER=nginx
+	APACHE_GROUP=nginx
 
 2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
    If your machine are located in Tokyo, Japan, you should get the following.
@@ -40,25 +43,65 @@ To use concrete5 with Apache 2.4, you will need to perform the following steps.
 7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=gd.so
-	extension=mysql.so
+	extension=dom.so
+	extension=pdo.so
+	extension=pdo_mysql.so
 	extension=iconv.so
+	extension=mbstring.so
+	extension=curl.so
+	extension=mcrypt.so
+	extension=json.so
+	extension=zip.so
 
-8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+	default_charaset = UTF8
+	mbstring.language = neutral
+	mbstring.internal_encoding = UTF-8
+	mbstring.http_input = auto
+	mbstring.http_output =  UTF-8
+	iconv.input_encoding = UTF-8
+	iconv.internal_encoding = UTF-8
 
-	DocumentRoot "${PREFIX}/share/concrete5"
-	LoadModule php5_module lib/httpd/mod_php5.so
-	AddType application/x-httpd-php .php
-	<Directory ${PREFIX}/share/concrete5>
-		DirectoryIndex index.php
-		Options All
-		Allow from All
-		Require all granted
-	</Directory>
+8. Be sure to have the following lines in ${PREFIX}/etc/nginx/nginx.conf
 
-9. Start Apache httpd 2.2
-	# ${RCD_SCRIPTS_DIR}/apache start
+	http {
+		include /usr/pkg/etc/nginx/mime.types;
 
-10. Access http://localhost/index.php
+		upstream php-handler {
+			server 127.0.0.1:9000;
+	}
+
+	server {
+		listen 80;
+		server_name YOUR_SERVER_NAME;
+		client_max_body_size 20m;
+
+	location / {
+		root   ${PREFIX}/share/concrete5;
+		index  index.php index.html index.htm;
+		try_files $uri $uri/ @rewrite;
+	}
+
+	location @rewrite {
+		rewrite ^/(.*)$ /index.php/$1 last;
+	}
+
+	location ~ \.php($|/) {
+		root    ${PREFIX}/share/concrete5;
+	        fastcgi_pass   127.0.0.1:9000;
+		fastcgi_index  index.php;
+		fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+		include        fastcgi_params;
+	}
+
+	}
+	}
+
+9. Start php-fpm and nginx.
+
+	# ${RCD_SCRIPTS_DIR}/php_fpm start
+	# ${RCD_SCRIPTS_DIR}/nginx start
+
+10. Access http://localhost/
    And setup with the following information.
 
 	database name:	concrete5_db
