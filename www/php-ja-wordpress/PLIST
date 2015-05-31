@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/03/21 04:15:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/05/31 19:59:59 ryoon Exp $
 share/doc/ja-wordpress/license.txt
 share/doc/ja-wordpress/readme.html
 share/examples/ja-wordpress/ja-wordpress.conf
@@ -103,8 +103,12 @@ share/ja-wordpress/wp-admin/css/media-rtl.css
 share/ja-wordpress/wp-admin/css/media.css
 share/ja-wordpress/wp-admin/css/nav-menus-rtl.css
 share/ja-wordpress/wp-admin/css/nav-menus.css
+share/ja-wordpress/wp-admin/css/press-this-editor-rtl.css
+share/ja-wordpress/wp-admin/css/press-this-editor.css
 share/ja-wordpress/wp-admin/css/press-this-rtl.css
+share/ja-wordpress/wp-admin/css/press-this-rtl.min.css
 share/ja-wordpress/wp-admin/css/press-this.css
+share/ja-wordpress/wp-admin/css/press-this.min.css
 share/ja-wordpress/wp-admin/css/revisions-rtl.css
 share/ja-wordpress/wp-admin/css/revisions.css
 share/ja-wordpress/wp-admin/css/themes-rtl.css
@@ -216,6 +220,7 @@ share/ja-wordpress/wp-admin/includes/class-wp-ms-users-list-table.php
 share/ja-wordpress/wp-admin/includes/class-wp-plugin-install-list-table.php
 share/ja-wordpress/wp-admin/includes/class-wp-plugins-list-table.php
 share/ja-wordpress/wp-admin/includes/class-wp-posts-list-table.php
+share/ja-wordpress/wp-admin/includes/class-wp-press-this.php
 share/ja-wordpress/wp-admin/includes/class-wp-terms-list-table.php
 share/ja-wordpress/wp-admin/includes/class-wp-theme-install-list-table.php
 share/ja-wordpress/wp-admin/includes/class-wp-themes-list-table.php
@@ -260,6 +265,8 @@ share/ja-wordpress/wp-admin/install-helper.php
 share/ja-wordpress/wp-admin/install.php
 share/ja-wordpress/wp-admin/js/accordion.js
 share/ja-wordpress/wp-admin/js/accordion.min.js
+share/ja-wordpress/wp-admin/js/bookmarklet.js
+share/ja-wordpress/wp-admin/js/bookmarklet.min.js
 share/ja-wordpress/wp-admin/js/color-picker.js
 share/ja-wordpress/wp-admin/js/color-picker.min.js
 share/ja-wordpress/wp-admin/js/comment.js
@@ -311,12 +318,16 @@ share/ja-wordpress/wp-admin/js/post.js
 share/ja-wordpress/wp-admin/js/post.min.js
 share/ja-wordpress/wp-admin/js/postbox.js
 share/ja-wordpress/wp-admin/js/postbox.min.js
+share/ja-wordpress/wp-admin/js/press-this.js
+share/ja-wordpress/wp-admin/js/press-this.min.js
 share/ja-wordpress/wp-admin/js/revisions.js
 share/ja-wordpress/wp-admin/js/revisions.min.js
 share/ja-wordpress/wp-admin/js/set-post-thumbnail.js
 share/ja-wordpress/wp-admin/js/set-post-thumbnail.min.js
 share/ja-wordpress/wp-admin/js/svg-painter.js
 share/ja-wordpress/wp-admin/js/svg-painter.min.js
+share/ja-wordpress/wp-admin/js/tags-box.js
+share/ja-wordpress/wp-admin/js/tags-box.min.js
 share/ja-wordpress/wp-admin/js/tags.js
 share/ja-wordpress/wp-admin/js/tags.min.js
 share/ja-wordpress/wp-admin/js/theme.js
@@ -467,8 +478,8 @@ share/ja-wordpress/wp-content/plugins/index.html
 share/ja-wordpress/wp-content/plugins/index.php
 share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/ext/ja/admin.css
 share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/ext/ja/class.php
-share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/20140817/wplink.js
-share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/20140817/wplink.min.js
+share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/20141213/wplink.js
+share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/20141213/wplink.min.js
 share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/word-count.js
 share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/word-count.min.js
 share/ja-wordpress/wp-content/plugins/wp-multibyte-patch/js/wplink.js
@@ -502,7 +513,6 @@ share/ja-wordpress/wp-content/themes/twentyfifteen/genericons/Genericons.ttf
 share/ja-wordpress/wp-content/themes/twentyfifteen/genericons/Genericons.woff
 share/ja-wordpress/wp-content/themes/twentyfifteen/genericons/LICENSE.txt
 share/ja-wordpress/wp-content/themes/twentyfifteen/genericons/README.md
-share/ja-wordpress/wp-content/themes/twentyfifteen/genericons/example.html
 share/ja-wordpress/wp-content/themes/twentyfifteen/genericons/genericons.css
 share/ja-wordpress/wp-content/themes/twentyfifteen/header.php
 share/ja-wordpress/wp-content/themes/twentyfifteen/image.php
@@ -551,7 +561,6 @@ share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/COPYING.txt
 share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/Genericons-Regular.otf
 share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/LICENSE.txt
 share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/README.txt
-share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/example.html
 share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.eot
 share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.svg
 share/ja-wordpress/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.ttf
@@ -613,7 +622,6 @@ share/ja-wordpress/wp-content/themes/twentythirteen/genericons/COPYING.txt
 share/ja-wordpress/wp-content/themes/twentythirteen/genericons/Genericons-Regular.otf
 share/ja-wordpress/wp-content/themes/twentythirteen/genericons/LICENSE.txt
 share/ja-wordpress/wp-content/themes/twentythirteen/genericons/README.txt
-share/ja-wordpress/wp-content/themes/twentythirteen/genericons/example.html
 share/ja-wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.eot
 share/ja-wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.svg
 share/ja-wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.ttf
@@ -839,6 +847,7 @@ share/ja-wordpress/wp-includes/images/media/text.png
 share/ja-wordpress/wp-includes/images/media/video.png
 share/ja-wordpress/wp-includes/images/rss-2x.png
 share/ja-wordpress/wp-includes/images/rss.png
+share/ja-wordpress/wp-includes/images/smilies/frownie.png
 share/ja-wordpress/wp-includes/images/smilies/icon_arrow.gif
 share/ja-wordpress/wp-includes/images/smilies/icon_biggrin.gif
 share/ja-wordpress/wp-includes/images/smilies/icon_confused.gif
@@ -861,6 +870,9 @@ share/ja-wordpress/wp-includes/images/smilies/icon_smile.gif
 share/ja-wordpress/wp-includes/images/smilies/icon_surprised.gif
 share/ja-wordpress/wp-includes/images/smilies/icon_twisted.gif
 share/ja-wordpress/wp-includes/images/smilies/icon_wink.gif
+share/ja-wordpress/wp-includes/images/smilies/mrgreen.png
+share/ja-wordpress/wp-includes/images/smilies/rolleyes.png
+share/ja-wordpress/wp-includes/images/smilies/simple-smile.png
 share/ja-wordpress/wp-includes/images/spinner-2x.gif
 share/ja-wordpress/wp-includes/images/spinner.gif
 share/ja-wordpress/wp-includes/images/toggle-arrow-2x.png
@@ -988,6 +1000,7 @@ share/ja-wordpress/wp-includes/js/mediaelement/bigplay.svg
 share/ja-wordpress/wp-includes/js/mediaelement/controls.png
 share/ja-wordpress/wp-includes/js/mediaelement/controls.svg
 share/ja-wordpress/wp-includes/js/mediaelement/flashmediaelement.swf
+share/ja-wordpress/wp-includes/js/mediaelement/froogaloop.min.js
 share/ja-wordpress/wp-includes/js/mediaelement/loading.gif
 share/ja-wordpress/wp-includes/js/mediaelement/mediaelement-and-player.min.js
 share/ja-wordpress/wp-includes/js/mediaelement/mediaelementplayer.min.css
@@ -1058,6 +1071,8 @@ share/ja-wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.js
 share/ja-wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.min.js
 share/ja-wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.js
 share/ja-wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js
+share/ja-wordpress/wp-includes/js/tinymce/plugins/wpemoji/plugin.js
+share/ja-wordpress/wp-includes/js/tinymce/plugins/wpemoji/plugin.min.js
 share/ja-wordpress/wp-includes/js/tinymce/plugins/wpfullscreen/plugin.js
 share/ja-wordpress/wp-includes/js/tinymce/plugins/wpfullscreen/plugin.min.js
 share/ja-wordpress/wp-includes/js/tinymce/plugins/wpgallery/plugin.js
@@ -1110,15 +1125,24 @@ share/ja-wordpress/wp-includes/js/tinymce/wp-tinymce.js.gz
 share/ja-wordpress/wp-includes/js/tinymce/wp-tinymce.php
 share/ja-wordpress/wp-includes/js/tw-sack.js
 share/ja-wordpress/wp-includes/js/tw-sack.min.js
+share/ja-wordpress/wp-includes/js/twemoji.js
+share/ja-wordpress/wp-includes/js/twemoji.min.js
 share/ja-wordpress/wp-includes/js/underscore.min.js
 share/ja-wordpress/wp-includes/js/utils.js
 share/ja-wordpress/wp-includes/js/utils.min.js
+share/ja-wordpress/wp-includes/js/wp-a11y.js
+share/ja-wordpress/wp-includes/js/wp-a11y.min.js
 share/ja-wordpress/wp-includes/js/wp-ajax-response.js
 share/ja-wordpress/wp-includes/js/wp-ajax-response.min.js
 share/ja-wordpress/wp-includes/js/wp-auth-check.js
 share/ja-wordpress/wp-includes/js/wp-auth-check.min.js
 share/ja-wordpress/wp-includes/js/wp-backbone.js
 share/ja-wordpress/wp-includes/js/wp-backbone.min.js
+share/ja-wordpress/wp-includes/js/wp-emoji-loader.js
+share/ja-wordpress/wp-includes/js/wp-emoji-loader.min.js
+share/ja-wordpress/wp-includes/js/wp-emoji-release.min.js
+share/ja-wordpress/wp-includes/js/wp-emoji.js
+share/ja-wordpress/wp-includes/js/wp-emoji.min.js
 share/ja-wordpress/wp-includes/js/wp-list-revisions.js
 share/ja-wordpress/wp-includes/js/wp-list-revisions.min.js
 share/ja-wordpress/wp-includes/js/wp-lists.js
