@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2417 2015/05/31 15:20:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2418 2015/05/31 15:23:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4638,3 +4638,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/waf to 1.8.10 [wiz 2015-05-31]
 	Updated math/R-intervals to 0.15.0 [wen 2015-05-31]
 	Updated lang/pear to 1.9.5nb4 [taca 2015-05-31]
+	Updated audio/ruby-mp3info to 0.8.6 [taca 2015-05-31]
