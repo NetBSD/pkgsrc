@@ -1,0 +1,16 @@
+TeXsis is a TeX macro package which provides useful features
+for typesetting research papers and related documents. For
+example, it includes support specifically for: Automatic
+numbering of equations, figures, tables and references;
+Simplified control of type sizes, line spacing, footnotes,
+running headlines and footlines, and tables of contents,
+figures and tables; Specialized document formats for research
+papers, preprints and ``e-prints,'' conference proceedings,
+theses, books, referee reports, letters, and memoranda;
+Simplified means of constructing an index for a book or thesis;
+Easy to use double column formatting; Specialized environments
+for lists, theorems and proofs, centered or non-justified text,
+and listing computer code; Specialized macros for easily
+constructing ruled tables. TeXsis was originally developed for
+physicists, but others may also find it useful. It is
+completely compatible with Plain TeX.
