@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:32 markd Exp $
+bin/eplain
+share/texmf-dist/tex/eplain/arrow.tex
+share/texmf-dist/tex/eplain/btxmac.tex
+share/texmf-dist/tex/eplain/eplain.aux
+share/texmf-dist/tex/eplain/eplain.ini
+share/texmf-dist/tex/eplain/eplain.tex

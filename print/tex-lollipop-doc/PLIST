@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:33 markd Exp $
+share/texmf-dist/doc/otherformats/lollipop/README
+share/texmf-dist/doc/otherformats/lollipop/manual/address.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/appendix.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/btxmac.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/comm.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/comment.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/example.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/extern.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/head.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/list.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/lollipop-manual.bib
+share/texmf-dist/doc/otherformats/lollipop/manual/lollipop-manual.pdf
+share/texmf-dist/doc/otherformats/lollipop/manual/lollipop-manual.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/mandefs.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/opt.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/out.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/prelim.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/struct.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/titlepag.tex
+share/texmf-dist/doc/otherformats/lollipop/manual/trace.tex
+share/texmf-dist/doc/otherformats/lollipop/tex-inde.xen

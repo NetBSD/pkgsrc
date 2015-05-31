@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:32 markd Exp $
+share/texmf-dist/tex/generic/edmac/edmac.tex
+share/texmf-dist/tex/generic/edmac/edmacfss.sty
+share/texmf-dist/tex/generic/edmac/edstanza.tex
+share/texmf-dist/tex/generic/edmac/tabmac.tex

@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:33 markd Exp $
+share/texmf-dist/tex/psizzl/base/chapters.Psizzl
+share/texmf-dist/tex/psizzl/base/citation.Psizzl
+share/texmf-dist/tex/psizzl/base/fontdefs.Psizzl
+share/texmf-dist/tex/psizzl/base/index.Psizzl
+share/texmf-dist/tex/psizzl/base/institut.Psizzl
+share/texmf-dist/tex/psizzl/base/letter.Psizzl
+share/texmf-dist/tex/psizzl/base/lists.Psizzl
+share/texmf-dist/tex/psizzl/base/macros.Psizzl
+share/texmf-dist/tex/psizzl/base/memo.Psizzl
+share/texmf-dist/tex/psizzl/base/mypsizzl.tex
+share/texmf-dist/tex/psizzl/base/options.Psizzl
+share/texmf-dist/tex/psizzl/base/output.Psizzl
+share/texmf-dist/tex/psizzl/base/picture.Psizzl
+share/texmf-dist/tex/psizzl/base/psizzl.tex
+share/texmf-dist/tex/psizzl/base/publicat.Psizzl
+share/texmf-dist/tex/psizzl/base/symbols.Psizzl
+share/texmf-dist/tex/psizzl/base/thesis.Psizzl
+share/texmf-dist/tex/psizzl/config/psizzl.ini

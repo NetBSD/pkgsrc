@@ -1,0 +1,12 @@
+Lollipop is "TeX made easy" -- it is a macro package that
+functions as a toolbox for writing TeX macros. Its main aim is
+to make macro writing so easy that implementing a fully new
+layout in TeX would become a matter of less than an hour for an
+average document. The aim is that such a task could be
+accomplished by someone with only a very basic training in TeX
+programming. Thus, Lollipop aims to make structured text
+formatting available in environments where typical users would
+switch to WYSIWYG packages for the freedom that such a
+mechanism offers. In addition, development of support for
+Lollipop documents written in RTL languages (such as Persian)
+is underway.

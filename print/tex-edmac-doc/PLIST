@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:32 markd Exp $
+share/texmf-dist/doc/latex/edmac/COPYRIGHT
+share/texmf-dist/doc/latex/edmac/braonain.tex
+share/texmf-dist/doc/latex/edmac/copying
+share/texmf-dist/doc/latex/edmac/ed-nfss.txt
+share/texmf-dist/doc/latex/edmac/edmac.doc
+share/texmf-dist/doc/latex/edmac/edstanza.doc
+share/texmf-dist/doc/latex/edmac/edszadoc.tex
+share/texmf-dist/doc/latex/edmac/features.tex
+share/texmf-dist/doc/latex/edmac/readme

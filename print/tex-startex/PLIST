@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:33 markd Exp $
+share/texmf-dist/makeindex/startex/stxglo.ist
+share/texmf-dist/makeindex/startex/stxind.ist
+share/texmf-dist/tex/startex/a4-article.stx
+share/texmf-dist/tex/startex/article.stx
+share/texmf-dist/tex/startex/ifi-article.stx
+share/texmf-dist/tex/startex/ifi-artikkel.stx
+share/texmf-dist/tex/startex/startex.lan
+share/texmf-dist/tex/startex/startex.tex

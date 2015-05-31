@@ -1,0 +1,8 @@
+A powerfully extended version of the plain format, adding
+support for bibliographies, tables of contents, enumerated
+lists, verbatim input of files, numbered equations, tables, two-
+column output, footnotes, hyperlinks in PDF output and
+commutative diagrams. Eplain can also load some of the more
+useful LaTeX packages, notably graphics, graphicx, color,
+autopict (a package instance of the LaTeX picture code),
+psfrag, and url.
