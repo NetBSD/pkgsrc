@@ -1,0 +1,8 @@
+GNU gnu-pw-mgr is a password manager designed to make it easy to
+reconstruct difficult passwords when they are needed, while limiting
+the risk of attack. The user of this program inputs a very long
+initial password "seed" and a self-defined transformation of a web
+site URL to obtain both the password and a user name hint for that
+web site. The seed is stored in a hidden file. However, the passwords
+and the URL transforms are never stored anywhere. You must remember
+this transform (password id), or the password is lost forever.
