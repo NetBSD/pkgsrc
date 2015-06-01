@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2422 2015/06/01 12:57:11 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2423 2015/06/01 12:57:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4654,3 +4654,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-do_mysql to 0.10.16 [taca 2015-06-01]
 	Updated databases/ruby-do_postgres to 0.10.16 [taca 2015-06-01]
 	Updated databases/ruby-do_sqlite3 to 0.10.16 [taca 2015-06-01]
+	Added security/gnu-pw-mgr version 1.4 [wiz 2015-06-01]
