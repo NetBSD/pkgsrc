@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2015/04/25 14:24:59 tnn Exp $
+# $NetBSD: Makefile,v 1.92 2015/06/01 17:52:38 snj Exp $
 
-DISTNAME=	openbox-3.5.2
-PKGREVISION=	3
+DISTNAME=	openbox-3.6
 CATEGORIES=	wm x11
 MASTER_SITES=	http://openbox.org/dist/openbox/
 
