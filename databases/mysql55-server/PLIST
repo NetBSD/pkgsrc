@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2015/04/08 10:38:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2015/06/01 07:40:36 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -3008,6 +3008,7 @@ share/mysql/test/suite/innodb/r/innodb_trx_weight.result
 share/mysql/test/suite/innodb/r/insert_debug.result
 share/mysql/test/suite/innodb/r/sp_temp_table.result
 share/mysql/test/suite/innodb/r/strict_mode.result
+share/mysql/test/suite/innodb/r/xa_recovery.result
 share/mysql/test/suite/innodb/t/blob-update-debug.test
 share/mysql/test/suite/innodb/t/create-index.test
 share/mysql/test/suite/innodb/t/disabled.def
@@ -3140,6 +3141,7 @@ share/mysql/test/suite/innodb/t/innodb_trx_weight.test
 share/mysql/test/suite/innodb/t/insert_debug.test
 share/mysql/test/suite/innodb/t/sp_temp_table.test
 share/mysql/test/suite/innodb/t/strict_mode.test
+share/mysql/test/suite/innodb/t/xa_recovery.test
 share/mysql/test/suite/innodb_zip/r/innodb-create-options.result
 share/mysql/test/suite/innodb_zip/r/innodb-zip.result
 share/mysql/test/suite/innodb_zip/r/innodb_bug36169.result
