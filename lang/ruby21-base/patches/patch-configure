@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.2.8.1 2015/04/26 08:36:34 tron Exp $
+$NetBSD: patch-configure,v 1.2.8.2 2015/06/01 01:46:36 hiramatsu Exp $
 
-* Adding Interix and MirBSD support.
+* Adding Interix support.
 * Ignore doxygen.
 
 --- configure.orig	2014-11-13 13:38:30.000000000 +0000
