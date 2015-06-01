@@ -1,8 +1,8 @@
-$NetBSD: patch-src_libopts_autoopts_options.h,v 1.1 2013/10/25 09:03:12 jperkin Exp $
+$NetBSD: patch-src_libopts_autoopts_options.h,v 1.2 2015/06/01 21:50:22 spz Exp $
 
 Workaround for older OSX.
 
---- src/libopts/autoopts/options.h.orig	2013-05-08 18:32:30.000000000 +0000
+--- src/libopts/autoopts/options.h.orig	2015-03-23 07:19:23.000000000 +0000
 +++ src/libopts/autoopts/options.h
 @@ -62,7 +62,7 @@
  #    include <sysexits.h>
