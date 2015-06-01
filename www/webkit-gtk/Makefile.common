@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2015/05/28 05:30:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.42 2015/06/01 20:58:37 wiz Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.4.9
@@ -29,6 +29,11 @@ CONFIGURE_ARGS+=	--enable-x11-target \
 			--disable-geolocation \
 			--disable-gtk-doc-html
 
+.include "../../mk/compiler.mk"
+.if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]))
+BUILDLINK_TRANSFORM+=	rm:-D_FORTIFY_SOURCE=2
+.endif
+
 .include "options.mk"
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
@@ -55,7 +60,6 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
 CXXFLAGS.SunOS+=	-fpermissive
 
-.include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .endif
