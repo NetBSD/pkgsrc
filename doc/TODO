@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14436 2015/05/31 22:30:26 ryoon Exp $
+$NetBSD: TODO,v 1.14437 2015/06/01 13:20:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -652,7 +652,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.1.0
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
-	o gsharutils-4.15.1
+	o gsharutils-4.15.2
 	o gss-1.0.3
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
@@ -787,7 +787,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.161
+	o mame-0.162
 	o manedit-1.2.1
 	o maradns-2.0.11
 	o matchbox-panel-0.9.3
@@ -798,7 +798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mediainfo-0.7.72
 	o mednafen-0.9.38.2
 	o mergeant-0.67
-	o mess-0.161
+	o mess-0.162
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
