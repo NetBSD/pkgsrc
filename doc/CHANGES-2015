@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2420 2015/05/31 22:30:26 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2421 2015/06/01 08:16:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4646,3 +4646,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-svn to 2.4.2 [ryoon 2015-05-31]
 	Updated www/gitweb to 2.4.2 [ryoon 2015-05-31]
 	Updated devel/git to 2.4.2 [ryoon 2015-05-31]
+	Updated databases/mysql55-client to 5.5.44 [adam 2015-06-01]
+	Updated databases/mysql55-server to 5.5.44 [adam 2015-06-01]
+	Updated databases/mysql56-client to 5.6.25 [adam 2015-06-01]
+	Updated databases/mysql56-server to 5.6.25 [adam 2015-06-01]
