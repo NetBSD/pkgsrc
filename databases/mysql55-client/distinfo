@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.42 2015/04/08 10:38:01 adam Exp $
+$NetBSD: distinfo,v 1.43 2015/06/01 07:40:36 adam Exp $
 
-SHA1 (mysql-5.5.43.tar.gz) = ac986973e921d669d3bd5e14d8f35110eb7a3428
-RMD160 (mysql-5.5.43.tar.gz) = 780d539d1aed5e753b91ea70f601b97ef03bfff7
-Size (mysql-5.5.43.tar.gz) = 21784417 bytes
+SHA1 (mysql-5.5.44.tar.gz) = 1882c53d078ffb2e50339a8d9f5ba44c3eb155ea
+RMD160 (mysql-5.5.44.tar.gz) = 72faecbd2cae73ac109253e4a512086e74058128
+Size (mysql-5.5.44.tar.gz) = 21789766 bytes
 SHA1 (sphinx-2.2.7-release.tar.gz) = dedae28c0deafda90109745230dacbe0dc441e1a
 RMD160 (sphinx-2.2.7-release.tar.gz) = d9f0150f6779b43457e30c77be50aa9bc658b03a
 Size (sphinx-2.2.7-release.tar.gz) = 2969037 bytes
@@ -47,4 +47,3 @@ SHA1 (patch-strings_decimal.c) = dafedbfbd71149890f3356f3cafa77d6d0466f0f
 SHA1 (patch-strtoll.c) = fe0c586ba0475c16df5cd6ecaae41e2c5b89c509
 SHA1 (patch-strtoull.c) = 1f334e5b89390de41594de6d22e0071ceeaed951
 SHA1 (patch-vio_viosocket.c) = 49964371be640a029c295fe4178801e9f0b6be18
-SHA1 (patch-vio_viossl.c) = bc1922f1170ff55a6ed832b90c110e788b49d4be
