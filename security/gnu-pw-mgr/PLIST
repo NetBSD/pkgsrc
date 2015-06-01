@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/01 12:57:14 wiz Exp $
+bin/gnu-pw-mgr
+bin/sort-pw-cfg
+info/gnu-pw-mgr.info
+man/man1/gnu-pw-mgr.1
+man/man1/sort-pw-cfg.1
