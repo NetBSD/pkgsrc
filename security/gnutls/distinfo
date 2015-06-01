@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.112 2015/02/11 11:25:57 adam Exp $
+$NetBSD: distinfo,v 1.113 2015/06/01 21:50:22 spz Exp $
 
-SHA1 (gnutls-3.2.21.tar.xz) = fa12e643ad21bcaf450d534f262c813d75843966
-RMD160 (gnutls-3.2.21.tar.xz) = 8d3b7817dcd28d3c4f1e3ad0d014ab7891daa7f9
-Size (gnutls-3.2.21.tar.xz) = 5162040 bytes
-SHA1 (patch-ae) = b6402cc4a03f1b32792191518ed0c5596eb91c07
-SHA1 (patch-gl_stdio.in.h) = cad0685b77a1abb74ac578695ceb5c1c74479a87
-SHA1 (patch-lib_Makefile.in) = a75aa7bf9d493fae93b02d0ffdc82f538cc85737
-SHA1 (patch-lib_nettle_rnd.c) = bbce9bbb61d2be625585f6c8ed5bda95f3a80344
-SHA1 (patch-lib_system.h) = fb67be62f1e889a665a65ab151ced24fa1ab3e2e
-SHA1 (patch-src_libopts_autoopts_options.h) = 60be5b43f23ba5978759c1e245781da7f9125071
-SHA1 (patch-src_libopts_compat_compat.h) = 2e0a1be460917b2d7a8f6bdac698dad405143013
-SHA1 (patch-src_libopts_makeshell.c) = c94e717027d078a081acd10eaec51a44dc4d42e1
-SHA1 (patch-src_libopts_proto.h) = 9749cc4bd080e1a8d800bde181143acb9c340ec8
-SHA1 (patch-tests_Makefile.in) = 0c2e37c632686301855cf6d0ed09583e797ae4e3
-SHA1 (patch-tests_openpgp-certs_Makefile.in) = 8d3a7e7e4fb063465e0fbdfae22a7bf579529b0c
+SHA1 (gnutls-3.3.15.tar.xz) = d7f66b0aeaf48ff8621cc1913230635ef672f0a4
+RMD160 (gnutls-3.3.15.tar.xz) = 0c812034b3b8356c31d69074ec92382545eb808b
+Size (gnutls-3.3.15.tar.xz) = 6286288 bytes
+SHA1 (patch-ae) = 5e020483ac14ef6ccc45a53e351242ab16c860f1
+SHA1 (patch-gl_stdio.in.h) = 298cc0e27087f086e9d47c67f81c8d10f6a7a8f1
+SHA1 (patch-lib_Makefile.in) = d0e292e632a91a9f19e39bd2c2d205a086ba5588
+SHA1 (patch-lib_nettle_rnd-common.c) = e0feb509e0c37791560280d9eb36785edea51a25
+SHA1 (patch-src_libopts_autoopts_options.h) = 9202c55314fe8764ac82c95bbfabfa1b031e9ba4
+SHA1 (patch-src_libopts_compat_compat.h) = 240fbfc0ba20af35e0634ba873fe9e34bfbcc921
+SHA1 (patch-src_libopts_makeshell.c) = e5b7d66caaec45e12ae5490d515fc9fc75de3d92
+SHA1 (patch-src_libopts_proto.h) = 78f845bdcbac8de74953a3cee0b77fa9c5b05386
+SHA1 (patch-tests_Makefile.in) = 5a52b56d247f999f8c16a068291c5dfb2ec80f6c
+SHA1 (patch-tests_openpgp-certs_Makefile.in) = 2e7074312e67d747bd0ecfa839187f8bf33f4f09

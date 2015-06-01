@@ -1,8 +1,8 @@
-$NetBSD: patch-src_libopts_compat_compat.h,v 1.1 2013/10/25 09:03:12 jperkin Exp $
+$NetBSD: patch-src_libopts_compat_compat.h,v 1.2 2015/06/01 21:50:22 spz Exp $
 
 Workaround for older OSX.
 
---- src/libopts/compat/compat.h.orig	2013-05-08 18:32:30.000000000 +0000
+--- src/libopts/compat/compat.h.orig	2015-03-23 07:19:23.000000000 +0000
 +++ src/libopts/compat/compat.h
 @@ -182,7 +182,7 @@
  #  include <unistd.h>
