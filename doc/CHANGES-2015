@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2424 2015/06/01 17:53:05 snj Exp $
+$NetBSD: CHANGES-2015,v 1.2425 2015/06/01 22:55:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-do_sqlite3 to 0.10.16 [taca 2015-06-01]
 	Added security/gnu-pw-mgr version 1.4 [wiz 2015-06-01]
 	Updated wm/openbox to 3.6 [snj 2015-06-01]
+	Updated mail/getmail to 4.48.0 [schmonz 2015-06-01]
