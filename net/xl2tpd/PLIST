@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/02 00:22:16 christos Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/01 14:01:21 hauke Exp $
 bin/pfc
 man/man1/pfc.1
 man/man5/l2tp-secrets.5
@@ -6,10 +6,10 @@ man/man5/xl2tpd.conf.5
 man/man8/xl2tpd.8
 sbin/xl2tpd
 sbin/xl2tpd-control
+share/examples/rc.d/xl2tpd
 share/examples/xl2tpd/chap-secrets
 share/examples/xl2tpd/ipsec.conf
 share/examples/xl2tpd/options.xl2tpd
 share/examples/xl2tpd/racoon.conf
 share/examples/xl2tpd/psk.txt
-share/examples/xl2tpd/xl2tpd
 share/examples/xl2tpd/xl2tpd.conf
