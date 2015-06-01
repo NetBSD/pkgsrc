@@ -1,8 +1,8 @@
-$NetBSD: patch-gl_stdio.in.h,v 1.2 2014/12/05 12:25:42 khorben Exp $
+$NetBSD: patch-gl_stdio.in.h,v 1.3 2015/06/01 21:50:22 spz Exp $
 
 Avoid conflict between gets() and std::gets()
 
---- gl/stdio.in.h.orig	2014-04-18 17:03:19.000000000 +0000
+--- gl/stdio.in.h.orig	2015-03-23 20:57:21.000000000 +0000
 +++ gl/stdio.in.h
 @@ -714,6 +714,7 @@ _GL_WARN_ON_USE (getline, "getline is un
  # endif
