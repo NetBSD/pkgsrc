@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.19 2014/04/26 01:16:54 dsainty Exp $
+$NetBSD: patch-aa,v 1.20 2015/06/02 14:53:10 adam Exp $
 
---- makefile.machine.orig	2010-05-30 08:33:48.000000000 +0000
+--- makefile.machine.orig	2015-02-25 20:12:06.000000000 +0000
 +++ makefile.machine
-@@ -2,20 +2,20 @@
+@@ -2,20 +2,18 @@
  # makefile for Linux (x86, PPC, alpha ...)
  #
  
@@ -16,12 +16,10 @@ $NetBSD: patch-aa,v 1.19 2014/04/26 01:16:54 dsainty Exp $
  	-D_7ZIP_LARGE_PAGES \
  	$(LOCAL_FLAGS)
  
--CXX=g++ $(ALLFLAGS)
--CC=gcc $(ALLFLAGS)
+-CXX=g++
+-CC=gcc
 -CC_SHARED=-fPIC
 -LINK_SHARED=-fPIC -shared
-+CXX+=$(ALLFLAGS)
-+CC+=$(ALLFLAGS)
 +CC_SHARED=
 +LINK_SHARED=-shared
  
