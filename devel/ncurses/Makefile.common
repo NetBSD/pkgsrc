@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2014/12/15 11:46:34 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.27 2015/06/02 01:03:57 sevan Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -61,9 +61,10 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 .  endif
 .endif
 
+.include "../../mk/compiler.mk"
+
 .if ${OPSYS} == "SunOS"
 USE_LANGUAGES+=	c99
-.include "../../mk/compiler.mk"
 . if !empty(CC_VERSION:Mgcc-4.*)
 #This may yet need to be adapted for systems prior to Solaris 10
 BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_POSIX_C_SOURCE=200112L
@@ -73,6 +74,12 @@ TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
 TERMINFODIR=	share/lib/terminfo
 .else
 TERMINFODIR=	share/terminfo
+.endif
+
+.if !empty(CC_VERSION:Mgcc-5.*)
+# Inhibit generation of line markers in the output from the preprocessor
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=60723
+CPPFLAGS+=	-P
 .endif
 
 # This prevents tic from writing into ~/.terminfo
