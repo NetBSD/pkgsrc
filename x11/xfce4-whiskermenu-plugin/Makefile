@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:25:25 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/02 13:27:03 youri Exp $
 
 DISTNAME=	xfce4-whiskermenu-plugin-1.5.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin
 EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
-MAINTAINER=	youri.mout@gmail.com
+MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://gottcode.org/xfce4-whiskermenu-plugin/
 COMMENT=	Alternate application launcher for Xfce
 
