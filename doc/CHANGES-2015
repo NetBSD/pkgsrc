@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2426 2015/06/02 03:11:32 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2427 2015/06/02 03:46:20 manu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4658,3 +4658,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated wm/openbox to 3.6 [snj 2015-06-01]
 	Updated mail/getmail to 4.48.0 [schmonz 2015-06-01]
 	Updated graphics/libwebp to 0.4.3 [adam 2015-06-02]
+	Updated filesystems/glusterfs to 3.7.1 [manu 2015-06-02]
