@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/29 14:11:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/02 19:06:19 fhajny Exp $
 share/examples/magento/applied.patches.list
 share/examples/magento/config.xml
 share/examples/magento/local.xml.additional
@@ -3437,6 +3437,7 @@ share/magento/app/code/core/Mage/Install/Block/End.php
 share/magento/app/code/core/Mage/Install/Block/Locale.php
 share/magento/app/code/core/Mage/Install/Block/State.php
 share/magento/app/code/core/Mage/Install/Controller/Action.php
+share/magento/app/code/core/Mage/Install/Controller/Router/Install.php
 share/magento/app/code/core/Mage/Install/Helper/Data.php
 share/magento/app/code/core/Mage/Install/Model/Config.php
 share/magento/app/code/core/Mage/Install/Model/Installer.php
@@ -8191,6 +8192,7 @@ share/magento/lib/PEAR/Net/Socket.php
 share/magento/lib/PEAR/Net/URL.php
 share/magento/lib/PEAR/PEAR.php
 share/magento/lib/PEAR/PEAR/PEAR.php
+share/magento/lib/PEAR/PEAR/PEAR5.php
 share/magento/lib/PEAR/SOAP/Base.php
 share/magento/lib/PEAR/SOAP/Client.php
 share/magento/lib/PEAR/SOAP/Fault.php

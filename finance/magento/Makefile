@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/05/03 10:59:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/02 19:06:19 fhajny Exp $
 
-DISTNAME=	magento-1.9.1.0
-PKGREVISION=	1
+DISTNAME=	magento-1.9.1.1
 CATEGORIES=	www finance
 MASTER_SITES=	http://www.magentocommerce.com/downloads/assets/${PKGVERSION_NOREV}/
 
@@ -11,9 +10,9 @@ COMMENT=	Feature-rich eCommerce platform
 LICENSE=	osl
 
 DIST_SUBDIR=	magento
-PATCH_SITES=	http://www.magentocommerce.com/downloads/assets/ce_patches/
+PATCH_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
 PATCHFILES=	PATCH_SUPEE-4829_EE_1.14.1.0_v1.sh
-PATCHFILES+=	PATCH_SUPEE-5344_CE_1.8.0.0_v1.sh
+PATCHFILES+=	PATCH_SUPEE-5994_CE_1.6.0.0_v1-2015-05-15-04-34-46.sh
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
