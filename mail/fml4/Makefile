@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/02 23:54:35 sevan Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
@@ -49,6 +49,9 @@ PLIST_SUBST+=		FML_DIR=${FML_DIR}
 MESSAGE_SUBST+=		FML_DIR=${FML_DIR}
 
 INSTALLATION_DIRS+=	${FML_DIR}/examples
+
+do-configure:
+	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/sbin
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${PERL5} makefml install
