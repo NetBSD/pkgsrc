@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/21 08:56:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/02 13:27:03 youri Exp $
 
 GHCOMMIT=	47f947becd85583da089c0132b86011d0ecd3d60
 DISTNAME=	${GHCOMMIT}
@@ -6,7 +6,7 @@ PKGNAME=	elementary-xfce-icon-theme-0.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/elementary-xfce/archive/}
 
-MAINTAINER=	youri.mout@gmail.com
+MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/shimmerproject/elementary-xfce
 COMMENT=	Elementary icons forked, extended and maintained for Xfce
 LICENSE=	gnu-gpl-v2
