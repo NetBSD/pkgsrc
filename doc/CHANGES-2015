@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2428 2015/06/02 11:25:39 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.2429 2015/06/02 14:54:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4660,3 +4660,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/libwebp to 0.4.3 [adam 2015-06-02]
 	Updated filesystems/glusterfs to 3.7.1 [manu 2015-06-02]
 	Downgraded net/synergy to 1.7.0 [tnn 2015-06-02]
+	Updated archivers/p7zip to 9.38.1 [adam 2015-06-02]
