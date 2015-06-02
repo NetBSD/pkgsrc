@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2427 2015/06/02 03:46:20 manu Exp $
+$NetBSD: CHANGES-2015,v 1.2428 2015/06/02 11:25:39 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4659,3 +4659,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/getmail to 4.48.0 [schmonz 2015-06-01]
 	Updated graphics/libwebp to 0.4.3 [adam 2015-06-02]
 	Updated filesystems/glusterfs to 3.7.1 [manu 2015-06-02]
+	Downgraded net/synergy to 1.7.0 [tnn 2015-06-02]
