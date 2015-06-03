@@ -1,0 +1,2 @@
+This is an experimental implementation of Google's SPDY protocol in C. This
+library provides SPDY version 2, 3 and 3.1 framing layer implementation.

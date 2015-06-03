@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/03 11:00:15 fhajny Exp $
+bin/shrpx
+bin/spdycat
+${PLIST.spdyd}bin/spdyd
+include/spdylay/spdylay.h
+include/spdylay/spdylayver.h
+lib/libspdylay.la
+lib/pkgconfig/libspdylay.pc
+share/doc/spdylay/README.rst
