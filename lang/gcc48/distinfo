@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2015/03/12 14:56:13 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2015/06/03 06:48:54 dsainty Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -68,7 +68,7 @@ SHA1 (patch-libgo_config_ltmain.sh) = 703a27554e479cc2e48410a6bb0e5f5b4be2c150
 SHA1 (patch-libgomp_configure) = 8527167e1f08ac7e64277ac0d22532dd59394b64
 SHA1 (patch-libiberty_cp-demangle.c) = 4f9a29efadd5dedd1de796c58389f9ed8b62ab74
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
-SHA1 (patch-libjava_configure) = ddf1388e14c3ff83efdd7ba4a40609b275f7d922
+SHA1 (patch-libjava_configure) = cf31039797226620dd9cc2a65209b354e2a74f0c
 SHA1 (patch-libjava_configure.host) = 194b88bfe2c2ed24fd7bc5b6b84c70d7329bf1b2
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
 SHA1 (patch-libjava_libltdl_configure) = aed53e3063685d16a9dbd4c494e40be2a2ecede4
