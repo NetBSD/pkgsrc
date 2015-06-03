@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/03 22:11:13 pettai Exp $
+${PYSITELIB}/distorm3/__init__.py
+${PYSITELIB}/distorm3/__init__.pyc
+${PYSITELIB}/distorm3/__init__.pyo
+${PYSITELIB}/distorm3/libdistorm3.so
+${PYSITELIB}/distorm3/sample.py
+${PYSITELIB}/distorm3/sample.pyc
+${PYSITELIB}/distorm3/sample.pyo
