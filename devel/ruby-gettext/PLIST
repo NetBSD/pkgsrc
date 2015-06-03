@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.19 2015/02/01 14:26:25 taca Exp $
-bin/rmsgcat
-bin/rmsgfmt
-bin/rmsginit
-bin/rmsgmerge
-bin/rxgettext
+@comment $NetBSD: PLIST,v 1.20 2015/06/03 13:51:06 taca Exp $
+bin/rmsgcat${RUBY_SUFFIX}
+bin/rmsgfmt${RUBY_SUFFIX}
+bin/rmsginit${RUBY_SUFFIX}
+bin/rmsgmerge${RUBY_SUFFIX}
+bin/rxgettext${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/README.md
