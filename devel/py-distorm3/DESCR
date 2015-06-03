@@ -1,0 +1,7 @@
+The goal of diStorm3 is to decode x86/AMD64 binary streams and return
+a structure that describes each instruction.
+
+diStorm3 is really a decomposer, which means it takes an instruction and
+returns a binary structure which describes it rather than static text,
+which is great for advanced binary code analysis. diStorm3 is super
+lightweight (~45KB), ultra fast and easy to use (a single API)!
