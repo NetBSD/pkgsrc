@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2455 2015/06/03 14:49:09 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2456 2015/06/03 18:23:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4688,3 +4688,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-locale to 2.1.1 [taca 2015-06-03]
 	Updated devel/ruby-logging to 2.0.0 [taca 2015-06-03]
 	Updated devel/ruby-minitest to 5.7.0 [taca 2015-06-03]
+	Updated lang/nodejs to 0.12.4 [fhajny 2015-06-03]
