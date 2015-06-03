@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/14 14:54:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/03 10:46:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -34,6 +34,9 @@ ${GEM_LIBDIR}/lib/moneta/adapters/memcached/dalli.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/memcached/native.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/memory.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/mongo.rb
+${GEM_LIBDIR}/lib/moneta/adapters/mongo/base.rb
+${GEM_LIBDIR}/lib/moneta/adapters/mongo/moped.rb
+${GEM_LIBDIR}/lib/moneta/adapters/mongo/official.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/null.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/pstore.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/redis.rb
@@ -114,6 +117,10 @@ ${GEM_LIBDIR}/spec/moneta/adapter_memcached_native_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapter_memcached_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapter_memcached_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapter_memory_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapter_mongo_moped_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapter_mongo_moped_with_default_expires_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapter_mongo_official_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapter_mongo_official_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapter_mongo_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapter_mongo_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapter_pstore_spec.rb
@@ -192,6 +199,8 @@ ${GEM_LIBDIR}/spec/moneta/standard_memory_with_json_serializer_spec.rb
 ${GEM_LIBDIR}/spec/moneta/standard_memory_with_json_value_serializer_spec.rb
 ${GEM_LIBDIR}/spec/moneta/standard_memory_with_prefix_spec.rb
 ${GEM_LIBDIR}/spec/moneta/standard_memory_with_snappy_compress_spec.rb
+${GEM_LIBDIR}/spec/moneta/standard_mongo_moped_spec.rb
+${GEM_LIBDIR}/spec/moneta/standard_mongo_official_spec.rb
 ${GEM_LIBDIR}/spec/moneta/standard_mongo_spec.rb
 ${GEM_LIBDIR}/spec/moneta/standard_null_spec.rb
 ${GEM_LIBDIR}/spec/moneta/standard_pstore_spec.rb
@@ -264,4 +273,3 @@ ${GEM_LIBDIR}/spec/rack/moneta_cookies_spec.rb
 ${GEM_LIBDIR}/spec/rack/moneta_store_spec.rb
 ${GEM_LIBDIR}/spec/rack/session_moneta_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
