@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.29 2015/05/19 14:31:16 fhajny Exp $
+$NetBSD: distinfo,v 1.30 2015/06/03 18:23:24 fhajny Exp $
 
-SHA1 (node-v0.12.3.tar.gz) = b0b02a254c06ebf2b1695900181baa3ffd206584
-RMD160 (node-v0.12.3.tar.gz) = e38052415db59c6b2cbc0c4b7d3343c0389ca13a
-Size (node-v0.12.3.tar.gz) = 19622994 bytes
+SHA1 (node-v0.12.4.tar.gz) = 147ff79947752399b870fcf3f1fc37102100b545
+RMD160 (node-v0.12.4.tar.gz) = 67880fa9887825ca400c11ab6eb59e0ecc8fa8c8
+Size (node-v0.12.4.tar.gz) = 19642076 bytes
 SHA1 (patch-common.gypi) = 07bab46c26a402d7a9a45e1f1cbe1805ca27b72f
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 78d6ddd37ae30e869e0da666a78baad86a638c50
 SHA1 (patch-deps_uv_common.gypi) = af1c707cbc02a4aeccebebf6691d5a8680646a0d
 SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = aae5e1649a3ea876e724cec95731989fb01ff008
-SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = a209357b885ef86540bce1b0563e8bfe90213a4a
+SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = c78ecdc332996a93b7bf63093a461742eb814452
 SHA1 (patch-deps_v8_tools_gyp_v8.gyp) = a7e13e7ef8cc078a812a1f6f37da71c84eedaf6f
 SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
 SHA1 (patch-src_cares__wrap.cc) = d9510afd0cd4b0156a604d9197d9f97d6e3b291f
