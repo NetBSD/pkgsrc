@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2442 2015/06/03 12:22:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2443 2015/06/03 12:54:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4675,3 +4675,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/nghttp2 version 1.0.1 [fhajny 2015-06-03]
 	Updated devel/SOPE to 2.3.0 [taca 2015-06-03]
 	Updated www/SOGo to 2.3.0 [taca 2015-06-03]
+	Updated devel/hg-git to 0.8.1 [taca 2015-06-03]
