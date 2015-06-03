@@ -2,7 +2,7 @@
 # Attempt to guess a canonical system name.
 #   Copyright 1992-2015 Free Software Foundation, Inc.
 
-timestamp='2015-02-23'
+timestamp='2015-03-04'
 
 # This file is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -946,6 +946,9 @@ EOF
 	exit ;;
     crisv32:Linux:*:*)
 	echo ${UNAME_MACHINE}-axis-linux-${LIBC}
+	exit ;;
+    e2k:Linux:*:*)
+	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
 	exit ;;
     frv:Linux:*:*)
 	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
