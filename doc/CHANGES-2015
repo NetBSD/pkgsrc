@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2435 2015/06/03 07:19:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2436 2015/06/03 07:22:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4667,3 +4667,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 38.0.5 [ryoon 2015-06-03]
 	Updated security/p5-IO-Socket-SSL to 2.016 [wiz 2015-06-03]
 	Updated devel/p5-Date-Manip to 6.50 [wiz 2015-06-03]
+	Updated time/p5-DateTime to 1.1900 [wiz 2015-06-03]
