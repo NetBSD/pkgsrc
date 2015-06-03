@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/03/08 16:26:19 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/03 13:47:18 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -11,7 +11,6 @@ MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby fiddle library to wrap libffi
 
-RUBY_VERSION_SUPPORTED= 22 21 200 193
 USE_RUBY_EXTCONF=	yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/fiddle
 WRKSRC=			${RUBY_WRKSRC}/ext/fiddle
