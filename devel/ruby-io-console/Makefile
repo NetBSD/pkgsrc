@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/01/16 09:18:47 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/03 14:07:28 taca Exp $
 
 DISTNAME=	io-console-0.4.2
 PKGREVISION=	2
@@ -13,8 +13,6 @@ GEM_CLEANBUILD=	Makefile console.${RUBY_DLEXT} *.o mkmf.log \
 	.RUBYLIBDIR.-.console.time .RUBYARCHDIR.time
 GEM_CLEANBUILD_EXTENSIONS= .RUBYARCHDIR.time .RUBYLIBDIR.-.console.time \
 	io/console/size.rb
-
-RUBY_VERSION_SUPPORTED=	21 200 193
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
