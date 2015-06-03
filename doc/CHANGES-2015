@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2441 2015/06/03 11:54:11 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2442 2015/06/03 12:22:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4673,3 +4673,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/spdylay version 1.3.2 [fhajny 2015-06-03]
 	Updated databases/ruby-sequel to 4.23.0 [taca 2015-06-03]
 	Added www/nghttp2 version 1.0.1 [fhajny 2015-06-03]
+	Updated devel/SOPE to 2.3.0 [taca 2015-06-03]
+	Updated www/SOGo to 2.3.0 [taca 2015-06-03]
