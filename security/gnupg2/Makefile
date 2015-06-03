@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2015/02/21 09:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2015/06/03 21:00:39 wiz Exp $
 
-DISTNAME=	gnupg-2.0.27
+DISTNAME=	gnupg-2.0.28
 PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -29,9 +29,6 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
-BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
@@ -40,8 +37,11 @@ BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.5.0
 .include "../../security/libgcrypt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 .include "../../security/libgpg-error/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
 .include "../../security/libksba/buildlink3.mk"
 .include "../../security/pinentry/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
