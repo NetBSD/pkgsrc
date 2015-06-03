@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/01/13 23:05:26 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/03 13:14:46 taca Exp $
 
-DISTNAME=	v0.21.1
+DISTNAME=	v0.22.2
 PKGNAME=	libgit2-${DISTNAME:S/v//1}
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/libgit2/libgit2/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
+GITHUB_PROJECT=	libgit2
+GITHUB_TAG=	v0.22.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libgit2.github.com/
@@ -21,6 +23,7 @@ CMAKE_ARGS+=	-DUSE_SSH=OFF
 PKGCONFIG_OVERRIDE+=	libgit2.pc.in
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.21.1
 
+.include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
