@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2459 2015/06/03 22:22:18 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2460 2015/06/03 22:52:43 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnupg2 to 2.0.28 [wiz 2015-06-03]
 	Added devel/py-distorm3 version 3.3.0 [pettai 2015-06-03]
 	Added security/volatility version 2.4 [pettai 2015-06-03]
+	Updated net/get_iplayer to 2.94 [prlw1 2015-06-03]
