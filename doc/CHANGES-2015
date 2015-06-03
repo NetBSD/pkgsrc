@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2437 2015/06/03 10:47:15 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2438 2015/06/03 10:48:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4669,3 +4669,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Date-Manip to 6.50 [wiz 2015-06-03]
 	Updated time/p5-DateTime to 1.1900 [wiz 2015-06-03]
 	Updated databases/ruby-moneta to 0.8.0 [taca 2015-06-03]
+	Updated databases/ruby-pg to 0.18.2 [taca 2015-06-03]
