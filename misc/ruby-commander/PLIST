@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/13 14:48:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/06/03 13:55:24 taca Exp $
 bin/commander${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -41,6 +41,7 @@ ${GEM_LIBDIR}/spec/command_spec.rb
 ${GEM_LIBDIR}/spec/configure_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/array_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/object_spec.rb
+${GEM_LIBDIR}/spec/help_formatters/terminal_compact_spec.rb
 ${GEM_LIBDIR}/spec/help_formatters/terminal_spec.rb
 ${GEM_LIBDIR}/spec/methods_spec.rb
 ${GEM_LIBDIR}/spec/runner_spec.rb
