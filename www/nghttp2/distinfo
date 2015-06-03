@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/06/03 11:53:53 fhajny Exp $
+
+SHA1 (nghttp2-1.0.1.tar.gz) = 6dc5a07e8f5a0351ca388e5d30c0978fe0530fee
+RMD160 (nghttp2-1.0.1.tar.gz) = e6b7fa4d2502506b7cef6967b4e88a490a5e238d
+Size (nghttp2-1.0.1.tar.gz) = 1350918 bytes
+SHA1 (patch-configure) = 7a776cad97a6590d3bbef93ffee6815341719f46
