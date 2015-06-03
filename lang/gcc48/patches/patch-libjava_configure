@@ -1,6 +1,4 @@
-$NetBSD: patch-libjava_configure,v 1.4 2014/11/28 09:57:32 obache Exp $
-
-Detect gethostbyname_r properly.
+$NetBSD: patch-libjava_configure,v 1.5 2015/06/03 06:48:54 dsainty Exp $
 
 Avoid a reference to the wrapped make in the pkgsrc work directory from
 showing up in an installed file.
@@ -17,22 +15,7 @@ See: libjava/contrib/aotcompile.py.in
  	# FreeBSD >=5.3 implements a model much closer to other modern UNIX
  	# systems which support threads and -lpthread.
  	THREADLDFLAGS=-pthread
-@@ -22020,6 +22020,14 @@ do :
- if test "x$ac_cv_func_gethostbyname_r" = x""yes; then :
-   cat >>confdefs.h <<_ACEOF
- #define HAVE_GETHOSTBYNAME_R 1
-+#include <netdb.h>
-+int
-+main ()
-+{
-+gethostbyname_r("", 0, 0);
-+;
-+return 0;
-+}
- _ACEOF
- 
- 
-@@ -24873,7 +24881,7 @@ $as_echo "Python modules dir: ${python_m
+@@ -24873,7 +24873,7 @@ $as_echo "Python modules dir: ${python_m
  
  
  # needed for aot-compile-rpm
