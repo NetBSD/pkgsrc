@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2015/02/08 07:21:28 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/03 13:22:02 taca Exp $
 
-DISTNAME=	rugged-0.21.4
+DISTNAME=	rugged-0.22.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/libgit2/rugged
+HOMEPAGE=	https://github.com/libgit2/rugged
 COMMENT=	Ruby bindings to libgit2
 LICENSE=	mit
-
-RUBY_VERSION_SUPPORTED=	193 200 21
 
 USE_TOOLS+=	cmake pkg-config
 
