@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/08 15:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/03 13:45:17 taca Exp $
 bin/ffi-yajl-bench${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/ffi_yajl/ext/dlopen.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/ffi_yajl/ext/encoder.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/ffi_yajl/ext/parser.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,6 +9,8 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ffi-yajl-bench
+${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/dlopen.c
+${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/extconf.rb
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/encoder/encoder.c
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/encoder/extconf.rb
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/parser/extconf.rb
@@ -36,17 +39,18 @@ ${GEM_LIBDIR}/lib/ffi_yajl/benchmark/subjects/unicode.json
 ${GEM_LIBDIR}/lib/ffi_yajl/encoder.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/ext.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/ext/.keep
+${GEM_LIBDIR}/lib/ffi_yajl/ext/dlopen.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/ffi_yajl/ext/encoder.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/ffi_yajl/ext/parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/ffi_yajl/ffi.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/ffi/encoder.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/ffi/parser.rb
-${GEM_LIBDIR}/lib/ffi_yajl/json_gem.rb
+${GEM_LIBDIR}/lib/ffi_yajl/map_library_name.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/parser.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/platform.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/version.rb
 ${GEM_LIBDIR}/spec/ffi_yajl/encoder_spec.rb
-${GEM_LIBDIR}/spec/ffi_yajl/json_gem_spec.rb
+${GEM_LIBDIR}/spec/ffi_yajl/map_library_name_spec.rb
 ${GEM_LIBDIR}/spec/ffi_yajl/parser_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

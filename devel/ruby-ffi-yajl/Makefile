@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2015/03/01 13:47:14 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/03 13:45:17 taca Exp $
 
-DISTNAME=	ffi-yajl-1.4.0
+DISTNAME=	ffi-yajl-2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/opscode/ffi-yajl
-COMMENT=	Ruby FFI gem wrapper around yajl2 library
+HOMEPAGE=	https://github.com/opscode/ffi-yajl
+COMMENT=	Ruby FFI wrapper around YAJL 2.x
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.5:../../devel/ruby-ffi
 DEPENDS+=	${RUBY_PKGPREFIX}-libyajl2>=1.2:../../devel/ruby-libyajl2
 
 RUBYGEM_OPTIONS+=	--format-executable
