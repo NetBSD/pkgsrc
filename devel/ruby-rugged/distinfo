@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/02/08 07:21:28 taca Exp $
+$NetBSD: distinfo,v 1.3 2015/06/03 13:22:02 taca Exp $
 
-SHA1 (rugged-0.21.4.gem) = ccdbe0d85f0c6d67e96922d73a0d156e1794ff15
-RMD160 (rugged-0.21.4.gem) = 742f26004d3ab57339d30c39b308a7077939fd2f
-Size (rugged-0.21.4.gem) = 926208 bytes
+SHA1 (rugged-0.22.2.gem) = 655b9b81b1a90d8caa3b85483301abf06e316837
+RMD160 (rugged-0.22.2.gem) = f7020dd94098c2e137edf288758dee91e99259b6
+Size (rugged-0.22.2.gem) = 988672 bytes
