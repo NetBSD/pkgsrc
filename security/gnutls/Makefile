@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2015/06/01 21:50:22 spz Exp $
+# $NetBSD: Makefile,v 1.154 2015/06/03 20:43:52 wiz Exp $
 
 DISTNAME=	gnutls-3.3.15
 CATEGORIES=	security devel
@@ -57,6 +57,7 @@ post-install:
 .include "../../devel/gmp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 .include "../../security/libtasn1/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libnettle+=	nettle<3
 .include "../../security/nettle/buildlink3.mk"
 # guile is useful for selftests, but bindings should be separate pkgs
 #.include "../../lang/guile/buildlink3.mk"
