@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2444 2015/06/03 13:15:33 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2445 2015/06/03 13:22:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/SOGo to 2.3.0 [taca 2015-06-03]
 	Updated devel/hg-git to 0.8.1 [taca 2015-06-03]
 	Updated devel/libgit2 to 0.22.2 [taca 2015-06-03]
+	Updated devel/ruby-rugged to 0.22.2 [taca 2015-06-03]
