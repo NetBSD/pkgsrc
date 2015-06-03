@@ -1,0 +1,5 @@
+bin/rmsgcat @PREFIX@/bin/rmsgcat@RUBY_SUFFIX@
+bin/rmsgfmt @PREFIX@/bin/rmsgfmt@RUBY_SUFFIX@
+bin/rmsginit @PREFIX@/bin/rmsginit@RUBY_SUFFIX@
+bin/rmsgmerge @PREFIX@/bin/rmsgmerge@RUBY_SUFFIX@
+bin/rxgettext @PREFIX@/bin/rxgettext@RUBY_SUFFIX@
