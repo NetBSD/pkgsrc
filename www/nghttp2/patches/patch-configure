@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/06/03 11:53:53 fhajny Exp $
+
+Portability.
+
+--- configure.orig	2015-05-24 10:28:58.000000000 +0000
++++ configure
+@@ -18634,7 +18634,7 @@ else
+ $as_echo "yes" >&6; }
+ 	have_jansson=yes
+ fi
+-if test "x${have_jansson}" == "xyes"; then
++if test "x${have_jansson}" = "xyes"; then
+ 
+ $as_echo "#define HAVE_JANSSON 1" >>confdefs.h
+ 
