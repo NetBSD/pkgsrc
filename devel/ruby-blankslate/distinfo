@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/02/11 08:37:56 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/06/03 13:40:24 taca Exp $
 
-SHA1 (blankslate-2.1.2.4.gem) = f12304a670c66f0d289daf57c6412b3a1af25601
-RMD160 (blankslate-2.1.2.4.gem) = 77e047001d85849b00fd6262b103002d1ee50e55
-Size (blankslate-2.1.2.4.gem) = 6144 bytes
+SHA1 (blankslate-3.1.3.gem) = 4846123e720dba849cf4b4a4120dad1ad4965acf
+RMD160 (blankslate-3.1.3.gem) = 263161dd22bfeaff4fccd9d7203378b06ae24000
+Size (blankslate-3.1.3.gem) = 8192 bytes
