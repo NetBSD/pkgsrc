@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2458 2015/06/03 22:13:24 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2459 2015/06/03 22:22:18 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/nodejs to 0.12.4 [fhajny 2015-06-03]
 	Updated security/gnupg2 to 2.0.28 [wiz 2015-06-03]
 	Added devel/py-distorm3 version 3.3.0 [pettai 2015-06-03]
+	Added security/volatility version 2.4 [pettai 2015-06-03]
