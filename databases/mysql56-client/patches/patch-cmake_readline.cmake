@@ -1,8 +1,8 @@
-$NetBSD: patch-cmake_readline.cmake,v 1.1 2013/07/15 02:04:36 ryoon Exp $
+$NetBSD: patch-cmake_readline.cmake,v 1.2 2015/06/03 03:20:04 ryoon Exp $
 
 * If devel/editline is installed and use base libedit, cmake
   readline.h detection fails. Disable mis-detection of
-  /usr/pkg/editline/readline.h.
+  /usr/pkg/include/editline/readline.h.
 
 --- cmake/readline.cmake.orig	2013-05-21 15:18:39.000000000 +0000
 +++ cmake/readline.cmake
