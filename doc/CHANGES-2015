@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2449 2015/06/03 13:51:30 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2450 2015/06/03 13:54:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-blankslate to 3.1.3 [taca 2015-06-03]
 	Updated devel/ruby-ffi-yajl to 2.2.0 [taca 2015-06-03]
 	Updated devel/ruby-gettext to 3.1.6nb1 [taca 2015-06-03]
+	Updated devel/ruby-highline to 1.7.2 [taca 2015-06-03]
