@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1108 2015/05/07 10:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.1109 2015/06/03 11:56:28 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -191,6 +191,7 @@ SUBDIR+=	nanoblogger-extra
 SUBDIR+=	neon
 SUBDIR+=	netscape
 SUBDIR+=	netsurf
+SUBDIR+=	nghttp2
 SUBDIR+=	nginx
 SUBDIR+=	nginx-devel
 SUBDIR+=	ns-plugger-common
@@ -757,6 +758,7 @@ SUBDIR+=	sitecopy
 SUBDIR+=	snarf
 SUBDIR+=	snownews
 SUBDIR+=	spawn-fcgi
+SUBDIR+=	spdylay
 SUBDIR+=	sqtop
 SUBDIR+=	squid3
 SUBDIR+=	squidGuard
