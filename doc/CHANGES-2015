@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2451 2015/06/03 13:55:56 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2452 2015/06/03 13:57:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-gettext to 3.1.6nb1 [taca 2015-06-03]
 	Updated devel/ruby-highline to 1.7.2 [taca 2015-06-03]
 	Updated misc/ruby-commander to 4.3.4 [taca 2015-06-03]
+	Updated devel/ruby-inline to 3.12.4 [taca 2015-06-03]
