@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2015/06/01 08:15:05 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2015/06/03 07:13:30 tron Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -123,6 +123,12 @@ SOEXT="so"
 CMAKE_ARGS+=	-DWITH_EDITLINE=system
 CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editline}/lib/libedit.${SOEXT}
 CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readline
+
+# Don't use the base system "libedit" under NetBSD because MySQL expects
+# an incompatible prototype for "rl_completion_entry_function".
+.if ${OPSYS} == "NetBSD"
+USE_BUILTIN.editline=	no
+.endif
 
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
