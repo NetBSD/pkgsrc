@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2015/05/19 14:31:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.35 2015/06/03 18:23:24 fhajny Exp $
 
-DISTNAME=	node-v0.12.3
+DISTNAME=	node-v0.12.4
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
@@ -33,6 +33,7 @@ SUBST_VARS.man=		PKGMANDIR
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--shared-zlib
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ENV+=		GYP_DEFINES="OS=netbsd"
@@ -41,13 +42,7 @@ MAKE_ENV+=		GYP_DEFINES="OS=netbsd"
 
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
-REPLACE_PYTHON+=	tools/gyp_node
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
-REPLACE_PYTHON+=	tools/gyp/pylib/gyp/sun_tool.py
-REPLACE_PYTHON+=	tools/node-waf
-REPLACE_PYTHON+=	tools/waf-light
-REPLACE_PYTHON+=	tools/wafadmin/*.py
-REPLACE_PYTHON+=	tools/wafadmin/Tools/*.py
 
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
@@ -62,6 +57,7 @@ pre-install:
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

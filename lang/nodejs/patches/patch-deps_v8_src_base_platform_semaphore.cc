@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_semaphore.cc,v 1.2 2015/05/14 20:36:37 joerg Exp $
+$NetBSD: patch-deps_v8_src_base_platform_semaphore.cc,v 1.3 2015/06/03 18:23:24 fhajny Exp $
 Work around lack of sem_timedwait(3) in NetBSD < 6.99.4.
 Adapted from d4f11c0cf476dd854eaebec1cbacb1afc7bea18e of the Chromium V8 sources.
 
@@ -23,7 +23,7 @@ Adapted from d4f11c0cf476dd854eaebec1cbacb1afc7bea18e of the Chromium V8 sources
  
  
  bool Semaphore::WaitFor(const TimeDelta& rel_time) {
-+#if V8_OS_NACL || (V8_OS_NETBSD && __NetBSD_Version__ - 0 > 699000400)
++#if V8_OS_NACL || (V8_OS_NETBSD && __NetBSD_Version__ - 0 < 699000400)
 +  // PNaCL and older NetBSD doesn't support sem_timedwait, do ugly busy waiting.
 +  ElapsedTimer timer;
 +  timer.Start();

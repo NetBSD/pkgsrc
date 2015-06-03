@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/05/19 14:31:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.22 2015/06/03 18:23:24 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -36,10 +36,7 @@ include/node/v8-util.h
 include/node/v8.h
 include/node/v8config.h
 include/node/v8stdint.h
-include/node/zconf.h
-include/node/zlib.h
 ${PLIST.dtrace}lib/dtrace/node.d
-lib/node_modules/npm/.eslintrc
 lib/node_modules/npm/.mailmap
 lib/node_modules/npm/.npmignore
 lib/node_modules/npm/.npmrc
@@ -191,7 +188,6 @@ lib/node_modules/npm/html/doc/api/npm-search.html
 lib/node_modules/npm/html/doc/api/npm-shrinkwrap.html
 lib/node_modules/npm/html/doc/api/npm-start.html
 lib/node_modules/npm/html/doc/api/npm-stop.html
-lib/node_modules/npm/html/doc/api/npm-submodule.html
 lib/node_modules/npm/html/doc/api/npm-tag.html
 lib/node_modules/npm/html/doc/api/npm-test.html
 lib/node_modules/npm/html/doc/api/npm-uninstall.html
@@ -241,7 +237,6 @@ lib/node_modules/npm/html/doc/cli/npm-star.html
 lib/node_modules/npm/html/doc/cli/npm-stars.html
 lib/node_modules/npm/html/doc/cli/npm-start.html
 lib/node_modules/npm/html/doc/cli/npm-stop.html
-lib/node_modules/npm/html/doc/cli/npm-submodule.html
 lib/node_modules/npm/html/doc/cli/npm-tag.html
 lib/node_modules/npm/html/doc/cli/npm-test.html
 lib/node_modules/npm/html/doc/cli/npm-uninstall.html
@@ -303,7 +298,6 @@ lib/node_modules/npm/html/partial/doc/api/npm-search.html
 lib/node_modules/npm/html/partial/doc/api/npm-shrinkwrap.html
 lib/node_modules/npm/html/partial/doc/api/npm-start.html
 lib/node_modules/npm/html/partial/doc/api/npm-stop.html
-lib/node_modules/npm/html/partial/doc/api/npm-submodule.html
 lib/node_modules/npm/html/partial/doc/api/npm-tag.html
 lib/node_modules/npm/html/partial/doc/api/npm-test.html
 lib/node_modules/npm/html/partial/doc/api/npm-uninstall.html
@@ -353,7 +347,6 @@ lib/node_modules/npm/html/partial/doc/cli/npm-star.html
 lib/node_modules/npm/html/partial/doc/cli/npm-stars.html
 lib/node_modules/npm/html/partial/doc/cli/npm-start.html
 lib/node_modules/npm/html/partial/doc/cli/npm-stop.html
-lib/node_modules/npm/html/partial/doc/cli/npm-submodule.html
 lib/node_modules/npm/html/partial/doc/cli/npm-tag.html
 lib/node_modules/npm/html/partial/doc/cli/npm-test.html
 lib/node_modules/npm/html/partial/doc/cli/npm-uninstall.html
@@ -516,7 +509,6 @@ lib/node_modules/npm/man/man1/npm-star.1
 lib/node_modules/npm/man/man1/npm-stars.1
 lib/node_modules/npm/man/man1/npm-start.1
 lib/node_modules/npm/man/man1/npm-stop.1
-lib/node_modules/npm/man/man1/npm-submodule.1
 lib/node_modules/npm/man/man1/npm-tag.1
 lib/node_modules/npm/man/man1/npm-test.1
 lib/node_modules/npm/man/man1/npm-uninstall.1
@@ -556,7 +548,6 @@ lib/node_modules/npm/man/man3/npm-search.3
 lib/node_modules/npm/man/man3/npm-shrinkwrap.3
 lib/node_modules/npm/man/man3/npm-start.3
 lib/node_modules/npm/man/man3/npm-stop.3
-lib/node_modules/npm/man/man3/npm-submodule.3
 lib/node_modules/npm/man/man3/npm-tag.3
 lib/node_modules/npm/man/man3/npm-test.3
 lib/node_modules/npm/man/man3/npm-uninstall.3
@@ -823,6 +814,14 @@ lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/exampl
 lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/example/substack-input.js
 lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/package.json
 lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/promzard.js
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/LICENSE.md
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/README.md
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/index.js
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/node_modules/spdx-correct/.npmignore
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/node_modules/spdx-correct/README.md
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/node_modules/spdx-correct/package.json
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/node_modules/spdx-correct/spdx-correct.js
+lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-license/package.json
 lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-name/.npmignore
 lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-name/README.md
 lib/node_modules/npm/node_modules/init-package-json/node_modules/validate-npm-package-name/index.js
@@ -841,8 +840,6 @@ lib/node_modules/npm/node_modules/lru-cache/.npmignore
 lib/node_modules/npm/node_modules/lru-cache/CONTRIBUTORS
 lib/node_modules/npm/node_modules/lru-cache/LICENSE
 lib/node_modules/npm/node_modules/lru-cache/README.md
-lib/node_modules/npm/node_modules/lru-cache/bar.js
-lib/node_modules/npm/node_modules/lru-cache/foo.js
 lib/node_modules/npm/node_modules/lru-cache/lib/lru-cache.js
 lib/node_modules/npm/node_modules/lru-cache/package.json
 lib/node_modules/npm/node_modules/minimatch/LICENSE
@@ -869,7 +866,6 @@ lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion/node_mo
 lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json
 lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion/package.json
 lib/node_modules/npm/node_modules/minimatch/package.json
-lib/node_modules/npm/node_modules/mkdirp/.npmignore
 lib/node_modules/npm/node_modules/mkdirp/.travis.yml
 lib/node_modules/npm/node_modules/mkdirp/LICENSE
 lib/node_modules/npm/node_modules/mkdirp/README.markdown
@@ -1329,7 +1325,6 @@ lib/node_modules/npm/node_modules/realize-package-specifier/.npmignore
 lib/node_modules/npm/node_modules/realize-package-specifier/README.md
 lib/node_modules/npm/node_modules/realize-package-specifier/index.js
 lib/node_modules/npm/node_modules/realize-package-specifier/package.json
-lib/node_modules/npm/node_modules/request/.eslintrc
 lib/node_modules/npm/node_modules/request/.npmignore
 lib/node_modules/npm/node_modules/request/.travis.yml
 lib/node_modules/npm/node_modules/request/CHANGELOG.md
@@ -1352,7 +1347,6 @@ lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/README.md
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/index.js
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/package.json
-lib/node_modules/npm/node_modules/request/node_modules/bl/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/bl/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/bl/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/bl/LICENSE.md
@@ -1502,7 +1496,6 @@ lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_module
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/jsonpointer.js
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/test.js
-lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/LICENCE
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/Makefile
@@ -1626,7 +1619,6 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modul
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsl.conf
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsstyle
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/package.json
-lib/node_modules/npm/node_modules/request/node_modules/isstream/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/isstream/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/isstream/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/isstream/LICENSE.md
@@ -1669,7 +1661,6 @@ lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/index.js
 lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/package.json
 lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/test.js
 lib/node_modules/npm/node_modules/request/node_modules/qs/.jshintignore
-lib/node_modules/npm/node_modules/request/node_modules/qs/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/qs/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/qs/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/qs/CHANGELOG.md
@@ -1707,7 +1698,6 @@ lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/node_modules
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/package.json
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/public-suffix.txt
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/test.js
-lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/README.md
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js
@@ -1797,13 +1787,24 @@ lib/node_modules/npm/node_modules/sorted-object/LICENSE.txt
 lib/node_modules/npm/node_modules/sorted-object/README.md
 lib/node_modules/npm/node_modules/sorted-object/lib/sorted-object.js
 lib/node_modules/npm/node_modules/sorted-object/package.json
+lib/node_modules/npm/node_modules/spdx/LICENSE.md
+lib/node_modules/npm/node_modules/spdx/README.md
+lib/node_modules/npm/node_modules/spdx/node_modules/spdx-license-ids/LICENSE
+lib/node_modules/npm/node_modules/spdx/node_modules/spdx-license-ids/README.md
+lib/node_modules/npm/node_modules/spdx/node_modules/spdx-license-ids/package.json
+lib/node_modules/npm/node_modules/spdx/node_modules/spdx-license-ids/spdx-license-ids.json
+lib/node_modules/npm/node_modules/spdx/package.json
+lib/node_modules/npm/node_modules/spdx/source/exceptions.json
+lib/node_modules/npm/node_modules/spdx/source/parser.generated.js
+lib/node_modules/npm/node_modules/spdx/source/ranges.json
+lib/node_modules/npm/node_modules/spdx/source/spdx.js
 lib/node_modules/npm/node_modules/strip-ansi/cli.js
 lib/node_modules/npm/node_modules/strip-ansi/index.js
 lib/node_modules/npm/node_modules/strip-ansi/package.json
 lib/node_modules/npm/node_modules/strip-ansi/readme.md
 lib/node_modules/npm/node_modules/tar/.npmignore
 lib/node_modules/npm/node_modules/tar/.travis.yml
-lib/node_modules/npm/node_modules/tar/LICENCE
+lib/node_modules/npm/node_modules/tar/LICENSE
 lib/node_modules/npm/node_modules/tar/README.md
 lib/node_modules/npm/node_modules/tar/examples/extracter.js
 lib/node_modules/npm/node_modules/tar/examples/packer.js
@@ -1844,6 +1845,14 @@ lib/node_modules/npm/node_modules/umask/package.json
 lib/node_modules/npm/node_modules/which/LICENSE
 lib/node_modules/npm/node_modules/which/README.md
 lib/node_modules/npm/node_modules/which/bin/which
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/LICENSE
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/README.md
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/index.js
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is-relative/LICENSE-MIT
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is-relative/README.md
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is-relative/index.js
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is-relative/package.json
+lib/node_modules/npm/node_modules/which/node_modules/is-absolute/package.json
 lib/node_modules/npm/node_modules/which/package.json
 lib/node_modules/npm/node_modules/which/which.js
 lib/node_modules/npm/node_modules/wrappy/LICENSE
