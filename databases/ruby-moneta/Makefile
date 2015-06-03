@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/03/14 14:54:44 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/03 10:46:46 taca Exp $
 
-DISTNAME=	moneta-0.7.20
+DISTNAME=	moneta-0.8.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
