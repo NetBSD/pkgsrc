@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2480 2015/06/04 20:13:24 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2481 2015/06/04 20:17:54 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added wm/2bwm version 20150526 [youri 2015-06-04]
 	Updated devel/hs-text to 1.2.1.1 [szptvlfn 2015-06-04]
 	Added security/asignify version 20150220 [youri 2015-06-04]
+	Added chat/ii version 1.7 [youri 2015-06-04]
