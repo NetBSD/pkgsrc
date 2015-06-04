@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2475 2015/06/04 16:05:47 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2476 2015/06/04 16:43:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-sexp-processor to 4.6.0 [taca 2015-06-04]
 	Updated devel/ruby2ruby to 2.2.0 [taca 2015-06-04]
 	Updated sysutils/xfce4-thunar to 1.6.10 [youri 2015-06-04]
+	Updated pkgtools/bootstrap-mk-files to 20150605 [ryoon 2015-06-04]
