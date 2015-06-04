@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/03/14 19:18:31 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/04 00:10:12 taca Exp $
 
 DISTNAME=	padrino-cache-${RUBY_PADRINO_VERS}
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +11,9 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-core
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-helpers>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-helpers
-DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7.0<0.8:../../databases/ruby-moneta
+DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7.0<1:../../databases/ruby-moneta
+
+OVERRIDE_GEMSPEC+=	moneta>=0.7.0
 
 .include "../../www/ruby-padrino/Makefile.common"
 .include "../../lang/ruby/gem.mk"
