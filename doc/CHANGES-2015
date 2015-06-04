@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2482 2015/06/04 20:28:18 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2483 2015/06/04 21:33:18 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4714,3 +4714,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/asignify version 20150220 [youri 2015-06-04]
 	Added chat/ii version 1.7 [youri 2015-06-04]
 	Added misc/cw version 1.0.16 [youri 2015-06-04]
+	Updated www/goaccess to 0.9.1 [wiedi 2015-06-04]
