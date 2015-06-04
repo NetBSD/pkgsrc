@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2478 2015/06/04 19:35:09 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2479 2015/06/04 20:08:16 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xfce4-thunar to 1.6.10 [youri 2015-06-04]
 	Updated pkgtools/bootstrap-mk-files to 20150605 [ryoon 2015-06-04]
 	Added wm/2bwm version 20150526 [youri 2015-06-04]
+	Updated devel/hs-text to 1.2.1.1 [szptvlfn 2015-06-04]
