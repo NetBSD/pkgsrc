@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.13 2015/02/02 15:30:22 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/04 14:44:58 taca Exp $
 
-DISTNAME=	ruby2ruby-2.1.3
+DISTNAME=	ruby2ruby-2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://seattlerb.rubyforge.org/
+HOMEPAGE=	https://github.com/seattlerb/ruby2ruby
 COMMENT=	Pure Ruby code from Ruby S-expressions
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-sexp-processor>=4.0<5:../../devel/ruby-sexp-processor
 DEPENDS+=	${RUBY_PKGPREFIX}-parser>=3.1<4:../../devel/ruby-parser
 
-CONFLICTS+=	ruby[1-9][0-9]-ruby2ruby-[0-9]*
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
