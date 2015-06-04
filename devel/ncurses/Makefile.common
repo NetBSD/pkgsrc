@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2015/06/02 01:03:57 sevan Exp $
+# $NetBSD: Makefile.common,v 1.28 2015/06/04 09:14:33 jperkin Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -42,6 +42,10 @@ SUBST_MESSAGE.rpath=	Fixing rpath in ncurses-config.
 CONFIGURE_ARGS+=	--disable-mixed-case
 .endif
 
+.if ${OPSYS} == "SunOS"
+USE_LANGUAGES+=		c99
+.endif
+
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
 CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
@@ -64,7 +68,6 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
-USE_LANGUAGES+=	c99
 . if !empty(CC_VERSION:Mgcc-4.*)
 #This may yet need to be adapted for systems prior to Solaris 10
 BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_POSIX_C_SOURCE=200112L
