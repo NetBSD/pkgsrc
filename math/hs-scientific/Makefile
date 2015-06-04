@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/01/07 13:21:14 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/04 20:08:59 szptvlfn Exp $
 
 DISTNAME=	scientific-0.3.3.5
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org

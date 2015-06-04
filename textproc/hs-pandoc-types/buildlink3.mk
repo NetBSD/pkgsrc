@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2015/05/31 12:59:15 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2015/06/04 20:09:00 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-types
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pandoc-types
 HS_PANDOC_TYPES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pandoc-types+=	hs-pandoc-types>=1.12.4
-BUILDLINK_ABI_DEPENDS.hs-pandoc-types+=	hs-pandoc-types>=1.12.4.1nb9
+BUILDLINK_ABI_DEPENDS.hs-pandoc-types+=	hs-pandoc-types>=1.12.4.1nb10
 BUILDLINK_PKGSRCDIR.hs-pandoc-types?=	../../textproc/hs-pandoc-types
 
 .include "../../converters/hs-aeson/buildlink3.mk"

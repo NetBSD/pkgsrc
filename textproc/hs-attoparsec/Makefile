@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/01/07 13:21:55 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/04 20:08:59 szptvlfn Exp $
 
 DISTNAME=	attoparsec-0.12.1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
