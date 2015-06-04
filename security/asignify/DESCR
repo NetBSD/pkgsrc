@@ -1,0 +1,5 @@
+signify tool is heavily inspired by signify used in OpenBSD. However, the main
+goal of this project is to define high level API for signing files, validating
+signatures and encrypting using public keys cryptography. Asignify is
+designed to be portable and self-contained with zero external dependencies.
+It uses blake2b as the hash function and ed25519 implementation from tweetnacl.
