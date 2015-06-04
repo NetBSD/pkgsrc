@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 00:20:17 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/04 13:56:25 taca Exp $
 
 DISTNAME=	ruby-romkan-0.4
 PKGNAME=	${RUBY_PKGPREFIX}-romkan-0.4
@@ -26,5 +26,5 @@ do-install:
 .endfor
 
 .include "../../lang/ruby/modules.mk"
-.include "../../textproc/ruby-rdtool/buildlink3.mk"
+.include "../../textproc/ruby-rdtool/rdtool.mk"
 .include "../../mk/bsd.pkg.mk"
