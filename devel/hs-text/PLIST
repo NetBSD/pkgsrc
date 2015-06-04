@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/18 21:19:44 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/04 20:07:57 szptvlfn Exp $
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Array.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Encoding.hi
@@ -41,6 +41,7 @@ lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/IO.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Internal.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Read.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Read.hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Show.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Unsafe.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/HStext-${PKGVERSION}.o
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/libHStext-${PKGVERSION}.a
