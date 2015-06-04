@@ -1,9 +1,9 @@
-$NetBSD: patch-thunar_Makefile.in,v 1.2 2015/05/16 06:47:02 wiz Exp $
+$NetBSD: patch-thunar_Makefile.in,v 1.3 2015/06/04 16:04:04 youri Exp $
 
 Don't link Thunar to thunar.
---- thunar/Makefile.in.orig	2015-04-01 17:26:19.000000000 +0000
+--- thunar/Makefile.in.orig	2015-05-22 20:47:32.000000000 +0000
 +++ thunar/Makefile.in
-@@ -2617,7 +2617,7 @@ install-dvi-am:
+@@ -2603,7 +2603,7 @@ install-dvi-am:
  
  install-exec-am: install-binPROGRAMS install-binSCRIPTS
  	@$(NORMAL_INSTALL)
@@ -12,7 +12,7 @@ Don't link Thunar to thunar.
  install-html: install-html-am
  
  install-html-am:
-@@ -2681,9 +2681,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -2667,9 +2667,9 @@ uninstall-am: uninstall-binPROGRAMS unin
  @INTLTOOL_DESKTOP_RULE@
  
  # install symlink to 'thunar'
