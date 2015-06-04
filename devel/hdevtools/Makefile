@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/06/04 13:07:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/04 20:09:00 szptvlfn Exp $
 
 DISTNAME=	hdevtools-0.1.0.5
 PKGNAME=	${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel #haskell
 
 MAINTAINER=	szptvlfn@NetBSD.org
