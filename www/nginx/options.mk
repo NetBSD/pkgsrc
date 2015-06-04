@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.30 2014/05/30 08:14:07 fhajny Exp $
+# $NetBSD: options.mk,v 1.31 2015/06/04 10:25:17 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			pcre push realip ssl sub uwsgi image-filter upload \
 			debug status nginx-autodetect-cflags spdy echo \
 			set-misc headers-more array-var encrypted-session \
-			form-input perl
+			form-input perl gzip
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi perl uwsgi
@@ -212,4 +212,8 @@ INSTALLATION_DIRS+=	${PERL5_INSTALLVENDORARCH}/auto/nginx
 PLIST.perl=		yes
 .include "../../lang/perl5/dirs.mk"
 .include "../../lang/perl5/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgzip)
+CONFIGURE_ARGS+=	--with-http_gzip_static_module
 .endif
