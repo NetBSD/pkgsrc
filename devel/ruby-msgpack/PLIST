@@ -1,13 +1,23 @@
-@comment $NetBSD: PLIST,v 1.6 2015/03/08 15:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/06/04 14:15:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/Dockerfile
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bench/pack.rb
+${GEM_LIBDIR}/bench/pack_log.rb
+${GEM_LIBDIR}/bench/pack_log_long.rb
+${GEM_LIBDIR}/bench/run.sh
+${GEM_LIBDIR}/bench/run_long.sh
+${GEM_LIBDIR}/bench/unpack.rb
+${GEM_LIBDIR}/bench/unpack_log.rb
+${GEM_LIBDIR}/bench/unpack_log_long.rb
 ${GEM_LIBDIR}/doclib/msgpack.rb
 ${GEM_LIBDIR}/doclib/msgpack/buffer.rb
 ${GEM_LIBDIR}/doclib/msgpack/core_ext.rb
