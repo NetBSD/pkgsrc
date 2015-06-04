@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.127 2015/04/19 23:38:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.128 2015/06/04 19:23:11 youri Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
 
+SUBDIR+=	2bwm
 SUBDIR+=	3ddesktop
 SUBDIR+=	9wm
 SUBDIR+=	aewm++
