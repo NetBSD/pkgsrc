@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2464 2015/06/04 13:54:04 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2465 2015/06/04 13:58:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4697,3 +4697,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/hs-cmdargs to 0.10.13 [szptvlfn 2015-06-04]
 	Updated devel/ruby-mkrf to 0.2.3nb1 [taca 2015-06-04]
 	Updated textproc/ruby-rdtool to 0.6.38nb1 [taca 2015-06-04]
+	Updated converters/ruby-unf_ext to 0.0.7.1 [taca 2015-06-04]
