@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/03/01 15:28:34 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/04 14:38:43 taca Exp $
 
-DISTNAME=	posix-spawn-0.3.10
+DISTNAME=	posix-spawn-0.3.11
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
