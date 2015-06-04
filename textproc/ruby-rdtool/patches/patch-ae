@@ -1,8 +1,11 @@
-$NetBSD: patch-ae,v 1.1 2005/11/03 05:21:18 taca Exp $
+$NetBSD: patch-ae,v 1.2 2015/06/04 13:53:32 taca Exp $
 
---- bin/rd2.orig	2005-10-26 20:20:49.000000000 +0900
+* Try load from PKG_SYSCONFDIR/dot.rd2rc.
+* Depend on $0 strictly.
+
+--- bin/rd2.orig	2015-06-04 13:21:12.000000000 +0000
 +++ bin/rd2
-@@ -66,6 +66,7 @@ output_file = nil
+@@ -67,6 +67,7 @@ output_file = nil
  output_index = nil
  out_code = nil
  from_rdo = nil
@@ -10,7 +13,7 @@ $NetBSD: patch-ae,v 1.1 2005/11/03 05:21:18 taca Exp $
  
  # user option
  $DEFAULT_FORMAT_LIB = "rd/rd2html-lib"
-@@ -76,10 +77,10 @@ begin
+@@ -77,10 +78,10 @@ begin
      load "~/.rd2rc"
      #  STDERR << "#{$0}: loading ~/.rd2rc\n"
    else
@@ -23,3 +26,14 @@ $NetBSD: patch-ae,v 1.1 2005/11/03 05:21:18 taca Exp $
    load "rd/dot.rd2rc"
  end
  
+@@ -161,8 +162,8 @@ ARGV.options do |q|
+ end # OptionParser.new
+ 
+ # require format lib implicitly
+-if /rd2.+/ =~ File.basename($0, ".*").downcase
+-  visitor_lib = "rd/" + $& + "-lib.rb"
++if /rd2[0-9]*([a-z-]*).*/ =~ File.basename($0, ".*").downcase
++  visitor_lib = "rd/rd2" + $1 + "-lib.rb"
+   require visitor_lib
+   require $RD2_Sub_OptionParser  if $RD2_Sub_OptionParser
+   # make visitor

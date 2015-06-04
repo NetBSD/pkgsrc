@@ -1,0 +1,2 @@
+bin/rd2  @PREFIX@/bin/rd2@RUBY_SUFFIX@
+bin/rdswap.rb @PREFIX@/bin/rdswap.rb@RUBY_SUFFIX@
