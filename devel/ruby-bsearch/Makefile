@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 15:46:36 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/04 13:59:17 taca Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
@@ -34,5 +34,5 @@ do-install:
 .endfor
 
 .include "../../lang/ruby/modules.mk"
-.include "../../textproc/ruby-rdtool/buildlink3.mk"
+.include "../../textproc/ruby-rdtool/rdtool.mk"
 .include "../../mk/bsd.pkg.mk"
