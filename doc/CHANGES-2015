@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2471 2015/06/04 14:41:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2472 2015/06/04 14:43:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4705,3 +4705,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-posix-spawn to 0.3.11 [taca 2015-06-04]
 	Updated devel/ruby-rspec-core to 3.2.3 [taca 2015-06-04]
 	Updated devel/ruby-rspec-expectations to 3.2.1 [taca 2015-06-04]
+	Updated devel/ruby-sexp-processor to 4.6.0 [taca 2015-06-04]
