@@ -1,0 +1,26 @@
+$NetBSD: README.Bitrig,v 1.1 2015/06/04 15:48:45 sevan Exp $
+
+Please read the general README file as well.
+
+Care should be taken so that the tools that this kit installs do not conflict
+with the Bitrig userland tools. There are several steps:
+
+1. Bitrig stores its ports pkg database in /var/db/pkg. Therefore, you must
+choose a different location (e.g. /var/db/pkgsrc) by using the --pkgdbdir
+option to the bootstrap script. If you don't do this, installing pkgsrc
+packages will result in numerous PLIST errors upon install.
+
+2. If you do not intend to use the Bitrig ports tools, it's probably a
+good idea to move them out of the way to avoid confusion, e.g.:
+	cd /usr/sbin
+	mv pkg_add pkg_add.orig
+	mv pkg_create pkg_create.orig
+	mv pkg_delete pkg_delete.orig
+	mv pkg_info pkg_info.orig
+
+3. The bootstrap script will create an example mk.conf file located in
+pkgsrc/bootstrap/work/mk.conf.example. It contains the settings you provided to 
+bootstrap. Copy it to your $sysconfdir directory. If $sysconfdir/mk.conf doesn't
+exist, the example is copied into place.
+
+bootstrap-pkgsrc has been tested on Bitrig 1.0 (amd64).
