@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2466 2015/06/04 14:08:24 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2467 2015/06/04 14:10:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4699,3 +4699,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-rdtool to 0.6.38nb1 [taca 2015-06-04]
 	Updated converters/ruby-unf_ext to 0.0.7.1 [taca 2015-06-04]
 	Updated devel/ruby-mixlib-config to 2.2.1 [taca 2015-06-04]
+	Updated devel/ruby-mixlib-shellout to 2.1.0 [taca 2015-06-04]
