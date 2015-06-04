@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 05:59:06 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/04 13:20:10 taca Exp $
 
 DISTNAME=	mkrf-0.2.3
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
