@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.SunOS-i386,v 1.1 2013/09/13 20:47:55 jperkin Exp $
-bin/mono-sgen
-lib/libmonosgen-2.0.la
-lib/pkgconfig/monosgen-2.pc
