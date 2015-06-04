@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/04 20:27:53 youri Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/04 21:56:48 youri Exp $
 
 DISTNAME=	cw-1.0.16
 CATEGORIES=	misc
@@ -12,6 +12,10 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-CHECK_INTERPRETER_SKIP=	lib/cw/*
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-build
+SUBST_MESSAGE.path=	Updating intepreter path
+SUBST_FILES.path=	def/*
+SUBST_SED.path=		-e 's,/cw,${PREFIX}/bin/cw,1'
 
 .include "../../mk/bsd.pkg.mk"
