@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/04 20:17:42 youri Exp $
+bin/ii
+man/man1/ii.1
+share/doc/ii/CHANGES
+share/doc/ii/FAQ
+share/doc/ii/LICENSE
+share/doc/ii/README
+share/doc/ii/query.sh
