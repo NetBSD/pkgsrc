@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2461 2015/06/04 00:10:45 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2462 2015/06/04 13:06:35 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4694,3 +4694,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/volatility version 2.4 [pettai 2015-06-03]
 	Updated net/get_iplayer to 2.94 [prlw1 2015-06-03]
 	Updated www/ruby-padrino-cache to 0.12.5nb1 [taca 2015-06-04]
+	Updated devel/hs-cmdargs to 0.10.13 [szptvlfn 2015-06-04]
