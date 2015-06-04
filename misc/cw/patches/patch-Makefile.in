@@ -1,0 +1,121 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/06/04 20:27:53 youri Exp $
+
+Fix the Makefile for DESTDIR support.
+
+--- Makefile.in.orig	2010-06-20 04:39:51.000000000 +0000
++++ Makefile.in
+@@ -2,101 +2,21 @@
+ PREFIX=@prefix@
+ BINDIR=${PREFIX}/bin
+ LIBDIR=${PREFIX}/lib
+-MANDIR=@mandir@
+ SHELL=@SHELL@
+ CC=@CC@
+-ECHO=echo
+-LN=ln
+-RM=rm
+-MKDIR=mkdir
+-INSTALL=@INSTALL@
+ 
+ all:
+-	@$(ECHO) "* Type \"make local\" to just compile local binaries."
+-	@$(ECHO) "* Type \"make installlocal\" to compile/install in"\
+-        "your home directory."
+-	@$(ECHO) "* Type \"make install\" to compile/install globally."
++	$(CC) src/cw.c -o bin/cw @CFLAGS@ @LIBS@ @DEFS@
++	$(CC) src/cwu.c -o bin/cwu @CFLAGS@
+ 
+-cw:
+-	@$(ECHO) "* Compiling cw(color wrapper)..."
+-	@$(CC) src/cw.c -o bin/cw @CFLAGS@ @LIBS@ @DEFS@
+-
+-cwu:
+-	@$(ECHO) "* Compiling cwu(color wrapper directive updater)..."
+-	@$(CC) src/cwu.c -o bin/cwu @CFLAGS@
+-
+-local: cw cwu
+-
+-installlocal: cleanlocal local
+-	@$(ECHO) "* Installing color wrapper locally..."
+-	@$(MKDIR) -m 755 $(HOME)/.cw $(HOME)/.cw/bin $(HOME)/.cw/def $(HOME)/.cw/def/etc
+-	@for FILE in bin/*;do $(INSTALL) -m 755 $$FILE $(HOME)/.cw/bin/;done
+-	@$(LN) -sf $(HOME)/.cw/bin/cw $(HOME)/.cw/bin/cwe
+-	@$(ECHO) "* Installing color wrapper generic definition files..."
+-	@for FILE in def/*;do $(INSTALL) -m 755 $$FILE $(HOME)/.cw/def/;done
+-	@$(ECHO) "* Installing color wrapper generic header/footer files..."
+-	@for FILE in etc/*;do $(INSTALL) -m 644 $$FILE $(HOME)/.cw/def/etc/;done
+-	@$(ECHO) "* Updating definition files..."
+-	@bin/cwu $(HOME)/.cw/def/ $(HOME)/.cw/bin/cw
+-	@$(ECHO) "-----------------------------------------------------------"
+-	@$(ECHO) "* Complete, definitions are stored in: ~/.cw/def"
+-	@$(ECHO) "* For bash: place 'export PATH=\"~/.cw/def:\$$PATH\"'"\
+-        "at the end of ~/.bash_profile"
+-	@$(ECHO) "* For tcsh: place 'setenv PATH \"~/.cw/def:\$$PATH\"'"\
+-        "at the end of ~/.login"
+-	@$(ECHO) "* Or to automate the two lines above use the"\
+-        "\"~/.cw/bin/colorcfg\" command. (and add optional anti-coloring"\
+-        "precautions)"
+-	@$(ECHO) "* Once the desired shell(s) are setup, use the"\
+-        "\"~/.cw/bin/color\" command, or the environmental variable"\
+-        "NOCOLOR=1 to turn color wrapping on and off."
+-	@$(ECHO) ""
+-	@$(ECHO) "* PLEASE view the ./README file for more information if"\
+-        "you haven't already."
+-
+-install: cleanpub cw cwu
+-	@$(ECHO) "* Installing color wrapper..."
+-	@for FILE in bin/*;do $(INSTALL) -o 0 -g 0 -m 755 $$FILE $(BINDIR);done
+-	@$(LN) -sf $(BINDIR)/cw $(BINDIR)/cwe
+-	@$(ECHO) "* Installing color wrapper generic definition files..."
+-	@$(MKDIR) -m 755 $(LIBDIR)/cw/
+-	@for FILE in def/*;do $(INSTALL) -o 0 -g 0 -m 755 $$FILE $(LIBDIR)/cw/;done
+-	@$(ECHO) "* Installing color wrapper generic header/footer files..."
+-	@$(MKDIR) -m 755 $(LIBDIR)/cw/etc
+-	@for FILE in etc/*;do $(INSTALL) -o 0 -g 0 -m 644 $$FILE $(LIBDIR)/cw/etc;done
+-	@$(ECHO) "* Installing manual pages..."
+-	@for FILE in man/*;do $(INSTALL) -o 0 -g 0 -m 644 $$FILE $(MANDIR)/man1/;done
+-	@$(ECHO) "* Updating definition files..."
+-	@$(BINDIR)/cwu $(LIBDIR)/cw $(BINDIR)/cw
+-	@$(ECHO) "-----------------------------------------------------------"
+-	@$(ECHO) "* Complete, definitions are stored in: $(LIBDIR)/cw"
+-	@$(ECHO) "* For bash: place 'export PATH=\"$(LIBDIR)/cw:\$$PATH\"'"\
+-        "at the end of ~/.bash_profile(or /etc/profile globally)"
+-	@$(ECHO) "* For tcsh: place 'setenv PATH \"$(LIBDIR)/cw:\$$PATH\"'"\
+-        "at the end of ~/.login(or /etc/csh.login globally)"
+-	@$(ECHO) "* Or to automate the two lines above use the"\
+-        "\"colorcfg\" command. (and add optional anti-coloring precautions)"
+-	@$(ECHO) "* Once the desired shell(s) are setup, use the"\
+-        "\"color\" command, or the environmental variable NOCOLOR=1 to turn"\
+-        "color wrapping on and off."
+-	@$(ECHO) ""
+-	@$(ECHO) "* PLEASE view the ./README file for more information if"\
+-        "you haven't already."
+-
+-clean:
+-	@$(ECHO) "* Cleaning compiling content..."
+-	@$(RM) -rf Makefile config.status config.cache config.log config.h\
+-        bin/cw bin/cwu bin/cw.exe bin/cwu.exe
+-
+-cleanlocal:
+-	@$(ECHO) "* Cleaning local content..."
+-	@$(RM) -rf $(HOME)/.cw
+-
+-cleanpub:
+-	@$(ECHO) "* Cleaning cw and cwu binaries, and definitions..."
+-	@$(RM) -rf $(BINDIR)/cw $(BINDIR)/cwu $(BINDIR)/cwe\
+-        $(BINDIR)/cw.exe $(BINDIR)/cwu.exe $(BINDIR)/color $(BINDIR)/colorcfg\
+-        $(LIBDIR)/cw $(MANDIR)/man1/cw.1.gz $(MANDIR)/man1/cwu.1.gz\
+-        $(MANDIR)/man1/cwe.1.gz
+-
+-cleanall: clean cleanlocal cleanpub
++.PHONY: install
++install: 
++	mkdir -p $(DESTDIR)$(LIBDIR)/cw/etc
++	mkdir -p $(DESTDIR)$(LIBDIR)
++	mkdir -p $(DESTDIR)$(BINDIR)
++	install -pm 755 bin/cw $(DESTDIR)$(BINDIR)/
++	install -pm 755 bin/cwu $(DESTDIR)$(BINDIR)/
++	install -pm 755 bin/color $(DESTDIR)$(BINDIR)/
++	install -pm 755 bin/colorcfg $(DESTDIR)$(BINDIR)/
++	install -pm 755 def/* $(DESTDIR)$(LIBDIR)/cw/
++	install -pm 644 etc/* $(DESTDIR)$(LIBDIR)/cw/etc/
