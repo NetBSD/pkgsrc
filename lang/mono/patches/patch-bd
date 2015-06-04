@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.6 2014/11/30 08:40:51 spz Exp $
+$NetBSD: patch-bd,v 1.7 2015/06/04 17:16:20 jperkin Exp $
 
 Add MANDIR, but don't hardcode it (fixed in post-patch by SUBST_*).
 
@@ -9,9 +9,9 @@ Add MANDIR, but don't hardcode it (fixed in post-patch by SUBST_*).
  CFLAGS = -g -O2
  endif
 -prefix = /usr/local
-+prefix = /usr/pkg
++prefix = @PREFIX@
  exec_prefix = $(prefix)
-+mandir = $(prefix)/man
++mandir = @PKGMANDIR@
  mono_libdir = $(exec_prefix)/lib
  sysconfdir = $(prefix)/etc
  #RUNTIME = mono

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2015/05/26 12:19:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.161 2015/06/04 17:16:20 jperkin Exp $
 
 DISTNAME=	mono-4.0.1
 PKGREVISION=	1
@@ -117,8 +117,7 @@ SUBST_CLASSES+=			fix-mcs
 SUBST_STAGE.fix-mcs=		post-patch
 SUBST_MESSAGE.fix-mcs=		Fixing mcs default prefix
 SUBST_FILES.fix-mcs=		mcs/build/config-default.make
-SUBST_SED.fix-mcs=		-e 's,/usr/local,${PREFIX},1'
-SUBST_SED.fix-mcs+=		-e "s|MANDIR|${PKGMANDIR}|1"
+SUBST_VARS.fix-mcs=		PREFIX PKGMANDIR
 
 SUBST_CLASSES+=			fix-cfgdir
 SUBST_STAGE.fix-cfgdir=		post-patch
@@ -139,16 +138,12 @@ PLIST_VARS=	monodoc
 .if ${OPSYS} == "SunOS"
 CFLAGS+=		-D_XOPEN_SOURCE=600
 CONFIGURE_ARGS+=	--with-mcs-docs=no
+CONFIGURE_ARGS+=	--with-sgen=no
+CONFIGURE_ARGS+=	--with-sigaltstack=no
 CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
 CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
-.  if ${ABI} == "32"
-ULIMIT_CMD_datasize=	ulimit -d 262144
-ULIMIT_CMD_stacksize=	ulimit -s 10240
-.  else
-CONFIGURE_ARGS+=	--with-sigaltstack=no
 ULIMIT_CMD_datasize=	ulimit -d 524288
 ULIMIT_CMD_stacksize=	ulimit -s 10240
-.  endif
 .elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:M*arm*}
 CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ARGS+=	--disable-parallel-mark
