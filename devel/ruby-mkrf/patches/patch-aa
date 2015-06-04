@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2010/09/10 05:59:06 taca Exp $
+$NetBSD: patch-aa,v 1.2 2015/06/04 13:20:11 taca Exp $
 
-Allow changeing rake command's name.
+* Allow changeing rake command's name.
+* Do not use obsolete Config but RbConfig
 
---- lib/mkrf/rakehelper.rb.orig	2010-08-28 10:52:11.000000000 +0000
+--- lib/mkrf/rakehelper.rb.orig	2015-05-30 13:40:54.000000000 +0000
 +++ lib/mkrf/rakehelper.rb
 @@ -5,7 +5,7 @@
  
@@ -13,6 +14,15 @@ Allow changeing rake command's name.
    end
  end
  
+@@ -41,7 +41,7 @@ end
+ 
+ def setup_extension(dir, extension)
+   ext = "ext/#{dir}"
+-  ext_so = "#{ext}/#{extension}.#{Config::CONFIG['DLEXT']}"
++  ext_so = "#{ext}/#{extension}.#{RbConfig::CONFIG['DLEXT']}"
+   ext_files = FileList[
+     "#{ext}/*.c",
+     "#{ext}/*.h",
 @@ -105,7 +105,7 @@ end
  def sub_project(project, *targets)
    targets.each do |target|
