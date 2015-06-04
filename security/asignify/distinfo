@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/04 20:12:25 youri Exp $
+
+SHA1 (asignify-20150220-746b6dfc1f8d6deb320b6679f00b78061f4f08e6.tar.gz) = d47746baddd15069e5a4b6cca27aa5f48ccf2e73
+RMD160 (asignify-20150220-746b6dfc1f8d6deb320b6679f00b78061f4f08e6.tar.gz) = 079fdbc1480f3d281a2fb40d1a27c02082bb1b22
+Size (asignify-20150220-746b6dfc1f8d6deb320b6679f00b78061f4f08e6.tar.gz) = 73842 bytes
