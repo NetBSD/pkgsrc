@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/04 13:57:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/unf_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
