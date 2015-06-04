@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/13 13:41:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/06/04 14:35:13 taca Exp $
 bin/ruby_parse${RUBY_SUFFIX}
 bin/ruby_parse_extract_error${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -19,10 +19,13 @@ ${GEM_LIBDIR}/lib/ruby20_parser.rb
 ${GEM_LIBDIR}/lib/ruby20_parser.y
 ${GEM_LIBDIR}/lib/ruby21_parser.rb
 ${GEM_LIBDIR}/lib/ruby21_parser.y
+${GEM_LIBDIR}/lib/ruby22_parser.rb
+${GEM_LIBDIR}/lib/ruby22_parser.y
 ${GEM_LIBDIR}/lib/ruby_lexer.rb
 ${GEM_LIBDIR}/lib/ruby_lexer.rex
 ${GEM_LIBDIR}/lib/ruby_lexer.rex.rb
 ${GEM_LIBDIR}/lib/ruby_parser.rb
+${GEM_LIBDIR}/lib/ruby_parser.yy
 ${GEM_LIBDIR}/lib/ruby_parser_extras.rb
 ${GEM_LIBDIR}/test/test_ruby_lexer.rb
 ${GEM_LIBDIR}/test/test_ruby_parser.rb
