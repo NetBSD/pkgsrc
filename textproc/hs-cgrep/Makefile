@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/06/04 13:07:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/04 20:09:00 szptvlfn Exp $
 
 DISTNAME=	cgrep-6.4.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
