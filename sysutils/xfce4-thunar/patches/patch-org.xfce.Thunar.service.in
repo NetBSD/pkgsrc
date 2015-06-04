@@ -1,7 +1,7 @@
-$NetBSD: patch-org.xfce.Thunar.service.in,v 1.1 2015/04/21 08:56:41 jperkin Exp $
+$NetBSD: patch-org.xfce.Thunar.service.in,v 1.2 2015/06/04 16:04:04 youri Exp $
 
 Our installed thunar is all lower-case.
---- org.xfce.Thunar.service.in.orig	2013-07-30 05:44:48.000000000 +0000
+--- org.xfce.Thunar.service.in.orig	2015-05-22 13:25:36.000000000 +0000
 +++ org.xfce.Thunar.service.in
 @@ -1,3 +1,3 @@
  [D-BUS Service]

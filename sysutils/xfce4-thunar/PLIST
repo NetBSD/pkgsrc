@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/21 08:56:41 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/06/04 16:04:04 youri Exp $
 bin/thunar
 bin/thunar-settings
 include/thunarx-2/thunarx/thunarx-config.h
@@ -32,40 +32,6 @@ share/dbus-1/services/org.xfce.FileManager.service
 share/dbus-1/services/org.xfce.Thunar.service
 share/doc/Thunar/README.gtkrc
 share/examples/xfce4/Thunar/uca.xml
-share/gtk-doc/html/thunarx/ThunarxFileInfo.html
-share/gtk-doc/html/thunarx/ThunarxMenuProvider.html
-share/gtk-doc/html/thunarx/ThunarxPreferencesProvider.html
-share/gtk-doc/html/thunarx/ThunarxPropertyPage.html
-share/gtk-doc/html/thunarx/ThunarxPropertyPageProvider.html
-share/gtk-doc/html/thunarx/ThunarxProviderFactory.html
-share/gtk-doc/html/thunarx/ThunarxProviderPlugin.html
-share/gtk-doc/html/thunarx/ThunarxRenamer.html
-share/gtk-doc/html/thunarx/ThunarxRenamerProvider.html
-share/gtk-doc/html/thunarx/abstraction.png
-share/gtk-doc/html/thunarx/bulk-rename.png
-share/gtk-doc/html/thunarx/home.png
-share/gtk-doc/html/thunarx/index.html
-share/gtk-doc/html/thunarx/index.sgml
-share/gtk-doc/html/thunarx/ix01.html
-share/gtk-doc/html/thunarx/left-insensitive.png
-share/gtk-doc/html/thunarx/left.png
-share/gtk-doc/html/thunarx/menu-provider.png
-share/gtk-doc/html/thunarx/right-insensitive.png
-share/gtk-doc/html/thunarx/right.png
-share/gtk-doc/html/thunarx/say-hello.png
-share/gtk-doc/html/thunarx/style.css
-share/gtk-doc/html/thunarx/thunarx-Variables-and-functions-to-check-the-library-version.html
-share/gtk-doc/html/thunarx/thunarx-abstraction-layer.html
-share/gtk-doc/html/thunarx/thunarx-fundamentals.html
-share/gtk-doc/html/thunarx/thunarx-overview.html
-share/gtk-doc/html/thunarx/thunarx-providers.html
-share/gtk-doc/html/thunarx/thunarx-using-extensions.html
-share/gtk-doc/html/thunarx/thunarx-writing-extensions-advanced-topics.html
-share/gtk-doc/html/thunarx/thunarx-writing-extensions-getting-started.html
-share/gtk-doc/html/thunarx/thunarx-writing-extensions.html
-share/gtk-doc/html/thunarx/thunarx.devhelp2
-share/gtk-doc/html/thunarx/up-insensitive.png
-share/gtk-doc/html/thunarx/up.png
 share/icons/hicolor/128x128/apps/Thunar.png
 share/icons/hicolor/16x16/apps/Thunar.png
 share/icons/hicolor/16x16/stock/navigation/stock_folder-copy.png
