@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/17 12:31:52 mef Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/04 20:43:49 wiedi Exp $
 
 DISTNAME=	znapzend-0.14.0
 CATEGORIES=	sysutils
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl gmake
+
+TEST_TARGET=	test
 
 DEPENDS+=	p5-Mojolicious>=5.08:../../www/p5-Mojolicious
 DEPENDS+=	p5-Mojo-IOLoop-ForkCall>=0.12:../../devel/p5-Mojo-IOLoop-ForkCall
