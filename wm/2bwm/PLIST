@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/04 19:26:55 youri Exp $
+bin/2bwm
+bin/hidden
+man/man1/2bwm.1
+man/man1/hidden.1
