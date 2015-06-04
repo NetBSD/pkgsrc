@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/12/12 22:53:35 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/04 20:07:57 szptvlfn Exp $
 
-DISTNAME=	text-1.2.0.3
+DISTNAME=	text-1.2.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
