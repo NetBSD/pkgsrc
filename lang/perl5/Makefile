@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2014/11/22 03:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2015/06/05 12:25:30 sevan Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -193,6 +193,7 @@ SUBST_VARS.policysh+=	FALSE
 # dependencies.  If this isn't defined, then use the perl defaults for the
 # particular operating system.
 #
+LIBSWANTED.Bitrig=	m crypt
 LIBSWANTED.Cygwin=	m crypt dl
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.DragonFly=	m crypt
@@ -216,6 +217,7 @@ SUBST_VARS.policysh+=	LIBSWANTED
 # If this isn't defined, then use the perl defaults for the particular
 # operating system.
 #
+SYSLIBPATH.Bitrig=	/usr/lib
 SYSLIBPATH.Cygwin=	/usr/lib
 SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.DragonFly=	/usr/lib
