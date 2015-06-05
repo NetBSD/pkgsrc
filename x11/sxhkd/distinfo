@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/05 22:45:07 youri Exp $
+
+SHA1 (sxhkd-0.5.5.tar.gz) = 953ac57272adca3258ba0609a9f8c9d85450cd21
+RMD160 (sxhkd-0.5.5.tar.gz) = 0cef5d17cd55408102f319ac5d1ef608e112ed9f
+Size (sxhkd-0.5.5.tar.gz) = 34634 bytes
