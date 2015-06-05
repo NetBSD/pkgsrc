@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2486 2015/06/05 00:50:27 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.2487 2015/06/05 01:33:25 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4718,3 +4718,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/sniproxy to 0.4.0 [wiedi 2015-06-04]
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.17 [wiedi 2015-06-04]
 	Updated mail/rspamd to 0.9.5 [wiedi 2015-06-05]
+	Updated editors/nano to 2.4.1 [wiedi 2015-06-05]
