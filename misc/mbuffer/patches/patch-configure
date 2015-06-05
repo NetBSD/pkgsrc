@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2014/05/08 11:21:24 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2015/06/05 11:36:40 wiedi Exp $
 
 Portability fix.
 
---- configure.orig	2014-05-08 10:26:55.008091173 +0000
+--- configure.orig	2015-04-12 20:03:59.000000000 +0000
 +++ configure
-@@ -3841,7 +3841,7 @@ fi
+@@ -3839,7 +3839,7 @@ fi
  	else
  		SUNCCVERSION=`${CC} -V 2>&1 | grep Sun`
  		SUNCC=$?
