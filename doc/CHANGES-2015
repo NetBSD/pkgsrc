@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2495 2015/06/05 14:08:12 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.2496 2015/06/05 20:43:05 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4727,3 +4727,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql-postgis2 to 2.1.7nb2 [gdt 2015-06-05]
 	Updated mail/dcc to 1.3.158 [gdt 2015-06-05]
 	Updated databases/hiredis to 0.13.1 [wiedi 2015-06-05]
+	Updated security/stunnel to 5.17 [youri 2015-06-05]
