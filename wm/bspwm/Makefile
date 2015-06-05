@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2015/06/05 22:48:18 youri Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/05 23:01:28 youri Exp $
 
 DISTNAME=		bspwm-0.9
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_GITHUB:=baskerville/}
-GITHUB_TAG=		${PKGVERSION}
+GITHUB_TAG=		${PKGVERSION_NOREV}
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://github.com/baskerville/bspwm
 COMMENT=		Binary space partitioning window manager
 LICENSE=		2-clause-bsd
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bash:run
 REPLACE_BASH+=		bin/bspwm-session
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bspwm
