@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/04/02 17:25:44 wiedi Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/05 14:07:27 wiedi Exp $
 
-VERSION=	0.11.0
-DISTNAME=	v${VERSION}
-PKGNAME=	hiredis-${VERSION}
+DISTNAME=	hiredis-0.13.1
 CATEGORIES=	databases
-MASTER_SITES=	https://github.com/redis/hiredis/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=redis/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	wiedi@frubar.net
 HOMEPAGE=	https://github.com/redis/hiredis/
@@ -13,7 +12,6 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
-WRKSRC=		${WRKDIR}/hiredis-${VERSION}
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 
 .include "../../mk/bsd.pkg.mk"
