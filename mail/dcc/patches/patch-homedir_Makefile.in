@@ -1,0 +1,38 @@
+$NetBSD: patch-homedir_Makefile.in,v 1.1 2015/06/05 13:43:20 gdt Exp $
+
+Install configuration files into PKGSRC_DCC_EGDIR.
+
+The path in HD is only used during installation and should therefore not
+end up in any of the installed files.
+
+Also, skip make-dcc_conf (there is nothing to merge) and fix-map (moved
+into rc-files as start_precmd check).
+
+--- homedir/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ homedir/Makefile.in
+@@ -39,7 +39,7 @@
+ DEPTH	=..
+ 
+ HINST	=$(INSTALL) -c $(SET_DCCOWN)
+-HD	=@installroot@@prefix@
++HD	=@installroot@$(PKGSRC_DCC_EGDIR)
+ MAP	=$(HD)/map@configsuffix@
+ MAPTXT	=$(HD)/map.txt@configsuffix@
+ IDS	=$(HD)/ids@configsuffix@
+@@ -60,14 +60,12 @@ DCC_BINDIR=@installroot@@libexecdir@
+ all:
+ 	@:
+ 
+-install:$(HD) $(HD)/log
++install:$(HD)
+ 	for NM in $(SSCRIPTS); do $(BININSTALL) $$NM $(DCC_BINDIR)/$$NM;done
+-	sh make-dcc_conf -F '@configsuffix@' -h $(HD)
+-	for NM in $(SIMPLE); do\
++	for NM in $(SIMPLE) $(GENFILES); do\
+ 	    if test -n '@configsuffix@' -o ! -f $(HD)/$$NM; then\
+ 		$(HINST) -m 644 $$NM $(HD)/$${NM}@configsuffix@; fi; done
+ 	if test -s $(PFILE); then $(HINST) -m 600 $(PFILE) $(HD)/$(PFILE); fi
+-	sh fix-map -n '@configsuffix@' -c $(CDCC) -h $(HD) -i $(IDS) -m $(MAP) -t $(MAPTXT)
+ 	for NM in $(SIMPLE) $(GENFILES); do\
+ 	    if test -n '@configsuffix@' -a ! -s $(HD)/$$NM; then\
+ 		cp -p $(HD)/$${NM}@configsuffix@ $(HD)/$${NM}; fi; done
