@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2015/06/05 13:43:20 gdt Exp $
+
+NetBSD uses mandoc since netbsd-6.
+
+--- configure.orig	2014-08-06 14:43:42.000000000 +0000
++++ configure
+@@ -1970,12 +1970,10 @@ case "$TARGET_SYS" in
+ 	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+ 	;;
+     NetBSD)
+-	# use text output to avoid running groff on every `man` command
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	# force NetBSD to install the man pages
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes\
+-install:maninstall'
++	# default to /usr/local/man/man8 and use nroff files
++	mancat=man
++	MANX='$(MAN8)'
++	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+ 	;;
+     BSD/OS)
+ 	# default to /usr/local/man/cat8 and use cleartext files, possibly
