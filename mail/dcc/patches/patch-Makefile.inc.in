@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.inc.in,v 1.1 2015/06/05 13:43:20 gdt Exp $
+
+NO_SYS_INSTALL shouldn't prevent man pages from being installed.
+
+--- Makefile.inc.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ Makefile.inc.in
+@@ -124,7 +124,6 @@ MANOWN	    =$(DCC_OWN)
+ MANMODE	    =444
+ 
+ @MAKE_DOT@ifdef NO_SYS_INSTALL
+-NOMAN	=no
+ SET_BINOWN=
+ SET_MANOWN=
+ SET_DCCOWN=
