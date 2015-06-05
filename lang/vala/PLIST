@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.14 2015/04/03 07:38:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/06/05 08:53:55 wiz Exp $
+bin/vala
 bin/vala-0.28
+bin/vala-gen-introspect
 bin/vala-gen-introspect-0.28
+bin/valac
 bin/valac-0.28
+bin/vapicheck
 bin/vapicheck-0.28
+bin/vapigen
 bin/vapigen-0.28
 include/vala-0.28/vala.h
 include/vala-0.28/valaccode.h
@@ -11,7 +16,10 @@ include/vala-0.28/valagee.h
 lib/libvala-0.28.la
 lib/pkgconfig/libvala-0.28.pc
 lib/vala-0.28/gen-introspect-0.28
+share/aclocal/vala.m4
+share/aclocal/vapigen.m4
 share/pkgconfig/vapigen-0.28.pc
+share/pkgconfig/vapigen.pc
 share/vala-0.28/vapi/alsa.deps
 share/vala-0.28/vapi/alsa.vapi
 share/vala-0.28/vapi/atk.vapi
@@ -312,3 +320,4 @@ share/vala-0.28/vapi/xcb.vapi
 share/vala-0.28/vapi/xtst.deps
 share/vala-0.28/vapi/xtst.vapi
 share/vala-0.28/vapi/zlib.vapi
+share/vala/Makefile.vapigen
