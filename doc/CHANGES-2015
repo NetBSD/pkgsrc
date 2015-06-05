@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2488 2015/06/05 06:35:48 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2489 2015/06/05 08:54:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4720,3 +4720,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/rspamd to 0.9.5 [wiedi 2015-06-05]
 	Updated editors/nano to 2.4.1 [wiedi 2015-06-05]
 	Updated www/p5-Dancer2 to 0.160002 [wen 2015-06-05]
+	Updated lang/vala to 0.28.0nb1 [wiz 2015-06-05]
