@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2489 2015/06/05 08:54:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2490 2015/06/05 11:37:17 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/nano to 2.4.1 [wiedi 2015-06-05]
 	Updated www/p5-Dancer2 to 0.160002 [wen 2015-06-05]
 	Updated lang/vala to 0.28.0nb1 [wiz 2015-06-05]
+	Updated misc/mbuffer to 20150412 [wiedi 2015-06-05]
