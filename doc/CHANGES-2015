@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2487 2015/06/05 01:33:25 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.2488 2015/06/05 06:35:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.17 [wiedi 2015-06-04]
 	Updated mail/rspamd to 0.9.5 [wiedi 2015-06-05]
 	Updated editors/nano to 2.4.1 [wiedi 2015-06-05]
+	Updated www/p5-Dancer2 to 0.160002 [wen 2015-06-05]
