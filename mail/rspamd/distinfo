@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/01/23 21:47:44 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2015/06/05 00:49:35 wiedi Exp $
 
-SHA1 (rspamd-0.8.1.tar.xz) = 7ffe119d8ddfb05e298d740c2ad66156385170db
-RMD160 (rspamd-0.8.1.tar.xz) = 16817053945d234122a93aee39287320f8c5cf75
-Size (rspamd-0.8.1.tar.xz) = 750724 bytes
+SHA1 (rspamd-0.9.5.tar.xz) = c298e7e02f77fc1577008ef5aa1da3ec5c8e2723
+RMD160 (rspamd-0.9.5.tar.xz) = 786b767f11328d4914db29dbbc13896742ee96a2
+Size (rspamd-0.9.5.tar.xz) = 802752 bytes
