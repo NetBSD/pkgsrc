@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/10/27 12:26:37 gdt Exp $
+$NetBSD: MESSAGE,v 1.2 2015/06/05 13:43:20 gdt Exp $
 
 Use of Public DCC Servers
 -------------------------
@@ -40,17 +40,5 @@ so, cron-dccd should run at least once per day in order to remove old
 checksums from the database:
 
    ${PREFIX}/libexec/cron-dccd
-
-===========================================================================
-===========================================================================
-
-SpamAssassin DCC Module
------------------------
-
-For a proper initialization of the SpamAssassin DCC module (DCC.pm),
-copy dcc-spamassassin.pre into the main SpamAssassin configuration
-directory and restart spamd:
-
-   ${PREFIX}/share/examples/dcc/dcc-spamassassin.pre
 
 ===========================================================================
