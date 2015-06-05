@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:20:22 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/05 21:04:36 mrg Exp $
 
 DISTNAME=	lilv-0.20.0
 PKGREVISION=	1
@@ -29,6 +29,7 @@ BUILD_OPTIONS=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS} # --bindings BROKEN
 do-configure:
 	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
+			--configdir=${PKG_SYSCONFDIR:Q} \
 			--destdir=${DESTDIR} --mandir=${PREFIX}/${PKGMANDIR} \
 				--default-lv2-path=${BUILDLINK_PREFIX.lv2}/lib/lv2 \
 					${BUILD_OPTIONS}
