@@ -1,42 +1,32 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dccifd.sh,v 1.1.1.1 2010/10/27 12:26:37 gdt Exp $
+# $NetBSD: dccifd.sh,v 1.2 2015/06/05 13:43:20 gdt Exp $
 #
 #
 # PROVIDE: dccifd
 # REQUIRE: DAEMON
 # BEFORE:  mail spamd
+# KEYWORD: shutdown
 
 $_rc_subr_loaded . /etc/rc.subr
 
-name="dccifd"
-rcvar="${name}"
-start_precmd="dcc_precmd"
-command="@PREFIX@/libexec/start-${name}"
-procname="@PREFIX@/libexec/${name}"
-pidfile="@DCC_RUN@/${name}.pid"
-#
-#
-#	start-dcc{d,ifd,m} understands certain flags while
-#	it passes everything behind -a to dcc{d,ifd,m}
-#
-#
-dcc_precmd()
+name=dccifd
+rcvar=$name
+start_precmd=dcc_precmd
+start_cmd="@DCC_RC@ \${rc_flags:+-x} -m $name start"
+stop_cmd="@DCC_RC@ \${rc_flags:+-x} -m $name stop"
+
+dcc_precmd ()
 {
-	if [ -n "${rc_flags}" ]; then
-		rc_flags="-a '${rc_flags}'"
-	fi
-
-	eval dcc_start_flags=\$${name}_start_flags
-	if [ -n "${dcc_start_flags}" ]; then
-		rc_flags="${dcc_start_flags} ${rc_flags}"
-	fi
-
-	if [ -n "${command_args}" ]; then
-		rc_flags="${command_args} ${rc_flags}"
-		unset command_args
+	if [ ! -s @DCC_HOME@/ids ]; then
+		@DCC_FIXMAP@ \
+			-i @DCC_HOME@/ids \
+			-I @DCC_EGDIR@/ids \
+			-m @DCC_HOME@/map \
+			-t @DCC_HOME@/map.txt \
+			-T @DCC_EGDIR@/map.txt
 	fi
 }
 
-load_rc_config "${name}"
+load_rc_config $name
 run_rc_command "${1}"
