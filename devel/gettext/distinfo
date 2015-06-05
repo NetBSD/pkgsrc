@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2015/01/03 18:04:06 spz Exp $
+$NetBSD: distinfo,v 1.30 2015/06/05 12:28:38 sevan Exp $
 
 SHA1 (gettext-0.19.4.tar.gz) = c473f4f268501d971b913197fb07767e628644bb
 RMD160 (gettext-0.19.4.tar.gz) = ab9191c0ac33c11ee98278271defe7cecc5a567f
@@ -13,4 +13,5 @@ SHA1 (patch-ak) = 05b06eae21fcf49af91479a63c5b9bbc1388101c
 SHA1 (patch-al) = 15563935bd43886309dd95a0816a5c2153b5da3c
 SHA1 (patch-an) = c78b531f1a55bb5509c89d5fbba2a8da425486e5
 SHA1 (patch-ao) = d0ab5520f53f38c7b2eb76395c5d6dd24407ef4f
+SHA1 (patch-gettext-tools_src_Makefile.in) = e231887f1354b17cc678bc56db0dd5796b35f966
 SHA1 (patch-gettext-tools_tests_Makefile.in) = 7ea89df2c45e6c544e2ec6c91cde6d135d964679
