@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2492 2015/06/05 13:21:24 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2493 2015/06/05 13:31:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/mbuffer to 20150412 [wiedi 2015-06-05]
 	Added www/p5-HTTP-Headers-Fast version 0.17 [wen 2015-06-05]
 	Updated www/p5-Plack to 1.0036 [wen 2015-06-05]
+	Updated databases/postgresql-postgis2 to 2.1.7nb2 [gdt 2015-06-05]
