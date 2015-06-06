@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2506 2015/06/06 12:58:11 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.2507 2015/06/06 14:14:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-svn to 2.4.3 [adam 2015-06-06]
 	Updated www/gitweb to 2.4.3 [adam 2015-06-06]
 	Updated geography/gpsbabel to 1.5.2 [gdt 2015-06-06]
+	Updated mail/roundcube to 1.1.2 [taca 2015-06-06]
