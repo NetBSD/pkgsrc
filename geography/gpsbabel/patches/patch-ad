@@ -1,43 +1,47 @@
-$NetBSD: patch-ad,v 1.4 2013/03/16 18:52:58 gdt Exp $
+$NetBSD: patch-ad,v 1.5 2015/06/06 12:57:58 gdt Exp $
 
 This patch was rejected by upstream.  There is a comment in upstream
 Makefile.in that explains why there is no space, and output flag is
 set to "-o ", so that the output flag can be set to "-Fo" for MSVC.n
 
-On NetBSD, the upstream versoni works, but there is some mysterious
+On NetBSD, the upstream version works, but there is some mysterious
 failure on Mac OS X.  This patch therefore needs investigation and
-resolution to be filed with upstream.
+resolution to be filed with upstream.  (It almost certainly breaks
+native compilation on Windows, but that's not a pkgsrc platform.)
 
---- Makefile.in.orig	2012-03-29 00:19:29.000000000 +0000
+--- Makefile.in.orig	2014-12-17 00:47:31.000000000 +0000
 +++ Makefile.in
-@@ -102,7 +102,7 @@ LIBOBJS = queue.o route.o waypt.o filter
- OBJS = main.o globals.o $(LIBOBJS) @FILEINFO@
+@@ -119,9 +119,9 @@ OBJS = main.o globals.o $(LIBOBJS) @FILE
+ DEPFILES = $(OBJS:.o=.d)
  
+ .cc.o:
+-	$(CXX) @CPPFLAGS@ @CXXFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH)$@
++	$(CXX) @CPPFLAGS@ @CXXFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH) $@
  .c.o:
--	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH)$@
-+	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH) $@
+-	$(CC) @CPPFLAGS@ @CFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH)$@
++	$(CC) @CPPFLAGS@ @CFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH) $@
  
  
  
-@@ -113,10 +113,10 @@ WEB=@DOCDIR@
+@@ -141,10 +141,10 @@ gui linux-gui mac-gui mac-gui-dmg msvc-b
  all: gpsbabel$(EXEEXT)
  
  gpsbabel$(EXEEXT): configure Makefile $(OBJS) @GPSBABEL_DEBUG@ 
--	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH)$@
-+	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH) $@
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ $(QT_LIBS) @USB_LIBS@ $(OUTPUT_SWITCH)$@
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ $(QT_LIBS) @USB_LIBS@ $(OUTPUT_SWITCH) $@
  
  gpsbabel-debug: $(OBJS)
--	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH)$@
-+	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH) $@
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ $(QT_LIBS) @USB_LIBS@ $(OUTPUT_SWITCH)$@
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ $(QT_LIBS) @USB_LIBS@ $(OUTPUT_SWITCH) $@
  
  Makefile gbversion.h: Makefile.in config.status xmldoc/makedoc.in \
  	  gbversion.h.in gui/setup.iss.in
-@@ -129,7 +129,7 @@ config.status: configure 
+@@ -157,7 +157,7 @@ config.status: configure 
  	$(SHELL) config.status --recheck
  
  jeeps/gpslibusb.o: 
--	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) @USB_CFLAGS@ @srcdir@/jeeps/gpslibusb.c $(OUTPUT_SWITCH)$@
-+	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) @USB_CFLAGS@ @srcdir@/jeeps/gpslibusb.c $(OUTPUT_SWITCH) $@
+-	$(CXX) @CPPFLAGS@ @CXXFLAGS@ -c $(GBCFLAGS) @USB_CFLAGS@ @srcdir@/jeeps/gpslibusb.cc $(OUTPUT_SWITCH)$@
++	$(CXX) @CPPFLAGS@ @CXXFLAGS@ -c $(GBCFLAGS) @USB_CFLAGS@ @srcdir@/jeeps/gpslibusb.cc $(OUTPUT_SWITCH) $@
  
  fileinfo.o: win32/gpsbabel.rc
  	$(RC) -o fileinfo.o win32/gpsbabel.rc
