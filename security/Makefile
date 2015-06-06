@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.552 2015/06/04 20:12:45 youri Exp $
+# $NetBSD: Makefile,v 1.553 2015/06/06 08:20:27 pettai Exp $
 #
 
 COMMENT=	Security tools
@@ -480,6 +480,7 @@ SUBDIR+=	volatility
 SUBDIR+=	xml-security-c
 SUBDIR+=	xmlsec1
 SUBDIR+=	yafic
+SUBDIR+=	yara
 SUBDIR+=	ykclient
 SUBDIR+=	ykpers
 SUBDIR+=	zebedee
