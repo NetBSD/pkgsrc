@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2503 2015/06/06 08:19:07 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2504 2015/06/06 09:13:52 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4736,3 +4736,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/contao35 version 3.5.0 [taca 2015-06-06]
 	Added net/pear-Net_LDAP3 version 1.0.3 [manu 2015-06-06]
 	Added security/yara version 3.3.0 [pettai 2015-06-06]
+	Added security/py-yara version 3.3.0 [pettai 2015-06-06]
