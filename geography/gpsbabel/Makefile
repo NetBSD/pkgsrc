@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2015/06/06 12:57:58 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2015/06/06 13:01:56 gdt Exp $
 #
 
 DISTNAME=	gpsbabel-1.5.2
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsbabel/}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 # Download from official site apparently only via interactive form,
 # but code is gnu-gpl-v2 so hosted elsewhere.
-MASTER_SITES+=	http://archlinux-stuff.googlecode.com/files/
+# older versions were at
+# MASTER_SITES+=	http://archlinux-stuff.googlecode.com/files/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gpsbabel.org/
