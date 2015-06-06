@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2510 2015/06/06 17:31:47 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.2511 2015/06/06 20:33:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/typo3_62 to 6.2.12 [taca 2015-06-06]
 	Updated misc/rlwrap to 0.42 [youri 2015-06-06]
 	Updated emulators/xnp2 to 0.84 [tsutsui 2015-06-06]
+	Updated net/gupnp to 0.20.13nb3 [wiz 2015-06-06]
