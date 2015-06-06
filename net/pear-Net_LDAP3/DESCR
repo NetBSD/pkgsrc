@@ -1,0 +1,7 @@
+Net_LDAP3 is a successor of Net_LDAP2. Informations on this project
+are scarce, but it is required for Roundcube LDAP directory feature.
+
+Obtained by:
+git clone -b pear-Net-LDAP3-1.0.3 \
+    https://git.kolab.org/diffusion/PNL/php-net_ldap.git Net_LDAP3-1.0.3
+tar -czf Net_LDAP3-1.0.3.tgz Net_LDAP3-1.0.3
