@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2504 2015/06/06 09:13:52 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2505 2015/06/06 11:42:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4737,3 +4737,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/pear-Net_LDAP3 version 1.0.3 [manu 2015-06-06]
 	Added security/yara version 3.3.0 [pettai 2015-06-06]
 	Added security/py-yara version 3.3.0 [pettai 2015-06-06]
+	Updated devel/git to 2.4.3 [adam 2015-06-06]
+	Updated devel/git-base to 2.4.3 [adam 2015-06-06]
+	Updated devel/git-docs to 2.4.3 [adam 2015-06-06]
+	Updated devel/git-gitk to 2.4.3 [adam 2015-06-06]
+	Updated devel/git-svn to 2.4.3 [adam 2015-06-06]
+	Updated www/gitweb to 2.4.3 [adam 2015-06-06]
