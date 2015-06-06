@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/06 09:13:27 pettai Exp $
+${PYSITELIB}/yara.so
