@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/06 17:11:43 youri Exp $
 #
 
-DISTNAME=	rlwrap-0.37
-PKGREVISION=	3
+DISTNAME=	rlwrap-0.42
 CATEGORIES=	misc
 MASTER_SITES=	http://utopia.knoware.nl/~hlub/uck/rlwrap/
 
@@ -11,16 +10,8 @@ HOMEPAGE=	http://utopia.knoware.nl/~hlub/uck/rlwrap/
 COMMENT=	Provides command line editing and history for other commands
 LICENSE=	gnu-gpl-v2
 
-BUILDLINK_API_DEPENDS.readline+=readline>=4.2
-
 GNU_CONFIGURE=		yes
-
-.include "options.mk"
-
-USE_LANGUAGES=		c
 USE_TOOLS+=		gmake perl:run
-
-TEST_TARGET=		check
 
 REPLACE_PERL+=	filters/censor_passwords
 REPLACE_PERL+=	filters/count_in_prompt
@@ -37,7 +28,10 @@ REPLACE_PERL+=	filters/simple_macro
 REPLACE_PERL+=	filters/template
 REPLACE_PERL+=	filters/unbackspace
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+TEST_TARGET=		check
 
+.include "options.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+BUILDLINK_API_DEPENDS.readline+=readline>=4.2
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
