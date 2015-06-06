@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/18 14:01:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/06 14:29:13 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/.editorconfig
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
@@ -5113,6 +5113,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/UserManual/In
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Resources/Private/Language/locallang.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Resources/Private/Language/locallang_em.xlf
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Resources/Private/Partials/Form.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Resources/Private/Partials/Rules.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Resources/Private/Partials/Searchresult.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Resources/Private/Templates/Search/Form.html
