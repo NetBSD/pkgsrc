@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2498 2015/06/05 22:48:33 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2499 2015/06/06 00:03:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4730,3 +4730,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/stunnel to 5.17 [youri 2015-06-05]
 	Added x11/sxhkd version 0.5.5 [youri 2015-06-05]
 	Added wm/bspwm version 0.9 [youri 2015-06-05]
+	Updated devel/p5-App-cpanminus to 1.7035 [wen 2015-06-06]
