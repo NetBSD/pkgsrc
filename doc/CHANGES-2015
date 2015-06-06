@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2500 2015/06/06 03:32:05 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2501 2015/06/06 03:42:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-App-cpanminus to 1.7035 [wen 2015-06-06]
 	Updated www/contao32 to 3.2.21 [taca 2015-06-06]
 	Updated www/contao34 to 3.4.5nb1 [taca 2015-06-06]
+	Added www/contao35 version 3.5.0 [taca 2015-06-06]
