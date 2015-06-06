@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2508 2015/06/06 14:29:52 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2509 2015/06/06 17:13:25 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/gpsbabel to 1.5.2 [gdt 2015-06-06]
 	Updated mail/roundcube to 1.1.2 [taca 2015-06-06]
 	Updated www/typo3_62 to 6.2.12 [taca 2015-06-06]
+	Updated misc/rlwrap to 0.42 [youri 2015-06-06]
