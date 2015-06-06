@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2505 2015/06/06 11:42:35 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2506 2015/06/06 12:58:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-gitk to 2.4.3 [adam 2015-06-06]
 	Updated devel/git-svn to 2.4.3 [adam 2015-06-06]
 	Updated www/gitweb to 2.4.3 [adam 2015-06-06]
+	Updated geography/gpsbabel to 1.5.2 [gdt 2015-06-06]
