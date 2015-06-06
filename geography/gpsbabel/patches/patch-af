@@ -1,12 +1,12 @@
-$NetBSD: patch-af,v 1.4 2013/03/16 18:52:58 gdt Exp $
+$NetBSD: patch-af,v 1.5 2015/06/06 12:57:58 gdt Exp $
 
 From Giles Lean, who places it in the public domain.  Workarounds for
 problems with buggy USB serial adapators.  Not applied by upstream
 2009-02-21 because it's too dangerous to work around problems without
 understanding them.
 
---- jeeps/gpsread.c.orig	2011-07-26 01:56:33.000000000 +0000
-+++ jeeps/gpsread.c
+--- jeeps/gpsread.cc.orig	2014-02-13 00:12:48.000000000 +0000
++++ jeeps/gpsread.cc
 @@ -98,6 +98,36 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
        GPS_Diag("%02x ", u);
  
@@ -50,12 +50,12 @@ understanding them.
  
 +dle_missed:
        if (len==1) {
-         (*packet)->type = u;
+         (*packet).type = u;
          ++len;
 @@ -130,6 +161,20 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
        if (u == ETX)
          if (isDLE) {
-           if (p-(*packet)->data-2 != (*packet)->n) {
+           if (p-(*packet).data-2 != (*packet).n) {
 +	    /*
 +	     * When used with a buggy Prolific USB-serial converter the
 +	     * calling sequence GPS_A000() -> GPS_Get_Ack() sometimes
