@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/06/06 12:33:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/06/06 20:33:32 wiz Exp $
 bin/gupnp-binding-tool
 include/gupnp-1.0/libgupnp/gupnp-acl.h
 include/gupnp-1.0/libgupnp/gupnp-context-manager.h
@@ -68,3 +68,5 @@ share/gtk-doc/html/gupnp/style.css
 share/gtk-doc/html/gupnp/tutorial.html
 share/gtk-doc/html/gupnp/up-insensitive.png
 share/gtk-doc/html/gupnp/up.png
+share/vala/vapi/gupnp-1.0.deps
+share/vala/vapi/gupnp-1.0.vapi
