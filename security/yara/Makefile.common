@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2015/06/06 08:57:18 pettai Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/06/06 09:15:50 pettai Exp $
 #
 # used by security/yara/Makefile
+# used by security/py-yara/Makefile
 
 DISTNAME=	v3.3.0
 YAVER=		${DISTNAME:S/v//}
