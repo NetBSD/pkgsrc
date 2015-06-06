@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2509 2015/06/06 17:13:25 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2510 2015/06/06 17:31:47 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/roundcube to 1.1.2 [taca 2015-06-06]
 	Updated www/typo3_62 to 6.2.12 [taca 2015-06-06]
 	Updated misc/rlwrap to 0.42 [youri 2015-06-06]
+	Updated emulators/xnp2 to 0.84 [tsutsui 2015-06-06]
