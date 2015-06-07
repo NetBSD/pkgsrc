@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/02/07 14:46:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/07 10:28:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -59,6 +59,7 @@ ${GEM_LIBDIR}/lib/tins/go.rb
 ${GEM_LIBDIR}/lib/tins/hash_symbolize_keys_recursive.rb
 ${GEM_LIBDIR}/lib/tins/hash_union.rb
 ${GEM_LIBDIR}/lib/tins/if_predicate.rb
+${GEM_LIBDIR}/lib/tins/implement.rb
 ${GEM_LIBDIR}/lib/tins/limited.rb
 ${GEM_LIBDIR}/lib/tins/lines_file.rb
 ${GEM_LIBDIR}/lib/tins/memoize.rb
@@ -112,6 +113,7 @@ ${GEM_LIBDIR}/lib/tins/xt/full.rb
 ${GEM_LIBDIR}/lib/tins/xt/hash_symbolize_keys_recursive.rb
 ${GEM_LIBDIR}/lib/tins/xt/hash_union.rb
 ${GEM_LIBDIR}/lib/tins/xt/if_predicate.rb
+${GEM_LIBDIR}/lib/tins/xt/implement.rb
 ${GEM_LIBDIR}/lib/tins/xt/irb.rb
 ${GEM_LIBDIR}/lib/tins/xt/method_description.rb
 ${GEM_LIBDIR}/lib/tins/xt/named.rb
@@ -163,6 +165,7 @@ ${GEM_LIBDIR}/tests/go_test.rb
 ${GEM_LIBDIR}/tests/hash_symbolize_keys_recursive_test.rb
 ${GEM_LIBDIR}/tests/hash_union_test.rb
 ${GEM_LIBDIR}/tests/if_predicate_test.rb
+${GEM_LIBDIR}/tests/implement_test.rb
 ${GEM_LIBDIR}/tests/limited_test.rb
 ${GEM_LIBDIR}/tests/lines_file_test.rb
 ${GEM_LIBDIR}/tests/memoize_test.rb
