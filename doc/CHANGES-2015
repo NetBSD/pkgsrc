@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2537 2015/06/07 12:40:23 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.2538 2015/06/07 13:54:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/guile-pg to 0.47 [gdt 2015-06-07]
 	Updated devel/guile-gnome to 2.16.2 [gdt 2015-06-07]
 	Updated www/trac to 1.0.5 [gdt 2015-06-07]
+	Updated lang/ruby-coffee-script-source to 1.9.1.1 [taca 2015-06-07]
