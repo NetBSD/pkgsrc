@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/04/06 08:17:17 adam Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/07 14:06:00 youri Exp $
 #
 
 DISTNAME=	rest-0.6
@@ -20,6 +20,6 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	rest.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

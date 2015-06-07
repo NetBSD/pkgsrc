@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2015/04/25 14:20:18 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2015/06/07 14:05:57 youri Exp $
 #
 
 DISTNAME=	ario-1.5.1
@@ -32,7 +32,7 @@ BUILDLINK_TRANSFORM+=	rm:-W${fl}
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 #.include "../../net/avahi/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4.0

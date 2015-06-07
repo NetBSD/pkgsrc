@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2015/05/31 03:42:28 dsainty Exp $
+# $NetBSD: Makefile,v 1.68 2015/06/07 14:05:58 youri Exp $
 
 DISTNAME=		shotwell-0.20.2
 PKGREVISION=		3
@@ -41,7 +41,7 @@ BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
 .include "../../graphics/librsvg/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

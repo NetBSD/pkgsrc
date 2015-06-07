@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2015/04/25 14:23:41 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2015/06/07 14:05:58 youri Exp $
 #
 
 DISTNAME=		swfdec-0.8.4
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--with-audio=none
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

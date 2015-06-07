@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/25 14:23:43 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/07 14:05:58 youri Exp $
 
 DISTNAME=	corebird-0.9
 PKGREVISION=	3
@@ -25,7 +25,7 @@ TEST_TARGET=	check
 .include "../../www/librest07/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"

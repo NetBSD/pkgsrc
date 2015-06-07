@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2015/04/25 14:20:36 tnn Exp $
+# $NetBSD: Makefile,v 1.54 2015/06/07 14:05:57 youri Exp $
 #
 
 DISTNAME=	libgweather-2.30.3
@@ -24,5 +24,5 @@ CONFLICTS+=	gnome-applets<2.22.0
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/04/25 14:23:37 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2015/06/07 14:05:58 youri Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -13,7 +13,7 @@ COMMENT=	Xfce weather plugin
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

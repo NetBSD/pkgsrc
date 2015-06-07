@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/05/11 14:24:51 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/07 14:05:57 youri Exp $
 
 DISTNAME=	appdata_tools-0.1.7
 PKGREVISION=	3
@@ -27,5 +27,5 @@ pre-configure:
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
