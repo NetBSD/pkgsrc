@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/06/07 10:31:48 taca Exp $
+# $NetBSD: Makefile,v 1.52 2015/06/07 23:25:27 joerg Exp $
 #
 
 DISTNAME=	rabbit-2.1.6
@@ -25,6 +25,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-faraday-[0-9]*:../../www/ruby-faraday
 
 USE_RUBY_SETUP=		yes
 USE_RUBY_SETUP_PKG=	yes
+
+RUBY_VERSION_SUPPORTED=	200 193 21
 
 CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
 			--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
