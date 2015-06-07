@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2531 2015/06/07 10:29:21 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2532 2015/06/07 10:33:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4770,3 +4770,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-simplecov to 0.10.0 [taca 2015-06-07]
 	Updated devel/ruby-test-unit to 3.1.1 [taca 2015-06-07]
 	Updated devel/ruby-tins to 1.5.2 [taca 2015-06-07]
+	Updated graphics/ruby-RMagick to 2.15.2 [taca 2015-06-07]
