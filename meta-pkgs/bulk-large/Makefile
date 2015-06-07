@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/05/06 10:23:42 markd Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/07 14:19:12 youri Exp $
 
 DISTNAME=	bulk-large-20150218
 CATEGORIES=	meta-pkgs
@@ -43,7 +43,7 @@ BUILD_DEPENDS+=	libgnomeui-[0-9]*:../../devel/libgnomeui
 BUILD_DEPENDS+=	ocaml-[0-9]*:../../lang/ocaml
 BUILD_DEPENDS+=	gst-plugins0.10-base-[0-9]*:../../multimedia/gst-plugins0.10-base
 BUILD_DEPENDS+=	gstreamer0.10-[0-9]*:../../multimedia/gstreamer0.10
-BUILD_DEPENDS+=	libsoup24-[0-9]*:../../net/libsoup24
+BUILD_DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 BUILD_DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 BUILD_DEPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib
 BUILD_DEPENDS+=	aspell-[0-9]*:../../textproc/aspell

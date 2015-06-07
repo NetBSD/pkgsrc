@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/04/14 13:40:16 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2015/06/07 14:19:12 youri Exp $
 
 DISTNAME=	bulk-medium-20150414
 CATEGORIES=	meta-pkgs
@@ -184,7 +184,7 @@ BUILD_DEPENDS+=	boost-[0-9]*:../../meta-pkgs/boost
 BUILD_DEPENDS+=	ffmpeg2-[0-9]*:../../multimedia/ffmpeg2
 BUILD_DEPENDS+=	libogg-[0-9]*:../../multimedia/libogg
 BUILD_DEPENDS+=	libpcap-[0-9]*:../../net/libpcap
-BUILD_DEPENDS+=	libsoup24-[0-9]*:../../net/libsoup24
+BUILD_DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 BUILD_DEPENDS+=	poppler-[0-9]*:../../print/poppler
 BUILD_DEPENDS+=	poppler-includes-[0-9]*:../../print/poppler-includes
 BUILD_DEPENDS+=	cyrus-sasl-[0-9]*:../../security/cyrus-sasl
