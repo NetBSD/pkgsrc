@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/07 03:40:19 joerg Exp $
 
 DISTNAME=	italiano_2_4_2007_09_01
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linguistico/}
 EXTRACT_SUFX=	.zip
