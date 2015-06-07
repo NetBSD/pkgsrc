@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2546 2015/06/07 15:55:24 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.2547 2015/06/07 15:57:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4785,3 +4785,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-bundler to 1.10.3 [taca 2015-06-07]
 	Updated misc/ruby-colorize to 0.7.7 [taca 2015-06-07]
 	Updated graphics/MesaLib to 10.5.7 [tnn 2015-06-07]
+	Updated misc/ruby-daemons to 1.2.2 [taca 2015-06-07]
