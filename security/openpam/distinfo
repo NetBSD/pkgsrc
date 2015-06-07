@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.9 2014/06/10 13:17:42 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/06/07 22:46:08 joerg Exp $
 
-SHA1 (openpam-20130907.tar.gz) = c6d33913c2e90b463ef8ecc04358a14e6467c11f
-RMD160 (openpam-20130907.tar.gz) = 501c36f07b78bece4a96b21acadef659a68634f1
-Size (openpam-20130907.tar.gz) = 459949 bytes
-SHA1 (patch-bin_openpam__dump__policy_openpam__dump__policy.c) = 8485ecba73ec4f1fe3c5133d9f00cc74788534af
-SHA1 (patch-lib_libpam_openpam__configure.c) = 0d2d6b3bcb4ab86b253fbe13c751e8c5c8607ee0
+SHA1 (openpam-20140912.tar.gz) = 45b335d2cb3a4edcc66046ae56d689113e59a67a
+RMD160 (openpam-20140912.tar.gz) = 547cb3cf81d5b4526ddf2a702b83d5303430f764
+Size (openpam-20140912.tar.gz) = 457600 bytes
 SHA1 (patch-lib_libpam_openpam__constants.c) = 7dd63e288408939a73057b3e4d90382983c1d559
-SHA1 (patch-lib_libpam_openpam__ctype.h) = 14866f4cfbdd5c6f67f97d4f3755a4e80782cce0
+SHA1 (patch-lib_libpam_openpam__readword.c) = 75875dc75f76c6caa267ce7c6c905e0ac2790ad1

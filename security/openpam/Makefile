@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2014/06/10 13:17:42 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/07 22:46:08 joerg Exp $
 
-DISTNAME=	openpam-20130907
+DISTNAME=	openpam-20140912
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 
