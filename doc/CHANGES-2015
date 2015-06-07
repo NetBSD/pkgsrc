@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2516 2015/06/07 08:13:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2517 2015/06/07 08:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated shells/bash to 4.3.039 [ryoon 2015-06-07]
 	Updated devel/p5-Moose to 2.1405 [wen 2015-06-07]
 	Updated security/p5-Net-SSLeay to 1.69 [wiz 2015-06-07]
+	Updated devel/p5-Term-ReadKey to 2.33 [wiz 2015-06-07]
