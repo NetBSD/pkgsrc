@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2015/04/06 15:27:34 he Exp $
+# $NetBSD: Makefile,v 1.217 2015/06/07 09:13:11 wiz Exp $
 
 .include "Makefile.common"
 
@@ -30,9 +30,6 @@ PKGCONFIG_OVERRIDE+=	wand/MagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	wand/Wand.pc.in
 
 GCC_REQD+=		2.95.3
-
-PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER:Q}
-PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER:Q}
 
 TEST_TARGET=		check
 
