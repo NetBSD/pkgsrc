@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.26 2014/01/24 12:42:52 obache Exp $
+# $NetBSD: print-plist.mk,v 1.27 2015/06/07 03:39:08 joerg Exp $
 
 ###
 ### Automatic PLIST generation
@@ -51,37 +51,6 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.scale/)
     (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*)) || \
     (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.cache-1/)
-.endif
-
-# Common (system) directories not to generate @dirrm statements for
-# Reads _MTREE_FILE and generate awk statements that will
-# sort out which directories NOT to include into the PLIST @dirrm list
-_COMMON_MTREE_FILE=	${PKGSRCDIR}/mk/plist/common-dirs.mtree
-
-.if make(print-PLIST)
-_PRINT_PLIST_COMMON_DIRS!=	${AWK} 'BEGIN {				\
-			i=0;						\
-			stack[i]="${PREFIX}" ;				\
-			cwd="";						\
-		}							\
-		! ( /^\// || /^\#/ || /^$$/ ) {				\
-			if ( $$1 == ".." ){				\
-				i=i-1;					\
-				cwd = stack[i];				\
-			} else if ( $$1 == "." ){			\
-			} else {					\
-				stack[i] = cwd ;			\
-				if ( i == 0 ){				\
-					cwd = $$1 ;			\
-				} else {				\
-					cwd = cwd "\\/" $$1 ;		\
-				}					\
-				print "/^" cwd "$$$$/ { next; }";	\
-				i=i+1 ;					\
-			}						\
-		}							\
-		END { print "{ print $$$$0; }"; }			\
-	' <${_COMMON_MTREE_FILE}
 .endif
 
 # scan $PREFIX for any files/dirs modified since the package was extracted
@@ -179,8 +148,7 @@ print-PLIST:
 				{ sub("^${PKGINFODIR}/", "info/"); }	\
 				{ sub("^${PKGMANDIR}/", "man/"); }	\
 				/^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}(\/|$$)/ { next; } \
-				/^${PKGINFODIR:S|/|\\/|g}$$/ { next; }	\
-				${_PRINT_PLIST_COMMON_DIRS}'` ;		\
+				/^${PKGINFODIR:S|/|\\/|g}$$/ { next; }'` ;	\
 	do								\
 		if [ `${LS} -la ${DESTDIR}${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
 			${ECHO} @pkgdir $$i | ${AWK} '			\
