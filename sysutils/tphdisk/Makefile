@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:27 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/07 12:33:50 gdt Exp $
 
 DISTNAME=		tphdisk
 PKGNAME=		tphdisk-20050112
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://samba.anu.edu.au/ftp/unpacked/junkcode/
 EXTRACT_SUFX=		.c
 
-MAINTAINER=		gdt@NetBSD.org
+MAINTAINER=		pkgsrc-users@netbsd.org
 HOMEPAGE=		http://samba.anu.edu.au/ftp/unpacked/junkcode/
 COMMENT=		Create hibernation partitions for Thinkpads
 
