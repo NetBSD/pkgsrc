@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/02 15:07:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/07 10:14:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -11,6 +12,9 @@ ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/cucumber.yml
+${GEM_LIBDIR}/doc/alternate-formatters.md
+${GEM_LIBDIR}/doc/commercial-services.md
+${GEM_LIBDIR}/doc/editor-integration.md
 ${GEM_LIBDIR}/features/config_autoload.feature
 ${GEM_LIBDIR}/features/config_command_name.feature
 ${GEM_LIBDIR}/features/config_coverage_dir.feature
@@ -55,7 +59,6 @@ ${GEM_LIBDIR}/lib/simplecov/formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/multi_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/simple_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/jruby_fix.rb
-${GEM_LIBDIR}/lib/simplecov/json.rb
 ${GEM_LIBDIR}/lib/simplecov/last_run.rb
 ${GEM_LIBDIR}/lib/simplecov/merge_helpers.rb
 ${GEM_LIBDIR}/lib/simplecov/no_defaults.rb
@@ -78,6 +81,7 @@ ${GEM_LIBDIR}/test/faked_project/lib/faked_project/framework_specific.rb
 ${GEM_LIBDIR}/test/faked_project/lib/faked_project/meta_magic.rb
 ${GEM_LIBDIR}/test/faked_project/lib/faked_project/some_class.rb
 ${GEM_LIBDIR}/test/faked_project/spec/faked_spec.rb
+${GEM_LIBDIR}/test/faked_project/spec/forking_spec.rb
 ${GEM_LIBDIR}/test/faked_project/spec/meta_magic_spec.rb
 ${GEM_LIBDIR}/test/faked_project/spec/some_class_spec.rb
 ${GEM_LIBDIR}/test/faked_project/spec/spec_helper.rb
