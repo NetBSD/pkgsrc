@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:14 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/07 03:43:27 joerg Exp $
 ${IKED}man/man8/iked.8
 ${KINKD}man/man8/kinkd.8
 man/man8/pskgen.8
@@ -38,25 +38,12 @@ share/examples/racoon2/hook/migration
 share/examples/racoon2/hook/ph1-up
 share/examples/racoon2/hook/ph1-down
 @dirrm share/doc/racoon2
-@exec ${MKDIR} %D/share/examples/racoon2/hook/child-up.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/child-down.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/child-rekey.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/ikesa-up.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/ikesa-down.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/ikesa-rekey.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/migration.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/ph1-up.d
-@exec ${MKDIR} %D/share/examples/racoon2/hook/ph1-down.d
-@dirrm share/examples/racoon2/hook/child-up.d
-@dirrm share/examples/racoon2/hook/child-down.d
-@dirrm share/examples/racoon2/hook/child-rekey.d
-@dirrm share/examples/racoon2/hook/ikesa-up.d
-@dirrm share/examples/racoon2/hook/ikesa-down.d
-@dirrm share/examples/racoon2/hook/ikesa-rekey.d
-@dirrm share/examples/racoon2/hook/migration.d
-@dirrm share/examples/racoon2/hook/ph1-up.d
-@dirrm share/examples/racoon2/hook/ph1-down.d
-@dirrm share/examples/racoon2/hook
-@dirrm share/examples/racoon2
+@pkgdir share/examples/racoon2/hook/child-down.d
+@pkgdir share/examples/racoon2/hook/child-rekey.d
+@pkgdir share/examples/racoon2/hook/ikesa-down.d
+@pkgdir share/examples/racoon2/hook/ikesa-rekey.d
+@pkgdir share/examples/racoon2/hook/migration.d
+@pkgdir share/examples/racoon2/hook/ph1-up.d
+@pkgdir share/examples/racoon2/hook/ph1-down.d
 @exec %D/sbin/pskgen -r -o ${PKG_SYSCONFDIR}/spmd.pwd
 @unexec ${RM} ${PKG_SYSCONFDIR}/spmd.pwd
