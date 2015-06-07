@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/02/08 12:14:32 obache Exp $
+# $NetBSD: options.mk,v 1.4 2015/06/07 14:16:01 youri Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cutter
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--disable-gtktest
 ### libsoup support
 ###
 .if !empty(PKG_OPTIONS:Mlibsoup)
-.  include "../../net/libsoup24/buildlink3.mk"
+.  include "../../net/libsoup/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libsoup
 PLIST.soup=		yes
 .else
