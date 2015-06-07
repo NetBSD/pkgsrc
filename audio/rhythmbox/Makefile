@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2015/04/25 14:20:23 tnn Exp $
+# $NetBSD: Makefile,v 1.126 2015/06/07 14:05:57 youri Exp $
 
 DISTNAME=	rhythmbox-0.12.8
 PKGREVISION=	42
@@ -37,7 +37,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2, py-gstreamer0.10
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/brasero/buildlink3.mk"

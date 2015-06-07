@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/04/06 08:17:15 adam Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/07 14:05:59 youri Exp $
 #
 
 DISTNAME=	grilo-0.2.7
@@ -23,5 +23,5 @@ PKGCONFIG_OVERRIDE+=	grilo-net-0.2.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
