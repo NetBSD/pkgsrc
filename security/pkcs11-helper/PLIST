@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/09/15 20:03:47 spz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/07 03:52:26 joerg Exp $
 include/pkcs11-helper-1.0/pkcs11.h
 include/pkcs11-helper-1.0/pkcs11h-certificate.h
 include/pkcs11-helper-1.0/pkcs11h-core.h
@@ -16,4 +16,3 @@ share/doc/pkcs11-helper/COPYING
 share/doc/pkcs11-helper/COPYING.BSD
 share/doc/pkcs11-helper/COPYING.GPL
 share/doc/pkcs11-helper/README
-@exec ${MKDIR} %D/share/doc/pkcs11-helper/api
