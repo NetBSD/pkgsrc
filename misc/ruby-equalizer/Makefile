@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 12:57:28 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/07 16:01:38 taca Exp $
 #
 
-DISTNAME=	equalizer-0.0.9
+DISTNAME=	equalizer-0.0.11
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
