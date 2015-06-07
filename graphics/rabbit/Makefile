@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2015/03/15 17:04:44 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.51 2015/06/07 10:31:48 taca Exp $
 #
 
 DISTNAME=	rabbit-2.1.6
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rabbit-shocker.org/
 COMMENT=	RD-document-based presentation application
 LICENSE=	gnu-gpl-v2 # or later
-
-RUBY_VERSION_SUPPORTED=	193 200 21
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=0.90.3:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg-[0-9]*:../../graphics/ruby-gnome2-rsvg
