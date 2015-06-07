@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2015/04/06 08:17:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2015/06/07 14:14:04 youri Exp $
 
 BUILDLINK_TREE+=	gupnp
 
@@ -18,7 +18,7 @@ pre-configure:
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../net/gssdp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif	# GUPNP_BUILDLINK3_MK

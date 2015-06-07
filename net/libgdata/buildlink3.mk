@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2015/04/06 08:17:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2015/06/07 14:14:04 youri Exp $
 
 BUILDLINK_TREE+=	libgdata
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libgdata?=	../../net/libgdata
 
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 
 .endif	# LIBGDATA_BUILDLINK3_MK
 
