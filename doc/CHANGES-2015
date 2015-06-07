@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2533 2015/06/07 10:44:20 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2534 2015/06/07 10:48:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-tins to 1.5.2 [taca 2015-06-07]
 	Updated graphics/ruby-RMagick to 2.15.2 [taca 2015-06-07]
 	Updated graphics/ruby-mini-magick to 4.2.7 [taca 2015-06-07]
+	Updated graphics/ruby-oily_png to 1.2.0 [taca 2015-06-07]
