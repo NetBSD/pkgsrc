@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/03/13 14:23:17 taca Exp $
+$NetBSD: distinfo,v 1.10 2015/06/07 13:51:56 taca Exp $
 
-SHA1 (coffee-script-source-1.9.1.gem) = dd5c35d98d64bf27d19f38baea120fe840c576c5
-RMD160 (coffee-script-source-1.9.1.gem) = 3aa1f30569213752f8746cdd081688c13de95b64
-Size (coffee-script-source-1.9.1.gem) = 44032 bytes
+SHA1 (coffee-script-source-1.9.1.1.gem) = cfcb8c39e35a23d5499b2af0f28c36624dfdb666
+RMD160 (coffee-script-source-1.9.1.1.gem) = 79c9d4acf798ebab5a4c3b43133243cee53d71d9
+Size (coffee-script-source-1.9.1.1.gem) = 58368 bytes
