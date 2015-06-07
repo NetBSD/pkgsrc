@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.24 2015/03/08 15:17:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2015/06/07 10:32:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.hound.yml
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.simplecov
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Doxyfile
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -13,6 +18,7 @@ ${GEM_LIBDIR}/README.textile
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/before_install_linux.sh
 ${GEM_LIBDIR}/before_install_osx.sh
+${GEM_LIBDIR}/deprecated/RMagick.rb
 ${GEM_LIBDIR}/doc/.cvsignore
 ${GEM_LIBDIR}/doc/comtasks.html
 ${GEM_LIBDIR}/doc/constants.html
@@ -342,7 +348,6 @@ ${GEM_LIBDIR}/ext/RMagick/rmmontage.c
 ${GEM_LIBDIR}/ext/RMagick/rmpixel.c
 ${GEM_LIBDIR}/ext/RMagick/rmstruct.c
 ${GEM_LIBDIR}/ext/RMagick/rmutil.c
-${GEM_LIBDIR}/lib/RMagick.rb
 ${GEM_LIBDIR}/lib/RMagick2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/rmagick.rb
 ${GEM_LIBDIR}/lib/rmagick/version.rb
@@ -362,7 +367,9 @@ ${GEM_LIBDIR}/lib/rvg/text.rb
 ${GEM_LIBDIR}/lib/rvg/transformable.rb
 ${GEM_LIBDIR}/lib/rvg/units.rb
 ${GEM_LIBDIR}/rmagick.gemspec
-${GEM_LIBDIR}/test/Draw.rb
+${GEM_LIBDIR}/spec/rmagick/ImageList1_spec.rb
+${GEM_LIBDIR}/spec/rmagick/draw_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/test/Image1.rb
 ${GEM_LIBDIR}/test/Image2.rb
 ${GEM_LIBDIR}/test/Image3.rb
