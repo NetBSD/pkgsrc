@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/04/25 14:20:20 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2015/06/07 14:05:57 youri Exp $
 #
 
 DISTNAME=		gmpc-11.8.16
@@ -27,7 +27,7 @@ BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.20.0
 .include "../../devel/gob2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"

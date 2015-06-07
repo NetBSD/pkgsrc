@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2015/04/25 14:25:01 tnn Exp $
+# $NetBSD: Makefile,v 1.158 2015/06/07 14:06:00 youri Exp $
 
 DISTNAME=	epiphany-2.30.6
 PKGREVISION=	41
@@ -43,7 +43,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2015/04/25 14:23:08 tnn Exp $
+# $NetBSD: Makefile,v 1.54 2015/06/07 14:05:58 youri Exp $
 
 DISTNAME=	darktable-1.2.3
 PKGREVISION=	10
@@ -78,7 +78,7 @@ BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/flickcurl/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 #.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
