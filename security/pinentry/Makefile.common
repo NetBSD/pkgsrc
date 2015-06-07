@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2015/05/28 06:41:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/06/07 08:46:48 wiz Exp $
 # -*- Makefile -*-
 # used by security/pinentry/Makefile
 # used by security/pinentry-gtk2/Makefile
 # used by security/pinentry-qt4/Makefile
 
-PINENTRY_VERSION=	0.9.2
+PINENTRY_VERSION=	0.9.4
 DISTNAME=		pinentry-${PINENTRY_VERSION}
 
 CATEGORIES=		security
