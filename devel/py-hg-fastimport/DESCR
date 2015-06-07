@@ -1,0 +1,10 @@
+The "fast import" format originates with Git, where it is used as
+the generic backend for converting other SCM repositories to git.
+It's generic enough that it can be used to feed a Mercurial repository
+as well, and that's what this extension does: read a "fast import"
+stream and turn it into changesets in a Mercurial repository. The
+potential of this extension is that any foreign SCM that can be
+converted to Git can also be converted to Mercurial, regardless of
+the capabilities of Mercurial's own ConvertExtension. The catch is
+that the conversion is a little cumbersome: first convert to a
+fast-import dump, then feed that dump to Mercurial.
