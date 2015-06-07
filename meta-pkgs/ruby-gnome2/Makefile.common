@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2015/05/17 06:45:23 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.46 2015/06/07 16:05:41 taca Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -37,7 +37,6 @@ LICENSE=		gnu-lgpl-v2.1
 VERSION=		2.2.5
 USE_RUBY_EXTCONF?=	yes
 CONFIGURE_ENV+=		RUBYOPT="-Ku"
-RUBY_VERSION_SUPPORTED=	193 200 21
 
 INSTALL_TARGET=		install
 
