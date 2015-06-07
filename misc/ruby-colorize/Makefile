@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/02/03 14:56:32 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/07 15:54:08 taca Exp $
 
-DISTNAME=	colorize-0.7.5
+DISTNAME=	colorize-0.7.7
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
