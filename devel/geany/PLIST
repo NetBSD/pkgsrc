@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/06/09 15:40:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/06/07 08:25:33 wiz Exp $
 bin/geany
 include/geany/build.h
 include/geany/document.h
@@ -8,6 +8,7 @@ include/geany/filetypes.h
 include/geany/geany.h
 include/geany/geanyfunctions.h
 include/geany/geanyplugin.h
+include/geany/gtkcompat.h
 include/geany/highlighting.h
 include/geany/keybindings.h
 include/geany/msgwindow.h
@@ -22,6 +23,7 @@ include/geany/search.h
 include/geany/stash.h
 include/geany/support.h
 include/geany/tagmanager/tm_file_entry.h
+include/geany/tagmanager/tm_parser.h
 include/geany/tagmanager/tm_project.h
 include/geany/tagmanager/tm_source_file.h
 include/geany/tagmanager/tm_symbol.h
@@ -77,9 +79,12 @@ share/geany/GPL-2
 share/geany/c99.tags
 share/geany/colorschemes/alt.conf
 share/geany/filetype_extensions.conf
+share/geany/filetypes.CUDA.conf
+share/geany/filetypes.Clojure.conf
 share/geany/filetypes.Cython.conf
 share/geany/filetypes.Genie.conf
 share/geany/filetypes.Go.conf
+share/geany/filetypes.Graphviz.conf
 share/geany/filetypes.Scala.conf
 share/geany/filetypes.abaqus
 share/geany/filetypes.abc
@@ -87,6 +92,7 @@ share/geany/filetypes.actionscript
 share/geany/filetypes.ada
 share/geany/filetypes.asciidoc
 share/geany/filetypes.asm
+share/geany/filetypes.batch
 share/geany/filetypes.c
 share/geany/filetypes.caml
 share/geany/filetypes.cmake
@@ -123,10 +129,12 @@ share/geany/filetypes.pascal
 share/geany/filetypes.perl
 share/geany/filetypes.php
 share/geany/filetypes.po
+share/geany/filetypes.powershell
 share/geany/filetypes.python
 share/geany/filetypes.r
 share/geany/filetypes.restructuredtext
 share/geany/filetypes.ruby
+share/geany/filetypes.rust
 share/geany/filetypes.sh
 share/geany/filetypes.sql
 share/geany/filetypes.tcl
@@ -136,6 +144,7 @@ share/geany/filetypes.verilog
 share/geany/filetypes.vhdl
 share/geany/filetypes.xml
 share/geany/filetypes.yaml
+share/geany/geany.css
 share/geany/geany.glade
 share/geany/geany.gtkrc
 share/geany/html_entities.tags
@@ -156,6 +165,7 @@ share/geany/templates/files/main.d
 share/geany/templates/files/main.java
 share/geany/templates/files/main.py
 share/geany/templates/files/main.vala
+share/geany/templates/files/module.erl
 share/geany/templates/files/program.pas
 share/geany/templates/function
 share/geany/templates/gpl
