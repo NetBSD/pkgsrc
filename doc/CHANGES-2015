@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2534 2015/06/07 10:48:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2535 2015/06/07 11:32:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4773,3 +4773,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ruby-RMagick to 2.15.2 [taca 2015-06-07]
 	Updated graphics/ruby-mini-magick to 4.2.7 [taca 2015-06-07]
 	Updated graphics/ruby-oily_png to 1.2.0 [taca 2015-06-07]
+	Updated databases/guile-pg to 0.47 [gdt 2015-06-07]
