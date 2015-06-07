@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2549 2015/06/07 22:44:04 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.2550 2015/06/07 22:46:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4787,6 +4787,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/MesaLib to 10.5.7 [tnn 2015-06-07]
 	Updated misc/ruby-daemons to 1.2.2 [taca 2015-06-07]
 	Updated misc/ruby-equalizer to 0.0.11 [taca 2015-06-07]
+<<<<<<< CHANGES-2015
+	Updated security/openpam to 20140912 [joerg 2015-06-07]
+=======
 	Updated databases/postgresql93 to 9.3.8 [joerg 2015-06-07]
 	Updated databases/postgresql93-adminpack to 9.3.8 [joerg 2015-06-07]
 	Updated databases/postgresql93-client to 9.3.8 [joerg 2015-06-07]
@@ -4802,3 +4805,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql93-replicationtools to 9.3.8 [joerg 2015-06-07]
 	Updated databases/postgresql93-server to 9.3.8 [joerg 2015-06-07]
 	Updated databases/postgresql93-upgrade to 9.3.8 [joerg 2015-06-07]
+>>>>>>> 1.2549
+	Updated security/openpam to 20140912 [joerg 2015-06-07]
