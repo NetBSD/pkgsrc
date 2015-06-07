@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2104 2015/06/03 22:12:34 pettai Exp $
+# $NetBSD: Makefile,v 1.2105 2015/06/07 08:22:41 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1614,6 +1614,7 @@ SUBDIR+=	py-enum34
 SUBDIR+=	py-expect
 SUBDIR+=	py-extras
 SUBDIR+=	py-fann2
+SUBDIR+=	py-fastimport
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-flake8
 SUBDIR+=	py-flakes
@@ -1628,6 +1629,7 @@ SUBDIR+=	py-gobject3
 SUBDIR+=	py-gobject3-common
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
+SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hglist
 SUBDIR+=	py-hgnested
 SUBDIR+=	py-hgtools
