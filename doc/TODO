@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14447 2015/06/07 08:46:57 wiz Exp $
+$NetBSD: TODO,v 1.14448 2015/06/07 08:49:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -927,7 +927,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.14
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
-	o py-cryptography-0.9.1
 	o py-datapkg-0.9
 	o py-django-1.8 [incompatible with django-cms, please hold]
 	o py-django-cms-3.1
