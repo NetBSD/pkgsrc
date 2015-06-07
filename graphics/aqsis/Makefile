@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2015/04/25 14:23:07 tnn Exp $
+# $NetBSD: Makefile,v 1.64 2015/06/07 13:58:08 wiedi Exp $
 #
 
 DISTNAME=		aqsis-1.8.1
@@ -15,7 +15,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config flex bison
 
-LIBS.SunOS=		-lsocket -lnsl
+LDFLAGS.SunOS=		-lsocket -lnsl
 
 #
 # Insists on being built in a separate directory.
