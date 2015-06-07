@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.21 2015/03/02 16:40:54 sevan Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.22 2015/06/07 03:34:54 joerg Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -37,15 +37,6 @@
   <sect1 id="print-PLIST">
     <title>Tweaking output of <command>make print-PLIST</command></title>
 
-    <para>If you have used any of the *-dirs packages, as explained in
-    <xref linkend="faq.common-dirs"/>, you may have noticed that
-    <command>make print-PLIST</command> outputs a set of
-    <varname>@comment</varname>s instead of real
-    <varname>@dirrm</varname> lines.  You can also do this for
-    specific directories and files, so that the results of that
-    command are very close to reality. This helps <emphasis>a
-    lot</emphasis> during the update of packages.</para>
-
     <para>The <varname>PRINT_PLIST_AWK</varname> variable takes a set
     of AWK patterns and actions that are used to filter the output of
     print-PLIST.  You can <emphasis>append</emphasis> any chunk of AWK
@@ -58,16 +49,7 @@
     <programlisting>
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
     </programlisting>
-
-    <para>And to get all the <varname>@dirrm</varname> lines referring
-    to a specific (shared) directory converted to
-    <varname>@comment</varname>s:</para>
-
-    <programlisting>
-PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
-    </programlisting>
   </sect1>
-
 
   <sect1 id="plist.misc">
     <title>Variable substitution in PLIST</title>
@@ -177,10 +159,7 @@ man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
-${PLIST.foo}@dirrm share/bar
     </programlisting>
-
-
 
   </sect1>
 
