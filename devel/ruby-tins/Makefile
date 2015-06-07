@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/03/13 14:07:04 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/07 10:28:54 taca Exp $
 
-DISTNAME=	tins-1.3.5
+DISTNAME=	tins-1.5.2
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://flori.github.com/tins/
+HOMEPAGE=	https://github.com/flori/tins
 COMMENT=	Not good/big enough for a real library
 LICENSE=	mit
 
