@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2015/04/25 14:24:50 tnn Exp $
+# $NetBSD: Makefile,v 1.129 2015/06/07 14:05:59 youri Exp $
 
 DISTNAME=	seahorse-2.32.0
 PKGREVISION=	34
@@ -46,7 +46,7 @@ GCONF_SCHEMAS= 	seahorse.schemas
 .include "../../devel/GConf/schemas.mk"
 #.include "../../devel/libglade/buildlink3.mk"
 #.include "../../net/avahi/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 .include "../../security/gpgme/buildlink3.mk"
