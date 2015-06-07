@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2529 2015/06/07 10:14:40 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2530 2015/06/07 10:15:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4768,3 +4768,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ImageMagick to 6.9.1.4 [wiz 2015-06-07]
 	Updated devel/ruby-simplecov-html to 0.10.0 [taca 2015-06-07]
 	Updated devel/ruby-simplecov to 0.10.0 [taca 2015-06-07]
+	Updated devel/ruby-test-unit to 3.1.1 [taca 2015-06-07]
