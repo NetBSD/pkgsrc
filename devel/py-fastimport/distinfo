@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/07 08:19:04 wiz Exp $
+
+SHA1 (python-fastimport/fastimport-0.9.4.tar.gz) = a34c8a82db0a7b3d839bb8a4da7cf72c23bf0202
+RMD160 (python-fastimport/fastimport-0.9.4.tar.gz) = c2f85cfe5bc1f5b28f83669a30a3336d4b659712
+Size (python-fastimport/fastimport-0.9.4.tar.gz) = 32481 bytes
