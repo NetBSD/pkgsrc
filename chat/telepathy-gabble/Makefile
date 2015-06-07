@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/04/06 08:17:22 adam Exp $
+# $NetBSD: Makefile,v 1.43 2015/06/07 14:05:57 youri Exp $
 
 DISTNAME=	telepathy-gabble-0.11.10
 PKGREVISION=	21
@@ -43,7 +43,7 @@ BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.37
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.21.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../net/libnice/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.78
 .include "../../sysutils/dbus-glib/buildlink3.mk"

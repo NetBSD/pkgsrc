@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2015/04/25 14:25:02 tnn Exp $
+# $NetBSD: Makefile,v 1.81 2015/06/07 14:06:00 youri Exp $
 
 DISTNAME=	midori_0.5.9_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
@@ -50,7 +50,7 @@ pre-configure:
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 #.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

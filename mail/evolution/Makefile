@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2015/04/25 14:23:28 tnn Exp $
+# $NetBSD: Makefile,v 1.213 2015/06/07 14:05:58 youri Exp $
 
 DISTNAME=		evolution-2.32.3
 PKGREVISION=		35
@@ -77,7 +77,7 @@ BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.30.2.1
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.3
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2015/04/06 08:17:15 adam Exp $
+# $NetBSD: Makefile,v 1.54 2015/06/07 14:05:58 youri Exp $
 
 DISTNAME=	totem-pl-parser-3.4.5
 PKGREVISION=	1
@@ -24,5 +24,5 @@ PKGCONFIG_OVERRIDE+=	totem-plparser.pc.in
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

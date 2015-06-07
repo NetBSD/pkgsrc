@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2015/04/25 14:25:01 tnn Exp $
+# $NetBSD: Makefile,v 1.71 2015/06/07 14:06:00 youri Exp $
 #
 # PKGNAME derives from the supported API (still from
 # release 3.14). See also PLIST.
@@ -30,7 +30,7 @@ PKGCONFIG_OVERRIDE+=	gtkhtml/libgtkhtml.pc.in
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
