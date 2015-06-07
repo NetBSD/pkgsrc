@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2015/03/13 14:17:13 taca Exp $
+# $NetBSD: Makefile,v 1.15 2015/06/07 10:43:50 taca Exp $
 
-DISTNAME=	mini_magick-4.1.0
+DISTNAME=	mini_magick-4.2.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/probablycorey/mini_magick
+HOMEPAGE=	https://github.com/minimagick/minimagick
 COMMENT=	Ruby wrapper for ImageMagick command line
 LICENSE=	mit
 
