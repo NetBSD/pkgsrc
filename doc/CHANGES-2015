@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2512 2015/06/07 04:16:38 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2513 2015/06/07 04:18:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/xnp2 to 0.84 [tsutsui 2015-06-06]
 	Updated net/gupnp to 0.20.13nb3 [wiz 2015-06-06]
 	Updated devel/ruby-gettext_i18n_rails to 1.2.3 [taca 2015-06-07]
+	Updated devel/ruby-rspec-rails to 3.2.3 [taca 2015-06-07]
