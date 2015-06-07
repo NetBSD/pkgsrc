@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2522 2015/06/07 08:41:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2523 2015/06/07 08:41:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4760,3 +4760,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-hg-fastimport version 20150518 [wiz 2015-06-07]
 	Updated devel/geany to 1.24.1 [wiz 2015-06-07]
 	Updated math/coinmp to 1.8.2 [wiz 2015-06-07]
+	Updated audio/mpc to 0.27 [wiz 2015-06-07]
