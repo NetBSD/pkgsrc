@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2525 2015/06/07 08:49:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2526 2015/06/07 08:52:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4763,3 +4763,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/mpc to 0.27 [wiz 2015-06-07]
 	Updated security/pinentry to 0.9.4 [wiz 2015-06-07]
 	Updated security/py-cryptography to 0.9.1 [wiz 2015-06-07]
+	Updated devel/py-tortoisehg to 3.4.1 [wiz 2015-06-07]
