@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2526 2015/06/07 08:52:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2527 2015/06/07 08:54:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4764,3 +4764,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/pinentry to 0.9.4 [wiz 2015-06-07]
 	Updated security/py-cryptography to 0.9.1 [wiz 2015-06-07]
 	Updated devel/py-tortoisehg to 3.4.1 [wiz 2015-06-07]
+	Updated devel/py-virtualenv to 13.0.3 [wiz 2015-06-07]
