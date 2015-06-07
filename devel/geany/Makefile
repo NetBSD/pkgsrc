@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2015/04/25 14:20:34 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2015/06/07 08:25:33 wiz Exp $
 
-DISTNAME=	geany-1.23.1
-PKGREVISION=	5
+DISTNAME=	geany-1.24.1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.geany.org/
 
