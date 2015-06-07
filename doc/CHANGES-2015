@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2543 2015/06/07 15:50:29 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2544 2015/06/07 15:53:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/libsoup version 2.50.0 [youri 2015-06-07]
 	Removed net/libsoup24 [youri 2015-06-07]
 	Updated mail/ruby-mime-types to 2.6.1 [taca 2015-06-07]
+	Updated misc/ruby-bundler to 1.10.3 [taca 2015-06-07]
