@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/02/07 17:11:23 he Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/07 14:05:08 wiedi Exp $
 
 DISTNAME=	iperf-3.0.11
 PKGNAME=	${DISTNAME:S/iperf/iperf3/}
@@ -14,5 +14,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
