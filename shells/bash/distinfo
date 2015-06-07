@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2015/03/07 22:40:48 rodent Exp $
+$NetBSD: distinfo,v 1.41 2015/06/07 05:49:28 ryoon Exp $
 
 SHA1 (bash-4.3.tar.gz) = 45ac3c5727e7262334f4dfadecdf601b39434e84
 RMD160 (bash-4.3.tar.gz) = cd21a9f51ea7780994d4e2c9c7d16d5eb000f845
@@ -93,6 +93,33 @@ Size (bash43-029) = 1824 bytes
 SHA1 (bash43-030) = ad1e978c051ef58584343ad24f165e614ed2a184
 RMD160 (bash43-030) = 9634eb9f937b10507fb5b750633b0d7ea17c3456
 Size (bash43-030) = 63206 bytes
+SHA1 (bash43-031) = 71cb6f10910f04fa501d705a947c4439b5e711ac
+RMD160 (bash43-031) = 0d88d3afb4d572f691d04f4644382bd291166544
+Size (bash43-031) = 3689 bytes
+SHA1 (bash43-032) = dc7129036a5a472b370b376cef272eff1ff3befb
+RMD160 (bash43-032) = b60f0cb5fd1a5aadce44b93c798b7b90de4d683b
+Size (bash43-032) = 1734 bytes
+SHA1 (bash43-033) = 4f3b7de83e7bec1a9ab6f18abb1c45a56d245e92
+RMD160 (bash43-033) = 1b7121ccfdaabf75ec6485891edd16303f5bc6e1
+Size (bash43-033) = 7038 bytes
+SHA1 (bash43-034) = ad36fc7a1c903319c1ee39709e30e11c810ba959
+RMD160 (bash43-034) = 0bcc09b7fb9b9004ee7338f6c59626c74c13b173
+Size (bash43-034) = 2392 bytes
+SHA1 (bash43-035) = 0a5e4c2a855e106e17f8a86e4fc5c0ded956e630
+RMD160 (bash43-035) = 4d5abcddd7632e3cfc5f11ae2fea24fa889172d4
+Size (bash43-035) = 1800 bytes
+SHA1 (bash43-036) = e9536d5f736ea23af0fc0618ddc2439fa6d4b9a0
+RMD160 (bash43-036) = c0e34740dfe90b8e250456fed50e71803cbaccfc
+Size (bash43-036) = 1539 bytes
+SHA1 (bash43-037) = 36e988e7770b280a0ca855a9b538002860976d29
+RMD160 (bash43-037) = 03863b336ded242944c653ef56d429580345dcf6
+Size (bash43-037) = 1284 bytes
+SHA1 (bash43-038) = 08055d5872c5e59e91a58f2924896fcfcc921602
+RMD160 (bash43-038) = 78c174ed1361332f8f4891a55a89cfc7fb732961
+Size (bash43-038) = 2354 bytes
+SHA1 (bash43-039) = 45ac5c1cb035a74c6ff871a506437f1607c38e94
+RMD160 (bash43-039) = 50a2c9c3271242ab8d38b4e7b258c4ad631026d8
+Size (bash43-039) = 1531 bytes
 SHA1 (patch-af) = 31cb0d8af1e9e83bf1cc9094475c710792ca2a1c
 SHA1 (patch-ag) = 61573c7b068b1e9df886655efb3d89c89643f25e
 SHA1 (patch-aj) = 2e4c15afd9b50d44967ee8e1f85bdc908c0eeeb0

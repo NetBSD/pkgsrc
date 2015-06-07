@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2015/03/08 01:38:35 tnn Exp $
+# $NetBSD: Makefile,v 1.75 2015/06/07 05:49:28 ryoon Exp $
 
 BASH_VERSION=		4.3
-BASH_PATCHLEVEL=	030
+BASH_PATCHLEVEL=	039
 
 DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
@@ -16,6 +16,8 @@ PATCHFILES+=	bash43-011 bash43-012 bash43-013 bash43-014 bash43-015
 PATCHFILES+=	bash43-016 bash43-017 bash43-018 bash43-019 bash43-020
 PATCHFILES+=	bash43-021 bash43-022 bash43-023 bash43-024 bash43-025
 PATCHFILES+=	bash43-026 bash43-027 bash43-028 bash43-029 bash43-030
+PATCHFILES+=	bash43-031 bash43-032 bash43-033 bash43-034 bash43-035
+PATCHFILES+=	bash43-036 bash43-037 bash43-038 bash43-039
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
