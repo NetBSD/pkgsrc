@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/04 20:17:42 youri Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/07 14:25:40 wiedi Exp $
 
 DISTNAME=	ii-1.7
 CATEGORIES=	chat
@@ -15,5 +15,8 @@ SUBST_MESSAGE.makefile=	Fixing config.mk
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_SED.makefile+=	-e 's,^LDFLAGS,\#LDFLAGS,g'
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
