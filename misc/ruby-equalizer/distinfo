@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/17 12:57:28 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/06/07 16:01:38 taca Exp $
 
-SHA1 (equalizer-0.0.9.gem) = 62527beb20838fe7663188d3c0bfa969b5633b00
-RMD160 (equalizer-0.0.9.gem) = c805a833e11bebe38fb7e8ab3ddb8ed16a03c2af
-Size (equalizer-0.0.9.gem) = 12288 bytes
+SHA1 (equalizer-0.0.11.gem) = 22681dc061cf28b0e88b7fad63eee8fa87d86bd7
+RMD160 (equalizer-0.0.11.gem) = 9d590554b04eb0ffb26eab0dcd0674acf2ad1e3b
+Size (equalizer-0.0.11.gem) = 12800 bytes
