@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.95 2015/05/16 16:39:52 tnn Exp $
+$NetBSD: distinfo,v 1.96 2015/06/07 15:48:12 tnn Exp $
 
-SHA1 (mesa-10.5.5.tar.xz) = 367f78c244a34eeb5e8fc4531228166ea1118165
-RMD160 (mesa-10.5.5.tar.xz) = 3d73894defb5badf8bde0d026c7802f55aa24484
-Size (mesa-10.5.5.tar.xz) = 6989964 bytes
+SHA1 (mesa-10.5.7.tar.xz) = b600f09ccaeab9f6bb5b98091cf01732bab854a2
+RMD160 (mesa-10.5.7.tar.xz) = 0e15cf97678ecdc95996b598169130dcfd239533
+Size (mesa-10.5.7.tar.xz) = 6992848 bytes
 SHA1 (patch-configure) = 3fc150370e36fc49382b491d907608f00cf99a72
 SHA1 (patch-include_EGL_eglplatform.h) = c34bac7386fd93ee8d0b83a748ae14dc4742d776
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
@@ -26,9 +26,9 @@ SHA1 (patch-src_mapi_entry__x86__tsd.h) = 62501b6e609fa81e33fd826a694e9d9752a7ba
 SHA1 (patch-src_mesa_drivers_dri_Makefile.in) = b016b3f9324b05e4206e1c23150bd1cde9b9e100
 SHA1 (patch-src_mesa_drivers_dri_common_Makefile.in) = 5e160f7d92c2e9f3fa36e52a082a496af67e634e
 SHA1 (patch-src_mesa_drivers_dri_common_xmlconfig.c) = 8c8e748397bcdc9b9abbd14604af5d79de08dfbf
-SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = 616cec356fb098e9fd349489a577aeacf6f412e4
-SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 632d9a95e514d0b63fb54f31827c0aacc28ace94
-SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = abca30898144b7014cdddcc7c7e808087704b596
+SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = fd8436e4e3a69250256c2cddf8138effb16bd7b3
+SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 7c1a1e5c549f64d4c390e0c87984c44a88d4abfe
+SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = b8a6cca517e1cccbdb2c59cf67a6d2481cdfebd4
 SHA1 (patch-src_mesa_main_compiler.h) = fc0e2b6be8afa9e21ddca1d1a14608a1687bddd8
 SHA1 (patch-src_mesa_main_context.c) = 30c3796865372aa16297c2aaa647ddb49958fa64
 SHA1 (patch-src_mesa_main_shader__query.cpp) = 6273c74161f045363c58f38adeb672287f6a0898

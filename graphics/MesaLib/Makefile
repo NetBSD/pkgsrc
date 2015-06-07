@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.103 2015/05/15 14:27:42 nros Exp $
+# $NetBSD: Makefile,v 1.104 2015/06/07 15:48:12 tnn Exp $
 
-DISTNAME=	mesa-10.5.5
+DISTNAME=	mesa-10.5.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/10.5.5/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
