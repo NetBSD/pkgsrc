@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.55 2015/04/25 14:23:41 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.56 2015/06/07 14:14:04 youri Exp $
 
 BUILDLINK_TREE+=	swfdec
 
@@ -22,7 +22,7 @@ pkgbase := swfdec
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .endif # SWFDEC_BUILDLINK3_MK
 
