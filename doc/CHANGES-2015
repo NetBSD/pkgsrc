@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2514 2015/06/07 05:52:45 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2515 2015/06/07 05:58:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-gettext_i18n_rails to 1.2.3 [taca 2015-06-07]
 	Updated devel/ruby-rspec-rails to 3.2.3 [taca 2015-06-07]
 	Updated shells/bash to 4.3.039 [ryoon 2015-06-07]
+	Updated devel/p5-Moose to 2.1405 [wen 2015-06-07]
