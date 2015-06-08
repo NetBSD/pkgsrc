@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.8 2008/10/06 12:36:20 joerg Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.9 2015/06/08 00:44:46 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -25,7 +25,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.8 2008/10/06 12:36:20 joerg Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.9 2015/06/08 00:44:46 joerg Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -53,15 +53,7 @@ __weak_alias(RMD160Final,_RMD160Final)
 #endif
 #endif
 
-#if defined(HAVE_MEMSET)
 #define ZEROIZE(d, l)		memset((d), 0, (l)) 
-#else 
-# if defined(HAVE_BZERO)
-#define ZEROIZE(d, l)		bzero((d), (l))
-# else
-#error You need either memset or bzero 
-# endif 
-#endif
 
 /********************************************************************/
 
