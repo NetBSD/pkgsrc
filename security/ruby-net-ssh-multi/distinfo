@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/03 14:52:56 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/06/08 16:25:36 taca Exp $
 
-SHA1 (net-ssh-multi-1.2.0.gem) = 20e8930e56a55c36aa798751c2eb6a8dc8335fdc
-RMD160 (net-ssh-multi-1.2.0.gem) = 3956a963c1e27e5df01045d3079452fdce48d932
-Size (net-ssh-multi-1.2.0.gem) = 32768 bytes
+SHA1 (net-ssh-multi-1.2.1.gem) = bffe0c41e3b62f71a84745409ca5f5869f33cd7d
+RMD160 (net-ssh-multi-1.2.1.gem) = 78f780aa34695f3ad6601f6e99a9b6228be70735
+Size (net-ssh-multi-1.2.1.gem) = 32768 bytes
