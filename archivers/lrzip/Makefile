@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/01/09 15:34:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/08 14:58:09 wiedi Exp $
 
-DISTNAME=	lrzip-0.616
-PKGREVISION=	1
+DISTNAME=	lrzip-0.621
 CATEGORIES=	archivers
 MASTER_SITES=	http://ck.kolivas.org/apps/lrzip/
 EXTRACT_SUFX=	.tar.bz2

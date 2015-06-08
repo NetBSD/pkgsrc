@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/21 11:29:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/08 14:58:09 wiedi Exp $
 bin/lrunzip
 bin/lrzcat
 bin/lrzip
@@ -17,11 +17,11 @@ share/doc/lrzip/AUTHORS
 share/doc/lrzip/BUGS
 share/doc/lrzip/COPYING
 share/doc/lrzip/ChangeLog
-share/doc/lrzip/README
 share/doc/lrzip/README-NOT-BACKWARD-COMPATIBLE
 share/doc/lrzip/README.Assembler
 share/doc/lrzip/README.benchmarks
 share/doc/lrzip/README.lzo_compresses.test.txt
+share/doc/lrzip/README.md
 share/doc/lrzip/TODO
 share/doc/lrzip/WHATS-NEW
 share/doc/lrzip/lrzip.conf.example

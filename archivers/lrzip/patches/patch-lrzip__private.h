@@ -1,8 +1,8 @@
-$NetBSD: patch-lrzip__private.h,v 1.1 2013/11/08 21:14:02 joerg Exp $
+$NetBSD: patch-lrzip__private.h,v 1.2 2015/06/08 14:58:09 wiedi Exp $
 
---- lrzip_private.h.orig	2013-11-08 20:52:44.000000000 +0000
+--- lrzip_private.h.orig	2015-03-10 09:25:42.000000000 +0000
 +++ lrzip_private.h
-@@ -139,7 +139,7 @@ extern int errno;
+@@ -140,7 +140,7 @@ extern int errno;
  #define unlikely(x)	__builtin_expect(!!(x), 0)
  #define __maybe_unused	__attribute__((unused))
  
