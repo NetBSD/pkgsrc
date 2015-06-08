@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/13 15:22:51 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/08 16:01:41 taca Exp $
 
 DISTNAME=	pdf-core-0.5.1
 CATEGORIES=	print
@@ -8,7 +8,7 @@ HOMEPAGE=	http://prawnpdf.org/
 COMMENT=	PDF::Core is used by Prawn to render PDF documents
 LICENSE=	mit
 
-RUBY_VERSION_SUPPORTED= 200 193 21
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
