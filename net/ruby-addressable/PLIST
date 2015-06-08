@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2013/09/13 05:56:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/06/08 15:02:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/addressable.gemspec
 ${GEM_LIBDIR}/data/unicode.data
 ${GEM_LIBDIR}/lib/addressable/idna.rb
 ${GEM_LIBDIR}/lib/addressable/idna/native.rb
@@ -22,7 +23,6 @@ ${GEM_LIBDIR}/tasks/gem.rake
 ${GEM_LIBDIR}/tasks/git.rake
 ${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/rspec.rake
-${GEM_LIBDIR}/tasks/rubyforge.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/website/index.html
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
