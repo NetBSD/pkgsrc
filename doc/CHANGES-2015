@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2560 2015/06/08 14:53:24 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2561 2015/06/08 14:59:00 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4871,3 +4871,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-sprockets to 3.2.0 [taca 2015-06-08]
 	Updated net/libnice to 0.1.10nb2 [wiz 2015-06-08]
 	Updated misc/ruby-systemu to 2.6.5 [taca 2015-06-08]
+	Updated archivers/lrzip to 0.621 [wiedi 2015-06-08]
