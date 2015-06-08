@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.158 2015/05/26 12:34:42 ryoon Exp $
+$NetBSD: distinfo,v 1.159 2015/06/08 13:40:58 joerg Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -91,7 +91,9 @@ SHA1 (patch-mozilla_ipc_glue_StringUtil.cpp) = f2bfc2a877554d64ab886d0159c9bdb4e
 SHA1 (patch-mozilla_ipc_ipdl_ipdl_cxx_ast.py) = d2ffbde2fb0744ab7acc279dcc9dfc430fb58dfc
 SHA1 (patch-mozilla_ipc_ipdl_ipdl_cxx_cgen.py) = 8c63e06ed257d059e9ff4da0b00e752bd694347e
 SHA1 (patch-mozilla_ipc_ipdl_ipdl_lower.py) = c3e0f719900b515554218b6312055f34ccbf9feb
+SHA1 (patch-mozilla_js_src_builtin_TypedObject.cpp) = 6ed299b2799aaf3bf789763657a8e54e9299b778
 SHA1 (patch-mozilla_js_src_ctypes_CTypes.h) = 852b14dc17cc29bdbf0b2cc407ba5780dd568d3a
+SHA1 (patch-mozilla_js_src_frontend_BytecodeCompiler.cpp) = 876d1438194becc19a01341af901b709c8892ed6
 SHA1 (patch-mozilla_js_src_frontend_ParseMaps.cpp) = d7f45bde1f819786c45225600697f14769bed946
 SHA1 (patch-mozilla_js_src_gc_Memory.cpp) = b09074af9f08c142ba83a634a9c93672c1d9252d
 SHA1 (patch-mozilla_js_src_jsmath.cpp) = b02ecb4a64c6b486645ffdf0446430db9e2dcd71
