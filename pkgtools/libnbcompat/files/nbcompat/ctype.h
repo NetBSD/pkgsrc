@@ -1,4 +1,4 @@
-/*	$NetBSD: ctype.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: ctype.h,v 1.3 2015/06/08 00:44:46 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -40,7 +40,7 @@
  * Declare macros and functions that may be missing in <ctype.h>.
  */
 
-#if !HAVE_ISBLANK
+#if !HAVE_DECL_ISBLANK
 int	isblank(int);
 #endif
 

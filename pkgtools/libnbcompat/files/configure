@@ -5533,73 +5533,6 @@ _ACEOF
 
 
 # Checks for library functions.
-for ac_header in stdlib.h
-do :
-  ac_fn_c_check_header_mongrel "$LINENO" "stdlib.h" "ac_cv_header_stdlib_h" "$ac_includes_default"
-if test "x$ac_cv_header_stdlib_h" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_STDLIB_H 1
-_ACEOF
-
-fi
-
-done
-
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GNU libc compatible malloc" >&5
-$as_echo_n "checking for GNU libc compatible malloc... " >&6; }
-if ${ac_cv_func_malloc_0_nonnull+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-  if test "$cross_compiling" = yes; then :
-  ac_cv_func_malloc_0_nonnull=no
-else
-  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-#if defined STDC_HEADERS || defined HAVE_STDLIB_H
-# include <stdlib.h>
-#else
-char *malloc ();
-#endif
-
-int
-main ()
-{
-return ! malloc (0);
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_run "$LINENO"; then :
-  ac_cv_func_malloc_0_nonnull=yes
-else
-  ac_cv_func_malloc_0_nonnull=no
-fi
-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
-  conftest.$ac_objext conftest.beam conftest.$ac_ext
-fi
-
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_func_malloc_0_nonnull" >&5
-$as_echo "$ac_cv_func_malloc_0_nonnull" >&6; }
-if test $ac_cv_func_malloc_0_nonnull = yes; then :
-
-$as_echo "#define HAVE_MALLOC 1" >>confdefs.h
-
-else
-  $as_echo "#define HAVE_MALLOC 0" >>confdefs.h
-
-   case " $LIBOBJS " in
-  *" malloc.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS malloc.$ac_objext"
- ;;
-esac
-
-
-$as_echo "#define malloc rpl_malloc" >>confdefs.h
-
-fi
-
-
 ac_fn_c_check_decl "$LINENO" "strerror_r" "ac_cv_have_decl_strerror_r" "$ac_includes_default"
 if test "x$ac_cv_have_decl_strerror_r" = xyes; then :
   ac_have_decl=1
@@ -5916,29 +5849,11 @@ $as_echo "#define HAVE_WORKING_FORK 1" >>confdefs.h
 
 fi
 
-for ac_func in vprintf
-do :
-  ac_fn_c_check_func "$LINENO" "vprintf" "ac_cv_func_vprintf"
-if test "x$ac_cv_func_vprintf" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_VPRINTF 1
-_ACEOF
 
-ac_fn_c_check_func "$LINENO" "_doprnt" "ac_cv_func__doprnt"
-if test "x$ac_cv_func__doprnt" = xyes; then :
-
-$as_echo "#define HAVE_DOPRNT 1" >>confdefs.h
-
-fi
-
-fi
-done
-
-
-
-ac_fn_c_check_decl "$LINENO" "snprintf" "ac_cv_have_decl_snprintf" "#include <stdio.h>
+as_ac_Symbol=`$as_echo "ac_cv_have_decl_snprintf(char *, size_t, const char *, ...)" | $as_tr_sh`
+ac_fn_c_check_decl "$LINENO" "snprintf(char *, size_t, const char *, ...)" "$as_ac_Symbol" "#include <stdio.h>
 "
-if test "x$ac_cv_have_decl_snprintf" = xyes; then :
+if eval test \"x\$"$as_ac_Symbol"\" = x"yes"; then :
   ac_have_decl=1
 else
   ac_have_decl=0
@@ -5947,29 +5862,31 @@ fi
 cat >>confdefs.h <<_ACEOF
 #define HAVE_DECL_SNPRINTF $ac_have_decl
 _ACEOF
-ac_fn_c_check_decl "$LINENO" "vasprintf" "ac_cv_have_decl_vasprintf" "#include <stdio.h>
+if test $ac_have_decl = 1; then :
+
+else
+  case " $LIBOBJS " in
+  *" snprintf.$ac_objext "* ) ;;
+  *) LIBOBJS="$LIBOBJS snprintf.$ac_objext"
+ ;;
+esac
+
+fi
+
+as_ac_Symbol=`$as_echo "ac_cv_have_decl_asprintf(char **, const char *, ...)" | $as_tr_sh`
+ac_fn_c_check_decl "$LINENO" "asprintf(char **, const char *, ...)" "$as_ac_Symbol" "#define _GNU_SOURCE
+             #include <stdio.h>
 "
-if test "x$ac_cv_have_decl_vasprintf" = xyes; then :
+if eval test \"x\$"$as_ac_Symbol"\" = x"yes"; then :
   ac_have_decl=1
 else
   ac_have_decl=0
 fi
 
 cat >>confdefs.h <<_ACEOF
-#define HAVE_DECL_VASPRINTF $ac_have_decl
+#define HAVE_DECL_ASPRINTF $ac_have_decl
 _ACEOF
-
-
-case $host_os in
-darwin*)
-	# NetBSD PR 38488: warnx(3) escapes certain characters like \n
-	ac_cv_func_warn=no
-	;;
-esac
-
-ac_fn_c_check_func "$LINENO" "asprintf" "ac_cv_func_asprintf"
-if test "x$ac_cv_func_asprintf" = xyes; then :
-  $as_echo "#define HAVE_ASPRINTF 1" >>confdefs.h
+if test $ac_have_decl = 1; then :
 
 else
   case " $LIBOBJS " in
@@ -5979,6 +5896,61 @@ else
 esac
 
 fi
+
+as_ac_Symbol=`$as_echo "ac_cv_have_decl_strdup(const char *)" | $as_tr_sh`
+ac_fn_c_check_decl "$LINENO" "strdup(const char *)" "$as_ac_Symbol" "#include <string.h>
+"
+if eval test \"x\$"$as_ac_Symbol"\" = x"yes"; then :
+  ac_have_decl=1
+else
+  ac_have_decl=0
+fi
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_STRDUP $ac_have_decl
+_ACEOF
+if test $ac_have_decl = 1; then :
+
+else
+  case " $LIBOBJS " in
+  *" strdup.$ac_objext "* ) ;;
+  *) LIBOBJS="$LIBOBJS strdup.$ac_objext"
+ ;;
+esac
+
+fi
+
+
+case $host_os in
+darwin*)
+	# NetBSD PR 38488: warnx(3) escapes certain characters like \n
+	ac_cv_func_warn=no
+	;;
+esac
+
+as_ac_Symbol=`$as_echo "ac_cv_have_decl_isblank(int)" | $as_tr_sh`
+ac_fn_c_check_decl "$LINENO" "isblank(int)" "$as_ac_Symbol" "#include <ctype.h>
+"
+if eval test \"x\$"$as_ac_Symbol"\" = x"yes"; then :
+  ac_have_decl=1
+else
+  ac_have_decl=0
+fi
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_ISBLANK $ac_have_decl
+_ACEOF
+if test $ac_have_decl = 1; then :
+
+else
+  case " $LIBOBJS " in
+  *" isblank.$ac_objext "* ) ;;
+  *) LIBOBJS="$LIBOBJS isblank.$ac_objext"
+ ;;
+esac
+
+fi
+
 
 ac_fn_c_check_func "$LINENO" "err" "ac_cv_func_err"
 if test "x$ac_cv_func_err" = xyes; then :
@@ -6066,19 +6038,6 @@ else
   case " $LIBOBJS " in
   *" getline.$ac_objext "* ) ;;
   *) LIBOBJS="$LIBOBJS getline.$ac_objext"
- ;;
-esac
-
-fi
-
-ac_fn_c_check_func "$LINENO" "isblank" "ac_cv_func_isblank"
-if test "x$ac_cv_func_isblank" = xyes; then :
-  $as_echo "#define HAVE_ISBLANK 1" >>confdefs.h
-
-else
-  case " $LIBOBJS " in
-  *" isblank.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS isblank.$ac_objext"
  ;;
 esac
 
@@ -6227,19 +6186,6 @@ esac
 
 fi
 
-ac_fn_c_check_func "$LINENO" "snprintf" "ac_cv_func_snprintf"
-if test "x$ac_cv_func_snprintf" = xyes; then :
-  $as_echo "#define HAVE_SNPRINTF 1" >>confdefs.h
-
-else
-  case " $LIBOBJS " in
-  *" snprintf.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS snprintf.$ac_objext"
- ;;
-esac
-
-fi
-
 ac_fn_c_check_func "$LINENO" "statvfs" "ac_cv_func_statvfs"
 if test "x$ac_cv_func_statvfs" = xyes; then :
   $as_echo "#define HAVE_STATVFS 1" >>confdefs.h
@@ -6248,19 +6194,6 @@ else
   case " $LIBOBJS " in
   *" statvfs.$ac_objext "* ) ;;
   *) LIBOBJS="$LIBOBJS statvfs.$ac_objext"
- ;;
-esac
-
-fi
-
-ac_fn_c_check_func "$LINENO" "strdup" "ac_cv_func_strdup"
-if test "x$ac_cv_func_strdup" = xyes; then :
-  $as_echo "#define HAVE_STRDUP 1" >>confdefs.h
-
-else
-  case " $LIBOBJS " in
-  *" strdup.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS strdup.$ac_objext"
  ;;
 esac
 
@@ -6644,13 +6577,12 @@ esac
 
 fi
 
-for ac_func in bcopy bzero memset memcpy setlocale
+for ac_func in setlocale
 do :
-  as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
-ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-if eval test \"x\$"$as_ac_var"\" = x"yes"; then :
+  ac_fn_c_check_func "$LINENO" "setlocale" "ac_cv_func_setlocale"
+if test "x$ac_cv_func_setlocale" = xyes; then :
   cat >>confdefs.h <<_ACEOF
-#define `$as_echo "HAVE_$ac_func" | $as_tr_cpp` 1
+#define HAVE_SETLOCALE 1
 _ACEOF
 
 fi
@@ -6874,7 +6806,7 @@ esac
 
 fi
 
-for ac_func in getpassphrase getpgrp memmove select
+for ac_func in getpassphrase getpgrp select
 do :
   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
 ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
