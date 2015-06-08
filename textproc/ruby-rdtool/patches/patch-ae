@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2015/06/04 13:53:32 taca Exp $
+$NetBSD: patch-ae,v 1.3 2015/06/08 16:47:54 taca Exp $
 
 * Try load from PKG_SYSCONFDIR/dot.rd2rc.
 * Depend on $0 strictly.
@@ -32,7 +32,7 @@ $NetBSD: patch-ae,v 1.2 2015/06/04 13:53:32 taca Exp $
  # require format lib implicitly
 -if /rd2.+/ =~ File.basename($0, ".*").downcase
 -  visitor_lib = "rd/" + $& + "-lib.rb"
-+if /rd2[0-9]*([a-z-]*).*/ =~ File.basename($0, ".*").downcase
++if /rd2[0-9]*([a-z-]+).*/ =~ File.basename($0, ".*").downcase
 +  visitor_lib = "rd/rd2" + $1 + "-lib.rb"
    require visitor_lib
    require $RD2_Sub_OptionParser  if $RD2_Sub_OptionParser
