@@ -1,4 +1,4 @@
-/*	$NetBSD: string.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: string.h,v 1.3 2015/06/08 00:44:46 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -40,11 +40,7 @@
  * Declare functions and macros that may be missing in <string.h>.
  */
 
-#if !HAVE_MEMMOVE
-# define memmove(a,b,c)	bcopy((b),(a),(c))
-#endif
-
-#if !HAVE_STRDUP
+#if !HAVE_DECL_STRDUP
 char	*strdup(const char *);
 #endif
 
