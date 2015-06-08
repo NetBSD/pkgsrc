@@ -1,0 +1,4 @@
+bin/pdf_callbacks @PREFIX@/@RUBY_SUFFIX@
+bin/pdf_list_callbacks @PREFIX@/bin/pdf_list_callbacks@RUBY_SUFFIX@
+bin/pdf_object @PREFIX@/bin/pdf_object@RUBY_SUFFIX@
+bin/pdf_text @PREFIX@/bin/pdf_text@RUBY_SUFFIX@
