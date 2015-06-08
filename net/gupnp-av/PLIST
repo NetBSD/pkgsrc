@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/06/10 13:41:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/06/08 23:15:04 joerg Exp $
 include/gupnp-av-1.0/libgupnp-av/gupnp-av-enums.h
 include/gupnp-av-1.0/libgupnp-av/gupnp-av-error.h
 include/gupnp-av-1.0/libgupnp-av/gupnp-av.h
@@ -59,3 +59,5 @@ share/gupnp-av/didl-lite-v2.xsd
 share/gupnp-av/simpledc20021212.xsd
 share/gupnp-av/upnp.xsd
 share/gupnp-av/xml.xsd
+share/vala/vapi/gupnp-av-1.0.deps
+share/vala/vapi/gupnp-av-1.0.vapi
