@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.38 2015/06/02 03:44:16 manu Exp $
+$NetBSD: distinfo,v 1.39 2015/06/08 13:40:08 joerg Exp $
 
 SHA1 (glusterfs-3.7.1.tar.gz) = 02e99a642e659b9c4232d12bff849d360a89c6fd
 RMD160 (glusterfs-3.7.1.tar.gz) = 0e33e3ac9b3eb110bbe1e3d1b6348103c2bc5704
 Size (glusterfs-3.7.1.tar.gz) = 7191402 bytes
 SHA1 (patch-10963) = ce20da94602b6ad4fcc8d63a3d125d5f72ad78f7
+SHA1 (patch-xlators_mgmt_glusterd_src_Makefile.in) = 188eab283bd7433c86e7767e594ba8fb97645e23
