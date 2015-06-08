@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2562 2015/06/08 15:02:53 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2563 2015/06/08 15:04:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4873,3 +4873,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-systemu to 2.6.5 [taca 2015-06-08]
 	Updated archivers/lrzip to 0.621 [wiedi 2015-06-08]
 	Updated net/ruby-addressable to 2.3.8 [taca 2015-06-08]
+	Updated net/ruby-dnsruby to 1.58.0 [taca 2015-06-08]
