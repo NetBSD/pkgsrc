@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/06/08 13:59:38 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/06/08 15:08:41 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-gnutls/Makefile
@@ -27,7 +27,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 CONFIGURE_ARGS+=	RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	ac_cv_func_epoll_create=no
+CONFIGURE_ARGS+=	ac_cv_func_epoll_create=no ac_cv_func_epoll_create1=no
 .endif
 
 GNU_CONFIGURE=		yes
