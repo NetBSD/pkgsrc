@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2557 2015/06/08 14:43:56 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2558 2015/06/08 14:48:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4868,3 +4868,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql90-upgrade to 9.0.21 [adam 2015-06-08]
 	Updated misc/ruby-hashie to 3.4.2 [taca 2015-06-08]
 	Updated misc/ruby-parallel to 1.6.0 [taca 2015-06-08]
+	Updated misc/ruby-sprockets to 3.2.0 [taca 2015-06-08]
