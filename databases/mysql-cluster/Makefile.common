@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/05/25 22:17:36 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/06/08 16:27:35 fhajny Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -90,7 +90,7 @@ CXXFLAGS+=		-fPIC -DPIC
 # and does not properly detect this, breaking the build later on.  Also
 # explicitly disable epoll support as it is Linux-specific.
 .if ${OPSYS} == "SunOS"
-CMAKE_ARGS+=		-DHAVE_SYS_EPOLL_H=NO
+CMAKE_ARGS+=		-DHAVE_SYS_EPOLL_H=NO -DHAVE_EPOLL_CREATE=NO
 CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
