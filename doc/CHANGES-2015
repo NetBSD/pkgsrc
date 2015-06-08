@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2567 2015/06/08 16:00:47 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2568 2015/06/08 16:03:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4878,3 +4878,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-snmp to 1.2.0 [taca 2015-06-08]
 	Updated net/ruby-soap4r to 2.0.5nb1 [taca 2015-06-08]
 	Updated net/ruby-userstream to 1.4.0nb2 [taca 2015-06-08]
+	Updated print/ruby-pdf-reader to 1.3.3nb1 [taca 2015-06-08]
