@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/04 15:49:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/08 15:03:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -25,6 +25,8 @@ ${GEM_LIBDIR}/demo/trace_dns.rb
 ${GEM_LIBDIR}/dnsruby.gemspec
 ${GEM_LIBDIR}/lib/dnsruby.rb
 ${GEM_LIBDIR}/lib/dnsruby/DNS.rb
+${GEM_LIBDIR}/lib/dnsruby/bit_mapping.rb
+${GEM_LIBDIR}/lib/dnsruby/bitmap.rb
 ${GEM_LIBDIR}/lib/dnsruby/cache.rb
 ${GEM_LIBDIR}/lib/dnsruby/code_mapper.rb
 ${GEM_LIBDIR}/lib/dnsruby/code_mappers.rb
@@ -68,6 +70,7 @@ ${GEM_LIBDIR}/lib/dnsruby/resource/NSAP.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/NSEC.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/NSEC3.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/NSEC3PARAM.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/NXT.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/OPT.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/PX.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/RP.rb
@@ -86,6 +89,7 @@ ${GEM_LIBDIR}/lib/dnsruby/resource/X25.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/domain_name.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/generic.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/resource.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/type_bitmap.rb
 ${GEM_LIBDIR}/lib/dnsruby/select_thread.rb
 ${GEM_LIBDIR}/lib/dnsruby/single_resolver.rb
 ${GEM_LIBDIR}/lib/dnsruby/single_verifier.rb
@@ -103,7 +107,6 @@ ${GEM_LIBDIR}/test/tc_cache.rb
 ${GEM_LIBDIR}/test/tc_dlv.rb
 ${GEM_LIBDIR}/test/tc_dns.rb
 ${GEM_LIBDIR}/test/tc_dnskey.rb
-${GEM_LIBDIR}/test/tc_dnsruby.rb
 ${GEM_LIBDIR}/test/tc_ds.rb
 ${GEM_LIBDIR}/test/tc_escapedchars.rb
 ${GEM_LIBDIR}/test/tc_gpos.rb
@@ -119,6 +122,7 @@ ${GEM_LIBDIR}/test/tc_naptr.rb
 ${GEM_LIBDIR}/test/tc_nsec.rb
 ${GEM_LIBDIR}/test/tc_nsec3.rb
 ${GEM_LIBDIR}/test/tc_nsec3param.rb
+${GEM_LIBDIR}/test/tc_nxt.rb
 ${GEM_LIBDIR}/test/tc_packet.rb
 ${GEM_LIBDIR}/test/tc_packet_unique_push.rb
 ${GEM_LIBDIR}/test/tc_question.rb
@@ -128,6 +132,7 @@ ${GEM_LIBDIR}/test/tc_res_config.rb
 ${GEM_LIBDIR}/test/tc_res_env.rb
 ${GEM_LIBDIR}/test/tc_res_file.rb
 ${GEM_LIBDIR}/test/tc_res_opt.rb
+${GEM_LIBDIR}/test/tc_resolv.rb
 ${GEM_LIBDIR}/test/tc_resolver.rb
 ${GEM_LIBDIR}/test/tc_rr-opt.rb
 ${GEM_LIBDIR}/test/tc_rr-txt.rb
@@ -140,11 +145,15 @@ ${GEM_LIBDIR}/test/tc_soak.rb
 ${GEM_LIBDIR}/test/tc_soak_base.rb
 ${GEM_LIBDIR}/test/tc_sshfp.rb
 ${GEM_LIBDIR}/test/tc_tcp.rb
+${GEM_LIBDIR}/test/tc_tcp_pipelining.rb
 ${GEM_LIBDIR}/test/tc_tkey.rb
 ${GEM_LIBDIR}/test/tc_tsig.rb
 ${GEM_LIBDIR}/test/tc_update.rb
 ${GEM_LIBDIR}/test/tc_validator.rb
 ${GEM_LIBDIR}/test/tc_verifier.rb
+${GEM_LIBDIR}/test/tc_zone_reader.rb
+${GEM_LIBDIR}/test/test_dnsserver.rb
+${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_LIBDIR}/test/ts_dnsruby.rb
 ${GEM_LIBDIR}/test/ts_offline.rb
 ${GEM_LIBDIR}/test/ts_online.rb
