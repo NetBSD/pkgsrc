@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.21 2015/04/10 01:32:16 hiramatsu Exp $
+$NetBSD: distinfo,v 1.22 2015/06/08 23:13:52 joerg Exp $
 
 SHA1 (sharutils-4.15.tar.gz) = a073d1912e537a53cabab210ca869adfd907f6f6
 RMD160 (sharutils-4.15.tar.gz) = fd8b1ebe41b1df398eef53513e2e5b5b53e8bbac
 Size (sharutils-4.15.tar.gz) = 2196398 bytes
 SHA1 (patch-lib_fseeko.c) = 9308258bebbabc60a0203fd3baa054758ce60b02
+SHA1 (patch-libopts_libopts.c) = da5b86c5ba4dfdae5108476e46c1ed5e47a4254e
+SHA1 (patch-src_shar-opts.c) = eabc6a22adb102fc88b42c4479ee4030435d07dd
+SHA1 (patch-src_unshar-opts.c) = 7c34db513400d5f818be396a6bdbd2ff8d8bb77b
+SHA1 (patch-src_uudecode-opts.c) = d560a91b977d3c02627be22073b1dc1810a9b3cb
+SHA1 (patch-src_uuencode-opts.c) = 0906d8b3d9ac10d529b2a35aadce1fb09d3c60b7
