@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2015/06/04 13:53:32 taca Exp $
+$NetBSD: distinfo,v 1.22 2015/06/08 16:47:54 taca Exp $
 
 SHA1 (rdtool-0.6.38.gem) = 10a9a241f8360ac937611b6597ed0aaca3e65c07
 RMD160 (rdtool-0.6.38.gem) = 5b4efcaefb504f1c82a052c69d7d7434358aa818
 Size (rdtool-0.6.38.gem) = 115712 bytes
-SHA1 (patch-ae) = c2c6247a5705733f4a4e41b81f7fac61d897f089
+SHA1 (patch-ae) = 4bac026ae88f24ab623bc4878a9efe313a8e0aef
