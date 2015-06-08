@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2552 2015/06/07 22:49:14 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.2553 2015/06/08 11:04:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql93-upgrade to 9.3.8 [joerg 2015-06-07]
 	Updated security/openpam to 20140912 [joerg 2015-06-07]
 	Updated pkgtools/pbulk to 0.54 [joerg 2015-06-07]
+	Updated net/gupnp-igd to 0.2.3nb4 [wiz 2015-06-08]
