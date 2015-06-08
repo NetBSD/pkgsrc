@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/06/04 20:08:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/08 20:56:15 szptvlfn Exp $
 
 DISTNAME=	nats-0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
