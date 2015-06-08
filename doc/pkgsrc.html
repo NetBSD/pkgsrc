@@ -4933,14 +4933,6 @@ VAR:=   ${VAR:N${_othervar_:C/-//}}
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="print-PLIST"></a>13.3. Tweaking output of <span class="command"><strong>make print-PLIST</strong></span>
 </h2></div></div></div>
-<p>If you have used any of the *-dirs packages, as explained in
-    <a class="xref" href="#faq.common-dirs" title="13.9. Sharing directories between packages">Section 13.9, &#8220;Sharing directories between packages&#8221;</a>, you may have noticed that
-    <span class="command"><strong>make print-PLIST</strong></span> outputs a set of
-    <code class="varname">@comment</code>s instead of real
-    <code class="varname">@dirrm</code> lines.  You can also do this for
-    specific directories and files, so that the results of that
-    command are very close to reality. This helps <span class="emphasis"><em>a
-    lot</em></span> during the update of packages.</p>
 <p>The <code class="varname">PRINT_PLIST_AWK</code> variable takes a set
     of AWK patterns and actions that are used to filter the output of
     print-PLIST.  You can <span class="emphasis"><em>append</em></span> any chunk of AWK
@@ -4950,12 +4942,6 @@ VAR:=   ${VAR:N${_othervar_:C/-//}}
     resulting PLIST:</p>
 <pre class="programlisting">
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
-    </pre>
-<p>And to get all the <code class="varname">@dirrm</code> lines referring
-    to a specific (shared) directory converted to
-    <code class="varname">@comment</code>s:</p>
-<pre class="programlisting">
-PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
     </pre>
 </div>
 <div class="sect1">
@@ -5038,7 +5024,6 @@ man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
-${PLIST.foo}@dirrm share/bar
     </pre>
 </div>
 <div class="sect1">
@@ -7013,6 +6998,14 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <span class="command"><strong>pkg_add</strong></span> can be set via
 	  <code class="varname">BIN_INSTALL_FLAGS</code> e.g., to do verbose
 	  operation, etc.</p></dd>
+<dt><span class="term">install-clean</span></dt>
+<dd><p>This target removes the state files for the "install" and later
+	  phases so that the "install" target may be re-invoked. This can be
+	  used after editing the PLIST to install the package without
+	  rebuilding it.</p></dd>
+<dt><span class="term">build-clean</span></dt>
+<dd><p>This target removes the state files for the "build" and later
+	  phases so that the "build" target may be re-invoked.</p></dd>
 <dt><span class="term">update</span></dt>
 <dd>
 <p>This target causes the current package to be
@@ -7237,6 +7230,12 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  the current package's <code class="varname">DEPENDS</code>. Useful
 	  if out of date dependencies are causing build
 	  problems.</p></dd>
+<dt><span class="term">print-build-depends-list</span></dt>
+<dd><p>This target shows the list of packages that the current package
+	    depends on for building.</p></dd>
+<dt><span class="term">print-run-depends-list</span></dt>
+<dd><p>This target shows the list of packages that the current package
+	    depends on for running.</p></dd>
 <dt><span class="term">check-shlibs</span></dt>
 <dd><p>After a package is installed, check all its
 	  binaries and (on ELF platforms) shared libraries to see
@@ -7385,7 +7384,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm77719696"></a><dl>
+<a name="idm76167696"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7404,7 +7403,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm77719312"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm76167312"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7414,7 +7413,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm77718288"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm76166288"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7425,7 +7424,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm77717264"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm76165264"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9573,7 +9572,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm77164688"></a><dl>
+<a name="idm77713936"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9618,7 +9617,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm77164304"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm77713552"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9634,7 +9633,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm77160208"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm77709456"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9652,7 +9651,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm77155856"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm77705104"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9670,7 +9669,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm77151632"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm77700880"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9683,7 +9682,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm77149456"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm77698704"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9699,7 +9698,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm77146384"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm77695632"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9723,7 +9722,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm77138320"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm77687568"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9748,7 +9747,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm77134480"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm77683728"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9796,7 +9795,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm77127952"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm77677200"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
