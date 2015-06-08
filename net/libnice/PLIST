@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/02/01 20:02:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/06/08 14:50:09 wiz Exp $
 bin/sdp-example
 bin/simple-example
 bin/stunbdc
@@ -20,8 +20,10 @@ include/stun/usages/ice.h
 include/stun/usages/timer.h
 include/stun/usages/turn.h
 include/stun/win32_common.h
+lib/girepository-1.0/Nice-0.1.typelib
 lib/libnice.la
 lib/pkgconfig/nice.pc
+share/gir-1.0/Nice-0.1.gir
 share/gtk-doc/html/libnice/NiceAgent.html
 share/gtk-doc/html/libnice/NiceCandidate.html
 share/gtk-doc/html/libnice/annotation-glossary.html

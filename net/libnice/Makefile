@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2015/04/06 08:17:16 adam Exp $
+# $NetBSD: Makefile,v 1.37 2015/06/08 14:50:09 wiz Exp $
 #
 # Also update net/gst-plugins1-libnice when you update this!
 
 DISTNAME=	libnice-0.1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 CONFIGURE_ARGS+= --without-gstreamer
 
 .include "../../mk/bsd.prefs.mk"
