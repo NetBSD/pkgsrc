@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2553 2015/06/08 11:04:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2554 2015/06/08 11:17:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/openpam to 20140912 [joerg 2015-06-07]
 	Updated pkgtools/pbulk to 0.54 [joerg 2015-06-07]
 	Updated net/gupnp-igd to 0.2.3nb4 [wiz 2015-06-08]
+	Added textproc/artha version 1.0.3 [wiz 2015-06-08]
