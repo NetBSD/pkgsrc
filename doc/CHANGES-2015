@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2570 2015/06/08 16:26:05 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2571 2015/06/08 16:48:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/ruby-pdf-reader to 1.3.3nb1 [taca 2015-06-08]
 	Updated print/ruby-prawn to 2.0.1 [taca 2015-06-08]
 	Updated security/ruby-net-ssh-multi to 1.2.1 [taca 2015-06-08]
+	Updated textproc/ruby-rdtool to 0.6.38nb2 [taca 2015-06-08]
