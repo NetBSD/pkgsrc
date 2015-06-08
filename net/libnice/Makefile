@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/06/08 14:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/06/08 21:22:17 wiz Exp $
 #
 # Also update net/gst-plugins1-libnice when you update this!
 
@@ -35,5 +35,6 @@ CWRAPPERS_APPEND.cc+=	-Wunused-but-set-variable
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../net/gupnp-igd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
