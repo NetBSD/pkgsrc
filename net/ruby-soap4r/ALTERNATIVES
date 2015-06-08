@@ -1,0 +1,2 @@
+bin/wsdl2ruby.rb @PREFIX@/bin/wsdl2ruby.rb@RUBY_SUFFIX@
+bin/xsd2ruby.rb @PREFIX@/bin/xsd2ruby.rb@RUBY_SUFFIX@
