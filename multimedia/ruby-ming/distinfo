@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/07/21 02:48:12 taca Exp $
+$NetBSD: distinfo,v 1.10 2015/06/08 14:55:17 taca Exp $
 
 SHA1 (ming-ruby-0.2.1.tar.gz) = 942829a4085afb2645e6b098b72bd24badb8f0ef
 RMD160 (ming-ruby-0.2.1.tar.gz) = 7ddde8b9912bdd1608a7af8b23464a5fc63b9306
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = c6604cb8856ea42d1083894eae9f60c997bfa27a
 SHA1 (patch-ad) = 6a62e023b934f528f9247bae24c28829f35d1c25
 SHA1 (patch-ext_ming_mingc_swfcxform.c) = fae47d061d2088c27c056b66cec3ea45fc8bfe4b
 SHA1 (patch-ext_ming_mingc_swfdisplayitem.c) = 134f713c96454b9dec4851ccdcd2310ef24cc540
+SHA1 (patch-setup.rb) = d64c1babfae090cf8868a66c0bcd220ccba9a0a2
