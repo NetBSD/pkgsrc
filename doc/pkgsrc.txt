@@ -4187,13 +4187,6 @@ targets" for more information on this target.
 
 13.3. Tweaking output of make print-PLIST
 
-If you have used any of the *-dirs packages, as explained in Section 13.9,
-"Sharing directories between packages", you may have noticed that make
-print-PLIST outputs a set of @comments instead of real @dirrm lines. You can
-also do this for specific directories and files, so that the results of that
-command are very close to reality. This helps a lot during the update of
-packages.
-
 The PRINT_PLIST_AWK variable takes a set of AWK patterns and actions that are
 used to filter the output of print-PLIST. You can append any chunk of AWK
 scripting you like to it, but be careful with quoting.
@@ -4202,12 +4195,6 @@ For example, to get all files inside the libdata/foo directory removed from the
 resulting PLIST:
 
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
-
-
-And to get all the @dirrm lines referring to a specific (shared) directory
-converted to @comments:
-
-PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
 
 
 13.4. Variable substitution in PLIST
@@ -4274,7 +4261,6 @@ man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
-${PLIST.foo}@dirrm share/bar
 
 
 13.5. Man page compression
@@ -5882,6 +5868,17 @@ bin-install
     is available anywhere. The arguments given to pkg_add can be set via
     BIN_INSTALL_FLAGS e.g., to do verbose operation, etc.
 
+install-clean
+
+    This target removes the state files for the "install" and later phases so
+    that the "install" target may be re-invoked. This can be used after editing
+    the PLIST to install the package without rebuilding it.
+
+build-clean
+
+    This target removes the state files for the "build" and later phases so
+    that the "build" target may be re-invoked.
+
 update
 
     This target causes the current package to be updated to the latest version.
@@ -6057,6 +6054,16 @@ show-installed-depends
 
     This target shows which installed packages match the current package's
     DEPENDS. Useful if out of date dependencies are causing build problems.
+
+print-build-depends-list
+
+    This target shows the list of packages that the current package depends on
+    for building.
+
+print-run-depends-list
+
+    This target shows the list of packages that the current package depends on
+    for running.
 
 check-shlibs
 
