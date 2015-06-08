@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2572 2015/06/08 20:55:51 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.2573 2015/06/08 21:29:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/ruby-net-ssh-multi to 1.2.1 [taca 2015-06-08]
 	Updated textproc/ruby-rdtool to 0.6.38nb2 [taca 2015-06-08]
 	Updated devel/hs-hashable to 1.2.3.2 [szptvlfn 2015-06-08]
+	Added devel/py-hg-git version 0.8.1 [wiz 2015-06-08]
