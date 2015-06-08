@@ -408,6 +408,7 @@ libmp4v2		Enable MP4 support using libmp4v2.
 libmpdclient		Enable MPD client support.
 libmpg123		Enable mpg123 project's core decoder library support.
 libmtp			Enable MTP via libmtp support.
+libnotify		Enable libnotify support.
 libofa			Enable Open Fingerprint Architecture library support.
 libofx			Enable OFX support.
 libsmi			Use libsmi for SMI MIB support.
