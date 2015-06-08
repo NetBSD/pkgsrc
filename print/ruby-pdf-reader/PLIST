@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2013/02/11 08:58:51 taca Exp $
-bin/pdf_callbacks
-bin/pdf_list_callbacks
-bin/pdf_object
-bin/pdf_text
+@comment $NetBSD: PLIST,v 1.6 2015/06/08 16:02:54 taca Exp $
+bin/pdf_callbacks${RUBY_SUFFIX}
+bin/pdf_list_callbacks${RUBY_SUFFIX}
+bin/pdf_object${RUBY_SUFFIX}
+bin/pdf_text${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
