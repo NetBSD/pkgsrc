@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2014/09/10 10:39:35 richard Exp $
+# $NetBSD: builtin.mk,v 1.9 2015/06/08 06:49:55 dsainty Exp $
 
 BINUTILS_PREFIX?=	/usr
 
@@ -71,11 +71,11 @@ CHECK_BUILTIN.binutils?=	no
 .if !empty(CHECK_BUILTIN.binutils:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.binutils:M[nN][oO])
-AR=	${BUILDLINK_PREFIX.binutils}/bin/ar
-AS=	${BUILDLINK_PREFIX.binutils}/bin/as
-LD=	${BUILDLINK_PREFIX.binutils}/bin/ld
-NM=	${BUILDLINK_PREFIX.binutils}/bin/nm
-RANLIB=	${BUILDLINK_PREFIX.binutils}/bin/ranlib
+AR=	${BUILDLINK_PREFIX.binutils}/bin/gar
+AS=	${BUILDLINK_PREFIX.binutils}/bin/gas
+LD=	${BUILDLINK_PREFIX.binutils}/bin/gld
+NM=	${BUILDLINK_PREFIX.binutils}/bin/gnm
+RANLIB=	${BUILDLINK_PREFIX.binutils}/bin/granlib
 .  endif
 
 .endif	# CHECK_BUILTIN.binutils
