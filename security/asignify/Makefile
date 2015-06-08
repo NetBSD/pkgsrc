@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/04 20:12:25 youri Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/08 13:44:01 joerg Exp $
 
 DISTNAME=	asignify-20150220
 CATEGORIES=	security
@@ -12,6 +12,7 @@ COMMENT=	Yet another signify tool
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	automake
 
 pre-configure:
