@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/28 02:46:19 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2015/06/08 06:53:27 dsainty Exp $
+
+Add in LDFLAGS, and compile before linking for compilers that optimise out
+library symbols that do not appear to be in use.
 
 --- Makefile.in.orig	2005-09-24 01:47:19.000000000 -0700
 +++ Makefile.in
@@ -7,7 +10,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/28 02:46:19 minskim Exp $
  
  $(PROG): tzosdclock.c
 -	$(CC) $(OPTS) $(CFLAGS) $(LIBS) tzosdclock.c -o $(PROG)
-+	$(CC) $(OPTS) $(CFLAGS) $(LDFLAGS) $(LIBS) tzosdclock.c -o $(PROG)
++	$(CC) $(OPTS) $(CFLAGS) tzosdclock.c $(LDFLAGS) $(LIBS) -o $(PROG)
  
  clean:
  	-/bin/rm -rf $(PROG)
