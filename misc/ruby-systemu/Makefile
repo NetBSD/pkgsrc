@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/01/19 20:52:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/08 14:52:44 taca Exp $
 
-DISTNAME=	systemu-2.6.4
+DISTNAME=	systemu-2.6.5
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
