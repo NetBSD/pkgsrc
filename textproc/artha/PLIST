@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/08 11:16:38 wiz Exp $
+bin/artha
+man/man1/artha.1
+share/applications/artha.desktop
+share/artha/gui.glade
+share/pixmaps/artha.png
