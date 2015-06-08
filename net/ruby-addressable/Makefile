@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/03/13 15:07:22 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/08 15:02:16 taca Exp $
 
-DISTNAME=	addressable-2.3.7
+DISTNAME=	addressable-2.3.8
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
