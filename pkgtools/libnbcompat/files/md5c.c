@@ -1,4 +1,4 @@
-/*	$NetBSD: md5c.c,v 1.7 2008/10/06 12:36:20 joerg Exp $	*/
+/*	$NetBSD: md5c.c,v 1.8 2015/06/08 00:44:46 joerg Exp $	*/
 
 /*
  * This file is derived from the RSA Data Security, Inc. MD5 Message-Digest
@@ -51,15 +51,7 @@
 
 #if !HAVE_MD5_H
 
-#if defined(HAVE_MEMSET)
 #define ZEROIZE(d, l)		memset((d), 0, (l)) 
-#else 
-# if defined(HAVE_BZERO)
-#define ZEROIZE(d, l)		bzero((d), (l))
-# else
-#error You need either memset or bzero 
-# endif 
-#endif
 
 typedef unsigned char *POINTER;
 typedef uint16_t UINT2;
