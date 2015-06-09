@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.55 2015/06/07 14:14:04 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.56 2015/06/09 14:18:47 joerg Exp $
 
 BUILDLINK_TREE+=	evolution-data-server
 
@@ -17,6 +17,7 @@ BDB_ACCEPTED?=		db4 db5
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../net/libgdata/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .endif # EVOLUTION_DATA_SERVER_BUILDLINK3_MK
