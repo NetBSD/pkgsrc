@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/30 13:50:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/09 14:55:57 fhajny Exp $
 bin/activate-global-python-argcomplete
 bin/python-argcomplete-check-easy-install-script
 bin/register-python-argcomplete
@@ -11,6 +11,9 @@ ${PYSITELIB}/argcomplete/__init__.py
 ${PYSITELIB}/argcomplete/__init__.pyc
 ${PYSITELIB}/argcomplete/__init__.pyo
 ${PYSITELIB}/argcomplete/bash_completion.d/python-argcomplete.sh
+${PYSITELIB}/argcomplete/compat.py
+${PYSITELIB}/argcomplete/compat.pyc
+${PYSITELIB}/argcomplete/compat.pyo
 ${PYSITELIB}/argcomplete/completers.py
 ${PYSITELIB}/argcomplete/completers.pyc
 ${PYSITELIB}/argcomplete/completers.pyo
