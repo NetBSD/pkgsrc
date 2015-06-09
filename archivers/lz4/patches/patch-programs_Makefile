@@ -1,18 +1,18 @@
-$NetBSD: patch-programs_Makefile,v 1.4 2015/03/23 22:24:11 fhajny Exp $
+$NetBSD: patch-programs_Makefile,v 1.5 2015/06/09 12:04:19 fhajny Exp $
 
 Make portable, use pkgsrc install scripts.
---- programs/Makefile.orig	2014-12-19 08:51:32.000000000 +0000
+--- programs/Makefile.orig	2015-05-26 01:13:50.000000000 +0000
 +++ programs/Makefile
-@@ -40,7 +40,7 @@ CFLAGS += -std=c99 -Wall -Wextra -Wundef
- FLAGS   = -I../lib $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
+@@ -43,7 +43,7 @@ CFLAGS += -std=c99 -Wall -Wextra -Wundef
+ FLAGS  := -I../lib $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
  
- BINDIR=$(PREFIX)/bin
--MANDIR=$(PREFIX)/share/man/man1
-+MANDIR=$(PREFIX)/$(PKGMANDIR)/man1
- LZ4DIR=../lib
+ BINDIR := $(PREFIX)/bin
+-MANDIR := $(PREFIX)/share/man/man1
++MANDIR := $(PREFIX)/$(PKGMANDIR)/man1
+ LZ4DIR := ../lib
  
- TEST_FILES = COPYING
-@@ -106,20 +106,16 @@ clean:
+ 
+@@ -112,19 +112,15 @@ clean:
  	@echo Cleaning completed
  
  
@@ -23,23 +23,20 @@ Make portable, use pkgsrc install scripts.
  install: lz4 lz4c
  	@echo Installing binaries
 -	@install -d -m 755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(MANDIR)/
--	@install -m 755 lz4$(EXT) $(DESTDIR)$(BINDIR)/lz4$(EXT)
+-	@install -m 755 lz4 $(DESTDIR)$(BINDIR)/lz4
 +	$(BSD_INSTALL_PROGRAM_DIR) -d -m 755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(MANDIR)/
-+	$(BSD_INSTALL_PROGRAM) -m 755 lz4$(EXT) $(DESTDIR)$(BINDIR)/lz4$(EXT)
- 	@ln -sf lz4$(EXT) $(DESTDIR)$(BINDIR)/lz4cat
--	@install -m 755 lz4c$(EXT) $(DESTDIR)$(BINDIR)/lz4c$(EXT)
-+	$(BSD_INSTALL_PROGRAM) -m 755 lz4c$(EXT) $(DESTDIR)$(BINDIR)/lz4c$(EXT)
++	$(BSD_INSTALL_PROGRAM) -m 755 lz4 $(DESTDIR)$(BINDIR)/lz4
+ 	@ln -sf lz4 $(DESTDIR)$(BINDIR)/lz4cat
+ 	@ln -sf lz4 $(DESTDIR)$(BINDIR)/unlz4
+-	@install -m 755 lz4c $(DESTDIR)$(BINDIR)/lz4c
++	$(BSD_INSTALL_PROGRAM) -m 755 lz4c $(DESTDIR)$(BINDIR)/lz4c
  	@echo Installing man pages
 -	@install -m 644 lz4.1 $(DESTDIR)$(MANDIR)/lz4.1
--	@install -m 644 lz4c.1 $(DESTDIR)$(MANDIR)/lz4c.1
--	@install -m 644 lz4cat.1 $(DESTDIR)$(MANDIR)/lz4cat.1
 +	$(BSD_INSTALL_MAN) -m 644 lz4.1 $(DESTDIR)$(MANDIR)/lz4.1
-+	$(BSD_INSTALL_MAN) -m 644 lz4c.1 $(DESTDIR)$(MANDIR)/lz4c.1
-+	$(BSD_INSTALL_MAN) -m 644 lz4cat.1 $(DESTDIR)$(MANDIR)/lz4cat.1
- 	@echo lz4 installation completed
- 
- uninstall:
-@@ -203,4 +199,3 @@ test-mem: lz4 datagen fuzzer frametest
+ 	@ln -sf lz4.1 $(DESTDIR)$(MANDIR)/lz4c.1
+ 	@ln -sf lz4.1 $(DESTDIR)$(MANDIR)/lz4cat.1
+ 	@ln -sf lz4.1 $(DESTDIR)$(MANDIR)/unlz4.1
+@@ -308,4 +304,3 @@ test-mem: lz4 datagen fuzzer frametest f
  test-mem32: lz4c32 datagen
  # unfortunately, valgrind doesn't seem to work with non-native binary. If someone knows how to do a valgrind-test on a 32-bits exe with a 64-bits system...
  

@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile,v 1.4 2015/03/23 22:24:11 fhajny Exp $
+$NetBSD: patch-Makefile,v 1.5 2015/06/09 12:04:19 fhajny Exp $
 
 Make portable, use pkgsrc install scripts.
---- Makefile.orig	2014-12-19 08:51:32.000000000 +0000
+--- Makefile.orig	2015-05-26 01:13:50.000000000 +0000
 +++ Makefile
-@@ -86,10 +86,6 @@ clean:
+@@ -75,10 +75,6 @@ clean:
  	@echo Cleaning completed
  
  
@@ -14,7 +14,7 @@ Make portable, use pkgsrc install scripts.
  install:
  	@cd $(LZ4DIR); $(MAKE) -e install
  	@cd $(PRGDIR); $(MAKE) -e install
-@@ -133,4 +129,3 @@ streaming-examples:
+@@ -123,4 +119,3 @@ streaming-examples:
  prg-travis:
  	@cd $(PRGDIR); $(MAKE) -e test-travis
  
