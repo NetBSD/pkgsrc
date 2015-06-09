@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.8 2012/01/18 18:36:51 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2015/06/09 08:55:23 wiz Exp $
 
---- configure.orig	2011-04-25 13:04:56.000000000 +0000
+--- configure.orig	2014-09-05 11:08:16.000000000 -0400
 +++ configure
-@@ -18016,7 +18016,7 @@ $as_echo_n "checking for $am_display_PYT
- if test "${am_cv_python_pythondir+set}" = set; then :
+@@ -19308,7 +19308,7 @@
+ if ${am_cv_python_pythondir+:} false; then :
    $as_echo_n "(cached) " >&6
  else
 -  am_cv_python_pythondir=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(0,0,prefix='$PYTHON_PREFIX')" 2>/dev/null ||
@@ -11,8 +11,8 @@ $NetBSD: patch-aa,v 1.8 2012/01/18 18:36:51 drochner Exp $
       echo "$PYTHON_PREFIX/${py_lib}/python$PYTHON_VERSION/site-packages"`
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $am_cv_python_pythondir" >&5
-@@ -18034,7 +18034,7 @@ $as_echo_n "checking for $am_display_PYT
- if test "${am_cv_python_pyexecdir+set}" = set; then :
+@@ -19326,7 +19326,7 @@
+ if ${am_cv_python_pyexecdir+:} false; then :
    $as_echo_n "(cached) " >&6
  else
 -  am_cv_python_pyexecdir=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(1,0,prefix='$PYTHON_EXEC_PREFIX')" 2>/dev/null ||
@@ -20,25 +20,25 @@ $NetBSD: patch-aa,v 1.8 2012/01/18 18:36:51 drochner Exp $
       echo "${PYTHON_EXEC_PREFIX}/${py_lib}/python${PYTHON_VERSION}/site-packages"`
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $am_cv_python_pyexecdir" >&5
-@@ -18121,18 +18121,18 @@ CPPFLAGS="$save_CPPFLAGS"
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpython${PYTHON_VERSION}.a" >&5
+@@ -19420,18 +19420,18 @@
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpython${PYTHON_VERSION}.a" >&5
  $as_echo_n "checking for libpython${PYTHON_VERSION}.a... " >&6; }
  
--py_config_dir="$py_prefix/$py_lib/python${PYTHON_VERSION}/config"
-+py_config_dir="$py_prefix/lib/python${PYTHON_VERSION}/config"
+-  py_config_dir="$py_prefix/$py_lib/python${PYTHON_VERSION}/config"
++  py_config_dir="$py_prefix/lib/python${PYTHON_VERSION}/config"
  
- py_makefile="${py_config_dir}/Makefile"
- if test -f "$py_makefile"; then
-   py_basemodlibs=`sed -n -e 's/^BASEMODLIBS=\(.*\)/\1/p' $py_makefile`
-   py_other_libs=`sed -n -e 's/^LIBS=\(.*\)/\1/p' $py_makefile`
+   py_makefile="${py_config_dir}/Makefile"
+   if test -f "$py_makefile"; then
+       py_basemodlibs=`sed -n -e 's/^BASEMODLIBS=\(.*\)/\1/p' $py_makefile`
+     py_other_libs=`sed -n -e 's/^LIBS=\(.*\)/\1/p' $py_makefile`
  
--  if test -e "$PYTHON_PREFIX/${py_lib}/libpython${PYTHON_VERSION}.so"; then
-+  if test -e "$PYTHON_PREFIX/lib/libpython${PYTHON_VERSION}.so"; then
-     PYTHON_LIBS="-L${py_config_dir} -lpython${PYTHON_VERSION} $py_basemodlibs $py_other_libs"
-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
+-      if test -e "$PYTHON_PREFIX/${py_lib}/libpython${PYTHON_VERSION}.so"; then
++      if test -e "$PYTHON_PREFIX/lib/libpython${PYTHON_VERSION}.so"; then
+       PYTHON_LIBS="-L${py_config_dir} -lpython${PYTHON_VERSION} $py_basemodlibs $py_other_libs"
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
  $as_echo "found" >&6; }
--  elif test -e "${py_prefix}/${py_lib}/libpython${PYTHON_VERSION}.a"; then
-+  elif test -e "${py_prefix}/lib/libpython${PYTHON_VERSION}.a"; then
-         PYTHON_LIBS="-L${py_config_dir} -lpython${PYTHON_VERSION} $py_basemodlibs $py_other_libs"
-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
+-    elif test -e "${py_prefix}/${py_lib}/libpython${PYTHON_VERSION}.a"; then
++    elif test -e "${py_prefix}/lib/libpython${PYTHON_VERSION}.a"; then
+             PYTHON_LIBS="-L${py_config_dir} -lpython${PYTHON_VERSION} $py_basemodlibs $py_other_libs"
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
  $as_echo "found" >&6; }

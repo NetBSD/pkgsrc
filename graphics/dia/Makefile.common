@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.28 2012/12/04 12:37:15 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.29 2015/06/09 08:55:22 wiz Exp $
 #
 # used by graphics/dia-python/Makefile
 
-DISTNAME=	dia-0.97.2
+DISTNAME=	dia-0.97.3
 PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.97/}
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://live.gnome.org/Dia
 COMMENT=	Program for creating diagrams of all kinds
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/dia/patches

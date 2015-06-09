@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.31 2014/04/15 20:34:36 asau Exp $
+$NetBSD: distinfo,v 1.32 2015/06/09 08:55:22 wiz Exp $
 
-SHA1 (dia-0.97.2.tar.xz) = dc7ed6f8cd83acc8f421d28f30e4042fe370e9ba
-RMD160 (dia-0.97.2.tar.xz) = f9270f1f2cb6ad505219463827d02e3759693796
-Size (dia-0.97.2.tar.xz) = 5507004 bytes
-SHA1 (patch-aa) = ab5acd47ba4557aa8cc4a5abb3ce1f41ea5e2574
-SHA1 (patch-app_render_gdk.c) = 2bff345b8168ef731eb977f1850fd6a725224c78
-SHA1 (patch-be) = dab7626daefcd702b31f54d198311d9be921e1ff
+SHA1 (dia-0.97.3.tar.xz) = 316393951daebd186ba387e1cd6e34160a458c39
+RMD160 (dia-0.97.3.tar.xz) = a984efa1663cc154f4394060af37fab146f99175
+Size (dia-0.97.3.tar.xz) = 5548500 bytes
+SHA1 (patch-aa) = bad171ff4f379030f05c613b362e669a53d7f6da
+SHA1 (patch-app_load_save.c) = ee6c58a9db031fc89c61939a6c3fce90dae75a8d
+SHA1 (patch-be) = 08db7c440eea343895cced29522dd487f11d4773
 SHA1 (patch-ca) = 8737f3ff19244e2f87ffb571da21159bc2248648
 SHA1 (patch-cb) = 02210139cbf38e91a61ad1e090f63f5635bb26ef
 SHA1 (patch-cc) = 2dd4c822d8771e48ff1ac67946d765e5d8b85d50
-SHA1 (patch-cd) = b7dd72a359fe6f36a56d2c16f94427c6977b0477
+SHA1 (patch-cd) = d5fdf63320e59278b5c99a07b450161ffbc1789b
 SHA1 (patch-da) = 4ed80c2a7eaa2dbbebd8265c8b74faac20c4f6c2
-SHA1 (patch-objects_custom_shape__typeinfo_c) = 128477ab7cc363a490e042062379585800893626
-SHA1 (patch-plug-ins_postscript_diapsft2renderer.c) = c4933ba0133aca4e6816e796499f9710158f333d
 SHA1 (patch-plug-ins_postscript_paginate__psprint.c) = 59784ea73d32158f457e52132bc5c4cef375dcae
-SHA1 (patch-tests_test-boundingbox_c) = f05fe01fd2d79bf5b519808aa491458040097fb7
-SHA1 (patch-tests_test-objects_c) = 759b788aa55e3256758514906c1ce812fb3b6aba
