@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/13 11:33:35 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/06/09 12:17:56 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -51,6 +51,7 @@ share/examples/redis/tests/sentinel/tests/02-slaves-reconf.tcl
 share/examples/redis/tests/sentinel/tests/03-runtime-reconf.tcl
 share/examples/redis/tests/sentinel/tests/04-slave-selection.tcl
 share/examples/redis/tests/sentinel/tests/05-manual.tcl
+share/examples/redis/tests/sentinel/tests/06-ckquorum.tcl
 share/examples/redis/tests/sentinel/tests/includes/init-tests.tcl
 share/examples/redis/tests/sentinel/tmp/.gitignore
 share/examples/redis/tests/support/cluster.tcl
