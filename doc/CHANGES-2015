@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2581 2015/06/09 13:10:28 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2582 2015/06/09 14:26:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/redis to 3.0.2 [fhajny 2015-06-09]
 	Updated net/rabbitmq to 3.5.3 [fhajny 2015-06-09]
 	Updated x11/autocutsel to 0.10.0 [ryoon 2015-06-09]
+	Updated textproc/sphinxsearch to 2.2.9 [fhajny 2015-06-09]
