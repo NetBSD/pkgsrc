@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2579 2015/06/09 12:18:08 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2580 2015/06/09 12:41:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4888,3 +4888,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/dia to 0.97.3 [wiz 2015-06-09]
 	Updated archivers/lz4 to 130 [fhajny 2015-06-09]
 	Updated databases/redis to 3.0.2 [fhajny 2015-06-09]
+	Updated net/rabbitmq to 3.5.3 [fhajny 2015-06-09]
