@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2576 2015/06/09 08:36:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2577 2015/06/09 08:55:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4885,3 +4885,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-hg-git version 0.8.1 [wiz 2015-06-08]
 	Updated devel/cmake to 3.2.3 [adam 2015-06-09]
 	Updated devel/py-subvertpy to 0.9.1 [wiz 2015-06-09]
+	Updated graphics/dia to 0.97.3 [wiz 2015-06-09]
