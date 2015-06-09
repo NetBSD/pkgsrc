@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2015/04/15 11:28:18 adam Exp $
+# $NetBSD: Makefile,v 1.98 2015/06/09 08:21:40 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.2
+DISTNAME=	cmake-${CMAKE_API}.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
