@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.99 2015/05/05 16:20:08 abs Exp $
+# $NetBSD: Makefile,v 1.100 2015/06/09 15:03:43 tnn Exp $
 
-DISTNAME=	openjdk-1.7.76-20150127
-PKGNAME=	openjdk7-1.7.76
-PKGREVISION=	4
+DISTNAME=	openjdk-1.7.80-20150609
+PKGNAME=	openjdk7-1.7.80
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
