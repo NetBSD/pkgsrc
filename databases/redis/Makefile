@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/04/13 11:33:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/09 12:17:56 fhajny Exp $
 
-DISTNAME=	redis-3.0.0
+DISTNAME=	redis-3.0.2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
