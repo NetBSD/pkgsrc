@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/10/19 21:25:47 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2015/06/09 22:08:41 szptvlfn Exp $
 
-SHA1 (parsec-3.1.7.tar.gz) = d342559a7d4117d8b7e3b4ee36980aaf64ba13c5
-RMD160 (parsec-3.1.7.tar.gz) = a4da38b8c74c529bfb2c75f92027d4b2f4470c8a
-Size (parsec-3.1.7.tar.gz) = 29556 bytes
+SHA1 (parsec-3.1.9.tar.gz) = 52eb8bf530111a2e92f710d14f0cf6e43eaaf741
+RMD160 (parsec-3.1.9.tar.gz) = 366255e648b0b9e20a555e942c71f53014a5a513
+Size (parsec-3.1.9.tar.gz) = 29668 bytes
