@@ -1,11 +1,11 @@
-$NetBSD: patch-bfd_cache.c,v 1.2 2014/05/12 13:17:01 jperkin Exp $
+$NetBSD: patch-bfd_cache.c,v 1.3 2015/06/09 20:24:39 ryoon Exp $
 
 Fix sign-compare on SunOS.
 Handle 256 file descriptor limit in 32-bit SunOS environment.
 
---- bfd/cache.c.orig	2013-11-04 15:33:37.000000000 +0000
+--- bfd/cache.c.orig	2014-10-14 07:32:02.000000000 +0000
 +++ bfd/cache.c
-@@ -51,6 +51,10 @@ SUBSECTION
+@@ -50,6 +50,10 @@ SUBSECTION
  #include <sys/mman.h>
  #endif
  
@@ -16,21 +16,7 @@ Handle 256 file descriptor limit in 32-bit SunOS environment.
  /* In some cases we can optimize cache operation when reopening files.
     For instance, a flush is entirely unnecessary if the file is already
     closed, so a flush would use CACHE_NO_OPEN.  Similarly, a seek using
-@@ -81,8 +85,13 @@ bfd_cache_max_open (void)
-       int max;
- #ifdef HAVE_GETRLIMIT
-       struct rlimit rlim;
-+#ifdef __sun
-+      if (getrlimit (RLIMIT_NOFILE, &rlim) == 0
-+	  && rlim.rlim_cur != (rlim_t)RLIM_INFINITY)
-+#else
-       if (getrlimit (RLIMIT_NOFILE, &rlim) == 0
- 	  && rlim.rlim_cur != RLIM_INFINITY)
-+#endif
- 	max = rlim.rlim_cur / 8;
-       else
- #endif /* HAVE_GETRLIMIT */
-@@ -91,6 +100,9 @@ bfd_cache_max_open (void)
+@@ -90,6 +94,9 @@ bfd_cache_max_open (void)
  #else
  	max = 10;
  #endif /* _SC_OPEN_MAX */
