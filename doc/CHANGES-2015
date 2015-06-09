@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2583 2015/06/09 14:56:08 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2584 2015/06/09 15:00:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4892,3 +4892,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/autocutsel to 0.10.0 [ryoon 2015-06-09]
 	Updated textproc/sphinxsearch to 2.2.9 [fhajny 2015-06-09]
 	Updated devel/py-argcomplete to 0.8.9 [fhajny 2015-06-09]
+	Updated sysutils/rsyslog to 8.10.0 [fhajny 2015-06-09]
