@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/06/07 15:52:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/06/09 00:57:36 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -117,6 +117,7 @@ ${GEM_LIBDIR}/lib/bundler/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/GeoTrustGlobalCA.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/certificate_manager.rb
+${GEM_LIBDIR}/lib/bundler/stub_specification.rb
 ${GEM_LIBDIR}/lib/bundler/templates/Executable
 ${GEM_LIBDIR}/lib/bundler/templates/Executable.standalone
 ${GEM_LIBDIR}/lib/bundler/templates/Gemfile
