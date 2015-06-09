@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 12:44:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/09 11:07:13 fhajny Exp $
 
-DISTNAME=	python-driver-2.5.0
+DISTNAME=	python-driver-2.5.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
 CATEGORIES=	databases
-MASTER_SITES=	-https://github.com/datastax/python-driver/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=datastax/}
+GITHUB_PROJECT=	python-driver
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://github.com/datastax/python-driver/
