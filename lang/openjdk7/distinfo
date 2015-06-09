@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2015/04/27 19:24:17 jperkin Exp $
+$NetBSD: distinfo,v 1.84 2015/06/09 15:03:43 tnn Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -36,9 +36,9 @@ Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 379
 SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 29bd7aa925941933b2da671340e1d325d9603e5d
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = b13d0e42839fb746d41f9001e488162b47803140
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-SHA1 (openjdk7/openjdk-1.7.76-20150127.tar.bz2) = 3210d939b5ac92f2a13c43f3616788c114958451
-RMD160 (openjdk7/openjdk-1.7.76-20150127.tar.bz2) = 683ce69d0cf0854c3ff38dd058338066e448bd62
-Size (openjdk7/openjdk-1.7.76-20150127.tar.bz2) = 52843102 bytes
+SHA1 (openjdk7/openjdk-1.7.80-20150609.tar.xz) = 90f79a0436d539f58fb5ac70dda1ab9e9fc96ae0
+RMD160 (openjdk7/openjdk-1.7.80-20150609.tar.xz) = 175e665bca448534195e0d9bd77f3d8dc66fcb07
+Size (openjdk7/openjdk-1.7.80-20150609.tar.xz) = 40534324 bytes
 SHA1 (openjdk7/rhino1_7R5.zip) = 39ada4cca8c7f651a68eda3f307ff9b68808f0ce
 RMD160 (openjdk7/rhino1_7R5.zip) = 04d47e3b108cfb62d8252c358b6f785c8268fc45
 Size (openjdk7/rhino1_7R5.zip) = 10227088 bytes
@@ -98,7 +98,6 @@ SHA1 (patch-hotspot_src_os_solaris_vm_decoder__solaris.cpp) = 3be8a96525ead1df18
 SHA1 (patch-hotspot_src_os_solaris_vm_os__solaris.cpp) = ea09ffd080fcf4c12b0b69cb622ee3945000cb68
 SHA1 (patch-hotspot_src_os_solaris_vm_perfMemory__solaris.cpp) = 1bc67dd849eec122162b71f21d204e5489555738
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = 869d8ec9dc6dae6e0b8a23fe44f2583747059553
-SHA1 (patch-hotspot_src_share_vm_runtime_arguments.cpp) = 797e0382e5d67180757070ae5b76577809f7ad15
 SHA1 (patch-hotspot_src_share_vm_runtime_os.cpp) = c7a33e791e3b5fec5cca9a5343c6d1f685e0cd4b
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = 1935e8225e08870fd912737de6dee3d599d260ab
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 30084c64570e420fbda8fbd36fcd4aa2641eab8e
@@ -139,7 +138,7 @@ SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c) = 8502fc7da30
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_jpegdecoder.c) = ca10ce2d79f11925b7ec52fc1b5dfad9b25ddddb
 SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 13aae05b649af0d1f908b0a9b6f60c55d8baa7d4
 SHA1 (patch-jdk_src_solaris_bin_ergo__i586.c) = 7b1d1c7f84e752ef7c53d5419dc3ab5213fec716
-SHA1 (patch-jdk_src_solaris_classes_java_lang_UNIXProcess.java.bsd) = 41edb9389d4900cd35e52bb29df96d474617a372
+SHA1 (patch-jdk_src_solaris_classes_java_lang_UNIXProcess.java.bsd) = 9f0b2ab0789367a2d46cbd4581144beec9e36680
 SHA1 (patch-jdk_src_solaris_classes_sun_net_PortConfig.java) = 265d9f401eff6a39d607c8c8a14ecb56c089ed44
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_ch_DefaultAsynchronousChannelProvider.java) = 02e51e702868e1cea4a2628eccbcaa81f231efce
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_fs_BsdFileSystemProvider.java) = b57411309b8d46de6a9ab3606d72690908989d50

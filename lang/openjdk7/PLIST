@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/05/05 17:07:39 abs Exp $
+@comment $NetBSD: PLIST,v 1.23 2015/06/09 15:03:43 tnn Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -611,7 +611,6 @@ java/openjdk7/jre/lib/zi/Antarctica/Rothera
 java/openjdk7/jre/lib/zi/Antarctica/Syowa
 java/openjdk7/jre/lib/zi/Antarctica/Troll
 java/openjdk7/jre/lib/zi/Antarctica/Vostok
-java/openjdk7/jre/lib/zi/Asia/Aden
 java/openjdk7/jre/lib/zi/Asia/Almaty
 java/openjdk7/jre/lib/zi/Asia/Amman
 java/openjdk7/jre/lib/zi/Asia/Anadyr
@@ -619,7 +618,6 @@ java/openjdk7/jre/lib/zi/Asia/Aqtau
 java/openjdk7/jre/lib/zi/Asia/Aqtobe
 java/openjdk7/jre/lib/zi/Asia/Ashgabat
 java/openjdk7/jre/lib/zi/Asia/Baghdad
-java/openjdk7/jre/lib/zi/Asia/Bahrain
 java/openjdk7/jre/lib/zi/Asia/Baku
 java/openjdk7/jre/lib/zi/Asia/Bangkok
 java/openjdk7/jre/lib/zi/Asia/Beirut
@@ -651,12 +649,10 @@ java/openjdk7/jre/lib/zi/Asia/Kolkata
 java/openjdk7/jre/lib/zi/Asia/Krasnoyarsk
 java/openjdk7/jre/lib/zi/Asia/Kuala_Lumpur
 java/openjdk7/jre/lib/zi/Asia/Kuching
-java/openjdk7/jre/lib/zi/Asia/Kuwait
 java/openjdk7/jre/lib/zi/Asia/Macau
 java/openjdk7/jre/lib/zi/Asia/Magadan
 java/openjdk7/jre/lib/zi/Asia/Makassar
 java/openjdk7/jre/lib/zi/Asia/Manila
-java/openjdk7/jre/lib/zi/Asia/Muscat
 java/openjdk7/jre/lib/zi/Asia/Nicosia
 java/openjdk7/jre/lib/zi/Asia/Novokuznetsk
 java/openjdk7/jre/lib/zi/Asia/Novosibirsk
