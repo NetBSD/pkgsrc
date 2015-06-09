@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2575 2015/06/09 08:22:35 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2576 2015/06/09 08:36:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4884,3 +4884,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/hs-hashable to 1.2.3.2 [szptvlfn 2015-06-08]
 	Added devel/py-hg-git version 0.8.1 [wiz 2015-06-08]
 	Updated devel/cmake to 3.2.3 [adam 2015-06-09]
+	Updated devel/py-subvertpy to 0.9.1 [wiz 2015-06-09]
