@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/01/18 18:36:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/06/09 08:55:22 wiz Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libart_filter.la
@@ -1900,6 +1900,7 @@ share/locale/sl/LC_MESSAGES/dia.mo
 share/locale/sq/LC_MESSAGES/dia.mo
 share/locale/sr/LC_MESSAGES/dia.mo
 share/locale/sr@Latn/LC_MESSAGES/dia.mo
+share/locale/sr@latin/LC_MESSAGES/dia.mo
 share/locale/sv/LC_MESSAGES/dia.mo
 share/locale/ta/LC_MESSAGES/dia.mo
 share/locale/th/LC_MESSAGES/dia.mo

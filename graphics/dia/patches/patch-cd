@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.1 2009/12/09 10:22:04 drochner Exp $
+$NetBSD: patch-cd,v 1.2 2015/06/09 08:55:23 wiz Exp $
 
---- doc/fr/Makefile.in.orig	2009-05-03 20:12:41.000000000 +0200
+--- doc/fr/Makefile.in.orig	2014-09-05 11:08:04.000000000 -0400
 +++ doc/fr/Makefile.in
-@@ -571,7 +571,7 @@ info: info-am
+@@ -674,7 +674,7 @@
  
  info-am:
  
@@ -10,4 +10,4 @@ $NetBSD: patch-cd,v 1.1 2009/12/09 10:22:04 drochner Exp $
 +install-data-am: install-data-local
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- 
+ install-dvi: install-dvi-am
