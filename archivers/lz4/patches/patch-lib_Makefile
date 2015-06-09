@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_Makefile,v 1.1 2015/03/23 22:24:11 fhajny Exp $
+$NetBSD: patch-lib_Makefile,v 1.2 2015/06/09 12:04:19 fhajny Exp $
 
 Make portable, use pkgsrc install scripts.
---- lib/Makefile.orig	2014-12-19 08:51:32.000000000 +0000
+--- lib/Makefile.orig	2015-05-26 01:13:50.000000000 +0000
 +++ lib/Makefile
-@@ -33,9 +33,9 @@
+@@ -32,9 +32,9 @@
  
  # Version numbers
- VERSION ?= 126
+ VERSION ?= 129
 -LIBVER_MAJOR=`sed -n '/define LZ4_VERSION_MAJOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < lz4.h`
 -LIBVER_MINOR=`sed -n '/define LZ4_VERSION_MINOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < lz4.h`
 -LIBVER_PATCH=`sed -n '/define LZ4_VERSION_RELEASE/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < lz4.h`
@@ -16,7 +16,7 @@ Make portable, use pkgsrc install scripts.
  LIBVER=$(LIBVER_MAJOR).$(LIBVER_MINOR).$(LIBVER_PATCH)
  
  DESTDIR?=
-@@ -80,28 +80,24 @@ clean:
+@@ -79,28 +79,24 @@ clean:
  	@echo Cleaning library completed
  
  
@@ -59,8 +59,8 @@ Make portable, use pkgsrc install scripts.
  
  uninstall:
 @@ -113,5 +109,3 @@ uninstall:
- 	@[ -f $(DESTDIR)$(INCLUDEDIR)/lz4.h ] && rm -f $(DESTDIR)$(INCLUDEDIR)/lz4.h
  	@[ -f $(DESTDIR)$(INCLUDEDIR)/lz4hc.h ] && rm -f $(DESTDIR)$(INCLUDEDIR)/lz4hc.h
+ 	@[ -f $(DESTDIR)$(INCLUDEDIR)/lz4frame.h ] && rm -f $(DESTDIR)$(INCLUDEDIR)/lz4frame.h
  	@echo lz4 libraries successfully uninstalled
 -
 -endif
