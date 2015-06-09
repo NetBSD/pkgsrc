@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/04/26 11:52:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2015/06/09 12:41:08 fhajny Exp $
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
-PKGREVISION=		1
 DISTNAME=		rabbitmq-server-${RMQ_VERSION}
 CATEGORIES=		net
 MASTER_SITES=		http://www.rabbitmq.com/releases/rabbitmq-server/v${RMQ_VERSION}/
