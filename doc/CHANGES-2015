@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2587 2015/06/09 20:25:20 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2588 2015/06/09 22:09:01 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4896,3 +4896,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/openjdk7 to 1.7.80 [tnn 2015-06-09]
 	Updated databases/py-barman to 1.4.1 [fhajny 2015-06-09]
 	Updated devel/binutils to 2.25 [ryoon 2015-06-09]
+	Updated textproc/hs-parsec to 3.1.9 [szptvlfn 2015-06-09]
