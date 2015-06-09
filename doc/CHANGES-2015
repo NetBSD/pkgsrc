@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2584 2015/06/09 15:00:44 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2585 2015/06/09 15:04:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/sphinxsearch to 2.2.9 [fhajny 2015-06-09]
 	Updated devel/py-argcomplete to 0.8.9 [fhajny 2015-06-09]
 	Updated sysutils/rsyslog to 8.10.0 [fhajny 2015-06-09]
+	Updated lang/openjdk7 to 1.7.80 [tnn 2015-06-09]
