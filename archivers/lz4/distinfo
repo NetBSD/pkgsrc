@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/03/23 22:24:11 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2015/06/09 12:04:19 fhajny Exp $
 
-SHA1 (lz4-r127.tar.gz) = 1aa7d4bb62eb79f88b33f86f9890dc9f96797af5
-RMD160 (lz4-r127.tar.gz) = 1f68ce2228d4d0c19c8ca72c7d2d08c45049e963
-Size (lz4-r127.tar.gz) = 139066 bytes
-SHA1 (patch-Makefile) = 93fd35f5d79431f9ebe3ba1344fd1d7e94a55075
-SHA1 (patch-lib_Makefile) = 7a30b62b8a1507e2c62503e73413a795717e089a
-SHA1 (patch-programs_Makefile) = 4f852a496b1acebfebce36f426c394702c5680d0
-SHA1 (patch-programs_frametest.c) = 0d25ab96df4b615a3e04abed116b6ec16de400df
-SHA1 (patch-programs_fuzzer.c) = 02598b7836b73467ce98d9de6bcf9eadc3fa14ce
+SHA1 (lz4-r130.tar.gz) = 5e1167e578639cb75e4103933dbf68e193a4d4c4
+RMD160 (lz4-r130.tar.gz) = c02f1852e17fea7f88f23cca5ca36a694b857d98
+Size (lz4-r130.tar.gz) = 129154 bytes
+SHA1 (patch-Makefile) = c6e5cd7c375aea8d37704f307bd6488f80a208bf
+SHA1 (patch-lib_Makefile) = 30caae8b487ceedb378c7d4c264cacbfaf3df3e9
+SHA1 (patch-programs_Makefile) = 9211e3718b52834fe461dc57ca486113659bbf8d
