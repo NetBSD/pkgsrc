@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:40 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/09 14:55:57 fhajny Exp $
 
-DISTNAME=	argcomplete-0.8.4
+DISTNAME=	argcomplete-0.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/a/argcomplete/
