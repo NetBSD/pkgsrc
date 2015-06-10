@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/24 08:17:40 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/10 10:37:06 adam Exp $
 
-DISTNAME=	mod_wsgi-4.4.8
+DISTNAME=	mod_wsgi-4.4.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/m/mod_wsgi/
