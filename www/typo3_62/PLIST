@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/06 14:29:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/06/10 13:02:03 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/.editorconfig
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
@@ -2977,6 +2977,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FolderTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Index/ExtractorRegistryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ProcessedFileRepositoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ProcessedFileTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Processing/LocalPreviewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Repository/AbstractRepositoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceCompressorTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceFactoryTest.php
@@ -5321,6 +5322,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/InitUpdateWizard.p
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/InitialDatabaseSchemaUpdate.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/InstallerProcessInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/MediaFlexformUpdate.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/ProcessedFileChecksumUpdate.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/ReferenceIntegrityUpdateWizard.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/RootTemplateUpdate.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Classes/Updates/RteFileLinksUpdateWizard.php
@@ -5370,6 +5372,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Step/StepCounter.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Tool/AllConfiguration/SubSection.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Tool/CleanUp/ClearTables.html
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Tool/CleanUp/ProcessedFiles.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Tool/CleanUp/ResetBackendUserUc.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Tool/CleanUp/Typo3TempFiles.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/Resources/Private/Partials/Action/Tool/Configuration/Charset.html
@@ -6934,6 +6937,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/structure/tool
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/structure/toolbar_username.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/structure/toolbar_workspace.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/structure/topbar.css
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/structure/various_fixes.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/visual/debug_panel.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/visual/element_button_back.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/Resources/Public/Css/visual/element_clipboard.css

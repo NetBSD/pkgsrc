@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/06 14:29:13 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/10 13:02:03 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -18,11 +18,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.7:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.7:../../archivers/php-zip/
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.7:../../archivers/php-zlib/
 
-VER=		6.2.12
+VER=		6.2.13
 NO_BUILD=	yes
 USE_TOOLS+=	bash:run pax
-
-PHP_VERSIONS_ACCEPTED=	54 55
 
 TYPO3NAME=	typo3_src-${VER}
 WRKSRC=		${WRKDIR}/${DISTNAME}
