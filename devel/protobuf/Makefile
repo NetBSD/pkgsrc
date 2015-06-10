@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/10/17 22:00:40 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/10 01:31:51 wiedi Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://protobuf.googlecode.com/files/
 
 MAINTAINER=	aran@100acres.us
 HOMEPAGE=	http://code.google.com/p/protobuf/

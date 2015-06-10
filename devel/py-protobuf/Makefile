@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/10/17 22:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/10 01:31:52 wiedi Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://protobuf.googlecode.com/files/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://code.google.com/p/protobuf/
