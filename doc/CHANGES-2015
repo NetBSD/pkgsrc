@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2589 2015/06/10 01:33:19 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.2590 2015/06/10 01:42:04 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4899,3 +4899,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/hs-parsec to 3.1.9 [szptvlfn 2015-06-09]
 	Updated devel/protobuf to 2.6.1 [wiedi 2015-06-10]
 	Updated devel/py-protobuf to 2.6.1 [wiedi 2015-06-10]
+	Added devel/protobuf-c version 1.1.1 [wiedi 2015-06-10]
