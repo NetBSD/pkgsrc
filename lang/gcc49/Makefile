@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/10 20:20:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/10 21:45:40 ryoon Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -133,7 +133,7 @@ BUILDLINK_DEPMETHOD.binutils=	full
 .    include "../../devel/binutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
-.else # Solaris 10
+.elif !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
 .  if exists(/usr/sfw/bin/gobjdump)
 CONFIGURE_ENV+=		OBJDUMP=/usr/sfw/bin/gobjdump
 .  endif
