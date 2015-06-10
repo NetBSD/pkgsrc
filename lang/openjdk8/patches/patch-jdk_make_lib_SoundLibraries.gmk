@@ -1,13 +1,13 @@
-$NetBSD: patch-jdk_make_lib_SoundLibraries.gmk,v 1.1 2015/02/08 08:41:25 tnn Exp $
+$NetBSD: patch-jdk_make_lib_SoundLibraries.gmk,v 1.2 2015/06/10 11:38:51 tnn Exp $
 
---- jdk/make/lib/SoundLibraries.gmk.orig	2015-02-02 15:37:11.000000000 +0000
+--- jdk/make/lib/SoundLibraries.gmk.orig	2015-06-09 13:56:39.000000000 +0000
 +++ jdk/make/lib/SoundLibraries.gmk
 @@ -76,7 +76,7 @@ ifeq ($(OPENJDK_TARGET_OS), aix)
  endif # OPENJDK_TARGET_OS aix
  
  ifeq ($(OPENJDK_TARGET_OS), bsd)
--  EXTRA_SOUND_JNI_LIBS += jsoundalsa
-+#  EXTRA_SOUND_JNI_LIBS += jsoundalsa
+-  ifneq ($(OPENJDK_TARGET_OS_VENDOR), openbsd)
++  ifeq (, $(filter $(OPENJDK_TARGET_OS_VENDOR), netbsd openbsd))
+     EXTRA_SOUND_JNI_LIBS += jsoundalsa
+   endif # OPENJDK_TARGET_OS_VENDOR openbsd
    LIBJSOUND_CFLAGS += -DX_PLATFORM=X_BSD
- endif # OPENJDK_TARGET_OS bsd
- 
