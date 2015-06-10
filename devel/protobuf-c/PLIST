@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/10 01:39:33 wiedi Exp $
+bin/protoc-c
+include/google/protobuf-c/protobuf-c.h
+include/protobuf-c/protobuf-c.h
+lib/libprotobuf-c.la
+lib/pkgconfig/libprotobuf-c.pc
