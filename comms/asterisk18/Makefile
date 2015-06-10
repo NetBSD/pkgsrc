@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.92 2015/03/15 22:26:26 jnemeth Exp $
+# $NetBSD: Makefile,v 1.92.2.1 2015/06/10 20:38:42 tron Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-1.8.32.2
+DISTNAME=	asterisk-1.8.32.3
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
+PKGREVISION=	3
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
@@ -16,9 +17,6 @@ OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
-
-# known to have issues on i386, block the package until the bug is fixed
-BROKEN_ON_PLATFORM=	NetBSD-*-i386
 
 CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
