@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2606 2015/06/10 17:13:54 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2607 2015/06/10 17:25:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4916,3 +4916,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/lua-gi to 0.9.0 [khorben 2015-06-10]
 	Updated net/powerdns to 3.4.5 [fhajny 2015-06-10]
 	Updated devel/libbson to 1.1.7 [fhajny 2015-06-10]
+	Updated databases/mongo-c-driver to 1.1.7 [fhajny 2015-06-10]
