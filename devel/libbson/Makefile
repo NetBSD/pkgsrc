@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2015/06/10 17:13:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/10 17:24:49 fhajny Exp $
 
 DISTNAME=	libbson-1.1.7
 CATEGORIES=	devel
-MASTER_SITES=	http://github.com/mongodb/libbson/releases/download/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://github.com/mongodb/libbson/
 COMMENT=	BSON utility library
 LICENSE=	apache-2.0
+
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
