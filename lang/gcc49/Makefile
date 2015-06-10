@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/11/28 11:47:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/10 20:20:42 ryoon Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -112,7 +112,7 @@ CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 MAKE_ENV+=		ac_cv_path_SED=${TOOLS_SED}
 MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
-.if ${OPSYS} == "SunOS"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.1[123456789]-*)
 # Causes multilib build problems with specific compiler combinations
 MAKE_ENV+=		gcc_cv_ld_as_needed=no
 # Determine whether to use binutils
@@ -133,6 +133,16 @@ BUILDLINK_DEPMETHOD.binutils=	full
 .    include "../../devel/binutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
+.else # Solaris 10
+.  if exists(/usr/sfw/bin/gobjdump)
+CONFIGURE_ENV+=		OBJDUMP=/usr/sfw/bin/gobjdump
+.  endif
+BUILDLINK_API_DEPENDS.binutils+=	binutils>=2.23
+BUILDLINK_DEPMETHOD.binutils=	full
+.  include "../../devel/binutils/buildlink3.mk"
+CONFIGURE_ENV+=		OBJCOPY=${PREFIX}/bin/gobjcopy
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
 .endif
 
 pre-configure:
