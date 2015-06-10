@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/07 09:51:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/06/10 17:34:25 fhajny Exp $
 bin/pwiz.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/playhouse/flask_utils.pyo
 ${PYSITELIB}/playhouse/gfk.py
 ${PYSITELIB}/playhouse/gfk.pyc
 ${PYSITELIB}/playhouse/gfk.pyo
+${PYSITELIB}/playhouse/hybrid.py
+${PYSITELIB}/playhouse/hybrid.pyc
+${PYSITELIB}/playhouse/hybrid.pyo
 ${PYSITELIB}/playhouse/kv.py
 ${PYSITELIB}/playhouse/kv.pyc
 ${PYSITELIB}/playhouse/kv.pyo
