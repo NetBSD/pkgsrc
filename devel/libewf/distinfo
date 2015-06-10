@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/10 20:15:24 pettai Exp $
+
+SHA1 (libewf-experimental-20150126.tar.gz) = 971f3fa3a270d7d53626c3d2617cc63a85f0023f
+RMD160 (libewf-experimental-20150126.tar.gz) = 1439855fda08c4bfc460a58b1f3e95e8f187570a
+Size (libewf-experimental-20150126.tar.gz) = 2130325 bytes
