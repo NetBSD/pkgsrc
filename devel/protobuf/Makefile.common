@@ -1,8 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2014/10/17 22:00:40 joerg Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/06/10 09:02:06 wiedi Exp $
 #
 # used by devel/protobuf/Makefile
 # used by devel/py-protobuf/Makefile
 
-DISTNAME=	protobuf-2.5.0
+DISTNAME=	protobuf-2.6.1
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
 DISTINFO_FILE=	${.CURDIR}/../../devel/protobuf/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/protobuf/patches
