@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/04/21 07:59:39 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/10 17:22:57 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-array-private.h
 include/libmongoc-1.0/mongoc-b64-private.h
@@ -204,6 +204,7 @@ man/man3/mongoc_gridfs_file_list_next.3
 man/man3/mongoc_gridfs_file_list_t.3
 man/man3/mongoc_gridfs_file_opt_t.3
 man/man3/mongoc_gridfs_file_readv.3
+man/man3/mongoc_gridfs_file_remove.3
 man/man3/mongoc_gridfs_file_save.3
 man/man3/mongoc_gridfs_file_seek.3
 man/man3/mongoc_gridfs_file_set_aliases.3
@@ -219,6 +220,7 @@ man/man3/mongoc_gridfs_find_one.3
 man/man3/mongoc_gridfs_find_one_by_filename.3
 man/man3/mongoc_gridfs_get_chunks.3
 man/man3/mongoc_gridfs_get_files.3
+man/man3/mongoc_gridfs_remove_by_filename.3
 man/man3/mongoc_gridfs_t.3
 man/man3/mongoc_index_opt_get_default.3
 man/man3/mongoc_index_opt_init.3
