@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2014/01/02 12:32:19 obache Exp $
+$NetBSD: patch-aa,v 1.3 2015/06/10 23:27:56 prlw1 Exp $
 
---- giscanner/ast.py.orig	2013-07-10 16:13:23.000000000 +0000
+--- giscanner/ast.py.orig	2015-03-04 18:30:22.000000000 +0000
 +++ giscanner/ast.py
 @@ -277,13 +277,21 @@ type_names['void'] = TYPE_NONE
  type_names['signed long long'] = TYPE_LONG_LONG
@@ -21,10 +21,10 @@ $NetBSD: patch-aa,v 1.2 2014/01/02 12:32:19 obache Exp $
 +type_names['__int64_t'] = TYPE_INT64
  type_names['uint64_t'] = TYPE_UINT64
 +type_names['__uint64_t'] = TYPE_UINT64
+ # C99 stdbool
+ type_names['bool'] = TYPE_BOOLEAN
  
- # A few additional GLib type aliases
- type_names['guchar'] = TYPE_UINT8
-@@ -319,7 +327,7 @@ type_names['FILE*'] = TYPE_ANY
+@@ -321,7 +329,7 @@ type_names['FILE*'] = TYPE_ANY
  # the relevant methods, but on the other hand, since these types are just
  # integers it's easy enough to expand them.
  type_names['size_t'] = type_names['gsize']
