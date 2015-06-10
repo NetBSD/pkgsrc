@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2107 2015/06/10 01:41:08 wiedi Exp $
+# $NetBSD: Makefile,v 1.2108 2015/06/10 20:17:24 pettai Exp $
 #
 
 COMMENT=	Development utilities
@@ -428,6 +428,7 @@ SUBDIR+=	libestr
 SUBDIR+=	libetm
 SUBDIR+=	libev
 SUBDIR+=	libevent
+SUBDIR+=	libewf
 SUBDIR+=	libexecinfo
 SUBDIR+=	libextractor
 SUBDIR+=	libf2c
