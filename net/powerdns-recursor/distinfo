@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/06/10 14:22:29 fhajny Exp $
+$NetBSD: distinfo,v 1.14 2015/06/10 14:40:07 fhajny Exp $
 
-SHA1 (pdns-recursor-3.7.2.tar.bz2) = 1780b34c7a0d38cc62f5581484cf25de91bbe1ca
-RMD160 (pdns-recursor-3.7.2.tar.bz2) = a87ac0783da412e24a00a6fca9f42fd70f63c706
-Size (pdns-recursor-3.7.2.tar.bz2) = 244582 bytes
+SHA1 (pdns-recursor-3.7.3.tar.bz2) = a09d960852ba67c1618dfa9258158a1145f657c1
+RMD160 (pdns-recursor-3.7.3.tar.bz2) = c73738ea571b8ce4ef4c01ee02c971c990d03f42
+Size (pdns-recursor-3.7.3.tar.bz2) = 245192 bytes
 SHA1 (patch-Makefile.in) = 4aa3fc487afab1795532cc6a09975fa6580625fe
 SHA1 (patch-dns.hh) = 7e9c1b10a066a605b74ebdbee2d894aed50f6c68
 SHA1 (patch-dnsparser.cc) = acd60fbeaa5ad3aa09db306eeaddb1071bbedfb7

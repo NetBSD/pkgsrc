@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2015/06/10 14:22:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/10 14:40:07 fhajny Exp $
 #
 
-DISTNAME=		pdns-recursor-3.7.2
+DISTNAME=		pdns-recursor-3.7.3
 CATEGORIES=		net
 MASTER_SITES=		http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -34,10 +34,12 @@ CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 
 .include "options.mk"
 
-pre-configure:
+post-extract:
 	${LN} -s FreeBSD.inc ${WRKSRC}/sysdeps/NetBSD.inc
-	${MV} ${WRKSRC}/pdns_recursor.1 ${WRKSRC}/pdns_recursor.8
-	${MV} ${WRKSRC}/rec_control.1 ${WRKSRC}/rec_control.8
+
+post-build:
+	${CP} ${WRKSRC}/pdns_recursor.1 ${WRKSRC}/pdns_recursor.8
+	${CP} ${WRKSRC}/rec_control.1 ${WRKSRC}/rec_control.8
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
