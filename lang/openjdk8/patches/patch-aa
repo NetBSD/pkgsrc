@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2015/03/02 04:26:40 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2015/06/10 11:38:51 tnn Exp $
 
 DragonFly support.
 Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2015-02-02 15:32:37.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2015-06-09 13:49:54.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -112,8 +112,11 @@
+@@ -113,8 +113,11 @@
  # include <vm/vm_param.h>
  #endif
  
@@ -17,8 +17,8 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 +#endif
  #endif
  
- #ifdef __APPLE__
-@@ -282,6 +285,7 @@ void os::Bsd::initialize_system_info() {
+ #ifdef __NetBSD__
+@@ -287,6 +290,7 @@ void os::Bsd::initialize_system_info() {
    size_t len;
    int cpu_val;
    julong mem_val;
@@ -26,7 +26,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  
    /* get processors count via hw.ncpus sysctl */
    mib[0] = CTL_HW;
-@@ -302,6 +306,8 @@ void os::Bsd::initialize_system_info() {
+@@ -307,6 +311,8 @@ void os::Bsd::initialize_system_info() {
  
  #if defined (HW_MEMSIZE) // Apple
    mib[1] = HW_MEMSIZE;
@@ -35,7 +35,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  #elif defined(HW_PHYSMEM) // Most of BSD
    mib[1] = HW_PHYSMEM;
  #elif defined(HW_REALMEM) // Old FreeBSD
-@@ -318,14 +324,11 @@ void os::Bsd::initialize_system_info() {
+@@ -323,14 +329,11 @@ void os::Bsd::initialize_system_info() {
         _physical_memory = 256*1024*1024;       // fallback (XXXBSD?)
    }
  
@@ -55,7 +55,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  #endif
  }
  
-@@ -377,7 +380,7 @@ void os::init_system_properties_values()
+@@ -382,7 +385,7 @@ void os::init_system_properties_values()
  //        ...
  //        7: The default directories, normally /lib and /usr/lib.
  #ifndef DEFAULT_LIBPATH
@@ -64,28 +64,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  #endif
  
  // Base path of extensions installed on the system.
-@@ -1236,7 +1239,7 @@ pid_t os::Bsd::gettid() {
-   guarantee(retval != 0, "just checking");
-   return retval;
- 
--#elif __FreeBSD__
-+#elif defined(__FreeBSD__)
- #if __FreeBSD_version > 900030
-   return ::pthread_getthreadid_np();
- #else
-@@ -1244,9 +1247,9 @@ pid_t os::Bsd::gettid() {
-   thr_self(&tid);
-   return (pid_t)tid;
- #endif
--#elif __OpenBSD__
-+#elif defined(__OpenBSD__)
-   retval = syscall(SYS_getthrid);
--#elif __NetBSD__
-+#elif defined(__NetBSD__)
-   retval = (pid_t) syscall(SYS__lwp_self);
- #endif
- 
-@@ -1561,7 +1564,9 @@ void * os::dll_load(const char *filename
+@@ -1566,7 +1569,9 @@ void * os::dll_load(const char *filename
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
@@ -95,7 +74,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -2092,6 +2097,33 @@ bool Semaphore::timedwait(unsigned int s
+@@ -2097,6 +2102,33 @@ bool Semaphore::timedwait(unsigned int s
  
  #else
  
@@ -129,7 +108,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  bool Semaphore::trywait() {
    return sem_trywait(&_semaphore) == 0;
  }
-@@ -2242,7 +2274,7 @@ static void warn_fail_commit_memory(char
+@@ -2247,7 +2279,7 @@ static void warn_fail_commit_memory(char
  //       problem.
  bool os::pd_commit_memory(char* addr, size_t size, bool exec) {
    int prot = exec ? PROT_READ|PROT_WRITE|PROT_EXEC : PROT_READ|PROT_WRITE;
@@ -138,7 +117,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
    // XXX: Work-around mmap/MAP_FIXED bug temporarily on OpenBSD
    if (::mprotect(addr, size, prot) == 0) {
      return true;
-@@ -2843,7 +2875,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -2850,7 +2882,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -147,7 +126,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
    return (ret == 0) ? OS_OK : OS_ERR;
  #elif defined(__APPLE__) || defined(__NetBSD__)
-@@ -2872,7 +2904,7 @@ OSReturn os::get_native_priority(const T
+@@ -2879,7 +2911,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;

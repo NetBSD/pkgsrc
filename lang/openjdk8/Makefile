@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/05/05 16:20:08 abs Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/10 11:38:51 tnn Exp $
 
-DISTNAME=	openjdk-1.8.31-20150207
-PKGNAME=	openjdk8-1.8.31
-PKGREVISION=	5
+DISTNAME=	openjdk-1.8.45-20150610
+PKGNAME=	openjdk8-1.8.45
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
