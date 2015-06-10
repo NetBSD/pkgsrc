@@ -1,22 +1,10 @@
-$NetBSD: patch-Makefile,v 1.2 2014/01/22 16:16:21 jperkin Exp $
+$NetBSD: patch-lgi_Makefile,v 1.1 2015/06/10 15:44:16 khorben Exp $
 
-Don't hardcode PREFIX
-Fix the LUA version to match the one installed by pkgsrc
 Don't use mkdir and cp directly, use BSD_INSTALL_* abstraction instead
 
---- lgi/Makefile.orig	2013-03-04 21:10:19.000000000 +0000
-+++ lgi/Makefile	2013-07-21 21:56:37.000000000 +0000
-@@ -5,8 +5,7 @@
- # License: MIT
- #
- 
--PREFIX = /usr/local
--LUA_VERSION=5.1
-+LUA_VERSION=@_LUA_DOT_VERSION@
- LUA_LIBDIR = $(PREFIX)/lib/lua/$(LUA_VERSION)
- LUA_SHAREDIR = $(PREFIX)/share/lua/$(LUA_VERSION)
- 
-@@ -74,11 +73,11 @@
+--- lgi/Makefile.orig	2015-03-23 22:48:44.000000000 +0000
++++ lgi/Makefile
+@@ -74,11 +74,11 @@ OVERRIDES = $(wildcard override/*.lua)
  CORESOURCES = $(wildcard *.lua)
  
  install : $(CORE) $(VERSION_FILE)
