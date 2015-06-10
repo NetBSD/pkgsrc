@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2610 2015/06/10 20:15:50 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2611 2015/06/10 23:00:36 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4920,3 +4920,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-peewee to 2.6.1 [fhajny 2015-06-10]
 	Updated sysutils/collectd to 5.5.0 [fhajny 2015-06-10]
 	Added devel/libewf version 20150126 [pettai 2015-06-10]
+	Updated devel/glib2 to 2.44.1 [prlw1 2015-06-10]
