@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2599 2015/06/10 14:23:31 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2600 2015/06/10 14:40:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/openjdk8 to 1.8.45 [tnn 2015-06-10]
 	Updated www/typo3_62 to 6.2.13 [taca 2015-06-10]
 	Updated net/powerdns-recursor to 3.7.2 [fhajny 2015-06-10]
+	Updated net/powerdns-recursor to 3.7.3 [fhajny 2015-06-10]
