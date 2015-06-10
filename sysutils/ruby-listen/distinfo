@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/03/13 16:05:19 taca Exp $
+$NetBSD: distinfo,v 1.3 2015/06/10 14:53:09 taca Exp $
 
-SHA1 (listen-2.9.0.gem) = 2a224b452e7ccf68aaee3138aad07857710b7fee
-RMD160 (listen-2.9.0.gem) = 45ac563dd09a595d1c4529dac8f06fc3675f0be6
-Size (listen-2.9.0.gem) = 26112 bytes
+SHA1 (listen-2.10.0.gem) = 3c09f2a3eb6fae4047dd7d505c971fafd0cae8a2
+RMD160 (listen-2.10.0.gem) = 21e3d6e9aee642e9e8d90a818dfda3b243c01487
+Size (listen-2.10.0.gem) = 26112 bytes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/04/16 10:53:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/10 14:53:09 taca Exp $
 
-DISTNAME=	listen-2.9.0
+DISTNAME=	listen-2.10.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_RUBYGEMS:=listen/}
+HOMEPAGE=	https://github.com/guard/listen
 COMMENT=	Listen to file modifications
 LICENSE=	mit
 
