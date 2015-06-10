@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2015/05/30 03:30:21 wen Exp $
+# $NetBSD: Makefile,v 1.51 2015/06/10 01:50:09 wiedi Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -33,6 +33,7 @@ SUBDIR+=	merkaartor
 SUBDIR+=	opencpn
 SUBDIR+=	opencpn-plugin-gshhs
 SUBDIR+=	opencpn-plugin-weather_routing
+SUBDIR+=	osm2pgsql
 SUBDIR+=	p5-Geo-Coordinates-UTM
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-Mercator
