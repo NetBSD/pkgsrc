@@ -1,10 +1,9 @@
-$NetBSD: patch-Makefile,v 1.1 2012/02/28 10:49:27 roy Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2015/06/10 14:22:29 fhajny Exp $
 
-Support conigurable installation location.
-Man pages belong in section 8.
+Use proper locations and install scripts.
 
---- Makefile.orig	2010-09-21 16:22:09.000000000 +0000
-+++ Makefile
+--- Makefile.in.orig	2015-04-21 13:02:57.000000000 +0000
++++ Makefile.in
 @@ -1,6 +1,8 @@
  # user editable stuff:
 -SBINDIR=/usr/sbin/
@@ -13,10 +12,10 @@ Man pages belong in section 8.
 +SBINDIR=$(PREFIX)/sbin/
 +BINDIR=$(PREFIX)/bin/
 +MANDIR=$(PREFIX)/share/man
- CONFIGDIR="/etc/powerdns/"
+ SYSCONFDIR=/etc/powerdns/
+ LOCALSTATEDIR=/var/run/
  OPTFLAGS?=-O3
- CXXFLAGS:= $(CXXFLAGS) -Wall $(OPTFLAGS) $(PROFILEFLAGS) $(ARCHFLAGS) -pthread
-@@ -10,6 +12,13 @@ LDFLAGS:=$(LDFLAGS) $(ARCHFLAGS) -pthrea
+@@ -12,6 +14,13 @@ STRIP_BINARIES?=1
  LINKCC=$(CXX)
  CC?=gcc
  
@@ -30,18 +29,27 @@ Man pages belong in section 8.
  # Lua 5.1 settings
  
  # static dependencies
-@@ -25,7 +34,7 @@ REC_CONTROL_OBJECTS=rec_channel.o rec_co
+@@ -30,7 +39,7 @@ REC_CONTROL_OBJECTS=rec_channel.o rec_co
  	unix_utility.o logger.o qtype.o
  
  # what we need 
--all: message pdns_recursor rec_control 
-+all: message pdns_recursor rec_control recursor.conf-dist
+-all: message version_generated.h build
++all: message version_generated.h build recursor.conf-dist
  
  # OS specific instructions
  -include sysdeps/$(shell uname).inc
-@@ -52,6 +61,10 @@ endif
+@@ -71,7 +80,7 @@ CFLAGS += -DSYSCONFDIR='"$(SYSCONFDIR)"'
  
- LDFLAGS += $(PROFILEFLAGS) $(STATICFLAGS)
+ # Version
+ build_date := $(shell LC_TIME=C date '+%Y%m%d%H%M%S')
+-build_host := $(shell id -u -n)@$(shell hostname -f)
++build_host := $(shell id -u -n)@$(shell hostname)
+ 
+ .PHONY: version_generated.h
+ version_generated.h:
+@@ -89,6 +98,10 @@ endef
+ 
+ export create_version_generated_h
  
 +recursor.conf-dist: pdns_recursor
 +	@# Not cross-compile friendly :/
@@ -50,32 +58,36 @@ Man pages belong in section 8.
  message: 
  	@echo
  	@echo PLEASE READ: If you get an error mentioning \#include '<boost/something.hpp>', please read README
-@@ -70,16 +83,14 @@ basic_checks: 
+@@ -107,20 +120,14 @@ basic_checks:
  	 fi
  
- install: all
+ install: build-stamp
 -	-mkdir -p $(DESTDIR)/$(SBINDIR)
--	mv pdns_recursor $(DESTDIR)/$(SBINDIR)
+-	cp pdns_recursor $(DESTDIR)/$(SBINDIR)
+-ifeq ($(STRIP_BINARIES), 1)
 -	strip $(DESTDIR)/$(SBINDIR)/pdns_recursor
+-endif
 -	mkdir -p $(DESTDIR)/$(BINDIR)
--	mv rec_control $(DESTDIR)/$(BINDIR)
+-	cp rec_control $(DESTDIR)/$(BINDIR)
+-ifeq ($(STRIP_BINARIES), 1)
 -	strip $(DESTDIR)/$(BINDIR)/rec_control
--	-mkdir -p $(DESTDIR)/$(CONFIGDIR)
--	$(DESTDIR)/$(SBINDIR)/pdns_recursor --config > $(DESTDIR)/$(CONFIGDIR)/recursor.conf-dist
+-endif
+-	-mkdir -p $(DESTDIR)/$(SYSCONFDIR)
+-	$(DESTDIR)/$(SBINDIR)/pdns_recursor --config > $(DESTDIR)/$(SYSCONFDIR)/recursor.conf-dist
 -	-mkdir -p $(DESTDIR)/usr/share/man/man1
 -	cp pdns_recursor.1 rec_control.1 $(DESTDIR)/usr/share/man/man1
 +	$(INSTALL_DIR) $(DESTDIR)/$(SBINDIR)
 +	$(INSTALL) pdns_recursor $(DESTDIR)/$(SBINDIR)
 +	$(INSTALL_DIR) $(DESTDIR)/$(BINDIR)
 +	$(INSTALL) rec_control $(DESTDIR)/$(BINDIR)
-+	$(INSTALL_DIR) $(DESTDIR)/$(CONFIGDIR)
-+	$(INSTALL_DATA) recursor.conf-dist $(DESTDIR)/$(CONFIGDIR)
++	$(INSTALL_DIR) $(DESTDIR)/$(SYSCONFDIR)
++	$(INSTALL_DATA) recursor.conf-dist $(DESTDIR)/$(SYSCONFDIR)
 +	$(INSTALL_DIR) $(DESTDIR)/$(MANDIR)/man8
 +	$(INSTALL_MAN) pdns_recursor.8 rec_control.8 $(DESTDIR)/$(MANDIR)/man8
  	$(OS_SPECIFIC_INSTALL)	
  
  clean: binclean
-@@ -94,7 +105,7 @@ dep:
+@@ -135,7 +142,7 @@ dep:
  -include dep
  
  optional:
