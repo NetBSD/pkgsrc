@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/02/13 13:55:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/06/10 14:45:09 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COMMITTERS.md
@@ -85,6 +85,7 @@ ${GEM_LIBDIR}/lib/facter/operatingsystem/base.rb
 ${GEM_LIBDIR}/lib/facter/operatingsystem/cumuluslinux.rb
 ${GEM_LIBDIR}/lib/facter/operatingsystem/implementation.rb
 ${GEM_LIBDIR}/lib/facter/operatingsystem/linux.rb
+${GEM_LIBDIR}/lib/facter/operatingsystem/osreleaselinux.rb
 ${GEM_LIBDIR}/lib/facter/operatingsystem/sunos.rb
 ${GEM_LIBDIR}/lib/facter/operatingsystem/vmkernel.rb
 ${GEM_LIBDIR}/lib/facter/operatingsystem/windows.rb
@@ -175,6 +176,7 @@ ${GEM_LIBDIR}/spec/fixtures/cpuinfo/bbg3-armel
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/beaglexm-armel
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/panda-armel
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/ppc64
+${GEM_LIBDIR}/spec/fixtures/cpuinfo/ppc64le
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/sparc
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/two_multicore-grep
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/two_singlecore-grep
@@ -272,6 +274,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/netmask/ifconfig_net_tools_1.60.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/netmask/ifconfig_ubuntu_1204.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/processors/os/darwin-system-profiler
 ${GEM_LIBDIR}/spec/fixtures/unit/selinux/selinux_sestatus
+${GEM_LIBDIR}/spec/fixtures/unit/selinux/selinux_sestatus2
 ${GEM_LIBDIR}/spec/fixtures/unit/util/dhcp_servers/route
 ${GEM_LIBDIR}/spec/fixtures/unit/util/dhcp_servers/route_nogw
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/centos-arp-ec2.out
@@ -324,6 +327,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/opensolaris_smbios
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/smartos_smbios
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/solaris_sunfire_v120_prtdiag
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/solaris_t5220_prtdiag
+${GEM_LIBDIR}/spec/fixtures/unit/util/operatingsystem/coreos.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/util/operatingsystem/cumuluslinux.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/util/operatingsystem/redhat-7.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/util/operatingsystem/sabayon.txt
