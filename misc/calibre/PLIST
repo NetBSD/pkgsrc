@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2015/05/28 07:04:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2015/06/10 09:00:40 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1151,6 +1151,7 @@ lib/calibre/calibre/plugins/_patiencediff_c.so
 lib/calibre/calibre/plugins/_regex.so
 lib/calibre/calibre/plugins/bzzdec.so
 lib/calibre/calibre/plugins/cPalmdoc.so
+lib/calibre/calibre/plugins/certgen.so
 lib/calibre/calibre/plugins/chm_extra.so
 lib/calibre/calibre/plugins/chmlib.so
 lib/calibre/calibre/plugins/freetype.so
@@ -1177,6 +1178,26 @@ lib/calibre/calibre/spell/__init__.py
 lib/calibre/calibre/spell/break_iterator.py
 lib/calibre/calibre/spell/dictionary.py
 lib/calibre/calibre/spell/import_from.py
+lib/calibre/calibre/srv/__init__.py
+lib/calibre/calibre/srv/bonjour.py
+lib/calibre/calibre/srv/errors.py
+lib/calibre/calibre/srv/handler.py
+lib/calibre/calibre/srv/http_request.py
+lib/calibre/calibre/srv/http_response.py
+lib/calibre/calibre/srv/loop.py
+lib/calibre/calibre/srv/opts.py
+lib/calibre/calibre/srv/pool.py
+lib/calibre/calibre/srv/pre_activated.py
+lib/calibre/calibre/srv/routes.py
+lib/calibre/calibre/srv/sendfile.py
+lib/calibre/calibre/srv/standalone.py
+lib/calibre/calibre/srv/tests/__init__.py
+lib/calibre/calibre/srv/tests/base.py
+lib/calibre/calibre/srv/tests/http.py
+lib/calibre/calibre/srv/tests/loop.py
+lib/calibre/calibre/srv/tests/main.py
+lib/calibre/calibre/srv/tests/routes.py
+lib/calibre/calibre/srv/utils.py
 lib/calibre/calibre/startup.py
 lib/calibre/calibre/test_build.py
 lib/calibre/calibre/translations/__init__.py
@@ -1187,6 +1208,7 @@ lib/calibre/calibre/utils/__init__.py
 lib/calibre/calibre/utils/apsw_shell.py
 lib/calibre/calibre/utils/bibtex.py
 lib/calibre/calibre/utils/browser.py
+lib/calibre/calibre/utils/certgen.py
 lib/calibre/calibre/utils/chm/__init__.py
 lib/calibre/calibre/utils/chm/chm.py
 lib/calibre/calibre/utils/chm/chmlib.py
@@ -2606,7 +2628,6 @@ share/calibre/recipes/marketing_sensoriale.recipe
 share/calibre/recipes/mateusz_czytania.recipe
 share/calibre/recipes/matichon.recipe
 share/calibre/recipes/max_planck.recipe
-share/calibre/recipes/maximum_pc.recipe
 share/calibre/recipes/mayra.recipe
 share/calibre/recipes/mdj.recipe
 share/calibre/recipes/media2.recipe
@@ -3520,4 +3541,3 @@ share/doc/calibre/Changelog.yaml
 share/doc/calibre/INSTALL
 share/doc/calibre/LICENSE.rtf
 share/doc/calibre/README.md
-@pkgdir lib/calibre/calibre/plugins/.libs
