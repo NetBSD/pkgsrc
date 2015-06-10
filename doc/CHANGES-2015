@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2604 2015/06/10 15:45:17 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.2605 2015/06/10 16:24:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4914,3 +4914,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/ruby-listen to 2.10.0 [taca 2015-06-10]
 	Updated time/ruby-tzinfo to 0.3.44 [taca 2015-06-10]
 	Updated devel/lua-gi to 0.9.0 [khorben 2015-06-10]
+	Updated net/powerdns to 3.4.5 [fhajny 2015-06-10]
