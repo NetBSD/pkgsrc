@@ -1,0 +1,3 @@
+Converts OSM planet.osm data to a PostgreSQL / PostGIS database suitable
+for specific applications like rendering into map tiles by Mapnik
+or geocoding with Nominatim.
