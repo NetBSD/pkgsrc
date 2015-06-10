@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/13 15:56:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/10 10:37:06 adam Exp $
 bin/mod_wsgi-express${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -53,6 +53,9 @@ ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.3.1.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.3.2.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.0.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.1.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.10.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.11.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.12.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.2.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.3.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.4.txt
@@ -60,6 +63,7 @@ ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.5.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.6.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.7.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.8.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.4.9.txt
 ${PYSITELIB}/mod_wsgi/docs/_static/ajax-loader.gif
 ${PYSITELIB}/mod_wsgi/docs/_static/basic.css
 ${PYSITELIB}/mod_wsgi/docs/_static/comment-bright.png
@@ -130,6 +134,9 @@ ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.3.1.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.3.2.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.0.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.1.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.10.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.11.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.12.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.2.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.3.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.4.html
@@ -137,6 +144,7 @@ ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.5.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.6.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.7.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.8.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.4.9.html
 ${PYSITELIB}/mod_wsgi/docs/search.html
 ${PYSITELIB}/mod_wsgi/docs/searchindex.js
 ${PYSITELIB}/mod_wsgi/images/__init__.py
