@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/09 09:10:47 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/10 01:31:52 wiedi Exp $
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
 ${PYSITELIB}/google/protobuf/__init__.pyo
@@ -59,6 +59,12 @@ ${PYSITELIB}/google/protobuf/message.pyo
 ${PYSITELIB}/google/protobuf/message_factory.py
 ${PYSITELIB}/google/protobuf/message_factory.pyc
 ${PYSITELIB}/google/protobuf/message_factory.pyo
+${PYSITELIB}/google/protobuf/pyext/__init__.py
+${PYSITELIB}/google/protobuf/pyext/__init__.pyc
+${PYSITELIB}/google/protobuf/pyext/__init__.pyo
+${PYSITELIB}/google/protobuf/pyext/cpp_message.py
+${PYSITELIB}/google/protobuf/pyext/cpp_message.pyc
+${PYSITELIB}/google/protobuf/pyext/cpp_message.pyo
 ${PYSITELIB}/google/protobuf/reflection.py
 ${PYSITELIB}/google/protobuf/reflection.pyc
 ${PYSITELIB}/google/protobuf/reflection.pyo
@@ -68,6 +74,12 @@ ${PYSITELIB}/google/protobuf/service.pyo
 ${PYSITELIB}/google/protobuf/service_reflection.py
 ${PYSITELIB}/google/protobuf/service_reflection.pyc
 ${PYSITELIB}/google/protobuf/service_reflection.pyo
+${PYSITELIB}/google/protobuf/symbol_database.py
+${PYSITELIB}/google/protobuf/symbol_database.pyc
+${PYSITELIB}/google/protobuf/symbol_database.pyo
+${PYSITELIB}/google/protobuf/text_encoding.py
+${PYSITELIB}/google/protobuf/text_encoding.pyc
+${PYSITELIB}/google/protobuf/text_encoding.pyo
 ${PYSITELIB}/google/protobuf/text_format.py
 ${PYSITELIB}/google/protobuf/text_format.pyc
 ${PYSITELIB}/google/protobuf/text_format.pyo
