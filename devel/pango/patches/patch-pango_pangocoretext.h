@@ -1,13 +1,13 @@
-$NetBSD: patch-pango_pangocoretext.h,v 1.2 2012/05/15 15:07:23 adam Exp $
+$NetBSD: patch-pango_pangocoretext.h,v 1.3 2015/06/10 23:30:24 prlw1 Exp $
 
 Use correct CoreText header on Mac OS X.
 
---- pango/pangocoretext.h.orig	2011-08-16 01:11:08.000000000 +0000
+--- pango/pangocoretext.h.orig	2015-05-27 17:38:43.000000000 +0000
 +++ pango/pangocoretext.h
-@@ -25,7 +25,9 @@
+@@ -24,7 +24,9 @@
+ #define __PANGOCORETEXT_H__
  
- #include <pango/pango-context.h>
- #include <pango/pango-font.h>
+ #include <pango/pango.h>
 -#include <Carbon/Carbon.h>
 +#ifndef __GI_SCANNER__
 +#include <ApplicationServices/ApplicationServices.h>
