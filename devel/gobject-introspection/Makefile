@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2014/10/07 23:29:49 prlw1 Exp $
+# $NetBSD: Makefile,v 1.43 2015/06/10 23:27:56 prlw1 Exp $
 
-DISTNAME=	gobject-introspection-1.42.0
+DISTNAME=	gobject-introspection-1.44.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--disable-doctool --disable-tests
 #.include "../../graphics/cairo-gobject/buildlink3.mk"
 #TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.36.0
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
