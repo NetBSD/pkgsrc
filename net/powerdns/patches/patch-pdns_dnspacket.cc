@@ -1,20 +1,20 @@
-$NetBSD: patch-pdns_dnspacket.cc,v 1.4 2015/03/27 23:37:52 rodent Exp $
+$NetBSD: patch-pdns_dnspacket.cc,v 1.5 2015/06/10 16:24:44 fhajny Exp $
 
 Resolve boost symbol ambiguity.
 Avoid ambiguous abs() call.
 
---- pdns/dnspacket.cc.orig	2015-03-02 13:17:09.000000000 +0000
+--- pdns/dnspacket.cc.orig	2015-04-23 08:09:54.000000000 +0000
 +++ pdns/dnspacket.cc
 @@ -312,7 +312,7 @@ void DNSPacket::wrapup()
            pos->content=".";
          
          pw.startRecord(pos->qname, pos->qtype.getCode(), pos->ttl, pos->qclass, (DNSPacketWriter::Place)pos->d_place); 
--        shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(pos->qtype.getCode(), 1, pos->content)); 
-+        boost::shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(pos->qtype.getCode(), 1, pos->content)); 
+-        shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(pos->qtype.getCode(), pos->qclass, pos->content));
++        boost::shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(pos->qtype.getCode(), pos->qclass, pos->content));
                drc->toPacket(pw);
          if(pw.size() + 20U > (d_tcp ? 65535 : getMaxReplyLen())) { // 20 = room for EDNS0
            pw.rollback();
-@@ -601,7 +601,7 @@ bool checkForCorrectTSIG(const DNSPacket
+@@ -622,7 +622,7 @@ bool checkForCorrectTSIG(const DNSPacket
    string message;
  
    q->getTSIGDetails(trc, keyname, &message);
