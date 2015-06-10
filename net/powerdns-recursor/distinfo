@@ -1,25 +1,20 @@
-$NetBSD: distinfo,v 1.12 2014/12/11 20:18:17 roy Exp $
+$NetBSD: distinfo,v 1.13 2015/06/10 14:22:29 fhajny Exp $
 
-SHA1 (pdns-recursor-3.3.tar.bz2) = 2f42955b8b8de355709e9072da2d5dbfadd7ffac
-RMD160 (pdns-recursor-3.3.tar.bz2) = 17bd7ac68892c3fca218c3dc3e70074dd9e748d6
-Size (pdns-recursor-3.3.tar.bz2) = 145785 bytes
-SHA1 (patch-CVE-2014-8601) = dae3dec54e53022183a8889eb1c741b00d08cd0b
-SHA1 (patch-Makefile) = 840d0be6dd7decf4b037efc4f9da05a97815ce8e
-SHA1 (patch-brg_endian.h) = 2fb9d3231e969b2be57d160b0952e11091ae6e26
-SHA1 (patch-cachecleaner.hh) = e9a9ade3fe63160eb897df959f6921b791122499
-SHA1 (patch-dns.hh) = 4d24a3c2bad973e05ed4b1c20bacce3b70992e5a
-SHA1 (patch-dnsparser.cc) = 257072b44d3d68ccd3b773cd4db7d0495f67d874
-SHA1 (patch-dnsparser.hh) = 85dad11c65d242630244a600ab5d857af591db9f
-SHA1 (patch-kqueuemplexer.cc) = e67ca0cc9703e5ba5f89f85eefd457c72495ca52
-SHA1 (patch-namespaces.hh) = 3c9b7c68a8576fd63747b6773549b98f30cba1a0
-SHA1 (patch-pdns__recursor.1) = 33170dd8ec13b0607ebf2ef8366656c565ca4664
-SHA1 (patch-pdns__recursor.cc) = 02baa1f54035aae06d241f1732bd165af60dd584
-SHA1 (patch-rec__channel.cc) = 3bd902cf9152cb90c3cb934263dd0482cac16d16
-SHA1 (patch-rec__channel__rec.cc) = a183984d31aad6d1665d11c40e872511c18bd740
-SHA1 (patch-rec__control.1) = e6ea8e7b93e23cd37bddb272e7cd64858cdf7f83
-SHA1 (patch-recpacketcache.hh) = aef8dbc00cfdd45e75f357b20e48e89ad26d5317
-SHA1 (patch-recursor__cache.cc) = b3ff1ae80e6ec592feb037cfa3964bcbc3798938
-SHA1 (patch-recursor__cache.hh) = f56f189f851fd1e764476851055f2a21e5acbb06
-SHA1 (patch-reczones.cc) = a8d0770d7db449e703e3d66fabfb21bcd02e049e
-SHA1 (patch-syncres.cc) = ca3ba23a8d36ca54832452dab47ceb50754e2c35
-SHA1 (patch-syncres.hh) = 4a85e102a2da9a3533ac019e394594834d430214
+SHA1 (pdns-recursor-3.7.2.tar.bz2) = 1780b34c7a0d38cc62f5581484cf25de91bbe1ca
+RMD160 (pdns-recursor-3.7.2.tar.bz2) = a87ac0783da412e24a00a6fca9f42fd70f63c706
+Size (pdns-recursor-3.7.2.tar.bz2) = 244582 bytes
+SHA1 (patch-Makefile.in) = 4aa3fc487afab1795532cc6a09975fa6580625fe
+SHA1 (patch-dns.hh) = 7e9c1b10a066a605b74ebdbee2d894aed50f6c68
+SHA1 (patch-dnsparser.cc) = acd60fbeaa5ad3aa09db306eeaddb1071bbedfb7
+SHA1 (patch-dnsparser.hh) = 289e271629969a50b41e805ae9f092ce75a1483f
+SHA1 (patch-iputils.hh) = 01134b045189653046036d7cb081a2f4d1ed27e4
+SHA1 (patch-kqueuemplexer.cc) = 1e3923aec5f81400eaedffa07c50762da7bdd5c8
+SHA1 (patch-namespaces.hh) = b7abe73b649569819fb070e10d3c926c95589bfb
+SHA1 (patch-pdns__recursor.1) = de3c561e770558850a9f1bdf13f60570d90a5643
+SHA1 (patch-pdns__recursor.cc) = b1d6ba1d1abfbd2759431caffc113bca22513abd
+SHA1 (patch-rec__channel.cc) = dee9fba4bbe240ca2070cdf8a8f303bb2e3bce61
+SHA1 (patch-rec__channel__rec.cc) = b0b277167fff8a080528f6a5cc75a81658f7c66f
+SHA1 (patch-rec__control.1) = 6a38b768cf5ab6f91fcf6eb7e4d5f0c62824f723
+SHA1 (patch-recursor__cache.cc) = c2f86bd695ed01ae6b415a61a099696c87f78d63
+SHA1 (patch-reczones.cc) = f187de66d755a8e134804282ceb7723aa9bd392e
+SHA1 (patch-sysdeps_SunOS.inc) = e2087d1469437c88266bc30566cf9d7415e7af69
