@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2615 2015/06/10 23:28:22 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2616 2015/06/10 23:30:44 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4925,3 +4925,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/at-spi2-core to 2.16.0 [prlw1 2015-06-10]
 	Updated devel/at-spi2-atk to 2.16.0 [prlw1 2015-06-10]
 	Updated devel/gobject-introspection to 1.44.0 [prlw1 2015-06-10]
+	Updated devel/pango to 1.37.0 [prlw1 2015-06-10]
