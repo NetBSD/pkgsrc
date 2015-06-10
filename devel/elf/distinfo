@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2013/10/16 12:32:34 roy Exp $
+$NetBSD: distinfo,v 1.6 2015/06/10 14:57:52 joerg Exp $
 
 SHA1 (elf-0.5.3.tar.gz) = 7cf3ea7d098b239c7b70405a2641dfcd55a49c37
 RMD160 (elf-0.5.3.tar.gz) = f3198b4183c9bd6d288013847e525c21c972afff
@@ -6,3 +6,5 @@ Size (elf-0.5.3.tar.gz) = 43552 bytes
 SHA1 (patch-aa) = a8e3d3e981e14fc3b3d51d7a9113f8a75225f2dc
 SHA1 (patch-configure) = ece37ad216857d56b6e4e67d593871c798626f75
 SHA1 (patch-configure.in) = 0347b9e69632e12018e40e50c66d8a141346b2a3
+SHA1 (patch-include_command.h) = 1797fa9010bbc04970c2a36a71f0c2ceb7085474
+SHA1 (patch-src_main.c) = a52da4f884bb62d62ce95af5ed9ad81acaeee7bc
