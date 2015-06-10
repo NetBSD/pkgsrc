@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/07/17 14:44:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/10 15:01:00 joerg Exp $
 bin/gupnp-dlna-info-2.0
 bin/gupnp-dlna-ls-profiles-2.0
 include/gupnp-dlna-2.0/libgupnp-dlna/gupnp-dlna-audio-information.h
@@ -84,3 +84,7 @@ share/gupnp-dlna-2.0/dlna-profiles/mpeg1.xml
 share/gupnp-dlna-2.0/dlna-profiles/mpeg4.xml
 share/gupnp-dlna-2.0/dlna-profiles/png.xml
 share/gupnp-dlna-2.0/dlna-profiles/wma.xml
+share/vala/vapi/gupnp-dlna-2.0.deps
+share/vala/vapi/gupnp-dlna-2.0.vapi
+share/vala/vapi/gupnp-dlna-gst-2.0.deps
+share/vala/vapi/gupnp-dlna-gst-2.0.vapi
