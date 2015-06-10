@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.45 2015/06/09 02:10:46 hiramatsu Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.46 2015/06/10 20:56:41 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -158,3 +158,5 @@ Pullup ticket #4721 - requested by taca
 lang/ruby21-base: build fix
 Pullup ticket #4722 - requested by taca
 lang/ruby22-base: build fix
+Pullup ticket #4736 - requested by manu
+comms/asterisk18: security update
