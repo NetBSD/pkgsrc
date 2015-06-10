@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2015/04/07 09:51:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/10 17:34:25 fhajny Exp $
 
-DISTNAME=	peewee-2.5.1
+DISTNAME=	peewee-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	-https://github.com/coleifer/peewee/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=coleifer/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.peewee-orm.com/
 COMMENT=	Small, expressive ORM for PostgreSQL, MySQL and SQLite
 LICENSE=	mit
+
+GITHUB_PROJECT=	peewee
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash
