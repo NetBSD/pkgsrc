@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2015/05/11 10:39:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/10 09:15:48 wiz Exp $
 
 DISTNAME=	sslh-1.17
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
-GITHUB_TAG=	v${PKGVERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rutschle.net/tech/sslh.shtml
