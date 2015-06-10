@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/09/18 08:33:32 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/06/10 14:47:59 taca Exp $
 
 SHA1 (ruby-libnotify-0.5.1.tar.gz) = 49c03da48c80ce962d164338e030114bd99300ef
 RMD160 (ruby-libnotify-0.5.1.tar.gz) = 97285d65f55938b9902841e76e8da69108313a06
 Size (ruby-libnotify-0.5.1.tar.gz) = 25822 bytes
-SHA1 (patch-ext_extconf.rb) = 62094980312bac7ac3f9c8bff423056aefaea3ec
+SHA1 (patch-ext_extconf.rb) = 0f88e4c467f70d7e70c787b3f9bffdcc7f573a0b
 SHA1 (patch-ext_rnotify.c) = f737a74df9eb3556cff6e4f64cbf25413073e30f
+SHA1 (patch-setup.rb) = 1d00946ff78c337e7f8bfb7a4825773f6014f1ac

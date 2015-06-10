@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_extconf.rb,v 1.1 2013/09/18 08:33:32 obache Exp $
+$NetBSD: patch-ext_extconf.rb,v 1.2 2015/06/10 14:47:59 taca Exp $
 
 * not using gems in pkgsrc.
 
@@ -13,3 +13,12 @@ $NetBSD: patch-ext_extconf.rb,v 1.1 2013/09/18 08:33:32 obache Exp $
  begin
    require 'mkmf-gnome2'
    require 'gtk2'
+@@ -43,7 +41,7 @@ end
+ if check_required_version("libnotify", 0, 7, 0) == true
+   if have_library("notify", "notify_init") == true
+     $CFLAGS << ' -DDEBUG' if type == 0
+-    $CFLAGS << ' -Wall' << " -I#{Config::CONFIG["sitearchdir"]} " << PKGConfig.cflags("libnotify")
++    $CFLAGS << ' -Wall' << " -I#{RbConfig::CONFIG["sitearchdir"]} " << PKGConfig.cflags("libnotify")
+     $LIBS << ' ' << PKGConfig.libs("libnotify")
+     check_set_app_name_libnotify
+     check_set_notification_name_libnotify
