@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2106 2015/06/08 21:29:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2107 2015/06/10 01:41:08 wiedi Exp $
 #
 
 COMMENT=	Development utilities
@@ -1560,6 +1560,7 @@ SUBDIR+=	popt
 SUBDIR+=	poxml
 SUBDIR+=	prcs
 SUBDIR+=	protobuf
+SUBDIR+=	protobuf-c
 SUBDIR+=	pstreams
 SUBDIR+=	psvn
 SUBDIR+=	pth
