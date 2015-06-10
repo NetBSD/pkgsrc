@@ -1,8 +1,10 @@
-$NetBSD: patch-dnsparser.hh,v 1.1 2013/06/10 18:59:09 joerg Exp $
+$NetBSD: patch-dnsparser.hh,v 1.2 2015/06/10 14:22:29 fhajny Exp $
 
---- dnsparser.hh.orig	2013-05-10 14:52:18.000000000 +0000
+Straighten Boost namespace.
+
+--- dnsparser.hh.orig	2015-04-21 13:02:57.000000000 +0000
 +++ dnsparser.hh
-@@ -167,7 +167,7 @@ public:
+@@ -183,7 +183,7 @@ public:
      return record;
    }
  
@@ -11,7 +13,7 @@ $NetBSD: patch-dnsparser.hh,v 1.1 2013/06/10 18:59:09 joerg Exp $
  
    void doRecordCheck(const struct DNSRecord&){}
  
-@@ -305,9 +305,9 @@ public:
+@@ -327,9 +327,9 @@ public:
    //! All answers contained in this packet
    answers_t d_answers;
  

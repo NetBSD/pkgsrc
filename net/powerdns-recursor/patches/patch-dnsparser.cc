@@ -1,8 +1,10 @@
-$NetBSD: patch-dnsparser.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
+$NetBSD: patch-dnsparser.cc,v 1.2 2015/06/10 14:22:29 fhajny Exp $
 
---- dnsparser.cc.orig	2010-09-21 16:22:09.000000000 +0000
+Straighten Boost namespace.
+
+--- dnsparser.cc.orig	2015-04-21 13:02:57.000000000 +0000
 +++ dnsparser.cc
-@@ -106,7 +106,7 @@ static const string EncodeDNSLabel(const
+@@ -109,7 +109,7 @@ static const string EncodeDNSLabel(const
  }
  
  
@@ -11,7 +13,7 @@ $NetBSD: patch-dnsparser.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
  {
    dnsheader dnsheader;
    memset(&dnsheader, 0, sizeof(dnsheader));
-@@ -140,7 +140,7 @@ shared_ptr<DNSRecordContent> DNSRecordCo
+@@ -143,7 +143,7 @@ shared_ptr<DNSRecordContent> DNSRecordCo
    memcpy(&packet[pos], serialized.c_str(), serialized.size()); pos+=(uint16_t)serialized.size();
  
    MOADNSParser mdp((char*)&*packet.begin(), (unsigned int)packet.size());

@@ -1,8 +1,10 @@
-$NetBSD: patch-recursor__cache.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
+$NetBSD: patch-recursor__cache.cc,v 1.2 2015/06/10 14:22:29 fhajny Exp $
 
---- recursor_cache.cc.orig	2010-09-21 16:22:09.000000000 +0000
+Straighten Boost namespace.
+
+--- recursor_cache.cc.orig	2015-04-21 13:02:57.000000000 +0000
 +++ recursor_cache.cc
-@@ -52,7 +52,7 @@ DNSResourceRecord String2DNSRR(const str
+@@ -53,7 +53,7 @@ DNSResourceRecord String2DNSRR(const str
        rr.content=".";
    }
    else {
@@ -11,7 +13,7 @@ $NetBSD: patch-recursor__cache.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
      rr.content=regen->getZoneRepresentation();
    }
    rr.content.reserve(0);
-@@ -78,7 +78,7 @@ string DNSRR2String(const DNSResourceRec
+@@ -79,7 +79,7 @@ string DNSRR2String(const DNSResourceRec
        return simpleCompress(rr.content, rr.qname);
    else {
      string ret;
@@ -20,12 +22,3 @@ $NetBSD: patch-recursor__cache.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
      ret=drc->serialize(rr.qname);
    //  cerr<<"stored '"<<rr.qname<<" '"<<rr.qtype.getName()<<"' '"<<rr.content<<"' as "<<ret.size()<<" bytes"<<endl;
      return ret;
-@@ -186,7 +186,7 @@ bool MemRecursorCache::attemptToRefreshN
- void MemRecursorCache::replace(time_t now, const string &qname, const QType& qt,  const set<DNSResourceRecord>& content, bool auth)
- {
-   d_cachecachevalid=false;
--  tuple<string, uint16_t> key=make_tuple(qname, qt.getCode());
-+  boost::tuple<string, uint16_t> key=boost::make_tuple(qname, qt.getCode());
-   cache_t::iterator stored=d_cache.find(key);
- 
-   bool isNew=false;

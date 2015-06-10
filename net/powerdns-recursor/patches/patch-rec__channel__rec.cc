@@ -1,9 +1,11 @@
-$NetBSD: patch-rec__channel__rec.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
+$NetBSD: patch-rec__channel__rec.cc,v 1.2 2015/06/10 14:22:29 fhajny Exp $
 
---- rec_channel_rec.cc.orig	2010-09-21 16:22:09.000000000 +0000
+Straighten Boost namespace.
+
+--- rec_channel_rec.cc.orig	2015-04-21 13:02:57.000000000 +0000
 +++ rec_channel_rec.cc
-@@ -27,7 +27,7 @@ using namespace std;
- #include "namespaces.hh"
+@@ -31,7 +31,7 @@ pthread_mutex_t g_carbon_config_lock=PTH
+ 
  map<string, const uint32_t*> d_get32bitpointers;
  map<string, const uint64_t*> d_get64bitpointers;
 -map<string, function< uint32_t() > >  d_get32bitmembers;
@@ -11,7 +13,7 @@ $NetBSD: patch-rec__channel__rec.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
  
  void addGetStat(const string& name, const uint32_t* place)
  {
-@@ -37,7 +37,7 @@ void addGetStat(const string& name, cons
+@@ -41,7 +41,7 @@ void addGetStat(const string& name, cons
  {
    d_get64bitpointers[name]=place;
  }
@@ -20,12 +22,12 @@ $NetBSD: patch-rec__channel__rec.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
  {
    d_get32bitmembers[name]=f;
  }
-@@ -61,7 +61,7 @@ string getAllStats()
-   string ret;
+@@ -66,7 +66,7 @@ map<string,string> getAllStatsMap()
+   
    pair<string, const uint32_t*> the32bits;
    pair<string, const uint64_t*> the64bits;
 -  pair<string, function< uint32_t() > >  the32bitmembers;
 +  pair<string, boost::function< uint32_t() > >  the32bitmembers;
+   
    BOOST_FOREACH(the32bits, d_get32bitpointers) {
-     ret += the32bits.first + "\t" + lexical_cast<string>(*the32bits.second) + "\n";
-   }
+     ret.insert(make_pair(the32bits.first, lexical_cast<string>(*the32bits.second)));
