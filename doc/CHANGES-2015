@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2588 2015/06/09 22:09:01 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.2589 2015/06/10 01:33:19 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4897,3 +4897,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-barman to 1.4.1 [fhajny 2015-06-09]
 	Updated devel/binutils to 2.25 [ryoon 2015-06-09]
 	Updated textproc/hs-parsec to 3.1.9 [szptvlfn 2015-06-09]
+	Updated devel/protobuf to 2.6.1 [wiedi 2015-06-10]
+	Updated devel/py-protobuf to 2.6.1 [wiedi 2015-06-10]
