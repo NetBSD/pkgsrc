@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2601 2015/06/10 14:45:38 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2602 2015/06/10 14:54:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4911,3 +4911,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/powerdns-recursor to 3.7.2 [fhajny 2015-06-10]
 	Updated net/powerdns-recursor to 3.7.3 [fhajny 2015-06-10]
 	Updated sysutils/ruby-facter to 2.4.4 [taca 2015-06-10]
+	Updated sysutils/ruby-listen to 2.10.0 [taca 2015-06-10]
