@@ -1,4 +1,4 @@
-/* $NetBSD: cvsdiff2patch.c,v 1.1.1.1 2007/11/29 10:11:13 bjs Exp $ */
+/* $NetBSD: cvsdiff2patch.c,v 1.2 2015/06/10 11:45:56 richard Exp $ */
 
 /*
  * Copyright (c) 2003 Research Engineering Development Inc.
@@ -26,17 +26,25 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: cvsdiff2patch.c,v 1.1.1.1 2007/11/29 10:11:13 bjs Exp $
+ * $Id: cvsdiff2patch.c,v 1.2 2015/06/10 11:45:56 richard Exp $
  */
 
 /*
  * Convert crappy CVS diffs into something that patch(1) understands.
  */
-
+#ifdef HAVE_NBCOMPAT_H
+#include <nbcompat/config.h>	/* needed for the other headers */
+#include <nbcompat/cdefs.h>	/* needed for the other headers */
+#include <nbcompat/stdio.h>
+#include <nbcompat/string.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/err.h>
+#else
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <err.h>
+#endif
 
 char *	xstrdup(const char *str);
 int	fileline(const char *line, int ch);
