@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2015/02/13 13:55:58 taca Exp $
+$NetBSD: distinfo,v 1.23 2015/06/10 14:45:09 taca Exp $
 
-SHA1 (facter-2.4.1.gem) = 59b7b0e51f03252c6aafc0eca57a08e0534e8d27
-RMD160 (facter-2.4.1.gem) = 2c2a720cec110a6a93106ff30d1669c9eb076df4
-Size (facter-2.4.1.gem) = 236544 bytes
+SHA1 (facter-2.4.4.gem) = 09c835e91d51f6b7d334d48bbd9a48e3f595dca1
+RMD160 (facter-2.4.4.gem) = 01a4f71344f4552c7caa88ec219605d4eb90f272
+Size (facter-2.4.4.gem) = 245760 bytes
