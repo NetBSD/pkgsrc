@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2014/06/27 00:41:47 schmonz Exp $
-bin/pango-querymodules
+@comment $NetBSD: PLIST,v 1.63 2015/06/10 23:30:24 prlw1 Exp $
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-bidi-type.h
@@ -43,16 +42,10 @@ lib/libpango-1.0.la
 lib/libpangocairo-1.0.la
 lib/libpangoft2-1.0.la
 ${PLIST.x11}lib/libpangoxft-1.0.la
-lib/pango/1.8.0/modules/pango-arabic-lang.la
-${PLIST.thai}lib/pango/1.8.0/modules/pango-thai-lang.la
-${PLIST.coretext}lib/pango/1.8.0/modules/pango-basic-coretext.la
-lib/pango/1.8.0/modules/pango-basic-fc.la
-lib/pango/1.8.0/modules/pango-indic-lang.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 ${PLIST.x11}lib/pkgconfig/pangoxft.pc
 lib/pkgconfig/pangoft2.pc
-man/man1/pango-querymodules.1
 man/man1/pango-view.1
 share/gir-1.0/Pango-1.0.gir
 share/gir-1.0/PangoCairo-1.0.gir
@@ -81,6 +74,7 @@ share/gtk-doc/html/pango/api-index-1-31-0.html
 share/gtk-doc/html/pango/api-index-1-32-4.html
 share/gtk-doc/html/pango/api-index-1-32.html
 share/gtk-doc/html/pango/api-index-1-34.html
+share/gtk-doc/html/pango/api-index-1-38.html
 share/gtk-doc/html/pango/api-index-1-4.html
 share/gtk-doc/html/pango/api-index-1-6.html
 share/gtk-doc/html/pango/api-index-1-8.html
@@ -114,7 +108,6 @@ share/gtk-doc/html/pango/pango-Vertical-Text.html
 share/gtk-doc/html/pango/pango-Win32-Fonts-and-Rendering.html
 share/gtk-doc/html/pango/pango-Xft-Fonts-and-Rendering.html
 share/gtk-doc/html/pango/pango-hierarchy.html
-share/gtk-doc/html/pango/pango-querymodules.html
 share/gtk-doc/html/pango/pango.devhelp2
 share/gtk-doc/html/pango/pango.html
 share/gtk-doc/html/pango/rendering.html
@@ -122,6 +115,5 @@ share/gtk-doc/html/pango/right-insensitive.png
 share/gtk-doc/html/pango/right.png
 share/gtk-doc/html/pango/rotated-text.png
 share/gtk-doc/html/pango/style.css
-share/gtk-doc/html/pango/tools.html
 share/gtk-doc/html/pango/up-insensitive.png
 share/gtk-doc/html/pango/up.png
