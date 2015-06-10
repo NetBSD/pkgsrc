@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/06/10 14:21:37 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/10 20:05:26 fhajny Exp $
 
 COLLECTD_PACKAGE=	postgresql
 
 PKGNAME=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}${PGSQL_VERSION}/}
-PKGREVISION=		1
 COMMENT=		Statistics collection daemon - postgresql plugin
 
 .include "../../sysutils/collectd/Makefile.common"

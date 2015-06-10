@@ -1,10 +1,10 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2014/02/17 11:21:55 fhajny Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2015/06/10 20:05:26 fhajny Exp $
 
 Use a reasonable db dir.
 Install config file into examples.
---- src/Makefile.in.orig	2014-01-26 08:09:56.685201776 +0000
+--- src/Makefile.in.orig	2015-05-27 07:51:49.001922959 +0000
 +++ src/Makefile.in
-@@ -2230,6 +2230,7 @@ srcdir = @srcdir@
+@@ -2424,6 +2424,7 @@ srcdir = @srcdir@
  subdirs = @subdirs@
  sys_symbol_underscore = @sys_symbol_underscore@
  sysconfdir = @sysconfdir@
@@ -12,16 +12,16 @@ Install config file into examples.
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -2239,7 +2240,7 @@ SUBDIRS = libcollectdclient $(am__append
- AM_CPPFLAGS = -DPREFIX='"${prefix}"' \
+@@ -2434,7 +2435,7 @@ PLUGIN_LDFLAGS = -module -avoid-version
+ AM_CPPFLAGS = -I$(srcdir)/daemon -DPREFIX='"${prefix}"' \
  	-DCONFIGFILE='"${sysconfdir}/${PACKAGE_NAME}.conf"' \
  	-DLOCALSTATEDIR='"${localstatedir}"' \
 -	-DPKGLOCALSTATEDIR='"${localstatedir}/lib/${PACKAGE_NAME}"' \
 +	-DPKGLOCALSTATEDIR='"${localstatedir}/db/${PACKAGE_NAME}"' \
  	$(am__append_2) -DPLUGINDIR='"${pkglibdir}"' \
  	-DPKGDATADIR='"${pkgdatadir}"'
- collectd_SOURCES = collectd.c collectd.h \
-@@ -4856,13 +4857,8 @@ uninstall-man: uninstall-man1 uninstall-
+ AUTOMAKE_OPTIONS = subdir-objects
+@@ -5190,13 +5191,8 @@ uninstall-man: uninstall-man1 uninstall-
  @HAVE_PROTOC_C_TRUE@	protoc-c -I$(srcdir) --c_out . $(srcdir)/riemann.proto
  
  install-exec-hook:
@@ -37,7 +37,7 @@ Install config file into examples.
  	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
  	$(INSTALL) -m 0644 $(srcdir)/types.db $(DESTDIR)$(pkgdatadir)/types.db;
  	$(INSTALL) -m 0644 $(srcdir)/postgresql_default.conf \
-@@ -4870,7 +4866,7 @@ install-exec-hook:
+@@ -5204,7 +5200,7 @@ install-exec-hook:
  
  uninstall-hook:
  	rm -f $(DESTDIR)$(pkgdatadir)/types.db;
