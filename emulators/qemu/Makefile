@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2015/05/16 03:19:54 khorben Exp $
+# $NetBSD: Makefile,v 1.139 2015/06/10 20:40:11 ryoon Exp $
 
 DISTNAME=	qemu-2.3.0
 PKGREVISION=	1
@@ -55,7 +55,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
 UE_ARCHS+=		alpha arm armeb cris i386 m68k microblaze mips mipsel
 UE_ARCHS+=		or32 ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
-UE_ARCHS+=		sparc64 x86_64 microblazeel s390x tricore unicore32
+UE_ARCHS+=		sparc64 x86_64 microblazeel s390x unicore32
 
 .if ${OPSYS} == "NetBSD"
 .  if (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*))
