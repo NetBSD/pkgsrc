@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2612 2015/06/10 23:08:36 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2613 2015/06/10 23:12:27 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/libewf version 20150126 [pettai 2015-06-10]
 	Updated devel/glib2 to 2.44.1 [prlw1 2015-06-10]
 	Updated devel/atk to 2.16.0 [prlw1 2015-06-10]
+	Updated devel/at-spi2-core to 2.16.0 [prlw1 2015-06-10]
