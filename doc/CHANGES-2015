@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2593 2015/06/10 08:19:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2594 2015/06/10 09:00:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added geography/osm2pgsql version 0.87.3 [wiedi 2015-06-10]
 	Updated www/py-uwsgi to 2.0.10nb1 [rodent 2015-06-10]
 	Updated textproc/p5-Encode-Locale to 1.05 [wiz 2015-06-10]
+	Updated misc/calibre to 2.30.0 [wiz 2015-06-10]
