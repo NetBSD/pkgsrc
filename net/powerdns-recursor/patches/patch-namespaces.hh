@@ -1,8 +1,10 @@
-$NetBSD: patch-namespaces.hh,v 1.1 2013/06/26 15:52:22 joerg Exp $
+$NetBSD: patch-namespaces.hh,v 1.2 2015/06/10 14:22:29 fhajny Exp $
 
---- namespaces.hh.orig	2010-09-21 16:22:09.000000000 +0000
+Straighten Boost namespace.
+
+--- namespaces.hh.orig	2015-04-21 13:02:57.000000000 +0000
 +++ namespaces.hh
-@@ -16,9 +16,7 @@ using boost::tie;
+@@ -46,9 +46,7 @@ using boost::tie;
  using boost::shared_ptr;
  using boost::shared_array;
  using boost::scoped_array;

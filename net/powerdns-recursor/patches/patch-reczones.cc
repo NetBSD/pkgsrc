@@ -1,9 +1,11 @@
-$NetBSD: patch-reczones.cc,v 1.1 2013/06/26 15:52:22 joerg Exp $
+$NetBSD: patch-reczones.cc,v 1.2 2015/06/10 14:22:29 fhajny Exp $
 
---- reczones.cc.orig	2010-09-21 16:22:09.000000000 +0000
+Straighten Boost namespace.
+
+--- reczones.cc.orig	2015-04-21 13:02:57.000000000 +0000
 +++ reczones.cc
-@@ -343,7 +343,7 @@ SyncRes::domainmap_t* parseAuthAndForwar
-       throw AhuException("Error opening forward-zones-file '"+::arg()["forward-zones-file"]+"': "+stringerror());
+@@ -378,7 +378,7 @@ SyncRes::domainmap_t* parseAuthAndForwar
+       throw PDNSException("Error opening forward-zones-file '"+::arg()["forward-zones-file"]+"': "+stringerror());
      }
  
 -    shared_ptr<FILE> fp=shared_ptr<FILE>(rfp, fclose);
