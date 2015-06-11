@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2647 2015/06/11 17:22:41 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2648 2015/06/11 17:28:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4959,3 +4959,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-sinatra-contrib to 1.4.4 [taca 2015-06-11]
 	Updated textproc/ruby-multi_json to 1.11.1 [taca 2015-06-11]
 	Updated devel/ruby-shoulda-matchers to 2.8.0 [taca 2015-06-11]
+	Updated misc/ruby-ohai to 8.4.0 [taca 2015-06-11]
