@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2014/09/25 12:25:02 fhajny Exp $
+$NetBSD: distinfo,v 1.19 2015/06/11 16:43:32 taca Exp $
 
 SHA1 (clearsilver-0.10.5.tar.gz) = 138865dc91e27328fe29fcaaac1bc6558f19dd75
 RMD160 (clearsilver-0.10.5.tar.gz) = bd5c616f326b544df8a74eec71a98a474b408249
@@ -8,4 +8,5 @@ SHA1 (patch-ae) = 58326210ecef3936579a19f3cbcb9b9374bc3541
 SHA1 (patch-af) = e88106bb0c57d632c348bc16ff673e0ef7487847
 SHA1 (patch-python_neo__cgi.c) = 0baf7f06bdf7c5686131b1b1abbd4fb0fef11c85
 SHA1 (patch-ruby_Makefile) = 1b183a6a97ce04fd6387f328f7356d80b3c058ae
+SHA1 (patch-ruby_install.rb) = a6ce501bec857debce16ef6785604e68c1dec711
 SHA1 (patch-util_neo__err.h) = 599f4d34b958cbdfb673e9b68409eeea5c1861aa
