@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/02/05 15:49:59 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/11 17:34:28 taca Exp $
 
 DISTNAME=	mechanize-2.7.3
 CATEGORIES=	www
@@ -16,8 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-http-cookie>=1.0.0<1.1:../../www/ruby-http-cookie
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.4<2:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-ntlm-http>=0.1<1:../../www/ruby-ntlm-http
 DEPENDS+=	${RUBY_PKGPREFIX}-webrobots>=0.0<0.2:../../www/ruby-webrobots
-
-RUBY_VERSION_SUPPORTED=	200 193 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
