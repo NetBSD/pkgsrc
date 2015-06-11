@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2642 2015/06/11 17:04:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2643 2015/06/11 17:08:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4954,3 +4954,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/ffmpeg2 to 2.7 [adam 2015-06-11]
 	Updated multimedia/ffplay2 to 2.7 [adam 2015-06-11]
 	Updated www/ruby-sinatra to 1.4.6 [taca 2015-06-11]
+	Updated www/ruby-unicorn to 4.9.0 [taca 2015-06-11]
