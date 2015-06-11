@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/08 15:30:27 taca Exp $
-bin/redcarpet
+@comment $NetBSD: PLIST,v 1.4 2015/06/11 16:27:15 taca Exp $
+bin/redcarpet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/redcarpet.${RUBY_DLEXT}
@@ -29,17 +29,20 @@ ${GEM_LIBDIR}/ext/redcarpet/stack.c
 ${GEM_LIBDIR}/ext/redcarpet/stack.h
 ${GEM_LIBDIR}/lib/redcarpet.rb
 ${GEM_LIBDIR}/lib/redcarpet.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/redcarpet/cli.rb
 ${GEM_LIBDIR}/lib/redcarpet/compat.rb
 ${GEM_LIBDIR}/lib/redcarpet/render_man.rb
 ${GEM_LIBDIR}/lib/redcarpet/render_strip.rb
 ${GEM_LIBDIR}/redcarpet.gemspec
 ${GEM_LIBDIR}/test/benchmark.rb
 ${GEM_LIBDIR}/test/custom_render_test.rb
+${GEM_LIBDIR}/test/fixtures/benchmark.md
 ${GEM_LIBDIR}/test/html5_test.rb
 ${GEM_LIBDIR}/test/html_render_test.rb
 ${GEM_LIBDIR}/test/html_toc_render_test.rb
 ${GEM_LIBDIR}/test/markdown_test.rb
 ${GEM_LIBDIR}/test/pathological_inputs_test.rb
+${GEM_LIBDIR}/test/redcarpet_bin_test.rb
 ${GEM_LIBDIR}/test/redcarpet_compat_test.rb
 ${GEM_LIBDIR}/test/safe_render_test.rb
 ${GEM_LIBDIR}/test/smarty_html_test.rb
@@ -47,4 +50,3 @@ ${GEM_LIBDIR}/test/smarty_pants_test.rb
 ${GEM_LIBDIR}/test/stripdown_render_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
