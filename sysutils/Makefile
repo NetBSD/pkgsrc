@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.634 2015/05/07 12:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.635 2015/06/11 12:22:56 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -418,6 +418,7 @@ SUBDIR+=	qlogtools
 SUBDIR+=	radeontool
 SUBDIR+=	radmind
 SUBDIR+=	rconfig
+SUBDIR+=	rdfind
 SUBDIR+=	rdiff-backup
 SUBDIR+=	rename
 SUBDIR+=	rfstool
