@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/03/13 11:08:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2015/06/11 15:37:21 taca Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGREVISION=	8
@@ -54,5 +54,5 @@ post-install:
 .endfor
 
 .include "../../lang/ruby/modules.mk"
-.include "../../textproc/ruby-rdtool/buildlink3.mk"
+.include "../../textproc/ruby-rdtool/rdtool.mk"
 .include "../../mk/bsd.pkg.mk"
