@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2617 2015/06/11 08:35:16 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2618 2015/06/11 08:41:48 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4927,3 +4927,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/gobject-introspection to 1.44.0 [prlw1 2015-06-10]
 	Updated devel/pango to 1.37.0 [prlw1 2015-06-10]
 	Updated x11/gnome-desktop3 to 3.16.2nb1 [prlw1 2015-06-11]
+	Updated devel/py-gobject3 to 3.16.1nb1 [prlw1 2015-06-11]
