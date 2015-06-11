@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2015/04/04 16:08:26 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.44 2015/06/11 14:15:33 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-comment
@@ -65,6 +65,7 @@ share/ikiwiki/basewiki/templates.mdwn
 share/ikiwiki/basewiki/templates/note.mdwn
 share/ikiwiki/basewiki/templates/popup.mdwn
 share/ikiwiki/basewiki/wikiicons/diff.png
+share/ikiwiki/basewiki/wikiicons/email.png
 share/ikiwiki/basewiki/wikiicons/openidlogin-bg.gif
 share/ikiwiki/basewiki/wikiicons/revert.png
 share/ikiwiki/basewiki/wikiicons/search-bg.gif
@@ -151,14 +152,12 @@ share/ikiwiki/javascript/ikiwiki/ikiwiki.js
 share/ikiwiki/javascript/ikiwiki/relativedate.js
 share/ikiwiki/javascript/ikiwiki/toggle.js
 share/ikiwiki/jquery/ikiwiki/jquery.min.js
-share/ikiwiki/openid-selector/ikiwiki/openid/aol.png
-share/ikiwiki/openid-selector/ikiwiki/openid/goa-account-flickr.png
-share/ikiwiki/openid-selector/ikiwiki/openid/goa-account-google.png
-share/ikiwiki/openid-selector/ikiwiki/openid/goa-account-yahoo.png
-share/ikiwiki/openid-selector/ikiwiki/openid/livejournal.png
-share/ikiwiki/openid-selector/ikiwiki/openid/openid-jquery.js
-share/ikiwiki/openid-selector/ikiwiki/openid/verisign.png
-share/ikiwiki/openid-selector/ikiwiki/openid/wordpress.png
+share/ikiwiki/login-selector/ikiwiki/login-selector/aol.png
+share/ikiwiki/login-selector/ikiwiki/login-selector/goa-account-flickr.png
+share/ikiwiki/login-selector/ikiwiki/login-selector/goa-account-yahoo.png
+share/ikiwiki/login-selector/ikiwiki/login-selector/login-selector.js
+share/ikiwiki/login-selector/ikiwiki/login-selector/verisign.png
+share/ikiwiki/login-selector/ikiwiki/login-selector/wordpress.png
 share/ikiwiki/osm/ikiwiki/images/osm.png
 share/ikiwiki/osm/ikiwiki/osm.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
@@ -436,12 +435,13 @@ share/ikiwiki/templates/editcreationconflict.tmpl
 share/ikiwiki/templates/editfailedsave.tmpl
 share/ikiwiki/templates/editpage.tmpl
 share/ikiwiki/templates/editpagegone.tmpl
+share/ikiwiki/templates/emailauth.tmpl
 share/ikiwiki/templates/feedlink.tmpl
 share/ikiwiki/templates/googleform.tmpl
 share/ikiwiki/templates/inlinepage.tmpl
+share/ikiwiki/templates/login-selector.tmpl
 share/ikiwiki/templates/microblog.tmpl
 share/ikiwiki/templates/notifyemail.tmpl
-share/ikiwiki/templates/openid-selector.tmpl
 share/ikiwiki/templates/page.tmpl
 share/ikiwiki/templates/passwordmail.tmpl
 share/ikiwiki/templates/pocreatepage.tmpl
