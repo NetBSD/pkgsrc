@@ -1,16 +1,26 @@
-$NetBSD: patch-qemu-xen-traditional_hw_ide.c,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+$NetBSD: patch-qemu-xen-traditional_hw_ide.c,v 1.2 2015/06/11 17:43:58 bouyer Exp $
 
---- qemu-xen-traditional/hw/ide.c.orig	2014-10-06 17:50:24.000000000 +0200
-+++ qemu-xen-traditional/hw/ide.c	2015-01-19 13:16:38.000000000 +0100
-@@ -761,6 +761,7 @@
-     put_le16(p + 61, s->nb_sectors >> 16);
+--- qemu-xen-traditional/hw/ide.c.orig	2014-01-09 13:44:42.000000000 +0100
++++ qemu-xen-traditional/hw/ide.c	2015-06-11 16:15:49.000000000 +0200
+@@ -757,10 +757,15 @@
+     put_le16(p + 58, oldsize >> 16);
+     if (s->mult_sectors)
+         put_le16(p + 59, 0x100 | s->mult_sectors);
+-    put_le16(p + 60, s->nb_sectors);
+-    put_le16(p + 61, s->nb_sectors >> 16);
++    if (s->nb_sectors > 0x10000000)
++	oldsize = 0x10000000; /* report only 128GB */
++    else
++	oldsize =  s->nb_sectors;
++    put_le16(p + 60, oldsize);
++    put_le16(p + 61, oldsize >> 16);
      put_le16(p + 62, 0x07); /* single word dma0-2 supported */
      put_le16(p + 63, 0x07); /* mdma0-2 supported */
 +    put_le16(p + 64, 0x03); /* pio3-4 supported */
      put_le16(p + 65, 120);
      put_le16(p + 66, 120);
      put_le16(p + 67, 120);
-@@ -812,13 +813,12 @@
+@@ -812,13 +817,12 @@
      put_le16(p + 53, 7); /* words 64-70, 54-58, 88 valid */
      put_le16(p + 62, 7);  /* single word dma0-2 supported */
      put_le16(p + 63, 7);  /* mdma0-2 supported */
