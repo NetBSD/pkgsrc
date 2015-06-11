@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:25:04 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/11 08:34:40 prlw1 Exp $
 
-DISTNAME=	gnome-desktop-3.14.1
+DISTNAME=	gnome-desktop-3.16.2
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
 PKGREVISION=	1
 CATEGORIES=	x11 gnome
