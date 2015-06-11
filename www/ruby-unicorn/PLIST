@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/08 15:35:47 taca Exp $
-bin/unicorn
-bin/unicorn_rails
+@comment $NetBSD: PLIST,v 1.8 2015/06/11 17:07:56 taca Exp $
+bin/unicorn${RUBY_SUFFIX}
+bin/unicorn_rails${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/unicorn_http.${RUBY_DLEXT}
@@ -9,11 +9,10 @@ ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/.manifest
-${GEM_LIBDIR}/.wrongdoc.yml
+${GEM_LIBDIR}/.olddoc.yml
 ${GEM_LIBDIR}/Application_Timeouts
 ${GEM_LIBDIR}/CONTRIBUTORS
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/DESIGN
 ${GEM_LIBDIR}/Documentation/.gitignore
 ${GEM_LIBDIR}/Documentation/GNUmakefile
@@ -85,10 +84,8 @@ ${GEM_LIBDIR}/lib/unicorn/util.rb
 ${GEM_LIBDIR}/lib/unicorn/version.rb
 ${GEM_LIBDIR}/lib/unicorn/worker.rb
 ${GEM_LIBDIR}/lib/unicorn_http.${RUBY_DLEXT}
-${GEM_LIBDIR}/local.mk.sample
 ${GEM_LIBDIR}/man/man1/unicorn.1
 ${GEM_LIBDIR}/man/man1/unicorn_rails.1
-${GEM_LIBDIR}/script/isolate_for_tests
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/t/.gitignore
 ${GEM_LIBDIR}/t/GNUmakefile
@@ -171,4 +168,6 @@ ${GEM_LIBDIR}/test/unit/test_tee_input.rb
 ${GEM_LIBDIR}/test/unit/test_upload.rb
 ${GEM_LIBDIR}/test/unit/test_util.rb
 ${GEM_LIBDIR}/unicorn.gemspec
+${GEM_LIBDIR}/unicorn_1
+${GEM_LIBDIR}/unicorn_rails_1
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
