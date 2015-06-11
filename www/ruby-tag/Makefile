@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/28 06:31:03 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/06/11 15:37:22 taca Exp $
 
 DISTNAME=	tag104
 PKGNAME=	${RUBY_PKGPREFIX}-tag-1.0.4
@@ -26,5 +26,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tag.html ${DESTDIR}${PREFIX}/${RUBY_DOC}/tag/ja
 
 .include "../../lang/ruby/modules.mk"
-.include "../../textproc/ruby-rdtool/buildlink3.mk"
+.include "../../textproc/ruby-rdtool/rdtool.mk"
 .include "../../mk/bsd.pkg.mk"
