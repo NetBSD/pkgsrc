@@ -1,0 +1,2 @@
+bin/unicorn @PREFIX@/bin/unicorn@RUBY_SUFFIX@
+bin/unicorn_rails @PREFIX@/bin/unicorn_rails@RUBY_SUFFIX@
