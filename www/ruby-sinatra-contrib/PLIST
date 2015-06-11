@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/26 10:19:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/11 17:14:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/lib/sinatra/contrib/all.rb
 ${GEM_LIBDIR}/lib/sinatra/contrib/setup.rb
 ${GEM_LIBDIR}/lib/sinatra/contrib/version.rb
 ${GEM_LIBDIR}/lib/sinatra/cookies.rb
+${GEM_LIBDIR}/lib/sinatra/custom_logger.rb
 ${GEM_LIBDIR}/lib/sinatra/decompile.rb
 ${GEM_LIBDIR}/lib/sinatra/engine_tracking.rb
 ${GEM_LIBDIR}/lib/sinatra/extension.rb
@@ -66,6 +67,7 @@ ${GEM_LIBDIR}/spec/content_for/takes_values.haml
 ${GEM_LIBDIR}/spec/content_for/takes_values.slim
 ${GEM_LIBDIR}/spec/content_for_spec.rb
 ${GEM_LIBDIR}/spec/cookies_spec.rb
+${GEM_LIBDIR}/spec/custom_logger_spec.rb
 ${GEM_LIBDIR}/spec/decompile_spec.rb
 ${GEM_LIBDIR}/spec/extension_spec.rb
 ${GEM_LIBDIR}/spec/json_spec.rb
