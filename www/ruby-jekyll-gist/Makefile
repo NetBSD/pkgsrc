@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/03/13 16:44:56 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/11 16:52:26 taca Exp $
 
-DISTNAME=	jekyll-gist-1.1.0
+DISTNAME=	jekyll-gist-1.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
