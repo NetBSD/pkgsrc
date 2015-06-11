@@ -1,4 +1,4 @@
-$NetBSD: patch-libavcodec_x86_ac3dsp_init.c,v 1.1 2014/12/03 15:06:11 bouyer Exp $
+$NetBSD: patch-libavcodec_x86_ac3dsp_init.c,v 1.2 2015/06/11 17:02:35 adam Exp $
 
 Fix from PR pkg/48680
 
@@ -65,15 +65,6 @@ Fix from PR pkg/48680
          "add             $16, %0            \n"                 \
          "jl               1b                \n"                 \
          : "+&r"(i), "=&r"(j), "=&r"(k), "=&r"(m)                \
-@@ -166,7 +168,7 @@
-                matrix_cmp[3][0] == matrix_cmp[4][0]) {
-         MIX5(IF1, IF0);
-     } else {
--        DECLARE_ALIGNED(16, float, matrix_simd)[AC3_MAX_CHANNELS][2][4];
-+        float matrix_simd[AC3_MAX_CHANNELS][2][4];
-         float *samp[AC3_MAX_CHANNELS];
-
-         for (j = 0; j < in_ch; j++)
 @@ -180,8 +182,8 @@
              "movss    4(%2, %0), %%xmm5         \n"
              "shufps          $0, %%xmm4, %%xmm4 \n"

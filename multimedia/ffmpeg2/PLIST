@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/08 08:10:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/06/11 17:02:35 adam Exp $
 bin/ffmpeg2
 bin/ffprobe2
 bin/ffserver2
 include/ffmpeg2/libavcodec/avcodec.h
 include/ffmpeg2/libavcodec/avfft.h
+include/ffmpeg2/libavcodec/d3d11va.h
 include/ffmpeg2/libavcodec/dv_profile.h
 include/ffmpeg2/libavcodec/dxva2.h
 include/ffmpeg2/libavcodec/old_codec_ids.h
@@ -100,7 +101,7 @@ include/ffmpeg2/libswscale/version.h
 lib/ffmpeg2/libavcodec.a
 lib/ffmpeg2/libavcodec.so
 lib/ffmpeg2/libavcodec.so.56
-lib/ffmpeg2/libavcodec.so.56.26.100
+lib/ffmpeg2/libavcodec.so.56.41.100
 lib/ffmpeg2/libavdevice.a
 lib/ffmpeg2/libavdevice.so
 lib/ffmpeg2/libavdevice.so.56
@@ -108,15 +109,15 @@ lib/ffmpeg2/libavdevice.so.56.4.100
 lib/ffmpeg2/libavfilter.a
 lib/ffmpeg2/libavfilter.so
 lib/ffmpeg2/libavfilter.so.5
-lib/ffmpeg2/libavfilter.so.5.11.102
+lib/ffmpeg2/libavfilter.so.5.16.101
 lib/ffmpeg2/libavformat.a
 lib/ffmpeg2/libavformat.so
 lib/ffmpeg2/libavformat.so.56
-lib/ffmpeg2/libavformat.so.56.25.101
+lib/ffmpeg2/libavformat.so.56.36.100
 lib/ffmpeg2/libavutil.a
 lib/ffmpeg2/libavutil.so
 lib/ffmpeg2/libavutil.so.54
-lib/ffmpeg2/libavutil.so.54.20.100
+lib/ffmpeg2/libavutil.so.54.27.100
 lib/ffmpeg2/libpostproc.a
 lib/ffmpeg2/libpostproc.so
 lib/ffmpeg2/libpostproc.so.53
@@ -124,7 +125,7 @@ lib/ffmpeg2/libpostproc.so.53.3.100
 lib/ffmpeg2/libswresample.a
 lib/ffmpeg2/libswresample.so
 lib/ffmpeg2/libswresample.so.1
-lib/ffmpeg2/libswresample.so.1.1.100
+lib/ffmpeg2/libswresample.so.1.2.100
 lib/ffmpeg2/libswscale.a
 lib/ffmpeg2/libswscale.so
 lib/ffmpeg2/libswscale.so.3
@@ -154,6 +155,7 @@ share/doc/ffmpeg2/writing_filters.txt
 share/examples/ffmpeg2/ffserver.conf
 share/ffmpeg2/examples/Makefile
 share/ffmpeg2/examples/README
+share/ffmpeg2/examples/avio_list_dir.c
 share/ffmpeg2/examples/avio_reading.c
 share/ffmpeg2/examples/decoding_encoding.c
 share/ffmpeg2/examples/demuxing_decoding.c
