@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/12/14 05:46:23 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/11 17:38:27 taca Exp $
 
 DISTNAME=	tw-1.0.9
 PKGREVISION=	1
@@ -16,7 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=2.0.0:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=5.6.0:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-userstream>=1.4.0:../../net/ruby-userstream
 
-RUBY_VERSION_SUPPORTED=	200 193 21
 RUBY_JSON_REQD=	1.7.0
 
 .include "../../lang/ruby/gem.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2015/05/17 06:55:34 tsutsui Exp $
+# $NetBSD: Makefile,v 1.99 2015/06/11 17:39:23 taca Exp $
 #
 
 DISTNAME=	mikutter.3.2.3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
 LICENSE=	mit AND cc-by-sa-v3.0
 
-RUBY_VERSION_SUPPORTED=	200 21
+RUBY_VERSION_SUPPORTED=	200 21 22
 
 .include "../../lang/ruby/rubyversion.mk"
 

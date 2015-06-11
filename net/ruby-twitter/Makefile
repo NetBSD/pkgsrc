@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/03/13 15:14:26 taca Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/11 17:37:50 taca Exp $
 
 DISTNAME=	twitter-5.14.0
 CATEGORIES=	net
@@ -19,7 +19,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-http>=0.6.0:../../www/ruby-http
 DEPENDS+=	${RUBY_PKGPREFIX}-http_parser.rb>=0.6.0:../../www/ruby-http_parser.rb
 
 RUBY_JSON_REQD=	1.8
-RUBY_VERSION_SUPPORTED=	200 193 21
 OVERRIDE_GEMSPEC+=	http>=0.6.0
 
 .include "../../lang/ruby/gem.mk"
