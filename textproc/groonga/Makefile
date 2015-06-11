@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2015/03/15 19:42:33 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.55 2015/06/11 17:37:09 taca Exp $
 #
 
 DISTNAME=	groonga-4.1.1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://groonga.org/
 COMMENT=	Fulltext search engine and column store
 LICENSE=	gnu-lgpl-v2.1
 
-RUBY_VERSION_SUPPORTED=	21 200 193
-.include "../../lang/ruby/rubyversion.mk"
 DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 GNU_CONFIGURE=	yes
@@ -53,8 +51,8 @@ REPLACE_RUBY+=	data/munin/groonga_n_records_
 REPLACE_RUBY+=	data/munin/groonga_query_performance_
 REPLACE_RUBY+=	data/munin/groonga_status_
 REPLACE_RUBY+=	data/munin/groonga_throughput_
-.include "../../lang/ruby/replace.mk"
 
+.include "../../lang/ruby/replace.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
