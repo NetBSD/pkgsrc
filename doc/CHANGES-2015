@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2637 2015/06/11 16:52:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2638 2015/06/11 16:55:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4948,3 +4948,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-http-form_data to 1.0.1 [taca 2015-06-11]
 	Updated www/ruby-http to 0.8.12 [taca 2015-06-11]
 	Updated www/ruby-jekyll-gist to 1.2.1 [taca 2015-06-11]
+	Updated www/ruby-puma to 2.11.3 [taca 2015-06-11]
