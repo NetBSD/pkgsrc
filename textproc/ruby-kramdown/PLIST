@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/13 16:13:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/06/11 16:23:35 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/doc/news.page
 ${GEM_LIBDIR}/doc/options.page
 ${GEM_LIBDIR}/doc/quickref.page
 ${GEM_LIBDIR}/doc/sidebar.template
+${GEM_LIBDIR}/doc/sitemap.sitemap
 ${GEM_LIBDIR}/doc/syntax.page
 ${GEM_LIBDIR}/doc/tests.page
 ${GEM_LIBDIR}/doc/virtual
@@ -44,10 +45,13 @@ ${GEM_LIBDIR}/lib/kramdown/converter/kramdown.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/latex.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/itex2mml.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/mathjax.rb
+${GEM_LIBDIR}/lib/kramdown/converter/math_engine/mathjaxnode.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/ritex.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/pdf.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/remove_html_tags.rb
+${GEM_LIBDIR}/lib/kramdown/converter/syntax_highlighter.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/syntax_highlighter/coderay.rb
+${GEM_LIBDIR}/lib/kramdown/converter/syntax_highlighter/minted.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/syntax_highlighter/rouge.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/toc.rb
 ${GEM_LIBDIR}/lib/kramdown/document.rb
@@ -156,6 +160,12 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/disable-highlighting.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/disable-highlighting.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/error.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/error.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted-with-opts.latex
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted-with-opts.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted-with-opts.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted.latex
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-opts.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-opts.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-opts.text
@@ -188,6 +198,9 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_ial.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_name_with_dash.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_name_with_dash.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_name_with_dash.text
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/error.html
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/error.html.19
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/error.text
@@ -231,6 +244,8 @@ ${GEM_LIBDIR}/test/testcases/block/09_html/content_model/tables.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/content_model/tables.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/html5_attributes.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/html5_attributes.text
+${GEM_LIBDIR}/test/testcases/block/09_html/html_after_block.html
+${GEM_LIBDIR}/test/testcases/block/09_html/html_after_block.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/html_and_codeblocks.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/html_and_codeblocks.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/html_and_codeblocks.text
@@ -356,6 +371,21 @@ ${GEM_LIBDIR}/test/testcases/block/15_math/gh_128.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/itex2mml.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/itex2mml.options
 ${GEM_LIBDIR}/test/testcases/block/15_math/itex2mml.text
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.html
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.options
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.text
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_simple.html
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_simple.options
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_simple.text
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode.html.19
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode.options
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode.text
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_notexhints.html.19
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_notexhints.options
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_notexhints.text
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_semantics.html.19
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_semantics.options
+${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_semantics.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/ritex.html
@@ -376,6 +406,8 @@ ${GEM_LIBDIR}/test/testcases/encoding.html
 ${GEM_LIBDIR}/test/testcases/encoding.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/empty.html
 ${GEM_LIBDIR}/test/testcases/span/01_link/empty.text
+${GEM_LIBDIR}/test/testcases/span/01_link/empty_title.htmlinput
+${GEM_LIBDIR}/test/testcases/span/01_link/empty_title.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/image_in_a.html
 ${GEM_LIBDIR}/test/testcases/span/01_link/image_in_a.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/imagelinks.html
@@ -385,6 +417,8 @@ ${GEM_LIBDIR}/test/testcases/span/01_link/inline.html.19
 ${GEM_LIBDIR}/test/testcases/span/01_link/inline.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/link_defs.html
 ${GEM_LIBDIR}/test/testcases/span/01_link/link_defs.text
+${GEM_LIBDIR}/test/testcases/span/01_link/link_defs_with_ial.html
+${GEM_LIBDIR}/test/testcases/span/01_link/link_defs_with_ial.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/links_with_angle_brackets.html
 ${GEM_LIBDIR}/test/testcases/span/01_link/links_with_angle_brackets.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/reference.html
@@ -403,6 +437,9 @@ ${GEM_LIBDIR}/test/testcases/span/03_codespan/empty.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/empty.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/errors.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/errors.text
+${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-minted.latex
+${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-minted.options
+${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-minted.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-rouge.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-rouge.options
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-rouge.text
@@ -462,6 +499,9 @@ ${GEM_LIBDIR}/test/testcases/span/line_breaks/normal.text
 ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.html
 ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.options
 ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.text
+${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.html.19
+${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.options
+${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.text
 ${GEM_LIBDIR}/test/testcases/span/math/normal.html
 ${GEM_LIBDIR}/test/testcases/span/math/normal.text
 ${GEM_LIBDIR}/test/testcases/span/math/ritex.html
