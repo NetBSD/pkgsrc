@@ -1,13 +1,8 @@
-#	$NetBSD: Minix.sys.mk,v 1.2 2015/06/04 17:11:33 ryoon Exp $
+#	$NetBSD: Minix.sys.mk,v 1.3 2015/06/11 09:20:56 joerg Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix.
 OS?=		Minix
-
-# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=25509
-.if !defined(NOGCCERROR)
-CFLAGS+= -Werror
-.endif
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
