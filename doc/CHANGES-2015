@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2634 2015/06/11 16:47:23 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2635 2015/06/11 16:48:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4945,3 +4945,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-yajl to 1.2.1 [taca 2015-06-11]
 	Updated www/ruby-pygments.rb to 0.6.3 [taca 2015-06-11]
 	Updated www/ruby-csspool to 4.0.5 [taca 2015-06-11]
+	Updated www/ruby-http-form_data to 1.0.1 [taca 2015-06-11]
