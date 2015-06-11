@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2015/04/25 14:20:41 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/11 18:47:33 khorben Exp $
 
-DISTNAME=	Editor-0.3.0
-PKGNAME=	deforaos-editor-0.3.0
-PKGREVISION=	2
+DISTNAME=	Editor-0.3.1
+PKGNAME=	deforaos-editor-0.3.1
 CATEGORIES=	editors
-MASTER_SITES=	http://www.defora.org/os/download/download/4326/
+MASTER_SITES=	http://www.defora.org/os/download/download/4356/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS desktop text editor
 
-LICENSE=	gnu-gpl-v3
+LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
@@ -23,8 +22,11 @@ AUTO_MKDIRS=	yes
 
 .if ${PKGMANDIR} != "share/man"
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/editor.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/editor.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/filter.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/filter.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/editor.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/editor.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/filter.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/filter.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
