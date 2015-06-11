@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2013/10/20 17:49:58 joerg Exp $
+$NetBSD: distinfo,v 1.31 2015/06/11 15:14:14 taca Exp $
 
 SHA1 (hyperestraier-1.4.13.tar.gz) = 21c3f325f42019fef096172105c2fc16f3e72fc0
 RMD160 (hyperestraier-1.4.13.tar.gz) = 8af0af25df6d5bd45a09e9abfbb26300339b5a2c
@@ -6,7 +6,7 @@ Size (hyperestraier-1.4.13.tar.gz) = 1014600 bytes
 SHA1 (patch-aa) = 67e563ac93b2b3e09122d3fcd12fc443d437fdb3
 SHA1 (patch-ab) = f3f57404f02ff9928adc0a8c5c9ddec65700ce85
 SHA1 (patch-ac) = 06bc0a56cc3a7592995d615a1afbffce8fb99931
-SHA1 (patch-ad) = 519ec64e5e87b5de00a488b4d19d82fe336724f4
-SHA1 (patch-ae) = fcde455f65834f004897805b61de40b1171ae6dd
+SHA1 (patch-ad) = 1ac7dad8bc89fc8bba945a89fa771b925daed7bf
+SHA1 (patch-ae) = 61621529c87c9040b8b948f03d461111c8488644
 SHA1 (patch-af) = 24ba33d20fc9b23cbc91c8345d2250db14dab536
 SHA1 (patch-rubynative_src_extconf.rb) = fbe2f3b3156a04a4d8ed78719dc429070eb9a559
