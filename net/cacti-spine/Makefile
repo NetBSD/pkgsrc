@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/01/30 16:01:27 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/11 08:45:48 nils Exp $
 #
 
-DISTNAME=	cacti-spine-0.8.8b
+DISTNAME=	cacti-spine-0.8.8c
 CATEGORIES=	net
 MASTER_SITES=	http://www.cacti.net/downloads/spine/
 
