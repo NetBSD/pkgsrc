@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2627 2015/06/11 15:39:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2628 2015/06/11 15:41:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4938,3 +4938,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ikiwiki to 3.20150610 [schmonz 2015-06-11]
 	Updated net/bind910 to 9.10.2pl1 [taca 2015-06-11]
 	Updated www/apache24 to 2.4.12nb1 [taca 2015-06-11]
+	Updated textproc/ruby-json to 1.8.3 [taca 2015-06-11]
