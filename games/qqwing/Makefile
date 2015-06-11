@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/11/29 13:42:30 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/11 08:47:29 prlw1 Exp $
 
-DISTNAME=	qqwing-1.3.3
+DISTNAME=	qqwing-1.3.4
 CATEGORIES=	games
 MASTER_SITES=	http://qqwing.com/
 
