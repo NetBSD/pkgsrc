@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/06/11 12:22:40 abs Exp $
+
+SHA1 (rdfind-1.3.4.tar.gz) = c01bd2910cdec885b6c24164a389457e4f01ef61
+RMD160 (rdfind-1.3.4.tar.gz) = 6bc32205392d4142b53ddc442f8e8ccbf39a097a
+Size (rdfind-1.3.4.tar.gz) = 109584 bytes
