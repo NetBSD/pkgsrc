@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2646 2015/06/11 17:20:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2647 2015/06/11 17:22:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4958,3 +4958,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-websocket to 1.2.2 [taca 2015-06-11]
 	Updated www/ruby-sinatra-contrib to 1.4.4 [taca 2015-06-11]
 	Updated textproc/ruby-multi_json to 1.11.1 [taca 2015-06-11]
+	Updated devel/ruby-shoulda-matchers to 2.8.0 [taca 2015-06-11]
