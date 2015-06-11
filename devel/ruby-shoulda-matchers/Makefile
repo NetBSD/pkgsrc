@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/08/14 02:18:41 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/11 17:22:16 taca Exp $
 
-DISTNAME=	shoulda-matchers-2.6.2
+DISTNAME=	shoulda-matchers-2.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 
@@ -12,8 +12,6 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=3.0.0:../../devel/ruby-activesupport32
 
 USE_LANGUAGES=	# none
-
-RUBY_VERSION_SUPPORTED=	200 193 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
