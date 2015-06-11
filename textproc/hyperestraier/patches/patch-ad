@@ -1,8 +1,11 @@
-$NetBSD: patch-ad,v 1.4 2008/06/19 15:18:31 taca Exp $
+$NetBSD: patch-ad,v 1.5 2015/06/11 15:14:14 taca Exp $
+
+* Do not guess paths.
+* Fix build problem on Ruby 2.2 and later.
 
 --- rubynative/configure.orig	2007-12-25 01:53:40.000000000 +0000
 +++ rubynative/configure
-@@ -1233,27 +1233,6 @@ RDOC="rdoc"
+@@ -1233,32 +1233,11 @@ RDOC="rdoc"
  MYRBLIBDIR=/usr/local/lib/ruby/site_ruby
  MYRUNPATH=""
  
@@ -30,12 +33,18 @@ $NetBSD: patch-ad,v 1.4 2008/06/19 15:18:31 taca Exp $
  
  # Setting the default prefix
  if test "$prefix" = NONE
+ then
+-  prefix=`ruby -rrbconfig -e 'puts(Config::CONFIG.fetch("prefix"))'`
++  prefix=`ruby -rrbconfig -e 'puts(RbConfig::CONFIG.fetch("prefix"))'`
+ fi
+ 
+ 
 @@ -1285,7 +1264,7 @@ fi
  printf '%s\n' "$RDOC"
  
  # Librarh path
 -myrblibdir=`ruby -rrbconfig -e 'puts(Config::CONFIG.fetch("sitelibdir"))'`
-+myrblibdir=`ruby -rrbconfig -e 'puts(Config::CONFIG.fetch("vendorarchdir"))'`
++myrblibdir=`ruby -rrbconfig -e 'puts(RbConfig::CONFIG.fetch("vendorarchdir"))'`
  if test -n "$myrblibdir"
  then
    MYRBLIBDIR="$myrblibdir"
