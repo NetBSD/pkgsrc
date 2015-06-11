@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2639 2015/06/11 17:00:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2640 2015/06/11 17:02:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4950,3 +4950,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-jekyll-gist to 1.2.1 [taca 2015-06-11]
 	Updated www/ruby-puma to 2.11.3 [taca 2015-06-11]
 	Updated www/ruby-rack to 1.6.1 [taca 2015-06-11]
+	Updated www/ruby-sass to 3.4.14 [taca 2015-06-11]
