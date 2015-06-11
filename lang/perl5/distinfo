@@ -1,26 +1,24 @@
-$NetBSD: distinfo,v 1.127 2015/05/15 14:32:27 ryoon Exp $
+$NetBSD: distinfo,v 1.128 2015/06/11 13:44:23 adam Exp $
 
-SHA1 (perl-5.20.2.tar.bz2) = 63126c683b4c79c35008a47d56f7beae876c569f
-RMD160 (perl-5.20.2.tar.bz2) = a24d4c70846ae4332d01d8d56696a55bf492f44b
-Size (perl-5.20.2.tar.bz2) = 13717128 bytes
+SHA1 (perl-5.22.0.tar.bz2) = 400338c91c56420d98142cbfcb84d418cae2c98c
+RMD160 (perl-5.22.0.tar.bz2) = 16f3ac6c5d4d72e599222bcbf2591c3b2aa2f857
+Size (perl-5.22.0.tar.bz2) = 13811518 bytes
 SHA1 (patch-Makefile.SH) = 92c623fe1ea024b05f47bcfee7002e02647d5062
-SHA1 (patch-aa) = 441ad4f0d27d9be0fcdce31c9d35d35d98958518
+SHA1 (patch-aa) = 9bbcc9395080b11934528a32808e0a509f1d831c
 SHA1 (patch-ab) = c899b7221a78e74cc9b1480834baba047dd19f38
 SHA1 (patch-ac) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-ah) = c1cb4ddb6db49dcfe12bb1d47911668b2318b953
 SHA1 (patch-aq) = 4bf5a76f0277b0939b2ca7720f4bb045a788b5cc
-SHA1 (patch-ca) = d4a924b4e78d210d143f4e40f63082b6d42fc0e8
+SHA1 (patch-ca) = 51ba28fe241d1f7893965e8c258c376ca1d47800
 SHA1 (patch-ch) = 5b6a89c82e158bab0a5f06add48c28e600678099
 SHA1 (patch-ck) = 5c381db130cdf4c315678e2d65380eaaa3065fee
 SHA1 (patch-cn) = d1877383e213a414562b5bb4c1e8aa785926fab7
 SHA1 (patch-cpan_Socket_Socket.xs) = 9390c42ad456b0ea114c2e57e4d829d630fb698e
 SHA1 (patch-ext_Errno_Errno__pm.PL) = 4f135e267da17de38f8f1e7e03d5209bfd09a323
 SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
-SHA1 (patch-hints_darwin.sh) = 15596f109f317ffb14c695b4196bb37699d2f34b
+SHA1 (patch-hints_darwin.sh) = bb4ea9e16a1d441388b8e9cdd37a7d757f3f1687
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
 SHA1 (patch-hints_sco.sh) = 8d43cdc0632799e1cdb5dc6fdb968052a9ae4216
 SHA1 (patch-hints_solaris__2.sh) = f054d36917c74df8219c0fc84e9b20fa312a56a3
-SHA1 (patch-install__lib.pl) = 31e9e0fc34386542dd6a60bf6ca0a607babbd4b6
 SHA1 (patch-ta) = a9d13eeec22733e4087942f217a0d47a19498a6f
-SHA1 (patch-zd) = 469602bc04b217f2d9929f5caeab43f77a74076f
 SHA1 (patch-ze) = d6fb718a1417e37a7d6bee1ae89fe2beec51c81b
