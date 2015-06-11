@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:33:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/11 16:54:58 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -47,6 +47,7 @@ ${GEM_LIBDIR}/lib/puma/control_cli.rb
 ${GEM_LIBDIR}/lib/puma/daemon_ext.rb
 ${GEM_LIBDIR}/lib/puma/delegation.rb
 ${GEM_LIBDIR}/lib/puma/detect.rb
+${GEM_LIBDIR}/lib/puma/dsl.rb
 ${GEM_LIBDIR}/lib/puma/events.rb
 ${GEM_LIBDIR}/lib/puma/io_buffer.rb
 ${GEM_LIBDIR}/lib/puma/java_io_buffer.rb
@@ -65,24 +66,6 @@ ${GEM_LIBDIR}/lib/puma/thread_pool.rb
 ${GEM_LIBDIR}/lib/puma/util.rb
 ${GEM_LIBDIR}/lib/rack/handler/puma.rb
 ${GEM_LIBDIR}/puma.gemspec
-${GEM_LIBDIR}/test/test_app_status.rb
-${GEM_LIBDIR}/test/test_cli.rb
-${GEM_LIBDIR}/test/test_config.rb
-${GEM_LIBDIR}/test/test_http10.rb
-${GEM_LIBDIR}/test/test_http11.rb
-${GEM_LIBDIR}/test/test_integration.rb
-${GEM_LIBDIR}/test/test_iobuffer.rb
-${GEM_LIBDIR}/test/test_minissl.rb
-${GEM_LIBDIR}/test/test_null_io.rb
-${GEM_LIBDIR}/test/test_persistent.rb
-${GEM_LIBDIR}/test/test_puma_server.rb
-${GEM_LIBDIR}/test/test_puma_server_ssl.rb
-${GEM_LIBDIR}/test/test_rack_handler.rb
-${GEM_LIBDIR}/test/test_rack_server.rb
-${GEM_LIBDIR}/test/test_tcp_rack.rb
-${GEM_LIBDIR}/test/test_thread_pool.rb
-${GEM_LIBDIR}/test/test_unix_socket.rb
-${GEM_LIBDIR}/test/test_ws.rb
 ${GEM_LIBDIR}/tools/jungle/README.md
 ${GEM_LIBDIR}/tools/jungle/init.d/README.md
 ${GEM_LIBDIR}/tools/jungle/init.d/puma
