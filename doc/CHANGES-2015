@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2623 2015/06/11 13:33:28 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2624 2015/06/11 13:45:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4934,3 +4934,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/rdfind version 1.3.4 [abs 2015-06-11]
 	Updated devel/libuv to 1.6.1 [fhajny 2015-06-11]
 	Updated devel/libuv to 1.6.1 [fhajny 2015-06-11]
+	Updated lang/perl5 to 5.22.0 [adam 2015-06-11]
