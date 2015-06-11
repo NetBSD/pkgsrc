@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2015/03/13 17:21:19 taca Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/11 16:59:50 taca Exp $
 
-DISTNAME=	rack-1.6.0
+DISTNAME=	rack-1.6.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rack.github.com/
+HOMEPAGE=	http://rack.github.io/
 COMMENT=	Modular Ruby webserver interface
 LICENSE=	mit
 
