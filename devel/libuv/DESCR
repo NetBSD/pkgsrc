@@ -1,7 +1,3 @@
-libuv is used as the platform layer for node.js
-
-libuv enforces an asynchronous, event-driven style of programming.
-Its core job is to provide an event loop and callback based
-notifications of I/O and other activities.  libuv offers core
-utilities like timers, non-blocking networking support, asynchronous
-file system access, child processes and more.
+libuv is a multi-platform support library with a focus on asynchronous
+I/O. It was primarily developed for use by Node.js, but it's also used
+by Luvit, Julia, pyuv, and others.
