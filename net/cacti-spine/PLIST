@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/11 03:01:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/11 08:45:48 nils Exp $
 bin/spine
 share/doc/cacti-spine/AUTHORS
 share/doc/cacti-spine/COPYING
@@ -8,5 +8,5 @@ share/doc/cacti-spine/LICENSE
 share/doc/cacti-spine/LICENSE.LGPL
 share/doc/cacti-spine/NEWS
 share/doc/cacti-spine/README
-share/doc/cacti-spine/README-WINDOWS
+share/doc/cacti-spine/README.wri
 share/doc/cacti-spine/examples/spine.conf.dist
