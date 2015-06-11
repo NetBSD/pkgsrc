@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/03/10 16:20:01 taca Exp $
+# $NetBSD: Makefile,v 1.40 2015/06/11 15:37:22 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -55,6 +55,6 @@ post-install:
 
 .include "../../lang/ruby/modules.mk"
 .include "../../textproc/ruby-eruby/buildlink3.mk"
-.include "../../textproc/ruby-rdtool/buildlink3.mk"
+.include "../../textproc/ruby-rdtool/rdtool.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
