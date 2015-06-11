@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2015/03/13 17:21:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/06/11 16:59:50 taca Exp $
 bin/rackup16${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/HISTORY.md
 ${GEM_LIBDIR}/KNOWN-ISSUES
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
@@ -172,6 +173,7 @@ ${GEM_LIBDIR}/test/spec_tempfile_reaper.rb
 ${GEM_LIBDIR}/test/spec_thin.rb
 ${GEM_LIBDIR}/test/spec_urlmap.rb
 ${GEM_LIBDIR}/test/spec_utils.rb
+${GEM_LIBDIR}/test/spec_version.rb
 ${GEM_LIBDIR}/test/spec_webrick.rb
 ${GEM_LIBDIR}/test/static/another/index.html
 ${GEM_LIBDIR}/test/static/index.html
