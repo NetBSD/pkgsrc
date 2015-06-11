@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2649 2015/06/11 17:31:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2650 2015/06/11 18:48:38 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4961,3 +4961,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-shoulda-matchers to 2.8.0 [taca 2015-06-11]
 	Updated misc/ruby-ohai to 8.4.0 [taca 2015-06-11]
 	Updated devel/ruby-test-unit to 3.1.2 [taca 2015-06-11]
+	Updated editors/deforaos-editor to 0.3.1 [khorben 2015-06-11]
