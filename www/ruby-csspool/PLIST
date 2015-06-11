@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/05 15:32:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/06/11 16:47:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/csspool.rb
 ${GEM_LIBDIR}/lib/csspool/collection.rb
@@ -53,6 +53,7 @@ ${GEM_LIBDIR}/lib/csspool/terms/hash.rb
 ${GEM_LIBDIR}/lib/csspool/terms/ident.rb
 ${GEM_LIBDIR}/lib/csspool/terms/math.rb
 ${GEM_LIBDIR}/lib/csspool/terms/number.rb
+${GEM_LIBDIR}/lib/csspool/terms/ratio.rb
 ${GEM_LIBDIR}/lib/csspool/terms/resolution.rb
 ${GEM_LIBDIR}/lib/csspool/terms/rgb.rb
 ${GEM_LIBDIR}/lib/csspool/terms/string.rb
@@ -70,11 +71,9 @@ ${GEM_LIBDIR}/test/css/test_import_rule.rb
 ${GEM_LIBDIR}/test/css/test_keyframes_rule.rb
 ${GEM_LIBDIR}/test/css/test_media_rule.rb
 ${GEM_LIBDIR}/test/css/test_namespace_rule.rb
-${GEM_LIBDIR}/test/css/test_node_position.rb
 ${GEM_LIBDIR}/test/css/test_parser.rb
 ${GEM_LIBDIR}/test/css/test_supports_rule.rb
 ${GEM_LIBDIR}/test/css/test_tokenizer.rb
-${GEM_LIBDIR}/test/css/test_variables.rb
 ${GEM_LIBDIR}/test/files/test.css
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/sac/test_parser.rb
