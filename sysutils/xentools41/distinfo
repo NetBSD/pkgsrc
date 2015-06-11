@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2015/04/19 13:13:21 spz Exp $
+$NetBSD: distinfo,v 1.39 2015/06/11 17:42:43 bouyer Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -43,7 +43,7 @@ SHA1 (patch-db) = 4766f9925462023332793bcea4321072758e289d
 SHA1 (patch-dc) = d860fe3725978227278d58f09e7d5157001e463e
 SHA1 (patch-dd) = e66d9cc0028ba922b050fc142862b4095cd018f3
 SHA1 (patch-de) = fae94b61a430a1a7dd98c9a6a04e4513824c6d8d
-SHA1 (patch-df) = d20bf9d3fd05f5334f77c9154bf0fb9944c1292c
+SHA1 (patch-df) = e7b41242fcb4a0d4fb9e22376af6a50d1081f96c
 SHA1 (patch-firmware_hvmloader_Makefile) = b2914e4988ba004d45403d67f1580b1f9725d006
 SHA1 (patch-ioemu-qemu-xen_hw_pass-through.c) = 76185c239078f29cb42b953d6c2cd1f59e240989
 SHA1 (patch-ioemu-qemu-xen_hw_pass-through.h) = 98c26798d1ad99d3eee8b33deb08f747c958c886
