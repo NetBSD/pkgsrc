@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.36 2014/05/29 07:57:07 adam Exp $
+$NetBSD: patch-aa,v 1.37 2015/06/11 13:44:23 adam Exp $
 
 * $Is{NetBSD} and $Is{Interix} are unified into $Is{BSD}.
 * Ignore installed packlist when creating new packlist.
 
---- cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm.orig	2014-05-26 13:34:19.000000000 +0000
+--- cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm.orig	2015-05-16 12:23:24.000000000 +0000
 +++ cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm
 @@ -29,8 +29,6 @@ BEGIN {
      $Is{VMS}     = $^O eq 'VMS';
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.36 2014/05/29 07:57:07 adam Exp $
      $Is{SunOS4}  = $^O eq 'sunos';
      $Is{Solaris} = $^O eq 'solaris';
      $Is{SunOS}   = $Is{SunOS4} || $Is{Solaris};
-@@ -934,7 +932,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+@@ -955,7 +953,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
  
      my $libs = '$(LDLOADLIBS)';
  
@@ -23,12 +23,12 @@ $NetBSD: patch-aa,v 1.36 2014/05/29 07:57:07 adam Exp $
  	# Use nothing on static perl platforms, and to the flags needed
  	# to link against the shared libperl library on shared perl
  	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2116,7 +2114,7 @@ pure_vendor_install :: all
+@@ -2159,7 +2157,7 @@ pure_vendor_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
  };
      push @m,
--q{		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
+-q{		read "}.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{" \
 +q{		read "" \
- 		write }.$self->catfile('$(DESTINSTALLVENDORARCH)','auto','$(FULLEXT)','.packlist').q{ \
+ 		write "}.$self->catfile('$(DESTINSTALLVENDORARCH)','auto','$(FULLEXT)','.packlist').q{" \
  } unless $self->{NO_PACKLIST};
  
