@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/01/16 09:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/12 11:46:53 wiz Exp $
 
-DISTNAME=	reposurgeon-3.19
+DISTNAME=	reposurgeon-3.26
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.catb.org/~esr/reposurgeon/
 
@@ -17,7 +17,7 @@ MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PKGMANDIR}
 
 REPLACE_PYTHON=	repodiffer reposurgeon
-REPLACE_SH=	repopuller
+REPLACE_SH=	repotool
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
