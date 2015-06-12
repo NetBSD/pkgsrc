@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2014/05/29 23:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/06/12 10:48:30 wiz Exp $
 
 DISTNAME=	pilotmgr-1.109
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pilotmanager/}
 EXTRACT_SUFX=	.tgz

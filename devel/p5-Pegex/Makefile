@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/02/12 13:14:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/12 10:49:38 wiz Exp $
 
 DISTNAME=		Pegex-0.60
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IN/INGY/}
 

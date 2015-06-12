@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2014/05/29 23:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2015/06/12 10:50:57 wiz Exp $
 
 DISTNAME=		a2ps-4.14
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/} \
 			ftp://ftp.enst.fr/pub/unix/a2ps/

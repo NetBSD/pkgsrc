@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:40 wiz Exp $
 
 VERSION=	20130404
 DISTNAME=	20130404
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	fpdns-0.10.0pre${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/kirei/fpdns/archive/

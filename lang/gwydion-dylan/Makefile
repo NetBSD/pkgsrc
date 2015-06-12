@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2015/01/04 08:28:48 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2015/06/12 10:50:16 wiz Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/tar/ \
 			ftp://ftp.ntua.gr/pub/lang/gwydion/src/tar/

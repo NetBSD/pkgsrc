@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2014/11/30 10:09:09 markd Exp $
+# $NetBSD: Makefile,v 1.21 2015/06/12 10:50:39 wiz Exp $
 
 DISTNAME=	argus-3.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcp4me.com/code/argus-archive/
 EXTRACT_SUFX=	.tgz

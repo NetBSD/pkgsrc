@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2014/07/24 13:21:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2015/06/12 10:50:57 wiz Exp $
 #
 
 DISTNAME=		enscript-1.6.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=enscript/}
 

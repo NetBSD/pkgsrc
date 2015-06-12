@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:48:52 wiz Exp $
 
 DISTNAME=	Algorithm-CheckDigits-v1.3.0
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 

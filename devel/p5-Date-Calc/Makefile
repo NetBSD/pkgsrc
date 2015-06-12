@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2015/03/09 06:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2015/06/12 10:49:06 wiz Exp $
 
 DISTNAME=	Date-Calc-6.4
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 

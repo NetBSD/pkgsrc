@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:25 wiz Exp $
 #
 
 DISTNAME=		policyd-weight-0.1.14.17
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mail
 MASTER_SITES=		http://www.policyd-weight.org/releases/
 

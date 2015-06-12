@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2015/05/21 15:11:57 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.9 2015/06/12 10:48:46 wiz Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -11,7 +11,6 @@
 # used by databases/sqlrelay/Makefile
 
 DISTNAME=		sqlrelay-0.59
-PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 

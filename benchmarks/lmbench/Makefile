@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2014/10/09 14:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/06/12 10:48:25 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		benchmarks
 MASTER_SITES=		# ftp://ftp.kreonet.re.kr/tools/benchmark/lmbench/old/
 EXTRACT_SUFX=		.tgz

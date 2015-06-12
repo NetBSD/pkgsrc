@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:54 wiz Exp $
 #
 
 DISTNAME=	Tie-RefHash-Weak-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 

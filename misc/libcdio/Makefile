@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2014/10/09 14:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2015/06/12 10:50:34 wiz Exp $
 
 DISTNAME=	libcdio-0.93
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=libcdio/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/12 10:49:17 wiz Exp $
 
 DISTNAME=	Getopt-Simple-1.52
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Getopt/}
 EXTRACT_SUFX=	.tgz

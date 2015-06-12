@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2015/01/16 09:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/12 10:49:59 wiz Exp $
 
 DISTNAME=		patchutils-0.3.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://cyberelk.net/tim/data/patchutils/stable/
 EXTRACT_SUFX=		.tar.xz

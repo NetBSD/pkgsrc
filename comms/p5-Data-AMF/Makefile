@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:35:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/12 10:48:30 wiz Exp $
 #
 
 DISTNAME=	Data-AMF-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/T/TY/TYPESTER/
 
