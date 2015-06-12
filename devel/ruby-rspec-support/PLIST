@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/07 14:39:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/12 23:57:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -12,19 +12,21 @@ ${GEM_LIBDIR}/lib/rspec/support/fuzzy_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/support/hunk_generator.rb
 ${GEM_LIBDIR}/lib/rspec/support/matcher_definition.rb
 ${GEM_LIBDIR}/lib/rspec/support/method_signature_verifier.rb
+${GEM_LIBDIR}/lib/rspec/support/object_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/support/recursive_const_methods.rb
 ${GEM_LIBDIR}/lib/rspec/support/ruby_features.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/deprecation_helpers.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/formatting_support.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/in_sub_process.rb
-${GEM_LIBDIR}/lib/rspec/support/spec/prevent_load_time_warnings.rb
+${GEM_LIBDIR}/lib/rspec/support/spec/library_wide_checks.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/shell_out.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/stderr_splitter.rb
+${GEM_LIBDIR}/lib/rspec/support/spec/string_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/with_isolated_directory.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/with_isolated_stderr.rb
 ${GEM_LIBDIR}/lib/rspec/support/version.rb
 ${GEM_LIBDIR}/lib/rspec/support/version_checker.rb
 ${GEM_LIBDIR}/lib/rspec/support/warnings.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
+
