@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/13 16:53:12 taca Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/12 22:59:26 taca Exp $
 
 DISTNAME=	jekyll-2.5.3
 CATEGORIES=	www
@@ -23,7 +23,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-sass-converter>=1.0<2:../../www/ruby-jekyll-s
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=1.1<2:../../www/ruby-jekyll-watch
 DEPENDS+=	${RUBY_PKGPREFIX}-classifier-reborn>=2.0<3:../../textproc/ruby-classifier-reborn
 
-RUBY_VERSION_SUPPORTED=	200 193 21
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
