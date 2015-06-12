@@ -1,18 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2014/10/15 22:10:21 joerg Exp $
+$NetBSD: patch-configure,v 1.5 2015/06/12 23:39:11 taca Exp $
 
 Detect Berkeley DB.
 
---- configure.orig	2013-01-04 08:36:02.000000000 +0000
+--- configure.orig	2014-10-28 10:45:44.000000000 +0000
 +++ configure
-@@ -635,6 +635,7 @@ DEFINE_OFF_T
- DEFINE_SIZE_T
- USE_REGEX
- SYSV_IPC
-+HAVE_STRNSTR
- INTTYPES_H
- SYS_TYPES_H
- LDAP_ADD_FLAG
-@@ -12525,12 +12526,11 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -13060,12 +13060,11 @@ rm -f core conftest.err conftest.$ac_obj
       OLDCFLAGS=$CFLAGS
       OLDLDFLAGS=$LDFLAGS
       OLDLIBS=$LIBS
@@ -27,7 +19,7 @@ Detect Berkeley DB.
             cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -12544,7 +12544,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -13079,7 +13078,7 @@ rm -f core conftest.err conftest.$ac_obj
  
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
@@ -36,20 +28,3 @@ Detect Berkeley DB.
  else
    libdb="no"; echo "no";
  
-@@ -13302,6 +13302,7 @@ $as_echo "#define HAVE_INET_ATON 1" >>co
- fi
- done
- 
-+HAVE_STRNSTR="0"
- 
- for ac_func in strnstr
- do :
-@@ -13312,7 +13313,7 @@ if test "x$ac_cv_func_strnstr" = xyes; t
- _ACEOF
- 
- $as_echo "#define HAVE_STRNSTR 1" >>confdefs.h
--
-+HAVE_STRNSTR="1"
- 
- fi
- done

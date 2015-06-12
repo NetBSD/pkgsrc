@@ -1,6 +1,8 @@
-$NetBSD: patch-service.c,v 1.1 2015/06/02 20:02:45 joerg Exp $
+$NetBSD: patch-service.c,v 1.2 2015/06/12 23:39:11 taca Exp $
 
---- service.c.orig	2015-05-28 20:06:13.000000000 +0000
+Avoid CONF name colision.
+
+--- service.c.orig	2013-10-25 14:59:57.000000000 +0000
 +++ service.c
 @@ -368,7 +368,7 @@ ci_service_module_t *add_service(ci_serv
       xdata = &service_extra_data_list[services_num];
