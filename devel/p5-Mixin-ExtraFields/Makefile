@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2015/02/09 15:40:58 mef Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/12 10:49:25 wiz Exp $
 #
 
 DISTNAME=	Mixin-ExtraFields-0.140002
 #               0.100971 -> 0.100.971, 0.140002 -> 0.140.002
 PKGNAME=	p5-${DISTNAME:C/([0-9])\.([0-9][0-9][0-9])([0-9][0-9][0-9])/\1.\2.\3/}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
 
