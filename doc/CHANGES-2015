@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2662 2015/06/12 12:07:45 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2663 2015/06/12 13:58:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/rendercheck to 1.5 [wiz 2015-06-12]
 	Updated devel/reposurgeon to 3.26 [wiz 2015-06-12]
 	Removed security/polarssl [fhajny 2015-06-12]
+	Updated sysutils/smartmontools to 6.3nb1 [jperkin 2015-06-12]
