@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.109 2015/02/17 13:53:48 wiz Exp $
+$NetBSD: distinfo,v 1.110 2015/06/12 11:02:35 wiz Exp $
 
-SHA1 (cups-2.0.2-source.tar.bz2) = e42586e4d46e47b85f5f5ba1d3403ecf255d03a1
-RMD160 (cups-2.0.2-source.tar.bz2) = 46f7ce1c31e5d34eff1f5972fd358422b2c09001
-Size (cups-2.0.2-source.tar.bz2) = 8766982 bytes
+SHA1 (cups-2.0.3-source.tar.bz2) = 3de556237dcb7c9f3df0eb853a53cb93e1879a8f
+RMD160 (cups-2.0.3-source.tar.bz2) = 0885debd2440e96aa5b5d7a6433dc85ffb45fe2f
+Size (cups-2.0.3-source.tar.bz2) = 8797220 bytes
 SHA1 (patch-ae) = e8f4bbbbbe43cd5f6f9236e10d7241caeaedc3a3
 SHA1 (patch-af) = 1bac8b3ae3c44034be6fa6d2878f10d7f89cd1ce
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
