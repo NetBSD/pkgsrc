@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2651 2015/06/12 00:45:01 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2652 2015/06/12 00:47:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4963,3 +4963,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-test-unit to 3.1.2 [taca 2015-06-11]
 	Updated editors/deforaos-editor to 0.3.1 [khorben 2015-06-11]
 	Updated lang/php55 to 5.5.26 [taca 2015-06-12]
+	Updated lang/php56 to 5.6.10 [taca 2015-06-12]
