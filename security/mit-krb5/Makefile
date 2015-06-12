@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2015/05/26 13:56:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.84 2015/06/12 10:51:03 wiz Exp $
 
 DISTNAME=	krb5-1.10.7
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/30 04:29:52 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/12 10:51:51 wiz Exp $
 
 DISTNAME=	Any-URI-Escape-0.01
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PH/PHRED/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Any/}

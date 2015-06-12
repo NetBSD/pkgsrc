@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/28 20:08:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/12 10:51:00 wiz Exp $
 
 DISTNAME=	thumbpdf
 PKGNAME=	tex-${DISTNAME}-3.16
+PKGREVISION=	1
 TEXLIVE_REV=	34621
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
