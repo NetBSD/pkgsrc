@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/04/21 22:45:53 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/12 10:50:59 wiz Exp $
 
 DISTNAME=	biblatex
 PKGNAME=	tex-${DISTNAME}-2.9a
 TEXLIVE_REV=	34433
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Bibliographies in LaTeX using BibTeX for sorting only
