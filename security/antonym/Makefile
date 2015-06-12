@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/06/12 10:51:01 wiz Exp $
 #
 
 DISTNAME=		antonym-1.9
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security mail
 MASTER_SITES=		http://subwiki.honeypot.net/pub/Computing/AntoNym/
 
