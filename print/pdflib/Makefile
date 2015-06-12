@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/06/12 10:50:59 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		pdflib-${PDFLIB_BASE_VERS}
-PKGREVISION=		18
+PKGREVISION=		19
 COMMENT=		C library to produce PDF files
 
 BUILD_TARGET=		pdflib

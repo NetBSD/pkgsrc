@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/03/01 15:58:04 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/12 10:51:11 wiz Exp $
 
 DISTNAME=	BackupPC-3.3.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=backuppc/}
 

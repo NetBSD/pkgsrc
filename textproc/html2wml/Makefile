@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2014/05/29 23:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/06/12 10:51:20 wiz Exp $
 
 DISTNAME=	html2wml-0.4.8r2
 PKGNAME=	html2wml-0.4.8.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc converters
 MASTER_SITES=	http://maddingue.free.fr/softwares/download/Html2Wml/html2wml-0.4.x/	\
 		${MASTER_SITE_SOURCEFORGE:=htmlwml/}

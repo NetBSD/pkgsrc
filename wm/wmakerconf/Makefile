@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2015/04/25 14:25:00 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2015/06/12 10:51:47 wiz Exp $
 
 DISTNAME=	wmakerconf-2.11
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://starplot.org/wmakerconf/
 

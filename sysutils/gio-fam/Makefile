@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/09/05 21:13:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:51:13 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/glib2/Makefile.common"
 
 PKGNAME:=	${PKGNAME:S/glib2/gio-fam/}

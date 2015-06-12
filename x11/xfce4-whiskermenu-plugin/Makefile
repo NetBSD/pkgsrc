@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/06/02 13:27:03 youri Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/12 10:52:19 wiz Exp $
 
 DISTNAME=	xfce4-whiskermenu-plugin-1.5.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/1.5/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2014/06/14 10:15:59 wiedi Exp $
+# $NetBSD: Makefile,v 1.48 2015/06/12 10:51:01 wiz Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.64.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2

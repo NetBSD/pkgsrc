@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:31 wiz Exp $
 
 DISTNAME=	Text-FindIndent-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
