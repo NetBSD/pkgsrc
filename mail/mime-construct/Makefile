@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:36:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:20 wiz Exp $
 #
 
 DISTNAME=	mime-construct-1.10
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.argon.org/~roderick/
 

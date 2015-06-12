@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2014/05/29 23:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/06/12 10:48:31 wiz Exp $
 #
 
 DISTNAME=	latex2rtf-1.9.19
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print converters textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex2rtf/}	\
 		${MASTER_SITE_TEX_CTAN:=support/latex2rtf/}

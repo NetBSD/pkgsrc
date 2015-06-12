@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/05/23 00:04:46 mef Exp $
+# $NetBSD: Makefile,v 1.24 2015/06/12 10:49:22 wiz Exp $
 
 DISTNAME=	List-MoreUtils-0.412
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=List/}
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/id/V/VP/VPARSEVAL/}

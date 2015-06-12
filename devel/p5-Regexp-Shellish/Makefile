@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:26 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/12 10:49:41 wiz Exp $
 
 DISTNAME=	Regexp-Shellish-0.93
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RB/RBS/
 
