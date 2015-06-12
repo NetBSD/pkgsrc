@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/09/12 11:15:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/12 08:23:51 dholland Exp $
 #
 
-DISTNAME=	tradcpp-0.4
+DISTNAME=	tradcpp-0.5
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/dholland/
 
