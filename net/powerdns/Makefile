@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/06/10 16:24:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/12 10:50:58 fhajny Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns/}
+PKGREVISION=		1
 COMMENT=		Modern, advanced and high performance nameserver
 
 .include "options.mk"
@@ -26,5 +27,4 @@ SUBST_SED.conf+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
