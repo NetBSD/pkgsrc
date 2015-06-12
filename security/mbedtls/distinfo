@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/06/12 09:05:05 fhajny Exp $
+
+SHA1 (mbedtls-1.3.11-gpl.tgz) = 3948084c9d3312b381d458b06d9a2066c3cc0184
+RMD160 (mbedtls-1.3.11-gpl.tgz) = 66448e7d5ca41e7c64f55bdb3e4b9ec9d1ec3205
+Size (mbedtls-1.3.11-gpl.tgz) = 1731809 bytes
+SHA1 (patch-Makefile) = 80698e16a397133de134ab582016b9e91ad652f0
+SHA1 (patch-library_Makefile) = 551854fbdd91ae180f1d5408869a556ff0c39d1a
+SHA1 (patch-programs_test_CMakeLists.txt) = 94ce731d81f1584c406e3b295c84fd6a5c327a50
