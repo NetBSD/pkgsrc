@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/05/28 00:28:25 wen Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/12 10:51:49 wiz Exp $
 
 DISTNAME=	h2o-1.2.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-https://github.com/h2o/h2o/archive/v1.2.0${EXTRACT_SUFX}
 
