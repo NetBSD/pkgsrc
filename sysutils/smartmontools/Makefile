@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2015/04/08 01:43:32 rodent Exp $
+# $NetBSD: Makefile,v 1.27 2015/06/12 13:58:07 jperkin Exp $
 
 DISTNAME=		smartmontools-6.3
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
