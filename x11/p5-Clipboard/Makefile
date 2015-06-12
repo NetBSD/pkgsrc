@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/12 10:52:18 wiz Exp $
 
 DISTNAME=	Clipboard-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KI/KING/}
 

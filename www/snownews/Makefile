@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2014/09/18 14:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2015/06/12 10:52:15 wiz Exp $
 
 DISTNAME=	snownews-1.5.12
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
 

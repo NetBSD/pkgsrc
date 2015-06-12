@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2015/01/16 11:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2015/06/12 10:51:20 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Docbook XSL modular stylesheet

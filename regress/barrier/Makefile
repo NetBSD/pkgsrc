@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/05/29 23:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/12 10:51:00 wiz Exp $
 #
 
 DISTNAME=	barrier-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none

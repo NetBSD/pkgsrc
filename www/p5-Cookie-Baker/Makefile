@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/01/01 03:57:53 mef Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/12 10:51:58 wiz Exp $
 
 DISTNAME=	Cookie-Baker-0.05
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cookie/}
 

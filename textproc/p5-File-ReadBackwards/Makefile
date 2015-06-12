@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:51:23 wiz Exp $
 #
 
 DISTNAME=		File-ReadBackwards-1.05
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 

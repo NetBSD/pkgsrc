@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/01/26 11:54:17 mef Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:59 wiz Exp $
 
 DISTNAME=	qpdf-5.1.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qpdf/}
 
