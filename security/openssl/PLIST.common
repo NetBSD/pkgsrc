@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.23 2015/03/19 22:11:22 tron Exp $
+@comment $NetBSD: PLIST.common,v 1.24 2015/06/12 17:02:24 tron Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1125,6 +1125,7 @@ man/man3/SSL_CIPHER_get_bits.3
 man/man3/SSL_CIPHER_get_name.3
 man/man3/SSL_CIPHER_get_version.3
 man/man3/SSL_COMP_add_compression_method.3
+man/man3/SSL_COMP_free_compression_methods.3
 man/man3/SSL_CONF_CTX_clear_flags.3
 man/man3/SSL_CONF_CTX_free.3
 man/man3/SSL_CONF_CTX_new.3
