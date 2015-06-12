@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_phar_Makefile.frag,v 1.2 2014/12/19 16:12:48 taca Exp $
+$NetBSD: patch-ext_phar_Makefile.frag,v 1.3 2015/06/12 00:47:03 taca Exp $
 
---- ext/phar/Makefile.frag.orig	2014-12-17 01:25:00.000000000 +0000
+--- ext/phar/Makefile.frag.orig	2015-06-10 07:42:27.000000000 +0000
 +++ ext/phar/Makefile.frag
 @@ -18,7 +18,7 @@ PHP_PHARCMD_EXECUTABLE = ` \
  	else \
@@ -11,12 +11,3 @@ $NetBSD: patch-ext_phar_Makefile.frag,v 1.2 2014/12/19 16:12:48 taca Exp $
  
  $(builddir)/phar/phar.inc: $(srcdir)/phar/phar.inc
  	-@test -d $(builddir)/phar || mkdir $(builddir)/phar
-@@ -39,7 +39,7 @@ install-pharcmd: pharcmd
- 	-@$(mkinstalldirs) $(INSTALL_ROOT)$(bindir)
- 	$(INSTALL) $(builddir)/phar.phar $(INSTALL_ROOT)$(bindir)
- 	-@rm -f $(INSTALL_ROOT)$(bindir)/phar
--	$(LN_S) -f $(INSTALL_ROOT)$(bindir)/phar.phar $(INSTALL_ROOT)$(bindir)/phar
-+	$(LN_S) -f phar.phar $(INSTALL_ROOT)$(bindir)/phar
- 	@$(mkinstalldirs) $(INSTALL_ROOT)$(mandir)/man1
- 	@$(INSTALL_DATA) $(builddir)/phar.1 $(INSTALL_ROOT)$(mandir)/man1/phar.1
- 	@$(INSTALL_DATA) $(builddir)/phar.phar.1 $(INSTALL_ROOT)$(mandir)/man1/phar.phar.1
