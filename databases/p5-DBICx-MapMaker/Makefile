@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/04/27 01:50:58 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/12 10:48:39 wiz Exp $
 
 DISTNAME=	DBICx-MapMaker-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JR/JROCKWAY/}
 

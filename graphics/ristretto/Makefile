@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:23:18 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2015/06/12 10:50:13 wiz Exp $
 #
 
 DISTNAME=	ristretto-0.8.0
 EXTRACT_SUFX=	.tar.bz2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://archive.xfce.org/src/apps/ristretto/0.8/
 

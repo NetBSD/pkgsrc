@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/08/21 14:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/12 10:48:47 wiz Exp $
 
 DISTNAME=	colordiff-1.0.13
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.colordiff.org/
 

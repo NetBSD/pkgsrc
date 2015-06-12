@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/07/29 03:44:21 wen Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/12 10:48:53 wiz Exp $
 #
 
 DISTNAME=	AnyEvent-XMPP-0.55
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MS/MSTPLBG/
 
