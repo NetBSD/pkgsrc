@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.208 2015/06/12 17:02:24 tron Exp $
+# $NetBSD: Makefile,v 1.209 2015/06/12 17:32:32 tron Exp $
 
-DISTNAME=	openssl-1.0.2b
+DISTNAME=	openssl-1.0.2c
 CATEGORIES=	security
-MASTER_SITES=	http://www.openssl.org/source/
+MASTER_SITES=	https://www.openssl.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openssl.org/
+HOMEPAGE=	https://www.openssl.org/
 COMMENT=	Secure Socket Layer and cryptographic library
 LICENSE=	openssl
 
