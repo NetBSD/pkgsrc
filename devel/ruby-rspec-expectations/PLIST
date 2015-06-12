@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/02/07 14:41:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/06/12 23:59:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/lib/rspec/expectations.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/expectation_target.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/fail_with.rb
+${GEM_LIBDIR}/lib/rspec/expectations/failure_aggregator.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/handler.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/minitest_integration.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/syntax.rb
@@ -45,9 +46,10 @@ ${GEM_LIBDIR}/lib/rspec/matchers/built_in/throw_symbol.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/yield.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/composable.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/dsl.rb
+${GEM_LIBDIR}/lib/rspec/matchers/english_phrasing.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/expecteds_for_multiple_diffs.rb
+${GEM_LIBDIR}/lib/rspec/matchers/fail_matchers.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/generated_descriptions.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/matcher_delegator.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/matcher_protocol.rb
-${GEM_LIBDIR}/lib/rspec/matchers/pretty.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
