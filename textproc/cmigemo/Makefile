@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2014/06/14 16:19:02 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/12 10:51:19 wiz Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
 PKGNAME=	${DISTNAME:S/-default-src-/-1.3e./}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://cmigemo.googlecode.com/files/
 EXTRACT_SUFX=	.zip

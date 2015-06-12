@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/04/06 04:33:45 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/12 10:51:10 wiz Exp $
 #
 
 DISTNAME=		polarssl-1.3.9-gpl
 PKGNAME=		${DISTNAME:-gpl=}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security devel
 MASTER_SITES=		https://tls.mbed.org/download/
 EXTRACT_SUFX=		.tgz

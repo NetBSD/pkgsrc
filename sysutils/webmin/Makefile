@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2015/02/27 14:35:02 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2015/06/12 10:51:18 wiz Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
 #KGREVISION=	5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 

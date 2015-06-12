@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/07/18 08:27:11 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/12 10:51:33 wiz Exp $
 
 DISTNAME=	Text-Soundex-3.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2014/05/29 23:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/12 10:51:33 wiz Exp $
 
 DISTNAME=		Text-Substitute-0.15
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		www perl5
 MASTER_SITES=		http://www.mono.org/abs/tools/Text-Substitute/
 
