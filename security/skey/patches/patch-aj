@@ -1,10 +1,20 @@
-$NetBSD: patch-aj,v 1.1 2011/01/04 14:20:00 obache Exp $
+$NetBSD: patch-aj,v 1.2 2015/06/12 08:04:23 tron Exp $
 
 * defined(%hash) is deprecated.
+* defined(@array) is deprecated.
 
---- fixpaths.orig	2001-05-10 16:10:49.000000000 +0000
-+++ fixpaths
-@@ -26,7 +26,7 @@ while ($_=$ARGV[0], /^-/) {
+--- fixpaths.orig	2001-05-10 17:10:49.000000000 +0100
++++ fixpaths	2015-06-12 09:02:03.000000000 +0100
+@@ -7,7 +7,7 @@
+ 
+ $ext="out";
+ 
+-if (!defined(@ARGV)) { die ("$usage"); }
++if (!@ARGV) { die ("$usage"); }
+ 
+ # read in the command line and get some definitions
+ while ($_=$ARGV[0], /^-/) {
+@@ -26,7 +26,7 @@
    }
  } # while parsing arguments
  
