@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2015/04/25 08:55:17 mef Exp $
+# $NetBSD: Makefile,v 1.60 2015/06/12 10:50:45 wiz Exp $
 
 DISTNAME=	libnet-3.06
 PKGNAME=	p5-${DISTNAME:S/libnet/Net/}
+PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
