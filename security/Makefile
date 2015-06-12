@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2015/06/06 09:15:01 pettai Exp $
+# $NetBSD: Makefile,v 1.555 2015/06/12 12:07:45 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -171,6 +171,7 @@ SUBDIR+=	log2timeline
 SUBDIR+=	logcheck
 SUBDIR+=	lsh
 SUBDIR+=	lua-sec
+SUBDIR+=	mbedtls
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
@@ -333,7 +334,6 @@ SUBDIR+=	pinentry-qt4
 SUBDIR+=	pinepgp
 SUBDIR+=	pkcs11-helper
 SUBDIR+=	pks
-SUBDIR+=	polarssl
 SUBDIR+=	policykit
 SUBDIR+=	policykit-gnome
 SUBDIR+=	polkit-qt
