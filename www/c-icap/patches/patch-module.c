@@ -1,6 +1,8 @@
-$NetBSD: patch-module.c,v 1.1 2015/06/02 20:02:45 joerg Exp $
+$NetBSD: patch-module.c,v 1.2 2015/06/12 23:39:11 taca Exp $
 
---- module.c.orig	2015-05-28 20:06:17.000000000 +0000
+Avoid CONF name colision.
+
+--- module.c.orig	2013-10-25 14:59:57.000000000 +0000
 +++ module.c
 @@ -71,7 +71,7 @@ void *load_module(const char *module_fil
       void *module = NULL;
