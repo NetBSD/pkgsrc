@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/01/30 01:37:08 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/12 10:50:38 wiz Exp $
 
 DISTNAME=	gst-omx-1.2.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-omx/
 EXTRACT_SUFX=	.tar.xz

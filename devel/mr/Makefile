@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2014/10/25 15:34:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2015/06/12 10:48:51 wiz Exp $
 #
 
 DISTNAME=		myrepos_1.20141024
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/myrepos/}
 

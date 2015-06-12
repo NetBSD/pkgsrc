@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/28 06:48:12 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/12 10:49:24 wiz Exp $
 
 DISTNAME=	Log-Message-Simple-0.10
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 

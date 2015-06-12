@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:20:21 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/12 10:48:22 wiz Exp $
 
 DISTNAME=	3.1.1
 PKGNAME=	libgroove-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/andrewrk/libgroove/archive/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/12 10:50:55 wiz Exp $
 #
 
 DISTNAME=	pdsh-2.29
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://pdsh.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

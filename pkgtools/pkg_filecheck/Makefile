@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2014/05/29 23:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2015/06/12 10:50:56 wiz Exp $
 #
 
 PKGNAME=		pkg_filecheck-0.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		pkgtools devel
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

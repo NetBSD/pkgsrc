@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2015/04/25 14:20:30 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2015/06/12 10:48:35 wiz Exp $
 
 DISTNAME=	gq-1.2.3
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	databases net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqclient/}
 
