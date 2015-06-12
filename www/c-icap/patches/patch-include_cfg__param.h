@@ -1,8 +1,10 @@
-$NetBSD: patch-include_cfg__param.h,v 1.1 2015/06/02 20:02:45 joerg Exp $
+$NetBSD: patch-include_cfg__param.h,v 1.2 2015/06/12 23:39:11 taca Exp $
 
---- include/cfg_param.h.orig	2015-05-28 20:05:29.000000000 +0000
+Avoid CONF name colision.
+
+--- include/cfg_param.h.orig	2013-10-25 14:59:54.000000000 +0000
 +++ include/cfg_param.h
-@@ -121,7 +121,7 @@ struct cfg_default_value{
+@@ -126,7 +126,7 @@ struct cfg_default_value{
  #define ALIAS_TABLE 2
  
  #ifndef CI_BUILD_LIB

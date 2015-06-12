@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.6 2015/06/02 20:02:45 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/06/12 23:39:11 taca Exp $
 
-SHA1 (c_icap-0.2.5.tar.gz) = 986f0906780c0d0ad13a40add1e3f4bf7fabf8d5
-RMD160 (c_icap-0.2.5.tar.gz) = a9515e36927dcf008d187e079f6bd535b7e8b6bd
-Size (c_icap-0.2.5.tar.gz) = 582223 bytes
-SHA1 (patch-Makefile.in) = 1e24956dee6d124c4f1e06d4bc6187ca0c2be52b
-SHA1 (patch-aserver.c) = cc6075128968acc2d40adb181d3241010e370258
-SHA1 (patch-cfg__param.c) = 572e8bf53b5d8433c07dddd69e9d03a636feb3e5
-SHA1 (patch-configure) = 007831090cdf9b2d6c269793b38f8e65f44dc765
-SHA1 (patch-configure.in) = 5a8ad3240425f7c1ff4dec8c3617e00d8665c62a
-SHA1 (patch-include_c-icap-conf.h.in) = b7b7e64f561062eeafc9eb88abf95d266cdb0782
-SHA1 (patch-include_cfg__param.h) = 63891cde4ebdcc863e51b37aeb8b98236e1083ea
-SHA1 (patch-include_util.h) = 1e041fa22a540fbf477cf6fb628458130977724a
-SHA1 (patch-module.c) = 023475ba2f04044c42eb6360aa15d84d8bcba24a
-SHA1 (patch-mpmt__server.c) = 1b3f942bf6e0b86e3133c9cc1339ae2b013af47f
-SHA1 (patch-service.c) = 3b84d07b91259d1617bd0c23215a7b3d6ba444b5
+SHA1 (c_icap-0.3.5.tar.gz) = 189db804146a5654105e8bf6791b5f6eebd5f068
+RMD160 (c_icap-0.3.5.tar.gz) = 32f4d7dbe2a6170b3858c6d05c3f3e388c1037bd
+Size (c_icap-0.3.5.tar.gz) = 614388 bytes
+SHA1 (patch-Makefile.in) = 251eb502dd1a40ef45ff46f8814f12b098c01528
+SHA1 (patch-aserver.c) = cbcec895c718cb4270b1ac249b5ea0d425ed35ba
+SHA1 (patch-cfg__param.c) = 91cfa22762c9bf82eecc8d29afc9f08414124c3e
+SHA1 (patch-configure) = c1e533f47cc1a1e580337e8882b0222d966e6b30
+SHA1 (patch-include_cfg__param.h) = 02c094f42bb9b9395b1c9cbfb2bfb3715a8717b5
+SHA1 (patch-module.c) = 0b95917721340a1a78102b2b10033a0de0dfec31
+SHA1 (patch-mpmt__server.c) = d8ec64183acbd9e8b159fde4e92c92a79ab80da0
+SHA1 (patch-service.c) = ecb623c1bce5acce186a153abbb3129e8b15ccab
+SHA1 (patch-winnt__server.c) = c14bf29bf5d04bf127e1b2a22a68739144c496bd

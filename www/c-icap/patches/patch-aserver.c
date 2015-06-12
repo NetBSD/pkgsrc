@@ -1,10 +1,12 @@
-$NetBSD: patch-aserver.c,v 1.1 2015/06/02 20:02:45 joerg Exp $
+$NetBSD: patch-aserver.c,v 1.2 2015/06/12 23:39:11 taca Exp $
 
---- aserver.c.orig	2015-05-28 20:06:22.000000000 +0000
+Avoid CONF name colision.
+
+--- aserver.c.orig	2013-12-27 15:10:53.000000000 +0000
 +++ aserver.c
-@@ -105,9 +105,9 @@ int main(int argc, char **argv)
-      ci_txt_template_init();
+@@ -125,9 +125,9 @@ int main(int argc, char **argv)
       ci_txt_template_set_dir(DATADIR"templates");
+      commands_init();
  
 -     if (!(CONF.MAGIC_DB = ci_magic_db_load(CONF.magics_file))) {
 +     if (!(ci_CONF.MAGIC_DB = ci_magic_db_load(ci_CONF.magics_file))) {
@@ -14,8 +16,8 @@ $NetBSD: patch-aserver.c,v 1.1 2015/06/02 20:02:45 joerg Exp $
       }
       init_conf_tables();
       request_stats_init();
-@@ -118,26 +118,26 @@ int main(int argc, char **argv)
-      ci_debug_printf(2, "My hostname is:%s\n", MY_HOSTNAME);
+@@ -143,22 +143,22 @@ int main(int argc, char **argv)
+      }
  
  #if ! defined(_WIN32)
 -     if (is_icap_running(CONF.PIDFILE)) {
@@ -32,10 +34,6 @@ $NetBSD: patch-aserver.c,v 1.1 2015/06/02 20:02:45 joerg Exp $
 +     store_pid(ci_CONF.PIDFILE);
  #endif
  
-      if (!log_open()) {
-           ci_debug_printf(1, "Can not init loggers. Exiting.....\n");
-           exit(-1);
-      }
 -     if (!init_server(CONF.ADDRESS, CONF.PORT, &(CONF.PROTOCOL_FAMILY)))
 +     if (!init_server(ci_CONF.ADDRESS, ci_CONF.PORT, &(ci_CONF.PROTOCOL_FAMILY)))
            return -1;
