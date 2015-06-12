@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:05 wiz Exp $
 
 DISTNAME=	Finance-Currency-Convert-WebserviceX-0.07001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CL/CLACO/}
 

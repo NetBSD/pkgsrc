@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:20 wiz Exp $
 #
 
 DISTNAME=	mailhops-1.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.spinnaker.de/mutt/
 EXTRACT_SUFX=		

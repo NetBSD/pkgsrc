@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2015/01/04 08:04:59 dholland Exp $
+# $NetBSD: Makefile,v 1.55 2015/06/12 10:50:15 wiz Exp $
 
 DISTNAME=	ghc-6.8.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/6.8.3/
 DISTFILES=	ghc-6.8.3-src.tar.bz2 \

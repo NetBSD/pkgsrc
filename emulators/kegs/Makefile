@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2015/01/01 10:38:24 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:04 wiz Exp $
 #
 
 DISTNAME=	kegs.0.91
 PKGNAME=	kegs-0.91
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	http://kegs.sourceforge.net/
 

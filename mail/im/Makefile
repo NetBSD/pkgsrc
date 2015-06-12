@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/03/15 17:20:19 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/12 10:50:19 wiz Exp $
 
 DISTNAME=	im-151
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	http://tats.haun.org/im/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/06/06 17:11:43 youri Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/12 10:50:36 wiz Exp $
 #
 
 DISTNAME=	rlwrap-0.42
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://utopia.knoware.nl/~hlub/uck/rlwrap/
 

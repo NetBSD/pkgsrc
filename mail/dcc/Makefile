@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/06/05 13:43:20 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:18 wiz Exp $
 
 DISTNAME=		dcc-1.3.158
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
 EXTRACT_SUFX=		.tar.Z

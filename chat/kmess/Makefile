@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2015/04/25 14:20:28 tnn Exp $
+# $NetBSD: Makefile,v 1.70 2015/06/12 10:48:27 wiz Exp $
 #
 
 DISTNAME=	kmess-1.4.3
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	chat kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmess/}
 

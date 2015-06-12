@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/05/09 23:12:20 mef Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/12 10:48:56 wiz Exp $
 
 DISTNAME=	CHI-0.59
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CHI/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2015/04/03 18:37:32 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2015/06/12 10:50:43 wiz Exp $
 #
 
 PKGNAME=	nagios-plugin-radius-${PLUGINSVERSION}
+PKGREVISION=	1
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

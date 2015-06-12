@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/04/03 14:05:38 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/12 10:48:49 wiz Exp $
 
 DISTNAME=	gperftools-2.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://googledrive.com/host/0B6NtGsLhIcf7MWxMMF9JdTN3UVk/
 

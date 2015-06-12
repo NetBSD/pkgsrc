@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/02/27 14:44:41 mef Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:49 wiz Exp $
 #
 
 DISTNAME=	Net-Trac-0.16
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

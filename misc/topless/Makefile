@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/03/15 17:15:02 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:37 wiz Exp $
 #
 
 DISTNAME=	topless-1.52
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc sysutils
 MASTER_SITES=	http://people.freebsd.org/~daichi/src/
 

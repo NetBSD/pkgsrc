@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2014/05/29 23:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2015/06/12 10:48:22 wiz Exp $
 
 DISTNAME=	festival-2.1-release
 PKGNAME=	festival-2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/festival/2.1/
 DISTFILES=	${DISTNAME}.tar.gz \

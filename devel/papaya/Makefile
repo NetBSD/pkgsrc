@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2014/10/09 14:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/06/12 10:49:59 wiz Exp $
 #
 
 DISTNAME=	papaya-0.1.7
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
 

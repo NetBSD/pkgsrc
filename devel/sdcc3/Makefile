@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/04/17 15:53:01 adam Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/12 10:50:00 wiz Exp $
 
 DISTNAME=	sdcc-src-3.4.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2

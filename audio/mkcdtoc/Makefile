@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/12 10:48:23 wiz Exp $
 #
 
 DISTNAME=		mkcdtoc-1.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mkcdtoc/}
 EXTRACT_SUFX=		.tar.bz2

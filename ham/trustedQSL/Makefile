@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2015/04/25 14:23:21 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/12 10:50:14 wiz Exp $
 
 DISTNAME=		tqsl-2.0.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		ham
 MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.0.3/
 

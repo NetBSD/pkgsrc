@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/04/27 01:50:58 mef Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/12 10:48:58 wiz Exp $
 #
 
 DISTNAME=	Check-ISA-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NU/NUFFIN/}
 

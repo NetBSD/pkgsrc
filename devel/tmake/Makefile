@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 23:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/12 10:50:00 wiz Exp $
 #
 
 DISTNAME=	tmake-1.13
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.qtsoftware.com/freebies/tmake/
 

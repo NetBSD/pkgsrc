@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/02/08 07:00:04 mef Exp $
+# $NetBSD: Makefile,v 1.19 2015/06/12 10:49:03 wiz Exp $
 
 DISTNAME=	Curses-UI-POE-0.04
 # 0.035 -> 0.03500, 0.04 -> 0.04000
 PKGNAME=	p5-${DISTNAME:C/[0-9.]+//}0.04000
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 

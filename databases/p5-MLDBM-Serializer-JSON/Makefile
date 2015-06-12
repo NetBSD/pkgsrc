@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/12/12 04:53:52 mef Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/12 10:48:42 wiz Exp $
 #
 
 DISTNAME=	MLDBM-Serializer-JSON-0.002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MLDBM/}
 

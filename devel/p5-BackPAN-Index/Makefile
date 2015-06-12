@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/01/26 08:00:04 mef Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/12 10:48:55 wiz Exp $
 
 DISTNAME=	BackPAN-Index-0.42
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=BackPAN/}
 

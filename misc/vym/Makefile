@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2015/04/25 14:23:37 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2015/06/12 10:50:37 wiz Exp $
 #
 
 DISTNAME=		vym-2.2.4
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vym/}
 EXTRACT_SUFX=		.tar.bz2
