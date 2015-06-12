@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/02/02 14:22:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/06/12 23:59:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/rspec/mocks.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance/chain.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/error_generator.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance/expect_chain_chain.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance/expectation_chain.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance/message_chains.rb
