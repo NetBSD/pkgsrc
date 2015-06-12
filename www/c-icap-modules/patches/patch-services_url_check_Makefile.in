@@ -1,16 +1,16 @@
-$NetBSD: patch-services_url_check_Makefile.in,v 1.3 2013/09/03 13:38:08 adam Exp $
+$NetBSD: patch-services_url_check_Makefile.in,v 1.4 2015/06/12 23:40:16 taca Exp $
 
 Handle configuration files
 
---- services/url_check/Makefile.in.orig	2011-05-05 13:19:55.000000000 +0000
+--- services/url_check/Makefile.in.orig	2013-12-27 15:35:48.000000000 +0000
 +++ services/url_check/Makefile.in
-@@ -720,8 +720,7 @@ uninstall-man: uninstall-man8
+@@ -730,8 +730,7 @@ uninstall-man: uninstall-man8
  	$(do_subst) < $< > $@
  
  install-data-local:
 -	$(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf.default
 -	if test ! -f $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; then $(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; fi
-+	$(INSTALL) srv_url_check.conf $(DESTDIR)$(datadir)/c-icap/srv_url_check.conf.default
++	$(INSTALL) -m 0444 srv_url_check.conf $(DESTDIR)$(datadir)/c-icap/srv_url_check.conf.default
  	$(mkinstalldirs) $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en
  	$(INSTALL) $(TMPLS) $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en/
  
