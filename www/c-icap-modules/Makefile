@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/01/18 15:52:05 wiedi Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/12 23:40:16 taca Exp $
 
-DISTNAME=	c_icap_modules-0.2.4
+DISTNAME=	c_icap_modules-0.3.2
 PKGNAME=	${DISTNAME:S/_/-/g}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=c-icap/}
@@ -18,7 +18,10 @@ CONFIGURE_ARGS=		--with-c-icap=${BUILDLINK_PREFIX.c-icap}
 EGDIR=		${PREFIX}/share/c-icap
 CONF_FILES=	${EGDIR}/srv_url_check.conf.default ${PKG_SYSCONFDIR}/srv_url_check.conf
 
-INSTALLATION_DIRS=	share/c-icap
+INSTALLATION_DIRS=	etc share/c-icap
+
+post-install:
+	${FIND} ${DESTDIR}${PREFIX}/share/c_icap/templates -type f -exec ${CHMOD} -x {} \;
 
 .include "options.mk"
 
