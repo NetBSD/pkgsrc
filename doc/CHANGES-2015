@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2661 2015/06/12 11:47:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2662 2015/06/12 12:07:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4973,3 +4973,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups to 2.0.3 [wiz 2015-06-12]
 	Updated x11/rendercheck to 1.5 [wiz 2015-06-12]
 	Updated devel/reposurgeon to 3.26 [wiz 2015-06-12]
+	Removed security/polarssl [fhajny 2015-06-12]
