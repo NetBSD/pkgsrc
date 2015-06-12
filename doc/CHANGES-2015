@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2666 2015/06/12 17:05:18 tron Exp $
+$NetBSD: CHANGES-2015,v 1.2667 2015/06/12 17:32:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4977,4 +4977,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/smartmontools to 6.3nb1 [jperkin 2015-06-12]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.466 [tsutsui 2015-06-12]
 	Updated www/dillo to 3.0.4.1 [snj 2015-06-12]
-	Updated security/openssl to 1.0.2b [tron 2015-06-12]
+	Updated security/openssl to 1.0.2c [tron 2015-06-12]
