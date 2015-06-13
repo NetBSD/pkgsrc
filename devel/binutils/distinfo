@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2015/06/09 20:24:39 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2015/06/13 10:54:39 dsainty Exp $
 
 SHA1 (binutils-2.25.tar.bz2) = b46cc90ebaba7ffcf6c6d996d60738881b14e50d
 RMD160 (binutils-2.25.tar.bz2) = af6f54aa304d4840e1b1a3bd8a4cd165b30f9c1e
@@ -6,12 +6,10 @@ Size (binutils-2.25.tar.bz2) = 24049133 bytes
 SHA1 (patch-aa) = 1a127f82c807cbd1ac6fee073c618f3fb48667f6
 SHA1 (patch-bfd_cache.c) = db48182cee9f0bf16fbefca260b542171f0ef596
 SHA1 (patch-configure.ac) = 7bd7b90e57d850705286f2cc6464ecc45e0657c0
-SHA1 (patch-gas_config_tc-i386.c) = 16b04ee6c3c46db375c883b4338bf5d796174458
 SHA1 (patch-gas_configure) = 2365091529f5444c8c3a0615304cd4a2b043625c
 SHA1 (patch-gold_Makefile.in) = ca87f7589025752713127110cbf9738f1080b62a
 SHA1 (patch-gold_options.h) = 3a1f9f59a1ce105f8f8d5a09fe60e0fe673b61a9
 SHA1 (patch-gold_resolve.cc) = 7e6c45cafddc73a4195c4bdacc43102a0fde3c13
-SHA1 (patch-gold_stringpool.cc) = 16b624c8ffba07f5fb6dc1c787a9b35ffa8d89c3
 SHA1 (patch-gold_system.h) = 68655247b884cd520daf6a98cbc3f365396049bd
 SHA1 (patch-include_safe-ctype.h) = 480c46b1528f623435e9b52b7ba8247745e4e254
 SHA1 (patch-libiberty_Makefile.in) = fd07f4fafe6c25e9ab65c65ec3807c89bfd9f0b5
