@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/06/06 03:31:01 taca Exp $
-
-SHA1 (contao-3.4.5.tar.gz) = 0ae1b47a85f33e74550a77fa4fa44fa5c3b6e674
-RMD160 (contao-3.4.5.tar.gz) = dcca780d1d67d71e5cbeade268608e296d4d847b
-Size (contao-3.4.5.tar.gz) = 11544130 bytes
-SHA1 (patch-system_helper_functions.php) = e5ee8f1e08b2712030f8809f20166bf6550f266b
-SHA1 (patch-system_modules_core_classes_BackendUser.php) = 527074d91cd550be242f6b4dfe005f6351fd1f35
-SHA1 (patch-system_modules_core_controllers_BackendPopup.php) = 29d2abf5bb149297da84ad198365b7656304fcb9
-SHA1 (patch-system_modules_core_dca_tl__files.php) = 8c1d1fb73cfe0e76e30eeb1b4036beb7b56fd71e
