@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.217 2015/06/04 15:48:45 sevan Exp $
+# $NetBSD: bootstrap,v 1.218 2015/06/13 13:15:39 tron Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -804,7 +804,7 @@ SunOS)
 	else
 		need_sed=yes
 	fi
-	if [ "`uname -r`" = "5.11" -a -x "/usr/bin/bash" ]; then
+	if [ -x "/usr/bin/bash" ]; then
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
 	else
