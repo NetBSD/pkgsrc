@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/10 13:29:57 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/13 14:55:52 tnn Exp $
 
 DISTNAME=	openjdk-1.8.45-20150610
 PKGNAME=	openjdk8-1.8.45
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--disable-freetype-bundling
 CONFIGURE_ARGS+=	--with-jobs=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--with-num-cores=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--with-memory-size=768
+CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--with-user-release-suffix=pkgsrc_${PKGVERSION}
 CONFIGURE_ARGS+=	--with-update-version=u${PKGVERSION_NOREV:S/1.8.//}
