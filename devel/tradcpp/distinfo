@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/06/12 08:23:51 dholland Exp $
+$NetBSD: distinfo,v 1.10 2015/06/13 00:10:12 dholland Exp $
 
 SHA1 (tradcpp-0.5.tar.gz) = e153eabe2d01627d640cf36386941e5b1d549f21
 RMD160 (tradcpp-0.5.tar.gz) = 38fa87d6c297d1e02fbc4c1d4a4ddbae6046234e
 Size (tradcpp-0.5.tar.gz) = 36701 bytes
+SHA1 (patch-macro.c) = 7bc02b70f7b5f52581747e997874e75531c00026
