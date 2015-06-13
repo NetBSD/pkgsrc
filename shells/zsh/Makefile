@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2015/02/04 09:22:34 snj Exp $
+# $NetBSD: Makefile,v 1.69 2015/06/13 12:57:28 ryoon Exp $
 
 .include "../../shells/zsh/Makefile.common"
 
-ZSH_VERSION=	5.0.7
-PKGREVISION=	1
+ZSH_VERSION=	5.0.8
 ZSH_MAINTAINER=	uebayasi@NetBSD.org
 
 CONFIGURE_ARGS+=	--disable-gdbm
@@ -18,6 +17,7 @@ SUBST_FILES.prefix-fixup= \
 	Util/reporter \
 	Functions/Calendar/calendar_add \
 	Functions/Misc/run-help \
+	Functions/Misc/run-help-ip \
 	Functions/Misc/checkmail \
 	Functions/Misc/sticky-note \
 	Functions/Misc/zcalc \
@@ -29,5 +29,6 @@ SUBST_SED.prefix-fixup= 	-e 's|^\#\!/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\! /bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\!/usr/local/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\! /usr/local/bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
+SUBST_SED.prefix-fixup+=	-e 's|^\#\! zsh|\#\! ${PREFIX}/bin/zsh|g'
 
 .include "../../mk/bsd.pkg.mk"
