@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/12/09 18:40:07 jakllsch Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/13 12:55:51 jakllsch Exp $
 #
 
-DISTNAME=	nvramtool-4.0-5009-gf87c20a-6af86f2
-PKGNAME=	nvramtool-0pre20131209
+DISTNAME=	nvramtool-4.0-9989-gf2dfef0-08bda29
+PKGNAME=	nvramtool-0pre20150613
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL:=nvramtool/}
 
