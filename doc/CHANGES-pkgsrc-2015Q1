@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.47 2015/06/12 22:06:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.48 2015/06/13 09:15:25 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -164,3 +164,13 @@ Pullup ticket #4739 - requested by taca
 www/contao32: security update
 Pullup ticket #4740 - requested by taca
 www/contao34: security patch
+Pullup ticket #4743 - requested by khorben
+sysutils/xenkernel45: security patch
+Pullup ticket #4744 - requested by khorben
+sysutils/xentools45: security patch
+Pullup ticket #4745 - requested by khorben
+sysutils/xenkernel42: security patch
+Pullup ticket #4746 - requested by khorben
+sysutils/xentools42: security patch
+Pullup ticket #4747 - requested by tron
+security/openssl: security update
