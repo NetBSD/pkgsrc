@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2673 2015/06/13 10:28:53 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2674 2015/06/13 10:36:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4990,3 +4990,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Dancer to 1.3138 [wen 2015-06-13]
 	Updated security/p5-String-Random to 0.28 [wen 2015-06-13]
 	Updated security/p5-Crypt-URandom to 0.36 [wen 2015-06-13]
+	Updated textproc/p5-Text-BibTeX to 0.71 [wen 2015-06-13]
