@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2677 2015/06/13 13:37:51 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2678 2015/06/13 13:48:53 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4994,3 +4994,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/nvramtool to 0pre20150613 [jakllsch 2015-06-13]
 	Updated shells/zsh to 5.0.8 [ryoon 2015-06-13]
 	Updated ham/fldigi to 3.22.10 [makoto 2015-06-13]
+	Added databases/php-mongo version 1.6.9 [fhajny 2015-06-13]
