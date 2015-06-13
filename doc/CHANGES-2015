@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2668 2015/06/12 23:40:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2669 2015/06/13 00:02:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4980,3 +4980,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/openssl to 1.0.2c [tron 2015-06-12]
 	Updated www/c-icap to 0.3.5 [taca 2015-06-12]
 	Updated www/c-icap-modules to 0.3.2 [taca 2015-06-12]
+	Updated devel/ruby-rspec-support to 3.3.0 [taca 2015-06-12]
+	Updated devel/ruby-rspec-core to 3.3.0 [taca 2015-06-12]
+	Updated devel/ruby-rspec-mocks to 3.3.0 [taca 2015-06-12]
+	Updated devel/ruby-rspec-expectations to 3.3.0 [taca 2015-06-12]
+	Updated devel/ruby-rspec to 3.3.0 [taca 2015-06-13]
+	Updated devel/ruby-rspec-rails to 3.3.0 [taca 2015-06-13]
