@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2680 2015/06/13 17:24:14 alnsn Exp $
+$NetBSD: CHANGES-2015,v 1.2681 2015/06/13 20:43:48 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4997,3 +4997,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/php-mongo version 1.6.9 [fhajny 2015-06-13]
 	Removed www/contao34 [taca 2015-06-13]
 	Updated devel/lua-penlight to 1.3.2 [alnsn 2015-06-13]
+	Updated inputmethod/ja-freewnn-lib to 1.11alpha23 [tsutsui 2015-06-13]
+	Updated inputmethod/ja-freewnn-server to 1.11alpha23 [tsutsui 2015-06-13]
