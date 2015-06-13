@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 14:23:15 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/13 19:13:10 tnn Exp $
 
 DISTNAME=	libepoxy-1.2
 PKGREVISION=	1
@@ -25,13 +25,12 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} == "modular"
-# We should enforce this, but the dependency cannot
-# currently be satisfied by pkgsrc, which might break pbulk(?)
-# We'll settle for failing in the build phase for now.
-#BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=10
+PLIST_VARS+=		egl
+.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+PLIST.egl=		yes
+CONFIGURE_ENV+=		PKGSRC_BUILD_EGL=yes
 .else
-PKG_FAIL_REASON+=	"This package is currently for modular X.org only"
+CONFIGURE_ENV+=		PKGSRC_BUILD_EGL=no
 .endif
 
 .include "../../lang/python/tool.mk"
