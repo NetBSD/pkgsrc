@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.48 2015/06/13 09:15:25 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.49 2015/06/13 10:51:02 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -174,3 +174,5 @@ Pullup ticket #4746 - requested by khorben
 sysutils/xentools42: security patch
 Pullup ticket #4747 - requested by tron
 security/openssl: security update
+Pullup ticket #4741 - requested by tron
+security/gnutls: build fix
