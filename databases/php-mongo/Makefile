@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/06/13 13:48:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/13 14:29:54 fhajny Exp $
 
 MODNAME=		mongo
 PECL_VERSION=		1.6.9
 CATEGORIES+=		databases
 
-MAINTAINER=		filip@joyent.com
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://pecl.php.net/package/mongo
 COMMENT=		MongoDB database driver
 LICENSE=		apache-2.0
