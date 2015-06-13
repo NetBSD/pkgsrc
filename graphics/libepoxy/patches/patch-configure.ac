@@ -1,0 +1,33 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/06/13 19:13:10 tnn Exp $
+
+Override EGL detection.
+
+--- configure.ac.orig	2014-05-14 00:22:08.000000000 +0000
++++ configure.ac
+@@ -62,7 +62,7 @@ has_znow=yes
+ 
+ case $host_os in
+     mingw*)
+-        build_egl=no
++        build_egl=${PKGSRC_BUILD_EGL}
+         build_glx=no
+         build_wgl=yes
+         # On windows, the DLL has to have all of its functions
+@@ -77,7 +77,7 @@ case $host_os in
+         AC_SUBST([LOG_COMPILER], [wine])
+         ;;
+     darwin*)
+-        build_egl=no
++        build_egl=${PKGSRC_BUILD_EGL}
+         build_glx=yes
+         build_wgl=no
+         build_apple=yes
+@@ -85,7 +85,7 @@ case $host_os in
+         EPOXY_LINK_LIBS=""
+         ;;
+     *)
+-        build_egl=yes
++        build_egl=${PKGSRC_BUILD_EGL}
+         build_glx=yes
+         build_wgl=no
+         # On platforms with dlopen, we load everything dynamically and
