@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2672 2015/06/13 09:58:17 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2673 2015/06/13 10:28:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4989,3 +4989,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/tradcpp to 0.5.1 [dholland 2015-06-13]
 	Updated www/p5-Dancer to 1.3138 [wen 2015-06-13]
 	Updated security/p5-String-Random to 0.28 [wen 2015-06-13]
+	Updated security/p5-Crypt-URandom to 0.36 [wen 2015-06-13]
