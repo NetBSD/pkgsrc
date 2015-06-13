@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.26 2011/04/22 09:03:53 spz Exp $
+# $NetBSD: mkreadme,v 1.27 2015/06/13 12:09:32 spz Exp $
 #
 # Script for README.html generation
 #
@@ -519,11 +519,14 @@ if [ "x$prune" = "xyes" ]; then
     echo "Pruning unused README.html files"
     echo " "
     cd ${PKGSRCDIR}
-    for d in `ls -d */*` ; do
-	if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/README.html ]; then
-	    echo "Pruning ${d}/README.html which is no longer used"
-	    rm -f ${d}/README.html
-	fi
+    # cats=`${BMAKE} show-subdir-var VARNAME=SUBDIR` # already set above
+    for c in ${cats} ; do
+	for d in `ls -d ${c}/*` ; do
+	    if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/README.html ]; then
+		echo "Pruning ${d}/README.html which is no longer used"
+		rm -f ${d}/README.html
+	    fi
+	done
     done
 fi
 
