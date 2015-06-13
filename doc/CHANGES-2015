@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2670 2015/06/13 02:09:34 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.2671 2015/06/13 09:05:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rspec to 3.3.0 [taca 2015-06-13]
 	Updated devel/ruby-rspec-rails to 3.3.0 [taca 2015-06-13]
 	Updated devel/tradcpp to 0.5.1 [dholland 2015-06-13]
+	Updated www/p5-Dancer to 1.3138 [wen 2015-06-12]
