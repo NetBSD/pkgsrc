@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2682 2015/06/13 21:26:39 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.2683 2015/06/13 21:55:58 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5000,3 +5000,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/ja-freewnn-lib to 1.11alpha23 [tsutsui 2015-06-13]
 	Updated inputmethod/ja-freewnn-server to 1.11alpha23 [tsutsui 2015-06-13]
 	Updated x11/mlterm to 3.5.0 [tsutsui 2015-06-13]
+	Updated x11/deforaos-locker to 0.3.0 [khorben 2015-06-13]
