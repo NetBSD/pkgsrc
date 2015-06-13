@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2675 2015/06/13 12:56:19 jakllsch Exp $
+$NetBSD: CHANGES-2015,v 1.2676 2015/06/13 12:58:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4992,3 +4992,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Crypt-URandom to 0.36 [wen 2015-06-13]
 	Updated textproc/p5-Text-BibTeX to 0.71 [wen 2015-06-13]
 	Updated sysutils/nvramtool to 0pre20150613 [jakllsch 2015-06-13]
+	Updated shells/zsh to 5.0.8 [ryoon 2015-06-13]
