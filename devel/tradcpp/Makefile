@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 08:23:51 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/13 02:08:42 dholland Exp $
 #
 
-DISTNAME=	tradcpp-0.5
+DISTNAME=	tradcpp-0.5.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/dholland/
 
@@ -11,7 +11,7 @@ COMMENT=	Traditional (K&R-style) C preprocessor
 LICENSE=	modified-bsd
 
 USE_BSD_MAKEFILE=	yes
-USE_TOOLS=		nroff
+USE_TOOLS+=		nroff
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
