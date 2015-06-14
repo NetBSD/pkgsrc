@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:58 markd Exp $
 
 DISTNAME=	drm
-PKGNAME=	tex-${DISTNAME}-4.1
-TEXLIVE_REV=	36735
+PKGNAME=	tex-${DISTNAME}-4.2
+TEXLIVE_REV=	37153
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/drm

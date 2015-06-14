@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/06/14 11:19:58 markd Exp $
 
-SHA1 (tex-drm-36735/drm.doc.tar.xz) = d7429fddad961e722183a90e4fddbda994ca7df5
-RMD160 (tex-drm-36735/drm.doc.tar.xz) = 01c819d9329241fcf12aeaa47a696d14d79b8dc3
-Size (tex-drm-36735/drm.doc.tar.xz) = 2981540 bytes
+SHA1 (tex-drm-37153/drm.doc.tar.xz) = ab7a208f5c81f15338001bf7cb0d3f697bcc023f
+RMD160 (tex-drm-37153/drm.doc.tar.xz) = 29ff95299a0cf7914f4988860713b74bda0f8ff1
+Size (tex-drm-37153/drm.doc.tar.xz) = 2981484 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/06/14 11:20:00 markd Exp $
 
-SHA1 (tex-sourcesanspro-34817/sourcesanspro.doc.tar.xz) = da7383db1e0e74b6ed7f1bd762149622b25cab8b
-RMD160 (tex-sourcesanspro-34817/sourcesanspro.doc.tar.xz) = 8049d4d4eb5afa263c71d855492aec669a853527
-Size (tex-sourcesanspro-34817/sourcesanspro.doc.tar.xz) = 119840 bytes
+SHA1 (tex-sourcesanspro-37379/sourcesanspro.doc.tar.xz) = 2b2a2735a43fa69cca884676a4443ec1f942a73f
+RMD160 (tex-sourcesanspro-37379/sourcesanspro.doc.tar.xz) = c94202f5f23996e7d8db124666f69a7676691950
+Size (tex-sourcesanspro-37379/sourcesanspro.doc.tar.xz) = 188292 bytes

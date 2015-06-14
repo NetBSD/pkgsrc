@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:59 markd Exp $
 
 DISTNAME=	gentium-tug
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	31194
+PKGNAME=	tex-${DISTNAME}-1.1
+TEXLIVE_REV=	37378
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/gentium-tug

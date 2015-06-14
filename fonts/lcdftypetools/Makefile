@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/05/17 06:16:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:58 markd Exp $
 
-DISTNAME=	texlive-20140525-source
-PKGNAME=	lcdftypetools-2.100
+DISTNAME=	texlive-20150521-source
+PKGNAME=	lcdftypetools-2.104
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,14 +19,14 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/lcdf-typetools
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
 
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

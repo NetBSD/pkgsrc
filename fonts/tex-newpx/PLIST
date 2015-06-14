@@ -1,21 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/14 11:20:00 markd Exp $
 share/texmf-dist/fonts/afm/public/newpx/zplb.afm
 share/texmf-dist/fonts/afm/public/newpx/zplbi.afm
 share/texmf-dist/fonts/afm/public/newpx/zplr.afm
 share/texmf-dist/fonts/afm/public/newpx/zplri.afm
 share/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-ecth-lf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-ecth-osf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-ecth-tlf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-ecth-tosf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-ot1-th-osf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-ot1-th-tlf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-texnansi-th-osf.enc
-share/texmf-dist/fonts/enc/dvips/newpx/ntx-texnansi-th-tlf.enc
 share/texmf-dist/fonts/enc/dvips/newpx/ot1sups.enc
 share/texmf-dist/fonts/enc/dvips/newpx/texnansxsups.enc
 share/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc
 share/texmf-dist/fonts/map/dvips/newpx/newpx.map
+share/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Bold.otf
+share/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-BoldItalic.otf
+share/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Italic.otf
+share/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Regular.otf
 share/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-lf-ly1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-lf-ot1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-lf-sc-ly1.tfm
@@ -270,6 +266,7 @@ share/texmf-dist/fonts/vf/public/newpx/zplmia.vf
 share/texmf-dist/fonts/vf/public/newpx/zplsy.vf
 share/texmf-dist/fonts/vf/public/newpx/zplsyc.vf
 share/texmf-dist/fonts/vf/public/newpx/zplsym.vf
+share/texmf-dist/tex/latex/newpx/TeXGyrePagellaX.fontspec
 share/texmf-dist/tex/latex/newpx/ly1npxtt.fd
 share/texmf-dist/tex/latex/newpx/ly1zpllf.fd
 share/texmf-dist/tex/latex/newpx/ly1zplosf.fd

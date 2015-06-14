@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/14 11:20:00 markd Exp $
 share/texmf-dist/fonts/afm/public/newtx/ntxsups-Bold.afm
 share/texmf-dist/fonts/afm/public/newtx/ntxsups-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/newtx/ntxsups-Italic.afm
@@ -18,12 +18,18 @@ share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tosf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tosf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-lf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-osf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tosf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ly1-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-lf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-lf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-osf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-osf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-sc.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-th-osf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-th-tlf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tosf-sc.enc
@@ -33,6 +39,8 @@ share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-lf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-lf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-osf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-osf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-th-osf.enc
+share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-th-tlf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-tlf-sc.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-tlf.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntx-texnansi-tosf-sc.enc
