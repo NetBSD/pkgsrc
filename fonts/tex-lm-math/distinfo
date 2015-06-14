@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/12/03 23:51:42 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/06/14 11:19:59 markd Exp $
 
-SHA1 (tex-lm-math-29044/lm-math.tar.xz) = 25b73d5f880143ac1c25e6e152d645ab4da02489
-RMD160 (tex-lm-math-29044/lm-math.tar.xz) = 0c87321460e9543fa4f434ca3d76e7bc9bdd093e
-Size (tex-lm-math-29044/lm-math.tar.xz) = 378420 bytes
+SHA1 (tex-lm-math-36915/lm-math.tar.xz) = 8f44a9ec25368700576df88ea92aa7f3ac564af2
+RMD160 (tex-lm-math-36915/lm-math.tar.xz) = 62d72a43a961ecffc72443ae5c1f963931db6b9f
+Size (tex-lm-math-36915/lm-math.tar.xz) = 377748 bytes
