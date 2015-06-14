@@ -1,7 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/06/11 19:13:46 asau Exp $
+$NetBSD: patch-configure.ac,v 1.2 2015/06/14 16:08:04 wiz Exp $
 
 Add a --with-shell option in order to avoid hardcoding "/bin/bash" inside
 filter/foomaticrip.c.
+
+Fixed upstream as [Bug 1288]:
+https://bugs.linuxfoundation.org/show_bug.cgi?id=1288
 
 --- configure.ac.orig	2015-04-13 14:47:41.000000000 +0000
 +++ configure.ac
