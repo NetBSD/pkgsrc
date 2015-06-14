@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.86 2015/03/14 00:39:14 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.87 2015/06/14 21:46:34 prlw1 Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
-bin/gtk-update-icon-cache
+bin/gtk2-update-icon-cache
 include/gail-1.0/gail/gailwidget.h
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
