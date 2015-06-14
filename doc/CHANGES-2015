@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2684 2015/06/14 07:27:33 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.2685 2015/06/14 08:10:09 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5002,3 +5002,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/mlterm to 3.5.0 [tsutsui 2015-06-13]
 	Updated x11/deforaos-locker to 0.3.0 [khorben 2015-06-13]
 	Added security/dcfldd version 1.3.4 [pettai 2015-06-14]
+	Updated graphics/feh to 2.13.1 [szptvlfn 2015-06-14]
