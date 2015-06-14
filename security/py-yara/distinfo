@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/06/06 09:13:27 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/06/14 21:29:58 pettai Exp $
 
-SHA1 (v3.3.0.tar.gz) = 6f72d80f21336c098f9013212d496d3920d9ef18
-RMD160 (v3.3.0.tar.gz) = 330de9de9294953a3a42032ccc5ae849f065ab5e
-Size (v3.3.0.tar.gz) = 7634474 bytes
+SHA1 (yara/v3.3.0.tar.gz) = 6f72d80f21336c098f9013212d496d3920d9ef18
+RMD160 (yara/v3.3.0.tar.gz) = 330de9de9294953a3a42032ccc5ae849f065ab5e
+Size (yara/v3.3.0.tar.gz) = 7634474 bytes
