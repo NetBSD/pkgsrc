@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2712 2015/06/14 21:47:04 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2713 2015/06/14 21:48:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5202,3 +5202,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/kpathsea to 6.2.1nb1 [ryoon 2015-06-14]
 	Updated wm/notion to 3.2015061300 [wiz 2015-06-14]
 	Updated x11/gtk2 to 2.24.28 [prlw1 2015-06-14]
+	Added devel/py-hglib version 1.6 [wiz 2015-06-14]
