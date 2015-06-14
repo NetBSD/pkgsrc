@@ -327,62 +327,6 @@
 +
 +#define INTPTR_TYPE       (LONG_TYPE_SIZE == 64 ? "long int" : "int")
 +#define UINTPTR_TYPE      (LONG_TYPE_SIZE == 64 ? "long unsigned int" : "unsigned int")
---- gcc/config/openbsd-libpthread.h.orig
-+++ gcc/config/openbsd-libpthread.h
-@@ -18,5 +18,5 @@
-    along with GCC; see the file COPYING3.  If not see
-    <http://www.gnu.org/licenses/>.  */
- 
--#define OBSD_LIB_SPEC "%{!shared:%{pthread:-lpthread} -lc}"
-+#define OBSD_LIB_SPEC "%{pthread:-lpthread%{!shared:%{p|pg:_p}}} %{!shared:-lc%{p:_p}%{!p:%{pg:_p}}}"
- 
---- gcc/config/openbsd.h.orig
-+++ gcc/config/openbsd.h
-@@ -108,9 +108,9 @@
-    This two-stage defines makes it easy to pick that for targets that
-    have subspecs.  */
- #ifdef CPP_CPU_SPEC
--#define OBSD_CPP_SPEC "%(cpp_cpu) %{posix:-D_POSIX_SOURCE} %{pthread:-D_POSIX_THREADS}"
-+#define OBSD_CPP_SPEC "%(cpp_cpu) %{posix:-D_POSIX_SOURCE} %{pthread:-D_REENTRANT}"
- #else
--#define OBSD_CPP_SPEC "%{posix:-D_POSIX_SOURCE} %{pthread:-D_POSIX_THREADS}"
-+#define OBSD_CPP_SPEC "%{posix:-D_POSIX_SOURCE} %{pthread:-D_REENTRANT}"
- #endif
- 
- #undef LIB_SPEC
-@@ -143,6 +143,9 @@
- #define LIB_SPEC OBSD_LIB_SPEC
- #endif
- 
-+#undef LINK_PIE_SPEC
-+#define LINK_PIE_SPEC "%{pie:-pie} %{p|pg|nopie:-nopie} "
-+
- #define TARGET_POSIX_IO
- 
- /* All new versions of OpenBSD have C99 functions.  We redefine this hook
-@@ -285,5 +288,12 @@
- 
- /* Storage layout.  */
- 
-+/* Silence "unsafe GNU crap" messages */
-+#define NO_UNSAFE_BUILTINS
-+
-+/* The system headers on OpenBSD are C++-aware.  */
-+#undef NO_IMPLICIT_EXTERN_C
-+#define NO_IMPLICIT_EXTERN_C
-+
- 
- #define HAVE_ENABLE_EXECUTE_STACK
---- gcc/config/openbsd.opt.orig
-+++ gcc/config/openbsd.opt
-@@ -32,4 +32,7 @@
- pthread
- Driver
- 
-+rdynamic
-+Driver
-+
- ; This comment is to ensure we retain the blank line above.
 --- /dev/null
 +++ gcc/config/i386/dragonfly.h
 @@ -0,0 +1,105 @@
@@ -565,46 +509,6 @@
 +#if defined(HAVE_LD_EH_FRAME_HDR)
 +#define LINK_EH_SPEC "%{!static:--eh-frame-hdr} "
 +#endif
---- gcc/config/i386/openbsd.h.orig
-+++ gcc/config/i386/openbsd.h
-@@ -38,10 +38,10 @@
- 
- /* This must agree with <machine/ansi.h> */
- #undef SIZE_TYPE
--#define SIZE_TYPE "unsigned int"
-+#define SIZE_TYPE "long unsigned int"
- 
- #undef PTRDIFF_TYPE
--#define PTRDIFF_TYPE "int"
-+#define PTRDIFF_TYPE "long int"
- 
- #undef WCHAR_TYPE
- #define WCHAR_TYPE "int"
-@@ -49,6 +49,9 @@
- #undef WCHAR_TYPE_SIZE
- #define WCHAR_TYPE_SIZE 32
- 
-+#undef WINT_TYPE
-+#define WINT_TYPE "int"
-+
- /* Assembler format: overall framework.  */
- 
- #undef ASM_APP_ON
---- gcc/config/i386/openbsdelf.h.orig
-+++ gcc/config/i386/openbsdelf.h
-@@ -97,9 +97,12 @@
-    %{shared:-shared} %{R*} \
-    %{static:-Bstatic} \
-    %{!static:-Bdynamic} \
-+   %{rdynamic:-export-dynamic} \
-    %{assert*} \
-    -dynamic-linker /usr/libexec/ld.so"
- 
-+#define SUBTARGET32_DEFAULT_CPU "i486"
-+
- #undef STARTFILE_SPEC
- #define STARTFILE_SPEC "\
- 	%{!shared: %{pg:gcrt0%O%s} %{!pg:%{p:gcrt0%O%s} %{!p:crt0%O%s}} \
 --- gcc/ginclude/stddef.h.orig
 +++ gcc/ginclude/stddef.h
 @@ -50,6 +50,11 @@
@@ -1338,60 +1242,6 @@
  #endif
 +#endif
  }
---- gcc/builtins.c.orig
-+++ gcc/builtins.c
-@@ -125,9 +125,11 @@
- static rtx expand_builtin_mempcpy (tree, rtx, enum machine_mode);
- static rtx expand_builtin_mempcpy_args (tree, tree, tree, rtx,
- 					enum machine_mode, int);
-+#ifndef NO_UNSAFE_BUILTINS
- static rtx expand_builtin_strcpy (tree, rtx);
- static rtx expand_builtin_strcpy_args (tree, tree, rtx);
- static rtx expand_builtin_stpcpy (tree, rtx, enum machine_mode);
-+#endif
- static rtx expand_builtin_strncpy (tree, rtx);
- static rtx builtin_memset_gen_str (void *, HOST_WIDE_INT, enum machine_mode);
- static rtx expand_builtin_memset (tree, rtx, enum machine_mode);
-@@ -3370,6 +3372,7 @@
- # define CODE_FOR_movstr CODE_FOR_nothing
- #endif
- 
-+#ifndef NO_UNSAFE_BUILTINS
- /* Expand into a movstr instruction, if one is available.  Return NULL_RTX if
-    we failed, the caller should emit a normal call, otherwise try to
-    get the result in TARGET, if convenient.  If ENDP is 0 return the
-@@ -3521,6 +3524,7 @@
-       return expand_movstr (dst, src, target, /*endp=*/2);
-     }
- }
-+#endif
- 
- /* Callback routine for store_by_pieces.  Read GET_MODE_BITSIZE (MODE)
-    bytes from constant string DATA + OFFSET and return it as target
-@@ -6140,9 +6144,11 @@
-       break;
- 
-     case BUILT_IN_STRCPY:
-+#ifndef NO_UNSAFE_BUILTINS
-       target = expand_builtin_strcpy (exp, target);
-       if (target)
- 	return target;
-+#endif
-       break;
- 
-     case BUILT_IN_STRNCPY:
-@@ -6152,9 +6158,11 @@
-       break;
- 
-     case BUILT_IN_STPCPY:
-+#ifndef NO_UNSAFE_BUILTINS
-       target = expand_builtin_stpcpy (exp, target, mode);
-       if (target)
- 	return target;
-+#endif
-       break;
- 
-     case BUILT_IN_MEMCPY:
 --- gcc/config.gcc.orig
 +++ gcc/config.gcc
 @@ -687,6 +687,26 @@
@@ -1429,7 +1279,7 @@
    tmake_file="t-slibgcc"
    gas=yes
    gnu_ld=yes
-@@ -1352,6 +1373,14 @@
+@@ -1357,6 +1378,14 @@
      tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h i386/rdos.h i386/rdos64.h"
      tmake_file="i386/t-i386elf t-svr4"
      ;;
@@ -1444,7 +1294,7 @@
  i[34567]86-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/freebsd.h"
  	;;
-@@ -1359,12 +1388,14 @@
+@@ -1364,12 +1393,14 @@
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	;;
  i[34567]86-*-netbsdelf*)
@@ -1461,7 +1311,7 @@
  	;;
  i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
  	tm_file="i386/i386.h i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h openbsd-oldgas.h openbsd.h i386/openbsd.h"
-@@ -1375,6 +1406,7 @@
+@@ -1380,6 +1411,7 @@
  	use_collect2=yes
  	;;
  i[34567]86-*-openbsd*)
@@ -1469,7 +1319,7 @@
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h"
  	tm_file="${tm_file} openbsd.h openbsd-stdint.h openbsd-libpthread.h i386/openbsdelf.h"
  	extra_options="${extra_options} openbsd.opt"
-@@ -1382,6 +1414,7 @@
+@@ -1387,6 +1419,7 @@
  	gnu_ld=yes
  	;;
  x86_64-*-openbsd*)
@@ -1477,7 +1327,7 @@
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h"
  	tm_file="${tm_file} openbsd.h openbsd-stdint.h openbsd-libpthread.h i386/x86-64.h i386/openbsdelf.h"
  	extra_options="${extra_options} openbsd.opt"
-@@ -2927,6 +2960,12 @@
+@@ -2935,6 +2968,12 @@
      arch_without_sse2=yes
      arch_without_64bit=yes
      ;;
@@ -1490,7 +1340,7 @@
    i386-*-*)
      arch=i386
      cpu=i386
-@@ -4109,6 +4148,8 @@
+@@ -4114,6 +4153,8 @@
  		;;
  	i[34567]86-*-mingw* | x86_64-*-mingw*)
  		;;
@@ -1501,7 +1351,7 @@
  	ia64*-*-linux*)
 --- gcc/configure.orig
 +++ gcc/configure
-@@ -27421,6 +27421,20 @@
+@@ -27477,6 +27477,20 @@
        gcc_cv_target_dl_iterate_phdr=no
      fi
      ;;
@@ -1573,7 +1423,7 @@
  insn-preds.c: s-preds; @true
  tm-preds.h: s-preds-h; @true
  tm-constrs.h: s-constrs-h; @true
-@@ -3217,6 +3228,9 @@
+@@ -3219,6 +3230,9 @@
  	  ( cd $(DESTDIR)$(bindir) && \
  	    $(LN) $(GCC_INSTALL_NAME)$(exeext) $(target_noncanonical)-gcc-$(version)$(exeext) ); \
  	fi
@@ -1697,7 +1547,7 @@
      // showed that calling _mm_delay_32() (or doing nothing) was a better
 --- libitm/configure.tgt.orig
 +++ libitm/configure.tgt
-@@ -138,6 +138,7 @@
+@@ -139,6 +139,7 @@
  	;;
  
    *-*-gnu* | *-*-k*bsd*-gnu \

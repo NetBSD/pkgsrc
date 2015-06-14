@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2014/05/13 08:18:04 marino Exp $
+# $NetBSD: options.mk,v 1.5 2015/06/14 19:46:51 marino Exp $
+
+# NLS is failing, might be linking with wrong iconv lib.
+# Disable option until further notice
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc-aux
-PKG_SUPPORTED_OPTIONS=  fortran objc testsuite nls static bootstrap
-PKG_SUGGESTED_OPTIONS=  fortran objc nls
+PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap #nls
+PKG_SUGGESTED_OPTIONS=  fortran objc #nls
 
 .include "../../mk/bsd.options.mk"
 
