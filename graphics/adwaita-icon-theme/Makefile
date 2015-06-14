@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/01/10 12:23:05 prlw1 Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/14 22:19:00 prlw1 Exp $
 
-DISTNAME=		adwaita-icon-theme-3.14.1
+DISTNAME=		adwaita-icon-theme-3.16.2.1
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/adwaita-icon-theme/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/adwaita-icon-theme/${PKGVERSION_NOREV:R:R}/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		prlw1@cam.ac.uk
@@ -27,8 +27,8 @@ PKGCONFIG_OVERRIDE+=	adwaita-icon-theme.pc.in
 INSTALLATION_DIRS+=	share/icons/Adwaita/96x96/places
 
 EVAL_PREFIX+=		PREFIX.svg=librsvg
-EVAL_PREFIX+=		PREFIX.gtk2=gtk2+
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX.gtk2}/bin/gtk-update-icon-cache"
+EVAL_PREFIX+=		PREFIX.gtk3=gtk3+
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX.gtk3}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons/Adwaita"
 INSTALL_TEMPLATES+=	../../graphics/adwaita-icon-theme/files/icon-cache.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/adwaita-icon-theme/files/icon-cache.tmpl
