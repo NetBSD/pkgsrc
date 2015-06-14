@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/23 12:33:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/14 12:50:04 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
@@ -41,8 +41,6 @@ share/texmf-dist/doc/generic/musixtex/examples/ilestne.tex
 share/texmf-dist/doc/generic/musixtex/examples/ilestnex.tex
 share/texmf-dist/doc/generic/musixtex/examples/ilfaitda.tex
 share/texmf-dist/doc/generic/musixtex/examples/ilfaitdx.tex
-share/texmf-dist/doc/generic/musixtex/examples/kinder.log
-share/texmf-dist/doc/generic/musixtex/examples/kinder.pdf
 share/texmf-dist/doc/generic/musixtex/examples/kinder.tex
 share/texmf-dist/doc/generic/musixtex/examples/kv315.tex
 share/texmf-dist/doc/generic/musixtex/examples/kv315f.tex
@@ -117,14 +115,11 @@ share/texmf-dist/doc/generic/musixtex/musixdoc/smaller.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/spacing.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/staffsize.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/summary.tex
-share/texmf-dist/doc/generic/musixtex/musixdoc/texput.log
 share/texmf-dist/doc/generic/musixtex/musixdoc/transposition.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/writingnotes.tex
 share/texmf-dist/doc/generic/musixtex/musixlyr/README.musixlyr
-share/texmf-dist/doc/generic/musixtex/musixlyr/examples/nonmoriar.dvi
 share/texmf-dist/doc/generic/musixtex/musixlyr/examples/nonmoriar.pdf
 share/texmf-dist/doc/generic/musixtex/musixlyr/examples/nonmoriar.tex
-share/texmf-dist/doc/generic/musixtex/musixlyr/mxlyrdoc.dvi
 share/texmf-dist/doc/generic/musixtex/musixlyr/mxlyrdoc.pdf
 share/texmf-dist/doc/generic/musixtex/musixlyr/mxlyrdoc.tex
 share/texmf-dist/doc/generic/musixtex/musixtex-install.pdf

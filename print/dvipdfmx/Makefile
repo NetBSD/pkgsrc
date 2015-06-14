@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2015/04/25 13:08:52 markd Exp $
+# $NetBSD: Makefile,v 1.47 2015/06/14 12:50:00 markd Exp $
 
-DISTNAME=	texlive-20140525-source
-PKGNAME=	dvipdfmx-20140525
+DISTNAME=	texlive-20150521-source
+PKGNAME=	dvipdfmx-20150315
 CATEGORIES=	print converters
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -27,12 +27,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvipdfm-x
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
-CONFIGURE_ARGS+=	--with-system-freetype2 \
-		--with-freetype2-includes=${BUILDLINK_PREFIX.freetype2}/include/freetype2 \
-		--with-freetype2-libdir=${BUILDLINK_PREFIX.freetype2}/lib
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
 CONFIGURE_ARGS+=	--with-system-zlib \
 		--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
@@ -59,7 +54,7 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/libpaper/buildlink3.mk"

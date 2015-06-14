@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2015/05/05 18:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/06/14 12:50:03 markd Exp $
 
 DISTNAME=	kpathsea
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	35814
+PKGNAME=	tex-${DISTNAME}-2015
+TEXLIVE_REV=	37193
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/kpathsea

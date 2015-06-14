@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2015/05/05 18:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/14 12:50:05 markd Exp $
 
 DISTNAME=	plain
-PKGNAME=	tex-${DISTNAME}-3.141592653.35821
-TEXLIVE_REV=	35821
+PKGNAME=	tex-${DISTNAME}-3.141592653.37363
+TEXLIVE_REV=	37363
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/plain

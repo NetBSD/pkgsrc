@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2015/04/26 00:54:04 markd Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/14 12:50:01 markd Exp $
 
 DISTNAME=	context
-PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	1
-TEXLIVE_REV=	35839
+PKGNAME=	tex-${DISTNAME}-2015
+TEXLIVE_REV=	37464
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/context
 COMMENT=	The ConTeXt macro package
 
 CONFLICTS+=	teTeX-bin<=3.0nb44

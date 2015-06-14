@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.15 2015/04/25 04:44:53 markd Exp $
+$NetBSD: distinfo,v 1.16 2015/06/14 12:50:05 markd Exp $
 
-SHA1 (tex-tetex-36067/tetex.tar.xz) = 061b25584aa1aadcd25126a1c70d1a36e061b7b9
-RMD160 (tex-tetex-36067/tetex.tar.xz) = b9faad091c4aa697fce17ed336973936dbc382b6
-Size (tex-tetex-36067/tetex.tar.xz) = 52492 bytes
-SHA1 (patch-bin_fmtutil) = 2bd10500fc9ef66ad539c4aae6278ad1fa714e20
-SHA1 (patch-bin_fmtutil-sys) = d7154376477cf6f02027b24cbcae5e5f3b3129f3
+SHA1 (tex-tetex-37485/tetex.tar.xz) = 0c54fa5df3fe428d6045fedb17795640c2ccae2a
+RMD160 (tex-tetex-37485/tetex.tar.xz) = b5b74427f38f931e9a10024885eca7f0701bc8aa
+Size (tex-tetex-37485/tetex.tar.xz) = 56756 bytes
+SHA1 (patch-bin_fmtutil) = aeea4413d8b30c25fba5151daf8eb6f96badc409
+SHA1 (patch-bin_fmtutil-sys) = 41720ed218bbf9980772dc61ead757a3f0633d6b
 SHA1 (patch-bin_kpsetool) = 6b19c9711dba7f2d73a4dc3fc6a62c48add928bb
 SHA1 (patch-bin_kpsewhere) = d442bf917f9fbd5f6a0bc3c461b01cf4ad03346e
 SHA1 (patch-bin_texconfig-dialog) = 6d4522833219687fcbc2b4b91047254fe97052aa
 SHA1 (patch-bin_texconfig-sys) = 8d17ef9242da8d3f541501938aa5cb1f20828343
 SHA1 (patch-bin_texlinks) = da88d185d7610afae9a84b5d0ce34c8fac957e0b
-SHA1 (patch-bin_updmap) = f6ab079600e6b611c2efc19200dcaa10d506f442
+SHA1 (patch-bin_updmap) = 9b760dc84e086214378e843995522383ae2d86f0
 SHA1 (patch-bin_updmap-sys) = e8b7248482f1e59ad9be556e5bc222fd41bd514c
-SHA1 (patch-texmf-dist_web2c_updmap.cfg) = 9c889aa72bd773f53e8ed80758aa4e8eb5e5cd62
+SHA1 (patch-texmf-dist_web2c_updmap.cfg) = a3238bd6fff5dbb4babdd2e6ebdbac2c76cc429f

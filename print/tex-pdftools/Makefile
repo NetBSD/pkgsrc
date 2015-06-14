@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/14 12:50:05 markd Exp $
 
 DISTNAME=	pdftools
-PKGNAME=	tex-${DISTNAME}-0.83
-PKGREVISION=	2
-TEXLIVE_REV=	31660
+PKGNAME=	tex-${DISTNAME}-0.86
+TEXLIVE_REV=	37078
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	PDF-related utilities, including PostScript-to-PDF conversion

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/04/28 20:08:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 12:50:04 markd Exp $
 
 DISTNAME=	mathtools
-PKGNAME=	tex-${DISTNAME}-1.15
-TEXLIVE_REV=	34868
+PKGNAME=	tex-${DISTNAME}-1.16
+TEXLIVE_REV=	37331
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/mathtools
 COMMENT=	Mathematical tools to use with amsmath
 LICENSE=	lppl-1.3c
 

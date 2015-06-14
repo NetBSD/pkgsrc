@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 03:53:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/14 12:50:05 markd Exp $
 
 DISTNAME=	pgf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.0.0
-TEXLIVE_REV=	33057
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.0.0.37375
+TEXLIVE_REV=	37375
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pgf

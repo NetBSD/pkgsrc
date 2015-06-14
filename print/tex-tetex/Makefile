@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/14 12:50:05 markd Exp $
 
 DISTNAME=	tetex
-PKGNAME=	tex-${DISTNAME}-3.0.36067
-PKGREVISION=	1
-TEXLIVE_REV=	36067
+PKGNAME=	tex-${DISTNAME}-3.0.37485
+TEXLIVE_REV=	37485
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for updmap
@@ -35,9 +34,9 @@ SUBST_SED.paths+=	-e 's,@KPSEWHICH@,${KPATHSEA_PREFIX}/bin/kpsewhich,g'
 SUBST_SED.paths+=	-e 's,@TEXCONFIG@,${TEXCONFIG_PREFIX}/bin/texconfig,g'
 SUBST_SED.paths+=	-e 's,@UPDMAP@,${PREFIX}/bin/updmap,g'
 
-REPLACE_PERL=	bin/updmap
+REPLACE_PERL=	bin/updmap bin/fmtutil texmf-dist/scripts/texlive/mktexlsr.pl
 REPLACE_SH=	bin/allcm bin/allneeded bin/dvi2fax bin/dvired \
-		bin/fmtutil-sys bin/fmtutil bin/kpsetool bin/kpsewhere \
+		bin/fmtutil-sys bin/kpsetool bin/kpsewhere \
 		bin/texconfig-dialog bin/texconfig-sys bin/texlinks \
 		bin/updmap-sys
 
@@ -53,22 +52,22 @@ TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} ${PREFIX}/share/texmf-dist
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
-.for script in fmtutil-sys.sh fmtutil.sh texconfig-dialog.sh \
+.for script in fmtutil-sys.sh texconfig-dialog.sh \
 		texconfig-sys.sh texlinks.sh
 	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.sh//}
 .endfor
 .for script in allcm.sh allneeded.sh dvi2fax.sh dvired.sh kpsetool.sh \
-		kpsewhere.sh updmap-sys.sh updmap.pl
+		kpsewhere.sh updmap-sys.sh updmap.pl fmtutil.pl
 	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.pl//:S/.sh//}
 .endfor
-	${RMDIR} -p ${WRKSRC}/texmf-dist/scripts/texlive 2>/dev/null || ${TRUE}
+#	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/mktexlsr.pl ${WRKSRC}/bin
+#	${RMDIR} -p ${WRKSRC}/texmf-dist/scripts/texlive 2>/dev/null || ${TRUE}
 
 post-install:
 	${LN} -sf allcm ${DESTDIR}${PREFIX}/bin/allec
 	${LN} -sf kpsetool ${DESTDIR}${PREFIX}/bin/kpsepath
 	${LN} -sf kpsetool ${DESTDIR}${PREFIX}/bin/kpsexpand
-	${LN} -sf fmtutil ${DESTDIR}${PREFIX}/bin/mktexfmt
 
 .include "../../mk/bsd.pkg.mk"

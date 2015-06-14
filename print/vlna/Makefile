@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 11:55:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 12:50:07 markd Exp $
 
-DISTNAME=	texlive-20140525-source
+DISTNAME=	texlive-20150521-source
 PKGNAME=	vlna-1.5
+PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,9 +21,4 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/utils/vlna
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
-
-.include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2015/04/23 12:09:18 markd Exp $
+# $NetBSD: Makefile,v 1.15 2015/06/14 12:50:04 markd Exp $
 
 DISTNAME=	luatex
-PKGNAME=	tex-${DISTNAME}-0.70.1pl33828
-TEXLIVE_REV=	33828
+PKGNAME=	tex-${DISTNAME}-0.70.1pl37242
+TEXLIVE_REV=	37242
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
@@ -21,7 +21,6 @@ CONF_FILES+=	${PREFIX}/share/texmf-dist/web2c/texmfcnf.lua \
 INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"luatex luatex language.def,language.dat.lua luatex.ini\\ndviluatex luatex language.def,language.dat.lua dviluatex.ini\\n"
-#TEX_FORMATS+=	"luatex luatex language.def,language.dat.lua luatex.ini\\ndviluatex luatex language.def,language.dat.lua dviluatex.ini\\nluajittex luajittex language.def,language.dat.lua luatex.ini\\n"
 
 .include "../../print/texlive/package.mk"
 

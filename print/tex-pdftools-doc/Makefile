@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/12/12 04:44:17 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 12:50:05 markd Exp $
 
 DISTNAME=	pdftools.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.83
-TEXLIVE_REV=	31660
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.86
+TEXLIVE_REV=	37078
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pdftools
