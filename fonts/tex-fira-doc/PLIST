@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
-share/texmf-dist/doc/fonts/fira/Changelog.pdf
+@comment $NetBSD: PLIST,v 1.2 2015/06/14 11:19:59 markd Exp $
+share/texmf-dist/doc/fonts/fira/Fira_4_0_Version_Report.pdf
 share/texmf-dist/doc/fonts/fira/Fira_Sans_font_specimen.png
 share/texmf-dist/doc/fonts/fira/LICENSE
 share/texmf-dist/doc/fonts/fira/README

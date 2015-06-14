@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 09:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:20:01 markd Exp $
 
 DISTNAME=	tex-gyre-math.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2014
-TEXLIVE_REV=	34089
+PKGNAME=	tex-${DISTNAME:S/./-/}-2015
+TEXLIVE_REV=	36916
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/tex-gyre-math

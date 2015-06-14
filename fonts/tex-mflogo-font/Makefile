@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/26 00:47:41 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:59 markd Exp $
 
 DISTNAME=	mflogo-font
-PKGNAME=	tex-${DISTNAME}-1.002
-TEXLIVE_REV=	35819
+PKGNAME=	tex-${DISTNAME}-1.002pl36898
+TEXLIVE_REV=	36898
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Metafont logo font
