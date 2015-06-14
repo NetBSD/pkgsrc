@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2700 2015/06/14 16:39:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2701 2015/06/14 16:45:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-cparser to 2.14 [wiz 2015-06-14]
 	Updated devel/py-setuptools to 17.1.1 [wiz 2015-06-14]
 	Updated net/tor to 0.2.6.9 [wiz 2015-06-14]
+	Updated devel/p5-Params-Validate to 1.19 [wiz 2015-06-14]
