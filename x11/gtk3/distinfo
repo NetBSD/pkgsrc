@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2014/11/11 00:58:05 prlw1 Exp $
+$NetBSD: distinfo,v 1.29 2015/06/14 22:02:08 prlw1 Exp $
 
-SHA1 (gtk+-3.14.5.tar.xz) = 0458df75d7218435c634c7cbd1d385bcf5497bfd
-RMD160 (gtk+-3.14.5.tar.xz) = c1d46daf29de127e72e4a66b61603c2700af42b8
-Size (gtk+-3.14.5.tar.xz) = 15666824 bytes
-SHA1 (patch-aj) = 00f7dcee15c73a594cbef31fddedc4d311499210
+SHA1 (gtk+-3.16.3.tar.xz) = 1ae1ffc565259e719c6fb8fc26e0e24abe518107
+RMD160 (gtk+-3.16.3.tar.xz) = 025e83565beca62713eb2f529eb35e3f0bfd540c
+Size (gtk+-3.16.3.tar.xz) = 18228560 bytes
+SHA1 (patch-aj) = cbfab43f27352f7c6bc57a7c562c2d84c69da07a
 SHA1 (patch-config.h.in) = 59bb990ca3f1d40648153eb092550ad925ca06a1
 SHA1 (patch-configure) = 1dca87c6a85ee927b85d4edc14b0985c5130c0d9
 SHA1 (patch-configure.ac) = 68793f40752f25ccaecc958c72c23a504670bea5

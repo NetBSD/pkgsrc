@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2015/06/12 10:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2015/06/14 22:02:08 prlw1 Exp $
 
-DISTNAME=	gtk+-3.14.5
+DISTNAME=	gtk+-3.16.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
-PKGREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
@@ -26,11 +25,8 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 # Work around build problems, disable unstable PAPI, PR #41608:
 CONFIGURE_ARGS+=	--disable-papi
-# XXX for now, to avoid conflict
-CONFIGURE_ARGS+=	--enable-gtk2-dependency
 # Avoid regeneration of Makefile.in after configure.ac patch
 CONFIGURE_ARGS+=	--disable-maintainer-mode
-DEPENDS+=		gtk2+-[0-9]*:../../x11/gtk2
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 TEST_TARGET=		check
 
@@ -98,8 +94,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.0
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-# gtk-update-icon-cache --source  is called during build
-NOOP_GTK_UPDATE_ICON_CACHE=
+.include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
