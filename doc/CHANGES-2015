@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2714 2015/06/14 21:52:14 schnoebe Exp $
+$NetBSD: CHANGES-2015,v 1.2715 2015/06/14 22:02:30 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5204,3 +5204,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/gtk2 to 2.24.28 [prlw1 2015-06-14]
 	Added devel/py-hglib version 1.6 [wiz 2015-06-14]
 	Updated print/hplip to 3.15.6 [schnoebe 2015-06-14]
+	Updated x11/gtk3 to 3.16.3 [prlw1 2015-06-14]
