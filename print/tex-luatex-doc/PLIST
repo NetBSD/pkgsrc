@@ -1,13 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/14 19:53:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/06/14 12:50:04 markd Exp $
 man/man1/luatex.1
 man/man1/texlua.1
 man/man1/texluac.1
-share/texmf-dist/doc/luatex/base/fdata.lua
-share/texmf-dist/doc/luatex/base/fdata_epdf.lua
-share/texmf-dist/doc/luatex/base/fdata_img.lua
-share/texmf-dist/doc/luatex/base/functionref.pdf
-share/texmf-dist/doc/luatex/base/functionref.tex
-share/texmf-dist/doc/luatex/base/luatex.man
 share/texmf-dist/doc/luatex/base/luatexref-env.tex
 share/texmf-dist/doc/luatex/base/luatexref-t.pdf
 share/texmf-dist/doc/luatex/base/luatexref-t.tex

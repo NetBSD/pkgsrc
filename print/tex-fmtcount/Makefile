@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/22 22:27:20 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 12:50:02 markd Exp $
 
 DISTNAME=	fmtcount
-PKGNAME=	tex-${DISTNAME}-3.00
-TEXLIVE_REV=	34771
+PKGNAME=	tex-${DISTNAME}-3.01
+TEXLIVE_REV=	37298
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Display the value of a LaTeX counter in a variety of formats

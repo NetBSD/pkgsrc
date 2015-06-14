@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:50:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/14 12:50:01 markd Exp $
 
 DISTNAME=	biblatex
-PKGNAME=	tex-${DISTNAME}-2.9a
-TEXLIVE_REV=	34433
-PKGREVISION=	2
+PKGNAME=	tex-${DISTNAME}-3.0
+TEXLIVE_REV=	37083
 
 MAINTAINER=	markd@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/biblatex
 COMMENT=	Bibliographies in LaTeX using BibTeX for sorting only
 LICENSE=	lppl-1.3c
 
