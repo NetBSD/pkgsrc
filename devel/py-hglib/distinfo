@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/14 21:47:49 wiz Exp $
+
+SHA1 (python-hglib-1.6.tar.gz) = 90307145f4f6628ae11e095e481c1d83550d9d78
+RMD160 (python-hglib-1.6.tar.gz) = 0249bb23995630bc589838b249cd46f4dc442ded
+Size (python-hglib-1.6.tar.gz) = 28639 bytes
