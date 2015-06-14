@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2709 2015/06/14 18:18:43 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2710 2015/06/14 20:49:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5199,3 +5199,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.4 [tsutsui 2015-06-14]
 	Added devel/p5-Canary-Stability version 2001 [wiz 2015-06-14]
 	Updated pkgtools/pkglint to 4.155 [wiz 2015-06-14]
+	Updated print/kpathsea to 6.2.1nb1 [ryoon 2015-06-14]
