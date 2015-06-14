@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2015/03/28 19:00:28 rodent Exp $
-
-SHA1 (polarssl-1.3.9-gpl.tgz) = 3462b4455e1443ac1a1007fbd69861ebfb5c5506
-RMD160 (polarssl-1.3.9-gpl.tgz) = 981e4605d36ac8dfc1269c7be281f8c7d37c93cf
-Size (polarssl-1.3.9-gpl.tgz) = 1741396 bytes
-SHA1 (patch-Makefile) = 166adbc2786bb99018b47407677eb358952fd97b
-SHA1 (patch-library_Makefile) = d2799d7f60744b094968fe5ebd0b443ee47ddbd8
-SHA1 (patch-programs_test_CMakeLists.txt) = c2d352091bc6da4913c20e9f622cd112595a809c
