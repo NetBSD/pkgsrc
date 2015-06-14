@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4626 2015/06/14 13:53:00 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4627 2015/06/14 18:14:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1995,7 +1995,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/mp3check to 0.8.7 [drochner 2013-04-10]
 	Updated net/grilo to 0.2.5 [drochner 2013-04-10]
 	Updated net/grilo-plugins to 0.2.6 [drochner 2013-04-10]
-	Added net/gst-plugins1-soup version to 1.0.6 [drochner 2013-04-10]
+	Added net/gst-plugins1-soup version 1.0.6 [drochner 2013-04-10]
 	Added textproc/aspell-ast version 0.01 [rodent 2013-04-10]
 	Added textproc/aspell-az version 0.02.0 [rodent 2013-04-10]
 	Added textproc/aspell-be version 0.01 [rodent 2013-04-10]
