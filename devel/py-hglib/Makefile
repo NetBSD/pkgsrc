@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/14 21:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 21:49:04 wiz Exp $
 
 DISTNAME=	python-hglib-1.6
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # like mercurial itself
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # 2.7 and 3.4 only
 EGG_NAME=	python_hglib-unknown
 
 .include "../../lang/python/distutils.mk"
