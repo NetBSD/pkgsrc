@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.66 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.67 2015/06/14 15:46:21 mef Exp $
 #
 # used by editors/emacs-snapshot/Makefile
 
-DISTNAME=	emacs-snapshot_20140101.orig
-SNAPDATE=	${DISTNAME:S/emacs-snapshot_//:S/.orig//}
+.include	"../../editors/emacs-snapshot/version.mk"
+DISTNAME=	emacs-snapshot_2015041522+17a8618dc7396ef485c38b4b7c37c591839b3ec5.orig
+SNAPDATE=	${DISTNAME:C/.*_(20[0-9]+)\+.*/\1/}
 PKGNAME=	emacs${_EMACS_VERSION_MAJOR}-${EMACS_VERSION}.${SNAPDATE}
 CATEGORIES=	editors
-MASTER_SITES=	http://emacs.naquadah.org/unstable/
+MASTER_SITES=	http://londo.ganneff.de/pool/main/e/emacs-snapshot/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -14,33 +15,28 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-SETGIDGAME=		yes
-MAKE_JOBS_SAFE=		no
+USE_TOOLS+=	autoconf automake gmake gzip makeinfo
+AUTOCONF_REQD=	2.65
 
 CONFLICTS+=	emacs-nox11-[0-9]*
+SETGIDGAME=	yes
+MAKE_JOBS_SAFE=	no
 
-GNU_CONFIGURE=	yes
-INFO_FILES=	yes
-USE_TOOLS+=	automake autoconf gmake makeinfo gzip
+GNU_CONFIGURE=		yes
+INFO_FILES=		yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 
-AUTOCONF_REQUIRED=	 2.6.5
-CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-gameuser=${GAMEOWN}
-
-BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		GAMES_USER GAMES_GROUP GAMEDATAMODE
-PLIST_SRC+=		../../editors/emacs-snapshot/PLIST
-
-.include "../../editors/emacs-snapshot/version.mk"
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-gameuser=${GAMEOWN:Q}
 
 BUILD_TARGET=		bootstrap
-EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		GAMES_USER GAMES_GROUP GAMEDATAMODE
+PLIST_SRC+=		PLIST
 PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
 
-REPLACE_PERL=		lib-src/grep-changelog
-CHECK_INTERPRETER_SKIP=	bin/grep-changelog
+EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
@@ -48,6 +44,9 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 SPECIAL_PERMS+=		libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score ${SETGID_GAMES_PERMS}
+
+REPLACE_PERL=		lib-src/grep-changelog
+CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
@@ -75,6 +74,8 @@ post-extract:
 	cp ${.CURDIR}/../../editors/emacs23/files/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
+	# set auto-load for send-pr library
+	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
