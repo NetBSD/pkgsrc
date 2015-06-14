@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/19 18:44:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/06/14 16:08:04 wiz Exp $
 bin/foomatic-rip
 bin/ttfread
 include/cupsfilters/colord.h
@@ -27,7 +27,6 @@ libexec/cups/filter/imagetopdf
 libexec/cups/filter/imagetops
 libexec/cups/filter/imagetoraster
 libexec/cups/filter/pdftoijs
-libexec/cups/filter/pdftoippprinter
 libexec/cups/filter/pdftoopvp
 libexec/cups/filter/pdftopdf
 libexec/cups/filter/pdftops
@@ -36,6 +35,7 @@ libexec/cups/filter/pstopdf
 libexec/cups/filter/rastertoescpx
 libexec/cups/filter/rastertopclx
 libexec/cups/filter/rastertopdf
+libexec/cups/filter/sys5ippprinter
 libexec/cups/filter/textonly
 libexec/cups/filter/texttopdf
 libexec/cups/filter/texttops
