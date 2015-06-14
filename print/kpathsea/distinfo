@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.15 2015/01/09 22:13:13 minskim Exp $
+$NetBSD: distinfo,v 1.16 2015/06/14 11:12:37 markd Exp $
 
-SHA1 (texlive-20140525-source.tar.xz) = 8cb283ad26b1fe18e1089820cf64ecc63d8224e8
-RMD160 (texlive-20140525-source.tar.xz) = c9fb954e63e700d06aa0cf40c37cdb40eaac84a2
-Size (texlive-20140525-source.tar.xz) = 41657688 bytes
+SHA1 (texlive-20150521-source.tar.xz) = a32df8d5d6b61f87f7dab907e864fb51b14f4143
+RMD160 (texlive-20150521-source.tar.xz) = fced0e58a7bd15d19e11d72baed23ac14fd2be13
+Size (texlive-20150521-source.tar.xz) = 45459552 bytes
 SHA1 (patch-aa) = b585b9c0755bcac61465d0370540f98312ac06ea
 SHA1 (patch-ac) = cf7a574f78f13b4ff662e97da4b6a4bcfcd002b0
-SHA1 (patch-ad) = b9ff0a7d906c8ed613b84de9f200629d37e8ef40
+SHA1 (patch-ad) = 3c2629948dca3157c64078220537e96f66956289
 SHA1 (patch-ae) = b85fd269d86bbc878bc4622f1cdbbdebb5c320bf
 SHA1 (patch-af) = 390783ba6ad88208df1b7be0bf9e52e2ceb81c13
 SHA1 (patch-ag) = 0590a33b0f557d9f6fbf13fdf59469c9345445fe
 SHA1 (patch-ah) = 15a0026ed21d732504d50af9597e53197aca038e
-SHA1 (patch-ai) = ceef76e53a9146161be23bb22287b4f768d3cb3c
+SHA1 (patch-ai) = 094412f43212c4b5a6c3349b5d147bc41b9edc0d
 SHA1 (patch-aj) = 97235f77188a1923d87d6992defb4c0cc2e050f4
 SHA1 (patch-ak) = 2cee0c54ee5d2f02c08a6d19d8bfb7aa6316b69c
 SHA1 (patch-xputenv.c) = 75edfd8abdf2f0373a084095cfdd37865e628590

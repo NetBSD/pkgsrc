@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/01/09 22:13:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/06/14 11:12:37 markd Exp $
 bin/kpseaccess
 bin/kpsereadlink
 bin/kpsestat
@@ -9,7 +9,6 @@ bin/mktexpk
 bin/mktextfm
 bin/texhash
 include/kpathsea/absolute.h
-include/kpathsea/c-auto.h
 include/kpathsea/c-ctype.h
 include/kpathsea/c-dir.h
 include/kpathsea/c-errno.h
@@ -55,7 +54,9 @@ include/kpathsea/variable.h
 include/kpathsea/version.h
 include/kpathsea/win32lib.h
 info/kpathsea.info
+lib/kpathsea/c-auto.h
 lib/libkpathsea.la
+lib/pkgconfig/kpathsea.pc
 man/man1/kpseaccess.1
 man/man1/kpsereadlink.1
 man/man1/kpsestat.1

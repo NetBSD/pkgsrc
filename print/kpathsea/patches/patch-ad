@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.1 2009/09/20 18:50:03 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2015/06/14 11:12:37 markd Exp $
 
---- mktex.opt.orig	2009-06-03 06:07:19.000000000 -0700
+--- mktex.opt.orig	2014-07-18 23:38:50.000000000 +0000
 +++ mktex.opt
-@@ -9,7 +9,7 @@ if test "x$1" = x--help || test "x$1" = 
+@@ -10,7 +10,7 @@ if test "x$1" = x--help || test "x$1" = 
    exit 0
  elif test "x$1" = x--version || test "x$1" = x-version; then
-   echo "`basename $0` $version"
+   echo "$0 $version"
 -  kpsewhich --version
 +  @KPSEWHICH@ --version
    exit 0
  elif test $# -lt ${mt_min_args-1}; then
    echo "$0: Missing argument(s)." >&2
-@@ -63,22 +63,22 @@ cd "$TEMPDIR" || exit 1
+@@ -64,22 +64,22 @@ cd "$TEMPDIR" || exit 1
  
  # The alternative location for fonts.  The directory need not exist,
  # so we use --expand-var here.  We also perform a sanity check.
@@ -40,7 +40,7 @@ $NetBSD: patch-ad,v 1.1 2009/09/20 18:50:03 minskim Exp $
  test -n "$MT_MKTEXUPD" || MT_MKTEXUPD="$MT_TEXMFMAIN/web2c/mktexupd"
  
  # mktexupd and mktexlsr make sure they're coordinated via this.  A copy of
-@@ -92,7 +92,7 @@ old_ls_R_magic='% ls-R -- maintained by 
+@@ -93,7 +93,7 @@ old_ls_R_magic='% ls-R -- maintained by 
  # given here (e.g. ``: ${MODE=ljfour}'', not just ``MODE=ljfour'', as
  # this can cause trouble (e.g. when the mode for mktexnam is
  # already specified on the command line).
