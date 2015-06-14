@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/05/31 04:52:59 markd Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/14 13:28:53 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2014pre5
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -148,6 +148,7 @@ DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
 # depend cmsd
 # depend cnltx
 # depend cntformats
+# depend cntperchap
 # depend codedoc
 # depend codepage
 # depend codesection
@@ -155,6 +156,7 @@ DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
 DEPENDS+=	tex-collectbox-[0-9]*:../../print/tex-collectbox
 # depend colordoc
 # depend colorinfo
+# depend colorspace
 # depend colortab
 # depend colorwav
 # depend colorweb
@@ -227,6 +229,7 @@ DEPENDS+=	tex-datetime-[0-9]*:../../print/tex-datetime
 # depend datetime2-icelandic
 # depend datetime2-irish
 # depend datetime2-italian
+# depend datetime2-it-fulltext
 # depend datetime2-latin
 # depend datetime2-lsorbian
 # depend datetime2-magyar
@@ -251,6 +254,7 @@ DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
 # depend decorule
 # depend delim
 # depend delimtxt
+# depend denisbdoc
 # depend detlev-cm
 # depend diagbox
 # depend diagnose
@@ -295,6 +299,7 @@ DEPENDS+=	tex-draftwatermark-[0-9]*:../../print/tex-draftwatermark
 # depend egplot
 # depend ellipsis
 # depend elmath
+# depend elocalloc
 # depend elpres
 # depend elzcards
 # depend emarks
@@ -327,6 +332,7 @@ DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 # depend esint-type1
 # depend etaremune
 # depend etextools
+# depend etoc
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 # depend eukdate
 # depend europasscv
@@ -454,6 +460,7 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend gtl
 # depend guitlogo
 # depend handout
+# depend hang
 # depend hanging
 # depend hardwrap
 # depend harnon-cv
@@ -775,6 +782,7 @@ DEPENDS+=	tex-rcsinfo-[0-9]*:../../print/tex-rcsinfo
 DEPENDS+=	tex-readarray-[0-9]*:../../print/tex-readarray
 # depend realboxes
 # depend recipe
+# depend recipebook
 # depend recipecard
 # depend rectopma
 # depend refcheck
@@ -857,7 +865,6 @@ DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 # depend snapshot
 # depend snotez
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
-# depend spanglish
 # depend sparklines
 DEPENDS+=	tex-sphack-[0-9]*:../../print/tex-sphack
 # depend splitindex
@@ -915,6 +922,7 @@ DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 # depend tabularew
 # depend tabulary
 # depend tagging
+# depend tagpair
 # depend talk
 # depend tamefloats
 # depend tasks

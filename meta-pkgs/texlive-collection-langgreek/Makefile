@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 13:28:52 markd Exp $
 
 DISTNAME=	collection-langgreek
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36158
+TEXLIVE_REV=	36842
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 22:48:26 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:53 markd Exp $
 
 DISTNAME=	collection-music
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36029
+TEXLIVE_REV=	37024
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -26,6 +26,7 @@ DEPENDS+=	tex-bagpipe-[0-9]*:../../print/tex-bagpipe
 # depend musixguit
 DEPENDS+=	tex-musixtex-[0-9]*:../../print/tex-musixtex
 DEPENDS+=	tex-musixtex-fonts-[0-9]*:../../fonts/tex-musixtex-fonts
+# depend musixtnt
 # depend pmx
 # depend pmxchords
 # depend songbook

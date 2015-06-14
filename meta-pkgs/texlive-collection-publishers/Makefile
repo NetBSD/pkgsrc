@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/05/06 18:28:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:53 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36387
+TEXLIVE_REV=	37300
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -58,6 +58,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend gaceta
 # depend gatech-thesis
 # depend gsemthesis
+# depend gzt
 # depend har2nat
 # depend hobete
 # depend icsv

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/05/17 06:29:40 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/14 13:28:52 markd Exp $
 
 DISTNAME=	collection-fontutils
-PKGNAME=	texlive-${DISTNAME}-2014
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36028
+TEXLIVE_REV=	37105
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -18,6 +18,7 @@ DEPENDS+=	tex-dosepsbin-[0-9]*:../../fonts/tex-dosepsbin
 DEPENDS+=	tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
 # fontware is entirely included in web2c
 DEPENDS+=	lcdftypetools-[0-9]*:../../fonts/lcdftypetools
+# depend metatype1
 DEPENDS+=	ps2pkm-[0-9]*:../../fonts/ps2pkm
 DEPENDS+=	tex-pstools-[0-9]*:../../graphics/tex-pstools
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
