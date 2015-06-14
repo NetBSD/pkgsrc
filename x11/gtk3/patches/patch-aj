@@ -1,6 +1,7 @@
-$NetBSD: patch-aj,v 1.5 2014/10/07 23:52:08 prlw1 Exp $
+$NetBSD: patch-aj,v 1.6 2015/06/14 22:02:08 prlw1 Exp $
 
 Do not build files we won't install.
+Oddly, the tool doc-shooter uses a source file from tests.
 
 --- Makefile.in.orig	2013-10-16 02:20:38.000000000 +0000
 +++ Makefile.in
@@ -8,8 +9,8 @@ Do not build files we won't install.
  	|| { echo "Gtk+Tests:ERROR: Failed to start Xvfb environment for X11 target tests."; exit 1; } \
  	&& DISPLAY=:$$XID && export DISPLAY
  
--SRC_SUBDIRS = util gdk gtk libgail-util modules demos tests testsuite examples
-+SRC_SUBDIRS = util gdk gtk libgail-util modules demos
+-SRC_SUBDIRS = gdk gtk libgail-util modules demos tests testsuite examples
++SRC_SUBDIRS = gdk gtk libgail-util modules demos tests
  SUBDIRS = po po-properties $(SRC_SUBDIRS) docs m4macros build
  ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
  MAINTAINERCLEANFILES = \
