@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2691 2015/06/14 16:08:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2692 2015/06/14 16:10:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5181,3 +5181,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-pbox version 1.2 [joerg 2015-06-14]
 	Updated editors/emacs-snapshot to 25.0.50.2015041522 [mef 2015-06-14]
 	Updated print/cups-filters to 1.0.69 [wiz 2015-06-14]
+	Updated devel/afl to 1.82b [wiz 2015-06-14]
