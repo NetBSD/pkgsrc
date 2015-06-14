@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2014/05/17 16:19:27 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2015/06/14 16:23:03 wiz Exp $
 
-SHA1 (util-linux-2.24.2.tar.xz) = 4d2159b2420b8090b31f7198ff9d392a5b3cf0ff
-RMD160 (util-linux-2.24.2.tar.xz) = 7db147ba5545aadef19920815b6461001afb1f4e
-Size (util-linux-2.24.2.tar.xz) = 3586580 bytes
-SHA1 (patch-aa) = 50054bed3cb5da7ffebb7bfd3f2da0d92b0616d7
+SHA1 (util-linux-2.26.2.tar.xz) = ac0b880a12392b2cbbe12239ab7613c25349093d
+RMD160 (util-linux-2.26.2.tar.xz) = 2bdbd937843dbf6bc5a5a997f1dc3253d2166a25
+Size (util-linux-2.26.2.tar.xz) = 3863868 bytes
 SHA1 (patch-ab) = 160c13ca5ff36c4ed78aaa9bd3b4d270a5a8b847
+SHA1 (patch-configure) = e025f3ebe8ccf5bdc0fa46746f038ab2bbb4b481
 SHA1 (patch-lib_randutils.c) = 5cab5d27a4936478c55c8d11dc002df9a0a41962
