@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2015/06/12 10:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/06/14 12:50:07 markd Exp $
 
-DISTNAME=	texlive-20140525-source
-PKGNAME=	xetex-0.99991
-PKGREVISION=	1
+DISTNAME=	texlive-20150521-source
+PKGNAME=	xetex-0.99992
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -27,7 +26,7 @@ USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--disable-luatex --disable-mf --disable-mf-nowin \
 			--disable-luajittex \
-			--disable-mp \
+			--disable-mp --disable-pmp --disable-upmp \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \
 			--enable-web2c --enable-xetex
@@ -35,17 +34,13 @@ CONFIGURE_ARGS+=	--with-system-poppler
 CONFIGURE_ARGS+= \
 	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
 	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-	--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-	--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
 CONFIGURE_ARGS+=	--with-system-zlib \
 	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_ARGS+=	--with-system-libpng
 CONFIGURE_ARGS+=	--with-system-freetype2
-CONFIGURE_ARGS+=	--with-system-teckit \
-	--with-teckit-includes=${BUILDLINK_PREFIX.TECkit}/include/teckit \
-	--with-teckit-libdir=${BUILDLINK_PREFIX.TECkit}/lib
+CONFIGURE_ARGS+=	--with-system-teckit
 CONFIGURE_ARGS+=	--with-system-icu
 
 CONFIGURE_DIRS=		libs/graphite2
@@ -70,6 +65,7 @@ CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
