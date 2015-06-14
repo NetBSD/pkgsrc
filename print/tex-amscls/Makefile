@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2015/04/22 09:35:02 markd Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/14 12:50:01 markd Exp $
 
 DISTNAME=	amscls
-PKGNAME=	tex-${DISTNAME}-2014.34870
-TEXLIVE_REV=	34870
+PKGNAME=	tex-${DISTNAME}-2015
+TEXLIVE_REV=	36804
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/amscls
 COMMENT=	AMS document classes for LaTeX
 LICENSE=	lppl-1.3c
 

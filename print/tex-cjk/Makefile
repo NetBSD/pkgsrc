@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2015/04/22 10:26:50 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 12:50:01 markd Exp $
 
 DISTNAME=	cjk
-PKGNAME=	tex-${DISTNAME}-4.8.3
-TEXLIVE_REV=	30576
+PKGNAME=	tex-${DISTNAME}-4.8.4
+TEXLIVE_REV=	36951
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/cjk
 COMMENT=	CJK language support
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-arphic-[0-9]*:../../fonts/tex-arphic
 DEPENDS+=	tex-fontspec-[0-9]*:../../fonts/tex-fontspec
