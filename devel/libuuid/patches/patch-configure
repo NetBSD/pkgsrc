@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2015/06/14 16:23:03 wiz Exp $
+
+--- configure.orig	2015-04-30 10:13:13.000000000 +0000
++++ configure
+@@ -20035,7 +20035,7 @@ else
+ fi
+ 
+ 
+-if test "x$enable_libmount_force_mountinfo" == xyes; then :
++if test "x$enable_libmount_force_mountinfo" = xyes; then :
+ 
+ 
+ $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
