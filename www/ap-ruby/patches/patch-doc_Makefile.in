@@ -1,0 +1,21 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2015/06/14 00:40:30 taca Exp $
+
+Do not hard cord rd2.
+
+--- doc/Makefile.in.orig	2004-07-01 03:49:24.000000000 +0000
++++ doc/Makefile.in
+@@ -15,12 +15,12 @@ HTMLS		= $(EN_HTMLS) $(JA_HTMLS)
+ .SUFFIXES: .en.rd .ja.euc.rd .en.html .ja.jis.html
+ 
+ .en.rd.en.html:
+-	$(RUBY) -Kn -S rd2 -r rd/rd2html-lib \
++	$(RUBY) -Kn @RUBY_RD@ -r rd/rd2html-lib \
+ 		--with-css=default.css \
+ 		$< > $@
+ 
+ .ja.euc.rd.ja.jis.html:
+-	$(RUBY) -Ke -S rd2 -r rd/rd2html-lib \
++	$(RUBY) -Ke @RUBY_RD@ -r rd/rd2html-lib \
+ 		--with-css=default.css --out-code=jis \
+ 		$< > $@
+ 

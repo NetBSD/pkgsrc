@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/06/11 15:37:22 taca Exp $
+# $NetBSD: Makefile,v 1.41 2015/06/14 00:40:30 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -34,6 +34,12 @@ PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
 CONF_FILES+=		${PREFIX}/${RUBY_EG}/mod_ruby/mod_ruby.conf \
 			${PKG_SYSCONFDIR}/mod_ruby.conf
+
+SUBST_CLASSES+=		rd2
+SUBST_STAGE.rd2=	pre-configure
+SUBST_FILES.rd2=	doc/Makefile.in
+SUBST_SED.rd2=		-e 's|@RUBY_RD@|${RUBY_RD}|g'
+SUBST_MESSAGE.rd2=	Fixing rd2.
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-build
