@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.877 2015/03/11 19:05:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.878 2015/06/14 18:18:34 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2116,7 +2116,7 @@ sub parse_mk_cond($$) {
 sub parse_licenses($) {
 	my ($licenses) = @_;
 
-	$licenses =~ s,\${PERL5_LICENSE},gnu-gpl-v2 OR artistic,g;
+	$licenses =~ s,\$\{PERL5_LICENSE},gnu-gpl-v2 OR artistic,g;
 	$licenses =~ s,[()]|AND|OR,,g; # XXX: treats OR like AND
 	my @licenses = split(/\s+/, $licenses);
 	return \@licenses;
@@ -3578,7 +3578,7 @@ sub checkline_mk_shelltext($$) {
 "\${PREFIX}.");
 		}
 
-		if (($state == SCST_INSTALL_DIR || $state == SCST_INSTALL_DIR2) && $shellword !~ regex_mk_shellvaruse && $shellword =~ m"^(?:\${DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)") {
+		if (($state == SCST_INSTALL_DIR || $state == SCST_INSTALL_DIR2) && $shellword !~ regex_mk_shellvaruse && $shellword =~ m"^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)") {
 			my ($dirname) = ($1);
 
 			$line->log_note("You can use AUTO_MKDIRS=yes or INSTALLATION_DIRS+= ${dirname} instead of this command.");
@@ -7011,7 +7011,7 @@ sub checkfile_PLIST($) {
 				$opt_debug_unchecked and $line->log_debug("Unchecked pathname \"${text}\".");
 			}
 
-			if ($text =~ /\${PKGLOCALEDIR}/ && defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"USE_PKGLOCALEDIR"})) {
+			if ($text =~ /\$\{PKGLOCALEDIR}/ && defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"USE_PKGLOCALEDIR"})) {
 				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 			}
 
