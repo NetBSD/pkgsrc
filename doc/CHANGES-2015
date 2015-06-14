@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2702 2015/06/14 16:46:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2703 2015/06/14 16:48:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/tor to 0.2.6.9 [wiz 2015-06-14]
 	Updated devel/p5-Params-Validate to 1.19 [wiz 2015-06-14]
 	Updated devel/p5-List-MoreUtils to 0.413 [wiz 2015-06-14]
+	Updated time/p5-DateTime-TimeZone to 1.91 [wiz 2015-06-14]
