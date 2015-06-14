@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/14 12:50:03 markd Exp $
 share/texmf-dist/doc/latex/kotex-utf/ChangeLog
 share/texmf-dist/doc/latex/kotex-utf/README
-share/texmf-dist/doc/latex/kotex-utf/README.md
 share/texmf-dist/doc/latex/kotex-utf/fig/allowbreak-dhucs.pdf
 share/texmf-dist/doc/latex/kotex-utf/fig/fntexp.pdf
 share/texmf-dist/doc/latex/kotex-utf/fig/fntnormal.pdf

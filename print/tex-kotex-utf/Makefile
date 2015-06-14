@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 11:49:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 12:50:03 markd Exp $
 
 DISTNAME=	kotex-utf
-PKGNAME=	tex-${DISTNAME}-2.0.1
-TEXLIVE_REV=	34243
+PKGNAME=	tex-${DISTNAME}-2.1.0
+TEXLIVE_REV=	36988
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/kotex-utf
