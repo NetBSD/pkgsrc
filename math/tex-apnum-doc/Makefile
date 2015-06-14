@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/04/26 03:39:03 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:31:46 markd Exp $
 
 DISTNAME=	apnum.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
-TEXLIVE_REV=	35958
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
+TEXLIVE_REV=	37357
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-apnum
