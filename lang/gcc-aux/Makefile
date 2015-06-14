@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/06/14 19:46:51 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -25,15 +24,13 @@ APPLY_DIFFS=	core ada cxx
 # Requires bootstrap compiler, which is only available for on selected systems
 # Disable SunOS for now until multilib version can be built and tested.
 
-ONLY_FOR_PLATFORM=	DragonFly-*-*        \
+ONLY_FOR_PLATFORM=	DragonFly-*-x86_64   \
 			FreeBSD-*-i386       \
 			FreeBSD-*-x86_64     \
 			NetBSD-[5-9]*-i386   \
 			NetBSD-[5-9]*-x86_64 \
 			SunOS-5.1[1-9]*-i386 \
 			SunOS-5.1[1-9]*-x86_64
-
-#ONLY_FOR_PLATFORM+=	OpenBSD-*-amd64 MirBSD-*-amd64
 
 GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
 BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
@@ -55,22 +52,38 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 .endif
 
 .if ${OPSYS} == NetBSD
-.if !empty(OS_VERSION:M6.99.*)
-   NSUFF=	7.0_DEV
-.elif !empty(OS_VERSION:M7.99.*)
-   NSUFF=	8.0_DEV
-.else
-   NSUFF=	${OS_VERSION}
-.endif
-.if ${GARCH} == i386
-   NELF=	elf
-.endif
+.  if !empty(OS_VERSION:M6.99.*)
+NSUFF=	7.0_DEV
+.  elif !empty(OS_VERSION:M7.99.*)
+NSUFF=	8.0_DEV
+.  else
+NSUFF=	${OS_VERSION}
+.  endif
+.  if ${GARCH} == i386
+NELF=	elf
+.  endif
 XLDF=			-lm
-.if empty(OS_VERSION:M7.99.*)
+.  if empty(OS_VERSION:M7.99.*)
 MODERN_BINUTILS=	yes
-.endif
+.  endif
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.netbsd.614.tar.bz2
 BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NELF}${NSUFF}
+.  if ${OS_VERSION:R} == 5
+CORRECTIONS=		g-socthi-bsd.adb
+CRXN=			C5
+.  else
+CORRECTIONS=		g-socthi-bsd.adb g-socthi.ads \
+			s-osinte-netbsd.ads s-osprim-posix.adb
+CRXN=			C6
+.  endif
+C5_g-socthi-bsd.adb=	Syscall_Socket/__socket30
+C6_g-socthi-bsd.adb=	Syscall_Socket/__socket30
+C6_g-socthi.ads=	C_Select/__select50
+C6_s-osinte-netbsd.ads=	nanosleep/__nanosleep50 \
+			clock_getres/__clock_getres50 \
+			clock_gettime/__clock_gettime50
+C6_s-osprim-posix.adb=	nanosleep/__nanosleep50 \
+			gettimeofday/__gettimeofday50
 .endif
 
 .if ${OPSYS} == SunOS
@@ -85,16 +98,6 @@ COMPILER_ABI_SWITCH=	-m32
 MY_CONFIGURE_ENV+=	OBJDUMP=${PREFIX}/bin/gobjdump
 MODERN_BINUTILS=	yes
 NATIVE_LINKER!=		which ld
-.endif
-
-.if ${OPSYS} == OpenBSD || ${OPSYS} == MirBSD
-OPENMIR=		yes
-MODERN_BINUTILS=	yes
-EXTRA_CONFARGS+=	--disable-libstdcxx-pch
-EXTRA_CONFARGS+=	--disable-tls
-EXTRA_CONFARGS+=	--enable-cpp
-EXTRA_CONFARGS+=	--enable-wchar_t
-BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.openbsd.55.tar.bz2
 .endif
 
 .if defined(MODERN_BINUTILS)
@@ -165,7 +168,6 @@ DISTFILES= \
    ada-bootstrap.x86_64.freebsd.84.tar.bz2 \
    ada-bootstrap.x86_64.freebsd.100B.tar.bz2 \
    ada-bootstrap.x86_64.netbsd.614.tar.bz2 \
-   ada-bootstrap.x86_64.openbsd.55.tar.bz2 \
    ada-bootstrap.x86_64.solaris.511.tar.bz2
 .endif
 
@@ -192,6 +194,8 @@ CONFIGURE_ARGS+=	--enable-checking=release
 CONFIGURE_ARGS+=	--disable-libmudflap
 CONFIGURE_ARGS+=	--disable-libgomp
 CONFIGURE_ARGS+=	--disable-libssp
+CONFIGURE_ARGS+=	--disable-libcilkrts
+CONFIGURE_ARGS+=	--disable-libitm
 CONFIGURE_ARGS+=	${EXTRA_CONFARGS}
 
 # Automatic package list generation
@@ -220,30 +224,25 @@ post-extract:
 	  -pe 's|se_NO|no_NO|g;' \
 	  -pe 's|es_MX|es_ES|g;' \
 	  -pe 's|ru_RU.UTF8|ru_RU.UTF-8|g' ${LOCALE22FIX})
+.if ${OPSYS} == NetBSD
+.  for sysfile in ${CORRECTIONS}
+.    for pair in ${${CRXN}_${sysfile}}
+	${PERL5} -pi -e 's|C, ${pair:H}, ".*"|C, ${pair:H}, "${pair:T}"|' \
+		${WRKSRC}/gcc/ada/${sysfile}
+.    endfor
+.  endfor
+.  if ${CRXN} == C5
+	${PERL5} -pi -e 's|new int64_t|new int|' \
+		${WRKSRC}/gcc/ada/s-osinte-netbsd.ads
+	${PERL5} -pi -e 's|new Long_Integer|new Integer|' \
+		${WRKSRC}/gcc/ada/s-osprim-posix.adb
+.  endif
+.endif
 .if defined(STATIC_BUILD) || !empty(PKG_OPTIONS:Mbootstrap)
 .  if ${OPSYS} != SunOS
 	# Ensure GNAT tools are built statically
 	${PERL5} -pi -e 's/^GCC_LINK_FLAGS=.*/GCC_LINK_FLAGS=-static/' \
 	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
-.  endif
-.else
-.  if defined(OPENMIR)
-	# OpenBSD has no system libraries ending in ".so" so the pkgsrc linker
-	# fails to link things like "-lutil -lm".  Work around this oddity.
-	${MKDIR} ${SYSLIBDIR}
-.    for sl in c m z util pthread
-	${LN} -s `ls /usr/lib/lib${sl}.so* | head -1` ${SYSLIBDIR}/lib${sl}.so
-.    endfor
-	${PERL5} -i.bak -pe 's|\$$\(MISCLIB\)|-L${SYSLIBDIR} \$$(MISCLIB)|g;' \
-		-pe 's|\$$\(THREADSLIB\)|-L${SYSLIBDIR} \$$(THREADSLIB)|g' \
-		${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
-	${PERL5} -i.bak -pe 's|-lm|-L${SYSLIBDIR} -lm|g' \
-		${WRKSRC}/libquadmath/Makefile.in \
-		${WRKSRC}/libgfortran/Makefile.in
-	${PERL5} -i.bak -pe 's|-lpthread|-L${SYSLIBDIR} -lpthread|g;' \
-		-pe 's|\@XCFLAGS\@|-L${SYSLIBDIR} \@XCFLAGS\@|g;' \
-		${WRKSRC}/libcilkrts/Makefile.in \
-		${WRKSRC}/libitm/Makefile.in
 .  endif
 .endif
 .if !exists(${LOCALBASE}/gcc-aux/bin/ada) && ${OPSYS} == SunOS
