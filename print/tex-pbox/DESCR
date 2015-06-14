@@ -1,0 +1,4 @@
+This package provides a variable-width \parbox and some convenient
+length commands.  The \pbox command is equivalent to the \parbox
+command, only the width specified is merely the maximum  width; the
+\pbox tries to fit itself tightly around the specified text.
