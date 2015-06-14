@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2697 2015/06/14 16:24:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2698 2015/06/14 16:27:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/iso-codes to 3.58 [wiz 2015-06-14]
 	Updated devel/libuuid to 2.26.2 [wiz 2015-06-14]
 	Updated devel/py-cffi to 1.1.2 [wiz 2015-06-14]
+	Updated devel/py-cparser to 2.14 [wiz 2015-06-14]
