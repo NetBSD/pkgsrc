@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/06/14 11:12:37 markd Exp $
+# $NetBSD: Makefile,v 1.24 2015/06/14 20:48:35 ryoon Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	kpathsea-6.2.1
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
