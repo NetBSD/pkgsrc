@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2690 2015/06/14 15:52:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2691 2015/06/14 16:08:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5180,3 +5180,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-science to 2015pre1 [markd 2015-06-14]
 	Added print/tex-pbox version 1.2 [joerg 2015-06-14]
 	Updated editors/emacs-snapshot to 25.0.50.2015041522 [mef 2015-06-14]
+	Updated print/cups-filters to 1.0.69 [wiz 2015-06-14]
