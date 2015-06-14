@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2694 2015/06/14 16:15:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2695 2015/06/14 16:17:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.82b [wiz 2015-06-14]
 	Updated devel/glibmm to 2.44.0 [wiz 2015-06-14]
 	Updated devel/global to 6.5 [wiz 2015-06-14]
+	Updated textproc/iso-codes to 3.58 [wiz 2015-06-14]
