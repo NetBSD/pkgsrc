@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2015/04/25 14:25:06 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2015/06/14 22:02:08 prlw1 Exp $
 
 BUILDLINK_TREE+=	gtk3
 
@@ -23,6 +23,7 @@ pkgbase := gtk3
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk3:Mx11)
 .  if !empty(PKG_BUILD_OPTIONS.gtk3:Mgtk3-atk-bridge)
 .  include "../../devel/at-spi2-atk/buildlink3.mk"
