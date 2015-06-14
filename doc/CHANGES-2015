@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2693 2015/06/14 16:13:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2694 2015/06/14 16:15:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5183,3 +5183,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.69 [wiz 2015-06-14]
 	Updated devel/afl to 1.82b [wiz 2015-06-14]
 	Updated devel/glibmm to 2.44.0 [wiz 2015-06-14]
+	Updated devel/global to 6.5 [wiz 2015-06-14]
