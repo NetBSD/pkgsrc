@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2688 2015/06/14 13:31:25 markd Exp $
+$NetBSD: CHANGES-2015,v 1.2689 2015/06/14 14:20:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5178,3 +5178,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/texlive-collection-plainextra to 2015pre1 [markd 2015-06-14]
 	Updated meta-pkgs/texlive-collection-publishers to 2015pre1 [markd 2015-06-14]
 	Updated meta-pkgs/texlive-collection-science to 2015pre1 [markd 2015-06-14]
+	Added print/tex-pbox version 1.2 [joerg 2015-06-14]
