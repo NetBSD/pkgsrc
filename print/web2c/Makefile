@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2015/04/25 14:24:47 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2015/06/14 12:50:07 markd Exp $
 
-DISTNAME=	texlive-20140525-source
-PKGNAME=	web2c-2014
-PKGREVISION=	1
+DISTNAME=	texlive-20150521-source
+PKGNAME=	web2c-2015
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -14,8 +13,8 @@ COMMENT=	TeX implementation translating WEB to C
 CONFLICTS+=	ja-ptex-bin-[0-9]*
 CONFLICTS+=	teTeX-bin<=3.0nb28
 CONFLICTS+=	texlive-tetex<2010
-DEPENDS+=	kpathsea>=6.1.1:../../print/kpathsea
-DEPENDS+=	ptexenc>=1.3.1:../../print/ptexenc
+DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
+DEPENDS+=	ptexenc>=1.3.3:../../print/ptexenc
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/web2c
@@ -29,22 +28,25 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/texk/web2c
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
+PKGCONFIG_OVERRIDE=	synctexdir/synctex.pc.in
 
 CONFIGURE_ARGS+=	--disable-luatex
 CONFIGURE_ARGS+=	--disable-luajittex
 CONFIGURE_ARGS+=	--disable-xetex
 CONFIGURE_ARGS+=	--with-x=no
 CONFIGURE_ARGS+=	--without-mf-x-toolkit
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
 CONFIGURE_ARGS+=	--with-system-libpng
 CONFIGURE_ARGS+=	--with-system-cairo
+CONFIGURE_ARGS+=	--with-system-gmp \
+			--with-gmp-includes=${BUILDLINK_PREFIX.gmp}/include \
+			--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
+CONFIGURE_ARGS+=	--with-system-mpfr \
+			--with-mpfr-includes=${BUILDLINK_PREFIX.mpfr}/include \
+			--with-mpfr-libdir=${BUILDLINK_PREFIX.mpfr}/lib
 CONFIGURE_ARGS+=	--with-system-pixman
 CONFIGURE_ARGS+=	--with-system-poppler
-CONFIGURE_ARGS+=	--with-system-ptexenc \
-		--with-ptexenc-includes=${BUILDLINK_PREFIX.ptexenc}/include \
-		--with-ptexenc-libdir=${BUILDLINK_PREFIX.ptexenc}/lib
+CONFIGURE_ARGS+=	--with-system-ptexenc
 CONFIGURE_ARGS+=	--with-system-xpdf
 CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
@@ -57,6 +59,7 @@ INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"

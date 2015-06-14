@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/10 01:04:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/14 12:50:06 markd Exp $
 share/texmf-dist/doc/latex/zxjafont/LICENSE
 share/texmf-dist/doc/latex/zxjafont/README
+share/texmf-dist/doc/latex/zxjafont/README-ja
 share/texmf-dist/doc/latex/zxjafont/zxjafont.pdf
 share/texmf-dist/doc/latex/zxjafont/zxjafont.tex

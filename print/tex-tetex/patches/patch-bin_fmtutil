@@ -1,90 +1,81 @@
-$NetBSD: patch-bin_fmtutil,v 1.2 2015/04/25 20:26:37 markd Exp $
+$NetBSD: patch-bin_fmtutil,v 1.3 2015/06/14 12:50:05 markd Exp $
 
---- bin/fmtutil.orig	2014-11-23 18:10:07.000000000 +0000
+--- bin/fmtutil.orig	2015-05-23 16:52:36.000000000 +0000
 +++ bin/fmtutil
-@@ -215,7 +215,7 @@ getmatch()
- initTexmfMain()
- {
-   case $MT_TEXMFMAIN in
--    "") MT_TEXMFMAIN=`kpsewhich --var-value=TEXMFMAIN`;;
-+    "") MT_TEXMFMAIN=`@KPSEWHICH@ --var-value=TEXMFMAIN`;;
-   esac
-   export MT_TEXMFMAIN
- }
-@@ -227,14 +227,14 @@ initTexmfMain()
- #
- cache_vars()
- {
--  : ${MT_VARTEXFONTS=`kpsewhich --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
--  : ${MT_MKTEXNAM=`kpsewhich --format='web2c files' mktexnam`}
--  : ${MT_MKTEXNAM_OPT=`kpsewhich --format='web2c files' mktexnam.opt`}
--  : ${MT_MKTEXDIR=`kpsewhich --format='web2c files' mktexdir`}
--  : ${MT_MKTEXDIR_OPT=`kpsewhich --format='web2c files' mktexdir.opt`}
--  : ${MT_MKTEXUPD=`kpsewhich --format='web2c files' mktexupd`}
--  : ${MT_MKTEX_CNF=`kpsewhich --format='web2c files' mktex.cnf`}
--  : ${MT_MKTEX_OPT=`kpsewhich --format='web2c files' mktex.opt`}
-+  : ${MT_VARTEXFONTS=`@KPSEWHICH@ --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
-+  : ${MT_MKTEXNAM=`@KPSEWHICH@ --format='web2c files' mktexnam`}
-+  : ${MT_MKTEXNAM_OPT=`@KPSEWHICH@ --format='web2c files' mktexnam.opt`}
-+  : ${MT_MKTEXDIR=`@KPSEWHICH@ --format='web2c files' mktexdir`}
-+  : ${MT_MKTEXDIR_OPT=`@KPSEWHICH@ --format='web2c files' mktexdir.opt`}
-+  : ${MT_MKTEXUPD=`@KPSEWHICH@ --format='web2c files' mktexupd`}
-+  : ${MT_MKTEX_CNF=`@KPSEWHICH@ --format='web2c files' mktex.cnf`}
-+  : ${MT_MKTEX_OPT=`@KPSEWHICH@ --format='web2c files' mktex.opt`}
-   export MT_VARTEXFONTS MT_MKTEXNAM MT_MKTEXNAM_OPT MT_MKTEXDIR
-   export MT_MKTEXDIR_OPT MT_MKTEXUPD MT_MKTEX_CNF MT_MKTEX_OPT
- }
-@@ -579,7 +579,7 @@ main()
+@@ -14,7 +14,7 @@ my $TEXMFROOT;
  
-   # set up destdir:
-   if test -z "$destdir"; then
--    : ${MT_TEXMFVAR=`kpsewhich -var-value=TEXMFVAR`}
-+    : ${MT_TEXMFVAR=`@KPSEWHICH@ -var-value=TEXMFVAR`}
-     destdir=$MT_TEXMFVAR/web2c
-   fi
-   test -d "$destdir" || mktexdir "$destdir" >/dev/null 2>&1
-@@ -686,7 +686,7 @@ parse_line()
-   inifile=`echo $lastarg | sed 's%^\*%%'`
+ BEGIN {
+   $^W = 1;
+-  $TEXMFROOT = `kpsewhich -var-value=TEXMFROOT`;
++  $TEXMFROOT = `@KPSEWHICH@ -var-value=TEXMFROOT`;
+   if ($?) {
+     die "$0: kpsewhich -var-value=TEXMFROOT failed, aborting early.\n";
+   }
+@@ -72,12 +72,12 @@ my @deferred_stdout;
+ # this function checks by itself whether it is running on windows or not
+ reset_root_home();
  
-   # See if we can find $inifile for return code:
--  kpsewhich -progname=$format -format=$kpsefmt $inifile >/dev/null 2>&1
-+  @KPSEWHICH@ -progname=$format -format=$kpsefmt $inifile >/dev/null 2>&1
- }
+-chomp(our $TEXMFDIST = `kpsewhich --var-value=TEXMFDIST`);
+-chomp(our $TEXMFVAR = `kpsewhich -var-value=TEXMFVAR`);
+-chomp(our $TEXMFSYSVAR = `kpsewhich -var-value=TEXMFSYSVAR`);
+-chomp(our $TEXMFCONFIG = `kpsewhich -var-value=TEXMFCONFIG`);
+-chomp(our $TEXMFSYSCONFIG = `kpsewhich -var-value=TEXMFSYSCONFIG`);
+-chomp(our $TEXMFHOME = `kpsewhich -var-value=TEXMFHOME`);
++chomp(our $TEXMFDIST = `@KPSEWHICH@ --var-value=TEXMFDIST`);
++chomp(our $TEXMFVAR = `@KPSEWHICH@ -var-value=TEXMFVAR`);
++chomp(our $TEXMFSYSVAR = `@KPSEWHICH@ -var-value=TEXMFSYSVAR`);
++chomp(our $TEXMFCONFIG = `@KPSEWHICH@ -var-value=TEXMFCONFIG`);
++chomp(our $TEXMFSYSCONFIG = `@KPSEWHICH@ -var-value=TEXMFSYSCONFIG`);
++chomp(our $TEXMFHOME = `@KPSEWHICH@ -var-value=TEXMFHOME`);
  
- ###############################################################################
-@@ -700,7 +700,7 @@ find_hyphenfile()
-   hyphenation="`echo $2 | sed 's/,/ /g'`"
-   case $hyphenation in
-     -) ;;
--    *) kpsewhich -progname="$format" -format=tex $hyphenation;;
-+    *) @KPSEWHICH@ -progname="$format" -format=tex $hyphenation;;
-   esac
- }
- 
-@@ -729,7 +729,7 @@ run_initex()
-   poolfile=
-   tcxflag=
-   test -n "$pool" \
--    && poolfile=`(kpsewhich -progname=$engine $pool.pool) 2>/dev/null`
-+    && poolfile=`(@KPSEWHICH@ -progname=$engine $pool.pool) 2>/dev/null`
-   if test -n "$poolfile" && test -f "$poolfile"; then
-     verboseMsg "$progname: attempting to create localized format using pool=$pool and tcx=$tcx."
-     cp "$poolfile" $engine.pool
-@@ -907,7 +907,7 @@ recreate_by_fmt()
- create_missing()
- {
-   # match_cmd='test ! -f $destdir/$fmtfile'
--  match_cmd='test ! -f "`kpsewhich -engine=$texengine -progname=$format $fmtfile`"'
-+  match_cmd='test ! -f "`@KPSEWHICH@ -engine=$texengine -progname=$format $fmtfile`"'
-   recreate_loop
- }
- 
-@@ -916,7 +916,7 @@ create_missing()
- #
- recreate_existing()
- {
--  match_cmd='test -f "`kpsewhich -engine=$texengine -progname=$format $fmtfile`"'
-+  match_cmd='test -f "`@KPSEWHICH@ -engine=$texengine -progname=$format $fmtfile`"'
-   recreate_loop
- }
- 
+ # make sure that on windows *everything* is in lower case for comparison
+ if (win32()) {
+@@ -211,7 +211,7 @@ sub main {
+       for my $e (sort @all_engines) {
+         my $hf = $alldata->{'merged'}{$f}{$e}{'hyphen'};
+         next if ($hf eq '-');
+-        my $ff = `kpsewhich -progname=$f -format=tex $hf`;
++        my $ff = `@KPSEWHICH@ -progname=$f -format=tex $hf`;
+         chomp($ff);
+         if ($ff ne "") {
+           if ($#all_engines > 0) {
+@@ -462,7 +462,7 @@ sub rebuild_one_format {
+   }
+   
+   # check for existence of ini file before doing anything else
+-  if (system("kpsewhich -progname=$fmt -format=$kpsefmt $inifile >$nul 2>&1") != 0) {
++  if (system("@KPSEWHICH@ -progname=$fmt -format=$kpsefmt $inifile >$nul 2>&1") != 0) {
+     # we didn't find the ini file, skip
+     print_deferred_warning("inifile $inifile for $fmt/$eng not found.\n");
+     # The original script just skipped it but in TeX Live we expect that
+@@ -483,7 +483,7 @@ sub rebuild_one_format {
+     $texargs = $addargs;
+   }
+   if ($pool) {
+-    chomp ( my $poolfile = `kpsewhich -progname=$eng $pool.poo 2>$nul` );
++    chomp ( my $poolfile = `@KPSEWHICH@ -progname=$eng $pool.poo 2>$nul` );
+     if ($poolfile && -f $poolfile) {
+       print_verbose ("attempting to create localized format using pool=$pool and tcx=$tcx.\n");
+       File::Copy($poolfile, "$eng.pool");
+@@ -860,7 +860,7 @@ sub determine_config_files {
+     # in the list is the one where changes will be written to.
+     ($changes_config_file) = @{$opts{'cnffile'}};
+   } else {
+-    my @all_files = `kpsewhich -all $fn`;
++    my @all_files = `@KPSEWHICH@ -all $fn`;
+     chomp(@all_files);
+     my @used_files;
+     for my $f (@all_files) {
+@@ -870,10 +870,10 @@ sub determine_config_files {
+     my $TEXMFLOCALVAR;
+     my @TEXMFLOCAL;
+     if (win32()) {
+-      chomp($TEXMFLOCALVAR =`kpsewhich --expand-path=\$TEXMFLOCAL`);
++      chomp($TEXMFLOCALVAR =`@KPSEWHICH@ --expand-path=\$TEXMFLOCAL`);
+       @TEXMFLOCAL = map { lc } split(/;/ , $TEXMFLOCALVAR);
+     } else {
+-      chomp($TEXMFLOCALVAR =`kpsewhich --expand-path='\$TEXMFLOCAL'`);
++      chomp($TEXMFLOCALVAR =`@KPSEWHICH@ --expand-path='\$TEXMFLOCAL'`);
+       @TEXMFLOCAL = split /:/ , $TEXMFLOCALVAR;
+     }
+     #

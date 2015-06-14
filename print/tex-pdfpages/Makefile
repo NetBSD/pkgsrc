@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/04/23 12:48:19 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/14 12:50:04 markd Exp $
 
 DISTNAME=	pdfpages
-PKGNAME=	tex-${DISTNAME}-0.4v
-TEXLIVE_REV=	31518
+PKGNAME=	tex-${DISTNAME}-0.4x
+TEXLIVE_REV=	37333
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Include PDF documents in LaTeX

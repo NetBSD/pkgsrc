@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 11:49:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 12:50:03 markd Exp $
 
 DISTNAME=	kotex-plain.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2014
-TEXLIVE_REV=	32104
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.0
+TEXLIVE_REV=	36990
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/kotex-plain

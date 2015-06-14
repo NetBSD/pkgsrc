@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/04 22:17:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/14 12:50:04 markd Exp $
 share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 share/texmf-dist/tex/latex/pdfpages/ppdvipdfm.def
 share/texmf-dist/tex/latex/pdfpages/ppdvips.def
+share/texmf-dist/tex/latex/pdfpages/ppluatex.def
 share/texmf-dist/tex/latex/pdfpages/ppnull.def
 share/texmf-dist/tex/latex/pdfpages/pppdftex.def
 share/texmf-dist/tex/latex/pdfpages/ppvtex.def

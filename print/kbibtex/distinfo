@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/04/06 10:45:05 markd Exp $
+$NetBSD: distinfo,v 1.9 2015/06/14 12:50:00 markd Exp $
 
-SHA1 (kbibtex-0.4.1.tar.bz2) = 0c2f9a9acee9ad9acd3b0a2f52529439fd9bb64a
-RMD160 (kbibtex-0.4.1.tar.bz2) = 02fb07150c0a7c806320b4e367d10fa82df5059c
-Size (kbibtex-0.4.1.tar.bz2) = 198342 bytes
-SHA1 (patch-CMakeLists.txt) = 41c6e553dfb3ccc7aa60535145ac333ed18f019d
-SHA1 (patch-src_libkbibtexio_iconvlatex.cpp) = 0a5a05f8babd5baa791062e3d74052937f64d087
-SHA1 (patch-src_websearch_websearchabstract.cpp) = cf27acc7af52992dd4feb0c02b92e835870dfaed
+SHA1 (kbibtex-0.5.1.tar.xz) = 6345bc6cad253a21bc9ef3e6a239a6025d65982b
+RMD160 (kbibtex-0.5.1.tar.xz) = d0c8441cca37d689f1839ca9d21ce139a2f74edc
+Size (kbibtex-0.5.1.tar.xz) = 250224 bytes
+SHA1 (patch-CMakeLists.txt) = dfd065839108bd5ea577a12e2f5a5fec5fd7a81e
+SHA1 (patch-src_libkbibtexio_iconvlatex.cpp) = 319bddfbb0a7d6511355ebf4dbfbec99e32f747b

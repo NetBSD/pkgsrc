@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/04/25 03:53:52 markd Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/14 12:50:05 markd Exp $
 
 DISTNAME=	pgf
-PKGNAME=	tex-${DISTNAME}-3.0.0
+PKGNAME=	tex-${DISTNAME}-3.0.0.37375
 CATEGORIES=	print graphics
-TEXLIVE_REV=	33057
+TEXLIVE_REV=	37375
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	PostScript and PDF graphics systems for TeX

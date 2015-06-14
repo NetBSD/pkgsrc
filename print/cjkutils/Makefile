@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 12:14:16 markd Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/14 12:50:00 markd Exp $
 
-DISTNAME=	texlive-20140525-source
-PKGNAME=	cjkutils-4.8.3
-PKGREVISION=	1
+DISTNAME=	texlive-20150521-source
+PKGNAME=	cjkutils-4.8.4
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
@@ -17,16 +16,16 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/cjkutils
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/cjkutils
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
 
 INSTALL_TARGET=	install-exec-am install-man
 
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

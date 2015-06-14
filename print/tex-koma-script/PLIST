@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/23 11:45:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/06/14 12:50:03 markd Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
@@ -175,7 +175,6 @@ share/texmf-dist/source/latex/koma-script/doc/tocbasic.html
 share/texmf-dist/source/latex/koma-script/doc/typearea.html
 share/texmf-dist/source/latex/koma-script/japanlco.dtx
 share/texmf-dist/source/latex/koma-script/scraddr.dtx
-share/texmf-dist/source/latex/koma-script/scrbeta.dtx
 share/texmf-dist/source/latex/koma-script/scrdoc.dtx
 share/texmf-dist/source/latex/koma-script/scrdocstrip.tex
 share/texmf-dist/source/latex/koma-script/scrextend.dtx
@@ -259,6 +258,7 @@ share/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
 share/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
 share/texmf-dist/tex/latex/koma-script/scrtime.sty
 share/texmf-dist/tex/latex/koma-script/scrwfile.sty
+share/texmf-dist/tex/latex/koma-script/setspace.hak
 share/texmf-dist/tex/latex/koma-script/tocbasic.sty
 share/texmf-dist/tex/latex/koma-script/tocstyle.sty
 share/texmf-dist/tex/latex/koma-script/typearea.sty

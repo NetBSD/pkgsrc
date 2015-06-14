@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/04/21 22:45:53 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/14 12:50:01 markd Exp $
 
 DISTNAME=	biblatex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.9a
-TEXLIVE_REV=	34433
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.0
+TEXLIVE_REV=	37083
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Documentation for tex-biblatex

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 11:55:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 12:50:01 markd Exp $
 
 DISTNAME=	csplain
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	35901
+PKGNAME=	tex-${DISTNAME}-2015
+TEXLIVE_REV=	37280
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/csplain
