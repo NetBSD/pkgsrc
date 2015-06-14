@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/05/28 12:30:00 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/14 13:28:53 markd Exp $
 
 DISTNAME=	collection-langspanish
-PKGNAME=	texlive-${DISTNAME}-2014
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	30372
+TEXLIVE_REV=	36995
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -18,6 +18,7 @@ DEPENDS+=	tex-babel-spanish-[0-9]*:../../print/tex-babel-spanish
 # es-tex-faq is documentation only
 DEPENDS+=	tex-hyphen-catalan-[0-9]*:../../print/tex-hyphen-catalan
 DEPENDS+=	tex-hyphen-galician-[0-9]*:../../print/tex-hyphen-galician
+# depend babel-spanglish
 DEPENDS+=	tex-hyphen-spanish-[0-9]*:../../print/tex-hyphen-spanish
 # l2tabu-spanish is documentation only
 # latex2e-help-texinfo-spanish is documentation only
