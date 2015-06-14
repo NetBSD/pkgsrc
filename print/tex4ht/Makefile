@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/06/12 10:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 12:50:06 markd Exp $
 
-DISTNAME=	texlive-20140525-source
+DISTNAME=	texlive-20150521-source
 PKGNAME=	tex4ht-0.0.20120725.1936
 PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2014/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,15 +20,14 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/tex4htk
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pkg-config
 REPLACE_PERL=	mk4ht.pl
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
-CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
 
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
