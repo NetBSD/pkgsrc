@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2710 2015/06/14 20:49:04 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2711 2015/06/14 21:02:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5200,3 +5200,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Canary-Stability version 2001 [wiz 2015-06-14]
 	Updated pkgtools/pkglint to 4.155 [wiz 2015-06-14]
 	Updated print/kpathsea to 6.2.1nb1 [ryoon 2015-06-14]
+	Updated wm/notion to 3.2015061300 [wiz 2015-06-14]
