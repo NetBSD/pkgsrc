@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/05/08 11:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:51 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2014
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36711
+TEXLIVE_REV=	37396
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -101,6 +101,7 @@ DEPENDS+=	tex-elvish-[0-9]*:../../fonts/tex-elvish
 DEPENDS+=	tex-epigrafica-[0-9]*:../../fonts/tex-epigrafica
 DEPENDS+=	tex-epsdice-[0-9]*:../../fonts/tex-epsdice
 DEPENDS+=	tex-erewhon-[0-9]*:../../fonts/tex-erewhon
+# depend esrelation
 DEPENDS+=	tex-esstix-[0-9]*:../../fonts/tex-esstix
 DEPENDS+=	tex-esvect-[0-9]*:../../fonts/tex-esvect
 DEPENDS+=	tex-eulervm-[0-9]*:../../fonts/tex-eulervm
@@ -210,6 +211,7 @@ DEPENDS+=	tex-semaphor-[0-9]*:../../fonts/tex-semaphor
 DEPENDS+=	tex-skull-[0-9]*:../../fonts/tex-skull
 DEPENDS+=	tex-sourcecodepro-[0-9]*:../../fonts/tex-sourcecodepro
 DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
+# depend sourceserifpro
 DEPENDS+=	tex-starfont-[0-9]*:../../fonts/tex-starfont
 DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
 DEPENDS+=	tex-stix-[0-9]*:../../fonts/tex-stix

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/05/16 11:24:59 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:51 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36325
+TEXLIVE_REV=	37359
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -50,6 +50,7 @@ DEPENDS+=	tex-biblatex-[0-9]*:../../print/tex-biblatex
 # depend biblatex-realauthor
 # depend biblatex-science
 # depend biblatex-source-division
+# depend biblatex-subseries
 # depend biblatex-swiss-legal
 # depend biblatex-trad
 # depend biblatex-true-citepages-omit
