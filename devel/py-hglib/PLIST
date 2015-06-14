@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/14 21:47:49 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/hglib/__init__.py
+${PYSITELIB}/hglib/__init__.pyc
+${PYSITELIB}/hglib/__init__.pyo
+${PYSITELIB}/hglib/client.py
+${PYSITELIB}/hglib/client.pyc
+${PYSITELIB}/hglib/client.pyo
+${PYSITELIB}/hglib/context.py
+${PYSITELIB}/hglib/context.pyc
+${PYSITELIB}/hglib/context.pyo
+${PYSITELIB}/hglib/error.py
+${PYSITELIB}/hglib/error.pyc
+${PYSITELIB}/hglib/error.pyo
+${PYSITELIB}/hglib/merge.py
+${PYSITELIB}/hglib/merge.pyc
+${PYSITELIB}/hglib/merge.pyo
+${PYSITELIB}/hglib/templates.py
+${PYSITELIB}/hglib/templates.pyc
+${PYSITELIB}/hglib/templates.pyo
+${PYSITELIB}/hglib/util.py
+${PYSITELIB}/hglib/util.pyc
+${PYSITELIB}/hglib/util.pyo
