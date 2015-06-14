@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.269 2015/06/12 10:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.270 2015/06/14 21:46:34 prlw1 Exp $
 
-DISTNAME=	gtk+-2.24.27
+DISTNAME=	gtk+-2.24.28
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/2.24/}
 EXTRACT_SUFX=	.tar.xz
-PKGREVISION=	3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/
@@ -76,6 +75,12 @@ CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 #SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 #SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
+SUBST_CLASSES+=			iconcache
+SUBST_STAGE.iconcache=		pre-configure
+SUBST_MESSAGE.iconcache=	Renaming gtk-icon-cache-update.
+SUBST_SED.iconcache=		-e 's,gtk-update-icon-cache,gtk2-update-icon-cache,g'
+SUBST_FILES.iconcache=		gtk/Makefile.in
+
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.24.22
 REPLACE_PYTHON=	gtk/gtk-builder-convert
 
@@ -86,7 +91,7 @@ post-install:
 	${RM} -f ${DESTDIR}${GTK_IMMODULES_DB}
 
 EVAL_PREFIX+=		PREFIX.hicolor=hicolor-icon-theme
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk2-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX.hicolor}/share/icons/hicolor"
 INSTALL_TEMPLATES+=	../../x11/gtk2/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
