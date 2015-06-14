@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/14 16:55:23 wiz Exp $
 
-DISTNAME=	libfreehand-0.1.0
-PKGREVISION=	1
+DISTNAME=	libfreehand-0.1.1
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,5 +24,7 @@ PKGCONFIG_OVERRIDE+=	libfreehand.pc.in
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
