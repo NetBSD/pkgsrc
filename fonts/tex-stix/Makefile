@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/14 11:20:01 markd Exp $
 
 DISTNAME=	stix
-PKGNAME=	tex-${DISTNAME}-1.1.1
-TEXLIVE_REV=	34793
+PKGNAME=	tex-${DISTNAME}-1.1.2
+TEXLIVE_REV=	36914
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/stix
