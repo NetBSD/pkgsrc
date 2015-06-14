@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2010/09/10 10:50:27 taca Exp $
+$NetBSD: distinfo,v 1.12 2015/06/14 00:40:30 taca Exp $
 
 SHA1 (mod_ruby-1.3.0.tar.gz) = 967c4efa1ec3f8b0d9870db8665295ba6e019fff
 RMD160 (mod_ruby-1.3.0.tar.gz) = a87f2a54a0b501e27efffdaab88b5ad4e6abd413
 Size (mod_ruby-1.3.0.tar.gz) = 114246 bytes
 SHA1 (patch-aa) = a00f6d5baf7c470e7143aa5ba8b6955516787f27
 SHA1 (patch-ac) = c88ef1288325717750f76e2234c631bd3d8126c5
+SHA1 (patch-doc_Makefile.in) = 340cb64c1c194bd7679ecba0c5eb265f7fa1904d
