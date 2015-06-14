@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/04/23 11:25:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/06/14 12:50:07 markd Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -35,10 +35,12 @@ bin/patgen
 bin/pbibtex
 bin/pdftex
 bin/pdftosrc
+bin/pdvitomp
 bin/pdvitype
 bin/pktogf
 bin/pktype
 bin/pltotf
+bin/pmpost
 bin/pooltype
 bin/ppltotf
 bin/ptex
@@ -50,7 +52,9 @@ bin/tftopl
 bin/tie
 bin/ttf2afm
 bin/upbibtex
+bin/updvitomp
 bin/updvitype
+bin/upmpost
 bin/uppltotf
 bin/uptex
 bin/uptftopl
@@ -59,9 +63,13 @@ bin/vptovf
 bin/weave
 bin/wofm2opl
 bin/wopl2ofm
-bin/wovp2ovf
 bin/wovf2ovp
+bin/wovp2ovf
+include/synctex/synctex_parser.h
+include/synctex/synctex_parser_utils.h
 info/web2c.info
+lib/libsynctex.la
+lib/pkgconfig/synctex.pc
 man/man1/aleph.1
 man/man1/bibtex.1
 man/man1/ctangle.1
