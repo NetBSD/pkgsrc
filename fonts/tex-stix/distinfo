@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/06/14 11:20:01 markd Exp $
 
-SHA1 (tex-stix-34793/stix.tar.xz) = 133b2c63b066c934352792f2d10b917c3bac50a9
-RMD160 (tex-stix-34793/stix.tar.xz) = 656a2d5424a1fa5192106d5781c16a0757e4f4bd
-Size (tex-stix-34793/stix.tar.xz) = 2670756 bytes
+SHA1 (tex-stix-36914/stix.tar.xz) = c2a3b30a571db29c1597dd7a44a8f27895408740
+RMD160 (tex-stix-36914/stix.tar.xz) = 1dca733fcb7192ad63ffbdaf5b52f01091d99992
+Size (tex-stix-36914/stix.tar.xz) = 2670740 bytes
