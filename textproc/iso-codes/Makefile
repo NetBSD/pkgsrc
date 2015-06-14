@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2015/01/28 11:40:55 adam Exp $
+# $NetBSD: Makefile,v 1.41 2015/06/14 16:16:52 wiz Exp $
 
-DISTNAME=	iso-codes-3.57
+DISTNAME=	iso-codes-3.58
 CATEGORIES=	textproc
 MASTER_SITES=	https://pkg-isocodes.alioth.debian.org/downloads/
 EXTRACT_SUFX=	.tar.xz
