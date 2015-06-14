@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14462 2015/06/12 17:05:19 tron Exp $
+$NetBSD: TODO,v 1.14463 2015/06/14 13:57:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,6 +369,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o abiword-3.0
 	o adocman-0.13
 	o aewm++-1.0.27
+	o afl-1.82b
 	o alacarte-0.13.2
 	o allegro-5.10
 	o alsa-lib-1.0.29
@@ -463,6 +464,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
+	o cups-2.0.3
+	o cups-filters-1.0.69
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.6
 	o cxref-1.6e
@@ -590,6 +593,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o glibmm-2.44.0
+	o global-6.5
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -649,6 +653,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grilo-plugins-0.2.14
 	o gsharutils-4.15.2
 	o gss-1.0.3
+	o gst-plugins1-soup-1.5.1
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -689,6 +694,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
+	o iso-codes-3.58
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
@@ -730,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
+	o libfreehand-0.1.1
 	o libgdata-0.16.1
 	o libgdiplus-3.0
 	o libgee-0.18.0
@@ -918,6 +925,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
 	o py-cassa-1.11.0
+	o py-cffi-1.1.2
+	o py-cparser-2.14
 	o py-creole-1.1.1
 	o py-datapkg-0.9
 	o py-django-1.8 [incompatible with django-cms, please hold]
@@ -928,7 +937,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
-	o py-html2text-2015.6.6
+	o py-gstreamer0.10-1.2.1
+	o py-html2text-2015.6.12
 	o py-lasso-2.4.0
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.3
@@ -941,6 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-reportlab-3.0
 	o py-rope-0.9.4
+	o py-setuptools-17.1.1
 	o py-simpletal-5.1
 	o py-simpy-3.0.5
 	o py-smb-1.1.8
@@ -990,6 +1001,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scew-0.4.0
 	o scilab-5.5.1
 	o scm-5e7
+	o screen-4.3.0
 	o scribus-1.4.5
 	o scripts-1.0.1
 	o scrollz-1.9.99
@@ -1080,6 +1092,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.4.2 [GNOME 2.32]
 	o tomboy-1.10.2
 	o top-3.8beta1
+	o tor-0.2.6.9
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
