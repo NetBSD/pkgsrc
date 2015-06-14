@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2109 2015/06/14 18:15:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2110 2015/06/14 21:48:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1634,6 +1634,7 @@ SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hg-git
+SUBDIR+=	py-hglib
 SUBDIR+=	py-hglist
 SUBDIR+=	py-hgnested
 SUBDIR+=	py-hgtools
