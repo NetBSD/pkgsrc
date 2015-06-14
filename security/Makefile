@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.555 2015/06/12 12:07:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.556 2015/06/14 07:28:43 pettai Exp $
 #
 
 COMMENT=	Security tools
@@ -57,6 +57,7 @@ SUBDIR+=	cy2-scram
 SUBDIR+=	cy2-sql
 SUBDIR+=	cyrus-sasl
 SUBDIR+=	cyrus-saslauthd
+SUBDIR+=	dcfldd
 SUBDIR+=	ddos-scan
 SUBDIR+=	destroy
 SUBDIR+=	dhbitty
