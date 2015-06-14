@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/14 07:27:08 pettai Exp $
+
+SHA1 (dcfldd-1.3.4.tar.gz) = 0ff5f510ac88490efb24b5b4929c06a7eac47ed8
+RMD160 (dcfldd-1.3.4.tar.gz) = e0baefedf4c2fb4a114b598e565c3ae98a9b3914
+Size (dcfldd-1.3.4.tar.gz) = 166530 bytes
