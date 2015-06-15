@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.version,v 1.1 2015/06/15 09:46:27 marino Exp $
+#
+
+SNAPSHOT=	20150422
+GCC_BRANCH=	5
+GCC_POINT=	1.0
+GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
+BUILD_RELEASE=	yes
+
+.if ${BUILD_RELEASE:Mno}
+# Snapshot naming pattern
+IDENTIFICATION=	gcc-${GCC_BRANCH}-${SNAPSHOT}
+MS_SUBDIR=	snapshots/${GCC_BRANCH}-${SNAPSHOT}
+PHASE=		snapshot
+.else
+# Release naming pattern
+IDENTIFICATION=	gcc-${GCC_VERSION}
+MS_SUBDIR=	releases/gcc-${GCC_VERSION}
+PHASE=		release
+.endif
