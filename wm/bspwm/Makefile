@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/05 23:01:28 youri Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/15 09:22:59 joerg Exp $
 
 DISTNAME=		bspwm-0.9
 CATEGORIES=		wm
@@ -11,7 +11,7 @@ COMMENT=		Binary space partitioning window manager
 LICENSE=		2-clause-bsd
 
 USE_TOOLS+=		gmake bash:run
-REPLACE_BASH+=		bin/bspwm-session
+REPLACE_BASH+=		contrib/freedesktop/bspwm-session
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bspwm
 INSTALLATION_DIRS=	share/examples/bspwm
