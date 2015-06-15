@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2718 2015/06/15 01:03:32 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2719 2015/06/15 01:14:43 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/adwaita-icon-theme to 3.16.2.1 [prlw1 2015-06-14]
 	Updated print/evince3 to 3.16.1 [prlw1 2015-06-15]
 	Updated x11/gtksourceview3 to 3.16.1 [prlw1 2015-06-15]
+	Updated math/gnome-calculator to 3.16.2 [prlw1 2015-06-15]
