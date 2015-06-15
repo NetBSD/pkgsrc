@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2015/05/10 08:10:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.64 2015/06/15 09:27:02 adam Exp $
 
-VERSION_DATE=	2015.05.04
+VERSION_DATE=	2015.06.15
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//S/.//}
 CATEGORIES=	net
@@ -22,8 +22,8 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/youtube-dl
 USE_TOOLS+=	gmake
 
-MAKE_FLAGS+=	PREFIX=${PREFIX:Q} MANDIR=${PREFIX:Q}/${PKGMANDIR:Q} \
-		BASHCOMPDIR=${PREFIX:Q}/share/bash-completion/completions
+MAKE_FLAGS+=	PREFIX=${PREFIX} MANDIR=${PREFIX}/${PKGMANDIR} \
+		BASHCOMPDIR=${PREFIX}/share/bash-completion/completions
 INSTALLATION_DIRS=	share/youtube-dl
 CHECK_INTERPRETER_SKIP=	share/youtube-dl/youtube-dl
 
