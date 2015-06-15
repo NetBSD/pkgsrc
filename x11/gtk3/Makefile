@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/06/14 23:58:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2015/06/15 01:24:39 prlw1 Exp $
 
 DISTNAME=	gtk+-3.16.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -18,7 +18,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=		gettext-tools>=0.18.3:../../devel/gettext-tools
+TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
 
 GNU_CONFIGURE=		yes
 # XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh
