@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/11 13:32:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/15 09:20:47 joerg Exp $
 #
 
 DISTNAME=	libuv-1.6.1
@@ -13,7 +13,7 @@ LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf automake
+USE_TOOLS+=	autoconf automake pkg-config
 GNU_CONFIGURE=	yes
 
 HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h	\
