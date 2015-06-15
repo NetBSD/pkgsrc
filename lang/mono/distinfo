@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.103 2015/06/04 17:16:20 jperkin Exp $
+$NetBSD: distinfo,v 1.104 2015/06/15 09:27:29 joerg Exp $
 
 SHA1 (mono-4.0.1.tar.bz2) = 9c7c27caa69e6a1673753437fd6824e0d33fe2ac
 RMD160 (mono-4.0.1.tar.bz2) = 3adcb49d7da9a4d81b7f5bc2108d13c20d94ab15
@@ -9,7 +9,7 @@ SHA1 (patch-ae) = 25869b98f9197243aea799b75b238d92f58e8845
 SHA1 (patch-af) = 6a458a91dc34420d45238b5dad01ed63f0bd9e00
 SHA1 (patch-ai) = d06c382d188f4263a2a505ca3d3ee491baa3af28
 SHA1 (patch-aj) = 33b75ec2662cc442f602b21b03fee1e5c39e3a76
-SHA1 (patch-ak) = 919379dbf2a35c23010c87d9e95e124e8e84d04a
+SHA1 (patch-ak) = 262845edcf84cf5127b7e01963f0d433aad7682a
 SHA1 (patch-al) = 07462d3f9cf2aa08b1fb837400084d32a7062eee
 SHA1 (patch-am) = ff0af9c120ebeb59edcdb727c7d36aa5939c73af
 SHA1 (patch-ap) = e0590d7014ae4ef74ee9f9c39f069411a66c8f76
@@ -40,6 +40,7 @@ SHA1 (patch-dj) = 049cc88dc523975404445f13de81255d75a22156
 SHA1 (patch-dk) = ad78819e71f082d0b7f262c162d3a67cfdfdcf2f
 SHA1 (patch-dl) = dc63c1d3f6a1d78b2f5bb725cdff6824e2307dc5
 SHA1 (patch-do) = 0bda0d2e482be218fb502e0c4ea945a41d078d27
+SHA1 (patch-libgc_misc.c) = 52c68e7b6f1b58f480286bd135591f97a3e13125
 SHA1 (patch-man_mprof-report.1) = 0a80c164614cc9af5f01822005193d80f1d89946
 SHA1 (patch-mono_dis_Makefile.in) = f000112e2712faf29104489e45feae8d6fc45169
 SHA1 (patch-mono_metadata_icall.c) = 191a7fccb174855026cb11dd0f6ac450bb920ec7
