@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2015/06/15 09:46:27 marino Exp $
+# $NetBSD: options.mk,v 1.2 2015/06/15 17:14:27 marino Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc5-aux
 PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap
-PKG_SUGGESTED_OPTIONS=  fortran objc 
+PKG_SUGGESTED_OPTIONS=  #fortran objc 
 
 # disable nls for now (build error involving iconv)
+# disable fortran, breaks during build on NetBSD 7.0-beta
 
 .include "../../mk/bsd.options.mk"
 
