@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/11/23 13:46:07 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/06/15 01:03:11 prlw1 Exp $
 include/gtksourceview-3.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-3.0/gtksourceview/gtksource.h
 include/gtksourceview-3.0/gtksourceview/gtksourcebuffer.h
@@ -25,6 +25,9 @@ include/gtksourceview-3.0/gtksourceview/gtksourcesearchcontext.h
 include/gtksourceview-3.0/gtksourceview/gtksourcesearchsettings.h
 include/gtksourceview-3.0/gtksourceview/gtksourcestyle.h
 include/gtksourceview-3.0/gtksourceview/gtksourcestylescheme.h
+include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooser.h
+include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooserbutton.h
+include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooserwidget.h
 include/gtksourceview-3.0/gtksourceview/gtksourcestyleschememanager.h
 include/gtksourceview-3.0/gtksourceview/gtksourcetypes.h
 include/gtksourceview-3.0/gtksourceview/gtksourceundomanager.h
@@ -60,6 +63,9 @@ share/gtk-doc/html/gtksourceview-3.0/GtkSourceSearchContext.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceSearchSettings.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceStyle.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceStyleScheme.html
+share/gtk-doc/html/gtksourceview-3.0/GtkSourceStyleSchemeChooser.html
+share/gtk-doc/html/gtksourceview-3.0/GtkSourceStyleSchemeChooserButton.html
+share/gtk-doc/html/gtksourceview-3.0/GtkSourceStyleSchemeChooserWidget.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceStyleSchemeManager.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceUndoManager.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceView.html
@@ -68,11 +74,18 @@ share/gtk-doc/html/gtksourceview-3.0/api-index-3-0.html
 share/gtk-doc/html/gtksourceview-3.0/api-index-3-10.html
 share/gtk-doc/html/gtksourceview-3.0/api-index-3-12.html
 share/gtk-doc/html/gtksourceview-3.0/api-index-3-14.html
+share/gtk-doc/html/gtksourceview-3.0/api-index-3-16.html
 share/gtk-doc/html/gtksourceview-3.0/api-index-3-4.html
 share/gtk-doc/html/gtksourceview-3.0/api-index-deprecated.html
 share/gtk-doc/html/gtksourceview-3.0/api-index-full.html
 share/gtk-doc/html/gtksourceview-3.0/ch01.html
 share/gtk-doc/html/gtksourceview-3.0/ch02.html
+share/gtk-doc/html/gtksourceview-3.0/ch03.html
+share/gtk-doc/html/gtksourceview-3.0/ch04.html
+share/gtk-doc/html/gtksourceview-3.0/ch05.html
+share/gtk-doc/html/gtksourceview-3.0/ch06.html
+share/gtk-doc/html/gtksourceview-3.0/ch07.html
+share/gtk-doc/html/gtksourceview-3.0/ch08.html
 share/gtk-doc/html/gtksourceview-3.0/gtksourceview-3.0-GtkSourceUtils.html
 share/gtk-doc/html/gtksourceview-3.0/gtksourceview-3.0.devhelp2
 share/gtk-doc/html/gtksourceview-3.0/home.png
@@ -83,6 +96,8 @@ share/gtk-doc/html/gtksourceview-3.0/lang-tutorial.html
 share/gtk-doc/html/gtksourceview-3.0/left-insensitive.png
 share/gtk-doc/html/gtksourceview-3.0/left.png
 share/gtk-doc/html/gtksourceview-3.0/object-tree.html
+share/gtk-doc/html/gtksourceview-3.0/pt01.html
+share/gtk-doc/html/gtksourceview-3.0/pt02.html
 share/gtk-doc/html/gtksourceview-3.0/right-insensitive.png
 share/gtk-doc/html/gtksourceview-3.0/right.png
 share/gtk-doc/html/gtksourceview-3.0/style-reference.html
@@ -127,6 +142,7 @@ share/gtksourceview-3.0/language-specs/fortran.lang
 share/gtksourceview-3.0/language-specs/fsharp.lang
 share/gtksourceview-3.0/language-specs/gap.lang
 share/gtksourceview-3.0/language-specs/gdb-log.lang
+share/gtksourceview-3.0/language-specs/genie.lang
 share/gtksourceview-3.0/language-specs/glsl.lang
 share/gtksourceview-3.0/language-specs/go.lang
 share/gtksourceview-3.0/language-specs/gtk-doc.lang
@@ -174,6 +190,7 @@ share/gtksourceview-3.0/language-specs/opencl.lang
 share/gtksourceview-3.0/language-specs/pascal.lang
 share/gtksourceview-3.0/language-specs/perl.lang
 share/gtksourceview-3.0/language-specs/php.lang
+share/gtksourceview-3.0/language-specs/pig.lang
 share/gtksourceview-3.0/language-specs/pkgconfig.lang
 share/gtksourceview-3.0/language-specs/po.lang
 share/gtksourceview-3.0/language-specs/prolog.lang
@@ -196,6 +213,7 @@ share/gtksourceview-3.0/language-specs/systemverilog.lang
 share/gtksourceview-3.0/language-specs/t2t.lang
 share/gtksourceview-3.0/language-specs/tcl.lang
 share/gtksourceview-3.0/language-specs/texinfo.lang
+share/gtksourceview-3.0/language-specs/thrift.lang
 share/gtksourceview-3.0/language-specs/vala.lang
 share/gtksourceview-3.0/language-specs/vbnet.lang
 share/gtksourceview-3.0/language-specs/verilog.lang
@@ -249,6 +267,7 @@ share/locale/hu/LC_MESSAGES/gtksourceview-3.0.mo
 share/locale/id/LC_MESSAGES/gtksourceview-3.0.mo
 share/locale/it/LC_MESSAGES/gtksourceview-3.0.mo
 share/locale/ja/LC_MESSAGES/gtksourceview-3.0.mo
+share/locale/kk/LC_MESSAGES/gtksourceview-3.0.mo
 share/locale/kn/LC_MESSAGES/gtksourceview-3.0.mo
 share/locale/ko/LC_MESSAGES/gtksourceview-3.0.mo
 share/locale/lt/LC_MESSAGES/gtksourceview-3.0.mo
