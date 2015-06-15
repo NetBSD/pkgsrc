@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2015/03/14 01:47:12 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/06/15 00:06:03 prlw1 Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
 
-DISTNAME=		evince-3.14.2
+DISTNAME=		evince-3.16.1
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -47,5 +47,5 @@ BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.24.0
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.14.0
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.15.3
 .include "../../x11/gtk3/buildlink3.mk"
