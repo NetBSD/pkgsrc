@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.1 2015/06/15 09:46:27 marino Exp $
+
+SHA1 (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = 7e0725889ae752e6a9fdbac5b1d2ef0e3f62822e
+RMD160 (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = f62c00515588804ce69368507822f30380d7e48d
+Size (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = 39357314 bytes
+SHA1 (ada-bootstrap.i386.freebsd.100B.tar.bz2) = b7ff322bbcfa403d37d917d6e88e306de0857251
+RMD160 (ada-bootstrap.i386.freebsd.100B.tar.bz2) = 7a85e0f073dafe9b0d37b493dbb4268bd2f39601
+Size (ada-bootstrap.i386.freebsd.100B.tar.bz2) = 41229192 bytes
+SHA1 (ada-bootstrap.i386.freebsd.84.tar.bz2) = 54c3d59fd2ca75bb91255296bc0f9d6028ac2cd2
+RMD160 (ada-bootstrap.i386.freebsd.84.tar.bz2) = 8ceb3957708eb9ccc8ce2ff1ea26949683ee2fa7
+Size (ada-bootstrap.i386.freebsd.84.tar.bz2) = 39727003 bytes
+SHA1 (ada-bootstrap.i386.netbsd.614.tar.bz2) = 2c29209b086dcf3076428f232fadf306b9a227c6
+RMD160 (ada-bootstrap.i386.netbsd.614.tar.bz2) = f0ecb9b0d69c2d097c6405e0db581f606b372017
+Size (ada-bootstrap.i386.netbsd.614.tar.bz2) = 37900035 bytes
+SHA1 (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = 85ceea8d0bd0d1b8c1f91ea6d7ffb2ffe4a4c7da
+RMD160 (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = 7ca8ccff5a4400a7e4fc9ad1d11c64f3c92d54f4
+Size (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = 40747242 bytes
+SHA1 (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = edfe60c5f42bbeb145d7070ed868135ebc60c2de
+RMD160 (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = 0d50885402208caafbc133ffc3b8684e89a50cae
+Size (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = 42163803 bytes
+SHA1 (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = b5c76ce07df6e944742eda5f860352c8e179b988
+RMD160 (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = 334c2375ee35bdf931a3a476e794e494ff252515
+Size (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = 40227668 bytes
+SHA1 (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 683f58e6e394a508a52ec1dc5f3d9ca2869d5252
+RMD160 (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 4574857089e82fb80725161cc8b625ce75f6810e
+Size (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 39348972 bytes
+SHA1 (ada-bootstrap.x86_64.solaris.511.tar.bz2) = abb16c1582e2a6ffe37df4afd96d04c44f2eea7b
+RMD160 (ada-bootstrap.x86_64.solaris.511.tar.bz2) = 41677e2fd0cb02c89f200fb97b112ad3be7f19cd
+Size (ada-bootstrap.x86_64.solaris.511.tar.bz2) = 60110383 bytes
+SHA1 (gcc-5.1.0.tar.bz2) = b6c947b09adf780fe02065d0c48bfd7b4bdddfa3
+RMD160 (gcc-5.1.0.tar.bz2) = 17a9623f384ce10415a603042e0592c9b4956078
+Size (gcc-5.1.0.tar.bz2) = 94954411 bytes
