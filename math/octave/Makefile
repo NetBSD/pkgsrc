@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2015/06/12 10:50:28 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2015/06/15 21:18:03 joerg Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	9
@@ -14,9 +14,9 @@ COMMENT=	High-level language, intended for numerical computations
 LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
+BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../print/tex-latex-fonts
 BUILD_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 TOOL_DEPENDS+=	gtexinfo>=5.1:../../devel/gtexinfo
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
