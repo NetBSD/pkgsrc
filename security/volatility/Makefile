@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/03 22:44:10 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/15 09:22:25 joerg Exp $
 
 DISTNAME=	volatility-2.4
 CATEGORIES=	security
@@ -18,6 +18,6 @@ REPLACE_PYTHON= tools/vtype_diff.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
