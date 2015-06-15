@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/06/14 13:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/15 10:11:36 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -721,7 +721,7 @@ DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
 # depend pauldoc
 # depend pawpict
 # depend pax
-# depend pbox
+DEPENDS+=	tex-pbox-[0-9]*:../../print/tex-pbox
 # depend pbsheet
 # depend pdf14
 DEPENDS+=	tex-pdfcomment-[0-9]*:../../print/tex-pdfcomment
