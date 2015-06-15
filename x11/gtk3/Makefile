@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2015/06/15 01:24:39 prlw1 Exp $
+# $NetBSD: Makefile,v 1.64 2015/06/15 01:39:06 prlw1 Exp $
 
 DISTNAME=	gtk+-3.16.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -95,6 +95,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.0
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libepoxy+=	libepoxy>=1.2nb2
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
