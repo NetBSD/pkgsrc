@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/14 19:46:51 marino Exp $
+# $NetBSD: Makefile,v 1.25 2015/06/15 18:22:55 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
@@ -63,7 +63,7 @@ NSUFF=	${OS_VERSION}
 NELF=	elf
 .  endif
 XLDF=			-lm
-.  if empty(OS_VERSION:M7.99.*)
+.  if ${OS_VERSION:R} < 7
 MODERN_BINUTILS=	yes
 .  endif
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.netbsd.614.tar.bz2
