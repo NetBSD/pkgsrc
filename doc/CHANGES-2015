@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2722 2015/06/15 09:25:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2723 2015/06/15 09:28:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5211,4 +5211,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/gnome-calculator to 3.16.2 [prlw1 2015-06-15]
 	Updated www/ikiwiki to 3.20150614 [schmonz 2015-06-15]
 	Updated graphics/pngcrush to 1.7.85 [adam 2015-06-15]
+	Updated net/youtube-dl to 2015.06.15 [bsiegert 2015-06-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q2 branch [wiz 2015-06-15]
