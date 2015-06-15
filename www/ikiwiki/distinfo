@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.106 2015/06/11 14:15:33 schmonz Exp $
+$NetBSD: distinfo,v 1.107 2015/06/15 01:49:50 schmonz Exp $
 
-SHA1 (ikiwiki_3.20150610.tar.gz) = 1265eb208a5f533bc35c2ea30e0474e5e648b814
-RMD160 (ikiwiki_3.20150610.tar.gz) = 69f4f2a000c67a36ae1ae9716659d3156f77140c
-Size (ikiwiki_3.20150610.tar.gz) = 3342097 bytes
+SHA1 (ikiwiki_3.20150614.tar.gz) = 22722f25f5dbc3a55c211a064854d823ed6d4bc8
+RMD160 (ikiwiki_3.20150614.tar.gz) = 7ba865d9f37e45ddd97a0a34acf47f38a66877e6
+Size (ikiwiki_3.20150614.tar.gz) = 3344970 bytes
+SHA1 (patch-IkiWiki_Plugin_teximg.pm) = fe51d946ae50da9e34f7ae3a8f76f7208cfdc2a3
+SHA1 (patch-pm__filter) = d89be6c329590bf461eb8dfd61d5bd7a03521949
+SHA1 (patch-t_inline.t) = ea24b4a96cce2cef01e526d2c729164b0d0d0823
