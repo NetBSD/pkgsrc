@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/04/25 14:23:30 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/15 01:14:23 prlw1 Exp $
 
-DISTNAME=		gnome-calculator-3.14.1
-PKGREVISION=		2
+DISTNAME=		gnome-calculator-3.16.2
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-calculator/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -24,7 +23,9 @@ USE_PKGLOCALEDIR=	yes
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../lang/vala/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.15.1
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
