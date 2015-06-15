@@ -1,19 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2015/06/14 14:20:11 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/15 10:08:40 markd Exp $
 
-DISTNAME=		pbox
-PKGNAME=		tex-${DISTNAME}-1.2
-EXTRACT_SUFX=		.tar.xz
-TEXLIVE_USE_CTAN=	yes
+DISTNAME=	pbox
+PKGNAME=	tex-${DISTNAME}-1.2
+TEXLIVE_REV=	24807
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		A variable-width pbox
-LICENSE=		gnu-gpl-v3
-
-INSTALLATION_DIRS=	share/texmf-dist/tex/latex/pbox
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/tex/latex/pbox/pbox.sty \
-	    ${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/pbox
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pbox
+COMMENT=	A variable-width \parbox command
+LICENSE=	gnu-gpl-v3
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
