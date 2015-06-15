@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.50 2015/06/13 10:52:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q1,v 1.1.2.51 2015/06/15 19:28:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2015Q1 branch:
@@ -180,3 +180,5 @@ Pullup ticket #4748 - requested by taca
 lang/php55: security update
 Pullup ticket #4749 - requested by taca
 lang/php56: security update
+Pullup ticket #4723 - requested by taca
+textproc/ruby-redcarpet: security fix
