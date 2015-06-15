@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2724 2015/06/15 09:52:02 marino Exp $
+$NetBSD: CHANGES-2015,v 1.2725 2015/06/15 10:14:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5215,3 +5215,4 @@ Changes to the packages collection and infrastructure in 2015:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q2 branch [wiz 2015-06-15]
 	Removed lang/gnat-aux [marino 2015-06-15]
 	Added lang/gcc5-aux version 20150422 [marino 2015-06-15]
+	Updated graphics/dvipng to 1.15 [markd 2015-06-15]
