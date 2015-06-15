@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2723 2015/06/15 09:28:48 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2724 2015/06/15 09:52:02 marino Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5213,3 +5213,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/pngcrush to 1.7.85 [adam 2015-06-15]
 	Updated net/youtube-dl to 2015.06.15 [bsiegert 2015-06-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q2 branch [wiz 2015-06-15]
+	Removed lang/gnat-aux [marino 2015-06-15]
+	Added lang/gcc5-aux version 20150422 [marino 2015-06-15]
