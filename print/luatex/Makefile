@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/04/25 14:24:46 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2015/06/15 09:45:39 markd Exp $
 
 DISTNAME=	luatex-beta-0.76.0-source
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
@@ -102,6 +102,8 @@ CONFIGURE_ARGS+=--with-system-zlib \
 CONFIGURE_ARGS+=--with-system-zziplib
 CONFIGURE_DIRS+=. texk/web2c
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
+
+CFLAGS+=	-I${BUILDLINK_PREFIX.kpathsea}/lib
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
