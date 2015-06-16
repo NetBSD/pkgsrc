@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2726 2015/06/15 12:43:33 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2727 2015/06/16 16:16:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5217,3 +5217,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/gcc5-aux version 20150422 [marino 2015-06-15]
 	Updated graphics/dvipng to 1.15 [markd 2015-06-15]
 	Updated devel/py-at-spi2 to 2.16.0 [prlw1 2015-06-15]
+	Added net/grive2 version 0.4.0.20150531 [abs 2015-06-16]
