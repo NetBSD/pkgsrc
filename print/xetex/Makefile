@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/06/14 12:50:07 markd Exp $
+# $NetBSD: Makefile,v 1.41 2015/06/16 16:26:46 joerg Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	xetex-0.99992
@@ -70,6 +70,9 @@ BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+
+BUILDLINK_DEPMETHOD.libX11?=	build
+.include "../../x11/libX11/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/xetex ${DESTDIR}${PREFIX}/bin
