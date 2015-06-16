@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2015/06/03 21:00:39 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2015/06/16 13:41:23 jperkin Exp $
 
 DISTNAME=	gnupg-2.0.28
 PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
@@ -20,8 +20,12 @@ CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pinentry-pgm=${BUILDLINK_PREFIX.pinentry}/bin/pinentry
 
+.include "../../mk/bsd.prefs.mk"
+
 # Sometimes wrong include file gets detected, e.g. for Clang
-.if exists(/usr/include/stdint.h)
+.if defined(OSX_SDK_PATH) && exists(${OSX_SDK_PATH:Q}/usr/include/stdint.h)
+CONFIGURE_ENV+=		gl_cv_absolute_stdint_h=${OSX_SDK_PATH:Q}/usr/include/stdint.h
+.elif exists(/usr/include/stdint.h)
 CONFIGURE_ENV+=		gl_cv_absolute_stdint_h=/usr/include/stdint.h
 .endif
 
