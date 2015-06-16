@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/06/16 16:15:37 abs Exp $
+
+SHA1 (grive2-20150531-06eb1a7df2032144f99473fd812412514834a1ee.tar.gz) = e77a4d64f2fa2dbb69d9a7df1998424d261c263e
+RMD160 (grive2-20150531-06eb1a7df2032144f99473fd812412514834a1ee.tar.gz) = 3affce2d7b3112cc49941e4ea5cf81f6e2af49fe
+Size (grive2-20150531-06eb1a7df2032144f99473fd812412514834a1ee.tar.gz) = 158413 bytes
+SHA1 (patch-libgrive_CMakeLists.txt) = fa81eae7f6c70478c757c897fab3fb1d297b25b0
+SHA1 (patch-libgrive_src_util_OS.cc) = ac5a59b717af6029134eb299b36a5862df193c38
+SHA1 (patch-libgrive_test_drive_EntryTest.cc) = 16627f2bb0f1b547a1be287c65c82793ac3a3f45
+SHA1 (patch-libgrive_test_drive_ResourceTest.cc) = b2337741b60c3f98481ecbe65f42e3dbf2382c09
+SHA1 (patch-libgrive_test_drive_ResourceTreeTest.cc) = a2e8e44f82996cbe506475c9c451e44eb04507b3

@@ -1,0 +1,15 @@
+$NetBSD: patch-libgrive_CMakeLists.txt,v 1.1.1.1 2015/06/16 16:15:37 abs Exp $
+
+currently unit tests are broken
+
+--- libgrive/CMakeLists.txt.orig	2015-06-16 13:59:21.000000000 +0000
++++ libgrive/CMakeLists.txt
+@@ -111,7 +111,7 @@ endif()
+ #install(FILES ${UTIL_HEADERS} DESTINATION include/grive/util)
+ #install(FILES ${XML_HEADERS} DESTINATION include/grive/xml)
+ 
+-IF ( CPPUNIT_FOUND )
++IF ( 0 ) # ( CPPUNIT_FOUND ) -- currently unit tests broken
+ 	message("-- Building unitary tests along with the library and the binary")
+ 	set( OPT_INCS		${CPPUNIT_INCLUDE_DIR} )
+     
