@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/03/27 01:21:16 prlw1 Exp $
+$NetBSD: distinfo,v 1.3 2015/06/17 19:13:57 prlw1 Exp $
 
-SHA1 (hitori-3.14.3.tar.xz) = 11c9f7229abd6a71c12b9dd179d2cbe7120cd4f3
-RMD160 (hitori-3.14.3.tar.xz) = 6c71c22928426ec0234da21a87b6f8605d59ce5a
-Size (hitori-3.14.3.tar.xz) = 491360 bytes
+SHA1 (hitori-3.16.1.tar.xz) = 49ef8d21cb7aa5cc2725403bf4194a37c1b2e347
+RMD160 (hitori-3.16.1.tar.xz) = e24b6c96d70571be19a49fa04e5c552bb93987bb
+Size (hitori-3.16.1.tar.xz) = 494796 bytes
