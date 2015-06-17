@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2727 2015/06/16 16:16:37 abs Exp $
+$NetBSD: CHANGES-2015,v 1.2728 2015/06/17 10:21:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/dvipng to 1.15 [markd 2015-06-15]
 	Updated devel/py-at-spi2 to 2.16.0 [prlw1 2015-06-15]
 	Added net/grive2 version 0.4.0.20150531 [abs 2015-06-16]
+	Updated print/hplip to 3.15.6nb1 [wiz 2015-06-17]
