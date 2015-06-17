@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/29 14:16:47 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/17 19:10:01 prlw1 Exp $
 bin/gnome-sudoku
 man/man6/gnome-sudoku.6
 share/appdata/gnome-sudoku.appdata.xml
@@ -645,6 +645,7 @@ share/icons/hicolor/22x22/apps/gnome-sudoku.png
 share/icons/hicolor/24x24/apps/gnome-sudoku.png
 share/icons/hicolor/32x32/apps/gnome-sudoku.png
 share/icons/hicolor/48x48/apps/gnome-sudoku.png
+share/icons/hicolor/scalable/apps/gnome-sudoku-symbolic.svg
 share/icons/hicolor/scalable/apps/gnome-sudoku.svg
 share/locale/af/LC_MESSAGES/gnome-sudoku.mo
 share/locale/am/LC_MESSAGES/gnome-sudoku.mo
@@ -657,6 +658,7 @@ share/locale/bg/LC_MESSAGES/gnome-sudoku.mo
 share/locale/bn/LC_MESSAGES/gnome-sudoku.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-sudoku.mo
 share/locale/br/LC_MESSAGES/gnome-sudoku.mo
+share/locale/bs/LC_MESSAGES/gnome-sudoku.mo
 share/locale/ca/LC_MESSAGES/gnome-sudoku.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-sudoku.mo
 share/locale/cs/LC_MESSAGES/gnome-sudoku.mo
