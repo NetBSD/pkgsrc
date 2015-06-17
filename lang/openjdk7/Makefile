@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/06/13 14:55:52 tnn Exp $
+# $NetBSD: Makefile,v 1.102 2015/06/17 20:54:42 rodent Exp $
 
 DISTNAME=	openjdk-1.7.80-20150609
 PKGNAME=	openjdk7-1.7.80
@@ -232,7 +232,7 @@ do-install:
 	ln -s ${LOWER_OPSYS}/jni_md.h					\
 	  ${DESTDIR}${JAVA_HOME}/include/jni_md.h
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 TOOLS_PLATFORM.unzip=
 .endif
 
