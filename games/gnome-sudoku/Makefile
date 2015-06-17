@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 14:22:56 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/17 19:10:01 prlw1 Exp $
 
-DISTNAME=	gnome-sudoku-3.14.2
-PKGREVISION=	2
+DISTNAME=	gnome-sudoku-3.16.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sudoku/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,17 +18,18 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qqwing+=   qqwing>=1.2.0
+BUILDLINK_API_DEPENDS.qqwing+=	qqwing>=1.3.4
 .include "../../games/qqwing/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala:= build
-BUILDLINK_API_DEPENDS.vala+=    vala>=0.25.1
+BUILDLINK_API_DEPENDS.vala+=	vala>=0.27.1.30
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=   gtk3+>=3.13.4
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.15.0
 .include "../../x11/gtk3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
