@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/08 10:32:40 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/17 19:02:00 prlw1 Exp $
 bin/gnome-help
 bin/yelp
 include/libyelp/yelp-bookmarks.h
@@ -170,8 +170,6 @@ share/yelp/icons/hicolor/16x16/status/yelp-page-task.png
 share/yelp/icons/hicolor/16x16/status/yelp-page-tip.png
 share/yelp/icons/hicolor/16x16/status/yelp-page-ui.png
 share/yelp/icons/hicolor/16x16/status/yelp-page-video.png
-share/yelp/icons/hicolor/scalable/actions/yelp-bookmark-add-symbolic.svg
-share/yelp/icons/hicolor/scalable/actions/yelp-bookmark-remove-symbolic.svg
 share/yelp/icons/hicolor/scalable/status/yelp-page-problem-symbolic.svg
 share/yelp/icons/hicolor/scalable/status/yelp-page-search-symbolic.svg
 share/yelp/icons/hicolor/scalable/status/yelp-page-symbolic.svg
