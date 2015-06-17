@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/29 05:07:01 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2015/06/17 17:31:38 tron Exp $
 
 DISTNAME=	xdg-user-dirs-0.10
 PKGREVISION=	1
@@ -9,6 +8,7 @@ MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/xdg-user-dirs
 COMMENT=	Tool to manage "well known" user directories
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
