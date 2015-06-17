@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 14:22:56 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/17 19:13:57 prlw1 Exp $
 
-DISTNAME=	hitori-3.14.3
-PKGREVISION=	1
+DISTNAME=	hitori-3.16.1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hitori/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,5 +20,6 @@ BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.15.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
