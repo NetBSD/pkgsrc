@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2015/06/12 10:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/06/17 19:30:48 prlw1 Exp $
 
-DISTNAME=	gedit-3.14.3
-PKGREVISION=	2
+DISTNAME=	gedit-3.16.2
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 PY_PATCHPLIST=		yes
+PY_PEP3147=		no
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=	plugins/externaltools/data/send-to-fpaste.tool.in
 
@@ -40,9 +40,9 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.14.0
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.16
 .include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.14.3
+BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.16
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
