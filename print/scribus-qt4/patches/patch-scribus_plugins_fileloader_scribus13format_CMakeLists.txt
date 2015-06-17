@@ -1,0 +1,13 @@
+$NetBSD: patch-scribus_plugins_fileloader_scribus13format_CMakeLists.txt,v 1.1 2015/06/17 20:46:51 joerg Exp $
+
+--- scribus/plugins/fileloader/scribus13format/CMakeLists.txt.orig	2015-06-17 20:04:41.000000000 +0000
++++ scribus/plugins/fileloader/scribus13format/CMakeLists.txt
+@@ -13,6 +13,8 @@ scribus13format.cpp
+ scribus13formatimpl.cpp
+ )
+ 
++SET_SOURCE_FILES_PROPERTIES(scribus13format.cpp PROPERTIES COMPILE_FLAGS "${CLANG_NO_OPT}")
++
+ SET(SCRIBUS_SCR13FORMAT_FL_PLUGIN "scribus13format")
+ 
+ QT4_WRAP_CPP(SCR13FORMAT_FL_PLUGIN_MOC_SOURCES ${SCR13FORMAT_FL_PLUGIN_MOC_CLASSES})
