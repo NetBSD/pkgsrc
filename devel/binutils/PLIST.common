@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.24 2015/06/09 20:24:39 ryoon Exp $
+@comment $NetBSD: PLIST.common,v 1.25 2015/06/17 14:02:40 sborrill Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -69,8 +69,7 @@ include/ansidecl.h
 include/bfd.h
 include/bfdlink.h
 include/dis-asm.h
-${PLIST.gold}include/plugin-api.h
-${PLIST.SunOS}include/plugin-api.h
+include/plugin-api.h
 include/symcat.h
 info/as.info
 info/bfd.info
