@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/17 10:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/17 11:48:15 fhajny Exp $
 
 DISTNAME=	util-linux-2.26.2
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
@@ -27,7 +27,7 @@ USE_TOOLS+=		bash:build
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./libuuid/src/uuid.sym
+BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./libuuid/src/libuuid.sym
 .endif
 
 do-install:
