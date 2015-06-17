@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/06/12 10:50:59 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/06/17 20:46:51 joerg Exp $
 
 DISTNAME=		scribus-1.4.3
 PKGREVISION=		6
@@ -26,7 +26,7 @@ INSTALLATION_DIRS+=	share/pixmaps
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CMAKE_ARGS+=	-DCLANG_NO_OPT=-O0
+CMAKE_ARGS+=	-DCLANG_NO_OPT=${CLANG_NO_VALUE_PROPAGATION_PASS:Q}
 .endif
 
 post-install:
