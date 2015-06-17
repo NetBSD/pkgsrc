@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2733 2015/06/17 19:14:19 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.2734 2015/06/17 19:31:09 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5224,3 +5224,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/yelp3 to 3.16.1 [prlw1 2015-06-17]
 	Updated games/gnome-sudoku to 3.16.0 [prlw1 2015-06-17]
 	Updated games/hitori to 3.16.1 [prlw1 2015-06-17]
+	Updated editors/gedit3 to 3.16.2 [prlw1 2015-06-17]
