@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2015/06/07 14:06:00 youri Exp $
+# $NetBSD: Makefile.common,v 1.44 2015/06/17 03:12:02 dsainty Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.4.9
@@ -19,6 +19,9 @@ USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
 # GCC >= 4.8 (for std::this_thread::yield() at least) or Clang >= 3.3
 GCC_REQD+=	4.8
+
+# gmake 3.81 enters a 100% CPU spin.
+GMAKE_REQD+=	4.1
 
 PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
 
