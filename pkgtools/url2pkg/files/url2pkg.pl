@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.28 2015/04/07 00:10:33 rodent Exp $
+# $NetBSD: url2pkg.pl,v 1.29 2015/06/17 11:59:58 wiz Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -333,6 +333,8 @@ sub generate_initial_package($) {
 			} else {
 				die("$0: ERROR: Invalid GitHub URL: ${url}\n");
 			}
+		} else {
+			$gh_project = ""; $gh_release = ""; $dist_subdir = "";
 		}
 	}
 
