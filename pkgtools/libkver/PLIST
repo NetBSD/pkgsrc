@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2013/01/04 06:00:48 apb Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/06/17 08:20:21 sborrill Exp $
 lib/libkver.a
 lib/libkver.so
 lib/libkver.so.1
 lib/libkver.so.1.0
 sbin/kver
-man/cat8/kver.0
-man/man8/kver.8
 man/cat3/kver.0
 man/cat8/kver.0
 man/man3/kver.3
 man/man8/kver.8
-sbin/kver
 ${PLIST.sysctl}sbin/sysctl
