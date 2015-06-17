@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2014/12/07 08:45:59 obache Exp $
+# $NetBSD: options.mk,v 1.29 2015/06/17 06:48:22 khorben Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -21,6 +21,7 @@ PLIST.gnome=		yes
 GCONF_SCHEMAS+=		purple.schemas
 .else
 CONFIGURE_ARGS+=	--disable-schemas-install
+CONFIGURE_ENV+=		ac_cv_path_GCONFTOOL="no"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
