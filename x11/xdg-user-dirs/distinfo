@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/16 19:06:56 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/06/17 17:31:38 tron Exp $
 
 SHA1 (xdg-user-dirs-0.10.tar.gz) = 824ab2ccdbea30d4cdc29bbec3b80250297e363b
 RMD160 (xdg-user-dirs-0.10.tar.gz) = 6069cff49918dc0393bc86bde1a95268e8c6de51
@@ -6,3 +6,4 @@ Size (xdg-user-dirs-0.10.tar.gz) = 242835 bytes
 SHA1 (patch-aa) = 133a075c749ec27c46688c0ff9894d3689ea6d80
 SHA1 (patch-ab) = 2a699ce58d526684c53c0e989b95de588908e324
 SHA1 (patch-ac) = da06f94f98f6d9ad8fb219c0d6708868b9975821
+SHA1 (patch-xdg-user-dirs-update.c) = c08fe39ab65ba7704aefc9c1530ccebf11e06ad7
