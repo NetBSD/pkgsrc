@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/03/29 18:00:31 rodent Exp $
+# $NetBSD: options.mk,v 1.4 2015/06/18 12:49:37 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine
 
@@ -46,7 +46,7 @@ PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.sqlite3
 PLIST_SRC+=	PLIST.unicorn
 DISTFILES+=	kgio-2.9.3.gem \
 		raindrops-0.13.0.gem \
-		unicorn-4.8.3.gem
+		unicorn-4.9.0.gem
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
