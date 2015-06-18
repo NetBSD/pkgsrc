@@ -1,8 +1,9 @@
-# $NetBSD: builtin.mk,v 1.9 2014/07/21 09:12:03 obache Exp $
+# $NetBSD: builtin.mk,v 1.10 2015/06/18 21:48:52 jperkin Exp $
 
 BUILTIN_PKG:=	fixesproto
 PKGCONFIG_FILE.fixesproto=	${X11BASE}/lib/pkgconfig/fixesproto.pc
 PKGCONFIG_FILE.fixesproto+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/fixesproto.pc
+PKGCONFIG_FILE.fixesproto+=	${X11BASE}/share/pkgconfig/fixesproto.pc
 
 .include "../../mk/buildlink3/pkgconfig-builtin.mk"
 .include "../../mk/x11.builtin.mk"
