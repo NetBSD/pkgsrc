@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:51:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/18 13:01:44 pettai Exp $
 
 DISTNAME=	sleuthkit-4.1.3
 PKGREVISION=	3
@@ -9,6 +9,8 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.sleuthkit.org/
 COMMENT=	The Sleuth Kit (TSK) opensource forensic toolkit
 LICENSE=	cpl-1.0 AND gnu-gpl-v2
+
+DEPENDS+=	p5-DateTime-TimeZone>=0:../../time/p5-DateTime-TimeZone
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
