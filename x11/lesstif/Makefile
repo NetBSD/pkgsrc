@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2013/06/04 22:17:27 tron Exp $
+# $NetBSD: Makefile,v 1.103 2015/06/18 06:02:42 dholland Exp $
 
 DISTNAME=	lesstif-0.95.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -65,7 +65,7 @@ post-patch:
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
