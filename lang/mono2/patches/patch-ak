@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2013/06/17 12:43:28 wiz Exp $
---- libgc/pthread_support.c.orig	2011-01-04 19:39:55.000000000 +0200
-+++ libgc/pthread_support.c	2011-03-17 16:14:10.000000000 +0200
+$NetBSD: patch-ak,v 1.2 2015/06/18 19:00:26 joerg Exp $
+--- libgc/pthread_support.c.orig	2012-01-30 18:01:22.000000000 +0000
++++ libgc/pthread_support.c
 @@ -68,8 +68,8 @@
  
  # if (defined(GC_DGUX386_THREADS) || defined(GC_OSF1_THREADS) || \
@@ -12,7 +12,28 @@ $NetBSD: patch-ak,v 1.1 2013/06/17 12:43:28 wiz Exp $
  #   define USE_PTHREAD_SPECIFIC
  # endif
  
-@@ -1175,6 +1175,22 @@
+@@ -592,6 +592,20 @@ static void start_mark_threads()
+ 	}
+       }
+ #   endif /* HPUX || GC_DGUX386_THREADS */
++#   if defined(__NetBSD__)
++#     define MAX_STACK_SIZE (1024 * 1024 *sizeof(word))
++      {
++	size_t old_size;
++	int code;
++
++        if (pthread_attr_getstacksize(&attr, &old_size) != 0)
++	  ABORT("pthread_attr_getstacksize failed\n");
++	if (old_size > MAX_STACK_SIZE) {
++	  if (pthread_attr_setstacksize(&attr, MAX_STACK_SIZE) != 0)
++		  ABORT("pthread_attr_setstacksize failed\n");
++	}
++      }
++#   endif
+ #   ifdef CONDPRINT
+       if (GC_print_stats) {
+ 	GC_printf1("Starting %ld marker threads\n", GC_markers - 1);
+@@ -1238,6 +1252,22 @@ void GC_end_blocking(void) {
  #define __d10_sleep sleep
  #endif /* GC_DGUX386_THREADS */
  
