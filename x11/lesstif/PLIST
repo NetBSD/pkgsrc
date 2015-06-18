@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:24:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/06/18 06:02:42 dholland Exp $
 bin/motif-config
 bin/mwm
 bin/mxmkmf
 bin/uil
 bin/xmbind
-include/Dt/Print.h
 include/Mrm/MrmAppl.h
 include/Mrm/MrmDecls.h
 include/Mrm/MrmPrivate.h
@@ -182,7 +181,6 @@ lib/X11/config/LessTif.tmpl
 lib/X11/mwm/README
 lib/X11/mwm/alt.map
 lib/X11/mwm/system.mwmrc
-lib/libDtPrint.la
 lib/libMrm.la
 lib/libUil.la
 lib/libXm.la
