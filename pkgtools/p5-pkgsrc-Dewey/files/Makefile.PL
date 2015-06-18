@@ -5,4 +5,5 @@ WriteMakefile(
     VERSION_FROM      => 'Dewey.pm', # finds $VERSION
     INC               => '-I.',
     OBJECT            => '$(O_FILES)', # link all the C files too
+    LIBS              => "$ENV{LDFLAGS} $ENV{LIBS}", # for -lnbcompat
 );
