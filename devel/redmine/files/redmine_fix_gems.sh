@@ -7,7 +7,7 @@ export GEM_HOME GEM_PATH
 
 cd @PREFIX@/share/redmine/app
 
-@GEM@ install nokogiri --version 1.6.6.2 -- --use-system-libraries --with-xml2-config=/usr/pkg/bin/xml2-config --with-xslt-config=/usr/pkg/bin/xslt-config
+@GEM@ install nokogiri --version 1.6.6.2 -- --use-system-libraries --with-xml2-config=@PREFIX@/bin/xml2-config --with-xslt-config=@PREFIX@/bin/xslt-config
 @GEM@ pristine json --version 1.8.2
 @GEM@ pristine kgio --version 2.9.3
 @GEM@ pristine mysql2 --version 0.3.18
