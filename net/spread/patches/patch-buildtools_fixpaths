@@ -1,0 +1,22 @@
+$NetBSD: patch-buildtools_fixpaths,v 1.1 2015/06/18 19:01:01 joerg Exp $
+
+--- buildtools/fixpaths.orig	2015-06-18 13:43:07.000000000 +0000
++++ buildtools/fixpaths
+@@ -5,7 +5,7 @@
+ 
+ $usage = "Usage: $0 [-Dstring=replacement] [[infile] ...]\n";
+ 
+-if (!defined(@ARGV)) { die ("$usage"); }
++if (!(@ARGV)) { die ("$usage"); }
+ 
+ # read in the command line and get some definitions
+ while ($_=$ARGV[0], /^-/) {
+@@ -23,7 +23,7 @@ while ($_=$ARGV[0], /^-/) {
+   }
+ } # while parsing arguments
+ 
+-if (!defined(%def)) {
++if (!(%def)) {
+   die ("$0: nothing to do - no substitutions listed!\n");
+ }
+ 
