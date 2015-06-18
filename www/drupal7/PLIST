@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/11/23 16:40:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/06/18 11:44:04 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -570,6 +570,8 @@ share/drupal/modules/search/tests/search_embedded_form.info
 share/drupal/modules/search/tests/search_embedded_form.module
 share/drupal/modules/search/tests/search_extra_type.info
 share/drupal/modules/search/tests/search_extra_type.module
+share/drupal/modules/search/tests/search_node_tags.info
+share/drupal/modules/search/tests/search_node_tags.module
 share/drupal/modules/shortcut/shortcut-rtl.css
 share/drupal/modules/shortcut/shortcut.admin.css
 share/drupal/modules/shortcut/shortcut.admin.inc
@@ -601,6 +603,7 @@ share/drupal/modules/simpletest/files/html-1.txt
 share/drupal/modules/simpletest/files/html-2.html
 share/drupal/modules/simpletest/files/image-1.png
 share/drupal/modules/simpletest/files/image-2.jpg
+share/drupal/modules/simpletest/files/image-test-transparent-out-of-range.gif
 share/drupal/modules/simpletest/files/image-test.gif
 share/drupal/modules/simpletest/files/image-test.jpg
 share/drupal/modules/simpletest/files/image-test.png
@@ -619,6 +622,7 @@ share/drupal/modules/simpletest/simpletest.js
 share/drupal/modules/simpletest/simpletest.module
 share/drupal/modules/simpletest/simpletest.pages.inc
 share/drupal/modules/simpletest/simpletest.test
+share/drupal/modules/simpletest/src/Tests/PSR4WebTest.php
 share/drupal/modules/simpletest/tests/actions.test
 share/drupal/modules/simpletest/tests/actions_loop_test.info
 share/drupal/modules/simpletest/tests/actions_loop_test.install
@@ -646,6 +650,10 @@ share/drupal/modules/simpletest/tests/database_test.info
 share/drupal/modules/simpletest/tests/database_test.install
 share/drupal/modules/simpletest/tests/database_test.module
 share/drupal/modules/simpletest/tests/database_test.test
+share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.info
+share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.module
+share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test_class.inc
+share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test_interface.inc
 share/drupal/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info
 share/drupal/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.module
 share/drupal/modules/simpletest/tests/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info
@@ -699,6 +707,10 @@ share/drupal/modules/simpletest/tests/psr_0_test/lib/Drupal/psr_0_test/Tests/Exa
 share/drupal/modules/simpletest/tests/psr_0_test/lib/Drupal/psr_0_test/Tests/Nested/NestedExampleTest.php
 share/drupal/modules/simpletest/tests/psr_0_test/psr_0_test.info
 share/drupal/modules/simpletest/tests/psr_0_test/psr_0_test.module
+share/drupal/modules/simpletest/tests/psr_4_test/psr_4_test.info
+share/drupal/modules/simpletest/tests/psr_4_test/psr_4_test.module
+share/drupal/modules/simpletest/tests/psr_4_test/src/Tests/ExampleTest.php
+share/drupal/modules/simpletest/tests/psr_4_test/src/Tests/Nested/NestedExampleTest.php
 share/drupal/modules/simpletest/tests/registry.test
 share/drupal/modules/simpletest/tests/requirements1_test.info
 share/drupal/modules/simpletest/tests/requirements1_test.install
