@@ -1,14 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2015/04/26 14:50:28 rodent Exp $
+$NetBSD: MESSAGE,v 1.5 2015/06/18 12:49:37 rodent Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
 
-1. If you want to use with MySQL server (by default),
-   install databases/mysql55-* and enable it, then create database.
+0. Fix some of the Redmine gems (this step will be removed eventually):
+
+	# redmine_fix_gems.sh
+
+1. If you want to use with MySQL server (by default), install
+   databases/mysql5[1|5|6]-* and enable it. Then, create the database.
 
 2. Install nginx httpd server, www/nginx.
 
-3. Setup Redmine database.
+3. Setup Redmine database:
 
 	$ mysql -u root -p
 	> create database redmine character set utf8;
@@ -18,42 +22,40 @@ To use Redmine with nginx, you will need to perform the following steps.
 	> grant all privileges on redmine_development.* to 'redmine'@'localhost';
 
 4. Write authentication information to
-   ${PREFIX}/share/redmine/app/config/database.yml .
-	$ vi ${PREFIX}/share/redmine/app/config/database.yml .
+   ${PREFIX}/share/redmine/app/config/database.yml:
+	# vi ${PREFIX}/share/redmine/app/config/database.yml
 	production:
-		adapter: mysql2
-		database: redmine
-		host: localhost
-		username: redmine
-		password: "redmine_password"
-		encoding: utf8
+	  adapter: mysql2
+	  database: redmine
+	  host: localhost
+	  username: redmine
+	  password: "redmine_password"
+	  encoding: utf8
 	development:
-		adapter: mysql2
-		database: redmine_development
-		host: localhost
-		username: redmine
-		password: "redmine_password"
-		encoding: utf8
+	  adapter: mysql2
+	  database: redmine_development
+	  host: localhost
+	  username: redmine
+	  password: "redmine_password"
+	  encoding: utf8
 
 5. Create secret token and write to
-   ${PREFIX}/share/redmine/app/config/configuration.yml .
+     ${PREFIX}/share/redmine/app/config/configuration.yml and secrets.yml
 
-	# cd ${PREFIX}/share/redmine/app
-	# GEM_HOME=${PREFIX}/share/redmine/gems \
-	GEM_PATH=${PREFIX}/share/redmine/gems \
-	${PREFIX}/bin/rake22 secret
-
+	# redmine_generate_secret.sh
 	# vi config/configuration.yml
 	  [...]
 	  secret_token: YOUR_SECRET_KEY
 	  [...]
+	# vi config/secrets.yml
+	  [...]
+	  production:
+	    secret_key_base: 'YOUR_SECRET_KEY'
+	  [...]
 
-6. Import some data to Redmine database, and select your locale.
+6. Import some data to Redmine database, select your locale, and migrate the DB:
 
-	# cd ${PREFIX}/share/redmine/app
-	# GEM_HOME=${PREFIX}/share/redmine/gems \
-	GEM_PATH=${PREFIX}/share/redmine/gems \
-	${PREFIX}/bin/rake22 db:migrate
+	# redmine_migrate_db.sh
 
 6. Setup nginx.
 
