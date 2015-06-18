@@ -1,10 +1,10 @@
-$NetBSD: patch-examples_ldns-keygen.c,v 1.1 2014/11/21 09:19:32 he Exp $
+$NetBSD: patch-examples_ldns-keygen.c,v 1.2 2015/06/18 13:04:29 jperkin Exp $
 
 Get bugfix #573: ldns-keygen write private keys with mode 0600.
 From http://git.nlnetlabs.nl/ldns/commit/?h=develop&id=169f38c1e25750f935838b670871056428977e6b
 Fixes CVE-2014-3209.
 
---- examples/ldns-keygen.c.orig	2010-10-18 13:59:21.000000000 +0000
+--- examples/ldns-keygen.c.orig	2014-01-10 21:04:41.000000000 +0000
 +++ examples/ldns-keygen.c
 @@ -10,6 +10,9 @@
  
