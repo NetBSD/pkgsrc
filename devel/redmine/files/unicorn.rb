@@ -5,4 +5,4 @@ stdout_path "@PREFIX@/share/redmine/unicorn.log"
  
 worker_processes 3
 listen "@PREFIX@/share/redmine/unicorn.redmine.sock"
-timeout 30
+timeout 60
