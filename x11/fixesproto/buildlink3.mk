@@ -1,10 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.9 2014/07/18 05:25:42 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2015/06/18 21:48:52 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${X11_TYPE} != "modular" && \
 	!exists(${X11BASE}/lib/pkgconfig/fixesproto.pc) && \
-	!exists(${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/fixesproto.pc)
+	!exists(${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/fixesproto.pc) && \
+	!exists(${X11BASE}/share/pkgconfig/fixesproto.pc)
 .include "../../x11/fixesproto4/buildlink3.mk"
 .else
 
