@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2014/03/13 23:41:31 pettai Exp $
+$NetBSD: patch-configure,v 1.2 2015/06/18 13:01:44 pettai Exp $
+
+Portability fix
 
 --- configure.orig	2014-03-13 22:51:42.000000000 +0000
 +++ configure
