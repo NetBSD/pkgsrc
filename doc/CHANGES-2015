@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2737 2015/06/18 06:03:30 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.2738 2015/06/18 11:43:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql51-client to 5.1.72nb5 [dholland 2015-06-18]
 	Updated databases/mysql51-server to 5.1.72nb5 [dholland 2015-06-18]
 	Updated x11/lesstif to 0.95.2nb5 [dholland 2015-06-18]
+	Updated www/drupal6 to 6.36 [taca 2015-06-18]
