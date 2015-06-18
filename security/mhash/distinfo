@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2008/11/08 13:47:11 bjs Exp $
+$NetBSD: distinfo,v 1.11 2015/06/18 06:17:33 dholland Exp $
 
 SHA1 (mhash-0.9.9.tar.bz2) = cd72ea80a58bbcc4b1ef96268d03d508ab082529
 RMD160 (mhash-0.9.9.tar.bz2) = bd5ced522314ba559d4a04d33f07df8e6aec2887
@@ -9,3 +9,5 @@ Size (mhash-freebsd-patches-20081108.diff.gz) = 6376 bytes
 SHA1 (patch-aa) = dd0c768a7f710adeaf6350550e97f36dfa3344f3
 SHA1 (patch-ab) = 39d26134ebbc935a6bbbc0876fdc23bc52a8a29f
 SHA1 (patch-ac) = aea5b22ffd9cb13513f4262e401a8ac17f05cf7b
+SHA1 (patch-include_mutils_mutils.h) = f4480583fc5e45c79c27a697442676357327dcbf
+SHA1 (patch-lib_stdfns.c) = f98611e91ea92a9c088523e5a6fad89b12507ee5
