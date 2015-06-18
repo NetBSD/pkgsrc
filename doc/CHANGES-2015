@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2736 2015/06/18 04:30:28 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.2737 2015/06/18 06:03:30 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5228,3 +5228,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/eog3 to 3.16.2 [prlw1 2015-06-17]
 	Updated databases/mysql51-client to 5.1.72nb5 [dholland 2015-06-18]
 	Updated databases/mysql51-server to 5.1.72nb5 [dholland 2015-06-18]
+	Updated x11/lesstif to 0.95.2nb5 [dholland 2015-06-18]
