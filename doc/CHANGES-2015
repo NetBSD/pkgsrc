@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2741 2015/06/18 14:59:07 adam Exp $
+$NetBSD: CHANGES-2015,v 1.2742 2015/06/19 08:20:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5307,3 +5307,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql90-replicationtools to 9.0.22 [adam 2015-06-18]
 	Updated databases/postgresql90-server to 9.0.22 [adam 2015-06-18]
 	Updated databases/postgresql90-upgrade to 9.0.22 [adam 2015-06-18]
+	Updated print/cups to 2.0.3nb1 [wiz 2015-06-19]
