@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2015/06/12 10:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2015/06/19 07:29:37 tron Exp $
 
 DISTNAME=	wireshark-1.10.14
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
 
-OWNER=		tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wireshark.org/
 COMMENT=	Network protocol analyzer
 LICENSE=	gnu-gpl-v2
