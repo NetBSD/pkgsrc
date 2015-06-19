@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/03/14 15:21:56 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2015/06/19 15:30:27 jperkin Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	2
@@ -17,7 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 # "Abort Traps" indefinitely in pbulk
-NOT_FOR_PLATFORM+=	DragonFly-*-* NetBSD-*-x86_64
+NOT_FOR_PLATFORM+=	DragonFly-*-* Linux-*-* NetBSD-*-x86_64
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_PLATFORMS+=	solaris-sparc
