@@ -1,0 +1,18 @@
+$NetBSD: patch-libiberty_Makefile.in,v 1.1 2015/06/19 00:44:46 dsainty Exp $
+
+The ${PREFIX}/include/ansidecl.h installed by devel/binutils is not
+necessarily compatible (E.g. binutils-2.25 does not define PARAMS).  Adjust
+the include path priority so the internal ansidecl.h gets precedence, allowing
+cp-demangle.c to use libiberty.h without compilation errors.
+
+--- libiberty/Makefile.in	2013-01-02 15:04:42.000000000 +1300
++++ libiberty/Makefile.in	2015-06-18 17:22:12.145815941 +1200
+@@ -112,7 +112,7 @@
+ 
+ INCDIR=$(srcdir)/$(MULTISRCTOP)../include
+ 
+-COMPILE.c = $(CC) -c @DEFS@ $(CFLAGS) $(CPPFLAGS) -I. -I$(INCDIR) $(HDEFINES) @ac_libiberty_warn_cflags@
++COMPILE.c = $(CC) -c @DEFS@ -I. -I$(INCDIR) $(CFLAGS) $(CPPFLAGS) $(HDEFINES) @ac_libiberty_warn_cflags@
+ 
+ # Just to make sure we don't use a built-in rule with VPATH
+ .c.$(objext):
