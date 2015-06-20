@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14480 2015/06/20 08:21:50 wiz Exp $
+$NetBSD: TODO,v 1.14481 2015/06/20 08:22:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -323,6 +323,10 @@ Suggested new packages
 	Gitlab
 	https://gitlab.com/gitlab-org/gitlab-ce
 	Git repository management tool with code review and tracker/wiki
+
+	diaspora
+	https://diasporafoundation.org/
+	Distributed social networking
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
