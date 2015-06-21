@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14481 2015/06/20 08:22:50 wiz Exp $
+$NetBSD: TODO,v 1.14482 2015/06/21 10:05:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
 	o GNUMail-1.2.2
+	o ImageMagick-6.9.1.6
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o MesaLib-10.6.0
 	o OdfConverter-4.0
@@ -370,11 +371,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TeXmacs-1.0.7.21
 	o TiffIO-130e
 	o YoSucker-81
+	o abcde-2.7
 	o abcm2ps-7.8.13
 	o abcmidi-20150316
 	o abiword-3.0
 	o adocman-0.13
 	o aewm++-1.0.27
+	o afl-1.83b
 	o alacarte-0.13.2
 	o allegro-5.10
 	o alsa-lib-1.0.29
@@ -395,7 +398,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-mp3-0.40
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
+	o ap2-perl-2.0.9
 	o ap2-transform-0.6.0
+	o apache-ant-1.9.5
 	o apache-ivy-2.4.0
 	o apollo-1.7
 	o apr0-2.4.1
@@ -436,6 +441,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.31.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -469,6 +475,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
+	o curl-7.43.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.6
 	o cxref-1.6e
@@ -539,6 +546,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o festival-2.4
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
+	o ffmpeg2-2.7.1
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o filerunner-14.06.18.10
@@ -589,6 +597,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-7.8.3
 	o ghc7-7.10.1
 	o gimp-docs-2.8.2
+	o git-base-2.4.4
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -674,8 +683,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o handbrake-0.10.0
 	o hanzim-3.5
 	o haproxy-1.5.12
+	o harfbuzz-0.9.41
 	o haskell-mode-1.45
 	o hdf-4.2.8
+	o help2man-1.47.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.5
@@ -816,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
+	o mpfr-3.1.3
 	o mpg123-1.23.0
 	o mpop-1.0.29
 	o mserv-devel-0.41
@@ -844,9 +856,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nspluginwrapper-1.4.4 [pkg/47208]
+	o nss-3.19.2
 	o ntop-5.0
 	o nut-20.1
 	o nxtvepg-2.8.1
+	o ocaml-4.02.2
 	o ocamlgraph-1.8.6
 	o ocrad-0.25
 	o octave-4.0.0
@@ -927,6 +941,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.14
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
+	o py-cython-0.22.1
 	o py-datapkg-0.9
 	o py-django-1.8 [incompatible with django-cms, please hold]
 	o py-django-cms-3.1
@@ -946,6 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
 	o py-psutil-2.2.0
+	o py-psycopg2-2.6.1
 	o py-ptt-1.10.2
 	o py-reportlab-3.0
 	o py-rope-0.9.4
@@ -956,6 +972,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-vdirsyncer-0.5.2
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
@@ -1063,6 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o systrace-1.6e
 	o t-prot-2.101
 	o tads-3.0.16
+	o tahoe-lafs-1.10.1
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl85-8.5.16
@@ -1138,7 +1156,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o windowlab-1.40
 	o wine-devel-1.7.45
-	o wireshark-1.12.5
+	o wireshark-1.12.6
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmweather-2.4.4
