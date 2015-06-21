@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/04/30 03:27:20 taca Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/21 15:10:17 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -31,6 +31,11 @@ CONFIGURE_ENV+=		INSTALL="${INSTALL} ${COPY}" \
 			INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
 
 .include "../../mk/compiler.mk"
+
+# /usr/bin/dtrace is not DTrace.
+.if ${OPSYS} == "Linux" && exists(/usr/bin/dtrace)
+CONFIGURE_ARGS+=	--disable-dtrace
+.endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 LIBS.SunOS+=	-B static -lsunmath -B dynamic -lm
