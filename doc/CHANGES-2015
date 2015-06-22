@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2746 2015/06/22 14:00:39 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2747 2015/06/22 16:03:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5321,3 +5321,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-rack14 to 1.4.7 [taca 2015-06-22]
 	Updated www/ruby-rack15 to 1.5.5 [taca 2015-06-22]
 	Updated www/ruby-rack to 1.6.4 [taca 2015-06-22]
+	Updated www/php-owncloud to 8.0.4 [ryoon 2015-06-22]
