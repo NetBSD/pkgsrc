@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2015/06/12 10:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2015/06/22 13:21:59 jperkin Exp $
 
 DISTNAME=		R-3.2.0
 PKGREVISION=		2
@@ -131,7 +131,7 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
-SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool-fortran,${PKG_LIBTOOL},g"
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
 BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
