@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/06/11 16:59:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/06/22 13:59:29 taca Exp $
 bin/rackup16${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -94,6 +94,7 @@ ${GEM_LIBDIR}/test/cgi/assets/index.html
 ${GEM_LIBDIR}/test/cgi/assets/javascripts/app.js
 ${GEM_LIBDIR}/test/cgi/assets/stylesheets/app.css
 ${GEM_LIBDIR}/test/cgi/lighttpd.conf
+${GEM_LIBDIR}/test/cgi/lighttpd.errors
 ${GEM_LIBDIR}/test/cgi/rackup_stub.rb
 ${GEM_LIBDIR}/test/cgi/sample_rackup.ru
 ${GEM_LIBDIR}/test/cgi/test
@@ -123,6 +124,7 @@ ${GEM_LIBDIR}/test/multipart/nested
 ${GEM_LIBDIR}/test/multipart/none
 ${GEM_LIBDIR}/test/multipart/semicolon
 ${GEM_LIBDIR}/test/multipart/text
+${GEM_LIBDIR}/test/multipart/three_files_three_fields
 ${GEM_LIBDIR}/test/multipart/webkit
 ${GEM_LIBDIR}/test/rackup/config.ru
 ${GEM_LIBDIR}/test/registering_handler/rack/handler/registering_myself.rb
