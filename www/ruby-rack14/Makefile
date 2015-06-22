@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/03/14 08:00:40 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/22 13:57:59 taca Exp $
 
-DISTNAME=	rack-1.4.5
+DISTNAME=	rack-1.4.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rack/rack14/}
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
