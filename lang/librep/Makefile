@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/03/15 19:56:54 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2015/06/22 16:22:21 jperkin Exp $
 #
 
 DISTNAME=		librep-0.92.3
@@ -32,6 +32,11 @@ REPLACE_INTERPRETER+=	rep
 REPLACE.rep.old=	.*/bin/rep
 REPLACE.rep.new=	${PREFIX}/bin/rep
 REPLACE_FILES.rep=	src/rep-xgettext.jl
+
+SUBST_CLASSES+=		fixwrap
+SUBST_STAGE.fixwrap=	post-build
+SUBST_FILES.fixwrap=	libtool
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
