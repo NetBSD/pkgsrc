@@ -1,4 +1,4 @@
-# $NetBSD: dri.mk,v 1.10 2015/06/19 16:27:40 jperkin Exp $
+# $NetBSD: dri.mk,v 1.11 2015/06/22 22:45:06 jperkin Exp $
 #
 # Currently, this is for convenience only.
 #
@@ -27,10 +27,12 @@ BUILDLINK_API_DEPENDS.libdrm+=		libdrm>=2.4.24
 .  include "../../x11/xf86vidmodeproto/buildlink3.mk"
 # Linux supports dri3
 .  if ${OPSYS} == "Linux"
+.    if !empty(USE_BUILTIN.MesaLib:M[Nn][Oo])
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.56
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.9.3
-.  include "../../x11/dri3proto/buildlink3.mk"
-.  include "../../x11/presentproto/buildlink3.mk"
-.  include "../../x11/libxshmfence/buildlink3.mk"
+.    endif
+.    include "../../x11/dri3proto/buildlink3.mk"
+.    include "../../x11/presentproto/buildlink3.mk"
+.    include "../../x11/libxshmfence/buildlink3.mk"
 .  endif
 .endif
