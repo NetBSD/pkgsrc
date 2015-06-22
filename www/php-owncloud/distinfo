@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2015/05/31 00:16:33 ryoon Exp $
+$NetBSD: distinfo,v 1.33 2015/06/22 16:03:20 ryoon Exp $
 
 SHA1 (168707-calendar.zip) = 521fb58ad898529f9a10d94c165bc978010defd3
 RMD160 (168707-calendar.zip) = fdb7c3cddc0cd9e0338328d5cf246bd774f28803
@@ -6,6 +6,6 @@ Size (168707-calendar.zip) = 905909 bytes
 SHA1 (168708-contacts.zip) = abbb3ae9f966a80ec3dc7590c0906ad10b7e340e
 RMD160 (168708-contacts.zip) = 4d351166cfca85957d72fcbdcc454b21b0965ce7
 Size (168708-contacts.zip) = 1442129 bytes
-SHA1 (owncloud-8.0.3.tar.bz2) = 2146490723665e726df5444f6755a7f688823b19
-RMD160 (owncloud-8.0.3.tar.bz2) = fc117688c4e52ed986aad1b74b88936b27540d48
-Size (owncloud-8.0.3.tar.bz2) = 20403786 bytes
+SHA1 (owncloud-8.0.4.tar.bz2) = d4bc4fb6fc776c15175ebd68851421a71a24ba02
+RMD160 (owncloud-8.0.4.tar.bz2) = 4050f64ef1e248540e9cae5cf0a182ca70ba3a8e
+Size (owncloud-8.0.4.tar.bz2) = 24518670 bytes
