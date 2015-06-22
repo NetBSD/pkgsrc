@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.66 2015/06/22 16:50:38 jperkin Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -55,6 +55,11 @@ SUBST_FILES.egdir+=	src/gnome2-console/Makefile.in
 SUBST_FILES.egdir+=	src/wx-console/Makefile.in
 SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
 SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
+
+SUBST_CLASSES+=		fixwrap
+SUBST_STAGE.fixwrap=	post-build
+SUBST_FILES.fixwrap=	scripts/bacula_config
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/g++,${CXXPATH},g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
