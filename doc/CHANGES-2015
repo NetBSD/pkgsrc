@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2745 2015/06/22 13:56:46 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2746 2015/06/22 14:00:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5318,3 +5318,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/ruby-actionmailer32 to 3.2.22 [taca 2015-06-22]
 	Updated devel/ruby-railties32 to 3.2.22 [taca 2015-06-22]
 	Updated www/ruby-rails32 to 3.2.22 [taca 2015-06-22]
+	Updated www/ruby-rack14 to 1.4.7 [taca 2015-06-22]
+	Updated www/ruby-rack15 to 1.5.5 [taca 2015-06-22]
+	Updated www/ruby-rack to 1.6.4 [taca 2015-06-22]
