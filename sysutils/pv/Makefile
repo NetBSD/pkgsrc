@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/05/12 15:45:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2015/06/22 22:29:53 jperkin Exp $
 #
 
 DISTNAME=		pv-1.6.0
@@ -19,6 +19,9 @@ REPLACE_LOCALEDIR_PATTERNS+=	vars.mk
 
 DOCDIR=			${PREFIX}/share/doc/pv
 INSTALLATION_DIRS=	${DOCDIR}
+
+# configure test only checks for open64()
+CFLAGS.SunOS+=		-DENABLE_LARGEFILE=1
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
