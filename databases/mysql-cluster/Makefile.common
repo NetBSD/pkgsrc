@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/06/08 16:27:35 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/06/22 15:16:24 jperkin Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Cluster-7.4/}
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/products/cluster/
 LICENSE=	gnu-gpl-v2
-
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
@@ -117,6 +116,13 @@ SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	scripts/mysql_install_db.pl.in
 SUBST_VARS.vars=	PKG_SYSCONFDIR
+
+SUBST_CLASSES+=		fixpaths
+SUBST_STAGE.fixpaths=	post-install
+SUBST_FILES.fixpaths=	${DESTDIR}${PREFIX}/bin/mysqlbug
+SUBST_FILES.fixpaths+=	${DESTDIR}${PREFIX}/share/doc/mysql/INFO_BIN
+SUBST_SED.fixpaths=	-e "s,${WRAPPER_BINDIR}/gcc,${CCPATH},g"
+SUBST_SED.fixpaths+=	-e "s,${WRAPPER_BINDIR}/g++,${CXXPATH},g"
 
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
 SOEXT="dylib"
