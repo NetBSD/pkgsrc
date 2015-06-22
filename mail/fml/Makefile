@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/22 16:16:50 jperkin Exp $
 #
 
 DISTNAME=	fml-7.98.18-${FML_STAMP}
@@ -60,6 +60,11 @@ PRINT_PLIST_AWK+=	/${FML_STAMP}/ \
 
 CHECK_INTERPRETER_SKIP+= lib/fml/${FML_STAMP}/* \
 			libexec/fml/${FML_STAMP}/loader.in
+
+SUBST_CLASSES+=		fixpaths
+SUBST_STAGE.fixpaths=	post-build
+SUBST_FILES.fixpaths=	fml/etc/install.cf
+SUBST_SED.fixpaths=	-e 's,${WRAPPER_BINDIR}/cc,${CCPATH},g'
 
 pre-configure:
 	${ECHO} ${FML_STAMP} > ${WRKSRC}/.version
