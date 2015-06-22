@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.vtkdist,v 1.9 2007/05/18 07:50:11 obache Exp $
+# $NetBSD: Makefile.vtkdist,v 1.10 2015/06/22 18:51:02 jperkin Exp $
 
 .include "../../graphics/vtk/Makefile.common"
 
@@ -19,6 +19,11 @@ VTK_CMAKE_OPT+= -DCMAKE_INSTALL_PREFIX:STRING=${PREFIX:Q} \
 	-DCMAKE_BUILD_WITH_INSTALL_RPATH:BOOL=ON \
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON \
 	-DVTK_USE_HYBRID:BOOL=ON
+
+SUBST_CLASSES+=		fixwrap
+SUBST_STAGE.fixwrap=	post-build
+SUBST_FILES.fixwrap=	vtkConfigure.h
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/c++,${CXXPATH},g"
 
 do-configure:
 	cd ${WRKSRC} && cmake . ${VTK_CMAKE_OPT}
