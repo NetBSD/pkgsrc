@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2754 2015/06/23 15:05:11 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.2755 2015/06/23 17:47:19 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5331,3 +5331,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ruby22-base to 2.2.2nb2 [taca 2015-06-23]
 	Updated misc/rubygems to 2.4.8 [taca 2015-06-23]
 	Updated misc/tmux to 2.0nb1 [jperkin 2015-06-23]
+	Updated sysutils/xenkernel45 to 4.5.1 [bouyer 2015-06-23]
+	Updated sysutils/xentools45 to 4.5.1 [bouyer 2015-06-23]
