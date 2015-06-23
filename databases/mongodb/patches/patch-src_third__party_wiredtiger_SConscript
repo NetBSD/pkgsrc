@@ -1,8 +1,8 @@
-$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.1 2015/05/02 08:10:33 ryoon Exp $
+$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.2 2015/06/23 13:31:24 ryoon Exp $
 
 * Add NetBSD case.
 
---- src/third_party/wiredtiger/SConscript.orig	2015-04-08 20:28:08.000000000 +0000
+--- src/third_party/wiredtiger/SConscript.orig	2015-06-15 15:43:51.000000000 +0000
 +++ src/third_party/wiredtiger/SConscript
 @@ -2,7 +2,7 @@
  import re
@@ -10,10 +10,10 @@ $NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.1 2015/05/02 08:10:33 
  
 -Import("env windows darwin solaris linux freebsd openbsd debugBuild")
 +Import("env windows darwin solaris linux freebsd openbsd netbsd debugBuild")
+ Import("get_option")
  
  env = env.Clone()
- env.InjectThirdPartyIncludePaths(libraries=['snappy', 'zlib'])
-@@ -28,6 +28,8 @@ elif freebsd:
+@@ -32,6 +32,8 @@ elif freebsd:
      env.Append(CPPPATH=["build_freebsd"])
  elif openbsd:
      env.Append(CPPPATH=["build_openbsd"])
