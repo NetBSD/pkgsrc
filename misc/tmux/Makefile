@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2015/05/16 20:27:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2015/06/23 15:05:02 jperkin Exp $
 
 DISTNAME=	tmux-2.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
@@ -17,6 +18,11 @@ USE_TERMINFO=	yes
 .if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
     !empty(CC_VERSION:Mgcc-4.[6-9].*)
 BUILDLINK_TRANSFORM+=	opt:-D_XPG4_2:-D_XPG6
+.endif
+
+# https://trac.macports.org/changeset/127986
+.if !empty(MACHINE_PLATFORM:MDarwin-1[0-9]*)
+CPPFLAGS+=	-D__DARWIN_VERS_1050=0
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
