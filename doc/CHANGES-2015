@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2750 2015/06/23 13:29:01 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2751 2015/06/23 13:31:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5325,3 +5325,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/nodejs to 0.12.5 [fhajny 2015-06-23]
 	Updated devel/nss to 3.19.2 [ryoon 2015-06-23]
 	Updated net/owncloudclient to 1.8.1 [ryoon 2015-06-23]
+	Updated databases/mongodb to 3.0.4 [ryoon 2015-06-23]
