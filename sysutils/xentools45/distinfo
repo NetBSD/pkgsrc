@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2015/06/11 17:43:58 bouyer Exp $
+$NetBSD: distinfo,v 1.9 2015/06/23 17:45:33 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
 Size (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 2867999 bytes
-SHA1 (xen-4.5.0.tar.gz) = c4aab5fb366496ad1edc7fe0a935a0d604335637
-RMD160 (xen-4.5.0.tar.gz) = e35ba0cb484492c1a289218eb9bf53b57dbd3a45
-Size (xen-4.5.0.tar.gz) = 18404933 bytes
+SHA1 (xen-4.5.1.tar.gz) = f10328ce63625a5a7bfa3af5899c4432a467c051
+RMD160 (xen-4.5.1.tar.gz) = 4c449d799e041a52a94c00ee43a8c28fd4af1b96
+Size (xen-4.5.1.tar.gz) = 18410400 bytes
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 9e053e5e9936f49c46af0d59382a67d5f28cb39d
 SHA1 (patch-.._.._ipxe_src_interface_efi_efi_snp.c) = 7cd8a2d2dbeff55624b5d3461d22cd8331221762
 SHA1 (patch-.._.._ipxe_src_net_fcels.c) = 7c13c87af5e38233f8b867503789f536394e7005
@@ -15,12 +15,9 @@ SHA1 (patch-.._docs_man_xl.cfg.pod.5) = e2058495b6fe85af338e22560d46996d36aeedab
 SHA1 (patch-.._docs_man_xl.conf.pod.5) = 015da24a45388468d56f1ecfa60f6acf07bdfef8
 SHA1 (patch-.._docs_man_xl.pod.1) = b194f2c5608c6f0e80a4abd8655808cf91355cd5
 SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736a4663b2
-SHA1 (patch-CVE-2015-2152) = 5a1cabf330b3a1bd902adf2b33dd5c4c32b8ab9d
-SHA1 (patch-CVE-2015-2752) = 85bcb80dab938b85da3342e7001d95bacf7f49e5
-SHA1 (patch-CVE-2015-2756) = 350cfd57a77d90997b81c7186e320bb52fb62d75
-SHA1 (patch-CVE-2015-3456) = 268b4dcb47bdf760e146b81184022e46d8a9d2d7
 SHA1 (patch-Makefile) = 5d5b9678ed9764275ee95f49d24e8538a0e8a01c
 SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
+SHA1 (patch-XSA135) = c27b9c495d7348864e9939f54574e3afc37a816a
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
 SHA1 (patch-configure) = d1a1b9c9e00dd79bb872190282006201510ce2c1
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
@@ -35,7 +32,7 @@ SHA1 (patch-include_xen-sys_NetBSD_gntdev.h) = b1f60f46e606b7591d68d98655d1cb29d
 SHA1 (patch-libfsimage_common_Makefile) = 9c80a669805ba2e1f224985c71ca976fbe60e8b5
 SHA1 (patch-libfsimage_ufs_ufs.h) = ce1461ab83499edb4e127e3b7af9dfc1e9c0267f
 SHA1 (patch-libxc_xc__netbsd.c) = 547a713bbe9ddc92ee51b57a7b58a619f01225f1
-SHA1 (patch-libxl_Makefile) = 5b5dede29e5d9c579cdd7d6497f692ecf3a3c2cb
+SHA1 (patch-libxl_Makefile) = 16abc9e74855dacbeff40ad1010876dd80230977
 SHA1 (patch-libxl_libxl__create.c) = d4c94e9a389e9a7601513460f31c82e4f4bf28c9
 SHA1 (patch-libxl_libxl__save__helper.c) = 70e5237e28bea1aa87486e080fc25aa81300a6d8
 SHA1 (patch-libxl_libxl_uuid.c) = d14286be8ccdbcb5fae544a1968e7b681b63e884
