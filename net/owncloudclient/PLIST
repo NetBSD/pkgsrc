@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/25 20:12:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/23 13:28:35 ryoon Exp $
 bin/owncloud
 bin/owncloudcmd
 include/httpbf.h
@@ -18,7 +18,7 @@ lib/libowncloudsync.so.0
 lib/libowncloudsync.so.${PKGVERSION}
 lib/owncloud/libocsync.so
 lib/owncloud/libocsync.so.0
-lib/owncloud/libocsync.so.0.2.1
+lib/owncloud/libocsync.so.${PKGVERSION}
 share/applications/owncloud.desktop
 share/examples/owncloud/sync-exclude.lst
 share/icons/hicolor/128x128/apps/ownCloud_error.png
@@ -109,10 +109,10 @@ share/owncloud/i18n/client_pt_BR.qm
 share/owncloud/i18n/client_ru.qm
 share/owncloud/i18n/client_sk.qm
 share/owncloud/i18n/client_sl.qm
+share/owncloud/i18n/client_sr.qm
 share/owncloud/i18n/client_sv.qm
 share/owncloud/i18n/client_th.qm
 share/owncloud/i18n/client_tr.qm
 share/owncloud/i18n/client_uk.qm
 share/owncloud/i18n/client_zh_CN.qm
 share/owncloud/i18n/client_zh_TW.qm
-@pkgdir etc/ownCloud
