@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2751 2015/06/23 13:31:48 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2752 2015/06/23 14:05:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5326,3 +5326,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nss to 3.19.2 [ryoon 2015-06-23]
 	Updated net/owncloudclient to 1.8.1 [ryoon 2015-06-23]
 	Updated databases/mongodb to 3.0.4 [ryoon 2015-06-23]
+	Updated lang/ruby200-base to 2.0.0p645nb1 [taca 2015-06-23]
+	Updated lang/ruby21-base to 2.1.6nb2 [taca 2015-06-23]
+	Updated lang/ruby22-base to 2.2.2nb2 [taca 2015-06-23]
