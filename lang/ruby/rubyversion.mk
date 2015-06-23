@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.142 2015/05/16 11:21:00 ryoon Exp $
+# $NetBSD: rubyversion.mk,v 1.143 2015/06/23 14:07:36 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -247,7 +247,7 @@ RUBY21_API_VERSION=	2.1.0
 RUBY22_API_VERSION=	2.2.0
 
 # pkgsrc's rubygems's version
-RUBY_GEMS_PKGSRC_VERS=	2.4.6
+RUBY_GEMS_PKGSRC_VERS=	2.4.8
 
 # pkgsrc's rdoc's version
 RUBY_RDOC_PKGSRC_VERS=	4.2.0
