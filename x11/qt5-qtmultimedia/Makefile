@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/04/25 14:25:18 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2015/06/24 09:54:10 nros Exp $
 
 DISTNAME=	qtmultimedia-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Qt5 module for multimedia
 
 BUILD_TARGET=		sub-src
@@ -11,6 +11,10 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
 .include "../../x11/qt5-qtbase/Makefile.common"
+
+.if ${OPSYS} != "Darwin"
+MAKE_ENV+=		LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulseaudio
+.endif
 
 post-install:
 .for i in Qt5Multimedia.pc Qt5MultimediaQuick_p.pc Qt5MultimediaWidgets.pc
