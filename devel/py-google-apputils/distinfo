@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/24 17:59:19 khorben Exp $
+
+SHA1 (google-apputils-0.4.2.tar.gz) = 6f82069efd1a2cbc168dfb814d077df2fca4cff1
+RMD160 (google-apputils-0.4.2.tar.gz) = b661a451df07ac2f7c7a345e6a663d730957e28b
+Size (google-apputils-0.4.2.tar.gz) = 81095 bytes
