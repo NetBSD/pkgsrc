@@ -1,56 +1,58 @@
-# $NetBSD: Makefile,v 1.12 2014/06/10 14:21:37 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/24 19:56:28 ryoon Exp $
 #
 
-DISTNAME=	aipo${VERSION:S/.//g}0ja_linux32
-VERSION=	7.0.2
+DISTNAME=	aipo-${VERSION}-linux-x86
+VERSION=	8.0.1
 PKGNAME=	aipo-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://aipo.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=aipo/63319/}
+EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.aipo.com/
 COMMENT=	Web-based groupware that supports Japanese interface
 LICENSE=	gnu-agpl-v3
 
-DEPENDS=	jdbc-postgresql92-[0-9]*:../../databases/jdbc-postgresql92
-
 USE_JAVA=	run
 USE_JAVA2=	6
 
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}/aipo${VERSION:S/.//g}0ja_linux
 USE_LANGUAGES=	# none
 
-USE_TOOLS+=	gunzip pax tar
+USE_TOOLS+=	pax tar unzip
 
-AIPO_DIR=	share/aipo
-TOMCAT_DIR=	share/tomcat
-
-INSTALLATION_DIRS=	share/tomcat/lib ${AIPO_DIR}/webapps/aipo/WEB-INF
+INSTALLATION_DIRS=	share/aipo/ROOT share/aipo/container share/examples/aipo
 
 SUBST_CLASSES+=			username
 SUBST_STAGE.username=		pre-configure
 SUBST_MESSAGE.username=		Set default username and password
-SUBST_FILES.username=		aipo/src/webapps/aipo/WEB-INF/datasource/dbcp-org001.properties
-SUBST_FILES.username+=		aipo/src/webapps/ROOT/WEB-INF/datasource/dbcp-org001.properties
+SUBST_FILES.username=		dist/ROOT/WEB-INF/datasource/dbcp-org001.properties
 SUBST_SED.username=		-e 's,cayenne.dbcp.username=postgres,cayenne.dbcp.username=aipo_pgsql,'
 SUBST_SED.username+=		-e 's,cayenne.dbcp.password=aipo,cayenne.dbcp.password=aipo_db_password,'
 
+CONF_FILES+=	${PREFIX}/share/examples/aipo/securityTokenKey.txt \
+		${PREFIX}/share/aipo/ROOT/WEB-INF/conf/securityTokenKey.txt
+CONF_FILES+=	${PREFIX}/share/examples/aipo/dbcp-org001.properties \
+		${PREFIX}/share/aipo/ROOT/WEB-INF/datasource/dbcp-org001.properties
+ 
+
 post-extract:
-	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo${VERSION:S/.//g}0.tar.gz | ${TAR} -xpf -
+	cd ${WRKDIR} && ${TAR} -xpf aipo-${VERSION}-linux-x86
+	${UNZIP_CMD} -d ${WRKSRC}/dist/ROOT \
+		${WRKSRC}/dist/aipo.war
 
 do-install:
-	cd  ${WRKSRC}/aipo/src/webapps && \
-		pax -rw aipo ROOT ${DESTDIR}${PREFIX}/${AIPO_DIR}/webapps
-	cd  ${WRKSRC}/aipo/src/initdata && \
-		pax -rw psml files mail sql \
-			${DESTDIR}${PREFIX}/${AIPO_DIR}/webapps/aipo/WEB-INF
-	${INSTALL_DATA} ${PREFIX}/lib/java/postgresql92.jar \
-			${DESTDIR}${PREFIX}/${TOMCAT_DIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/aipo/src/tools.jar \
-			${DESTDIR}${PREFIX}/${TOMCAT_DIR}/lib
+	cd ${WRKSRC}/dist && pax -rw ROOT license sql \
+		${DESTDIR}${PREFIX}/share/aipo
+	${INSTALL_DATA} ${WRKSRC}/dist/postgresql-9.3-1103.jdbc41.jar \
+		${DESTDIR}${PREFIX}/share/aipo/ROOT/WEB-INF/lib
+	mv ${DESTDIR}${PREFIX}/share/aipo/ROOT/WEB-INF/datasource/dbcp-org001.properties \
+		${DESTDIR}${PREFIX}/share/examples/aipo
+	mv ${DESTDIR}${PREFIX}/share/aipo/ROOT/WEB-INF/conf/securityTokenKey.txt \
+		${DESTDIR}${PREFIX}/share/examples/aipo
+	find ${DESTDIR}${PREFIX}/share/aipo -type f -exec chmod 644 {} \;
+	find ${DESTDIR}${PREFIX}/share/examples/aipo -type f -exec chmod 644 {} \;
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
