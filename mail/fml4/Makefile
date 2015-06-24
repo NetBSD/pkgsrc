@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/24 19:49:56 joerg Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
@@ -59,6 +59,9 @@ do-install:
 		${DESTDIR}${PREFIX}/${FML_DIR}/examples
 	${FIND} ${DESTDIR}${PREFIX}/${FML_DIR} -xdev -type f \
 		\( -name '*.bak' -o -name '*.orig' \) -exec ${RM} -- {} \;
+	${INSTALL_SCRIPT} ${PKGSRCDIR}/mk/gnu-config/config.guess \
+	    ${DESTDIR}${PREFIX}/${FML_DIR}/sbin/config.guess
+
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
