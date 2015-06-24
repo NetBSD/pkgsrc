@@ -1,7 +1,8 @@
-$NetBSD: patch-ca,v 1.23 2015/06/11 13:44:23 adam Exp $
+$NetBSD: patch-ca,v 1.24 2015/06/24 11:43:42 he Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
+* Detect systems which have <fenv.h> but where using it fails.
 * Several other changes.
 
 --- Configure.orig	2015-05-13 20:19:28.000000000 +0000
@@ -184,3 +185,25 @@ $NetBSD: patch-ca,v 1.23 2015/06/11 13:44:23 adam Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
+@@ -22645,6 +22685,21 @@ eval $inhdr
+ set fenv.h i_fenv
+ eval $inhdr
+ 
++: And really validate that it is OK to include it
++: On NetBSD 6.x non-amd64 non-i386 and non-sparc this fails
++cat > try.c <<EOCP
++#include <fenv.h>
++int main() {
++	printf("runs ok too\n");
++	exit(0);
++}
++EOCP
++set try
++if ! eval $compile_ok; then
++	echo "<fenv.h> found to be unusable, disabling" >&4
++	i_fenv=$undef
++fi
++
+ : see if this is a fp.h system
+ set fp.h i_fp
+ eval $inhdr
