@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:50:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/24 18:07:45 bouyer Exp $
 #
 
 DISTNAME=	FusionInventory-Agent-2.2.7
@@ -33,6 +33,8 @@ DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+
+PERL5_PACKLIST= auto/FusionInventory/Agent/.packlist
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
