@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/03/16 14:07:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2015/06/24 07:17:21 jperkin Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -31,7 +31,7 @@ PLIST.log=		yes
 
 # Long double math functions are not available on Darwin. See
 # boost/math/tools/config.hpp:53
-.if ${OPSYS} != "Darwin" || !empty(MACHINE_PLATFORM:MDarwin-14.*)
+.if ${OPSYS} != "Darwin" || !empty(MACHINE_PLATFORM:MDarwin-1[34].*)
 PLIST.long_double_math=	yes
 .endif
 
