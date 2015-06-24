@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/06/12 10:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/06/24 18:05:57 bouyer Exp $
 
 DISTNAME=	smokeping-2.6.7
 PKGREVISION=	5
@@ -20,6 +20,8 @@ DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5>=2.20}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-HMAC>=1.03:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 DEPENDS+=	p5-FCGI>=0.74:../../www/p5-FCGI
+DEPENDS+=	p5-CGI>=4.20:../../www/p5-CGI
+DEPENDS+=	p5-CGI-Fast>=2.09:../../www/p5-CGI-Fast
 DEPENDS+=	p5-Config-Grammar>=1.10:../../devel/p5-Config-Grammar
 
 USE_TOOLS+=	pax gmake perl:run
