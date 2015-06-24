@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+$NetBSD: patch-ac,v 1.2 2015/06/24 19:49:56 joerg Exp $
 
 - use HOSTNAME as hostname when install.
 - Stop perl deprecated warnings.
@@ -454,6 +454,15 @@ $NetBSD: patch-ac,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
  	print STDERR $f, " " unless $SilentMode;
  	&Copy($template, $outfile);
  	chmod 0755, $outfile;
+@@ -6355,7 +6368,7 @@ sub main::Dumpvar 
+ 		$buf .= "\$$key = '$entry';\n";
+ 	    }
+ 
+-	    if (defined @entry) {
++	    if (@entry) {
+ 		$buf .= "\@$key = (\n";
+ 		foreach $num ($[ .. $#entry) {
+ 		    $buf .= "\t'$entry[$num]',\n";
 @@ -6364,12 +6377,12 @@ sub main::Dumpvar 
  	    }
  
