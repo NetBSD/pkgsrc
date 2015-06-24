@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2015/06/08 15:42:07 wiedi Exp $
+# $NetBSD: Makefile,v 1.77 2015/06/24 12:18:03 pettai Exp $
 
-DISTNAME=	nsd-4.1.2
-PKGREVISION=	1
+DISTNAME=	nsd-4.1.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
