@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/11/26 15:52:37 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/06/24 19:56:28 ryoon Exp $
 
-SHA1 (aipo7020ja_linux32.tar.gz) = 3e84d289eece668e98c5a52c7db8ceb844b19302
-RMD160 (aipo7020ja_linux32.tar.gz) = 5e4120a754076dd2f0719efed8ad77f1555627de
-Size (aipo7020ja_linux32.tar.gz) = 117031679 bytes
+SHA1 (aipo-8.0.1-linux-x86.gz) = 3bc893966ca20774e65390668d1a1ba51b3b8a19
+RMD160 (aipo-8.0.1-linux-x86.gz) = 003940e7755f37a340c396c512012db2d3614a26
+Size (aipo-8.0.1-linux-x86.gz) = 151188414 bytes
