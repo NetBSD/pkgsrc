@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2757 2015/06/24 19:57:20 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2758 2015/06/25 13:24:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5335,3 +5335,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xentools45 to 4.5.1 [bouyer 2015-06-23]
 	Added devel/py-google-apputils version 0.4.2 [khorben 2015-06-24]
 	Updated www/aipo to 8.0.1 [ryoon 2015-06-24]
+	Updated sysutils/ansible to 1.6.10nb1 [jperkin 2015-06-25]
