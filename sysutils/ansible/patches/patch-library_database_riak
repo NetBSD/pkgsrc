@@ -1,8 +1,8 @@
-$NetBSD: patch-library_database_riak,v 1.2 2014/06/15 00:15:08 rodent Exp $
+$NetBSD: patch-library_database_riak,v 1.3 2015/06/25 13:21:03 jperkin Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
---- library/database/riak.orig	2014-06-09 21:23:31.000000000 +0000
+--- library/database/riak.orig	2014-07-25 20:48:49.000000000 +0000
 +++ library/database/riak
 @@ -118,7 +118,7 @@ def main():
          argument_spec=dict(
