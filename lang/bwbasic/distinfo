@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/05/20 07:28:05 wen Exp $
+$NetBSD: distinfo,v 1.12 2015/06/25 07:52:13 dholland Exp $
 
 SHA1 (bwbasic-3.00.zip) = 89bb9e960bb91339752bb6d9796d93998d9ca3f6
 RMD160 (bwbasic-3.00.zip) = 3d78b2fc3c6a73856b92443c296d71cd5b39208e
 Size (bwbasic-3.00.zip) = 2777709 bytes
 SHA1 (patch-aa) = ca4a5d62dc7aebfcace1df368cdc6ffbaa2c60da
 SHA1 (patch-ac) = 1f8e3a3d6d75223abe2ceef63b5eb97a4b4cf4b4
+SHA1 (patch-renum.c) = 458affe1dd9742b54040b9721d2a8a7cfa82956b
