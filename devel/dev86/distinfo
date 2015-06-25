@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/12/21 00:43:38 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/06/25 07:27:32 dholland Exp $
 
 SHA1 (dev86-0.16.21.tar.gz) = 0f5b54a36fe24f90b4cc8b62517d00b32c04b34e
 RMD160 (dev86-0.16.21.tar.gz) = 592eec1f68b62b8a4717428f133e2a6106b12b81
 Size (dev86-0.16.21.tar.gz) = 711473 bytes
 SHA1 (patch-aa) = fb72158f52b13b12aed20e36b615e3ef0fde894e
-SHA1 (patch-unproto_tok__io.c) = 3f5a9ae5269ed44a22989e121400e367e2a514d0
+SHA1 (patch-unproto_tok__class.c) = e2862fc3222372d2abf17b691454de49aea70a15
+SHA1 (patch-unproto_tok__io.c) = 03756fa37f29362ace5fe0413640042420b1f9a5
