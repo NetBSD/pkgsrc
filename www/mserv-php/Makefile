@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/03/15 11:52:31 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/25 07:38:52 joerg Exp $
 #
 
 DISTNAME=	mserv-php-090
@@ -13,7 +13,6 @@ HOMEPAGE=	# 404: http://dougiamas.com/mserv/
 COMMENT=	Quick web interface to mserv audio jukebox
 
 DEPENDS+=       mserv-[0-9]*:../../audio/mserv
-DEPENDS+=	php>=${PHP_BASE_VERS}:${PHPPKGSRCDIR}
 
 WRKSRC=		${WRKDIR}/mserv-php
 
@@ -43,4 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README-0.90 ${DESTDIR}${DOCDIR}
 
 .include "../../lang/php/phpversion.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
