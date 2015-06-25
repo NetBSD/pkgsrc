@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/02/05 15:22:06 pettai Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/25 13:21:03 jperkin Exp $
 
 DISTNAME=	ansible-1.6.10
+PKGREVISION=	1
 #PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/

@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_ansible_constants.py,v 1.6 2015/02/05 15:22:06 pettai Exp $
+$NetBSD: patch-lib_ansible_constants.py,v 1.7 2015/06/25 13:21:03 jperkin Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
---- lib/ansible/constants.py.orig	2014-06-09 21:23:31.000000000 +0000
+--- lib/ansible/constants.py.orig	2014-07-25 20:48:49.000000000 +0000
 +++ lib/ansible/constants.py
-@@ -65,7 +65,7 @@ def load_config_file():
+@@ -67,7 +67,7 @@ def load_config_file():
          path0 = os.path.expanduser(path0)
      path1 = os.getcwd() + "/ansible.cfg"
      path2 = os.path.expanduser("~/.ansible.cfg")
@@ -13,7 +13,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
      for path in [path0, path1, path2, path3]:
          if path is not None and os.path.exists(path):
-@@ -90,7 +90,7 @@ if getattr(sys, "real_prefix", None):
+@@ -92,7 +92,7 @@ if getattr(sys, "real_prefix", None):
      # in a virtualenv
      DIST_MODULE_PATH = os.path.join(sys.prefix, 'share/ansible/')
  else:
@@ -22,7 +22,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  # check all of these extensions when looking for yaml files for things like
  # group variables -- really anything we can load
-@@ -100,7 +100,7 @@ YAML_FILENAME_EXTENSIONS = [ "", ".yml",
+@@ -102,7 +102,7 @@ YAML_FILENAME_EXTENSIONS = [ "", ".yml",
  DEFAULTS='defaults'
  
  # configurable things
