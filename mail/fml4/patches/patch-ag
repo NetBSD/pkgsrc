@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+$NetBSD: patch-ag,v 1.2 2015/06/25 07:36:56 joerg Exp $
 
 Stop perl deprecated warnings.
 
@@ -17,6 +17,15 @@ Stop perl deprecated warnings.
  		print STDERR "GO \%\t$key\n";
  	    }
  	    elsif (defined &entry) {
+@@ -703,7 +703,7 @@ sub main'reverse
+ 	    next;
+ 	}
+ 
+-	if (defined @entry) {
++	if (@entry) {
+ 	    undef $num;
+ 	    $OUT'LOCAL .=  "\@$key = (";
+ 	    foreach (@entry) {
 @@ -718,7 +718,7 @@ sub main'reverse
  	# Is there an associative array that isn't the one
  	# we're currently iterating through?
