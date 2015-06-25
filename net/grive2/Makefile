@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/06/16 16:15:37 abs Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/25 07:37:58 joerg Exp $
 
 DISTNAME=	${GHNAME}-${GHDATE}-${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.4.0.${GHDATE}
@@ -17,6 +17,7 @@ GHCOMMIT=	06eb1a7df2032144f99473fd812412514834a1ee
 
 WRKSRC=		${WRKDIR}/grive2-${GHCOMMIT}
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 SUBST_CLASSES+=		manpath
