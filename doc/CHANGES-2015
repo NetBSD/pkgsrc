@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2762 2015/06/26 16:14:04 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2763 2015/06/26 16:51:53 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5340,3 +5340,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/nginx to 1.8.0 [rodent 2015-06-26]
 	Updated converters/py-cairosvg to 1.0.15 [rodent 2015-06-26]
 	Updated databases/py-python-sql to 0.7 [rodent 2015-06-26]
+	Updated devel/py-astor to 0.5 [rodent 2015-06-26]
