@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/12 12:19:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/26 16:09:49 jperkin Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -128,7 +128,7 @@ include/smb_cliraw.h
 include/smb_common.h
 include/smb_composite.h
 include/smb_constants.h
-include/smb_ldap.h
+${PLIST.ldap}include/smb_ldap.h
 include/smb_raw.h
 include/smb_raw_interfaces.h
 include/smb_raw_signing.h
@@ -139,7 +139,7 @@ include/smb_signing.h
 include/smb_unix_ext.h
 include/smb_util.h
 include/smbconf.h
-include/smbldap.h
+${PLIST.ldap}include/smbldap.h
 include/tdr.h
 include/torture.h
 include/tsocket.h
@@ -225,8 +225,8 @@ lib/libsmbclient.so.0
 lib/libsmbclient.so.0.2.1
 lib/libsmbconf.so
 lib/libsmbconf.so.0
-lib/libsmbldap.so
-lib/libsmbldap.so.0
+${PLIST.ldap}lib/libsmbldap.so
+${PLIST.ldap}lib/libsmbldap.so.0
 lib/libtevent-util.so
 lib/libtevent-util.so.0
 lib/libtevent-util.so.0.0.1
@@ -607,10 +607,10 @@ ${PYSITELIB}/talloc.so
 ${PYSITELIB}/tdb.so
 ${PYSITELIB}/tevent.py
 lib/samba/auth/script.so
-lib/samba/idmap/ad.so
+${PLIST.ldap}lib/samba/idmap/ad.so
 lib/samba/idmap/autorid.so
 lib/samba/idmap/hash.so
-lib/samba/idmap/rfc2307.so
+${PLIST.ldap}lib/samba/idmap/rfc2307.so
 lib/samba/idmap/rid.so
 lib/samba/idmap/tdb2.so
 lib/samba/ldb/asq.so
@@ -624,9 +624,9 @@ lib/samba/ldb/server_sort.so
 lib/samba/ldb/skel.so
 lib/samba/ldb/tdb.so
 lib/samba/nss_info/hash.so
-lib/samba/nss_info/rfc2307.so
-lib/samba/nss_info/sfu.so
-lib/samba/nss_info/sfu20.so
+${PLIST.ldap}lib/samba/nss_info/rfc2307.so
+${PLIST.ldap}lib/samba/nss_info/sfu.so
+${PLIST.ldap}lib/samba/nss_info/sfu20.so
 lib/samba/private/libCHARSET3-samba4.so
 lib/samba/private/libLIBWBCLIENT-OLD-samba4.so
 lib/samba/private/libMESSAGING-samba4.so
@@ -703,7 +703,7 @@ lib/samba/private/libsmb-transport-samba4.so
 lib/samba/private/libsmbd-base-samba4.so
 lib/samba/private/libsmbd-conn-samba4.so
 lib/samba/private/libsmbd-shim-samba4.so
-lib/samba/private/libsmbldaphelper-samba4.so
+${PLIST.ldap}lib/samba/private/libsmbldaphelper-samba4.so
 lib/samba/private/libsmbpasswdparser-samba4.so
 lib/samba/private/libsmbregistry-samba4.so
 lib/samba/private/libsocket-blocking-samba4.so

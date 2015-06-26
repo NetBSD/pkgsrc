@@ -1,14 +1,18 @@
-# $NetBSD: options.mk,v 1.1 2015/05/12 12:19:52 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2015/06/26 16:09:49 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
-PKG_SUPPORTED_OPTIONS=	fam pam winbind # cups # cups option is broken for me.
-PKG_SUGGESTED_OPTIONS=	pam winbind
+PKG_SUPPORTED_OPTIONS=	ads fam ldap pam winbind # cups # cups option is broken for me.
+PKG_SUGGESTED_OPTIONS=	ldap pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux OSF1 SunOS
 .if !empty(SAMBA_ACL_OPSYS:M${OPSYS})
 PKG_SUPPORTED_OPTIONS+=	acl
+.endif
+
+.if empty(MACHINE_PLATFORM:MDarwin-1[1-9].*)
+PKG_SUGGESTED_OPTIONS+=	ads
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -20,6 +24,15 @@ PKG_SUPPORTED_OPTIONS+=	acl
 CONFIGURE_ARGS+=	--with-acl-support
 .else
 CONFIGURE_ARGS+=	--without-acl-support
+.endif
+
+###
+### Allow Samba to join as a member server of an Active Directory domain.
+###
+.if !empty(PKG_OPTIONS:Mads)
+CONFIGURE_ARGS+=	--with-ads
+.else
+CONFIGURE_ARGS+=	--without-ads
 .endif
 
 ###
@@ -45,6 +58,19 @@ CONFIGURE_ARGS+=	--with-fam
 PLIST.fam=		yes
 .else
 CONFIGURE_ARGS+=	--without-fam
+.endif
+
+###
+### Support LDAP authentication and storage of Samba account information.
+###
+PLIST_VARS+=		ldap
+# Active Directory requires ldap
+.if !empty(PKG_OPTIONS:Mldap) || !empty(PKG_OPTIONS:Mads)
+.  include "../../databases/openldap-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ldap
+PLIST.ldap=		yes
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 ###
