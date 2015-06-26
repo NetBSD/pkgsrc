@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/02/02 14:45:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/06/26 19:25:12 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -98,7 +98,8 @@ lib/httpd/mod_buffer.so
 lib/httpd/mod_cache.so
 lib/httpd/mod_cache_disk.so
 lib/httpd/mod_cache_socache.so
-lib/httpd/mod_cgid.so
+${PLIST.only-prefork}lib/httpd/mod_cgi.so
+${PLIST.not-only-prefork}lib/httpd/mod_cgid.so
 lib/httpd/mod_charset_lite.so
 lib/httpd/mod_data.so
 lib/httpd/mod_dav.so
