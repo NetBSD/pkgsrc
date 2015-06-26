@@ -1,11 +1,11 @@
-$NetBSD: patch-source4_scripting_wsript_build,v 1.1 2015/05/12 12:19:52 ryoon Exp $
+$NetBSD: patch-source4_scripting_wsript_build,v 1.2 2015/06/26 16:09:49 jperkin Exp $
 
 Avoid getting strange ending # character on interpreter 
 name like: 
 #!/usr/pkg/bin/python2.7#
 
---- source4/scripting/wscript_build.orig	2013-04-09 17:14:59.000000000 +0900
-+++ source4/scripting/wscript_build	2013-06-07 20:41:22.000000000 +0900
+--- source4/scripting/wscript_build.orig	2014-10-01 09:16:21.000000000 +0000
++++ source4/scripting/wscript_build
 @@ -9,7 +9,7 @@ if bld.CONFIG_SET('AD_DC_BUILD_IS_ENABLE
  if sbin_files:
      bld.INSTALL_FILES('${SBINDIR}',
