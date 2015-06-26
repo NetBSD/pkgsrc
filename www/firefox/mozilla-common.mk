@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.56 2015/05/16 20:08:36 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.57 2015/06/26 11:16:41 szptvlfn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -88,7 +88,6 @@ CONFIGURE_ARGS+=	--enable-url-classifier
 CONFIGURE_ARGS+=	--enable-shared-js
 CONFIGURE_ARGS+=	--with-system-ply
 CONFIGURE_ARGS+=	--disable-icf
-CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-updater
 
 SUBST_CLASSES+=			fix-paths
