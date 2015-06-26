@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/03/30 02:34:17 rodent Exp $
+$NetBSD: distinfo,v 1.4 2015/06/26 16:51:36 rodent Exp $
 
-SHA1 (astor-0.4.1.tar.gz) = 8715b894fe4b1fce29bafb8f91a7024edca74e24
-RMD160 (astor-0.4.1.tar.gz) = 975d9db2007df213539690a2ed7c97d7e13bc669
-Size (astor-0.4.1.tar.gz) = 10865 bytes
+SHA1 (astor-0.5.tar.gz) = ec9b78ac901a857e62574fa4b262dc52b0ecce87
+RMD160 (astor-0.5.tar.gz) = d204d3ddc43d3a4388382a885742fc8a504416ab
+Size (astor-0.5.tar.gz) = 10999 bytes
