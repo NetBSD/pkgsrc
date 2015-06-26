@@ -1,10 +1,10 @@
-$NetBSD: patch-testprogs_blackbox_dbcheck-oldrelease.sh,v 1.1 2015/05/12 12:19:52 ryoon Exp $
+$NetBSD: patch-testprogs_blackbox_dbcheck-oldrelease.sh,v 1.2 2015/06/26 16:09:49 jperkin Exp $
 
 ERROR: [check-portability.awk] 
 
---- testprogs/blackbox/dbcheck-oldrelease.sh.orig	2013-09-27 19:35:31.000000000 +0900
-+++ testprogs/blackbox/dbcheck-oldrelease.sh	2013-11-02 11:59:48.000000000 +0900
-@@ -55,19 +55,19 @@ dbcheck_acl_reset_clean() {
+--- testprogs/blackbox/dbcheck-oldrelease.sh.orig	2014-10-01 09:16:22.000000000 +0000
++++ testprogs/blackbox/dbcheck-oldrelease.sh
+@@ -178,19 +178,19 @@ dbcheck_clean2() {
  }
  
  referenceprovision() {
