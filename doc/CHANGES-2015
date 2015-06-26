@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2760 2015/06/26 13:47:07 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2761 2015/06/26 16:10:11 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5338,3 +5338,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/ansible to 1.6.10nb1 [jperkin 2015-06-25]
 	Updated net/haproxy to 1.5.12 [rodent 2015-06-26]
 	Updated www/nginx to 1.8.0 [rodent 2015-06-26]
+	Updated converters/py-cairosvg to 1.0.15 [rodent 2015-06-26]
