@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.66 2015/01/03 21:30:52 gdt Exp $
+# $NetBSD: Darwin.mk,v 1.67 2015/06/26 13:51:57 adam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -20,6 +20,7 @@
 # Mountain Lion	10.8.x	12.x.y	4.5 (llvm gcc 4.2.1)
 # Mavericks	10.9.x	13.x.y	6 (llvm clang 6.0)
 # Yosemite	10.10.x	14.x.y	6 (llvm clang 6.0)
+# El Capitan	10.11.x	15.x.y	7 (llvm clang 7.0)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
@@ -79,9 +80,14 @@ _OPSYS_EMULDIR.darwin=	# empty
 #
 # From Xcode 5 onwards system headers are no longer installed by default
 # into /usr/include, so we need to query their location.
+# Use current system version SDK (avoid newer SDKs).
 #
 .if exists(/usr/bin/xcrun)
-OSX_SDK_PATH!=	/usr/bin/xcrun --show-sdk-path 2>/dev/null || echo /nonexistent
+OSX_VERS!=	sw_vers -productVersion
+.  if ${OSX_VERS:R:R} != ${OSX_VERS:R}
+OSX_VERS:=${OSX_VERS:R}
+.  endif
+OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERS} --show-sdk-path 2>/dev/null || echo /nonexistent
 .endif
 
 _OPSYS_SYSTEM_RPATH?=		/usr/lib
@@ -152,7 +158,7 @@ CONFIGURE_ENV+=		ac_cv_func_poll=no
 .endif
 
 # Use "/bin/ksh" for buildlink3 wrapper script to improve build performance.
-.if (!empty(OS_VERSION:M9.*) || !empty(OS_VERSION:M1[0-2].*)) && \
+.if (!empty(OS_VERSION:M9.*) || !empty(OS_VERSION:M1[0-9].*)) && \
     exists(/bin/ksh)
 WRAPPER_BIN_SH?=	/bin/ksh
 .endif
