@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/01 02:19:17 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/26 16:13:51 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/sql/tests/test_insert.pyo
 ${PYSITELIB}/sql/tests/test_join.py
 ${PYSITELIB}/sql/tests/test_join.pyc
 ${PYSITELIB}/sql/tests/test_join.pyo
+${PYSITELIB}/sql/tests/test_lateral.py
+${PYSITELIB}/sql/tests/test_lateral.pyc
+${PYSITELIB}/sql/tests/test_lateral.pyo
 ${PYSITELIB}/sql/tests/test_literal.py
 ${PYSITELIB}/sql/tests/test_literal.pyc
 ${PYSITELIB}/sql/tests/test_literal.pyo
@@ -78,6 +81,9 @@ ${PYSITELIB}/sql/tests/test_update.pyo
 ${PYSITELIB}/sql/tests/test_values.py
 ${PYSITELIB}/sql/tests/test_values.pyc
 ${PYSITELIB}/sql/tests/test_values.pyo
+${PYSITELIB}/sql/tests/test_window.py
+${PYSITELIB}/sql/tests/test_window.pyc
+${PYSITELIB}/sql/tests/test_window.pyo
 ${PYSITELIB}/sql/tests/test_with.py
 ${PYSITELIB}/sql/tests/test_with.pyc
 ${PYSITELIB}/sql/tests/test_with.pyo
