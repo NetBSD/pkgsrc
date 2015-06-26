@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/04/01 02:19:17 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/06/26 16:13:51 rodent Exp $
 
-SHA1 (python-sql-0.6.tar.gz) = af0a044589ea1b8c33b28c07ced79dd1b6eca44d
-RMD160 (python-sql-0.6.tar.gz) = eed865ed7c071755d3609aca9989b621da2b3048
-Size (python-sql-0.6.tar.gz) = 24757 bytes
+SHA1 (python-sql-0.7.tar.gz) = db674f55c21ecdb8afc08aec68fe9306abdeaa76
+RMD160 (python-sql-0.7.tar.gz) = 153ba48aa64efbe16d02d2a905e3c3fda012b54d
+Size (python-sql-0.7.tar.gz) = 27422 bytes
