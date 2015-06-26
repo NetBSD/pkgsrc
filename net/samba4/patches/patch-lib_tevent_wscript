@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_tevent_wscript,v 1.1 2015/06/26 16:09:49 jperkin Exp $
+
+Skip epoll tests on SunOS, implementation is Linux-specific.
+
+--- lib/tevent/wscript.orig	2015-03-04 19:50:43.000000000 +0000
++++ lib/tevent/wscript
+@@ -41,7 +41,7 @@ def configure(conf):
+             if conf.CHECK_BUNDLED_SYSTEM_PYTHON('pytevent', 'tevent', minversion=VERSION):
+                 conf.define('USING_SYSTEM_PYTEVENT', 1)
+ 
+-    if conf.CHECK_FUNCS('epoll_create', headers='sys/epoll.h'):
++    if not sys.platform.startswith('sunos') and conf.CHECK_FUNCS('epoll_create', headers='sys/epoll.h'):
+         conf.DEFINE('HAVE_EPOLL', 1)
+ 
+     tevent_num_signals = 64
