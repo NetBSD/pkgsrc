@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14485 2015/06/26 13:47:07 rodent Exp $
+$NetBSD: TODO,v 1.14486 2015/06/26 13:48:18 rodent Exp $
 
 Suggested new packages
 ======================
@@ -849,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netsurf-3.2
 	o nettle-3.1.1 [wip; breaks gnutls-3.2.15, wait for newer version]
 	o newmail-1.0.2
+	o nginx-devel-1.9.2
 	o nikto-2.0.1
 	o notmuch-0.20.1
 	o ns-3.14.1
