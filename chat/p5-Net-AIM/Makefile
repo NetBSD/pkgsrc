@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/06/27 22:35:00 joerg Exp $
 
 DISTNAME=	Net-AIM-1.22
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,10 @@ COMMENT=	Implementation of the AOL Instant Messenger TOC protocol
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Net/AIM/.packlist
+
+# Bad symlink in 1.22's distfile
+post-extract:
+	${RM} ${WRKSRC}/Net
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
