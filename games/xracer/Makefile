@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2015/06/12 10:50:07 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2015/06/27 09:32:15 dholland Exp $
 #
 
 DISTNAME=		xracer-0.96.9
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.annexia.org/_file/
 
@@ -30,6 +30,8 @@ REPLACE_PERL+=		tools/blender2track/xracer-blender2track.pl \
 			tools/mkmeshnotex/xracer-mkmeshnotex.pl
 
 post-configure: do-makemaker-configure
+
+DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
