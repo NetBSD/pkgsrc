@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/18 12:49:37 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/27 18:43:05 joerg Exp $
 
 DISTNAME=	redmine-3.0.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -119,7 +119,8 @@ USE_LANGUAGES=	c
 # Do not build internal libxml2 and libxslt.
 MAKE_ENV+=	NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 
-INSTALLATION_DIRS+=	bin share/examples/redmine share/redmine/app/.bundle
+INSTALLATION_DIRS+=	bin share/examples/redmine share/redmine/app/.bundle \
+			${RM_DIR}/app/config
 
 EGDIR=		${PREFIX}/share/examples/redmine
 CONF_FILES+=	${EGDIR}/configuration.yml.example \
