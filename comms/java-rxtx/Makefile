@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/05/14 18:12:11 dsainty Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/27 06:30:03 dsainty Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
@@ -23,7 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Configuration looks for certain versions of JDK - this list can be expanded
 # if the patches are also appropriately updated.
-PKG_JVMS_ACCEPTED= openjdk7 sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED= oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
 
 .include "../../mk/bsd.prefs.mk"
 
