@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/27 22:35:41 joerg Exp $
 
 DISTNAME=	Algorithm-CheckDigits-v1.3.0
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=	p5-Probe-Perl-[0-9]*:../../devel/p5-Probe-Perl
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Algorithm/CheckDigits/.packlist
+
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
