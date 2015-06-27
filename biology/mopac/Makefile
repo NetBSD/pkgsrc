@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/11 20:32:13 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/27 07:08:13 dholland Exp $
 #
 
 DISTNAME=		mopac7
@@ -24,6 +24,11 @@ USE_LANGUAGES=		fortran77
 PKG_FC=			f2c-f77
 
 INSTALLATION_DIRS=	bin share/mopac7/sample
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(PKGSRC_COMPILER:Mgcc)
+ALL_ENV+=	PKGSRC_FFLAGS=-freal-loops
+.endif
 
 pre-build:
 	cp ${WRKSRC}/esp.rof ${WRKSRC}/esp.f

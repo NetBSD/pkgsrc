@@ -8,7 +8,7 @@
 #	make clean	Clean up disk to minimum config
 #
 #F77		=
-FFLAGS	        = -O2 -w
+FFLAGS	        = -O2 -w $(PKGSRC_FFLAGS)
 HDRS		= SIZES
 SRCS		:= $(shell ls *.f)
 CSRCS           := $(shell ls *.c) 
