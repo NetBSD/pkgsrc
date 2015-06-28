@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/09/29 06:29:01 dholland Exp $
+$NetBSD: distinfo,v 1.13 2015/06/28 17:11:12 joerg Exp $
 
 SHA1 (pdflib-4.0.3.tar.gz) = 9fbe256249ef780c4607ee3070785d9a4ecc03f7
 RMD160 (pdflib-4.0.3.tar.gz) = 5e21c05a9e2c49d90ccffea5a2ba085776b457c7
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = da90a65a101ae23622dfd85e1be3a5855f1fc265
 SHA1 (patch-ac) = 3f226ef6ee2a1b740831f44d97d9c49a2a6db50f
 SHA1 (patch-ad) = b4aab4f41184a7142d88bb9dadbf7b8ba8f11c94
 SHA1 (patch-ae) = f85f5beeec1c2aac90eafef24c1ed2fa96ebd2ac
+SHA1 (patch-bind_tcl_pdflib__tcl.c) = adbe2a433fdef3c823fc9a803951dd40b00ccd1a
