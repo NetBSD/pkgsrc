@@ -1,0 +1,17 @@
+$NetBSD: patch-foomatic-gswrapper.in,v 1.1 2015/06/28 13:09:35 gdt Exp $
+
+--- foomatic-gswrapper.in.orig	2004-01-22 03:42:35.000000000 +0000
++++ foomatic-gswrapper.in
+@@ -19,10 +19,10 @@ my $configpath = "@sysconfdir@/foomatic"
+ 
+ # Set GhostScript path
+ my $gspath = "gs";
+-$gspath = $conf{gspath} if defined(%conf) and defined $conf{gspath};
++$gspath = $conf{gspath} if %conf and defined $conf{gspath};
+ my $execpath = "@prefix@/bin:/usr/local/bin:/usr/bin:/bin";
+ # Get execution path from config file
+-$execpath = $conf{execpath} if defined(%conf) and defined $conf{execpath};
++$execpath = $conf{execpath} if %conf and defined $conf{execpath};
+ $ENV{'PATH'} = $execpath;
+ 
+ grep (m!\-sOutputFile=\-! 
