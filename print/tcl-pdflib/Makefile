@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.32 2015/06/28 17:11:13 joerg Exp $
 
 .include "../../print/pdflib/Makefile.common"
 
@@ -12,7 +12,7 @@ BUILDLINK_API_DEPENDS.pdflib+=	pdflib>=${PDFLIB_BASE_VERS}
 
 CONFIGURE_ARGS+=	--with-tcl=${TCLSH:Q}
 CONFIGURE_ARGS+=	--with-tclincl="${BUILDLINK_PREFIX.tcl}/include"
-CONFIGURE_ARGS+=	--with-tclpkg="${PREFIX}/lib/tcl8.5"
+CONFIGURE_ARGS+=	--with-tclpkg="${PREFIX}/lib/tcl${TCL_BASEVER}"
 TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 
 BUILD_DIRS=		bind/tcl
@@ -22,5 +22,6 @@ pre-build:
 
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl/Makefile.version"
 
 .include "../../mk/bsd.pkg.mk"
