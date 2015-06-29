@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.33 2015/05/04 14:40:38 fhajny Exp $
+$NetBSD: distinfo,v 1.34 2015/06/29 21:44:10 fhajny Exp $
 
-SHA1 (ejabberd-15.04-deps.tar.gz) = c4a920fe2e60c0810af1588bd955066261f8dfc4
-RMD160 (ejabberd-15.04-deps.tar.gz) = 527e6f8c9965012281cac6da7feea0993a6d8378
-Size (ejabberd-15.04-deps.tar.gz) = 13647808 bytes
-SHA1 (ejabberd-15.04.tgz) = cbd2661e921fe324e694bd1f582a3cbd67c309f9
-RMD160 (ejabberd-15.04.tgz) = 2340080ff4cd4d0b5d8b7aec71ecd85b2938dae4
-Size (ejabberd-15.04.tgz) = 3261947 bytes
+SHA1 (ejabberd-15.06-deps.tar.gz) = b3704208c5756c7c717477b9c66e7f5853b6d91e
+RMD160 (ejabberd-15.06-deps.tar.gz) = 3ae7d5d31befe7717322253d7692bc3b33172042
+Size (ejabberd-15.06-deps.tar.gz) = 14294458 bytes
+SHA1 (ejabberd-15.06.tgz) = 7e3f050f1c27cfe9941440572374c8fa80fca0d7
+RMD160 (ejabberd-15.06.tgz) = ab352af31f929852428a137c49b662e6bff07733
+Size (ejabberd-15.06.tgz) = 1560640 bytes
 SHA1 (patch-aa) = 5025927e6be5792fa8e59541938950d901b91ee5
 SHA1 (patch-ad) = cdd7a61333f3206ac3ae9168b1878a059da25988
-SHA1 (patch-ae) = 90787d77dda8317d89908ca9520710ea4e8d43f4
+SHA1 (patch-ae) = a9340add286fe4b70ce0ac6b75a2f9162b8c4e7d
 SHA1 (patch-configure) = 8cf03f571ef13ed825b445e0f1664d387895b8fe
-SHA1 (patch-deps_p1__iconv_rebar.config) = cd1200342aea2d4731207b3b5c33653682a8988f
