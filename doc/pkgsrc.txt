@@ -592,8 +592,6 @@ Table 1.1. Platforms supported by pkgsrc
 |Cygwin                                |   Mar 2013    |README.Cygwin         |
 |--------------------------------------+---------------+----------------------|
 |GNU/kFreeBSD                          |   Jul 2013    |README.GNUkFreeBSD    |
-|--------------------------------------+---------------+----------------------|
-|Bitrig                                |   Jun 2014    |README.Bitrig         |
 +-----------------------------------------------------------------------------+
 
 
@@ -5498,12 +5496,12 @@ ${MASTER_SITE_MOZILLA_ESR}
 ${MASTER_SITE_MYSQL}
 ${MASTER_SITE_NETLIB}
 ${MASTER_SITE_OPENOFFICE}
+${MASTER_SITE_OSDN}
 ${MASTER_SITE_PERL_CPAN}
 ${MASTER_SITE_PGSQL}
 ${MASTER_SITE_RUBYGEMS}
 ${MASTER_SITE_R_CRAN}
 ${MASTER_SITE_SOURCEFORGE}
-${MASTER_SITE_SOURCEFORGE_JP}
 ${MASTER_SITE_SUNSITE}
 ${MASTER_SITE_SUSE}
 ${MASTER_SITE_TEX_CTAN}
