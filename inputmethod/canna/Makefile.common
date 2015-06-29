@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2010/05/28 11:06:34 obache Exp $
+# $NetBSD: Makefile.common,v 1.22 2015/06/29 11:06:47 ryoon Exp $
 #
 # Canna common makefile.
 #
@@ -13,10 +13,10 @@ CANNA_VERSION=	3.6pl4
 DISTNAME=	Canna${CANNA_VERSION:S|.||:S|pl|p|}
 PKGNAME=	Canna-${CANNA_MODULE}-${CANNA_VERSION}
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=canna/6059/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=canna/6059/}
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://canna.sourceforge.jp/
+HOMEPAGE=	http://canna.osdn.jp/
 COMMENT=	Kana-Kanji conversion system (${CANNA_MODULE})
 
 FILESDIR=	${.CURDIR}/../../inputmethod/canna/files

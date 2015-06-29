@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2014/12/06 03:42:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/29 11:06:46 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	migu-ttf-${VERSION}
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mix-mplus-ipa/59022/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=mix-mplus-ipa/59022/}
 DISTFILES=	migu-1p-${VERSION}.zip \
 		migu-1c-${VERSION}.zip \
 		migu-1m-${VERSION}.zip \
 		migu-2m-${VERSION}.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://mix-mplus-ipa.sourceforge.jp/
+HOMEPAGE=	http://mix-mplus-ipa.osdn.jp/
 COMMENT=	Fonts generated from M+ and IPA Gothic (Universal Design)
 LICENSE=	ipafont
 

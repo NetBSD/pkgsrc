@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/11/13 11:08:13 obache Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/29 11:06:46 ryoon Exp $
 #
 
 IPAEXVER=	00201
@@ -6,7 +6,7 @@ DISTNAME=	IPAexfont${IPAEXVER}
 PKGNAME=	${DISTNAME:S/IPAexfont/ipaexfont-/}
 PKGREVISION=	1
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ipafonts/57330/} \
+MASTER_SITES=	${MASTER_SITE_OSDN:=ipafonts/57330/} \
 		http://dl.ipafont.ipa.go.jp/IPAexfont/
 EXTRACT_SUFX=	.zip
 
