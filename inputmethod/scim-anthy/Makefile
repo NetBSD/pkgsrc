@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2015/04/25 14:23:24 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2015/06/29 11:06:47 ryoon Exp $
 #
 
 DISTNAME=		scim-anthy-1.2.7
 PKGREVISION=		22
 CATEGORIES=		inputmethod
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/37309/}
+MASTER_SITES=		${MASTER_SITE_OSDN:=scim-imengine/37309/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://scim-imengine.sourceforge.jp/
+HOMEPAGE=		http://osdn.jp/projects/scim-imengine/
 COMMENT=		SCIM IMEngine module for anthy
 LICENSE=		gnu-gpl-v2
 

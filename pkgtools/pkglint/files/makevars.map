@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.264 2015/05/03 15:20:24 bsiegert Exp $
+# $NetBSD: makevars.map,v 1.265 2015/06/29 11:06:48 ryoon Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -484,11 +484,11 @@ MASTER_SITE_MOZILLA_ESR	List of FetchURL [$system]
 MASTER_SITE_MYSQL	List of FetchURL [$system]
 MASTER_SITE_NETLIB	List of FetchURL [$system]
 MASTER_SITE_OPENOFFICE	List of FetchURL [$system]
+MASTER_SITE_OSDN	List of FetchURL [$system]
 MASTER_SITE_PERL_CPAN	List of FetchURL [$system]
 MASTER_SITE_R_CRAN	List of FetchURL [$system]
 MASTER_SITE_RUBYGEMS	List of FetchURL [$system]
 MASTER_SITE_SOURCEFORGE	List of FetchURL [$system]
-MASTER_SITE_SOURCEFORGE_JP	List of FetchURL [$system]
 MASTER_SITE_SUNSITE	List of FetchURL [$system]
 MASTER_SITE_SUSE	List of FetchURL [$system]
 MASTER_SITE_TEX_CTAN	List of FetchURL [$system]

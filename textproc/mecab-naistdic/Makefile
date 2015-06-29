@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2013/08/20 22:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/29 11:06:49 ryoon Exp $
 #
 
 DISTNAME=	mecab-naist-jdic-0.6.3-20100801
 PKGNAME=	${DISTNAME:S/naist-jdic/naistjdic/}
 PKGREVISION=	1
 CATEGORIES=	japanese textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=naist-jdic/48487/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=naist-jdic/48487/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.jp/projects/naist-jdic/wiki/FrontPage
+HOMEPAGE=	http://osdn.jp/projects/naist-jdic/wiki/FrontPage
 COMMENT=	Japanese Morphological Dictionary for MeCab
 LICENSE=	modified-bsd
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/29 11:06:46 ryoon Exp $
 
 DISTNAME=		sazanami-${SAZANAMI_VERS}
 PKGNAME=		ja-sazanami-ttf-${SAZANAMI_VERS}
 PKGREVISION=		2
 CATEGORIES=		fonts japanese
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=efont/10087/}
+MASTER_SITES=		${MASTER_SITE_OSDN:=efont/10087/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		yamajun@ofug.net

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/03/15 21:41:46 hiramatsu Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/06/29 11:06:49 ryoon Exp $
 #
 # used by textproc/ruby-suikyo/Makefile
 # used by textproc/suikyo-docs/Makefile
@@ -8,7 +8,7 @@
 SUIKYO_VER=	2.1.0
 DISTNAME=	suikyo-${SUIKYO_VER}
 CATEGORIES=	textproc
-MASTER_SITES=	http://prime.sourceforge.jp/src/
+MASTER_SITES=	http://prime.osdn.jp/src/
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/suikyo/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/suikyo/patches
