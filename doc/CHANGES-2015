@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2767 2015/06/29 10:26:07 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2768 2015/06/29 10:29:17 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5347,3 +5347,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.10nb1 [taca 2015-06-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2015Q2 branch [wiz 2015-06-29]
 	Updated multimedia/xfce4-mpc-plugin to 0.4.5 [youri 2015-06-29]
+	Updated sysutils/xfce4-fsguard-plugin to 1.0.2 [youri 2015-06-29]
