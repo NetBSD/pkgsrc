@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.10 2015/01/02 09:14:16 fhajny Exp $
+$NetBSD: patch-ae,v 1.11 2015/06/29 21:44:10 fhajny Exp $
 
 - Default locations.
 - Make it work with NetBSD's flock(1).
 
---- ejabberdctl.template.orig	2014-07-22 16:42:49.000000000 +0100
-+++ ejabberdctl.template	2014-08-21 20:17:35.000000000 +0100
-@@ -67,10 +67,10 @@
+--- ejabberdctl.template.orig	2015-06-24 09:58:37.000000000 +0000
++++ ejabberdctl.template
+@@ -71,10 +71,10 @@ if [ "$EJABBERD_CONFIG_PATH" = "" ] ; th
      EJABBERD_CONFIG_PATH=$ETC_DIR/ejabberd.yml
  fi
  if [ "$LOGS_DIR" = "" ] ; then
@@ -18,7 +18,7 @@ $NetBSD: patch-ae,v 1.10 2015/01/02 09:14:16 fhajny Exp $
  fi
  if [ "$EJABBERD_DOC_PATH" = "" ] ; then
      EJABBERD_DOC_PATH={{docdir}}
-@@ -81,7 +81,7 @@
+@@ -85,7 +85,7 @@ if [ "$ERLANG_NODE_ARG" != "" ] ; then
  fi
  if [ "{{release}}" != "true" ] ; then
      if [ "$EJABBERDDIR" = "" ] ; then
@@ -27,16 +27,16 @@ $NetBSD: patch-ae,v 1.10 2015/01/02 09:14:16 fhajny Exp $
      fi
      if [ "$EJABBERD_EBIN_PATH" = "" ] ; then
          EJABBERD_EBIN_PATH=$EJABBERDDIR/ebin
-@@ -281,7 +281,7 @@
+@@ -335,7 +335,7 @@ ctl()
      # using flock if available. Expects a linux-style
      # flock that can lock a file descriptor.
      MAXCONNID=100
 -    CONNLOCKDIR={{localstatedir}}/lock/ejabberdctl
 +    CONNLOCKDIR=@EJABBERD_PIDDIR@
-     FLOCK='/usr/bin/flock'
+     FLOCK=/usr/bin/flock
      if [ ! -x "$FLOCK" ] || [ ! -d "$CONNLOCKDIR" ] ; then
-         JOT='/usr/bin/jot'
-@@ -308,7 +308,7 @@
+         JOT=/usr/bin/jot
+@@ -362,7 +362,7 @@ ctl()
              CTL_LOCKFILE="$CONNLOCKDIR/$CTL_CONN"
              (
                  exec 8>"$CTL_LOCKFILE"
