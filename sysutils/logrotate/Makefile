@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/03/11 21:34:16 nils Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/29 12:28:55 nils Exp $
 
-DISTNAME=		logrotate-3.8.9
+DISTNAME=		logrotate-3.9.1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://fedorahosted.org/releases/l/o/logrotate/
 
@@ -9,15 +9,16 @@ HOMEPAGE=		https://fedorahosted.org/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
 
-USE_TOOLS+=		gmake gzip:run gunzip:run mail:run
+USE_TOOLS+=		gmake gzip:run gunzip:run mail:run automake autoconf
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
 NO_EXPORT_CPP=		yes
 
-CFLAGS+=		-DSTATEFILE=\"${VARBASE}/db/logrotate.status\"
-CFLAGS+=		-DDEFAULT_MAIL_COMMAND=\"${MAIL_CMD:Q}\"
-CFLAGS+=		-DCOMPRESS_COMMAND=\"${GZIP_CMD:[1]:Q}\"
-CFLAGS+=		-DUNCOMPRESS_COMMAND=\"${GUNZIP_CMD:[1]:Q}\"
-
-MAKE_ENV+=		RPM_OPT_FLAGS=${CFLAGS:Q}
+CONFIGURE_ENV+=		STATEFILE=\"${VARBASE}/db/logrotate.status\"
+CONFIGURE_ENV+=		DEFAULT_MAIL_COMMAND=\"${MAIL_CMD:Q}\"
+CONFIGURE_ENV+=		COMPRESS_COMMAND=\"${GZIP_CMD:[1]:Q}\"
+CONFIGURE_ENV+=		UNCOMPRESS_COMMAND=\"${GUNZIP_CMD:[1]:Q}\"
 
 BUILD_DEFS+=		VARBASE
 EGDIR=			${PREFIX}/share/examples/logrotate
@@ -38,6 +39,11 @@ SUBST_VARS.paths+=	VARBASE
 SUBST_VARS.paths+=	PKG_SYSCONFDIR
 
 DOCDIR=			share/doc/logrotate
+
+pre-configure:
+	cd ${WRKSRC} && \
+		${SETENV} ${CONFIGURE_ENV} ./autogen.sh
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/logrotate ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/examples/logrotate-default ${DESTDIR}${EGDIR}/logrotate.conf
