@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2015/05/04 14:40:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.55 2015/06/29 21:44:10 fhajny Exp $
 
-DISTNAME=	ejabberd-15.04
-PKGREVISION=	1
+DISTNAME=	ejabberd-15.06
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -100,11 +99,6 @@ fetch-deps:
 
 post-extract:
 	${LN} -s ${WRKDIR}/deps ${WRKSRC}/
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/dev.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/features.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/guide.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
