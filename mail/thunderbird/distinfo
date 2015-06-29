@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.159 2015/06/08 13:40:58 joerg Exp $
+$NetBSD: distinfo,v 1.160 2015/06/29 21:27:01 markd Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -98,6 +98,7 @@ SHA1 (patch-mozilla_js_src_frontend_ParseMaps.cpp) = d7f45bde1f819786c4522560069
 SHA1 (patch-mozilla_js_src_gc_Memory.cpp) = b09074af9f08c142ba83a634a9c93672c1d9252d
 SHA1 (patch-mozilla_js_src_jsmath.cpp) = b02ecb4a64c6b486645ffdf0446430db9e2dcd71
 SHA1 (patch-mozilla_js_src_vm_SPSProfiler.cpp) = 35df0beb0c2f7d233d21c4214281002412b7d5dd
+SHA1 (patch-mozilla_js_xpconnect_wrapper_XrayWrapper.cpp) = 374f7236c6c141489d699edc7368bc5ec3ded2f8
 SHA1 (patch-mozilla_media_libcubeb_src_Makefile.in) = 8c809178a1f427302d58fc8776a9371b78a7ca7e
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = db2a16f6a7d19bca54bd71a488ee95a0db932a46
 SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = 7058656f387417a2c22de882a9f2405a0685c2ab
@@ -125,6 +126,7 @@ SHA1 (patch-mozilla_mobile_android_installer_Makefile.in) = c2f9f4dcac0c870b64e0
 SHA1 (patch-mozilla_mobile_android_installer_package-manifest.in) = 3ed532efccca911bb70182527651d534d5146dcc
 SHA1 (patch-mozilla_modules_libjar_nsZipArchive.cpp) = c906441ba5d7f391f5e37edcf88bfdf8586d5a84
 SHA1 (patch-mozilla_netwerk_dns_Makefile.in) = b439f2a5da18fc3f3fb65118d4e99048381b26d9
+SHA1 (patch-mozilla_netwerk_ipc_NeckoParent.cpp) = 7d6c84fc8de5ce93e439c644e79e556be0b8cb75
 SHA1 (patch-mozilla_ostream) = 97351e78803053e561343e429f5eb12252b0290d
 SHA1 (patch-mozilla_probes_Makefile.in) = 2f942dadf56add19653a1995fc6ea68e491dd1c5
 SHA1 (patch-mozilla_security_manager_ssl_src_nsNSSComponent.cpp) = a881012bf1b40685fbc5f48bf5eaed50cef89f72
