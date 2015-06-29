@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2013/05/16 05:55:18 richard Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/06/29 11:15:05 wiz Exp $
 bin/vmmouse_detect
 lib/hal/hal-probe-vmmouse
+lib/udev/rules.d/69-xorg-vmmouse.rules
 lib/xorg/modules/input/vmmouse_drv.la
 man/man1/vmmouse_detect.1
 man/man4/vmmouse.4
-share/hal/fdi/policy/20thirdparty/11-x11-vmmouse.fdi
 share/X11/xorg.conf.d/50-vmmouse.conf
+share/hal/fdi/policy/20thirdparty/11-x11-vmmouse.fdi
