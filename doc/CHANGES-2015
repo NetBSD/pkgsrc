@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2785 2015/06/29 13:18:26 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2786 2015/06/29 14:48:01 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5367,3 +5367,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/ffplay2 to 2.7.1 [adam 2015-06-29]
 	Updated graphics/lensfun to 0.3.1 [adam 2015-06-29]
 	Updated www/p5-Mojolicious to 6.12 [wen 2015-06-29]
+	Updated sysutils/xfce4-xkb-plugin to 0.7.1 [youri 2015-06-29]
