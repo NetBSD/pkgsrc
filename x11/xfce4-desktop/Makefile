@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2015/04/25 14:25:24 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2015/06/29 10:36:40 youri Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfdesktop-4.12.1
-PKGNAME=	xfce4-desktop-4.12.1
+DISTNAME=	xfdesktop-4.12.2
+PKGNAME=	xfce4-desktop-4.12.2
 CATEGORIES=	x11
 MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfdesktop/4.12/
 
