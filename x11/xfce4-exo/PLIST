@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/04/21 08:56:44 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/06/29 10:38:00 youri Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -82,9 +82,12 @@ share/gtk-doc/html/exo-1/home.png
 share/gtk-doc/html/exo-1/index.html
 share/gtk-doc/html/exo-1/index.sgml
 share/gtk-doc/html/exo-1/ix01.html
+share/gtk-doc/html/exo-1/left-insensitive.png
 share/gtk-doc/html/exo-1/left.png
+share/gtk-doc/html/exo-1/right-insensitive.png
 share/gtk-doc/html/exo-1/right.png
 share/gtk-doc/html/exo-1/style.css
+share/gtk-doc/html/exo-1/up-insensitive.png
 share/gtk-doc/html/exo-1/up.png
 share/icons/hicolor/24x24/apps/preferences-desktop-default-applications.png
 share/icons/hicolor/48x48/apps/preferences-desktop-default-applications.png
