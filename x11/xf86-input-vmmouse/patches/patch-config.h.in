@@ -1,0 +1,14 @@
+$NetBSD: patch-config.h.in,v 1.1 2015/06/29 11:15:05 wiz Exp $
+
+--- config.h.in.orig	2015-06-25 10:27:50.000000000 +0000
++++ config.h.in
+@@ -102,6 +102,9 @@
+ /* BSD AMD64 iopl */
+ #undef USE_AMD64_IOPL
+ 
++/* BSD X86_64 iopl */
++#undef USE_X86_64_IOPL
++
+ /* BSD /dev/io */
+ #undef USE_DEV_IO
+ 
