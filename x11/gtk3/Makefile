@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2015/06/16 09:20:33 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2015/06/29 11:06:49 ryoon Exp $
 
 DISTNAME=	gtk+-3.16.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -13,12 +13,12 @@ COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl pkg-config bash
+USE_TOOLS+=		gmake perl pkg-config bash msgmerge xgettext
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
+#TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
 
 GNU_CONFIGURE=		yes
 # XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2015/06/07 16:05:41 taca Exp $
+# $NetBSD: Makefile.common,v 1.47 2015/06/29 11:06:48 ryoon Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -31,7 +31,7 @@ DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/ruby-gnome2/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/ruby-gnome2/patches
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
+HOMEPAGE=		http://ruby-gnome2.osdn.jp/
 LICENSE=		gnu-lgpl-v2.1
 
 VERSION=		2.2.5

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/12/24 13:06:38 nonaka Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/29 11:06:46 ryoon Exp $
 #
 
 DISTNAME=	Koruri-${KORURI_VERSION}
 PKGNAME=	koruri-ttf-${KORURI_VERSION}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=koruri/62469/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=koruri/62469/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	nonakap@gmail.com

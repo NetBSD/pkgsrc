@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2014/06/01 16:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/06/29 11:06:46 ryoon Exp $
 
 DISTNAME=	kochi-substitute-${KOCHI_VERSION}
 PKGNAME=	kochi-ttf-${KOCHI_VERSION}
 PKGREVISION=	6
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=efont/5411/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=efont/5411/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	uebayasi@NetBSD.org
