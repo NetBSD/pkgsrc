@@ -1,7 +1,7 @@
-$NetBSD: patch-settings_xfce4-session.xml,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+$NetBSD: patch-settings_xfce4-session.xml,v 1.2 2015/06/29 16:50:01 youri Exp $
 
 Look for the right thunar binary.
---- settings/xfce4-session.xml.orig	2013-05-05 15:33:55.000000000 +0000
+--- settings/xfce4-session.xml.orig	2014-08-28 15:50:18.000000000 +0000
 +++ settings/xfce4-session.xml
 @@ -21,7 +21,7 @@
        </property>
