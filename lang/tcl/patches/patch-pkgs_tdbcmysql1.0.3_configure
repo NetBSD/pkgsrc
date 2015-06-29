@@ -1,17 +1,19 @@
-$NetBSD: patch-pkgs_tdbcmysql1.0.3_configure,v 1.1 2015/05/21 10:37:59 adam Exp $
+$NetBSD: patch-pkgs_tdbcmysql1.0.3_configure,v 1.2 2015/06/29 09:49:51 joerg Exp $
 
 Add support for DragonFly.
 
 --- pkgs/tdbcmysql1.0.3/configure.orig	2015-03-06 18:34:04.000000000 +0000
 +++ pkgs/tdbcmysql1.0.3/configure
-@@ -7814,7 +7814,6 @@ fi
+@@ -7814,8 +7814,7 @@ fi
  		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  fi
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
 -		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
- 		LDFLAGS="-Wl,-export-dynamic"
+-		LDFLAGS="-Wl,-export-dynamic"
++		LDFLAGS="-Wl,--export-dynamic"
  		;;
  	    esac
+ 	    case "$arch" in
 @@ -7835,8 +7834,6 @@ fi
  
  fi

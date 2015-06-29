@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2015/05/21 10:37:59 adam Exp $
+$NetBSD: distinfo,v 1.66 2015/06/29 09:49:50 joerg Exp $
 
 SHA1 (tcl8.6.4-src.tar.gz) = 33c5a083a23cf54f15e25a9e787dc39ef3fa0a2b
 RMD160 (tcl8.6.4-src.tar.gz) = 9a30b9083edba13aeef53ba6483b88202264f6dc
@@ -6,17 +6,17 @@ Size (tcl8.6.4-src.tar.gz) = 8915556 bytes
 SHA1 (patch-generic_tclInt.h) = 13289d8fcf5021898b06a9608bc05fc968a1ba5c
 SHA1 (patch-generic_tclPort.h) = 36ff05b22591d588952e55d0f13c2ef52e371d1e
 SHA1 (patch-generic_tclPosixStr.c) = 68da211865282fe7124cad71381658f8dfb986d6
-SHA1 (patch-pkgs_itcl4.0.3_configure) = b49bd258d424c9d9643659519624c1a93bdc867d
-SHA1 (patch-pkgs_sqlite3.8.8.3_configure) = 181ecbfaf3b26c67ae3e5fe8cd319188b4e89c5f
-SHA1 (patch-pkgs_tdbc1.0.3_configure) = 23c46840cf353027f508115d6154d023b87bd83e
-SHA1 (patch-pkgs_tdbcmysql1.0.3_configure) = bab1df97a74f6ecb7aa5dcfb06998beca342e504
-SHA1 (patch-pkgs_tdbcodbc1.0.3_configure) = 16b5e720d17cd6e3a7fcabe31e4f364ae804f01c
-SHA1 (patch-pkgs_tdbcpostgres1.0.3_configure) = 1419e36de841ac1f71e2fe7f0663e0bd6e487006
-SHA1 (patch-pkgs_thread2.7.2_configure) = a322d7e715b59b208ccbb4884a03d131c84bc356
+SHA1 (patch-pkgs_itcl4.0.3_configure) = 8350140809004c1157f9650b9c29e49af0120304
+SHA1 (patch-pkgs_sqlite3.8.8.3_configure) = e49e8b345330a08e4f931bf21d45d89c72b9099f
+SHA1 (patch-pkgs_tdbc1.0.3_configure) = 39c1f010155a9b10ebcdefce065b3dfe26a09491
+SHA1 (patch-pkgs_tdbcmysql1.0.3_configure) = b38503fce5fe49213cf3612a0fe589dd79e4ab9c
+SHA1 (patch-pkgs_tdbcodbc1.0.3_configure) = 5e4d10312768ad42e6b5d2a033ca4b3ee98cf861
+SHA1 (patch-pkgs_tdbcpostgres1.0.3_configure) = 57e99769900fc8d55f61096badc037aed6c4b60e
+SHA1 (patch-pkgs_thread2.7.2_configure) = 1912b6411bf7b0dc0719fcb6d67c0aa848de85e3
 SHA1 (patch-tests_load.test) = 438695ab76e01646e49aadc01c44344a5495eabb
 SHA1 (patch-tests_pkgMkIndex.test) = 70d1042c1f4743052c5fa191fa7c4732a08e28a2
 SHA1 (patch-unix_Makefile.in) = 70cd193ca4bf93a0dc635c4ea0681686699277bf
-SHA1 (patch-unix_configure) = abe7ec2bccea451d69d2df2587d3189971f17d9a
+SHA1 (patch-unix_configure) = a3a0965e82b81093ba53cb5bb31842138272450a
 SHA1 (patch-unix_tclConfig.sh.in) = 341ac4f1bbfb29551dea87ade98b3b7b59652a31
 SHA1 (patch-unix_tclUnixCompat.c) = 7ffa40a1a56345f5b86cd896e8e3b0d5748d8c5e
 SHA1 (patch-unix_tclUnixFCmd.c) = e715d9419a36a8414355252bb3da0ef48b07fe4f
