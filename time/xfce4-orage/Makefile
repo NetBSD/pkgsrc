@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:24:58 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2015/06/29 15:03:01 youri Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.10.0
+VERSION=	4.12.1
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
 CATEGORIES=	time
-MASTER_SITES=	http://archive.xfce.org/src/apps/orage/4.10/
+MASTER_SITES=	http://archive.xfce.org/src/apps/orage/4.12/
 
 HOMEPAGE=	http://www.kolumbus.fi/~w408237/orage/
 COMMENT=	Xfce time managing application
