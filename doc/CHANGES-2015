@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2787 2015/06/29 15:03:30 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2788 2015/06/29 15:51:31 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Mojolicious to 6.12 [wen 2015-06-29]
 	Updated sysutils/xfce4-xkb-plugin to 0.7.1 [youri 2015-06-29]
 	Updated time/xfce4-orage to 4.12.1 [youri 2015-06-29]
+	Updated x11/xfce4-notes-plugin to 1.8.1 [youri 2015-06-29]
