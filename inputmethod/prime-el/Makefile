@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2015/03/15 17:56:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/29 11:06:47 ryoon Exp $
 #
 
 DISTNAME=	prime-el-1.5.1.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://prime.sourceforge.jp/src/
+MASTER_SITES=	http://prime.osdn.jp/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/emacs/
