@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/06/02 20:04:43 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/06/29 21:31:43 markd Exp $
 
 SHA1 (firefox-31.7.0esr.source.tar.bz2) = d8c79d4228c15ff903e79362d2392401329e027f
 RMD160 (firefox-31.7.0esr.source.tar.bz2) = 1f04f235a3b2b0f2ac5d33951ae04e2131e5fff7
@@ -93,6 +93,7 @@ SHA1 (patch-js_src_jit_arm_BaselineIC-arm.cpp) = 57ed2516904c17b7a037bb39e2d2ac2
 SHA1 (patch-js_src_jit_arm_CodeGenerator-arm.cpp) = 57c98ed86ec1544f9476138b9c1a6ef0064e69cf
 SHA1 (patch-js_src_jsmath.cpp) = 7d4993ae91e9b5e6820358165603819aefb586f9
 SHA1 (patch-js_src_vm_NumericConversions.h) = 6c2fcc21f3bf90a9305d15339442c3ed3ad8a60b
+SHA1 (patch-js_xpconnect_wrapper_XrayWrapper.cpp) = 3470a36d8d2ed35df1fcb96bd1003567c093e46e
 SHA1 (patch-mb) = b661abce429a88554fca6c930b4dbf71ba6bb5cb
 SHA1 (patch-media_libcubeb_src_Makefile.in) = fe880774789b0be54dec6fd83b89457fc8c2cabc
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 5ef0de0ac875334e959ff0d4bfa43a2e5ab087b9
@@ -128,6 +129,7 @@ SHA1 (patch-mobile_android_installer_package-manifest.in) = 9664858fe3b4593eb29d
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
 SHA1 (patch-mozglue_build_Makefile.in) = 2383acdb12470dc4166ff433d5f121ac5dd2b6fc
 SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
+SHA1 (patch-netwerk_ipc_NeckoParent.cpp) = a27ab07df808518d3e6c6e00d0bdf93cd4e8347e
 SHA1 (patch-pb) = 97c9b2e4cefd524dc6ba825f71c3da2a761aa1f4
 SHA1 (patch-pc) = 8b2baa88f0983a2fef4f801cf6b1ae425f6c813a
 SHA1 (patch-probes_Makefile.in) = 9a8d48556daaaa17996133a6183b1d27f0510361
