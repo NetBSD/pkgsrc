@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2013/10/14 14:36:12 joerg Exp $
+$NetBSD: distinfo,v 1.19 2015/06/29 21:13:30 markd Exp $
 
 SHA1 (ptlib-2.10.7.tar.xz) = 51077b76aed30ab614e31b2a18cb383848d4332c
 RMD160 (ptlib-2.10.7.tar.xz) = 0c05b57f5435f4646af05278e66718e0e433a10a
@@ -8,6 +8,7 @@ SHA1 (patch-configure) = d05e68485a9cd3190410e7f4beb14ac44050d2cb
 SHA1 (patch-configure.ac) = f319f4a183a6fc6c59693f516d9c68921625158b
 SHA1 (patch-include_ptbuildopts.h.in) = 2b7ba6a6dbbe9480880652de774afbff346ce635
 SHA1 (patch-include_ptclib_pldap.h) = ccb5b36a5afa7d1762e90eb9bfdb134066d2d84f
+SHA1 (patch-include_ptlib_critsec.h) = 519cee6e56d1e5a33b88237536ff4d921d7d5c44
 SHA1 (patch-include_ptlib_object.h) = 9ce0a2f333ab06ca17506481c2ae8b5b47441f85
 SHA1 (patch-include_ptlib_pmachdep.h) = 92dd7b693dc8d10ffaee7a22f8a3f3a1526e55c2
 SHA1 (patch-make_unix.mak) = 13d814a914b3bc4897a350f4393873b9b3a2b685
