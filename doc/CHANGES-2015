@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2776 2015/06/29 11:12:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2777 2015/06/29 11:12:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5356,3 +5356,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xfce4-garcon to 0.5.0 [youri 2015-06-29]
 	Updated net/xfce4-wavelan-plugin to 0.5.12 [youri 2015-06-29]
 	Updated x11/xf86-video-vesa to 2.3.4 [wiz 2015-06-29]
+	Updated x11/modular-xorg-server to 1.17.2 [wiz 2015-06-29]
