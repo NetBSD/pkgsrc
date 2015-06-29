@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2788 2015/06/29 15:51:31 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2789 2015/06/29 16:50:38 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5370,3 +5370,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xfce4-xkb-plugin to 0.7.1 [youri 2015-06-29]
 	Updated time/xfce4-orage to 4.12.1 [youri 2015-06-29]
 	Updated x11/xfce4-notes-plugin to 1.8.1 [youri 2015-06-29]
+	Updated x11/xfce4-session to 4.12.1 [youri 2015-06-29]
