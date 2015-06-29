@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2772 2015/06/29 10:41:35 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2773 2015/06/29 10:46:42 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5352,3 +5352,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xfce4-desktop to 4.12.2 [youri 2015-06-29]
 	Updated x11/xfce4-exo to 0.10.6 [youri 2015-06-29]
 	Updated x11/xfce4-eyes-plugin to 4.4.4 [youri 2015-06-29]
+	Updated x11/xfce4-places-plugin to 1.7.0 [youri 2015-06-29]
