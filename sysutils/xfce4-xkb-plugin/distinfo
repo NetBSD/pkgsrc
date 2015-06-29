@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/04/21 08:56:42 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2015/06/29 14:47:31 youri Exp $
 
-SHA1 (xfce4-xkb-plugin-0.7.0.tar.bz2) = 39e019e9b92ef4483987695ba9a2291e3acbb46a
-RMD160 (xfce4-xkb-plugin-0.7.0.tar.bz2) = 49322989395d4557ca4d724cf54f9b75c72b4bae
-Size (xfce4-xkb-plugin-0.7.0.tar.bz2) = 807921 bytes
-SHA1 (patch-panel-plugin_Makefile.in) = 226fd1e324c4dc97378631bab5c1ce32a3e1ac2c
+SHA1 (xfce4-xkb-plugin-0.7.1.tar.bz2) = 6aa958e73f72f3eeb1e68b90c2b74ac215015a9c
+RMD160 (xfce4-xkb-plugin-0.7.1.tar.bz2) = da5a56996e2e5e548e58c70aa3f36e5c7e39c2ad
+Size (xfce4-xkb-plugin-0.7.1.tar.bz2) = 837922 bytes
+SHA1 (patch-panel-plugin_Makefile.in) = 1dc52a7583558c5144760b91a13b088559c8833a
