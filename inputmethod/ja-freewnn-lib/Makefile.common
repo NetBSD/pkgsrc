@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.20 2015/06/13 20:40:30 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.21 2015/06/29 11:06:47 ryoon Exp $
 # used by inputmethod/ja-freewnn-server/Makefile
 # used by inputmethod/ja-freewnn-lib/Makefile
 
 DISTNAME=	FreeWnn-1.1.1-a023
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE_JP:=freewnn/63271/}   \
+MASTER_SITES=   ${MASTER_SITE_OSDN:=freewnn/63271/}   \
                 ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 CATEGORIES=	inputmethod
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://freewnn.sourceforge.jp/
+HOMEPAGE=	http://freewnn.osdn.jp/
 COMMENT=	Japanese/Chinese/Korean input method
 LICENSE=	gnu-gpl-v2
 

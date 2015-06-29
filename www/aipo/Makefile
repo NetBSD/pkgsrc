@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2015/06/24 19:56:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2015/06/29 11:06:49 ryoon Exp $
 #
 
 DISTNAME=	aipo-${VERSION}-linux-x86
 VERSION=	8.0.1
 PKGNAME=	aipo-${VERSION}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=aipo/63319/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=aipo/63319/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ryoon@NetBSD.org
