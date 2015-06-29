@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2015/05/31 12:54:18 wiz Exp $
+$NetBSD: distinfo,v 1.39 2015/06/29 11:13:09 wiz Exp $
 
-SHA1 (CGI-4.20.tar.gz) = 30b12a988a955c9e526b5af23ffce4fb8fc3a417
-RMD160 (CGI-4.20.tar.gz) = 5832413ce4eac3ad5b81cf1a9fd95b5baa0d7794
-Size (CGI-4.20.tar.gz) = 193964 bytes
+SHA1 (CGI-4.21.tar.gz) = afb2d4129bf776e5f1ed668ec2bff80136c74951
+RMD160 (CGI-4.21.tar.gz) = 66ae6ff608a26c34e7eb02dae2f93363928e274f
+Size (CGI-4.21.tar.gz) = 194539 bytes
