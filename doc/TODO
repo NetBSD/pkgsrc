@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14489 2015/06/29 11:12:55 wiz Exp $
+$NetBSD: TODO,v 1.14490 2015/06/29 11:15:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xentools44-4.4.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xf86-input-vmmouse-13.1.0 [wiz]
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
