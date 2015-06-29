@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2769 2015/06/29 10:35:29 youri Exp $
+$NetBSD: CHANGES-2015,v 1.2770 2015/06/29 10:36:50 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/xfce4-mpc-plugin to 0.4.5 [youri 2015-06-29]
 	Updated sysutils/xfce4-fsguard-plugin to 1.0.2 [youri 2015-06-29]
 	Updated wm/xfce4-wm to 4.12.3 [youri 2015-06-29]
+	Updated x11/xfce4-desktop to 4.12.2 [youri 2015-06-29]
