@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2015/04/25 14:25:00 tnn Exp $
+# $NetBSD: Makefile,v 1.55 2015/06/29 10:35:18 youri Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfwm4-4.12.2
-PKGNAME=	xfce4-wm-4.12.2
+DISTNAME=	xfwm4-4.12.3
+PKGNAME=	xfce4-wm-4.12.3
 CATEGORIES=	wm
 MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfwm4/4.12/
 
