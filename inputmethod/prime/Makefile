@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2015/03/15 17:25:56 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/29 11:06:47 ryoon Exp $
 #
 
 DISTNAME=	prime-1.0.0.1
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://prime.sourceforge.jp/src/
+MASTER_SITES=	http://prime.osdn.jp/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/
