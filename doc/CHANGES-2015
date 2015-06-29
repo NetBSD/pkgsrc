@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2778 2015/06/29 11:13:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2779 2015/06/29 11:13:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5358,3 +5358,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-vesa to 2.3.4 [wiz 2015-06-29]
 	Updated x11/modular-xorg-server to 1.17.2 [wiz 2015-06-29]
 	Updated www/p5-CGI to 4.21 [wiz 2015-06-29]
+	Updated mail/p5-Net-SMTP-SSL to 1.03 [wiz 2015-06-29]
