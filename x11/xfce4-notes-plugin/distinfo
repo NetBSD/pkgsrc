@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/04/21 08:56:44 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2015/06/29 15:51:11 youri Exp $
 
-SHA1 (xfce4-notes-plugin-1.7.7.tar.bz2) = 8a8ab252a65aee386849ddd589c552c2e2a20148
-RMD160 (xfce4-notes-plugin-1.7.7.tar.bz2) = 6b2dc23496fc6feebdf89a8d8ff4a00ea5bce82a
-Size (xfce4-notes-plugin-1.7.7.tar.bz2) = 472082 bytes
-SHA1 (patch-src_Makefile.in) = 7161f6c95fba7b9191c59855c1efe10490310f3f
+SHA1 (xfce4-notes-plugin-1.8.1.tar.bz2) = 37d1a497ea26e796336feb4b0a247b7c4c7a66cd
+RMD160 (xfce4-notes-plugin-1.8.1.tar.bz2) = 8ff2b784e6d89b63223a5faa6e9561f692b8b9c8
+Size (xfce4-notes-plugin-1.8.1.tar.bz2) = 479652 bytes
+SHA1 (patch-src_Makefile.in) = 461899a818a2a88d62baf451be5a0e03814a62e4
