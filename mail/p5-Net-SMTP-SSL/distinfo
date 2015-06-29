@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/04/02 22:43:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/06/29 11:13:30 wiz Exp $
 
-SHA1 (Net-SMTP-SSL-1.02.tar.gz) = 0d962a9b838a220c4504874a5208f91b017c1026
-RMD160 (Net-SMTP-SSL-1.02.tar.gz) = 1a7172336cc0ef2c4cce124b82c6f97800d9f9a4
-Size (Net-SMTP-SSL-1.02.tar.gz) = 2109 bytes
+SHA1 (Net-SMTP-SSL-1.03.tar.gz) = 1c46faadb2ae80b4664c031ab6d09d1bde36915b
+RMD160 (Net-SMTP-SSL-1.03.tar.gz) = aaee2f7bfb88b185b70465d1b87b8e5a6c29777f
+Size (Net-SMTP-SSL-1.03.tar.gz) = 2271 bytes
