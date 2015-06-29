@@ -1,0 +1,15 @@
+$NetBSD: patch-source_util_arch,v 1.1 2015/06/29 21:44:33 markd Exp $
+
+Deal with linux 4.x
+
+--- source/dist/util/arch.orig	2013-10-28 16:22:53.000000000 +0000
++++ source/dist/util/arch
+@@ -212,7 +212,7 @@ Linux)
+    # http://sourceware.org/git/?p=glibc.git;a=blob_plain;f=FAQ;hb=HEAD
+    if [ "$unsupported" != "UNSUPPORTED-" ]; then
+       case $osrelease in
+-      2.4.*|2.6.*|3.*)
++      2.4.*|2.6.*|3.*|4.*)
+          # verify the GNU C lib version
+          # we expect libc version to be
+          # >= 2.3 - this is our supported lx-* platform
