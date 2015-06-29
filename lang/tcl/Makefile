@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2014/10/31 21:11:18 adam Exp $
+# $NetBSD: Makefile,v 1.79 2015/06/29 09:49:50 joerg Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -33,6 +34,10 @@ TEST_TARGET=		test
 # This is needed for SGI and maybe sun (according to tcl developers)
 .if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	ac_cv_func_gethostbyname_r=no
 .endif
 
 SUBST_CLASSES+=		tcl-config
