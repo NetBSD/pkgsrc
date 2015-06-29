@@ -1,9 +1,9 @@
-$NetBSD: patch-scripts_Makefile.in,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+$NetBSD: patch-scripts_Makefile.in,v 1.2 2015/06/29 16:50:01 youri Exp $
 
 Adjust config path.
---- scripts/Makefile.in.orig	2013-05-05 15:33:59.000000000 +0000
+--- scripts/Makefile.in.orig	2015-03-16 07:29:45.000000000 +0000
 +++ scripts/Makefile.in
-@@ -329,12 +329,12 @@ edit = $(SED) \
+@@ -363,12 +363,12 @@ edit = $(SED) \
  	-e "s,@_docdir_\@,$$(dirname $(docdir)),g" \
  	-e "s,@_sysconfdir_\@,$(sysconfdir),g"
  
