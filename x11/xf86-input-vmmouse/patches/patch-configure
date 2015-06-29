@@ -1,0 +1,82 @@
+$NetBSD: patch-configure,v 1.1 2015/06/29 11:15:05 wiz Exp $
+
+--- configure.orig	2015-06-25 10:27:50.000000000 +0000
++++ configure
+@@ -18030,7 +18030,7 @@ $as_echo "#define VMMOUSE_OS_BSD 1" >>co
+ 
+      ;;
+      solaris*)
+-	 if test "x$GCC" == "xyes"; then
++	 if test "x$GCC" = "xyes"; then
+             CC="$save_solaris_cc -fms-extensions"
+ 	 fi
+ 
+@@ -18077,9 +18077,9 @@ case $host_cpu in
+ $as_echo "#define USE_DEV_IO 1" >>confdefs.h
+  ;;
+ 		*netbsd*)
+-$as_echo "#define USE_I386_IOPL 1" >>confdefs.h
++$as_echo "#define USE_X86_64_IOPL 1" >>confdefs.h
+ 
+-				use_i386_iopl=yes ;;
++				use_x86_64_iopl=yes ;;
+ 		*openbsd*)
+ $as_echo "#define USE_AMD64_IOPL 1" >>confdefs.h
+ 
+@@ -18188,6 +18188,56 @@ fi
+ 
+ fi
+ 
++if test x$use_x86_64_iopl = xyes; then
++   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for x86_64_iopl in -lx86_64" >&5
++$as_echo_n "checking for x86_64_iopl in -lx86_64... " >&6; }
++if ${ac_cv_lib_x86_64_x86_64_iopl+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lx86_64  $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char x86_64_iopl ();
++int
++main ()
++{
++return x86_64_iopl ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_lib_x86_64_x86_64_iopl=yes
++else
++  ac_cv_lib_x86_64_x86_64_iopl=no
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_x86_64_x86_64_iopl" >&5
++$as_echo "$ac_cv_lib_x86_64_x86_64_iopl" >&6; }
++if test "x$ac_cv_lib_x86_64_x86_64_iopl" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBAMD64 1
++_ACEOF
++
++  LIBS="-lx86_64 $LIBS"
++
++else
++  as_fn_error $? "cannot find library for x86_64_iopl" "$LINENO" 5
++fi
++
++fi
++
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for XORG" >&5

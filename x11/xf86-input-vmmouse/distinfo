@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/05/16 05:55:18 richard Exp $
+$NetBSD: distinfo,v 1.8 2015/06/29 11:15:05 wiz Exp $
 
-SHA1 (xf86-input-vmmouse-13.0.0.tar.bz2) = 0fa67d2ca9b2b26d32b93cc030fc3ea28964fe81
-RMD160 (xf86-input-vmmouse-13.0.0.tar.bz2) = d5083a76f73a10c4ed137bd822b2b5c4b2e2c05e
-Size (xf86-input-vmmouse-13.0.0.tar.bz2) = 314269 bytes
+SHA1 (xf86-input-vmmouse-13.1.0.tar.bz2) = c00fbf985b22a86901fa905a8037005bca96d805
+RMD160 (xf86-input-vmmouse-13.1.0.tar.bz2) = 45397da8726e6b3d81a9c61ed2c4b191495803aa
+Size (xf86-input-vmmouse-13.1.0.tar.bz2) = 319188 bytes
+SHA1 (patch-config.h.in) = ee6936aef0cbb1402c000eb9a8cf1539dfe5e8ef
+SHA1 (patch-configure) = 9ad8d39e00274b3eba69291ad2812ea41d150e55
+SHA1 (patch-tools_vmmouse__iopl.c) = e0527fee0d29485580b2cfe64d09e27a7792278e
