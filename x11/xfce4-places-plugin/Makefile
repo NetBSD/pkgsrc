@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2015/04/25 14:25:24 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2015/06/29 10:46:31 youri Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-places-plugin-1.6.0
+DISTNAME=	xfce4-places-plugin-1.7.0
 CATEGORIES=	x11
-MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.6/
+MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.7/
 
 HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin
 COMMENT=	Xfce Places plugin
