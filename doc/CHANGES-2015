@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2783 2015/06/29 12:30:46 nils Exp $
+$NetBSD: CHANGES-2015,v 1.2784 2015/06/29 13:16:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5363,3 +5363,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-input-vmmouse to 13.1.0 [wiz 2015-06-29]
 	Updated sysutils/xfce4-diskperf-plugin to 2.5.5 [youri 2015-06-29]
         Updated sysutils/logrotate to 0.9.1 [nils 2015-06-29]
+	Updated multimedia/ffmpeg2 to 2.7.1 [adam 2015-06-29]
+	Updated multimedia/ffplay2 to 2.7.1 [adam 2015-06-29]
+	Updated graphics/lensfun to 0.3.1 [adam 2015-06-29]
