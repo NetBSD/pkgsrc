@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
+$NetBSD: patch-aq,v 1.15 2015/06/29 21:06:14 markd Exp $
 
---- configure.orig	2013-06-07 05:16:41.000000000 +0000
+--- configure.orig	2014-04-10 18:37:08.000000000 +0000
 +++ configure
 @@ -3223,13 +3223,13 @@ if [ -z "${CFG_HOST_ARCH}" ]; then
              CFG_HOST_ARCH=x86_64
@@ -18,7 +18,7 @@ $NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
          if [ "$OPT_VERBOSE" = "yes" ]; then
              echo "    64-bit PowerPC (powerpc)"
          fi
-@@ -3253,6 +3253,19 @@ if [ -z "${CFG_HOST_ARCH}" ]; then
+@@ -3259,6 +3259,19 @@ if [ -z "${CFG_HOST_ARCH}" ]; then
          fi
          CFG_HOST_ARCH=sparc
          ;;
@@ -38,7 +38,7 @@ $NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
      QNX:*:*)
          case "$UNAME_MACHINE" in
          x86pc)
-@@ -3561,7 +3574,7 @@ fi
+@@ -3567,7 +3580,7 @@ fi
  if [ "$PLATFORM_MAC" = "yes" ] && [ '!' -z "$CFG_SDK" ]; then
      # get the darwin version. 10.0.0 and up means snow leopard.
      VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
@@ -47,7 +47,7 @@ $NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
          echo
          echo "WARNING: The 10.4u SDK does not support gcc 4.2. Configure with -platform macx-g++40. "
          echo
-@@ -5058,7 +5071,7 @@ if true; then ###[ '!' -f "$outpath/bin/
+@@ -5074,7 +5087,7 @@ if true; then ###[ '!' -f "$outpath/bin/
      done
  
      QMAKE_BUILD_ERROR=no
@@ -56,7 +56,7 @@ $NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
      [ '!' -z "$QCONFIG_H" ] && mv -f "$QCONFIG_H" "$QMAKE_QCONFIG_H" #move qmake's qconfig.h to qconfig.h.qmake
      [ '!' -z "$OLD_QCONFIG_H" ] && mv -f "${OLD_QCONFIG_H}.old" "$OLD_QCONFIG_H" #put back qconfig.h
      [ "$QMAKE_BUILD_ERROR" = "yes" ] && exit 2
-@@ -7158,7 +7171,7 @@ fi
+@@ -7198,7 +7211,7 @@ fi
  # select Carbon on 10.4 Tiger.
  if [ "$PLATFORM_MAC" = "yes" ]; then
      VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
@@ -65,7 +65,16 @@ $NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
          CFG_MAC_COCOA="no";
          CFG_MAC_CARBON="yes";
      fi
-@@ -8422,7 +8435,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+@@ -7729,7 +7742,7 @@ case "$XPLATFORM" in
+     *-g++*)
+ 	# Check gcc's version
+ 	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
+-	    4*|3.4*)
++	    5*|4*|3.4*)
+ 		;;
+             3.3*)
+                 canBuildWebKit="no"
+@@ -8475,7 +8488,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
  [ "$CFG_EXCEPTIONS" = "no" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_EXCEPTIONS"
  [ "$CFG_IPV6" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IPV6"
  [ "$CFG_SXE" = "no" ]        && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_SXE"
@@ -74,7 +83,7 @@ $NetBSD: patch-aq,v 1.14 2013/07/07 18:13:56 adam Exp $
  
  if [ "$PLATFORM_QWS" != "yes" -a "$PLATFORM_QPA" != "yes" ]; then
      [ "$CFG_GRAPHICS_SYSTEM" = "raster" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_GRAPHICSSYSTEM_RASTER"
-@@ -8638,6 +8651,7 @@ cat >>"$QTCONFIG.tmp" <<EOF
+@@ -8691,6 +8704,7 @@ cat >>"$QTCONFIG.tmp" <<EOF
  #configuration
  CONFIG += $QTCONFIG_CONFIG
  QT_ARCH = $CFG_ARCH
