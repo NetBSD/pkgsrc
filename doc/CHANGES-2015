@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2790 2015/06/29 17:02:23 gls Exp $
+$NetBSD: CHANGES-2015,v 1.2791 2015/06/29 21:44:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5372,3 +5372,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xfce4-notes-plugin to 1.8.1 [youri 2015-06-29]
 	Updated x11/xfce4-session to 4.12.1 [youri 2015-06-29]
 	Updated security/py-ecdsa to 0.13 [gls 2015-06-27]
+	Updated chat/ejabberd to 15.06 [fhajny 2015-06-29]
