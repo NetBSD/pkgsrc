@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/04/02 23:22:31 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/30 22:44:17 rodent Exp $
 #
 
-DISTNAME=	limits-1.0.4
+DISTNAME=	limits-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/l/limits/
