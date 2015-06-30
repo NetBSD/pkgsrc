@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/14 21:19:22 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/30 22:42:32 rodent Exp $
 bin/pbr${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,7 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pbr/__init__.py
 ${PYSITELIB}/pbr/__init__.pyc
@@ -80,12 +79,18 @@ ${PYSITELIB}/pbr/tests/test_files.pyo
 ${PYSITELIB}/pbr/tests/test_hooks.py
 ${PYSITELIB}/pbr/tests/test_hooks.pyc
 ${PYSITELIB}/pbr/tests/test_hooks.pyo
+${PYSITELIB}/pbr/tests/test_integration.py
+${PYSITELIB}/pbr/tests/test_integration.pyc
+${PYSITELIB}/pbr/tests/test_integration.pyo
 ${PYSITELIB}/pbr/tests/test_packaging.py
 ${PYSITELIB}/pbr/tests/test_packaging.pyc
 ${PYSITELIB}/pbr/tests/test_packaging.pyo
 ${PYSITELIB}/pbr/tests/test_setup.py
 ${PYSITELIB}/pbr/tests/test_setup.pyc
 ${PYSITELIB}/pbr/tests/test_setup.pyo
+${PYSITELIB}/pbr/tests/test_util.py
+${PYSITELIB}/pbr/tests/test_util.pyc
+${PYSITELIB}/pbr/tests/test_util.pyo
 ${PYSITELIB}/pbr/tests/test_version.py
 ${PYSITELIB}/pbr/tests/test_version.pyc
 ${PYSITELIB}/pbr/tests/test_version.pyo
@@ -107,6 +112,9 @@ ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/_setup_hooks.pyo
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/cmd.py
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/cmd.pyc
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/cmd.pyo
+${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/extra.py
+${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/extra.pyc
+${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/extra.pyo
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/package_data/1.txt
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/package_data/2.txt
 ${PYSITELIB}/pbr/tests/testpackage/setup.cfg
@@ -114,6 +122,7 @@ ${PYSITELIB}/pbr/tests/testpackage/setup.py
 ${PYSITELIB}/pbr/tests/testpackage/setup.pyc
 ${PYSITELIB}/pbr/tests/testpackage/setup.pyo
 ${PYSITELIB}/pbr/tests/testpackage/src/testext.c
+${PYSITELIB}/pbr/tests/testpackage/test-requirements.txt
 ${PYSITELIB}/pbr/tests/util.py
 ${PYSITELIB}/pbr/tests/util.pyc
 ${PYSITELIB}/pbr/tests/util.pyo
