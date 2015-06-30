@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/01/20 16:09:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/30 11:52:56 jaapb Exp $
 #
 
 DISTNAME=	2.5
 PKGNAME=	js_of_ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/ocsigen/js_of_ocaml/archive/
 DIST_SUBDIR=	js_of_ocaml
