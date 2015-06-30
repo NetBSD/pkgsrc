@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/06/30 11:13:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/30 22:21:04 wiz Exp $
 
 DISTNAME=	lablgtk-2.18.3
 PKGREVISION=	4
@@ -10,6 +10,9 @@ HOMEPAGE=	http://lablgtk.forge.ocamlcore.org/
 COMMENT=	GTK+ 2.x bindings for Objective Caml
 # for installed files; more restrictions on applications/
 LICENSE=	gnu-lgpl-v2
+
+# remove on next update
+DIST_SUBDIR=	lablgtk-2.18.3
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-debug
