@@ -1,7 +1,7 @@
-$NetBSD: patch-tools_ocamlmklib,v 1.3 2014/10/09 19:08:28 jaapb Exp $
+$NetBSD: patch-tools_ocamlmklib,v 1.4 2015/06/30 11:08:47 jaapb Exp $
 
-Add ELF mode support to ocamlmklib 
---- tools/ocamlmklib.ml.orig	2014-04-29 11:56:17.000000000 +0000
+Add ELF mode support to ocamlmklib
+--- tools/ocamlmklib.ml.orig	2014-12-27 08:44:24.000000000 +0000
 +++ tools/ocamlmklib.ml
 @@ -25,6 +25,7 @@ and c_objs = ref []         (* .o, .a, .
  and caml_libs = ref []      (* -cclib to pass to ocamlc, ocamlopt *)
@@ -10,20 +10,20 @@ Add ELF mode support to ocamlmklib
 +and elfmode = ref false     (* do not add C link lib path to run-time path *)
  and failsafe = ref false    (* whether to fall back on static build only *)
  and c_libs = ref []         (* libs to pass to mksharedlib and ocamlc -cclib *)
- and c_Lopts = ref []      (* options to pass to mksharedlib and ocamlc -cclib *)
-@@ -94,8 +95,9 @@ let parse_arguments argv =
+ and c_Lopts = ref []        (* options to pass to mksharedlib and ocamlc -cclib *)
+@@ -99,8 +100,9 @@ let parse_arguments argv =
        c_libs := s :: !c_libs
      else if starts_with s "-L" then
       (c_Lopts := s :: !c_Lopts;
 -      let l = chop_prefix s "-L" in
 -      if not (Filename.is_relative l) then rpath := l :: !rpath)
-+      if not !elfmode then
-+      (let l = chop_prefix s "-L" in
-+       if not (Filename.is_relative l) then rpath := l :: !rpath))
++     if not !elfmode then
++     (let l = chop_prefix s "-L" in
++      if not (Filename.is_relative l) then rpath := l :: !rpath))
+     else if s = "-ocamlcflags" then
+       ocamlc_opts := next_arg () :: !ocamlc_opts
      else if s = "-ocamlc" then
-       ocamlc := next_arg ()
-     else if s = "-ocamlopt" then
-@@ -106,6 +108,8 @@ let parse_arguments argv =
+@@ -115,6 +117,8 @@ let parse_arguments argv =
        output_c := next_arg()
      else if s = "-dllpath" || s = "-R" || s = "-rpath" then
        rpath := next_arg() :: !rpath
@@ -32,9 +32,9 @@ Add ELF mode support to ocamlmklib
      else if starts_with s "-R" then
        rpath := chop_prefix s "-R" :: !rpath
      else if s = "-Wl,-rpath" then
-@@ -150,6 +154,7 @@ Usage: ocamlmklib [options] <.cmo|.cma|.
- \n  -ccopt <opt>   C option passed to ocamlc -a or ocamlopt -a only\
- \n  -custom        disable dynamic loading\
+@@ -160,6 +164,7 @@ Usage: ocamlmklib [options] <.cmo|.cma|.
+ \n  -custom        Disable dynamic loading\
+ \n  -g             Build with debug information\
  \n  -dllpath <dir> Add <dir> to the run-time search path for DLLs\
 +\n  -elfmode       Do not add link-time search path to run-time path\
  \n  -F<dir>        Specify a framework directory (MacOSX)\
