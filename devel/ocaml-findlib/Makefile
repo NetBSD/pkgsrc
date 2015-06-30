@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/01/20 15:33:55 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2015/06/30 11:52:57 jaapb Exp $
 
 DISTNAME=		findlib-1.5.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
