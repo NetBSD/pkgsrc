@@ -1,38 +1,5 @@
-$NetBSD: distinfo,v 1.19 2014/12/05 13:16:26 wiz Exp $
+$NetBSD: distinfo,v 1.20 2015/06/30 10:25:01 ryoon Exp $
 
-SHA1 (mpfr-3.1.2/mpfr-3.1.2.tar.bz2) = 46d5a11a59a4e31f74f73dd70c5d57a59de2d0b4
-RMD160 (mpfr-3.1.2/mpfr-3.1.2.tar.bz2) = 8ab6a2aad186ef2dc99efc50f4ca13a142f85c2f
-Size (mpfr-3.1.2/mpfr-3.1.2.tar.bz2) = 1225496 bytes
-SHA1 (mpfr-3.1.2/patch01) = ab4b0be3b19106ab544cb9c0d6028b60b1576028
-RMD160 (mpfr-3.1.2/patch01) = c6907261f3faa467a9d9cecdba6f9917db3b7de0
-Size (mpfr-3.1.2/patch01) = 1652 bytes
-SHA1 (mpfr-3.1.2/patch02) = 0543edc718b82e1ef379b62b61ae27a0eea354d0
-RMD160 (mpfr-3.1.2/patch02) = b9232b9b5467a6ba2770156a8eeb3b04612c46e1
-Size (mpfr-3.1.2/patch02) = 18656 bytes
-SHA1 (mpfr-3.1.2/patch03) = f5573e2b2ab20f6615050f78d70f810775aa832d
-RMD160 (mpfr-3.1.2/patch03) = ea3cf54186502fcbd3d938067af22cf1e9814535
-Size (mpfr-3.1.2/patch03) = 4614 bytes
-SHA1 (mpfr-3.1.2/patch04) = fd810ffb73bdc84192d123c4bb220c3f1f9017f5
-RMD160 (mpfr-3.1.2/patch04) = 38abeffb08d681fb3d664c6a51a9ca2096ecd255
-Size (mpfr-3.1.2/patch04) = 3456 bytes
-SHA1 (mpfr-3.1.2/patch05) = 232b95f82da128fd6b133097cdd6e814a1d3f471
-RMD160 (mpfr-3.1.2/patch05) = 9aba36a214cc2d04dce376049a82c45e9b871926
-Size (mpfr-3.1.2/patch05) = 1760 bytes
-SHA1 (mpfr-3.1.2/patch06) = 5c0f9f7b5a25266b63961d0edcd0308e256423f7
-RMD160 (mpfr-3.1.2/patch06) = 554b0830858695ada7ec477dfa3ee3e29a54cb11
-Size (mpfr-3.1.2/patch06) = 1577 bytes
-SHA1 (mpfr-3.1.2/patch07) = b596fb5f1af4954fb94a5fbb71d7d69e75673cad
-RMD160 (mpfr-3.1.2/patch07) = 6dcbc15510c4f45ce330ba0d3f48dd4536832dec
-Size (mpfr-3.1.2/patch07) = 2640 bytes
-SHA1 (mpfr-3.1.2/patch08) = 91680e47ea2f2934e9667f703ff0f6b907c6dd24
-RMD160 (mpfr-3.1.2/patch08) = d32195e2b141208448d238852a365ceb6bf840ec
-Size (mpfr-3.1.2/patch08) = 10512 bytes
-SHA1 (mpfr-3.1.2/patch09) = 2998fc3d61b79bdf547aaeaaf90f71381e62f532
-RMD160 (mpfr-3.1.2/patch09) = b98383f009bd7021ff1814f90033fd0f357a272e
-Size (mpfr-3.1.2/patch09) = 5798 bytes
-SHA1 (mpfr-3.1.2/patch10) = 4538a6178c64259082cd55d87279a4d5e6748aee
-RMD160 (mpfr-3.1.2/patch10) = 940d1becc15f1f4f0e633720e251a0aec2b50bbe
-Size (mpfr-3.1.2/patch10) = 4012 bytes
-SHA1 (mpfr-3.1.2/patch11) = 3da176ee31b48c92f03a8eeb2f664fe8fedf298e
-RMD160 (mpfr-3.1.2/patch11) = eb31815cb378c22dd9371fdb447977e26d9a8e24
-Size (mpfr-3.1.2/patch11) = 2057 bytes
+SHA1 (mpfr-3.1.3/mpfr-3.1.3.tar.bz2) = 3e46c5ce43701f2f36f9d01f407efe081700da80
+RMD160 (mpfr-3.1.3/mpfr-3.1.3.tar.bz2) = 71c3aaed03012563a2ff0d97dbe085c497d4c148
+Size (mpfr-3.1.3/mpfr-3.1.3.tar.bz2) = 1281323 bytes
