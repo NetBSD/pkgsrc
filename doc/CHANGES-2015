@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2810 2015/06/30 11:11:09 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.2811 2015/06/30 11:11:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5392,3 +5392,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Net-SSLeay to 1.70 [wiz 2015-06-30]
 	Updated www/p5-URI to 1.68 [wiz 2015-06-30]
 	Updated lang/ocaml to 4.02.2 [jaapb 2015-06-30]
+	Updated lang/camlp5 to 6.13 [jaapb 2015-06-30]
