@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2796 2015/06/30 07:58:01 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2797 2015/06/30 09:07:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Params-Validate to 1.20 [wen 2015-06-30]
 	Updated devel/p5-Canary-Stability to 2006 [wen 2015-06-30]
 	Updated math/cln to 1.3.4 [wen 2015-06-30]
+	Updated x11/libdrm to 2.4.62 [wiz 2015-06-30]
