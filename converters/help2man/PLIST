@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2015/05/03 10:13:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/06/30 10:54:34 ryoon Exp $
 bin/help2man
 ${PLIST.nls}info/help2man-de.info
+${PLIST.nls}info/help2man-es.info
 ${PLIST.nls}info/help2man-fr.info
 ${PLIST.nls}info/help2man-pl.info
 ${PLIST.nls}info/help2man-uk.info
