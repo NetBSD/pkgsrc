@@ -1,12 +1,10 @@
-$NetBSD: patch-util_texi2dvi,v 1.4 2014/07/17 12:56:23 ryoon Exp $
+$NetBSD: patch-util_texi2dvi,v 1.5 2015/06/30 11:00:33 ryoon Exp $
 
 As indicated in pkg/48075, pdksh doesn't support double-parens
 if not containing an arithmetic expression of a particular form.
 Older bash and ast-ksh apparently also had problems with this.
 
-Second part: fix PR pkg/48075. This should work with pdksh.
- 
---- util/texi2dvi.orig	2013-09-26 23:04:02.000000000 +0000
+--- util/texi2dvi.orig	2015-06-26 12:49:37.000000000 +0000
 +++ util/texi2dvi
 @@ -25,10 +25,10 @@
  # If possible, please send a copy of the output of the script called with
@@ -23,12 +21,3 @@ Second part: fix PR pkg/48075. This should work with pdksh.
  
  # No failure shall remain unpunished.
  set -e
-@@ -1103,7 +1103,7 @@ run_bibtex ()
-   # bibtex would never be run.
-   if test -r "$in_noext.aux" \
-      && test -r "$in_noext.log" \
--     && ((grep 'Warning:.*Citation.*undefined' "$in_noext.log" \
-+     && ( (grep 'Warning:.*Citation.*undefined' "$in_noext.log" \
-           || grep '.*Undefined citation' "$in_noext.log" \
-           || grep 'No file .*\.bbl\.' "$in_noext.log") \
-           || (grep 'No \.aux file' "$in_noext.log" \
