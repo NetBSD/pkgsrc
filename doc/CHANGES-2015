@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2806 2015/06/30 11:00:54 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2807 2015/06/30 11:01:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gdk-pixbuf2 to 2.30.8 [ryoon 2015-06-30]
 	Updated converters/help2man to 1.47.1 [ryoon 2015-06-30]
 	Updated devel/gtexinfo to 6.0 [ryoon 2015-06-30]
+	Updated devel/p5-MooX-Types-MooseLike to 0.29 [wiz 2015-06-30]
