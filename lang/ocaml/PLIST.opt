@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.22 2014/10/09 19:08:28 jaapb Exp $
+@comment $NetBSD: PLIST.opt,v 1.23 2015/06/30 11:08:47 jaapb Exp $
 bin/ocamlbuild.native
 bin/ocamlc.opt
 bin/ocamldep.opt
@@ -134,6 +134,8 @@ lib/ocaml/int_misc.cmx
 lib/ocaml/lazy.cmx
 lib/ocaml/lexing.cmx
 lib/ocaml/libasmrun.a
+lib/ocaml/libasmrun_pic.a
+lib/ocaml/libasmrun_shared.so
 lib/ocaml/libasmrunp.a
 lib/ocaml/libthreadsnat.a
 lib/ocaml/list.cmx

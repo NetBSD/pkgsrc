@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2015/04/17 09:12:12 jaapb Exp $
+# $NetBSD: Makefile,v 1.97 2015/06/30 11:08:47 jaapb Exp $
 
 .include "Makefile.common"
-PKGREVISION=		2
 
 #CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ARGS+=	-cc ${CC}
@@ -37,7 +36,6 @@ PLIST_SRC+=	${PKGDIR}/PLIST.opt
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
       empty(MACHINE_PLATFORM:MSunOS-*-x86_64) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && \
-      empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) && \
       empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-arm) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
