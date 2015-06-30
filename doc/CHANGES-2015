@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2798 2015/06/30 09:54:54 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2799 2015/06/30 10:20:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/cln to 1.3.4 [wen 2015-06-30]
 	Updated x11/libdrm to 2.4.62 [wiz 2015-06-30]
 	Updated multimedia/libvpx to 1.4.0 [ryoon 2015-06-30]
+	Updated graphics/gd to 2.1.1 [ryoon 2015-06-30]
