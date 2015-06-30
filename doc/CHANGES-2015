@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2792 2015/06/30 02:40:40 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2793 2015/06/30 06:48:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5374,3 +5374,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-ecdsa to 0.13 [gls 2015-06-27]
 	Updated chat/ejabberd to 15.06 [fhajny 2015-06-29]
 	Updated math/R to 3.2.1 [wen 2015-06-30]
+	Updated devel/p5-strictures to 2.000001 [wen 2015-06-30]
