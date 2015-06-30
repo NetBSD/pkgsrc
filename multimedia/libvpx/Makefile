@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.55 2015/06/12 10:50:38 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2015/06/30 09:53:17 ryoon Exp $
 
-DISTNAME=	libvpx_1.3.0.orig
-PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	4
+DISTNAME=	libvpx-1.4.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libv/libvpx/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
+GITHUB_PROJECT=	libvpx
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/webm/
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
