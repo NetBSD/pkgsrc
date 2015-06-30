@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2015/05/15 09:17:03 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2015/06/30 07:56:44 wen Exp $
 
-DISTNAME=	cln-1.3.2
-PKGREVISION=	2
+DISTNAME=	cln-1.3.4
 CATEGORIES=	math
 MASTER_SITES=	http://www.ginac.de/CLN/ \
 		ftp://ftpthep.physik.uni-mainz.de/pub/gnu/
