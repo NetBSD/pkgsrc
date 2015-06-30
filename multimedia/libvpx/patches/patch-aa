@@ -1,51 +1,60 @@
-$NetBSD: patch-aa,v 1.8 2014/01/02 15:18:01 ryoon Exp $
+$NetBSD: patch-aa,v 1.9 2015/06/30 09:53:17 ryoon Exp $
 
---- build/make/Makefile.orig	2013-11-18 22:18:52.000000000 +0000
+--- build/make/Makefile.orig	2015-04-03 18:49:19.000000000 +0000
 +++ build/make/Makefile
-@@ -126,7 +126,7 @@ $(BUILD_PFX)%.c.d: %.c
- 
+@@ -147,7 +147,7 @@ $(BUILD_PFX)%.c.d: %.c
  $(BUILD_PFX)%.c.o: %.c
  	$(if $(quiet),@echo "    [CC] $@")
+ 	$(qexec)$(if $(CONFIG_DEPENDENCY_TRACKING),,mkdir -p $(dir $@))
 -	$(qexec)$(CC) $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
 +	$(qexec)${LIBTOOL} --mode=compile $(CC) $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
  
  $(BUILD_PFX)%.cc.d: %.cc
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -135,7 +135,7 @@ $(BUILD_PFX)%.cc.d: %.cc
- 
+@@ -157,7 +157,7 @@ $(BUILD_PFX)%.cc.d: %.cc
  $(BUILD_PFX)%.cc.o: %.cc
  	$(if $(quiet),@echo "    [CXX] $@")
+ 	$(qexec)$(if $(CONFIG_DEPENDENCY_TRACKING),,mkdir -p $(dir $@))
+-	$(qexec)$(CXX) $(INTERNAL_CFLAGS) $(CXXFLAGS) -c -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile $(CXX) $(INTERNAL_CFLAGS) $(CXXFLAGS) -c -o $@ $<
+ 
+ $(BUILD_PFX)%.cpp.d: %.cpp
+ 	$(if $(quiet),@echo "    [DEP] $@")
+@@ -167,7 +167,7 @@ $(BUILD_PFX)%.cpp.d: %.cpp
+ $(BUILD_PFX)%.cpp.o: %.cpp
+ 	$(if $(quiet),@echo "    [CXX] $@")
+ 	$(qexec)$(if $(CONFIG_DEPENDENCY_TRACKING),,mkdir -p $(dir $@))
 -	$(qexec)$(CXX) $(INTERNAL_CFLAGS) $(CXXFLAGS) -c -o $@ $<
 +	$(qexec)${LIBTOOL} --mode=compile $(CXX) $(INTERNAL_CFLAGS) $(CXXFLAGS) -c -o $@ $<
  
  $(BUILD_PFX)%.asm.d: %.asm
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -145,7 +145,8 @@ $(BUILD_PFX)%.asm.d: %.asm
- 
+@@ -178,7 +178,8 @@ $(BUILD_PFX)%.asm.d: %.asm
  $(BUILD_PFX)%.asm.o: %.asm
  	$(if $(quiet),@echo "    [AS] $@")
+ 	$(qexec)$(if $(CONFIG_DEPENDENCY_TRACKING),,mkdir -p $(dir $@))
 -	$(qexec)$(AS) $(ASFLAGS) -o $@ $<
 +	$(qexec)${LIBTOOL} --mode=compile --tag=CC sh strip_fPIC.sh \
 +		$(AS) $(ASFLAGS) -o $@ $<
  
  $(BUILD_PFX)%.s.d: %.s
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -155,7 +156,8 @@ $(BUILD_PFX)%.s.d: %.s
- 
+@@ -189,7 +190,8 @@ $(BUILD_PFX)%.s.d: %.s
  $(BUILD_PFX)%.s.o: %.s
  	$(if $(quiet),@echo "    [AS] $@")
+ 	$(qexec)$(if $(CONFIG_DEPENDENCY_TRACKING),,mkdir -p $(dir $@))
 -	$(qexec)$(AS) $(ASFLAGS) -o $@ $<
 +	$(qexec)${LIBTOOL} --mode=compile --tag=CC sh strip_fPIC.sh \
 +		$(AS) $(ASFLAGS) -o $@ $<
  
  .PRECIOUS: %.c.S
  %.c.S: CFLAGS += -DINLINE_ASM
-@@ -227,13 +229,15 @@ define linker_template
+@@ -254,13 +256,15 @@ define linker_template
  $(1): $(filter-out -%,$(2))
  $(1):
  	$(if $(quiet),@echo    "    [LD] $$@")
 -	$(qexec)$$(LD) $$(strip $$(INTERNAL_LDFLAGS) $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
-+	$(qexec)${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $$@ \
++	$(qexec)${LIBTOOL} --mode=link $(CXX) $(LDFLAGS) -o $$@ \
 +		$$(filter-out -lvpx,$(2)) libvpx.la $$(extralibs)
  endef
  define linkerxx_template
@@ -58,7 +67,7 @@ $NetBSD: patch-aa,v 1.8 2014/01/02 15:18:01 ryoon Exp $
  endef
  # make-3.80 has a bug with expanding large input strings to the eval function,
  # which was triggered in some cases by the following component of
-@@ -246,8 +250,12 @@ endef
+@@ -273,8 +277,12 @@ endef
  define install_map_template
  $(DIST_DIR)/$(1): $(2)
  	$(if $(quiet),@echo "    [INSTALL] $$@")
@@ -73,7 +82,7 @@ $NetBSD: patch-aa,v 1.8 2014/01/02 15:18:01 ryoon Exp $
  endef
  
  define archive_template
-@@ -256,7 +264,9 @@ define archive_template
+@@ -283,7 +291,9 @@ define archive_template
  # for creating them.
  $(1):
  	$(if $(quiet),@echo "    [AR] $$@")
@@ -84,7 +93,7 @@ $NetBSD: patch-aa,v 1.8 2014/01/02 15:18:01 ryoon Exp $
  endef
  
  define so_template
-@@ -348,9 +358,9 @@ clean::
+@@ -380,9 +390,9 @@ clean::
  	rm -f .bins .install-bins $(BINS)
  
  LIBS=$(call enabled,LIBS)
@@ -93,10 +102,10 @@ $NetBSD: patch-aa,v 1.8 2014/01/02 15:18:01 ryoon Exp $
  	@touch $@
 -$(foreach lib,$(filter %_g.a,$(LIBS)),$(eval $(call archive_template,$(lib))))
 +$(foreach lib,$(filter %.a,$(LIBS)),$(eval $(call archive_template,$(lib))))
- $(foreach lib,$(filter %so.$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH),$(LIBS)),$(eval $(call so_template,$(lib))))
- $(foreach lib,$(filter %$(VERSION_MAJOR).dylib,$(LIBS)),$(eval $(call dl_template,$(lib))))
+ $(foreach lib,$(filter %so.$(SO_VERSION_MAJOR).$(SO_VERSION_MINOR).$(SO_VERSION_PATCH),$(LIBS)),$(eval $(call so_template,$(lib))))
+ $(foreach lib,$(filter %$(SO_VERSION_MAJOR).dylib,$(LIBS)),$(eval $(call dl_template,$(lib))))
  
-@@ -358,11 +368,11 @@ INSTALL-LIBS=$(call cond_enabled,CONFIG_
+@@ -390,11 +400,11 @@ INSTALL-LIBS=$(call cond_enabled,CONFIG_
  ifeq ($(MAKECMDGOALS),dist)
  INSTALL-LIBS+=$(call cond_enabled,CONFIG_INSTALL_LIBS,DIST-LIBS)
  endif
@@ -110,7 +119,7 @@ $NetBSD: patch-aa,v 1.8 2014/01/02 15:18:01 ryoon Exp $
  
  ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
  PROJECTS=$(call enabled,PROJECTS)
-@@ -416,7 +426,7 @@ ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
+@@ -445,7 +455,7 @@ ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
      BUILD_TARGETS += .projects
      INSTALL_TARGETS += .install-projects
  endif

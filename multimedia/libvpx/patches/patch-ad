@@ -1,96 +1,99 @@
-$NetBSD: patch-ad,v 1.16 2014/11/14 11:51:01 jmcneill Exp $
+$NetBSD: patch-ad,v 1.17 2015/06/30 09:53:17 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
 All sparc cpus can not do unaligned access.
 Detect NetBSD ARMv7 hardfloat toolchain.
 
---- build/make/configure.sh.orig	2013-12-17 17:05:18.000000000 +0000
+--- build/make/configure.sh.orig	2015-04-03 18:49:19.000000000 +0000
 +++ build/make/configure.sh
-@@ -604,7 +604,7 @@ process_common_toolchain() {
-             armv6*)
-                 tgt_isa=armv6
-                 ;;
--            armv7*-hardfloat*)
-+            armv7*-hardfloat*|armv7*-netbsd*-*hf)
-                 tgt_isa=armv7
-                 float_abi=hard
-                 ;;
-@@ -665,7 +665,7 @@ process_common_toolchain() {
-                 [ -z "$tgt_isa" ] && tgt_isa=x86
-                 tgt_os=win32
-                 ;;
--            *linux*|*bsd*)
-+            *linux*|*bsd*|*qnx6*)
-                 tgt_os=linux
-                 ;;
-             *solaris2.10)
-@@ -704,6 +704,7 @@ process_common_toolchain() {
-     case ${tgt_isa} in
-         arm*) enable_feature arm;;
-         mips*) enable_feature mips;;
-+	sparc) disable_feature fast_unaligned;;
-     esac
+@@ -626,7 +626,7 @@ process_common_toolchain() {
+       armv6*)
+         tgt_isa=armv6
+         ;;
+-      armv7*-hardfloat*)
++      armv7*-hardfloat*|armv7*-netbsd*-*hf)
+         tgt_isa=armv7
+         float_abi=hard
+         ;;
+@@ -688,7 +688,7 @@ process_common_toolchain() {
+         [ -z "$tgt_isa" ] && tgt_isa=x86
+         tgt_os=win32
+         ;;
+-      *linux*|*bsd*)
++      *linux*|*bsd*|*qnx6*)
+         tgt_os=linux
+         ;;
+       *solaris2.10)
+@@ -731,6 +731,9 @@ process_common_toolchain() {
+     mips*)
+       enable_feature mips
+       ;;
++    sparc*)
++      enable_feature fast_unaligned
++      ;;
+   esac
  
-     # PIC is probably what we want when building shared libs
-@@ -799,7 +800,7 @@ process_common_toolchain() {
+   # PIC is probably what we want when building shared libs
+@@ -831,7 +834,7 @@ process_common_toolchain() {
  
-         case ${tgt_cc} in
+       case ${tgt_cc} in
          gcc)
--            CROSS=${CROSS:-arm-none-linux-gnueabi-}
-+#            CROSS=${CROSS:-arm-none-linux-gnueabi-}
-             link_with_cc=gcc
-             setup_gnu_toolchain
-             arch_int=${tgt_isa##armv}
-@@ -988,8 +989,6 @@ EOF
-             check_add_cflags -mips32r2 -mdspr2
-             disable_feature fast_unaligned
-         fi
--        check_add_cflags -march=${tgt_isa}
--        check_add_asflags -march=${tgt_isa}
-         check_add_asflags -KPIC
-     ;;
+-          CROSS=${CROSS:-arm-none-linux-gnueabi-}
++#          CROSS=${CROSS:-arm-none-linux-gnueabi-}
+           link_with_cc=gcc
+           setup_gnu_toolchain
+           arch_int=${tgt_isa##armv}
+@@ -1041,8 +1044,6 @@ EOF
+         check_add_cflags -mips32r2 -mdspr2
+         disable_feature fast_unaligned
+       fi
+-      check_add_cflags -march=${tgt_isa}
+-      check_add_asflags -march=${tgt_isa}
+       check_add_asflags -KPIC
+       ;;
      ppc*)
-@@ -1219,7 +1218,7 @@ EOF
-     check_cc <<EOF
-     unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
+@@ -1280,7 +1281,7 @@ EOF
+   check_cc <<EOF
+ unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
 -    [ -f "${TMP_O}" ] && od -A n -t x1 "${TMP_O}" | tr -d '\n' |
-+    [ -f "${TMP_O}" ] && od -t x1 "${TMP_O}" | cut -c 8- | tr -d '\n' |
++    [ -f "${TMP_O}" ] && od -t x1 "${TMP_O}" | tr -d '\n' |
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1235,10 +1234,32 @@ EOF
-         case ${toolchain} in
-             *-win*-vs*);;
-             *-android-gcc);;
--            *) check_header pthread.h && add_extralibs -lpthread
-+            *) check_header pthread.h && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
-         esac
-     fi
+@@ -1296,11 +1297,33 @@ EOF
+       *-android-gcc)
+         ;;
+       *)
+-        check_header pthread.h && add_extralibs -lpthread
++        check_header pthread.h && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+         ;;
+     esac
+   fi
  
-+    case ${tgt_os} in
-+    darwin*)
-+       add_extralibs -lm
-+       ;;
-+    solaris*)
-+       add_extralibs -lm -lrt
-+       ;;
-+    linux*)
-+       case ${gcctarget} in
-+       *qnx6*)
-+           add_extralibs -lm
-+           ;;
-+       *openbsd*)
-+           add_extralibs -lm
-+           ;;
-+       *)
-+           add_extralibs -lm -lrt
-+           ;;
-+       esac
-+       ;;
-+    esac
++  case ${tgt_os} in
++  darwin*)
++     add_extralibs -lm
++     ;;
++  solaris*)
++     add_extralibs -lm -lrt
++     ;;
++  linux*)
++     case ${gcctarget} in
++     *qnx6*)
++         add_extralibs -lm
++         ;;
++     *openbsd*)
++         add_extralibs -lm
++         ;;
++     *)
++         add_extralibs -lm -lrt
++         ;;
++     esac
++     ;;
++  esac
 +
-     # only for MIPS platforms
-     case ${toolchain} in
-         mips*)
+   # only for MIPS platforms
+   case ${toolchain} in
+     mips*)
