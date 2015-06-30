@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/04/25 14:20:23 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/30 09:57:34 ryoon Exp $
 
 DISTNAME=	quodlibet-2.6.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://bitbucket.org/lazka/quodlibet-files/raw/default/releases/
 

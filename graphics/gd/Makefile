@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2015/06/12 10:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2015/06/30 09:57:36 ryoon Exp $
 
 DISTNAME=	libgd-2.1.0
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://cdn.bitbucket.org/libgd/gd-libgd/downloads/
 EXTRACT_SUFX=	.tar.xz
