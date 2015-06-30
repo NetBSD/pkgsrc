@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2817 2015/06/30 22:44:28 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2818 2015/06/30 22:47:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5399,3 +5399,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/RBTools to 0.7.4 [richard 2015-06-30]
 	Updated devel/py-pbr to 1.2.0 [rodent 2015-06-30]
 	Updated devel/py-limits to 1.0.8 [rodent 2015-06-30]
+	Updated devel/py-modulegraph to 0.12.1 [rodent 2015-06-30]
