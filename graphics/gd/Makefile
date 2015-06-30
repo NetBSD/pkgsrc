@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.105 2015/06/30 09:57:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.106 2015/06/30 10:20:10 ryoon Exp $
 
-DISTNAME=	libgd-2.1.0
+DISTNAME=	libgd-2.1.1
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	4
 CATEGORIES=	graphics
-MASTER_SITES=	http://cdn.bitbucket.org/libgd/gd-libgd/downloads/
+MASTER_SITES=	https://bitbucket.org/libgd/gd-libgd/downloads/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://libgd.bitbucket.org/
 COMMENT=	Graphics library for the dynamic creation of images
+
+#WRKSRC=		${WRKDIR}/${DISTNAME:S/libgd-/libgd-gd-/}
 
 .include "options.mk"
 
