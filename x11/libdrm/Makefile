@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2015/05/07 06:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2015/06/30 09:06:56 wiz Exp $
 
-DISTNAME=		libdrm-2.4.61
+DISTNAME=		libdrm-2.4.62
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -37,6 +37,7 @@ CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
+CONFIGURE_ARGS+=	--disable-valgrind
 
 PLIST_VARS+=	intel arm
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
