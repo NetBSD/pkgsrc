@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2812 2015/06/30 11:14:04 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.2813 2015/06/30 11:48:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5394,3 +5394,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ocaml to 4.02.2 [jaapb 2015-06-30]
 	Updated lang/camlp5 to 6.13 [jaapb 2015-06-30]
 	Updated x11/ocaml-lablgtk to 2.18.3nb4 [jaapb 2015-06-30]
+	Updated net/choqok to 1.5 [jaapb 2015-06-30]
