@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2815 2015/06/30 22:02:33 richard Exp $
+$NetBSD: CHANGES-2015,v 1.2816 2015/06/30 22:42:45 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5397,3 +5397,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/choqok to 1.5 [jaapb 2015-06-30]
 	Updated net/ntp4 to 4.2.8p3 [taca 2015-06-30]
 	Updated devel/RBTools to 0.7.4 [richard 2015-06-30]
+	Updated devel/py-pbr to 1.2.0 [rodent 2015-06-30]
