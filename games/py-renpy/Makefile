@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/30 09:57:35 ryoon Exp $
 
 DISTNAME=	renpy-6.16.5-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.renpy.org/dl/6.16.5/
 EXTRACT_SUFX=	.tar.bz2

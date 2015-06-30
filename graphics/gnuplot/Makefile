@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2015/04/26 09:25:44 tnn Exp $
+# $NetBSD: Makefile,v 1.99 2015/06/30 09:57:36 ryoon Exp $
 
 DISTNAME=	gnuplot-5.0.0
 API_VERSION=	${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnuplot.sourceforge.net/
 COMMENT=	Portable interactive, function plotting utility
-PKGREVISION=	1
+PKGREVISION=	2
 #LICENSE=	gnuplot + BSD
 
 CONFLICTS+=		gnuplot-nox11-[0-9]*
