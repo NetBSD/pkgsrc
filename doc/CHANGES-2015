@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2804 2015/06/30 10:48:17 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2805 2015/06/30 10:55:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/pango to 1.37.1 [ryoon 2015-06-30]
 	Updated graphics/tiff to 4.0.4 [ryoon 2015-06-30]
 	Updated graphics/gdk-pixbuf2 to 2.30.8 [ryoon 2015-06-30]
+	Updated converters/help2man to 1.47.1 [ryoon 2015-06-30]
