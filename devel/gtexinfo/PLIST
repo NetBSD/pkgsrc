@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.17 2013/10/06 16:12:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/06/30 11:00:32 ryoon Exp $
 bin/info
-bin/infokey
 bin/install-info
 bin/makeinfo
 bin/pdftexi2dvi
@@ -13,7 +12,6 @@ info/info-stnd.info
 info/info.info
 info/texinfo.info
 man/man1/info.1
-man/man1/infokey.1
 man/man1/install-info.1
 man/man1/makeinfo.1
 man/man1/pdftexi2dvi.1
@@ -57,4 +55,5 @@ share/texinfo/init/chm.pm
 share/texinfo/init/html32.pm
 share/texinfo/init/latex2html.pm
 share/texinfo/init/tex4ht.pm
+share/texinfo/texindex.awk
 share/texinfo/texinfo.dtd
