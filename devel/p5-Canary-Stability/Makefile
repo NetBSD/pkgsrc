@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/06/14 18:15:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/30 07:28:29 wen Exp $
 
-DISTNAME=	Canary-Stability-2001
+DISTNAME=	Canary-Stability-2006
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/ML/MLEHMANN/}
