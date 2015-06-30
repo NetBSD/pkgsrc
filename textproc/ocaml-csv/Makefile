@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/03/06 01:18:58 sevan Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/30 11:52:59 jaapb Exp $
 
 PKGNAME= ocaml-${DISTNAME}
 DISTNAME=	csv-1.3.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1172/
 
