@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.63 2015/03/29 14:47:03 bsiegert Exp $
+$NetBSD: distinfo,v 1.64 2015/06/30 10:42:19 ryoon Exp $
 
-SHA1 (tiff-4.0.4beta.tar.gz) = 987568b81f6c40653eb79386fa0e163f3c6ab6fb
-RMD160 (tiff-4.0.4beta.tar.gz) = 0f7c47bad8d6d9cd75d3bf42abf0a6133c1ea129
-Size (tiff-4.0.4beta.tar.gz) = 2098962 bytes
-SHA1 (patch-configure) = 1fb9ef790a59ac9c1396dd8e962c75946e2c998a
+SHA1 (tiff-4.0.4.tar.gz) = 185f844babe4ee902b5e4775d9f65915fcbabd11
+RMD160 (tiff-4.0.4.tar.gz) = 351a72505dce4a679df023b7f3870c389d7df4c7
+Size (tiff-4.0.4.tar.gz) = 2100766 bytes
