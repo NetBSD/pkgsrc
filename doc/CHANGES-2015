@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2794 2015/06/30 06:55:50 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2795 2015/06/30 07:29:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5376,3 +5376,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R to 3.2.1 [wen 2015-06-30]
 	Updated devel/p5-strictures to 2.000001 [wen 2015-06-30]
 	Updated devel/p5-Params-Validate to 1.20 [wen 2015-06-30]
+	Updated devel/p5-Canary-Stability to 2006 [wen 2015-06-30]
