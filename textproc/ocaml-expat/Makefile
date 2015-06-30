@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/01/20 14:24:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/30 11:52:59 jaapb Exp $
 #
 
 DISTNAME=	ocaml-expat-0.9.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://mmzeeman.home.xs4all.nl/ocaml/
 

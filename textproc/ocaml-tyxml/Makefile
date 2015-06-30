@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2015/01/20 16:03:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/30 11:52:59 jaapb Exp $
 #
 
 PKGNAME=	ocaml-tyxml-${VERSION}
 DISTNAME=	${VERSION}
 VERSION=	3.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/ocsigen/tyxml/archive/
 

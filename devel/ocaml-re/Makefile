@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/02/11 13:56:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/30 11:52:57 jaapb Exp $
 
 DISTNAME=	ocaml-re-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME} # avoid prefixing with ocaml-
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/ocaml/ocaml-re/archive/
