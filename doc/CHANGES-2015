@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2808 2015/06/30 11:02:37 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2809 2015/06/30 11:04:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5390,3 +5390,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/gtexinfo to 6.0 [ryoon 2015-06-30]
 	Updated devel/p5-MooX-Types-MooseLike to 0.29 [wiz 2015-06-30]
 	Updated security/p5-Net-SSLeay to 1.70 [wiz 2015-06-30]
+	Updated www/p5-URI to 1.68 [wiz 2015-06-30]
