@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 14:25:14 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/30 11:13:39 jaapb Exp $
 
 DISTNAME=	lablgtk-2.18.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1456/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1479/
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://lablgtk.forge.ocamlcore.org/
@@ -12,11 +12,9 @@ COMMENT=	GTK+ 2.x bindings for Objective Caml
 LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-debug
 USE_TOOLS+=		gmake pkg-config
 OCAML_USE_FINDLIB=	yes
-
-# seems to have been forgotten in 2.18.3 release
-WRKSRC=		${WRKDIR}/lablgtk-2.18.2
 
 MAKE_JOBS_SAFE=		no
 BUILD_TARGET=		world
