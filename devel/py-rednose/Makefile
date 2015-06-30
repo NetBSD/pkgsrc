@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/12/06 03:12:25 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/30 22:51:56 rodent Exp $
 
-DISTNAME=	rednose-0.4.1
+DISTNAME=	rednose-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/r/rednose/
