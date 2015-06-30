@@ -1,5 +1,6 @@
-$NetBSD: patch-ocamldoc_odoc__messages.ml,v 1.1 2015/04/02 22:40:09 tnn Exp $
+$NetBSD: patch-ocamldoc_odoc__messages.ml,v 1.2 2015/06/30 11:08:47 jaapb Exp $
 
+Put man pages in section 3 rather than 3o
 --- ocamldoc/odoc_messages.ml.orig	2014-09-26 13:00:20.000000000 +0000
 +++ ocamldoc/odoc_messages.ml
 @@ -89,7 +89,7 @@ let default_man_section = "3"

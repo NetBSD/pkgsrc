@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2015/04/02 22:40:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.30 2015/06/30 11:08:47 jaapb Exp $
 bin/ocaml
 bin/ocamlbuild
 bin/ocamlbuild.byte
@@ -44,6 +44,7 @@ lib/ocaml/bytesLabels.mli
 lib/ocaml/callback.cmi
 lib/ocaml/callback.ml
 lib/ocaml/callback.mli
+lib/ocaml/caml/address_class.h
 lib/ocaml/caml/alloc.h
 lib/ocaml/caml/bigarray.h
 lib/ocaml/caml/callback.h
@@ -51,6 +52,7 @@ lib/ocaml/caml/compatibility.h
 lib/ocaml/caml/config.h
 lib/ocaml/caml/custom.h
 lib/ocaml/caml/fail.h
+lib/ocaml/caml/gc.h
 lib/ocaml/caml/hash.h
 lib/ocaml/caml/intext.h
 lib/ocaml/caml/memory.h
@@ -123,6 +125,8 @@ lib/ocaml/compiler-libs/annot.cmi
 lib/ocaml/compiler-libs/ast_helper.cmi
 lib/ocaml/compiler-libs/ast_mapper.cmi
 lib/ocaml/compiler-libs/asttypes.cmi
+lib/ocaml/compiler-libs/branch_relaxation.cmi
+lib/ocaml/compiler-libs/branch_relaxation_intf.cmi
 lib/ocaml/compiler-libs/btype.cmi
 lib/ocaml/compiler-libs/bytegen.cmi
 lib/ocaml/compiler-libs/bytelibrarian.cmi
@@ -145,6 +149,7 @@ lib/ocaml/compiler-libs/ctype.cmi
 lib/ocaml/compiler-libs/datarepr.cmi
 lib/ocaml/compiler-libs/deadcode.cmi
 lib/ocaml/compiler-libs/dll.cmi
+lib/ocaml/compiler-libs/docstrings.cmi
 lib/ocaml/compiler-libs/envaux.cmi
 lib/ocaml/compiler-libs/emitcode.cmi
 lib/ocaml/compiler-libs/env.cmi
@@ -266,6 +271,7 @@ lib/ocaml/lexing.ml
 lib/ocaml/lexing.mli
 lib/ocaml/libbigarray.a
 lib/ocaml/libcamlrun.a
+lib/ocaml/libcamlrun_pic.a
 lib/ocaml/libcamlrun_shared.so
 lib/ocaml/libcamlstr.a
 lib/ocaml/libnums.a
@@ -338,6 +344,7 @@ lib/ocaml/${PKGMANDIR}/man3/CamlinternalOO.3
 lib/ocaml/${PKGMANDIR}/man3/Char.3
 lib/ocaml/${PKGMANDIR}/man3/Complex.3
 lib/ocaml/${PKGMANDIR}/man3/Digest.3
+lib/ocaml/${PKGMANDIR}/man3/Docstrings.3
 lib/ocaml/${PKGMANDIR}/man3/Filename.3
 lib/ocaml/${PKGMANDIR}/man3/Format.3
 lib/ocaml/${PKGMANDIR}/man3/Gc.3
