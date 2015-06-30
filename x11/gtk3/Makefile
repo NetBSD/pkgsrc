@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2015/06/30 09:39:49 tnn Exp $
+# $NetBSD: Makefile,v 1.68 2015/06/30 13:10:24 tnn Exp $
 
 DISTNAME=	gtk+-3.16.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -13,12 +13,15 @@ COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl pkg-config bash
+USE_TOOLS+=		gmake perl pkg-config bash xgettext msgmerge
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
+# There is no logic in gettext.mk to detect the native version of xgettext,
+# and we do need it to be compiled with Glade support.
+_TOOLS_USE_PKGSRC.xgettext=yes
 
 GNU_CONFIGURE=		yes
 # XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh
