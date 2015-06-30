@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2015/06/12 10:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2015/06/30 21:39:09 richard Exp $
 
 DISTNAME=	bison-3.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +21,8 @@ CONFIGURE_ENV+=		ac_cv_prog_M4=${TOOLS_PATH.gm4}
 
 INFO_FILES=		yes
 TEST_TARGET=		check
+REPLACE_PERL+=		examples/extexi
+REPLACE_SH+=		examples/test examples/*/*.test
 
 .include "../../mk/bsd.prefs.mk"
 
