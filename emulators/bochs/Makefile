@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2015/04/26 13:26:57 joerg Exp $
+# $NetBSD: Makefile,v 1.82 2015/07/01 13:39:17 ryoon Exp $
 
-DISTNAME=		bochs-2.6.2
-PKGREVISION=		4
+DISTNAME=		bochs-2.6.8
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -17,6 +16,7 @@ USE_TOOLS+=		gmake gunzip gzip
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
+ONLY_FOR_COMPILER=	gcc
 CXXFLAGS+=		-DPARANOID
 
 CONFIGURE_ARGS+=	--enable-cdrom
