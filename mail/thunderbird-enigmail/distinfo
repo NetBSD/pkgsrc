@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/07/01 12:54:32 ryoon Exp $
+
+SHA1 (enigmail-1.8.2.tar.gz) = 484158091985bb06ffa175348bafccea0250a348
+RMD160 (enigmail-1.8.2.tar.gz) = 7f691a485ec11b711d6fd4019425cf68dd511c07
+Size (enigmail-1.8.2.tar.gz) = 1604159 bytes
+SHA1 (patch-ipc_src_Makefile) = 0a2e7c33869fbe7d21e1a78faf15e60e93adcf7b
