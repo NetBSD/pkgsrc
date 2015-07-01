@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/06/12 10:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/01 23:26:53 rodent Exp $
 #
 
-DISTNAME=	HTML-FormatText-WithLinks-AndTables-0.02
+DISTNAME=	HTML-FormatText-WithLinks-AndTables-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
@@ -14,9 +13,11 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-HTML-FormatText-WithLinks>=0:../../textproc/p5-HTML-FormatText-WithLinks
 
-WRKSRC=		${WRKDIR}/HTML-FormatText-WithLinks-AndTables
 PERL5_PACKLIST=	auto/HTML/FormatText/WithLinks/AndTables/.packlist
 USE_LANGUAGES=	# none
+
+post-install:
+	${CHMOD} -x ${DESTDIR}${PREFIX}/${PERL5_SUB_INSTALLVENDORLIB}/HTML/FormatText/WithLinks/AndTables.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
