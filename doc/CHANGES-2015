@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2823 2015/07/01 05:25:15 nonaka Exp $
+$NetBSD: CHANGES-2015,v 1.2824 2015/07/01 07:34:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5405,3 +5405,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/p5-Lingua-EN-Fathom version 1.18 [rodent 2015-07-01]
 	Added textproc/p5-Publican version 4.3.1 [rodent 2015-07-01]
 	Updated fonts/koruri-ttf to 20150701 [nonaka 2015-07-01]
+	Updated devel/p5-common-sense to 3.74 [wiz 2015-07-01]
