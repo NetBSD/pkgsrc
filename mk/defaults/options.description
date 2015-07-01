@@ -474,7 +474,6 @@ modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
 motoya			Add motoya fonts.
 mozilla			Use mozilla as gecko rendering engine.
-mozilla-enigmail	Enable the Enigmail OpenPGP extension.
 mozilla-jemalloc	Enable building with Mozilla'a jemalloc.
 mozilla-jit		Enable nanojit javascript acceleration.
 mozilla-lightning	Enable the lightning calendar extension.
