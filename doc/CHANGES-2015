@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2829 2015/07/01 09:24:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2830 2015/07/01 09:25:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5411,3 +5411,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mbone/dbeacon to 0.3.9.1nb5 [he 2015-07-01]
 	Updated audio/musicpd to 0.19.10 [wiz 2015-07-01]
 	Updated devel/colordiff to 1.0.15 [wiz 2015-07-01]
+	Updated time/py-vdirsyncer to 0.5.2 [wiz 2015-07-01]
