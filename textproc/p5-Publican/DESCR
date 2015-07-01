@@ -1,0 +1,3 @@
+Publican is a DocBook publication system, not just a DocBook processing tool. As
+well as ensuring your DocBook XML is valid, publican works to ensure your XML is
+up to publishable standard.
