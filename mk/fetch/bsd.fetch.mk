@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch.mk,v 1.8 2015/03/07 14:17:52 tnn Exp $
+# $NetBSD: bsd.fetch.mk,v 1.9 2015/07/01 00:55:34 rodent Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "fetch" step.
@@ -39,4 +39,4 @@
 .include "fetch-list.mk"
 .include "distclean.mk"
 .include "github.mk"
-
+#.include "pypi.mk"
