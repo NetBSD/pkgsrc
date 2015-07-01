@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2843 2015/07/01 11:50:27 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2844 2015/07/01 12:34:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-psycopg2 to 2.6.1 [wiz 2015-07-01]
 	Updated editors/Sigil to 0.8.7 [wiz 2015-07-01]
 	Updated finance/gnucash to 2.6.7 [wiz 2015-07-01]
+	Updated fonts/umefont-ttf to 0.520 [ryoon 2015-07-01]
