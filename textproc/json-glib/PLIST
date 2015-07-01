@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/04/20 09:36:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/07/01 09:32:36 wiz Exp $
 bin/json-glib-format
 bin/json-glib-validate
 include/json-glib-1.0/json-glib/json-builder.h
@@ -38,6 +38,8 @@ share/gtk-doc/html/json-glib/ix05.html
 share/gtk-doc/html/json-glib/ix06.html
 share/gtk-doc/html/json-glib/ix07.html
 share/gtk-doc/html/json-glib/ix08.html
+share/gtk-doc/html/json-glib/ix09.html
+share/gtk-doc/html/json-glib/ix10.html
 share/gtk-doc/html/json-glib/json-advanced.html
 share/gtk-doc/html/json-glib/json-base.html
 share/gtk-doc/html/json-glib/json-format-tool.html
@@ -66,6 +68,7 @@ share/gtk-doc/html/json-glib/up.png
 ${PLIST.nls}share/locale/as/LC_MESSAGES/json-glib-1.0.mo
 ${PLIST.nls}share/locale/bg/LC_MESSAGES/json-glib-1.0.mo
 ${PLIST.nls}share/locale/bn_IN/LC_MESSAGES/json-glib-1.0.mo
+${PLIST.nls}share/locale/bs/LC_MESSAGES/json-glib-1.0.mo
 ${PLIST.nls}share/locale/ca/LC_MESSAGES/json-glib-1.0.mo
 ${PLIST.nls}share/locale/ca@valencia/LC_MESSAGES/json-glib-1.0.mo
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/json-glib-1.0.mo
