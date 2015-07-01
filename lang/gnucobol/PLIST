@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/01 14:23:55 ryoon Exp $
+bin/cob-config
+bin/cobc
+bin/cobcrun
+include/libcob.h
+include/libcob/cobgetopt.h
+include/libcob/common.h
+include/libcob/exception.def
+info/gnucobol.info
+lib/gnu-cobol/CBL_OC_DUMP.so
+lib/libcob.la
+share/gnu-cobol/config/bs2000.conf
+share/gnu-cobol/config/cobol2002.conf
+share/gnu-cobol/config/cobol85.conf
+share/gnu-cobol/config/default.conf
+share/gnu-cobol/config/ibm.conf
+share/gnu-cobol/config/mf.conf
+share/gnu-cobol/config/mvs.conf
+share/gnu-cobol/copy/screenio.cpy
+share/gnu-cobol/copy/sqlca.cpy
+share/gnu-cobol/copy/sqlda.cpy
+share/locale/en@boldquot/LC_MESSAGES/gnu-cobol.mo
+share/locale/en@quot/LC_MESSAGES/gnu-cobol.mo
+share/locale/es/LC_MESSAGES/gnu-cobol.mo
+share/locale/ja/LC_MESSAGES/gnu-cobol.mo
