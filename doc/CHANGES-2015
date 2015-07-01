@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2847 2015/07/01 13:39:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2848 2015/07/01 13:40:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5430,3 +5430,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added mail/thunderbird-enigmail version 1.8.2 [ryoon 2015-07-01]
 	Added mail/seamonkey-enigmail version 1.8.2 [ryoon 2015-07-01]
 	Updated lang/gcc49 to 4.9.3 [wiz 2015-07-01]
+	Updated emulators/bochs to 2.6.8 [ryoon 2015-07-01]

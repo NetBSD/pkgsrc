@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14520 2015/07/01 13:39:43 wiz Exp $
+$NetBSD: TODO,v 1.14521 2015/07/01 13:40:36 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -423,8 +423,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.6.7 [wip]
-	o bochs-2.6.8
 	o boolean-7.1
 	o bos-2.5
 	o boson-0.13
