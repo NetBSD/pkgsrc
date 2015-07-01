@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/08/29 02:12:31 rodent Exp $
+$NetBSD: distinfo,v 1.8 2015/07/01 23:06:59 rodent Exp $
 
-SHA1 (solarus-1.3.1-src.tar.gz) = c4e46197e9d856fe9f65ce3e15d8225e4d9dd186
-RMD160 (solarus-1.3.1-src.tar.gz) = 31f20c1e8e3167b9ea1889edf591cd7d27a80556
-Size (solarus-1.3.1-src.tar.gz) = 2450599 bytes
+SHA1 (solarus-1.4.2-src.tar.gz) = 145c34d617f66ed419aa18e69616b5e7331a0092
+RMD160 (solarus-1.4.2-src.tar.gz) = 3bada277c00ab929fc9bf16f475c8cff03ea7ee4
+Size (solarus-1.4.2-src.tar.gz) = 2443414 bytes
