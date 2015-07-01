@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/05/07 18:23:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/07/01 09:36:21 wiz Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -1188,6 +1188,8 @@ share/doc/java/ant/api/org/apache/tools/ant/types/resolver/package-tree.html
 share/doc/java/ant/api/org/apache/tools/ant/types/resources/AbstractClasspathResource.ClassLoaderWithFlag.html
 share/doc/java/ant/api/org/apache/tools/ant/types/resources/AbstractClasspathResource.html
 share/doc/java/ant/api/org/apache/tools/ant/types/resources/AbstractResourceCollectionWrapper.html
+share/doc/java/ant/api/org/apache/tools/ant/types/resources/AllButFirst.html
+share/doc/java/ant/api/org/apache/tools/ant/types/resources/AllButLast.html
 share/doc/java/ant/api/org/apache/tools/ant/types/resources/Appendable.html
 share/doc/java/ant/api/org/apache/tools/ant/types/resources/ArchiveResource.html
 share/doc/java/ant/api/org/apache/tools/ant/types/resources/Archives.html
@@ -1500,7 +1502,10 @@ share/doc/java/ant/api/overview-frame.html
 share/doc/java/ant/api/overview-summary.html
 share/doc/java/ant/api/overview-tree.html
 share/doc/java/ant/api/package-list
-share/doc/java/ant/api/resources/inherit.gif
+share/doc/java/ant/api/resources/background.gif
+share/doc/java/ant/api/resources/tab.gif
+share/doc/java/ant/api/resources/titlebar.gif
+share/doc/java/ant/api/resources/titlebar_end.gif
 share/doc/java/ant/api/serialized-form.html
 share/doc/java/ant/api/stylesheet.css
 share/doc/java/ant/argumentprocessor.html
