@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/01 02:44:29 rodent Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Lingua/EN/Fathom.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Lingua/EN/Fathom/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Lingua::EN::Fathom.3
