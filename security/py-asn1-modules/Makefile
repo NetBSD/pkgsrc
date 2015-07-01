@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/01 13:55:20 wiz Exp $
 
-DISTNAME=		pyasn1-modules-0.0.5
+DISTNAME=		pyasn1-modules-0.0.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pyasn1/}
