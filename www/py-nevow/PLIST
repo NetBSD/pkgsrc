@@ -1,20 +1,35 @@
-@comment $NetBSD: PLIST,v 1.4 2010/07/23 23:20:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/07/01 13:47:46 wiz Exp $
 bin/nevow-xmlgettext
 bin/nit
 doc/README
+doc/howto/chattutorial/concepts.xhtml
+doc/howto/chattutorial/env.xhtml
+doc/howto/chattutorial/index.xhtml
+doc/howto/chattutorial/intro.xhtml
+doc/howto/chattutorial/part00/index.xhtml
 doc/howto/chattutorial/part00/listings/echothing/__init__.py
 doc/howto/chattutorial/part00/listings/echothing/echobox.py
 doc/howto/chattutorial/part00/listings/echothing/js/EchoThing.js
 doc/howto/chattutorial/part00/listings/echothing/template.html
 doc/howto/chattutorial/part00/listings/nevow/plugins/echothing_package.py
+doc/howto/chattutorial/part01/index.xhtml
 doc/howto/chattutorial/part01/listings/chatthing/__init__.py
 doc/howto/chattutorial/part01/listings/chatthing/chatterbox.py
 doc/howto/chattutorial/part01/listings/chatthing/js/ChatThing.js
 doc/howto/chattutorial/part01/listings/chatthing/template.html
 doc/howto/chattutorial/part01/listings/nevow/plugins/chatthing_package.py
+doc/howto/deployment.xhtml
+doc/howto/gettingstarted.xhtml
+doc/howto/glossary.xhtml
+doc/howto/index.xhtml
+doc/howto/intro.xhtml
 doc/howto/listings/gettingstarted/helloworld.py
 doc/howto/listings/gettingstarted/helloworld.tac
+doc/howto/publishing.xhtml
 doc/howto/stylesheet.css
+doc/howto/template.tpl
+doc/howto/traversal.xhtml
+doc/howto/xmltemplates.xhtml
 doc/html/default.css
 doc/man/nevow-xmlgettext.1
 doc/old/nevow.doc
@@ -22,6 +37,8 @@ doc/old/toc.html
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/formless/__init__.py
 ${PYSITELIB}/formless/__init__.pyc
@@ -276,9 +293,6 @@ ${PYSITELIB}/nevow/test/livetest_athena.pyo
 ${PYSITELIB}/nevow/test/livetest_runtime.py
 ${PYSITELIB}/nevow/test/livetest_runtime.pyc
 ${PYSITELIB}/nevow/test/livetest_runtime.pyo
-${PYSITELIB}/nevow/test/segfault.py
-${PYSITELIB}/nevow/test/segfault.pyc
-${PYSITELIB}/nevow/test/segfault.pyo
 ${PYSITELIB}/nevow/test/test_accessors.py
 ${PYSITELIB}/nevow/test/test_accessors.pyc
 ${PYSITELIB}/nevow/test/test_accessors.pyo
@@ -345,6 +359,9 @@ ${PYSITELIB}/nevow/test/test_newflat.pyo
 ${PYSITELIB}/nevow/test/test_nit.py
 ${PYSITELIB}/nevow/test/test_nit.pyc
 ${PYSITELIB}/nevow/test/test_nit.pyo
+${PYSITELIB}/nevow/test/test_package.py
+${PYSITELIB}/nevow/test/test_package.pyc
+${PYSITELIB}/nevow/test/test_package.pyo
 ${PYSITELIB}/nevow/test/test_passobj.py
 ${PYSITELIB}/nevow/test/test_passobj.pyc
 ${PYSITELIB}/nevow/test/test_passobj.pyo
@@ -400,4 +417,6 @@ ${PYSITELIB}/nevow/wsgi.pyo
 ${PYSITELIB}/nevow/zomnesrv.py
 ${PYSITELIB}/nevow/zomnesrv.pyc
 ${PYSITELIB}/nevow/zomnesrv.pyo
-twisted/plugins/nevow_widget.py
+${PYSITELIB}/twisted/plugins/nevow_widget.py
+${PYSITELIB}/twisted/plugins/nevow_widget.pyc
+${PYSITELIB}/twisted/plugins/nevow_widget.pyo
