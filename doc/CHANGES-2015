@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2821 2015/07/01 02:44:40 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2822 2015/07/01 02:51:41 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5403,3 +5403,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-rednose to 0.4.3 [rodent 2015-06-30]
 	Added textproc/p5-Lingua-EN-Syllable version 0.251 [rodent 2015-07-01]
 	Added textproc/p5-Lingua-EN-Fathom version 1.18 [rodent 2015-07-01]
+	Added textproc/p5-Publican version 4.3.1 [rodent 2015-07-01]
