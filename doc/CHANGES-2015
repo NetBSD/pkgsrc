@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2841 2015/07/01 09:59:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2842 2015/07/01 11:19:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5423,3 +5423,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.31.0 [wiz 2015-07-01]
 	Updated devel/py-cython to 0.22.1 [wiz 2015-07-01]
 	Updated databases/py-psycopg2 to 2.6.1 [wiz 2015-07-01]
+	Updated editors/Sigil to 0.8.7 [wiz 2015-07-01]
