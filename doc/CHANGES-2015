@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2826 2015/07/01 09:20:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2827 2015/07/01 09:22:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-common-sense to 3.74 [wiz 2015-07-01]
 	Updated graphics/p5-GD to 2.56 [wiz 2015-07-01]
 	Updated devel/waf to 1.8.11 [wiz 2015-07-01]
+	Updated mbone/dbeacon to 0.3.9.1nb5 [he 2015-07-01]
