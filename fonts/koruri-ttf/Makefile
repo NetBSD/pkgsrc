@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/06/29 11:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/01 05:22:03 nonaka Exp $
 #
 
 DISTNAME=	Koruri-${KORURI_VERSION}
 PKGNAME=	koruri-ttf-${KORURI_VERSION}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_OSDN:=koruri/62469/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=koruri/63497/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	nonakap@gmail.com
@@ -12,7 +12,7 @@ HOMEPAGE=	http://koruri.lindwurm.biz/
 COMMENT=	Koruri Japanese TrueType fonts
 LICENSE=	apache-2.0
 
-KORURI_VERSION=	20141224
+KORURI_VERSION=	20150701
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
