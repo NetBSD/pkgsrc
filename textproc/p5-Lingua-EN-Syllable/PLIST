@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/01 02:42:51 rodent Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Lingua/EN/Syllable.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Lingua/EN/Syllable/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Lingua::EN::Syllable.3
