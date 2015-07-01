@@ -1,0 +1,15 @@
+$NetBSD: patch-ipc_src_Makefile,v 1.1 2015/07/01 12:54:32 ryoon Exp $
+
+Fix permissions of the .so file (add +x)
+
+--- ipc/src/Makefile.orig	2015-04-17 09:21:32.000000000 +0000
++++ ipc/src/Makefile
+@@ -73,7 +73,7 @@ $(libname): $(objfiles)
+ 	$(CC) $(LDFLAGS) -o $(libname) $(objfiles)
+ 
+ install: $(libname)
+-	$(DEPTH)/util/install -m 644 $(DIST)/platform/$(OS_TARGET)_$(CPU_ARCH)/lib $^
++	$(DEPTH)/util/install -m 755 $(DIST)/platform/$(OS_TARGET)_$(CPU_ARCH)/lib $^
+ 
+ clean:
+ 	rm -f $(objfiles) $(libname) $(DIST)/platform/$(OS_TARGET)_$(CPU_ARCH)/lib/$(libname)
