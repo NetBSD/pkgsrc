@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2015/07/01 14:23:55 ryoon Exp $
+
+* Improve POSIX shell compatibility.
+* Detect pkgsrc berkeley db library.
+
+--- configure.orig	2014-08-21 18:24:14.000000000 +0000
++++ configure
+@@ -13672,7 +13672,7 @@ $as_echo_n "checking matching GMP versio
+ COB_GMP_LIB_MAJOR=$(echo $COB_GMP_LIB | cut -d. -f1)
+ COB_GMP_LIB_MINOR=$(echo $COB_GMP_LIB | cut -d. -f2)
+ 
+-if test "$COB_GMP_HEADER" == "$COB_GMP_LIB_MAJOR.$COB_GMP_LIB_MINOR"
++if test "$COB_GMP_HEADER" = "$COB_GMP_LIB_MAJOR.$COB_GMP_LIB_MINOR"
+ then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes ($COB_GMP_HEADER)" >&5
+ $as_echo "yes ($COB_GMP_HEADER)" >&6; }
+@@ -16271,7 +16271,7 @@ $as_echo "no ($COB_BDB_HEADER)" >&6; }
+ 	cob_got_db=no
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Berkeley DB library with version $COB_BDB_HEADER" >&5
+ $as_echo_n "checking for Berkeley DB library with version $COB_BDB_HEADER... " >&6; }
+-	for cobdb in db db-$COB_BDB_HEADER
++	for cobdb in db db$COB_BDB_HEADER_MAJOR-$COB_BDB_HEADER
+ 	do
+ 		LIBS="$MYOLDLIBS -l$cobdb"
+ 		if test "$cross_compiling" = yes; then :
