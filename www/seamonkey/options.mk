@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.31 2015/03/17 19:50:42 ryoon Exp $
+# $NetBSD: options.mk,v 1.32 2015/07/01 13:02:30 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
-PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc mozilla-enigmail # gnome
+PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc # gnome
 PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
@@ -60,10 +60,6 @@ PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-install-strip
-.endif
-
-.if !empty(PKG_OPTIONS:Mmozilla-enigmail) || make(distinfo)
-.include "enigmail.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
