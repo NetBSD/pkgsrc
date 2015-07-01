@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2015/04/21 08:56:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.465 2015/07/01 12:56:39 ryoon Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -304,6 +304,7 @@ SUBDIR+=	ruby-mime-types
 SUBDIR+=	ruby-mime-types1
 SUBDIR+=	ruby-tmail
 SUBDIR+=	safecat
+SUBDIR+=	seamonkey-enigmail
 SUBDIR+=	sendmail
 SUBDIR+=	sendmail-cidrexpand
 SUBDIR+=	sendmail-qtool
@@ -331,6 +332,7 @@ SUBDIR+=	sympa
 SUBDIR+=	t-prot
 SUBDIR+=	teapop
 SUBDIR+=	thunderbird
+SUBDIR+=	thunderbird-enigmail
 SUBDIR+=	thunderbird-l10n
 SUBDIR+=	thunderbird24
 SUBDIR+=	thunderbird24-l10n
