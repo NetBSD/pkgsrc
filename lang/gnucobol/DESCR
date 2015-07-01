@@ -1,0 +1,3 @@
+GnuCOBOL, formerly OpenCOBOL, is an open-source COBOL compiler,
+which translates COBOL programs to C code and compiles it using
+GCC.
