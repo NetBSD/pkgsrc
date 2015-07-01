@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2856 2015/07/01 23:07:21 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2857 2015/07/01 23:13:31 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5439,3 +5439,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.70 [wiz 2015-07-01]
 	Updated pkgtools/lintpkgsrc to 4.89 [tron 2015-07-01]
 	Updated games/solarus to 1.4.2 [rodent 2015-07-01]
+	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.540 [rodent 2015-07-01]
