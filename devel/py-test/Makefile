@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/05/28 07:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/01 09:34:49 wiz Exp $
 
-DISTNAME=	pytest-2.7.1
+DISTNAME=	pytest-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pytest/
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/pytest
 COMMENT=	Python testing tool
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-py>=1.4.20:../../devel/py-py
+DEPENDS+=	${PYPKGPREFIX}-py>=1.4.29:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # actually, test dependencies
 BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
