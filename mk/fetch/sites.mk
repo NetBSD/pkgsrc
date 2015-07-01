@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.130 2015/06/30 23:11:18 rodent Exp $
+# $NetBSD: sites.mk,v 1.131 2015/07/01 00:45:35 rodent Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -320,7 +320,8 @@ MASTER_SITE_OPENBSD+= \
 MASTER_SITE_RUBYGEMS+= \
 	http://rubygems.org/downloads/
 
-MASTER_SITE_PYPI+=	https://pypi.python.org/packages/source/
+MASTER_SITE_PYPI+= \
+	https://pypi.python.org/packages/source/
 
 MASTER_SITE_HASKELL_HACKAGE+=	\
 	http://hackage.haskell.org/package/
