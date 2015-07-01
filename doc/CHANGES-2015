@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2855 2015/07/01 19:58:06 tron Exp $
+$NetBSD: CHANGES-2015,v 1.2856 2015/07/01 23:07:21 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/gnucobol version 2.0alpha1 [ryoon 2015-07-01]
 	Updated print/cups-filters to 1.0.70 [wiz 2015-07-01]
 	Updated pkgtools/lintpkgsrc to 4.89 [tron 2015-07-01]
+	Updated games/solarus to 1.4.2 [rodent 2015-07-01]
