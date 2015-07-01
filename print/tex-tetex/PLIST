@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/06/14 12:50:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/07/01 10:49:05 markd Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -10,6 +10,7 @@ bin/kpsepath
 bin/kpsetool
 bin/kpsewhere
 bin/kpsexpand
+bin/mktexfmt
 bin/texconfig-dialog
 bin/texconfig-sys
 bin/texlinks
