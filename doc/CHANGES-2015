@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2828 2015/07/01 09:23:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2829 2015/07/01 09:24:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/waf to 1.8.11 [wiz 2015-07-01]
 	Updated mbone/dbeacon to 0.3.9.1nb5 [he 2015-07-01]
 	Updated audio/musicpd to 0.19.10 [wiz 2015-07-01]
+	Updated devel/colordiff to 1.0.15 [wiz 2015-07-01]
