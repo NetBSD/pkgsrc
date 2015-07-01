@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/05/01 23:59:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/07/01 13:58:21 wiz Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -192,6 +192,9 @@ ${PYSITELIB}/allmydata/scripts/create_node.pyo
 ${PYSITELIB}/allmydata/scripts/debug.py
 ${PYSITELIB}/allmydata/scripts/debug.pyc
 ${PYSITELIB}/allmydata/scripts/debug.pyo
+${PYSITELIB}/allmydata/scripts/default_nodedir.py
+${PYSITELIB}/allmydata/scripts/default_nodedir.pyc
+${PYSITELIB}/allmydata/scripts/default_nodedir.pyo
 ${PYSITELIB}/allmydata/scripts/keygen.py
 ${PYSITELIB}/allmydata/scripts/keygen.pyc
 ${PYSITELIB}/allmydata/scripts/keygen.pyo
@@ -306,6 +309,9 @@ ${PYSITELIB}/allmydata/test/common_web.pyo
 ${PYSITELIB}/allmydata/test/no_network.py
 ${PYSITELIB}/allmydata/test/no_network.pyc
 ${PYSITELIB}/allmydata/test/no_network.pyo
+${PYSITELIB}/allmydata/test/test_auth.py
+${PYSITELIB}/allmydata/test/test_auth.pyc
+${PYSITELIB}/allmydata/test/test_auth.pyo
 ${PYSITELIB}/allmydata/test/test_backupdb.py
 ${PYSITELIB}/allmydata/test/test_backupdb.pyc
 ${PYSITELIB}/allmydata/test/test_backupdb.pyo
@@ -318,6 +324,27 @@ ${PYSITELIB}/allmydata/test/test_checker.pyo
 ${PYSITELIB}/allmydata/test/test_cli.py
 ${PYSITELIB}/allmydata/test/test_cli.pyc
 ${PYSITELIB}/allmydata/test/test_cli.pyo
+${PYSITELIB}/allmydata/test/test_cli_backup.py
+${PYSITELIB}/allmydata/test/test_cli_backup.pyc
+${PYSITELIB}/allmydata/test/test_cli_backup.pyo
+${PYSITELIB}/allmydata/test/test_cli_check.py
+${PYSITELIB}/allmydata/test/test_cli_check.pyc
+${PYSITELIB}/allmydata/test/test_cli_check.pyo
+${PYSITELIB}/allmydata/test/test_cli_cp.py
+${PYSITELIB}/allmydata/test/test_cli_cp.pyc
+${PYSITELIB}/allmydata/test/test_cli_cp.pyo
+${PYSITELIB}/allmydata/test/test_cli_create_alias.py
+${PYSITELIB}/allmydata/test/test_cli_create_alias.pyc
+${PYSITELIB}/allmydata/test/test_cli_create_alias.pyo
+${PYSITELIB}/allmydata/test/test_cli_list.py
+${PYSITELIB}/allmydata/test/test_cli_list.pyc
+${PYSITELIB}/allmydata/test/test_cli_list.pyo
+${PYSITELIB}/allmydata/test/test_cli_mv.py
+${PYSITELIB}/allmydata/test/test_cli_mv.pyc
+${PYSITELIB}/allmydata/test/test_cli_mv.pyo
+${PYSITELIB}/allmydata/test/test_cli_put.py
+${PYSITELIB}/allmydata/test/test_cli_put.pyc
+${PYSITELIB}/allmydata/test/test_cli_put.pyo
 ${PYSITELIB}/allmydata/test/test_client.py
 ${PYSITELIB}/allmydata/test/test_client.pyc
 ${PYSITELIB}/allmydata/test/test_client.pyo
@@ -372,6 +399,9 @@ ${PYSITELIB}/allmydata/test/test_introducer.pyo
 ${PYSITELIB}/allmydata/test/test_iputil.py
 ${PYSITELIB}/allmydata/test/test_iputil.pyc
 ${PYSITELIB}/allmydata/test/test_iputil.pyo
+${PYSITELIB}/allmydata/test/test_json_metadata.py
+${PYSITELIB}/allmydata/test/test_json_metadata.pyc
+${PYSITELIB}/allmydata/test/test_json_metadata.pyo
 ${PYSITELIB}/allmydata/test/test_keygen.py
 ${PYSITELIB}/allmydata/test/test_keygen.pyc
 ${PYSITELIB}/allmydata/test/test_keygen.pyo
@@ -405,6 +435,9 @@ ${PYSITELIB}/allmydata/test/test_stats.pyo
 ${PYSITELIB}/allmydata/test/test_storage.py
 ${PYSITELIB}/allmydata/test/test_storage.pyc
 ${PYSITELIB}/allmydata/test/test_storage.pyo
+${PYSITELIB}/allmydata/test/test_storage_client.py
+${PYSITELIB}/allmydata/test/test_storage_client.pyc
+${PYSITELIB}/allmydata/test/test_storage_client.pyo
 ${PYSITELIB}/allmydata/test/test_system.py
 ${PYSITELIB}/allmydata/test/test_system.pyc
 ${PYSITELIB}/allmydata/test/test_system.pyo
@@ -423,9 +456,6 @@ ${PYSITELIB}/allmydata/test/test_version.pyo
 ${PYSITELIB}/allmydata/test/test_web.py
 ${PYSITELIB}/allmydata/test/test_web.pyc
 ${PYSITELIB}/allmydata/test/test_web.pyo
-${PYSITELIB}/allmydata/test/trial_coverage.py
-${PYSITELIB}/allmydata/test/trial_coverage.pyc
-${PYSITELIB}/allmydata/test/trial_coverage.pyo
 ${PYSITELIB}/allmydata/test/trialtest.py
 ${PYSITELIB}/allmydata/test/trialtest.pyc
 ${PYSITELIB}/allmydata/test/trialtest.pyo
@@ -456,6 +486,9 @@ ${PYSITELIB}/allmydata/util/cachedir.pyo
 ${PYSITELIB}/allmydata/util/consumer.py
 ${PYSITELIB}/allmydata/util/consumer.pyc
 ${PYSITELIB}/allmydata/util/consumer.pyo
+${PYSITELIB}/allmydata/util/dbutil.py
+${PYSITELIB}/allmydata/util/dbutil.pyc
+${PYSITELIB}/allmydata/util/dbutil.pyo
 ${PYSITELIB}/allmydata/util/deferredutil.py
 ${PYSITELIB}/allmydata/util/deferredutil.pyc
 ${PYSITELIB}/allmydata/util/deferredutil.pyo
@@ -582,11 +615,15 @@ ${PYSITELIB}/allmydata/web/root.pyc
 ${PYSITELIB}/allmydata/web/root.pyo
 ${PYSITELIB}/allmydata/web/static/css/bootstrap.css
 ${PYSITELIB}/allmydata/web/static/css/new-tahoe.css
-${PYSITELIB}/allmydata/web/static/d3-2.4.6.min.js
-${PYSITELIB}/allmydata/web/static/d3-2.4.6.time.min.js
+${PYSITELIB}/allmydata/web/static/d3-2.4.6.js
+${PYSITELIB}/allmydata/web/static/d3-2.4.6.time.js
 ${PYSITELIB}/allmydata/web/static/download_status_timeline.js
 ${PYSITELIB}/allmydata/web/static/icon.png
-${PYSITELIB}/allmydata/web/static/jquery-1.6.1.min.js
+${PYSITELIB}/allmydata/web/static/img/connected-no.png
+${PYSITELIB}/allmydata/web/static/img/connected-not-configured.png
+${PYSITELIB}/allmydata/web/static/img/connected-yes.png
+${PYSITELIB}/allmydata/web/static/img/logo.png
+${PYSITELIB}/allmydata/web/static/jquery-1.11.0.js
 ${PYSITELIB}/allmydata/web/static/tahoe.css
 ${PYSITELIB}/allmydata/web/statistics.xhtml
 ${PYSITELIB}/allmydata/web/status.py
