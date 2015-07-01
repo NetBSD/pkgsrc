@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2015/04/20 07:30:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/07/01 13:58:21 wiz Exp $
 
-VERSION=	1.10.0
-PKGREVISION=	3
+VERSION=	1.10.1
 DISTNAME=	allmydata-tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
 CATEGORIES=	filesystems
@@ -35,13 +34,15 @@ DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # Included egg setuptools_trial, not used.
 # Included egg setuptools_darcs, used (no package yet).
-DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.6.3:../../net/py-foolscap
-DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.8.0:../../net/py-foolscap
+DEPENDS+=	${PYPKGPREFIX}-twisted>=13.0.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.4:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.5:../../security/py-asn1-modules
+DEPENDS+=	${PYPKGPREFIX}-characteristic>=14.0.0:../../devel/py-characteristic
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-nevow>=0.11.1:../../www/py-nevow
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
