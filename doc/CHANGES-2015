@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2850 2015/07/01 13:54:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2851 2015/07/01 13:55:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5433,3 +5433,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/bochs to 2.6.8 [ryoon 2015-07-01]
 	Updated www/py-nevow to 0.11.1 [wiz 2015-07-01]
 	Updated security/py-asn1 to 0.1.8 [wiz 2015-07-01]
+	Updated security/py-asn1-modules to 0.0.6 [wiz 2015-07-01]
