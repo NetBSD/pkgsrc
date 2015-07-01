@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.5 2015/01/10 20:12:24 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.6 2015/07/01 19:57:31 tron Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1190,7 +1190,7 @@ sub parse_makefile_vars($$) {
             # fully expand
             if (   $incfile =~ m#/mk/bsd#
                 || $incfile =~ /$magic_undefined/
-                || $incfile =~ /\${/
+                || $incfile =~ /\$\{/
                 || ( !$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)# ) )
             {
                 debug("$file: .include \"$incfile\" skipped\n");
@@ -1307,7 +1307,7 @@ sub parse_makefile_vars($$) {
 
             }
             elsif ( $vars{$key} =~
-                m#\${([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)}# )
+                m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}# )
             {
                 my ( $left, $subvar, $right ) = ( $`, $1, $' );
                 my (@patterns) = split( ':', $2 );
