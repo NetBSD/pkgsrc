@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2012/10/01 13:40:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/07/01 13:39:17 ryoon Exp $
 bin/bochs
-bin/bxcommit
 bin/bximage
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_acpi.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_biosdev.la
-${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_busmouse.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_cmos.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_dma.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_extfpuirq.la
@@ -36,7 +34,6 @@ ${PLIST.notiny}${PLIST.plugins}${PLIST.x11}lib/bochs/plugins/libbx_x.la
 ${PLIST.notiny}${PLIST.plugins}${PLIST.nox11}lib/bochs/plugins/libbx_term.la
 man/man1/bochs-dlx.1
 man/man1/bochs.1
-man/man1/bxcommit.1
 man/man1/bximage.1
 man/man5/bochsrc.5
 share/bochs/BIOS-bochs-latest
@@ -67,3 +64,8 @@ share/doc/bochs/LICENSE
 share/doc/bochs/README
 share/doc/bochs/TODO
 share/doc/bochs/bochsrc-sample.txt
+share/doc/bochs/slirp.conf
+share/bochs/SeaBIOS-README
+share/bochs/bios.bin-1.7.5
+share/bochs/keymaps/sdl2-pc-de.map
+share/bochs/keymaps/sdl2-pc-us.map
