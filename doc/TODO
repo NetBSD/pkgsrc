@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14509 2015/07/01 09:32:45 wiz Exp $
+$NetBSD: TODO,v 1.14510 2015/07/01 09:34:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -961,7 +961,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sphinx-theme-cloud-1.6
 	o py-suds-0.4.1
 	o py-sybase-0.37
-	o py-test-2.7.2
 	o py-tlslite-0.4.6
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
