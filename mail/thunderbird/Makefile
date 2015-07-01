@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.152 2015/06/30 09:57:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.153 2015/07/01 12:48:08 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
 PKGREVISION=	1
 TB_VER=		31.7.0
-#LIGHTNINGVER=	1.9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
-#DISTFILES+=	lightning-${LIGHTNINGVER}.source.tar.bz2
-#SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
-#EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2=	${WRKSRC}/lightning
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
