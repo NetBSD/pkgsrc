@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2837 2015/07/01 09:36:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2838 2015/07/01 09:37:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5419,3 +5419,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-py to 1.4.30 [wiz 2015-07-01]
 	Updated devel/py-test to 2.7.2 [wiz 2015-07-01]
 	Updated devel/apache-ant to 1.9.5 [wiz 2015-07-01]
+	Updated devel/afl to 1.83b [wiz 2015-07-01]
