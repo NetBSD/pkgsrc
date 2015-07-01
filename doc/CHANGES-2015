@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2833 2015/07/01 09:29:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2834 2015/07/01 09:32:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5415,3 +5415,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/liblangtag to 0.5.7 [wiz 2015-07-01]
 	Updated audio/abcde to 2.7 [wiz 2015-07-01]
 	Updated devel/py-setuptools to 18.0.1 [wiz 2015-07-01]
+	Updated textproc/json-glib to 1.0.4 [wiz 2015-07-01]
