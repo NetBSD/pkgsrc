@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2015/06/10 09:00:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2015/07/01 09:52:09 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1154,6 +1154,7 @@ lib/calibre/calibre/plugins/cPalmdoc.so
 lib/calibre/calibre/plugins/certgen.so
 lib/calibre/calibre/plugins/chm_extra.so
 lib/calibre/calibre/plugins/chmlib.so
+lib/calibre/calibre/plugins/dukpy.so
 lib/calibre/calibre/plugins/freetype.so
 lib/calibre/calibre/plugins/html.so
 lib/calibre/calibre/plugins/hunspell.so
@@ -1179,7 +1180,11 @@ lib/calibre/calibre/spell/break_iterator.py
 lib/calibre/calibre/spell/dictionary.py
 lib/calibre/calibre/spell/import_from.py
 lib/calibre/calibre/srv/__init__.py
+lib/calibre/calibre/srv/ajax.py
+lib/calibre/calibre/srv/auth.py
+lib/calibre/calibre/srv/auto_reload.py
 lib/calibre/calibre/srv/bonjour.py
+lib/calibre/calibre/srv/content.py
 lib/calibre/calibre/srv/errors.py
 lib/calibre/calibre/srv/handler.py
 lib/calibre/calibre/srv/http_request.py
@@ -1192,7 +1197,10 @@ lib/calibre/calibre/srv/routes.py
 lib/calibre/calibre/srv/sendfile.py
 lib/calibre/calibre/srv/standalone.py
 lib/calibre/calibre/srv/tests/__init__.py
+lib/calibre/calibre/srv/tests/ajax.py
+lib/calibre/calibre/srv/tests/auth.py
 lib/calibre/calibre/srv/tests/base.py
+lib/calibre/calibre/srv/tests/content.py
 lib/calibre/calibre/srv/tests/http.py
 lib/calibre/calibre/srv/tests/loop.py
 lib/calibre/calibre/srv/tests/main.py
@@ -1252,6 +1260,7 @@ lib/calibre/calibre/utils/https.py
 lib/calibre/calibre/utils/icu.py
 lib/calibre/calibre/utils/icu_test.py
 lib/calibre/calibre/utils/imghdr.py
+lib/calibre/calibre/utils/inotify.py
 lib/calibre/calibre/utils/ipc/__init__.py
 lib/calibre/calibre/utils/ipc/job.py
 lib/calibre/calibre/utils/ipc/launch.py
@@ -1300,6 +1309,7 @@ lib/calibre/calibre/utils/rss_gen.py
 lib/calibre/calibre/utils/search_query_parser.py
 lib/calibre/calibre/utils/serve_coffee.py
 lib/calibre/calibre/utils/sftp.py
+lib/calibre/calibre/utils/shared_file.py
 lib/calibre/calibre/utils/smartypants.py
 lib/calibre/calibre/utils/smtp.py
 lib/calibre/calibre/utils/smtplib.py
@@ -1344,6 +1354,8 @@ lib/calibre/css_selectors/ordered_set.py
 lib/calibre/css_selectors/parser.py
 lib/calibre/css_selectors/select.py
 lib/calibre/css_selectors/tests.py
+lib/calibre/duktape/__init__.py
+lib/calibre/duktape/tests.py
 lib/calibre/odf/__init__.py
 lib/calibre/odf/anim.py
 lib/calibre/odf/attrconverters.py
@@ -1424,7 +1436,9 @@ share/calibre/catalog/mastheadImage.gif
 share/calibre/catalog/section_list_templates.py
 share/calibre/catalog/stylesheet.css
 share/calibre/catalog/template.xhtml
+share/calibre/coffee-script.js
 share/calibre/compiled_coffeescript.zip
+share/calibre/content-server/empty.html
 share/calibre/content_server/av.jpg
 share/calibre/content_server/bg_search_box.png
 share/calibre/content_server/browse/browse.css
@@ -1936,6 +1950,7 @@ share/calibre/recipes/ceske_noviny.recipe
 share/calibre/recipes/cesky_rozhlas_6.recipe
 share/calibre/recipes/cetnixploitation.recipe
 share/calibre/recipes/cgm_pl.recipe
+share/calibre/recipes/champion.recipe
 share/calibre/recipes/chicago_breaking_news.recipe
 share/calibre/recipes/chicago_tribune.recipe
 share/calibre/recipes/china_economic_net.recipe
@@ -2397,6 +2412,7 @@ share/calibre/recipes/idg_se.recipe
 share/calibre/recipes/idnes.recipe
 share/calibre/recipes/ieco.recipe
 share/calibre/recipes/ieeespectrum.recipe
+share/calibre/recipes/iekspries.recipe
 share/calibre/recipes/ifzm.recipe
 share/calibre/recipes/ihned.cz.recipe
 share/calibre/recipes/ihned.recipe
@@ -2518,6 +2534,7 @@ share/calibre/recipes/kurier_poranny.recipe
 share/calibre/recipes/kurier_szczecinski.recipe
 share/calibre/recipes/kyungyhang.recipe
 share/calibre/recipes/l_espresso.recipe
+share/calibre/recipes/l_vivs_ghazieta.recipe
 share/calibre/recipes/la_cuarta.recipe
 share/calibre/recipes/la_diaria.recipe
 share/calibre/recipes/la_gazetta_del_mezzogiorno.recipe
@@ -3213,6 +3230,7 @@ share/calibre/recipes/tyzden.recipe
 share/calibre/recipes/ubuntu_pl.recipe
 share/calibre/recipes/ubuntu_pomoc_org.recipe
 share/calibre/recipes/ukraiyns_kii_tizhdien.recipe
+share/calibre/recipes/ukraiyns_tizhdien.recipe
 share/calibre/recipes/ultimahora.recipe
 share/calibre/recipes/uncrate.recipe
 share/calibre/recipes/unica.recipe
