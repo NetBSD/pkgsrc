@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/06/15 10:11:36 markd Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/02 21:13:55 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2015pre2
+PKGNAME=	texlive-${DISTNAME}-2015pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -878,7 +878,7 @@ DEPENDS+=	tex-srcltx-[0-9]*:../../print/tex-srcltx
 # depend sslides
 # depend stack
 # depend stackengine
-# depend standalone
+DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
 # depend statistik
 DEPENDS+=	tex-stdclsdv-[0-9]*:../../print/tex-stdclsdv
 # depend stdpage
@@ -893,7 +893,7 @@ DEPENDS+=	tex-sttools-[0-9]*:../../print/tex-sttools
 # depend subeqnarray
 DEPENDS+=	tex-subfigmat-[0-9]*:../../print/tex-subfigmat
 DEPENDS+=	tex-subfigure-[0-9]*:../../print/tex-subfigure
-# depend subfiles
+DEPENDS+=	tex-subfiles-[0-9]*:../../print/tex-subfiles
 # depend subfloat
 # depend substitutefont
 DEPENDS+=	tex-substr-[0-9]*:../../print/tex-substr
