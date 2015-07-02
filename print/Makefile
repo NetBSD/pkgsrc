@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.644 2015/06/14 14:21:01 joerg Exp $
+# $NetBSD: Makefile,v 1.645 2015/07/02 21:06:52 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -547,6 +547,8 @@ SUBDIR+=	tex-germkorr
 SUBDIR+=	tex-germkorr-doc
 SUBDIR+=	tex-getoptk
 SUBDIR+=	tex-getoptk-doc
+SUBDIR+=	tex-gfnotation
+SUBDIR+=	tex-gfnotation-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-glossaries-doc
 SUBDIR+=	tex-go
@@ -965,6 +967,8 @@ SUBDIR+=	tex-showtags-doc
 SUBDIR+=	tex-sidecap
 SUBDIR+=	tex-sidecap-doc
 SUBDIR+=	tex-simplified-latex-doc
+SUBDIR+=	tex-siunitx
+SUBDIR+=	tex-siunitx-doc
 SUBDIR+=	tex-skak
 SUBDIR+=	tex-skak-doc
 SUBDIR+=	tex-skaknew
@@ -978,6 +982,8 @@ SUBDIR+=	tex-sphack-doc
 SUBDIR+=	tex-splitbib
 SUBDIR+=	tex-srcltx
 SUBDIR+=	tex-srcltx-doc
+SUBDIR+=	tex-standalone
+SUBDIR+=	tex-standalone-doc
 SUBDIR+=	tex-startex
 SUBDIR+=	tex-startex-doc
 SUBDIR+=	tex-statex
@@ -992,6 +998,8 @@ SUBDIR+=	tex-subfigmat
 SUBDIR+=	tex-subfigmat-doc
 SUBDIR+=	tex-subfigure
 SUBDIR+=	tex-subfigure-doc
+SUBDIR+=	tex-subfiles
+SUBDIR+=	tex-subfiles-doc
 SUBDIR+=	tex-substr
 SUBDIR+=	tex-substr-doc
 SUBDIR+=	tex-supertabular
