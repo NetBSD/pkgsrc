@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 13:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/02 21:12:04 markd Exp $
 
 DISTNAME=	collection-science
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36989
@@ -70,7 +70,7 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend sciposter
 # depend sclang-prettifier
 # depend sfg
-# depend siunitx
+DEPENDS+=	tex-siunitx-[0-9]*:../../print/tex-siunitx
 # depend steinmetz
 # depend struktex
 # depend substances
