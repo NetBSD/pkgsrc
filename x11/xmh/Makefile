@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 12:38:33 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/02 23:00:01 rodent Exp $
 #
 
 DISTNAME=	xmh-1.0.2
-CATEGORIES=	mail
+CATEGORIES=	mail x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
