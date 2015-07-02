@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2867 2015/07/02 18:49:06 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.2868 2015/07/02 21:14:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5474,3 +5474,17 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/noto-ttf version 20150630 [wiz 2015-07-02]
 	Updated x11/xscreensaver to 5.33 [khorben 2015-07-02]
 	Updated x11/xscreensaver-demo to 5.33 [khorben 2015-07-02]
+	Added graphics/tex-bclogo version 2.26 [markd 2015-07-02]
+	Added graphics/tex-bclogo-doc version 2.26 [markd 2015-07-02]
+	Added print/tex-standalone version 1.1b [markd 2015-07-02]
+	Added print/tex-standalone-doc version 1.1b [markd 2015-07-02]
+	Added print/tex-siunitx version 2.6e [markd 2015-07-02]
+	Added print/tex-siunitx-doc version 2.6e [markd 2015-07-02]
+	Added print/tex-gfnotation version 2.9 [markd 2015-07-02]
+	Added print/tex-gfnotation-doc version 2.9 [markd 2015-07-02]
+	Added print/tex-subfiles version 1.1 [markd 2015-07-02]
+	Added print/tex-subfiles-doc version 1.1 [markd 2015-07-02]
+	Updated meta-pkgs/texlive-collection-pstricks to 2015pre1 [markd 2015-07-02]
+	Updated meta-pkgs/texlive-collection-plainextra to 2015 [markd 2015-07-02]
+	Updated meta-pkgs/texlive-collection-latexextra to 2015pre3 [markd 2015-07-02]
+	Updated meta-pkgs/texlive-collection-science to 2015pre2 [markd 2015-07-02]
