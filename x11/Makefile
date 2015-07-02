@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.755 2015/07/02 22:48:11 rodent Exp $
+# $NetBSD: Makefile,v 1.756 2015/07/02 22:57:16 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -626,6 +626,7 @@ SUBDIR+=	xfishtank
 SUBDIR+=	xflame
 SUBDIR+=	xfontsel
 SUBDIR+=	xforms
+SUBDIR+=	xfsinfo
 SUBDIR+=	xfstt
 SUBDIR+=	xfwp
 SUBDIR+=	xgamma
