@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/07 11:23:09 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.2 2015/07/02 13:05:32 wiz Exp $
 
 MODNAME=	igbinary
 PECL_VERSION=	1.2.1
@@ -16,8 +15,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gsed
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 USE_LIBTOOL=		yes
-
-USE_PHP_EXT_PATCHES=	yes
 
 PLIST_SRC+=		PLIST
 
