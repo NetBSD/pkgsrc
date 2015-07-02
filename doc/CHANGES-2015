@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2861 2015/07/02 04:05:19 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2862 2015/07/02 12:46:53 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5454,3 +5454,17 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xf86-video-suntcx version 1.1.2 [rodent 2015-07-02]
 	Added x11/xf86-video-voodoo version 1.2.5 [rodent 2015-07-02]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb3 [rodent 2015-07-02]
+	Added x11/libXaw3d version 1.6.2 [rodent 2015-07-02]
+	Added x11/libXprintAppUtil version 1.0.1 [rodent 2015-07-02]
+	Added x11/liblbxutil version 1.1.0 [rodent 2015-07-02]
+	Added x11/mkcomposecache version 1.2.1 [rodent 2015-07-02]
+	Added x11/proxymngr version 1.0.3 [rodent 2015-07-02]
+	Added x11/rstart version 1.0.5 [rodent 2015-07-02]
+	Added x11/xcmsdb version 1.0.4 [rodent 2015-07-02]
+	Added x11/xdbedizzy version 1.1.0 [rodent 2015-07-02]
+	Added x11/xedit version 1.2.2 [rodent 2015-07-02]
+	Added x11/xf86dga version 1.0.3 [rodent 2015-07-02]
+	Added x11/xmh version 1.0.2 [rodent 2015-07-02]
+	Added x11/xpr version 1.0.4 [rodent 2015-07-02]
+	Added x11/xrx version 1.0.4 [rodent 2015-07-02]
+	Added x11/xtrap version 1.0.2 [rodent 2015-07-02]
