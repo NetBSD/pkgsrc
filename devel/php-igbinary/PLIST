@@ -1,1 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2015/07/02 12:38:20 wiz Exp $
 include/php/ext/igbinary/igbinary.h
