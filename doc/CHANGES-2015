@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2864 2015/07/02 12:58:56 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2865 2015/07/02 13:11:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xtrap version 1.0.2 [rodent 2015-07-02]
 	Updated meta-pkgs/modular-xorg-libs to 1.3 [rodent 2015-07-02]
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.4 [rodent 2015-07-02]
+	Updated x11/xproto to 7.0.28 [wiz 2015-07-02]
