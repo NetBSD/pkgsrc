@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2858 2015/07/01 23:27:10 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2859 2015/07/02 01:47:35 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5441,3 +5441,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/solarus to 1.4.2 [rodent 2015-07-01]
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.540 [rodent 2015-07-01]
 	Updated textproc/p5-HTML-FormatText-WithLinks-AndTables to 0.06 [rodent 2015-07-01]
+	Updated databases/py-sqlalchemy-migrate to 0.9.6 [rodent 2015-07-02]
