@@ -1,0 +1,4 @@
+Using subfiles the user can handle multi-file projects more
+comfortably making it possible to both process the subsidiary
+files by themselves and to process the main file that includes
+them, without making any changes to either.
