@@ -1,0 +1,4 @@
+xfsinfo is a utility for displaying information about an X font server. It is
+used to examine the capabilities of a server, the predefined values for various
+parameters used in communicating between clients and the server, and the font
+catalogues and alternate servers that are available.
