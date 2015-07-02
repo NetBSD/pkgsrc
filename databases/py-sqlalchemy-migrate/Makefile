@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/12/31 13:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/02 01:46:11 rodent Exp $
 
-DISTNAME=	sqlalchemy-migrate-0.9.1
+DISTNAME=	sqlalchemy-migrate-0.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/s/sqlalchemy-migrate/
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
-DEPENDS+=	${PYPKGPREFIX}-pbr>=0.5.21<1.0:../../devel/py-pbr
+DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.8:../../databases/py-sqlalchemy
