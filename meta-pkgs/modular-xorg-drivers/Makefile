@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/07/02 03:55:11 rodent Exp $
+# $NetBSD: Makefile,v 1.29 2015/07/02 03:59:48 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
@@ -49,11 +49,14 @@ DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-input-mutouch-[0-9]*:../../x11/xf86-input-mutouch
+DEPENDS+=	xf86-video-modesetting-[0-9]*:../../x11/xf86-video-modesetting
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 # does not work with 1.17 server
 #DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
+DEPENDS+=	xf86-video-nouveau-[0-9]*:../../x11/xf86-video-nouveau
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
 DEPENDS+=	xf86-video-openchrome-[0-9]*:../../x11/xf86-video-openchrome
+DEPENDS+=	xf86-video-qxl-[0-9]*:../../x11/xf86-video-qxl
 DEPENDS+=	xf86-video-r128-[0-9]*:../../x11/xf86-video-r128
 DEPENDS+=	xf86-video-rendition-[0-9]*:../../x11/xf86-video-rendition
 DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
@@ -61,9 +64,11 @@ DEPENDS+=	xf86-video-s3virge-[0-9]*:../../x11/xf86-video-s3virge
 DEPENDS+=	xf86-video-savage-[0-9]*:../../x11/xf86-video-savage
 DEPENDS+=	xf86-video-siliconmotion-[0-9]*:../../x11/xf86-video-siliconmotion
 DEPENDS+=	xf86-video-sis-[0-9]*:../../x11/xf86-video-sis
-DEPENDS+=	xf86-video-suncg3-[0-9]*:../../x11/xf86-video-suncg3
 DEPENDS+=	xf86-video-suncg14-[0-9]*:../../x11/xf86-video-suncg14
+DEPENDS+=	xf86-video-suncg3-[0-9]*:../../x11/xf86-video-suncg3
+DEPENDS+=	xf86-video-suncg6-[0-9]*:../../x11/xf86-video-suncg6
 DEPENDS+=	xf86-video-sunffb-[0-9]*:../../x11/xf86-video-sunffb
+DEPENDS+=	xf86-video-suntcx-[0-9]*:../../x11/xf86-video-suntcx
 DEPENDS+=	xf86-video-tdfx-[0-9]*:../../x11/xf86-video-tdfx
 DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
 DEPENDS+=	xf86-video-trident-[0-9]*:../../x11/xf86-video-trident
@@ -71,6 +76,7 @@ DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
 DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
+DEPENDS+=	xf86-video-voodoo-[0-9]*:../../x11/xf86-video-voodoo
 .endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 DEPENDS+=	xf86-video-wsfb-[0-9]*:../../x11/xf86-video-wsfb
