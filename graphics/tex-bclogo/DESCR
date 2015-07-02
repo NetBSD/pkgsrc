@@ -1,0 +1,3 @@
+The package facilitates the creation of colorful boxes with a
+title and logo. It may use either tikz or PSTricks as graphics
+engine.
