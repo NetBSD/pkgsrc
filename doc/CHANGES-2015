@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2860 2015/07/02 03:47:47 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2861 2015/07/02 04:05:19 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5453,3 +5453,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xf86-video-suncg6 version 1.1.2 [rodent 2015-07-02]
 	Added x11/xf86-video-suntcx version 1.1.2 [rodent 2015-07-02]
 	Added x11/xf86-video-voodoo version 1.2.5 [rodent 2015-07-02]
+	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb3 [rodent 2015-07-02]
