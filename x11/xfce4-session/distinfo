@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/06/29 16:50:01 youri Exp $
+$NetBSD: distinfo,v 1.15 2015/07/02 13:15:58 youri Exp $
 
 SHA1 (xfce4-session-4.12.1.tar.bz2) = ccdeac8bb6b4bb2382a963efdf2e05c09c61fee4
 RMD160 (xfce4-session-4.12.1.tar.bz2) = 14db09177003f4139345b4d670015d90ebf28ef6
@@ -6,7 +6,6 @@ Size (xfce4-session-4.12.1.tar.bz2) = 1289284 bytes
 SHA1 (patch-ac) = 14398273b8169d26f89262310c1ca4d8546a2c0c
 SHA1 (patch-config.h.in) = 88c67de7708c958674de7f222937739dd9f7fc00
 SHA1 (patch-configure) = 22924508b9af1b428dfe41413ff46b5592d17c48
-SHA1 (patch-configure.ac) = f6d86f0e1be3fc7124f0a83c04667f30e07e71b2
 SHA1 (patch-scripts_Makefile.in) = 1d1f2230fc861f222f44b9541d52c157a23c16dc
 SHA1 (patch-settings_xfce4-session.xml) = 6607e682df06674c4e6a3219b911f58f756cfab7
 SHA1 (patch-xfsm-shutdown-helper_main.c) = 93d2322ed90bef8b17427c1cb32e2fe87f614b04

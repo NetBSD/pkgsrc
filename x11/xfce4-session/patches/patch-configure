@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2015/07/02 13:15:58 youri Exp $
+
+Add NetBSD backend detection.
+--- configure.orig	2015-06-29 16:19:21.000000000 +0000
++++ configure
+@@ -18208,6 +18208,8 @@ if test x$with_backend = x; then
+     with_backend=freebsd ;; #(
+   *-*dragonfly*) :
+     with_backend=freebsd ;; #(
++  *-*netbsd*) :
++    with_backend=netbsd ;; #(
+   *-openbsd*) :
+     with_backend=openbsd ;; #(
+   *) :
+@@ -18237,6 +18239,11 @@ if test x$with_backend = xopenbsd; then
+ $as_echo "#define BACKEND_TYPE_OPENBSD 1" >>confdefs.h
+ 
+ fi
++if test x$with_backend = xnetbsd; then
++
++$as_echo "#define BACKEND_TYPE_NETBSD 1" >>confdefs.h
++
++fi
+ 
+ XFCE_GLADE_CATALOG_PATH="`pkg-config --variable glade_catalogdir libxfce4ui-1`"
+ XFCE_GLADE_PIXMAP_PATH="`pkg-config --variable glade_pixmapdir libxfce4ui-1`"
