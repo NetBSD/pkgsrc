@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 12:38:33 rodent Exp $
+bin/xrx
+lib/libxrx.la
+lib/libxrxnest.la
+man/man1/libxrx.1
+man/man1/xrx.1

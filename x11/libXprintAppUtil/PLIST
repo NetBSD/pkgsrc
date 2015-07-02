@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 12:38:32 rodent Exp $
+include/X11/XprintAppUtil/xpapputil.h
+lib/libXprintAppUtil.la
+lib/pkgconfig/xprintapputil.pc
