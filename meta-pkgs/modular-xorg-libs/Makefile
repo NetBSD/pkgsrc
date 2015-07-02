@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/04/17 20:00:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/02 12:49:46 rodent Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-libs-1.2
+PKGNAME=	modular-xorg-libs-1.3
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty
@@ -27,6 +27,7 @@ META_PACKAGE=	yes
 .include "../../x11/libXTrap/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
@@ -41,6 +42,7 @@ META_PACKAGE=	yes
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXprintAppUtil/buildlink3.mk"
 .include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../x11/libXpresent/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
@@ -54,6 +56,7 @@ META_PACKAGE=	yes
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 
