@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 03:37:49 rodent Exp $
+include/xorg/joystick-properties.h
+lib/pkgconfig/xorg-joystick.pc
+lib/xorg/modules/input/joystick_drv.la
+man/man4/joystick.4
