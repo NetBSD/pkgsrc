@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.754 2015/07/02 12:38:32 rodent Exp $
+# $NetBSD: Makefile,v 1.755 2015/07/02 22:48:11 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -265,6 +265,7 @@ SUBDIR+=	konsole
 SUBDIR+=	kterm
 SUBDIR+=	lablgtk1
 SUBDIR+=	labltk
+SUBDIR+=	lbxproxy
 SUBDIR+=	lesstif
 SUBDIR+=	libFS
 SUBDIR+=	libICE
