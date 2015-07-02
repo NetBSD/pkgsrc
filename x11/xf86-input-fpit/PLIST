@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 03:37:48 rodent Exp $
+lib/xorg/modules/input/fpit_drv.la
+man/man4/fpit.4
+share/X11/xorg.conf.d/50-fpit.conf
