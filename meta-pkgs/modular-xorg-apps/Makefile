@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2015/07/02 22:49:43 rodent Exp $
+# $NetBSD: Makefile,v 1.33 2015/07/02 23:00:43 rodent Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-apps-1.14.1.5
+PKGNAME=	modular-xorg-apps-1.14.1.6
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 DISTFILES=	# empty
@@ -53,6 +53,7 @@ DEPENDS+=	xf86dga-[0-9]*:../../x11/xf86dga
 DEPENDS+=	xfd-[0-9]*:../../x11/xfd
 DEPENDS+=	xfindproxy-[0-9]*:../../net/xfindproxy
 DEPENDS+=	xfontsel-[0-9]*:../../x11/xfontsel
+DEPENDS+=	xfsinfo-[0-9]*:../../x11/xfsinfo
 DEPENDS+=	xfwp-[0-9]*:../../x11/xfwp
 DEPENDS+=	xgamma-[0-9]*:../../x11/xgamma
 DEPENDS+=	xgc-[0-9]*:../../graphics/xgc
