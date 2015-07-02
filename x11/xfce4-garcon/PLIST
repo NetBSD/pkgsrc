@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/02 14:13:29 youri Exp $
 include/garcon-1/garcon/garcon-config.h
 include/garcon-1/garcon/garcon-environment.h
 include/garcon-1/garcon/garcon-marshal.h
@@ -14,12 +14,33 @@ include/garcon-1/garcon/garcon-menu-separator.h
 include/garcon-1/garcon/garcon-menu-tree-provider.h
 include/garcon-1/garcon/garcon-menu.h
 include/garcon-1/garcon/garcon.h
+include/garcon-2/garcon/garcon-config.h
+include/garcon-2/garcon/garcon-environment.h
+include/garcon-2/garcon/garcon-marshal.h
+include/garcon-2/garcon/garcon-menu-directory.h
+include/garcon-2/garcon/garcon-menu-element.h
+include/garcon-2/garcon/garcon-menu-item-cache.h
+include/garcon-2/garcon/garcon-menu-item-pool.h
+include/garcon-2/garcon/garcon-menu-item.h
+include/garcon-2/garcon/garcon-menu-merger.h
+include/garcon-2/garcon/garcon-menu-node.h
+include/garcon-2/garcon/garcon-menu-parser.h
+include/garcon-2/garcon/garcon-menu-separator.h
+include/garcon-2/garcon/garcon-menu-tree-provider.h
+include/garcon-2/garcon/garcon-menu.h
+include/garcon-2/garcon/garcon.h
 include/garcon-gtk2-1/garcon-gtk/garcon-gtk-menu.h
 include/garcon-gtk2-1/garcon-gtk/garcon-gtk.h
+include/garcon-gtk3-1/garcon-gtk/garcon-gtk-menu.h
+include/garcon-gtk3-1/garcon-gtk/garcon-gtk.h
 lib/libgarcon-1.la
+lib/libgarcon-2.la
 lib/libgarcon-gtk2-1.la
+lib/libgarcon-gtk3-1.la
 lib/pkgconfig/garcon-1.pc
+lib/pkgconfig/garcon-2.pc
 lib/pkgconfig/garcon-gtk2-1.pc
+lib/pkgconfig/garcon-gtk3-1.pc
 share/desktop-directories/xfce-accessories.directory
 share/desktop-directories/xfce-development.directory
 share/desktop-directories/xfce-education.directory
