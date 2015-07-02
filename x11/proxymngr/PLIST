@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 12:38:32 rodent Exp $
+bin/proxymngr
+man/man1/proxymngr.1
+share/examples/proxymngr/pmconfig

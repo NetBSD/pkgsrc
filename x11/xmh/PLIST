@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 12:38:33 rodent Exp $
+bin/xmh
+lib/X11/app-defaults/Xmh
+man/man1/xmh.1
