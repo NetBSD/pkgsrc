@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2015/05/09 03:58:15 mef Exp $
+@comment $NetBSD: PLIST,v 1.42 2015/07/02 18:47:57 khorben Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -201,6 +201,7 @@ libexec/xscreensaver/config/queens.xml
 libexec/xscreensaver/config/rd-bomb.xml
 libexec/xscreensaver/config/ripples.xml
 libexec/xscreensaver/config/rocks.xml
+libexec/xscreensaver/config/romanboy.xml
 libexec/xscreensaver/config/rorschach.xml
 libexec/xscreensaver/config/rotzoomer.xml
 libexec/xscreensaver/config/rubik.xml
@@ -215,6 +216,7 @@ libexec/xscreensaver/config/slip.xml
 libexec/xscreensaver/config/sonar.xml
 libexec/xscreensaver/config/speedmine.xml
 libexec/xscreensaver/config/spheremonics.xml
+libexec/xscreensaver/config/splitflap.xml
 libexec/xscreensaver/config/spotlight.xml
 libexec/xscreensaver/config/sproingies.xml
 libexec/xscreensaver/config/squiral.xml
@@ -376,6 +378,7 @@ libexec/xscreensaver/queens
 libexec/xscreensaver/rd-bomb
 libexec/xscreensaver/ripples
 libexec/xscreensaver/rocks
+libexec/xscreensaver/romanboy
 libexec/xscreensaver/rorschach
 libexec/xscreensaver/rotzoomer
 libexec/xscreensaver/rubik
@@ -390,6 +393,7 @@ libexec/xscreensaver/slip
 libexec/xscreensaver/sonar
 libexec/xscreensaver/speedmine
 libexec/xscreensaver/spheremonics
+libexec/xscreensaver/splitflap
 libexec/xscreensaver/spotlight
 libexec/xscreensaver/sproingies
 libexec/xscreensaver/squiral
@@ -590,6 +594,7 @@ man/man6/queens.6
 man/man6/rd-bomb.6
 man/man6/ripples.6
 man/man6/rocks.6
+man/man6/romanboy.6
 man/man6/rorschach.6
 man/man6/rotzoomer.6
 man/man6/rubik.6
@@ -604,6 +609,7 @@ man/man6/slip.6
 man/man6/sonar.6
 man/man6/speedmine.6
 man/man6/spheremonics.6
+man/man6/splitflap.6
 man/man6/spotlight.6
 man/man6/sproingies.6
 man/man6/squiral.6
