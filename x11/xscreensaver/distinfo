@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.67 2015/05/09 03:58:15 mef Exp $
+$NetBSD: distinfo,v 1.68 2015/07/02 18:47:57 khorben Exp $
 
-SHA1 (xscreensaver-5.32.tar.gz) = 3131d45295b9a18a2901737c9b95f1c5434f53a6
-RMD160 (xscreensaver-5.32.tar.gz) = 1db8aede14b62a65f4d5798e4346335c2dd5b820
-Size (xscreensaver-5.32.tar.gz) = 10571502 bytes
+SHA1 (xscreensaver-5.33.tar.gz) = 1aa269a967761f81fa30113c06ecac8a445a5de2
+RMD160 (xscreensaver-5.33.tar.gz) = bb0a223f73af32b3cba8407ba43aa1b66c0d3892
+Size (xscreensaver-5.33.tar.gz) = 20668552 bytes
 SHA1 (patch-ab) = c520709327ae6bf500243ca044e84a2d527ddf1d
-SHA1 (patch-ac) = c55ee279fe0613bc278a56f10db51b42546dcffe
+SHA1 (patch-ac) = 2355a2954c61db134e623ab0656c2bb2f9e6238a
 SHA1 (patch-ad) = 33e41981d9b703dcec0df9f238a5e440d1401dff
 SHA1 (patch-ae) = 16d0c8b50b2601458aaec09d1c7425fb23308225
 SHA1 (patch-af) = d8261f1c8fd01b455a151f97837712dc46aff6f3
 SHA1 (patch-ai) = ceda5f16e4fca352a3c4cd6cbdc55d43d3e7b6d5
 SHA1 (patch-aj) = dd88d037ae3c73f33512ab24714afe8ea5756a29
-SHA1 (patch-ak) = e296e59bec9a11ddab8412751e91395b869686d1
-SHA1 (patch-al) = 0c1ceba4bea29026298d1d1903f32f2a14958c8a
+SHA1 (patch-ak) = e87576d457b9d5344f48bca2a6c9894d8290ce39
+SHA1 (patch-al) = 2d19b2aa5100424a00b260b53916d58ac14e0051
