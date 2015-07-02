@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2871 2015/07/02 22:56:48 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2872 2015/07/02 23:00:53 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5491,3 +5491,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/lbxproxy version 1.0.3 [rodent 2015-07-02]
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.5 [rodent 2015-07-02]
 	Added x11/xfsinfo version 1.0.5 [rodent 2015-07-02]
+	Updated meta-pkgs/modular-xorg-apps to 1.14.1.6 [rodent 2015-07-02]
