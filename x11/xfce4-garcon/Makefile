@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/29 10:50:17 youri Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/02 14:13:29 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -10,10 +10,17 @@ MASTER_SITES=	http://archive.xfce.org/src/xfce/garcon/0.5/
 HOMEPAGE=	https://wiki.xfce.org/dev/garcon
 COMMENT=	Xfce menu library
 
-CONF_FILES=	${XFCE4_EGBASE}/menus/xfce-applications.menu \
-		${PKG_SYSCONFDIR}/menus/xfce-applications.menu
+PKGCONFIG_OVERRIDE=	garcon/garcon-1.pc.in
+PKGCONFIG_OVERRIDE=	garcon/garcon-2.pc.in
+PKGCONFIG_OVERRIDE+=	garcon-gtk/garcon-gtk2.pc.in
+PKGCONFIG_OVERRIDE+=	garcon-gtk/garcon-gtk3.pc.in
 
-MAKE_DIRS+=	${XFCE4_EGBASE}/menus
+EGDIR=			${XFCE4_EGBASE}
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS+=		${EGDIR} ${EGDIR}/menus ${PKG_SYSCONFDIR}/menus
+
+CONF_FILES=		${EGDIR}/menus/xfce-applications.menu \
+			${PKG_SYSCONFDIR}/menus/xfce-applications.menu
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
