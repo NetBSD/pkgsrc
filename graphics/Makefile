@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.709 2015/05/27 22:06:54 markd Exp $
+# $NetBSD: Makefile,v 1.710 2015/07/02 20:48:23 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -483,6 +483,8 @@ SUBDIR+=	tex-automata
 SUBDIR+=	tex-automata-doc
 SUBDIR+=	tex-bbcard
 SUBDIR+=	tex-bbcard-doc
+SUBDIR+=	tex-bclogo
+SUBDIR+=	tex-bclogo-doc
 SUBDIR+=	tex-blockdraw_mp
 SUBDIR+=	tex-blockdraw_mp-doc
 SUBDIR+=	tex-bpolynomial
