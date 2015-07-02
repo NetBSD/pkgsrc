@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:43 jperkin Exp $
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:43 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/02 13:57:48 youri Exp $
 bin/xfce4-about
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcut-dialog.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts-grabber.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts-provider.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts-xfwm4.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcut-dialog.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-grabber.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-provider.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-xfwm4.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts.h
 include/xfce4/libxfce4ui-1/libxfce4ui/libxfce4ui-config.h
 include/xfce4/libxfce4ui-1/libxfce4ui/libxfce4ui-enum-types.h
 include/xfce4/libxfce4ui-1/libxfce4ui/libxfce4ui.h
@@ -15,10 +19,23 @@ include/xfce4/libxfce4ui-1/libxfce4ui/xfce-gtk-extensions.h
 include/xfce4/libxfce4ui-1/libxfce4ui/xfce-sm-client.h
 include/xfce4/libxfce4ui-1/libxfce4ui/xfce-spawn.h
 include/xfce4/libxfce4ui-1/libxfce4ui/xfce-titled-dialog.h
+include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui-config.h
+include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui-enum-types.h
+include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-dialogs.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-gdk-extensions.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-gtk-extensions.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-sm-client.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-spawn.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-titled-dialog.h
 lib/libxfce4kbd-private-2.la
+lib/libxfce4kbd-private-3.la
 lib/libxfce4ui-1.la
+lib/libxfce4ui-2.la
 lib/pkgconfig/libxfce4kbd-private-2.pc
+lib/pkgconfig/libxfce4kbd-private-3.pc
 lib/pkgconfig/libxfce4ui-1.pc
+lib/pkgconfig/libxfce4ui-2.pc
 share/applications/xfce4-about.desktop
 share/examples/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 share/gtk-doc/html/libxfce4ui/XfceSMClient.html
