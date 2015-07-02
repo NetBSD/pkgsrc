@@ -1,0 +1,4 @@
+The package implements macros for plain TeX to typeset the
+notation invented by Gottlob Frege in 1879 for his books
+"Begriffsschrift" and "Grundgesetze der Arithmetik" (two
+volumes). The output styles of both books are supported.

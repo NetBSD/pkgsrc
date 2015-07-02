@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 21:02:39 markd Exp $
+share/texmf-dist/doc/plain/gfnotation/COPYING
+share/texmf-dist/doc/plain/gfnotation/GFnotation-doc.pdf
+share/texmf-dist/doc/plain/gfnotation/GFnotation-doc.tex
+share/texmf-dist/doc/plain/gfnotation/README
