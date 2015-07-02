@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2015/04/02 22:32:05 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2015/07/02 03:55:11 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -37,13 +37,18 @@ DEPENDS+=	xf86-video-ati6-[0-9]*:../../x11/xf86-video-ati6
 DEPENDS+=	xf86-video-chips-[0-9]*:../../x11/xf86-video-chips
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
 DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-dummy
+DEPENDS+=	xf86-input-elographics-[0-9]*:../../x11/xf86-input-elographics
 DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
+DEPENDS+=	xf86-input-fpit-[0-9]*:../../x11/xf86-input-fpit
 DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
+DEPENDS+=	xf86-input-hyperpen-[0-9]*:../../x11/xf86-input-hyperpen
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
 DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
+DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
+DEPENDS+=	xf86-input-mutouch-[0-9]*:../../x11/xf86-input-mutouch
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 # does not work with 1.17 server
 #DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
