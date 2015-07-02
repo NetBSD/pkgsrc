@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/06/14 13:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/02 21:10:32 markd Exp $
 
 DISTNAME=	collection-plainextra
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37156
@@ -18,7 +18,7 @@ DEPENDS+=	tex-fixpdfmag-[0-9]*:../../print/tex-fixpdfmag
 DEPENDS+=	tex-font-change-[0-9]*:../../print/tex-font-change
 DEPENDS+=	tex-fontch-[0-9]*:../../print/tex-fontch
 DEPENDS+=	tex-getoptk-[0-9]*:../../print/tex-getoptk
-# depend gfnotation
+DEPENDS+=	tex-gfnotation-[0-9]*:../../print/tex-gfnotation
 DEPENDS+=	tex-graphics-pln-[0-9]*:../../graphics/tex-graphics-pln
 DEPENDS+=	tex-hyplain-[0-9]*:../../print/tex-hyplain
 DEPENDS+=	tex-js-misc-[0-9]*:../../print/tex-js-misc
