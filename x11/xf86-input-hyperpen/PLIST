@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/02 03:37:48 rodent Exp $
+lib/xorg/modules/input/hyperpen_drv.la

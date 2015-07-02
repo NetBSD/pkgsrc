@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2015/06/05 22:45:24 youri Exp $
+# $NetBSD: Makefile,v 1.753 2015/07/02 03:37:48 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -537,8 +537,13 @@ SUBDIR+=	xev
 SUBDIR+=	xextproto
 SUBDIR+=	xeyes
 SUBDIR+=	xf86-input-acecad
+SUBDIR+=	xf86-input-elographics
+SUBDIR+=	xf86-input-fpit
+SUBDIR+=	xf86-input-hyperpen
+SUBDIR+=	xf86-input-joystick
 SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-input-mouse
+SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-penmount
 SUBDIR+=	xf86-input-vmmouse
 SUBDIR+=	xf86-input-void
@@ -557,10 +562,13 @@ SUBDIR+=	xf86-video-i740
 SUBDIR+=	xf86-video-intel
 SUBDIR+=	xf86-video-mach64
 SUBDIR+=	xf86-video-mga
+SUBDIR+=	xf86-video-modesetting
 SUBDIR+=	xf86-video-neomagic
 SUBDIR+=	xf86-video-newport
+SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv
 SUBDIR+=	xf86-video-openchrome
+SUBDIR+=	xf86-video-qxl
 SUBDIR+=	xf86-video-r128
 SUBDIR+=	xf86-video-rendition
 SUBDIR+=	xf86-video-s3
@@ -570,13 +578,16 @@ SUBDIR+=	xf86-video-siliconmotion
 SUBDIR+=	xf86-video-sis
 SUBDIR+=	xf86-video-suncg14
 SUBDIR+=	xf86-video-suncg3
+SUBDIR+=	xf86-video-suncg6
 SUBDIR+=	xf86-video-sunffb
+SUBDIR+=	xf86-video-suntcx
 SUBDIR+=	xf86-video-tdfx
 SUBDIR+=	xf86-video-tga
 SUBDIR+=	xf86-video-trident
 SUBDIR+=	xf86-video-tseng
 SUBDIR+=	xf86-video-vesa
 SUBDIR+=	xf86-video-vmware
+SUBDIR+=	xf86-video-voodoo
 SUBDIR+=	xf86-video-wsfb
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xf86dgaproto
