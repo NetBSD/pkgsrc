@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.3 2015/07/03 10:25:40 ryoon Exp $
 
---- toolkit/mozapps/extensions/internal/GMPProvider.jsm.orig	2015-05-04 00:43:33.000000000 +0000
+--- toolkit/mozapps/extensions/internal/GMPProvider.jsm.orig	2015-06-18 20:55:37.000000000 +0000
 +++ toolkit/mozapps/extensions/internal/GMPProvider.jsm
-@@ -101,12 +101,11 @@ function GMPWrapper(aPluginInfo) {
+@@ -112,12 +112,11 @@ function GMPWrapper(aPluginInfo) {
      Log.repository.getLoggerWithMessagePrefix("Toolkit.GMP",
                                                "GMPWrapper(" +
                                                this._plugin.id + ") ");
@@ -18,7 +18,7 @@ $NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05
    if (this._plugin.isEME) {
      Preferences.observe(GMPPrefs.KEY_EME_ENABLED,
                          this.onPrefEMEGlobalEnabledChanged, this);
-@@ -123,17 +122,14 @@ GMPWrapper.prototype = {
+@@ -134,17 +133,14 @@ GMPWrapper.prototype = {
    optionsType: AddonManager.OPTIONS_TYPE_INLINE,
    get optionsURL() { return this._plugin.optionsURL; },
  
@@ -36,10 +36,10 @@ $NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05
      return this._gmpPath;
    },
 -
-   get id() { return this._plugin.id; },
-   get type() { return "plugin"; },
-   get isGMPlugin() { return true; },
-@@ -144,8 +140,13 @@ GMPWrapper.prototype = {
+   get missingKey() {
+     return this._plugin.missingKey;
+   },
+@@ -159,8 +155,13 @@ GMPWrapper.prototype = {
    get description() { return this._plugin.description; },
    get fullDescription() { return this._plugin.fullDescription; },
  
@@ -55,7 +55,7 @@ $NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05
  
    get isActive() { return !this.appDisabled && !this.userDisabled; },
    get appDisabled() {
-@@ -292,24 +293,17 @@ GMPWrapper.prototype = {
+@@ -307,24 +308,17 @@ GMPWrapper.prototype = {
  
    get pluginMimeTypes() { return []; },
    get pluginLibraries() {
@@ -86,7 +86,7 @@ $NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05
    },
  
    _handleEnabledChanged: function() {
-@@ -389,10 +383,10 @@ GMPWrapper.prototype = {
+@@ -404,10 +398,10 @@ GMPWrapper.prototype = {
      }
    },
  
@@ -99,7 +99,7 @@ $NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05
                       this._gmpPath);
        gmpService.removeAndDeletePluginDirectory(this._gmpPath, true /* can defer */);
      }
-@@ -401,15 +395,10 @@ GMPWrapper.prototype = {
+@@ -416,15 +410,10 @@ GMPWrapper.prototype = {
      AddonManagerPrivate.callInstallListeners("onExternalInstall", null, this,
                                               null, false);
      AddonManagerPrivate.callAddonListeners("onInstalling", this, false);
@@ -118,7 +118,7 @@ $NetBSD: patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm,v 1.2 2015/05
                       this._gmpPath);
        gmpService.addPluginDirectory(this._gmpPath);
      }
-@@ -431,9 +420,9 @@ GMPWrapper.prototype = {
+@@ -446,9 +435,9 @@ GMPWrapper.prototype = {
      Preferences.ignore(GMPPrefs.getPrefKey(GMPPrefs.KEY_PLUGIN_ENABLED,
                                             this._plugin.id),
                         this.onPrefEnabledChanged, this);
