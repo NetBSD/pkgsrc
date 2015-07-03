@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14525 2015/07/02 03:47:47 rodent Exp $
+$NetBSD: TODO,v 1.14526 2015/07/03 12:23:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o JBidwatcher-2.5.6 [wants launch4j]
-	o MesaLib-10.6.0
+	o MesaLib-10.6.1
 	o OdfConverter-4.0
 	o PAM-0.99.7.1
 	o TeXmacs-1.0.7.21
@@ -461,6 +461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
+	o cups-filters-1.0.71
 	o curl-7.43.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.6
@@ -478,6 +479,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.9
 	o denemo-1.2.2
 	o digikam-4.11
+	o dillo-3.0.5
 	o dinotrace-9.4d
 	o doclifter-2.15
 	o dolphin-4.0.2
@@ -544,7 +546,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fmsx-4.0
 	o fontforge-20150228
 	o fotoxx-14.06
-	o fox-1.7.51
+	o fox-1.7.52
 	o frama-c-20140301
 	o freenet-0.7
 	o freesci-0.6.4
@@ -1130,7 +1132,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o weechat-1.1
 	o whohas-0.29.1
 	o windowlab-1.40
-	o wine-devel-1.7.45
+	o wine-devel-1.7.46
 	o wireshark-1.12.6
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
@@ -1145,7 +1147,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-tk-1.8.0
 	o xboard-4.8.0
 	o xcircuit-3.9.33
-	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
 	o xentools44-4.4.0
 	o xerces-j-2.4.0 [pkg/21725]
@@ -1155,8 +1156,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-glide-1.2.2
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-xgi-1.6.0 [unpackaged]
-	o xfce-4.12
-	o xfce4-volman-0.3.80
 	o xfig-3.2.5c
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
@@ -1176,7 +1175,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xorp-1.8.5
 	o xosview-1.16
 	o xpaint-2.9.9
-	o xpr-1.0.4 [unpackaged]
 	o xpuyopuyo-0.9.8
 	o xrmap-base-2.33.1
 	o xrn-9.02
