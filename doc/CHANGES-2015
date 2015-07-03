@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2880 2015/07/03 12:36:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2881 2015/07/03 12:37:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5501,3 +5501,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.71 [wiz 2015-07-03]
 	Updated net/openntpd to 5.7p4 [wiz 2015-07-03]
 	Updated games/openttd-data to 0.5.2 [wiz 2015-07-03]
+	Updated games/openttd to 1.5.1 [wiz 2015-07-03]
