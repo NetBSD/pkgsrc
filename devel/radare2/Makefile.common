@@ -1,0 +1,6 @@
+# $NetBSD: Makefile.common,v 1.1 2015/07/03 16:05:02 khorben Exp $
+
+RADARE2_VERSION=0.9.9
+
+HOMEPAGE=	http://www.radare.org/
+MASTER_SITES=	http://www.radare.org/get/
