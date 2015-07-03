@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2877 2015/07/03 12:19:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2878 2015/07/03 12:25:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5498,3 +5498,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 39.0 [ryoon 2015-07-03]
 	Updated www/firefox-l10n to 39.0 [ryoon 2015-07-03]
 	Updated devel/py-mercurial to 3.4.2 [wiz 2015-07-03]
+	Updated print/cups-filters to 1.0.71 [wiz 2015-07-03]
