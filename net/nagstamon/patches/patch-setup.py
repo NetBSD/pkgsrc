@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.1 2012/02/18 17:05:27 gls Exp $
+$NetBSD: patch-setup.py,v 1.2 2015/07/03 14:41:42 bouyer Exp $
 
 Install manpage in the proper location.
 
---- setup.py.orig	2011-10-24 13:03:20.000000000 +0000
-+++ setup.py
-@@ -50,6 +50,6 @@ setup(name = 'nagstamon',
-     packages = ['Nagstamon', 'Nagstamon.Server'],
+--- setup.py.orig	2014-09-22 09:34:25.000000000 +0200
++++ setup.py	2015-05-21 12:42:03.000000000 +0200
+@@ -50,6 +50,6 @@
+     packages = ['Nagstamon', 'Nagstamon.Server', 'Nagstamon.thirdparty'],
      package_dir = {'Nagstamon':'Nagstamon'},
      package_data = {'Nagstamon':['resources/*']},
 -    data_files = [('%s/share/man/man1' % sys.prefix, ['Nagstamon/resources/nagstamon.1'])]
