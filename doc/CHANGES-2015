@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2887 2015/07/03 21:54:25 mef Exp $
+$NetBSD: CHANGES-2015,v 1.2888 2015/07/03 23:30:57 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5507,3 +5507,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/po4a to 0.46 [ryoon 2015-07-03]
 	Updated devel/p5-App-FatPacker to 0.010004 [mef 2015-07-03]
 	Updated devel/p5-App-cpanminus to 1.7039 [mef 2015-07-03]
+	Updated textproc/libxml2 to 2.9.2nb3 [he 2015-07-03]
