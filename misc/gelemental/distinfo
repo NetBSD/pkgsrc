@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/05/06 23:07:05 dholland Exp $
+$NetBSD: distinfo,v 1.4 2015/07/03 12:46:10 joerg Exp $
 
 SHA1 (gelemental-1.2.0.tar.bz2) = 5640c8912de555eddf72924c866831249d0fdd28
 RMD160 (gelemental-1.2.0.tar.bz2) = a54b29e853d4861f4fd5adb947816cb0f736d2bc
@@ -6,5 +6,7 @@ Size (gelemental-1.2.0.tar.bz2) = 460757 bytes
 SHA1 (patch-aa) = bef3bc522e630b5f5674b75bb9713a844e38b66f
 SHA1 (patch-libelemental_misc_extras_cc) = 5b65d9d3b26ff81f96a3af9a0de2552c79b2c957
 SHA1 (patch-libelemental_misc_widgets_cc) = 1de3021e6b4790e8f879f7ed8859281bf6f768ff
+SHA1 (patch-libelemental_value.cc) = 1db6a3d81c98749bf71a66ee88af8a18f3b2608d
+SHA1 (patch-libelemental_value.hh) = bc630930c5e6a801419b7e48986814b7a96c4e89
 SHA1 (patch-libelemental_value.tcc) = d07bd0eda624514bf4e22a2f995cc0176d1e6a6c
 SHA1 (patch-src_main_cc) = efd05b15c0e4fc2d19c07c525ac5f20e9fb05b1c
