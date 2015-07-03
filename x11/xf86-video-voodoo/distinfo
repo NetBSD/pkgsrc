@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 03:37:49 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/07/03 10:31:32 wiz Exp $
 
 SHA1 (xf86-video-voodoo-1.2.5.tar.bz2) = 7316df33814694ad2fb1617bcd92e6e42c3d184f
 RMD160 (xf86-video-voodoo-1.2.5.tar.bz2) = 80d69602164641dfef9bb951f4ad694c06de9bc1
 Size (xf86-video-voodoo-1.2.5.tar.bz2) = 305489 bytes
-SHA1 (patch-src_voodoo.h) = e964411361df6bc7eafd4fc8db19a84bf76c5876
+SHA1 (patch-src_voodoo.h) = bf1701a6a8b9ac14fab7b71d9faea4592f2a9cbc
