@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.22 2015/06/19 00:49:14 dholland Exp $
+$NetBSD: distinfo,v 1.23 2015/07/03 12:37:44 wiz Exp $
 
-SHA1 (openttd-1.4.4-source.tar.xz) = c3aa122cda75162b76cd12dc4586371e841102b3
-RMD160 (openttd-1.4.4-source.tar.xz) = 591ffe69e26e4820af29f8e04ec181d4c5119170
-Size (openttd-1.4.4-source.tar.xz) = 6342508 bytes
-SHA1 (patch-aa) = b34cc7e0adf8a91657f1426ff2d888eb7c31bcb2
-SHA1 (patch-src_fontcache.cpp) = 88fb873e3e487bbf5a63afd9490a83981ec8b306
+SHA1 (openttd-1.5.1-source.tar.xz) = 95b9b16fd3dc9edd8d893d7adacc32a8fcb09c47
+RMD160 (openttd-1.5.1-source.tar.xz) = fea88dbaf7f852e2d9967a8060a2db3d89897f56
+Size (openttd-1.5.1-source.tar.xz) = 6557704 bytes
+SHA1 (patch-aa) = f9c9291ec5414e239d53e110e54aac83b926af8a
