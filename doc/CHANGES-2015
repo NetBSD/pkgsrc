@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2874 2015/07/03 09:57:40 abs Exp $
+$NetBSD: CHANGES-2015,v 1.2875 2015/07/03 10:26:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5495,3 +5495,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.4.3 [ryoon 2015-07-03]
 	Updated pkgtools/pkglint to 4.156 [abs 2015-07-03]
 	Added editors/yed version 3.14.2 [abs 2015-07-03]
+	Updated www/firefox to 39.0 [ryoon 2015-07-03]
