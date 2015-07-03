@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/27 18:43:05 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/03 01:25:07 rodent Exp $
 
 DISTNAME=	redmine-3.0.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -108,11 +108,17 @@ SUBST_FILES.rake+=	actionpack-action_caching-1.1.1/Rakefile
 SUBST_FILES.rake+=	ruby-openid-2.3.0/examples/rails_openid/Rakefile
 SUBST_SED.rake=		-e 's,/usr/bin/env rake,${PREFIX}/${RM_DIR}/gems/bin/rake,g'
 
+SUBST_CLASSES+=		shell
+SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine_*.sh
+SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
+SUBST_SED.shell=	-e "s|@PREFIX@|${PREFIX}|g;s|@GEM@|${GEM}|g"
+SUBST_SED.shell+=	-e "s|@RUBY@|${RUBY}|g"
+SUBST_STAGE.shell=	post-install
+
 REPLACE_BASH+=	nokogiri-1.6.6.2/build_all nokogiri-1.6.6.2/test_all
 REPLACE_BASH+=	bundler-1.9.1/lib/bundler/templates/newgem/bin/setup.tt
 
 GEM_HOME=	${RM_DIR}/gems
-FILES_SUBST+=	GEM=${GEM}
 PLIST_SUBST+=	GEM_HOME=${GEM_HOME}
 
 USE_LANGUAGES=	c
@@ -191,6 +197,7 @@ do-install:
 	# XXX: Rewrite this to use ${INSTALL_DATA} and remove pax from USE_TOOLS
 	cd ${WRKDIR}/${DISTNAME} && pax -rw -pmp . \
 		${DESTDIR}${PREFIX}/${RM_DIR}/app
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/redmine_*.sh
 
 post-install: unicorn-post-install
 	find ${DESTDIR} -name ext -type d | xargs rm -rf
@@ -205,6 +212,7 @@ post-install: unicorn-post-install
 		${DESTDIR}${PREFIX}/share/examples/redmine
 	find ${DESTDIR} -type f -print0 | xargs -0 chmod g+r,g-w,-x
 	find ${DESTDIR} -type d -print0 | xargs -0 chmod g-w
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/redmine_*.sh
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
