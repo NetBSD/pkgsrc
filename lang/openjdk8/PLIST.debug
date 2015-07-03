@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.debug,v 1.1 2015/02/08 08:41:25 tnn Exp $
+@comment $NetBSD: PLIST.debug,v 1.2 2015/07/03 20:40:59 fhajny Exp $
 java/openjdk8/jre/lib/${ARCH}/jexec.debuginfo
 java/openjdk8/jre/lib/${ARCH}/jli/libjli.debuginfo
 java/openjdk8/jre/lib/${ARCH}/libattach.debuginfo
@@ -28,7 +28,7 @@ java/openjdk8/jre/lib/${ARCH}/libnet.debuginfo
 java/openjdk8/jre/lib/${ARCH}/libnio.debuginfo
 java/openjdk8/jre/lib/${ARCH}/libnpt.debuginfo
 ${PLIST.native}java/openjdk8/jre/lib/${ARCH}/libsaproc.debuginfo
-java/openjdk8/jre/lib/${ARCH}/libsctp.debuginfo
+${PLIST.sctp}java/openjdk8/jre/lib/${ARCH}/libsctp.debuginfo
 ${PLIST.x11}java/openjdk8/jre/lib/${ARCH}/libsplashscreen.debuginfo
 java/openjdk8/jre/lib/${ARCH}/libsunec.debuginfo
 java/openjdk8/jre/lib/${ARCH}/libunpack.debuginfo

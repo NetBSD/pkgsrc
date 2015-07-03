@@ -1,0 +1,49 @@
+$NetBSD: patch-jdk_make_CompileDemos.gmk,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+
+--- jdk/make/CompileDemos.gmk.orig	2015-06-10 10:36:15.000000000 +0000
++++ jdk/make/CompileDemos.gmk
+@@ -56,7 +56,6 @@ define SetupAppletDemo
+       BUILD_DEMOS += $$(BUILD_DEMO_APPLET_$1)
+ endef
+ 
+-ifneq ($(OPENJDK_TARGET_OS), solaris)
+   $(eval $(call SetupAppletDemo,ArcTest))
+   $(eval $(call SetupAppletDemo,BarChart))
+   $(eval $(call SetupAppletDemo,Blink))
+@@ -77,7 +76,6 @@ ifneq ($(OPENJDK_TARGET_OS), solaris)
+     $(eval $(call SetupAppletDemo,JumpingBox,,closed/))
+     $(eval $(call SetupAppletDemo,TicTacToe,,closed/))
+   endif
+-endif
+ 
+ ##################################################################################################
+ 
+@@ -159,11 +157,9 @@ $(JDK_OUTPUTDIR)/demo/jfc/CodePointIM/_t
+ 
+ BUILD_DEMOS += $(JDK_OUTPUTDIR)/demo/jfc/CodePointIM/_the.services
+ 
+-ifneq ($(OPENJDK_TARGET_OS), solaris)
+   $(eval $(call SetupDemo,MoleculeViewer,applets,,XYZChemModel,,,example*.html *.java))
+   $(eval $(call SetupDemo,WireFrame,applets,,ThreeD,,,example*.html *.java))
+   $(eval $(call SetupDemo,SwingApplet,jfc,,SwingApplet,,,README* *.html))
+-endif
+ $(eval $(call SetupDemo,FileChooserDemo,jfc,,FileChooserDemo,,,README*))
+ $(eval $(call SetupDemo,Font2DTest,jfc,,Font2DTest,,,*.html *.txt))
+ $(eval $(call SetupDemo,Metalworks,jfc,,Metalworks,,,README*))
+@@ -375,16 +371,9 @@ BUILD_DEMOS += $(JDK_OUTPUTDIR)/demo/man
+ ##################################################################################################
+ 
+ # The netbeans project files are copied into the demo directory.
+-ifeq ($(OPENJDK_TARGET_OS), solaris)
+-  BUILD_DEMOS += $(patsubst $(JDK_TOPDIR)/src/share/demo/nbproject/%, \
+-    $(JDK_OUTPUTDIR)/demo/nbproject/%, \
+-    $(filter-out $(JDK_TOPDIR)/src/share/demo/nbproject/jfc/SwingApplet%, \
+-    $(call CacheFind, $(JDK_TOPDIR)/src/share/demo/nbproject)))
+-else
+   BUILD_DEMOS += $(patsubst $(JDK_TOPDIR)/src/share/demo/nbproject/%, \
+     $(JDK_OUTPUTDIR)/demo/nbproject/%, \
+     $(call CacheFind, $(JDK_TOPDIR)/src/share/demo/nbproject))
+-endif
+ 
+ $(JDK_OUTPUTDIR)/demo/nbproject/%: $(JDK_TOPDIR)/src/share/demo/nbproject/%
+ 	$(call install-file)
