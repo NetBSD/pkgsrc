@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2015/06/12 10:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/07/03 18:00:36 ryoon Exp $
 
-DISTNAME=		po4a-0.45
-PKGREVISION=		1
+DISTNAME=		po4a-0.46
 CATEGORIES=		textproc
-MASTER_SITES=		https://alioth.debian.org/frs/download.php/file/3942/
+MASTER_SITES=		https://alioth.debian.org/frs/download.php/file/4134/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://po4a.alioth.debian.org/
