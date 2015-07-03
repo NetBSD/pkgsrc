@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/12/20 21:53:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/03 12:36:10 wiz Exp $
 
-GFXVER=		0.5.0
+GFXVER=		0.5.2
 PKGNAME=	openttd-data-${GFXVER}
 CATEGORIES=	games x11
 MASTER_SITES=	http://binaries.openttd.org/extra
@@ -21,6 +21,8 @@ NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	share/openttd/data
 INSTALLATION_DIRS+=	share/openttd/gm
+
+USE_TOOLS+=	tar
 
 post-extract:
 	cd ${WRKDIR} && tar xvf opengfx-${GFXVER}.tar
