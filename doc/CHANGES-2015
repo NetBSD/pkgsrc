@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2872 2015/07/02 23:00:53 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2873 2015/07/03 04:13:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5492,3 +5492,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.5 [rodent 2015-07-02]
 	Added x11/xfsinfo version 1.0.5 [rodent 2015-07-02]
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.6 [rodent 2015-07-02]
+	Updated misc/libreoffice4 to 4.4.4.3 [ryoon 2015-07-03]
