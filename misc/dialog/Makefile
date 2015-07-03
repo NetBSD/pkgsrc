@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2015/05/31 13:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2015/07/03 15:08:24 sborrill Exp $
 
 DISTNAME=	dialog-1.2-20150528
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C/-2/.2/}
 CATEGORIES=	misc
 MASTER_SITES=	ftp://invisible-island.net/dialog/
@@ -25,6 +26,12 @@ SUBST_FILES.rpath=	dialog-config.in
 SUBST_MESSAGE.rpath=	Fixing rpath in dialog-config
 SUBST_SED.rpath=	-e 's;-L\(.\);${_COMPILER_RPATH_FLAG}\1\{exec_prefix\}/lib -L\1;'
 SUBST_STAGE.rpath=	pre-configure
+
+.include "../../mk/bsd.prefs.mk"
+# curses from NetBSD 5 and earlier will coredump when displaying shadows
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5]*)
+CONFIGURE_ARGS+=	--disable-widec
+.endif
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
