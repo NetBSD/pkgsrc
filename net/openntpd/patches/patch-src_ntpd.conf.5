@@ -1,0 +1,21 @@
+$NetBSD: patch-src_ntpd.conf.5,v 1.1 2015/07/03 12:31:12 wiz Exp $
+
+Abort if configuration specifies tls constraints and ntpd not compiled with
+tls support; accepted upstream.
+
+--- src/ntpd.conf.5.orig	2015-03-25 01:18:56.000000000 +0000
++++ src/ntpd.conf.5
+@@ -192,8 +192,11 @@ thereby reducing the impact of unauthent
+ .Sq Man-In-The-Middle
+ attacks.
+ Received NTP packets with time information falling outside of a range
+-near the constraint will be discarded and such NTP servers
+-will be marked as invalid.
++near the constraint will be discarded and such NTP servers will be marked as
++invalid. Contraints are only available if
++.Xr ntpd 8
++has been compiled with libtls support. Configuring a constraint without libtls
++support will result in a fatal error.
+ .Bl -tag -width Ds
+ .It Ic constraint from Ar url
+ Specify the URL, IP address or the hostname of an HTTPS server to
