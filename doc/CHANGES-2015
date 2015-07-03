@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2883 2015/07/03 16:06:34 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.2884 2015/07/03 18:01:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5504,3 +5504,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/openttd to 1.5.1 [wiz 2015-07-03]
 	Updated net/nagstamon to 1.0.1 [bouyer 2015-07-04]
 	Updated devel/radare2 to 0.9.9 [khorben 2015-07-03]
+	Updated textproc/po4a to 0.46 [ryoon 2015-07-03]
