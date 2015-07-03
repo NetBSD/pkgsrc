@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/03/12 02:59:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/07/03 04:13:04 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -137,6 +137,7 @@ ${PKGNAME}/program/libepslo.so
 ${PKGNAME}/program/libeptlo.so
 ${PKGNAME}/program/liberalo.so
 ${PKGNAME}/program/libetilo.so
+${PLIST.kde4}${PKGNAME}/program/libkde4be1lo.so
 ${PKGNAME}/program/libevtattlo.so
 ${PKGNAME}/program/libexplo.so
 ${PKGNAME}/program/libexpwraplo.so
@@ -8926,6 +8927,115 @@ ${PKGNAME}/share/config/soffice.cfg/modules/scalc/ui/validationhelptabpage.ui
 ${PKGNAME}/share/config/soffice.cfg/modules/scalc/ui/xmlsourcedialog.ui
 ${PKGNAME}/share/config/soffice.cfg/modules/scalc/ui/ztestdialog.ui
 ${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/griddialog.ui
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/af.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/am.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ar.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/as.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ast.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/be.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/bg.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/bn-IN.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/bn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/bo.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/br.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/brx.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/bs.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ca-valencia.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ca.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/cs.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/cy.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/da.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/de.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/dgo.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/dz.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/el.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/en-GB.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/en-ZA.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/eo.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/es.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/et.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/eu.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/fa.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/fi.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/fr.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ga.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/gd.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/gl.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/gu.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/he.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/hi.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/hr.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/hu.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/id.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/is.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/it.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ja.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ka.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/kk.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/km.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/kmr-Latn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/kn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ko.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/kok.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ks.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/lb.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/lo.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/lt.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/lv.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/mai.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/mk.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ml.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/mn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/mni.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/mr.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/my.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/nb.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ne.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/nl.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/nn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/nr.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/nso.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/oc.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/om.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/or.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/pa-IN.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/pl.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/pt-BR.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/pt.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ro.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ru.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/rw.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sa-IN.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sat.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sd.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/si.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sid.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sk.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sl.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sq.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sr-Latn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sr.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ss.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/st.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sv.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/sw-TZ.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ta.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/te.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/tg.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/th.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/tn.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/tr.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ts.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/tt.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ug.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/uk.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/uz.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/ve.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/vi.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/xh.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/zh-CN.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/zh-TW.zip
+${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/res/zu.zip
 ${PKGNAME}/share/config/soffice.cfg/modules/scanner/ui/sanedialog.ui
 ${PKGNAME}/share/config/soffice.cfg/modules/schart/menubar/menubar.xml
 ${PKGNAME}/share/config/soffice.cfg/modules/schart/statusbar/statusbar.xml
@@ -13567,6 +13677,7 @@ ${PKGNAME}/ure/lib/libxmlreaderlo.so
 ${PKGNAME}/ure/lib/unorc
 ${PKGNAME}/ure/share/misc/services.rdb
 ${PKGNAME}/ure/share/misc/types.rdb
+${PKGNAME}/ure/ure
 share/appdata/libreoffice-base.appdata.xml
 share/appdata/libreoffice-calc.appdata.xml
 share/appdata/libreoffice-draw.appdata.xml
@@ -14029,83 +14140,3 @@ share/mimelnk/application/libreoffice-spreadsheet-template.desktop
 share/mimelnk/application/libreoffice-spreadsheet.desktop
 share/mimelnk/application/libreoffice-text-template.desktop
 share/mimelnk/application/libreoffice-text.desktop
-@pkgdir share/applications
-@pkgdir ${PKGNAME}/share/uno_packages/cache/uno_packages
-@pkgdir ${PKGNAME}/share/autotext/zu
-@pkgdir ${PKGNAME}/share/autotext/xh
-@pkgdir ${PKGNAME}/share/autotext/ve
-@pkgdir ${PKGNAME}/share/autotext/uz
-@pkgdir ${PKGNAME}/share/autotext/uk
-@pkgdir ${PKGNAME}/share/autotext/ug
-@pkgdir ${PKGNAME}/share/autotext/tt
-@pkgdir ${PKGNAME}/share/autotext/ts
-@pkgdir ${PKGNAME}/share/autotext/tn
-@pkgdir ${PKGNAME}/share/autotext/th
-@pkgdir ${PKGNAME}/share/autotext/tg
-@pkgdir ${PKGNAME}/share/autotext/te
-@pkgdir ${PKGNAME}/share/autotext/ta
-@pkgdir ${PKGNAME}/share/autotext/sw-TZ
-@pkgdir ${PKGNAME}/share/autotext/st
-@pkgdir ${PKGNAME}/share/autotext/ss
-@pkgdir ${PKGNAME}/share/autotext/sr-Latn
-@pkgdir ${PKGNAME}/share/autotext/sr
-@pkgdir ${PKGNAME}/share/autotext/sq
-@pkgdir ${PKGNAME}/share/autotext/sid
-@pkgdir ${PKGNAME}/share/autotext/si
-@pkgdir ${PKGNAME}/share/autotext/sd
-@pkgdir ${PKGNAME}/share/autotext/sat
-@pkgdir ${PKGNAME}/share/autotext/sa-IN
-@pkgdir ${PKGNAME}/share/autotext/rw
-@pkgdir ${PKGNAME}/share/autotext/pa-IN
-@pkgdir ${PKGNAME}/share/autotext/or
-@pkgdir ${PKGNAME}/share/autotext/om
-@pkgdir ${PKGNAME}/share/autotext/oc
-@pkgdir ${PKGNAME}/share/autotext/nso
-@pkgdir ${PKGNAME}/share/autotext/nr
-@pkgdir ${PKGNAME}/share/autotext/nn
-@pkgdir ${PKGNAME}/share/autotext/ne
-@pkgdir ${PKGNAME}/share/autotext/nb
-@pkgdir ${PKGNAME}/share/autotext/my
-@pkgdir ${PKGNAME}/share/autotext/mr
-@pkgdir ${PKGNAME}/share/autotext/mni
-@pkgdir ${PKGNAME}/share/autotext/ml
-@pkgdir ${PKGNAME}/share/autotext/mk
-@pkgdir ${PKGNAME}/share/autotext/mai
-@pkgdir ${PKGNAME}/share/autotext/lv
-@pkgdir ${PKGNAME}/share/autotext/lo
-@pkgdir ${PKGNAME}/share/autotext/lb
-@pkgdir ${PKGNAME}/share/autotext/ks
-@pkgdir ${PKGNAME}/share/autotext/kok
-@pkgdir ${PKGNAME}/share/autotext/kn
-@pkgdir ${PKGNAME}/share/autotext/kmr-Latn
-@pkgdir ${PKGNAME}/share/autotext/kk
-@pkgdir ${PKGNAME}/share/autotext/ka
-@pkgdir ${PKGNAME}/share/autotext/id
-@pkgdir ${PKGNAME}/share/autotext/hi
-@pkgdir ${PKGNAME}/share/autotext/he
-@pkgdir ${PKGNAME}/share/autotext/gu
-@pkgdir ${PKGNAME}/share/autotext/gl
-@pkgdir ${PKGNAME}/share/autotext/gd
-@pkgdir ${PKGNAME}/share/autotext/ga
-@pkgdir ${PKGNAME}/share/autotext/eu
-@pkgdir ${PKGNAME}/share/autotext/et
-@pkgdir ${PKGNAME}/share/autotext/eo
-@pkgdir ${PKGNAME}/share/autotext/el
-@pkgdir ${PKGNAME}/share/autotext/dz
-@pkgdir ${PKGNAME}/share/autotext/dgo
-@pkgdir ${PKGNAME}/share/autotext/cy
-@pkgdir ${PKGNAME}/share/autotext/ca-valencia
-@pkgdir ${PKGNAME}/share/autotext/bs
-@pkgdir ${PKGNAME}/share/autotext/brx
-@pkgdir ${PKGNAME}/share/autotext/br
-@pkgdir ${PKGNAME}/share/autotext/bo
-@pkgdir ${PKGNAME}/share/autotext/bn-IN
-@pkgdir ${PKGNAME}/share/autotext/bn
-@pkgdir ${PKGNAME}/share/autotext/be
-@pkgdir ${PKGNAME}/share/autotext/ast
-@pkgdir ${PKGNAME}/share/autotext/as
-@pkgdir ${PKGNAME}/share/autotext/ar
-@pkgdir ${PKGNAME}/share/autotext/am
-@pkgdir ${PKGNAME}/share/autotext/af
-@pkgdir ${PKGNAME}/presets/uno_packages
-@pkgdir ${PKGNAME}/presets/psprint
