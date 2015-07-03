@@ -1,6 +1,6 @@
-$NetBSD: patch-mfbt_Attributes.h,v 1.4 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-mfbt_Attributes.h,v 1.5 2015/07/03 10:25:40 ryoon Exp $
 
---- mfbt/Attributes.h.orig	2015-05-04 00:43:30.000000000 +0000
+--- mfbt/Attributes.h.orig	2015-06-18 20:55:34.000000000 +0000
 +++ mfbt/Attributes.h
 @@ -50,6 +50,7 @@
   * don't indicate support for them here, due to
@@ -20,13 +20,11 @@ $NetBSD: patch-mfbt_Attributes.h,v 1.4 2015/05/12 22:48:54 ryoon Exp $
  #  if __has_extension(cxx_constexpr)
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #  endif
-@@ -84,6 +88,9 @@
- #  endif
- #elif defined(__GNUC__)
+@@ -86,6 +90,7 @@
  #  if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
-+#    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
+ #    define MOZ_HAVE_CXX11_CONSTEXPR
+ #    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
 +#      define MOZ_HAVE_CXX11_ALIGNAS
-+#    endif
- #      define MOZ_HAVE_CXX11_CONSTEXPR
- #      define MOZ_HAVE_EXPLICIT_CONVERSION
- #  endif
+ #      define MOZ_HAVE_CXX11_CONSTEXPR_IN_TEMPLATES
+ #    endif
+ #    define MOZ_HAVE_EXPLICIT_CONVERSION
