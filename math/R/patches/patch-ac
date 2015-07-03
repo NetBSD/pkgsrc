@@ -1,9 +1,10 @@
-$NetBSD: patch-ac,v 1.34 2015/05/13 12:48:05 ryoon Exp $
+$NetBSD: patch-ac,v 1.35 2015/07/03 12:45:03 joerg Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 FreeBSD 10 is not FreeBSD 1.
+Fix texi2any version check.
 
---- configure.orig	2015-04-08 22:16:36.000000000 +0000
+--- configure.orig	2015-06-10 22:16:27.000000000 +0000
 +++ configure
 @@ -4012,7 +4012,7 @@ fi
  
@@ -23,6 +24,15 @@ FreeBSD 10 is not FreeBSD 1.
    LTOALL=-flto
  fi
  
+@@ -5270,7 +5270,7 @@ if test -z "${texi2any_version_maj}" \
+      || test -z "${texi2any_version_min}"; then
+   r_cv_prog_texi2any_v5=no
+ elif test ${texi2any_version_maj} -lt 5 \
+-     || test ${texi2any_version_min} -lt 1; then
++     || test ${texi2any_version_maj} = 5 -a ${texi2any_version_min} -lt 1; then
+   r_cv_prog_texi2any_v5=no
+ else
+   r_cv_prog_texi2any_v5=yes
 @@ -19921,7 +19921,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
