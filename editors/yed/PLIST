@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2015/07/03 09:56:55 abs Exp $
+bin/yed
+lib/java/yed/icons/yicon.ico
+lib/java/yed/icons/yicon16.png
+lib/java/yed/icons/yicon32.png
+lib/java/yed/lib/common-image.jar
+lib/java/yed/lib/common-io.jar
+lib/java/yed/lib/common-lang.jar
+lib/java/yed/lib/imageio-core.jar
+lib/java/yed/lib/imageio-icns.jar
+lib/java/yed/lib/imageio-ico.jar
+lib/java/yed/lib/imageio-iff.jar
+lib/java/yed/lib/imageio-jpeg.jar
+lib/java/yed/lib/imageio-metadata.jar
+lib/java/yed/lib/imageio-pict.jar
+lib/java/yed/lib/imageio-psd.jar
+lib/java/yed/lib/imageio-thumbsdb.jar
+lib/java/yed/lib/imageio-tiff.jar
+lib/java/yed/lib/vectorgraphics.jar
+lib/java/yed/yed.jar
+share/doc/java/yed/license.html
