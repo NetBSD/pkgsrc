@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/03 23:56:42 markd Exp $
+share/texmf-dist/doc/latex/bclogo/LISEZ-MOI.doc
+share/texmf-dist/doc/latex/bclogo/LISEZ-MOI.latex
+share/texmf-dist/doc/latex/bclogo/README.doc
+share/texmf-dist/doc/latex/bclogo/README.latex
+share/texmf-dist/doc/latex/bclogo/bclogo-doc.pdf
+share/texmf-dist/doc/latex/bclogo/bclogo-doc.tex
+share/texmf-dist/doc/latex/bclogo/brace.mps
+share/texmf-dist/doc/latex/bclogo/losanges.mps
+share/texmf-dist/doc/latex/bclogo/spir.mps
