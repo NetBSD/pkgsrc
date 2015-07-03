@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/02/01 01:47:27 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/07/03 12:31:12 wiz Exp $
 
-SHA1 (openntpd-5.7p3.tar.gz) = 02ad9ae80f2dfd6cfbcc642d35f73093d167a067
-RMD160 (openntpd-5.7p3.tar.gz) = 7996771b7041add8f8c3233f30b9dfaab027eb7b
-Size (openntpd-5.7p3.tar.gz) = 409734 bytes
+SHA1 (openntpd-5.7p4.tar.gz) = ba885dc7cf599161b351cd90af2af175071e3a9d
+RMD160 (openntpd-5.7p4.tar.gz) = d99d0058ce67272e5dff3cd945f0beaaf564591c
+Size (openntpd-5.7p4.tar.gz) = 427900 bytes
+SHA1 (patch-src_config.c) = baffc96d29a1d4c8482add8a2f89e7c42bbacf96
+SHA1 (patch-src_ntp.c) = 12fa52fae73f97ed6f49794ef964519ac70ddc5c
+SHA1 (patch-src_ntpd.conf.5) = c5ca38a046ad68f1997c0d8b5aaa6cee171b17b1
