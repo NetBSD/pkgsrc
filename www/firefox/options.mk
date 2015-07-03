@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2015/04/15 12:36:23 ryoon Exp $
+# $NetBSD: options.mk,v 1.26 2015/07/03 10:25:40 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-alsa
 
 .if !empty(PKG_OPTIONS:Mgnome)
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+#.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gio --enable-dbus --enable-gnomeui
 CONFIGURE_ARGS+=	--enable-libnotify

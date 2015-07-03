@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2015/06/03 03:22:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.98 2015/07/03 10:25:40 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -137,6 +137,8 @@ lib/firefox/browser/chrome/browser/content/browser/devtools/app-manager/template
 lib/firefox/browser/chrome/browser/content/browser/devtools/app-manager/utils.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/canvasdebugger.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/canvasdebugger.xul
+lib/firefox/browser/chrome/browser/content/browser/devtools/canvasdebugger/callslist.js
+lib/firefox/browser/chrome/browser/content/browser/devtools/canvasdebugger/snapshotslist.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/codemirror/activeline.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/codemirror/brace-fold.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/codemirror/clike.js
@@ -693,6 +695,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/editor-debug-lo
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/editor-debug-location@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/editor-error.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/eyedropper.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/fast-forward.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/fast-forward@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/filetype-dir-close.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/filetype-dir-open.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/filetype-globe.svg
@@ -741,6 +745,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-sc
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-screenshot@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-touch.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-touch@2x.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/rewind.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/rewind@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/ruleview.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/scratchpad.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/shadereditor.css
@@ -868,6 +874,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/Options.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/aboutPermissions.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/alwaysAsk.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/applications.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/default-profile-image.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/dialog.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/favicon.ico
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/icons.svg
@@ -1395,6 +1402,9 @@ lib/firefox/browser/chrome/webide/content/permissionstable.js
 lib/firefox/browser/chrome/webide/content/permissionstable.xhtml
 lib/firefox/browser/chrome/webide/content/prefs.js
 lib/firefox/browser/chrome/webide/content/prefs.xhtml
+lib/firefox/browser/chrome/webide/content/project-listing.js
+lib/firefox/browser/chrome/webide/content/project-listing.xhtml
+lib/firefox/browser/chrome/webide/content/project-panel.js
 lib/firefox/browser/chrome/webide/content/runtimedetails.js
 lib/firefox/browser/chrome/webide/content/runtimedetails.xhtml
 lib/firefox/browser/chrome/webide/content/webide.js
@@ -1410,7 +1420,7 @@ lib/firefox/browser/chrome/webide/skin/logs.css
 lib/firefox/browser/chrome/webide/skin/monitor.css
 lib/firefox/browser/chrome/webide/skin/newapp.css
 lib/firefox/browser/chrome/webide/skin/permissionstable.css
-lib/firefox/browser/chrome/webide/skin/prefs.css
+lib/firefox/browser/chrome/webide/skin/project-listing.css
 lib/firefox/browser/chrome/webide/skin/runtimedetails.css
 lib/firefox/browser/chrome/webide/skin/throbber.svg
 lib/firefox/browser/chrome/webide/skin/webide.css
@@ -1581,6 +1591,7 @@ lib/firefox/browser/modules/devtools/shared/d3.js
 lib/firefox/browser/modules/devtools/shared/devices.js
 lib/firefox/browser/modules/devtools/shared/doorhanger.js
 lib/firefox/browser/modules/devtools/shared/frame-script-utils.js
+lib/firefox/browser/modules/devtools/shared/getjson.js
 lib/firefox/browser/modules/devtools/shared/inplace-editor.js
 lib/firefox/browser/modules/devtools/shared/observable-object.js
 lib/firefox/browser/modules/devtools/shared/options-view.js
@@ -1596,6 +1607,7 @@ lib/firefox/browser/modules/devtools/shared/timeline/markers-overview.js
 lib/firefox/browser/modules/devtools/shared/timeline/memory-overview.js
 lib/firefox/browser/modules/devtools/shared/timeline/waterfall.js
 lib/firefox/browser/modules/devtools/shared/undo.js
+lib/firefox/browser/modules/devtools/shared/widgets/CubicBezierPresets.js
 lib/firefox/browser/modules/devtools/shared/widgets/CubicBezierWidget.js
 lib/firefox/browser/modules/devtools/shared/widgets/FastListWidget.js
 lib/firefox/browser/modules/devtools/shared/widgets/Spectrum.js
@@ -1638,7 +1650,7 @@ lib/firefox/browser/modules/devtools/webide/addons.js
 lib/firefox/browser/modules/devtools/webide/app-manager.js
 lib/firefox/browser/modules/devtools/webide/build.js
 lib/firefox/browser/modules/devtools/webide/config-view.js
-lib/firefox/browser/modules/devtools/webide/remote-resources.js
+lib/firefox/browser/modules/devtools/webide/project-list.js
 lib/firefox/browser/modules/devtools/webide/runtimes.js
 lib/firefox/browser/modules/devtools/webide/simulator-process.js
 lib/firefox/browser/modules/devtools/webide/simulators.js
@@ -1729,6 +1741,7 @@ lib/firefox/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/aboutSupport.properties
 lib/firefox/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/aboutTelemetry.properties
+lib/firefox/chrome/en-US/locale/en-US/global/aboutWebrtc.properties
 lib/firefox/chrome/en-US/locale/en-US/global/appPicker.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/appstrings.properties
 lib/firefox/chrome/en-US/locale/en-US/global/autocomplete.properties
@@ -1862,14 +1875,21 @@ lib/firefox/chrome/marionette/content/EventUtils.js
 lib/firefox/chrome/marionette/content/MozillaLogger.js
 lib/firefox/chrome/marionette/content/SpecialPowersObserver.js
 lib/firefox/chrome/marionette/content/SpecialPowersObserverAPI.js
+lib/firefox/chrome/marionette/content/actions.js
 lib/firefox/chrome/marionette/content/atoms.js
-lib/firefox/chrome/marionette/content/marionette-common.js
-lib/firefox/chrome/marionette/content/marionette-elements.js
-lib/firefox/chrome/marionette/content/marionette-frame-manager.js
-lib/firefox/chrome/marionette/content/marionette-listener.js
-lib/firefox/chrome/marionette/content/marionette-sendkeys.js
-lib/firefox/chrome/marionette/content/marionette-server.js
-lib/firefox/chrome/marionette/content/marionette-simpletest.js
+lib/firefox/chrome/marionette/content/command.js
+lib/firefox/chrome/marionette/content/common.js
+lib/firefox/chrome/marionette/content/dispatcher.js
+lib/firefox/chrome/marionette/content/driver.js
+lib/firefox/chrome/marionette/content/elements.js
+lib/firefox/chrome/marionette/content/emulator.js
+lib/firefox/chrome/marionette/content/error.js
+lib/firefox/chrome/marionette/content/frame-manager.js
+lib/firefox/chrome/marionette/content/listener.js
+lib/firefox/chrome/marionette/content/modal.js
+lib/firefox/chrome/marionette/content/sendkeys.js
+lib/firefox/chrome/marionette/content/server.js
+lib/firefox/chrome/marionette/content/simpletest.js
 lib/firefox/chrome/marionette/content/specialpowers.js
 lib/firefox/chrome/marionette/content/specialpowersAPI.js
 lib/firefox/chrome/marionette/modules/Assert.jsm
@@ -1903,12 +1923,8 @@ lib/firefox/chrome/pippki/content/pippki/downloadcert.js
 lib/firefox/chrome/pippki/content/pippki/downloadcert.xul
 lib/firefox/chrome/pippki/content/pippki/editcacert.xul
 lib/firefox/chrome/pippki/content/pippki/editcerts.js
-lib/firefox/chrome/pippki/content/pippki/editemailcert.xul
-lib/firefox/chrome/pippki/content/pippki/escrowWarn.js
-lib/firefox/chrome/pippki/content/pippki/escrowWarn.xul
 lib/firefox/chrome/pippki/content/pippki/exceptionDialog.js
 lib/firefox/chrome/pippki/content/pippki/exceptionDialog.xul
-lib/firefox/chrome/pippki/content/pippki/getpassword.xul
 lib/firefox/chrome/pippki/content/pippki/load_device.xul
 lib/firefox/chrome/pippki/content/pippki/password.js
 lib/firefox/chrome/pippki/content/pippki/pippki.js
@@ -1928,6 +1944,7 @@ lib/firefox/chrome/toolkit/content/formautofill/requestAutocomplete.xhtml
 lib/firefox/chrome/toolkit/content/global/BrowserElementChild.js
 lib/firefox/chrome/toolkit/content/global/BrowserElementChildPreload.js
 lib/firefox/chrome/toolkit/content/global/BrowserElementPanning.js
+lib/firefox/chrome/toolkit/content/global/BrowserElementPanningAPZDisabled.js
 lib/firefox/chrome/toolkit/content/global/XPCNativeWrapper.js
 lib/firefox/chrome/toolkit/content/global/about.js
 lib/firefox/chrome/toolkit/content/global/about.xhtml
@@ -2061,6 +2078,7 @@ lib/firefox/chrome/toolkit/content/global/printdialog.js
 lib/firefox/chrome/toolkit/content/global/printdialog.xul
 lib/firefox/chrome/toolkit/content/global/printjoboptions.js
 lib/firefox/chrome/toolkit/content/global/printjoboptions.xul
+lib/firefox/chrome/toolkit/content/global/process-content.js
 lib/firefox/chrome/toolkit/content/global/reader/aboutReader.html
 lib/firefox/chrome/toolkit/content/global/reader/aboutReader.js
 lib/firefox/chrome/toolkit/content/global/remote-test-ipc.js
@@ -2466,6 +2484,7 @@ lib/firefox/components/ActivityWrapper.js
 lib/firefox/components/AlarmsManager.js
 lib/firefox/components/AppsService.js
 lib/firefox/components/BrowserElementParent.js
+lib/firefox/components/CSSUnprefixingService.js
 lib/firefox/components/ChromeNotifications.js
 lib/firefox/components/ColorAnalyzer.js
 lib/firefox/components/ConsoleAPIStorage.js
@@ -2482,6 +2501,7 @@ lib/firefox/components/MainProcessSingleton.js
 lib/firefox/components/MozKeyboard.js
 lib/firefox/components/NetworkGeolocationProvider.js
 lib/firefox/components/NotificationStorage.js
+lib/firefox/components/PACGenerator.js
 lib/firefox/components/PageThumbsProtocol.js
 lib/firefox/components/Payment.js
 lib/firefox/components/PaymentFlowInfo.js
@@ -2528,14 +2548,12 @@ lib/firefox/components/nsBlocklistService.js
 lib/firefox/components/nsContentDispatchChooser.js
 lib/firefox/components/nsContentPrefService.js
 lib/firefox/components/nsCrashMonitor.js
-lib/firefox/components/nsDOMIdentity.js
 lib/firefox/components/nsDefaultCLH.js
 lib/firefox/components/nsFilePicker.js
 lib/firefox/components/nsFormAutoComplete.js
 lib/firefox/components/nsFormHistory.js
 lib/firefox/components/nsHandlerService.js
 lib/firefox/components/nsHelperAppDlg.js
-lib/firefox/components/nsIDService.js
 lib/firefox/components/nsINIProcessor.js
 lib/firefox/components/nsInputListAutoComplete.js
 lib/firefox/components/nsLivemarkService.js
@@ -2616,8 +2634,10 @@ lib/firefox/modules/AboutReader.jsm
 lib/firefox/modules/ActivitiesService.jsm
 lib/firefox/modules/ActivitiesServiceFilter.jsm
 lib/firefox/modules/AddonManager.jsm
+lib/firefox/modules/AddonWatcher.jsm
 lib/firefox/modules/AlarmDB.jsm
 lib/firefox/modules/AlarmService.jsm
+lib/firefox/modules/AppConstants.jsm
 lib/firefox/modules/AppDownloadManager.jsm
 lib/firefox/modules/AppsServiceChild.jsm
 lib/firefox/modules/AppsUtils.jsm
@@ -2657,7 +2677,6 @@ lib/firefox/modules/ContentPrefStore.jsm
 lib/firefox/modules/ContentPrefUtils.jsm
 lib/firefox/modules/CrashMonitor.jsm
 lib/firefox/modules/Credentials.jsm
-lib/firefox/modules/DOMIdentity.jsm
 lib/firefox/modules/DOMRequestHelper.jsm
 lib/firefox/modules/DataStoreChangeNotifier.jsm
 lib/firefox/modules/DataStoreCursorImpl.jsm
@@ -2692,6 +2711,8 @@ lib/firefox/modules/FxAccountsClient.jsm
 lib/firefox/modules/FxAccountsCommon.js
 lib/firefox/modules/FxAccountsOAuthClient.jsm
 lib/firefox/modules/FxAccountsOAuthGrantClient.jsm
+lib/firefox/modules/FxAccountsProfile.jsm
+lib/firefox/modules/FxAccountsProfileChannel.jsm
 lib/firefox/modules/FxAccountsProfileClient.jsm
 lib/firefox/modules/GMPInstallManager.jsm
 lib/firefox/modules/GMPUtils.jsm
@@ -2716,6 +2737,7 @@ lib/firefox/modules/LoginHelper.jsm
 lib/firefox/modules/LoginImport.jsm
 lib/firefox/modules/LoginManagerContent.jsm
 lib/firefox/modules/LoginManagerParent.jsm
+lib/firefox/modules/LoginRecipes.jsm
 lib/firefox/modules/LoginStore.jsm
 lib/firefox/modules/ManifestProcessor.jsm
 lib/firefox/modules/MessagePortBase.jsm
@@ -2727,6 +2749,7 @@ lib/firefox/modules/NativeApp.jsm
 lib/firefox/modules/NetUtil.jsm
 lib/firefox/modules/NewTabUtils.jsm
 lib/firefox/modules/NotificationDB.jsm
+lib/firefox/modules/ObjectUtils.jsm
 lib/firefox/modules/OfflineCacheInstaller.jsm
 lib/firefox/modules/OperatorApps.jsm
 lib/firefox/modules/PageMenu.jsm
@@ -2755,6 +2778,7 @@ lib/firefox/modules/Preferences.jsm
 lib/firefox/modules/Prefetcher.jsm
 lib/firefox/modules/PresentationDeviceInfoManager.jsm
 lib/firefox/modules/PrivateBrowsingUtils.jsm
+lib/firefox/modules/ProfileAge.jsm
 lib/firefox/modules/Promise-backend.js
 lib/firefox/modules/Promise.jsm
 lib/firefox/modules/PromiseUtils.jsm
@@ -2766,6 +2790,7 @@ lib/firefox/modules/RemoteAddonsChild.jsm
 lib/firefox/modules/RemoteAddonsParent.jsm
 lib/firefox/modules/RemoteController.jsm
 lib/firefox/modules/RemoteFinder.jsm
+lib/firefox/modules/RemotePageManager.jsm
 lib/firefox/modules/RemoteSecurityUI.jsm
 lib/firefox/modules/RemoteWebNavigation.jsm
 lib/firefox/modules/RemoteWebProgress.jsm
@@ -2797,6 +2822,7 @@ lib/firefox/modules/Sqlite.jsm
 lib/firefox/modules/StoreTrustAnchor.jsm
 lib/firefox/modules/SystemMessagePermissionsChecker.jsm
 lib/firefox/modules/Task.jsm
+lib/firefox/modules/TelemetryEnvironment.jsm
 lib/firefox/modules/TelemetryFile.jsm
 lib/firefox/modules/TelemetryLog.jsm
 lib/firefox/modules/TelemetryPing.jsm
@@ -2847,6 +2873,8 @@ lib/firefox/modules/commonjs/dev/frame-script.js
 lib/firefox/modules/commonjs/dev/panel.js
 lib/firefox/modules/commonjs/dev/panel/view.js
 lib/firefox/modules/commonjs/dev/ports.js
+lib/firefox/modules/commonjs/dev/theme.js
+lib/firefox/modules/commonjs/dev/theme/hooks.js
 lib/firefox/modules/commonjs/dev/toolbox.js
 lib/firefox/modules/commonjs/dev/utils.js
 lib/firefox/modules/commonjs/dev/volcan.js
@@ -2860,11 +2888,9 @@ lib/firefox/modules/commonjs/diffpatcher/test/index.js
 lib/firefox/modules/commonjs/diffpatcher/test/patch.js
 lib/firefox/modules/commonjs/diffpatcher/test/tap.js
 lib/firefox/modules/commonjs/framescript/FrameScriptManager.jsm
-lib/firefox/modules/commonjs/framescript/LoaderHelper.jsm
+lib/firefox/modules/commonjs/framescript/content.jsm
 lib/firefox/modules/commonjs/framescript/context-menu.js
-lib/firefox/modules/commonjs/framescript/contextmenu-events.js
 lib/firefox/modules/commonjs/framescript/manager.js
-lib/firefox/modules/commonjs/framescript/tab-events.js
 lib/firefox/modules/commonjs/framescript/util.js
 lib/firefox/modules/commonjs/index.js
 lib/firefox/modules/commonjs/method/core.js
@@ -2887,9 +2913,12 @@ lib/firefox/modules/commonjs/sdk/content/content-worker.js
 lib/firefox/modules/commonjs/sdk/content/content.js
 lib/firefox/modules/commonjs/sdk/content/context-menu.js
 lib/firefox/modules/commonjs/sdk/content/events.js
+lib/firefox/modules/commonjs/sdk/content/l10n-html.js
 lib/firefox/modules/commonjs/sdk/content/loader.js
 lib/firefox/modules/commonjs/sdk/content/mod.js
+lib/firefox/modules/commonjs/sdk/content/page-mod.js
 lib/firefox/modules/commonjs/sdk/content/sandbox.js
+lib/firefox/modules/commonjs/sdk/content/tab-events.js
 lib/firefox/modules/commonjs/sdk/content/thumbnail.js
 lib/firefox/modules/commonjs/sdk/content/utils.js
 lib/firefox/modules/commonjs/sdk/content/worker-child.js
@@ -2996,6 +3025,10 @@ lib/firefox/modules/commonjs/sdk/preferences/utils.js
 lib/firefox/modules/commonjs/sdk/private-browsing.js
 lib/firefox/modules/commonjs/sdk/private-browsing/utils.js
 lib/firefox/modules/commonjs/sdk/querystring.js
+lib/firefox/modules/commonjs/sdk/remote/child.js
+lib/firefox/modules/commonjs/sdk/remote/core.js
+lib/firefox/modules/commonjs/sdk/remote/parent.js
+lib/firefox/modules/commonjs/sdk/remote/utils.js
 lib/firefox/modules/commonjs/sdk/request.js
 lib/firefox/modules/commonjs/sdk/selection.js
 lib/firefox/modules/commonjs/sdk/self.js
@@ -3237,6 +3270,7 @@ lib/firefox/modules/devtools/server/actors/call-watcher.js
 lib/firefox/modules/devtools/server/actors/canvas.js
 lib/firefox/modules/devtools/server/actors/child-process.js
 lib/firefox/modules/devtools/server/actors/childtab.js
+lib/firefox/modules/devtools/server/actors/chrome.js
 lib/firefox/modules/devtools/server/actors/common.js
 lib/firefox/modules/devtools/server/actors/csscoverage.js
 lib/firefox/modules/devtools/server/actors/device.js
@@ -3265,7 +3299,9 @@ lib/firefox/modules/devtools/server/actors/stylesheets.js
 lib/firefox/modules/devtools/server/actors/timeline.js
 lib/firefox/modules/devtools/server/actors/tracer.js
 lib/firefox/modules/devtools/server/actors/utils/ScriptStore.js
+lib/firefox/modules/devtools/server/actors/utils/TabSources.js
 lib/firefox/modules/devtools/server/actors/utils/actor-registry-utils.js
+lib/firefox/modules/devtools/server/actors/utils/audionodes.json
 lib/firefox/modules/devtools/server/actors/utils/automation-timeline.js
 lib/firefox/modules/devtools/server/actors/utils/make-debugger.js
 lib/firefox/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
@@ -3438,6 +3474,18 @@ lib/firefox/res/table-remove-column.gif
 lib/firefox/res/table-remove-row-active.gif
 lib/firefox/res/table-remove-row-hover.gif
 lib/firefox/res/table-remove-row.gif
+lib/firefox/res/text_caret.png
+lib/firefox/res/text_caret@1.5x.png
+lib/firefox/res/text_caret@2.25x.png
+lib/firefox/res/text_caret@2x.png
+lib/firefox/res/text_caret_tilt_left.png
+lib/firefox/res/text_caret_tilt_left@1.5x.png
+lib/firefox/res/text_caret_tilt_left@2.25x.png
+lib/firefox/res/text_caret_tilt_left@2x.png
+lib/firefox/res/text_caret_tilt_right.png
+lib/firefox/res/text_caret_tilt_right@1.5x.png
+lib/firefox/res/text_caret_tilt_right@2.25x.png
+lib/firefox/res/text_caret_tilt_right@2x.png
 lib/firefox/run-mozilla.sh
 lib/firefox/webapprt-stub
 lib/firefox/webapprt/chrome.manifest
