@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2015/02/16 11:03:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2015/07/03 12:31:12 wiz Exp $
 
-DISTNAME=		openntpd-5.7p3
+DISTNAME=		openntpd-5.7p4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenNTPD/}
 
@@ -14,17 +14,16 @@ CONFLICTS+=		ntp-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-privsep-path=path=${VARBASE}/chroot/ntpd
 
 SUBST_CLASSES+=		ntpd_m
 SUBST_STAGE.ntpd_m=	pre-build
-SUBST_FILES.ntpd_m=	ntpd.8 ntpctl.8
+SUBST_FILES.ntpd_m=	src/ntpd.8 src/ntpctl.8
 SUBST_SED.ntpd_m+=	-e 's,/var/db/,${VARBASE}/db/openntpd/,g'
 SUBST_SED.ntpd_m+=	-e 's,/var/run/,${VARBASE}/run/,g'
 
 SUBST_CLASSES+=		ntpd_h
 SUBST_STAGE.ntpd_h=	pre-build
-SUBST_FILES.ntpd_h=	ntpd.h
+SUBST_FILES.ntpd_h=	src/ntpd.h
 SUBST_SED.ntpd_h+=	-e 's,/db/ntpd.drift,/db/openntpd/ntpd.drift,g'
 
 EGDIR=			${PREFIX}/share/examples/openntpd
@@ -43,11 +42,11 @@ AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 ${EGDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ntpd ${DESTDIR}${PREFIX}/sbin/ntpd
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ntpd ${DESTDIR}${PREFIX}/sbin/ntpd
 	ln ${DESTDIR}${PREFIX}/sbin/ntpd ${DESTDIR}${PREFIX}/sbin/ntpctl
-	${INSTALL_MAN} ${WRKSRC}/ntpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/ntpd.8
-	${INSTALL_MAN} ${WRKSRC}/ntpctl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/ntpctl.8
-	${INSTALL_MAN} ${WRKSRC}/ntpd.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ntpd.conf.5
+	${INSTALL_MAN} ${WRKSRC}/src/ntpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/ntpd.8
+	${INSTALL_MAN} ${WRKSRC}/src/ntpctl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/ntpctl.8
+	${INSTALL_MAN} ${WRKSRC}/src/ntpd.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ntpd.conf.5
 	${INSTALL_DATA} ${WRKSRC}/ntpd.conf ${DESTDIR}${EGDIR}/ntpd.conf
 
 .include "../../mk/bsd.pkg.mk"
