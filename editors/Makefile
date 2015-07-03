@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2014/12/06 20:41:36 prlw1 Exp $
+# $NetBSD: Makefile,v 1.168 2015/07/03 09:57:16 abs Exp $
 #
 
 COMMENT=	Editors
@@ -162,6 +162,7 @@ SUBDIR+=	xjed
 SUBDIR+=	xournal
 SUBDIR+=	xvile
 SUBDIR+=	xwpe
+SUBDIR+=	yed
 SUBDIR+=	yudit
 SUBDIR+=	zile
 SUBDIR+=	zim
