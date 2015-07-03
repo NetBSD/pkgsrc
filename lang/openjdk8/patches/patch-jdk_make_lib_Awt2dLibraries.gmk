@@ -1,0 +1,14 @@
+$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+
+GCC support.
+
+--- jdk/make/lib/Awt2dLibraries.gmk.orig	2015-06-10 10:36:24.000000000 +0000
++++ jdk/make/lib/Awt2dLibraries.gmk
+@@ -695,7 +695,6 @@ $(eval $(call SetupNativeCompilation,BUI
+         $(SHARED_LIBRARY_FLAGS) \
+         -I$(JDK_TOPDIR)/src/share/native/sun/java2d \
+         -I$(JDK_TOPDIR)/src/share/native/sun/awt/debug, \
+-    CFLAGS_solaris := -xc99=no_lib, \
+     CFLAGS_windows := -DCMS_IS_WINDOWS_, \
+     MAPFILE := $(JDK_TOPDIR)/make/mapfiles/liblcms/mapfile-vers, \
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
