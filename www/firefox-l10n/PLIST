@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/05/12 23:06:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/07/03 10:28:33 ryoon Exp $
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach.manifest
@@ -187,6 +187,7 @@ lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/local
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/chrome/ach/locale/ach/global/autocomplete.properties
@@ -502,6 +503,7 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/autocomplete.properties
@@ -817,6 +819,7 @@ lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org/chrome/an/locale/an/global/autocomplete.properties
@@ -1132,6 +1135,7 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/autocomplete.properties
@@ -1447,6 +1451,7 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/autocomplete.properties
@@ -1762,6 +1767,7 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/local
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/autocomplete.properties
@@ -2078,6 +2084,7 @@ lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org/chrome/az/locale/az/global/autocomplete.properties
@@ -2394,6 +2401,7 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/autocomplete.properties
@@ -2708,6 +2716,7 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/autocomplete.properties
@@ -3021,6 +3030,7 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/l
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/autocomplete.properties
@@ -3338,6 +3348,7 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/l
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/autocomplete.properties
@@ -3653,6 +3664,7 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/autocomplete.properties
@@ -3969,6 +3981,7 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/autocomplete.properties
@@ -4283,6 +4296,7 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/autocomplete.properties
@@ -4598,6 +4612,7 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/autocomplete.properties
@@ -4915,6 +4930,7 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/autocomplete.properties
@@ -5229,6 +5245,7 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/autocomplete.properties
@@ -5545,6 +5562,7 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/autocomplete.properties
@@ -5861,6 +5879,7 @@ lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/local
 lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-dsb@firefox.mozilla.org/chrome/dsb/locale/dsb/global/autocomplete.properties
@@ -6176,6 +6195,7 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/autocomplete.properties
@@ -6493,6 +6513,7 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/l
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/autocomplete.properties
@@ -6809,6 +6830,7 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/l
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/autocomplete.properties
@@ -7123,6 +7145,7 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/l
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/autocomplete.properties
@@ -7440,6 +7463,7 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/autocomplete.properties
@@ -7756,6 +7780,7 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/l
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/autocomplete.properties
@@ -8071,6 +8096,7 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/l
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/autocomplete.properties
@@ -8387,6 +8413,7 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/l
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/autocomplete.properties
@@ -8701,6 +8728,7 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/l
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/autocomplete.properties
@@ -9016,6 +9044,7 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/autocomplete.properties
@@ -9333,6 +9362,7 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/autocomplete.properties
@@ -9648,6 +9678,7 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/autocomplete.properties
@@ -9964,6 +9995,7 @@ lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/
 lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ff@firefox.mozilla.org/chrome/ff/locale/ff/global/autocomplete.properties
@@ -10279,6 +10311,7 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/autocomplete.properties
@@ -10595,6 +10628,7 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/autocomplete.properties
@@ -10910,6 +10944,7 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/l
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/autocomplete.properties
@@ -11228,6 +11263,7 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/l
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/autocomplete.properties
@@ -11543,6 +11579,7 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/autocomplete.properties
@@ -11858,6 +11895,7 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/autocomplete.properties
@@ -12173,6 +12211,7 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/l
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/autocomplete.properties
@@ -12486,6 +12525,7 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/autocomplete.properties
@@ -12800,6 +12840,7 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/l
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/autocomplete.properties
@@ -13117,6 +13158,7 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/autocomplete.properties
@@ -13433,6 +13475,7 @@ lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/local
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org/chrome/hsb/locale/hsb/global/autocomplete.properties
@@ -13747,6 +13790,7 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/autocomplete.properties
@@ -14062,6 +14106,7 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/l
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/autocomplete.properties
@@ -14374,6 +14419,7 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/autocomplete.properties
@@ -14690,6 +14736,7 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/autocomplete.properties
@@ -15006,6 +15053,7 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/autocomplete.properties
@@ -15324,6 +15372,7 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/autocomplete.properties
@@ -15639,6 +15688,7 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/autocomplete.properties
@@ -15955,6 +16005,7 @@ lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/
 lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-km@firefox.mozilla.org/chrome/km/locale/km/global/autocomplete.properties
@@ -16270,6 +16321,7 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/autocomplete.properties
@@ -16584,6 +16636,7 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/autocomplete.properties
@@ -16900,6 +16953,7 @@ lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/local
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org/chrome/lij/locale/lij/global/autocomplete.properties
@@ -17215,6 +17269,7 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/autocomplete.properties
@@ -17530,6 +17585,7 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/autocomplete.properties
@@ -17845,6 +17901,7 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/local
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/autocomplete.properties
@@ -18162,6 +18219,7 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/autocomplete.properties
@@ -18478,6 +18536,7 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/autocomplete.properties
@@ -18794,6 +18853,7 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/autocomplete.properties
@@ -19110,6 +19170,7 @@ lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org/chrome/ms/locale/ms/global/autocomplete.properties
@@ -19427,6 +19488,7 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/l
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/autocomplete.properties
@@ -19741,6 +19803,7 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/autocomplete.properties
@@ -20057,6 +20120,7 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/l
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/autocomplete.properties
@@ -20372,6 +20436,7 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/autocomplete.properties
@@ -20686,6 +20751,7 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/l
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/autocomplete.properties
@@ -21001,6 +21067,7 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/autocomplete.properties
@@ -21317,6 +21384,7 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/l
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/autocomplete.properties
@@ -21631,6 +21699,7 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/l
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/autocomplete.properties
@@ -21946,6 +22015,7 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/autocomplete.properties
@@ -22261,6 +22331,7 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/autocomplete.properties
@@ -22577,6 +22648,7 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/autocomplete.properties
@@ -22893,6 +22965,7 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/autocomplete.properties
@@ -23210,6 +23283,7 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/autocomplete.properties
@@ -23525,6 +23599,7 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/autocomplete.properties
@@ -23841,6 +23916,7 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/local
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/autocomplete.properties
@@ -24156,6 +24232,7 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/autocomplete.properties
@@ -24472,6 +24549,7 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/autocomplete.properties
@@ -24788,6 +24866,7 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/l
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/autocomplete.properties
@@ -25102,6 +25181,7 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/autocomplete.properties
@@ -25418,6 +25498,7 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/autocomplete.properties
@@ -25735,6 +25816,7 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/autocomplete.properties
@@ -26050,6 +26132,7 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/autocomplete.properties
@@ -26364,6 +26447,7 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/autocomplete.properties
@@ -26680,6 +26764,7 @@ lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/
 lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-uz@firefox.mozilla.org/chrome/uz/locale/uz/global/autocomplete.properties
@@ -26996,6 +27081,7 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/autocomplete.properties
@@ -27308,6 +27394,7 @@ lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/
 lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-xh@firefox.mozilla.org/chrome/xh/locale/xh/global/autocomplete.properties
@@ -27626,6 +27713,7 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/l
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/autocomplete.properties
@@ -27942,6 +28030,7 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/l
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutSupport.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutTelemetry.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutTelemetry.properties
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutWebrtc.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/appPicker.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/appstrings.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/autocomplete.properties
