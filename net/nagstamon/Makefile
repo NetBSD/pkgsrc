@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:23:46 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2015/07/03 14:41:42 bouyer Exp $
 
-VERSION=	0.9.9
-DISTNAME=	nagstamon_${VERSION}
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	15
+VERSION=	1.0.1
+DISTNAME=	Nagstamon-${VERSION}
+PKGNAME=	${DISTNAME:S/N/n/}
+#PKGREVISION=	14
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagstamon/}
+MASTER_SITES=	https://nagstamon.ifw-dresden.de/files-nagstamon/stable/
 
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://nagstamon.ifw-dresden.de/
