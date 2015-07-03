@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.11 2013/08/05 19:24:35 adam Exp $
+$NetBSD: patch-aa,v 1.12 2015/07/03 12:37:44 wiz Exp $
 
 Compile 'strip' test with CFLAGS, so -isysroot can be passed on OSX.
 Correct library detection on NetBSD.
 
---- config.lib.orig	2012-04-15 11:55:05.000000000 +0000
+--- config.lib.orig	2015-06-01 18:43:32.000000000 +0000
 +++ config.lib
-@@ -2001,7 +2001,7 @@ check_strip() {
+@@ -2070,7 +2070,7 @@ check_strip() {
  	elif [ "$os" = "OSX" ]; then
  		# Most targets have -V in strip, to see if they exists... OSX doesn't.. so execute something
  		echo "int main(int argc, char *argv[]) { }" > strip.test.c
@@ -14,7 +14,7 @@ Correct library detection on NetBSD.
  		check_compiler "host strip" "strip" "$host" "$strip" "$STRIP" "strip" "strip" "3" "strip.test"
  		rm -f strip.test.c strip.test
  	else
-@@ -2533,7 +2533,7 @@ detect_library() {
+@@ -2628,7 +2628,7 @@ detect_library() {
  		if [ -z "$res" ]; then
  			log 2 "  trying /opt/local/include/$4$5... no"
  		fi
