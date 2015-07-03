@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-aa,v 1.38 2015/07/03 10:25:40 ryoon Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2015-05-04 00:43:23.000000000 +0000
+--- configure.in.orig	2015-06-18 20:55:30.000000000 +0000
 +++ configure.in
-@@ -1794,7 +1794,13 @@ Linux)
+@@ -1796,7 +1796,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1898,7 +1904,7 @@ case "$host" in
+@@ -1900,7 +1906,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -2022,7 +2028,6 @@ case "$target" in
+@@ -2024,7 +2030,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2641,8 +2646,7 @@ MOZ_CXX11
+@@ -2643,8 +2648,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3663,6 +3667,14 @@ if test -n "$YASM"; then
+@@ -3666,6 +3670,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3690,11 +3702,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3693,11 +3705,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4392,6 +4400,10 @@ cairo-gonk)
+@@ -4403,6 +4411,10 @@ cairo-gonk)
  
  esac
  
@@ -96,16 +96,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -4408,7 +4420,7 @@ fi
- 
- if test "$COMPILE_ENVIRONMENT"; then
-   if test "$MOZ_ENABLE_GTK3"; then
--    PKG_CHECK_MODULES(MOZ_GTK3, gtk+-3.0 >= $GTK3_VERSION gtk+-unix-print-3.0 glib-2.0 gobject-2.0 atk-bridge-2.0 $GDK_PACKAGES)
-+    PKG_CHECK_MODULES(MOZ_GTK3, gtk+-3.0 >= $GTK3_VERSION gtk+-unix-print-3.0 glib-2.0 gobject-2.0 $GDK_PACKAGES)
-     MOZ_GTK3_CFLAGS="-I${_topsrcdir}/widget/gtk/compat-gtk3 $MOZ_GTK3_CFLAGS"
-     dnl Contrary to MOZ_GTK2_LIBS, MOZ_GTK3_LIBS needs to be literally added to TK_LIBS instead
-     dnl of a make reference because of how TK_LIBS is mangled in toolkit/library/moz.build
-@@ -5149,6 +5161,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5137,6 +5149,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -115,7 +106,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5252,6 +5267,157 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5240,6 +5255,157 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -273,7 +264,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5606,6 +5772,67 @@ fi
+@@ -5608,6 +5774,67 @@ fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -341,7 +332,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5619,12 +5846,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+@@ -5621,12 +5848,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
     MOZ_ALSA=1,
     MOZ_ALSA=)
  
@@ -365,7 +356,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
  AC_SUBST(MOZ_ALSA)
  
  dnl ========================================================
-@@ -6046,7 +6284,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -6054,7 +6292,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -376,7 +367,7 @@ $NetBSD: patch-aa,v 1.37 2015/05/12 22:48:54 ryoon Exp $
          ;;
      WINNT)
          MOZ_GAMEPAD_BACKEND=windows
-@@ -8066,6 +8306,49 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8073,6 +8313,49 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
