@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2015/06/12 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2015/07/04 09:25:48 richard Exp $
 
 DISTNAME=	libxslt-1.1.28
 PKGREVISION=	4
@@ -33,6 +33,9 @@ post-extract:
 .if ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 .endif
+
+BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
