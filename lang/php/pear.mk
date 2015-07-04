@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.23 2013/01/07 14:26:14 taca Exp $
+# $NetBSD: pear.mk,v 1.24 2015/07/04 14:36:56 bsiegert Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -50,21 +50,23 @@ GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
 
 NO_BUILD=	yes
 
+.if ${_USE_DESTDIR} != "no"
+PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/\.alias/.*\.txt
+PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/.*\.reg
+PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.depdb
+PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.depdblock
+PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.filemap
+PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.lock
+CHECK_FILES_SKIP+=	${PEAR_FILES_SKIP}
+.endif
+
 post-extract:
 	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/package.xml package.xml
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} TZ=UTC \
 		${PEAR_CMD} "install" ${PEAR_DESTDIR} -n -O package.xml || exit 1
-
-.if ${_USE_DESTDIR} != "no"
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/\.alias/.*\.txt
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/.*\.reg
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.depdb
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.depdblock
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.filemap
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.lock
-.endif
+	${RM} -f ${PEAR_FILES_SKIP:S/^/${DESTDIR}&/}
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
