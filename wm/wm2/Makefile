@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/23 10:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/04 16:18:41 joerg Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -14,7 +14,6 @@ BUILD_TARGET=	depend wm2
 
 USE_TOOLS+=	makedepend
 USE_LANGUAGES=	c c++
-USE_X11BASE=	YES
 MAKE_ENV+=	CCC=${CXX:Q}
 
 INSTALLATION_DIRS=	bin share/doc/wm2

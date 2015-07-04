@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2002/10/21 12:11:05 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2015/07/04 16:18:34 joerg Exp $
 
 --- server/Makefile.orig	Sun Apr 12 04:18:42 1998
 +++ server/Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/21 12:11:05 wiz Exp $
 -EXTRAFLAGS = -g -Wall -DLIFE -DLIFEFREQ=300
 +EXTRAFLAGS = -g -Wall -DLIFE -DLIFEFREQ=300 -DTANKDIR=\"$(TANKDIR)\"
 +
-+TANKDIR= $(X11PREFIX)/share/tanked
++TANKDIR= $(PREFIX)/share/tanked
  
  INCLUDES = -I../common
  

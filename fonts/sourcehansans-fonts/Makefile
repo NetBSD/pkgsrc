@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/17 14:52:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/04 16:18:33 joerg Exp $
 
 DISTNAME=	SourceHanSansOTF-1.000
 PKGNAME=	${DISTNAME:S/SourceHanSansOTF/sourcehansans-fonts/}
@@ -12,7 +12,6 @@ COMMENT=	Set of Pan-CJK fonts from Adobe
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
-USE_X11BASE=	yes
 NO_BUILD=	yes
 
 FONTDIR=	${PREFIX}/share/fonts/X11/TTF

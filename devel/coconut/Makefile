@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/04/25 14:20:32 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2015/07/04 16:18:29 joerg Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -31,6 +31,6 @@ pre-configure:
 	cd ${WRKSRC} &&							\
 	${CP} configure configure.old &&				\
 	${SED} < configure.old > configure				\
-	's|^\(INCLUDE_DIR_LIST=\).*|\1"${PREFIX}/include ${X11PREFIX}/include"|'
+	's|^\(INCLUDE_DIR_LIST=\).*|\1"${PREFIX}/include ${X11BASE}/include"|'
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/06 11:55:02 asau Exp $
+# $NetBSD: Makefile,v 1.45 2015/07/04 16:18:35 joerg Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		9
@@ -11,7 +11,6 @@ HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
 USE_TOOLS+=		automake autoconf gmake
-USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES

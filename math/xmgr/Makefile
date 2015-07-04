@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/06/12 10:50:32 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/07/04 16:18:37 joerg Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		12
@@ -10,7 +10,6 @@ HOMEPAGE=		http://plasma-gate.weizmann.ac.il/Xmgr/
 COMMENT=		Powerful XY plotting tool for workstations or X-terminals using X
 LICENSE=		modified-bsd
 
-USE_X11BASE=		YES
 USE_LANGUAGES=		c fortran77
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-acegr-home=${PREFIX:Q}

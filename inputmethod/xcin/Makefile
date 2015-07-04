@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/06/12 10:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/07/04 16:18:37 joerg Exp $
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
@@ -17,7 +17,6 @@ WRKSRC=			${WRKDIR}/xcin
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pax perl:run
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-db-lib=${BDBBASE}/lib

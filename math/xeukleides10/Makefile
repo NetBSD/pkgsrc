@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/10 12:29:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/04 16:18:37 joerg Exp $
 
 DISTNAME=	xeukleides.1.0.1
 PKGNAME=	xeukleides-1.0.1
@@ -14,7 +14,6 @@ MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	eukleides>=1.0.1:../../math/eukleides10
 
-USE_X11BASE=	yes
 BUILD_TARGET=	xeukleides
 USE_TOOLS+=	gmake flex bison
 

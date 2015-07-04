@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2015/04/25 14:23:20 tnn Exp $
+# $NetBSD: Makefile,v 1.65 2015/07/04 16:18:36 joerg Exp $
 #
 
 DISTNAME=	xzgv-0.9.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://sourceforge.net/projects/xzgv
 COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2
 
-USE_X11BASE=		yes
 USE_TOOLS+=		gmake makeinfo pkg-config gawk
 INFO_FILES=		yes
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1

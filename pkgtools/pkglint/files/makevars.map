@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.266 2015/07/03 09:52:04 abs Exp $
+# $NetBSD: makevars.map,v 1.267 2015/07/04 16:18:39 joerg Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -757,7 +757,6 @@ USE_PKGLOCALEDIR	YesNo [$package]
 USE_PKGSRC_GCC		Yes [$user]
 USE_TOOLS		List of Tool [*:a]
 USE_X11			Yes [$package]
-USE_X11BASE		Yes [$package]
 WARNING_MSG		ShellCommand [$system]
 WARNING_CAT		ShellCommand [$system]
 WRAPPER_REORDER_CMDS	List of WrapperReorder [b:a,c:a,m:a]
@@ -765,6 +764,5 @@ WRAPPER_TRANSFORM_CMDS	List of WrapperTransform [b:a,c:a,m:a]
 WRKDIR			Pathname [$system]
 WRKSRC			WrkdirSubdirectory [$package]
 X11_PKGSRCDIR.*		Pathname [$system]
-X11PREFIX		Pathname [$system]
 XAW_TYPE		{ 3d neXtaw standard xpm } [$user]
 XMKMF_FLAGS		List of ShellWord

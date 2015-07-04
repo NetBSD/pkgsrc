@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/21 11:07:04 rh Exp $
+$NetBSD: patch-aa,v 1.2 2015/07/04 16:18:39 joerg Exp $
 
 --- Makefile.orig	Wed Nov 18 08:25:43 1998
 +++ Makefile
@@ -9,8 +9,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/21 11:07:04 rh Exp $
 -XLIBSPATH=/usr/X11R6/lib          # path to standard X libraries
 -XINCPATH=/usr/X11R6/include       # path to standard X header files
 -LIBS= -lm -lX11 -lforms           # libraries 
-+XFORMSLIBPATH=${X11PREFIX}/lib          # path to xforms library
-+XFORMSINCPATH=${X11PREFIX}/include/X11  # path to xforms header file <forms.h>
++XFORMSLIBPATH=${PREFIX}/lib          # path to xforms library
++XFORMSINCPATH=${PREFIX}/include/X11  # path to xforms header file <forms.h>
 +XLIBSPATH=${X11BASE}/lib                # path to standard X libraries
 +XINCPATH=${X11BASE}/include             # path to standard X header files
 +LIBS= -lm -lX11 -lforms -ljpeg -lXpm    # libraries 
