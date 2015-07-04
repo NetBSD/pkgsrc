@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2893 2015/07/04 07:19:30 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2894 2015/07/04 09:58:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5518,3 +5518,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-svn to 2.4.5 [ryoon 2015-07-04]
 	Updated www/gitweb to 2.4.5 [ryoon 2015-07-04]
 	Updated pkgtools/bootstrap-mk-files to 20150704 [ryoon 2015-07-04]
+	Updated www/typo3_62 to 6.2.14 [taca 2015-07-04]
