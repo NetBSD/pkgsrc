@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/04 05:17:56 ryoon Exp $
+
+SHA1 (npth-1.2.tar.bz2) = 3bfa2a2d7521d6481850e8a611efe5bf5ed75200
+RMD160 (npth-1.2.tar.bz2) = a9ed5c0c9a2bdd9efba5cadd24a12acfcd480508
+Size (npth-1.2.tar.bz2) = 298735 bytes
