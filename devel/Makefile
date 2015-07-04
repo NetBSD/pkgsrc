@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2111 2015/06/24 18:01:27 khorben Exp $
+# $NetBSD: Makefile,v 1.2112 2015/07/04 05:18:37 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -596,6 +596,7 @@ SUBDIR+=	newfile
 SUBDIR+=	ninja-build
 SUBDIR+=	noweb
 SUBDIR+=	npapi-sdk
+SUBDIR+=	npth
 SUBDIR+=	nqc
 SUBDIR+=	nsis
 SUBDIR+=	nspr
