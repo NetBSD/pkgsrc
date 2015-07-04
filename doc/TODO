@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14528 2015/07/03 12:31:24 wiz Exp $
+$NetBSD: TODO,v 1.14529 2015/07/04 05:58:15 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -585,7 +585,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-7.8.3
 	o ghc7-7.10.1
 	o gimp-docs-2.8.2
-	o git-base-2.4.5
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0

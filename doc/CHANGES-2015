@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2891 2015/07/04 05:27:34 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2892 2015/07/04 05:58:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5511,3 +5511,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/npth version 1.2 [ryoon 2015-07-04]
 	Added security/libassuan22 version 2.2.1 [ryoon 2015-07-04]
 	Added security/gnupg21 version 2.1.6 [ryoon 2015-07-04]
+	Updated devel/git to 2.4.5 [ryoon 2015-07-04]
+	Updated devel/git-base to 2.4.5 [ryoon 2015-07-04]
+	Updated devel/git-docs to 2.4.5 [ryoon 2015-07-04]
+	Updated devel/git-gitk to 2.4.5 [ryoon 2015-07-04]
+	Updated devel/git-svn to 2.4.5 [ryoon 2015-07-04]
+	Updated www/gitweb to 2.4.5 [ryoon 2015-07-04]
