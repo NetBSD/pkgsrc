@@ -1,8 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.3 2015/07/04 15:06:32 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.4 2015/07/04 15:42:30 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
 Pullup ticket #4756 - requested by nils
 www/nginx: build fix
 Pullup ticket #4755 - requested by joerg
-lang/tcl: crash fixes
+Lang/tcl: crash fixes
+Pullup ticket #4758 - requested by joerg
+net/p5-DNS-LDNS: build fix
