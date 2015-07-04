@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 03:37:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/04 06:41:53 richard Exp $
 
 DISTNAME=	xf86-video-qxl-0.1.4
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config
 .include "options.mk"
 
 .if ${OPSYS} == "SunOS"
+CPPFLAGS+=	-D__EXTENSIONS__
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
