@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/07/04 14:36:52 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/04 18:06:37 richard Exp $
 
 DISTNAME=	lbxproxy-1.0.3
 CATEGORIES=	x11
@@ -13,15 +13,14 @@ LICENSE=	x11 # XXX and others
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-EGDIR=		share/examples/lbxproxy
-CONF_FILES+=	${EGDIR}/AtomControl ${PKG_SYSCONFDIR}/X11/lbxproxy/AtomControl
+PKG_SYSCONFSUBDIR=	X11/lbxproxy
+EGDIR=		${PREFIX}/share/examples/lbxproxy
+CONF_FILES+=	${EGDIR}/AtomControl ${PKG_SYSCONFDIR}/AtomControl
 
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	share/examples/lbxproxy
 
 post-install:
-		${RM} ${DESTDIR}${PKG_SYSCONFDIR}/X11/lbxproxy/AtomControl
-		${INSTALL_DATA} ${WRKSRC}/config/AtomControl \
-			${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/AtomControl ${DESTDIR}${EGDIR}/
 
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/xproxymanagementprotocol/buildlink3.mk"
