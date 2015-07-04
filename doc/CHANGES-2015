@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2895 2015/07/04 12:47:51 morr Exp $
+$NetBSD: CHANGES-2015,v 1.2896 2015/07/04 12:55:58 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5520,3 +5520,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/bootstrap-mk-files to 20150704 [ryoon 2015-07-04]
 	Updated www/typo3_62 to 6.2.14 [taca 2015-07-04]
 	Updated editors/vim-share to 7.4.768 [morr 2015-07-04]
+	Updated editors/vim-share to 7.4.768nb1 [morr 2015-07-04]
