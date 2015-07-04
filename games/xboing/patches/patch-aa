@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2010/02/14 21:52:53 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2015/07/04 16:18:35 joerg Exp $
 
 --- Imakefile.orig	1996-11-22 01:28:46.000000000 +0000
 +++ Imakefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.10 2010/02/14 21:52:53 joerg Exp $
  XCOMM placed. Default will be the current directory.
  
 -    XBOING_DIR = .
-+    XBOING_DIR = ${DESTDIR}$(X11PREFIX)/share/xboing
++    XBOING_DIR = ${DESTDIR}$(PREFIX)/share/xboing
  
  XCOMM These are some defines that must be set. Some may be overwritten in the
  XCOMM machine arch section.

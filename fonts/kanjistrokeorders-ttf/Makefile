@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/07 01:15:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/04 16:18:32 joerg Exp $
 
 DISTNAME=	KanjiStrokeOrders_v${KSOVER}
 PKGNAME=	${DISTNAME:tl:S/_v/-ttf-/}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://sites.google.com/site/nihilistorguk/
 COMMENT=	Japanese Kanji characters stroke order font
 LICENSE=	modified-bsd
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

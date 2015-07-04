@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/06 14:10:46 asau Exp $
+# $NetBSD: Makefile,v 1.28 2015/07/04 16:18:35 joerg Exp $
 
 DISTNAME=	dxsamples-4.4.0
 CATEGORIES=	graphics
@@ -13,6 +13,5 @@ DEPENDS+=	dx-[0-9]*:../../graphics/dx
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake makeinfo
 CONFIGURE_ARGS+=	MAKEINFO=${TOOLS_PATH.makeinfo}
-USE_X11BASE=	yes
 
 .include "../../mk/bsd.pkg.mk"

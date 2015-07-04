@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 12:42:21 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/04 16:18:41 joerg Exp $
 
 DISTNAME=	icewmconf-2.1.0
 PKGREVISION=	2
@@ -22,7 +22,7 @@ post-extract:
 
 post-patch:
 	${MV} ${FILENAME} ${FILENAME}.orig
-	${SED} 's#PREFIX#${X11PREFIX}#g' \
+	${SED} 's#PREFIX#${PREFIX}#g' \
 		< ${FILENAME}.orig > ${FILENAME}
 
 do-install:

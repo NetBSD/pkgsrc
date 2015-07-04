@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:19:19 asau Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/04 16:18:39 joerg Exp $
 
 DISTNAME=	wmnet-1.2
 PKGNAME=	wminet-1.2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://users.rcn.com/rneswold/
 COMMENT=	Dockable network monitor
 
 NOT_FOR_PLATFORM=	Interix-*-* # no userland protocol stack support
-
-USE_X11BASE=	YES
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 

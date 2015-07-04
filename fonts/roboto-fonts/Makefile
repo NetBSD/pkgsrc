@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/07/17 14:31:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/04 16:18:33 joerg Exp $
 #
 
 DISTNAME=	RobotoTTF
@@ -17,7 +17,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=	# none
-USE_X11BASE=	yes
 NO_BUILD=	yes
 
 FONTDIR=	${PREFIX}/share/fonts/X11/TTF

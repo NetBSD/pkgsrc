@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/07/01 05:22:03 nonaka Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/04 16:18:32 joerg Exp $
 #
 
 DISTNAME=	Koruri-${KORURI_VERSION}
@@ -14,7 +14,6 @@ LICENSE=	apache-2.0
 
 KORURI_VERSION=	20150701
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
