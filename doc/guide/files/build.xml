@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.74 2015/07/04 16:12:54 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.75 2015/07/04 16:20:35 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -88,7 +88,7 @@
       </listitem>
 
       <listitem>
-	To determine the prefix of an
+	<para>To determine the prefix of an
 	installed package, the <varname>EVAL_PREFIX</varname>
 	definition can be used. It takes pairs in the format
 	<quote>DIRNAME=&lt;package&gt;</quote>, and the &man.make.1;
