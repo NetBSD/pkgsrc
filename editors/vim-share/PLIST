@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/09/08 21:55:33 morr Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/07/04 12:46:30 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -188,6 +188,7 @@ share/vim/${VIM_SUBDIR}/doc/os_win32.txt
 share/vim/${VIM_SUBDIR}/doc/pattern.txt
 share/vim/${VIM_SUBDIR}/doc/pi_getscript.txt
 share/vim/${VIM_SUBDIR}/doc/pi_gzip.txt
+share/vim/${VIM_SUBDIR}/doc/pi_logipat.txt
 share/vim/${VIM_SUBDIR}/doc/pi_netrw.txt
 share/vim/${VIM_SUBDIR}/doc/pi_paren.txt
 share/vim/${VIM_SUBDIR}/doc/pi_spec.txt
@@ -350,6 +351,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/jsp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/kconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/kwt.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ld.vim
+share/vim/${VIM_SUBDIR}/ftplugin/less.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lftp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/libao.vim
 share/vim/${VIM_SUBDIR}/ftplugin/limits.vim
@@ -516,6 +518,7 @@ share/vim/${VIM_SUBDIR}/indent/javascript.vim
 share/vim/${VIM_SUBDIR}/indent/json.vim
 share/vim/${VIM_SUBDIR}/indent/jsp.vim
 share/vim/${VIM_SUBDIR}/indent/ld.vim
+share/vim/${VIM_SUBDIR}/indent/less.vim
 share/vim/${VIM_SUBDIR}/indent/lifelines.vim
 share/vim/${VIM_SUBDIR}/indent/liquid.vim
 share/vim/${VIM_SUBDIR}/indent/lisp.vim
@@ -613,6 +616,7 @@ share/vim/${VIM_SUBDIR}/optwin.vim
 share/vim/${VIM_SUBDIR}/plugin/README.txt
 share/vim/${VIM_SUBDIR}/plugin/getscriptPlugin.vim
 share/vim/${VIM_SUBDIR}/plugin/gzip.vim
+share/vim/${VIM_SUBDIR}/plugin/logiPat.vim
 share/vim/${VIM_SUBDIR}/plugin/matchparen.vim
 share/vim/${VIM_SUBDIR}/plugin/netrwPlugin.vim
 share/vim/${VIM_SUBDIR}/plugin/rrhelper.vim
@@ -924,6 +928,7 @@ share/vim/${VIM_SUBDIR}/syntax/latte.vim
 share/vim/${VIM_SUBDIR}/syntax/ld.vim
 share/vim/${VIM_SUBDIR}/syntax/ldapconf.vim
 share/vim/${VIM_SUBDIR}/syntax/ldif.vim
+share/vim/${VIM_SUBDIR}/syntax/less.vim
 share/vim/${VIM_SUBDIR}/syntax/lex.vim
 share/vim/${VIM_SUBDIR}/syntax/lftp.vim
 share/vim/${VIM_SUBDIR}/syntax/lhaskell.vim
@@ -1146,6 +1151,7 @@ share/vim/${VIM_SUBDIR}/syntax/sqlj.vim
 share/vim/${VIM_SUBDIR}/syntax/sqloracle.vim
 share/vim/${VIM_SUBDIR}/syntax/sqr.vim
 share/vim/${VIM_SUBDIR}/syntax/squid.vim
+share/vim/${VIM_SUBDIR}/syntax/srec.vim
 share/vim/${VIM_SUBDIR}/syntax/sshconfig.vim
 share/vim/${VIM_SUBDIR}/syntax/sshdconfig.vim
 share/vim/${VIM_SUBDIR}/syntax/st.vim
@@ -1200,6 +1206,7 @@ share/vim/${VIM_SUBDIR}/syntax/upstart.vim
 share/vim/${VIM_SUBDIR}/syntax/upstreamdat.vim
 share/vim/${VIM_SUBDIR}/syntax/upstreaminstalllog.vim
 share/vim/${VIM_SUBDIR}/syntax/upstreamlog.vim
+share/vim/${VIM_SUBDIR}/syntax/upstreamrpt.vim
 share/vim/${VIM_SUBDIR}/syntax/usserverlog.vim
 share/vim/${VIM_SUBDIR}/syntax/usw2kagtlog.vim
 share/vim/${VIM_SUBDIR}/syntax/valgrind.vim
@@ -1327,6 +1334,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.sv
 share/vim/${VIM_SUBDIR}/tutor/tutor.sv.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.tr.iso9
 share/vim/${VIM_SUBDIR}/tutor/tutor.tr.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.uk.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.vi.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.vim
