@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2015/06/12 10:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.231 2015/07/04 08:07:28 wiz Exp $
 
 DISTNAME=		openssh-6.6p1
 PKGNAME=		openssh-6.6.1
@@ -32,6 +32,11 @@ BUILD_DEFS+=		VARBASE
 INSTALL_TARGET=		install-nokeys
 
 .include "options.mk"
+
+.if ${OPSYS} == "Darwin"
+# fixes: dyld: Symbol not found: _allow_severity
+CONFIGURE_ARGS+=	--disable-strip
+.endif
 
 .if ${OPSYS} == "Interix"
 
