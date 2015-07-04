@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2905 2015/07/04 15:53:47 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2906 2015/07/04 16:20:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libbson to 1.1.9 [fhajny 2015-07-04]
 	Updated databases/mongo-c-driver to 1.1.9 [fhajny 2015-07-04]
 	Updated mail/isync to 1.1.1nb1 [bsiegert 2015-07-04]
+	Updated benchmarks/ttcp to 1.12nb3 [bsiegert 2015-07-04]
