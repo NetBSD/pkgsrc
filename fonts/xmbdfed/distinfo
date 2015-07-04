@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2014/03/22 22:26:44 spz Exp $
+$NetBSD: distinfo,v 1.8 2015/07/04 16:18:34 joerg Exp $
 
 SHA1 (xmbdfed-4.5.tar.gz) = 325f2f3a8ae68b3f5d22ff9bdd115d30cdd743db
 RMD160 (xmbdfed-4.5.tar.gz) = a6c1d9202e6d978dbc0aaa1fb6389a3d14b16c26
 Size (xmbdfed-4.5.tar.gz) = 282055 bytes
-SHA1 (patch-aa) = 9c01eb9c4d160e8747fe2f9d68bb16a2b6afc197
+SHA1 (patch-aa) = 55740a6f3bf01bf149bc953078a0cf75eea4dc11
 SHA1 (patch-ab) = 2ddd129850dfc53e46ba0df8d62239ffb5fac0eb
 SHA1 (patch-ac) = c62140d171ea96418d48ee4b236cde8bb87b545d

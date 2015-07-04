@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/01/27 04:37:53 dbj Exp $
+# $NetBSD: Makefile,v 1.31 2015/07/04 16:18:28 joerg Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -99,7 +99,7 @@ SUBST_CLASSES+=		jacksrc
 SUBST_FILES.jacksrc=	libjack/unlock.c
 SUBST_MESSAGE.jacksrc=	Peforming substitutions in JACK sources.
 SUBST_STAGE.jacksrc=	pre-build
-SUBST_VARS.jacksrc=	PREFIX JACKD_PROCFS_PATH
+SUBST_VARS.jacksrc=	PREFIX JACKD_PROCFS_PATH X11BASE
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jack

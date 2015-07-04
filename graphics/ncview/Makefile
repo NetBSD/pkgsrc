@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/02/12 23:18:02 tron Exp $
+# $NetBSD: Makefile,v 1.29 2015/07/04 16:18:36 joerg Exp $
 
 DISTNAME=		ncview-1.92d
 PKGREVISION=	5
@@ -12,7 +12,6 @@ COMMENT=		Visual browser for netCDF format files
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
 
 CONFIGURE_ARGS+=	--with-netcdf_incdir=${BUILDLINK_PREFIX.netcdf}/include
 CONFIGURE_ARGS+=	--with-netcdf_libdir=${BUILDLINK_PREFIX.netcdf}/lib

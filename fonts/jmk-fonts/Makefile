@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/06/01 16:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/04 16:18:32 joerg Exp $
 #
 
 DISTNAME=	jmk-x11-fonts-3.0
@@ -16,7 +16,6 @@ MAKE_FLAGS+=	INSTALL_DIR=${PREFIX}/share/fonts/X11/jmk
 
 USE_TOOLS+=	bdftopcf gzip
 
-USE_X11BASE=		yes
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/jmk
 REQD_DIRS+=		${PREFIX}/share/fonts/X11/jmk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/05/20 12:38:25 obache Exp $
+# $NetBSD: Makefile,v 1.27 2015/07/04 16:18:30 joerg Exp $
 #
 
 DISTNAME=	xtrs-4.9d
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-configure
 SUBST_FILES.mf=		Makefile.local
 SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g'
-SUBST_SED.mf+=		-e 's|/usr/X11/|${X11PREFIX}/|g'
+SUBST_SED.mf+=		-e 's|/usr/X11/|${X11BASE}/|g'
 SUBST_SED.mf+=		-e 's|/usr/include/X11|${X11BASE}/include|g'
 SUBST_SED.mf+=		-e 's|/share/man|/${PKGMANDIR}|g'
 

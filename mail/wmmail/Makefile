@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/04/06 03:45:16 rodent Exp $
+# $NetBSD: Makefile,v 1.39 2015/07/04 16:18:37 joerg Exp $
 
 DISTNAME=	WMMail.app-0.64
 PKGNAME=	wmmail-0.64
@@ -11,7 +11,6 @@ COMMENT=	WindowMaker xbiff-like "mail-checker"
 
 DEPENDS+=	windowmaker>=0.80.0nb1:../../wm/windowmaker
 
-USE_X11BASE=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-PL-incs="-I${LOCALBASE}/include" \

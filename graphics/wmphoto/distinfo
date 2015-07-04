@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/11/01 19:52:47 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/07/04 16:18:36 joerg Exp $
 
 SHA1 (wmphoto-0.3a.tar.gz) = dbec1ddd49671bc915b6e9ce37462247557f7fb9
 RMD160 (wmphoto-0.3a.tar.gz) = 64b0006b90d187ec01da32f1bc9b7607d19f4330
 Size (wmphoto-0.3a.tar.gz) = 19320 bytes
-SHA1 (patch-aa) = fc65409f609cf4484abf13a72437dd8e7fe77e5b
+SHA1 (patch-aa) = cbdb2ba3f1d845b8ea4d6a3fb281e2fd8966669e
 SHA1 (patch-wmgeneral_list.h) = fdbaefcdb1e895bf904b383316c8aac3909a9b20

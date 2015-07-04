@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 13:20:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/04 16:18:33 joerg Exp $
 
 DISTNAME=	noto-ttf-20150630
 CATEGORIES=	fonts
@@ -12,7 +12,6 @@ COMMENT=	Noto fonts for all languages
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
-USE_X11BASE=	yes
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/noto-fonts-2015-06-30

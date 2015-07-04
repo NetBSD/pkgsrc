@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/03/15 18:42:12 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:33 joerg Exp $
 #
 
 DISTNAME=	sgi-fonts-1.0-457.src
@@ -15,7 +15,6 @@ COMMENT=	Linux compatibility package for SGI fonts
 WRKSRC=		${WRKDIR}/sgi-fonts
 USE_LANGUAGES=	c
 
-USE_X11BASE=	yes
 FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/misc/sgi
 
 USE_IMAKE=	yes

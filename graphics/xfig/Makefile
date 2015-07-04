@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2014/03/18 23:28:20 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2015/07/04 16:18:36 joerg Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
@@ -21,7 +21,7 @@ XAW_TYPE?=		3d
 
 NO_INSTALL_MANPAGES=	YES	# install.all does install.man
 INSTALL_TARGET=		install install.all
-CFLAGS+=		-I${X11PREFIX}/include/X11
+CFLAGS+=		-I${X11BASE}/include/X11
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2010/01/29 23:50:26 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2015/07/04 16:18:36 joerg Exp $
 
 --- wmphoto/Makefile.orig	Wed Mar 28 10:09:18 2001
 +++ wmphoto/Makefile	Wed Mar 28 10:15:59 2001
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.3 2010/01/29 23:50:26 joerg Exp $
 -CC = gcc
 -CCOPTIONS = -O2 -Wall
 -LIBDIR = -L/usr/X11R6/lib
-+LIBDIR = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -Wl,-R${X11PREFIX}/lib -L${X11PREFIX}/lib
++LIBDIR = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -Wl,-R${PREFIX}/lib -L${PREFIX}/lib
  LIBS   = -lXpm -lXext -lX11
 -
 -# Slowlaris at my university
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2010/01/29 23:50:26 joerg Exp $
 -#CCOPTIONS = -O2 -I/usr/local/X11R6/include
 -#LIBDIR = -L/usr/local/X11R6/lib
 -#LIBS   = -lXpm -lXext -lX11 -lsocket -lnsl
-+CFLAGS = -I${X11PREFIX}/include -I${X11BASE}/include
++CFLAGS = -I${PREFIX}/include -I${X11BASE}/include
  
  # now the common stuff...
  APP = wmphoto
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.3 2010/01/29 23:50:26 joerg Exp $
 -	cp $(APP) $(INSTALL)
 -	chown root.root $(APP)
 -	chmod 755 $(APP)
-+	${BSD_INSTALL_PROGRAM} $(APP) ${DESTDIR}${X11PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} $(APP) ${DESTDIR}${PREFIX}/bin
  
  clean::
  	for i in $(OBJS) ; do \

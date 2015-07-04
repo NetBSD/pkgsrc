@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.5 2007/03/24 21:02:18 adam Exp $
+$NetBSD: patch-ap,v 1.6 2015/07/04 16:18:28 joerg Exp $
 
 --- tooltips/Makefile.netbsd.orig	2003-09-16 01:05:51.000000000 +0200
 +++ tooltips/Makefile.netbsd
@@ -8,7 +8,7 @@ $NetBSD: patch-ap,v 1.5 2007/03/24 21:02:18 adam Exp $
  # Define where the X11 include files are.
 -X11_INCLUDE_DIR = /usr/X11R6/include
 +X11_INCLUDE_DIR = ${X11BASE}/include
-+OTHER_INCLUDE_DIR = ${X11PREFIX}/include/X11
++OTHER_INCLUDE_DIR = ${LOCALBASE}/include/X11
 +X11_BASE_INCLUDE= ${X11BASE}/include
  
  # Uncomment out this line if you do not want debug information included.

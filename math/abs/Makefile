@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:16 asau Exp $
+# $NetBSD: Makefile,v 1.24 2015/07/04 16:18:37 joerg Exp $
 #
 
 DISTNAME=	abs-src-0.8
@@ -12,7 +12,6 @@ HOMEPAGE=	http://home.scarlet.be/~pin01858/abs.html
 COMMENT=	Free spreadsheet with graphical user interface
 LICENSE=	gnu-gpl-v2
 
-USE_X11BASE=	YES
 MAKE_FILE=	Makefile.netBSD
 
 INSTALLATION_DIRS=	bin

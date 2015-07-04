@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:55 asau Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/04 16:18:34 joerg Exp $
 #
 
 DISTNAME=		spellcast
@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.eblong.com/zarf/spellcast.html
 COMMENT=		Game of dueling wizards for two players
 
-USE_X11BASE=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 .include "../../x11/libX11/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/12/23 11:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2015/07/04 16:18:28 joerg Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	4
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=		no
 USE_LANGUAGES=		c c++
 INSTALLATION_DIRS+=	bin share/doc/dap
 MAKE_FILE=		Makefile.netbsd
-MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q} OTHER_INCLUDE_DIR=.
+MAKE_ENV+=		OTHER_INCLUDE_DIR=.
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main/DAP ${DESTDIR}${PREFIX}/bin/dap

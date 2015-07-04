@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/02/27 14:35:01 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2015/07/04 16:18:39 joerg Exp $
 #
 
 DISTNAME=	pload-0.9.5
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	imake
-USE_X11BASE=	YES
 INSTALL_TARGET=	install install.man
 
 .include "../../x11/libXaw/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:37 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:34 joerg Exp $
 #
 
 DISTNAME=	finalbattle.0.0
@@ -14,8 +14,6 @@ COMMENT=	Multiplayer space battle simulation for X
 
 WRKSRC=		${WRKDIR}/final
 MAKE_FILE=	makefile
-
-USE_X11BASE=	yes
 
 INSTALLATION_DIRS+=	bin
 

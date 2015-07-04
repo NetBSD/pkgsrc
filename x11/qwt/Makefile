@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/29 05:06:47 asau Exp $
+# $NetBSD: Makefile,v 1.38 2015/07/04 16:18:42 joerg Exp $
 
 DISTNAME=	qwt-5.0.2
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ COMMENT=	Qt widget library for technical purposes
 
 MAKE_JOBS_SAFE=		no
 
-USE_X11BASE=	yes
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/06/01 16:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/04 16:18:30 joerg Exp $
 #
 
 DISTNAME=	artwiz-aleczapka-1.3
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.vastwaters.com/
 COMMENT=	Set of free fonts for X11 desktops
 
 WRKSRC=		${WRKDIR}/artwiz-aleczapka
-USE_X11BASE=	yes
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

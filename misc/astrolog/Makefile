@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/08 09:57:16 asau Exp $
+# $NetBSD: Makefile,v 1.39 2015/07/04 16:18:38 joerg Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
@@ -20,8 +20,6 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 WRKSRC=		${WRKDIR}
 EPHEM=		LRZ5_24 CHI_24 CPJV_24
 EXTRACT_ONLY=	${DISTNAME}.shr
-
-USE_X11BASE=	yes
 
 DIST_SUBDIR=	astrolog
 BUILD_TARGET=	astrolog

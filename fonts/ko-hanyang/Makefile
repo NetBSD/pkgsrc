@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/06/01 16:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/04 16:18:32 joerg Exp $
 #
 
 DISTNAME=	hanyang-font-pcf
@@ -13,7 +13,6 @@ COMMENT=	X11 fonts for KSC 5601 standard
 
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
-USE_X11BASE=	yes
 USE_TOOLS+=	gzip
 EXTRACT_ONLY=	# empty
 

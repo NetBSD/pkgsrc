@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/04/06 13:24:18 rodent Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:30 joerg Exp $
 
 DISTNAME=		xcoral-3.2
 PKGREVISION=		1
@@ -10,7 +10,6 @@ COMMENT=	Multiwindow mouse-based text editor for X
 
 MAKE_JOBS_SAFE=		no
 
-USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 
 LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \

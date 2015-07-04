@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/04 16:18:41 joerg Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -20,7 +20,6 @@ THEM_VER=	0.6.2
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=	perl:run
-USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-ft-datadir=${PREFIX}/share/fvwm2

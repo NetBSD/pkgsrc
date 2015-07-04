@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 14:11:23 asau Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:36 joerg Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
@@ -14,7 +14,6 @@ MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/vcg.1.30
 USE_TOOLS+=	imake lex
-USE_X11BASE=	yes
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/preconf/X11ccNetBSD

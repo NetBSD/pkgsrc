@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2014/05/16 12:27:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.20 2015/07/04 16:18:35 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk guile lua ocaml pangocairo rsvg tcl x11 perl
@@ -21,7 +21,7 @@ PLIST_VARS+=		gd ghostscript gtk guile lua ocaml pangocairo perl rsvg tcl x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../mk/xaw.buildlink3.mk"
-CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
 PLIST.x11=		yes
 
 .  if !empty(PKG_OPTIONS:Mpangocairo)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/08/12 18:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/04 16:18:38 joerg Exp $
 
 DISTNAME=	dvd-slideshow-0.7.5
 PKGREVISION=	12
@@ -20,7 +20,6 @@ DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	mjpegtools-[0-9]*:../../multimedia/mjpegtools
 DEPENDS+=	ffmpeg1-[0-9]*:../../multimedia/ffmpeg1
 
-USE_X11BASE=	yes
 USE_TOOLS+=	bash:run
 NO_BUILD=	yes
 SCRIPTS=	dvd-slideshow dvd-menu dir2slideshow gallery1-to-slideshow \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 11:43:44 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/04 16:18:29 joerg Exp $
 
 DISTNAME=	Ted_fr_FR
 PKGNAME=	ted-fr-2.16
@@ -13,7 +13,6 @@ COMMENT=	French spelling dictionary for the Ted word processor
 DEPENDS+=	ted>=2.6:../../editors/ted
 
 WRKSRC=		${WRKDIR}
-USE_X11BASE=	YES
 
 DIST_SUBDIR=	Ted-2.16
 NO_BUILD=	YES

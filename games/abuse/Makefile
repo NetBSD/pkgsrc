@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/01/04 02:55:02 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2015/07/04 16:18:34 joerg Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# AWOL
 COMMENT=		Full color 320x200 arcade quality platform shooter
 
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS=${X11_LDFLAGS:Q}
 USE_TOOLS+=		gmake gtar

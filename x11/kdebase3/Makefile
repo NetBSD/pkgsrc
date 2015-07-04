@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2015/04/25 14:25:12 tnn Exp $
+# $NetBSD: Makefile,v 1.190 2015/07/04 16:18:42 joerg Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	38
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ENV+=		kde_cv_defines_imake_version=8 \
-			kde_cv_defines_imake="XBINDIR=${X11PREFIX:Q}/bin XLIBDIR=${X11PREFIX:Q}/lib" \
+			kde_cv_defines_imake="XBINDIR=${X11BASE:Q}/bin XLIBDIR=${X11BASE:Q}/lib" \
 			XMKMF=${TRUE}
 
 REPLACE_PERL+=		kcontrol/keys/convertShortcuts.pl \

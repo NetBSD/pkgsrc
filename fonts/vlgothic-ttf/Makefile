@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/06/29 11:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2015/07/04 16:18:34 joerg Exp $
 #
 
 DISTNAME=	VLGothic-20141206
@@ -12,7 +12,6 @@ HOMEPAGE=	http://vlgothic.dicey.org/
 COMMENT=	Free Japanese TrueType fonts named 'VLGothic'
 LICENSE=	modified-bsd AND mplusfont
 
-USE_X11BASE=	YES
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 

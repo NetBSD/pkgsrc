@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.73 2015/04/15 07:31:15 spz Exp $
+# $NetBSD: Makefile.common,v 1.74 2015/07/04 16:18:43 joerg Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -35,7 +35,6 @@ PKG_OPTIONS_LEGACY_VARS+=XLOCK_NO_DPMS:-xlockmore-dpms
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		xmkmf
-USE_X11BASE=		YES
 
 XLOCK_SOUNDDIR=		${PREFIX}/lib/X11/xlock/sounds
 XLOCK_MODULEDIR=	${PREFIX}/lib/X11/xlock/modules

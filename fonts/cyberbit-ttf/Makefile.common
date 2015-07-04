@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2015/07/04 16:18:31 joerg Exp $
 #
 # used by fonts/cyberbit-ttf/Makefile
 # used by fonts/cyberbase-ttf/Makefile
@@ -25,7 +25,6 @@ DIST_SUBDIR=	cyberbit-ttf
 EXTRACT_ONLY=		${FONT_FILE}
 #EXTRACT_OPTS_ZIP=	-Laq
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

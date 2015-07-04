@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/04 16:18:31 joerg Exp $
 #
 
 DISTNAME=	geoslab703-ttf-20010522
@@ -14,7 +14,6 @@ COMMENT=	Free TrueType fonts from Bitstream, useful for web viewing
 DIST_SUBDIR=	geoslab703-ttf
 EXTRACT_ONLY=	# empty
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

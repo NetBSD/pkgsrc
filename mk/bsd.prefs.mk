@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.365 2015/06/04 15:48:46 sevan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.366 2015/07/04 16:18:38 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -658,8 +658,6 @@ CROSSBASE?=	${LOCALBASE}/cross
 .if ${X11_TYPE} == "modular"
 X11BASE=		${LOCALBASE}
 .endif
-
-X11PREFIX=		${LOCALBASE}
 
 # Default directory for font encodings
 .if ${X11_TYPE} == "modular"

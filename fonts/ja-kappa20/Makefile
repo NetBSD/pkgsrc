@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/04 16:18:31 joerg Exp $
 
 DISTNAME=		Kappa20-0.394
 PKGNAME=		ja-kappa20-0.394
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://kappa.allnet.ne.jp/20dot.fonts/
 COMMENT=		20x20 dots X11 bitmap font for Japanese with several extra fonts
 
-USE_X11BASE=		YES
 FONTDIR=		${PREFIX}/share/fonts/X11/local
 ALIAS_KAPPA=		${PREFIX}/share/examples/fonts.alias.Kappa20
 

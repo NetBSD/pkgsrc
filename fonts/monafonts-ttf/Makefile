@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/04 16:18:33 joerg Exp $
 # $FreeBSD: ports/japanese/monafonts-ttf/Makefile,v 1.1 2003/10/14 13:35:38 nobutaka Exp $
 
 DISTNAME=		monafont-ttf-2.90
@@ -12,7 +12,6 @@ MAINTAINER=		yamajun@ofug.net
 HOMEPAGE=		http://monafont.sourceforge.net/index-e.html
 COMMENT=		Japanese TrueType fonts for "Mona" seen at 2ch.net
 
-USE_X11BASE=		YES
 NO_BUILD=		YES
 NO_CONFIGURE=		YES
 

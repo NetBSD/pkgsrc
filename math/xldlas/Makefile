@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/01/26 21:38:12 adam Exp $
+# $NetBSD: Makefile,v 1.39 2015/07/04 16:18:37 joerg Exp $
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		9
@@ -11,7 +11,6 @@ HOMEPAGE=		# http://sunsite.math.klte.hu/mirrors/xldlas/
 COMMENT=		XForms-based statistics package
 
 WRKSRC=			${WRKDIR}/xldlas
-USE_X11BASE=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

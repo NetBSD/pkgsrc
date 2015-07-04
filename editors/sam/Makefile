@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/03/12 17:32:58 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2015/07/04 16:18:29 joerg Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -18,14 +18,11 @@ WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${GZCAT} $$extract_file | ${SH}
 
 MANCOMPRESSED=		yes
-USE_X11BASE=		yes
-MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q}
 
 INSTALLATION_DIRS=	bin include lib/X11/app-defaults \
 	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man4 ${PKGMANDIR}/man6
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX:Q}		\
-			X11PREFIX=${DESTDIR}${X11PREFIX:Q}	\
 			MAN=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"

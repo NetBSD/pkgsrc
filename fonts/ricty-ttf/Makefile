@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/03/19 23:41:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:33 joerg Exp $
 
 DISTNAME=	Ricty-3.2.4
 PKGNAME=	${DISTNAME:S/Ricty/ricty-ttf/}
@@ -23,7 +23,6 @@ RESTRICTED=		Redistribution not permitted per open-font-license PERMISSION & CON
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 
 INSTALLATION_DIRS=	share/fonts/X11/TTF

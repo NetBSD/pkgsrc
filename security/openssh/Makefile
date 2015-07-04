@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2015/07/04 08:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.232 2015/07/04 16:18:39 joerg Exp $
 
 DISTNAME=		openssh-6.6p1
 PKGNAME=		openssh-6.6.1
@@ -119,14 +119,14 @@ CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp
 CONFIGURE_ARGS+=	--enable-md5-password
 .endif
 
-# The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
+# The ssh-askpass program is in ${X11BASE}/bin or ${PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
 # (security/ssh-askpass).
 #
 .if exists(${X11BASE}/bin/ssh-askpass)
 ASKPASS_PROGRAM=	${X11BASE}/bin/ssh-askpass
 .else
-ASKPASS_PROGRAM=	${X11PREFIX}/bin/ssh-askpass
+ASKPASS_PROGRAM=	${PREFIX}/bin/ssh-askpass
 .endif
 CONFIGURE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM:Q}
 MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM:Q}
@@ -135,7 +135,7 @@ MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM:Q}
 .if exists(${X11BASE}/bin/xauth)
 CONFIGURE_ARGS+=	--with-xauth=${X11BASE}/bin/xauth
 .else
-CONFIGURE_ARGS+=	--with-xauth=${X11PREFIX}/bin/xauth
+CONFIGURE_ARGS+=	--with-xauth=${PREFIX}/bin/xauth
 .endif
 
 CONFS=			ssh_config sshd_config moduli
