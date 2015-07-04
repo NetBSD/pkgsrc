@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 03:37:48 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/04 06:38:06 richard Exp $
 
 DISTNAME=	xf86-input-hyperpen-1.4.1
 CATEGORIES=	x11
@@ -13,6 +13,7 @@ COMMENT=	Aiptek HyperPen 6000 input driver for the Xorg X server
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES+=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
