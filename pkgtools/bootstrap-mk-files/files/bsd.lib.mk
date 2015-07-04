@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.lib.mk,v 1.6 2015/07/04 07:19:08 ryoon Exp $
+#	$NetBSD: bsd.lib.mk,v 1.7 2015/07/04 12:33:36 ryoon Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -350,7 +350,7 @@ realall: ${SRCS} ${ALLOBJS:O} ${_LIBS}
 
 __archivebuild: .USE
 	@rm -f ${.TARGET}
-	${AR} cq ${.TARGET} ${.ALLSRC:M*o}
+	${AR} cq ${.TARGET} `NM=${NM} ${LORDER} ${.ALLSRC:M*o} | ${TSORT}`
 	${RANLIB} ${.TARGET}
 
 __archiveinstall: .USE
