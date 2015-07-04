@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:48:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/04 05:56:29 ryoon Exp $
 
-PKGREVISION= 1
 .include "../../devel/git/Makefile.version"
 
 DISTNAME=	# empty
