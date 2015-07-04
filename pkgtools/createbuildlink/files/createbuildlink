@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.35 2010/01/13 15:27:52 wiz Exp $
+#	$NetBSD: createbuildlink,v 1.36 2015/07/04 16:18:39 joerg Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.35 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.36 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -90,13 +90,7 @@ PKGNAME=`@MAKE@ show-var VARNAME=PKGNAME`
 PKGVER=`echo $PKGNAME | sed -e 's/^.*-//'`
 PKGNOVER=`echo $PKGNAME | sed -e 's/-[^-]*$//'`
 PKGUPPER=`echo $PKGNOVER | tr '[:lower:]' '[:upper:]' | tr - _`
-PREFIX=X11PREFIX
-USE_X11BASE=`@MAKE@ show-var VARNAME=USE_X11BASE`
-if [ -z "$USE_X11BASE" ]; then
-	if ! grep "^USE_X11BASE" $makefile $commons > /dev/null; then
-		PREFIX=LOCALBASE
-	fi
-fi
+PREFIX=LOCALBASE
 
 ##
 ## create sed rules

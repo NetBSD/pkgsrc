@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2014/10/09 14:07:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2015/07/04 16:18:41 joerg Exp $
 #
 # used by wm/wmx/Makefile
 # used by wm/wmx-gnome/Makefile
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
 CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
 USE_LANGUAGES=		c c++
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		depend all
 

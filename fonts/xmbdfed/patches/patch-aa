@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2013/10/20 18:10:11 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2015/07/04 16:18:34 joerg Exp $
 
 --- Makefile.orig	Fri Mar 17 05:08:49 2000
 +++ Makefile	Wed Mar 20 00:37:53 2002
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.3 2013/10/20 18:10:11 joerg Exp $
 -#FTYPE_INCS = -I/usr/local/include
 -#FTYPE_LIBS = -L/user/local/lib -lttf
 -#FTYPE_DEFS = -DHAVE_FREETYPE
-+FTYPE_INCS = -I${X11PREFIX}/include/freetype
-+FTYPE_LIBS = -L${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib -lttf
++FTYPE_INCS = -I${X11BASE}/include/freetype
++FTYPE_LIBS = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lttf
 +FTYPE_DEFS = -DHAVE_FREETYPE
  
 @@ -66,3 +66,3 @@
@@ -25,8 +25,8 @@ $NetBSD: patch-aa,v 1.3 2013/10/20 18:10:11 joerg Exp $
  
 @@ -73,2 +73,6 @@
  
-+INCS = -I${X11PREFIX}/include -I${PREFIX}/include ${FTYPE_INCS}
-+LIBS = -L${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib \
++INCS = -I${X11BASE}/include -I${PREFIX}/include ${FTYPE_INCS}
++LIBS = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib \
 +       -lXm -lXmu -lXt -lXext -lX11 ${FTYPE_LIBS}
 +
  #

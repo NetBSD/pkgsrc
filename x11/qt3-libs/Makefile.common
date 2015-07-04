@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.77 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.78 2015/07/04 16:18:42 joerg Exp $
 # used by x11/qt3-docs/Makefile
 # used by x11/qt3-libs/Makefile
 # used by x11/qt3-tools/Makefile
@@ -131,7 +131,6 @@ pre-configure:
 	${SED} \
 		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
-		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL}:g' \
 		-e 's:@CC@:${CC}:g' \
 		-e 's:@CXX@:${CXX}:g' \

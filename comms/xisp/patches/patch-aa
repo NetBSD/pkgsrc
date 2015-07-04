@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2012/02/17 13:49:47 hans Exp $
+$NetBSD: patch-aa,v 1.13 2015/07/04 16:18:28 joerg Exp $
 
 --- Makefile.orig	2005-11-07 00:38:22.000000000 +0000
 +++ Makefile
@@ -17,8 +17,9 @@ $NetBSD: patch-aa,v 1.12 2012/02/17 13:49:47 hans Exp $
 +#X11PREFIX  = /usr/X11R6
 +INCX11     = $(X11BASE)/include
 +LIBX11     = $(X11BASE)/lib
-+INCFORMS   = $(X11PREFIX)/include/X11
- LIBFORMS   = $(X11PREFIX)/lib
++INCFORMS   = $(PREFIX)/include/X11
+-LIBFORMS   = $(X11PREFIX)/lib
++LIBFORMS   = $(X11BASE)/lib
  MODEM_DEV  = modem
  MODEM_PATH = /dev/$(MODEM_DEV)
 @@ -29,26 +29,26 @@ MODEM_PATH = /dev/$(MODEM_DEV)
@@ -78,7 +79,7 @@ $NetBSD: patch-aa,v 1.12 2012/02/17 13:49:47 hans Exp $
 -#MANDIR     = $(PREFIX)/man/man1
 -#ETCPPP     = /etc/ppp
 -#OPTSDIR    = $(ETCPPP)
-+BINX11     = $(X11PREFIX)/bin
++BINX11     = $(PREFIX)/bin
 +USRLOCAL   = $(BINX11)
 +SBINDIR    = /usr/sbin
 +VARRUN     = $(VARBASE)/run

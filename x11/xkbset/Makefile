@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:43 joerg Exp $
 #
 
 DISTNAME=	xkbset-0.5
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.math.missouri.edu/~stephen/software/#xkbset
 COMMENT=	Manages XKB features of the X window system
 
-USE_X11BASE=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	xkbset-gui
 

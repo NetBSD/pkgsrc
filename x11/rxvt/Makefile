@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2014/10/09 14:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2015/07/04 16:18:42 joerg Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		6
@@ -11,7 +11,6 @@ MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://sourceforge.net/projects/rxvt
 COMMENT=		Low memory usage xterm replacement that supports color
 
-USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-utmp \
