@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.73 2015/06/29 11:06:46 ryoon Exp $ -->
+<!-- $NetBSD: build.xml,v 1.74 2015/07/04 16:12:54 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -82,54 +82,19 @@
       </listitem>
 
       <listitem>
-	<para>X11-based packages are special in that they may be
-	installed in either <varname>X11BASE</varname> or
+	<para>X11-based packages using imake must set
+	<varname>USE_IMAKE</varname> to be installed correctly under
 	<varname>LOCALBASE</varname>.</para>
-
-	<para>Usually, X11 packages should be installed under
-	<varname>LOCALBASE</varname> whenever possible.  Note that you
-	will need to include
-	<filename>../../mk/x11.buildlink3.mk</filename> in them to
-	request the presence of X11 and to get the right compilation
-	flags.</para>
-
-	<para>Even though, there are some packages that cannot be installed
-	under <varname>LOCALBASE</varname>: those that come with app-defaults
-	files. These packages are special and they must be placed under
-	<varname>X11BASE</varname>. To accomplish this, set either
-	<varname>USE_X11BASE</varname> or <varname>USE_IMAKE</varname> in
-	your package.</para>
-
-	<para>Some notes: If you need
-	to find includes or libraries installed by a pkg that has
-	<varname>USE_IMAKE</varname> or <varname>USE_X11BASE</varname> in
-	its pkg <filename>Makefile</filename>, you need to look in
-	<emphasis>both</emphasis> <filename>${X11BASE}</filename> and
-	<filename>${LOCALBASE}</filename>. To force installation of
-	all X11 packages in <varname>LOCALBASE</varname>, the
-	<filename role="pkg">pkgtools/xpkgwedge</filename> package
-	is enabled by default.</para>
       </listitem>
 
       <listitem>
-	<para><varname>X11PREFIX</varname> should be used to refer to
-	the installed location of an X11
-	package. <varname>X11PREFIX</varname> will be set to
-	<varname>X11BASE</varname> if xpkgwedge is not installed, and
-	to <varname>LOCALBASE</varname> if xpkgwedge is
-	installed.</para>
-      </listitem>
-
-      <listitem>
-	<para>If xpkgwedge is installed, it is possible to have some
-	packages installed in <varname>X11BASE</varname> and some in
-	<varname>LOCALBASE</varname>.  To determine the prefix of an
+	To determine the prefix of an
 	installed package, the <varname>EVAL_PREFIX</varname>
 	definition can be used. It takes pairs in the format
 	<quote>DIRNAME=&lt;package&gt;</quote>, and the &man.make.1;
 	variable <varname>DIRNAME</varname> will be set to the prefix
 	of the installed package &lt;package&gt;, or
-	<quote>${X11PREFIX}</quote> if the package is not
+	<quote>${PREFIX}</quote> if the package is not
 	installed.</para>
 
 	<para>This is best illustrated by example.</para>
@@ -619,10 +584,8 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <para>If the program uses an <filename>Imakefile</filename>
     for configuration, the appropriate steps can be invoked by
     setting <varname>USE_IMAKE</varname> to
-    <quote>yes</quote>. (If you only want the package installed in
-    <varname>${X11PREFIX}</varname> but xmkmf not being run, set
-    <varname>USE_X11BASE</varname> instead.)  You can add variables to
-    xmkmf's environment by adding them to the
+    <quote>yes</quote>.  If you only need xmkmf, add it to <varname>USE_TOOLS</varname>.
+    You can add variables to xmkmf's environment by adding them to the
     <varname>SCRIPTS_ENV</varname> variable.</para>
 
     <para>If the program uses <filename>cmake</filename>
