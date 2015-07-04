@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/02/20 05:45:05 mef Exp $
+# $NetBSD: Makefile,v 1.10 2015/07/04 16:18:38 joerg Exp $
 #
 
 DISTNAME=	pconsole-1.0
@@ -20,7 +20,7 @@ REPLACE_KSH=	pconsole.sh.in
 SUBST_CLASSES=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	pconsole.sh.in
-SUBST_VARS.path=	PREFIX X11PREFIX
+SUBST_VARS.path=	PREFIX X11BASE
 
 INSTALLATION_DIRS=	share/doc/pconsole
 INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin

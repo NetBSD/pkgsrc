@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/02/12 23:18:11 tron Exp $
+# $NetBSD: Makefile,v 1.59 2015/07/04 16:18:37 joerg Exp $
 
 DISTNAME=	grace-5.1.23
 PKGREVISION=	4
@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
 
-USE_X11BASE=		YES
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c fortran77
 GNU_CONFIGURE=		YES

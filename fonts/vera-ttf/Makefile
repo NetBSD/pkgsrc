@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:34 joerg Exp $
 #
 
 DISTNAME=	ttf-bitstream-vera-1.10
@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/fonts/
 COMMENT=	Bitstream Vera TrueType fonts
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:35 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:37 joerg Exp $
 #
 
 DISTNAME=	xbuffy-3.4
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Replacement for xbiff that handles multiple mail files
 
 GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
 
 CPPFLAGS+=	-I${X11BASE}/include
 CPPFLAGS+=	-Wall

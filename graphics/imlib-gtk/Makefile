@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/04 16:18:36 joerg Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGNAME=	imlib-gtk-1.9.15
@@ -37,10 +37,7 @@ PKG_SYSCONFSUBDIR=	imlib
 #
 X_LDFLAGS=		${X11_LDFLAGS}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${X11PREFIX:Q}/include
-.endif
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

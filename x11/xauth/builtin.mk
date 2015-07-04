@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2014/03/14 22:35:44 agc Exp $
+# $NetBSD: builtin.mk,v 1.2 2015/07/04 16:18:43 joerg Exp $
 
 BUILTIN_PKG:=	xauth
 
@@ -65,5 +65,5 @@ USE_BUILTIN.xauth!=						\
 .if !empty(USE_BUILTIN.xauth:M[yY][eE][sS])
 XAUTHBASE=		${X11BASE}
 .else
-XAUTHBASE=		${X11PREFIX}
+XAUTHBASE=		${PREFIX}
 .endif

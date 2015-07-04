@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/09/25 16:32:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2015/07/04 16:18:39 joerg Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -13,7 +13,6 @@ COMMENT=	Displays IP packets using X Window System
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
-USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${PREFIX}/include
 LIBS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lnet

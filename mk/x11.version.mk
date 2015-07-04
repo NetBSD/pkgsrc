@@ -1,4 +1,4 @@
-# $NetBSD: x11.version.mk,v 1.11 2010/09/11 20:46:11 wiz Exp $
+# $NetBSD: x11.version.mk,v 1.12 2015/07/04 16:18:38 joerg Exp $
 #
 # This file must not be included directly.
 # It is included automatically by mk/x11.buildlink3.mk.
@@ -35,7 +35,6 @@
 
 _VARGROUPS+=	x11
 _USER_VARS.x11=	X11_TYPE X11BASE
-_PKG_VARS.x11=	USE_X11BASE
 _SYS_VARS.x11=	X11_PKGSRCDIR.${X11_TYPE} BUILTIN_X11_TYPE.${X11_TYPE} BUILTIN_X11_VERSION.${X11_TYPE}
 
 X11_PKGSRCDIR.native=	../../pkgtools/x11-links

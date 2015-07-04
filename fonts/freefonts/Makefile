@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/08/19 10:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/04 16:18:31 joerg Exp $
 
 DISTNAME=	freefonts-0.10
 PKGREVISION=	3
@@ -15,7 +15,6 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_X11BASE=	yes
 USE_TOOLS+=	gzcat tar
 FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/freefont
 REQD_DIRS=	${PREFIX}/share/fonts/X11/freefont

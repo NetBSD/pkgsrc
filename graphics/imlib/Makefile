@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2014/10/09 14:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2015/07/04 16:18:35 joerg Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	20
@@ -46,10 +46,7 @@ SUBST_STAGE.imlib-config=	post-configure
 #
 X_LDFLAGS=		${X11_LDFLAGS}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${X11PREFIX:Q}/include
-.endif
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/imlib

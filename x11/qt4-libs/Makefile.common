@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2015/05/27 21:36:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2015/07/04 16:18:42 joerg Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -143,7 +143,6 @@ CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 pre-configure:
 	sed	-e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
-		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \
 		-e 's:@CC@:${CC:Q}:g' \
 		-e 's:@CXX@:${CXX:Q}:g' \

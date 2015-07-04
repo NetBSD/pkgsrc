@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/02/17 00:24:05 wiedi Exp $
+# $NetBSD: Makefile,v 1.24 2015/07/04 16:18:39 joerg Exp $
 
 DISTNAME=	xrmftp-1.2.4
 PKGREVISION=	8
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www-users.mat.uni.torun.pl/~rafmet/xrmftp/
 COMMENT=	FTP client for X Window System
 
 WRKSRC=		${WRKDIR}/${DISTNAME}.src
-USE_X11BASE=	yes
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:16 asau Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:38 joerg Exp $
 #
 
 DISTNAME=	bbappconf-0.0.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=1
 COMMENT=	Configure the behaviour of an application under Blackbox
 
 USE_LANGUAGES=		c c++
-USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1

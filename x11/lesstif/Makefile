@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/06/18 06:02:42 dholland Exp $
+# $NetBSD: Makefile,v 1.104 2015/07/04 16:18:42 joerg Exp $
 
 DISTNAME=	lesstif-0.95.2
 PKGREVISION=	5
@@ -14,7 +14,6 @@ CONFLICTS+=	openmotif-[0-9]*
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-verbose

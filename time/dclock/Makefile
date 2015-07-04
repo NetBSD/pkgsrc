@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 13:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/04 16:18:40 joerg Exp $
 #
 
 DISTNAME=	dclock
@@ -14,7 +14,6 @@ COMMENT=	Digital clock for X
 CONFLICTS+=	ivtools-*
 
 WRKSRC=		${WRKDIR}
-USE_X11BASE=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

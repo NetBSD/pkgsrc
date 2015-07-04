@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:56 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/04 16:18:43 joerg Exp $
 #
 
 DISTNAME=	worker-2.14.1
@@ -17,7 +17,6 @@ GNU_CONFIGURE=	YES
 #DEPENDS+=	xview-lib>=3.2.1:../../x11/xview-lib
 #DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 
-USE_X11BASE=	yes
 REPLACE_BASH+=	scripts/*.sh scripts/*r
 USE_TOOLS+=	bash:run
 

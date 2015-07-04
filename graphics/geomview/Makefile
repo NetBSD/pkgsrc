@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/04/25 14:23:10 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2015/07/04 16:18:35 joerg Exp $
 
 DISTNAME=		geomview-1.8.1
 PKGREVISION=		7
@@ -13,7 +13,6 @@ MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		lex
 USE_LANGUAGES=		c c++
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-xforms

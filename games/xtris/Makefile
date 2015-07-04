@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/06 11:55:04 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/07/04 16:18:35 joerg Exp $
 #
 
 DISTNAME=	xtris-1.15
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.iagora.com/~espel/xtris/xtris.html
 COMMENT=	Multi-player version of a popular game for the X Window system
 
 WRKSRC=		${WRKDIR}/xtris
-USE_X11BASE=	yes
 LIBS.SunOS+=	-lsocket -lnsl
 MAKE_ENV+=	LIBS=${LIBS:Q}
 

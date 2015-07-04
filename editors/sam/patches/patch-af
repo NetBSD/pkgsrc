@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2001/05/01 09:16:25 agc Exp $
+$NetBSD: patch-af,v 1.5 2015/07/04 16:18:29 joerg Exp $
 
 --- Makefile.orig	Tue May  1 09:42:03 2001
 +++ Makefile	Tue May  1 09:43:37 2001
@@ -12,7 +12,7 @@ $NetBSD: patch-af,v 1.4 2001/05/01 09:16:25 agc Exp $
 +MAN3=add balloc bitblt cachechars event frame graphics rgbpix rune
 +MAN4=font keyboard utf
 +MAN6=bitmap regexp
-+APP_DEFAULT_DIR=${X11PREFIX}/lib/X11/app-defaults
++APP_DEFAULT_DIR=${PREFIX}/lib/X11/app-defaults
 +AD=Sam
 +
  all:	lXg lframe samdir samtermdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/06/12 10:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2015/07/04 16:18:41 joerg Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	40
@@ -11,7 +11,6 @@ COMMENT=	Gtk+ based configuration tool for Window Maker
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gzip tar perl:run pkg-config msgfmt
 

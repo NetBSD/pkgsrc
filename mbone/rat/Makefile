@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/09/10 19:02:13 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2015/07/04 16:18:37 joerg Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -12,7 +12,6 @@ COMMENT=	Robust Audio Tool - multicast audioconferencing
 
 CRYPTO=		yes
 USE_TOOLS+=	gmake
-USE_X11BASE=	yes
 
 USER=		build
 

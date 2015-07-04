@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/01/14 08:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/04 16:18:41 joerg Exp $
 
 DISTNAME=	spectrwm-2.5.1
 CATEGORIES=	wm
@@ -25,8 +25,8 @@ MAKE_FLAGS+=	MANINSTALL=maninstall
 CFLAGS+=	-DSWM_LIB=\"${PREFIX}/lib/libswmhack.so.0.0\"
 .else
 USE_TOOLS+=	gmake
-CFLAGS+=	-I${X11PREFIX}/include
-LDFLAGS+=	-L${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib
+CFLAGS+=	-I${PREFIX}/include
+LDFLAGS+=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 .  if ${OPSYS} == "Darwin"
 BUILD_DIRS=	osx

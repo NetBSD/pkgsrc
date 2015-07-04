@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/07 12:12:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/04 16:18:33 joerg Exp $
 #
 
 DISTNAME=	TakaoExFonts_00201.01
@@ -12,7 +12,6 @@ HOMEPAGE=	https://launchpad.net/takao-fonts
 COMMENT=	Takao Ex Fonts are based on IPA Ex fonts, and includes some bug fix
 LICENSE=	ipafont
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

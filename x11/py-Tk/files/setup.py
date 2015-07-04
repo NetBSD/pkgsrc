@@ -1,4 +1,4 @@
-# $NetBSD: setup.py,v 1.5 2015/05/27 20:46:34 wiz Exp $
+# $NetBSD: setup.py,v 1.6 2015/07/04 16:18:42 joerg Exp $
 
 import distutils
 from distutils.core import setup, Extension
@@ -11,10 +11,10 @@ tclrtlib = tclrtprefix + '/lib'
 tclincl = tclrtprefix + '/include/tcl/generic'
 tkrtprefix = '@TKRTPREFIX@'
 tkrtlib = tkrtprefix + '/lib'
-x11prefix = '@X11PREFIX@'
+x11prefix = '@X11BASE@'
 x11incl = x11prefix + '/include'
 x11lib = x11prefix + '/lib'
-x11rtprefix = '@X11RTPREFIX@'
+x11rtprefix = '@X11BASE@'
 x11rtlib = x11rtprefix + '/lib'
 
 setup(

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2015/06/12 10:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2015/07/04 16:18:41 joerg Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		14
@@ -12,7 +12,6 @@ COMMENT=		GIMP Toolkit v1 - libraries for building X11 user interfaces
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_X11BASE=		yes
 USE_TOOLS+=		gmake msgfmt perl
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES+=		c99

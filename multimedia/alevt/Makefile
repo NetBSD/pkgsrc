@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/16 11:23:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/04 16:18:38 joerg Exp $
 
 DISTNAME=	alevt-1.6.1
 PKGREVISION=	3
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 			NetBSD-1.5_ALPHA-* NetBSD-1.[56]*-* \
 			NetBSD-[2-9]*-* DragonFly-*-*
 
-USE_X11BASE=	YES
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/pixmaps

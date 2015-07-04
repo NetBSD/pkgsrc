@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/03/13 16:50:37 tnn Exp $
+$NetBSD: distinfo,v 1.7 2015/07/04 16:18:40 joerg Exp $
 
 SHA1 (aewm++-1.0.24.tar.bz2) = 366da85a5edf47e3214c772007aebb2daf7d18d0
 RMD160 (aewm++-1.0.24.tar.bz2) = 6e37b29343948f469dcceba90732209b4b7324b9
 Size (aewm++-1.0.24.tar.bz2) = 36642 bytes
-SHA1 (patch-aa) = 9ca0d09a37893c8de049fcaa9eff7e2958c317b8
+SHA1 (patch-aa) = 0594007d3da7e03ab41a52103985a8fc68f3b0e3
 SHA1 (patch-ab) = fb68b8580de648b9af46f0e994388bb586294644
 SHA1 (patch-client.cc) = ab9d467920ecb1d402e33cb3ee429264ab42f9a8
 SHA1 (patch-main.cc) = 4cbc321d877543aa1224c8c2548df85335e9b2ef

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/11/12 15:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/07/04 16:18:43 joerg Exp $
 
 DISTNAME=		xfstt-1.9.1
 CATEGORIES=		x11 net fonts
@@ -11,7 +11,6 @@ COMMENT=		TrueType font server for X11
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_X11BASE=		YES
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/04 16:18:30 joerg Exp $
 #
 
 DISTNAME=	croscorefonts-1.21.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://fedoraproject.org/wiki/Google_Croscore_fonts
 COMMENT=	Google Croscore fonts
 LICENSE=	ofl-v1.1
 
-USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none

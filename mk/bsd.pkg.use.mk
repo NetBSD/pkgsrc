@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.59 2015/05/04 19:23:19 joerg Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.60 2015/07/04 16:18:38 joerg Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -47,18 +47,11 @@ PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX:Q}
 .endif
 
 .if defined(USE_IMAKE)
-USE_X11BASE?=		implied
 MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
-.endif
-
-.if defined(USE_X11BASE) && ${X11_TYPE} != "modular"
-.  include "x11.buildlink3.mk"
 .endif
 
 .if defined(INSTALLATION_PREFIX)
 PREFIX=			${INSTALLATION_PREFIX}
-.elif defined(USE_X11BASE)
-PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 .else

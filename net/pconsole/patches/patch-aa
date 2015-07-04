@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/23 21:52:08 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 2015/07/04 16:18:38 joerg Exp $
 
 --- pconsole.sh.in.orig	Mon Apr  9 10:59:48 2001
 +++ pconsole.sh.in	Sat Jun 23 23:29:24 2001
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/23 21:52:08 frueauf Exp $
  fi
  
 -PATH=/bin:/usr/bin:/usr/bin/X11:/usr/openwin/bin:/usr/local/bin:/usr/bsd:/usr/share/bin:/opt/bin:/etc:/usr/etc
-+PATH=/bin:/usr/bin:@PREFIX@/bin:@X11PREFIX@/bin:/usr/bin/X11:/usr/openwin/bin:/usr/local/bin:/usr/bsd:/usr/share/bin:/opt/bin:/etc:/usr/etc
++PATH=/bin:/usr/bin:@PREFIX@/bin:@X11BASE@/bin:/usr/bin/X11:/usr/openwin/bin:/usr/local/bin:/usr/bsd:/usr/share/bin:/opt/bin:/etc:/usr/etc
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
