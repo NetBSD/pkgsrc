@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2903 2015/07/04 15:03:10 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2904 2015/07/04 15:03:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb4 [rodent 2015-07-04]
 	Added pkgtools/pkg version 1.5.4 [khorben 2015-07-04]
 	Updated devel/libbson to 1.1.9 [fhajny 2015-07-04]
+	Updated databases/mongo-c-driver to 1.1.9 [fhajny 2015-07-04]
