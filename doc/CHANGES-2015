@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2898 2015/07/04 13:43:45 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.2899 2015/07/04 14:17:59 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5523,3 +5523,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/vim-share to 7.4.768nb1 [morr 2015-07-04]
 	Updated net/haproxy to 1.5.14 [morr 2015-07-04]
 	Updated lang/nodejs to 0.12.6 [fhajny 2015-07-04]
+	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb4 [rodent 2015-07-04]
