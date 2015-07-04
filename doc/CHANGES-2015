@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2901 2015/07/04 14:36:52 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2902 2015/07/04 14:40:08 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5524,3 +5524,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/haproxy to 1.5.14 [morr 2015-07-04]
 	Updated lang/nodejs to 0.12.6 [fhajny 2015-07-04]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb4 [rodent 2015-07-04]
+	Added pkgtools/pkg version 1.5.4 [khorben 2015-07-04]
