@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/07/04 05:26:21 ryoon Exp $
+
+SHA1 (gnupg-2.1.6.tar.bz2) = 9e8157b3386da04760657ce3117fc4dc570c57c5
+RMD160 (gnupg-2.1.6.tar.bz2) = 42db712fe0669caf246dbf46aca429b392614e2b
+Size (gnupg-2.1.6.tar.bz2) = 4917722 bytes
+SHA1 (patch-doc_Makefile.in) = 1f5dc55c6751322e2a5436b0a66a530d231b4a75
