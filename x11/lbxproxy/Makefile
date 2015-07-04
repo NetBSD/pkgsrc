@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/07/02 22:47:40 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.10 2015/07/04 09:16:09 wiz Exp $
 
 DISTNAME=	lbxproxy-1.0.3
 CATEGORIES=	x11
@@ -28,7 +27,7 @@ post-install:
 .include "../../x11/xproxymanagementprotocol/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../wip/liblbxutil/buildlink3.mk"
+.include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
