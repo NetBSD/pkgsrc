@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 03:37:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/04 06:44:49 richard Exp $
 
 DISTNAME=	xf86-input-mutouch-1.3.0
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
+USE_LANGUAGES=+	c99
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
