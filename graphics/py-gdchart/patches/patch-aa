@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/08/17 06:14:21 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2015/07/04 16:18:36 joerg Exp $
 
 --- Makefile.orig	2001-03-16 14:08:18.000000000 -0500
 +++ Makefile	2008-08-17 02:14:47.000000000 -0400
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2008/08/17 06:14:21 dholland Exp $
 -GCC = gcc
 -CFLAGS = -Wall -fpic -O2
 +INC_DIRS = -I${GDCHART_INCLUDE} -I$(GD_INCLUDE) -I$(PYTHON_INCLUDE)
-+LIB_DIRS = -L${LOCALBASE}/lib -L/usr/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -L${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib
++LIB_DIRS = -L${LOCALBASE}/lib -L/usr/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 +GCC = ${CC}
 +CFLAGS ?= -Wall -fpic -O2
 +CFLAGS+=-fPIC

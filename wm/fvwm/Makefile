@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/06/12 10:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/07/04 16:18:41 joerg Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	6
@@ -18,7 +18,6 @@ CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]* xpmroot-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 FVWM_VER=	2.6.5
 
-USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		perl:run tar
 

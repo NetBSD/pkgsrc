@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 14:25:10 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:36 joerg Exp $
 
 DISTNAME=	Chinput-3.0
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://download.linuxbyte.net/Chinese/Input/
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Chinese input server
-
-USE_X11BASE=	yes
 
 BUILD_TARGET=	chinput
 

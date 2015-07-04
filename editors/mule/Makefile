@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/06/01 16:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2015/07/04 16:18:29 joerg Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	8
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--terminal-face --mcpath --canna-libraries=${PREFIX}/lib
 .if ${MACHINE_ARCH} != "alpha" && ${MACHINE_ARCH} != "sparc64"
 CONFIGURE_ARGS+=	--valbits=26
 .endif
-CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/share/fonts/X11/intlfonts/bdf
+CONFIGURE_ARGS+=	--bdf-path=${PREFIX}/share/fonts/X11/intlfonts/bdf
 
 .include "options.mk"
 

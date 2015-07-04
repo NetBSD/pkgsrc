@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2015/06/30 11:52:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.97 2015/07/04 16:18:37 joerg Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -21,7 +21,6 @@ WRKSRC=		${WRKDIR}/${SCIBASE}
 BROKEN_ON_PLATFORM+=	${LP64PLATFORMS}
 
 USE_LANGUAGES=		c fortran77
-USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		tee
 

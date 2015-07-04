@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/04 16:18:33 joerg Exp $
 
 DISTNAME=	proggy-fonts-1
 PKGREVISION=	1
@@ -14,7 +14,6 @@ LICENSE=	mit
 WRKSRC=			${WRKDIR}/proggy-fonts
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
-USE_X11BASE=		yes
 
 FONTS_DIRS.x11=		${PREFIX}/share/fonts/X11/misc
 INSTALLATION_DIRS=	share/fonts/X11/misc

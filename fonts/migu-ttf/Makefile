@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/29 11:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/04 16:18:32 joerg Exp $
 #
 
 DISTNAME=	# empty
@@ -15,7 +15,6 @@ HOMEPAGE=	http://mix-mplus-ipa.osdn.jp/
 COMMENT=	Fonts generated from M+ and IPA Gothic (Universal Design)
 LICENSE=	ipafont
 
-USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

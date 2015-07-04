@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/02/16 15:41:54 wiedi Exp $
+# $NetBSD: Makefile,v 1.33 2015/07/04 16:18:40 joerg Exp $
 
 DISTNAME=	plan-1.9
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	yacc lex
-USE_X11BASE=	YES
 BUILD_TARGET=	${LOWER_OPSYS}
 
 INSTALLATION_DIRS=	libexec/plan ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 \

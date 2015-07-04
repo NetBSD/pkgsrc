@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/29 05:07:16 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/04 16:18:43 joerg Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
@@ -17,7 +17,7 @@ XMOVEDOCDIR=	${PREFIX}/share/doc/xmove
 INSTALLATION_DIRS=	${XMOVEDOCDIR}
 
 pre-configure:
-	@${SED} -e 's|@x11base@|'${X11PREFIX}'|' < ${WRKSRC}/xmove/Imakefile > ${WRKSRC}/xmove/Imakefile.new && \
+	@${SED} -e 's|@x11base@|'${PREFIX}'|' < ${WRKSRC}/xmove/Imakefile > ${WRKSRC}/xmove/Imakefile.new && \
 		${MV} ${WRKSRC}/xmove/Imakefile.new ${WRKSRC}/xmove/Imakefile
 	${CP} ${WRKSRC}/man/man1/xmove.1 ${WRKSRC}/xmove/xmove.man
 	${CP} ${WRKSRC}/man/man1/xmovectrl.1 ${WRKSRC}/xmovectrl/xmovectrl.man

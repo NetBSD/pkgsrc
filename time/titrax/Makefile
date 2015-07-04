@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/07/04 16:18:40 joerg Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -23,7 +23,6 @@ USE_TOOLS+=		perl:run
 pre-configure:
 	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.bak
 	${SED}	-e "s|@LOCALBASE@|${PREFIX}|g"			\
-		-e "s|@X11BASE@|${X11PREFIX}|g"				\
 		${WRKSRC}/Imakefile.bak > ${WRKSRC}/Imakefile
 
 INSTALLATION_DIRS=	libexec/titrax
