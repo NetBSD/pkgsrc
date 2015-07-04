@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.50 2014/11/28 12:11:24 bsiegert Exp $ -->
+<!-- $NetBSD: components.xml,v 1.51 2015/07/04 16:12:54 joerg Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -591,8 +591,7 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
 	    <filename>MESSAGE</filename>.  By default, substitution is
 	    performed for <varname>PKGNAME</varname>,
 	    <varname>PKGBASE</varname>, <varname>PREFIX</varname>,
-	    <varname>LOCALBASE</varname>, <varname>X11PREFIX</varname>,
-	    <varname>X11BASE</varname>,
+	    <varname>LOCALBASE</varname>, <varname>X11BASE</varname>,
 	    <varname>PKG_SYSCONFDIR</varname>,
 	    <varname>ROOT_GROUP</varname>, and
 	    <varname>ROOT_USER</varname>.</para>
