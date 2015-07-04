@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:50:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2015/07/04 15:32:39 bsiegert Exp $
 
-DISTVERSION=	1.6.17
-PKGVERSION=	0.06
-PKGNAME=	p5-DNS-LDNS-${PKGVERSION}
+DISTNAME=	ldns-1.6.17
+PKGNAME=	p5-DNS-LDNS-0.06
 PKGREVISION=	1
-DISTNAME=	ldns-${DISTVERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
