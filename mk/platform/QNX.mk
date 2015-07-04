@@ -1,6 +1,5 @@
 # Variable definitions for the QNX operating system.
 
-CC=		gcc
 ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
