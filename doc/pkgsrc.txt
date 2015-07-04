@@ -592,6 +592,8 @@ Table 1.1. Platforms supported by pkgsrc
 |Cygwin                                |   Mar 2013    |README.Cygwin         |
 |--------------------------------------+---------------+----------------------|
 |GNU/kFreeBSD                          |   Jul 2013    |README.GNUkFreeBSD    |
+|--------------------------------------+---------------+----------------------|
+|Bitrig                                |   Jun 2014    |README.Bitrig         |
 +-----------------------------------------------------------------------------+
 
 
@@ -3801,7 +3803,7 @@ MESSAGE
     MESSAGE_SUBST+=  SOMEVAR="somevalue"
 
     replaces "${SOMEVAR}" with "somevalue" in MESSAGE. By default, substitution
-    is performed for PKGNAME, PKGBASE, PREFIX, LOCALBASE, X11PREFIX, X11BASE,
+    is performed for PKGNAME, PKGBASE, PREFIX, LOCALBASE, X11BASE,
     PKG_SYSCONFDIR, ROOT_GROUP, and ROOT_USER.
 
     You can display a different or additional files by setting the MESSAGE_SRC
@@ -5320,33 +5322,13 @@ When choosing which of these variables to use, follow the following rules:
     installed. When looking for standard X11 includes (not those installed by a
     package), use "${X11BASE}".
 
-  * X11-based packages are special in that they may be installed in either
-    X11BASE or LOCALBASE.
+  * X11-based packages using imake must set USE_IMAKE to be installed correctly
+    under LOCALBASE.
 
-    Usually, X11 packages should be installed under LOCALBASE whenever
-    possible. Note that you will need to include ../../mk/x11.buildlink3.mk in
-    them to request the presence of X11 and to get the right compilation flags.
-
-    Even though, there are some packages that cannot be installed under
-    LOCALBASE: those that come with app-defaults files. These packages are
-    special and they must be placed under X11BASE. To accomplish this, set
-    either USE_X11BASE or USE_IMAKE in your package.
-
-    Some notes: If you need to find includes or libraries installed by a pkg
-    that has USE_IMAKE or USE_X11BASE in its pkg Makefile, you need to look in 
-    both ${X11BASE} and ${LOCALBASE}. To force installation of all X11 packages
-    in LOCALBASE, the pkgtools/xpkgwedge package is enabled by default.
-
-  * X11PREFIX should be used to refer to the installed location of an X11
-    package. X11PREFIX will be set to X11BASE if xpkgwedge is not installed,
-    and to LOCALBASE if xpkgwedge is installed.
-
-  * If xpkgwedge is installed, it is possible to have some packages installed
-    in X11BASE and some in LOCALBASE. To determine the prefix of an installed
-    package, the EVAL_PREFIX definition can be used. It takes pairs in the
-    format "DIRNAME=<package>", and the make(1) variable DIRNAME will be set to
-    the prefix of the installed package <package>, or "${X11PREFIX}" if the
-    package is not installed.
+  * To determine the prefix of an installed package, the EVAL_PREFIX definition
+    can be used. It takes pairs in the format "DIRNAME=<package>", and the make
+    (1) variable DIRNAME will be set to the prefix of the installed package
+    <package>, or "${PREFIX}" if the package is not installed.
 
     This is best illustrated by example.
 
@@ -5668,10 +5650,9 @@ module.mk. To set any parameter for Makefile.PL use the MAKE_PARAMS variable
 (e.g., MAKE_PARAMS+=foo=bar
 
 If the program uses an Imakefile for configuration, the appropriate steps can
-be invoked by setting USE_IMAKE to "yes". (If you only want the package
-installed in ${X11PREFIX} but xmkmf not being run, set USE_X11BASE instead.)
-You can add variables to xmkmf's environment by adding them to the SCRIPTS_ENV
-variable.
+be invoked by setting USE_IMAKE to "yes". If you only need xmkmf, add it to
+USE_TOOLS. You can add variables to xmkmf's environment by adding them to the
+SCRIPTS_ENV variable.
 
 If the program uses cmake for configuration, the appropriate steps can be
 invoked by setting USE_CMAKE to "yes". You can add variables to cmake's
