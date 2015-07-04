@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/06/01 16:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/04 16:18:31 joerg Exp $
 #
 
 DISTNAME=	droid-fonts-20111115
@@ -14,7 +14,6 @@ COMMENT=	The Droid fonts family from Ascender Corporation
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
-USE_X11BASE=	YES
 NO_BUILD=	YES
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/29 05:07:18 asau Exp $
+# $NetBSD: Makefile,v 1.26 2015/07/04 16:18:43 joerg Exp $
 
 DISTNAME=	xpmicons-1.0
 PKGREVISION=	5
@@ -16,7 +16,6 @@ COMMENT=	Huge collection of icons for any windowmanager
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	icons
-USE_X11BASE=	yes
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	include/X11/bitmaps include/X11/pixmaps

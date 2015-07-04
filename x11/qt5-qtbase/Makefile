@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/12 10:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/07/04 16:18:42 joerg Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -132,7 +132,6 @@ PC_FILES=		Qt5Bootstrap.pc Qt5Concurrent.pc Qt5Core.pc \
 pre-configure:
 	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
-		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \
 		-e 's:@CC@:${CC:Q}:g' \
 		-e 's:@CXX@:${CXX:Q}:g' \

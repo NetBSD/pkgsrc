@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/18 12:35:48 kei Exp $
+$NetBSD: patch-aa,v 1.2 2015/07/04 16:18:40 joerg Exp $
 
 --- Imakefile.orig	Mon Dec 18 13:41:06 2000
 +++ Imakefile	Mon Dec 18 13:42:16 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/18 12:35:48 kei Exp $
   */
  #ifdef SUPPORT_XPM
 -    EXTRA_INCLUDES = -I/usr/local/include
-+    EXTRA_INCLUDES = -I${X11PREFIX}/include
++    EXTRA_INCLUDES = -I${X11BASE}/include
         XPM_LIBRARY = -lXpm
  #endif
  

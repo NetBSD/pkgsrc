@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/04 16:18:32 joerg Exp $
 #
 
 DISTNAME=	Konatu_ver_26
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.masuseki.com/?u=be/konatu.htm
 COMMENT=	Japanese TrueType gothic (sans-serif) fonts, Konatu fonts
 LICENSE=	cc-by-sa-v3.0
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/07/01 12:33:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2015/07/04 16:18:33 joerg Exp $
 #
 
 DISTNAME=	umefont_520
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/([a-z]+)-//}
 CONFLICTS=	umefont<=0.421
 SUPERSEDES=	umefont<=0.421
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2012/10/29 05:07:18 asau Exp $
+# $NetBSD: Makefile,v 1.64 2015/07/04 16:18:43 joerg Exp $
 #
 
 DISTNAME=	fvwm-${PKG_VERSION}
@@ -13,7 +13,6 @@ COMMENT=	Sets the root window to an Xpm pixmap
 LICENSE=	gnu-gpl-v2
 
 PKG_VERSION=	2.4.20
-USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 BUILD_DIRS=	libs utils
 

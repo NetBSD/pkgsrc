@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/04/06 12:04:02 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2015/07/04 16:18:40 joerg Exp $
 #
 
 DISTNAME=	cs113ins
@@ -17,8 +17,6 @@ RESTRICTED=	Distribution permitted only of unmodified distfile at no charge.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-USE_X11BASE=	yes
 
 USE_TOOLS+=	pax gtar
 

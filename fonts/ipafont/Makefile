@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/04 16:18:31 joerg Exp $
 #
 
 DISTNAME=	IPAfont00303
@@ -13,7 +13,6 @@ HOMEPAGE=	http://ipafont.ipa.go.jp/
 COMMENT=	IPA JIS X 0213 fonts (Gothic, P Gothic, Mincho, and P Mincho)
 LICENSE=	ipafont
 
-USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
