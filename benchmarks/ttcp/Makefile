@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/04 16:11:53 bsiegert Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	benchmarks net
 #MASTER_SITES=	ftp://ftp.ptb.de/pub/benchmarks/
 EXTRACT_SUFX=	.tar.Z
