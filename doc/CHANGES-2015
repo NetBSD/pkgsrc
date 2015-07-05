@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2908 2015/07/05 11:55:20 martin Exp $
+$NetBSD: CHANGES-2015,v 1.2909 2015/07/05 13:19:09 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated benchmarks/ttcp to 1.12nb3 [bsiegert 2015-07-04]
 	Updated pkgtools/mksandbox to 1.5 [jperkin 2015-07-05]
 	Updated www/firefox to 39.0nb1 [martin 2015-07-05]
+	Added x11/modular-xorg-xephyr version 1.17.2 [khorben 2015-07-05]
