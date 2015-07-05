@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2911 2015/07/05 13:53:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2912 2015/07/05 18:20:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5534,3 +5534,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/modular-xorg-xephyr version 1.17.2 [khorben 2015-07-05]
 	Updated time/p5-DateTime to 1.2000 [wiz 2015-07-05]
 	Updated devel/p5-Test-Pod to 1.51 [wiz 2015-07-05]
+	Updated devel/apache-ant to 1.9.6 [wiz 2015-07-05]
