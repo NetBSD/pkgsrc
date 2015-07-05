@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2014/11/25 14:35:37 wiz Exp $
+$NetBSD: distinfo,v 1.18 2015/07/05 18:24:10 wiz Exp $
 
-SHA1 (libksba-1.3.2.tar.bz2) = 37d0893a587354af2b6e49f6ae701ca84f52da67
-RMD160 (libksba-1.3.2.tar.bz2) = f58993d067acda2e2dae5497c058f19cdf84a539
-Size (libksba-1.3.2.tar.bz2) = 600952 bytes
+SHA1 (libksba-1.3.3.tar.bz2) = 86fe0436f3c8c394d32e142ee410a9f9560173fb
+RMD160 (libksba-1.3.3.tar.bz2) = a1f8632a86f726fc46e7043a4f41c775a3f597d6
+Size (libksba-1.3.3.tar.bz2) = 618698 bytes
 SHA1 (patch-aa) = f2e63361afb95d5469153efaecebcb8719938d58
 SHA1 (patch-src_Makefile.in) = 484f6c02bc382b8c5647ce867f30bb2c4073580f
