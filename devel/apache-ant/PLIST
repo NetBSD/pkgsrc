@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/07/01 09:36:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/07/05 18:19:30 wiz Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -1535,7 +1535,6 @@ share/doc/java/ant/properties.html
 share/doc/java/ant/proxy.html
 share/doc/java/ant/running.html
 share/doc/java/ant/runninglist.html
-share/doc/java/ant/stylesheets/antmanual.css
 share/doc/java/ant/stylesheets/style.css
 share/doc/java/ant/sysclasspath.html
 share/doc/java/ant/targets.html
