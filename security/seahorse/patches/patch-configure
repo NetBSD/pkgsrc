@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2015/07/05 10:04:22 joerg Exp $
+
+--- configure.orig	2015-07-05 09:46:21.000000000 +0000
++++ configure
+@@ -16363,7 +16363,7 @@ fi
+ 
+ 
+ 	if test	"$DO_CHECK" = "yes"; then
+-		accepted_versions="1.2 1.4 2.0"
++		accepted_versions="1.2 1.4 2.0 2.1"
+ 		for ac_prog in gpg gpg2
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
