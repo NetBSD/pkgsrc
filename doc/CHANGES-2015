@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2920 2015/07/05 23:55:37 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2921 2015/07/05 23:59:07 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5542,4 +5542,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gpa to 0.9.7 [wiz 2015-07-05]
 	Updated security/py-cryptography to 0.9.2 [wiz 2015-07-05]
 	Updated textproc/iso-codes to 3.59 [wiz 2015-07-05]
-	Added devel/ruby-redmine version 3.0.3 [rodent 2015-07-05]
+	Moved devel/redmine to devel/ruby-redmine [rodent 2015-07-05]
