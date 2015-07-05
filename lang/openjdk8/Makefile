@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/07/03 20:40:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/05 21:03:05 fhajny Exp $
 
 DISTNAME=	openjdk-1.8.45-20150610
 PKGNAME=	openjdk8-1.8.45
@@ -25,7 +25,7 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jps keytool orbd \
 
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
-GNU_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	common/autoconf/configure
 CONFIG_SHELL=		bash
 CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/config.sub
@@ -40,6 +40,9 @@ PLIST_SRC+=		${PLIST_SRC_DFLT}
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 PREPEND_PATH+=			${ALT_BOOTDIR}/bin
 
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
 CONFIGURE_ARGS+=	--with-zlib=system
 CONFIGURE_ARGS+=	--with-giflib=bundled
@@ -86,32 +89,6 @@ CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
 MAKE_ENV+=	USE_GCC=1
 MAKE_ENV+=	ARCH_DATA_MODEL=${ABI:Q}
-.endif
-
-# SmartOS has ccs tools in /usr/bin
-.if ${OS_VARIANT} == "SmartOS"
-SUBST_CLASSES+=		ccspath
-SUBST_STAGE.ccspath=	pre-build
-SUBST_FILES.ccspath=	jdk/make/common/shared/Defs-utils.gmk
-SUBST_FILES.ccspath+=	hotspot/make/solaris/makefiles/build_vm_def.sh
-SUBST_SED.ccspath=	-e 's/UNIXCCS_PATH/UNIXCOMMAND_PATH/g'
-SUBST_SED.ccspath+=	-e 's,/usr/ccs/bin,/usr/bin,g'
-.endif
-
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		mapfix
-SUBST_STAGE.mapfix=	pre-build
-SUBST_FILES.mapfix=	jdk/make/com/sun/java/pack/mapfile-vers
-SUBST_FILES.mapfix+=	jdk/make/java/main/java/mapfile-amd64
-SUBST_FILES.mapfix+=	jdk/make/java/main/java/mapfile-i586
-SUBST_SED.mapfix=	-e '/__fsr_init_value/d'
-SUBST_SED.mapfix+=	-e '/__progname/d'
-
-# environ should only be removed from this file (added by patches)
-SUBST_CLASSES+=		mapfix2
-SUBST_STAGE.mapfix2=	pre-build
-SUBST_FILES.mapfix2=	jdk/make/com/sun/java/pack/mapfile-vers
-SUBST_SED.mapfix2=	-e '/environ/d'
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -239,7 +216,6 @@ TOOLS_PLATFORM.unzip=
 .if ${OS_VARIANT} == "SmartOS"
 .include "../../devel/binutils/buildlink3.mk"
 BUILDLINK_DEPMETHOD.binutils?=	build
-MAKE_ENV+=	ALT_OBJCOPY=${PREFIX}/bin/gobjcopy
 MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .endif
 
