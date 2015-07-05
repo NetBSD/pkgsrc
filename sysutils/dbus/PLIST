@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/01/21 13:45:18 pho Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/07/05 15:21:50 richard Exp $
 ${PLIST.launchd}Library/LaunchAgents/org.freedesktop.dbus-session.plist
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
@@ -28,8 +28,28 @@ lib/dbus-1.0/include/dbus/dbus-arch-deps.h
 lib/libdbus-1.la
 lib/pkgconfig/dbus-1.pc
 libexec/dbus-daemon-launch-helper
+man/man1/dbus-cleanup-sockets.1
+man/man1/dbus-daemon.1
+man/man1/dbus-launch.1
+man/man1/dbus-monitor.1
+man/man1/dbus-run-session.1
+man/man1/dbus-send.1
+man/man1/dbus-uuidgen.1
+share/doc/dbus/dbus-cleanup-sockets.1.html
+share/doc/dbus/dbus-daemon.1.html
+share/doc/dbus/dbus-faq.html
+share/doc/dbus/dbus-launch.1.html
+share/doc/dbus/dbus-monitor.1.html
+share/doc/dbus/dbus-run-session.1.html
+share/doc/dbus/dbus-send.1.html
+share/doc/dbus/dbus-specification.html
+share/doc/dbus/dbus-test-plan.html
+share/doc/dbus/dbus-tutorial.html
+share/doc/dbus/dbus-uuidgen.1.html
 share/doc/dbus/diagram.png
 share/doc/dbus/diagram.svg
+share/doc/dbus/introspect.dtd
+share/doc/dbus/introspect.xsl
 share/doc/dbus/system-activation.txt
 share/examples/dbus/session.conf
 share/examples/dbus/system.conf
