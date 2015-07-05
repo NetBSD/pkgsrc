@@ -19,7 +19,7 @@
 		exec='@PREFIX@/@SMF_METHOD_FILE.dbus@ start'
 		timeout_seconds='30'>
 		<method_context>
-			<method_credential user='@DBUS_USER@' group='@DBUS_GROUP@' />
+			<method_credential user='root' group='@DBUS_GROUP@' />
 		</method_context>
 	</exec_method>
 	<exec_method
