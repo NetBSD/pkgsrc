@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/07/03 04:13:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/07/05 08:27:41 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -13677,7 +13677,6 @@ ${PKGNAME}/ure/lib/libxmlreaderlo.so
 ${PKGNAME}/ure/lib/unorc
 ${PKGNAME}/ure/share/misc/services.rdb
 ${PKGNAME}/ure/share/misc/types.rdb
-${PKGNAME}/ure/ure
 share/appdata/libreoffice-base.appdata.xml
 share/appdata/libreoffice-calc.appdata.xml
 share/appdata/libreoffice-draw.appdata.xml
