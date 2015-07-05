@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2015/05/14 17:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2015/07/05 15:21:50 richard Exp $
 
 DISTNAME=	dbus-1.8.18
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -42,12 +43,11 @@ CONFIGURE_ARGS.with+=	session-socket-dir=/tmp
 .endif
 
 CONFIGURE_ARGS.Linux=	abstract-sockets selinux
-CONFIGURE_ARGS.docs=	doxygen-docs xml-docs
 
 CONFIGURE_ARGS.without+=	init-scripts
 CONFIGURE_ARGS.disable+=	ansi
 CONFIGURE_ARGS.disable+=	console-owner-file
-CONFIGURE_ARGS.disable+=	${CONFIGURE_ARGS.docs}
+CONFIGURE_ARGS.disable+=	doxygen-docs
 CONFIGURE_ARGS.enable+=		checks static
 ###
 ### XXX the spawn test hangs, and some of these tests may be bogus
@@ -110,6 +110,12 @@ BUILDLINK_TRANSFORM+=	rm:-lrt
 .endif
 
 .include "options.mk"
+
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/introspect.* \
+		${DESTDIR}${PREFIX}/share/doc/dbus/
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
