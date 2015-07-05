@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.7 2015/04/14 08:55:07 jperkin Exp $
+# $NetBSD: mksandbox,v 1.8 2015/07/05 11:47:14 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -119,7 +119,7 @@ Linux)
 	fi
 	paxprog=""
 	sedprog=/bin/sed
-	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos"
+	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos /run"
 	sandboxWriteDirs="$sandboxWriteDirs /proc"
 	;;
 NetBSD)
