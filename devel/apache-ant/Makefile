@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2015/07/01 09:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2015/07/05 18:19:30 wiz Exp $
 
-DISTNAME=	apache-ant-1.9.5-bin
+DISTNAME=	apache-ant-1.9.6-bin
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
