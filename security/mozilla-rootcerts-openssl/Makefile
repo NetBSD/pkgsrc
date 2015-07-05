@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/18 20:21:25 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/05 19:02:04 dholland Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-1
 CATEGORIES=	security
@@ -28,6 +28,9 @@ CHECK_BUILTIN.openssl=	no
 #
 # For native openssl this is in /etc outside of ${PREFIX}. Beware.
 #
+# Update: even for pkgsrc openssl it's in /etc for SSLDIR, as per the
+# mozilla-rootcerts script.
+#
 .if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 PLACE=			/etc
 SET_PREFIX=		yes
@@ -36,13 +39,13 @@ CHECK_FILES_SUPPORTED=	no
 NOT_FOR_UNPRIVILEGED=	yes
 
 .else
-PLACE=			${PKG_SYSCONFDIR}
-SET_PREFIX=		no
-PLIST_SUBST+=		${PKG_SYSCONFDIR:S/^${PREFIX}//}
+PLACE=			${MY_PKG_SYSCONFDIR}
+SET_PREFIX=		yes
+PLIST_SUBST+=		MYETCDIR=${MY_PKG_SYSCONFDIR:S/^${PREFIX}//}
 .endif
 
 OPENSSLDIR=		${PLACE}/openssl/certs
-SSLDIR=			${PLACE}/ssl/certs
+SSLDIR=			/etc/ssl/certs
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${OPENSSLDIR}
@@ -54,6 +57,7 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 
 # This must be after bsd.pkg.mk is included to work.
+MY_PKG_SYSCONFDIR:=	${PKG_SYSCONFDIR}
 .if ${SET_PREFIX} == "yes"
 PREFIX=			/
 .endif

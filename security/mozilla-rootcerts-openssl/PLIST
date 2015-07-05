@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/18 20:21:25 dholland Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/05 19:02:04 dholland Exp $
 ${MYETCDIR}/openssl/certs/024dc131.0
 ${MYETCDIR}/openssl/certs/034868d6.0
 ${MYETCDIR}/openssl/certs/039c618a.0
@@ -353,4 +353,4 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-96.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-97.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-98.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-99.pem
-${MYETCDIR}/ssl/certs/ca-certificates.crt
+etc/ssl/certs/ca-certificates.crt
