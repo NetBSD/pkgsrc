@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2112 2015/07/04 05:18:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.2113 2015/07/05 23:57:13 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1783,7 +1783,6 @@ SUBDIR+=	rdp
 SUBDIR+=	re2c
 SUBDIR+=	readline
 SUBDIR+=	rebar
-SUBDIR+=	redmine
 SUBDIR+=	refinecvs
 SUBDIR+=	reposurgeon
 SUBDIR+=	roundup
@@ -1897,6 +1896,7 @@ SUBDIR+=	ruby-rcsparse
 SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-rdoc
 SUBDIR+=	ruby-readline
+SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-rspec
 SUBDIR+=	ruby-rspec-core
