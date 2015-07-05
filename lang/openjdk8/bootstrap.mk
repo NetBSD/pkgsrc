@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.7 2015/07/03 20:40:59 fhajny Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2015/07/05 21:03:05 fhajny Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -54,7 +54,6 @@ EXTRACT_ONLY+=		${BOOT.nb5-amd64}
 .if ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=		sun-jdk7-[0-9]*:../../lang/sun-jdk7
 JDK_BOOTDIR=		${PREFIX}/java/sun-7
-MAKE_ENV+=		ALT_JDK_IMPORT_PATH=${JDK_BOOTDIR}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-6.[0-8]*-i386) || make(distinfo)
