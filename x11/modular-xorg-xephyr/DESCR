@@ -1,0 +1,8 @@
+A kdrive based X Server which targets a window on a host X Server as its
+framebuffer.
+
+Unlike Xnest it supports modern X extensions (even if host server
+doesn't) such as Composite, Damage, randr etc (no GLX support now). It
+uses SHM Images and shadow framebuffer updates to provide good
+performance. It also has a visual debugging mode for observing screen
+updates.
