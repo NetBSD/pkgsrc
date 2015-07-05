@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/05 12:42:35 joerg Exp $
 
 DISTNAME=	Text-Microformat-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Text/Microformat/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 DEPENDS+=	p5-Class-Accessor>=0.25:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0.04:../../devel/p5-Class-Data-Inheritable
