@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/05 13:16:44 khorben Exp $
+bin/Xephyr
+man/man1/Xephyr.1
