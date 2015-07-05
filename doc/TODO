@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14529 2015/07/04 05:58:15 ryoon Exp $
+$NetBSD: TODO,v 1.14530 2015/07/05 08:18:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,6 +357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
 	o GNUMail-1.2.2
+	o ImageMagick-6.9.1.7
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o MesaLib-10.6.1
 	o OdfConverter-4.0
@@ -391,6 +392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap2-auth-ldap-3.11
 	o ap2-perl-2.0.9
 	o ap2-transform-0.6.0
+	o apache-ant-1.9.6
 	o apache-ivy-2.4.0
 	o apollo-1.7
 	o apr0-2.4.1
@@ -690,6 +692,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
+	o iso-codes-3.59
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
@@ -788,6 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcsim-5.5.0
 	o mediainfo-0.7.72
 	o mednafen-0.9.38.2
+	o meld-3.13.2
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metacity-3.14.2
@@ -832,7 +836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o newmail-1.0.2
 	o nginx-devel-1.9.2
 	o nikto-2.0.1
-	o notmuch-0.20.1
+	o notmuch-0.20.2
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nspluginwrapper-1.4.4 [pkg/47208]
@@ -891,6 +895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o picprg-3.01
 	o pim6dd-20040819a
 	o pim6sd-20040824a
+	o pinentry-0.9.5
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
@@ -918,6 +923,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.14
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
+	o py-cryptography-0.9.2
 	o py-datapkg-0.9
 	o py-django-1.8 [incompatible with django-cms, please hold]
 	o py-django-cms-3.1
@@ -927,7 +933,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
-	o py-html2text-2015.6.12
+	o py-html2text-2015.6.21
 	o py-lasso-2.4.0
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.3
@@ -947,6 +953,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-virtualenv-13.1.0
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qcad-3.7.5.0
