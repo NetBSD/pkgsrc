@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.7 2013/05/03 16:36:05 drochner Exp $
+$NetBSD: patch-aj,v 1.8 2015/07/05 18:26:45 wiz Exp $
 
---- src/Makefile.in.orig	2013-05-01 12:18:06.000000000 +0000
+--- src/Makefile.in.orig	2015-06-08 13:03:50.000000000 +0000
 +++ src/Makefile.in
-@@ -551,7 +551,7 @@ libgpgme_pthread_la_LDFLAGS = $(no_undef
+@@ -632,7 +632,7 @@ libgpgme_pthread_la_LDFLAGS = \
  
  libgpgme_pthread_la_DEPENDENCIES = @LTLIBOBJS@ $(srcdir)/libgpgme.vers
  libgpgme_pthread_la_LIBADD = $(gpgme_res) @LIBASSUAN_LIBS@ @LTLIBOBJS@ \
 -	-lpthread @GPG_ERROR_LIBS@
 +	$(PTHREAD_LDFLAGS) $(PTHREAD_LIBS) @GPG_ERROR_LIBS@
  
- @BUILD_W32_GLIB_TRUE@libgpgme_glib_la_LDFLAGS = $(no_undefined) \
- @BUILD_W32_GLIB_TRUE@	$(export_symbols) $(libgpgme_version_script_cmd) -version-info \
+ @BUILD_W32_GLIB_TRUE@libgpgme_glib_la_LDFLAGS = \
+ @BUILD_W32_GLIB_TRUE@        $(no_undefined) $(export_symbols) $(extra_ltoptions) \
