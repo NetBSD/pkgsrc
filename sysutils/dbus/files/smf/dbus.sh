@@ -13,11 +13,16 @@ fi
 if [ ! -f @VARBASE@/db/dbus/machine-id ]; then
 	@PREFIX@/bin/dbus-uuidgen --ensure
 fi
-
+pidfile="@VARBASE@/run/dbus/pid"
 case "$1" in
 'start')
-	if [ -f @VARBASE@/run/dbus/pid ]; then
-		rm -f @VARBASE@/run/dbus/pid
+    dir="@VARBASE@/run/dbus"
+    if ! [ -d $dir ]; then
+		@MKDIR@ $dir
+		@CHMOD@ 0755 $dir
+		@CHOWN@ @DBUS_USER@:@DBUS_GROUP@ $dir
+	elif [ -f $pidfile ]; then
+		rm -f $pidfile
 	fi
 	@PREFIX@/bin/dbus-daemon --system
 	err=$?
