@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/06 04:31:27 rodent Exp $
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/code-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/footer-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/header-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/menu-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/menu-disabled.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/menu-selected.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/mobile/menu.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/page-left.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/page-right.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/progress-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/quote.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/torn-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/wordpress-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/images/yellow-box-background.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/javascripts/theme.js
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/stylesheets/application.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/stylesheets/mobile.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/red-andy/stylesheets/redword.css
