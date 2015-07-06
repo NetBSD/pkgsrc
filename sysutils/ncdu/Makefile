@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/23 11:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/06 11:35:51 sborrill Exp $
 
 DISTNAME=	ncdu-1.10
 CATEGORIES=	filesystems
@@ -10,6 +10,7 @@ HOMEPAGE=	http://dev.yorhel.nl/ncdu
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
+INCOMPAT_CURSES=	NetBSD-[0-5]*-*
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
