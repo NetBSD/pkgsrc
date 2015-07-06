@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2928 2015/07/06 10:41:20 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2929 2015/07/06 11:50:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5560,3 +5560,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/pinentry to 0.9.5 [wiz 2015-07-06]
 	Updated security/gnupg21 to 2.1.6nb1 [wiz 2015-07-06]
 	Removed security/libassuan22 successor security/libassuan2 [wiz 2015-07-06]
+	Updated www/geeklog to 2.1.0nb1 [taca 2015-07-06]
