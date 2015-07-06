@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2924 2015/07/06 04:34:31 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2925 2015/07/06 09:40:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added meta-pkgs/ruby-redmine-themes version 1.0.0 [rodent 2015-07-06]
 	Added devel/ruby-redmine-red-andy-theme version 1.00 [rodent 2015-07-06]
 	Updated meta-pkgs/ruby-redmine-themes to 1.1.0 [rodent 2015-07-06]
+	Updated www/squid3 to 3.5.6 [adam 2015-07-06]
