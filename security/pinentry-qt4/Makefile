@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/05/28 06:42:08 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/07/06 10:31:17 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/pinentry-/pinentry-qt4-/}
 COMMENT=		Applications for entering PINs or Passphrases, qt4 enabled
@@ -6,14 +6,11 @@ COMMENT=		Applications for entering PINs or Passphrases, qt4 enabled
 .include		"../../security/pinentry/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-pinentry-qt4
-CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
-CONFIGURE_ARGS+=	--with-qt-includes=${BUILDLINK_PREFIX.qt4-libs}/qt4/include
-CONFIGURE_ARGS+=	--with-qt-libraries=${BUILDLINK_PREFIX.qt4-libs}/qt4/lib
 CONFIGURE_ARGS+=	--disable-pinentry-curses
+CONFIGURE_ARGS+=	--disable-pinentry-emacs
 #CONFIGURE_ARGS+=	--disable-fallback-curses
-CONFIGURE_ARGS+=	--disable-pinentry-gtk
+CONFIGURE_ARGS+=	--disable-pinentry-gnome3
 CONFIGURE_ARGS+=	--disable-pinentry-gtk2
-CONFIGURE_ARGS+=	--disable-pinentry-qt
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config gmake
