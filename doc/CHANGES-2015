@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2922 2015/07/06 04:20:06 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2923 2015/07/06 04:31:36 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5553,3 +5553,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/ruby-redmine_work_time version 0.3.0 [rodent 2015-07-06]
 	Added meta-pkgs/ruby-redmine-plugins version 1.0.0 [rodent 2015-07-06]
 	Added meta-pkgs/ruby-redmine-themes version 1.0.0 [rodent 2015-07-06]
+	Added devel/ruby-redmine-red-andy-theme version 1.00 [rodent 2015-07-06]
