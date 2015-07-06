@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.558 2015/07/04 05:27:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.559 2015/07/06 10:37:27 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -127,7 +127,6 @@ SUBDIR+=	kwalletmanager
 SUBDIR+=	lasso
 SUBDIR+=	libassuan
 SUBDIR+=	libassuan2
-SUBDIR+=	libassuan22
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libcurvecpr
