@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2015/07/06 04:15:33 rodent Exp $
+#
+# used by devel/ruby-redmine-gitmike-theme
+# used by devel/ruby-redmine-minimalflat-theme
+
+CATEGORIES=	devel
+
+.include "../../lang/ruby/rubyversion.mk"
+
+DEPENDS+=	${RUBY_PKGPREFIX}-redmine-[0-9]*:../../devel/ruby-redmine
+
+USE_LANGUAGES=	# none
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+REDMINE_THEMEDIR=	share/${RUBY_PKGPREFIX}-redmine/app/public/themes

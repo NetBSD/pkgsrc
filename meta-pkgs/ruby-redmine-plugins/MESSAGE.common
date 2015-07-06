@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.common,v 1.1 2015/07/06 04:15:33 rodent Exp $
+
+0) Stop Redmine (if started). Like a good SysOp, you have scheduled
+   downtime with your team already;
+
+1) Migrate the plugin(s):
+     # redmine_migrate_plugins${RUBY_SUFFIX}.sh
+
+2) Start Redmine;
