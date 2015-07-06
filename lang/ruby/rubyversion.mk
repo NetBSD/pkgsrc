@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.143 2015/06/23 14:07:36 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.144 2015/07/06 01:15:22 rodent Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -577,6 +577,7 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_SHLIB=${RUBY_SHLIB:Q} \
 			RUBY_SHLIBALIAS=${RUBY_SHLIBALIAS:Q} \
 			RUBY_STATICLIB=${RUBY_STATICLIB:Q} \
+			RUBY_API_VERSION=${RUBY_API_VERSION:Q} \
 			RUBY_ARCH=${RUBY_ARCH:Q} \
 			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",} \
 			RUBY_MAJOR_MINOR=${RUBY_MAJOR_MINOR}
