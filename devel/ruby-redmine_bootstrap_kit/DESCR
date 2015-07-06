@@ -1,0 +1,3 @@
+Redmine plugin which makes developing your own Redmine plugin easy. As Redmine
+does not support asset pipeline, we need to install JQuery plugins as Redmine
+plugins to load them globally.

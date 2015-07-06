@@ -1,0 +1,29 @@
+$NetBSD: distinfo,v 1.1 2015/07/06 04:12:49 rodent Exp $
+
+SHA1 (ruby-redmine_jenkins/1.0.1.tar.gz) = 720ba3d5ab3ac7b19ee0456a10ee04c5604042fd
+RMD160 (ruby-redmine_jenkins/1.0.1.tar.gz) = 7e7381b0a5ea9804fb40f0b84953db5444f8bbe7
+Size (ruby-redmine_jenkins/1.0.1.tar.gz) = 32791 bytes
+SHA1 (ruby-redmine_jenkins/haml-4.0.6.gem) = bb04f72b93b4bde846c549b36647d54cd01fc002
+RMD160 (ruby-redmine_jenkins/haml-4.0.6.gem) = 3317975819834c51508c2f62e2efeaa550293579
+Size (ruby-redmine_jenkins/haml-4.0.6.gem) = 115712 bytes
+SHA1 (ruby-redmine_jenkins/haml-rails-0.9.0.gem) = 8db704ee2064c8480df3d8c634fde1c3689512ce
+RMD160 (ruby-redmine_jenkins/haml-rails-0.9.0.gem) = 9a560fb10fd186d3136633cf07f42cb1622889da
+Size (ruby-redmine_jenkins/haml-rails-0.9.0.gem) = 13312 bytes
+SHA1 (ruby-redmine_jenkins/html2haml-2.0.0.gem) = d4f3c70b06fd5c8b486584b494404a39b6197011
+RMD160 (ruby-redmine_jenkins/html2haml-2.0.0.gem) = c305b7ba1bded0b8692df8936bb8cb1a7f4b11a2
+Size (ruby-redmine_jenkins/html2haml-2.0.0.gem) = 20992 bytes
+SHA1 (ruby-redmine_jenkins/jenkins_api_client-1.3.0.gem) = 9a7b9b7c440141d29653073bc0da47c45f35b27d
+RMD160 (ruby-redmine_jenkins/jenkins_api_client-1.3.0.gem) = 6133a5aaf5555d7f7718cb8272909d30bb9129c0
+Size (ruby-redmine_jenkins/jenkins_api_client-1.3.0.gem) = 705024 bytes
+SHA1 (ruby-redmine_jenkins/mixlib-shellout-2.0.1.gem) = aca33dca9145b3766a7d40e5d3110034e4373ed6
+RMD160 (ruby-redmine_jenkins/mixlib-shellout-2.0.1.gem) = 9d76f073ea0581bad032ced991790018a6eba824
+Size (ruby-redmine_jenkins/mixlib-shellout-2.0.1.gem) = 22016 bytes
+SHA1 (ruby-redmine_jenkins/ruby_parser-3.6.6.gem) = d5da40cbf75ded2e5d883902c7f846dfd50f40d1
+RMD160 (ruby-redmine_jenkins/ruby_parser-3.6.6.gem) = 080106cdff66507006309c9811280b0fd498e9e7
+Size (ruby-redmine_jenkins/ruby_parser-3.6.6.gem) = 250880 bytes
+SHA1 (ruby-redmine_jenkins/sexp_processor-4.5.1.gem) = 89f4866d73fafb62d3791b604e86eb4bb8657281
+RMD160 (ruby-redmine_jenkins/sexp_processor-4.5.1.gem) = dad354432eaef0f0555459d286279a5bf3e0260f
+Size (ruby-redmine_jenkins/sexp_processor-4.5.1.gem) = 38912 bytes
+SHA1 (ruby-redmine_jenkins/terminal-table-1.4.5.gem) = 17f6a889b8bcc91a1242fabc39bac186f8e9542a
+RMD160 (ruby-redmine_jenkins/terminal-table-1.4.5.gem) = 6ee5ffbbb4f5e71bfa5100e706cc42797911f070
+Size (ruby-redmine_jenkins/terminal-table-1.4.5.gem) = 14336 bytes
