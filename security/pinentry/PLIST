@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2015/01/15 20:48:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/07/06 10:31:00 wiz Exp $
 bin/pinentry
 bin/pinentry-curses
+bin/pinentry-emacs
 bin/pinentry-tty
 info/pinentry.info
