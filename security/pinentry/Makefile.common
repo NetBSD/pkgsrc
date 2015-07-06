@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2015/06/07 08:46:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/07/06 10:31:00 wiz Exp $
 # -*- Makefile -*-
 # used by security/pinentry/Makefile
 # used by security/pinentry-gtk2/Makefile
 # used by security/pinentry-qt4/Makefile
 
-PINENTRY_VERSION=	0.9.4
+PINENTRY_VERSION=	0.9.5
 DISTNAME=		pinentry-${PINENTRY_VERSION}
 
 CATEGORIES=		security
@@ -15,7 +15,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 LICENSE=		gnu-gpl-v2
 
-PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
+#PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
 DISTINFO_FILE=		${.CURDIR}/../../security/pinentry/distinfo
 
 GNU_CONFIGURE=		yes
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
 INFO_FILES=		yes
 
+BUILDLINK_API_DEPENDS.libassuan+=       libassuan>=2.1.0
+.include "../../security/libassuan2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
