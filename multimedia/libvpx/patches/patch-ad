@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.17 2015/06/30 09:53:17 ryoon Exp $
+$NetBSD: patch-ad,v 1.18 2015/07/06 09:46:36 martin Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -30,7 +30,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
        enable_feature mips
        ;;
 +    sparc*)
-+      enable_feature fast_unaligned
++      disable_feature fast_unaligned
 +      ;;
    esac
  
