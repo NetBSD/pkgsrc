@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/05/01 08:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/06 20:29:45 gdt Exp $
 
 DISTNAME=	libpciaccess-0.13.4
 CATEGORIES=	sysutils x11
@@ -23,10 +23,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
-
-# Harmless on x86; needed by others because the libpciaccess configure
-# script doesn't know this.
-LIBS.NetBSD+=		-lpci
 
 PKGCONFIG_OVERRIDE+=	pciaccess.pc.in
 
