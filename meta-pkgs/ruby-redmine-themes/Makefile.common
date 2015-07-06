@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2015/07/06 04:15:33 rodent Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/07/06 04:34:16 rodent Exp $
 #
 # used by devel/ruby-redmine-gitmike-theme
 # used by devel/ruby-redmine-minimalflat-theme
+# used by devel/ruby-redmine-red-andy-theme/Makefile
 
 CATEGORIES=	devel
 
