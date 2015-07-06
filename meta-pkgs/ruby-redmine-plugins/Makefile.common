@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 2015/07/06 04:15:33 rodent Exp $
+#
+# used by devel/ruby-redmine_bootstrap_kit
+# used by devel/ruby-redmine_code_review
+# used by devel/ruby-redmine_jenkins
+# used by devel/ruby-redmine_lightbox2
+# used by devel/ruby-redmine_theme_changer
+# used by devel/ruby-redmine_work_time
+
+CATEGORIES=	devel
+
+.include "../../lang/ruby/rubyversion.mk"
+
+DEPENDS+=	${RUBY_PKGPREFIX}-redmine-[0-9]*:../../devel/ruby-redmine
+
+USE_LANGUAGES=	# none
+
+RM_DIR=		share/${RUBY_PKGPREFIX}-redmine
+GEM_HOME=	${RM_DIR}/gems
+PLIST_SUBST+=	GEM_HOME=${GEM_HOME}
+
+REDMINE_PLUGINDIR=	${RM_DIR}/app/plugins
+
+MESSAGE_SRC=	../../meta-pkgs/ruby-redmine-plugins/MESSAGE.common
+MESSAGE_SRC+=	${.CURDIR}/MESSAGE
