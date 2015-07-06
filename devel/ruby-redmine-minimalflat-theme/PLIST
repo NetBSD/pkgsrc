@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/06 04:12:49 rodent Exp $
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/fonts/FontAwesome.otf
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/fonts/fontawesome-webfont.eot
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/fonts/fontawesome-webfont.svg
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/fonts/fontawesome-webfont.ttf
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/fonts/fontawesome-webfont.woff
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/javascripts/theme.js
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/stylesheets/application.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/minimalflat/stylesheets/font-awesome.min.css

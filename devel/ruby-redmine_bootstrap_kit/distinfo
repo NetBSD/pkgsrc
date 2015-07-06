@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/07/06 04:12:49 rodent Exp $
+
+SHA1 (ruby-redmine_bootstrap_kit/0.2.3.tar.gz) = b8ec68a79937bac11f31996aa1cee038dfa2f3df
+RMD160 (ruby-redmine_bootstrap_kit/0.2.3.tar.gz) = 69978c4391be0e6bf850047ef855f0cfd89e5ff7
+Size (ruby-redmine_bootstrap_kit/0.2.3.tar.gz) = 765692 bytes
+SHA1 (ruby-redmine_bootstrap_kit/will_paginate-3.0.7.gem) = 48adba17eb9cc4e9bc7fd11abe20eeb0d6626396
+RMD160 (ruby-redmine_bootstrap_kit/will_paginate-3.0.7.gem) = af99bf0818a31922e05b23e6f5ecc9626dd7d7bd
+Size (ruby-redmine_bootstrap_kit/will_paginate-3.0.7.gem) = 35840 bytes
