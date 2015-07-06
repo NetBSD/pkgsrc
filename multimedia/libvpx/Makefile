@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/07/06 09:46:36 martin Exp $
+# $NetBSD: Makefile,v 1.58 2015/07/06 09:48:24 martin Exp $
 
 DISTNAME=	libvpx-1.4.0
 CATEGORIES=	multimedia
@@ -22,8 +22,6 @@ CONFIGURE_ARGS+=	--enable-pic
 CONFIGURE_ARGS+=	--enable-runtime-cpu-detect
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-unit-tests
-CONFIGURE_ARGS+=	--enable-debug
-CONFIGURE_ARGS+=	--extra-cflags="-g"
 
 .include "../../mk/bsd.prefs.mk"
 
