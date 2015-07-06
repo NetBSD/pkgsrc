@@ -1,4 +1,4 @@
-# $NetBSD: pypi.mk,v 1.1 2015/07/01 00:55:34 rodent Exp $
+# $NetBSD: pypi.mk,v 1.2 2015/07/06 05:03:33 rodent Exp $
 #
 # pypi.python.org master site handling
 #
@@ -37,5 +37,5 @@ PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 .endif
 
 # Makes: https://pypi.python.org/pypi/pyfoo/1.0.0 and saves an HTTP redirect.
-HOMEPAGE?=			https://pypi.python.org/pypi/${_PYPI_PACKAGE_PATH}/${PKGVERSION_NOREV}
+HOMEPAGE?=			https://pypi.python.org/pypi/${_PYPI_PACKAGE_PATH}
 .endif
