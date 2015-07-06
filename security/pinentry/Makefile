@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2015/04/12 14:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/07/06 10:31:00 wiz Exp $
 
 COMMENT=		Applications for entering PINs or Passphrases
 
 CONFIGURE_ARGS+=	--enable-pinentry-tty
+CONFIGURE_ARGS+=        --enable-pinentry-emacs
+CONFIGURE_ARGS+=        --disable-pinentry-qt4
+CONFIGURE_ARGS+=        --disable-pinentry-gnome3
+CONFIGURE_ARGS+=        --disable-pinentry-gtk2
 
 .include		"../../security/pinentry/Makefile.common"
 
@@ -12,9 +16,5 @@ post-install:
 		${LN} -sf pinentry-${PINENTRY_DEFAULT} pinentry
 .endif
 
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
-
-.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
