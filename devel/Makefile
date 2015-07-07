@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2116 2015/07/07 12:15:28 rodent Exp $
+# $NetBSD: Makefile,v 1.2117 2015/07/07 22:21:50 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1905,6 +1905,7 @@ SUBDIR+=	ruby-redmine_bootstrap_kit
 SUBDIR+=	ruby-redmine_code_review
 SUBDIR+=	ruby-redmine_jenkins
 SUBDIR+=	ruby-redmine_lightbox2
+SUBDIR+=	ruby-redmine_startpage
 SUBDIR+=	ruby-redmine_theme_changer
 SUBDIR+=	ruby-redmine_work_time
 SUBDIR+=	ruby-rgl
