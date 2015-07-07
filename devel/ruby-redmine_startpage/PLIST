@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/07 22:20:55 rodent Exp $
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_startpage/app/views/settings/_startpage_settings.html.erb
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_startpage/config/locales/de.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_startpage/config/locales/en.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_startpage/config/locales/es.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_startpage/init.rb
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_startpage/lib/welcome_controller_patch.rb
