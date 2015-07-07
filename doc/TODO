@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14535 2015/07/06 10:35:50 wiz Exp $
+$NetBSD: TODO,v 1.14536 2015/07/07 01:30:10 rodent Exp $
 
 Suggested new packages
 ======================
@@ -982,11 +982,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-pppoe-3.11
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
+	o ruby-actionmailer-4.2.3
+	o ruby-activemodel-4.2.3
+	o ruby-actionpack-4.2.3
+	o ruby-builder-3.2.2
 	o ruby-chef-12.3.0
 	o ruby-chef-zero-4.2.2
 	o ruby-ncurses-1.3.1
+	o ruby-railties-4.2.1
 	o ruby-review-1.4.0 [wip]
 	o ruby-selenium-webdriver-2.46.2
+	o ruby-tzinfo-1.2.2
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o sane-1.0.24
