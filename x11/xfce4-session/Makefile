@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/06/29 16:50:01 youri Exp $
+# $NetBSD: Makefile,v 1.52 2015/07/07 19:55:28 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ DISTNAME=		xfce4-session-4.12.1
 CATEGORIES=		x11
 MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-session/4.12/
 
-HOMEPAGE=	http://docs.xfce.org/xfce/xfce4-session/start
+HOMEPAGE=		http://docs.xfce.org/xfce/xfce4-session/start
 COMMENT=		Xfce session manager
 
 PKGCONFIG_OVERRIDE+=	libxfsm/xfce4-session-2.0.pc.in
@@ -17,6 +17,12 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	ICEAUTH=${TOOLS_PATH.iceauth}
 
 USE_TOOLS+=		iceauth:run
+
+SUBST_CLASSES+=		xflock4
+SUBST_STAGE.xflock4=	pre-build
+SUBST_MESSAGE.xflock4=	Updating path in xflock4
+SUBST_FILES.xflock4=	scripts/xflock4
+SUBST_SED.xflock4=	-e 's,/bin:/usr/bin,${PREFIX}/bin,g'
 
 EGDIR=			${XFCE4_EGBASE}
 PKG_SYSCONFSUBDIR=	xdg
