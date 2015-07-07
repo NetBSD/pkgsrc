@@ -1,4 +1,4 @@
-$NetBSD: patch-Imakefile,v 1.1 2014/11/05 22:41:38 he Exp $
+$NetBSD: patch-Imakefile,v 1.2 2015/07/07 11:42:40 joerg Exp $
 
 - configure for pkgsrc
 - do ratty interpreter fixes (XXX: change to REPLACE_PERL)
@@ -15,7 +15,7 @@ $NetBSD: patch-Imakefile,v 1.1 2014/11/05 22:41:38 he Exp $
  #
  # PERLLIBDIR should be the output from perl -e 'print "@INC[0]\n"'
 -PERLLIBDIR = /usr/lib/perl
-+PERLLIBDIR = @X11BASE@/libexec/titrax
++PERLLIBDIR = @LOCALBASE@/libexec/titrax
  # PERL - where your Perl executable is located (is in sumtitrax)
  PERL = $(NONXBINDIR)/perl
  #
