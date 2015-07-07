@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/07 22:20:55 rodent Exp $
+
+SHA1 (ruby-redmine_startpage/0.0.3.tar.gz) = 4e14c9f483c730fcb640d2673dd36d2e87a6825b
+RMD160 (ruby-redmine_startpage/0.0.3.tar.gz) = e28d6a0760568e9df1ffb0217a4a9bd3f44e5e86
+Size (ruby-redmine_startpage/0.0.3.tar.gz) = 1926 bytes
