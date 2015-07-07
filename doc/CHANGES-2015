@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2930 2015/07/07 12:14:56 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2931 2015/07/07 12:17:00 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5562,3 +5562,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed security/libassuan22 successor security/libassuan2 [wiz 2015-07-06]
 	Updated www/geeklog to 2.1.0nb1 [taca 2015-07-06]
 	Added devel/ruby-redmine-flatly-light-theme version 0.1 [rodent 2015-07-07]
+	Updated meta-pkgs/ruby-redmine-themes to 1.2.0 [rodent 2015-07-07]
