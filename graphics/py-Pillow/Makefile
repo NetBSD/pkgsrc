@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/04/17 15:10:02 adam Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/07 14:29:50 adam Exp $
 
-DISTNAME=	Pillow-2.8.1
+DISTNAME=	Pillow-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/P/Pillow/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://python-pillow.github.io/
