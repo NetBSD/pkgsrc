@@ -1,4 +1,4 @@
-/* $NetBSD: normalise-cc.c,v 1.2 2015/04/19 14:30:07 jperkin Exp $ */
+/* $NetBSD: normalise-cc.c,v 1.3 2015/07/07 15:00:25 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -105,6 +105,10 @@ normalise_cc(struct arglist *args)
 
 	TAILQ_FOREACH_SAFE(arg, args, link, arg2) {
 		if (strcmp(arg->val, "-o") == 0 ||
+		    strcmp(arg->val, "-dylib_file") == 0 ||
+		    strcmp(arg->val, "-dylib_install_name") == 0 ||
+		    strcmp(arg->val, "-install_name") == 0 ||
+		    strcmp(arg->val, "-seg_addr_table_filename") == 0 ||
 		    strcmp(arg->val, "--dynamic-linker") == 0) {
 			if (arg2 == NULL || arg2->val[0] == '-')
 				errx(255, "Missing argument for %s", arg->val);
@@ -121,11 +125,15 @@ normalise_cc(struct arglist *args)
 			if (len == 0)
 				continue;
 			last = next + len;
-			if (strncmp(last, ".so", 3) &&
-			    strncmp(last, ".sl", 3))
+			if (strncmp(last, ".so", 3) == 0 ||
+			    strncmp(last, ".sl", 3) == 0)
+				last += 3;
+			else if (strncmp(last, ".dylib", 6) == 0)
+				last += 6;
+			else
 				continue;
-			if (last[3] &&
-			    (last[3] != '.' || last[4] < '0' || last[4] > '9'))
+			if (last[0] &&
+			    (last[0] != '.' || last[1] < '0' || last[1] > '9'))
 				continue;
 			arg3 = argument_new(xasprintf("-l%*.*s", (int)len,
 			    (int)len, next));
