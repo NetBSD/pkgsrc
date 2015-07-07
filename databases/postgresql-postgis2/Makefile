@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/07/07 15:49:48 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/07 17:26:10 gdt Exp $
 
 DISTNAME=	postgis-2.1.8
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -19,6 +19,9 @@ CONFLICTS=		postgis-[0-9]*
 # 1. File ticket upstream about make->$(MAKE) in doc/html/image_src/Makefile.
 # 2. Update to upstream with fixes for:
 #      http://trac.osgeo.org/postgis/ticket/2909
+# 3. Fix installation use of "install -o root" from pgxs.mk, when postgresql
+#    was built as root and postgis is built/installed as a non-root user.
+#    https://lists.osgeo.org/pipermail/postgis-devel/2015-July/025045.html
 
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
