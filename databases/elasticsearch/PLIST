@@ -1,25 +1,26 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/23 12:42:12 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/07/07 14:11:59 fhajny Exp $
 lib/elasticsearch/antlr-runtime-3.5.jar
+lib/elasticsearch/apache-log4j-extras-1.2.17.jar
 lib/elasticsearch/asm-4.1.jar
 lib/elasticsearch/asm-commons-4.1.jar
 lib/elasticsearch/${PKGNAME}.jar
-lib/elasticsearch/groovy-all-2.3.2.jar
+lib/elasticsearch/groovy-all-2.4.0.jar
 lib/elasticsearch/jna-4.1.0.jar
 lib/elasticsearch/jts-1.13.jar
 lib/elasticsearch/log4j-1.2.17.jar
-lib/elasticsearch/lucene-analyzers-common-4.10.3.jar
-lib/elasticsearch/lucene-core-4.10.3.jar
-lib/elasticsearch/lucene-expressions-4.10.3.jar
-lib/elasticsearch/lucene-grouping-4.10.3.jar
-lib/elasticsearch/lucene-highlighter-4.10.3.jar
-lib/elasticsearch/lucene-join-4.10.3.jar
-lib/elasticsearch/lucene-memory-4.10.3.jar
-lib/elasticsearch/lucene-misc-4.10.3.jar
-lib/elasticsearch/lucene-queries-4.10.3.jar
-lib/elasticsearch/lucene-queryparser-4.10.3.jar
-lib/elasticsearch/lucene-sandbox-4.10.3.jar
-lib/elasticsearch/lucene-spatial-4.10.3.jar
-lib/elasticsearch/lucene-suggest-4.10.3.jar
+lib/elasticsearch/lucene-analyzers-common-4.10.4.jar
+lib/elasticsearch/lucene-core-4.10.4.jar
+lib/elasticsearch/lucene-expressions-4.10.4.jar
+lib/elasticsearch/lucene-grouping-4.10.4.jar
+lib/elasticsearch/lucene-highlighter-4.10.4.jar
+lib/elasticsearch/lucene-join-4.10.4.jar
+lib/elasticsearch/lucene-memory-4.10.4.jar
+lib/elasticsearch/lucene-misc-4.10.4.jar
+lib/elasticsearch/lucene-queries-4.10.4.jar
+lib/elasticsearch/lucene-queryparser-4.10.4.jar
+lib/elasticsearch/lucene-sandbox-4.10.4.jar
+lib/elasticsearch/lucene-spatial-4.10.4.jar
+lib/elasticsearch/lucene-suggest-4.10.4.jar
 ${PLIST.sigar}lib/elasticsearch/sigar/${SIGAR_FILE}
 ${PLIST.sigar}lib/elasticsearch/sigar/sigar-1.6.4.jar
 lib/elasticsearch/spatial4j-0.4.1.jar
@@ -31,4 +32,3 @@ share/elasticsearch/elasticsearch.in.sh
 share/elasticsearch/plugin
 share/examples/elasticsearch/elasticsearch.yml
 share/examples/elasticsearch/logging.yml
-@pkgdir lib/elasticsearch/plugins
