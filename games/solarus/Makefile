@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/07/01 23:06:59 rodent Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/07 11:41:19 joerg Exp $
 
 VERSION=	1.4.2
 DISTNAME=	solarus-${VERSION}-src
@@ -19,6 +19,9 @@ USE_LANGUAGES=	c c++
 
 GCC_REQD+=	4.8
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+pre-install:
+	rm ${WRKSRC}/include/solarus/EntityData.h.orig
 
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
