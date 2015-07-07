@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2929 2015/07/06 11:50:22 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2930 2015/07/07 12:14:56 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5561,3 +5561,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnupg21 to 2.1.6nb1 [wiz 2015-07-06]
 	Removed security/libassuan22 successor security/libassuan2 [wiz 2015-07-06]
 	Updated www/geeklog to 2.1.0nb1 [taca 2015-07-06]
+	Added devel/ruby-redmine-flatly-light-theme version 0.1 [rodent 2015-07-07]
