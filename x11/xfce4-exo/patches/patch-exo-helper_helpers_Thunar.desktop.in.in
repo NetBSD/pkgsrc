@@ -1,0 +1,14 @@
+$NetBSD: patch-exo-helper_helpers_Thunar.desktop.in.in,v 1.1 2015/07/07 15:03:13 youri Exp $
+
+Use thunar, not Thunar.
+--- exo-helper/helpers/Thunar.desktop.in.in.orig	2015-05-25 18:04:45.000000000 +0000
++++ exo-helper/helpers/Thunar.desktop.in.in
+@@ -5,7 +5,7 @@ Icon=Thunar
+ Type=X-XFCE-Helper
+ _Name=Thunar
+ StartupNotify=true
+-X-XFCE-Binaries=Thunar;
++X-XFCE-Binaries=thunar;
+ X-XFCE-Category=FileManager
+ X-XFCE-Commands=%B;
+ X-XFCE-CommandsWithParameter=%B "%s";
