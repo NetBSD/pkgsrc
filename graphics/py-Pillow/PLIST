@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2014/11/30 10:11:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/07/07 14:29:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/PIL/BdfFontFile.py
@@ -269,3 +270,6 @@ ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
 ${PYSITELIB}/PIL/_webp.so
+${PYSITELIB}/PIL/features.py
+${PYSITELIB}/PIL/features.pyc
+${PYSITELIB}/PIL/features.pyo
