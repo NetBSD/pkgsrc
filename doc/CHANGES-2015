@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2935 2015/07/07 16:19:37 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.2936 2015/07/07 22:21:06 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5568,3 +5568,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/py-Pillow to 2.9.0 [adam 2015-07-07]
 	Updated pkgtools/cwrappers to 20150707 [jperkin 2015-07-07]
 	Updated databases/postgresql-postgis2 to 2.1.8 [gdt 2015-07-07]
+	Added devel/ruby-redmine_startpage version 0.0.3 [rodent 2015-07-07]
