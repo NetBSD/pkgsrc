@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/04/29 14:23:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/07 15:00:25 jperkin Exp $
 
-PKGNAME=		cwrappers-20150318
+PKGNAME=		cwrappers-20150707
 CATEGORIES=		pkgtools sysutils
 
 MAINTAINER=		joerg@NetBSD.org
@@ -22,7 +22,7 @@ MAKE_ENV+=	NEED_MI_VECTOR_HASH=1
 .endif
 
 CFLAGS.FreeBSD+=	-D_WITH_GETLINE
-CFLAGS.Linux+=	-D_GNU_SOURCE=1
+CFLAGS.Linux+=		-D_GNU_SOURCE=1
 
 do-extract:
 	${CP} -R ${FILESDIR}/bin ${WRKSRC}
