@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2938 2015/07/07 22:27:45 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2939 2015/07/08 06:41:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5572,3 +5572,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/ruby-redmine-plugins to 1.1.0 [rodent 2015-07-07]
 	Updated net/bind99 to 9.9.7pl1 [taca 2015-07-07]
 	Updated net/bind910 to 9.10.2pl2 [taca 2015-07-07]
+	Updated net/p5-Net-DNS to 1.01 [wiz 2015-07-08]
