@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/06/05 01:32:38 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/07/08 21:23:43 wiedi Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -50,10 +50,12 @@ share/nano/cmake.nanorc
 share/nano/css.nanorc
 share/nano/debian.nanorc
 share/nano/default.nanorc
+share/nano/elisp.nanorc
 share/nano/fortran.nanorc
 share/nano/gentoo.nanorc
 share/nano/go.nanorc
 share/nano/groff.nanorc
+share/nano/guile.nanorc
 share/nano/html.nanorc
 share/nano/java.nanorc
 share/nano/javascript.nanorc
@@ -70,6 +72,7 @@ share/nano/patch.nanorc
 share/nano/perl.nanorc
 share/nano/php.nanorc
 share/nano/po.nanorc
+share/nano/postgresql.nanorc
 share/nano/pov.nanorc
 share/nano/python.nanorc
 share/nano/ruby.nanorc
