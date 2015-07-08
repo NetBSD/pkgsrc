@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2015/06/12 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.44.2.1 2015/07/08 20:25:04 tron Exp $
 
 DISTNAME=	latex2html-2008
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
 
