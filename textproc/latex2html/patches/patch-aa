@@ -1,10 +1,38 @@
-$NetBSD: patch-aa,v 1.1 2005/10/09 20:02:29 rillig Exp $
+$NetBSD: patch-aa,v 1.1.82.1 2015/07/08 20:25:05 tron Exp $
 
 Some typos in the man page.
+Deal Perl 5.22.
 
---- latex2html.pin.orig	Fri Aug 23 07:15:01 2002
-+++ latex2html.pin	Sun Oct  9 21:58:17 2005
-@@ -16875,7 +16875,7 @@ S<[ B<-font_size> I<size> ]>
+--- latex2html.pin.orig	2004-01-08 06:15:01.000000000 +0000
++++ latex2html.pin
+@@ -532,7 +532,7 @@ $CHARSET = $charset || 'iso-8859-1';
+ #
+ # If possible, use icons of the same type as generated images
+ #
+-if ($IMAGE_TYPE && defined %{"icons_$IMAGE_TYPE"}) {
++if ($IMAGE_TYPE && %{"icons_$IMAGE_TYPE"}) {
+     %icons = %{"icons_$IMAGE_TYPE"};
+ }
+ 
+@@ -2112,7 +2112,7 @@ sub convert_iso_latin_chars {
+ 		"\nCould not find translation function for $default_language.\n\n")
+ 	    }
+ 	);
+-	if ($USE_UTF ||(!$NO_UTF &&(defined %unicode_table)&&length(%unicode_table)>2)) {
++	if ($USE_UTF ||(!$NO_UTF && %unicode_table &&length(%unicode_table)>2)) {
+ 	    &convert_to_unicode($_)};
+     }
+     $_ = join('', @case_processed, $_); undef(@case_processed);
+@@ -9117,7 +9117,7 @@ sub real_replace_strange_accents {
+     my ($charset) = "${CHARSET}_character_map_inv";
+     $charset =~ s/-/_/g;
+     # convert upper 8-bit characters
+-    if (defined %$charset &&($CHARSET =~ /8859[_\-]1$/)) {
++    if (%$charset &&($CHARSET =~ /8859[_\-]1$/)) {
+ 	s/([\200-\377])/
+ 	    $tmp = $$charset{'&#'.ord($1).';'};
+ 	    &mark_string($tmp) if ($tmp =~ m!\{!);
+@@ -16884,7 +16884,7 @@ S<[ B<-font_size> I<size> ]>
  S<[ B<->(B<no>)B<tex_defs> ]>
  S<[ B<->(B<no>)B<navigation> ]>
  S<[ B<->(B<no>)B<top_navigation> ]>
@@ -13,7 +41,7 @@ Some typos in the man page.
  S<[ B<->(B<no>)B<auto_navigation> ]>
  S<[ B<->(B<no>)B<index_in_navigation> ]>
  S<[ B<->(B<no>)B<contents_in_navigation> ]>
-@@ -17048,9 +17048,9 @@ Put a navigation panel at the top of eac
+@@ -17057,9 +17057,9 @@ Put a navigation panel at the top of eac
  
  Enables navigation links at the top of each page (default).
  
