@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/08 22:48:02 khorben Exp $
+bin/valabind
+bin/valabind-cc
+man/man1/valabind-cc.1
+man/man1/valabind.1
