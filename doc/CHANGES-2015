@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2944 2015/07/08 15:54:16 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2945 2015/07/08 16:04:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5578,3 +5578,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ImageMagick to 6.9.1.7 [wiz 2015-07-08]
 	Updated devel/exempi to 2.2.2 [wiz 2015-07-08]
 	Updated www/moodle to 2.9.1 [wen 2015-07-08]
+	Updated www/p5-HTTP-Headers-Fast to 0.18 [wen 2015-07-08]
