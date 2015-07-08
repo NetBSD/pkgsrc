@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2015/03/01 11:42:34 wiz Exp $
+$NetBSD: distinfo,v 1.34 2015/07/08 06:41:35 wiz Exp $
 
-SHA1 (Net-DNS-0.83.tar.gz) = 1e0f7a3640125c5d7511324e516620ae25cac99f
-RMD160 (Net-DNS-0.83.tar.gz) = 7c9b84f82f4b39fdbb333f240bb49c5e18ed1df5
-Size (Net-DNS-0.83.tar.gz) = 200932 bytes
-SHA1 (patch-Makefile.PL) = a43bfbe30623b6705416e5074acf4094e3875046
+SHA1 (Net-DNS-1.01.tar.gz) = a4b9c177117397604cf0ee6f10ac80034aff37bc
+RMD160 (Net-DNS-1.01.tar.gz) = 81a87c2ce28a16bff122afc47921827c1d704592
+Size (Net-DNS-1.01.tar.gz) = 239297 bytes
