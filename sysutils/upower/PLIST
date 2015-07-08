@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/21 19:44:55 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/08 10:41:35 richard Exp $
 bin/upower
 include/libupower-glib/up-client.h
 include/libupower-glib/up-device.h
@@ -10,12 +10,11 @@ include/libupower-glib/up-wakeup-item.h
 include/libupower-glib/up-wakeups.h
 include/libupower-glib/upower.h
 lib/libupower-glib.la
-lib/locale/fr/LC_MESSAGES/upower.mo
-lib/locale/it/LC_MESSAGES/upower.mo
-lib/locale/pl/LC_MESSAGES/upower.mo
-lib/locale/sv/LC_MESSAGES/upower.mo
 lib/pkgconfig/upower-glib.pc
 libexec/upowerd
+man/man1/upower.1
+man/man7/UPower.7
+man/man8/upowerd.8
 share/dbus-1/interfaces/org.freedesktop.UPower.Device.xml
 share/dbus-1/interfaces/org.freedesktop.UPower.KbdBacklight.xml
 share/dbus-1/interfaces/org.freedesktop.UPower.Wakeups.xml
@@ -23,3 +22,7 @@ share/dbus-1/interfaces/org.freedesktop.UPower.xml
 share/dbus-1/system-services/org.freedesktop.UPower.service
 share/examples/upower/UPower.conf
 share/examples/upower/org.freedesktop.UPower.conf
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/upower.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/upower.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/upower.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/upower.mo
