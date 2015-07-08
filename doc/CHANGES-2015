@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2939 2015/07/08 06:41:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2940 2015/07/08 10:42:25 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5573,3 +5573,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/bind99 to 9.9.7pl1 [taca 2015-07-07]
 	Updated net/bind910 to 9.10.2pl2 [taca 2015-07-07]
 	Updated net/p5-Net-DNS to 1.01 [wiz 2015-07-08]
+	Updated sysutils/upower to 0.99.3 [richard 2015-07-08]
