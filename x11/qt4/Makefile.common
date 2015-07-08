@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.33 2014/07/22 17:01:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.34 2015/07/08 17:49:49 wiz Exp $
 # used by x11/qt4-libs/Makefile.common
 # used by x11/qt4-tools/Makefile
 
-QTVERSION=	4.8.6
+QTVERSION=	4.8.7
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qt-project.org/
