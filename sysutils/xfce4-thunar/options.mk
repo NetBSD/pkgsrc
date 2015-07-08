@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2015/04/21 08:56:41 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2015/07/08 21:15:21 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xfce4-thunar
 PKG_SUPPORTED_OPTIONS=	gvfs
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=  gvfs
 
 .include "../../mk/bsd.options.mk"
 
