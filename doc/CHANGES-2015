@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2947 2015/07/08 16:47:34 richard Exp $
+$NetBSD: CHANGES-2015,v 1.2948 2015/07/08 17:23:23 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5581,3 +5581,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Headers-Fast to 0.18 [wen 2015-07-08]
 	Updated www/p5-Plack to 1.0037 [wen 2015-07-08]
 	Updated net/filezilla to 3.12.0 [richard 2015-07-08]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.481 [tsutsui 2015-07-08]
