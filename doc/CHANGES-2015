@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2946 2015/07/08 16:08:33 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2947 2015/07/08 16:47:34 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5580,3 +5580,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/moodle to 2.9.1 [wen 2015-07-08]
 	Updated www/p5-HTTP-Headers-Fast to 0.18 [wen 2015-07-08]
 	Updated www/p5-Plack to 1.0037 [wen 2015-07-08]
+	Updated net/filezilla to 3.12.0 [richard 2015-07-08]
