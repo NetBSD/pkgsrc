@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2942 2015/07/08 11:51:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2943 2015/07/08 11:58:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5576,3 +5576,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/upower to 0.99.3 [richard 2015-07-08]
 	Updated devel/py-virtualenv to 13.1.0 [wiz 2015-07-08]
 	Updated graphics/ImageMagick to 6.9.1.7 [wiz 2015-07-08]
+	Updated devel/exempi to 2.2.2 [wiz 2015-07-08]
