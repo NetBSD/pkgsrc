@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2949 2015/07/08 17:50:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2950 2015/07/08 21:28:19 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/filezilla to 3.12.0 [richard 2015-07-08]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.481 [tsutsui 2015-07-08]
 	Updated x11/qt4 to 4.8.7 [wiz 2015-07-08]
+	Updated editors/nano to 2.4.2 [wiedi 2015-07-08]
