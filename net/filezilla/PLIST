@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/01/18 17:19:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/07/08 16:46:43 richard Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -669,7 +669,6 @@ share/locale/el/LC_MESSAGES/filezilla.mo
 share/locale/es/LC_MESSAGES/filezilla.mo
 share/locale/et/LC_MESSAGES/filezilla.mo
 share/locale/eu/LC_MESSAGES/filezilla.mo
-share/locale/eu_ES/LC_MESSAGES/filezilla.mo
 share/locale/fa_IR/LC_MESSAGES/filezilla.mo
 share/locale/fi_FI/LC_MESSAGES/filezilla.mo
 share/locale/fr/LC_MESSAGES/filezilla.mo
