@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2015/06/04 16:04:04 youri Exp $
+# $NetBSD: Makefile,v 1.43 2015/07/08 21:15:21 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	1.6.10
+PKGREVISION=	1
 DISTNAME=	Thunar-${VERSION}
 PKGNAME=	xfce4-thunar-${VERSION}
 CATEGORIES=	sysutils
@@ -18,6 +19,8 @@ EGDIR=			${XFCE4_EGBASE}/Thunar
 
 MAKE_DIRS+=	${XFCE4_EGBASE} ${PREFIX}/share/xfce4
 CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
+
+.include "options.mk"
 
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
