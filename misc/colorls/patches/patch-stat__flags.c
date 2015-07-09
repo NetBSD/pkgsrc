@@ -1,7 +1,9 @@
-$NetBSD: patch-stat__flags.c,v 1.1 2012/03/01 16:25:16 hans Exp $
+$NetBSD: patch-stat__flags.c,v 1.2 2015/07/09 11:44:09 jperkin Exp $
 
---- stat_flags.c.orig	1996-12-22 00:40:58.000000000 +0100
-+++ stat_flags.c	2012-03-01 15:39:46.769141152 +0100
+Avoid file flags on SunOS.
+
+--- stat_flags.c.orig	1996-12-21 23:40:58.000000000 +0000
++++ stat_flags.c
 @@ -43,6 +43,8 @@ static char const sccsid[] = "@(#)stat_f
  #include <stddef.h>
  #include <string.h>

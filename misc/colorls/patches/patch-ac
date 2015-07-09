@@ -1,8 +1,21 @@
-$NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
+$NetBSD: patch-ac,v 1.7 2015/07/09 11:44:09 jperkin Exp $
+
+Use nbcompat.
 
 --- ls.c.orig	1996-12-21 23:40:58.000000000 +0000
 +++ ls.c
-@@ -59,12 +59,26 @@ static char const sccsid[] = "@(#)ls.c	8
+@@ -53,18 +53,37 @@ static char const sccsid[] = "@(#)ls.c	8
+ #include <dirent.h>
+ #include <err.h>
+ #include <errno.h>
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat.h>
++#include <nbcompat/fts.h>
++#else
+ #include <fts.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
  #include <string.h>
  #include <unistd.h>
  #include <locale.h>
@@ -29,7 +42,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  static void	 traverse __P((int, char **, int));
  
  static void (*printfcn) __P((DISPLAY *));
-@@ -76,7 +90,9 @@ int termwidth = 80;		/* default terminal
+@@ -76,7 +95,9 @@ int termwidth = 80;		/* default terminal
  /* flags */
  int f_accesstime;		/* use time of last access */
  int f_column;			/* columnated format */
@@ -39,7 +52,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  int f_inode;			/* print inode */
  int f_kblocks;			/* print size in kilobytes */
  int f_listdir;			/* list actual directory, not contents */
-@@ -94,6 +110,7 @@ int f_statustime;		/* use time of last m
+@@ -94,6 +115,7 @@ int f_statustime;		/* use time of last m
  int f_dirname;			/* if precede with directory name */
  int f_timesort;			/* sort by time vice name */
  int f_type;			/* add type character for non-regular files */
@@ -47,7 +60,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  #ifndef BSD4_4_LITE
  int f_whiteout;			/* show whiteout entries */
  #endif
-@@ -135,9 +152,13 @@ main(argc, argv)
+@@ -135,9 +157,13 @@ main(argc, argv)
  
  	fts_options = FTS_PHYSICAL;
  #ifdef BSD4_4_LITE
@@ -63,7 +76,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  #endif
  		switch (ch) {
  		/*
-@@ -168,6 +189,10 @@ main(argc, argv)
+@@ -168,6 +194,10 @@ main(argc, argv)
  		case 'F':
  			f_type = 1;
  			break;
@@ -74,7 +87,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  		case 'L':
  			fts_options &= ~FTS_PHYSICAL;
  			fts_options |= FTS_LOGICAL;
-@@ -197,9 +222,11 @@ main(argc, argv)
+@@ -197,9 +227,11 @@ main(argc, argv)
  		case 'k':
  			f_kblocks = 1;
  			break;
@@ -86,7 +99,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  		case 'q':
  			f_nonprint = 1;
  			break;
-@@ -228,18 +255,21 @@ main(argc, argv)
+@@ -228,18 +260,21 @@ main(argc, argv)
  	argc -= optind;
  	argv += optind;
  
@@ -110,7 +123,19 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  		fts_options |= FTS_COMFOLLOW;
  
  #ifndef BSD4_4_LITE
-@@ -384,7 +414,8 @@ display(p, list)
+@@ -257,7 +292,11 @@ main(argc, argv)
+ 		if (f_kblocks)
+ 			blocksize = 2;
+ 		else {
++#ifdef __sun
++			blocksize = 512;
++#else
+ 			(void)getbsize(&notused, &blocksize);
++#endif
+ 			blocksize /= 512;
+ 		}
+ 	}
+@@ -384,7 +423,8 @@ display(p, list)
  	u_long btotal, maxblock, maxinode, maxlen, maxnlink;
  	int bcfile, flen, glen, ulen, maxflags, maxgroup, maxuser;
  	int entries, needstats;
@@ -120,7 +145,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  
  	/*
  	 * If list is NULL there are two possibilities: that the parent
-@@ -452,12 +483,14 @@ display(p, list)
+@@ -452,12 +492,14 @@ display(p, list)
  				group = group_from_gid(sp->st_gid, 0);
  				if ((glen = strlen(group)) > maxgroup)
  					maxgroup = glen;
@@ -135,7 +160,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  					flen = 0;
  
  				if ((np = malloc(sizeof(NAMES) +
-@@ -473,10 +506,12 @@ display(p, list)
+@@ -473,10 +515,12 @@ display(p, list)
  				    S_ISBLK(sp->st_mode))
  					bcfile = 1;
  
@@ -148,7 +173,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  				cur->fts_pointer = np;
  			}
  		}
-@@ -500,7 +535,7 @@ display(p, list)
+@@ -500,7 +544,7 @@ display(p, list)
  		d.s_inode = strlen(buf);
  		(void)snprintf(buf, sizeof(buf), "%lu", maxnlink);
  		d.s_nlink = strlen(buf);
@@ -157,7 +182,7 @@ $NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
  		d.s_size = strlen(buf);
  		d.s_user = maxuser;
  	}
-@@ -521,7 +556,11 @@ display(p, list)
+@@ -521,7 +565,11 @@ display(p, list)
   */
  static int
  mastercmp(a, b)

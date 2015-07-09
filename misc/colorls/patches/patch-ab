@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2004/10/13 18:50:13 tv Exp $
+$NetBSD: patch-ab,v 1.8 2015/07/09 11:44:09 jperkin Exp $
 
---- colorls.1.orig	Wed Oct 13 14:49:05 2004
+Manual page fixes.
+
+--- colorls.1.orig	2015-07-09 11:19:52.025462425 +0000
 +++ colorls.1
 @@ -37,14 +37,22 @@
  .\"

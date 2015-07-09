@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2004/10/13 18:50:13 tv Exp $
+$NetBSD: patch-aa,v 1.8 2015/07/09 11:44:09 jperkin Exp $
 
---- Makefile.orig	Fri Sep 23 22:55:51 1994
+Use pkgsrc layout.
+
+--- Makefile.orig	1994-09-24 02:55:51.000000000 +0000
 +++ Makefile
 @@ -3,4 +3,7 @@
  
