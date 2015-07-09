@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2011/09/29 20:46:59 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2015/07/09 10:56:54 jperkin Exp $
+
+Call it bgrep.  Pass pkgsrc variables.
 
 --- Makefile.orig	2006-05-15 21:12:21.000000000 +0000
-+++ Makefile	2007-12-08 23:52:46.000000000 +0000
-@@ -2,21 +1,26 @@
++++ Makefile
+@@ -2,18 +2,18 @@
  
 -PROG=	grep
 +PROG=	bgrep
@@ -31,13 +33,14 @@ $NetBSD: patch-aa,v 1.5 2011/09/29 20:46:59 wiz Exp $
 +	bgrep.1 zebgrep.1	\
 +	bgrep.1 zfbgrep.1
  
- LDADD=  -lz
+-LDADD=  -lz
++LDADD=	-lz ${LIBS}
  
- WARNS=	4
+@@ -21,2 +21,7 @@ WARNS=	4
  
 +PREFIX?=	/usr/local
 +MANDIR=		${PREFIX}/man
 +BINDIR=		${PREFIX}/bin
-+MKCATPAGES=	no
++MKCATPAGES?=	no
 +
  .include <bsd.prog.mk>
