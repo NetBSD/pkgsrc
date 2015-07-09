@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2958 2015/07/09 14:17:41 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2959 2015/07/09 15:17:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/libunistring to 0.9.6 [wiz 2015-07-09]
 	Added www/firefox38 version 38.1.0 [ryoon 2015-07-09]
 	Added www/firefox38-l10n version 38.1.0 [ryoon 2015-07-09]
+	Updated mail/thunderbird to 38.0.1 [ryoon 2015-07-09]
