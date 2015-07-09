@@ -1,33 +1,16 @@
-$NetBSD: patch-ml,v 1.7 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-ml,v 1.8 2015/07/09 15:17:34 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/Makefile.in.orig	2014-07-18 00:05:24.000000000 +0000
+--- mozilla/js/src/Makefile.in.orig	2015-06-08 17:49:55.000000000 +0000
 +++ mozilla/js/src/Makefile.in
-@@ -20,8 +20,6 @@ run_for_side_effects := $(shell echo 'MA
- STATIC_LIBRARY_NAME = js_static
- LIBS		= $(NSPR_LIBS)
+@@ -16,9 +16,6 @@ TOPLEVEL_BUILD := 1
+ 
+ run_for_side_effects := $(shell echo 'MAKE: $(MAKE)')
  
 -DIST_INSTALL = 1
+-NO_EXPAND_LIBS = 1
 -
- ifdef JS_STANDALONE
- SHARED_LIBRARY_LIBS += $(call EXPAND_LIBNAME_PATH,mfbt,$(DEPTH)/mfbt)
- endif
-@@ -226,7 +224,7 @@ endif
- ifdef MOZ_SHARED_ICU
- EXTRA_DSO_LDOPTS += $(MOZ_ICU_LIBS)
- else
--SHARED_LIBRARY_LIBS += $(MOZ_ICU_LIBS)
-+SHARED_LIBRARY_LIBS += $(filter-out -L% -l% -Wl%,$(MOZ_ICU_LIBS))
- endif
- 
- # Prevent floating point errors caused by VC++ optimizations
-@@ -350,7 +348,7 @@ endif
- 
- ifdef HAVE_DTRACE
- $(CURDIR)/javascript-trace.h: $(srcdir)/devtools/javascript-trace.d
--	dtrace -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
-+	dtrace -x nolibs -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
- 	sed -e 's/if _DTRACE_VERSION/ifdef INCLUDE_MOZILLA_DTRACE/' \
- 	    -e '/const/!s/char \*/const char */g' \
- 	    javascript-trace.h.in > javascript-trace.h
+ ifdef JS_HAS_CTYPES
+ ifdef MOZ_NATIVE_FFI
+ LOCAL_INCLUDES = $(MOZ_FFI_CFLAGS)

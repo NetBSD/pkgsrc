@@ -1,9 +1,9 @@
-$NetBSD: patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm,v 1.1 2014/07/27 20:05:00 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm,v 1.2 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/toolkit/components/osfile/modules/osfile_unix_front.jsm.orig	2014-07-18 00:05:52.000000000 +0000
+--- mozilla/toolkit/components/osfile/modules/osfile_unix_front.jsm.orig	2015-06-08 17:49:29.000000000 +0000
 +++ mozilla/toolkit/components/osfile/modules/osfile_unix_front.jsm
-@@ -400,7 +400,7 @@
-        throw_on_negative("statvfs",  UnixFile.statvfs(sourcePath, fileSystemInfoPtr));
+@@ -399,7 +399,7 @@
+        throw_on_negative("statvfs",  (UnixFile.statvfs || UnixFile.statfs)(sourcePath, fileSystemInfoPtr));
  
         let bytes = new Type.uint64_t.implementation(
 -                        fileSystemInfo.f_bsize * fileSystemInfo.f_bavail);

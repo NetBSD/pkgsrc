@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2015/07/01 12:58:35 ryoon Exp $
+# $NetBSD: options.mk,v 1.17 2015/07/09 15:17:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome \
@@ -60,8 +60,8 @@ CONFIGURE_ARGS+=	--disable-pulseaudio
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
 CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/gdata-provider.xpi
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/lightning.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/gdata-provider.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/lightning.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
 .endif

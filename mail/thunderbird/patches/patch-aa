@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
+$NetBSD: patch-aa,v 1.20 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/configure.in.orig	2014-07-18 00:05:11.000000000 +0000
+--- mozilla/configure.in.orig	2015-06-08 17:49:55.000000000 +0000
 +++ mozilla/configure.in
-@@ -962,7 +962,7 @@ MOZ_BZ2_LIBS='$(call EXPAND_LIBNAME_PATH
- MOZ_PNG_CFLAGS="-I$_objdir/dist/include" # needed for freetype compilation
- MOZ_PNG_LIBS='$(call EXPAND_LIBNAME_PATH,mozpng,$(DEPTH)/media/libpng)'
- 
--MOZ_JS_STATIC_LIBS='$(call EXPAND_LIBNAME_PATH,js_static,$(LIBXUL_DIST)/lib)'
-+MOZ_JS_STATIC_LIBS='$(call EXPAND_LIBNAME_PATH,js_static,$(DEPTH)/js/src)'
- MOZ_JS_SHARED_LIBS='$(call EXPAND_LIBNAME_PATH,mozjs,$(LIBXUL_DIST)/lib)'
- MOZ_FIX_LINK_PATHS='-Wl,-rpath-link,$(LIBXUL_DIST)/bin -Wl,-rpath-link,$(prefix)/lib'
- XPCOM_FROZEN_LDOPTS='$(call EXPAND_LIBNAME_PATH,xul mozalloc,$(LIBXUL_DIST)/bin)'
-@@ -1676,7 +1676,13 @@ Linux)
+@@ -1794,7 +1794,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -26,7 +17,7 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1780,7 +1786,7 @@ case "$host" in
+@@ -1898,7 +1904,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -35,7 +26,7 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -1912,7 +1918,6 @@ case "$target" in
+@@ -2022,7 +2028,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -43,7 +34,7 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2522,118 +2527,15 @@ MOZ_CXX11
+@@ -2641,8 +2646,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -51,134 +42,9 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 -dnl Borrowed from glibc configure.in
 +dnl Setup default hidden visibility and wrapped system headers.
  dnl ===============================================================
- if test "$GNU_CC"; then
--  AC_CACHE_CHECK(for visibility(hidden) attribute,
--                 ac_cv_visibility_hidden,
--                 [cat > conftest.c <<EOF
--                  int foo __attribute__ ((visibility ("hidden"))) = 1;
--EOF
--                  ac_cv_visibility_hidden=no
--                  if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
--                    if egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
--                      ac_cv_visibility_hidden=yes
--                    fi
--                  fi
--                  rm -f conftest.[cs]
--                 ])
--  if test "$ac_cv_visibility_hidden" = "yes"; then
--    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
--
--    AC_CACHE_CHECK(for visibility(default) attribute,
--                   ac_cv_visibility_default,
--                   [cat > conftest.c <<EOF
--                    int foo __attribute__ ((visibility ("default"))) = 1;
--EOF
--                    ac_cv_visibility_default=no
--                    if ${CC-cc} -fvisibility=hidden -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
--                      if ! egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
--                        ac_cv_visibility_default=yes
--                      fi
--                    fi
--                    rm -f conftest.[cs]
--                   ])
--    if test "$ac_cv_visibility_default" = "yes"; then
--      AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
--
--      AC_CACHE_CHECK(for visibility pragma support,
--                     ac_cv_visibility_pragma,
--                     [cat > conftest.c <<EOF
--#pragma GCC visibility push(hidden)
--                      int foo_hidden = 1;
--#pragma GCC visibility push(default)
--                      int foo_default = 1;
--EOF
--                      ac_cv_visibility_pragma=no
--                      if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
--                        if egrep '\.(hidden|private_extern).*foo_hidden' conftest.s >/dev/null; then
--                          if ! egrep '\.(hidden|private_extern).*foo_default' conftest.s > /dev/null; then
--                            ac_cv_visibility_pragma=yes
--                          fi
--                        fi
--                      fi
--                      rm -f conftest.[cs]
--                    ])
--      if test "$ac_cv_visibility_pragma" = "yes"; then
--        AC_CACHE_CHECK(For gcc visibility bug with class-level attributes (GCC bug 26905),
--                       ac_cv_have_visibility_class_bug,
--                       [cat > conftest.c <<EOF
--#pragma GCC visibility push(hidden)
--struct __attribute__ ((visibility ("default"))) TestStruct {
--  static void Init();
--};
--__attribute__ ((visibility ("default"))) void TestFunc() {
--  TestStruct::Init();
--}
--EOF
--                       ac_cv_have_visibility_class_bug=no
--                       if ! ${CXX-g++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
--                         ac_cv_have_visibility_class_bug=yes
--                       else
--                         if test `egrep -c '@PLT|\\$stub' conftest.S` = 0; then
--                           ac_cv_have_visibility_class_bug=yes
--                         fi
--                       fi
--                       rm -rf conftest.{c,S}
--                       ])
--
--        AC_CACHE_CHECK(For x86_64 gcc visibility bug with builtins (GCC bug 20297),
--                       ac_cv_have_visibility_builtin_bug,
--                       [cat > conftest.c <<EOF
--#pragma GCC visibility push(hidden)
--#pragma GCC visibility push(default)
--#include <string.h>
--#pragma GCC visibility pop
--
--__attribute__ ((visibility ("default"))) void Func() {
--  char c[[100]];
--  memset(c, 0, sizeof(c));
--}
--EOF
--                       ac_cv_have_visibility_builtin_bug=no
--                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
--                         ac_cv_have_visibility_builtin_bug=yes
--                       else
--                         if test `grep -c "@PLT" conftest.S` = 0; then
--                           ac_cv_visibility_builtin_bug=yes
--                         fi
--                       fi
--                       rm -f conftest.{c,S}
--                       ])
--        if test "$ac_cv_have_visibility_builtin_bug" = "no" -a \
--                "$ac_cv_have_visibility_class_bug" = "no"; then
--          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
--          WRAP_SYSTEM_INCLUDES=1
--          STL_FLAGS='-I$(DIST)/stl_wrappers'
--          WRAP_STL_INCLUDES=1
--        else
--          VISIBILITY_FLAGS='-fvisibility=hidden'
--        fi # have visibility pragma bug
--      fi   # have visibility pragma
--    fi     # have visibility(default) attribute
--  fi       # have visibility(hidden) attribute
-+  AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-+  AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
-+  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
-+  WRAP_SYSTEM_INCLUDES=1
-+  STL_FLAGS='-I$(DIST)/stl_wrappers'
-+  WRAP_STL_INCLUDES=1
- fi         # GNU_CC
- 
- # visibility hidden flag for Sun Studio on Solaris
-@@ -3004,7 +2906,7 @@ dnl Checks for library functions.
- dnl ========================================================
- AC_PROG_GCC_TRADITIONAL
- AC_FUNC_MEMCMP
--AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r)
-+AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r arc4random arc4random_buf)
- 
- dnl check for clock_gettime(), the CLOCK_MONOTONIC clock
- AC_CACHE_CHECK(for clock_gettime(CLOCK_MONOTONIC),
-@@ -3691,6 +3593,14 @@ if test -n "$YASM"; then
+ if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
+   AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+@@ -3663,6 +3667,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -193,7 +59,7 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3718,11 +3628,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3690,11 +3702,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -206,7 +72,7 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4387,6 +4293,10 @@ cairo-gonk)
+@@ -4392,6 +4400,10 @@ cairo-gonk)
  
  esac
  
@@ -217,7 +83,16 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5106,6 +5016,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -4408,7 +4420,7 @@ fi
+ 
+ if test "$COMPILE_ENVIRONMENT"; then
+   if test "$MOZ_ENABLE_GTK3"; then
+-    PKG_CHECK_MODULES(MOZ_GTK3, gtk+-3.0 >= $GTK3_VERSION gtk+-unix-print-3.0 glib-2.0 gobject-2.0 atk-bridge-2.0 $GDK_PACKAGES)
++    PKG_CHECK_MODULES(MOZ_GTK3, gtk+-3.0 >= $GTK3_VERSION gtk+-unix-print-3.0 glib-2.0 gobject-2.0 $GDK_PACKAGES)
+     MOZ_GTK3_CFLAGS="-I${_topsrcdir}/widget/gtk/compat-gtk3 $MOZ_GTK3_CFLAGS"
+     dnl Contrary to MOZ_GTK2_LIBS, MOZ_GTK3_LIBS needs to be literally added to TK_LIBS instead
+     dnl of a make reference because of how TK_LIBS is mangled in toolkit/library/moz.build
+@@ -5149,6 +5161,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -227,7 +102,7 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5190,6 +5106,63 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5252,6 +5267,157 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -250,8 +125,6 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_OGG)
-+AC_SUBST(MOZ_OGG_CFLAGS)
-+AC_SUBST(MOZ_OGG_LIBS)
 +
 +dnl ========================================================
 +dnl Check for libvorbis
@@ -263,12 +136,10 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +MOZ_NATIVE_VORBIS=)
 +
 +if test -n "$MOZ_NATIVE_VORBIS"; then
-+    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.4)
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.5)
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_VORBIS)
-+AC_SUBST(MOZ_VORBIS_CFLAGS)
-+AC_SUBST(MOZ_VORBIS_LIBS)
 +
 +dnl ========================================================
 +dnl Check for integer-only libvorbis aka tremor
@@ -284,17 +155,25 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_TREMOR)
-+AC_SUBST(MOZ_TREMOR_CFLAGS)
-+AC_SUBST(MOZ_TREMOR_LIBS)
 +
 +dnl ========================================================
- dnl = Disable Opus audio codec support
- dnl ========================================================
- MOZ_ARG_DISABLE_BOOL(opus,
-@@ -5198,6 +5171,97 @@ MOZ_ARG_DISABLE_BOOL(opus,
-     MOZ_OPUS=1)
- 
- dnl ========================================================
++dnl Check for libcelt
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-celt,
++[  --with-system-celt      Use system libcelt (located with pkgconfig)],
++MOZ_NATIVE_CELT=1,
++MOZ_NATIVE_CELT=)
++
++if test -n "$MOZ_NATIVE_CELT"; then
++    PKG_CHECK_MODULES(MOZ_CELT, celt)
++else
++    MOZ_CELT_CFLAGS='-I$(topsrcdir)/media/libopus'
++fi
++
++AC_SUBST(MOZ_NATIVE_CELT)
++
++dnl ========================================================
 +dnl Check for libopus
 +dnl ========================================================
 +
@@ -310,8 +189,6 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_OPUS)
-+AC_SUBST(MOZ_OPUS_CFLAGS)
-+AC_SUBST(MOZ_OPUS_LIBS)
 +
 +dnl ========================================================
 +dnl Check for libtheora
@@ -327,8 +204,6 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_THEORA)
-+AC_SUBST(MOZ_THEORA_CFLAGS)
-+AC_SUBST(MOZ_THEORA_LIBS)
 +
 +dnl ========================================================
 +dnl Check for libspeex resampler
@@ -344,8 +219,6 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_SPEEX)
-+AC_SUBST(MOZ_SPEEX_CFLAGS)
-+AC_SUBST(MOZ_SPEEX_LIBS)
 +
 +dnl ========================================================
 +dnl Check for libsoundtouch
@@ -382,14 +255,104 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
-+AC_SUBST(MOZ_SOUNDTOUCH_CFLAGS)
-+AC_SUBST(MOZ_SOUNDTOUCH_LIBS)
 +
 +dnl ========================================================
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5938,7 +6002,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -5606,6 +5772,67 @@ fi
+ AC_SUBST(MOZ_WEBM_ENCODER)
+ 
+ dnl ==================================
++dnl = Check OSS availability
++dnl ==================================
++
++dnl If using Linux, Solaris or BSDs, ensure that OSS is available
++case "$OS_TARGET" in
++Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
++    MOZ_OSS=1
++    ;;
++esac
++
++MOZ_ARG_WITH_STRING(oss,
++[  --with-oss[=PFX]        Enable OpenSoundSystem support [installed at prefix PFX]],
++   OSSPREFIX=$withval)
++
++if test -n "$OSSPREFIX"; then
++    if test "$OSSPREFIX" != "no"; then
++        MOZ_OSS=1
++    else
++        MOZ_OSS=
++    fi
++fi
++
++_SAVE_CFLAGS=$CFLAGS
++_SAVE_LIBS=$LIBS
++if test -n "$MOZ_OSS"; then
++    dnl Prefer 4Front implementation
++    AC_MSG_CHECKING([MOZ_OSS_CFLAGS])
++    if test "$OSSPREFIX" != "yes"; then
++        oss_conf=${OSSPREFIX%/usr}/etc/oss.conf
++        if test -f "$oss_conf"; then
++            . "$oss_conf"
++        else
++            OSSLIBDIR=$OSSPREFIX/lib/oss
++        fi
++        if test -d "$OSSLIBDIR"; then
++            MOZ_OSS_CFLAGS="$MOZ_OSS_CFLAGS -I$OSSLIBDIR/include"
++        fi
++    fi
++    AC_MSG_RESULT([$MOZ_OSS_CFLAGS])
++
++    CFLAGS="$CFLAGS $MOZ_OSS_CFLAGS"
++    MOZ_CHECK_HEADERS(sys/soundcard.h soundcard.h)
++
++    if test "$ac_cv_header_sys_soundcard_h" != "yes" -a \
++            "$ac_cv_header_soundcard_h" != "yes"; then
++        AC_MSG_ERROR([Need OSS for Ogg, Wave or WebM decoding on $OS_TARGET.  Disable with --disable-ogg --disable-wave --disable-webm.])
++    fi
++
++    dnl Assume NetBSD implementation over SunAudio
++    AC_CHECK_LIB(ossaudio, _oss_ioctl,
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
++         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
++fi
++CFLAGS=$_SAVE_CFLAGS
++LIBS=$_SAVE_LIBS
++
++AC_SUBST(MOZ_OSS)
++AC_SUBST_LIST(MOZ_OSS_CFLAGS)
++AC_SUBST_LIST(MOZ_OSS_LIBS)
++
++dnl ==================================
+ dnl = Check alsa availability on Linux
+ dnl ==================================
+ 
+@@ -5619,12 +5846,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+    MOZ_ALSA=1,
+    MOZ_ALSA=)
+ 
++MOZ_ARG_DISABLE_BOOL(alsa-dlopen,
++[  --disable-alsa-dlopen   Disable runtime linking of libasound.so],
++   DISABLE_LIBASOUND_DLOPEN=1,
++   DISABLE_LIBASOUND_DLOPEN=)
++
+ if test -n "$MOZ_ALSA"; then
+     PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for audio output on Linux. (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi
+ 
++if test -n "$DISABLE_LIBASOUND_DLOPEN"; then
++    AC_DEFINE(DISABLE_LIBASOUND_DLOPEN)
++else
++    MOZ_ALSA_LIBS=
++fi
++
+ AC_SUBST(MOZ_ALSA)
+ 
+ dnl ========================================================
+@@ -6046,7 +6284,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -399,8 +362,8 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +        fi
          ;;
      WINNT)
-         if test -z "$MOZ_HAS_WINSDK_WITH_D3D"; then
-@@ -8036,6 +8102,52 @@ if test "$USE_FC_FREETYPE"; then
+         MOZ_GAMEPAD_BACKEND=windows
+@@ -8066,6 +8306,49 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
@@ -413,16 +376,15 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +MOZ_NATIVE_HARFBUZZ=)
 +
 +if test -n "$MOZ_NATIVE_HARFBUZZ"; then
-+    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.25)
++    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.34)
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_HARFBUZZ)
-+AC_SUBST(MOZ_HARFBUZZ_CFLAGS)
-+AC_SUBST(MOZ_HARFBUZZ_LIBS)
 +
 +dnl ========================================================
 +dnl Check for graphite2
 +dnl ========================================================
++
 +MOZ_ARG_WITH_BOOL(system-graphite2,
 +[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
 +MOZ_NATIVE_GRAPHITE2=1,
@@ -446,8 +408,6 @@ $NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_GRAPHITE2)
-+AC_SUBST(MOZ_GRAPHITE2_CFLAGS)
-+AC_SUBST(MOZ_GRAPHITE2_LIBS)
 +
 +dnl ========================================================
  dnl Check for pixman and cairo

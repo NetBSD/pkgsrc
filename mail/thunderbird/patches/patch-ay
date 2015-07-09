@@ -1,6 +1,6 @@
-$NetBSD: patch-ay,v 1.11 2015/01/29 22:22:27 wiz Exp $
+$NetBSD: patch-ay,v 1.12 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/browser/app/nsBrowserApp.cpp.orig	2014-07-18 00:05:06.000000000 +0000
+--- mozilla/browser/app/nsBrowserApp.cpp.orig	2015-06-08 17:49:17.000000000 +0000
 +++ mozilla/browser/app/nsBrowserApp.cpp
 @@ -18,8 +18,10 @@
  #include <unistd.h>
@@ -14,7 +14,7 @@ $NetBSD: patch-ay,v 1.11 2015/01/29 22:22:27 wiz Exp $
  #include "MacQuirks.h"
  #endif
  
-@@ -447,7 +449,7 @@ TimeStamp_Now()
+@@ -459,7 +461,7 @@ TimeStamp_Now()
    }
  
    return sGetTickCount64() * freq.QuadPart;
@@ -23,3 +23,11 @@ $NetBSD: patch-ay,v 1.11 2015/01/29 22:22:27 wiz Exp $
    return mach_absolute_time();
  #elif defined(HAVE_CLOCK_MONOTONIC)
    struct timespec ts;
+@@ -606,6 +608,7 @@ int main(int argc, char* argv[])
+   TriggerQuirks();
+ #endif
+ 
++  setenv("MOZ_PLUGIN_PATH", "%%LOCALBASE%%/lib/browser_plugins/symlinks/gecko", 0);
+   int gotCounters;
+ #if defined(XP_UNIX)
+   struct rusage initialRUsage;
