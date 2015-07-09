@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.5 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.6 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2013-10-23 22:08:54.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2015-06-08 17:49:29.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.cpp
-@@ -203,7 +203,7 @@ PluginModuleChild::Init(const std::strin
+@@ -325,7 +325,7 @@ PluginModuleChild::InitForChrome(const s
  
      // TODO: use PluginPRLibrary here
  
@@ -11,21 +11,21 @@ $NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.5 2013/11/12 20
      mShutdownFunc =
          (NP_PLUGINSHUTDOWN) PR_FindFunctionSymbol(mLibrary, "NP_Shutdown");
  
-@@ -1834,7 +1834,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
-     PLUGIN_LOG_DEBUG_METHOD;
+@@ -1887,7 +1887,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
      AssertPluginThread();
+     MOZ_ASSERT(mIsChrome);
  
 -#if defined(OS_LINUX) || defined(OS_BSD)
 +#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_SOLARIS)
      return true;
  #elif defined(OS_WIN) || defined(OS_MACOSX)
      *_retval = mGetEntryPointsFunc(&mFunctions);
-@@ -1863,7 +1863,7 @@ PluginModuleChild::AnswerNP_Initialize(c
-     SendBackUpXResources(FileDescriptor(xSocketFd));
+@@ -1932,7 +1932,7 @@ PluginModuleChild::DoNP_Initialize(const
  #endif
  
+     NPError result;
 -#if defined(OS_LINUX) || defined(OS_BSD)
 +#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_SOLARIS)
-     *_retval = mInitializeFunc(&sBrowserFuncs, &mFunctions);
-     return true;
+     result = mInitializeFunc(&sBrowserFuncs, &mFunctions);
  #elif defined(OS_WIN) || defined(OS_MACOSX)
+     result = mInitializeFunc(&sBrowserFuncs);
