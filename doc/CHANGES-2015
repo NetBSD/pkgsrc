@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2953 2015/07/09 10:34:17 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.2954 2015/07/09 13:38:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5588,3 +5588,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dhcpcd to 6.9.1 [roy 2015-07-09]
 	Added sysutils/mtx version 1.3.12 [bouyer 2015-07-09]
 	Updated sysutils/amanada-server to 3.3.1nb4 [bouyer 2015-07-09]
+	Updated security/openssl to 1.0.2d [wiz 2015-07-09]
