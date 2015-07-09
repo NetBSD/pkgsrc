@@ -1,16 +1,26 @@
-$NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
+$NetBSD: patch-ae,v 1.5 2015/07/09 11:44:09 jperkin Exp $
+
+Use nbcompat.
 
 --- print.c.orig	1996-12-21 23:40:58.000000000 +0000
 +++ print.c
-@@ -43,6 +43,7 @@ static char const sccsid[] = "@(#)print.
+@@ -43,9 +43,15 @@ static char const sccsid[] = "@(#)print.
  #include <sys/param.h>
  #include <sys/stat.h>
  
 +#include <ctype.h>
  #include <err.h>
  #include <errno.h>
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat.h>
++#include <nbcompat/fts.h>
++#else
  #include <fts.h>
-@@ -64,6 +65,26 @@ static int	printtype __P((u_int));
++#endif
+ #include <grp.h>
+ #include <pwd.h>
+ #include <stdio.h>
+@@ -64,6 +70,26 @@ static int	printtype __P((u_int));
  
  #define	IS_NOPRINT(p)	((p)->fts_number == NO_PRINT)
  
@@ -37,7 +47,7 @@ $NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
  void
  printscol(dp)
  	DISPLAY *dp;
-@@ -97,8 +118,8 @@ printlong(dp)
+@@ -97,15 +123,17 @@ printlong(dp)
  		if (f_inode)
  			(void)printf("%*lu ", dp->s_inode, (u_long)sp->st_ino);
  		if (f_size)
@@ -48,7 +58,16 @@ $NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
  		(void)strmode(sp->st_mode, buf);
  		np = p->fts_pointer;
  		(void)printf("%s %*u %-*s  %-*s  ", buf, dp->s_nlink,
-@@ -114,20 +135,24 @@ printlong(dp)
+ 		    sp->st_nlink, dp->s_user, np->user, dp->s_group,
+ 		    np->group);
++#ifndef __sun
+ 		if (f_flags)
+ 			(void)printf("%-*s ", dp->s_flags, np->flags);
++#endif
+ 		if (S_ISCHR(sp->st_mode) || S_ISBLK(sp->st_mode))
+ 			if (minor(sp->st_rdev) > 255)
+ 				(void)printf("%3d, 0x%08x ",
+@@ -114,20 +142,24 @@ printlong(dp)
  				(void)printf("%3d, %3d ",
  				    major(sp->st_rdev), minor(sp->st_rdev));
  		else if (dp->bcfile)
@@ -77,7 +96,7 @@ $NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
  			printlink(p);
  		(void)putchar('\n');
  	}
-@@ -190,10 +215,22 @@ printcol(dp)
+@@ -190,10 +222,22 @@ printcol(dp)
  			    dp->s_block);
  			if ((base += numrows) >= num)
  				break;
@@ -104,7 +123,7 @@ $NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
  			endcol += colwidth;
  		}
  		(void)putchar('\n');
-@@ -217,11 +254,15 @@ printaname(p, inodefield, sizefield)
+@@ -217,11 +261,15 @@ printaname(p, inodefield, sizefield)
  	if (f_inode)
  		chcnt += printf("%*lu ", (int)inodefield, (u_long)sp->st_ino);
  	if (f_size)
@@ -122,7 +141,7 @@ $NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
  	return (chcnt);
  }
  
-@@ -281,6 +322,96 @@ printtype(mode)
+@@ -281,6 +329,96 @@ printtype(mode)
  	return (0);
  }
  

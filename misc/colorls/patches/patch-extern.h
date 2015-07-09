@@ -1,4 +1,6 @@
-$NetBSD: patch-extern.h,v 1.1 2011/06/14 13:25:57 wiz Exp $
+$NetBSD: patch-extern.h,v 1.2 2015/07/09 11:44:09 jperkin Exp $
+
+Add colors.
 
 --- extern.h.orig	1994-09-24 02:55:52.000000000 +0000
 +++ extern.h
