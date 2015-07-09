@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/07/07 21:51:22 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/09 22:36:47 khorben Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-xorg-xephyr-${XORG_VERSION}
@@ -20,6 +20,9 @@ CONFIGURE_ARGS+=	--disable-xvfb
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/lib/xorg/protocol.txt
 	${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/Xserver.1
+	if [ -f ${DESTDIR}${PREFIX}/share/doc/xorg-server/Xserver-DTrace.xml ]; then \
+		${RM} ${DESTDIR}${PREFIX}/share/doc/xorg-server/Xserver-DTrace.xml; \
+	fi
 
 .include "../../x11/modular-xorg-server/options.mk"
 
