@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.232 2015/07/04 16:18:39 joerg Exp $
+# $NetBSD: Makefile,v 1.233 2015/07/09 16:14:23 taca Exp $
 
-DISTNAME=		openssh-6.6p1
-PKGNAME=		openssh-6.6.1
-PKGREVISION=		7
+DISTNAME=		openssh-6.9p1
+PKGNAME=		openssh-6.9.1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -17,7 +16,7 @@ CONFLICTS+=		openssh+gssapi-[0-9]*
 CONFLICTS+=		lsh>2.0
 
 USE_GCC_RUNTIME=	yes
-USE_TOOLS+=		perl
+USE_TOOLS+=		autoconf perl
 
 CRYPTO=			yes
 
@@ -177,6 +176,9 @@ SUBST_MESSAGE.patch=	More patch a file.
 #
 # type of key "ecdsa" isn't always supported depends on OpenSSL.
 #
+pre-configure:
+	cd ${WRKSRC} && autoconf -i
+
 post-configure:
 	if ${EGREP} -q '^\#define[ 	]+OPENSSL_HAS_ECC' \
 	    ${WRKSRC}/config.h; then \
