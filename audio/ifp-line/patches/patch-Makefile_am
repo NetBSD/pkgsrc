@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile_am,v 1.1 2011/07/03 22:04:51 dholland Exp $
+$NetBSD: patch-Makefile_am,v 1.2 2015/07/09 12:00:14 jperkin Exp $
 
 Avoid confusing make with multiple paths to the same file.
 
---- Makefile.am~	2005-12-10 07:35:04.000000000 +0000
+--- Makefile.am.orig	2005-12-10 07:35:04.000000000 +0000
 +++ Makefile.am
 @@ -5,7 +5,7 @@ EXTRA_DIST = $(man1_MANS) $(pkgdata_DATA
  bin_PROGRAMS = ifp
