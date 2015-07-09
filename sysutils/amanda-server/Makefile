@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.58 2015/03/27 23:45:29 gdt Exp $
+# $NetBSD: Makefile,v 1.59 2015/07/09 10:31:28 bouyer Exp $
 
 PKGNAME=		amanda-server-${AMANDA_VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		Server part of Amanda, a network backup system
 
+DEPENDS+=               mtx-[0-9]*:../../sysutils/mtx
 USE_TOOLS+=		awk:run mail:run
 
-CONFIGURE_ENV+=		MAILER=${TOOLS_PATH.mail}
+CONFIGURE_ENV+=		MAILER=${TOOLS_PATH.mail} MTX=${PREFIX}/sbin/mtx
 CONFIGURE_ARGS+=	--without-client --without-gnuplot
 
 BUILD_DIRS=		device-src server-src changer-src
