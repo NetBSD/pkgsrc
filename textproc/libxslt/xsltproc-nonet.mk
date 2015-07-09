@@ -1,4 +1,4 @@
-# $NetBSD: xsltproc-nonet.mk,v 1.2 2015/07/08 10:34:46 richard Exp $
+# $NetBSD: xsltproc-nonet.mk,v 1.3 2015/07/09 01:56:44 richard Exp $
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
@@ -10,6 +10,6 @@ pre-configure: create-xsltproc-wrapper
 create-xsltproc-wrapper:
 	${PRINTF} "#! ${SH}\\n\
 	${LOCALBASE}/bin/xsltproc --nonet \
-	--path ${XLSTPROC_PATH:U.:O:u:ts::Q} \$$*\\n\
+	--path ${XSLTPROC_PATH:U.:O:u:ts::Q} \$$*\\n\
 	" > ${BUILDLINK_DIR}/bin/xsltproc
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/xsltproc
