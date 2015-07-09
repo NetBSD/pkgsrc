@@ -1,15 +1,15 @@
-$NetBSD: patch-mozilla_mfbt_Poison.cpp,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_mfbt_Poison.cpp,v 1.2 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/mfbt/Poison.cpp.orig	2013-10-23 22:09:13.000000000 +0000
+--- mozilla/mfbt/Poison.cpp.orig	2015-06-08 17:49:26.000000000 +0000
 +++ mozilla/mfbt/Poison.cpp
-@@ -125,7 +125,11 @@ ReleaseRegion(void *region, uintptr_t si
+@@ -129,7 +129,11 @@ ReleaseRegion(void* aRegion, uintptr_t a
  static bool
- ProbeRegion(uintptr_t region, uintptr_t size)
+ ProbeRegion(uintptr_t aRegion, uintptr_t aSize)
  {
 +#if !defined(__sun__)
-   if (madvise(reinterpret_cast<void*>(region), size, MADV_NORMAL)) {
+   if (madvise(reinterpret_cast<void*>(aRegion), aSize, MADV_NORMAL)) {
 +#else
-+  if (posix_madvise(reinterpret_cast<void*>(region), size, MADV_NORMAL)) {
++  if (posix_madvise(reinterpret_cast<void*>(aRegion), aSize, MADV_NORMAL)) {
 +#endif
      return true;
    } else {
