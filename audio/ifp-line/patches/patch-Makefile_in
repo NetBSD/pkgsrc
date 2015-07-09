@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile_in,v 1.1 2011/07/03 22:04:51 dholland Exp $
+$NetBSD: patch-Makefile_in,v 1.2 2015/07/09 12:00:14 jperkin Exp $
 
 Avoid confusing make with multiple paths to the same file.
 
---- Makefile.in~	2005-12-10 08:35:05.000000000 +0000
+--- Makefile.in.orig	2005-12-10 08:35:05.000000000 +0000
 +++ Makefile.in
 @@ -70,7 +70,7 @@ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  PROGRAMS = $(bin_PROGRAMS)
