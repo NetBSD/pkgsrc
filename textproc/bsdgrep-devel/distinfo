@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.13 2011/09/29 20:46:59 wiz Exp $
+$NetBSD: distinfo,v 1.14 2015/07/09 10:56:54 jperkin Exp $
 
 SHA1 (bsdgrep-20071201.tar.gz) = ae5eabcaa6fbf1760023ee6f3d4a596fe1db9039
 RMD160 (bsdgrep-20071201.tar.gz) = 915ac4d8c6a44e56a6bf88454e7cc9ae5dc7f363
 Size (bsdgrep-20071201.tar.gz) = 13161 bytes
-SHA1 (patch-aa) = cd477be4588aed5c09b4fdd920d84fdc27119185
+SHA1 (patch-aa) = df62793f9b86cffc0c7c98efe5fe71b010e26d11
+SHA1 (patch-binary.c) = c762d925ccf2d4f03477a1e546eb7a5aacd54d39
+SHA1 (patch-file.c) = bfa823c4d47f1f3315a4533f4a56d62fa822daf3
+SHA1 (patch-grep.c) = 657a0780e76b9eb6d8b7257fbe81c3ff3f02423b
+SHA1 (patch-grep.h) = e06a5163da09bef733f84817bbd9516394150bc3
+SHA1 (patch-mmfile.c) = bec0d58484b0a1eb3229efaf288745bc65d518e7
+SHA1 (patch-queue.c) = 2398c2821f39c39388e16365a19fa2be652bb626
+SHA1 (patch-util.c) = c204e9ad9e8f3dc99e48626e03f66274de2e2919
