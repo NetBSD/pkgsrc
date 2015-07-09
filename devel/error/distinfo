@@ -1,10 +1,16 @@
-$NetBSD: distinfo,v 1.5 2014/02/09 16:48:42 wiedi Exp $
+$NetBSD: distinfo,v 1.6 2015/07/09 11:56:58 jperkin Exp $
 
 SHA1 (error-0.0.tar.gz) = b791825e6864e9459401d2bc780521a7411f1ce2
 RMD160 (error-0.0.tar.gz) = 8546498a08045c44eb1a5693447954640d2bf9e4
 Size (error-0.0.tar.gz) = 25818 bytes
-SHA1 (patch-Makefile) = 53979fb590663c9b28c9a57bdc69dfd27e878f33
-SHA1 (patch-aa) = 8a5addfb206d969b8cf5d2ff8b1505f28d499f02
-SHA1 (patch-ab) = d07451d05915be0fdc0e941befc292d26807fa8d
-SHA1 (patch-ac) = 4077d23e2a155ff022e767eacdabb0a3eb815415
+SHA1 (patch-Makefile) = ec0605adf1b5968d4ab7ff70dd8f0a9d09041473
+SHA1 (patch-aa) = 79a08a78256211fc509eb7c545ce4a3c580daee3
+SHA1 (patch-ab) = 52084feda3deb718136ae9f1bc3896c72eb36acc
+SHA1 (patch-ac) = 9500ca2702ae57b383676e614fc4253fa3042bbf
+SHA1 (patch-filter.c) = d2c50245539e854aa6094a1324f4a5f607133434
+SHA1 (patch-input.c) = 277c4a7e2d71960c8fc78c350329e63669ead211
+SHA1 (patch-main.c) = a101d954a92cf69ed443b72f772bea8a71f7cc65
 SHA1 (patch-pathnames.h) = 5d88acd43f71b91f41f6c25d17f2576f347563aa
+SHA1 (patch-pi.c) = 404c23b18901fbe2371cc9e2d51bc4f5d321d0e6
+SHA1 (patch-subr.c) = 3277879b10ac912f6d731cf097b4fcd9fd5867b0
+SHA1 (patch-touch.c) = 105e404825e05a564ba7675f6f012dc4958e92a3
