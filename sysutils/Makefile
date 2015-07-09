@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2015/06/11 12:22:56 abs Exp $
+# $NetBSD: Makefile,v 1.636 2015/07/09 10:28:46 bouyer Exp $
 #
 
 COMMENT=	System utilities
@@ -327,6 +327,7 @@ SUBDIR+=	mrsync
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
 SUBDIR+=	mtscan
+SUBDIR+=	mtx
 SUBDIR+=	munin-doc
 SUBDIR+=	munin-node
 SUBDIR+=	munin-server
