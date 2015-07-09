@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.48 2015/05/16 23:37:25 roy Exp $
+# $NetBSD: Makefile,v 1.49 2015/07/09 10:32:25 roy Exp $
 #
 
-DISTNAME=		dhcpcd-6.9.0
+DISTNAME=		dhcpcd-6.9.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
 MASTER_SITES+=		http://cflags.cc/roy/dhcpcd/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
-COMMENT=		RFC2131 compliant DHCP client
+COMMENT=		DHCP / IPv4LL / IPv6RA / DHCPv6 client
 LICENSE=		modified-bsd
 
 USE_LANGUAGES=		c99
