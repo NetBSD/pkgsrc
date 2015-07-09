@@ -1,0 +1,10 @@
+sbin/mtx
+sbin/tapeinfo
+sbin/loaderinfo
+sbin/scsitape
+sbin/scsieject
+man/man1/loaderinfo.1
+man/man1/mtx.1
+man/man1/tapeinfo.1
+man/man1/scsitape.1
+man/man1/scsieject.1
