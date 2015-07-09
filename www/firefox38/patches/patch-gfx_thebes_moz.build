@@ -1,0 +1,17 @@
+$NetBSD: patch-gfx_thebes_moz.build,v 1.1 2015/07/09 14:13:52 ryoon Exp $
+
+--- gfx/thebes/moz.build.orig	2014-11-21 03:37:31.000000000 +0000
++++ gfx/thebes/moz.build
+@@ -276,6 +276,12 @@ CXXFLAGS += CONFIG['TK_CFLAGS']
+ CFLAGS += CONFIG['MOZ_CAIRO_CFLAGS']
+ CFLAGS += CONFIG['TK_CFLAGS']
+ 
++if CONFIG['MOZ_NATIVE_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
++if CONFIG['MOZ_NATIVE_GRAPHITE2']:
++    CXXFLAGS += CONFIG['MOZ_GRAPHITE2_CFLAGS']
++
+ if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('android', 'gonk', 'qt'):
+     CXXFLAGS += CONFIG['CAIRO_FT_CFLAGS']
+ 
