@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/25 06:55:43 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/09 10:56:53 jperkin Exp $
 #
 
 DISTNAME=	bsdgrep-20071201
@@ -13,9 +13,12 @@ LICENSE=	original-bsd
 
 USE_FEATURES+=		cdefs fts_open
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		nroff
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+MAKE_ENV+=	LIBS=${LIBS:Q}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 post-patch:
 	${SED} -e 's|grep|bgrep|g' ${WRKSRC}/grep.1 > ${WRKSRC}/bgrep.1
