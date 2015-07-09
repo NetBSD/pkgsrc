@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/07/08 10:41:35 richard Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/09 01:57:40 richard Exp $
 
 DISTNAME=	upower-0.99.3
 CATEGORIES=	sysutils
@@ -35,7 +35,7 @@ BUILDLINK_TRANSFORM+=	opt:-Wl,--as-needed:-Wl,-zignore
 TEST_TARGET=	check
 
 # with --nonet, xsltproc needs a helping hand finding some dtds
-XLSTPROC_PATH+=	${LOCALBASE}/share/doc/dbus
+XSLTPROC_PATH+=	${LOCALBASE}/share/doc/dbus
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
