@@ -1,0 +1,10 @@
+$NetBSD: patch-mozilla_media_libtremor_moz.build,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+
+--- mozilla/media/libtremor/moz.build.orig	2015-06-08 17:49:23.000000000 +0000
++++ mozilla/media/libtremor/moz.build
+@@ -6,3 +6,5 @@
+ 
+ DIRS += ['include/tremor', 'lib']
+ 
++if CONFIG['MOZ_NATIVE_OGG']:
++    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']

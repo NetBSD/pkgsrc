@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.6 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.7 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2014-07-18 00:05:24.000000000 +0000
+--- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2015-06-08 17:49:21.000000000 +0000
 +++ mozilla/ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -14,9 +14,9 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.6 2014/07/27 20:04:59 ryoo
 +_Pragma("GCC visibility pop")
 +#endif
  
- #if defined(XP_WIN) && defined(MOZ_CONTENT_SANDBOX)
- #include "sandboxBroker.h"
-@@ -548,7 +554,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+ #include "base/command_line.h"
+ #include "base/string_util.h"
+@@ -547,7 +553,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.6 2014/07/27 20:04:59 ryoo
    base::environment_map newEnvVars;
    ChildPrivileges privs = mPrivileges;
    if (privs == base::PRIVILEGES_DEFAULT) {
-@@ -671,7 +677,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -686,7 +692,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -34,7 +34,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.6 2014/07/27 20:04:59 ryoo
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -704,7 +710,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -719,7 +725,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(childProcessType);
  
    base::LaunchApp(childArgv, mFileMap,

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.153 2015/07/01 12:48:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.154 2015/07/09 15:17:34 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
-PKGREVISION=	1
-TB_VER=		31.7.0
+TB_VER=		38.0.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
@@ -13,7 +12,7 @@ HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/comm-esr31
+WRKSRC=		${WRKDIR}/comm-esr38
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
@@ -78,7 +77,7 @@ INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
-	${INSTALL_DATA} ${WRKSRC}/${OBJDIR}/mozilla/dist/thunderbird/chrome/icons/default/default48.png	\
+	${INSTALL_DATA} ${WRKSRC}/${OBJDIR}/dist/thunderbird/chrome/icons/default/default48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 	@${STEP_MSG} "Installing bundled thunderbird extensions."
 	rm -rf ${WRKDIR}/extensions

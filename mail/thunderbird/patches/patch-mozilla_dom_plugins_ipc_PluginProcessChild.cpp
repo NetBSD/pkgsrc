@@ -1,11 +1,11 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginProcessChild.cpp,v 1.1 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginProcessChild.cpp,v 1.2 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginProcessChild.cpp.orig	2014-07-18 00:05:16.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginProcessChild.cpp.orig	2015-06-08 17:49:29.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginProcessChild.cpp
-@@ -42,7 +42,7 @@ namespace plugins {
- bool
- PluginProcessChild::Init()
+@@ -56,7 +56,7 @@ PluginProcessChild::Init()
  {
+     nsDebugImpl::SetMultiprocessMode("NPAPI");
+ 
 -#if defined(XP_MACOSX)
 +#if defined(MOZ_WIDGET_COCOA)
      // Remove the trigger for "dyld interposing" that we added in

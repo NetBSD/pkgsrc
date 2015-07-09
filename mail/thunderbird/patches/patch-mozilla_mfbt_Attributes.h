@@ -1,8 +1,16 @@
-$NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.1 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.2 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/mfbt/Attributes.h.orig	2014-07-18 00:05:43.000000000 +0000
+--- mozilla/mfbt/Attributes.h.orig	2015-06-08 17:49:26.000000000 +0000
 +++ mozilla/mfbt/Attributes.h
-@@ -54,6 +54,9 @@
+@@ -50,6 +50,7 @@
+  * don't indicate support for them here, due to
+  * http://stackoverflow.com/questions/20498142/visual-studio-2013-explicit-keyword-bug
+  */
++#  define MOZ_HAVE_CXX11_ALIGNAS
+ #  define MOZ_HAVE_NEVER_INLINE          __declspec(noinline)
+ #  define MOZ_HAVE_NORETURN              __declspec(noreturn)
+ #  ifdef __clang__
+@@ -70,6 +71,9 @@
  #  ifndef __has_extension
  #    define __has_extension __has_feature /* compatibility, for older versions of clang */
  #  endif
@@ -12,21 +20,13 @@ $NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.1 2014/07/27 20:04:59 ryoon Exp $
  #  if __has_extension(cxx_constexpr)
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #  endif
-@@ -75,6 +78,9 @@
+@@ -84,6 +88,9 @@
  #  endif
  #elif defined(__GNUC__)
  #  if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
 +#    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
 +#      define MOZ_HAVE_CXX11_ALIGNAS
 +#    endif
- #    if MOZ_GCC_VERSION_AT_LEAST(4, 7, 0)
- #      define MOZ_HAVE_CXX11_OVERRIDE
- #      define MOZ_HAVE_CXX11_FINAL       final
-@@ -96,6 +102,7 @@
- #  define MOZ_HAVE_NORETURN              __attribute__((noreturn))
- #elif defined(_MSC_VER)
- #  if _MSC_VER >= 1800
-+#    define MOZ_HAVE_CXX11_ALIGNAS
- #    define MOZ_HAVE_CXX11_DELETE
+ #      define MOZ_HAVE_CXX11_CONSTEXPR
+ #      define MOZ_HAVE_EXPLICIT_CONVERSION
  #  endif
- #  if _MSC_VER >= 1700

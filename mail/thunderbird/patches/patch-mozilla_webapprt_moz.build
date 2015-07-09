@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_webapprt_moz.build,v 1.1 2014/07/27 20:05:00 ryoon Exp $
+$NetBSD: patch-mozilla_webapprt_moz.build,v 1.2 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/webapprt/moz.build.orig	2014-07-18 00:05:56.000000000 +0000
+--- mozilla/webapprt/moz.build.orig	2015-06-08 17:49:33.000000000 +0000
 +++ mozilla/webapprt/moz.build
 @@ -6,7 +6,7 @@
  
@@ -9,12 +9,5 @@ $NetBSD: patch-mozilla_webapprt_moz.build,v 1.1 2014/07/27 20:05:00 ryoon Exp $
 -elif CONFIG['OS_ARCH'] == 'Darwin':
 +elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
      DIRS += ['mac']
- elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gtk2':
-     DIRS += ['gtk2']
-@@ -45,4 +45,4 @@ if CONFIG['MOZILLA_OFFICIAL']:
- DEFINES['GRE_MILESTONE'] = CONFIG['GRE_MILESTONE']
- DEFINES['MOZ_APP_BASENAME'] = CONFIG['MOZ_APP_BASENAME']
- 
--JAR_MANIFESTS += ['jar.mn']
-\ No newline at end of file
-+JAR_MANIFESTS += ['jar.mn']
+ elif CONFIG['MOZ_ENABLE_GTK']:
+     DIRS += ['gtk']
