@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2955 2015/07/09 14:02:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2956 2015/07/09 14:04:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5590,3 +5590,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/amanada-server to 3.3.1nb4 [bouyer 2015-07-09]
 	Updated security/openssl to 1.0.2d [wiz 2015-07-09]
 	Updated devel/libidn to 1.31 [wiz 2015-07-09]
+	Updated textproc/libunistring to 0.9.6 [wiz 2015-07-09]
