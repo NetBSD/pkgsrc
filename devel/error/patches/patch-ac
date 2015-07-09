@@ -1,12 +1,19 @@
-$NetBSD: patch-ac,v 1.2 2005/12/05 20:50:03 rillig Exp $
+$NetBSD: patch-ac,v 1.3 2015/07/09 11:56:59 jperkin Exp $
 
---- strlcpy.c.orig	2005-05-10 16:48:24.000000000 -0400
+Don't redefine _DIAGASSERT.
+
+--- strlcpy.c.orig	2005-05-10 20:48:24.000000000 +0000
 +++ strlcpy.c
-@@ -34,6 +34,7 @@
- #include <string.h>
- size_t
+@@ -23,3 +23,8 @@
+ 
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat.h>
++#include <nbcompat/cdefs.h>
++#else
+ #include <sys/cdefs.h>
++#endif
+ #if defined(LIBC_SCCS) && !defined(lint)
+@@ -36,2 +41,3 @@ size_t
  strlcpy(char *dst, const char *src, size_t siz);
 +#undef _DIAGASSERT
  #define _DIAGASSERT(a)
- 
- #ifdef _LIBC
