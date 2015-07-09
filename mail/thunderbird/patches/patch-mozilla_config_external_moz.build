@@ -1,14 +1,17 @@
-$NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_config_external_moz.build,v 1.2 2015/07/09 15:17:34 ryoon Exp $
 
---- mozilla/config/external/moz.build.orig	2014-07-18 00:05:11.000000000 +0000
+--- mozilla/config/external/moz.build.orig	2015-06-08 17:49:23.000000000 +0000
 +++ mozilla/config/external/moz.build
-@@ -15,13 +15,19 @@ if CONFIG['MOZ_UPDATER']:
-     if not CONFIG['MOZ_NATIVE_BZ2']:
-         external_dirs += ['modules/libbz2']
+@@ -19,10 +19,19 @@ if CONFIG['MOZ_UPDATER']:
+ # There's no "native brotli" yet, but probably in the future...
+ external_dirs += ['modules/brotli']
  
 -if CONFIG['MOZ_VORBIS']:
 +if not CONFIG['MOZ_NATIVE_OGG']:
 +    external_dirs += ['media/libogg']
++
++if not CONFIG['MOZ_NATIVE_CELT'] or not CONFIG['MOZ_NATIVE_OPUS']:
++    external_dirs += ['media/libopus']
 +
 +if not CONFIG['MOZ_NATIVE_THEORA']:
 +    external_dirs += ['media/libtheora']
@@ -20,12 +23,8 @@ $NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2014/07/27 20:04:59 ryoon
 +if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
      external_dirs += ['media/libtremor']
  
--if CONFIG['MOZ_OPUS']:
-+if CONFIG['MOZ_OPUS'] and not CONFIG['MOZ_NATIVE_OPUS']:
-     external_dirs += ['media/libopus']
- 
  if CONFIG['MOZ_WEBM']:
-@@ -36,13 +42,15 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+@@ -37,15 +46,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
  
@@ -39,9 +38,11 @@ $NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2014/07/27 20:04:59 ryoon
      'media/kiss_fft',
      'media/libcubeb',
 -    'media/libogg',
+-    'media/libopus',
 -    'media/libtheora',
 -    'media/libspeex_resampler',
+     'media/libstagefright',
 -    'media/libsoundtouch',
  ]
  
- PARALLEL_DIRS += ['../../' + i for i in external_dirs]
+ DIRS += ['../../' + i for i in external_dirs]
