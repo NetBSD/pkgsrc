@@ -1,4 +1,4 @@
-/* $NetBSD: autocue.c,v 1.3 2007/02/24 12:16:12 agc Exp $ */
+/* $NetBSD: autocue.c,v 1.4 2015/07/09 09:44:18 jperkin Exp $ */
 
 /*
  * Copyright © 2006 Alistair Crooks.  All rights reserved.
@@ -27,12 +27,18 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
+#if defined(HAVE_NBCOMPAT_H)
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#else
 #include <sys/cdefs.h>
+#endif
 
 #ifndef lint
 __COPYRIGHT("@(#) Copyright © 2006 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: autocue.c,v 1.3 2007/02/24 12:16:12 agc Exp $");
+__RCSID("$NetBSD: autocue.c,v 1.4 2015/07/09 09:44:18 jperkin Exp $");
 #endif
 
 #include <err.h>
@@ -143,7 +149,7 @@ main(int argc, char **argv)
 	if ((fp = fopen(argv[optind], "r")) == NULL) {
 		errx(EXIT_FAILURE, "can't open `%s'", argv[optind]);
 	}
-	printf("send this process - %d - a USR1 to make the display go faster, a USR2 to make it go slower\n", getpid());
+	printf("send this process - %ld - a USR1 to make the display go faster, a USR2 to make it go slower\n", (long)getpid());
 	for (cc = 0 ; fgets(line, sizeof(line), fp) != NULL ; ) {
 		if (line[0] == '\n') {
 			showbuffer(buf, cc, maxcut);
