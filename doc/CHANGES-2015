@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2951 2015/07/08 22:50:39 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.2952 2015/07/09 10:32:50 roy Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5585,3 +5585,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qt4 to 4.8.7 [wiz 2015-07-08]
 	Updated editors/nano to 2.4.2 [wiedi 2015-07-08]
 	Added devel/radare2-valabind version 0.9.2 [khorben 2015-07-09]
+	Updated net/dhcpcd to 6.9.1 [roy 2015-07-09]
