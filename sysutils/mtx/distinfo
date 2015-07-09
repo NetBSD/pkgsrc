@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/07/09 10:27:39 bouyer Exp $
+
+SHA1 (mtx-1.3.12.tar.gz) = 9823426934261c9186ed5954f67068e44d3f7cf3
+RMD160 (mtx-1.3.12.tar.gz) = 7c9a762b489c1923e5508225cf8a5da8c53cc50f
+Size (mtx-1.3.12.tar.gz) = 235214 bytes
+SHA1 (patch-Makefile.in) = d503b4af0c3c4681ec8c0b46873715f32ccc3a98
+SHA1 (patch-mtx.h) = 5781cc7f2df760f1329a666ab00c81b6f69dcc3c
+SHA1 (patch-mtxl.c) = f745d030caad76e8d73b88c9d494ae39fadf49db
+SHA1 (patch-scsi_netbsd.c) = 80bdcf3cea4d654b1750401d8b575245a6719b27
