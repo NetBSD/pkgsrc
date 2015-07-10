@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/06/23 09:41:50 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/07/10 06:29:44 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -188,6 +188,7 @@ lib/node_modules/npm/html/doc/api/npm-search.html
 lib/node_modules/npm/html/doc/api/npm-shrinkwrap.html
 lib/node_modules/npm/html/doc/api/npm-start.html
 lib/node_modules/npm/html/doc/api/npm-stop.html
+lib/node_modules/npm/html/doc/api/npm-submodule.html
 lib/node_modules/npm/html/doc/api/npm-tag.html
 lib/node_modules/npm/html/doc/api/npm-test.html
 lib/node_modules/npm/html/doc/api/npm-uninstall.html
@@ -237,6 +238,7 @@ lib/node_modules/npm/html/doc/cli/npm-star.html
 lib/node_modules/npm/html/doc/cli/npm-stars.html
 lib/node_modules/npm/html/doc/cli/npm-start.html
 lib/node_modules/npm/html/doc/cli/npm-stop.html
+lib/node_modules/npm/html/doc/cli/npm-submodule.html
 lib/node_modules/npm/html/doc/cli/npm-tag.html
 lib/node_modules/npm/html/doc/cli/npm-test.html
 lib/node_modules/npm/html/doc/cli/npm-uninstall.html
@@ -298,6 +300,7 @@ lib/node_modules/npm/html/partial/doc/api/npm-search.html
 lib/node_modules/npm/html/partial/doc/api/npm-shrinkwrap.html
 lib/node_modules/npm/html/partial/doc/api/npm-start.html
 lib/node_modules/npm/html/partial/doc/api/npm-stop.html
+lib/node_modules/npm/html/partial/doc/api/npm-submodule.html
 lib/node_modules/npm/html/partial/doc/api/npm-tag.html
 lib/node_modules/npm/html/partial/doc/api/npm-test.html
 lib/node_modules/npm/html/partial/doc/api/npm-uninstall.html
@@ -347,6 +350,7 @@ lib/node_modules/npm/html/partial/doc/cli/npm-star.html
 lib/node_modules/npm/html/partial/doc/cli/npm-stars.html
 lib/node_modules/npm/html/partial/doc/cli/npm-start.html
 lib/node_modules/npm/html/partial/doc/cli/npm-stop.html
+lib/node_modules/npm/html/partial/doc/cli/npm-submodule.html
 lib/node_modules/npm/html/partial/doc/cli/npm-tag.html
 lib/node_modules/npm/html/partial/doc/cli/npm-test.html
 lib/node_modules/npm/html/partial/doc/cli/npm-uninstall.html
@@ -509,6 +513,7 @@ lib/node_modules/npm/man/man1/npm-star.1
 lib/node_modules/npm/man/man1/npm-stars.1
 lib/node_modules/npm/man/man1/npm-start.1
 lib/node_modules/npm/man/man1/npm-stop.1
+lib/node_modules/npm/man/man1/npm-submodule.1
 lib/node_modules/npm/man/man1/npm-tag.1
 lib/node_modules/npm/man/man1/npm-test.1
 lib/node_modules/npm/man/man1/npm-uninstall.1
@@ -548,6 +553,7 @@ lib/node_modules/npm/man/man3/npm-search.3
 lib/node_modules/npm/man/man3/npm-shrinkwrap.3
 lib/node_modules/npm/man/man3/npm-start.3
 lib/node_modules/npm/man/man3/npm-stop.3
+lib/node_modules/npm/man/man3/npm-submodule.3
 lib/node_modules/npm/man/man3/npm-tag.3
 lib/node_modules/npm/man/man3/npm-test.3
 lib/node_modules/npm/man/man3/npm-uninstall.3
@@ -795,7 +801,6 @@ lib/node_modules/npm/node_modules/inherits/inherits.js
 lib/node_modules/npm/node_modules/inherits/inherits_browser.js
 lib/node_modules/npm/node_modules/inherits/package.json
 lib/node_modules/npm/node_modules/inherits/test.js
-lib/node_modules/npm/node_modules/ini/.npmignore
 lib/node_modules/npm/node_modules/ini/LICENSE
 lib/node_modules/npm/node_modules/ini/README.md
 lib/node_modules/npm/node_modules/ini/ini.js
@@ -1072,6 +1077,7 @@ lib/node_modules/npm/node_modules/nopt/bin/nopt.js
 lib/node_modules/npm/node_modules/nopt/examples/my-program.js
 lib/node_modules/npm/node_modules/nopt/lib/nopt.js
 lib/node_modules/npm/node_modules/nopt/package.json
+lib/node_modules/npm/node_modules/normalize-git-url/.eslintrc
 lib/node_modules/npm/node_modules/normalize-git-url/.npmignore
 lib/node_modules/npm/node_modules/normalize-git-url/CHANGELOG.md
 lib/node_modules/npm/node_modules/normalize-git-url/LICENSE
@@ -1209,8 +1215,13 @@ lib/node_modules/npm/node_modules/opener/README.md
 lib/node_modules/npm/node_modules/opener/opener.js
 lib/node_modules/npm/node_modules/opener/package.json
 lib/node_modules/npm/node_modules/osenv/.npmignore
+lib/node_modules/npm/node_modules/osenv/.travis.yml
 lib/node_modules/npm/node_modules/osenv/LICENSE
 lib/node_modules/npm/node_modules/osenv/README.md
+lib/node_modules/npm/node_modules/osenv/node_modules/os-tmpdir/index.js
+lib/node_modules/npm/node_modules/osenv/node_modules/os-tmpdir/license
+lib/node_modules/npm/node_modules/osenv/node_modules/os-tmpdir/package.json
+lib/node_modules/npm/node_modules/osenv/node_modules/os-tmpdir/readme.md
 lib/node_modules/npm/node_modules/osenv/osenv.js
 lib/node_modules/npm/node_modules/osenv/package.json
 lib/node_modules/npm/node_modules/path-is-inside/LICENSE.txt
@@ -1308,6 +1319,7 @@ lib/node_modules/npm/node_modules/realize-package-specifier/LICENSE
 lib/node_modules/npm/node_modules/realize-package-specifier/README.md
 lib/node_modules/npm/node_modules/realize-package-specifier/index.js
 lib/node_modules/npm/node_modules/realize-package-specifier/package.json
+lib/node_modules/npm/node_modules/request/.eslintrc
 lib/node_modules/npm/node_modules/request/.npmignore
 lib/node_modules/npm/node_modules/request/.travis.yml
 lib/node_modules/npm/node_modules/request/CHANGELOG.md
@@ -1331,6 +1343,7 @@ lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/README.md
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/index.js
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/package.json
+lib/node_modules/npm/node_modules/request/node_modules/bl/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/bl/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/bl/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/bl/LICENSE.md
@@ -1387,6 +1400,7 @@ lib/node_modules/npm/node_modules/request/node_modules/forever-agent/package.jso
 lib/node_modules/npm/node_modules/request/node_modules/form-data/License
 lib/node_modules/npm/node_modules/request/node_modules/form-data/Readme.md
 lib/node_modules/npm/node_modules/request/node_modules/form-data/lib/form_data.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/README.md
@@ -1521,6 +1535,7 @@ lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_module
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/jsonpointer.js
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/test.js
+lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/LICENCE
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/Makefile
@@ -1644,6 +1659,7 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modul
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsl.conf
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsstyle
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/package.json
+lib/node_modules/npm/node_modules/request/node_modules/isstream/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/isstream/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/isstream/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/isstream/LICENSE.md
@@ -1689,6 +1705,7 @@ lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/package.json
 lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/test.js
 lib/node_modules/npm/node_modules/request/node_modules/qs/.eslintignore
 lib/node_modules/npm/node_modules/request/node_modules/qs/.jshintignore
+lib/node_modules/npm/node_modules/request/node_modules/qs/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/qs/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/qs/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/qs/CHANGELOG.md
@@ -1725,6 +1742,7 @@ lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/lib/pubsuffi
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/lib/store.js
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/package.json
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/public-suffix.txt
+lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/README.md
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js
