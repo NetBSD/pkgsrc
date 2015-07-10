@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/07 14:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/10 17:32:57 khorben Exp $
 
 .include "../../devel/git/Makefile.version"
 
@@ -17,6 +17,7 @@ SUPERSEDES+=	scmgit-[0-9]*
 META_PACKAGE=	yes
 
 DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
+DEPENDS+=	git-contrib>=${GIT_VERSION}:../../devel/git-contrib
 DEPENDS+=	git-docs>=${GIT_VERSION}:../../devel/git-docs
 DEPENDS+=	git-gitk>=${GIT_VERSION}:../../devel/git-gitk
 
