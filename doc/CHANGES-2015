@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2961 2015/07/09 16:15:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2962 2015/07/10 06:30:09 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/thunderbird to 38.0.1 [ryoon 2015-07-09]
 	Updated mail/thunderbird-l10n to 38.0.1 [ryoon 2015-07-09]
 	Updated security/openssh to 6.9.1 [taca 2015-07-09]
+	Updated lang/nodejs to 0.12.7 [fhajny 2015-07-10]
