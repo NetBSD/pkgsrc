@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2015/07/10 13:46:36 richard Exp $
+
+Not using git, pkgsrc should punt like other distros to get the date
+from the Changelog.  Use awk to avoid all the other business, not to
+mention difficulties with configures use of 'echo -n' on SunOS.
+
+--- configure.orig	2014-09-03 19:30:34.000000000 +0000
++++ configure
+@@ -2268,7 +2268,7 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define NV_DRIVER_DATE $(echo -n \";git log |head -3|tail -1|tr -d '\n';echo -n \")
++#define NV_DRIVER_DATE $(awk '/^Date:/{print "\"" $0 "\"";exit}' ChangeLog)
+ _ACEOF
+ 
+ 
