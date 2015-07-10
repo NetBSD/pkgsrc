@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/10 09:05:06 wiz Exp $
+
+SHA1 (uhttpmock-0.4.0.tar.xz) = 6692e1618f026470dc6ffd250392052232fcab72
+RMD160 (uhttpmock-0.4.0.tar.xz) = 3b0323dc7bbac3a613cd8c80e6fd9738c82006d9
+Size (uhttpmock-0.4.0.tar.xz) = 295392 bytes
