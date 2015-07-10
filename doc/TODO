@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14546 2015/07/09 22:23:54 wiz Exp $
+$NetBSD: TODO,v 1.14547 2015/07/10 17:38:55 khorben Exp $
 
 Suggested new packages
 ======================
@@ -957,7 +957,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
 	o qt5-qtbase-5.5.0
-	o radare2-0.9.9
 	o radiance-4.1
 	o rails-4.1.5
 	o rainbowcrack-1.5
