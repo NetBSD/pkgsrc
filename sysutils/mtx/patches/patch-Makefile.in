@@ -1,3 +1,7 @@
+$NetBSD: patch-Makefile.in,v 1.2 2015/07/10 13:33:41 bouyer Exp $
+
+Fix DESTDIR support
+
 --- Makefile.in.orig	2015-07-08 16:29:12.000000000 +0200
 +++ Makefile.in	2015-07-08 17:04:46.000000000 +0200
 @@ -62,6 +62,10 @@
