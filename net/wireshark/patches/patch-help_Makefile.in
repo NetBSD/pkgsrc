@@ -1,0 +1,15 @@
+$NetBSD: patch-help_Makefile.in,v 1.1 2015/07/10 08:13:42 dsainty Exp $
+
+Not all shells (E.g. pdksh) support '((', whereas '( (' is portable.
+
+--- help/Makefile.in.orig	2015-05-13 08:21:33.000000000 +1200
++++ help/Makefile.in	2015-07-10 18:21:32.144104113 +1200
+@@ -673,7 +673,7 @@
+ # can use it exclusively.
+ faq.txt: $(srcdir)/faq.py
+ 	$(AM_V_GEN)$(srcdir)/faq.py >$@.tmp && \
+-	(( which elinks > /dev/null && elinks -dump -dump-width 72 -no-numbering -no-references < $@.tmp > $@ ) || \
++	( ( which elinks > /dev/null && elinks -dump -dump-width 72 -no-numbering -no-references < $@.tmp > $@ ) || \
+ 	 ( which links  > /dev/null && links -width 72 -html-numbered-links 0 -dump               $@.tmp > $@ ) || \
+ 	 ( which lynx   > /dev/null && lynx -dump -width=72 -nolist -stdin -force-html          < $@.tmp > $@ ) || \
+          $(srcdir)/../tools/html2text.py --width=72 --no-links $@.tmp > $@ ) && \
