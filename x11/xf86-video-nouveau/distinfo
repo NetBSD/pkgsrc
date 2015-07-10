@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 03:37:49 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/07/10 11:38:36 rodent Exp $
 
 SHA1 (xf86-video-nouveau-1.0.11.tar.bz2) = ea94037f8dd05c223dd89c79a2e655ff58425892
 RMD160 (xf86-video-nouveau-1.0.11.tar.bz2) = fb456dd3f9a20f492860040f3b7b70e107d68e61
 Size (xf86-video-nouveau-1.0.11.tar.bz2) = 582436 bytes
+SHA1 (patch-aa) = 70171a9fd194f7f4be86dd849b6c04c454e183a2
