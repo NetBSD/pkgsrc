@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/07/04 14:11:53 rodent Exp $
+# $NetBSD: Makefile,v 1.31 2015/07/10 07:39:51 richard Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
@@ -45,7 +45,9 @@ DEPENDS+=	xf86-input-hyperpen-[0-9]*:../../x11/xf86-input-hyperpen
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
 DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
+.if ${OPSYS} != "SunOS"
 DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
+.endif
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-input-mutouch-[0-9]*:../../x11/xf86-input-mutouch
