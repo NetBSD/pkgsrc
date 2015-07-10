@@ -1,0 +1,5 @@
+xfdashboard provides a GNOME shell dashboard like interface for use with Xfce
+desktop. It can be configured to run to any keyboard shortcut and when executed
+provides an overview of applications currently open enabling the user to switch
+between different applications. The search feature works like Xfce's app finder
+which makes it convenient to search for and start applications.
