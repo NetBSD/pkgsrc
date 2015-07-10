@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2015/07/05 13:17:43 khorben Exp $
+# $NetBSD: Makefile,v 1.758 2015/07/10 17:48:31 youri Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -607,6 +607,7 @@ SUBDIR+=	xf86driproto
 SUBDIR+=	xf86miscproto
 SUBDIR+=	xf86vidmodeproto
 SUBDIR+=	xfce4-clipman-plugin
+SUBDIR+=	xfce4-dashboard
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-eyes-plugin
