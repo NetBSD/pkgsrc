@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2963 2015/07/10 09:05:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2964 2015/07/10 17:30:20 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5598,3 +5598,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/openssh to 6.9.1 [taca 2015-07-09]
 	Updated lang/nodejs to 0.12.7 [fhajny 2015-07-10]
 	Added www/uhttpmock version 0.4.0 [wiz 2015-07-10]
+	Added devel/git-contrib version 2.4.5 [khorben 2015-07-10]
