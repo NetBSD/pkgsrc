@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 03:37:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/10 13:46:36 richard Exp $
 
 DISTNAME=	xf86-video-nouveau-1.0.11
 CATEGORIES=	x11
@@ -10,6 +10,7 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	New (or nouveau) NVidia driver for modular X.org
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES+=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
