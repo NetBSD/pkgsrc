@@ -1,0 +1,14 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2015/07/10 17:48:00 youri Exp $
+
+Adjust config path.
+--- data/Makefile.in.orig	2015-06-11 17:55:53.000000000 +0000
++++ data/Makefile.in
+@@ -429,7 +429,7 @@ SUBDIRS = \
+ desktopdir = $(datadir)/applications
+ desktop_in_files = xfdashboard.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/examples/xfce4/autostart
+ autostart_in_files = xfdashboard-autostart.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ settingsdir = $(datadir)/applications
