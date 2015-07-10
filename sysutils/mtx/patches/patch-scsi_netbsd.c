@@ -1,11 +1,10 @@
+$NetBSD: patch-scsi_netbsd.c,v 1.2 2015/07/10 13:33:41 bouyer Exp $
+
 --- /dev/null	2015-07-08 16:44:57.000000000 +0200
 +++ scsi_netbsd.c	2015-07-08 16:58:09.000000000 +0200
-@@ -0,0 +1,159 @@
+@@ -0,0 +1,156 @@
 +/* Changes 2003 Steve Heck <steve.heck@am.sony.com>
 +   Copyright 2007-2008 by Robert Nelson <robertn@the-nelsons.org>
-+
-+$Date: 2015/07/09 10:27:39 $
-+$Revision: 1.1.1.1 $
 +
 +  This program is free software; you may redistribute and/or modify it under
 +  the terms of the GNU General Public License Version 2 as published by the
