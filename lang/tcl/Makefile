@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2015/06/29 09:49:50 joerg Exp $
+# $NetBSD: Makefile,v 1.80 2015/07/10 18:48:22 dholland Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -49,5 +49,8 @@ SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
 PLIST_SUBST+=		SONUM=${TCL_SONUM}
 PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
 
+CONFIGURE_ARGS+=	--with-system-sqlite
+
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
