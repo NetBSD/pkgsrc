@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2015/06/12 10:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/07/10 17:01:16 dholland Exp $
 #
 
 PKGNAME=	pkgdepgraph-2.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,10 +20,6 @@ NO_CONFIGURE=	yes
 DISTVER=	${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
-USE_TOOLS+=	nroff
-.endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
@@ -48,10 +44,6 @@ do-build:
 		< ${WRKSRC}/${file}.in		\
 		> ${WRKSRC}/${file}
 .endfor
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
-	# the pre-generated man-pages are 'mandoc';  these OS need 'man'
-	nroff -man ${WRKSRC}/pkgdepgraph.1 > ${WRKSRC}/pkgdepgraph.0
-.endif
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${DESTDIR}${PREFIX}/bin/pkgdepgraph
