@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.common,v 1.1 2015/07/11 11:13:28 kamil Exp $
+#
+# used by x11/py-keybinder/Makefile
+# used by x11/lua-keybinder/Makefile
+
+DISTNAME=	keybinder-0.3.0
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
+
+HOMEPAGE=	https://github.com/engla/keybinder
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=		${.CURDIR}/../../x11/keybinder/distinfo
+
+PKGCONFIG_OVERRIDE+=	libkeybinder/keybinder.pc.in
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake
+
+CONFIGURE_ARGS+=	--disable-static
+# Don't rebuild the documentation
+CONFIGURE_ARGS+=	--disable-gtk-doc
