@@ -1,23 +1,104 @@
-$NetBSD: patch-configure,v 1.1 2015/06/05 13:43:20 gdt Exp $
+$NetBSD: patch-configure,v 1.2 2015/07/11 23:44:21 sevan Exp $
 
-NetBSD uses mandoc since netbsd-6.
+Always install man-pages.
 
 --- configure.orig	2014-08-06 14:43:42.000000000 +0000
 +++ configure
-@@ -1970,12 +1970,10 @@ case "$TARGET_SYS" in
- 	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
- 	;;
-     NetBSD)
+@@ -1920,93 +1920,10 @@ fi
+ #	decide whether to install .8 or .0 files.
+ MANXFILE=
+ MAN0AS8='/`expr $$NM : "\(.*\)".0`.8'
+-case "$TARGET_SYS" in
+-    Linux)
+-	# default to /usr/local/man/man8 and use roff files
+-	mancat=man
+-	MANX='$(MAN8)'
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    OpenBSD)
+-	# default to /usr/local/man/cat8 and .0 names
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    HP-UX)
+-	# default to /usr/local/man/cat8 and use cleartext files and
+-	#   .8 names
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	MANXFILE="$MAN8AS8"
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    IRIX*)
+-	# default to /usr/local/man/man8 and use cleartext files and .8 names
+-	mancat=man
+-	MANX='$(MAN0)'
+-	MANXFILE="$MAN8AS8"
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    SunOS)
+-	# default to /usr/local/man/cat8 and use cleartext files,
+-	#   use our installation rule, and .8 names
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	MANXFILE="$MAN8AS8"
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    FreeBSD|DragonFly)
+-	# default to /usr/local/man/man8 and use nroff files, possibly
+-	#   compressed via /usr/share/mk
+-	mancat=man
+-	MANX='$(MAN8)'
+-	USE_DCCMANINSTALL='# USE_DCCMANINSTALL=no'
+-	;;
+-    Darwin)
+-	# default to /usr/local/man/man8 and use nroff files
+-	mancat=man
+-	MANX='$(MAN8)'
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    NetBSD)
 -	# use text output to avoid running groff on every `man` command
 -	mancat=cat
 -	MANX='$(MAN0)'
 -	# force NetBSD to install the man pages
 -	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes\
 -install:maninstall'
-+	# default to /usr/local/man/man8 and use nroff files
-+	mancat=man
-+	MANX='$(MAN8)'
-+	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
- 	;;
-     BSD/OS)
- 	# default to /usr/local/man/cat8 and use cleartext files, possibly
+-	;;
+-    BSD/OS)
+-	# default to /usr/local/man/cat8 and use cleartext files, possibly
+-	#   compressed via /usr/share/mk, and named .0
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	USE_DCCMANINSTALL='# USE_DCCMANINSTALL=no'
+-	;;
+-    AIX)
+-	# default to /usr/local/man/cat8, use our installation rule,
+-	#   and use cleartext files named .8
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	MANXFILE="$MAN8AS8"
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    OpenUNIX)
+-	# default to /usr/local/man/cat8 and use cleartext files named
+-	#   .8
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	MANXFILE="$MAN8AS8"
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-    *)
+-	echo "warning: 	*** Cannot install man pages on unfamiliar systems ***" 1>&2
+-	mancat=fixme
+-	MANX=
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+-	;;
+-esac
++# default to /usr/local/man/man8 and use nroff files
++mancat=man
++MANX='$(MAN8)'
++USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+ if test "$mandir" = '${prefix}/man'; then
+     if test "$DCC_MANDIR"SET != SET; then
+ 	mandir="$DCC_MANDIR"
