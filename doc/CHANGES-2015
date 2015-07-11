@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2971 2015/07/11 09:59:06 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2972 2015/07/11 10:08:57 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5609,3 +5609,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Changes to 0.400002 [wen 2015-07-11]
 	Updated www/p5-CGI-Fast to 2.10 [wen 2015-07-11]
 	Updated textproc/p5-Text-Xslate to 3.3.4 [wen 2015-07-11]
+	Updated mail/sendmail to 8.15.2 [jnemeth 2015-07-11]
