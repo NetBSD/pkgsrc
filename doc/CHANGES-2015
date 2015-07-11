@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2978 2015/07/11 16:42:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2979 2015/07/11 19:29:24 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5618,3 +5618,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/librest07 to 0.7.93 [wiz 2015-07-11]
 	Added net/libgdata0.6 version 0.6.6nb16 [wiz 2015-07-11]
 	Updated net/libgdata to 0.16.1 [wiz 2015-07-11]
+	Updated devel/netbeans-ide to 8.0.2 [asau 2015-07-11]
