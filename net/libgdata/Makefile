@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2015/06/07 14:05:59 youri Exp $
-#
+# $NetBSD: Makefile,v 1.26 2015/07/11 16:42:45 wiz Exp $
 
-DISTNAME=	libgdata-0.6.6
-PKGREVISION=	16
+DISTNAME=	libgdata-0.16.1
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgdata/0.6/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgdata/0.16/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://live.gnome.org/libgdata
@@ -20,23 +18,20 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libgdata.pc.in
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libgdata
-PKG_SUPPORTED_OPTIONS=	gnome
-PKG_SUGGESTED_OPTIONS=	gnome
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-gnome
-.else
+# TODO needs gcr and goa packages
+#.include "options.mk"
 CONFIGURE_ARGS+=	--disable-gnome
-.endif
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.19.7
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsoup+=	libsoup>=2.26.0
 .include "../../net/libsoup/buildlink3.mk"
+.include "../../security/liboauth/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+# only needed for tests, but checked for by configure
+BUILDLINK_DEPMETHOD.uhttpmock?=	build
+.include "../../www/uhttpmock/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
