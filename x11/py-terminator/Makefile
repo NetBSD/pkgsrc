@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/11 11:54:02 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/11 23:19:54 kamil Exp $
 
 DISTNAME=	terminator-0.97
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/terminator
 COMMENT=	Terminator, multiple terminals in one window
 LICENSE=	gnu-gpl-v2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-notify-python, py-keybinder, py-vte
 
 REPLACE_PYTHON+= *.py
 REPLACE_PYTHON+= terminatorlib/*.py
