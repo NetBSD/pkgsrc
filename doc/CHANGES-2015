@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2973 2015/07/11 10:59:22 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.2974 2015/07/11 11:24:40 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5611,3 +5611,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-Xslate to 3.3.4 [wen 2015-07-11]
 	Updated mail/sendmail to 8.15.2 [jnemeth 2015-07-11]
 	Updated mail/sylpheed to 3.4.3 [szptvlfn 2015-07-11]
+	Added x11/keybinder version 0.3.0 [kamil 2015-07-11]
+	Added x11/lua-keybinder version 0.3.0 [kamil 2015-07-11]
+	Added x11/py-keybinder version 0.3.0 [kamil 2015-07-11]
