@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_libedit_configure.ac,v 1.1 2013/10/11 16:21:40 roy Exp $
+$NetBSD: patch-lib_libedit_configure.ac,v 1.2 2015/07/11 04:26:57 rodent Exp $
 
 Include termcap in the termcap test
 
---- lib/libedit/configure.ac.orig	2013-10-11 15:50:21.000000000 +0000
+--- lib/libedit/configure.ac.orig	2012-12-09 22:06:44.000000000 +0000
 +++ lib/libedit/configure.ac
 @@ -33,9 +33,10 @@ AC_PROG_AWK
  EL_MANTYPE

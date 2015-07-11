@@ -1,10 +1,10 @@
-$NetBSD: patch-kdc_version-script.map,v 1.1 2011/07/31 21:21:01 gls Exp $
+$NetBSD: patch-kdc_version-script.map,v 1.2 2015/07/11 04:26:57 rodent Exp $
 
 Adds the symbols _kdc_db_fetch and _kdc_free_ent to global
 visibility, so that they can be referenced from kdc/digest-service.
 Fixes build on Dragonfly. From Alex Hornung in PR pkg/45195.
 
---- kdc/version-script.map.orig	2010-09-13 07:23:34.000000000 +0000
+--- kdc/version-script.map.orig	2012-12-09 22:06:44.000000000 +0000
 +++ kdc/version-script.map
 @@ -2,6 +2,8 @@
  
