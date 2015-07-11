@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2972 2015/07/11 10:08:57 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.2973 2015/07/11 10:59:22 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5610,3 +5610,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI-Fast to 2.10 [wen 2015-07-11]
 	Updated textproc/p5-Text-Xslate to 3.3.4 [wen 2015-07-11]
 	Updated mail/sendmail to 8.15.2 [jnemeth 2015-07-11]
+	Updated mail/sylpheed to 3.4.3 [szptvlfn 2015-07-11]
