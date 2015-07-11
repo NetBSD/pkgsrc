@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_libedit_src_vis.c,v 1.2 2014/09/22 11:55:37 joerg Exp $
+$NetBSD: patch-lib_libedit_src_vis.c,v 1.3 2015/07/11 04:26:57 rodent Exp $
 
 * Fix OpenBSD 5.5 build
 
 --- lib/libedit/src/vis.c.orig	2012-12-09 22:06:44.000000000 +0000
 +++ lib/libedit/src/vis.c
-@@ -67,6 +67,7 @@
+@@ -67,6 +67,7 @@ __RCSID("$NetBSD: vis.c,v 1.41 2009/11/2
  #include <vis.h>
  #include <stdlib.h>
  
