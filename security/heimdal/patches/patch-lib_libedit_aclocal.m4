@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_libedit_aclocal.m4,v 1.1 2013/07/26 12:40:06 ryoon Exp $
+$NetBSD: patch-lib_libedit_aclocal.m4,v 1.2 2015/07/11 04:26:57 rodent Exp $
 
---- lib/libedit/aclocal.m4.orig	2012-01-11 13:03:51.000000000 +0000
+--- lib/libedit/aclocal.m4.orig	2012-12-09 22:09:25.000000000 +0000
 +++ lib/libedit/aclocal.m4
 @@ -1283,7 +1283,7 @@ ia64-*-hpux*)
    rm -rf conftest*
