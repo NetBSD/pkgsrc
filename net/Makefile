@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1076 2015/06/16 16:16:20 abs Exp $
+# $NetBSD: Makefile,v 1.1077 2015/07/11 16:41:59 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -271,6 +271,7 @@ SUBDIR+=	libdnet
 SUBDIR+=	libexosip
 SUBDIR+=	libfetch
 SUBDIR+=	libgdata
+SUBDIR+=	libgdata0.6
 SUBDIR+=	libktorrent
 SUBDIR+=	liblive
 SUBDIR+=	libmms
