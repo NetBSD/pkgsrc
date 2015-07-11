@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/11 16:41:55 wiz Exp $
+
+SHA1 (libgdata-0.6.6.tar.bz2) = 2fe2f02be38662103eca19ae1edd7be56bffbc9e
+RMD160 (libgdata-0.6.6.tar.bz2) = 5d3f8ee7c4897cfe12a634a472a44ce122666fc6
+Size (libgdata-0.6.6.tar.bz2) = 1040702 bytes
