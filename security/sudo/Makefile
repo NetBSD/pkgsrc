@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2015/02/11 09:11:59 spz Exp $
+# $NetBSD: Makefile,v 1.146 2015/07/11 15:12:27 sevan Exp $
 #
 
 DISTNAME=		sudo-1.7.10p9
@@ -51,6 +51,7 @@ SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		bin/sudoreplay ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 511
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+NOT_FOR_UNPRIVILEGED=	yes
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DESTDIR}${PREFIX}/${DOCDIR}
