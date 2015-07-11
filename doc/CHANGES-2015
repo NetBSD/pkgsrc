@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2975 2015/07/11 11:57:08 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.2976 2015/07/11 16:15:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/lua-keybinder version 0.3.0 [kamil 2015-07-11]
 	Added x11/py-keybinder version 0.3.0 [kamil 2015-07-11]
 	Added x11/py-terminator version 0.97 [kamil 2015-07-11]
+	Updated www/librest07 to 0.7.93 [wiz 2015-07-11]
