@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2009/02/14 19:30:33 tonnerre Exp $
+# $NetBSD: options.mk,v 1.18 2015/07/11 15:12:27 sevan Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
@@ -8,6 +8,10 @@ PKG_OPTIONS_GROUP.auth=	kerberos pam skey
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/skey.h)
 PKG_SUGGESTED_OPTIONS=	skey
+.endif
+
+.if ${OPSYS} == "Darwin"
+PKG_SUGGESTED_OPTIONS=	pam
 .endif
 
 .include "../../mk/bsd.options.mk"
