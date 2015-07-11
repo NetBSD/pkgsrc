@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2966 2015/07/10 18:49:23 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.2967 2015/07/11 00:31:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5602,3 +5602,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/git-contrib version 2.4.5 [khorben 2015-07-10]
 	Added x11/xfce4-dashboard version 0.5.0 [youri 2015-07-10]
 	Updated lang/tcl to 8.6.4nb2 [dholland 2015-07-10]
+	Updated lang/php54 to 5.4.43 [taca 2015-07-11]
+	Updated lang/php55 to 5.5.27 [taca 2015-07-11]
+	Updated lang/php56 to 5.6.11 [taca 2015-07-11]
