@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
+$NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
 
 * GNU/kFreeBSD parts: use host of Debian GNU/kFreeBSD 7.0.
 * OpenBSD's vish requires stdlib.h.
@@ -32,7 +32,75 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  	    LD="${LD-ld} -m elf_x86_64_fbsd"
  	    ;;
  	  x86_64-*linux*)
-@@ -12702,7 +12702,11 @@ fi #if test -n "$GCC"; then
+@@ -9567,29 +9567,6 @@ fi
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
+-      ld_shlibs=no
+-      ;;
+-
+-    # FreeBSD 2.2.[012] allows us to include c++rt0.o to get C++ constructor
+-    # support.  Future versions do this automatically, but an explicit c++rt0.o
+-    # does not break anything, and helps significantly (at the cost of a little
+-    # extra space).
+-    freebsd2.2*)
+-      archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags /usr/lib/c++rt0.o'
+-      hardcode_libdir_flag_spec='-R$libdir'
+-      hardcode_direct=yes
+-      hardcode_shlibpath_var=no
+-      ;;
+-
+-    # Unfortunately, older versions of FreeBSD 2 do not have this feature.
+-    freebsd2*)
+-      archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
+-      hardcode_direct=yes
+-      hardcode_minus_L=yes
+-      hardcode_shlibpath_var=no
+-      ;;
+-
+     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+     freebsd* | dragonfly*)
+       archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
+@@ -10561,10 +10538,6 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
+-  dynamic_linker=no
+-  ;;
+-
+ freebsd* | dragonfly*)
+   # DragonFly does not have aout.  When/if they implement a new
+   # versioning mechanism, adjust this.
+@@ -10572,7 +10545,6 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -10590,18 +10562,6 @@ freebsd* | dragonfly*)
+   esac
+   shlibpath_var=LD_LIBRARY_PATH
+   case $host_os in
+-  freebsd2*)
+-    shlibpath_overrides_runpath=yes
+-    ;;
+-  freebsd3.[01]* | freebsdelf3.[01]*)
+-    shlibpath_overrides_runpath=yes
+-    hardcode_into_libs=yes
+-    ;;
+-  freebsd3.[2-9]* | freebsdelf3.[2-9]* | \
+-  freebsd4.[0-5] | freebsdelf4.[0-5] | freebsd4.1.1 | freebsdelf4.1.1)
+-    shlibpath_overrides_runpath=no
+-    hardcode_into_libs=yes
+-    ;;
+   *) # from 4.6 on, and DragonFly
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+@@ -12702,7 +12662,11 @@ fi #if test -n "$GCC"; then
  esac
  
  CC="$CC $abi"
@@ -45,7 +113,16 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for __attribute__" >&5
-@@ -14245,7 +14249,7 @@ case "$host" in
+@@ -14227,7 +14191,7 @@ case "$host" in
+ 	native_pthread_support="netbsd 3 uses explict pthread"
+ 		PTHREAD_LIBADD="-lpthread"
+ 	;;
+-*-*-freebsd[56789]*)
++*-*-freebsd*)
+ 	native_pthread_support=yes
+ 	PTHREAD_LIBADD="-pthread"
+ 	;;
+@@ -14245,7 +14209,7 @@ case "$host" in
  		;;
  	esac
  	;;
@@ -54,7 +131,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  	native_pthread_support=yes
  	PTHREAD_CFLAGS=-pthread
  	PTHREAD_LIBADD=-pthread
-@@ -16057,6 +16061,7 @@ fi
+@@ -16057,6 +16021,7 @@ fi
  for ac_header in vis.h
  do :
    ac_fn_c_check_header_compile "$LINENO" "vis.h" "ac_cv_header_vis_h" "
@@ -62,7 +139,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #ifndef VIS_SP
  #error invis
-@@ -20473,6 +20478,7 @@ else
+@@ -20473,6 +20438,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -70,7 +147,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20510,6 +20516,7 @@ else
+@@ -20510,6 +20476,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -78,7 +155,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20547,6 +20554,7 @@ else
+@@ -20547,6 +20514,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -86,7 +163,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20584,6 +20592,7 @@ else
+@@ -20584,6 +20552,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -94,7 +171,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20621,6 +20630,7 @@ else
+@@ -20621,6 +20590,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -102,7 +179,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20658,6 +20668,7 @@ else
+@@ -20658,6 +20628,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -110,7 +187,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20695,6 +20706,7 @@ else
+@@ -20695,6 +20666,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -118,7 +195,7 @@ $NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20732,6 +20744,7 @@ else
+@@ -20732,6 +20704,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H

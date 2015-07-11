@@ -1,8 +1,8 @@
-$NetBSD: patch-cf_libtool.m4,v 1.1 2013/07/26 12:40:06 ryoon Exp $
+$NetBSD: patch-cf_libtool.m4,v 1.2 2015/07/11 04:26:57 rodent Exp $
 
 * GNU/kFreeBSD parts: use host of Debian GNU/kFreeBSD 7.0.
 
---- cf/libtool.m4.orig	2012-01-11 13:03:55.000000000 +0000
+--- cf/libtool.m4.orig	2012-12-09 22:09:27.000000000 +0000
 +++ cf/libtool.m4
 @@ -1268,7 +1268,7 @@ ia64-*-hpux*)
    rm -rf conftest*

@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.3 2011/07/08 09:49:22 adam Exp $
+$NetBSD: patch-al,v 1.4 2015/07/11 04:26:57 rodent Exp $
 
---- lib/roken/Makefile.in.orig	2010-09-13 07:24:23.000000000 +0000
+--- lib/roken/Makefile.in.orig	2012-12-09 22:09:39.000000000 +0000
 +++ lib/roken/Makefile.in
-@@ -1990,6 +1990,8 @@ $(LTLIBOBJS) $(libroken_la_OBJECTS): rok
+@@ -2046,6 +2046,8 @@ $(LTLIBOBJS) $(libroken_la_OBJECTS): rok
  @CROSS_COMPILE_TRUE@	-c $(top_builddir)/include/config.h  \
  @CROSS_COMPILE_TRUE@	-p $(srcdir)/roken.h.in -o roken.h
  
