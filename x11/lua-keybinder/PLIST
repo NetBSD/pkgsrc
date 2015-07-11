@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/11 11:13:28 kamil Exp $
+lib/lua/5.1/keybinder.la
