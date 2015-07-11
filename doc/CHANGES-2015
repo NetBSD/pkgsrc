@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2968 2015/07/11 09:10:52 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2969 2015/07/11 09:21:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5606,3 +5606,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php55 to 5.5.27 [taca 2015-07-11]
 	Updated lang/php56 to 5.6.11 [taca 2015-07-11]
 	Updated www/p5-Dancer to 1.3140 [wen 2015-07-11]
+	Updated devel/p5-CPAN-Changes to 0.400002 [wen 2015-07-11]
