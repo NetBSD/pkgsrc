@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2015/07/06 09:48:24 martin Exp $
+# $NetBSD: Makefile,v 1.59 2015/07/11 23:40:49 wiz Exp $
 
 DISTNAME=	libvpx-1.4.0
 CATEGORIES=	multimedia
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_PROJECT=	libvpx
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGVERSION=	1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/webm/
