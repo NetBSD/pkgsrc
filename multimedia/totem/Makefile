@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2015/04/25 14:23:41 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.80 2015/07/11 17:15:58 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	31
+PKGREVISION=	32
 
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 
@@ -20,5 +19,5 @@ BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.7
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-.include "../../net/libgdata/buildlink3.mk"
+.include "../../net/libgdata0.6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
