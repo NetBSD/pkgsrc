@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:13 wiz Exp $
 
 DISTNAME=	Git-CPAN-Patch-2.0.4
 PKGNAME=	p5-${DISTNAME}
@@ -32,7 +32,7 @@ DEPENDS+=	p5-MooseX-App-Cmd-[0-9]*:../../devel/p5-MooseX-App-Cmd
 DEPENDS+=	p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
 DEPENDS+=	p5-MooseX-Role-Tempdir-[0-9]*:../../devel/p5-MooseX-Role-Tempdir
 DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
-DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
+#DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww # LWP::UserAgent
 
 # for make test

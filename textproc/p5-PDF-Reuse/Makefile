@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:30 wiz Exp $
 
 DISTNAME=	PDF-Reuse-0.36
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/PDF-Reuse/
 COMMENT=	Reuse and mass produce PDF documents
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]}}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]}}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Text-PDF-[0-9]*:../../textproc/p5-Text-PDF
 DEPENDS+=	p5-Font-TTF-[0-9]*:../../fonts/p5-Font-TTF
 

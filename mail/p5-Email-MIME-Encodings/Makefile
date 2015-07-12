@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=		Email-MIME-Encodings-1.315
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Email-MIME-Encodings/
 COMMENT=		Unified interface to MIME encoding and decoding
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=		{perl>=5.8.6,p5-MIME-Base64>=3.05}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.8.6,p5-MIME-Base64>=3.05}:../../converters/p5-MIME-Base64
 
 PERL5_PACKLIST=		auto/Email/MIME/Encodings/.packlist
 

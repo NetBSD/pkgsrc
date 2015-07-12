@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/06/12 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/07/12 18:56:24 wiz Exp $
 
 DISTNAME=	Mail-IMAPClient-3.33
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Mail-IMAPClient/
 COMMENT=	Perl5 module for talking to RFC-2060 IMAP servers
 LICENSE=	gnu-gpl-v2 # OR artistic
 
-DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Parse-RecDescent>=1.94:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 

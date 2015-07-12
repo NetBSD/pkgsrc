@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2015/06/30 11:02:27 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2015/07/12 18:56:29 wiz Exp $
 
 DISTNAME=	Net-SSLeay-1.70
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	openssl
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 
 # see WRKSRC/inc/Module/Install/PRIVATE/Net/SSLeay.pm
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.3

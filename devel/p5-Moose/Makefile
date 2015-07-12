@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2015/06/12 10:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2015/07/12 18:56:15 wiz Exp $
 
 DISTNAME=	Moose-2.1405
 PKGNAME=	p5-${DISTNAME}
@@ -32,7 +32,7 @@ DEPENDS+=	p5-Sub-Identify>=0:../../devel/p5-Sub-Identify
 DEPENDS+=	p5-Sub-Name>=0.05:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
-DEPENDS+=	{perl>=5.19.5,p5-Scalar-List-Utils>=1.35}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{perl>=5.19.5,p5-Scalar-List-Utils>=1.35}:../../devel/p5-Scalar-List-Utils
 # Note: Moose can take advantage of PartialDump, but as PartialDump depends
 # on Moose, we cannot add it to DEPENDS
 

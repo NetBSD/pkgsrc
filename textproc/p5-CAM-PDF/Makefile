@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/12 18:56:29 wiz Exp $
 #
 
 DISTNAME=	CAM-PDF-1.60
@@ -18,7 +18,7 @@ REPLACE_CSH=	bin/asciify
 
 DEPENDS+=	p5-Crypt-RC4>=2.02:../../security/p5-Crypt-RC4
 DEPENDS+=	p5-Text-PDF>=0.29:../../textproc/p5-Text-PDF
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=2.16}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=2.16}:../../security/p5-Digest-MD5
 
 PERL5_PACKLIST=	auto/CAM/PDF/.packlist
 

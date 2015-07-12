@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:51:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/12 18:56:28 wiz Exp $
 
 DISTNAME=		Crypt-Random-TESHA2-0.01
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=		http://search.cpan.org/dist/Crypt-Random-TESHA2/
 COMMENT=		Random numbers using timer/schedule entropy
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA>=5.22}:../../security/p5-Digest-SHA
-DEPENDS+=		{perl>=5.10.0,p5-Time-HiRes>=1.9711}:../../time/p5-Time-HiRes
+#DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA>=5.22}:../../security/p5-Digest-SHA
+#DEPENDS+=		{perl>=5.10.0,p5-Time-HiRes>=1.9711}:../../time/p5-Time-HiRes
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/Random/TESHA2/.packlist

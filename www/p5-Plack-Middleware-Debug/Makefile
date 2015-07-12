@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:35 wiz Exp $
 
 DISTNAME=	Plack-Middleware-Debug-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-File-ShareDir>=1.00:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 DEPENDS+=	p5-Text-MicroTemplate-[0-9]*:../../textproc/p5-Text-MicroTemplate
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 DEPENDS+=	p5-Module-Versions>=0.01:../../devel/p5-Module-Versions
 
 .include "../../lang/perl5/module.mk"

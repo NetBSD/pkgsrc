@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/06/12 10:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/07/12 18:56:31 wiz Exp $
 
 DISTNAME=	XML-Atom-0.41
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-XML-XPath-[0-9]*:../../textproc/p5-XML-XPath
 
 # Client/Server for Atom API

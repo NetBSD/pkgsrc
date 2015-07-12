@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/06/12 10:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/07/12 18:56:30 wiz Exp $
 
 DISTNAME=	Pod-Simple-3.30
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Pod-Simple/
 COMMENT=	Simple framework for parsing Pod
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.9.3,p5-Pod-Escapes>=1.04}:../../textproc/p5-Pod-Escapes
+#DEPENDS+=	{perl>=5.9.3,p5-Pod-Escapes>=1.04}:../../textproc/p5-Pod-Escapes
 
 PERL5_PACKLIST=		auto/Pod/Simple/.packlist
 

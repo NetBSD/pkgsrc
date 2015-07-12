@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/06/30 06:54:39 wen Exp $
+# $NetBSD: Makefile,v 1.57 2015/07/12 18:56:17 wiz Exp $
 
 DISTNAME=	Params-Validate-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Params-Validate/
 COMMENT=	Validate method/function parameters
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{p5-Scalar-List-Utils>=1.0,perl>=5.10.0}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{p5-Scalar-List-Utils>=1.0,perl>=5.10.0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
 
 BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
