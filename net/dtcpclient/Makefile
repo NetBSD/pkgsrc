@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2015/07/12 05:31:47 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/12 05:36:50 dholland Exp $
 #
 
 DISTNAME=	dtcpclient-20090812
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.imasy.or.jp/~ume/ipv6/ \
 		http://home.jp.FreeBSD.org/~ume/ipv6/
@@ -31,7 +32,13 @@ BUILD_DEFS+=	VARBASE
 INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
+
+# Keep this in sync with patch-aa, as that determines whether -lcrypto
+# is used and if we get it wrong we'll get a silent dependency on
+# builtin openssl on platforms where that exists, which isn't good.
+.if ${OPSYS} != "NetBSD" || ${OPSYS} != "OpenBSD" || \
+    ${OPSYS} != "FreeBSD" || ${OPSYS} != "DragonFly"
 .include "../../security/openssl/buildlink3.mk"
 .endif
+
 .include "../../mk/bsd.pkg.mk"
