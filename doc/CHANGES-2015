@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2989 2015/07/12 08:32:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2990 2015/07/12 08:40:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5629,3 +5629,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated cad/py-simpy to 3.0.8 [wen 2015-07-12]
 	Updated www/p5-HTTP-Message to 6.08 [wiz 2015-07-12]
 	Updated games/lgogdownloader to 2.24 [wiz 2015-07-12]
+	Updated wm/ratpoison to 1.4.8 [wiz 2015-07-12]
