@@ -1,0 +1,4 @@
+This plugin allows you to send requests directly to your browser and perform
+a custom search. Some examples: http://www.google.it/search?q= if you want
+to perform a search on Google or http://bugs.debian.org if something is wrong
+with your system (assuming your distribution is Debian).
