@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 06:38:23 dholland Exp $
 
 DISTNAME=	wimon-0.3
 PKGREVISION=	1
@@ -10,7 +10,8 @@ HOMEPAGE=	http://imil.net/wimon/
 COMMENT=	Tool that shows a real-time graph of your wireless connection
 LICENSE=	original-bsd
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-* \
+			MirBSD-*-* Bitrig-*-*
 # Needs net80211/*.h header files which appeared in 1.6ZD.
 NOT_FOR_PLATFORM=	NetBSD-0*-* NetBSD-1.[012345]*-* NetBSD-1.6[-_.]*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
