@@ -1,42 +1,32 @@
-# $NetBSD: Makefile.common,v 1.45 2015/07/06 10:28:12 richard Exp $
-# used by www/webkit-gtk/Makefile
+# $NetBSD: Makefile.common,v 1.46 2015/07/12 00:44:46 wiz Exp $
+# used by wip/webkit-gtk/Makefile
 
-DISTNAME=	webkitgtk-2.4.9
+DISTNAME=	webkitgtk-2.8.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webkitgtk.org/
-LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../www/webkit-gtk/distinfo
 PATCHDIR=		${.CURDIR}/../../www/webkit-gtk/patches
 
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
+#USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
-USE_TOOLS+=	msgmerge xgettext
 
 # GCC >= 4.8 (for std::this_thread::yield() at least) or Clang >= 3.3
 GCC_REQD+=	4.8
 
-# gmake 3.81 enters a 100% CPU spin.
-GMAKE_REQD+=	4.1
+PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pcin
 
-PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
-
-MAKE_FILE=	GNUmakefile
-GNU_CONFIGURE=	yes
-
-CONFIGURE_ARGS+=	--enable-x11-target \
-			--disable-geolocation \
-			--disable-gtk-doc-html
-
-.include "../../mk/compiler.mk"
-.if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]))
-BUILDLINK_TRANSFORM+=	rm:-D_FORTIFY_SOURCE=2
-.endif
+CMAKE_ARGS+=		-DPORT=GTK
+CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
+CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 
 .include "options.mk"
 
@@ -46,8 +36,7 @@ REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/bindings/scripts/InFilesParser.pm \
 		Source/WebCore/css/*.pl \
 		Source/WebCore/dom/*.pl \
-		Source/WebCore/make-hash-tools.pl \
-		Source/WebCore/platform/text/mac/*.pl
+		Source/WebCore/make-hash-tools.pl
 
 REPLACE_PYTHON+=	Tools/gtk/*.py \
 			Tools/gtk/generate-feature-defines-files \
@@ -55,22 +44,32 @@ REPLACE_PYTHON+=	Tools/gtk/*.py \
 
 .include "../../lang/ruby/rubyversion.mk"
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
-CONFIGURE_ENV+=	RUBY=${RUBY}
+CMAKE_ARGS+=	-DRUBY_EXECUTABLE=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.10.2
 .include "../../lang/python/application.mk"
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
+
+#
+# XXX: Turning -O options with gcc-4.8.4 does not work on NetBSD. Disable
+# optimization, according to the gcc(1) manual page:
+#
+#  «If you use multiple -O options, with or without level numbers, the
+#   last such option is the one that is effective.»
+#
+# ...this XXX abuse this feature.
+CFLAGS+=	-O0
 
 CXXFLAGS.SunOS+=	-fpermissive
 
+.include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
-CONFIGURE_ARGS+=	--disable-fast-malloc
-CPPFLAGS+=		-DUSE_SYSTEM_MALLOC
+CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON	# XXX: not completely sure (was --disable-fast-malloc)
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
@@ -78,13 +77,12 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-introspection
+CMAKE_ARGS+=	-DENABLE_INTROSPECTION=ON
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-# This is optional, but needs testing.
-#.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 # A correct Webkit build requires flex 2.5.33
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
@@ -98,6 +96,7 @@ BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
