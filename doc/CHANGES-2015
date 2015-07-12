@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2984 2015/07/12 03:22:38 wen Exp $
+$NetBSD: CHANGES-2015,v 1.2985 2015/07/12 03:27:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5624,3 +5624,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/gnome-online-accounts version 3.16.3 [wiz 2015-07-12]
 	Updated databases/p5-DBIx-Class to 0.082820 [wen 2015-07-12]
 	Updated databases/p5-DBIx-Class-Helpers to 2.030001 [wen 2015-07-12]
+	Updated math/p5-Number-Tolerant to 1.706 [wen 2015-07-12]
