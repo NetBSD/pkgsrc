@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/04/08 03:31:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.18.2.1 2015/07/12 08:58:43 tron Exp $
 bin/sntp
 man/man1/sntp.1
 man/man5/ntp.conf.5
@@ -66,6 +66,7 @@ share/doc/ntp/drivers/driver37.html
 share/doc/ntp/drivers/driver38.html
 share/doc/ntp/drivers/driver39.html
 share/doc/ntp/drivers/driver4.html
+share/doc/ntp/drivers/driver40-ja.html
 share/doc/ntp/drivers/driver40.html
 share/doc/ntp/drivers/driver42.html
 share/doc/ntp/drivers/driver43.html
@@ -162,6 +163,7 @@ share/doc/ntp/html/drivers/driver37.html
 share/doc/ntp/html/drivers/driver38.html
 share/doc/ntp/html/drivers/driver39.html
 share/doc/ntp/html/drivers/driver4.html
+share/doc/ntp/html/drivers/driver40-ja.html
 share/doc/ntp/html/drivers/driver40.html
 share/doc/ntp/html/drivers/driver42.html
 share/doc/ntp/html/drivers/driver43.html
