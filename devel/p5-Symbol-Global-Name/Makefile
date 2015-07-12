@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/12 18:56:19 wiz Exp $
 
 DISTNAME=	Symbol-Global-Name-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Symbol-Global-Name/
 COMMENT=	Finds name and type of a global variable
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.15.1,p5-ExtUtils-MakeMaker>=6.59}:../../devel/p5-ExtUtils-MakeMaker
+#DEPENDS+=	{perl>=5.15.1,p5-ExtUtils-MakeMaker>=6.59}:../../devel/p5-ExtUtils-MakeMaker
 
 PERL5_PACKLIST=	auto/Symbol/Global/Name/.packlist
 USE_LANGUAGES=	# none

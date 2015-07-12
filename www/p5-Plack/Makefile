@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/07/08 16:07:30 wen Exp $
+# $NetBSD: Makefile,v 1.38 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	Plack-1.0037
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-URI>=1.59:../../www/p5-URI
 DEPENDS+=	p5-File-ShareDir>=1.00:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-File-ShareDir-Install>=0.04:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 DEPENDS+=	p5-Devel-StackTrace>=1.23:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Devel-StackTrace-AsHTML>=0.11:../../devel/p5-Devel-StackTrace-AsHTML
 DEPENDS+=	p5-Filesys-Notify-Simple-[0-9]*:../../devel/p5-Filesys-Notify-Simple

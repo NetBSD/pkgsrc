@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/06/12 10:50:51 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/07/12 18:56:26 wiz Exp $
 
 DISTNAME=	SOAP-Lite-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -13,11 +13,11 @@ COMMENT=	Perl5 module providing a lightweight interface to SOAP
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-Inspector-[0-9]*:../../devel/p5-Class-Inspector
-DEPENDS+=	{perl>=5.10.0,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress
+#DEPENDS+=	{perl>=5.10.0,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress
 DEPENDS+=	p5-IO-SessionData>=1.03:../../net/p5-IO-SessionData
 DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-LWP-Protocol-https>=0:../../www/p5-LWP-Protocol-https
-DEPENDS+=	{perl>=5.10.0,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.10.0,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MIME-tools>=0:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

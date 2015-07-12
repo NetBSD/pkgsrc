@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:19 wiz Exp $
 #
 
 DISTNAME=	Test-CheckDeps-0.010
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Test-CheckDeps/
 COMMENT=	Perl 5 module to check for presence of dependencies
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta>=2.120920}:../../devel/p5-CPAN-Meta
+#DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta>=2.120920}:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
 
 # make test

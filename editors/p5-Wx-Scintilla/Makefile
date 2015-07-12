@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:50:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/12 18:56:22 wiz Exp $
 
 DISTNAME=	Wx-Scintilla-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Scintilla source code editing component for wxWidgets
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Alien-wxWidgets-[0-9]*:../../x11/p5-Alien-wxWidgets
-BUILD_DEPENDS+=	{perl>=5.16.6,p5-ExtUtils-ParseXS>=3.15}:../../devel/p5-ExtUtils-ParseXS
+#BUILD_DEPENDS+=	{perl>=5.16.6,p5-ExtUtils-ParseXS>=3.15}:../../devel/p5-ExtUtils-ParseXS
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/blib/arch/auto/Wx/Scintilla
 

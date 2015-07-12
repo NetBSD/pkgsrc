@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/06/12 10:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	Starman-0.4011
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Parser-XS-[0-9]*:../../www/p5-HTTP-Parser-XS
 DEPENDS+=	p5-Net-Server>=0.91:../../net/p5-Net-Server
 DEPENDS+=	p5-Plack>=0.9931:../../www/p5-Plack
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

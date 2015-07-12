@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:10 wiz Exp $
 
 DISTNAME=	B-Hooks-OP-PPAddr-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Hook into opcode execution
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
-DEPENDS+=	{perl>=5.10.1,p5-parent>0}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent>0}:../../devel/p5-parent
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/OP/PPAddr/.packlist

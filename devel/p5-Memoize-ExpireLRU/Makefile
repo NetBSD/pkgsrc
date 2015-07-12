@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/06/12 10:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 18:56:14 wiz Exp $
 #
 
 DISTNAME=	Memoize-ExpireLRU-0.55
@@ -12,7 +12,7 @@ COMMENT=	Expiry plug-in for Memoize that adds LRU cache expiration
 
 PERL5_PACKLIST=		auto/Memoize/ExpireLRU/.packlist
 
-DEPENDS+=		{perl>=5.7.3,p5-Memoize>=0.52}:../../devel/p5-Memoize
+#DEPENDS+=		{perl>=5.7.3,p5-Memoize>=0.52}:../../devel/p5-Memoize
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/12 18:56:29 wiz Exp $
 #
 
 DISTNAME=	crush-tools-2013-04
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Date-Calc-[0-9]*:../../devel/p5-Date-Calc
-DEPENDS+=	{perl>=5,p5-Getopt-Long-[0-9]*}:../../devel/p5-Getopt-Long
+#DEPENDS+=	{perl>=5,p5-Getopt-Long-[0-9]*}:../../devel/p5-Getopt-Long
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

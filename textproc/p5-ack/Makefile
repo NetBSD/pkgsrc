@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/06/12 10:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/12 18:56:32 wiz Exp $
 
 DISTNAME=	ack-2.14
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,7 @@ post-configure:
 
 DEPENDS+=	p5-File-Next>=0.4:../../devel/p5-File-Next
 #DEPENDS+=	p5-Term-ANSIColor-[0-9]*:../../devel/p5-Term-ANSIColor
-BUILD_DEPENDS+=	{perl>=5.8.8,p5-Test-Harness>=2.5}:../../devel/p5-Test-Harness
+#BUILD_DEPENDS+=	{perl>=5.8.8,p5-Test-Harness>=2.5}:../../devel/p5-Test-Harness
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

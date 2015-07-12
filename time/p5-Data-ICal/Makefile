@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/12 18:56:32 wiz Exp $
 
 DISTNAME=		Data-ICal-0.22
 PKGNAME=		p5-${DISTNAME}
@@ -13,10 +13,10 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Class-Accessor>=0.30:../../devel/p5-Class-Accessor
 DEPENDS+=		p5-Class-ReturnValue>=0.53:../../devel/p5-Class-ReturnValue
-DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Text-vFile-asData>=0.05:../../textproc/p5-Text-vFile-asData
 
-BUILD_DEPENDS+=		{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=		{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
 BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
