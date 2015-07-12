@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2988 2015/07/12 08:04:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2989 2015/07/12 08:32:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5628,3 +5628,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dtcpclient to 20090812nb1 [dholland 2015-07-12]
 	Updated cad/py-simpy to 3.0.8 [wen 2015-07-12]
 	Updated www/p5-HTTP-Message to 6.08 [wiz 2015-07-12]
+	Updated games/lgogdownloader to 2.24 [wiz 2015-07-12]
