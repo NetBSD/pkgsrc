@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2015/07/12 06:40:46 dholland Exp $
 #
 # used by net/wistumbler2-gtk/Makefile
 
@@ -15,7 +15,8 @@ PATCHDIR=		${.CURDIR}/../../net/wistumbler2/patches
 PLIST_SRC=		${.CURDIR}/../../net/wistumbler2/PLIST
 
 NOT_FOR_PLATFORM=	NetBSD-[01].[012345]*-*
-ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* DragonFly-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* DragonFly-*-* \
+			MirBSD-*-* Bitrig-*-*
 CONFLICTS+=		wistumbler-[0-9]*
 
 HAS_CONFIGURE=		YES
