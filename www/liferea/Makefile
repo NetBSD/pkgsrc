@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2015/06/12 10:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2015/07/12 00:39:56 wiz Exp $
 
 DISTNAME=		liferea-1.8.15
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,7 +31,7 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
