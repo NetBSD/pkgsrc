@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/07/06 10:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/12 21:12:24 szptvlfn Exp $
 
 DISTNAME=	gnupg-2.1.6
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -20,6 +20,8 @@ USE_TOOLS+=		gmake pkg-config makeinfo
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
+
+DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
 .include "../../security/libgpg-error/buildlink3.mk"
