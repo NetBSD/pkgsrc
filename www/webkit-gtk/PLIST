@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/07/12 00:44:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/07/12 21:50:12 wiz Exp $
 bin/MiniBrowser
 bin/jsc
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
@@ -274,10 +274,10 @@ lib/girepository-1.0/WebKit2-4.0.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.1.8
+lib/libjavascriptcoregtk-4.0.so.18.1.11
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.6.4
+lib/libwebkit2gtk-4.0.so.37.6.7
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
@@ -292,6 +292,7 @@ share/gir-1.0/WebKit2WebExtension-4.0.gir
 share/locale/ar/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/as/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/bg/LC_MESSAGES/WebKit2GTK-4.0.mo
+share/locale/ca/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/cs/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/de/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/el/LC_MESSAGES/WebKit2GTK-4.0.mo

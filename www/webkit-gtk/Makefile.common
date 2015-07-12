@@ -1,13 +1,14 @@
-# $NetBSD: Makefile.common,v 1.46 2015/07/12 00:44:46 wiz Exp $
-# used by wip/webkit-gtk/Makefile
+# $NetBSD: Makefile.common,v 1.47 2015/07/12 21:50:12 wiz Exp $
+# used by www/webkit-gtk/Makefile
 
-DISTNAME=	webkitgtk-2.8.1
+DISTNAME=	webkitgtk-2.8.4
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webkitgtk.org/
+LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../www/webkit-gtk/distinfo
 PATCHDIR=		${.CURDIR}/../../www/webkit-gtk/patches
@@ -55,10 +56,18 @@ CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 # XXX: Turning -O options with gcc-4.8.4 does not work on NetBSD. Disable
 # optimization, according to the gcc(1) manual page:
 #
-#  «If you use multiple -O options, with or without level numbers, the
-#   last such option is the one that is effective.»
+#  If you use multiple -O options, with or without level numbers, the
+#  last such option is the one that is effective.
 #
-# ...this XXX abuse this feature.
+# Fixes build problem on NetBSD of this type:
+# Linking CXX shared library ../../lib/libjavascriptcoregtk-4.0.so
+# CMakeFiles/JavaScriptCore.dir/runtime/FunctionExecutableDump.cpp.o: In function `JSC::FunctionExecutableDump::dump(WTF::PrintStream&) const':
+# FunctionExecutableDump.cpp:(.text+0x61): undefined reference to `JSC::JSCell::inherits(JSC::ClassInfo const*) const'
+# CMakeFiles/JavaScriptCore.dir/llint/LLIntEntrypoint.cpp.o: In function `JSC::LLInt::setEntrypoint(JSC::VM&, JSC::CodeBlock*)':
+# LLIntEntrypoint.cpp:(.text+0x9d): undefined reference to `JSC::JSCell::inherits(JSC::ClassInfo const*) const'
+# Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/build.make:13652: recipe for target 'lib/libjavascriptcoregtk-4.0.so.18.1.11' failed
+#
+# last checked for 2.8.4.
 CFLAGS+=	-O0
 
 CXXFLAGS.SunOS+=	-fpermissive
