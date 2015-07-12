@@ -4,4 +4,4 @@ Safari, Dashboard, Mail, and many other OS X applications. WebKit's HTML
 and JavaScript code began as a branch of the KHTML and KJS libraries
 from KDE.
 
-This is the GTK2+ port of the engine.
+This is the GTK port of the engine.
