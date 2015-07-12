@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2979 2015/07/11 19:29:24 asau Exp $
+$NetBSD: CHANGES-2015,v 1.2980 2015/07/12 00:45:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5619,3 +5619,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/libgdata0.6 version 0.6.6nb16 [wiz 2015-07-11]
 	Updated net/libgdata to 0.16.1 [wiz 2015-07-11]
 	Updated devel/netbeans-ide to 8.0.2 [asau 2015-07-11]
+	Added www/webkit24-gtk version 2.4.9nb1 [wiz 2015-07-12]
