@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/06/12 10:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 18:56:25 wiz Exp $
 
 DISTNAME=	File-Tail-1.0
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Tail/
 COMMENT=	Perl5 module for reading from continuously updated files
 
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>1.12}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>1.12}:../../time/p5-Time-HiRes
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/File/Tail/.packlist

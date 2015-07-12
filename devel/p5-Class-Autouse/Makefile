@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/12 10:48:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/07/12 18:56:10 wiz Exp $
 
 DISTNAME=	Class-Autouse-2.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Run-time class loading on first method call
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-ExtUtils-AutoInstall>=0.61:../../devel/p5-ExtUtils-AutoInstall
-DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Utils
 
 PERL5_PACKLIST=		auto/Class/Autouse/.packlist
 

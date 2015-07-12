@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/06/12 10:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/07/12 18:56:09 wiz Exp $
 
 DISTNAME=	perl-ldap-0.63
 PKGREVISION=	2
@@ -16,7 +16,7 @@ BUILD_DEFS+=	IPV6_READY
 DEPENDS+=	p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-IO-Socket-SSL>=0.81:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Text-Soundex-[0-9]*:../../textproc/p5-Text-Soundex
-DEPENDS+=	{perl>=5.8.0,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.8.0,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-XML-SAX-Writer-[0-9]*:../../textproc/p5-XML-SAX-Writer
 
@@ -30,7 +30,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 .if !empty(PKG_OPTIONS:Msasl)
 DEPENDS+=	p5-Authen-SASL>=2.00:../../security/p5-Authen-SASL
-DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)

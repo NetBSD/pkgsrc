@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:11 wiz Exp $
 
 DISTNAME=	Class-Mix-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module providing dynamic class mixing
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Params-Classify-[0-9]*:../../devel/p5-Params-Classify
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build

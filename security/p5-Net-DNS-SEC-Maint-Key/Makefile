@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:28 wiz Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-Maint-Key-0.013
@@ -15,7 +15,7 @@ DEPENDS+=		p5-Net-DNS>=0.44:../../net/p5-Net-DNS
 DEPENDS+=		p5-Net-DNS-SEC>=0.12:../../security/p5-Net-DNS-SEC
 DEPENDS+=		p5-IO-LockedFile-[0-9]*:../../devel/p5-IO-LockedFile
 DEPENDS+=		p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
-DEPENDS+=		{perl>=5.17.10,p5-Term-ReadLine>=1.12}:../../devel/p5-Term-ReadLine
+#DEPENDS+=		{perl>=5.17.10,p5-Term-ReadLine>=1.12}:../../devel/p5-Term-ReadLine
 
 PERL5_PACKLIST=		auto/Net/DNS/SEC/Maint/Key/.packlist
 

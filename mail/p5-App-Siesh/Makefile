@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=	App-Siesh-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,8 @@ DEPENDS+=	p5-IO-Prompt-[0-9]*:../../devel/p5-IO-Prompt
 DEPENDS+=	p5-IPC-System-Simple-[0-9]*:../../devel/p5-IPC-System-Simple
 DEPENDS+=	p5-Net-ManageSieve-[0-9]*:../../mail/p5-Net-ManageSieve
 DEPENDS+=	p5-Term-ShellUI>=0.86:../../devel/p5-Term-ShellUI
-DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 BUILD_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output

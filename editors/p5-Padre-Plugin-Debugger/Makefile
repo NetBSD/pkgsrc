@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/12 18:56:21 wiz Exp $
 #
 
 DISTNAME=	Padre-Plugin-Debugger-0.3
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Devel-ebug>=0.49:../../devel/p5-Devel-ebug
 DEPENDS+=	p5-Padre>=0.28:../../editors/p5-Padre
-DEPENDS+=	{perl>=5.10.1,parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,parent-[0-9]*}:../../devel/p5-parent
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Debugger/.packlist
 PERL5_MODULE_TYPE=	Module::Build

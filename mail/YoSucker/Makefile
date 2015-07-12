@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:22 wiz Exp $
 #
 
 DISTNAME=		YoSucker-pr37
@@ -12,7 +12,7 @@ HOMEPAGE=		http://yosucker.sourceforge.net/
 COMMENT=		Download mails from Yahoo webmail into mbox
 
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=		p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 

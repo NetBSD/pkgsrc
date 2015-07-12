@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/06/12 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/07/12 18:56:24 wiz Exp $
 #
 
 DISTNAME=		Mail-DKIM-0.40
@@ -13,9 +13,9 @@ COMMENT=		Perl5 module for DKIM-based mail-signing and -verifying
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.27:../../security/p5-Crypt-OpenSSL-RSA
-DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
+#DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
-DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 
 USE_LANGUAGES=		# empty

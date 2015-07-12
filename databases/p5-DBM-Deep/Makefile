@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:48:41 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/12 18:56:08 wiz Exp $
 
 DISTNAME=	DBM-Deep-2.0011
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ PERL5_PACKLIST=	auto/DBM/Deep/.packlist
 BUILD_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
-BUILD_DEPENDS+= {perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+= {perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn>=0.08:../../devel/p5-Test-Warn
 
 # for test target

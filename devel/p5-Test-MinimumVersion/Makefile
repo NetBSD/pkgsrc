@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:20 wiz Exp $
 #
 
 DISTNAME=		Test-MinimumVersion-0.101081
@@ -16,7 +16,7 @@ DEPENDS+=		p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
 DEPENDS+=		p5-File-Find-Rule-Perl-[0-9]*:../../devel/p5-File-Find-Rule-Perl
 DEPENDS+=		p5-Perl-MinimumVersion>=1.20:../../devel/p5-Perl-MinimumVersion
 DEPENDS+=		p5-YAML-Tiny>=1.40:../../textproc/p5-YAML-Tiny
-DEPENDS+=		{perl>=5.10.0,p5-version>=0.7000}:../../devel/p5-version
+#DEPENDS+=		{perl>=5.10.0,p5-version>=0.7000}:../../devel/p5-version
 
 BUILD_DEPENDS+=		p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 

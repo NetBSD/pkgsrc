@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:13 wiz Exp $
 #
 
 DISTNAME=	IO-Handle-Util-0.01
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-asa-[0-9]*:../../devel/p5-asa
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

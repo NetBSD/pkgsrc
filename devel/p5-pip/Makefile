@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:49:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:21 wiz Exp $
 
 DISTNAME=	pip-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Archive-Zip>=1.29:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-CPAN-Inject>=0.07:../../devel/p5-CPAN-Inject
 DEPENDS+=	p5-File-Which>=1.08:../../devel/p5-File-Which
 DEPENDS+=	p5-File-pushd>=0.32:../../devel/p5-File-pushd
-DEPENDS+=	{perl>=5.10.0,p5-IO-Zlib-[0-9]*}:../../devel/p5-IO-Zlib
+#DEPENDS+=	{perl>=5.10.0,p5-IO-Zlib-[0-9]*}:../../devel/p5-IO-Zlib
 DEPENDS+=	p5-PAR-Dist>=0.25:../../devel/p5-PAR-Dist
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

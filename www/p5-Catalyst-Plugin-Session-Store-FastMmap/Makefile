@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/12 18:56:34 wiz Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -13,10 +13,10 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=       p5-Cache-FastMmap>=1.29:../../devel/p5-Cache-FastMmap
 DEPENDS+=	p5-Catalyst-Plugin-Session>=0.27:../../www/p5-Catalyst-Plugin-Session
-DEPENDS+=       {perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
-DEPENDS+=	{perl>=5.10,p5-MRO-Compat-[0-9]*}:../../devel/p5-MRO-Compat
+#DEPENDS+=       {perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.10,p5-MRO-Compat-[0-9]*}:../../devel/p5-MRO-Compat
 DEPENDS+=       p5-Path-Class>=0:../../devel/p5-Path-Class
-DEPENDS+=       {perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
+#DEPENDS+=       {perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
 DEPENDS+=       p5-MooseX-Emulate-Class-Accessor-Fast-[0-9]*:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
 DEPENDS+=       p5-Catalyst-Runtime>=5.9:../../www/p5-Catalyst-Runtime
 

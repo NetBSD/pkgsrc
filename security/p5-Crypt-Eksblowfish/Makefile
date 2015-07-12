@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:27 wiz Exp $
 #
 
 DISTNAME=		Crypt-Eksblowfish-0.009
@@ -13,9 +13,9 @@ COMMENT=		Perl5 Eksblowfish block cipher
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Class-Mix>=0.001:../../devel/p5-Class-Mix
-DEPENDS+=		{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
-DEPENDS+=		{perl>=5.8.2,p5-MIME-Base64>=2.21}:../../converters/p5-MIME-Base64
-BUILD_DEPENDS+=		{perl>=5.10.0,p5-ExtUtils-CBuilder>=0.15}:../../devel/p5-ExtUtils-CBuilder
+#DEPENDS+=		{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=		{perl>=5.8.2,p5-MIME-Base64>=2.21}:../../converters/p5-MIME-Base64
+#BUILD_DEPENDS+=		{perl>=5.10.0,p5-ExtUtils-CBuilder>=0.15}:../../devel/p5-ExtUtils-CBuilder
 
 CRYPTO=			YES
 USE_LANGUAGES=		c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:21 wiz Exp $
 
 DISTNAME=	VCP-autrijus-snapshot-0.9-${SNAPSHOT_VERS}
 SNAPSHOT_VERS=	20050110
@@ -15,8 +15,8 @@ LICENSE=	modified-bsd
 
 MAKE_JOBS_SAFE=		no
 
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
-DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Regexp-Shellish>=0.93:../../devel/p5-Regexp-Shellish
 DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff

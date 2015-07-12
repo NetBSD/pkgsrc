@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:34 wiz Exp $
 
 DISTNAME=	Catalyst-Engine-JobQueue-POE-0.0.4
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Engine-JobQueue-POE/
 COMMENT=	Implementing a Catalyst job queue with POE
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>0}:../../devel/p5-Test-Simple
+#DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>0}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-version>0:../../devel/p5-version
 DEPENDS+=	p5-Email-MIME>=1.903:../../mail/p5-Email-MIME
 DEPENDS+=	p5-Email-Send>=2.15:../../mail/p5-Email-Send

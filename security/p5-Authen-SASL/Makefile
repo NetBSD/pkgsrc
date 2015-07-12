@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/06/12 10:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/07/12 18:56:27 wiz Exp $
 #
 
 DISTNAME=	Authen-SASL-2.16
@@ -16,7 +16,7 @@ PERL5_PACKLIST=		auto/Authen/SASL/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Authen-SASL
 PKG_SUPPORTED_OPTIONS=	gssapi

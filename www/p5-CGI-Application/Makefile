@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/06/12 10:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/07/12 18:56:33 wiz Exp $
 
 DISTNAME=		CGI-Application-4.50
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=		http://search.cpan.org/dist/CGI-Application/
 COMMENT=		Perl5 module to create sophisticated, reusable web-based applications
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=		{p5-CGI>=2.66,perl>=5.6.1nb2}:../../www/p5-CGI
+#DEPENDS+=		{p5-CGI>=2.66,perl>=5.6.1nb2}:../../www/p5-CGI
 DEPENDS+=		p5-Class-ISA-[0-9]*:../../devel/p5-Class-ISA
 DEPENDS+=		p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 

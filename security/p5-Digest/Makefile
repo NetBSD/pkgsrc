@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:51:07 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/07/12 18:56:28 wiz Exp $
 
 DISTNAME=	Digest-1.17
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Digest/
 COMMENT=	Perl5 base class for Digest:: modules
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.8.1,p5-MIME-Base64>=2.18}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.8.1,p5-MIME-Base64>=2.18}:../../converters/p5-MIME-Base64
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Digest/.packlist

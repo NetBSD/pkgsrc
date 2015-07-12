@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:11 wiz Exp $
 
 DISTNAME=	Devel-CheckOS-1.76
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 OR artistic
 
 DEPENDS+=	p5-Data-Compare>=1.21:../../devel/p5-Data-Compare
 DEPENDS+=	p5-File-Find-Rule>=0.28:../../devel/p5-File-Find-Rule
-DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
 
 PERL5_PACKLIST=		auto/Devel/CheckOS/.packlist
 

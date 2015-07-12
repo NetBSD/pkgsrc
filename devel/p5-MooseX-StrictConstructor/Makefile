@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:16 wiz Exp $
 #
 
 DISTNAME=	MooseX-StrictConstructor-0.19
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/MooseX-StrictConstructor/
 COMMENT=	Make your object constructors blow up on unknown attributes
 LICENSE=	artistic-2.0
 
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Moose>=0.94:../../devel/p5-Moose
 

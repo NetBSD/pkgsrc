@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:19 wiz Exp $
 #
 
 DISTNAME=	Test-Fixture-DBIC-Schema-0.04
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Fixture/DBIC/Schema/.packlist
 
 DEPENDS+=	p5-DBIx-Class>=0.08008:../../databases/p5-DBIx-Class
-DEPENDS+=	{perl>=5.7.3,p5-Filter-[0-9]*}:../../textproc/p5-Filter
+#DEPENDS+=	{perl>=5.7.3,p5-Filter-[0-9]*}:../../textproc/p5-Filter
 DEPENDS+=	p5-Kwalify>=1.16:../../textproc/p5-Kwalify
 DEPENDS+=	p5-Params-Validate>=0.89:../../devel/p5-Params-Validate
 DEPENDS+=	p5-YAML-Syck>=1.00:../../textproc/p5-YAML-Syck

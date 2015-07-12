@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/06/12 10:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/12 18:56:07 wiz Exp $
 
 DISTNAME=	Unicode-String-2.09
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Unicode-String/
 COMMENT=	Perl5 modules to handle various Unicode issues
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 
 PERL5_PACKLIST=		auto/Unicode/String/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/07/12 14:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:31 wiz Exp $
 
 DISTNAME=	Text-Xslate-3.3.4
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Data-MessagePack>=0.38:../../devel/p5-Data-MessagePack
-DEPENDS+=	{perl>=5.10.1,p5-parent>=0.221}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent>=0.221}:../../devel/p5-parent
 DEPENDS+=	p5-Mouse>=1.08:../../devel/p5-Mouse
 DEPENDS+=	p5-Test-Requires>=0:../../devel/p5-Test-Requires
 # only for regress test

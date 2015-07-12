@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	Tatsumaki-0.1013
 PKGNAME=	p5-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	p5-Plack>=0.9913:../../www/p5-Plack
 DEPENDS+=	p5-Text-MicroTemplate-[0-9]*:../../textproc/p5-Text-MicroTemplate
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-Twiggy-[0-9]*:../../www/p5-Twiggy
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

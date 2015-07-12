@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=		Email-MIME-1.924
 PKGNAME=		p5-${DISTNAME}
@@ -16,9 +16,9 @@ DEPENDS+=		p5-Email-MIME-Encodings>=1.314:../../mail/p5-Email-MIME-Encodings
 DEPENDS+=		p5-Email-MessageID-[0-9]*:../../mail/p5-Email-MessageID
 # Email::Simple-2.100 contains both: Email::Simple and Email::Simple::Creator
 DEPENDS+=		p5-Email-Simple>=2.102:../../mail/p5-Email-Simple
-DEPENDS+=		{perl>=5.8.1,p5-Encode>=1.98.01}:../../textproc/p5-Encode
+#DEPENDS+=		{perl>=5.8.1,p5-Encode>=1.98.01}:../../textproc/p5-Encode
 DEPENDS+=		p5-MIME-Types>=1.13:../../mail/p5-MIME-Types
-BUILD_DEPENDS+=		{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=		{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 CONFLICTS+=		p5-Email-MIME-Creator-[0-9]*
 CONFLICTS+=		p5-Email-MIME-Modifier-[0-9]*

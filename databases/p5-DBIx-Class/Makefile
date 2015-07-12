@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/07/12 03:10:28 wen Exp $
+# $NetBSD: Makefile,v 1.36 2015/07/12 18:56:08 wiz Exp $
 
 DISTNAME=	DBIx-Class-0.082820
 PKGNAME=	p5-${DISTNAME}
@@ -34,9 +34,9 @@ DEPENDS+=	p5-namespace-clean>=0.24:../../devel/p5-namespace-clean
 
 BUILD_DEPENDS+=	p5-DBD-SQLite>=1.40:../../databases/p5-DBD-SQLite
 BUILD_DEPENDS+= p5-Package-Stash>=0.28:../../devel/p5-Package-Stash
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-Class-DBI>=0:../../databases/p5-Class-DBI
 BUILD_DEPENDS+=	p5-SQL-Translator>=0.11018:../../databases/p5-SQL-Translator

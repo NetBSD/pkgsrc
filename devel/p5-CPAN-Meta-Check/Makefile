@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:48:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:10 wiz Exp $
 
 DISTNAME=	CPAN-Meta-Check-0.011
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/CPAN-Meta-Check/
 COMMENT=	Perl module to verify requirements in a CPAN::Meta object
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta>=2.132830}:../../devel/p5-CPAN-Meta
-DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta-Requirements>=2.122}:../../devel/p5-CPAN-Meta-Requirements
+#DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta>=2.132830}:../../devel/p5-CPAN-Meta
+#DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta-Requirements>=2.122}:../../devel/p5-CPAN-Meta-Requirements
 
 # use BUILD_DEPENDS+= as 'make test' dependency 
 # perl 5.20.0 has 1.000019, but test wants following version

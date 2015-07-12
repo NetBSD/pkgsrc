@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/12 18:56:17 wiz Exp $
 
 DISTNAME=	Role-Basic-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Role-Basic/
 COMMENT=	Just roles. Nothing else
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.9.3,p5-Storable>=2.15}:../../devel/p5-Storable
+#DEPENDS+=	{perl>=5.9.3,p5-Storable>=2.15}:../../devel/p5-Storable
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Role/Basic/.packlist

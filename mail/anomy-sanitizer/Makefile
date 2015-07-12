@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/06/12 10:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/07/12 18:56:22 wiz Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.76
@@ -10,8 +10,8 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://mailtools.anomy.net/
 COMMENT=	Mail message filter and sanitizer
 
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 
 .include "../../mk/bsd.prefs.mk"
 

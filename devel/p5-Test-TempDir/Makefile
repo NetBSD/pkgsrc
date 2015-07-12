@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:20 wiz Exp $
 
 DISTNAME=	Test-TempDir-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Temporary files support for testing
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-File-NFSLock>=0:../../devel/p5-File-NFSLock
-DEPENDS+=	{p5-File-Path>=2.04,perl>=5.10}:../../devel/p5-File-Path
+#DEPENDS+=	{p5-File-Path>=2.04,perl>=5.10}:../../devel/p5-File-Path
 DEPENDS+=	p5-Moose>=0.87:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types-Path-Class>=0:../../devel/p5-MooseX-Types-Path-Class
 DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class

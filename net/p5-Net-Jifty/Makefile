@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/06/12 10:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/12 18:56:26 wiz Exp $
 #
 
 DISTNAME=	Net-Jifty-0.14
@@ -13,7 +13,7 @@ COMMENT=	Interface to online Jifty applications
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Email-Address-[0-9]*:../../mail/p5-Email-Address
-DEPENDS+=	{perl>=5.7.3,p5-Encode-[0-9]*}:../../textproc/p5-Encode
+#DEPENDS+=	{perl>=5.7.3,p5-Encode-[0-9]*}:../../textproc/p5-Encode
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Any-Moose>=0.04:../../devel/p5-Any-Moose

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/06/12 10:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/12 18:56:34 wiz Exp $
 
 DISTNAME=	CatalystX-Component-Traits-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-MooseX-Traits-Pluggable>=0.08:../../devel/p5-MooseX-Traits-Pluggable
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Module-Pluggable>=3.9}:../../devel/p5-Module-Pluggable
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Module-Pluggable>=3.9}:../../devel/p5-Module-Pluggable
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CatalystX/Component/Traits/.packlist

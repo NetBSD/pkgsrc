@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/06/12 10:50:39 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/07/12 18:56:25 wiz Exp $
 
 DISTNAME=	xmltv-0.5.56
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-Twig>=3.10:../../textproc/p5-XML-Twig
 DEPENDS+=	p5-XML-Writer>=0.600:../../textproc/p5-XML-Writer
-DEPENDS+=	{perl>=5.10,p5-Memoize-[0-9]*}:../../devel/p5-Memoize
+#DEPENDS+=	{perl>=5.10,p5-Memoize-[0-9]*}:../../devel/p5-Memoize
 #DEPENDS+=	{perl>=5.10,p5-Storable>=2.04}:../../devel/p5-Storable
 DEPENDS+=	p5-libwww>=5.65:../../www/p5-libwww
 # recommended
@@ -47,7 +47,7 @@ DEPENDS+=	p5-DateTime-Format-Strptime-[0-9]*:../../time/p5-DateTime-Format-Strpt
 DEPENDS+=	p5-Text-Kakasi-[0-9]*:../../textproc/p5-Text-Kakasi
 # needed by se grabber
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
-DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib>=0
+#DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib>=0
 DEPENDS+=	p5-HTTP-Cache-Transparent-[0-9]*:../../www/p5-HTTP-Cache-Transparent
 # needed by pt grabber
 DEPENDS+=	p5-Unicode-UTF8simple-[0-9]*:../../converters/p5-Unicode-UTF8simple

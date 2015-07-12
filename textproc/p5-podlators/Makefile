@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:32 wiz Exp $
 
 DISTNAME=	podlators-2.5.3
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/podlators/
 COMMENT=	Collection of pod related perl modules
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10.1,p5-Pod-Simple>=3.06}:../../textproc/p5-Pod-Simple
+#DEPENDS+=	{perl>=5.10.1,p5-Pod-Simple>=3.06}:../../textproc/p5-Pod-Simple
 
 PERL5_PACKLIST=		auto/Pod/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/12 18:56:35 wiz Exp $
 
 DISTNAME=		HTML-FormFu-2.01
 PKGNAME=		p5-${DISTNAME}
@@ -31,8 +31,8 @@ DEPENDS+=	p5-HTML-Scrubber-[0-9]*:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-HTML-TokeParser-Simple>=3.14:../../www/p5-HTML-TokeParser-Simple
 DEPENDS+=	p5-Hash-Flatten-[0-9]*:../../devel/p5-Hash-Flatten
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
-DEPENDS+=	{perl>=5.10.0,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
-DEPENDS+=	{perl>=5.7.3,p5-Locale-Maketext-[0-9]*}:../../misc/p5-Locale-Maketext
+#DEPENDS+=	{perl>=5.10.0,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{perl>=5.7.3,p5-Locale-Maketext-[0-9]*}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moose>=1.00:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Attribute-Chained>=1.0.1:../../devel/p5-MooseX-Attribute-Chained
@@ -48,7 +48,7 @@ DEPENDS+=	p5-Template-Toolkit>=2:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-YAML-LibYAML>=0.32:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-libwww>=5:../../www/p5-libwww
 
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=	p5-Test-Aggregate>=0.371:../../devel/p5-Test-Aggregate
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:13 wiz Exp $
 #
 
 DISTNAME=	IO-Interactive-0.0.6
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/IO-Interactive/
 COMMENT=	Perl 5 module prodiving utilities for interactive I/O
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/IO/Interactive/.packlist

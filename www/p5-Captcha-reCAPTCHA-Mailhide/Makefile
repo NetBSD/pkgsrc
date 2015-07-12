@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:33 wiz Exp $
 #
 
 DISTNAME=	Captcha-reCAPTCHA-Mailhide-0.94
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
 DEPENDS+=	p5-HTML-Tiny>=0.904:../../www/p5-HTML-Tiny
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 
 PERL5_PACKLIST=	auto/Captcha/reCAPTCHA/Mailhide/.packlist
 USE_LANGUAGES=	# none

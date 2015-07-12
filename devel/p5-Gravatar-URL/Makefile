@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/12 18:56:13 wiz Exp $
 #
 
 DISTNAME=		Gravatar-URL-1.06
@@ -14,8 +14,8 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
-DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Gravatar/URL/.packlist

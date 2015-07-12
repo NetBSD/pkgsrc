@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=	opendmarc-1.3.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
-DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-Switch-[0-9]*:../../lang/p5-Switch
 
 RCD_SCRIPTS=	opendmarc

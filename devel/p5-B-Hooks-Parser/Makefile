@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:10 wiz Exp $
 
 DISTNAME=	B-Hooks-Parser-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/B-Hooks-Parser/
 COMMENT=	Interface to perls parser variables
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10.1,p5-parent>0}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10.1,p5-parent>0}:../../devel/p5-parent
 
 BUILD_DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
 BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends

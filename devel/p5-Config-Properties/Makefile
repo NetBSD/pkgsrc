@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:49:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/07/12 18:56:11 wiz Exp $
 #
 
 DISTNAME=	Config-Properties-1.80
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Config-Properties/
 COMMENT=	Read and write property files
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.6.1,p5-File-Temp>=0}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.6.1,p5-File-Temp>=0}:../../devel/p5-File-Temp
 
 PERL5_PACKLIST=	auto/Config/Properties/.packlist
 USE_LANGUAGES=	# none

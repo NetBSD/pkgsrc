@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/06/12 10:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/07/12 18:56:34 wiz Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -12,14 +12,14 @@ COMMENT=	Generic Catalyst Session plugin
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.71001:../../www/p5-Catalyst-Runtime
-DEPENDS+=	{perl>=5.10,p5-Digest-[0-9]*}:../../security/p5-Digest
-DEPENDS+=	{perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.10,p5-Digest-[0-9]*}:../../security/p5-Digest
+#DEPENDS+=	{perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Moose>=0.76:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Emulate-Class-Accessor-Fast>=0.00801:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
 DEPENDS+=	p5-Object-Signature>=0:../../devel/p5-Object-Signature
-DEPENDS+=	{perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
-DEPENDS+=	{perl>=5.9.4,p5-Tie-RefHash>=1.34}:../../devel/p5-Tie-RefHash
+#DEPENDS+=	{perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
+#DEPENDS+=	{perl>=5.9.4,p5-Tie-RefHash>=1.34}:../../devel/p5-Tie-RefHash
 DEPENDS+=	p5-namespace-clean>=0.10:../../devel/p5-namespace-clean
 
 BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:51:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:28 wiz Exp $
 
 DISTNAME=	Digest-MD5-File-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Digest-MD5-File/
 COMMENT=	Perl5 extension for getting MD5 sums for files and urls
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PERL5_PACKLIST=		auto/Digest/MD5/File/.packlist

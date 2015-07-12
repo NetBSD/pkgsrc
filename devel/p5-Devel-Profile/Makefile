@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/06/12 10:49:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 18:56:12 wiz Exp $
 
 DISTNAME=	Devel-Profile-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Devel-Profile/
 COMMENT=	Perl5 module for profiling perl programs
 LICENSE=	artistic
 
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=1.20}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=1.20}:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=		auto/Devel/Profile/.packlist
 

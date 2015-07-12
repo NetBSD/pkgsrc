@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:12 wiz Exp $
 
 DISTNAME=	Dist-Zilla-5.036
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-App-Cmd>=0.309:../../devel/p5-App-Cmd
 DEPENDS+=	p5-Archive-Tar-Wrapper-[0-9]*:../../archivers/p5-Archive-Tar-Wrapper
-DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta>=2.120630}:../../devel/p5-CPAN-Meta
-DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta-Requirements>=2.121}:../../devel/p5-CPAN-Meta-Requirements
+#DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta>=2.120630}:../../devel/p5-CPAN-Meta
+#DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta-Requirements>=2.121}:../../devel/p5-CPAN-Meta-Requirements
 DEPENDS+=	p5-CPAN-Uploader>=0.103004:../../devel/p5-CPAN-Uploader
 DEPENDS+=	p5-Class-Load>=0.17:../../devel/p5-Class-Load
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
@@ -67,7 +67,7 @@ DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 BUILD_DEPENDS+=	p5-File-ShareDir-Install>=0.03:../../devel/p5-File-ShareDir-Install
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
-BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Dist/Zilla/.packlist
 

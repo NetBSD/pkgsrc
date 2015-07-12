@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:24 wiz Exp $
 #
 
 DISTNAME=	Mail-Sender-Easy-v0.0.5
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/~dmuey/Mail-Sender/
 COMMENT=	Simplified interface to Mail::Sender
 
 DEPENDS+=	p5-Mail-Sender>=0:../../mail/p5-Mail-Sender
-DEPENDS+=       {perl>=5.9.0,p5-version>=0}:../../devel/p5-version
+#DEPENDS+=       {perl>=5.9.0,p5-version>=0}:../../devel/p5-version
 
 PERL5_PACKLIST=	auto/Mail/Sender/Easy/.packlist
 

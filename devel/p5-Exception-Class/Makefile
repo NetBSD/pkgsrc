@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/07/12 18:56:12 wiz Exp $
 
 DISTNAME=	Exception-Class-1.39
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	p5-Class-Data-Inheritable>=0.02:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Devel-StackTrace>=1.20:../../devel/p5-Devel-StackTrace
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# none
 PERL5_PACKLIST=		auto/Exception/Class/.packlist

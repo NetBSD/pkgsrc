@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:14 wiz Exp $
 
 DISTNAME=	MetaCPAN-API-0.50
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Comprehensive, DWIM-featured API to MetaCPAN for Perl5
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Any-Moose-[0-9]*:../../devel/p5-Any-Moose
-DEPENDS+=	{perl>=5.13.9,p5-HTTP-Tiny-[0-9]*}:../../www/p5-HTTP-Tiny
+#DEPENDS+=	{perl>=5.13.9,p5-HTTP-Tiny-[0-9]*}:../../www/p5-HTTP-Tiny
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

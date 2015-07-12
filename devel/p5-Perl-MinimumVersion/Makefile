@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:17 wiz Exp $
 #
 
 DISTNAME=		Perl-MinimumVersion-1.38
@@ -14,12 +14,12 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-File-Find-Rule>=0.32:../../devel/p5-File-Find-Rule
 DEPENDS+=		p5-File-Find-Rule-Perl>=1.04:../../devel/p5-File-Find-Rule-Perl
-DEPENDS+=		{perl>=5.10.0,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=		{perl>=5.10.0,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=		p5-PPI>=1.215:../../devel/p5-PPI
 DEPENDS+=		p5-Params-Util>=0.25:../../devel/p5-Params-Util
 DEPENDS+=		p5-Perl-Critic>=1.104:../../devel/p5-Perl-Critic
 DEPENDS+=		p5-PPIx-Regexp>=0.033:../../devel/p5-PPIx-Regexp
-DEPENDS+=		{perl>=5.10.1,p5-version>=0.76}:../../devel/p5-version
+#DEPENDS+=		{perl>=5.10.1,p5-version>=0.76}:../../devel/p5-version
 
 BUILD_DEPENDS+=		p5-Test-Script>=1.03:../../devel/p5-Test-Script
 

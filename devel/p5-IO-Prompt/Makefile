@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:14 wiz Exp $
 #
 
 DISTNAME=	IO-Prompt-0.997002
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/~dconway/IO-Prompt/
 COMMENT=	Interactively prompt for user input
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.10,p5-version-[0-9]*}:../../devel/p5-version
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Want-[0-9]*:../../devel/p5-Want
 

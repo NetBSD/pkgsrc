@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:48:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:07 wiz Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -78,7 +78,7 @@ DEPENDS+=	faad2-[0-9]*:../../audio/faad2
 # Perl modules with native code
 DEPENDS+=	p5-Audio-Scan>=0.84:../../audio/p5-Audio-Scan
 DEPENDS+=	p5-Class-XSAccessor>=1.05:../../devel/p5-Class-XSAccessor
-DEPENDS+=	{perl>=5.10.0,p5-Compress-Raw-Zlib-[0-9]*}:../../devel/p5-Compress-Raw-Zlib
+#DEPENDS+=	{perl>=5.10.0,p5-Compress-Raw-Zlib-[0-9]*}:../../devel/p5-Compress-Raw-Zlib
 DEPENDS+=	p5-DBD-mysql>=3.0002:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBI>=1.608:../../databases/p5-DBI
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
