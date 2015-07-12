@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2986 2015/07/12 07:27:12 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.2987 2015/07/12 07:58:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5626,3 +5626,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBIx-Class-Helpers to 2.030001 [wen 2015-07-12]
 	Updated math/p5-Number-Tolerant to 1.706 [wen 2015-07-12]
 	Updated net/dtcpclient to 20090812nb1 [dholland 2015-07-12]
+	Updated cad/py-simpy to 3.0.8 [wen 2015-07-12]
