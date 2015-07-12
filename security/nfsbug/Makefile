@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/23 18:16:37 asau Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/12 07:19:13 dholland Exp $
 
 DISTNAME=	nfsshell-1.0
 PKGREVISION=	1
@@ -9,8 +9,6 @@ DISTFILES=	nfsBugFerret.tgz \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NFS security verification suite
-
-ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Darwin-*-* HPUX-*-*
 
 EXTRACT_ONLY=	nfsBugFerret.tgz
 WRKSRC=		${WRKDIR}/nfsbug
