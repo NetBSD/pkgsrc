@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.24 2015/06/12 17:02:24 tron Exp $
+@comment $NetBSD: PLIST.common,v 1.24.2.1 2015/07/12 10:48:58 tron Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1151,6 +1151,7 @@ man/man3/SSL_CTX_ctrl.3
 man/man3/SSL_CTX_flush_sessions.3
 man/man3/SSL_CTX_free.3
 man/man3/SSL_CTX_get0_chain_certs.3
+man/man3/SSL_CTX_get0_param.3
 man/man3/SSL_CTX_get_cert_store.3
 man/man3/SSL_CTX_get_client_CA_list.3
 man/man3/SSL_CTX_get_client_cert_cb.3
@@ -1201,6 +1202,7 @@ man/man3/SSL_CTX_set1_chain.3
 man/man3/SSL_CTX_set1_chain_cert_store.3
 man/man3/SSL_CTX_set1_curves.3
 man/man3/SSL_CTX_set1_curves_list.3
+man/man3/SSL_CTX_set1_param.3
 man/man3/SSL_CTX_set1_verify_cert_store.3
 man/man3/SSL_CTX_set_cert_cb.3
 man/man3/SSL_CTX_set_cert_store.3
@@ -1249,6 +1251,7 @@ man/man3/SSL_CTX_use_certificate_chain_file.3
 man/man3/SSL_CTX_use_certificate_file.3
 man/man3/SSL_CTX_use_psk_identity_hint.3
 man/man3/SSL_CTX_use_serverinfo.3
+man/man3/SSL_CTX_use_serverinfo_file.3
 man/man3/SSL_SESSION_free.3
 man/man3/SSL_SESSION_get_ex_data.3
 man/man3/SSL_SESSION_get_ex_new_index.3
@@ -1278,6 +1281,7 @@ man/man3/SSL_do_handshake.3
 man/man3/SSL_flush_sessions.3
 man/man3/SSL_free.3
 man/man3/SSL_get0_chain_certs.3
+man/man3/SSL_get0_param.3
 man/man3/SSL_get1_curves.3
 man/man3/SSL_get_SSL_CTX.3
 man/man3/SSL_get_accept_state.3
@@ -1337,6 +1341,7 @@ man/man3/SSL_set1_chain.3
 man/man3/SSL_set1_chain_cert_store.3
 man/man3/SSL_set1_curves.3
 man/man3/SSL_set1_curves_list.3
+man/man3/SSL_set1_param.3
 man/man3/SSL_set1_verify_cert_store.3
 man/man3/SSL_set_bio.3
 man/man3/SSL_set_cert_cb.3
@@ -1601,7 +1606,6 @@ man/man3/lh_node_usage_stats_bio.3
 man/man3/lh_retrieve.3
 man/man3/lh_stats.3
 man/man3/lh_stats_bio.3
-man/man3/openssl_.3
 man/man3/openssl_bio.3
 man/man3/openssl_blowfish.3
 man/man3/openssl_bn.3
