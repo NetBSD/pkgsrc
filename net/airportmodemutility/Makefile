@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:09 asau Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 05:12:10 dholland Exp $
 
 DISTNAME=	${BINNAME}_20
 PKGNAME=	${BINNAME}-2.0
@@ -12,8 +12,6 @@ HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Modem (dis)connection utility for Apple's Airport Base Station
 
 PLIST_SUBST+=	BINNAME=${BINNAME:Q} JARNAME=${JARNAME:Q}
-
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc Darwin-*-*
 
 BINNAME=	airportmodemutility
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
