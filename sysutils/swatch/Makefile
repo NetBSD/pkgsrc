@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:51:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:29 wiz Exp $
 #
 
 DISTNAME=	swatch-3.2.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 # or later
 DEPENDS+=	p5-Date-Calc>=0:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Date-Manip>=0:../../devel/p5-Date-Manip
 DEPENDS+=	p5-File-Tail>=0:../../misc/p5-File-Tail
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=1.12}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=1.12}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-TimeDate>=0:../../time/p5-TimeDate
 
 PERL5_PACKLIST=	auto/swatch/.packlist

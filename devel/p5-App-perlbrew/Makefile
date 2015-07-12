@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/06/12 10:48:54 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/07/12 18:56:09 wiz Exp $
 
 DISTNAME=	App-perlbrew-0.73
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-CPAN-Perl-Releases>=1.10:../../devel/p5-CPAN-Perl-Releases
 DEPENDS+=	curl-[0-9]*:../../www/curl
 
 # actually, only TEST_DEPENDS
-BUILD_DEPENDS+=	{perl>=5.13.11,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.13.11,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
 #		Test::More in perl 5.14
 BUILD_DEPENDS+=	p5-Test-Output>=0:../../devel/p5-Test-Output
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception

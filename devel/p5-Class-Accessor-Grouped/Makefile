@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/06/12 10:48:58 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/07/12 18:56:10 wiz Exp $
 
 DISTNAME=	Class-Accessor-Grouped-0.10012
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Sub-Name>=0.05:../../devel/p5-Sub-Name
 # For test target
 BUILD_DEPENDS+=	p5-Sub-Identify-[0-9]*:../../devel/p5-Sub-Identify
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Class-XSAccessor>=1.15:../../devel/p5-Class-XSAccessor
 
 USE_LANGUAGES=		c

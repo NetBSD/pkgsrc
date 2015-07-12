@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:34 wiz Exp $
 
 DISTNAME=	Catalyst-View-Mason-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Catalyst-Runtime>=5.50:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-HTML-Mason>=0:../../www/p5-HTML-Mason
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
-DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
-DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/View/Mason/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/06/12 10:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2015/07/12 18:56:09 wiz Exp $
 
 DISTNAME=	bugzilla-2.22.7
 PKGREVISION=	7
@@ -12,13 +12,13 @@ COMMENT=	Web based bug tracking system
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=1.38:../../databases/p5-DBI
-DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
-DEPENDS+=	{perl>=5.17.3,p5-Text-Tabs+Wrap>=2001.0131}:../../textproc/p5-Text-Tabs+Wrap
+#DEPENDS+=	{perl>=5.17.3,p5-Text-Tabs+Wrap>=2001.0131}:../../textproc/p5-Text-Tabs+Wrap
 #DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-MailTools>=1.74:../../mail/p5-MailTools
-DEPENDS+=	{perl>=5.8.4,p5-MIME-Base64>=3.01}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.8.4,p5-MIME-Base64>=3.01}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MIME-tools>=5.406:../../mail/p5-MIME-tools
 
 PKG_DESTDIR_SUPPORT=	destdir

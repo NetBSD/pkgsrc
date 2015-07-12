@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/06/12 10:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2015/07/12 18:56:24 wiz Exp $
 
 DISTNAME=	razor-agents-2.85
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Distributed and collaborative spam detection network
 LICENSE=	artistic-2.0
 
 # MIME::QuotedPrint, Getopt::Long, File::Copy needed from the perl package
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 

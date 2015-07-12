@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:52:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=		URI-Find-20140709
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=		${PERL5_LICENSE}
 
 # requires URI::URL 5.00 - oldest available URI on CPAN contains 5.03
 DEPENDS+=		p5-URI>=1.60:../../www/p5-URI
-BUILD_DEPENDS+=		{perl>=5.10.1,p5-Test-Simple>=0.82}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=		{perl>=5.10.1,p5-Test-Simple>=0.82}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/06/12 10:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=	Email-Address-1.905
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Email-Address/
 COMMENT=	RFC 2822 Address Parsing and Creation
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+#DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST= auto/Email/Address/.packlist
 

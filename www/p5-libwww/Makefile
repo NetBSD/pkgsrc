@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2015/06/12 10:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	libwww-perl-6.13
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/libwww-perl/
 COMMENT=	Perl5 library for WWW access
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 #		Encode in perl 5.14
 DEPENDS+=	p5-Encode-Locale>=0:../../textproc/p5-Encode-Locale
 DEPENDS+=	p5-File-Listing>=6:../../devel/p5-File-Listing
@@ -26,8 +26,8 @@ DEPENDS+=	p5-HTTP-Message>=6:../../www/p5-HTTP-Message
 #		IO::Select in perl 5.14
 #		IO::Socket in perl 5.14
 DEPENDS+=	p5-LWP-MediaTypes>=6:../../www/p5-LWP-MediaTypes
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=2.1}:../../converters/p5-MIME-Base64
-DEPENDS+=	{perl>=5.10,p5-Net>=1.09}:../../net/p5-Net # for Net::FTP>=2.58
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=2.1}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.10,p5-Net>=1.09}:../../net/p5-Net # for Net::FTP>=2.58
 DEPENDS+=	p5-Net-HTTP>=6.07:../../www/p5-Net-HTTP
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 #		URI::Escape in URI
@@ -35,7 +35,7 @@ DEPENDS+=	p5-WWW-RobotRules>=6.01:../../www/p5-WWW-RobotRules
 
 # Optionals
 DEPENDS+=	p5-LWP-Protocol-https>=6.02:../../www/p5-LWP-Protocol-https
-DEPENDS+=	{perl>=5.9.4,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress
+#DEPENDS+=	{perl>=5.9.4,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset
