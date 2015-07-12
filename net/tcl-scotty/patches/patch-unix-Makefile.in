@@ -1,4 +1,4 @@
-$NetBSD: patch-unix-Makefile.in,v 1.2 2014/05/30 11:35:35 joerg Exp $
+$NetBSD: patch-unix-Makefile.in,v 1.3 2015/07/12 04:59:55 dholland Exp $
 
 Put installed files under lib/tcl, so that tcl more easily picks it
 up using e.g. "package require Tnm".
@@ -7,6 +7,8 @@ Don't initialize $(LD_SEARCH_FLAGS), fixes PR#30241.
 
 Support DESTDIR installs, but not yet for the "uninstall" target,
 since that's not used in pkgsrc.
+
+Use SPECIAL_PERMS instead of installing setuid directly.
 
 --- unix/Makefile.in.orig	2001-06-15 10:06:35.000000000 +0000
 +++ unix/Makefile.in
@@ -421,7 +423,7 @@ since that's not used in pkgsrc.
  		else true; \
  		fi; \
  	    done;
-@@ -661,44 +670,44 @@ tki-install-apps:
+@@ -661,44 +670,45 @@ tki-install-apps:
  	    do \
  	    echo "Installing $$i"; \
  	    base=`basename $$i`; \
@@ -465,7 +467,8 @@ since that's not used in pkgsrc.
  	    do \
  	    echo "Installing $$i"; \
 -	    $(INSTALL_PROGRAM) -o root -m 4755 $$i $(BIN_INSTALL_DIR)/$$i; \
-+	    $(INSTALL_PROGRAM) -o root -m 4555 $$i ${DESTDIR}/$(BIN_INSTALL_DIR)/$$i; \
++	    : $(INSTALL_PROGRAM) -o root -m 4555 $$i ${DESTDIR}/$(BIN_INSTALL_DIR)/$$i; \
++	    $(INSTALL_PROGRAM) $$i ${DESTDIR}/$(BIN_INSTALL_DIR)/$$i; \
  	    done
  
  uninstall: tnm-uninstall uninstall-man tki-uninstall
@@ -479,7 +482,7 @@ since that's not used in pkgsrc.
  	@for i in $(LIB_INSTALL_DIR)/tnm$(TNM_VERSION)/* ; \
  	    do \
  	    if [ "`basename $$i`" != "site" ] ; then \
-@@ -713,9 +722,9 @@ tnm-uninstall:
+@@ -713,9 +723,9 @@ tnm-uninstall:
  	    fi
  
  tki-uninstall:
@@ -491,7 +494,7 @@ since that's not used in pkgsrc.
  	@for i in $(LIB_INSTALL_DIR)/tkined$(TKI_VERSION)/* ; \
  	    do \
  	    if [ "`basename $$i`" != "site" ] ; then \
-@@ -750,7 +759,7 @@ clean:
+@@ -750,7 +760,7 @@ clean:
  	@rm -f $(TNM_OBJS) $(TKI_OBJS) scotty.o ntping.o straps.o
  	@rm -f tnmGdmoScan.c tnmGdmoParser.c tnmGdmoParser.h
  	@rm -f scotty ntping straps tkined
@@ -500,7 +503,7 @@ since that's not used in pkgsrc.
  	@rm -f core *_svc.c *~ *.bak so_locations lmake.???
  	@rm -f map.so tnmMap.o tnmMapUtil.o 
  	@rm -f tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
-@@ -821,8 +830,8 @@ BIN_FILES =	$(BIN_INSTALL_DIR)/tkined$(T
+@@ -821,8 +831,8 @@ BIN_FILES =	$(BIN_INSTALL_DIR)/tkined$(T
  		$(MAN8_INSTALL_DIR)/straps.8 \
  		$(BIN_INSTALL_DIR)/ntping \
  		$(MAN8_INSTALL_DIR)/ntping.8 \

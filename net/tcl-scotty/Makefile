@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:48 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/07/12 04:59:55 dholland Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.nosuchname.net/scotty/
 COMMENT=	Network management extensions to TCL
 
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT= destdir
 
 DIST_VERS=	2.1.11
 
@@ -36,6 +34,9 @@ USE_TOOLS+=	lex yacc
 PLIST_SUBST+=	MACHINE="${MACHINE}"
 
 INSTALL_TARGET= tnm-install install-man sinstall
+
+SPECIAL_PERMS+=	bin/ntping ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	bin/straps ${SETUID_ROOT_PERMS}
 
 post-extract:
 	cd ${WRKSRC}/${BUILD_DIRS} && ${RM} -f ../doc/http.n
