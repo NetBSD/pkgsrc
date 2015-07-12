@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.91 2015/06/12 10:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2015/07/12 00:44:46 wiz Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 
-COMMENT=	GTK2 port of the WebKit browser engine
+COMMENT=	GTK port of the WebKit browser engine
 
-CONFIGURE_ARGS+=	--with-gtk=2.0
-CONFIGURE_ARGS+=	--disable-webkit2
+BUILD_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
-LDFLAGS+=	-Wl,-no-keep-memory -Wl,-reduce-memory
+# shm_open(3) and shm_unlink(3) appeared in NetBSD 7.0
+.if !empty(MACHINE_PLATFORM:MNetBSD-*)
+DEPENDS+=       osabi-NetBSD>=7.0:../../pkgtools/osabi
 .endif
 
 #introspection support
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24.17nb3
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
