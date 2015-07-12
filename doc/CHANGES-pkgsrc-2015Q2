@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.6 2015/07/12 09:15:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.7 2015/07/12 10:49:16 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -22,3 +22,5 @@ Pullup ticket #4768 - requested by taca
 net/bind99: security update
 Pullup ticket #4769 - requested by taca
 net/bind910: security update
+Pullup ticket #4770 - requested by wiz
+security/openssl: security update
