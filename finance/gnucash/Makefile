@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.218 2015/07/01 11:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.219 2015/07/12 00:39:55 wiz Exp $
 
 DISTNAME=		gnucash-2.6.7
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -61,6 +62,6 @@ BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
