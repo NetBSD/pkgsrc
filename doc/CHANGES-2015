@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2982 2015/07/12 00:47:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2983 2015/07/12 03:12:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5622,3 +5622,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/webkit24-gtk version 2.4.9nb1 [wiz 2015-07-12]
 	Updated www/webkit-gtk to 2.8.1 [wiz 2015-07-12]
 	Added net/gnome-online-accounts version 3.16.3 [wiz 2015-07-12]
+	Updated databases/p5-DBIx-Class to 0.082820 [wen 2015-07-12]
