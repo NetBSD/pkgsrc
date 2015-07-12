@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2015/07/12 00:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2015/07/12 21:50:12 wiz Exp $
 
 .include "Makefile.common"
 
@@ -9,9 +9,7 @@ COMMENT=	GTK port of the WebKit browser engine
 BUILD_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
 # shm_open(3) and shm_unlink(3) appeared in NetBSD 7.0
-.if !empty(MACHINE_PLATFORM:MNetBSD-*)
-DEPENDS+=       osabi-NetBSD>=7.0:../../pkgtools/osabi
-.endif
+NOT_FOR_PLATFORM=	NetBSD-[1-6]*-*
 
 #introspection support
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24.17nb3
