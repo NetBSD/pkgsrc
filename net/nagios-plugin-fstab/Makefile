@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/03 18:08:23 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/12 06:43:24 dholland Exp $
 #
 
 PKGNAME=	nagios-plugin-fstab-${DISTNAME:C/.*-//}
@@ -12,7 +12,8 @@ HOMEPAGE=	http://ftp.espci.fr/pub/nagios-local/
 COMMENT=	Mount points and swaps monitoring plugin for Nagios
 LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-* \
+			MirBSD-*-* Bitrig-*-* Linux-*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
