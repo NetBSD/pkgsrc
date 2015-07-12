@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/06/12 10:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/12 18:56:27 wiz Exp $
 
 DISTNAME=		torrentutils-0.3.0
 PKGREVISION=		9
@@ -11,7 +11,7 @@ COMMENT=		Manage BitTorrent files and interact with trackers
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 
 USE_TOOLS+=		bash:run gmake perl:run
 REPLACE_BASH+=		defrag.in

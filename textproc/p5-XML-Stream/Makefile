@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/06/12 10:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/12 18:56:32 wiz Exp $
 #
 
 DISTNAME=	XML-Stream-1.24
@@ -13,7 +13,7 @@ COMMENT=	XML::Stream provides you with access to XML Stream
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	p5-Authen-SASL-[0-9]*:../../security/p5-Authen-SASL
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>0}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>0}:../../converters/p5-MIME-Base64
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=	auto/XML/Stream/.packlist

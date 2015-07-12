@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/06/12 10:48:25 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/07/12 18:56:07 wiz Exp $
 
 DISTNAME=	BioPerl-1.6.924
 PKGNAME=	${DISTNAME:tl}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.bioperl.org/
 COMMENT=	Perl tools for computational molecular biology
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	{perl>=5.19.6,p5-Module-Build>0.42}:../../devel/p5-Module-Build
+#BUILD_DEPENDS+=	{perl>=5.19.6,p5-Module-Build>0.42}:../../devel/p5-Module-Build
 BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 DEPENDS+=	p5-Algorithm-Munkres-[0-9]*:../../math/p5-Algorithm-Munkres
@@ -19,10 +19,10 @@ DEPENDS+=	p5-Array-Compare-[0-9]*:../../devel/p5-Array-Compare
 DEPENDS+=	p5-Bio-ASN1-EntrezGene-[0-9]*:../../biology/p5-Bio-ASN1-EntrezGene
 DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=	p5-Convert-Binary-C-[0-9]*:../../devel/p5-Convert-Binary-C
-DEPENDS+=	{perl>=5,p5-DB_File-[0-9]*}:../../databases/p5-DB_File
+#DEPENDS+=	{perl>=5,p5-DB_File-[0-9]*}:../../databases/p5-DB_File
 DEPENDS+=	p5-Data-Stag>=0.11:../../devel/p5-Data-Stag
 DEPENDS+=	p5-Error-[0-9]*:../../devel/p5-Error
-DEPENDS+=	{perl>=5.10.1,p5-ExtUtils-Manifest>=1.52}:../../devel/p5-ExtUtils-Manifest
+#DEPENDS+=	{perl>=5.10.1,p5-ExtUtils-Manifest>=1.52}:../../devel/p5-ExtUtils-Manifest
 DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
 DEPENDS+=	p5-Graph>=0.50:../../devel/p5-Graph
 DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
@@ -37,7 +37,7 @@ DEPENDS+=	p5-SVG>=2.26:../../graphics/p5-SVG
 DEPENDS+=	p5-Set-Scalar-[0-9]*:../../devel/p5-Set-Scalar
 DEPENDS+=	p5-Sort-Naturally-[0-9]*:../../devel/p5-Sort-Naturally
 DEPENDS+=	p5-Spreadsheet-ParseExcel-[0-9]*:../../math/p5-Spreadsheet-ParseExcel
-DEPENDS+=	{perl>=5.8.1,p5-Storable>=2.05}:../../devel/p5-Storable
+#DEPENDS+=	{perl>=5.8.1,p5-Storable>=2.05}:../../devel/p5-Storable
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-SAX-Writer-[0-9]*:../../textproc/p5-XML-SAX-Writer
 DEPENDS+=	p5-XML-SAX>=0.15:../../textproc/p5-XML-SAX

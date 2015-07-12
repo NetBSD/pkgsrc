@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=	Email-MessageID-1.405
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Generate world unique message-ids
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Email-Address>=1.80:../../mail/p5-Email-Address
-DEPENDS+=	{perl>5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+#DEPENDS+=	{perl>5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST= auto/Email/MessageID/.packlist
 

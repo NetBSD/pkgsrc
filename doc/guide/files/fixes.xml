@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.131 2015/04/25 11:31:01 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.132 2015/07/12 18:56:21 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -443,20 +443,6 @@ DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
 	vulnerabilities file. See <xref
 	linkend="security-handling"/> for more
 	information.</para>
-      </listitem>
-      <listitem>
-	<para>If the package depends on either one of two (or more)
-	packages, specify the <quote>pre-req-package-name</quote> as a
-	comma-separated list between curly braces.</para>
-
-	<para>As an example, take a package that depends on the Perl
-	<quote>version</quote> module, which has been part of Perl
-	itself since version 5.10.0. This either/or dependency is
-	expressed as:</para>
-
-	<programlisting>
-DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
-	</programlisting>
       </listitem>
     </orderedlist>
 

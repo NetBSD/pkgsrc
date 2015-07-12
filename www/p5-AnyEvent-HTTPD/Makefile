@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:33 wiz Exp $
 
 DISTNAME=	AnyEvent-HTTPD-0.93
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ PERL5_PACKLIST= auto/AnyEvent/HTTPD/.packlist
 DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
 DEPENDS+=	p5-Object-Event-[0-9]*:../../devel/p5-Object-Event
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-DEPENDS+=	{perl>=5,p5-Time-Local-[0-9]*}:../../time/p5-Time-Local
+#DEPENDS+=	{perl>=5,p5-Time-Local-[0-9]*}:../../time/p5-Time-Local
 DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 DEPENDS+=	p5-AnyEvent-HTTP-[0-9]*:../../www/p5-AnyEvent-HTTP
 

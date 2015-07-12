@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/12 18:56:25 wiz Exp $
 #
 
 DISTNAME=	Spreadsheet-Read-0.54
@@ -20,7 +20,7 @@ MAKE_ENV+=		AUTOMATED_TESTING=1
 # This is useless but placate check-interpreter.mk
 REPLACE_PERL+=	Read.pm
 
-DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.57:../../math/p5-Spreadsheet-ParseExcel
 DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.20:../../math/p5-Spreadsheet-ReadSXC
@@ -29,7 +29,7 @@ DEPENDS+=	p5-Text-CSV_XS>=0.73:../../textproc/p5-Text-CSV_XS
 DEPENDS+=	p5-Text-CSV>=1.17:../../textproc/p5-Text-CSV
 
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=	{perl>=5.11.1,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.11.1,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

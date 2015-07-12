@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/06/12 10:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/07/12 18:56:31 wiz Exp $
 
 DISTNAME=	Text-vCard-3.07
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Parse, edit and create vCards (RFC 2426)
 LICENSE=	${PERL5_LICENSE}
 
 # for MIME::QuotedPrint
-DEPENDS+=	{perl>=5.8.8,p5-MIME-Base64>=3.07}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.8.8,p5-MIME-Base64>=3.07}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 DEPENDS+=	p5-Text-Tabs+Wrap-[0-9]*:../../textproc/p5-Text-Tabs+Wrap

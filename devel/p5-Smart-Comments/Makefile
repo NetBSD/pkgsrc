@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:18 wiz Exp $
 #
 
 DISTNAME=	Smart-Comments-1.000005
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Smart-Comments/
 COMMENT=	Perl 5 module to insert debugging and tracking code easily
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Smart/Comments/.packlist

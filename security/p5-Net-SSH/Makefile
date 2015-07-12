@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:51:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/12 18:56:29 wiz Exp $
 #
 
 DISTNAME=		Net-SSH-Perl-1.34
@@ -20,9 +20,9 @@ DEPENDS+=		p5-Crypt-RSA>=1.37:../../security/p5-Crypt-RSA
 DEPENDS+=		p5-Crypt-IDEA-[0-9]*:../../security/p5-Crypt-IDEA
 DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
 DEPENDS+=		p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Digest-SHA1>=2.10:../../security/p5-Digest-SHA1
-DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Math-GMP>=1.04:../../math/p5-Math-GMP
 DEPENDS+=		p5-Math-Pari>=2.001804:../../math/p5-Math-Pari
 DEPENDS+=		p5-String-CRC32>=1.2:../../textproc/p5-String-CRC32

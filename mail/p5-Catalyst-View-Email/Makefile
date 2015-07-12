@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:23 wiz Exp $
 
 DISTNAME=	Catalyst-View-Email-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -16,9 +16,9 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.70000:../../www/p5-Catalyst-Runtime
 # Email::MIME-1.900 merges Email::MIME::Creator
 DEPENDS+=	p5-Email-MIME>=1.900:../../mail/p5-Email-MIME
 DEPENDS+=	p5-Email-Sender>=0.100110:../../mail/p5-Email-Sender
-DEPENDS+=	{perl>=5.10.1,p5-MIME-Base64>=3.08}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.10.1,p5-MIME-Base64>=3.08}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Moose>=0.93:../../devel/p5-Moose
-DEPENDS+=	{perl>=5.12.0,p5-parent>=0.223}:../../devel/p5-parent
+#DEPENDS+=	{perl>=5.12.0,p5-parent>=0.223}:../../devel/p5-parent
 
 BUILD_DEPENDS+=	p5-Catalyst-View-Mason-[0-9]*:../../www/p5-Catalyst-View-Mason
 BUILD_DEPENDS+=	p5-Catalyst-View-TT-[0-9]*:../../www/p5-Catalyst-View-TT

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:18 wiz Exp $
 
 DISTNAME=	SVN-Class-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Manipulate Subversion workspaces with Perl objects
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
-DEPENDS+=	{perl>=5.10.0,p5-IPC-Cmd>=0.40}:../../devel/p5-IPC-Cmd
+#DEPENDS+=	{perl>=5.10.0,p5-IPC-Cmd>=0.40}:../../devel/p5-IPC-Cmd
 DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Path-Class-File-Stat-[0-9]*:../../devel/p5-Path-Class-File-Stat
