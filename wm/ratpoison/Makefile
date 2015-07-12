@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.40 2015/06/12 10:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/07/12 08:40:48 wiz Exp $
 #
 
-DISTNAME=	ratpoison-1.4.5
-PKGREVISION=	8
+DISTNAME=	ratpoison-1.4.8
 CATEGORIES=	wm
 MASTER_SITES=	http://savannah.nongnu.org/download/ratpoison/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/ratpoison/
 COMMENT=	Simple window manager with no fat library dependencies
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		yes
