@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/23 17:18:09 asau Exp $
+# $NetBSD: Makefile,v 1.38 2015/07/12 05:10:32 dholland Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -12,8 +12,6 @@ HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Configuration program for Apple's Airport Base Station
 
 PLIST_SUBST+=	BINNAME=${BINNAME:Q} JARNAME=${JARNAME:Q}
-
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc Darwin-*-*
 
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
