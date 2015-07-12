@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/12 10:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/12 18:56:27 wiz Exp $
 #
 
 DISTNAME=	grake-0.1.0
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
 DEPENDS+=	p5-Test-Pod>=1.44:../../devel/p5-Test-Pod
-DEPENDS+=	{perl>=5.10.1,p5-version>=0.77}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.10.1,p5-version>=0.77}:../../devel/p5-version
 DEPENDS+=	p5-Umph-Prompt>=0.1.0:../../net/p5-Umph-Prompt
 
 PERL5_PACKLIST=	auto/grake/.packlist

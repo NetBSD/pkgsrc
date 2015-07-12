@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:48:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:10 wiz Exp $
 
 DISTNAME=	CPAN-FindDependencies-2.43
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Capture-Tiny>=0.05:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Devel-CheckOS>=1.52:../../devel/p5-Devel-CheckOS
-DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
 DEPENDS+=	p5-libwww>=1.41:../../www/p5-libwww
 DEPENDS+=	p5-Parse-CPAN-Packages>=2.31:../../devel/p5-Parse-CPAN-Packages
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI # really URI::file>=4.13

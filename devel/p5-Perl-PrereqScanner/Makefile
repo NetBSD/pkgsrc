@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:49:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:17 wiz Exp $
 #
 
 DISTNAME=	Perl-PrereqScanner-1.023
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Perl-PrereqScanner/
 COMMENT=	Tool to scan your Perl code for its prerequisites
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta-Requirements>=2.120.630}:../../devel/p5-CPAN-Meta-Requirements
+#DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta-Requirements>=2.120.630}:../../devel/p5-CPAN-Meta-Requirements
 DEPENDS+=	p5-Getopt-Long-Descriptive-[0-9]*:../../devel/p5-Getopt-Long-Descriptive
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Module-Path-[0-9]*:../../filesystems/p5-Module-Path
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 DEPENDS+=	p5-String-RewritePrefix>=0.005:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 PERL5_PACKLIST=	auto/Perl/PrereqScanner/.packlist

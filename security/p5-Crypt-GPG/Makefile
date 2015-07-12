@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:51:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:28 wiz Exp $
 #
 
 DISTNAME=		Crypt-GPG-1.63
@@ -13,7 +13,7 @@ COMMENT=		Object Oriented Interface to GnuPG
 
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=		p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
-DEPENDS+=		{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=		{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 # It defaults to a gpg path in /usr/local, which is not helpful

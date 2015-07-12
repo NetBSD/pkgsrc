@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/06/12 10:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	Pod-POM-Web-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Alien-GvaScript>=1.21:../../www/p5-Alien-GvaScript
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-MIME-Types-[0-9]*:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Pod-POM>=0.17:../../textproc/p5-Pod-POM
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 

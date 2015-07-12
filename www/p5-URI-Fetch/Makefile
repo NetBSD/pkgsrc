@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/06/12 10:52:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=		URI-Fetch-0.10
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
-DEPENDS+=		{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib
+#DEPENDS+=		{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib
 #DEPENDS+=		p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 

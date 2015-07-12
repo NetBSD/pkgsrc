@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:49:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/12 18:56:14 wiz Exp $
 
 DISTNAME=	Log-Dispatchouli-2.012
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Try-Tiny>=0.04:../../devel/p5-Try-Tiny
 
 BUILD_DEPENDS+= p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+= p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Log/Dispatchouli/.packlist
 

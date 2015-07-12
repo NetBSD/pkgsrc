@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/06/12 10:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/07/12 18:56:11 wiz Exp $
 
 DISTNAME=	Data-UUID-1.220
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Data-UUID/
 COMMENT=	Perl module for generating UUIDs
 LICENSE=	modified-bsd
 
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Data/UUID/.packlist

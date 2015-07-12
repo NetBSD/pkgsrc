@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/12 10:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/07/12 18:56:36 wiz Exp $
 #
 
 DISTNAME=	wApua-0.05.1
@@ -14,7 +14,7 @@ DEPENDS+=	p5-URI>=1.03:../../www/p5-URI
 DEPENDS+=	p5-libwww>=5.47:../../www/p5-libwww
 DEPENDS+=	p5-Tk>=800.000:../../x11/p5-Tk
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 
 PERL5_PACKLIST=		auto/wApua/.packlist

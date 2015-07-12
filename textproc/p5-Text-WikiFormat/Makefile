@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:31 wiz Exp $
 #
 
 DISTNAME=	Text-WikiFormat-0.81
@@ -13,7 +13,7 @@ COMMENT=	Translate Wiki formatted text into other formats
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
-DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.14}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.14}:../../devel/p5-Scalar-List-Utils
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Text/WikiFormat/.packlist

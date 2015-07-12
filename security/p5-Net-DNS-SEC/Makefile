@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/07/12 14:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/07/12 18:56:29 wiz Exp $
 
 DISTNAME=		Net-DNS-SEC-0.22
 PKGNAME=		p5-${DISTNAME}
@@ -14,13 +14,13 @@ DEPENDS+=		p5-Crypt-OpenSSL-Bignum>=0.03:../../security/p5-Crypt-OpenSSL-Bignum
 DEPENDS+=		p5-Crypt-OpenSSL-DSA>=0.10:../../security/p5-Crypt-OpenSSL-DSA
 DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.27:../../security/p5-Crypt-OpenSSL-RSA
 DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
-DEPENDS+=		{perl>=5.10.0,p5-Digest-SHA>=5.23}:../../security/p5-Digest-SHA
+#DEPENDS+=		{perl>=5.10.0,p5-Digest-SHA>=5.23}:../../security/p5-Digest-SHA
 DEPENDS+=		p5-Digest-SHA1>=2.04:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-MIME-Base32-[0-9]*:../../converters/p5-MIME-Base32
-DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Net-DNS>=0.64:../../net/p5-Net-DNS
 
-BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
+#BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
 
 PERL5_PACKLIST=		auto/Net/DNS/SEC/.packlist
 

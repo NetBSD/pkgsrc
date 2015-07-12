@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/12 18:56:34 wiz Exp $
 
 DISTNAME=	Catalyst-DispatchType-Regex-5.90033
 PKGNAME=	p5-${DISTNAME}
@@ -12,10 +12,10 @@ COMMENT=	Deprecated Catalyst Regex DispatchType
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=0:../../devel/p5-Moose
-DEPENDS+=	{perl>=5.7.3,p5-Text-Balanced>=0}:../../textproc/p5-Text-Balanced
+#DEPENDS+=	{perl>=5.7.3,p5-Text-Balanced>=0}:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Text-SimpleTable>=0:../../textproc/p5-Text-SimpleTable
 
-BUILD_DEPENDS+=	{perl>=5.19.1,p5-Module-Build>=0.4004}:../../devel/p5-Module-Build
+#BUILD_DEPENDS+=	{perl>=5.19.1,p5-Module-Build>=0.4004}:../../devel/p5-Module-Build
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/DispatchType/Regex/.packlist
