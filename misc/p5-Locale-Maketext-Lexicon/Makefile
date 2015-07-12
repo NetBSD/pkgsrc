@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/06/12 10:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/07/12 18:56:25 wiz Exp $
 #
 
 DISTNAME=		Locale-Maketext-Lexicon-1.00
@@ -12,7 +12,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Locale-Maketext-Lexicon/
 COMMENT=		Use other catalog formats in Maketext
 LICENSE=		mit
 
-DEPENDS+=		{perl>=5.8.0,p5-Locale-Maketext-[0-8]*}:../../misc/p5-Locale-Maketext
+#DEPENDS+=		{perl>=5.8.0,p5-Locale-Maketext-[0-8]*}:../../misc/p5-Locale-Maketext
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Locale/Maketext/Lexicon/.packlist

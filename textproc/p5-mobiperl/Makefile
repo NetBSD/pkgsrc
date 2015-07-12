@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/07/12 18:56:32 wiz Exp $
 #
 
 DISTNAME=	mobiperl-0.0.43
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Getopt-Mixed-[0-9]*:../../devel/p5-Getopt-Mixed
 DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-Image-BMP-[0-9]*:../../graphics/p5-Image-BMP
-DEPENDS+=	{perl>=5.7.3,p5-Encode-[0-9]*}:../../textproc/p5-Encode
+#DEPENDS+=	{perl>=5.7.3,p5-Encode-[0-9]*}:../../textproc/p5-Encode
 DEPENDS+=	p5-XML-Parser-Lite-Tree-[0-9]*:../../textproc/p5-XML-Parser-Lite-Tree
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree

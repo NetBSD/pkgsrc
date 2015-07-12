@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/06/12 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/07/12 18:56:24 wiz Exp $
 
 DISTNAME=	MIME-tools-5.506
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=	http://search.cpan.org/dist/MIME-tools/
 COMMENT=	Perl5 modules for encoding and decoding MIME messages
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.9.5,p5-File-Temp>=0.18}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.9.5,p5-File-Temp>=0.18}:../../devel/p5-File-Temp
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
-DEPENDS+=	{perl>=5.8.6,p5-MIME-Base64>=3.03}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.8.6,p5-MIME-Base64>=3.03}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 # missing dependency in Makefile, see
 # https://rt.cpan.org/Public/Bug/Display.html?id=72223

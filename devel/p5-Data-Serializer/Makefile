@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:11 wiz Exp $
 
 DISTNAME=	Data-Serializer-0.60
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ PERL5_MODULE_TYPE=	Module::Build
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Serializer/.packlist
 
-DEPENDS+=	{perl>=5.10,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
+#DEPENDS+=	{perl>=5.10,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
 
 # Commented dependencies are recommended packages/modules for use with
 # this package/module

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:11 wiz Exp $
 
 DISTNAME=	Debug-Client-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Term-ReadLine-Perl>=1.0303:../../devel/p5-Term-ReadLine-Perl
 
 BUILD_DEPENDS+=	p5-Test-Class>=0.36:../../devel/p5-Test-Class
 BUILD_DEPENDS+= p5-Test-Deep>=0.108:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	{perl>=5.14.2,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.14.2,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Debug/Client/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/12 10:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/07/12 18:56:17 wiz Exp $
 
 DISTNAME=	Path-Class-0.35
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Path/Class/.packlist
 
-DEPENDS+=	{perl>=5.10.0,p5-PathTools>=3.19}:../../devel/p5-PathTools
+#DEPENDS+=	{perl>=5.10.0,p5-PathTools>=3.19}:../../devel/p5-PathTools
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

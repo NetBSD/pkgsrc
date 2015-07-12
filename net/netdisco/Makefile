@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/06/12 10:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/07/12 18:56:25 wiz Exp $
 #
 
 DISTNAME=		netdisco-1.1_with_mibs
@@ -16,12 +16,12 @@ DEPENDS+=		p5-SNMP-Info>=2.04:../../net/p5-SNMP-Info
 DEPENDS+=		p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI
 DEPENDS+=		p5-Apache-Session-[0-9]*:../../www/p5-Apache-Session
 DEPENDS+=		p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
-DEPENDS+=		{perl>=5,p5-DB_File-[0-9]*}:../../databases/p5-DB_File
+#DEPENDS+=		{perl>=5,p5-DB_File-[0-9]*}:../../databases/p5-DB_File
 DEPENDS+=		p5-MasonX-Request-WithApacheSession-[0-9]*:../../www/p5-MasonX-Request-WithApacheSession
 DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=		p5-Graph-[0-9]*:../../devel/p5-Graph
 DEPENDS+=		p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
-DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
+#DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
 DEPENDS+=		p5-Net-NBName-[0-9]*:../../net/p5-Net-NBName
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

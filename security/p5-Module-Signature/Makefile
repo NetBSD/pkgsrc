@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/06/12 10:51:08 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/07/12 18:56:28 wiz Exp $
 
 DISTNAME=	Module-Signature-0.73
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module for module signature file manipulation
 LICENSE=	public-domain
 
 #DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
-DEPENDS+=		{perl>=5.10.0,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
+#DEPENDS+=		{perl>=5.10.0,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
 DEPENDS+=		p5-Crypt-OpenPGP>=1.00:../../security/p5-Crypt-OpenPGP
 
 # OpenPGP dependencies used
@@ -34,11 +34,11 @@ DEPENDS+=		p5-Crypt-Twofish>=2.00:../../security/p5-Crypt-Twofish
 DEPENDS+=		p5-Data-Buffer>=0.04:../../devel/p5-Data-Buffer
 DEPENDS+=		p5-Digest-MD2-[0-9]*:../../security/p5-Digest-MD2
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
+#DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
 DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=		p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
-DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=		# empty

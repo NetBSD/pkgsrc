@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/12 18:56:26 wiz Exp $
 #
 
 DISTNAME=	Net-DNS-Resolver-Programmable-v0.003
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Net-DNS-Resolver-Programmable/
 COMMENT=	Net::DNS::Resolver descendant class for offline emulation of DNS
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 
 USE_LANGUAGES=	# empty

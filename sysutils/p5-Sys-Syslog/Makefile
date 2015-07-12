@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/12 18:56:29 wiz Exp $
 #
 
 DISTNAME=	Sys-Syslog-0.33
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Sys-Syslog/
 COMMENT=	Perl interface to the UNIX syslog(3) calls
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.6.0,p5-XSLoader>=0}:../../devel/p5-XSLoader
+#DEPENDS+=	{perl>=5.6.0,p5-XSLoader>=0}:../../devel/p5-XSLoader
 
 PERL5_PACKLIST=	auto/Sys/Syslog/.packlist
 

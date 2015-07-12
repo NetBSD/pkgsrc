@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:49:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:12 wiz Exp $
 
 DISTNAME=	Devel-NYTProf-6.01
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://code.google.com/p/perl-devel-nytprof/
 COMMENT=	Powerful feature-rich Perl 5 source code profiler
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.84}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.84}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-JSON-Any-[0-9]*:../../converters/p5-JSON-Any
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 

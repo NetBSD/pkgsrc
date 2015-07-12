@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:51:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:27 wiz Exp $
 #
 
 DISTNAME=		antonym-1.9
@@ -11,7 +11,7 @@ HOMEPAGE=		http://subwiki.honeypot.net/cgi-bin/view/Computing/AntoNym
 COMMENT=		Anonymous nymserver account maintenance tool
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=		pgp-2.*:../../security/pgp2
 
 WRKSRC=			${WRKDIR}/antonym

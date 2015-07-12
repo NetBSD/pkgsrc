@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/12 10:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/12 18:56:27 wiz Exp $
 #
 
 DISTNAME=		snmptt_1.3
@@ -13,11 +13,11 @@ HOMEPAGE=		http://www.snmptt.org/
 COMMENT=		SNMP trap handler written in Perl
 
 DEPENDS+=		p5-Config-IniFiles-[0-9]*:../../devel/p5-Config-IniFiles
-DEPENDS+=		{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+#DEPENDS+=		{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=		p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=		p5-DBD-ODBC-[0-9]*:../../databases/p5-DBD-ODBC
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 

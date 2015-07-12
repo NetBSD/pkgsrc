@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:11 wiz Exp $
 
 DISTNAME=	Config-AutoConf-0.311
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Config/AutoConf/.packlist
 
 DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.23}:../../devel/p5-ExtUtils-CBuilder
+#DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.23}:../../devel/p5-ExtUtils-CBuilder
 
 ALL_ENV+=	TMPDIR=${WRKDIR}/tmp
 

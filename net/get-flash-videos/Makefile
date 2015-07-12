@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:25 wiz Exp $
 
 DISTNAME=	get-flash-videos-0.0.20150331
 PKGREVISION=	1
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Crypt-Blowfish_PP-[0-9]*:../../security/p5-Crypt-Blowfish_PP
 DEPENDS+=	p5-Data-AMF-[0-9]*:../../comms/p5-Data-AMF
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Module-Find-[0-9]*:../../devel/p5-Module-Find
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

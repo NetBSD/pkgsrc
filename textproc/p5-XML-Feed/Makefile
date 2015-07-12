@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:32 wiz Exp $
 
 DISTNAME=		XML-Feed-0.52
 PKGNAME=		p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Format-Mail-[0-9]*:../../time/p5-DateTime-Format-Mail
 DEPENDS+=		p5-DateTime-Format-W3CDTF-[0-9]*:../../time/p5-DateTime-Format-W3CDTF
 DEPENDS+=		p5-Feed-Find-[0-9]*:../../textproc/p5-Feed-Find
-DEPENDS+=		{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=		{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=		p5-URI-Fetch-[0-9]*:../../www/p5-URI-Fetch
 DEPENDS+=		p5-XML-Atom>=0.38:../../textproc/p5-XML-Atom

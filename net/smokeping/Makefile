@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/06/24 18:05:57 bouyer Exp $
+# $NetBSD: Makefile,v 1.36 2015/07/12 18:56:27 wiz Exp $
 
 DISTNAME=	smokeping-2.6.7
 PKGREVISION=	5
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--with-htdocs-dir=${PREFIX}/share/httpd/htdocs
 
 DEPENDS+=	rrdtool>=1.0:../../databases/rrdtool
 DEPENDS+=	fping>=2.4b2:../../net/fping
-DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5>=2.20}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5>=2.20}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-HMAC>=1.03:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 DEPENDS+=	p5-FCGI>=0.74:../../www/p5-FCGI

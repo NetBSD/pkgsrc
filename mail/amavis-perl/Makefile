@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/12 18:56:22 wiz Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -24,13 +24,13 @@ DEPENDS+=	lha-[0-9]*:../../archivers/lha
 DEPENDS+=	zoo-[0-9]*:../../archivers/zoo
 DEPENDS+=	freeze-[0-9]*:../../archivers/freeze
 DEPENDS+=	arc-[0-9]*:../../archivers/arc
-DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar-[0-9]*}:../../archivers/p5-Archive-Tar
+#DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar-[0-9]*}:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress #Compress::Zlib>=1.14
+#DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress #Compress::Zlib>=1.14
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
-DEPENDS+=	{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
+#DEPENDS+=	{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
 .include "options.mk"

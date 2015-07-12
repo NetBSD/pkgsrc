@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:24 wiz Exp $
 #
 
 DISTNAME=	IMAP-Client-0.13
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 module for IMAP manipulation
 
 DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
-DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
+#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-URI-imap>=0:../../mail/p5-URI-imap
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 

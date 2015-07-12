@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/06/12 10:49:59 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2015/07/12 18:56:21 wiz Exp $
 
 DISTNAME=		rt-3.8.17
 PKGREVISION=		5
@@ -18,8 +18,8 @@ USE_TOOLS+=	perl:run
 USE_LANGUAGES+=	c
 
 # Core dependencies:
-DEPENDS+=	{perl>=5.7.3,p5-Digest-[0-9]*}:../../security/p5-Digest
-DEPENDS+=	{perl>=5.8.1,p5-Digest-MD5>=2.27}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-[0-9]*}:../../security/p5-Digest
+#DEPENDS+=	{perl>=5.8.1,p5-Digest-MD5>=2.27}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-DBIx-SearchBuilder>=1.54:../../databases/p5-DBIx-SearchBuilder
@@ -29,7 +29,7 @@ DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-HTTP-Server-Simple>=0.34:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-HTTP-Server-Simple-Mason>=0.09:../../www/p5-HTTP-Server-Simple-Mason
 DEPENDS+=	p5-Log-Dispatch>=2.0:../../devel/p5-Log-Dispatch
-DEPENDS+=	{perl>=5.10.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
+#DEPENDS+=	{perl>=5.10.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
 DEPENDS+=	p5-Locale-Maketext-Fuzzy>=0.02:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
@@ -59,7 +59,7 @@ DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
 DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
 DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
 DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
-DEPENDS+=	{perl>=5.10.1,p5-Encode>=2.13}:../../textproc/p5-Encode
+#DEPENDS+=	{perl>=5.10.1,p5-Encode>=2.13}:../../textproc/p5-Encode
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree

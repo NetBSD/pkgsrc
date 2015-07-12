@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/12 18:56:20 wiz Exp $
 
 DISTNAME=	UNIVERSAL-isa-1.20140927
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/UNIVERSAL-isa/
 COMMENT=	Hack around people calling UNIVERSAL::isa() as a function
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	{perl>=5.004,p5-CGI-[0-9]*}:../../www/p5-CGI
+#BUILD_DEPENDS+=	{perl>=5.004,p5-CGI-[0-9]*}:../../www/p5-CGI
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/UNIVERSAL/isa/.packlist

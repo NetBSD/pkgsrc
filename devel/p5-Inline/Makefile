@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/06/12 10:49:22 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2015/07/12 18:56:14 wiz Exp $
 #
 
 DISTNAME=	Inline-0.80
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Inline/
 COMMENT=	Perl5 module for writing Perl subroutines in other languages
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=2.09}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=2.09}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Parse-RecDescent>=1.80:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
 

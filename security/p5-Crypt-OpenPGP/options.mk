@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2010/02/12 18:26:36 sno Exp $
+# $NetBSD: options.mk,v 1.2 2015/07/12 18:56:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Crypt-OpenPGP
 PKG_SUPPORTED_OPTIONS=	pgp2-compat
@@ -8,5 +8,5 @@ PKG_SUGGESTED_OPTIONS=	# empty
 
 .if !empty(PKG_OPTIONS:Mpgp2-compat)
 DEPENDS+=		p5-Crypt-IDEA-[0-9]*:../../security/p5-Crypt-IDEA
-DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 .endif

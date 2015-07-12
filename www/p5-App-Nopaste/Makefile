@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/07/12 18:56:33 wiz Exp $
 
 DISTNAME=	App-Nopaste-1.004
 PKGNAME=	p5-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
 DEPENDS+=	p5-Clipboard-[0-9]*:../../x11/p5-Clipboard
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
 DEPENDS+=	p5-WWW-Pastebin-PastebinCom-Create-[0-9]*:../../www/p5-WWW-Pastebin-PastebinCom-Create
-DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+#DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 
 # for make test
 BUILD_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS

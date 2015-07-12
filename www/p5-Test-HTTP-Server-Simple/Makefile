@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	Test-HTTP-Server-Simple-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ PERL5_PACKLIST= auto/Test/HTTP/Server/Simple/.packlist
 
 DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
 # This may be only a build dependency - No, it's not
-DEPENDS+=	{perl>=5.10,p5-Test-Simple>0.62}:../../devel/p5-Test-Simple
+#DEPENDS+=	{perl>=5.10,p5-Test-Simple>0.62}:../../devel/p5-Test-Simple
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

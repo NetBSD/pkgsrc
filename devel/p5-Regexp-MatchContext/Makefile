@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:17 wiz Exp $
 #
 
 DISTNAME=	Regexp-MatchContext-0.0.2
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Regexp-MatchContext/
 COMMENT=	Perl 5 module prodiving replacements for regexp related variables
 
-DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
 
 # Ignore warning about the supposedly missing prerequisite Tie::StdScalar.
 # It's there, have faith, run 'make test'!

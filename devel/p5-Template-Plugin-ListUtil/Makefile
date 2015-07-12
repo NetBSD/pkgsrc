@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/07/12 18:56:19 wiz Exp $
 #
 
 DISTNAME=	Template-Plugin-ListUtil-0.02
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 
-DEPENDS+=	{perl>=5.8,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	{perl>=5.8,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Template-Plugin-VMethods>=0.02:../../devel/p5-Template-Plugin-VMethods
 DEPENDS+=	p5-Template-Toolkit>=2.06:../../www/p5-Template-Toolkit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:49:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:20 wiz Exp $
 #
 
 DISTNAME=	Test-Pod-Spelling-CommonMistakes-1.001
@@ -13,7 +13,7 @@ COMMENT=	Checks POD for common spelling mistake
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Pod-Spell-CommonMistakes>=0.01:../../textproc/p5-Pod-Spell-CommonMistakes
-DEPENDS+=	{perl>=5.12,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
+#DEPENDS+=	{perl>=5.12,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Test-Pod>=1.40:../../devel/p5-Test-Pod
 
 USE_LANGUAGES=		# empty

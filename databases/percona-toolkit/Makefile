@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:09 wiz Exp $
 #
 
 DISTNAME=	percona-toolkit-2.2.14
@@ -22,7 +22,7 @@ CHECK_INTERPRETER_SKIP+=	*pt-sift
 CHECK_INTERPRETER_SKIP+=	*pt-stalk
 
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=	auto/percona-toolkit/.packlist
 

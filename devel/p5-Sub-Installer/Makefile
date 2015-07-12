@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:18 wiz Exp $
 
 DISTNAME=	Sub-Installer-v0.0.3
 PKGNAME=	p5-Sub-Installer-0.0.3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Sub-Installer/
 COMMENT=	Perl 5 module prodiving a clean way to install package subroutines
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Sub/Installer/.packlist

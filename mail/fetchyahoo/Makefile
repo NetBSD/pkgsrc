@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:22 wiz Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
@@ -15,12 +15,12 @@ COMMENT=		Download mails from Yahoo webmail into mbox
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
-DEPENDS+=		{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
+#DEPENDS+=		{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
 DEPENDS+=		p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
-DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 
 USE_TOOLS+=		perl:run

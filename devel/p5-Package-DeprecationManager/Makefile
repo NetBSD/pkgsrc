@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:16 wiz Exp $
 
 DISTNAME=	Package-DeprecationManager-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Package/DeprecationManager/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires

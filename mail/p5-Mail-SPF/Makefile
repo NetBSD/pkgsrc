@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 18:56:24 wiz Exp $
 
 DISTNAME=	Mail-SPF-v2.9.0
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -12,9 +12,9 @@ COMMENT=	Perl implementation of the Sender Policy Framework
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=		p5-Net-DNS-Resolver-Programmable-[0-9]*:../../net/p5-Net-DNS-Resolver-Programmable
-BUILD_DEPENDS+=		{perl>=5.6.2,p5-Test-Simple>=0.10}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=		{perl>=5.6.2,p5-Test-Simple>=0.10}:../../devel/p5-Test-Simple
 
-DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
+#DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
 DEPENDS+=	p5-Error-[0-9]*:../../devel/p5-Error
 DEPENDS+=	p5-NetAddr-IP>=4.000:../../net/p5-NetAddr-IP
 DEPENDS+=	p5-Net-DNS>=0.58:../../net/p5-Net-DNS

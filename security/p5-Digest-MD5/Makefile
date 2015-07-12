@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/06/12 10:51:07 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/07/12 18:56:28 wiz Exp $
 
 DISTNAME=	Digest-MD5-2.54
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Digest-MD5/
 COMMENT=	Perl5 extension interface for MD5 algorithm
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.7.3,p5-Digest>=1.00}:../../security/p5-Digest
+#DEPENDS+=	{perl>=5.7.3,p5-Digest>=1.00}:../../security/p5-Digest
 
 CONFLICTS+=	p5-MD5-[0-9]*
 

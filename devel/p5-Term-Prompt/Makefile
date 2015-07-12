@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:19 wiz Exp $
 #
 
 DISTNAME=	Term-Prompt-1.04
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Term-Prompt/
 COMMENT=	Perl extension for prompting a user for information
 
-DEPENDS+=	{perl>=5,p5-Text-Tabs+Wrap>=1.0}:../../textproc/p5-Text-Tabs+Wrap
+#DEPENDS+=	{perl>=5,p5-Text-Tabs+Wrap>=1.0}:../../textproc/p5-Text-Tabs+Wrap
 DEPENDS+=	p5-Term-ReadKey>=1.0:../../devel/p5-Term-ReadKey
 
 PERL5_PACKLIST=		auto/Term/Prompt/.packlist

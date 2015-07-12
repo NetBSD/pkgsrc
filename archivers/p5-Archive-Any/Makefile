@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:48:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:06 wiz Exp $
 
 DISTNAME=	Archive-Any-0.0942
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Archive-Any/
 COMMENT=	Perl5 module with single interface to deal with archives
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar>=0.22}:../../archivers/p5-Archive-Tar
+#DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar>=0.22}:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Tar>=0:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip>=0:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-File-MMagic>=0:../../misc/p5-File-MMagic

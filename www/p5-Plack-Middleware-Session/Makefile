@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:36 wiz Exp $
 
 DISTNAME=	Plack-Middleware-Session-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ PERL5_PACKLIST= auto/Plack/Middleware/Session/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Plack>=0.9910:../../www/p5-Plack

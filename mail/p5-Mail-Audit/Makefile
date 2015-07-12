@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/07/12 18:56:24 wiz Exp $
 
 DISTNAME=	Mail-Audit-2.228
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 # Needs MIME::Entity from p5-MIME-tools.
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 # Needs Net::SMTP from p5-Net.
-DEPENDS+=	{perl>=5.10,p5-Net>=1.0}:../../net/p5-Net
+#DEPENDS+=	{perl>=5.10,p5-Net>=1.0}:../../net/p5-Net
 
 PERL5_PACKLIST=		auto/Mail/Audit/.packlist
 

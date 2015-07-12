@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/12 10:49:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/12 18:56:17 wiz Exp $
 #
 
 DISTNAME=	Pod-Usage-1.66
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Pod-Usage/
 COMMENT=	Print a usage message from embedded pod documentation
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	{perl>=5.17.9,p5-Pod-Parser>=1.60}:../../textproc/p5-Pod-Parser
+#DEPENDS+=	{perl>=5.17.9,p5-Pod-Parser>=1.60}:../../textproc/p5-Pod-Parser
 
 PERL5_PACKLIST=	auto/Pod/Usage/.packlist
 USE_LANGUAGES=	# none

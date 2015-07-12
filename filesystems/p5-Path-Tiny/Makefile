@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:50:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/12 18:56:22 wiz Exp $
 
 DISTNAME=	Path-Tiny-0.068
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 PERL5_PACKLIST=		auto/Path/Tiny/.packlist
 
-DEPENDS+=	{perl>=5.18.0,p5-PathTools>=3.40}:../../devel/p5-PathTools
+#DEPENDS+=	{perl>=5.18.0,p5-PathTools>=3.40}:../../devel/p5-PathTools
 
 BUILD_DEPENDS+=	p5-Devel-Hide-[0-9]*:../../devel/p5-Devel-Hide
 BUILD_DEPENDS+=	p5-File-pushd-[0-9]*:../../devel/p5-File-pushd

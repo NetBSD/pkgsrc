@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/07/05 13:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/07/12 18:56:20 wiz Exp $
 
 DISTNAME=		Test-Pod-1.51
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=		http://search.cpan.org/dist/Test-Pod/
 COMMENT=		Perl5 module to check for POD errors in files
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=		{perl>=5.10.1,p5-Pod-Simple>=3.07}:../../textproc/p5-Pod-Simple
-DEPENDS+=		{p5-Test-Simple>=0.70,perl>=5.8.9}:../../devel/p5-Test-Simple
+#DEPENDS+=		{perl>=5.10.1,p5-Pod-Simple>=3.07}:../../textproc/p5-Pod-Simple
+#DEPENDS+=		{p5-Test-Simple>=0.70,perl>=5.8.9}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Pod/.packlist

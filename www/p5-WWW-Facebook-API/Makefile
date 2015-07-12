@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:36 wiz Exp $
 #
 
 DISTNAME=	WWW-Facebook-API-0.4.18
@@ -12,9 +12,9 @@ HOMEPAGE=	http://search.cpan.org/dist/WWW-Facebook-API/
 COMMENT=	Facebook API implementation
 
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
-DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
+#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-JSON-Any-[0-9]*:../../converters/p5-JSON-Any
-DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
 DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
