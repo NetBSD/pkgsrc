@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:09 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/12 05:14:20 dholland Exp $
 
 DISTNAME=	vblade-14
 PKGNAME=	aoe-vblade-14
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aoetools.sourceforge.net/
 COMMENT=	ATA over Ethernet (AoE) server - thin, LAN-based storage protocol
 
-ONLY_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* Linux-*-* DragonFly-*-*
+BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-* FreeBSD-*-* Linux-*-* DragonFly-*-*
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
