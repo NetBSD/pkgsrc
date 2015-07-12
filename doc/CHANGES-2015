@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2981 2015/07/12 00:45:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.2982 2015/07/12 00:47:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5621,3 +5621,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/netbeans-ide to 8.0.2 [asau 2015-07-11]
 	Added www/webkit24-gtk version 2.4.9nb1 [wiz 2015-07-12]
 	Updated www/webkit-gtk to 2.8.1 [wiz 2015-07-12]
+	Added net/gnome-online-accounts version 3.16.3 [wiz 2015-07-12]
