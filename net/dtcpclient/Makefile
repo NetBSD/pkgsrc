@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/03/08 02:45:35 mef Exp $
+# $NetBSD: Makefile,v 1.22 2015/07/12 05:31:47 dholland Exp $
 #
 
 DISTNAME=	dtcpclient-20090812
@@ -10,9 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.imasy.or.jp/~ume/dtcp/
 COMMENT=	Dynamic Tunnel Configuration Protocol client
 LICENSE=	2-clause-bsd
-
-ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Darwin-*-*
-ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
 USE_BSD_MAKEFILE=	yes
 
