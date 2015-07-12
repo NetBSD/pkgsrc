@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.18 2015/01/04 02:13:16 mef Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 07:56:09 wen Exp $
 
-DISTNAME=		SimPy-2.3.1
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=		simpy-3.0.8
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		cad math
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=simpy/} \
-			http://pypi.python.org/packages/source/S/SimPy/
+MASTER_SITES=		http://pypi.python.org/packages/source/s/simpy/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://simpy.readthedocs.org/en/latest/
+HOMEPAGE=		http://simpy.readthedocs.org/
 COMMENT=		Discrete event simulation framework
-LICENSE=		gnu-lgpl-v2.1
+LICENSE=		mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.3
+# it is only for test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
-TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib
-
-# needs py-test (pkgsrc/devel/py-test)
-#do-test:
-#	${SETENV} ${TEST_ENV} ${PYTHONBIN} -c "import SimPy; SimPy.test()"
+do-test:
+	${SETENV} ${TEST_ENV} ${PYTHONBIN} -c "import simpy; simpy.test()"
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
