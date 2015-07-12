@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/12 19:02:03 wiz Exp $
 
 DISTNAME=	Rose-DBx-Garden-Catalyst-0.180
 PKGNAME=	p5-${DISTNAME}
@@ -37,7 +37,7 @@ DEPENDS+=	p5-Tree-Simple-VisitorFactory-[0-9]*:../../devel/p5-Tree-Simple-Visito
 
 # For tests:
 BUILD_DEPENDS+=	sqlite3>=0:../../databases/sqlite3
-BUILD_DEPENDS+=	{perl>5.10,p5-IPC-Cmd>=0}:../../devel/p5-IPC-Cmd
+#BUILD_DEPENDS+=	{perl>5.10,p5-IPC-Cmd>=0}:../../devel/p5-IPC-Cmd
 
 SUBST_CLASSES+=	sqlite3
 SUBST_MESSAGE.sqlite3=	Fixing sqlite3-using test
