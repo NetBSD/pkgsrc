@@ -1,0 +1,12 @@
+$NetBSD: patch-panel-plugin_xkb-plugin.desktop.in.in,v 1.1 2015/07/12 20:58:11 youri Exp $
+
+Find xkb-plugin executable in the right place.
+--- panel-plugin/xkb-plugin.desktop.in.in.orig	2013-03-20 16:20:05.000000000 +0000
++++ panel-plugin/xkb-plugin.desktop.in.in
+@@ -3,5 +3,5 @@ Type=X-XFCE-PanelPlugin
+ _Name=Keyboard Layouts
+ _Comment=Keyboard layouts setup and switch plugin
+ Icon=preferences-desktop-keyboard
+-X-XFCE-Exec=@libexecdir@/xfce4/panel-plugins/xfce4-xkb-plugin
++X-XFCE-Exec=@libexecdir@/xfce4/panel/plugins/xfce4-xkb-plugin
+ X-XFCE-Unique=TRUE
