@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2015/06/12 10:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2015/07/12 00:39:55 wiz Exp $
 
 DISTNAME=		devhelp-2.32.0
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/2.32/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,7 +27,7 @@ GCONF_SCHEMAS=		devhelp.schemas
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
