@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.5 2015/07/08 20:26:04 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.6 2015/07/12 09:15:16 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -14,3 +14,11 @@ Pullup ticket #4760 - requested by bsiegert
 mail/isync: bug fix patch
 Pullup ticket #4761 - requested by joerg
 textproc/latex2html: bug fix patch
+Pullup ticket #4764 - requested by taca
+net/ntp4: security update
+Pullup ticket #4767 - requested by he
+textproc/libxml2: security patch
+Pullup ticket #4768 - requested by taca
+net/bind99: security update
+Pullup ticket #4769 - requested by taca
+net/bind910: security update
