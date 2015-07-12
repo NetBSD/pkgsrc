@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 18:16:29 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/12 06:52:58 dholland Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.citi.umich.edu/u/provos/systrace/index.html
 COMMENT=	GTK interface to systrace(1)
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6[H-Z]*-* NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-1.6[H-Z]*-* NetBSD-[2-4]*-*
 
 WRKSRC=			${WRKDIR}/notification-0.1
 GNU_CONFIGURE=		YES
