@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2998 2015/07/13 14:06:37 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.2999 2015/07/13 15:10:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5638,3 +5638,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated shells/mksh to 51 [bsiegert 2015-07-13]
 	Updated editors/vim-share to 7.4.768nb2 [morr 2015-07-13]
 	Updated benchmarks/iozone to 3.430 [ryoon 2015-07-13]
+	Added devel/py-boost [wiz 2015-07-13]
+	Removed devel/boost-python successor devel/py-boost [wiz 2015-07-13]
