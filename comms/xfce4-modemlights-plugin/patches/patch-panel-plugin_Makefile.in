@@ -1,0 +1,32 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/07/13 19:54:26 youri Exp $
+
+Adjust panel plugin path.
+--- panel-plugin/Makefile.in.orig	2007-11-08 08:34:26.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -237,7 +237,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-plugindir = $(libexecdir)/xfce4/panel-plugins
++plugindir = $(libexecdir)/xfce4/panel/plugins
+ xfce4_modemlights_plugin_SOURCES = \
+ 	panel-plugin.c
+ 
+@@ -263,7 +263,7 @@ xfce4_modemlights_plugin_LDADD = \
+ # 
+ desktop_in_in_files = modemlights.desktop.in.in
+ desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ EXTRA_DIST = \
+ 	$(desktop_in_in_files)
+@@ -567,7 +567,7 @@ uninstall-am: uninstall-desktopDATA unin
+ 
+ # get full path into .desktop file
+ %.desktop.in: %.desktop.in.in
+-	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel-plugins^"		\
++	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel/plugins^"		\
+ 		$< > $@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
