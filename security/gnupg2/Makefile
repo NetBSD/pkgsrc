@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2015/06/16 13:41:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.61 2015/07/13 21:00:05 szptvlfn Exp $
 
 DISTNAME=	gnupg-2.0.28
 PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
@@ -31,6 +31,8 @@ CONFIGURE_ENV+=		gl_cv_absolute_stdint_h=/usr/include/stdint.h
 
 TEST_TARGET=		check
 
+DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
+
 .include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -47,6 +49,5 @@ BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 .include "../../security/libgpg-error/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
 .include "../../security/libksba/buildlink3.mk"
-.include "../../security/pinentry/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
