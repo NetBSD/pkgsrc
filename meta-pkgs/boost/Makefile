@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/04/17 14:04:47 adam Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/13 15:08:55 wiz Exp $
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
@@ -22,6 +22,7 @@ DEPENDS+=	boost-docs-${BOOST_DEPENDS_VERSION}:../../devel/boost-docs
 DEPENDS+=	boost-headers-${BOOST_DEPENDS_VERSION}:../../devel/boost-headers
 DEPENDS+=	boost-jam-${BOOST_DEPENDS_VERSION}:../../devel/boost-jam
 DEPENDS+=	boost-libs-${BOOST_DEPENDS_VERSION}:../../devel/boost-libs
-DEPENDS+=	boost-python-${BOOST_DEPENDS_VERSION}:../../devel/boost-python
+DEPENDS+=	${PYPKGPREFIX}-boost-${BOOST_DEPENDS_VERSION}:../../devel/py-boost
 
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

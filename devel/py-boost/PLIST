@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/23 15:44:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/07/13 15:08:55 wiz Exp $
 lib/libboost_python.a
 lib/libboost_python.so
 lib/libboost_python.so.${BOOST_VERSION}
