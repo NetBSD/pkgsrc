@@ -1,13 +1,15 @@
-$NetBSD: patch-contrib_mod_tls.c,v 1.2 2011/10/03 11:23:31 adam Exp $
+$NetBSD: patch-contrib_mod_tls.c,v 1.3 2015/07/13 15:39:27 he Exp $
 
---- contrib/mod_tls.c.orig	2011-03-25 13:53:45.000000000 +0000
+Add a specific other OpenSSL version to avoid re-negotiation for.
+
+--- contrib/mod_tls.c.orig	2015-05-28 00:25:54.000000000 +0000
 +++ contrib/mod_tls.c
-@@ -7235,7 +7235,7 @@ static int tls_sess_init(void) {
-   if (opts != NULL)
-     tls_opts = *opts;
+@@ -7204,7 +7204,7 @@ static int tls_netio_write_cb(pr_netio_s
+     if (tls_data_renegotiate_limit &&
+         session.xfer.total_bytes >= tls_data_renegotiate_limit
  
--#if OPENSSL_VERSION_NUMBER > 0x009080cfL
-+#if OPENSSL_VERSION_NUMBER > 0x009080cfL && OPENSSL_VERSION_NUMBER != 0x00909000L
-   /* The OpenSSL team realized that the flag added in 0.9.8l, the
-    * SSL3_FLAGS_ALLOW_UNSAFE_LEGACY_RENEGOTIATION flag, was a bad idea.
-    * So in later versions, it was changed to a context flag,
+-#if OPENSSL_VERSION_NUMBER >= 0x009080cfL
++#if OPENSSL_VERSION_NUMBER >= 0x009080cfL && OPENSSL_VERSION_NUMBER != 0x00909000L
+         /* In OpenSSL-0.9.8l and later, SSL session renegotiations
+          * (both client- and server-initiated) are automatically disabled.
+          * Unless the admin explicitly configured support for
