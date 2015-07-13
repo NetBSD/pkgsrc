@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2015/04/03 22:31:32 rodent Exp $
+# $NetBSD: Makefile,v 1.99 2015/07/13 19:54:59 youri Exp $
 #
 
 COMMENT=	Communication utilities
@@ -81,6 +81,7 @@ SUBDIR+=	synce-serial
 SUBDIR+=	tilp2
 SUBDIR+=	tkhylafax
 SUBDIR+=	tn3270
+SUBDIR+=	xfce4-modemlights-plugin
 SUBDIR+=	xisp
 SUBDIR+=	xtel
 
