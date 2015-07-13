@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_b2g_installer_package-manifest.in,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/b2g/installer/package-manifest.in.orig	2014-07-18 00:05:06.000000000 +0000
++++ mozilla/b2g/installer/package-manifest.in
+@@ -565,7 +565,7 @@
+ @BINPATH@/components/MozKeyboard.js
+ @BINPATH@/components/InputMethod.manifest
+ 
+-#ifdef MOZ_DEBUG
++#if defined(ENABLE_TESTS) && defined(MOZ_DEBUG)
+ @BINPATH@/components/TestInterfaceJS.js
+ @BINPATH@/components/TestInterfaceJS.manifest
+ #endif

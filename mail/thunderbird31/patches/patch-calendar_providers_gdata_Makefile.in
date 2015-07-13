@@ -1,0 +1,13 @@
+$NetBSD: patch-calendar_providers_gdata_Makefile.in,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- calendar/providers/gdata/Makefile.in.orig	2014-07-18 00:04:05.000000000 +0000
++++ calendar/providers/gdata/Makefile.in
+@@ -11,7 +11,7 @@ include $(DEPTH)/config/autoconf.mk
+ 
+ export USE_EXTENSION_MANIFEST = 1
+ DIST_FILES = install.rdf
+-XPI_PKGNAME = gdata-provider-$(GDATA_VERSION).$(AB_CD).$(MOZ_PKG_PLATFORM)
++XPI_PKGNAME = gdata-provider
+ XPI_VERSION = $(GDATA_VERSION)
+ XPI_NO_UNIVERSAL = 1
+ 

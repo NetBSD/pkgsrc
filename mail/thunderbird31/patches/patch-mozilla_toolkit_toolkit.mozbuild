@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_toolkit_toolkit.mozbuild,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/toolkit/toolkit.mozbuild.orig	2014-07-18 00:05:56.000000000 +0000
++++ mozilla/toolkit/toolkit.mozbuild
+@@ -40,8 +40,8 @@ add_tier_dir('platform', [
+ if CONFIG['MOZ_AUTH_EXTENSION']:
+     add_tier_dir('platform', 'extensions/auth')
+ 
+-if CONFIG['MOZ_UPDATER']:
+-    add_tier_dir('platform', 'other-licenses/bsdiff')
++#if CONFIG['MOZ_UPDATER']:
++#    add_tier_dir('platform', 'other-licenses/bsdiff')
+ 
+ # Gecko/Core components.
+ 
