@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2994 2015/07/13 02:32:12 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.2995 2015/07/13 04:22:50 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5634,3 +5634,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/webkit-gtk to 2.8.4 [wiz 2015-07-12]
 	Added misc/xfce4-smartbookmark-plugin version 0.4.6 [youri 2015-07-12]
 	Added geography/osm-gps-map version 1.0.2 [rodent 2015-07-13]
+	Removed net/bpalogin [bsiegert 2015-07-13]
