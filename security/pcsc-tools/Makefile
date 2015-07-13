@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:51:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2015/07/13 09:54:20 wiz Exp $
 
 DISTNAME=	pcsc-tools-1.4.22
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 COMMENT=	Tools useful for a PC/SC user
 LICENSE=	gnu-gpl-v2 # or later
 
-DEPENDS+=	p5-pcsc-perl>=1.4.6:../../security/p5-pcsc
+DEPENDS+=	p5-pcsc>=1.4.6:../../security/p5-pcsc
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	gmake
