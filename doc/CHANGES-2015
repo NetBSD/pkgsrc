@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3000 2015/07/13 15:13:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3001 2015/07/13 15:40:02 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5640,3 +5640,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated benchmarks/iozone to 3.430 [ryoon 2015-07-13]
 	Added devel/py-boost version 1.58.0 [wiz 2015-07-13]
 	Removed devel/boost-python successor devel/py-boost [wiz 2015-07-13]
+	Updated net/proftpd to 1.3.5a [he 2015-07-13]
