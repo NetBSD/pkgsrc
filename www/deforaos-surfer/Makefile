@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2015/04/25 14:25:00 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/13 14:32:02 wiz Exp $
 
 DISTNAME=	Surfer-0.2.7
 PKGNAME=	deforaos-surfer-0.2.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.defora.org/os/download/download/4345/
 
@@ -38,7 +38,7 @@ post-install:
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
