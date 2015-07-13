@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/28 15:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/13 04:55:31 bsiegert Exp $
 
 DISTNAME=	libexecinfo-1.1
 PKGREVISION=	1
@@ -21,10 +21,10 @@ USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	include lib
 
 do-build:
-	cd ${WRKSRC} && ${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c execinfo.c
-	cd ${WRKSRC} && ${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c stacktraverse.c
-	cd ${WRKSRC} && ${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${LIBS}	\
-		-o libexecinfo.la execinfo.lo stacktraverse.lo		\
+	cd ${WRKSRC} && ${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c execinfo.c
+	cd ${WRKSRC} && ${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c stacktraverse.c
+	cd ${WRKSRC} && ${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} ${LIBS}	\
+		-o libexecinfo.la execinfo.lo stacktraverse.lo				\
 		-version-info 1:0:0 -rpath ${PREFIX}/lib
 
 do-install:
