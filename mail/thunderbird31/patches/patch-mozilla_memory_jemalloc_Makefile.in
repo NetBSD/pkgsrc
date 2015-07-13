@@ -1,0 +1,12 @@
+$NetBSD: patch-mozilla_memory_jemalloc_Makefile.in,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/memory/jemalloc/Makefile.in.orig	2014-07-18 00:05:43.000000000 +0000
++++ mozilla/memory/jemalloc/Makefile.in
+@@ -12,3 +12,7 @@ include $(topsrcdir)/config/rules.mk
+ ifdef GNU_CC
+ CFLAGS += -std=gnu99
+ endif
++
++# XXX startup crash workaround for gcc47 on amd64
++jemalloc.$(OBJ_SUFFIX): OS_CFLAGS := $(filter-out -O3 -Ofast,$(OS_CFLAGS))
++jemalloc.$(OBJ_SUFFIX): MOZ_OPTIMIZE_FLAGS=

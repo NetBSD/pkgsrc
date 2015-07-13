@@ -1,0 +1,12 @@
+$NetBSD: patch-mozilla_media_libcubeb_src_Makefile.in,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/media/libcubeb/src/Makefile.in.orig	2014-07-18 00:05:38.000000000 +0000
++++ mozilla/media/libcubeb/src/Makefile.in
+@@ -9,3 +9,7 @@ CFLAGS += \
+         $(MOZ_ALSA_CFLAGS) \
+         $(MOZ_PULSEAUDIO_CFLAGS) \
+         $(NULL)
++
++ifdef MOZ_NATIVE_SPEEX
++CFLAGS += $(MOZ_SPEEX_CFLAGS)
++endif
