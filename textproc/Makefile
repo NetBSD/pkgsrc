@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.835 2015/07/01 02:52:42 rodent Exp $
+# $NetBSD: Makefile,v 1.836 2015/07/13 16:14:53 kleink Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -689,6 +689,7 @@ SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
+SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-relatorio
