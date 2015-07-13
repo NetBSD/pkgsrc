@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_gfx_skia_Makefile.in,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/gfx/skia/Makefile.in.orig	2014-07-18 00:05:20.000000000 +0000
++++ mozilla/gfx/skia/Makefile.in
+@@ -15,6 +15,10 @@ ifeq (qt,$(MOZ_WIDGET_TOOLKIT))
+ OS_CXXFLAGS += $(MOZ_CAIRO_CFLAGS) $(MOZ_PANGO_CFLAGS) $(CAIRO_FT_CFLAGS)
+ endif
+ 
++ifdef MOZ_NATIVE_HARFBUZZ
++OS_CXXFLAGS += $(MOZ_HARFBUZZ_CFLAGS)
++endif
++
+ include $(topsrcdir)/config/rules.mk
+ 
+ ifeq ($(CPU_ARCH)_$(GNU_CC),arm_1)

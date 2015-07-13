@@ -1,0 +1,47 @@
+$NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/config/external/moz.build.orig	2014-07-18 00:05:11.000000000 +0000
++++ mozilla/config/external/moz.build
+@@ -15,13 +15,19 @@ if CONFIG['MOZ_UPDATER']:
+     if not CONFIG['MOZ_NATIVE_BZ2']:
+         external_dirs += ['modules/libbz2']
+ 
+-if CONFIG['MOZ_VORBIS']:
++if not CONFIG['MOZ_NATIVE_OGG']:
++    external_dirs += ['media/libogg']
++
++if not CONFIG['MOZ_NATIVE_THEORA']:
++    external_dirs += ['media/libtheora']
++
++if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_NATIVE_VORBIS']:
+     external_dirs += ['media/libvorbis']
+ 
+-if CONFIG['MOZ_TREMOR']:
++if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
+     external_dirs += ['media/libtremor']
+ 
+-if CONFIG['MOZ_OPUS']:
++if CONFIG['MOZ_OPUS'] and not CONFIG['MOZ_NATIVE_OPUS']:
+     external_dirs += ['media/libopus']
+ 
+ if CONFIG['MOZ_WEBM']:
+@@ -36,13 +42,15 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+ if not CONFIG['MOZ_NATIVE_PNG']:
+     external_dirs += ['media/libpng']
+ 
++if not CONFIG['MOZ_NATIVE_SPEEX']:
++    external_dirs += ['media/libspeex_resampler']
++
++if not CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
++    external_dirs += ['media/libsoundtouch']
++
+ external_dirs += [
+     'media/kiss_fft',
+     'media/libcubeb',
+-    'media/libogg',
+-    'media/libtheora',
+-    'media/libspeex_resampler',
+-    'media/libsoundtouch',
+ ]
+ 
+ PARALLEL_DIRS += ['../../' + i for i in external_dirs]

@@ -1,0 +1,455 @@
+$NetBSD: patch-aa,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+
+--- mozilla/configure.in.orig	2014-07-18 00:05:11.000000000 +0000
++++ mozilla/configure.in
+@@ -962,7 +962,7 @@ MOZ_BZ2_LIBS='$(call EXPAND_LIBNAME_PATH
+ MOZ_PNG_CFLAGS="-I$_objdir/dist/include" # needed for freetype compilation
+ MOZ_PNG_LIBS='$(call EXPAND_LIBNAME_PATH,mozpng,$(DEPTH)/media/libpng)'
+ 
+-MOZ_JS_STATIC_LIBS='$(call EXPAND_LIBNAME_PATH,js_static,$(LIBXUL_DIST)/lib)'
++MOZ_JS_STATIC_LIBS='$(call EXPAND_LIBNAME_PATH,js_static,$(DEPTH)/js/src)'
+ MOZ_JS_SHARED_LIBS='$(call EXPAND_LIBNAME_PATH,mozjs,$(LIBXUL_DIST)/lib)'
+ MOZ_FIX_LINK_PATHS='-Wl,-rpath-link,$(LIBXUL_DIST)/bin -Wl,-rpath-link,$(prefix)/lib'
+ XPCOM_FROZEN_LDOPTS='$(call EXPAND_LIBNAME_PATH,xul mozalloc,$(LIBXUL_DIST)/bin)'
+@@ -1676,7 +1676,13 @@ Linux)
+         MOZ_ENABLE_PROFILER_SPS=
+     esac
+     ;;
+-WINNT|Darwin) ;;
++WINNT|Darwin)
++    case "${CPU_ARCH}" in
++    x86 | x86_64) ;;
++    *)
++        MOZ_ENABLE_PROFILER_SPS=
++    esac
++    ;;
+ *)
+     MOZ_ENABLE_PROFILER_SPS=
+     ;;
+@@ -1780,7 +1786,7 @@ case "$host" in
+     ;;
+ 
+ *-darwin*)
+-    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX -DXP_MACOSX -DNO_X11"
++    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX"
+     HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
+     HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
+     ;;
+@@ -1912,7 +1918,6 @@ case "$target" in
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
+     else
+-        AC_DEFINE(XP_MACOSX)
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
+         # The ExceptionHandling framework is needed for Objective-C exception
+@@ -2522,118 +2527,15 @@ MOZ_CXX11
+ 
+ AC_LANG_C
+ 
+-dnl Check for .hidden assembler directive and visibility attribute.
+-dnl Borrowed from glibc configure.in
++dnl Setup default hidden visibility and wrapped system headers.
+ dnl ===============================================================
+ if test "$GNU_CC"; then
+-  AC_CACHE_CHECK(for visibility(hidden) attribute,
+-                 ac_cv_visibility_hidden,
+-                 [cat > conftest.c <<EOF
+-                  int foo __attribute__ ((visibility ("hidden"))) = 1;
+-EOF
+-                  ac_cv_visibility_hidden=no
+-                  if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                    if egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
+-                      ac_cv_visibility_hidden=yes
+-                    fi
+-                  fi
+-                  rm -f conftest.[cs]
+-                 ])
+-  if test "$ac_cv_visibility_hidden" = "yes"; then
+-    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+-
+-    AC_CACHE_CHECK(for visibility(default) attribute,
+-                   ac_cv_visibility_default,
+-                   [cat > conftest.c <<EOF
+-                    int foo __attribute__ ((visibility ("default"))) = 1;
+-EOF
+-                    ac_cv_visibility_default=no
+-                    if ${CC-cc} -fvisibility=hidden -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                      if ! egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
+-                        ac_cv_visibility_default=yes
+-                      fi
+-                    fi
+-                    rm -f conftest.[cs]
+-                   ])
+-    if test "$ac_cv_visibility_default" = "yes"; then
+-      AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
+-
+-      AC_CACHE_CHECK(for visibility pragma support,
+-                     ac_cv_visibility_pragma,
+-                     [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-                      int foo_hidden = 1;
+-#pragma GCC visibility push(default)
+-                      int foo_default = 1;
+-EOF
+-                      ac_cv_visibility_pragma=no
+-                      if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                        if egrep '\.(hidden|private_extern).*foo_hidden' conftest.s >/dev/null; then
+-                          if ! egrep '\.(hidden|private_extern).*foo_default' conftest.s > /dev/null; then
+-                            ac_cv_visibility_pragma=yes
+-                          fi
+-                        fi
+-                      fi
+-                      rm -f conftest.[cs]
+-                    ])
+-      if test "$ac_cv_visibility_pragma" = "yes"; then
+-        AC_CACHE_CHECK(For gcc visibility bug with class-level attributes (GCC bug 26905),
+-                       ac_cv_have_visibility_class_bug,
+-                       [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-struct __attribute__ ((visibility ("default"))) TestStruct {
+-  static void Init();
+-};
+-__attribute__ ((visibility ("default"))) void TestFunc() {
+-  TestStruct::Init();
+-}
+-EOF
+-                       ac_cv_have_visibility_class_bug=no
+-                       if ! ${CXX-g++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
+-                         ac_cv_have_visibility_class_bug=yes
+-                       else
+-                         if test `egrep -c '@PLT|\\$stub' conftest.S` = 0; then
+-                           ac_cv_have_visibility_class_bug=yes
+-                         fi
+-                       fi
+-                       rm -rf conftest.{c,S}
+-                       ])
+-
+-        AC_CACHE_CHECK(For x86_64 gcc visibility bug with builtins (GCC bug 20297),
+-                       ac_cv_have_visibility_builtin_bug,
+-                       [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-#pragma GCC visibility push(default)
+-#include <string.h>
+-#pragma GCC visibility pop
+-
+-__attribute__ ((visibility ("default"))) void Func() {
+-  char c[[100]];
+-  memset(c, 0, sizeof(c));
+-}
+-EOF
+-                       ac_cv_have_visibility_builtin_bug=no
+-                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
+-                         ac_cv_have_visibility_builtin_bug=yes
+-                       else
+-                         if test `grep -c "@PLT" conftest.S` = 0; then
+-                           ac_cv_visibility_builtin_bug=yes
+-                         fi
+-                       fi
+-                       rm -f conftest.{c,S}
+-                       ])
+-        if test "$ac_cv_have_visibility_builtin_bug" = "no" -a \
+-                "$ac_cv_have_visibility_class_bug" = "no"; then
+-          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
+-          WRAP_SYSTEM_INCLUDES=1
+-          STL_FLAGS='-I$(DIST)/stl_wrappers'
+-          WRAP_STL_INCLUDES=1
+-        else
+-          VISIBILITY_FLAGS='-fvisibility=hidden'
+-        fi # have visibility pragma bug
+-      fi   # have visibility pragma
+-    fi     # have visibility(default) attribute
+-  fi       # have visibility(hidden) attribute
++  AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
++  AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
++  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
++  WRAP_SYSTEM_INCLUDES=1
++  STL_FLAGS='-I$(DIST)/stl_wrappers'
++  WRAP_STL_INCLUDES=1
+ fi         # GNU_CC
+ 
+ # visibility hidden flag for Sun Studio on Solaris
+@@ -3004,7 +2906,7 @@ dnl Checks for library functions.
+ dnl ========================================================
+ AC_PROG_GCC_TRADITIONAL
+ AC_FUNC_MEMCMP
+-AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r)
++AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r arc4random arc4random_buf)
+ 
+ dnl check for clock_gettime(), the CLOCK_MONOTONIC clock
+ AC_CACHE_CHECK(for clock_gettime(CLOCK_MONOTONIC),
+@@ -3691,6 +3593,14 @@ if test -n "$YASM"; then
+   _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
+ fi
+ 
++if test -n "${LIBXUL_SDK_DIR}"; then
++    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
++    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags nspr`"
++    NSPR_LIBS="`pkg-config --libs nspr`"
++    NSS_CFLAGS="`pkg-config --cflags nss`"
++    NSS_LIBS="`pkg-config --libs nss`"
++fi
++
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
+ dnl system JPEG support
+ dnl ========================================================
+@@ -3718,11 +3628,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+                      #include <jpeglib.h> ],
+                    [ #if JPEG_LIB_VERSION < $MOZJPEG
+                      #error "Insufficient JPEG library version ($MOZJPEG required)."
+-                     #endif
+-                     #ifndef JCS_EXTENSIONS
+-                     #error "libjpeg-turbo JCS_EXTENSIONS required"
+-                     #endif
+-                     ],
++                     #endif ],
+                    MOZ_NATIVE_JPEG=1,
+                    AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
+ fi
+@@ -4387,6 +4293,10 @@ cairo-gonk)
+ 
+ esac
+ 
++if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++   AC_DEFINE(XP_MACOSX)
++fi
++
+ AC_SUBST(MOZ_PDF_PRINTING)
+ if test "$MOZ_PDF_PRINTING"; then
+    PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
+@@ -5106,6 +5016,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_VPX=1
+     MOZ_VPX_ERROR_CONCEALMENT=1
+ 
++    dnl with libv4l2 we can support more cameras
++    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
++
+ dnl enable once Signaling lands
+     MOZ_WEBRTC_SIGNALING=1
+     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
+@@ -5190,6 +5106,63 @@ if test "${ac_cv_c_attribute_aligned}" !
+ fi
+ 
+ dnl ========================================================
++dnl Check for libogg
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-ogg,
++[  --with-system-ogg       Use system libogg (located with pkgconfig)],
++MOZ_NATIVE_OGG=1,
++MOZ_NATIVE_OGG=)
++
++if test -n "$MOZ_NATIVE_OGG"; then
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++
++    _SAVE_LIBS=$LIBS
++    LIBS="$LIBS $MOZ_OGG_LIBS"
++    AC_CHECK_FUNC(ogg_set_mem_functions, [],
++      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
++    LIBS=$_SAVE_LIBS
++fi
++
++AC_SUBST(MOZ_NATIVE_OGG)
++AC_SUBST(MOZ_OGG_CFLAGS)
++AC_SUBST(MOZ_OGG_LIBS)
++
++dnl ========================================================
++dnl Check for libvorbis
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-vorbis,
++[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
++MOZ_NATIVE_VORBIS=1,
++MOZ_NATIVE_VORBIS=)
++
++if test -n "$MOZ_NATIVE_VORBIS"; then
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.4)
++fi
++
++AC_SUBST(MOZ_NATIVE_VORBIS)
++AC_SUBST(MOZ_VORBIS_CFLAGS)
++AC_SUBST(MOZ_VORBIS_LIBS)
++
++dnl ========================================================
++dnl Check for integer-only libvorbis aka tremor
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-tremor,
++[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
++MOZ_NATIVE_TREMOR=1,
++MOZ_NATIVE_TREMOR=)
++
++if test -n "$MOZ_NATIVE_TREMOR"; then
++    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_NATIVE_TREMOR)
++AC_SUBST(MOZ_TREMOR_CFLAGS)
++AC_SUBST(MOZ_TREMOR_LIBS)
++
++dnl ========================================================
+ dnl = Disable Opus audio codec support
+ dnl ========================================================
+ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5198,6 +5171,97 @@ MOZ_ARG_DISABLE_BOOL(opus,
+     MOZ_OPUS=1)
+ 
+ dnl ========================================================
++dnl Check for libopus
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-opus,
++[  --with-system-opus      Use system libopus (located with pkgconfig)],
++MOZ_NATIVE_OPUS=1,
++MOZ_NATIVE_OPUS=)
++
++if test -n "$MOZ_NATIVE_OPUS"; then
++    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
++else
++    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
++fi
++
++AC_SUBST(MOZ_NATIVE_OPUS)
++AC_SUBST(MOZ_OPUS_CFLAGS)
++AC_SUBST(MOZ_OPUS_LIBS)
++
++dnl ========================================================
++dnl Check for libtheora
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-theora,
++[  --with-system-theora    Use system libtheora (located with pkgconfig)],
++MOZ_NATIVE_THEORA=1,
++MOZ_NATIVE_THEORA=)
++
++if test -n "$MOZ_NATIVE_THEORA"; then
++    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
++fi
++
++AC_SUBST(MOZ_NATIVE_THEORA)
++AC_SUBST(MOZ_THEORA_CFLAGS)
++AC_SUBST(MOZ_THEORA_LIBS)
++
++dnl ========================================================
++dnl Check for libspeex resampler
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-speex,
++[  --with-system-speex     Use system libspeex (located with pkgconfig)],
++MOZ_NATIVE_SPEEX=1,
++MOZ_NATIVE_SPEEX=)
++
++if test -n "$MOZ_NATIVE_SPEEX"; then
++    PKG_CHECK_MODULES(MOZ_SPEEX, speexdsp >= 1.2)
++fi
++
++AC_SUBST(MOZ_NATIVE_SPEEX)
++AC_SUBST(MOZ_SPEEX_CFLAGS)
++AC_SUBST(MOZ_SPEEX_LIBS)
++
++dnl ========================================================
++dnl Check for libsoundtouch
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-soundtouch,
++[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
++MOZ_NATIVE_SOUNDTOUCH=1,
++MOZ_NATIVE_SOUNDTOUCH=)
++
++if test -n "$MOZ_NATIVE_SOUNDTOUCH"; then
++    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.8.0)
++
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
++    _SAVE_CXXFLAGS=$CXXFLAGS
++    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
++    AC_CACHE_CHECK(for soundtouch sample type,
++                   ac_cv_soundtouch_sample_type,
++                   [AC_TRY_COMPILE([#include <SoundTouch.h>
++                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
++                                    #error soundtouch expects float samples
++                                    #endif],
++                                   [],
++                                   [ac_cv_soundtouch_sample_type=short],
++                                   [ac_cv_soundtouch_sample_type=float])])
++    CXXFLAGS=$_SAVE_CXXFLAGS
++    AC_LANG_RESTORE
++
++    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
++         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
++        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
++    fi
++fi
++
++AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
++AC_SUBST(MOZ_SOUNDTOUCH_CFLAGS)
++AC_SUBST(MOZ_SOUNDTOUCH_LIBS)
++
++dnl ========================================================
+ dnl = Disable VP8 decoder support
+ dnl ========================================================
+ MOZ_ARG_DISABLE_BOOL(webm,
+@@ -5938,7 +6002,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+ if test "$MOZ_GAMEPAD"; then
+     case "$OS_TARGET" in
+     Darwin)
+-        MOZ_GAMEPAD_BACKEND=cocoa
++        if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++            MOZ_GAMEPAD_BACKEND=cocoa
++        fi
+         ;;
+     WINNT)
+         if test -z "$MOZ_HAS_WINSDK_WITH_D3D"; then
+@@ -8036,6 +8102,52 @@ if test "$USE_FC_FREETYPE"; then
+ fi
+ 
+ dnl ========================================================
++dnl Check for harfbuzz
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-harfbuzz,
++[  --with-system-harfbuzz  Use system harfbuzz (located with pkgconfig)],
++MOZ_NATIVE_HARFBUZZ=1,
++MOZ_NATIVE_HARFBUZZ=)
++
++if test -n "$MOZ_NATIVE_HARFBUZZ"; then
++    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.25)
++fi
++
++AC_SUBST(MOZ_NATIVE_HARFBUZZ)
++AC_SUBST(MOZ_HARFBUZZ_CFLAGS)
++AC_SUBST(MOZ_HARFBUZZ_LIBS)
++
++dnl ========================================================
++dnl Check for graphite2
++dnl ========================================================
++MOZ_ARG_WITH_BOOL(system-graphite2,
++[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
++MOZ_NATIVE_GRAPHITE2=1,
++MOZ_NATIVE_GRAPHITE2=)
++
++if test -n "$MOZ_NATIVE_GRAPHITE2"; then
++    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2)
++
++    dnl graphite2.pc has bogus version, check manually
++    AC_TRY_COMPILE([ #include <graphite2/Font.h>
++                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
++                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
++                               * 100 + GR2_VERSION_BUGFIX >= \
++                               (major) * 10000 + (minor) * 100 + (bugfix) )
++                   ], [
++                     #if !GR2_VERSION_REQUIRE(1,2,4)
++                     #error "Insufficient graphite2 version."
++                     #endif
++                   ], [],
++                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
++fi
++
++AC_SUBST(MOZ_NATIVE_GRAPHITE2)
++AC_SUBST(MOZ_GRAPHITE2_CFLAGS)
++AC_SUBST(MOZ_GRAPHITE2_LIBS)
++
++dnl ========================================================
+ dnl Check for pixman and cairo
+ dnl ========================================================
+ 
