@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.13 2010/11/07 12:21:09 obache Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2015/07/13 15:39:27 he Exp $
 
 Make this pkgsrc friendly.
 
 Linking ftpdctl does not (seem to) require all the libraries needed for
 various proftpd modules.  It definitely cannot include -lwrap.
 
---- Makefile.in.orig	2009-12-15 23:24:42.000000000 +0000
+--- Makefile.in.orig	2015-05-28 00:25:54.000000000 +0000
 +++ Makefile.in
-@@ -58,7 +58,7 @@ ftpcount$(EXEEXT): lib utils
+@@ -59,7 +59,7 @@ ftpcount$(EXEEXT): lib utils
  	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPCOUNT_OBJS) $(UTILS_LIBS)
  
  ftpdctl$(EXEEXT): lib src
@@ -16,8 +16,8 @@ various proftpd modules.  It definitely cannot include -lwrap.
  
  ftpscrub$(EXEEXT): lib utils
  	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPSCRUB_OBJS) $(UTILS_LIBS)
-@@ -147,7 +147,7 @@ install-man: $(DESTDIR)$(mandir) $(DESTD
- 	$(INSTALL_MAN) $(top_srcdir)/utils/ftpwho.1   $(DESTDIR)$(mandir)/man1
+@@ -178,7 +178,7 @@ install-man: $(DESTDIR)$(mandir) $(DESTD
+ 	$(INSTALL_MAN) $(top_srcdir)/src/proftpd.conf.5 $(DESTDIR)$(mandir)/man5
  	$(INSTALL_MAN) $(top_srcdir)/src/xferlog.5    $(DESTDIR)$(mandir)/man5
  
 -install-all: install-proftpd install-modules install-utils install-conf install-man install-libs install-headers install-pkgconfig install-locales $(INSTALL_DEPS)
