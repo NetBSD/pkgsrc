@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2119 2015/07/10 17:27:53 khorben Exp $
+# $NetBSD: Makefile,v 1.2120 2015/07/13 15:08:54 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -84,7 +84,6 @@ SUBDIR+=	boost-docs
 SUBDIR+=	boost-headers
 SUBDIR+=	boost-jam
 SUBDIR+=	boost-libs
-SUBDIR+=	boost-python
 SUBDIR+=	bouml
 SUBDIR+=	bpython
 SUBDIR+=	buddy
@@ -1588,6 +1587,7 @@ SUBDIR+=	py-at-spi2
 SUBDIR+=	py-atomicwrites
 SUBDIR+=	py-babel
 SUBDIR+=	py-blinker
+SUBDIR+=	py-boost
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-slave
 SUBDIR+=	py-cffi
