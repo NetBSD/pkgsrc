@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2997 2015/07/13 09:34:04 morr Exp $
+$NetBSD: CHANGES-2015,v 1.2998 2015/07/13 14:06:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5637,3 +5637,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed net/bpalogin [bsiegert 2015-07-13]
 	Updated shells/mksh to 51 [bsiegert 2015-07-13]
 	Updated editors/vim-share to 7.4.768nb2 [morr 2015-07-13]
+	Updated benchmarks/iozone to 3.430 [ryoon 2015-07-13]
