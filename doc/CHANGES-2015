@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2996 2015/07/13 04:43:04 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.2997 2015/07/13 09:34:04 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5636,3 +5636,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added geography/osm-gps-map version 1.0.2 [rodent 2015-07-13]
 	Removed net/bpalogin [bsiegert 2015-07-13]
 	Updated shells/mksh to 51 [bsiegert 2015-07-13]
+	Updated editors/vim-share to 7.4.768nb2 [morr 2015-07-13]
