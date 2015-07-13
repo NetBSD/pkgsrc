@@ -1,0 +1,5 @@
+Xfce 4 Modem Lights panel plugin is intended to simplify establishing a ppp
+connection via a modem. It is primarily designed to work with the debian ppp
+package and the pon/poff scripts provided by that package, but should be usable
+with any scripts that create a lock file during dialing and retain it through
+the connection.
