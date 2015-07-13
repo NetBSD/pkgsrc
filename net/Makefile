@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1078 2015/07/12 00:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.1079 2015/07/13 04:10:34 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -48,7 +48,6 @@ SUBDIR+=	bittorrent
 SUBDIR+=	bittorrent-gui
 SUBDIR+=	bmon
 SUBDIR+=	bounce
-SUBDIR+=	bpalogin
 SUBDIR+=	bridged
 SUBDIR+=	bsddip
 SUBDIR+=	btget
