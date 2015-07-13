@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/06/23 13:31:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/13 15:09:32 wiz Exp $
 
 DISTNAME=	mongodb-src-r3.0.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -29,6 +30,8 @@ SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
 SCONS_ARGS+=	--js-engine=v8-3.25
 # Avoid Argument list too long from mongod linking
 SCONS_ARGS+=	--variant-dir=pkgsrc
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -121,7 +124,7 @@ post-install:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/py-boost/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
