@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.3 2014/03/29 09:38:11 taca Exp $
+$NetBSD: patch-Makefile.in,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
 
 Removed install-sysconf as we handle that phase through post-install
 
---- Makefile.in.orig	2014-02-04 00:12:56.000000000 +0000
+--- Makefile.in.orig	2015-07-01 02:35:31.000000000 +0000
 +++ Makefile.in
 @@ -2,5 +2,5 @@
  
@@ -18,7 +18,7 @@ Removed install-sysconf as we handle that phase through post-install
 +#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
-@@ -250,5 +250,5 @@ distprep: catman-do
+@@ -288,5 +288,5 @@ distprep: catman-do
  
  install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
 -install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf

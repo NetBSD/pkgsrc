@@ -1,10 +1,10 @@
-$NetBSD: patch-scp.c,v 1.2 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-scp.c,v 1.2.14.1 2015/07/14 22:03:39 tron Exp $
 
 Interix support
 
---- scp.c.orig	2013-07-18 06:11:25.000000000 +0000
+--- scp.c.orig	2015-07-01 02:35:31.000000000 +0000
 +++ scp.c
-@@ -477,7 +477,11 @@ main(int argc, char **argv)
+@@ -478,7 +478,11 @@ main(int argc, char **argv)
  	argc -= optind;
  	argv += optind;
  
@@ -16,7 +16,7 @@ Interix support
  		fatal("unknown user %u", (u_int) userid);
  
  	if (!isatty(STDOUT_FILENO))
-@@ -881,8 +885,10 @@ rsource(char *name, struct stat *statp)
+@@ -886,8 +890,10 @@ rsource(char *name, struct stat *statp)
  		return;
  	}
  	while ((dp = readdir(dirp)) != NULL) {
@@ -27,7 +27,7 @@ Interix support
  		if (!strcmp(dp->d_name, ".") || !strcmp(dp->d_name, ".."))
  			continue;
  		if (strlen(name) + 1 + strlen(dp->d_name) >= sizeof(path) - 1) {
-@@ -1292,7 +1298,9 @@ okname(char *cp0)
+@@ -1297,7 +1303,9 @@ okname(char *cp0)
  			case '\'':
  			case '"':
  			case '`':
