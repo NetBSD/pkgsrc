@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2015/05/06 06:08:48 mef Exp $
+# $NetBSD: Makefile,v 1.30 2015/07/14 09:57:13 fhajny Exp $
 
-DISTNAME=		dnsmasq-2.72
+DISTNAME=		dnsmasq-2.73
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
@@ -44,6 +44,10 @@ PLIST.dbus=	yes
 
 .if empty(PKG_OPTIONS:Minet6)
 CFLAGS+=	-DNO_IPV6
+.endif
+
+.if ${OPSYS} == "SunOS"
+CFLAGS+=	-DNO_IPSET
 .endif
 
 # Override the defaults
