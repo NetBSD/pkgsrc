@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3011 2015/07/14 08:51:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3012 2015/07/14 09:03:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5651,3 +5651,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mock to 1.1.2 [wiz 2015-07-14]
 	Updated x11/luit to 2.0.20150706 [wiz 2015-07-14]
 	Updated security/py-cryptography to 0.9.3 [wiz 2015-07-14]
+	Updated print/poppler to 0.34.0 [wiz 2015-07-14]
