@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2015/04/27 09:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2015/07/14 09:29:58 wiz Exp $
 
-DISTNAME=	cdrtools-3.01a28
+DISTNAME=	cdrtools-3.01a30
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdrtools/}
