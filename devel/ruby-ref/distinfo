@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/14 21:10:34 fhajny Exp $
+
+SHA1 (ref-2.0.0.gem) = 6bd1a1009101059b9c5e9193cc43c8c9bf90dc3f
+RMD160 (ref-2.0.0.gem) = bc7a2fc7e4edca128f747d0ae2e0d3329d84b21b
+Size (ref-2.0.0.gem) = 16384 bytes
