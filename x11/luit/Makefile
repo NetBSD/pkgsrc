@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/12/07 17:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/07/14 08:50:02 wiz Exp $
 
-DISTNAME=		luit-20141204
+DISTNAME=		luit-20150706
 # check if this line needs changes when packaging newer snapshots
 PKGNAME=		${DISTNAME:S/-2/-2.0.2/}
 CATEGORIES=		x11
