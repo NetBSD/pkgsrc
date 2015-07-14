@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2015/05/31 08:30:47 wiz Exp $
+# $NetBSD: Makefile,v 1.233 2015/07/14 20:15:59 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -100,7 +100,6 @@ SUBDIR+=	m1
 SUBDIR+=	makeppf
 SUBDIR+=	mame
 SUBDIR+=	mednafen
-SUBDIR+=	mess
 SUBDIR+=	minivmac
 SUBDIR+=	mmix
 SUBDIR+=	nestopia
