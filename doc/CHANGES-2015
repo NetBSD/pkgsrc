@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3015 2015/07/14 09:30:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3016 2015/07/14 09:57:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5655,3 +5655,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/libnice to 0.1.13 [wiz 2015-07-14]
 	Updated net/gst-plugins1-libnice to 0.1.13 [wiz 2015-07-14]
 	Updated sysutils/cdrtools to 3.01alpha30 [wiz 2015-07-14]
+	Updated net/dnsmasq to 2.73 [fhajny 2015-07-14]
