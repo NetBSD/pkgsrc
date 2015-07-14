@@ -1,10 +1,10 @@
-$NetBSD: patch-includes.h,v 1.2 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-includes.h,v 1.2.14.1 2015/07/14 22:03:39 tron Exp $
 
 Interix support
 
---- includes.h.orig	2013-03-22 01:51:09.000000000 +0000
+--- includes.h.orig	2015-07-01 02:35:31.000000000 +0000
 +++ includes.h
-@@ -126,6 +126,10 @@
+@@ -127,6 +127,10 @@
  #ifdef HAVE_READPASSPHRASE_H
  # include <readpassphrase.h>
  #endif
