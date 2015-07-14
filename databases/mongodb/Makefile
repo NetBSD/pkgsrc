@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/07/13 15:09:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/14 17:53:55 fhajny Exp $
 
 DISTNAME=	mongodb-src-r3.0.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -16,8 +16,6 @@ USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
-GCC_REQD+=	4.8.2
-
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--c++11=on
@@ -34,6 +32,8 @@ SCONS_ARGS+=	--variant-dir=pkgsrc
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
+
+GCC_REQD+=	4.8.2
 
 .if ${MACHINE_ARCH} == "x86_64"
 SCONS_ARGS+=	--64
