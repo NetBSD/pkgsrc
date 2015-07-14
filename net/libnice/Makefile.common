@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1 2015/07/14 09:16:47 wiz Exp $
+#
+# used by net/libnice/Makefile
+# used by net/gst-plugins1-libnice/Makefile
+
+DISTNAME=	libnice-0.1.13
+CATEGORIES=	net devel
+MASTER_SITES=	http://nice.freedesktop.org/releases/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://nice.freedesktop.org/wiki/
+COMMENT=	IETF's Interactive Connectivity Establishment standard implementation
+LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
+
+PATCHDIR=	${.CURDIR}/../../net/libnice/patches
+DISTINFO_FILE=	${.CURDIR}/../../net/libnice/distinfo
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_LANGUAGES+=	c99
+.endif
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wunused-but-set-variable
+CWRAPPERS_APPEND.cc+=	-Wunused-but-set-variable
+.endif
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../net/gupnp-igd/buildlink3.mk"
