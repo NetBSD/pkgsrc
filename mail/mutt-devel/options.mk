@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2015/03/23 10:15:46 jperkin Exp $
+# $NetBSD: options.mk,v 1.48 2015/07/14 07:04:12 tonio Exp $
 
 # Global and legacy options
 
@@ -7,9 +7,9 @@ PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
-# Comment the following line out on updates.
-#PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
+PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
+# Comment the following line out on updates.
 #PKG_SUPPORTED_OPTIONS+=	mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
@@ -130,6 +130,8 @@ SUBST_FILES.compress=	Makefile.in
 SUBST_SED.compress=	-e 's,^mutt_SOURCES = ,mutt_SOURCES = compress.c ,'
 SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
 SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
+PLIST_VARS+=		compressed
+PLIST.compressed=	yes
 .endif
 
 ###
