@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14561 2015/07/14 22:03:01 wiz Exp $
+$NetBSD: TODO,v 1.14562 2015/07/14 22:03:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -540,6 +540,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-data-0.7.4
 	o filerunner-14.06.18.10
 	o findutils-4.4.2
+	o fish-2.2.0
 	o flashplayer-0.4.13
 	o flightgear-2.12
 	o fltk2-2.0pre8323
@@ -637,7 +638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnustep-examples-1.4.0
 	o gnustep-gui-0.24.0
 	o gnustep-make-2.6.6
-	o gnustep-objc-1.7
+	o gnustep-objc-1.8
 	o gnuchess-6.2.1
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
@@ -772,7 +773,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
 	o lsh-2.1
-	o luit-20150706
 	o lwm-1.2.3
 	o maelstrom-x11-2.0.7
 	o magic-8.1.23
@@ -1081,7 +1081,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tex2page-20130325
 	o texlive-2014
 	o tfmxplay-1.1.6
-	o tigervnc-1.4.2
+	o tigervnc-1.5.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tinc-1.0.24
