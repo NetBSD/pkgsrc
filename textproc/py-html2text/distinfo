@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2015/04/18 14:08:54 schmonz Exp $
+$NetBSD: distinfo,v 1.27 2015/07/14 22:02:53 wiz Exp $
 
-SHA1 (html2text-2015.4.14.tar.gz) = 326ccd0da5f6f0ac21398e708c92a8ab1bf53e74
-RMD160 (html2text-2015.4.14.tar.gz) = a431bddfcb21349198b34587bf15272d18176670
-Size (html2text-2015.4.14.tar.gz) = 37031 bytes
+SHA1 (html2text-2015.6.21.tar.gz) = 0dad6ac4015f7e4cb5b181062754d1f887a39622
+RMD160 (html2text-2015.6.21.tar.gz) = 513a4021ae4ec105f90332e70e528502a075dda1
+Size (html2text-2015.6.21.tar.gz) = 42288 bytes
