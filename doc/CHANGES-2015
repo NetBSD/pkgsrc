@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3021 2015/07/14 21:10:48 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3022 2015/07/14 22:01:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5661,3 +5661,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/mame to 0.163 [wiz 2015-07-14]
 	Removed emulators/mess successor emulators/mame [wiz 2015-07-14]
 	Added devel/ruby-ref version 2.0.0 [fhajny 2015-07-14]
+	Updated www/ap2-perl to 2.0.9 [wiz 2015-07-14]
