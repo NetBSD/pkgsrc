@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.48 2015/07/14 07:04:12 tonio Exp $
+# $NetBSD: options.mk,v 1.49 2015/07/14 12:44:13 tonio Exp $
 
 # Global and legacy options
 
@@ -132,6 +132,8 @@ SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
 SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
 PLIST_VARS+=		compressed
 PLIST.compressed=	yes
+# add xsltproc to be able to regenerate the documentation
+BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 .endif
 
 ###
