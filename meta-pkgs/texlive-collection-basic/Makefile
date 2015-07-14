@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:51 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/14 02:36:23 minskim Exp $
 
 DISTNAME=	collection-basic
 PKGNAME=	texlive-${DISTNAME}-2015
@@ -44,9 +44,10 @@ DEPENDS+=	tex-texlive-docindex>=2014:../../print/tex-texlive-docindex
 # texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts>=2013:../../print/tex-texlive-scripts
 DEPENDS+=	tex-xdvi>=22.87:../../print/tex-xdvi
-DEPENDS+=	xdvik>=22.87:../../print/xdvik
 
 META_PACKAGE=	yes
+
+.include "options.mk"
 
 .include "../../lang/lua/luaversion.mk"
 .include "../../mk/bsd.pkg.mk"
