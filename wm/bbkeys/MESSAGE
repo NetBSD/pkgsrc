@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/07/14 03:48:02 dholland Exp $
+
+This version of bbkeys does not work with semi-recent X servers (since
+Xorg) unless the compositing extension ("Composite") is disabled in
+the server configuration.
+===========================================================================
