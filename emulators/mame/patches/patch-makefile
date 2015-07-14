@@ -1,50 +1,44 @@
-$NetBSD: patch-makefile,v 1.11 2015/03/31 16:35:29 joerg Exp $
+$NetBSD: patch-makefile,v 1.12 2015/07/14 20:14:49 wiz Exp $
 
-Link against pkgsrc versions of expat, zlib, flac, jpeg, and
-sqlite3, and add appropriate linker search paths.
+Add NetBSD support.
 
---- makefile.orig	2015-02-28 10:39:06.000000000 +0000
+--- makefile.orig	2015-07-14 19:04:56.000000000 +0000
 +++ makefile
-@@ -227,19 +227,19 @@ endif
- # BIGENDIAN = 1
+@@ -295,6 +295,10 @@ ifeq ($(TARGETOS),freebsd)
+ OSD := sdl
+ endif
  
- # uncomment next line to build expat as part of MAME build
--BUILD_EXPAT = 1
-+#BUILD_EXPAT = 1
++ifeq ($(TARGETOS),netbsd)
++OSD := sdl
++endif
++
+ ifeq ($(TARGETOS),solaris)
+ OSD := sdl
+ endif
+@@ -1000,6 +1004,26 @@ freebsd_x86: generate $(PROJECTDIR)/gmak
  
- # uncomment next line to build zlib as part of MAME build
--BUILD_ZLIB = 1
-+#BUILD_ZLIB = 1
  
- # uncomment next line to build libflac as part of MAME build
--BUILD_FLAC = 1
-+#BUILD_FLAC = 1
- 
- # uncomment next line to build jpeglib as part of MAME build
--BUILD_JPEGLIB = 1
-+#BUILD_JPEGLIB = 1
- 
- # uncomment next line to build libsqlite3 as part of MAME/MESS build
--BUILD_SQLITE3 = 1
-+#BUILD_SQLITE3 = 1
- 
- # uncomment next line to build PortMidi as part of MAME/MESS build
- BUILD_MIDILIB = 1
-@@ -527,7 +527,7 @@ CFLAGS = $(CCOMFLAGS) $(CPPONLYFLAGS) $(
- 
- # we compile C-only to C89 standard with GNU extensions
- # we compile C++ code to C++98 standard with GNU extensions
--CONLYFLAGS += -std=gnu89
-+CONLYFLAGS += -std=gnu99
- ifdef CPP11
- CPPONLYFLAGS += -x c++ -std=gnu++11
- else
-@@ -742,7 +742,7 @@ DRIVLISTOBJ = $(OBJ)/$(TARGET)/$(SUBTARG
+ #-------------------------------------------------
++# gmake-netbsd
++#-------------------------------------------------
++
++
++$(PROJECTDIR)/gmake-netbsd/Makefile: makefile $(SCRIPTS) $(GENIE)
++	$(SILENT) $(GENIE) $(PARAMS) --gcc=netbsd --gcc_version=$(GCC_VERSION) gmake
++
++.PHONY: netbsd_x64
++netbsd_x64: generate $(PROJECTDIR)/gmake-netbsd/Makefile
++	$(SILENT) $(MAKE) -C $(PROJECTDIR)/gmake-netbsd config=$(CONFIG)64
++
++.PHONY: netbsd
++netbsd: netbsd_x86
++
++.PHONY: netbsd_x86
++netbsd_x86: generate $(PROJECTDIR)/gmake-netbsd/Makefile
++	$(SILENT) $(MAKE) -C $(PROJECTDIR)/gmake-netbsd config=$(CONFIG)32
++
++
++#-------------------------------------------------
+ # Clean/bootstrap
  #-------------------------------------------------
  
- # start with an empty set of libs
--LIBS = 
-+LIBS = -Wl,-R${PREFIX}/lib -L${PREFIX}/lib
- 
- # add expat XML library
- ifeq ($(BUILD_EXPAT),1)
