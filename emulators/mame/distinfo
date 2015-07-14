@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.35 2015/04/21 17:20:39 joerg Exp $
+$NetBSD: distinfo,v 1.36 2015/07/14 20:14:49 wiz Exp $
 
-SHA1 (mame0160s.zip) = db3d2f10a5c9ef00f629bfd8ab5665874ef581c2
-RMD160 (mame0160s.zip) = 95a0edb499dc81a690ca13040954c87f586ec673
-Size (mame0160s.zip) = 80937878 bytes
-SHA1 (patch-makefile) = 57837dbc8571682e4fd73a2be5771df109c7225f
-SHA1 (patch-src_osd_sdl_osinline.h) = f710a75a51b603905913f2b282c2fc8b92066466
+SHA1 (mame0163s.zip) = 14617c9d8a98d9f4c9709441b73285ad66f9b3c3
+RMD160 (mame0163s.zip) = d115f68b9ab6bd4f869149fb011955e1c1d5bc16
+Size (mame0163s.zip) = 83107428 bytes
+SHA1 (patch-3rdparty_bgfx_src_renderer__null.cpp) = 908f196d68c9b759b26a75331f543ed3ab73970c
+SHA1 (patch-3rdparty_bx_include_bx_os.h) = 31d9e848dafc0f9a7459deac122577e9aebdc230
+SHA1 (patch-3rdparty_bx_include_bx_platform.h) = a971c90f2ed169d35d4c600a0b4266f942f99383
+SHA1 (patch-3rdparty_portmidi_porttime_ptlinux.c) = 3d7ac3eb870764ed8a94712708299e0391941221
+SHA1 (patch-makefile) = 48eeb6f119b0affb4614c9ff6a51933b4f0c08bf
+SHA1 (patch-scripts_src_3rdparty.lua) = db85c6c50bdd456f8e8127b956f32df809b706be
+SHA1 (patch-scripts_toolchain.lua) = 0b6b8708b5102b154a38872d2a3069f4061ca353
+SHA1 (patch-src_osd_osdmini_minifile.c) = d78d2b3badec7caa1c6aa3e8c335ea64f3e0c6c2
