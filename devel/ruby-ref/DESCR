@@ -1,0 +1,4 @@
+This library provides object references for Ruby as well as some
+common utilities for working with references. Object references
+are used to point to other objects and come in three distinct
+flavors that interact differently with the garbage collector.
