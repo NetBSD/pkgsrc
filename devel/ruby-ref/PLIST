@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/14 21:10:34 fhajny Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT_LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/ext/java/org/jruby/ext/ref/ReferencesService.java
+${GEM_LIBDIR}/ext/java/org/jruby/ext/ref/RubySoftReference.java
+${GEM_LIBDIR}/ext/java/org/jruby/ext/ref/RubyWeakReference.java
+${GEM_LIBDIR}/lib/ref.rb
+${GEM_LIBDIR}/lib/ref/abstract_reference_key_map.rb
+${GEM_LIBDIR}/lib/ref/abstract_reference_value_map.rb
+${GEM_LIBDIR}/lib/ref/reference.rb
+${GEM_LIBDIR}/lib/ref/reference_queue.rb
+${GEM_LIBDIR}/lib/ref/soft_key_map.rb
+${GEM_LIBDIR}/lib/ref/soft_reference.rb
+${GEM_LIBDIR}/lib/ref/soft_value_map.rb
+${GEM_LIBDIR}/lib/ref/strong_reference.rb
+${GEM_LIBDIR}/lib/ref/version.rb
+${GEM_LIBDIR}/lib/ref/weak_key_map.rb
+${GEM_LIBDIR}/lib/ref/weak_reference.rb
+${GEM_LIBDIR}/lib/ref/weak_reference/pure_ruby.rb
+${GEM_LIBDIR}/lib/ref/weak_reference/weak_ref.rb
+${GEM_LIBDIR}/lib/ref/weak_value_map.rb
+${GEM_LIBDIR}/lib/ref_ext.jar
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
