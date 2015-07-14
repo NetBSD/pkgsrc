@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3012 2015/07/14 09:03:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3013 2015/07/14 09:16:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5652,3 +5652,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/luit to 2.0.20150706 [wiz 2015-07-14]
 	Updated security/py-cryptography to 0.9.3 [wiz 2015-07-14]
 	Updated print/poppler to 0.34.0 [wiz 2015-07-14]
+	Updated net/libnice to 0.1.13 [wiz 2015-07-14]
