@@ -1,8 +1,8 @@
-$NetBSD: patch-scsi_netbsd.c,v 1.2 2015/07/10 13:33:41 bouyer Exp $
+$NetBSD: patch-scsi_netbsd.c,v 1.3 2015/07/14 12:25:36 bouyer Exp $
 
---- /dev/null	2015-07-08 16:44:57.000000000 +0200
-+++ scsi_netbsd.c	2015-07-08 16:58:09.000000000 +0200
-@@ -0,0 +1,156 @@
+--- scsi_netbsd.c.orig	2015-07-14 13:48:44.000000000 +0200
++++ scsi_netbsd.c	2015-07-14 13:58:53.000000000 +0200
+@@ -0,0 +1,157 @@
 +/* Changes 2003 Steve Heck <steve.heck@am.sony.com>
 +   Copyright 2007-2008 by Robert Nelson <robertn@the-nelsons.org>
 +
@@ -135,6 +135,7 @@ $NetBSD: patch-scsi_netbsd.c,v 1.2 2015/07/10 13:33:41 bouyer Exp $
 +	req.senselen = SENSEBUFLEN;
 +	req.senselen_used = 0;
 +	ioctl_result = ioctl(DeviceFD, SCIOCCOMMAND, &req);
++	SCSI_Default_Timeout(); /* set it back to default, sigh. */
 +
 +	if (ioctl_result < 0)
 +	{
