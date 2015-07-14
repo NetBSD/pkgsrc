@@ -1,4 +1,4 @@
-$NetBSD: patch-src_osd_osdmini_minifile.c,v 1.1 2015/07/14 20:14:49 wiz Exp $
+$NetBSD: patch-src_osd_osdmini_minifile.c,v 1.2 2015/07/14 21:44:55 wiz Exp $
 
 Implement missing osd_truncate() function.
 
@@ -19,7 +19,7 @@ Implement missing osd_truncate() function.
 +		return FILERR_FAILURE;
 +
 +	result = ftruncate(fileno((FILE *)file), offset);
-+	if (!result)
++	if (result)
 +		return FILERR_FAILURE;
 +
 +	return FILERR_NONE;
