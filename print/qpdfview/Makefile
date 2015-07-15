@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2015/04/25 14:24:47 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2015/07/15 15:09:39 wiz Exp $
 
 VER=		0.4
 DISTNAME=	qpdfview-${VER}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	print
 MASTER_SITES=	https://launchpad.net/qpdfview/trunk/${VER}/+download/
 
