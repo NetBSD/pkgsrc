@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2014/07/19 05:19:39 taca Exp $
+# $NetBSD: Makefile,v 1.40.8.1 2015/07/15 20:19:23 tron Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.geeklog.net/filemgmt/upload_dir/
 
@@ -91,6 +92,8 @@ post-extract:
 	${CP} ${FILESDIR}/README ${FILESDIR}/geeklog.conf ${WRKDIR}
 
 pre-install:
+	cd ${WRKSRC}/public_html/filemanager/connectors/php/inc/vendor/wideimage && \
+	${RM} -fr demo test
 	${FIND} ${WRKSRC} -type f -name "*.orig" -exec ${RM} -f {} \;
 	cd ${WRKSRC}/public_html; \
 		${FIND} ${GL_TMPL_SUB} -type f -exec ${CHMOD} -x {} \;
