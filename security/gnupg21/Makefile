@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/07/12 22:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/15 20:45:58 szptvlfn Exp $
 
 DISTNAME=	gnupg-2.1.6
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ada@netbsdfr.org
 HOMEPAGE=	https://www.gnupg.org/
-COMMENT=	GNUpg with OpenPGP and S/MIME capabilities
+COMMENT=	GnuPG with OpenPGP and S/MIME capabilities
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
