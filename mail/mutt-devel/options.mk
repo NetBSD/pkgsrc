@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.49 2015/07/14 12:44:13 tonio Exp $
+# $NetBSD: options.mk,v 1.50 2015/07/15 12:56:29 wiz Exp $
 
 # Global and legacy options
 
@@ -115,6 +115,7 @@ CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
 
+PLIST_VARS+=		compressed
 ###
 ### Compressed mail boxes
 ###
@@ -130,7 +131,6 @@ SUBST_FILES.compress=	Makefile.in
 SUBST_SED.compress=	-e 's,^mutt_SOURCES = ,mutt_SOURCES = compress.c ,'
 SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
 SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
-PLIST_VARS+=		compressed
 PLIST.compressed=	yes
 # add xsltproc to be able to regenerate the documentation
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
