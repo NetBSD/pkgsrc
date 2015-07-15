@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/07/01 12:54:32 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/07/15 12:58:40 wiz Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.mozilla-enigmail.org/download/source/
 HOMEPAGE=	https://www.enigmail.net/
 LICENSE=	(mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1) AND mpl-2.0
 
-USE_TOOLS+=	gmake perl sed unzip
+USE_TOOLS+=	gmake perl sed unzip zip
 
 # It doesn't work -- noted also here:
 # https://aur.archlinux.org/packages/th/thunderbird-enigmail/PKGBUILD
@@ -25,6 +25,7 @@ REPLACE_PERL+=	config/getOsTarget.pl
 REPLACE_PERL+=	util/fixlang.pl
 REPLACE_PERL+=	util/make-lang-xpi.pl
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 1.8.2
 REPLACE_PYTHON+=	util/checkFiles.py
 REPLACE_PYTHON+=	util/header.py
 REPLACE_PYTHON+=	util/typelib.py
