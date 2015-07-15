@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3025 2015/07/15 13:08:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3026 2015/07/15 17:17:33 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5665,3 +5665,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/py-html2text to 2015.6.21 [wiz 2015-07-14]
 	Updated devel/py-pbr to 1.3.0 [wiz 2015-07-15]
 	Updated filesystems/tahoe-lafs to 1.10.1nb1 [wiz 2015-07-15]
+	Updated x11/xorg-cf-files to 1.0.5nb4 [dholland 2015-07-15]
