@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2015/07/01 13:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/07/15 13:07:57 wiz Exp $
 
 VERSION=	1.10.1
 DISTNAME=	allmydata-tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/
 #for beta, add
@@ -44,6 +45,7 @@ DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow>=0.11.1:../../www/py-nevow
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
+DEPENDS+=	${PYPKGPREFIX}-pbr>=0.11.1:../../devel/py-pbr
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
 
