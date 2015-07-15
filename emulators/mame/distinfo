@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2015/07/14 21:44:55 wiz Exp $
+$NetBSD: distinfo,v 1.38 2015/07/15 12:37:03 wiz Exp $
 
-SHA1 (mame0163s.zip) = 14617c9d8a98d9f4c9709441b73285ad66f9b3c3
-RMD160 (mame0163s.zip) = d115f68b9ab6bd4f869149fb011955e1c1d5bc16
-Size (mame0163s.zip) = 83107428 bytes
+SHA1 (mame-0.163.tar.gz) = f3f3a8c74758db5bedaf6ee5dd31c30574d2510b
+RMD160 (mame-0.163.tar.gz) = 722dd17f78c53a72fa9003d50bbf11b9248c0837
+Size (mame-0.163.tar.gz) = 88920010 bytes
 SHA1 (patch-3rdparty_bgfx_src_renderer__null.cpp) = 908f196d68c9b759b26a75331f543ed3ab73970c
 SHA1 (patch-3rdparty_bx_include_bx_os.h) = 31d9e848dafc0f9a7459deac122577e9aebdc230
 SHA1 (patch-3rdparty_bx_include_bx_platform.h) = a971c90f2ed169d35d4c600a0b4266f942f99383
