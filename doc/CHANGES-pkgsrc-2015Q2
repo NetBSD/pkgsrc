@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.8 2015/07/14 22:19:50 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.9 2015/07/15 20:19:51 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -34,3 +34,9 @@ Pullup ticket #4773 - requested by taca
 lang/php55: security update
 Pullup ticket #4774 - requested by taca
 lang/php56: security update
+Pullup ticket #4762 - requested by joerg
+textproc/p5-Text-Microformat: build fix
+Pullup ticket #4763 - requested by joerg
+devel/p5-Test-Approx: build fix
+Pullup ticket #4766 - requested by taca
+www/geeklog: security patch
