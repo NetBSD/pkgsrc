@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1117 2015/07/15 18:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.1118 2015/07/15 18:30:26 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -554,6 +554,7 @@ SUBDIR+=	phraseanet-indexer
 SUBDIR+=	pound
 SUBDIR+=	privoxy
 SUBDIR+=	py-ClientForm
+SUBDIR+=	py-FormEncode
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-WebOb
