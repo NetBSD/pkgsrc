@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/15 18:46:17 wiz Exp $
+
+SHA1 (repoze.lru-0.6.tar.gz) = e7cfb2ca9e9dcbf237844f9e6233903a38ce6d09
+RMD160 (repoze.lru-0.6.tar.gz) = 9f226eb552395543a53d25afc6ec9e42682c9d90
+Size (repoze.lru-0.6.tar.gz) = 19814 bytes
