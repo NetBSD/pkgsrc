@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2015/07/01 09:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2015/07/15 18:19:54 wiz Exp $
 
 EGG_VERSION=		18.0.1
 DISTNAME=		setuptools-${EGG_VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=		https://pypi.python.org/packages/source/s/setuptools/
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://pypi.python.org/pypi/setuptools
 COMMENT=		New Python packaging system
-LICENSE=		python-software-foundation OR zpl
+LICENSE=		python-software-foundation OR zpl-2.0
 
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
