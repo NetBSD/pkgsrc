@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2015/07/14 20:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2015/07/15 12:37:03 wiz Exp $
 
-DISTNAME=	mame0163s
-PKGNAME=	${DISTNAME:S/0/-0./:S/s$//}
+DISTNAME=	mame-0.163
 CATEGORIES=	emulators
-MASTER_SITES=	https://github.com/mamedev/mame/releases/download/mame0163/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
+GITHUB_TAG=	${DISTNAME:S/-//S/.//}
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.mamedev.org/
@@ -21,10 +20,7 @@ RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-BUILD_DEPENDS+=		dos2unix-[0-9]*:../../converters/dos2unix
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
-
-WRKSRC=			${WRKDIR}
 
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake pkg-config
@@ -89,15 +85,6 @@ MAKE_ENV+=	BIGENDIAN=1
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.151
 
-# mame source is double-zipped
-post-extract:
-	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
-	rm ${WRKDIR}/mame.zip
-	# This needs to be done for every file that is patched.
-	${RUN} for f in 3rdparty/mongoose/mongoose.c makefile; do    \
-		${CP} ${WRKSRC}/$${f} ${WRKSRC}/$${f}.bak;              \
-		${CAT} ${WRKSRC}/$${f}.bak | dos2unix >${WRKSRC}/$${f}; \
-	done
 pre-build:
 	# problems with mame-specific png.h
 	${RM} -f ${WRKDIR}/.buildlink/include/png*
