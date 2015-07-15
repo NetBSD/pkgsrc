@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/15 18:49:39 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/routes/__init__.py
+${PYSITELIB}/routes/__init__.pyc
+${PYSITELIB}/routes/__init__.pyo
+${PYSITELIB}/routes/base.py
+${PYSITELIB}/routes/base.pyc
+${PYSITELIB}/routes/base.pyo
+${PYSITELIB}/routes/mapper.py
+${PYSITELIB}/routes/mapper.pyc
+${PYSITELIB}/routes/mapper.pyo
+${PYSITELIB}/routes/middleware.py
+${PYSITELIB}/routes/middleware.pyc
+${PYSITELIB}/routes/middleware.pyo
+${PYSITELIB}/routes/route.py
+${PYSITELIB}/routes/route.pyc
+${PYSITELIB}/routes/route.pyo
+${PYSITELIB}/routes/util.py
+${PYSITELIB}/routes/util.pyc
+${PYSITELIB}/routes/util.pyo
