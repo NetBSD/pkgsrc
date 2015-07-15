@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2015/07/15 20:10:45 tron Exp $
 #
 
 DISTNAME=	Test-Approx-0.03
@@ -15,6 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Text-LevenshteinXS>=0.03:../../textproc/p5-Text-LevenshteinXS
 
 PERL5_PACKLIST=		auto/Test/Approx/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
