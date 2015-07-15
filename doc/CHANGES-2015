@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3027 2015/07/15 18:03:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3028 2015/07/15 18:09:25 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated filesystems/tahoe-lafs to 1.10.1nb1 [wiz 2015-07-15]
 	Updated x11/xorg-cf-files to 1.0.5nb4 [dholland 2015-07-15]
 	Updated devel/py-mako to 1.0.1 [wiz 2015-07-15]
+	Updated net/unbound to 1.5.4 [pettai 2015-07-15]
