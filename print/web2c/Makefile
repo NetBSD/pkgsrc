@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2015/06/14 12:50:07 markd Exp $
+# $NetBSD: Makefile,v 1.46 2015/07/15 15:09:39 wiz Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	web2c-2015
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz
