@@ -1,0 +1,13 @@
+$NetBSD: patch-libcilkrts_configure,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+
+--- libcilkrts/configure.orig	2014-08-12 11:06:44.000000000 +0000
++++ libcilkrts/configure
+@@ -14519,7 +14519,7 @@ esac
+ CFLAGS="$save_CFLAGS"
+ 
+ if test $enable_shared = yes; then
+-  link_cilkrts="-lcilkrts %{static: $LIBS}"
++  link_cilkrts="-rpath ${PREFIX}/gcc50snapshot/lib --as-needed -lgcc_s -lcilkrts %{static $LIBS}"
+ else
+   link_cilkrts="-lcilkrts $LIBS"
+ fi

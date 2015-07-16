@@ -1,0 +1,13 @@
+$NetBSD: patch-libsanitizer_configure.tgt,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+
+--- libsanitizer/configure.tgt.orig	2014-09-26 13:07:42.000000000 +0000
++++ libsanitizer/configure.tgt
+@@ -37,7 +37,7 @@ case "${target}" in
+ 	;;
+   aarch64*-*-linux*)
+ 	;;
+-  x86_64-*-darwin[1]* | i?86-*-darwin[1]*)
++  x86_64-*-darwin[1][1-9]* | i?86-*-darwin[1][1-9]*)
+ 	TSAN_SUPPORTED=no
+ 	;;
+   *)
