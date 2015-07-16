@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3038 2015/07/16 11:42:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3039 2015/07/16 11:42:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5678,3 +5678,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-paste to 2.0.2 [wiz 2015-07-16]
 	Updated www/py-PasteDeploy to 1.5.2 [wiz 2015-07-16]
 	Added www/py-PasteScript version 2.0.2 [wiz 2015-07-16]
+	Updated mail/thunderbird to 38.1.0 [ryoon 2015-07-16]
