@@ -1,0 +1,6 @@
+The GNU Compiler Collection (GCC) includes front ends for C, C++, Objective-C,
+Fortran, Java, and Go, as well as libraries for these languages (libstdc++,
+libgcj,...). This package provides the snapshot release of version 5.
+
+On NetBSD a working cabsl function must be present in libm to build gfortran. 
+This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13.
