@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/26 12:38:42 obache Exp $
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.6 2015/07/16 11:36:20 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +7,7 @@ ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/paste/auth/__init__.py
 ${PYSITELIB}/paste/auth/__init__.pyc
 ${PYSITELIB}/paste/auth/__init__.pyo
@@ -53,6 +53,8 @@ ${PYSITELIB}/paste/config.pyo
 ${PYSITELIB}/paste/cowbell/__init__.py
 ${PYSITELIB}/paste/cowbell/__init__.pyc
 ${PYSITELIB}/paste/cowbell/__init__.pyo
+${PYSITELIB}/paste/cowbell/bell-ascending.png
+${PYSITELIB}/paste/cowbell/bell-descending.png
 ${PYSITELIB}/paste/debug/__init__.py
 ${PYSITELIB}/paste/debug/__init__.pyc
 ${PYSITELIB}/paste/debug/__init__.pyo
@@ -178,6 +180,7 @@ ${PYSITELIB}/paste/url.py
 ${PYSITELIB}/paste/url.pyc
 ${PYSITELIB}/paste/url.pyo
 ${PYSITELIB}/paste/urlmap.py
+${PYSITELIB}/paste/urlmap.py.orig
 ${PYSITELIB}/paste/urlmap.pyc
 ${PYSITELIB}/paste/urlmap.pyo
 ${PYSITELIB}/paste/urlparser.py
@@ -186,9 +189,6 @@ ${PYSITELIB}/paste/urlparser.pyo
 ${PYSITELIB}/paste/util/PySourceColor.py
 ${PYSITELIB}/paste/util/PySourceColor.pyc
 ${PYSITELIB}/paste/util/PySourceColor.pyo
-${PYSITELIB}/paste/util/UserDict24.py
-${PYSITELIB}/paste/util/UserDict24.pyc
-${PYSITELIB}/paste/util/UserDict24.pyo
 ${PYSITELIB}/paste/util/__init__.py
 ${PYSITELIB}/paste/util/__init__.pyc
 ${PYSITELIB}/paste/util/__init__.pyo
@@ -207,9 +207,6 @@ ${PYSITELIB}/paste/util/dateinterval.pyo
 ${PYSITELIB}/paste/util/datetimeutil.py
 ${PYSITELIB}/paste/util/datetimeutil.pyc
 ${PYSITELIB}/paste/util/datetimeutil.pyo
-${PYSITELIB}/paste/util/doctest24.py
-${PYSITELIB}/paste/util/doctest24.pyc
-${PYSITELIB}/paste/util/doctest24.pyo
 ${PYSITELIB}/paste/util/filemixin.py
 ${PYSITELIB}/paste/util/filemixin.pyc
 ${PYSITELIB}/paste/util/filemixin.pyo
@@ -246,13 +243,9 @@ ${PYSITELIB}/paste/util/quoting.pyo
 ${PYSITELIB}/paste/util/scgiserver.py
 ${PYSITELIB}/paste/util/scgiserver.pyc
 ${PYSITELIB}/paste/util/scgiserver.pyo
-${PYSITELIB}/paste/util/string24.py
-${PYSITELIB}/paste/util/string24.pyc
-${PYSITELIB}/paste/util/string24.pyo
-${PYSITELIB}/paste/util/subprocess24.py
-${PYSITELIB}/paste/util/subprocess24.pyc
-${PYSITELIB}/paste/util/subprocess24.pyo
 ${PYSITELIB}/paste/util/template.py
+${PYSITELIB}/paste/util/template.py.2015-04-30-123224
+${PYSITELIB}/paste/util/template.py.orig
 ${PYSITELIB}/paste/util/template.pyc
 ${PYSITELIB}/paste/util/template.pyo
 ${PYSITELIB}/paste/util/threadedprint.py

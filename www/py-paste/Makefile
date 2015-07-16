@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2014/05/09 07:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/16 11:36:20 wiz Exp $
 
-DISTNAME=	Paste-1.7.5.1
+DISTNAME=	Paste-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/P/Paste/
@@ -10,9 +10,9 @@ HOMEPAGE=	http://pythonpaste.org/
 COMMENT=	Middleware for Python WSGI applications
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
