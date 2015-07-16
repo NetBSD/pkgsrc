@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/07/15 15:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2015/07/16 11:55:26 ryoon Exp $
 
 VERREL=		4.4.4
 VERRC=		3
@@ -129,13 +129,13 @@ HAS_CONFIGURE=		yes
 # Do not use /tmp, outside of WRKSRC.
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 
-.if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
-CONFIGURE_ARGS+=	--with-parallelism=1
-.else
-# --with-parallelism conficts with -jN.
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=		no # --with-parallelism conficts with -jN
+.if !empty(MAKE_JOBS)
 CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS}
+.else
+CONFIGURE_ARGS+=	--with-parallelism=1
 .endif
+
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
