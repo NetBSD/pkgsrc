@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2015/07/05 11:55:06 martin Exp $
+# $NetBSD: Makefile,v 1.218 2015/07/16 22:05:31 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	39.0
@@ -23,9 +23,6 @@ LICENSE=	mpl-1.1
 MOZILLA_DIR=	# empty
 
 # Note: when updating remember to conditionalise about-background.png in PLIST
-# XXX Firefox 21.0's firefox/xulrunner separation is not working.
-#CONFIGURE_ARGS+=	--with-libxul-sdk
-#CONFIGURE_ARGS+=	--with-system-libxul
 CONFIGURE_ARGS+=	--enable-application=browser
 
 # workround for link of libxul.so etc.
