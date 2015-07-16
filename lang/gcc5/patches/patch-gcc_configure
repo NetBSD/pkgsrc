@@ -1,0 +1,18 @@
+$NetBSD: patch-gcc_configure,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+
+--- gcc/configure.orig	2014-05-21 11:08:58.000000000 +0000
++++ gcc/configure
+@@ -27332,6 +27332,13 @@ case "$target" in
+       gcc_cv_target_dl_iterate_phdr=no
+     fi
+     ;;
++  *-*-netbsd* | *-*-openbsd*)
++    if grep dl_iterate_phdr $target_header_dir/sys/link_elf.h > /dev/null 2>&1; then
++      gcc_cv_target_dl_iterate_phdr=yes
++    else
++      gcc_cv_target_dl_iterate_phdr=no
++    fi
++    ;;
+ esac
+ 
+ if test x$gcc_cv_target_dl_iterate_phdr = xyes; then
