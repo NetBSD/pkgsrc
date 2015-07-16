@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/08/06 20:49:23 bad Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/07/16 16:46:47 adam Exp $
 bin/dcraw
 man/ca/man1/dcraw.1
 man/cs/man1/dcraw.1
@@ -9,9 +9,12 @@ man/es/man1/dcraw.1
 man/fr/man1/dcraw.1
 man/hu/man1/dcraw.1
 man/it/man1/dcraw.1
+man/ja/man1/dcraw.1
 man/man1/dcraw.1
+man/nl/man1/dcraw.1
 man/pl/man1/dcraw.1
 man/pt/man1/dcraw.1
+man/ro/man1/dcraw.1
 man/ru/man1/dcraw.1
 man/sv/man1/dcraw.1
 man/zh_CN/man1/dcraw.1
@@ -25,9 +28,11 @@ share/locale/es/LC_MESSAGES/dcraw.mo
 share/locale/fr/LC_MESSAGES/dcraw.mo
 share/locale/hu/LC_MESSAGES/dcraw.mo
 share/locale/it/LC_MESSAGES/dcraw.mo
+share/locale/ja/LC_MESSAGES/dcraw.mo
 share/locale/nl/LC_MESSAGES/dcraw.mo
 share/locale/pl/LC_MESSAGES/dcraw.mo
 share/locale/pt/LC_MESSAGES/dcraw.mo
+share/locale/ro/LC_MESSAGES/dcraw.mo
 share/locale/ru/LC_MESSAGES/dcraw.mo
 share/locale/sv/LC_MESSAGES/dcraw.mo
 share/locale/zh_CN/LC_MESSAGES/dcraw.mo
