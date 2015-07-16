@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3044 2015/07/16 12:07:44 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3045 2015/07/16 16:47:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5684,3 +5684,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox31-l10n to 31.8.0 [ryoon 2015-07-16]
 	Added lang/gcc5 version 5.1.0 [ryoon 2015-07-16]
 	Added lang/gcc5-libs version 5.1.0nb1 [ryoon 2015-07-16]
+	Updated graphics/dcraw to 9.26.0 [adam 2015-07-16]
