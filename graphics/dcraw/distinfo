@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2014/03/15 00:16:03 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2015/07/16 16:46:47 adam Exp $
 
-SHA1 (dcraw-9.20/dcraw-9.20.tar.gz) = 9b8ca82eaaf6582ffa0f2602e8ca705c722ea87e
-RMD160 (dcraw-9.20/dcraw-9.20.tar.gz) = 4b5722023a7ef70d887e1b5deb6a42dfdddaa112
-Size (dcraw-9.20/dcraw-9.20.tar.gz) = 171270 bytes
+SHA1 (dcraw-9.26.0.tar.gz) = f4432b673b15df8181c386bc18bb039aefafea7f
+RMD160 (dcraw-9.26.0.tar.gz) = ee3ff85aaa8fc3860450723aece31ea997ad4371
+Size (dcraw-9.26.0.tar.gz) = 190647 bytes
 SHA1 (patch-aa) = 3191ee51355a17f4d17a1b43fb1ad99918861935
