@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.154 2015/07/09 15:17:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.155 2015/07/16 11:40:50 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		38.0.1
+TB_VER=		38.1.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
@@ -92,7 +92,7 @@ post-install:
 	   ${DESTDIR}${PREFIX}/lib/${MOZILLA}/extensions/.
 	rm -rf ${WRKDIR}/extensions
 
-.include "../../www/firefox31/mozilla-common.mk"
+.include "../../www/firefox38/mozilla-common.mk"
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
