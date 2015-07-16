@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3036 2015/07/16 11:36:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3037 2015/07/16 11:38:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5676,3 +5676,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/url2pkg to 2.24 [wiz 2015-07-15]
 	Updated devel/py-mock to 1.1.2nb1 [wiz 2015-07-16]
 	Updated www/py-paste to 2.0.2 [wiz 2015-07-16]
+	Updated www/py-PasteDeploy to 1.5.2 [wiz 2015-07-16]
