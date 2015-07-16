@@ -1,14 +1,16 @@
-# $NetBSD: builtin.mk,v 1.7 2014/04/18 10:49:01 adam Exp $
+# $NetBSD: builtin.mk,v 1.8 2015/07/16 09:16:30 richard Exp $
 
 BUILTIN_PKG:=	gmp
 
 BUILTIN_FIND_HEADERS_VAR:=	H_GMP
 BUILTIN_FIND_HEADERS.H_GMP=	gmp.h gmp/gmp.h
 
-BUILTIN_VERSION_SCRIPT.gmp= 						\
-		{ ${ECHO} "\#include <${H_GMP}>";			\
-		  ${ECHO} "__GNU_MP_VERSION/__GNU_MP_VERSION_MINOR/__GNU_MP_VERSION_PATCHLEVEL";								\
-		} | ${CCPATH:U${CC}} -E  - | ${SED} -e 's,/,.,g' | ${TAIL} -1
+BUILTIN_VERSION_SCRIPT.gmp= ${AWK} \
+	'/\#define[ \t]*__GNU_MP_VERSION[ \t]/ { major = $$3; } \
+	/\#define[ \t]*__GNU_MP_VERSION_MINOR[ \t]/ { minor = $$3; } \
+	/\#define[ \t]*__GNU_MP_VERSION_PATCHLEVEL[ \t]/ { patch = $$3; } \
+	END { if (major!="" && minor!="" && patch!="") \
+	print major "." minor "." patch; else print ""; }'
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -31,7 +33,7 @@ MAKEVARS+=	IS_BUILTIN.gmp
 .if !defined(BUILTIN_PKG.gmp) && \
     !empty(IS_BUILTIN.gmp:M[yY][eE][sS]) && \
     empty(H_GMP:M__nonexistent__)
-BUILTIN_VERSION.gmp!=	${BUILTIN_VERSION_SCRIPT.gmp}
+BUILTIN_VERSION.gmp!=	${BUILTIN_VERSION_SCRIPT.gmp} ${H_GMP}
 BUILTIN_PKG.gmp=	gmp-${BUILTIN_VERSION.gmp}
 .endif
 MAKEVARS+=	BUILTIN_PKG.gmp
