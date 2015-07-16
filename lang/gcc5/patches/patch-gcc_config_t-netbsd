@@ -1,0 +1,28 @@
+$NetBSD: patch-gcc_config_t-netbsd,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+
+--- /dev/null	2014-12-16 20:23:05.000000000 +0000
++++ gcc/config/t-netbsd
+@@ -0,0 +1,23 @@
++# Copyright (C) 2002-2014 Free Software Foundation, Inc.
++#
++# This file is part of GCC.
++#
++# GCC is free software; you can redistribute it and/or modify
++# it under the terms of the GNU General Public License as published by
++# the Free Software Foundation; either version 3, or (at your option)
++# any later version.
++#
++# GCC is distributed in the hope that it will be useful,
++# but WITHOUT ANY WARRANTY; without even the implied warranty of
++# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++# GNU General Public License for more details.
++#
++# You should have received a copy of the GNU General Public License
++# along with GCC; see the file COPYING3.  If not see
++# <http://www.gnu.org/licenses/>.
++
++
++netbsd.o: $(srcdir)/config/netbsd.c
++	$(COMPILE) $<
++	$(POSTCOMPILE)
++
