@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14564 2015/07/17 12:50:12 wiz Exp $
+$NetBSD: TODO,v 1.14565 2015/07/17 16:01:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -915,10 +915,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
 	o py-datapkg-0.9
-	o py-django-1.7.9
-	o py-django-1.8 [incompatible with django-cms, please hold]
-	o py-django-1.8.3
-	o py-django-cms-3.1
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
