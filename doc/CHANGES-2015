@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3046 2015/07/17 02:03:17 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.3047 2015/07/17 04:54:26 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5686,3 +5686,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/gcc5-libs version 5.1.0nb1 [ryoon 2015-07-16]
 	Updated graphics/dcraw to 9.26.0 [adam 2015-07-16]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.491 [tsutsui 2015-07-17]
+	Updated wm/bbpager to 0.3.1nb3 [bsiegert 2015-07-17]
