@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3048 2015/07/17 07:54:14 tron Exp $
+$NetBSD: CHANGES-2015,v 1.3049 2015/07/17 14:53:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5688,3 +5688,17 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.491 [tsutsui 2015-07-17]
 	Updated wm/bbpager to 0.3.1nb3 [bsiegert 2015-07-17]
 	Updated net/youtube-dl to 20150615nb1 [tron 2015-07-17]
+	Updated devel/git to 2.4.6 [adam 2015-07-17]
+	Updated devel/git-base to 2.4.6 [adam 2015-07-17]
+	Updated devel/git-contrib to 2.4.6 [adam 2015-07-17]
+	Updated devel/git-docs to 2.4.6 [adam 2015-07-17]
+	Updated devel/git-gitk to 2.4.6 [adam 2015-07-17]
+	Updated devel/git-svn to 2.4.6 [adam 2015-07-17]
+	Updated www/gitweb to 2.4.6 [adam 2015-07-17]
+	Updated databases/openldap to 2.4.41 [adam 2015-07-17]
+	Updated databases/openldap-client to 2.4.41 [adam 2015-07-17]
+	Updated databases/openldap-server to 2.4.41 [adam 2015-07-17]
+	Updated databases/openldap-doc to 2.4.41 [adam 2015-07-17]
+	Updated databases/openldap-cloak to 2.4.41 [adam 2015-07-17]
+	Updated databases/openldap-nops to 2.4.41 [adam 2015-07-17]
+	Updated databases/openldap-smbk5pwd to 2.4.41 [adam 2015-07-17]
