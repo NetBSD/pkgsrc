@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/04/17 15:46:22 adam Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/17 15:38:55 adam Exp $
 
-DISTNAME=	django-mptt-0.7.1
+DISTNAME=	django-mptt-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-mptt/
