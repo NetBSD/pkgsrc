@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3049 2015/07/17 14:53:02 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3050 2015/07/17 16:01:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5702,3 +5702,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/openldap-cloak to 2.4.41 [adam 2015-07-17]
 	Updated databases/openldap-nops to 2.4.41 [adam 2015-07-17]
 	Updated databases/openldap-smbk5pwd to 2.4.41 [adam 2015-07-17]
+	Updated www/py-djangocms-admin-style to 0.2.7 [adam 2015-07-17]
+	Updated www/py-django-reversion to 1.8.7 [adam 2015-07-17]
+	Updated www/py-django-mptt to 0.7.4 [adam 2015-07-17]
+	Updated www/py-django-classy-tags to 0.6.2 [adam 2015-07-17]
+	Updated www/py-django-sekizai to 0.8.2 [adam 2015-07-17]
+	Updated www/py-django to 1.8.3 [adam 2015-07-17]
+	Updated www/py-django-cms to 3.1.2 [adam 2015-07-17]
+	Updated www/py-djangocms-text-ckeditor to 2.5.1 [adam 2015-07-17]
