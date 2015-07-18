@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2015/07/09 15:17:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.58 2015/07/18 13:30:36 abs Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -2022,6 +2022,7 @@ lib/thunderbird/isp/rss.rdf
 lib/thunderbird/libldap60.so
 lib/thunderbird/libldif60.so
 lib/thunderbird/libmozalloc.so
+lib/thunderbird/libmozjs.so
 lib/thunderbird/libprldap60.so
 lib/thunderbird/libxul.so
 lib/thunderbird/modules/AboutReader.jsm
