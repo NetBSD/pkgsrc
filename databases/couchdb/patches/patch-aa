@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2014/01/02 17:10:23 fhajny Exp $
+$NetBSD: patch-aa,v 1.7 2015/07/18 07:36:35 fhajny Exp $
 
 Set pkgsrc standard paths.
---- configure.orig	2013-10-20 09:38:47.000000000 +0000
+--- configure.orig	2014-08-21 23:15:40.000000000 +0000
 +++ configure
 @@ -647,6 +647,7 @@ localstatelogdir
  localstatelibdir
@@ -11,7 +11,7 @@ Set pkgsrc standard paths.
  localdatadir
  localconfdir
  bug_uri
-@@ -18326,7 +18327,7 @@ fi
+@@ -18383,7 +18384,7 @@ fi
  done
  test -n "$CURL_CONFIG" || CURL_CONFIG="no"
  
@@ -20,7 +20,7 @@ Set pkgsrc standard paths.
  
        :
  
-@@ -18338,7 +18339,7 @@ $as_echo "$as_me: WARNING: You will be u
+@@ -18395,7 +18396,7 @@ $as_echo "$as_me: WARNING: You will be u
  
  else
  
@@ -29,7 +29,7 @@ Set pkgsrc standard paths.
  
  	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
  
-@@ -18348,7 +18349,7 @@ else
+@@ -18405,7 +18406,7 @@ else
  
  fi
  
@@ -38,7 +38,43 @@ Set pkgsrc standard paths.
  
  	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
  
-@@ -19153,13 +19154,15 @@ localdatadir=${datadir}/${package_identi
+@@ -18532,7 +18533,7 @@ esac
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking Erlang version compatibility" >&5
+ $as_echo_n "checking Erlang version compatibility... " >&6; }
+-erlang_version_error="The installed Erlang version must be >= R14B (erts-5.8.1) and =< 17 (erts-6.0)"
++erlang_version_error="The installed Erlang version must be >= R14B (erts-5.8.1) and =< 18 (erts-7.0)"
+ 
+ version="`${ERL} -version 2>&1 | ${SED} 's/[^0-9]/ /g'` 0 0 0"
+ major_version=`echo $version | ${AWK} "{print \\$1}"`
+@@ -18540,7 +18541,7 @@ minor_version=`echo $version | ${AWK} "{
+ patch_version=`echo $version | ${AWK} "{print \\$3}"`
+ echo -n "detected Erlang version: $major_version.$minor_version.$patch_version..."
+ 
+-if test $major_version -lt 5 -o $major_version -gt 6; then
++if test $major_version -lt 5 -o $major_version -gt 7; then
+     as_fn_error $? "$erlang_version_error major_version does not match" "$LINENO" 5
+ fi
+ 
+@@ -18559,7 +18560,7 @@ otp_release="`\
+ 
+ 
+ 
+- if can_use_nifs=$(echo $otp_release | grep -E "^(R14B|R15|R16|17)"); then
++ if can_use_nifs=$(echo $otp_release | grep -E "^(R14B|R15|R16|17|18)"); then
+   USE_OTP_NIFS_TRUE=
+   USE_OTP_NIFS_FALSE='#'
+ else
+@@ -18567,7 +18568,7 @@ else
+   USE_OTP_NIFS_FALSE=
+ fi
+ 
+- if can_use_ejson=$(echo $otp_release | grep -E "^(R14B03|R15|R16|17)"); then
++ if can_use_ejson=$(echo $otp_release | grep -E "^(R14B03|R15|R16|17|18)"); then
+   USE_EJSON_COMPARE_NIF_TRUE=
+   USE_EJSON_COMPARE_NIF_FALSE='#'
+ else
+@@ -19212,13 +19213,15 @@ localdatadir=${datadir}/${package_identi
  
  localdocdir=${datadir}/doc/${package_identifier}
  
@@ -57,7 +93,7 @@ Set pkgsrc standard paths.
  
  erlangversion=${erlangversion}
  
-@@ -19174,9 +19177,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+@@ -19233,9 +19236,9 @@ if test x${IS_WINDOWS} = xTRUE; then
      localerlanglibdir=${libdir}
  
  else
