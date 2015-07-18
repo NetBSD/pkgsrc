@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2015/07/08 17:49:49 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2015/07/18 11:11:53 adam Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
@@ -28,9 +28,9 @@ CONFIGURE_ARGS+=	-openssl-linked
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
-.if empty(MACHINE_PLATFORM:MDarwin-*-*)
+.  if empty(MACHINE_PLATFORM:MDarwin-*-*)
 CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
-.endif
+.  endif
 .endif
 
 INSTALLATION_DIRS=	lib/pkgconfig
