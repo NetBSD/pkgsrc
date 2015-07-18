@@ -1,4 +1,4 @@
-$NetBSD: manual-ltmain.m4sh,v 1.1 2014/12/02 10:56:24 joerg Exp $
+$NetBSD: manual-ltmain.m4sh,v 1.2 2015/07/18 16:50:51 joerg Exp $
 
 --- libltdl/config/ltmain.m4sh.orig	2014-11-27 21:09:59.000000000 +0000
 +++ libltdl/config/ltmain.m4sh
@@ -15,3 +15,14 @@ $NetBSD: manual-ltmain.m4sh,v 1.1 2014/12/02 10:56:24 joerg Exp $
  	    elif test "$hardcode_minus_L" = yes; then
  	      add_dir="-L$libdir"
  	      add="-l$name"
+@@ -8632,8 +8636,8 @@ dlpreopen='$dlprefiles'
+ 
+ # Directory that this library needs to be installed in:
+ libdir='$install_libdir'"
+-	  if test "$installed" = no && test "$need_relink" = yes; then
+-	    $ECHO >> $output "\
++	  if test "$installed" = no && test "$need_relink" = yes && \
++	     test -n "$relink_command"; then
+ relink_command=\"$relink_command\""
+ 	  fi
+ 	done
