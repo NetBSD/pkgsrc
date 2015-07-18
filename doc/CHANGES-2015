@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3055 2015/07/18 10:41:34 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3056 2015/07/18 11:09:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5715,3 +5715,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/erlang-doc to 18.0 [fhajny 2015-07-18]
 	Updated lang/erlang-man to 18.0 [fhajny 2015-07-18]
 	Updated graphics/libraw to 0.16.2 [adam 2015-07-18]
+	Updated multimedia/x264-devel to 20150717 [adam 2015-07-18]
