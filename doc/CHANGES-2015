@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3056 2015/07/18 11:09:50 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3057 2015/07/18 21:58:35 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5716,3 +5716,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/erlang-man to 18.0 [fhajny 2015-07-18]
 	Updated graphics/libraw to 0.16.2 [adam 2015-07-18]
 	Updated multimedia/x264-devel to 20150717 [adam 2015-07-18]
+	Updated devel/py-tortoisehg to 3.4.2 [nros 2015-07-18]
