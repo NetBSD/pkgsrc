@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: distinfo,v 1.23 2015/07/18 07:07:42 fhajny Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -56,7 +56,7 @@ SHA1 (patch-hotspot_make_solaris_makefiles_build__vm__def.sh) = 54d197a94d27406f
 SHA1 (patch-hotspot_make_solaris_makefiles_debug.make) = 7195c97c4f559b2e9410028315de351c5047d59d
 SHA1 (patch-hotspot_make_solaris_makefiles_dtrace.make) = 0c9dc2b97d49cf557dc57071fd7c312b9cb8e598
 SHA1 (patch-hotspot_make_solaris_makefiles_fastdebug.make) = 632f96a322f1568df6f49bf31716bafe1d324976
-SHA1 (patch-hotspot_make_solaris_makefiles_gcc.make) = 9aef5948efd9ef11f862c00d14b4d6dfec019be4
+SHA1 (patch-hotspot_make_solaris_makefiles_gcc.make) = 4763215f5ce2c3d9fcadb69e52afad7c9de97417
 SHA1 (patch-hotspot_make_solaris_makefiles_jsig.make) = 10ecc1bd24d6d555e4730041c9dce1d3258bcab0
 SHA1 (patch-hotspot_make_solaris_makefiles_mapfile-vers-COMPILER1.gcc) = 58965fe7c142b67be35cab8b30f84dcee2096e39
 SHA1 (patch-hotspot_make_solaris_makefiles_mapfile-vers-COMPILER2.gcc) = 2dfd843c450971ee0857cbd81b946a4d7c86ee3b
