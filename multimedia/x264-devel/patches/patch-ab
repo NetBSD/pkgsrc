@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.21 2015/01/20 09:37:53 wiz Exp $
+$NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
 
---- Makefile.orig	2014-12-18 21:45:04.000000000 +0000
+--- Makefile.orig	2015-07-17 20:45:05.000000000 +0000
 +++ Makefile
 @@ -99,9 +99,9 @@ endif
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.21 2015/01/20 09:37:53 wiz Exp $
  endif
  endif
  
-@@ -159,20 +159,23 @@ GENERATED += common/oclobj.h
+@@ -162,20 +162,23 @@ GENERATED += common/oclobj.h
  SRCS += common/opencl.c encoder/slicetype-cl.c
  endif
  
@@ -54,7 +54,7 @@ $NetBSD: patch-ab,v 1.21 2015/01/20 09:37:53 wiz Exp $
  
  $(SONAME): $(GENERATED) .depend $(OBJS) $(OBJASM) $(OBJSO)
  	$(LD)$@ $(OBJS) $(OBJASM) $(OBJSO) $(SOFLAGS) $(LDFLAGS)
-@@ -184,20 +187,19 @@ checkasm: checkasm$(EXE)
+@@ -187,20 +190,19 @@ checkasm: checkasm$(EXE)
  example: example$(EXE)
  endif
  
@@ -81,8 +81,8 @@ $NetBSD: patch-ab,v 1.21 2015/01/20 09:37:53 wiz Exp $
  
  %.o: %.S
  	$(AS) $(ASFLAGS) -o $@ $<
-@@ -267,8 +269,7 @@ distclean: clean
- 	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def
+@@ -270,8 +272,7 @@ distclean: clean
+ 	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def conftest*
  
  install-cli: cli
 -	$(INSTALL) -d $(DESTDIR)$(bindir)
@@ -91,7 +91,7 @@ $NetBSD: patch-ab,v 1.21 2015/01/20 09:37:53 wiz Exp $
  
  install-lib-dev:
  	$(INSTALL) -d $(DESTDIR)$(includedir)
-@@ -279,8 +280,7 @@ install-lib-dev:
+@@ -282,8 +283,7 @@ install-lib-dev:
  	$(INSTALL) -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
