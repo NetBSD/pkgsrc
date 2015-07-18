@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2015/05/03 19:44:00 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/18 07:23:47 fhajny Exp $
 
-DISTNAME=	2.5.1
-PKGNAME=	rebar-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	rebar-2.6.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rebar/rebar/archive/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rebar/}
 
 MAINTAINER=	reinoud@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=rebar/rebar/}
+HOMEPAGE=	http://github.com/rebar/rebar/
 COMMENT=	Rebar is an Erlang build tool
 LICENSE=	apache-2.0
-
-WRKSRC=	${WRKDIR}/rebar-2.5.1
 
 USE_TOOLS+=	gmake
 AUTO_MKDIRS=	yes
