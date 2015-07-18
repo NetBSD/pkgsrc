@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/04/28 14:34:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/07/18 08:55:16 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -168,6 +168,7 @@ lib/erlang/erts-${VERSION.erts}/doc/html/release_notes.html
 lib/erlang/erts-${VERSION.erts}/doc/html/run_erl.html
 lib/erlang/erts-${VERSION.erts}/doc/html/start.html
 lib/erlang/erts-${VERSION.erts}/doc/html/start_erl.html
+lib/erlang/erts-${VERSION.erts}/doc/html/time_compat.erl
 lib/erlang/erts-${VERSION.erts}/doc/html/time_correction.html
 lib/erlang/erts-${VERSION.erts}/doc/html/tty.html
 lib/erlang/erts-${VERSION.erts}/doc/html/users_guide.html
@@ -176,8 +177,10 @@ lib/erlang/erts-${VERSION.erts}/doc/html/zlib.html
 lib/erlang/erts-${VERSION.erts}/doc/pdf/erts-${VERSION.erts}.pdf
 lib/erlang/erts-${VERSION.erts}/info
 lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1.eix
+lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1_getting_started.html
+lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1_introduction.html
+lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1_overview.html
 lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1_spec.html
-lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1_ug.html
 lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1ct.html
 lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/asn1rt.html
 lib/erlang/lib/asn1-${VERSION.asn1}/doc/html/exclusive_Win_But.gif
@@ -690,6 +693,7 @@ lib/erlang/lib/inets-${VERSION.inets}/doc/html/http_uri.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpc.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_conf.html
+lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_custom_api.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_socket.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_util.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/index.html
@@ -759,6 +763,12 @@ lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/e
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpPeer.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpSelf.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpServer.html
+lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpServerSocketTransport.html
+lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpServerTransport.html
+lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpSocketTransport.html
+lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpSocketTransportFactory.html
+lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpTransport.html
+lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/OtpTransportFactory.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/package-frame.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/package-summary.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/com/ericsson/otp/erlang/package-tree.html
@@ -870,7 +880,6 @@ lib/erlang/lib/megaco-${VERSION.megaco}/info
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_App_A.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_App_B.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_App_C.html
-lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_App_D.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap1.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap2.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap3.html
@@ -878,6 +887,7 @@ lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap4.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap5.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap7.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_chap8.html
+lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/Mnesia_overview.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/book.gif
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/company.gif
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/index.html
@@ -1062,7 +1072,6 @@ lib/erlang/lib/percept-${VERSION.percept}/doc/html/test4.gif
 lib/erlang/lib/percept-${VERSION.percept}/doc/html/users_guide.html
 lib/erlang/lib/percept-${VERSION.percept}/doc/pdf/percept-${VERSION.percept}.pdf
 lib/erlang/lib/percept-${VERSION.percept}/info
-lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/cert_records.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/index.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/introduction.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/note.gif
@@ -1210,7 +1219,6 @@ lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_channel.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_client_key_api.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_connection.html
-lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_protocol.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_server_key_api.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_sftp.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_sftpd.html
@@ -1224,7 +1232,10 @@ lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/release_notes.html
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl.eix
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl.html
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_app.html
+lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_crl_cache.html
+lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_crl_cache_api.html
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_distribution.html
+lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_introduction.html
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_protocol.html
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/ssl_session_cache_api.html
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/users_guide.html
@@ -1234,6 +1245,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/doc/pdf/ssl-${VERSION.ssl}.pdf
 lib/erlang/lib/ssl-${VERSION.ssl}/info
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/STDLIB_app.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/array.html
+lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/assert.hrl.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/base64.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/beam_lib.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/binary.html
@@ -1244,6 +1256,7 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/dict.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/digraph.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/digraph_utils.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/epp.html
+lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/erl_anno.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/erl_eval.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/erl_expand_records.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/erl_id_trans.html
@@ -1275,12 +1288,12 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/ms_transform.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/notes.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/orddict.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/ordsets.html
-lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/pg.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/pool.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/proc_lib.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/proplists.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/qlc.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/queue.html
+lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/rand.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/random.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/re.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/release_notes.html
@@ -1312,6 +1325,8 @@ lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/erl_syntax_lib.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/erl_tidy.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/igor.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/index.html
+lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/merl.html
+lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/merl_transform.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/notes.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/prettypr.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/release_notes.html

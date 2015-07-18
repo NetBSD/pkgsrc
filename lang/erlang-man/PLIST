@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/04/28 14:34:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/07/18 08:55:16 fhajny Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -151,6 +151,7 @@ lib/erlang/man/man3/eldap.3
 lib/erlang/man/man3/epp.3
 lib/erlang/man/man3/epp_dodger.3
 lib/erlang/man/man3/eprof.3
+lib/erlang/man/man3/erl_anno.3
 lib/erlang/man/man3/erl_boot_server.3
 lib/erlang/man/man3/erl_comment_scan.3
 lib/erlang/man/man3/erl_connect.3
@@ -219,6 +220,7 @@ lib/erlang/man/man3/http_uri.3
 lib/erlang/man/man3/httpc.3
 lib/erlang/man/man3/httpd.3
 lib/erlang/man/man3/httpd_conf.3
+lib/erlang/man/man3/httpd_custom_api.3
 lib/erlang/man/man3/httpd_socket.3
 lib/erlang/man/man3/httpd_util.3
 lib/erlang/man/man3/i.3
@@ -259,6 +261,8 @@ lib/erlang/man/man3/megaco_transport.3
 lib/erlang/man/man3/megaco_udp.3
 lib/erlang/man/man3/megaco_user.3
 lib/erlang/man/man3/memsup.3
+lib/erlang/man/man3/merl.3
+lib/erlang/man/man3/merl_transform.3
 lib/erlang/man/man3/mnesia.3
 lib/erlang/man/man3/mnesia_frag_hash.3
 lib/erlang/man/man3/mnesia_registry.3
@@ -288,7 +292,6 @@ lib/erlang/man/man3/otp_mib.3
 lib/erlang/man/man3/overload.3
 lib/erlang/man/man3/percept.3
 lib/erlang/man/man3/percept_profile.3
-lib/erlang/man/man3/pg.3
 lib/erlang/man/man3/pg2.3
 lib/erlang/man/man3/pool.3
 lib/erlang/man/man3/prettypr.3
@@ -297,6 +300,7 @@ lib/erlang/man/man3/proplists.3
 lib/erlang/man/man3/public_key.3
 lib/erlang/man/man3/qlc.3
 lib/erlang/man/man3/queue.3
+lib/erlang/man/man3/rand.3
 lib/erlang/man/man3/random.3
 lib/erlang/man/man3/rb.3
 lib/erlang/man/man3/re.3
@@ -352,6 +356,8 @@ lib/erlang/man/man3/ssh_server_key_api.3
 lib/erlang/man/man3/ssh_sftp.3
 lib/erlang/man/man3/ssh_sftpd.3
 lib/erlang/man/man3/ssl.3
+lib/erlang/man/man3/ssl_crl_cache.3
+lib/erlang/man/man3/ssl_crl_cache_api.3
 lib/erlang/man/man3/ssl_session_cache_api.3
 lib/erlang/man/man3/string.3
 lib/erlang/man/man3/supervisor.3
