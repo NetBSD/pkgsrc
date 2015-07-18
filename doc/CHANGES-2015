@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3050 2015/07/17 16:01:58 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3051 2015/07/18 07:23:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5710,3 +5710,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django to 1.8.3 [adam 2015-07-17]
 	Updated www/py-django-cms to 3.1.2 [adam 2015-07-17]
 	Updated www/py-djangocms-text-ckeditor to 2.5.1 [adam 2015-07-17]
+	Updated devel/rebar to 2.6.0 [fhajny 2015-07-18]
