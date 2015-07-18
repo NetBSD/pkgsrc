@@ -1,4 +1,6 @@
-$NetBSD: patch-libraw__r.pc.in,v 1.1 2014/11/17 19:04:25 joerg Exp $
+$NetBSD: patch-libraw__r.pc.in,v 1.2 2015/07/18 10:40:20 adam Exp $
+
+Avoid libstdc++.
 
 --- libraw_r.pc.in.orig	2013-05-17 22:56:40.000000000 +0000
 +++ libraw_r.pc.in
