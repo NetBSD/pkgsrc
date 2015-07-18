@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.62 2015/05/08 20:28:30 sevan Exp $
+# $NetBSD: Linux.mk,v 1.63 2015/07/18 15:08:43 wiedi Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -59,8 +59,13 @@ _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/i386-linux
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/i386-linux-gnu /usr/lib/i386-linux-gnu
 .endif
 .if !empty(MACHINE_ARCH:Marm*)
+.if exists(/etc/ld.so.conf.d/arm-linux-gnueabihf.conf)
+_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabihf:/usr/lib/arm-linux-gnueabihf
+_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabihf /usr/lib/arm-linux-gnueabihf
+.else
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabi:/usr/lib/arm-linux-gnueabi
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabi /usr/lib/arm-linux-gnueabi
+.endif
 .endif
 .else
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
