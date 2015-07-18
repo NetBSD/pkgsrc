@@ -1,8 +1,8 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.2 2015/07/18 07:07:42 fhajny Exp $
 
 GCC support.
 
---- hotspot/make/solaris/makefiles/gcc.make.orig	2015-02-02 15:32:37.000000000 +0000
+--- hotspot/make/solaris/makefiles/gcc.make.orig	2015-06-10 10:31:44.000000000 +0000
 +++ hotspot/make/solaris/makefiles/gcc.make
 @@ -70,11 +70,23 @@ VM_PICFLAG/LIBJVM = $(PICFLAG)
  VM_PICFLAG/AOUT   =
@@ -38,14 +38,18 @@ GCC support.
  ISA_DIR/i486=
  ISA_DIR/sparcv9=/64
  
-@@ -94,7 +107,6 @@
+@@ -94,10 +107,9 @@ ISA_DIR/sparcv9=/64
  CFLAGS     += $(ARCHFLAG)
  AOUT_FLAGS += $(ARCHFLAG)
  LFLAGS     += $(ARCHFLAG)
 -ASFLAGS    += $(ARCHFLAG)
-
+ 
  ifeq ($(BUILDARCH), amd64)
- ASFLAGS += -march=k8  -march=amd64
+-ASFLAGS += -march=k8  -march=amd64
++ASFLAGS += -march=k8
+ LFLAGS += -march=k8 
+ endif
+ 
 @@ -107,6 +119,11 @@ ifdef CC_INTERP
    CFLAGS += -DCC_INTERP
  endif
