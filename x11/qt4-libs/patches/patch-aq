@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.16 2015/07/08 17:49:49 wiz Exp $
+$NetBSD: patch-aq,v 1.17 2015/07/18 11:11:53 adam Exp $
 
 --- configure.orig	2015-05-07 14:14:56.000000000 +0000
 +++ configure
@@ -47,6 +47,15 @@ $NetBSD: patch-aq,v 1.16 2015/07/08 17:49:49 wiz Exp $
          echo
          echo "WARNING: The 10.4u SDK does not support gcc 4.2. Configure with -platform macx-g++40. "
          echo
+@@ -5009,7 +5022,7 @@ if true; then ###[ '!' -f "$outpath/bin/
+         fi
+         if [ "$BUILD_ON_MAC" = "yes" ]; then
+             case "$PLATFORM" in
+-            *macx-clang-libc++)
++            *macx-llvm)
+                 # Avoid overriding the default configuration settings when building with clang/libc++
+                 ;;
+             *)
 @@ -5078,7 +5091,7 @@ if true; then ###[ '!' -f "$outpath/bin/
      done
  
@@ -65,6 +74,15 @@ $NetBSD: patch-aq,v 1.16 2015/07/08 17:49:49 wiz Exp $
          CFG_MAC_COCOA="no";
          CFG_MAC_CARBON="yes";
      fi
+@@ -7225,7 +7238,7 @@ fi
+ # set the global Mac deployment target. This is overridden on an arch-by-arch basis
+ # in some cases, see code further down
+ case "$PLATFORM,$CFG_MAC_COCOA" in
+-*macx-clang-libc++,yes)
++*macx-llvm,yes)
+     # Avoid overriding the default configuration setting when building with clang/libc++
+     ;;
+ macx*,yes)
 @@ -7713,7 +7726,7 @@ case "$XPLATFORM" in
  
  	# Check gcc's version
@@ -74,6 +92,15 @@ $NetBSD: patch-aq,v 1.16 2015/07/08 17:49:49 wiz Exp $
  		;;
  	    3.4*)
  		canBuildQtXmlPatterns="no"
+@@ -7981,7 +7994,7 @@ fi
+ # env. variable.
+ if [ "$PLATFORM_MAC" = "yes" ] && [ "$CFG_MAC_XARCH" != "no" ]; then
+     case "$PLATFORM" in
+-    *macx-clang-libc++)
++    *macx-llvm)
+         # Avoid overriding the default settings when building clang/libc++.
+         ;;
+     *)
 @@ -8485,7 +8498,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
  [ "$CFG_EXCEPTIONS" = "no" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_EXCEPTIONS"
  [ "$CFG_IPV6" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IPV6"
