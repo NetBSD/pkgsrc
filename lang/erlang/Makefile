@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.68 2015/07/18 08:55:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.69 2015/07/18 13:47:42 fhajny Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.erlang.org/
 COMMENT=		Concurrent functional programming language
-LICENSE=		erlang-public-license
+LICENSE=		apache-2.0
 
 DIST_SUBDIR=		erlang
 
