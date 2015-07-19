@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/05 14:16:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/19 10:17:00 wiz Exp $
 
-DISTNAME=	click-4.0
+DISTNAME=	click-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/c/click/
