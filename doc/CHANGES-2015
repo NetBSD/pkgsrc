@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3058 2015/07/19 08:08:55 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3059 2015/07/19 08:11:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5718,3 +5718,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/x264-devel to 20150717 [adam 2015-07-18]
 	Updated devel/py-tortoisehg to 3.4.2 [nros 2015-07-18]
 	Updated devel/p5-Params-Validate to 1.21 [wiz 2015-07-19]
+	Updated fonts/fontconfig to 2.11.1nb2 [wiz 2015-07-19]
