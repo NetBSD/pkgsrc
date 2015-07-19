@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sslh.sh,v 1.1 2013/11/08 13:33:55 obache Exp $
+# $NetBSD: sslh.sh,v 1.2 2015/07/19 16:49:41 nils Exp $
 #
 # PROVIDE: sslh
 # REQUIRE: DAEMON
@@ -16,7 +16,7 @@ pidfile="@VARBASE@/run/${name}.pid"
 command_args="-P ${pidfile}"
 
 if [ -f @PKG_SYSCONFDIR@/sslh.cfg ]; then
-	command_args="${command_args} -F @PKG_SYSCONFDIR@/sslh.cfg"
+	command_args="${command_args} -F@PKG_SYSCONFDIR@/sslh.cfg"
 fi
 
 if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]; then
