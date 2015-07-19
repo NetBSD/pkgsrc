@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/07/09 09:25:55 kamil Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/19 16:02:51 kamil Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	radare2-${RADARE2_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 EXTRACT_SUFX=	.tar.xz
 
