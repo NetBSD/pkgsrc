@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/04/05 14:16:58 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/07/19 10:17:00 wiz Exp $
 
-SHA1 (click-4.0.tar.gz) = ae85a5546ce42642dc63b2645f4732189d253bb6
-RMD160 (click-4.0.tar.gz) = 82cf40c5808514ea7c30ba23103830bff95debcc
-Size (click-4.0.tar.gz) = 270183 bytes
+SHA1 (click-4.1.tar.gz) = 6cfa88a7a75260421c2a1191c307d1c8d48fc134
+RMD160 (click-4.1.tar.gz) = a2ad6031151c13aa88c91d969d5496a1cf195e02
+Size (click-4.1.tar.gz) = 274489 bytes
