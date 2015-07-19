@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3067 2015/07/19 14:52:47 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.3068 2015/07/19 16:48:30 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5726,4 +5726,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.32.1 [wiz 2015-07-19]
 	Updated net/tor to 0.2.6.10 [wiz 2015-07-19]
 	Updated net/mikutter to 3.2.5 [tsutsui 2015-07-19]
-	Updated devel/capstone to 3.0.4 [tsutsui 2015-07-19]
+	Updated devel/capstone to 3.0.4 [kamil 2015-07-19]
+	Updated devel/radare2 to 0.9.9nb1 [kamil 2015-07-19]
