@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2015/07/01 09:52:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2015/07/19 10:48:49 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1303,6 +1303,7 @@ lib/calibre/calibre/utils/pyconsole/history.py
 lib/calibre/calibre/utils/pyconsole/interpreter.py
 lib/calibre/calibre/utils/pyconsole/main.py
 lib/calibre/calibre/utils/pyparsing.py
+lib/calibre/calibre/utils/rapydscript.py
 lib/calibre/calibre/utils/recycle_bin.py
 lib/calibre/calibre/utils/resources.py
 lib/calibre/calibre/utils/rss_gen.py
@@ -1752,6 +1753,7 @@ share/calibre/quick_start/deu.epub
 share/calibre/quick_start/eng.epub
 share/calibre/quick_start/fra.epub
 share/calibre/quick_start/ita.epub
+share/calibre/rapydscript/compiler.js
 share/calibre/recipes/10minutos.recipe
 share/calibre/recipes/180.recipe
 share/calibre/recipes/20_minutos.recipe
@@ -2401,6 +2403,7 @@ share/calibre/recipes/hoy.recipe
 share/calibre/recipes/hrt.recipe
 share/calibre/recipes/huffingtonpost.recipe
 share/calibre/recipes/huffingtonpost_uk.recipe
+share/calibre/recipes/hurriyet.recipe
 share/calibre/recipes/hurriyet_daily_news.recipe
 share/calibre/recipes/hvg.recipe
 share/calibre/recipes/ibm_smarter_planet.recipe
@@ -3059,6 +3062,7 @@ share/calibre/recipes/skeptical_enquirer.recipe
 share/calibre/recipes/skylife.recipe
 share/calibre/recipes/slashdot.recipe
 share/calibre/recipes/slate.recipe
+share/calibre/recipes/slate_star_codex.recipe
 share/calibre/recipes/slovo.recipe
 share/calibre/recipes/smashing.recipe
 share/calibre/recipes/sme.recipe
