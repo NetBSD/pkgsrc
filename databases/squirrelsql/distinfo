@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/07/19 20:26:18 asau Exp $
+
+SHA1 (squirrelsql-3.6-standard.zip) = e31399dd5c06feeb9961f9e59ed9644f69690404
+RMD160 (squirrelsql-3.6-standard.zip) = 1ef3de33c508ef512325f4a9c26086e776f4351d
+Size (squirrelsql-3.6-standard.zip) = 47534886 bytes
+SHA1 (patch-squirrel-sql.sh) = 6770fd0d24ab552e9c49e3808b7f065c1407604c
