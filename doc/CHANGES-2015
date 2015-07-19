@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3064 2015/07/19 10:48:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3065 2015/07/19 12:04:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5724,3 +5724,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-click to 4.1 [wiz 2015-07-19]
 	Updated textproc/py-markdown to 2.6.2 [wiz 2015-07-19]
 	Updated misc/calibre to 2.32.1 [wiz 2015-07-19]
+	Updated net/tor to 0.2.6.10 [wiz 2015-07-19]
