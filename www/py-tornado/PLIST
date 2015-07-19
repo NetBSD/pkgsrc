@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/06/01 21:40:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/07/19 10:16:12 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -197,6 +197,7 @@ ${PYSITELIB}/tornado/test/stack_context_test.pyc
 ${PYSITELIB}/tornado/test/stack_context_test.pyo
 ${PYSITELIB}/tornado/test/static/dir/index.html
 ${PYSITELIB}/tornado/test/static/robots.txt
+${PYSITELIB}/tornado/test/static_foo.txt
 ${PYSITELIB}/tornado/test/tcpclient_test.py
 ${PYSITELIB}/tornado/test/tcpclient_test.pyc
 ${PYSITELIB}/tornado/test/tcpclient_test.pyo
