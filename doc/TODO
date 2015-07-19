@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14570 2015/07/19 10:12:13 wiz Exp $
+$NetBSD: TODO,v 1.14571 2015/07/19 10:14:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.3
 	o py-mezzanine-3.0.5
-	o py-mock-1.2.0
 	o py-musicbrainz-0.7.4
 	o py-notify-0.3.1
 	o py-omniORBpy-3.7
