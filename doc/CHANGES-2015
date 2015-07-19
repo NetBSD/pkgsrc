@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3062 2015/07/19 10:17:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3063 2015/07/19 10:20:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5722,3 +5722,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mock to 1.2.0 [wiz 2015-07-19]
 	Updated www/py-tornado to 4.2.1 [wiz 2015-07-19]
 	Updated devel/py-click to 4.1 [wiz 2015-07-19]
+	Updated textproc/py-markdown to 2.6.2 [wiz 2015-07-19]
