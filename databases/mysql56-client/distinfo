@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2015/06/03 03:20:03 ryoon Exp $
+$NetBSD: distinfo,v 1.24.2.1 2015/07/19 17:58:43 tron Exp $
 
 SHA1 (mysql-5.6.25.tar.gz) = ace53481400a4ad363ee0453a547b8ba07582fd2
 RMD160 (mysql-5.6.25.tar.gz) = a65b1aa209cb2f08295db7cb7259a7ce294c0713
@@ -20,6 +20,7 @@ SHA1 (patch-include_my__global.h) = 843b9527faf880eee59cf02239ba601f5985ddfb
 SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my_net.h) = b08aa36921efd023f9ecaac4cd3fb8a16d200abd
 SHA1 (patch-include_my_pthread.h) = ff3bf1fddd04edd7804d810f79de64387464b5ca
+SHA1 (patch-include_violite.h) = 1a5f404da44e24d5deebf1d54418aa910f54fc02
 SHA1 (patch-libmysql_CMakeLists.txt) = 229044de6d11b26ee99b25be99b628a9f146b795
 SHA1 (patch-mysql-test_CMakeLists.txt) = b7dd562d55678b13ac487aa0ee59bf2551af1f9d
 SHA1 (patch-mysys__ssl_CMakeLists.txt) = e50bad459520be78ea2d5c4d0699cda8c1141884
@@ -39,3 +40,4 @@ SHA1 (patch-storage_myisam_CMakeLists.txt) = 55897ae78208f78a396776d1082cb5f9863
 SHA1 (patch-storage_myisammrg_CMakeLists.txt) = 0a56a16ccaff3fa9de996fec6ffc324af9855a4e
 SHA1 (patch-storage_ndb_include_util_Parser.hpp) = 037fc153619bf79ee95cb03a5ac4a71c14952c3a
 SHA1 (patch-strings_decimal.c) = 069c9d930c735f74510702baa9bef38aec425903
+SHA1 (patch-vio_viosslfactories.c) = ad3fa2152243c9d384c312d5554580e139c6398e
