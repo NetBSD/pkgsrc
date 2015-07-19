@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/07/12 14:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/19 16:42:55 kamil Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
@@ -6,7 +6,6 @@ PKGNAME=	radare2-valabind-0.9.2
 PKGREVISION=	1
 DISTNAME=	valabind-0.9.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.radare.org/get/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Reverse engineering framework (language bindings interface)
