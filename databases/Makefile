@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.489 2015/07/19 13:16:27 asau Exp $
+# $NetBSD: Makefile,v 1.490 2015/07/19 20:30:28 asau Exp $
 
 COMMENT=	Databases
 
@@ -489,6 +489,7 @@ SUBDIR+=	sqlrelay-sqlite
 SUBDIR+=	sqsh
 SUBDIR+=	sqsh-motif
 SUBDIR+=	sqsh-x11
+SUBDIR+=	squirrelsql
 SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
 SUBDIR+=	tdb
