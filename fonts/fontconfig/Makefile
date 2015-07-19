@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2014/10/09 14:06:33 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2015/07/19 08:11:08 wiz Exp $
 
 DISTNAME=	fontconfig-2.11.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -42,7 +42,7 @@ SUBST_SED.visibility+=		-e 's/, visibility("default")//g'
 
 ADDFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts,${PREFIX}/share/fonts/X11
 .if ${X11BASE} != ${LOCALBASE}
-ADDFONTS:=	${X11BASE}/share/fonts/X11,${ADDFONTS}
+ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
 .else
 ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
