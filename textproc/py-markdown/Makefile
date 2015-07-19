@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/08/26 11:57:30 obache Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/19 10:20:10 wiz Exp $
 
-DISTNAME=	Markdown-2.2.1
+DISTNAME=	Markdown-2.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/M/Markdown/
 
