@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3068 2015/07/19 16:48:30 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.3069 2015/07/20 00:06:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5728,3 +5728,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.5 [tsutsui 2015-07-19]
 	Updated devel/capstone to 3.0.4 [kamil 2015-07-19]
 	Updated devel/radare2 to 0.9.9nb1 [kamil 2015-07-19]
+	Updated mail/fml4 to 4.0.3.20040215nb9 [taca 2015-07-20]
