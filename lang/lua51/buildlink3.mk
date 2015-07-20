@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/05/03 13:00:44 alnsn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2015/07/20 11:30:54 wiz Exp $
 
 BUILDLINK_TREE+=	lua51
 
@@ -15,8 +15,6 @@ BUILDLINK_DEPMETHOD.lua51?=	${BUILDLINK_DEPMETHOD.lua}
 # -llua -> -llua5.1
 BUILDLINK_TRANSFORM+=		l:lua:lua5.1
 BUILDLINK_INCDIRS.lua51+=	include/lua-5.1
-
-BUILDLINK_FNAME_TRANSFORM.lua51+=	-e 's|lib/pkgconfig/lua-5.1.pc|lib/pkgconfig/lua.pc|'
 
 .include "../../mk/readline.buildlink3.mk"
 .endif # LUA51_BUILDLINK3_MK
