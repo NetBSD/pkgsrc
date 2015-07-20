@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3075 2015/07/20 17:45:27 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3076 2015/07/20 18:30:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5736,3 +5736,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/py-vdirsyncer to 0.5.2nb1 [wiz 2015-07-20]
 	Updated audio/mpg123 to 1.22.2 [adam 2015-07-20]
 	Updated net/tinc to 1.0.26 [adam 2015-07-20]
+	Updated www/apache22 to 2.2.31 [adam 2015-07-20]
