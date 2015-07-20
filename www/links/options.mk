@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.2 2012/01/27 08:24:28 sbd Exp $
+# $NetBSD: options.mk,v 1.3 2015/07/20 23:03:24 dholland Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.links
-PKG_SUPPORTED_OPTIONS=	bzip2 links-zlib links-xz
-PKG_SUGGESTED_OPTIONS=	bzip2 links-zlib links-xz
+PKG_OPTIONS_VAR=		PKG_OPTIONS.links
+PKG_OPTIONS_LEGACY_OPTS+=	links-xz:lzma
+PKG_OPTIONS_LEGACY_OPTS+=	links-zlib:zlib
+PKG_SUPPORTED_OPTIONS+=		bzip2 lzma zlib
+PKG_SUGGESTED_OPTIONS=		bzip2 lzma zlib
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mlinks-xz)
+.if !empty(PKG_OPTIONS:Mlzma)
 .  include "../../archivers/xz/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-lzma
@@ -18,7 +20,7 @@ CONFIGURE_ARGS+=	--without-lzma
 CONFIGURE_ARGS+=	--without-bzip2
 .endif
 
-.if !empty(PKG_OPTIONS:Mlinks-zlib)
+.if !empty(PKG_OPTIONS:Mzlib)
 .  include "../../devel/zlib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-zlib
