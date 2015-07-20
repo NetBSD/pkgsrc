@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3072 2015/07/20 10:43:19 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3073 2015/07/20 10:43:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5733,3 +5733,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/clang to 3.6.2 [adam 2015-07-20]
         Updated lang/libLLVM to 3.6.2 [adam 2015-07-20]
 	Added devel/py-setuptools_scm version 1.5.5 [wiz 2015-07-20]
+	Updated time/py-vdirsyncer to 0.5.2nb1 [wiz 2015-07-20]
