@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2014/12/30 14:47:25 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2015/07/20 23:03:24 dholland Exp $
 
---- configure.orig	2014-12-19 20:04:31.000000000 +0000
+--- configure.orig	2015-07-03 21:23:41.000000000 +0000
 +++ configure
-@@ -830,10 +830,10 @@ fi
+@@ -838,10 +838,10 @@ fi
  
  
  
