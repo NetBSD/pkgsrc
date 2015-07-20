@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2015/05/28 13:25:59 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 #
 # used by lang/clang/Makefile
 # used by lang/libLLVM/Makefile
 
-DISTNAME=	clang-3.6.1
+DISTNAME=	clang-3.6.2
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.xz \
