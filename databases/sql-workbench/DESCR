@@ -1,0 +1,50 @@
+SQL Workbench/J is a free, DBMS-independent, cross-platform SQL
+query tool. It is written in Java and should run on any
+operating system that provides a Java Runtime Environment.
+
+Its main focus is on running SQL scripts (either interactively
+or as a batch) and export/import features. Graphical query
+building or more advanced DBA tasks are not the focus and are
+not planned.
+
+Features:
+
+ * Edit, insert and delete data directly in the query result.
+ * Powerful export command to write text files (aka "CSV"),
+   XML, HTML or SQL (including BLOB data). All user tables
+   can be exported into a directory with a single command.
+   Export files can be compressed "on-the-fly".
+ * Powerful text, XML and spreadsheet import. A set of files
+   (including compressed files) can be imported from a directory
+   with a single command. Foreign key constraints are detected
+   to insert the data in the correct order.
+ * Compare two database schemas for differences. The XML output
+   can be transformed into the approriate SQL ALTER statements
+   using XSLT.
+ * Compare the data of two database and generate the necessary
+   SQL statements to migrate one to the other.
+ * Supports running SQL scripts in batch mode.
+ * Supports running in console mode.
+ * Search text in procedure, view and other sources using a SQL
+   command or a GUI.
+ * Search for data across all columns in all tables using a SQL
+   command or a GUI.
+ * Reformatting (Pretty-Print) of SQL Statements.
+ * Select rows from related tables according to their foreign
+   key definitions.
+ * Tooltips for INSERT statements to show the corresponding
+   value or column.
+ * Copy data directly between to database servers using a SQL
+   command or a GUI.
+ * Macros (aka aliases) for frequently used SQL statements.
+ * Variable substitution in SQL statements including smart
+   prompting for values (can be combined with macros).
+ * Auto completion for tables and columns in SQL statements.
+ * Display database objects and their definitions.
+ * Display table source.
+ * Display view, procedure and trigger source code.
+ * Display foreign key constraints between tables.
+ * Full support for BLOB data in query results, SQL statements,
+   export and import.
+ * SQLWorkbench/J is free for almost everyone (published under
+   a modified the Apache 2.0 license).
