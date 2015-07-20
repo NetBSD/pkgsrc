@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.29 2015/05/08 16:29:37 agc Exp $	*/
+/*	$NetBSD: main.c,v 1.30 2015/07/20 13:59:44 khorben Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.29 2015/05/08 16:29:37 agc Exp $");
+__RCSID("$NetBSD: main.c,v 1.30 2015/07/20 13:59:44 khorben Exp $");
 
 /*
  *
@@ -64,7 +64,7 @@ usage(void)
 {
 	(void) fprintf(stderr, "%s\n%s\n%s\n",
 	    "usage: pkg_add [-AfhInRuVv] [-C config] [-P destdir] [-K pkg_dbdir]",
-	    "               [-m machine] [-p prefix] [-s verification-type]",
+	    "               [-m machine] [-p prefix]",
 	    "               [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...");
 	exit(1);
 }
