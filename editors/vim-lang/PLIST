@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/10/07 19:26:28 morr Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/07/20 11:00:29 morr Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -140,6 +140,7 @@ share/vim/${VIM_SUBDIR}/keymap/polish-slash_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcukenwin.vim
+share/vim/${VIM_SUBDIR}/keymap/russian-jcukenwintype.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-yawerty.vim
 share/vim/${VIM_SUBDIR}/keymap/serbian-latin.vim
 share/vim/${VIM_SUBDIR}/keymap/serbian-latin_utf-8.vim
