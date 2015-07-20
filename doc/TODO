@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14577 2015/07/20 17:31:37 adam Exp $
+$NetBSD: TODO,v 1.14578 2015/07/20 17:45:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -1072,7 +1072,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tigervnc-1.5.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
-	o tinc-1.0.24
 	o tk85-8.5.16
 	o tkhylafax-3.2
 	o tkpasman-2.2b
