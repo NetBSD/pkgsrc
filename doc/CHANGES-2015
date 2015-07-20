@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3074 2015/07/20 17:31:37 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3075 2015/07/20 17:45:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5735,3 +5735,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-setuptools_scm version 1.5.5 [wiz 2015-07-20]
 	Updated time/py-vdirsyncer to 0.5.2nb1 [wiz 2015-07-20]
 	Updated audio/mpg123 to 1.22.2 [adam 2015-07-20]
+	Updated net/tinc to 1.0.26 [adam 2015-07-20]
