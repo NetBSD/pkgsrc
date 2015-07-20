@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/07/19 20:26:18 asau Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/20 18:27:09 asau Exp $
 
 DISTNAME=	squirrelsql-3.6-standard
 PKGNAME=	squirrelsql-3.6
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=squirrel-sql/)
 EXTRACT_SUFX=	.zip
@@ -29,6 +30,8 @@ INSTALLATION_DIRS=	bin share/$(PKGBASE)
 
 do-install:
 	cd $(WRKSRC) && pax -rwpm . $(DESTDIR)$(PREFIX)/share/$(PKGBASE)
+	$(RM) -f $(DESTDIR)$(PREFIX)/share/$(PKGBASE)/squirrel-sql.sh.orig
+	$(CHMOD) +x $(DESTDIR)$(PREFIX)/share/$(PKGBASE)/squirrel-sql.sh
 	$(LN) -sf $(PREFIX)/share/$(PKGBASE)/squirrel-sql.sh $(DESTDIR)$(PREFIX)/bin/squirrel-sql
 
 .include "../../mk/java-vm.mk"
