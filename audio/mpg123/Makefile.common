@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2014/11/20 13:07:12 mef Exp $
+# $NetBSD: Makefile.common,v 1.39 2015/07/20 17:30:33 adam Exp $
 #
 # used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
@@ -7,7 +7,7 @@
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.21.0
+DISTNAME=	mpg123-1.22.2
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
@@ -42,6 +42,6 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/mpg123
 .endif
 
-# .include "../../devel/libltdl/convenience.mk"
+#.include "../../devel/libltdl/convenience.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
