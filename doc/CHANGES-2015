@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3076 2015/07/20 18:30:03 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3077 2015/07/20 23:07:31 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5737,3 +5737,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/mpg123 to 1.22.2 [adam 2015-07-20]
 	Updated net/tinc to 1.0.26 [adam 2015-07-20]
 	Updated www/apache22 to 2.2.31 [adam 2015-07-20]
+	Updated www/links to 2.10 [dholland 2015-07-20]
+	Updated www/links-gui to 2.10 [dholland 2015-07-20]
