@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/07/05 12:41:26 joerg Exp $
+$NetBSD: distinfo,v 1.16 2015/07/20 10:43:46 wiz Exp $
 
 SHA1 (vdirsyncer-0.5.2.tar.gz) = 8ebbe6bfcdd276080ab29a0f8dc06531ae34ab6d
 RMD160 (vdirsyncer-0.5.2.tar.gz) = 39fca92bc8573f17b6225d52246efb2dd3f06515
 Size (vdirsyncer-0.5.2.tar.gz) = 77916 bytes
-SHA1 (patch-setup.py) = c43a310760199f98bbd4c0fe306494e0efc9244e
