@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3071 2015/07/20 05:50:45 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3072 2015/07/20 10:43:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5732,3 +5732,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache24 to 2.4.16 [taca 2015-07-20]
 	Updated lang/clang to 3.6.2 [adam 2015-07-20]
         Updated lang/libLLVM to 3.6.2 [adam 2015-07-20]
+	Added devel/py-setuptools_scm version 1.5.5 [wiz 2015-07-20]
