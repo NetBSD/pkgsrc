@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/07 20:23:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/21 12:16:14 richard Exp $
 
-DISTNAME=	soundtouch-1.8.0
+DISTNAME=	soundtouch-1.9.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.surina.net/soundtouch/
 
