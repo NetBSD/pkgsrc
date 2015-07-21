@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXrandr,v 1.10 2014/05/03 21:31:10 ryoon Exp $
+# $NetBSD: xorg.libXrandr,v 1.11 2015/07/21 12:51:42 ryoon Exp $
 #
 include/X11/extensions/Xrandr.h
 lib/libXrandr.2.2.0.dylib
@@ -14,6 +14,7 @@ lib/libXrandr.so.2.1
 lib/libXrandr.so.3
 lib/libXrandr.so.3.0
 lib/libXrandr.so.3.1
+lib/libXrandr.so.3.2
 lib/libXrandr.so.6.1
 lib/libXrandr.so.6.2
 lib/libXrandr.so.7.0

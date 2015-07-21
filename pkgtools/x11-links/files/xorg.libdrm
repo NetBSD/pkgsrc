@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libdrm,v 1.8 2014/05/03 21:31:10 ryoon Exp $
+# $NetBSD: xorg.libdrm,v 1.9 2015/07/21 12:51:42 ryoon Exp $
 #
 include/libdrm/drm.h
 include/libdrm/drm_mode.h
@@ -39,6 +39,7 @@ lib/libdrm_intel.a
 lib/libdrm_intel.so
 lib/libdrm_intel.so.0
 lib/libdrm_intel.so.0.0
+lib/libdrm_intel.so.0.1
 lib/libdrm_intel.so.1.3
 lib/libdrm_intel.so.3.1
 lib/libdrm_radeon.a
