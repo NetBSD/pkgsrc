@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2123 2015/07/20 10:43:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2124 2015/07/21 17:27:47 gson Exp $
 #
 
 COMMENT=	Development utilities
@@ -966,7 +966,7 @@ SUBDIR+=	p5-Git-Wrapper
 SUBDIR+=	p5-Glib-Object-Introspection
 SUBDIR+=	p5-Gnome2
 SUBDIR+=	p5-Gnome2-GConf
-SUBDIR+=	p5-Graph
+SUBDIR+=	p5-Graph-ReadWrite
 SUBDIR+=	p5-Gravatar-URL
 SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Guard
