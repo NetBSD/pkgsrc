@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.67 2015/06/14 15:46:21 mef Exp $
+# $NetBSD: Makefile.common,v 1.68 2015/07/21 14:32:18 mef Exp $
 #
 # used by editors/emacs-snapshot/Makefile
 
 .include	"../../editors/emacs-snapshot/version.mk"
-DISTNAME=	emacs-snapshot_2015041522+17a8618dc7396ef485c38b4b7c37c591839b3ec5.orig
+DISTNAME=	emacs-snapshot_2015071614+bd8b5ac77250d9fe0634d58a30a3bf6d2497725a.orig
 SNAPDATE=	${DISTNAME:C/.*_(20[0-9]+)\+.*/\1/}
 PKGNAME=	emacs${_EMACS_VERSION_MAJOR}-${EMACS_VERSION}.${SNAPDATE}
 CATEGORIES=	editors
