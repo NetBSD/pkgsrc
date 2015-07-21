@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3079 2015/07/21 12:40:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3080 2015/07/21 12:52:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5741,3 +5741,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/links-gui to 2.10 [dholland 2015-07-20]
 	Updated audio/soundtouch to 1.9.0 [richard 2015-07-21]
 	Updated x11/xproto to 7.0.28nb1 [wiz 2015-07-21]
+	Updated pkgtools/x11-links to 0.95 [ryoon 2015-07-21]
