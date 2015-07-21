@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3091 2015/07/21 21:39:27 rjs Exp $
+$NetBSD: CHANGES-2015,v 1.3092 2015/07/21 21:57:00 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5751,3 +5751,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/py-pandas to 0.16.2 [bad 2015-07-21]
 	Added textproc/p5-Text-Aligner version 0.12 [bsiegert 2015-07-21]
 	Updated graphics/libjpeg-turbo to 1.4.1 [rjs 2015-07-21]
+	Updated x11/fltk13 to 1.3.3 [markd 2015-07-21]
+	Updated net/tigervnc to 1.5.0 [markd 2015-07-21]
