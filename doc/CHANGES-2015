@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3084 2015/07/21 14:33:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3085 2015/07/21 17:29:19 gson Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5744,3 +5744,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/x11-links to 0.95 [ryoon 2015-07-21]
 	Updated ham/fldigi to 3.22.12 [mef 2015-07-21]
 	Updated editors/emacs-snapshot to 25.0.50.2015071614 [mef 2015-07-21]
+	Added devel/p5-Graph-ReadWrite version 2.07 [gson 2015-07-21]
