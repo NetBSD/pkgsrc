@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3085 2015/07/21 17:29:19 gson Exp $
+$NetBSD: CHANGES-2015,v 1.3086 2015/07/21 19:16:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5745,3 +5745,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/fldigi to 3.22.12 [mef 2015-07-21]
 	Updated editors/emacs-snapshot to 25.0.50.2015071614 [mef 2015-07-21]
 	Added devel/p5-Graph-ReadWrite version 2.07 [gson 2015-07-21]
+	Updated time/khal to 0.6.0 [wiz 2015-07-21]
