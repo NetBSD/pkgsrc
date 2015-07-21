@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3090 2015/07/21 20:16:33 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.3091 2015/07/21 21:39:27 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5750,3 +5750,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-pkginfo version 1.2.1 [wiz 2015-07-21]
 	Updated math/py-pandas to 0.16.2 [bad 2015-07-21]
 	Added textproc/p5-Text-Aligner version 0.12 [bsiegert 2015-07-21]
+	Updated graphics/libjpeg-turbo to 1.4.1 [rjs 2015-07-21]
