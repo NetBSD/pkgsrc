@@ -1,18 +1,20 @@
-$NetBSD: patch-aa,v 1.3 2015/01/28 21:51:02 rjs Exp $
+$NetBSD: patch-aa,v 1.4 2015/07/21 21:37:12 rjs Exp $
 
---- Makefile.in.orig	2015-01-07 04:56:55.000000000 +0000
+--- Makefile.in.orig	2015-06-08 18:41:46.000000000 +0000
 +++ Makefile.in
-@@ -494,11 +494,11 @@ dist_man1_MANS = cjpeg.1 djpeg.1 jpegtra
+@@ -414,7 +414,6 @@ build_cpu = @build_cpu@
+ build_os = @build_os@
+ build_vendor = @build_vendor@
+ datadir = @datadir@
+-docdir = @docdir@
+ exec_prefix = @exec_prefix@
+ host = @host@
+ host_alias = @host_alias@
+@@ -495,6 +494,7 @@ dist_man1_MANS = cjpeg.1 djpeg.1 jpegtra
  DOCS = coderules.txt jconfig.txt change.log rdrle.c wrrle.c BUILDING.txt \
  	ChangeLog.txt
  
--docdir = $(datadir)/doc
 +docdir = $(datadir)/doc/libjpeg-turbo
  dist_doc_DATA = README README-turbo.txt libjpeg.txt structure.txt usage.txt \
  	wizard.txt
  
--exampledir = $(datadir)/doc
-+exampledir = $(datadir)/doc/libjpeg-turbo
- dist_example_DATA = example.c
- EXTRA_DIST = win release $(DOCS) testimages CMakeLists.txt \
- 	sharedlib/CMakeLists.txt cmakescripts libjpeg.map.in doc doxygen.config \
