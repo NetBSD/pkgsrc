@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3086 2015/07/21 19:16:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3087 2015/07/21 19:18:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5746,3 +5746,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/emacs-snapshot to 25.0.50.2015071614 [mef 2015-07-21]
 	Added devel/p5-Graph-ReadWrite version 2.07 [gson 2015-07-21]
 	Updated time/khal to 0.6.0 [wiz 2015-07-21]
+	Updated misc/khard to 0.4.1 [wiz 2015-07-21]
