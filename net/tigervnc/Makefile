@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/21 21:51:39 markd Exp $
 
-DISTNAME=	tigervnc-1.3.1
-PKGREVISION=	3
+DISTNAME=	tigervnc-1.5.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tigervnc/}
-XORG_SERVER_FILE=	xorg-server-1.12.4
+MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+XORG_SERVER_FILE=	xorg-server-1.17.2
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
@@ -44,14 +44,15 @@ post-extract:
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
 
 post-patch:
-	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver112.patch
+	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver117.patch
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
-XORG_CONFIGURE_ARGS+=	--disable-wayland --disable-present --disable-dri3
+XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
 XORG_CONFIGURE_ARGS+=	--disable-static --disable-xinerama --without-dtrace
 XORG_CONFIGURE_ARGS+=	--disable-xorg --disable-xnest --disable-xvfb --disable-dmx
+XORG_CONFIGURE_ARGS+=	--disable-config-hal --disable-config-udev --with-pic
 XORG_CONFIGURE_ARGS+=	--disable-unit-tests --disable-devel-docs --disable-selective-werror
-XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --enable-glx --enable-glx-tls
+XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --disable-dri3 --enable-glx --enable-glx-tls
 
 pre-configure:
 	cd ${WRKSRC}/unix/xserver && autoreconf -fvi &&	\
@@ -71,6 +72,7 @@ pre-configure:
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xcmiscproto/buildlink3.mk"
@@ -84,6 +86,7 @@ pre-configure:
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
+.include "../../x11/presentproto/buildlink3.mk"
 .include "../../x11/resourceproto/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
