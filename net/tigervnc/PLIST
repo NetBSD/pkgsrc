@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/08 19:42:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/21 21:51:39 markd Exp $
 bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
@@ -14,9 +14,20 @@ man/man1/vncviewer.1
 man/man1/x0vncserver.1
 share/doc/${PKGNAME}/LICENCE.TXT
 share/doc/${PKGNAME}/README.txt
+share/locale/bg/LC_MESSAGES/tigervnc.mo
+share/locale/da/LC_MESSAGES/tigervnc.mo
 share/locale/de/LC_MESSAGES/tigervnc.mo
+share/locale/el/LC_MESSAGES/tigervnc.mo
+share/locale/eo/LC_MESSAGES/tigervnc.mo
+share/locale/es/LC_MESSAGES/tigervnc.mo
+share/locale/fi/LC_MESSAGES/tigervnc.mo
 share/locale/fr/LC_MESSAGES/tigervnc.mo
+share/locale/it/LC_MESSAGES/tigervnc.mo
+share/locale/nl/LC_MESSAGES/tigervnc.mo
 share/locale/pl/LC_MESSAGES/tigervnc.mo
+share/locale/pt_BR/LC_MESSAGES/tigervnc.mo
 share/locale/ru/LC_MESSAGES/tigervnc.mo
 share/locale/sk/LC_MESSAGES/tigervnc.mo
 share/locale/sv/LC_MESSAGES/tigervnc.mo
+share/locale/tr/LC_MESSAGES/tigervnc.mo
+share/locale/uk/LC_MESSAGES/tigervnc.mo
