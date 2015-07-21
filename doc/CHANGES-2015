@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3077 2015/07/20 23:07:31 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.3078 2015/07/21 12:16:51 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5739,3 +5739,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache22 to 2.2.31 [adam 2015-07-20]
 	Updated www/links to 2.10 [dholland 2015-07-20]
 	Updated www/links-gui to 2.10 [dholland 2015-07-20]
+	Updated audio/soundtouch to 1.9.0 [richard 2015-07-21]
