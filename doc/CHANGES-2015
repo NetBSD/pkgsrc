@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3088 2015/07/21 19:23:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3089 2015/07/21 19:46:36 bad Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5748,3 +5748,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/khal to 0.6.0 [wiz 2015-07-21]
 	Updated misc/khard to 0.4.1 [wiz 2015-07-21]
 	Added devel/py-pkginfo version 1.2.1 [wiz 2015-07-21]
+	Updated math/py-pandas to 0.16.2 [bad 2015-07-21]
