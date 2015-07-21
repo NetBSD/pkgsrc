@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/21 19:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/21 19:18:25 wiz Exp $
 
 DISTNAME=		khard-0.4.1
 CATEGORIES=		misc net
@@ -13,7 +13,7 @@ DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.4.1
 
 INSTALLATION_DIRS=	share/examples/khard
 REPLACE_PYTHON+=	*/*.py
