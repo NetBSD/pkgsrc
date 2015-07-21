@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2015/06/14 15:46:21 mef Exp $
+@comment $NetBSD: PLIST,v 1.38 2015/07/21 14:32:18 mef Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1463,6 +1463,8 @@ share/emacs/${EMACS_VERSION}/lisp/cedet/srecode/template.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/srecode/template.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/srecode/texi.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/srecode/texi.elc
+share/emacs/${EMACS_VERSION}/lisp/character-fold.el.gz
+share/emacs/${EMACS_VERSION}/lisp/character-fold.elc
 share/emacs/${EMACS_VERSION}/lisp/chistory.el.gz
 share/emacs/${EMACS_VERSION}/lisp/chistory.elc
 share/emacs/${EMACS_VERSION}/lisp/cmuscheme.el.gz
@@ -1643,6 +1645,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/helper.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/helper.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/inline.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/inline.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/let-alist.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/let-alist.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp-mnt.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp-mnt.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp-mode.el.gz
@@ -1653,6 +1657,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/macroexp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/macroexp.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map-ynp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map-ynp.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/nadvice.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/nadvice.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package-x.el.gz
@@ -2264,8 +2270,12 @@ share/emacs/${EMACS_VERSION}/lisp/international/ccl.elc
 share/emacs/${EMACS_VERSION}/lisp/international/characters.el.gz
 share/emacs/${EMACS_VERSION}/lisp/international/characters.elc
 share/emacs/${EMACS_VERSION}/lisp/international/charprop.el
-share/emacs/${EMACS_VERSION}/lisp/international/cp51932.el
-share/emacs/${EMACS_VERSION}/lisp/international/eucjp-ms.el
+share/emacs/${EMACS_VERSION}/lisp/international/charscript.el.gz
+share/emacs/${EMACS_VERSION}/lisp/international/charscript.elc
+share/emacs/${EMACS_VERSION}/lisp/international/cp51932.el.gz
+share/emacs/${EMACS_VERSION}/lisp/international/cp51932.elc
+share/emacs/${EMACS_VERSION}/lisp/international/eucjp-ms.el.gz
+share/emacs/${EMACS_VERSION}/lisp/international/eucjp-ms.elc
 share/emacs/${EMACS_VERSION}/lisp/international/fontset.el.gz
 share/emacs/${EMACS_VERSION}/lisp/international/fontset.elc
 share/emacs/${EMACS_VERSION}/lisp/international/isearch-x.el.gz
@@ -2539,8 +2549,6 @@ share/emacs/${EMACS_VERSION}/lisp/leim/quail/vnvni.el.gz
 share/emacs/${EMACS_VERSION}/lisp/leim/quail/vnvni.elc
 share/emacs/${EMACS_VERSION}/lisp/leim/quail/welsh.el.gz
 share/emacs/${EMACS_VERSION}/lisp/leim/quail/welsh.elc
-share/emacs/${EMACS_VERSION}/lisp/let-alist.el.gz
-share/emacs/${EMACS_VERSION}/lisp/let-alist.elc
 share/emacs/${EMACS_VERSION}/lisp/linum.el.gz
 share/emacs/${EMACS_VERSION}/lisp/linum.elc
 share/emacs/${EMACS_VERSION}/lisp/loaddefs.el
@@ -2770,6 +2778,8 @@ share/emacs/${EMACS_VERSION}/lisp/net/nsm.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/nsm.elc
 share/emacs/${EMACS_VERSION}/lisp/net/ntlm.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/ntlm.elc
+share/emacs/${EMACS_VERSION}/lisp/net/pinentry.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/pinentry.elc
 share/emacs/${EMACS_VERSION}/lisp/net/quickurl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/quickurl.elc
 share/emacs/${EMACS_VERSION}/lisp/net/rcirc.el.gz
@@ -2895,7 +2905,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/assoc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/assoc.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/bruce.el
+share/emacs/${EMACS_VERSION}/lisp/obsolete/bruce.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/bruce.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cc-compat.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cc-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.el.gz
@@ -2920,7 +2931,10 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/iso-swed.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/iso-swed.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/iswitchb.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/keyswap.el
+share/emacs/${EMACS_VERSION}/lisp/obsolete/keyswap.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/keyswap.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/landmark.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/landmark.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lazy-lock.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/ledit.el.gz
@@ -2947,7 +2961,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/options.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/options.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/otodo-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/otodo-mode.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/patcomp.el
+share/emacs/${EMACS_VERSION}/lisp/obsolete/patcomp.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/patcomp.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/pc-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/pc-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/pc-select.el.gz
@@ -3263,8 +3278,6 @@ share/emacs/${EMACS_VERSION}/lisp/play/handwrite.el.gz
 share/emacs/${EMACS_VERSION}/lisp/play/handwrite.elc
 share/emacs/${EMACS_VERSION}/lisp/play/hanoi.el.gz
 share/emacs/${EMACS_VERSION}/lisp/play/hanoi.elc
-share/emacs/${EMACS_VERSION}/lisp/play/landmark.el.gz
-share/emacs/${EMACS_VERSION}/lisp/play/landmark.elc
 share/emacs/${EMACS_VERSION}/lisp/play/life.el.gz
 share/emacs/${EMACS_VERSION}/lisp/play/life.elc
 share/emacs/${EMACS_VERSION}/lisp/play/morse.el.gz
@@ -3431,6 +3444,8 @@ share/emacs/${EMACS_VERSION}/lisp/progmodes/perl-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/perl-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/prog-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/prog-mode.elc
+share/emacs/${EMACS_VERSION}/lisp/progmodes/project.el.gz
+share/emacs/${EMACS_VERSION}/lisp/progmodes/project.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/prolog.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/prolog.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/ps-mode.el.gz
