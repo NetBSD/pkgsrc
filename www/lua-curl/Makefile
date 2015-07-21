@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/19 22:27:48 alnsn Exp $
-#
+# $NetBSD: Makefile,v 1.12 2015/07/21 20:41:34 wiz Exp $
 
 DISTNAME=	lua-curl-0.2
 PKGNAME=	${LUA_PKGPREFIX}-curl-0.2
@@ -20,6 +19,7 @@ USE_TOOLS+=	pkg-config
 AUTO_MKDIRS=	yes
 
 .include "../../www/curl/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../lang/lua/module.mk"
 .include "../../lang/lua/tool.mk"
 .include "../../mk/bsd.pkg.mk"
