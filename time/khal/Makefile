@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2015/03/27 16:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/21 19:15:53 wiz Exp $
 
-DISTNAME=		khal-0.4.0
+DISTNAME=		khal-0.6.0
 CATEGORIES=		time net
-MASTER_SITES=		${MASTER_SITE_GITHUB:=geier/}
+MASTER_SITES=		https://pypi.python.org/packages/source/k/khal/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/geier/khal
 COMMENT=		CLI calendar application built around CalDAV
 LICENSE=		mit
 
-GITHUB_TAG=		v${PKGVERSION_NOREV}
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
@@ -21,9 +20,10 @@ DEPENDS+=		${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 DEPENDS+=		${PYPKGPREFIX}-urwid>=1.1.0:../../devel/py-urwid
 # not needed, but recommended, so let's just depend on it
 DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
+# test dependency, not packaged yet
+# freezegun
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.4.0
 
 INSTALLATION_DIRS=	share/doc/khal
 REPLACE_PYTHON+=	khal/*/*.py
