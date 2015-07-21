@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/01/21 11:23:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.10.4.1 2015/07/21 17:28:23 tron Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -524,6 +524,7 @@ share/squid/errors/es-pe
 share/squid/errors/es-pr
 share/squid/errors/es-py
 share/squid/errors/es-sv
+share/squid/errors/es-us
 share/squid/errors/es-uy
 share/squid/errors/es-ve
 share/squid/errors/es/ERR_ACCESS_DENIED
