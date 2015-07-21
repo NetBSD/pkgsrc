@@ -1,21 +1,25 @@
-$NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.1 2015/02/08 19:42:09 wiz Exp $
+$NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.2 2015/07/21 21:51:39 markd Exp $
 
---- unix/xserver/hw/vnc/Makefile.am.orig	2013-04-09 15:50:50.000000000 +0000
+--- unix/xserver/hw/vnc/Makefile.am.orig	2015-07-11 13:00:36.000000000 +0000
 +++ unix/xserver/hw/vnc/Makefile.am
-@@ -5,6 +5,7 @@ RFB_LIB=$(LIB_DIR)/rfb/librfb.la
+@@ -5,8 +5,12 @@ RFB_LIB=$(LIB_DIR)/rfb/librfb.la
  RDR_LIB=$(LIB_DIR)/rdr/librdr.la
  NETWORK_LIB=$(LIB_DIR)/network/libnetwork.la
  XREGION_LIB=$(LIB_DIR)/Xregion/libXregion.la
 +OS_LIB=$(LIB_DIR)/os/libos.la
  COMMON_LIBS=$(NETWORK_LIB) $(RFB_LIB) $(RDR_LIB) $(XREGION_LIB)
  
++# Hack to get the C headers to work when included from C++ code
++AM_CXXFLAGS = -fpermissive
++
  noinst_LTLIBRARIES = libvnccommon.la
-@@ -55,7 +56,7 @@ libvnc_la_CPPFLAGS = $(XVNC_CPPFLAGS) -I
  
- libvnc_la_LDFLAGS = -module -avoid-version
+ HDRS = vncExtInit.h vncHooks.h \
+@@ -64,6 +68,6 @@ libvnc_la_CPPFLAGS = $(XVNC_CPPFLAGS) -I
+ 
+ libvnc_la_LDFLAGS = -module -avoid-version -Wl,-z,now
  
 -libvnc_la_LIBADD = libvnccommon.la $(COMMON_LIBS)
 +libvnc_la_LIBADD = libvnccommon.la $(COMMON_LIBS) $(OS_LIB)
  
  EXTRA_DIST = Xvnc.man
- 

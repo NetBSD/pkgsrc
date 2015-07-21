@@ -1,8 +1,8 @@
-$NetBSD: patch-common_CMakeLists.txt,v 1.1 2015/03/22 20:07:46 joerg Exp $
+$NetBSD: patch-common_CMakeLists.txt,v 1.2 2015/07/21 21:51:39 markd Exp $
 
---- common/CMakeLists.txt.orig	2015-03-22 17:29:15.000000000 +0000
+--- common/CMakeLists.txt.orig	2015-07-11 13:00:36.000000000 +0000
 +++ common/CMakeLists.txt
-@@ -16,7 +16,7 @@ add_subdirectory(rfb)
+@@ -9,7 +9,7 @@ add_subdirectory(rfb)
  # because PIC code does not exist on that platform and MinGW complains if -fPIC
  # is passed (additionally, libvnc is not used on Windows.)
  
@@ -10,4 +10,4 @@ $NetBSD: patch-common_CMakeLists.txt,v 1.1 2015/03/22 20:07:46 joerg Exp $
 +if(NOT WIN32)
    set_target_properties(os rdr network Xregion rfb
      PROPERTIES COMPILE_FLAGS -fPIC)
-   if(USE_INCLUDED_ZLIB)
+ endif()
