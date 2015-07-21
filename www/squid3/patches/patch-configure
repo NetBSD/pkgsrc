@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.7 2015/06/01 16:18:20 sborrill Exp $
+$NetBSD: patch-configure,v 1.7.2.1 2015/07/21 17:28:23 tron Exp $
 
 * Portability fix.
 * Fix broken tests for IPFilter
@@ -42,18 +42,3 @@ $NetBSD: patch-configure,v 1.7 2015/06/01 16:18:20 sborrill Exp $
  #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
  #undef minor_t
  #endif
-@@ -41022,6 +41025,14 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
