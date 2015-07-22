@@ -1,0 +1,40 @@
+Gabedit is a graphical user interface to computational chemistry
+packages like Gamess-US, Gaussian, Molcas, Molpro, MPQC,
+OpenMopac, Orca, PCGamess and Q-Chem.
+
+It can display a variety of calculation results including
+support for most major molecular file formats.
+The advanced "Molecule Builder" allows to rapidly sketch in
+molecules and examine them in 3D. Graphics can be exported to
+various formats, including animations.
+
+Major features
+
+ * Gabedit can create input file for GAMESS(US), GAUSSIAN,
+   MOLCAS, MOLPRO , MPQC, OpenMopac, Orca, PCGamess and Q-Chem.
+ * Gabedit can graphically display a variety of Gamess-US,
+   Gaussian, Molcas, Molpro, MPQC, OpenMopac, Orca, PCGamess,
+   Q-Chem, (partially) ErgoSCF and (partially) ADF calculation
+   results, including the following:
+     + Molecular orbitals.
+     + Surfaces from the electron density, electrostatic
+       potential, NMR shielding density, and other properties.
+     + Surfaces may be displayed in solid, translucent and wire
+       mesh modes. they are can be colorcoded by a separate property.
+     + Contours (colorcoded), Planes colorcoded, Dipole. XYZ axes
+       and the principal axes of the molecule.
+     + Animation of the normal modes corresponding to vibrational
+       frequencies. 
+     + Animation of the rotation of geometry, surfaces, contours,
+       planes colorcoded, xyz and the principal axes of the molecule.
+     + Animation of contours, Animation of planes colorcoded.
+ * Gabedit can display UV-Vis, IR and Raman computed spectra.
+ * Gabedit can generate a povray file for geometry (including
+   hydrogen's bond),surfaces (including colorcoded surfaces),
+   contours, planes colorcoded.
+ * Gabedit can save picture in BMP, JPEG, PNG, PPM and PS format.
+ * Gabedit can generate automatically a series of pictures
+   for animation (vibration, geometry convergence, rotation, contours,
+   planes colorcoded).
+ * Simulated Annealing with Molecular Dynamics is implemented in Gabedit
+   (using Amber 99 molecular mechanics parameters).
