@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2015/07/10 18:48:22 dholland Exp $
+# $NetBSD: Makefile,v 1.81 2015/07/22 04:54:23 dholland Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -51,6 +51,7 @@ PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
 
 CONFIGURE_ARGS+=	--with-system-sqlite
 
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.8.3
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
