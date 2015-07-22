@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2015/06/25 07:36:56 joerg Exp $
+$NetBSD: patch-ag,v 1.2.2.1 2015/07/22 20:07:53 tron Exp $
 
-Stop perl deprecated warnings.
+Avoid use of obsolete perl syntax.
 
 --- cf/config.orig	2003-01-15 18:07:38.000000000 +0000
 +++ cf/config
@@ -35,8 +35,12 @@ Stop perl deprecated warnings.
  	    $OUT'LOCAL .= "\%$key = (\n"; #';
  	    foreach $key (sort keys(%entry)) {
  		$OUT'LOCAL .= "'$key', '". $entry{$key} ."',\n";#';
-@@ -794,7 +794,7 @@ sub rv'PreScanConfigPH #';
- 	elsif (defined @entry) {
+@@ -791,10 +791,10 @@ sub rv'PreScanConfigPH #';
+ 	if (defined $entry) {
+ 	    eval("$rv'\$$key = 1; undef $rv'\$$key");
+ 	}
+-	elsif (defined @entry) {
++	elsif (@entry) {
  	    eval("$rv'\@$key = 1; undef $rv'\@$key");
  	}
 -	elsif ($key ne "_$package" && $key ne "_DB" && defined %entry) {

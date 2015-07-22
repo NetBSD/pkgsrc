@@ -1,9 +1,10 @@
-$NetBSD: patch-ac,v 1.2 2015/06/24 19:49:56 joerg Exp $
+$NetBSD: patch-ac,v 1.2.2.1 2015/07/22 20:07:53 tron Exp $
 
-- use HOSTNAME as hostname when install.
+- Use HOSTNAME as hostname when install.
 - Stop perl deprecated warnings.
 - honor PREFIX and FML_DATADIR.
 - Add support for DESTDIR.
+- Avoid use of obsolete perl syntax.
 
 --- sbin/makefml.orig	2003-01-26 11:18:01.000000000 +0000
 +++ sbin/makefml
