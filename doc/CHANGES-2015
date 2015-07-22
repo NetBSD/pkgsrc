@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3094 2015/07/22 04:58:14 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.3095 2015/07/22 19:08:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5755,3 +5755,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/tigervnc to 1.5.0 [markd 2015-07-21]
 	Updated mail/postfix to 2.11.6 [taca 2015-07-22]
 	Updated lang/tcl to 8.6.4nb3 [dholland 2015-07-22]
+	Updated pkgtools/x11-links to 0.96 [ryoon 2015-07-22]
