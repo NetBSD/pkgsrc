@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14582 2015/07/22 00:26:51 taca Exp $
+$NetBSD: TODO,v 1.14583 2015/07/22 05:43:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dbmail-3.2.0
 	o dd_rescue-1.45
 	o delegate-9.9.9
-	o denemo-1.2.2
+	o denemo-1.2.4
 	o digikam-4.11
 	o dillo-3.0.5
 	o dinotrace-9.4d
