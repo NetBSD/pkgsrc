@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.11 2015/07/21 17:28:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.12 2015/07/22 20:16:43 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -45,3 +45,9 @@ databases/mysql56-client: bug fix patch
 databases/mysql56-server: bug fix patch
 Pullup ticket #4777 - requested by taca
 www/squid3: security update
+Pullup ticket #4778 - requested by taca
+mail/fml4: bug fix patch
+Pullup ticket #4779 - requested by taca
+www/apache24: security update
+Pullup ticket #4780 - requested by taca
+mail/postfix: security update
