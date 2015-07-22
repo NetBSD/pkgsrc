@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/02/20 11:44:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.38 2015/07/22 19:49:07 asau Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -13,6 +13,7 @@ SUBDIR+=	clustalw
 SUBDIR+=	coalesce
 SUBDIR+=	fastDNAml
 SUBDIR+=	fluctuate
+SUBDIR+=	gabedit
 SUBDIR+=	genesplicer
 SUBDIR+=	glimmer
 SUBDIR+=	gnome-chemistry-utils
