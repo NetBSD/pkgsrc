@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.32 2014/08/25 16:00:54 taca Exp $
+$NetBSD: patch-ai,v 1.32.8.1 2015/07/22 20:16:13 tron Exp $
 
 Make this pkgsrc friendly.
 
---- makedefs.orig	2014-01-16 19:49:11.000000000 +0000
+--- makedefs.orig	2015-07-19 14:24:10.000000000 +0000
 +++ makedefs
-@@ -182,6 +182,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -187,6 +187,8 @@ case "$SYSTEM.$RELEASE" in
  		;;
     NetBSD.6*)	SYSTYPE=NETBSD6
  		;;
@@ -13,7 +13,7 @@ Make this pkgsrc friendly.
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
     BSD/OS.3*)	SYSTYPE=BSDI3
-@@ -239,13 +241,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -244,13 +246,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -27,7 +27,7 @@ Make this pkgsrc friendly.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -283,33 +278,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -288,33 +283,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -61,10 +61,10 @@ Make this pkgsrc friendly.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -363,25 +333,6 @@ EOF
+@@ -368,25 +338,6 @@ EOF
  		esac
  		;;
-     Linux.3*)	SYSTYPE=LINUX3
+   Linux.[34].*)	SYSTYPE=LINUX$RELEASE_MAJOR
 -		case "$CCARGS" in
 -		 *-DNO_DB*) ;;
 -		 *-DHAS_DB*) ;;
@@ -87,7 +87,7 @@ Make this pkgsrc friendly.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /usr/lib/* /lib /lib/*
-@@ -395,24 +346,6 @@ EOF
+@@ -400,24 +351,6 @@ EOF
  		;;
       GNU.0*|GNU/kFreeBSD.[567]*)
  		SYSTYPE=GNU0
@@ -112,7 +112,7 @@ Make this pkgsrc friendly.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -443,25 +376,13 @@ EOF
+@@ -448,25 +381,13 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
