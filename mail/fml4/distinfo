@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.5 2015/06/25 07:36:56 joerg Exp $
+$NetBSD: distinfo,v 1.5.2.1 2015/07/22 20:07:53 tron Exp $
 
 SHA1 (fml-4.0-stable-20040215.tar.gz) = b7f958deacc50a0173928b7c43df52b5869d9491
 RMD160 (fml-4.0-stable-20040215.tar.gz) = 40eb43d2631a5e6d6769b8cfdf35e4a980ff0391
 Size (fml-4.0-stable-20040215.tar.gz) = 2906052 bytes
 SHA1 (patch-aa) = 91c0544e2969b3e4537a485d1f7a92ab5bf72bae
 SHA1 (patch-ab) = d8f8ef2085d9ad30331924c89958aaeddb89b457
-SHA1 (patch-ac) = 75f5a3da8a17d29a81d7912e7ba0721277ded0fd
+SHA1 (patch-ac) = fa5ffc01319190dadaa5c3deda0425a6fb9fe28a
 SHA1 (patch-ad) = 17e5d1d97e5a085b8b5da67e00730ce92b959fbf
 SHA1 (patch-ae) = 467a8bacfb0a6d41ceb1d8f52fc4bfc0ae2fc565
 SHA1 (patch-af) = 9e7fa7c70b4f3353a5c33d0ded2eeae86d9a5c65
-SHA1 (patch-ag) = 7b4c0be6de3b7fba18280779ede5c3b217598b32
+SHA1 (patch-ag) = 00c20b043e74e9107a204ee94abef9de870d2b97
+SHA1 (patch-src_jcode.pl) = d850d762e7af4a2f9086f745d20c24ab427ed611
 SHA1 (patch-src_libkernsubr.pl) = c9d4e57b12fddb3045f47b27926c67cfe32c0d44

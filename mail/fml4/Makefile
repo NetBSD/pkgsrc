@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/06/24 19:49:56 joerg Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2015/07/22 20:07:53 tron Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
 PKGNAME=	fml4-4.0.3.20040215
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.fml.org/pub/fml/stable/
 
