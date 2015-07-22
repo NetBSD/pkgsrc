@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.18 2015/07/21 12:51:42 ryoon Exp $
+# $NetBSD: xorg.freetype2,v 1.19 2015/07/22 19:06:18 ryoon Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -68,6 +68,7 @@ include/freetype2/ftchapters.h
 include/freetype2/ftcid.h
 include/freetype2/fterrdef.h
 include/freetype2/fterrors.h
+include/freetype2/ftfntfmt.h
 include/freetype2/ftgasp.h
 include/freetype2/ftglyph.h
 include/freetype2/ftgxval.h
