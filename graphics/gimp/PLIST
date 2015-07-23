@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2014/08/30 06:37:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.54 2015/07/23 20:54:54 markd Exp $
 bin/gimp
 bin/gimp-2.8
 bin/gimp-console
@@ -302,6 +302,7 @@ lib/gimp/2.0/plug-ins/file-jpeg
 ${PLIST.mng}lib/gimp/2.0/plug-ins/file-mng
 lib/gimp/2.0/plug-ins/file-pat
 lib/gimp/2.0/plug-ins/file-pcx
+${PLIST.pdf}lib/gimp/2.0/plug-ins/file-pdf-load
 lib/gimp/2.0/plug-ins/file-pdf-save
 lib/gimp/2.0/plug-ins/file-pix
 lib/gimp/2.0/plug-ins/file-png
