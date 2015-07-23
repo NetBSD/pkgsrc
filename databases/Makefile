@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2015/07/20 20:21:11 asau Exp $
+# $NetBSD: Makefile,v 1.492 2015/07/23 06:59:02 jnemeth Exp $
 
 COMMENT=	Databases
 
@@ -475,6 +475,7 @@ SUBDIR+=	shared-mime-info
 SUBDIR+=	skytools
 SUBDIR+=	slony1
 SUBDIR+=	soci
+SUBDIR+=	sql-workbench
 SUBDIR+=	sqlite
 SUBDIR+=	sqlite3
 SUBDIR+=	sqlite3-docs
@@ -486,7 +487,6 @@ SUBDIR+=	sqlrelay-mysql
 SUBDIR+=	sqlrelay-odbc
 SUBDIR+=	sqlrelay-pgsql
 SUBDIR+=	sqlrelay-sqlite
-SUBDIR+=	sql-workbench
 SUBDIR+=	sqsh
 SUBDIR+=	sqsh-motif
 SUBDIR+=	sqsh-x11
