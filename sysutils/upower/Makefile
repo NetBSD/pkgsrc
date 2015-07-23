@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/07/09 01:57:40 richard Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/23 10:55:17 joerg Exp $
 
 DISTNAME=	upower-0.99.3
 CATEGORIES=	sysutils
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config intltool xgettext msgmerge msgfmt
+
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
