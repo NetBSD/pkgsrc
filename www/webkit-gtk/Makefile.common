@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2015/07/12 21:50:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2015/07/23 11:10:49 joerg Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.8.4
@@ -51,24 +51,6 @@ PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.10.2
 .include "../../lang/python/application.mk"
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
-
-#
-# XXX: Turning -O options with gcc-4.8.4 does not work on NetBSD. Disable
-# optimization, according to the gcc(1) manual page:
-#
-#  If you use multiple -O options, with or without level numbers, the
-#  last such option is the one that is effective.
-#
-# Fixes build problem on NetBSD of this type:
-# Linking CXX shared library ../../lib/libjavascriptcoregtk-4.0.so
-# CMakeFiles/JavaScriptCore.dir/runtime/FunctionExecutableDump.cpp.o: In function `JSC::FunctionExecutableDump::dump(WTF::PrintStream&) const':
-# FunctionExecutableDump.cpp:(.text+0x61): undefined reference to `JSC::JSCell::inherits(JSC::ClassInfo const*) const'
-# CMakeFiles/JavaScriptCore.dir/llint/LLIntEntrypoint.cpp.o: In function `JSC::LLInt::setEntrypoint(JSC::VM&, JSC::CodeBlock*)':
-# LLIntEntrypoint.cpp:(.text+0x9d): undefined reference to `JSC::JSCell::inherits(JSC::ClassInfo const*) const'
-# Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/build.make:13652: recipe for target 'lib/libjavascriptcoregtk-4.0.so.18.1.11' failed
-#
-# last checked for 2.8.4.
-CFLAGS+=	-O0
 
 CXXFLAGS.SunOS+=	-fpermissive
 
