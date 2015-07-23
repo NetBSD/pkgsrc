@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/14 02:21:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/07/23 12:19:10 mef Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
@@ -333,6 +333,8 @@ ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.el.gz
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-util.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-util.elc
+${EMACS_LISPPREFIX}/w3m/w3m-save.el.gz
+${EMACS_LISPPREFIX}/w3m/w3m-save.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.elc
 ${EMACS_LISPPREFIX}/w3m/w3m.el.gz
