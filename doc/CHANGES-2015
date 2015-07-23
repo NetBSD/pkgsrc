@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3099 2015/07/23 12:19:47 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3100 2015/07/23 12:21:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5760,3 +5760,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Message to 6.10 [wiz 2015-07-23]
 	Updated devel/p5-File-Which to 1.19 [wiz 2015-07-23]
 	Updated www/emacs-w3m-snapshot to 1.4.554.20150609 [mef 2015-07-23]
+	Updated textproc/p5-Net-IDN-Encode to 2.300 [wiz 2015-07-23]
