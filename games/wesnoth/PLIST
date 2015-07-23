@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/04/17 15:02:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/07/23 14:56:45 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnoth.6
@@ -13010,7 +13010,6 @@ share/wesnoth/data/tools/wmlmove
 share/wesnoth/data/tools/wmlscope
 share/wesnoth/data/tools/wmlunits
 share/wesnoth/data/tools/wmlvalidator
-share/wesnoth/data/tools/wmlxgettext
 share/wesnoth/fonts/Andagii.ttf
 share/wesnoth/fonts/COPYING
 share/wesnoth/fonts/DejaVuSans.ttf
