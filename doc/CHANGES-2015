@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3095 2015/07/22 19:08:12 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3096 2015/07/23 12:11:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5756,3 +5756,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/postfix to 2.11.6 [taca 2015-07-22]
 	Updated lang/tcl to 8.6.4nb3 [dholland 2015-07-22]
 	Updated pkgtools/x11-links to 0.96 [ryoon 2015-07-22]
+	Updated ham/fldigi to 3.22.13 [mef 2015-07-23]
