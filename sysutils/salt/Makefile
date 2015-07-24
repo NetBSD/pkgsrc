@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2015/02/23 13:58:13 imil Exp $
+# $NetBSD: Makefile,v 1.27 2015/07/24 10:24:27 jperkin Exp $
 
 DISTNAME=	salt-2014.7.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
 
@@ -36,6 +37,7 @@ PYSETUPINSTALLARGS+=	--salt-pidfile-dir=${VARBASE}/run
 REPLACE_PYTHON=	*.py */*.py */*/*.py
 
 RCD_SCRIPTS+=		salt_master salt_minion
+SMF_INSTANCES=		master minion
 FILES_SUBST+=		PYTHON=${PYTHONBIN:Q}
 
 PKG_SYSCONFSUBDIR=	salt
