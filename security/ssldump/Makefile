@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2014/06/19 03:48:18 manu Exp $
+# $NetBSD: Makefile,v 1.29 2015/07/24 13:22:28 manu Exp $
 #
 
 DISTNAME=	ssldump-0.9b3
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	security
 MASTER_SITES=	http://www.rtfm.com/ssldump/
 
