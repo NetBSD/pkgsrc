@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2014/10/09 14:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2015/07/24 10:33:27 adam Exp $
 
-DISTNAME=	minicom-2.6.2
+DISTNAME=	minicom-2.7
 CATEGORIES=	comms
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/3869/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/file/3977/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/minicom/
