@@ -1,0 +1,1330 @@
+$NetBSD: patch-ciphers,v 1.1 2015/07/24 13:22:28 manu Exp $
+
+All ciphers from IANA registry:
+https://www.iana.org/assignments/tls-parameters/tls-parameters.txt
+
+--- ssl/ssl.enums.c.orig	2015-07-24 15:07:06.000000000 +0200
++++ ssl/ssl.enums.c	2015-07-24 15:07:45.000000000 +0200
+@@ -502,8 +502,12 @@
+ };
+ 
+ decoder cipher_suite_decoder[]={
+ 	{
++		0,
++		"TLS_NULL_WITH_NULL_NULL",
++		0	},
++	{
+ 		1,
+ 		"TLS_RSA_WITH_NULL_MD5",
+ 		0	},
+ 	{
+@@ -610,55 +614,183 @@
+ 		27,
+ 		"TLS_DH_anon_WITH_3DES_EDE_CBC_SHA",
+ 		0	},
+ 	{
+-	        47,
+-	        "TLS_RSA_WITH_AES_128_CBC_SHA",
+-	        0       },
+-	{
+-	        48,
+-	        "TLS_DH_DSS_WITH_AES_128_CBC_SHA",
+-	        0       },
+-	{
+-	        49,
+-	        "TLS_DH_RSA_WITH_AES_128_CBC_SHA",
+-	        0       },
+-	{
+-	        50,
+-	        "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+-	        0       },
+-	{
+-	        51,
+-	        "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+-	        0       },
+-	{
+-	        52,
+-	        "TLS_DH_anon_WITH_AES_128_CBC_SHA",
+-	        0       },
+-	{
+-	        53,
+-	        "TLS_RSA_WITH_AES_256_CBC_SHA",
+-	        0       },
+-	{
+-	        54,
+-	        "TLS_DH_DSS_WITH_AES_256_CBC_SHA",
+-	        0       },
+-	{
+-	        55,
+-	        "TLS_DH_RSA_WITH_AES_256_CBC_SHA",
+-	        0       },
+-	{
+-	        56,
+-	        "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+-	        0       },
+-	{
+-	        57,
+-	        "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+-	        0       },
+-	{
+-	        58,
+-	        "TLS_DH_anon_WITH_AES_256_CBC_SHA",
+-	        0       },
++		30,
++		"TLS_KRB5_WITH_DES_CBC_SHA",
++		0	},
++	{
++		31,
++		"TLS_KRB5_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		32,
++		"TLS_KRB5_WITH_RC4_128_SHA",
++		0	},
++	{
++		33,
++		"TLS_KRB5_WITH_IDEA_CBC_SHA",
++		0	},
++	{
++		34,
++		"TLS_KRB5_WITH_DES_CBC_MD5",
++		0	},
++	{
++		35,
++		"TLS_KRB5_WITH_3DES_EDE_CBC_MD5",
++		0	},
++	{
++		36,
++		"TLS_KRB5_WITH_RC4_128_MD5",
++		0	},
++	{
++		37,
++		"TLS_KRB5_WITH_IDEA_CBC_MD5",
++		0	},
++	{
++		38,
++		"TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA",
++		0	},
++	{
++		39,
++		"TLS_KRB5_EXPORT_WITH_RC2_CBC_40_SHA",
++		0	},
++	{
++		40,
++		"TLS_KRB5_EXPORT_WITH_RC4_40_SHA",
++		0	},
++	{
++		41,
++		"TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5",
++		0	},
++	{
++		42,
++		"TLS_KRB5_EXPORT_WITH_RC2_CBC_40_MD5",
++		0	},
++	{
++		43,
++		"TLS_KRB5_EXPORT_WITH_RC4_40_MD5",
++		0	},
++	{
++		44,
++		"TLS_PSK_WITH_NULL_SHA",
++		0	},
++	{
++		45,
++		"TLS_DHE_PSK_WITH_NULL_SHA",
++		0	},
++	{
++		46,
++		"TLS_RSA_PSK_WITH_NULL_SHA",
++		0	},
++	{
++		47,
++		"TLS_RSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		48,
++		"TLS_DH_DSS_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49,
++		"TLS_DH_RSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		50,
++		"TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		51,
++		"TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		52,
++		"TLS_DH_anon_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		53,
++		"TLS_RSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		54,
++		"TLS_DH_DSS_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		55,
++		"TLS_DH_RSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		56,
++		"TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		57,
++		"TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		58,
++		"TLS_DH_anon_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		59,
++		"TLS_RSA_WITH_NULL_SHA256",
++		0	},
++	{
++		60,
++		"TLS_RSA_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		61,
++		"TLS_RSA_WITH_AES_256_CBC_SHA256",
++		0	},
++	{
++		62,
++		"TLS_DH_DSS_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		63,
++		"TLS_DH_RSA_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		64,
++		"TLS_DHE_DSS_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		65,
++		"TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
++		0	},
++	{
++		66,
++		"TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA",
++		0	},
++	{
++		67,
++		"TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA",
++		0	},
++	{
++		68,
++		"TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA",
++		0	},
++	{
++		69,
++		"TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
++		0	},
++	{
++		70,
++		"TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA",
++		0	},
++	{
++		72,
++		"TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
++		0	},
++	{
++		73,
++		"TLS_ECDH_ECDSA_WITH_DES_CBC_SHA",
++		0	},
++	{
++		74,
++		"TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
++		0	},
+ 	{
+ 		96,
+ 		"TLS_RSA_EXPORT1024_WITH_RC4_56_MD5",
+ 		0	},
+@@ -690,62 +822,1050 @@
+ 		103,
+ 		"TLS_DHE_DSS_WITH_NULL_SHA",
+ 		0	},
+ 	{
+-		65664,
+-		"SSL2_CK_RC4",
++		103,
++		"TLS_DHE_RSA_WITH_AES_128_CBC_SHA256",
+ 		0	},
+ 	{
+-		131200,
+-		"SSL2_CK_RC4_EXPORT40",
++		104,
++		"TLS_DH_DSS_WITH_AES_256_CBC_SHA256",
+ 		0	},
+ 	{
+-		196736,
+-		"SSL2_CK_RC2",
++		105,
++		"TLS_DH_RSA_WITH_AES_256_CBC_SHA256",
+ 		0	},
+ 	{
+-		262272,
+-		"SSL2_CK_RC2_EXPORT40",
++		106,
++		"TLS_DHE_DSS_WITH_AES_256_CBC_SHA256",
+ 		0	},
+ 	{
+-		327808,
+-		"SSL2_CK_IDEA",
++		107,
++		"TLS_DHE_RSA_WITH_AES_256_CBC_SHA256",
+ 		0	},
+ 	{
+-		393280,
+-		"SSL2_CK_DES",
++		108,
++		"TLS_DH_anon_WITH_AES_128_CBC_SHA256",
+ 		0	},
+ 	{
+-		524416,
+-		"SSL2_CK_RC464",
++		109,
++		"TLS_DH_anon_WITH_AES_256_CBC_SHA256",
+ 		0	},
+ 	{
+-		458944,
+-		"SSL2_CK_3DES",
++		132,
++		"TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+ 		0	},
+ 	{
+-		74,
+-		"TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
++		133,
++		"TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA",
+ 		0	},
+ 	{
+-		72,
+-		"TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
++		134,
++		"TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA",
+ 		0	},
+ 	{
+-		65408,
+-		"SSL_RSA_WITH_RC2_CBC_MD5",
++		135,
++		"TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA",
+ 		0	},
+ 	{
+-		73,
+-		"TLS_ECDH_ECDSA_WITH_DES_CBC_SHA",
++		136,
++		"TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+ 		0	},
+ 	{
+-		65413,
+-		"TLS_ECDH_ECDSA_EXPORT_WITH_RC4_56_SHA",
++		137,
++		"TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA",
+ 		0	},
+ 	{
+-		65412,
+-		"TLS_ECDH_ECDSA_EXPORT_WITH_RC4_40_SHA",
++		138,
++		"TLS_PSK_WITH_RC4_128_SHA",
++		0	},
++	{
++		139,
++		"TLS_PSK_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		140,
++		"TLS_PSK_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		141,
++		"TLS_PSK_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		142,
++		"TLS_DHE_PSK_WITH_RC4_128_SHA",
++		0	},
++	{
++		143,
++		"TLS_DHE_PSK_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		144,
++		"TLS_DHE_PSK_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		145,
++		"TLS_DHE_PSK_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		146,
++		"TLS_RSA_PSK_WITH_RC4_128_SHA",
++		0	},
++	{
++		147,
++		"TLS_RSA_PSK_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		148,
++		"TLS_RSA_PSK_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		149,
++		"TLS_RSA_PSK_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		150,
++		"TLS_RSA_WITH_SEED_CBC_SHA",
++		0	},
++	{
++		151,
++		"TLS_DH_DSS_WITH_SEED_CBC_SHA",
++		0	},
++	{
++		152,
++		"TLS_DH_RSA_WITH_SEED_CBC_SHA",
++		0	},
++	{
++		153,
++		"TLS_DHE_DSS_WITH_SEED_CBC_SHA",
++		0	},
++	{
++		154,
++		"TLS_DHE_RSA_WITH_SEED_CBC_SHA",
++		0	},
++	{
++		155,
++		"TLS_DH_anon_WITH_SEED_CBC_SHA",
++		0	},
++	{
++		156,
++		"TLS_RSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		157,
++		"TLS_RSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		158,
++		"TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		159,
++		"TLS_DHE_RSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		160,
++		"TLS_DH_RSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		161,
++		"TLS_DH_RSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		162,
++		"TLS_DHE_DSS_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		163,
++		"TLS_DHE_DSS_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		164,
++		"TLS_DH_DSS_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		165,
++		"TLS_DH_DSS_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		166,
++		"TLS_DH_anon_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		167,
++		"TLS_DH_anon_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		168,
++		"TLS_PSK_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		169,
++		"TLS_PSK_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		170,
++		"TLS_DHE_PSK_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		171,
++		"TLS_DHE_PSK_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		172,
++		"TLS_RSA_PSK_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		173,
++		"TLS_RSA_PSK_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		174,
++		"TLS_PSK_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		175,
++		"TLS_PSK_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		176,
++		"TLS_PSK_WITH_NULL_SHA256",
++		0	},
++	{
++		177,
++		"TLS_PSK_WITH_NULL_SHA384",
++		0	},
++	{
++		178,
++		"TLS_DHE_PSK_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		179,
++		"TLS_DHE_PSK_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		180,
++		"TLS_DHE_PSK_WITH_NULL_SHA256",
++		0	},
++	{
++		181,
++		"TLS_DHE_PSK_WITH_NULL_SHA384",
++		0	},
++	{
++		182,
++		"TLS_RSA_PSK_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		183,
++		"TLS_RSA_PSK_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		184,
++		"TLS_RSA_PSK_WITH_NULL_SHA256",
++		0	},
++	{
++		185,
++		"TLS_RSA_PSK_WITH_NULL_SHA384",
++		0	},
++	{
++		186,
++		"TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		187,
++		"TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		188,
++		"TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		189,
++		"TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		190,
++		"TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		191,
++		"TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		192,
++		"TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256",
++		0	},
++	{
++		193,
++		"TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA256",
++		0	},
++	{
++		194,
++		"TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA256",
++		0	},
++	{
++		195,
++		"TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA256",
++		0	},
++	{
++		196,
++		"TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256",
++		0	},
++	{
++		197,
++		"TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA256",
++		0	},
++	{
++		255,
++		"TLS_EMPTY_RENEGOTIATION_INFO_SCSV",
++		0	},
++	{
++		22016,
++		"TLS_FALLBACK_SCSV",
++		0	},
++	{
++		49153,
++		"TLS_ECDH_ECDSA_WITH_NULL_SHA",
++		0	},
++	{
++		49154,
++		"TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
++		0	},
++	{
++		49155,
++		"TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49156,
++		"TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49157,
++		"TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49158,
++		"TLS_ECDHE_ECDSA_WITH_NULL_SHA",
++		0	},
++	{
++		49159,
++		"TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
++		0	},
++	{
++		49160,
++		"TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49161,
++		"TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49162,
++		"TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49163,
++		"TLS_ECDH_RSA_WITH_NULL_SHA",
++		0	},
++	{
++		49164,
++		"TLS_ECDH_RSA_WITH_RC4_128_SHA",
++		0	},
++	{
++		49165,
++		"TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49166,
++		"TLS_ECDH_RSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49167,
++		"TLS_ECDH_RSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49168,
++		"TLS_ECDHE_RSA_WITH_NULL_SHA",
++		0	},
++	{
++		49169,
++		"TLS_ECDHE_RSA_WITH_RC4_128_SHA",
++		0	},
++	{
++		49170,
++		"TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49171,
++		"TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49172,
++		"TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49173,
++		"TLS_ECDH_anon_WITH_NULL_SHA",
++		0	},
++	{
++		49174,
++		"TLS_ECDH_anon_WITH_RC4_128_SHA",
++		0	},
++	{
++		49175,
++		"TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49176,
++		"TLS_ECDH_anon_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49177,
++		"TLS_ECDH_anon_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49178,
++		"TLS_SRP_SHA_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49179,
++		"TLS_SRP_SHA_RSA_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49180,
++		"TLS_SRP_SHA_DSS_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49181,
++		"TLS_SRP_SHA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49182,
++		"TLS_SRP_SHA_RSA_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49183,
++		"TLS_SRP_SHA_DSS_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49184,
++		"TLS_SRP_SHA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49185,
++		"TLS_SRP_SHA_RSA_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49186,
++		"TLS_SRP_SHA_DSS_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49187,
++		"TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		49188,
++		"TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		49189,
++		"TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		49190,
++		"TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		49191,
++		"TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		49192,
++		"TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		49193,
++		"TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		49194,
++		"TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		49195,
++		"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		49196,
++		"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		49197,
++		"TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		49198,
++		"TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		49199,
++		"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		49200,
++		"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		49201,
++		"TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256",
++		0	},
++	{
++		49202,
++		"TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384",
++		0	},
++	{
++		49203,
++		"TLS_ECDHE_PSK_WITH_RC4_128_SHA",
++		0	},
++	{
++		49204,
++		"TLS_ECDHE_PSK_WITH_3DES_EDE_CBC_SHA",
++		0	},
++	{
++		49205,
++		"TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA",
++		0	},
++	{
++		49206,
++		"TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA",
++		0	},
++	{
++		49207,
++		"TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256",
++		0	},
++	{
++		49208,
++		"TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384",
++		0	},
++	{
++		49209,
++		"TLS_ECDHE_PSK_WITH_NULL_SHA",
++		0	},
++	{
++		49210,
++		"TLS_ECDHE_PSK_WITH_NULL_SHA256",
++		0	},
++	{
++		49211,
++		"TLS_ECDHE_PSK_WITH_NULL_SHA384",
++		0	},
++	{
++		49212,
++		"TLS_RSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49213,
++		"TLS_RSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49214,
++		"TLS_DH_DSS_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49215,
++		"TLS_DH_DSS_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49216,
++		"TLS_DH_RSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49217,
++		"TLS_DH_RSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49218,
++		"TLS_DHE_DSS_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49219,
++		"TLS_DHE_DSS_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49220,
++		"TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49221,
++		"TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49222,
++		"TLS_DH_anon_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49223,
++		"TLS_DH_anon_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49224,
++		"TLS_ECDHE_ECDSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49225,
++		"TLS_ECDHE_ECDSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49226,
++		"TLS_ECDH_ECDSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49227,
++		"TLS_ECDH_ECDSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49228,
++		"TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49229,
++		"TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49230,
++		"TLS_ECDH_RSA_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49231,
++		"TLS_ECDH_RSA_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49232,
++		"TLS_RSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49233,
++		"TLS_RSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49234,
++		"TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49235,
++		"TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49236,
++		"TLS_DH_RSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49237,
++		"TLS_DH_RSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49238,
++		"TLS_DHE_DSS_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49239,
++		"TLS_DHE_DSS_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49240,
++		"TLS_DH_DSS_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49241,
++		"TLS_DH_DSS_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49242,
++		"TLS_DH_anon_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49243,
++		"TLS_DH_anon_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49244,
++		"TLS_ECDHE_ECDSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49245,
++		"TLS_ECDHE_ECDSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49246,
++		"TLS_ECDH_ECDSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49247,
++		"TLS_ECDH_ECDSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49248,
++		"TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49249,
++		"TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49250,
++		"TLS_ECDH_RSA_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49251,
++		"TLS_ECDH_RSA_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49252,
++		"TLS_PSK_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49253,
++		"TLS_PSK_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49254,
++		"TLS_DHE_PSK_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49255,
++		"TLS_DHE_PSK_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49256,
++		"TLS_RSA_PSK_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49257,
++		"TLS_RSA_PSK_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49258,
++		"TLS_PSK_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49259,
++		"TLS_PSK_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49260,
++		"TLS_DHE_PSK_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49261,
++		"TLS_DHE_PSK_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49262,
++		"TLS_RSA_PSK_WITH_ARIA_128_GCM_SHA256",
++		0	},
++	{
++		49263,
++		"TLS_RSA_PSK_WITH_ARIA_256_GCM_SHA384",
++		0	},
++	{
++		49264,
++		"TLS_ECDHE_PSK_WITH_ARIA_128_CBC_SHA256",
++		0	},
++	{
++		49265,
++		"TLS_ECDHE_PSK_WITH_ARIA_256_CBC_SHA384",
++		0	},
++	{
++		49266,
++		"TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49267,
++		"TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49268,
++		"TLS_ECDH_ECDSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49269,
++		"TLS_ECDH_ECDSA_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49270,
++		"TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49271,
++		"TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49272,
++		"TLS_ECDH_RSA_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49273,
++		"TLS_ECDH_RSA_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49274,
++		"TLS_RSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49275,
++		"TLS_RSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49276,
++		"TLS_DHE_RSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49277,
++		"TLS_DHE_RSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49278,
++		"TLS_DH_RSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49279,
++		"TLS_DH_RSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49280,
++		"TLS_DHE_DSS_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49281,
++		"TLS_DHE_DSS_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49282,
++		"TLS_DH_DSS_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49283,
++		"TLS_DH_DSS_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49284,
++		"TLS_DH_anon_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49285,
++		"TLS_DH_anon_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49286,
++		"TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49287,
++		"TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49288,
++		"TLS_ECDH_ECDSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49289,
++		"TLS_ECDH_ECDSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49290,
++		"TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49291,
++		"TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49292,
++		"TLS_ECDH_RSA_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49293,
++		"TLS_ECDH_RSA_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49294,
++		"TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49295,
++		"TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49296,
++		"TLS_DHE_PSK_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49297,
++		"TLS_DHE_PSK_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49298,
++		"TLS_RSA_PSK_WITH_CAMELLIA_128_GCM_SHA256",
++		0	},
++	{
++		49299,
++		"TLS_RSA_PSK_WITH_CAMELLIA_256_GCM_SHA384",
++		0	},
++	{
++		49300,
++		"TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49301,
++		"TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49302,
++		"TLS_DHE_PSK_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49303,
++		"TLS_DHE_PSK_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49304,
++		"TLS_RSA_PSK_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49305,
++		"TLS_RSA_PSK_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49306,
++		"TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256",
++		0	},
++	{
++		49307,
++		"TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384",
++		0	},
++	{
++		49308,
++		"TLS_RSA_WITH_AES_128_CCM",
++		0	},
++	{
++		49309,
++		"TLS_RSA_WITH_AES_256_CCM",
++		0	},
++	{
++		49310,
++		"TLS_DHE_RSA_WITH_AES_128_CCM",
++		0	},
++	{
++		49311,
++		"TLS_DHE_RSA_WITH_AES_256_CCM",
++		0	},
++	{
++		49312,
++		"TLS_RSA_WITH_AES_128_CCM_8",
++		0	},
++	{
++		49313,
++		"TLS_RSA_WITH_AES_256_CCM_8",
++		0	},
++	{
++		49314,
++		"TLS_DHE_RSA_WITH_AES_128_CCM_8",
++		0	},
++	{
++		49315,
++		"TLS_DHE_RSA_WITH_AES_256_CCM_8",
++		0	},
++	{
++		49316,
++		"TLS_PSK_WITH_AES_128_CCM",
++		0	},
++	{
++		49317,
++		"TLS_PSK_WITH_AES_256_CCM",
++		0	},
++	{
++		49318,
++		"TLS_DHE_PSK_WITH_AES_128_CCM",
++		0	},
++	{
++		49319,
++		"TLS_DHE_PSK_WITH_AES_256_CCM",
++		0	},
++	{
++		49320,
++		"TLS_PSK_WITH_AES_128_CCM_8",
++		0	},
++	{
++		49321,
++		"TLS_PSK_WITH_AES_256_CCM_8",
++		0	},
++	{
++		49322,
++		"TLS_PSK_DHE_WITH_AES_128_CCM_8",
++		0	},
++	{
++		49323,
++		"TLS_PSK_DHE_WITH_AES_256_CCM_8",
++		0	},
++	{
++		49324,
++		"TLS_ECDHE_ECDSA_WITH_AES_128_CCM",
++		0	},
++	{
++		49325,
++		"TLS_ECDHE_ECDSA_WITH_AES_256_CCM",
++		0	},
++	{
++		49326,
++		"TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8",
++		0	},
++	{
++		49327,
++		"TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8",
++		0	},
++	{
++		65408,
++		"SSL_RSA_WITH_RC2_CBC_MD5",
++		0	},
++	{
++		65412,
++		"TLS_ECDH_ECDSA_EXPORT_WITH_RC4_40_SHA",
++		0	},
++	{
++		65413,
++		"TLS_ECDH_ECDSA_EXPORT_WITH_RC4_56_SHA",
++		0	},
++	{
++		65664,
++		"SSL2_CK_RC4",
++		0	},
++	{
++		131200,
++		"SSL2_CK_RC4_EXPORT40",
++		0	},
++	{
++		196736,
++		"SSL2_CK_RC2",
++		0	},
++	{
++		262272,
++		"SSL2_CK_RC2_EXPORT40",
++		0	},
++	{
++		327808,
++		"SSL2_CK_IDEA",
++		0	},
++	{
++		393280,
++		"SSL2_CK_DES",
++		0	},
++	{
++		458944,
++		"SSL2_CK_3DES",
++		0	},
++	{
++		524416,
++		"SSL2_CK_RC464",
+ 		0	},
+ {-1}
+ };
+ 
