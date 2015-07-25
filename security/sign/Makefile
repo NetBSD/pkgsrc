@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2014/02/12 23:18:37 tron Exp $
-#
+# $NetBSD: Makefile,v 1.16 2015/07/25 18:15:13 bsiegert Exp $
 
-DISTNAME=	sign-1.0.4
-PKGREVISION=	6
+GITHUB_PROJECT= sign
+GITHUB_TAG=     1.0.7
+DISTNAME=       ${GITHUB_TAG}
+PKGNAME=        sign-${DISTNAME}
 CATEGORIES=	security
-MASTER_SITES=	http://swapped.cc/sign/files/
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=apankrat/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://swapped.cc/sign/
 COMMENT=	File signing and signature verification utility
+LICENSE=	openssl AND 2-clause-bsd
 
 USE_TOOLS+=	gmake
 
