@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3114 2015/07/25 16:37:58 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3115 2015/07/25 18:17:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5784,3 +5784,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/socat to 1.7.3.0 [bsiegert 2015-07-25]
 	Updated graphics/cogl to 1.20.0 [prlw1 2015-07-25]
 	Updated www/trac to 1.0.8 [gdt 2015-07-25]
+	Updated editors/ed to 1.12 [bsiegert 2015-07-25]
+	Updated security/sign to 1.0.7 [bsiegert 2015-07-25]
