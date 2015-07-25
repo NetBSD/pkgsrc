@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=GColor2 
+GenericName=Color Selector
+Comment=Choose Colors
+Exec=gcolor2
+Icon=/usr/share/pixmaps/gcolor2/icon.png
+Terminal=false
+Type=Application
+Categories=Graphics;GTK;
