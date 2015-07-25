@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3112 2015/07/25 14:44:41 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.3113 2015/07/25 15:52:49 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5782,3 +5782,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/p5-Text-Table version 1.130 [bsiegert 2015-07-25]
 	Added databases/p5-Parse-Dia-SQL version 0.27 [bsiegert 2015-07-25]
 	Updated net/socat to 1.7.3.0 [bsiegert 2015-07-25]
+	Updated graphics/cogl to 1.20.0 [prlw1 2015-07-25]
