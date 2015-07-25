@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3108 2015/07/25 03:46:55 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3109 2015/07/25 07:52:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5771,3 +5771,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/lftp to 4.6.3a [ryoon 2015-07-25]
 	Updated lang/gcc5 to 5.2.0 [ryoon 2015-07-25]
 	Updated lang/gcc5-libs to 5.2.0nb1 [ryoon 2015-07-25]
+	Updated devel/p5-CHI to 0.60 [mef 2015-07-25]
+	Updated devel/p5-B-Hooks-Parser to 0.13 [mef 2015-07-25]
+	Updated devel/p5-CPAN-FindDependencies to 2.44 [mef 2015-07-25]
+	Updated devel/p5-CPAN-Meta to 2.150005 [mef 2015-07-25]
+	Updated devel/p5-CPAN-Meta-Check to 0.012 [mef 2015-07-25]
+	Updated devel/p5-CPAN-Perl-Releases to 2.28 [mef 2015-07-25]
+	Updated devel/p5-CPANPLUS to 0.9154 [mef 2015-07-25]
