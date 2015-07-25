@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14587 2015/07/25 14:44:41 bsiegert Exp $
+$NetBSD: TODO,v 1.14588 2015/07/25 18:17:42 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eboard-1.1.1
 	o ebook-tools-0.2.2
 	o eclipse-3.2.0
-	o ed-1.12
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
@@ -1000,7 +999,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o shmux-1.0.2
 	o shotwell-0.22.0
 	o showfont-1.0.4 [wip]
-	o sign-1.0.7
 	o silc-1.1.11
 	o silc-client-1.1.11
 	o silc-server-1.1.19
