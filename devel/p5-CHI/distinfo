@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/01/26 06:44:35 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/07/25 06:38:22 mef Exp $
 
-SHA1 (CHI-0.59.tar.gz) = 2bab8d0eb85113945eb6e39247db183fbfad5222
-RMD160 (CHI-0.59.tar.gz) = 8b645f378a4ea5bdb6fc6275afc908f59ced7a3d
-Size (CHI-0.59.tar.gz) = 87978 bytes
+SHA1 (CHI-0.60.tar.gz) = d6f5464c5053edc105d7039e8c23df03b8a6016b
+RMD160 (CHI-0.60.tar.gz) = 7dc14aee531435a0f44d1a2feedca85f89672cb5
+Size (CHI-0.60.tar.gz) = 87894 bytes
