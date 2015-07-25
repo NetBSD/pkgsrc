@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/12/06 11:41:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2015/07/25 16:45:12 bsiegert Exp $
 
-DISTNAME=		ed-1.1
-PKGREVISION=		2
+DISTNAME=		ed-1.12
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GNU:=ed/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.lz
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.gnu.org/software/ed/ed.html
