@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2013/05/18 20:23:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/07/25 03:29:57 ryoon Exp $
 bin/lftp
 bin/lftpget
 @comment belongs to libiconv: lib/charset.alias
@@ -33,6 +33,7 @@ share/locale/ko/LC_MESSAGES/lftp.mo
 share/locale/pl/LC_MESSAGES/lftp.mo
 share/locale/pt_BR/LC_MESSAGES/lftp.mo
 share/locale/ru/LC_MESSAGES/lftp.mo
+share/locale/uk/LC_MESSAGES/lftp.mo
 share/locale/zh_CN/LC_MESSAGES/lftp.mo
 share/locale/zh_HK/LC_MESSAGES/lftp.mo
 share/locale/zh_TW/LC_MESSAGES/lftp.mo
