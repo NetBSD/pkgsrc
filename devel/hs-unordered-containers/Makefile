@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/06/08 20:56:14 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/25 21:58:55 szptvlfn Exp $
 
-DISTNAME=	unordered-containers-0.2.5.0
-PKGREVISION=	6
+DISTNAME=	unordered-containers-0.2.5.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
