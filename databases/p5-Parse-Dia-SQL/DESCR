@@ -1,0 +1,2 @@
+Parse::Dia::SQL converts Dia class diagrams into SQL. Various SQL
+dialects are supported.
