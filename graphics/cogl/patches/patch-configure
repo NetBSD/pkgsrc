@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2015/07/25 15:52:25 prlw1 Exp $
+
+Find native X libGL.so.2 as well as modular X libGL.so.1.
+https://bugzilla.gnome.org/show_bug.cgi?id=752864
+
+--- configure.orig	2015-02-23 19:46:01.000000000 +0000
++++ configure
+@@ -24239,7 +24239,7 @@ fi
+ 
+ 
+ fi
+-                COGL_GL_LIBNAME="libGL.so.1"
++                COGL_GL_LIBNAME="libGL.so"
+ 
+ fi
+ 
