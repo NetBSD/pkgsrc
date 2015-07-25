@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/07/25 03:46:02 ryoon Exp $
 
-SHA1 (gcc-5.1.0.tar.bz2) = b6c947b09adf780fe02065d0c48bfd7b4bdddfa3
-RMD160 (gcc-5.1.0.tar.bz2) = 17a9623f384ce10415a603042e0592c9b4956078
-Size (gcc-5.1.0.tar.bz2) = 94954411 bytes
+SHA1 (gcc-5.2.0.tar.bz2) = fe3f5390949d47054b613edc36c557eb1d51c18e
+RMD160 (gcc-5.2.0.tar.bz2) = eaedd62e7a738f6bdc0e97a0c40fbbd75d35925b
+Size (gcc-5.2.0.tar.bz2) = 95221552 bytes
 SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
 RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
 Size (isl-0.14.tar.bz2) = 1399896 bytes

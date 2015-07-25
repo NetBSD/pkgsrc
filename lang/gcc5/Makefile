@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/25 03:46:02 ryoon Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -10,8 +10,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC5_DIST_VERSION}
 ## PKGREVISION of this package!
 #PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC5-DIST_VERSION}/}
-MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC5_DIST_VERSION}/
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC5_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
