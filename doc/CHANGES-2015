@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3106 2015/07/25 03:12:02 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3107 2015/07/25 03:30:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5768,3 +5768,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/coreutils to 8.23nb2 [jperkin 2015-07-24]
 	Added x11/gcolor2 version 0.4 [kamil 2015-07-25]
 	Updated security/stunnel to 5.20 [ryoon 2015-07-25]
+	Updated net/lftp to 4.6.3a [ryoon 2015-07-25]
