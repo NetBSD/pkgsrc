@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2012/12/27 21:04:11 bsiegert Exp $
+$NetBSD: patch-af,v 1.4 2015/07/25 14:36:12 bsiegert Exp $
 
 --- src/polkit/polkit-sysdeps.c.orig	2008-11-21 22:17:08.000000000 -0500
 +++ src/polkit/polkit-sysdeps.c
@@ -20,3 +20,12 @@ $NetBSD: patch-af,v 1.3 2012/12/27 21:04:11 bsiegert Exp $
          tokens = kit_strsplit (contents, ' ', &num_tokens);
          if (tokens == NULL)
                  goto out;
+@@ -270,7 +270,7 @@ polkit_sysdeps_get_exe_for_pid (pid_t pi
+         ret = strlen (info.pr_psargs);
+         strncpy (out_buf, info.pr_psargs, ret);
+ #else
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 	snprintf (proc_name, sizeof (proc_name), "/proc/%d/file", pid);
+ #else
+         snprintf (proc_name, sizeof (proc_name), "/proc/%d/exe", pid);
