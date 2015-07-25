@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/25 02:06:04 kamil Exp $
+bin/gcolor2
+share/applications/gcolor2.desktop
+share/pixmaps/gcolor2/about_icon.png
+share/pixmaps/gcolor2/icon.png
