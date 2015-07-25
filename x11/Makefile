@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.760 2015/07/11 11:55:33 kamil Exp $
+# $NetBSD: Makefile,v 1.761 2015/07/25 02:09:12 kamil Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -68,6 +68,7 @@ SUBDIR+=	fox
 SUBDIR+=	fspanel
 SUBDIR+=	ftmenu
 SUBDIR+=	fvwm-wharf
+SUBDIR+=	gcolor2
 SUBDIR+=	gdm
 SUBDIR+=	ggiterm
 SUBDIR+=	glproto
