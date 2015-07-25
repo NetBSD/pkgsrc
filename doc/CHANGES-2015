@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3116 2015/07/25 18:26:04 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.3117 2015/07/25 18:28:42 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5787,3 +5787,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/ed to 1.12 [bsiegert 2015-07-25]
 	Updated security/sign to 1.0.7 [bsiegert 2015-07-25]
 	Removed security/systrace-policies [dholland 2015-07-25]
+	Removed security/gtk-systrace [dholland 2015-07-25]
