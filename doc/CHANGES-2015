@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3109 2015/07/25 07:52:45 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3110 2015/07/25 09:47:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Meta-Check to 0.012 [mef 2015-07-25]
 	Updated devel/p5-CPAN-Perl-Releases to 2.28 [mef 2015-07-25]
 	Updated devel/p5-CPANPLUS to 0.9154 [mef 2015-07-25]
+	Updated devel/xulrunner31 to 31.8.0 [ryoon 2015-07-25]
