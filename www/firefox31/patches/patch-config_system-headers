@@ -1,8 +1,18 @@
-$NetBSD: patch-config_system-headers,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.2 2015/07/25 04:04:54 ryoon Exp $
 
---- config/system-headers.orig	2014-07-17 01:45:08.000000000 +0000
+https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
+
+--- config/system-headers.orig	2015-06-24 21:24:43.000000000 +0000
 +++ config/system-headers
-@@ -1048,8 +1048,6 @@ X11/Xlocale.h
+@@ -415,6 +415,7 @@ freetype/ftbitmap.h
+ freetype/ftxf86.h
+ freetype.h
+ ftcache.h
++ftfntfmt.h
+ ftglyph.h
+ ftsynth.h
+ ftoutln.h
+@@ -1048,8 +1049,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -11,7 +21,7 @@ $NetBSD: patch-config_system-headers,v 1.1 2014/11/03 12:18:32 ryoon Exp $
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1117,6 +1115,8 @@ ogg/ogg.h
+@@ -1117,6 +1116,8 @@ ogg/ogg.h
  ogg/os_types.h
  nestegg/nestegg.h
  cubeb/cubeb.h
@@ -20,7 +30,7 @@ $NetBSD: patch-config_system-headers,v 1.1 2014/11/03 12:18:32 ryoon Exp $
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1145,3 +1145,37 @@ unicode/utypes.h
+@@ -1145,3 +1146,37 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
