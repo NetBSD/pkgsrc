@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.559 2015/07/06 10:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.560 2015/07/25 18:29:02 dholland Exp $
 #
 
 COMMENT=	Security tools
@@ -99,7 +99,6 @@ SUBDIR+=	gpgme
 SUBDIR+=	gpshell
 SUBDIR+=	gsasl
 SUBDIR+=	gss
-SUBDIR+=	gtk-systrace
 SUBDIR+=	guardtime
 SUBDIR+=	hackbot
 SUBDIR+=	hashcash
@@ -470,7 +469,6 @@ SUBDIR+=	stegtunnel
 SUBDIR+=	stud
 SUBDIR+=	stunnel
 SUBDIR+=	sudo
-SUBDIR+=	systrace-policies
 SUBDIR+=	tacshell
 SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
