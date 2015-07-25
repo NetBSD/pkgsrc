@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2015/06/30 03:27:01 tnn Exp $
+$NetBSD: distinfo,v 1.62 2015/07/25 04:10:53 markd Exp $
 
 SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
 RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
@@ -12,3 +12,6 @@ SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = f2c72562a40c0e3109991453a
 SHA1 (patch-hw_xfree86_os-support_bsd_sparc64__video.c) = eddf15142e26f10f9028088f8e4e910bb6b5df59
 SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 499e536a1189b88bc17e3df44a9ae2397decdc8b
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
+SHA1 (patch-os_WaitFor.c) = 6060455bd8d145116b4177c5b0f482cf39c741ea
+SHA1 (patch-os_connection.c) = 19189656fbcabb0a48b68a7606660bda33e5d605
+SHA1 (patch-os_io.c) = 42c41abee29d241e3d7e10d59764c573a2165d55
