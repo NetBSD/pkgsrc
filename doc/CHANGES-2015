@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3104 2015/07/24 17:02:52 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.3105 2015/07/25 02:11:14 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5766,3 +5766,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/dillo to 3.0.5 [adam 2015-07-24]
 	Updated comms/minicom to 2.7 [adam 2015-07-24]
 	Updated sysutils/coreutils to 8.23nb2 [jperkin 2015-07-24]
+	Added x11/gcolor2 version 0.4 [kamil 2015-07-25]
