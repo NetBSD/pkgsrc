@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.18 2015/06/05 20:41:04 youri Exp $
+$NetBSD: patch-ac,v 1.19 2015/07/25 03:11:18 ryoon Exp $
 
 We'll take care of PKG_SYSCONFSUBDIR ourselves, thanks.
 
---- src/Makefile.in.orig	2015-04-29 18:17:24.000000000 +0000
+--- src/Makefile.in.orig	2015-07-09 13:41:47.000000000 +0000
 +++ src/Makefile.in
-@@ -388,7 +388,7 @@ libstunnel_la_LDFLAGS = -avoid-version
+@@ -396,7 +396,7 @@ libstunnel_la_LDFLAGS = -avoid-version
  
  # Additional preprocesor definitions
  stunnel_CPPFLAGS = -I/usr/kerberos/include -I$(SSLDIR)/include \
