@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/26 18:38:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/07/26 23:53:45 wiz Exp $
 include/gdkmm-3.0/gdkmm.h
 include/gdkmm-3.0/gdkmm/applaunchcontext.h
 include/gdkmm-3.0/gdkmm/color.h
@@ -104,6 +104,7 @@ include/gtkmm-3.0/gtkmm/combobox.h
 include/gtkmm-3.0/gtkmm/comboboxtext.h
 include/gtkmm-3.0/gtkmm/container.h
 include/gtkmm-3.0/gtkmm/cssprovider.h
+include/gtkmm-3.0/gtkmm/csssection.h
 include/gtkmm-3.0/gtkmm/dialog.h
 include/gtkmm-3.0/gtkmm/drawingarea.h
 include/gtkmm-3.0/gtkmm/editable.h
@@ -247,6 +248,7 @@ include/gtkmm-3.0/gtkmm/private/combobox_p.h
 include/gtkmm-3.0/gtkmm/private/comboboxtext_p.h
 include/gtkmm-3.0/gtkmm/private/container_p.h
 include/gtkmm-3.0/gtkmm/private/cssprovider_p.h
+include/gtkmm-3.0/gtkmm/private/csssection_p.h
 include/gtkmm-3.0/gtkmm/private/dialog_p.h
 include/gtkmm-3.0/gtkmm/private/drawingarea_p.h
 include/gtkmm-3.0/gtkmm/private/editable_p.h
@@ -369,6 +371,7 @@ ${PLIST.x11}include/gtkmm-3.0/gtkmm/private/socket_p.h
 include/gtkmm-3.0/gtkmm/private/spinbutton_p.h
 include/gtkmm-3.0/gtkmm/private/spinner_p.h
 include/gtkmm-3.0/gtkmm/private/stack_p.h
+include/gtkmm-3.0/gtkmm/private/stacksidebar_p.h
 include/gtkmm-3.0/gtkmm/private/stackswitcher_p.h
 include/gtkmm-3.0/gtkmm/private/statusbar_p.h
 include/gtkmm-3.0/gtkmm/private/statusicon_p.h
@@ -416,6 +419,7 @@ include/gtkmm-3.0/gtkmm/private/volumebutton_p.h
 include/gtkmm-3.0/gtkmm/private/widget_p.h
 include/gtkmm-3.0/gtkmm/private/widgetpath_p.h
 include/gtkmm-3.0/gtkmm/private/window_p.h
+include/gtkmm-3.0/gtkmm/private/windowgroup_p.h
 include/gtkmm-3.0/gtkmm/progressbar.h
 include/gtkmm-3.0/gtkmm/radioaction.h
 include/gtkmm-3.0/gtkmm/radiobutton.h
@@ -451,6 +455,7 @@ ${PLIST.x11}include/gtkmm-3.0/gtkmm/socket.h
 include/gtkmm-3.0/gtkmm/spinbutton.h
 include/gtkmm-3.0/gtkmm/spinner.h
 include/gtkmm-3.0/gtkmm/stack.h
+include/gtkmm-3.0/gtkmm/stacksidebar.h
 include/gtkmm-3.0/gtkmm/stackswitcher.h
 include/gtkmm-3.0/gtkmm/statusbar.h
 include/gtkmm-3.0/gtkmm/statusicon.h
@@ -458,6 +463,7 @@ include/gtkmm-3.0/gtkmm/stock.h
 include/gtkmm-3.0/gtkmm/stockid.h
 include/gtkmm-3.0/gtkmm/stockitem.h
 include/gtkmm-3.0/gtkmm/stylecontext.h
+include/gtkmm-3.0/gtkmm/styleproperty.h
 include/gtkmm-3.0/gtkmm/styleprovider.h
 include/gtkmm-3.0/gtkmm/switch.h
 include/gtkmm-3.0/gtkmm/table.h
@@ -503,6 +509,7 @@ include/gtkmm-3.0/gtkmm/volumebutton.h
 include/gtkmm-3.0/gtkmm/widget.h
 include/gtkmm-3.0/gtkmm/widgetpath.h
 include/gtkmm-3.0/gtkmm/window.h
+include/gtkmm-3.0/gtkmm/windowgroup.h
 include/gtkmm-3.0/gtkmm/wrap_init.h
 lib/gdkmm-3.0/include/gdkmmconfig.h
 lib/gtkmm-3.0/include/gtkmmconfig.h
@@ -525,6 +532,8 @@ share/doc/gtkmm-3.0/reference/html/annotated.html
 share/doc/gtkmm-3.0/reference/html/appchooserbutton1.png
 share/doc/gtkmm-3.0/reference/html/appchooserdialog1.png
 share/doc/gtkmm-3.0/reference/html/arrow1.png
+share/doc/gtkmm-3.0/reference/html/arrowdown.png
+share/doc/gtkmm-3.0/reference/html/arrowright.png
 share/doc/gtkmm-3.0/reference/html/bc_s.png
 share/doc/gtkmm-3.0/reference/html/bdwn.png
 share/doc/gtkmm-3.0/reference/html/button2.png
@@ -592,6 +601,9 @@ share/doc/gtkmm-3.0/reference/html/classGdk_1_1Window__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1RecentInfo_01_4_01_4-members.html
 share/doc/gtkmm-3.0/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1RecentInfo_01_4_01_4.html
 share/doc/gtkmm-3.0/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1RecentInfo_01_4_01_4__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1TargetList_01_4_01_4-members.html
+share/doc/gtkmm-3.0/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1TargetList_01_4_01_4.html
+share/doc/gtkmm-3.0/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1TargetList_01_4_01_4__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1AboutDialog-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1AboutDialog.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1AboutDialog__inherit__graph.png
@@ -769,7 +781,12 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1Container.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Container__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssProvider-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssProvider.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssProviderError-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssProviderError.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssProviderError__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssProvider__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssSection-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1CssSection.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Dialog-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Dialog.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Dialog__inherit__graph.png
@@ -1164,6 +1181,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1Spinner.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Spinner__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Stack-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Stack.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StackSidebar-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StackSidebar.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StackSidebar__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StackSwitcher-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StackSwitcher.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StackSwitcher__inherit__graph.png
@@ -1181,6 +1201,12 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1StockItem.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleContext-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleContext.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleContext__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleProperty-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleProperty.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StylePropertyBase-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StylePropertyBase.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StylePropertyBase__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleProperty__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleProvider-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleProvider.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1StyleProvider__inherit__graph.png
@@ -1353,28 +1379,19 @@ share/doc/gtkmm-3.0/reference/html/combobox1.png
 share/doc/gtkmm-3.0/reference/html/deprecated.html
 share/doc/gtkmm-3.0/reference/html/dir_4cca10c204509ca3086b747fab94faa6.html
 share/doc/gtkmm-3.0/reference/html/dir_cdc0cb133378d4d23d07a2a9cfb94776.html
+share/doc/gtkmm-3.0/reference/html/doc.png
+share/doc/gtkmm-3.0/reference/html/doxygen-extra.css
 share/doc/gtkmm-3.0/reference/html/doxygen.css
 share/doc/gtkmm-3.0/reference/html/doxygen.png
 share/doc/gtkmm-3.0/reference/html/dynsections.js
 share/doc/gtkmm-3.0/reference/html/entry1.png
 share/doc/gtkmm-3.0/reference/html/filechooserbutton1.png
 share/doc/gtkmm-3.0/reference/html/filechooserdialog1.png
+share/doc/gtkmm-3.0/reference/html/folderclosed.png
+share/doc/gtkmm-3.0/reference/html/folderopen.png
 share/doc/gtkmm-3.0/reference/html/fontbutton1.png
 share/doc/gtkmm-3.0/reference/html/fontselectiondialog1.png
 share/doc/gtkmm-3.0/reference/html/frame1.png
-share/doc/gtkmm-3.0/reference/html/ftv2blank.png
-share/doc/gtkmm-3.0/reference/html/ftv2doc.png
-share/doc/gtkmm-3.0/reference/html/ftv2folderclosed.png
-share/doc/gtkmm-3.0/reference/html/ftv2folderopen.png
-share/doc/gtkmm-3.0/reference/html/ftv2lastnode.png
-share/doc/gtkmm-3.0/reference/html/ftv2link.png
-share/doc/gtkmm-3.0/reference/html/ftv2mlastnode.png
-share/doc/gtkmm-3.0/reference/html/ftv2mnode.png
-share/doc/gtkmm-3.0/reference/html/ftv2node.png
-share/doc/gtkmm-3.0/reference/html/ftv2plastnode.png
-share/doc/gtkmm-3.0/reference/html/ftv2pnode.png
-share/doc/gtkmm-3.0/reference/html/ftv2splitbar.png
-share/doc/gtkmm-3.0/reference/html/ftv2vertline.png
 share/doc/gtkmm-3.0/reference/html/functions.html
 share/doc/gtkmm-3.0/reference/html/functions_b.html
 share/doc/gtkmm-3.0/reference/html/functions_c.html
@@ -1594,6 +1611,8 @@ share/doc/gtkmm-3.0/reference/html/inherit_graph_38.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_39.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_4.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_40.png
+share/doc/gtkmm-3.0/reference/html/inherit_graph_41.png
+share/doc/gtkmm-3.0/reference/html/inherit_graph_42.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_5.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_6.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_7.png
@@ -1707,11 +1726,13 @@ share/doc/gtkmm-3.0/reference/html/since_3_0.html
 share/doc/gtkmm-3.0/reference/html/since_3_10.html
 share/doc/gtkmm-3.0/reference/html/since_3_12.html
 share/doc/gtkmm-3.0/reference/html/since_3_14.html
+share/doc/gtkmm-3.0/reference/html/since_3_16.html
 share/doc/gtkmm-3.0/reference/html/since_3_2.html
 share/doc/gtkmm-3.0/reference/html/since_3_4.html
 share/doc/gtkmm-3.0/reference/html/since_3_6.html
 share/doc/gtkmm-3.0/reference/html/since_3_8.html
 share/doc/gtkmm-3.0/reference/html/spinbutton1.png
+share/doc/gtkmm-3.0/reference/html/splitbar.png
 share/doc/gtkmm-3.0/reference/html/statusbar1.png
 share/doc/gtkmm-3.0/reference/html/structGtk_1_1BuiltinStockID-members.html
 share/doc/gtkmm-3.0/reference/html/structGtk_1_1BuiltinStockID.html
