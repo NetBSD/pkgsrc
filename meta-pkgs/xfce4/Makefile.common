@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2015/07/13 19:56:36 youri Exp $
+# $NetBSD: Makefile.common,v 1.53 2015/07/26 13:59:24 youri Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -31,7 +31,7 @@
 # used by sysutils/xfce4-verve-plugin/Makefile
 # used by sysutils/xfce4-xarchiver/Makefile
 # used by sysutils/xfce4-xkb-plugin/Makefile
-# used by textproc/xfce4-dict-plugin/Makefile
+# used by textproc/xfce4-dict/Makefile
 # used by time/xfce4-datetime-plugin/Makefile
 # used by time/xfce4-orage/Makefile
 # used by time/xfce4-stopwatch-plugin/Makefile
