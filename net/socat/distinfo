@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2014/09/07 23:24:56 rodent Exp $
+$NetBSD: distinfo,v 1.20.8.1 2015/07/26 19:57:43 tron Exp $
 
-SHA1 (socat-1.7.2.4.tar.gz) = c33904b83295accef2aaff8adf7eedd3310f9777
-RMD160 (socat-1.7.2.4.tar.gz) = 034e7e1197339aa01d657d580fbc60d16ebf13dc
-Size (socat-1.7.2.4.tar.gz) = 583762 bytes
-SHA1 (patch-configure) = 2fb11fb9f5ab7ff911597fa9460226a913151bb1
-SHA1 (patch-mytypes.h) = d93e629e4aedae62ed6de2c30bf459c8af853a84
+SHA1 (socat-1.7.3.0.tar.gz) = c09ec6539647cebe8fccdfcf0f1ace1243231ec3
+RMD160 (socat-1.7.3.0.tar.gz) = 574d55611cc8ab1dfa7941e133c882893d72785d
+Size (socat-1.7.3.0.tar.gz) = 601022 bytes
+SHA1 (patch-mytypes.h) = 94df5a47f7fbadf867e0994edeeb857b467021df
