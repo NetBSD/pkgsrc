@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2011/01/21 21:18:12 wiz Exp $
+$NetBSD: distinfo,v 1.20 2015/07/26 15:58:53 spz Exp $
 
 SHA1 (tidy-20091027.tar.gz) = f77203b481430fef66382dc32ae5152004dabe78
 RMD160 (tidy-20091027.tar.gz) = b1e1aa3178b2e16095e1e6a532644462640b3f7f
 Size (tidy-20091027.tar.gz) = 492052 bytes
-SHA1 (patch-aa) = fc86695745a6711d74d4f07f93a53d396f98e308
+SHA1 (patch-aa) = 1c9f52f2713bdab8662dd71ccecadbfe3806bda0
+SHA1 (patch-src_lexer.c) = abb93b322452607e552c3c76871acf5de93c9cf5
