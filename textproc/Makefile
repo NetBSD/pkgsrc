@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.838 2015/07/25 13:53:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.839 2015/07/26 13:58:14 youri Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -847,7 +847,7 @@ SUBDIR+=	xapian
 SUBDIR+=	xapian-omega
 SUBDIR+=	xerces-c
 SUBDIR+=	xerces-j
-SUBDIR+=	xfce4-dict-plugin
+SUBDIR+=	xfce4-dict
 SUBDIR+=	xhtml
 SUBDIR+=	xhtmldiff
 SUBDIR+=	xml-coreutils
