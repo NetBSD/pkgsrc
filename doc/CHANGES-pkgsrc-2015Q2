@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.12 2015/07/22 20:16:43 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.13 2015/07/26 15:41:36 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -51,3 +51,5 @@ Pullup ticket #4779 - requested by taca
 www/apache24: security update
 Pullup ticket #4780 - requested by taca
 mail/postfix: security update
+Pullup ticket #4759 - requested by morr
+net/haproxy: security fix
