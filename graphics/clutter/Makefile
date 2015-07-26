@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2015/04/25 14:23:08 tnn Exp $
+# $NetBSD: Makefile,v 1.51 2015/07/26 23:25:47 wiz Exp $
 
-DISTNAME=	clutter-1.20.0
-PKGREVISION=	1
+DISTNAME=	clutter-1.22.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,13 +25,13 @@ TEST_TARGET=	check
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
 .include "../../devel/atk/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.37.3
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.30.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.12.0
+BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.14.0
 .include "../../graphics/cairo-gobject/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.17.5
+BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.20.0
 .include "../../graphics/cogl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.12.0
 .include "../../textproc/json-glib/buildlink3.mk"
