@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/01/17 15:19:04 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/07/26 23:25:47 wiz Exp $
 include/clutter-1.0/cally/cally-actor.h
 include/clutter-1.0/cally/cally-clone.h
 include/clutter-1.0/cally/cally-factory.h
@@ -283,6 +283,7 @@ share/gtk-doc/html/clutter/ch10.html
 share/gtk-doc/html/clutter/ch11.html
 share/gtk-doc/html/clutter/ch12.html
 share/gtk-doc/html/clutter/clutter-Base-geometric-types.html
+share/gtk-doc/html/clutter/clutter-Cairo-integration.html
 share/gtk-doc/html/clutter/clutter-ClutterGLXTexturePixmap.html
 share/gtk-doc/html/clutter/clutter-ClutterWaylandSurface.html
 share/gtk-doc/html/clutter/clutter-ClutterX11TexturePixmap.html
@@ -306,6 +307,7 @@ share/gtk-doc/html/clutter/clutter-Wayland-compositor-specific-support.html
 share/gtk-doc/html/clutter/clutter-Wayland-specific-support.html
 share/gtk-doc/html/clutter/clutter-Win32-Specific-Support.html
 share/gtk-doc/html/clutter/clutter-X11-Specific-Support.html
+share/gtk-doc/html/clutter/clutter-clutter-mir.html
 share/gtk-doc/html/clutter/clutter-overview.html
 share/gtk-doc/html/clutter/clutter.devhelp2
 share/gtk-doc/html/clutter/clutteranimation.html
@@ -340,6 +342,10 @@ share/gtk-doc/html/clutter/ix11.html
 share/gtk-doc/html/clutter/ix12.html
 share/gtk-doc/html/clutter/ix13.html
 share/gtk-doc/html/clutter/ix14.html
+share/gtk-doc/html/clutter/ix15.html
+share/gtk-doc/html/clutter/ix16.html
+share/gtk-doc/html/clutter/ix17.html
+share/gtk-doc/html/clutter/ix18.html
 share/gtk-doc/html/clutter/left-insensitive.png
 share/gtk-doc/html/clutter/left.png
 share/gtk-doc/html/clutter/license.html
@@ -366,6 +372,7 @@ share/locale/ast/LC_MESSAGES/clutter-1.0.mo
 share/locale/az_IR/LC_MESSAGES/clutter-1.0.mo
 share/locale/be/LC_MESSAGES/clutter-1.0.mo
 share/locale/bg/LC_MESSAGES/clutter-1.0.mo
+share/locale/bs/LC_MESSAGES/clutter-1.0.mo
 share/locale/ca/LC_MESSAGES/clutter-1.0.mo
 share/locale/ca@valencia/LC_MESSAGES/clutter-1.0.mo
 share/locale/cs/LC_MESSAGES/clutter-1.0.mo
@@ -386,6 +393,7 @@ share/locale/hu/LC_MESSAGES/clutter-1.0.mo
 share/locale/id/LC_MESSAGES/clutter-1.0.mo
 share/locale/it/LC_MESSAGES/clutter-1.0.mo
 share/locale/ja/LC_MESSAGES/clutter-1.0.mo
+share/locale/kk/LC_MESSAGES/clutter-1.0.mo
 share/locale/km/LC_MESSAGES/clutter-1.0.mo
 share/locale/kn/LC_MESSAGES/clutter-1.0.mo
 share/locale/ko/LC_MESSAGES/clutter-1.0.mo
