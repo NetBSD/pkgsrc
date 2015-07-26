@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/23 09:14:53 nros Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/07/26 17:15:34 nros Exp $
 include/libssh2.h
 include/libssh2_publickey.h
 include/libssh2_sftp.h
@@ -169,4 +169,5 @@ man/man3/libssh2_userauth_password_ex.3
 man/man3/libssh2_userauth_publickey.3
 man/man3/libssh2_userauth_publickey_fromfile.3
 man/man3/libssh2_userauth_publickey_fromfile_ex.3
+man/man3/libssh2_userauth_publickey_frommemory.3
 man/man3/libssh2_version.3
