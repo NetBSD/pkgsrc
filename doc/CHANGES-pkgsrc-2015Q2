@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.13 2015/07/26 15:41:36 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.14 2015/07/26 19:58:12 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -53,3 +53,9 @@ Pullup ticket #4780 - requested by taca
 mail/postfix: security update
 Pullup ticket #4759 - requested by morr
 net/haproxy: security fix
+Pullup ticket #4775 - requested by sevan
+graphics/libwmf: security patch
+Pullup ticket #4781 - requested by bsiegert
+net/gcloud-golang-metadata: build fix
+Pullup ticket #4782 - requested by bsiegert
+net/socat: security update
