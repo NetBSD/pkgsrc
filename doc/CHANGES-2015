@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3127 2015/07/26 22:45:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3128 2015/07/26 22:47:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5799,3 +5799,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-URI to 1.69 [wiz 2015-07-26]
 	Updated devel/p5-Moo to 2.000002 [wiz 2015-07-26]
 	Updated devel/talloc to 2.1.3 [wiz 2015-07-26]
+	Updated graphics/png to 1.6.18 [wiz 2015-07-26]
