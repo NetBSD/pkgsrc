@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3121 2015/07/26 13:55:09 youri Exp $
+$NetBSD: CHANGES-2015,v 1.3122 2015/07/26 15:13:06 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5793,3 +5793,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/lziprecover to 1.17 [mef 2015-07-26]
 	Updated geography/R-countrycode to 0.18 [mef 2015-07-26]
 	Added textproc/xfce4-dict version 0.7.1 [youri 2015-07-26]
+	Updated graphics/elementary-xfce-icon-theme to 0.6 [youri 2015-07-26]
