@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.52 2015/06/13 12:57:28 ryoon Exp $
+$NetBSD: distinfo,v 1.53 2015/07/26 22:04:13 snj Exp $
 
 SHA1 (zsh-5.0.8.tar.bz2) = e15e00bd4b80e96e87301bf682d86fdf56929989
 RMD160 (zsh-5.0.8.tar.bz2) = 2c831d5dee22d79b6e2fd6ad7b8392c1d201f017
 Size (zsh-5.0.8.tar.bz2) = 3250542 bytes
+SHA1 (patch-Completion_Unix_Command__du) = 267c6adc4941c9487b7a4a524472e65fef39dda6
+SHA1 (patch-Completion_Unix_Command__sort) = 34ec91557c1a8b78042ab333f73a18111dd64d18
 SHA1 (patch-Src_builtin.c) = 500ad7e79c38ba35055e39c3879e8d72f2f4a59d
 SHA1 (patch-Test_B03print.ztst) = 5e534fbacf1648faa6deeaae8af57f37498a98c4
 SHA1 (patch-ac) = 75c1b9e56858289adf9f1d9c58d2319bb6df7abc

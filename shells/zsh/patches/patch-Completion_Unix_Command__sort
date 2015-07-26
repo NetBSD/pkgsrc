@@ -1,0 +1,18 @@
+$NetBSD: patch-Completion_Unix_Command__sort,v 1.1 2015/07/26 22:04:13 snj Exp $
+
+Add missing ].  Fixes NetBSD and DragonFly completion of the sort
+command.  Without this, you get:
+"_arguments:comparguments:312: invalid option definition: (-s)-S[don't
+use stable sort"
+
+--- Completion/Unix/Command/_sort.orig	2015-07-26 14:58:06.000000000 -0700
++++ Completion/Unix/Command/_sort	2015-07-26 14:58:16.000000000 -0700
+@@ -55,7 +55,7 @@ case $variant in
+   netbsd*|dragonfly*)
+     args+=(
+       "${ordering}-l[sort by string length of field]"
+-      "(-s)-S[don't use stable sort"
++      "(-s)-S[don't use stable sort]"
+     )
+   ;|
+   openbsd*)
