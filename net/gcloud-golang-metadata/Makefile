@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/11 13:02:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1.2.1 2015/07/26 19:53:23 tron Exp $
 #
 
 DISTNAME=		gcloud-golang
@@ -19,7 +19,13 @@ GO_DIST_BASE=		${DISTNAME}-${GITHUB_TAG}*
 
 # Remove all code except compute/metadata and internal
 pre-patch:
-	${RM} -fr ${WRKSRC}/[^ci]* ${WRKSRC}/cloud*go
+	for i in ${WRKSRC}/*; do \
+		case $$i in \
+		c*|i*) ;; \
+		default) ${RM} -fr $$i ;; \
+		esac; \
+		done
+	${RM} -fr ${WRKSRC}/cloud*go
 	${RM} -fr ${WRKSRC}/internal/datastore
 	${RM} -fr ${WRKSRC}/internal/testutil
 
