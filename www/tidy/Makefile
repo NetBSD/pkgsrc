@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/07/26 15:58:53 spz Exp $
+# $NetBSD: Makefile,v 1.45 2015/07/26 21:33:56 wiz Exp $
 
 DISTNAME=	tidy-20091027
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	# manually created tarballs on ftp.NetBSD.org only
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tidy.sourceforge.net/
+HOMEPAGE=	http://www.html-tidy.org/
 COMMENT=	Fixes and tidies up HTML files
 LICENSE=	mit
 
