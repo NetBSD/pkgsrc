@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3118 2015/07/25 21:59:26 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.3119 2015/07/26 12:19:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5789,3 +5789,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed security/systrace-policies [dholland 2015-07-25]
 	Removed security/gtk-systrace [dholland 2015-07-25]
 	Updated devel/hs-unordered-containers to 0.2.5.1 [szptvlfn 2015-07-25]
+	Updated archivers/lzip to 1.17 [mef 2015-07-26]
+	Updated archivers/lziprecover to 1.17 [mef 2015-07-26]
