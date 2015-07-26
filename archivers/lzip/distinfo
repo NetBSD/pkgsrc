@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/11/20 07:32:15 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/07/26 12:15:30 mef Exp $
 
-SHA1 (lzip-1.16.tar.gz) = 5bcefbb788305db7be9748d3c0478156518f1025
-RMD160 (lzip-1.16.tar.gz) = f2e5ef5a56ece6b56330f2365e3703592266833a
-Size (lzip-1.16.tar.gz) = 86035 bytes
+SHA1 (lzip-1.17.tar.gz) = d023f1e95202e45b50656833d09eee1a8c7bd9d6
+RMD160 (lzip-1.17.tar.gz) = bf3d2c68939cbf7d489e4635009dfddbc5c2092d
+Size (lzip-1.17.tar.gz) = 91299 bytes
