@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3132 2015/07/26 22:54:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3133 2015/07/26 23:01:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5804,3 +5804,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/py-setproctitle to 1.1.9 [wiz 2015-07-26]
 	Updated sysutils/dbus to 1.8.20 [wiz 2015-07-26]
 	Updated net/mosh to 1.2.5 [wiz 2015-07-26]
+	Updated devel/meld to 3.14.0 [wiz 2015-07-26]
