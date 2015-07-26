@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.3 2013/09/12 13:25:47 wiz Exp $
+$NetBSD: patch-al,v 1.4 2015/07/26 22:51:23 wiz Exp $
 
---- tools/Makefile.in.orig	2013-09-05 15:37:16.000000000 +0000
+--- tools/Makefile.in.orig	2015-07-21 16:32:32.000000000 +0000
 +++ tools/Makefile.in
-@@ -412,7 +412,7 @@ AM_CPPFLAGS = \
+@@ -428,7 +428,7 @@ AM_CPPFLAGS = \
  	$(DBUS_STATIC_BUILD_CPPFLAGS) \
  	$(DBUS_X_CFLAGS) \
  	-DDBUS_COMPILATION \
@@ -11,8 +11,8 @@ $NetBSD: patch-al,v 1.3 2013/09/12 13:25:47 wiz Exp $
  	$(NULL)
  
  
-@@ -818,9 +818,9 @@ uninstall-am: uninstall-binPROGRAMS
- 	uninstall-am uninstall-binPROGRAMS
+@@ -847,9 +847,9 @@ uninstall-am: uninstall-binPROGRAMS
+ .PRECIOUS: Makefile
  
  
 -# create the /var/lib/dbus directory for dbus-uuidgen
