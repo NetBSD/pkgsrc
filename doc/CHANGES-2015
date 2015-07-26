@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3136 2015/07/26 23:25:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3137 2015/07/26 23:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5808,3 +5808,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/libvisio to 0.1.3 [wiz 2015-07-26]
 	Updated devel/cmake to 3.3.0 [wiz 2015-07-26]
 	Updated graphics/clutter to 1.22.2 [wiz 2015-07-26]
+	Updated x11/gtkmm3 to 3.16.0 [wiz 2015-07-26]
