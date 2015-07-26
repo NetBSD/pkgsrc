@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3129 2015/07/26 22:47:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3130 2015/07/26 22:48:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5801,3 +5801,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/talloc to 2.1.3 [wiz 2015-07-26]
 	Updated graphics/png to 1.6.18 [wiz 2015-07-26]
 	Updated devel/py-mock to 1.3.0 [wiz 2015-07-26]
+	Updated sysutils/py-setproctitle to 1.1.9 [wiz 2015-07-26]
