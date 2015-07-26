@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/07/19 10:14:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/26 22:47:34 wiz Exp $
 
-DISTNAME=	mock-1.2.0
+DISTNAME=	mock-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/m/mock/
