@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:50:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/26 22:53:54 wiz Exp $
 
-DISTNAME=	mosh-1.2.4
-PKGREVISION=	3
+DISTNAME=	mosh-1.2.5
 CATEGORIES=	net
 MASTER_SITES=	http://mosh.mit.edu/
 
@@ -16,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
-REPLACE_PERL+=	scripts/mosh
+REPLACE_PERL+=	scripts/mosh.pl
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
