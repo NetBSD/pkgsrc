@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/09/19 20:53:02 brook Exp $
+$NetBSD: distinfo,v 1.2 2015/07/26 13:30:21 mef Exp $
 
-SHA1 (R/countrycode_0.17.tar.gz) = 2fb432637a56b10c441dbd411a3deecacae7b6f6
-RMD160 (R/countrycode_0.17.tar.gz) = f3e126304d870b8016e51cf46024dd8726b9c5c5
-Size (R/countrycode_0.17.tar.gz) = 17555 bytes
+SHA1 (R/countrycode_0.18.tar.gz) = a2a00f1dea17cf2104d1c6b49f6fa5d16e807169
+RMD160 (R/countrycode_0.18.tar.gz) = ce148a4a15fbced3710855f1b21c4a7662d1cd97
+Size (R/countrycode_0.18.tar.gz) = 17552 bytes
