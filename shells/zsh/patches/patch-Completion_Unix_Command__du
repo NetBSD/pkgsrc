@@ -1,0 +1,14 @@
+$NetBSD: patch-Completion_Unix_Command__du,v 1.1 2015/07/26 22:04:13 snj Exp $
+
+Unbreak filename completion on non-GNU du binaries like NetBSD's.
+Upstreadm commit 806f73a0b3d3959d5af12ce97e0258b4d4fe7d76
+
+--- Completion/Unix/Command/_du.orig	2015-07-26 14:39:36.000000000 -0700
++++ Completion/Unix/Command/_du	2015-07-26 14:39:17.000000000 -0700
+@@ -74,5 +74,5 @@ else
+   do
+     [[ $OSTYPE = $~pattern ]] && args+=( $arg )
+   done
+-  _arguments -s -A "-*" $args
++  _arguments -s -A "-*" $args '*:file:_files'
+ fi
