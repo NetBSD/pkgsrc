@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3125 2015/07/26 19:06:38 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3126 2015/07/26 19:09:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5797,3 +5797,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libssh2 to 1.6.0 [nros 2015-07-26]
 	Updated www/contao35 to 3.5.2 [taca 2015-07-26]
 	Updated www/p5-URI to 1.69 [wiz 2015-07-26]
+	Updated devel/p5-Moo to 2.000002 [wiz 2015-07-26]
