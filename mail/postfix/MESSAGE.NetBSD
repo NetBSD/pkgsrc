@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.5 2010/03/02 08:07:36 martti Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.6 2015/07/26 15:53:11 bsiegert Exp $
 
 The existing /etc/rc.d/postfix can be forced to start ${PREFIX}/sbin/postfix
 instead of /usr/sbin/postfix, by adding the following lines to
@@ -7,9 +7,6 @@ instead of /usr/sbin/postfix, by adding the following lines to
 
 	postfix_command='${PREFIX}/sbin/postfix'
 	required_files='${PKG_SYSCONFDIR}/main.cf'
-	start_cmd='${PREFIX}/sbin/postfix start'
-	stop_cmd='${PREFIX}/sbin/postfix stop'
-	reload_cmd='${PREFIX}/sbin/postfix reload'
 	postconf='${PREFIX}/sbin/postconf'
 
 Please note that /etc/rc.conf.d/postfix does not exist by default so
