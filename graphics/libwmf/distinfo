@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.19 2011/01/24 13:55:18 wiz Exp $
+$NetBSD: distinfo,v 1.19.36.1 2015/07/26 19:49:47 tron Exp $
 
 SHA1 (libwmf-0.2.8.4.tar.gz) = 822ab3bd0f5e8f39ad732f2774a8e9f18fc91e89
 RMD160 (libwmf-0.2.8.4.tar.gz) = 98cd631adb5bb332d9224d04bc8a265c105435f2
 Size (libwmf-0.2.8.4.tar.gz) = 2169375 bytes
-SHA1 (patch-aa) = ba51d096404b6234f52032f0acc337226d823411
+SHA1 (patch-aa) = e687f9f8c20e7a9b1ed4718c8d37b7407658c52c
 SHA1 (patch-ad) = b74be16c5da490394b86403009f5f35d80ba4bfa
 SHA1 (patch-ae) = f5cbb60757261aaf6084e9fcf16f9074b3013538
+SHA1 (patch-src_extra_gd_gd.c) = 4c00b5625cd054313c8780ed0fc4fb65520258a2
+SHA1 (patch-src_extra_gd_gd_gd.c) = 8678d62d2b1bbb5ee5d71c8e12e5f865ace98fdb
+SHA1 (patch-src_extra_gd_gd_png.c) = 4cde34078cb5c79f526493cac578301eb7cfb849
+SHA1 (patch-src_extra_gd_gdft.c) = 157ec6a4be6a0d7a3651227165d7a0c4e5ec82c6
+SHA1 (patch-src_extra_gd_gdhelpers.c) = 9fe826eaca3560a9dc5bbbaafc074f565fd6d4bd
+SHA1 (patch-src_extra_gd_gdhelpers.h) = f8d06383430f81cbe754966ef27f7c3505a5f916
+SHA1 (patch-src_ipa_ipa.h) = 84dd4084e62a1ab9820282e4587ef312eee1c770
+SHA1 (patch-src_player_meta.h) = 1681ef8272efb01de4e340a3347493dcc37473f2
