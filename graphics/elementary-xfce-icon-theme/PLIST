@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/26 14:59:47 youri Exp $
 share/icons/elementary-xfce-dark/AUTHORS
 share/icons/elementary-xfce-dark/CONTRIBUTORS
 share/icons/elementary-xfce-dark/LICENSE
@@ -3935,6 +3935,7 @@ share/icons/elementary-xfce/apps/128/preferences-desktop-sound.svg
 share/icons/elementary-xfce/apps/128/preferences-desktop-wallpaper.svg
 share/icons/elementary-xfce/apps/128/preferences-desktop.svg
 share/icons/elementary-xfce/apps/128/preferences-sound.svg
+share/icons/elementary-xfce/apps/128/preferences-system-power.svg
 share/icons/elementary-xfce/apps/128/preferences-system-session.svg
 share/icons/elementary-xfce/apps/128/preferences-system-windows.svg
 share/icons/elementary-xfce/apps/128/preferences-wallpaper.svg
@@ -3995,6 +3996,7 @@ share/icons/elementary-xfce/apps/128/xfce-terminal.svg
 share/icons/elementary-xfce/apps/128/xfce-unknown.svg
 share/icons/elementary-xfce/apps/128/xfce4-backdrop.svg
 share/icons/elementary-xfce/apps/128/xfce4-notes-plugin.svg
+share/icons/elementary-xfce/apps/128/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/128/xfce4-session.svg
 share/icons/elementary-xfce/apps/128/xfce_unknown.svg
 share/icons/elementary-xfce/apps/128/xfwm4.svg
@@ -4279,6 +4281,7 @@ share/icons/elementary-xfce/apps/16/preferences-desktop-wallpaper.svg
 share/icons/elementary-xfce/apps/16/preferences-desktop.svg
 share/icons/elementary-xfce/apps/16/preferences-sound.svg
 share/icons/elementary-xfce/apps/16/preferences-system-network.svg
+share/icons/elementary-xfce/apps/16/preferences-system-power.svg
 share/icons/elementary-xfce/apps/16/preferences-system-session.svg
 share/icons/elementary-xfce/apps/16/preferences-system-time.svg
 share/icons/elementary-xfce/apps/16/preferences-system-windows.svg
@@ -4381,6 +4384,7 @@ share/icons/elementary-xfce/apps/16/xfce4-menueditor.svg
 share/icons/elementary-xfce/apps/16/xfce4-notes-plugin.svg
 share/icons/elementary-xfce/apps/16/xfce4-notifyd.svg
 share/icons/elementary-xfce/apps/16/xfce4-panel.svg
+share/icons/elementary-xfce/apps/16/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/16/xfce4-session.svg
 share/icons/elementary-xfce/apps/16/xfce4-workspaces.svg
 share/icons/elementary-xfce/apps/16/xfce_unknown.svg
@@ -4596,6 +4600,8 @@ share/icons/elementary-xfce/apps/22/preferences-desktop-peripherals.svg
 share/icons/elementary-xfce/apps/22/preferences-desktop-remote-desktop.svg
 share/icons/elementary-xfce/apps/22/preferences-desktop-sound.svg
 share/icons/elementary-xfce/apps/22/preferences-sound.svg
+share/icons/elementary-xfce/apps/22/preferences-system-network.svg
+share/icons/elementary-xfce/apps/22/preferences-system-power.svg
 share/icons/elementary-xfce/apps/22/preferences-system-session.svg
 share/icons/elementary-xfce/apps/22/preferences-system-time.svg
 share/icons/elementary-xfce/apps/22/preferences-system-windows.svg
@@ -4663,6 +4669,7 @@ share/icons/elementary-xfce/apps/22/xfce-system-info.svg
 share/icons/elementary-xfce/apps/22/xfce-terminal.svg
 share/icons/elementary-xfce/apps/22/xfce-unknown.svg
 share/icons/elementary-xfce/apps/22/xfce4-clock.svg
+share/icons/elementary-xfce/apps/22/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/22/xfce4-session.svg
 share/icons/elementary-xfce/apps/22/xfce_unknown.svg
 share/icons/elementary-xfce/apps/22/xfsm-hibernate.svg
@@ -4911,6 +4918,7 @@ share/icons/elementary-xfce/apps/24/locale.svg
 share/icons/elementary-xfce/apps/24/logviewer.svg
 share/icons/elementary-xfce/apps/24/lpi-translate.svg
 share/icons/elementary-xfce/apps/24/lv_icon.svg
+share/icons/elementary-xfce/apps/24/mate-disk-usage-analyzer.svg
 share/icons/elementary-xfce/apps/24/media-player-48.svg
 share/icons/elementary-xfce/apps/24/menu-editor.svg
 share/icons/elementary-xfce/apps/24/menulibre.svg
@@ -4973,6 +4981,8 @@ share/icons/elementary-xfce/apps/24/preferences-desktop-theme.svg
 share/icons/elementary-xfce/apps/24/preferences-desktop-wallpaper.svg
 share/icons/elementary-xfce/apps/24/preferences-desktop.svg
 share/icons/elementary-xfce/apps/24/preferences-sound.svg
+share/icons/elementary-xfce/apps/24/preferences-system-network.svg
+share/icons/elementary-xfce/apps/24/preferences-system-power.svg
 share/icons/elementary-xfce/apps/24/preferences-system-session.svg
 share/icons/elementary-xfce/apps/24/preferences-system-time.svg
 share/icons/elementary-xfce/apps/24/preferences-system-windows.svg
@@ -5085,6 +5095,7 @@ share/icons/elementary-xfce/apps/24/xfce4-backdrop.svg
 share/icons/elementary-xfce/apps/24/xfce4-clock.svg
 share/icons/elementary-xfce/apps/24/xfce4-menueditor.svg
 share/icons/elementary-xfce/apps/24/xfce4-notes-plugin.svg
+share/icons/elementary-xfce/apps/24/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/24/xfce4-session.svg
 share/icons/elementary-xfce/apps/24/xfce4-splash.svg
 share/icons/elementary-xfce/apps/24/xfce4-ui.svg
@@ -5344,6 +5355,7 @@ share/icons/elementary-xfce/apps/32/preferences-desktop-wallpaper.svg
 share/icons/elementary-xfce/apps/32/preferences-desktop.svg
 share/icons/elementary-xfce/apps/32/preferences-sound.svg
 share/icons/elementary-xfce/apps/32/preferences-system-network.svg
+share/icons/elementary-xfce/apps/32/preferences-system-power.svg
 share/icons/elementary-xfce/apps/32/preferences-system-services.svg
 share/icons/elementary-xfce/apps/32/preferences-system-session.svg
 share/icons/elementary-xfce/apps/32/preferences-system-time.svg
@@ -5429,6 +5441,7 @@ share/icons/elementary-xfce/apps/32/xfce4-clock.svg
 share/icons/elementary-xfce/apps/32/xfce4-dict.svg
 share/icons/elementary-xfce/apps/32/xfce4-menueditor.svg
 share/icons/elementary-xfce/apps/32/xfce4-notes-plugin.svg
+share/icons/elementary-xfce/apps/32/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/32/xfce4-session.svg
 share/icons/elementary-xfce/apps/32/xfce4-splash.svg
 share/icons/elementary-xfce/apps/32/xfce4-systray.svg
@@ -5685,6 +5698,7 @@ share/icons/elementary-xfce/apps/48/locale.svg
 share/icons/elementary-xfce/apps/48/logviewer.svg
 share/icons/elementary-xfce/apps/48/lpi-translate.svg
 share/icons/elementary-xfce/apps/48/master-pdf-editor.svg
+share/icons/elementary-xfce/apps/48/mate-disk-usage-analyzer.svg
 share/icons/elementary-xfce/apps/48/media-player-48.svg
 share/icons/elementary-xfce/apps/48/media-player-banshee.svg
 share/icons/elementary-xfce/apps/48/menu-editor.svg
@@ -5871,6 +5885,7 @@ share/icons/elementary-xfce/apps/48/xfce4-notes-plugin.svg
 share/icons/elementary-xfce/apps/48/xfce4-notifyd.svg
 share/icons/elementary-xfce/apps/48/xfce4-panel-menu.svg
 share/icons/elementary-xfce/apps/48/xfce4-panel.svg
+share/icons/elementary-xfce/apps/48/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/48/xfce4-session.svg
 share/icons/elementary-xfce/apps/48/xfce4-splash.svg
 share/icons/elementary-xfce/apps/48/xfce4-systray.svg
@@ -6078,6 +6093,7 @@ share/icons/elementary-xfce/apps/64/libreoffice-math.svg
 share/icons/elementary-xfce/apps/64/libreoffice-startcenter.svg
 share/icons/elementary-xfce/apps/64/libreoffice-writer.svg
 share/icons/elementary-xfce/apps/64/master-pdf-editor.svg
+share/icons/elementary-xfce/apps/64/mate-disk-usage-analyzer.svg
 share/icons/elementary-xfce/apps/64/menu-editor.svg
 share/icons/elementary-xfce/apps/64/menulibre.svg
 share/icons/elementary-xfce/apps/64/midori.svg
@@ -6223,6 +6239,7 @@ share/icons/elementary-xfce/apps/64/xfce4-dict.svg
 share/icons/elementary-xfce/apps/64/xfce4-menueditor.svg
 share/icons/elementary-xfce/apps/64/xfce4-notes-plugin.svg
 share/icons/elementary-xfce/apps/64/xfce4-panel.svg
+share/icons/elementary-xfce/apps/64/xfce4-power-manager-settings.svg
 share/icons/elementary-xfce/apps/64/xfce4-schedule.svg
 share/icons/elementary-xfce/apps/64/xfce4-session.svg
 share/icons/elementary-xfce/apps/64/xfce4-systray.svg
@@ -6877,6 +6894,7 @@ share/icons/elementary-xfce/devices/128/multimedia-player-apple-ipod-touch.svg
 share/icons/elementary-xfce/devices/128/multimedia-player-ipod-touch.svg
 share/icons/elementary-xfce/devices/128/phone-motorola-droid.svg
 share/icons/elementary-xfce/devices/128/phone.svg
+share/icons/elementary-xfce/devices/128/scanner.svg
 share/icons/elementary-xfce/devices/128/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/128/stock_music-library.svg
 share/icons/elementary-xfce/devices/128/system.svg
@@ -7006,7 +7024,7 @@ share/icons/elementary-xfce/devices/16/printer-remote.svg
 share/icons/elementary-xfce/devices/16/printer.svg
 share/icons/elementary-xfce/devices/16/printer1.svg
 share/icons/elementary-xfce/devices/16/printmgr.svg
-share/icons/elementary-xfce/devices/16/scanner.png
+share/icons/elementary-xfce/devices/16/scanner.svg
 share/icons/elementary-xfce/devices/16/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/16/stock_mic.svg
 share/icons/elementary-xfce/devices/16/stock_music-library.svg
@@ -7103,7 +7121,7 @@ share/icons/elementary-xfce/devices/22/multimedia-player-apple-ipod-touch.svg
 share/icons/elementary-xfce/devices/22/multimedia-player-ipod-touch.svg
 share/icons/elementary-xfce/devices/22/phone-motorola-droid.svg
 share/icons/elementary-xfce/devices/22/phone.svg
-share/icons/elementary-xfce/devices/22/scanner.png
+share/icons/elementary-xfce/devices/22/scanner.svg
 share/icons/elementary-xfce/devices/22/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/22/stock_mic.svg
 share/icons/elementary-xfce/devices/22/stock_music-library.svg
@@ -7249,7 +7267,7 @@ share/icons/elementary-xfce/devices/24/printer.svg
 share/icons/elementary-xfce/devices/24/printer1.svg
 share/icons/elementary-xfce/devices/24/printmgr.svg
 share/icons/elementary-xfce/devices/24/samba.svg
-share/icons/elementary-xfce/devices/24/scanner.png
+share/icons/elementary-xfce/devices/24/scanner.svg
 share/icons/elementary-xfce/devices/24/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/24/stock_mic.svg
 share/icons/elementary-xfce/devices/24/stock_music-library.svg
@@ -7354,7 +7372,7 @@ share/icons/elementary-xfce/devices/32/multimedia-player.svg
 share/icons/elementary-xfce/devices/32/music-player.svg
 share/icons/elementary-xfce/devices/32/phone-motorola-droid.svg
 share/icons/elementary-xfce/devices/32/phone.svg
-share/icons/elementary-xfce/devices/32/scanner.png
+share/icons/elementary-xfce/devices/32/scanner.svg
 share/icons/elementary-xfce/devices/32/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/32/stock_music-library.svg
 share/icons/elementary-xfce/devices/32/system-floppy.svg
@@ -7380,7 +7398,7 @@ share/icons/elementary-xfce/devices/48/blueman-keyboard.svg
 share/icons/elementary-xfce/devices/48/blueman-loudspeaker.svg
 share/icons/elementary-xfce/devices/48/blueman-mouse.svg
 share/icons/elementary-xfce/devices/48/blueman-pointing.svg
-share/icons/elementary-xfce/devices/48/blueman-scanner.png
+share/icons/elementary-xfce/devices/48/blueman-scanner.svg
 share/icons/elementary-xfce/devices/48/blueman-smart-phone.svg
 share/icons/elementary-xfce/devices/48/camera-photo.svg
 share/icons/elementary-xfce/devices/48/camera.svg
@@ -7523,7 +7541,7 @@ share/icons/elementary-xfce/devices/48/printer1.svg
 share/icons/elementary-xfce/devices/48/printmgr.svg
 share/icons/elementary-xfce/devices/48/processor.svg
 share/icons/elementary-xfce/devices/48/samba.svg
-share/icons/elementary-xfce/devices/48/scanner.png
+share/icons/elementary-xfce/devices/48/scanner.svg
 share/icons/elementary-xfce/devices/48/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/48/stock_mic.svg
 share/icons/elementary-xfce/devices/48/stock_music-library.svg
@@ -7639,6 +7657,7 @@ share/icons/elementary-xfce/devices/64/printer1.svg
 share/icons/elementary-xfce/devices/64/printmgr.svg
 share/icons/elementary-xfce/devices/64/processor.svg
 share/icons/elementary-xfce/devices/64/samba.svg
+share/icons/elementary-xfce/devices/64/scanner.svg
 share/icons/elementary-xfce/devices/64/stock_cell-phone.svg
 share/icons/elementary-xfce/devices/64/stock_music-library.svg
 share/icons/elementary-xfce/devices/64/stock_printers.svg
@@ -10836,7 +10855,6 @@ share/icons/elementary-xfce/mimes/96/text-x-generic-template.svg
 share/icons/elementary-xfce/mimes/96/text-x-generic.svg
 share/icons/elementary-xfce/mimes/96/text-x-gtkrc.svg
 share/icons/elementary-xfce/mimes/96/text-x-install.svg
-share/icons/elementary-xfce/mimes/96/text-x-java-source.png
 share/icons/elementary-xfce/mimes/96/text-x-java-source.svg
 share/icons/elementary-xfce/mimes/96/text-x-java.svg
 share/icons/elementary-xfce/mimes/96/text-x-javascript.svg
@@ -11630,6 +11648,7 @@ share/icons/elementary-xfce/panel/48/gpm-ups-100-charging.svg
 share/icons/elementary-xfce/panel/48/gpm-ups-100.svg
 share/icons/elementary-xfce/panel/48/gpm-ups-missing.svg
 share/icons/elementary-xfce/panel/48/nm-device-wired.svg
+share/icons/elementary-xfce/panel/48/nm-device-wireless.svg
 share/icons/elementary-xfce/panel/48/nm-no-connection.svg
 share/icons/elementary-xfce/panel/48/nm-signal-0.svg
 share/icons/elementary-xfce/panel/48/nm-signal-00.svg
@@ -11674,8 +11693,6 @@ share/icons/elementary-xfce/panel/48/xfpm-ups-missing.svg
 share/icons/elementary-xfce/places/128/bookmark-missing.svg
 share/icons/elementary-xfce/places/128/desktop.svg
 share/icons/elementary-xfce/places/128/distributor-logo.svg
-share/icons/elementary-xfce/places/128/edittrash.svg
-share/icons/elementary-xfce/places/128/emptytrash.svg
 share/icons/elementary-xfce/places/128/folder-documents.svg
 share/icons/elementary-xfce/places/128/folder-download.svg
 share/icons/elementary-xfce/places/128/folder-downloads.svg
@@ -11719,14 +11736,9 @@ share/icons/elementary-xfce/places/128/gnome-fs-nfs.svg
 share/icons/elementary-xfce/places/128/gnome-fs-share.svg
 share/icons/elementary-xfce/places/128/gnome-fs-smb.svg
 share/icons/elementary-xfce/places/128/gnome-fs-ssh.svg
-share/icons/elementary-xfce/places/128/gnome-fs-trash-empty-accept.svg
-share/icons/elementary-xfce/places/128/gnome-fs-trash-empty.svg
-share/icons/elementary-xfce/places/128/gnome-fs-trash-full.svg
 share/icons/elementary-xfce/places/128/gnome-home.svg
 share/icons/elementary-xfce/places/128/gnome-mime-x-directory-smb-share.svg
 share/icons/elementary-xfce/places/128/gnome-mime-x-directory-smb-workgroup.svg
-share/icons/elementary-xfce/places/128/gnome-stock-trash-full.svg
-share/icons/elementary-xfce/places/128/gnome-stock-trash.svg
 share/icons/elementary-xfce/places/128/gtk-directory.svg
 share/icons/elementary-xfce/places/128/gtk-network.svg
 share/icons/elementary-xfce/places/128/inode-directory.svg
@@ -11743,19 +11755,12 @@ share/icons/elementary-xfce/places/128/stock_folder.svg
 share/icons/elementary-xfce/places/128/stock_open.svg
 share/icons/elementary-xfce/places/128/stock_shared-by-me.svg
 share/icons/elementary-xfce/places/128/stock_shared-to-me.svg
-share/icons/elementary-xfce/places/128/stock_trash_full.svg
-share/icons/elementary-xfce/places/128/trashcan_empty.svg
-share/icons/elementary-xfce/places/128/trashcan_full.svg
 share/icons/elementary-xfce/places/128/user-bookmarks.svg
 share/icons/elementary-xfce/places/128/user-desktop.svg
 share/icons/elementary-xfce/places/128/user-home.svg
 share/icons/elementary-xfce/places/128/user-images.svg
 share/icons/elementary-xfce/places/128/user-pictures.svg
 share/icons/elementary-xfce/places/128/user-share.svg
-share/icons/elementary-xfce/places/128/user-trash-full.svg
-share/icons/elementary-xfce/places/128/user-trash.svg
-share/icons/elementary-xfce/places/128/xfce-trash_empty.svg
-share/icons/elementary-xfce/places/128/xfce-trash_full.svg
 share/icons/elementary-xfce/places/16/application-x-gnome-saved-search.svg
 share/icons/elementary-xfce/places/16/bookmark-missing.svg
 share/icons/elementary-xfce/places/16/desktop.svg
@@ -11779,6 +11784,7 @@ share/icons/elementary-xfce/places/16/folder-remote-smb.svg
 share/icons/elementary-xfce/places/16/folder-remote-ssh.svg
 share/icons/elementary-xfce/places/16/folder-remote.svg
 share/icons/elementary-xfce/places/16/folder-saved-search.svg
+share/icons/elementary-xfce/places/16/folder-tag.svg
 share/icons/elementary-xfce/places/16/folder-templates.svg
 share/icons/elementary-xfce/places/16/folder-video.svg
 share/icons/elementary-xfce/places/16/folder-videos.svg
@@ -11817,7 +11823,9 @@ share/icons/elementary-xfce/places/16/gtk-directory.svg
 share/icons/elementary-xfce/places/16/gtk-network.svg
 share/icons/elementary-xfce/places/16/inode-directory.svg
 share/icons/elementary-xfce/places/16/internet-radio.svg
+share/icons/elementary-xfce/places/16/library-audiobook.svg
 share/icons/elementary-xfce/places/16/library-music.svg
+share/icons/elementary-xfce/places/16/library-places.svg
 share/icons/elementary-xfce/places/16/library-podcast.svg
 share/icons/elementary-xfce/places/16/mail-inbox.svg
 share/icons/elementary-xfce/places/16/mail-mailbox.svg
@@ -11829,6 +11837,10 @@ share/icons/elementary-xfce/places/16/network.svg
 share/icons/elementary-xfce/places/16/network_fs.svg
 share/icons/elementary-xfce/places/16/network_local.svg
 share/icons/elementary-xfce/places/16/other-desktop.svg
+share/icons/elementary-xfce/places/16/playlist-automatic.svg
+share/icons/elementary-xfce/places/16/playlist-queue.svg
+share/icons/elementary-xfce/places/16/playlist-similar.svg
+share/icons/elementary-xfce/places/16/playlist.svg
 share/icons/elementary-xfce/places/16/redhat-system-group.svg
 share/icons/elementary-xfce/places/16/stock_folder.svg
 share/icons/elementary-xfce/places/16/stock_open.svg
@@ -11836,6 +11848,7 @@ share/icons/elementary-xfce/places/16/stock_sent-mail.svg
 share/icons/elementary-xfce/places/16/stock_shared-by-me.svg
 share/icons/elementary-xfce/places/16/stock_shared-to-me.svg
 share/icons/elementary-xfce/places/16/stock_trash_full.svg
+share/icons/elementary-xfce/places/16/tag.svg
 share/icons/elementary-xfce/places/16/trashcan_empty.svg
 share/icons/elementary-xfce/places/16/trashcan_full.svg
 share/icons/elementary-xfce/places/16/user-bookmarks.svg
@@ -12517,6 +12530,7 @@ share/icons/elementary-xfce/status/22/xfce-unknown.svg
 share/icons/elementary-xfce/status/24/aptdaemon-add.svg
 share/icons/elementary-xfce/status/24/aptdaemon-download.svg
 share/icons/elementary-xfce/status/24/aptdaemon-working.svg
+share/icons/elementary-xfce/status/24/avatar-default.svg
 share/icons/elementary-xfce/status/24/battery_charged.svg
 share/icons/elementary-xfce/status/24/battery_empty.svg
 share/icons/elementary-xfce/status/24/battery_full.svg
@@ -12580,6 +12594,7 @@ share/icons/elementary-xfce/status/24/xfce-unknown.svg
 share/icons/elementary-xfce/status/32/aptdaemon-add.svg
 share/icons/elementary-xfce/status/32/aptdaemon-download.svg
 share/icons/elementary-xfce/status/32/aptdaemon-working.svg
+share/icons/elementary-xfce/status/32/avatar-default.svg
 share/icons/elementary-xfce/status/32/battery-000.svg
 share/icons/elementary-xfce/status/32/battery-020.svg
 share/icons/elementary-xfce/status/32/battery-040.svg
