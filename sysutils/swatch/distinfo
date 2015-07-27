@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/02 19:53:17 rillig Exp $
+$NetBSD: distinfo,v 1.2 2015/07/27 22:19:17 wiz Exp $
 
-SHA1 (swatch-3.2.1.tar.gz) = e3117104947a7f3ee26e26ea691f7942cbb8ec67
-RMD160 (swatch-3.2.1.tar.gz) = 7bbe75f6c6c6f08b60c6e77cdddfb96881d5ae4b
-Size (swatch-3.2.1.tar.gz) = 31039 bytes
+SHA1 (swatch-3.2.3.tar.gz) = d67f434103b42b11aee62151d7a9e533459ec624
+RMD160 (swatch-3.2.3.tar.gz) = 09692c0c889ff9c5a1af50a5e5272a177130bc31
+Size (swatch-3.2.3.tar.gz) = 31199 bytes
