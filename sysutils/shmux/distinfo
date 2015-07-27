@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/04/12 21:38:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/07/27 16:34:06 wiz Exp $
 
-SHA1 (shmux-1.0.tgz) = 3a5fef29ea7f2631668af348d651079fd65a1321
-RMD160 (shmux-1.0.tgz) = 5b45f744fb85ccd99534f0b13d12a9bc49cea9e1
-Size (shmux-1.0.tgz) = 81096 bytes
+SHA1 (shmux-1.0.2.tgz) = 6fe39602c497331e448c4331b8cddbb2abb71b79
+RMD160 (shmux-1.0.2.tgz) = 31937f39483e8ab54848f84830489bf45dff5783
+Size (shmux-1.0.2.tgz) = 110473 bytes

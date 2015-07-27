@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 19:51:23 asau Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/27 16:34:06 wiz Exp $
 
-DISTNAME=	shmux-1.0
-PKGREVISION=	2
+DISTNAME=	shmux-1.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.taranis.org/shmux/dist/
 EXTRACT_SUFX=	.tgz
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.taranis.org/shmux/
 COMMENT=	Shell Multiplexor
+LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	shmux
