@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3137 2015/07/26 23:53:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3138 2015/07/27 08:23:05 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5809,3 +5809,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cmake to 3.3.0 [wiz 2015-07-26]
 	Updated graphics/clutter to 1.22.2 [wiz 2015-07-26]
 	Updated x11/gtkmm3 to 3.16.0 [wiz 2015-07-26]
+	Updated security/p5-Net-DNS-SEC to 0.22nb1 [he 2015-07-27]
