@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3149 2015/07/27 22:31:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3150 2015/07/27 22:34:44 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5821,3 +5821,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/xzip to 1.8.2 [wiz 2015-07-27]
 	Updated games/zoom to 1.1.5 [wiz 2015-07-27]
 	Updated chat/scrollz to 2.2.3 [wiz 2015-07-27]
+	Updated x11/xfce4-desktop to 4.12.3 [youri 2015-07-27]
