@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2013/11/05 18:57:32 adam Exp $
+$NetBSD: patch-aa,v 1.14 2015/07/27 16:40:06 wiz Exp $
 
---- src/Makefile.orig	2013-10-27 22:46:05.000000000 +0000
+--- src/Makefile.orig	2015-06-29 22:38:56.000000000 +0000
 +++ src/Makefile
 @@ -1,5 +1,3 @@
 -DESTDIR =
@@ -8,17 +8,19 @@ $NetBSD: patch-aa,v 1.13 2013/11/05 18:57:32 adam Exp $
  BINDIR = $(PREFIX)/bin
  SHAREDIR = $(PREFIX)/share/imapfilter
  MANDIR = $(PREFIX)/man
-@@ -16,8 +14,8 @@ LIBPCRE = -lpcre
+@@ -16,9 +14,9 @@ LIBPCRE = -lpcre
  LIBSSL = -lssl
  LIBCRYPTO = -lcrypto
  
 -CFLAGS = -Wall -Wextra -O -DCONFIG_SHAREDIR='"$(SHAREDIR)"' $(INCDIRS) $(MYCFLAGS)
 -LDFLAGS = $(LIBDIRS) $(MYLDFLAGS)
+-LIBS = -lm -ldl $(LIBLUA) $(LIBPCRE) $(LIBSSL) $(LIBCRYPTO) $(MYLIBS)
 +CFLAGS += -Wall -Wextra -DCONFIG_SHAREDIR='"$(SHAREDIR)"' $(INCDIRS) $(MYCFLAGS)
 +LDFLAGS += $(LIBDIRS) $(MYLDFLAGS)
- LIBS = -lm $(LIBLUA) $(LIBPCRE) $(LIBSSL) $(LIBCRYPTO) $(MYLIBS)
++LIBS = -lm $(LIBLUA) $(LIBPCRE) $(LIBSSL) $(LIBCRYPTO) $(MYLIBS)
  
  MAN1 = imapfilter.1
+ MAN5 = imapfilter_config.5
 @@ -34,7 +32,7 @@ OBJ = auth.o buffer.o cert.o core.o file
  all: $(BIN)
  
