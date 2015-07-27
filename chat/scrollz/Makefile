@@ -1,35 +1,29 @@
-# $NetBSD: Makefile,v 1.18 2014/02/12 23:17:37 tron Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/27 22:31:30 wiz Exp $
 #
 
-DISTNAME=	ScrollZ-1.9.5
-PKGNAME=	scrollz-1.9.5
-PKGREVISION=	1
+DISTNAME=	ScrollZ-2.2.3
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.scrollz.com/pub/ScrollZ/source/
+MASTER_SITES=	http://www.scrollz.info/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scrollz.com/
+HOMEPAGE=	http://www.scrollz.info/
 COMMENT=	Advanced IRC client based on ircII client
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd # XXX ?
 
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+SUBST_CLASSES+=		mandir
+SUBST_FILES.mandir=	Makefile.in
+SUBST_MESSAGE.mandir=	Fixing PKGMANDIR path.
+SUBST_SED.mandir=	-e 's|@prefix@/share/man/man1|@mandir@/man1|1'
+SUBST_STAGE.mandir=	pre-configure
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.scrollz
-PKG_SUPPORTED_OPTIONS=	inet6 ssl
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+.include "options.mk"
 
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-.if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--with-ssl
-.include "../../security/openssl/buildlink3.mk"
-.endif
+post-install:
+		${CHMOD} -x ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scrollz.1
 
 .include "../../mk/bsd.pkg.mk"
