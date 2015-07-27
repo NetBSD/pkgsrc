@@ -1,4 +1,6 @@
-$NetBSD: patch-libev_ev.h,v 1.2 2013/09/02 12:23:43 obache Exp $
+$NetBSD: patch-libev_ev.h,v 1.3 2015/07/27 14:30:34 mef Exp $
+
+Don't define a variable as both static and extern.
 
 --- libev/ev.h.orig	2013-03-01 11:05:29.000000000 +0000
 +++ libev/ev.h
