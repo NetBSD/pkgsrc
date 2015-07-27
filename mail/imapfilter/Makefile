@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2014/10/19 22:27:46 alnsn Exp $
+# $NetBSD: Makefile,v 1.44 2015/07/27 16:40:06 wiz Exp $
 
-DISTNAME=	imapfilter-2.5.6
-PKGREVISION=	3
+DISTNAME=	imapfilter-2.6.2
 CATEGORIES=	mail
-MASTER_SITES=	-https://codeload.github.com/lefcha/imapfilter/tar.gz/v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lefcha/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://imapfilter.hellug.gr/
