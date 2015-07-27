@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3140 2015/07/27 14:30:44 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3141 2015/07/27 14:35:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5812,3 +5812,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Net-DNS-SEC to 0.22nb1 [he 2015-07-27]
 	Removed devel/hg-git successor py-hg-git [wiz 2015-07-27]
 	Updated devel/p5-EV to 4.21 [mef 2015-07-27]
+	Updated devel/p5-AnyEvent to 7.11 [mef 2015-07-27]
