@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.43 2015/07/26 22:13:17 khorben Exp $
+# $NetBSD: NetBSD.mk,v 1.44 2015/07/27 23:37:38 khorben Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -128,11 +128,11 @@ FFLAGS+=	-mieee
 PKG_HAVE_KQUEUE=	# defined
 .endif
 
-.if (${MACHINE_ARCH} != "alpha") && \
+.if ${PKGSRC_USE_SSP:Uno} != "no"
+. if (${MACHINE_ARCH} != "alpha") && \
 	(${MACHINE_ARCH} != "hppa") && \
 	(${MACHINE_ARCH} != "ia64") && \
 	(${MACHINE_ARCH} != "mips")
-. if ${PKGSRC_USE_SSP:Uno} != "no"
 # build with stack protection (with GCC)
 _GCC_CFLAGS+=	-fstack-protector
 . endif
