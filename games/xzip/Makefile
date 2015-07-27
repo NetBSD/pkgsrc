@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/07/04 16:18:35 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/27 22:22:18 wiz Exp $
 
-DISTNAME=		xzip180
-PKGNAME=		xzip-1.8
-PKGREVISION=		1
+DISTNAME=		xzip182
+PKGNAME=		xzip-1.8.2
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.eblong.com/zarf/ftp/
 EXTRACT_SUFX=		.tar.Z
