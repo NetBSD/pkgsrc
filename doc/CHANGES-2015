@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3143 2015/07/27 16:33:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3144 2015/07/27 16:34:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5815,3 +5815,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-AnyEvent to 7.11 [mef 2015-07-27]
 	Updated misc/calibre to 2.33.0 [wiz 2015-07-27]
 	Updated sysutils/shc to 3.8.9 [wiz 2015-07-27]
+	Updated sysutils/shmux to 1.0.2 [wiz 2015-07-27]
