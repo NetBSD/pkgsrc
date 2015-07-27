@@ -1,4 +1,6 @@
-$NetBSD: patch-src_tokenise.c,v 1.1 2012/06/15 18:51:32 joerg Exp $
+$NetBSD: patch-src_tokenise.c,v 1.2 2015/07/27 22:24:51 wiz Exp $
+
+Fix C99 inline usage.
 
 --- src/tokenise.c.orig	2012-06-15 14:24:46.000000000 +0000
 +++ src/tokenise.c
