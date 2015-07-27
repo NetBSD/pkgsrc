@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/07/22 19:05:10 asau Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/27 19:47:55 asau Exp $
 
 PKGNAME=	gabedit-2.4.8
 DISTNAME=	GabeditSrc248
@@ -12,6 +12,10 @@ COMMENT=	A Graphical User Interface to computational chemistry packages
 USE_TOOLS=	gmake pkg-config
 
 INSTALLATION_DIRS=	bin
+
+# Skip check for example scripts:
+CHECK_PORTABILITY_SKIP=	utils/Dalton/SGE/submitDalton \
+			utils/Gamess/SGE/submitGamess
 
 do-configure:
 	cd $(WRKSRC) && cp platforms/CONFIG.unix CONFIG
