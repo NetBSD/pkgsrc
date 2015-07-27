@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3146 2015/07/27 22:19:26 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3147 2015/07/27 22:22:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5818,3 +5818,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/shmux to 1.0.2 [wiz 2015-07-27]
 	Updated mail/imapfilter to 2.6.2 [wiz 2015-07-27]
 	Updated sysutils/swatch to 3.2.3 [wiz 2015-07-27]
+	Updated games/xzip to 1.8.2 [wiz 2015-07-27]
