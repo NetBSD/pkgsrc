@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2015/02/26 17:52:12 tnn Exp $
+$NetBSD: distinfo,v 1.29 2015/07/28 16:43:25 rumko Exp $
 
 SHA1 (opencv-2.4.9.zip) = 4f5166e2bd22bd6167cb56dd04f2c6ed68148b2c
 RMD160 (opencv-2.4.9.zip) = 1b0b80ecb50270fa7e4b1dea6f075982b5d15d81
@@ -11,4 +11,5 @@ SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
 SHA1 (patch-modules_legacy_src_calibfilter.cpp) = a388e646cd0b09af1b9ad4844f1097855808f316
 SHA1 (patch-modules_ocl_src_gftt.cpp) = fe1107c1613881d050ec5a87fad12b916ac8b8fc
+SHA1 (patch-modules_python_src2_cv2.cv.hpp) = 477bc2dd2090fd2aa955a7335717e7a0f23ebdf8
 SHA1 (patch-modules_ts_src_ts.cpp) = 61e4ab59f2ca57f75212743bf869616dfc9e5f13
