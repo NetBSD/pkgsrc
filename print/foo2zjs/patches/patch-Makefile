@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.3 2014/09/24 13:44:21 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.4 2015/07/28 16:42:03 rumko Exp $
 
 Fix PREFIX path
 Remove extra dc check. The DragonFly version has dc that supports the -e
@@ -7,7 +7,7 @@ actually test for -e support.  Just remove it completely.
 
 --- Makefile.orig	2012-06-01 23:10:31.000000000 +0000
 +++ Makefile
-@@ -17,9 +17,7 @@ SYSNAME := $(shell uname -n)
+@@ -17,9 +17,8 @@ SYSNAME := $(shell uname -n)
  VERSION=0.0
  
  # Installation prefix...
@@ -15,10 +15,11 @@ actually test for -e support.  Just remove it completely.
 -PREFIX=/usr
 -PREFIX=$(DESTDIR)/usr
 +PREFIX=@PREFIX@
++RUNPREFIX=@RUNPREFIX@
  
  # Pathnames for this package...
  BIN=$(PREFIX)/bin
-@@ -31,7 +29,7 @@ SHARELAVA=$(PREFIX)/share/foo2lava
+@@ -31,7 +30,7 @@ SHARELAVA=$(PREFIX)/share/foo2lava
  SHAREQPDL=$(PREFIX)/share/foo2qpdl
  SHARESLX=$(PREFIX)/share/foo2slx
  SHAREHC=$(PREFIX)/share/foo2hiperc
@@ -27,7 +28,7 @@ actually test for -e support.  Just remove it completely.
  DOCDIR=$(PREFIX)/share/doc/foo2zjs/
  INSTALL=install
  ROOT=root
-@@ -58,7 +56,7 @@ endif
+@@ -58,7 +57,7 @@ endif
  ifeq ($(UNAME),SunOS)
      LPuid=-oroot
      LPgid=-glp
@@ -36,7 +37,7 @@ actually test for -e support.  Just remove it completely.
  endif
  # If we aren't root, don't try to set ownership
  ifneq ($(EUID),0)
-@@ -409,12 +407,6 @@ all-test:
+@@ -409,12 +408,6 @@ all-test:
  	    echo "      ***"; \
  	    exit 1; \
  	fi
@@ -49,3 +50,68 @@ actually test for -e support.  Just remove it completely.
  ifeq ($(UNAME),Darwin)
  	@if ! type gsed >/dev/null 2>&1; then \
  	    echo "      ***"; \
+@@ -469,55 +462,55 @@ foo2hiperc: foo2hiperc.o $(LIBJBG)
+ foo2zjs-wrapper: foo2zjs-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2hp2600-wrapper: foo2hp2600-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2xqx-wrapper: foo2xqx-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2lava-wrapper: foo2lava-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2qpdl-wrapper: foo2qpdl-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2oak-wrapper: foo2oak-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2slx-wrapper: foo2slx-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2hiperc-wrapper: foo2hiperc-wrapper.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ foo2zjs-wrapper9: foo2zjs-wrapper9.in Makefile
+ 	[ ! -f $@ ] || chmod +w $@
+ 	sed < $@.in > $@ \
+-	    -e 's@^PREFIX=.*@PREFIX=$(PREFIX)@' || (rm -f $@ && exit 1)
++	    -e 's@^PREFIX=.*@PREFIX=$(RUNPREFIX)@' || (rm -f $@ && exit 1)
+ 	chmod 555 $@
+ 
+ 

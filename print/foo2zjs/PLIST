@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/25 17:15:45 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/28 16:42:03 rumko Exp $
 bin/arm2hpdl
 bin/foo2hiperc
 bin/foo2hiperc-wrapper
@@ -59,6 +59,24 @@ man/man1/slxdecode.1
 man/man1/usb_printerid.1
 man/man1/xqxdecode.1
 man/man1/zjsdecode.1
+share/foo2qpdl/crd/CLP-300-1200x1200cms2
+share/foo2qpdl/crd/CLP-300-1200x600cms2
+share/foo2qpdl/crd/CLP-300-600x600cms2
+share/foo2qpdl/crd/CLP-300cms
+share/foo2qpdl/crd/CLP-600-1200x1200cms2
+share/foo2qpdl/crd/CLP-600-1200x600cms2
+share/foo2qpdl/crd/CLP-600-600x600cms2
+share/foo2qpdl/crd/CLP-600cms
+share/foo2qpdl/crd/black-text.ps
+share/foo2zjs/crd/2300w-1200@150-l250-kx,ucr100,0-per.crd
+share/foo2zjs/crd/2300w-1200@150-l250-kx,ucr100,50-per.crd
+share/foo2zjs/crd/2300w-1200@150-l250-kx,ucr100,75-per.crd
+share/foo2zjs/crd/2300w-1200@150-l250-kx,ucr125,75-per.crd
+share/foo2zjs/crd/kh.crd
+share/foo2zjs/crd/kx.crd
+share/foo2zjs/crd/prolog.ps
+share/foo2zjs/crd/screen1200.ps
+share/foo2zjs/crd/screen2400.ps
 share/foo2zjs/gamma-lookup.ps
 share/foo2zjs/gamma.ps
 share/foomatic/ppd/foo2zjs/Generic-OAKT_Printer.ppd
