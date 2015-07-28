@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3150 2015/07/27 22:34:44 youri Exp $
+$NetBSD: CHANGES-2015,v 1.3151 2015/07/28 07:28:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5822,3 +5822,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/zoom to 1.1.5 [wiz 2015-07-27]
 	Updated chat/scrollz to 2.2.3 [wiz 2015-07-27]
 	Updated x11/xfce4-desktop to 4.12.3 [youri 2015-07-27]
+	Updated databases/sqlite3 to 3.8.11 [adam 2015-07-28]
+	Updated databases/sqlite3-docs to 3.8.11 [adam 2015-07-28]
+	Updated databases/sqlite3-tcl to 3.8.11 [adam 2015-07-28]
