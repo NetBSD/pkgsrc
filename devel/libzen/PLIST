@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/31 23:10:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/28 12:31:03 wiz Exp $
 bin/libzen-config
 include/ZenLib/BitStream.h
+include/ZenLib/BitStream_Fast.h
 include/ZenLib/BitStream_LE.h
 include/ZenLib/Conf.h
 include/ZenLib/Conf_Internal.h
