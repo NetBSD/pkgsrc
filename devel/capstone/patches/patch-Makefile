@@ -1,0 +1,33 @@
+$NetBSD: patch-Makefile,v 1.1 2015/07/28 12:48:14 sevan Exp $
+
+Unbreak build on FreeBSD and DragonflyBSD.
+
+Patch accepted upstream:
+https://github.com/aquynh/capstone/commit/453b41a29ed7f02f8319329cc86853d394b85a1e
+
+--- Makefile.orig	2015-07-15 07:44:42.000000000 +0000
++++ Makefile
+@@ -70,12 +70,18 @@ LIBDIRARCH ?= lib
+ LIBDIR = $(DESTDIR)$(PREFIX)/$(LIBDIRARCH)
+ 
+ LIBDATADIR = $(LIBDIR)
++
++# Don't redefine $LIBDATADIR when global environment variable
++# USE_GENERIC_LIBDATADIR is set. This is used by the pkgsrc framework.
++
++ifndef USE_GENERIC_LIBDATADIR
+ ifeq ($(UNAME_S), FreeBSD)
+ LIBDATADIR = $(DESTDIR)$(PREFIX)/libdata
+ endif
+ ifeq ($(UNAME_S), DragonFly)
+ LIBDATADIR = $(DESTDIR)$(PREFIX)/libdata
+ endif
++endif
+ 
+ INSTALL_BIN ?= install
+ INSTALL_DATA ?= $(INSTALL_BIN) -m0644
+@@ -463,4 +469,3 @@ define generate-pkgcfg
+ 	echo 'Libs: -L$${libdir} -lcapstone' >> $(PKGCFGF)
+ 	echo 'Cflags: -I$${includedir}' >> $(PKGCFGF)
+ endef
+-
