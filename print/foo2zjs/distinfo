@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/09/24 13:44:21 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2015/07/28 16:42:03 rumko Exp $
 
 SHA1 (foo2zjs.tar.gz) = c1a3aeb88cca8b284685c3457a7cc33d78319147
 RMD160 (foo2zjs.tar.gz) = f24945860e41fda61342a9b867123202ecf82179
 Size (foo2zjs.tar.gz) = 1644122 bytes
-SHA1 (patch-Makefile) = ee1542db6f954d77e5e1dcdeb146f57cf9b8cb95
+SHA1 (patch-Makefile) = 439dcce6060d679232b66d38991e86e97a6085eb
+SHA1 (patch-foo2zjs-pstops.sh) = c872f1df99d780705773bf9bda51495975f859e2
 SHA1 (patch-icc2ps_Makefile) = dae8f19cc2fab130d1c4962a3bcbd7d37d8d2a09
