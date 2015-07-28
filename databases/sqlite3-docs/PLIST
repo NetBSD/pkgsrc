@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/05/21 10:38:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/07/28 07:18:22 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -166,6 +166,7 @@ share/doc/sqlite3/c3ref/uri_boolean.html
 share/doc/sqlite3/c3ref/user_data.html
 share/doc/sqlite3/c3ref/value.html
 share/doc/sqlite3/c3ref/value_blob.html
+share/doc/sqlite3/c3ref/value_dup.html
 share/doc/sqlite3/c3ref/vfs.html
 share/doc/sqlite3/c3ref/vfs_find.html
 share/doc/sqlite3/c3ref/vtab.html
@@ -257,6 +258,7 @@ share/doc/sqlite3/images/books/aditya.jpg
 share/doc/sqlite3/images/books/das.jpg
 share/doc/sqlite3/images/books/droessler.jpg
 share/doc/sqlite3/images/books/haldar.gif
+share/doc/sqlite3/images/books/haldar2.jpg
 share/doc/sqlite3/images/books/kreibich.gif
 share/doc/sqlite3/images/books/newman.jpg
 share/doc/sqlite3/images/books/nishizawa2.jpg
@@ -509,6 +511,7 @@ share/doc/sqlite3/psow.html
 share/doc/sqlite3/queryplanner-ng.html
 share/doc/sqlite3/queryplanner.html
 share/doc/sqlite3/quickstart.html
+share/doc/sqlite3/rbu.html
 share/doc/sqlite3/releaselog/3_0_0.html
 share/doc/sqlite3/releaselog/3_0_1.html
 share/doc/sqlite3/releaselog/3_0_2.html
@@ -631,6 +634,7 @@ share/doc/sqlite3/releaselog/3_8_1.html
 share/doc/sqlite3/releaselog/3_8_10.html
 share/doc/sqlite3/releaselog/3_8_10_1.html
 share/doc/sqlite3/releaselog/3_8_10_2.html
+share/doc/sqlite3/releaselog/3_8_11.html
 share/doc/sqlite3/releaselog/3_8_2.html
 share/doc/sqlite3/releaselog/3_8_3.html
 share/doc/sqlite3/releaselog/3_8_3_1.html
