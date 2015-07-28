@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3151 2015/07/28 07:28:36 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3152 2015/07/28 08:49:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5825,3 +5825,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3 to 3.8.11 [adam 2015-07-28]
 	Updated databases/sqlite3-docs to 3.8.11 [adam 2015-07-28]
 	Updated databases/sqlite3-tcl to 3.8.11 [adam 2015-07-28]
+	Updated emulators/suse131_base to 13.1nb9 [wiz 2015-07-28]
