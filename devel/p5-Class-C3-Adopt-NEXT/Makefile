@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:48:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/07/28 13:47:28 mef Exp $
 
-DISTNAME=	Class-C3-Adopt-NEXT-0.13
+DISTNAME=	Class-C3-Adopt-NEXT-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
@@ -12,7 +11,7 @@ COMMENT=	Perl5 module to make NEXT suck less
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 
 MAKE_PARAMS+=		--skipdeps
