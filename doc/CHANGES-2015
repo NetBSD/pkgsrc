@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3157 2015/07/28 13:47:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3158 2015/07/28 22:38:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5831,3 +5831,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libzen to 0.4.31 [wiz 2015-07-28]
 	Updated devel/p5-Carp-REPL to 0.18 [mef 2015-07-28]
 	Updated devel/p5-Class-C3-Adopt-NEXT to 0.14 [mef 2015-07-28]
+	Updated net/bind99 to 9.9.7pl2 [taca 2015-07-28]
+	Updated net/bind910 to 9.10.2pl3 [taca 2015-07-28]
