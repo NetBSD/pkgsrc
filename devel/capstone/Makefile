@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/07/19 14:49:44 kamil Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/28 12:48:14 sevan Exp $
 
 DISTNAME=	capstone-3.0.4
 CATEGORIES=	devel
@@ -14,5 +14,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 USE_TOOLS+=	gmake
 # succeeds after 'make install'
 TEST_TARGET=	check
+
+ALL_ENV+=	USE_GENERIC_LIBDATADIR=yes
 
 .include "../../mk/bsd.pkg.mk"
