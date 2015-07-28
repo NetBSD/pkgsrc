@@ -1,15 +1,17 @@
-$NetBSD: patch-Project_GNU_Library_configure.ac,v 1.1 2013/12/31 23:10:21 ryoon Exp $
+$NetBSD: patch-Project_GNU_Library_configure.ac,v 1.2 2015/07/28 12:58:31 wiz Exp $
 
-* Fix version number
+Fix flags for libzen-config file.
 
---- Project/GNU/Library/configure.ac.orig	2012-08-20 12:31:54.000000000 +0000
+--- Project/GNU/Library/configure.ac.orig	2015-04-08 14:02:42.000000000 +0000
 +++ Project/GNU/Library/configure.ac
-@@ -5,7 +5,7 @@ dnl ####################################
+@@ -123,8 +123,8 @@ dnl ####################################
  dnl -------------------------------------------------------------------------
- dnl Name and version
+ dnl Common
  dnl
--AC_INIT([libzen], [0.4.25])
-+AC_INIT([libzen], [0.4.29])
- dnl -------------------------------------------------------------------------
- dnl Test if we are at the good place
- dnl
+-ZenLib_LIBS="-L$(pwd) -lzen -lpthread -lstdc++ $ZenLib_LIBS"
+-ZenLib_LIBS_Static="$(pwd)/.libs/libzen.a -lpthread -lstdc++ $ZenLib_LIBS_Static"
++ZenLib_LIBS="-L${prefix}/lib -lzen -lpthread -lstdc++ $ZenLib_LIBS"
++ZenLib_LIBS_Static="${prefix}/lib/libzen.a -lpthread -lstdc++ $ZenLib_LIBS_Static"
+ 
+ dnl #########################################################################
+ dnl ### C/C++ compiler options used to compile
