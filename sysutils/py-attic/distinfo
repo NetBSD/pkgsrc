@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/05/28 07:07:19 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/07/28 23:54:29 riz Exp $
 
 SHA1 (Attic-0.16.tar.gz) = 7afaa64f6d546bff94494d19d9e88c02d2e94088
 RMD160 (Attic-0.16.tar.gz) = 02f14e1f5f6b002b78b581e51497c14263331214
 Size (Attic-0.16.tar.gz) = 232455 bytes
+SHA1 (patch-archivers.py) = 8ed0a975d6f80c2862539f81be9119a8ba17ea77
