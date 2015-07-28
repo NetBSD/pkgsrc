@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3153 2015/07/28 09:52:10 youri Exp $
+$NetBSD: CHANGES-2015,v 1.3154 2015/07/28 12:18:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5827,3 +5827,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-tcl to 3.8.11 [adam 2015-07-28]
 	Updated emulators/suse131_base to 13.1nb9 [wiz 2015-07-28]
 	Updated www/lighttpd to 1.4.36 [youri 2015-07-28]
+	Updated fonts/harfbuzz to 1.0.1 [wiz 2015-07-28]
