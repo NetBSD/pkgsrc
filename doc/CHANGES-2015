@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3156 2015/07/28 13:28:54 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3157 2015/07/28 13:47:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5830,3 +5830,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/harfbuzz to 1.0.1 [wiz 2015-07-28]
 	Updated devel/libzen to 0.4.31 [wiz 2015-07-28]
 	Updated devel/p5-Carp-REPL to 0.18 [mef 2015-07-28]
+	Updated devel/p5-Class-C3-Adopt-NEXT to 0.14 [mef 2015-07-28]
