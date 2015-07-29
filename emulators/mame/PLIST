@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/07/14 20:14:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/07/29 12:03:40 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -161,6 +161,7 @@ share/mame/hash/gameboy.xml
 share/mame/hash/gamecom.xml
 share/mame/hash/gamegear.xml
 share/mame/hash/gameking.xml
+share/mame/hash/gameking3.xml
 share/mame/hash/gamepock.xml
 share/mame/hash/gba.xml
 share/mame/hash/gbcolor.xml
@@ -172,6 +173,7 @@ share/mame/hash/gl6000sl.xml
 share/mame/hash/glcolor.xml
 share/mame/hash/gmaster.xml
 share/mame/hash/gp32.xml
+share/mame/hash/guab.xml
 share/mame/hash/gx4000.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp9835a_rom.xml
