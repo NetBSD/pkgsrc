@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/29 16:30:27 youri Exp $
+lib/xfce4/panel/plugins/xfce4-kbdleds-plugin
+share/icons/hicolor/48x48/apps/kbdleds-plugin.png
+share/icons/hicolor/scalable/apps/kbdleds-plugin.svg
+share/locale/ru/LC_MESSAGES/xfce4-kbdleds-plugin.mo
+share/locale/uk/LC_MESSAGES/xfce4-kbdleds-plugin.mo
+share/xfce4/panel/plugins/kbdleds.desktop
