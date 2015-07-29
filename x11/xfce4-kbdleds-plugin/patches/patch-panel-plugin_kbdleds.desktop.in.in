@@ -1,0 +1,12 @@
+$NetBSD: patch-panel-plugin_kbdleds.desktop.in.in,v 1.1 2015/07/29 16:30:27 youri Exp $
+
+Adjust panel plugin path to the newer convention.
+--- panel-plugin/kbdleds.desktop.in.in.orig	2011-06-02 20:51:07.000000000 +0000
++++ panel-plugin/kbdleds.desktop.in.in
+@@ -4,5 +4,5 @@ Encoding=UTF-8
+ _Name=Kbdleds Plugin
+ _Comment=Keyboard LEDs plugin for the Xfce panel
+ Icon=kbdleds-plugin
+-X-XFCE-Exec=@libexecdir@/xfce4/panel-plugins/xfce4-kbdleds-plugin
++X-XFCE-Exec=@libexecdir@/xfce4/panel/plugins/xfce4-kbdleds-plugin
+ #X-XFCE-Unique=true
