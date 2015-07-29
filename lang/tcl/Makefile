@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2015/07/22 04:54:23 dholland Exp $
+# $NetBSD: Makefile,v 1.82 2015/07/29 15:23:11 jperkin Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -50,6 +50,10 @@ PLIST_SUBST+=		SONUM=${TCL_SONUM}
 PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
 
 CONFIGURE_ARGS+=	--with-system-sqlite
+SUBST_CLASSES+=		sqllink
+SUBST_STAGE.sqllink=	pre-configure
+SUBST_FILES.sqllink=	pkgs/sqlite3.8.8.3/configure
+SUBST_SED.sqllink=	-e "/LIBS=/s,-lsqlite3,-L${BUILDLINK_PREFIX.sqlite3}/lib -lsqlite3,g"
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.8.3
 .include "../../databases/sqlite3/buildlink3.mk"
