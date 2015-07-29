@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/01/24 17:59:42 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/07/29 12:21:32 jperkin Exp $
 
 DISTNAME=		rcs-5.9.4
 CATEGORIES=		devel scm
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.cs.purdue.edu/homes/trinkle/RCS/
 COMMENT=		GNU Revision Control System - version control software
 LICENSE=		gnu-gpl-v3
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gsoelim
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "AIX" || ${OPSYS} == "Minix"
