@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3160 2015/07/29 17:12:44 youri Exp $
+$NetBSD: CHANGES-2015,v 1.3161 2015/07/29 18:06:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5835,3 +5835,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/bind910 to 9.10.2pl3 [taca 2015-07-28]
 	Added x11/xfce4-kbdleds-plugin version 0.0.6 [youri 2015-07-29]
 	Updated wm/evilwm to 1.1.1 [youri 2015-07-29]
+	Updated devel/bzr to 2.6.0 [wiz 2015-07-29]
