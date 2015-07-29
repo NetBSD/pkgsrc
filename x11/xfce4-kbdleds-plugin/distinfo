@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/07/29 16:30:27 youri Exp $
+
+SHA1 (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = d10393d4c1aeda4a10f89f3d85a5a574e0fa9ba8
+RMD160 (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = 13dd6160585a7ead98f5250e0d69d2f43a071cf3
+Size (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = 265889 bytes
+SHA1 (patch-panel-plugin_Makefile.in) = c3f47c34f71eceb1cb7054fd4bff80a7928f5645
+SHA1 (patch-panel-plugin_kbdleds.desktop.in.in) = 4ea49c7e174b9c829433d1b0db2c70980847ca3f
