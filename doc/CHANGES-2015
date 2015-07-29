@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3161 2015/07/29 18:06:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3162 2015/07/29 18:07:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5836,3 +5836,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xfce4-kbdleds-plugin version 0.0.6 [youri 2015-07-29]
 	Updated wm/evilwm to 1.1.1 [youri 2015-07-29]
 	Updated devel/bzr to 2.6.0 [wiz 2015-07-29]
+	Updated net/gupnp-dlna to 0.10.3 [wiz 2015-07-29]
