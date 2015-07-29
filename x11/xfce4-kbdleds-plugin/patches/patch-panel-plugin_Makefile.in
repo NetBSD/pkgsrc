@@ -1,0 +1,23 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/07/29 16:30:27 youri Exp $
+
+Adjust panel plugin path to the newer convention.
+--- panel-plugin/Makefile.in.orig	2011-10-13 17:39:23.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -292,7 +292,7 @@ INCLUDES = \
+ #plugindir = \
+ #	$(libexecdir)/xfce4/panel-plugins
+ plugindir = \
+-	$(libdir)/xfce4/panel-plugins
++	$(libdir)/xfce4/panel/plugins
+ 
+ xfce4_kbdleds_plugin_SOURCES = \
+ 	kbdleds.c \
+@@ -319,7 +319,7 @@ xfce4_kbdleds_plugin_LDADD = \
+ # Desktop file
+ #
+ desktopdir = \
+-	$(datadir)/xfce4/panel-plugins
++	$(datadir)/xfce4/panel/plugins
+ 
+ desktop_in_in_files = \
+ 	kbdleds.desktop.in.in
