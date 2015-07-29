@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/10/23 10:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/07/29 17:12:31 youri Exp $
 #
 
-DISTNAME=	evilwm-1.1.0
+DISTNAME=	evilwm-1.1.1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.6809.org.uk/evilwm/
 
