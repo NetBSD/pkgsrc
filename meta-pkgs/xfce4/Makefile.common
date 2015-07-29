@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2015/07/26 13:59:24 youri Exp $
+# $NetBSD: Makefile.common,v 1.54 2015/07/29 16:33:16 youri Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -47,6 +47,7 @@
 # used by x11/xfce4-exo/Makefile
 # used by x11/xfce4-eyes-plugin/Makefile
 # used by x11/xfce4-garcon/Makefile
+# used by x11/xfce4-kbdleds-plugin/Makefile
 # used by x11/xfce4-gtk2-engine/Makefile
 # used by x11/xfce4-notes-plugin/Makefile
 # used by x11/xfce4-notifyd/Makefile
@@ -81,4 +82,4 @@ XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 CONFIGURE_ARGS+=	--disable-visibility
 .endif
 
-.include "../../x11/gtk2/buildlink3.mk"
+#.include "../../x11/gtk2/buildlink3.mk"
