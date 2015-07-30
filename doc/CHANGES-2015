@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3168 2015/07/30 14:42:16 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3169 2015/07/30 21:57:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5849,3 +5849,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql56-server to 5.6.26 [adam 2015-07-30]
 	Updated databases/mysql55-client to 5.5.45 [adam 2015-07-30]
 	Updated databases/mysql55-server to 5.5.45 [adam 2015-07-30]
+	Updated misc/libreoffice4 to 4.4.4.3nb2 [ryoon 2015-07-30]
