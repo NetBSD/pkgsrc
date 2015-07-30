@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/06/01 07:40:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/07/30 14:36:34 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1003,7 +1003,6 @@ share/mysql/test/r/merge-big.result
 share/mysql/test/r/merge.result
 share/mysql/test/r/merge_innodb.result
 share/mysql/test/r/merge_mmap.result
-share/mysql/test/r/merge_recover.result
 share/mysql/test/r/metadata.result
 share/mysql/test/r/mix2_myisam.result
 share/mysql/test/r/mix2_myisam_ucs2.result
@@ -1017,6 +1016,7 @@ share/mysql/test/r/myisam-system.result
 share/mysql/test/r/myisam.result
 share/mysql/test/r/myisam_crash_before_flush_keys.result
 share/mysql/test/r/myisam_debug.result
+share/mysql/test/r/myisam_recover.result
 share/mysql/test/r/myisampack.result
 share/mysql/test/r/mysql-bug41486.result
 share/mysql/test/r/mysql-bug45236.result
@@ -2904,6 +2904,7 @@ share/mysql/test/suite/funcs_2/t/innodb_charset.test
 share/mysql/test/suite/funcs_2/t/memory_charset.test
 share/mysql/test/suite/funcs_2/t/myisam_charset.test
 share/mysql/test/suite/funcs_2/t/suite.opt
+share/mysql/test/suite/innodb/r/add_constraint.result
 share/mysql/test/suite/innodb/r/blob-update-debug.result
 share/mysql/test/suite/innodb/r/create-index.result
 share/mysql/test/suite/innodb/r/foreign-keys.result
@@ -3009,6 +3010,7 @@ share/mysql/test/suite/innodb/r/insert_debug.result
 share/mysql/test/suite/innodb/r/sp_temp_table.result
 share/mysql/test/suite/innodb/r/strict_mode.result
 share/mysql/test/suite/innodb/r/xa_recovery.result
+share/mysql/test/suite/innodb/t/add_constraint.test
 share/mysql/test/suite/innodb/t/blob-update-debug.test
 share/mysql/test/suite/innodb/t/create-index.test
 share/mysql/test/suite/innodb/t/disabled.def
@@ -3415,6 +3417,8 @@ share/mysql/test/suite/large_tests/t/rpl_slave_net_timeout.test
 share/mysql/test/suite/manual/r/rpl_replication_delay.result
 share/mysql/test/suite/manual/t/rpl_replication_delay-slave.opt
 share/mysql/test/suite/manual/t/rpl_replication_delay.test
+share/mysql/test/suite/ndb/r/ndb_restore_discover.result
+share/mysql/test/suite/ndb/t/ndb_restore_discover.test
 share/mysql/test/suite/parts/inc/methods1.inc
 share/mysql/test/suite/parts/inc/part_blocked_sql_funcs_main.inc
 share/mysql/test/suite/parts/inc/part_supported_sql_funcs_delete.inc
@@ -5970,8 +5974,6 @@ share/mysql/test/t/merge.test
 share/mysql/test/t/merge_innodb.test
 share/mysql/test/t/merge_mmap-master.opt
 share/mysql/test/t/merge_mmap.test
-share/mysql/test/t/merge_recover-master.opt
-share/mysql/test/t/merge_recover.test
 share/mysql/test/t/metadata.test
 share/mysql/test/t/mix2_myisam.test
 share/mysql/test/t/mix2_myisam_ucs2.test
@@ -5991,6 +5993,8 @@ share/mysql/test/t/myisam.test
 share/mysql/test/t/myisam_crash_before_flush_keys-master.opt
 share/mysql/test/t/myisam_crash_before_flush_keys.test
 share/mysql/test/t/myisam_debug.test
+share/mysql/test/t/myisam_recover-master.opt
+share/mysql/test/t/myisam_recover.test
 share/mysql/test/t/myisampack.test
 share/mysql/test/t/mysql-bug41486.test
 share/mysql/test/t/mysql-bug45236.test
