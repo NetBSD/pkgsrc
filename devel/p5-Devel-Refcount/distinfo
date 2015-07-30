@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/30 12:51:22 schmonz Exp $
+
+SHA1 (Devel-Refcount-0.10.tar.gz) = a2ea865b79b0af500efe2051f179f9a4c0200251
+RMD160 (Devel-Refcount-0.10.tar.gz) = 57cb0884281f193b8227b257c370b010241f4273
+Size (Devel-Refcount-0.10.tar.gz) = 14394 bytes
