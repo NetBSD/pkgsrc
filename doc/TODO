@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14612 2015/07/29 18:06:01 wiz Exp $
+$NetBSD: TODO,v 1.14613 2015/07/30 03:21:34 taca Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamtuner-2.1.4
 	o subtitleeditor-0.41.1
-	o sudo-1.8.13
+	o sudo-1.8.14p3
 	o supertuxkart-0.9
 	o swapd-1.0.5
 	o swath-0.5.2
