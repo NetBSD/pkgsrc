@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3165 2015/07/30 12:12:47 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3166 2015/07/30 12:17:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5840,3 +5840,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/openssh to 6.9.1nb1 [taca 2015-07-30]
 	Updated filesystems/p5-Path-Tiny to 0.072 [wen 2015-07-30]
 	Updated devel/p5-Class-Std to 0.0.13 [wen 2015-07-30]
+	Updated devel/p5-Class-Accessor-Lite to 0.08 [wen 2015-07-30]
