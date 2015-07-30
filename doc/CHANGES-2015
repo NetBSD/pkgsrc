@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3166 2015/07/30 12:17:42 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3167 2015/07/30 12:52:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5841,3 +5841,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated filesystems/p5-Path-Tiny to 0.072 [wen 2015-07-30]
 	Updated devel/p5-Class-Std to 0.0.13 [wen 2015-07-30]
 	Updated devel/p5-Class-Accessor-Lite to 0.08 [wen 2015-07-30]
+	Added devel/p5-Devel-Refcount version 0.10 [schmonz 2015-07-30]
