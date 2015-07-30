@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/06/01 08:15:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/07/30 14:39:18 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -255,6 +255,7 @@ share/mysql/test/extra/rpl_tests/rpl_flsh_tbls.test
 share/mysql/test/extra/rpl_tests/rpl_foreign_key.test
 share/mysql/test/extra/rpl_tests/rpl_get_master_version_and_clock.test
 share/mysql/test/extra/rpl_tests/rpl_gtid_drop_table.inc
+share/mysql/test/extra/rpl_tests/rpl_gtid_mts_relay_log_recovery.test
 share/mysql/test/extra/rpl_tests/rpl_gtids_restart_slave_io_lost_trx.test
 share/mysql/test/extra/rpl_tests/rpl_heartbeat_2slaves.inc
 share/mysql/test/extra/rpl_tests/rpl_ignore_table_filter_insensitive.inc
@@ -1252,7 +1253,6 @@ share/mysql/test/r/merge-big.result
 share/mysql/test/r/merge.result
 share/mysql/test/r/merge_innodb.result
 share/mysql/test/r/merge_mmap.result
-share/mysql/test/r/merge_recover.result
 share/mysql/test/r/metadata.result
 share/mysql/test/r/mix2_myisam.result
 share/mysql/test/r/mix2_myisam_ucs2.result
@@ -1283,6 +1283,7 @@ share/mysql/test/r/myisam_mrr_cost_all.result
 share/mysql/test/r/myisam_mrr_cost_icp.result
 share/mysql/test/r/myisam_mrr_icp.result
 share/mysql/test/r/myisam_mrr_none.result
+share/mysql/test/r/myisam_recover.result
 share/mysql/test/r/myisam_row_rpl.result
 share/mysql/test/r/myisampack.result
 share/mysql/test/r/mysql-bug41486.result
@@ -1550,6 +1551,7 @@ share/mysql/test/r/ssl_crl_crlpath.result
 share/mysql/test/r/status.result
 share/mysql/test/r/status2.result
 share/mysql/test/r/status_bug17954.result
+share/mysql/test/r/status_debug.result
 share/mysql/test/r/strict.result
 share/mysql/test/r/strict_autoinc_1myisam.result
 share/mysql/test/r/strict_autoinc_2innodb.result
@@ -3418,6 +3420,7 @@ share/mysql/test/suite/funcs_2/t/memory_charset.test
 share/mysql/test/suite/funcs_2/t/myisam_charset.test
 share/mysql/test/suite/funcs_2/t/suite.opt
 share/mysql/test/suite/innodb/include/checksum_not_strict.inc
+share/mysql/test/suite/innodb/include/import.inc
 share/mysql/test/suite/innodb/include/innodb_dict.inc
 share/mysql/test/suite/innodb/include/innodb_stats.inc
 share/mysql/test/suite/innodb/include/innodb_stats_table_flag.inc
@@ -3427,7 +3430,9 @@ share/mysql/test/suite/innodb/r/blob-update-debug.result
 share/mysql/test/suite/innodb/r/blob_redo.result
 share/mysql/test/suite/innodb/r/checksum.result
 share/mysql/test/suite/innodb/r/create-index.result
+share/mysql/test/suite/innodb/r/dropdb.result
 share/mysql/test/suite/innodb/r/foreign_key.result
+share/mysql/test/suite/innodb/r/import.result
 share/mysql/test/suite/innodb/r/index_tree_operation.result
 share/mysql/test/suite/innodb/r/innodb-2byte-collation.result
 share/mysql/test/suite/innodb/r/innodb-ac-non-locking-select.result
@@ -3609,7 +3614,9 @@ share/mysql/test/suite/innodb/t/blob_redo.test
 share/mysql/test/suite/innodb/t/checksum.test
 share/mysql/test/suite/innodb/t/create-index.test
 share/mysql/test/suite/innodb/t/disabled.def
+share/mysql/test/suite/innodb/t/dropdb.test
 share/mysql/test/suite/innodb/t/foreign_key.test
+share/mysql/test/suite/innodb/t/import.test
 share/mysql/test/suite/innodb/t/index_tree_operation.test
 share/mysql/test/suite/innodb/t/innodb-2byte-collation-master.opt
 share/mysql/test/suite/innodb/t/innodb-2byte-collation.test
@@ -4474,6 +4481,7 @@ share/mysql/test/suite/ndb/r/ndb_restore_conv_lossy_charbinary.result
 share/mysql/test/suite/ndb/r/ndb_restore_conv_lossy_integral.result
 share/mysql/test/suite/ndb/r/ndb_restore_conv_padding.result
 share/mysql/test/suite/ndb/r/ndb_restore_conv_promotion.result
+share/mysql/test/suite/ndb/r/ndb_restore_discover.result
 share/mysql/test/suite/ndb/r/ndb_restore_misc.result
 share/mysql/test/suite/ndb/r/ndb_restore_print.result
 share/mysql/test/suite/ndb/r/ndb_restore_schema_blobs.result
@@ -4618,6 +4626,7 @@ share/mysql/test/suite/ndb/t/ndb_restore_conv_lossy_charbinary.test
 share/mysql/test/suite/ndb/t/ndb_restore_conv_lossy_integral.test
 share/mysql/test/suite/ndb/t/ndb_restore_conv_padding.test
 share/mysql/test/suite/ndb/t/ndb_restore_conv_promotion.test
+share/mysql/test/suite/ndb/t/ndb_restore_discover.test
 share/mysql/test/suite/ndb/t/ndb_restore_misc.test
 share/mysql/test/suite/ndb/t/ndb_restore_print.test
 share/mysql/test/suite/ndb/t/ndb_restore_schema_blobs.test
@@ -6303,6 +6312,7 @@ share/mysql/test/suite/rpl/r/rpl_gtid_loaddata_s.result
 share/mysql/test/suite/rpl/r/rpl_gtid_mode.result
 share/mysql/test/suite/rpl/r/rpl_gtid_mode_off_new_master.result
 share/mysql/test/suite/rpl/r/rpl_gtid_mode_on_new_master.result
+share/mysql/test/suite/rpl/r/rpl_gtid_mts_relay_log_recovery_auto_pos_on_off.result
 share/mysql/test/suite/rpl/r/rpl_gtid_parallel.result
 share/mysql/test/suite/rpl/r/rpl_gtid_purged_fail_to_connect.result
 share/mysql/test/suite/rpl/r/rpl_gtid_purged_maintained.result
@@ -6383,6 +6393,7 @@ share/mysql/test/suite/rpl/r/rpl_mts_execute_partial_trx_with_auto_pos_off.resul
 share/mysql/test/suite/rpl/r/rpl_mts_execute_partial_trx_with_auto_pos_on.result
 share/mysql/test/suite/rpl/r/rpl_mts_gtids_restart_slave_io_lost_trx.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_hang_with_partial_trx.result
+share/mysql/test/suite/rpl/r/rpl_mts_stop_slave.result
 share/mysql/test/suite/rpl/r/rpl_multi_delete.result
 share/mysql/test/suite/rpl/r/rpl_multi_delete2.result
 share/mysql/test/suite/rpl/r/rpl_multi_engine.result
@@ -6812,6 +6823,9 @@ share/mysql/test/suite/rpl/t/rpl_gtid_loaddata_s.test
 share/mysql/test/suite/rpl/t/rpl_gtid_mode.test
 share/mysql/test/suite/rpl/t/rpl_gtid_mode_off_new_master.test
 share/mysql/test/suite/rpl/t/rpl_gtid_mode_on_new_master.test
+share/mysql/test/suite/rpl/t/rpl_gtid_mts_relay_log_recovery_auto_pos_on_off-master.opt
+share/mysql/test/suite/rpl/t/rpl_gtid_mts_relay_log_recovery_auto_pos_on_off-slave.opt
+share/mysql/test/suite/rpl/t/rpl_gtid_mts_relay_log_recovery_auto_pos_on_off.test
 share/mysql/test/suite/rpl/t/rpl_gtid_parallel.test
 share/mysql/test/suite/rpl/t/rpl_gtid_purged_fail_to_connect-master.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_purged_fail_to_connect-slave.opt
@@ -6948,6 +6962,8 @@ share/mysql/test/suite/rpl/t/rpl_mts_gtids_restart_slave_io_lost_trx-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_gtids_restart_slave_io_lost_trx.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_hang_with_partial_trx-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_slave_hang_with_partial_trx.test
+share/mysql/test/suite/rpl/t/rpl_mts_stop_slave-slave.opt
+share/mysql/test/suite/rpl/t/rpl_mts_stop_slave.test
 share/mysql/test/suite/rpl/t/rpl_multi_delete-slave.opt
 share/mysql/test/suite/rpl/t/rpl_multi_delete.test
 share/mysql/test/suite/rpl/t/rpl_multi_delete2-slave.opt
@@ -7843,6 +7859,7 @@ share/mysql/test/suite/sys_vars/r/pfs_events_waits_hl_size_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_hosts_size_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_max_cond_classes_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_max_cond_instances_basic.result
+share/mysql/test/suite/sys_vars/r/pfs_max_digest_length_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_max_file_classes_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_max_file_handles_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_max_file_instances_basic.result
@@ -8474,6 +8491,8 @@ share/mysql/test/suite/sys_vars/t/pfs_max_cond_classes_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_max_cond_classes_basic.test
 share/mysql/test/suite/sys_vars/t/pfs_max_cond_instances_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_max_cond_instances_basic.test
+share/mysql/test/suite/sys_vars/t/pfs_max_digest_length_basic-master.opt
+share/mysql/test/suite/sys_vars/t/pfs_max_digest_length_basic.test
 share/mysql/test/suite/sys_vars/t/pfs_max_file_classes_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_max_file_classes_basic.test
 share/mysql/test/suite/sys_vars/t/pfs_max_file_handles_basic-master.opt
@@ -9140,8 +9159,6 @@ share/mysql/test/t/merge.test
 share/mysql/test/t/merge_innodb.test
 share/mysql/test/t/merge_mmap-master.opt
 share/mysql/test/t/merge_mmap.test
-share/mysql/test/t/merge_recover-master.opt
-share/mysql/test/t/merge_recover.test
 share/mysql/test/t/metadata.test
 share/mysql/test/t/mix2_myisam-master.opt
 share/mysql/test/t/mix2_myisam.test
@@ -9182,6 +9199,8 @@ share/mysql/test/t/myisam_mrr_cost_all.test
 share/mysql/test/t/myisam_mrr_cost_icp.test
 share/mysql/test/t/myisam_mrr_icp.test
 share/mysql/test/t/myisam_mrr_none.test
+share/mysql/test/t/myisam_recover-master.opt
+share/mysql/test/t/myisam_recover.test
 share/mysql/test/t/myisam_row_rpl-master.opt
 share/mysql/test/t/myisam_row_rpl-slave.opt
 share/mysql/test/t/myisam_row_rpl.test
@@ -9497,6 +9516,7 @@ share/mysql/test/t/status-master.opt
 share/mysql/test/t/status.test
 share/mysql/test/t/status2.test
 share/mysql/test/t/status_bug17954.test
+share/mysql/test/t/status_debug.test
 share/mysql/test/t/strict-master.opt
 share/mysql/test/t/strict.test
 share/mysql/test/t/strict_autoinc_1myisam.test
