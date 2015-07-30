@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3167 2015/07/30 12:52:09 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.3168 2015/07/30 14:42:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5842,3 +5842,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-Std to 0.0.13 [wen 2015-07-30]
 	Updated devel/p5-Class-Accessor-Lite to 0.08 [wen 2015-07-30]
 	Added devel/p5-Devel-Refcount version 0.10 [schmonz 2015-07-30]
+	Updated databases/sqlite3 to 3.8.11.1 [adam 2015-07-30]
+	Updated databases/sqlite3-docs to 3.8.11.1 [adam 2015-07-30]
+	Updated databases/sqlite3-tcl to 3.8.11.1 [adam 2015-07-30]
+	Updated databases/mysql56-client to 5.6.26 [adam 2015-07-30]
+	Updated databases/mysql56-server to 5.6.26 [adam 2015-07-30]
+	Updated databases/mysql55-client to 5.5.45 [adam 2015-07-30]
+	Updated databases/mysql55-server to 5.5.45 [adam 2015-07-30]
