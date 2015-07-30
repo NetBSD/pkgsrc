@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3163 2015/07/30 03:21:13 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3164 2015/07/30 09:48:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5838,3 +5838,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/bzr to 2.6.0 [wiz 2015-07-29]
 	Updated net/gupnp-dlna to 0.10.3 [wiz 2015-07-29]
 	Updated security/openssh to 6.9.1nb1 [taca 2015-07-30]
+	Updated filesystems/p5-Path-Tiny to 0.072 [wen 2015-07-30]
