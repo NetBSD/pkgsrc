@@ -1,0 +1,11 @@
+$NetBSD: patch-panel-plugin_wmdock.desktop.in.in,v 1.1 2015/07/31 08:41:30 youri Exp $
+
+Adjust panel plugin path to the newer convention
+--- panel-plugin/wmdock.desktop.in.in.orig	2012-08-15 16:32:07.000000000 +0000
++++ panel-plugin/wmdock.desktop.in.in
+@@ -4,4 +4,4 @@ Encoding=UTF-8
+ _Name=WMdock
+ _Comment=Plugin for WindowMaker dockapps
+ Icon=xfce4-wmdock
+-X-XFCE-Exec=@libexecdir@/xfce4/panel-plugins/xfce4-wmdock-plugin
++X-XFCE-Exec=@libexecdir@/xfce4/panel/plugins/xfce4-wmdock-plugin

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/07/31 08:41:30 youri Exp $
+
+SHA1 (xfce4-wmdock-plugin-0.6.0.tar.bz2) = 9ee9b9e4923efd6e7d98e73d7726d8e4b8f5151a
+RMD160 (xfce4-wmdock-plugin-0.6.0.tar.bz2) = d681dbd744d6913069cc85aefaa7035392947981
+Size (xfce4-wmdock-plugin-0.6.0.tar.bz2) = 344743 bytes
+SHA1 (patch-panel-plugin_Makefile.in) = 59105abbfaefc348dbd1f8d74c731230027967e8
+SHA1 (patch-panel-plugin_wmdock.desktop.in.in) = ebff5b2b70c62d7cb9caa837b5d88bbec709a877
