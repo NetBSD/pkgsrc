@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3176 2015/07/31 13:04:11 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3177 2015/07/31 13:08:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5863,3 +5863,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/gitweb to 2.5.0 [adam 2015-07-31]
 	Updated devel/cmake-fedora to 2.1.3nb1 [ryoon 2015-07-31]
 	Updated inputmethod/ibus to 1.5.11 [ryoon 2015-07-31]
+	Updated inputmethod/mozc-server to 2.17.2106.102 [ryoon 2015-07-31]
+	Updated inputmethod/mozc-renderer to 2.17.2106.102 [ryoon 2015-07-31]
+	Updated inputmethod/mozc-tool to 2.17.2106.102 [ryoon 2015-07-31]
+	Updated inputmethod/mozc-elisp to 2.17.2106.102 [ryoon 2015-07-31]
+	Updated inputmethod/ibus-mozc to 2.17.2106.102 [ryoon 2015-07-31]
+	Updated inputmethod/uim-mozc to 2.17.2106.102 [ryoon 2015-07-31]
