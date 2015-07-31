@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2014/04/17 09:08:34 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/31 13:14:20 ryoon Exp $
 
-DISTNAME=	jq-1.3
+DISTNAME=	jq-jq-1.4
+PKGNAME=	${DISTNAME:S/jq-jq-/jq-/}
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/stedolan/jq/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=stedolan/}
+GITHUB_PROJECT=	jq
+GITHUB_TAG=	jq-${PKGVERSION_NOREV}
 
 MAINTAINER=	jperkin@joyent.com
 HOMEPAGE=	http://github.com/stedolan/jq/
 COMMENT=	Command-line JSON processor
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/jq-${DISTNAME}
 
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
