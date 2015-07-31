@@ -1,0 +1,23 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/07/31 08:41:30 youri Exp $
+
+Adjust panel plugin path to the newer convention
+--- panel-plugin/Makefile.in.orig	2013-10-20 20:31:10.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -309,7 +309,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-plugindir = $(libexecdir)/xfce4/panel-plugins
++plugindir = $(libexecdir)/xfce4/panel/plugins
+ xfce4_wmdock_plugin_SOURCES = \
+ 	catchwindow.h							\
+ 	catchwindow.c							\
+@@ -350,7 +350,7 @@ xfce4_wmdock_plugin_LDADD = \
+ #
+ # Desktop file
+ #
+-desktopdir = $(datadir)/xfce4/panel-plugins
++desktopdir = $(datadir)/xfce4/panel/plugins
+ desktop_in_in_files = wmdock.desktop.in.in
+ desktop_in_files = \
+ 	$(desktop_in_in_files:.desktop.in.in=.desktop.in)
