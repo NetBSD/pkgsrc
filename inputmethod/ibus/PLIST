@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/07/31 10:03:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/07/31 13:03:45 ryoon Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -92,7 +92,7 @@ share/gtk-doc/html/ibus/ch04.html
 share/gtk-doc/html/ibus/ch05.html
 share/gtk-doc/html/ibus/ch06.html
 share/gtk-doc/html/ibus/home.png
-share/gtk-doc/html/ibus/ibus-IBusEngineSimple.html
+share/gtk-doc/html/ibus/IBusEngineSimple.html
 share/gtk-doc/html/ibus/ibus-IBusKeysyms.html
 share/gtk-doc/html/ibus/ibus-ibusdebug.html
 share/gtk-doc/html/ibus/ibus-ibuserror.html
