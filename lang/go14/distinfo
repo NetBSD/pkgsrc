@@ -1,0 +1,33 @@
+$NetBSD: distinfo,v 1.1 2015/07/31 14:46:25 bsiegert Exp $
+
+SHA1 (go1.4.2.src.tar.gz) = 460caac03379f746c473814a65223397e9c9a2f6
+RMD160 (go1.4.2.src.tar.gz) = dea15b3b4c31554a47b40799f4b9a926ea760e70
+Size (go1.4.2.src.tar.gz) = 10921896 bytes
+SHA1 (patch-doc_progs_run) = 5a29fe4f91defb2e20d192850601df7cbabdac7c
+SHA1 (patch-misc_cgo_test_cthread__unix.c) = a63f08f07713bd32e279315cca21235101ce9cd3
+SHA1 (patch-misc_cgo_testso_cgoso.go) = ef782a6f173c814656eac0df640aedaa1a923bbc
+SHA1 (patch-misc_cgo_testso_cgoso__unix.go) = 58e221e1ce123428a3fe6ecededf0590cbfb81ca
+SHA1 (patch-src_cmd_5l_asm.c) = fd78203b7c92b9bbd057077671d649bac2d121ee
+SHA1 (patch-src_cmd_6l_asm.c) = 1f244d7c760e738057b1649ed486206a6ec3812b
+SHA1 (patch-src_cmd_8l_asm.c) = e5233a3d9b08f2ef8d809756ef7d6fc4b03303b9
+SHA1 (patch-src_cmd_go_build.go) = f7705aa955241d3add353a144a676a58a0a1617e
+SHA1 (patch-src_cmd_go_pkg.go) = e70441f3fdf312eb389e4dd5408c207a4d4b8350
+SHA1 (patch-src_cmd_ld_data.c) = 96181bac03333f7bc5293ab9ddbd68bb9174ed47
+SHA1 (patch-src_cmd_ld_doc.go) = 000447f5a5862358a85a7510dc92195494972e26
+SHA1 (patch-src_cmd_ld_lib.h) = e6aa8b9520e1b75f435e179e5ea4f0ef738621f4
+SHA1 (patch-src_cmd_ld_pobj.c) = eaf67d6bc4f9ba835893f9d8c2d36941ff84933d
+SHA1 (patch-src_crypto_x509_root__unix.go) = c933f334da1c8de48a06d23abd12da01f73776e6
+SHA1 (patch-src_go_build_build.go) = b68bc557e7b48877889c63070e9cb9d8360f40f5
+SHA1 (patch-src_net_cgo__bsd.go) = 4678fccd6956300ce55343965334fc3881383bbc
+SHA1 (patch-src_net_cgo__stub.go) = cf373587745d68e556dadf3a61956b489b4f420a
+SHA1 (patch-src_net_cgo__unix.go) = cebe897ab624aaf52bebc50d12a045d6b4ea2bc6
+SHA1 (patch-src_os_user_lookup__unix.go) = 861cf9b2b64bc314b6ee8e11411245e214717515
+SHA1 (patch-src_runtime_cgo_cgo.go) = 9cc88b35d12e0d52e76495e04f7fce2b78af08d5
+SHA1 (patch-src_runtime_cgo_gcc__setenv.c) = c9614b76d71e84ad46b2ce785580fdc54b261455
+SHA1 (patch-src_runtime_cgo_gcc__solaris__amd64.c) = 633d8dcc8a843e343ee2ab9edb7cfaf6f6c3865b
+SHA1 (patch-src_runtime_cgo_setenv.c) = f3b56885fa54cabf78944fad75c21f04bea5cd88
+SHA1 (patch-src_runtime_netpoll__solaris.c) = ae399518bb02d6b898734a52dfa7fe18f041e1ec
+SHA1 (patch-src_runtime_os__solaris.c) = eec5b293fe4a72f58e4cd51cd23ea6e6fce714b6
+SHA1 (patch-src_runtime_os__solaris.h) = c0a39aa6ab57eca7056178c87ebb00bb21236499
+SHA1 (patch-src_runtime_sys__solaris__amd64.s) = 88f2e3fc43b0d6e4f17ef06d3f4f27cfed3103c6
+SHA1 (patch-src_runtime_thunk__solaris__amd64.s) = 2835cdc171ae3209c61ef804fbfbf22cdf68bf43
