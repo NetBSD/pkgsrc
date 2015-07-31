@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3177 2015/07/31 13:08:46 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3178 2015/07/31 13:14:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5869,3 +5869,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/mozc-elisp to 2.17.2106.102 [ryoon 2015-07-31]
 	Updated inputmethod/ibus-mozc to 2.17.2106.102 [ryoon 2015-07-31]
 	Updated inputmethod/uim-mozc to 2.17.2106.102 [ryoon 2015-07-31]
+	Updated devel/jq to 1.4 [ryoon 2015-07-31]
