@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3172 2015/07/31 09:03:10 youri Exp $
+$NetBSD: CHANGES-2015,v 1.3173 2015/07/31 12:10:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5853,3 +5853,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xfce4-wmdock-plugin version 0.6.0 [youri 2015-07-31]
 	Updated pkgtools/x11-links to 0.97 [jperkin 2015-07-31]
 	Added sysutils/xfce4-gvfs-mount-plugin version 0.0.4 [youri 2015-07-31]
+	Updated devel/scons to 2.3.5 [adam 2015-07-31]
