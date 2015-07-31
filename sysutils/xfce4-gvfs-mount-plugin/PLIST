@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/31 09:02:53 youri Exp $
+bin/xfce4-gvfs-mount
+libexec/xfce4-gvfs-daemon
+libexec/xfce4/panel/plugins/xfce4-gvfs-mount-plugin
+share/dbus-1/services/org.xfce.vfs.Daemon.service
+share/locale/fr/LC_MESSAGES/xfce4-gvfs-mount.mo
+share/xfce4-gvfs-mount/glade/dialog.glade
+share/xfce4-gvfs-mount/glade/generic.glade
+share/xfce4-gvfs-mount/glade/samba.glade
+share/xfce4-gvfs-mount/glade/sftp.glade
+share/xfce4/panel/plugins/xfce4-gvfs-mount-plugin.desktop
