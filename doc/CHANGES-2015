@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3179 2015/07/31 14:47:55 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.3180 2015/07/31 17:53:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5871,3 +5871,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/uim-mozc to 2.17.2106.102 [ryoon 2015-07-31]
 	Updated devel/jq to 1.4 [ryoon 2015-07-31]
 	Copied lang/go to lang/go14 [bsiegert 2015-07-31]
+	Removed devel/p5-Coro [wiz 2015-07-31]
+	Removed net/p5-Net-RabbitFoot [wiz 2015-07-31]
+	Removed net/p5-Net-Server-Coro [wiz 2015-07-31]
+	Removed www/p5-Continuity [wiz 2015-07-31]
+	Removed www/p5-Corona [wiz 2015-07-31]
+	Removed www/p5-Squatting [wiz 2015-07-31]
+	Removed www/p5-Squatting-On-PSGI [wiz 2015-07-31]
+	Removed www/p5-Task-Plack [wiz 2015-07-31]
