@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3182 2015/07/31 23:46:04 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3183 2015/07/31 23:55:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5881,3 +5881,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed www/p5-Task-Plack [wiz 2015-07-31]
 	Updated databases/p5-DBIx-Class-Helpers to 2.031000 [wen 2015-07-31]
 	Updated databases/p5-DBIx-Class-Candy to 0.004001 [wen 2015-07-31]
+	Updated databases/p5-DBIx-Class-IntrospectableM2M to 0.001002 [wen 2015-07-31]
