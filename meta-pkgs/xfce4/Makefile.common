@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2015/07/31 08:41:45 youri Exp $
+# $NetBSD: Makefile.common,v 1.57 2015/07/31 09:03:36 youri Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -22,6 +22,7 @@
 # used by sysutils/xfce4-diskperf-plugin/Makefile
 # used by sysutils/xfce4-fsguard-plugin/Makefile
 # used by sysutils/xfce4-genmon-plugin/Makefile
+# used by sysutils/xfce4-gvfs-mount-plugin/Makefile
 # used by sysutils/xfce4-mount-plugin/Makefile
 # used by sysutils/xfce4-netload-plugin/Makefile
 # used by sysutils/xfce4-quicklauncher-plugin/Makefile
