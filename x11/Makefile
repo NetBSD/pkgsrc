@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.762 2015/07/29 16:31:36 youri Exp $
+# $NetBSD: Makefile,v 1.763 2015/07/31 08:42:11 youri Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -629,6 +629,7 @@ SUBDIR+=	xfce4-settings
 SUBDIR+=	xfce4-terminal
 SUBDIR+=	xfce4-tumbler
 SUBDIR+=	xfce4-whiskermenu-plugin
+SUBDIR+=	xfce4-wmdock-plugin
 SUBDIR+=	xfd
 SUBDIR+=	xfishtank
 SUBDIR+=	xflame
