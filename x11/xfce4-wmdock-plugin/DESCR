@@ -1,0 +1,3 @@
+The WMdock plugin is a compatibility layer for running WindowMaker dockapps on
+he XFCE desktop. It integrates the dockapps into a panel, closely resembling
+the look and feel of the WindowMaker dock or clip, respectively.
