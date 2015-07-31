@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3173 2015/07/31 12:10:15 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3174 2015/07/31 12:58:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5854,3 +5854,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/x11-links to 0.97 [jperkin 2015-07-31]
 	Added sysutils/xfce4-gvfs-mount-plugin version 0.0.4 [youri 2015-07-31]
 	Updated devel/scons to 2.3.5 [adam 2015-07-31]
+	Updated devel/git to 2.5.0 [adam 2015-07-31]
+	Updated devel/git-base to 2.5.0 [adam 2015-07-31]
+	Updated devel/git-contrib to 2.5.0 [adam 2015-07-31]
+	Updated devel/git-docs to 2.5.0 [adam 2015-07-31]
+	Updated devel/git-gitk to 2.5.0 [adam 2015-07-31]
+	Updated devel/git-svn to 2.5.0 [adam 2015-07-31]
+	Updated www/gitweb to 2.5.0 [adam 2015-07-31]
