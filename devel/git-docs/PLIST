@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/30 18:43:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/07/31 12:57:23 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -145,6 +145,7 @@ man/man1/git-verify-pack.1
 man/man1/git-verify-tag.1
 man/man1/git-web--browse.1
 man/man1/git-whatchanged.1
+man/man1/git-worktree.1
 man/man1/git-write-tree.1
 man/man1/git.1
 man/man1/gitk.1

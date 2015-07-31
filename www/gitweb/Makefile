@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2015/07/19 21:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/07/31 12:57:23 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/git/gitweb/}
-PKGREVISION=	1
 CATEGORIES=	www
 
 COMMENT=	Web interface for GIT repositories
