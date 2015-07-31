@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1121 2015/07/16 11:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.1122 2015/07/31 17:53:14 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -305,10 +305,8 @@ SUBDIR+=	p5-CatalystX-CRUD-View-Excel
 SUBDIR+=	p5-CatalystX-CRUD-YUI
 SUBDIR+=	p5-CatalystX-Component-Traits
 SUBDIR+=	p5-CatalystX-LeakChecker
-SUBDIR+=	p5-Continuity
 SUBDIR+=	p5-Cookie-Baker
 SUBDIR+=	p5-Cookie-XS
-SUBDIR+=	p5-Corona
 SUBDIR+=	p5-Dancer
 SUBDIR+=	p5-Dancer-Session-Cookie
 SUBDIR+=	p5-Dancer2
@@ -471,13 +469,10 @@ SUBDIR+=	p5-Router-Simple
 SUBDIR+=	p5-SCGI
 SUBDIR+=	p5-SVN-Web
 SUBDIR+=	p5-Session-Storage-Secure
-SUBDIR+=	p5-Squatting
-SUBDIR+=	p5-Squatting-On-PSGI
 SUBDIR+=	p5-Starlet
 SUBDIR+=	p5-Starman
 SUBDIR+=	p5-Task-CatInABox
 SUBDIR+=	p5-Task-Catalyst-Tutorial
-SUBDIR+=	p5-Task-Plack
 SUBDIR+=	p5-Tatsumaki
 SUBDIR+=	p5-Template-Extract
 SUBDIR+=	p5-Template-Generate

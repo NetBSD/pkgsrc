@@ -1,7 +1,0 @@
-The Perl 5 module collection Coro manages continuations in general,
-most often in the form of cooperative threads.The specific flavor
-of thread offered by this module also guarantees you that it will
-not switch between threads unless necessary, at easily-identified
-points in your program, so locking and parallel access are rarely
-an issue, making thread programming much safer and easier than using
-other thread models.

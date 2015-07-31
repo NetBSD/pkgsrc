@@ -1,3 +1,0 @@
-The Perl 5 module Corona is a Coro based Plack web server. It uses
-Net::Server::Coro under the hood, which means we have coroutines
-(threads) for each socket, active connections and a main loop.
