@@ -1,2 +1,0 @@
-The Perl 5 module Squatting::On::PSGI is an adapter to run Squatting
-applications on PSGI implementations.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2013/09/05 00:48:24 wen Exp $
-
-SHA1 (Task-Plack-0.28.tar.gz) = ed30b9186653c651f8ec83cf10ca21432fcef6fc
-RMD160 (Task-Plack-0.28.tar.gz) = 3a5fa11b32e6efcf9e23fd79ebe1fa892b48826a
-Size (Task-Plack-0.28.tar.gz) = 12724 bytes

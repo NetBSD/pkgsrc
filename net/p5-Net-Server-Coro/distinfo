@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/02/27 15:03:20 mef Exp $
-
-SHA1 (Net-Server-Coro-1.3.tar.gz) = 54d56e5abf378ee51c6fff3063032f8a2ddded43
-RMD160 (Net-Server-Coro-1.3.tar.gz) = d247f9cc2f92c57e1c4ca7f25b2b0eee00c6247b
-Size (Net-Server-Coro-1.3.tar.gz) = 27510 bytes
