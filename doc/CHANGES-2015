@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3171 2015/07/31 08:51:41 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.3172 2015/07/31 09:03:10 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5852,3 +5852,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.4.3nb2 [ryoon 2015-07-30]
 	Added x11/xfce4-wmdock-plugin version 0.6.0 [youri 2015-07-31]
 	Updated pkgtools/x11-links to 0.97 [jperkin 2015-07-31]
+	Added sysutils/xfce4-gvfs-mount-plugin version 0.0.4 [youri 2015-07-31]
