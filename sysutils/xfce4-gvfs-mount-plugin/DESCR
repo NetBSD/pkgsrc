@@ -1,0 +1,4 @@
+Xfce4 GVfs Mount is a small application that is meant to mount remote file
+systems only. It was initially written because Thunar 1.0 is lacking that
+feature. The application is composed of a daemon, a mount dialog,
+and a panel plugin.
