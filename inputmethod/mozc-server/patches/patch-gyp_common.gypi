@@ -1,10 +1,10 @@
-$NetBSD: patch-gyp_common.gypi,v 1.6 2015/02/17 23:55:58 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.7 2015/07/31 13:07:05 ryoon Exp $
 
---- gyp/common.gypi.orig	2015-02-17 14:35:04.000000000 +0000
+--- gyp/common.gypi.orig	2015-06-07 07:16:23.000000000 +0000
 +++ gyp/common.gypi
 @@ -158,7 +158,7 @@
          'compiler_host': 'clang',
-         'compiler_host_version_int': 305,  # Clang 3.5 or higher
+         'compiler_host_version_int': 304,  # Clang 3.4 or higher
        }],
 -      ['target_platform=="Linux"', {
 +      ['target_platform=="Linux" or target_platform=="NetBSD"', {
@@ -29,7 +29,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.6 2015/02/17 23:55:58 ryoon Exp $
              'ldflags': [
                '<@(linux_ldflags)',
              ],
-@@ -513,7 +513,7 @@
+@@ -523,7 +523,7 @@
            },
          },
          'conditions': [
@@ -38,7 +38,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.6 2015/02/17 23:55:58 ryoon Exp $
              'cflags': [
                '<@(debug_extra_cflags)',
              ],
-@@ -574,7 +574,7 @@
+@@ -589,7 +589,7 @@
            },
          },
          'conditions': [
@@ -47,7 +47,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.6 2015/02/17 23:55:58 ryoon Exp $
              'cflags': [
                '<@(release_extra_cflags)',
              ],
-@@ -793,6 +793,22 @@
+@@ -814,6 +814,22 @@
            }],
          ],
        }],

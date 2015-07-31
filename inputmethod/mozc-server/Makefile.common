@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2015/02/17 23:55:58 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.19 2015/07/31 13:07:05 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,15 +7,27 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-2.16.2037.102
+DISTNAME=	mozc-2.17.2106.102
 CATEGORIES=	inputmethod
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT=	mozc
+GITHUB_TAG=	3648b9bf06d5d9b36bed2425640bfd18ae05b588
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/mozc/
+HOMEPAGE=	https://github.com/google/mozc/
 COMMENT=	Japanese inputmethod Mozc engine for IBus
 LICENSE=	modified-bsd
+
+USAGE_DICT=	usage_dict-rev10.txt
+UIM_MOZC=	uim-mozc-318.0562676
+DISTFILES+=	${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX} \
+		${USAGE_DICT} \
+		${UIM_MOZC}.tar.xz
+SITES.${USAGE_DICT}=		${MASTER_SITE_LOCAL}
+SITES.${UIM_MOZC}.tar.xz=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}
+
+EXTRACT_USING=	bsdtar
+WRKSRC=		${WRKDIR}/mozc-${GITHUB_TAG}/src
 
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/mozc-server/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
@@ -65,6 +77,11 @@ OSDEST=		linux
 .endif
 
 MOZC_BUILD_MODE=	Release # or Debug
+
+pre-configure:
+	mkdir -p ${WRKSRC}/third_party/japanese_usage_dictionary
+	cp ${WRKDIR}/${USAGE_DICT} \
+		${WRKSRC}/third_party/japanese_usage_dictionary/usage_dict.txt
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

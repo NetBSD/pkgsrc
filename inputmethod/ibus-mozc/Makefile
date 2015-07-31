@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2015/04/25 14:23:22 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2015/07/31 13:07:05 ryoon Exp $
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	1
 
 INSTALLATION_DIRS+=	libexec share/ibus share/ibus/component \
 			share/ibus-mozc
@@ -14,6 +13,7 @@ DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} ${_MAKE_JOBS} \
+			unix/ibus/ibus.gyp:ibus_mozc_lib \
 			unix/ibus/ibus.gyp:ibus_mozc
 
 do-install:

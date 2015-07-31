@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.13 2015/02/17 23:55:58 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2015/07/31 13:07:05 ryoon Exp $
 
-SHA1 (mozc-2.16.2037.102.tar.xz) = 74c088a81572588d8e60aaf25d066cc74b6fc989
-RMD160 (mozc-2.16.2037.102.tar.xz) = b26f8f58ef2e2f27e5ce42804c6559cb59d33aa9
-Size (mozc-2.16.2037.102.tar.xz) = 37548784 bytes
-SHA1 (uim-mozc-334.tar.xz) = af86ce7a04b291629bd5dc56d5c1115332954a91
-RMD160 (uim-mozc-334.tar.xz) = b988667237f65e61fabf3935f83f5d21a8059f4e
-Size (uim-mozc-334.tar.xz) = 30544 bytes
+SHA1 (mozc-2.17.2106.102-3648b9bf06d5d9b36bed2425640bfd18ae05b588.tar.gz) = cc9c59329fee015a4149686f103a5554a0e085ff
+RMD160 (mozc-2.17.2106.102-3648b9bf06d5d9b36bed2425640bfd18ae05b588.tar.gz) = b40e1c9b62ef6ee4d953add8ab3beed1ee2c4056
+Size (mozc-2.17.2106.102-3648b9bf06d5d9b36bed2425640bfd18ae05b588.tar.gz) = 59324198 bytes
+SHA1 (uim-mozc-318.0562676.tar.xz) = 5cd298aaac5afd7ff8882453e3e8fa698c2c5aa1
+RMD160 (uim-mozc-318.0562676.tar.xz) = 7b93efa2ed2710d5098b1b6b81c0fd195645857b
+Size (uim-mozc-318.0562676.tar.xz) = 24316 bytes
+SHA1 (usage_dict-rev10.txt) = 174fd3073422deb5f7b3740b1c8ea6d52a077c25
+RMD160 (usage_dict-rev10.txt) = 2c70d0c6c46bff422108e3ce617a6eebc311843d
+Size (usage_dict-rev10.txt) = 219146 bytes
 SHA1 (patch-base_base.gyp) = 437fa7ef6c84448a2a8fb049af773ab9df64dc81
 SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191
 SHA1 (patch-base_iconv.cc) = 1bf65dfc6152bf152cbe2714835a61436df2a48b
@@ -26,10 +29,10 @@ SHA1 (patch-gui_base_locale__util.cc) = 7d1e9cf3c2c36590298496471a97b8c32010a30b
 SHA1 (patch-gui_config__dialog_config__dialog.cc) = aae18b7ea36fd5ff5758625875a04634ffdfd68a
 SHA1 (patch-gui_config__dialog_keybinding__editor.cc) = 00a6e4bb2c07e3340e188f108f0285a3aa2aceb9
 SHA1 (patch-gui_dictionary__tool_dictionary__tool.cc) = 3652713857d03f847108952f2994ee44bfe62608
-SHA1 (patch-gui_gui.gyp) = 70b6d78ca5a482b9e8fa697dbb191cccbdde1c6a
+SHA1 (patch-gui_gui.gyp) = 82377e902935e1fccb79056fa94dd4ad4f8ff29d
 SHA1 (patch-gui_qt__libraries.gypi) = e92be78947dcf66211c80169b864b7c9d057b3db
 SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 34a7cd2a99a0082f490c3f623c7c6a856c984f8b
-SHA1 (patch-gyp_common.gypi) = c9d93e9ff9c917f759694ed94568d3996e355c6c
+SHA1 (patch-gyp_common.gypi) = 64d8c387f5afbce02b30a42b27ade76f75224f05
 SHA1 (patch-handwriting_handwriting.gyp) = 0261aef287b34f4a3c8424fb1af44720ae00a85c
 SHA1 (patch-handwriting_zinnia.gyp) = d09ac17d17dabdbfdcb7c623193a5c72dbcacfbc
 SHA1 (patch-handwriting_zinnia__handwriting.cc) = dd9363f470bf4a27fed40602f02127cb130042b2
@@ -42,6 +45,5 @@ SHA1 (patch-protobuf_protobuf.gyp) = 35059f0e24a9d47ca5224a892de84890d72acdf4
 SHA1 (patch-session_session.cc) = 0562f8646dc6f68e180d8ae98f00eeb0364fc473
 SHA1 (patch-session_session__converter__interface.h) = 93bda6e51b9a9ac7146aa23ac0aa28bb017a4465
 SHA1 (patch-session_session__test.cc) = a256caec45a45f4eaab0555ecc18cea09c417d95
-SHA1 (patch-third__party_protobuf_post__process__dist.sh) = c54363572de0afc2c49b4ed06bc0eb329e4ad237
 SHA1 (patch-unix_ibus_gen__mozc__xml.py) = 566d567ae4f911766309e035697a23350f24bbf5
 SHA1 (patch-unix_ibus_ibus.gyp) = 2fc9309216270846f7ce33d1854d9d76e65e6e96
