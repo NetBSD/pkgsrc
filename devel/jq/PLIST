@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/17 09:08:34 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/07/31 13:14:20 ryoon Exp $
 bin/jq
+include/jq.h
+include/jv.h
+lib/libjq.la
 man/man1/jq.1
 share/doc/jq/AUTHORS
 share/doc/jq/COPYING
