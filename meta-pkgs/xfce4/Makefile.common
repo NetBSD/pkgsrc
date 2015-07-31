@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2015/07/30 14:58:10 youri Exp $
+# $NetBSD: Makefile.common,v 1.56 2015/07/31 08:41:45 youri Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -60,6 +60,7 @@
 # used by x11/xfce4-terminal/Makefile
 # used by x11/xfce4-tumbler/Makefile
 # used by x11/xfce4-whiskermenu-plugin/Makefile
+# used by x11/xfce4-wmdock-plugin/Makefile
 
 MASTER_SITES=		http://archive.xfce.org/xfce/4.12/src/
 EXTRACT_SUFX=		.tar.bz2
