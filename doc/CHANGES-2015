@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3180 2015/07/31 17:53:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3181 2015/07/31 23:40:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5879,3 +5879,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed www/p5-Squatting [wiz 2015-07-31]
 	Removed www/p5-Squatting-On-PSGI [wiz 2015-07-31]
 	Removed www/p5-Task-Plack [wiz 2015-07-31]
+	Updated databases/p5-DBIx-Class-Helpers to 2.031000 [wen 2015-07-31]
