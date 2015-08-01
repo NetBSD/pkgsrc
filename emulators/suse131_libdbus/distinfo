@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.7 2015/01/23 10:34:08 obache Exp $
+$NetBSD: distinfo,v 1.7.4.1 2015/08/01 09:19:55 tron Exp $
 
-SHA1 (suse131/dbus-1-1.8.14-4.32.3.i586.rpm) = 9110ad7e70a6bd0e8f1fdcd77a2405f7e144845b
-RMD160 (suse131/dbus-1-1.8.14-4.32.3.i586.rpm) = d016b921e59de9562cb87bb73574b8c0af7600ae
-Size (suse131/dbus-1-1.8.14-4.32.3.i586.rpm) = 321795 bytes
-SHA1 (suse131/dbus-1-1.8.14-4.32.3.x86_64.rpm) = e5d161e463a0334917d7a4b49a6a05103f49822b
-RMD160 (suse131/dbus-1-1.8.14-4.32.3.x86_64.rpm) = 429443590d91bbe81f6de7917a3297e905532e94
-Size (suse131/dbus-1-1.8.14-4.32.3.x86_64.rpm) = 320808 bytes
-SHA1 (suse131/libdbus-1-3-1.8.14-4.32.1.i586.rpm) = bde7a703ea7930f5ae109532b0c26de46a634d0f
-RMD160 (suse131/libdbus-1-3-1.8.14-4.32.1.i586.rpm) = 36013a782d11f0698535f0de4536bbfd0eb90cf3
-Size (suse131/libdbus-1-3-1.8.14-4.32.1.i586.rpm) = 160659 bytes
-SHA1 (suse131/libdbus-1-3-1.8.14-4.32.1.x86_64.rpm) = f2af89b1ad0de13fea1acc40e3df67fac7f60a30
-RMD160 (suse131/libdbus-1-3-1.8.14-4.32.1.x86_64.rpm) = 10faef1c3c52c44df4e84c381f055414deb780b5
-Size (suse131/libdbus-1-3-1.8.14-4.32.1.x86_64.rpm) = 161330 bytes
+SHA1 (suse131/dbus-1-1.8.16-4.36.2.i586.rpm) = 9961af7778bc78981d38cd4ae44c0d22854fc6f2
+RMD160 (suse131/dbus-1-1.8.16-4.36.2.i586.rpm) = 98347c8ef58c5c682c79e61c851aecba94e67432
+Size (suse131/dbus-1-1.8.16-4.36.2.i586.rpm) = 323031 bytes
+SHA1 (suse131/dbus-1-1.8.16-4.36.2.x86_64.rpm) = 62e6d3813332cc51b184906ae4970814cb2bcec5
+RMD160 (suse131/dbus-1-1.8.16-4.36.2.x86_64.rpm) = 81d3e14721b9fc351d75f9d2789d07f39e05c378
+Size (suse131/dbus-1-1.8.16-4.36.2.x86_64.rpm) = 321970 bytes
+SHA1 (suse131/libdbus-1-3-1.8.16-4.36.1.i586.rpm) = de99fcfa8e2c7ced28caf38c24d217d6037aaa56
+RMD160 (suse131/libdbus-1-3-1.8.16-4.36.1.i586.rpm) = 15a572e52e73161c8f38c60fd8bee16e2a7002db
+Size (suse131/libdbus-1-3-1.8.16-4.36.1.i586.rpm) = 161472 bytes
+SHA1 (suse131/libdbus-1-3-1.8.16-4.36.1.x86_64.rpm) = c1d53d80b8bc07e5e1e85c71226b6b3ad53ae8d5
+RMD160 (suse131/libdbus-1-3-1.8.16-4.36.1.x86_64.rpm) = dd1579826697284dd751942b5d564d212c771d67
+Size (suse131/libdbus-1-3-1.8.16-4.36.1.x86_64.rpm) = 162130 bytes

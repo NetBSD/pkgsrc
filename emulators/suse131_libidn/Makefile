@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.4.4.1 2015/08/01 09:19:55 tron Exp $
 
 PKGNAME=	suse_libidn-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-RPMPKGS+=	libidn11-1.25-7.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libidn11-1.31-7.3.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for libidn

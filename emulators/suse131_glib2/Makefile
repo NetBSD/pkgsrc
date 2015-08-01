@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.4.4.1 2015/08/01 09:19:55 tron Exp $
 
 PKGNAME=	suse_glib2-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-RPMPKGS+=	gio-branding-upstream-2.38.1-1.1.noarch
-RPMPKGS+=	glib2-tools-2.38.1-1.1.${SUSE_ARCH}
-RPMPKGS+=	libgio-2_0-0-2.38.1-1.1.${SUSE_ARCH}
-RPMPKGS+=	libglib-2_0-0-2.38.1-1.1.${SUSE_ARCH}
-RPMPKGS+=	libgmodule-2_0-0-2.38.1-1.1.${SUSE_ARCH}
-RPMPKGS+=	libgobject-2_0-0-2.38.1-1.1.${SUSE_ARCH}
-RPMPKGS+=	libgthread-2_0-0-2.38.1-1.1.${SUSE_ARCH}
+RPMUPDPKGS+=	gio-branding-upstream-2.38.2-8.2.noarch
+RPMUPDPKGS+=	glib2-tools-2.38.2-8.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libgio-2_0-0-2.38.2-8.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libglib-2_0-0-2.38.2-8.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libgmodule-2_0-0-2.38.2-8.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libgobject-2_0-0-2.38.2-8.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libgthread-2_0-0-2.38.2-8.2.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for GLib-2.x

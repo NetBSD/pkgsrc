@@ -1,26 +1,26 @@
-$NetBSD: distinfo,v 1.4 2014/12/04 18:52:56 rodent Exp $
+$NetBSD: distinfo,v 1.4.6.1 2015/08/01 09:19:56 tron Exp $
 
-SHA1 (suse131/libqt4-4.8.5-5.13.1.i586.rpm) = a6ec03cc6056edf7bec1aca1c982392118c53ae3
-RMD160 (suse131/libqt4-4.8.5-5.13.1.i586.rpm) = 6342e87bb3e9628c8ef5ecbdd7794e32fbebce7c
-Size (suse131/libqt4-4.8.5-5.13.1.i586.rpm) = 3881806 bytes
-SHA1 (suse131/libqt4-4.8.5-5.13.1.x86_64.rpm) = 46ad341f4eab2991063c14f49611dcbc0222f22e
-RMD160 (suse131/libqt4-4.8.5-5.13.1.x86_64.rpm) = a0b3fe3e9fbe51c525787c74acfb680d9f188fe8
-Size (suse131/libqt4-4.8.5-5.13.1.x86_64.rpm) = 3874720 bytes
-SHA1 (suse131/libqt4-qt3support-4.8.5-5.13.1.i586.rpm) = d75371f9ebadd772e053c7aab67d8fd168a59756
-RMD160 (suse131/libqt4-qt3support-4.8.5-5.13.1.i586.rpm) = 9bc4675ba7819b4a64e0583b620b6411c67c1db3
-Size (suse131/libqt4-qt3support-4.8.5-5.13.1.i586.rpm) = 1036838 bytes
-SHA1 (suse131/libqt4-qt3support-4.8.5-5.13.1.x86_64.rpm) = e5b534b5fe27e6a8775cf704e643982f3b3e643e
-RMD160 (suse131/libqt4-qt3support-4.8.5-5.13.1.x86_64.rpm) = cf21ffd68ae6bbf6be293f5a7d7ced035af1e70d
-Size (suse131/libqt4-qt3support-4.8.5-5.13.1.x86_64.rpm) = 1023863 bytes
-SHA1 (suse131/libqt4-x11-4.8.5-5.13.1.i586.rpm) = ded4f52541e3811f1367c1f35ec70df121e953b8
-RMD160 (suse131/libqt4-x11-4.8.5-5.13.1.i586.rpm) = 67e56e220b8ed2c66a929f0eb91f68057712c29d
-Size (suse131/libqt4-x11-4.8.5-5.13.1.i586.rpm) = 10711025 bytes
-SHA1 (suse131/libqt4-x11-4.8.5-5.13.1.x86_64.rpm) = 3dcced60d5e2c2de7370b83d5698b864b991ec42
-RMD160 (suse131/libqt4-x11-4.8.5-5.13.1.x86_64.rpm) = 2828e75870137fc601611ba82fd2fa816fd53976
-Size (suse131/libqt4-x11-4.8.5-5.13.1.x86_64.rpm) = 10630362 bytes
 SHA1 (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.i586.rpm) = cdfd2fd2ccd6f44150dac76c55f58e8475c98032
 RMD160 (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.i586.rpm) = 3ca45793da763180097b37d33dcfa1377c44cca2
 Size (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.i586.rpm) = 8135476 bytes
 SHA1 (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.x86_64.rpm) = 6dd11315b73d914029203c925023aaac9de3606e
 RMD160 (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.x86_64.rpm) = 75a3ef5574f9fbc20a39d00769c88407a937ad66
 Size (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.x86_64.rpm) = 8549365 bytes
+SHA1 (suse131/libqt4-4.8.5-5.17.1.i586.rpm) = 9d9ee23861b8cca4b55825276bb538f2f98c597a
+RMD160 (suse131/libqt4-4.8.5-5.17.1.i586.rpm) = 498f0fb9854e3759c72f7508a32a84eb09b3351b
+Size (suse131/libqt4-4.8.5-5.17.1.i586.rpm) = 3884258 bytes
+SHA1 (suse131/libqt4-4.8.5-5.17.1.x86_64.rpm) = c9b1cf1e08c16fc2323f153db05f1fcee75a7dfe
+RMD160 (suse131/libqt4-4.8.5-5.17.1.x86_64.rpm) = a15fbbd7a9623575462ea2bdf60585ab3efbfeee
+Size (suse131/libqt4-4.8.5-5.17.1.x86_64.rpm) = 3876179 bytes
+SHA1 (suse131/libqt4-qt3support-4.8.5-5.17.1.i586.rpm) = e7ad6375a0ff620907044821f944431907269f0a
+RMD160 (suse131/libqt4-qt3support-4.8.5-5.17.1.i586.rpm) = 1bbae42d09551f4ed37cd122d57aec7d1c450820
+Size (suse131/libqt4-qt3support-4.8.5-5.17.1.i586.rpm) = 1036822 bytes
+SHA1 (suse131/libqt4-qt3support-4.8.5-5.17.1.x86_64.rpm) = 4e3826f9e3f8db11d3f6a4a820a645d1ee96833e
+RMD160 (suse131/libqt4-qt3support-4.8.5-5.17.1.x86_64.rpm) = 55bc061b6bb6fcad51f0d83ac895e315fc657ea5
+Size (suse131/libqt4-qt3support-4.8.5-5.17.1.x86_64.rpm) = 1024798 bytes
+SHA1 (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = 94daff738912c96ed8878ce1a131cd49fb379206
+RMD160 (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = c21cf9efe998c325efe26c0fc7f74fc80814cd13
+Size (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = 10712382 bytes
+SHA1 (suse131/libqt4-x11-4.8.5-5.17.1.x86_64.rpm) = 6466d57d6e614eb2bef14bd9c10107bc405bc3e6
+RMD160 (suse131/libqt4-x11-4.8.5-5.17.1.x86_64.rpm) = 96beb6d5143816e3a5f924605c81c13d13051ed9
+Size (suse131/libqt4-x11-4.8.5-5.17.1.x86_64.rpm) = 10630303 bytes

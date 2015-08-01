@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.1 2014/04/17 00:08:34 wiz Exp $
+$NetBSD: distinfo,v 1.1.10.1 2015/08/01 09:19:55 tron Exp $
 
-SHA1 (suse131/libSDL-1_2-0-1.2.15-10.1.2.i586.rpm) = bfb8c3a8e63abb73a01f5fcad64560dc353ddab3
-RMD160 (suse131/libSDL-1_2-0-1.2.15-10.1.2.i586.rpm) = 5b50845a4060e7584fc8a5e0279ef4d22b6ae1c4
-Size (suse131/libSDL-1_2-0-1.2.15-10.1.2.i586.rpm) = 181198 bytes
+SHA1 (suse131/libSDL-1_2-0-1.2.15-10.4.1.i586.rpm) = 1c4d17a53bece6243cb3e6dd11c36d50f851a4f4
+RMD160 (suse131/libSDL-1_2-0-1.2.15-10.4.1.i586.rpm) = e6e4513cc5dcbcc17eec9a0f2bb0c5549765b43c
+Size (suse131/libSDL-1_2-0-1.2.15-10.4.1.i586.rpm) = 181554 bytes
+SHA1 (suse131/libSDL-1_2-0-1.2.15-10.4.1.x86_64.rpm) = 251d25e08b88d86a93547472e492594ad525e125
+RMD160 (suse131/libSDL-1_2-0-1.2.15-10.4.1.x86_64.rpm) = ae98807ffb32f9fb515cfe0fa559f3045a86ef9c
+Size (suse131/libSDL-1_2-0-1.2.15-10.4.1.x86_64.rpm) = 178366 bytes
 SHA1 (suse131/libSDL_image-1_2-0-1.2.12-6.1.2.i586.rpm) = 7b8981bd9bd8bf6856102ec8cb13ed78fb988b08
 RMD160 (suse131/libSDL_image-1_2-0-1.2.12-6.1.2.i586.rpm) = 4d27732e267d661dc495246fbf7c05b322c0ca31
 Size (suse131/libSDL_image-1_2-0-1.2.12-6.1.2.i586.rpm) = 32267 bytes
-SHA1 (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.i586.rpm) = 90b0f7dc051a400c2a445332a2df9ef281abc405
-RMD160 (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.i586.rpm) = 2e767edf7f529d9dd3dde0a86b1fe9d1c0b90903
-Size (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.i586.rpm) = 19532 bytes
-SHA1 (suse131/libSDL-1_2-0-1.2.15-10.1.2.x86_64.rpm) = 7b6a8fe9d0da1a49f3cf9d27e54a1d9319045898
-RMD160 (suse131/libSDL-1_2-0-1.2.15-10.1.2.x86_64.rpm) = 028457212a94ef05b3e1a6d03e0f588a459116d0
-Size (suse131/libSDL-1_2-0-1.2.15-10.1.2.x86_64.rpm) = 178153 bytes
 SHA1 (suse131/libSDL_image-1_2-0-1.2.12-6.1.2.x86_64.rpm) = 38d8418c25748423f9267e25dcaba6f95d74428a
 RMD160 (suse131/libSDL_image-1_2-0-1.2.12-6.1.2.x86_64.rpm) = 8c71ef9d77f32429fb9ec335d87f74b215901513
 Size (suse131/libSDL_image-1_2-0-1.2.12-6.1.2.x86_64.rpm) = 32828 bytes
+SHA1 (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.i586.rpm) = 90b0f7dc051a400c2a445332a2df9ef281abc405
+RMD160 (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.i586.rpm) = 2e767edf7f529d9dd3dde0a86b1fe9d1c0b90903
+Size (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.i586.rpm) = 19532 bytes
 SHA1 (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.x86_64.rpm) = e0d699038237488dac587417f58e44af6a320a10
 RMD160 (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.x86_64.rpm) = f8b8db90be88159098084f52eb96ec08eea3a1f5
 Size (suse131/libSDL_ttf-2_0-0-2.0.11-2.1.1.x86_64.rpm) = 19804 bytes
