@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3192 2015/08/01 02:38:58 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3193 2015/08/01 08:19:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5870,7 +5870,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/ibus-mozc to 2.17.2106.102 [ryoon 2015-07-31]
 	Updated inputmethod/uim-mozc to 2.17.2106.102 [ryoon 2015-07-31]
 	Updated devel/jq to 1.4 [ryoon 2015-07-31]
-	Copied lang/go to lang/go14 [bsiegert 2015-07-31]
+	Renamed lang/go to lang/go14 [bsiegert 2015-07-31]
 	Removed devel/p5-Coro [wiz 2015-07-31]
 	Removed net/p5-Net-RabbitFoot [wiz 2015-07-31]
 	Removed net/p5-Net-Server-Coro [wiz 2015-07-31]
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001032 [wen 2015-08-01]
 	Updated devel/p5-Moose to 2.1600 [wen 2015-08-01]
 	Updated cad/gtkwave to 3.3.66 [mef 2015-08-01]
+	Updated www/py-cherrypy to 3.8.0 [adam 2015-08-01]
