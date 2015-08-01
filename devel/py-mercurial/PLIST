@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/05/03 09:49:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/01 10:12:13 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -325,6 +325,7 @@ ${PYSITELIB}/mercurial/help/patterns.txt
 ${PYSITELIB}/mercurial/help/phases.txt
 ${PYSITELIB}/mercurial/help/revisions.txt
 ${PYSITELIB}/mercurial/help/revsets.txt
+${PYSITELIB}/mercurial/help/scripting.txt
 ${PYSITELIB}/mercurial/help/subrepos.txt
 ${PYSITELIB}/mercurial/help/templates.txt
 ${PYSITELIB}/mercurial/help/urls.txt
@@ -382,9 +383,6 @@ ${PYSITELIB}/mercurial/httppeer.pyo
 ${PYSITELIB}/mercurial/i18n.py
 ${PYSITELIB}/mercurial/i18n.pyc
 ${PYSITELIB}/mercurial/i18n.pyo
-${PYSITELIB}/mercurial/ignore.py
-${PYSITELIB}/mercurial/ignore.pyc
-${PYSITELIB}/mercurial/ignore.pyo
 ${PYSITELIB}/mercurial/keepalive.py
 ${PYSITELIB}/mercurial/keepalive.pyc
 ${PYSITELIB}/mercurial/keepalive.pyo
@@ -460,6 +458,9 @@ ${PYSITELIB}/mercurial/phases.pyo
 ${PYSITELIB}/mercurial/posix.py
 ${PYSITELIB}/mercurial/posix.pyc
 ${PYSITELIB}/mercurial/posix.pyo
+${PYSITELIB}/mercurial/progress.py
+${PYSITELIB}/mercurial/progress.pyc
+${PYSITELIB}/mercurial/progress.pyo
 ${PYSITELIB}/mercurial/pushkey.py
 ${PYSITELIB}/mercurial/pushkey.pyc
 ${PYSITELIB}/mercurial/pushkey.pyo
@@ -580,6 +581,7 @@ ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
 ${PYSITELIB}/mercurial/templates/map-cmdline.phases
+${PYSITELIB}/mercurial/templates/map-cmdline.status
 ${PYSITELIB}/mercurial/templates/map-cmdline.xml
 ${PYSITELIB}/mercurial/templates/monoblue/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/branches.tmpl
