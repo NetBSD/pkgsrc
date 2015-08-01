@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3194 2015/08/01 09:36:55 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3195 2015/08/01 10:12:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-nose to 1.3.7 [adam 2015-08-01]
 	Updated databases/py-sqlalchemy to 1.0.8 [adam 2015-08-01]
 	Updated databases/mysql-connector-c++ to 1.1.6 [adam 2015-08-01]
+	Updated devel/py-mercurial to 3.5 [wiz 2015-08-01]
