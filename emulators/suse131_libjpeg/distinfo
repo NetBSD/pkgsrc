@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+$NetBSD: distinfo,v 1.1.14.1 2015/08/01 09:19:55 tron Exp $
 
-SHA1 (suse131/libjpeg62-62.0.0-24.1.3.i586.rpm) = e92e9af64bd666f70888f12d275766593ea7c545
-RMD160 (suse131/libjpeg62-62.0.0-24.1.3.i586.rpm) = 3dd0cb948a5a7c090e52006b4c7337e46fb2298a
-Size (suse131/libjpeg62-62.0.0-24.1.3.i586.rpm) = 97161 bytes
-SHA1 (suse131/libjpeg62-62.0.0-24.1.3.x86_64.rpm) = 9c09930d21a0cc90e9c59667b4cfe5ccb8bb8fd7
-RMD160 (suse131/libjpeg62-62.0.0-24.1.3.x86_64.rpm) = 3f94047d7f14413245d64b562818b5d62b3faf30
-Size (suse131/libjpeg62-62.0.0-24.1.3.x86_64.rpm) = 94785 bytes
-SHA1 (suse131/libjpeg8-8.0.2-24.1.3.i586.rpm) = 385c734551e2f56efcb3f06384bb15959c055648
-RMD160 (suse131/libjpeg8-8.0.2-24.1.3.i586.rpm) = 5068a3b763f8f5a8726fcae3fb0c1cb44a26fefd
-Size (suse131/libjpeg8-8.0.2-24.1.3.i586.rpm) = 97867 bytes
-SHA1 (suse131/libjpeg8-8.0.2-24.1.3.x86_64.rpm) = 5d3dee0f4806c86598246a7978ec037a8dabe2c8
-RMD160 (suse131/libjpeg8-8.0.2-24.1.3.x86_64.rpm) = 69a0dfdfecb3aef6e0133ae7f1fc7678de04dd48
-Size (suse131/libjpeg8-8.0.2-24.1.3.x86_64.rpm) = 95354 bytes
+SHA1 (suse131/libjpeg62-62.0.0-24.4.1.i586.rpm) = c67fe93ecde95aeae2168514672391d585a7fc32
+RMD160 (suse131/libjpeg62-62.0.0-24.4.1.i586.rpm) = 71f8285f9b3aa7e6505cc60ab0459721f75fec63
+Size (suse131/libjpeg62-62.0.0-24.4.1.i586.rpm) = 97330 bytes
+SHA1 (suse131/libjpeg62-62.0.0-24.4.1.x86_64.rpm) = d9fc21fc096025bd8bf00500f2b245a6e387aadc
+RMD160 (suse131/libjpeg62-62.0.0-24.4.1.x86_64.rpm) = d865217a2bcb11d3b6a2ec3dcca2e47ac0f9ddf9
+Size (suse131/libjpeg62-62.0.0-24.4.1.x86_64.rpm) = 94903 bytes
+SHA1 (suse131/libjpeg8-8.0.2-24.4.1.i586.rpm) = cf923281cf0b8a1c47601295f70f03eaf43de9af
+RMD160 (suse131/libjpeg8-8.0.2-24.4.1.i586.rpm) = 7bab811e391113b983d6dd85a1e2e92c08ce01fb
+Size (suse131/libjpeg8-8.0.2-24.4.1.i586.rpm) = 97963 bytes
+SHA1 (suse131/libjpeg8-8.0.2-24.4.1.x86_64.rpm) = 5caf703dfcb881d7ebc0f55933a23dc9066cb321
+RMD160 (suse131/libjpeg8-8.0.2-24.4.1.x86_64.rpm) = 21939e7ac723acd93e033cc23025c9edf95db733
+Size (suse131/libjpeg8-8.0.2-24.4.1.x86_64.rpm) = 95513 bytes
