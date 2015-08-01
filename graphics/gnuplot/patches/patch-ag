@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2015/03/03 15:22:20 mef Exp $
+$NetBSD: patch-ag,v 1.8 2015/08/01 01:29:00 mef Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
@@ -14,8 +14,8 @@ Also get rid of a non-portable "test ... ==" instance.
 -  withval=$with_aquaterm; if test "$withval" == yes; then
 +  withval=$with_aquaterm; if test "$withval" = yes; then
  
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Aquaterm framework presence" >&5
- $as_echo_n "checking for Aquaterm framework presence... " >&6; }
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for AquaTerm framework presence" >&5
+ $as_echo_n "checking for AquaTerm framework presence... " >&6; }
 @@ -10164,9 +10164,9 @@ fi
  
  $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
