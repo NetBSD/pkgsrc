@@ -1,8 +1,8 @@
-$NetBSD: patch-src_gui_curses_CMakeLists_txt,v 1.4 2015/04/30 11:36:54 joerg Exp $
+$NetBSD: patch-src_gui_curses_CMakeLists_txt,v 1.5 2015/08/01 19:10:15 tonio Exp $
 
 Test for ncursesw
 
---- src/gui/curses/CMakeLists.txt.orig	2014-08-15 08:09:01.000000000 +0000
+--- src/gui/curses/CMakeLists.txt.orig	2015-05-10 07:24:50.000000000 +0000
 +++ src/gui/curses/CMakeLists.txt
 @@ -37,9 +37,11 @@ set(EXECUTABLE weechat)
  
@@ -28,18 +28,9 @@ Test for ncursesw
  list(APPEND EXTRA_LIBS "pthread")
  
  if(ICONV_LIBRARY)
-@@ -85,14 +91,3 @@ add_dependencies(${EXECUTABLE} weechat_g
- target_link_libraries(${EXECUTABLE} ${STATIC_LIBS} weechat_gui_curses ${EXTRA_LIBS} ${STATIC_LIBS})
+@@ -103,4 +109,4 @@ list(APPEND CMAKE_INSTALL_MANIFEST_FILES
  
+ # Install executable and symbolic link
  install(TARGETS ${EXECUTABLE} RUNTIME DESTINATION bin)
--
--# Create a symbolic link weechat-curses -> weechat
--# This link is created for compatibility with old versions on /upgrade.
--# It may be removed in future.
--install(CODE "
--  EXECUTE_PROCESS(
--    COMMAND ${CMAKE_COMMAND} -E remove -f \"\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/weechat-curses${CMAKE_EXECUTABLE_SUFFIX}\"
--    COMMAND ${CMAKE_COMMAND} -E create_symlink weechat${CMAKE_EXECUTABLE_SUFFIX} \"\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/weechat-curses${CMAKE_EXECUTABLE_SUFFIX}\"
--  )
--  LIST(APPEND CMAKE_INSTALL_MANIFEST_FILES \"${CMAKE_INSTALL_PREFIX}/bin/weechat-curses${CMAKE_EXECUTABLE_SUFFIX}\")
--")
+-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${EXECUTABLE}-curses${CMAKE_EXECUTABLE_SUFFIX} DESTINATION bin)
++
