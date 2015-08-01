@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/12/31 13:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/01 08:17:43 adam Exp $
 
-DISTNAME=	CherryPy-3.6.0
+DISTNAME=	CherryPy-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/C/CherryPy/
