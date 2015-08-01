@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.32 2015/04/30 11:36:54 joerg Exp $
+$NetBSD: distinfo,v 1.33 2015/08/01 19:10:15 tonio Exp $
 
-SHA1 (weechat-1.0.tar.bz2) = d3070ffde05cb706d615144e71f933153871894d
-RMD160 (weechat-1.0.tar.bz2) = d36e7144884a0779b8242ac5e35f4e3c6379af65
-Size (weechat-1.0.tar.bz2) = 2275868 bytes
-SHA1 (patch-ab) = d0fac0994602dfa0afde9fe14487f44f8cce25d6
-SHA1 (patch-po_CMakeLists.txt) = d6b1fad4ec4026f319f19fb581af93a196f6e78b
-SHA1 (patch-src_gui_curses_CMakeLists_txt) = b96a789692e60c824e7f1d3a3fdd0c91d98d50ba
-SHA1 (patch-src_gui_curses_gui-curses-term_c) = d1a2d4f08c6df0007e2d6cb1771c889c7b2441c6
+SHA1 (weechat-1.2.tar.bz2) = 494c14ee078f9670a9434b842bd8d61107168021
+RMD160 (weechat-1.2.tar.bz2) = 9db8427595ceec939d0c0195cef4dfa67d8c4cdd
+Size (weechat-1.2.tar.bz2) = 2367277 bytes
+SHA1 (patch-ab) = 2a4583e0f5b0336e8c42ad9eb5a65bbec4730207
+SHA1 (patch-po_CMakeLists.txt) = 9b97a4a4da4175e31ea53352fd0b95e1c985ba1e
+SHA1 (patch-src_gui_curses_CMakeLists_txt) = 28a1b3b9920cc130d0454a18b111d37b8090038b
+SHA1 (patch-src_gui_curses_gui-curses-term_c) = 900af9a94e74f229b32031bfeced1b85ea3a0ccf
 SHA1 (patch-src_plugins_charset_charset.c) = f0b6e5268908caab5efa8048c8a55b0083ec0ca4
-SHA1 (patch-src_plugins_weechat-plugin.h) = 52971fbb702355993fc9f55bfec19bae177f4dcb

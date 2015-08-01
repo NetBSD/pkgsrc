@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gui_curses_gui-curses-term_c,v 1.4 2014/08/24 12:45:35 tonio Exp $
+$NetBSD: patch-src_gui_curses_gui-curses-term_c,v 1.5 2015/08/01 19:10:15 tonio Exp $
 
 Include <ncurses/term.h>, not <ncursesw/term.h>.
 Check for HAVE_NCURSES_TERM_H, not for HAVE_NCURSES_CURSES_H.
@@ -6,9 +6,9 @@ Check for HAVE_NCURSES_TERM_H, not for HAVE_NCURSES_CURSES_H.
 Workaround for build failure on early NetBSD 6.99.* and prerelease 6.0
 (PR 46492)
 
---- src/gui/curses/gui-curses-term.c.orig	2014-08-15 08:09:01.000000000 +0000
+--- src/gui/curses/gui-curses-term.c.orig	2015-05-10 07:24:50.000000000 +0000
 +++ src/gui/curses/gui-curses-term.c
-@@ -23,13 +23,13 @@
+@@ -23,15 +23,15 @@
  #include "config.h"
  #endif
  
@@ -18,14 +18,18 @@ Workaround for build failure on early NetBSD 6.99.* and prerelease 6.0
  #include <ncurses/term.h>
  #else
 -#include <ncursesw/term.h>
+-#endif /* __sun */
+-#else
 +#ifdef __NetBSD__
 +/* workaround for build failure on early 6.99.* and prerelease 6.0 */
 +#include <sys/cdefs.h>
- #endif
--#else
++#endif
  #include <term.h>
- #endif
+-#endif /* HAVE_NCURSESW_CURSES_H */
++#endif /* HAVE_NCURSESW_TERM_H */
  
+ 
+ /*
 @@ -45,7 +45,7 @@
  void
  gui_term_set_eat_newline_glitch (int value)
