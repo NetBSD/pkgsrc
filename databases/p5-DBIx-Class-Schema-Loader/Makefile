@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2015/07/12 18:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/08/01 00:24:56 wen Exp $
 
-DISTNAME=	DBIx-Class-Schema-Loader-0.07042
+DISTNAME=	DBIx-Class-Schema-Loader-0.07043
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -41,14 +40,12 @@ DEPENDS+=	p5-Hash-Merge>=0.12:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-Lingua-EN-Inflect-Number>=1.1:../../textproc/p5-Lingua-EN-Inflect-Number
 DEPENDS+=	p5-Lingua-EN-Inflect-Phrase>=0.15:../../textproc/p5-Lingua-EN-Inflect-Phrase
 DEPENDS+=	p5-Lingua-EN-Tagger>=0.23:../../textproc/p5-Lingua-EN-Tagger
-DEPENDS+=	p5-List-MoreUtils>=0.32:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-MRO-Compat>=0.09:../../devel/p5-MRO-Compat
 #DEPENDS+=	{perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
 #DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Scope-Guard>=0.20:../../devel/p5-Scope-Guard
 DEPENDS+=	p5-String-CamelCase>=0.02:../../textproc/p5-String-CamelCase
 DEPENDS+=	p5-String-ToIdentifier-EN>=0.05:../../textproc/p5-String-ToIdentifier-EN
-DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-clean>=0.23:../../devel/p5-namespace-clean
