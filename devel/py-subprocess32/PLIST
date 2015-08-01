@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/01 15:29:43 bsiegert Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/_posixsubprocess.so
+${PYSITELIB}/subprocess32.py
+${PYSITELIB}/subprocess32.pyc
+${PYSITELIB}/subprocess32.pyo
