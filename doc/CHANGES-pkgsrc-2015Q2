@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.14 2015/07/26 19:58:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.15 2015/08/01 09:21:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -59,3 +59,33 @@ Pullup ticket #4781 - requested by bsiegert
 net/gcloud-golang-metadata: build fix
 Pullup ticket #4782 - requested by bsiegert
 net/socat: security update
+Pullup ticket #4783 - requested by he
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4784 - requested by taca
+net/bind99: security update
+Pullup ticket #4785 - requested by taca
+net/bind910: security update
+Pullup ticket #4786 - requested by taca
+security/openssh: security patch
+Pullup ticket #4787 - requested by wiz
+emulators/suse131_base: security update
+emulators/suse131_freetype2: security update
+emulators/suse131_glib2: security update
+emulators/suse131_glx: security update
+emulators/suse131_gtk2: security update
+emulators/suse131_krb5: security update
+emulators/suse131_libSDL: security update
+emulators/suse131_libcups: security update
+emulators/suse131_libcurl: security update
+emulators/suse131_libdbus: security update
+emulators/suse131_libidn: security update
+emulators/suse131_libjpeg: security update
+emulators/suse131_libsndfile: security update
+emulators/suse131_libssh: security update
+emulators/suse131_libtiff: security update
+emulators/suse131_locale: security update
+emulators/suse131_mozilla-nspr: security update
+emulators/suse131_mozilla-nss: security update
+emulators/suse131_openssl: security update
+emulators/suse131_qt4: security update
+emulators/suse131_x11: security update
