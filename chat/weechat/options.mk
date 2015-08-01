@@ -1,19 +1,12 @@
-# $NetBSD: options.mk,v 1.11 2014/05/03 13:27:33 alnsn Exp $
+# $NetBSD: options.mk,v 1.12 2015/08/01 19:10:15 tonio Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
-PKG_SUPPORTED_OPTIONS=	charset gnutls python lua wide-curses perl ruby
-PKG_SUGGESTED_OPTIONS=	charset gnutls
+PKG_SUPPORTED_OPTIONS=	gnutls python lua wide-curses perl ruby
+PKG_SUGGESTED_OPTIONS=	gnutls
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		charset lua plugin python perl ruby
-
-.if !empty(PKG_OPTIONS:Mcharset)
-CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=ON
-PLIST.charset=		yes
-.else
-CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=OFF
-.endif
+PLIST_VARS+=		lua plugin python perl ruby
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
@@ -54,14 +47,14 @@ CMAKE_ARGS+=		-DENABLE_PERL:BOOL=OFF
 .if !empty(PKG_OPTIONS:Mruby)
 .include "../../lang/ruby/buildlink3.mk"
 CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=ON
-USE_TOOLS+=		ruby
 PLIST.ruby=		yes
+BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_INC}
+BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
 .else
 CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython) || \
-    !empty(PKG_OPTIONS:Mlua) || \
-    !empty(PKG_OPTIONS:Mcharset)
+    !empty(PKG_OPTIONS:Mlua)
 PLIST.plugin=		yes
 .endif
