@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3189 2015/08/01 02:00:42 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3190 2015/08/01 02:10:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5888,3 +5888,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gnuplot to 5.0.1 [mef 2015-08-01]
 	Updated devel/p5-autodie to 0.29 [wen 2015-08-01]
 	Added devel/p5-Test-TempDir-Tiny version 0.004 [wen 2015-08-01]
+	Updated databases/p5-DBIx-Class-Fixtures to 1.001032 [wen 2015-08-01]
