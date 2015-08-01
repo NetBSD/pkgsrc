@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.91.2.1 2015/07/14 22:03:39 tron Exp $
+$NetBSD: distinfo,v 1.91.2.2 2015/08/01 08:56:59 tron Exp $
 
 SHA1 (openssh-6.9p1-hpn-20150709.diff.gz) = a39571c1cdb13382631a1d9cfe89b82fb346c92c
 RMD160 (openssh-6.9p1-hpn-20150709.diff.gz) = 8bb077e7ecbc7550386a050209e84d6f4d895788
@@ -11,6 +11,7 @@ SHA1 (patch-auth-passwd.c) = 32da596dd9b255ffdd8168e6ea6f62596304b116
 SHA1 (patch-auth-rhosts.c) = 5752c384f1fd81ed6ef21707fa2b9743a3891987
 SHA1 (patch-auth.c) = 80f1c5ad8ea01a3c9dedce4eef1b625640958450
 SHA1 (patch-auth1.c) = 0bb4bc35e2ca2cd03c5596dadcd2ffb4329091a7
+SHA1 (patch-auth2-chall.c) = 9edd679fc0a1d128786cea8939e804adb400c3c9
 SHA1 (patch-auth2.c) = 831139b9cdbd9b4d3429ea1aba176daf78be3405
 SHA1 (patch-channels.c) = 9ad160fd1c2c7fabbea3d49dacb36036d13adfaa
 SHA1 (patch-clientloop.c) = 11d44815ec39030ae20cb75727acff8c8e91144e
