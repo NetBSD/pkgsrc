@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/03/15 14:04:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/08/01 09:30:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,9 +13,6 @@ ${PYSITELIB}/sqlalchemy/connectors/__init__.pyo
 ${PYSITELIB}/sqlalchemy/connectors/mxodbc.py
 ${PYSITELIB}/sqlalchemy/connectors/mxodbc.pyc
 ${PYSITELIB}/sqlalchemy/connectors/mxodbc.pyo
-${PYSITELIB}/sqlalchemy/connectors/mysqldb.py
-${PYSITELIB}/sqlalchemy/connectors/mysqldb.pyc
-${PYSITELIB}/sqlalchemy/connectors/mysqldb.pyo
 ${PYSITELIB}/sqlalchemy/connectors/pyodbc.py
 ${PYSITELIB}/sqlalchemy/connectors/pyodbc.pyc
 ${PYSITELIB}/sqlalchemy/connectors/pyodbc.pyo
@@ -31,15 +28,6 @@ ${PYSITELIB}/sqlalchemy/databases/__init__.pyo
 ${PYSITELIB}/sqlalchemy/dialects/__init__.py
 ${PYSITELIB}/sqlalchemy/dialects/__init__.pyc
 ${PYSITELIB}/sqlalchemy/dialects/__init__.pyo
-${PYSITELIB}/sqlalchemy/dialects/drizzle/__init__.py
-${PYSITELIB}/sqlalchemy/dialects/drizzle/__init__.pyc
-${PYSITELIB}/sqlalchemy/dialects/drizzle/__init__.pyo
-${PYSITELIB}/sqlalchemy/dialects/drizzle/base.py
-${PYSITELIB}/sqlalchemy/dialects/drizzle/base.pyc
-${PYSITELIB}/sqlalchemy/dialects/drizzle/base.pyo
-${PYSITELIB}/sqlalchemy/dialects/drizzle/mysqldb.py
-${PYSITELIB}/sqlalchemy/dialects/drizzle/mysqldb.pyc
-${PYSITELIB}/sqlalchemy/dialects/drizzle/mysqldb.pyo
 ${PYSITELIB}/sqlalchemy/dialects/firebird/__init__.py
 ${PYSITELIB}/sqlalchemy/dialects/firebird/__init__.pyc
 ${PYSITELIB}/sqlalchemy/dialects/firebird/__init__.pyo
@@ -142,6 +130,9 @@ ${PYSITELIB}/sqlalchemy/dialects/postgresql/pg8000.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.pyo
+${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2cffi.py
+${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2cffi.pyc
+${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2cffi.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pypostgresql.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pypostgresql.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pypostgresql.pyo
@@ -241,6 +232,9 @@ ${PYSITELIB}/sqlalchemy/ext/associationproxy.pyo
 ${PYSITELIB}/sqlalchemy/ext/automap.py
 ${PYSITELIB}/sqlalchemy/ext/automap.pyc
 ${PYSITELIB}/sqlalchemy/ext/automap.pyo
+${PYSITELIB}/sqlalchemy/ext/baked.py
+${PYSITELIB}/sqlalchemy/ext/baked.pyc
+${PYSITELIB}/sqlalchemy/ext/baked.pyo
 ${PYSITELIB}/sqlalchemy/ext/compiler.py
 ${PYSITELIB}/sqlalchemy/ext/compiler.pyc
 ${PYSITELIB}/sqlalchemy/ext/compiler.pyo
@@ -391,6 +385,9 @@ ${PYSITELIB}/sqlalchemy/sql/base.pyo
 ${PYSITELIB}/sqlalchemy/sql/compiler.py
 ${PYSITELIB}/sqlalchemy/sql/compiler.pyc
 ${PYSITELIB}/sqlalchemy/sql/compiler.pyo
+${PYSITELIB}/sqlalchemy/sql/crud.py
+${PYSITELIB}/sqlalchemy/sql/crud.pyc
+${PYSITELIB}/sqlalchemy/sql/crud.pyo
 ${PYSITELIB}/sqlalchemy/sql/ddl.py
 ${PYSITELIB}/sqlalchemy/sql/ddl.pyc
 ${PYSITELIB}/sqlalchemy/sql/ddl.pyo
@@ -469,6 +466,9 @@ ${PYSITELIB}/sqlalchemy/testing/pickleable.pyo
 ${PYSITELIB}/sqlalchemy/testing/plugin/__init__.py
 ${PYSITELIB}/sqlalchemy/testing/plugin/__init__.pyc
 ${PYSITELIB}/sqlalchemy/testing/plugin/__init__.pyo
+${PYSITELIB}/sqlalchemy/testing/plugin/bootstrap.py
+${PYSITELIB}/sqlalchemy/testing/plugin/bootstrap.pyc
+${PYSITELIB}/sqlalchemy/testing/plugin/bootstrap.pyo
 ${PYSITELIB}/sqlalchemy/testing/plugin/noseplugin.py
 ${PYSITELIB}/sqlalchemy/testing/plugin/noseplugin.pyc
 ${PYSITELIB}/sqlalchemy/testing/plugin/noseplugin.pyo
@@ -481,6 +481,12 @@ ${PYSITELIB}/sqlalchemy/testing/plugin/pytestplugin.pyo
 ${PYSITELIB}/sqlalchemy/testing/profiling.py
 ${PYSITELIB}/sqlalchemy/testing/profiling.pyc
 ${PYSITELIB}/sqlalchemy/testing/profiling.pyo
+${PYSITELIB}/sqlalchemy/testing/provision.py
+${PYSITELIB}/sqlalchemy/testing/provision.pyc
+${PYSITELIB}/sqlalchemy/testing/provision.pyo
+${PYSITELIB}/sqlalchemy/testing/replay_fixture.py
+${PYSITELIB}/sqlalchemy/testing/replay_fixture.pyc
+${PYSITELIB}/sqlalchemy/testing/replay_fixture.pyo
 ${PYSITELIB}/sqlalchemy/testing/requirements.py
 ${PYSITELIB}/sqlalchemy/testing/requirements.pyc
 ${PYSITELIB}/sqlalchemy/testing/requirements.pyo
@@ -496,6 +502,9 @@ ${PYSITELIB}/sqlalchemy/testing/suite/__init__.pyo
 ${PYSITELIB}/sqlalchemy/testing/suite/test_ddl.py
 ${PYSITELIB}/sqlalchemy/testing/suite/test_ddl.pyc
 ${PYSITELIB}/sqlalchemy/testing/suite/test_ddl.pyo
+${PYSITELIB}/sqlalchemy/testing/suite/test_dialect.py
+${PYSITELIB}/sqlalchemy/testing/suite/test_dialect.pyc
+${PYSITELIB}/sqlalchemy/testing/suite/test_dialect.pyo
 ${PYSITELIB}/sqlalchemy/testing/suite/test_insert.py
 ${PYSITELIB}/sqlalchemy/testing/suite/test_insert.pyc
 ${PYSITELIB}/sqlalchemy/testing/suite/test_insert.pyo
