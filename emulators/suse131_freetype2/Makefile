@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.4.4.1 2015/08/01 09:19:54 tron Exp $
 
 PKGNAME=	suse_freetype2-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-RPMPKGS+=	libfreetype6-2.5.0.1-2.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libfreetype6-2.5.0.1-2.4.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for freetype-2.x

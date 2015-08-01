@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.10 2015/04/09 10:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2015/08/01 09:19:55 tron Exp $
 
 PKGNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
-RPMPKGS+=	libcairo2-1.12.16-3.1.3.${SUSE_ARCH}
 RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.30.1-20.1.${SUSE_ARCH}
-RPMPKGS+=	gtk2-tools-2.24.22-2.1.${SUSE_ARCH}
-RPMPKGS+=	pango-tools-1.36.0-1.1.${SUSE_ARCH}
+RPMUPDPKGS+=	gtk2-tools-2.24.23-7.1.${SUSE_ARCH}
 RPMPKGS+=	libIDL-2-0-0.8.14-18.1.3.${SUSE_ARCH}
 RPMPKGS+=	libatk-1_0-0-2.10.0-1.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libcairo2-1.12.16-3.4.1.${SUSE_ARCH}
 RPMUPDPKGS+=	libgdk_pixbuf-2_0-0-2.30.1-20.1.${SUSE_ARCH}
-RPMPKGS+=	libgtk-2_0-0-2.24.22-2.1.${SUSE_ARCH}
-RPMUPDPKGS+=	libjasper1-1.900.1-160.9.1.${SUSE_ARCH}
-RPMPKGS+=	orbit2-2.14.19-15.1.3.${SUSE_ARCH}
-RPMPKGS+=	libpango-1_0-0-1.36.0-1.1.${SUSE_ARCH}
-RPMPKGS+=	libpangox-1_0-0-0.0.2-4.1.3.${SUSE_ARCH}
-RPMPKGS+=	libharfbuzz0-0.9.21-1.3.${SUSE_ARCH}
 RPMPKGS+=	libgraphite2-3-1.2.0-6.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libgtk-2_0-0-2.24.23-7.1.${SUSE_ARCH}
+RPMPKGS+=	libharfbuzz0-0.9.21-1.3.${SUSE_ARCH}
+RPMUPDPKGS+=	libjasper1-1.900.1-160.13.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libpango-1_0-0-1.36.1-4.2.${SUSE_ARCH}
+RPMPKGS+=	libpangox-1_0-0-0.0.2-4.1.3.${SUSE_ARCH}
+RPMPKGS+=	orbit2-2.14.19-15.1.3.${SUSE_ARCH}
+RPMUPDPKGS+=	pango-tools-1.36.1-4.2.${SUSE_ARCH}
 RPMPKGS+=	shared-mime-info-1.1-2.1.3.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

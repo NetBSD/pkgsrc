@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2014/05/23 13:18:56 obache Exp $
+$NetBSD: distinfo,v 1.6.10.1 2015/08/01 09:19:56 tron Exp $
 
 SHA1 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = 7ae5e9e9b7a86221ddb5dc3bb7699133a65313d2
 RMD160 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = f9b31a84204ba4989f92de331612ed60fffdfe77
@@ -123,12 +123,12 @@ Size (suse131/libXfixes3-5.0.1-2.1.2.i586.rpm) = 10554 bytes
 SHA1 (suse131/libXfixes3-5.0.1-2.1.2.x86_64.rpm) = a7a5d4fa5f76368c99a7f4a8421efddd0d7f363b
 RMD160 (suse131/libXfixes3-5.0.1-2.1.2.x86_64.rpm) = 30ab18795468cdfebb812ba207475c92eb3c31ec
 Size (suse131/libXfixes3-5.0.1-2.1.2.x86_64.rpm) = 10857 bytes
-SHA1 (suse131/libXfont1-1.4.6-2.8.1.i586.rpm) = cb4588e9fdac13859a793d558252894540f8b0cd
-RMD160 (suse131/libXfont1-1.4.6-2.8.1.i586.rpm) = e2720339c4059efbaaab2ec2bea0a1e8cb08ff28
-Size (suse131/libXfont1-1.4.6-2.8.1.i586.rpm) = 113171 bytes
-SHA1 (suse131/libXfont1-1.4.6-2.8.1.x86_64.rpm) = 0dd1d1498ee6ccb1ba5c6991ea18d540f856445f
-RMD160 (suse131/libXfont1-1.4.6-2.8.1.x86_64.rpm) = f724cf94f299b4481a558936b701d4e44e7c2de3
-Size (suse131/libXfont1-1.4.6-2.8.1.x86_64.rpm) = 115763 bytes
+SHA1 (suse131/libXfont1-1.4.6-2.12.1.i586.rpm) = 1a07dea21192e241e23470bfa8029ba236527745
+RMD160 (suse131/libXfont1-1.4.6-2.12.1.i586.rpm) = d7f3bdd4a7ad14b3a7427c1aab6f8dfae225dfb4
+Size (suse131/libXfont1-1.4.6-2.12.1.i586.rpm) = 113514 bytes
+SHA1 (suse131/libXfont1-1.4.6-2.12.1.x86_64.rpm) = 94c7eac87e487ef8c6feea9c0a06473762b91522
+RMD160 (suse131/libXfont1-1.4.6-2.12.1.x86_64.rpm) = 03be1f077c5711469e426c1af5f95c6a62a5b22e
+Size (suse131/libXfont1-1.4.6-2.12.1.x86_64.rpm) = 116589 bytes
 SHA1 (suse131/libXfontcache1-1.0.5-9.1.2.i586.rpm) = a404bac6f7feb32d379d84ecd7ba1b8fa9b1f6c1
 RMD160 (suse131/libXfontcache1-1.0.5-9.1.2.i586.rpm) = 549258f5d0b399022acf5cc4c88c72be06d01ba2
 Size (suse131/libXfontcache1-1.0.5-9.1.2.i586.rpm) = 6043 bytes

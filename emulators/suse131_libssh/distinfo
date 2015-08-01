@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+$NetBSD: distinfo,v 1.1.14.1 2015/08/01 09:19:55 tron Exp $
 
-SHA1 (suse131/libssh2-1-1.4.3-7.1.2.i586.rpm) = eb5f62803f3da27f52c8ada30b2b6ee32268e336
-RMD160 (suse131/libssh2-1-1.4.3-7.1.2.i586.rpm) = c65b98f4ce74611081cf90b7baf8a2bd9cf55811
-Size (suse131/libssh2-1-1.4.3-7.1.2.i586.rpm) = 69791 bytes
-SHA1 (suse131/libssh2-1-1.4.3-7.1.2.x86_64.rpm) = df6057030a58080af3434b5cc3b550f3d1eee76e
-RMD160 (suse131/libssh2-1-1.4.3-7.1.2.x86_64.rpm) = f5d2ad3b62ecd9154f5dd917073d2af3664fb337
-Size (suse131/libssh2-1-1.4.3-7.1.2.x86_64.rpm) = 71260 bytes
+SHA1 (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = 26cebd184240298a6e6ec945fca93e507cd83d97
+RMD160 (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = a19ccca6e59c7a2affd580ab8f7bc25bb17861df
+Size (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = 75186 bytes
+SHA1 (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = 9e301e65bab47be6a14d03f6595f0df1e847b05b
+RMD160 (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = 7f7d5d9d53d4cd24998a21cd6fde217393de6fc0
+Size (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = 76344 bytes
