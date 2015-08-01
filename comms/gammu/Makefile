@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2014/11/23 09:45:57 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/01 15:40:25 bsiegert Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Command line utility and library to work with mobile phones
 
@@ -40,6 +42,7 @@ LDFLAGS.SunOS+=	-lintl
 post-install:
 	(cd ${DESTDIR}${PREFIX}/share/doc/gammu/manual; ${RM} -r */PaxHeaders*)
 
+.include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
