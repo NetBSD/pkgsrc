@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/08/01 15:29:43 bsiegert Exp $
+
+SHA1 (subprocess32-3.2.6.tar.gz) = 25242b79dba6e84982c2533c8b2403b31d8538e8
+RMD160 (subprocess32-3.2.6.tar.gz) = a35c508539c27565ec40c5a08d882e2a98eeac2d
+Size (subprocess32-3.2.6.tar.gz) = 51874 bytes
+SHA1 (patch-setup.py) = e506f4f43a43377ce6289c83bd9b2cc30ddef163

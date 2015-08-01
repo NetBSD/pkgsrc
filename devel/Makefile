@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2130 2015/08/01 01:57:23 wen Exp $
+# $NetBSD: Makefile,v 1.2131 2015/08/01 15:29:43 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -1749,6 +1749,7 @@ SUBDIR+=	py-singledispatch
 SUBDIR+=	py-speaklater
 SUBDIR+=	py-spwd
 SUBDIR+=	py-stompclient
+SUBDIR+=	py-subprocess32
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sysctl
