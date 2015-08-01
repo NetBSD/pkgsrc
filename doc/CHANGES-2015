@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3198 2015/08/01 15:49:54 richard Exp $
+$NetBSD: CHANGES-2015,v 1.3199 2015/08/01 19:10:53 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5899,3 +5899,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-subprocess32 version 3.2.6 [bsiegert 2015-08-01]
 	Updated comms/gammu to 1.33.0nb1 [wiz 2015-08-01]
 	Updated fonts/awesome-ttf to 4.4.0 [richard 2015-08-01]
+	Updated chat/weechat to 1.2 [tonio 2015-08-01]
