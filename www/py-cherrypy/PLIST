@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/07/22 09:52:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/01 08:17:43 adam Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -8,6 +8,9 @@ ${PYSITELIB}/cherrypy/LICENSE.txt
 ${PYSITELIB}/cherrypy/__init__.py
 ${PYSITELIB}/cherrypy/__init__.pyc
 ${PYSITELIB}/cherrypy/__init__.pyo
+${PYSITELIB}/cherrypy/__main__.py
+${PYSITELIB}/cherrypy/__main__.pyc
+${PYSITELIB}/cherrypy/__main__.pyo
 ${PYSITELIB}/cherrypy/_cpchecker.py
 ${PYSITELIB}/cherrypy/_cpchecker.pyc
 ${PYSITELIB}/cherrypy/_cpchecker.pyo
@@ -60,6 +63,9 @@ ${PYSITELIB}/cherrypy/_cpwsgi_server.py
 ${PYSITELIB}/cherrypy/_cpwsgi_server.pyc
 ${PYSITELIB}/cherrypy/_cpwsgi_server.pyo
 ${PYSITELIB}/cherrypy/cherryd
+${PYSITELIB}/cherrypy/daemon.pyc
+${PYSITELIB}/cherrypy/daemon.pyo
+${PYSITELIB}/cherrypy/daemon.py
 ${PYSITELIB}/cherrypy/favicon.ico
 ${PYSITELIB}/cherrypy/lib/__init__.py
 ${PYSITELIB}/cherrypy/lib/__init__.pyc
