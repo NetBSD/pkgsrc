@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/11/02 17:58:21 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/01 15:49:19 richard Exp $
 #
 
-DISTNAME=	font-awesome-4.2.0
-PKGNAME=	awesome-ttf-4.2.0
+DISTNAME=	font-awesome-4.4.0
+PKGNAME=	awesome-ttf-4.4.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://fortawesome.github.io/Font-Awesome/assets/
 EXTRACT_SUFX=	.zip
