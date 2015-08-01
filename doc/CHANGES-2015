@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3197 2015/08/01 15:41:31 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.3198 2015/08/01 15:49:54 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5898,3 +5898,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mercurial to 3.5 [wiz 2015-08-01]
 	Added devel/py-subprocess32 version 3.2.6 [bsiegert 2015-08-01]
 	Updated comms/gammu to 1.33.0nb1 [wiz 2015-08-01]
+	Updated fonts/awesome-ttf to 4.4.0 [richard 2015-08-01]
