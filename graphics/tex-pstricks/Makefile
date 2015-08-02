@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2015/04/22 00:11:23 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/02 13:23:06 markd Exp $
 
 DISTNAME=	pstricks
-PKGNAME=	tex-${DISTNAME}-2.60
-TEXLIVE_REV=	35439
+PKGNAME=	tex-${DISTNAME}-2.62a
+TEXLIVE_REV=	37970
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pstricks-base
 COMMENT=	PostScript macros for TeX
+LICENSE=	lppl-1.3c
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 DEPENDS+=	tex-auto-pst-pdf-[0-9]*:../../graphics/tex-auto-pst-pdf
