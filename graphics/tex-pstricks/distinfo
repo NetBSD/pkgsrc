@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/04/22 00:11:23 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/08/02 13:23:06 markd Exp $
 
-SHA1 (tex-pstricks-35439/pstricks.tar.xz) = bfc843a6ce91c34d5edf21a8bd9a444537ad925e
-RMD160 (tex-pstricks-35439/pstricks.tar.xz) = e8d7ace728a0bddf01c938757ddbd4f59b5c0124
-Size (tex-pstricks-35439/pstricks.tar.xz) = 72560 bytes
+SHA1 (tex-pstricks-37970/pstricks.tar.xz) = 125481adb93b3b41719317803146183f4b1a0fac
+RMD160 (tex-pstricks-37970/pstricks.tar.xz) = 86e51e35c8b54174c7c84b183d12f58b92620958
+Size (tex-pstricks-37970/pstricks.tar.xz) = 72884 bytes
