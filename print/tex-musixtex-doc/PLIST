@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/14 12:50:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/02 11:49:59 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-115.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-116.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-117.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-118.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc.txt
 share/texmf-dist/doc/generic/musixtex/README
 share/texmf-dist/doc/generic/musixtex/examples/8bitchar.tex
