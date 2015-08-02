@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/02 03:11:46 markd Exp $
 
 DISTNAME=	collection-luatex
 PKGNAME=	texlive-${DISTNAME}-2014pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	34908
+TEXLIVE_REV=	37811
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -14,6 +14,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 
 # depend checkcites
 # depend chickenize
+# depend cloze
 # depend enigma
 # depend interpreter
 # depend lua-check-hyphen
@@ -41,6 +42,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend selnolig
 # depend showhyphens
 # depend spelling
+# depend ucharcat
 
 META_PACKAGE=	yes
 
