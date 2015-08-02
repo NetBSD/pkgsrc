@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/02 01:59:51 markd Exp $
+share/texmf-dist/doc/latex/todo/README
+share/texmf-dist/doc/latex/todo/todo-spl.pdf
+share/texmf-dist/doc/latex/todo/todo-spl.tex
+share/texmf-dist/doc/latex/todo/todo.pdf
