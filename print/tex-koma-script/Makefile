@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2015/06/14 12:50:03 markd Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/02 13:10:05 markd Exp $
 
 DISTNAME=	koma-script
-PKGNAME=	tex-${DISTNAME}-3.17a
-TEXLIVE_REV=	37384
+PKGNAME=	tex-${DISTNAME}-3.18
+TEXLIVE_REV=	37734
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/koma-script
 COMMENT=	Bundle of versatile classes and packages
 LICENSE=	lppl-1.3c
 
