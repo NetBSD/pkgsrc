@@ -1,0 +1,4 @@
+The package provides tools to highlight FIXME and TODO annotations.
+
+The command \listofnotes prints a list of outstanding notes, with links
+to the pages on which they appear.
