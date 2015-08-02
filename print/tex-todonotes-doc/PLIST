@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/02 01:58:16 markd Exp $
+share/texmf-dist/doc/latex/todonotes/README
+share/texmf-dist/doc/latex/todonotes/examples/alterAppearenceOfListOfTodos.pdf
+share/texmf-dist/doc/latex/todonotes/examples/alterAppearenceOfListOfTodos.tex
+share/texmf-dist/doc/latex/todonotes/examples/externalize.pdf
+share/texmf-dist/doc/latex/todonotes/examples/externalize.tex
+share/texmf-dist/doc/latex/todonotes/examples/saveColorByUsingLayers.pdf
+share/texmf-dist/doc/latex/todonotes/examples/saveColorByUsingLayers.tex
+share/texmf-dist/doc/latex/todonotes/todonotes.pdf
