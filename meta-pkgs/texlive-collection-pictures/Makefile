@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/05/16 11:26:04 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/02 03:18:01 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36373
+TEXLIVE_REV=	37604
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -85,7 +85,6 @@ DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 # depend pgfmolbio
 # depend pgfopts
 DEPENDS+=	tex-pgfplots-[0-9]*:../../print/tex-pgfplots
-# depend piano
 DEPENDS+=	tex-picinpar-[0-9]*:../../print/tex-picinpar
 DEPENDS+=	tex-pict2e-[0-9]*:../../print/tex-pict2e
 DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
