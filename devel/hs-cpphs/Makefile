@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/06/04 20:08:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/02 11:33:26 szptvlfn Exp $
 
-DISTNAME=		cpphs-1.18.7
-PKGREVISION=		1
+DISTNAME=		cpphs-1.19.2
 CATEGORIES=		devel
 
 MAINTAINER=		esg@sdf.lonestar.org
