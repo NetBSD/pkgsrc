@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2015/06/14 12:50:04 markd Exp $
+# $NetBSD: Makefile,v 1.33 2015/08/02 11:49:59 markd Exp $
 
 DISTNAME=	musixtex
-PKGNAME=	tex-${DISTNAME}-1.16.20150421
-TEXLIVE_REV=	37025
+PKGNAME=	tex-${DISTNAME}-1.18
+TEXLIVE_REV=	37959
 
 MAINTAINER=	dgriffi@cs.csubak.edu
+HOMEPAGE=	http://ctan.org/pkg/musixtex
 COMMENT=	TeX macros for sophisticated music typesetting
 LICENSE=	gnu-gpl-v2
 
