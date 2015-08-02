@@ -1,0 +1,5 @@
+This package provides a complete Babel replacement for users of
+LuaLaTeX and XeLaTeX; it relies on the fontspec package,
+version 2.0 at least. This is the first release that supports
+use with LuaLaTeX; it should be considered "transitional" in
+that role.

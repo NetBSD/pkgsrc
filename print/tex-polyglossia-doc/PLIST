@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/02 02:02:15 markd Exp $
+share/texmf-dist/doc/latex/polyglossia/README
+share/texmf-dist/doc/latex/polyglossia/example-arabic.pdf
+share/texmf-dist/doc/latex/polyglossia/example-arabic.tex
+share/texmf-dist/doc/latex/polyglossia/example-korean.pdf
+share/texmf-dist/doc/latex/polyglossia/example-korean.tex
+share/texmf-dist/doc/latex/polyglossia/example-thai.pdf
+share/texmf-dist/doc/latex/polyglossia/example-thai.tex
+share/texmf-dist/doc/latex/polyglossia/examples.pdf
+share/texmf-dist/doc/latex/polyglossia/examples.tex
+share/texmf-dist/doc/latex/polyglossia/polyglossia.pdf
+share/texmf-dist/doc/latex/polyglossia/polyglossia.tex
