@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/08 04:47:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/02 10:23:12 markd Exp $
+share/texmf-dist/bibtex/bst/tufte-latex/tufte.bst
 share/texmf-dist/tex/latex/tufte-latex/tufte-book.cls
 share/texmf-dist/tex/latex/tufte-latex/tufte-common.def
 share/texmf-dist/tex/latex/tufte-latex/tufte-handout.cls
