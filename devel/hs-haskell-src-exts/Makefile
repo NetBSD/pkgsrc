@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/06/04 20:08:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/02 11:37:31 szptvlfn Exp $
 
 DISTNAME=	haskell-src-exts-1.16.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
