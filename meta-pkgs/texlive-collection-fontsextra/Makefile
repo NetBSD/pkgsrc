@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:51 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/02 02:56:36 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	37396
+TEXLIVE_REV=	37744
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -13,6 +13,7 @@ COMMENT=	Additional fonts for TeX
 DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-Asana-Math-[0-9]*:../../fonts/tex-Asana-Math
+# depend academicons
 DEPENDS+=	tex-accanthis-[0-9]*:../../fonts/tex-accanthis
 DEPENDS+=	tex-adforn-[0-9]*:../../fonts/tex-adforn
 DEPENDS+=	tex-adfsymbols-[0-9]*:../../fonts/tex-adfsymbols
@@ -70,6 +71,7 @@ DEPENDS+=	tex-cmll-[0-9]*:../../fonts/tex-cmll
 DEPENDS+=	tex-cmpica-[0-9]*:../../fonts/tex-cmpica
 DEPENDS+=	tex-cmtiup-[0-9]*:../../fonts/tex-cmtiup
 DEPENDS+=	tex-comfortaa-[0-9]*:../../fonts/tex-comfortaa
+# depend comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
 DEPENDS+=	tex-countriesofeurope-[0-9]*:../../fonts/tex-countriesofeurope
@@ -222,6 +224,7 @@ DEPENDS+=	tex-tfrupee-[0-9]*:../../fonts/tex-tfrupee
 DEPENDS+=	tex-tpslifonts-[0-9]*:../../print/tex-tpslifonts
 DEPENDS+=	tex-trajan-[0-9]*:../../fonts/tex-trajan
 DEPENDS+=	tex-txfontsb-[0-9]*:../../fonts/tex-txfontsb
+# depend typicons
 DEPENDS+=	tex-umtypewriter-[0-9]*:../../fonts/tex-umtypewriter
 DEPENDS+=	tex-universa-[0-9]*:../../fonts/tex-universa
 DEPENDS+=	tex-universalis-[0-9]*:../../fonts/tex-universalis
