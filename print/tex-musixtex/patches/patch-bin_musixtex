@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_musixtex,v 1.3 2015/04/23 12:33:29 markd Exp $
+$NetBSD: patch-bin_musixtex,v 1.4 2015/08/02 11:49:59 markd Exp $
 
 Fix paths to commands.
 
---- bin/musixtex.orig	2015-02-28 22:49:36.000000000 +0000
+--- bin/musixtex.orig	2015-07-26 22:48:40.000000000 +0000
 +++ bin/musixtex
-@@ -84,11 +84,11 @@ if #arg == 0 then
+@@ -91,11 +91,11 @@ if #arg == 0 then
  end
  
  -- defaults:
@@ -21,7 +21,7 @@ Fix paths to commands.
  intermediate = 1
  passes = 2
  index = 0
-@@ -104,19 +104,19 @@ repeat
+@@ -112,19 +112,19 @@ repeat
      os.exit(0)
    elseif this_arg == "-l" then
      if tex == "pdfetex" then
@@ -46,15 +46,15 @@ Fix paths to commands.
    elseif this_arg == "-s" then
      dvi = ""; ps2pdf = ""
    elseif this_arg == "-i" then
-@@ -124,9 +124,9 @@ repeat
+@@ -132,9 +132,9 @@ repeat
    elseif this_arg == "-1" then
      passes = 1
    elseif this_arg == "-f" then
--    tex = "etex"; dvi = dvips; ps2pdf = "ps2pdf"; intermediate = 1; passes = 2; index = 0
-+    tex = "@LOCALBASE@/bin/etex"; dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = "@LOCALBASE@/bin/ps2pdf"; intermediate = 1; passes = 2; index = 0
+-    tex = "etex"; dvi = dvips; ps2pdf = "ps2pdf"; intermediate = 1; passes = 2; index = 0; preprocess = 0
++    tex = "@LOCALBASE@/bin/etex"; dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = "@LOCALBASE@/bin/ps2pdf"; intermediate = 1; passes = 2; index = 0; preprocess = 0
    elseif this_arg == "-g" then
 -    dvi = dvips; ps2pdf = ""
 +    dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = ""
    elseif this_arg == "-x" then
      index = 1
-   elseif this_arg == "-F" then
+   elseif this_arg == "-a" then
