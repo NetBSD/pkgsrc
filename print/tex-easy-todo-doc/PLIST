@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/02 01:54:22 markd Exp $
+share/texmf-dist/doc/latex/easy-todo/LICENSE
+share/texmf-dist/doc/latex/easy-todo/README
+share/texmf-dist/doc/latex/easy-todo/easy-todo.pdf
+share/texmf-dist/doc/latex/easy-todo/easy-todo.tex
