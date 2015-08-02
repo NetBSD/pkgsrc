@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/02 12:43:51 markd Exp $
 
-SHA1 (tex-fontawesome-31020/fontawesome.doc.tar.xz) = 0a1695e6eea2448a30646b1cc0fff0a0bbc7e4a7
-RMD160 (tex-fontawesome-31020/fontawesome.doc.tar.xz) = 757a9f42e76486fcc4ef8b3cb9f62f159cbde80f
-Size (tex-fontawesome-31020/fontawesome.doc.tar.xz) = 147588 bytes
+SHA1 (tex-fontawesome-37890/fontawesome.doc.tar.xz) = b2b2c8069ca7b52aff2efcd955832017afeac9e5
+RMD160 (tex-fontawesome-37890/fontawesome.doc.tar.xz) = 66cf86d1e4a391453ea406a3aced43a1eb122ad7
+Size (tex-fontawesome-37890/fontawesome.doc.tar.xz) = 194724 bytes
