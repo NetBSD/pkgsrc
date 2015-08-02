@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 10:41:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/02 02:14:49 markd Exp $
 
 DISTNAME=	collection-xetex
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36312
@@ -24,7 +24,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend interchar
 # depend mathspec
 # depend philokalia
-# depend polyglossia
+DEPENDS+=	tex-polyglossia-[0-9]*:../../print/tex-polyglossia
 # depend ptext
 DEPENDS+=	tex-realscripts-[0-9]*:../../print/tex-realscripts
 # depend ucharclasses
