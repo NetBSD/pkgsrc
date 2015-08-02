@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/06/14 11:26:43 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/02 10:34:37 markd Exp $
 
 DISTNAME=	pst-barcode
-PKGNAME=	tex-${DISTNAME}-0.13
-TEXLIVE_REV=	37353
+PKGNAME=	tex-${DISTNAME}-0.14
+TEXLIVE_REV=	37586
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pst-barcode
 COMMENT=	Print barcodes using PostScript
 LICENSE=	lppl-1.3c
 
