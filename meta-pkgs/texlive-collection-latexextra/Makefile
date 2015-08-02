@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/07/02 21:13:55 markd Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/02 02:19:04 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2015pre3
+PKGNAME=	texlive-${DISTNAME}-2015pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36739
@@ -287,6 +287,7 @@ DEPENDS+=	tex-draftwatermark-[0-9]*:../../print/tex-draftwatermark
 # depend ean13isbn
 # depend easy
 # depend easy-todo
+DEPENDS+=	tex-easy-todo-[0-9]*:../../print/tex-easy-todo
 # depend easyfig
 # depend easylist
 # depend ebezier
@@ -373,7 +374,7 @@ DEPENDS+=	tex-filecontents-[0-9]*:../../print/tex-filecontents
 # depend finstrut
 # depend fixfoot
 DEPENDS+=	tex-fixme-[0-9]*:../../print/tex-fixme
-# depend fixmetodonotes
+DEPENDS+=	tex-fixmetodonotes-[0-9]*:../../print/tex-fixmetodonotes
 # depend fixocgx
 # depend fjodor
 # depend flabels
@@ -964,8 +965,8 @@ DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 # depend tocvsec2
-# depend todo
-# depend todonotes
+DEPENDS+=	tex-todo-[0-9]*:../../print/tex-todo
+DEPENDS+=	tex-todonotes-[0-9]*:../../print/tex-todonotes
 # depend tokenizer
 # depend toolbox
 # depend topfloat
