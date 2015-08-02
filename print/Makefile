@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2015/07/02 21:06:52 markd Exp $
+# $NetBSD: Makefile,v 1.646 2015/08/02 02:05:59 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -440,6 +440,8 @@ SUBDIR+=	tex-dvipdfmx-def
 SUBDIR+=	tex-dvipdfmx-doc
 SUBDIR+=	tex-dvips
 SUBDIR+=	tex-dvips-doc
+SUBDIR+=	tex-easy-todo
+SUBDIR+=	tex-easy-todo-doc
 SUBDIR+=	tex-edmac
 SUBDIR+=	tex-edmac-doc
 SUBDIR+=	tex-einfuehrung-doc
@@ -502,6 +504,8 @@ SUBDIR+=	tex-fix2col
 SUBDIR+=	tex-fix2col-doc
 SUBDIR+=	tex-fixme
 SUBDIR+=	tex-fixme-doc
+SUBDIR+=	tex-fixmetodonotes
+SUBDIR+=	tex-fixmetodonotes-doc
 SUBDIR+=	tex-fixpdfmag
 SUBDIR+=	tex-float
 SUBDIR+=	tex-float-doc
@@ -879,6 +883,8 @@ SUBDIR+=	tex-plstmary
 SUBDIR+=	tex-plstmary-doc
 SUBDIR+=	tex-poltawski
 SUBDIR+=	tex-poltawski-doc
+SUBDIR+=	tex-polyglossia
+SUBDIR+=	tex-polyglossia-doc
 SUBDIR+=	tex-polytable
 SUBDIR+=	tex-polytable-doc
 SUBDIR+=	tex-powerdot
@@ -1068,6 +1074,10 @@ SUBDIR+=	tex-tocbibind
 SUBDIR+=	tex-tocbibind-doc
 SUBDIR+=	tex-tocloft
 SUBDIR+=	tex-tocloft-doc
+SUBDIR+=	tex-todo
+SUBDIR+=	tex-todo-doc
+SUBDIR+=	tex-todonotes
+SUBDIR+=	tex-todonotes-doc
 SUBDIR+=	tex-tools
 SUBDIR+=	tex-tools-doc
 SUBDIR+=	tex-totpages
