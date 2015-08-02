@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/04/23 12:06:26 markd Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/02 11:19:20 markd Exp $
 
 DISTNAME=	listings.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.5e
-TEXLIVE_REV=	35124
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
+TEXLIVE_REV=	37534
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/listings
 COMMENT=	Documentation for tex-listings
 LICENSE=	lppl-1.3c
 
