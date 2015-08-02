@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/08 04:47:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/08/02 10:23:12 markd Exp $
 
-SHA1 (tex-tufte-latex-24733/tufte-latex.doc.tar.xz) = a615f6cca1e3a29c5ec3093c05833ae83335ab35
-RMD160 (tex-tufte-latex-24733/tufte-latex.doc.tar.xz) = 907c126fe8981c9453e02f590be91b7cf005fd36
-Size (tex-tufte-latex-24733/tufte-latex.doc.tar.xz) = 435028 bytes
+SHA1 (tex-tufte-latex-37649/tufte-latex.doc.tar.xz) = 7337965bc5c9c551c83a0c594caddce292c07cba
+RMD160 (tex-tufte-latex-37649/tufte-latex.doc.tar.xz) = 8c2e84a7cab20f9f68efab7616d703a06f4f6818
+Size (tex-tufte-latex-37649/tufte-latex.doc.tar.xz) = 453460 bytes
