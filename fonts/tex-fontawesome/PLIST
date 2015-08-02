@@ -1,3 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/02 12:43:51 markd Exp $
+share/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc
+share/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomethree.enc
+share/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc
 share/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf
+share/texmf-dist/fonts/tfm/public/fontawesome/FontAwesome--fontawesomeone.tfm
+share/texmf-dist/fonts/tfm/public/fontawesome/FontAwesome--fontawesomethree.tfm
+share/texmf-dist/fonts/tfm/public/fontawesome/FontAwesome--fontawesometwo.tfm
+share/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb
 share/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex
+share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.tex
+share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-xeluatex.tex
