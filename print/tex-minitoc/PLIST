@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/22 22:23:57 minskim Exp $
-share/texmf-dist/bibtex/bst/minitoc/en-mtc.bst
-share/texmf-dist/bibtex/bst/minitoc/fr-mtc.bst
-share/texmf-dist/makeindex/minitoc/minitoc-fr.ist
-share/texmf-dist/makeindex/minitoc/minitoc.ist
+@comment $NetBSD: PLIST,v 1.2 2015/08/02 12:21:43 markd Exp $
 share/texmf-dist/tex/latex/minitoc/UKenglish.mld
 share/texmf-dist/tex/latex/minitoc/USenglish.mld
 share/texmf-dist/tex/latex/minitoc/acadian.mld
@@ -28,7 +24,6 @@ share/texmf-dist/tex/latex/minitoc/bicig.mld
 share/texmf-dist/tex/latex/minitoc/bicig2.mld
 share/texmf-dist/tex/latex/minitoc/bicig3.mld
 share/texmf-dist/tex/latex/minitoc/bithe.mld
-share/texmf-dist/tex/latex/minitoc/boldsc.sty
 share/texmf-dist/tex/latex/minitoc/brazil.mld
 share/texmf-dist/tex/latex/minitoc/brazilian.mld
 share/texmf-dist/tex/latex/minitoc/breton.mld
@@ -49,7 +44,6 @@ share/texmf-dist/tex/latex/minitoc/chinese2.mlo
 share/texmf-dist/tex/latex/minitoc/croatian.mld
 share/texmf-dist/tex/latex/minitoc/czech.mld
 share/texmf-dist/tex/latex/minitoc/danish.mld
-share/texmf-dist/tex/latex/minitoc/dblaccnt.sty
 share/texmf-dist/tex/latex/minitoc/devanagari.mld
 share/texmf-dist/tex/latex/minitoc/dutch.mld
 share/texmf-dist/tex/latex/minitoc/english.mld
@@ -68,16 +62,13 @@ share/texmf-dist/tex/latex/minitoc/farsi2.mlo
 share/texmf-dist/tex/latex/minitoc/farsi3.mld
 share/texmf-dist/tex/latex/minitoc/finnish.mld
 share/texmf-dist/tex/latex/minitoc/finnish2.mld
-share/texmf-dist/tex/latex/minitoc/franc.sty
 share/texmf-dist/tex/latex/minitoc/francais.mld
-share/texmf-dist/tex/latex/minitoc/frbib.sty
 share/texmf-dist/tex/latex/minitoc/french.mld
 share/texmf-dist/tex/latex/minitoc/french1.mld
 share/texmf-dist/tex/latex/minitoc/french2.mld
 share/texmf-dist/tex/latex/minitoc/frenchb.mld
 share/texmf-dist/tex/latex/minitoc/frenchle.mld
 share/texmf-dist/tex/latex/minitoc/frenchpro.mld
-share/texmf-dist/tex/latex/minitoc/frnew.sty
 share/texmf-dist/tex/latex/minitoc/galician.mld
 share/texmf-dist/tex/latex/minitoc/german.mld
 share/texmf-dist/tex/latex/minitoc/germanb.mld
@@ -164,7 +155,6 @@ share/texmf-dist/tex/latex/minitoc/mongolian.mld
 share/texmf-dist/tex/latex/minitoc/mtcmess.sty
 share/texmf-dist/tex/latex/minitoc/mtcoff.sty
 share/texmf-dist/tex/latex/minitoc/mtcpatchmem.sty
-share/texmf-dist/tex/latex/minitoc/mypatches.sty
 share/texmf-dist/tex/latex/minitoc/naustrian.mld
 share/texmf-dist/tex/latex/minitoc/newzealand.mld
 share/texmf-dist/tex/latex/minitoc/ngerman.mld
