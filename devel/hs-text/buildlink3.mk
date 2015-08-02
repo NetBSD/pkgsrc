@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2015/06/04 20:07:57 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2015/08/02 11:26:15 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-text
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-text
 HS_TEXT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-text+=	hs-text>=1.2.1
-BUILDLINK_ABI_DEPENDS.hs-text+=	hs-text>=1.2.1.1
+BUILDLINK_ABI_DEPENDS.hs-text+=	hs-text>=1.2.1.3
 BUILDLINK_PKGSRCDIR.hs-text?=	../../devel/hs-text
 .endif	# HS_TEXT_BUILDLINK3_MK
 
