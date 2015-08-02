@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/05/27 22:19:42 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/02 02:51:46 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2014pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36355
+TEXLIVE_REV=	37751
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -53,9 +53,11 @@ DEPENDS+=	latexmk-[0-9]*:../../print/latexmk
 # depend ltxfileinfo
 # depend ltximg
 # depend listings-ext
+# depend make4ht
 # depend match_parens
 # depend mkjobtexmf
 # patgen entirely included in web2c
+# depend pdfbook2
 DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
 DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam
 DEPENDS+=	tex-pdftools-[0-9]*:../../print/tex-pdftools
@@ -67,6 +69,7 @@ DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
 DEPENDS+=	seetexk-[0-9]*:../../print/seetexk
 # depend sty2dtx
 # depend synctex
+# depend tex4ebook
 # depend texcount
 # depend texdef
 # depend texdiff
