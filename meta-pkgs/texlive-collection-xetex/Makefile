@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/08/02 02:14:49 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/02 03:22:01 markd Exp $
 
 DISTNAME=	collection-xetex
 PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36312
+TEXLIVE_REV=	37812
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -26,6 +26,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend philokalia
 DEPENDS+=	tex-polyglossia-[0-9]*:../../print/tex-polyglossia
 # depend ptext
+# depend quran
 DEPENDS+=	tex-realscripts-[0-9]*:../../print/tex-realscripts
 # depend ucharclasses
 # depend unisugar
