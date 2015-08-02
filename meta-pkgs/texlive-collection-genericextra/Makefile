@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 13:28:52 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/02 02:59:03 markd Exp $
 
 DISTNAME=	collection-genericextra
 PKGNAME=	texlive-${DISTNAME}-2015pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	37262
+TEXLIVE_REV=	37591
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -50,6 +50,7 @@ DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
 # depend shade
 # depend systeme
 # depend tabto-generic
+# depend termmenu
 # depend tracklang
 # depend texapi
 # depend upca
