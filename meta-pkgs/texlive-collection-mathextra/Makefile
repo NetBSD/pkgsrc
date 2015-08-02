@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/05/17 03:59:36 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/02 03:13:22 markd Exp $
 
 DISTNAME=	collection-mathextra
 PKGNAME=	texlive-${DISTNAME}-2014pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36538
+TEXLIVE_REV=	37535
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -52,6 +52,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend proba
 # depend rec-thy
 # depend ribbonproofs
+# depend rmathbr
 # depend sesamanuel
 # depend shuffle
 # depend skmath
