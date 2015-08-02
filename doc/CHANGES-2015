@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3201 2015/08/02 02:49:37 manu Exp $
+$NetBSD: CHANGES-2015,v 1.3202 2015/08/02 07:10:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5911,3 +5911,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-polyglossia version 1.40.1 [markd 2015-08-02]
 	Added print/tex-polyglossia-doc version 1.40.1 [markd 2015-08-02]
 	Updated filesystems/glusterfs to 3.7.3 [manu 2015-08-02]
+	Updated devel/ruby-railties32 to 3.2.22nb1 [taca 2015-08-02]
