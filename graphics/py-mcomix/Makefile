@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/12/16 23:02:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/03 14:06:55 nonaka Exp $
 
-DISTNAME=	mcomix-1.00
+DISTNAME=	mcomix-1.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
@@ -13,11 +13,12 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.12.0:../../x11/py-gtk2
 DEPENDS+=	{${PYPKGPREFIX}-imaging>=1.1.5,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
+DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
-EGG_NAME=	${DISTNAME:S/00/0/}
+EGG_NAME=	${DISTNAME:S/01/1/}
 
 PYTHON_SELF_CONFLICT=	yes
 

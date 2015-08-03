@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/07/15 12:12:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/08/03 14:06:55 nonaka Exp $
 
-SHA1 (mcomix-1.00.tar.bz2) = 2b4cbd1b403df60f076525f3fc9f2c96aa46f936
-RMD160 (mcomix-1.00.tar.bz2) = de4e569fc12ea51d9cc34b99d708aab39b31b648
-Size (mcomix-1.00.tar.bz2) = 527779 bytes
+SHA1 (mcomix-1.01.tar.bz2) = 3c4973c711e3370e77a033f9d9be4483471b33d4
+RMD160 (mcomix-1.01.tar.bz2) = 1fd6a217279cab4f692e295eaedaaf608ff98ff3
+Size (mcomix-1.01.tar.bz2) = 543293 bytes
