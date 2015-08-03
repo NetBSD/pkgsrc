@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3215 2015/08/03 07:45:54 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3216 2015/08/03 07:54:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5955,3 +5955,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-Email-Simple to 2.208 [wen 2015-08-03]
 	Updated mail/p5-Email-MIME to 1.934 [wen 2015-08-03]
 	Updated devel/p5-Devel-Cover to 1.20 [wen 2015-08-03]
+	Updated filesystems/p5-Module-Path to 0.19 [wen 2015-08-03]
