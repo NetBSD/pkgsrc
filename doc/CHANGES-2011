@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3394 2015/01/16 21:08:58 adam Exp $
+$NetBSD: CHANGES-2011,v 1.3395 2015/08/03 12:26:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -785,6 +785,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mldonkey-gui to 3.0.7 [wiz 2011-02-26]
 	Updated pkgtools/x11-links to 0.65 [wiz 2011-02-26]
 	Added net/p5-Net-DNS-Zone-Parser version 0.02 [obache 2011-02-26]
+	Added graphics/p5-Barcode-Code128 version 2.01 [abs 2011-02-26]
 	Updated multimedia/avidemux to 2.5.4nb1 [wiz 2011-02-26]
 	Updated print/chktex to 1.6.3nb2 [wiz 2011-02-26]
 	Updated print/p5-LaTeX-Driver to 0.08nb2 [wiz 2011-02-26]
