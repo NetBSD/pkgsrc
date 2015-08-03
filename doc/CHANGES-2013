@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4627 2015/06/14 18:14:41 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4628 2015/08/03 12:26:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1623,6 +1623,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/tmux to 1.8 [fhajny 2013-04-02]
 	Added audio/py-audioread version 1.0.0 [drochner 2013-04-02]
 	Added audio/chromaprint version 0.7 [drochner 2013-04-02]
+	Added audio/mutagen-tools version 1.21 [drochner 2013-04-02]
 	Updated textproc/saxon to 9.4.0.7j [rodent 2013-04-03]
 	Updated www/p5-Plack to 1.0022 [wen 2013-04-03]
 	Updated devel/p5-Moose to 2.0801 [wen 2013-04-03]
@@ -2284,6 +2285,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/meld to 1.7.2 [wiz 2013-04-21]
 	Updated mail/getmail to 4.40.0 [schmonz 2013-04-21]
 	Added sysutils/cuisine version 0.5.8 [imil 2013-04-21]
+	Added mail/p5-Mail-POP3Client version 2.18 [ryoon 2013-04-21]
 	Updated devel/p5-Tree-DAG_Node to 1.11 [hiramatsu 2013-04-22]
 	Removed multimedia/ns-flash [marino 2013-04-22]
 	Added sysutils/monitoring version 0.9.5 [imil 2013-04-22]
@@ -6150,6 +6152,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libdrm to 2.4.49 [wiz 2013-11-23]
 	Added textproc/hyphen version 2.8.6 [jaapb 2013-11-23]
 	Added cad/ghdl version 0.29 [ryoon 2013-11-23]
+	Added audio/quodlibet2 version 2.6.3 [drochner 2013-11-23]
 	Updated textproc/source-highlight to 3.1.7 [gls 2013-11-23]
 	Updated textproc/asciidoc to 8.6.9 [gls 2013-11-23]
 	Updated x11/x3270 to 3.3.13ga7 [gls 2013-11-23]
@@ -6359,6 +6362,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Added graphics/tex-pstools-doc version 1.68 [minskim 2013-12-04]
 	Added print/tex-cyrillic-bin version 2013 [minskim 2013-12-04]
 	Added print/tex-cyrillic-bin-doc version 2013 [minskim 2013-12-04]
+	Added devel/py-serpent version 1.4 [drochner 2013-12-04]
 	Removed print/texlive-tetex [minskim 2013-12-04]
 	Added databases/dbfsak version 4.5 [adam 2013-12-05]
 	Added meta-pkgs/suse131 version 13.1 [obache 2013-12-05]
