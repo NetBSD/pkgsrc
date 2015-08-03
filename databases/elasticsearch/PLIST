@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2015/07/07 14:11:59 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/08/03 11:57:43 fhajny Exp $
 lib/elasticsearch/antlr-runtime-3.5.jar
 lib/elasticsearch/apache-log4j-extras-1.2.17.jar
 lib/elasticsearch/asm-4.1.jar
 lib/elasticsearch/asm-commons-4.1.jar
 lib/elasticsearch/${PKGNAME}.jar
-lib/elasticsearch/groovy-all-2.4.0.jar
+lib/elasticsearch/groovy-all-2.4.4.jar
 lib/elasticsearch/jna-4.1.0.jar
 lib/elasticsearch/jts-1.13.jar
 lib/elasticsearch/log4j-1.2.17.jar
