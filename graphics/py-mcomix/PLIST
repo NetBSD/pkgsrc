@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/15 12:12:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/03 14:06:55 nonaka Exp $
 bin/mcomix
 man/man1/mcomix.1
+share/appdata/mcomix.appdata.xml
 share/applications/mcomix.desktop
 share/icons/hicolor/16x16/apps/mcomix.png
 share/icons/hicolor/16x16/mimetypes/application-x-cbr.png
@@ -42,9 +43,15 @@ ${PYSITELIB}/mcomix/archive/__init__.pyo
 ${PYSITELIB}/mcomix/archive/archive_base.py
 ${PYSITELIB}/mcomix/archive/archive_base.pyc
 ${PYSITELIB}/mcomix/archive/archive_base.pyo
+${PYSITELIB}/mcomix/archive/archive_recursive.py
+${PYSITELIB}/mcomix/archive/archive_recursive.pyc
+${PYSITELIB}/mcomix/archive/archive_recursive.pyo
 ${PYSITELIB}/mcomix/archive/lha.py
 ${PYSITELIB}/mcomix/archive/lha.pyc
 ${PYSITELIB}/mcomix/archive/lha.pyo
+${PYSITELIB}/mcomix/archive/pdf.py
+${PYSITELIB}/mcomix/archive/pdf.pyc
+${PYSITELIB}/mcomix/archive/pdf.pyo
 ${PYSITELIB}/mcomix/archive/rar.py
 ${PYSITELIB}/mcomix/archive/rar.pyc
 ${PYSITELIB}/mcomix/archive/rar.pyo
@@ -60,6 +67,9 @@ ${PYSITELIB}/mcomix/archive/tar.pyo
 ${PYSITELIB}/mcomix/archive/zip.py
 ${PYSITELIB}/mcomix/archive/zip.pyc
 ${PYSITELIB}/mcomix/archive/zip.pyo
+${PYSITELIB}/mcomix/archive/zip_external.py
+${PYSITELIB}/mcomix/archive/zip_external.pyc
+${PYSITELIB}/mcomix/archive/zip_external.pyo
 ${PYSITELIB}/mcomix/archive_extractor.py
 ${PYSITELIB}/mcomix/archive_extractor.pyc
 ${PYSITELIB}/mcomix/archive_extractor.pyo
@@ -81,6 +91,9 @@ ${PYSITELIB}/mcomix/bookmark_menu.pyo
 ${PYSITELIB}/mcomix/bookmark_menu_item.py
 ${PYSITELIB}/mcomix/bookmark_menu_item.pyc
 ${PYSITELIB}/mcomix/bookmark_menu_item.pyo
+${PYSITELIB}/mcomix/box.py
+${PYSITELIB}/mcomix/box.pyc
+${PYSITELIB}/mcomix/box.pyo
 ${PYSITELIB}/mcomix/callback.py
 ${PYSITELIB}/mcomix/callback.pyc
 ${PYSITELIB}/mcomix/callback.pyo
@@ -172,18 +185,10 @@ ${PYSITELIB}/mcomix/images/gimp-rotate-270.png
 ${PYSITELIB}/mcomix/images/gimp-rotate-90.png
 ${PYSITELIB}/mcomix/images/gimp-thumbnails.png
 ${PYSITELIB}/mcomix/images/gimp-transform.png
-${PYSITELIB}/mcomix/images/goto-first-page.png
-${PYSITELIB}/mcomix/images/goto-last-page.png
 ${PYSITELIB}/mcomix/images/lens.png
 ${PYSITELIB}/mcomix/images/library.png
 ${PYSITELIB}/mcomix/images/manga.png
 ${PYSITELIB}/mcomix/images/mcomix.png
-${PYSITELIB}/mcomix/images/next-archive.png
-${PYSITELIB}/mcomix/images/next-directory.png
-${PYSITELIB}/mcomix/images/next-page.png
-${PYSITELIB}/mcomix/images/previous-archive.png
-${PYSITELIB}/mcomix/images/previous-directory.png
-${PYSITELIB}/mcomix/images/previous-page.png
 ${PYSITELIB}/mcomix/images/tango-add-bookmark.png
 ${PYSITELIB}/mcomix/images/tango-archive.png
 ${PYSITELIB}/mcomix/images/tango-enhance-image.png
@@ -192,12 +197,18 @@ ${PYSITELIB}/mcomix/images/zoom.png
 ${PYSITELIB}/mcomix/keybindings.py
 ${PYSITELIB}/mcomix/keybindings.pyc
 ${PYSITELIB}/mcomix/keybindings.pyo
+${PYSITELIB}/mcomix/keybindings_editor.py
+${PYSITELIB}/mcomix/keybindings_editor.pyc
+${PYSITELIB}/mcomix/keybindings_editor.pyo
 ${PYSITELIB}/mcomix/labels.py
 ${PYSITELIB}/mcomix/labels.pyc
 ${PYSITELIB}/mcomix/labels.pyo
 ${PYSITELIB}/mcomix/last_read_page.py
 ${PYSITELIB}/mcomix/last_read_page.pyc
 ${PYSITELIB}/mcomix/last_read_page.pyo
+${PYSITELIB}/mcomix/layout.py
+${PYSITELIB}/mcomix/layout.pyc
+${PYSITELIB}/mcomix/layout.pyo
 ${PYSITELIB}/mcomix/lens.py
 ${PYSITELIB}/mcomix/lens.pyc
 ${PYSITELIB}/mcomix/lens.pyo
@@ -308,6 +319,9 @@ ${PYSITELIB}/mcomix/recent.pyo
 ${PYSITELIB}/mcomix/run.py
 ${PYSITELIB}/mcomix/run.pyc
 ${PYSITELIB}/mcomix/run.pyo
+${PYSITELIB}/mcomix/scrolling.py
+${PYSITELIB}/mcomix/scrolling.pyc
+${PYSITELIB}/mcomix/scrolling.pyo
 ${PYSITELIB}/mcomix/slideshow.py
 ${PYSITELIB}/mcomix/slideshow.pyc
 ${PYSITELIB}/mcomix/slideshow.pyo
@@ -332,6 +346,9 @@ ${PYSITELIB}/mcomix/tools.pyo
 ${PYSITELIB}/mcomix/ui.py
 ${PYSITELIB}/mcomix/ui.pyc
 ${PYSITELIB}/mcomix/ui.pyo
+${PYSITELIB}/mcomix/worker_thread.py
+${PYSITELIB}/mcomix/worker_thread.pyc
+${PYSITELIB}/mcomix/worker_thread.pyo
 ${PYSITELIB}/mcomix/zoom.py
 ${PYSITELIB}/mcomix/zoom.pyc
 ${PYSITELIB}/mcomix/zoom.pyo
