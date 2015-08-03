@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3217 2015/08/03 11:57:56 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3218 2015/08/03 14:08:41 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5957,3 +5957,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-Cover to 1.20 [wen 2015-08-03]
 	Updated filesystems/p5-Module-Path to 0.19 [wen 2015-08-03]
 	Updated databases/elasticsearch to 1.7.1 [fhajny 2015-08-03]
+	Updated graphics/py-mcomix to 1.01 [nonaka 2015-08-03]
