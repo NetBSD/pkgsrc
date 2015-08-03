@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3212 2015/08/03 02:09:07 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3213 2015/08/03 03:15:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5951,4 +5951,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-arel to 6.0.2 [taca 2015-08-02]
 	Updated databases/ruby-sequel to 4.25.0 [taca 2015-08-02]
 	Updated www/wordpress to 4.2.3 [morr 2015-08-02]
-	Updated devel/p5-Mouse to 2.4.4 [wen 2016-08-03]
+	Updated devel/p5-Mouse to 2.4.4 [wen 2015-08-03]
+	Updated mail/p5-Email-Simple to 2.208 [wen 2015-08-03]
