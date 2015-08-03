@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14622 2015/08/03 07:46:46 wen Exp $
+$NetBSD: TODO,v 1.14623 2015/08/03 07:56:04 wen Exp $
 
 Suggested new packages
 ======================
@@ -1269,7 +1269,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Module-Build-0.42140
 	o p5-Module-Build-XSUtil-0.16
 	o p5-Module-CoreList-5.20150720
-	o p5-Module-Path-0.19
 	o p5-Module-ScanDeps-1.19
 	o p5-MooX-Cmd-0.015
 	o p5-MooX-Roles-Pluggable-0.003
