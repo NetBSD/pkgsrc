@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.22 2014/12/30 09:31:08 obache Exp $
+$NetBSD: CHANGES-2004,v 1.23 2015/08/03 12:26:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4082,6 +4082,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xmlsec1-1.2.6 [drochner 2004-08-27]
 	Added vp-1.5 [drochner 2004-08-27]
 	Added boaconstructor-0.2.3 [drochner 2004-08-27]
+	Added geography/xrmap-factbook_html version 2002 [drochner 2004-08-27]
+	Added geography/xrmap-flags version 1.1 [drochner 2004-08-27]
+	Added geography/xrmap-hymns version 1.2 [drochner 2004-08-27]
 	Updated mstream to 1.0 [kim 2004-08-27]
 	Updated getmail to 4.1.1 [schmonz 2004-08-27]
 	Updated mono to 1.0.1 [recht 2004-08-27]
@@ -5482,6 +5485,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnuserv to 3.12.7 [epg 2004-11-27]
 	Updated xlockmore to 5.14.1 [hubertf 2004-11-26]
 	Updated xlockmore-lite to 5.14.1 [hubertf 2004-11-26]
+	Moved devel/libavl to devel/avl [wiz 2004-11-26]
 	Updated wmpload to 0.9.5 [abs 2004-11-27]
 	Updated apachetop to 0.12.5 [sketch 2004-11-27]
 	Updated p5-Getopt-Simple to 1.48 [wiz 2004-11-27]
