@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.20 2012/04/01 08:52:43 obache Exp $
+$NetBSD: distinfo,v 1.21 2015/08/04 08:47:19 tnn Exp $
 
 SHA1 (expat-2.1.0.tar.gz) = b08197d146930a5543a7b99e871cba3da614f6f0
 RMD160 (expat-2.1.0.tar.gz) = bffca083d29fe7688f106a902ef9b909c3321c5d
 Size (expat-2.1.0.tar.gz) = 562616 bytes
+SHA1 (patch-xmlparse.c) = e6e3697102b2f86d4a0824b1f6498e0ec435b9e4
