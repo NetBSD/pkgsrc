@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2014/05/28 10:29:12 markd Exp $
+# $NetBSD: Makefile,v 1.43 2015/08/04 18:05:32 asau Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-packages-${SWIPLVERS}
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
@@ -79,6 +80,7 @@ teardownx:
 CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
 
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
