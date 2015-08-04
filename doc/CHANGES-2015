@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3219 2015/08/04 12:00:52 he Exp $
+$NetBSD: CHANGES-2015,v 1.3220 2015/08/04 19:11:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/elasticsearch to 1.7.1 [fhajny 2015-08-03]
 	Updated graphics/py-mcomix to 1.01 [nonaka 2015-08-03]
 	Updated misc/goffice0.10 to 0.10.21 [he 2015-08-04]
+	Updated misc/libreoffice4 to 4.4.5.2 [ryoon 2015-08-04]
