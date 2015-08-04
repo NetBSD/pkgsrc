@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1123 2015/08/02 15:44:25 taca Exp $
+# $NetBSD: Makefile,v 1.1124 2015/08/04 18:19:08 asau Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -145,7 +145,6 @@ SUBDIR+=	icedtea-web
 SUBDIR+=	ies4linux
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
-SUBDIR+=	ja-trac
 SUBDIR+=	jalbum
 SUBDIR+=	jetty7
 SUBDIR+=	kahua
