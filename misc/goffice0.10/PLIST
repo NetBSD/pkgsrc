@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/20 15:44:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/04 11:57:50 he Exp $
 include/libgoffice-0.10/goffice/app/error-info.h
 include/libgoffice-0.10/goffice/app/file.h
 include/libgoffice-0.10/goffice/app/go-cmd-context-impl.h
@@ -93,6 +93,7 @@ include/libgoffice-0.10/goffice/gtk/go-action-combo-color.h
 include/libgoffice-0.10/goffice/gtk/go-action-combo-pixmaps.h
 include/libgoffice-0.10/goffice/gtk/go-action-combo-stack.h
 include/libgoffice-0.10/goffice/gtk/go-action-combo-text.h
+include/libgoffice-0.10/goffice/gtk/go-arrow-sel.h
 include/libgoffice-0.10/goffice/gtk/go-calendar-button.h
 include/libgoffice-0.10/goffice/gtk/go-charmap-sel.h
 include/libgoffice-0.10/goffice/gtk/go-color-group.h
@@ -110,6 +111,7 @@ include/libgoffice-0.10/goffice/gtk/go-image-sel.h
 include/libgoffice-0.10/goffice/gtk/go-line-selector.h
 include/libgoffice-0.10/goffice/gtk/go-locale-sel.h
 include/libgoffice-0.10/goffice/gtk/go-marker-selector.h
+include/libgoffice-0.10/goffice/gtk/go-math-editor.h
 include/libgoffice-0.10/goffice/gtk/go-optionmenu.h
 include/libgoffice-0.10/goffice/gtk/go-palette.h
 include/libgoffice-0.10/goffice/gtk/go-pattern-selector.h
@@ -121,6 +123,7 @@ include/libgoffice-0.10/goffice/math/go-accumulator.h
 include/libgoffice-0.10/goffice/math/go-complex.h
 include/libgoffice-0.10/goffice/math/go-cspline.h
 include/libgoffice-0.10/goffice/math/go-distribution.h
+include/libgoffice-0.10/goffice/math/go-dtoa.h
 include/libgoffice-0.10/goffice/math/go-fft.h
 include/libgoffice-0.10/goffice/math/go-math.h
 include/libgoffice-0.10/goffice/math/go-matrix.h
@@ -147,6 +150,7 @@ include/libgoffice-0.10/goffice/utils/go-libxml-extras.h
 include/libgoffice-0.10/goffice/utils/go-line.h
 include/libgoffice-0.10/goffice/utils/go-locale.h
 include/libgoffice-0.10/goffice/utils/go-marker.h
+include/libgoffice-0.10/goffice/utils/go-mml-to-itex.h
 include/libgoffice-0.10/goffice/utils/go-pango-extras.h
 include/libgoffice-0.10/goffice/utils/go-path.h
 include/libgoffice-0.10/goffice/utils/go-pattern.h
@@ -159,9 +163,12 @@ include/libgoffice-0.10/goffice/utils/go-style.h
 include/libgoffice-0.10/goffice/utils/go-styled-object.h
 include/libgoffice-0.10/goffice/utils/go-svg.h
 include/libgoffice-0.10/goffice/utils/go-undo.h
+include/libgoffice-0.10/goffice/utils/go-unit.h
 include/libgoffice-0.10/goffice/utils/go-units.h
 include/libgoffice-0.10/goffice/utils/goffice-utils.h
 include/libgoffice-0.10/goffice/utils/regutf8.h
+lib/goffice/${PKGVERSION}/plugins/lasem/lasem.la
+lib/goffice/${PKGVERSION}/plugins/lasem/plugin.xml
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/barcol.la
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/plot-types.xml
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/plugin.xml
@@ -191,6 +198,14 @@ lib/goffice/${PKGVERSION}/plugins/smoothing/smoothing.la
 lib/goffice/${PKGVERSION}/plugins/smoothing/types.xml
 lib/libgoffice-0.10.la
 lib/pkgconfig/libgoffice-0.10.pc
+share/goffice/${PKGVERSION}/mmlitex/README
+share/goffice/${PKGVERSION}/mmlitex/cmarkup.xsl
+share/goffice/${PKGVERSION}/mmlitex/entities.xsl
+share/goffice/${PKGVERSION}/mmlitex/glayout.xsl
+share/goffice/${PKGVERSION}/mmlitex/mmlitex.xsl
+share/goffice/${PKGVERSION}/mmlitex/scripts.xsl
+share/goffice/${PKGVERSION}/mmlitex/tables.xsl
+share/goffice/${PKGVERSION}/mmlitex/tokens.xsl
 share/gtk-doc/html/goffice-0.10/GOArrow.html
 share/gtk-doc/html/goffice-0.10/GOBezierSpline.html
 share/gtk-doc/html/goffice-0.10/GOCalendarButton.html
@@ -211,6 +226,7 @@ share/gtk-doc/html/goffice-0.10/GODocControl.html
 share/gtk-doc/html/goffice-0.10/GOEditor.html
 share/gtk-doc/html/goffice-0.10/GOErrorInfo.html
 share/gtk-doc/html/goffice-0.10/GOFileSaver.html
+share/gtk-doc/html/goffice-0.10/GOFont.html
 share/gtk-doc/html/goffice-0.10/GOFontSel.html
 share/gtk-doc/html/goffice-0.10/GOFormat.html
 share/gtk-doc/html/goffice-0.10/GOFormatSel.html
@@ -313,7 +329,6 @@ share/gtk-doc/html/goffice-0.10/goffice-0.10-GOColor.html
 share/gtk-doc/html/goffice-0.10/goffice-0.10-GOComplex.html
 share/gtk-doc/html/goffice-0.10/goffice-0.10-GODataCVector.html
 share/gtk-doc/html/goffice-0.10/goffice-0.10-GOFileOpeners.html
-share/gtk-doc/html/goffice-0.10/goffice-0.10-GOFont.html
 share/gtk-doc/html/goffice-0.10/goffice-0.10-GOPattern.html
 share/gtk-doc/html/goffice-0.10/goffice-0.10-GOQuad.html
 share/gtk-doc/html/goffice-0.10/goffice-0.10-GORange.html
@@ -341,13 +356,16 @@ share/gtk-doc/html/goffice-0.10/gsf-index.html
 share/gtk-doc/html/goffice-0.10/home.png
 share/gtk-doc/html/goffice-0.10/index.html
 share/gtk-doc/html/goffice-0.10/index.sgml
+share/gtk-doc/html/goffice-0.10/left-insensitive.png
 share/gtk-doc/html/goffice-0.10/left.png
 share/gtk-doc/html/goffice-0.10/pt01.html
 share/gtk-doc/html/goffice-0.10/pt02.html
 share/gtk-doc/html/goffice-0.10/pt03.html
 share/gtk-doc/html/goffice-0.10/pt04.html
+share/gtk-doc/html/goffice-0.10/right-insensitive.png
 share/gtk-doc/html/goffice-0.10/right.png
 share/gtk-doc/html/goffice-0.10/style.css
+share/gtk-doc/html/goffice-0.10/up-insensitive.png
 share/gtk-doc/html/goffice-0.10/up.png
 share/locale/am/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ar/LC_MESSAGES/goffice-${PKGVERSION}.mo
