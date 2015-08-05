@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3228 2015/08/05 15:16:43 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3229 2015/08/05 15:17:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5968,3 +5968,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed editors/TeXmacs-devel [ryoon 2015-08-05]
 	Updated fonts/umefont-ttf to 0.530 [ryoon 2015-08-05]
 	Updated www/php-owncloud to 8.1.0 [ryoon 2015-08-05]
+	Updated net/owncloudclient to 1.8.4 [ryoon 2015-08-05]
