@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14627 2015/08/05 13:08:51 ryoon Exp $
+$NetBSD: TODO,v 1.14628 2015/08/05 13:09:42 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ROMInfo-28
 	o SOGo-2.3.1
 	o SOPE-2.3.1
-	o TeXmacs-1.0.7.21
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
 	o YoSucker-81
