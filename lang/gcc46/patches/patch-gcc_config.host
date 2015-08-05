@@ -1,14 +1,21 @@
-$NetBSD: patch-gcc_config.host,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+$NetBSD: patch-gcc_config.host,v 1.2 2015/08/05 19:51:50 martin Exp $
 
---- gcc/config.host.orig	2011-02-15 09:49:14.000000000 +0000
-+++ gcc/config.host
-@@ -268,6 +268,10 @@ case ${host} in
+Add host hooks for NetBSD - needed for working precompiled headers.
+http://gcc.gnu.org/bugzilla/show_bug.cgi?id=58397
+
+--- gcc/config.host.orig	2011-02-15 10:49:14.000000000 +0100
++++ gcc/config.host	2015-08-05 21:04:37.000000000 +0200
+@@ -268,6 +268,14 @@
      out_host_hook_obj=host-solaris.o
      host_xmake_file="${host_xmake_file} x-solaris"
      ;;
 +  *-*-openbsd*)
 +    out_host_hook_obj=host-openbsd.o
 +    host_xmake_file="${host_xmake_file} x-openbsd"
++    ;;
++  *-*-netbsd*)
++    out_host_hook_obj=host-netbsd.o
++    host_xmake_file="${host_xmake_file} x-netbsd"
 +    ;;
    *-*-linux*)
      out_host_hook_obj=host-linux.o
