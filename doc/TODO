@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14626 2015/08/05 08:13:00 adam Exp $
+$NetBSD: TODO,v 1.14627 2015/08/05 13:08:51 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1133,7 +1133,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mapserver-12.11
 	o maradns-2.0.11
 	o matchbox-panel-0.9.3
-	o maxima-5.36.0
 	o mbedtls-2.0.0
 	o mbuf-20141227
 	o mc-4.8.14
