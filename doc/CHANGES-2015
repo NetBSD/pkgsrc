@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3222 2015/08/05 12:33:42 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3223 2015/08/05 12:38:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5962,3 +5962,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.5.2 [ryoon 2015-08-04]
 	Updated www/squid3 to 3.5.7 [adam 2015-08-04]
 	Updated mail/mew to 6.7 [ryoon 2015-08-05]
+	Updated misc/libreoffice4-bin to 4.4.5 [ryoon 2015-08-05]
