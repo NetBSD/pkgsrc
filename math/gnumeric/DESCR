@@ -5,3 +5,6 @@ familiar with Gnumeric advanced features.  A plugin system lets
 you extend Gnumeric with GPL extensions, and an optional
 Python and Perl plugins let you define complex functions in those
 popular languages.
+
+This is an old version, the latest update was in January 2009.
+Newer versions are in gnumeric110 and gnumeric112.
