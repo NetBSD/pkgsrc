@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3224 2015/08/05 13:08:51 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3225 2015/08/05 13:09:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5964,3 +5964,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/mew to 6.7 [ryoon 2015-08-05]
 	Updated misc/libreoffice4-bin to 4.4.5 [ryoon 2015-08-05]
 	Updated math/maxima to 5.36.1 [ryoon 2015-08-05]
+	Updated editors/TeXmacs to 1.99.2 [ryoon 2015-08-05]
