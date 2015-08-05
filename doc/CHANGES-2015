@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3232 2015/08/05 21:17:48 asau Exp $
+$NetBSD: CHANGES-2015,v 1.3233 2015/08/05 21:18:35 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/pgadmin3 to 1.20.0 [richard 2015-08-05]
 	Updated lang/chicken to 4.10.0 [asau 2015-08-05]
 	Updated lang/racket to 6.2 [asau 2015-08-05]
+	Updated lang/racket-textual to 6.2 [asau 2015-08-05]
