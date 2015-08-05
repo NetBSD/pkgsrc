@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2015/04/25 14:20:31 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2015/08/05 15:29:00 richard Exp $
 
-DISTNAME=	pgadmin3-1.18.1
-PKGREVISION=	4
+DISTNAME=	pgadmin3-1.20.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=pgadmin3/release/v${PKGVERSION_NOREV}/src/}
 
@@ -18,14 +17,14 @@ REPLACE_SH=		pgadmin/ver_svn.sh
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-wx=${BUILDLINK_PREFIX.wxGTK28}
+CONFIGURE_ARGS+=	--with-wx=${BUILDLINK_PREFIX.wxGTK30}
+CONFIGURE_ARGS+=	--with-wx-version=3.0
 CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-libxslt=${BUILDLINK_PREFIX.libxslt}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
-.include "../../x11/wxGTK28-contrib/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
