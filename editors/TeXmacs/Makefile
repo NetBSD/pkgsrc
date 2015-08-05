@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.105 2015/06/12 10:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2015/08/05 13:09:17 ryoon Exp $
 
-DISTNAME=		TeXmacs-1.0.6.15-src
+DISTNAME=		TeXmacs-1.99.2-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		20
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
-MASTER_SITES+=		http://www.texmacs.org/Download/ftp/targz/
+MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
+MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.texmacs.org/
@@ -13,14 +12,17 @@ COMMENT=		GNU TeXmacs (free scientific text editor)
 
 BUILD_TARGET=		TEXMACS
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_path_RCC=${QTDIR}/bin/rcc
 # XXX workaround for bug in configure
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+CONFIGURE_ARGS+=	--with-qt=${QTDIR}
 #TEX_ACCEPTED=		teTeX3
+BUILD_MAKE_FLAGS+=	QT_QTDIR=${QTDIR}
 
-REPLACE_PYTHON=	plugins/python/bin/tm_python
+REPLACE_PYTHON=		plugins/python/bin/tm_python
 REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 
@@ -29,8 +31,10 @@ SUBST_STAGE.init=	post-patch
 SUBST_FILES.init=	plugins/python/progs/init-python.scm
 SUBST_SED.init=		-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 
+REPLACE_SH+=		plugins/asymptote/bin/tm_asy
 REPLACE_SH+=		plugins/dratex/bin/tm_dratex
 REPLACE_SH+=		plugins/eukleides/bin/tm_eukleides
+REPLACE_SH+=		plugins/eukleides/bin/tm_eukleides.old
 REPLACE_SH+=		plugins/gnuplot/bin/tm_gnuplot
 REPLACE_SH+=		plugins/lisp/bin/tm_lisp
 REPLACE_SH+=		plugins/lush/bin/tm_lush
@@ -40,7 +44,11 @@ REPLACE_SH+=		plugins/maxima/bin/tm_maxima
 REPLACE_SH+=		plugins/mupad/bin/tm_mupad_help
 REPLACE_SH+=		plugins/octave/bin/tm_octave
 REPLACE_SH+=		plugins/reduce/bin/tm_reduce
+REPLACE_SH+=		plugins/texgraph/bin/tm_texgraph
 REPLACE_SH+=		plugins/xypic/bin/tm_xypic
+
+REPLACE_PERL+=		plugins/asymptote/bin/perl-tm_asy
+REPLACE_PERL+=		plugins/asymptote/bin/tm_asy2
 
 pre-install:
 	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
@@ -63,7 +71,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 #.include "../../mk/tex.buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
