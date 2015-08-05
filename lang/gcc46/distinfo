@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/01/01 01:29:56 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2015/08/05 19:51:50 martin Exp $
 
 SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
 RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
@@ -24,10 +24,11 @@ SHA1 (patch-boehm-gc_pthread__support.c) = 1028b0e8604e0477dd80ec20c04ffc0027823
 SHA1 (patch-boehm-gc_tests_test.c) = f4f2c7a701ef166004746e5f819f7e04c4176b24
 SHA1 (patch-boehm-gc_threadlibs.c) = 62cabc51234e1ce5c60e70bef9fc4d8f92b9739d
 SHA1 (patch-gcc_common.opt) = 561965695238afd4c41b75f20d84114adb4dd194
-SHA1 (patch-gcc_config.host) = 5be619aad33ee0ac05d8fb64879be5e530914122
+SHA1 (patch-gcc_config.host) = 9458bf6bc6d16abd07c66e60b04c84106fe937fd
 SHA1 (patch-gcc_config_arm_elf.h) = 28c67bb698ebe9a3aa45c4cff29f028c82cc7606
 SHA1 (patch-gcc_config_arm_t-netbsd) = a1682f4f8dc7e393446f19f615737ddfc98fcb7f
 SHA1 (patch-gcc_config_exec-stack.h) = 2ff8a153a41638de2943c4109f38ea3a7c26c00d
+SHA1 (patch-gcc_config_host-netbsd.c) = 765295f07edb8a68f1910e3a9b4dd2a7dcd491a5
 SHA1 (patch-gcc_config_host-openbsd.c) = 109ce33dbbc19c988637d77dce4d240d6bfc912c
 SHA1 (patch-gcc_config_i386_i386.c) = 49ba75bb347a9c96606a7bef7e0f972488d881b3
 SHA1 (patch-gcc_config_i386_openbsd.h) = 0adb1e531eb9d773cbd6944f279e949e59035bd3
@@ -36,10 +37,12 @@ SHA1 (patch-gcc_config_i386_openbsdelf.h) = cd7afa938514dc80fb53c683fb089468c935
 SHA1 (patch-gcc_config_openbsd-libpthread.h) = 826aaae4b2dda5a49ec71510f0752aba3c1b0b91
 SHA1 (patch-gcc_config_openbsd.h) = a396d14b2df78a4c45d3e51ef7fe960bbc8d5754
 SHA1 (patch-gcc_config_t-openbsd) = 662fe8d0c4b58145fb3268bc7ac432a1616c1106
+SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_config_x-openbsd) = b307d75331b9a7f6271698c68f1647a03d204eb9
 SHA1 (patch-gcc_configure) = 906906aca782c75b2a053aef272a8472f0a9a9ee
 SHA1 (patch-gcc_defaults.h) = 72b145fdf9baecc061e90e9634eb5f842215a962
 SHA1 (patch-gcc_gcc.c) = 6b9499cf22f1018c289f2a20a4487d5f5e1a1069
+SHA1 (patch-gcc_ggc-common.c) = fa577bc25260d7e6304f166686ba51c0b677d7f6
 SHA1 (patch-gcc_lto_lto.c) = 3c7df0691d300d2915388e7ef019b9717a9673d7
 SHA1 (patch-gcc_opts.c) = e02ebec8a9de24492a3aba80ee8c742446f2c549
 SHA1 (patch-gcc_unwind-dw2-fde-glibc.c) = 704ccc2b1058344586e0ccb8bcd291f41d93ed0a
