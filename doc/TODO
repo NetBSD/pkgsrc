@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14625 2015/08/05 00:45:57 ryoon Exp $
+$NetBSD: TODO,v 1.14626 2015/08/05 08:13:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -1879,7 +1879,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spin-643
 	o spl-1.0pre6
 	o squeak-4.6
-	o squid3-3.5.7
 	o squidview-0.81
 	o sqwebmail-5.8.2
 	o srp_client-1.7.5
