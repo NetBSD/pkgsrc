@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2015/01/04 09:41:11 dholland Exp $
+# $NetBSD: Makefile,v 1.53 2015/08/05 20:41:14 asau Exp $
 
-DISTNAME=	chicken-4.9.0.1
+DISTNAME=	chicken-4.10.0
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/$(PKGVERSION_NOREV)/ \
 		http://code.call-cc.org/releases/$(PKGVERSION_NOREV:R)/
@@ -46,7 +46,7 @@ MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
 # Need to have these in MAKE_FLAGS, MAKE_ENV is not enough due to the
 # way the build system overrides them.
 MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
-MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
+MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR}
 MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
 
