@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14624 2015/08/03 12:25:01 wiz Exp $
+$NetBSD: TODO,v 1.14625 2015/08/05 00:45:57 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -360,7 +360,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
-	o JBidwatcher-2.5.6.jar
 	o LPRng-core-3.8.35
 	o Mesa-10.6.3
 	o MesaLib-10.6.3
@@ -733,7 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
-	o frink-2.3.1.a2
+	o frink-2.3.1a2
 	o frotz-2.44
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.5
@@ -975,7 +974,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ipv6calc-0.99.0
 	o ipw-firmware-1.3
 	o ircservices-5.1.21
-	o iroffer-1.4.b01
+	o iroffer-1.4b01
 	o isl-0.15
 	o ispell-de-20131206
 	o ispell-ga-4.6
@@ -1011,7 +1010,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o keychain-2.8.1
 	o kipi-plugins-4.12.0
 	o kismet-2011.03r2 [pkg/45692]
-	o kismet-2013.03.R1b
+	o kismet-2013.03R1b
 	o klavaro-3.0
 	o kmess-1.5.1
 	o kmp-0.5
