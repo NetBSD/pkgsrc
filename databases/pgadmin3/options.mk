@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/09/11 13:39:35 richard Exp $
+# $NetBSD: options.mk,v 1.2 2015/08/05 15:29:00 richard Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.pgadmin3
 PKG_SUPPORTED_OPTIONS=	pgadmin-db-designer doc zlib
@@ -20,6 +20,7 @@ PLIST.doc=	yes
 PYTHON_FOR_BUILD_ONLY=yes
 .include "../../lang/python/pyversion.mk"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.0:../../textproc/py-sphinx
+CONFIGURE_ARGS+=		--with-sphinx-build=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 .else
 CONFIGURE_ENV+=		ac_cv_path_SPHINX_BUILD=
 .endif
