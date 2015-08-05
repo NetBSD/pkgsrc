@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2014/03/11 20:16:32 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2015/08/05 13:08:22 ryoon Exp $
 
-SHA1 (maxima-5.32.1.tar.gz) = 8667c9e26fdb2889ceb0641b0abc7372aadd591a
-RMD160 (maxima-5.32.1.tar.gz) = 9c7564a2b6418aacfc28f1de0a8fa9a64257bd66
-Size (maxima-5.32.1.tar.gz) = 28650767 bytes
+SHA1 (maxima-5.36.1.tar.gz) = 7ab4136e59906f5230fb72ffd2582f4d4bd13b0c
+RMD160 (maxima-5.36.1.tar.gz) = 6446bd96c4138aec61a7906cc9fd8923670d2892
+Size (maxima-5.36.1.tar.gz) = 29615673 bytes
