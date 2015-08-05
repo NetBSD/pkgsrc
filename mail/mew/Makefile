@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2014/04/29 13:41:05 taca Exp $
+# $NetBSD: Makefile,v 1.93 2015/08/05 12:32:56 ryoon Exp $
 
-DISTNAME=	mew-6.6
+DISTNAME=	mew-6.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mew.org/Release/
