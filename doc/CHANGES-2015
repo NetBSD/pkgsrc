@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3230 2015/08/05 15:29:43 richard Exp $
+$NetBSD: CHANGES-2015,v 1.3231 2015/08/05 21:17:13 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5970,3 +5970,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/php-owncloud to 8.1.0 [ryoon 2015-08-05]
 	Updated net/owncloudclient to 1.8.4 [ryoon 2015-08-05]
 	Updated databases/pgadmin3 to 1.20.0 [richard 2015-08-05]
+	Updated lang/chicken to 4.10.0 [asau 2015-08-05]
