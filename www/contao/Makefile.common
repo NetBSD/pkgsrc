@@ -1,20 +1,16 @@
-# $NetBSD: Makefile.common,v 1.98 2015/07/26 17:18:35 taca Exp $
+# $NetBSD: Makefile.common,v 1.99 2015/08/05 13:19:52 taca Exp $
 #
 # used by www/contao32/Makefile
-# used by www/contao34/Makefile
 # used by www/contao35/Makefile
 
 # current release
 CT32_VERSION=	3.2.21
-CT34_VERSION=	3.4.5
 CT35_VERSION=	3.5.2
 
 CT_VERS?=	35
 
 .if ${CT_VERS} == "32"
 CT_VERSION=	${CT32_VERSION}
-.elif ${CT_VERS} == "34"
-CT_VERSION=	${CT34_VERSION}
 .elif ${CT_VERS} == "35"
 CT_VERSION=	${CT35_VERSION}
 .else
