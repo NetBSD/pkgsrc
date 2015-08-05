@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3233 2015/08/05 21:18:35 asau Exp $
+$NetBSD: CHANGES-2015,v 1.3234 2015/08/05 21:35:13 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5973,3 +5973,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/chicken to 4.10.0 [asau 2015-08-05]
 	Updated lang/racket to 6.2 [asau 2015-08-05]
 	Updated lang/racket-textual to 6.2 [asau 2015-08-05]
+	Updated math/gnumeric112 to 1.12.21 [he 2015-08-05]
