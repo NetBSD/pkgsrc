@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.493 2015/07/25 14:04:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.494 2015/08/06 13:26:41 kleink Exp $
 
 COMMENT=	Databases
 
@@ -360,6 +360,7 @@ SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-datapkg
 SUBDIR+=	py-elasticsearch
 SUBDIR+=	py-elixir
+SUBDIR+=	py-firebase
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
