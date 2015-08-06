@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2014/11/23 14:24:57 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2015/08/06 09:23:53 wiz Exp $
 
-SHA1 (Test-Class-0.48.tar.gz) = 020ba6d931034118d4febbd4f6ce949a0b864a74
-RMD160 (Test-Class-0.48.tar.gz) = 6a228ade284137d437b080768d6e0608266ff18c
-Size (Test-Class-0.48.tar.gz) = 71256 bytes
+SHA1 (Test-Class-0.50.tar.gz) = 1f79ae39619c9788dc5b9e3efb04d7775b321318
+RMD160 (Test-Class-0.50.tar.gz) = a13053f904ec426ae5172050d8399967c1c5c7d7
+Size (Test-Class-0.50.tar.gz) = 60253 bytes
