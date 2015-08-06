@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/04/06 13:24:20 rodent Exp $
+# $NetBSD: Makefile,v 1.34 2015/08/06 22:16:24 khorben Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -13,6 +13,8 @@ NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 WRKSRC=		${WRKDIR}/asclock1.0
 USE_IMAKE=	YES
+
+MAKE_FLAGS+=	CDEBUGFLAGS=${CFLAGS:Q}
 
 LANGUAGES=	en de pt nl no it sv es hu br fr cs ru uk sl id da
 
