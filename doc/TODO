@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14669 2015/08/06 09:26:29 wiz Exp $
+$NetBSD: TODO,v 1.14670 2015/08/06 09:28:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1462,7 +1462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Rose-URI-1.02
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SNMP-Info-3.28
-	o p5-SUPER-1.20141117
 	o p5-SVG-2.64
 	o p5-SVN-Simple-0.312
 	o p5-Scope-Guard-0.21
