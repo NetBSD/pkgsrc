@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/05/06 02:33:52 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/08/06 09:03:27 wiz Exp $
 
-SHA1 (Devel-CheckBin-0.03.tar.gz) = dcc85fbad6e84da213fd7fc11f3ee6b87253fc3b
-RMD160 (Devel-CheckBin-0.03.tar.gz) = 0160278bdd32a99180408f31336955bf13b359bf
-Size (Devel-CheckBin-0.03.tar.gz) = 9832 bytes
+SHA1 (Devel-CheckBin-0.04.tar.gz) = 0292b2c2d41924796bd6d599c87982da199d9913
+RMD160 (Devel-CheckBin-0.04.tar.gz) = 0606582701fdcf424c61a0ea24515de767fa113c
+Size (Devel-CheckBin-0.04.tar.gz) = 9866 bytes
