@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3261 2015/08/06 08:29:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3262 2015/08/06 08:30:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6001,3 +6001,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Variable-Magic to 0.58 [wiz 2015-08-06]
 	Updated time/p5-Time-Duration-Parse to 0.12 [wiz 2015-08-06]
 	Updated time/p5-Time-Duration to 1.20 [wiz 2015-08-06]
+	Updated net/p5-Test-RequiresInternet to 0.05 [wiz 2015-08-06]
