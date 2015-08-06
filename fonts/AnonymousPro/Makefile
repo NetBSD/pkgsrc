@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/06 07:01:53 wiz Exp $
 #
 
-DISTNAME=	AnonymousPro-1.001
-PKGREVISION=	1
+DISTNAME=	AnonymousPro-1.002
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.ms-studio.com/FontSales/
+MASTER_SITES=	http://www.marksimonson.com/assets/content/fonts/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ms-studio.com/FontSales/anonymouspro.html
+HOMEPAGE=	http://www.marksimonson.com/fonts/view/anonymous-pro
 COMMENT=	Fixed width Sans designed especially for Coders
 LICENSE=	ofl-v1.1
 
-#WRKSRC=		${WRKDIR}/AnonymousPro-1.001
+WRKSRC=		${WRKDIR}/AnonymousPro-1.002.001
 USE_LANGUAGES=	# none
 
 NO_CONFIGURE=	YES
