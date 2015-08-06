@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3244 2015/08/06 06:27:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3245 2015/08/06 06:35:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5984,3 +5984,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-Slurp-Tiny to 0.004 [wen 2015-08-06]
 	Updated devel/p5-Log-Dispatch to 2.46 [wen 2015-08-06]
 	Updated mail/p5-MIME-Types to 2.11 [wiz 2015-08-06]
+	Updated devel/afl to 1.85b [wiz 2015-08-06]
