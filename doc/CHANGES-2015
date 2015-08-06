@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3283 2015/08/06 10:36:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3284 2015/08/06 11:00:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-inc version 0.06 [wiz 2015-08-06]
 	Updated geography/py-geojson to 1.2.2 [kleink 2015-08-06]
 	Added devel/p5-inc-latest version 0.500 [wiz 2015-08-06]
+	Updated devel/p5-Module-Build to 0.42140 [wiz 2015-08-06]
