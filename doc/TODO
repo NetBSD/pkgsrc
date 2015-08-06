@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14660 2015/08/06 09:03:36 wiz Exp $
+$NetBSD: TODO,v 1.14661 2015/08/06 09:04:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1316,7 +1316,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Date-Extract-0.05
 	o p5-DateTime-Format-Mail-0.4020
 	o p5-DateTime-Format-Pg-0.16011
-	o p5-Devel-CheckCompiler-0.06
 	o p5-Devel-FindPerl-0.014
 	o p5-Devel-PatchPerl-1.38
 	o p5-Device-XBee-API-0.8
