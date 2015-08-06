@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3237 2015/08/06 01:45:40 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3238 2015/08/06 01:53:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5977,3 +5977,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBIx-Introspector to 0.001005 [wen 2015-08-06]
 	Added math/p5-Math-Base-Convert version 0.08 [wen 2015-08-06]
 	Updated databases/p5-SQL-Statement to 1.407 [wen 2015-08-06]
+	Updated databases/p5-SQL-Translator to 0.11021 [wen 2015-08-06]
