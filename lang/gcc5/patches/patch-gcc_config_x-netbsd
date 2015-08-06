@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_config_x-netbsd,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+$NetBSD: patch-gcc_config_x-netbsd,v 1.2 2015/08/06 07:21:29 martin Exp $
 
 Add host hooks for NetBSD - needed for working precompiled headers.
 http://gcc.gnu.org/bugzilla/show_bug.cgi?id=58397
