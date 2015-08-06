@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14633 2015/08/06 02:27:01 wen Exp $
+$NetBSD: TODO,v 1.14634 2015/08/06 03:37:56 wen Exp $
 
 Suggested new packages
 ======================
@@ -1347,7 +1347,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-File-LibMagic-1.13
 	o p5-File-Path-2.11
 	o p5-File-ShareDir-ProjectDistDir-1.000008
-	o p5-File-Slurp-Tiny-0.004
 	o p5-File-Tail-1.2
 	o p5-Filter-1.55
 	o p5-Font-FreeType-0.06
