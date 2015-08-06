@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 12:38:32 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.2 2015/08/06 07:21:26 wiz Exp $
 
-DISTNAME=	proxymngr-1.0.3
+DISTNAME=	proxymngr-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
