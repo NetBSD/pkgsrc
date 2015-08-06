@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3259 2015/08/06 08:26:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3260 2015/08/06 08:27:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5999,3 +5999,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-YAML-LibYAML to 0.59 [wiz 2015-08-06]
 	Updated www/p5-WWW-Mechanize to 1.75 [wiz 2015-08-06]
 	Updated devel/p5-Variable-Magic to 0.58 [wiz 2015-08-06]
+	Updated time/p5-Time-Duration-Parse to 0.12 [wiz 2015-08-06]
