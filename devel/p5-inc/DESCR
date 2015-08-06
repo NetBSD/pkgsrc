@@ -1,0 +1,5 @@
+The inc module redefines @INC to a list of predefined smart objects.
+These objects are really just code refs for handy lookup techniques.
+For example, only finding modules that were core in Perl 5.8.1, or
+only finding non-core modules that are declared prerequisites of
+some module.
