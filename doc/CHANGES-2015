@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3235 2015/08/06 00:17:07 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3236 2015/08/06 01:37:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5975,3 +5975,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/racket-textual to 6.2 [asau 2015-08-05]
 	Updated math/gnumeric112 to 1.12.21 [he 2015-08-05]
 	Updated databases/p5-DBIx-Introspector to 0.001005 [wen 2015-08-06]
+	Added math/p5-Math-Base-Convert version 0.08 [wen 2015-08-06]
