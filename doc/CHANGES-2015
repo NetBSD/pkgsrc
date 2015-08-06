@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3247 2015/08/06 07:02:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3248 2015/08/06 07:14:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5987,3 +5987,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.85b [wiz 2015-08-06]
 	Updated print/cups to 2.0.4 [wiz 2015-08-06]
 	Updated fonts/AnonymousPro to 1.002 [wiz 2015-08-06]
+	Updated x11/xmh to 1.0.3 [wiz 2015-08-06]
