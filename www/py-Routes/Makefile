@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/07/15 18:49:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/06 08:05:56 wiz Exp $
 
-DISTNAME=	Routes-2.1
+DISTNAME=	Routes-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	https://pypi.python.org/packages/source/R/Routes/
