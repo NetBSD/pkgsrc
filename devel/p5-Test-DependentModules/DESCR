@@ -1,24 +1,9 @@
-WARNING: The tests this module does should never be included as part of a
-normal CPAN install!
-  This module is intended as a tool for module authors who would like to
-easily test that a module release will not break dependencies. This is
-particularly useful for module authors (like myself) who have modules which
-are a dependency of many other modules.  
- --  How It Works --
-Internally, this module will download dependencies from CPAN and run their
-tests. If those dependencies in turn have unsatisfied dependencies, they
-are installed into a temporary directory. These second-level (and third-,
-etc) dependencies are not tested.
-  In order to avoid prompting, this module sets $ENV{PERL_AUTOINSTALL} to
---defaultdeps and sets $ENV{PERL_MM_USE_DEFAULT} to a true value.
-  Nonetheless, some ill-behaved modules will still wait for a prompt.
-Unfortunately, because of the way this module attempts to keep output
-to a minimum, you won't see these prompts. Patches are welcome.
+This module is intended as a tool for module authors who would like
+to easily test that a module release will not break dependencies.
+This is particularly useful for module authors (like myself) who
+have modules which are a dependency of many other modules.
 
- -- Running Tests in Parallel --
-If you're testing a lot of modules, you might benefit from running tests in
-parallel. You'll need to have Parallel::ForkManager installed for this to
-work.
-
-  Set the $ENV{PERL_TEST_DM_PROCESSES} env var to a value greater than 1 to
-qenable parallel testing.
+Internally, this module will download dependencies from CPAN and
+run their tests. If those dependencies in turn have unsatisfied
+dependencies, they are installed into a temporary directory. These
+second-level (and third-, etc) dependencies are not tested.
