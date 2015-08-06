@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:32 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/08/06 07:18:58 wiz Exp $
 
-SHA1 (xcmsdb-1.0.4.tar.bz2) = a633f76af38ea40b33d55c3ac820fd19f17f9428
-RMD160 (xcmsdb-1.0.4.tar.bz2) = 01b4bb77fe3058d21894a99b97e5b1e65e080e98
-Size (xcmsdb-1.0.4.tar.bz2) = 136502 bytes
+SHA1 (xcmsdb-1.0.5.tar.bz2) = b1d09b1a9a4324fa86c85340ae47cc34743423a9
+RMD160 (xcmsdb-1.0.5.tar.bz2) = 5f086cf1c0acaa7b0555085bfac07063621c1efb
+Size (xcmsdb-1.0.5.tar.bz2) = 145419 bytes
