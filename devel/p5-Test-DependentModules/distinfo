@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/09 14:20:15 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/08/06 09:26:20 wiz Exp $
 
-SHA1 (Test-DependentModules-0.20.tar.gz) = 0f8769954c5d952a83f03791711320bbd4c7f966
-RMD160 (Test-DependentModules-0.20.tar.gz) = e1f5e605d31d9e134a9683e7fadf36aab3b2731e
-Size (Test-DependentModules-0.20.tar.gz) = 26646 bytes
+SHA1 (Test-DependentModules-0.21.tar.gz) = 65decb309465ba6403a90c290d66bf22dc083fa7
+RMD160 (Test-DependentModules-0.21.tar.gz) = 81a335cc9e05f86a318b6562647fdac1643e70ac
+Size (Test-DependentModules-0.21.tar.gz) = 29370 bytes
