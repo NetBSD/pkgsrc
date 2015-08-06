@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/16 15:52:30 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/08/06 03:36:25 wen Exp $
 
-SHA1 (File-Slurp-Tiny-0.003.tar.gz) = 805245e0116b1aabdce3b6106e229de50b7f6d3e
-RMD160 (File-Slurp-Tiny-0.003.tar.gz) = 3409bb345f2af70a243c2bf798b35335ae0b1ca9
-Size (File-Slurp-Tiny-0.003.tar.gz) = 12091 bytes
+SHA1 (File-Slurp-Tiny-0.004.tar.gz) = 016480e301a0b28f19f51fd31cf35d1ce4808b91
+RMD160 (File-Slurp-Tiny-0.004.tar.gz) = 6e862c584394779e7f5d38e007a111291a53285c
+Size (File-Slurp-Tiny-0.004.tar.gz) = 12841 bytes
