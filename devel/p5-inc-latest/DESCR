@@ -1,0 +1,10 @@
+The inc::latest module helps bootstrap configure-time dependencies
+for CPAN distributions. These dependencies get bundled into the
+inc directory within a distribution and are used by Makefile.PL or
+Build.PL.
+
+Arguments to inc::latest are module names that are checked against
+both the current @INC array and against specially-named directories
+in inc. If the bundled version is newer than the installed one (or
+the module isn't installed, then, the bundled directory is added
+to the start of @INC and the module is loaded from there.
