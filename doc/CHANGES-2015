@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3276 2015/08/06 09:22:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3277 2015/08/06 09:24:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6016,3 +6016,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Hijk to 0.24 [wiz 2015-08-06]
 	Updated devel/p5-IO-All to 0.86 [wiz 2015-08-06]
 	Updated devel/p5-Inline-C to 0.76 [wiz 2015-08-06]
+	Updated devel/p5-Test-Class to 0.50 [wiz 2015-08-06]
