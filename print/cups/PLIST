@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2015/06/12 11:02:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2015/08/06 06:56:33 wiz Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -90,6 +90,7 @@ man/man5/classes.conf.5
 man/man5/client.conf.5
 man/man5/cups-files.conf.5
 man/man5/cups-snmp.conf.5
+man/man5/cupsd-logs.5
 man/man5/cupsd.conf.5
 man/man5/ipptoolfile.5
 man/man5/mailto.conf.5
@@ -111,7 +112,6 @@ man/man8/cupsaccept.8
 man/man8/cupsaddsmb.8
 man/man8/cupsctl.8
 man/man8/cupsd-helper.8
-man/man8/cupsd-logs.8
 man/man8/cupsd.8
 man/man8/cupsdisable.8
 man/man8/cupsenable.8
