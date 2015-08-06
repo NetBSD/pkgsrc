@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3268 2015/08/06 09:01:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3269 2015/08/06 09:03:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6008,3 +6008,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Data-Dump to 1.23 [wiz 2015-08-06]
 	Updated time/p5-DateTime-Format-Strptime to 1.5600 [wiz 2015-08-06]
 	Updated devel/p5-Class-Load to 0.23 [wiz 2015-08-06]
+	Updated devel/p5-Devel-CheckBin to 0.04 [wiz 2015-08-06]
