@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3278 2015/08/06 09:26:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3279 2015/08/06 09:28:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6018,3 +6018,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Inline-C to 0.76 [wiz 2015-08-06]
 	Updated devel/p5-Test-Class to 0.50 [wiz 2015-08-06]
 	Updated devel/p5-Test-DependentModules to 0.21 [wiz 2015-08-06]
+	Updated devel/p5-SUPER to 1.20141117 [wiz 2015-08-06]
