@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2015/01/18 12:24:46 wen Exp $
+$NetBSD: distinfo,v 1.23 2015/08/06 04:15:52 wen Exp $
 
-SHA1 (Log-Dispatch-2.44.tar.gz) = a73627d56cd2ba4ab8cf91f030032438c3811a76
-RMD160 (Log-Dispatch-2.44.tar.gz) = 0cecffb2a33687339b4aa5793308f51232e27a0c
-Size (Log-Dispatch-2.44.tar.gz) = 49540 bytes
+SHA1 (Log-Dispatch-2.46.tar.gz) = 42fefc536bbc99e788f2227e41ad433937cd30e4
+RMD160 (Log-Dispatch-2.46.tar.gz) = d088dc40030b8b174ac214eb5c673b4ca1c36ccf
+Size (Log-Dispatch-2.46.tar.gz) = 52185 bytes
