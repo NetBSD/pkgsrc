@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/06 13:26:16 kleink Exp $
+
+SHA1 (python-firebase-1.2.tar.gz) = ac52c16ca1f19a946038a30ac1e66be6ac1ce091
+RMD160 (python-firebase-1.2.tar.gz) = 22453f695813ae2492e87b04e3f5859e6eb29539
+Size (python-firebase-1.2.tar.gz) = 10031 bytes
