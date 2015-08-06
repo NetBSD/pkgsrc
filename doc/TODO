@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14647 2015/08/06 08:18:02 wiz Exp $
+$NetBSD: TODO,v 1.14648 2015/08/06 08:19:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1542,7 +1542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-WebService-Google-Reader-0.23
 	o p5-Wx-0.9927
 	o p5-YAML-1.15
-	o p5-YAML-LibYAML-0.59
 	o p5-YAML-Tiny-1.69
 	o p5-autodie-2.29
 	o p5-autovivification-0.16
