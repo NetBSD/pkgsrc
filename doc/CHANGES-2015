@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3289 2015/08/06 11:13:41 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3290 2015/08/06 12:47:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6029,3 +6029,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net to 3.07 [wiz 2015-08-06]
 	Updated sysutils/spice-protocol to 0.12.9 [wiz 2015-08-06]
 	Updated converters/psiconv to 0.9.9 [wiz 2015-08-06]
+	Updated devel/libgsf to 1.14.34 [wiz 2015-08-06]
