@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2014/08/23 20:40:38 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.38 2015/08/06 12:47:26 wiz Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -86,14 +86,18 @@ share/gtk-doc/html/gsf/index.html
 share/gtk-doc/html/gsf/index.sgml
 share/gtk-doc/html/gsf/intro.html
 share/gtk-doc/html/gsf/io.html
+share/gtk-doc/html/gsf/left-insensitive.png
 share/gtk-doc/html/gsf/left.png
 share/gtk-doc/html/gsf/misc.html
 share/gtk-doc/html/gsf/parsers.html
+share/gtk-doc/html/gsf/right-insensitive.png
 share/gtk-doc/html/gsf/right.png
 share/gtk-doc/html/gsf/sources.html
 share/gtk-doc/html/gsf/style.css
+share/gtk-doc/html/gsf/up-insensitive.png
 share/gtk-doc/html/gsf/up.png
 share/locale/as/LC_MESSAGES/libgsf.mo
+share/locale/bs/LC_MESSAGES/libgsf.mo
 share/locale/ca/LC_MESSAGES/libgsf.mo
 share/locale/ca@valencia/LC_MESSAGES/libgsf.mo
 share/locale/cs/LC_MESSAGES/libgsf.mo
