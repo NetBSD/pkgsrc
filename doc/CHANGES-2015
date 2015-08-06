@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3251 2015/08/06 07:55:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3252 2015/08/06 08:06:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5991,3 +5991,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xcmsdb to 1.0.5 [wiz 2015-08-06]
 	Updated x11/proxymngr to 1.0.4 [wiz 2015-08-06]
 	Updated devel/libidn to 1.32 [wiz 2015-08-06]
+	Updated www/py-Routes to 2.2 [wiz 2015-08-06]
