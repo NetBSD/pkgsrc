@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3241 2015/08/06 02:25:48 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3242 2015/08/06 03:37:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5981,3 +5981,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Deep to 0.117 [wen 2015-08-06]
 	Updated databases/p5-DBI to 1.634 [wen 2015-08-06]
 	Updated www/p5-Dancer2 to 0.161000 [wen 2015-08-06]
+	Updated devel/p5-File-Slurp-Tiny to 0.004 [wen 2015-08-06]
