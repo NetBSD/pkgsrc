@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/04/30 03:10:32 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/08/06 09:12:20 wiz Exp $
 
-SHA1 (Hijk-0.20.tar.gz) = 293f30e9a1b03f0591783f156ed807586d2a4717
-RMD160 (Hijk-0.20.tar.gz) = c3e6e89d1f7799e7680378ccc88e172fbd1aceb7
-Size (Hijk-0.20.tar.gz) = 42142 bytes
+SHA1 (Hijk-0.24.tar.gz) = b66d601072d2d4b8e7985c6a4cfe3ddf2a13c331
+RMD160 (Hijk-0.24.tar.gz) = 9a1f883fb62337989adc9383f4d7215ceb261414
+Size (Hijk-0.24.tar.gz) = 43623 bytes
