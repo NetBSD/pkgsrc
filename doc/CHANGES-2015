@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3274 2015/08/06 09:12:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3275 2015/08/06 09:15:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6014,3 +6014,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-DesktopEntry to 0.12 [wiz 2015-08-06]
 	Updated www/p5-HTTP-Server-Simple to 0.50 [wiz 2015-08-06]
 	Updated www/p5-Hijk to 0.24 [wiz 2015-08-06]
+	Updated devel/p5-IO-All to 0.86 [wiz 2015-08-06]
