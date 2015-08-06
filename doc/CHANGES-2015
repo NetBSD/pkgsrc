@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3257 2015/08/06 08:19:55 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3258 2015/08/06 08:24:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5997,3 +5997,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools_scm to 1.6.0 [wiz 2015-08-06]
 	Updated devel/p5-namespace-autoclean to 0.26 [wiz 2015-08-06]
 	Updated textproc/p5-YAML-LibYAML to 0.59 [wiz 2015-08-06]
+	Updated www/p5-WWW-Mechanize to 1.75 [wiz 2015-08-06]
