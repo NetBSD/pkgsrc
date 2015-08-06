@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3279 2015/08/06 09:28:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3280 2015/08/06 09:29:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Class to 0.50 [wiz 2015-08-06]
 	Updated devel/p5-Test-DependentModules to 0.21 [wiz 2015-08-06]
 	Updated devel/p5-SUPER to 1.20141117 [wiz 2015-08-06]
+	Updated converters/p5-JSON-MaybeXS to 1.003005 [wiz 2015-08-06]
