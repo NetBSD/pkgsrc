@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14666 2015/08/06 09:15:11 wiz Exp $
+$NetBSD: TODO,v 1.14667 2015/08/06 09:22:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1187,7 +1187,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o myodbc-5.3.4
 	o mysql-5.7.6
 	o mysql-cluster-7.4.7
-	o mysql-connector-c++-1.1.6
 	o mysql-workbench-6.2.5
 	o nagios-plugin-ldap-2.1.1
 	o nagios-plugin-mysql-2.1.1
@@ -1363,8 +1362,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompter-0.004013
 	o p5-IP-Country-3.03
-	o p5-Image-ExifTool-9.99
-	o p5-Inline-C-0.76
 	o p5-JSON-Any-1.39
 	o p5-JSON-MaybeXS-1.003005
 	o p5-JavaScript-Value-Escape-0.07
