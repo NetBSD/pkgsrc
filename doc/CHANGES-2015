@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3286 2015/08/06 11:03:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3287 2015/08/06 11:04:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6026,3 +6026,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-Build to 0.42140 [wiz 2015-08-06]
 	Updated devel/p5-Module-Build-XSUtil to 0.16 [wiz 2015-08-06]
 	Updated misc/p5-Locale-libintl to 1.24 [wiz 2015-08-06]
+	Updated net/p5-Net to 3.07 [wiz 2015-08-06]
