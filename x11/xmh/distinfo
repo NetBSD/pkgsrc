@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:33 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/08/06 07:14:46 wiz Exp $
 
-SHA1 (xmh-1.0.2.tar.bz2) = 3b771d8e7de175dc6890bcf03bd1fcf91c7ad919
-RMD160 (xmh-1.0.2.tar.bz2) = 29d14122033edb31418aac199facc7e9d07c38de
-Size (xmh-1.0.2.tar.bz2) = 181993 bytes
+SHA1 (xmh-1.0.3.tar.bz2) = 09f7b3f683b0fe93da62e4dc8ed023fcacca078a
+RMD160 (xmh-1.0.3.tar.bz2) = 8f8c5d9be71785b62949bec56719fae9b0c6a0df
+Size (xmh-1.0.3.tar.bz2) = 212109 bytes
