@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3246 2015/08/06 06:56:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3247 2015/08/06 07:02:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5986,3 +5986,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-MIME-Types to 2.11 [wiz 2015-08-06]
 	Updated devel/afl to 1.85b [wiz 2015-08-06]
 	Updated print/cups to 2.0.4 [wiz 2015-08-06]
+	Updated fonts/AnonymousPro to 1.002 [wiz 2015-08-06]
