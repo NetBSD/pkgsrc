@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2015/06/12 10:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/08/06 08:24:31 wiz Exp $
 
-DISTNAME=	WWW-Mechanize-1.74
+DISTNAME=	WWW-Mechanize-1.75
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/WWW-Mechanize/
 COMMENT=	Automates web page form & link interaction
 LICENSE=	${PERL5_LICENSE}
 
+DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-HTML-Form>=6.00:../../www/p5-HTML-Form
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
