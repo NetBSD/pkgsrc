@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3265 2015/08/06 08:35:19 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3266 2015/08/06 08:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6005,3 +6005,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-Requires to 0.10 [wiz 2015-08-06]
 	Updated devel/p5-Test-Exception to 0.40 [wiz 2015-08-06]
 	Updated databases/p5-DBM-Deep to 2.0012 [wiz 2015-08-06]
+	Updated devel/p5-Data-Dump to 1.23 [wiz 2015-08-06]
