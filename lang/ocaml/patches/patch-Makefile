@@ -1,7 +1,7 @@
-$NetBSD: patch-Makefile,v 1.5 2015/06/30 11:08:47 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.6 2015/08/07 11:16:30 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
---- Makefile.orig	2015-06-10 09:27:36.000000000 +0000
+--- Makefile.orig	2015-07-20 14:10:11.000000000 +0000
 +++ Makefile
 @@ -186,8 +186,10 @@ LIBFILES=stdlib.cma std_exit.cmo *.cmi c
  # Start up the system from the distribution compiler
@@ -14,7 +14,7 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
  	cp yacc/ocamlyacc$(EXE) boot/ocamlyacc$(EXE)
  	cd stdlib; $(MAKE) COMPILER=../boot/ocamlc all
  	cd stdlib; cp $(LIBFILES) ../boot
-@@ -302,31 +304,31 @@ INSTALL_MANDIR=$(DESTDIR)$(MANDIR)
+@@ -302,35 +304,35 @@ INSTALL_MANDIR=$(DESTDIR)$(MANDIR)
  
  install:
  	if test -d $(INSTALL_BINDIR); then : ; \
@@ -44,11 +44,15 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
  	cd stdlib; $(MAKE) install
 -	cp lex/ocamllex $(INSTALL_BINDIR)/ocamllex$(EXE)
 -	cp $(CAMLYACC)$(EXE) $(INSTALL_BINDIR)/ocamlyacc$(EXE)
--	cp utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi \
+-	cp utils/*.cmi utils/*.cmt utils/*.cmti \
 +	$(BSD_INSTALL_SCRIPT) lex/ocamllex $(INSTALL_BINDIR)/ocamllex$(EXE)
 +	$(BSD_INSTALL_SCRIPT) $(CAMLYACC)$(EXE) $(INSTALL_BINDIR)/ocamlyacc$(EXE)
-+	$(BSD_INSTALL_DATA) utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi \
- 	   toplevel/*.cmi $(INSTALL_COMPLIBDIR)
++	$(BSD_INSTALL_DATA) utils/*.cmi utils/*.cmt utils/*.cmti \
+ 	   parsing/*.cmi parsing/*.cmt parsing/*.cmti \
+ 	   typing/*.cmi typing/*.cmt typing/*.cmti \
+ 	   bytecomp/*.cmi bytecomp/*.cmt bytecomp/*.cmti \
+ 	   driver/*.cmi driver/*.cmt driver/*.cmti \
+ 	   toplevel/*.cmi toplevel/*.cmt toplevel/*.cmti $(INSTALL_COMPLIBDIR)
 -	cp compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
 +	$(BSD_INSTALL_DATA) compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
  	   compilerlibs/ocamltoplevel.cma $(BYTESTART) $(TOPLEVELSTART) \
@@ -60,7 +64,7 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
  	cd tools; $(MAKE) install
  	-cd man; $(MAKE) install
  	for i in $(OTHERLIBRARIES); do \
-@@ -337,16 +339,16 @@ install:
+@@ -341,16 +343,16 @@ install:
  	   else :; fi
  	if test -n "$(WITH_OCAMLBUILD)"; then (cd ocamlbuild; $(MAKE) install); \
  	   else :; fi
@@ -74,14 +78,14 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
 -	cp ocamlopt $(INSTALL_BINDIR)/ocamlopt$(EXE)
 +	$(BSD_INSTALL_SCRIPT) ocamlopt $(INSTALL_BINDIR)/ocamlopt$(EXE)
  	cd stdlib; $(MAKE) installopt
--	cp asmcomp/*.cmi $(INSTALL_COMPLIBDIR)
+-	cp asmcomp/*.cmi asmcomp/*.cmt asmcomp/*.cmti $(INSTALL_COMPLIBDIR)
 -	cp compilerlibs/ocamloptcomp.cma $(OPTSTART) $(INSTALL_COMPLIBDIR)
-+	$(BSD_INSTALL_DATA) asmcomp/*.cmi $(INSTALL_COMPLIBDIR)
++	$(BSD_INSTALL_DATA) asmcomp/*.cmi asmcomp/*.cmt asmcomp/*.cmti $(INSTALL_COMPLIBDIR)
 +	$(BSD_INSTALL_DATA) compilerlibs/ocamloptcomp.cma $(OPTSTART) $(INSTALL_COMPLIBDIR)
  	if test -n "$(WITH_OCAMLDOC)"; then (cd ocamldoc; $(MAKE) installopt); \
  		else :; fi
  	if test -n "$(WITH_OCAMLBUILD)"; then (cd ocamlbuild; $(MAKE) installopt); \
-@@ -357,10 +359,10 @@ installopt:
+@@ -361,10 +363,10 @@ installopt:
  	cd tools; $(MAKE) installopt
  
  installoptopt:
