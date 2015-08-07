@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/07 01:31:20 wen Exp $
 #
 
-DISTNAME=	Mail-Sender-0.8.16
+DISTNAME=	Mail-Sender-0.8.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~jenda/Mail-Sender/
 COMMENT=	Sending mails with attachments through an SMTP server
+LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
 
