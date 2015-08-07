@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/06/30 11:53:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/07 11:20:33 jaapb Exp $
 
 DISTNAME=	lablgtk-1.2.7
 PKGNAME=	lablgtk1-1.2.7
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/571/
 LICENSE=	gnu-lgpl-v2.1

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.94 2015/06/30 11:52:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.95 2015/08/07 11:20:34 jaapb Exp $
 
 DISTNAME=	unison-2.48.3
 # XXX remove DIST_SUBDIR with next release
 DIST_SUBDIR=	${DISTNAME}-release
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://www.seas.upenn.edu/~bcpierce/unison/download/releases/stable/
 
