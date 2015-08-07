@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/21 12:44:07 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/08/07 12:42:55 wen Exp $
 
-SHA1 (Mail-POP3Client-2.18.tar.gz) = 61d39947688dff3211445a777d0a9373fab79187
-RMD160 (Mail-POP3Client-2.18.tar.gz) = 2bbae09628ce6948f5e055e59045655bdc358e68
-Size (Mail-POP3Client-2.18.tar.gz) = 16641 bytes
+SHA1 (Mail-POP3Client-2.19.tar.gz) = b1bb721a0bbc8964394068b4ca4401c58b483102
+RMD160 (Mail-POP3Client-2.19.tar.gz) = 785a83f44c23e6a12be1411186f2a3d074633282
+Size (Mail-POP3Client-2.19.tar.gz) = 17751 bytes
