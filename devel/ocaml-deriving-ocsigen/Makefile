@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2015/06/30 11:52:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/07 11:20:33 jaapb Exp $
 #
 
 VERSION=	0.7
 DISTNAME=	${VERSION}
 PKGNAME=	ocaml-deriving-ocsigen-${VERSION}
 COMMENT=	Extension to OCaml for deriving functions from type declarations
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/ocsigen/deriving/archive/
 DIST_SUBDIR=	ocaml-deriving-ocsigen
