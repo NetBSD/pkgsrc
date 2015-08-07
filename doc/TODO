@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14680 2015/08/07 01:22:20 wen Exp $
+$NetBSD: TODO,v 1.14681 2015/08/07 01:32:36 wen Exp $
 
 Suggested new packages
 ======================
@@ -1379,7 +1379,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Mail-IMAPClient-3.35
 	o p5-Mail-Mbox-MessageParser-1.5105
 	o p5-Mail-POP3Client-2.19
-	o p5-Mail-Sender-0.8.23
 	o p5-Math-Base36-0.14
 	o p5-Math-BigInt-GMP-1.38
 	o p5-Math-BigInt-Pari-1.18
