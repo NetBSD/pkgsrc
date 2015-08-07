@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2015/06/30 11:53:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/07 11:20:35 jaapb Exp $
 #
 
 VERSION=	4.1.0
 PKGNAME=	eliom-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	${VERSION}
 DIST_SUBDIR=	eliom
 CATEGORIES=	www
