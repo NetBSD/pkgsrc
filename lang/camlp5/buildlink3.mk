@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2015/06/30 11:10:15 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/08/07 11:19:13 jaapb Exp $
 #
 
 BUILDLINK_TREE+=	camlp5
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	camlp5
 CAMLP5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.camlp5+=	camlp5>=5.01
-BUILDLINK_ABI_DEPENDS.camlp5+=	camlp5>=6.13
+BUILDLINK_ABI_DEPENDS.camlp5+=	camlp5>=6.14
 BUILDLINK_PKGSRCDIR.camlp5?=	../../lang/camlp5
 
 .include "../../lang/ocaml/buildlink3.mk"
