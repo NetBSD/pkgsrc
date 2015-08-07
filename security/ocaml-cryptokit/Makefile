@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/06/30 11:52:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/07 11:20:32 jaapb Exp $
 #
 
 DISTNAME=	cryptokit-1.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1229/
 
