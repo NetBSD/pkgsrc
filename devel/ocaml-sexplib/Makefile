@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/06/30 11:52:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/07 11:20:34 jaapb Exp $
 
 DISTNAME=	sexplib-${VERS}
 VERS=		112.01.00
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/janestreet/sexplib/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}

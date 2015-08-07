@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/06/30 11:52:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/07 11:20:34 jaapb Exp $
 
 VERSION=	1.2.0
 PKGNAME=	ocaml-opam-${VERSION}
 DISTNAME=	${VERSION}
 DIST_SUBDIR=	ocaml-opam
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	https://github.com/ocaml/opam/archive/
 
@@ -25,6 +25,7 @@ BUILD_TARGET=	all
 INSTALL_TARGET=	install libinstall
 INSTALL_ENV+=	LIBINSTALL_DIR=${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}
 
+.include "options.mk"
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
 .include "../../devel/ocaml-extlib/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
