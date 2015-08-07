@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.86 2015/07/04 09:29:47 jaapb Exp $
+$NetBSD: distinfo,v 1.87 2015/08/07 11:16:30 jaapb Exp $
 
-SHA1 (ocaml-4.02.2.tar.gz) = 7fb6571972635b00dfda204ca38a4b9dce79a354
-RMD160 (ocaml-4.02.2.tar.gz) = efb044b9c0a76ed20e7960176f26398dea2ba0aa
-Size (ocaml-4.02.2.tar.gz) = 3174187 bytes
-SHA1 (patch-Makefile) = 334808f12a1b14d7159d3b098f932e7621634007
+SHA1 (ocaml-4.02.3.tar.gz) = e68ffd2b5bb491a6345f46b27675e1361a49b274
+RMD160 (ocaml-4.02.3.tar.gz) = 3946204b9396a7fb81ae1042ce67a494579c151b
+Size (ocaml-4.02.3.tar.gz) = 3108892 bytes
+SHA1 (patch-Makefile) = ef49cd32d4cd360dbf4d6e743a34814616cd4e8f
 SHA1 (patch-asmcomp_asmlink.ml) = c97174d349a02783fd852da6ea707baab646a936
 SHA1 (patch-asmcomp_power_emit.mlp) = 726e09e4902b96f4790c7a8093eb245dd7028bf4
 SHA1 (patch-asmrun_Makefile) = 9dbb6cb2291caf5edb892b2b2ef008d61f7b1367
@@ -28,7 +28,7 @@ SHA1 (patch-otherlibs_dynlink_Makefile) = 41cecb61230880a40c55f2f8f25d2b250864eb
 SHA1 (patch-otherlibs_systhreads_Makefile) = f3cdf000f58927dff44b4ce61153c1df8e9eceea
 SHA1 (patch-otherlibs_threads_Makefile) = e976e94bddae1ce8462f22c2eaa6509b9cafb12d
 SHA1 (patch-stdlib_Makefile) = 501b45018245950c78d663bbd6eea1c38a6d04d2
-SHA1 (patch-stdlib_Makefile.shared) = 58d2d0036a5fe57e130d477438d0441d1956c328
+SHA1 (patch-stdlib_Makefile.shared) = 8c2a2b9d7dcecd140d3a7d36189e9b164c8a5462
 SHA1 (patch-tools_Makefile.shared) = ff10364c68df2ac548468c9e5d1ab66458d3413e
 SHA1 (patch-tools_ocamlcp.ml) = 779380f7ffb56f0a8156b2b30f477b2de8c1b269
 SHA1 (patch-tools_ocamlmklib) = bc9c22e8e2a63ae5dc8269587d4ff6c5ac26e440
