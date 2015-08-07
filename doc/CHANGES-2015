@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3301 2015/08/07 12:44:16 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3302 2015/08/07 12:51:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6041,3 +6041,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/camlp5 to 6.14 [jaapb 2015-08-07]
 	Updated mail/p5-Email-Address to 1.907 [wen 2015-08-07]
 	Updated mail/p5-Mail-POP3Client to 2.19 [wen 2015-08-07]
+	Updated mail/p5-Email-Send to 2.201 [wen 2015-08-07]
