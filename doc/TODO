@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14683 2015/08/07 11:17:22 jaapb Exp $
+$NetBSD: TODO,v 1.14684 2015/08/07 11:19:23 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calcoo-2.1.0
 	o calligra-2.4.3 [in wip; koffice successor]
-	o camlp5-6.14
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
 	o catdoc-tk-1.1
