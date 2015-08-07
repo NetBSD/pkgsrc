@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3296 2015/08/07 01:32:36 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3297 2015/08/07 01:43:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6036,3 +6036,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Convert-Binary-C to 0.77 [wen 2015-08-07]
 	Updated textproc/p5-Pod-Tree to 1.25 [wen 2015-08-07]
 	Updated mail/p5-Mail-Sender to 0.8.23 [wen 2015-08-07]
+	Updated math/R-DBI to 0.3.1 [wen 2015-08-07]
