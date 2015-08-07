@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3299 2015/08/07 11:19:23 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.3300 2015/08/07 12:37:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6039,3 +6039,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R-DBI to 0.3.1 [wen 2015-08-07]
 	Updated lang/ocaml to 4.02.3 [jaapb 2015-08-07]
 	Updated lang/camlp5 to 6.14 [jaapb 2015-08-07]
+	Updated mail/p5-Email-Address to 1.907 [wen 2015-08-07]
