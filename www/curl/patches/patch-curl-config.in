@@ -1,8 +1,8 @@
-$NetBSD: patch-curl-config.in,v 1.6 2015/06/30 23:00:21 spz Exp $
+$NetBSD: patch-curl-config.in,v 1.7 2015/08/08 02:44:16 spz Exp $
 
 - make "curl-config --libs" return proper ldflags for shared libraries
 
---- curl-config.in.orig	2014-01-05 22:07:54.000000000 +0000
+--- curl-config.in.orig	2015-06-03 07:38:20.000000000 +0000
 +++ curl-config.in
 @@ -148,9 +148,9 @@ while test $# -gt 0; do
             CURLLIBDIR=""
