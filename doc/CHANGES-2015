@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3302 2015/08/07 12:51:00 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3303 2015/08/08 00:14:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6042,3 +6042,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-Email-Address to 1.907 [wen 2015-08-07]
 	Updated mail/p5-Mail-POP3Client to 2.19 [wen 2015-08-07]
 	Updated mail/p5-Email-Send to 2.201 [wen 2015-08-07]
+	Updated lang/php54 to 5.4.44 [taca 2015-08-08]
+	Updated lang/php55 to 5.5.28 [taca 2015-08-08]
+	Updated lang/php56 to 5.6.12 [taca 2015-08-08]
