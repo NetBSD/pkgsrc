@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/10/16 16:22:41 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2015/08/08 06:45:36 wen Exp $
 
-SHA1 (MIME-Charset-1.009.1.tar.gz) = 918f9bc4057815b962d649062e99530bd311969b
-RMD160 (MIME-Charset-1.009.1.tar.gz) = a15b3d22ee8d54a7991278f43cc3ab9993200f8a
-Size (MIME-Charset-1.009.1.tar.gz) = 50202 bytes
+SHA1 (MIME-Charset-1.012.tar.gz) = e89670b443fa60c309e4d55e493c90a38b3a5940
+RMD160 (MIME-Charset-1.012.tar.gz) = a20419228ddca1480dfaf0b52ba00990ae593401
+Size (MIME-Charset-1.012.tar.gz) = 55201 bytes
