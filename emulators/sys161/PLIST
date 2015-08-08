@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/01 08:11:29 dholland Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/08/08 18:44:32 dholland Exp $
 bin/disk161
 bin/disk161-${PKGVERSION}
 bin/hub161
@@ -9,6 +9,10 @@ bin/sys161
 bin/sys161-${PKGVERSION}
 bin/trace161
 bin/trace161-${PKGVERSION}
+man/man1/disk161.1
+man/man1/hub161.1
+man/man1/stat161.1
+man/man1/sys161.1
 share/doc/sys161/copying.txt
 share/doc/sys161/devices.html
 share/doc/sys161/gdb.html
@@ -17,5 +21,6 @@ share/doc/sys161/install.html
 share/doc/sys161/lamebus.html
 share/doc/sys161/mips.html
 share/doc/sys161/networking.html
+share/doc/sys161/prof.html
 share/doc/sys161/system.html
 share/examples/sys161/sys161.conf.sample
