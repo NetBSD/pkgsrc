@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3306 2015/08/08 20:42:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3307 2015/08/08 21:33:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6048,3 +6048,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-MIME-Charset to 1.012 [wen 2015-08-08]
 	Updated emulators/sys161 to 2.0.3 [dholland 2015-08-08]
 	Updated devel/automake to 1.15nb2 [wiz 2015-08-08]
+	Updated converters/libmwaw to 0.3.6.2 [wiz 2015-08-08]
