@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2014/10/07 16:47:31 adam Exp $
+# $NetBSD: Makefile,v 1.45 2015/08/08 11:44:35 wiz Exp $
 
 DISTNAME=		dvdauthor-0.7.1
 PKGREVISION=		7
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dvdauthor/}
 
-MAINTAINER=		sekiya@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dvdauthor.sourceforge.net/
 COMMENT=		Tools to assist DVD authoring
 LICENSE=		gnu-gpl-v2

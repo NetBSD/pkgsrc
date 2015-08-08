@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 03:45:22 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/08 11:44:35 wiz Exp $
 
 DISTNAME=	rlpr-2.06
 PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	# ftp://truffula.com/pub/
 
-MAINTAINER=	sekiya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://truffula.com/rlpr/
 COMMENT=	Work-alike of lpr to print directly to remote printer
 
