@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/12/10 05:46:00 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/08/08 18:44:32 dholland Exp $
 
-SHA1 (sys161-1.99.10.tar.gz) = 8a9a26146516f650d7589032d3fac5d9fbfd5fc1
-RMD160 (sys161-1.99.10.tar.gz) = a3074fd766cace345b136a09b60fb13536f5e027
-Size (sys161-1.99.10.tar.gz) = 159582 bytes
+SHA1 (sys161-2.0.3.tar.gz) = 6838db38039f146f603b910c3e3aaa4bc82f7cc0
+RMD160 (sys161-2.0.3.tar.gz) = 91837c6ca9bf8715c8891c085f80317f863d6897
+Size (sys161-2.0.3.tar.gz) = 166109 bytes
+SHA1 (patch-mk_doc.mk) = 29fd6421a8865c39665fa4cda02133f2c6c862b2
