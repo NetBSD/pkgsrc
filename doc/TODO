@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14687 2015/08/07 12:51:00 wen Exp $
+$NetBSD: TODO,v 1.14688 2015/08/08 06:47:02 wen Exp $
 
 Suggested new packages
 ======================
@@ -1368,7 +1368,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Log-Any-Adapter-Log4perl-0.08
 	o p5-Log-Handler-0.87
 	o p5-Log-Report-1.07
-	o p5-MIME-Charset-1.012
 	o p5-MIME-EncWords-1.014.3
 	o p5-Mac-SystemDirectory-0.06
 	o p5-Mail-IMAPClient-3.35
