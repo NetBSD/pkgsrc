@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.48 2015/01/08 16:40:50 wiz Exp $
+$NetBSD: distinfo,v 1.49 2015/08/08 20:42:45 wiz Exp $
 
 SHA1 (automake-1.15.tar.xz) = c279b35ca6c410809dac8ade143b805fb48b7655
 RMD160 (automake-1.15.tar.xz) = 2581eff5fe04f416e0de9fed4c80dcde2ab677d1
 Size (automake-1.15.tar.xz) = 1496708 bytes
+SHA1 (patch-m4_python.m4) = 2f388204572f68ac180a85a873f73512e01c0fa4
