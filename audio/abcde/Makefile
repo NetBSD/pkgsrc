@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2015/07/01 09:28:25 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2015/08/08 11:44:34 wiz Exp $
 
 DISTNAME=	abcde-2.7
 CATEGORIES=	audio
 MASTER_SITES=	http://abcde.einval.com/download/
 
-MAINTAINER=	sekiya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://abcde.einval.com/
 COMMENT=	Command-line utility to rip and encode an audio CD
 
