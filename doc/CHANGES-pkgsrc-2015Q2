@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.15 2015/08/01 09:21:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.16 2015/08/09 08:04:45 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -89,3 +89,5 @@ emulators/suse131_mozilla-nss: security update
 emulators/suse131_openssl: security update
 emulators/suse131_qt4: security update
 emulators/suse131_x11: security update
+Pullup ticket #4789 - requested by mrg
+lang/perl5: bug fix patch
