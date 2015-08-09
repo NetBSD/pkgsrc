@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3324 2015/08/09 11:05:33 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3325 2015/08/09 11:16:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6103,3 +6103,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-siunitx-doc to 2.6h [markd 2015-08-09]
 	Updated print/tex-tetex to 3.0.38001 [markd 2015-08-09]
 	Updated print/tex-tetex-doc to 3.0.38001 [markd 2015-08-09]
+	Updated print/tex-texlive.infra to 2015.37738 [markd 2015-08-09]
