@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:24:57 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/09 15:22:22 khorben Exp $
 #
 
 DISTNAME=	Todo-0.1.2
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config xgettext
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 
 .include "options.mk"
 
