@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/09 06:14:08 markd Exp $
 
 DISTNAME=	fge.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.24
-TEXLIVE_REV=	24732
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.25
+TEXLIVE_REV=	37628
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fge

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:58 markd Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/09 06:14:07 markd Exp $
 
 DISTNAME=	fbb
-PKGNAME=	tex-${DISTNAME}-1.08
-TEXLIVE_REV=	36939
+PKGNAME=	tex-${DISTNAME}-1.08a
+TEXLIVE_REV=	37585
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fbb
