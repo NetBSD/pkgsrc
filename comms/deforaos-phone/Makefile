@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:20:29 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2015/08/09 15:38:16 khorben Exp $
 #
 
 DISTNAME=	Phone-0.4.2
@@ -21,6 +21,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/04/25 14:20:33 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/09 15:40:03 khorben Exp $
 
 DISTNAME=	Coder-0.0.0
 PKGNAME=	deforaos-coder-0.0.0
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 post-install:

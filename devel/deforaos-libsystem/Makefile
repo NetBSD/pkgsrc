@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/05/20 23:08:37 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/09 14:55:58 khorben Exp $
 #
 
 DISTNAME=	libSystem-0.2.1
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	INSTALL=${INSTALL}
 AUTO_MKDIRS=	yes
 

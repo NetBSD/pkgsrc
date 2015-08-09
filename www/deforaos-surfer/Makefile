@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/07/13 14:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/08/09 15:50:19 khorben Exp $
 
 DISTNAME=	Surfer-0.2.7
 PKGNAME=	deforaos-surfer-0.2.7
@@ -19,6 +19,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 OPSYSVARS+=		MAKE_ENV
