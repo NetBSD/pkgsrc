@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
+$NetBSD: patch-Makefile,v 1.3 2015/08/09 04:07:13 jnemeth Exp $
 
---- Makefile.orig	2013-02-04 19:50:52.000000000 +0000
+--- Makefile.orig	2015-06-04 00:44:42.000000000 +0000
 +++ Makefile
 @@ -130,7 +130,7 @@ DEBUG=-g3
  
@@ -11,7 +11,17 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  AGI_DIR=$(ASTDATADIR)/agi-bin
  
  # If you use Apache, you may determine by a grep 'DocumentRoot' of your httpd.conf file
-@@ -197,10 +197,6 @@ ifeq ($(AST_DEVMODE),yes)
+@@ -164,6 +164,9 @@ LINKER_SYMBOL_PREFIX=
+ # supported run:
+ # menuselect/menuselect --help
+ 
++GLOBAL_MAKEOPTS=$(wildcard /etc/asterisk.makeopts)
++USER_MAKEOPTS=$(wildcard ~/.asterisk.makeopts)
++
+ 
+ MOD_SUBDIR_CFLAGS="-I$(ASTTOPDIR)/include"
+ OTHER_SUBDIR_CFLAGS="-I$(ASTTOPDIR)/include"
+@@ -203,10 +206,6 @@ ifeq ($(AST_DEVMODE),yes)
    ADDL_TARGETS+=validate-docs
  endif
  
@@ -22,7 +32,20 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  ifeq ($(OSARCH),FreeBSD)
    # -V is understood by BSD Make, not by GNU make.
    BSDVERSION=$(shell make -V OSVERSION -f /usr/share/mk/bsd.port.subdir.mk)
-@@ -427,7 +423,6 @@ dist-clean: distclean
+@@ -340,10 +339,10 @@ makeopts: configure
+ 	@echo "****"
+ 	@exit 1
+ 
+-menuselect.makeopts: menuselect/menuselect menuselect-tree makeopts build_tools/menuselect-deps
++menuselect.makeopts: menuselect/menuselect menuselect-tree makeopts build_tools/menuselect-deps $(GLOBAL_MAKEOPTS) $(USER_MAKEOPTS)
+ ifeq ($(filter %menuselect,$(MAKECMDGOALS)),)
+ 	menuselect/menuselect --check-deps $@
+-	menuselect/menuselect --check-deps $@
++	menuselect/menuselect --check-deps $@ $(GLOBAL_MAKEOPTS) $(USER_MAKEOPTS)
+ endif
+ 
+ $(MOD_SUBDIRS_EMBED_LDSCRIPT):
+@@ -439,7 +438,6 @@ dist-clean: distclean
  
  distclean: $(SUBDIRS_DIST_CLEAN) _clean
  	@$(MAKE) -C menuselect dist-clean
@@ -30,7 +53,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  	rm -f menuselect.makeopts makeopts menuselect-tree menuselect.makedeps
  	rm -f makeopts.embed_rules
  	rm -f config.log config.status config.cache
-@@ -525,7 +520,7 @@ update:
+@@ -538,7 +536,7 @@ update:
  
  NEWHEADERS=$(notdir $(wildcard include/asterisk/*.h))
  OLDHEADERS=$(filter-out $(NEWHEADERS) $(notdir $(DESTDIR)$(ASTHEADERDIR)),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
@@ -39,7 +62,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  	"$(ASTSPOOLDIR)" "$(ASTSPOOLDIR)/dictate" "$(ASTSPOOLDIR)/meetme" \
  	"$(ASTSPOOLDIR)/monitor" "$(ASTSPOOLDIR)/system" "$(ASTSPOOLDIR)/tmp" \
  	"$(ASTSPOOLDIR)/voicemail" "$(ASTHEADERDIR)" "$(ASTHEADERDIR)/doxygen" \
-@@ -636,21 +631,21 @@ upgrade: bininstall
+@@ -650,21 +648,21 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -65,7 +88,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  		if [ -f "$${dst}" ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s "$${dst}" "$$x" ; then \
-@@ -679,9 +674,9 @@ samples: adsi
+@@ -693,9 +691,9 @@ samples: adsi
  			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
  			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
  			-e 's|^astsbindir.*$$|astsbindir => $(ASTSBINDIR)|' \
@@ -78,7 +101,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  	fi ; \
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX"
  	build_tools/make_sample_voicemail "$(DESTDIR)/$(ASTDATADIR)" "$(DESTDIR)/$(ASTSPOOLDIR)"
-@@ -707,7 +702,7 @@ samples: adsi
+@@ -721,7 +719,7 @@ samples: adsi
  webvmail:
  	@[ -d "$(DESTDIR)$(HTTP_DOCSDIR)/" ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d "$(DESTDIR)$(HTTP_CGIDIR)" ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
@@ -87,7 +110,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  	$(INSTALL) -d "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk"
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/"; \
-@@ -863,7 +858,7 @@ uninstall-all: _uninstall
+@@ -899,7 +897,7 @@ uninstall-all: _uninstall
  	rm -rf "$(DESTDIR)$(ASTVARLIBDIR)"
  	rm -rf "$(DESTDIR)$(ASTDATADIR)"
  	rm -rf "$(DESTDIR)$(ASTSPOOLDIR)"
@@ -96,7 +119,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/05/18 03:40:17 jnemeth Exp $
  	rm -rf "$(DESTDIR)$(ASTLOGDIR)"
  
  menuconfig: menuselect
-@@ -934,6 +929,7 @@ menuselect-tree: $(foreach dir,$(filter-
+@@ -970,6 +968,7 @@ menuselect-tree: $(foreach dir,$(filter-
  	@echo "</menu>" >> $@
  
  .PHONY: menuselect
