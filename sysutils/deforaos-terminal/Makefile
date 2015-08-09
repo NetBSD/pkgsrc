@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:24:51 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/09 15:24:15 khorben Exp $
 #
 
 DISTNAME=	Terminal-0.0.0
@@ -21,6 +21,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 DEPENDS+=	xterm-[0-9]*:../../x11/xterm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/07/15 15:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/08/09 15:54:06 khorben Exp $
 #
 
 DISTNAME=	PDFViewer-0.0.1
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 
 .include "options.mk"
 
