@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3319 2015/08/09 09:44:18 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3320 2015/08/09 09:54:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6093,3 +6093,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-csplain to 2015.37901 [markd 2015-08-09]
 	Updated print/tex-memoir to 3.7e [markd 2015-08-09]
 	Updated print/tex-memoir-doc to 3.7e [markd 2015-08-09]
+	Updated fonts/tex-fontspec to 2.4d [markd 2015-08-09]
+	Updated fonts/tex-fontspec-doc to 2.4d [markd 2015-08-09]
