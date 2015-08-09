@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/09 06:14:09 markd Exp $
 
-SHA1 (tex-rsfso-32051/rsfso.doc.tar.xz) = cdbb8bc1725dfbf051cb30bcd2364622ca29e916
-RMD160 (tex-rsfso-32051/rsfso.doc.tar.xz) = 7bf97f08c1f3e52095a567c77a9fa56ef57b11fd
-Size (tex-rsfso-32051/rsfso.doc.tar.xz) = 145704 bytes
+SHA1 (tex-rsfso-37965/rsfso.doc.tar.xz) = 46d3756544081707b842b172a72eec1b4b1a2a56
+RMD160 (tex-rsfso-37965/rsfso.doc.tar.xz) = d86942f2de3881feabd0e0f3d23a34e1564f2594
+Size (tex-rsfso-37965/rsfso.doc.tar.xz) = 145708 bytes
