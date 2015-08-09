@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/14 03:36:40 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/08/09 04:07:13 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -145,6 +145,7 @@ include/asterisk/udptl.h
 include/asterisk/ulaw.h
 include/asterisk/unaligned.h
 include/asterisk/utils.h
+include/asterisk/vector.h
 include/asterisk/version.h
 include/asterisk/xml.h
 include/asterisk/xmldoc.h
@@ -222,11 +223,13 @@ lib/asterisk/modules/cdr_csv.so
 lib/asterisk/modules/cdr_custom.so
 lib/asterisk/modules/cdr_manager.so
 ${PLIST.unixodbc}lib/asterisk/modules/cdr_odbc.so
+${PLIST.pgsql}lib/asterisk/modules/cdr_pgsql.so
 lib/asterisk/modules/cdr_sqlite3_custom.so
 lib/asterisk/modules/cdr_syslog.so
 lib/asterisk/modules/cel_custom.so
 lib/asterisk/modules/cel_manager.so
 ${PLIST.unixodbc}lib/asterisk/modules/cel_odbc.so
+${PLIST.pgsql}lib/asterisk/modules/cel_pgsql.so
 lib/asterisk/modules/cel_sqlite3_custom.so
 lib/asterisk/modules/chan_agent.so
 lib/asterisk/modules/chan_bridge.so
@@ -327,6 +330,7 @@ lib/asterisk/modules/res_clioriginate.so
 lib/asterisk/modules/res_config_curl.so
 ${PLIST.ldap}lib/asterisk/modules/res_config_ldap.so
 ${PLIST.unixodbc}lib/asterisk/modules/res_config_odbc.so
+${PLIST.pgsql}lib/asterisk/modules/res_config_pgsql.so
 lib/asterisk/modules/res_config_sqlite3.so
 lib/asterisk/modules/res_convert.so
 lib/asterisk/modules/res_crypto.so
@@ -350,6 +354,7 @@ lib/asterisk/modules/res_rtp_asterisk.so
 lib/asterisk/modules/res_rtp_multicast.so
 lib/asterisk/modules/res_security_log.so
 lib/asterisk/modules/res_smdi.so
+${PLIST.snmp}lib/asterisk/modules/res_snmp.so
 lib/asterisk/modules/res_speech.so
 lib/asterisk/modules/res_stun_monitor.so
 ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
@@ -377,14 +382,14 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.26
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.27
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.26
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.27
 libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.15
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.26
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.27
 libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.4.15
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.26
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.27
 libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.4.15
 libdata/asterisk/sounds/en/OfficeSpace.gsm
 libdata/asterisk/sounds/en/Randulo-allison.gsm
@@ -497,6 +502,7 @@ libdata/asterisk/sounds/en/bar.gsm
 libdata/asterisk/sounds/en/barn.gsm
 libdata/asterisk/sounds/en/barns.gsm
 libdata/asterisk/sounds/en/barometric.gsm
+libdata/asterisk/sounds/en/basic-pbx-ivr-main.gsm
 libdata/asterisk/sounds/en/bearing.gsm
 libdata/asterisk/sounds/en/beaufort.gsm
 libdata/asterisk/sounds/en/because-paranoid.gsm
