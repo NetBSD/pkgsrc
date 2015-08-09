@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/10/13 21:47:59 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2015/08/09 11:17:00 wiz Exp $
 
 BUILDLINK_TREE+=	glm
 
@@ -7,7 +7,7 @@ GLM_BUILDLINK3_MK:=
 
 BUILDLINK_DEPMETHOD.glm?=	build
 
-BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.5.3
+BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.7
 BUILDLINK_PKGSRCDIR.glm?=	../../graphics/glm
 .endif	# GLM_BUILDLINK3_MK
 
