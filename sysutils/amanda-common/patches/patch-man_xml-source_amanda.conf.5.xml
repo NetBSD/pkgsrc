@@ -1,0 +1,44 @@
+$NetBSD: patch-man_xml-source_amanda.conf.5.xml,v 1.1 2015/08/09 22:50:10 dholland Exp $
+
+Remove references to /usr/adm as no system has shipped with such a
+directory in probably a good twenty years. Use /var instead.
+PR 38958.
+
+--- man/xml-source/amanda.conf.5.xml~	2012-02-21 11:36:43.000000000 +0000
++++ man/xml-source/amanda.conf.5.xml
+@@ -666,7 +666,7 @@ option.</para>
+   <term><amkeyword>changerfile</amkeyword> <amtype>string</amtype></term>
+   <listitem>
+ <para>Default:
+-<amdefault>&quot;/usr/adm/amanda/log/changer-status&quot;</amdefault>.
++<amdefault>&quot;/var/amanda/log/changer-status&quot;</amdefault>.
+ A tape changer configuration parameter.
+ Usage depends on the particular changer defined with the
+ <amkeyword>tpchanger</amkeyword>
+@@ -1039,7 +1039,7 @@ file holding client hosts, disks and oth
+   <term><amkeyword>infofile</amkeyword> <amtype>string</amtype></term>
+   <listitem>
+ <para>Default:
+-<amdefault>&quot;/usr/adm/amanda/curinfo&quot;</amdefault>.
++<amdefault>&quot;/var/amanda/curinfo&quot;</amdefault>.
+ The file or directory name for the historical information database.
+ If Amanda was configured to use DBM databases, this is the base file
+ name for them.
+@@ -1052,7 +1052,7 @@ client, then a directory per disk, then 
+   <term><amkeyword>logdir</amkeyword> <amtype>string</amtype></term>
+   <listitem>
+ <para>Default:
+-<amdefault>&quot;/usr/adm/amanda&quot;</amdefault>.
++<amdefault>&quot;/var/amanda&quot;</amdefault>.
+ The directory for the
+ <command>amdump</command>
+ and
+@@ -1064,7 +1064,7 @@ files.</para>
+   <term><amkeyword>indexdir</amkeyword> <amtype>string</amtype></term>
+   <listitem>
+ <para>Default
+-<amdefault>&quot;/usr/adm/amanda/index&quot;</amdefault>.
++<amdefault>&quot;/var/amanda/index&quot;</amdefault>.
+ The directory where index files (backup image catalogues) are stored.
+ Index files are
+ only generated for filesystems whose
