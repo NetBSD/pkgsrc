@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/06/14 12:50:04 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/09 10:06:28 markd Exp $
 
 DISTNAME=	mhchem
-PKGNAME=	tex-${DISTNAME}-4.01
-TEXLIVE_REV=	37037
+PKGNAME=	tex-${DISTNAME}-4.02
+TEXLIVE_REV=	37943
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/mhchem
 COMMENT=	Typeset chemical formulae/equations and Risk and Safety phrases
 LICENSE=	lppl-1.3c
 
