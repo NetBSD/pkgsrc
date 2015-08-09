@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.76 2015/08/04 19:11:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2015/08/09 11:18:00 wiz Exp $
 
 VERREL=		4.4.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -255,8 +256,10 @@ do-install:
 .include "../../converters/libvisio/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libwps+=	libwps<0.4.0
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../converters/libmwaw/buildlink3.mk"
+BUILDLINK_API_DEPENDS.orcus+=	orcus<0.9.0
 .include "../../converters/orcus/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
