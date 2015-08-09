@@ -1,25 +1,19 @@
-$NetBSD: patch-include_asterisk_utils.h,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
+$NetBSD: patch-include_asterisk_utils.h,v 1.3 2015/08/09 04:07:13 jnemeth Exp $
 
---- include/asterisk/utils.h.orig	2015-03-12 12:26:57.000000000 +0000
+--- include/asterisk/utils.h.orig	2015-06-04 00:44:42.000000000 +0000
 +++ include/asterisk/utils.h
-@@ -943,30 +943,9 @@ char *ast_utils_which(const char *binary
+@@ -949,24 +949,9 @@ char *ast_utils_which(const char *binary
   * \encode
   */
  
 -#if defined(__clang__)
--
--#if defined(__has_feature) && __has_feature(blocks)
 -typedef void (^_raii_cleanup_block_t)(void);
 -static inline void _raii_cleanup_block(_raii_cleanup_block_t *b) { (*b)(); }
 -
 -#define RAII_VAR(vartype, varname, initval, dtor)                                                                \
 -    _raii_cleanup_block_t _raii_cleanup_ ## varname __attribute__((cleanup(_raii_cleanup_block),unused)) = NULL; \
--    vartype varname = initval;                                                                                   \
--    _raii_cleanup_ ## varname = ^{ dtor(varname); }
--
--#else
--	#error "CLANG must support the 'blocks' feature to compile Asterisk."
--#endif /* #if defined(__has_feature) && __has_feature(blocks) */
+-    __block vartype varname = initval;                                                                           \
+-    _raii_cleanup_ ## varname = ^{ {(void)dtor(varname);} }
 -
 -#elif defined(__GNUC__)
 -
