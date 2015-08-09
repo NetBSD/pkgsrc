@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/09 07:59:23 markd Exp $
 
 DISTNAME=	glossaries
-PKGNAME=	tex-${DISTNAME}-4.15
-PKGREVISION=	1
-TEXLIVE_REV=	36533
+PKGNAME=	tex-${DISTNAME}-4.17
+TEXLIVE_REV=	37869
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/glossaries
 COMMENT=	Create glossaries and lists of acronyms
 LICENSE=	lppl-1.3c
 
@@ -33,5 +33,6 @@ post-extract:
 	${MV} ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries \
 		${WRKSRC}/bin/
 	${RM} -rf ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries.bat
+	${RM} -rf ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries-lite.lua
 
 .include "../../mk/bsd.pkg.mk"
