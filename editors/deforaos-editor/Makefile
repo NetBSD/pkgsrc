@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/06/11 18:47:33 khorben Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/09 15:36:19 khorben Exp $
 
 DISTNAME=	Editor-0.3.1
 PKGNAME=	deforaos-editor-0.3.1
@@ -16,6 +16,7 @@ USE_TOOLS+=	xgettext
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
