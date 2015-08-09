@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3326 2015/08/09 11:17:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3327 2015/08/09 13:22:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6105,3 +6105,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-tetex-doc to 3.0.38001 [markd 2015-08-09]
 	Updated print/tex-texlive.infra to 2015.37738 [markd 2015-08-09]
 	Updated graphics/glm to 0.9.7.0 [wiz 2015-08-09]
+	Updated devel/monotone-viz to 1.0.2 [jaapb 2015-08-09]
