@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2014/10/13 21:47:59 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/08/09 11:17:00 wiz Exp $
 
-DISTNAME=	glm-0.9.5.4
+DISTNAME=	glm-0.9.7.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogl-math/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=g-truc/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://glm.g-truc.net/
 COMMENT=	C++ mathematics library for graphics programming
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/glm
+# in "Happy Bunny" variation, adding:
+# Restrictions: By making use of the Software for military purposes,
+# you choose to make a Bunny unhappy.
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
