@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.16 2015/05/17 12:57:16 bsiegert Exp $
+# $NetBSD: hacks.mk,v 1.16.2.1 2015/08/09 08:04:54 tron Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -71,6 +71,19 @@ CFLAGS+=-fno-tree-ter
 .  if !empty(CC_VERSION:Mgcc-3.4.3)
 BUILDLINK_PASSTHRU_RPATHDIRS+=	/usr/sfw/lib/amd64
 LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
+.  endif
+.endif
+
+### [Thu Aug  6 14:43:56 PDT 2015 : mrg]
+### On NetBSD/{mips,vax,sparc64}, the -freorder-blocks option in -O2
+### causes opmini.c to be miscompiled, and perl build fails.
+###
+.if !empty(CC_VERSION:Mgcc-4.5.*) && ${OPSYS} == "NetBSD"
+.  if (${MACHINE_ARCH} == "vax" ||	\
+       ${MACHINE_CPU} == "mips" ||	\
+       ${MACHINE_ARCH} == "sparc64")
+PKG_HACKS+=	gcc-4.5-codegen
+CFLAGS+=	-fno-reorder-blocks
 .  endif
 .endif
 
