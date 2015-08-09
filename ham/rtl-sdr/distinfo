@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/10/13 13:05:36 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/08/09 00:16:33 mef Exp $
 
-SHA1 (rtl-sdr/v0.5.3.zip) = 305d286a440d9feb02ee9f929200aab9cbfaccb5
-RMD160 (rtl-sdr/v0.5.3.zip) = d314ce3515aa25c1fe1c6dc5686fff700f247641
-Size (rtl-sdr/v0.5.3.zip) = 148189 bytes
+SHA1 (rtl-sdr/rtl-src-0.5.3.tar.gz) = f6f20f7b0562a6d3f7b9ff7bff38a15bff175982
+RMD160 (rtl-sdr/rtl-src-0.5.3.tar.gz) = 3b30938053870ed2d4b261ac9e27ad0863762ca4
+Size (rtl-sdr/rtl-src-0.5.3.tar.gz) = 117414 bytes
 SHA1 (patch-src_rtl__fm_c) = 04ec7142f38f26d2ed431765017f53e8e79a3a36

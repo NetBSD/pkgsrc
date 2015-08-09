@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/10/13 13:05:36 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/09 00:16:33 mef Exp $
 #
-DISTNAME=		v0.5.3
-PKGNAME=		rtl-sdr-${DISTNAME:S/v//}
+DISTNAME=		rtl-src-0.5.3
 CATEGORIES=		ham
-MASTER_SITES=		-https://github.com/steve-m/librtlsdr/archive/${DISTNAME}${EXTRACT_SUFX}
-EXTRACT_SUFX=		.zip
+MASTER_SITES=	       ${MASTER_SITE_GITHUB:=steve-m/}
+GITHUB_PROJECT=	       librtlsdr
+GITHUB_TAG=	       v0.5.3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdr.osmocom.org/trac/wiki/rtl-sdr
@@ -15,7 +15,6 @@ DIST_SUBDIR=		rtl-sdr
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake
 USE_CMAKE=		yes
-WRKSRC=			${WRKDIR}/librtlsdr-${DISTNAME:S/v//}
 AUTO_MKDIRS=		yes
 
 ## CMake Error at CMakeLists.txt:69 (message):
