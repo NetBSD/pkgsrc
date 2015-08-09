@@ -1,0 +1,17 @@
+$NetBSD: patch-example_template.d_advanced.conf.in,v 1.1 2015/08/09 22:50:10 dholland Exp $
+
+Remove references to /usr/adm as no system has shipped with such a
+directory in probably a good twenty years. Say /var or /var/local
+instead. PR 38958.
+
+--- example/template.d/advanced.conf.in~	2012-02-21 11:36:41.000000000 +0000
++++ example/template.d/advanced.conf.in
+@@ -84,7 +84,7 @@ autoflush no 
+ 
+ # Amanda needs a few Mb of diskspace for the log and debug files,
+ # as well as a database.  This stuff can grow large, so the conf directory
+-# isn't usually appropriate.  Some sites use /usr/local/var and some /usr/adm.
++# isn't usually appropriate.  A typical place is /var or /var/local.
+ # Create an amanda directory under there.  You need a separate infofile and
+ # logdir for each configuration, so create subdirectories for each conf and
+ # put the files there.  Specify the locations below.
