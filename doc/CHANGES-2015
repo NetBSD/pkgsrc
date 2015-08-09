@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3315 2015/08/09 08:00:18 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3316 2015/08/09 08:26:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6087,3 +6087,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/tex-l3packages-doc to 0.5700 [markd 2015-08-09]
 	Updated print/tex-glossaries to 4.17 [markd 2015-08-09]
 	Updated print/tex-glossaries-doc to 4.17 [markd 2015-08-09]
+	Updated print/tex-latex to 2015.37789 [markd 2015-08-09]
+	Updated print/tex-latex-doc to 2015.37789 [markd 2015-08-09]
