@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:23:08 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/09 15:34:27 khorben Exp $
 #
 
 DISTNAME=	Camera-0.0.1
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 post-install:
