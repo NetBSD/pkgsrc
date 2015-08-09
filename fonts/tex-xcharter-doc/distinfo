@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/09 06:14:09 markd Exp $
 
-SHA1 (tex-xcharter-36562/xcharter.doc.tar.xz) = 25919013305fe5607606c0cb782a2fce76d5d41c
-RMD160 (tex-xcharter-36562/xcharter.doc.tar.xz) = 9777856796f70b70a989d4827b475920e8fb8433
-Size (tex-xcharter-36562/xcharter.doc.tar.xz) = 140888 bytes
+SHA1 (tex-xcharter-37962/xcharter.doc.tar.xz) = 44edd88d635840b69e2c1005e1c9ba43a2f13f11
+RMD160 (tex-xcharter-37962/xcharter.doc.tar.xz) = 2eeb802c507062571c909dfa0792c17c431ffee7
+Size (tex-xcharter-37962/xcharter.doc.tar.xz) = 141004 bytes

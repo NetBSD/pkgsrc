@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/09 06:14:07 markd Exp $
 
 DISTNAME=	Asana-Math.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-000.954
-TEXLIVE_REV=	35339
+PKGNAME=	tex-${DISTNAME:S/./-/}-000.955
+TEXLIVE_REV=	37556
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/Asana-Math

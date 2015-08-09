@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/09 06:14:08 markd Exp $
 
-SHA1 (tex-fge-24732/fge.doc.tar.xz) = d3f10e9054a4720bf5c3222a72c12299e9d8d183
-RMD160 (tex-fge-24732/fge.doc.tar.xz) = d612c107f27aec9d910e9e86e402d1b36c7261b6
-Size (tex-fge-24732/fge.doc.tar.xz) = 136324 bytes
+SHA1 (tex-fge-37628/fge.doc.tar.xz) = 19e3ec91f441bd5da889e889a37627980b43520c
+RMD160 (tex-fge-37628/fge.doc.tar.xz) = 7ef1726393b5ab8fbd61d54d1773e0876cfa8723
+Size (tex-fge-37628/fge.doc.tar.xz) = 137820 bytes
