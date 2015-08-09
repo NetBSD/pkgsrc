@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/09 06:14:07 markd Exp $
 
 DISTNAME=	archaic
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-2015
+TEXLIVE_REV=	38005
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/archaic

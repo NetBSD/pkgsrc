@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/09 06:14:09 markd Exp $
 
 DISTNAME=	rsfso
-PKGNAME=	tex-${DISTNAME}-1.01
-TEXLIVE_REV=	32051
+PKGNAME=	tex-${DISTNAME}-1.02
+TEXLIVE_REV=	37965
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/rsfso
