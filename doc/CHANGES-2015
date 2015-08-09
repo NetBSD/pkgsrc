@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3308 2015/08/09 04:07:56 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.3309 2015/08/09 04:11:10 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6049,4 +6049,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/sys161 to 2.0.3 [dholland 2015-08-08]
 	Updated devel/automake to 1.15nb2 [wiz 2015-08-08]
 	Updated converters/libmwaw to 0.3.6.2 [wiz 2015-08-08]
-	Updated comms/asterisk to 11.19.0nb1 [jnemeth 2015-08-09]
+	Updated comms/asterisk to 11.19.0 [jnemeth 2015-08-09]
