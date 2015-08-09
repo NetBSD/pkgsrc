@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3309 2015/08/09 04:11:10 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.3310 2015/08/09 06:14:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6050,3 +6050,27 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/automake to 1.15nb2 [wiz 2015-08-08]
 	Updated converters/libmwaw to 0.3.6.2 [wiz 2015-08-08]
 	Updated comms/asterisk to 11.19.0 [jnemeth 2015-08-09]
+	Updated fonts/tex-Asana-Math to 000.955 [markd 2015-08-09]
+	Updated fonts/tex-Asana-Math-doc to 000.955 [markd 2015-08-09]
+	Updated fonts/tex-archaic to 2015 [markd 2015-08-09]
+	Updated fonts/tex-archaic-doc to 2015 [markd 2015-08-09]
+	Updated fonts/tex-fbb to 1.08a [markd 2015-08-09]
+	Updated fonts/tex-fbb-doc to 1.08a [markd 2015-08-09]
+	Updated fonts/tex-fge to 1.25 [markd 2015-08-09]
+	Updated fonts/tex-fge-doc to 1.25 [markd 2015-08-09]
+	Updated fonts/tex-garuda-c90 to 2015 [markd 2015-08-09]
+	Updated fonts/tex-musixtex-fonts to 2015 [markd 2015-08-09]
+	Updated fonts/tex-musixtex-fonts-doc to 2015 [markd 2015-08-09]
+	Updated fonts/tex-newpx to 1.292 [markd 2015-08-09]
+	Updated fonts/tex-newpx-doc to 1.292 [markd 2015-08-09]
+	Updated fonts/tex-newtx to 1.451 [markd 2015-08-09]
+	Updated fonts/tex-newtx-doc to 1.451 [markd 2015-08-09]
+	Updated fonts/tex-newtxsf to 1.03 [markd 2015-08-09]
+	Updated fonts/tex-newtxsf-doc to 1.03 [markd 2015-08-09]
+	Updated fonts/tex-newtxtt to 1.052 [markd 2015-08-09]
+	Updated fonts/tex-newtxtt-doc to 1.052 [markd 2015-08-09]
+	Updated fonts/tex-norasi-c90 to 2015 [markd 2015-08-09]
+	Updated fonts/tex-rsfso to 1.02 [markd 2015-08-09]
+	Updated fonts/tex-rsfso-doc to 1.02 [markd 2015-08-09]
+	Updated fonts/tex-xcharter to 1.075 [markd 2015-08-09]
+	Updated fonts/tex-xcharter-doc to 1.075 [markd 2015-08-09]
