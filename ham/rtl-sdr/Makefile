@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2015/08/09 00:16:33 mef Exp $
-#
-DISTNAME=		rtl-src-0.5.3
+# $NetBSD: Makefile,v 1.3 2015/08/09 06:25:06 wiz Exp $
+
+DISTNAME=		rtl-sdr-0.5.3
 CATEGORIES=		ham
-MASTER_SITES=	       ${MASTER_SITE_GITHUB:=steve-m/}
-GITHUB_PROJECT=	       librtlsdr
-GITHUB_TAG=	       v0.5.3
+MASTER_SITES=		${MASTER_SITE_GITHUB:=steve-m/}
+GITHUB_PROJECT=		librtlsdr
+GITHUB_TAG=		v0.5.3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdr.osmocom.org/trac/wiki/rtl-sdr
 COMMENT=		Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
 LICENSE=		gnu-gpl-v2
 
-DIST_SUBDIR=		rtl-sdr
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake
 USE_CMAKE=		yes
