@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2015/03/30 01:14:22 gdt Exp $
+$NetBSD: distinfo,v 1.18 2015/08/09 22:50:09 dholland Exp $
 
 SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
 RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
@@ -10,6 +10,7 @@ SHA1 (patch-client-src_Makefile.am) = 641ef76fd1ea413b416704e1e52e25a93a596442
 SHA1 (patch-client-src_sendbackup-dump.c) = aea1aca0bbcdab0c393b012a592cbc5ca458acec
 SHA1 (patch-client-src_sendsize.c) = 32a1627c250b6413e4695a610bba59796c6e7ed6
 SHA1 (patch-common-src_Makefile.in) = 422e4d519d8797e686d62cfeca8cda2e8a4a8bb3
+SHA1 (patch-common-src_conffile.c) = b25e6a7e7f7c6841e28aa93587996b017bfefc2c
 SHA1 (patch-common-src_glib-util.c) = 8b62499f6730843fbf9e872adc80978b77b5573f
 SHA1 (patch-common-src_glib-util.h) = 6d5b14acd7a44b17a52ebc697f5354db2a4b04f9
 SHA1 (patch-common-src_security-util.h) = c628cc19a624da2cfabdb7d488bc2cd2d4b955a4
@@ -20,6 +21,10 @@ SHA1 (patch-config_macro-archive_xsltproc.m4) = 20324db1ce3db016fa89fe39df5a8133
 SHA1 (patch-device-src_Makefile.am) = 29fd554033ff0ff7b1d98a08306f157ced7324c5
 SHA1 (patch-device-src_device.c) = 31cb823dcce0f7f3d9de8f9def1a0f025ab10876
 SHA1 (patch-example_Makefile.am) = 8d2dac1abdc473fbf94489bcb620a42a665fd27a
+SHA1 (patch-example_amanda.conf.in) = 4be9bd71f9965d9dd351ae2666ee1cb99e8aea94
+SHA1 (patch-example_chg-multi-conf) = 2a586e02e5766d89c71061a5b344dc13d98ed56a
+SHA1 (patch-example_template.d_advanced.conf.in) = 654d896c321b81f5db15fddd8a1c08a528921d8a
+SHA1 (patch-man_xml-source_amanda.conf.5.xml) = a5a40433fc011c43524076f6c4164e51b2639836
 SHA1 (patch-ndmp-src_ndmp2__xdr.c) = 9ae6d78c2192ece83a1aa141cb04c9761969ca5b
 SHA1 (patch-ndmp-src_ndmp3__xdr.c) = a080c7337ede4fe75f9735fb3355d0aa16b0af6c
 SHA1 (patch-ndmp-src_ndmp4__xdr.c) = 339b0d539754127446acf6456fb385f00b1fbcc3

@@ -1,0 +1,17 @@
+$NetBSD: patch-example_chg-multi-conf,v 1.1 2015/08/09 22:50:10 dholland Exp $
+
+Remove references to /usr/adm as no system has shipped with such a
+directory in probably a good twenty years. Use /var instead.
+PR 38958.
+
+--- example/chg-multi.conf~	2012-02-21 11:36:41.000000000 +0000
++++ example/chg-multi.conf
+@@ -51,7 +51,7 @@ needeject 0
+ ejectdelay 0
+ 
+ # Names a status file where the current ``changer'' state is stored.
+-statefile /usr/adm/amanda/csd/changer-status
++statefile /var/amanda/csd/changer-status
+ 
+ # What are the slot numbers used in the tape rack?
+ firstslot 1
