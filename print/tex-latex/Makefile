@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2015/06/14 12:50:04 markd Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/09 08:25:48 markd Exp $
 
 DISTNAME=	latex
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	37361
+PKGNAME=	tex-${DISTNAME}-2015.37789
+TEXLIVE_REV=	37789
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/latex
 COMMENT=	TeX macro package that defines LaTeX
 LICENSE=	lppl-1.3c
 
