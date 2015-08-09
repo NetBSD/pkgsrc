@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3322 2015/08/09 10:17:35 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3323 2015/08/09 10:32:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6099,3 +6099,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/tex-mhchem-doc to 4.02 [markd 2015-08-09]
 	Updated print/tex-pdfpages to 0.5a [markd 2015-08-09]
 	Updated print/tex-pdfpages-doc to 0.5a [markd 2015-08-09]
+	Updated print/tex-siunitx to 2.6h [markd 2015-08-09]
+	Updated print/tex-siunitx-doc to 2.6h [markd 2015-08-09]
