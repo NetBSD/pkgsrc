@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3329 2015/08/09 16:34:29 he Exp $
+$NetBSD: CHANGES-2015,v 1.3330 2015/08/09 16:59:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6108,3 +6108,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/monotone-viz to 1.0.2 [jaapb 2015-08-09]
 	Updated www/firefox to 39.0.3 [he 2015-08-09]
 	Updated www/firefox38 to 38.1.1 [he 2015-08-09]
+	Updated www/firefox-l10n to 39.0.3 [ryoon 2015-08-09]
