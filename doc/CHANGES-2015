@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3310 2015/08/09 06:14:53 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3311 2015/08/09 06:24:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6074,3 +6074,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/tex-rsfso-doc to 1.02 [markd 2015-08-09]
 	Updated fonts/tex-xcharter to 1.075 [markd 2015-08-09]
 	Updated fonts/tex-xcharter-doc to 1.075 [markd 2015-08-09]
+	Updated print/tex-c90 to 2015 [markd 2015-08-09]
+	Updated print/tex-c90-doc to 2015 [markd 2015-08-09]
