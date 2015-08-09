@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.7 2009/02/17 19:16:29 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/08/09 13:21:42 jaapb Exp $
 
-SHA1 (monotone-viz-1.0.1-nolablgtk.tar.gz) = 68bce1e401fe7f0212152969ea1268026e1dcc7c
-RMD160 (monotone-viz-1.0.1-nolablgtk.tar.gz) = 21e0a5d946d1b73cb05322a00d2cd236d5d2b42f
-Size (monotone-viz-1.0.1-nolablgtk.tar.gz) = 97972 bytes
-SHA1 (patch-aa) = 5fca1fa18cc247c3f8c62469b1f79dffc7fcf9bc
-SHA1 (patch-ab) = c765bd1bb0e11d5a16e08f72ab1d64c8198a7db3
-SHA1 (patch-ac) = 84d4281fdf0bd5b7f6e173c55b4deb219c9bf6d9
+SHA1 (monotone-viz-1.0.2-nolablgtk.tar.gz) = cebc1e9266ab69f05804cd7b7fe9ca3e4a6eb98f
+RMD160 (monotone-viz-1.0.2-nolablgtk.tar.gz) = 358057a826651bb69f7b82aaad04c2fb3ef98788
+Size (monotone-viz-1.0.2-nolablgtk.tar.gz) = 99263 bytes
+SHA1 (patch-Makefile) = c84d9c567a331e71ce2b06d01e3c2c124ac0f48b
+SHA1 (patch-app.ml) = 80e0f9459d6170989e687da9c54c576cb24f1be9
+SHA1 (patch-app.mli) = 3c2074c7f65b98c814cfacc85e30cbb9193b0e9a
+SHA1 (patch-app_types.mli) = 84916b04f1360f4fc6aa9e73be6f910ea455afed
+SHA1 (patch-query.mli) = a661d6a17f3a18eeecdcc68260dbe8bf72fa56dd
+SHA1 (patch-ui.mli) = afc7e413ba7a9eac946cad3286de6c121403f0c7
+SHA1 (patch-unidiff.mli) = a8a6666b71e0bd31bcc363906170b346a7d51ead
+SHA1 (patch-view.mli) = d994ff3d2bce5865399a7ff5ec4c556a25e98f8f
