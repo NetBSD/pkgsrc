@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.73 2015/05/19 07:52:14 jnemeth Exp $
+$NetBSD: distinfo,v 1.74 2015/08/09 04:07:13 jnemeth Exp $
 
-SHA1 (asterisk-11.17.1/asterisk-11.17.1.tar.gz) = 90a83350623cd0d3638e526504107aafe6df4cc5
-RMD160 (asterisk-11.17.1/asterisk-11.17.1.tar.gz) = 1aefeecafb9efb98b9aa259827bf6b72f99a6c5b
-Size (asterisk-11.17.1/asterisk-11.17.1.tar.gz) = 35002041 bytes
-SHA1 (asterisk-11.17.1/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = fbb94494e31fc08eee8fdf2ce7d12eb274018050
-RMD160 (asterisk-11.17.1/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 53656a3d6771602504f220ad312093e3503e1150
-Size (asterisk-11.17.1/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 4409969 bytes
-SHA1 (patch-Makefile) = ed581d46026e8e89ed8be374c7085efca19911d2
+SHA1 (asterisk-11.19.0/asterisk-11.19.0.tar.gz) = e35b9d910cb549b0bea20dbad60760f230bd3881
+RMD160 (asterisk-11.19.0/asterisk-11.19.0.tar.gz) = 1dca1ddf50233b57f8f1edcaace76ccd56ca2e7e
+Size (asterisk-11.19.0/asterisk-11.19.0.tar.gz) = 34852510 bytes
+SHA1 (asterisk-11.19.0/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = fbb94494e31fc08eee8fdf2ce7d12eb274018050
+RMD160 (asterisk-11.19.0/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 53656a3d6771602504f220ad312093e3503e1150
+Size (asterisk-11.19.0/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 4409969 bytes
+SHA1 (patch-Makefile) = 5fd774779d3c8d85936beca8a3407dd3011af2dc
 SHA1 (patch-addons_chan__ooh323.c) = 57f61a2edf0f9f022e03837230ee572ec9cf47b4
 SHA1 (patch-apps_app__confbridge.c) = c815905994355a19c32e8e3e2eb5dc9f1679eb29
 SHA1 (patch-apps_app__dial.c) = 0f78d2571af88384a2d472ece08bf4b06f9ad211
@@ -33,7 +33,7 @@ SHA1 (patch-include_asterisk_autoconfig.h.in) = 09a8f8d5398612fdadba25f221b16c19
 SHA1 (patch-include_asterisk_endian.h) = 41c1a9a9e02fe394bc9261f5559e931b1378ea28
 SHA1 (patch-include_asterisk_lock.h) = cb1404e56de4708836091c224df439158119764c
 SHA1 (patch-include_asterisk_strings.h) = fc5987a98429ca470f7e9bdcf170d49b0c1f3407
-SHA1 (patch-include_asterisk_utils.h) = ea06ed86369b1eaedf5d7d245190f54f1eb1edd0
+SHA1 (patch-include_asterisk_utils.h) = 07e70fe0adf39cd9a7f94c735b9a3fa72ae3df89
 SHA1 (patch-main_Makefile) = 5f9238a528d2b96777e17a4ac6d3e7876dfffb98
 SHA1 (patch-main_acl.c) = 1eac532a15127c25981d2db9462a8ccce2c58620
 SHA1 (patch-main_asterisk.c) = bfdbd5299b7279ef080a015a9a10627aa929dd49
@@ -55,6 +55,7 @@ SHA1 (patch-main_test.c) = 3f239ed7611facbd937057f056ebc7495403dbaf
 SHA1 (patch-main_udptl.c) = 260586e4203b4bf51737ba171cbfe57621de8728
 SHA1 (patch-main_utils.c) = df8bfd592f82b9b5c2c95a6860d2dca7003f66ca
 SHA1 (patch-pbx_pbx__dundi.c) = 4dbcbbae3cbace91c8ed87e3e10cad0a1eb45e75
+SHA1 (patch-res_Makefile) = 2b3fa69b155a88e9026005fa6d89f651541bde8a
 SHA1 (patch-res_pjproject_aconfigure) = 0095894c5daac2dec6a9ec745c0ecb8d46c0b73a
 SHA1 (patch-res_pjproject_aconfigure.ac) = cbabe4a5f1888e180c93404324ddb96728dc20b9
 SHA1 (patch-res_pjproject_build.symbian_makedef.sh) = 37781fe307564ad827e9be67f507f84230ebf299
@@ -62,7 +63,7 @@ SHA1 (patch-res_res__calendar.c) = a4c491d8c77f88d0834d0eb52622f7c6e4f3428b
 SHA1 (patch-res_res__calendar__caldav.c) = 673e8a256fc748338f35c7deddbf283809d19904
 SHA1 (patch-res_res__calendar__icalendar.c) = 3258522abbdc5c0cfe76868f73f16931118983e5
 SHA1 (patch-res_res__config__pgsql.c) = 719fa8939ca0e6cae256dd1b19a11405f475a620
-SHA1 (patch-res_res__xmpp.c) = 5296a4f7454e432592a058939c7b0f2e328d53e2
+SHA1 (patch-res_res__xmpp.c) = 25ce66a0536a290598b4c11f14c7ab94f6577af5
 SHA1 (patch-sounds_Makefile) = 792c2e25e1c8334fe8c9038b8b630376a5894c31
 SHA1 (patch-tests_test__abstract__jb.c) = 42cfa303fc2e399aa9fe3bebf51464d0776e171c
 SHA1 (patch-tests_test__config.c) = fa049dc1fedb8a0c898afa6848406d191acb54d3

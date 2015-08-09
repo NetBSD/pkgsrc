@@ -1,0 +1,24 @@
+$NetBSD: patch-res_Makefile,v 1.1 2015/08/09 04:07:13 jnemeth Exp $
+
+--- res/Makefile.orig	2015-06-04 00:44:42.000000000 +0000
++++ res/Makefile
+@@ -90,11 +90,12 @@ FORCE:
+ $(PJ_LIB_FILES): FORCE
+ 	$(MAKE) -C $(patsubst %/lib/,%,$(dir $@))/build/ ../lib/$(notdir $@)
+ 
+-ifeq ($(subst 1:0,1,$(UUID)), 1)
+-res_rtp_asterisk.o: $(PJ_LIB_FILES)
+-res_rtp_asterisk.o: _ASTCFLAGS+=-DUSE_PJPROJECT
+-res_rtp_asterisk.o: _ASTCFLAGS+=$(PJ_CFLAGS)
+-res_rtp_asterisk.so: _ASTLDFLAGS+=$(PJ_LDFLAGS)
+-res_rtp_asterisk.so: LIBS+=$(PJ_LDLIBS)
+-endif
++#XXX PJSIP is known not work properly on NetBSD, comment it out for now
++#ifeq ($(subst 1:0,1,$(UUID)), 1)
++#res_rtp_asterisk.o: $(PJ_LIB_FILES)
++#res_rtp_asterisk.o: _ASTCFLAGS+=-DUSE_PJPROJECT
++#res_rtp_asterisk.o: _ASTCFLAGS+=$(PJ_CFLAGS)
++#res_rtp_asterisk.so: _ASTLDFLAGS+=$(PJ_LDFLAGS)
++#res_rtp_asterisk.so: LIBS+=$(PJ_LDLIBS)
++#endif
+ 
