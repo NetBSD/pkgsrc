@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4035 2015/08/03 12:26:06 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.4036 2015/08/10 16:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -877,6 +877,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-libs to 4.8.0nb2 [reinoud 2012-02-27]
 	Updated games/scummvm to 1.4.1 [adam 2012-02-27]
 	Added cad/openscad version 2011.12 [reinoud 2012-02-27]
+	Added math/cgal version 3.9 [reinoud 2012-02-27]
 	Updated pkgtools/pkg_comp to 1.36 [jmmv 2012-02-27]
 	Updated databases/py-ldap to 2.4.8 [adam 2012-02-28]
 	Updated graphics/opencsg to 1.3.2nb1 [reinoud 2012-02-28]
