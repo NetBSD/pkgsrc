@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.44 2015/07/27 23:37:38 khorben Exp $
+# $NetBSD: NetBSD.mk,v 1.45 2015/08/10 21:44:34 khorben Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -126,6 +126,11 @@ FFLAGS+=	-mieee
 # check for kqueue(2) support, added in NetBSD-1.6J
 .if exists(/usr/include/sys/event.h)
 PKG_HAVE_KQUEUE=	# defined
+.endif
+
+.if ${PKGSRC_USE_FORT:Uno} != "no"
+# build with fortify
+_GCC_CFLAGS+=	-D_FORTIFY_SOURCE=2
 .endif
 
 .if ${PKGSRC_USE_SSP:Uno} != "no"
