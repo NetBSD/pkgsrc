@@ -1,7 +1,11 @@
-$NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
+$NetBSD: patch-cg,v 1.13 2015/08/10 21:19:28 khorben Exp $
+
+- fix ripping on NetBSD/amd64
+- build fix on DragonFly
+- build fix on NetBSD with SSP
 
 --- interface/scsi_interface.c.orig	2008-09-11 20:33:30.000000000 +0000
-+++ interface/scsi_interface.c	2009-09-10 12:02:02.000000000 +0000
++++ interface/scsi_interface.c
 @@ -12,7 +12,16 @@
  #include "common_interface.h"
  #include "utils.h"
@@ -20,7 +24,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
    struct timespec tv1;
    struct timespec tv2;
    int ret1=clock_gettime(d->private->clock,&tv1);
-@@ -36,6 +45,7 @@
+@@ -36,6 +45,7 @@ static void tweak_SG_buffer(cdrom_drive 
    int table, reserved, cur, err;
    char buffer[256];
  
@@ -28,7 +32,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
    /* SG_SET_RESERVED_SIZE doesn't actually allocate or reserve anything.
     * what it _does_ do is give you an error if you ask for a value
     * larger than q->max_sectors (the length of the device's bio request
-@@ -54,6 +64,10 @@
+@@ -54,6 +64,10 @@ static void tweak_SG_buffer(cdrom_drive 
       implement working sg lists with SG_IO devices, so who knows... */
    if (ioctl(d->cdda_fd, SG_GET_SG_TABLESIZE, &table) < 0)
      table=1;
@@ -39,7 +43,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  
    sprintf(buffer,"\tDMA scatter/gather table entries: %d\n\t"
  	  "table entry size: %d bytes\n\t"
-@@ -93,6 +107,7 @@
+@@ -93,6 +107,7 @@ static void tweak_SG_buffer(cdrom_drive 
    cdmessage(d,buffer);
  }
  
@@ -47,7 +51,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  static void clear_garbage(cdrom_drive *d){
    fd_set fdset;
    struct timeval tv;
-@@ -123,6 +138,7 @@
+@@ -123,6 +138,7 @@ static void clear_garbage(cdrom_drive *d
      flag=1;
    }
  }
@@ -55,7 +59,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  
  static int check_sbp_error(const unsigned char status,
  			   const unsigned char *sbp) {
-@@ -172,6 +188,7 @@
+@@ -172,6 +188,7 @@ static int check_sbp_error(const unsigne
    return 0;
  }
  
@@ -63,7 +67,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  /* process a complete scsi command. */
  static int sg2_handle_scsi_cmd(cdrom_drive *d,
  			       unsigned char *cmd,
-@@ -356,7 +373,11 @@
+@@ -356,7 +373,11 @@ static int sgio_handle_scsi_cmd(cdrom_dr
    hdr.timeout = 50000;
    hdr.interface_id = 'S';
    hdr.dxferp =  d->private->sg_buffer;
@@ -75,7 +79,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  
    /* scary buffer fill hack */
    if(bytecheck && out_size>in_size)
-@@ -417,6 +438,71 @@
+@@ -417,6 +438,71 @@ static int sgio_handle_scsi_cmd(cdrom_dr
    errno = 0;
    return 0;
  }
@@ -147,7 +151,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  
  static int handle_scsi_cmd(cdrom_drive *d,
  			   unsigned char *cmd,
-@@ -427,9 +513,14 @@
+@@ -427,9 +513,14 @@ static int handle_scsi_cmd(cdrom_drive *
  			   int bytecheck,
  			   unsigned char *sense){
  
@@ -162,7 +166,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  
  }
  
-@@ -453,6 +544,7 @@
+@@ -453,6 +544,7 @@ static int test_unit_ready(cdrom_drive *
    return 1;
  }
  
@@ -170,7 +174,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  static void reset_scsi(cdrom_drive *d){
    int arg,tries=0;
    d->enable_cdda(d,0);
-@@ -471,6 +563,22 @@
+@@ -471,6 +563,22 @@ static void reset_scsi(cdrom_drive *d){
    
    d->enable_cdda(d,1);
  }
@@ -193,7 +197,43 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  
  static int mode_sense_atapi(cdrom_drive *d,int size,int page){ 
    unsigned char sense[SG_MAX_SENSE];
-@@ -1587,6 +1695,7 @@
+@@ -657,6 +765,7 @@ static int scsi_read_toc (cdrom_drive *d
+   /* read the header first */
+   unsigned char sense[SG_MAX_SENSE];
+   unsigned char cmd[10] = { 0x43, 0, 0, 0, 0, 0, 1, 0, 12, 0};
++  const char cmd_43[10] = { 0x43, 0, 0, 0, 0, 0, 0, 0, 12, 0};
+   cmd[1]=d->lun<<5;
+ 
+   if (handle_scsi_cmd (d,cmd,10, 0, 12,'\377',1,sense)){
+@@ -674,7 +783,7 @@ static int scsi_read_toc (cdrom_drive *d
+   }
+ 
+   for (i = first; i <= last; i++){
+-    memcpy(cmd, (char []){ 0x43, 0, 0, 0, 0, 0, 0, 0, 12, 0}, 10);
++    memcpy(cmd, cmd_43, sizeof(cmd_43));
+     cmd[1]=d->lun<<5;
+     cmd[6]=i;
+     
+@@ -695,7 +804,7 @@ static int scsi_read_toc (cdrom_drive *d
+     }
+   }
+ 
+-  memcpy(cmd, (char []){ 0x43, 0, 0, 0, 0, 0, 0, 0, 12, 0}, 10);
++  memcpy(cmd, cmd_43, sizeof(cmd_43));
+   cmd[1]=d->lun<<5;
+   cmd[6]=0xAA;
+     
+@@ -745,7 +854,8 @@ static int scsi_read_toc2 (cdrom_drive *
+   }
+ 
+   for (i = 0; i < tracks; i++){
+-    memcpy(cmd, (char[]){ 0xe5, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 10);
++    const char cmd_e5[10] = { 0xe5, 0, 0, 0, 0, 0, 0, 0, 0, 0};
++    memcpy(cmd, cmd_e5, sizeof(cmd_e5));
+     cmd[5]=i+1;
+     cmd[8]=255;
+     
+@@ -1587,6 +1697,7 @@ static void check_cache(cdrom_drive *d){
    }
  }
  
@@ -201,7 +241,7 @@ $NetBSD: patch-cg,v 1.12 2009/09/10 19:14:46 wiz Exp $
  static int check_atapi(cdrom_drive *d){
    int atapiret=-1;
    int fd = d->cdda_fd; /* check the device we'll actually be using to read */
-@@ -1616,7 +1725,32 @@
+@@ -1616,7 +1727,32 @@ static int check_atapi(cdrom_drive *d){
  
      return(d->is_atapi);
    }
