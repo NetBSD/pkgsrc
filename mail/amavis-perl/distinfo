@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/24 07:21:08 kefren Exp $
+$NetBSD: distinfo,v 1.2 2015/08/10 06:54:15 dholland Exp $
 
 SHA1 (amavisd-0.1.tar.gz) = 0c8cfe497ee0e42c2f5ff5c958e47e8a0d08720b
 RMD160 (amavisd-0.1.tar.gz) = d1688aa5a0a4df36e7d938f28d923b350302faa2
 Size (amavisd-0.1.tar.gz) = 329501 bytes
+SHA1 (patch-amavis_amavisd.in) = feec13284ace3a1c5661bcba4a88d47ce7b4b43e
+SHA1 (patch-amavis_av_clamavd) = 52b4da21b363900a369eabf8cd97acc5374868af
