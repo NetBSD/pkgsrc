@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/08/10 10:04:44 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/08/10 12:52:11 abs Exp $
 #
 
 DISTNAME=	netbeans-8.0.2-201411181905
@@ -27,6 +27,7 @@ REPLACE_PYTHON=	extide/ant/bin/runant.py
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 
+CHECK_SHLIBS_SUPPORTED=	no
 INSTALLATION_DIRS=	bin
 
 do-install:
