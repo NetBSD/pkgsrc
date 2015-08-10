@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.62 2015/02/24 09:46:09 wiz Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.63 2015/08/10 05:41:10 dholland Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -1163,12 +1163,13 @@ install-rcd-scripts:	# do nothing
 
 .for _script_ in ${_INSTALL_RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
-RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/${_script_}
+RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/.rc.d/${_script_}
 
 .  if !empty(RCD_SCRIPT_SRC.${_script_})
 generate-rcd-scripts: ${RCD_SCRIPT_WRK.${_script_}}
 ${RCD_SCRIPT_WRK.${_script_}}: ${RCD_SCRIPT_SRC.${_script_}}
 	@${STEP_MSG} "Creating ${.TARGET}"
+	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${RUN}${CHMOD} +x ${.TARGET}
 
