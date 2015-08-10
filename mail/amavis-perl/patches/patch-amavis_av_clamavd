@@ -1,0 +1,15 @@
+$NetBSD: patch-amavis_av_clamavd,v 1.1 2015/08/10 06:54:16 dholland Exp $
+
+Make this scanner fragment work like the other ones, from PR 24350.
+
+--- amavis/av/clamavd~	2003-02-25 10:42:54.000000000 +0000
++++ amavis/av/clamavd
+@@ -15,7 +15,7 @@ if ($clamd) {
+ 	if ($output =~ /FOUND$/) {	# no errors, a virus was found
+ 	    $scanner_errors = 0;
+ 	    @virusname = ($output =~ /: (.+) FOUND/g);
+-	    return 1;  # 'true' indicates virus found and stops further checking
++	    do_virus();
+ 	} elsif ($output =~ /OK$/) {            # no errors, no viruses
+ 	    $scanner_errors = 0;
+ 	} elsif ($output =~ /ERROR$/) {

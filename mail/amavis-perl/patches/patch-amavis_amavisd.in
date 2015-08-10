@@ -1,0 +1,17 @@
+$NetBSD: patch-amavis_amavisd.in,v 1.1 2015/08/10 06:54:16 dholland Exp $
+
+Catch SIGCHLD properly, per PR 24350.
+
+--- amavis/amavisd.in~	2003-03-04 19:00:43.000000000 +0000
++++ amavis/amavisd.in
+@@ -157,8 +157,8 @@ sub deadbabe {
+ 
+ # If IGNORE leaves zombies behind on your system,
+ # switch the comments between the two lines below
+-# $SIG{CHLD} = \&deadbabe;
+-$SIG{CHLD} = 'IGNORE';
++$SIG{CHLD} = \&deadbabe;
++# $SIG{CHLD} = 'IGNORE';
+ 
+ # may need to do more - eg. if logging changes, close/reopen syslog/log file
+ # rethink - handler should be simple
