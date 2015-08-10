@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/06/13 14:17:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2015/08/10 14:19:11 manu Exp $
 
 MODNAME=		mysql
 CATEGORIES+=		databases
