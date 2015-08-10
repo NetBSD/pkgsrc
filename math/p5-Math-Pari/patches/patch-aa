@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/03/10 09:24:52 sno Exp $
+$NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 
 --- Makefile.PL.orig	2010-03-03 21:26:10.000000000 +0000
 +++ Makefile.PL
@@ -246,3 +246,13 @@ $NetBSD: patch-aa,v 1.5 2010/03/10 09:24:52 sno Exp $
  }
  
  # Rewrite pic option to PIC in CCCDLFLAGS,
+@@ -234,7 +83,8 @@ sub MY::const_config
+  my $self = shift;
+  my $flags = $self->{'CCCDLFLAGS'}; # Tmp var needed with Perl4 !
+  $flags =~ s/(-[fK]?\s*)pic\b/${1}PIC/; 
+- $flags =~ s/-KPIC/-K PIC/;	# Apparently (was?) needed on Solaris...
++ # Nowadays breaks build; see PR 45271
++ #$flags =~ s/-KPIC/-K PIC/;	# Apparently (was?) needed on Solaris...
+  $self->{'CCCDLFLAGS'} = $flags;
+  if ($^O eq 'MSWin32' && $Config{'ccflags'} =~ /-DPERL_OBJECT/)
+   {
