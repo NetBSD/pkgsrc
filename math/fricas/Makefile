@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/04/30 14:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/08/10 08:13:45 asau Exp $
 
-PKGNAME=		fricas-1.2.0
+PKGNAME=		fricas-1.2.5
 DISTNAME=		${PKGNAME_NOREV}-full
-PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,8 +10,6 @@ MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 LICENSE=		modified-bsd
-
-BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 MAKE_JOBS_SAFE=		no
 
