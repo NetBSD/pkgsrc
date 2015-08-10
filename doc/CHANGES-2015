@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3336 2015/08/10 08:16:31 asau Exp $
+$NetBSD: CHANGES-2015,v 1.3337 2015/08/10 08:18:06 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6114,4 +6114,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/OmegaT to 3.5.01 [ryoon 2015-08-09]
 	Updated devel/cvs-fast-export to 1.32 [ryoon 2015-08-09]
 	Updated www/py-gunicorn to 19.3.0 [gls 2015-08-08]
-	Updated local-asitos/fricas to 1.2.5 [asau 2015-08-10]
+	Updated math/fricas to 1.2.5 [asau 2015-08-10]
