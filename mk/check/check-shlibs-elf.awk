@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.10 2014/10/03 19:12:16 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.11 2015/08/10 15:11:47 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -101,7 +101,7 @@ function check_pkg(DSO, pkg, found) {
 	close(depends_file)
 }
 
-function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath, nrpath) {
+function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 	cmd = readelf " -Wd " shquote(DSO) " 2> /dev/null"
 	while ((cmd | getline) > 0) {
 		if ($2 == "(RPATH)" || $2 == "(RUNPATH)") {
