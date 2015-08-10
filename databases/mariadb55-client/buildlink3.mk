@@ -1,5 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/08/10 12:56:27 manu Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2015/08/10 14:19:11 manu Exp $
 
+# This buildlink file uses mysql-client and not mariadb-client, 
+# because some packages depending on it expect BUILDLINK_*.mysql-client
+# to be set and will fail build if they get BUILDLINK_*.mariadb-client
+# instead.
 BUILDLINK_TREE+=	mysql-client
 
 .if !defined(MARIADB_CLIENT_BUILDLINK3_MK)
