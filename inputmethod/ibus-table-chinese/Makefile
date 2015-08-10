@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/15 18:46:56 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/10 19:27:48 joerg Exp $
 #
 
 DISTNAME=	ibus-table-chinese-1.8.2
@@ -15,6 +15,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 BUILD_DEPENDS+=	cmake-fedora>=2.0:../../devel/cmake-fedora
+
+# iconv: unexpected end of file; the last character is incomplete.
+MAKE_JOBS_SAFE=	noo
 
 .include "../../mk/bsd.prefs.mk"
 
