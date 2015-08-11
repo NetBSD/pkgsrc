@@ -1,4 +1,6 @@
-$NetBSD: patch-src_tcpconns.c,v 1.4 2015/06/10 20:05:26 fhajny Exp $
+$NetBSD: patch-src_tcpconns.c,v 1.5 2015/08/11 13:19:21 he Exp $
+
+Include <sys/param.h>
 
 --- src/tcpconns.c.orig	2015-05-20 12:04:47.191035542 +0000
 +++ src/tcpconns.c
