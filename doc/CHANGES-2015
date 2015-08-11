@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3339 2015/08/11 14:23:51 he Exp $
+$NetBSD: CHANGES-2015,v 1.3340 2015/08/11 14:29:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6117,3 +6117,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/fricas to 1.2.5 [asau 2015-08-10]
 	Updated sysutils/collectd to 5.5.0nb2 [he 2015-08-11]
 	Updated sysutils/collectd to 5.5.0nb3 [he 2015-08-11]
+	Updated databases/mongodb to 3.0.5 [fhajny 2015-08-11]
