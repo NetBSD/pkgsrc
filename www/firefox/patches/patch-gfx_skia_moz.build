@@ -1,11 +1,14 @@
-$NetBSD: patch-gfx_skia_moz.build,v 1.8 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-gfx_skia_moz.build,v 1.9 2015/08/11 23:48:18 ryoon Exp $
 
---- gfx/skia/moz.build.orig	2014-11-21 03:37:30.000000000 +0000
+--- gfx/skia/moz.build.orig	2015-08-07 15:54:04.000000000 +0000
 +++ gfx/skia/moz.build
-@@ -968,6 +968,9 @@ if CONFIG['GNU_CXX']:
-     if not CONFIG['CLANG_CXX']:
-         CXXFLAGS += ['-Wno-logical-op']
+@@ -970,6 +970,12 @@ if CONFIG['GNU_CXX']:
+     if CONFIG['CPU_ARCH'] == 'arm':
+         SOURCES['trunk/src/opts/SkBlitRow_opts_arm.cpp'].flags += ['-fomit-frame-pointer']
  
++if CONFIG['MOZ_NATIVE_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
 +if CONFIG['MOZ_NATIVE_HARFBUZZ']:
 +    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
 +
