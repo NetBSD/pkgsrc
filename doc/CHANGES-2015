@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3341 2015/08/11 20:12:38 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.3342 2015/08/11 23:49:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6119,3 +6119,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/collectd to 5.5.0nb3 [he 2015-08-11]
 	Updated databases/mongodb to 3.0.5 [fhajny 2015-08-11]
 	Updated devel/ht to 2.1.0 [bsiegert 2015-08-11]
+	Updated www/firefox to 40.0 [ryoon 2015-08-11]
