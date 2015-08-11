@@ -1,0 +1,66 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/08/11 13:19:21 he Exp $
+
+Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
+and also do swap for "have_swapctl_three_args" (as for NetBSD).
+Also, the start of process support, but that's not yet finished.
+
+--- configure.ac.orig	2015-05-27 07:51:35.000000000 +0000
++++ configure.ac
+@@ -77,6 +77,10 @@ case $host_os in
+ 	AC_DEFINE([KERNEL_OPENBSD], 1, [True if program is to be compiled for an OpenBSD kernel])
+ 	ac_system="OpenBSD"
+ 	;;
++	*netbsd*)
++	AC_DEFINE([KERNEL_NETBSD], 1, [True if program is to be compiled for a NetBSD kernel])
++	ac_system="NetBSD"
++	;;
+ 	*aix*)
+ 	AC_DEFINE([KERNEL_AIX], 1, [True if program is to be compiled for a AIX kernel])
+ 	ac_system="AIX"
+@@ -1363,6 +1367,21 @@ AC_CHECK_MEMBERS([struct kinfo_proc.p_pi
+ #include <kvm.h>
+ 	])
+ 
++AC_CHECK_MEMBERS([struct kinfo_proc2.p_pid, struct kinfo_proc2.p_uru_maxrss],
++	[
++		AC_DEFINE(HAVE_STRUCT_KINFO_PROC_NETBSD, 1,
++			[Define if struct kinfo_proc2 exists in the NetBSD variant.])
++		have_struct_kinfo_proc_netbsd="yes"
++	],
++	[
++		have_struct_kinfo_proc_netbsd="no"
++	],
++	[
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <kvm.h>
++	])
++
+ AC_CHECK_MEMBERS([struct udphdr.uh_dport, struct udphdr.uh_sport], [], [],
+ [#define _BSD_SOURCE
+ #define _DEFAULT_SOURCE
+@@ -5244,6 +5263,12 @@ then
+ 	plugin_tcpconns="yes"
+ fi
+ 
++if test "x$ac_system" = "xNetBSD"
++then
++	plugin_entropy="yes"
++	plugin_disk="yes"
++fi
++
+ # Mac OS X devices
+ if test "x$with_libiokit" = "xyes"
+ then
+@@ -5482,6 +5507,11 @@ then
+ 	plugin_swap="yes"
+ fi
+ 
++if test "x$have_swapctl" = "xyes" && test "x$c_cv_have_swapctl_three_args" = "xyes"
++then
++	plugin_swap="yes"
++fi
++
+ if test "x$with_kvm_openfiles$with_kvm_nlist" = "xyesyes"
+ then
+ 	plugin_tcpconns="yes"
