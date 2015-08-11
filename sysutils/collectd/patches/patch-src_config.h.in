@@ -1,0 +1,39 @@
+$NetBSD: patch-src_config.h.in,v 1.1 2015/08/11 13:19:21 he Exp $
+
+Optionally define a few vars for NetBSD.
+
+--- src/config.h.in.orig	2015-05-27 07:53:03.000000000 +0000
++++ src/config.h.in
+@@ -1246,6 +1246,12 @@
+ /* Define to 1 if `imr_ifindex' is a member of `struct ip_mreqn'. */
+ #undef HAVE_STRUCT_IP_MREQN_IMR_IFINDEX
+ 
++/* Define to 1 if `p_pid' is a member of `struct kinfo_proc2'. */
++#undef HAVE_STRUCT_KINFO_PROC2_P_PID
++
++/* Define to 1 if `p_uru_maxrss' is a member of `struct kinfo_proc2'. */
++#undef HAVE_STRUCT_KINFO_PROC2_P_URU_MAXRSS
++
+ /* Define if struct kinfo_proc exists in the FreeBSD variant. */
+ #undef HAVE_STRUCT_KINFO_PROC_FREEBSD
+ 
+@@ -1258,6 +1264,9 @@
+ /* Define to 1 if `ki_rusage' is a member of `struct kinfo_proc'. */
+ #undef HAVE_STRUCT_KINFO_PROC_KI_RUSAGE
+ 
++/* Define if struct kinfo_proc2 exists in the NetBSD variant. */
++#undef HAVE_STRUCT_KINFO_PROC_NETBSD
++
+ /* Define if struct kinfo_proc exists in the OpenBSD variant. */
+ #undef HAVE_STRUCT_KINFO_PROC_OPENBSD
+ 
+@@ -1507,6 +1516,9 @@
+ /* True if program is to be compiled for a Linux kernel */
+ #undef KERNEL_LINUX
+ 
++/* True if program is to be compiled for a NetBSD kernel */
++#undef KERNEL_NETBSD
++
+ /* True if program is to be compiled for an OpenBSD kernel */
+ #undef KERNEL_OPENBSD
+ 
