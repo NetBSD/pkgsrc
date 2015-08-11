@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/11 12:18:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/11 12:39:18 jperkin Exp $
 bin/apu-1-config
 include/apr-1/apr_anylock.h
 include/apr-1/apr_base64.h
@@ -35,9 +35,10 @@ include/apr-1/apu_version.h
 include/apr-1/apu_want.h
 lib/aprutil.exp
 lib/libaprutil-1.la
-${PLIST.ldap}lib/apr-util-1/apr_ldap.la
+${PLIST.ssl}lib/apr-util-1/apr_crypto_openssl.la
 ${PLIST.mysql}lib/apr-util-1/apr_dbd_mysql.la
 ${PLIST.pgsql}lib/apr-util-1/apr_dbd_pgsql.la
 ${PLIST.sqlite3}lib/apr-util-1/apr_dbd_sqlite3.la
 ${PLIST.db4}lib/apr-util-1/apr_dbm_db.la
+${PLIST.ldap}lib/apr-util-1/apr_ldap.la
 lib/pkgconfig/apr-util-1.pc
