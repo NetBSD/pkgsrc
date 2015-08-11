@@ -1,0 +1,144 @@
+$NetBSD: patch-configure,v 1.3 2015/08/11 13:19:21 he Exp $
+
+Regen from configure.ac.
+
+--- configure.orig	2015-05-27 07:51:50.000000000 +0000
++++ configure
+@@ -13908,7 +13908,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -13954,7 +13954,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -13978,7 +13978,7 @@ rm -f core conftest.err conftest.$ac_obj
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -14023,7 +14023,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -14047,7 +14047,7 @@ rm -f core conftest.err conftest.$ac_obj
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -15319,6 +15319,12 @@ $as_echo "#define KERNEL_OPENBSD 1" >>co
+ 
+ 	ac_system="OpenBSD"
+ 	;;
++	*netbsd*)
++
++$as_echo "#define KERNEL_NETBSD 1" >>confdefs.h
++
++	ac_system="NetBSD"
++	;;
+ 	*aix*)
+ 
+ $as_echo "#define KERNEL_AIX 1" >>confdefs.h
+@@ -19171,6 +19177,54 @@ else
+ fi
+ 
+ 
++ac_fn_c_check_member "$LINENO" "struct kinfo_proc2" "p_pid" "ac_cv_member_struct_kinfo_proc2_p_pid" "
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <kvm.h>
++
++"
++if test "x$ac_cv_member_struct_kinfo_proc2_p_pid" = xyes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_STRUCT_KINFO_PROC2_P_PID 1
++_ACEOF
++
++
++
++$as_echo "#define HAVE_STRUCT_KINFO_PROC_NETBSD 1" >>confdefs.h
++
++		have_struct_kinfo_proc_netbsd="yes"
++
++else
++
++		have_struct_kinfo_proc_netbsd="no"
++
++fi
++ac_fn_c_check_member "$LINENO" "struct kinfo_proc2" "p_uru_maxrss" "ac_cv_member_struct_kinfo_proc2_p_uru_maxrss" "
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <kvm.h>
++
++"
++if test "x$ac_cv_member_struct_kinfo_proc2_p_uru_maxrss" = xyes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_STRUCT_KINFO_PROC2_P_URU_MAXRSS 1
++_ACEOF
++
++
++
++$as_echo "#define HAVE_STRUCT_KINFO_PROC_NETBSD 1" >>confdefs.h
++
++		have_struct_kinfo_proc_netbsd="yes"
++
++else
++
++		have_struct_kinfo_proc_netbsd="no"
++
++fi
++
++
+ ac_fn_c_check_member "$LINENO" "struct udphdr" "uh_dport" "ac_cv_member_struct_udphdr_uh_dport" "#define _BSD_SOURCE
+ #define _DEFAULT_SOURCE
+ #if HAVE_STDINT_H
+@@ -27648,6 +27702,12 @@ then
+ 	plugin_tcpconns="yes"
+ fi
+ 
++if test "x$ac_system" = "xNetBSD"
++then
++	plugin_entropy="yes"
++	plugin_disk="yes"
++fi
++
+ # Mac OS X devices
+ if test "x$with_libiokit" = "xyes"
+ then
+@@ -27890,6 +27950,11 @@ then
+ 	plugin_swap="yes"
+ fi
+ 
++if test "x$have_swapctl" = "xyes" && test "x$c_cv_have_swapctl_three_args" = "xyes"
++then
++	plugin_swap="yes"
++fi
++
+ if test "x$with_kvm_openfiles$with_kvm_nlist" = "xyesyes"
+ then
+ 	plugin_tcpconns="yes"
