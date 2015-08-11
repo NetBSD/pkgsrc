@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_modules_GMPInstallManager.jsm,v 1.3 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-toolkit_modules_GMPInstallManager.jsm,v 1.4 2015/08/11 23:48:18 ryoon Exp $
 
---- toolkit/modules/GMPInstallManager.jsm.orig	2015-05-04 00:43:33.000000000 +0000
+--- toolkit/modules/GMPInstallManager.jsm.orig	2015-08-07 15:54:20.000000000 +0000
 +++ toolkit/modules/GMPInstallManager.jsm
-@@ -874,9 +874,7 @@ GMPDownloader.prototype = {
+@@ -884,9 +884,7 @@ GMPDownloader.prototype = {
        let gmpAddon = this._gmpAddon;
        let installToDirPath = Cc["@mozilla.org/file/local;1"].
                            createInstance(Ci.nsIFile);
@@ -13,7 +13,7 @@ $NetBSD: patch-toolkit_modules_GMPInstallManager.jsm,v 1.3 2015/05/12 22:48:54 r
        installToDirPath.initWithPath(path);
        log.info("install to directory path: " + installToDirPath.path);
        let gmpInstaller = new GMPExtractor(zipPath, installToDirPath.path);
-@@ -885,10 +883,12 @@ GMPDownloader.prototype = {
+@@ -895,10 +893,12 @@ GMPDownloader.prototype = {
          // Success, set the prefs
          let now = Math.round(Date.now() / 1000);
          GMPPrefs.set(GMPPrefs.KEY_PLUGIN_LAST_UPDATE, now, gmpAddon.id);
@@ -25,6 +25,6 @@ $NetBSD: patch-toolkit_modules_GMPInstallManager.jsm,v 1.3 2015/05/12 22:48:54 r
                       gmpAddon.id);
 +        GMPPrefs.set(GMPPrefs.KEY_PLUGIN_PATH,
 +                     installToDirPath.path, gmpAddon.id);
-         this._deferred.resolve(extractedPaths);
-       }, err => {
-         this._deferred.reject(err);
+         // Reset the trial create pref, so that Gecko knows to do a test
+         // run before reporting that the GMP works to content.
+         GMPPrefs.reset(GMPPrefs.KEY_PLUGIN_TRIAL_CREATE, gmpAddon.version,

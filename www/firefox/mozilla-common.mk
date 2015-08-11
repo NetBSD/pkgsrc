@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.59 2015/07/04 18:49:05 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.60 2015/08/11 23:48:17 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -85,8 +85,7 @@ CONFIGURE_ARGS+=	--enable-canvas
 CONFIGURE_ARGS+=	--disable-installer
 CONFIGURE_ARGS+=	--enable-url-classifier
 #CONFIGURE_ARGS+=	--enable-startup-notification
-# Disabled from https://bugzilla.mozilla.org/show_bug.cgi?id=977400
-CONFIGURE_ARGS+=	--enable-shared-js
+#CONFIGURE_ARGS+=	--enable-shared-js
 CONFIGURE_ARGS+=	--with-system-ply
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater

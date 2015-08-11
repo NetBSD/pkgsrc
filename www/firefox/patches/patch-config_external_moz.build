@@ -1,6 +1,6 @@
-$NetBSD: patch-config_external_moz.build,v 1.8 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.9 2015/08/11 23:48:18 ryoon Exp $
 
---- config/external/moz.build.orig	2015-05-04 00:43:23.000000000 +0000
+--- config/external/moz.build.orig	2015-08-07 15:54:10.000000000 +0000
 +++ config/external/moz.build
 @@ -19,10 +19,19 @@ if CONFIG['MOZ_UPDATER']:
  # There's no "native brotli" yet, but probably in the future...
@@ -24,9 +24,9 @@ $NetBSD: patch-config_external_moz.build,v 1.8 2015/05/12 22:48:54 ryoon Exp $
      external_dirs += ['media/libtremor']
  
  if CONFIG['MOZ_WEBM']:
-@@ -37,15 +46,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
- if not CONFIG['MOZ_NATIVE_PNG']:
-     external_dirs += ['media/libpng']
+@@ -40,15 +49,16 @@ if not CONFIG['MOZ_NATIVE_PNG']:
+ if CONFIG['CPU_ARCH'] == 'arm':
+     external_dirs += ['media/openmax_dl']
  
 +if not CONFIG['MOZ_NATIVE_SPEEX']:
 +    external_dirs += ['media/libspeex_resampler']
