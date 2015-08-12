@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3357 2015/08/12 12:48:49 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3358 2015/08/12 13:56:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6135,3 +6135,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/fricas to 1.2.6 [asau 2015-08-12]
 	Removed multimedia/xfmedia [youri 2015-08-12]
 	Updated graphics/glew to 1.13.0 [adam 2015-08-12]
+	Updated www/mediawiki to 1.25.2 [wen 2015-08-12]
