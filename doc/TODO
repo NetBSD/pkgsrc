@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14694 2015/08/12 14:01:12 wen Exp $
+$NetBSD: TODO,v 1.14695 2015/08/12 14:07:38 wen Exp $
 
 Suggested new packages
 ======================
@@ -1358,7 +1358,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-HTTP-Lite-2.44
 	o p5-HTTP-Proxy-0.304
 	o p5-HTTP-Server-EV-0.69
-	o p5-HTTP-Tiny-0.056
 	o p5-IO-Async-0.67
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompter-0.004013
