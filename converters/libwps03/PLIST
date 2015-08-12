@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/12 00:29:14 ryoon Exp $
+bin/wks2csv
+bin/wks2raw
+bin/wks2text
+bin/wps2html
+bin/wps2raw
+bin/wps2text
+include/libwps-0.3/libwps/WPSDocument.h
+include/libwps-0.3/libwps/libwps.h
+lib/libwps-0.3.la
+lib/pkgconfig/libwps-0.3.pc
