@@ -1,0 +1,48 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/08/12 00:57:20 ryoon Exp $
+
+* Use gstreamer under OpenBSD
+* Add FreeBSD support (GNU patch is not needed)
+* Detect pkgsrc apache-ant library
+* Fix installation directory
+
+--- configure.ac.orig	2015-07-31 00:32:43.000000000 +0000
++++ configure.ac
+@@ -7882,7 +7882,7 @@ no|disable)
+     else
+         # Unset variables set by the above AM_PATH_PYTHON so that
+         # we actually do check anew.
+-        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
++        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
+         AM_PATH_PYTHON([3.3],, [:])
+         if test "$PYTHON" = ":"; then
+             if test -z "$PYTHON_FOR_BUILD"; then
+@@ -7935,9 +7935,9 @@ if test $enable_python = system; then
+     elif test "$cross_compiling" != yes; then
+         # Unset variables set by the above AM_PATH_PYTHON so that
+         # we actually do check anew.
+-        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
++        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
+         # This causes an error if no python command is found
+-        AM_PATH_PYTHON([3.3])
++        AM_PATH_PYTHON([2.6])
+         python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
+         python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
+         python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
+@@ -12069,7 +12069,7 @@ EOF
+     dnl Checking for ant.jar
+     if test "$ANT_HOME" != "NO_ANT_HOME"; then
+         AC_MSG_CHECKING([Ant lib directory])
+-        if test -f $ANT_HOME/lib/ant.jar; then
++        if test -f $ANT_HOME/lib/java/ant/ant.jar; then
+             ANT_LIB="$ANT_HOME/lib"
+         else
+             if test -f $ANT_HOME/ant.jar; then
+@@ -12513,7 +12513,7 @@ AC_SUBST(MANDIR)
+ DOCDIR=[$(eval echo $(eval echo $docdir))]
+ AC_SUBST(DOCDIR)
+ 
+-INSTALLDIR="$LIBDIR/$INSTALLDIRNAME"
++INSTALLDIR="$PREFIXDIR"
+ AC_SUBST(INSTALLDIR)
+ 
+ TESTINSTALLDIR="${BUILDDIR}/test-install"
