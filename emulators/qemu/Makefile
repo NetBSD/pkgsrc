@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2015/06/12 10:50:04 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2015/08/12 06:55:59 ryoon Exp $
 
-DISTNAME=	qemu-2.3.0
-PKGREVISION=	2
+DISTNAME=	qemu-2.4.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,10 +37,6 @@ CONFIGURE_ARGS+=	--enable-curses
 #HF#CONFIGURE_ARGS+=	--disable-fdt			# HF: build on OS X
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
-CONF_FILES=		${EGDIR}/target-x86_64.conf \
-			${PKG_SYSCONFDIR}/target-x86_64.conf
-EGDIR=			${PREFIX}/share/examples/qemu
-INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
 PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
