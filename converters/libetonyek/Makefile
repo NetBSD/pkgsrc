@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2015/04/17 15:52:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/12 00:25:27 ryoon Exp $
 
-DISTNAME=	libetonyek-0.1.1
-PKGREVISION=	3
+DISTNAME=	libetonyek-0.1.2
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/libetonyek/
-COMMENT=	Library for Apple Keynote presentations
+HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libetonyek
+COMMENT=	Library for Apple Office suite files
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
@@ -18,15 +17,19 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
+# Boost qi.hpp
+CXXFLAGS+=	-std=c++0x
+
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-docs
-CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
 
 PKGCONFIG_OVERRIDE+=	libetonyek.pc.in
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
