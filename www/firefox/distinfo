@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.210 2015/08/11 23:48:17 ryoon Exp $
+$NetBSD: distinfo,v 1.211 2015/08/12 05:41:30 ryoon Exp $
 
 SHA1 (firefox-40.0.source.tar.bz2) = 48483e5738182f8567e2b6d2e29bd6bc1812d3eb
 RMD160 (firefox-40.0.source.tar.bz2) = 046cd9d0ce0952238b60bb7351e2009a101a74d9
@@ -11,7 +11,7 @@ SHA1 (patch-b2g_installer_Makefile.in) = 95eb82774734db093c990919ba669d4666e55df
 SHA1 (patch-b2g_installer_package-manifest.in) = daf8468729a96875d346643d4f9df54a39a4bdd7
 SHA1 (patch-bf) = 75c971043e9f693203d6bd670b2c20c4952a7756
 SHA1 (patch-bg) = d6c02294765265d9e85cf49c22320d88573c2e25
-SHA1 (patch-browser_app_nsBrowserApp.cpp) = b7dd345b88dd03716f725c790364d06475aaf6bb
+SHA1 (patch-browser_app_nsBrowserApp.cpp) = 2957fa349b34d41b273be689a97cfbc613cead02
 SHA1 (patch-browser_installer_package-manifest.in) = aee56636fc83ea6441c5303ef0297971b41516d1
 SHA1 (patch-build_autoconf_compiler-opts.m4) = ccdc06a2b07b7664f9cb91bcc4fb29052dda8b07
 SHA1 (patch-build_autoconf_nss.m4) = 970fcd9aeede2347651c516d5211c4555dd28a4d
