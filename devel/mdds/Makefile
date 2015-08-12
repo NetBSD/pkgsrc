@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2015/04/17 15:53:01 adam Exp $
+# $NetBSD: Makefile,v 1.28 2015/08/12 00:45:18 ryoon Exp $
 
-DISTNAME=	mdds_0.12.0
+DISTNAME=	mdds_0.12.1
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://kohei.us/files/mdds/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,20 +14,22 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
-NO_BUILD=		yes
+#NO_BUILD=		yes
 INSTALLATION_DIRS=	include/mdds/compat include/mdds/hash_container \
 			share/pkgconfig
 PKGCONFIG_OVERRIDE+=	misc/mdds.pc.in
 
 do-install:
-	for i in ${WRKSRC}/include/mdds/*.*; do \
+	for i in ${WRKSRC}/include/mdds/*.hpp; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
 	done
-	for i in ${WRKSRC}/include/mdds/compat/*.*; do \
+	for i in ${WRKSRC}/include/mdds/*.inl; do \
+		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
+	done
+	for i in ${WRKSRC}/include/mdds/compat/*.hpp; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds/compat; \
 	done
-	rm -f ${DESTDIR}${PREFIX}/include/mdds/*orig
-	for i in ${WRKSRC}/include/mdds/hash_container/*.*; do \
+	for i in ${WRKSRC}/include/mdds/hash_container/*.hpp; do \
 		${INSTALL_DATA} $$i \
 			${DESTDIR}${PREFIX}/include/mdds/hash_container; \
 	done
