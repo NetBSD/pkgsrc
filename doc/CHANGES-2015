@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3355 2015/08/12 08:55:21 asau Exp $
+$NetBSD: CHANGES-2015,v 1.3356 2015/08/12 11:32:26 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6133,3 +6133,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 40.0nb1 [ryoon 2015-08-12]
 	Updated emulators/qemu to 2.4.0 [ryoon 2015-08-12]
 	Updated math/fricas to 1.2.6 [asau 2015-08-12]
+	Removed multimedia/xfmedia [youri 2015-08-12]
