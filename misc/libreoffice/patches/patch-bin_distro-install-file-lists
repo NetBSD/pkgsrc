@@ -1,7 +1,7 @@
-$NetBSD: patch-bin_distro-install-file-lists,v 1.1 2015/08/12 00:57:20 ryoon Exp $
+$NetBSD: patch-bin_distro-install-file-lists,v 1.2 2015/08/12 12:13:02 wiz Exp $
 
---- /usr/tmp/pkgsrc/misc/libreoffice/work/libreoffice-5.0.0.5/bin/distro-install-file-lists.orig	2015-07-31 00:32:43.000000000 +0000
-+++ /usr/tmp/pkgsrc/misc/libreoffice/work/libreoffice-5.0.0.5/bin/distro-install-file-lists
+--- bin/distro-install-file-lists.orig	2015-07-31 00:32:43.000000000 +0000
++++ bin/distro-install-file-lists
 @@ -31,8 +31,8 @@ mv_file_between_flists()
  # Params: target_file_list source_file_list
  add_used_directories()
