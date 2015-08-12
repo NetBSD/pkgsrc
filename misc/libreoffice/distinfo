@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/08/12 00:57:20 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2015/08/12 12:13:02 wiz Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -128,7 +128,7 @@ RMD160 (libreoffice/libreoffice-translations-5.0.0.5.tar.xz) = 39a642926e767b06d
 Size (libreoffice/libreoffice-translations-5.0.0.5.tar.xz) = 129890036 bytes
 SHA1 (patch-Repository.mk) = 01a1fe049fc192a2b8b171b7162e3d34da1480c0
 SHA1 (patch-bin_distro-install-desktop-integration) = 292abb5c40018547bc58efa092eb7014dc28dced
-SHA1 (patch-bin_distro-install-file-lists) = 28e658e9e6c69fde63b0a84daf1dc952da4819dd
+SHA1 (patch-bin_distro-install-file-lists) = 782e2943a8438fb0ff033b97eda8ad4923453774
 SHA1 (patch-configure.ac) = 4314429f4e612e340413e45c0b2dcec1db3b8495
 SHA1 (patch-desktop_Library__sofficeapp.mk) = 320ab924a87607ed98c3404ed9d8688cbbed820a
 SHA1 (patch-include_LibreOfficeKit_LibreOfficeKitInit.h) = ce962b5d8646038150d57b02fd25a03eef592bb6
