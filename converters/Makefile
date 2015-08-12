@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2015/04/19 23:46:04 rodent Exp $
+# $NetBSD: Makefile,v 1.137 2015/08/12 00:30:26 ryoon Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -48,6 +48,7 @@ SUBDIR+=	libvisio
 SUBDIR+=	libwpd
 SUBDIR+=	libwpg
 SUBDIR+=	libwps
+SUBDIR+=	libwps03
 SUBDIR+=	macfork
 SUBDIR+=	mpack
 SUBDIR+=	nkf
