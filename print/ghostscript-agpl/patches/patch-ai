@@ -1,11 +1,25 @@
-$NetBSD: patch-ai,v 1.2 2013/08/22 21:07:08 adam Exp $
+$NetBSD: patch-ai,v 1.3 2015/08/12 22:27:23 wiz Exp $
 
+chunk 1:
+fix build with _FORTIFY_SOURCE=2; it seems the arguments sometimes
+overlap.
+
+chunk 2:
 Replace BSD/Linux specific "qd" printf format specifier by "lld",
 should fix build problem on Solaris reported by Joern Clausen per PR pkg/40664
 
---- base/mkromfs.c.orig 2009-02-13 12:20:54.000000000 +0100
+--- base/mkromfs.c.orig	2015-03-30 08:21:24.000000000 +0000
 +++ base/mkromfs.c
-@@ -2302,7 +2302,7 @@
+@@ -1987,7 +1987,7 @@ ws(const byte *str, int len)
+     if (len >= LINE_SIZE)
+         exit(1);
+ 
+-    memcpy(linebuf, str, len);
++    memmove(linebuf, str, len);
+     flush_line_buf(len);
+ }
+ 
+@@ -2329,7 +2329,7 @@ main(int argc, char *argv[])
  #endif
      fprintf(out,"\n#include \"stdint_.h\"\n");
      fprintf(out,"\n#include \"time_.h\"\n\n");
