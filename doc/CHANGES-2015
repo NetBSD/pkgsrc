@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3354 2015/08/12 06:56:36 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3355 2015/08/12 08:55:21 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6132,3 +6132,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.508 [tsutsui 2015-08-12]
 	Updated www/firefox to 40.0nb1 [ryoon 2015-08-12]
 	Updated emulators/qemu to 2.4.0 [ryoon 2015-08-12]
+	Updated math/fricas to 1.2.6 [asau 2015-08-12]
