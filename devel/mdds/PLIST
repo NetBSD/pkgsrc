@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/04 18:01:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/08/12 00:45:18 ryoon Exp $
 include/mdds/compat/unique_ptr.hpp
 include/mdds/default_deleter.hpp
 include/mdds/flat_segment_tree.hpp
@@ -30,6 +30,7 @@ include/mdds/quad_node.hpp
 include/mdds/rectangle_set.hpp
 include/mdds/rectangle_set_def.inl
 include/mdds/segment_tree.hpp
+include/mdds/segment_tree_def.inl
 include/mdds/sorted_string_map.hpp
 include/mdds/sorted_string_map_def.inl
 share/pkgconfig/mdds.pc
