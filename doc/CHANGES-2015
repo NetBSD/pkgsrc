@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3345 2015/08/12 00:28:20 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3346 2015/08/12 00:29:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6123,3 +6123,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 40.0 [ryoon 2015-08-11]
 	Updated converters/libetonyek to 0.1.2 [ryoon 2015-08-12]
 	Updated converters/libwps to 0.4.0 [ryoon 2015-08-12]
+	Added converters/libwps03 version 0.3.1 [ryoon 2015-08-12]
