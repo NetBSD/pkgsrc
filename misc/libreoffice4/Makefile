@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.77 2015/08/09 11:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2015/08/12 00:49:24 ryoon Exp $
 
 VERREL=		4.4.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -69,7 +69,6 @@ MORE_DISTFILES= \
 	ba2930200c9f019c2d93a8c88c651a0f-flow-engine-0.9.4.zip \
 	b2371dc7cf4811c9d32146eec913d296-libcmis-0.3.0.tar.gz \
 	c3c1a8ba7452950636e871d25020ce0d-pt-serif-font-1.0000W.tar.gz \
-	46eb0e7f213ad61bd5dee0c494132cb0-libwps-0.2.9.tar.bz2 \
 	db60e4fde8dd6d6807523deb71ee34dc-liblayout-0.2.10.zip \
 	d8bd5eed178db6e2b18eeed243f85aa8-flute-1.1.6.zip \
 	e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip \
@@ -257,7 +256,7 @@ do-install:
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwps+=	libwps<0.4.0
-.include "../../converters/libwps/buildlink3.mk"
+.include "../../converters/libwps03/buildlink3.mk"
 .include "../../converters/libmwaw/buildlink3.mk"
 BUILDLINK_API_DEPENDS.orcus+=	orcus<0.9.0
 .include "../../converters/orcus/buildlink3.mk"
