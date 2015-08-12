@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3362 2015/08/12 18:16:34 gls Exp $
+$NetBSD: CHANGES-2015,v 1.3363 2015/08/12 18:31:51 gls Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6140,3 +6140,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Mojolicious to 6.14 [wen 2015-08-12]
 	Updated cad/eagle to 7.3.0 [tnn 2015-08-12]
 	Updated security/clusterssh to 4.03.06 [gls 2015-08-12]
+	Updated devel/py-requests to 2.7.0 [gls 2015-08-12]
