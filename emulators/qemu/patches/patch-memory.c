@@ -1,13 +1,13 @@
-$NetBSD: patch-memory.c,v 1.8 2014/01/15 18:26:20 wiz Exp $
+$NetBSD: patch-memory.c,v 1.9 2015/08/12 06:55:59 ryoon Exp $
 
---- memory.c.orig	2013-11-27 22:15:55.000000000 +0000
+--- memory.c.orig	2015-08-11 19:11:09.000000000 +0000
 +++ memory.c
-@@ -404,7 +404,7 @@ static void memory_region_read_accessor(
-     if (mr->flush_coalesced_mmio) {
-         qemu_flush_coalesced_mmio_buffer();
-     }
+@@ -396,7 +396,7 @@ static MemTxResult  memory_region_read_a
+ {
+     uint64_t tmp;
+ 
 -    tmp = mr->ops->read(mr->opaque, addr, size);
-+    tmp = (*mr->ops->read)(mr->opaque, addr, size);
++    tmp = (mr->ops->read)(mr->opaque, addr, size);
      trace_memory_region_ops_read(mr, addr, tmp, size);
      *value |= (tmp & mask) << shift;
- }
+     return MEMTX_OK;

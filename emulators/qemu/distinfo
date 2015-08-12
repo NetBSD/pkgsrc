@@ -1,17 +1,16 @@
-$NetBSD: distinfo,v 1.104 2015/05/16 03:19:54 khorben Exp $
+$NetBSD: distinfo,v 1.105 2015/08/12 06:55:59 ryoon Exp $
 
-SHA1 (qemu-2.3.0.tar.bz2) = 373d74bfafce1ca45f85195190d0a5e22b29299e
-RMD160 (qemu-2.3.0.tar.bz2) = cb203bf3faa316c9eb4ceeb975441deab6f9b2f7
-Size (qemu-2.3.0.tar.bz2) = 24683085 bytes
+SHA1 (qemu-2.4.0.tar.bz2) = 27c4651243ad885a2a3b35fe6d2532e6a7f0711e
+RMD160 (qemu-2.4.0.tar.bz2) = f3b5ce602574aec28a5b5e43591248d4358ec5f7
+Size (qemu-2.4.0.tar.bz2) = 25070979 bytes
 SHA1 (patch-configure) = 2d0d2549056c9f53a932b236ed4d69a5ee58a856
 SHA1 (patch-ef) = 6e57de87f91067e8a9a1388c91133a31b3582b3a
-SHA1 (patch-et) = 036e1a254ce40df635dfb6107d2707879467e127
-SHA1 (patch-hw_block_fdc.c) = a49f714266b767953d78aa42492cde3ba4ecb06a
+SHA1 (patch-et) = e9b850ac5985cbe934b541acbfdb330cce421d50
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_ppc_mac__newworld.c) = 9a0ec3ba0b6da2879fdaba6a7937fb16a02685f5
 SHA1 (patch-hw_ppc_mac__oldworld.c) = 46322c77c87be6d517c43466325c344db99cd463
-SHA1 (patch-memory.c) = 14df9c835ca318fc79a8d3a46bb94d2f229277cc
+SHA1 (patch-memory.c) = f5193fb86a6fad5864477dafc4651d3d51147cc8
 SHA1 (patch-slirp_tcp__subr.c) = cfc8289384fa987289e32b64532c13a83a890820
 SHA1 (patch-tests_Makefile) = 44ec206f8061274d0c0a7ca0d4a3e2dbe936fafa

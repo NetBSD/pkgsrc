@@ -1,8 +1,8 @@
-$NetBSD: patch-et,v 1.13 2014/01/15 18:26:20 wiz Exp $
+$NetBSD: patch-et,v 1.14 2015/08/12 06:55:59 ryoon Exp $
 
---- Makefile.orig	2013-11-27 22:15:55.000000000 +0000
+--- Makefile.orig	2015-08-11 19:11:05.000000000 +0000
 +++ Makefile
-@@ -155,6 +155,7 @@ $(SRC_PATH)/pixman/configure:
+@@ -189,6 +189,7 @@ $(SRC_PATH)/pixman/configure:
  DTC_MAKE_ARGS=-I$(SRC_PATH)/dtc VPATH=$(SRC_PATH)/dtc -C dtc V="$(V)" LIBFDT_srcdir=$(SRC_PATH)/dtc/libfdt
  DTC_CFLAGS=$(CFLAGS) $(QEMU_CFLAGS)
  DTC_CPPFLAGS=-I$(BUILD_DIR)/dtc -I$(SRC_PATH)/dtc -I$(SRC_PATH)/dtc/libfdt
@@ -10,15 +10,3 @@ $NetBSD: patch-et,v 1.13 2014/01/15 18:26:20 wiz Exp $
  
  subdir-dtc:dtc/libfdt dtc/tests
  	$(call quiet-command,$(MAKE) $(DTC_MAKE_ARGS) CPPFLAGS="$(DTC_CPPFLAGS)" CFLAGS="$(DTC_CFLAGS)" LDFLAGS="$(LDFLAGS)" ARFLAGS="$(ARFLAGS)" CC="$(CC)" AR="$(AR)" LD="$(LD)" $(SUBDIR_MAKEFLAGS) libfdt/libfdt.a,)
-@@ -340,8 +341,9 @@ endif
- install-confdir:
- 	$(INSTALL_DIR) "$(DESTDIR)$(qemu_confdir)"
- 
--install-sysconfig: install-datadir install-confdir
--	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(qemu_confdir)"
-+install-sysconfig:
-+	$(INSTALL_DIR) "$(DESTDIR)$(egdir)"
-+	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(egdir)"
- 
- install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig \
- install-datadir install-localstatedir

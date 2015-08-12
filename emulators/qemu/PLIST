@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/06/10 20:40:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/08/12 06:55:59 ryoon Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -60,7 +60,6 @@ share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
 share/doc/qemu/qmp-commands.txt
-share/examples/qemu/target-x86_64.conf
 share/qemu/QEMU,cgthree.bin
 share/qemu/QEMU,tcx.bin
 share/qemu/acpi-dsdt.aml
@@ -139,5 +138,6 @@ share/qemu/u-boot.e500
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios-qxl.bin
 share/qemu/vgabios-stdvga.bin
+share/qemu/vgabios-virtio.bin
 share/qemu/vgabios-vmware.bin
 share/qemu/vgabios.bin
