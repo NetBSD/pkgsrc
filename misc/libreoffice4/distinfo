@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2015/08/04 19:11:09 ryoon Exp $
+$NetBSD: distinfo,v 1.42 2015/08/12 00:49:24 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -57,9 +57,6 @@ Size (libreoffice/3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip) = 5750610
 SHA1 (libreoffice/46e92b68e31e858512b680b3b61dc4c1-mythes-1.2.3.tar.gz) = 8a5d58aa4bb8752375eff51db9f701c269d1831e
 RMD160 (libreoffice/46e92b68e31e858512b680b3b61dc4c1-mythes-1.2.3.tar.gz) = b89878cad47646db5562d76c81f458612a58433c
 Size (libreoffice/46e92b68e31e858512b680b3b61dc4c1-mythes-1.2.3.tar.gz) = 4910188 bytes
-SHA1 (libreoffice/46eb0e7f213ad61bd5dee0c494132cb0-libwps-0.2.9.tar.bz2) = 04acc2c13485f8b9e714a5d2b4eb3e77f643d23e
-RMD160 (libreoffice/46eb0e7f213ad61bd5dee0c494132cb0-libwps-0.2.9.tar.bz2) = 140bfb05af718d59474dd9992b6af794ff0ca99f
-Size (libreoffice/46eb0e7f213ad61bd5dee0c494132cb0-libwps-0.2.9.tar.bz2) = 474208 bytes
 SHA1 (libreoffice/5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz) = 84b40d7f8bb0cd085dd70b3abed197133d761557
 RMD160 (libreoffice/5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz) = 99ee3851f3f1ae9a431541de5765312f01ef19d7
 Size (libreoffice/5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz) = 2285857 bytes
