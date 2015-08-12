@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12.2.1 2015/07/14 22:14:30 tron Exp $
+$NetBSD: distinfo,v 1.12.2.2 2015/08/12 20:17:12 tron Exp $
 
-SHA1 (php-5.6.11.tar.bz2) = 513bbde88a8b8270b2bff357d41c4f1c42e51fcd
-RMD160 (php-5.6.11.tar.bz2) = fb07baeead5c5eb477fc8d06960e669aff47968e
-Size (php-5.6.11.tar.bz2) = 14081292 bytes
+SHA1 (php-5.6.12.tar.bz2) = ea9ac92e424f5b2bbfefe31c06864e3cb4c098e5
+RMD160 (php-5.6.12.tar.bz2) = c1528c753b961970a8af6a7ac8eb684956ac80ae
+Size (php-5.6.12.tar.bz2) = 14094148 bytes
 SHA1 (patch-acinclude.m4) = b38fc34c3a3847dc317e8e286612b21ec8fd5ce8
 SHA1 (patch-aclocal.m4) = 49117c42e03bd3ed57d967d33ba543f936013b4f
 SHA1 (patch-build_libtool.m4) = f459cda09cbdad9780568d271091fb17bbc5d965
