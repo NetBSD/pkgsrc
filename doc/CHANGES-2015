@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3351 2015/08/12 03:27:09 gls Exp $
+$NetBSD: CHANGES-2015,v 1.3352 2015/08/12 04:15:08 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6129,3 +6129,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4 to 4.4.5.2nb2 [ryoon 2015-08-12]
 	Added misc/libreoffice version 5.0.0.5 [ryoon 2015-08-12]
 	Updated sysutils/fabric to 1.10.2 [gls 2015-08-12]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.508 [tsutsui 2015-08-12]
