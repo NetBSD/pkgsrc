@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/07/05 23:55:25 rodent Exp $
+$NetBSD: MESSAGE,v 1.2 2015/08/13 12:22:13 ryoon Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
 
@@ -45,7 +45,7 @@ To use Redmine with nginx, you will need to perform the following steps.
 	# redmine_generate_secret${RUBY_SUFFIX}.sh
 	# vi config/configuration.yml
 	  [...]
-	  secret_token: YOUR_SECRET_KEY
+	  secret_token: 'YOUR_SECRET_KEY'
 	  [...]
 	# vi config/secrets.yml
 	  [...]
