@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2007/02/22 19:27:24 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2015/08/13 20:32:30 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tinyproxy
 PKG_SUPPORTED_OPTIONS+=	socks5
-
-PKG_SUGGESTED_OPTIONS+=	socks5
 
 .include "../../mk/bsd.options.mk"
 
