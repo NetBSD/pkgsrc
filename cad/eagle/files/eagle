@@ -1,5 +1,7 @@
 #!/bin/sh
 #
-#	$NetBSD: eagle,v 1.1.1.1 2000/10/15 12:17:26 rh Exp $
+#	$NetBSD: eagle,v 1.2 2015/08/13 20:27:43 tnn Exp $
 #
-cd @@PREFIX@@/eagle && bin/eagle $*
+QT_XKB_CONFIG_ROOT="@@QT_XKB_CONFIG_ROOT@@"
+export QT_XKB_CONFIG_ROOT
+cd @@PREFIX@@/eagle && bin/eagle "$@"
