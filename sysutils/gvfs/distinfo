@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2014/10/17 16:48:17 joerg Exp $
+$NetBSD: distinfo,v 1.24 2015/08/13 08:57:08 martin Exp $
 
 SHA1 (gvfs-1.6.7.tar.bz2) = 285a810772dce8b37289cbe0aaab8354f2b6717a
 RMD160 (gvfs-1.6.7.tar.bz2) = e833fdbc9dc503cdde8e0ab5a7a8fa5403ec1aa1
@@ -9,3 +9,4 @@ SHA1 (patch-ad) = 45e7d172fe4839018b64babdca2f8c60c7eeec70
 SHA1 (patch-ae) = 07b631786e89f38f831a1cc926818c15520fcd3b
 SHA1 (patch-ag) = 8474aed53e07f2c3899bafc278d886c41ccd04a5
 SHA1 (patch-ai) = 2246232efe91c36be8c577c1db16e80ebb45a515
+SHA1 (patch-metadata_metatree.c) = 952352af28299c92403932ef38d281611427b654
