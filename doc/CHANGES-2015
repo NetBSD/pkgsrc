@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3370 2015/08/13 15:17:05 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.3371 2015/08/13 15:45:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6149,3 +6149,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/goffice0.10 to 0.10.23 [he 2015-08-13]
 	Updated math/gnumeric112 to 1.12.23 [he 2015-08-13]
 	Updated pkgtools/pkgin to 0.9.1 [jperkin 2015-08-13]
+	Updated archivers/libunrar to 5.3.2 [adam 2015-08-13]
+	Updated archivers/unrar to 5.3.2 [adam 2015-08-13]
