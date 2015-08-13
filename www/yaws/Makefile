@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/13 10:59:39 is Exp $
 #
 
 DISTNAME=		yaws-1.97
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www
 MASTER_SITES=		http://yaws.hyber.org/download/
 
@@ -42,6 +42,14 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5
 
+# remove after upgrading to a now()-less yaws:
+SUBST_CLASSES+=         now
+SUBST_STAGE.now=        post-patch
+SUBST_FILES.now=        */*.erl
+SUBST_SED.now=          -e 's|\([^:a-zA-Z]\)now()|\1erlang:timestamp()|g'
+SUBST_SED.now+=         -e 's|\([^:a-zA-Z]\)erlang:now()|\1erlang:timestamp()|g'
+SUBST_MESSAGE.now=      Replacing now().
+
 post-patch:
 	${RM} ${WRKDIR}/yaws
 	${RM} -Rf ${WRKSRC}/www/.xvpics
@@ -71,6 +79,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}/yaws
+
+BUILDLINK_API_DEPENDS.erlang+= erlang>=18.0
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
