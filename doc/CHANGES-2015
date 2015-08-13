@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3366 2015/08/13 12:22:58 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3367 2015/08/13 15:00:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6144,3 +6144,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/redis to 3.0.3 [fhajny 2015-08-13]
 	Updated pkgtools/pkgin to 0.9.0 [jperkin 2015-08-13]
 	Updated devel/ruby-redmine to 3.1.0 [ryoon 2015-08-13]
+	Updated time/p5-DateTime-TimeZone to 1.93 [wiz 2015-08-13]
