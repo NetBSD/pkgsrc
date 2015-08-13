@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2015/08/13 20:30:47 jperkin Exp $
+
+Remove non-portable ld argument.
+
+--- configure.orig	2011-08-16 12:27:59.000000000 +0000
++++ configure
+@@ -6744,7 +6744,6 @@ if test x"$debug_enabled" != x"yes" ; th
+     CFLAGS="-DNDEBUG $CFLAGS"
+ fi
+ 
+-LDFLAGS="-Wl,-z,defs"
+ 
+ 
+ if test x"$ac_cv_func_regexec" != x"yes"; then
