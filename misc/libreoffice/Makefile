@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/08/12 00:57:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2015/08/13 05:48:35 wiz Exp $
 
 VERREL=		5.0.0
 VERRC=		5
@@ -241,6 +241,7 @@ do-install:
 .include "../../converters/libabw/buildlink3.mk"
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libe-book/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../converters/libetonyek/buildlink3.mk"
 .include "../../converters/libfreehand/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
