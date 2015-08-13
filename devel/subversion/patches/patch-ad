@@ -1,13 +1,22 @@
-$NetBSD: patch-ad,v 1.15 2011/03/04 03:12:36 taca Exp $
+$NetBSD: patch-ad,v 1.16 2015/08/13 20:47:42 adam Exp $
 
---- Makefile.in.orig	2010-11-25 17:55:59.000000000 +0000
+--- Makefile.in.orig	2015-07-26 23:03:10.000000000 +0000
 +++ Makefile.in
-@@ -682,7 +682,7 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
+@@ -89,7 +89,7 @@ swig_rbdir = $(SWIG_RB_SITE_ARCH_DIR)/sv
+ toolsdir = @bindir@/svn-tools
+ 
+ # where to install pkg-config files
+-pkgconfig_dir = $(datadir)/pkgconfig
++pkgconfig_dir = $(libdir)/pkgconfig
+ 
+ javahl_javadir = @libdir@/svn-javahl
+ javahl_javahdir = @libdir@/svn-javahl/include
+@@ -837,7 +837,7 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
  $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
--	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL
-+	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL INSTALLDIRS=vendor
+-	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL PREFIX=$(prefix)
++	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL PREFIX=$(prefix) INSTALLDIRS=vendor
  
  # There is a "readlink -f" command on some systems for the same purpose,
  # but it's not as portable (e.g. Mac OS X doesn't have it).  These should
