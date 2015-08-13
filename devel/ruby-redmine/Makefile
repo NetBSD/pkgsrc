@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/07/05 23:55:25 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/13 12:22:13 ryoon Exp $
 
-DISTNAME=	redmine-3.0.3
+DISTNAME=	redmine-3.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
@@ -13,27 +13,27 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 RUBY_VERSION_SUPPORTED= 200 193 21 22
 
-GEMS_DISTFILES+=	actionmailer-4.2.1.gem actionpack-4.2.1.gem
+GEMS_DISTFILES+=	actionmailer-4.2.3.gem actionpack-4.2.3.gem
 GEMS_DISTFILES+=	actionpack-action_caching-1.1.1.gem
-GEMS_DISTFILES+=	actionpack-xml_parser-1.0.2.gem actionview-4.2.1.gem
-GEMS_DISTFILES+=	activejob-4.2.1.gem activemodel-4.2.1.gem
-GEMS_DISTFILES+=	activerecord-4.2.1.gem activesupport-4.2.1.gem
-GEMS_DISTFILES+=	arel-6.0.0.gem builder-3.2.2.gem bundler-1.9.1.gem
-GEMS_DISTFILES+=	coderay-1.1.0.gem erubis-2.7.0.gem globalid-0.3.5.gem
-GEMS_DISTFILES+=	hike-1.2.3.gem i18n-0.7.0.gem jquery-rails-3.1.2.gem
-GEMS_DISTFILES+=	json-1.8.2.gem loofah-2.0.2.gem mail-2.6.3.gem
-GEMS_DISTFILES+=	mime-types-2.5.gem mini_portile-0.6.2.gem
-GEMS_DISTFILES+=	minitest-5.6.1.gem multi_json-1.11.0.gem
+GEMS_DISTFILES+=	actionpack-xml_parser-1.0.2.gem actionview-4.2.3.gem
+GEMS_DISTFILES+=	activejob-4.2.3.gem activemodel-4.2.3.gem
+GEMS_DISTFILES+=	activerecord-4.2.3.gem activesupport-4.2.3.gem
+GEMS_DISTFILES+=	arel-6.0.3.gem builder-3.2.2.gem bundler-1.10.6.gem
+GEMS_DISTFILES+=	coderay-1.1.0.gem erubis-2.7.0.gem globalid-0.3.6.gem
+GEMS_DISTFILES+=	hike-1.2.3.gem i18n-0.7.0.gem jquery-rails-3.1.3.gem
+GEMS_DISTFILES+=	json-1.8.3.gem loofah-2.0.2.gem mail-2.6.3.gem
+GEMS_DISTFILES+=	mime-types-2.6.1.gem mini_portile-0.6.2.gem
+GEMS_DISTFILES+=	minitest-5.8.0.gem multi_json-1.11.0.gem
 GEMS_DISTFILES+=	net-ldap-0.3.1.gem nokogiri-1.6.6.2.gem
-GEMS_DISTFILES+=	protected_attributes-1.0.9.gem rack-1.6.1.gem
+GEMS_DISTFILES+=	protected_attributes-1.1.3.gem rack-1.6.4.gem
 GEMS_DISTFILES+=	rack-openid-1.4.2.gem rack-test-0.6.3.gem
-GEMS_DISTFILES+=	rails-4.2.1.gem rails-deprecated_sanitizer-1.0.3.gem
+GEMS_DISTFILES+=	rails-4.2.3.gem rails-deprecated_sanitizer-1.0.3.gem
 GEMS_DISTFILES+=	rails-dom-testing-1.0.6.gem
-GEMS_DISTFILES+=	rails-html-sanitizer-1.0.2.gem railties-4.2.1.gem
-GEMS_DISTFILES+=	rake-10.4.2.gem rbpdf-1.18.5.gem redcarpet-3.1.2.gem
-GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.13.4.gem
-GEMS_DISTFILES+=	ruby-openid-2.3.0.gem sprockets-3.1.0.gem
-GEMS_DISTFILES+=	sprockets-rails-2.3.1.gem thor-0.19.1.gem
+GEMS_DISTFILES+=	rails-html-sanitizer-1.0.2.gem railties-4.2.3.gem
+GEMS_DISTFILES+=	rake-10.4.2.gem rbpdf-1.18.6.gem redcarpet-3.1.2.gem
+GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.15.3.gem
+GEMS_DISTFILES+=	ruby-openid-2.3.0.gem sprockets-3.3.0.gem
+GEMS_DISTFILES+=	sprockets-rails-2.3.2.gem thor-0.19.1.gem
 GEMS_DISTFILES+=	thread_safe-0.3.5.gem tilt-1.4.1.gem tzinfo-1.2.2.gem
 
 DISTFILES+=	${DEFAULT_DISTFILES}
@@ -216,6 +216,8 @@ post-install: unicorn-post-install
 	find ${DESTDIR} -type f -print0 | xargs -0 chmod g+r,g-w,-x
 	find ${DESTDIR} -type d -print0 | xargs -0 chmod g-w
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/redmine_*${RUBY_SUFFIX}.sh
+	${CHMOD} +x ${DESTDIR}${PREFIX}/${RM_DIR}/gems/bin/*
+	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/rc.d/redmine_*${RUBY_SUFFIX}
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
