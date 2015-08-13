@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.1 2015/07/13 17:49:26 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.2 2015/08/13 20:17:30 joerg Exp $
 
 # workround for link of thunderbird-bin etc.
-LDFLAGS+=	-Wl,-R${PREFIX}/lib/thunderbird
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/thunderbird31
 
 .if ${OPSYS} == "SunOS"
 # workaround for strip problems with libxul.so
