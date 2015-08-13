@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2014/02/12 23:18:22 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/08/13 21:49:47 jperkin Exp $
 
 BUILDLINK_TREE+=	libfetch
 
@@ -15,7 +15,8 @@ pkgbase := libfetch
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.libfetch:Mopenssl)
-.include "../../security/openssl/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
+BUILDLINK_LIBS.libfetch+=	-lcrypto -lssl
 .endif
 .endif # LIBFETCH_BUILDLINK3_MK
 
