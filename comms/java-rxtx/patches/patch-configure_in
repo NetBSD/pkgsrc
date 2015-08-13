@@ -1,4 +1,4 @@
-$NetBSD: patch-configure_in,v 1.2 2013/03/29 12:40:25 dsainty Exp $
+$NetBSD: patch-configure_in,v 1.3 2015/08/13 20:16:22 joerg Exp $
 
 AM_CONFIG_HEADER is obsolete.
 
@@ -10,8 +10,8 @@ The printer port support is experimental, and only supported on some
 platforms.  Disable it for consistency, using a patch since
 --disable-PRINTER only works on Linux.
 
---- configure.in.orig	2006-01-30 17:37:47.000000000 +1300
-+++ configure.in	2013-03-30 01:16:29.425838439 +1300
+--- configure.in.orig	2006-01-30 04:37:47.000000000 +0000
++++ configure.in
 @@ -17,7 +17,7 @@
  #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  #-------------------------------------------------------------------------
@@ -21,7 +21,7 @@ platforms.  Disable it for consistency, using a patch since
  AC_CANONICAL_SYSTEM
  AC_MSG_WARN(Trying libtool.  If the following fails install libtool)
  AC_PROG_CC
-@@ -458,12 +458,12 @@
+@@ -458,12 +458,12 @@ fi
  [ case $OS_NAME in 
  Linux)
  	LDFLAGS=$LDFLAGS" -lpthread"
@@ -36,7 +36,14 @@ platforms.  Disable it for consistency, using a patch since
  		#fix_parameters $JPATH/jre/lib/javax.comm.properties
  		CLASSPATH=".:\$(TOP):\$(TOP)/src:"`find $JPATH/ -name RXTXcomm.jar |head -n1`
  		JHOME=$JPATH"/jre/lib/ext"
-@@ -533,7 +533,7 @@
+@@ -527,13 +527,13 @@ Linux)
+ ;;
+ 
+ *BSD)
+-	LDFLAGS=$LDFLAGS" -lc_r"
++	LDFLAGS=$LDFLAGS" -lpthread"
+ 	JHOME=$JPATH/"lib"
+ 	CFLAGS=$CFLAGS" -D_NO_POSIX=1 -D_NO_XOPEN4=1"
  	TARGETLIB="\$(target_triplet)/librxtxSerial.la \
  			\$(target_triplet)/librxtxParallel.la"
  	case $JAVA_VERSION in
@@ -45,7 +52,7 @@ platforms.  Disable it for consistency, using a patch since
  		#fix_parameters $JPATH/jre/lib/javax.comm.properties
  		CLASSPATH=".:\$(TOP):\$(TOP)/src:"`find $JPATH/ -name RXTXcomm.jar |head -n1`
  		RXTX_PATH="\$(JPATH)/jre/lib/\$(OS_ARCH)"
-@@ -721,7 +721,7 @@
+@@ -721,7 +721,7 @@ Solaris*)
  	CLASSPATH=".:\$(TOP):\$(TOP)/src:\$(JPATH)/lib/classes.zip:\$(JPATH)/lib/RXTXcomm.jar:$CLASSPATH"
  
  	case $JAVA_VERSION in
@@ -54,7 +61,7 @@ platforms.  Disable it for consistency, using a patch since
  		RXTX_PATH="\$(JPATH)/jre/lib/\$(OS_ARCH)"
  	;;
  	1.1*)
-@@ -816,6 +816,8 @@
+@@ -816,6 +816,8 @@ QNX)
  ;;
  esac ]
  
