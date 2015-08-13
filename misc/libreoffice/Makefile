@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/08/13 06:17:57 pgoyette Exp $
+# $NetBSD: Makefile,v 1.59 2015/08/13 06:53:45 pgoyette Exp $
 
 VERREL=		5.0.0
 VERRC=		5
@@ -299,7 +299,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.libodfgen+=       libodfgen>=0.1.4
+BUILDLINK_API_DEPENDS.libodfgen+=       libodfgen>=0.1.4
 .include "../../textproc/libodfgen/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
