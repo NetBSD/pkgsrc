@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3363 2015/08/12 18:31:51 gls Exp $
+$NetBSD: CHANGES-2015,v 1.3364 2015/08/13 07:43:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6141,3 +6141,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated cad/eagle to 7.3.0 [tnn 2015-08-12]
 	Updated security/clusterssh to 4.03.06 [gls 2015-08-12]
 	Updated devel/py-requests to 2.7.0 [gls 2015-08-12]
+	Updated databases/redis to 3.0.3 [fhajny 2015-08-13]
