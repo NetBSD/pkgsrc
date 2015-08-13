@@ -1,10 +1,10 @@
-$NetBSD: patch-src_SerialImp_c,v 1.1 2013/02/11 01:13:21 dsainty Exp $
+$NetBSD: patch-src_SerialImp_c,v 1.2 2015/08/13 20:16:22 joerg Exp $
 
 UTS_RELEASE isn't even reliably available on Linux, let alone portable.
 
---- src/SerialImp.c.orig	2011-11-29 00:22:44.514521000 +1300
-+++ src/SerialImp.c	2011-11-29 00:23:01.778521001 +1300
-@@ -279,7 +279,7 @@
+--- src/SerialImp.c.orig	2006-01-29 22:19:04.000000000 +0000
++++ src/SerialImp.c
+@@ -279,7 +279,7 @@ JNIEXPORT void JNICALL RXTXPort(Initiali
  #if DEBUG_TIMING
  	gettimeofday(&seloop, NULL);
  #endif /* DEBUG_TIMING */
@@ -13,3 +13,21 @@ UTS_RELEASE isn't even reliably available on Linux, let alone portable.
  	/* Lets let people who upgraded kernels know they may have problems */
  	if (uname (&name) == -1)
  	{
+@@ -4946,7 +4946,7 @@ void throw_java_exception( JNIEnv *env, 
+ void report_warning(char *msg)
+ {
+ #ifndef DEBUG_MW
+-	fprintf(stderr, msg);
++	fprintf(stderr, "%s", msg);
+ #else
+ 	mexWarnMsgTxt( (const char *) msg );
+ #endif /* DEBUG_MW */
+@@ -4983,7 +4983,7 @@ void report_verbose(char *msg)
+ void report_error(char *msg)
+ {
+ #ifndef DEBUG_MW
+-	fprintf(stderr, msg);
++	fprintf(stderr, "%s", msg);
+ #else
+ 	mexWarnMsgTxt( msg );
+ #endif /* DEBUG_MW */
