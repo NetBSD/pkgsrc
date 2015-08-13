@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2015/08/12 17:39:36 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2015/08/13 20:27:43 tnn Exp $
 
-DISTNAME=		eagle-lin64-7.3.0
-PKGNAME=		${DISTNAME:S/-lin64//}
+DISTNAME=		eagle-lin32-7.3.0
+PKGREVISION=		1
+PKGNAME=		${DISTNAME:S/-lin32//}
 CATEGORIES=		cad
 MASTER_SITES=		http://web.cadsoft.de/ftp/eagle/program/7.3/
 EXTRACT_SUFX=		.run
@@ -21,13 +22,15 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 USE_TOOLS+=		bsdtar bzip2 pax
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-EMUL_PLATFORMS=		linux-x86_64
+EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11 freetype2 fontconfig openssl cups krb5
 
 INSTALLATION_DIRS=	bin eagle
 
+QT_XKB_CONFIG_ROOT=	${X11BASE}/share/X11/xkb
+
 do-build:
-	${SED} -e "s:@@PREFIX@@:${PREFIX}:g" <${FILESDIR}/eagle >${WRKDIR}/eagle
+	${SED} -e "s:@@PREFIX@@:${PREFIX}:g" -e "s:@@QT_XKB_CONFIG_ROOT@@:${QT_XKB_CONFIG_ROOT}:g" <${FILESDIR}/eagle >${WRKDIR}/eagle
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/eagle/.
