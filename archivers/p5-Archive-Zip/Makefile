@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2015/07/12 18:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/08/13 15:03:02 wiz Exp $
 
-DISTNAME=	Archive-Zip-1.46
+DISTNAME=	Archive-Zip-1.49
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 
@@ -15,6 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Archive/Zip/.packlist
+
+post-extract:
+	rm -rf ${WRKSRC}/PaxHeader ${WRKSRC}/*/PaxHeader ${WRKSRC}/*/*/PaxHeader
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
