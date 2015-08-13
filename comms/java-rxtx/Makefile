@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/06/27 06:30:03 dsainty Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/13 20:16:22 joerg Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
 PKGNAME=	java-rxtx-2.1.7r2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms java
 MASTER_SITES=	http://rxtx.qbang.org/pub/rxtx/
 EXTRACT_SUFX=	.zip
@@ -23,7 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Configuration looks for certain versions of JDK - this list can be expanded
 # if the patches are also appropriately updated.
-PKG_JVMS_ACCEPTED= oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED= oracle-jdk8 openjdk8 openjdk7 sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
 
 .include "../../mk/bsd.prefs.mk"
 
