@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14696 2015/08/13 07:43:51 fhajny Exp $
+$NetBSD: TODO,v 1.14697 2015/08/13 15:03:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1276,7 +1276,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Apache-Test-1.39
 	o p5-Archive-Extract-0.76
 	o p5-Archive-Tar-Wrapper-0.23
-	o p5-Archive-Zip-1.49
 	o p5-AuthCAS-1.6
 	o p5-Authen-CAS-Client-0.07
 	o p5-B-Hooks-Parser-0.16
