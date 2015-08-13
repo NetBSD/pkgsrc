@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/08/05 21:34:17 he Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/13 15:14:29 he Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -792,6 +792,8 @@ share/locale/az/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/az/LC_MESSAGES/${PKGNAME}.mo
 share/locale/bg/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/bg/LC_MESSAGES/${PKGNAME}.mo
+share/locale/bs/LC_MESSAGES/${PKGNAME}-functions.mo
+share/locale/bs/LC_MESSAGES/${PKGNAME}.mo
 share/locale/ca/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/ca/LC_MESSAGES/${PKGNAME}.mo
 share/locale/ca@valencia/LC_MESSAGES/${PKGNAME}-functions.mo

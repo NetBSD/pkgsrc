@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2015/08/05 21:34:17 he Exp $
+# $NetBSD: Makefile,v 1.26 2015/08/13 15:14:29 he Exp $
 
-DISTNAME=	gnumeric-1.12.21
+DISTNAME=	gnumeric-1.12.23
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
@@ -43,7 +43,7 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.32
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.21
+BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.23
 .include "../../misc/goffice0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.4.12
 .include "../../textproc/libxml2/buildlink3.mk"
