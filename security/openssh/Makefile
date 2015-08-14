@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.234 2015/07/30 03:20:36 taca Exp $
+# $NetBSD: Makefile,v 1.235 2015/08/14 08:57:00 jperkin Exp $
 
 DISTNAME=		openssh-6.9p1
 PKGNAME=		openssh-6.9.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -140,7 +140,7 @@ CONFIGURE_ARGS+=	--with-xauth=${PREFIX}/bin/xauth
 
 CONFS=			ssh_config sshd_config moduli
 
-PLIST_VARS+=		prng
+PLIST_VARS+=		darwin prng
 
 .if exists(/dev/urandom)
 .  if ${OPSYS} == "NetBSD"
@@ -153,7 +153,14 @@ PLIST.prng=		yes
 .endif
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=		# empty
+
+# enable privsep patches
+.if ${OPSYS} == "Darwin"
+CONF_FILES+=		${EGDIR}/org.openssh.sshd.sb ${PKG_SYSCONFDIR}/org.openssh.sshd.sb
+CPPFLAGS+=		-D__APPLE_SANDBOX_NAMED_EXTERNAL__
+PLIST.darwin=		yes
+.endif
+
 .for f in ${CONFS}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
@@ -166,9 +173,9 @@ FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
 
 SUBST_CLASSES+=		patch
 SUBST_STAGE.patch=	pre-configure
-SUBST_FILES.patch=	session.c
+SUBST_FILES.patch=	session.c sandbox-darwin.c
 SUBST_SED.patch=	-e '/channel_input_port_forward_request/s/0/ROOTUID/'
-SUBST_MESSAGE.patch=	More patch a file.
+SUBST_VARS.patch=	PKG_SYSCONFDIR
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
@@ -189,6 +196,9 @@ post-configure:
 		${SED} -e '/HAVE_ECDSA_START/,/HAVE_ECDSA_STOP/d' \
 			${FILESDIR}/sshd.sh > ${WRKDIR}/sshd.sh; \
 	fi
+	${SED} -e 's,@VARBASE@,${VARBASE:Q},g' \
+		< ${FILESDIR}/org.openssh.sshd.sb.in \
+		> ${WRKDIR}/org.openssh.sshd.sb
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
@@ -198,6 +208,10 @@ post-install:
 .if !empty(PKG_OPTIONS:Mpam) && ${OPSYS} == "Linux"
 	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic \
 	  ${DESTDIR}${EGDIR}/sshd.pam
+.endif
+.if ${OPSYS} == "Darwin"
+	${INSTALL_DATA} ${WRKDIR}/org.openssh.sshd.sb \
+		${DESTDIR}${EGDIR}/org.openssh.sshd.sb
 .endif
 
 .include "../../mk/bsd.pkg.mk"
