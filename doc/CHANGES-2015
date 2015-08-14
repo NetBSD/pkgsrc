@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3394 2015/08/14 18:47:39 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.3395 2015/08/14 18:53:43 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6186,3 +6186,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/iso-codes to 3.60 [wiz 2015-08-14]
 	Updated graphics/babl to 0.1.12 [wiz 2015-08-14]
 	Updated security/py-passlib to 1.6.5 [kleink 2015-08-14]
+	Updated www/py-flask-wtf to 0.12 [kleink 2015-08-14]
