@@ -1,8 +1,16 @@
-$NetBSD: patch-aj,v 1.6 2015/08/05 13:09:17 ryoon Exp $
+$NetBSD: patch-aj,v 1.7 2015/08/14 20:58:41 joerg Exp $
 
 --- plugins/r/src/tm_r.c.orig	2014-03-03 11:44:12.000000000 +0000
 +++ plugins/r/src/tm_r.c
-@@ -842,7 +842,11 @@ int main(int argc, char *argv[])
+@@ -16,6 +16,7 @@
+ #include <pty.h>
+ #endif
+ 
++#include <util.h>
+ #include <utmp.h>
+ #include <unistd.h>
+ #include <termios.h>
+@@ -842,7 +843,11 @@ int main(int argc, char *argv[])
    char *TEXMACS_HOME_PATH, *TEXMACS_R, *TEXMACS_SEND_E, *TEXMACS_LIB, *HOME ;
    struct termios termi ;
    sigset_t sigmask, orig_sigmask;
@@ -15,7 +23,7 @@ $NetBSD: patch-aj,v 1.6 2015/08/05 13:09:17 ryoon Exp $
    struct stat stat_buf;
  
    name = getenv("TEXMACS_R_SESSION") ;
-@@ -1005,7 +1009,14 @@ unsetenv( "DYLD_LIBRARY_PATH") ;
+@@ -1005,7 +1010,14 @@ unsetenv( "DYLD_LIBRARY_PATH") ;
  
        // We will wait till something happens using pselect.
  
