@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/02/06 19:30:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/14 21:08:00 leot Exp $
 
-DISTNAME=		dnscap-134
-PKGREVISION=		1
+DISTNAME=		dnscap-141
 CATEGORIES=		net
 MASTER_SITES=		http://dnscap.dns-oarc.net/
 
