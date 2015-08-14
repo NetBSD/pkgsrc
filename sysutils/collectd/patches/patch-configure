@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2015/08/14 12:59:04 he Exp $
+$NetBSD: patch-configure,v 1.5 2015/08/14 15:39:28 he Exp $
 
 Regen from configure.ac.
 
@@ -147,20 +147,21 @@ Regen from configure.ac.
  ac_fn_c_check_member "$LINENO" "struct udphdr" "uh_dport" "ac_cv_member_struct_udphdr_uh_dport" "#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
  #if HAVE_STDINT_H
-@@ -27648,6 +27725,12 @@ then
+@@ -27648,6 +27725,13 @@ then
  	plugin_tcpconns="yes"
  fi
  
 +if test "x$ac_system" = "xNetBSD"
 +then
 +	plugin_entropy="yes"
++	plugin_processes="yes"
 +	plugin_disk="yes"
 +fi
 +
  # Mac OS X devices
  if test "x$with_libiokit" = "xyes"
  then
-@@ -27890,6 +27973,11 @@ then
+@@ -27890,6 +27974,11 @@ then
  	plugin_swap="yes"
  fi
  
