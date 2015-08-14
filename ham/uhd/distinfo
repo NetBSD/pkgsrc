@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/08/14 04:53:08 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/08/14 06:19:13 mef Exp $
 
-SHA1 (uhd-3.7.2.tar.gz) = 76fd06744e82f4d4f8734c100fa9bca309a0a2ae
-RMD160 (uhd-3.7.2.tar.gz) = b16c7e946fcb5e9c068c583f4e0cb910a908e1f1
-Size (uhd-3.7.2.tar.gz) = 86463974 bytes
-SHA1 (patch-host_include_uhd_transport_nirio_nirio__driver__iface_h) = 2ba6c50f467515bfac9fe330572bb0154154a0ad
-SHA1 (patch-lib_usrp_b200_b200__io__impl.cpp) = 937003ecd88a31d96c5223c95751ace7622e2256
+SHA1 (uhd-3.8.5.tar.gz) = 815ef97870a3d0f3d65fa4075a3f2c1c476d1d17
+RMD160 (uhd-3.8.5.tar.gz) = 69dabc854cb77a2ddde04c4615df602671610ed5
+Size (uhd-3.8.5.tar.gz) = 2910398 bytes
