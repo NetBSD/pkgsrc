@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3391 2015/08/14 18:16:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3392 2015/08/14 18:18:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6183,3 +6183,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 18.1 [wiz 2015-08-14]
 	Updated misc/calibre to 2.35.0 [wiz 2015-08-14]
 	Updated devel/afl to 1.86b [wiz 2015-08-14]
+	Updated textproc/iso-codes to 3.60 [wiz 2015-08-14]
