@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3387 2015/08/14 17:54:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3388 2015/08/14 18:01:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6179,3 +6179,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-cython to 0.23 [wiz 2015-08-14]
 	Updated time/py-vdirsyncer to 0.6.0 [wiz 2015-08-14]
 	Updated devel/reposurgeon to 3.28 [wiz 2015-08-14]
+	Updated devel/py-tortoisehg to 3.5 [wiz 2015-08-14]
