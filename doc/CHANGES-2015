@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3375 2015/08/14 07:55:21 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3376 2015/08/14 08:57:09 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/boost-build to 1.59.0 [adam 2015-08-14]
 	Updated devel/py-boost to 1.59.0 [adam 2015-08-14]
 	Updated meta-pkgs/boost to 1.59.0 [adam 2015-08-14]
+	Updated security/openssh to 6.9.1nb2 [jperkin 2015-08-14]
