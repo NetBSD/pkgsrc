@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2015/07/16 10:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/08/14 20:37:43 wiz Exp $
 
-VERSION=	1.10.1
+VERSION=	1.10.2
 DISTNAME=	allmydata-tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/
 #for beta, add
@@ -26,23 +25,23 @@ TEST_TARGET=	test
 # Included egg darcsver, but depend anyway.
 BUILD_DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
 
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-zfec-[0-9]*:../../converters/py-zfec
 DEPENDS+=	${PYPKGPREFIX}-zbase32-[0-9]*:../../converters/py-zbase32
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
-DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # Included egg setuptools_trial, not used.
 # Included egg setuptools_darcs, used (no package yet).
 DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.8.0:../../net/py-foolscap
 DEPENDS+=	${PYPKGPREFIX}-twisted>=13.0.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.4:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.8:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.5:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-characteristic>=14.0.0:../../devel/py-characteristic
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
-DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-cryptopp>=0.6.0:../../security/py-cryptopp
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow>=0.11.1:../../www/py-nevow
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
