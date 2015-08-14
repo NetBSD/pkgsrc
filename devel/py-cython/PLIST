@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/02/17 14:00:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/08/14 17:47:54 wiz Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -147,6 +147,9 @@ ${PYSITELIB}/Cython/Compiler/Symtab.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestBuffer.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestBuffer.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestBuffer.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestCmdLine.py
+${PYSITELIB}/Cython/Compiler/Tests/TestCmdLine.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestCmdLine.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.pyo
@@ -200,6 +203,9 @@ ${PYSITELIB}/Cython/Compiler/Visitor.so
 ${PYSITELIB}/Cython/Compiler/__init__.py
 ${PYSITELIB}/Cython/Compiler/__init__.pyc
 ${PYSITELIB}/Cython/Compiler/__init__.pyo
+${PYSITELIB}/Cython/Coverage.py
+${PYSITELIB}/Cython/Coverage.pyc
+${PYSITELIB}/Cython/Coverage.pyo
 ${PYSITELIB}/Cython/Debugger/Cygdb.py
 ${PYSITELIB}/Cython/Debugger/Cygdb.pyc
 ${PYSITELIB}/Cython/Debugger/Cygdb.pyo
@@ -337,6 +343,7 @@ ${PYSITELIB}/Cython/Includes/libcpp/complex.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/deque.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/list.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/map.pxd
+${PYSITELIB}/Cython/Includes/libcpp/memory.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/pair.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/queue.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/set.pxd
@@ -444,8 +451,10 @@ ${PYSITELIB}/Cython/Tests/xmlrunner.pyo
 ${PYSITELIB}/Cython/Utility/Buffer.c
 ${PYSITELIB}/Cython/Utility/Builtins.c
 ${PYSITELIB}/Cython/Utility/CConvert.pyx
+${PYSITELIB}/Cython/Utility/CMath.c
 ${PYSITELIB}/Cython/Utility/Capsule.c
 ${PYSITELIB}/Cython/Utility/CommonTypes.c
+${PYSITELIB}/Cython/Utility/Coroutine.c
 ${PYSITELIB}/Cython/Utility/CppConvert.pyx
 ${PYSITELIB}/Cython/Utility/CppSupport.cpp
 ${PYSITELIB}/Cython/Utility/CythonFunction.c
@@ -453,7 +462,6 @@ ${PYSITELIB}/Cython/Utility/Embed.c
 ${PYSITELIB}/Cython/Utility/Exceptions.c
 ${PYSITELIB}/Cython/Utility/ExtensionTypes.c
 ${PYSITELIB}/Cython/Utility/FunctionArguments.c
-${PYSITELIB}/Cython/Utility/Generator.c
 ${PYSITELIB}/Cython/Utility/ImportExport.c
 ${PYSITELIB}/Cython/Utility/MemoryView.pyx
 ${PYSITELIB}/Cython/Utility/MemoryView_C.c
