@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/07/01 13:58:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/08/14 20:37:43 wiz Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -531,6 +531,9 @@ ${PYSITELIB}/allmydata/util/log.pyo
 ${PYSITELIB}/allmydata/util/mathutil.py
 ${PYSITELIB}/allmydata/util/mathutil.pyc
 ${PYSITELIB}/allmydata/util/mathutil.pyo
+${PYSITELIB}/allmydata/util/namespace.py
+${PYSITELIB}/allmydata/util/namespace.pyc
+${PYSITELIB}/allmydata/util/namespace.pyo
 ${PYSITELIB}/allmydata/util/netstring.py
 ${PYSITELIB}/allmydata/util/netstring.pyc
 ${PYSITELIB}/allmydata/util/netstring.pyo
