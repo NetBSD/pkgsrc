@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/04/04 07:59:33 snj Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/14 20:24:27 abs Exp $
 
 DISTNAME=	inadyn-1.99.13
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troglobit/}
 EXTRACT_SUFX=	.zip
