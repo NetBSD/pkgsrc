@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2015/04/17 15:53:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/14 04:53:08 mef Exp $
 
-DISTNAME=		uhd-release_003_007_002
-PKGNAME=		uhd-3.7.2
+DISTNAME=		uhd-3.7.2
 PKGREVISION=		2
 CATEGORIES=		ham
-MASTER_SITES=		-https://github.com/EttusResearch/uhd/archive/${DISTNAME:S/uhd-//}${EXTRACT_SUFX}
-EXTRACT_SUFX=		.zip
+MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
+GITHUB_PROJECT=         uhd
+GITHUB_TAG=		release_003_007_002
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
@@ -20,10 +20,13 @@ CMAKE_ARGS+=		-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake pkg-config
 USE_CMAKE=		yes
+# extra pax_global_header exists, and to avoid that:
+EXTRACT_USING=		gtar
+#EXTRACT_ELEMENTS=	uhd-${GITHUB_TAG}
 
 # Please note distribution has many stuff under uhd/, but build itself
 # needs under host/ only.  Those uhd/ stuff will be handled post-{patch,install}:
-WRKSRC=			${WRKDIR}/${DISTNAME}/host
+WRKSRC=			${WRKDIR}/uhd-${GITHUB_TAG}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON=	\
@@ -87,7 +90,7 @@ post-patch:
 	(cd ${WRKDIR}; \
 	for i in firmware fpga images ; do \
 	  ${MKDIR} ${WRKSRC}/uhd-$$i ;\
-	${CP} -r ${WRKDIR}/${DISTNAME}/$$i/* ${WRKSRC}/uhd-$$i ;\
+	${CP} -r ${WRKDIR}/uhd-${GITHUB_TAG}/$$i/* ${WRKSRC}/uhd-$$i ;\
 	done)
 
 # (1) move back the files to original location after REPLACE_PYTHON handled
