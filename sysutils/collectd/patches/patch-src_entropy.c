@@ -1,28 +1,30 @@
-$NetBSD: patch-src_entropy.c,v 1.1 2015/08/11 13:19:21 he Exp $
+$NetBSD: patch-src_entropy.c,v 1.2 2015/08/14 12:59:04 he Exp $
 
 Provide a NetBSD implementation for graphing available entropy.
 
 --- src/entropy.c.orig	2015-03-10 14:14:45.000000000 +0000
 +++ src/entropy.c
-@@ -29,27 +29,43 @@
+@@ -29,27 +29,46 @@
  #include "plugin.h"
  
  #if !KERNEL_LINUX
 -# error "No applicable input method."
--#endif
 +# if defined(__NetBSD__)
 +/* Provide a NetBSD implementation, partial from rndctl.c */
- 
--#define ENTROPY_FILE "/proc/sys/kernel/random/entropy_avail"
++
 +#include <sys/types.h>
 +#include <sys/ioctl.h>
 +#include <sys/param.h>
 +#include <sys/rnd.h>
++#if HAVE_SYS_RNDIO_H
++# include <sys/rndio.h>
+ #endif
  
--static void entropy_submit (double entropy)
+-#define ENTROPY_FILE "/proc/sys/kernel/random/entropy_avail"
 +static void entropy_submit (double);
 +static int entropy_read (void);
-+
+ 
+-static void entropy_submit (double entropy)
 +static int
 +entropy_read (void)
  {
@@ -61,7 +63,7 @@ Provide a NetBSD implementation for graphing available entropy.
  static int entropy_read (void)
  {
  	double entropy;
-@@ -74,6 +90,23 @@ static int entropy_read (void)
+@@ -74,6 +93,23 @@ static int entropy_read (void)
  
  	return (0);
  }
