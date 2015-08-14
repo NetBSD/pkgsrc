@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/07 16:41:07 kleink Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2015/08/14 17:00:11 kleink Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/blinker/__init__.py
 ${PYSITELIB}/blinker/__init__.pyc
 ${PYSITELIB}/blinker/__init__.pyo
