@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2015/08/11 13:19:21 he Exp $
+# $NetBSD: options.mk,v 1.4 2015/08/14 15:39:28 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=	cpu df interface load memory syslog uptime
 PKG_SUGGESTED_OPTIONS+=	cpu df interface load memory syslog uptime
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUPPORTED_OPTIONS+=	contextswitch disk entropy pf swap tcpconns users
-PKG_SUGGESTED_OPTIONS+=	contextswitch disk entropy pf swap tcpconns users
+PKG_SUPPORTED_OPTIONS+=	contextswitch disk entropy pf processes swap tcpconns users
+PKG_SUGGESTED_OPTIONS+=	contextswitch disk entropy pf processes swap tcpconns users
 .endif
 
 .if ${OPSYS} == "FreeBSD"
