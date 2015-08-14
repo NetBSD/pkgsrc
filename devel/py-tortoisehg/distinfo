@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/07/18 21:56:49 nros Exp $
+$NetBSD: distinfo,v 1.16 2015/08/14 18:00:56 wiz Exp $
 
-SHA1 (tortoisehg-3.4.2.tar.gz) = 115fad204916fb75eb77f423565991c1e403281c
-RMD160 (tortoisehg-3.4.2.tar.gz) = ad57ee9cb289e21b50d43e35fe293c5353eb5c5e
-Size (tortoisehg-3.4.2.tar.gz) = 8205349 bytes
-SHA1 (patch-setup.py) = 2fb156031c85bb24404e36d2a360177a77d45a47
+SHA1 (tortoisehg-3.5.tar.gz) = e9da2fd592e1d57f6b796545622e17e9696d4a28
+RMD160 (tortoisehg-3.5.tar.gz) = 4c8ec1c9266c04a9ae33d18bb869c5a3ad72e123
+Size (tortoisehg-3.5.tar.gz) = 7395688 bytes
+SHA1 (patch-setup.py) = 3f053f9935aacc25c271a3a7658918998058694a
 SHA1 (patch-tortoisehg_hgqt_qtlib.py) = 7c66aaf4472ac39f158e4c393bf03afafbd707d9
 SHA1 (patch-tortoisehg_util_paths.py) = 0eea97a668b27d1ee8293bc2f2b6f6692a18b365
