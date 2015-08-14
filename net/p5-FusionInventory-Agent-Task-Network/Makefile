@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:50:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/14 20:59:10 joerg Exp $
 #
 
 DISTNAME=	FusionInventory-Agent-Task-Network-1.0.2
@@ -19,6 +19,7 @@ DEPENDS+=	p5-Test-Compile-[0-9]*:../../devel/p5-Test-Compile
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
+PERL5_PACKLIST= auto/FusionInventory/Agent/Task/Network/.packlist
 MAKE_PARAMS+=	PREFIX=${PREFIX}
 
 .include "../../lang/perl5/module.mk"
