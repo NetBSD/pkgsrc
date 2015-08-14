@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14709 2015/08/14 20:07:44 wiz Exp $
+$NetBSD: TODO,v 1.14710 2015/08/14 20:08:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -727,7 +727,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
-	o fribidi-0.19.7
 	o frink-2.3.1a2
 	o frotz-2.44
 	o ftplibpp-2.0.2
