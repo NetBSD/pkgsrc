@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2015/06/17 10:21:02 wiz Exp $
+$NetBSD: distinfo,v 1.18 2015/08/14 19:45:29 schnoebe Exp $
 
-SHA1 (hplip-3.15.6.tar.gz) = dba9839d3daf1a2dc464a0d3094ba9b71fea422c
-RMD160 (hplip-3.15.6.tar.gz) = ded043f1c5c03949957057647f5e3bbeda3d6885
-Size (hplip-3.15.6.tar.gz) = 21956752 bytes
+SHA1 (hplip-3.15.7.tar.gz) = f84e33b749ef34939c11b253767686c00ca2c30c
+RMD160 (hplip-3.15.7.tar.gz) = b8f5b9be838ed9261cb208df46b5aa7ef6680e31
+Size (hplip-3.15.7.tar.gz) = 21979938 bytes
 SHA1 (patch-aa) = 68bede16003a2d43c93a0ef547857b9e4196312e
 SHA1 (patch-ab) = 82b8ab80f778a6a31c1031688d9a16dbd4c55462
 SHA1 (patch-ae) = 0dfdef7ebb56b04c7d910bf0add1a035fc32a7e7
