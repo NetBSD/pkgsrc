@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.16 2015/06/14 21:50:53 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.17 2015/08/14 19:45:29 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -550,6 +550,8 @@ share/hplip/ppd/HP/hp-deskjet_1050_j410_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1050_j410_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1100-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1100.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_1110_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_1110_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1120-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1120.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1125-hpijs.ppd.gz
@@ -630,6 +632,8 @@ share/hplip/ppd/HP/hp-deskjet_3820-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3820.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3822-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3822.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_3830_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_3830_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3840-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3840.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3870-hpijs.ppd.gz
@@ -1498,6 +1502,8 @@ share/hplip/ppd/HP/hp-officejet_150_mobile_l511-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511.ppd.gz
 share/hplip/ppd/HP/hp-officejet_2620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_2620_series.ppd.gz
+share/hplip/ppd/HP/hp-officejet_3830_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_3830_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4000_k210-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4000_k210.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4100_series-hpijs.ppd.gz
@@ -1586,6 +1592,8 @@ share/hplip/ppd/HP/hp-officejet_7400_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7400_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7500_e910-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7500_e910.ppd.gz
+share/hplip/ppd/HP/hp-officejet_7510_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_7510_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7610_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7610_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_8040_series-hpijs.ppd.gz
