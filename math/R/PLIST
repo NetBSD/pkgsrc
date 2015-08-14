@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/05/26 13:36:57 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.23 2015/08/14 12:40:19 wen Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -36,6 +36,7 @@ lib/R/bin/mkinstalldirs
 lib/R/bin/pager
 lib/R/bin/rtags
 lib/R/doc/AUTHORS
+lib/R/doc/BioC_mirrors.csv
 lib/R/doc/COPYING
 lib/R/doc/COPYRIGHTS
 lib/R/doc/CRAN_mirrors.csv
@@ -363,6 +364,7 @@ lib/R/library/cluster/Meta/links.rds
 lib/R/library/cluster/Meta/nsInfo.rds
 lib/R/library/cluster/Meta/package.rds
 lib/R/library/cluster/NAMESPACE
+lib/R/library/cluster/NEWS.Rd
 lib/R/library/cluster/R/cluster
 lib/R/library/cluster/R/cluster.rdb
 lib/R/library/cluster/R/cluster.rdx
@@ -378,9 +380,12 @@ lib/R/library/cluster/html/00Index.html
 lib/R/library/cluster/html/R.css
 lib/R/library/cluster/libs/cluster.so
 lib/R/library/cluster/po/de/LC_MESSAGES/R-cluster.mo
+lib/R/library/cluster/po/de/LC_MESSAGES/cluster.mo
 lib/R/library/cluster/po/en@quot/LC_MESSAGES/R-cluster.mo
 lib/R/library/cluster/po/en@quot/LC_MESSAGES/cluster.mo
 lib/R/library/cluster/po/fr/LC_MESSAGES/R-cluster.mo
+lib/R/library/cluster/po/ko/LC_MESSAGES/R-cluster.mo
+lib/R/library/cluster/po/ko/LC_MESSAGES/cluster.mo
 lib/R/library/cluster/po/pl/LC_MESSAGES/R-cluster.mo
 lib/R/library/codetools/DESCRIPTION
 lib/R/library/codetools/INDEX
@@ -759,8 +764,6 @@ lib/R/library/mgcv/po/ko/LC_MESSAGES/R-mgcv.mo
 lib/R/library/mgcv/po/ko/LC_MESSAGES/mgcv.mo
 lib/R/library/mgcv/po/pl/LC_MESSAGES/R-mgcv.mo
 lib/R/library/mgcv/po/pl/LC_MESSAGES/mgcv.mo
-lib/R/library/mgcv/po/po/LC_MESSAGES/R-mgcv.mo
-lib/R/library/mgcv/po/po/LC_MESSAGES/mgcv.mo
 lib/R/library/nlme/CITATION
 lib/R/library/nlme/DESCRIPTION
 lib/R/library/nlme/INDEX
