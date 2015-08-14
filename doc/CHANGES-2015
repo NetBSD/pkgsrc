@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3382 2015/08/14 17:06:16 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.3383 2015/08/14 17:12:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6174,3 +6174,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/collectd to 5.5.0nb4 [he 2015-08-14]
 	Updated devel/py-blinker to 1.4 [kleink 2015-08-14]
 	Added print/py-weasyprint version 0.24 [kleink 2015-08-14]
+	Updated x11/libdrm to 2.4.63 [wiz 2015-08-14]
