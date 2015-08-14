@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.13 2014/08/19 10:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/14 18:25:40 wiz Exp $
 
-DISTNAME=	babl-0.1.10
+DISTNAME=	babl_0.1.12.orig
+PKGNAME=	babl-0.1.12
 CATEGORIES=	graphics
-MASTER_SITES=	http://ftp.gwdg.de/pub/misc/grafik/gimp/babl/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	https://launchpad.net/ubuntu/+archive/primary/+files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gegl.org/babl/
 COMMENT=	Dynamic pixel conversion library
 LICENSE=	gnu-gpl-v3
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # NOTE: to build documentation (which requires additional dependencies)
 #	define BUILD_DOCS in MAKE_ENV.

@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2012/05/07 08:33:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/08/14 18:25:40 wiz Exp $
+include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
 include/babl-0.1/babl/babl-types.h
 include/babl-0.1/babl/babl-version.h
 include/babl-0.1/babl/babl.h
 lib/babl-0.1/CIE.la
+lib/babl-0.1/HSL.la
+lib/babl-0.1/HSV.la
 lib/babl-0.1/cairo.la
 lib/babl-0.1/fast-float.la
 lib/babl-0.1/float.la
@@ -11,7 +14,13 @@ lib/babl-0.1/gegl-fixups.la
 lib/babl-0.1/gggl-lies.la
 lib/babl-0.1/gggl.la
 lib/babl-0.1/gimp-8bit.la
+lib/babl-0.1/grey.la
 lib/babl-0.1/naive-CMYK.la
-lib/babl-0.1/sse-fixups.la
+lib/babl-0.1/simple.la
+lib/babl-0.1/sse2-float.la
+lib/babl-0.1/sse2-int16.la
+lib/babl-0.1/sse2-int8.la
+lib/babl-0.1/two-table.la
+lib/babl-0.1/ycbcr.la
 lib/libbabl-0.1.la
 lib/pkgconfig/babl.pc
