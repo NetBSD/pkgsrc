@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14703 2015/08/14 18:03:02 wiz Exp $
+$NetBSD: TODO,v 1.14704 2015/08/14 18:04:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o caff-2.1
 	o cal3d-0.11.0
 	o calcoo-2.1.0
-	o calibre-2.34.0
+	o calibre-2.35.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -522,6 +522,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdrkit-1.1.10
 	o cfengine3-3.7.0
 	o cflow-mode-1.4
+	o cgal-4.6.1
 	o cgen-20150701
 	o checkbot-1.80
 	o cheese-2.32.0 [GNOME 2.32]
@@ -836,6 +837,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnuchess-6.2.1
 	o gnuchess-book-1.02
+	o gnupg21-2.1.7
 	o gnuradio-3.7.7.1
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
@@ -881,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o guile-cairo-1.4.1
+	o guile-gnome-2.16.3
 	o guile-gtk-2.1
 	o gutenprint-lib-5.2.10
 	o gvfs-1.22.0
@@ -1260,6 +1263,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openresolv-3.7.0
 	o openscad-2013.06
 	o openslp-2.0.0
+	o openssh-7.0p1
 	o opera-26
 	o opus-1.1
 	o oroborus-2.0.18
@@ -1620,6 +1624,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
 	o py-input-pad-1.4.2
+	o py-ipython-4.0
 	o py-jaraco_util-11.0
 	o py-junos-eznc-1.2.2
 	o py-libmc-1.5.0
@@ -1824,6 +1829,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sqwebmail-5.8.2
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
+	o sshguard-1.6.1
 	o sslsplit-0.4.11
 	o stalin-0.11
 	o star-1.5.3
