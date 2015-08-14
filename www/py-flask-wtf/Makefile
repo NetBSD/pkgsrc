@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/01/30 21:14:17 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2015/08/14 18:52:48 kleink Exp $
 
-DISTNAME=	Flask-WTF-0.11
+DISTNAME=	Flask-WTF-0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-WTF/
