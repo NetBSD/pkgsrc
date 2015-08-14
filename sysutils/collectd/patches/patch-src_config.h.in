@@ -1,4 +1,4 @@
-$NetBSD: patch-src_config.h.in,v 1.1 2015/08/11 13:19:21 he Exp $
+$NetBSD: patch-src_config.h.in,v 1.2 2015/08/14 12:59:04 he Exp $
 
 Optionally define a few vars for NetBSD.
 
@@ -27,7 +27,17 @@ Optionally define a few vars for NetBSD.
  /* Define if struct kinfo_proc exists in the OpenBSD variant. */
  #undef HAVE_STRUCT_KINFO_PROC_OPENBSD
  
-@@ -1507,6 +1516,9 @@
+@@ -1375,6 +1384,9 @@
+ /* Define to 1 if you have the <sys/resource.h> header file. */
+ #undef HAVE_SYS_RESOURCE_H
+ 
++/* Define to 1 if you have the <sys/rndio.h> header file. */
++#undef HAVE_SYS_RNDIO_H
++
+ /* Define to 1 if you have the <sys/select.h> header file. */
+ #undef HAVE_SYS_SELECT_H
+ 
+@@ -1507,6 +1519,9 @@
  /* True if program is to be compiled for a Linux kernel */
  #undef KERNEL_LINUX
  
