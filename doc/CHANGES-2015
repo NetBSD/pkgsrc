@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3377 2015/08/14 11:49:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3378 2015/08/14 12:41:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6169,3 +6169,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/boost to 1.59.0 [adam 2015-08-14]
 	Updated security/openssh to 6.9.1nb2 [jperkin 2015-08-14]
 	Updated security/gnutls to 3.3.17.1 [wiz 2015-08-14]
+	Updated math/R to 3.2.2 [wen 2015-08-14]
