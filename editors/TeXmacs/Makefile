@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2015/08/05 13:09:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.107 2015/08/14 20:58:41 joerg Exp $
 
 DISTNAME=		TeXmacs-1.99.2-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -71,5 +71,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 #.include "../../mk/tex.buildlink3.mk"
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
