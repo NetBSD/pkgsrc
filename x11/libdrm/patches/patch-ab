@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2015/01/03 10:01:40 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2015/08/14 17:12:35 wiz Exp $
 
---- xf86drm.c.orig	2014-09-28 16:19:54.000000000 +0000
+--- xf86drm.c.orig	2015-08-13 22:27:03.000000000 +0000
 +++ xf86drm.c
-@@ -64,7 +64,7 @@
+@@ -79,7 +79,7 @@
  #endif
  
  #ifdef __NetBSD__
@@ -10,4 +10,4 @@ $NetBSD: patch-ab,v 1.7 2015/01/03 10:01:40 wiz Exp $
 +#define DRM_MAJOR 180
  #endif
  
- # ifdef __OpenBSD__
+ #ifdef __OpenBSD__
