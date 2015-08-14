@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14707 2015/08/14 18:18:00 wiz Exp $
+$NetBSD: TODO,v 1.14708 2015/08/14 18:25:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avr-binutils-2.25.1
 	o awesome-3.5.6
 	o awstats-7.4
-	o babl-0.1.20
 	o baci-20040415
 	o balance-3.57
 	o bastet-0.43
