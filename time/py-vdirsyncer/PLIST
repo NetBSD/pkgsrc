@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/05/31 13:20:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/14 17:53:33 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,12 @@ ${PYSITELIB}/vdirsyncer/exceptions.pyo
 ${PYSITELIB}/vdirsyncer/log.py
 ${PYSITELIB}/vdirsyncer/log.pyc
 ${PYSITELIB}/vdirsyncer/log.pyo
+${PYSITELIB}/vdirsyncer/metasync.py
+${PYSITELIB}/vdirsyncer/metasync.pyc
+${PYSITELIB}/vdirsyncer/metasync.pyo
+${PYSITELIB}/vdirsyncer/repair.py
+${PYSITELIB}/vdirsyncer/repair.pyc
+${PYSITELIB}/vdirsyncer/repair.pyo
 ${PYSITELIB}/vdirsyncer/storage/__init__.py
 ${PYSITELIB}/vdirsyncer/storage/__init__.pyc
 ${PYSITELIB}/vdirsyncer/storage/__init__.pyo
@@ -66,4 +72,6 @@ ${PYSITELIB}/vdirsyncer/utils/password.pyo
 ${PYSITELIB}/vdirsyncer/utils/vobject.py
 ${PYSITELIB}/vdirsyncer/utils/vobject.pyc
 ${PYSITELIB}/vdirsyncer/utils/vobject.pyo
-share/examples/${PKGBASE}/example.cfg
+${PYSITELIB}/vdirsyncer/version.py
+${PYSITELIB}/vdirsyncer/version.pyc
+${PYSITELIB}/vdirsyncer/version.pyo
