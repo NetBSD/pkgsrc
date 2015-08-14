@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/14 18:46:33 kleink Exp $
 
-DISTNAME=	passlib-1.6.2
+DISTNAME=	passlib-1.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	http://passlib.googlecode.com/files/ \
-		http://pypi.python.org/packages/source/p/passlib/
+MASTER_SITES=	http://pypi.python.org/packages/source/p/passlib/
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://passlib.googlecode.com/
+HOMEPAGE=	https://bitbucket.org/ecollins/passlib
 COMMENT=	Comprehensive password hashing framework supporting over 30 schemes
 LICENSE=	modified-bsd
 
