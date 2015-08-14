@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/08/11 13:19:21 he Exp $
+$NetBSD: patch-configure.ac,v 1.2 2015/08/14 12:59:04 he Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -17,7 +17,26 @@ Also, the start of process support, but that's not yet finished.
  	*aix*)
  	AC_DEFINE([KERNEL_AIX], 1, [True if program is to be compiled for a AIX kernel])
  	ac_system="AIX"
-@@ -1363,6 +1367,21 @@ AC_CHECK_MEMBERS([struct kinfo_proc.p_pi
+@@ -151,6 +155,18 @@ AC_HEADER_STDBOOL
+ 
+ AC_CHECK_HEADERS(stdio.h errno.h math.h stdarg.h syslog.h fcntl.h signal.h assert.h sys/types.h sys/socket.h sys/select.h poll.h netdb.h arpa/inet.h sys/resource.h sys/param.h kstat.h regex.h sys/ioctl.h endian.h sys/isa_defs.h fnmatch.h libgen.h)
+ 
++# For entropy plugin on newer NetBSD
++AC_CHECK_HEADERS(sys/rndio.h, [], [],
++[#if HAVE_SYS_TYPES_H
++# include <sys/types.h>
++#endif
++#if HAVE_SYS_IOCTL_H
++# include <sys/ioctl.h>
++#endif
++#if HAVE_SYS_PARAM_H
++# include <sys/param.h>
++#endif
++])
+ # For ping library
+ AC_CHECK_HEADERS(netinet/in_systm.h, [], [],
+ [#if HAVE_STDINT_H
+@@ -1363,6 +1379,21 @@ AC_CHECK_MEMBERS([struct kinfo_proc.p_pi
  #include <kvm.h>
  	])
  
@@ -39,7 +58,7 @@ Also, the start of process support, but that's not yet finished.
  AC_CHECK_MEMBERS([struct udphdr.uh_dport, struct udphdr.uh_sport], [], [],
  [#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
-@@ -5244,6 +5263,12 @@ then
+@@ -5244,6 +5275,12 @@ then
  	plugin_tcpconns="yes"
  fi
  
@@ -52,7 +71,7 @@ Also, the start of process support, but that's not yet finished.
  # Mac OS X devices
  if test "x$with_libiokit" = "xyes"
  then
-@@ -5482,6 +5507,11 @@ then
+@@ -5482,6 +5519,11 @@ then
  	plugin_swap="yes"
  fi
  
