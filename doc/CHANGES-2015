@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3403 2015/08/14 21:10:39 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3404 2015/08/14 21:21:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6194,3 +6194,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated filesystems/tahoe-lafs to 1.10.2 [wiz 2015-08-14]
 	Updated www/py-flask-admin to 1.2.0 [kleink 2015-08-14]
 	Updated net/dnscap to 141 [leot 2015-08-14]
+	Updated net/dnstop to 20140915 [leot 2015-08-14]
