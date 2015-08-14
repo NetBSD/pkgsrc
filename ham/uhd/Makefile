@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2015/08/14 04:53:08 mef Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/14 06:19:13 mef Exp $
 
-DISTNAME=		uhd-3.7.2
-PKGREVISION=		2
+DISTNAME=		uhd-3.8.5
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_PROJECT=         uhd
-GITHUB_TAG=		release_003_007_002
+GITHUB_TAG=		release_003_008_005
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
@@ -16,6 +15,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
 CMAKE_ARGS+=		-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
+CMAKE_ARGS+=		-Wno-dev
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake pkg-config
@@ -30,6 +30,8 @@ WRKSRC=			${WRKDIR}/uhd-${GITHUB_TAG}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON=	\
+	utils/latency/graph.py \
+	utils/latency/run_tests.py \
 	utils/uhd_images_downloader.py.in \
 	utils/usrp2_card_burner.py \
 	utils/usrp2_card_burner_gui.py \
@@ -39,34 +41,6 @@ REPLACE_PYTHON=	\
 	uhd-firmware/fx2/utils/edit-gpif-b100.py \
 	uhd-firmware/fx2/utils/edit-gpif.py \
 	uhd-firmware/fx2/utils/generate_regs.py \
-        uhd-firmware/x300/bin_to_coe.py \
-	uhd-firmware/zpu/bin/bin_to_mif.py \
-	uhd-firmware/zpu/bin/bin_to_ram_macro_init.py \
-	uhd-firmware/zpu/bin/divisors.py \
-	uhd-firmware/zpu/bin/elf_to_sbf \
-	uhd-firmware/zpu/bin/serial_loader \
-	uhd-firmware/zpu/bin/uart_ihex_flash_loader.py \
-	uhd-firmware/zpu/bin/uart_ihex_ram_loader.py \
-	uhd-fpga/usrp1/gen_makefile_extra.py \
-	uhd-fpga/usrp1/sdr_lib/gen_cordic_consts.py \
-	uhd-fpga/usrp1/tb/makesine.pl \
-	uhd-fpga/usrp1/toplevel/mrfm/mrfm.py \
-	uhd-fpga/usrp1/toplevel/mrfm/mrfm_fft.py \
-	uhd-fpga/usrp2/sdr_lib/gen_cordic_consts.py \
-	uhd-fpga/usrp2/top/extract_usage.py \
-	uhd-fpga/usrp2/top/python/check_inout.py \
-	uhd-fpga/usrp2/top/python/check_timing.py \
-	uhd-fpga/usrp3/top/python/bit_to_zynq_bin.py \
-	uhd-fpga/usrp3/top/python/check_inout.py \
-	uhd-fpga/usrp3/top/python/check_timing.py \
-        uhd-fpga/usrp3/lib/io_port2/create-lvbitx.py
-
-REPLACE_PERL=	uhd-fpga/usrp1/tb/makesine.pl
-
-REPLACE_BASH=	\
-	uhd-fpga/usrp2/top/impactor.sh \
-	uhd-fpga/usrp3/top/impactor.sh \
-        uhd-fpga/usrp3/top/python/batch-build
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
@@ -88,7 +62,7 @@ PLIST_SRC=	${PKGDIR}/PLIST
 # to receive REPLACE_PYTHON conversion ( otherwise above the range )
 post-patch:
 	(cd ${WRKDIR}; \
-	for i in firmware fpga images ; do \
+	for i in firmware images ; do \
 	  ${MKDIR} ${WRKSRC}/uhd-$$i ;\
 	${CP} -r ${WRKDIR}/uhd-${GITHUB_TAG}/$$i/* ${WRKSRC}/uhd-$$i ;\
 	done)
@@ -99,7 +73,7 @@ post-patch:
 #  Converting ${CP} into ${INTALL_DATA_DIR} and ${INSTALL_DATA} as pkglint
 #  flags are NOT easy, sorry for that.
 post-install:
-	for i in firmware fpga images ; do \
+	for i in firmware images ; do \
 	  ${CP} -r ${WRKSRC}/uhd-$$i/* ${DESTDIR}${PREFIX}/share/uhd/$$i/;\
 	  ${FIND} ${DESTDIR}${PREFIX}/share/uhd/$$i -type f -exec \
 	          ${CHMOD} -x '{}' \; ;\
