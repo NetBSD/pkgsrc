@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2015/08/13 20:47:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2015/08/14 06:40:05 adam Exp $
 bin/svn
 bin/svnadmin
 bin/svnbench
@@ -74,13 +74,13 @@ lib/pkgconfig/libsvn_client.pc
 lib/pkgconfig/libsvn_delta.pc
 lib/pkgconfig/libsvn_diff.pc
 lib/pkgconfig/libsvn_fs.pc
-lib/pkgconfig/libsvn_fs_base.pc
+${PLIST.db4}lib/pkgconfig/libsvn_fs_base.pc
 lib/pkgconfig/libsvn_fs_fs.pc
 lib/pkgconfig/libsvn_fs_util.pc
 lib/pkgconfig/libsvn_fs_x.pc
 lib/pkgconfig/libsvn_ra.pc
 lib/pkgconfig/libsvn_ra_local.pc
-lib/pkgconfig/libsvn_ra_serf.pc
+${PLIST.serf}lib/pkgconfig/libsvn_ra_serf.pc
 lib/pkgconfig/libsvn_ra_svn.pc
 lib/pkgconfig/libsvn_repos.pc
 lib/pkgconfig/libsvn_subr.pc
