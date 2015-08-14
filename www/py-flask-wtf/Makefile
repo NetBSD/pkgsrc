@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/08/14 18:52:48 kleink Exp $
+# $NetBSD: Makefile,v 1.19 2015/08/14 18:55:11 kleink Exp $
 
 DISTNAME=	Flask-WTF-0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-WTF/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-WTF/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://github.com/lepture/flask-wtf
