@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3380 2015/08/14 15:40:26 he Exp $
+$NetBSD: CHANGES-2015,v 1.3381 2015/08/14 17:01:09 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6172,3 +6172,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/R to 3.2.2 [wen 2015-08-14]
 	Updated devel/p5-Devel-OverloadInfo to 0.003 [mef 2015-08-14]
 	Updated sysutils/collectd to 5.5.0nb4 [he 2015-08-14]
+	Updated devel/py-blinker to 1.4 [kleink 2015-08-14]
