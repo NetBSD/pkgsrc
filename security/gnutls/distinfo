@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.115 2015/06/08 13:44:56 joerg Exp $
+$NetBSD: distinfo,v 1.116 2015/08/14 11:48:55 wiz Exp $
 
-SHA1 (gnutls-3.3.15.tar.xz) = d7f66b0aeaf48ff8621cc1913230635ef672f0a4
-RMD160 (gnutls-3.3.15.tar.xz) = 0c812034b3b8356c31d69074ec92382545eb808b
-Size (gnutls-3.3.15.tar.xz) = 6286288 bytes
+SHA1 (gnutls-3.3.17.1.tar.xz) = da876bee8a6ae65b8f4884a397cd91004706f692
+RMD160 (gnutls-3.3.17.1.tar.xz) = 923cf31bae49816e4357dfeb99d30c75f3100ce7
+Size (gnutls-3.3.17.1.tar.xz) = 6339588 bytes
 SHA1 (patch-ae) = 5e020483ac14ef6ccc45a53e351242ab16c860f1
 SHA1 (patch-gl_stdio.in.h) = 298cc0e27087f086e9d47c67f81c8d10f6a7a8f1
 SHA1 (patch-lib_Makefile.in) = d0e292e632a91a9f19e39bd2c2d205a086ba5588
@@ -13,5 +13,5 @@ SHA1 (patch-src_libopts_compat_compat.h) = 240fbfc0ba20af35e0634ba873fe9e34bfbcc
 SHA1 (patch-src_libopts_libopts.c) = ce5e7681def882e95ed5ab770564d1f999b97039
 SHA1 (patch-src_libopts_makeshell.c) = e5b7d66caaec45e12ae5490d515fc9fc75de3d92
 SHA1 (patch-src_libopts_proto.h) = 78f845bdcbac8de74953a3cee0b77fa9c5b05386
-SHA1 (patch-tests_Makefile.in) = b76dfb38f057b9094a5f46eef33b27492a79301e
+SHA1 (patch-tests_Makefile.in) = a6505d834ac660ef6343c0ecdbff9f4aca324954
 SHA1 (patch-tests_openpgp-certs_Makefile.in) = 2e7074312e67d747bd0ecfa839187f8bf33f4f09
