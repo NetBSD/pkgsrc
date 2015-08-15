@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3414 2015/08/15 14:00:47 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3415 2015/08/15 15:35:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6205,3 +6205,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Data-UUID to 1.221 [mef 2015-08-15]
 	Updated devel/p5-Devel-FindPerl to 0.014 [mef 2015-08-15]
 	Updated devel/p5-Devel-NYTProf to 6.02 [mef 2015-08-15]
+	Updated www/webkit-gtk to 2.8.5 [leot 2015-08-15]
