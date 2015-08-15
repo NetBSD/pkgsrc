@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3417 2015/08/15 17:24:51 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.3418 2015/08/15 17:49:28 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6208,3 +6208,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/webkit-gtk to 2.8.5 [leot 2015-08-15]
 	Updated net/youtube-dl to 20150809 [leot 2015-08-15]
 	Updated devel/py-blinker to 1.4nb1 [kleink 2015-08-15]
+	Updated graphics/deforaos-icon-theme to 0.1.1 [khorben 2015-08-15]
