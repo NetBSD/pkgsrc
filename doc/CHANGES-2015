@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3411 2015/08/15 12:42:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3412 2015/08/15 12:46:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6202,3 +6202,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dnsmasq to 2.75 [leot 2015-08-15]
 	Updated devel/p5-Config-Find to 0.31 [mef 2015-08-15]
 	Updated devel/p5-Devel-OverloadInfo to 0.004 [mef 2015-08-15]
+	Updated devel/p5-Data-UUID to 1.221 [mef 2015-08-15]
