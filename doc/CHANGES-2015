@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3420 2015/08/15 22:13:29 asau Exp $
+$NetBSD: CHANGES-2015,v 1.3421 2015/08/15 22:55:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6211,3 +6211,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/deforaos-icon-theme to 0.1.1 [khorben 2015-08-15]
 	Updated lang/chicken to 4.10.0nb1 [leot 2015-08-15]
 	Updated parallel/hwloc to 1.11.0 [asau 2015-08-15]
+	Updated print/foomatic4-db-engine to 4.0.12 [leot 2015-08-15]
