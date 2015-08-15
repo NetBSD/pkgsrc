@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3405 2015/08/15 11:56:02 nros Exp $
+$NetBSD: CHANGES-2015,v 1.3406 2015/08/15 12:21:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dnscap to 141 [leot 2015-08-14]
 	Updated net/dnstop to 20140915 [leot 2015-08-14]
 	Updated wm/i3 to 4.10.3 [nros 2015-08-15]
+	Updated devel/p5-B-Hooks-Parser to 0.16 [mef 2015-08-15]
