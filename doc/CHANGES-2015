@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3404 2015/08/14 21:21:50 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3405 2015/08/15 11:56:02 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6195,3 +6195,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-flask-admin to 1.2.0 [kleink 2015-08-14]
 	Updated net/dnscap to 141 [leot 2015-08-14]
 	Updated net/dnstop to 20140915 [leot 2015-08-14]
+	Updated wm/i3 to 4.10.3 [nros 2015-08-15]
