@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/07/23 06:24:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2015/08/15 22:46:39 wiz Exp $
 
 BUILDLINK_TREE+=	libodfgen
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libodfgen
 LIBODFGEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libodfgen+=	libodfgen>=0.0.3
-BUILDLINK_ABI_DEPENDS.libodfgen?=	libodfgen>=0.1.1
+BUILDLINK_ABI_DEPENDS.libodfgen?=	libodfgen>=0.1.4nb1
 BUILDLINK_PKGSRCDIR.libodfgen?=	../../textproc/libodfgen
 
 .include "../../converters/librevenge/buildlink3.mk"
