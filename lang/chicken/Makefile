@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2015/08/05 20:41:14 asau Exp $
+# $NetBSD: Makefile,v 1.54 2015/08/15 17:51:43 leot Exp $
 
 DISTNAME=	chicken-4.10.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/$(PKGVERSION_NOREV)/ \
 		http://code.call-cc.org/releases/$(PKGVERSION_NOREV:R)/
@@ -17,7 +18,7 @@ USE_TOOLS+=		gmake
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
-OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/6
+OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/7
 
 BUILD_TARGET=		all
 
