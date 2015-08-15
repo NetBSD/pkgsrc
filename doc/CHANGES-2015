@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3415 2015/08/15 15:35:13 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3416 2015/08/15 16:24:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6206,3 +6206,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-FindPerl to 0.014 [mef 2015-08-15]
 	Updated devel/p5-Devel-NYTProf to 6.02 [mef 2015-08-15]
 	Updated www/webkit-gtk to 2.8.5 [leot 2015-08-15]
+	Updated net/youtube-dl to 20150809 [leot 2015-08-15]
