@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.48 2015/07/23 11:10:49 joerg Exp $
+# $NetBSD: Makefile.common,v 1.49 2015/08/15 15:34:32 leot Exp $
 # used by www/webkit-gtk/Makefile
 
-DISTNAME=	webkitgtk-2.8.4
+DISTNAME=	webkitgtk-2.8.5
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +23,7 @@ GCC_REQD+=	4.8
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk.pc.in
-PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pcin
+PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pc.in
 
 CMAKE_ARGS+=		-DPORT=GTK
 CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
@@ -40,7 +40,6 @@ REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/make-hash-tools.pl
 
 REPLACE_PYTHON+=	Tools/gtk/*.py \
-			Tools/gtk/generate-feature-defines-files \
 			Tools/gtk/generate-gtkdoc
 
 .include "../../lang/ruby/rubyversion.mk"
