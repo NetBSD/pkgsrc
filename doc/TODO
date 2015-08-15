@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14718 2015/08/15 12:38:53 leot Exp $
+$NetBSD: TODO,v 1.14719 2015/08/15 12:40:14 mef Exp $
 
 Suggested new packages
 ======================
@@ -1290,7 +1290,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Catalyst-View-Excel-Template-Plus-0.04
 	o p5-Chart-2.4.10
 	o p5-Config-Augeas-1.300
-	o p5-Config-Find-0.31
 	o p5-Config-IniFiles-2.88
 	o p5-Cookie-Baker-0.06
 	o p5-Crypt-GPG-1.64
