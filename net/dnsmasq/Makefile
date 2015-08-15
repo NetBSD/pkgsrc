@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2015/07/14 09:57:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.31 2015/08/15 12:38:17 leot Exp $
 
-DISTNAME=		dnsmasq-2.73
+DISTNAME=		dnsmasq-2.75
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
@@ -10,8 +10,8 @@ COMMENT=		Lightweight, easy to configure DNS forwarder
 LICENSE=		gnu-gpl-v3
 
 RCD_SCRIPTS=		dnsmasq
-CONF_FILES=		${PREFIX}/share/examples/dnsmasq/dnsmasq.conf.example \
-			${PKG_SYSCONFDIR}/dnsmasq.conf
+EGDIR=			${PREFIX}/share/examples/dnsmasq
+CONF_FILES=		${EGDIR}/dnsmasq.conf.example ${PKG_SYSCONFDIR}/dnsmasq.conf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,7 +37,7 @@ PLIST_VARS+=	dbus
 USE_TOOLS+=	pkg-config
 CFLAGS+=	-DHAVE_DBUS
 .include "../../sysutils/dbus/buildlink3.mk"
-CONF_FILES+=	${PREFIX}/share/examples/dnsmasq/dnsmasq-dbus.conf \
+CONF_FILES+=	${EGDIR}/dnsmasq-dbus.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/dnsmasq-dbus.conf
 PLIST.dbus=	yes
 .endif
@@ -53,7 +53,7 @@ CFLAGS+=	-DNO_IPSET
 # Override the defaults
 AUTO_MKDIRS=yes
 CFLAGS+=		-DCONFFILE='"${PKG_SYSCONFDIR}/dnsmasq.conf"'
-BUILD_MAKE_FLAGS+=	COPTS=${CFLAGS:Q}
+MAKE_FLAGS+=		COPTS=${CFLAGS:Q}
 INSTALL_MAKE_FLAGS+=	PREFIX="${PREFIX}"
 INSTALL_MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 INSTALL_MAKE_FLAGS+=	LOCALEDIR="${PREFIX}/${PKGLOCALEDIR}"
@@ -64,10 +64,10 @@ INSTALL_MAKE_FLAGS+=	AWK="${AWK}"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dnsmasq.conf.example \
-		${DESTDIR}${PREFIX}/share/examples/dnsmasq/
+		${DESTDIR}${EGDIR}
 .if !empty(PKG_OPTIONS:Mdbus)
 	${INSTALL_DATA} ${WRKSRC}/dbus/dnsmasq.conf \
-		${DESTDIR}${PREFIX}/share/examples/dnsmasq/dnsmasq-dbus.conf
+		${DESTDIR}${EGDIR}/dnsmasq-dbus.conf
 .endif
 
 .include "../../mk/bsd.pkg.mk"
