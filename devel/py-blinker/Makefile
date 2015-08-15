@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/08/14 17:00:11 kleink Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/15 17:23:55 kleink Exp $
 
 DISTNAME=	blinker-1.4
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/blinker/
@@ -12,5 +13,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# empty
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
