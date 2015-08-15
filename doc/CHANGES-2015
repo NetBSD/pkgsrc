@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3408 2015/08/15 12:37:08 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3409 2015/08/15 12:38:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6199,3 +6199,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-B-Hooks-Parser to 0.16 [mef 2015-08-15]
 	Updated devel/p5-B-Utils to 0.27 [mef 2015-08-15]
 	Updated devel/p5-CPAN-Uploader to 0.103010 [mef 2015-08-15]
+	Updated net/dnsmasq to 2.75 [leot 2015-08-15]
