@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3426 2015/08/16 02:21:54 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3427 2015/08/16 02:37:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6218,3 +6218,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated benchmarks/netperf to 2.7.0 [mef 2015-08-16]
 	Updated converters/librevenge to 0.0.2nb2 [ryoon 2015-08-16]
 	Updated benchmarks/p5-Benchmark-Timer to 0.7107 [mef 2015-08-16]
+	Updated devel/p5-Config-IniFiles to 2.88 [mef 2015-08-16]
