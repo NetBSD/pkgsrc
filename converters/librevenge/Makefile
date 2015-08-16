@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/08/15 22:42:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/16 02:08:17 ryoon Exp $
 
 DISTNAME=	librevenge-0.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 EXTRACT_SUFX=	.tar.xz
@@ -34,7 +34,6 @@ LIBS+=	-lboost_system
 #			-Wno-error=shadow
 #.endif
 
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
