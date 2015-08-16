@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/12 10:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/16 17:35:25 joerg Exp $
 
 DISTNAME=	Date-Extract-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Test-MockTime-[0-9]*:../../time/p5-Test-MockTime
 DEPENDS+=	p5-DateTime-Format-Natural-[0-9]*:../../time/p5-DateTime-Format-Natural
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
+BUILD_DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 
 PERL5_PACKLIST=	auto/Date/Extract/.packlist
 
