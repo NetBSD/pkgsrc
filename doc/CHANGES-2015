@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3433 2015/08/16 12:01:38 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3434 2015/08/16 12:03:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6225,3 +6225,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated benchmarks/blogbench to 1.1 [mef 2015-08-16]
 	Updated benchmarks/nbench to 2.2.3 [mef 2015-08-16]
 	Updated devel/p5-Sub-Exporter-ForMethods to 0.100052 [wen 2015-08-16]
+	Updated x11/wmweather to 2.4.5 [leot 2015-08-16]
