@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3439 2015/08/16 20:24:49 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3440 2015/08/16 22:34:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6232,3 +6232,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-werkzeug to 0.10.4 [kleink 2015-08-16]
 	Updated www/py-werkzeug-docs to 0.10.4 [kleink 2015-08-16]
 	Updated graphics/sane-backends to 1.0.24 [leot 2015-08-16]
+	Updated editors/kile-kde3 to 2.0.2nb41 [leot 2015-08-16]
+	Updated emulators/wine to 1.6.2nb6 [leot 2015-08-16]
+	Updated emulators/wine-devel to 1.7.36nb2 [leot 2015-08-16]
+	Updated graphics/kdegraphics3 to 3.5.10nb45 [leot 2015-08-16]
+	Updated graphics/libksane to 4.14.3nb3 [leot 2015-08-16]
+	Updated graphics/sane-frontends to 1.0.14nb33 [leot 2015-08-16]
+	Updated graphics/xsane to 0.99.9nb2 [leot 2015-08-16]
+	Updated print/hplip to 3.15.7nb1 [leot 2015-08-16]
