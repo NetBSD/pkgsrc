@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3430 2015/08/16 04:31:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3431 2015/08/16 06:09:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6222,3 +6222,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-PatchPerl to 1.38 [mef 2015-08-16]
 	Updated devel/p5-Dist-Zilla to 5.039 [mef 2015-08-16]
 	Updated devel/p5-Dist-Zooky to 0.16 [mef 2015-08-16]
+	Updated benchmarks/blogbench to 1.1 [mef 2015-08-16]
