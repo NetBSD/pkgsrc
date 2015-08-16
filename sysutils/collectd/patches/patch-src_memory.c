@@ -1,4 +1,4 @@
-$NetBSD: patch-src_memory.c,v 1.1 2015/08/11 13:19:21 he Exp $
+$NetBSD: patch-src_memory.c,v 1.2 2015/08/16 08:01:58 he Exp $
 
 Add a port for NetBSD using VM_UVMEXP2, and preferring
 sysctl over sysctlbyname.
@@ -27,7 +27,18 @@ sysctl over sysctlbyname.
  #elif HAVE_LIBSTATGRAB
  /* no global variables */
  /* endif HAVE_LIBSTATGRAB */
-@@ -121,6 +121,15 @@ static int memory_init (void)
+@@ -92,6 +92,10 @@ static int pagesize;
+ # error "No applicable input method."
+ #endif
+ 
++#if KERNEL_NETBSD
++# include <uvm/uvm_extern.h>
++#endif
++
+ static _Bool values_absolute = 1;
+ static _Bool values_percentage = 0;
+ 
+@@ -121,6 +125,15 @@ static int memory_init (void)
  	host_page_size (port_host, &pagesize);
  /* #endif HAVE_HOST_STATISTICS */
  
@@ -43,7 +54,7 @@ sysctl over sysctlbyname.
  #elif HAVE_SYSCTLBYNAME
  /* no init stuff */
  /* #endif HAVE_SYSCTLBYNAME */
-@@ -139,15 +148,6 @@ static int memory_init (void)
+@@ -139,15 +152,6 @@ static int memory_init (void)
  	}
  /* #endif HAVE_LIBKSTAT */
  
@@ -59,7 +70,7 @@ sysctl over sysctlbyname.
  #elif HAVE_LIBSTATGRAB
  /* no init stuff */
  /* #endif HAVE_LIBSTATGRAB */
-@@ -221,6 +221,46 @@ static int memory_read_internal (value_l
+@@ -221,6 +225,46 @@ static int memory_read_internal (value_l
  /* #endif HAVE_HOST_STATISTICS */
  
  #elif HAVE_SYSCTLBYNAME
@@ -106,7 +117,7 @@ sysctl over sysctlbyname.
  	/*
  	 * vm.stats.vm.v_page_size: 4096
  	 * vm.stats.vm.v_page_count: 246178
-@@ -272,6 +312,8 @@ static int memory_read_internal (value_l
+@@ -272,6 +316,8 @@ static int memory_read_internal (value_l
  	               "active",   (gauge_t) sysctl_vals[4],
  	               "inactive", (gauge_t) sysctl_vals[5],
  	               "cache",    (gauge_t) sysctl_vals[6]);
