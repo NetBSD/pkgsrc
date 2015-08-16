@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3436 2015/08/16 12:33:56 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3437 2015/08/16 12:40:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/wmweather to 2.4.5 [leot 2015-08-16]
 	Updated devel/p5-MooseX-Types to 0.46 [wen 2015-08-16]
 	Updated time/p5-MooseX-Types-DateTime to 0.11 [wen 2015-08-16]
+	Updated devel/p5-MooseX-Types-Path-Class to 0.08 [wen 2015-08-16]
