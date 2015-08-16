@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2015/08/14 18:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2015/08/16 11:40:32 joerg Exp $
 
 DISTNAME=	calibre-2.35.0
 CATEGORIES=	misc
@@ -13,7 +13,7 @@ COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	help2man>=1.36.4:../../converters/help2man
-#DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 #DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.1:../../textproc/py-lxml
