@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/12/17 17:53:31 abs Exp $
+$NetBSD: patch-aa,v 1.6 2015/08/16 12:03:02 leot Exp $
 
---- Makefile.in.orig	2003-08-01 12:46:16.000000000 +0000
+--- Makefile.in.orig	2007-05-13 17:27:21.000000000 +0000
 +++ Makefile.in
 @@ -2,5 +2,4 @@
  # @configure_input@
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.5 2009/12/17 17:53:31 abs Exp $
 -DESTDIR         =
  prefix          = @prefix@
  exec_prefix     = @exec_prefix@
-@@ -30,7 +29,8 @@ install: wmweather wmweather.1
+@@ -31,7 +30,8 @@ install: wmweather wmweather.1
  	${INSTALL_PROGRAM} wmweather   ${DESTDIR}${bindir}
  	${INSTALL_DATA}    wmweather.1 ${DESTDIR}${mandir}/man1
 -	${LN_S} wmweather   ${DESTDIR}${bindir}/wmWeather
