@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3424 2015/08/16 01:05:17 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3425 2015/08/16 02:09:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6216,3 +6216,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p5-Archive-Extract to 0.76 [mef 2015-08-16]
 	Updated archivers/p5-Archive-Tar-Wrapper to 0.23 [mef 2015-08-16]
 	Updated benchmarks/netperf to 2.7.0 [mef 2015-08-16]
+	Updated converters/librevenge to 0.0.2nb2 [ryoon 2015-08-16]
