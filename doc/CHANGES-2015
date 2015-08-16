@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3438 2015/08/16 16:20:06 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.3439 2015/08/16 20:24:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6231,3 +6231,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooseX-Types-Path-Class to 0.08 [wen 2015-08-16]
 	Updated www/py-werkzeug to 0.10.4 [kleink 2015-08-16]
 	Updated www/py-werkzeug-docs to 0.10.4 [kleink 2015-08-16]
+	Updated graphics/sane-backends to 1.0.24 [leot 2015-08-16]
