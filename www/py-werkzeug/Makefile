@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/16 16:18:24 kleink Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -18,7 +18,7 @@ REPLACE_PYTHON+=	examples/manage-simplewiki.py
 REPLACE_PYTHON+=	examples/manage-webpylike.py
 REPLACE_PYTHON+=	examples/upload.py
 REPLACE_PYTHON+=	examples/contrib/sessions.py
-REPLACE_PYTHON+=	werkzeug/testsuite/multipart/collect.py
+REPLACE_PYTHON+=	tests/multipart/test_collect.py
 
 DOCFILES=	AUTHORS CHANGES
 
@@ -38,6 +38,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
 	cd ${WRKSRC}/examples && pax -rwppm . ${DESTDIR}${PREFIX}/${EGDIR}
+.for i in manage-coolmagic.py manage-couchy.py manage-cupoftee.py \
+    manage-i18nurls.py manage-plnt.py manage-shorty.py manage-simplewiki.py \
+    manage-webpylike.py
+	${CHMOD} ${SHAREMODE} \
+	    ${DESTDIR}${PREFIX}/${EGDIR}/${i}
+.endfor
 .for i in down.png up.png
 	${CHMOD} ${SHAREMODE} \
 	    ${DESTDIR}${PREFIX}/${EGDIR}/cupoftee/shared/${i}
