@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2015/08/15 22:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2015/08/16 02:14:20 ryoon Exp $
 
 VERREL=		5.0.0
 VERRC=		5
@@ -109,6 +109,8 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 WRAPPER_SKIP_TRANSFORM=yes
 
 USE_LANGUAGES+=		c c++
+
+LDFLAGS+=		-lboost_system
 
 USE_LIBTOOL=		yes
 # Use GNU find fron findutils.
