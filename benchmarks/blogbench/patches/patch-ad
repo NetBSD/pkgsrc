@@ -1,28 +1,34 @@
-$NetBSD: patch-ad,v 1.2 2006/10/22 04:36:12 rillig Exp $
+$NetBSD: patch-ad,v 1.3 2015/08/16 06:08:57 mef Exp $
 
---- src/helpers.c.orig	2005-02-11 15:46:26.000000000 +0100
-+++ src/helpers.c	2006-10-22 06:33:08.000000000 +0200
-@@ -48,9 +48,20 @@ int create_dummy_file(const char * const
+ 			     
+--- src/helpers.c~	2015-08-16 14:59:03.000000000 +0900
++++ src/helpers.c	2015-08-16 14:59:14.000000000 +0900
+@@ -46,12 +46,24 @@ int create_dummy_file(const char * const
+ {
+     static char garbage[WRITE_CHUNK_SIZE];
      size_t towrite;
-     ssize_t written;    
+-    ssize_t written;    
++    ssize_t written;
      int fd;
--    
--    if ((fd = open(file_name, O_CREAT | O_TRUNC | O_WRONLY,
--		   (mode_t) 0600)) == -1) {
 +    mode_t m;
+     
+-    if ((fd = open(file_name, O_CREAT | O_TRUNC | O_WRONLY,
+-                   (mode_t) 0600)) == -1) {
+-        if (errno != ENOENT) {      
 +
 +#if defined(O_DIRECT)
 +    m = O_CREAT|O_TRUNC|O_WRONLY|(do_directio ? O_DIRECT : 0);
 +#else
 +    if (do_directio) {
-+	reentrant_printf("open: O_DIRECT is not supported on this system.\n");
-+	return -1;
++        reentrant_printf("open: O_DIRECT is not supported on this system.\n");
++        return -1;
 +    }
 +    m = O_CREAT|O_TRUNC|O_WRONLY;
 +#endif
 +
 +    fd = open(file_name, m, (mode_t)0600);
-+    if (fd == -1) {
- 	if (errno != ENOENT) {	    
- 	    reentrant_printf("open(\"%s\"): %s\n",
- 			     file_name, strerror(errno));
++    if (fd == -1) { 
++        if (errno != ENOENT) {
+             reentrant_printf("open(\"%s\"): %s\n",
+                              file_name, strerror(errno));
+         }
