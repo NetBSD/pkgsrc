@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14729 2015/08/16 06:53:22 mef Exp $
+$NetBSD: TODO,v 1.14730 2015/08/16 10:45:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -566,6 +566,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.6
 	o cue-20150720
+	o curl-7.44.0
 	o cvm-0.97
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsgraph-1.7.0
@@ -1386,6 +1387,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Net-OpenSSH-0.64
 	o p5-Net-SSH-1.37
 	o p5-Net-Twitter-4.01010
+	o p5-NetAddr-IP-4.077
 	o p5-NetPacket-1.6.0
 	o p5-Number-Format-1.75
 	o p5-Number-Range-0.12
@@ -1587,6 +1589,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
+	o py-cryptography-1.0
 	o py-cups-1.9.73
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
@@ -1950,7 +1953,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20150801
+	o x264-devel-20150815
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
