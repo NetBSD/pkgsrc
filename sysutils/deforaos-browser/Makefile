@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/08/09 15:07:06 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2015/08/16 17:34:45 joerg Exp $
 #
 
 DISTNAME=	Browser-0.4.13
@@ -21,7 +21,6 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
