@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3422 2015/08/15 23:05:03 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3423 2015/08/16 00:09:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6213,3 +6213,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated parallel/hwloc to 1.11.0 [asau 2015-08-15]
 	Updated print/foomatic4-db-engine to 4.0.12 [leot 2015-08-15]
 	Updated devel/p5-Perl-Tidy to 20150815 [mef 2015-08-15]
+	Updated archivers/p5-Archive-Extract to 0.76 [mef 2015-08-16]
+	Updated archivers/p5-Archive-Tar-Wrapper to 0.23 [mef 2015-08-16]
