@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/08/13 20:39:16 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/16 02:21:45 mef Exp $
 
-SHA1 (Benchmark-Timer-0.7102.tar.gz) = d977d5473b06ad12141c57ec628caa89de9181d3
-RMD160 (Benchmark-Timer-0.7102.tar.gz) = 6b9231c6aee1df85dbd2733a9248072de6090b2d
-Size (Benchmark-Timer-0.7102.tar.gz) = 31219 bytes
+SHA1 (Benchmark-Timer-0.7107.tar.gz) = 24132bf428edca54d86cc17f9d0ab598f6099516
+RMD160 (Benchmark-Timer-0.7107.tar.gz) = 1232a7ff2b2a4cd2464c90f2276d73464943cc31
+Size (Benchmark-Timer-0.7107.tar.gz) = 45734 bytes
