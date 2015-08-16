@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/09/11 22:37:13 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/16 06:39:45 mef Exp $
 #
 
-DISTNAME=	nbench-byte-2.2.2
+DISTNAME=	nbench-byte-2.2.3
 PKGNAME=	${DISTNAME:S/-byte//}
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.tux.org/~mayer/linux/
