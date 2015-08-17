@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:09 jlam Exp $
-bin/pkgxmkmf
-lib/X11/config/xpkgwedge.def
-${PLIST.Darwin}lib/X11/config/darwin.cf
-${PLIST.IRIX}lib/X11/config/sgi.cf
-${PLIST.IRIX5}lib/X11/config/sgiLib.rules
-${PLIST.IRIX6}lib/X11/config/X11.rules
