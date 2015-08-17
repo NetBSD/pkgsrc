@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3450 2015/08/17 16:14:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3451 2015/08/17 16:41:52 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6252,3 +6252,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/suse131_base to 13.1nb10 [wiz 2015-08-17]
 	Updated emulators/suse131_locale to 13.1nb2 [wiz 2015-08-17]
 	Updated emulators/suse131_openldap to 13.1nb1 [wiz 2015-08-17]
+	Updated www/squid3 to 3.5.7nb1 [prlw1 2015-08-17]
