@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/11/23 10:06:41 mef Exp $
-${PYSITELIB}/gammu/Data.py
-${PYSITELIB}/gammu/Data.pyc
-${PYSITELIB}/gammu/Data.pyo
-${PYSITELIB}/gammu/Worker.py
-${PYSITELIB}/gammu/Worker.pyc
-${PYSITELIB}/gammu/Worker.pyo
+@comment $NetBSD: PLIST,v 1.6 2015/08/17 16:46:11 leot Exp $
 ${PYSITELIB}/gammu/__init__.py
 ${PYSITELIB}/gammu/__init__.pyc
 ${PYSITELIB}/gammu/__init__.pyo
@@ -21,4 +15,7 @@ ${PYSITELIB}/gammu/smsd.pyo
 ${PYSITELIB}/gammu/worker.py
 ${PYSITELIB}/gammu/worker.pyc
 ${PYSITELIB}/gammu/worker.pyo
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt

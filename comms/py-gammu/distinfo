@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/17 16:46:11 leot Exp $
+
+SHA1 (python-gammu-2.3.tar.gz) = df7dd98c9688db8fc68681a403ac48c2cfcd1d99
+RMD160 (python-gammu-2.3.tar.gz) = 957c538caf5ce124c73de3daff900c9795a40e94
+Size (python-gammu-2.3.tar.gz) = 130112 bytes
