@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/03/31 08:11:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/17 18:09:07 leot Exp $
 
-SHA1 (ttf-tlwg-0.6.0.tar.xz) = 54858c350b1339d0db2a18c5ba7f47658c96040d
-RMD160 (ttf-tlwg-0.6.0.tar.xz) = 9000ce9f3cd4f63b825c2026a0934d9571a57b24
-Size (ttf-tlwg-0.6.0.tar.xz) = 1775996 bytes
+SHA1 (ttf-tlwg-0.6.1.tar.xz) = 975bb4fb87ef52598519a6aba21bcf694d3901ff
+RMD160 (ttf-tlwg-0.6.1.tar.xz) = 717ecb59b990e242ca7d1e47d1be3c38f5090452
+Size (ttf-tlwg-0.6.1.tar.xz) = 1931628 bytes
