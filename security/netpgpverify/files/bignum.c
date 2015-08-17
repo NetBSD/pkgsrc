@@ -45,6 +45,7 @@
 # include <sys/kmem.h>
 #else
 # include <arpa/inet.h>
+# include <limits.h>
 # include <stdarg.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -86,6 +87,10 @@
 
 #ifndef __arraycount
 #define	__arraycount(__x)	(sizeof(__x) / sizeof(__x[0]))
+#endif
+
+#ifndef MIN
+#define MIN(a,b)	(((a)<(b))?(a):(b))
 #endif
 
 #define MP_ISZERO(a) (((a)->used == 0) ? MP_YES : MP_NO)
