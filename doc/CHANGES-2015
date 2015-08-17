@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3452 2015/08/17 16:47:18 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3453 2015/08/17 16:49:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6254,3 +6254,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/suse131_openldap to 13.1nb1 [wiz 2015-08-17]
 	Updated www/squid3 to 3.5.7nb1 [prlw1 2015-08-17]
 	Updated comms/gammu to 1.36.4 [leot 2015-08-17]
+	Updated comms/py-gammu to 2.3 [leot 2015-08-17]
