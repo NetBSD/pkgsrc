@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3444 2015/08/17 13:20:59 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3445 2015/08/17 15:03:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkg_comp to 1.38 [wiz 2015-08-17]
 	Updated pkgtools/pkgin to 0.9.2 [jperkin 2015-08-17]
 	Updated sysutils/puppet to 3.8.2 [fhajny 2015-08-17]
+	Updated devel/gdb to 7.9nb2 [wiz 2015-08-17]
