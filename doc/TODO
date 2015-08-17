@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14740 2015/08/17 17:10:46 wiz Exp $
+$NetBSD: TODO,v 1.14741 2015/08/17 17:10:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3 [GNOME 2.30]
-	o ncursesw-6.0
 	o ncview-2.1.5
 	o ne-2.01
 	o nessus-4.4.1
