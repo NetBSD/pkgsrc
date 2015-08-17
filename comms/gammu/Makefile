@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2015/08/01 15:40:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/17 16:42:53 leot Exp $
 #
 
-.include "Makefile.common"
+DISTNAME=	gammu-1.36.4
+CATEGORIES=	comms
+MASTER_SITES=	http://dl.cihar.com/gammu/releases/
+EXTRACT_SUFX=	.tar.bz2
 
-PKGREVISION=	1
-
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://wammu.eu/gammu/
 COMMENT=	Command line utility and library to work with mobile phones
+LICENSE=	gnu-gpl-v2
 
 # cmake tests for it; unclear for what it would be used
 #BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
@@ -15,8 +19,6 @@ DEPENDS+=	dialog-[0-9]*:../../misc/dialog
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DINSTALL_MAN_DIR:STRING=${PKGMANDIR}
-# see py-gammu:
-CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
 # make sure some optional dependencies are not found:
 CMAKE_ARGS+=	-DWITH_MySQL:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_Postgres:BOOL=OFF
@@ -26,8 +28,8 @@ CMAKE_ARGS+=	-DBASH_BIN:FILEPATH=
 #CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 # silence warning
-CMAKE_ARGS+=    -Wno-dev
-CMAKE_ARGS+=    -DINSTALL_DOC=ON
+CMAKE_ARGS+=	-Wno-dev
+CMAKE_ARGS+=	-DINSTALL_DOC=ON
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run msgfmt
@@ -38,11 +40,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 LDFLAGS.SunOS+=	-lintl
 
-# Remove garbage under PaxHeaders.* directory
-post-install:
-	(cd ${DESTDIR}${PREFIX}/share/doc/gammu/manual; ${RM} -r */PaxHeaders*)
-
 .include "../../databases/unixodbc/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

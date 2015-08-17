@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/11/23 09:46:49 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/08/17 16:42:53 leot Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -63,7 +63,7 @@ man/man7/gammu-smsd-sql.7
 man/man7/gammu-smsd-tables.7
 share/doc/gammu/COPYING
 share/doc/gammu/ChangeLog
-share/doc/gammu/README
+share/doc/gammu/README.rst
 share/doc/gammu/examples/Makefile
 share/doc/gammu/examples/config/gammurc
 share/doc/gammu/examples/config/smsdrc
@@ -92,9 +92,6 @@ share/doc/gammu/examples/smsd.c
 share/doc/gammu/examples/sql/mysql.sql
 share/doc/gammu/examples/sql/pgsql.sql
 share/doc/gammu/examples/sql/sqlite.sql
-share/doc/gammu/manual/PaxHeaders.12815/contents.rst
-share/doc/gammu/manual/PaxHeaders.12815/glossary.rst
-share/doc/gammu/manual/PaxHeaders.12815/index.rst
 share/doc/gammu/manual/c/api.rst
 share/doc/gammu/manual/c/backup.rst
 share/doc/gammu/manual/c/bitmap.rst
@@ -216,6 +213,8 @@ share/locale/ar/LC_MESSAGES/gammu.mo
 share/locale/ar/LC_MESSAGES/libgammu.mo
 share/locale/bg/LC_MESSAGES/gammu.mo
 share/locale/bg/LC_MESSAGES/libgammu.mo
+share/locale/bn/LC_MESSAGES/gammu.mo
+share/locale/bn/LC_MESSAGES/libgammu.mo
 share/locale/ca/LC_MESSAGES/gammu.mo
 share/locale/ca/LC_MESSAGES/libgammu.mo
 share/locale/cs/LC_MESSAGES/gammu.mo

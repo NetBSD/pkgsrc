@@ -1,10 +1,10 @@
-$NetBSD: patch-libgammu_phone_at_at-sms.c,v 1.2 2014/11/23 09:46:50 mef Exp $
+$NetBSD: patch-libgammu_phone_at_at-sms.c,v 1.3 2015/08/17 16:42:53 leot Exp $
 
 Don't use strcharnul from the helper library, it doesn't end up as PIC
 when compiled with Clang.
 
---- libgammu/phone/at/at-sms.c~	2014-11-23 18:13:31.000000000 +0900
-+++ libgammu/phone/at/at-sms.c	2014-11-23 18:15:42.000000000 +0900
+--- libgammu/phone/at/at-sms.c.orig	2015-08-14 12:32:29.000000000 +0000
++++ libgammu/phone/at/at-sms.c
 @@ -112,6 +112,9 @@ GSM_Error ATGEN_ReplyGetSMSMemories(GSM_
  		if (pos_start != NULL) {
  			/* Detect which memories we can use for saving */
