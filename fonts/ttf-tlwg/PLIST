@@ -1,4 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/08/17 18:09:07 leot Exp $
+share/fontconfig/conf.avail/64-01-tlwg-kinnari.conf
+share/fontconfig/conf.avail/64-02-tlwg-norasi.conf
+share/fontconfig/conf.avail/64-11-tlwg-waree.conf
+share/fontconfig/conf.avail/64-12-tlwg-loma.conf
+share/fontconfig/conf.avail/64-13-tlwg-garuda.conf
+share/fontconfig/conf.avail/64-14-tlwg-umpush.conf
+share/fontconfig/conf.avail/64-15-laksaman.conf
+share/fontconfig/conf.avail/64-21-tlwg-typo.conf
+share/fontconfig/conf.avail/64-22-tlwg-typist.conf
+share/fontconfig/conf.avail/64-23-tlwg-mono.conf
+share/fontconfig/conf.avail/89-tlwg-garuda-synthetic.conf
+share/fontconfig/conf.avail/89-tlwg-kinnari-synthetic.conf
+share/fontconfig/conf.avail/89-tlwg-laksaman-synthetic.conf
+share/fontconfig/conf.avail/89-tlwg-loma-synthetic.conf
+share/fontconfig/conf.avail/89-tlwg-umpush-synthetic.conf
+share/fontconfig/conf.avail/89-tlwg-waree-synthetic.conf
 share/fonts/X11/TTF/Garuda-Bold.ttf
 share/fonts/X11/TTF/Garuda-BoldOblique.ttf
 share/fonts/X11/TTF/Garuda-Oblique.ttf
@@ -9,6 +25,10 @@ share/fonts/X11/TTF/Kinnari-BoldOblique.ttf
 share/fonts/X11/TTF/Kinnari-Italic.ttf
 share/fonts/X11/TTF/Kinnari-Oblique.ttf
 share/fonts/X11/TTF/Kinnari.ttf
+share/fonts/X11/TTF/Laksaman-Bold.ttf
+share/fonts/X11/TTF/Laksaman-BoldItalic.ttf
+share/fonts/X11/TTF/Laksaman-Italic.ttf
+share/fonts/X11/TTF/Laksaman.ttf
 share/fonts/X11/TTF/Loma-Bold.ttf
 share/fonts/X11/TTF/Loma-BoldOblique.ttf
 share/fonts/X11/TTF/Loma-Oblique.ttf
@@ -53,5 +73,3 @@ share/fonts/X11/TTF/Waree-Bold.ttf
 share/fonts/X11/TTF/Waree-BoldOblique.ttf
 share/fonts/X11/TTF/Waree-Oblique.ttf
 share/fonts/X11/TTF/Waree.ttf
-share/fontconfig/conf.avail/64-ttf-thai-tlwg.conf
-share/fontconfig/conf.avail/89-ttf-thai-tlwg-synthetic.conf

@@ -1,28 +1,22 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/17 18:09:07 leot Exp $
 
-DISTNAME=	ttf-tlwg-0.6.0
-PKGREVISION=	1
+DISTNAME=	ttf-tlwg-0.6.1
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/thai-ttf/
+MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/thai-ttf/ \
+		http://linux.thai.net/pub/thailinux/software/thai-ttf/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linux.thai.net/projects/thaifonts-scalable
 COMMENT=	Thai fonts in TTF format
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2 AND vera-ttf-license
 
 USE_LANGUAGES=	# none
+NO_BUILD=	yes
 
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf= ${FONTDIR}
-PKG_SYSCONFSUBDIR=	fontconfig
-CONF_FILES=	${PREFIX}/share/fontconfig/conf.avail/64-ttf-thai-tlwg.conf \
-		${PKG_SYSCONFDIR}/conf.d/64-ttf-thai-tlwg.conf
-CONF_FILES+=	${PREFIX}/share/fontconfig/conf.avail/89-ttf-thai-tlwg-synthetic.conf \
-		${PKG_SYSCONFDIR}/conf.d/89-ttf-thai-tlwg-synthetic.conf
+FONTDIR=		${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${FONTDIR}
 INSTALLATION_DIRS=	${FONTDIR} share/fontconfig/conf.avail
-
-do-build:
 
 do-install:
 	cd ${WRKSRC} && for f in *.ttf ; do \
