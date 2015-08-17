@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2015/04/25 14:23:40 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2015/08/17 17:11:26 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	mplayer-share-${MPLAYER_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 COMMENT=	Documentation used by mplayer and gmplayer
 
 DEPENDS+=	mplayer-fonts-[0-9]*:../../fonts/mplayer-fonts

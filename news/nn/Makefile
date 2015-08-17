@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2014/01/02 08:00:32 dholland Exp $
+# $NetBSD: Makefile,v 1.45 2015/08/17 17:11:28 wiz Exp $
 
 DISTNAME=	nn-6.7.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-6.7/
 EXTRACT_SUFX=	.tar.Z
