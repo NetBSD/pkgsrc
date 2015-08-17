@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3448 2015/08/17 15:48:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3449 2015/08/17 15:55:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6248,3 +6248,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/curl to 7.44.0 [wiz 2015-08-17]
 	Updated graphics/gif2png to 2.5.11 [wiz 2015-08-17]
 	Updated net/p5-NetAddr-IP to 4.077 [wiz 2015-08-17]
+	Updated security/py-cryptography to 1.0 [wiz 2015-08-17]
