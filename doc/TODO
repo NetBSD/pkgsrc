@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14738 2015/08/17 15:55:36 wiz Exp $
+$NetBSD: TODO,v 1.14739 2015/08/17 17:00:03 leot Exp $
 
 Suggested new packages
 ======================
@@ -1160,7 +1160,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o monit-5.14
 	o mono-4.0.3.20
 	o monodevelop-5.9.5.6
-	o moon-buggy-1.0.51
 	o mopher-0.6.0
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-3.12.0 [wip]
