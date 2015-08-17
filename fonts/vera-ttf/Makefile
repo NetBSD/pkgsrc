@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:34 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2015/08/17 17:59:57 leot Exp $
 #
 
 DISTNAME=	ttf-bitstream-vera-1.10
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/fonts/
 COMMENT=	Bitstream Vera TrueType fonts
+LICENSE=	vera-ttf-license
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
