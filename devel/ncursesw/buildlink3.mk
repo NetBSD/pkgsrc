@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2012/02/18 10:19:04 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2015/08/17 17:10:32 wiz Exp $
 
 BUILDLINK_TREE+=	ncursesw
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ncursesw
 NCURSESW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ncursesw+=	ncursesw>=5.5
-BUILDLINK_ABI_DEPENDS.ncursesw+=	ncursesw>=5.5
+BUILDLINK_ABI_DEPENDS.ncursesw+=	ncursesw>=6.0
 BUILDLINK_PKGSRCDIR.ncursesw?=		../../devel/ncursesw
 
 BUILDLINK_LIBNAME.ncursesw=	ncursesw

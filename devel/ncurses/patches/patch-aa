@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2014/05/11 16:55:17 rodent Exp $
+$NetBSD: patch-aa,v 1.18 2015/08/17 17:10:32 wiz Exp $
 
---- misc/run_tic.in.orig	Wed Feb 23 23:30:15 2011
+--- misc/run_tic.in.orig	2012-10-06 19:00:51.000000000 +0000
 +++ misc/run_tic.in
-@@ -122,7 +122,7 @@ fi
+@@ -123,7 +123,7 @@ fi
  # would generate a lot of confusing error messages if we tried to overwrite it.
  # We explicitly remove its contents rather than the directory itself, in case
  # the directory is actually a symbolic link.
@@ -11,13 +11,13 @@ $NetBSD: patch-aa,v 1.17 2014/05/11 16:55:17 rodent Exp $
  
  if test "$ext_funcs" = 1 ; then
  cat <<EOF
-@@ -163,6 +163,9 @@ else
- 	exit 1
+@@ -165,6 +165,9 @@ else
  fi
  fi
-+
+ 
 +# For NetBSD pkgsrc, don't bother with setting a symbolic link.
 +exit 0
- 
++
  # Make a symbolic link to provide compatibility with applications that expect
  # to find terminfo under /usr/lib.  That is, we'll _try_ to do that.  Not
+ # all systems support symbolic links, and those that do provide a variety
