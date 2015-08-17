@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2014/11/23 09:46:49 mef Exp $
+$NetBSD: distinfo,v 1.10 2015/08/17 16:42:53 leot Exp $
 
-SHA1 (gammu-1.33.0.tar.bz2) = b7ee28e7398ea578290588d94d69c295491ff86a
-RMD160 (gammu-1.33.0.tar.bz2) = c84ac1acdc9d019576447e14414de99366794942
-Size (gammu-1.33.0.tar.bz2) = 6535262 bytes
-SHA1 (patch-contrib_smscgi_sms__cgi.c) = 32316e2c4e8cfcbb850c1f2551c424a8922494e6
-SHA1 (patch-libgammu_phone_at_at-sms.c) = 05e834b5da6cebeb16d867df7059b7c715b5b676
+SHA1 (gammu-1.36.4.tar.bz2) = 118a7f9670d42b4cdc19833c9df09cc50bd54e5a
+RMD160 (gammu-1.36.4.tar.bz2) = cf609af4c4e2148bebe5d3dbeaea412163dfa754
+Size (gammu-1.36.4.tar.bz2) = 2091893 bytes
+SHA1 (patch-contrib_smscgi_sms__cgi.c) = 39598119eae4fd27d6d1844ca4a846fc79b126c1
+SHA1 (patch-libgammu_phone_at_at-sms.c) = fb9dd703f822f20efa35303b15faba482e39538c
