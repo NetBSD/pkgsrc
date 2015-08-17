@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2013/04/10 21:10:55 tonnerre Exp $
+$NetBSD: patch-ab,v 1.6 2015/08/17 13:20:43 fhajny Exp $
 
 Make the FreeBSD provider the default for NetBSD as well.
 Omit _enabled for init scripts under NetBSD, which doesn't look for them.
 
---- lib/puppet/provider/service/freebsd.rb.orig	2013-04-01 00:44:50.000000000 +0000
+--- lib/puppet/provider/service/freebsd.rb.orig	2015-08-14 08:28:22.488080198 +0000
 +++ lib/puppet/provider/service/freebsd.rb
 @@ -3,7 +3,7 @@ Puppet::Type.type(:service).provide :fre
    desc "Provider for FreeBSD and DragonFly BSD. Uses the `rcvar` argument of init scripts and parses/edits rc files."
@@ -22,5 +22,5 @@ Omit _enabled for init scripts under NetBSD, which doesn't look for them.
 +      append = "\# Added by Puppet\n#{rcvar}=\"#{yesno}\"\n"
 +    end
      # First, try the one-file-per-service style
-     if File.exists?(rcconf_dir)
+     if Puppet::FileSystem.exist?(rcconf_dir)
        File.open(rcconf_dir + "/#{service}", File::WRONLY | File::APPEND | File::CREAT, 0644) {

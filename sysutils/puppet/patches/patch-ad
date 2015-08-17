@@ -1,39 +1,15 @@
-$NetBSD: patch-ad,v 1.4 2014/01/02 01:41:48 tonnerre Exp $
+$NetBSD: patch-ad,v 1.5 2015/08/17 13:20:43 fhajny Exp $
 
 Add NetBSD and update support to the pkgin provider.
 
---- lib/puppet/provider/package/pkgin.rb.orig	2013-04-07 00:25:33.000000000 +0000
+--- lib/puppet/provider/package/pkgin.rb.orig	2015-08-14 08:28:22.519663101 +0000
 +++ lib/puppet/provider/package/pkgin.rb
-@@ -5,9 +5,9 @@ Puppet::Type.type(:package).provide :pkg
+@@ -5,7 +5,7 @@ Puppet::Type.type(:package).provide :pkg
  
    commands :pkgin => "pkgin"
  
--  defaultfor :operatingsystem => :dragonfly
-+  defaultfor :operatingsystem => [:dragonfly, :netbsd]
+-  defaultfor :operatingsystem => [ :dragonfly , :smartos ]
++  defaultfor :operatingsystem => [ :dragonfly , :smartos , :netbsd ]
  
--  has_feature :installable, :uninstallable
-+  has_feature :installable, :uninstallable, :upgradeable
+   has_feature :installable, :uninstallable, :upgradeable, :versionable
  
-   def self.parse_pkgin_line(package, force_status=nil)
- 
-@@ -59,4 +59,20 @@ Puppet::Type.type(:package).provide :pkg
-   def uninstall
-     pkgin("-y", :remove, resource[:name])
-   end
-+
-+  def update
-+    pkgin("-y", :install, resource[:name])
-+  end
-+
-+  def latest
-+    output = pkgin("se", @resource[:name])
-+    pat = @resource[:name]
-+
-+    if output =~ /^#{pat}-(\d\S*)\s/
-+      return $1
-+    else
-+      self.err "Could not find latest version of %s" % pat
-+      return nil
-+    end
-+  end
- end
