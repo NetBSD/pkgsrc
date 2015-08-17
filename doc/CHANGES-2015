@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3455 2015/08/17 17:10:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3456 2015/08/17 17:10:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6257,3 +6257,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated comms/py-gammu to 2.3 [leot 2015-08-17]
 	Updated games/moon-buggy to 1.0.51 [leot 2015-08-17]
 	Updated devel/ncurses to 6.0 [wiz 2015-08-17]
+	Updated devel/ncursesw to 6.0 [wiz 2015-08-17]
