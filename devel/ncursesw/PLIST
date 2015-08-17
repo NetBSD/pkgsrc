@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2014/09/16 09:48:41 wiz Exp $
-bin/ncursesw5-config
+@comment $NetBSD: PLIST,v 1.6 2015/08/17 17:10:32 wiz Exp $
+bin/ncursesw6-config
 include/ncursesw/curses.h
 include/ncursesw/nc_tparm.h
 include/ncursesw/ncurses.h

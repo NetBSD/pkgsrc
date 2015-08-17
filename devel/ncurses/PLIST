@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.20 2011/02/28 11:02:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/08/17 17:10:31 wiz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
 bin/infotocap
-bin/ncurses5-config
+bin/ncurses6-config
 bin/reset
 bin/tabs
 bin/tic
@@ -39,7 +39,7 @@ man/man1/captoinfo.1
 man/man1/clear.1
 man/man1/infocmp.1
 man/man1/infotocap.1
-man/man1/ncurses5-config.1
+man/man1/ncurses6-config.1
 man/man1/reset.1
 man/man1/tabs.1
 man/man1/tic.1
@@ -257,6 +257,7 @@ man/man3/form.3
 man/man3/form_cursor.3
 man/man3/form_data.3
 man/man3/form_driver.3
+man/man3/form_driver_w.3
 man/man3/form_field.3
 man/man3/form_field_attributes.3
 man/man3/form_field_buffer.3
@@ -796,6 +797,7 @@ man/man3/use_extended_names.3
 man/man3/use_legacy_coding.3
 man/man3/use_legacy_coding_sp.3
 man/man3/use_screen.3
+man/man3/use_tioctl.3
 man/man3/use_window.3
 man/man3/vid_attr.3
 man/man3/vid_attr_sp.3
@@ -850,6 +852,7 @@ man/man3/wget_wch.3
 man/man3/wget_wstr.3
 man/man3/wgetbkgrnd.3
 man/man3/wgetch.3
+man/man3/wgetdelay.3
 man/man3/wgetn_wstr.3
 man/man3/wgetnstr.3
 man/man3/wgetparent.3

@@ -1,23 +1,26 @@
-$NetBSD: patch-ab,v 1.17 2014/05/11 16:55:17 rodent Exp $
+$NetBSD: patch-ab,v 1.18 2015/08/17 17:10:32 wiz Exp $
 
---- mk-1st.awk.orig	Sat Aug  7 20:42:30 2010
+--- mk-1st.awk.orig	2014-12-20 23:54:22.000000000 +0000
 +++ mk-1st.awk
-@@ -396,11 +396,11 @@ END	{
- 				end_name = lib_name;
- 				printf "../lib/%s : $(%s_OBJS)\n", lib_name, OBJS
- 				if ( is_ticlib() ) {
--					printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) -o %s $(%s_OBJS:$o=.lo) -rpath $(DESTDIR)$(libdir) %s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(TICS_LIST)\n", compile, lib_name, OBJS, libtool_version
-+					printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) -o %s $(%s_OBJS:.o=.lo) -rpath $(DESTDIR)$(libdir) %s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(TICS_LIST)\n", compile, lib_name, OBJS, libtool_version
- 				} else if ( is_termlib() ) {
--					printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) -o %s $(%s_OBJS:$o=.lo) -rpath $(DESTDIR)$(libdir) %s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(TINFO_LIST)\n", compile, lib_name, OBJS, libtool_version
-+					printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) -o %s $(%s_OBJS:.o=.lo) -rpath $(DESTDIR)$(libdir) %s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(TINFO_LIST)\n", compile, lib_name, OBJS, libtool_version
- 				} else {
--					printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) -o %s $(%s_OBJS:$o=.lo) -rpath $(DESTDIR)$(libdir) %s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(SHLIB_LIST)\n", compile, lib_name, OBJS, libtool_version
-+					printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) -o %s $(%s_OBJS:.o=.lo) -rpath $(DESTDIR)$(libdir) %s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(SHLIB_LIST)\n", compile, lib_name, OBJS, libtool_version
+@@ -447,7 +447,7 @@ END	{
+ 					which_list = "SHLIB_LIST";
+ 				}
+ 				printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) $(%s) \\\n", CC_NAME, CC_FLAG;
+-				printf "\t\t-o %s $(%s_OBJS:$o=.lo) \\\n", lib_name, OBJS;
++				printf "\t\t-o %s $(%s_OBJS:.o=.lo) \\\n", lib_name, OBJS;
+ 				printf "\t\t-rpath $(DESTDIR)$(libdir) \\\n";
+ 				printf "\t\t%s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(%s) $(LDFLAGS)\n", libtool_version, which_list;
+ 				print  ""
+@@ -471,7 +471,7 @@ END	{
+ 				printf "\t$(RANLIB) $@\n"
+ 				if ( host == "vxworks" )
+ 				{
+-					printf "\t$(LD) $(LD_OPTS) $? -o $(@:.a=$o)\n"
++					printf "\t$(LD) $(LD_OPTS) $? -o $(@:.a=.o)\n"
  				}
  				print  ""
  				print  "install \\"
-@@ -469,7 +469,7 @@ END	{
+@@ -517,7 +517,7 @@ END	{
  			print "mostlyclean::"
  			printf "\t-rm -f $(%s_OBJS)\n", OBJS
  			if ( MODEL == "LIBTOOL" ) {
@@ -26,7 +29,7 @@ $NetBSD: patch-ab,v 1.17 2014/05/11 16:55:17 rodent Exp $
  			}
  		}
  		else if ( found == 2 )
-@@ -478,13 +478,13 @@ END	{
+@@ -526,13 +526,13 @@ END	{
  			print "mostlyclean::"
  			printf "\t-rm -f $(%s_OBJS)\n", OBJS
  			if ( MODEL == "LIBTOOL" ) {
