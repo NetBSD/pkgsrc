@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.41 2012/05/19 10:54:40 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.42 2015/08/17 08:18:31 wiz Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -42,7 +42,7 @@ ProgName="`basename $0`"
 _MKCONF_VARS="WRKDIR_BASENAME MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
               PKG_DEVELOPER CLEANDEPENDS LOCALBASE PKG_SYSCONFBASE \
               CFLAGS CPPFLAGS CXXFLAGS USE_AUDIT_PACKAGES PKGVULNDIR \
-              USE_XPKGWEDGE PKGSRC_COMPILER \
+              PKGSRC_COMPILER \
               LIBKVER_STANDALONE_PREFIX PKG_DBDIR"
 
 _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
@@ -97,7 +97,6 @@ env_setdefaults()
     : ${USE_GCC3:=no}
     : ${USE_AUDIT_PACKAGES:=yes}
     : ${PKGVULNDIR:=/usr/pkg/share}
-    : ${USE_XPKGWEDGE:=yes}
     : ${PKGSRC_COMPILER:=gcc}
     : ${PKG_DBDIR:=/var/db/pkg}
 
@@ -636,16 +635,10 @@ makeroot_libkver()
 # makeroot_x11
 #
 #   If X11 is enabled, installs x11-links inside the sandbox.
-#   If USE_XPKGWEDGE is yes, configures xpkgwedge too (but does not
-#   install it; pkgsrc will take care of that when needed).
 #
 makeroot_x11()
 {
     if [ "$SETS_X11" != "no" ]; then
-        if [ "$USE_XPKGWEDGE" = "yes" ]; then
-            echo "export XAPPLRESDIR=${LOCALBASE}/lib/X11/app-defaults" >> $DESTDIR/etc/profile
-            echo "setenv XAPPLRESDIR ${LOCALBASE}/lib/X11/app-defaults" >> $DESTDIR/etc/csh.login
-        fi
         [ "$Nflag" = "no" ] && build_and_install pkgtools/x11-links
     fi
 }
