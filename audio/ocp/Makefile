@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2015/04/25 14:20:23 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2015/08/17 17:11:20 wiz Exp $
 
 DISTNAME=		ocp-0.1.21
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opencubicplayer/}
 EXTRACT_SUFX=		.tar.bz2

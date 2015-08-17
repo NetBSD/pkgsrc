@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/04/11 00:44:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/17 17:11:24 wiz Exp $
 
 DISTNAME=	opensource-cobol-1.4.0J-utf8
 PKGNAME=	${DISTNAME:S/-utf8//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	-http://www.osscons.jp/osscobol/files/?action=cabinet_action_main_download&block_id=414&room_id=21&cabinet_id=11&file_id=289&upload_id=564
 

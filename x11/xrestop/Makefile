@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:19 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/17 17:11:31 wiz Exp $
 #
 
 DISTNAME=		xrestop-0.4
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://labs.o-hand.com/sources/xrestop/
 

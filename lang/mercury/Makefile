@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2015/07/30 19:34:40 asau Exp $
+# $NetBSD: Makefile,v 1.56 2015/08/17 17:11:24 wiz Exp $
 
 DISTNAME=		mercury-srcdist-14.01.1
 PKGNAME=		mercury-14.01.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		lang
 MASTER_SITES=		http://dl.mercurylang.org/release/ \
 			ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \

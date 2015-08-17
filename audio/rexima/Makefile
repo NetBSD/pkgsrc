@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 23:48:07 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/17 17:11:20 wiz Exp $
 #
 
 DISTNAME=		rexima-1.4
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.ibiblio.org/pub/Linux/apps/sound/mixers/
 

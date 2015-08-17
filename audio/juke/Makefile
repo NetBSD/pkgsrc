@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/09/12 00:24:40 asau Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/17 17:11:19 wiz Exp $
 #
 
 DISTNAME=	juke-0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.moll.no/oyvind/distfiles/
 

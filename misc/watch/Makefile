@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/09/12 11:15:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2015/08/17 17:11:26 wiz Exp $
 
 DISTNAME=	procps-3.2.6
 PKGNAME=	watch-3.2.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://procps.sourceforge.net/
 

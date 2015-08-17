@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2015/02/09 12:56:49 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2015/08/17 17:11:23 wiz Exp $
 
 # gpsd 3.11 has been released.  It has only not been updated because
 # newer versions use scons.
 DISTNAME=	gpsd-2.96
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 
