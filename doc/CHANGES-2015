@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3442 2015/08/17 08:18:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3443 2015/08/17 09:40:20 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6242,3 +6242,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/hplip to 3.15.7nb1 [leot 2015-08-16]
 	Removed pkgtools/xpkgwedge [wiz 2015-08-17]
 	Updated pkgtools/pkg_comp to 1.38 [wiz 2015-08-17]
+	Updated pkgtools/pkgin to 0.9.2 [jperkin 2015-08-17]
