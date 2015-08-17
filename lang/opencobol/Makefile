@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2015/02/21 11:09:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2015/08/17 17:11:24 wiz Exp $
 #
 
 DISTNAME=	open-cobol-1.1
 PKGNAME=	opencobol-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-cobol/}
 

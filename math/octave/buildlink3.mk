@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2013/09/01 12:14:06 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2015/08/17 17:11:19 wiz Exp $
 
 BUILDLINK_TREE+=	octave
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	octave
 OCTAVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.octave+=	octave>=3.0.0
-BUILDLINK_ABI_DEPENDS.octave+=	octave>=3.6.4nb4
+BUILDLINK_ABI_DEPENDS.octave+=	octave>=3.6.4nb10
 BUILDLINK_PKGSRCDIR.octave?=	../../math/octave
 
 .include "../../mk/bsd.fast.prefs.mk"

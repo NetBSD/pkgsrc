@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/12/12 10:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/08/17 17:11:23 wiz Exp $
 #
 
 DISTNAME=	hugov31_unix_source
 PKGNAME=	hugo-3.1.02.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/hugo/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} hugolib.zip

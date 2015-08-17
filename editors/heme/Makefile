@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/12/10 06:57:25 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/17 17:11:21 wiz Exp $
 #
 
 DISTNAME=		heme-0.4.2
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heme/}
 

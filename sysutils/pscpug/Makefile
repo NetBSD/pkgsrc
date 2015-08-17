@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/01/11 23:30:39 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/17 17:11:29 wiz Exp $
 
 DISTNAME=		pscpug035
 PKGNAME=		pscpug-0.3.5
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.diablonet.net/~mercadal/projects/pscpug/
 EXTRACT_SUFX=		.tgz
