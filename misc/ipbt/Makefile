@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/17 17:11:26 wiz Exp $
 #
 
 DISTNAME=	ipbt-r8765
 PKGNAME=	ipbt-8765
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 # The upstream distfile is apparently rebuilt every night with
 # newly regenerated docs that have different timestamps. Use the

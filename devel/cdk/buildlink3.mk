@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:11 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2015/08/17 17:11:19 wiz Exp $
 
 BUILDLINK_TREE+=	cdk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cdk
 CDK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cdk+=		cdk>=4.9.9nb1
-BUILDLINK_ABI_DEPENDS.cdk+=	cdk>=4.9.9nb2
+BUILDLINK_ABI_DEPENDS.cdk+=	cdk>=4.9.9nb4
 BUILDLINK_PKGSRCDIR.cdk?=	../../devel/cdk
 
 USE_NCURSES=	yes

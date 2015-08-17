@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/08/14 21:21:24 leot Exp $
+# $NetBSD: Makefile,v 1.24 2015/08/17 17:11:27 wiz Exp $
 #
 
 DISTNAME=	dnstop-20140915
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://dns.measurement-factory.com/tools/dnstop/src/
 

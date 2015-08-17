@@ -1,3 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/17 17:11:27 wiz Exp $
 
+PKGREVISION= 1
 .include "../../net/bird/Makefile.common"
