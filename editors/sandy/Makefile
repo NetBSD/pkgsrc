@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/04/26 18:31:28 mspo Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/17 17:11:22 wiz Exp $
 #
 
 DISTNAME=	sandy-0.4
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

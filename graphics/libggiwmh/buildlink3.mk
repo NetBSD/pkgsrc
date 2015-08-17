@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2012/05/07 01:53:36 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2015/08/17 17:11:19 wiz Exp $
 
 BUILDLINK_TREE+=	libggiwmh
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libggiwmh
 LIBGGIWMH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libggiwmh+=	libggiwmh>=0.2.0
-BUILDLINK_ABI_DEPENDS.libggiwmh+=	libggiwmh>=0.2.1nb1
+BUILDLINK_ABI_DEPENDS.libggiwmh+=	libggiwmh>=0.3.2nb1
 BUILDLINK_PKGSRCDIR.libggiwmh?=	../../graphics/libggiwmh
 
 .include "../../graphics/libggi/buildlink3.mk"
