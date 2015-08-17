@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3440 2015/08/16 22:34:16 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3441 2015/08/17 08:15:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6240,3 +6240,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/sane-frontends to 1.0.14nb33 [leot 2015-08-16]
 	Updated graphics/xsane to 0.99.9nb2 [leot 2015-08-16]
 	Updated print/hplip to 3.15.7nb1 [leot 2015-08-16]
+	Removed pkgtools/xpkgwedge [wiz 2015-08-17]
