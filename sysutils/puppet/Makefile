@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2014/03/26 14:27:22 taca Exp $
+# $NetBSD: Makefile,v 1.19 2015/08/17 13:20:43 fhajny Exp $
 
-DISTNAME=		puppet-3.1.1
-PKGREVISION=		1
+DISTNAME=		puppet-3.8.2
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -10,8 +9,8 @@ HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=		${RUBY_PKGPREFIX}-facter>=1.6.18:../../sysutils/ruby-facter
-DEPENDS+=		${RUBY_PKGPREFIX}-hiera>=1.0.0:../../databases/ruby-hiera
+DEPENDS+=		${RUBY_PKGPREFIX}-facter>=1.7.0<3:../../sysutils/ruby-facter
+DEPENDS+=		${RUBY_PKGPREFIX}-hiera>=1.0.0<3:../../databases/ruby-hiera
 DEPENDS+=		${RUBY_PKGPREFIX}-io-console>=0.3:../../devel/ruby-io-console
 DEPENDS+=		${RUBY_PKGPREFIX}-json-pure>=0:../../textproc/ruby-json-pure
 DEPENDS+=		${RUBY_PKGPREFIX}-minitest>=2.5.1:../../devel/ruby-minitest
@@ -34,13 +33,10 @@ SUBST_FILES.prefix+=	lib/puppet/face/module/uninstall.rb
 SUBST_FILES.prefix+=	lib/puppet/face/module/upgrade.rb
 SUBST_FILES.prefix+=	lib/puppet/parser/functions/extlookup.rb
 SUBST_FILES.prefix+=	lib/puppet/reference/configuration.rb
-SUBST_FILES.prefix+=	lib/puppet/defaults.rb lib/puppet/util/run_mode.rb
-SUBST_FILES.prefix+=	bin/puppet ext/rack/manifest.pp
-SUBST_FILES.prefix+=	ext/rack/files/apache2.conf ext/rack/files/config.ru
+SUBST_FILES.prefix+=	lib/puppet/util/run_mode.rb
 SUBST_FILES.prefix+=	ext/solaris/smf/puppetd.xml
 SUBST_FILES.prefix+=	ext/solaris/smf/puppetmasterd.xml
 SUBST_FILES.prefix+=	man/man5/puppet.conf.5
-SUBST_FILES.prefix+=	man/man8/puppet.8
 SUBST_FILES.prefix+=	man/man8/puppet-apply.8
 SUBST_FILES.prefix+=	man/man8/puppet-device.8
 SUBST_FILES.prefix+=	man/man8/puppet-doc.8
