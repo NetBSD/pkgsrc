@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3449 2015/08/17 15:55:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3450 2015/08/17 16:14:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6249,3 +6249,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gif2png to 2.5.11 [wiz 2015-08-17]
 	Updated net/p5-NetAddr-IP to 4.077 [wiz 2015-08-17]
 	Updated security/py-cryptography to 1.0 [wiz 2015-08-17]
+	Updated emulators/suse131_base to 13.1nb10 [wiz 2015-08-17]
+	Updated emulators/suse131_locale to 13.1nb2 [wiz 2015-08-17]
+	Updated emulators/suse131_openldap to 13.1nb1 [wiz 2015-08-17]
