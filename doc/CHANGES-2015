@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3458 2015/08/17 18:34:31 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3459 2015/08/17 18:36:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6258,5 +6258,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/moon-buggy to 1.0.51 [leot 2015-08-17]
 	Updated devel/ncurses to 6.0 [wiz 2015-08-17]
 	Updated devel/ncursesw to 6.0 [wiz 2015-08-17]
-	Updated fonts/ttf-tlwg to 0.6.1 [leot 2015-08-17]
 	Updated fonts/ttf-tlwg to 0.6.1 [leot 2015-08-17]
