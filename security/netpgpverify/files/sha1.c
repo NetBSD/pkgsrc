@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.1 2013/03/16 07:32:35 agc Exp $	*/
+/*	$NetBSD: sha1.c,v 1.2 2015/08/17 11:37:55 jperkin Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -16,8 +16,6 @@
  */
 
 #define SHA1HANDSOFF		/* Copies data before messing with it. */
-
-#include <sys/cdefs.h>
 
 #include <string.h>
 
