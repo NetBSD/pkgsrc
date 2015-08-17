@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/07/15 02:02:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2015/08/17 17:11:30 wiz Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
