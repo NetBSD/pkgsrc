@@ -1,13 +1,2 @@
-$NetBSD: patch-ad,v 1.12 2014/05/11 16:55:17 rodent Exp $
+$NetBSD: patch-ad,v 1.13 2015/08/17 17:10:32 wiz Exp $
 
---- c++/Makefile.in.orig	Sat Nov 27 21:45:27 2010
-+++ c++/Makefile.in
-@@ -167,7 +167,7 @@ LIB_OBJS = \
- 
- ../lib/$(LIBNAME_LIBTOOL) : $(LIB_OBJS)
- 	cd ../lib && $(LIBTOOL_LINK) $(CXX) $(CXXFLAGS) \
--		-o $(LIBNAME) $(LIB_OBJS:$o=.lo) \
-+		-o $(LIBNAME) $(LIB_OBJS:.o=.lo) \
- 		-rpath $(INSTALL_PREFIX)$(libdir) \
- 		$(LIBTOOL_VERSION) $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(SHLIB_LIST)
- 

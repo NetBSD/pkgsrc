@@ -1,8 +1,8 @@
-$NetBSD: patch-ncurses_tinfo_lib__baudrate.c,v 1.1 2014/05/11 16:55:17 rodent Exp $
+$NetBSD: patch-ncurses_tinfo_lib__baudrate.c,v 1.2 2015/08/17 17:10:32 wiz Exp $
 
 sys/ttydev.h doesn't exist in OpenBSD 5.5
 
---- ncurses/tinfo/lib_baudrate.c.orig	Sun Dec 19 01:50:50 2010
+--- ncurses/tinfo/lib_baudrate.c.orig	2015-06-14 00:34:12.000000000 +0000
 +++ ncurses/tinfo/lib_baudrate.c
 @@ -39,7 +39,7 @@
  
@@ -17,8 +17,8 @@ sys/ttydev.h doesn't exist in OpenBSD 5.5
   * of the indices up to B115200 fit nicely in a 'short', allowing us to retain
   * ospeed's type for compatibility.
   */
--#if (defined(__FreeBSD__) && (__FreeBSD_version < 700000)) || defined(__NetBSD__) || defined(__OpenBSD__)
-+#if (defined(__FreeBSD__) && (__FreeBSD_version < 700000)) || defined(__NetBSD__) || (defined(__OpenBSD__) && (OpenBSD < 201405))
+-#if NCURSES_OSPEED_COMPAT && ((defined(__FreeBSD__) && (__FreeBSD_version < 700000)) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__))
++#if NCURSES_OSPEED_COMPAT && ((defined(__FreeBSD__) && (__FreeBSD_version < 700000)) || defined(__NetBSD__) || (defined(__OpenBSD__) && (OpenBSD < 201405)) || defined(__APPLE__))
  #undef B0
  #undef B50
  #undef B75
