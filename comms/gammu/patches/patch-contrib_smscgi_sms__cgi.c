@@ -1,17 +1,17 @@
-$NetBSD: patch-contrib_smscgi_sms__cgi.c,v 1.2 2014/11/23 09:46:49 mef Exp $
+$NetBSD: patch-contrib_smscgi_sms__cgi.c,v 1.3 2015/08/17 16:42:53 leot Exp $
 
 Fix build on SunOS.
 
---- contrib/smscgi/sms_cgi.c.orig	2009-09-08 09:57:12.000000000 +0200
-+++ contrib/smscgi/sms_cgi.c	2012-01-25 19:47:48.177845692 +0100
-@@ -26,6 +26,10 @@
- #include <signal.h>
- #include <sys/wait.h>
- 
+--- contrib/smscgi/sms_cgi.c.orig	2015-08-14 12:32:29.000000000 +0000
++++ contrib/smscgi/sms_cgi.c
+@@ -28,6 +28,10 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
++ 
 +#ifdef __sun
 +#include <alloca.h>
 +#endif
-+
+ 
  #include "sms_cgi.h"
  
- /* Some systems let waitpid(2) tell callers about stopped children. */
