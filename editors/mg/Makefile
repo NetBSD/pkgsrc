@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/12/12 12:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/17 17:11:21 wiz Exp $
 #
 
 DISTNAME=	mg-20110905
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://homepage.boetes.org/software/mg/
 

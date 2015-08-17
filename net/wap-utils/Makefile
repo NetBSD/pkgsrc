@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2014/02/22 17:40:38 wiedi Exp $
+# $NetBSD: Makefile,v 1.24 2015/08/17 17:11:28 wiz Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
 PKGNAME=	w${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ap-utils/}
 EXTRACT_SUFX=	.tar.bz2

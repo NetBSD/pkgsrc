@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2015/08/11 20:11:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2015/08/17 17:11:21 wiz Exp $
 #
 
 DISTNAME=	ht-2.1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hte/}
 EXTRACT_SUFX=	.tar.bz2
