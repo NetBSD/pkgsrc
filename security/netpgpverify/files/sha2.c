@@ -1,4 +1,4 @@
-/* $NetBSD: sha2.c,v 1.2 2013/03/24 16:48:17 joerg Exp $ */
+/* $NetBSD: sha2.c,v 1.3 2015/08/17 11:37:55 jperkin Exp $ */
 /*	$KAME: sha2.c,v 1.9 2003/07/20 00:28:38 itojun Exp $	*/
 
 /*
@@ -35,8 +35,6 @@
  * SUCH DAMAGE.
  *
  */
-
-#include <sys/cdefs.h>
 
 #include <sys/types.h>
 
