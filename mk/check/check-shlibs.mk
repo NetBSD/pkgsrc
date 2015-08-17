@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.25 2015/08/17 16:39:13 jperkin Exp $
+# $NetBSD: check-shlibs.mk,v 1.26 2015/08/17 17:35:23 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -50,17 +50,23 @@ _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST} |		\
 privileged-install-hook: _check-shlibs
 .endif
 
-.if !empty(USE_CHECK_SHLIBS_ELF:M[yY][eE][sS])
-CHECK_SHLIBS_ELF=	${PKGSRCDIR}/mk/check/check-shlibs-elf.awk
-CHECK_SHLIBS_ELF_ENV=	PLATFORM_RPATH=${_OPSYS_SYSTEM_RPATH:Q}
-CHECK_SHLIBS_ELF_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
-CHECK_SHLIBS_ELF_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
-CHECK_SHLIBS_ELF_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
-CHECK_SHLIBS_ELF_ENV+=	DEPENDS_FILE=${_RRDEPENDS_FILE:Q}
-.  if ${_USE_DESTDIR} != "no"
-CHECK_SHLIBS_ELF_ENV+=	DESTDIR=${DESTDIR:Q}
+.if ${_USE_CHECK_SHLIBS_NATIVE} == "yes"
+CHECK_SHLIBS_NATIVE_ENV=
+.  if ${OBJECT_FMT} == "ELF"
+USE_TOOLS+=			readelf
+CHECK_SHLIBS_NATIVE=		${PKGSRCDIR}/mk/check/check-shlibs-elf.awk
+CHECK_SHLIBS_NATIVE_ENV+=	PLATFORM_RPATH=${_OPSYS_SYSTEM_RPATH:Q}
+CHECK_SHLIBS_NATIVE_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
+.  elif ${OBJECT_FMT} == "Mach-O"
+CHECK_SHLIBS_NATIVE=		${PKGSRCDIR}/mk/check/check-shlibs-macho.awk
 .  endif
-CHECK_SHLIBS_ELF_ENV+=	WRKDIR=${WRKDIR:Q}
+CHECK_SHLIBS_NATIVE_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
+CHECK_SHLIBS_NATIVE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
+CHECK_SHLIBS_NATIVE_ENV+=	DEPENDS_FILE=${_RRDEPENDS_FILE:Q}
+.  if ${_USE_DESTDIR} != "no"
+CHECK_SHLIBS_NATIVE_ENV+=	DESTDIR=${DESTDIR:Q}
+.  endif
+CHECK_SHLIBS_NATIVE_ENV+=	WRKDIR=${WRKDIR:Q}
 
 _check-shlibs: error-check .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
@@ -76,7 +82,7 @@ _check-shlibs: error-check .PHONY
 		esac;							\
 		${ECHO} $$file;						\
 	done |								\
-	${PKGSRC_SETENV} ${CHECK_SHLIBS_ELF_ENV} ${AWK} -f ${CHECK_SHLIBS_ELF} > ${ERROR_DIR}/${.TARGET}
+	${PKGSRC_SETENV} ${CHECK_SHLIBS_NATIVE_ENV} ${AWK} -f ${CHECK_SHLIBS_NATIVE} > ${ERROR_DIR}/${.TARGET}
 
 .else
 .  if ${_USE_DESTDIR} != "no"
