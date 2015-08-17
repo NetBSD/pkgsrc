@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2013/04/10 21:10:55 tonnerre Exp $
+$NetBSD: patch-aa,v 1.6 2015/08/17 13:20:43 fhajny Exp $
 
 Add NetBSD to list of operating systems that the OpenBSD provider is the
 default for now. In fact, NetBSD's pkg_add provider can do a lot more
 than OpenBSD's, but for now basic support should suffice.
 
---- lib/puppet/provider/package/openbsd.rb.orig	2013-04-01 00:44:50.000000000 +0000
+--- lib/puppet/provider/package/openbsd.rb.orig	2015-08-14 08:28:22.513689691 +0000
 +++ lib/puppet/provider/package/openbsd.rb
-@@ -7,7 +7,7 @@ Puppet::Type.type(:package).provide :ope
-   commands :pkginfo => "pkg_info", :pkgadd => "pkg_add", :pkgdelete => "pkg_delete"
+@@ -14,7 +14,7 @@ Puppet::Type.type(:package).provide :ope
+            :pkgdelete => "pkg_delete"
  
    defaultfor :operatingsystem => :openbsd
 -  confine :operatingsystem => :openbsd
 +  confine :operatingsystem => [:openbsd, :netbsd]
  
    has_feature :versionable
- 
+   has_feature :install_options
