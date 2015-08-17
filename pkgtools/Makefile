@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2015/07/04 14:38:28 khorben Exp $
+# $NetBSD: Makefile,v 1.110 2015/08/17 08:15:40 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -69,6 +69,5 @@ SUBDIR+=	shlock
 SUBDIR+=	url2pkg
 SUBDIR+=	verifypc
 SUBDIR+=	x11-links
-SUBDIR+=	xpkgwedge
 
 .include "../mk/misc/category.mk"
