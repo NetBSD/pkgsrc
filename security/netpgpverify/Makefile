@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/02/05 00:21:57 agc Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/17 11:37:55 jperkin Exp $
 
 DISTNAME=		netpgpverify-20150205
 CATEGORIES=		security
@@ -12,6 +12,8 @@ LICENSE=		modified-bsd
 
 AUTO_MKDIRS=		yes
 GNU_CONFIGURE=		yes
+
+TEST_TARGET=		tst
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}

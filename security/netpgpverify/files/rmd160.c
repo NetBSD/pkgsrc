@@ -1,4 +1,4 @@
-/* 	$NetBSD: rmd160.c,v 1.1 2013/03/16 07:32:35 agc Exp $ */
+/* 	$NetBSD: rmd160.c,v 1.2 2015/08/17 11:37:55 jperkin Exp $ */
 /*	$KAME: rmd160.c,v 1.2 2003/07/25 09:37:55 itojun Exp $	*/
 /*	$OpenBSD: rmd160.c,v 1.3 2001/09/26 21:40:13 markus Exp $	*/
 /*
@@ -29,8 +29,6 @@
  * RSA Laboratories, CryptoBytes, Volume 3, Number 2, Autumn 1997,
  * ftp://ftp.rsasecurity.com/pub/cryptobytes/crypto3n2.pdf
  */
-
-#include <sys/cdefs.h>
 
 #include <string.h>
 

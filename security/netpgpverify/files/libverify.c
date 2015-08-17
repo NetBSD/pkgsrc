@@ -32,6 +32,7 @@
 #include <arpa/inet.h>
 
 #include <inttypes.h>
+#include <limits.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -62,6 +63,10 @@
 
 #ifndef __printflike
 #define __printflike(n, m)		__attribute__((format(printf,n,m)))
+#endif
+
+#ifndef MIN
+#define MIN(a,b)			(((a)<(b))?(a):(b))
 #endif
 
 #define BITS_TO_BYTES(b)		(((b) + (CHAR_BIT - 1)) / CHAR_BIT)

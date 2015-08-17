@@ -1,4 +1,4 @@
-/*	$NetBSD: sha2.h,v 1.1 2013/03/16 07:32:35 agc Exp $	*/
+/*	$NetBSD: sha2.h,v 1.2 2015/08/17 11:37:55 jperkin Exp $	*/
 /*	$KAME: sha2.h,v 1.4 2003/07/20 00:28:38 itojun Exp $	*/
 
 /*
@@ -40,7 +40,6 @@
 #define __SHA2_H__
 
 #include <sys/types.h>
-#include <sys/cdefs.h>
 
 /*** SHA-224/256/384/512 Various Length Definitions ***********************/
 #define SHA224_BLOCK_LENGTH		64
@@ -56,6 +55,15 @@
 #define SHA512_DIGEST_LENGTH		64
 #define SHA512_DIGEST_STRING_LENGTH	(SHA512_DIGEST_LENGTH * 2 + 1)
 
+#ifndef __BEGIN_DECLS
+#  if defined(__cplusplus)
+#  define __BEGIN_DECLS           extern "C" {
+#  define __END_DECLS             }
+#  else
+#  define __BEGIN_DECLS
+#  define __END_DECLS
+#  endif
+#endif
 
 /*** SHA-256/384/512 Context Structures *******************************/
 typedef struct _SHA256_CTX {
