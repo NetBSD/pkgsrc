@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14741 2015/08/17 17:10:57 wiz Exp $
+$NetBSD: TODO,v 1.14742 2015/08/17 18:09:42 leot Exp $
 
 Suggested new packages
 ======================
@@ -1880,7 +1880,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o trojita-0.5
 	o ts-0.7.5
 	o tsclient-0.140
-	o ttf-tlwg-0.6.1
 	o turba-4.1.4
 	o uae-0.8.29
 	o ubs-0.20
