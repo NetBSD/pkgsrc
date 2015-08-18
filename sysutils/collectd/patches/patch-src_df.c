@@ -1,4 +1,4 @@
-$NetBSD: patch-src_df.c,v 1.3 2015/08/18 07:47:46 he Exp $
+$NetBSD: patch-src_df.c,v 1.4 2015/08/18 07:52:20 he Exp $
 
 Older NetBSD doesn't have float_t.
 
@@ -11,7 +11,7 @@ Older NetBSD doesn't have float_t.
 +#if defined(__NetBSD__)
 +#include <sys/param.h>
 +#include <math.h>
-+#if __NetBSD_VERSION__ < 699001900
++#if __NetBSD_Version__ < 699001900
 +typedef float float_t;
 +#endif
 +#endif
