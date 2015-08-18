@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/10/16 23:28:49 roy Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/18 07:31:06 wiz Exp $
 #
 
 DISTNAME=	tweak-3.01
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/tweak/
 

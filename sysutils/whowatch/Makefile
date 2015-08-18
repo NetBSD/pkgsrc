@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2015/08/17 17:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/08/18 07:31:18 wiz Exp $
 
 DISTNAME=	whowatch-1.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://wizard.ae.krakow.pl/~mike/download/ \
 		http://janek.ae.krakow.pl/~suszyckm/download/

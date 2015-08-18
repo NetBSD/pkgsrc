@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/08/18 07:31:04 wiz Exp $
 #
 
 DISTNAME=	abook-0.6.0pre2
 PKGNAME=	abook-0.6.0rc2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://abook.sourceforge.net/devel/
 

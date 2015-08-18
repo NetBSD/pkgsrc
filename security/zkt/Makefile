@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/01/02 00:50:07 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/18 07:31:17 wiz Exp $
 #
 
 DISTNAME=	zkt-1.1.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.hznet.de/dns/zkt/
 

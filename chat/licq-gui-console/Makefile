@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2015/08/17 17:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:03 wiz Exp $
 #
 
 DISTNAME=	licq-1.3.5
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:C/-/-gui-console-/}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=licq/}

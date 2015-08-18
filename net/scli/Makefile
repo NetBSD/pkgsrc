@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/08/17 17:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/08/18 07:31:15 wiz Exp $
 #
 
 DISTNAME=		scli-0.3.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/local/scli/
 

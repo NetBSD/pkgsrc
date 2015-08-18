@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/10/29 02:37:56 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:12 wiz Exp $
 
 DISTNAME=	eukleides-1.5.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	http://www.eukleides.org/files/
 EXTRACT_SUFX=	.tar.bz2

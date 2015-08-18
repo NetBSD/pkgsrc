@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2015/08/18 07:31:03 wiz Exp $
 
 DISTNAME=	snooper-19991202
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/tools/snooper/
 

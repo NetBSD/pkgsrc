@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/10/17 17:03:11 roy Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/18 07:31:09 wiz Exp $
 #
 
 DISTNAME=	robotfindskitten-1.7320508.406
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://robotfindskitten.org/download/POSIX/
 

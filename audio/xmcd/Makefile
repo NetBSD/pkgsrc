@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2013/10/15 13:38:19 roy Exp $
+# $NetBSD: Makefile,v 1.79 2015/08/18 07:31:03 wiz Exp $
 
 DISTNAME=	xmcd-3.0.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 

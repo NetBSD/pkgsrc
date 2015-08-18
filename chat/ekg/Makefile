@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2015/08/17 17:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2015/08/18 07:31:03 wiz Exp $
 
 DISTNAME=	ekg-1.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	chat
 MASTER_SITES=	http://ekg.chmurka.net/ \
 		http://ekg.chmurka.net/archive/

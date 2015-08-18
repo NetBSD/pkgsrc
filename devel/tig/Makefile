@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/08/17 17:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/18 07:31:05 wiz Exp $
 
 DISTNAME=	tig-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 14:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:01 wiz Exp $
 #
 
 DISTNAME=	gramofile-1.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.opensourcepartners.nl/~costar/gramofile/
 

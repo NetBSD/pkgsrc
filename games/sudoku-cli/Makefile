@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/10/17 16:24:11 roy Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:09 wiz Exp $
 #
 
 DISTNAME=		sudoku-1.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		${DISTNAME:S/sudoku/sudoku-cli/}
 CATEGORIES=		games
 MASTER_SITES=		http://www.laurasia.com.au/downloads/

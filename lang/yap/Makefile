@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2015/08/17 17:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/08/18 07:31:11 wiz Exp $
 
 DISTNAME=		yap-6.3.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 # MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yap/}
 MASTER_SITES=		http://www.dcc.fc.up.pt/~vsc/Yap/ \
