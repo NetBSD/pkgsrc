@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/08/24 07:06:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/08/18 12:29:44 mef Exp $
 bin/rrdcached
 bin/rrdcgi
 bin/rrdcreate
@@ -139,3 +139,4 @@ share/examples/rrdtool/perftest.pl
 share/examples/rrdtool/piped-demo.pl
 share/examples/rrdtool/shared-demo.pl
 share/examples/rrdtool/stripes.pl
+share/examples/rrdtool/stripes.py

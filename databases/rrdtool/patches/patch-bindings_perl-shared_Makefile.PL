@@ -1,17 +1,18 @@
-$NetBSD: patch-bindings_perl-shared_Makefile.PL,v 1.1 2013/10/20 18:18:52 joerg Exp $
+$NetBSD: patch-bindings_perl-shared_Makefile.PL,v 1.2 2015/08/18 12:29:44 mef Exp $
 
---- bindings/perl-shared/Makefile.PL.orig	2013-10-16 20:05:57.000000000 +0000
-+++ bindings/perl-shared/Makefile.PL
-@@ -30,9 +30,9 @@ if (($Config{'osname'} eq 'MSWin32' && $
+ 
+--- bindings/perl-shared/Makefile.PL.orig	2015-04-20 23:12:18.000000000 +0900
++++ bindings/perl-shared/Makefile.PL	2015-08-16 22:00:55.000000000 +0900
+@@ -40,9 +40,9 @@ if (($Config{'osname'} eq 'MSWin32' && $
  		for ($^O){
  			/linux/   && do{ $R = "-Wl,--rpath -Wl,$rp"};
  			/hpux/    && do{ $R = "+b$rp"};
 -			/solaris/ && do{ $R = "-R$rp"};
--			/bsd/     && do{ $R = "-R$rp"};
+-			/bsd/     && do{ $R = "-Wl,--rpath -Wl,$rp"};
 -			/aix/     && do{ $R = "-blibpath:$rp"};
 +			/solaris/ && do{ $R = "-Wl,-R$rp"};
-+			/bsd/     && do{ $R = "-Wl,-R$rp"};
-+			/aix/     && do{ $R = "-Wl,-blibpath:$rp"};
++			/bsd/	  && do{ $R = "-Wl,-R$rp"};
++			/aix/	  && do{ $R = "-Wl,-blibpath:$rp"};
  		}
  	}
  
