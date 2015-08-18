@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:24:26 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2015/08/18 07:31:00 wiz Exp $
 
 BUILDLINK_TREE+=	pdcurses
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	pdcurses
 PDCURSES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pdcurses+=	pdcurses>=3.3
+BUILDLINK_ABI_DEPENDS.pdcurses?=		pdcurses>=3.3nb2
 BUILDLINK_PKGSRCDIR.pdcurses?=		../../devel/pdcurses
 
 BUILDLINK_LIBNAME.pdcurses=	XCurses
