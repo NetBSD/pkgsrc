@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2013/10/17 15:36:34 roy Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2015/08/18 07:31:00 wiz Exp $
 
 BUILDLINK_TREE+=	aalib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	aalib
 AALIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.aalib+=	aalib>=1.4.0.4
-BUILDLINK_ABI_DEPENDS.aalib+=	aalib>=1.4.0.5nb3
+BUILDLINK_ABI_DEPENDS.aalib+=	aalib>=1.4.0.5nb4
 BUILDLINK_PKGSRCDIR.aalib?=	../../graphics/aalib
 
 pkgbase := aalib

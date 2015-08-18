@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/18 07:31:05 wiz Exp $
 #
 
 PKGNAME=		picprg-2.3d
 DISTNAME=		${PKGNAME_NOREV:S/-//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.finitesite.com/d3jsys/
 

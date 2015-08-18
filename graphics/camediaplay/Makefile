@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2015/03/13 17:45:50 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:09 wiz Exp $
 
 DISTNAME=	camediaplay-20010211
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.itojun.org/pub/digi-cam/C-400L/unix/
 

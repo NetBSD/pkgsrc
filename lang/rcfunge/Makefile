@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/03/09 11:48:15 roy Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:10 wiz Exp $
 #
 
 DISTNAME=	rcfunge2
 PKGNAME=	rcfunge-2.02
-PKGREVISION=	1
+PKGREVISION=	2
 DIST_SUBDIR=	rcfunge-2.02
 CATEGORIES=	lang
 MASTER_SITES=	http://www.rcfunge98.com/

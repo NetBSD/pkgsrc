@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2015/08/17 17:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2015/08/18 07:31:15 wiz Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
 PKGNAME=		sniffit-0.3.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net security
 MASTER_SITES=		http://reptile.rug.ac.be/~coder/sniffit/files/
 
