@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/18 07:31:17 wiz Exp $
 
 PKGNAME=	heirloom-ls-${HEIRLOOM_VER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 LICENSE=	modified-bsd AND original-bsd
 

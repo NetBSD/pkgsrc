@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2013/10/14 13:33:31 roy Exp $
+# $NetBSD: Makefile,v 1.33 2015/08/18 07:31:01 wiz Exp $
 #
 
 DISTNAME=	emixer-0.05.5
 PKGNAME=	emixer-0.5.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	# http://emixer.linuxbox.com/
 
