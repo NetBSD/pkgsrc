@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.56 2015/08/18 13:26:29 richard Exp $
+$NetBSD: distinfo,v 1.57 2015/08/18 22:19:38 wiz Exp $
 
-SHA1 (libdrm-2.4.63.tar.bz2) = 996fb06859ef56bcecbdd43963d8258095caa2cc
-RMD160 (libdrm-2.4.63.tar.bz2) = 699d7efbcb1b642a7d25035176931a0aa6b56c3c
-Size (libdrm-2.4.63.tar.bz2) = 677288 bytes
+SHA1 (libdrm-2.4.64.tar.bz2) = 057492fa0742b778687757e241fff4ef39fcb7c3
+RMD160 (libdrm-2.4.64.tar.bz2) = a7ff0df732501e438315ae9d5821cd1d1fb0f332
+Size (libdrm-2.4.64.tar.bz2) = 640440 bytes
 SHA1 (patch-ab) = ebc345d7f1aeb583b3ebb883fb3b27abc5b8133c
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-amdgpu_amdgpu__cs.c) = 8c88901b92000eaee89d541982f14c0a5b49c66e
