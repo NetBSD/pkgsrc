@@ -1,15 +1,15 @@
-$NetBSD: patch-al,v 1.17 2010/07/06 07:31:20 adam Exp $
+$NetBSD: patch-al,v 1.18 2015/08/18 12:29:44 mef Exp $
 
 Correct examples directory.
 
---- examples/Makefile.in.orig	2010-07-05 19:31:54.000000000 +0000
-+++ examples/Makefile.in
-@@ -330,7 +330,7 @@ top_builddir = @top_builddir@
+--- examples/Makefile.in.orig	2015-08-10 00:17:18.000000000 +0900
++++ examples/Makefile.in	2015-08-16 22:02:38.000000000 +0900
+@@ -420,7 +420,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  SUBDIRS = rrdcached
- EXTRA_DIST = cgi-demo.cgi.in
+ EXTRA_DIST = cgi-demo.cgi.in stripes.py
 -examplesdir = $(pkgdatadir)/examples
 +examplesdir = $(prefix)/share/examples/rrdtool
  examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl \
- 	stripes.pl bigtops.pl minmax.pl 4charts.pl perftest.pl
- 
+ 	stripes.pl bigtops.pl minmax.pl 4charts.pl perftest.pl \
+         stripes.py

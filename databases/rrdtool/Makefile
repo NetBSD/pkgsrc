@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.118 2015/06/12 10:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2015/08/18 12:29:44 mef Exp $
 #
 # Please, also update databases/ruby-rrdtool
 
-DISTNAME=	rrdtool-1.4.9
-PKGREVISION=	2
+DISTNAME=	rrdtool-1.5.4
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 
@@ -39,6 +38,9 @@ SUBST_MESSAGE.prefix=	Fixing $${prefix} in scripts.
 SUBST_FILES.prefix=	examples/cgi-demo.cgi
 SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
+REPLACE_PYTHON=		examples/stripes.py
+TEST_TARGET=		# *** No rule to make target 'test'. 
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
@@ -49,5 +51,7 @@ SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../lang/python/application.mk"
+
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
