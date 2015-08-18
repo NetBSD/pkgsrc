@@ -1,0 +1,48 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2015/08/18 07:47:46 he Exp $
+
+Install config file in example directory.
+
+--- src/Makefile.am.orig	2015-05-26 19:38:14.000000000 +0000
++++ src/Makefile.am
+@@ -14,13 +14,15 @@ AM_CPPFLAGS = -I$(srcdir)/daemon
+ AM_CPPFLAGS += -DPREFIX='"${prefix}"'
+ AM_CPPFLAGS += -DCONFIGFILE='"${sysconfdir}/${PACKAGE_NAME}.conf"'
+ AM_CPPFLAGS += -DLOCALSTATEDIR='"${localstatedir}"'
+-AM_CPPFLAGS += -DPKGLOCALSTATEDIR='"${localstatedir}/lib/${PACKAGE_NAME}"'
++AM_CPPFLAGS += -DPKGLOCALSTATEDIR='"${localstatedir}/db/${PACKAGE_NAME}"'
+ if BUILD_FEATURE_DAEMON
+ AM_CPPFLAGS += -DPIDFILE='"${localstatedir}/run/${PACKAGE_NAME}.pid"'
+ endif
+ AM_CPPFLAGS += -DPLUGINDIR='"${pkglibdir}"'
+ AM_CPPFLAGS += -DPKGDATADIR='"${pkgdatadir}"'
+ 
++egdir = @exec_prefix@/share/examples/@PACKAGE@
++
+ AUTOMAKE_OPTIONS = subdir-objects
+ 
+ noinst_LTLIBRARIES = libmount.la liblookup.la
+@@ -1363,13 +1365,8 @@ riemann.pb-c.c riemann.pb-c.h: riemann.p
+ endif
+ 
+ install-exec-hook:
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+-	if test -e $(DESTDIR)$(sysconfdir)/collectd.conf; \
+-	then \
+-		$(INSTALL) -m 0640 collectd.conf $(DESTDIR)$(sysconfdir)/collectd.conf.pkg-orig; \
+-	else \
+-		$(INSTALL) -m 0640 collectd.conf $(DESTDIR)$(sysconfdir)/collectd.conf; \
+-	fi; \
++	$(mkinstalldirs) $(DESTDIR)$(egdir)
++	$(INSTALL) -m 0640 collectd.conf $(DESTDIR)$(egdir)/collectd.conf
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+ 	$(INSTALL) -m 0644 $(srcdir)/types.db $(DESTDIR)$(pkgdatadir)/types.db;
+ 	$(INSTALL) -m 0644 $(srcdir)/postgresql_default.conf \
+@@ -1377,7 +1374,7 @@ install-exec-hook:
+ 
+ uninstall-hook:
+ 	rm -f $(DESTDIR)$(pkgdatadir)/types.db;
+-	rm -f $(DESTDIR)$(sysconfdir)/collectd.conf
++	rm -f $(DESTDIR)$(egdir)/collectd.conf
+ 	rm -f $(DESTDIR)$(pkgdatadir)/postgresql_default.conf;
+ 
+ check_PROGRAMS = test_utils_mount test_utils_vl_lookup

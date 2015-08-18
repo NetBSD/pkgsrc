@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/11 13:19:21 he Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/18 07:47:46 he Exp $
 bin/collectd-nagios
 bin/collectd-tg
 bin/collectdctl
@@ -21,6 +21,7 @@ lib/collectd/exec.la
 lib/collectd/filecount.la
 lib/collectd/hddtemp.la
 ${PLIST.interface}lib/collectd/interface.la
+${PLIST.irq}lib/collectd/irq.la
 ${PLIST.load}lib/collectd/load.la
 lib/collectd/logfile.la
 lib/collectd/match_empty_counter.la

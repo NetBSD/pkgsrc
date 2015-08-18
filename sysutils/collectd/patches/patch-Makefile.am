@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2015/08/18 07:47:46 he Exp $
+
+Use other data directory.
+
+--- Makefile.am.orig	2015-03-09 09:38:22.000000000 +0000
++++ Makefile.am
+@@ -8,7 +8,7 @@ EXTRA_DIST = contrib version-gen.sh
+ 
+ install-exec-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/run
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/lib/$(PACKAGE_NAME)
++	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/db/$(PACKAGE_NAME)
+ 	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log
+ 
+ maintainer-clean-local:
