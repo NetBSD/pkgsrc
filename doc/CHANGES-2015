@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3460 2015/08/18 07:52:53 he Exp $
+$NetBSD: CHANGES-2015,v 1.3461 2015/08/18 12:29:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6260,3 +6260,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ncursesw to 6.0 [wiz 2015-08-17]
 	Updated fonts/ttf-tlwg to 0.6.1 [leot 2015-08-17]
 	Updated sysutils/collectd to 5.5.0nb5 [he 2015-08-18]
+	Updated databases/rrdtool to 1.5.4 [mef 2015-08-18]
