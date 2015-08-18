@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2013/10/15 21:20:29 roy Exp $
+# $NetBSD: Makefile,v 1.54 2015/08/18 07:31:03 wiz Exp $
 
 DISTNAME=	naim-0.11.8.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://naim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

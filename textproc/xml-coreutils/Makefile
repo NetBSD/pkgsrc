@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/08/17 17:11:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/18 07:31:19 wiz Exp $
 #
 
 DISTNAME=	xml-coreutils-0.8a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xml-coreutils/}
 

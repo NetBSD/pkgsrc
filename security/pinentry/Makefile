@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2015/08/17 17:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2015/08/18 07:31:17 wiz Exp $
 
 COMMENT=		Applications for entering PINs or Passphrases
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFIGURE_ARGS+=	--enable-pinentry-tty
 CONFIGURE_ARGS+=        --enable-pinentry-emacs

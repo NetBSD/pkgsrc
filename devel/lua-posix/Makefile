@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/18 07:31:04 wiz Exp $
 
 DISTNAME=	luaposix-release-v31
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/:S/release-v//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	-https://github.com/luaposix/luaposix/archive/release-v31.tar.gz
 

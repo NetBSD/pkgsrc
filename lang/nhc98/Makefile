@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2015/01/04 03:26:34 dholland Exp $
+# $NetBSD: Makefile,v 1.49 2015/08/18 07:31:10 wiz Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		http://www.haskell.org/nhc98/
 

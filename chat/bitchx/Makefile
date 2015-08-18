@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2014/02/12 23:17:35 tron Exp $
+# $NetBSD: Makefile,v 1.55 2015/08/18 07:31:03 wiz Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bitchx/}
 

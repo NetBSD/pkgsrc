@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2015/03/15 14:54:19 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2015/08/18 07:31:12 wiz Exp $
 #
 
 DISTNAME=	xlife-5.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math games
 MASTER_SITES=	http://www.catb.org/~esr/
 

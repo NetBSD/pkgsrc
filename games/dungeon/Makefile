@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/10/17 16:36:07 roy Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:08 wiz Exp $
 #
 
 DISTNAME=	dungeon-3.2b
-PKGREVISION=	1
+PKGREVISION=	2
 DISTFILES=	dungeon-gdt-glk.tar.gz \
 		glkterm-080.tar.gz
 CATEGORIES=	games

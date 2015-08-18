@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/01/04 09:25:36 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/18 07:31:14 wiz Exp $
 
 DISTNAME=	window-20120215
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2015/04/20 07:35:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:04 wiz Exp $
 
 DISTNAME=	cgdb-0.6.8
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://cgdb.me/files/
 

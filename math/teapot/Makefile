@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/10/09 12:07:20 obache Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/18 07:31:12 wiz Exp $
 
 DISTNAME=	teapot-2.3.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.syntax-k.de/projekte/teapot/
 

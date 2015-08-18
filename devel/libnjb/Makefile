@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:18 asau Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:04 wiz Exp $
 #
 
 DISTNAME=		libnjb-2.2.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libnjb/}
 

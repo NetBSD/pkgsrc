@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/03/06 21:03:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/18 07:31:17 wiz Exp $
 
 FISHVER=		2.1.2
 DISTNAME=		fish-${FISHVER}
+PKGREVISION=		1
 CATEGORIES=		shells
 MASTER_SITES=		http://fishshell.com/files/${FISHVER}/
 

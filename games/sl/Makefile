@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2015/08/17 17:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/08/18 07:31:09 wiz Exp $
 #
 
 DISTNAME=	sl-5.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	-https://github.com/mtoyoda/sl/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 

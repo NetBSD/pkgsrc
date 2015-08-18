@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/08/17 16:59:22 leot Exp $
-#
+# $NetBSD: Makefile,v 1.12 2015/08/18 07:31:08 wiz Exp $
 
 DISTNAME=		moon-buggy-1.0.51
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://m.seehuhn.de/programs/
 
