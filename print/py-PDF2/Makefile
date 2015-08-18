@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/10/02 13:16:20 wen Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/18 16:58:21 kleink Exp $
 
-DISTNAME=	PyPDF2-1.23
+DISTNAME=	PyPDF2-1.25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	print python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/PyPDF2/
