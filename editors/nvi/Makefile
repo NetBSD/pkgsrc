@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2015/08/17 17:11:22 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/08/18 07:31:06 wiz Exp $
 
 DISTNAME=	nvi-1.81.6
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE:Q}
 EXTRACT_SUFX=	.tar.bz2

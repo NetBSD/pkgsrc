@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/08/17 17:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/08/18 07:31:16 wiz Exp $
 #
 
 DISTNAME=	pkg_select-20090308
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/18 07:31:19 wiz Exp $
 
 PKGNAME=	heirloom-ul-${HEIRLOOM_VER}
+PKGREVISION=	1
 CATEGORIES=	textproc
 LICENSE=	original-bsd
 
