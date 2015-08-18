@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/10/02 13:16:20 wen Exp $
+$NetBSD: distinfo,v 1.3 2015/08/18 16:58:21 kleink Exp $
 
-SHA1 (PyPDF2-1.23.tar.gz) = e5f6caac9c6ed490fe2a782de56c2840902eb1ca
-RMD160 (PyPDF2-1.23.tar.gz) = f009d1c3cc887605caf93fe61b38b85e0ec160f0
-Size (PyPDF2-1.23.tar.gz) = 59589 bytes
+SHA1 (PyPDF2-1.25.1.tar.gz) = b45adc8cf2129e4c7a3a22a2a3266fb80b64f457
+RMD160 (PyPDF2-1.25.1.tar.gz) = 50aba019402254fe36389426778462bae5890b7b
+Size (PyPDF2-1.25.1.tar.gz) = 194181 bytes
