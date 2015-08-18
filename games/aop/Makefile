@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/10/17 09:12:42 roy Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/18 07:31:07 wiz Exp $
 
 DISTNAME=	aop-0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://raffi.at/code/aop/
 

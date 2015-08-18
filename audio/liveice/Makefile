@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/09/12 00:24:45 asau Exp $
+# $NetBSD: Makefile,v 1.20 2015/08/18 07:31:02 wiz Exp $
 #
 
 DISTNAME=	liveice
 PKGNAME=	liveice-0.20001121
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://star.arm.ac.uk/~spm/software/
 
