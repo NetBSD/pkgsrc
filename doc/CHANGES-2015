@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3461 2015/08/18 12:29:56 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3462 2015/08/18 16:59:35 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6261,3 +6261,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/ttf-tlwg to 0.6.1 [leot 2015-08-17]
 	Updated sysutils/collectd to 5.5.0nb5 [he 2015-08-18]
 	Updated databases/rrdtool to 1.5.4 [mef 2015-08-18]
+	Updated print/py-PDF2 to 1.25.1 [kleink 2015-08-18]
