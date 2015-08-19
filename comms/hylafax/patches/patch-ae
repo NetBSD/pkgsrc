@@ -1,7 +1,11 @@
-$NetBSD: patch-ae,v 1.18 2014/03/14 15:59:29 adam Exp $
+$NetBSD: patch-ae,v 1.18.12.1 2015/08/19 19:50:56 tron Exp $
 
 * Customize paths.
 * Configure for pkgsrc.
+* LIBPORT needs to be specified with -L and -l (instead of the path to
+the .a file) to match the other internal libraries. Otherwise the
+wrappers reorder it relative to the other internal libraries and some
+symbols aren't resolved at link time.
 
 --- configure.orig	2012-06-06 00:58:38.000000000 +0000
 +++ configure
@@ -160,6 +164,15 @@ $NetBSD: patch-ae,v 1.18 2014/03/14 15:59:29 adam Exp $
      capture cat t.c
      runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
  }
+@@ -3303,7 +3303,7 @@ else
+     Note "... emulate syslog&co."
+     PORTFUNCS="$PORTFUNCS syslog.c"
+ fi
+-LIBPORT='${PORT}/libport.a'
++LIBPORT='-L${PORT} -lport'
+ 
+ Note "Done checking system libraries."
+ 
 @@ -3314,19 +3314,13 @@ Note "Checking ZLIB support."
  #
  cat>t.c<<EOF
