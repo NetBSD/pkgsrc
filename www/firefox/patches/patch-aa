@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.38 2015/07/03 10:25:40 ryoon Exp $
+$NetBSD: patch-aa,v 1.39 2015/08/19 11:37:04 ryoon Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -273,7 +273,7 @@ $NetBSD: patch-aa,v 1.38 2015/07/03 10:25:40 ryoon Exp $
 +
 +dnl If using Linux, Solaris or BSDs, ensure that OSS is available
 +case "$OS_TARGET" in
-+Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
++Linux|SunOS|DragonFly|FreeBSD|GNU/kFreeBSD)
 +    MOZ_OSS=1
 +    ;;
 +esac
@@ -296,7 +296,7 @@ $NetBSD: patch-aa,v 1.38 2015/07/03 10:25:40 ryoon Exp $
 +    dnl Prefer 4Front implementation
 +    AC_MSG_CHECKING([MOZ_OSS_CFLAGS])
 +    if test "$OSSPREFIX" != "yes"; then
-+        oss_conf=${OSSPREFIX%/usr}/etc/oss.conf
++        oss_conf=${OSSPREFIX}/etc/oss.conf
 +        if test -f "$oss_conf"; then
 +            . "$oss_conf"
 +        else
