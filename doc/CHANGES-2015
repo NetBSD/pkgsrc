@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3464 2015/08/18 22:19:47 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3465 2015/08/19 07:13:46 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6264,3 +6264,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/py-PDF2 to 1.25.1 [kleink 2015-08-18]
 	Updated pkgtools/pkgin to 0.9.3 [jperkin 2015-08-18]
 	Updated x11/libdrm to 2.4.64 [wiz 2015-08-18]
+	Added misc/libreoffice43 version 4.3.5.2 [he 2015-08-19]
