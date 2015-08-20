@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3485 2015/08/20 23:30:25 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3486 2015/08/20 23:33:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6298,3 +6298,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libstatgrab to 0.91 [wiz 2015-08-20]
 	Updated textproc/p5-Text-Diff to 1.42 [mef 2015-08-20]
 	Updated textproc/p5-Text-Diff to 1.42 [mef 2015-08-20]
+	Updated www/p5-HTTP-Headers-Fast to 0.19 [mef 2015-08-20]
