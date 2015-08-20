@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3480 2015/08/20 15:35:09 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3481 2015/08/20 15:38:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6293,3 +6293,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-mode to 2.2.3 [taca 2015-08-20]
 	Updated www/drupal6 to 6.37 [taca 2015-08-20]
 	Updated www/drupal7 to 7.39 [taca 2015-08-20]
+	Updated devel/p5-Proc-ProcessTable to 0.51nb2 [wiz 2015-08-20]
