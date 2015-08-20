@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3484 2015/08/20 23:26:00 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3485 2015/08/20 23:30:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6296,4 +6296,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Proc-ProcessTable to 0.51nb2 [wiz 2015-08-20]
 	Updated finance/magento to 1.9.2.1 [fhajny 2015-08-20]
 	Updated devel/libstatgrab to 0.91 [wiz 2015-08-20]
+	Updated textproc/p5-Text-Diff to 1.42 [mef 2015-08-20]
 	Updated textproc/p5-Text-Diff to 1.42 [mef 2015-08-20]
