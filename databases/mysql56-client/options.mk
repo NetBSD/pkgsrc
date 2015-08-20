@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2015/07/30 14:39:18 adam Exp $
+# $NetBSD: options.mk,v 1.9 2015/08/20 12:24:45 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
 # ndb-cluster does not configure with cmake
 PKG_SUPPORTED_OPTIONS+=	dtrace embedded-server ndb-cluster sphinx ssl
+PKG_SUPPORTED_OPTIONS+=	memcached
 PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
 
 .include "../../mk/bsd.options.mk"
@@ -19,6 +20,17 @@ CMAKE_ARGS+=		-DWITH_SSL=no
 # Enable DTrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
 CMAKE_ARGS+=		-DENABLE_DTRACE=ON
+.endif
+
+# Enable InnoDB Memcached support
+PLIST_VARS+=		memcached
+.if !empty(PKG_OPTIONS:Mmemcached)
+PLIST.memcached=	yes
+CMAKE_ARGS+=		-DWITH_INNODB_MEMCACHED=ON
+CMAKE_ARGS+=		-DWITH_BUNDLED_MEMCACHED=ON
+.include "../../devel/libevent/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DWITH_INNODB_MEMCACHED=OFF
 .endif
 
 # Enable Sphinx SE support
