@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/07/30 14:39:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/08/20 12:24:45 jperkin Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -22,7 +22,9 @@ ${PLIST.auth_socket}lib/mysql/plugin/auth_socket.so
 lib/mysql/plugin/auth_test_plugin.so
 lib/mysql/plugin/daemon_example.ini
 ${PLIST.sphinx}lib/mysql/plugin/ha_sphinx.so
+${PLIST.memcached}lib/mysql/plugin/innodb_engine.so
 lib/mysql/plugin/libdaemon_example.so
+${PLIST.memcached}lib/mysql/plugin/libmemcached.so
 lib/mysql/plugin/mypluglib.so
 lib/mysql/plugin/mysql_no_login.so
 lib/mysql/plugin/qa_auth_client.so
