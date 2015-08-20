@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3471 2015/08/20 10:53:39 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3472 2015/08/20 10:54:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6273,3 +6273,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 40.0.2 [ryoon 2015-08-19]
 	Updated www/webnew to 1.3nb5 [is 2015-08-19]
 	Updated devel/nspr to 4.10.9 [ryoon 2015-08-20]
+	Updated devel/nss to 3.20 [ryoon 2015-08-20]
