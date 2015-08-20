@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3474 2015/08/20 13:02:18 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3475 2015/08/20 13:49:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6276,3 +6276,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nss to 3.20 [ryoon 2015-08-20]
 	Updated devel/cmake to 3.3.1 [ryoon 2015-08-20]
 	Updated mail/nmh to 1.6nb3 [leot 2015-08-20]
+	Updated devel/p5-Devel-PartialDump to 0.18 [mef 2015-08-20]
+	Updated devel/p5-Event to 1.24 [mef 2015-08-20]
