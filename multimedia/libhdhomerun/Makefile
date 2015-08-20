@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/05 16:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/20 12:13:30 jperkin Exp $
 
 DISTNAME=	libhdhomerun_20140121
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,6 +10,8 @@ MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://www.silicondust.com/
 COMMENT=	Client and library for Silicon Dust HD Homerun
 LICENSE=	gnu-lgpl-v2.1
+
+USE_GCC_RUNTIME=	yes
 
 USE_TOOLS+=	gmake
 
