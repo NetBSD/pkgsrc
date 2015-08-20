@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3473 2015/08/20 11:35:55 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3474 2015/08/20 13:02:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6275,3 +6275,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nspr to 4.10.9 [ryoon 2015-08-20]
 	Updated devel/nss to 3.20 [ryoon 2015-08-20]
 	Updated devel/cmake to 3.3.1 [ryoon 2015-08-20]
+	Updated mail/nmh to 1.6nb3 [leot 2015-08-20]
