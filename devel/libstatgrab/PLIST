@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/09/13 10:13:20 sno Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/08/20 17:13:47 wiz Exp $
 ${PLIST.saidar}bin/saidar
 ${PLIST.statgrab}bin/statgrab
 ${PLIST.statgrab}bin/statgrab-make-mrtg-config
@@ -113,3 +113,9 @@ man/man3/sg_vector_create.3
 man/man3/sg_vector_free.3
 man/man3/sg_vector_resize.3
 man/man3/statgrab.3
+share/doc/libstatgrab/AUTHORS
+share/doc/libstatgrab/COPYING
+share/doc/libstatgrab/COPYING.LGPL
+share/doc/libstatgrab/NEWS
+share/doc/libstatgrab/PLATFORMS
+share/doc/libstatgrab/README
