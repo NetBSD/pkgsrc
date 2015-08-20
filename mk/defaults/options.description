@@ -453,6 +453,7 @@ mc-samba		Enable smb virtual file system.
 mc-subshell		Enable support for subshell.
 mc-vfs			Support for VFS (virtual file system).
 mecab			Use MeCab as the Japanese Morphological Analzer.
+memcached		Enable memcached support.
 mex			Enable matlab mex support (Linux and Solaris only).
 migemo			Enable migemo (Japanese text search tool/library) support.
 mikmod			Enable MikMod sound library.
@@ -659,6 +660,7 @@ spamassassin-test-prefork	Enable spamd prefork test (kills processes containing 
 spandsp			Enable spandsp support.
 speex			Enable speex support.
 spf			Enable Sender Policy Framework support.
+sphinx			Enable Sphinx full-text search.
 sqlite			Enable SQLite support.
 sqlite3			Enable SQLite3 support.
 squid-arp-acl		Enable use of ARP ACL lists (ether address).
