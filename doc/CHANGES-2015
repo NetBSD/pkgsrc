@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3475 2015/08/20 13:49:35 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3476 2015/08/20 13:51:12 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6278,3 +6278,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/nmh to 1.6nb3 [leot 2015-08-20]
 	Updated devel/p5-Devel-PartialDump to 0.18 [mef 2015-08-20]
 	Updated devel/p5-Event to 1.24 [mef 2015-08-20]
+	Updated net/net-snmp to 5.7.3nb2 [jperkin 2015-08-20]
