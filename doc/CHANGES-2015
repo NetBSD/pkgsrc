@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3476 2015/08/20 13:51:12 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.3477 2015/08/20 15:25:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6279,3 +6279,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Devel-PartialDump to 0.18 [mef 2015-08-20]
 	Updated devel/p5-Event to 1.24 [mef 2015-08-20]
 	Updated net/net-snmp to 5.7.3nb2 [jperkin 2015-08-20]
+	Updated lang/ruby200-base to 2.0.0p647 [taca 2015-08-20]
+	Updated databases/ruby-gdbm to 2.0.0p647 [taca 2015-08-20]
+	Updated devel/ruby-curses to 2.0.0p647nb1 [taca 2015-08-20]
+	Updated devel/ruby-fiddle to 2.0.0p647 [taca 2015-08-20]
+	Updated devel/ruby-readline to 2.0.0p647nb1 [taca 2015-08-20]
+	Updated x11/ruby-tk to 2.0.0p647nb4 [taca 2015-08-20]
+	Updated lang/ruby200 to 2.0.0p647 [taca 2015-08-20]
