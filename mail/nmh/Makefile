@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2015/08/19 18:23:02 leot Exp $
+# $NetBSD: Makefile,v 1.89 2015/08/20 13:01:54 leot Exp $
 
 DISTNAME=		nmh-1.6
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
-PKGREVISION=		2
+PKGREVISION=		3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
@@ -37,6 +37,7 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec/nmh
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-mts=${NMH_MTA:Q}
+CONFIGURE_ARGS+=	--without-readline
 
 DOCDIR=			share/doc/nmh
 EGDIR=			${PREFIX}/share/examples/nmh
@@ -76,10 +77,12 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 # The configure script checks for arc4random(), but the program uses
-# arc4random_buf(); netbsd-5 (and presumably earlier) has the one but
-# not the other. Just disable it, because all it's using the
-# randomness for is message-ids.
-.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
+# arc4random_buf(); netbsd-5 (and presumably earlier) and some Darwin
+# versions has the one but not the other. Just disable it, because all
+# it's using the randomness for is message-ids.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*) || \
+    !empty(MACHINE_PLATFORM:MDarwin-[1-9].*-*) || \
+    !empty(MACHINE_PLATFORM:MDarwin-1[0-2].*-*)
 CONFIGURE_ENV+=		ac_cv_func_arc4random=no
 .endif
 
