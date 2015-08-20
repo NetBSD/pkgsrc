@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2015/01/01 09:24:22 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2015/08/20 23:39:44 mef Exp $
 
-DISTNAME=	icbirc-1.8
-PKGREVISION=	1
+DISTNAME=	icbirc-1.9
 CATEGORIES=	chat
-MASTER_SITES=	http://www.benzedrine.cx/
+MASTER_SITES=	http://www.benzedrine.ch/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/icbirc.html
 COMMENT=	Proxy IRC client and ICB server
+LICENSE=	2-clause-bsd
 
 # uses strlcpy
 BROKEN_ON_PLATFORM=	Linux-*-*
