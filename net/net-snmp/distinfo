@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2015/06/08 20:08:57 spz Exp $
+$NetBSD: distinfo,v 1.86 2015/08/20 13:51:03 jperkin Exp $
 
 SHA1 (net-snmp-5.7.3.tar.gz) = 97dc25077257680815de44e34128d365c76bd839
 RMD160 (net-snmp-5.7.3.tar.gz) = c5cf54d5723ee417e07f1f9fa3936aef505104a2
@@ -12,6 +12,8 @@ SHA1 (patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c) = 5f1cd89f938b60e57ae87c0
 SHA1 (patch-agent_mibgroup_hardware_fsys_fsys_getfsstats.c) = cee9722d9a3f956726a8760b900ed3a375afde3f
 SHA1 (patch-agent_mibgroup_hardware_memory_memory__netbsd.c) = 928a5aa99e7893ee91dea3110db8098212e328fa
 SHA1 (patch-agent_mibgroup_host_data__access_swrun__kinfo.c) = f983ae0d99d85ab1ac6dc7cf2d2c0415b6935258
+SHA1 (patch-agent_mibgroup_kernel__sunos5.c) = 3e345f92f42a47959716b0176096c6b0d91aa65a
+SHA1 (patch-agent_mibgroup_kernel__sunos5.h) = eb80eb5e55020014b1e5524fd572839aefdce5a5
 SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a55b1e
 SHA1 (patch-agent_mibgroup_mibII_ipv6.c) = d6a271145e6ba774cbc1e93caa14e3d22dc43075
 SHA1 (patch-agent_mibgroup_mibII_tcpTable.c) = f547f3fd08848803cbf7ce08a41ba463c4d02992
