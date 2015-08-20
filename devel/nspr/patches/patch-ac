@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2013/11/02 12:34:14 ryoon Exp $
+$NetBSD: patch-ac,v 1.10 2015/08/20 10:53:13 ryoon Exp $
 
---- nspr/configure.in.orig	2013-09-18 23:49:51.000000000 +0000
+--- nspr/configure.in.orig	2015-08-19 15:32:22.000000000 +0000
 +++ nspr/configure.in
-@@ -36,7 +36,7 @@ OBJDIR_NAME=.
+@@ -38,7 +38,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
  NSINSTALL='$(MOD_DEPTH)/config/$(OBJDIR_NAME)/nsinstall'
  NOSUCHFILE=/no-such-file
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.9 2013/11/02 12:34:14 ryoon Exp $
  LIBPLC='-L$(dist_libdir) -lplc$(MOD_MAJOR_VERSION)'
  CYGWIN_WRAPPER=
  MACOS_SDK_DIR=
-@@ -1538,6 +1538,33 @@ tools are selected during the Xcode/Deve
+@@ -1531,6 +1531,33 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -45,15 +45,7 @@ $NetBSD: patch-ac,v 1.9 2013/11/02 12:34:14 ryoon Exp $
      ;;
  
  *-hpux*)
-@@ -2088,6 +2115,7 @@ tools are selected during the Xcode/Deve
-     AC_DEFINE(XP_UNIX)
-     AC_DEFINE(NETBSD)
-     AC_DEFINE(HAVE_BSD_FLOCK)
-+    AC_DEFINE(HAVE_SOCKLEN_T)
-     if test -z "$USE_NSPR_THREADS"; then
-         USE_PTHREADS=1
-     fi
-@@ -2138,7 +2166,7 @@ tools are selected during the Xcode/Deve
+@@ -2132,7 +2159,7 @@ tools are selected during the Xcode/Deve
      AC_DEFINE(HAVE_SOCKLEN_T)
      CFLAGS="$CFLAGS -ansi -Wall"
      CXXFLAGS="$CXXFLAGS -ansi -Wall"
@@ -62,7 +54,7 @@ $NetBSD: patch-ac,v 1.9 2013/11/02 12:34:14 ryoon Exp $
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
-@@ -2806,7 +2834,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2718,7 +2745,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -71,7 +63,7 @@ $NetBSD: patch-ac,v 1.9 2013/11/02 12:34:14 ryoon Exp $
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2844,7 +2872,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2756,7 +2783,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -80,7 +72,7 @@ $NetBSD: patch-ac,v 1.9 2013/11/02 12:34:14 ryoon Exp $
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2925,7 +2953,7 @@ case "$target" in
+@@ -2837,7 +2864,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
