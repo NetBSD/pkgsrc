@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/06/02 19:06:19 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2015/08/20 16:49:35 fhajny Exp $
 
-SHA1 (magento/PATCH_SUPEE-4829_EE_1.14.1.0_v1.sh) = ed08f33cfc8a35c0c38d9264bb94723d6a544450
-RMD160 (magento/PATCH_SUPEE-4829_EE_1.14.1.0_v1.sh) = bd9729743ccc4c028b5354f06f669b142edd3815
-Size (magento/PATCH_SUPEE-4829_EE_1.14.1.0_v1.sh) = 6173 bytes
-SHA1 (magento/PATCH_SUPEE-5994_CE_1.6.0.0_v1-2015-05-15-04-34-46.sh) = 848bfe64959b0c9b431c278db613dde5fcdbdda2
-RMD160 (magento/PATCH_SUPEE-5994_CE_1.6.0.0_v1-2015-05-15-04-34-46.sh) = 024f5ee9e6ca4127bcfa064f89110668f9865568
-Size (magento/PATCH_SUPEE-5994_CE_1.6.0.0_v1-2015-05-15-04-34-46.sh) = 42636 bytes
-SHA1 (magento/magento-1.9.1.1.tar.gz) = 170e4b9019f43477d2f2a074ef551a05009da724
-RMD160 (magento/magento-1.9.1.1.tar.gz) = e46fdbe5deda09f4d8173cd1d2e328c37eb92840
-Size (magento/magento-1.9.1.1.tar.gz) = 23786953 bytes
+SHA1 (magento/magento-1.9.2.1.tar.gz) = 41b4b9ae2e02fa9fecf3330e19790120aeeced92
+RMD160 (magento/magento-1.9.2.1.tar.gz) = cd893c2e9a7e5998f9010c4150d0eca02ec800d0
+Size (magento/magento-1.9.2.1.tar.gz) = 24437578 bytes
