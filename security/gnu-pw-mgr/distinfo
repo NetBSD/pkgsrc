@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/06/01 12:57:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/21 15:20:33 wiz Exp $
 
-SHA1 (gnu-pw-mgr-1.4.tar.gz) = b9bb480a343aaa565ba3b06d61ed433ed0e8b11b
-RMD160 (gnu-pw-mgr-1.4.tar.gz) = d207c289e0d8e486c88f814b5f7cf87c828de701
-Size (gnu-pw-mgr-1.4.tar.gz) = 1154362 bytes
+SHA1 (gnu-pw-mgr-1.5.tar.gz) = a5c372bef293a6aa24718c61e6a3c12c946426d7
+RMD160 (gnu-pw-mgr-1.5.tar.gz) = 94afb7b8e4abf46f6caa0e9a8c538cc300cf9fe2
+Size (gnu-pw-mgr-1.5.tar.gz) = 1156033 bytes
