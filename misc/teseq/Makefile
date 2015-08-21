@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2015/08/21 15:22:22 wiz Exp $
 
-DISTNAME=	teseq-1.1
-PKGREVISION=	2
+DISTNAME=	teseq-1.1.1
 CATEGORIES=	misc
 MASTER_SITES=	http://ftp.gnu.org/gnu/teseq/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,10 +8,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ftp.gnu.org/gnu/teseq/
 COMMENT=	Terminal control sequence analyzer
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
-USE_TOOLS+=	perl:run sed:run
+USE_TOOLS+=	perl:run
 
 CONFIGURE_ENV+=	AUTOCONF=true # files pre-built, not needed
 CONFIGURE_ENV+= MAKEINFO=true
@@ -22,13 +21,7 @@ CONFIGURE_ENV+=	HELP2MAN=true
 INFO_FILES=	yes
 
 REPLACE_PERL=	reseq.in
-REPLACE_SED=	src/teseq-post.sed
 REPLACE_SH=	tests/run.in
-
-REPLACE_INTERPRETER+=	sed
-REPLACE.sed.old=	.*sed
-REPLACE.sed.new=	${SED}
-REPLACE_FILES.sed=	${REPLACE_SED}
 
 SUBST_CLASSES+=	infodir
 SUBST_FILES.infodir=	Makefile.in
