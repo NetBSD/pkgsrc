@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3492 2015/08/21 10:54:06 roy Exp $
+$NetBSD: CHANGES-2015,v 1.3493 2015/08/21 12:05:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6301,5 +6301,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/icbirc to 1.9 [mef 2015-08-20]
 	Updated net/p5-NetAddr-IP to 4.078 [mef 2015-08-20]
 	Updated security/openssh to 7.1.1 [wiz 2015-08-21]
-	Updated www/wordpress to 4.3 [john 2015-08-21]
+	Updated www/wordpress to 4.3 [jklos 2015-08-21]
 	Updated net/dhcpcd to 6.9.2 [roy 2015-08-21]
