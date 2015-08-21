@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3489 2015/08/20 23:45:55 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3490 2015/08/21 08:12:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6300,3 +6300,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Headers-Fast to 0.19 [mef 2015-08-20]
 	Updated chat/icbirc to 1.9 [mef 2015-08-20]
 	Updated net/p5-NetAddr-IP to 4.078 [mef 2015-08-20]
+	Updated security/openssh to 7.1.1 [wiz 2015-08-21]
