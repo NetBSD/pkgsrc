@@ -1,4 +1,6 @@
-$NetBSD: patch-webnew_pl,v 1.1 2015/08/19 12:49:00 is Exp $
+$NetBSD: patch-webnew_pl,v 1.2 2015/08/21 08:18:26 wiz Exp $
+
+With modern perl, 'do getopts' doesnt work any longer.
 
 --- webnew.pl.orig	2001-05-27 22:08:01.000000000 +0000
 +++ webnew.pl
