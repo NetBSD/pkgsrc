@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3495 2015/08/21 15:20:41 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3496 2015/08/21 15:22:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6305,3 +6305,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dhcpcd to 6.9.2 [roy 2015-08-21]
 	Updated sysutils/tarsnap to 1.0.36 [wiz 2015-08-21]
 	Updated security/gnu-pw-mgr to 1.5 [wiz 2015-08-21]
+	Updated misc/teseq to 1.1.1 [wiz 2015-08-21]
