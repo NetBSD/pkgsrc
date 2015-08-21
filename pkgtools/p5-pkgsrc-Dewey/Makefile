@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/06/18 06:29:18 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2015/08/21 07:40:39 wiz Exp $
 
 PKGNAME=	p5-pkgsrc-Dewey-1.1
 PKGREVISION=	6
@@ -11,6 +11,7 @@ LICENSE=	${PERL5_LICENSE} OR 2-clause-bsd
 
 CPPFLAGS+=	-DHAVE_CTYPE_H -DHAVE_STDLIB_H -DHAVE_STRING_H
 CPPFLAGS.NetBSD+=	-DHAVE_ERR_H
+CPPFLAGS.Linux+=	-fPIC
 
 USE_LANGUAGES=		c
 USE_FEATURES+=		err
