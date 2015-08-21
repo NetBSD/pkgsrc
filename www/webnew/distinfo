@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 14:08:40 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/08/21 08:18:26 wiz Exp $
 
 SHA1 (webnew-1.3.tar.gz) = be21d4c48e441f8704ea384d1e2494e801881e7f
 RMD160 (webnew-1.3.tar.gz) = 4e198e1cb0faaf21a35d3897a25114f9dfe8ad9b
 Size (webnew-1.3.tar.gz) = 6462 bytes
+SHA1 (patch-webnew_pl) = 9b0d5fd1203fbe3b9fe9541125a93532aa780d4a
