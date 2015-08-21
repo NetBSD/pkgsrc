@@ -1,5 +1,4 @@
-$NetBSD: patch-ai,v 1.10 2013/01/29 16:56:39 is Exp $
-
+$NetBSD: patch-ai,v 1.11 2015/08/21 11:03:44 is Exp $
 - improve default configuration behavior for the modern world
 - configure for pkgsrc
 - DEVICE_GROUP is set from the pkgsrc makefile, so avoid compiler
@@ -7,7 +6,9 @@ $NetBSD: patch-ai,v 1.10 2013/01/29 16:56:39 is Exp $
 - honor PREFIX and VARBASE in paths
 - turn on AUTO_PPP (whatever that is...?)
 
---- policy.h.orig	2012-04-08 00:19:33.000000000 +0000
+- no FLOW_HARD for fax-sending (for netbsd6)
+
+--- policy.h.orig	2015-08-20 10:26:33.000000000 +0000
 +++ policy.h
 @@ -48,7 +48,12 @@
   * Normally, this is "/bin/login", just a few systems put "login"
@@ -60,6 +61,15 @@ $NetBSD: patch-ai,v 1.10 2013/01/29 16:56:39 is Exp $
  #if defined (SVR4) || defined(sunos4)
  # define LOCK_PATH "/var/spool/locks"
  # define LOCK      "/var/spool/locks/LCK..%s"
+@@ -439,7 +449,7 @@
+  * that fax sending will time out after the first page sent (no ACK received)
+  * and fail if FLOW_HARD is used. Use FLOW_SOFT instead.
+  */
+-#define FAXSEND_FLOW	FLOW_HARD | FLOW_SOFT
++#define FAXSEND_FLOW	FLOW_SOFT
+  
+ /* if your faxmodem switches port bit rate just after sending the "+FCON"
+  * message to the host, define this to contain the baudrate used. (Not
 @@ -459,7 +469,8 @@
   * watch out: if you run 'sendfax' as non-privileged user (user 'fax' etc.)
   * you might need to create this file manually and chown it to 'fax'
