@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3493 2015/08/21 12:05:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3494 2015/08/21 14:43:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/openssh to 7.1.1 [wiz 2015-08-21]
 	Updated www/wordpress to 4.3 [jklos 2015-08-21]
 	Updated net/dhcpcd to 6.9.2 [roy 2015-08-21]
+	Updated sysutils/tarsnap to 1.0.36 [wiz 2015-08-21]
