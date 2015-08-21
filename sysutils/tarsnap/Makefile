@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/08/21 14:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/21 18:03:22 wiz Exp $
 
-DISTNAME=	tarsnap-autoconf-1.0.36
+DISTNAME=	tarsnap-autoconf-1.0.36.1
 PKGNAME=	${DISTNAME:S/-autoconf//}
 CATEGORIES=	sysutils archivers security
 MASTER_SITES=	https://www.tarsnap.com/download/
