@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3491 2015/08/21 09:56:52 jklos Exp $
+$NetBSD: CHANGES-2015,v 1.3492 2015/08/21 10:54:06 roy Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6302,3 +6302,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-NetAddr-IP to 4.078 [mef 2015-08-20]
 	Updated security/openssh to 7.1.1 [wiz 2015-08-21]
 	Updated www/wordpress to 4.3 [john 2015-08-21]
+	Updated net/dhcpcd to 6.9.2 [roy 2015-08-21]
