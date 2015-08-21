@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3498 2015/08/21 16:06:01 he Exp $
+$NetBSD: CHANGES-2015,v 1.3499 2015/08/21 18:03:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6308,3 +6308,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/teseq to 1.1.1 [wiz 2015-08-21]
 	Updated graphics/p5-Image-ExifTool to 10.00 [wiz 2015-08-21]
 	Updated www/firefox38 to 38.2.0 [he 2015-08-21]
+	Updated sysutils/tarsnap to 1.0.36.1 [wiz 2015-08-21]
