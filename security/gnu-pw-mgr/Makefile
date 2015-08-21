@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/06/01 12:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/21 15:20:33 wiz Exp $
 
-DISTNAME=	gnu-pw-mgr-1.4
+DISTNAME=	gnu-pw-mgr-1.5
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/gnu-pw-mgr/
 
