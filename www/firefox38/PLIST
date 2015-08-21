@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/09 14:13:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/21 21:58:51 snj Exp $
 bin/firefox38
 lib/firefox38/application.ini
 lib/firefox38/browser/blocklist.xml
@@ -6,7 +6,8 @@ lib/firefox38/browser/chrome.manifest
 ${PLIST.nobranding}lib/firefox38/browser/chrome/browser/content/branding/about-background.png
 lib/firefox38/browser/chrome/browser/content/branding/about-logo.png
 lib/firefox38/browser/chrome/browser/content/branding/about-logo@2x.png
-lib/firefox38/browser/chrome/browser/content/branding/about-wordmark.svg
+${PLIST.branding}lib/firefox38/browser/chrome/browser/content/branding/about-wordmark.png
+${PLIST.nobranding}lib/firefox38/browser/chrome/browser/content/branding/about-wordmark.svg
 lib/firefox38/browser/chrome/browser/content/branding/about.png
 lib/firefox38/browser/chrome/browser/content/branding/aboutDialog.css
 lib/firefox38/browser/chrome/browser/content/branding/icon128.png
