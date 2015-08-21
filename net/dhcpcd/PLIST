@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:07 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/21 10:53:36 roy Exp $
 libexec/dhcpcd-hooks/01-test
 libexec/dhcpcd-hooks/02-dump
-libexec/dhcpcd-hooks/10-mtu
 libexec/dhcpcd-hooks/10-wpa_supplicant
 libexec/dhcpcd-hooks/15-timezone
 libexec/dhcpcd-hooks/20-resolv.conf
