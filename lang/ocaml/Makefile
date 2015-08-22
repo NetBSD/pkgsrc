@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.97 2015/06/30 11:08:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.98 2015/08/22 10:45:13 jaapb Exp $
 
 .include "Makefile.common"
+PKGREVISION=	1
 
 #CONFIGURE_ARGS+=	-no-tk
-CONFIGURE_ARGS+=	-cc ${CC}
+#CONFIGURE_ARGS+=	-cc ${CC}
 CONFIGURE_ENV+=		disable_x11=yes
 
 BUILD_TARGET=		world
@@ -50,7 +51,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.prof
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
-      !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
+      !empty(MACHINE_PLATFORM:MDarwin-*-*)
 PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
 .  endif
 .endif
