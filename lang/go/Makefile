@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2015/08/22 10:51:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2015/08/22 23:49:13 wiz Exp $
 
 .include "version.mk"
 
 DISTNAME=	go${GO_VERSION}.src
 PKGNAME=	go-${GO_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 
@@ -24,6 +25,7 @@ BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
 # bash script may use unportable bash constructs
 CHECK_PORTABILITY_SKIP=	lib/time/update.bash
+CHECK_PORTABILITY_SKIP=	misc/ios/clangwrap.sh
 
 GOROOT_FINAL=	${PREFIX}/go
 INSTALLATION_DIRS= bin
@@ -34,13 +36,20 @@ REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/benchcmp
 REPLACE_BASH+=	misc/cgo/errors/test.bash
+REPLACE_BASH+=	misc/cgo/testcarchive/test.bash
+REPLACE_BASH+=	misc/cgo/testcshared/test.bash
 REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
 REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_arm_exec
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/androidtest.bash
+REPLACE_BASH+=	src/bootstrap.bash
+REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
+REPLACE_BASH+=	src/cmd/compile/internal/big/vendor.bash
+REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
+REPLACE_BASH+=	src/iostest.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/nacltest.bash
 REPLACE_BASH+=	src/race.bash
