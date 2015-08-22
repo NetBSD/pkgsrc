@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/08/22 19:13:37 wiz Exp $
 
-DISTNAME=		ipw3945-ucode-1.13
-PKGNAME=		wpi-firmware-1.13
+DISTNAME=		ipw3945-ucode-1.14.2
+PKGNAME=		wpi-firmware-1.14.2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://bughost.org/ipw3945/ucode/
+MASTER_SITES=		http://web.archive.org/web/20101115131002/http://bughost.org/ipw3945/ucode/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bughost.org/ipw3945/
 COMMENT=		Firmware binary images for wpi(4) driver
+#LICENSE=		see work/ipw3945-ucode-1.14.2/LICENSE.ipw3945-ucode
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
