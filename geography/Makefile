@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/07/13 02:33:10 rodent Exp $
+# $NetBSD: Makefile,v 1.53 2015/08/22 17:45:08 nros Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -27,6 +27,7 @@ SUBDIR+=	libchamplain06
 SUBDIR+=	libchamplain08
 SUBDIR+=	libdrg
 SUBDIR+=	libgeotiff
+SUBDIR+=	libmemphis02
 SUBDIR+=	libnova
 SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
