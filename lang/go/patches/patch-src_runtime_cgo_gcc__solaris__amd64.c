@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_cgo_gcc__solaris__amd64.c,v 1.1 2015/03/10 13:11:36 jperkin Exp $
+$NetBSD: patch-src_runtime_cgo_gcc__solaris__amd64.c,v 1.2 2015/08/22 10:51:20 bsiegert Exp $
 
 Support cgo on illumos.
 
---- /dev/null
+--- src/runtime/cgo/gcc_solaris_amd64.c.orig	2015-07-30 00:03:37.000000000 +0000
 +++ src/runtime/cgo/gcc_solaris_amd64.c
-@@ -0,0 +1,70 @@
+@@ -1,3 +1,73 @@
 +// Copyright 2009 The Go Authors.  All rights reserved.
 +// Use of this source code is governed by a BSD-style
 +// license that can be found in the LICENSE file.
@@ -75,3 +75,6 @@ Support cgo on illumos.
 +	crosscall_amd64(ts.fn);
 +	return nil;
 +}
+ // Copyright 2015 The Go Authors. All rights reserved.
+ // Use of this source code is governed by a BSD-style
+ // license that can be found in the LICENSE file.
