@@ -1,14 +1,14 @@
-$NetBSD: patch-device_non-free_lib_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+$NetBSD: patch-device_non-free_lib_Makefile.in,v 1.2 2015/08/22 17:06:16 bouyer Exp $
 
---- device/non-free/lib/Makefile.in.orig	2012-01-06 12:38:30.000000000 +0000
-+++ device/non-free/lib/Makefile.in
-@@ -349,17 +349,6 @@ clean_intermediate-pic14:
- # ---------------------------------------------------
+--- device/non-free/lib/Makefile.in.orig	2015-03-26 14:21:24.000000000 +0100
++++ device/non-free/lib/Makefile.in	2015-08-22 13:09:20.000000000 +0200
+@@ -353,17 +353,6 @@
  install: all installdirs
+ ifneq ($(TARGETS), )
  	[ ! -d "$(BUILDDIR)" ] || $(CP_U) -r $(BUILDDIR)/* $(sdcc_libdir)
--	$(CP_U) -r $(srcdir)/pic14 $(srcdir)/pic16 $(sdcc_libdir)/src
+-	$(CP_U) -r $(foreach p, $(ENABLED_PORTS), $(srcdir)/$(p)) $(sdcc_libdir)/src
 -
--	for src in pic14 pic16; do \
+-	for src in $(ENABLED_PORTS); do \
 -	  find $(sdcc_libdir)/src/$$src -depth \
 -	    \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
 -	    -name '*.lst' -o -name '*.asm' -o -name '.svn' -o -name 'autom4te.cache' -o \
@@ -17,18 +17,18 @@ $NetBSD: patch-device_non-free_lib_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon E
 -	    -name 'bootstrap.sh' \) \
 -	    -exec rm -rf {} + ; \
 -	done
+ endif
  
  # Deleting all the installed files
- # --------------------------------
-@@ -379,10 +368,7 @@ installcheck:
- # Creating installation directories
+@@ -385,10 +374,7 @@
  # ---------------------------------
  installdirs:
--	for libdir in pic16 pic14; do \
+ ifneq ($(TARGETS), )
+-	for libdir in $(ENABLED_PORTS); do \
 -	  mkdir -p $(sdcc_libdir)/$$libdir; \
 -	done
 -	mkdir -p $(sdcc_libdir)/src
 +	mkdir -p $(sdcc_libdir)
+ endif
  
  # Creating dependencies
- # ---------------------
