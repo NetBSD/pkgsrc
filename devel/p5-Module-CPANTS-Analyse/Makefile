@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/08/22 13:58:54 mef Exp $
+# $NetBSD: Makefile,v 1.20 2015/08/22 16:00:41 mef Exp $
 
 DISTNAME=		Module-CPANTS-Analyse-0.96
 PKGNAME=		p5-${DISTNAME}
@@ -37,6 +37,9 @@ BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
 BUILD_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+BUILD_DEPENDS+=	p5-File-Find-Object-[0-9]*:../../devel/p5-File-Find-Object
+BUILD_DEPENDS+=	p5-Class-XSAccessor-[0-9]*:../../devel/p5-Class-XSAccessor
+BUILD_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Module/CPANTS/Analyse/.packlist
