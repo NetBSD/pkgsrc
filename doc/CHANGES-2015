@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3512 2015/08/22 20:52:58 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3513 2015/08/22 21:24:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6323,3 +6323,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated news/inn to 2.5.5 [wiz 2015-08-22]
 	Updated sysutils/wpi-firmware to 1.14.2 [wiz 2015-08-22]
 	Added textproc/DWB version 20150517 [leot 2015-08-22]
+	Updated devel/libusb1 to 1.0.19 [leot 2015-08-22]
