@@ -1,0 +1,13 @@
+$NetBSD: patch-docs_reference_Makefile.am,v 1.1 2015/08/22 17:42:53 nros Exp $
+* Install versioned docs
+--- docs/reference/Makefile.am.orig	2010-06-20 13:23:27.000000000 +0000
++++ docs/reference/Makefile.am
+@@ -12,7 +12,7 @@ AUTOMAKE_OPTIONS = 1.6
+ DOC_MODULE=libmemphis
+ 
+ # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
+-#DOC_MODULE_VERSION=2
++DOC_MODULE_VERSION=0.2
+ 
+ 
+ # The top-level SGML file. You can change this if you want to.
