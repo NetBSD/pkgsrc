@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/11/23 12:21:03 mef Exp $
-
-SHA1 (libusbx-1.0.18.tar.bz2) = dc206a4d3eafa740753937856b507d3d913a0e9d
-RMD160 (libusbx-1.0.18.tar.bz2) = 311f9ab967479c61a31325d538897e43dd058b46
-Size (libusbx-1.0.18.tar.bz2) = 502109 bytes
