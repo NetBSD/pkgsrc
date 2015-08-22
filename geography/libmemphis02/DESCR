@@ -1,0 +1,3 @@
+Memphis is a library for OpenStreetMap written in C using eXpat,
+Cairo and GLib. It's licensed under the terms of the GNU Lesser
+General Public License.
