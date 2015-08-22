@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1 2015/08/22 20:51:31 leot Exp $
+
+SHA1 (DWB3.3-20150517.tar.gz) = 31f7655cb6aa688e9fe11e58a5c2f7ae12b28381
+RMD160 (DWB3.3-20150517.tar.gz) = f2e58caea367c4acf74fd5c989444caf8c9bd15b
+Size (DWB3.3-20150517.tar.gz) = 2847814 bytes
+SHA1 (patch-doc_doc.mk) = 768fbbf587ce6cfbdd7a5fb820673c70c5bbddda
+SHA1 (patch-index_index.mk) = 428ff5f966378d69257c9e8c3916795c01300723
+SHA1 (patch-index_ndx_ndx.sh) = d9d749425e71e27e6ed265f9df6265b60ed115e5
+SHA1 (patch-index_subj_parts.sh) = 6e2ce1c2c57957ddd6abea7a25cbb176e5e18f06
+SHA1 (patch-index_subj_subj.sh) = fc7750bd98b9ec8b63f91329e196a00cbff528e4
+SHA1 (patch-laserjet_laserjet.mk) = 2c808e6b21883e44c44ca7b30ebf972e5fc27ec5
+SHA1 (patch-macros_macros.mk) = e2e25a5211256a3f4c86af49961d21ea25c5d763
+SHA1 (patch-misc_diffmk_diffmk.sh) = 626f8f8e4e9f81998091476bcf47c5bb83c30f46
+SHA1 (patch-misc_dwbv_dwbv.mk) = 835b22e45e9aabb7dedbd4727939847e09361d47
+SHA1 (patch-misc_misc.mk) = ca9e51bb10e22beb070be552e2fa2a38fc89ac99
+SHA1 (patch-misc_mm_mm.sh) = afad8a77c67706e50b60d4a3092f583fa6739724
+SHA1 (patch-misc_mmt_mmt.sh) = 56c88774a0ea9476a750f030e45b201db9880b09
+SHA1 (patch-postscript_buildtables_buildtables.sh) = f6eeeeca304ca2ff03a427ac42dd64c90e8dfa03
+SHA1 (patch-postscript_cropmarks_cropmarks.sh) = c1a8310332dcec05753c9070e57cef483c627563
+SHA1 (patch-postscript_grabit_grabit.sh) = 1b8dda978b0f56039334039d51488cb8851c809c
+SHA1 (patch-postscript_hardcopy_hardcopy.sh) = bfde4fafce3bc04d5cdcf32b0bd68b99f644d6c7
+SHA1 (patch-postscript_postscript.mk) = c1075557baca7a5c8e91be827fbc538513c2bbe7
+SHA1 (patch-postscript_printfont_printfont.sh) = 1a50e6c9aa2501f88b3fcbb27be0126aa52ee4b5
+SHA1 (patch-postscript_psencoding_psencoding.sh) = 42113e2ef48dcffee3ccdc6a8b5eba95dcde6336
+SHA1 (patch-postscript_trofftable_trofftable.sh) = 4be944139d7ac2464e5276f04336d7cdd87e8988
+SHA1 (patch-tests_tests.mk) = 52ea6ac02adba3ff32ba5d51e4a81b6deae71cf7
+SHA1 (patch-text_pm_pm.mk) = 0b365bf76d2659e16e66eaa47ae38570433caafb
+SHA1 (patch-text_text.mk) = 6ff26db2855e585dae3aec2e2282120e7618e112
