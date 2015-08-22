@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.637 2015/07/31 09:03:29 youri Exp $
+# $NetBSD: Makefile,v 1.638 2015/08/22 14:47:55 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -403,6 +403,7 @@ SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	py-attic
 SUBDIR+=	py-augeas
+SUBDIR+=	py-borg
 SUBDIR+=	py-collectd
 SUBDIR+=	py-dbus
 SUBDIR+=	py-gnome-menus
