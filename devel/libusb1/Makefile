@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/03/11 22:28:35 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/22 21:23:46 leot Exp $
 
-DISTNAME=	libusb-1.0.9
+DISTNAME=	libusb-1.0.19
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +22,12 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libusb-1.0.pc.in
 
+CONFIGURE_ARGS+=	--enable-tests-build
+
 CONFLICTS=	libusbx-[0-9]*
+
+do-test:
+	cd ${WRKSRC}/tests && ./stress
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
