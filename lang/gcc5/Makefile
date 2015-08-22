@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/25 03:46:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/22 16:38:10 bsiegert Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -24,7 +24,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=		gmake makeinfo sed:run
+USE_TOOLS+=		gmake makeinfo sed:run tar:build
 
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}
