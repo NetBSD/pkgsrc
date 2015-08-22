@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14750 2015/08/21 15:27:54 wiz Exp $
+$NetBSD: TODO,v 1.14751 2015/08/22 13:02:33 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -327,6 +327,10 @@ Suggested new packages
 	diaspora
 	https://diasporafoundation.org/
 	Distributed social networking
+
+	Borg backup
+	https://github.com/borgbackup/borg
+	Deduplicating backup program with compression and authenticated encryption
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
