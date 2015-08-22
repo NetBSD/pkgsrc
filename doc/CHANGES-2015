@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3509 2015/08/22 17:49:02 nros Exp $
+$NetBSD: CHANGES-2015,v 1.3510 2015/08/22 19:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6320,3 +6320,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/gputils to 1.4.0-1 [bouyer 2015-08-22]
 	Updated devel/sdcc3 to 3.5.0 [bouyer 2015-08-22]
 	Added geography/libmemphis02 version 0.2.3 [nros 2015-08-22]
+	Updated news/inn to 2.5.5 [wiz 2015-08-22]
