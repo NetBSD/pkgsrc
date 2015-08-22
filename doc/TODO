@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14752 2015/08/22 13:32:06 wiz Exp $
+$NetBSD: TODO,v 1.14753 2015/08/22 14:55:43 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -275,7 +275,7 @@ Suggested new packages
 	xl2tpd is an improved version of l2tpd, the L2TP protocol daemon.
 
 	Torque
-	http://www.clusterresources.com/products/torque-resource-manager.php
+	http://www.adaptivecomputing.com/products/open-source/torque/
 	Open source batch jobs resource manager, successor to OpenPBS.
 	(Check me when taking on it - asau.)
 
@@ -327,10 +327,6 @@ Suggested new packages
 	diaspora
 	https://diasporafoundation.org/
 	Distributed social networking
-
-	Borg backup
-	https://github.com/borgbackup/borg
-	Deduplicating backup program with compression and authenticated encryption
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
