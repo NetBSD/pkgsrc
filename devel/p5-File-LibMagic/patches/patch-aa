@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2015/02/07 16:01:07 mef Exp $
+$NetBSD: patch-aa,v 1.6 2015/08/22 23:41:00 mef Exp $
 
 - Ensure we use the required ldflags for the platform.
 
---- Makefile.PL.orig	2015-02-02 02:42:08.000000000 +0900
-+++ Makefile.PL	2015-02-03 10:19:06.000000000 +0900
-@@ -22,7 +22,7 @@
-   "EXE_FILES" => [],
+--- Makefile.PL.orig	2015-07-13 02:54:52.000000000 +0900
++++ Makefile.PL	2015-08-23 08:33:54.000000000 +0900
+@@ -22,7 +22,7 @@ my %WriteMakefileArgs = (
+   "DISTNAME" => "File-LibMagic",
    "INC" => "-I. -Ic",
    "LDFROM" => "LibMagic\$(OBJ_EXT)",
 -  "LIBS" => "-lmagic",
