@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14755 2015/08/22 19:13:46 wiz Exp $
+$NetBSD: TODO,v 1.14756 2015/08/22 23:28:04 mef Exp $
 
 Suggested new packages
 ======================
@@ -1300,7 +1300,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Encode-2.76
 	o p5-Excel-Template-0.34
 	o p5-Excel-Template-Plus-0.06
-	o p5-ExtUtils-CBuilder-0.280223
 	o p5-ExtUtils-F77-1.18
 	o p5-File-LibMagic-1.13
 	o p5-File-Path-2.11
