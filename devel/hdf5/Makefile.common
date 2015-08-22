@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/04/10 02:49:56 wen Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/08/22 23:03:39 alnsn Exp $
 # used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hdfgroup.org/HDF5/
 LICENSE=	original-bsd
 
