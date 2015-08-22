@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3502 2015/08/22 12:09:29 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.3503 2015/08/22 13:32:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6312,3 +6312,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Object-InsideOut to 3.99 [wen 2015-08-22]
 	Updated lang/go to 1.5 [bsiegert 2015-08-22]
 	Updated x11/gtk3 to 3.16.6 [prlw1 2015-08-22]
+	Added x11/xf86-video-xgi version 1.6.1 [wiz 2015-08-22]
