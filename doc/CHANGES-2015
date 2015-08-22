@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3511 2015/08/22 19:13:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3512 2015/08/22 20:52:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6322,3 +6322,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added geography/libmemphis02 version 0.2.3 [nros 2015-08-22]
 	Updated news/inn to 2.5.5 [wiz 2015-08-22]
 	Updated sysutils/wpi-firmware to 1.14.2 [wiz 2015-08-22]
+	Added textproc/DWB version 20150517 [leot 2015-08-22]
