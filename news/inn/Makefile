@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2015/06/12 10:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2015/08/22 19:10:50 wiz Exp $
 
-DISTNAME=		inn-2.5.4
-PKGREVISION=		1
+DISTNAME=		inn-2.5.5
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -168,6 +167,8 @@ GCC_REQD+=		2.95.3
 .endif
 
 .include "options.mk"
+
+TEST_TARGET=    tests
 
 pre-install:
 .for file in ${CFILES} active.minimal newsgroups.minimal
