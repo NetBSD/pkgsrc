@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/22 10:46:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/22 23:32:40 wiz Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -69,11 +69,11 @@ REPLACE_PERL+=	src/syscall/*.pl
 REPLACE_PERL+=	test/errchk
 
 # uses /bin/rc (for Plan 9)
-CHECK_INTERPRETER_SKIP+=	go/include/plan9/mklibc.rc
-CHECK_INTERPRETER_SKIP+=	go/src/all.rc
-CHECK_INTERPRETER_SKIP+=	go/src/clean.rc
-CHECK_INTERPRETER_SKIP+=	go/src/make.rc
-CHECK_INTERPRETER_SKIP+=	go/src/run.rc
+CHECK_INTERPRETER_SKIP+=	go14/include/plan9/mklibc.rc
+CHECK_INTERPRETER_SKIP+=	go14/src/all.rc
+CHECK_INTERPRETER_SKIP+=	go14/src/clean.rc
+CHECK_INTERPRETER_SKIP+=	go14/src/make.rc
+CHECK_INTERPRETER_SKIP+=	go14/src/run.rc
 
 do-build:
 	cd ${WRKSRC}/src && env GOROOT_FINAL=${GOROOT_FINAL:Q} ${BASH} ./make.bash
