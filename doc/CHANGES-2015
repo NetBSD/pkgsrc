@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3508 2015/08/22 17:07:29 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.3509 2015/08/22 17:49:02 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6319,3 +6319,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/py-borg version 0.24.0 [bsiegert 2015-08-22]
 	Updated devel/gputils to 1.4.0-1 [bouyer 2015-08-22]
 	Updated devel/sdcc3 to 3.5.0 [bouyer 2015-08-22]
+	Added geography/libmemphis02 version 0.2.3 [nros 2015-08-22]
