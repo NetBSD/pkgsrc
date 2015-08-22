@@ -1,0 +1,13 @@
+$NetBSD: patch-demos_Makefile.am,v 1.1 2015/08/22 17:42:53 nros Exp $
+* install in versioned directory
+--- demos/Makefile.am.orig	2010-06-20 13:23:27.000000000 +0000
++++ demos/Makefile.am
+@@ -6,7 +6,7 @@ AM_LDFLAGS = $(DEPS_LIBS) ../memphis/lib
+ 
+ tile_renderer_SOURCES = tile-renderer.c
+ 
+-memphisrulesdir = $(datadir)/memphis
++memphisrulesdir = $(datadir)/memphis-0.2
+ memphisrules_DATA = \
+ 	default-rules.xml
+ 
