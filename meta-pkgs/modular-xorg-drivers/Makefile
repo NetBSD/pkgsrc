@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2015/07/10 07:39:51 richard Exp $
+# $NetBSD: Makefile,v 1.32 2015/08/22 13:33:07 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -85,5 +85,6 @@ DEPENDS+=	xf86-video-voodoo-[0-9]*:../../x11/xf86-video-voodoo
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 DEPENDS+=	xf86-video-wsfb-[0-9]*:../../x11/xf86-video-wsfb
 .endif
+DEPENDS+=	xf86-video-xgi-[0-9]*:../../x11/xf86-video-xgi
 
 .include "../../mk/bsd.pkg.mk"
