@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3505 2015/08/22 14:22:18 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3506 2015/08/22 14:35:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6315,3 +6315,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xf86-video-xgi version 1.6.1 [wiz 2015-08-22]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb5 [wiz 2015-08-22]
 	Added devel/p5-File-Find-Object version 0.2.13 [mef 2015-08-22]
+	Updated devel/py-msgpack to 0.4.6 [bsiegert 2015-08-22]
