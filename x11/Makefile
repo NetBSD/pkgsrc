@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.763 2015/07/31 08:42:11 youri Exp $
+# $NetBSD: Makefile,v 1.764 2015/08/22 13:31:56 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -605,6 +605,7 @@ SUBDIR+=	xf86-video-vesa
 SUBDIR+=	xf86-video-vmware
 SUBDIR+=	xf86-video-voodoo
 SUBDIR+=	xf86-video-wsfb
+SUBDIR+=	xf86-video-xgi
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86dgaproto
