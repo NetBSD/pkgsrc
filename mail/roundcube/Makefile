@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2015/08/23 15:39:02 taca Exp $
+# $NetBSD: Makefile,v 1.75 2015/08/23 15:43:00 taca Exp $
 
 DISTNAME=	roundcubemail-1.1.2
 PKGNAME=	${DISTNAME:S/mail-/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -84,8 +84,6 @@ CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 .endfor
 
-.include "../../mk/apache.mk"
-
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_MESSAGE.files=	Fixing configuration files.
@@ -99,12 +97,6 @@ SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_EXAMPLES@|${PREFIX}/share/examples/roundcube|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFBASE@|${PKG_SYSCONFBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-.if ${PKG_APACHE} == "apache24"
-SUBST_SED.files+=	-e "/Order allow,deny/d"
-SUBST_SED.files+=	-e "/Order deny,allow/d"
-SUBST_SED.files+=	-e "s,Allow from all,Require all granted,g"
-SUBST_SED.files+=	-e "s,Deny from all,Require all denied,g"
-.endif
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/env php
