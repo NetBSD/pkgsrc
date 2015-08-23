@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/05/25 17:52:37 khorben Exp $
+$NetBSD: distinfo,v 1.6 2015/08/23 16:22:38 khorben Exp $
 
 SHA1 (libDesktop-0.2.0.tar.gz) = 5915629202ea0e9ae9b2c6929644fab3570802df
 RMD160 (libDesktop-0.2.0.tar.gz) = 60f6fbee77bdb7524d0908db24ff21ea170f82a3
 Size (libDesktop-0.2.0.tar.gz) = 17698 bytes
+SHA1 (patch-src_Makefile) = a1ea52cb9da648eb0829ac02296b14d331a23f4e
