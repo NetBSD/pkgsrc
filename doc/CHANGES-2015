@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3544 2015/08/23 14:13:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3545 2015/08/23 14:17:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6362,3 +6362,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-ast to 1.1.5 [wiz 2015-08-23]
 	Added net/py-hpack version 1.1.0 [leot 2015-08-23]
 	Updated devel/libgee to 0.18.0 [wiz 2015-08-23]
+	Updated devel/libgphoto2 to 2.5.8 [wiz 2015-08-23]
