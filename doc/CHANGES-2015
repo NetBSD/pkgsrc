@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3548 2015/08/23 14:23:54 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3549 2015/08/23 14:33:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6366,3 +6366,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/py-pyperclip version 1.5.11 [leot 2015-08-23]
 	Updated security/nettle to 3.1.1 [wiz 2015-08-23]
 	Added security/py-certifi version 2015.04.28 [leot 2015-08-23]
+	Updated net/py-netlib to 0.13.1 [leot 2015-08-23]
