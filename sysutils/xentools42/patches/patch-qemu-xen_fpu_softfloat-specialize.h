@@ -1,8 +1,8 @@
-$NetBSD: patch-qemu-xen_fpu_softfloat-specialize.h,v 1.1 2013/05/26 20:27:43 bouyer Exp $
+$NetBSD: patch-qemu-xen_fpu_softfloat-specialize.h,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- qemu-xen/fpu/softfloat-specialize.h.orig	2013-05-26 21:19:30.000000000 +0200
-+++ qemu-xen/fpu/softfloat-specialize.h	2013-05-26 21:20:25.000000000 +0200
-@@ -89,8 +89,8 @@
+--- qemu-xen/fpu/softfloat-specialize.h.orig	2013-10-10 14:15:47.000000000 +0000
++++ qemu-xen/fpu/softfloat-specialize.h
+@@ -89,8 +89,8 @@ const float64 float64_default_nan = cons
  #define floatx80_default_nan_low  LIT64( 0xC000000000000000 )
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-qemu-xen_fpu_softfloat-specialize.h,v 1.1 2013/05/26 20:27:43 bou
  
  /*----------------------------------------------------------------------------
  | The pattern for a default generated quadruple-precision NaN.  The `high' and
-@@ -104,8 +104,8 @@
+@@ -104,8 +104,8 @@ const floatx80 floatx80_default_nan = ma
  #define float128_default_nan_low  LIT64( 0x0000000000000000 )
  #endif
  

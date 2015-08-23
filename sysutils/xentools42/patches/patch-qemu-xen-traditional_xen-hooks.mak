@@ -1,10 +1,10 @@
-$NetBSD: patch-qemu-xen-traditional_xen-hooks.mak,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-qemu-xen-traditional_xen-hooks.mak,v 1.2 2015/08/23 16:17:12 spz Exp $
 
 enable PCI passthrough when pciutils is present
 
---- qemu-xen-traditional/xen-hooks.mak.orig	2012-05-24 15:41:11.000000000 +0200
-+++ qemu-xen-traditional/xen-hooks.mak	2012-05-24 15:46:21.000000000 +0200
-@@ -55,17 +55,25 @@
+--- qemu-xen-traditional/xen-hooks.mak.orig	2014-01-09 12:44:42.000000000 +0000
++++ qemu-xen-traditional/xen-hooks.mak
+@@ -57,17 +57,25 @@ endif
  ifdef CONFIG_STUBDOM
  CONFIG_PASSTHROUGH=1
  else

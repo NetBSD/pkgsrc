@@ -1,5 +1,7 @@
---- firmware/hvmloader/util.h.orig	2014-09-02 15:22:57.000000000 +0900
-+++ firmware/hvmloader/util.h	2014-12-08 13:01:39.000000000 +0900
+$NetBSD: patch-firmware_hvmloader_util.h,v 1.2 2015/08/23 16:17:12 spz Exp $
+
+--- firmware/hvmloader/util.h.orig	2014-09-02 06:22:57.000000000 +0000
++++ firmware/hvmloader/util.h
 @@ -3,6 +3,7 @@
  
  #include <stdarg.h>
@@ -8,7 +10,7 @@
  #include <xen/xen.h>
  #include <xen/hvm/hvm_info_table.h>
  
-@@ -172,7 +173,6 @@
+@@ -172,7 +173,6 @@ int printf(const char *fmt, ...) __attri
  int vprintf(const char *fmt, va_list ap);
  
  /* Buffer output */

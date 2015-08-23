@@ -1,7 +1,7 @@
-$NetBSD: patch-qemu-xen-traditional_hw_pt-graphics.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-qemu-xen-traditional_hw_pt-graphics.c,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- qemu-xen-traditional/hw/pt-graphics.c.orig	2012-05-24 16:16:49.000000000 +0200
-+++ qemu-xen-traditional/hw/pt-graphics.c	2012-05-24 16:16:55.000000000 +0200
+--- qemu-xen-traditional/hw/pt-graphics.c.orig	2014-01-09 12:44:42.000000000 +0000
++++ qemu-xen-traditional/hw/pt-graphics.c
 @@ -3,8 +3,6 @@
   */
  

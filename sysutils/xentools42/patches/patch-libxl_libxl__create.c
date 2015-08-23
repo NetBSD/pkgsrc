@@ -1,8 +1,8 @@
-$NetBSD: patch-libxl_libxl__create.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-libxl_libxl__create.c,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- libxl/libxl_create.c.orig	2012-12-17 15:01:09.000000000 +0000
+--- libxl/libxl_create.c.orig	2014-09-02 06:22:57.000000000 +0000
 +++ libxl/libxl_create.c
-@@ -338,7 +338,7 @@ int libxl__domain_build(libxl__gc *gc,
+@@ -355,7 +355,7 @@ int libxl__domain_build(libxl__gc *gc,
          vments[2] = "image/ostype";
          vments[3] = "hvm";
          vments[4] = "start_time";
@@ -11,7 +11,7 @@ $NetBSD: patch-libxl_libxl__create.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
  
          localents = libxl__calloc(gc, 7, sizeof(char *));
          localents[0] = "platform/acpi";
-@@ -361,7 +361,7 @@ int libxl__domain_build(libxl__gc *gc,
+@@ -378,7 +378,7 @@ int libxl__domain_build(libxl__gc *gc,
          vments[i++] = "image/kernel";
          vments[i++] = (char *) state->pv_kernel.path;
          vments[i++] = "start_time";
@@ -20,7 +20,7 @@ $NetBSD: patch-libxl_libxl__create.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
          if (state->pv_ramdisk.path) {
              vments[i++] = "image/ramdisk";
              vments[i++] = (char *) state->pv_ramdisk.path;
-@@ -832,7 +832,7 @@ void libxl__xc_domain_restore_done(libxl
+@@ -849,7 +849,7 @@ void libxl__xc_domain_restore_done(libxl
          vments[2] = "image/ostype";
          vments[3] = "hvm";
          vments[4] = "start_time";
@@ -29,7 +29,7 @@ $NetBSD: patch-libxl_libxl__create.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
          break;
      case LIBXL_DOMAIN_TYPE_PV:
          vments = libxl__calloc(gc, 11, sizeof(char *));
-@@ -842,7 +842,7 @@ void libxl__xc_domain_restore_done(libxl
+@@ -859,7 +859,7 @@ void libxl__xc_domain_restore_done(libxl
          vments[i++] = "image/kernel";
          vments[i++] = (char *) state->pv_kernel.path;
          vments[i++] = "start_time";

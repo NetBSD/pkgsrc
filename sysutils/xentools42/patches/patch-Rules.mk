@@ -1,6 +1,6 @@
-$NetBSD: patch-Rules.mk,v 1.1 2015/01/29 21:31:39 joerg Exp $
+$NetBSD: patch-Rules.mk,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- Rules.mk.orig	2015-01-12 16:53:24.000000000 +0000
+--- Rules.mk.orig	2014-09-02 06:22:57.000000000 +0000
 +++ Rules.mk
 @@ -21,23 +21,23 @@ CFLAGS_xeninclude = -I$(XEN_INCLUDE)
  

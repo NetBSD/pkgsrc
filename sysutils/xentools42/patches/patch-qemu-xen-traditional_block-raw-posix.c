@@ -1,8 +1,8 @@
-$NetBSD: patch-qemu-xen-traditional_block-raw-posix.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-qemu-xen-traditional_block-raw-posix.c,v 1.2 2015/08/23 16:17:12 spz Exp $
 
 - if given a block device, use the character device instead.
 
---- qemu-xen-traditional/block-raw-posix.c.orig	2012-12-11 13:11:04.000000000 +0000
+--- qemu-xen-traditional/block-raw-posix.c.orig	2014-01-09 12:44:42.000000000 +0000
 +++ qemu-xen-traditional/block-raw-posix.c
 @@ -65,6 +65,7 @@
  #include <sys/disklabel.h>

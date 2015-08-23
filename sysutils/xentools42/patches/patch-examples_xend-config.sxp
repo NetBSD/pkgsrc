@@ -1,8 +1,8 @@
-$NetBSD: patch-examples_xend-config.sxp,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-examples_xend-config.sxp,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- examples/xend-config.sxp.orig	2010-04-07 16:12:04.000000000 +0000
+--- examples/xend-config.sxp.orig	2014-09-02 06:22:57.000000000 +0000
 +++ examples/xend-config.sxp
-@@ -190,7 +190,7 @@
+@@ -207,7 +207,7 @@
  
  # Whether to enable auto-ballooning of dom0 to allow domUs to be created.
  # If enable-dom0-ballooning = no, dom0 will never balloon out.

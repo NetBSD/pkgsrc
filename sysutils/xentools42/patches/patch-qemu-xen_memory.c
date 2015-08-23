@@ -1,8 +1,8 @@
-$NetBSD: patch-qemu-xen_memory.c,v 1.1 2013/05/26 20:27:43 bouyer Exp $
+$NetBSD: patch-qemu-xen_memory.c,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- qemu-xen/memory.c.orig	2013-05-26 20:31:37.000000000 +0200
-+++ qemu-xen/memory.c	2013-05-26 20:31:22.000000000 +0200
-@@ -237,6 +237,7 @@
+--- qemu-xen/memory.c.orig	2013-10-10 14:15:47.000000000 +0000
++++ qemu-xen/memory.c
+@@ -237,6 +237,7 @@ static void flatview_simplify(FlatView *
      }
  }
  
