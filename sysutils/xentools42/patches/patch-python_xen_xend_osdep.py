@@ -1,8 +1,8 @@
-$NetBSD: patch-python_xen_xend_osdep.py,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-python_xen_xend_osdep.py,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- python/xen/xend/osdep.py.orig	2011-04-01 12:03:13.000000000 +0200
-+++ python/xen/xend/osdep.py	2011-04-01 13:49:45.000000000 +0200
-@@ -94,8 +94,12 @@
+--- python/xen/xend/osdep.py.orig	2014-09-02 06:22:57.000000000 +0000
++++ python/xen/xend/osdep.py
+@@ -98,8 +98,12 @@ def _netbsd_balloon_stat(label):
          return None
      cmd = "/sbin/sysctl " + cmdarg
      sysctloutput = commands.getoutput(cmd)

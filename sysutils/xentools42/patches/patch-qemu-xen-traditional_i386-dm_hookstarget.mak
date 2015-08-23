@@ -1,8 +1,8 @@
-$NetBSD: patch-qemu-xen-traditional_i386-dm_hookstarget.mak,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-qemu-xen-traditional_i386-dm_hookstarget.mak,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- qemu-xen-traditional/i386-dm/hookstarget.mak.orig	2011-04-15 11:45:21.000000000 +0200
-+++ qemu-xen-traditional/i386-dm/hookstarget.mak	2011-04-15 11:46:36.000000000 +0200
-@@ -2,5 +2,5 @@
+--- qemu-xen-traditional/i386-dm/hookstarget.mak.orig	2014-01-09 12:44:42.000000000 +0000
++++ qemu-xen-traditional/i386-dm/hookstarget.mak
+@@ -2,5 +2,5 @@ IOEMU_OS=$(shell uname -s)
  
  install-hook:
  	$(INSTALL_DIR) "$(DESTDIR)/$(bindir)"
