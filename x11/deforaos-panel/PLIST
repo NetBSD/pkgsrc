@@ -1,14 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/24 18:21:06 khorben Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/08/23 16:16:37 khorben Exp $
 bin/panel
 bin/panel-embed
 bin/panel-message
 bin/panel-notify
 bin/panelctl
 bin/run
+bin/settings
 bin/wifibrowser
 include/Desktop/Panel.h
+include/Desktop/Panel/applet.h
+include/Desktop/Panel/panel.h
+include/Desktop/Panel/window.h
 lib/Panel/applets/battery.so
 lib/Panel/applets/bluetooth.so
+lib/Panel/applets/brightness.so
 lib/Panel/applets/clock.so
 lib/Panel/applets/close.so
 lib/Panel/applets/cpu.so
@@ -19,13 +24,12 @@ lib/Panel/applets/gps.so
 lib/Panel/applets/gsm.so
 lib/Panel/applets/lock.so
 lib/Panel/applets/logout.so
-lib/Panel/applets/main.so
 lib/Panel/applets/memory.so
+lib/Panel/applets/menu.so
 lib/Panel/applets/mixer.so
 lib/Panel/applets/network.so
 lib/Panel/applets/pager.so
 lib/Panel/applets/phone.so
-lib/Panel/applets/player.so
 lib/Panel/applets/rotate.so
 lib/Panel/applets/separator.so
 lib/Panel/applets/spacer.so
@@ -55,6 +59,7 @@ man/man1/panel.1
 man/man1/panelctl.1
 man/man1/wifibrowser.1
 share/applications/deforaos-panel-settings.desktop
+share/applications/deforaos-settings.desktop
 share/applications/deforaos-wifibrowser.desktop
 share/icons/hicolor/16x16/apps/panel-applet-bluetooth.png
 share/icons/hicolor/16x16/apps/panel-applet-desktop.png
@@ -74,4 +79,5 @@ share/icons/hicolor/48x48/apps/panel-applet-bluetooth.png
 share/icons/hicolor/48x48/apps/panel-applet-desktop.png
 share/icons/hicolor/48x48/apps/panel-settings.png
 share/icons/hicolor/scalable/apps/panel-applet-bluetooth.svg
+share/locale/es/LC_MESSAGES/Panel.mo
 share/locale/fr/LC_MESSAGES/Panel.mo
