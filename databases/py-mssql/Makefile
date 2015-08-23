@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/05/09 07:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/08/23 14:30:37 wiz Exp $
 
 DISTNAME=		pymssql-1.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pymssql/}
 

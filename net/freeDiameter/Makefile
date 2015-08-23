@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/09/26 10:55:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/23 14:30:39 wiz Exp $
 
 DISTNAME=	1.2.0
 PKGNAME=	freeDiameter-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.freediameter.net/hg/freeDiameter/archive/
 

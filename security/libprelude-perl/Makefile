@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:51:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/08/23 14:30:41 wiz Exp $
 
 PKGNAME=		libprelude-perl-${VERSION}
-PKGREVISION=		11
+PKGREVISION=		12
 COMMENT=		Perl bindings to LibPrelude
 
 .include "../../security/libprelude/Makefile.common"
