@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/02/24 11:47:03 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2015/08/23 10:10:26 leot Exp $
 ${PYSITELIB}/OpenSSL/SSL.py
 ${PYSITELIB}/OpenSSL/SSL.pyc
 ${PYSITELIB}/OpenSSL/SSL.pyo
@@ -31,6 +26,12 @@ ${PYSITELIB}/OpenSSL/test/test_rand.pyo
 ${PYSITELIB}/OpenSSL/test/test_ssl.py
 ${PYSITELIB}/OpenSSL/test/test_ssl.pyc
 ${PYSITELIB}/OpenSSL/test/test_ssl.pyo
+${PYSITELIB}/OpenSSL/test/test_tsafe.py
+${PYSITELIB}/OpenSSL/test/test_tsafe.pyc
+${PYSITELIB}/OpenSSL/test/test_tsafe.pyo
+${PYSITELIB}/OpenSSL/test/test_util.py
+${PYSITELIB}/OpenSSL/test/test_util.pyc
+${PYSITELIB}/OpenSSL/test/test_util.pyo
 ${PYSITELIB}/OpenSSL/test/util.py
 ${PYSITELIB}/OpenSSL/test/util.pyc
 ${PYSITELIB}/OpenSSL/test/util.pyo
@@ -40,3 +41,8 @@ ${PYSITELIB}/OpenSSL/tsafe.pyo
 ${PYSITELIB}/OpenSSL/version.py
 ${PYSITELIB}/OpenSSL/version.pyc
 ${PYSITELIB}/OpenSSL/version.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
