@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/01/14 21:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/23 14:30:38 wiz Exp $
 
 DISTNAME=		dovecot-antispam-plugin-20130429
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://olgeni.olgeni.com/~olgeni/distfiles/ \
 			http://distcache.FreeBSD.org/local-distfiles/olgeni/
