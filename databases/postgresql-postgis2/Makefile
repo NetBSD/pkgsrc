@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/07/07 17:26:10 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/23 20:34:07 wiz Exp $
 
 DISTNAME=	postgis-2.1.8
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Spatial database capabilities for PostgreSQL
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS=		postgis-[0-9]*
 
@@ -72,7 +73,6 @@ MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 # These are really all BUILD_DEPENDS.
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/docbook-xsl/buildlink3.mk"
 
 # NORMAL DEPENDS
 .include "../../geography/gdal-lib/buildlink3.mk"
