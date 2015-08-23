@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2015/08/03 02:07:37 wen Exp $
+# $NetBSD: Makefile,v 1.51 2015/08/23 02:11:22 mef Exp $
 
 DISTNAME=	Mouse-v2.4.4
 PKGNAME=	p5-${DISTNAME:S/v//1}
@@ -15,6 +15,14 @@ BUILD_DEPENDS+=	p5-Test-Requires>=0.06:../../devel/p5-Test-Requires
 #BUILD_DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.21}:../../devel/p5-ExtUtils-ParseXS
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Devel-PPPort>=3.19}:../../devel/p5-Devel-PPPort
 BUILD_DEPENDS+=	p5-Module-Build-XSUtil>=0:../../devel/p5-Module-Build-XSUtil
+# for make test
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+# (recommended)
+BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+BUILD_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
+BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 
 MAKE_JOBS_SAFE=	no
 
