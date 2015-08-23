@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2015/08/23 13:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2015/08/23 14:04:32 wiz Exp $
 
-DISTNAME=		shotwell-0.20.2
-PKGREVISION=		5
+DISTNAME=		shotwell-0.22.0
 CATEGORIES=		graphics
-MASTER_SITES=		https://download.gnome.org/sources/shotwell/0.20/
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/shotwell/0.22/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
@@ -47,6 +46,7 @@ BUILDLINK_DEPMETHOD.vala= build
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/webkit24-gtk3/buildlink3.mk"
 .include "../../www/librest07/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.12.2
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libunique3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
