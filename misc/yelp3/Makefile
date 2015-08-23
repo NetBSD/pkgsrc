@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2015/06/17 19:02:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.36 2015/08/23 10:12:43 wiz Exp $
 
 DISTNAME=		yelp-3.16.1
+PKGREVISION=		1
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -27,7 +28,7 @@ BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../www/webkit1-gtk3/buildlink3.mk"
+.include "../../www/webkit24-gtk3/buildlink3.mk"
 .include "../../textproc/yelp-xsl/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
