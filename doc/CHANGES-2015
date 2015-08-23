@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3542 2015/08/23 14:11:26 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3543 2015/08/23 14:12:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6360,3 +6360,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/p5-Convert-BinHex to 1.124 [wiz 2015-08-23]
 	Updated finance/p5-Finance-Quote to 1.38 [wiz 2015-08-23]
 	Updated x11/xf86-video-ast to 1.1.5 [wiz 2015-08-23]
+	Added net/py-hpack version 1.1.0 [leot 2015-08-23]
