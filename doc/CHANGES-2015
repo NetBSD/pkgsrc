@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3555 2015/08/23 16:17:34 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3556 2015/08/23 20:20:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6373,3 +6373,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/roundcube to 1.1.2nb1 [taca 2015-08-23]
 	Updated mail/roundcube to 1.1.2nb2 [taca 2015-08-23]
 	Updated x11/deforaos-panel to 0.3.2 [khorben 2015-08-23]
+	Updated comms/py-gammu to 2.3nb1 [leot 2015-08-23]
