@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3519 2015/08/23 00:24:33 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3520 2015/08/23 00:43:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6335,3 +6335,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-Path to 2.11 [mef 2015-08-22]
 	Updated devel/p5-File-ShareDir-ProjectDistDir to 1.000008 [mef 2015-08-23]
 	Updated devel/p5-Future to 0.33 [mef 2015-08-23]
+	Added www/webkit24-gtk3 version 2.4.9 [leot 2015-08-23]
