@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2015/08/23 10:16:13 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2015/08/23 13:56:34 wiz Exp $
 
 DISTNAME=		shotwell-0.20.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		https://download.gnome.org/sources/shotwell/0.20/
 EXTRACT_SUFX=		.tar.xz
@@ -32,8 +32,7 @@ REPLACE_SH+=		configure
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgexiv2+= libgexiv2>=0.4.1
-.include "../../graphics/libgexiv2/buildlink3.mk"
+.include "../../graphics/gexiv2/buildlink3.mk"
 # 0.13.2 added shared libs
 BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
 .include "../../graphics/libraw/buildlink3.mk"
