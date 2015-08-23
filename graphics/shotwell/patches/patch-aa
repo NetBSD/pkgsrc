@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2014/11/25 10:07:18 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2015/08/23 14:04:32 wiz Exp $
 
---- Makefile.orig	2013-11-19 02:16:36.000000000 +0000
+--- Makefile.orig	2015-03-24 00:38:31.000000000 +0000
 +++ Makefile
-@@ -315,7 +315,6 @@ EXT_PKGS = \
+@@ -263,7 +263,6 @@ EXT_PKGS = \
  	gstreamer-base-1.0 \
  	gstreamer-pbutils-1.0 \
  	gtk+-3.0 \
@@ -10,15 +10,15 @@ $NetBSD: patch-aa,v 1.10 2014/11/25 10:07:18 wiz Exp $
  	libexif \
  	libgphoto2 \
  	json-glib-1.0 \
-@@ -347,7 +346,6 @@ EXT_PKG_VERSIONS = \
+@@ -295,7 +294,6 @@ EXT_PKG_VERSIONS = \
  	gstreamer-plugins-base-1.0 >= 1.0.0 \
  	gstreamer-pbutils-1.0 >= 1.0.0 \
- 	gtk+-3.0 >= 3.6.0 \
+ 	gtk+-3.0 >= 3.12.2 \
 -	gudev-1.0 >= 145 \
  	libexif >= 0.6.16 \
  	libgphoto2 >= 2.4.2 \
  	libraw >= 0.13.2 \
-@@ -461,7 +459,7 @@ PLUGIN_CFLAGS += $(PROFILE_FLAGS) $(REQU
+@@ -417,7 +415,7 @@ PLUGIN_CFLAGS += $(PROFILE_FLAGS) $(REQU
  # Required for gudev-1.0
  CFLAGS += -DG_UDEV_API_IS_SUBJECT_TO_CHANGE
  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.10 2014/11/25 10:07:18 wiz Exp $
  
  ifdef ENABLE_BUILD_FOR_GLADE
  all: $(PLUGINS_DIR) lib$(PROGRAM).so $(PROGRAM) $(PC_FILE)
-@@ -535,7 +533,7 @@ ifndef DISABLE_DESKTOP_VALIDATE
+@@ -489,7 +487,7 @@ ifndef DISABLE_DESKTOP_VALIDATE
  	else rm -f misc/shotwell.desktop.errors; \
  	fi
  endif
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.10 2014/11/25 10:07:18 wiz Exp $
  misc/shotwell-viewer.desktop: misc/shotwell-viewer.desktop.head $(EXPANDED_CORE_PO_FILES)
  	cp misc/shotwell-viewer.desktop.head misc/shotwell-viewer.desktop
  	$(foreach lang,$(CORE_SUPPORTED_LANGUAGES), echo X-GNOME-FullName[$(lang)]=`TEXTDOMAINDIR=locale-langpack \
-@@ -736,7 +732,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
+@@ -694,7 +692,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
  
  .PHONY: $(PLUGINS_DIR)
  $(PLUGINS_DIR): $(PLUGIN_VAPI) $(PLUGIN_HEADER) $(PLUGIN_DEPS)

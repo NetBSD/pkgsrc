@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2015/08/23 14:04:32 wiz Exp $
 
---- src/camera/CameraTable.vala.orig	2012-03-28 22:35:57.000000000 +0000
+--- src/camera/CameraTable.vala.orig	2015-02-14 00:50:15.000000000 +0000
 +++ src/camera/CameraTable.vala
 @@ -26,7 +26,6 @@ public class CameraTable {
      
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
      private OneShotScheduler camera_update_scheduler = null;
      private GPhoto.Context null_context = new GPhoto.Context();
      private GPhoto.CameraAbilitiesList abilities_list;
-@@ -44,7 +43,6 @@ public class CameraTable {
+@@ -43,7 +42,6 @@ public class CameraTable {
              on_update_cameras);
          
          // listen for interesting events on the specified subsystems
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
          volume_monitor = VolumeMonitor.get();
          volume_monitor.volume_changed.connect(on_volume_changed);
          volume_monitor.volume_added.connect(on_volume_changed);
-@@ -105,31 +103,6 @@ public class CameraTable {
+@@ -111,31 +109,6 @@ public class CameraTable {
      private string[] get_all_usb_cameras() {
          string[] cameras = new string[0];
          
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
          return cameras;
      }
      
-@@ -206,24 +179,6 @@ public class CameraTable {
+@@ -212,24 +185,6 @@ public class CameraTable {
              "/dev/bus/usb/%s".printf(port.substring(4).replace(",", "/")) : null;
      }
      
@@ -63,10 +63,10 @@ $NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
 -        return null;
 -    }
 -    
--    private GLib.Icon? get_icon_for_uuid(string uuid) {
+-    private string? get_icon_for_uuid(string uuid) {
 -        foreach (Volume volume in volume_monitor.get_volumes()) {
 -            if (volume.get_identifier(VolumeIdentifier.UUID) == uuid) {
--                return volume.get_icon();
+-                return volume.get_icon().to_string();
 -            }
 -        }
 -        return null;
@@ -75,7 +75,7 @@ $NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
      private void update_camera_table() throws GPhotoError {
          // need to do this because virtual ports come and go in the USB world (and probably others)
          GPhoto.PortInfoList port_info_list;
-@@ -313,23 +268,6 @@ public class CameraTable {
+@@ -333,23 +288,6 @@ public class CameraTable {
                  continue;
              }
              
@@ -99,7 +99,7 @@ $NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
              if (null == display_name) {
                  // Default to GPhoto detected name.
                  display_name = name;
-@@ -367,14 +305,6 @@ public class CameraTable {
+@@ -394,14 +332,6 @@ public class CameraTable {
          }
      }
      
