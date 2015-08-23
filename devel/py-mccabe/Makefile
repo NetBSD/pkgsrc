@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/01/03 00:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/23 11:15:03 wen Exp $
 
-DISTNAME=	mccabe-0.3
+DISTNAME=	mccabe-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/m/mccabe/
