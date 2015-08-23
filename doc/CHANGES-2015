@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3536 2015/08/23 13:44:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3537 2015/08/23 13:57:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6352,3 +6352,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-Diff to 1.43 [wiz 2015-08-23]
 	Updated fonts/harfbuzz to 1.0.2 [wiz 2015-08-23]
 	Updated audio/libopenmpt to 0.2.5486beta13 [wiz 2015-08-23]
+	Added graphics/gexiv2 version 0.10.3 [wiz 2015-08-23]
+	Removed graphics/libgexiv2 successor graphics/gexiv2 [wiz 2015-08-23]
+	Updated graphics/shotwell to 0.20.2nb5 [wiz 2015-08-23]
