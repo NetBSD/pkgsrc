@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14760 2015/08/23 07:28:42 wen Exp $
+$NetBSD: TODO,v 1.14761 2015/08/23 08:54:43 leot Exp $
 
 Suggested new packages
 ======================
@@ -610,7 +610,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dropbear-2015.67
 	o duplicity-0.6.26
 	o dvdstyler-2.9.3
-	o dvtm-0.14
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
 	o easytag-2.2.6
