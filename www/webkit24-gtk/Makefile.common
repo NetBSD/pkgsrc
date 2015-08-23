@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2015/07/12 00:37:47 wiz Exp $
-# used by www/webkit-gtk/Makefile
+# $NetBSD: Makefile.common,v 1.2 2015/08/23 00:44:59 leot Exp $
+# used by www/webkit24-gtk/Makefile
+# used by www/webkit24-gtk3/Makefile
 
 DISTNAME=	webkitgtk-2.4.9
 CATEGORIES=	www
