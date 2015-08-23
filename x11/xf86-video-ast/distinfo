@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/08/17 17:43:58 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/08/23 14:11:17 wiz Exp $
 
-SHA1 (xf86-video-ast-1.0.1.tar.bz2) = 446a446dc5b4f3de305ae2662a48910f1067880b
-RMD160 (xf86-video-ast-1.0.1.tar.bz2) = aa13003a6495d9ae6745ca6d771710bd596b260f
-Size (xf86-video-ast-1.0.1.tar.bz2) = 334841 bytes
+SHA1 (xf86-video-ast-1.1.5.tar.bz2) = 34a610e506079f32b240335520200457aa72d4c2
+RMD160 (xf86-video-ast-1.1.5.tar.bz2) = eba414a195e28858a28e213bc6662d7ced1c3db6
+Size (xf86-video-ast-1.1.5.tar.bz2) = 339848 bytes
