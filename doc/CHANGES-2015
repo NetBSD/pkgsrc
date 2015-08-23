@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3551 2015/08/23 14:41:45 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3552 2015/08/23 14:42:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6369,3 +6369,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-netlib to 0.13.1 [leot 2015-08-23]
 	Updated net/mitmproxy to 0.13 [leot 2015-08-23]
 	Updated devel/deforaos-libsystem to 0.2.2 [khorben 2015-08-23]
+	Updated security/scrypt to 1.2.0 [wiz 2015-08-23]
