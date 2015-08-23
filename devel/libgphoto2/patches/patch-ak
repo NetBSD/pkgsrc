@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.1 2008/04/29 09:31:09 sborrill Exp $
+$NetBSD: patch-ak,v 1.2 2015/08/23 14:17:06 wiz Exp $
 
---- packaging/generic/check-ptp-camera.orig	2008-04-25 00:01:14.000000000 +0100
-+++ packaging/generic/check-ptp-camera	2008-04-25 00:01:36.000000000 +0100
+--- packaging/generic/check-ptp-camera.orig	2015-02-22 10:08:18.000000000 +0000
++++ packaging/generic/check-ptp-camera
 @@ -1,4 +1,4 @@
 -#!/bin/bash
 +#!/bin/sh
-  
- # check if any interface of this device is a PTP camera interface (06)
- INTERFACE="${1:-06/01/01}"
+ # This program is free software; you can redistribute it and/or
+ # modify it under the terms of the GNU Lesser General Public
+ # License as published by the Free Software Foundation; either
