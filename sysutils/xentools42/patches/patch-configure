@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-configure,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- configure.orig	2012-12-17 15:00:12.000000000 +0000
+--- configure.orig	2014-09-02 06:22:57.000000000 +0000
 +++ configure
 @@ -3719,7 +3719,7 @@ $as_echo "no" >&6; }
  fi
