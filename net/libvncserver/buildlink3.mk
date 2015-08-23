@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2014/01/01 11:52:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/08/23 14:30:35 wiz Exp $
 
 BUILDLINK_TREE+=	libVNCServer
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libVNCServer
 LIBVNCSERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libVNCServer+=	libVNCServer>=0.9.1
-BUILDLINK_ABI_DEPENDS.libVNCServer+=	libVNCServer>=0.9.9nb4
+BUILDLINK_ABI_DEPENDS.libVNCServer+=	libVNCServer>=0.9.9nb5
 BUILDLINK_PKGSRCDIR.libVNCServer?=	../../net/libvncserver
 
 .include "../../devel/zlib/buildlink3.mk"
