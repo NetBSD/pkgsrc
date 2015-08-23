@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14762 2015/08/23 10:12:54 wiz Exp $
+$NetBSD: TODO,v 1.14763 2015/08/23 13:16:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,7 @@ Suggested new packages
 	xf86-video-freedreno, xf86-video-glide, xf86-video-impact,
 	xf86-video-omap, xf86-video-sisusb, xf86-video-sunbw2,
 	xf86-video-sunleo, xf86-video-v4l, xf86-video-vermilion,
-	xf86-video-xgi, xf86-video-xgixp
+	xf86-video-xgixp
 	lib: liboldX
 	test: xorg-gtest, xts
 	util: gccmakedep, lndir
@@ -1065,6 +1065,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libnasl-2.3.1
 	o libntfs-2015.3.14
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.5486
 	o libowfat-0.29
 	o libpcap-1.7.4
 	o libpgm-5.2.122
@@ -1921,7 +1922,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-devel-1.7.49
+	o wine-devel-1.7.50
 	o wireshark-1.12.6
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
@@ -1947,6 +1948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
+	o xf86-video-ast-1.1.5
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-sisusb-0.9.4
@@ -1987,6 +1989,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xscorch-0.2.1
 	o xsd-3.3.0
 	o xsoldier-1.8
+	o xterm-319
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
