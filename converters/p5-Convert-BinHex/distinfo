@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/10/02 10:54:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/08/23 14:07:27 wiz Exp $
 
-SHA1 (Convert-BinHex-1.123.tar.gz) = b4f7a1f24b4ba64762a8a7e2c3e64b7e8c157e5f
-RMD160 (Convert-BinHex-1.123.tar.gz) = 5bb598bfb739f56b9040dc66f42a14a80748b702
-Size (Convert-BinHex-1.123.tar.gz) = 75876 bytes
+SHA1 (Convert-BinHex-1.124.tar.gz) = 12fbf3fa73f8c9dab1db0c416ae1cc6c5bcadb50
+RMD160 (Convert-BinHex-1.124.tar.gz) = 4f01dbb24e19f04da77b5bf650e70846d8f39eb9
+Size (Convert-BinHex-1.124.tar.gz) = 73095 bytes
