@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3517 2015/08/22 23:49:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3518 2015/08/23 00:18:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6330,3 +6330,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-CPAN-Perl-Releases to 2.30 [mef 2015-08-22]
 	Updated devel/p5-CPAN-Reporter to 1.2015 [mef 2015-08-22]
 	Updated lang/go to 1.5nb1 [wiz 2015-08-22]
+	Updated devel/p5-ExtUtils-F77 to 1.18 [mef 2015-08-22]
+	Updated devel/p5-File-LibMagic to 1.13 [mef 2015-08-22]
+	Updated devel/p5-File-Path to 2.11 [mef 2015-08-22]
+	Updated devel/p5-File-ShareDir-ProjectDistDir to 1.000008 [mef 2015-08-23]
