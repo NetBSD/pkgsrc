@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14763 2015/08/23 13:16:57 wiz Exp $
+$NetBSD: TODO,v 1.14764 2015/08/23 13:38:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1453,7 +1453,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Test-Version-2.03
 	o p5-Test-YAML-1.06
 	o p5-Text-CSV_XS-1.19
-	o p5-Text-Diff-1.43
 	o p5-Text-MicroTemplate-0.24
 	o p5-Text-Reflow-1.10
 	o p5-Throwable-0.200013
