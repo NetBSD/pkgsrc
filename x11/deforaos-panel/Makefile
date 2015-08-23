@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2015/08/09 15:17:43 khorben Exp $
+# $NetBSD: Makefile,v 1.18 2015/08/23 16:16:37 khorben Exp $
 #
 
-DISTNAME=	Panel-0.3.1
-PKGNAME=	deforaos-panel-0.3.1
-PKGREVISION=	2
+DISTNAME=	Panel-0.3.2
+PKGNAME=	deforaos-panel-0.3.2
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/4338/
+MASTER_SITES=	http://www.defora.org/os/download/download/4358/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -54,6 +53,4 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
-.include "../../sysutils/deforaos-browser/buildlink3.mk"
-.include "../../multimedia/deforaos-player/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
