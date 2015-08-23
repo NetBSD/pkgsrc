@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3538 2015/08/23 14:04:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3539 2015/08/23 14:06:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6356,3 +6356,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed graphics/libgexiv2 successor graphics/gexiv2 [wiz 2015-08-23]
 	Updated graphics/shotwell to 0.20.2nb5 [wiz 2015-08-23]
 	Updated graphics/shotwell to 0.22.0 [wiz 2015-08-23]
+	Updated x11/xterm to 319 [wiz 2015-08-23]
