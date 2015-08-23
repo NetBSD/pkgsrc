@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14773 2015/08/23 14:17:15 wiz Exp $
+$NetBSD: TODO,v 1.14774 2015/08/23 14:22:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1193,7 +1193,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netio-132
 	o netramet-50
 	o netsurf-3.2
-	o nettle-3.1.1 [wip; breaks gnutls-3.2.15, wait for newer version]
 	o newmail-1.0.2
 	o nginx-devel-1.9.2
 	o nikto-2.1.5
