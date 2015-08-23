@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3553 2015/08/23 15:39:32 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3554 2015/08/23 15:43:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6371,3 +6371,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/deforaos-libsystem to 0.2.2 [khorben 2015-08-23]
 	Updated security/scrypt to 1.2.0 [wiz 2015-08-23]
 	Updated mail/roundcube to 1.1.2nb1 [taca 2015-08-23]
+	Updated mail/roundcube to 1.1.2nb2 [taca 2015-08-23]
