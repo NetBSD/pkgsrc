@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.710 2015/07/02 20:48:23 markd Exp $
+# $NetBSD: Makefile,v 1.711 2015/08/23 13:57:07 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -134,6 +134,7 @@ SUBDIR+=	geeqie
 SUBDIR+=	gegl
 SUBDIR+=	geomview
 SUBDIR+=	get_ds7
+SUBDIR+=	gexiv2
 SUBDIR+=	gfract
 SUBDIR+=	gif2png
 SUBDIR+=	gif320
@@ -272,7 +273,6 @@ SUBDIR+=	libepoxy
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk
 SUBDIR+=	libgdiplus
-SUBDIR+=	libgexiv2
 SUBDIR+=	libggi
 SUBDIR+=	libggigcp
 SUBDIR+=	libggimisc
