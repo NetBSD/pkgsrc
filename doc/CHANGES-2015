@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3523 2015/08/23 07:35:03 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3524 2015/08/23 07:38:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6339,3 +6339,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Getopt-Long to 2.47 [mef 2015-08-23]
 	Updated devel/p5-MooseX-OneArgNew to 0.005 [wen 2015-08-23]
 	Updated www/p5-Mojolicious to 6.17 [wen 2015-08-23]
+	Updated devel/p5-Log-Dispatch to 2.49 [wen 2015-08-23]
