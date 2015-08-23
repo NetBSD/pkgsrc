@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14761 2015/08/23 08:54:43 leot Exp $
+$NetBSD: TODO,v 1.14762 2015/08/23 10:12:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -566,6 +566,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.6
 	o cue-20150720
+	o cups-filters-1.0.73
 	o cvm-0.97
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsgraph-1.7.0
@@ -883,6 +884,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.0.2
 	o harminv-1.4
 	o haskell-mode-1.45
 	o hdevtools-0.1.1.9
@@ -1277,6 +1279,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Catalyst-View-Excel-Template-Plus-0.04
 	o p5-Chart-2.4.10
 	o p5-Config-Augeas-1.300
+	o p5-Convert-BinHex-1.124
 	o p5-Cookie-Baker-0.06
 	o p5-Crypt-GPG-1.64
 	o p5-Crypt-GeneratePassword-0.04
@@ -1301,6 +1304,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Excel-Template-Plus-0.06
 	o p5-File-Tail-1.2
 	o p5-Filter-1.55
+	o p5-Finance-Quote-1.38
 	o p5-Font-FreeType-0.06
 	o p5-Font-TTF-1.05
 	o p5-FormValidator-Simple-1.00
@@ -1448,6 +1452,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Test-Version-2.03
 	o p5-Test-YAML-1.06
 	o p5-Text-CSV_XS-1.19
+	o p5-Text-Diff-1.43
 	o p5-Text-MicroTemplate-0.24
 	o p5-Text-Reflow-1.10
 	o p5-Throwable-0.200013
@@ -1569,6 +1574,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
 	o py-cups-1.9.73
+	o py-cython-0.23.1
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
 	o py-datapkg-0.9
@@ -1926,7 +1932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20150815
+	o x264-devel-20150822
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
