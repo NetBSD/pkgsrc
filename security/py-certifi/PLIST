@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/23 14:20:55 leot Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/certifi/__init__.py
+${PYSITELIB}/certifi/__init__.pyc
+${PYSITELIB}/certifi/__init__.pyo
+${PYSITELIB}/certifi/__main__.py
+${PYSITELIB}/certifi/__main__.pyc
+${PYSITELIB}/certifi/__main__.pyo
+${PYSITELIB}/certifi/cacert.pem
+${PYSITELIB}/certifi/core.py
+${PYSITELIB}/certifi/core.pyc
+${PYSITELIB}/certifi/core.pyo
+${PYSITELIB}/certifi/mkcert.pem
+${PYSITELIB}/certifi/old_root.pem
