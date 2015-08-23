@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3530 2015/08/23 10:18:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3531 2015/08/23 11:18:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6346,3 +6346,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/yelp3 to 3.16.1nb1 [wiz 2015-08-23]
 	Updated graphics/shotwell to 0.20.2nb4 [wiz 2015-08-23]
 	Updated www/ruby-gnome2-webkit-gtk to 2.2.5nb1 [wiz 2015-08-23]
+	Updated devel/py-mccabe to 0.3.1 [wen 2015-08-23]
