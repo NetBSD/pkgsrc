@@ -1,10 +1,10 @@
-$NetBSD: patch-testsuite_Makefile.in,v 1.4 2013/04/29 16:42:25 adam Exp $
+$NetBSD: patch-testsuite_Makefile.in,v 1.5 2015/08/23 14:22:10 wiz Exp $
 
 Use LIBTOOL.
 
---- testsuite/Makefile.in.orig	2013-01-14 21:44:13.000000000 +0000
+--- testsuite/Makefile.in.orig	2014-06-07 06:15:01.000000000 +0000
 +++ testsuite/Makefile.in
-@@ -73,9 +73,9 @@ all: $(TARGETS) $(EXTRA_TARGETS)
+@@ -76,9 +76,9 @@ all: $(EXTRA_TARGETS)
  # to use suffix rules to build the test executables. So we use an
  # explicit rule for each and every executable.
  
@@ -16,12 +16,3 @@ Use LIBTOOL.
  
  ../nettle-internal.$(OBJEXT):
  	( cd .. && $(MAKE) nettle-internal.$(OBJEXT) )
-@@ -96,7 +96,7 @@ test-rules:
- include $(srcdir)/.test-rules.make
- 
- $(TARGETS) $(EXTRA_TARGETS): testutils.$(OBJEXT) ../nettle-internal.$(OBJEXT) \
--	../libnettle.a @IF_HOGWEED@ ../libhogweed.a
-+	../libnettle.la @IF_HOGWEED@ ../libhogweed.la
- 
- # For use as, e.g.,
- #
