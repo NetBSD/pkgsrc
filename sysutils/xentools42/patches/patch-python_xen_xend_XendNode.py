@@ -1,8 +1,8 @@
-$NetBSD: patch-python_xen_xend_XendNode.py,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-python_xen_xend_XendNode.py,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- python/xen/xend/XendNode.py.orig	2010-04-07 16:12:05.000000000 +0000
+--- python/xen/xend/XendNode.py.orig	2014-09-02 06:22:57.000000000 +0000
 +++ python/xen/xend/XendNode.py
-@@ -276,28 +276,29 @@ class XendNode:
+@@ -279,28 +279,29 @@ class XendNode:
                  except KeyError:
                      pass
  

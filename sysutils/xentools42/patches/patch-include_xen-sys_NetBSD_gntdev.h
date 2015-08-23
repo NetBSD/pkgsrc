@@ -1,6 +1,6 @@
-$NetBSD: patch-include_xen-sys_NetBSD_gntdev.h,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-include_xen-sys_NetBSD_gntdev.h,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- include/xen-sys/NetBSD/gntdev.h.orig	2011-03-29 17:10:31.000000000 +0000
+--- include/xen-sys/NetBSD/gntdev.h.orig	2015-08-23 08:59:20.000000000 +0000
 +++ include/xen-sys/NetBSD/gntdev.h
 @@ -0,0 +1,105 @@
 +/******************************************************************************

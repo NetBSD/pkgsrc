@@ -1,6 +1,6 @@
-$NetBSD: patch-libxc_xc__netbsd.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-libxc_xc__netbsd.c,v 1.2 2015/08/23 16:17:12 spz Exp $
 
---- libxc/xc_netbsd.c.orig	2012-12-17 15:00:48.000000000 +0000
+--- libxc/xc_netbsd.c.orig	2014-09-02 06:22:57.000000000 +0000
 +++ libxc/xc_netbsd.c
 @@ -18,13 +18,19 @@
   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
