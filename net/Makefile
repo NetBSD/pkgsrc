@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1080 2015/07/31 17:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.1081 2015/08/23 14:06:55 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -579,6 +579,7 @@ SUBDIR+=	py-foolscap
 SUBDIR+=	py-gevent
 SUBDIR+=	py-google
 SUBDIR+=	py-hatop
+SUBDIR+=	py-hpack
 SUBDIR+=	py-ipaddress
 SUBDIR+=	py-irclib
 SUBDIR+=	py-junos-eznc
