@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3522 2015/08/23 07:28:42 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3523 2015/08/23 07:35:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6338,3 +6338,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/webkit24-gtk3 version 2.4.9 [leot 2015-08-23]
 	Updated devel/p5-Getopt-Long to 2.47 [mef 2015-08-23]
 	Updated devel/p5-MooseX-OneArgNew to 0.005 [wen 2015-08-23]
+	Updated www/p5-Mojolicious to 6.17 [wen 2015-08-23]
