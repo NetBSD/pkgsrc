@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/24 14:49:42 richard Exp $
+
+SHA1 (tryton-3.6/trytond_account_invoice_history-3.6.0.tar.gz) = 572f11a18d921dae8912b33c352b40a11da663a7
+RMD160 (tryton-3.6/trytond_account_invoice_history-3.6.0.tar.gz) = 27f595c83f6acea28377dc21cff8fd0406c38564
+Size (tryton-3.6/trytond_account_invoice_history-3.6.0.tar.gz) = 17945 bytes

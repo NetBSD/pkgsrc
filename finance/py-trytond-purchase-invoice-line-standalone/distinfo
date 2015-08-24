@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/24 14:49:43 richard Exp $
+
+SHA1 (tryton-3.6/trytond_purchase_invoice_line_standalone-3.6.0.tar.gz) = b880fb5c145a3057f32515eb726ab51fbbe2b44b
+RMD160 (tryton-3.6/trytond_purchase_invoice_line_standalone-3.6.0.tar.gz) = 26b1d830667ff8de586321b036e2dd4a5a024879
+Size (tryton-3.6/trytond_purchase_invoice_line_standalone-3.6.0.tar.gz) = 23575 bytes
