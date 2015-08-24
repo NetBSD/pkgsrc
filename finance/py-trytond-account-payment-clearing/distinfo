@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/24 14:49:42 richard Exp $
+
+SHA1 (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = 235c88cf4e39c672aeb3823c12a646935a39e76a
+RMD160 (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = f1e94e2c065ccf81a93913721975dc20e411e6b5
+Size (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = 22318 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/03/15 00:17:35 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/24 14:49:43 richard Exp $
 TRYTON_MODULE_NAME=	trytond_currency
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -12,7 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	tests/test_currency.py
+REPLACE_PYTHON+=	tests/test_currency.py tests/tools.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

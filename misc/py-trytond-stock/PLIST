@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/15 00:17:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/08/24 14:49:44 richard Exp $
 ${PYSITELIB}/trytond/modules/stock/__init__.py
 ${PYSITELIB}/trytond/modules/stock/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock/__init__.pyo
@@ -55,6 +55,7 @@ ${PYSITELIB}/trytond/modules/stock/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock/tests/__init__.pyo
 ${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_average_cost_price.rst
 ${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_inventory.rst
+${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_reporting.rst
 ${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_shipment_internal.rst
 ${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_shipment_out.rst
 ${PYSITELIB}/trytond/modules/stock/tests/test_stock.py
@@ -71,8 +72,8 @@ ${PYSITELIB}/trytond/modules/stock/view/location_list.xml
 ${PYSITELIB}/trytond/modules/stock/view/location_quantity_tree.xml
 ${PYSITELIB}/trytond/modules/stock/view/location_tree.xml
 ${PYSITELIB}/trytond/modules/stock/view/move_form.xml
-${PYSITELIB}/trytond/modules/stock/view/move_tree.xml
 ${PYSITELIB}/trytond/modules/stock/view/move_tree_simple.xml
+${PYSITELIB}/trytond/modules/stock/view/move_tree.xml
 ${PYSITELIB}/trytond/modules/stock/view/party_address_form.xml
 ${PYSITELIB}/trytond/modules/stock/view/party_address_tree.xml
 ${PYSITELIB}/trytond/modules/stock/view/party_form.xml
