@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14775 2015/08/23 14:33:47 leot Exp $
+$NetBSD: TODO,v 1.14776 2015/08/24 14:56:05 richard Exp $
 
 Suggested new packages
 ======================
@@ -1615,27 +1615,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
-	o py-tryton-3.6.2
-	o py-trytond-3.6.2
-	o py-trytond-account-3.6.1
-	o py-trytond-account-asset-3.6.1
-	o py-trytond-account-fr-3.6.0
-	o py-trytond-account-invoice-3.6.1
-	o py-trytond-account-payment-3.6.0
-	o py-trytond-account-payment-sepa-3.6.0
-	o py-trytond-account-product-3.6.0
-	o py-trytond-account-statement-3.6.0
-	o py-trytond-analytic-account-3.6.0
-	o py-trytond-bank-3.6.0
-	o py-trytond-calendar-3.6.1
-	o py-trytond-company-3.6.0
-	o py-trytond-country-3.6.0
-	o py-trytond-currency-3.6.0
-	o py-trytond-party-3.6.1
-	o py-trytond-party-siret-3.6.0
-	o py-trytond-product-3.6.1
-	o py-trytond-stock-3.6.0
-	o py-trytond-stock-lot-3.6.0
 	o py-uliweb-0.4.1
 	o py-unittest2-1.1.0
 	o py-uwsgi-2.0.11.1
