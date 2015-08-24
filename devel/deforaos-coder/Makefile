@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2015/08/24 00:50:40 khorben Exp $
+# $NetBSD: Makefile,v 1.13 2015/08/24 01:59:18 khorben Exp $
 
-DISTNAME=	Coder-0.0.0
-PKGNAME=	deforaos-coder-0.0.0
-PKGREVISION=	8
+DISTNAME=	Coder-0.1.0
+PKGNAME=	deforaos-coder-0.1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.defora.org/os/download/download/4288/
+MASTER_SITES=	http://www.defora.org/os/download/download/4364/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -29,6 +28,10 @@ AUTO_MKDIRS=	yes
 
 .if ${PKGMANDIR} != "share/man"
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/coder.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/coder.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/sequel.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/sequel.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/simulator.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/simulator.html
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/coder.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/coder.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/sequel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sequel.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/simulator.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/simulator.1
@@ -36,7 +39,9 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../databases/deforaos-libdatabase/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
