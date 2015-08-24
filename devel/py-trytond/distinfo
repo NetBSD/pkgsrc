@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/03/15 00:17:34 rodent Exp $
+$NetBSD: distinfo,v 1.6 2015/08/24 14:49:41 richard Exp $
 
-SHA1 (tryton-3.4/trytond-3.4.2.tar.gz) = a4ddae29896c232409c9d92901872c1a83521933
-RMD160 (tryton-3.4/trytond-3.4.2.tar.gz) = 8af4253eb53fde506683015cc148f336d15364e7
-Size (tryton-3.4/trytond-3.4.2.tar.gz) = 497677 bytes
+SHA1 (tryton-3.6/trytond-3.6.2.tar.gz) = 0a2486c85cdb43e814a49cab763290210dabd48a
+RMD160 (tryton-3.6/trytond-3.6.2.tar.gz) = 80fd7420220c9b8bba12076304e48e00f68792cf
+Size (tryton-3.6/trytond-3.6.2.tar.gz) = 506699 bytes
