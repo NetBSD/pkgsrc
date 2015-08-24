@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/24 19:54:14 leot Exp $
 #
 
-DISTNAME=		testdisk-6.14
-PKGREVISION=		2
+DISTNAME=		testdisk-7.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cgsecurity.org/
 EXTRACT_SUFX=		.tar.bz2
@@ -20,12 +19,15 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
 
+CONFIGURE_ARGS+=	--disable-qt
+
 # testdisk uses either ntfsprogs or fuse-ntfs-3g, but not both, and prefers
 # fuse-ntfs-3g.  Ignore configure-time warnings that the ntfs library is
 # disabled.
 .include "../../filesystems/libntfs/buildlink3.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
