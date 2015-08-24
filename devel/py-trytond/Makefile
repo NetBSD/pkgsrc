@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/04/19 00:54:30 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/24 14:49:41 richard Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
-PKGREVISION=	1
 CATEGORIES=	devel python
 
 MAINTAINER=	rodent@NetBSD.org
@@ -11,7 +10,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-python-sql>=0.2:../../databases/py-python-sql
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
-DEPENDS+=	${PYPKGPREFIX}-py-bcrypt-[0-9]*:../../security/py-py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-relatorio>=0.2.0:../../textproc/py-relatorio
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 

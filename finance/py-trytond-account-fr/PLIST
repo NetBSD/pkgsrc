@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/15 05:33:45 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/24 14:49:41 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -14,4 +14,10 @@ ${PYSITELIB}/trytond/modules/account_fr/account.py
 ${PYSITELIB}/trytond/modules/account_fr/account.pyc
 ${PYSITELIB}/trytond/modules/account_fr/account.pyo
 ${PYSITELIB}/trytond/modules/account_fr/tax_fr.xml
+${PYSITELIB}/trytond/modules/account_fr/tests/__init__.py
+${PYSITELIB}/trytond/modules/account_fr/tests/__init__.pyc
+${PYSITELIB}/trytond/modules/account_fr/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/account_fr/tests/test_account_fr.py
+${PYSITELIB}/trytond/modules/account_fr/tests/test_account_fr.pyc
+${PYSITELIB}/trytond/modules/account_fr/tests/test_account_fr.pyo
 ${PYSITELIB}/trytond/modules/account_fr/tryton.cfg

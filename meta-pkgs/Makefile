@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2015/07/06 04:15:33 rodent Exp $
+# $NetBSD: Makefile,v 1.82 2015/08/24 14:49:43 richard Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -44,6 +44,7 @@ SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
 SUBDIR+=	py-gnome-bindings
+SUBDIR+=	py-tryton-platform
 SUBDIR+=	ruby-gnome2
 SUBDIR+=	ruby-redmine-plugins
 SUBDIR+=	ruby-redmine-themes

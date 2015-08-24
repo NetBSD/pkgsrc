@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/15 00:17:34 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/08/24 14:49:41 richard Exp $
 bin/tryton${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -36,9 +36,6 @@ ${PYSITELIB}/tryton/common/cellrendererclickablepixbuf.pyo
 ${PYSITELIB}/tryton/common/cellrenderercombo.py
 ${PYSITELIB}/tryton/common/cellrenderercombo.pyc
 ${PYSITELIB}/tryton/common/cellrenderercombo.pyo
-${PYSITELIB}/tryton/common/cellrendererdate.py
-${PYSITELIB}/tryton/common/cellrendererdate.pyc
-${PYSITELIB}/tryton/common/cellrendererdate.pyo
 ${PYSITELIB}/tryton/common/cellrendererfloat.py
 ${PYSITELIB}/tryton/common/cellrendererfloat.pyc
 ${PYSITELIB}/tryton/common/cellrendererfloat.pyo
@@ -57,9 +54,9 @@ ${PYSITELIB}/tryton/common/common.pyo
 ${PYSITELIB}/tryton/common/completion.py
 ${PYSITELIB}/tryton/common/completion.pyc
 ${PYSITELIB}/tryton/common/completion.pyo
-${PYSITELIB}/tryton/common/date_widget.py
-${PYSITELIB}/tryton/common/date_widget.pyc
-${PYSITELIB}/tryton/common/date_widget.pyo
+${PYSITELIB}/tryton/common/datetime_.py
+${PYSITELIB}/tryton/common/datetime_.pyc
+${PYSITELIB}/tryton/common/datetime_.pyo
 ${PYSITELIB}/tryton/common/datetime_strftime.py
 ${PYSITELIB}/tryton/common/datetime_strftime.pyc
 ${PYSITELIB}/tryton/common/datetime_strftime.pyo
@@ -87,6 +84,9 @@ ${PYSITELIB}/tryton/common/popup_menu.pyo
 ${PYSITELIB}/tryton/common/selection.py
 ${PYSITELIB}/tryton/common/selection.pyc
 ${PYSITELIB}/tryton/common/selection.pyo
+${PYSITELIB}/tryton/common/timedelta.py
+${PYSITELIB}/tryton/common/timedelta.pyc
+${PYSITELIB}/tryton/common/timedelta.pyo
 ${PYSITELIB}/tryton/common/treeviewcontrol.py
 ${PYSITELIB}/tryton/common/treeviewcontrol.pyc
 ${PYSITELIB}/tryton/common/treeviewcontrol.pyo
@@ -222,9 +222,6 @@ ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/checkbox.pyo
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/dictionary.py
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/dictionary.pyc
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/dictionary.pyo
-${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/float_time.py
-${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/float_time.pyc
-${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/float_time.pyo
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/float.py
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/float.pyc
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/float.pyo
@@ -267,6 +264,9 @@ ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/state_widget.pyo
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/textbox.py
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/textbox.pyc
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/textbox.pyo
+${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/timedelta.py
+${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/timedelta.pyc
+${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/timedelta.pyo
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/url.py
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/url.pyc
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/url.pyo
@@ -351,9 +351,6 @@ ${PYSITELIB}/tryton/signal_event.pyo
 ${PYSITELIB}/tryton/translate.py
 ${PYSITELIB}/tryton/translate.pyc
 ${PYSITELIB}/tryton/translate.pyo
-${PYSITELIB}/tryton/version.py
-${PYSITELIB}/tryton/version.pyc
-${PYSITELIB}/tryton/version.pyo
 share/locale/bg_BG/LC_MESSAGES/tryton.mo
 share/locale/bg_BG/LC_MESSAGES/tryton.po
 share/locale/ca_ES/LC_MESSAGES/tryton.mo

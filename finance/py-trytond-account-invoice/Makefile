@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/15 00:17:34 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/24 14:49:41 richard Exp $
 TRYTON_MODULE_NAME=	trytond_account_invoice
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
-REPLACE_PYTHON+=	tests/test_account_invoice.py
+REPLACE_PYTHON+=	tests/test_account_invoice.py tests/tools.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

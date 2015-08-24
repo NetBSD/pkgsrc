@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/03/15 00:17:35 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/24 14:49:42 richard Exp $
 TRYTON_MODULE_NAME=	trytond_account_payment
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
-COMMENT=	account_payment module of the Tryton application platform
+COMMENT=	Account_payment module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-trytond-currency-[0-9]*:../../finance/py-trytond-currency

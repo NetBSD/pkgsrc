@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/24 14:49:42 richard Exp $
+
+SHA1 (tryton-3.6/trytond_analytic_purchase-3.6.0.tar.gz) = 266105c1c7de80302a4cd758dadd9f882b167dab
+RMD160 (tryton-3.6/trytond_analytic_purchase-3.6.0.tar.gz) = d61218afa186897f35a1e51e284cc53a741ad7d2
+Size (tryton-3.6/trytond_analytic_purchase-3.6.0.tar.gz) = 22993 bytes

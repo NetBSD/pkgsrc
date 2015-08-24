@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/24 14:49:42 richard Exp $
+
+SHA1 (tryton-3.6/trytond_account_invoice_stock-3.6.0.tar.gz) = b12504e336f55dba4bb3fdc2cfed9de6600ab479
+RMD160 (tryton-3.6/trytond_account_invoice_stock-3.6.0.tar.gz) = 1da65a9d8aa4b0881dd2b745ab5276bb9024122b
+Size (tryton-3.6/trytond_account_invoice_stock-3.6.0.tar.gz) = 19198 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/04/14 11:40:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/08/24 14:49:41 richard Exp $
 
 # used by meta-pkgs/py-tryton-platform/Makefile
 # used by devel/py-proteus/Makefile
@@ -45,82 +45,84 @@
 # used by time/py-trytond-calendar/Makefile
 # used by time/py-trytond-company-work-time/Makefile
 
-TRYTON_BASEVER=		3.4
+TRYTON_BASEVER=		3.6
 
 #specific module revisions:
-MODULE_REVISION.proteus=					2
+MODULE_REVISION.proteus=					1
 MODULE_REVISION.tryton=						2
 MODULE_REVISION.trytond=					2
 MODULE_REVISION.trytond_account=				1
-MODULE_REVISION.trytond_account_asset=				0
-MODULE_REVISION.trytond_account_fr=				0
-MODULE_REVISION.trytond_account_history=			0
-MODULE_REVISION.trytond_account_invoice=			0
-MODULE_REVISION.trytond_account_invoice_history=		0
-MODULE_REVISION.trytond_account_invoice_line_standalone=	0
-MODULE_REVISION.trytond_account_invoice_stock=			0
-MODULE_REVISION.trytond_account_payment=			0
-MODULE_REVISION.trytond_account_payment_clearing=		0
-MODULE_REVISION.trytond_account_payment_sepa=			0
-MODULE_REVISION.trytond_account_product=			0
-MODULE_REVISION.trytond_account_statement=			0
-MODULE_REVISION.trytond_account_stock_continental=		0
-MODULE_REVISION.trytond_analytic_account=			0
-MODULE_REVISION.trytond_analytic_invoice=			0
-MODULE_REVISION.trytond_analytic_purchase=			0
-MODULE_REVISION.trytond_analytic_sale=				0
-MODULE_REVISION.trytond_bank=					0
-MODULE_REVISION.trytond_calendar=				0
-MODULE_REVISION.trytond_carrier=				1
-MODULE_REVISION.trytond_carrier_percentage=			1
-MODULE_REVISION.trytond_carrier_weight=				1
-MODULE_REVISION.trytond_company=				1
-MODULE_REVISION.trytond_company_work_time=			1
-MODULE_REVISION.trytond_country=				1
-MODULE_REVISION.trytond_currency=				1
-MODULE_REVISION.trytond_dashboard=				1
-MODULE_REVISION.trytond_google_maps=				1
-MODULE_REVISION.trytond_ldap_authentication=			1
+MODULE_REVISION.trytond_account_asset=				1
+#MODULE_REVISION.trytond_account_fr=				0
+MODULE_REVISION.trytond_account_invoice=			1
+#MODULE_REVISION.trytond_account_invoice_history=		1
+#MODULE_REVISION.trytond_account_invoice_line_standalone=	1
+#MODULE_REVISION.trytond_account_invoice_stock=			1
+#MODULE_REVISION.trytond_account_payment=			1
+#MODULE_REVISION.trytond_account_payment_clearing=		1
+#MODULE_REVISION.trytond_account_payment_sepa=			1
+#MODULE_REVISION.trytond_account_product=			1
+#MODULE_REVISION.trytond_account_statement=			1
+#MODULE_REVISION.trytond_account_stock_continental=		1
+#MODULE_REVISION.trytond_analytic_account=			1
+#MODULE_REVISION.trytond_analytic_invoice=			1
+#MODULE_REVISION.trytond_analytic_purchase=			1
+#MODULE_REVISION.trytond_analytic_sale=				1
+#MODULE_REVISION.trytond_bank=					1
+MODULE_REVISION.trytond_calendar=				1
+#MODULE_REVISION.trytond_carrier=				1
+#MODULE_REVISION.trytond_carrier_percentage=			1
+#MODULE_REVISION.trytond_carrier_weight=				1
+#MODULE_REVISION.trytond_company=				1
+#MODULE_REVISION.trytond_company_work_time=			1
+#MODULE_REVISION.trytond_country=				1
+#MODULE_REVISION.trytond_currency=				1
+#MODULE_REVISION.trytond_dashboard=				1
+#MODULE_REVISION.trytond_google_maps=				1
+#MODULE_REVISION.trytond_ldap_authentication=			1
 MODULE_REVISION.trytond_party=					1
-MODULE_REVISION.trytond_party_relationship=			1
-MODULE_REVISION.trytond_party_siret=				1
-MODULE_REVISION.trytond_party_vcarddav=				1
+#MODULE_REVISION.trytond_party_relationship=			1
+#MODULE_REVISION.trytond_party_siret=				1
+#MODULE_REVISION.trytond_party_vcarddav=				1
 MODULE_REVISION.trytond_product=				1
-MODULE_REVISION.trytond_product_attribute=			1
-MODULE_REVISION.trytond_product_cost_fifo=			1
-MODULE_REVISION.trytond_product_cost_history=			1
-MODULE_REVISION.trytond_product_measurements=			1
-MODULE_REVISION.trytond_product_price_list=			1
-MODULE_REVISION.trytond_production=				1
-MODULE_REVISION.trytond_project=				1
+#MODULE_REVISION.trytond_product_attribute=			1
+#MODULE_REVISION.trytond_product_cost_fifo=			1
+#MODULE_REVISION.trytond_product_cost_history=			1
+#MODULE_REVISION.trytond_product_measurements=			1
+#MODULE_REVISION.trytond_product_price_list=			1
+#MODULE_REVISION.trytond_production=				1
+#MODULE_REVISION.trytond_project=				1
 MODULE_REVISION.trytond_project_invoice=			1
 MODULE_REVISION.trytond_project_plan=				1
-MODULE_REVISION.trytond_project_revenue=			1
-MODULE_REVISION.trytond_purchase=				1
-MODULE_REVISION.trytond_purchase_invoice_line_standalone=	1
-MODULE_REVISION.trytond_purchase_shipment_cost=			1
-MODULE_REVISION.trytond_sale=					1
-MODULE_REVISION.trytond_sale_credit_limit=			1
-MODULE_REVISION.trytond_sale_invoice_grouping=			1
-MODULE_REVISION.trytond_sale_opportunity=			2
-MODULE_REVISION.trytond_sale_price_list=			1
-MODULE_REVISION.trytond_sale_shipment_cost=			1
-MODULE_REVISION.trytond_sale_shipment_grouping=			1
-MODULE_REVISION.trytond_sale_supply=				1
-MODULE_REVISION.trytond_sale_supply_drop_shipment=		1
-MODULE_REVISION.trytond_stock=					1
-MODULE_REVISION.trytond_stock_forecast=				1
-MODULE_REVISION.trytond_stock_inventory_location=		1
-MODULE_REVISION.trytond_stock_location_sequence=		1
-MODULE_REVISION.trytond_stock_lot=				1
-MODULE_REVISION.trytond_stock_package=				1
-MODULE_REVISION.trytond_stock_product_location=			1
-MODULE_REVISION.trytond_stock_split=				1
-MODULE_REVISION.trytond_stock_supply=				1
-MODULE_REVISION.trytond_stock_supply_day=			1
-MODULE_REVISION.trytond_stock_supply_production=		1
-MODULE_REVISION.trytond_timesheet=				1
-MODULE_REVISION.trytond_timesheet_cost=				1
+#MODULE_REVISION.trytond_project_revenue=			1
+#MODULE_REVISION.trytond_purchase=				1
+#MODULE_REVISION.trytond_purchase_invoice_line_standalone=	1
+#MODULE_REVISION.trytond_purchase_shipment_cost=			1
+#MODULE_REVISION.trytond_sale=					1
+#MODULE_REVISION.trytond_sale_credit_limit=			1
+#MODULE_REVISION.trytond_sale_invoice_grouping=			1
+#MODULE_REVISION.trytond_sale_opportunity=			2
+#MODULE_REVISION.trytond_sale_price_list=			1
+#MODULE_REVISION.trytond_sale_shipment_cost=			1
+#MODULE_REVISION.trytond_sale_shipment_grouping=			1
+#MODULE_REVISION.trytond_sale_supply=				1
+#MODULE_REVISION.trytond_sale_supply_drop_shipment=		1
+#MODULE_REVISION.trytond_stock=					1
+#MODULE_REVISION.trytond_stock_forecast=				1
+#MODULE_REVISION.trytond_stock_inventory_location=		1
+#MODULE_REVISION.trytond_stock_location_sequence=		1
+#MODULE_REVISION.trytond_stock_lot=				1
+#MODULE_REVISION.trytond_stock_package=				1
+#MODULE_REVISION.trytond_stock_product_location=			1
+#MODULE_REVISION.trytond_stock_split=				1
+#MODULE_REVISION.trytond_stock_supply=				1
+#MODULE_REVISION.trytond_stock_supply_day=			1
+#MODULE_REVISION.trytond_stock_supply_production=		1
+#MODULE_REVISION.trytond_timesheet=				1
+#MODULE_REVISION.trytond_timesheet_cost=				1
+#
+# default to 0 if not defined above
+MODULE_REVISION.${TRYTON_MODULE_NAME}?=				0
 
 TRYTON_VERSION=	${TRYTON_BASEVER}.${MODULE_REVISION.${TRYTON_MODULE_NAME}}
 
