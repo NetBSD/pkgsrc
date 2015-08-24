@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3570 2015/08/24 22:37:01 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3571 2015/08/24 23:47:19 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6438,3 +6438,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/openldap-cloak to 2.4.42 [adam 2015-08-25]
 	Updated databases/openldap-nops to 2.4.42 [adam 2015-08-25]
 	Updated databases/openldap-smbk5pwd to 2.4.42 [adam 2015-08-25]
+	Updated comms/deforaos-phone to 0.4.3 [khorben 2015-08-25]
