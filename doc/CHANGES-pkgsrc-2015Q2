@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.18 2015/08/19 19:58:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.19 2015/08/24 20:00:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -99,3 +99,11 @@ Pullup ticket #4792 - requested by taca
 lang/php56: security update
 Pullup ticket #4794 - requested by is
 comms/hylafax: build fix
+Pullup ticket #4795 - requested by he
+devel/libidn: security update
+Pullup ticket #4796 - requested by wiz
+security/openssh: security update
+Pullup ticket #4797 - requested by wiz
+sysutils/tarsnap: security update
+Pullup ticket #4800 - requested by manu
+net/netatalk30: build fix
