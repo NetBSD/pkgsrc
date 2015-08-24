@@ -1,4 +1,4 @@
-$NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
+$NetBSD: patch-sshd.c,v 1.3.12.2 2015/08/24 19:06:40 tron Exp $
 
 * Interix support
 * Revive tcp_wrappers support.
@@ -24,9 +24,9 @@ $NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
  
  /* variables used for privilege separation */
 +#ifdef HAVE_INTERIX
- int use_privsep = -1;
-+#else
 +int use_privsep = 0;
++#else
+ int use_privsep = -1;
 +#endif
  struct monitor *pmonitor = NULL;
  int privsep_is_preauth = 1;
@@ -47,16 +47,27 @@ $NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
  #endif
  }
  
-@@ -714,7 +730,7 @@ privsep_preauth(Authctxt *authctxt)
+@@ -714,11 +730,18 @@ privsep_preauth(Authctxt *authctxt)
  		set_log_handler(mm_log_handler, pmonitor);
  
  		/* Demote the child */
 -		if (getuid() == 0 || geteuid() == 0)
++#ifdef  __APPLE_SANDBOX_NAMED_EXTERNAL__
++		/* We need to do this before we chroot() so we can read sshd.sb */
++		if (box != NULL)
++			ssh_sandbox_child(box);
++#endif
 +		if (getuid() == ROOTUID || geteuid() == ROOTUID)
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
++#ifndef __APPLE_SANDBOX_NAMED_EXTERNAL__
  		if (box != NULL)
-@@ -732,7 +748,7 @@ privsep_postauth(Authctxt *authctxt)
+ 			ssh_sandbox_child(box);
++#endif
+ 
+ 		return 0;
+ 	}
+@@ -732,7 +755,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -65,7 +76,7 @@ $NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1485,8 +1501,10 @@ main(int ac, char **av)
+@@ -1485,8 +1508,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -77,7 +88,7 @@ $NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1915,7 +1933,7 @@ main(int ac, char **av)
+@@ -1915,7 +1940,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -86,7 +97,7 @@ $NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1938,8 +1956,10 @@ main(int ac, char **av)
+@@ -1938,8 +1963,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -97,7 +108,7 @@ $NetBSD: patch-sshd.c,v 1.3.12.1 2015/07/14 22:03:39 tron Exp $
  
  	if (rexec_flag) {
  		rexec_argv = xcalloc(rexec_argc + 2, sizeof(char *));
-@@ -2135,6 +2155,25 @@ main(int ac, char **av)
+@@ -2135,6 +2162,25 @@ main(int ac, char **av)
  	audit_connection_from(remote_ip, remote_port);
  #endif
  
