@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2015/07/17 15:50:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/08/24 10:45:22 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -3758,6 +3758,9 @@ ${PYSITELIB}/django/core/checks/compatibility/__init__.pyo
 ${PYSITELIB}/django/core/checks/compatibility/django_1_7_0.py
 ${PYSITELIB}/django/core/checks/compatibility/django_1_7_0.pyc
 ${PYSITELIB}/django/core/checks/compatibility/django_1_7_0.pyo
+${PYSITELIB}/django/core/checks/compatibility/django_1_8_0.pyc
+${PYSITELIB}/django/core/checks/compatibility/django_1_8_0.pyo
+${PYSITELIB}/django/core/checks/compatibility/django_1_8_0.py
 ${PYSITELIB}/django/core/checks/messages.py
 ${PYSITELIB}/django/core/checks/messages.pyc
 ${PYSITELIB}/django/core/checks/messages.pyo
