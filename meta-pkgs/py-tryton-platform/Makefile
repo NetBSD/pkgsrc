@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/24 14:49:43 richard Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/24 15:50:08 richard Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -43,6 +43,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-product-price-list-[0-9]*:../../finance/py-tryt
 DEPENDS+=	${PYPKGPREFIX}-trytond-purchase-[0-9]*:../../finance/py-trytond-purchase
 DEPENDS+=	${PYPKGPREFIX}-trytond-purchase-invoice-line-standalone-[0-9]*:../../finance/py-trytond-purchase-invoice-line-standalone
 DEPENDS+=	${PYPKGPREFIX}-trytond-sale-[0-9]*:../../finance/py-trytond-sale
+DEPENDS+=	${PYPKGPREFIX}-trytond-stock-supply-[0-9]*:../../finance/py-trytond-stock-supply
 DEPENDS+=	${PYPKGPREFIX}-trytond-country-[0-9]*:../../geography/py-trytond-country
 DEPENDS+=	${PYPKGPREFIX}-trytond-company-[0-9]*:../../misc/py-trytond-company
 DEPENDS+=	${PYPKGPREFIX}-trytond-party-[0-9]*:../../misc/py-trytond-party
