@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2015/08/09 15:38:16 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.22 2015/08/24 23:46:03 khorben Exp $
 
-DISTNAME=	Phone-0.4.2
-PKGNAME=	deforaos-phone-0.4.2
-PKGREVISION=	1
+DISTNAME=	Phone-0.4.3
+PKGNAME=	deforaos-phone-0.4.3
 CATEGORIES=	comms net
-MASTER_SITES=	http://www.defora.org/os/download/download/4348/
+MASTER_SITES=	http://www.defora.org/os/download/download/4366/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -22,6 +20,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,10 +38,7 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
 
-.include "../../x11/deforaos-libdesktop/buildlink3.mk"
-.include "../../chat/libpurple/buildlink3.mk"
-.include "../../devel/sofia-sip/buildlink3.mk"
-.include "../../x11/deforaos-locker/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
