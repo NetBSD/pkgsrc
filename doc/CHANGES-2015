@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3557 2015/08/24 02:06:42 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3558 2015/08/24 03:46:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6376,3 +6376,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated comms/py-gammu to 2.3nb1 [leot 2015-08-23]
 	Updated devel/deforaos-coder to 0.1.0 [khorben 2015-08-24]
 	Updated devel/deforaos-coder to 0.1.0nb1 [khorben 2015-08-24]
+	Updated devel/p5-Proc-ProcessTable to 0.52 [mef 2015-08-24]
