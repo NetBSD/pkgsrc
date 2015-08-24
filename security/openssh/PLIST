@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/03/29 09:38:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.16.12.1 2015/08/24 19:06:40 tron Exp $
 bin/scp
 bin/sftp
 bin/slogin
@@ -28,6 +28,7 @@ man/man8/ssh-pkcs11-helper.8
 man/man8/sshd.8
 sbin/sshd
 share/examples/openssh/moduli
+${PLIST.darwin}share/examples/openssh/org.openssh.sshd.sb
 share/examples/openssh/ssh_config
 ${PLIST.prng}share/examples/openssh/ssh_prng_cmds
 ${PLIST.pam}share/examples/openssh/sshd.pam
