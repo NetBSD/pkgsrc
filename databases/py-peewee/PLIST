@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/10 17:34:25 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/08/24 20:01:48 fhajny Exp $
 bin/pwiz.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -32,6 +32,9 @@ ${PYSITELIB}/playhouse/db_url.pyo
 ${PYSITELIB}/playhouse/djpeewee.py
 ${PYSITELIB}/playhouse/djpeewee.pyc
 ${PYSITELIB}/playhouse/djpeewee.pyo
+${PYSITELIB}/playhouse/fields.py
+${PYSITELIB}/playhouse/fields.pyc
+${PYSITELIB}/playhouse/fields.pyo
 ${PYSITELIB}/playhouse/flask_utils.py
 ${PYSITELIB}/playhouse/flask_utils.pyc
 ${PYSITELIB}/playhouse/flask_utils.pyo
