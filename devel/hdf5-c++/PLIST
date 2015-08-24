@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/01 09:56:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/08/24 17:58:34 gdt Exp $
 bin/h5c++
 include/H5AbstractDs.h
 include/H5ArrayType.h
@@ -25,6 +25,7 @@ include/H5IdComponent.h
 include/H5Include.h
 include/H5IntType.h
 include/H5Library.h
+include/H5Location.h
 include/H5Object.h
 include/H5PacketTable.h
 include/H5PredType.h
