@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/24 14:49:43 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/24 15:50:08 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -28,6 +28,7 @@ ${PYSITELIB}/trytond/modules/stock_supply/order_point.xml
 ${PYSITELIB}/trytond/modules/stock_supply/product.py
 ${PYSITELIB}/trytond/modules/stock_supply/product.pyc
 ${PYSITELIB}/trytond/modules/stock_supply/product.pyo
+${PYSITELIB}/trytond/modules/stock_supply/product.xml
 ${PYSITELIB}/trytond/modules/stock_supply/purchase_request.py
 ${PYSITELIB}/trytond/modules/stock_supply/purchase_request.pyc
 ${PYSITELIB}/trytond/modules/stock_supply/purchase_request.pyo
