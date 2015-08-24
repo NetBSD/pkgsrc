@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/16 14:26:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2015/08/24 19:59:57 tron Exp $
 
 DISTNAME=	netatalk-3.0.8
 PKGNAME=        ${DISTNAME:C/-/30-/}
@@ -84,6 +84,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk ${DESTDIR}${EGDIR}/netatalk.pam
 .endif
 
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
