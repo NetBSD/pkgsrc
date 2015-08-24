@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/08/24 00:46:02 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/24 00:50:40 khorben Exp $
 
 DISTNAME=	Coder-0.0.0
 PKGNAME=	deforaos-coder-0.0.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	http://www.defora.org/os/download/download/4288/
 
@@ -17,6 +17,8 @@ USE_TOOLS+=	xgettext
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+DEPENDS+=	modular-xorg-xephyr-[0-9]*:../../x11/modular-xorg-xephyr
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
