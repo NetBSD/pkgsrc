@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2015/06/09 12:04:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/24 16:28:32 fhajny Exp $
 
-DISTNAME=	lz4-r130
+DISTNAME=	lz4-r131
 PKGNAME=	${DISTNAME:S/-r/-/}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://code.google.com/p/lz4/
+HOMEPAGE=	http://github.com/Cyan4973/lz4/
 COMMENT=	Extremely Fast Compression algorithm
 LICENSE=	2-clause-bsd
 
