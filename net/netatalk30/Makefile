@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/07 09:52:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/24 22:00:57 tron Exp $
 
 DISTNAME=	netatalk-3.0.8
 PKGNAME=        ${DISTNAME:C/-/30-/}
@@ -70,6 +70,10 @@ PLIST_VARS+=		ea
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
 	(${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-6].[0-8]*))
 PLIST.ea=		yes
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--without-dtrace
 .endif
 
 .include "options.mk"
