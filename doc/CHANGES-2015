@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3563 2015/08/24 14:56:05 richard Exp $
+$NetBSD: CHANGES-2015,v 1.3564 2015/08/24 16:06:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6425,3 +6425,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated finance/py-trytond-product-cost-fifo to 3.6.0 [richard 2015-08-24]
 	Updated devel/py-trytond to 3.6.2 [richard 2015-08-24]
 	Updated devel/py-tryton to 3.6.2 [richard 2015-08-24]
+	Updated devel/libbson to 1.1.10 [fhajny 2015-08-24]
