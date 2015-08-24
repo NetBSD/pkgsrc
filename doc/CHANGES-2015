@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3566 2015/08/24 16:28:44 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3567 2015/08/24 16:31:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6428,3 +6428,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libbson to 1.1.10 [fhajny 2015-08-24]
 	Updated databases/mongo-c-driver to 1.1.10 [fhajny 2015-08-24]
 	Updated archivers/lz4 to 131 [fhajny 2015-08-24]
+	Updated devel/py-argcomplete to 1.0.0 [fhajny 2015-08-24]
