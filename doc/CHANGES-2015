@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3559 2015/08/24 03:53:05 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3560 2015/08/24 10:46:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6378,3 +6378,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/deforaos-coder to 0.1.0nb1 [khorben 2015-08-24]
 	Updated devel/p5-Proc-ProcessTable to 0.52 [mef 2015-08-24]
 	Updated devel/p5-CPAN-Perl-Releases to 2.32 [mef 2015-08-24]
+	Updated www/py-django to 1.8.4 [adam 2015-08-24]
