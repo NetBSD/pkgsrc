@@ -1,0 +1,23 @@
+;;	$NetBSD: org.openssh.sshd.sb.in,v 1.1.2.2 2015/08/24 19:06:40 tron Exp $
+;;
+;; Copyright (c) 2008 Apple Inc.  All Rights reserved.
+;;
+;; sshd - profile for privilege separated children
+;;
+;; WARNING: The sandbox rules in this file currently constitute
+;; Apple System Private Interface and are subject to change at any time and
+;; without notice.
+;;
+
+(version 1)
+
+(deny default)
+
+(allow file-chroot)
+(allow file-read-metadata (literal "@VARBASE@"))
+
+(allow sysctl-read)
+(allow mach-per-user-lookup)
+(allow mach-lookup
+	(global-name "com.apple.system.notification_center")
+	(global-name "com.apple.system.logger"))
