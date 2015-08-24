@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3558 2015/08/24 03:46:28 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3559 2015/08/24 03:53:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6377,3 +6377,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/deforaos-coder to 0.1.0 [khorben 2015-08-24]
 	Updated devel/deforaos-coder to 0.1.0nb1 [khorben 2015-08-24]
 	Updated devel/p5-Proc-ProcessTable to 0.52 [mef 2015-08-24]
+	Updated devel/p5-CPAN-Perl-Releases to 2.32 [mef 2015-08-24]
