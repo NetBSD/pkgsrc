@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/08/09 15:40:03 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/24 00:46:02 khorben Exp $
 
 DISTNAME=	Coder-0.0.0
 PKGNAME=	deforaos-coder-0.0.0
@@ -23,12 +23,16 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/coder.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/coder.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/sequel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sequel.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/simulator.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/simulator.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "../../databases/deforaos-libdatabase/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
