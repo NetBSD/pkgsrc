@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.711 2015/08/23 13:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.712 2015/08/25 13:23:13 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -132,6 +132,7 @@ SUBDIR+=	gdk-pixbuf2-jasper
 SUBDIR+=	gdk-pixbuf2-xlib
 SUBDIR+=	geeqie
 SUBDIR+=	gegl
+SUBDIR+=	gegl0.2
 SUBDIR+=	geomview
 SUBDIR+=	get_ds7
 SUBDIR+=	gexiv2
