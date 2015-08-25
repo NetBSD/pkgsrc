@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_Makefile.in,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+$NetBSD: patch-gcc_Makefile.in,v 1.2 2015/08/25 12:23:13 sevan Exp $
 
 Add gcc libdir to a programs rpath so that _this gcc's_ support libraries
 are found.
@@ -9,7 +9,7 @@ are found.
  # Language-independent files.
  
  DRIVER_DEFINES = \
-+  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(prefix)/@GCC_TARGET_MACHINE@/lib/%M $(LINKER_RPATH_FLAG) $(libdir)/%M \"" \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG)$(prefix)/@GCC_TARGET_MACHINE@/lib/%M $(LINKER_RPATH_FLAG)$(libdir)/%M \"" \
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
    -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
