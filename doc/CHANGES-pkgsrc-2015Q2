@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.19 2015/08/24 20:00:25 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.20 2015/08/25 18:46:15 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -107,3 +107,7 @@ Pullup ticket #4797 - requested by wiz
 sysutils/tarsnap: security update
 Pullup ticket #4800 - requested by manu
 net/netatalk30: build fix
+Pullup ticket #4799 - requested by manu
+databases/openldap-smbk5pwd: build fix
+Pullup ticket #4801 - requested by joerg
+print/tex-tetex: compatibility fix
