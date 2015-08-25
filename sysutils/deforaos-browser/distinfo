@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2014/03/21 14:19:31 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/08/25 22:52:25 khorben Exp $
 
 SHA1 (Browser-0.4.13.tar.gz) = 2a7eec2032bc224864000a149ba0afc2b8562cbd
 RMD160 (Browser-0.4.13.tar.gz) = 0cee3c24a8bc40a513aab6bd794bbd9865ac73f7
 Size (Browser-0.4.13.tar.gz) = 129587 bytes
 SHA1 (patch-data_pkgconfig.sh) = 4d331028b647bcd671fadeda613ecc29d56d3017
 SHA1 (patch-src_callbacks.c) = 81cc77f99c58a1c0de61f4096808d77d99cce4fd
+SHA1 (patch-src_plugins_Makefile) = 3a275dfcda3a8acc0e87daa8953ffd3ad3fb5181
 SHA1 (patch-src_plugins_dirtree.c) = 9abeac0ad6947d19435276708aefe0c9235e9b92
 SHA1 (patch-src_vfs.c) = e604b316be270e210c95b889d2c853aefd8bbc46
 SHA1 (patch-tools_dirtree.c) = 1c404e749464d30773360a43485117010d1cbd15
