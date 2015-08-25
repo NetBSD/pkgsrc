@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.25 2015/05/28 07:33:56 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.26 2015/08/25 12:22:59 wiz Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -978,8 +978,10 @@ lib/mono/xbuild/Microsoft/Portable/Microsoft.Portable.Core.props
 lib/mono/xbuild/Microsoft/Portable/Microsoft.Portable.Core.targets
 lib/mono/xbuild/Microsoft/Portable/v4.0/Microsoft.Portable.CSharp.targets
 lib/mono/xbuild/Microsoft/Portable/v4.0/Microsoft.Portable.Common.targets
+lib/mono/xbuild/Microsoft/Portable/v4.0/Microsoft.Portable.VisualBasic.targets
 lib/mono/xbuild/Microsoft/Portable/v4.5/Microsoft.Portable.CSharp.targets
 lib/mono/xbuild/Microsoft/Portable/v4.5/Microsoft.Portable.Common.targets
+lib/mono/xbuild/Microsoft/Portable/v4.5/Microsoft.Portable.VisualBasic.targets
 lib/mono/xbuild/Microsoft/VisualStudio/v10.0/WebApplications/Microsoft.WebApplication.targets
 lib/mono/xbuild/Microsoft/VisualStudio/v11.0/WebApplications/Microsoft.WebApplication.targets
 lib/mono/xbuild/Microsoft/VisualStudio/v9.0/WebApplications/Microsoft.WebApplication.targets
