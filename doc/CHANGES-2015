@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3580 2015/08/25 16:22:37 he Exp $
+$NetBSD: CHANGES-2015,v 1.3581 2015/08/25 20:19:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6451,3 +6451,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-webassets to 0.11 [kleink 2015-08-25]
 	Updated www/py-flask-assets to 0.11 [kleink 2015-08-25]
 	Updated sysutils/collectd to 5.5.0nb6 [he 2015-08-25]
+	Updated graphics/pfstools to 2.0.4 [adam 2015-08-25]
+	Removed graphics/pfstmo [adam 2015-08-25]
