@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/07/22 19:27:55 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/25 16:00:42 kleink Exp $
 
-DISTNAME=	webassets-0.10.1
+DISTNAME=	webassets-0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/w/webassets/
