@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3572 2015/08/25 02:03:53 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3573 2015/08/25 05:06:49 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6440,3 +6440,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/openldap-smbk5pwd to 2.4.42 [adam 2015-08-25]
 	Updated comms/deforaos-phone to 0.4.3 [khorben 2015-08-25]
 	Added cad/p5-gds2 version 3.33 [mef 2015-08-25]
+	Updated math/py-simpleeval to 0.8.2 [richard 2015-08-25]
