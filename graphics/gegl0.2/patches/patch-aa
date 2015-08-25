@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2015/08/25 13:23:02 wiz Exp $
+
+--- gegl/gegl-init.c.orig	2009-01-22 20:26:07.000000000 +0100
++++ gegl/gegl-init.c
+@@ -68,6 +68,7 @@ pid_is_running (gint pid)
+ 
+ #include <sys/types.h>
+ #include <signal.h>
++#include <locale.h>
+ 
+ static inline gboolean
+ pid_is_running (gint pid)
