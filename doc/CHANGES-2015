@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3576 2015/08/25 12:23:10 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3577 2015/08/25 13:23:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6445,3 +6445,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/sound-juicer to 2.32.0 [richard 2015-08-25]
 	Updated devel/py-cython to 0.23.1 [wiz 2015-08-25]
 	Updated lang/mono to 4.0.3.20 [wiz 2015-08-25]
+	Added graphics/gegl0.2 version 0.2.0nb19 [wiz 2015-08-25]
