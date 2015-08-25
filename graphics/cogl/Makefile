@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/07/25 15:52:25 prlw1 Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/25 07:21:00 richard Exp $
 
 DISTNAME=	cogl-1.20.0
 CATEGORIES=	graphics gnome
@@ -16,7 +16,7 @@ CONFLICTS+=	clutter<1.8
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake gsed pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	cogl-gles2/cogl-gles2-experimental.pc.in

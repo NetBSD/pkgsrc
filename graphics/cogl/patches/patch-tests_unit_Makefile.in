@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_unit_Makefile.in,v 1.1 2015/08/25 07:21:00 richard Exp $
+
+* The keyword '.' is an alias for 'source', and all Bourne compatible
+* shells including bash, AT&T ksh, and pdksh understand '.'
+
+--- tests/unit/Makefile.in.orig	2014-12-01 07:18:23.025351870 +0000
++++ tests/unit/Makefile.in
+@@ -788,7 +788,7 @@ wrappers: stamp-test-unit
+ 	@true
+ stamp-test-unit: Makefile test-unit$(EXEEXT)
+ 	@mkdir -p wrappers
+-	source $(top_builddir)/cogl/libcogl.la ; \
++	. $(top_builddir)/cogl/libcogl.la ; \
+ 	  $(NM) $(top_builddir)/cogl/.libs/"$$dlname"| \
+ 	  grep '[DR] _\?unit_test_'|sed 's/.\+ [DR] _\?//' > unit-tests
+ 	@chmod +x $(top_srcdir)/tests/test-launcher.sh
