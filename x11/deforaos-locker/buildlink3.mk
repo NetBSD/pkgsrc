@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2015/04/25 14:25:03 tnn Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.10 2015/08/25 23:58:20 khorben Exp $
 
 BUILDLINK_TREE+=	deforaos-locker
 
