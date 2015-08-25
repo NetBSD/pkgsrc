@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2015/06/07 14:05:58 youri Exp $
+# $NetBSD: Makefile,v 1.55 2015/08/25 13:24:27 wiz Exp $
 
 DISTNAME=	darktable-1.2.3
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 EXTRACT_SUFX=	.tar.xz
@@ -71,7 +71,7 @@ BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
-.include "../../graphics/gegl/buildlink3.mk"
+.include "../../graphics/gegl0.2/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
