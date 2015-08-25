@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/18 12:46:39 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/08/25 20:16:31 adam Exp $
 
-SHA1 (pfstools-1.7.0.tar.gz) = 46f89567f3c822f4fddf51214f62fa106efc0d5e
-RMD160 (pfstools-1.7.0.tar.gz) = be4c9f42ac59583ec69ec7d6330e0e1b6033a4ae
-Size (pfstools-1.7.0.tar.gz) = 611821 bytes
-SHA1 (patch-aa) = 01ea784a8db2d9f58ed0f5f7825e9ccc38103bcb
+SHA1 (pfstools-2.0.4.tgz) = ef81ee0d55c68fe0925777da16d093f3a4616add
+RMD160 (pfstools-2.0.4.tgz) = 5c6e88c08a80b350cd9cb5a351b60381bd4e4928
+Size (pfstools-2.0.4.tgz) = 581653 bytes
+SHA1 (patch-CMakeLists.txt) = 344903c4b26414f75c415a0c00dd520e2d3641dc
+SHA1 (patch-src_octave_pfscrop) = 5291c0ffecb0cf04004c7460d0639618595a9b1a
