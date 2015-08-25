@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14780 2015/08/25 08:59:24 wiz Exp $
+$NetBSD: TODO,v 1.14781 2015/08/25 12:23:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1157,7 +1157,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.4
 	o monit-5.14
-	o mono-4.0.3.20
 	o monodevelop-5.9.5.6
 	o mopher-0.6.0
 	o moserial-2.30.0 [GNOME 2.30]
