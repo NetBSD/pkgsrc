@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/07/25 15:52:25 prlw1 Exp $
+$NetBSD: distinfo,v 1.10 2015/08/25 07:21:00 richard Exp $
 
 SHA1 (cogl-1.20.0.tar.xz) = 46a0bfca30c440ad4b6a7b07ed7aa3e643d57401
 RMD160 (cogl-1.20.0.tar.xz) = 271518c1b07eddb2b117ba4c3ef2770ac28f4bb3
@@ -6,3 +6,4 @@ Size (cogl-1.20.0.tar.xz) = 1669620 bytes
 SHA1 (patch-cogl-winsys-cogl-winsys-glx.c) = 52be226fb3c62a3275ebec470597937e0b017f96
 SHA1 (patch-cogl_driver_gl_gl_cogl-driver-gl.c) = 41d0010a6e2a6a1fb03b6fb23f34db59cb867e14
 SHA1 (patch-configure) = aee31057c06af64ec04bcd1b5750ed9a62658661
+SHA1 (patch-tests_unit_Makefile.in) = bd06a307637ca9746c8168926796031fd2b24850
