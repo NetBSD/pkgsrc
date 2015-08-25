@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2010/07/30 10:36:25 asau Exp $
+# $NetBSD: options.mk,v 1.3 2015/08/25 20:16:31 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfstools
-PKG_SUPPORTED_OPTIONS=	gdal imagemagick openexr octave qt opengl
+PKG_SUPPORTED_OPTIONS=	imagemagick octave qt opengl
 
-PLIST_VARS+=	gdal im exr octave qt gl
+PLIST_VARS+=	im octave qt gl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -13,28 +13,12 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mgdal)
-.include "../../geography/gdal-lib/buildlink3.mk"
-PLIST.gdal=	yes
-CONFIGURE_ARGS+=	--enable-gdal
-.else
-CONFIGURE_ARGS+=	--disable-gdal
-.endif
-
 .if !empty(PKG_OPTIONS:Mimagemagick)
 .include "../../graphics/ImageMagick/buildlink3.mk"
 PLIST.im=	yes
-CONFIGURE_ARGS+=	--enable-imagemagick
+CMAKE_ARGS+=	-DWITH_ImageMagick=YES
 .else
-CONFIGURE_ARGS+=	--disable-imagemagick
-.endif
-
-.if !empty(PKG_OPTIONS:Mopenexr)
-.include "../../graphics/openexr/buildlink3.mk"
-PLIST.exr=	yes
-CONFIGURE_ARGS+=	--enable-openexr
-.else
-CONFIGURE_ARGS+=	--disable-openexr
+CMAKE_ARGS+=	-DWITH_ImageMagick=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Moctave)
@@ -45,28 +29,30 @@ REPLACE_OCTAVE+=	src/octave/pfsstat
 PLIST.octave=	yes
 PLIST_SUBST+=	OCT_LOCALVEROCTFILEDIR=${OCT_LOCALVEROCTFILEDIR:S/${BUILDLINK_PREFIX.octave}\///}
 PLIST_SUBST+=	OCT_LOCALVERFCNFILEDIR=${OCT_LOCALVERFCNFILEDIR:S/${BUILDLINK_PREFIX.octave}\///}
-USE_TOOLS+=	gmake
-USE_LANGUAGES+=	fortran77
-CONFIGURE_ARGS+=	--enable-octave
+CMAKE_ARGS+=	-DWITH_Octave=YES
 .else
-CONFIGURE_ARGS+=	--disable-octave
+CMAKE_ARGS+=	-DWITH_Octave=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt)
-.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 PLIST.qt=	yes
-USE_TOOLS+=	gmake
-CONFIGURE_ARGS+=	--enable-qt
+CMAKE_ARGS+=	-DWITH_QT=YES
 .else
-CONFIGURE_ARGS+=	--disable-qt
+CMAKE_ARGS+=	-DWITH_QT=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if ${OPSYS} != "Darwin"
 .include "../../graphics/glut/buildlink3.mk"
 .  endif
-CONFIGURE_ARGS+=	--enable-opengl
+# XXX nasty hack
+.  if ${OPSYS} == "NetBSD"
+CXXFLAGS+=	-lpthread
+.  endif
 PLIST.gl=	yes
+CMAKE_ARGS+=	-DWITH_pfsglview=YES
 .else
-CONFIGURE_ARGS+=	--disable-opengl
+CMAKE_ARGS+=	-DWITH_pfsglview=NO
 .endif
