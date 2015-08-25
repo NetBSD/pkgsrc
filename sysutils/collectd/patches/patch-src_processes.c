@@ -1,4 +1,4 @@
-$NetBSD: patch-src_processes.c,v 1.1 2015/08/14 15:39:28 he Exp $
+$NetBSD: patch-src_processes.c,v 1.2 2015/08/25 16:19:49 he Exp $
 
 Add a port to NetBSD.
 
@@ -200,7 +200,7 @@ Add a port to NetBSD.
 +			kl = kvm_getlwps(kd, p->p_pid, (u_long)p->p_paddr,
 +					 sizeof(struct kinfo_lwp), &nlwps);
 +
-+			for (l = 0; l < nlwps; l++) {
++			for (l = 0; kl && l < nlwps; l++) {
 +				switch (kl[l].l_stat) {
 +				case LSONPROC:
 +				case LSRUN:
