@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3582 2015/08/25 22:48:37 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3583 2015/08/25 23:00:34 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6454,3 +6454,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/pfstools to 2.0.4 [adam 2015-08-25]
 	Removed graphics/pfstmo [adam 2015-08-25]
 	Updated www/deforaos-surfer to 0.2.8 [khorben 2015-08-26]
+	Added x11/deforaos-integration version 0.0.1 [khorben 2015-08-26]
