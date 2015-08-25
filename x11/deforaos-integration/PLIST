@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/25 22:58:58 khorben Exp $
+bin/calculator
+bin/deforaos-session
+bin/stopwatch
+lib/Locker/plugins/panel.so
+lib/Panel/applets/keyboard.so
+lib/Panel/applets/player.so
+lib/Phone/modem/purple.so
+lib/Phone/modem/sofia.so
+lib/Phone/plugins/locker.so
+lib/Phone/plugins/notify.so
+lib/Phone/plugins/pulseaudio.so
+lib/Surfer/htmlapps/calculator.html
+lib/Surfer/htmlapps/stopwatch.html
+share/applications/deforaos-calculator.desktop
+share/applications/deforaos-stopwatch.desktop
+share/xsessions/DeforaOS.desktop
