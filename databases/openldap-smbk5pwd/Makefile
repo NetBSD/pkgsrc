@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/01 08:32:32 adam Exp $
+# $NetBSD: Makefile,v 1.17.6.1 2015/08/25 18:41:13 tron Exp $
 
 PKGNAME=	${DISTNAME:S/-/-smbk5pwd-/}
 COMMENT=	Samba and Kerberos password sync for OpenLDAP
@@ -17,10 +17,6 @@ do-install:
 		   ${DESTDIR}${PREFIX}/lib/openldap
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-LIBS+=		-ldes
-.endif
 
 .include "../../databases/openldap-server/options.mk"
 
