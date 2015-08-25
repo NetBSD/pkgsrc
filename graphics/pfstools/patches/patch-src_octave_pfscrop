@@ -1,0 +1,15 @@
+$NetBSD: patch-src_octave_pfscrop,v 1.1 2015/08/25 20:16:31 adam Exp $
+
+Portability fix.
+
+--- src/octave/pfscrop.orig	2015-07-16 20:06:44.000000000 +0000
++++ src/octave/pfscrop
+@@ -15,7 +15,7 @@ EOF
+     exit 1
+ fi
+ 
+-if test $# == "2"; then
++if test $# = "2"; then
+     CW_X=1
+     CW_Y=1
+     CW_W=$1
