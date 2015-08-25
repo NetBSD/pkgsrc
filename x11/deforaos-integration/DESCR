@@ -1,0 +1,6 @@
+DeforaOS desktop integration
+
+This package contains extensions to different components of the DeforaOS
+desktop environment, where it would have brought unnecessary
+(inter-)dependencies on the original releases. It also features a few HTML
+applications, completing basic functionality for the environment.
