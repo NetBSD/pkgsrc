@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/08/22 23:49:13 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/08/25 23:07:23 fhajny Exp $
 
 .include "version.mk"
 
@@ -85,5 +85,8 @@ do-install:
 .for cmd in go gofmt
 	cd ${DESTDIR}${PREFIX}/bin && ln -sf ../go/bin/${cmd} ${cmd}
 .endfor
+
+do-test:
+	cd ${WRKSRC}/src && GOROOT=${WRKSRC} PATH=${WRKSRC}/bin:${PATH} ${BASH} run.bash --no-rebuild --banner ""
 
 .include "../../mk/bsd.pkg.mk"
