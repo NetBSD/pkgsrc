@@ -1,4 +1,4 @@
-$NetBSD: patch-pan_usenet-utils_mime-utils.cc,v 1.2 2012/07/13 08:16:00 marino Exp $
+$NetBSD: patch-pan_usenet-utils_mime-utils.cc,v 1.3 2015/08/25 08:29:10 richard Exp $
 
 Fix build with NetBSD's iconv().
 
@@ -8,7 +8,7 @@ Fix build with NetBSD's iconv().
        outbuf = out + converted;
        outleft = outlen - converted;
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined (__sun)
 +      converted = iconv (cd, (const char **) &inbuf, &inleft, &outbuf, &outleft);
 +#else
        converted = iconv (cd, (char **) &inbuf, &inleft, &outbuf, &outleft);
