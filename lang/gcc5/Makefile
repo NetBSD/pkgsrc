@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/22 16:38:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/25 12:23:13 sevan Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -107,6 +107,9 @@ CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 CONFIGURE_ARGS+=	--with-arch=nocona --with-tune=nocona --with-fpmath=sse
 .endif
 
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+CONFIGURE_ARGS+=	--with-dwarf2
+.endif
 
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
