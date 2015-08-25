@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/07/22 19:27:55 kleink Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/08/25 16:00:42 kleink Exp $
 bin/webassets
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -104,6 +104,9 @@ ${PYSITELIB}/webassets/filter/less.pyo
 ${PYSITELIB}/webassets/filter/less_ruby.py
 ${PYSITELIB}/webassets/filter/less_ruby.pyc
 ${PYSITELIB}/webassets/filter/less_ruby.pyo
+${PYSITELIB}/webassets/filter/libsass.py
+${PYSITELIB}/webassets/filter/libsass.pyc
+${PYSITELIB}/webassets/filter/libsass.pyo
 ${PYSITELIB}/webassets/filter/pyscss.py
 ${PYSITELIB}/webassets/filter/pyscss.pyc
 ${PYSITELIB}/webassets/filter/pyscss.pyo
@@ -119,6 +122,9 @@ ${PYSITELIB}/webassets/filter/rjsmin/rjsmin.pyo
 ${PYSITELIB}/webassets/filter/sass.py
 ${PYSITELIB}/webassets/filter/sass.pyc
 ${PYSITELIB}/webassets/filter/sass.pyo
+${PYSITELIB}/webassets/filter/slimit.py
+${PYSITELIB}/webassets/filter/slimit.pyc
+${PYSITELIB}/webassets/filter/slimit.pyo
 ${PYSITELIB}/webassets/filter/slimmer.py
 ${PYSITELIB}/webassets/filter/slimmer.pyc
 ${PYSITELIB}/webassets/filter/slimmer.pyo
