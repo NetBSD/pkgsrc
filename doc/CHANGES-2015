@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3575 2015/08/25 08:59:24 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3576 2015/08/25 12:23:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -4357,6 +4357,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3 to 3.8.10.2 [adam 2015-05-21]
 	Updated databases/sqlite3-docs to 3.8.10.2 [adam 2015-05-21]
 	Updated databases/sqlite3-tcl to 3.8.10.2 [adam 2015-05-21]
+	Updated lang/mono to 4.0.1 [kefren 2015-05-21]
 	Updated shells/tcsh to 6.19.00 [kim 2015-05-22]
 	Updated graphics/jpegoptim to 1.4.3 [adam 2015-05-22]
 	Updated textproc/py-pygments to 2.0.2 [adam 2015-05-22]
@@ -6443,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/py-simpleeval to 0.8.2 [richard 2015-08-25]
 	Updated audio/sound-juicer to 2.32.0 [richard 2015-08-25]
 	Updated devel/py-cython to 0.23.1 [wiz 2015-08-25]
+	Updated lang/mono to 4.0.3.20 [wiz 2015-08-25]
