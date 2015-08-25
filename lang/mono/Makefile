@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.163 2015/06/15 09:27:29 joerg Exp $
+# $NetBSD: Makefile,v 1.164 2015/08/25 12:22:59 wiz Exp $
 
-DISTNAME=	mono-4.0.1
-PKGREVISION=	3
+DISTNAME=	mono-4.0.3.20
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +13,7 @@ LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
+WRKSRC=		${WRKDIR}/mono-4.0.3
 
 USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config
 USE_LIBTOOL=	yes
