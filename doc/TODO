@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14779 2015/08/25 08:37:46 wiz Exp $
+$NetBSD: TODO,v 1.14780 2015/08/25 08:59:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1597,7 +1597,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
 	o py-cups-1.9.73
-	o py-cython-0.23.1
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
 	o py-datapkg-0.9
