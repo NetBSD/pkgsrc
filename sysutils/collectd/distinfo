@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/08/18 07:52:20 he Exp $
+$NetBSD: distinfo,v 1.17 2015/08/25 16:19:49 he Exp $
 
 SHA1 (collectd-5.5.0.tar.gz) = d24e284c1eae20c5e75b846c8b2612ab65bd5565
 RMD160 (collectd-5.5.0.tar.gz) = 2197758942a5fe56e4eabda3786f09d4138e943a
@@ -18,7 +18,7 @@ SHA1 (patch-src_entropy.c) = 7a522a6849d39bf4ed4704204a084790d27950ef
 SHA1 (patch-src_irq.c) = 6b621474de35a5879105025d1a2848e4896b8479
 SHA1 (patch-src_libcollectclient_network__buffer.c) = e07d403d299613fa0885a0e7285849eb85510253
 SHA1 (patch-src_memory.c) = f48d50245176426e26af7fa1b1f4ff6fbf0b1d95
-SHA1 (patch-src_processes.c) = 32ca0414efaf57cb0b95b51d98b904008b5fe306
+SHA1 (patch-src_processes.c) = 46d50f952947991b09fc1f818fe47dc11f3dd4d8
 SHA1 (patch-src_swap.c) = e7602eb83eed6b90752b8293b9666b94bdd42493
 SHA1 (patch-src_tcpconns.c) = 712af1b821d62217283df884dd283d5b1218ab7c
 SHA1 (patch-src_utils__dns.c) = c3782dc9127f42da30e3142b853aa2cb2259af94
