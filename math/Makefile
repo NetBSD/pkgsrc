@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2015/08/06 01:35:25 wen Exp $
+# $NetBSD: Makefile,v 1.306 2015/08/25 05:05:39 richard Exp $
 
 COMMENT=	Mathematics
 
@@ -240,6 +240,7 @@ SUBDIR+=	py-pytables
 SUBDIR+=	py-roman
 SUBDIR+=	py-rpy
 SUBDIR+=	py-scipy
+SUBDIR+=	py-simpleeval
 SUBDIR+=	py-sympy
 SUBDIR+=	qalculate
 SUBDIR+=	qalculate-bases
