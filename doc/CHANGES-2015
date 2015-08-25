@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3574 2015/08/25 07:13:47 richard Exp $
+$NetBSD: CHANGES-2015,v 1.3575 2015/08/25 08:59:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6442,3 +6442,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added cad/p5-gds2 version 3.33 [mef 2015-08-25]
 	Updated math/py-simpleeval to 0.8.2 [richard 2015-08-25]
 	Updated audio/sound-juicer to 2.32.0 [richard 2015-08-25]
+	Updated devel/py-cython to 0.23.1 [wiz 2015-08-25]
