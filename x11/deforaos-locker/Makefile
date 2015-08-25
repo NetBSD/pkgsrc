@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2015/08/23 23:18:31 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.17 2015/08/25 23:58:20 khorben Exp $
 
-DISTNAME=	Locker-0.3.0
-PKGNAME=	deforaos-locker-0.3.0
+DISTNAME=	Locker-0.3.1
+PKGNAME=	deforaos-locker-0.3.1
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/4347/
+MASTER_SITES=	http://www.defora.org/os/download/download/4368/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -21,6 +20,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,6 +40,5 @@ post-install:
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../x11/deforaos-panel/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
