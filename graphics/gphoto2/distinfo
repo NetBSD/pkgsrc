@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2012/07/02 16:12:34 drochner Exp $
+$NetBSD: distinfo,v 1.22 2015/08/26 13:39:13 wiz Exp $
 
-SHA1 (gphoto2-2.4.14.tar.bz2) = e15d9795f10a18c1e8e2ddbd3a99d982b141a625
-RMD160 (gphoto2-2.4.14.tar.bz2) = 9a092ef79748062347d9b1ce017c01dc21992aea
-Size (gphoto2-2.4.14.tar.bz2) = 669292 bytes
+SHA1 (gphoto2-2.5.8.tar.bz2) = 319a81c855e76c0946140b57be2c5b7a6b877012
+RMD160 (gphoto2-2.5.8.tar.bz2) = b5edce0e89bffedda2a80dfb59f8a724fe33f6c5
+Size (gphoto2-2.5.8.tar.bz2) = 777235 bytes
