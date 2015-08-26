@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/01 20:52:28 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/26 21:29:42 shattered Exp $
 #
 
-DISTNAME=	libdsk-1.3.5
+DISTNAME=	libdsk-1.3.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.seasip.info/Unix/LibDsk/
 
