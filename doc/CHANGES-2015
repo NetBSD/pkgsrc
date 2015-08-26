@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3590 2015/08/26 05:03:15 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3591 2015/08/26 08:37:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6462,3 +6462,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/rabbitmq to 3.5.4 [fhajny 2015-08-26]
 	Updated databases/py-elasticsearch to 1.6.0 [fhajny 2015-08-26]
 	Updated databases/mongodb to 3.0.6 [fhajny 2015-08-26]
+	Updated print/cups-filters to 1.0.73 [wiz 2015-08-26]
