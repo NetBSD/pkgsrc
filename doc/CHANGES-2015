@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3595 2015/08/26 11:31:20 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3596 2015/08/26 11:46:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6467,3 +6467,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/jd-gui version 1.4.0 [tnn 2015-08-26]
 	Updated emulators/mame to 0.165 [wiz 2015-08-26]
 	Updated sysutils/xfe to 1.40nb2 [leot 2015-08-26]
+	Updated archivers/p5-Archive-Zip to 1.50 [wiz 2015-08-26]
