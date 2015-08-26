@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2015/03/09 15:56:33 imil Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/26 03:59:03 fhajny Exp $
 
-DISTNAME=	elasticsearch-1.4.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	elasticsearch-py-1.6.0
+PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	databases
-MASTER_SITES=	https://pypi.python.org/packages/source/e/elasticsearch/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=elastic/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/
+HOMEPAGE=	http://github.com/elastic/elasticsearch-py/
 COMMENT=	Official low-level python client for Elasticsearch
 LICENSE=	apache-2.0
+
+EGG_NAME=	${DISTNAME:S/-py//}
 
 USE_LANGUAGES=	# none
 
