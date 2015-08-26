@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2015/06/02 11:24:58 tnn Exp $
+$NetBSD: distinfo,v 1.19 2015/08/26 10:57:05 abs Exp $
 
-SHA1 (synergy-1.7.0.tar.gz) = 8ec4dc9f888b6c551eacb23258549ed7681ed0c7
-RMD160 (synergy-1.7.0.tar.gz) = 49a542024cf6cfa8517a3b0fe4ced508d03ca3fa
-Size (synergy-1.7.0.tar.gz) = 8990045 bytes
+SHA1 (synergy-1.7.4.tar.gz) = 4c3b8c545895ab6a36752c26cfa30a5eb30dd4ae
+RMD160 (synergy-1.7.4.tar.gz) = e9e4e2a5c3a685eb1932edcaa622296600e48be0
+Size (synergy-1.7.4.tar.gz) = 13665193 bytes
 SHA1 (patch-src_lib_ipc_CIpcClientProxy.cpp) = 0779513d0653354c775a7f04417ae214f06795da
 SHA1 (patch-src_lib_ipc_CIpcServerProxy.cpp) = 8b486ad626a9bef7d74602035f3df73c3a91e0dd
 SHA1 (patch-src_lib_server_CConfig.cpp) = 94c5e9a57f9880ab8fcb75320bd2dbb306540966
