@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.1 2015/04/30 15:04:56 ryoon Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.2 2015/08/26 06:57:01 rumko Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
@@ -9,7 +9,7 @@ Cast explicitly.
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
-+#elif V8_OS_NETBSD
++#elif V8_OS_NETBSD || V8_OS_FREEBSD
 +  return static_cast<int>(reinterpret_cast<intptr_t>(pthread_self()));
  #else
    return static_cast<int>(pthread_self());
