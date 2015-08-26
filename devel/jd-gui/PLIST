@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/26 10:57:30 tnn Exp $
+bin/jd-gui
+lib/java/jd-gui/${PKGNAME}.jar
