@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.39 2015/07/29 12:03:40 wiz Exp $
+$NetBSD: distinfo,v 1.40 2015/08/26 11:08:46 wiz Exp $
 
-SHA1 (mame-0.164.tar.gz) = bb6379ff2257ced39e21f154e16b819e53edb4d1
-RMD160 (mame-0.164.tar.gz) = 09cf056cda39da65a751ff3ce23a9a91c466d9ae
-Size (mame-0.164.tar.gz) = 89077882 bytes
-SHA1 (patch-3rdparty_mongoose_mongoose.h) = db3febac3da4de6bf4c5d629e6fae034c68030b7
+SHA1 (mame-0.165.tar.gz) = a941bcd4b91b3d20e4032d22875d7f94d0a2e174
+RMD160 (mame-0.165.tar.gz) = 93b8c529e7343bc26cbc146e1b1d24f6be013c48
+Size (mame-0.165.tar.gz) = 89196600 bytes
