@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3602 2015/08/26 12:44:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3603 2015/08/26 13:33:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6474,3 +6474,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/link-grammar to 5.2.5 [wiz 2015-08-26]
 	Updated sysutils/collectd to 5.5.0nb7 [he 2015-08-26]
 	Updated sysutils/findutils to 4.4.2 [wiz 2015-08-26]
+	Updated mail/notmuch to 0.20.2 [wiz 2015-08-26]
