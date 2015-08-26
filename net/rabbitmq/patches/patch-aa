@@ -1,28 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2012/03/22 11:58:58 fhajny Exp $
+$NetBSD: patch-aa,v 1.7 2015/08/26 01:17:11 fhajny Exp $
 
 Support for Python 2.7, drop dependency on gsed.
---- Makefile.orig	2011-12-16 12:24:15.000000000 +0000
+--- Makefile.orig	2015-07-21 19:37:21.000000000 +0000
 +++ Makefile
 @@ -1,3 +1,4 @@
 +SHELL=$(MAKE_SHELL)
  TMPDIR ?= /tmp
  
  RABBITMQ_NODENAME ?= rabbit
-@@ -26,6 +27,9 @@ QC_TRIALS ?= 100
- ifeq ($(shell python -c 'import simplejson' 2>/dev/null && echo yes),yes)
- PYTHON=python
- else
-+ifeq ($(shell python2.7 -c 'import simplejson' 2>/dev/null && echo yes),yes)
-+PYTHON=python2.7
-+else
- ifeq ($(shell python2.6 -c 'import simplejson' 2>/dev/null && echo yes),yes)
- PYTHON=python2.6
- else
-@@ -37,6 +41,7 @@ PYTHON=python
- endif
- endif
- endif
-+endif
- 
- BASIC_PLT=basic.plt
- RABBIT_PLT=rabbit.plt
