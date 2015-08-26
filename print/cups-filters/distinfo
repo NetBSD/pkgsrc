@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2015/07/15 12:49:37 wiz Exp $
+$NetBSD: distinfo,v 1.21 2015/08/26 08:36:48 wiz Exp $
 
-SHA1 (cups-filters-1.0.71.tar.xz) = c08258c086d4a6edf5869fc29676280ad0c22b27
-RMD160 (cups-filters-1.0.71.tar.xz) = c5da92ce803f156b60e8b08bf1251fa1d06c315b
-Size (cups-filters-1.0.71.tar.xz) = 1339116 bytes
-SHA1 (patch-filter_pdftoopvp_OPVPOutputDev.cxx) = a1f9214bcbc77438cd74310e9483bfb644bbf1da
-SHA1 (patch-filter_pdftoopvp_oprs_OPRS.cxx) = 1e5e641f209748105201fac382dd9802615d946e
+SHA1 (cups-filters-1.0.73.tar.xz) = 55296ba6104b11520a0490a17455c2f90dc0ad6f
+RMD160 (cups-filters-1.0.73.tar.xz) = e36bae34f2fe663944d44f04c863685ae21cf88f
+Size (cups-filters-1.0.73.tar.xz) = 1351652 bytes
+SHA1 (patch-backend_implicitclass.c) = 20f108e1361a7d691110e9e85ec9c750ad7674b2
