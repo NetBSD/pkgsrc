@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.4 2015/08/18 07:47:46 he Exp $
+$NetBSD: patch-configure.ac,v 1.5 2015/08/26 12:19:27 he Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -36,7 +36,30 @@ Also, the start of process support, but that's not yet finished.
  # For ping library
  AC_CHECK_HEADERS(netinet/in_systm.h, [], [],
  [#if HAVE_STDINT_H
-@@ -1363,6 +1379,21 @@ AC_CHECK_MEMBERS([struct kinfo_proc.p_pi
+@@ -329,6 +345,22 @@ then
+ else
+ 	AC_MSG_RESULT([no])
+ fi
++AC_MSG_CHECKING([for sysctl kern.cp_time])
++if test -x /sbin/sysctl
++then
++	/sbin/sysctl kern.cp_times 2>/dev/null
++	if test $? -eq 0
++	then
++		AC_MSG_RESULT([yes])
++		AC_DEFINE(HAVE_SYSCTL_KERN_CP_TIME, 1,
++		[Define if sysctl supports kern.cp_time])
++	else
++		AC_MSG_RESULT([no])
++	fi
++else
++	AC_MSG_RESULT([no])
++fi
++
+ 
+ # For hddtemp module
+ AC_CHECK_HEADERS(linux/major.h)
+@@ -1363,6 +1395,21 @@ AC_CHECK_MEMBERS([struct kinfo_proc.p_pi
  #include <kvm.h>
  	])
  
@@ -58,7 +81,7 @@ Also, the start of process support, but that's not yet finished.
  AC_CHECK_MEMBERS([struct udphdr.uh_dport, struct udphdr.uh_sport], [], [],
  [#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
-@@ -5244,6 +5275,14 @@ then
+@@ -5244,6 +5291,14 @@ then
  	plugin_tcpconns="yes"
  fi
  
@@ -73,7 +96,7 @@ Also, the start of process support, but that's not yet finished.
  # Mac OS X devices
  if test "x$with_libiokit" = "xyes"
  then
-@@ -5482,6 +5521,11 @@ then
+@@ -5482,6 +5537,11 @@ then
  	plugin_swap="yes"
  fi
  
