@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/08/26 22:06:10 joerg Exp $
+
+--- Makefile.in.orig	2015-08-26 12:59:39.000000000 +0000
++++ Makefile.in
+@@ -474,10 +474,6 @@ dist_vapi_DATA = \
+ # compilation setup. #
+ @PLATFORM_WIN32_TRUE@no_undefined = -no-undefined
+ 
+-# REQUIRED_CFLAGS absolutely get appended to CFLAGS, whatever the
+-# the value of CFLAGS in the environment.
+-REQUIRED_CXXFLAGS = -Wl,-lstdc++ $(am__append_1)
+-AM_CXXFLAGS = $(REQUIRED_CXXFLAGS)
+ lib@PACKAGE_NAME@_la_SOURCES = $(GEXIV2_sources) $(GEXIV2_public_HEADERS)
+ lib@PACKAGE_NAME@_la_LIBADD = $(EXIV2_LIBS) $(GLIB_LIBS)
+ lib@PACKAGE_NAME@_la_CPPFLAGS = $(EXIV2_CFLAGS) $(GLIB_CFLAGS)
