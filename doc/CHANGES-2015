@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3593 2015/08/26 10:59:35 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.3594 2015/08/26 11:08:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6465,3 +6465,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.73 [wiz 2015-08-26]
 	Updated net/synergy to 1.7.4 [abs 2015-08-26]
 	Added devel/jd-gui version 1.4.0 [tnn 2015-08-26]
+	Updated emulators/mame to 0.165 [wiz 2015-08-26]
