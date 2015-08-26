@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/08/26 21:37:11 shattered Exp $
 share/fonts/X11/TTF/Arimo-Bold.ttf
 share/fonts/X11/TTF/Arimo-BoldItalic.ttf
 share/fonts/X11/TTF/Arimo-Italic.ttf
@@ -12,4 +12,3 @@ share/fonts/X11/TTF/Tinos-Bold.ttf
 share/fonts/X11/TTF/Tinos-BoldItalic.ttf
 share/fonts/X11/TTF/Tinos-Italic.ttf
 share/fonts/X11/TTF/Tinos-Regular.ttf
-share/doc/croscorefonts/LICENSE
