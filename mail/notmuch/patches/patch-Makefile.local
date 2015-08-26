@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.local,v 1.1 2014/12/18 12:26:51 joerg Exp $
+$NetBSD: patch-Makefile.local,v 1.2 2015/08/26 13:33:36 wiz Exp $
+
+Avoid conflict with NetBSD's libutil.
 
 --- Makefile.local.orig	2014-12-15 20:14:52.000000000 +0000
 +++ Makefile.local
