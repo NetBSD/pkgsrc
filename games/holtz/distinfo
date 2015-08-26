@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/14 19:50:27 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/08/26 21:38:33 shattered Exp $
 
-SHA1 (holtz-1.3.1.tar.gz) = 4c7e8cccee02a43aa12c15c179030984a6eb3a47
-RMD160 (holtz-1.3.1.tar.gz) = e02cd225e8d470c1822b82ce9a40403380160f84
-Size (holtz-1.3.1.tar.gz) = 1858373 bytes
+SHA1 (holtz-1.4.0.tar.gz) = 2d1e75d8b9d3e66407c02c036079b97b3add0987
+RMD160 (holtz-1.4.0.tar.gz) = a57fafead6170fc8de05841721708b7275e63f97
+Size (holtz-1.4.0.tar.gz) = 2077168 bytes
