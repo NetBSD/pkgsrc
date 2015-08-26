@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3604 2015/08/26 13:39:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3605 2015/08/26 21:44:17 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6476,3 +6476,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/findutils to 4.4.2 [wiz 2015-08-26]
 	Updated mail/notmuch to 0.20.2 [wiz 2015-08-26]
 	Updated graphics/gphoto2 to 2.5.8 [wiz 2015-08-26]
+	Updated archivers/lhasa to 0.3.0 [shattered 2015-08-26]
+	Updated devel/cproto to 4.7m [shattered 2015-08-26]
+	Updated emulators/libdsk to 1.3.8 [shattered 2015-08-26]
+	Updated fonts/croscorefonts to 1.23.0 [shattered 2015-08-26]
+	Updated games/holtz to 1.4.0 [shattered 2015-08-26]
+	Updated net/sipcalc to 1.1.6 [shattered 2015-08-26]
+	Updated textproc/diffstat to 1.60 [shattered 2015-08-26]
