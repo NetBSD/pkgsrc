@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/07/29 12:03:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/26 11:08:46 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -385,6 +385,7 @@ share/mame/hash/ti74_cart.xml
 share/mame/hash/ti99_cart.xml
 share/mame/hash/tiki100.xml
 share/mame/hash/timex_dock.xml
+share/mame/hash/tntell.xml
 share/mame/hash/to770_cart.xml
 share/mame/hash/to7_cart.xml
 share/mame/hash/trs80m2.xml
