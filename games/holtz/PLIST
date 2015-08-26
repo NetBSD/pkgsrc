@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/14 19:50:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/26 21:38:33 shattered Exp $
 bin/holtz
 bin/relax
 share/holtz/help/help_en.zip
+share/holtz/skins/bloks20.zip
+share/holtz/skins/bloks35.zip
+share/holtz/skins/bloks50.zip
 share/holtz/skins/dvonn50.zip
 share/holtz/skins/dvonn60.zip
 share/holtz/skins/dvonn70.zip
@@ -16,5 +19,6 @@ share/holtz/skins/zertz60.zip
 share/holtz/skins/zertz70.zip
 share/holtz/skins/zertz80.zip
 share/holtz/sounds/beep.wav
-share/locale/holtz-hotkey.mo
-share/locale/holtz.mo
+share/locale/de/LC_MESSAGES/holtz-hotkey.mo
+share/locale/de/LC_MESSAGES/holtz.mo
+
