@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14794 2015/08/26 13:33:46 wiz Exp $
+$NetBSD: TODO,v 1.14795 2015/08/26 21:44:17 shattered Exp $
 
 Suggested new packages
 ======================
@@ -557,11 +557,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o covered-0.7.10
 	o covered-current-20091126
 	o cpmtools-2.20
-	o cproto-4.7m
 	o crack-attack-1.1.15
 	o crafty-23.4
 	o crimsonfields-0.5.3
-	o croscorefonts-1.23.0
 	o cross-h8300-elf-binutils-2.23.2 [wip]
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
@@ -600,7 +598,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhcpcd-dbus-0.6.1
 	o di-4.36
 	o dieharder-3.31.1
-	o diffstat-1.60
 	o digikam-4.12.0
 	o dinotrace-9.4d
 	o discount-2.1.8a
@@ -894,7 +891,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hevea-2.24
 	o heyu-2.9.0
 	o hiawatha-9.5
-	o holtz-1.4.0
 	o honeyd-1.5c
 	o horde-5.2.7
 	o howm-1.4.2
@@ -1025,7 +1021,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lft-3.73
 	o lgeneral-1.2.3
-	o lhasa-0.3.0
 	o libassuan-2.2.1
 	o libasyncns-0.8
 	o libbpg-0.9.5
@@ -1033,7 +1028,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.10
 	o libdatrie-0.2.9
-	o libdsk-1.3.8
 	o libetonyek-0.1.3
 	o libev-4.20
 	o libextractor-1.2 [requires shm_open()]
@@ -1747,7 +1741,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o silc-client-1.1.11
 	o silc-server-1.1.19
 	o simgear-3.4.0
-	o sipcalc-1.1.6
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skf-2.00
