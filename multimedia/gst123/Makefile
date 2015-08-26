@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/08/18 07:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/08/26 13:36:27 wiz Exp $
 
 DISTNAME=	gst123-0.3.3
 PKGREVISION=	6
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
 
 USE_NCURSES=	yes
+CONFIGURE_ARGS+=	NCURSES5_CONFIG=${BUILDLINK_PREFIX.ncurses}/bin/ncurses6-config
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
