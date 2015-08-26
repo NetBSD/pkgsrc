@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3598 2015/08/26 11:51:56 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3599 2015/08/26 11:54:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6470,3 +6470,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p5-Archive-Zip to 1.50 [wiz 2015-08-26]
 	Updated security/p5-IO-Socket-SSL to 2.017 [wiz 2015-08-26]
 	Updated devel/p5-Proc-ProcessTable to 0.53 [wiz 2015-08-26]
+	Updated x11/xdg-user-dirs to 0.15 [wiz 2015-08-26]
