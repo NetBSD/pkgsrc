@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/12/02 20:08:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/26 21:25:31 shattered Exp $
 
-DISTNAME=	lhasa-0.2.0
+DISTNAME=	lhasa-0.3.0
 CATEGORIES=	archivers
 MASTER_SITES=	https://soulsphere.org/projects/lhasa/
 
