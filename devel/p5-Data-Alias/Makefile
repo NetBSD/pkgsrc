@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:49:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/08/26 11:12:15 wiz Exp $
 
 DISTNAME=	Data-Alias-1.18
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-Alias/
 COMMENT=	Comprehensive set of aliasing operations
 LICENSE=	${PERL5_LICENSE}
+
+# see https://rt.cpan.org/Public/Bug/Display.html?id=98758
+# see https://rt.cpan.org/Public/Bug/Display.html?id=100944
+BROKEN=		1.18 does not build with perl-5.22.0
 
 PERL5_PACKLIST=	auto/Data/Alias/.packlist
 
