@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.89 2015/08/20 13:01:54 leot Exp $
+# $NetBSD: Makefile,v 1.90 2015/08/26 12:44:30 leot Exp $
 
 DISTNAME=		nmh-1.6
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
 PKGREVISION=		3
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		leot@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
 COMMENT=		Cleaned up MH mailer suite
 LICENSE=		modified-bsd
