@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/08/24 03:46:20 mef Exp $
+$NetBSD: distinfo,v 1.9 2015/08/26 11:51:48 wiz Exp $
 
-SHA1 (Proc-ProcessTable-0.52.tar.gz) = 63881731218afe7e2b94ad615c0eb20bc681de3d
-RMD160 (Proc-ProcessTable-0.52.tar.gz) = b72e9caac56f75a7f8ed21d4a421a4bb1cbad824
-Size (Proc-ProcessTable-0.52.tar.gz) = 70887 bytes
+SHA1 (Proc-ProcessTable-0.53.tar.gz) = c83a281d7438ccf23f08ccd500324e39a9fcff0e
+RMD160 (Proc-ProcessTable-0.53.tar.gz) = 0555e3c0c20203fb11f21b24fcee765e383a76bc
+Size (Proc-ProcessTable-0.53.tar.gz) = 71060 bytes

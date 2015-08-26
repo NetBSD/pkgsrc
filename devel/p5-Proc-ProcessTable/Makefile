@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/08/24 03:46:20 mef Exp $
+# $NetBSD: Makefile,v 1.20 2015/08/26 11:51:48 wiz Exp $
 
-DISTNAME=		Proc-ProcessTable-0.52
+DISTNAME=		Proc-ProcessTable-0.53
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Proc/}
