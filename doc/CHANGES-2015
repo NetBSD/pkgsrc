@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3600 2015/08/26 12:23:10 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3601 2015/08/26 12:24:23 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6472,3 +6472,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Proc-ProcessTable to 0.53 [wiz 2015-08-26]
 	Updated x11/xdg-user-dirs to 0.15 [wiz 2015-08-26]
 	Updated textproc/link-grammar to 5.2.5 [wiz 2015-08-26]
+	Updated sysutils/collectd to 5.5.0nb7 [he 2015-08-26]
