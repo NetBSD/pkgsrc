@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3586 2015/08/26 00:55:46 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3587 2015/08/26 01:01:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6458,3 +6458,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/deforaos-locker to 0.3.1 [khorben 2015-08-26]
 	Updated meta-pkgs/deforaos-desktop to 0.0.5 [khorben 2015-08-26]
 	Updated sysutils/rsyslog to 8.12.0 [fhajny 2015-08-26]
+	Updated net/rabbitmq-c to 0.7.0 [fhajny 2015-08-26]
