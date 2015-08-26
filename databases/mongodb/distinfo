@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2015/08/11 14:29:45 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2015/08/26 05:03:00 fhajny Exp $
 
-SHA1 (mongodb-src-r3.0.5.tar.gz) = 7ffef18eec16a41208322c3612a92c0e2652d5f7
-RMD160 (mongodb-src-r3.0.5.tar.gz) = 770714f107555f724968ab01c20dfc99568e8f23
-Size (mongodb-src-r3.0.5.tar.gz) = 26332788 bytes
+SHA1 (mongodb-src-r3.0.6.tar.gz) = b80acf2cd63b3bce27d860581ce17a3aad2b8ea8
+RMD160 (mongodb-src-r3.0.6.tar.gz) = 3e3dc920c0790826b54d02e5a82faace48da9e9f
+Size (mongodb-src-r3.0.6.tar.gz) = 26241944 bytes
 SHA1 (patch-SConstruct) = 71f06ac82474f81a6b1b6660cd9e23cd5a63d55f
 SHA1 (patch-debian_mongod.conf) = 35f3d7e7da4f573458bef0fe742c1790adec8200
 SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
-SHA1 (patch-src_mongo_db_repl_isself.c) = 93001bf0616c0fd64ac5e7ea03113885671540b0
-SHA1 (patch-src_mongo_platform_random.cpp) = ab275e90347a9d2e767f031df4e56a204647ddfe
-SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = d505c22aeeee09b482bf3d3a6bd0cdc45c9ec0bc
+SHA1 (patch-src_mongo_db_repl_isself.c) = c27e7ac0f19158eff9d5bf59d5d07835ab222bc4
+SHA1 (patch-src_mongo_platform_random.cpp) = 4e962e0ffdcbd80956bacebfcb052cb25508d4ca
+SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = 2d18e46cb63313e6fb09714e0662c98347f4f74e
 SHA1 (patch-src_mongo_util_intrusive__counter.h) = d242db05708c999bd19f2751bdc881db50ea81f0
 SHA1 (patch-src_third__party_s2_base_port.h) = 8e715efbfcacaba51d957c21aa32ccfd3cc4f736
 SHA1 (patch-src_third__party_v8-3.25_SConscript) = a8da59130c36b2be3b89498ba0b23b1c7c9ab9e6
