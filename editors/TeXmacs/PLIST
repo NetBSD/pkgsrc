@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/08/05 13:09:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/08/26 22:04:25 joerg Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -4211,23 +4211,9 @@ share/TeXmacs/texts/test/fonts.tm
 share/TeXmacs/texts/test/overview.tm
 share/application-registry/texmacs.applications
 share/applications/texmacs.desktop
-share/icons/gnome/icon-theme.cache
 share/icons/gnome/scalable/apps/TeXmacs.svg
 share/icons/gnome/scalable/mimetypes/text-texmacs.svg
 share/mime-info/texmacs.keys
 share/mime-info/texmacs.mime
-share/mime/XMLnamespaces
-share/mime/aliases
-share/mime/generic-icons
-share/mime/globs
-share/mime/globs2
-share/mime/icons
-share/mime/magic
-share/mime/mime.cache
 share/mime/packages/texmacs.xml
-share/mime/subclasses
-share/mime/text/x-texmacs.xml
-share/mime/treemagic
-share/mime/types
-share/mime/version
 share/pixmaps/TeXmacs.xpm
