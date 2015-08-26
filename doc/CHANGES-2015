@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3603 2015/08/26 13:33:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3604 2015/08/26 13:39:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6475,3 +6475,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/collectd to 5.5.0nb7 [he 2015-08-26]
 	Updated sysutils/findutils to 4.4.2 [wiz 2015-08-26]
 	Updated mail/notmuch to 0.20.2 [wiz 2015-08-26]
+	Updated graphics/gphoto2 to 2.5.8 [wiz 2015-08-26]
