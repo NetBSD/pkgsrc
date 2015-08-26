@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/06/14 16:08:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/08/26 08:36:48 wiz Exp $
 bin/foomatic-rip
 bin/ttfread
 include/cupsfilters/colord.h
@@ -15,6 +15,7 @@ lib/libcupsfilters.la
 lib/libfontembed.la
 lib/pkgconfig/libcupsfilters.pc
 lib/pkgconfig/libfontembed.pc
+libexec/cups/backend/implicitclass
 libexec/cups/backend/parallel
 libexec/cups/backend/serial
 libexec/cups/filter/bannertopdf
