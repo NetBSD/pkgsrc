@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2015/08/26 12:23:01 wiz Exp $
+
+Remove bash(1)ism(?).
+
+--- configure.orig	2015-02-01 05:46:09.000000000 +0000
++++ configure
+@@ -16655,8 +16655,8 @@ fi
+ 
+ if test "x$enable_debug" = "xyes"
+ then
+-	CFLAGS="${CFLAGS//-O[2-9]} -g"
+-	CXXFLAGS="${CXXFLAGS//-O[2-9]} -g"
++	CFLAGS="${CFLAGS} -g"
++	CXXFLAGS="${CXXFLAGS} -g"
+ 	LDFLAGS="${LDFLAGS} -g"
+ 	$as_echo "#define DEBUG_MEMORY 1" >>confdefs.h
+ 

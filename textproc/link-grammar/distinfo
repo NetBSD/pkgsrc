@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/11/26 14:43:31 adam Exp $
+$NetBSD: distinfo,v 1.3 2015/08/26 12:23:01 wiz Exp $
 
-SHA1 (link-grammar-4.7.0.tar.gz) = 93f7be53389e4925f74e8e7bdb0b8d6c0a80197f
-RMD160 (link-grammar-4.7.0.tar.gz) = 5afaeda0b0c2c2384871a27ca5090fee555b3ad7
-Size (link-grammar-4.7.0.tar.gz) = 1211822 bytes
-SHA1 (patch-aa) = 68ab5c351fbf924bb1ba679a721104199116971a
+SHA1 (link-grammar-5.2.5.tar.gz) = 8fcc02291d235eb0f37e8a05e76e8aa5d6124c4f
+RMD160 (link-grammar-5.2.5.tar.gz) = 856a0adb557e431f831a3d1812909c24828ad7b2
+Size (link-grammar-5.2.5.tar.gz) = 3469028 bytes
+SHA1 (patch-aa) = 3be918c26b639442b56efab2e9416974f31969c5
+SHA1 (patch-configure) = ae2e115129baf7679d395f6523297851f8a3715e
