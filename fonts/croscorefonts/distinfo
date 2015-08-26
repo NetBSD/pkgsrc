@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/14 15:53:04 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/08/26 21:37:11 shattered Exp $
 
-SHA1 (croscorefonts-1.21.0.tar.gz) = 8d83d12716b482fc5e823c445f22d1e53dcc72aa
-RMD160 (croscorefonts-1.21.0.tar.gz) = 203d5e76928f4c0fbc74e065bc33ce5b007930b9
-Size (croscorefonts-1.21.0.tar.gz) = 2605014 bytes
+SHA1 (croscorefonts-1.23.0.tar.gz) = 9d2cb76e055b9b75f0c4e57ab8a79e93a27fa1a2
+RMD160 (croscorefonts-1.23.0.tar.gz) = 2182a27f91477365b8525b5b6e17e9410188da8a
+Size (croscorefonts-1.23.0.tar.gz) = 2696327 bytes

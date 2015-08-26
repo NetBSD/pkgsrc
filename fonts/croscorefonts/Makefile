@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/07/04 16:18:30 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/26 21:37:11 shattered Exp $
 #
 
-DISTNAME=	croscorefonts-1.21.0
-PKGREVISION=	1
+DISTNAME=	croscorefonts-1.23.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://gsdview.appspot.com/chromeos-localmirror/distfiles/
 
@@ -37,14 +36,9 @@ INSTALL_FONTS=	Arimo-Bold.ttf \
 		Tinos-Italic.ttf \
 		Tinos-Regular.ttf
 
-INSTALL_DOCS=	LICENSE
-
 do-install:
 .for f in ${INSTALL_FONTS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${FONTDIR}
-.endfor
-.for f in ${INSTALL_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCSDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
