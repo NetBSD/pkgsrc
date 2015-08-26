@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/02/26 12:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/26 13:33:36 wiz Exp $
 
-DISTNAME=	notmuch-0.19
-PKGREVISION=	1
+DISTNAME=	notmuch-0.20.2
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
@@ -10,7 +9,7 @@ HOMEPAGE=	http://notmuchmail.org/
 COMMENT=	Mail indexer
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -29,11 +28,11 @@ SUBST_FILES.gnuld=	lib/Makefile.local
 SUBST_SED.gnuld=	-e 's/-Wl,--[^ ]*//g'
 .endif
 
-SUBST_CLASSES+=		docutils
-SUBST_SED.docutils+=	-e "s,rst2man.py,rst2man-${PYVERSSUFFIX}.py,"
-SUBST_FILES.docutils+=	configure doc/prerst2man.py
-SUBST_STAGE.docutils=	pre-configure
-SUBST_MESSAGE.docutils=	Fix docutils command names.
+SUBST_CLASSES+=		sphinx
+SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
+SUBST_FILES.sphinx+=	bindings/python/docs/Makefile configure doc/Makefile.local
+SUBST_STAGE.sphinx=	pre-configure
+SUBST_MESSAGE.sphinx=	Fix sphinx command names.
 
 LDFLAGS.SunOS+=	-lnsl
 
