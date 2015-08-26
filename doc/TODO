@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14786 2015/08/26 08:37:06 wiz Exp $
+$NetBSD: TODO,v 1.14787 2015/08/26 11:42:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1255,6 +1255,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Apache-Gallery-1.0.2
 	o p5-Apache-LogFormat-Compiler-0.32
 	o p5-Apache-Test-1.39
+	o p5-Archive-Zip-1.50
 	o p5-AuthCAS-1.6
 	o p5-Authen-CAS-Client-0.07
 	o p5-Barcode-Code128-2.21
@@ -1323,6 +1324,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Async-0.67
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompter-0.004013
+	o p5-IO-Socket-SSL-2.017
 	o p5-IP-Country-3.03
 	o p5-JSON-Any-1.39
 	o p5-JavaScript-Value-Escape-0.07
@@ -1398,6 +1400,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Plack-Test-ExternalServer-0.02
 	o p5-Pod-Elemental-PerlMunger-0.200003
 	o p5-Pod-Usage-1.67
+	o p5-Proc-ProcessTable-0.53
 	o p5-Publican-4.3.2
 	o p5-Quota-1.7.2
 	o p5-RADIUS-2.30
@@ -1553,7 +1556,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pioneers-15.3
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.0.2
+	o plasma-5.4
 	o ploticus-examples-230
 	o ply-3.6
 	o podcastdl-0.3.2
