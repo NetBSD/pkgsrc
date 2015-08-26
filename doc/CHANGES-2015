@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3594 2015/08/26 11:08:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3595 2015/08/26 11:31:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6466,3 +6466,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/synergy to 1.7.4 [abs 2015-08-26]
 	Added devel/jd-gui version 1.4.0 [tnn 2015-08-26]
 	Updated emulators/mame to 0.165 [wiz 2015-08-26]
+	Updated sysutils/xfe to 1.40nb2 [leot 2015-08-26]
