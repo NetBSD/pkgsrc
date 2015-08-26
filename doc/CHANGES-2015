@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3584 2015/08/26 00:00:42 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3585 2015/08/26 00:13:36 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6456,3 +6456,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/deforaos-surfer to 0.2.8 [khorben 2015-08-26]
 	Added x11/deforaos-integration version 0.0.1 [khorben 2015-08-26]
 	Updated x11/deforaos-locker to 0.3.1 [khorben 2015-08-26]
+	Updated meta-pkgs/deforaos-desktop to 0.0.5 [khorben 2015-08-26]
