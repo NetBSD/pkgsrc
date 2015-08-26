@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/07 08:57:32 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/26 01:01:34 fhajny Exp $
 bin/amqp-consume
 bin/amqp-declare-queue
 bin/amqp-delete-queue
@@ -8,9 +8,10 @@ include/amqp.h
 include/amqp_framing.h
 include/amqp_ssl_socket.h
 include/amqp_tcp_socket.h
+lib/librabbitmq.a
 lib/librabbitmq.so
 lib/librabbitmq.so.4
-lib/librabbitmq.so.4.0.0
+lib/librabbitmq.so.4.1.1
 lib/pkgconfig/librabbitmq.pc
 man/man1/amqp-consume.1
 man/man1/amqp-declare-queue.1
