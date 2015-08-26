@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2015/04/07 08:57:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/26 01:01:34 fhajny Exp $
 
-DISTNAME=	rabbitmq-c-0.6.0
+DISTNAME=	rabbitmq-c-0.7.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=alanxz/rabbitmq-c/releases/download/v${PKGVERSION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=alanxz/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://github.com/alanxz/rabbitmq-c
 COMMENT=	C-language AMQP client library for use with AMQP servers
 LICENSE=	mit
+
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
