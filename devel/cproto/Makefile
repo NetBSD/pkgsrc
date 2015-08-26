@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/01/16 09:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/26 21:26:29 shattered Exp $
 
-DISTNAME=	cproto-4.7l
+DISTNAME=	cproto-4.7m
 CATEGORIES=	devel
 MASTER_SITES=	ftp://invisible-island.net/cproto/
 EXTRACT_SUFX=	.tgz
