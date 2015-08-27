@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/27 19:07:13 joerg Exp $
 #
 
 RSYSLOG_MOD=	libgcrypt
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
+
+#/usr/bin/ld: cannot find ../runtime/.libs/librsyslog.a: No such file or directory
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../sysutils/rsyslog/Makefile.common"
 
