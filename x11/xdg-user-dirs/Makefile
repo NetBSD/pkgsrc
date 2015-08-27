@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/08/26 11:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/27 21:44:59 wiz Exp $
 
 DISTNAME=	xdg-user-dirs-0.15
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 
@@ -23,5 +24,6 @@ CONF_FILES+=	${EGDIR}/user-dirs.conf \
 CONF_FILES+=	${EGDIR}/user-dirs.defaults \
 		${PKG_SYSCONFDIR}/xdg/user-dirs.defaults
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
