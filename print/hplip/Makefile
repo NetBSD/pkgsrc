@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2015/08/16 22:00:38 leot Exp $
+# $NetBSD: Makefile,v 1.46 2015/08/27 23:53:24 khorben Exp $
 
 DISTNAME=		hplip-3.15.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -90,31 +90,33 @@ SUBST_SED.fix-paths-0=	-e 's,run=/var/run,run=${VARBASE}/run,g'
 
 SUBST_CLASSES+=			fix-paths-1
 SUBST_STAGE.fix-paths-1=	post-configure
-SUBST_MESSAGE.fix-paths-1=	Fixing /etc and /var paths in Python and C++ files.
-SUBST_FILES.fix-paths-1=	check.py base/codes.py base/g.py base/utils.py
-SUBST_FILES.fix-paths-1+=	installer/core_install.py
-SUBST_FILES.fix-paths-1+=	fax/backend/hpfax.py prnt/cups.py
-SUBST_FILES.fix-paths-1+=	ui/devmgr4.py ui4/devmgr5.py
-SUBST_FILES.fix-paths-1+=	prnt/filters/hpps
-SUBST_FILES.fix-paths-1+=	prnt/hpcups/HPCupsFilter.cpp prnt/hpcups/Utils.cpp
-SUBST_FILES.fix-paths-1+=	prnt/hpijs/globals.cpp prnt/hpijs/hpcupsfax.cpp
-SUBST_FILES.fix-paths-1+=	prnt/hpijs/hpijs.cpp
-SUBST_SED.fix-paths-1=	-e 's,\([ '\''"=]\)/etc/hp,\1${PKG_SYSCONFDIR}/hp,g'
-SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/etc/cups,\1${PKG_SYSCONFDIR}/cups,g'
-SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/etc/sane.d,\1${PKG_SYSCONFDIR}/sane.d,g'
-SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/var/lib/hp,\1${VARBASE}/lib/hp,g'
-SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/var/log/cups,\1${VARBASE}/log/cups,g'
-SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/var/spool/cups,\1${VARBASE}/spool/cups,g'
+SUBST_MESSAGE.fix-paths-1=	Fixing paths in Python installer files.
+SUBST_FILES.fix-paths-1=	installer/core_install.py
+SUBST_FILES.fix-paths-1+=	installer/dcheck.py
+SUBST_SED.fix-paths-1=	-e 's,\([ '\''"=]\)/usr,\1${PREFIX},g'
+SUBST_SED.fix-paths-1+=	-e 's,"/etc/PolicyKit,"${PKG_SYSCONFDIR}/PolicyKit,g'
+SUBST_SED.fix-paths-1+=	-e 's,"/etc/polkit-1,"${PKG_SYSCONFDIR}/polkit-1,g'
+SUBST_SED.fix-paths-1+=	-e 's,"file:///etc/hp,"file://${PKG_SYSCONFDIR}/hp,g'
+SUBST_SED.fix-paths-1+=	-e 's,"/usr/lib/cups/driver,"${PREFIX}/libexec/cups/driver,g'
 
 SUBST_CLASSES+=			fix-paths-2
 SUBST_STAGE.fix-paths-2=	post-configure
-SUBST_MESSAGE.fix-paths-2=	Fixing additional paths in installer/core_install.py.
-SUBST_FILES.fix-paths-2=	installer/core_install.py
-SUBST_SED.fix-paths-2=	-e 's,"/etc/PolicyKit,"${PKG_SYSCONFDIR}/PolicyKit,g'
-SUBST_SED.fix-paths-2+=	-e 's,"/etc/polkit-1,"${PKG_SYSCONFDIR}/polkit-1,g'
-SUBST_SED.fix-paths-2+=	-e 's,"file:///etc/hp,"file://${PKG_SYSCONFDIR}/hp,g'
-SUBST_SED.fix-paths-2+=	-e 's,"/usr/lib/cups/driver,"${PREFIX}/libexec/cups/driver,g'
-SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/usr,\1${PREFIX},g'
+SUBST_MESSAGE.fix-paths-2=	Fixing /etc and /var paths in Python and C++ files.
+SUBST_FILES.fix-paths-2=	check.py base/codes.py base/g.py base/utils.py
+SUBST_FILES.fix-paths-2+=	base/codes.py base/g.py base/queues.py base/utils.py
+SUBST_FILES.fix-paths-2+=	installer/core_install.py
+SUBST_FILES.fix-paths-2+=	fax/backend/hpfax.py prnt/cups.py
+SUBST_FILES.fix-paths-2+=	ui/devmgr4.py ui4/devmgr5.py
+SUBST_FILES.fix-paths-2+=	prnt/filters/hpps
+SUBST_FILES.fix-paths-2+=	prnt/hpcups/HPCupsFilter.cpp prnt/hpcups/Utils.cpp
+SUBST_FILES.fix-paths-2+=	prnt/hpijs/globals.cpp prnt/hpijs/hpcupsfax.cpp
+SUBST_FILES.fix-paths-2+=	prnt/hpijs/hpijs.cpp
+SUBST_SED.fix-paths-2=	-e 's,\([ '\''"=]\)/etc/hp,\1${PKG_SYSCONFDIR}/hp,g'
+SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/etc/cups,\1${PKG_SYSCONFDIR}/cups,g'
+SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/etc/sane.d,\1${PKG_SYSCONFDIR}/sane.d,g'
+SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/var/lib/hp,\1${VARBASE}/lib/hp,g'
+SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/var/log/cups,\1${VARBASE}/log/cups,g'
+SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/var/spool/cups,\1${VARBASE}/spool/cups,g'
 
 SUBST_CLASSES+=			fix-paths-3
 SUBST_STAGE.fix-paths-3=	post-configure
