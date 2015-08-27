@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.18 2015/08/14 19:45:29 schnoebe Exp $
+$NetBSD: distinfo,v 1.19 2015/08/27 23:53:24 khorben Exp $
 
 SHA1 (hplip-3.15.7.tar.gz) = f84e33b749ef34939c11b253767686c00ca2c30c
 RMD160 (hplip-3.15.7.tar.gz) = b8f5b9be838ed9261cb208df46b5aa7ef6680e31
 Size (hplip-3.15.7.tar.gz) = 21979938 bytes
-SHA1 (patch-aa) = 68bede16003a2d43c93a0ef547857b9e4196312e
+SHA1 (patch-aa) = 8eb162708a48e9b1720245f65f01177418a4ed85
 SHA1 (patch-ab) = 82b8ab80f778a6a31c1031688d9a16dbd4c55462
-SHA1 (patch-ae) = 0dfdef7ebb56b04c7d910bf0add1a035fc32a7e7
+SHA1 (patch-ae) = c4bae69fce7d9061d4c7dc53f1f8c5404577c605
+SHA1 (patch-installer_dcheck.py) = e381086ccdfbdcd84d3ffe29995d5d3643709be6
 SHA1 (patch-io_hpmud_musb.h) = ad634f5a1f426877e1c88916b6468fcdb7598555
 SHA1 (patch-prnt_hpijs_context2.cpp) = f81148c1c334a9074453b27ac055833cd1669bd0
 SHA1 (patch-prnt_hpijs_foomatic-rip-hplip) = a94c7bbdc90dd68d001ce0325b7aabcd470233eb
