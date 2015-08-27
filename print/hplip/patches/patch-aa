@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2013/10/30 23:37:31 schnoebe Exp $
+$NetBSD: patch-aa,v 1.4 2015/08/27 23:53:24 khorben Exp $
 
 # lots of portability changes to configure.in, removing hard-coded paths
 # and pulling in the dynamic library loading modules..
 
 # pushed upstream as https://bugs.launchpad.net/hplip/+bug/726207
 
---- configure.in.orig	2013-10-11 09:40:26.000000000 +0000
+--- configure.in.orig	2015-06-07 19:25:40.000000000 +0000
 +++ configure.in
 @@ -34,14 +34,15 @@ AC_DISABLE_STATIC
  # Checks for programs.
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.3 2013/10/30 23:37:31 schnoebe Exp $
  
  # Checks for required header files.
  AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([cannot find pthread-devel support], 7)])
-@@ -324,25 +325,25 @@ else
+@@ -316,25 +317,25 @@ else
  fi
  AM_CONDITIONAL(LIBUSB01_BUILD, test x$libusb01_build = xyes)
  
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.3 2013/10/30 23:37:31 schnoebe Exp $
  fi
  AC_ARG_WITH(mimedir, AC_HELP_STRING([--with-mimedir=DIR], [set cups mime.types location [default=abs_mimedir]]),
     mimedir=$withval, mimedir="$abs_mimedir")
-@@ -471,12 +472,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
+@@ -467,12 +468,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
  
  # Determine where the PolicyKit policy file goes
  if test "$policykit" = "yes"; then
@@ -79,7 +79,7 @@ $NetBSD: patch-aa,v 1.3 2013/10/30 23:37:31 schnoebe Exp $
     fi
  else
     policykit_dir=
-@@ -582,6 +583,7 @@ AC_DEFINE_DIR([abs_sbindir], [sbindir])
+@@ -581,6 +582,7 @@ AC_DEFINE_DIR([abs_sbindir], [sbindir])
  AC_DEFINE_DIR([abs_hpppddir], [hpppddir])
  AC_DEFINE_DIR([abs_docdir], [hpdocdir])
  AC_DEFINE_DIR([abs_htmldir], [hphtmldir])
