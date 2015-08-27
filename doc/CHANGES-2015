@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3607 2015/08/27 07:27:31 tron Exp $
+$NetBSD: CHANGES-2015,v 1.3608 2015/08/27 21:45:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6485,3 +6485,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/diffstat to 1.60 [shattered 2015-08-26]
 	Updated security/gpgme to 1.6.0 [mef 2015-08-27]
 	Updated security/p5-Mozilla-CA to 20150826 [tron 2015-08-27]
+	Updated x11/xdg-user-dirs to 0.15nb1 [wiz 2015-08-27]
