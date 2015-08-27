@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/08/23 20:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/08/27 19:06:44 joerg Exp $
 
 OPENSC_PKG_VERSION=	0.13.0
 DISTNAME=		opensc-${OPENSC_PKG_VERSION}
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		PCSC_CFLAGS=-I${PREFIX}/include/PCSC
 
 # The stylesheets are not found without this.
-CONFIGURE_ARGS+=	--with-xsl-stylesheetsdir=${BUILDLINK_PREFIX.docbook-xsl}/share/xsl/docbook
+CONFIGURE_ARGS+=	--with-xsl-stylesheetsdir=${PREFIX}/share/xsl/docbook
 
 EGDIR=			${PREFIX}/share/examples/opensc
 CONF_FILES+=		${EGDIR}/opensc.conf ${PKG_SYSCONFDIR}/opensc.conf
