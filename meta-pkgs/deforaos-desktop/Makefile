@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/08/26 00:12:36 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/27 22:33:38 khorben Exp $
 
 
-DISTNAME=	deforaos-desktop-0.0.5
+DISTNAME=	deforaos-desktop-0.0.6
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
@@ -21,7 +21,7 @@ DEPENDS+=	deforaos-integration>=0.0.1:../../x11/deforaos-integration
 DEPENDS+=	deforaos-keyboard>=0.2.1:../../x11/deforaos-keyboard
 DEPENDS+=	deforaos-locker>=0.3.1:../../x11/deforaos-locker
 DEPENDS+=	deforaos-mailer>=0.1.6:../../mail/deforaos-mailer
-DEPENDS+=	deforaos-mixer>=0.1.1:../../audio/deforaos-mixer
+DEPENDS+=	deforaos-mixer>=0.1.2:../../audio/deforaos-mixer
 DEPENDS+=	deforaos-panel>=0.3.2:../../x11/deforaos-panel
 DEPENDS+=	deforaos-pdfviewer>=0.0.1:../../print/deforaos-pdfviewer
 DEPENDS+=	deforaos-phone>=0.4.3:../../comms/deforaos-phone
