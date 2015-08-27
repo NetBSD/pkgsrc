@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.8 2013/10/30 23:37:31 schnoebe Exp $
+$NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
@@ -8,7 +8,7 @@ $NetBSD: patch-ae,v 1.8 2013/10/30 23:37:31 schnoebe Exp $
 # still needs to handle the buildlink path for libusb-1.0 :(
 # schnoebe -- Fri May 24 14:55:57 CDT 2013
 
---- Makefile.am.orig	2013-10-11 09:40:14.000000000 +0000
+--- Makefile.am.orig	2015-06-07 19:25:33.000000000 +0000
 +++ Makefile.am
 @@ -105,22 +105,22 @@ libhpip_la_SOURCES = ip/xconvolve.c ip/x
  
@@ -46,7 +46,7 @@ $NetBSD: patch-ae,v 1.8 2013/10/30 23:37:31 schnoebe Exp $
  dist_hplip_state_DATA =
  
  if FULL_BUILD
-@@ -344,9 +344,9 @@ endif
+@@ -359,9 +359,9 @@ endif
  
  # PolicyKit
  if POLICYKIT_INSTALL
@@ -58,7 +58,7 @@ $NetBSD: patch-ae,v 1.8 2013/10/30 23:37:31 schnoebe Exp $
  dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
  policykit_policydir = $(policykit_dir)
  dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
-@@ -525,13 +525,13 @@ install-data-hook:
+@@ -541,13 +541,13 @@ install-data-hook:
  if HPLIP_BUILD
  #	   If scanner build, add hpaio entry to sane dll.conf.
  	if [ "$(scan_build)" = "yes" ]; then \
