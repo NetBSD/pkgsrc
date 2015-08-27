@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2015/08/23 14:30:36 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.68 2015/08/27 21:58:42 wiz Exp $
 
-DISTNAME=		bitlbee-3.2.2
-PKGREVISION=		1
+DISTNAME=		bitlbee-3.4.1
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -11,9 +9,14 @@ HOMEPAGE=		http://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 LICENSE=		gnu-gpl-v2
 
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+BUILD_DEPENDS+=		links-[0-9]*:../../www/links
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
+REPLACE_PYTHON+=	configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
@@ -43,6 +46,10 @@ PKG_USERS=		bitlbee:nobody
 PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+
+post-build:
+	cd ${WRKSRC}/doc/user-guide && \
+		${BUILD_MAKE_CMD} user-guide.txt user-guide.html
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
@@ -80,6 +87,8 @@ RCD_SCRIPT_SRC.bitlbee=	${FILESDIR}/bitlbee.sh
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/application.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
