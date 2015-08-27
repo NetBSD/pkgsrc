@@ -1,0 +1,30 @@
+$NetBSD: patch-configure,v 1.4 2015/08/27 19:16:53 adam Exp $
+
+To avoid conflict with Security.framework on OS X, prefer unsigned long long as 64-bit type.
+
+--- configure.orig	2015-08-24 22:13:55.000000000 +0000
++++ configure
+@@ -17750,11 +17750,7 @@ _ACEOF
+ $as_echo_n "checking for unsigned 64-bit type... " >&6; }
+ UINT64_T='none'
+ UINT64_FORMAT='none'
+-if test $ac_cv_sizeof_unsigned_long -eq 8
+-then
+-  UINT64_T='unsigned long'
+-  UINT64_FORMAT='"%lu"'
+-elif test $ac_cv_sizeof_unsigned_long_long -eq 8
++if test $ac_cv_sizeof_unsigned_long_long -eq 8
+ then
+   UINT64_T='unsigned long long'
+   case "${host_os}" in
+@@ -17766,6 +17762,10 @@ then
+       UINT64_FORMAT='"%llu"'
+       ;;
+   esac
++elif test $ac_cv_sizeof_unsigned_long -eq 8
++then
++  UINT64_T='unsigned long'
++  UINT64_FORMAT='"%lu"'
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $UINT64_T" >&5
+ $as_echo "$UINT64_T" >&6; }
