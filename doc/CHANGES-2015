@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3605 2015/08/26 21:44:17 shattered Exp $
+$NetBSD: CHANGES-2015,v 1.3606 2015/08/27 03:39:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6483,3 +6483,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/holtz to 1.4.0 [shattered 2015-08-26]
 	Updated net/sipcalc to 1.1.6 [shattered 2015-08-26]
 	Updated textproc/diffstat to 1.60 [shattered 2015-08-26]
+	Updated security/gpgme to 1.6.0 [mef 2015-08-27]
