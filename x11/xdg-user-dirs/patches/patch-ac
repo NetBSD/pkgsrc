@@ -1,13 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/04/16 19:06:56 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2015/08/27 21:44:59 wiz Exp $
 
---- Makefile.in.orig	2009-04-16 17:04:57.000000000 +0200
+--- Makefile.in.orig	2013-06-27 08:22:14.000000000 +0000
 +++ Makefile.in
-@@ -229,7 +229,7 @@ INCLUDES = \
+@@ -314,9 +314,9 @@ INCLUDES = \
  EXTRA_DIST = config.rpath translate.c autogen.sh \
  	user-dirs.conf user-dirs.defaults xdg-user-dir
  
 -xdgdir = $(sysconfdir)/xdg
 +xdgdir = $(prefix)/share/examples/xdg
  xdg_DATA = user-dirs.conf user-dirs.defaults
- libraries = $(LIBINTL)
+-libraries = $(LIBINTL)
++libraries = $(LIBINTL) $(LIBICONV)
  bin_SCRIPTS = \
+ 	xdg-user-dir				\
+ 	$(NULL)
