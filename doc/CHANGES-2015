@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3609 2015/08/27 21:58:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3610 2015/08/27 22:32:39 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6487,3 +6487,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Mozilla-CA to 20150826 [tron 2015-08-27]
 	Updated x11/xdg-user-dirs to 0.15nb1 [wiz 2015-08-27]
 	Updated chat/bitlbee to 3.4.1 [wiz 2015-08-27]
+	Updated audio/deforaos-mixer to 0.1.2 [khorben 2015-08-28]
