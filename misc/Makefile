@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.458 2015/08/24 14:49:44 richard Exp $
+# $NetBSD: Makefile,v 1.459 2015/08/27 09:49:43 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -250,8 +250,8 @@ SUBDIR+=	py-trytond-product-attribute
 SUBDIR+=	py-trytond-production
 SUBDIR+=	py-trytond-stock
 SUBDIR+=	py-trytond-stock-inventory-location
-SUBDIR+=	py-trytond-stock-product-location
 SUBDIR+=	py-trytond-stock-lot
+SUBDIR+=	py-trytond-stock-product-location
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	raspberrypi-userland
