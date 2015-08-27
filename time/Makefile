@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2015/08/24 14:49:44 richard Exp $
+# $NetBSD: Makefile,v 1.150 2015/08/27 09:50:23 jnemeth Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -135,8 +135,8 @@ SUBDIR+=	py-mxDateTime
 SUBDIR+=	py-parsedatetime
 SUBDIR+=	py-pytz
 SUBDIR+=	py-trytond-calendar
-SUBDIR+=	py-tzlocal
 SUBDIR+=	py-trytond-company-work-time
+SUBDIR+=	py-tzlocal
 SUBDIR+=	py-vdirsyncer
 SUBDIR+=	rclock
 SUBDIR+=	rem2ics
