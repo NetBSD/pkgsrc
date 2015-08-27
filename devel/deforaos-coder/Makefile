@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/08/24 02:04:21 khorben Exp $
+# $NetBSD: Makefile,v 1.15 2015/08/27 08:27:07 khorben Exp $
 
 DISTNAME=	Coder-0.1.0
 PKGNAME=	deforaos-coder-0.1.0
@@ -23,6 +23,7 @@ DEPENDS+=	modular-xorg-xephyr-[0-9]*:../../x11/modular-xorg-xephyr
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
