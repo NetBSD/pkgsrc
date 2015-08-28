@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/06/10 01:48:49 wiedi Exp $
+$NetBSD: distinfo,v 1.2 2015/08/28 21:38:32 wiedi Exp $
 
-SHA1 (osm2pgsql-0.87.3.tar.gz) = 977f1c6591a7603240dafd31ca67a18f01537ab8
-RMD160 (osm2pgsql-0.87.3.tar.gz) = bacfb31b95611cd9c02e005bbc50749f1ac1905b
-Size (osm2pgsql-0.87.3.tar.gz) = 2141464 bytes
+SHA1 (osm2pgsql-0.88.1.tar.gz) = 8dcdb563de23a641c94855b50bf020c799b6a869
+RMD160 (osm2pgsql-0.88.1.tar.gz) = 8d8ce268e00a015112ec3385dd93b7160032da83
+Size (osm2pgsql-0.88.1.tar.gz) = 2140606 bytes
 SHA1 (patch-middle-pgsql.cpp) = 71146a00bdfd486ae0b7ed74566270b4671175b7
-SHA1 (patch-node-persistent-cache.cpp) = db641099525c275af06f86377d30b7f67d1e273a
