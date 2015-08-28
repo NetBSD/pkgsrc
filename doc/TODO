@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14797 2015/08/28 07:47:19 wiz Exp $
+$NetBSD: TODO,v 1.14798 2015/08/28 11:30:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1460,7 +1460,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
 	o p5-indirect-0.36
-	o p5-libapreq2-2.13
 	o p5-perl-ldap-0.65
 	o p5-signatures-0.13
 	o p5-sqlrelay-0.62
