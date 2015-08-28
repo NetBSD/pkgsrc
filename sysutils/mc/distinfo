@@ -1,13 +1,8 @@
-$NetBSD: distinfo,v 1.22 2012/12/19 16:00:21 joerg Exp $
+$NetBSD: distinfo,v 1.23 2015/08/28 07:47:08 wiz Exp $
 
-SHA1 (mc-4.7.0.10.tar.bz2) = 2bc13f963780eaddac2f675b9145656d759f974e
-RMD160 (mc-4.7.0.10.tar.bz2) = 83a527a94a81f886eb7f80b8965554bf927cad65
-Size (mc-4.7.0.10.tar.bz2) = 2862849 bytes
-SHA1 (patch-aa) = bf11aa2e9c6bd4b057b3af33c7d831e3e1e7fe02
-SHA1 (patch-ab) = 570977e37c54084d946d5871822e5ea24b0ed253
-SHA1 (patch-ac) = 04ee1f389ef7015d4976544404d8b9245839bf7b
+SHA1 (mc-4.8.14.tar.bz2) = ff83beaca4777fd888b23999664bfa7d0fc584cb
+RMD160 (mc-4.8.14.tar.bz2) = 6d08797e08368cd11dea363d13179d39027c4a72
+Size (mc-4.8.14.tar.bz2) = 3213271 bytes
+SHA1 (patch-ac) = d01357b685acd8e863510248ed7519ae2821757f
 SHA1 (patch-ad) = 4484b91511cf5bac73f4ae940988d46239e2cd95
-SHA1 (patch-ae) = b25734f82e46a92eb2a6d6590b0f7524f63040b3
-SHA1 (patch-af) = cff069eb20a5df7095805e800a141f8bb1d94c7d
-SHA1 (patch-lib_fs.h) = 89bb61541e0312c4e74d48a8668583d0925d8b7a
-SHA1 (patch-src_editor_syntax.c) = 7e07b88df9c270f650268265bd599d781991a695
+SHA1 (patch-src_vfs_extfs_helpers_Makefile.in) = c5d4735ce9548714731fdb1227e1acac78f11332

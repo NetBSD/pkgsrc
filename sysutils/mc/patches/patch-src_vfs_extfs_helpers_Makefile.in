@@ -1,9 +1,10 @@
-$NetBSD: patch-af,v 1.13 2011/01/23 14:36:10 wiz Exp $
+$NetBSD: patch-src_vfs_extfs_helpers_Makefile.in,v 1.1 2015/08/28 07:47:08 wiz Exp $
 
-for installing configs to share/examples/mc
---- lib/vfs/mc-vfs/extfs/Makefile.in.orig	2010-07-05 19:13:19.000000000 +0000
-+++ lib/vfs/mc-vfs/extfs/Makefile.in
-@@ -391,7 +391,7 @@ EXTFS_OUT = \
+Install config file to example directory.
+
+--- src/vfs/extfs/helpers/Makefile.in.orig	2015-08-28 07:03:49.000000000 +0000
++++ src/vfs/extfs/helpers/Makefile.in
+@@ -486,7 +486,7 @@ EXTFS_OUT = \
  
  @ENABLE_VFS_TRUE@extfs_DATA = $(EXTFS_MISC)
  @ENABLE_VFS_TRUE@extfs_SCRIPTS = $(EXTFS_CONST) $(EXTFS_OUT)
