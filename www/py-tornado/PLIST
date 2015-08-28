@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2015/07/19 10:16:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/08/28 10:42:46 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.requires}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc

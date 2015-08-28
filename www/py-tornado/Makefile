@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/07/19 10:16:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/28 10:42:46 wiz Exp $
 
 DISTNAME=	tornado-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/t/tornado/
 
@@ -22,8 +23,15 @@ do-test:
 
 .include "../../lang/python/pyversion.mk"
 
+PLIST_VARS+=	requires
 .if "${PYPKGPREFIX}" == "py27"
 DEPENDS+=	${PYPKGPREFIX}-backports.ssl_match_hostname-[0-9]*:../../security/py-backports.ssl_match_hostname
+DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
+PLIST.requires=	yes
+.endif
+.if "${PYPKGPREFIX}" == "py33"
+DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
+PLIST.requires=	yes
 .endif
 
 .include "../../lang/python/egg.mk"
