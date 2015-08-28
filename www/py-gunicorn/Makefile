@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/08/09 18:41:58 gls Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/28 10:34:07 wiz Exp $
 
 DISTNAME=	gunicorn-19.3.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://pypi.python.org/packages/source/g/gunicorn/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +16,12 @@ USE_TOOLS+=	pax
 DOCDIR=		${PREFIX}/share/doc/py-gunicorn
 EXAMPLESDIR=	${PREFIX}/share/examples/py-gunicorn
 AUTO_MKDIRS=	yes
+
+#   File "/usr/pkg/lib/python2.7/site-packages/gunicorn/workers/_gaiohttp.py", line 68
+#     yield from self.wsgi.close()
+#              ^
+# SyntaxError: invalid syntax
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${WRKSRC}/docs/source && pax -wr -pma *.rst	\
