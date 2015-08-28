@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/08/22 14:47:55 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/08/28 11:25:51 wiz Exp $
 
-SHA1 (borg/0.24.0.tar.gz) = d811bc6f9a4b93afc19877969fffc885a70f0d3d
-RMD160 (borg/0.24.0.tar.gz) = ef3f1ff7ffc3b56412c292fae00b19992d490444
-Size (borg/0.24.0.tar.gz) = 123557 bytes
+SHA1 (borg-0.24.0.tar.gz) = d811bc6f9a4b93afc19877969fffc885a70f0d3d
+RMD160 (borg-0.24.0.tar.gz) = ef3f1ff7ffc3b56412c292fae00b19992d490444
+Size (borg-0.24.0.tar.gz) = 123557 bytes
