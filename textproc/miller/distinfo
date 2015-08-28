@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/28 09:27:10 wiz Exp $
+
+SHA1 (miller-2.0.0.tar.gz) = e66bb7264be789995e03f12bb6e7bad68321418a
+RMD160 (miller-2.0.0.tar.gz) = 25228a05da4a76a5e16e21b3b355de4f078edfad
+Size (miller-2.0.0.tar.gz) = 63288484 bytes
