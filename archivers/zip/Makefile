@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2015/08/28 08:17:38 richard Exp $
 
 DISTNAME=	zip30
 PKGNAME=	zip-3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
@@ -32,7 +32,7 @@ BUILD_TARGET=	generic
 CFLAGS+=	-O
 .endif
 
-.if !empty(PKGSRC_COMPILER:Msunpro) || ${OPSYS} == "SunOS"
+.if !empty(PKGSRC_COMPILER:Msunpro)
 MAKE_FLAGS+=	DISABLE_ASM=YES
 .endif
 
