@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3613 2015/08/28 09:09:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3614 2015/08/28 09:27:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6491,3 +6491,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/deforaos-desktop to 0.0.6 [khorben 2015-08-28]
 	Updated sysutils/mc to 4.8.14 [wiz 2015-08-28]
 	Updated devel/jq to 1.5 [wiz 2015-08-28]
+	Added textproc/miller version 2.0.0 [wiz 2015-08-28]
