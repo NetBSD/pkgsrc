@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3623 2015/08/28 12:58:11 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.3624 2015/08/28 13:25:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6501,3 +6501,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.36.0 [wiz 2015-08-28]
 	Updated net/zeromq to 4.1.3 [he 2015-08-28]
 	Updated www/goaccess to 0.9.3 [wiedi 2015-08-28]
+	Updated security/libgnome-keyring to 3.12.0 [wiz 2015-08-28]
