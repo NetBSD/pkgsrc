@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2015/08/17 17:10:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2015/08/28 07:09:57 richard Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -42,10 +42,6 @@ SUBST_MESSAGE.rpath=	Fixing rpath in ncurses-config.
 CONFIGURE_ARGS+=	--disable-mixed-case
 .endif
 
-.if ${OPSYS} == "SunOS"
-USE_LANGUAGES+=		c99
-.endif
-
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
 CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
@@ -68,11 +64,7 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
-. if !empty(CC_VERSION:Mgcc-4.*)
-#This may yet need to be adapted for systems prior to Solaris 10
-BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_POSIX_C_SOURCE=200112L
-BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE_EXTENDED
-. endif
+CONFIGURE_ARGS+=	--disable-const
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
 TERMINFODIR=	share/lib/terminfo
 .else

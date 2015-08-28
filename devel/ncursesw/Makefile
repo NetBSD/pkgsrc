@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/08/17 17:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/28 07:09:57 richard Exp $
 
+PKGREVISION= 1
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
@@ -16,10 +17,6 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	lib
 
 BUILD_TARGET=	libs
-
-.if ${OPSYS} == "SunOS"
-CXXFLAGS+=	-D_XPG5
-.endif
 
 SUBST_CLASSES+=		includes
 SUBST_MESSAGE.includes=	Fixing include paths for ncurses headers.
