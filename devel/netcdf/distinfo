@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2013/04/09 15:57:28 adam Exp $
+$NetBSD: distinfo,v 1.17 2015/08/28 18:14:42 wiedi Exp $
 
 SHA1 (netcdf-4.2.1.1.tar.gz) = 76631cb4e6b767c224338415cf6e5f5ff9bd1238
 RMD160 (netcdf-4.2.1.1.tar.gz) = 400d20e0afe7b37db7b24f9e5c19e585e0b15b3c
 Size (netcdf-4.2.1.1.tar.gz) = 4515856 bytes
 SHA1 (patch-configure) = 74457173c01355cd0f99f136ae10bdc67e831489
+SHA1 (patch-ncgen3_load.c) = 8500ba7ceb43dc544fa974c2664d3a6603ec2a95
