@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/07/31 13:14:20 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/08/28 09:09:22 wiz Exp $
 
-SHA1 (jq-jq-1.4.tar.gz) = dc921fb64f13752855a54c2085758f05bfefc703
-RMD160 (jq-jq-1.4.tar.gz) = 766aaf2d2791e1054e1132703da59bb7bd2a2dd0
-Size (jq-jq-1.4.tar.gz) = 207841 bytes
-SHA1 (patch-jq.1) = 9eba00837c7da427739fd0f9bcbe9aa653a4df69
+SHA1 (jq-1.5.tar.gz) = 664638b560d9e734178e8cafb21d98817af5b5f3
+RMD160 (jq-1.5.tar.gz) = 33ac77ac93e0539f6d66d29cd717013cdab8cf61
+Size (jq-1.5.tar.gz) = 1118086 bytes
