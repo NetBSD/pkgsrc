@@ -448,10 +448,6 @@ maintainer-zts		Enable the Zend Thread Safety option for PHP.
 manual			Include manual.			
 marble			Enable marble (virtual globe) support.
 mc-charset		Enable charset selection and conversion.
-mc-edit			Enable internal editor.
-mc-samba		Enable smb virtual file system.
-mc-subshell		Enable support for subshell.
-mc-vfs			Support for VFS (virtual file system).
 mecab			Use MeCab as the Japanese Morphological Analzer.
 memcached		Enable memcached support.
 mex			Enable matlab mex support (Linux and Solaris only).
