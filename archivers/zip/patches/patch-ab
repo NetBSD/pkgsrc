@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2013/04/16 10:49:31 adam Exp $
+$NetBSD: patch-ab,v 1.7 2015/08/28 08:17:38 richard Exp $
 
 Use CPPFLAGS during configuration.
 Don't force compiler optimization flags.
@@ -26,6 +26,25 @@ Introduce DISABLE_ASM
  
  
  # bzip2
+@@ -221,12 +217,12 @@ echo Check for the C preprocessor
+ # on SVR4, cc -E does not produce correct assembler files. Need /lib/cpp.
+ CPP="${CC} -E"
+ # solaris as(1) needs -P, maybe others as well ?
+-[ -f /usr/ccs/lib/cpp ] && CPP="/usr/ccs/lib/cpp -P"
+-[ -f /usr/lib/cpp ] && CPP=/usr/lib/cpp
+-[ -f /lib/cpp ] && CPP=/lib/cpp
+-[ -f /usr/bin/cpp ] && CPP=/usr/bin/cpp
+-[ -f /xenix ] && CPP="${CC} -E"
+-[ -f /lynx.os ] && CPP="${CC} -E"
++#[ -f /usr/ccs/lib/cpp ] && CPP="/usr/ccs/lib/cpp -P"
++#[ -f /usr/lib/cpp ] && CPP=/usr/lib/cpp
++#[ -f /lib/cpp ] && CPP=/lib/cpp
++#[ -f /usr/bin/cpp ] && CPP=/usr/bin/cpp
++#[ -f /xenix ] && CPP="${CC} -E"
++#[ -f /lynx.os ] && CPP="${CC} -E"
+ 
+ echo "#include <stdio.h>" > conftest.c
+ $CPP conftest.c >/dev/null 2>/dev/null || CPP="${CC} -E"
 @@ -235,6 +231,7 @@ $CPP conftest.c >/dev/null 2>/dev/null |
  echo Check if we can use asm code
  OBJA=""
