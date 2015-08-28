@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3611 2015/08/27 22:34:21 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3612 2015/08/28 07:47:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6489,3 +6489,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/bitlbee to 3.4.1 [wiz 2015-08-27]
 	Updated audio/deforaos-mixer to 0.1.2 [khorben 2015-08-28]
 	Updated meta-pkgs/deforaos-desktop to 0.0.6 [khorben 2015-08-28]
+	Updated sysutils/mc to 4.8.14 [wiz 2015-08-28]
