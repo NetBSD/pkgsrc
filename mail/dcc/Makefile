@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/28 08:09:28 wiz Exp $
 
 DISTNAME=		dcc-1.3.158
 PKGREVISION=		1
@@ -43,11 +43,19 @@ SUBST_MESSAGE.dae=	Enabling all daemons in dcc_conf
 
 HAS_CONFIGURE=		yes
 
-USE_TOOLS+=		perl:run
 USE_TOOLS+=		xargs:run
+USE_TOOLS+=		ftp:run
 
-CONFIGURE_ENV+=		PERL=${TOOLS_PATH.perl:Q}
 CONFIGURE_ENV+=		DCC_XARGS=${TOOLS_PATH.xargs:Q}
+# See --with-fetch-cmd for ftp..
+
+# dcc provides certain auxiliary scripts used for its web-UI and stats
+# management.  Since these scripts are non-essential, the bulky tools
+# they rely on are not declared as dependencies.
+CONFIGURE_ENV+=		PERL=${DCC_HOME}/bin/perl
+CONFIGURE_ENV+=		NOTIFYMAILER=${DCC_HOME}/bin/sendmail
+CONFIGURE_ENV+=		HTPASSWD=${DCC_HOME}/bin/htpasswd
+CONFIGURE_ENV+=		RRDTOOL=${DCC_HOME}/bin/rrdtool
 
 CONFIGURE_ARGS+=	--homedir=${DCC_HOME}
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
@@ -57,6 +65,7 @@ CONFIGURE_ARGS+=	--with-cgi-bin=${DCC_EGDIR}/cgi-bin
 CONFIGURE_ARGS+=	--with-rundir=${DCC_RUN}
 CONFIGURE_ARGS+=	--with-uid=${DCC_USER}
 CONFIGURE_ARGS+=	--with-make-cmd=${MAKE_PROGRAM:Q}
+CONFIGURE_ARGS+=	--with-fetch-cmd=${TOOLS_PATH.ftp:Q}
 CONFIGURE_ARGS+=	--with-installroot=\$$\(DCC_DESTDIR\)
 CONFIGURE_ARGS+=	--disable-sys-inst
 CONFIGURE_ARGS+=	--disable-dccm
