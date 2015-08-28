@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/07/04 20:10:25 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/08/28 13:24:38 wiz Exp $
 
-SHA1 (libgnome-keyring-3.4.1.tar.xz) = a8e41617de8413219adf9e728e88869ab5145476
-RMD160 (libgnome-keyring-3.4.1.tar.xz) = 0eda1e112435aeb05940ad6721c274cd7a58ddf5
-Size (libgnome-keyring-3.4.1.tar.xz) = 417752 bytes
+SHA1 (libgnome-keyring-3.12.0.tar.xz) = 69b21d77e0946911b2e71346d219bb19b74d05f8
+RMD160 (libgnome-keyring-3.12.0.tar.xz) = d088c86fe3900e58a2dd67ef20bec5b23fd5f8ad
+Size (libgnome-keyring-3.12.0.tar.xz) = 435092 bytes
