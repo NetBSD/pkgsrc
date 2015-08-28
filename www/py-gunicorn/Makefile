@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/08/28 10:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/28 10:37:15 wiz Exp $
 
 DISTNAME=	gunicorn-19.3.0
 PKGREVISION=	1
@@ -21,6 +21,8 @@ AUTO_MKDIRS=	yes
 #     yield from self.wsgi.close()
 #              ^
 # SyntaxError: invalid syntax
+#
+# https://github.com/benoitc/gunicorn/issues/1108
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
