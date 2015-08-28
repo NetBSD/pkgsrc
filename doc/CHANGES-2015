@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3616 2015/08/28 10:42:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3617 2015/08/28 10:51:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6494,3 +6494,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/miller version 2.0.0 [wiz 2015-08-28]
 	Updated www/py-gunicorn to 19.3.0nb1 [wiz 2015-08-28]
 	Updated www/py-tornado to 4.2.1nb1 [wiz 2015-08-28]
+	Updated devel/py-google-apputils to 0.4.2nb1 [wiz 2015-08-28]
