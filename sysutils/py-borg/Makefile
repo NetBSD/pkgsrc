@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/08/22 14:47:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/28 11:25:51 wiz Exp $
 
-GITHUB_PROJECT=	borg
-DISTNAME=	0.24.0
-PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	borg-0.24.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=borgbackup/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
+GITHUB_PROJECT=	borg
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=borgbackup/borg/}
@@ -14,6 +12,8 @@ COMMENT=	Deduplicating backup program with compression and encryption
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.4.6:../../devel/py-msgpack
+
+EGG_NAME=	borgbackup-${PKGVERSION_NOREV}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 MAKE_ENV+=	BORG_OPENSSL_PREFIX=${SSLBASE:Q}

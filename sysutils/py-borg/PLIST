@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/22 14:47:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/28 11:25:51 wiz Exp $
 bin/borg${PYVERSSUFFIX}
 ${PYSITELIB}/borg/__init__.py
 ${PYSITELIB}/borg/__main__.py
@@ -45,7 +45,6 @@ ${PYSITELIB}/borg/key.py
 ${PYSITELIB}/borg/locking.py
 ${PYSITELIB}/borg/lrucache.py
 ${PYSITELIB}/borg/platform.py
-${PYSITELIB}/borg/platform_darwin.so
 ${PYSITELIB}/borg/remote.py
 ${PYSITELIB}/borg/repository.py
 ${PYSITELIB}/borg/testsuite/__init__.py
@@ -88,9 +87,9 @@ ${PYSITELIB}/borg/testsuite/platform.py
 ${PYSITELIB}/borg/testsuite/repository.py
 ${PYSITELIB}/borg/testsuite/xattr.py
 ${PYSITELIB}/borg/xattr.py
-${PYSITELIB}/borgbackup-${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/borgbackup-${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/borgbackup-${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/borgbackup-${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/borgbackup-${EGG_INFODIR}/requires.txt
-${PYSITELIB}/borgbackup-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
