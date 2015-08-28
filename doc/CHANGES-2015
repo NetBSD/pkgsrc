@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3620 2015/08/28 11:30:42 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3621 2015/08/28 12:08:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6498,3 +6498,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated filesystems/fuse-gphotofs to 0.5 [wiz 2015-08-28]
 	Removed net/p5-eBay-API [wiz 2015-08-28]
 	Updated www/p5-libapreq2 to 2.13 [wiz 2015-08-28]
+	Updated misc/calibre to 2.36.0 [wiz 2015-08-28]
