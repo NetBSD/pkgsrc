@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/28 10:34:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/28 15:18:24 wiz Exp $
 bin/gunicorn
 bin/gunicorn_django
 bin/gunicorn_paster
@@ -111,8 +111,8 @@ ${PYSITELIB}/gunicorn/workers/__init__.py
 ${PYSITELIB}/gunicorn/workers/__init__.pyc
 ${PYSITELIB}/gunicorn/workers/__init__.pyo
 ${PYSITELIB}/gunicorn/workers/_gaiohttp.py
-${PYSITELIB}/gunicorn/workers/_gaiohttp.pyc
-${PYSITELIB}/gunicorn/workers/_gaiohttp.pyo
+${PLIST.py3x}${PYSITELIB}/gunicorn/workers/_gaiohttp.pyc
+${PLIST.py3x}${PYSITELIB}/gunicorn/workers/_gaiohttp.pyo
 ${PYSITELIB}/gunicorn/workers/async.py
 ${PYSITELIB}/gunicorn/workers/async.pyc
 ${PYSITELIB}/gunicorn/workers/async.pyo
