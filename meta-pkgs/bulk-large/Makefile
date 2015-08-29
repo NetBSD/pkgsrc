@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/08/29 23:41:54 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2015/08/29 23:50:31 dholland Exp $
 
 DISTNAME=	bulk-large-20150218
 PKGREVISION=	1
@@ -95,8 +95,8 @@ BUILD_DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
 BUILD_DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 BUILD_DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
 BUILD_DEPENDS+=	gstreamer0.10-plugins-[0-9]*:../../meta-pkgs/gstreamer0.10-plugins
-BUILD_DEPENDS+=	cups-[0-9]*:../../print/cups15
-BUILD_DEPENDS+=	evince-[0-9]*:../../print/evince
+BUILD_DEPENDS+=	cups>=1.5<2.0:../../print/cups15
+BUILD_DEPENDS+=	evince>=2<3:../../print/evince
 BUILD_DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 BUILD_DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 BUILD_DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
