@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:50:32 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/08/29 23:41:54 dholland Exp $
 
 DISTNAME=	bulk-large-20150218
 PKGREVISION=	1
@@ -67,10 +67,10 @@ BUILD_DEPENDS+=	asterisk>=11:../../comms/asterisk
 BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
-BUILD_DEPENDS+=	mysql-client>=5.1<5.5:../../databases/mysql51-client
-BUILD_DEPENDS+=	mysql-server>=5.1<5.5:../../databases/mysql51-server
-BUILD_DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
-BUILD_DEPENDS+=	mysql-server>=5.5:../../databases/mysql55-server
+BUILD_DEPENDS+=	mysql-client>=5.5<5.6:../../databases/mysql55-client
+BUILD_DEPENDS+=	mysql-server>=5.5<5.6:../../databases/mysql55-server
+BUILD_DEPENDS+=	mysql-client>=5.6:../../databases/mysql56-client
+BUILD_DEPENDS+=	mysql-server>=5.6:../../databases/mysql56-server
 BUILD_DEPENDS+=	postgresql93-[0-9]*:../../databases/postgresql93
 BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
