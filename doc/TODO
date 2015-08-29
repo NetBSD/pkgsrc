@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14802 2015/08/29 04:43:38 wen Exp $
+$NetBSD: TODO,v 1.14803 2015/08/29 06:32:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1189,7 +1189,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o newmail-1.0.2
 	o nginx-devel-1.9.2
 	o nikto-2.1.5
-	o ninja-build-1.6.0
 	o nqp-2015.07.2
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
