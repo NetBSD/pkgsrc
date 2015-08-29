@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/07/09 14:09:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/29 06:32:02 wiz Exp $
 
-DISTNAME=	ninja-1.5.1
+DISTNAME=	ninja-1.6.0
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=martine/}
@@ -12,18 +12,20 @@ HOMEPAGE=	http://martine.github.io/ninja/
 COMMENT=	Ninja is a small build system with a focus on speed
 LICENSE=	apache-2.0
 
+BUILD_DEPENDS+=	re2c>=0.11.3:../../devel/re2c
+
 USE_LANGUAGES=	c c++
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fix PREFIX
-SUBST_FILES.prefix=	bootstrap.py
+SUBST_FILES.prefix=	configure.py
 SUBST_VARS.prefix=	PREFIX
 
 INSTALLATION_DIRS=	bin share/doc/ninja share/ninja
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./bootstrap.py --verbose
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./configure.py --bootstrap
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ninja \
