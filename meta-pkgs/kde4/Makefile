@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2015/06/12 10:50:32 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/08/29 02:35:13 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -123,7 +123,7 @@ DEPENDS+=	kde-dev-utils-4.14.3{,nb[0-9]*}:../../devel/kde-dev-utils
 DEPENDS+=	dolphin-plugins-4.14.3{,nb[0-9]*}:../../devel/dolphin-plugins
 DEPENDS+=	kapptemplate-4.14.3{,nb[0-9]*}:../../devel/kapptemplate
 DEPENDS+=	kcachegrind-4.14.3{,nb[0-9]*}:../../devel/kcachegrind
-DEPENDS+=	kdesdk-kioslaves-4.14.3{,nb[0-9]*}:../../devel/kdesdk-kioslaves
+###DEPENDS+=	kdesdk-kioslaves-4.14.3{,nb[0-9]*}:../../devel/kdesdk-kioslaves
 DEPENDS+=	kdesdk-strigi-analyzers-4.14.3{,nb[0-9]*}:../../devel/kdesdk-strigi-analyzers
 DEPENDS+=	kdesdk-thumbnailers-4.14.3{,nb[0-9]*}:../../devel/kdesdk-thumbnailers
 DEPENDS+=	kompare-4.14.3{,nb[0-9]*}:../../devel/kompare
