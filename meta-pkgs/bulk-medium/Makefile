@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/08/29 23:50:31 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2015/08/29 23:53:44 dholland Exp $
 
 DISTNAME=	bulk-medium-20150414
 PKGREVISION=	1
@@ -105,7 +105,7 @@ BUILD_DEPENDS+=	bind>=9.9<9.10:../../net/bind99
 BUILD_DEPENDS+=	bind>=9.10<9.11:../../net/bind910
 BUILD_DEPENDS+=	clive-[0-9]*:../../net/clive
 BUILD_DEPENDS+=	nmap-[0-9]*:../../net/nmap
-BUILD_DEPENDS+=	samba>=3.6:../../net/samba
+BUILD_DEPENDS+=	samba>=4.2:../../net/samba4
 BUILD_DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
 BUILD_DEPENDS+=	xymon-[0-9]*:../../net/xymon
 BUILD_DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
@@ -200,7 +200,7 @@ BUILD_DEPENDS+=	tk-[0-9]*:../../x11/tk
 #
 # 4. Linux compat packages
 #
-BUILD_DEPENDS+=	suse>=12.1:../../meta-pkgs/suse121
+BUILD_DEPENDS+=	suse>=13.1:../../meta-pkgs/suse131
 
 #
 # 5. Desktop infrastructure and support services
