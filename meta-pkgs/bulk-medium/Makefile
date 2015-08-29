@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/08/29 23:41:55 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2015/08/29 23:50:31 dholland Exp $
 
 DISTNAME=	bulk-medium-20150414
 PKGREVISION=	1
@@ -76,7 +76,7 @@ BUILD_DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 BUILD_DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 BUILD_DEPENDS+=	simh-[0-9]*:../../emulators/simh
 BUILD_DEPENDS+=	tme-[0-9]*:../../emulators/tme
-BUILD_DEPENDS+=	wine-[0-9]*:../../emulators/wine
+BUILD_DEPENDS+=	wine>=1.6<1.7:../../emulators/wine
 BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
@@ -98,7 +98,7 @@ BUILD_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 BUILD_DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
 BUILD_DEPENDS+=	mailman-[0-9]*:../../mail/mailman
 BUILD_DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
-BUILD_DEPENDS+=	mutt-[0-9]*:../../mail/mutt
+BUILD_DEPENDS+=	mutt>=1.4<1.5:../../mail/mutt
 BUILD_DEPENDS+=	re-alpine-[0-9]*:../../mail/re-alpine
 BUILD_DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
 BUILD_DEPENDS+=	bind>=9.9<9.10:../../net/bind99
@@ -116,7 +116,7 @@ BUILD_DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 BUILD_DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 BUILD_DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 BUILD_DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
-BUILD_DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
+BUILD_DEPENDS+=	gnupg2>=2.0<2.1:../../security/gnupg2
 BUILD_DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
 BUILD_DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
 BUILD_DEPENDS+=	xenkernel41-[0-9]*:../../sysutils/xenkernel41
