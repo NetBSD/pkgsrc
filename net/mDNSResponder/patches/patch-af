@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1 2011/01/12 08:53:52 adam Exp $
+$NetBSD: patch-af,v 1.2 2015/08/29 17:41:07 jperkin Exp $
 
 mDNSPlatformSetAllowSleep only defined for Mac OS X.
 
---- mDNSCore/mDNS.c.orig	2010-10-08 23:05:00.000000000 +0000
+--- mDNSCore/mDNS.c.orig	2010-11-18 01:05:40.000000000 +0000
 +++ mDNSCore/mDNS.c
-@@ -4011,8 +4011,10 @@ mDNSexport void mDNS_UpdateAllowSleep(mD
+@@ -4020,8 +4020,10 @@ mDNSexport void mDNS_UpdateAllowSleep(mD
  #endif /* !defined(IDLESLEEPCONTROL_DISABLED) */
  		}
  	
