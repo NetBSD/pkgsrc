@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2015/07/29 15:23:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2015/08/29 19:35:55 jperkin Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -54,6 +54,14 @@ SUBST_CLASSES+=		sqllink
 SUBST_STAGE.sqllink=	pre-configure
 SUBST_FILES.sqllink=	pkgs/sqlite3.8.8.3/configure
 SUBST_SED.sqllink=	-e "/LIBS=/s,-lsqlite3,-L${BUILDLINK_PREFIX.sqlite3}/lib -lsqlite3,g"
+
+.if ${OPSYS} == "Darwin"
+post-build:
+.  for lib in tdbcmysql1.0.3/libtdbcmysql1.0.3.dylib \
+	      tdbcpostgres1.0.3/libtdbcpostgres1.0.3.dylib
+	install_name_tool -id ${PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
+.  endfor
+.endif
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.8.3
 .include "../../databases/sqlite3/buildlink3.mk"
