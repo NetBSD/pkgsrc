@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/04/25 14:23:41 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2015/08/29 21:20:44 jperkin Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -35,6 +35,10 @@ CONFIGURE_ARGS+=	--enable-mmx
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	SunOS_LDFLAGS="-shared -mimpure-text"
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-sdltest
 .endif
 
 .include "options.mk"
