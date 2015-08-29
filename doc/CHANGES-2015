@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3628 2015/08/29 02:38:48 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3629 2015/08/29 03:10:27 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6506,3 +6506,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-Unidecode to 1.24 [mef 2015-08-28]
 	Updated devel/p5-Moose to 2.1603 [wen 2015-08-29]
 	Updated devel/p5-Mouse to 2.4.5 [wen 2015-08-29]
+	Updated net/mikutter to 3.2.6 [tsutsui 2015-08-29]
