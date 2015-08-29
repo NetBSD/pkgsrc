@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3626 2015/08/28 22:46:36 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3627 2015/08/29 02:30:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6504,3 +6504,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libgnome-keyring to 3.12.0 [wiz 2015-08-28]
 	Updated geography/osm2pgsql to 0.88.1 [wiedi 2015-08-28]
 	Updated textproc/p5-Text-Unidecode to 1.24 [mef 2015-08-28]
+	Updated devel/p5-Moose to 2.1603 [wen 2015-08-29]
