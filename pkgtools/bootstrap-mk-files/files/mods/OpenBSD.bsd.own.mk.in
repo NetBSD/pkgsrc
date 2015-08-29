@@ -1,4 +1,4 @@
-#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.4 2014/05/10 23:01:26 ryoon Exp $
+#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.5 2015/08/29 21:59:18 sevan Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -84,7 +84,7 @@ STRIPFLAG?=	-s
 # in environments where it's not possible to keep /sys publicly readable)
 #SYS_INCLUDE= 	symlinks
 
-# Profiling and linting is also off on the x86_64 port at the moment.
+# Profiling and linting is also off on the sparc64 port at the moment.
 .if ${MACHINE_ARCH} == "sparc64" 
 NOPROFILE=1
 NOLINT=1
