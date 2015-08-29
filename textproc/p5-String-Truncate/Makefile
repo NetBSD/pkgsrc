@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:51:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/29 22:50:33 joerg Exp $
 
 DISTNAME=	String-Truncate-1.100602
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 module for when strings are too long to be displayed
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Sub-Exporter>=0.953:../../devel/p5-Sub-Exporter
-DEPENDS+=	p5-Sub-Install>=0.030:../../devel/p5-Sub-Exporter
+DEPENDS+=	p5-Sub-Install>=0.030:../../devel/p5-Sub-Install
 
 # EU::MM 6.31 is in core as well as Test::More 0.96 (we have 0.98)
 
