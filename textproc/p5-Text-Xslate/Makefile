@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2015/07/12 18:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/08/29 03:44:07 wen Exp $
 
-DISTNAME=	Text-Xslate-3.3.4
+DISTNAME=	Text-Xslate-3.3.7
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GF/GFUJI/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SY/SYOHEX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Xslate/
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Data-MessagePack>=0.38:../../devel/p5-Data-MessagePack
 #DEPENDS+=	{perl>=5.10.1,p5-parent>=0.221}:../../devel/p5-parent
-DEPENDS+=	p5-Mouse>=1.08:../../devel/p5-Mouse
+DEPENDS+=	p5-Mouse>=2.4.5:../../devel/p5-Mouse
 DEPENDS+=	p5-Test-Requires>=0:../../devel/p5-Test-Requires
 # only for regress test
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
