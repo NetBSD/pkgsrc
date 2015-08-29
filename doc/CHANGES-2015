@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3633 2015/08/29 06:32:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3634 2015/08/29 12:15:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6511,3 +6511,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Set-Object to 1.35 [wen 2015-08-29]
 	Updated databases/p5-DBD-mysql to 4.032 [wen 2015-08-29]
 	Updated devel/ninja-build to 1.6.0 [wiz 2015-08-29]
+	Updated www/firefox to 40.0.3 [ryoon 2015-08-29]
