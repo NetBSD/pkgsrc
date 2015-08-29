@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3636 2015/08/29 12:43:22 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3637 2015/08/29 12:45:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6514,3 +6514,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 40.0.3 [ryoon 2015-08-29]
 	Updated www/firefox-l10n to 40.0.3 [ryoon 2015-08-29]
 	Updated mail/thunderbird to 38.2.0 [ryoon 2015-08-29]
+	Updated mail/thunderbird-l10n to 38.2.0 [ryoon 2015-08-29]
