@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3631 2015/08/29 03:54:32 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3632 2015/08/29 04:43:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6509,3 +6509,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.6 [tsutsui 2015-08-29]
 	Updated textproc/p5-Text-Xslate to 3.3.7 [wen 2015-08-29]
 	Updated devel/p5-Set-Object to 1.35 [wen 2015-08-29]
+	Updated databases/p5-DBD-mysql to 4.032 [wen 2015-08-29]
