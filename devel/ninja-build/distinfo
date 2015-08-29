@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/09/16 08:44:25 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2015/08/29 06:32:02 wiz Exp $
 
-SHA1 (ninja-1.5.1.tar.gz) = c5a3af39f6d7ee3a30263f34091c046964d442f0
-RMD160 (ninja-1.5.1.tar.gz) = c2bbb37038925a34f0f62bab4893441290b26783
-Size (ninja-1.5.1.tar.gz) = 163437 bytes
-SHA1 (patch-bootstrap.py) = 20448a3a7e96f7ddeec72182d64e237cabc017ab
-SHA1 (patch-platform__helper.py) = 62b7db93bc16fc7862da9fb2c25d507d6630ec95
-SHA1 (patch-src_line__printer.cc) = 648b694ed25baa3fe0805bf4162f3deba67d3920
+SHA1 (ninja-1.6.0.tar.gz) = a6ff055691f6d355234298c21cc18961b4ca2ed9
+RMD160 (ninja-1.6.0.tar.gz) = 99f9c988ca3d788be0fe2efc85d837e7426b3e5b
+Size (ninja-1.6.0.tar.gz) = 174501 bytes
+SHA1 (patch-configure.py) = 5259dcbf779e4e82782d6cb5c72688998c858494
