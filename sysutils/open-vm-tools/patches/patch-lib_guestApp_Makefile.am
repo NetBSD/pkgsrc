@@ -1,0 +1,12 @@
+$NetBSD: patch-lib_guestApp_Makefile.am,v 1.1 2015/08/29 15:42:36 taca Exp $
+
+Honor sysconfdir.
+
+--- lib/guestApp/Makefile.am.orig	2008-08-08 07:01:49.000000000 +0000
++++ lib/guestApp/Makefile.am
+@@ -32,3 +32,5 @@ libGuestAppX11_a_SOURCES = $(libGuestApp
+ libGuestAppX11_a_SOURCES += guestAppPosixX11.c
+ libGuestAppX11_a_CPPFLAGS = -DGUESTAPP_HAS_X11
+ endif
++
++CFLAGS += -DGUESTAPP_TOOLS_INSTALL_PATH=\"$(sysconfdir)/vmware-tools\"
