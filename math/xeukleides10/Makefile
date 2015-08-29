@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/07/04 16:18:37 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/29 23:01:29 joerg Exp $
 
 DISTNAME=	xeukleides.1.0.1
-PKGNAME=	xeukleides-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.eukleides.org/download/
 
@@ -12,7 +11,7 @@ COMMENT=	X-Frontend for A Euclidean geometry drawing language
 
 MAKE_JOBS_SAFE=		no
 
-DEPENDS+=	eukleides>=1.0.1:../../math/eukleides10
+DEPENDS+=	eukleides>=1.0.1<1.5:../../math/eukleides10
 
 BUILD_TARGET=	xeukleides
 USE_TOOLS+=	gmake flex bison
