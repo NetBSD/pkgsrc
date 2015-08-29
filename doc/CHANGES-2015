@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3640 2015/08/29 12:58:04 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3641 2015/08/29 15:43:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6518,3 +6518,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox38 to 38.2.1 [ryoon 2015-08-29]
 	Updated www/firefox38-l10n to 38.2.1 [ryoon 2015-08-29]
 	Updated misc/libreoffice to 5.0.1.2 [ryoon 2015-08-29]
+	Updated sysutils/open-vm-tools to 2008.08.08.109361nb41 [taca 2015-08-29]
