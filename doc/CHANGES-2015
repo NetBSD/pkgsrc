@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3627 2015/08/29 02:30:28 wen Exp $
+$NetBSD: CHANGES-2015,v 1.3628 2015/08/29 02:38:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6505,3 +6505,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/osm2pgsql to 0.88.1 [wiedi 2015-08-28]
 	Updated textproc/p5-Text-Unidecode to 1.24 [mef 2015-08-28]
 	Updated devel/p5-Moose to 2.1603 [wen 2015-08-29]
+	Updated devel/p5-Mouse to 2.4.5 [wen 2015-08-29]
