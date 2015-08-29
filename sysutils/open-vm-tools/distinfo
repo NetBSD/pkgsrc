@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/11/11 16:42:38 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/08/29 15:42:36 taca Exp $
 
 SHA1 (open-vm-tools-2008.08.08-109361.tar.gz) = 1c44c3524cd9cbc5870f1c6065b03a6b31859a25
 RMD160 (open-vm-tools-2008.08.08-109361.tar.gz) = 4ea0a6aa2edda2bc404c865dc5b58f3a177ae411
@@ -12,7 +12,6 @@ SHA1 (patch-ah) = 18577d28bea81a036495d3f86b4713b8a1003fdc
 SHA1 (patch-ai) = 59cdf9ae813aa9ac0cf5920e19cbfd23b720b50b
 SHA1 (patch-aj) = ee2e2bfc5f976d00fb4a830184e37427852a90d3
 SHA1 (patch-ak) = d27cd0cbbf2db45a07a8bf4a006ad5e28feb8b3a
-SHA1 (patch-al) = 0342d300f6c27a3a523f80f06d087c60c68b9a53
 SHA1 (patch-am) = a4d678ad7e163de381a547cad1c24bca08c72a73
 SHA1 (patch-an) = abd94ec83c54e4ee1e64a34996db21ce86cf7ae3
 SHA1 (patch-ao) = 5d6457e994f559fd826811644d2e77f46ce10d1e
@@ -56,6 +55,7 @@ SHA1 (patch-checkvm_checkvm.c) = 1da596cf11ccb9af1ba39013775a3a6b3a85345f
 SHA1 (patch-configure.ac) = d39767cc2006088203341782fca7895c2710fd55
 SHA1 (patch-guestd_Makefile.am) = 4855efa62b6633e23c11e3ea184f60f4c6952244
 SHA1 (patch-hgfsclient_Makefile.am) = 3b6adf9e4d88bcce2c191260b669615537927e28
+SHA1 (patch-lib_guestApp_Makefile.am) = b6fb86b15fa58ff87285ab591be1870cf79a5d18
 SHA1 (patch-lib_hgfsServer_hgfsServer.c) = 68a3102d4f53626717f64284eb5e51bfb584e783
 SHA1 (patch-lib_hgfsServer_hgfsServerLinux.c) = ef5a3135a8e4dc9f16d93d6eb7d88b8194aa0907
 SHA1 (patch-lib_panic_panic.c) = f784479ef9000e67389c04ca80ad22da5e3a2165
