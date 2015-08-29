@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3642 2015/08/29 17:43:22 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.3643 2015/08/29 19:36:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6520,3 +6520,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice to 5.0.1.2 [ryoon 2015-08-29]
 	Updated sysutils/open-vm-tools to 2008.08.08.109361nb41 [taca 2015-08-29]
 	Updated net/mDNSResponder to 258.14nb1 [jperkin 2015-08-29]
+	Updated lang/tcl to 8.6.4nb4 [jperkin 2015-08-29]
