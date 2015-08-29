@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14800 2015/08/28 13:25:41 wiz Exp $
+$NetBSD: TODO,v 1.14801 2015/08/29 03:54:32 wen Exp $
 
 Suggested new packages
 ======================
@@ -1408,7 +1408,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Search-QueryParser-SQL-0.010
 	o p5-Sendmail-AccessDB-1.04
 	o p5-Server-Starter-0.31
-	o p5-Set-Object-1.35
 	o p5-Spreadsheet-ParseExcel-0.6500
 	o p5-Spreadsheet-Read-0.61
 	o p5-Spreadsheet-WriteExcel-2.40
