@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3668 2015/08/30 14:40:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3669 2015/08/30 14:41:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6547,3 +6547,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libgpg-error to 1.20 [wiz 2015-08-30]
 	Updated fonts/ubuntu-fonts to 0.83 [wiz 2015-08-30]
 	Updated security/p5-IO-Socket-SSL to 2.018 [wiz 2015-08-30]
+	Updated net/php-yaz to 1.1.9 [taca 2015-08-30]
