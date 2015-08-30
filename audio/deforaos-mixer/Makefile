@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/08/27 22:31:48 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2015/08/30 19:13:18 khorben Exp $
 
 DISTNAME=	Mixer-0.1.2
 PKGNAME=	deforaos-mixer-0.1.2
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
+
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
