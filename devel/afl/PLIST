@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/05/28 05:54:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/08/30 14:33:45 wiz Exp $
 bin/afl-clang
 bin/afl-clang++
 bin/afl-cmin
@@ -63,6 +63,7 @@ share/afl/testcases/others/sql/simple_queries.sql
 share/afl/testcases/others/text/hello_world.txt
 share/afl/testcases/others/xml/small_document.xml
 share/doc/afl/ChangeLog
+share/doc/afl/QuickStartGuide.txt
 share/doc/afl/README
 share/doc/afl/env_variables.txt
 share/doc/afl/historical_notes.txt
