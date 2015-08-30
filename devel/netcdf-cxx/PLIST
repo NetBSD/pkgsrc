@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/30 10:26:44 markd Exp $
+include/ncvalues.h
+include/netcdf.hh
+include/netcdfcpp.h
+info/netcdf-cxx.info
+lib/libnetcdf_c++.la
