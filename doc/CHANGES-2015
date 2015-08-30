@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3692 2015/08/30 17:53:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3693 2015/08/30 19:05:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6571,3 +6571,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/libzdb version 3.0 [wiz 2015-08-30]
 	Updated mail/dbmail to 3.2.3 [wiz 2015-08-30]
 	Removed mail/gmime20 successor mail/gmime [wiz 2015-08-30]
+	Updated geography/viking to 1.6 [gdt 2015-08-30]
