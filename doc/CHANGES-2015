@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3658 2015/08/30 10:29:40 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3659 2015/08/30 10:53:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6536,3 +6536,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/pear-Net_URL2 to 2.2.0 [taca 2015-08-30]
 	Updated www/firefox to 40.0.3nb1 [ryoon 2015-08-30]
 	Added devel/netcdf-cxx version 4.2 [markd 2015-08-30]
+	Updated lang/oracle-jre8 to 8.0.60 [ryoon 2015-08-30]
+	Updated lang/oracle-jdk8 to 8.0.60 [ryoon 2015-08-30]
