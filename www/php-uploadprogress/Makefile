@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:58 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/30 15:04:45 taca Exp $
 #
 
 MODNAME=		uploadprogress
-PECL_VERSION=		1.0.1
+PECL_VERSION=		1.0.3.1
 CATEGORIES=		www
 
 MAINTAINER=		mbowie@buzmo.com
