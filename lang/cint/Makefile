@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/09/24 23:24:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2015/08/30 08:41:44 dholland Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -36,7 +36,9 @@ post-extract:
 do-build:
 	cd ${WRKDIR};						\
 	case ${OPSYS} in					\
-	NetBSD)							\
+	FreeBSD|DragonFly)					\
+		${SH} ./setup platform/freebsd_C ;;		\
+	NetBSD|OpenBSD|Bitrig)					\
 		${SH} ./setup platform/netbsd ;;		\
 	SunOS)							\
 		${SH} ./setup platform/solaris_gcc ;;		\
