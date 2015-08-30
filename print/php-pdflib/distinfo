@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/06/16 02:59:00 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/08/30 14:43:07 taca Exp $
 
-SHA1 (php-pdflib/pdflib-2.1.8.tgz) = 5d0b01dc6fe81a39e7832a4c719983ebd06f6174
-RMD160 (php-pdflib/pdflib-2.1.8.tgz) = a74d2bba8985bd85fbd61589450c591665663906
-Size (php-pdflib/pdflib-2.1.8.tgz) = 55797 bytes
+SHA1 (php-pdflib/pdflib-2.1.10.tgz) = adfb7d0d84e25f0686b524d260d65827de9d9d09
+RMD160 (php-pdflib/pdflib-2.1.10.tgz) = 65dd3567bf1200880378cd8ee01d5341e8d421b7
+Size (php-pdflib/pdflib-2.1.10.tgz) = 55880 bytes
 SHA1 (patch-pdf.c) = f6a2eb401f5da024df69e6fab119c482d6c8946b
 SHA1 (patch-pdf4.c) = 031c90ac70e3b83a92ea5d7f05388542aad1f2e0
 SHA1 (patch-pdf7.c) = a8cbd01525aa2b4bcbaceb15e82beff1223ce383
