@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/09/23 15:11:54 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/08/30 14:49:07 taca Exp $
 
-SHA1 (ssdeep-2.11.tar.gz) = f44db91fda437f36626eefd8e649ed8d5aea0e1b
-RMD160 (ssdeep-2.11.tar.gz) = a8039749d5344910b0fba146059c96ab3e755833
-Size (ssdeep-2.11.tar.gz) = 376529 bytes
-SHA1 (patch-Makefile.in) = d3740c2d7f58e3757b3551a53ab1cf731d5e5650
+SHA1 (ssdeep-2.13.tar.gz) = ccb4e2d53d90eb986d11df24b77179d5948fb257
+RMD160 (ssdeep-2.13.tar.gz) = 09f9cf356f9412cf448ef66eebc3424a0392e906
+Size (ssdeep-2.13.tar.gz) = 380712 bytes
+SHA1 (patch-Makefile.in) = ca7154014ff1c626093572e37c3a3a5073370c0b
