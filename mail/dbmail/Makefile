@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2015/04/06 08:17:31 adam Exp $
+# $NetBSD: Makefile,v 1.47 2015/08/30 17:52:27 wiz Exp $
 
-DISTNAME=	dbmail-2.2.17
-PKGREVISION=	20
+DISTNAME=	dbmail-3.2.3
 CATEGORIES=	mail
-MASTER_SITES=	http://www.dbmail.org/download/2.2/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pjstevns/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dbmail.org/
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
 CONFIGURE_ARGS+=	--with-pkglibdir=${PREFIX}/lib/dbmail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
+CONFIGURE_ARGS+=	--with-zdb=${BUILDLINK_PREFIX.libzdb}
 
 BUILD_DEFS+=		VARBASE
 
@@ -26,14 +27,7 @@ CONF_FILES_PERMS+=	${EGDIR}/dbmail.conf ${PKG_SYSCONFDIR}/dbmail.conf \
 			  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0640
 RCD_SCRIPTS=		dbmail dbmailimapd dbmaillmtpd dbmailpop3d
 DATADIR=		${PREFIX}/share/dbmail
-DOCSDIR=		${PREFIX}/share/doc/dbmail
-DOCS=			AUTHORS BUGS COPYING INSTALL NEWS README
-DOCS+=			README.aliases README.exim README.ldap
-DOCS+=			README.postfix README.qmail README.sieve
-DOCS+=			README.smtp README.solaris README.usermap
-DOCS+=			THANKS UPGRADING
 
-MESSAGE_SUBST+=		DOCSDIR=${DOCSDIR}
 MESSAGE_SUBST+=		DATADIR=${DATADIR}
 
 SUBST_CLASSES+=		sysconf
@@ -45,19 +39,17 @@ SUBST_FILES.sysconf+=	man/dbmail-sievecmd.8 mail/dbmail-timsieved.8
 SUBST_SED.sysconf=	-e 's|/etc/dbmail\.conf|${PKG_SYSCONFDIR}/dbmail.conf|g'
 SUBST_MESSAGE.sysconf=	Fixing sysconf paths.
 
-INSTALLATION_DIRS=	lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${DOCSDIR} ${EGDIR} ${DATADIR}/sql
+INSTALLATION_DIRS=	lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${EGDIR} ${DATADIR}/sql
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${DESTDIR}${EGDIR}
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCSDIR}
-.endfor
 
 .include "options.mk"
 
+.include "../../databases/libzdb/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gmime20+=	gmime20>=2.2.10
-.include "../../mail/gmime20/buildlink3.mk"
+.include "../../mail/gmime/buildlink3.mk"
+.include "../../security/mhash/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
