@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3653 2015/08/30 08:39:04 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3654 2015/08/30 08:59:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6531,3 +6531,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/php-xdebug to 2.3.3 [taca 2015-08-30]
 	Updated lang/pear to 1.9.5nb5 [taca 2015-08-30]
 	Updated mail/pear-Mail_Mime to 1.9.0 [taca 2015-08-30]
+	Updated math/pear-Math_BigInteger to 1.0.2 [taca 2015-08-30]
