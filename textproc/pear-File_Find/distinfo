@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/12/22 15:48:47 taca Exp $
+$NetBSD: distinfo,v 1.3 2015/08/30 14:59:16 taca Exp $
 
-SHA1 (pear/File_Find-1.3.1.tgz) = b5d06b70981d7ee42ca76d29abfa84bf594dc031
-RMD160 (pear/File_Find-1.3.1.tgz) = f0967fb2cfc8c4265184a5dc84757217f207c29f
-Size (pear/File_Find-1.3.1.tgz) = 8085 bytes
+SHA1 (pear/File_Find-1.3.3.tgz) = 2fad480db10b01b304467585af63f6edef334019
+RMD160 (pear/File_Find-1.3.3.tgz) = 719520952159c120039616fe3e92abb41e807a62
+Size (pear/File_Find-1.3.3.tgz) = 8092 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/04/06 03:45:26 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/30 14:59:16 taca Exp $
 
-DISTNAME=	File_Find-1.3.1
+DISTNAME=	File_Find-1.3.3
 CATEGORIES+=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
