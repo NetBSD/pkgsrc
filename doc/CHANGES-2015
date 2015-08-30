@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3687 2015/08/30 15:59:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3688 2015/08/30 16:06:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6566,3 +6566,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/php-redis to 2.2.7 [taca 2015-08-30]
 	Updated math/maxima to 5.37.0 [wiz 2015-08-30]
 	Updated devel/p5-Import-Into to 1.002005 [wiz 2015-08-30]
+	Updated x11/mlterm to 3.5.1 [tsutsui 2015-08-30]
