@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.2 2015/08/30 10:52:16 ryoon Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -177,6 +177,7 @@ java/oracle-8/lib/desktop/mime/packages/x-java-archive.xml
 java/oracle-8/lib/desktop/mime/packages/x-java-jnlp-file.xml
 java/oracle-8/lib/ext/cldrdata.jar
 java/oracle-8/lib/ext/dnsns.jar
+java/oracle-8/lib/ext/jaccess.jar
 java/oracle-8/lib/ext/jfxrt.jar
 java/oracle-8/lib/ext/localedata.jar
 java/oracle-8/lib/ext/meta-index
@@ -301,4 +302,3 @@ java/oracle-8/man/man1/unpack200.1
 java/oracle-8/plugin/desktop/sun_java.desktop
 java/oracle-8/plugin/desktop/sun_java.png
 java/oracle-8/release
-@pkgdir java/oracle-8/lib/applet
