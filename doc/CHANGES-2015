@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3655 2015/08/30 09:00:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3656 2015/08/30 09:03:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6533,3 +6533,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/pear-Mail_Mime to 1.9.0 [taca 2015-08-30]
 	Updated math/pear-Math_BigInteger to 1.0.2 [taca 2015-08-30]
 	Updated math/pear-Numbers_Words to 0.18.1 [taca 2015-08-30]
+	Updated net/pear-Net_URL2 to 2.2.0 [taca 2015-08-30]
