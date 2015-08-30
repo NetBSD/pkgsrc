@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3690 2015/08/30 17:43:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3691 2015/08/30 17:52:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6569,3 +6569,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/mlterm to 3.5.1 [tsutsui 2015-08-30]
 	Updated devel/git to 2.5.1 [wiz 2015-08-30]
 	Added databases/libzdb version 3.0 [wiz 2015-08-30]
+	Updated mail/dbmail to 3.2.3 [wiz 2015-08-30]
