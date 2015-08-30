@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/18 11:00:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/30 14:43:25 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -30,6 +30,9 @@ ${PYSITELIB}/click/exceptions.pyo
 ${PYSITELIB}/click/formatting.py
 ${PYSITELIB}/click/formatting.pyc
 ${PYSITELIB}/click/formatting.pyo
+${PYSITELIB}/click/globals.py
+${PYSITELIB}/click/globals.pyc
+${PYSITELIB}/click/globals.pyo
 ${PYSITELIB}/click/parser.py
 ${PYSITELIB}/click/parser.pyc
 ${PYSITELIB}/click/parser.pyo
