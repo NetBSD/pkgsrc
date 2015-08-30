@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2137 2015/08/26 10:59:35 tnn Exp $
+# $NetBSD: Makefile,v 1.2138 2015/08/30 10:27:16 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -590,6 +590,7 @@ SUBDIR+=	ncursesw
 SUBDIR+=	netbeans-ide
 SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
+SUBDIR+=	netcdf-cxx
 SUBDIR+=	netcdf-fortran
 SUBDIR+=	newfile
 SUBDIR+=	ninja-build
