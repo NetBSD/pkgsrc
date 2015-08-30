@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/04/07 11:19:15 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/30 08:22:53 taca Exp $
 
 MODNAME=	raphf
-PECL_VERSION=	1.0.4
-PKGREVISION=	1
+PECL_VERSION=	1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	rodent@NetBSD.org
