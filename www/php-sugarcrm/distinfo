@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/03/15 16:33:22 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/08/30 15:02:59 taca Exp $
 
-SHA1 (SugarCE-6.5.20.zip) = deae136a5027e9b372d380a270b986da65af1005
-RMD160 (SugarCE-6.5.20.zip) = e7b51f3192cd1c08f4c8737f2160acfb0db4062b
-Size (SugarCE-6.5.20.zip) = 21270144 bytes
+SHA1 (SugarCE-6.5.22.zip) = 1937cce219f449d59ba2d176fe8d665b9e266d95
+RMD160 (SugarCE-6.5.22.zip) = f94cd4ea3a8bb4771095a24a9275fb693d8290a5
+Size (SugarCE-6.5.22.zip) = 22095321 bytes
