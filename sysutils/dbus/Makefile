@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2015/07/26 22:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2015/08/30 15:08:00 wiz Exp $
 
-DISTNAME=	dbus-1.8.20
+DISTNAME=	dbus-1.10.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -31,7 +31,6 @@ MESSAGE_SRC+=	MESSAGE
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CONFIGURE_ARGS_GROUPS=	enable disable with without
 
@@ -77,14 +76,6 @@ CONFIGURE_ARGS+=\
 		@}					\
 	@:M*}
 
-MAKE_DIRS=		${PKG_SYSCONFDIR}/dbus-1/event.d
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/session.d
-
-EGDIR=			${PREFIX}/share/examples/dbus
-CONF_FILES=	${EGDIR}/session.conf ${PKG_SYSCONFDIR}/dbus-1/session.conf
-CONF_FILES+=	${EGDIR}/system.conf ${PKG_SYSCONFDIR}/dbus-1/system.conf
-
 RCD_SCRIPTS=		dbus
 
 PKG_GROUPS_VARS+=	DBUS_GROUP
@@ -115,6 +106,8 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/introspect.* \
 		${DESTDIR}${PREFIX}/share/doc/dbus/
+	${RM} ${DESTDIR}${PREFIX}/etc/dbus-1/s*.conf
+	${RMDIR} ${DESTDIR}${PREFIX}/etc/dbus-1
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
