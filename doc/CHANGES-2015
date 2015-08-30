@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3648 2015/08/30 06:57:14 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3649 2015/08/30 08:23:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6526,3 +6526,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ikiwiki to 3.20150614nb1 [schmonz 2015-08-30]
 	Updated databases/pear-DB to 1.8.2 [taca 2015-08-30]
 	Updated www/gitweb to 2.5.0nb1 [ryoon 2015-08-30]
+	Updated devel/php-raphf to 1.1.0 [taca 2015-08-30]
