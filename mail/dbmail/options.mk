@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2014/02/13 11:39:05 fhajny Exp $
+# $NetBSD: options.mk,v 1.11 2015/08/30 17:52:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbmail
 PKG_SUPPORTED_OPTIONS=	ldap sieve
@@ -17,7 +17,7 @@ PLIST_VARS+=		ldap mysql pgsql sieve sqlite
 .include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql
 PLIST.mysql=		yes
-INSTALLATION_DIRS+=	${DATADIR}/sql/mysql
+INSTALLATION_DIRS+=	${DATADIR}/sql/mysql/upgrades
 .endif
 
 ###
@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	${DATADIR}/sql/mysql
 .include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql
 PLIST.pgsql=		yes
-INSTALLATION_DIRS+=	${DATADIR}/sql/postgresql
+INSTALLATION_DIRS+=	${DATADIR}/sql/postgresql/upgrades
 .endif
 
 ###
@@ -37,7 +37,7 @@ INSTALLATION_DIRS+=	${DATADIR}/sql/postgresql
 .include "../../databases/sqlite3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sqlite
 PLIST.sqlite=		yes
-INSTALLATION_DIRS+=	${DATADIR}/sql/sqlite
+INSTALLATION_DIRS+=	${DATADIR}/sql/sqlite/upgrades
 .endif
 
 ###
@@ -70,11 +70,14 @@ post-install: dbmail-install-scripts
 .PHONY: dbmail-install-scripts
 dbmail-install-scripts:
 .if !empty(PKG_OPTIONS:Mmysql)
-	${INSTALL_DATA} ${WRKSRC}/sql/mysql/* ${DESTDIR}${DATADIR}/sql/mysql
+	${INSTALL_DATA} ${WRKSRC}/sql/mysql/*.* ${DESTDIR}${DATADIR}/sql/mysql
+	${INSTALL_DATA} ${WRKSRC}/sql/mysql/upgrades/*.* ${DESTDIR}${DATADIR}/sql/mysql/upgrades
 .endif
 .if !empty(PKG_OPTIONS:Mpgsql)
-	${INSTALL_DATA} ${WRKSRC}/sql/postgresql/* ${DESTDIR}${DATADIR}/sql/postgresql
+	${INSTALL_DATA} ${WRKSRC}/sql/postgresql/*.* ${DESTDIR}${DATADIR}/sql/postgresql
+	${INSTALL_DATA} ${WRKSRC}/sql/postgresql/upgrades/*.* ${DESTDIR}${DATADIR}/sql/postgresql/upgrades
 .endif
 .if !empty(PKG_OPTIONS:Msqlite)
-	${INSTALL_DATA} ${WRKSRC}/sql/sqlite/* ${DESTDIR}${DATADIR}/sql/sqlite
+	${INSTALL_DATA} ${WRKSRC}/sql/sqlite/*.* ${DESTDIR}${DATADIR}/sql/sqlite
+	${INSTALL_DATA} ${WRKSRC}/sql/sqlite/upgrades/*.* ${DESTDIR}${DATADIR}/sql/sqlite/upgrades
 .endif
