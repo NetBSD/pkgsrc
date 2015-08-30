@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3673 2015/08/30 14:46:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3674 2015/08/30 14:50:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6552,3 +6552,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-click to 5.1 [wiz 2015-08-30]
 	Updated devel/py-setuptools to 18.2 [wiz 2015-08-30]
 	Updated devel/py-virtualenv to 13.1.2 [wiz 2015-08-30]
+	Updated print/php-pdflib to 2.1.10 [taca 2015-08-30]
