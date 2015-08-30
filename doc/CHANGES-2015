@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3685 2015/08/30 15:18:02 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3686 2015/08/30 15:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6564,3 +6564,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/php-zendopcache to 7.0.5 [taca 2015-08-30]
 	Updated sysutils/dbus to 1.10.0 [wiz 2015-08-30]
 	Updated databases/php-redis to 2.2.7 [taca 2015-08-30]
+	Updated math/maxima to 5.37.0 [wiz 2015-08-30]
