@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/30 14:39:30 wiz Exp $
 
-VERSION=	0.80
+VERSION=	0.83
 PKGNAME=	ubuntu-fonts-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	fonts
 DISTNAME=	ubuntu-font-family-${VERSION}
 EXTRACT_SUFX=	.zip
