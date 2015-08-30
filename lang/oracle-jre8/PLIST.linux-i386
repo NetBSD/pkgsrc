@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.2 2015/08/30 10:52:16 ryoon Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -30,7 +30,7 @@ java/oracle-8/bin/rmiregistry
 java/oracle-8/bin/servertool
 java/oracle-8/bin/tnameserv
 java/oracle-8/bin/unpack200
-java/oracle-8/lib/calendars.properties.default
+java/oracle-8/lib/calendars.properties
 java/oracle-8/lib/charsets.jar
 java/oracle-8/lib/classlist
 java/oracle-8/lib/cmm/CIEXYZ.pf
@@ -38,7 +38,7 @@ java/oracle-8/lib/cmm/GRAY.pf
 java/oracle-8/lib/cmm/LINEAR_RGB.pf
 java/oracle-8/lib/cmm/PYCC.pf
 java/oracle-8/lib/cmm/sRGB.pf
-java/oracle-8/lib/content-types.properties.default
+java/oracle-8/lib/content-types.properties
 java/oracle-8/lib/currency.data
 java/oracle-8/lib/deploy.jar
 java/oracle-8/lib/deploy/MixedCodeMainDialog.ui
@@ -46,18 +46,18 @@ java/oracle-8/lib/deploy/MixedCodeMainDialogJs.ui
 java/oracle-8/lib/deploy/cautionshield.icns
 java/oracle-8/lib/deploy/ffjcext.zip
 java/oracle-8/lib/deploy/java-icon.ico
-java/oracle-8/lib/deploy/messages.properties.default
-java/oracle-8/lib/deploy/messages_de.properties.default
-java/oracle-8/lib/deploy/messages_es.properties.default
-java/oracle-8/lib/deploy/messages_fr.properties.default
-java/oracle-8/lib/deploy/messages_it.properties.default
-java/oracle-8/lib/deploy/messages_ja.properties.default
-java/oracle-8/lib/deploy/messages_ko.properties.default
-java/oracle-8/lib/deploy/messages_pt_BR.properties.default
-java/oracle-8/lib/deploy/messages_sv.properties.default
-java/oracle-8/lib/deploy/messages_zh_CN.properties.default
-java/oracle-8/lib/deploy/messages_zh_HK.properties.default
-java/oracle-8/lib/deploy/messages_zh_TW.properties.default
+java/oracle-8/lib/deploy/messages.properties
+java/oracle-8/lib/deploy/messages_de.properties
+java/oracle-8/lib/deploy/messages_es.properties
+java/oracle-8/lib/deploy/messages_fr.properties
+java/oracle-8/lib/deploy/messages_it.properties
+java/oracle-8/lib/deploy/messages_ja.properties
+java/oracle-8/lib/deploy/messages_ko.properties
+java/oracle-8/lib/deploy/messages_pt_BR.properties
+java/oracle-8/lib/deploy/messages_sv.properties
+java/oracle-8/lib/deploy/messages_zh_CN.properties
+java/oracle-8/lib/deploy/messages_zh_HK.properties
+java/oracle-8/lib/deploy/messages_zh_TW.properties
 java/oracle-8/lib/deploy/mixcode_s.png
 java/oracle-8/lib/deploy/splash.gif
 java/oracle-8/lib/deploy/splash@2x.gif
@@ -116,6 +116,7 @@ java/oracle-8/lib/desktop/mime/packages/x-java-archive.xml
 java/oracle-8/lib/desktop/mime/packages/x-java-jnlp-file.xml
 java/oracle-8/lib/ext/cldrdata.jar
 java/oracle-8/lib/ext/dnsns.jar
+java/oracle-8/lib/ext/jaccess.jar
 java/oracle-8/lib/ext/jfxrt.jar
 java/oracle-8/lib/ext/localedata.jar
 java/oracle-8/lib/ext/meta-index
@@ -124,7 +125,7 @@ java/oracle-8/lib/ext/sunec.jar
 java/oracle-8/lib/ext/sunjce_provider.jar
 java/oracle-8/lib/ext/sunpkcs11.jar
 java/oracle-8/lib/ext/zipfs.jar
-java/oracle-8/lib/flavormap.properties.default
+java/oracle-8/lib/flavormap.properties
 java/oracle-8/lib/fontconfig.RedHat.5.bfc.default
 java/oracle-8/lib/fontconfig.RedHat.5.properties.src.default
 java/oracle-8/lib/fontconfig.RedHat.6.bfc.default
@@ -146,12 +147,12 @@ java/oracle-8/lib/fonts/LucidaSansRegular.ttf
 java/oracle-8/lib/fonts/LucidaTypewriterBold.ttf
 java/oracle-8/lib/fonts/LucidaTypewriterRegular.ttf
 java/oracle-8/lib/fonts/fonts.dir
-java/oracle-8/lib/hijrah-config-umalqura.properties
+java/oracle-8/lib/hijrah-config-umalqura.properties.default
 java/oracle-8/lib/i386/client/Xusage.txt
 java/oracle-8/lib/i386/client/libjsig.so
 java/oracle-8/lib/i386/client/libjvm.so
 java/oracle-8/lib/i386/jli/libjli.so
-java/oracle-8/lib/i386/jvm.cfg.default
+java/oracle-8/lib/i386/jvm.cfg
 java/oracle-8/lib/i386/libavplugin-53.so
 java/oracle-8/lib/i386/libavplugin-54.so
 java/oracle-8/lib/i386/libawt.so
@@ -211,7 +212,7 @@ java/oracle-8/lib/i386/libzip.so
 java/oracle-8/lib/i386/server/Xusage.txt
 java/oracle-8/lib/i386/server/libjsig.so
 java/oracle-8/lib/i386/server/libjvm.so
-java/oracle-8/lib/images/cursors/cursors.properties.default
+java/oracle-8/lib/images/cursors/cursors.properties
 java/oracle-8/lib/images/cursors/invalid32x32.gif
 java/oracle-8/lib/images/cursors/motif_CopyDrop32x32.gif
 java/oracle-8/lib/images/cursors/motif_CopyNoDrop32x32.gif
@@ -223,7 +224,7 @@ java/oracle-8/lib/images/icons/sun-java.png
 java/oracle-8/lib/images/icons/sun-java_HighContrast.png
 java/oracle-8/lib/images/icons/sun-java_HighContrastInverse.png
 java/oracle-8/lib/images/icons/sun-java_LowContrast.png
-java/oracle-8/lib/javafx.properties.default
+java/oracle-8/lib/javafx.properties
 java/oracle-8/lib/javaws.jar
 java/oracle-8/lib/jce.jar
 java/oracle-8/lib/jexec
@@ -247,22 +248,22 @@ java/oracle-8/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
 java/oracle-8/lib/locale/zh_HK.BIG5HK/LC_MESSAGES/sunw_java_plugin.mo
 java/oracle-8/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
 java/oracle-8/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
-java/oracle-8/lib/logging.properties.default
+java/oracle-8/lib/logging.properties
 java/oracle-8/lib/management-agent.jar
 java/oracle-8/lib/management/jmxremote.access
 java/oracle-8/lib/management/jmxremote.password.template
-java/oracle-8/lib/management/management.properties.default
+java/oracle-8/lib/management/management.properties
 java/oracle-8/lib/management/snmp.acl.template
 java/oracle-8/lib/meta-index
-java/oracle-8/lib/net.properties.default
+java/oracle-8/lib/net.properties
 java/oracle-8/lib/oblique-fonts/LucidaSansDemiOblique.ttf
 java/oracle-8/lib/oblique-fonts/LucidaSansOblique.ttf
 java/oracle-8/lib/oblique-fonts/LucidaTypewriterBoldOblique.ttf
 java/oracle-8/lib/oblique-fonts/LucidaTypewriterOblique.ttf
 java/oracle-8/lib/oblique-fonts/fonts.dir
 java/oracle-8/lib/plugin.jar
-java/oracle-8/lib/psfont.properties.ja.default
-java/oracle-8/lib/psfontj2d.properties.default
+java/oracle-8/lib/psfont.properties.ja
+java/oracle-8/lib/psfontj2d.properties
 java/oracle-8/lib/resources.jar
 java/oracle-8/lib/rt.jar
 java/oracle-8/lib/security/US_export_policy.jar
@@ -270,11 +271,11 @@ java/oracle-8/lib/security/blacklist
 java/oracle-8/lib/security/blacklisted.certs
 java/oracle-8/lib/security/cacerts
 java/oracle-8/lib/security/java.policy
-java/oracle-8/lib/security/java.security.default
+java/oracle-8/lib/security/java.security
 java/oracle-8/lib/security/javaws.policy
 java/oracle-8/lib/security/local_policy.jar
 java/oracle-8/lib/security/trusted.libraries
-java/oracle-8/lib/sound.properties.default
+java/oracle-8/lib/sound.properties
 java/oracle-8/lib/tzdb.dat
 java/oracle-8/man/ja
 java/oracle-8/man/ja_JP.UTF-8/man1/java.1
@@ -304,4 +305,3 @@ java/oracle-8/man/man1/unpack200.1
 java/oracle-8/plugin/desktop/sun_java.desktop
 java/oracle-8/plugin/desktop/sun_java.png
 java/oracle-8/release
-@pkgdir java/oracle-8/lib/applet

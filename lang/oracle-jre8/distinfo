@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/08/30 10:52:16 ryoon Exp $
 
 SHA1 (jce_policy-8.zip) = 7d25dcee3e6ef2c984d748a14614b37c18ce3507
 RMD160 (jce_policy-8.zip) = bdcb54a9900c00b52c24d024282b6e40c148d49c
 Size (jce_policy-8.zip) = 8409 bytes
-SHA1 (jre-8u45-linux-i586.tar.gz) = ce6a870067947bf22154f9055df0a8752cfaf785
-RMD160 (jre-8u45-linux-i586.tar.gz) = cee7e0f15d8fbcd71b8e586230055955cfdded8f
-Size (jre-8u45-linux-i586.tar.gz) = 65672226 bytes
-SHA1 (jre-8u45-linux-x64.tar.gz) = a89f73e4101e2e9bc6b39cec2066b83ecc0b97db
-RMD160 (jre-8u45-linux-x64.tar.gz) = acf1c2f5c9335d5a5cf7c9db9b61efed1f902cbc
-Size (jre-8u45-linux-x64.tar.gz) = 63822322 bytes
-SHA1 (jre-8u45-solaris-x64.tar.gz) = 5fbbb81cb99a3a139701d95c7ec64dfc9bbc3706
-RMD160 (jre-8u45-solaris-x64.tar.gz) = 492a3688aea6c419fe66912d2b9a8ed6bb78ccf5
-Size (jre-8u45-solaris-x64.tar.gz) = 51902127 bytes
+SHA1 (jre-8u60-linux-i586.tar.gz) = 27c66201df30500cd87c557b48e05f265f110d96
+RMD160 (jre-8u60-linux-i586.tar.gz) = 4652b51a5371e7e606bf7ca7c535bfd9d01b6917
+Size (jre-8u60-linux-i586.tar.gz) = 73863653 bytes
+SHA1 (jre-8u60-linux-x64.tar.gz) = 1dcfa4ea4cd82be67f598564424f67a46e6a5f58
+RMD160 (jre-8u60-linux-x64.tar.gz) = 6fd20f85f941a1c4da313d5f48c2781696f4d05c
+Size (jre-8u60-linux-x64.tar.gz) = 71680110 bytes
+SHA1 (jre-8u60-solaris-x64.tar.gz) = f46caf3d2a6ff79c6b3c8fd0f45a924bca21c969
+RMD160 (jre-8u60-solaris-x64.tar.gz) = b0626d42839e11bdd7408dcd26619bc8ed32a172
+Size (jre-8u60-solaris-x64.tar.gz) = 52202549 bytes
