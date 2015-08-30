@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3670 2015/08/30 14:42:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3671 2015/08/30 14:43:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6549,3 +6549,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-IO-Socket-SSL to 2.018 [wiz 2015-08-30]
 	Updated net/php-yaz to 1.1.9 [taca 2015-08-30]
 	Updated devel/py-cffi to 1.2.1 [wiz 2015-08-30]
+	Updated devel/py-click to 5.1 [wiz 2015-08-30]
