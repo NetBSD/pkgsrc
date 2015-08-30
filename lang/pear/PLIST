@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/15 00:45:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/08/30 08:37:20 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -129,6 +129,10 @@ lib/php/doc/XML_Util/examples/example.php
 lib/php/doc/XML_Util/examples/example2.php
 lib/php/pearcmd.php
 lib/php/peclcmd.php
+lib/php/test/Console_Getopt/tests/001-getopt.phpt
+lib/php/test/Console_Getopt/tests/bug10557.phpt
+lib/php/test/Console_Getopt/tests/bug11068.phpt
+lib/php/test/Console_Getopt/tests/bug13140.phpt
 lib/php/test/Structures_Graph/tests/AcyclicTestTest.php
 lib/php/test/Structures_Graph/tests/AllTests.php
 lib/php/test/Structures_Graph/tests/BasicGraphTest.php
