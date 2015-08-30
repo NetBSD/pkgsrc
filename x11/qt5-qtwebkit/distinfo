@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2015/06/12 07:57:11 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/08/30 09:56:45 markd Exp $
 
 SHA1 (qtwebkit-opensource-src-5.4.0.tar.xz) = e5e92e126bb673dadc329bc726c21bf4f994d829
 RMD160 (qtwebkit-opensource-src-5.4.0.tar.xz) = 7310e566174839214a962f1d2ff07cbb7decb7a2
@@ -11,6 +11,7 @@ SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = a6cfdbced0bb528f47
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 2ed23192d9a4ec2c0f7b7b9a48bed664adbc7fb3
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = cf39645a9b61299bb7b5b700a4cf2af68aa2f9f6
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 09bfdb6e63b835fb50611289d4a1c50cd18c9e37
+SHA1 (patch-Source_JavaScriptCore_runtime_JSObject.cpp) = f08f344bb88ccf9b2383d6d7b9f7fcd07b667a39
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = 3b73e876e89e920267a6bd19dba696298f00c704
 SHA1 (patch-Source_QtWebKit.pro) = cfa9b6a36ce63f7655a164bbc696db2c0a44d288
 SHA1 (patch-Source_ThirdParty_ANGLE_Target.pri) = 33473cbae5e2f835b0cea6cfd5fe50f031bea60c
@@ -22,7 +23,7 @@ SHA1 (patch-Source_WTF_WTF.pro) = 06883057a69fb95142cf33615a800cd532528e3e
 SHA1 (patch-Source_WTF_wtf_Assertions.cpp) = 9146f5c8a44563328194470e3f1f4ec5150fbe93
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 64ea54605fbe787be57f7423e33802def66d6432
 SHA1 (patch-Source_WTF_wtf_NumberOfCores.cpp) = 5f80234f0bc8a66b2f1b4824a8b79b402e707491
-SHA1 (patch-Source_WTF_wtf_Platform.h) = 1d43e161c9836949970eca4545fd995b85a4f4d6
+SHA1 (patch-Source_WTF_wtf_Platform.h) = d44960e5a5d171e815f973999c29d88a785cb3d7
 SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = 1c5a9c0aaffdec25cea74b010b9bc8922593b1af
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = 249308d00b18a8b89e9787f440341e77a1927531
 SHA1 (patch-Source_WTF_wtf_Threading.h) = 92f303cb972335fc9aaf4054cf66d9b6e99c94a5
