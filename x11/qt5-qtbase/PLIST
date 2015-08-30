@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/27 10:38:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/30 01:21:42 markd Exp $
 lib/pkgconfig/Qt5Bootstrap.pc
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
@@ -2296,6 +2296,7 @@ qt5/lib/cmake/Qt5OpenGLExtensions/Qt5OpenGLExtensionsConfigVersion.cmake
 qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake
 qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake
 ${PLIST.mac}qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QCocoaPrinterSupportPlugin.cmake
+${PLIST.cups}qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake
 qt5/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake
 qt5/lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake
 qt5/lib/cmake/Qt5Test/Qt5TestConfig.cmake
@@ -2839,3 +2840,4 @@ ${PLIST.egl}qt5/plugins/platforms/libqminimalegl.la
 qt5/plugins/platforms/libqoffscreen.la
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.la
 ${PLIST.mac}qt5/plugins/printsupport/libcocoaprintersupport.la
+${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.la
