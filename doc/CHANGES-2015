@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3667 2015/08/30 14:39:38 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3668 2015/08/30 14:40:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6546,3 +6546,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.74 [wiz 2015-08-30]
 	Updated security/libgpg-error to 1.20 [wiz 2015-08-30]
 	Updated fonts/ubuntu-fonts to 0.83 [wiz 2015-08-30]
+	Updated security/p5-IO-Socket-SSL to 2.018 [wiz 2015-08-30]
