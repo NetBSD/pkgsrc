@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/05/05 13:21:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/08/30 11:32:35 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -90,8 +90,8 @@ share/tomcat/webapps/docs/apr.html
 share/tomcat/webapps/docs/architecture/index.html
 share/tomcat/webapps/docs/architecture/overview.html
 share/tomcat/webapps/docs/architecture/requestProcess.html
-share/tomcat/webapps/docs/architecture/requestProcess/requestProcess.pdf
-share/tomcat/webapps/docs/architecture/requestProcess/roseModel.mdl
+share/tomcat/webapps/docs/architecture/requestProcess/authentication-process.png
+share/tomcat/webapps/docs/architecture/requestProcess/request-process.png
 share/tomcat/webapps/docs/architecture/startup.html
 share/tomcat/webapps/docs/architecture/startup/serverStartup.pdf
 share/tomcat/webapps/docs/architecture/startup/serverStartup.txt
@@ -623,4 +623,3 @@ share/tomcat/webapps/manager/images/void.gif
 share/tomcat/webapps/manager/index.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
-@pkgdir share/tomcat/conf
