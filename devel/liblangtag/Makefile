@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/07/01 09:26:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/30 16:17:27 richard Exp $
 
 DISTNAME=	liblangtag-0.5.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/tagoh/liblangtag/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +16,9 @@ USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c
 PKGCONFIG_OVERRIDE+=	liblangtag.pc.in
+
+#TEST_TARGET=   check
+#.include "../../devel/check/buildlink3.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
