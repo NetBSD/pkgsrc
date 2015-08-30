@@ -1,12 +1,22 @@
-$NetBSD: patch-src_corelib_io_io.pri,v 1.2 2015/05/18 13:52:24 nros Exp $
+$NetBSD: patch-src_corelib_io_io.pri,v 1.3 2015/08/30 04:13:46 markd Exp $
 
 * Add NetBSD support
 * Add DragonFly support
 * Patch sent and merged upstream:
   http://codereview.qt-project.org/#/c/111741/
---- src/corelib/io/io.pri.orig	2013-11-27 01:01:16.000000000 +0000
+
+* fix linux test.
+
+--- src/corelib/io/io.pri.orig	2014-12-05 16:24:37.000000000 +0000
 +++ src/corelib/io/io.pri
-@@ -152,7 +152,7 @@ win32 {
+@@ -172,13 +172,13 @@ win32 {
+                 io/qstorageinfo_unix.cpp
+         }
+ 
+-        linux|if(qnx:contains(QT_CONFIG, inotify)) {
++        linux*|if(qnx:contains(QT_CONFIG, inotify)) {
+             SOURCES += io/qfilesystemwatcher_inotify.cpp
+             HEADERS += io/qfilesystemwatcher_inotify_p.h
          }
  
          !nacl {
