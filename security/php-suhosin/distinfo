@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/03/15 00:35:14 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/08/30 14:54:49 taca Exp $
 
-SHA1 (php-suhosin/suhosin-0.9.37.1.tar.gz) = 9de7a89ef7d336501a41f452fd3936ae66f63a6e
-RMD160 (php-suhosin/suhosin-0.9.37.1.tar.gz) = 37cd9bd86a65c9081260a9d809b646384290cebb
-Size (php-suhosin/suhosin-0.9.37.1.tar.gz) = 134207 bytes
+SHA1 (php-suhosin/suhosin-0.9.38.tar.gz) = 20af6379c0ff9879c5ed69452a6c38b7b3e76748
+RMD160 (php-suhosin/suhosin-0.9.38.tar.gz) = 7bcf2dcc9b50605ea5cbb772302963ebbbdf0dc1
+Size (php-suhosin/suhosin-0.9.38.tar.gz) = 122800 bytes
