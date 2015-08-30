@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/10/08 09:51:28 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/30 09:02:43 taca Exp $
 
-DISTNAME=	Net_URL2-2.0.8
+DISTNAME=	Net_URL2-2.2.0
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
