@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2015/07/18 13:47:42 fhajny Exp $
+# $NetBSD: Makefile,v 1.70 2015/08/30 12:30:33 jperkin Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
@@ -24,6 +24,11 @@ PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
 
 .include "../../mk/bsd.prefs.mk"
+
+# Fails trying to strip dyntrace.o
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
 
 # have gcc without the necessary atomic ops?
 .if !empty(MACHINE_PLATFORM:MNetBSD-[56].*)
@@ -73,7 +78,7 @@ CONFIGURE_ARGS+=	--disable-sctp
 ###
 ### XXX There may be others here.
 ###
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-kernel-poll
 .endif
 
