@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3676 2015/08/30 14:53:12 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3677 2015/08/30 14:55:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6555,3 +6555,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/php-pdflib to 2.1.10 [taca 2015-08-30]
 	Updated security/ssdeep to 2.13 [taca 2015-08-30]
 	Updated security/php-ssdeep to 1.0.4 [taca 2015-08-30]
+	Updated security/php-suhosin to 0.9.38 [taca 2015-08-30]
