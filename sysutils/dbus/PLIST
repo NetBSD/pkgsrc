@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/07/05 15:21:50 richard Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/08/30 15:08:00 wiz Exp $
 ${PLIST.launchd}Library/LaunchAgents/org.freedesktop.dbus-session.plist
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
@@ -6,6 +6,8 @@ bin/dbus-launch
 bin/dbus-monitor
 bin/dbus-run-session
 bin/dbus-send
+bin/dbus-test-tool
+bin/dbus-update-activation-environment
 bin/dbus-uuidgen
 include/dbus-1.0/dbus/dbus-address.h
 include/dbus-1.0/dbus/dbus-bus.h
@@ -34,7 +36,11 @@ man/man1/dbus-launch.1
 man/man1/dbus-monitor.1
 man/man1/dbus-run-session.1
 man/man1/dbus-send.1
+man/man1/dbus-test-tool.1
+man/man1/dbus-update-activation-environment.1
 man/man1/dbus-uuidgen.1
+share/dbus-1/session.conf
+share/dbus-1/system.conf
 share/doc/dbus/dbus-cleanup-sockets.1.html
 share/doc/dbus/dbus-daemon.1.html
 share/doc/dbus/dbus-faq.html
@@ -44,14 +50,15 @@ share/doc/dbus/dbus-run-session.1.html
 share/doc/dbus/dbus-send.1.html
 share/doc/dbus/dbus-specification.html
 share/doc/dbus/dbus-test-plan.html
+share/doc/dbus/dbus-test-tool.1.html
 share/doc/dbus/dbus-tutorial.html
+share/doc/dbus/dbus-update-activation-environment.1.html
 share/doc/dbus/dbus-uuidgen.1.html
 share/doc/dbus/diagram.png
 share/doc/dbus/diagram.svg
+share/doc/dbus/examples/GetAllMatchRules.py
+share/doc/dbus/examples/example-session-disable-stats.conf
+share/doc/dbus/examples/example-system-enable-stats.conf
 share/doc/dbus/introspect.dtd
 share/doc/dbus/introspect.xsl
 share/doc/dbus/system-activation.txt
-share/examples/dbus/session.conf
-share/examples/dbus/system.conf
-@pkgdir share/dbus-1/system-services
-@pkgdir share/dbus-1/services
