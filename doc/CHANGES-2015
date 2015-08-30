@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3646 2015/08/30 03:09:50 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.3647 2015/08/30 05:31:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6524,3 +6524,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Test-BDD-Cucumber to 0.37 [schmonz 2015-08-29]
 	Updated www/php-ja-wordpress to 4.3 [ryoon 2015-08-30]
 	Updated www/ikiwiki to 3.20150614nb1 [schmonz 2015-08-30]
+	Updated databases/pear-DB to 1.8.2 [taca 2015-08-30]
