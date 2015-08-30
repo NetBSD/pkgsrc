@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3649 2015/08/30 08:23:33 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3650 2015/08/30 08:25:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6527,3 +6527,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/pear-DB to 1.8.2 [taca 2015-08-30]
 	Updated www/gitweb to 2.5.0nb1 [ryoon 2015-08-30]
 	Updated devel/php-raphf to 1.1.0 [taca 2015-08-30]
+	Updated www/php-http to 2.5.1 [taca 2015-08-30]
