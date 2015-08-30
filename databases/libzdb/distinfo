@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/30 17:41:51 wiz Exp $
+
+SHA1 (libzdb-3.0.tar.gz) = bcf14c11cfcd0c05ecc8740f43cd0d6170406dc1
+RMD160 (libzdb-3.0.tar.gz) = 951c2db724f17c54f951d0afb7866496d3654e8a
+Size (libzdb-3.0.tar.gz) = 700284 bytes
