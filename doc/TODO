@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14821 2015/08/30 15:59:35 wiz Exp $
+$NetBSD: TODO,v 1.14822 2015/08/30 16:08:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -775,7 +775,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gimp-docs-ru-2.8.2
 	o gimp-docs-sv-2.8.2
 	o gimp-docs-zh_CN-2.8.2
-	o git-2.5.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5

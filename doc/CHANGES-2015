@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3688 2015/08/30 16:06:59 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.3689 2015/08/30 16:08:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6567,3 +6567,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/maxima to 5.37.0 [wiz 2015-08-30]
 	Updated devel/p5-Import-Into to 1.002005 [wiz 2015-08-30]
 	Updated x11/mlterm to 3.5.1 [tsutsui 2015-08-30]
+	Updated devel/git to 2.5.1 [wiz 2015-08-30]
