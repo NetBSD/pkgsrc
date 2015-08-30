@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2014/10/09 14:06:32 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2015/08/30 10:54:11 richard Exp $
 
 DISTNAME=	zlib-1.2.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://zlib.net/
@@ -19,7 +19,12 @@ PKGCONFIG_OVERRIDE+=	zlib.pc.in
 CFLAGS+=		${CPPFLAGS}
 LDFLAGS.Cygwin=		-no-undefined
 
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_ARCH:Mi386)
+# use NO_DIVIDE for adler32 if processor does not do division in hardware
+# which avoids needing emulation provided by libgcc_s
 CPPFLAGS.SunOS+=	-DNO_DIVIDE
+.endif
 LDFLAGS.SunOS+=	-Wl,-zignore	# avoid unused reference to libgcc_s.so
 
 SUBST_CLASSES+= pc
