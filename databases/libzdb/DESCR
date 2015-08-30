@@ -1,0 +1,5 @@
+The Zild Database Library implements a small, fast, and easy to
+use database API with thread-safe connection pooling. The library
+can connect transparently to multiple database systems, has zero
+configuration and connections are specified via a standard URL
+scheme.
