@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/04/15 13:13:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/08/30 04:17:15 markd Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaQuick_p.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
@@ -267,6 +267,7 @@ ${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AVFServicePlugin.cmake
 ${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AudioCaptureServicePlugin.cmake
 ${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CoreAudioPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
+${PLIST.alsa}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake
@@ -290,6 +291,7 @@ qt5/mkspecs/modules/qt_lib_multimedia_private.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri
+${PLIST.alsa}qt5/plugins/audio/libqtaudio_alsa.la
 ${PLIST.mac}qt5/plugins/audio/libqtaudio_coreaudio.la
 ${PLIST.mac}qt5/plugins/mediaservice/libqavfcamera.la
 ${PLIST.mac}qt5/plugins/mediaservice/libqavfmediaplayer.la
