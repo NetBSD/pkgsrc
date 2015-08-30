@@ -1,0 +1,19 @@
+$NetBSD: patch-src_dbmail.h.in,v 1.1 2015/08/30 17:52:27 wiz Exp $
+
+Define _NETBSD_SOURCE so that _NI_* are defined.
+Do not included features.h because it doesn't exist.
+
+--- src/dbmail.h.in.orig	2015-01-25 10:20:50.000000000 +0000
++++ src/dbmail.h.in
+@@ -39,7 +39,11 @@
+ #else
+ 
+ #define _XOPEN_SOURCE	500
++#ifdef __NetBSD__
++#define _NETBSD_SOURCE
++#else
+ #include <features.h>
++#endif
+ 
+ #endif
+ 
