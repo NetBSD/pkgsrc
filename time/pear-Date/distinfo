@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/09/05 19:51:41 jdolecek Exp $
+$NetBSD: distinfo,v 1.5 2015/08/30 15:00:52 taca Exp $
 
-SHA1 (pear/Date-1.4.7.tgz) = f5775798763ff1a8320c892bf7c4d2a27f49e342
-RMD160 (pear/Date-1.4.7.tgz) = 1e1bb2fb0a58e31f271945b98cbe8e282ef894b1
-Size (pear/Date-1.4.7.tgz) = 55754 bytes
+SHA1 (pear/Date-1.5.0a4.tgz) = 437087d29e24e30ea771332bde5d143f89d3bd42
+RMD160 (pear/Date-1.5.0a4.tgz) = 98b7e2d6d91f72f1b0095e6b03b510cef73edbe2
+Size (pear/Date-1.5.0a4.tgz) = 222378 bytes
