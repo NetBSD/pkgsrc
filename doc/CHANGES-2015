@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3645 2015/08/30 01:21:39 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3646 2015/08/30 03:09:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6523,3 +6523,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/tcl to 8.6.4nb4 [jperkin 2015-08-29]
 	Updated devel/p5-Test-BDD-Cucumber to 0.37 [schmonz 2015-08-29]
 	Updated www/php-ja-wordpress to 4.3 [ryoon 2015-08-30]
+	Updated www/ikiwiki to 3.20150614nb1 [schmonz 2015-08-30]
