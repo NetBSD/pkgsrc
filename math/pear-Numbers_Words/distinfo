@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/03/14 08:17:35 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/08/30 09:00:25 taca Exp $
 
-SHA1 (pear/Numbers_Words-0.18.0.tgz) = f5c665c2cd57d004e179c34851d999a19bfdf7a4
-RMD160 (pear/Numbers_Words-0.18.0.tgz) = 209ae9620bf9a7735d354dd04667dc8d7de5997e
-Size (pear/Numbers_Words-0.18.0.tgz) = 64706 bytes
+SHA1 (pear/Numbers_Words-0.18.1.tgz) = 5327788c9b745a9c485bcf49b1cd2e7a7d54647a
+RMD160 (pear/Numbers_Words-0.18.1.tgz) = b3b8b6700e1390d47fd8a4a5da44965aad35394c
+Size (pear/Numbers_Words-0.18.1.tgz) = 72925 bytes
