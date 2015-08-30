@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.213 2015/08/29 12:11:22 ryoon Exp $
+$NetBSD: distinfo,v 1.214 2015/08/30 09:29:15 ryoon Exp $
 
 SHA1 (firefox-40.0.3.source.tar.bz2) = 6ddda46bd6540ab3ae932fbb5ffec8e9a85cab13
 RMD160 (firefox-40.0.3.source.tar.bz2) = 640b728067690744fc979093018f19d3b1fd546c
@@ -129,6 +129,7 @@ SHA1 (patch-mfbt_Poison.cpp) = f502581db96b3e5eca25a9aa9035f436e9167503
 SHA1 (patch-mobile_android_installer_Makefile.in) = 3d6b7ea3fc6249f2f8ebc88f15f34495a0ef41d6
 SHA1 (patch-mobile_android_installer_package-manifest.in) = 5826a6585e76eecad46e8c8bf3a9c4ded61b5748
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
+SHA1 (patch-modules_libpref_init_all.js) = a7043f9ed33aa00a57ae7c6ac76e072e32257aeb
 SHA1 (patch-netwerk_base_nsNetUtil.h) = e80f40b048e4628876ceb1a5ca90f7b07862d9ab
 SHA1 (patch-netwerk_dns_moz.build) = 447ea9652f67cb5e48ea14a725c4cf45647eec6b
 SHA1 (patch-netwerk_protocol_http_Http2Session.cpp) = bd58c580aface92714a16cc533d69541ae31deef
