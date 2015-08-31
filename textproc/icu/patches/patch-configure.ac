@@ -1,11 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.3 2014/07/18 10:28:11 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.4 2015/08/31 15:26:19 sevan Exp $
 
 * Detect NetBSD libatomic
 * test(1) portability fix
+* Add support for Bitrig
 
---- configure.ac.orig	2013-12-09 17:32:25.000000000 +0000
+--- configure.ac.orig	Fri Mar 27 21:17:48 2015
 +++ configure.ac
-@@ -407,6 +407,18 @@ if test "x$ac_cv_header_elf_h" = "xyes";
+@@ -409,6 +409,18 @@ if test "x$ac_cv_header_elf_h" = "xyes"; then
      CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_ELF_H=1";
  fi
  
@@ -24,7 +25,16 @@ $NetBSD: patch-configure.ac,v 1.3 2014/07/18 10:28:11 ryoon Exp $
  U_ENABLE_DYLOAD=1
  enable=yes
  AC_MSG_CHECKING([whether to enable dynamic loading of plugins])
-@@ -1232,6 +1244,7 @@ case "${host}" in
+@@ -1234,7 +1246,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
+ case "${host}" in
+ 	*-*-solaris*) 	platform=U_SOLARIS ;;
+ 	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
+-	*-*-*bsd*|*-*-dragonfly*) 	platform=U_BSD ;;
++	*-*-*bsd*|*-*-dragonfly*|*-*-bitrig*) 	platform=U_BSD ;;
+ 	*-*-aix*) 	platform=U_AIX ;;
+ 	*-*-hpux*) 	platform=U_HPUX ;;
+ 	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;
+@@ -1253,6 +1265,7 @@ case "${host}" in
  	*-*-beos)		platform=U_BEOS ;;
  	*-*-irix*)		platform=U_IRIX ;;
  	*-ncr-*)		platform=U_MPRAS ;;
@@ -32,7 +42,7 @@ $NetBSD: patch-configure.ac,v 1.3 2014/07/18 10:28:11 ryoon Exp $
  	*) 		platform=U_UNKNOWN_PLATFORM ;;
  esac
  AC_SUBST(ICUDATA_CHAR)
-@@ -1249,13 +1262,13 @@ fi
+@@ -1270,13 +1283,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  
