@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3698 2015/08/31 10:13:15 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3699 2015/08/31 11:59:43 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6577,3 +6577,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/bootstrap-mk-files to 20150831 [jperkin 2015-08-31]
 	Updated www/py-webassets to 0.11.1 [kleink 2015-08-31]
 	Updated net/pear-Net_SMTP to 1.6.3 [taca 2015-08-31]
+	Added geography/libchamplain012 version 0.12.10 [nros 2015-08-31]
