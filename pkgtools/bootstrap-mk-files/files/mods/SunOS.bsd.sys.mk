@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.bsd.sys.mk,v 1.3 2015/06/04 17:11:33 ryoon Exp $
+#	$NetBSD: SunOS.bsd.sys.mk,v 1.4 2015/08/31 09:03:19 jperkin Exp $
 #
 # Overrides used for NetBSD source tree builds.
 
@@ -6,23 +6,20 @@
 
 .if defined(WARNS)
 .if ${WARNS} > 0
-CFLAGS+= -Wall -Wstrict-prototypes -Wmissing-prototypes
+CFLAGS+= -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith
 # XXX Delete -Wuninitialized by default for now -- the compiler doesn't
 # XXX always get it right.
 CFLAGS+= -Wno-uninitialized
 .endif
 .if ${WARNS} > 1
-CFLAGS+= -Wreturn-type -Wpointer-arith
+CFLAGS+=-Wreturn-type -Wcast-qual -Wpointer-arith -Wwrite-strings
+CFLAGS+=-Wswitch -Wshadow
 .endif
-.if ${WARNS} > 2
-CFLAGS+= -Wcast-qual -Wwrite-strings
-.endif
-CFLAGS+= -Wswitch -Wshadow
 .endif
 
 .if defined(WFORMAT) && defined(FORMAT_AUDIT)
 .if ${WFORMAT} > 1
-CFLAGS+= -Wnetbsd-format-audit -Wno-format-extra-args
+CFLAGS+=-Wnetbsd-format-audit -Wno-format-extra-args
 .endif
 .endif
 
@@ -36,16 +33,16 @@ CPPFLAGS+= -nostdinc -idirafter ${DESTDIR}/usr/include
 LINTFLAGS+= -d ${DESTDIR}/usr/include
 .endif
 
+.if defined(AUDIT)
+CPPFLAGS+= -D__AUDIT__
+.endif
+
 .if defined(MKSOFTFLOAT) && (${MKSOFTFLOAT} != "no")
 COPTS+=		-msoft-float
 FOPTS+=		-msoft-float
 .endif
 
 .endif # gcc
-
-.if defined(AUDIT)
-CPPFLAGS+= -D__AUDIT__
-.endif
 
 # Helpers for cross-compiling
 HOST_CC?=	cc
