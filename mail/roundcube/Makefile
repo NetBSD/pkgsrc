@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2015/08/23 15:43:00 taca Exp $
+# $NetBSD: Makefile,v 1.76 2015/08/31 15:31:26 taca Exp $
 
 DISTNAME=	roundcubemail-1.1.2
 PKGNAME=	${DISTNAME:S/mail-/-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -36,9 +36,6 @@ INSTALLATION_DIRS+=	${RCDIR}/bin ${RCDIR}/SQL ${DOCDIR} ${EGDIR}
 .include "../../lang/php/phpversion.mk"
 
 PKG_SYSCONFSUBDIR?=	roundcube
-
-WWW_USER?=		${APACHE_USER}
-WWW_GROUP?=		${APACHE_GROUP}
 
 PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS=		WWW_USER
@@ -106,7 +103,7 @@ REPLACE_FILES.php=	bin/*.sh
 REPLACE_PYTHON=		plugins/password/helpers/chpass-wrapper.py
 
 post-extract:
-	${CP} ${FILESDIR}/roundcube.conf ${WRKSRC}/roundcube.conf
+	${CP} ${FILESDIR}/${WWW_CONF_FILE} ${WRKSRC}/roundcube.conf
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
