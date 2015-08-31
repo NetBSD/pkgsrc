@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3700 2015/08/31 12:19:43 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3701 2015/08/31 12:24:56 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6579,3 +6579,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/pear-Net_SMTP to 1.6.3 [taca 2015-08-31]
 	Added geography/libchamplain012 version 0.12.10 [nros 2015-08-31]
 	Updated databases/py-ldap to 2.4.20 [adam 2015-08-31]
+	Added textproc/ots version 0.5.0 [nros 2015-08-31]
