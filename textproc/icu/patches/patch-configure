@@ -1,11 +1,21 @@
-$NetBSD: patch-configure,v 1.6 2014/10/07 16:09:53 adam Exp $
+$NetBSD: patch-configure,v 1.7 2015/08/31 15:26:19 sevan Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it.
+Add support for Bitrig.
 
---- configure.orig	2014-10-03 16:18:36.000000000 +0000
+--- configure.orig	Fri Mar 27 21:17:48 2015
 +++ configure
-@@ -5172,6 +5172,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -5147,7 +5147,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$
+ 		*-*-cygwin) icu_cv_host_frag=mh-cygwin-msvc ;;
+ 		esac
+ 	fi ;;
+-*-*-*bsd*|*-*-dragonfly*) 	icu_cv_host_frag=mh-bsd-gcc ;;
++*-*-*bsd*|*-*-dragonfly*|*-*-bitrig*) 	icu_cv_host_frag=mh-bsd-gcc ;;
+ *-*-aix*)
+ 	if test "$GCC" = yes; then
+ 		icu_cv_host_frag=mh-aix-gcc
+@@ -5172,6 +5172,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$
  *-dec-osf*) icu_cv_host_frag=mh-alpha-osf ;;
  *-*-nto*)	icu_cv_host_frag=mh-qnx ;;
  *-ncr-*)	icu_cv_host_frag=mh-mpras ;;
@@ -13,7 +23,7 @@ Solaris seems to need -std=c99 with recent pkgsrc so keep it.
  *) 		icu_cv_host_frag=mh-unknown ;;
  esac
  
-@@ -5682,6 +5683,29 @@ if test "x$ac_cv_header_elf_h" = "xyes";
+@@ -5682,6 +5683,29 @@ if test "x$ac_cv_header_elf_h" = "xyes"; then
      CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_ELF_H=1";
  fi
  
@@ -43,6 +53,15 @@ Solaris seems to need -std=c99 with recent pkgsrc so keep it.
  U_ENABLE_DYLOAD=1
  enable=yes
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins" >&5
+@@ -7655,7 +7679,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
+ case "${host}" in
+ 	*-*-solaris*) 	platform=U_SOLARIS ;;
+ 	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
+-	*-*-*bsd*|*-*-dragonfly*) 	platform=U_BSD ;;
++	*-*-*bsd*|*-*-dragonfly*|*-*-bitrig*) 	platform=U_BSD ;;
+ 	*-*-aix*) 	platform=U_AIX ;;
+ 	*-*-hpux*) 	platform=U_HPUX ;;
+ 	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;
 @@ -7691,13 +7715,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
