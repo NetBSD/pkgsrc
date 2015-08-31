@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/08/30 04:17:15 markd Exp $
+# $NetBSD: Makefile,v 1.20 2015/08/31 12:25:10 wiz Exp $
 
 DISTNAME=	qtmultimedia-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
@@ -22,9 +22,9 @@ post-install:
 	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
+PLIST_VARS+=		alsa
 .if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
-PLIST_VARS+=		alsa
 PLIST.alsa=		yes
 .endif
 
