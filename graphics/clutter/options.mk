@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/01/31 11:21:42 obache Exp $
+# $NetBSD: options.mk,v 1.9 2015/08/31 10:59:04 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
@@ -19,6 +19,10 @@ CONFIGURE_ARGS+=	--enable-introspection=yes
 CONFIGURE_ARGS+=	--enable-introspection=no
 .endif
 
+.if ${OPSYS} == "Darwin"
+PLIST.osx=		yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=		yes
 CONFIGURE_ARGS+=	--enable-x11-backend
@@ -34,9 +38,7 @@ BUILDLINK_API_DEPENDS.libXcomposite+=	libXcomposite>=0.4
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
-.include "../../mk/bsd.prefs.mk"
-.  if ${OPSYS} == Darwin
-PLIST.osx=		yes
+.  if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-quartz-backend
 .  endif
 .endif

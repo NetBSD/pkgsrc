@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/07/26 23:25:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/08/31 10:59:04 jperkin Exp $
 include/clutter-1.0/cally/cally-actor.h
 include/clutter-1.0/cally/cally-clone.h
 include/clutter-1.0/cally/cally-factory.h
@@ -65,7 +65,6 @@ include/clutter-1.0/clutter/clutter-main.h
 include/clutter-1.0/clutter/clutter-marshal.h
 include/clutter-1.0/clutter/clutter-model.h
 include/clutter-1.0/clutter/clutter-offscreen-effect.h
-${PLIST.osx}include/clutter-1.0/clutter/clutter-osx.h
 include/clutter-1.0/clutter/clutter-page-turn-effect.h
 include/clutter-1.0/clutter/clutter-paint-node.h
 include/clutter-1.0/clutter/clutter-paint-nodes.h
@@ -134,6 +133,7 @@ include/clutter-1.0/clutter/deprecated/clutter-timeout-pool.h
 include/clutter-1.0/clutter/deprecated/clutter-util.h
 ${PLIST.x11}include/clutter-1.0/clutter/glx/clutter-glx-texture-pixmap.h
 ${PLIST.x11}include/clutter-1.0/clutter/glx/clutter-glx.h
+${PLIST.osx}include/clutter-1.0/clutter/osx/clutter-osx.h
 ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11-texture-pixmap.h
 ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11.h
 ${PLIST.introspection}lib/girepository-1.0/Cally-1.0.typelib
