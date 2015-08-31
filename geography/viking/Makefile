@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/08/30 19:04:17 gdt Exp $
+# $NetBSD: Makefile,v 1.63 2015/08/31 00:16:38 gdt Exp $
 #
 
 VERSION=		1.6
@@ -34,7 +34,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/libgexiv2/buildlink3.mk"
+.include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
