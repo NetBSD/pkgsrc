@@ -1,0 +1,32 @@
+$NetBSD: patch-agentserver_CMakeLists.txt,v 1.1 2015/08/31 16:16:31 jperkin Exp $
+
+Disable MacOS bundle support, install in the normal place.
+
+--- agentserver/CMakeLists.txt.orig	2014-08-10 10:38:58.000000000 +0000
++++ agentserver/CMakeLists.txt
+@@ -26,7 +26,7 @@ set(akonadi_agent_launcher_SRCS
+   agentlauncher.cpp
+ )
+ 
+-add_executable(akonadi_agent_launcher MACOSX_BUNDLE ${akonadi_agent_launcher_SRCS})
++add_executable(akonadi_agent_launcher ${akonadi_agent_launcher_SRCS})
+ target_link_libraries(akonadi_agent_launcher
+   akonadi_shared
+   ${QT_QTGUI_LIBRARIES}
+@@ -35,14 +35,14 @@ target_link_libraries(akonadi_agent_laun
+   ${Boost_PROGRAM_OPTIONS_LIBRARY}
+ )
+ 
+-if(Q_WS_MAC)
++if(notQ_WS_MAC)
+   set_target_properties(akonadi_agent_launcher PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/../Info.plist.template)
+   set_target_properties(akonadi_agent_launcher PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.Akonadi.agentlauncher")
+   set_target_properties(akonadi_agent_launcher PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Akonadi Agent Launcher")
+ endif()
+ 
+ # Install both helper apps.
+-if(Q_WS_MAC)
++if(notQ_WS_MAC)
+   install(TARGETS akonadi_agent_launcher
+           DESTINATION ${AKONADI_BUNDLE_PATH})
+ else()
