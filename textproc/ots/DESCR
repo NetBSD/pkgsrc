@@ -1,0 +1,5 @@
+The Open Text Summarizer is an open source tool for summarizing texts.
+The program reads a text and decides which sentences are important and
+which are not. OTS supports many (25+) languages which are configured
+in XML files. Several academic publications have benchmarked it and
+praised it.
