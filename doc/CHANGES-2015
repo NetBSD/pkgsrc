@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3705 2015/08/31 16:02:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3706 2015/08/31 22:25:10 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6584,3 +6584,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/asio version 1.10.6 [nros 2015-08-31]
 	Updated mail/roundcube to 1.1.2nb3 [taca 2015-08-31]
 	Updated databases/ruby-arel to 6.0.3 [taca 2015-08-31]
+	Updated databases/deforaos-libdatabase to 0.0.1 [khorben 2015-09-01]
