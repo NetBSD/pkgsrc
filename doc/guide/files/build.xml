@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.75 2015/07/04 16:20:35 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.76 2015/08/31 11:54:29 leot Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -708,6 +708,10 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       <varlistentry><term><varname>INSTALL_MAN_DIR</varname></term>
       <listitem><para>directories that contain man
       pages</para></listitem></varlistentry>
+
+      <varlistentry><term><varname>INSTALL_GAME_DIR</varname></term>
+      <listitem><para>directories that contain data files for games
+      </para></listitem></varlistentry>
 
       <varlistentry><term><varname>INSTALL_PROGRAM</varname></term>
       <listitem><para>binaries that can be stripped from debugging
