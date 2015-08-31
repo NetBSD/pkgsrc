@@ -1,13 +1,13 @@
-#	$NetBSD: Linux.sys.mk,v 1.5 2015/06/11 09:20:56 joerg Exp $
+#	$NetBSD: Linux.sys.mk,v 1.6 2015/08/31 09:03:19 jperkin Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
-unix?=		We run Unix.
+unix?=		We run Unix
 OS?=		Linux
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
-  
+
 .LIBS:		.a
 
 AR?=		ar
@@ -16,18 +16,34 @@ RANLIB?=	ranlib
 
 AS?=		as
 AFLAGS?=
+.if ${MACHINE_ARCH} == "sparc64" 
+AFLAGS+= -Wa,-Av9a
+.endif
 COMPILE.s?=	${CC} ${AFLAGS} -c
 LINK.s?=	${CC} ${AFLAGS} ${LDFLAGS}
 COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
 LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CC?=		gcc
-DBG?=		-O2
+CC?=		cc
+.if ${MACHINE_ARCH} == "alpha" || \
+    ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm26" || \
+		${MACHINE_ARCH} == "arm32" || \
+    ${MACHINE_ARCH} == "i386" || \
+    ${MACHINE_ARCH} == "m68k" || \
+    ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+    ${MACHINE_ARCH} == "sparc" || \
+    ${MACHINE_ARCH} == "vax"
+DBG?=	-O2
+.elif ${MACHINE_ARCH} == "x86_64"
+DBG?=
+.else
+DBG?=	-O
+.endif
 CFLAGS?=	${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CXX?=		g++
+CXX?=		c++
 CXXFLAGS?=	${CFLAGS}
 COMPILE.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
 LINK.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
@@ -38,8 +54,7 @@ COMPILE.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} -c
 LINK.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 CPP?=		cpp
-NOLINT=		1
-CPPFLAGS?=
+CPPFLAGS?=	
 
 FC?=		f77
 FFLAGS?=	-O
