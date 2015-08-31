@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/08/25 16:00:42 kleink Exp $
+$NetBSD: distinfo,v 1.5 2015/08/31 09:31:34 kleink Exp $
 
-SHA1 (webassets-0.11.tar.gz) = 0faf9071beabb21e2007a5316a167602feb5091c
-RMD160 (webassets-0.11.tar.gz) = 974d0bb2ab92aab552aed8638b77926613144884
-Size (webassets-0.11.tar.gz) = 170973 bytes
+SHA1 (webassets-0.11.1.tar.gz) = 50a500d8cd742ad4f933962cea88dbde059b1d18
+RMD160 (webassets-0.11.1.tar.gz) = 5b995e5011601e35de7ad7dadff5d5217431de3e
+Size (webassets-0.11.1.tar.gz) = 171063 bytes
