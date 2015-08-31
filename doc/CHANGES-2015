@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3702 2015/08/31 12:36:34 he Exp $
+$NetBSD: CHANGES-2015,v 1.3703 2015/08/31 14:34:41 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6581,3 +6581,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-ldap to 2.4.20 [adam 2015-08-31]
 	Added textproc/ots version 0.5.0 [nros 2015-08-31]
 	Updated graphics/gdk-pixbuf2 to 2.30.8nb1 [he 2015-08-31]
+	Added devel/asio version 1.10.6 [nros 2015-08-31]
