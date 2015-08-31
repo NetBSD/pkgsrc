@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/08/31 12:16:52 nros Exp $
+* don't build the doc directory since a file (gtk-doc.make) is missing.
+--- Makefile.in.orig	2014-12-22 16:47:57.000000000 +0000
++++ Makefile.in
+@@ -100,7 +100,7 @@ STRIP = @STRIP@
+ VERSION = @VERSION@
+ VERSION_INFO = @VERSION_INFO@
+ 
+-SUBDIRS = src dic doc
++SUBDIRS = src dic
+ DIST_SUBDIRS = src articles dic doc
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
