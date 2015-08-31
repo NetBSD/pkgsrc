@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.132 2015/07/12 18:56:21 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.133 2015/08/31 11:54:29 leot Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1431,12 +1431,40 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     <filename>mk/defaults/mk.conf</filename>, control this
     behaviour: <varname>GAMEDATAMODE</varname>,
     <varname>GAMEDIRMODE</varname>, <varname>GAMES_GROUP</varname>,
-    <varname>GAMEMODE</varname>, <varname>GAME_USER</varname>.</para>
+    <varname>GAMEMODE</varname>, <varname>GAME_USER</varname>.
+    Other useful variables are: <varname>GAMEDIR_PERMS</varname>,
+    <varname>GAMEDATA_PERMS</varname> and
+    <varname>SETGID_GAMES_PERMS</varname>.</para>
+
+    <para>An example that illustrates some of the variables described above is
+    <filename>games/moon-buggy</filename>. <varname>OWN_DIRS_PERMS</varname> is
+    used to properly set directory permissions of the directory where the
+    scorefile is saved, <varname>REQD_FILES_PERMS</varname> is used to create a
+    dummy scorefile (<filename>mbscore</filename>) with the proper permissions
+    and <varname>SPECIAL_PERMS</varname> is used to install setgid the game
+    binary:</para>
+
+    <programlisting>
+USE_GAMESGROUP=		yes
+
+BUILD_DEFS+=		VARBASE
+
+OWN_DIRS_PERMS+=	${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
+REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
+SPECIAL_PERMS+=		${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
+    </programlisting>
+
+    <para>Various <varname>INSTALL_*</varname> variables are also available:
+    <varname>INSTALL_GAME</varname> to install setgid game binaries,
+    <varname>INSTALL_GAME_DIR</varname> to install game directories that are
+    needed to be accessed by setgid games and
+    <varname>INSTALL_GAME_DATA</varname> to install scorefiles.</para>
 
     <para>A package should therefore never hard code file ownership or
-    access permissions but rely on <varname>INSTALL_GAME</varname> and
-    <varname>INSTALL_GAME_DATA</varname> to set these
-    correctly.</para>
+    access permissions but rely on <varname>*_PERMS</varname> as described above
+    or alternatively on <varname>INSTALL_GAME</varname>,
+    <varname>INSTALL_GAME_DATA</varname> and
+    <varname>INSTALL_GAME_DIR</varname> to set these correctly.</para>
   </sect2>
 
   <sect2 id="destdir-support">
