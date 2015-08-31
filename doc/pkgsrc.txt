@@ -592,8 +592,6 @@ Table 1.1. Platforms supported by pkgsrc
 |Cygwin                                |   Mar 2013    |README.Cygwin         |
 |--------------------------------------+---------------+----------------------|
 |GNU/kFreeBSD                          |   Jul 2013    |README.GNUkFreeBSD    |
-|--------------------------------------+---------------+----------------------|
-|Bitrig                                |   Jun 2014    |README.Bitrig         |
 +-----------------------------------------------------------------------------+
 
 
@@ -5739,6 +5737,10 @@ INSTALL_MAN_DIR
 
     directories that contain man pages
 
+INSTALL_GAME_DIR
+
+    directories that contain data files for games
+
 INSTALL_PROGRAM
 
     binaries that can be stripped from debugging symbols
@@ -6585,16 +6587,6 @@ version numbers recognized by pkg_info(1).
     Section 19.1.10, "Handling packages with security problems" for more
     information.
 
- 7. If the package depends on either one of two (or more) packages, specify the
-    "pre-req-package-name" as a comma-separated list between curly braces.
-
-    As an example, take a package that depends on the Perl "version" module,
-    which has been part of Perl itself since version 5.10.0. This either/or
-    dependency is expressed as:
-
-    DEPENDS+=       {perl>=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
-
-
 If your package needs files from another package to build, add the relevant
 distribution files to DISTFILES, so they will be extracted automatically. See
 the print/ghostscript package for an example. (It relies on the jpeg sources
@@ -7298,10 +7290,31 @@ work, the binaries need to be installed setgid and the score files owned by the
 appropriate group and/or owner (traditionally the "games" user/group). Set
 USE_GAMESGROUP to yes to support this. The following variables, documented in
 more detail in mk/defaults/mk.conf, control this behaviour: GAMEDATAMODE,
-GAMEDIRMODE, GAMES_GROUP, GAMEMODE, GAME_USER.
+GAMEDIRMODE, GAMES_GROUP, GAMEMODE, GAME_USER. Other useful variables are:
+GAMEDIR_PERMS, GAMEDATA_PERMS and SETGID_GAMES_PERMS.
+
+An example that illustrates some of the variables described above is games/
+moon-buggy. OWN_DIRS_PERMS is used to properly set directory permissions of the
+directory where the scorefile is saved, REQD_FILES_PERMS is used to create a
+dummy scorefile (mbscore) with the proper permissions and SPECIAL_PERMS is used
+to install setgid the game binary:
+
+USE_GAMESGROUP=         yes
+
+BUILD_DEFS+=            VARBASE
+
+OWN_DIRS_PERMS+=        ${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
+REQD_FILES_PERMS+=      /dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
+SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
+
+
+Various INSTALL_* variables are also available: INSTALL_GAME to install setgid
+game binaries, INSTALL_GAME_DIR to install game directories that are needed to
+be accessed by setgid games and INSTALL_GAME_DATA to install scorefiles.
 
 A package should therefore never hard code file ownership or access permissions
-but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
+but rely on *_PERMS as described above or alternatively on INSTALL_GAME,
+INSTALL_GAME_DATA and INSTALL_GAME_DIR to set these correctly.
 
 19.6.4. Adding DESTDIR support to packages
 
