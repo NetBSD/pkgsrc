@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/31 14:31:05 nros Exp $
+
+SHA1 (asio-1.10.6.tar.bz2) = b69a6c3dcd20d2c14ee3a5e0bdd85821e6658ae9
+RMD160 (asio-1.10.6.tar.bz2) = 9c8a8300f9387f8796326799370c040cd889cadf
+Size (asio-1.10.6.tar.bz2) = 1266180 bytes
