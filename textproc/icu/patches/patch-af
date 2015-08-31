@@ -1,13 +1,15 @@
-$NetBSD: patch-af,v 1.14 2014/10/07 16:09:53 adam Exp $
+$NetBSD: patch-af,v 1.15 2015/08/31 15:26:19 sevan Exp $
 
---- runConfigureICU.orig	2014-10-03 16:18:36.000000000 +0000
+Add support for DragonFlyBSD & Bitrig
+
+--- runConfigureICU.orig	Fri Mar 27 21:17:48 2015
 +++ runConfigureICU
 @@ -327,7 +327,7 @@ case $platform in
          DEBUG_CXXFLAGS='-Zi -MDd'
          DEBUG_LDFLAGS='-DEBUG'
          ;;
 -    *BSD)
-+    *BSD | DragonFly)
++    *BSD | DragonFly | Bitrig)
          THE_OS="BSD"
          THE_COMP="the GNU C++"
          DEBUG_CFLAGS='-g -O0'
