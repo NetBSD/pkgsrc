@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/12/17 02:05:05 khorben Exp $
+$NetBSD: distinfo,v 1.2 2015/08/31 00:18:32 khorben Exp $
 
-SHA1 (Todo-0.1.2.tar.gz) = 4a9c006720a984caf4d281d4d84c007d3719426a
-RMD160 (Todo-0.1.2.tar.gz) = 636c726d6f9c55f353159aefb742292c79c84f06
-Size (Todo-0.1.2.tar.gz) = 33195 bytes
+SHA1 (Todo-0.2.0.tar.gz) = 187455d50b238ca726ee035d0aedb2b23c887198
+RMD160 (Todo-0.2.0.tar.gz) = eda6ff5662384b45645f37bf1bbc05f5bd120400
+Size (Todo-0.2.0.tar.gz) = 27861 bytes
+SHA1 (patch-tools_Makefile) = 1a805aef9fad94a5420edf75001b218393f19e57

@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/17 02:05:05 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/31 00:18:32 khorben Exp $
 bin/todo
-share/applications/todo.desktop
+lib/Mailer/plugins/todo.so
+man/html1/todo.html
+man/man1/todo.1
+share/applications/deforaos-todo.desktop
 share/icons/hicolor/16x16/apps/todo.png
 share/icons/hicolor/24x24/apps/todo.png
 share/icons/hicolor/48x48/apps/todo.png
+share/locale/es/LC_MESSAGES/Todo.mo
 share/locale/fr/LC_MESSAGES/Todo.mo
