@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.bsd.own.mk.in,v 1.1 2013/09/12 10:56:36 jperkin Exp $
+#	$NetBSD: SunOS.bsd.own.mk.in,v 1.2 2015/08/31 09:03:19 jperkin Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -118,6 +118,7 @@ NOPIC?=1
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "m68000" || \
     ${MACHINE_ARCH} == "arm" || \
+    !empty(MACHINE_ARCH:Mearm*) || \
     ${MACHINE} == "next68k" || \
     ${MACHINE} == "sun3" || \
     ${MACHINE} == "mvme68k" || \

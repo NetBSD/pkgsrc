@@ -1,13 +1,13 @@
-#	$NetBSD: SunOS.sys.mk,v 1.6 2013/08/30 14:47:29 jperkin Exp $
+#	$NetBSD: SunOS.sys.mk,v 1.7 2015/08/31 09:03:19 jperkin Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
-unix?=		We run Unix.
-OS?=		SunOS.5
+unix?=		We run Unix
+OS?=		SunOS
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
-  
+
 .LIBS:		.a
 
 AR?=		ar
@@ -16,6 +16,9 @@ RANLIB?=	ranlib
 
 AS?=		as
 AFLAGS?=
+.if ${MACHINE_ARCH} == "sparc64" 
+AFLAGS+= -Wa,-Av9a
+.endif
 COMPILE.s?=	${CC} ${AFLAGS} -c
 LINK.s?=	${CC} ${AFLAGS} ${LDFLAGS}
 COMPILE.S?=	${AS} ${AFLAGS} ${CPPFLAGS} -P
@@ -23,9 +26,20 @@ LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 # Unless told otherwise, assume GNU CC
 CC?=		gcc
-
-DBG?=		-O2
-
+.if ${MACHINE_ARCH} == "alpha" || \
+    ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm26" || \
+		${MACHINE_ARCH} == "arm32" || \
+    ${MACHINE_ARCH} == "i386" || \
+    ${MACHINE_ARCH} == "m68k" || \
+    ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+    ${MACHINE_ARCH} == "sparc" || \
+    ${MACHINE_ARCH} == "vax"
+DBG?=	-O2
+.elif ${MACHINE_ARCH} == "x86_64"
+DBG?=
+.else
+DBG?=	-O
+.endif
 CFLAGS?=	${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
@@ -47,13 +61,7 @@ CPP?=		cpp
 .else
 CPP?=		${CC} -E
 .endif
-.if defined(NETBSD_COMPATIBLE)
-CPPFLAGS?=	-I${BSDDIR}/include -D__EXTENSIONS__ -D_XPG4_2 -DSUNOS_5
-HOST_CPPFLAGS?=	${CPPFLAGS}
-NOLINT=1
-.else
 CPPFLAGS?=
-.endif
 
 FC?=		f77
 FFLAGS?=	-O
