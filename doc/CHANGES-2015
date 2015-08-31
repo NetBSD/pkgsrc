@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3695 2015/08/31 00:23:36 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3696 2015/08/31 09:03:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6574,3 +6574,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/viking to 1.6 [gdt 2015-08-30]
 	Updated time/deforaos-todo to 0.2.0 [khorben 2015-08-31]
 	Updated meta-pkgs/deforaos-desktop to 0.0.7 [khorben 2015-08-31]
+	Updated pkgtools/bootstrap-mk-files to 20150831 [jperkin 2015-08-31]
