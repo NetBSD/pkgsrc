@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/07/26 23:25:47 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/08/31 10:59:04 jperkin Exp $
 
 DISTNAME=	clutter-1.22.2
 CATEGORIES=	graphics gnome
@@ -21,6 +21,13 @@ PKGCONFIG_OVERRIDE+=	clutter/clutter.pc.in
 .include "options.mk"
 
 TEST_TARGET=	check
+
+# Broken compat symlinks which fail "test -f" check in mk/plist/shlib-dylib.awk
+# so they end up missing from PLIST.  We don't need them so just remove.
+.if ${OPSYS} == "Darwin"
+post-install:
+	rm -f ${DESTDIR}${PREFIX}/lib/libclutter-glx-1.0.so*
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
