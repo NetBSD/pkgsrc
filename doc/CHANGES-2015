@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3704 2015/08/31 15:31:55 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3705 2015/08/31 16:02:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6583,3 +6583,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gdk-pixbuf2 to 2.30.8nb1 [he 2015-08-31]
 	Added devel/asio version 1.10.6 [nros 2015-08-31]
 	Updated mail/roundcube to 1.1.2nb3 [taca 2015-08-31]
+	Updated databases/ruby-arel to 6.0.3 [taca 2015-08-31]
