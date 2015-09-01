@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.5 2015/08/26 12:19:27 he Exp $
+$NetBSD: patch-configure.ac,v 1.6 2015/09/01 09:00:04 he Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -65,12 +65,12 @@ Also, the start of process support, but that's not yet finished.
  
 +AC_CHECK_MEMBERS([struct kinfo_proc2.p_pid, struct kinfo_proc2.p_uru_maxrss],
 +	[
-+		AC_DEFINE(HAVE_STRUCT_KINFO_PROC_NETBSD, 1,
++		AC_DEFINE(HAVE_STRUCT_KINFO_PROC2_NETBSD, 1,
 +			[Define if struct kinfo_proc2 exists in the NetBSD variant.])
-+		have_struct_kinfo_proc_netbsd="yes"
++		have_struct_kinfo_proc2_netbsd="yes"
 +	],
 +	[
-+		have_struct_kinfo_proc_netbsd="no"
++		have_struct_kinfo_proc2_netbsd="no"
 +	],
 +	[
 +#include <sys/param.h>
