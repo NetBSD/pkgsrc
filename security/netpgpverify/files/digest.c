@@ -114,14 +114,14 @@ digest_init(digest_t *hash, const uint32_t hashalg)
 	}
 	switch(hash->alg = hashalg) {
 	case MD5_HASH_ALG:
-		MD5Init(&hash->u.md5ctx);
+		netpgpv_MD5Init(&hash->u.md5ctx);
 		hash->size = 16;
 		hash->prefix = prefix_md5;
 		hash->len = sizeof(prefix_md5);
 		hash->ctx = &hash->u.md5ctx;
 		return 1;
 	case SHA1_HASH_ALG:
-		SHA1Init(&hash->u.sha1ctx);
+		netpgpv_SHA1Init(&hash->u.sha1ctx);
 		hash->size = 20;
 		hash->prefix = prefix_sha1;
 		hash->len = sizeof(prefix_sha1);
@@ -135,28 +135,28 @@ digest_init(digest_t *hash, const uint32_t hashalg)
 		hash->ctx = &hash->u.rmd160ctx;
 		return 1;
 	case SHA256_HASH_ALG:
-		SHA256_Init(&hash->u.sha256ctx);
+		netpgpv_SHA256_Init(&hash->u.sha256ctx);
 		hash->size = 32;
 		hash->prefix = prefix_sha256;
 		hash->len = sizeof(prefix_sha256);
 		hash->ctx = &hash->u.sha256ctx;
 		return 1;
 	case SHA512_HASH_ALG:
-		SHA512_Init(&hash->u.sha512ctx);
+		netpgpv_SHA512_Init(&hash->u.sha512ctx);
 		hash->size = 64;
 		hash->prefix = prefix_sha512;
 		hash->len = sizeof(prefix_sha512);
 		hash->ctx = &hash->u.sha512ctx;
 		return 1;
 	case TIGER_HASH_ALG:
-		TIGER_Init(&hash->u.tigerctx);
+		netpgpv_TIGER_Init(&hash->u.tigerctx);
 		hash->size = TIGER_DIGEST_LENGTH;
 		hash->prefix = prefix_tiger;
 		hash->len = sizeof(prefix_tiger);
 		hash->ctx = &hash->u.tigerctx;
 		return 1;
 	case TIGER2_HASH_ALG:
-		TIGER2_Init(&hash->u.tigerctx);
+		netpgpv_TIGER2_Init(&hash->u.tigerctx);
 		hash->size = TIGER_DIGEST_LENGTH;
 		hash->prefix = prefix_tiger;
 		hash->len = sizeof(prefix_tiger);
@@ -206,23 +206,23 @@ digest_update(digest_t *hash, const uint8_t *data, size_t length)
 	}
 	switch(hash->alg) {
 	case MD5_HASH_ALG:
-		MD5Update(hash->ctx, data, (unsigned)length);
+		netpgpv_MD5Update(hash->ctx, data, (unsigned)length);
 		return 1;
 	case SHA1_HASH_ALG:
-		SHA1Update(hash->ctx, data, (unsigned)length);
+		netpgpv_SHA1Update(hash->ctx, data, (unsigned)length);
 		return 1;
 	case RIPEMD_HASH_ALG:
 		RMD160Update(hash->ctx, data, (unsigned)length);
 		return 1;
 	case SHA256_HASH_ALG:
-		SHA256_Update(hash->ctx, data, length);
+		netpgpv_SHA256_Update(hash->ctx, data, length);
 		return 1;
 	case SHA512_HASH_ALG:
-		SHA512_Update(hash->ctx, data, length);
+		netpgpv_SHA512_Update(hash->ctx, data, length);
 		return 1;
 	case TIGER_HASH_ALG:
 	case TIGER2_HASH_ALG:
-		TIGER_Update(hash->ctx, data, length);
+		netpgpv_TIGER_Update(hash->ctx, data, length);
 		return 1;
 	default:
 		printf("hash_any: bad algorithm\n");
@@ -238,22 +238,22 @@ digest_final(uint8_t *out, digest_t *hash)
 	}
 	switch(hash->alg) {
 	case MD5_HASH_ALG:
-		MD5Final(out, hash->ctx);
+		netpgpv_MD5Final(out, hash->ctx);
 		break;
 	case SHA1_HASH_ALG:
-		SHA1Final(out, hash->ctx);
+		netpgpv_SHA1Final(out, hash->ctx);
 		break;
 	case RIPEMD_HASH_ALG:
 		RMD160Final(out, hash->ctx);
 		break;
 	case SHA256_HASH_ALG:
-		SHA256_Final(out, hash->ctx);
+		netpgpv_SHA256_Final(out, hash->ctx);
 		break;
 	case SHA512_HASH_ALG:
-		SHA512_Final(out, hash->ctx);
+		netpgpv_SHA512_Final(out, hash->ctx);
 		break;
 	case TIGER_HASH_ALG:
-		TIGER_Final(out, hash->ctx);
+		netpgpv_TIGER_Final(out, hash->ctx);
 		break;
 	default:
 		printf("hash_any: bad algorithm\n");
