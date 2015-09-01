@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/01 04:14:55 mef Exp $
 bin/gr_modtool
 bin/gr_plot_char
 bin/gr_plot_const
@@ -48,6 +48,9 @@ ${PYSITELIB}/gnuradio/modtool/modtool_makexml.pyo
 ${PYSITELIB}/gnuradio/modtool/modtool_newmod.py
 ${PYSITELIB}/gnuradio/modtool/modtool_newmod.pyc
 ${PYSITELIB}/gnuradio/modtool/modtool_newmod.pyo
+${PYSITELIB}/gnuradio/modtool/modtool_rename.py
+${PYSITELIB}/gnuradio/modtool/modtool_rename.pyc
+${PYSITELIB}/gnuradio/modtool/modtool_rename.pyo
 ${PYSITELIB}/gnuradio/modtool/modtool_rm.py
 ${PYSITELIB}/gnuradio/modtool/modtool_rm.pyc
 ${PYSITELIB}/gnuradio/modtool/modtool_rm.pyo
@@ -78,8 +81,8 @@ ${PYSITELIB}/gnuradio/pyqt_filter.pyo
 ${PYSITELIB}/gnuradio/pyqt_plot.py
 ${PYSITELIB}/gnuradio/pyqt_plot.pyc
 ${PYSITELIB}/gnuradio/pyqt_plot.pyo
-share/examples/gnuradio/conf.d/modtool.conf
 share/gnuradio/modtool/gr-newmod/CMakeLists.txt
+share/gnuradio/modtool/gr-newmod/MANIFEST.md
 share/gnuradio/modtool/gr-newmod/apps/CMakeLists.txt
 share/gnuradio/modtool/gr-newmod/cmake/Modules/CMakeParseArgumentsCopy.cmake
 share/gnuradio/modtool/gr-newmod/cmake/Modules/FindCppUnit.cmake
