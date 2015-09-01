@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/06/09 11:07:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/01 11:51:00 fhajny Exp $
 
-DISTNAME=	python-driver-2.5.1
+DISTNAME=	python-driver-2.7.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=datastax/}
