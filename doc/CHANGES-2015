@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3713 2015/09/01 12:05:28 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3714 2015/09/01 12:14:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6592,3 +6592,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-cassandra-driver to 2.7.1 [fhajny 2015-09-01]
 	Updated www/lighttpd to 1.4.37 [mef 2015-09-01]
 	Updated www/links to 2.11 [mef 2015-09-01]
+	Updated pkgtools/pkg_install to 20150901 [jperkin 2015-09-01]
