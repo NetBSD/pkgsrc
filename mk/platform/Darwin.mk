@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.69 2015/08/17 17:35:23 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.70 2015/09/01 11:12:30 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -128,6 +128,9 @@ USE_BUILTIN.dl=		no	# Darwin-[56].* uses devel/dlcompat
 # Builtin defaults which make sense for this platform.
 _OPSYS_PREFER.linux-pam?=	native
 _OPSYS_PREFER.mit-krb5?=	native
+.if ${OS_VERSION:R} >= 11
+_OPSYS_PREFER.openssl?=		pkgsrc	# builtin deprecated from 10.7 onwards
+.endif
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
