@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:34 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/09/01 04:14:55 mef Exp $
 include/gnuradio/swig/zeromq_swig.i
 include/gnuradio/swig/zeromq_swig_doc.i
 include/gnuradio/zeromq/api.h
+include/gnuradio/zeromq/pub_msg_sink.h
 include/gnuradio/zeromq/pub_sink.h
+include/gnuradio/zeromq/pull_msg_source.h
 include/gnuradio/zeromq/pull_source.h
+include/gnuradio/zeromq/push_msg_sink.h
 include/gnuradio/zeromq/push_sink.h
+include/gnuradio/zeromq/rep_msg_sink.h
 include/gnuradio/zeromq/rep_sink.h
+include/gnuradio/zeromq/req_msg_source.h
 include/gnuradio/zeromq/req_source.h
+include/gnuradio/zeromq/sub_msg_source.h
 include/gnuradio/zeromq/sub_source.h
 lib/libgnuradio-zeromq.so
 lib/libgnuradio-zeromq.so.${PKGVERSION}
@@ -27,9 +33,17 @@ ${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyo
 share/gnuradio/examples/zeromq/zeromq_pubsub.grc
 share/gnuradio/examples/zeromq/zeromq_pushpull.grc
 share/gnuradio/examples/zeromq/zeromq_reqrep.grc
+share/gnuradio/examples/zeromq/zmq_msg.grc
+share/gnuradio/examples/zeromq/zmq_stream.grc
+share/gnuradio/grc/blocks/zeromq_pub_msg_sink.xml
 share/gnuradio/grc/blocks/zeromq_pub_sink.xml
+share/gnuradio/grc/blocks/zeromq_pull_msg_source.xml
 share/gnuradio/grc/blocks/zeromq_pull_source.xml
+share/gnuradio/grc/blocks/zeromq_push_msg_sink.xml
 share/gnuradio/grc/blocks/zeromq_push_sink.xml
+share/gnuradio/grc/blocks/zeromq_rep_msg_sink.xml
 share/gnuradio/grc/blocks/zeromq_rep_sink.xml
+share/gnuradio/grc/blocks/zeromq_req_msg_source.xml
 share/gnuradio/grc/blocks/zeromq_req_source.xml
+share/gnuradio/grc/blocks/zeromq_sub_msg_source.xml
 share/gnuradio/grc/blocks/zeromq_sub_source.xml
