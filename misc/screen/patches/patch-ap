@@ -1,10 +1,10 @@
-$NetBSD: patch-ap,v 1.4 2015/02/13 04:44:40 rodent Exp $
+$NetBSD: patch-ap,v 1.5 2015/09/01 12:18:55 kim Exp $
 
 Replace configurable paths with tags.
 
 --- doc/screen.1.orig	2014-04-27 22:10:01.000000000 +0000
-+++ doc/screen.1
-@@ -625,7 +625,7 @@ Show a listing of all currently attached
++++ doc/screen.1	2014-08-25 18:42:29.000000000 +0000
+@@ -625,7 +625,7 @@
  
  .SH CUSTOMIZATION
  The \*Qsocket directory\*U defaults either to $HOME/.screen or simply to
@@ -13,36 +13,36 @@ Replace configurable paths with tags.
  .I screen
  is installed setuid-root, then the administrator
  should compile
-@@ -638,7 +638,7 @@ in the environment variable $SCREENDIR.
+@@ -638,7 +638,7 @@
  When
  .I screen
  is invoked, it executes initialization commands from the files
 -\*Q/usr/local/etc/screenrc\*U and
-+\*Q/usr/pkgsrc/pkg/etc/screenrc\*U and
++\*Q@PKG_SYSCONFDIR@/screenrc\*U and
  \*Q.screenrc\*U in the user's home directory. These are the \*Qprogrammer's
  defaults\*U that can be overridden in the following ways: for the
  global screenrc file 
-@@ -668,7 +668,7 @@ variable substitution shall be performed
+@@ -668,7 +668,7 @@
  protected from variable substitution.
  .PP
  Two configuration files are shipped as examples with your screen distribution:
 -\*Qetc/screenrc\*U and \*Qetc/etcscreenrc\*U. They contain a number of
-+\*Q/usr/pkgsrc/pkg/share/examples/screen/screenrc\*U and \*Q/usr/pkgsrc/pkg/share/examples/screen/etcscreenrc\*U. They contain a number of
++\*Q@EXAMPLES@/screenrc\*U and \*Q@EXAMPLES@/etcscreenrc\*U. They contain a number of
  useful examples for various commands.
  .PP
  Customization can also be done 'on-line'. To enter the command mode type
-@@ -4857,14 +4857,14 @@ Examples in the 
+@@ -4857,14 +4857,14 @@
  .I screen
  distribution package for private and global initialization files.
  .IP $SYSSCREENRC 
 -.IP /usr/local/etc/screenrc
-+.IP /usr/pkgsrc/pkg/etc/screenrc
++.IP @PKG_SYSCONFDIR@/screenrc
  .I screen
  initialization commands
  .IP $SCREENRC
  .IP $HOME/.screenrc
 -Read in after /usr/local/etc/screenrc
-+Read in after /usr/pkgsrc/pkg/etc/screenrc
++Read in after @PKG_SYSCONFDIR@/screenrc
  .IP $SCREENDIR/S\-<login>
 -.IP /local/screens/S\-<login>
 +.IP /tmp/screens/S\-<login>
