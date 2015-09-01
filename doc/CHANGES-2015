@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3726 2015/09/01 22:24:14 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3727 2015/09/01 23:27:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6635,3 +6635,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/phonon to 4.8.3 [markd 2015-09-01]
 	Updated multimedia/phonon-backend-gstreamer to 4.8.2 [markd 2015-09-01]
 	Updated multimedia/phonon-backend-vlc to 0.8.2 [markd 2015-09-01]
+	Updated security/p5-IO-Socket-SSL to 2.019 [mef 2015-09-01]
