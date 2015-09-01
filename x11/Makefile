@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.766 2015/08/25 22:59:42 khorben Exp $
+# $NetBSD: Makefile,v 1.767 2015/09/01 00:28:39 khorben Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -35,6 +35,7 @@ SUBDIR+=	deforaos-integration
 SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
 SUBDIR+=	deforaos-locker
+SUBDIR+=	deforaos-notes
 SUBDIR+=	deforaos-panel
 SUBDIR+=	desklaunch
 SUBDIR+=	deskmenu
