@@ -1,4 +1,4 @@
-/*	$NetBSD: md5.h,v 1.2 2015/08/17 11:37:55 jperkin Exp $	*/
+/*	$NetBSD: md5.h,v 1.3 2015/09/01 19:38:42 agc Exp $	*/
 
 /*
  * This file is derived from the RSA Data Security, Inc. MD5 Message-Digest
@@ -54,16 +54,16 @@ typedef struct MD5Context {
 	uint32_t state[4];	/* state (ABCD) */
 	uint32_t count[2];	/* number of bits, modulo 2^64 (lsb first) */
 	unsigned char buffer[64]; /* input buffer */
-} MD5_CTX;
+} NETPGPV_MD5_CTX;
 
 __BEGIN_DECLS
-void	MD5Init(MD5_CTX *);
-void	MD5Update(MD5_CTX *, const unsigned char *, unsigned int);
-void	MD5Final(unsigned char[MD5_DIGEST_LENGTH], MD5_CTX *);
+void	netpgpv_MD5Init(NETPGPV_MD5_CTX *);
+void	netpgpv_MD5Update(NETPGPV_MD5_CTX *, const unsigned char *, unsigned int);
+void	netpgpv_MD5Final(unsigned char[MD5_DIGEST_LENGTH], NETPGPV_MD5_CTX *);
 #ifndef _KERNEL
-char	*MD5End(MD5_CTX *, char *);
-char	*MD5File(const char *, char *);
-char	*MD5Data(const unsigned char *, unsigned int, char *);
+char	*netpgpv_MD5End(NETPGPV_MD5_CTX *, char *);
+char	*netpgpv_MD5File(const char *, char *);
+char	*netpgpv_MD5Data(const unsigned char *, unsigned int, char *);
 #endif /* _KERNEL */
 __END_DECLS
 
