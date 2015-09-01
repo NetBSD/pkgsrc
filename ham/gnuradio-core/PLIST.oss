@@ -1,2 +1,1 @@
-@comment $NetBSD: PLIST.oss,v 1.1 2015/01/27 06:01:44 dbj Exp $
-share/examples/gnuradio/conf.d/gr-audio-oss.conf
+@comment $NetBSD: PLIST.oss,v 1.2 2015/09/01 04:13:43 mef Exp $

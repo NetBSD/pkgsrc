@@ -1,4 +1,4 @@
-# $NetBSD: Nocore.mk,v 1.6 2015/01/30 15:02:23 mef Exp $
+# $NetBSD: Nocore.mk,v 1.7 2015/09/01 04:13:43 mef Exp $
 
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 
@@ -11,8 +11,8 @@ PLIST_MINUS=	core
 #.if empty(PKGBASE:Mgnuradio-core) && !empty(PLIST_MINUS)
 post-install:
 # Take care CONF_FILES stuff
-	${MV}		    ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \
-			    ${DESTDIR}${PREFIX}/${EGDIR}/
+#	${MV}		    ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \
+#			    ${DESTDIR}${PREFIX}/${EGDIR}/
 	for i in ${PLIST_MINUS} ; do				\
 	  for p in PLIST PLIST.oss PLIST.${OPSYS} ; do		\
 	    f="${PKGDIR}/../../ham/gnuradio-$${i}/$${p}";	\
