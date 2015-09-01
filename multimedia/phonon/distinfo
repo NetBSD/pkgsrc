@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2014/11/13 09:26:08 markd Exp $
+$NetBSD: distinfo,v 1.13 2015/09/01 22:14:20 markd Exp $
 
-SHA1 (phonon-4.8.2.tar.xz) = 4f95b79738ac095b4a82aa338bdcd513d5042214
-RMD160 (phonon-4.8.2.tar.xz) = ab7967814ff175ea7ff7180fbb48751cb5b304a2
-Size (phonon-4.8.2.tar.xz) = 321728 bytes
+SHA1 (phonon-4.8.3.tar.xz) = aac5dc44ae4821e6165c6735b9c6063dd111ac03
+RMD160 (phonon-4.8.3.tar.xz) = c035f253eda49635377122423bb72161f97f18d3
+Size (phonon-4.8.3.tar.xz) = 322012 bytes
 SHA1 (patch-cmake_FindPhononInternal.cmake) = b44464daf9542d985e1163cd0b5eb6db73a0b457
