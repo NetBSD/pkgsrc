@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3715 2015/09/01 12:17:31 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3716 2015/09/01 12:21:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6594,3 +6594,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/links to 2.11 [mef 2015-09-01]
 	Updated pkgtools/pkg_install to 20150901 [jperkin 2015-09-01]
 	Updated devel/p5-ExtUtils-ParseXS to 3.30 [mef 2015-09-01]
+	Updated devel/p5-Git-Repository to 1.315 [mef 2015-09-01]
