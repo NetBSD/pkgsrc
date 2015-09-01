@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.65 2014/12/30 15:13:21 wiz Exp $ */
+/* $NetBSD: lib.h,v 1.66 2015/09/01 12:14:06 jperkin Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -400,9 +400,7 @@ int easy_pkcs7_sign(const char *, size_t, char **, size_t *, const char *,
     const char *);
 #endif
 
-int inline_gpg_verify(const char *, size_t, const char *);
-int detached_gpg_verify(const char *, size_t, const char *, size_t,
-    const char *);
+int gpg_verify(const char *, size_t, const char *, const char *, size_t);
 int detached_gpg_sign(const char *, size_t, char **, size_t *, const char *,
     const char *);
 

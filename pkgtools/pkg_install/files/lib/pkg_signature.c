@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.11 2013/09/11 14:10:05 khorben Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.12 2015/09/01 12:14:06 jperkin Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.11 2013/09/11 14:10:05 khorben Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.12 2015/09/01 12:14:06 jperkin Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -366,8 +366,8 @@ pkg_verify_signature(const char *archive_name, struct archive **archive,
 			free(state);
 			goto no_valid_signature;
 		}
-		has_sig = !detached_gpg_verify(hash_file, hash_len,
-		    signature_file, signature_len, gpg_keyring_verify);
+		has_sig = !gpg_verify(hash_file, hash_len, gpg_keyring_verify,
+		    signature_file, signature_len);
 
 		free(signature_file);
 	} else {
