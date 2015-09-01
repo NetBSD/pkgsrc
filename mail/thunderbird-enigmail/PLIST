@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/01 12:54:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/01 20:49:53 markd Exp $
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigMsgCompFields.js
@@ -23,5 +23,5 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeCo
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_unix.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_win.js
-lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/NetBSD_${MACHINE_ARCH}-gcc3/lib/libsubprocess-${MACHINE_ARCH}-gcc3.so
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/${OPSYS}_${MACHINE_ARCH}-gcc3/lib/libsubprocess-${MACHINE_ARCH}-gcc3.so
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/wrappers/gpg-agent-wrapper.sh
