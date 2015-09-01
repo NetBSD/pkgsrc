@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.20 2015/03/07 05:10:45 mef Exp $
+$NetBSD: distinfo,v 1.21 2015/09/01 04:13:43 mef Exp $
 
-SHA1 (gnuradio-3.7.6.tar.gz) = aaec56a3b9bfcf6bba1e4f7a9336579171811554
-RMD160 (gnuradio-3.7.6.tar.gz) = c0726c1c709c5414d4efa698f5396e6173862727
-Size (gnuradio-3.7.6.tar.gz) = 3579734 bytes
+SHA1 (gnuradio-3.7.8.tar.gz) = ef767d5f5e05e4f9883b3077cebd9ca915237c77
+RMD160 (gnuradio-3.7.8.tar.gz) = 890cd2c55ecb919a46cce0ac15118c3963a1156b
+Size (gnuradio-3.7.8.tar.gz) = 3990172 bytes
 SHA1 (patch-cmake_Modules_FindSphinx.cmake) = 1e42ad000962f4766810fbd322c80dad1f0b1c3c
 SHA1 (patch-gnuradio_runtime_include_gnuradio_high__res__timer__h) = 59ad8192e7ac76b2ce35cda68c378bc2abad20a5
 SHA1 (patch-gnuradio_runtime_lib_thread_thread_cc) = c05628aa88ac968928f9eabd8c56d4527e258767
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = 00ff8c14658acd2d1dc8be18ea6a19ace8d12968
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = d61dcd31058c04a6050479a6e8c321ca15420d49
-SHA1 (patch-grc_script_gnuradio-companion) = 5fd6ed47941c29054f78d968abd98a4197a69100
+SHA1 (patch-grc_script_gnuradio-companion) = 15dde8f3a9e057061e56157533f8af1919240b93
