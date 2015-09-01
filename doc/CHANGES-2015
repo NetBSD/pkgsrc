@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3722 2015/09/01 19:43:02 agc Exp $
+$NetBSD: CHANGES-2015,v 1.3723 2015/09/01 21:24:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6602,3 +6602,23 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated filesystems/glusterfs to 3.7.4 [manu 2015-09-01]
 	Updated security/netpgpverify to 20150901 [agc 2015-09-01]
 	Updated security/libnetpgpverify to 20150901 [agc 2015-09-01]
+	Added graphics/tex-tikzposter version 2.0 [markd 2015-09-01]
+	Added graphics/tex-tikzposter-doc version 2.0 [markd 2015-09-01]
+	Added print/tex-xstring version 1.7c [markd 2015-09-01]
+	Added print/tex-xstring-doc version 1.7c [markd 2015-09-01]
+	Added print/tex-toptesi version 5.86f [markd 2015-09-01]
+	Added print/tex-toptesi-doc version 5.86f [markd 2015-09-01]
+	Added print/tex-stringstrings version 1.23 [markd 2015-09-01]
+	Added print/tex-stringstrings-doc version 1.23 [markd 2015-09-01]
+	Added print/tex-probsoln version 3.04 [markd 2015-09-01]
+	Added print/tex-probsoln-doc version 3.04 [markd 2015-09-01]
+	Added print/tex-flowfram version 1.17 [markd 2015-09-01]
+	Added print/tex-flowfram-doc version 1.17 [markd 2015-09-01]
+	Added print/tex-europasscv version 2015 [markd 2015-09-01]
+	Added print/tex-europasscv-doc version 2015 [markd 2015-09-01]
+	Added print/tex-envlab version 1.2 [markd 2015-09-01]
+	Added print/tex-envlab-doc version 1.2 [markd 2015-09-01]
+	Added print/tex-newlfm version 9.4 [markd 2015-09-01]
+	Added print/tex-newlfm-doc version 9.4 [markd 2015-09-01]
+	Added print/tex-cuisine version 0.7 [markd 2015-09-01]
+	Added print/tex-cuisine-doc version 0.7 [markd 2015-09-01]
