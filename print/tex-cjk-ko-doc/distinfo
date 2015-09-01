@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/06/14 12:50:01 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/09/01 22:05:02 markd Exp $
 
-SHA1 (tex-cjk-ko-36947/cjk-ko.doc.tar.xz) = 9c6090bc5f3969433dd94dc67f4b99ffc63eac86
-RMD160 (tex-cjk-ko-36947/cjk-ko.doc.tar.xz) = 6022c1e84ca984ea629d05d1209ea9338a690d54
-Size (tex-cjk-ko-36947/cjk-ko.doc.tar.xz) = 152204 bytes
+SHA1 (tex-cjk-ko-37899/cjk-ko.doc.tar.xz) = 0d9f808381d3622da1c78af17ccd4b40ad5d45de
+RMD160 (tex-cjk-ko-37899/cjk-ko.doc.tar.xz) = bb382672e4b3ec19aab149c4d902e9beb63f26c5
+Size (tex-cjk-ko-37899/cjk-ko.doc.tar.xz) = 152148 bytes
