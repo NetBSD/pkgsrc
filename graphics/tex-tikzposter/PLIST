@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:07:29 markd Exp $
+share/texmf-dist/tex/latex/tikzposter/tikzposter.cls
+share/texmf-dist/tex/latex/tikzposter/tikzposterBackgroundstyles.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterBlockstyles.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterColorpalettes.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterColorstyles.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterInnerblockstyles.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterLayoutthemes.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterNotestyles.tex
+share/texmf-dist/tex/latex/tikzposter/tikzposterTitlestyles.tex
