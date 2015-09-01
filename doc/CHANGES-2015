@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3720 2015/09/01 14:15:26 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3721 2015/09/01 16:04:16 manu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6599,3 +6599,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Struct-Dumb version 0.03 [mef 2015-09-01]
 	Updated misc/screen to 4.3.1 [kim 2015-09-01]
 	Updated devel/p5-IO-Async to 0.68 [mef 2015-09-01]
+	Updated filesystems/glusterfs to 3.7.4 [manu 2015-09-01]
