@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.85 2015/06/08 00:44:46 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.86 2015/09/01 23:17:51 kamil Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -7,6 +7,7 @@ AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
 AC_CANONICAL_HOST
+AC_GNU_SOURCE
 CANONICAL_HOST=$host
 AC_SUBST(CANONICAL_HOST)
 AC_SUBST(INCLUDES)
