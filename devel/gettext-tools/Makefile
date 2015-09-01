@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/06/14 21:39:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.30 2015/09/01 13:16:48 sevan Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--without-git
 CONFIGURE_ARGS+=	--with-xz
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--without-emacs
+CONFIGURE_ARGS+=	--disable-openmp
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
