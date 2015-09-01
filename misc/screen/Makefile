@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.94 2015/08/18 07:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2015/09/01 13:34:47 kim Exp $
 
-DISTNAME=	screen-4.2.1
-PKGREVISION=	2
+DISTNAME=	screen-4.3.1
+#PKGREVISION=	0
 CATEGORIES=	misc shells
 MASTER_SITES=	${MASTER_SITE_GNU:=screen/}
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	kimmo@suominen.com
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 # In file included from list_display.c:36:
 # In file included from ./screen.h:150:
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--with-sys-screenrc=${PKG_SYSCONFDIR}/screenrc
 CONFIGURE_ARGS+=	--enable-telnet
 
 PKG_SHELL=		bin/screen
+
+USE_TOOLS+=		makeinfo
 INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
