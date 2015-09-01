@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3711 2015/09/01 11:52:50 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3712 2015/09/01 11:55:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6590,3 +6590,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/gnuradio-core to 3.7.8 [mef 2015-09-01]
 	Updated chat/ejabberd to 15.07 [fhajny 2015-09-01]
 	Updated databases/py-cassandra-driver to 2.7.1 [fhajny 2015-09-01]
+	Updated www/lighttpd to 1.4.37 [mef 2015-09-01]
