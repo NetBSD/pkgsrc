@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/06/26 19:25:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/09/01 08:26:05 jperkin Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -159,6 +159,7 @@ lib/httpd/mod_rewrite.so
 lib/httpd/mod_sed.so
 lib/httpd/mod_session.so
 lib/httpd/mod_session_cookie.so
+${PLIST.ssl}lib/httpd/mod_session_crypto.so
 lib/httpd/mod_session_dbd.so
 lib/httpd/mod_setenvif.so
 lib/httpd/mod_slotmem_plain.so
