@@ -431,20 +431,20 @@ static unsigned
 fmt_binary_mpi(pgpv_bignum_t *mpi, uint8_t *p, size_t size)
 {
 	unsigned	 bytes;
-	BIGNUM		*bn;
+	PGPV_BIGNUM		*bn;
 
 	bytes = BITS_TO_BYTES(mpi->bits);
 	if ((size_t)bytes + 2 + 1 > size) {
 		fprintf(stderr, "truncated mpi");
 		return 0;
 	}
-	bn = (BIGNUM *)mpi->bn;
-	if (bn == NULL || BN_is_zero(bn)) {
+	bn = (PGPV_BIGNUM *)mpi->bn;
+	if (bn == NULL || PGPV_BN_is_zero(bn)) {
 		fmt_32(p, 0);
 		return 2 + 1;
 	}
 	fmt_16(p, mpi->bits);
-	BN_bn2bin(bn, &p[2]);
+	PGPV_BN_bn2bin(bn, &p[2]);
 	return bytes + 2;
 }
 
@@ -459,7 +459,7 @@ fmt_mpi(char *s, size_t size, pgpv_bignum_t *bn, const char *name, int pbits)
 	if (pbits) {
 		cc += snprintf(&s[cc], size - cc, "[%u bits] ", bn->bits);
 	}
-	buf = BN_bn2hex(bn->bn);
+	buf = PGPV_BN_bn2hex(bn->bn);
 	cc += snprintf(&s[cc], size - cc, "%s\n", buf);
 	free(buf);
 	return cc;
@@ -733,7 +733,7 @@ get_mpi(pgpv_bignum_t *mpi, uint8_t *p, size_t pktlen, size_t *off)
 		return 0;
 	}
 	*off += sizeof(mpi->bits);
-	mpi->bn = BN_bin2bn(&p[sizeof(mpi->bits)], (int)bytes, NULL);
+	mpi->bn = PGPV_BN_bin2bn(&p[sizeof(mpi->bits)], (int)bytes, NULL);
 	*off += bytes;
 	return 1;
 }
@@ -1533,8 +1533,8 @@ static int
 lowlevel_rsa_public_check(const uint8_t *encbuf, int enclen, uint8_t *dec, const rsa_pubkey_t *rsa)
 {
 	uint8_t		*decbuf;
-	BIGNUM		*decbn;
-	BIGNUM		*encbn;
+	PGPV_BIGNUM		*decbn;
+	PGPV_BIGNUM		*encbn;
 	int		 decbytes;
 	int		 nbytes;
 	int		 r;
@@ -1543,22 +1543,22 @@ lowlevel_rsa_public_check(const uint8_t *encbuf, int enclen, uint8_t *dec, const
 	r = -1;
 	decbuf = NULL;
 	decbn = encbn = NULL;
-	if (BN_num_bits(rsa->n) > RSA_MAX_MODULUS_BITS) {
+	if (PGPV_BN_num_bits(rsa->n) > RSA_MAX_MODULUS_BITS) {
 		printf("rsa r modulus too large\n");
 		goto err;
 	}
-	if (BN_cmp(rsa->n, rsa->e) <= 0) {
+	if (PGPV_BN_cmp(rsa->n, rsa->e) <= 0) {
 		printf("rsa r bad n value\n");
 		goto err;
 	}
-	if (BN_num_bits(rsa->n) > RSA_SMALL_MODULUS_BITS &&
-	    BN_num_bits(rsa->e) > RSA_MAX_PUBEXP_BITS) {
+	if (PGPV_BN_num_bits(rsa->n) > RSA_SMALL_MODULUS_BITS &&
+	    PGPV_BN_num_bits(rsa->e) > RSA_MAX_PUBEXP_BITS) {
 		printf("rsa r bad exponent limit\n");
 		goto err;
 	}
-	nbytes = BN_num_bytes(rsa->n);
-	if ((encbn = BN_new()) == NULL ||
-	    (decbn = BN_new()) == NULL ||
+	nbytes = PGPV_BN_num_bytes(rsa->n);
+	if ((encbn = PGPV_BN_new()) == NULL ||
+	    (decbn = PGPV_BN_new()) == NULL ||
 	    (decbuf = calloc(1, (size_t)nbytes)) == NULL) {
 		printf("allocation failure\n");
 		goto err;
@@ -1567,26 +1567,26 @@ lowlevel_rsa_public_check(const uint8_t *encbuf, int enclen, uint8_t *dec, const
 		printf("rsa r > mod len\n");
 		goto err;
 	}
-	if (BN_bin2bn(encbuf, enclen, encbn) == NULL) {
+	if (PGPV_BN_bin2bn(encbuf, enclen, encbn) == NULL) {
 		printf("null encrypted BN\n");
 		goto err;
 	}
-	if (BN_cmp(encbn, rsa->n) >= 0) {
+	if (PGPV_BN_cmp(encbn, rsa->n) >= 0) {
 		printf("rsa r data too large for modulus\n");
 		goto err;
 	}
-	if (BN_mod_exp(decbn, encbn, rsa->e, rsa->n, NULL) < 0) {
-		printf("BN_mod_exp < 0\n");
+	if (PGPV_BN_mod_exp(decbn, encbn, rsa->e, rsa->n, NULL) < 0) {
+		printf("PGPV_BN_mod_exp < 0\n");
 		goto err;
 	}
-	decbytes = BN_num_bytes(decbn);
-	(void) BN_bn2bin(decbn, decbuf);
+	decbytes = PGPV_BN_num_bytes(decbn);
+	(void) PGPV_BN_bn2bin(decbn, decbuf);
 	if ((r = rsa_padding_check_none(dec, nbytes, decbuf, decbytes, 0)) < 0) {
 		printf("rsa r padding check failed\n");
 	}
 err:
-	BN_free(encbn);
-	BN_free(decbn);
+	PGPV_BN_free(encbn);
+	PGPV_BN_free(decbn);
 	if (decbuf != NULL) {
 		(void) memset(decbuf, 0x0, nbytes);
 		free(decbuf);
@@ -1606,11 +1606,11 @@ rsa_public_decrypt(int enclen, const unsigned char *enc, unsigned char *dec, RSA
 	}
 	USE_ARG(padding);
 	(void) memset(&pub, 0x0, sizeof(pub));
-	pub.n = BN_dup(rsa->n);
-	pub.e = BN_dup(rsa->e);
+	pub.n = PGPV_BN_dup(rsa->n);
+	pub.e = PGPV_BN_dup(rsa->e);
 	ret = lowlevel_rsa_public_check(enc, enclen, dec, &pub);
-	BN_free(pub.n);
-	BN_free(pub.e);
+	PGPV_BN_free(pub.n);
+	PGPV_BN_free(pub.e);
 	return ret;
 }
 
@@ -1661,7 +1661,7 @@ rsa_verify(uint8_t *calculated, unsigned calclen, uint8_t hashalg, pgpv_bignum_t
 	size_t		 keysize;
 
 	keysize = BITS_TO_BYTES(pubkey->bn[RSA_N].bits);
-	BN_bn2bin(bn[RSA_SIG].bn, sigbn);
+	PGPV_BN_bn2bin(bn[RSA_SIG].bn, sigbn);
 	decryptc = pgpv_rsa_public_decrypt(decrypted, sigbn, BITS_TO_BYTES(bn[RSA_SIG].bits), pubkey);
 	if (decryptc != keysize || (decrypted[0] != 0 || decrypted[1] != 1)) {
 		return 0;
@@ -1687,13 +1687,13 @@ rsa_verify(uint8_t *calculated, unsigned calclen, uint8_t hashalg, pgpv_bignum_t
 
 /* return 1 if bn <= 0 */
 static int
-bignum_is_bad(BIGNUM *bn)
+bignum_is_bad(PGPV_BIGNUM *bn)
 {
-	return BN_is_zero(bn) || BN_is_negative(bn);
+	return PGPV_BN_is_zero(bn) || PGPV_BN_is_negative(bn);
 }
 
 #define BAD_BIGNUM(s, k)	\
-	(bignum_is_bad((s)->bn) || BN_cmp((s)->bn, (k)->bn) >= 0)
+	(bignum_is_bad((s)->bn) || PGPV_BN_cmp((s)->bn, (k)->bn) >= 0)
 
 #ifndef DSA_MAX_MODULUS_BITS
 #define DSA_MAX_MODULUS_BITS      10000
@@ -1706,9 +1706,9 @@ verify_dsa_sig(uint8_t *calculated, unsigned calclen, pgpv_bignum_t *sig, pgpv_p
 	unsigned	  qbits;
 	uint8_t		  calcnum[128];
 	uint8_t		  signum[128];
-	BIGNUM		 *M;
-	BIGNUM		 *W;
-	BIGNUM		 *t1;
+	PGPV_BIGNUM		 *M;
+	PGPV_BIGNUM		 *W;
+	PGPV_BIGNUM		 *t1;
 	int		  ret;
 
 	if (pubkey->bn[DSA_P].bn == NULL ||
@@ -1736,37 +1736,37 @@ verify_dsa_sig(uint8_t *calculated, unsigned calclen, pgpv_bignum_t *sig, pgpv_p
 		return 0;
 	}
 	ret = 0;
-	if ((M = BN_new()) == NULL || (W = BN_new()) == NULL || (t1 = BN_new()) == NULL ||
+	if ((M = PGPV_BN_new()) == NULL || (W = PGPV_BN_new()) == NULL || (t1 = PGPV_BN_new()) == NULL ||
 	    BAD_BIGNUM(&sig[DSA_R], &pubkey->bn[DSA_Q]) ||
 	    BAD_BIGNUM(&sig[DSA_S], &pubkey->bn[DSA_Q]) ||
-	    BN_mod_inverse(W, sig[DSA_S].bn, pubkey->bn[DSA_Q].bn, NULL) == NULL) {
+	    PGPV_BN_mod_inverse(W, sig[DSA_S].bn, pubkey->bn[DSA_Q].bn, NULL) == NULL) {
 		goto done;
 	}
 	if (calclen > qbits / 8) {
 		calclen = qbits / 8;
 	}
-	if (BN_bin2bn(calculated, (int)calclen, M) == NULL ||
-	    !BN_mod_mul(M, M, W, pubkey->bn[DSA_Q].bn, NULL) ||
-	    !BN_mod_mul(W, sig[DSA_R].bn, W, pubkey->bn[DSA_Q].bn, NULL) ||
-	    !BN_mod_exp(t1, pubkey->bn[DSA_G].bn, M, pubkey->bn[DSA_P].bn, NULL) ||
-	    !BN_mod_exp(W, pubkey->bn[DSA_Y].bn, W, pubkey->bn[DSA_P].bn, NULL) ||
-	    !BN_mod_mul(t1, t1, W, pubkey->bn[DSA_P].bn, NULL) ||
-	    !BN_div(NULL, t1, t1, pubkey->bn[DSA_Q].bn, NULL)) {
+	if (PGPV_BN_bin2bn(calculated, (int)calclen, M) == NULL ||
+	    !PGPV_BN_mod_mul(M, M, W, pubkey->bn[DSA_Q].bn, NULL) ||
+	    !PGPV_BN_mod_mul(W, sig[DSA_R].bn, W, pubkey->bn[DSA_Q].bn, NULL) ||
+	    !PGPV_BN_mod_exp(t1, pubkey->bn[DSA_G].bn, M, pubkey->bn[DSA_P].bn, NULL) ||
+	    !PGPV_BN_mod_exp(W, pubkey->bn[DSA_Y].bn, W, pubkey->bn[DSA_P].bn, NULL) ||
+	    !PGPV_BN_mod_mul(t1, t1, W, pubkey->bn[DSA_P].bn, NULL) ||
+	    !PGPV_BN_div(NULL, t1, t1, pubkey->bn[DSA_Q].bn, NULL)) {
 		goto done;
 	}
 	/* only compare the first q bits */
-	BN_bn2bin(t1, calcnum);
-	BN_bn2bin(sig[DSA_R].bn, signum);
+	PGPV_BN_bn2bin(t1, calcnum);
+	PGPV_BN_bn2bin(sig[DSA_R].bn, signum);
 	ret = memcmp(calcnum, signum, BITS_TO_BYTES(qbits)) == 0;
 done:
 	if (M) {
-		BN_free(M);
+		PGPV_BN_free(M);
 	}
 	if (W) {
-		BN_free(W);
+		PGPV_BN_free(W);
 	}
 	if (t1) {
-		BN_free(t1);
+		PGPV_BN_free(t1);
 	}
 	return ret;
 }
@@ -2202,8 +2202,8 @@ getbignum(pgpv_bignum_t *bignum, bufgap_t *bg, char *buf, const char *header)
 	len = pgp_ntoh32(len);
 	(void) bufgap_seek(bg, sizeof(len), BGFromHere, BGByte);
 	(void) bufgap_getbin(bg, buf, len);
-	bignum->bn = BN_bin2bn((const uint8_t *)buf, (int)len, NULL);
-	bignum->bits = BN_num_bits(bignum->bn);
+	bignum->bn = PGPV_BN_bin2bn((const uint8_t *)buf, (int)len, NULL);
+	bignum->bits = PGPV_BN_num_bits(bignum->bn);
 	(void) bufgap_seek(bg, len, BGFromHere, BGByte);
 	return 1;
 }
