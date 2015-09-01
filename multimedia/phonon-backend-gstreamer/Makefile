@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:41 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2015/09/01 22:17:02 markd Exp $
 
-DISTNAME=	phonon-backend-gstreamer-4.8.0
-PKGREVISION=	1
+DISTNAME=	phonon-backend-gstreamer-4.8.2
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-gstreamer/4.8.0/}
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-gstreamer/4.8.2/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
