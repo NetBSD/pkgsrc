@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:54 markd Exp $
+share/texmf-dist/doc/generic/xstring/README
+share/texmf-dist/doc/generic/xstring/xstring_doc_en.pdf
+share/texmf-dist/doc/generic/xstring/xstring_doc_en.tex
+share/texmf-dist/doc/generic/xstring/xstring_doc_fr.pdf
+share/texmf-dist/doc/generic/xstring/xstring_doc_fr.tex

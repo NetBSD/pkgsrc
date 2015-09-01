@@ -1,0 +1,12 @@
+The package is designed for lecturers who have to generate new
+problem sheets for their students on a regular basis (e.g.
+yearly) by randomly selecting a specified number of problems
+defined in another file. The package allows you easily to
+generate a new problem sheet that is different from the
+previous year, thus alleviating the temptation of students to
+seek out the previous year's students and checking out their
+answers. The solutions to the problems can be defined along
+with the problem, making it easy to generate the solution sheet
+from the same source code; problems may be reused within a
+document, so that solutions may appear in a different section
+of the same document as the problems they cover.
