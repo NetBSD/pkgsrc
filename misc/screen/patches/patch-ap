@@ -1,10 +1,17 @@
-$NetBSD: patch-ap,v 1.5 2015/09/01 12:18:55 kim Exp $
+$NetBSD: patch-ap,v 1.6 2015/09/01 13:34:47 kim Exp $
 
 Replace configurable paths with tags.
 
---- doc/screen.1.orig	2014-04-27 22:10:01.000000000 +0000
-+++ doc/screen.1	2014-08-25 18:42:29.000000000 +0000
-@@ -625,7 +625,7 @@
+BE CAREFUL IF YOU WANT TO REGENERATE THIS PATCH!
+YOU MUST RUN DIFF BEFORE SUBSTITUTIONS!
+
+% make clean && make extract && make pre-patch && make do-patch
+
+RUNNING "make patch" TAKES YOU TOO FAR.
+
+--- doc/screen.1.orig	2015-06-28 21:39:33.000000000 +0000
++++ doc/screen.1	2015-09-01 13:12:22.000000000 +0000
+@@ -636,7 +636,7 @@
  
  .SH CUSTOMIZATION
  The \*Qsocket directory\*U defaults either to $HOME/.screen or simply to
@@ -13,7 +20,7 @@ Replace configurable paths with tags.
  .I screen
  is installed setuid-root, then the administrator
  should compile
-@@ -638,7 +638,7 @@
+@@ -649,7 +649,7 @@
  When
  .I screen
  is invoked, it executes initialization commands from the files
@@ -22,7 +29,7 @@ Replace configurable paths with tags.
  \*Q.screenrc\*U in the user's home directory. These are the \*Qprogrammer's
  defaults\*U that can be overridden in the following ways: for the
  global screenrc file 
-@@ -668,7 +668,7 @@
+@@ -679,7 +679,7 @@
  protected from variable substitution.
  .PP
  Two configuration files are shipped as examples with your screen distribution:
@@ -31,7 +38,7 @@ Replace configurable paths with tags.
  useful examples for various commands.
  .PP
  Customization can also be done 'on-line'. To enter the command mode type
-@@ -4857,14 +4857,14 @@
+@@ -4903,14 +4903,14 @@
  .I screen
  distribution package for private and global initialization files.
  .IP $SYSSCREENRC 
