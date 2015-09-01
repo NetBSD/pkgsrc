@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.713 2015/08/25 20:19:48 adam Exp $
+# $NetBSD: Makefile,v 1.714 2015/09/01 21:08:43 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -623,6 +623,8 @@ SUBDIR+=	tex-textpath
 SUBDIR+=	tex-textpath-doc
 SUBDIR+=	tex-threeddice
 SUBDIR+=	tex-threeddice-doc
+SUBDIR+=	tex-tikzposter
+SUBDIR+=	tex-tikzposter-doc
 SUBDIR+=	tex-xypic
 SUBDIR+=	tex-xypic-doc
 SUBDIR+=	tgif
