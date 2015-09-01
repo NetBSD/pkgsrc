@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/08/02 03:09:20 markd Exp $
+# $NetBSD: Makefile,v 1.11 2015/09/01 21:33:27 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2015pre4
+PKGNAME=	texlive-${DISTNAME}-2015pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37946
@@ -191,7 +191,7 @@ DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
 # depend crossreference
 DEPENDS+=	tex-csquotes-[0-9]*:../../print/tex-csquotes
 # depend csvsimple
-# depend cuisine
+DEPENDS+=	tex-cuisine-[0-9]*:../../print/tex-cuisine
 # depend currfile
 # depend currvita
 # depend cutwin
@@ -321,7 +321,7 @@ DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 # depend enumitem-zref
 # depend envbig
 DEPENDS+=	tex-environ-[0-9]*:../../print/tex-environ
-# depend envlab
+DEPENDS+=	tex-envlab-[0-9]*:../../print/tex-envlab
 # depend epigraph
 # depend epiolmec
 # depend epyt
@@ -339,7 +339,7 @@ DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 # depend etoc
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 # depend eukdate
-# depend europasscv
+DEPENDS+=	tex-europasscv-[0-9]*:../../print/tex-europasscv
 DEPENDS+=	tex-europecv-[0-9]*:../../print/tex-europecv
 # depend everyhook
 DEPENDS+=	tex-everypage-[0-9]*:../../print/tex-everypage
@@ -389,7 +389,7 @@ DEPENDS+=	tex-fixmetodonotes-[0-9]*:../../print/tex-fixmetodonotes
 # depend flippdf
 DEPENDS+=	tex-floatflt-[0-9]*:../../print/tex-floatflt
 # depend floatrow
-# depend flowfram
+DEPENDS+=	tex-flowfram-[0-9]*:../../print/tex-flowfram
 # depend fmp
 DEPENDS+=	tex-fmtcount-[0-9]*:../../print/tex-fmtcount
 # depend fn2end
@@ -663,7 +663,7 @@ DEPENDS+=	tex-needspace-[0-9]*:../../print/tex-needspace
 # depend newcommand
 # depend newenviron
 # depend newfile
-# depend newlfm
+DEPENDS+=	tex-newlfm-[0-9]*:../../print/tex-newlfm
 # depend newspaper
 # depend newunicodechar
 # depend newvbtm
@@ -761,7 +761,7 @@ DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 # depend prettyref
 DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
 DEPENDS+=	tex-printlen-[0-9]*:../../print/tex-printlen
-# depend probsoln
+DEPENDS+=	tex-probsoln-[0-9]*:../../print/tex-probsoln
 DEPENDS+=	tex-program-[0-9]*:../../print/tex-program
 # depend progress
 # depend progressbar
@@ -892,7 +892,7 @@ DEPENDS+=	tex-stdclsdv-[0-9]*:../../print/tex-stdclsdv
 # depend stex
 # depend storebox
 # depend storecmd
-# depend stringstrings
+DEPENDS+=	tex-stringstrings-[0-9]*:../../print/tex-stringstrings
 DEPENDS+=	tex-sttools-[0-9]*:../../print/tex-sttools
 # depend stubs
 # depend subdepth
@@ -1050,7 +1050,7 @@ DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 # depend xpeek
 # depend xprintlen
 # depend xpunctuate
-# depend xstring
+DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 # depend xwatermark
 # depend xytree
