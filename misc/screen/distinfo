@@ -1,18 +1,19 @@
-$NetBSD: distinfo,v 1.37 2015/02/13 04:44:40 rodent Exp $
+$NetBSD: distinfo,v 1.38 2015/09/01 13:34:47 kim Exp $
 
-SHA1 (screen-4.2.1.tar.gz) = 21eadf5f1d64120649f3390346253c6bc8a5103c
-RMD160 (screen-4.2.1.tar.gz) = 20ddf4a33f91e60a42a31f02aa2a30a9c5cba9b5
-Size (screen-4.2.1.tar.gz) = 1062485 bytes
+SHA1 (screen-4.3.1.tar.gz) = a524761504e28480517e338b20c852f2ab100c93
+RMD160 (screen-4.3.1.tar.gz) = 9de183f86e36b211d56c35e58598728f332faec9
+Size (screen-4.3.1.tar.gz) = 845958 bytes
 SHA1 (patch-aa) = 39c6fa5bda62b2891cecf4a5e9598b179ea8b4dc
 SHA1 (patch-ab) = 40911979a540645db2a17861328292add22898d3
 SHA1 (patch-ae) = 8792f7877c0a29701d7d0643e93360813ed7db0f
-SHA1 (patch-ai) = a6aafe822d7222398494e5733106b3d78c5836fc
-SHA1 (patch-aj) = 00cf67ceedb8ab48a554c9b5ce855ae5d7fd7474
-SHA1 (patch-ak) = 8e54df7a6bd648e60f2b6cfd6f01ed34040f1932
+SHA1 (patch-ai) = db9f23d31763e44d788af3a44e4ae91b84c87deb
+SHA1 (patch-aj) = e9996135629085c44867b9264648b2b507e91f98
+SHA1 (patch-ak) = 31982e692cabf25be31bd1758fe1aeb1a4787629
 SHA1 (patch-al) = f49e179dd814c826e283949c40497067e56398c4
 SHA1 (patch-am) = a721e311e7dde7938de0e9546a7892bfd104ebd1
-SHA1 (patch-an) = 98cbcbff81af04a171348e851a393b74d9be5e19
-SHA1 (patch-ao) = d234091ca54162b47017bf690af5fb86a8d6ba08
-SHA1 (patch-ap) = 80ea5287e4e74962c37b0b9bc6983179eed705ac
-SHA1 (patch-socket.c) = b82504e75afa7a18f3335692848794a65f3b242f
-SHA1 (patch-tty.sh) = f93a3e2063df25c2610c6e84a623f3dc2046761b
+SHA1 (patch-an) = bda6c65148410a6c9a13afd8ad34f93e33731552
+SHA1 (patch-ansi.c) = 4dc3d46b99f99257e341099781a3eda680c6d1c3
+SHA1 (patch-ao) = 56fc8cb9939149a49f920a0ae3f9a61701808c82
+SHA1 (patch-ap) = 821f11201b640464b3590c2571da96b250a397ac
+SHA1 (patch-socket.c) = 09683cee3685a5c6d625e86aa97f6a09f4280b56
+SHA1 (patch-tty.sh) = 9acdedeb1e2bf3919e29cb353c4e714cb61d8386
