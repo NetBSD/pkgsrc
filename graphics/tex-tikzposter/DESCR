@@ -1,0 +1,4 @@
+A document class provides a simple way of using TikZ for
+generating posters. Several formatting options are available,
+and spacing and layout of the poster is to a large extent
+automated.
