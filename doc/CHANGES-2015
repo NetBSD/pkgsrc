@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3728 2015/09/01 23:36:20 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3729 2015/09/01 23:45:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6637,3 +6637,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/phonon-backend-vlc to 0.8.2 [markd 2015-09-01]
 	Updated security/p5-IO-Socket-SSL to 2.019 [mef 2015-09-01]
 	Updated textproc/iso-codes to 3.61 [mef 2015-09-01]
+	Updated textproc/p5-XML-LibXML to 2.0122 [mef 2015-09-01]
