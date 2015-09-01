@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/07 05:10:45 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/09/01 04:14:54 mef Exp $
 bin/gr_constellation_plot
 bin/gr_psd_plot_b
 bin/gr_psd_plot_c
@@ -36,6 +36,7 @@ include/gnuradio/qtgui/displayform.h
 include/gnuradio/qtgui/form_menus.h
 include/gnuradio/qtgui/freq_sink_c.h
 include/gnuradio/qtgui/freq_sink_f.h
+include/gnuradio/qtgui/freqcontrolpanel.h
 include/gnuradio/qtgui/freqdisplayform.h
 include/gnuradio/qtgui/histogram_sink_f.h
 include/gnuradio/qtgui/histogramdisplayform.h
@@ -53,6 +54,7 @@ include/gnuradio/qtgui/time_raster_sink_b.h
 include/gnuradio/qtgui/time_raster_sink_f.h
 include/gnuradio/qtgui/time_sink_c.h
 include/gnuradio/qtgui/time_sink_f.h
+include/gnuradio/qtgui/timecontrolpanel.h
 include/gnuradio/qtgui/timedisplayform.h
 include/gnuradio/qtgui/timerasterdisplayform.h
 include/gnuradio/qtgui/trigger_mode.h
@@ -108,10 +110,10 @@ ${PYSITELIB}/gnuradio/qtgui/plot_time_raster_form.pyo
 ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.py
 ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.pyc
 ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.pyo
+${PYSITELIB}/gnuradio/qtgui/range.py
+${PYSITELIB}/gnuradio/qtgui/range.pyc
+${PYSITELIB}/gnuradio/qtgui/range.pyo
 share/doc/gnuradio-${PKGVERSION}/README.qtgui
-share/examples/gnuradio/conf.d/gr-qtgui.conf
-share/gnuradio/examples/qt-gui/alt.qss
-share/gnuradio/examples/qt-gui/dark.qss
 share/gnuradio/examples/qt-gui/pyqt_const_c.py
 share/gnuradio/examples/qt-gui/pyqt_example_c.py
 share/gnuradio/examples/qt-gui/pyqt_example_f.py
@@ -135,6 +137,7 @@ share/gnuradio/grc/blocks/qtgui_freq_sink_x.xml
 share/gnuradio/grc/blocks/qtgui_histogram_sink_x.xml
 share/gnuradio/grc/blocks/qtgui_label.xml
 share/gnuradio/grc/blocks/qtgui_number_sink.xml
+share/gnuradio/grc/blocks/qtgui_push_button.xml
 share/gnuradio/grc/blocks/qtgui_range.xml
 share/gnuradio/grc/blocks/qtgui_sink_x.xml
 share/gnuradio/grc/blocks/qtgui_tab_widget.xml
@@ -142,3 +145,5 @@ share/gnuradio/grc/blocks/qtgui_time_raster_x.xml
 share/gnuradio/grc/blocks/qtgui_time_sink_x.xml
 share/gnuradio/grc/blocks/qtgui_vector_sink_f.xml
 share/gnuradio/grc/blocks/qtgui_waterfall_sink_x.xml
+share/gnuradio/themes/alt.qss
+share/gnuradio/themes/dark.qss

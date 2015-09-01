@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/09/01 04:14:54 mef Exp $
 include/gnuradio/fec/api.h
 include/gnuradio/fec/async_decoder.h
 include/gnuradio/fec/async_encoder.h
 include/gnuradio/fec/ber_bf.h
+include/gnuradio/fec/cc_common.h
 include/gnuradio/fec/cc_decoder.h
 include/gnuradio/fec/cc_encoder.h
 include/gnuradio/fec/ccsds_encoder.h
@@ -73,6 +74,7 @@ ${PYSITELIB}/gnuradio/fec/threaded_encoder.py
 ${PYSITELIB}/gnuradio/fec/threaded_encoder.pyc
 ${PYSITELIB}/gnuradio/fec/threaded_encoder.pyo
 share/doc/gnuradio-${PKGVERSION}/README.fec
+share/gnuradio/examples/fec/271.127.3.112
 share/gnuradio/examples/fec/ber_curve_gen.grc
 share/gnuradio/examples/fec/ber_test.grc
 share/gnuradio/examples/fec/fecapi_async_decoders.grc
@@ -83,6 +85,7 @@ share/gnuradio/examples/fec/fecapi_decoders.grc
 share/gnuradio/examples/fec/fecapi_encoders.grc
 share/gnuradio/examples/fec/fecapi_tagged_decoders.grc
 share/gnuradio/examples/fec/fecapi_tagged_encoders.grc
+share/gnuradio/examples/fec/tpc_ber_curve_gen.grc
 share/gnuradio/grc/blocks/fec_async_decoder.xml
 share/gnuradio/grc/blocks/fec_async_encoder.xml
 share/gnuradio/grc/blocks/fec_ber_bf.xml
@@ -101,6 +104,10 @@ share/gnuradio/grc/blocks/fec_extended_tagged_encoder.xml
 share/gnuradio/grc/blocks/fec_puncture_xx.xml
 share/gnuradio/grc/blocks/fec_tagged_decoder.xml
 share/gnuradio/grc/blocks/fec_tagged_encoder.xml
+share/gnuradio/grc/blocks/ldpc_decoder_def_list.xml
+share/gnuradio/grc/blocks/ldpc_encoder_def_list.xml
+share/gnuradio/grc/blocks/tpc_decoder_def_list.xml
+share/gnuradio/grc/blocks/tpc_encoder_def_list.xml
 share/gnuradio/grc/blocks/variable_cc_decoder_def_list.xml
 share/gnuradio/grc/blocks/variable_cc_encoder_def_list.xml
 share/gnuradio/grc/blocks/variable_ccsds_encoder_def_list.xml

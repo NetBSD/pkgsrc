@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/28 16:59:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/09/01 04:14:55 mef Exp $
 include/gnuradio/swig/video_sdl_swig.i
 include/gnuradio/swig/video_sdl_swig_doc.i
 include/gnuradio/video_sdl/api.h
@@ -14,3 +14,5 @@ ${PYSITELIB}/gnuradio/video_sdl/_video_sdl_swig.so
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.py
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.pyc
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.pyo
+share/gnuradio/grc/blocks/video_block_tree.xml
+share/gnuradio/grc/blocks/video_sdl_sink.xml
