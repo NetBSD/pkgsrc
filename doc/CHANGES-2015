@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3719 2015/09/01 13:35:01 kim Exp $
+$NetBSD: CHANGES-2015,v 1.3720 2015/09/01 14:15:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6598,3 +6598,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Hash-Util-FieldHash-Compat to 0.09 [mef 2015-09-01]
 	Added devel/p5-Struct-Dumb version 0.03 [mef 2015-09-01]
 	Updated misc/screen to 4.3.1 [kim 2015-09-01]
+	Updated devel/p5-IO-Async to 0.68 [mef 2015-09-01]
