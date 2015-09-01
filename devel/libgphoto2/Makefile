@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/08/23 14:17:05 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2015/09/01 20:52:06 markd Exp $
 
 DISTNAME=	libgphoto2-2.5.8
 CATEGORIES=	devel graphics
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
+CONFIGURE_ARGS+=	--with-gdlib=no
 PKGCONFIG_OVERRIDE+=	libgphoto2.pc.in libgphoto2_port/libgphoto2_port.pc.in
 
 .include "../../mk/bsd.prefs.mk"
