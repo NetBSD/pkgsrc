@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3723 2015/09/01 21:24:58 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3724 2015/09/01 21:44:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6622,3 +6622,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-newlfm-doc version 9.4 [markd 2015-09-01]
 	Added print/tex-cuisine version 0.7 [markd 2015-09-01]
 	Added print/tex-cuisine-doc version 0.7 [markd 2015-09-01]
+	Updated meta-pkgs/texlive-collection-pictures to 2015pre3 [markd 2015-09-01]
+	Updated meta-pkgs/texlive-collection-publishers to 2015pre2 [markd 2015-09-01]
+	Updated meta-pkgs/texlive-collection-latexextra to 2015pre5 [markd 2015-09-01]
+	Updated print/tex-texinfo to 5.1.37747 [markd 2015-09-01]
