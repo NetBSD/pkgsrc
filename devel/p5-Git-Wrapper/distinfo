@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/04/09 01:36:56 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/09/01 12:30:33 mef Exp $
 
-SHA1 (Git-Wrapper-0.044.tar.gz) = ba065cdda42e332a4ba1603be508835e8c11d307
-RMD160 (Git-Wrapper-0.044.tar.gz) = 728d49420c954e70ecb7597b7d2e77836da7ac55
-Size (Git-Wrapper-0.044.tar.gz) = 28803 bytes
+SHA1 (Git-Wrapper-0.045.tar.gz) = 0577afea3ac939a208c4d8d7872aa5c595957a9b
+RMD160 (Git-Wrapper-0.045.tar.gz) = 330b3cae2a7f35103508dec158c5d1c40c00c8cc
+Size (Git-Wrapper-0.045.tar.gz) = 29543 bytes
