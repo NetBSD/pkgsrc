@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3712 2015/09/01 11:55:04 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3713 2015/09/01 12:05:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6591,3 +6591,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/ejabberd to 15.07 [fhajny 2015-09-01]
 	Updated databases/py-cassandra-driver to 2.7.1 [fhajny 2015-09-01]
 	Updated www/lighttpd to 1.4.37 [mef 2015-09-01]
+	Updated www/links to 2.11 [mef 2015-09-01]
