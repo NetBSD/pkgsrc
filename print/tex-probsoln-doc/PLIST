@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:55 markd Exp $
+share/texmf-dist/doc/latex/probsoln/CHANGES
+share/texmf-dist/doc/latex/probsoln/INSTALL
+share/texmf-dist/doc/latex/probsoln/README
+share/texmf-dist/doc/latex/probsoln/probsoln-manual.css
+share/texmf-dist/doc/latex/probsoln/probsoln-manual.html
+share/texmf-dist/doc/latex/probsoln/probsoln-manual.tex
+share/texmf-dist/doc/latex/probsoln/probsoln.pdf
+share/texmf-dist/doc/latex/probsoln/samples/sample-exclude.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample.pdf
+share/texmf-dist/doc/latex/probsoln/samples/sample.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample2.pdf
+share/texmf-dist/doc/latex/probsoln/samples/sample2.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample3.pdf
+share/texmf-dist/doc/latex/probsoln/samples/sample3.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample4.pdf
+share/texmf-dist/doc/latex/probsoln/samples/sample4.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample5.pdf
+share/texmf-dist/doc/latex/probsoln/samples/sample5.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample6.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample7.tex
+share/texmf-dist/doc/latex/probsoln/samples/sample8.tex

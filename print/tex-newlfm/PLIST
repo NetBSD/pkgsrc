@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:55 markd Exp $
+share/texmf-dist/tex/latex/newlfm/addrset.sty
+share/texmf-dist/tex/latex/newlfm/newlfm.cls
+share/texmf-dist/tex/latex/newlfm/setdim.sty

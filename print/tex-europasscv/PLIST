@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:55 markd Exp $
+share/texmf-dist/tex/latex/europasscv/address_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/europasscv.cls
+share/texmf-dist/tex/latex/europasscv/europasscv_de.def
+share/texmf-dist/tex/latex/europasscv/europasscv_en.def
+share/texmf-dist/tex/latex/europasscv/europasscv_it.def
+share/texmf-dist/tex/latex/europasscv/europasslogo2013.pdf
+share/texmf-dist/tex/latex/europasscv/im_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/mail_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/mobile_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/telephone_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/website_europass_icon.pdf

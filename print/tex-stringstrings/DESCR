@@ -1,0 +1,10 @@
+The package provides a large and sundry set of macros for the
+manipulation of strings. The macros are developed not merely
+for cosmetic application (such as changing the case of letters
+and string substitution), but also for programming applications
+such as character look-ahead, argument parsing, conditional
+tests on various string conditions, etc. The macros were
+designed all to be expandable (note that things such as
+\uppercase and \lowercase are not expandable), so that the
+macros may be strung together sequentially and nested (after a
+fashion) to achieve rather complex manipulations.

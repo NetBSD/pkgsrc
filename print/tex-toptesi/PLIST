@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:54 markd Exp $
+share/texmf-dist/tex/latex/toptesi/topcoman.sty
+share/texmf-dist/tex/latex/toptesi/topfront.sty
+share/texmf-dist/tex/latex/toptesi/toptesi.cfg
+share/texmf-dist/tex/latex/toptesi/toptesi.cls
+share/texmf-dist/tex/latex/toptesi/toptesi.sty

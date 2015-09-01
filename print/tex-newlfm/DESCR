@@ -1,0 +1,8 @@
+Integrates the letter class with fancyhdr and geometry to
+automatically make letterhead stationery. Useful for writing
+letters, fax, and memos. You can set up an address book using
+'wrapper' macros. You put all the information for a person into
+a wrapper and then put the wrapper in a document. The class
+handles letterheads automatically. You place the object for the
+letterhead (picture, information, etc.) in a box and all sizing
+is set automatically.
