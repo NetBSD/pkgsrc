@@ -1,0 +1,4 @@
+A LaTeX package for producing mailing envelopes and labels,
+including barcodes and address formatting according to the US
+Postal Service rules. Redefines the standard \makelabels
+command of the LaTeX letter documentclass.
