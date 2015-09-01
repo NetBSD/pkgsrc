@@ -15,7 +15,6 @@ REPLACE_PYTHON = \
 	grc/python/Constants.py \
 	grc/python/expr_utils.py \
 	grc/python/flow_graph.tmpl \
-	grc/python/convert_hier.py \
 	grc/python/Param.py \
 	grc/python/Connection.py \
 	grc/python/FlowGraph.py \
@@ -366,7 +365,6 @@ REPLACE_PYTHON = \
 	gnuradio-runtime/python/gnuradio/gr/gr_threading.py \
 	gnuradio-runtime/python/gnuradio/gr/tag_utils.py \
 	gnuradio-runtime/python/gnuradio/gr/gr_threading_23.py \
-	gnuradio-runtime/python/gnuradio/gr/qa_hier_block2_message_connections.py \
 	gnuradio-runtime/python/gnuradio/gr/top_block.py \
 	gnuradio-runtime/python/gnuradio/gr/gateway.py \
 	gnuradio-runtime/python/gnuradio/gr/qa_tag_utils.py \
@@ -379,7 +377,6 @@ REPLACE_PYTHON = \
 	gnuradio-runtime/python/gnuradio/eng_notation.py \
 	gnuradio-runtime/python/gnuradio/ctrlport/GrDataPlotter.py \
 	gnuradio-runtime/python/gnuradio/ctrlport/monitor.py \
-	gnuradio-runtime/python/gnuradio/ctrlport/IceRadioClient.py \
 	gnuradio-runtime/python/gnuradio/ctrlport/__init__.py \
 	gnuradio-runtime/python/gnuradio/eng_option.py \
 	gnuradio-runtime/python/gnuradio/__init__.py \
@@ -480,23 +477,7 @@ REPLACE_PYTHON = \
 	gr-trellis/doc/test_viterbi_equalization1.py \
 	gr-trellis/python/trellis/qa_trellis.py \
 	gr-trellis/python/trellis/__init__.py \
-	gr-trellis/examples/python/test_tcm_combined.py \
-	gr-trellis/examples/python/test_turbo_equalization1.py \
-	gr-trellis/examples/python/test_turbo_equalization.py \
 	gr-trellis/examples/python/test_cpm.py \
-	gr-trellis/examples/python/test_sccc_turbo.py \
-	gr-trellis/examples/python/test_tcm_bit.py \
-	gr-trellis/examples/python/test_sccc_soft.py \
-	gr-trellis/examples/python/test_pccc_turbo1.py \
-	gr-trellis/examples/python/test_sccc_turbo1.py \
-	gr-trellis/examples/python/test_sccc_hard.py \
-	gr-trellis/examples/python/test_tcm.py \
-	gr-trellis/examples/python/test_turbo_equalization2.py \
-	gr-trellis/examples/python/test_viterbi_equalization.py \
-	gr-trellis/examples/python/test_sccc_turbo2.py \
-	gr-trellis/examples/python/test_viterbi_equalization1.py \
-	gr-trellis/examples/python/test_tcm_parallel.py \
-	gr-trellis/examples/python/fsm_utils.py \
 	gr-video-sdl/python/video_sdl/qa_video_sdl.py \
 	gr-video-sdl/python/video_sdl/__init__.py \
 	gr-uhd/grc/gen_uhd_usrp_blocks.py \
@@ -617,8 +598,5 @@ REPLACE_PYTHON = \
 	gr-atsc/python/atsc/__init__.py \
 	gr-atsc/python/atsc/qa_atsc.py \
 	gr-atsc/lib/gen_encoder.py \
-        gr-filter/freq_xlating_fft_filter.py \
-	gnuradio-runtime/python/digital/packet_utils.py \
-	gnuradio-runtime/python/gnuradio/gr/packet_utils.py \
 	gr-digital/python/digital/packet_utils.py \
 	gr-filter/python/filter/freq_xlating_fft_filter.py \

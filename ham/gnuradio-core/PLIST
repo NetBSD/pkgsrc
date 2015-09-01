@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/03/07 05:10:45 mef Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/09/01 04:13:43 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -45,6 +45,7 @@ include/gnuradio/analog/sig_source_i.h
 include/gnuradio/analog/sig_source_s.h
 include/gnuradio/analog/sig_source_waveform.h
 include/gnuradio/analog/simple_squelch_cc.h
+include/gnuradio/analog/squelch_base_cc.h
 include/gnuradio/analog/squelch_base_ff.h
 include/gnuradio/api.h
 include/gnuradio/attributes.h
@@ -238,6 +239,7 @@ include/gnuradio/blocks/sub_ss.h
 include/gnuradio/blocks/tag_debug.h
 include/gnuradio/blocks/tag_gate.h
 include/gnuradio/blocks/tagged_file_sink.h
+include/gnuradio/blocks/tagged_stream_align.h
 include/gnuradio/blocks/tagged_stream_multiply_length.h
 include/gnuradio/blocks/tagged_stream_mux.h
 include/gnuradio/blocks/tagged_stream_to_pdu.h
@@ -507,6 +509,7 @@ include/volk/volk_32f_expfast_32f.h
 include/volk/volk_32f_index_max_16u.h
 include/volk/volk_32f_invsqrt_32f.h
 include/volk/volk_32f_log2_32f.h
+include/volk/volk_32f_null_32f.h
 include/volk/volk_32f_s32f_32f_fm_detect_32f.h
 include/volk/volk_32f_s32f_calc_spectral_noise_floor_32f.h
 include/volk/volk_32f_s32f_convert_16i.h
@@ -525,6 +528,7 @@ include/volk/volk_32f_x2_add_32f.h
 include/volk/volk_32f_x2_divide_32f.h
 include/volk/volk_32f_x2_dot_prod_16i.h
 include/volk/volk_32f_x2_dot_prod_32f.h
+include/volk/volk_32f_x2_fm_detectpuppet_32f.h
 include/volk/volk_32f_x2_interleave_32fc.h
 include/volk/volk_32f_x2_max_32f.h
 include/volk/volk_32f_x2_min_32f.h
@@ -603,7 +607,9 @@ lib/cmake/gnuradio/FindLog4cpp.cmake
 lib/cmake/gnuradio/FindOSS.cmake
 lib/cmake/gnuradio/FindPortaudio.cmake
 lib/cmake/gnuradio/FindQwt.cmake
+lib/cmake/gnuradio/FindSWIG.cmake
 lib/cmake/gnuradio/FindSphinx.cmake
+lib/cmake/gnuradio/FindThrift.cmake
 lib/cmake/gnuradio/FindUHD.cmake
 lib/cmake/gnuradio/FindUSB.cmake
 lib/cmake/gnuradio/FindZeroMQ.cmake
@@ -623,6 +629,7 @@ lib/cmake/gnuradio/GrVersion.cmake
 lib/cmake/gnuradio/LibFindMacros.cmake
 lib/cmake/gnuradio/UseSWIG.cmake
 lib/cmake/volk/VolkConfig.cmake
+lib/cmake/volk/VolkConfigVersion.cmake
 lib/libgnuradio-analog.so
 lib/libgnuradio-analog.so.${PKGVERSION}
 lib/libgnuradio-audio.so
@@ -638,7 +645,7 @@ lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
 lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/libvolk.so
-lib/libvolk.so.0.0.0
+lib/libvolk.so.1.0.2
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
 lib/pkgconfig/gnuradio-blocks.pc
@@ -729,6 +736,9 @@ ${PYSITELIB}/gnuradio/blocks/parse_file_metadata.pyo
 ${PYSITELIB}/gnuradio/blocks/stream_to_vector_decimator.py
 ${PYSITELIB}/gnuradio/blocks/stream_to_vector_decimator.pyc
 ${PYSITELIB}/gnuradio/blocks/stream_to_vector_decimator.pyo
+${PYSITELIB}/gnuradio/eng_arg.py
+${PYSITELIB}/gnuradio/eng_arg.pyc
+${PYSITELIB}/gnuradio/eng_arg.pyo
 ${PYSITELIB}/gnuradio/eng_notation.py
 ${PYSITELIB}/gnuradio/eng_notation.pyc
 ${PYSITELIB}/gnuradio/eng_notation.pyo
@@ -893,11 +903,8 @@ share/doc/gnuradio-${PKGVERSION}/README.blocks
 share/doc/gnuradio-${PKGVERSION}/README.fft
 share/doc/gnuradio-${PKGVERSION}/README.filter
 share/doc/gnuradio-${PKGVERSION}/README.hacking
-share/examples/gnuradio/conf.d/gnuradio-runtime.conf
-share/examples/gnuradio/conf.d/gr-audio-jack.conf
-share/examples/gnuradio/conf.d/gr-audio-portaudio.conf
-share/examples/gnuradio/conf.d/gr-audio.conf
 share/gnuradio/examples/analog/fmtest.py
+share/gnuradio/examples/analog/noise_power.grc
 share/gnuradio/examples/audio/audio_copy.py
 share/gnuradio/examples/audio/audio_fft.py
 share/gnuradio/examples/audio/audio_play.py
@@ -914,11 +921,13 @@ share/gnuradio/examples/audio/noise.py
 share/gnuradio/examples/audio/spectrum_inversion.py
 share/gnuradio/examples/audio/test_resampler.py
 share/gnuradio/examples/blocks/matrix_multiplexer.grc
+share/gnuradio/examples/blocks/peak_detector2.grc
 share/gnuradio/examples/blocks/vector_source_with_tags.grc
 share/gnuradio/examples/filter/channelize.py
 share/gnuradio/examples/filter/chirp_channelize.py
 share/gnuradio/examples/filter/decimate.py
 share/gnuradio/examples/filter/fft_filter_ccc.py
+share/gnuradio/examples/filter/filter_taps.grc
 share/gnuradio/examples/filter/fir_filter_ccc.py
 share/gnuradio/examples/filter/fir_filter_fff.py
 share/gnuradio/examples/filter/gr_filtdes_api.py
@@ -1008,9 +1017,11 @@ share/gnuradio/grc/blocks/blocks_complex_to_mag_squared.xml
 share/gnuradio/grc/blocks/blocks_complex_to_real.xml
 share/gnuradio/grc/blocks/blocks_conjugate_cc.xml
 share/gnuradio/grc/blocks/blocks_copy.xml
+share/gnuradio/grc/blocks/blocks_ctrlport_performance.xml
 share/gnuradio/grc/blocks/blocks_ctrlport_probe2_c.xml
 share/gnuradio/grc/blocks/blocks_ctrlport_probe2_x.xml
 share/gnuradio/grc/blocks/blocks_ctrlport_probe_c.xml
+share/gnuradio/grc/blocks/blocks_ctrlport_viewer.xml
 share/gnuradio/grc/blocks/blocks_deinterleave.xml
 share/gnuradio/grc/blocks/blocks_delay.xml
 share/gnuradio/grc/blocks/blocks_divide_XX.xml
@@ -1089,7 +1100,9 @@ share/gnuradio/grc/blocks/blocks_stretch_ff.xml
 share/gnuradio/grc/blocks/blocks_sub_xx.xml
 share/gnuradio/grc/blocks/blocks_tag_debug.xml
 share/gnuradio/grc/blocks/blocks_tag_gate.xml
+share/gnuradio/grc/blocks/blocks_tag_object.xml
 share/gnuradio/grc/blocks/blocks_tagged_file_sink.xml
+share/gnuradio/grc/blocks/blocks_tagged_stream_align.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_multiply_length.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_mux.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_to_pdu.xml
@@ -1145,3 +1158,8 @@ share/gnuradio/grc/blocks/filter_rational_resampler_base_xxx.xml
 share/gnuradio/grc/blocks/filter_rational_resampler_xxx.xml
 share/gnuradio/grc/blocks/filter_root_raised_cosine_filter.xml
 share/gnuradio/grc/blocks/filter_single_pole_iir_filter_xx.xml
+share/gnuradio/grc/blocks/variable_band_pass_filter_taps.xml
+share/gnuradio/grc/blocks/variable_band_reject_filter_taps.xml
+share/gnuradio/grc/blocks/variable_high_pass_filter_taps.xml
+share/gnuradio/grc/blocks/variable_low_pass_filter_taps.xml
+share/gnuradio/grc/blocks/variable_rrc_filter_taps.xml
