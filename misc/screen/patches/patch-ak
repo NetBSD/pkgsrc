@@ -1,15 +1,15 @@
-$NetBSD: patch-ak,v 1.7 2015/02/13 04:44:40 rodent Exp $
+$NetBSD: patch-ak,v 1.8 2015/09/01 13:34:47 kim Exp $
 
-Patch configure after configure.in (see patch-aj).
+Patch configure after configure.ac (see patch-aj).
 
 Include curses header when testing tgetent in order to prevent
 crash on 64-bit architectures.
 
 Detect getutent correctly on NetBSD with utmpx.
 
---- configure.orig	2014-04-26 10:58:46.000000000 +0000
-+++ configure
-@@ -5017,6 +5017,8 @@ else
+--- configure.orig	2015-06-28 21:42:40.000000000 +0000
++++ configure	2015-09-01 13:12:22.000000000 +0000
+@@ -5018,6 +5018,8 @@
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -18,7 +18,7 @@ Detect getutent correctly on NetBSD with utmpx.
  main()
  {
   exit(strcmp(tgoto("%p1%d", 0, 1), "1") ? 0 : 1);
-@@ -5413,9 +5415,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -5414,9 +5416,16 @@
  
  #include <time.h> /* to get time_t on SCO */
  #include <sys/types.h>

@@ -1,6 +1,13 @@
-$NetBSD: patch-ao,v 1.4 2015/09/01 12:16:31 kim Exp $
+$NetBSD: patch-ao,v 1.5 2015/09/01 13:34:47 kim Exp $
 
 Replace configurable paths with tags.
+
+BE CAREFUL IF YOU WANT TO REGENERATE THIS PATCH!
+YOU MUST RUN DIFF BEFORE SUBSTITUTIONS!
+
+% make clean && make extract && make pre-patch && make do-patch
+
+RUNNING "make patch" TAKES YOU TOO FAR.
 
 --- etc/etcscreenrc.orig	Sun Apr 29 01:25:34 2001
 +++ etc/etcscreenrc
