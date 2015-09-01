@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2015/08/02 02:48:34 manu Exp $
+# $NetBSD: Makefile,v 1.54 2015/09/01 16:02:54 manu Exp $
 
-DISTNAME=	glusterfs-3.7.3
+DISTNAME=	glusterfs-3.7.4
 #PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
@@ -31,6 +31,7 @@ REPLACE_PYTHON+=	geo-replication/syncdaemon/changelogagent.py
 REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncd.py
 REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncdstatus.py
 REPLACE_PYTHON+=	tools/gfind_missing_files/gfid_to_path.py
+REPLACE_PYTHON+=	tools/glusterfind/S57glusterfind-delete-post.py
 REPLACE_PYTHON+=	tools/glusterfind/glusterfind.in
 REPLACE_PYTHON+=	tools/glusterfind/src/__init__.py
 REPLACE_PYTHON+=	tools/glusterfind/src/brickfind.py
