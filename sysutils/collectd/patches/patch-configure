@@ -1,66 +1,10 @@
-$NetBSD: patch-configure,v 1.7 2015/08/26 12:19:27 he Exp $
+$NetBSD: patch-configure,v 1.8 2015/09/01 09:00:04 he Exp $
 
 Regen from configure.ac.
 
 --- configure.orig	2015-05-27 07:51:50.000000000 +0000
 +++ configure
-@@ -975,12 +975,6 @@ BUILD_WITH_LIBSIGROK_FALSE
- BUILD_WITH_LIBSIGROK_TRUE
- BUILD_WITH_LIBSIGROK_LDFLAGS
- BUILD_WITH_LIBSIGROK_CFLAGS
--GLIB_COMPILE_RESOURCES
--GLIB_MKENUMS
--GOBJECT_QUERY
--GLIB_GENMARSHAL
--GLIB_LIBS
--GLIB_CFLAGS
- BUILD_WITH_LM_SENSORS_FALSE
- BUILD_WITH_LM_SENSORS_TRUE
- BUILD_WITH_LIBSENSORS_LDFLAGS
-@@ -1083,9 +1077,6 @@ BUILD_WITH_LIBGCRYPT_TRUE
- GCRYPT_LIBS
- GCRYPT_LDFLAGS
- GCRYPT_CPPFLAGS
--LIBGCRYPT_LIBS
--LIBGCRYPT_CFLAGS
--LIBGCRYPT_CONFIG
- BUILD_WITH_LIBGANGLIA_FALSE
- BUILD_WITH_LIBGANGLIA_TRUE
- GANGLIA_LIBS
-@@ -1327,7 +1318,6 @@ with_libdbi
- with_libesmtp
- with_libganglia
- with_libgcrypt
--with_libgcrypt_prefix
- with_libiptc
- with_java
- with_libldap
-@@ -1354,7 +1344,6 @@ with_librouteros
- with_librrd
- with_libsensors
- with_libsigrok
--enable_glibtest
- with_libstatgrab
- with_libtokyotyrant
- with_libudev
-@@ -2156,7 +2145,6 @@ Optional Features:
-   --disable-silent-rules  verbose build output (undo: "make V=0")
-   --disable-largefile     omit support for large files
-   --enable-standards      Enable standards compliance mode
--  --disable-glibtest      do not try to compile and run a test GLIB program
- 
- collectd features:
-   --enable-debug          enable debugging (disabled by def)
-@@ -2334,8 +2322,6 @@ collectd additional packages:
-                           Path to libganglia.
-   --with-libgcrypt[=PREFIX]
-                           Path to libgcrypt.
--  --with-libgcrypt-prefix=PFX
--                          prefix where LIBGCRYPT is installed (optional)
-   --with-libiptc[=PREFIX] Path to libiptc.
-   --with-java[=PREFIX]    Path to Java home.
-   --with-libldap[=PREFIX] Path to libldap.
-@@ -3625,8 +3611,8 @@ esac
+@@ -3625,8 +3625,8 @@ esac
  
  
  
@@ -71,7 +15,7 @@ Regen from configure.ac.
  
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
-@@ -5196,8 +5182,7 @@ else
+@@ -5196,8 +5196,7 @@ else
      ;;
    *)
      lt_cv_sys_max_cmd_len=`(getconf ARG_MAX) 2> /dev/null`
@@ -81,7 +25,7 @@ Regen from configure.ac.
        lt_cv_sys_max_cmd_len=`expr $lt_cv_sys_max_cmd_len \/ 4`
        lt_cv_sys_max_cmd_len=`expr $lt_cv_sys_max_cmd_len \* 3`
      else
-@@ -5598,6 +5583,10 @@ freebsd* | dragonfly*)
+@@ -5598,6 +5597,10 @@ freebsd* | dragonfly*)
    fi
    ;;
  
@@ -92,7 +36,7 @@ Regen from configure.ac.
  haiku*)
    lt_cv_deplibs_check_method=pass_all
    ;;
-@@ -5636,11 +5625,11 @@ irix5* | irix6* | nonstopux*)
+@@ -5636,11 +5639,11 @@ irix5* | irix6* | nonstopux*)
    ;;
  
  # This must be glibc/ELF.
@@ -106,7 +50,7 @@ Regen from configure.ac.
    if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
      lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
    else
-@@ -6760,7 +6749,7 @@ ia64-*-hpux*)
+@@ -6760,7 +6763,7 @@ ia64-*-hpux*)
    rm -rf conftest*
    ;;
  
@@ -115,7 +59,7 @@ Regen from configure.ac.
  s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
    # Find out which ABI we are using.
    echo 'int i;' > conftest.$ac_ext
-@@ -6776,19 +6765,9 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+@@ -6776,19 +6779,9 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
  	    LD="${LD-ld} -m elf_i386_fbsd"
  	    ;;
  	  x86_64-*linux*)
@@ -127,17 +71,17 @@ Regen from configure.ac.
 -		LD="${LD-ld} -m elf_i386"
 -		;;
 -	    esac
--	    ;;
--	  powerpc64le-*)
--	    LD="${LD-ld} -m elf32lppclinux"
 +	    LD="${LD-ld} -m elf_i386"
  	    ;;
+-	  powerpc64le-*)
+-	    LD="${LD-ld} -m elf32lppclinux"
+-	    ;;
 -	  powerpc64-*)
 +	  ppc64-*linux*|powerpc64-*linux*)
  	    LD="${LD-ld} -m elf32ppclinux"
  	    ;;
  	  s390x-*linux*)
-@@ -6807,10 +6786,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+@@ -6807,10 +6800,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
  	  x86_64-*linux*)
  	    LD="${LD-ld} -m elf_x86_64"
  	    ;;
@@ -149,7 +93,7 @@ Regen from configure.ac.
  	    LD="${LD-ld} -m elf64ppc"
  	    ;;
  	  s390*-*linux*|s390*-*tpf*)
-@@ -8613,7 +8589,7 @@ lt_prog_compiler_static=
+@@ -8613,7 +8603,7 @@ lt_prog_compiler_static=
        lt_prog_compiler_static='-non_shared'
        ;;
  
@@ -158,7 +102,7 @@ Regen from configure.ac.
        case $cc_basename in
        # old Intel for x86_64 which still supported -KPIC.
        ecc*)
-@@ -9091,9 +9067,6 @@ $as_echo_n "checking whether the $compil
+@@ -9091,9 +9081,6 @@ $as_echo_n "checking whether the $compil
    openbsd*)
      with_gnu_ld=no
      ;;
@@ -168,7 +112,7 @@ Regen from configure.ac.
    esac
  
    ld_shlibs=yes
-@@ -9315,7 +9288,7 @@ _LT_EOF
+@@ -9315,7 +9302,7 @@ _LT_EOF
        fi
        ;;
  
@@ -177,7 +121,7 @@ Regen from configure.ac.
        if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
-@@ -9492,7 +9465,6 @@ _LT_EOF
+@@ -9492,7 +9479,6 @@ _LT_EOF
  	if test "$aix_use_runtimelinking" = yes; then
  	  shared_flag="$shared_flag "'${wl}-G'
  	fi
@@ -185,7 +129,7 @@ Regen from configure.ac.
        else
  	# not using gcc
  	if test "$host_cpu" = ia64; then
-@@ -9946,7 +9918,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -9946,7 +9932,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs=yes
        ;;
  
@@ -194,7 +138,7 @@ Regen from configure.ac.
        if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
        else
-@@ -10783,6 +10755,17 @@ freebsd* | dragonfly*)
+@@ -10783,6 +10769,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -212,7 +156,7 @@ Regen from configure.ac.
  haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -10899,7 +10882,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -10899,7 +10896,7 @@ linux*oldld* | linux*aout* | linux*coff*
    ;;
  
  # This must be glibc/ELF.
@@ -221,7 +165,7 @@ Regen from configure.ac.
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
    need_version=no
-@@ -10963,18 +10946,6 @@ fi
+@@ -10963,18 +10960,6 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -240,7 +184,7 @@ Regen from configure.ac.
  netbsd*)
    version_type=sunos
    need_lib_prefix=no
-@@ -12555,7 +12526,7 @@ else
+@@ -12555,7 +12540,7 @@ else
      # at 6.2 and later dlopen does load deplibs.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
@@ -249,7 +193,7 @@ Regen from configure.ac.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
    openbsd*)
-@@ -13026,7 +12997,7 @@ $as_echo "#define LIBTOOL_VERSION 2" >>c
+@@ -13026,7 +13011,7 @@ $as_echo "#define LIBTOOL_VERSION 2" >>c
  
  
  
@@ -258,7 +202,7 @@ Regen from configure.ac.
  
  # Find a good install program.  We prefer a C program (faster),
  # so one script is as good as another.  But avoid the broken or
-@@ -13215,7 +13186,7 @@ else
+@@ -13215,7 +13200,7 @@ else
  $as_echo "$as_me: WARNING: 'missing' script is too old or missing" >&2;}
  fi
  
@@ -267,7 +211,7 @@ Regen from configure.ac.
    case $am_aux_dir in
    *\ * | *\	*)
      install_sh="\${SHELL} '$am_aux_dir/install-sh'" ;;
-@@ -13564,8 +13535,8 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}ma
+@@ -13564,8 +13549,8 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}ma
  # <http://lists.gnu.org/archive/html/automake/2012-07/msg00014.html>
  mkdir_p='$(MKDIR_P)'
  
@@ -278,7 +222,7 @@ Regen from configure.ac.
  # Always define AMTAR for backward compatibility.  Yes, it's still used
  # in the wild :-(  We should find a proper way to deprecate it ...
  AMTAR='$${TAR-tar}'
-@@ -13835,6 +13806,7 @@ END
+@@ -13835,6 +13820,7 @@ END
      as_fn_error $? "Your 'rm' program is bad, sorry." "$LINENO" 5
    fi
  fi
@@ -286,7 +230,7 @@ Regen from configure.ac.
  # Check whether --enable-silent-rules was given.
  if test "${enable_silent_rules+set}" = set; then :
    enableval=$enable_silent_rules;
-@@ -13908,7 +13880,7 @@ else
+@@ -13908,7 +13894,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -295,7 +239,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -13954,7 +13926,7 @@ else
+@@ -13954,7 +13940,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -304,7 +248,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -13978,7 +13950,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -13978,7 +13964,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -313,7 +257,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -14023,7 +13995,7 @@ else
+@@ -14023,7 +14009,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -322,7 +266,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -14047,7 +14019,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -14047,7 +14033,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -331,7 +275,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -15319,6 +15291,12 @@ $as_echo "#define KERNEL_OPENBSD 1" >>co
+@@ -15319,6 +15305,12 @@ $as_echo "#define KERNEL_OPENBSD 1" >>co
  
  	ac_system="OpenBSD"
  	;;
@@ -344,7 +288,7 @@ Regen from configure.ac.
  	*aix*)
  
  $as_echo "#define KERNEL_AIX 1" >>confdefs.h
-@@ -15876,6 +15854,29 @@ fi
+@@ -15876,6 +15868,29 @@ fi
  done
  
  
@@ -374,7 +318,7 @@ Regen from configure.ac.
  # For ping library
  for ac_header in netinet/in_systm.h
  do :
-@@ -16215,6 +16216,27 @@ else
+@@ -16215,6 +16230,27 @@ else
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
  fi
@@ -402,7 +346,7 @@ Regen from configure.ac.
  
  # For hddtemp module
  for ac_header in linux/major.h
-@@ -19171,6 +19193,54 @@ else
+@@ -19171,6 +19207,54 @@ else
  fi
  
  
@@ -420,13 +364,13 @@ Regen from configure.ac.
 +
 +
 +
-+$as_echo "#define HAVE_STRUCT_KINFO_PROC_NETBSD 1" >>confdefs.h
++$as_echo "#define HAVE_STRUCT_KINFO_PROC2_NETBSD 1" >>confdefs.h
 +
-+		have_struct_kinfo_proc_netbsd="yes"
++		have_struct_kinfo_proc2_netbsd="yes"
 +
 +else
 +
-+		have_struct_kinfo_proc_netbsd="no"
++		have_struct_kinfo_proc2_netbsd="no"
 +
 +fi
 +ac_fn_c_check_member "$LINENO" "struct kinfo_proc2" "p_uru_maxrss" "ac_cv_member_struct_kinfo_proc2_p_uru_maxrss" "
@@ -443,13 +387,13 @@ Regen from configure.ac.
 +
 +
 +
-+$as_echo "#define HAVE_STRUCT_KINFO_PROC_NETBSD 1" >>confdefs.h
++$as_echo "#define HAVE_STRUCT_KINFO_PROC2_NETBSD 1" >>confdefs.h
 +
-+		have_struct_kinfo_proc_netbsd="yes"
++		have_struct_kinfo_proc2_netbsd="yes"
 +
 +else
 +
-+		have_struct_kinfo_proc_netbsd="no"
++		have_struct_kinfo_proc2_netbsd="no"
 +
 +fi
 +
@@ -457,588 +401,37 @@ Regen from configure.ac.
  ac_fn_c_check_member "$LINENO" "struct udphdr" "uh_dport" "ac_cv_member_struct_udphdr_uh_dport" "#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
  #if HAVE_STDINT_H
-@@ -20882,220 +20952,6 @@ fi
+@@ -20882,6 +20966,7 @@ fi
  
  	if test "$with_libgcrypt" != "no"; then
  
--# Check whether --with-libgcrypt-prefix was given.
--if test "${with_libgcrypt_prefix+set}" = set; then :
--  withval=$with_libgcrypt_prefix; libgcrypt_config_prefix="$withval"
--else
--  libgcrypt_config_prefix=""
--fi
--
--  if test x$libgcrypt_config_prefix != x ; then
--     if test x${LIBGCRYPT_CONFIG+set} != xset ; then
--        LIBGCRYPT_CONFIG=$libgcrypt_config_prefix/bin/libgcrypt-config
--     fi
--  fi
--
--  if test -n "$ac_tool_prefix"; then
--  # Extract the first word of "${ac_tool_prefix}libgcrypt-config", so it can be a program name with args.
--set dummy ${ac_tool_prefix}libgcrypt-config; ac_word=$2
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
--$as_echo_n "checking for $ac_word... " >&6; }
--if ${ac_cv_path_LIBGCRYPT_CONFIG+:} false; then :
--  $as_echo_n "(cached) " >&6
--else
--  case $LIBGCRYPT_CONFIG in
--  [\\/]* | ?:[\\/]*)
--  ac_cv_path_LIBGCRYPT_CONFIG="$LIBGCRYPT_CONFIG" # Let the user override the test with a path.
--  ;;
--  *)
--  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--    for ac_exec_ext in '' $ac_executable_extensions; do
--  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_path_LIBGCRYPT_CONFIG="$as_dir/$ac_word$ac_exec_ext"
--    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--  done
--IFS=$as_save_IFS
--
--  ;;
--esac
--fi
--LIBGCRYPT_CONFIG=$ac_cv_path_LIBGCRYPT_CONFIG
--if test -n "$LIBGCRYPT_CONFIG"; then
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $LIBGCRYPT_CONFIG" >&5
--$as_echo "$LIBGCRYPT_CONFIG" >&6; }
--else
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--fi
--
--
--fi
--if test -z "$ac_cv_path_LIBGCRYPT_CONFIG"; then
--  ac_pt_LIBGCRYPT_CONFIG=$LIBGCRYPT_CONFIG
--  # Extract the first word of "libgcrypt-config", so it can be a program name with args.
--set dummy libgcrypt-config; ac_word=$2
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
--$as_echo_n "checking for $ac_word... " >&6; }
--if ${ac_cv_path_ac_pt_LIBGCRYPT_CONFIG+:} false; then :
--  $as_echo_n "(cached) " >&6
--else
--  case $ac_pt_LIBGCRYPT_CONFIG in
--  [\\/]* | ?:[\\/]*)
--  ac_cv_path_ac_pt_LIBGCRYPT_CONFIG="$ac_pt_LIBGCRYPT_CONFIG" # Let the user override the test with a path.
--  ;;
--  *)
--  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--    for ac_exec_ext in '' $ac_executable_extensions; do
--  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_path_ac_pt_LIBGCRYPT_CONFIG="$as_dir/$ac_word$ac_exec_ext"
--    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--  done
--IFS=$as_save_IFS
--
--  ;;
--esac
--fi
--ac_pt_LIBGCRYPT_CONFIG=$ac_cv_path_ac_pt_LIBGCRYPT_CONFIG
--if test -n "$ac_pt_LIBGCRYPT_CONFIG"; then
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_pt_LIBGCRYPT_CONFIG" >&5
--$as_echo "$ac_pt_LIBGCRYPT_CONFIG" >&6; }
--else
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--fi
--
--  if test "x$ac_pt_LIBGCRYPT_CONFIG" = x; then
--    LIBGCRYPT_CONFIG="no"
--  else
--    case $cross_compiling:$ac_tool_warned in
--yes:)
--{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
--$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
--ac_tool_warned=yes ;;
--esac
--    LIBGCRYPT_CONFIG=$ac_pt_LIBGCRYPT_CONFIG
--  fi
--else
--  LIBGCRYPT_CONFIG="$ac_cv_path_LIBGCRYPT_CONFIG"
--fi
--
--  tmp=1:1.2.0
--  if echo "$tmp" | grep ':' >/dev/null 2>/dev/null ; then
--     req_libgcrypt_api=`echo "$tmp"     | sed 's/\(.*\):\(.*\)/\1/'`
--     min_libgcrypt_version=`echo "$tmp" | sed 's/\(.*\):\(.*\)/\2/'`
--  else
--     req_libgcrypt_api=0
--     min_libgcrypt_version="$tmp"
--  fi
--
--  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBGCRYPT - version >= $min_libgcrypt_version" >&5
--$as_echo_n "checking for LIBGCRYPT - version >= $min_libgcrypt_version... " >&6; }
--  ok=no
--  if test "$LIBGCRYPT_CONFIG" != "no" ; then
--    req_major=`echo $min_libgcrypt_version | \
--               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1/'`
--    req_minor=`echo $min_libgcrypt_version | \
--               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\2/'`
--    req_micro=`echo $min_libgcrypt_version | \
--               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\3/'`
--    libgcrypt_config_version=`$LIBGCRYPT_CONFIG --version`
--    major=`echo $libgcrypt_config_version | \
--               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\1/'`
--    minor=`echo $libgcrypt_config_version | \
--               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\2/'`
--    micro=`echo $libgcrypt_config_version | \
--               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
--    if test "$major" -gt "$req_major"; then
--        ok=yes
--    else
--        if test "$major" -eq "$req_major"; then
--            if test "$minor" -gt "$req_minor"; then
--               ok=yes
--            else
--               if test "$minor" -eq "$req_minor"; then
--                   if test "$micro" -ge "$req_micro"; then
--                     ok=yes
--                   fi
--               fi
--            fi
--        fi
--    fi
--  fi
--  if test $ok = yes; then
--    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes ($libgcrypt_config_version)" >&5
--$as_echo "yes ($libgcrypt_config_version)" >&6; }
--  else
--    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--  fi
--  if test $ok = yes; then
--     # If we have a recent libgcrypt, we should also check that the
--     # API is compatible
--     if test "$req_libgcrypt_api" -gt 0 ; then
--        tmp=`$LIBGCRYPT_CONFIG --api-version 2>/dev/null || echo 0`
--        if test "$tmp" -gt 0 ; then
--           { $as_echo "$as_me:${as_lineno-$LINENO}: checking LIBGCRYPT API version" >&5
--$as_echo_n "checking LIBGCRYPT API version... " >&6; }
--           if test "$req_libgcrypt_api" -eq "$tmp" ; then
--             { $as_echo "$as_me:${as_lineno-$LINENO}: result: okay" >&5
--$as_echo "okay" >&6; }
--           else
--             ok=no
--             { $as_echo "$as_me:${as_lineno-$LINENO}: result: does not match. want=$req_libgcrypt_api got=$tmp" >&5
--$as_echo "does not match. want=$req_libgcrypt_api got=$tmp" >&6; }
--           fi
--        fi
--     fi
--  fi
--  if test $ok = yes; then
--    LIBGCRYPT_CFLAGS=`$LIBGCRYPT_CONFIG --cflags`
--    LIBGCRYPT_LIBS=`$LIBGCRYPT_CONFIG --libs`
--    :
++
+ # Check whether --with-libgcrypt-prefix was given.
+ if test "${with_libgcrypt_prefix+set}" = set; then :
+   withval=$with_libgcrypt_prefix; libgcrypt_config_prefix="$withval"
+@@ -21065,10 +21150,9 @@ $as_echo "does not match. want=$req_libg
+     LIBGCRYPT_CFLAGS=`$LIBGCRYPT_CONFIG --cflags`
+     LIBGCRYPT_LIBS=`$LIBGCRYPT_CONFIG --libs`
+     :
 -    if test x"$host" != x ; then
 -      libgcrypt_config_host=`$LIBGCRYPT_CONFIG --host 2>/dev/null || echo none`
 -      if test x"$libgcrypt_config_host" != xnone ; then
 -        if test x"$libgcrypt_config_host" != x"$host" ; then
--  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING:
--***
--*** The config script $LIBGCRYPT_CONFIG was
--*** built for $libgcrypt_config_host and thus may not match the
--*** used host $host.
--*** You may want to use the configure option --with-libgcrypt-prefix
--*** to specify a matching config script.
--***" >&5
--$as_echo "$as_me: WARNING:
--***
--*** The config script $LIBGCRYPT_CONFIG was
--*** built for $libgcrypt_config_host and thus may not match the
--*** used host $host.
--*** You may want to use the configure option --with-libgcrypt-prefix
--*** to specify a matching config script.
--***" >&2;}
++    libgcrypt_config_host=`$LIBGCRYPT_CONFIG --host 2>/dev/null || echo none`
++    if test x"$libgcrypt_config_host" != xnone ; then
++      if test x"$libgcrypt_config_host" != x"$host" ; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING:
+ ***
+ *** The config script $LIBGCRYPT_CONFIG was
+@@ -21085,7 +21169,6 @@ $as_echo "$as_me: WARNING:
+ *** You may want to use the configure option --with-libgcrypt-prefix
+ *** to specify a matching config script.
+ ***" >&2;}
 -        fi
--      fi
--    fi
--  else
--    LIBGCRYPT_CFLAGS=""
--    LIBGCRYPT_LIBS=""
--    with_libgcrypt="no (version 1.2.0+ required)"
--  fi
--
--
--
- 		GCRYPT_CPPFLAGS="$LIBGCRYPT_CPPFLAGS $LIBGCRYPT_CFLAGS"
- 		GCRYPT_LIBS="$LIBGCRYPT_LIBS"
- 	fi
-@@ -25235,358 +25091,7 @@ fi
- if test "x$with_libsigrok" = "xyes"
- then
- 
--	 # Check whether --enable-glibtest was given.
--if test "${enable_glibtest+set}" = set; then :
--  enableval=$enable_glibtest;
--else
--  enable_glibtest=yes
--fi
--
--
--  pkg_config_args=glib-2.0
--  for module in .
--  do
--      case "$module" in
--         gmodule)
--             pkg_config_args="$pkg_config_args gmodule-2.0"
--         ;;
--         gmodule-no-export)
--             pkg_config_args="$pkg_config_args gmodule-no-export-2.0"
--         ;;
--         gobject)
--             pkg_config_args="$pkg_config_args gobject-2.0"
--         ;;
--         gthread)
--             pkg_config_args="$pkg_config_args gthread-2.0"
--         ;;
--         gio*)
--             pkg_config_args="$pkg_config_args $module-2.0"
--         ;;
--      esac
--  done
--
--
--
--
--
--
--
--
--if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
--	if test -n "$ac_tool_prefix"; then
--  # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
--set dummy ${ac_tool_prefix}pkg-config; ac_word=$2
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
--$as_echo_n "checking for $ac_word... " >&6; }
--if ${ac_cv_path_PKG_CONFIG+:} false; then :
--  $as_echo_n "(cached) " >&6
--else
--  case $PKG_CONFIG in
--  [\\/]* | ?:[\\/]*)
--  ac_cv_path_PKG_CONFIG="$PKG_CONFIG" # Let the user override the test with a path.
--  ;;
--  *)
--  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--    for ac_exec_ext in '' $ac_executable_extensions; do
--  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_path_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
--    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--  done
--IFS=$as_save_IFS
--
--  ;;
--esac
--fi
--PKG_CONFIG=$ac_cv_path_PKG_CONFIG
--if test -n "$PKG_CONFIG"; then
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PKG_CONFIG" >&5
--$as_echo "$PKG_CONFIG" >&6; }
--else
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--fi
--
--
--fi
--if test -z "$ac_cv_path_PKG_CONFIG"; then
--  ac_pt_PKG_CONFIG=$PKG_CONFIG
--  # Extract the first word of "pkg-config", so it can be a program name with args.
--set dummy pkg-config; ac_word=$2
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
--$as_echo_n "checking for $ac_word... " >&6; }
--if ${ac_cv_path_ac_pt_PKG_CONFIG+:} false; then :
--  $as_echo_n "(cached) " >&6
--else
--  case $ac_pt_PKG_CONFIG in
--  [\\/]* | ?:[\\/]*)
--  ac_cv_path_ac_pt_PKG_CONFIG="$ac_pt_PKG_CONFIG" # Let the user override the test with a path.
--  ;;
--  *)
--  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--    for ac_exec_ext in '' $ac_executable_extensions; do
--  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_path_ac_pt_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
--    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--  done
--IFS=$as_save_IFS
--
--  ;;
--esac
--fi
--ac_pt_PKG_CONFIG=$ac_cv_path_ac_pt_PKG_CONFIG
--if test -n "$ac_pt_PKG_CONFIG"; then
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_pt_PKG_CONFIG" >&5
--$as_echo "$ac_pt_PKG_CONFIG" >&6; }
--else
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--fi
--
--  if test "x$ac_pt_PKG_CONFIG" = x; then
--    PKG_CONFIG=""
--  else
--    case $cross_compiling:$ac_tool_warned in
--yes:)
--{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
--$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
--ac_tool_warned=yes ;;
--esac
--    PKG_CONFIG=$ac_pt_PKG_CONFIG
--  fi
--else
--  PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
--fi
--
--fi
--if test -n "$PKG_CONFIG"; then
--	_pkg_min_version=0.16
--	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking pkg-config is at least version $_pkg_min_version" >&5
--$as_echo_n "checking pkg-config is at least version $_pkg_min_version... " >&6; }
--	if $PKG_CONFIG --atleast-pkgconfig-version $_pkg_min_version; then
--		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
--$as_echo "yes" >&6; }
--	else
--		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--		PKG_CONFIG=""
--	fi
--fi
--
--  no_glib=""
--
--  if test "x$PKG_CONFIG" = x ; then
--    no_glib=yes
--    PKG_CONFIG=no
--  fi
--
--  min_glib_version=2.28.0
--  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GLIB - version >= $min_glib_version" >&5
--$as_echo_n "checking for GLIB - version >= $min_glib_version... " >&6; }
--
--  if test x$PKG_CONFIG != xno ; then
--    ## don't try to run the test against uninstalled libtool libs
--    if $PKG_CONFIG --uninstalled $pkg_config_args; then
--	  echo "Will use uninstalled version of GLib found in PKG_CONFIG_PATH"
--	  enable_glibtest=no
--    fi
--
--    if $PKG_CONFIG --atleast-version $min_glib_version $pkg_config_args; then
--	  :
--    else
--	  no_glib=yes
--    fi
--  fi
--
--  if test x"$no_glib" = x ; then
--    GLIB_GENMARSHAL=`$PKG_CONFIG --variable=glib_genmarshal glib-2.0`
--    GOBJECT_QUERY=`$PKG_CONFIG --variable=gobject_query glib-2.0`
--    GLIB_MKENUMS=`$PKG_CONFIG --variable=glib_mkenums glib-2.0`
--    GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable=glib_compile_resources gio-2.0`
--
--    GLIB_CFLAGS=`$PKG_CONFIG --cflags $pkg_config_args`
--    GLIB_LIBS=`$PKG_CONFIG --libs $pkg_config_args`
--    glib_config_major_version=`$PKG_CONFIG --modversion glib-2.0 | \
--           sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
--    glib_config_minor_version=`$PKG_CONFIG --modversion glib-2.0 | \
--           sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\2/'`
--    glib_config_micro_version=`$PKG_CONFIG --modversion glib-2.0 | \
--           sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\3/'`
--    if test "x$enable_glibtest" = "xyes" ; then
--      ac_save_CFLAGS="$CFLAGS"
--      ac_save_LIBS="$LIBS"
--      CFLAGS="$CFLAGS $GLIB_CFLAGS"
--      LIBS="$GLIB_LIBS $LIBS"
--      rm -f conf.glibtest
--      if test "$cross_compiling" = yes; then :
--  echo $ac_n "cross compiling; assumed OK... $ac_c"
--else
--  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
--/* end confdefs.h.  */
--
--#include <glib.h>
--#include <stdio.h>
--#include <stdlib.h>
--
--int
--main ()
--{
--  unsigned int major, minor, micro;
--
--  fclose (fopen ("conf.glibtest", "w"));
--
--  if (sscanf("$min_glib_version", "%u.%u.%u", &major, &minor, &micro) != 3) {
--     printf("%s, bad version string\n", "$min_glib_version");
--     exit(1);
--   }
--
--  if ((glib_major_version != $glib_config_major_version) ||
--      (glib_minor_version != $glib_config_minor_version) ||
--      (glib_micro_version != $glib_config_micro_version))
--    {
--      printf("\n*** 'pkg-config --modversion glib-2.0' returned %d.%d.%d, but GLIB (%d.%d.%d)\n",
--             $glib_config_major_version, $glib_config_minor_version, $glib_config_micro_version,
--             glib_major_version, glib_minor_version, glib_micro_version);
--      printf ("*** was found! If pkg-config was correct, then it is best\n");
--      printf ("*** to remove the old version of GLib. You may also be able to fix the error\n");
--      printf("*** by modifying your LD_LIBRARY_PATH enviroment variable, or by editing\n");
--      printf("*** /etc/ld.so.conf. Make sure you have run ldconfig if that is\n");
--      printf("*** required on your system.\n");
--      printf("*** If pkg-config was wrong, set the environment variable PKG_CONFIG_PATH\n");
--      printf("*** to point to the correct configuration files\n");
--    }
--  else if ((glib_major_version != GLIB_MAJOR_VERSION) ||
--	   (glib_minor_version != GLIB_MINOR_VERSION) ||
--           (glib_micro_version != GLIB_MICRO_VERSION))
--    {
--      printf("*** GLIB header files (version %d.%d.%d) do not match\n",
--	     GLIB_MAJOR_VERSION, GLIB_MINOR_VERSION, GLIB_MICRO_VERSION);
--      printf("*** library (version %d.%d.%d)\n",
--	     glib_major_version, glib_minor_version, glib_micro_version);
--    }
--  else
--    {
--      if ((glib_major_version > major) ||
--        ((glib_major_version == major) && (glib_minor_version > minor)) ||
--        ((glib_major_version == major) && (glib_minor_version == minor) && (glib_micro_version >= micro)))
--      {
--        return 0;
--       }
--     else
--      {
--        printf("\n*** An old version of GLIB (%u.%u.%u) was found.\n",
--               glib_major_version, glib_minor_version, glib_micro_version);
--        printf("*** You need a version of GLIB newer than %u.%u.%u. The latest version of\n",
--	       major, minor, micro);
--        printf("*** GLIB is always available from ftp://ftp.gtk.org.\n");
--        printf("***\n");
--        printf("*** If you have already installed a sufficiently new version, this error\n");
--        printf("*** probably means that the wrong copy of the pkg-config shell script is\n");
--        printf("*** being found. The easiest way to fix this is to remove the old version\n");
--        printf("*** of GLIB, but you can also set the PKG_CONFIG environment to point to the\n");
--        printf("*** correct copy of pkg-config. (In this case, you will have to\n");
--        printf("*** modify your LD_LIBRARY_PATH enviroment variable, or edit /etc/ld.so.conf\n");
--        printf("*** so that the correct libraries are found at run-time))\n");
--      }
--    }
--  return 1;
--}
--
--_ACEOF
--if ac_fn_c_try_run "$LINENO"; then :
--
--else
--  no_glib=yes
--fi
--rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
--  conftest.$ac_objext conftest.beam conftest.$ac_ext
--fi
--
--       CFLAGS="$ac_save_CFLAGS"
--       LIBS="$ac_save_LIBS"
--     fi
--  fi
--  if test "x$no_glib" = x ; then
--     { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes (version $glib_config_major_version.$glib_config_minor_version.$glib_config_micro_version)" >&5
--$as_echo "yes (version $glib_config_major_version.$glib_config_minor_version.$glib_config_micro_version)" >&6; }
--     with_libsigrok_cflags="$with_libsigrok_cflags $GLIB_CFLAGS"; with_libsigrok_ldflags="$with_libsigrok_ldflags $GLIB_LIBS"
--  else
--     { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--     if test "$PKG_CONFIG" = "no" ; then
--       echo "*** A new enough version of pkg-config was not found."
--       echo "*** See http://www.freedesktop.org/software/pkgconfig/"
--     else
--       if test -f conf.glibtest ; then
--        :
--       else
--          echo "*** Could not run GLIB test program, checking why..."
--          ac_save_CFLAGS="$CFLAGS"
--          ac_save_LIBS="$LIBS"
--          CFLAGS="$CFLAGS $GLIB_CFLAGS"
--          LIBS="$LIBS $GLIB_LIBS"
--          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
--/* end confdefs.h.  */
--
--#include <glib.h>
--#include <stdio.h>
--
--int
--main ()
--{
-- return ((glib_major_version) || (glib_minor_version) || (glib_micro_version));
--  ;
--  return 0;
--}
--_ACEOF
--if ac_fn_c_try_link "$LINENO"; then :
--   echo "*** The test program compiled, but did not run. This usually means"
--          echo "*** that the run-time linker is not finding GLIB or finding the wrong"
--          echo "*** version of GLIB. If it is not finding GLIB, you'll need to set your"
--          echo "*** LD_LIBRARY_PATH environment variable, or edit /etc/ld.so.conf to point"
--          echo "*** to the installed location  Also, make sure you have run ldconfig if that"
--          echo "*** is required on your system"
--	  echo "***"
--          echo "*** If you have an old version installed, it is best to remove it, although"
--          echo "*** you may also be able to get things to work by modifying LD_LIBRARY_PATH"
--else
--   echo "*** The test program failed to compile or link. See the file config.log for the"
--          echo "*** exact error that occured. This usually means GLIB is incorrectly installed."
--fi
--rm -f core conftest.err conftest.$ac_objext \
--    conftest$ac_exeext conftest.$ac_ext
--          CFLAGS="$ac_save_CFLAGS"
--          LIBS="$ac_save_LIBS"
--       fi
--     fi
--     GLIB_CFLAGS=""
--     GLIB_LIBS=""
--     GLIB_GENMARSHAL=""
--     GOBJECT_QUERY=""
--     GLIB_MKENUMS=""
--     GLIB_COMPILE_RESOURCES=""
--     :
--  fi
--
--
--
--
--
--
--  rm -f conf.glibtest
-+	 with_libsigrok="no (glib not available)"
- 
- 
- fi
-@@ -27648,6 +27153,14 @@ then
+       fi
+     fi
+   else
+@@ -27648,6 +27731,14 @@ then
  	plugin_tcpconns="yes"
  fi
  
@@ -1053,7 +446,7 @@ Regen from configure.ac.
  # Mac OS X devices
  if test "x$with_libiokit" = "xyes"
  then
-@@ -27890,6 +27403,11 @@ then
+@@ -27890,6 +27981,11 @@ then
  	plugin_swap="yes"
  fi
  
