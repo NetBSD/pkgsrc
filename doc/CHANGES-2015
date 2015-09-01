@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3709 2015/09/01 04:16:05 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3710 2015/09/01 11:37:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6588,3 +6588,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/deforaos-notes version 0.0.0 [khorben 2015-09-01]
 	Updated meta-pkgs/deforaos-desktop to 0.0.8 [khorben 2015-09-01]
 	Updated ham/gnuradio-core to 3.7.8 [mef 2015-09-01]
+	Updated chat/ejabberd to 15.07 [fhajny 2015-09-01]
