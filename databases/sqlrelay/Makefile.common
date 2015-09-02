@@ -1,16 +1,17 @@
-# $NetBSD: Makefile.common,v 1.9 2015/06/12 10:48:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/09/02 12:39:33 fhajny Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
 # used by databases/ruby-sqlrelay/Makefile
 # used by databases/sqlrelay-freetds/Makefile
 # used by databases/sqlrelay-mysql/Makefile
+# used by databases/sqlrelay-nodejs/Makefile
 # used by databases/sqlrelay-odbc/Makefile
 # used by databases/sqlrelay-pgsql/Makefile
 # used by databases/sqlrelay-sqlite/Makefile
 # used by databases/sqlrelay/Makefile
 
-DISTNAME=		sqlrelay-0.59
+DISTNAME=		sqlrelay-0.63
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
