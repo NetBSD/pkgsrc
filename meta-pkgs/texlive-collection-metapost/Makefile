@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/06/14 13:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/02 10:56:49 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2015
+PKGNAME=	texlive-${DISTNAME}-2015.37994
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	32455
+TEXLIVE_REV=	37994
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -30,6 +30,7 @@ DEPENDS+=	tex-garrigues-[0-9]*:../../graphics/tex-garrigues
 DEPENDS+=	tex-gmp-[0-9]*:../../graphics/tex-gmp
 DEPENDS+=	tex-hatching-[0-9]*:../../graphics/tex-hatching
 DEPENDS+=	tex-latexmp-[0-9]*:../../graphics/tex-latexmp
+DEPENDS+=	tex-mcf2graph-[0-9]*:../../graphics/tex-mcf2graph
 DEPENDS+=	tex-metago-[0-9]*:../../graphics/tex-metago
 DEPENDS+=	tex-metaobj-[0-9]*:../../graphics/tex-metaobj
 DEPENDS+=	tex-metaplot-[0-9]*:../../graphics/tex-metaplot
@@ -44,6 +45,8 @@ DEPENDS+=	tex-mpgraphics-[0-9]*:../../graphics/tex-mpgraphics
 DEPENDS+=	tex-piechartmp-[0-9]*:../../graphics/tex-piechartmp
 DEPENDS+=	tex-repere-[0-9]*:../../graphics/tex-repere
 DEPENDS+=	tex-roex-[0-9]*:../../graphics/tex-roex
+DEPENDS+=	tex-roundrect-[0-9]*:../../graphics/tex-roundrect
+DEPENDS+=	tex-shapes-[0-9]*:../../graphics/tex-shapes
 DEPENDS+=	tex-slideshow-[0-9]*:../../graphics/tex-slideshow
 DEPENDS+=	tex-splines-[0-9]*:../../graphics/tex-splines
 DEPENDS+=	tex-suanpan-[0-9]*:../../graphics/tex-suanpan
