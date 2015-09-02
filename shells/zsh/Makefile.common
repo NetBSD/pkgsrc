@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.75 2015/06/04 15:08:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.76 2015/09/02 10:54:29 szptvlfn Exp $
 # used by shells/zsh/Makefile
-# used by shells/zsh-current/Makefile
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://zsh.sourceforge.net/
@@ -126,6 +125,13 @@ PLIST.dynamic=	yes
 ################################################################################
 
 .undef MANZ
+
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Interix"
+do-patch:
+	# $ sha1 files/patch-ac
+	# SHA1 (files/patch-ac) = 602d7f8c1db02a7a15d920a55da6ac7ac80ee70e
+	${PATCH} -d ${WRKSRC} -i ${FILESDIR}/patch-ac
+.endif
 
 pre-install:
 	cd ${WRKSRC}/Completion; ${FIND} . -name \*.orig -exec ${RM} \{\} \;
