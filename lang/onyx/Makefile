@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/01/05 04:10:06 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2015/09/02 04:43:52 dholland Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	2
@@ -31,8 +31,9 @@ do-install:
 post-install:
 	strip ${DESTDIR}${PREFIX}/bin/onyx
 
+.include "../../devel/editline/buildlink3.mk"
+BUILDLINK_API_DEPENDS.editline+=	editline>=2.6	# explicitly checked
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if ${PTHREAD_TYPE} == "pth"
