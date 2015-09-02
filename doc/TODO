@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14835 2015/09/02 15:15:39 wiedi Exp $
+$NetBSD: TODO,v 1.14836 2015/09/02 23:38:21 mef Exp $
 
 Suggested new packages
 ======================
@@ -1914,7 +1914,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xinput-1.6.1
 	o xjman-0.7
 	o xli-2006.11.10
-	o xlog-2.0.13
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml-security-c-1.7.3
