@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/06/14 13:28:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/02 11:20:24 markd Exp $
 
 DISTNAME=	collection-langcjk
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37224
@@ -14,7 +14,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 
 DEPENDS+=	tex-adobemapping-[0-9]*:../../fonts/tex-adobemapping
 DEPENDS+=	tex-c90-[0-9]*:../../print/tex-c90
-# cjk-gs-integrate
+DEPENDS+=	tex-cjk-gs-integrate-[0-9]*:../../print/tex-cjk-gs-integrate
 DEPENDS+=	tex-cjk-[0-9]*:../../print/tex-cjk
 DEPENDS+=	tex-cjkpunct-[0-9]*:../../print/tex-cjkpunct
 DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
