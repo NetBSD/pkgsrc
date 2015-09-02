@@ -1,4 +1,4 @@
-/* $NetBSD: sha2.c,v 1.4 2015/09/01 19:38:42 agc Exp $ */
+/* $NetBSD: sha2.c,v 1.5 2015/09/02 17:15:09 jperkin Exp $ */
 /*	$KAME: sha2.c,v 1.9 2003/07/20 00:28:38 itojun Exp $	*/
 
 /*
@@ -478,7 +478,7 @@ netpgpv_SHA256_Update(NETPGPV_SHA256_CTX *context, const uint8_t *data, size_t l
 			context->bitcount += freespace << 3;
 			len -= freespace;
 			data += freespace;
-			SHA256_Transform(context,
+			netpgpv_SHA256_Transform(context,
 			    (uint32_t *)(void *)context->buffer);
 		} else {
 			/* The buffer is not yet full */
@@ -498,7 +498,7 @@ netpgpv_SHA256_Update(NETPGPV_SHA256_CTX *context, const uint8_t *data, size_t l
 	 */
 	if ((uintptr_t)data % 4 == 0) {
 		while (len >= SHA256_BLOCK_LENGTH) {
-			SHA256_Transform(context,
+			netpgpv_SHA256_Transform(context,
 			    (const uint32_t *)(const void *)data);
 			context->bitcount += SHA256_BLOCK_LENGTH << 3;
 			len -= SHA256_BLOCK_LENGTH;
@@ -507,7 +507,7 @@ netpgpv_SHA256_Update(NETPGPV_SHA256_CTX *context, const uint8_t *data, size_t l
 	} else {
 		while (len >= SHA256_BLOCK_LENGTH) {
 			memcpy(context->buffer, data, SHA256_BLOCK_LENGTH);
-			SHA256_Transform(context,
+			netpgpv_SHA256_Transform(context,
 			    (const uint32_t *)(const void *)context->buffer);
 			context->bitcount += SHA256_BLOCK_LENGTH << 3;
 			len -= SHA256_BLOCK_LENGTH;
@@ -552,7 +552,7 @@ netpgpv_SHA224_256_Final(uint8_t digest[], NETPGPV_SHA256_CTX *context, size_t l
 					    usedspace));
 				}
 				/* Do second-to-last transform: */
-				SHA256_Transform(context,
+				netpgpv_SHA256_Transform(context,
 				    (uint32_t *)(void *)context->buffer);
 
 				/* And set-up for the last transform: */
@@ -572,7 +572,7 @@ netpgpv_SHA224_256_Final(uint8_t digest[], NETPGPV_SHA256_CTX *context, size_t l
 		    &context->bitcount, sizeof(context->bitcount));
 
 		/* Final transform: */
-		SHA256_Transform(context, (uint32_t *)(void *)context->buffer);
+		netpgpv_SHA256_Transform(context, (uint32_t *)(void *)context->buffer);
 
 		for (i = 0; i < len / 4; i++)
 			be32encode(digest + 4 * i, context->state[i]);
@@ -610,13 +610,13 @@ netpgpv_SHA224_Init(NETPGPV_SHA224_CTX *context)
 int
 netpgpv_SHA224_Update(NETPGPV_SHA224_CTX *context, const uint8_t *data, size_t len)
 {
-	return SHA256_Update((NETPGPV_SHA256_CTX *)context, data, len);
+	return netpgpv_SHA256_Update((NETPGPV_SHA256_CTX *)context, data, len);
 }
 
 void
-SHA224_Transform(NETPGPV_SHA224_CTX *context, const uint32_t *data)
+netpgpv_SHA224_Transform(NETPGPV_SHA224_CTX *context, const uint32_t *data)
 {
-	SHA256_Transform((NETPGPV_SHA256_CTX *)context, data);
+	netpgpv_SHA256_Transform((NETPGPV_SHA256_CTX *)context, data);
 }
 
 int
@@ -819,7 +819,7 @@ netpgpv_SHA512_Update(NETPGPV_SHA512_CTX *context, const uint8_t *data, size_t l
 			ADDINC128(context->bitcount, freespace << 3);
 			len -= freespace;
 			data += freespace;
-			SHA512_Transform(context,
+			netpgpv_SHA512_Transform(context,
 			    (uint64_t *)(void *)context->buffer);
 		} else {
 			/* The buffer is not yet full */
@@ -839,7 +839,7 @@ netpgpv_SHA512_Update(NETPGPV_SHA512_CTX *context, const uint8_t *data, size_t l
 	 */
 	if ((uintptr_t)data % 8 == 0) {
 		while (len >= SHA512_BLOCK_LENGTH) {
-			SHA512_Transform(context,
+			netpgpv_SHA512_Transform(context,
 			    (const uint64_t*)(const void *)data);
 			ADDINC128(context->bitcount, SHA512_BLOCK_LENGTH << 3);
 			len -= SHA512_BLOCK_LENGTH;
@@ -848,7 +848,7 @@ netpgpv_SHA512_Update(NETPGPV_SHA512_CTX *context, const uint8_t *data, size_t l
 	} else {
 		while (len >= SHA512_BLOCK_LENGTH) {
 			memcpy(context->buffer, data, SHA512_BLOCK_LENGTH);
-			SHA512_Transform(context,
+			netpgpv_SHA512_Transform(context,
 			    (const void *)context->buffer);
 			ADDINC128(context->bitcount, SHA512_BLOCK_LENGTH << 3);
 			len -= SHA512_BLOCK_LENGTH;
@@ -888,7 +888,7 @@ netpgpv_SHA512_Last(NETPGPV_SHA512_CTX *context)
 				    (size_t)(SHA512_BLOCK_LENGTH - usedspace));
 			}
 			/* Do second-to-last transform: */
-			SHA512_Transform(context,
+			netpgpv_SHA512_Transform(context,
 			    (uint64_t *)(void *)context->buffer);
 
 			/* And set-up for the last transform: */
@@ -909,7 +909,7 @@ netpgpv_SHA512_Last(NETPGPV_SHA512_CTX *context)
 	    &context->bitcount[0], sizeof(context->bitcount[0]));
 
 	/* Final transform: */
-	SHA512_Transform(context, (uint64_t *)(void *)context->buffer);
+	netpgpv_SHA512_Transform(context, (uint64_t *)(void *)context->buffer);
 }
 
 int
@@ -950,13 +950,13 @@ netpgpv_SHA384_Init(NETPGPV_SHA384_CTX *context)
 int
 netpgpv_SHA384_Update(NETPGPV_SHA384_CTX *context, const uint8_t *data, size_t len)
 {
-	return SHA512_Update((NETPGPV_SHA512_CTX *)context, data, len);
+	return netpgpv_SHA512_Update((NETPGPV_SHA512_CTX *)context, data, len);
 }
 
 void
 netpgpv_SHA384_Transform(NETPGPV_SHA512_CTX *context, const uint64_t *data)
 {
-	SHA512_Transform((NETPGPV_SHA512_CTX *)context, data);
+	netpgpv_SHA512_Transform((NETPGPV_SHA512_CTX *)context, data);
 }
 
 int
