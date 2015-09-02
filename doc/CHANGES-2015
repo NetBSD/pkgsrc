@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3732 2015/09/02 04:24:55 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.3733 2015/09/02 07:41:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6642,3 +6642,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated cad/eagle to 7.4.0 [mef 2015-09-02]
 	Updated devel/afl to 1.89b [mef 2015-09-02]
 	Updated lang/ocaml to 4.02.3nb1 [dholland 2015-09-02]
+	Updated devel/p5-Date-Manip to 6.51 [wiz 2015-09-02]
