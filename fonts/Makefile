@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2015/07/02 13:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.287 2015/09/02 11:10:08 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -196,6 +196,8 @@ SUBDIR+=	tamsyn-font
 SUBDIR+=	terminus-font
 SUBDIR+=	tex-Asana-Math
 SUBDIR+=	tex-Asana-Math-doc
+SUBDIR+=	tex-academicons
+SUBDIR+=	tex-academicons-doc
 SUBDIR+=	tex-accanthis
 SUBDIR+=	tex-accanthis-doc
 SUBDIR+=	tex-accfonts
@@ -345,6 +347,8 @@ SUBDIR+=	tex-cns
 SUBDIR+=	tex-cns-doc
 SUBDIR+=	tex-comfortaa
 SUBDIR+=	tex-comfortaa-doc
+SUBDIR+=	tex-comicneue
+SUBDIR+=	tex-comicneue-doc
 SUBDIR+=	tex-concmath
 SUBDIR+=	tex-concmath-doc
 SUBDIR+=	tex-concmath-fonts
@@ -419,6 +423,8 @@ SUBDIR+=	tex-erewhon
 SUBDIR+=	tex-erewhon-doc
 SUBDIR+=	tex-esint
 SUBDIR+=	tex-esint-doc
+SUBDIR+=	tex-esrelation
+SUBDIR+=	tex-esrelation-doc
 SUBDIR+=	tex-esstix
 SUBDIR+=	tex-esstix-doc
 SUBDIR+=	tex-esvect
@@ -704,6 +710,8 @@ SUBDIR+=	tex-sourcecodepro
 SUBDIR+=	tex-sourcecodepro-doc
 SUBDIR+=	tex-sourcesanspro
 SUBDIR+=	tex-sourcesanspro-doc
+SUBDIR+=	tex-sourceserifpro
+SUBDIR+=	tex-sourceserifpro-doc
 SUBDIR+=	tex-starfont
 SUBDIR+=	tex-starfont-doc
 SUBDIR+=	tex-staves
@@ -736,6 +744,8 @@ SUBDIR+=	tex-txfonts
 SUBDIR+=	tex-txfonts-doc
 SUBDIR+=	tex-txfontsb
 SUBDIR+=	tex-txfontsb-doc
+SUBDIR+=	tex-typicons
+SUBDIR+=	tex-typicons-doc
 SUBDIR+=	tex-uhc
 SUBDIR+=	tex-uhc-doc
 SUBDIR+=	tex-umtypewriter
