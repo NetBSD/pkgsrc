@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3733 2015/09/02 07:41:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3734 2015/09/02 10:56:57 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6643,3 +6643,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/afl to 1.89b [mef 2015-09-02]
 	Updated lang/ocaml to 4.02.3nb1 [dholland 2015-09-02]
 	Updated devel/p5-Date-Manip to 6.51 [wiz 2015-09-02]
+	Updated shells/zsh to 5.1 [szptvlfn 2015-09-02]
