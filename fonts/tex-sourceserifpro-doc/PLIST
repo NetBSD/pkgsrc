@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:06:14 markd Exp $
+share/texmf-dist/doc/latex/sourceserifpro/LICENSE.txt
+share/texmf-dist/doc/latex/sourceserifpro/sourceserifpro-otf-specimen.pdf
+share/texmf-dist/doc/latex/sourceserifpro/sourceserifpro-otf-specimen.tex
+share/texmf-dist/doc/latex/sourceserifpro/sourceserifpro-type1-specimen.pdf
+share/texmf-dist/doc/latex/sourceserifpro/sourceserifpro-type1-specimen.tex
+share/texmf-dist/doc/latex/sourceserifpro/sourceserifpro.pdf
+share/texmf-dist/doc/latex/sourceserifpro/sourceserifpro.tex

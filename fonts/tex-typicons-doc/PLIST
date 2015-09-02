@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:06:14 markd Exp $
+share/texmf-dist/doc/fonts/typicons/README
+share/texmf-dist/doc/fonts/typicons/typicons.pdf
+share/texmf-dist/doc/fonts/typicons/typicons.tex
