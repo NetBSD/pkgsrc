@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/08/23 14:12:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2015/09/02 21:04:18 fhajny Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -340,17 +340,17 @@ lib/mailman/bin/unshunt
 lib/mailman/bin/update
 lib/mailman/bin/version
 lib/mailman/bin/withlist
-lib/mailman/cgi-bin/admin${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/admindb${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/confirm${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/create${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/edithtml${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/listinfo${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/options${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/private${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/rmlist${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/roster${MAILMAN_CGIEXT}
-lib/mailman/cgi-bin/subscribe${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/admin.cgi
+lib/mailman/cgi-bin/admindb.cgi
+lib/mailman/cgi-bin/confirm.cgi
+lib/mailman/cgi-bin/create.cgi
+lib/mailman/cgi-bin/edithtml.cgi
+lib/mailman/cgi-bin/listinfo.cgi
+lib/mailman/cgi-bin/options.cgi
+lib/mailman/cgi-bin/private.cgi
+lib/mailman/cgi-bin/rmlist.cgi
+lib/mailman/cgi-bin/roster.cgi
+lib/mailman/cgi-bin/subscribe.cgi
 lib/mailman/cron/bumpdigests
 lib/mailman/cron/checkdbs
 lib/mailman/cron/cull_bad_shunt
@@ -780,6 +780,7 @@ lib/mailman/templates/el/unsub.txt
 lib/mailman/templates/el/unsubauth.txt
 lib/mailman/templates/el/userpass.txt
 lib/mailman/templates/el/verify.txt
+lib/mailman/templates/en/adminaddrchgack.txt
 lib/mailman/templates/en/admindbdetails.html
 lib/mailman/templates/en/admindbpreamble.html
 lib/mailman/templates/en/admindbsummary.html
@@ -1231,6 +1232,7 @@ lib/mailman/templates/hu/unsub.txt
 lib/mailman/templates/hu/unsubauth.txt
 lib/mailman/templates/hu/userpass.txt
 lib/mailman/templates/hu/verify.txt
+lib/mailman/templates/ia/adminaddrchgack.txt
 lib/mailman/templates/ia/admindbdetails.html
 lib/mailman/templates/ia/admindbpreamble.html
 lib/mailman/templates/ia/admindbsummary.html
@@ -1693,6 +1695,7 @@ lib/mailman/templates/ro/unsub.txt
 lib/mailman/templates/ro/unsubauth.txt
 lib/mailman/templates/ro/userpass.txt
 lib/mailman/templates/ro/verify.txt
+lib/mailman/templates/ru/adminaddrchgack.txt
 lib/mailman/templates/ru/admindbdetails.html
 lib/mailman/templates/ru/admindbpreamble.html
 lib/mailman/templates/ru/admindbsummary.html
@@ -2253,4 +2256,3 @@ share/doc/mailman/mailman-member.ps
 share/doc/mailman/mailman-member.txt
 share/examples/mailman/crontab.in
 share/examples/mailman/mailman.conf
-@pkgdir lib/mailman/pythonlib
