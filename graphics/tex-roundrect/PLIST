@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 10:50:40 markd Exp $
+share/texmf-dist/metapost/roundrect/roundrect.mp

@@ -1,0 +1,4 @@
+The shapes set of macros allows drawing regular polygons; their
+corresponding reentrant stars in all their variations; and
+fractionally filled circles (useful for visually demonstrating
+the nature of fractions) in Metapost.
