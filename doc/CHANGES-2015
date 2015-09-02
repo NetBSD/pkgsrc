@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3749 2015/09/02 16:52:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3750 2015/09/02 18:42:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6680,3 +6680,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/hiredis to 0.13.2 [wiedi 2015-09-02]
 	Updated mail/rspamd to 0.9.10 [wiedi 2015-09-02]
 	Updated devel/py-mercurial to 3.5.1 [wiz 2015-09-02]
+	Updated mail/postgrey to 1.36 [fhajny 2015-09-02]
