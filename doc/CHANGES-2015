@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3734 2015/09/02 10:56:57 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.3735 2015/09/02 11:26:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6644,3 +6644,25 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ocaml to 4.02.3nb1 [dholland 2015-09-02]
 	Updated devel/p5-Date-Manip to 6.51 [wiz 2015-09-02]
 	Updated shells/zsh to 5.1 [szptvlfn 2015-09-02]
+	Added graphics/tex-mcf2graph version 3.53 [markd 2015-09-02]
+	Added graphics/tex-mcf2graph-doc version 3.53 [markd 2015-09-02]
+	Added graphics/tex-roundrect version 1.0 [markd 2015-09-02]
+	Added graphics/tex-roundrect-doc version 1.0 [markd 2015-09-02]
+	Added graphics/tex-shapes version 1.0 [markd 2015-09-02]
+	Added graphics/tex-shapes-doc version 1.0 [markd 2015-09-02]
+	Updated meta-pkgs/texlive-collection-metapost to 2015.37994 [markd 2015-09-02]
+	Added fonts/tex-academicons-doc version 1.5 [markd 2015-09-02]
+	Added fonts/tex-academicons version 1.5 [markd 2015-09-02]
+	Added fonts/tex-comicneue-doc version 1.0 [markd 2015-09-02]
+	Added fonts/tex-comicneue version 1.0 [markd 2015-09-02]
+	Added fonts/tex-esrelation-doc version 2015 [markd 2015-09-02]
+	Added fonts/tex-esrelation version 2015 [markd 2015-09-02]
+	Added fonts/tex-sourceserifpro-doc version 1.1 [markd 2015-09-02]
+	Added fonts/tex-sourceserifpro version 1.1 [markd 2015-09-02]
+	Added fonts/tex-typicons-doc version 2.0.7 [markd 2015-09-02]
+	Added fonts/tex-typicons version 2.0.7 [markd 2015-09-02]
+	Updated meta-pkgs/texlive-collection-fontsextra to 2015 [markd 2015-09-02]
+	Added print/tex-cjk-gs-integrate version 20150506.1 [markd 2015-09-02]
+	Added print/tex-cjk-gs-integrate-doc version 20150506.1 [markd 2015-09-02]
+	Updated meta-pkgs/texlive-collection-langcjk to 2015 [markd 2015-09-02]
+	Updated meta-pkgs/texlive-collection-langkorean to 2015 [markd 2015-09-02]
