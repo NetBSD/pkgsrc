@@ -1,0 +1,14 @@
+This package provides access in (La)TeX to 20 high quality
+icons of online academic profiles included in the free
+"Academicons" font. It requires the fontspec package and either
+the Xe(La)TeX or the Lua(La)TeX engine to load the included
+academicons.ttf font. The "Academicons" font was designed by
+James Walsh and released (see
+http://jpswalsh.github.io/academicons/) under the SIL Open Font
+License. This package is inspired by and based on the
+fontawesome package. academicons.sty provides the generic
+\aiicon command to access icons, which takes as a mandatory
+argument the name of the desired icon. It also provides
+individual direct commands for each specific icon. The full
+list of icons and their respective names and direct commands
+can be found in the manual.
