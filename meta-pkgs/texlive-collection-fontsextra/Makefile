@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/08/02 02:56:36 markd Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/02 11:13:54 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37744
@@ -13,7 +13,7 @@ COMMENT=	Additional fonts for TeX
 DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-Asana-Math-[0-9]*:../../fonts/tex-Asana-Math
-# depend academicons
+DEPENDS+=	tex-academicons-[0-9]*:../../fonts/tex-academicons
 DEPENDS+=	tex-accanthis-[0-9]*:../../fonts/tex-accanthis
 DEPENDS+=	tex-adforn-[0-9]*:../../fonts/tex-adforn
 DEPENDS+=	tex-adfsymbols-[0-9]*:../../fonts/tex-adfsymbols
@@ -71,7 +71,7 @@ DEPENDS+=	tex-cmll-[0-9]*:../../fonts/tex-cmll
 DEPENDS+=	tex-cmpica-[0-9]*:../../fonts/tex-cmpica
 DEPENDS+=	tex-cmtiup-[0-9]*:../../fonts/tex-cmtiup
 DEPENDS+=	tex-comfortaa-[0-9]*:../../fonts/tex-comfortaa
-# depend comicneue
+DEPENDS+=	tex-comicneue-[0-9]*:../../fonts/tex-comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
 DEPENDS+=	tex-countriesofeurope-[0-9]*:../../fonts/tex-countriesofeurope
@@ -103,7 +103,7 @@ DEPENDS+=	tex-elvish-[0-9]*:../../fonts/tex-elvish
 DEPENDS+=	tex-epigrafica-[0-9]*:../../fonts/tex-epigrafica
 DEPENDS+=	tex-epsdice-[0-9]*:../../fonts/tex-epsdice
 DEPENDS+=	tex-erewhon-[0-9]*:../../fonts/tex-erewhon
-# depend esrelation
+DEPENDS+=	tex-esrelation-[0-9]*:../../fonts/tex-esrelation
 DEPENDS+=	tex-esstix-[0-9]*:../../fonts/tex-esstix
 DEPENDS+=	tex-esvect-[0-9]*:../../fonts/tex-esvect
 DEPENDS+=	tex-eulervm-[0-9]*:../../fonts/tex-eulervm
@@ -213,7 +213,7 @@ DEPENDS+=	tex-semaphor-[0-9]*:../../fonts/tex-semaphor
 DEPENDS+=	tex-skull-[0-9]*:../../fonts/tex-skull
 DEPENDS+=	tex-sourcecodepro-[0-9]*:../../fonts/tex-sourcecodepro
 DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
-# depend sourceserifpro
+DEPENDS+=	tex-sourceserifpro-[0-9]*:../../fonts/tex-sourceserifpro
 DEPENDS+=	tex-starfont-[0-9]*:../../fonts/tex-starfont
 DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
 DEPENDS+=	tex-stix-[0-9]*:../../fonts/tex-stix
@@ -224,7 +224,7 @@ DEPENDS+=	tex-tfrupee-[0-9]*:../../fonts/tex-tfrupee
 DEPENDS+=	tex-tpslifonts-[0-9]*:../../print/tex-tpslifonts
 DEPENDS+=	tex-trajan-[0-9]*:../../fonts/tex-trajan
 DEPENDS+=	tex-txfontsb-[0-9]*:../../fonts/tex-txfontsb
-# depend typicons
+DEPENDS+=	tex-typicons-[0-9]*:../../fonts/tex-typicons
 DEPENDS+=	tex-umtypewriter-[0-9]*:../../fonts/tex-umtypewriter
 DEPENDS+=	tex-universa-[0-9]*:../../fonts/tex-universa
 DEPENDS+=	tex-universalis-[0-9]*:../../fonts/tex-universalis
