@@ -1,0 +1,5 @@
+This package provides Source Serif Pro for LaTeX. It includes
+both Type1 and OpenType fonts and selects the latter when using
+XeLaTeX or LuaLaTeX. Issues with this package can be reported
+on GitHub (https://github.com/silkeh/latex-
+sourceserifpro/issues) or emailed to tex@slxh.nl.
