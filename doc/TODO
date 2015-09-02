@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14834 2015/09/02 13:09:40 wen Exp $
+$NetBSD: TODO,v 1.14835 2015/09/02 15:15:39 wiedi Exp $
 
 Suggested new packages
 ======================
@@ -1653,7 +1653,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rsnapshot-1.4.0
-	o rspamd-0.9.9
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.2
