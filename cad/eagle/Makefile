@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2015/08/13 20:27:43 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2015/09/02 01:55:13 mef Exp $
 
-DISTNAME=		eagle-lin32-7.3.0
-PKGREVISION=		1
+DISTNAME=		eagle-lin32-7.4.0
 PKGNAME=		${DISTNAME:S/-lin32//}
 CATEGORIES=		cad
-MASTER_SITES=		http://web.cadsoft.de/ftp/eagle/program/7.3/
+MASTER_SITES=		http://web.cadsoft.de/ftp/eagle/program/7.4/
 EXTRACT_SUFX=		.run
 EXTRACT_CMD=		tail +126 $$extract_file | ${TOOLS_PATH.bsdtar} -C ${WRKDIR} -xjf -
 
