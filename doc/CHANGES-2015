@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3752 2015/09/02 21:25:27 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3753 2015/09/02 23:19:57 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6683,3 +6683,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/postgrey to 1.36 [fhajny 2015-09-02]
 	Updated mail/mailman to 2.1.20 [fhajny 2015-09-02]
 	Updated ham/tlf to 0.9.31.2 [mef 2015-09-02]
+	Updated x11/deforaos-panel to 0.3.3 [khorben 2015-09-03]
