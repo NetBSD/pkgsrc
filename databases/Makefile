@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2015/08/30 17:42:56 wiz Exp $
+# $NetBSD: Makefile,v 1.496 2015/09/02 12:44:07 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -488,6 +488,7 @@ SUBDIR+=	sqlrelay
 SUBDIR+=	sqlrelay-freetds
 SUBDIR+=	sqlrelay-mysql
 SUBDIR+=	sqlrelay-odbc
+SUBDIR+=	sqlrelay-nodejs
 SUBDIR+=	sqlrelay-pgsql
 SUBDIR+=	sqlrelay-sqlite
 SUBDIR+=	sqsh
