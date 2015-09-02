@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:06:14 markd Exp $
+share/texmf-dist/fonts/map/dvips/esrelation/esrelation.map
+share/texmf-dist/fonts/source/public/esrelation/esrelation.mf
+share/texmf-dist/fonts/source/public/esrelation/esrelation10.mf
+share/texmf-dist/fonts/tfm/public/esrelation/esrelation10.tfm
+share/texmf-dist/fonts/type1/public/esrelation/esrelation10.pfb
+share/texmf-dist/tex/latex/esrelation/esrelation.sty
+share/texmf-dist/tex/latex/esrelation/uesrelation.fd

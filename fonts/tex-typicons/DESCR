@@ -1,0 +1,11 @@
+This package grants access to 336 web-related icons provided by
+the included "Typicons" free font, designed by Stephen
+Hutchings and released under the SIL Open Font License. See
+http://www.typicons.com for more details about the font itself.
+This package requires the fontspec package and either the
+Xe(La)TeX or Lua(La)TeX engine to load the included ttf font.
+Once the package is loaded, icons can be accessed through the
+general \ticon command, which takes as argument the name of the
+desired icon, or through direct commands specific to each icon.
+The full list of icon designs, names and direct commands is
+showcased in the manual.
