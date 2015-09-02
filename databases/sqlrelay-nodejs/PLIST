@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 12:44:07 fhajny Exp $
+lib/node_modules/sqlrelay/index.js
+lib/node_modules/sqlrelay/package.json
+lib/node_modules/sqlrelay/sqlrelay.node
