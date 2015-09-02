@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.648 2015/09/01 21:24:12 markd Exp $
+# $NetBSD: Makefile,v 1.649 2015/09/02 11:18:43 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -365,6 +365,8 @@ SUBDIR+=	tex-cite
 SUBDIR+=	tex-cite-doc
 SUBDIR+=	tex-cjk
 SUBDIR+=	tex-cjk-doc
+SUBDIR+=	tex-cjk-gs-integrate
+SUBDIR+=	tex-cjk-gs-integrate-doc
 SUBDIR+=	tex-cjk-ko
 SUBDIR+=	tex-cjk-ko-doc
 SUBDIR+=	tex-cjkpunct
