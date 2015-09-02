@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:17:24 markd Exp $
+share/texmf-dist/doc/fonts/cjk-gs-integrate/ChangeLog
+share/texmf-dist/doc/fonts/cjk-gs-integrate/README.md
+share/texmf-dist/doc/fonts/cjk-gs-integrate/macosx-filelist
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/Makefile
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-CNS1.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-GB1-012.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-GB1-345.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-GB1.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-Japan1.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-Korea1.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/cidtable.sty
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/japanese-updmap-tests/do-tests
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/japanese-updmap-tests/prn-variants.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/japanese-updmap-tests/report
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/otfcidsample.tex
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/test-runner.sh
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tools/mkgsfntspecs.sh
+share/texmf-dist/doc/fonts/cjk-gs-integrate/tools/release.sh
