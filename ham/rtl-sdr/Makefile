@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/08/09 06:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/02 20:56:23 mef Exp $
 
 DISTNAME=		rtl-sdr-0.5.3
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=steve-m/}
 GITHUB_PROJECT=		librtlsdr
-GITHUB_TAG=		v0.5.3
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdr.osmocom.org/trac/wiki/rtl-sdr
