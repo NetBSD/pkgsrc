@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3754 2015/09/02 23:22:34 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.3755 2015/09/02 23:38:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6685,3 +6685,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/tlf to 0.9.31.2 [mef 2015-09-02]
 	Updated x11/deforaos-panel to 0.3.3 [khorben 2015-09-03]
 	Updated meta-pkgs/deforaos-desktop to 0.0.9 [khorben 2015-09-03]
+	Updated ham/xlog to 2.0.13 [mef 2015-09-02]
