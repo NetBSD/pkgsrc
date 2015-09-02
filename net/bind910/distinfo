@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/07/28 22:36:38 taca Exp $
+$NetBSD: distinfo,v 1.9 2015/09/02 19:46:44 sevan Exp $
 
 SHA1 (bind-9.10.2-P3.tar.gz) = ab362f2632db923accd1b29e37b8fffa66d21d8d
 RMD160 (bind-9.10.2-P3.tar.gz) = 1cd59e605ab723a1e051dfd6727f4534f3368efa
@@ -8,6 +8,18 @@ SHA1 (patch-bin_tests_system_Makefile.in) = 8bb6130981a6ff2ac736cf53a061115782bb
 SHA1 (patch-config.threads.in) = 227b83efe9cb3e301aaac9b97cf42f1fb8ad06b2
 SHA1 (patch-configure) = 3ea12f60b26064679e086ef5e637420b95d165be
 SHA1 (patch-contrib_dlz_config.dlz.in) = f18bec63fbfce7cb2cd72929058ce3770fce458f
+SHA1 (patch-lib_dns_hmac_link.c) = 4ed376d95d5588b0b4fd408f7e889b6ec2c23f1f
+SHA1 (patch-lib_dns_include_dst_dst.h) = 574b8c74cfc5e48c535716be0dc4adc38078ad18
+SHA1 (patch-lib_dns_ncache.c) = 95b50b3a89f7f7988ff15a16746e73500e85b321
+SHA1 (patch-lib_dns_openssldh_link.c) = 4f357bff84a822326833de7c132395c1cc252a94
+SHA1 (patch-lib_dns_openssldsa_link.c) = a21c32975643c939f4090db60c9066adac6a3800
+SHA1 (patch-lib_dns_opensslecdsa_link.c) = 6e33e77c40b64c887057a18e0f6d8406db55920a
+SHA1 (patch-lib_dns_opensslrsa_link.c) = e1f3a1f1d96ba56b877fd6123221ba8a54cef427
+SHA1 (patch-lib_dns_pkcs11dh_link.c) = 8a2fc71462a21bd17dab8e9221c00ce05694f4e2
+SHA1 (patch-lib_dns_pkcs11dsa_link.c) = 2ade7fe1e629e4d3ab4c486286105989f39f2b91
+SHA1 (patch-lib_dns_pkcs11rsa_link.c) = c59c26fec43a2193eee016be0c4169492395c351
 SHA1 (patch-lib_dns_rbt.c) = 510dfc72bc7764e548a46e9c48b58b2543490d7a
+SHA1 (patch-lib_dns_rdata_generic_openpgpkey_61.c) = 8b323bae83dc9bf508b4c6765462eac4271b8761
+SHA1 (patch-lib_dns_resolver.c) = b922349bb5e4f4c70aad67976fec41c642735d04
 SHA1 (patch-lib_lwres_getaddrinfo.c) = 69e9c8049fedcb93bd219c6053163f21ce3b2535
 SHA1 (patch-lib_lwres_getnameinfo.c) = 418ad349cf52925c9e8051b5c71d9d51ea8d2fb1
