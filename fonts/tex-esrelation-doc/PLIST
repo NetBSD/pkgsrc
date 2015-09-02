@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:06:14 markd Exp $
+share/texmf-dist/doc/fonts/esrelation/README
+share/texmf-dist/doc/fonts/esrelation/README.md
+share/texmf-dist/doc/fonts/esrelation/esrelation.pdf
