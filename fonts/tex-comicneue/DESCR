@@ -1,0 +1,5 @@
+Comic Neue is a well-known redesign of the (in)famous Comic
+Sans font. The package provides the original OpenType font for
+XeTeX and LuaTeX users, and also has converted Type1 files for
+pdfTeX users. Issues with this package can be reported on
+GitHub or emailed to tex@slxh.nl.
