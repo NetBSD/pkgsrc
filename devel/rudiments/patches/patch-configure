@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2015/05/19 14:12:40 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2015/09/02 12:37:09 fhajny Exp $
+
+Portability.
 
 --- configure.orig	2015-04-11 01:05:36.000000000 +0000
 +++ configure
