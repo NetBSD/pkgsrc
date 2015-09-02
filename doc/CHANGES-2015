@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3743 2015/09/02 12:40:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3744 2015/09/02 12:44:32 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6674,3 +6674,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django14 to 1.4.22 [joerg 2015-09-02]
 	Updated databases/sqlrelay to 0.63 [fhajny 2015-09-02]
 	Updated devel/p5-Log-Dispatch to 2.49 [mef 2015-09-02]
+	Added databases/sqlrelay-nodejs version 0.63 [fhajny 2015-09-02]
