@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3747 2015/09/02 15:13:30 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.3748 2015/09/02 15:15:40 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6678,3 +6678,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Log-Report to 1.07 [mef 2015-09-02]
 	Updated devel/p5-Throwable 0.200013 [wen 2015-09-02]
 	Updated databases/hiredis to 0.13.2 [wiedi 2015-09-02]
+	Updated mail/rspamd to 0.9.10 [wiedi 2015-09-02]
