@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2015/08/29 15:11:17 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.21 2015/09/02 23:18:45 khorben Exp $
 
-DISTNAME=	Panel-0.3.2
-PKGNAME=	deforaos-panel-0.3.2
+
+DISTNAME=	Panel-0.3.3
+PKGNAME=	deforaos-panel-0.3.3
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/4358/
+MASTER_SITES=	http://www.defora.org/os/download/download/4375/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
