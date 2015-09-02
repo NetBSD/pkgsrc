@@ -1,0 +1,3 @@
+The Molecular Coding Format (MCF) is a linear notation for
+describing chemical structure diagrams. This package converts
+MCF to graphic files using Metafont / MetaPost.

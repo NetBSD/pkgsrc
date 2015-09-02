@@ -1,0 +1,4 @@
+The roundrect macros for Metapost provide ways to produce
+rounded rectangles, which may or may not contain a title bar or
+text (the title bar may itself contain text). They are
+extremely configurable.
