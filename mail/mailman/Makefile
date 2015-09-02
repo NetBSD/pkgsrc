@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.74 2014/12/31 14:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2015/09/02 21:04:18 fhajny Exp $
 
-DISTNAME=	mailman-2.1.18-1
-PKGNAME=	mailman-2.1.18.1
-PKGREVISION=	1
+DISTNAME=	mailman-2.1.20
+PKGNAME=	mailman-2.1.20
 CATEGORIES=	mail www
-MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.18-1/+download/
+MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.20/+download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,8 +12,6 @@ COMMENT=	The GNU Mailing List Manager
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
-
-PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -105,11 +102,8 @@ CHECK_PERMS=	no
 
 REPLACE_PYTHON+=	cron/senddigests tests/fblast.py tests/onebounce.py
 
-# for readme.sr:
-# https://bugs.launchpad.net/mailman/+bug/1360616
 post-extract:
 	${CP} ${FILESDIR}/mailman.conf.dist ${WRKDIR}/mailman.conf.dist
-	cd ${WRKSRC} && mv messages/sr/readme.sr messages/sr/README.sr
 
 post-patch:
 	${RM} -f ${WRKSRC}/[A-Z]*.orig
