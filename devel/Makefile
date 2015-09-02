@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2140 2015/09/01 13:01:13 mef Exp $
+# $NetBSD: Makefile,v 1.2141 2015/09/02 13:04:12 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -1321,7 +1321,7 @@ SUBDIR+=	p5-String-Escape
 SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-String-PerlIdentifier
 SUBDIR+=	p5-String-Print
-SUBDIR+=	p5-Struct-Dump
+SUBDIR+=	p5-Struct-Dumb
 SUBDIR+=	p5-Sub-Exporter
 SUBDIR+=	p5-Sub-Exporter-ForMethods
 SUBDIR+=	p5-Sub-Exporter-GlobExporter
