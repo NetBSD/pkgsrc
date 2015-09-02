@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3735 2015/09/02 11:26:41 markd Exp $
+$NetBSD: CHANGES-2015,v 1.3736 2015/09/02 12:05:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6666,3 +6666,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-cjk-gs-integrate-doc version 20150506.1 [markd 2015-09-02]
 	Updated meta-pkgs/texlive-collection-langcjk to 2015 [markd 2015-09-02]
 	Updated meta-pkgs/texlive-collection-langkorean to 2015 [markd 2015-09-02]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.06 [mef 2015-09-02]
