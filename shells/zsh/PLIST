@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2015/06/13 12:57:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.32 2015/09/02 10:54:29 szptvlfn Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -136,6 +136,7 @@ share/zsh/${PKGVERSION}/functions/_bash_completions
 share/zsh/${PKGVERSION}/functions/_baz
 share/zsh/${PKGVERSION}/functions/_be_name
 share/zsh/${PKGVERSION}/functions/_beadm
+share/zsh/${PKGVERSION}/functions/_beep
 share/zsh/${PKGVERSION}/functions/_bind_addresses
 share/zsh/${PKGVERSION}/functions/_bindkey
 share/zsh/${PKGVERSION}/functions/_bison
@@ -182,6 +183,7 @@ share/zsh/${PKGVERSION}/functions/_comm
 share/zsh/${PKGVERSION}/functions/_command
 share/zsh/${PKGVERSION}/functions/_command_names
 share/zsh/${PKGVERSION}/functions/_comp_locale
+share/zsh/${PKGVERSION}/functions/_compadd
 share/zsh/${PKGVERSION}/functions/_compdef
 share/zsh/${PKGVERSION}/functions/_complete
 share/zsh/${PKGVERSION}/functions/_complete_debug
@@ -214,6 +216,8 @@ share/zsh/${PKGVERSION}/functions/_cygstart
 share/zsh/${PKGVERSION}/functions/_dak
 share/zsh/${PKGVERSION}/functions/_darcs
 share/zsh/${PKGVERSION}/functions/_date
+share/zsh/${PKGVERSION}/functions/_date_formats
+share/zsh/${PKGVERSION}/functions/_dates
 share/zsh/${PKGVERSION}/functions/_dbus
 share/zsh/${PKGVERSION}/functions/_dchroot
 share/zsh/${PKGVERSION}/functions/_dchroot-dsa
@@ -223,6 +227,7 @@ share/zsh/${PKGVERSION}/functions/_dd
 share/zsh/${PKGVERSION}/functions/_deb_architectures
 share/zsh/${PKGVERSION}/functions/_deb_packages
 share/zsh/${PKGVERSION}/functions/_debchange
+share/zsh/${PKGVERSION}/functions/_debcheckout
 share/zsh/${PKGVERSION}/functions/_debdiff
 share/zsh/${PKGVERSION}/functions/_debfoster
 share/zsh/${PKGVERSION}/functions/_debsign
@@ -250,6 +255,7 @@ share/zsh/${PKGVERSION}/functions/_django
 share/zsh/${PKGVERSION}/functions/_dladm
 share/zsh/${PKGVERSION}/functions/_dlocate
 share/zsh/${PKGVERSION}/functions/_dmidecode
+share/zsh/${PKGVERSION}/functions/_dnf
 share/zsh/${PKGVERSION}/functions/_domains
 share/zsh/${PKGVERSION}/functions/_dpatch-edit-patch
 share/zsh/${PKGVERSION}/functions/_dpkg
@@ -513,6 +519,7 @@ share/zsh/${PKGVERSION}/functions/_pack
 share/zsh/${PKGVERSION}/functions/_parameter
 share/zsh/${PKGVERSION}/functions/_parameters
 share/zsh/${PKGVERSION}/functions/_patch
+share/zsh/${PKGVERSION}/functions/_patchutils
 share/zsh/${PKGVERSION}/functions/_path_commands
 share/zsh/${PKGVERSION}/functions/_path_files
 share/zsh/${PKGVERSION}/functions/_pax
@@ -649,6 +656,7 @@ share/zsh/${PKGVERSION}/functions/_stat
 share/zsh/${PKGVERSION}/functions/_stgit
 share/zsh/${PKGVERSION}/functions/_store_cache
 share/zsh/${PKGVERSION}/functions/_strace
+share/zsh/${PKGVERSION}/functions/_strftime
 share/zsh/${PKGVERSION}/functions/_strip
 share/zsh/${PKGVERSION}/functions/_stty
 share/zsh/${PKGVERSION}/functions/_su
@@ -666,6 +674,7 @@ share/zsh/${PKGVERSION}/functions/_svcs_fmri
 share/zsh/${PKGVERSION}/functions/_svn-buildpackage
 share/zsh/${PKGVERSION}/functions/_sysctl
 share/zsh/${PKGVERSION}/functions/_sysstat
+share/zsh/${PKGVERSION}/functions/_systat
 share/zsh/${PKGVERSION}/functions/_system_profiler
 share/zsh/${PKGVERSION}/functions/_systemd
 share/zsh/${PKGVERSION}/functions/_tags
@@ -699,6 +708,7 @@ share/zsh/${PKGVERSION}/functions/_tracepath
 share/zsh/${PKGVERSION}/functions/_trap
 share/zsh/${PKGVERSION}/functions/_tree
 share/zsh/${PKGVERSION}/functions/_ttyctl
+share/zsh/${PKGVERSION}/functions/_ttys
 share/zsh/${PKGVERSION}/functions/_tune2fs
 share/zsh/${PKGVERSION}/functions/_twidge
 share/zsh/${PKGVERSION}/functions/_twisted
@@ -733,6 +743,7 @@ share/zsh/${PKGVERSION}/functions/_vars
 share/zsh/${PKGVERSION}/functions/_vcsh
 share/zsh/${PKGVERSION}/functions/_vim
 share/zsh/${PKGVERSION}/functions/_vim-addons
+share/zsh/${PKGVERSION}/functions/_vmstat
 share/zsh/${PKGVERSION}/functions/_vnc
 share/zsh/${PKGVERSION}/functions/_volume_groups
 share/zsh/${PKGVERSION}/functions/_vorbis
@@ -745,6 +756,8 @@ share/zsh/${PKGVERSION}/functions/_wajig
 share/zsh/${PKGVERSION}/functions/_wakeup_capable_devices
 share/zsh/${PKGVERSION}/functions/_wanna-build
 share/zsh/${PKGVERSION}/functions/_wanted
+share/zsh/${PKGVERSION}/functions/_watch
+share/zsh/${PKGVERSION}/functions/_watch-snoop
 share/zsh/${PKGVERSION}/functions/_wc
 share/zsh/${PKGVERSION}/functions/_webbrowser
 share/zsh/${PKGVERSION}/functions/_wget
@@ -834,6 +847,7 @@ share/zsh/${PKGVERSION}/functions/backward-kill-word-match
 share/zsh/${PKGVERSION}/functions/backward-word-match
 share/zsh/${PKGVERSION}/functions/bashcompinit
 share/zsh/${PKGVERSION}/functions/before
+share/zsh/${PKGVERSION}/functions/bracketed-paste-magic
 share/zsh/${PKGVERSION}/functions/calendar
 share/zsh/${PKGVERSION}/functions/calendar_add
 share/zsh/${PKGVERSION}/functions/calendar_edit
