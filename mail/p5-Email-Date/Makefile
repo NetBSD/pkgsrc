@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/02 12:54:21 mef Exp $
 
 DISTNAME=	Email-Date-1.104
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	p5-Email-Simple>=1.9:../../mail/p5-Email-Simple
 DEPENDS+=	p5-TimeDate>=2.27:../../time/p5-TimeDate
 DEPENDS+=	p5-Email-Abstract>=2.10:../../mail/p5-Email-Abstract
 DEPENDS+=	p5-Email-Date-Format>=1.000:../../mail/p5-Email-Date-Format
+# for make test
+BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=	auto/Email/Date/.packlist
 
