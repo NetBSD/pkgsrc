@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3738 2015/09/02 12:17:01 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3739 2015/09/02 12:29:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6669,3 +6669,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.06 [mef 2015-09-02]
 	Updated devel/p5-IO-Prompter to 0.004013 [mef 2015-09-02]
 	Updated devel/p5-List-UtilsBy to 0.10 [mef 2015-09-02]
+	Updated devel/p5-Log-Any-Adapter-Log4perl to 0.08 [mef 2015-09-02]
