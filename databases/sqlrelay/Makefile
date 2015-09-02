@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2015/06/12 10:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2015/09/02 12:39:33 fhajny Exp $
 
 COMMENT=		Database connection pooling middleware and API
-PKGREVISION=		2
 
 .include "../../databases/sqlrelay/Makefile.common"
 
@@ -12,7 +11,7 @@ CONFIGURE_ARGS+=	--disable-db2 --disable-erlang --disable-firebird	\
 			--disable-mysql --disable-odbc --disable-oracle		\
 			--disable-perl --disable-php --disable-postgresql	\
 			--disable-python --disable-ruby --disable-sqlite	\
-			--disable-sybase --disable-tcl
+			--disable-sybase --disable-tcl --disable-nodejs
 
 INSTALL_MAKE_FLAGS+=	EXAMPLEDIR=${DESTDIR}${EGDIR}
 
