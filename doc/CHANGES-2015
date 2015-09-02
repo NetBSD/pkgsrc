@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3730 2015/09/02 01:55:44 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3731 2015/09/02 03:43:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6639,3 +6639,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/iso-codes to 3.61 [mef 2015-09-01]
 	Updated textproc/p5-XML-LibXML to 2.0122 [mef 2015-09-01]
 	Updated cad/eagle to 7.4.0 [mef 2015-09-02]
+	Updated devel/afl to 1.89b [mef 2015-09-02]
