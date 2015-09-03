@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2015/09/03 14:49:02 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2015/09/03 21:04:34 wiz Exp $
 
 # Global and legacy options
 
@@ -9,9 +9,11 @@ PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
-# Comment the following line out on updates.
-#PKG_SUPPORTED_OPTIONS+=	mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
+# un-comment out the following lines whenever updating distinfo
+# and patches are up-to-date
+#PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
+#PKG_SUGGESTED_OPTIONS+=	mutt-sidebar
 
 .include "../../mk/bsd.options.mk"
 
@@ -115,7 +117,6 @@ CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
 
-PLIST_VARS+=		compressed
 ###
 ### Compressed mail boxes
 ###
@@ -131,7 +132,6 @@ SUBST_FILES.compress=	Makefile.in
 SUBST_SED.compress=	-e 's,^mutt_SOURCES = ,mutt_SOURCES = compress.c ,'
 SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
 SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
-PLIST.compressed=	yes
 # add xsltproc to be able to regenerate the documentation
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 .endif
@@ -149,19 +149,11 @@ CONFIGURE_ARGS+=	--disable-smtp
 ### Sidebar support
 ###
 .if !empty(PKG_OPTIONS:Mmutt-sidebar)
+# http://www.lunar-linux.org/mutt-sidebar/
 PATCH_SITES+=		http://lunar-linux.org/~tchan/mutt/
 PATCHFILES+=		patch-1.5.23.sidebar.20140412.txt
 PATCH_DIST_STRIP=	-p1
 PATCH_FUZZ_FACTOR=	-F1
-.endif
-
-###
-### X-Label header support
-###
-.if !empty(PKG_OPTIONS:Mmutt-xlabel)
-PATCH_SITES=		http://home.uchicago.edu/~dgc/sw/mutt/
-PATCHFILES+=		patch-1.5.17.dgc.xlabel_ext.9
-PATCH_DIST_STRIP=	-p1
 .endif
 
 ###
