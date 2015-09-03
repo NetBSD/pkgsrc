@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.40 2014/08/05 12:34:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2015/09/03 15:29:07 leot Exp $
 bin/liferea
 bin/liferea-add-feed
+lib/liferea/girepository-1.0/Liferea-3.0.typelib
+lib/liferea/plugins/gnome-keyring.plugin
+lib/liferea/plugins/gnome-keyring.py
+lib/liferea/plugins/media-player.plugin
+lib/liferea/plugins/media-player.py
 man/man1/liferea.1
 man/pl/man1/liferea.1
+share/GConf/gsettings/liferea.convert
+share/appdata/liferea.appdata.xml
 share/applications/liferea.desktop
-share/gconf/schemas/liferea.schemas
+share/glib-2.0/schemas/net.sf.liferea.gschema.xml
 share/icons/hicolor/16x16/apps/liferea.png
 share/icons/hicolor/22x22/apps/liferea.png
 share/icons/hicolor/24x24/apps/liferea.png
@@ -25,8 +32,6 @@ share/liferea/doc/html/faq_de.html
 share/liferea/doc/html/faq_en.html
 share/liferea/doc/html/folders_de.html
 share/liferea/doc/html/folders_en.html
-share/liferea/doc/html/greader_de.html
-share/liferea/doc/html/greader_en.html
 share/liferea/doc/html/headlines_de.html
 share/liferea/doc/html/headlines_en.html
 share/liferea/doc/html/help_feed_default.png
@@ -49,9 +54,12 @@ share/liferea/doc/html/help_prefs_headlines_1.6.0.png
 share/liferea/doc/html/help_prefs_proxy_1.6.0.png
 share/liferea/doc/html/help_search_1.6.0.png
 share/liferea/doc/html/help_subscribe_1.6.0.png
+share/liferea/doc/html/help_subscribe_adv_1.6.0.png
 share/liferea/doc/html/help_vfolder_1.6.0.png
 share/liferea/doc/html/newsbin_de.html
 share/liferea/doc/html/newsbin_en.html
+share/liferea/doc/html/onlineservices_de.html
+share/liferea/doc/html/onlineservices_en.html
 share/liferea/doc/html/preferences_de.html
 share/liferea/doc/html/preferences_en.html
 share/liferea/doc/html/reference.css
@@ -66,7 +74,9 @@ share/liferea/doc/html/topics_en.html
 share/liferea/doc/html/updating_de.html
 share/liferea/doc/html/updating_en.html
 share/liferea/dtd/html.ent
+share/liferea/gir-1.0/Liferea-3.0.gir
 share/liferea/google_source.ui
+share/liferea/inoreader_source.ui
 share/liferea/liferea.ui
 share/liferea/new_subscription.ui
 share/liferea/node_source.ui
@@ -103,7 +113,10 @@ share/liferea/pixmaps/grayflag.png
 share/liferea/pixmaps/newsbin.png
 share/liferea/pixmaps/unread.png
 share/liferea/pixmaps/vfolder.png
+share/liferea/prefs.ui
+share/liferea/reedah_source.ui
 share/liferea/simple_subscription.ui
+share/liferea/theoldreader_source.ui
 share/liferea/ttrss_source.ui
 share/liferea/xslt/feed.xml
 share/liferea/xslt/folder.xml
