@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.9 2015/01/20 11:34:43 prlw1 Exp $
+$NetBSD: distinfo,v 1.10 2015/09/03 11:55:40 sborrill Exp $
 
 SHA1 (dansguardian-2.12.0.3.tar.bz2) = c5d8175910310f9a03efc2e6cb440ea418adb896
 RMD160 (dansguardian-2.12.0.3.tar.bz2) = 312db0ce2db9d1b2ed537807f9b2eca5d76a4123
 Size (dansguardian-2.12.0.3.tar.bz2) = 577701 bytes
+SHA1 (patch-configs_dansguardian.conf.in) = 8707f9506ea7d93b3ff2caca3612054d1b0724e7
+SHA1 (patch-configs_dansguardianf1.conf.in) = 777e1b3a463d7619d937ff193ee94a7a44410c7a
 SHA1 (patch-configure) = be2ccff5ecd42994cf8727843372e5997004e5e4
+SHA1 (patch-src_ConnectionHandler.cpp) = c7d9ed8f825a3d1d74c3e2612169e8ad11d7fd44
+SHA1 (patch-src_FOptionContainer.cpp) = 09ed12353ea4622e5b78dc8d0a12cacd65283ea4
+SHA1 (patch-src_FOptionContainer.hpp) = 3be847e4e7821ee90c668524b543c28658920478
 SHA1 (patch-src_ImageContainer.cpp) = b1296ac496a699d2089255b61841f607eba9d084
 SHA1 (patch-src_OptionContainer.cpp) = d94a851522751b53c61a2b96e335170db0e1f86e
 SHA1 (patch-src_SocketArray.cpp) = 393bb901cf090b543a16da27f16c1bc99db8f155

@@ -1,0 +1,26 @@
+$NetBSD: patch-configs_dansguardian.conf.in,v 1.1 2015/09/03 11:55:40 sborrill Exp $
+
+maxuploadsize is a filtergroup setting
+
+--- configs/dansguardian.conf.in.orig	2015-09-03 12:12:29.000000000 +0100
++++ configs/dansguardian.conf.in	2015-09-03 12:13:31.000000000 +0100
+@@ -330,19 +330,6 @@
+ 
+ 
+ 
+-# POST protection (web upload and forms)
+-# does not block forms without any file upload, i.e. this is just for
+-# blocking or limiting uploads
+-# measured in kibibytes after MIME encoding and header bumph
+-# use 0 for a complete block
+-# use higher (e.g. 512 = 512Kbytes) for limiting
+-# use -1 for no blocking
+-#maxuploadsize = 512
+-#maxuploadsize = 0
+-maxuploadsize = -1
+-
+-
+-
+ # Max content filter size
+ # Sometimes web servers label binary files as text which can be very
+ # large which causes a huge drain on memory and cpu resources.
