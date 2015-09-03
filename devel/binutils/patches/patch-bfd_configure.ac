@@ -1,0 +1,25 @@
+$NetBSD: patch-bfd_configure.ac,v 1.1 2015/09/03 20:55:55 sevan Exp $
+
+Add Bitrig/amd64 support
+https://sourceware.org/bugzilla/show_bug.cgi?id=18920
+
+--- bfd/configure.ac.orig	Thu Sep  3 16:39:03 2015
++++ bfd/configure.ac
+@@ -311,7 +311,7 @@ changequote([,])dnl
+ 	TRAD_HEADER='"hosts/i386bsd.h"'
+ 	;;
+ changequote(,)dnl
+-  i[3-7]86-*-netbsd* | i[3-7]86-*-knetbsd*-gnu | i[3-7]86-*-openbsd*)
++  i[3-7]86-*-netbsd* | i[3-7]86-*-knetbsd*-gnu | i[3-7]86-*-openbsd* | i[3-7]86-*-bitrig*)
+ changequote([,])dnl
+ 	COREFILE=netbsd-core.lo
+ 	;;
+@@ -485,7 +485,7 @@ changequote([,])dnl
+   x86_64-*-linux*)
+ 	CORE_HEADER='"hosts/x86-64linux.h"'
+ 	;;
+-  x86_64-*-netbsd* | x86_64-*-openbsd*)
++  x86_64-*-netbsd* | x86_64-*-openbsd* | x86_64-*-bitrig*)
+ 	COREFILE=netbsd-core.lo
+ 	;;
+   esac
