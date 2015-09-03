@@ -1,7 +1,4 @@
-Liferea is a simple FeedReader clone for Unix distributions with GTK2
-(GNOME2 is optional).  It is a news aggregator for RSS/RDF feeds which
-also supports CDF channels, Atom/Echo/PIE feeds and OCS or OPML
-directories.  The problem with FeedReader: for now its only available
-for Windows.  There are some projects for GNU/Linux, but no solution
-for GTK/GNOME, which does not require Python or Perl.  Liferea tries
-to fill this gap.  Liferea is an abbreviation for Linux Feed Reader.
+Liferea is a web feed reader/news aggregator that brings together all of the
+content from your favorite subscriptions into a simple interface that makes it
+easy to organize and browse feeds. Its GUI is similar to a desktop
+mail/newsclient, with an embedded graphical browser.
