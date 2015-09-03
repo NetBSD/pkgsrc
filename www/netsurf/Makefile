@@ -1,42 +1,25 @@
-# $NetBSD: Makefile,v 1.42 2015/06/12 10:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2015/09/03 20:56:09 leot Exp $
 #
 
-DISTNAME=	netsurf-1.2-src
-PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	34
+DISTNAME=	netsurf-all-3.3
+PKGNAME=	${DISTNAME:S/-all//}
 CATEGORIES=	www
-MASTER_SITES=	http://www.netsurf-browser.org/downloads/releases/
+MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netsurf-browser.org/
 COMMENT=	Web browser for RISC OS and UNIX-like platforms
+LICENSE=	gnu-gpl-v2 AND mit
 
 BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
 BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
 
-# current codebase needs strndup
-NOT_FOR_PLATFORM=	NetBSD-[0-3]*-*
-
-WRKSRC=		${WRKDIR}/netsurf
-
-USE_TOOLS+=	gmake perl:build pax pkg-config
+BUILD_TARGET=	build
+USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
 
 INSTALLATION_DIRS+=	share/netsurf bin
 
-# needed for netsurf-1.2 and gtk2-2.20 -- remove on next update!
-BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
-
-post-extract:
-	find ${WRKSRC}/!NetSurf -type f | xargs chmod a-x
-
-do-install:
-	cd ${WRKSRC} && pax -rw !NetSurf ${DESTDIR}${PREFIX}/share/netsurf/
-	cd ${WRKSRC} && pax -rw gtk/res ${DESTDIR}${PREFIX}/share/netsurf/
-	${INSTALL_PROGRAM} ${WRKSRC}/nsgtk ${DESTDIR}${PREFIX}/share/netsurf/nsgtk
-	${INSTALL_SCRIPT} ${WRKSRC}/netsurf ${DESTDIR}${PREFIX}/bin/netsurf
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
