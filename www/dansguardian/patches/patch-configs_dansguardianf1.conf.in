@@ -1,0 +1,24 @@
+$NetBSD: patch-configs_dansguardianf1.conf.in,v 1.1 2015/09/03 11:55:40 sborrill Exp $
+
+maxuploadsize is a filtergroup setting
+
+--- configs/dansguardianf1.conf.in.orig	2015-09-03 12:12:36.000000000 +0100
++++ configs/dansguardianf1.conf.in	2015-09-03 12:13:30.000000000 +0100
+@@ -102,6 +102,17 @@
+ # 50 is for young children,  100 for old children,  160 for young adults.
+ naughtynesslimit = 50
+ 
++# POST protection (web upload and forms)
++# does not block forms without any file upload, i.e. this is just for
++# blocking or limiting uploads
++# measured in kibibytes after MIME encoding and header bumph
++# use 0 for a complete block
++# use higher (e.g. 512 = 512Kbytes) for limiting
++# use -1 for no blocking
++#maxuploadsize = 512
++#maxuploadsize = 0
++maxuploadsize = -1
++
+ # Search term blocking
+ # Search terms can be extracted from search URLs and filtered using the
+ # bannedphraselist, weightedphraselist and exceptionphraselist, with a separate
