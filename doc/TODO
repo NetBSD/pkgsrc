@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14838 2015/09/03 15:29:27 leot Exp $
+$NetBSD: TODO,v 1.14839 2015/09/03 20:57:34 leot Exp $
 
 Suggested new packages
 ======================
@@ -1186,7 +1186,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netbt-hcidump-5.33
 	o netio-132
 	o netramet-50
-	o netsurf-3.2
 	o newmail-1.0.2
 	o nginx-devel-1.9.2
 	o nikto-2.1.5
