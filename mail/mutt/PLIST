@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/09/03 14:49:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/09/03 21:04:34 wiz Exp $
 bin/flea
 bin/mutt
 bin/mutt_dotlock
@@ -28,7 +28,6 @@ share/doc/mutt/README.SSL
 share/doc/mutt/TODO
 share/doc/mutt/advancedusage.html
 share/doc/mutt/applying-patches.txt
-${PLIST.compressed}share/doc/mutt/compressed-folders.html
 share/doc/mutt/configuration.html
 share/doc/mutt/devel-notes.txt
 share/doc/mutt/gettingstarted.html

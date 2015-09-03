@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.10 2015/09/03 14:49:02 wiz Exp $
+$NetBSD: patch-ad,v 1.11 2015/09/03 21:04:34 wiz Exp $
 
---- contrib/Makefile.in.orig	2006-08-14 16:09:28.000000000 +0200
+--- contrib/Makefile.in.orig	2015-08-30 17:24:26.000000000 +0000
 +++ contrib/Makefile.in
-@@ -365,21 +365,20 @@ uninstall-am: uninstall-info-am uninstal
+@@ -459,21 +459,20 @@ uninstall-am: uninstall-local
  
  
  install-data-local:
--	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(docdir)/samples $(DESTDIR)$(docdir)/samples/iconv
-+	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir) $(DESTDIR)$(sysconfdir)/iconv
+-	$(MKDIR_P) $(DESTDIR)$(docdir)/samples $(DESTDIR)$(docdir)/samples/iconv
++	$(MKDIR_P) $(DESTDIR)$(sysconfdir) $(DESTDIR)$(sysconfdir)/iconv
  	for f in $(SAMPLES) ; do \
 -		$(INSTALL) -m 644 $(srcdir)/$$f $(DESTDIR)$(docdir)/samples ;	\
-+		$(INSTALL) -m 644 $(srcdir)/$$f $(DESTDIR)$(sysconfdir) ;	\
++		$(INSTALL) -m 644 $(srcdir)/$$f $(DESTDIR)$(sysconfdir);	\
  	done
  	for f in $(srcdir)/iconv/*.rc ; do					\
 -		$(INSTALL) -m 644 $$f $(DESTDIR)$(docdir)/samples/iconv	  ;	\
