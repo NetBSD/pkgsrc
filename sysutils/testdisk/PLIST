@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/09 17:45:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2.16.1 2015/09/03 19:36:34 tron Exp $
 bin/fidentify
 bin/photorec
 bin/testdisk
 man/man8/fidentify.8
 man/man8/photorec.8
+man/man8/qphotorec.8
 man/man8/testdisk.8
-share/doc/${PKGNAME}/AUTHORS
-share/doc/${PKGNAME}/ChangeLog
-share/doc/${PKGNAME}/NEWS
-share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/THANKS
-share/doc/${PKGNAME}/documentation.html
+man/zh_CN/man8/fidentify.8
+man/zh_CN/man8/photorec.8
+man/zh_CN/man8/qphotorec.8
+man/zh_CN/man8/testdisk.8
+share/doc/testdisk/AUTHORS
+share/doc/testdisk/ChangeLog
+share/doc/testdisk/NEWS
+share/doc/testdisk/README
+share/doc/testdisk/THANKS
+share/doc/testdisk/documentation.html
+share/icons/hicolor/48x48/apps/qphotorec.png
+share/icons/hicolor/scalable/apps/qphotorec.svg
