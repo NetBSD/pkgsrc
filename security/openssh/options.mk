@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29.12.1 2015/07/14 22:03:39 tron Exp $
+# $NetBSD: options.mk,v 1.29.12.2 2015/09/03 19:30:17 tron Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -16,7 +16,7 @@ CONFIGURE_ENV+=		ac_cv_search_k_hasafs=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mhpn-patch)
-PATCHFILES=		openssh-6.9p1-hpn-20150709.diff.gz
+PATCHFILES=		openssh-7.1p1-hpn-20150822.diff.bz2
 PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/openssh/
 PATCH_DIST_STRIP=	-p1
 .endif
