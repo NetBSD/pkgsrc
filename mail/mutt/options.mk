@@ -1,10 +1,17 @@
-# $NetBSD: options.mk,v 1.13 2010/02/26 11:00:40 drochner Exp $
+# $NetBSD: options.mk,v 1.14 2015/09/03 14:49:02 wiz Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.mutt
+# Global and legacy options
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
-PKG_SUPPORTED_OPTIONS=		ssl buffy-size
-PKG_SUGGESTED_OPTIONS=		ssl curses
+PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
+PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
+PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
+# Comment the following line out on updates.
+#PKG_SUPPORTED_OPTIONS+=	mutt-xlabel
+PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
 .include "../../mk/bsd.options.mk"
 
@@ -26,10 +33,23 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
 ###
+### SASLv2
+###
+.if !empty(PKG_OPTIONS:Msasl)
+.  include "../../security/cyrus-sasl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
+.endif
+
 ### curses
 ###
 .if !empty(PKG_OPTIONS:Mcurses)
 .  include "../../mk/curses.buildlink3.mk"
+.  if ${OPSYS} == "SunOS"
+BUILDLINK_PASSTHRU_DIRS+=	/usr/xpg4
+CONFIGURE_ARGS+=	--with-curses=/usr/xpg4
+LDFLAGS+=		-L/usr/xpg4/lib${LIBABISUFFIX}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
+.  endif
 .endif
 
 ###
@@ -41,7 +61,7 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 SUBST_CLASSES+=		curse
 SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw
 SUBST_STAGE.curse=	post-patch
-SUBST_FILES.curse=	configure.in configure
+SUBST_FILES.curse=	configure
 SUBST_SED.curse=	-e 's,for lib in ncurses ncursesw,for lib in ncurses,'
 .endif
 
@@ -56,8 +76,119 @@ CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 ###
-### configure option --enable-buffy-size
+### S/MIME
 ###
-.if !empty(PKG_OPTIONS:Mbuffy-size)
-CONFIGURE_ARGS+=	--enable-buffy-size
+PLIST_VARS+=		smime
+.if !empty(PKG_OPTIONS:Msmime)
+USE_TOOLS+=		perl:run
+REPLACE_PERL+=		*.pl */*.pl
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-smime
+PLIST.smime=		yes
+.else
+CONFIGURE_ARGS+=	--disable-smime
+.endif
+
+###
+### Header cache
+###
+.if !empty(PKG_OPTIONS:Mmutt-hcache)
+.  if !empty(PKG_OPTIONS:Mtokyocabinet)
+.  include "../../databases/tokyocabinet/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hcache
+CONFIGURE_ARGS+=	--enable-tokyocabinet
+CONFIGURE_ARGS+=	--without-gdbm
+CONFIGURE_ARGS+=	--without-bdb
+.  else
+BDB_ACCEPTED=		db4 db5
+BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
+.  include "../../mk/bdb.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hcache
+CONFIGURE_ARGS+=	--without-gdbm
+# BDB_INCLUDE_DIR_ and BDB_LIB_DIR don't have to be particularly accurate
+# since the real -I and -L flags are added by buildlink already.
+CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BDBBASE}/include
+CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
+CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
+.  endif
+.else
+CONFIGURE_ARGS+=	--disable-hcache
+.endif
+
+PLIST_VARS+=		compressed
+###
+### Compressed mail boxes
+###
+.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
+PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
+PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
+PATCH_DIST_STRIP=	-p1
+CONFIGURE_ARGS+=	--enable-compressed
+SUBST_CLASSES+=		compress
+SUBST_MESSAGE.compress=	Patch Makefile.in to avoid autoreconf for compress
+SUBST_STAGE.compress=	post-patch
+SUBST_FILES.compress=	Makefile.in
+SUBST_SED.compress=	-e 's,^mutt_SOURCES = ,mutt_SOURCES = compress.c ,'
+SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
+SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
+PLIST.compressed=	yes
+# add xsltproc to be able to regenerate the documentation
+BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+.endif
+
+###
+### Internal SMTP relay support
+###
+.if !empty(PKG_OPTIONS:Mmutt-smtp)
+CONFIGURE_ARGS+=	--enable-smtp
+.else
+CONFIGURE_ARGS+=	--disable-smtp
+.endif
+
+###
+### Sidebar support
+###
+.if !empty(PKG_OPTIONS:Mmutt-sidebar)
+PATCH_SITES+=		http://lunar-linux.org/~tchan/mutt/
+PATCHFILES+=		patch-1.5.23.sidebar.20140412.txt
+PATCH_DIST_STRIP=	-p1
+PATCH_FUZZ_FACTOR=	-F1
+.endif
+
+###
+### X-Label header support
+###
+.if !empty(PKG_OPTIONS:Mmutt-xlabel)
+PATCH_SITES=		http://home.uchicago.edu/~dgc/sw/mutt/
+PATCHFILES+=		patch-1.5.17.dgc.xlabel_ext.9
+PATCH_DIST_STRIP=	-p1
+.endif
+
+###
+### Internationalized Domain Names
+###
+.if !empty(PKG_OPTIONS:Midn)
+.  include "../../devel/libidn/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-idn=${BUILDLINK_PREFIX.libidn}
+.else
+CONFIGURE_ARGS+=	--with-idn=no
+.endif
+
+###
+### Enable debugging support
+###
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
+CFLAGS+= -g
+.endif
+
+###
+### gpgme support
+###
+.if !empty(PKG_OPTIONS:Mgpgme)
+.  include "../../security/gpgme/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gpgme
+CONFIGURE_ARGS+=	--with-gpgme-prefix=${BUILDLINK_PREFIX.gpgme}
+.else
+CONFIGURE_ARGS+=	--disable-gpgme
 .endif

@@ -1,0 +1,7 @@
+# $NetBSD: DEINSTALL,v 1.5 2015/09/03 14:49:02 wiz Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	${RM} -f @DOCDIR@/samples
+	;;
+esac
