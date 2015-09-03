@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/25 22:58:58 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/03 22:15:35 khorben Exp $
 
 DISTNAME=	Integration-0.0.1
 PKGNAME=	deforaos-integration-0.0.1
@@ -32,6 +32,8 @@ AUTO_MKDIRS=	yes
 .include "../../devel/sofia-sip/buildlink3.mk"
 .include "../../comms/deforaos-phone/buildlink3.mk"
 .include "../../multimedia/deforaos-player/buildlink3.mk"
+.include "../../x11/deforaos-keyboard/buildlink3.mk"
+.include "../../x11/deforaos-locker/buildlink3.mk"
 .include "../../x11/deforaos-panel/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
