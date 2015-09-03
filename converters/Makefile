@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2015/08/12 00:30:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.138 2015/09/03 06:47:59 fhajny Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -89,6 +89,7 @@ SUBDIR+=	p5-nkf
 SUBDIR+=	pear-I18n_UnicodeNormalizer
 SUBDIR+=	php-iconv
 SUBDIR+=	php-mbstring
+SUBDIR+=	php-recode
 SUBDIR+=	psiconv
 SUBDIR+=	pstotext
 SUBDIR+=	py-cairosvg
