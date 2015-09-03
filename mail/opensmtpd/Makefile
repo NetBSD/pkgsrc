@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/17 19:05:50 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/03 21:07:10 sevan Exp $
 
 VERSION=	5.3.3p1
 DISTNAME=	opensmtpd-${VERSION}
@@ -13,6 +13,7 @@ LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]* postfix-[0-9]*
+BROKEN_FOR_PLATFORM+=	OpenBSD-*-*
 
 BUILD_DEFS+=	VARBASE
 
