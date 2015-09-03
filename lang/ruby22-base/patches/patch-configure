@@ -1,10 +1,19 @@
-$NetBSD: patch-configure,v 1.2 2015/04/22 19:04:35 sevan Exp $
+$NetBSD: patch-configure,v 1.2.2.1 2015/09/03 18:56:54 tron Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 
---- configure.orig	2015-02-27 07:34:18.000000000 +0000
+--- configure.orig	2015-04-13 14:18:08.000000000 +0000
 +++ configure
+@@ -5579,7 +5579,7 @@ esac
+ else
+     if test x"$target_alias" = x; then
+ 	case "$target_os" in #(
+-  darwin*) :
++  notdarwin*) :
+ 
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
+ $as_echo_n "checking for real target cpu... " >&6; }
 @@ -8846,6 +8846,10 @@ esac
  		ac_cv_func_isinf=yes
  		ac_cv_func_isnan=yes
