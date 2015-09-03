@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3762 2015/09/03 14:44:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3763 2015/09/03 14:49:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6693,3 +6693,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added graphics/php-imagick version 3.1.2 [fhajny 2015-09-03]
 	Updated www/nginx-devel to 1.9.4 [fhajny 2015-09-03]
 	Updated sysutils/cdrtools to 3.01 [wiz 2015-09-03]
+	Updated mail/mutt to 1.5.23nb7 [wiz 2015-09-03]
