@@ -1,4 +1,4 @@
-$NetBSD: patch-goffice_math_go-dtoa.c,v 1.1 2015/08/04 11:58:51 he Exp $
+$NetBSD: patch-goffice_math_go-dtoa.c,v 1.2 2015/09/03 14:53:23 gdt Exp $
 
 Ensure frexpl() is declared on NetBSD before 6.99.17.
 
@@ -9,7 +9,7 @@ Ensure frexpl() is declared on NetBSD before 6.99.17.
  #endif
  
 +#if defined(__NetBSD__) 
-+#if (__NetBSD_Version__ <= 699001700)
++#if (__NetBSD_Version__ >= 699001700)
 +/* in <math.h> in newer NetBSDs, should already be included */
 +#else
 +extern long double frexpl(long double, int*);
