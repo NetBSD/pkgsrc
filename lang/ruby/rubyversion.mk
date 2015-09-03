@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.143.2.1 2015/09/03 18:44:27 tron Exp $
+# $NetBSD: rubyversion.mk,v 1.143.2.2 2015/09/03 18:49:44 tron Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -229,7 +229,7 @@ RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
 RUBY18_VERSION=		1.8.7
 RUBY193_VERSION=	1.9.3
 RUBY200_VERSION=	2.0.0
-RUBY21_VERSION=		2.1.6
+RUBY21_VERSION=		2.1.7
 RUBY22_VERSION=		2.2.2
 
 # patch
