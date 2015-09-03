@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.lightning,v 1.22 2015/07/09 15:17:34 ryoon Exp $
-lib/thunderbird/distribution/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/application.ini
+@comment $NetBSD: PLIST.lightning,v 1.23 2015/09/03 14:41:32 wiz Exp $
+lib/thunderbird/distribution/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/app.ini
 lib/thunderbird/distribution/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarm.js
 lib/thunderbird/distribution/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmMonitor.js
 lib/thunderbird/distribution/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmService.js
@@ -484,7 +484,7 @@ lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/shim/P
 lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/shim/Task.jsm
 lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/shim/Timer.jsm
 lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/timezoneMap.jsm
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/application.ini
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/app.ini
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarm.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmMonitor.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmService.js
