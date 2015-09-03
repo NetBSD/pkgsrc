@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2015/08/21 08:12:09 wiz Exp $
+# $NetBSD: Makefile,v 1.237 2015/09/03 21:05:24 sevan Exp $
 
 DISTNAME=		openssh-7.1p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
@@ -14,6 +14,7 @@ CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]*
 CONFLICTS+=		ssh2-[0-9]* ssh2-nox11-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
 CONFLICTS+=		lsh>2.0
+BROKEN_FOR_PLATFORM+=	OpenBSD-*-*
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		autoconf perl
