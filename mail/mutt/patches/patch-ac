@@ -1,15 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2004/02/20 14:02:04 wiz Exp $
---- curs_main.c.orig	Wed Jan 16 21:44:25 2002
-+++ curs_main.c	Mon Feb  2 08:17:26 2004
-@@ -989,6 +989,11 @@
-           cp = _("Open mailbox");
+$NetBSD: patch-ac,v 1.7 2015/09/03 14:49:02 wiz Exp $
+
+--- config.h.in.orig	2009-08-02 09:34:54 +0300
++++ config.h.in	2009-08-02 09:36:37 +0300
+@@ -442,6 +442,12 @@
+ /* Define to 1 if you have the `__argz_stringify' function. */
+ #undef HAVE___ARGZ_STRINGIFY
  
- 	buf[0] = '\0';
-+	if (option (OPTCHANGEFOLDERNEXT) && Context && Context->path)
-+	{
-+	  strfcpy (buf, Context->path, sizeof (buf));
-+	  mutt_pretty_mailbox (buf);
-+	}
- 	mutt_buffy (buf, sizeof (buf));
- 
- 	if (mutt_enter_fname (cp, buf, sizeof (buf), &menu->redraw, 1) == -1)
++/* Define to 1 if you have the `mvchgat' function. */
++#undef HAVE_MVCHGAT
++
++/* Define to 1 if you have the `mvwchgat' function. */
++#undef HAVE_MVWCHGAT
++
+ /* Is mail spooled to the user's home directory? If defined, MAILPATH should
+    be set to the filename of the spool mailbox relative the the home
+    directory. use: configure --with-homespool=FILE */
