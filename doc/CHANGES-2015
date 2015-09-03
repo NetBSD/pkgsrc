@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3766 2015/09/03 20:57:34 leot Exp $
+$NetBSD: CHANGES-2015,v 1.3767 2015/09/03 21:04:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6697,3 +6697,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed mail/mutt-devel successor mail/mutt [wiz 2015-09-03]
 	Updated www/liferea to 1.10.16 [leot 2015-09-03]
 	Updated www/netsurf to 3.3 [leot 2015-09-03]
+	Updated mail/mutt to 1.5.24 [wiz 2015-09-03]
