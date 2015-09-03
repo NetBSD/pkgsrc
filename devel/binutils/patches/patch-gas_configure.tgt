@@ -1,0 +1,15 @@
+$NetBSD: patch-gas_configure.tgt,v 1.1 2015/09/03 20:55:55 sevan Exp $
+
+Add Bitrig/amd64 support
+https://sourceware.org/bugzilla/show_bug.cgi?id=18920
+
+--- gas/configure.tgt.orig	Thu Sep  3 16:57:30 2015
++++ gas/configure.tgt
+@@ -231,6 +232,7 @@ case ${generic_target} in
+   i386-*-openbsd[0-2].* | \
+   i386-*-openbsd3.[0-2])		fmt=aout em=nbsd ;;
+   i386-*-openbsd*)			fmt=elf em=nbsd ;;
++  i386-*-bitrig*)			fmt=elf em=nbsd ;;
+   i386-*-linux*aout*)			fmt=aout em=linux ;;
+   i386-*-linux*oldld)			fmt=aout em=linux ;;
+   i386-*-linux*coff*)			fmt=coff em=linux ;;
