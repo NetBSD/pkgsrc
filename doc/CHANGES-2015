@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3760 2015/09/03 09:15:30 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3761 2015/09/03 14:43:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6692,3 +6692,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added converters/php-recode version 5.4.44 [fhajny 2015-09-03]
 	Added graphics/php-imagick version 3.1.2 [fhajny 2015-09-03]
 	Updated www/nginx-devel to 1.9.4 [fhajny 2015-09-03]
+	Updated sysutils/cdrtools to 3.01 [wiz 2015-09-03]
