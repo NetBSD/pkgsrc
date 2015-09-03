@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.20 2015/08/25 18:46:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.21 2015/09/03 20:12:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -111,3 +111,21 @@ Pullup ticket #4799 - requested by manu
 databases/openldap-smbk5pwd: build fix
 Pullup ticket #4801 - requested by joerg
 print/tex-tetex: compatibility fix
+Pullup ticket #4802 - requested by taca
+lang/ruby200-base: security update
+Pullup ticket #4803 - requested by taca
+lang/ruby21-base: security update
+Pullup ticket #4804 - requested by taca
+lang/ruby22-base: security update
+Pullup ticket #4805 - requested by taca
+www/drupal6: security update
+Pullup ticket #4806 - requested by taca
+www/drupal7: security update
+Pullup ticket #4807 - requested by taca
+security/openssh: build fix patch
+Pullup ticket #4808 - requested by taca
+sysutils/testdisk: security update
+Pullup ticket #4810 - requested by sevan & taca
+net/bind99: security update
+Pullup ticket #4811 - requested by sevan
+net/bind910: security update
