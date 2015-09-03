@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.55 2014/12/27 00:20:06 dholland Exp $
+# $NetBSD: Makefile,v 1.56 2015/09/03 02:45:23 dsainty Exp $
 
 DISTNAME=	exmh-2.7.2
 PKGREVISION=	6
 CATEGORIES=	mail tk
 MASTER_SITES=	ftp://ftp.tcl.tk/pub/tcl/exmh/
 
-MAINTAINER=	dsainty@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.beedub.com/exmh/
 COMMENT=	X11/TK based mail reader front end to MH
 
