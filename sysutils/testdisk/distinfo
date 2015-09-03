@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/09/09 17:45:58 drochner Exp $
+$NetBSD: distinfo,v 1.2.16.1 2015/09/03 19:36:34 tron Exp $
 
-SHA1 (testdisk-6.14.tar.bz2) = a2359406db5e3e3f9db81d8e8fce2a125dcc3677
-RMD160 (testdisk-6.14.tar.bz2) = b1ba7d714da496216e16a942045f0f6e32554d8b
-Size (testdisk-6.14.tar.bz2) = 620077 bytes
+SHA1 (testdisk-7.0.tar.bz2) = 3badfd88fea3d785f0d14ba0368866a085041c50
+RMD160 (testdisk-7.0.tar.bz2) = 56ff652a9ddf1c2b5cf96493e9aed8e7f7942d1f
+Size (testdisk-7.0.tar.bz2) = 676990 bytes
 SHA1 (patch-aa) = 76105a444a099435f75bf230292742a92fdc6722
