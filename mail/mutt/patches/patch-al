@@ -1,15 +1,22 @@
-$NetBSD: patch-al,v 1.8 2006/04/11 13:26:01 tron Exp $
+$NetBSD: patch-al,v 1.9 2015/09/03 14:49:02 wiz Exp $
 
---- pop_lib.c.orig	2005-12-26 06:28:37.000000000 -0800
-+++ pop_lib.c	2005-12-26 06:28:40.000000000 -0800
-@@ -155,8 +155,10 @@
+--- configure.orig	2010-08-25 16:31:47.000000000 +0000
++++ configure
+@@ -7836,7 +7836,7 @@ fi
  
-       if (!pop_data->expire)
- 	msg = _("Unable to leave messages on server.");
-+/*
-       if (!pop_data->cmd_top)
- 	msg = _("Command TOP is not supported by server.");
-+*/
-       if (!pop_data->cmd_uidl)
- 	msg = _("Command UIDL is not supported by server.");
-       break;
+         old_LIBS="$LIBS"
+         LIBS="$LIBS $MUTTLIBS"
+-        for ac_func in start_color typeahead bkgdset curs_set meta use_default_colors resizeterm
++        for ac_func in start_color typeahead bkgdset curs_set meta use_default_colors resizeterm mvchgat mvwchgat
+ do
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_func declaration" >&5
+@@ -8856,7 +8856,7 @@ fi
+ 
+ if test x$mutt_cv_setgid = xyes; then
+         DOTLOCK_GROUP='mail'
+-        DOTLOCK_PERMISSION=2755
++        DOTLOCK_PERMISSION=2555
+ else
+         DOTLOCK_GROUP=''
+         DOTLOCK_PERMISSION=755

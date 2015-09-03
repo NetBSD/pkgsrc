@@ -1,17 +1,17 @@
-$NetBSD: patch-ah,v 1.5 2004/02/20 14:02:04 wiz Exp $
---- init.h.orig	Wed Jul 24 10:41:29 2002
-+++ init.h	Mon Feb  2 08:17:26 2004
-@@ -278,6 +278,13 @@
-   ** .pp
-   ** Character set your terminal uses to display and enter textual data.
-   */
-+  { "change_folder_next", DT_BOOL, R_NONE, OPTCHANGEFOLDERNEXT, 0 },
-+  /*
-+  ** .pp
-+  ** When this variable is set, the change-folder command will start at the
-+  ** next folder after the current folder in your mailbox list instead of
-+  ** starting at the first folder.
-+  */
-   { "check_new",	DT_BOOL, R_NONE, OPTCHECKNEW, 1 },
-   /*
-   ** .pp
+$NetBSD: patch-ah,v 1.6 2015/09/03 14:49:02 wiz Exp $
+
+mutt_curses.h refers to event_t from mutt,h, and SHORT_STRING from lib.h,
+so include those headers here.
+
+--- mutt_curses.h.orig	2008-11-11 21:55:47.000000000 +0200
++++ mutt_curses.h
+@@ -52,6 +52,9 @@
+ # include <curses.h>
+ #endif
+ 
++#include "lib.h" /* for SHORT_STRING */
++#include "mutt.h" /* for event_t */
++
+ #define M_ENTER_C '\n'
+ #define M_ENTER_S "\n"
+ 
