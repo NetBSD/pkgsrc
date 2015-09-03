@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3761 2015/09/03 14:43:43 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3762 2015/09/03 14:44:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6676,7 +6676,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Log-Dispatch to 2.49 [mef 2015-09-02]
 	Added databases/sqlrelay-nodejs version 0.63 [fhajny 2015-09-02]
 	Updated devel/p5-Log-Report to 1.07 [mef 2015-09-02]
-	Updated devel/p5-Throwable 0.200013 [wen 2015-09-02]
+	Updated devel/p5-Throwable to 0.200013 [wen 2015-09-02]
 	Updated databases/hiredis to 0.13.2 [wiedi 2015-09-02]
 	Updated mail/rspamd to 0.9.10 [wiedi 2015-09-02]
 	Updated devel/py-mercurial to 3.5.1 [wiz 2015-09-02]
