@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3764 2015/09/03 14:50:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3765 2015/09/03 15:29:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6695,3 +6695,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/cdrtools to 3.01 [wiz 2015-09-03]
 	Updated mail/mutt to 1.5.23nb7 [wiz 2015-09-03]
 	Removed mail/mutt-devel successor mail/mutt [wiz 2015-09-03]
+	Updated www/liferea to 1.10.16 [leot 2015-09-03]
