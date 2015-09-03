@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.12 2007/07/31 13:17:34 joerg Exp $	*/
+/*	$NetBSD: unvis.c,v 1.13 2015/09/03 09:05:54 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -35,7 +35,7 @@
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.12 2007/07/31 13:17:34 joerg Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.13 2015/09/03 09:05:54 joerg Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -83,23 +83,11 @@ __warn_references(unvis,
 #define	isoctal(c)	(((unsigned char)(c)) >= '0' && ((unsigned char)(c)) <= '7')
 #define xtod(c)		(isdigit(c) ? (c - '0') : ((tolower(c) - 'a') + 10))
 
-int
-unvis(cp, c, astate, flag)
-	char *cp;
-	int c;
-	int *astate, flag;
-{
-	return __nbcompat_unvis13(cp, (int)c, astate, flag);
-}
-
 /*
  * unvis - decode characters previously encoded by vis
  */
-int
-__nbcompat_unvis13(cp, c, astate, flag)
-	char *cp;
-	int c;
-	int *astate, flag;
+static int
+__nbcompat_unvis13(char *cp, int c, int *astate, int flag)
 {
 
 	_DIAGASSERT(cp != NULL);
@@ -275,6 +263,12 @@ __nbcompat_unvis13(cp, c, astate, flag)
 	}
 }
 
+int
+unvis(char *cp, int c, int *astate, int flag)
+{
+	return __nbcompat_unvis13(cp, (int)c, astate, flag);
+}
+
 /*
  * strunvis - decode src into dst 
  *
@@ -283,10 +277,7 @@ __nbcompat_unvis13(cp, c, astate, flag)
  */
 
 int
-strunvisx(dst, src, flag)
-	char *dst;
-	const char *src;
-	int flag;
+strunvisx(char *dst, const char *src, int flag)
 {
 	char c;
 	char *start = dst;
@@ -318,9 +309,7 @@ strunvisx(dst, src, flag)
 }
 
 int
-strunvis(dst, src)
-	char *dst;
-	const char *src;
+strunvis(char *dst, const char *src)
 {
 	return strunvisx(dst, src, 0);
 }
