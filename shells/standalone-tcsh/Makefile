@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/03/15 18:32:12 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2015/09/03 15:58:22 sevan Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -14,6 +14,12 @@ PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
 # in /bin. Otherwise it clobbers the native copy, which really isn't what
 # anyone wants.
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OS_VARIANT} == "OmniOS"
+NOT_FOR_PLATFORM+=	SunOS-*-*
+.endif
 
 .include "../../shells/tcsh/Makefile"
 
