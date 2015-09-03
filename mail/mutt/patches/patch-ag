@@ -1,15 +1,15 @@
-$NetBSD: patch-ag,v 1.8 2015/09/03 14:49:02 wiz Exp $
+$NetBSD: patch-ag,v 1.9 2015/09/03 21:04:34 wiz Exp $
 
---- doc/Makefile.in.orig	2010-08-25 16:31:48.000000000 +0000
+--- doc/Makefile.in.orig	2015-08-30 17:24:26.000000000 +0000
 +++ doc/Makefile.in
-@@ -532,8 +532,8 @@ install-data-local: makedoc-all instdoc
- 	test x@DOTLOCK_TARGET@ = x || ./instdoc $(srcdir)/dotlock.man \
+@@ -642,8 +642,8 @@ install-data-local: makedoc-all instdoc
+ 	test x$(DOTLOCK_TARGET) = x || ./instdoc $(srcdir)/dotlock.man \
  		$(DESTDIR)$(mandir)/man1/mutt_dotlock.1
  	./instdoc muttrc.man $(DESTDIR)$(mandir)/man5/muttrc.5
 -	./instdoc $(srcdir)/mbox.man $(DESTDIR)$(mandir)/man5/mbox.5
 -	./instdoc $(srcdir)/mmdf.man $(DESTDIR)$(mandir)/man5/mmdf.5
 +	./instdoc $(srcdir)/mbox.man $(DESTDIR)$(mandir)/man5/mutt-mbox.5
 +	./instdoc $(srcdir)/mmdf.man $(DESTDIR)$(mandir)/man5/mutt-mmdf.5
- 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(docdir)
+ 	$(MKDIR_P) $(DESTDIR)$(docdir)
  	for f in $(topsrcdir_DOCFILES) ; do \
  		$(INSTALL) -m 644 $(top_srcdir)/$$f $(DESTDIR)$(docdir) ; \
