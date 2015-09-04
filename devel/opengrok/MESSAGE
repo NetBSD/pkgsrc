@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2015/09/04 12:07:39 nonaka Exp $
+$NetBSD: MESSAGE,v 1.3 2015/09/04 12:14:29 pgoyette Exp $
 
 To use OpenGrok with your code repository, you will need to perform
 the following steps.
 
 1. Install version control software that is used for your code repository.
 
-2. Install one of the following Apache Tomcat server from pkgsrc.
+2. Install one of the following Apache Tomcat servers from pkgsrc.
 	- Apache Tomcat 6: pkgsrc/www/apache-tomcat6
 	- Apache Tomcat 7: pkgsrc/www/apache-tomcat7
 	- Apache Tomcat 8: pkgsrc/www/apache-tomcat8
