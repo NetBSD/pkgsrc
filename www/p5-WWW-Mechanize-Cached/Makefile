@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/12 10:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/04 13:41:08 mef Exp $
 
 DISTNAME=	WWW-Mechanize-Cached-1.48
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,7 @@ BUILD_DEPENDS+= p5-Find-Lib-[0-9]*:../../devel/p5-Find-Lib
 BUILD_DEPENDS+= p5-CHI-[0-9]*:../../devel/p5-CHI
 
 BUILD_DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/WWW/Mechanize/Cached/.packlist
