@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/02 22:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/04 11:28:57 wiz Exp $
 
 DISTNAME=       mutt-kz-1.5.23.1-rc1
 PKGNAME=        ${DISTNAME:S/-rc/rc/}
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-notmuch
 pre-build:
 	${TOUCH} ${WRKSRC}/VERSION
 
-.include "../../mail/mutt-devel/Makefile.common"
+.include "../../mail/mutt/Makefile.common"
 
 DEINSTALL_SRC=		${.CURDIR}/../../mail/mutt-devel/DEINSTALL
 INSTALL_SRC=		${.CURDIR}/../../mail/mutt-devel/INSTALL
