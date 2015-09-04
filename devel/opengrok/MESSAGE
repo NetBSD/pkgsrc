@@ -1,17 +1,20 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/12/31 22:56:12 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2015/09/04 12:07:39 nonaka Exp $
 
 To use OpenGrok with your code repository, you will need to perform
 the following steps.
 
 1. Install version control software that is used for your code repository.
 
-2. Install Apache Tomcat 7 from pkgsrc/www/apache-tomcat7.
+2. Install one of the following Apache Tomcat server from pkgsrc.
+	- Apache Tomcat 6: pkgsrc/www/apache-tomcat6
+	- Apache Tomcat 7: pkgsrc/www/apache-tomcat7
+	- Apache Tomcat 8: pkgsrc/www/apache-tomcat8
 
 3. Run ${PREFIX}/share/opengrok/bin/OpenGrok with the following options
    to install source.war to ${PREFIX}/share/tomcat/webapps.
 
-	# JAVA_HOME=/usr/pkg/java/openjdk7 \
+	# JAVA_HOME=${PKG_JAVA_HOME} \
 		OPENGROK_WAR_TARGET_TOMCAT=${PREFIX}/share/tomcat/webapps \
 		${PREFIX}/share/opengrok/bin/OpenGrok deploy
 
@@ -24,10 +27,10 @@ the following steps.
 5. Run ${PREFIX}/share/opengrok/bin/OpenGrok with the following options
    to index your code repository.
 
-	# JAVA_HOME=${PREFIX}/java/openjdk7 \
+	# JAVA_HOME=${PKG_JAVA_HOME} \
 		${PREFIX}/share/opengrok/bin/OpenGrok update
 
-6. Start Apache Tomcat 7 server.
+6. Start Apache Tomcat server.
 
 7. Access http://localhost:8080/source/ .
 ===========================================================================
