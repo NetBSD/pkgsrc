@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/03/15 23:38:43 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/09/04 14:28:33 mef Exp $
 
-SHA1 (MooX-Cmd-0.013.tar.gz) = 624c3f98dd9c46526ca1be01d064ad564f0d5b15
-RMD160 (MooX-Cmd-0.013.tar.gz) = 14c7cba40127de91d39b24225f22a6a298e698a9
-Size (MooX-Cmd-0.013.tar.gz) = 16595 bytes
+SHA1 (MooX-Cmd-0.015.tar.gz) = 12a05c1d57fe1231a83f80bccf27022d5da8fe3d
+RMD160 (MooX-Cmd-0.015.tar.gz) = 6fa13c74d3c54cf0eda26a7eecd6899ebb331a22
+Size (MooX-Cmd-0.015.tar.gz) = 16792 bytes
