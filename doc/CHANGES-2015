@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3776 2015/09/04 11:36:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3777 2015/09/04 12:30:39 roy Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6707,3 +6707,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.37.1 [wiz 2015-09-04]
 	Updated devel/p5-Module-CoreList to 5.20150820 [mef 2015-09-04]
 	Updated devel/p5-Module-ScanDeps to 1.19 [mef 2015-09-04]
+	Updated net/dhcpcd to 6.9.3 [roy 2015-09-04]
