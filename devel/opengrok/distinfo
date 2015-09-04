@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/05/01 12:55:14 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2015/09/04 05:28:06 wiz Exp $
 
-SHA1 (OpenGrok-0.12.1.tar.gz) = 68a959ba5c5c23188e02f14ff023265111c86b36
-RMD160 (OpenGrok-0.12.1.tar.gz) = 93f35c977da7c1b860c485f07b3ee69697778f10
-Size (OpenGrok-0.12.1.tar.gz) = 1557993 bytes
+SHA1 (OpenGrok-0.12.1.5.tar.gz) = a31ca03bb340a084019825de61b9ec1878662c95
+RMD160 (OpenGrok-0.12.1.5.tar.gz) = 2c4dbebe88eab498d7d4a25807cc0bd45a4a5f40
+Size (OpenGrok-0.12.1.5.tar.gz) = 1560600 bytes
 SHA1 (patch-OpenGrok) = 3626793fca6f62a4e9da2ff23ccc20e1ec82087b
 SHA1 (patch-web_WEB-INF_web.xml) = dad7fe0aac6ba6f8cd388b89959abc129d960ac3
