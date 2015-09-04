@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/08/28 09:27:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/04 13:46:37 wiz Exp $
 
-DISTNAME=	miller-2.0.0
+DISTNAME=	miller-2.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnkerl/}
 GITHUB_PROJECT=	miller
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/johnkerl/miller/
 COMMENT=	Command-line CSV processor
 LICENSE=	2-clause-bsd
+
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 MAKE_JOBS_SAFE=		no
