@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/07/12 18:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/09/04 12:48:49 mef Exp $
 
 DISTNAME=	Getopt-Long-Descriptive-0.099
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	p5-Sub-Exporter>=0.972:../../devel/p5-Sub-Exporter
 
 #BUILD_DEPENDS+= {perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warnings>=0.005:../../devel/p5-Test-Warnings
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=		auto/Getopt/Long/Descriptive/.packlist
 
