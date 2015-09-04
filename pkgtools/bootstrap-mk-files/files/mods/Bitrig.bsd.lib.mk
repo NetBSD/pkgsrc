@@ -1,4 +1,4 @@
-#	$NetBSD: Bitrig.bsd.lib.mk,v 1.1 2015/06/04 15:48:45 sevan Exp $
+#	$NetBSD: Bitrig.bsd.lib.mk,v 1.2 2015/09/04 11:50:47 sevan Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -100,26 +100,16 @@ SHLIB_FULLVERSION=${SHLIB_MAJOR}
 #		 	(usually just ${CPPPICFLAGS} ${CPICFLAGS})
 # APICFLAGS:		flags for ${AS} to assemble .[sS] to .so objects.
 
-# Platform-independent flags for Bitrig a.out shared libraries
-SHLIB_LDSTARTFILE=
-SHLIB_LDENDFILE=
-SHLIB_SOVERSION=${SHLIB_FULLVERSION}
-SHLIB_SHFLAGS=
-FPICFLAGS ?= -fPIC
-CPICFLAGS?= -fPIC -DPIC
-CPPPICFLAGS?= -DPIC 
-CAPICFLAGS?= ${CPPPICFLAGS} ${CPICFLAGS}
-APICFLAGS?= -k
-
-MKPICLIB?= yes
-
 # Platform-independent linker flags for ELF shared libraries
-.if ${OBJECT_FMT} == "ELF"
 SHLIB_SOVERSION=	${SHLIB_MAJOR}
 SHLIB_SHFLAGS=		-Wl,-soname,lib${LIB}.so.${SHLIB_SOVERSION}
 SHLIB_LDSTARTFILE?=	${DESTDIR}/usr/lib/crtbeginS.o
 SHLIB_LDENDFILE?=	${DESTDIR}/usr/lib/crtendS.o
-.endif
+FPICFLAGS?= 		-fPIC
+CPICFLAGS?= 		-fPIC -DPIC
+CPPPICFLAGS?= 		-DPIC 
+CAPICFLAGS?= 		${CPPPICFLAGS} ${CPICFLAGS}
+APICFLAGS?= 		-k
 
 CFLAGS+=	${COPTS}
 FFLAGS+=	${FOPTS}
