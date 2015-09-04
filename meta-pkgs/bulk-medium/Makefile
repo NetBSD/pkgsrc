@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2015/08/29 23:53:44 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2015/09/04 04:43:47 wiz Exp $
 
-DISTNAME=	bulk-medium-20150414
-PKGREVISION=	1
+DISTNAME=	bulk-medium-20150904
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -98,7 +97,7 @@ BUILD_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 BUILD_DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
 BUILD_DEPENDS+=	mailman-[0-9]*:../../mail/mailman
 BUILD_DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
-BUILD_DEPENDS+=	mutt>=1.4<1.5:../../mail/mutt
+BUILD_DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 BUILD_DEPENDS+=	re-alpine-[0-9]*:../../mail/re-alpine
 BUILD_DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
 BUILD_DEPENDS+=	bind>=9.9<9.10:../../net/bind99
