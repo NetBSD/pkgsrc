@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3773 2015/09/04 08:50:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3774 2015/09/04 11:24:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6704,3 +6704,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice43 to 4.3.7.2 [he 2015-09-04]
 	Updated misc/calibre to 2.37.0 [wiz 2015-09-04]
 	Updated devel/p5-Log-Dispatch to 2.50 [mef 2015-09-04]
+	Updated misc/calibre to 2.37.1 [wiz 2015-09-04]
