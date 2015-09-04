@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3777 2015/09/04 12:30:39 roy Exp $
+$NetBSD: CHANGES-2015,v 1.3778 2015/09/04 13:46:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6708,3 +6708,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-CoreList to 5.20150820 [mef 2015-09-04]
 	Updated devel/p5-Module-ScanDeps to 1.19 [mef 2015-09-04]
 	Updated net/dhcpcd to 6.9.3 [roy 2015-09-04]
+	Updated textproc/miller to 2.1.1 [wiz 2015-09-04]
