@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2015/08/18 19:31:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2015/09/04 19:37:13 jperkin Exp $
 
 GHCOMMIT=		b08581b094980b6fc32beb304b8d3dda0689cc82
 DISTNAME=		${GHCOMMIT}
@@ -22,6 +22,8 @@ WRKSRC=			${WRKDIR}/pkgin-${GHCOMMIT}
 
 BUILD_DEFS+=		PKGIN_REPOSITORY_URL
 BUILD_DEFS+=		VARBASE
+
+OWN_DIRS+=		${VARBASE}/db/pkgin
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
