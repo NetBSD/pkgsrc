@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/06 09:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/04 13:16:15 mef Exp $
 
 DISTNAME=	Hijk-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	mit
 # for make test
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+BUILD_DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=	auto/Hijk/.packlist
 USE_LANGUAGES=	# none
