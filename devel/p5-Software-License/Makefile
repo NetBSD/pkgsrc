@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/07/12 18:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/04 12:28:20 mef Exp $
 #
 
 DISTNAME=	Software-License-0.103010
@@ -17,6 +17,9 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Data-Section-[0-9]*:../../devel/p5-Data-Section
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
+
+# for make test
+BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 PERL5_PACKLIST=	auto/Software/License/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
