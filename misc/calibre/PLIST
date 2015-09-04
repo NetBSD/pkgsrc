@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2015/08/28 12:08:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2015/09/04 08:41:44 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -782,6 +782,7 @@ lib/calibre/calibre/gui2/dialogs/confirm_delete.py
 lib/calibre/calibre/gui2/dialogs/confirm_delete_location.py
 lib/calibre/calibre/gui2/dialogs/confirm_delete_location_ui.py
 lib/calibre/calibre/gui2/dialogs/confirm_delete_ui.py
+lib/calibre/calibre/gui2/dialogs/confirm_merge.py
 lib/calibre/calibre/gui2/dialogs/conversion_error.py
 lib/calibre/calibre/gui2/dialogs/conversion_error_ui.py
 lib/calibre/calibre/gui2/dialogs/custom_recipes.py
