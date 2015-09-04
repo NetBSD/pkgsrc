@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2015/02/12 07:02:48 mef Exp $
+$NetBSD: distinfo,v 1.21 2015/09/04 11:36:12 mef Exp $
 
-SHA1 (Module-ScanDeps-1.18.tar.gz) = f12767be803f28e685be29e6bc9430361179de09
-RMD160 (Module-ScanDeps-1.18.tar.gz) = 6796d5cdb089dc442885965c8c55dc706af1cbb9
-Size (Module-ScanDeps-1.18.tar.gz) = 61759 bytes
+SHA1 (Module-ScanDeps-1.19.tar.gz) = dd063aa4bea1adc6a11041bcc8bbdc8ee8a288f0
+RMD160 (Module-ScanDeps-1.19.tar.gz) = 70b05b7e312e51e97e540310e6ee458470c150b5
+Size (Module-ScanDeps-1.19.tar.gz) = 62007 bytes
