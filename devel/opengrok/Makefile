@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/09/04 05:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2015/09/04 12:07:39 nonaka Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 CATEGORIES=	devel
@@ -27,6 +27,8 @@ SUBST_FILES.conf+=	web/WEB-INF/web.xml
 SUBST_MESSAGE.conf=	Set configuration.xml location
 SUBST_STAGE.conf=	pre-configure
 SUBST_VARS.conf=	PREFIX
+
+MESSAGE_SUBST+=		PKG_JAVA_HOME=${PKG_JAVA_HOME}
 
 .include "options.mk"
 
