@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3771 2015/09/04 07:22:33 he Exp $
+$NetBSD: CHANGES-2015,v 1.3772 2015/09/04 08:41:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6702,3 +6702,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/bulk-medium to 20150904 [wiz 2015-09-04]
 	Updated devel/opengrok to 0.12.1.5 [wiz 2015-09-04]
 	Updated misc/libreoffice43 to 4.3.7.2 [he 2015-09-04]
+	Updated misc/calibre to 2.37.0 [wiz 2015-09-04]
