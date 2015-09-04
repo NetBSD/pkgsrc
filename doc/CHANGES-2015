@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3780 2015/09/04 14:30:26 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3781 2015/09/04 14:35:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6711,3 +6711,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/miller to 2.1.1 [wiz 2015-09-04]
 	Updated devel/p5-MooX-Cmd to 0.015 [mef 2015-09-04]
 	Updated devel/p5-MooseX-App-Cmd to 0.31 [mef 2015-09-04]
+	Updated devel/p5-MooX-Roles-Pluggable to 0.003 [mef 2015-09-04]
