@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2015/06/30 10:42:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.120 2015/09/05 10:47:57 adam Exp $
 
-DISTNAME=	tiff-4.0.4
+DISTNAME=	tiff-4.0.5
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
