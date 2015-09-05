@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/04 05:17:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/05 23:19:52 wiedi Exp $
 
 DISTNAME=	npth-1.2
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ HOMEPAGE=	ftp://ftp.gnupg.org/gcrypt/npth/
 COMMENT=	New Portable Threads Library (nPth)
 LICENSE=	gnu-gpl-v3
 
+USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
