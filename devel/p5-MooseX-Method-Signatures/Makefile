@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/07/12 18:56:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/09/05 06:44:40 mef Exp $
 #
 
 DISTNAME=	MooseX-Method-Signatures-0.48
@@ -29,6 +29,8 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Eval-Closure-[0-9]*:../../devel/p5-Eval-Closure
 DEPENDS+=	p5-Module-Runtime>=0.012:../../devel/p5-Module-Runtime
 
+BUILD_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.89}:../../devel/p5-Test-Simple
 
