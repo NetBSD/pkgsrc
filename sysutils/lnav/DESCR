@@ -1,0 +1,14 @@
+An advanced log file viewer for the small-scale.  Watch and analyze
+your log files from a terminal.
+
+Many logging tools, like Splunk, provide great features but are
+optimized for large-scale deployments.  They require installing
+and configuring servers before they can be effectively used.  There
+is still a need for a robust log file analyzer for the terminal.
+
+Just point lnav to a directory and it will take care of the rest.
+File formats are automatically detected and compressed files are
+unpacked on the fly.
+
+Log files are a wealth of information, lnav can help highlight the
+parts that are important and filter out the noise.

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/05 22:12:04 wiz Exp $
+bin/lnav
+man/man1/lnav.1
