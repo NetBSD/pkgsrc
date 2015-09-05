@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2015/09/05 11:55:28 jperkin Exp $
+include/evas-1/Evas_Engine_GL_Cocoa.h
+lib/evas/modules/engines/gl_cocoa/${MODULE_ARCH}/module.la
+lib/pkgconfig/evas-opengl-cocoa.pc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/03/22 20:15:20 spz Exp $
+# $NetBSD: Makefile,v 1.19 2015/09/05 11:55:28 jperkin Exp $
 
 PKGREVISION=	2
 
@@ -27,6 +27,10 @@ PLIST_SRC+=	PLIST.cserve
 .else
 # Assume shm_open exists as sane default.
 PLIST_SRC+=	PLIST.cserve
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST_SRC+=	PLIST.Darwin
 .endif
 
 CPPFLAGS.SunOS+=	-std=gnu99 -D_XOPEN_SOURCE=600
