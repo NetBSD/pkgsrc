@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/05 13:35:57 mef Exp $
 #
 
 DISTNAME=	Pod-Markdown-2.002
@@ -13,6 +13,9 @@ COMMENT=	Convert POD to Markdown
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
+
+BUILD_DEPENDS+= p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+BUILD_DEPENDS+= p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PERL5_PACKLIST=		auto/Pod/Markdown/.packlist
 
