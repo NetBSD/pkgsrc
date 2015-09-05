@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/06/30 10:42:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/09/05 10:47:57 adam Exp $
 bin/bmp2tiff
 bin/fax2ps
 bin/fax2tiff
@@ -249,3 +249,4 @@ share/doc/tiff/html/v4.0.2.html
 share/doc/tiff/html/v4.0.3.html
 share/doc/tiff/html/v4.0.4.html
 share/doc/tiff/html/v4.0.4beta.html
+share/doc/tiff/html/v4.0.5.html
