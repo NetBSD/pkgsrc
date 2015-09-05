@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/05/20 07:28:05 wen Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/05 23:56:56 wiedi Exp $
 
 DISTNAME=	bwbasic-3.00
 CATEGORIES=	lang
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c99
 
 SHARE_DIR=	${PREFIX}/share/bwbasic
 
