@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/08/22 07:52:37 wen Exp $
+$NetBSD: distinfo,v 1.16 2015/09/05 11:50:39 mef Exp $
 
-SHA1 (Object-InsideOut-3.99.tar.gz) = 27e7baefdaa964ea28d0ef28ab037bb54838f39f
-RMD160 (Object-InsideOut-3.99.tar.gz) = db153c2b57fc9950e94ee20e50d4565b93a8df4b
-Size (Object-InsideOut-3.99.tar.gz) = 133769 bytes
+SHA1 (Object-InsideOut-4.02.tar.gz) = f5bb3a154d7de58cb1844205099b0e6860ab80bd
+RMD160 (Object-InsideOut-4.02.tar.gz) = ee0066c033b10ad037ccc205bd9cb2fd95396068
+Size (Object-InsideOut-4.02.tar.gz) = 133786 bytes
