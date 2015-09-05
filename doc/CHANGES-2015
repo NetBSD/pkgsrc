@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3795 2015/09/05 19:42:46 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3796 2015/09/05 22:13:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6740,3 +6740,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/rsyslog-elasticsearch version 8.12.0 [wiedi 2015-09-05]
 	Updated net/balance to 3.57 [wiedi 2015-09-05]
 	Updated graphics/jbig2dec to 0.12 [adam 2015-09-05]
+	Added sysutils/lnav version 0.7.3 [wiz 2015-09-05]
