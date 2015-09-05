@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2015/09/05 22:12:04 wiz Exp $
+
+SHA1 (lnav-0.7.3.tar.bz2) = 561d440bde7461db7f4dfbfbf3ce47fc58aeccf1
+RMD160 (lnav-0.7.3.tar.bz2) = 8b1795ed44448dd1eb11a51c2a89816ba1634899
+Size (lnav-0.7.3.tar.bz2) = 399142 bytes
+SHA1 (patch-src_data__parser.hh) = 0f976ff3df94af045d6d2be53cef964060f507ce
+SHA1 (patch-src_grep__proc.cc) = f8d23f8c2abf8d99ae27d71dedd9d76ff4ad4a87
+SHA1 (patch-src_log__format.hh) = 14b081db5e839da23dedac624a571a9cc5dffef8
+SHA1 (patch-src_pretty__printer.hh) = fa28e901539fdddfb69875d39efe6f1c74b83b0d
+SHA1 (patch-src_test__override.c) = 67c3fa4785a75eae1bfc8a9ed725276b37eca4ec
