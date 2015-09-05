@@ -1,0 +1,1 @@
+rsyslog module that provides native support for logging to Elasticsearch.
