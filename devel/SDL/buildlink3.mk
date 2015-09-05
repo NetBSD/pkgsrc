@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2015/04/25 14:20:31 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2015/09/05 11:21:53 jperkin Exp $
 
 BUILDLINK_TREE+=	SDL
 
@@ -23,6 +23,12 @@ PTHREAD_OPTS+=	require
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
+# SDL tests on OSX only work for the user logged in on the console, otherwise
+# they hang or crash.
+.if ${OPSYS} == "Darwin" && defined(GNU_CONFIGURE)
+CONFIGURE_ARGS+=	--disable-sdltest
+.endif
 
 pkgbase := SDL
 .include "../../mk/pkg-build-options.mk"
