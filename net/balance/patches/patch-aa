@@ -1,33 +1,31 @@
-$NetBSD: patch-aa,v 1.4 2015/02/11 12:00:01 mef Exp $
+$NetBSD: patch-aa,v 1.5 2015/09/05 16:16:03 wiedi Exp $
 
 * Adjust for pkgsrc installation.
 
---- Makefile.orig	2013-11-06 19:56:36.000000000 +0900
-+++ Makefile	2015-02-04 10:43:31.000000000 +0900
-@@ -2,12 +2,12 @@
+--- Makefile.orig	2015-04-28 07:49:41.000000000 +0000
++++ Makefile
+@@ -2,5 +2,5 @@
  
  #CFLAGS=-g -I.
 -CFLAGS=-O2 -Wall -Wstrict-prototypes -Wuninitialized
 +#CFLAGS=-O2 -Wall -Wstrict-prototypes -Wuninitialized
  
  # uncomment for any OS other than Cygwin
- BALANCE=balance
+@@ -8,5 +8,5 @@ BALANCE=balance
  ROOT=root
  INSTALL=install
 -BINDIR=/usr/sbin
 +BINDIR=${PREFIX}/sbin
  MANDIR=${BINDIR}/../man/man1
  
- # uncomment for Solaris:
-@@ -20,16 +20,16 @@ MANDIR=${BINDIR}/../man/man1
- # BALANCE=balance.exe
+@@ -21,5 +21,5 @@ MANDIR=${BINDIR}/../man/man1
  # ROOT=Administrators
  
 -CC=gcc
 +#CC=gcc
- RELEASE=3.56
+ RELEASE=3.57
  
- all: balance 
+@@ -27,8 +27,8 @@ all: balance
  
  balance: balance.o butils.o
 -	$(CC) $(CFLAGS) -I. -o balance balance.o butils.o $(LIBRARIES)
@@ -38,9 +36,7 @@ $NetBSD: patch-aa,v 1.4 2015/02/11 12:00:01 mef Exp $
 +	$(CC) ${CPPFLAGS} $(CFLAGS) -I. -c balance.c
  
  butils.o: butils.c balance.h
- 	$(CC) $(CFLAGS) -I. -c butils.c
-@@ -48,12 +48,14 @@ clean:
- 	rm -f $(BALANCE) *.o balance.ps balance.pdf
+@@ -49,10 +49,12 @@ clean:
  
  install:
 -	$(INSTALL) -o $(ROOT) -g $(ROOT) -m 755  $(BALANCE) \
@@ -57,4 +53,3 @@ $NetBSD: patch-aa,v 1.4 2015/02/11 12:00:01 mef Exp $
 +	chmod 1777 $(DESTDIR)${VARBASE}/run/balance
  
  release: balance.pdf
- 	rm -rf ./releases/balance-$(RELEASE)
