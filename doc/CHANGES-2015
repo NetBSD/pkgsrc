@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3788 2015/09/05 10:56:36 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3789 2015/09/05 11:50:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6723,3 +6723,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooseX-Declare to 0.43 [mef 2015-09-05]
 	Updated graphics/tiff to 4.0.5 [adam 2015-09-05]
 	Updated devel/scons to 2.3.6 [adam 2015-09-05]
+	Updated devel/p5-Object-InsideOut to 4.02 [mef 2015-09-05]
