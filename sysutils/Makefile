@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2015/08/22 14:47:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.639 2015/09/05 15:32:19 wiedi Exp $
 #
 
 COMMENT=	System utilities
@@ -430,6 +430,7 @@ SUBDIR+=	rox
 SUBDIR+=	rsnapshot
 SUBDIR+=	rsyslog
 SUBDIR+=	rsyslog-dbi
+SUBDIR+=	rsyslog-elasticsearch
 SUBDIR+=	rsyslog-gnutls
 SUBDIR+=	rsyslog-gssapi
 SUBDIR+=	rsyslog-libgcrypt
