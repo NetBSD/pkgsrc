@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3789 2015/09/05 11:50:49 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3790 2015/09/05 13:50:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6724,3 +6724,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/tiff to 4.0.5 [adam 2015-09-05]
 	Updated devel/scons to 2.3.6 [adam 2015-09-05]
 	Updated devel/p5-Object-InsideOut to 4.02 [mef 2015-09-05]
+	Updated devel/p5-App-Cmd to 0.328 [mef 2015-09-05]
+	Updated devel/p5-CPAN-Perl-Releases to 2.34 [mef 2015-09-05]
+	Updated devel/p5-Module-CPANfile to 1.1001 [mef 2015-09-05]
+	Updated devel/p5-PAR to 1.010 [mef 2015-09-05]
+	Updated devel/p5-POE to 1.367 [mef 2015-09-05]
