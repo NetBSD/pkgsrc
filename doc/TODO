@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14849 2015/09/05 06:58:08 mef Exp $
+$NetBSD: TODO,v 1.14850 2015/09/05 13:50:11 mef Exp $
 
 Suggested new packages
 ======================
@@ -1341,7 +1341,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Number-Format-1.75
 	o p5-Number-Range-0.12
 	o p5-Number-Tolerant-1.707
-	o p5-PAR-1.010
 	o p5-PAR-Dist-1.11
 	o p5-PDF-Reuse-Barcode-0.07
 	o p5-PDF-Table-0.9.9
