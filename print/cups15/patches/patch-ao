@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1 2014/06/17 13:17:13 wiz Exp $
+$NetBSD: patch-ao,v 1.2 2015/09/05 13:03:22 jperkin Exp $
 
 Add '--with-manext' configure option.
 
---- config-scripts/cups-manpages.m4.orig	2009-01-12 19:17:09.000000000 +0000
+--- config-scripts/cups-manpages.m4.orig	2011-05-12 05:21:56.000000000 +0000
 +++ config-scripts/cups-manpages.m4
 @@ -13,6 +13,8 @@ dnl   which should have been included wi
  dnl   file is missing or damaged, see the license at "http://www.cups.org/".
