@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/08/30 14:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/09/05 20:56:57 wiz Exp $
 
 DISTNAME=	cups-filters-1.0.74
 CATEGORIES=	print
@@ -28,6 +28,7 @@ REPLACE_BASH+=	filter/textonly
 
 CONFIGURE_ARGS+=	--with-rcdir=${PREFIX}/share/examples/rc.d
 CONFIGURE_ARGS+=	--with-rclevels=""
+CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
