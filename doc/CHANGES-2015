@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3794 2015/09/05 16:16:59 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.3795 2015/09/05 19:42:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6739,3 +6739,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Git-CPAN-Patch to 2.2.0 [mef 2015-09-05]
 	Added sysutils/rsyslog-elasticsearch version 8.12.0 [wiedi 2015-09-05]
 	Updated net/balance to 3.57 [wiedi 2015-09-05]
+	Updated graphics/jbig2dec to 0.12 [adam 2015-09-05]
