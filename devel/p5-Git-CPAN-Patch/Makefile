@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2015/07/12 18:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/05 15:31:58 mef Exp $
 
-DISTNAME=	Git-CPAN-Patch-2.0.4
+DISTNAME=	Git-CPAN-Patch-2.2.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 
@@ -41,6 +40,10 @@ BUILD_DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
 BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 BUILD_DEPENDS+=	p5-MetaCPAN-Client-[0-9]*:../../devel/p5-MetaCPAN-Client
 BUILD_DEPENDS+=	p5-Data-Printer-[0-9]*:../../devel/p5-Data-Printer
+BUILD_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
+BUILD_DEPENDS+=	p5-Package-Constants-[0-9]*:../../devel/p5-Package-Constants
+BUILD_DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
+BUILD_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Git/CPAN/Patch/.packlist
