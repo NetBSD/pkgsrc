@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/09/04 14:30:19 mef Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/05 13:31:50 mef Exp $
 #
 
 DISTNAME=	MooseX-App-Cmd-0.31
@@ -27,6 +27,9 @@ BUILD_DEPENDS+=	p5-MooseX-ConfigFromFile>=0.08:../../devel/p5-MooseX-ConfigFromF
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 BUILD_DEPENDS+=	p5-Test-Simple>=1.001014:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+# for others
+BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
