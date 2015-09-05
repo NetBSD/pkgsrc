@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3783 2015/09/04 14:47:18 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3784 2015/09/05 06:54:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6714,3 +6714,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooX-Roles-Pluggable to 0.003 [mef 2015-09-04]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.24 [mef 2015-09-04]
 	Updated devel/p5-MooseX-ConfigFromFile to 0.14 [mef 2015-09-04]
+	Updated devel/p5-MooseX-Daemonize to 0.20 [mef 2015-09-05]
+	Updated devel/p5-MooseX-MethodAttributes to 0.30 [mef 2015-09-05]
+	Updated devel/p5-MooseX-Traits to 0.13 [mef 2015-09-05]
+	Updated devel/p5-MooseX-Types-LoadableClass to 0.014 [mef 2015-09-05]
+	Updated devel/p5-MooseX-Types-Structured to 0.34 [mef 2015-09-05]
+	Updated devel/p5-MooseX-Types-URI to 0.08 [mef 2015-09-05]
+	Updated devel/p5-MooseX-Types-Structured to 0.34 [mef 2015-09-05]
