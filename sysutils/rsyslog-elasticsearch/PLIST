@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/05 15:32:19 wiedi Exp $
+lib/rsyslog/omelasticsearch.la
