@@ -1,4 +1,4 @@
-$NetBSD: patch-config-scripts_cups-gssapi.m4,v 1.1 2014/06/17 13:17:13 wiz Exp $
+$NetBSD: patch-config-scripts_cups-gssapi.m4,v 1.2 2015/09/05 13:03:22 jperkin Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
@@ -34,3 +34,12 @@ the gssapi option, and need an explicit -lgss
  				;;
  		esac
  		AC_DEFINE(HAVE_GSSAPI, 1, [Whether GSSAPI is available])
+@@ -105,7 +104,7 @@ if test x$enable_gssapi != xno; then
+ 				fi
+ 			else
+ 				AC_MSG_RESULT(no)
+-				if test $uversion -ge 110; then
++				if test $uversion -ge 999110; then
+ 					# Broken public headers in 10.7...
+ 					AC_MSG_ERROR(Run 'sudo mkdir -p $gssdir/PrivateHeaders' and 'sudo touch $gssdir/PrivateHeaders/gssapi_spi.h' to build CUPS.)
+ 				fi

@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2014/06/17 13:17:13 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2015/09/05 13:03:22 jperkin Exp $
 
 cups installs stuff in /usr/pkg/lib64 on Linux. Don't do this.
 
---- config-scripts/cups-3264.m4.orig	2009-04-19 21:18:45.000000000 +0000
+--- config-scripts/cups-3264.m4.orig	2011-05-12 05:21:56.000000000 +0000
 +++ config-scripts/cups-3264.m4
 @@ -95,7 +95,7 @@ case "$uname" in
  			LIB32CUPS="32bit/libcups.so.2"

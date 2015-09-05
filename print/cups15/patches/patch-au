@@ -1,6 +1,6 @@
-$NetBSD: patch-au,v 1.1 2014/06/17 13:17:13 wiz Exp $
+$NetBSD: patch-au,v 1.2 2015/09/05 13:03:22 jperkin Exp $
 
---- scheduler/printers.c.orig	2011-06-15 00:46:13.000000000 +0000
+--- scheduler/printers.c.orig	2012-02-15 23:21:06.000000000 +0000
 +++ scheduler/printers.c
 @@ -80,6 +80,9 @@
  #  include <asl.h>

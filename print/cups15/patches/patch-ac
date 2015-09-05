@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2014/06/17 13:17:13 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2015/09/05 13:03:22 jperkin Exp $
 
 libtoolize.
 
---- configure.in.orig	2008-11-14 19:32:22.000000000 +0000
+--- configure.in.orig	2011-08-31 01:36:33.000000000 +0000
 +++ configure.in
 @@ -22,7 +22,6 @@ sinclude(config-scripts/cups-manpages.m4
  

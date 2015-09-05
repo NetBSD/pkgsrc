@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2014/06/17 13:17:13 wiz Exp $
+$NetBSD: patch-af,v 1.2 2015/09/05 13:03:22 jperkin Exp $
 
 * Remove unneeded $(LIBTOOL), it's now in $(INSTALL_BIN).
 
---- backend/Makefile.orig	2011-05-04 04:28:00.000000000 +0000
+--- backend/Makefile.orig	2012-04-23 17:42:12.000000000 +0000
 +++ backend/Makefile
 @@ -89,7 +89,7 @@ install-exec:	$(INSTALLXPC)
  	echo Installing backends in $(SERVERBIN)/backend
@@ -13,3 +13,12 @@ $NetBSD: patch-af,v 1.1 2014/06/17 13:17:13 wiz Exp $
  	done
  	for file in $(UBACKENDS); do \
  		$(INSTALL_BIN) $$file $(SERVERBIN)/backend; \
+@@ -112,7 +112,7 @@ install-exec:	$(INSTALLXPC)
+ install-xpc:	ipp
+ 	echo Installing XPC backends in $(SERVERBIN)/apple
+ 	$(INSTALL_DIR) -m 755 $(SERVERBIN)/apple
+-	$(LIBTOOL) $(INSTALL_BIN) ipp $(SERVERBIN)/apple
++	$(INSTALL_BIN) ipp $(SERVERBIN)/apple
+ 	for file in $(IPPALIASES); do \
+ 		$(RM) $(SERVERBIN)/apple/$$file; \
+ 		$(LN) ipp $(SERVERBIN)/apple/$$file; \
