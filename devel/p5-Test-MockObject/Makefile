@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/05 12:52:34 mef Exp $
 
 DISTNAME=	Test-MockObject-1.20140408
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	p5-Test-Exception>=0.31:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Test-Warn>=0.23:../../devel/p5-Test-Warn
 DEPENDS+=	p5-UNIVERSAL-can>=1.20110617:../../devel/p5-UNIVERSAL-can
 DEPENDS+=	p5-UNIVERSAL-isa>=1.20110614:../../devel/p5-UNIVERSAL-isa
+
+BUILD_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
 INSTALL_TARGET=	pure_install
 
