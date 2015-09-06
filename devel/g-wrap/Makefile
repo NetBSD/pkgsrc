@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2012/10/31 11:16:58 asau Exp $
+# $NetBSD: Makefile,v 1.67 2015/09/06 13:48:38 gdt Exp $
 
 DISTNAME=	g-wrap-1.9.14
 PKGREVISION=	3
+# update to 1.9.15 on hold because it requires guile 2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/g-wrap/
 
