@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/02/14 02:50:59 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/09/06 03:33:01 mef Exp $
 
-SHA1 (Package-Variant-1.002002.tar.gz) = e4a388395b5daf15c949c718882e22aecaa3a181
-RMD160 (Package-Variant-1.002002.tar.gz) = aa13810aca5dabd39e649be3dcdab79290039bc0
-Size (Package-Variant-1.002002.tar.gz) = 9529 bytes
+SHA1 (Package-Variant-1.003002.tar.gz) = 7afcbdb65a386b7322158d86b432d641d9330d88
+RMD160 (Package-Variant-1.003002.tar.gz) = 29134c5a1abb809d22a407ceb389055b60ab8077
+Size (Package-Variant-1.003002.tar.gz) = 10518 bytes
