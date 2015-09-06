@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3799 2015/09/06 03:39:46 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3800 2015/09/06 04:06:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6747,3 +6747,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Package-Variant to 1.003002 [mef 2015-09-06]
 	Updated devel/p5-Parallel-ForkManager to 1.15 [mef 2015-09-06]
 	Updated devel/p5-Parse-CPAN-Meta to 1.4417 [mef 2015-09-06]
+	Updated devel/p5-Perl-APIReference to 0.21 [mef 2015-09-06]
+	Updated devel/p5-Perl-Critic to 1.126 [mef 2015-09-06]
+	Updated devel/p5-Proc-Daemon to 0.21 [mef 2015-09-06]
