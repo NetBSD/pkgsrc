@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3806 2015/09/06 09:56:30 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3807 2015/09/06 10:22:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6765,3 +6765,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Added fonts/Hack-ttf version 2.010 [wiz 2015-09-06]
 	Updated ham/xnec2c to 3.4 [mef 2015-09-06]
 	Updated ham/xdx to 2.5.0 [mef 2015-09-06]
+	Updated devel/p5-Test-Command-Simple to 0.05 [mef 2015-09-06]
+	Updated devel/p5-Test-DependentModules to 0.22 [mef 2015-09-06]
+	Updated devel/p5-Test-File to 1.44 [mef 2015-09-06]
+	Updated devel/p5-Test-MockModule to 0.10 [mef 2015-09-06]
+	Updated devel/p5-Test-MockObject to 1.20150527 [mef 2015-09-06]
+	Updated devel/p5-Test-SharedFork to 0.33 [mef 2015-09-06]
+	Updated devel/p5-Test-Spec to 0.51 [mef 2015-09-06]
+	Updated devel/p5-Test-Version to 2.03 [mef 2015-09-06]
