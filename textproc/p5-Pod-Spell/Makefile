@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/07/12 18:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/06 03:52:21 mef Exp $
 
 DISTNAME=	Pod-Spell-1.17
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,9 @@ DEPENDS+=	p5-Class-Tiny>=0:../../devel/p5-Class-Tiny
 DEPENDS+=	p5-File-ShareDir>=0:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-File-ShareDir-Install>=0:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-File-ShareDir-ProjectDistDir>=0:../../devel/p5-File-ShareDir-ProjectDistDir
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 PERL5_PACKLIST=		auto/Pod/Spell/.packlist
 
