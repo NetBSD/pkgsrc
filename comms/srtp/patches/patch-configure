@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2015/09/06 14:02:08 joerg Exp $
+
+--- configure.orig	2005-10-03 15:23:13.000000000 +0000
++++ configure
+@@ -2493,11 +2493,11 @@ fi
+ echo "$as_me:$LINENO: checking which random device to use" >&5
+ echo $ECHO_N "checking which random device to use... $ECHO_C" >&6
+ if test "$enable_kernel_linux" = "yes"; then
+-   RNG_OBJS=rand_linux_kernel.o
++   RNG_OBJS=rand_linux_kernel.lo
+    echo "$as_me:$LINENO: result: Linux kernel builtin" >&5
+ echo "${ECHO_T}Linux kernel builtin" >&6
+ else
+-   RNG_OBJS=rand_source.o
++   RNG_OBJS=rand_source.lo
+    if test -n "$DEV_URANDOM"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -7158,7 +7158,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define SRTP_GDOI 1
+ _ACEOF
+ 
+-   GDOI_OBJS=gdoi/srtp+gdoi.o
++   GDOI_OBJS=gdoi/srtp+gdoi.lo
+ 
+ fi
+ echo "$as_me:$LINENO: result: $enable_gdoi" >&5
