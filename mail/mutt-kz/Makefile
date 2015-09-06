@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/09/04 11:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/09/06 09:16:58 wiz Exp $
 
 DISTNAME=       mutt-kz-1.5.23.1-rc1
 PKGNAME=        ${DISTNAME:S/-rc/rc/}
@@ -21,8 +21,8 @@ pre-build:
 
 .include "../../mail/mutt/Makefile.common"
 
-DEINSTALL_SRC=		${.CURDIR}/../../mail/mutt-devel/DEINSTALL
-INSTALL_SRC=		${.CURDIR}/../../mail/mutt-devel/INSTALL
+DEINSTALL_SRC=		${.CURDIR}/../../mail/mutt/DEINSTALL
+INSTALL_SRC=		${.CURDIR}/../../mail/mutt/INSTALL
 
 .include "../../mail/notmuch/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
