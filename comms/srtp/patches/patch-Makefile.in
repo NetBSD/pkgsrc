@@ -1,0 +1,106 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/09/06 14:02:08 joerg Exp $
+
+--- Makefile.in.orig	2006-07-18 17:42:42.000000000 +0000
++++ Makefile.in
+@@ -66,44 +66,44 @@ libdir = @libdir@
+ 
+ # implicit rules for object files and test apps
+ 
++%.lo: %.c
++	libtool --mode=compile $(COMPILE) -c $< -o $@
+ %.o: %.c
+ 	$(COMPILE) -c $< -o $@
+ 
+ %$(EXE): %.c
+-	$(COMPILE) $(LDFLAGS) $< -o $@ $(SRTPLIB) $(LIBS)
+-
++	libtool --mode=link $(COMPILE) $(LDFLAGS) $< -o $@ $(SRTPLIB) $(LIBS)
+ 
+ # libcrypt.a (the crypto engine) 
+-ciphers = crypto/cipher/cipher.o crypto/cipher/null_cipher.o      \
+-          crypto/cipher/aes.o crypto/cipher/aes_icm.o             \
+-          crypto/cipher/aes_cbc.o
++ciphers = crypto/cipher/cipher.lo crypto/cipher/null_cipher.lo      \
++          crypto/cipher/aes.lo crypto/cipher/aes_icm.lo             \
++          crypto/cipher/aes_cbc.lo
+ 
+-hashes  = crypto/hash/null_auth.o crypto/hash/sha1.o \
+-          crypto/hash/hmac.o crypto/hash/auth.o # crypto/hash/tmmhv2.o 
++hashes  = crypto/hash/null_auth.lo crypto/hash/sha1.lo \
++          crypto/hash/hmac.lo crypto/hash/auth.lo # crypto/hash/tmmhv2.lo 
+ 
+-replay  = crypto/replay/rdb.o crypto/replay/rdbx.o               \
+-          crypto/replay/ut_sim.o 
++replay  = crypto/replay/rdb.lo crypto/replay/rdbx.lo               \
++          crypto/replay/ut_sim.lo 
+ 
+-math    = crypto/math/datatypes.o crypto/math/stat.o
++math    = crypto/math/datatypes.lo crypto/math/stat.lo
+ 
+-ust     = crypto/ust/ust.o 
++ust     = crypto/ust/ust.lo 
+ 
+-rng     = crypto/rng/$(RNG_OBJS) crypto/rng/prng.o crypto/rng/ctr_prng.o
++rng     = crypto/rng/$(RNG_OBJS) crypto/rng/prng.lo crypto/rng/ctr_prng.lo
+ 
+-err     = crypto/kernel/err.o
++err     = crypto/kernel/err.lo
+ 
+-kernel  = crypto/kernel/crypto_kernel.o  crypto/kernel/alloc.o   \
+-          crypto/kernel/key.o $(rng) $(err) # $(ust) 
++kernel  = crypto/kernel/crypto_kernel.lo  crypto/kernel/alloc.lo   \
++          crypto/kernel/key.lo $(rng) $(err) # $(ust) 
+ 
+ cryptobj =  $(ciphers) $(hashes) $(math) $(stat) $(kernel) $(replay)
+ 
+ # libsrtp.a (implements srtp processing)
+ 
+-srtpobj = srtp/srtp.o 
++srtpobj = srtp/srtp.lo 
+ 
+-libsrtp.a: $(srtpobj) $(cryptobj) $(gdoi)
+-	ar cr libsrtp.a $^
+-	$(RANLIB) libsrtp.a
++libsrtp.la: $(srtpobj) $(cryptobj) $(gdoi)
++	libtool --mode=link ${CC} -rpath ${libdir} -version-info 1 -o $@ $(srtpobj) $(cryptobj) $(gdoi)
+ 
+ # libcryptomath.a contains general-purpose routines that are used to
+ # generate tables and verify cryptoalgorithm implementations - this
+@@ -127,19 +127,19 @@ testapp = $(crypto_testapp) test/srtp_dr
+ 	  test/roc_driver$(EXE) test/rdbx_driver$(EXE) test/rtpw$(EXE) \
+ 	  test/dtls_srtp_driver$(EXE)
+ 
+-$(testapp): libsrtp.a
++$(testapp): libsrtp.la
+ 
+-test/rtpw$(EXE): test/rtpw.c test/rtp.c test/getopt_s.c
+-	$(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
++test/rtpw$(EXE): test/rtpw.lo test/rtp.lo test/getopt_s.lo
++	libtool --mode=link $(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
+ 
+-test/srtp_driver$(EXE): test/srtp_driver.c test/getopt_s.c
+-	$(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
++test/srtp_driver$(EXE): test/srtp_driver.lo test/getopt_s.lo
++	libtool --mode=link $(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
+ 
+-test/rdbx_driver$(EXE): test/rdbx_driver.c test/getopt_s.c
+-	$(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
++test/rdbx_driver$(EXE): test/rdbx_driver.lo test/getopt_s.lo
++	libtool --mode=link $(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
+ 
+-test/dtls_srtp_driver$(EXE): test/dtls_srtp_driver.c test/getopt_s.c
+-	$(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
++test/dtls_srtp_driver$(EXE): test/dtls_srtp_driver.lo test/getopt_s.lo
++	libtool --mode=link $(COMPILE) $(LDFLAGS) -o $@ $^ $(LIBS) $(SRTPLIB)
+ 
+ test: $(testapp)
+ 	@echo "Build done. Please run '$(MAKE) runtest' to run self tests."
+@@ -196,7 +196,7 @@ install:
+ 	$(INSTALL) -d $(DESTDIR)$(libdir)
+ 	cp include/*.h $(DESTDIR)$(includedir)/srtp  
+ 	cp crypto/include/*.h $(DESTDIR)$(includedir)/srtp
+-	if [ -f libsrtp.a ]; then cp libsrtp.a $(DESTDIR)$(libdir)/; fi
++	if [ -f libsrtp.la ]; then libtool --mode=install cp libsrtp.la $(DESTDIR)$(libdir)/; fi
+ 
+ uninstall:
+ 	rm -rf $(DESTDIR)$(includedir)/srtp
