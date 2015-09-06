@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3810 2015/09/06 12:28:32 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3811 2015/09/06 13:12:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6780,3 +6780,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php54 to 5.4.45 [taca 2015-09-06]
 	Updated lang/php55 to 5.5.29 [taca 2015-09-06]
 	Updated lang/php56 to 5.6.13 [taca 2015-09-06]
+	Updated devel/p5-Term-ReadLine to 1.27 [mef 2015-09-06]
