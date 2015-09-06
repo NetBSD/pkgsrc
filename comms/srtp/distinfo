@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2015/09/06 14:02:08 joerg Exp $
+
+SHA1 (srtp-1.4.4.tgz) = 299c6cfe0c9d6f1804bc5921cfbdb6a6bc76a521
+RMD160 (srtp-1.4.4.tgz) = 64e58a3fc2cc30a8d7cba6b6ce59f807649d9dee
+Size (srtp-1.4.4.tgz) = 502890 bytes
+SHA1 (patch-Makefile.in) = 8e0e6d7bed257263e4609d305dfa6a27efc1906d
+SHA1 (patch-configure) = d70d01b5f846b2f163ba2246511cf1314005fa35
+SHA1 (patch-configure.in) = 217c066920fedaaba02d86e3c2017a368ea8fee7
+SHA1 (patch-include_srtp.h) = 4e680a004d14a338c7ec4cc135f21da38490c315
+SHA1 (patch-srtp_srtp.c) = 90f2674702dc2070350abc61f7773a4a6234ae33
+SHA1 (patch-test_rtpw__test.sh) = 00f28ef1e91b963ab4d413ac10925150bff4b6be
