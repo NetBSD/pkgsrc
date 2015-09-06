@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3796 2015/09/05 22:13:04 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3797 2015/09/06 00:11:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6741,3 +6741,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/balance to 3.57 [wiedi 2015-09-05]
 	Updated graphics/jbig2dec to 0.12 [adam 2015-09-05]
 	Added sysutils/lnav version 0.7.3 [wiz 2015-09-05]
+	Updated ham/uhd to 3.9.0 [mef 2015-09-06]
