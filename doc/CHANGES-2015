@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3821 2015/09/06 20:42:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3822 2015/09/06 20:42:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6791,3 +6791,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-pbr to 1.6.0 [wiz 2015-09-06]
 	Updated net/py-twisted to 15.4.0 [wiz 2015-09-06]
 	Added devel/p5-File-Slurper version 0.008 [wiz 2015-09-06]
+	Updated textproc/p5-Pod-POM to 2.00 [wiz 2015-09-06]
