@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3808 2015/09/06 10:45:56 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3809 2015/09/06 12:04:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6776,3 +6776,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-autovivification to 0.16 [mef 2015-09-06]
 	Updated devel/p5-indirect to 0.36 [mef 2015-09-06]
 	Updated devel/p5-signatures to 0.13 [mef 2015-09-06]
+	Updated mail/squirrelmail to 1.4.23pre14523 [taca 2015-09-06]
