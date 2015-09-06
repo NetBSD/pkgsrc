@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/01/29 06:34:15 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/09/06 06:55:49 mef Exp $
 
-SHA1 (Term-UI-0.42.tar.gz) = 54c5c4a15e2a763864d1fcda54b26c791c78cdb7
-RMD160 (Term-UI-0.42.tar.gz) = 3b0f29109a02d82a8e9937b5e5c15c21fdc0eaf4
-Size (Term-UI-0.42.tar.gz) = 12276 bytes
+SHA1 (Term-UI-0.46.tar.gz) = 6b38f861da1d8eed8721a0e9a8124ddf2731cb99
+RMD160 (Term-UI-0.46.tar.gz) = a6aef0887a5f56507125b19e2d8bfa78e0907f79
+Size (Term-UI-0.46.tar.gz) = 12295 bytes
