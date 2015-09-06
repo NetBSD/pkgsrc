@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/09/06 06:53:55 mef Exp $
 
-DISTNAME=	Term-Screen-1.03
-PKGNAME=	p5-Term-Screen-1.03
-PKGREVISION=	7
+DISTNAME=	Term-Screen-1.05
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
@@ -11,9 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Term-Screen/
 COMMENT=	Term::Cap based screen positioning module
 
 PERL5_PACKLIST=		auto/Term/Screen/.packlist
-
-# Asks the user to first don't press a key and then to press a key.
-INTERACTIVE_STAGE=	test
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
