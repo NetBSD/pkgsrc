@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/12/12 15:43:39 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/09/06 09:56:08 mef Exp $
 
-SHA1 (xdx-2.4.3.tar.gz) = 6dd1981742a424690f0ecf12adb2fa4c1bd7e207
-RMD160 (xdx-2.4.3.tar.gz) = b207b01dc9e0f6459886e2bd232586bab292cb00
-Size (xdx-2.4.3.tar.gz) = 324178 bytes
+SHA1 (xdx-2.5.0.tar.gz) = 2138663ae34ef1020b0ee68f1547ee56a574ae81
+RMD160 (xdx-2.5.0.tar.gz) = ff03ec922ca834fce3752f715e85b5059c819eff
+Size (xdx-2.5.0.tar.gz) = 342548 bytes
