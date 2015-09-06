@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/15 09:22:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/06 18:32:10 wiedi Exp $
 
 DISTNAME=		bspwm-0.9
 CATEGORIES=		wm
@@ -12,6 +12,8 @@ LICENSE=		2-clause-bsd
 
 USE_TOOLS+=		gmake bash:run
 REPLACE_BASH+=		contrib/freedesktop/bspwm-session
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bspwm
 INSTALLATION_DIRS=	share/examples/bspwm
