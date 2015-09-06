@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3805 2015/09/06 09:51:02 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3806 2015/09/06 09:56:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6764,3 +6764,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/freetype2 to 2.6 [mef 2015-09-06]
 	Added fonts/Hack-ttf version 2.010 [wiz 2015-09-06]
 	Updated ham/xnec2c to 3.4 [mef 2015-09-06]
+	Updated ham/xdx to 2.5.0 [mef 2015-09-06]
