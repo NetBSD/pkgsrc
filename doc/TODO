@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14852 2015/09/05 16:16:59 wiedi Exp $
+$NetBSD: TODO,v 1.14853 2015/09/06 03:39:46 mef Exp $
 
 Suggested new packages
 ======================
@@ -1343,8 +1343,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-PDF-Reuse-Barcode-0.07
 	o p5-PDF-Table-0.9.9
 	o p5-PPIx-EditorTools-0.19
-	o p5-PPIx-Regexp-0.041
-	o p5-Package-Variant-1.003002
 	o p5-Padre-1.00
 	o p5-Padre-Plugin-Autoformat-1.22
 	o p5-Padre-Plugin-Catalyst-0.13
@@ -1357,8 +1355,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
-	o p5-Parallel-ForkManager-1.15
-	o p5-Parse-CPAN-Meta-1.4417
 	o p5-PerlMagick-6.9.1.10
 	o p5-Plack-Middleware-Auth-Digest-0.05
 	o p5-Plack-Middleware-ConsoleLogger-0.05
