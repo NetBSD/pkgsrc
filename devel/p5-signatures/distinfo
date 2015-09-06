@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/05/23 08:38:12 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/09/06 10:45:06 mef Exp $
 
-SHA1 (signatures-0.12.tar.gz) = 5163357cf6a7b8796983ed643bad4eff1205029c
-RMD160 (signatures-0.12.tar.gz) = ae3ec408b786f44d9eef12973765f8dbc377304d
-Size (signatures-0.12.tar.gz) = 78277 bytes
+SHA1 (signatures-0.13.tar.gz) = ce6887a5d78e624262608c5e1fa8c96d77278d70
+RMD160 (signatures-0.13.tar.gz) = fc087876c33a09e9292d948248a0d2345a4fb867
+Size (signatures-0.13.tar.gz) = 78058 bytes
