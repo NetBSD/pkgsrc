@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3800 2015/09/06 04:06:02 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3801 2015/09/06 07:00:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6750,3 +6750,13 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Perl-APIReference to 0.21 [mef 2015-09-06]
 	Updated devel/p5-Perl-Critic to 1.126 [mef 2015-09-06]
 	Updated devel/p5-Proc-Daemon to 0.21 [mef 2015-09-06]
+	Updated devel/p5-Regexp-Assemble to 0.36 [mef 2015-09-06]
+	Updated devel/p5-Scope-Guard to 0.21 [mef 2015-09-06]
+	Updated devel/p5-Scope-Upper to 0.28 [mef 2015-09-06]
+	Updated devel/p5-Search-Elasticsearch to 1.99 [mef 2015-09-06]
+	Updated devel/p5-Sub-Identify to 0.11 [mef 2015-09-06]
+	Updated devel/p5-System-Command to 1.112 [mef 2015-09-06]
+	Updated devel/p5-Template-Plugin-ListMoreUtils to 0.03 [mef 2015-09-06]
+	Updated devel/p5-Term-Cap to 1.17 [mef 2015-09-06]
+	Updated devel/p5-Term-Screen to 1.05 [mef 2015-09-06]
+	Updated devel/p5-Term-UI to 0.46 [mef 2015-09-06]
