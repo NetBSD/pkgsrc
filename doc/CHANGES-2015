@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3814 2015/09/06 19:19:15 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3815 2015/09/06 19:46:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6784,3 +6784,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-UNIVERSAL-isa to 1.20150614 [mef 2015-09-06]
 	Added comms/srtp version 1.4.4 [joerg 2015-09-06]
 	Updated graphics/gimp-ufraw to 0.22 [gdt 2015-09-06]
+	Updated geography/geos to 3.5.0 [gdt 2015-09-06]
