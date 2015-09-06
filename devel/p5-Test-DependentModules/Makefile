@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/08/06 09:26:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/06 10:07:46 mef Exp $
 
-DISTNAME=	Test-DependentModules-0.21
+DISTNAME=	Test-DependentModules-0.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
