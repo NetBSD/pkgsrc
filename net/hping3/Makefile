@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/06 12:08:06 wiedi Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -32,4 +32,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping3 ${DESTDIR}${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/docs/hping3.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
