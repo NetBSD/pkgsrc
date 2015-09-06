@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3803 2015/09/06 08:34:29 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3804 2015/09/06 09:18:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6762,3 +6762,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Term-UI to 0.46 [mef 2015-09-06]
 	Added sysutils/hytctl version 1.0 [kardel 2015-09-06]
 	Updated graphics/freetype2 to 2.6 [mef 2015-09-06]
+	Added fonts/Hack-ttf version 2.010 [wiz 2015-09-06]
