@@ -1,0 +1,5 @@
+hytctl allows reading and writing of EEPROM values
+of the HYT 221, 271 and 939 temperatur/hygro devices.
+This tool is mainly used to change the I2C-address
+of the device to facilitate multiple devices on a
+single I2C-bus.

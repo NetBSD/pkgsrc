@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.640 2015/09/05 22:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.641 2015/09/06 06:50:52 kardel Exp $
 #
 
 COMMENT=	System utilities
@@ -252,6 +252,7 @@ SUBDIR+=	heirloom-yes
 SUBDIR+=	hfsutils
 SUBDIR+=	hs-temporary
 SUBDIR+=	htop
+SUBDIR+=	hytctl
 SUBDIR+=	i2ocfg
 SUBDIR+=	i810switch
 SUBDIR+=	iat
