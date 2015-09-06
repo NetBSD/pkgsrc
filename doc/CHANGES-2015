@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3817 2015/09/06 20:30:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3818 2015/09/06 20:32:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6787,3 +6787,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/geos to 3.5.0 [gdt 2015-09-06]
 	Updated devel/afl to 1.92b [wiz 2015-09-06]
 	Updated fonts/harfbuzz to 1.0.3 [wiz 2015-09-06]
+	Updated security/py-cryptography to 1.0.1 [wiz 2015-09-06]
