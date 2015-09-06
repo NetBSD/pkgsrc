@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2013/08/30 16:37:38 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2015/09/06 19:45:44 gdt Exp $
 
-DISTNAME=	geos-3.4.2
+DISTNAME=	geos-3.5.0
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2

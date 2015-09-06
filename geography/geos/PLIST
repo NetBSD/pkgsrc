@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/08/30 16:37:38 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/09/06 19:45:44 gdt Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/Angle.h
@@ -262,6 +262,9 @@ include/geos/operation/distance/ConnectedElementLocationFilter.h
 include/geos/operation/distance/ConnectedElementPointFilter.h
 include/geos/operation/distance/DistanceOp.h
 include/geos/operation/distance/GeometryLocation.h
+include/geos/operation/intersection/Rectangle.h
+include/geos/operation/intersection/RectangleIntersection.h
+include/geos/operation/intersection/RectangleIntersectionBuilder.h
 include/geos/operation/linemerge/EdgeString.h
 include/geos/operation/linemerge/LineMergeDirectedEdge.h
 include/geos/operation/linemerge/LineMergeEdge.h
@@ -316,7 +319,6 @@ include/geos/operation/valid/RepeatedPointTester.h
 include/geos/operation/valid/SimpleNestedRingTester.h
 include/geos/operation/valid/SweeplineNestedRingTester.h
 include/geos/operation/valid/TopologyValidationError.h
-include/geos/platform.h
 include/geos/planargraph.h
 include/geos/planargraph/DirectedEdge.h
 include/geos/planargraph/DirectedEdgeStar.h
@@ -327,6 +329,7 @@ include/geos/planargraph/NodeMap.h
 include/geos/planargraph/PlanarGraph.h
 include/geos/planargraph/Subgraph.h
 include/geos/planargraph/algorithm/ConnectedSubgraphFinder.h
+include/geos/platform.h
 include/geos/precision.h
 include/geos/precision/CommonBits.h
 include/geos/precision/CommonBitsOp.h
@@ -348,6 +351,7 @@ include/geos/spatialIndex.h
 include/geos/timeval.h
 include/geos/triangulate/DelaunayTriangulationBuilder.h
 include/geos/triangulate/IncrementalDelaunayTriangulator.h
+include/geos/triangulate/VoronoiDiagramBuilder.h
 include/geos/triangulate/quadedge/LastFoundQuadEdgeLocator.h
 include/geos/triangulate/quadedge/LocateFailureException.h
 include/geos/triangulate/quadedge/QuadEdge.h
