@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3797 2015/09/06 00:11:21 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3798 2015/09/06 00:25:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6742,3 +6742,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/jbig2dec to 0.12 [adam 2015-09-05]
 	Added sysutils/lnav version 0.7.3 [wiz 2015-09-05]
 	Updated ham/uhd to 3.9.0 [mef 2015-09-06]
+	Updated multimedia/mpv to 0.10.0 [leot 2015-09-06]
