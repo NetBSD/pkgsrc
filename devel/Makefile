@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2141 2015/09/02 13:04:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.2142 2015/09/06 20:42:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -938,6 +938,7 @@ SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-File-ShareDir-ProjectDistDir
 SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Slurp-Tiny
+SUBDIR+=	p5-File-Slurper
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-File-Tempdir
 SUBDIR+=	p5-File-Touch
