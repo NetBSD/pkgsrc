@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/06/30 22:42:32 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/09/06 20:33:46 wiz Exp $
 bin/pbr${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -94,6 +94,9 @@ ${PYSITELIB}/pbr/tests/test_util.pyo
 ${PYSITELIB}/pbr/tests/test_version.py
 ${PYSITELIB}/pbr/tests/test_version.pyc
 ${PYSITELIB}/pbr/tests/test_version.pyo
+${PYSITELIB}/pbr/tests/test_wsgi.py
+${PYSITELIB}/pbr/tests/test_wsgi.pyc
+${PYSITELIB}/pbr/tests/test_wsgi.pyo
 ${PYSITELIB}/pbr/tests/testpackage/CHANGES.txt
 ${PYSITELIB}/pbr/tests/testpackage/LICENSE.txt
 ${PYSITELIB}/pbr/tests/testpackage/MANIFEST.in
@@ -117,6 +120,9 @@ ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/extra.pyc
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/extra.pyo
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/package_data/1.txt
 ${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/package_data/2.txt
+${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/wsgi.py
+${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/wsgi.pyc
+${PYSITELIB}/pbr/tests/testpackage/pbr_testpackage/wsgi.pyo
 ${PYSITELIB}/pbr/tests/testpackage/setup.cfg
 ${PYSITELIB}/pbr/tests/testpackage/setup.py
 ${PYSITELIB}/pbr/tests/testpackage/setup.pyc
