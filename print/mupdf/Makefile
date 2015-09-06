@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/05/27 21:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/09/06 20:53:24 wiz Exp $
 
 DISTNAME=	mupdf-1.7a-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -22,6 +22,7 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	XCFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	build=release
 
+CFLAGS+=	-DJBIG_NO_MEMENTO
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 .include "options.mk"
