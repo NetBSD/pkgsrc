@@ -1,0 +1,26 @@
+$NetBSD: patch-configure.in,v 1.1 2015/09/06 14:02:08 joerg Exp $
+
+--- configure.in.orig	2005-10-03 15:19:02.000000000 +0000
++++ configure.in
+@@ -34,10 +34,10 @@ fi
+ 
+ AC_MSG_CHECKING(which random device to use)
+ if test "$enable_kernel_linux" = "yes"; then
+-   RNG_OBJS=rand_linux_kernel.o
++   RNG_OBJS=rand_linux_kernel.lo
+    AC_MSG_RESULT([Linux kernel builtin])
+ else
+-   RNG_OBJS=rand_source.o
++   RNG_OBJS=rand_source.lo
+    if test -n "$DEV_URANDOM"; then
+       AC_DEFINE_UNQUOTED(DEV_URANDOM, "$DEV_URANDOM",[Path to random device])
+       AC_MSG_RESULT([$DEV_URANDOM])
+@@ -182,7 +182,7 @@ AC_ARG_ENABLE(gdoi,
+   [], enable_gdoi=no)
+ if test "$enable_gdoi" = "yes"; then
+    AC_DEFINE(SRTP_GDOI, 1, [Define to use GDOI.])
+-   GDOI_OBJS=gdoi/srtp+gdoi.o
++   GDOI_OBJS=gdoi/srtp+gdoi.lo
+    AC_SUBST(GDOI_OBJS)                              
+ fi
+ AC_MSG_RESULT($enable_gdoi)
