@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.287 2015/09/02 11:10:08 markd Exp $
+# $NetBSD: Makefile,v 1.288 2015/09/06 09:17:19 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -6,6 +6,7 @@ COMMENT=	Fonts
 SUBDIR+=	AnonymousPro
 SUBDIR+=	CamingoCode
 SUBDIR+=	EB-Garamond
+SUBDIR+=	Hack-ttf
 SUBDIR+=	SDL2_ttf
 SUBDIR+=	TextFonts-ttf
 SUBDIR+=	Xft2
