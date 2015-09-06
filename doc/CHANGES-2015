@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3812 2015/09/06 13:17:14 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3813 2015/09/06 14:02:44 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6782,3 +6782,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.13 [taca 2015-09-06]
 	Updated devel/p5-Term-ReadLine to 1.27 [mef 2015-09-06]
 	Updated devel/p5-UNIVERSAL-isa to 1.20150614 [mef 2015-09-06]
+	Added comms/srtp version 1.4.4 [joerg 2015-09-06]
