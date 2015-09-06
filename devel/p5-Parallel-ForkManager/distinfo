@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/05/23 00:31:20 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/09/06 03:34:22 mef Exp $
 
-SHA1 (Parallel-ForkManager-1.14.tar.gz) = f8faf0de2488224d401500e3f15506a082420eb5
-RMD160 (Parallel-ForkManager-1.14.tar.gz) = 5eec297102cd730c9dfc8dadfd03b2b05ed96375
-Size (Parallel-ForkManager-1.14.tar.gz) = 16857 bytes
+SHA1 (Parallel-ForkManager-1.15.tar.gz) = ba6ee5815a547b0dbbd1fffe9040d955bbbb3fce
+RMD160 (Parallel-ForkManager-1.15.tar.gz) = c0afd20c43379f10f4110eb3c2229ad967ee9f48
+Size (Parallel-ForkManager-1.15.tar.gz) = 16948 bytes
