@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3819 2015/09/06 20:33:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3820 2015/09/06 20:36:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6789,3 +6789,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/harfbuzz to 1.0.3 [wiz 2015-09-06]
 	Updated security/py-cryptography to 1.0.1 [wiz 2015-09-06]
 	Updated devel/py-pbr to 1.6.0 [wiz 2015-09-06]
+	Updated net/py-twisted to 15.4.0 [wiz 2015-09-06]
