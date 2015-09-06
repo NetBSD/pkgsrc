@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/08/14 06:19:13 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/09/06 00:11:12 mef Exp $
 
-DISTNAME=		uhd-3.8.5
+DISTNAME=		uhd-3.9.0
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
-GITHUB_PROJECT=         uhd
 GITHUB_TAG=		release_003_008_005
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
