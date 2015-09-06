@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/09/06 06:49:39 mef Exp $
 #
 
-DISTNAME=	Template-Plugin-ListMoreUtils-0.02
+DISTNAME=	Template-Plugin-ListMoreUtils-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
@@ -19,7 +18,6 @@ DEPENDS+=	p5-Template-Plugin-VMethods>=0.02:../../devel/p5-Template-Plugin-VMeth
 DEPENDS+=	p5-Template-Toolkit>=2.22:../../www/p5-Template-Toolkit
 
 PERL5_PACKLIST=		auto/Template/Plugin/ListMoreUtils/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
