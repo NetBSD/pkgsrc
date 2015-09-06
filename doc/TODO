@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14857 2015/09/06 10:22:46 mef Exp $
+$NetBSD: TODO,v 1.14858 2015/09/06 10:45:57 mef Exp $
 
 Suggested new packages
 ======================
@@ -1419,12 +1419,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-YAML-1.15
 	o p5-YAML-Tiny-1.69
 	o p5-autodie-2.29
-	o p5-autovivification-0.16
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
-	o p5-indirect-0.36
 	o p5-perl-ldap-0.65
-	o p5-signatures-0.13
 	o p5-sqlrelay-0.62
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
