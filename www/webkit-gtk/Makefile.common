@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2015/08/15 15:34:32 leot Exp $
+# $NetBSD: Makefile.common,v 1.50 2015/09/06 06:56:15 dsainty Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.8.5
@@ -20,6 +20,10 @@ USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
 # GCC >= 4.8 (for std::this_thread::yield() at least) or Clang >= 3.3
 GCC_REQD+=	4.8
+
+# Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
+# versions of ld.gold.
+CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk.pc.in
