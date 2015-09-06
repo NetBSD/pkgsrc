@@ -1,0 +1,65 @@
+.\"	$NetBSD: hytctl.8,v 1.1 2015/09/06 06:50:53 kardel Exp $
+.\"
+.\" Copyright (c) 2015 The NetBSD Foundation, Inc.
+.\" All rights reserved.
+.\"
+.\" This code is derived from software contributed to The NetBSD Foundation
+.\" by Frank Kardel.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\"
+.Dd Sep 5, 2015
+.Dt HYTCTL 8
+.Os
+.Sh NAME
+.Nm hytctl
+.Nd read or set HYT 221/271/939 device EEPROM values
+.Sh SYNOPSIS
+.Nm
+.Op Fl d
+.Ar gpio-device
+.Ar gpio-pin#|name
+.Ar i2c-device
+.Ar i2c-address
+.Ar eeprom-address
+.Op new-eeprom-value
+.Sh DESCRIPTION
+The
+.Nm hytctl
+command will read out a value at a given EEPROM address and can optionally
+set the value at this address. The man usage is setting a new I2C-address
+of the device via EEPROM address 0x1C.
+.Pp
+To access the EEPROM of the HYT devices the CM mode is used. This mode can
+only be entered within 10ms after device power-up. Thus a GPIO pin must
+be attached to Vdd on the device in order to be able to control the device
+power. Communication is done normally via the I2C-bus.
+.Pp
+The options are as follows:
+.Bl -tag -width Ds
+.It Fl d
+Enable debug output.
+.El
+.Sh RETURN VALUES
+.Ex -std hytctl
+.Sh AUTHORS
+.An Frank Kardel
