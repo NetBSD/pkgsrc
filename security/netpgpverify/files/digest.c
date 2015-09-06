@@ -128,7 +128,7 @@ digest_init(digest_t *hash, const uint32_t hashalg)
 		hash->ctx = &hash->u.sha1ctx;
 		return 1;
 	case RIPEMD_HASH_ALG:
-		RMD160Init(&hash->u.rmd160ctx);
+		netpgpv_RMD160Init(&hash->u.rmd160ctx);
 		hash->size = 20;
 		hash->prefix = prefix_rmd160;
 		hash->len = sizeof(prefix_rmd160);
@@ -212,7 +212,7 @@ digest_update(digest_t *hash, const uint8_t *data, size_t length)
 		netpgpv_SHA1Update(hash->ctx, data, (unsigned)length);
 		return 1;
 	case RIPEMD_HASH_ALG:
-		RMD160Update(hash->ctx, data, (unsigned)length);
+		netpgpv_RMD160Update(hash->ctx, data, (unsigned)length);
 		return 1;
 	case SHA256_HASH_ALG:
 		netpgpv_SHA256_Update(hash->ctx, data, length);
@@ -244,7 +244,7 @@ digest_final(uint8_t *out, digest_t *hash)
 		netpgpv_SHA1Final(out, hash->ctx);
 		break;
 	case RIPEMD_HASH_ALG:
-		RMD160Final(out, hash->ctx);
+		netpgpv_RMD160Final(out, hash->ctx);
 		break;
 	case SHA256_HASH_ALG:
 		netpgpv_SHA256_Final(out, hash->ctx);

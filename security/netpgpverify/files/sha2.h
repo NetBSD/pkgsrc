@@ -1,4 +1,4 @@
-/*	$NetBSD: sha2.h,v 1.3 2015/09/01 19:38:42 agc Exp $	*/
+/*	$NetBSD: sha2.h,v 1.4 2015/09/06 21:25:19 jperkin Exp $	*/
 /*	$KAME: sha2.h,v 1.4 2003/07/20 00:28:38 itojun Exp $	*/
 
 /*
@@ -116,7 +116,7 @@ char *netpgpv_SHA384_Data(const uint8_t *, size_t, char[SHA384_DIGEST_STRING_LEN
 
 int netpgpv_SHA512_Init(NETPGPV_SHA512_CTX*);
 int netpgpv_SHA512_Update(NETPGPV_SHA512_CTX*, const uint8_t*, size_t);
-int NETPGPV_SHA512_Final(uint8_t[SHA512_DIGEST_LENGTH], NETPGPV_SHA512_CTX*);
+int netpgpv_SHA512_Final(uint8_t[SHA512_DIGEST_LENGTH], NETPGPV_SHA512_CTX*);
 #ifndef _KERNEL
 char *netpgpv_SHA512_End(NETPGPV_SHA512_CTX *, char[SHA512_DIGEST_STRING_LENGTH]);
 char *netpgpv_SHA512_FileChunk(const char *, char *, off_t, off_t);
