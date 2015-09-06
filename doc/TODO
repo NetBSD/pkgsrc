@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14853 2015/09/06 03:39:46 mef Exp $
+$NetBSD: TODO,v 1.14854 2015/09/06 07:00:05 mef Exp $
 
 Suggested new packages
 ======================
@@ -1378,7 +1378,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SNMP-Info-3.28
 	o p5-SVG-2.64
 	o p5-SVN-Simple-0.312
-	o p5-Scope-Guard-0.21
 	o p5-Search-QueryParser-SQL-0.010
 	o p5-Sendmail-AccessDB-1.04
 	o p5-Server-Starter-0.31
@@ -1394,9 +1393,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sys-Hostname-Long-1.5
 	o p5-Sys-SigAction-0.21
 	o p5-Sys-Utmp-1.7
-	o p5-System-Command-1.112
-	o p5-Template-Plugin-ListMoreUtils-0.03
-	o p5-Term-Screen-1.05
 	o p5-Term-Shell-0.06
 	o p5-Test-Command-Simple-0.05
 	o p5-Test-File-1.44
