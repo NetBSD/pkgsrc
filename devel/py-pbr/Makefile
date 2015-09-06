@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/07/15 13:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/06 20:33:46 wiz Exp $
 
-DISTNAME=	pbr-1.3.0
+DISTNAME=	pbr-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pbr/
