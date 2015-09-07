@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14869 2015/09/07 03:51:58 mef Exp $
+$NetBSD: TODO,v 1.14870 2015/09/07 04:33:39 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -1159,7 +1159,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mxml-2.9
 	o myodbc-5.3.4
 	o mysql-5.7.6
-	o mysql-cluster-7.4.7
 	o mysql-workbench-6.2.5
 	o nagios-base-4.1.1
 	o nagios-plugin-ldap-2.1.1
