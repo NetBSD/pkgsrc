@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/04/03 07:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/09/07 12:02:06 jperkin Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -16,7 +16,6 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-soname=libdconf-dbus-1.so.0
 BUILDLINK_TRANSFORM+=	rm:-Wl,-soname=libdconf.so.1
-INSTALL_UNSTRIPPED=	yes
 .endif
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.77 2015/09/02 11:08:15 szptvlfn Exp $
+# $NetBSD: Makefile.common,v 1.78 2015/09/07 12:02:06 jperkin Exp $
 # used by shells/zsh/Makefile
 
 DISTNAME=	zsh-${ZSH_VERSION}
@@ -20,11 +20,6 @@ INFO_FILES=		yes
 TEXINFO_REQD=		4.0
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-#CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_LIB:Q}
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
 # These can't be detected automagically in cross-builds.
