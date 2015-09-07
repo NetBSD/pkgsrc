@@ -1,19 +1,11 @@
-$NetBSD: patch-ag,v 1.35 2014/08/25 16:00:54 taca Exp $
+$NetBSD: patch-ag,v 1.36 2015/09/07 09:47:01 fhajny Exp $
 
 * Add support for NetBSD 7.
 * Only define HAS_DB if it hasn't been defined.
 
---- src/util/sys_defs.h.orig	2013-09-29 20:51:55.000000000 +0000
+--- src/util/sys_defs.h.orig	2015-07-18 13:28:17.000000000 +0000
 +++ src/util/sys_defs.h
-@@ -31,6 +31,7 @@
-     || defined(OPENBSD5) \
-     || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
-     || defined(NETBSD4) || defined(NETBSD5) || defined(NETBSD6) \
-+    || defined(NETBSD7) \
-     || defined(EKKOBSD1) || defined(DRAGONFLY)
- #define SUPPORTED
- #include <sys/types.h>
-@@ -44,7 +45,9 @@
+@@ -45,7 +45,9 @@
  #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
@@ -23,7 +15,7 @@ $NetBSD: patch-ag,v 1.35 2014/08/25 16:00:54 taca Exp $
  #define HAS_SA_LEN
  #define NATIVE_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -1265,6 +1268,8 @@ extern int h_errno;
+@@ -1267,6 +1269,8 @@ extern int h_errno;
  #define DEF_SMTP_CACHE_DEMAND	0
  #endif
  
