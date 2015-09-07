@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3828 2015/09/07 03:51:58 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3829 2015/09/07 04:33:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6801,3 +6801,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Lingua-EN-Sentence to 0.29 [mef 2015-09-07]
 	Updated textproc/p5-Lingua-EN-FindNumber to 1.31 [mef 2015-09-07]
 	Updated textproc/p5-Lingua-EN-Numbers-Ordinate to 1.04 [mef 2015-09-07]
+	Updated databases/mysql-cluster to 7.4.7 [jnemeth 2015-09-07]
