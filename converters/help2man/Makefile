@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/06/30 10:54:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2015/09/07 12:06:05 jperkin Exp $
 
 DISTNAME=	help2man-1.47.1
 CATEGORIES=	converters
@@ -26,12 +26,11 @@ INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX: will undoubtedly include more versions
-.if ${OPSYS} == "Darwin" && !empty(OS_VERSION:M8.*) || !empty(OS_VERSION:M9.*)
+.if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=		shlibarg
 SUBST_STAGE.shlibarg=	pre-configure
 SUBST_FILES.shlibarg=	Makefile.in
-SUBST_SED.shlibarg=	-e 's, -shared , -dynamiclib ,g'
+SUBST_SED.shlibarg=	-e 's, -shared , -dynamiclib -install_name ${PREFIX}/lib/bindtextdomain.so ,g'
 .endif
 
 PLIST_VARS+=		nls
