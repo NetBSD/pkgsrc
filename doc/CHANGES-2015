@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3836 2015/09/07 09:48:59 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3837 2015/09/07 09:49:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6809,3 +6809,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added mail/postfix-cdb version 3.0.2 [fhajny 2015-09-07]
 	Added mail/postfix-ldap version 3.0.2 [fhajny 2015-09-07]
 	Added mail/postfix-lmdb version 3.0.2 [fhajny 2015-09-07]
+	Added mail/postfix-mysql version 3.0.2 [fhajny 2015-09-07]
