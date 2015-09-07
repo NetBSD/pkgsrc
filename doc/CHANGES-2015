@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3839 2015/09/07 09:50:02 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3840 2015/09/07 09:50:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6812,3 +6812,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added mail/postfix-mysql version 3.0.2 [fhajny 2015-09-07]
 	Added mail/postfix-pcre version 3.0.2 [fhajny 2015-09-07]
 	Added mail/postfix-pgsql version 3.0.2 [fhajny 2015-09-07]
+	Added mail/postfix-sqlite version 3.0.2 [fhajny 2015-09-07]
