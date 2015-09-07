@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/31 23:19:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/07 01:02:00 dsainty Exp $
 bin/libmediainfo-config
+include/MediaInfo/MediaInfo.h
+include/MediaInfo/MediaInfoList.h
+include/MediaInfo/MediaInfo_Const.h
+include/MediaInfo/MediaInfo_Events.h
+include/MediaInfoDLL/MediaInfoDLL.h
+include/MediaInfoDLL/MediaInfoDLL_Static.h
 lib/libmediainfo.la
 lib/pkgconfig/libmediainfo.pc
