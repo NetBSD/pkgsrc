@@ -1,4 +1,4 @@
-$NetBSD: patch-src_common_compat__getopt.h,v 1.2 2014/03/14 20:49:56 gdt Exp $
+$NetBSD: patch-src_common_compat__getopt.h,v 1.3 2015/09/07 19:59:42 gdt Exp $
 
 NetBSD has getopt_long but not getopt_long_only.  Replacing
 getopt_long causes a type conflict with the built-in implementation.
@@ -12,7 +12,7 @@ The following is the original mail archive URL, but it currently
 yields a '404 not found' error:
 https://www.opensc-project.org/pipermail/opensc-devel/2012-November/018668.html
 
---- src/common/compat_getopt.h.orig	2012-12-04 14:43:40.000000000 +0000
+--- src/common/compat_getopt.h.orig	2015-05-16 20:30:24.000000000 +0000
 +++ src/common/compat_getopt.h
 @@ -30,7 +30,7 @@
  #include "config.h"
