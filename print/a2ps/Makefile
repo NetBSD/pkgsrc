@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2015/06/12 10:50:57 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2015/09/07 12:05:17 jperkin Exp $
 
 DISTNAME=		a2ps-4.14
 PKGREVISION=		8
@@ -19,9 +19,6 @@ USE_LIBTOOL=		yes
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS.Darwin+=		-flat_namespace
-.if ${OPSYS} == "Darwin"
-_STRIPFLAG_INSTALL=	# none
-.endif
 
 USE_TOOLS+=		file:run gmake lex mktemp:run perl:run
 CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}
