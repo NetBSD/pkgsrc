@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/06/10 20:05:26 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/09/07 12:57:29 jperkin Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -71,7 +71,8 @@ CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
 
 .include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
+# XXX: proper clang version check when we have support for it.
+.if !empty(PKGSRC_COMPILER:Mclang) && ${OPSYS} != "Darwin"
 CFLAGS+=	-Wno-error=tautological-pointer-compare \
 		-Wno-error=pointer-bool-conversion
 .endif
