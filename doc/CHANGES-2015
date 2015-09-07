@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3826 2015/09/07 03:21:11 mef Exp $
+$NetBSD: CHANGES-2015,v 1.3827 2015/09/07 03:26:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6797,3 +6797,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libmediainfo to 0.7.77 [dsainty 2015-09-07]
 	Updated multimedia/mediainfo to 0.7.77 [dsainty 2015-09-07]
 	Updated textproc/p5-Encode to 2.76 [mef 2015-09-07]
+	Updated textproc/p5-Filter to 1.55 [mef 2015-09-07]
