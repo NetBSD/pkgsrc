@@ -1,6 +1,6 @@
-$NetBSD: patch-src_libopensc_log.c,v 1.1 2014/03/14 20:49:56 gdt Exp $
+$NetBSD: patch-src_libopensc_log.c,v 1.2 2015/09/07 19:59:42 gdt Exp $
 
---- src/libopensc/log.c.orig	2012-12-04 14:43:40.000000000 +0000
+--- src/libopensc/log.c.orig	2015-05-16 20:30:24.000000000 +0000
 +++ src/libopensc/log.c
 @@ -91,7 +91,13 @@ static void sc_do_log_va(sc_context_t *c
  	gettimeofday (&tv, NULL);
