@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.70 2015/09/01 11:12:30 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.71 2015/09/07 11:48:35 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -144,8 +144,12 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # check shared libraries using otool(1)
 
+# OSX strip(1) tries to remove relocatable symbols and fails on certain
+# objects, resulting in non-zero exit status.  We can't modify strip arguments
+# (e.g. adding "-u -r" which would fix the issue) when using install -s so for
+# now stripping is disabled in that mode.
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-Wl,-x} # cc(1) option to strip
-_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
