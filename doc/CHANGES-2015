@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3842 2015/09/07 19:34:41 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3843 2015/09/07 19:37:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6815,3 +6815,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added mail/postfix-sqlite version 3.0.2 [fhajny 2015-09-07]
 	Updated security/ccid to 1.4.20 [gdt 2015-09-07]
 	Updated security/pcsc-lite to 1.8.14 [gdt 2015-09-07]
+	Updated security/pcsc-tools to 1.4.24 [gdt 2015-09-07]

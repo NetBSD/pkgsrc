@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14871 2015/09/07 09:48:09 fhajny Exp $
+$NetBSD: TODO,v 1.14872 2015/09/07 19:37:28 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1433,7 +1433,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pciutils-3.3.1
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pcre2-10.20
-	o pcsc-tools-1.4.23
 	o pdmenu-1.2.87
 	o pen-0.29.0
 	o perlsh-1.8.1
