@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/09/07 00:45:27 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2015/09/07 00:47:07 gdt Exp $
 #
 
 DISTNAME=	guile-cairo-1.4.1
@@ -10,6 +10,8 @@ MASTER_SITES=	http://download.gna.org/guile-cairo/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/guile-cairo/
 COMMENT=	Guile wrapper for cairo
+
+LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
