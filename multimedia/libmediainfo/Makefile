@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/10 20:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/07 01:02:00 dsainty Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
@@ -7,12 +7,11 @@ PKGNAME=		libmediainfo-${MIVER}
 COMMENT=		MediaInfoLib, support library for MediaInfo program
 LICENSE=		zlib
 
-USE_TOOLS+=		autoconf automake bash:run gmake pkg-config
+USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
-CONFIG_SHELL=		bash
 CONFIGURE_DIRS+=	MediaInfoLib/Project/GNU/Library
 
 REPLACE_SH=		MediaInfoLib/Project/GNU/Library/libmediainfo-config.in
@@ -28,12 +27,12 @@ CONFIGURE_ARGS+=	--enable-shared
 INSTALLATION_DIRS+=	bin lib/pkgconfig
 
 pre-configure:
-	cd ${WRKSRC}/${CONFIGURE_DIRS} && autoreconf -i
+	cd ${WRKSRC}/${CONFIGURE_DIRS:Q} && autoreconf -i
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${CONFIGURE_DIRS}/libmediainfo-config \
+	${INSTALL_SCRIPT} ${WRKSRC}/${CONFIGURE_DIRS:Q}/libmediainfo-config \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/${CONFIGURE_DIRS}/libmediainfo.pc \
+	${INSTALL_DATA} ${WRKSRC}/${CONFIGURE_DIRS:Q}/libmediainfo.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/zlib/buildlink3.mk"
