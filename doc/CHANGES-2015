@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3834 2015/09/07 09:48:26 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3835 2015/09/07 09:48:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6807,3 +6807,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/libpciaccess to 0.13.4nb1 [wiz 2015-09-07]
 	Updated mail/postfix to 3.0.2 [fhajny 2015-09-07]
 	Added mail/postfix-cdb version 3.0.2 [fhajny 2015-09-07]
+	Added mail/postfix-ldap version 3.0.2 [fhajny 2015-09-07]
