@@ -1,103 +1,23 @@
-# $NetBSD: Makefile,v 1.285 2015/07/26 15:53:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.286 2015/09/07 09:47:01 fhajny Exp $
 
-DISTNAME=	postfix-2.11.6
-PKGREVISION=	1
-CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
-MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
-MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/official/
-MASTER_SITES+=	http://mirror.postfix.jp/postfix-release/official/
+.include "../../mail/postfix/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
-# The postfix license has only very minor diffs from cpl-1.0.
-LICENSE=	cpl-1.0
-#LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]*
 
 USE_TOOLS+=	perl
-CHECK_HEADERS_SKIP+=	src/global/mail_params.h
-
-.include "../../mk/bsd.prefs.mk"
 
 SPECIAL_PERMS+=	sbin/postdrop postfix maildrop 2555
 SPECIAL_PERMS+=	sbin/postqueue postfix maildrop 2555
 
-# POSTFIX_QUEUE_DIR is the default queue directory for Postfix.  This is
-# merely a default, and may be changed by setting "queue_directory" in
-# ${PKG_SYSCONFDIR}/main.cf.
-#
-POSTFIX_DATA_DIR?=	${VARBASE}/db/postfix
-POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
-BUILD_DEFS+=		VARBASE POSTFIX_DATA_DIR POSTFIX_QUEUE_DIR
-
-# CCARGS is a list of options to pass to the preprocessor/compiler.
-# AUXLIBS is a list of options to pass to the linker.
-CCARGS=		#defined
-AUXLIBS=	${LDFLAGS}
-
-# Enable Dovecot SASL
-CCARGS+=	-DUSE_SASL_AUTH
-# Enable Berkeley DB map type. BDB_LIBS is defined in mk/bdb.buildlink3.mk.
-CCARGS+=       -DHAS_DB
-AUXLIBS+=      ${BDB_LIBS}
-
-# Set some default paths to override ${WRKSRC}/src/global/mail_params.h.
-CCARGS+=	-DDEF_DATA_DIR=\"${POSTFIX_DATA_DIR}\"
-CCARGS+=	-DDEF_QUEUE_DIR=\"${POSTFIX_QUEUE_DIR}\"
-CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
-CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
-CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
-CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
-CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
-CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
-CCARGS+=	-DDEF_MANPAGE_DIR=\"${PREFIX}/${PKGMANDIR}\"
-CCARGS+=	-DDEF_SAMPLE_DIR=\"${EXAMPLEDIR}\"
-CCARGS+=	-DDEF_README_DIR=\"${DOCDIR}\"
-
 REPLACE_PERL+=	auxiliary/qshape/qshape.pl
-
-# Override those same default paths in the installed example main.cf.
-SUBST_CLASSES+=		postfix
-SUBST_STAGE.postfix=	post-configure
-SUBST_FILES.postfix=	conf/main.cf src/global/mail_params.h
-SUBST_SED.postfix=	\
-	-e 's|^\(data_directory\) =.*|\1 = ${POSTFIX_DATA_DIR}|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(queue_directory\) =.*|\1 = ${POSTFIX_QUEUE_DIR}|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(command_directory\) =.*|\1 = ${PREFIX}/sbin|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(daemon_directory\) =.*|\1 = ${LIBEXECDIR}|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(sendmail_path\) =.*|\1 = ${PREFIX}/sbin/sendmail|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(newaliases_path\) =.*|\1 = ${PREFIX}/bin/newaliases|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(mailq_path\) =.*|\1 = ${PREFIX}/bin/mailq|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(setgid_group\) =.*|\1 = maildrop|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(manpage_directory\) =.*|\1 = ${PREFIX}/${PKGMANDIR}|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(sample_directory\) =.*|\1 = ${EXAMPLEDIR}|'
-SUBST_SED.postfix+=	\
-	-e 's|^\(readme_directory\) =.*|\1 = ${DOCDIR}|'
-SUBST_SED.postfix+=	\
-	-e '/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,maildrop,g'
 
 # options.mk appends to CCARGS and AUXLIBS the options needed to build
 # Postfix with support for various add-on modules.
 #
 .include "options.mk"
-
-PKG_SYSCONFSUBDIR=	postfix
-LIBEXECDIR=		${PREFIX}/libexec/postfix
-DOCDIR=			${PREFIX}/share/doc/postfix
-EXAMPLEDIR=		${PREFIX}/share/examples/postfix
 
 FILES_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
@@ -109,14 +29,10 @@ MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-BUILD_TARGET=		# empty
-MAKE_ENV+=		CC=${CC:Q} OPT=${CFLAGS:Q}
-MAKE_ENV+=		AUXLIBS=${AUXLIBS:Q} CCARGS=${CCARGS:Q}
-
 RCD_SCRIPTS=		postfix
 OWN_DIRS+=		${POSTFIX_QUEUE_DIR} ${POSTFIX_QUEUE_DIR}/etc
 OWN_DIRS_PERMS+=	${POSTFIX_DATA_DIR} postfix postfix 0700
-MAKE_DIRS+=		${PKG_SYSCONFDIR}
+MAKE_DIRS+=		${METADIR}/dynamicmaps.cf.d ${METADIR}/postfix-files.d
 
 PKG_GROUPS?=		postfix maildrop
 PKG_USERS?=		postfix:postfix
@@ -129,37 +45,16 @@ CONF_FILES+=		${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 CONF_FILES_PERMS=	# empty
 
-MAKE_ENV+=		DEBUG= # empty
-
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
-.if ${OPSYS} == "SunOS" && !exists(/usr/include/rpcsvc/nis_cache.h)
-SUBST_CLASSES+=		nis
-SUBST_FILES.nis=	src/util/sys_defs.h
-SUBST_MESSAGE.nis=	Working around dropped support for NIS+ on SunOS
-SUBST_STAGE.nis=	post-patch
-SUBST_SED.nis=		-e 's,\#define HAS_NISPLUS,\#undef HAS_NISPLUS,g'
-.endif
-
-CFLAGS.SunOS+=		-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-
-.if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
-DESTDIR_INSTALLOPTIONS=-package install_root="${DESTDIR}"
-.endif
-
-INSTALLATION_DIRS+=	${LIBEXECDIR} ${EXAMPLEDIR} ${DOCDIR}
+INSTALLATION_DIRS+=	${LIBEXECDIR} ${METADIR} ${SHLIBDIR} ${EXAMPLEDIR} ${DOCDIR}
 
 post-extract:
 	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 	rm -f ${WRKSRC}/auxiliary/MacOSX/Postfix.StartupItem/Postfix
-
-do-configure:
-	cd ${WRKSRC} &&							\
-	env ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles		\
-		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}'
 
 post-build:
 .if !empty(PKG_OPTIONS:Msasl)
@@ -171,7 +66,8 @@ do-install:
 .if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${DESTDIR}${EXAMPLEDIR}
 .endif
-	cd ${WRKSRC} && sh ./postfix-install -non-interactive		\
+	cd ${WRKSRC} && ${SETENV} LD_LIBRARY_PATH=${WRKSRC}/lib sh		\
+		./postfix-install -non-interactive				\
 		${DESTDIR_INSTALLOPTIONS} config_directory="${EXAMPLEDIR}"
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${DESTDIR}${EXAMPLEDIR}/mailer.conf
@@ -180,5 +76,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man1/qshape.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
