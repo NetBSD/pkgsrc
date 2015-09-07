@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3824 2015/09/07 00:47:32 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3825 2015/09/07 01:04:56 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6794,3 +6794,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-POM to 2.00 [wiz 2015-09-06]
 	Updated textproc/miller to 2.1.3 [mef 2015-09-06]
 	Updated graphics/guile-cairo to 1.4.1 [gdt 2015-09-07]
+	Updated multimedia/libmediainfo to 0.7.77 [dsainty 2015-09-07]
+	Updated multimedia/mediainfo to 0.7.77 [dsainty 2015-09-07]
