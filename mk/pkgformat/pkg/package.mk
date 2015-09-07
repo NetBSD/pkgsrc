@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.10 2015/04/21 17:01:56 joerg Exp $
+# $NetBSD: package.mk,v 1.11 2015/09/07 11:02:28 jperkin Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -137,8 +137,8 @@ package-links: delete-package-links
 ### the non-primary categories to which the package belongs.
 ###
 delete-package-links:
-	${RUN} ${FIND} ${PACKAGES} -type l -name ${PKGFILE:T} -print	\
-	| ${XARGS} ${RM} -f
+	${RUN} ${FIND} ${PACKAGES}/*/${PKGFILE:T} -type l -print	\
+		2>/dev/null | ${XARGS} ${RM} -f
 
 ######################################################################
 ### tarup (PUBLIC)
