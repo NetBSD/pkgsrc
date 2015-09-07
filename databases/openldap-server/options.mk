@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2014/10/06 14:31:33 adam Exp $
+# $NetBSD: options.mk,v 1.19 2015/09/07 12:02:06 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb dso inet6 sasl slapi slp smbk5pwd
@@ -88,11 +88,6 @@ PKG_FAIL_REASON+=	"smbk5pwd option to openldap-server is now " \
 ###
 .if !empty(PKG_OPTIONS:Mdso)
 CONFIGURE_ARGS+=	--enable-modules
-# dynamic linking won't work on Darwin when slapd gets stripped
-.include "../../mk/bsd.prefs.mk"
-.  if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-.  endif
 .include "../../devel/libltdl/buildlink3.mk"
 .endif
 
