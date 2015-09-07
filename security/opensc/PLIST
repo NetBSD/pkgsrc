@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2014/03/14 20:49:56 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/09/07 19:59:42 gdt Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
+bin/dnie-tool
 bin/eidenv
 bin/iasecc-tool
 bin/netkey-tool
@@ -15,12 +16,16 @@ bin/pkcs15-tool
 bin/sc-hsm-tool
 bin/westcos-tool
 lib/libopensc.la
+lib/libsmm-local.la
+lib/onepin-opensc-pkcs11.la
 lib/opensc-pkcs11.la
 lib/pkcs11-spy.la
+lib/pkcs11/onepin-opensc-pkcs11.so
 lib/pkcs11/opensc-pkcs11.so
 lib/pkcs11/pkcs11-spy.so
 man/man1/cardos-tool.1
 man/man1/cryptoflex-tool.1
+man/man1/dnie-tool.1
 man/man1/eidenv.1
 man/man1/iasecc-tool.1
 man/man1/netkey-tool.1
@@ -53,6 +58,7 @@ share/opensc/iasecc_admin_eid.profile
 share/opensc/iasecc_generic_oberthur.profile
 share/opensc/iasecc_generic_pki.profile
 share/opensc/incrypto34.profile
+share/opensc/isoApplet.profile
 share/opensc/jcop.profile
 share/opensc/miocos.profile
 share/opensc/muscle.profile
