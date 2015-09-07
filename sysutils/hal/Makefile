@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/06/12 10:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2015/09/07 09:03:24 wiz Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		16
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
 LICENSE=		gnu-gpl-v2
+
+DEPENDS+=		pciids-[0-9]*:../../misc/pciids
 
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
@@ -113,7 +115,6 @@ pre-configure:
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../misc/pciids/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
