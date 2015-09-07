@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/01/17 15:24:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2015/09/07 12:02:06 jperkin Exp $
 
 DISTNAME=	Unreal3.2.10.4
 PKGNAME=	${DISTNAME:tl:S/l/lircd-/1}
@@ -99,10 +99,6 @@ OWN_DIRS_PERMS+=	${UIRCD_HOME:Q}/tmp ${UIRCD_USER:Q} \
 			${UIRCD_GROUP:Q} 0770
 INSTALLATION_DIRS=	sbin ${IRCD_DOCS} ${IRCD_EG} ${IRCD_SHARE}/aliases \
 			${IRCD_SHARE}/modules
-
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=YES
-.endif
 
 CFLAGS.Darwin+=	-DUSE_LOCALE
 CFLAGS.SunOS+=	-DUSE_LOCALE

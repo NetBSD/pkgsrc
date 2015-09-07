@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2015/08/22 10:45:13 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.45 2015/09/07 12:02:05 jperkin Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
@@ -28,7 +28,7 @@ PATCHDIR= ${.CURDIR}/../../lang/ocaml/patches
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux"
 INSTALL_UNSTRIPPED=	yes
 .endif
 

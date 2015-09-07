@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/07/11 00:31:01 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/09/07 12:02:05 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -40,11 +40,6 @@ SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
-
-# Make sure modules can link correctly
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 # and lacks the zone memory allocator

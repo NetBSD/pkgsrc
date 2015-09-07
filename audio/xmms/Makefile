@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/04/25 14:20:25 tnn Exp $
+# $NetBSD: Makefile,v 1.79 2015/09/07 12:02:07 jperkin Exp $
 #
 
 .include "Makefile.common"
@@ -11,9 +11,7 @@ CONFIGURE_ARGS+=	--disable-esd
 
 PLIST_VARS+=		cdaudio
 
-.if ${OPSYS} == "Darwin"
-_INSTALL_UNSTRIPPED=	yes
-.else
+.if ${OPSYS} != "Darwin"
 PLIST.cdaudio=		yes
 .endif
 
