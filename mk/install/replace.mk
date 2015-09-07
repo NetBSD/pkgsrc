@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.16 2014/12/06 23:28:18 agc Exp $
+# $NetBSD: replace.mk,v 1.17 2015/09/07 19:23:47 gdt Exp $
 #
 # Public targets:
 #
@@ -48,7 +48,6 @@ replace: barrier
 
 replace-message: .PHONY
 	@${PHASE_MSG} "Replacing for ${PKGNAME}"
-	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 .if ${_USE_DESTDIR} == "no"
 su-replace: .PHONY _pkgformat-replace
