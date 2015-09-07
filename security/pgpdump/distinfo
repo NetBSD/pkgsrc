@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2007/09/24 03:57:59 taca Exp $
+$NetBSD: distinfo,v 1.18 2015/09/07 20:09:11 gdt Exp $
 
-SHA1 (pgpdump-0.26.tar.gz) = 37cdceb6a722919f73081fa0d364c47c6a30c65f
-RMD160 (pgpdump-0.26.tar.gz) = a3be63c7a7c7246e94954e945f73abb99911e75a
-Size (pgpdump-0.26.tar.gz) = 55341 bytes
-SHA1 (patch-aa) = db23a92e379212216a82dae5f17f24dc15024aac
+SHA1 (pgpdump-0.29.tar.gz) = 5f36b5b3d9668442de542ced1d2b670cbe5e30a9
+RMD160 (pgpdump-0.29.tar.gz) = 49404bcff6cf6f5fc4e2f380c8efb424962cdabc
+Size (pgpdump-0.29.tar.gz) = 62779 bytes
+SHA1 (patch-Makefile.in) = 5e4a76444964c043a73c5f33178c12a76ee40b9a
