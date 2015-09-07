@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.38 2015/04/17 02:22:52 hiramatsu Exp $
+# $NetBSD: options.mk,v 1.39 2015/09/07 09:47:01 fhajny Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	ldap mysql pcre pgsql sasl sqlite tls cdb
+PKG_SUPPORTED_OPTIONS=	sasl tls eai
 PKG_SUGGESTED_OPTIONS=	tls
 
 .include "../../mk/bsd.options.mk"
@@ -17,60 +17,8 @@ CCARGS+=	-DUSE_TLS
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 		-lssl -lcrypto
-.endif
-
-###
-### Support "pcre" map type for regular expressions.
-###
-.if !empty(PKG_OPTIONS:Mpcre)
-.  include "../../devel/pcre/buildlink3.mk"
-CCARGS+=	-DHAS_PCRE
-AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib	\
-		-lpcre
 .else
-CCARGS+=	-DNO_PCRE
-.endif
-
-###
-### Support LDAP directories for table lookups.
-###
-.if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap-client/buildlink3.mk"
-CCARGS+=	-DHAS_LDAP
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap-client}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openldap-client}/lib	\
-		-lldap -llber
-.endif
-
-###
-### Support using a MySQL database server for table lookups.
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../mk/mysql.buildlink3.mk"
-CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql \
-		-lmysqlclient -lz -lm
-.endif
-
-###
-### Support using a PostgreSQL database server for table lookups.
-###
-.if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-CCARGS+=	-DHAS_PGSQL -I${PGSQL_PREFIX}/include/pgsql
-AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq
-.endif
-
-###
-### Support using a SQLite database for table lookups.
-### See http://www.treibsand.com/postfix-sqlite/
-###
-.if !empty(PKG_OPTIONS:Msqlite)
-.  include "../../databases/sqlite3/buildlink3.mk"
-CCARGS+=	-DHAS_SQLITE  -I${SQLITE3_PREFIX}/include/sqlite3
-AUXLIBS+=	-L${SQLITE3_PREFIX}/lib -lsqlite3
+CCARGS+=	-DNO_TLS
 .endif
 
 ###
@@ -98,12 +46,13 @@ CCARGS+=	-DDEF_SERVER_SASL_TYPE=\"dovecot\"
 .endif
 
 ###
-### Support CDB (Constant Database) map type.
+### EAI (Email Address Internationalization) support (SMTPUTF8)
 ###
-.if !empty(PKG_OPTIONS:Mcdb)
-.  include "../../databases/tinycdb/buildlink3.mk"
-CCARGS+=	-DHAS_CDB
-AUXLIBS+=	-L${BUILDLINK_PREFIX.tinycdb}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinycdb}/lib	\
-		-lcdb
+.if !empty(PKG_OPTIONS:Meai)
+.  include "../../textproc/icu/buildlink3.mk"
+CCARGS+=	-DHAS_EAI -I${BUILDLINK_PREFIX.icu}/include
+AUXLIBS+=	-L${BUILDLINK_PREFIX.icu}/lib -licuuc			\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.icu}/lib
+.else
+CCARGS+=	-DNO_EAI
 .endif
