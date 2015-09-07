@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:23:13 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2015/09/07 23:38:18 gdt Exp $
 
 DISTNAME=	gtkimageview-1.6.4
 PKGREVISION=	21
@@ -14,6 +14,10 @@ MASTER_SITES= 	http://trac.bjourne.webfactional.com/chrome/common/releases/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.bjourne.webfactional.com/
 COMMENT=	Image viewer widget for GTK
+
+# not really HOMEPAGE, but
+#  https://git.gnome.org/browse/gtk+/log/?h=wip/baedert/gtkimageview
+#  http://baedert-gsoc.blogspot.com/
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
