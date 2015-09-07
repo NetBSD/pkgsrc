@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/08/26 05:03:00 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2015/09/07 11:52:56 fhajny Exp $
 
 SHA1 (mongodb-src-r3.0.6.tar.gz) = b80acf2cd63b3bce27d860581ce17a3aad2b8ea8
 RMD160 (mongodb-src-r3.0.6.tar.gz) = 3e3dc920c0790826b54d02e5a82faace48da9e9f
@@ -13,5 +13,6 @@ SHA1 (patch-src_mongo_util_intrusive__counter.h) = d242db05708c999bd19f2751bdc88
 SHA1 (patch-src_third__party_s2_base_port.h) = 8e715efbfcacaba51d957c21aa32ccfd3cc4f736
 SHA1 (patch-src_third__party_v8-3.25_SConscript) = a8da59130c36b2be3b89498ba0b23b1c7c9ab9e6
 SHA1 (patch-src_third__party_v8-3.25_src_platform-posix.cc) = 2fa27016a9af828d1c01815739770918a2d53d16
+SHA1 (patch-src_third__party_v8-3.25_src_platform_semaphore.cc) = 1875441d4d7daed8ac49ef935d3cb138e29ddadd
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = b9ed24d0c05e812d66941f94a77cf4c91f55d43b
 SHA1 (patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h) = e41064c0ff7268efc795782312ff413295cbcba7
