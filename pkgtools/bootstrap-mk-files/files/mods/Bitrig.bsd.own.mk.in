@@ -1,4 +1,4 @@
-#	$NetBSD: Bitrig.bsd.own.mk.in,v 1.1 2015/06/04 15:48:45 sevan Exp $
+#	$NetBSD: Bitrig.bsd.own.mk.in,v 1.2 2015/09/07 15:07:54 sevan Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -90,11 +90,7 @@ STRIPFLAG?=	-s
 # OBJECT_FMT:		currently either "ELF" or "a.out".
 # SHLIB_TYPE:		"ELF" or "a.out" or "" to force static libraries.
 #
-.if ${MACHINE_ARCH} == "x86_64"
 OBJECT_FMT?=ELF
-.else
-OBJECT_FMT?=a.out
-.endif
 
 # Location of the file that contains the major and minor numbers of the
 # version of a shared library.  If this file exists a shared library
