@@ -1,4 +1,4 @@
-# $NetBSD: shlib-dylib.awk,v 1.3 2006/02/07 18:42:38 jlam Exp $
+# $NetBSD: shlib-dylib.awk,v 1.4 2015/09/07 15:30:25 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -91,6 +91,10 @@ function add_dylib(lib) {
 ### dylib names that can be derived from this entry as dylibs.
 ###
 /.*\/lib[^\/]+\.so(\.[0-9]+)+$/ {
+	cmd = TEST " -f " PREFIX "/" $0
+	if (system(cmd) == 0) {
+		entries[++nentries] = $0
+	}
 	lib = $0; sub("\\.so\\.", ".", lib); sub("\\.so$", "", lib)
 	lib = lib ".dylib"
 	add_dylib(lib)
