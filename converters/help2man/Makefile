@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/09/07 12:06:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2015/09/07 12:06:45 jperkin Exp $
 
 DISTNAME=	help2man-1.47.1
 CATEGORIES=	converters
@@ -35,9 +35,6 @@ SUBST_SED.shlibarg=	-e 's, -shared , -dynamiclib -install_name ${PREFIX}/lib/bin
 
 PLIST_VARS+=		nls
 
-.if ${OPSYS} == "Darwin"
-_STRIPFLAG_INSTALL=
-.endif
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 
