@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2014/02/12 23:18:08 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2015/09/07 12:02:06 jperkin Exp $
 
 BUILDLINK_TREE+=	imap-uw
 
@@ -12,9 +12,6 @@ BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2007fnb2
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 . if ${OPSYS} == "Darwin"
 BUILDLINK_LDFLAGS.imap-uw+=	-flat_namespace
-# install will strip the c-client library callback
-# function symbols from the executable unless we do this:
-INSTALL_UNSTRIPPED?=	yes
 . endif
 
 .include "../../security/openssl/buildlink3.mk"

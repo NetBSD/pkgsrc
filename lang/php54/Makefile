@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/07/11 00:29:17 taca Exp $
+# $NetBSD: Makefile,v 1.31 2015/09/07 12:02:05 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -40,11 +40,6 @@ SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
-
-# Make sure modules can link correctly
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 post-extract:
 	cd ${WRKSRC} && \

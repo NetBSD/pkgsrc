@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/08/18 07:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/09/07 12:02:06 jperkin Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	12
@@ -37,12 +37,6 @@ SUBST_FILES.conf=	configure
 SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet11}/include/libnet11|g"
 SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet11}/lib/libnet11|g"
 SUBST_MESSAGE.conf=	Fixing configuration script.
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	YES
-.endif
 
 CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 		${PKG_SYSCONFDIR}/etter.conf
