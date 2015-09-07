@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/03/16 09:09:19 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/09/07 12:02:06 jperkin Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
 CATEGORIES=	www
@@ -40,11 +40,6 @@ SMF_NAME=		php-fpm
 RCD_SCRIPTS=		php_fpm
 MESSAGE_SUBST+=		CGIDIR=${CGIDIR}
 MESSAGE_SUBST+=		VARBASE=${VARBASE}
-
-# Make sure modules can link correctly
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/fpm/php-fpm ${DESTDIR}${PREFIX}/sbin/php-fpm
