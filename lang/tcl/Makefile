@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2015/09/06 09:49:40 dholland Exp $
+# $NetBSD: Makefile,v 1.85 2015/09/07 04:27:41 dholland Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-system-sqlite
 SUBST_CLASSES+=		sqllink
 SUBST_STAGE.sqllink=	pre-configure
 SUBST_FILES.sqllink=	pkgs/sqlite3.8.8.3/configure
-SUBST_SED.sqllink=	-e "/LIBS=/s,-lsqlite3,-L${BUILDLINK_PREFIX.sqlite3}/lib -R${BUILDLINK_PREFIX.sqlite3}/lib -lsqlite3,g"
+SUBST_SED.sqllink=	-e "/LIBS=/s|-lsqlite3|-L${BUILDLINK_PREFIX.sqlite3}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib -lsqlite3|g"
 
 .if ${OPSYS} == "Darwin"
 post-build:
