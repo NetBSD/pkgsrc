@@ -1,18 +1,25 @@
-@comment $NetBSD: PLIST,v 1.28 2014/03/11 14:05:04 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.29 2015/09/07 09:47:01 fhajny Exp $
 bin/mailq
 bin/newaliases
+lib/postfix/libpostfix-dns.so
+lib/postfix/libpostfix-global.so
+lib/postfix/libpostfix-master.so
+lib/postfix/libpostfix-tls.so
+lib/postfix/libpostfix-util.so
 libexec/postfix/anvil
 libexec/postfix/bounce
 libexec/postfix/cleanup
 libexec/postfix/discard
 libexec/postfix/dnsblog
+libexec/postfix/dynamicmaps.cf
 libexec/postfix/error
 libexec/postfix/flush
 libexec/postfix/lmtp
 libexec/postfix/local
-libexec/postfix/main.cf
+libexec/postfix/main.cf.proto
+libexec/postfix/makedefs.out
 libexec/postfix/master
-libexec/postfix/master.cf
+libexec/postfix/master.cf.proto
 libexec/postfix/nqmgr
 libexec/postfix/oqmgr
 libexec/postfix/pickup
@@ -186,7 +193,6 @@ share/examples/postfix/header_checks
 share/examples/postfix/mailer.conf
 share/examples/postfix/main.cf
 share/examples/postfix/main.cf.default
-share/examples/postfix/makedefs.out
 share/examples/postfix/master.cf
 share/examples/postfix/relocated
 ${PLIST.csasl}share/examples/postfix/smtpd.conf

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.23 2014/02/09 05:34:13 taca Exp $
+$NetBSD: patch-aa,v 1.24 2015/09/07 09:47:01 fhajny Exp $
 
 Make this pkgsrc friendly.
 
---- postfix-install.orig	2012-05-22 19:40:29.000000000 +0000
+--- postfix-install.orig	2015-01-29 22:15:30.000000000 +0000
 +++ postfix-install
-@@ -370,26 +370,6 @@ HTML files. Specify \"no\" if you do not
+@@ -436,26 +436,6 @@ template files main.cf.proto and master.
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -c conf -h -d config_directory`}
  
@@ -31,13 +31,16 @@ Make this pkgsrc friendly.
  # In case some systems special-case pathnames beginning with //.
  
  case $install_root in
-@@ -744,10 +724,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
-     "sample_directory = $sample_directory" \
-     "readme_directory = $readme_directory" \
+@@ -847,13 +827,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
+     "shlib_directory = $shlib_directory" \
+     "meta_directory = $meta_directory" \
  || exit 1
 -
 -# If Postfix is being installed locally from source code, do the
 -# post-install processing now.
+-
+-# The unexpansion above may have side effects on exported variables.
+-# It does not matter because bin/postfix below will override them.
 -
 -test -n "$install_root" || {
 -    bin/postfix post-install $post_install_options || exit 1

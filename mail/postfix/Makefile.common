@@ -1,0 +1,128 @@
+# $NetBSD: Makefile.common,v 1.1 2015/09/07 09:47:01 fhajny Exp $
+# used by mail/postfix/Makefile
+# used by mail/postfix/Makefile.module
+
+DISTNAME=	postfix-3.0.2
+CATEGORIES=	mail
+MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
+MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
+MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/official/
+MASTER_SITES+=	http://mirror.postfix.jp/postfix-release/official/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.postfix.org/
+# The postfix license has only very minor diffs from cpl-1.0.
+LICENSE=	cpl-1.0
+#LICENSE=	postfix-license
+
+DISTINFO_FILE=	${PKGDIR}/../../mail/postfix/distinfo
+PATCHDIR=	${PKGDIR}/../../mail/postfix/patches
+
+CHECK_HEADERS_SKIP+=	src/global/mail_params.h
+
+.include "../../mk/bsd.prefs.mk"
+
+# POSTFIX_QUEUE_DIR is the default queue directory for Postfix.  This is
+# merely a default, and may be changed by setting "queue_directory" in
+# ${PKG_SYSCONFDIR}/main.cf.
+#
+POSTFIX_DATA_DIR?=	${VARBASE}/db/postfix
+POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
+BUILD_DEFS+=		VARBASE POSTFIX_DATA_DIR POSTFIX_QUEUE_DIR
+
+# CCARGS is a list of options to pass to the preprocessor/compiler.
+# AUXLIBS is a list of options to pass to the linker.
+CCARGS=		#defined
+AUXLIBS=	${LDFLAGS}
+
+# Enable Dovecot SASL
+CCARGS+=	-DUSE_SASL_AUTH
+# Enable Berkeley DB map type. BDB_LIBS is defined in mk/bdb.buildlink3.mk.
+CCARGS+=	-DHAS_DB
+AUXLIBS+=	${BDB_LIBS}
+
+# Disable modules by default
+.for module in cdb ldap lmdb mysql pcre pgsql sqlite
+CCARGS+=	-DNO_${module:tu}
+.endfor
+
+# Set some default paths to override ${WRKSRC}/src/global/mail_params.h.
+CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
+CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
+CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
+CCARGS+=	-DDEF_DATA_DIR=\"${POSTFIX_DATA_DIR}\"
+CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
+CCARGS+=	-DDEF_MANPAGE_DIR=\"${PREFIX}/${PKGMANDIR}\"
+CCARGS+=	-DDEF_META_DIR=\"${PREFIX}/${METADIR}\"
+CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
+CCARGS+=	-DDEF_QUEUE_DIR=\"${POSTFIX_QUEUE_DIR}\"
+CCARGS+=	-DDEF_README_DIR=\"${DOCDIR}\"
+CCARGS+=	-DDEF_SAMPLE_DIR=\"${EXAMPLEDIR}\"
+CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
+CCARGS+=	-DDEF_SHLIB_DIR=\"${PREFIX}/${SHLIBDIR}\"
+
+# Override those same default paths in the installed example main.cf.
+SUBST_CLASSES+=		postfix
+SUBST_STAGE.postfix=	post-configure
+SUBST_FILES.postfix=	conf/main.cf src/global/mail_params.h
+SUBST_SED.postfix=	\
+	-e 's|^\(data_directory\) =.*|\1 = ${POSTFIX_DATA_DIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(queue_directory\) =.*|\1 = ${POSTFIX_QUEUE_DIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(command_directory\) =.*|\1 = ${PREFIX}/sbin|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(daemon_directory\) =.*|\1 = ${LIBEXECDIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(meta_directory\) =.*|\1 = ${PREFIX}/${METADIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(shlib_directory\) =.*|\1 = ${PREFIX}/${SHLIBDIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(sendmail_path\) =.*|\1 = ${PREFIX}/sbin/sendmail|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(newaliases_path\) =.*|\1 = ${PREFIX}/bin/newaliases|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(mailq_path\) =.*|\1 = ${PREFIX}/bin/mailq|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(setgid_group\) =.*|\1 = maildrop|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(manpage_directory\) =.*|\1 = ${PREFIX}/${PKGMANDIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(sample_directory\) =.*|\1 = ${EXAMPLEDIR}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(readme_directory\) =.*|\1 = ${DOCDIR}|'
+SUBST_SED.postfix+=	\
+	-e '/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,maildrop,g'
+
+PKG_SYSCONFSUBDIR=	postfix
+LIBEXECDIR=		${PREFIX}/libexec/postfix
+DOCDIR=			${PREFIX}/share/doc/postfix
+EXAMPLEDIR=		${PREFIX}/share/examples/postfix
+# Not prefixed so that we can use where relative path needed
+# METADIR set for postfix-2.6.x compatibility
+METADIR=		libexec/postfix
+SHLIBDIR=		lib/postfix
+
+BUILD_TARGET=		# empty
+MAKE_ENV+=		CC=${CC:Q} OPT=${CFLAGS:Q}
+MAKE_ENV+=		AUXLIBS=${AUXLIBS:Q} CCARGS=${CCARGS:Q}
+
+MAKE_ENV+=		DEBUG= # empty
+
+.if ${OPSYS} == "SunOS" && !exists(/usr/include/rpcsvc/nis_cache.h)
+CCARGS+=		-DNO_NISPLUS
+.endif
+
+CFLAGS.SunOS+=		-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+
+.if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
+DESTDIR_INSTALLOPTIONS=-package install_root="${DESTDIR}"
+.endif
+
+do-configure:
+	cd ${WRKSRC} &&							\
+	env ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles		\
+		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}'			\
+		shared=yes dynamicmaps=yes
+
+.include "../../mk/bdb.buildlink3.mk"
