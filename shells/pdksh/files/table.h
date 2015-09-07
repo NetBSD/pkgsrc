@@ -1,4 +1,4 @@
-/* $NetBSD: table.h,v 1.2 2008/05/31 16:47:37 tnn Exp $ */
+/* $NetBSD: table.h,v 1.3 2015/09/07 06:43:48 dsainty Exp $ */
 
 /*
  * generic hashed associative table for commands and variables.
@@ -6,7 +6,7 @@
 
 struct table {
 	Area   *areap;		/* area to allocate entries */
-	short	size, nfree;	/* hash size (always 2^^n), free entries */
+	int	size, nfree;	/* hash size (always 2^^n), free entries */
 	struct	tbl **tbls;	/* hashed table items */
 };
 
