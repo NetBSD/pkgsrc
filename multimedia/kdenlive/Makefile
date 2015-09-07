@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/06/12 10:50:38 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/09/07 12:02:06 jperkin Exp $
 
 DISTNAME=	kdenlive-0.9.6
 PKGREVISION=	8
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 DEPENDS+=	dvdauthor>=0.6.18:../../multimedia/dvdauthor
 
-# INSTALL_UNSTRIPPED=no
 # LDFLAGS=-g
 # CFLAGS+=-g
 # CXXFLAGS+=-g

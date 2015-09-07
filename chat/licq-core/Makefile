@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 00:02:40 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/07 12:02:07 jperkin Exp $
 #
 
 DISTNAME=	licq-1.3.5
@@ -17,13 +17,6 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--disable-nls
-
-.include "../../mk/bsd.prefs.mk"
-
-# Make sure modules can link correctly
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-4.[6-9].*)

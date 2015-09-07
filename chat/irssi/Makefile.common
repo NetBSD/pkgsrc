@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2015/01/06 12:40:06 mef Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.15 2015/09/07 12:02:07 jperkin Exp $ -*- Makefile -*-
 # used by chat/irssi-icb/Makefile
 # used by chat/irssi-xmpp/Makefile
 
@@ -13,7 +13,3 @@ SITES.${IRSSI_DISTFILE}=	http://www.irssi.org/files/
 # plugins to compile properly.
 IRSSI_CONFIG=		${PREFIX}/share/irssi/irssi-config
 IRSSI_CONFIG_H=		${PREFIX}/include/irssi/irssi-config.h
-
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=YES
-.endif

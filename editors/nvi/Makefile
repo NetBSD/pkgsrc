@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2015/08/18 07:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2015/09/07 12:02:05 jperkin Exp $
 
 DISTNAME=	nvi-1.81.6
 PKGREVISION=	10
@@ -33,7 +33,6 @@ CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 LDFLAGS+=		-flat_namespace
-INSTALL_UNSTRIPPED=	yes
 .endif
 
 # Use of db1 is not officially supported.

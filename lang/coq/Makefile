@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2015/08/07 11:20:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.83 2015/09/07 12:02:05 jperkin Exp $
 #
 
 DISTNAME=	coq-8.4pl6
@@ -41,14 +41,6 @@ PLIST_SUBST+=	COQIDE_TYPE="byte"
       !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 PLIST.natdynlink=	yes
 .  endif
-.endif
-
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-# See PR# 28772 as the above should work but it appears to be ignored
-# so we set it explicitly below not to stip installed binaries.
-_STRIPFLAG_CC=
-_STRIPFLAG_INSTALL=
 .endif
 
 REPLACE_SH=	configure install.sh

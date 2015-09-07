@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/03/16 13:53:05 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2015/09/07 12:02:05 jperkin Exp $
 
 .include "dist.mk"
 
@@ -68,11 +68,6 @@ PLIST_VARS+=	oss
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
     (${PY_PLATNAME} == "linux" || ${OPSYS} == "FreeBSD")
 PLIST.oss=	yes
-.endif
-
-# Make sure python modules can link correctly
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
 .endif
 
 # For Xcode 5 and up, we need to search the SDK path for headers, otherwise
