@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2015/04/25 14:23:13 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2015/09/07 00:45:27 gdt Exp $
 #
 
-DISTNAME=	guile-cairo-1.4.0
-PKGREVISION=	14
+DISTNAME=	guile-cairo-1.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gna.org/guile-cairo/
+# guile-cario has moved to savannah and is at 1.9.1, but that is
+# a prerlease and hence not packaged.
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://home.gna.org/guile-cairo/
+HOMEPAGE=	http://www.nongnu.org/guile-cairo/
 COMMENT=	Guile wrapper for cairo
 
 GNU_CONFIGURE=	yes
