@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/02/05 12:59:46 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/09/07 08:55:57 wiz Exp $
 
-SHA1 (pciids-20091229.tar.bz2) = 6de623563a5e13f0f191b404dcd736cf56776181
-RMD160 (pciids-20091229.tar.bz2) = 3c7256739c4bdd4e5d5312764b21071ca8ae17ba
-Size (pciids-20091229.tar.bz2) = 156325 bytes
+SHA1 (pciids-20150907/pci.ids.bz2) = d725f7bf3c868e2d9a133d0c6ee55c5185575f28
+RMD160 (pciids-20150907/pci.ids.bz2) = bbf85850096ea5909ce16a1ca1dbbdc73924d1c0
+Size (pciids-20150907/pci.ids.bz2) = 219031 bytes
