@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3843 2015/09/07 19:37:28 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3844 2015/09/07 19:59:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6816,3 +6816,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/ccid to 1.4.20 [gdt 2015-09-07]
 	Updated security/pcsc-lite to 1.8.14 [gdt 2015-09-07]
 	Updated security/pcsc-tools to 1.4.24 [gdt 2015-09-07]
+	Updated security/opensc to 0.15.0 [gdt 2015-09-07]
