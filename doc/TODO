@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14865 2015/09/07 00:47:32 gdt Exp $
+$NetBSD: TODO,v 1.14866 2015/09/07 01:04:56 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -1111,7 +1111,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbuf-20141227
 	o mcollective-2.3.2
 	o mcsim-5.5.0
-	o mediainfo-0.7.75
 	o mednafen-0.9.38.2
 	o memcached-1.4.24
 	o menhir-20141215
