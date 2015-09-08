@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.64 2014/10/07 07:27:18 tron Exp $
+# $NetBSD: fetch.mk,v 1.65 2015/09/08 11:13:12 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -262,6 +262,9 @@ _FETCH_ARGS+=	-r
 .endif
 .if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
 _FETCH_ARGS+=	-d ${DIST_SUBDIR}
+.endif
+.if defined(POST_FETCH_HOOK) && !empty(POST_FETCH_HOOK)
+_FETCH_ARGS+=	-p ${POST_FETCH_HOOK:Q}
 .endif
 
 .PHONY: do-fetch-file
