@@ -1,0 +1,11 @@
+AnsiWeather is a Shell script for displaying the current weather conditions in
+your terminal, with support for ANSI colors and Unicode symbols.
+
+Weather data comes from the `OpenWeatherMap` free weather API.
+
+The default location of a configuration file can be overriden by the global
+environment variable ANSIWEATHERRC.
+
+Beware, if configuration file doesn't exists, the script queries a GeoIP API to
+try to approximate user location, this service may be overloaded at time so the
+application might appear stalled.
