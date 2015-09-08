@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/08 19:33:12 wiz Exp $
 
-DISTNAME=	Unix-Statgrab-0.103
+DISTNAME=	Unix-Statgrab-0.109
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
 
@@ -15,7 +14,7 @@ BUILD_DEPENDS+=	p5-Config-AutoConf>=0.19:../../devel/p5-Config-AutoConf
 BUILD_DEPENDS+=	p5-Module-Build>=0.4000:../../devel/p5-Module-Build
 
 USE_LANGUAGES=	c
-PERL5_MODULE_TYPE=	Module::Build
+USE_TOOLS+=	pkg-config
 PERL5_PACKLIST=		auto/Unix/Statgrab/.packlist
 PERL5_REQD+=	5.2	# File::Copy >= 0
 PERL5_REQD+=	5.10.1	# parent >= 0
