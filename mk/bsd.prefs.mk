@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.367 2015/07/25 15:11:09 sevan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.368 2015/09/08 11:36:34 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -388,28 +388,6 @@ PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 
 # Load the settings from MAKECONF, which is /etc/mk.conf by default.
 .include <bsd.own.mk>
-
-# /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.3*)
-.  if ${MACHINE_ARCH} == "alpha" || \
-      ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
-      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
-OBJECT_FMT?=		ELF
-.  else
-OBJECT_FMT?=		a.out
-.  endif
-# override what bootstrap-pkgsrc sets, which isn't right for NetBSD
-# 1.4.
-# XXX other ELF platforms in 1.4 need to be added to here.
-.elif !empty(MACHINE_PLATFORM:MNetBSD-1.4*)
-.  if ${MACHINE_ARCH} == "alpha" || \
-      ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
-      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
-OBJECT_FMT=		ELF
-.  else
-OBJECT_FMT=		a.out
-.  endif
-.endif
 
 .if ${OPSYS} == "OpenBSD"
 .  if defined(ELF_TOOLCHAIN) && ${ELF_TOOLCHAIN} == "yes"
