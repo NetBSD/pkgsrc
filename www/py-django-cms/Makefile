@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2015/07/17 15:53:36 adam Exp $
+# $NetBSD: Makefile,v 1.33 2015/09/08 08:16:24 adam Exp $
 
-DISTNAME=	django-cms-3.1.2
+DISTNAME=	django-cms-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-cms/
