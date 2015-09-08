@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/08/18 07:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/09/08 11:57:50 jperkin Exp $
 
 DISTNAME=	reed-5.4
 PKGREVISION=	8
@@ -14,9 +14,6 @@ CONFIGURE_ARGS+=	-p ${PREFIX}
 HAS_CONFIGURE=		YES
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		breed fix_bookmarks.pl wrap
-
-# wgetnstr()
-INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
