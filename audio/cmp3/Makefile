@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/09/08 11:57:48 jperkin Exp $
 #
 
 DISTNAME=	cmp3-2.0pre6
@@ -16,8 +16,6 @@ DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
 WRKSRC=			${WRKDIR}/cmp3-kenrevs
 USE_TOOLS+=		gmake
-INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-H]*-*
 
 INSTALLATION_DIRS=	bin
 
