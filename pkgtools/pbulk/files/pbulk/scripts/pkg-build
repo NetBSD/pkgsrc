@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.25 2012/11/23 12:13:35 joerg Exp $
+# $NetBSD: pkg-build,v 1.26 2015/09/08 17:35:07 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -109,6 +109,11 @@ while read build_info_line; do
 	esac
 done
 
+if [ "$use_unprivileged_checksum" != "no" ]; then
+	run_checksum=run_su
+else
+	run_checksum=run_direct
+fi
 case "$use_destdir" in
 user-destdir)
 	run_build=run_su
@@ -125,6 +130,7 @@ destdir)
 esac
 
 if [ `@ID@ -u` -ne 0 ]; then
+	run_checksum=run_direct
 	run_build=run_direct
 	run_install=run_direct
 fi
@@ -178,7 +184,7 @@ if [ ! -z "$dependencies" ]; then
 	${pkg_add_cmd} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1
 fi
 # Build package, create a separate log file for each major phase
-run_make run_direct checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
+run_make ${run_checksum} checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
 run_usergroup configure > ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
 run_make ${run_build} configure >> ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
 run_usergroup build> ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
