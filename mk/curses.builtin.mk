@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.8 2014/03/09 10:15:32 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.9 2015/09/08 11:36:34 jperkin Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -126,8 +126,7 @@ USE_BUILTIN.curses=	no
 # some system curses just are not good enough.
 # If your system is one, add it here so a suitable
 # curses from pkgsrc can be installed.
-_INCOMPAT_CURSES?=	NetBSD-0.*-* NetBSD-1.[0123]*-*			\
-			NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
+_INCOMPAT_CURSES?=
 .for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
 .  if !empty(MACHINE_PLATFORM:M${_pattern_})
 USE_BUILTIN.curses=	no
