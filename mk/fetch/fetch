@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.15 2013/02/16 07:32:28 obache Exp $
+# $NetBSD: fetch,v 1.16 2015/09/08 11:13:12 joerg Exp $
 #
-# Copyright (c) 2006 The NetBSD Foundation, Inc.
+# Copyright (c) 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -43,7 +43,7 @@
 #	fetch -- fetch files via URLs
 #
 # SYNOPSIS
-#	fetch [-c] [-d dir] [-f distinfo] [-r] [-v] file site ...
+#	fetch [-c] [-d dir] [-f distinfo] [-p hook] [-r] [-v] file site ...
 #
 # DESCRIPTION
 #	fetch will attempt to fetch the file from the list of specified
@@ -66,6 +66,10 @@
 #		The path to the distinfo file containing the checksums
 #		for the file.  The file format should match what is
 #		needed by the pkgsrc/mk/checksum/checksum script.
+#
+#	-p hook
+#		After a successful fetch, run hook with the relative path
+#		as argument.
 #
 #	-r	Resume a previous fetch for the file.  In this case,
 #		the file is first saved to a ".pkgsrc.resume" file,
@@ -118,13 +122,14 @@
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-c] [-d dir] [-f distinfo] [-r] [-v] file site ..."
+	${ECHO} 1>&2 "usage: $self [-c] [-d dir] [-f distinfo] [-p hook] [-r] [-v] file site ..."
 }
 
 # Process optional arguments
 checksum=
 distinfo=
 fetchdir=.			# A relative directory or "."
+post_fetch=
 resume=
 verbose=
 while ${TEST} $# -gt 0; do
@@ -132,6 +137,7 @@ while ${TEST} $# -gt 0; do
 	-c)	checksum=yes; shift ;;
 	-d)	fetchdir="$2"; shift 2 ;;
 	-f)	distinfo="$2"; shift 2 ;;
+	-p)	post_fetch="$2"; shift 2 ;;
 	-r)	resume=yes; shift ;;
 	-v)	verbose=yes; shift ;;
 	--)	shift; break ;;
@@ -301,6 +307,9 @@ while ${TEST} $# -gt 0; do
 		fi
 	fi
 done
+if ${TEST} -f $path && ${TEST} -n "$post_fetch"; then
+	"$post_fetch" $path
+fi
 if ${TEST} -f $path; then
 	exit 0
 else
