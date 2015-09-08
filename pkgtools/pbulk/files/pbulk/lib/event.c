@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.6 2009/08/23 18:02:04 joerg Exp $ */
+/* $NetBSD: event.c,v 1.7 2015/09/08 13:57:36 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -40,8 +40,7 @@
 #endif
 #if HAVE_POLL_H
 #include <poll.h>
-#endif
-#if HAVE_SYS_POLL_H
+#elif HAVE_SYS_POLL_H
 #include <sys/poll.h>
 #endif
 #include <nbcompat/time.h>
