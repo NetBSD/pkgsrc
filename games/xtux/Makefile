@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/06 11:55:04 asau Exp $
+# $NetBSD: Makefile,v 1.25 2015/09/08 18:48:27 joerg Exp $
 
 DISTNAME=	xtux-arena-src-nov-15
 PKGNAME=	xtux-0.2000.11.15
@@ -9,6 +9,10 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xtux/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xtux.sourceforge.net/
 COMMENT=	2D multi-player shootout using images from the Open Software scene
+
+#--- server ---
+#clang: error: no such file or directory: '../../src/common/xtuxlib.a'
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	pax
 
