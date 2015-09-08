@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3850 2015/09/08 19:41:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3851 2015/09/08 19:41:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6823,3 +6823,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/WCMCommander version 0.20.0 [wiz 2015-09-08]
 	Updated sysutils/p5-Unix-Statgrab to 0.109 [wiz 2015-09-08]
 	Added converters/orcus0.8 version 0.7.1nb1 [wiz 2015-09-08]
+	Updated converters/orcus to 0.9.2 [wiz 2015-09-08]
