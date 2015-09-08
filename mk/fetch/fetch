@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.16 2015/09/08 11:13:12 joerg Exp $
+# $NetBSD: fetch,v 1.17 2015/09/08 12:37:56 joerg Exp $
 #
 # Copyright (c) 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,8 +68,9 @@
 #		needed by the pkgsrc/mk/checksum/checksum script.
 #
 #	-p hook
-#		After a successful fetch, run hook with the relative path
-#		as argument.
+#		After a successful fetch, run hook.  The first argument is
+#		the relative path of the distfile and the second argument
+#		the full URL the file was obtained from.
 #
 #	-r	Resume a previous fetch for the file.  In this case,
 #		the file is first saved to a ".pkgsrc.resume" file,
@@ -308,7 +309,7 @@ while ${TEST} $# -gt 0; do
 	fi
 done
 if ${TEST} -f $path && ${TEST} -n "$post_fetch"; then
-	"$post_fetch" $path
+	"$post_fetch" $path "$url"
 fi
 if ${TEST} -f $path; then
 	exit 0
