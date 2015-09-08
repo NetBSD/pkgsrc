@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.368 2015/09/08 11:36:34 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.369 2015/09/08 12:07:55 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -402,6 +402,8 @@ OBJECT_FMT=	ELF
 .elif ${OPSYS} == "MirBSD"
 OBJECT_FMT=	ELF
 MKPROFILE=	no
+.elif ${OPSYS} == "Linux"
+OBJECT_FMT=	ELF
 .elif ${OPSYS} == "AIX"
 OBJECT_FMT=	XCOFF
 .elif ${OPSYS} == "OSF1"
