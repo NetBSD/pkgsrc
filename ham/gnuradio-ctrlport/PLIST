@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/08 21:01:31 mef Exp $
+bin/gr-ctrlport-monitor
+bin/gr-ctrlport-monitorc
+bin/gr-ctrlport-monitoro
+bin/gr-perf-monitorx
+bin/gr-perf-monitorxc
+bin/gr-perf-monitorxo
 include/gnuradio/blocks/ctrlport_probe2_b.h
 include/gnuradio/blocks/ctrlport_probe2_c.h
 include/gnuradio/blocks/ctrlport_probe2_f.h
@@ -6,9 +12,18 @@ include/gnuradio/blocks/ctrlport_probe2_i.h
 include/gnuradio/blocks/ctrlport_probe2_s.h
 include/gnuradio/blocks/ctrlport_probe_c.h
 include/gnuradio/fft/ctrlport_probe_psd.h
+${PYSITELIB}/gnuradio/ctrlport/GNURadioControlPortClient.py
+${PYSITELIB}/gnuradio/ctrlport/GNURadioControlPortClient.pyc
+${PYSITELIB}/gnuradio/ctrlport/GNURadioControlPortClient.pyo
 ${PYSITELIB}/gnuradio/ctrlport/GrDataPlotter.py
 ${PYSITELIB}/gnuradio/ctrlport/GrDataPlotter.pyc
 ${PYSITELIB}/gnuradio/ctrlport/GrDataPlotter.pyo
+${PYSITELIB}/gnuradio/ctrlport/RPCConnection.py
+${PYSITELIB}/gnuradio/ctrlport/RPCConnection.pyc
+${PYSITELIB}/gnuradio/ctrlport/RPCConnection.pyo
+${PYSITELIB}/gnuradio/ctrlport/__init__.py
+${PYSITELIB}/gnuradio/ctrlport/__init__.pyc
+${PYSITELIB}/gnuradio/ctrlport/__init__.pyo
 ${PYSITELIB}/gnuradio/ctrlport/icon.png
 ${PYSITELIB}/gnuradio/ctrlport/monitor.py
 ${PYSITELIB}/gnuradio/ctrlport/monitor.pyc
