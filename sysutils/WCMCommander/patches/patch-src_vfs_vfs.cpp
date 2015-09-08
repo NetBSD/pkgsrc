@@ -1,6 +1,7 @@
-$NetBSD: patch-src_vfs_vfs.cpp,v 1.1 2015/09/08 13:13:20 wiz Exp $
+$NetBSD: patch-src_vfs_vfs.cpp,v 1.2 2015/09/08 13:21:46 wiz Exp $
 
 Use BSD headers on NetBSD, and use statvfs (statfs was removed).
+https://github.com/corporateshark/WCMCommander/pull/509
 
 --- src/vfs/vfs.cpp.orig	2015-04-24 21:50:22.000000000 +0000
 +++ src/vfs/vfs.cpp
