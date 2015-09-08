@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/08 21:50:28 kamil Exp $
+bin/ansiweather
+share/doc/ansiweather/AUTHORS
+share/doc/ansiweather/ChangeLog
+share/doc/ansiweather/README.md
+share/doc/ansiweather/ansiweather.plugin.zsh
+share/examples/ansiweather/ansiweatherrc.example
