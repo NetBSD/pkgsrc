@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/08 19:39:04 wiz Exp $
+
+SHA1 (liborcus-0.7.1.tar.xz) = 4480f519c6724ee66d76072df32e9b12d55505da
+RMD160 (liborcus-0.7.1.tar.xz) = c37c35eecdd90bb367d2c38fd9014a1ba1a02e19
+Size (liborcus-0.7.1.tar.xz) = 1472804 bytes
