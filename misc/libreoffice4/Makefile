@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2015/08/15 22:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2015/09/08 19:39:38 wiz Exp $
 
 VERREL=		4.4.5
 VERRC=		2
@@ -258,8 +258,7 @@ do-install:
 BUILDLINK_API_DEPENDS.libwps+=	libwps<0.4.0
 .include "../../converters/libwps03/buildlink3.mk"
 .include "../../converters/libmwaw/buildlink3.mk"
-BUILDLINK_API_DEPENDS.orcus+=	orcus<0.9.0
-.include "../../converters/orcus/buildlink3.mk"
+.include "../../converters/orcus0.8/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"

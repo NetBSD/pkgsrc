@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/08/29 12:57:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2015/09/08 19:39:38 wiz Exp $
 
 VERREL=		5.0.1
 VERRC=		2
@@ -254,7 +254,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../converters/libmwaw/buildlink3.mk"
-.include "../../converters/orcus/buildlink3.mk"
+.include "../../converters/orcus0.8/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
