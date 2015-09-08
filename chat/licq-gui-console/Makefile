@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/09/08 11:57:49 jperkin Exp $
 #
 
 DISTNAME=	licq-1.3.5
@@ -23,8 +23,6 @@ USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
 CONFIGURE_DIRS=		plugins/console
 OVERRIDE_DIRDEPTH=	3
-
-INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
 # the cdk on NetBSD 4.0 isn't compatible; also force the check
 # initCDKScreen() to succeed, the configure script test fails due

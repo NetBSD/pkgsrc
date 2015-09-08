@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/08/18 07:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2015/09/08 11:57:49 jperkin Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -25,10 +25,7 @@ REPLACE_PERL+=		misc/cimconv
 REPLACE_PYTHON+=	misc/CenterIMLog2HTML.py
 REPLACE_AWK+=		misc/cimformathistory
 
-INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
-INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
-INCOMPAT_CURSES+=	NetBSD-2.*-* NetBSD-3.*-*	# see PR 29060
-INCOMPAT_CURSES+=	NetBSD-4.*-* NetBSD-5.*-*
+INCOMPAT_CURSES+=	NetBSD-[0-5].*-* # see PR 29060
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"

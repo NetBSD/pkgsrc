@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/08/18 07:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/09/08 11:57:50 jperkin Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-INCOMPAT_CURSES=	NetBSD-1.*-*
 FAKE_NCURSES=	yes
 
 .include "options.mk"

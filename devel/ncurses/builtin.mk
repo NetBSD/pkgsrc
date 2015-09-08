@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.36 2014/08/11 12:06:00 tron Exp $
+# $NetBSD: builtin.mk,v 1.37 2015/09/08 11:57:49 jperkin Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -88,8 +88,7 @@ H_NCURSES=		/usr/include/curses.h
 # Some platforms don't have a curses implementation that can replace
 # ncurses.
 #
-_INCOMPAT_CURSES?=	NetBSD-0.*-* NetBSD-1.[0123]*-*			\
-			NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
+_INCOMPAT_CURSES?=
 .    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
 USE_BUILTIN.ncurses=	no
