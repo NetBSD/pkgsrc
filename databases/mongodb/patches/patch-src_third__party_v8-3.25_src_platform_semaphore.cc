@@ -1,4 +1,4 @@
-$NetBSD: patch-src_third__party_v8-3.25_src_platform_semaphore.cc,v 1.1 2015/09/07 11:52:56 fhajny Exp $
+$NetBSD: patch-src_third__party_v8-3.25_src_platform_semaphore.cc,v 1.2 2015/09/08 07:48:19 fhajny Exp $
 
 Work around lack of sem_timedwait(3) in NetBSD < 6.99.4.
 Adapted from d4f11c0cf476dd854eaebec1cbacb1afc7bea18e of the Chromium V8 sources.
@@ -31,7 +31,7 @@ Adapted from d4f11c0cf476dd854eaebec1cbacb1afc7bea18e of the Chromium V8 sources
 +  do {
 +    int result = sem_trywait(&native_handle_);
 +    if (result == 0) return true;
-+      DCHECK(errno == EAGAIN || errno == EINTR);
++      ASSERT(errno == EAGAIN || errno == EINTR);
 +  } while (!timer.HasExpired(rel_time));
 +  return false;
 +#else
