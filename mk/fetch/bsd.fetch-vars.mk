@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.20 2015/09/08 11:13:12 joerg Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.21 2015/09/08 12:37:56 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -14,7 +14,8 @@
 #	No files will ever be created in these directories.
 #
 #    POST_FETCH_HOOK is a program to execute after fetch successfully
-#	obtained a file.  It is called with the path as argument.
+#	obtained a file.  It is called with the relative path of the distfile
+#	in ${DISTDIR} and the full URL it was obtained from.
 #
 # The following variables may be set in a package Makefile:
 #
