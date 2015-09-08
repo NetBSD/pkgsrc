@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2015/08/17 15:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2015/09/08 18:52:56 joerg Exp $
 
 DISTNAME=	gif2png-2.5.11
+PKGREVISION=	1
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.catb.org/~esr/gif2png/
 
@@ -11,6 +12,8 @@ LICENSE=	zlib
 
 REPLACE_PYTHON+=	web2png
 
+LDFLAGS=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
+BUILD_MAKE_FLAGS=	LDFLAGS=${LDFLAGS:Q}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
