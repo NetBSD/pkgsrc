@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2015/09/06 06:50:52 kardel Exp $
+# $NetBSD: Makefile,v 1.642 2015/09/08 13:13:38 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -6,6 +6,7 @@ COMMENT=	System utilities
 SUBDIR+=	855resolution
 SUBDIR+=	915resolution
 SUBDIR+=	9base
+SUBDIR+=	WCMCommander
 SUBDIR+=	acpica-utils
 SUBDIR+=	acpidump
 SUBDIR+=	adtool
