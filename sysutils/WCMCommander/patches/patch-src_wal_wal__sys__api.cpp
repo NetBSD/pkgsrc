@@ -1,6 +1,7 @@
-$NetBSD: patch-src_wal_wal__sys__api.cpp,v 1.1 2015/09/08 13:13:20 wiz Exp $
+$NetBSD: patch-src_wal_wal__sys__api.cpp,v 1.2 2015/09/08 13:21:46 wiz Exp $
 
 Handle NetBSD like the other BSDs.
+https://github.com/corporateshark/WCMCommander/pull/509
 
 --- src/wal/wal_sys_api.cpp.orig	2015-04-24 21:50:22.000000000 +0000
 +++ src/wal/wal_sys_api.cpp

@@ -1,6 +1,7 @@
-$NetBSD: patch-src_tcp__sock.cpp,v 1.1 2015/09/08 13:13:20 wiz Exp $
+$NetBSD: patch-src_tcp__sock.cpp,v 1.2 2015/09/08 13:21:46 wiz Exp $
 
 NetBSD does not have gethostbyname_r() either.
+https://github.com/corporateshark/WCMCommander/pull/509
 
 --- src/tcp_sock.cpp.orig	2015-04-24 21:50:22.000000000 +0000
 +++ src/tcp_sock.cpp
