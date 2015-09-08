@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/09/08 11:57:50 jperkin Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
@@ -14,9 +14,6 @@ COMMENT=	Wireless access points UNIX management tool
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-
-INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 

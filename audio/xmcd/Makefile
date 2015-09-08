@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2015/08/18 07:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2015/09/08 11:57:49 jperkin Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	15
@@ -28,8 +28,6 @@ MAKE_ENV+=		BATCH_MANSUFFIX=1
 MAKE_ENV+=		SHELL=${SH:Q}
 
 CHECK_PERMS_SKIP+=	lib/X11/xmcd/discog/*
-
-INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-S]*-*
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
