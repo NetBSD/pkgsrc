@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/09/08 11:57:48 jperkin Exp $
 #
 
 DISTNAME=		tcd-2.2.0
@@ -13,7 +13,6 @@ COMMENT=		Audio CD player using ncurses and SDL
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-INCOMPAT_CURSES+=	NetBSD-1.6*-*
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

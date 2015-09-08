@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2015/09/08 11:57:50 jperkin Exp $
 
 DISTNAME=	dialog-1.2-20150528
 PKGREVISION=	2
@@ -16,8 +16,6 @@ GNU_CONFIGURE=	yes
 MAKE_FILE=	makefile
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--with-libtool
-
-INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-P]-*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
