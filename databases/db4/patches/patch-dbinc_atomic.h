@@ -1,10 +1,21 @@
-$NetBSD: patch-dbinc_atomic.h,v 1.1 2012/05/29 20:18:28 joerg Exp $
+$NetBSD: patch-dbinc_atomic.h,v 1.2 2015/09/08 18:51:27 joerg Exp $
 
 Don't define inline functions in the protected namespace.
 This conflicts with Clang builtins.
 
---- dbinc/atomic.h.orig	2012-05-24 10:38:34.000000000 +0000
+Avoid overlap with stdatomic.h, the C++ binding uses <atomic>.
+
+--- dbinc/atomic.h.orig	2010-04-12 20:25:22.000000000 +0000
 +++ dbinc/atomic.h
+@@ -70,7 +70,7 @@ typedef struct {
+  * These have no memory barriers; the caller must include them when necessary.
+  */
+ #define	atomic_read(p)		((p)->value)
+-#define	atomic_init(p, val)	((p)->value = (val))
++#define	db_atomic_init(p, val)	((p)->value = (val))
+ 
+ #ifdef HAVE_ATOMIC_SUPPORT
+ 
 @@ -141,11 +141,7 @@ typedef LONG volatile *interlocked_val;
  
  #if defined(HAVE_ATOMIC_X86_GCC_ASSEMBLY)
@@ -36,3 +47,12 @@ This conflicts with Clang builtins.
  	db_atomic_t *p, atomic_value_t oldval, atomic_value_t newval)
  {
  	atomic_value_t was;
+@@ -206,7 +202,7 @@ static inline int __atomic_compare_excha
+ #define	atomic_dec(env, p)	(--(p)->value)
+ #define	atomic_compare_exchange(env, p, oldval, newval)		\
+ 	(DB_ASSERT(env, atomic_read(p) == (oldval)),		\
+-	atomic_init(p, (newval)), 1)
++	db_atomic_init(p, (newval)), 1)
+ #else
+ #define atomic_inc(env, p)	__atomic_inc(env, p)
+ #define atomic_dec(env, p)	__atomic_dec(env, p)
