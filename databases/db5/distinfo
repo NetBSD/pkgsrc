@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2014/10/06 14:29:45 adam Exp $
+$NetBSD: distinfo,v 1.11 2015/09/08 18:51:27 joerg Exp $
 
 SHA1 (db-5.3.28.tar.gz) = fa3f8a41ad5101f43d08bc0efb6241c9b6fc1ae9
 RMD160 (db-5.3.28.tar.gz) = a4898908ef6dccb137df02e43843f7d3cfab6a3c
@@ -7,4 +7,9 @@ SHA1 (patch-aa) = 9450e95f46787ddc1d661beaa239ea0ff4673f20
 SHA1 (patch-ab) = b09fac68d7d847c5660078de90a16f27268e9858
 SHA1 (patch-ac) = 0a243583ae2b66290fb83b112c539001bf3feef2
 SHA1 (patch-dist_aclocal_libtool.m4) = 2d56b318b4f0d14a9352f6c1eb14a4c2b8315fc0
-SHA1 (patch-src_dbinc_atomic.h) = 6d1e97317c20021d13ff5b59f587730301b4a795
+SHA1 (patch-src_dbinc_atomic.h) = c4fbe421d2c8ba68dc81aeeda1cad09a2c68fbe5
+SHA1 (patch-src_mp_mp__fget.c) = c5050193279db979d51d47f5e2c8d7c5cace0fa7
+SHA1 (patch-src_mp_mp__mvcc.c) = 2e8b4e5ff7a7534681597261ba82ca08e9231567
+SHA1 (patch-src_mp_mp__region.c) = 1c33dc783660515ff24ba018d1ef99cedf9eb3f8
+SHA1 (patch-src_mutex_mut__method.c) = 0d13673db042bc0a3d2a49f6636b12f8d2b6e7ca
+SHA1 (patch-src_mutex_mut__tas.c) = 873d5b4ef69ad0e792c28567e54beda76f1b126c
