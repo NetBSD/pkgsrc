@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/08 11:57:48 jperkin Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -11,9 +11,6 @@ MAINTAINER=	mob@bicekru.org
 COMMENT=	Simple ncurses based jukebox
 
 GNU_CONFIGURE=	YES
-
-# halfdelay()
-INCOMPAT_CURSES=	NetBSD-1.[45]*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-L]-*
 
 EGDIR=		${PREFIX}/share/examples/juke
 

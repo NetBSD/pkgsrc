@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/08/18 07:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2015/09/08 11:57:50 jperkin Exp $
 
 DISTNAME=	wml-2.0.11
 PKGREVISION=	3
@@ -24,9 +24,6 @@ CONFIGURE_ARGS+= --with-perl=${PERL5:Q} \
 		--with-tidy=${LOCALBASE}/bin/tidy
 
 TEST_TARGET=	test
-
-INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
 
 PERL_ARCHNAME_cmd=	eval `${PERL5} -V:archname 2>/dev/null`; \
 			${ECHO} $${archname}

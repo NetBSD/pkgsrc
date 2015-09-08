@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/08/18 07:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/08 11:57:49 jperkin Exp $
 #
 
 DISTNAME=		gtmess-0.91
@@ -17,8 +17,6 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		ac_cv_search_iconv=${BUILDLINK_LDADD.iconv:Q}
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
-
-INCOMPAT_CURSES=	NetBSD-1.*-*
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

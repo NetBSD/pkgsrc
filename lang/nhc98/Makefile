@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/09/08 11:57:50 jperkin Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -34,9 +34,6 @@ M32=			-m32
 BUILD_MAKE_FLAGS+=	PKGSRC_M32=${M32}
 
 PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
-
-INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"

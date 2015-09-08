@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/08/18 07:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/08 11:57:50 jperkin Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -13,10 +13,6 @@ COMMENT=	Real time apache log display
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/httpd/access_log
 USE_LANGUAGES=		c c++
-
-# NetBSD releases which do not include wattr_on() et al.
-INCOMPAT_CURSES=	NetBSD-1.5*-*
-INCOMPAT_CURSES=	NetBSD-1.6-* NetBSD-1.6.*-* NetBSD-1.6[A-Q]-*
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
