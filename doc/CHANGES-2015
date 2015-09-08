@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3849 2015/09/08 19:33:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3850 2015/09/08 19:41:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6822,3 +6822,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/amavisd-new to 2.10.1 [fhajny 2015-09-08]
 	Added sysutils/WCMCommander version 0.20.0 [wiz 2015-09-08]
 	Updated sysutils/p5-Unix-Statgrab to 0.109 [wiz 2015-09-08]
+	Added converters/orcus0.8 version 0.7.1nb1 [wiz 2015-09-08]
