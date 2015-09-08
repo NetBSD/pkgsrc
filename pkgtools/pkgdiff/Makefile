@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2015/06/12 10:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2015/09/08 18:47:01 joerg Exp $
 
 PKGNAME=	pkgdiff-1.6
 PKGREVISION=	1
@@ -39,11 +39,13 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/cat1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .endif
 
+PKGDIFF_MAKE?=	${MAKE}
+
 do-build:
 .for f in mkpatches patchdiff
 	${SED}	-e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PERL5@|${PERL5}|g'		\
-		-e 's|@MAKE@|${MAKE}|g'			\
+		-e 's|@MAKE@|${PKGDIFF_MAKE}|g'		\
 		< ${FILESDIR}/${f}.pl			\
 		> ${WRKSRC}/${f}
 .endfor
