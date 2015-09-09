@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2015/06/03 18:23:24 fhajny Exp $
+# $NetBSD: options.mk,v 1.6 2015/09/09 00:04:54 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace icu
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--with-intl=system-icu
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.2
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--shared-openssl
 .else
