@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3852 2015/09/08 21:55:27 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.3853 2015/09/09 00:05:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6825,3 +6825,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added converters/orcus0.8 version 0.7.1nb1 [wiz 2015-09-08]
 	Updated converters/orcus to 0.9.2 [wiz 2015-09-08]
 	Added misc/ansiweather version 1.03 [kamil 2015-09-08]
+	Updated lang/nodejs to 4.0.0 [ryoon 2015-09-09]
