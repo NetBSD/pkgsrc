@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/09 23:01:35 tnn Exp $
+${PLIST.diagnostic-bin}bin/devq-evwatch
+${PLIST.diagnostic-bin}bin/devq-lsdri
+include/libdevq.h
+lib/libdevq.la
+lib/pkgconfig/libdevq-1.0.pc

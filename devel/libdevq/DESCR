@@ -1,0 +1,2 @@
+libdevq on FreeBSD and DragonFly partially substitutes for Linux's udev
+enough to build features such as libgbm and drm egl on MesaLib.

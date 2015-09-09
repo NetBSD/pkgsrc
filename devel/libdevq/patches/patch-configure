@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2015/09/09 23:01:35 tnn Exp $
+
+Without this patch, building on DragonFly 4.3 DEVELOPMENT fails with:
+
+bmake: don't know how to make src/event_monitor_dragonfly.c. Stop
+
+dports seems able to make this substitution automatically.
+
+--- configure.orig	2015-09-05 00:19:11.267232000 +0000
++++ configure
+@@ -11725,7 +11725,7 @@ esac
+ 
+ 
+ case $target_os in
+-freebsd*) opsys=freebsd ;;
++dragonfly* | freebsd*) opsys=freebsd ;;
+ *) opsys=$target_os ;;
+ esac
+ 
