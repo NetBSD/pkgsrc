@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:23:06 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/09 11:07:07 bouyer Exp $
 #
 
-VERSION=	20150201
+VERSION=	20150829
 DISTNAME=	weather_routing_pi-${VERSION}
 PKGNAME=	opencpn-plugin-weather_routing-${VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	geography
-MASTER_SITES=	http://ftp.fr.netbsd.org/~bouyer/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=seandepagnier/}
+GITHUB_PROJECT=	weather_routing_pi
+GITHUB_TAG=	e652536aca24809cd3514c8c903603806b22bb0d
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://opencpn.org/ocpn/weather_routing_plugin
@@ -29,4 +31,5 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
