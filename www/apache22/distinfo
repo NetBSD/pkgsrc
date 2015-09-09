@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.61 2015/05/22 09:20:20 sborrill Exp $
+$NetBSD: distinfo,v 1.61.2.1 2015/09/09 20:38:53 tron Exp $
 
-SHA1 (httpd-2.2.29.tar.bz2) = 1d6a8fbc1391d358cc6fe430edc16222b97258d5
-RMD160 (httpd-2.2.29.tar.bz2) = c9a823f038a6a1cbfd94cd9bdd067edd26cf7a3b
-Size (httpd-2.2.29.tar.bz2) = 5625498 bytes
+SHA1 (httpd-2.2.31.tar.bz2) = e3b55387112206307ba76526820a2627472f3787
+RMD160 (httpd-2.2.31.tar.bz2) = 5b073f5f556c74e19eba8e40faa5c5fa308e018a
+Size (httpd-2.2.31.tar.bz2) = 5610489 bytes
 SHA1 (patch-aa) = e0bfdf6bc9cb034bea46a390a12a5508e363c9a7
 SHA1 (patch-ab) = 365cc3b0ac2d9d68ccb94f5699fe168a1c9b0150
 SHA1 (patch-ac) = 515043b5c215d49fe8f6d3191b502c978e2a2dad
@@ -16,5 +16,4 @@ SHA1 (patch-aw) = ca53d67beeb2c2c4d9adb04d3d79e24a8c427fd4
 SHA1 (patch-docs_man_apxs.8) = 70797ea73ae6379492971bec1106a8427ae7fdaa
 SHA1 (patch-lock.c) = 770ca03f1cb4421879bd5baa5a7c30cc91acb6e1
 SHA1 (patch-modules_proxy_mod_proxy_connect.c) = b2b5d0242a92c7bf20b14c16d8cd3abae42f3746
-SHA1 (patch-modules_ssl_ssl__engine__dh.c) = fc37a639ecfbade0cf8a4fc684d7ec3b92949897
 SHA1 (patch-repos.c) = 0e0361b91d4b0fe6c7c55a12fdfd2e6aacc710e1
