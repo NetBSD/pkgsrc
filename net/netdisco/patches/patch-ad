@@ -1,15 +1,24 @@
-$NetBSD: patch-ad,v 1.3 2011/03/15 20:36:03 bouyer Exp $
+$NetBSD: patch-ad,v 1.4 2015/09/09 08:35:51 hauke Exp $
 
---- netdisco_apache.conf.orig	2009-06-03 01:27:02.000000000 +0200
-+++ netdisco_apache.conf	2011-03-14 17:00:47.000000000 +0100
-@@ -12,8 +12,10 @@
+--- netdisco_apache.conf.orig	2014-03-27 22:48:23.000000000 +0000
++++ netdisco_apache.conf
+@@ -4,7 +4,5 @@
  
- # Pool Database Connections
- PerlModule Apache::DBI
-+@APACHE2@PerlModule CGI
-+@APACHE2@PerlModule Apache2::Request
- 
+-#
+-# Apache 1.x Users -- Comment out these four lines
+-#
+ LoadModule perl_module  libexec/apache2/mod_perl.so
+ LoadModule apreq_module libexec/apache2/mod_apreq2.so
++PerlModule CGI
+ PerlModule Apache2::compat
+@@ -16,4 +14,8 @@ PerlModule Apache::DBI
  <Directory /usr/local/netdisco/html>
- 	order allow,deny
- 	allow from all
+-	order allow,deny
+-	allow from all
++	# Apache <= 2.2
++	#order allow,deny
++	#allow from all
++
++	# Apache >= 2.4
++	Require all granted
  </Directory>

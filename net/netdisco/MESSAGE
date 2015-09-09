@@ -1,29 +1,23 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2014/06/10 15:22:14 joerg Exp $
+$NetBSD: MESSAGE,v 1.3 2015/09/09 08:35:51 hauke Exp $
 
 Here is a summary of the steps needed to complete the netdisco setup.
 Please look at the documentation in ${PREFIX}/doc/ for details.
 - add the netdisco administrator(s) account(s) to the netdisco group
-- cd to ${PREFIX}/netdisco/sql/ and run ./pg_init, ./pg_run and ./pg_all
-  to create the netdisco database in postgresql.  This will prompt for a
-  password which will then be used to access the netdisco database.
-  Rememer this password as you will need it later.
 - edit ${PREFIX}/netdisco/netdisco.conf to suit your needs. You have to
-  set the database password you entered in the previous step here.
+  set the database password here and in netdisco_apache.conf.
+- cd to ${PREFIX}/netdisco/sql/ and run ./pg --init
+  to create the netdisco database in postgresql.
 - Add a user to the netdisco system: ${PREFIX}/netdisco/netdisco -u joebob
   Give this user administration privileges, so that it will be able to
   create other users though the web interface.
-- Import the OUI database:
-  ${PREFIX}/netdisco/netdisco -o
-- Add an appropriate crontab to user netdisco. ${EGDIR} contains an
-  appropriate sample.
-- Include netdisco to your apache config. ${EGDIR} contains 2 config
+- Import the OUI database http://standards.ieee.org/regauth/oui/oui.txt
+  with ${PREFIX}/netdisco/netdisco -O
+- Add an appropriate crontab to user netdisco. ${EGDIR} contains an example.
+- Include netdisco in your apache config. ${EGDIR} contains two config
   fragments: netdisco_apache.conf and netdisco_apache_dir.conf which
-  can be inclued in the httpd.conf to make netdisco available though
+  can be included in the httpd.conf to make netdisco available though
   http://your.host.name/netdisco/
-  You will have to set the database password in netdisco_apache_dir.conf.
-  Make sure you load mod_apreq.so in addition to mod_perl.so, and that
-  you have "PerlModule Apache::compat"
 - Make netdisco discover one of your devices:
   ${PREFIX}/netdisco/netdisco -d devicename
 - Make netdisco discover your network topology, if supported by your

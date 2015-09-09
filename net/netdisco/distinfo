@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.6 2011/05/23 19:39:10 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2015/09/09 08:35:51 hauke Exp $
 
-SHA1 (netdisco-1.1_with_mibs.tar.gz) = 181025062cc41fa509405b92708ea28b6d719b83
-RMD160 (netdisco-1.1_with_mibs.tar.gz) = e33e329dbfc722b0d4eb14aa3b16a69fb3b2e0d5
-Size (netdisco-1.1_with_mibs.tar.gz) = 13883416 bytes
-SHA1 (patch-aa) = 7f0f1bf04754aa9b1ee722b3f5137ef820737485
-SHA1 (patch-ad) = 74a867d4774860a812bce1df4e78213ab6438ab7
+SHA1 (netdisco-1.3.3_with_mibs.tar.gz) = 429da2846a06b381ae3aec859d18525614560915
+RMD160 (netdisco-1.3.3_with_mibs.tar.gz) = de3026d39a2ac1eb66bd0094166b6ddc17bb0ed5
+Size (netdisco-1.3.3_with_mibs.tar.gz) = 21179271 bytes
+SHA1 (oui.txt) = 4c7807120d2b214e09c4d28e73d3835149d655be
+RMD160 (oui.txt) = b22f584cfd7748859d9dadd9384fe37a8561f2ff
+Size (oui.txt) = 3243695 bytes
+SHA1 (patch-aa) = a0815677c4208be0ea4b9a79de0d5f50ae4407cb
+SHA1 (patch-ad) = e5ada4d78597b8d108c12eead1ee839110b3541e
