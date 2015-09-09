@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2015/05/22 08:03:43 kim Exp $
+# $NetBSD: Makefile,v 1.80 2015/09/09 22:04:55 kim Exp $
 
 DISTNAME=	tcsh-6.19.00
 #PKGREVISION=	0
@@ -6,7 +6,7 @@ CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.astron.com/pub/tcsh/
 
-MAINTAINER=	kim@NetBSD.org
+MAINTAINER=	kimmo@suominen.com
 HOMEPAGE=	http://www.tcsh.org/
 COMMENT=	Extended C-shell with many useful features
 LICENSE=	original-bsd
