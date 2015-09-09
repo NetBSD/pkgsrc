@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3858 2015/09/09 17:54:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3859 2015/09/09 17:55:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6832,3 +6832,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/opencpn-plugin-weather_routing to 20150829 [bouyer 2015-09-09]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.862 [kleink 2015-09-09]
 	Updated x11/libxcb to 1.11.1 [wiz 2015-09-09]
+	Updated x11/libXi to 1.7.5 [wiz 2015-09-09]
