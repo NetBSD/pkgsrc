@@ -1,15 +1,15 @@
-$NetBSD: patch-aq,v 1.7 2007/06/12 21:43:30 heinz Exp $
+$NetBSD: patch-README,v 1.1 2015/09/09 19:13:49 christos Exp $
 
   Purely changes for pkgsrc:
 
 	- Change paths to those used by pkgsrc
 	- Notes about search paths set by pkgsrc
 
---- README.orig	2007-06-08 14:56:25.000000000 +0200
-+++ README
-@@ -99,25 +99,25 @@ Mail::SpamAssassin::Conf class (run the 
+--- README.orig	2015-04-28 15:57:01.000000000 -0400
++++ README	2015-09-09 14:57:29.000000000 -0400
+@@ -102,25 +102,25 @@
  the standard defaults that people use.  There is an explanation of all the
- default locations that SpamAssassin will look at the end.
+ default locations that Apache SpamAssassin will look at the end.
  
 -  - /usr/share/spamassassin/*.cf:
 +  - @@PREFIX@@/share/spamassassin/*.cf:
@@ -37,7 +37,7 @@ $NetBSD: patch-aq,v 1.7 2007/06/12 21:43:30 heinz Exp $
  
          Plugin control files, installed from the distribution. These are
          used to control what plugins are loaded.  Modifications here will
-@@ -126,22 +126,22 @@ default locations that SpamAssassin will
+@@ -129,22 +129,22 @@
          
          You want to modify these files if you want to load additional
          plugins, or inhibit loading a plugin that is enabled by default.
@@ -64,7 +64,7 @@ $NetBSD: patch-aq,v 1.7 2007/06/12 21:43:30 heinz Exp $
          just a template, which will be copied to a user's home directory
          for them to change.
  
-@@ -195,6 +195,12 @@ These are:
+@@ -198,6 +198,12 @@
    /opt/$DIR     /opt/$DIR/share/spamassassin   /etc/opt/mail/spamassassin
    $DIR          $DIR/share/spamassassin        $DIR/etc/mail/spamassassin
  
@@ -77,7 +77,7 @@ $NetBSD: patch-aq,v 1.7 2007/06/12 21:43:30 heinz Exp $
  The files themselves are then looked for in these paths:
  
    - Distributed Configuration Files
-@@ -234,6 +240,11 @@ ruleset:
+@@ -237,6 +243,11 @@
    /opt/$DIR     /var/opt/spamassassin/__version__
    $DIR          $DIR/var/spamassassin/__version__
  
@@ -88,4 +88,4 @@ $NetBSD: patch-aq,v 1.7 2007/06/12 21:43:30 heinz Exp $
 +
  This is normally written to by the "sa-update" script.  "__version__" is
  replaced by a representation of the version number, so that multiple
- versions of SpamAssassin will not interfere with each other's rulesets.
+ versions of Apache SpamAssassin will not interfere with each other's rulesets.
