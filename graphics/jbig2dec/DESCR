@@ -1,4 +1,4 @@
-jbig2dec is a decoder for the JGIB2 image compression format.  JBIG2 is
+jbig2dec is a decoder for the JBIG2 image compression format.  JBIG2 is
 designed for lossy and lossless encoding of monochrome images at
 moderately high resolutions.  For scanned paper documents, compression
 ratios on the order of 100:1 are often seen.
