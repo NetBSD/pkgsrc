@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.21 2015/09/03 20:12:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q2,v 1.1.2.22 2015/09/09 20:39:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q2 branch:
 
@@ -129,3 +129,7 @@ Pullup ticket #4810 - requested by sevan & taca
 net/bind99: security update
 Pullup ticket #4811 - requested by sevan
 net/bind910: security update
+Pullup ticket #4812 - requested by he
+www/curl: security update
+Pullup ticket #4813 - requested by he
+www/apache22: security update
