@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3861 2015/09/09 18:15:43 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3862 2015/09/09 19:14:05 christos Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6835,3 +6835,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/libXi to 1.7.5 [wiz 2015-09-09]
 	Updated security/libgcrypt to 1.6.4 [wiz 2015-09-09]
 	Updated security/gnupg2 to 2.0.29 [wiz 2015-09-09]
+	Updated mail/spamassassin to 3.4.1 [tron 2015-09-09]
