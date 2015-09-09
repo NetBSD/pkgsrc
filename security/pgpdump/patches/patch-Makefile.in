@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/09/09 22:01:01 gdt Exp $
+
+It's not clear that this is necessary, but it carries on the tradition
+of the old patch-aa.
+
+--- Makefile.in.orig	2014-08-01 03:36:50.000000000 +0000
++++ Makefile.in
+@@ -38,9 +38,9 @@ distclean:
+ 
+ install: all
+ 	$(INSTALL) -d $(DESTDIR)$(bindir)
+-	$(INSTALL) -cp -pm755 $(PROG) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_PROGRAM) -cp -pm755 $(PROG) $(DESTDIR)$(bindir)
+ 	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) -cp -pm644 $(MAN) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) -cp -pm644 $(MAN) $(DESTDIR)$(mandir)/man1
+ 
+ archive:
+ 	git archive master -o ~/pgpdump-$(VERSION).tar --prefix=pgpdump-$(VERSION)/
