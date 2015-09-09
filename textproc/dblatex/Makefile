@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2015/05/06 10:25:40 markd Exp $
+# $NetBSD: Makefile,v 1.21 2015/09/09 23:48:11 gdt Exp $
 
 DISTNAME=	dblatex-0.3.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,6 +34,9 @@ DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 DEPENDS+=	tex-subfigure-[0-9]*:../../print/tex-subfigure
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
+DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
+DEPENDS+=	tex-eepic-[0-9]*:../../graphics/tex-eepic
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
