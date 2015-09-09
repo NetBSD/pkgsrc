@@ -1,7 +1,8 @@
-$NetBSD: patch-ao,v 1.3 2011/05/05 08:55:23 adam Exp $
+$NetBSD: patch-ao,v 1.4 2015/09/09 18:15:34 wiz Exp $
 
 gpg-zip script will not be installed, so man page also should not be installed.
 If will introduce conflict with security/gnupg.
+https://bugs.gnupg.org/gnupg/issue2095
 
 --- doc/Makefile.in.orig	2010-07-19 07:05:40.000000000 +0000
 +++ doc/Makefile.in
@@ -14,12 +15,3 @@ If will introduce conflict with security/gnupg.
  
  man_MANS = $(myman_pages)
  noinst_MANS = gnupg.7
-@@ -905,7 +905,7 @@ uninstall-man: uninstall-man1 uninstall-
- 
- 
- yat2m: yat2m.c
--	$(CC_FOR_BUILD) -o $@ $(srcdir)/yat2m.c
-+	$(CC_FOR_BUILD) $(CPPFLAGS) -o $@ $(srcdir)/yat2m.c
- 
- .fig.png:
- 	fig2dev -L png `test -f '$<' || echo '$(srcdir)/'`$< $@
