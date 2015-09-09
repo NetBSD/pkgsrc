@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/09/09 23:01:35 tnn Exp $
+
+SHA1 (libdevq-0.0.2.tar.xz) = a7a06d4cc3e8de2e8015fb3f78cd596ede6e87ca
+RMD160 (libdevq-0.0.2.tar.xz) = df81ed6172c2f55035ff6804b67d9fea4ba5d5ee
+Size (libdevq-0.0.2.tar.xz) = 210960 bytes
+SHA1 (patch-configure) = 3a53138ebbd6aa02492ab910051bc060932b51b9
+SHA1 (patch-src_device.c) = 965f681e107c504dba49928950edefc71fbfc6a5
