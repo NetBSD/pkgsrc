@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/09/09 00:04:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2015/09/09 15:59:31 fhajny Exp $
 
 DISTNAME=	node-v4.0.0
 CATEGORIES=	devel
@@ -18,6 +18,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.10.24
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+GCC_REQD+=		4.8
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
