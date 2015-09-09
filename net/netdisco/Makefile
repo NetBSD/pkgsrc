@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.35 2015/07/12 18:56:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2015/09/09 08:35:51 hauke Exp $
 
-DISTNAME=		netdisco-1.1_with_mibs
-PKGNAME=		netdisco-1.1
-PKGREVISION=		6
+DISTNAME=		netdisco-${PKGVERSION}_with_mibs
+PKGNAME=		netdisco-${PKGVERSION}
+PKGVERSION=		1.3.3
+#PKGREVISION=		1
 CATEGORIES=		net
+DISTFILES=		${DEFAULT_DISTFILES} oui.txt
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
+SITES.oui.txt=		http://standards.ieee.org/regauth/oui/
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netdisco.org/
 COMMENT=		Open Source web-based network management tool
 LICENSE=		modified-bsd
 
+DEPENDS+=		p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=		p5-SNMP-Info>=2.04:../../net/p5-SNMP-Info
 DEPENDS+=		p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI
 DEPENDS+=		p5-Apache-Session-[0-9]*:../../www/p5-Apache-Session
@@ -23,6 +26,8 @@ DEPENDS+=		p5-Graph-[0-9]*:../../devel/p5-Graph
 DEPENDS+=		p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
 #DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
 DEPENDS+=		p5-Net-NBName-[0-9]*:../../net/p5-Net-NBName
+DEPENDS+=		p5-libapreq2-[0-9]*:../../www/p5-libapreq2
+DEPENDS+=		p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -59,46 +64,46 @@ SUBST_FILES.installdir+=	bin/test_cache.pl bin/test_cdp.pl
 SUBST_FILES.installdir+=	bin/test_dev.pl bin/test_stats.pl
 SUBST_FILES.installdir+=	bin/debian_install.sh
 SUBST_FILES.installdir+=	bin/test_fwtable.pl bin/test_iproute.pl
-SUBST_FILES.installdir+=	doc/INSTALL doc/INSTALL.pod
-SUBST_FILES.installdir+=	doc/README.pod doc/README.html
+SUBST_FILES.installdir+=	doc/INSTALL.pod
+SUBST_FILES.installdir+=	doc/README.pod
 SUBST_FILES.installdir+=	doc/UPGRADE.pod
 SUBST_FILES.installdir+=	INSTALL README UPGRADE
-SUBST_FILES.installdir+=	html/doc/README.html
 SUBST_FILES.installdir+=	html/admin_reconfig.html
 SUBST_FILES.installdir+=	netdisco.crontab
 SUBST_FILES.installdir+=	mibs/snmp.conf
 SUBST_SED.installdir=		-e "s|/usr/local/netdisco|${PREFIX}/netdisco|g"
 SUBST_MESSAGE.installdir=	Fixing hardcoded install directory path.
 
-SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	bin/catalyst_mac_vlan.pl bin/port_control
-SUBST_FILES.path+=	bin/test_cache.pl bin/test_dev.pl bin/test_stats.pl
-SUBST_FILES.path+=	bin/parse_mac
-SUBST_FILES.path+=	doc/INSTALL.pod
-SUBST_FILES.path+=	INSTALL netdisco.crontab
-SUBST_SED.path=		-e "s|/usr/local/bin|${PREFIX}/bin|g"
-SUBST_MESSAGE.path=	Fixing hardcoded path.
+SUBST_STAGE.path=		pre-configure
+SUBST_FILES.path=		bin/catalyst_mac_vlan.pl bin/port_control
+SUBST_FILES.path+=		bin/test_cache.pl bin/test_dev.pl bin/test_stats.pl
+SUBST_FILES.path+=		bin/parse_mac
+SUBST_FILES.path+=		doc/INSTALL.pod
+SUBST_FILES.path+=		INSTALL netdisco.crontab
+SUBST_SED.path=			-e "s|/usr/local/bin|${PREFIX}/bin|g"
+SUBST_MESSAGE.path=		Fixing hardcoded path.
 
-SUBST_STAGE.varbase=	pre-configure
-SUBST_FILES.varbase=	netdisco.conf
+SUBST_STAGE.varbase=		pre-configure
+SUBST_FILES.varbase=		netdisco.conf
 SUBST_SED.varbase=		-e "s|@VARBASE@|${VARBASE}|g"
-SUBST_MESSAGE.varbase=	Fixing data directory.
+SUBST_MESSAGE.varbase=		Fixing data directory.
 
-NETDISCOUSER?=	netdisco
-NETDISCOGROUP?=	netdisco
+NETDISCOUSER?=			netdisco
+NETDISCOGROUP?=			netdisco
 
-PKG_GROUPS_VARS+=	NETDISCOGROUP
-PKG_USERS_VARS+=	NETDISCOUSER
+PKG_GROUPS_VARS+=		NETDISCOGROUP
+PKG_USERS_VARS+=		NETDISCOUSER
 
-PKG_GROUPS=	${NETDISCOGROUP}
-PKG_USERS=	${NETDISCOUSER:Q}:${NETDISCOGROUP:Q}
+PKG_GROUPS=			${NETDISCOGROUP}
+PKG_USERS=			${NETDISCOUSER:Q}:${NETDISCOGROUP:Q}
 
 PKG_GECOS.${NETDISCOUSER}=	Netdisco administrator
 PKG_HOME.${NETDISCOUSER}=	${PREFIX}/netdisco
 PKG_SHELL.${NETDISCOUSER}=	${SH}
 
-PKG_SYSCONFVAR=		netdisco
+PKG_SYSCONFVAR=			netdisco
 PKG_SYSCONFDIR.netdisco=	${PREFIX}/netdisco
+
 EGDIR=			${PREFIX}/share/examples/netdisco
 CONF_FILES=		${EGDIR:Q}/netdisco.conf ${PKG_SYSCONFDIR:Q}/netdisco.conf
 CONF_FILES_PERMS+=	${EGDIR:Q}/netdisco.conf ${PKG_SYSCONFDIR:Q}/netdisco.conf \
@@ -110,19 +115,24 @@ OWN_DIRS_PERMS+=	${VARBASE:Q}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 0775
 OWN_DIRS_PERMS+=	${PREFIX:Q}/netdisco/html ${NETDISCOUSER} ${NETDISCOGROUP} 0775
 OWN_DIRS_PERMS+=	${PREFIX:Q}/netdisco/mason ${NETDISCOUSER} ${APACHE_GROUP} 0775
 
-RCD_SCRIPTS=		netdisco
+RCD_SCRIPTS=			netdisco
 RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
 .include "../../mk/apache.mk"
 
-SUBST_STAGE.apachevers=	pre-configure
-SUBST_FILES.apachevers=	netdisco_apache.conf
-SUBST_SED.apachevers=	-e "s|@APACHE2@||g"
-SUBST_MESSAGE.apachevers= Fixing config files for apache-2
+.if PKG_APACHE != apache22
+SUBST_STAGE.apachevers=		pre-configure
+SUBST_FILES.apachevers=		html/admin_user.html html/change_pw.html html/login.html
+SUBST_FILES.apachevers+=	html/logout.html html/portcontrol.html
+SUBST_FILES.apachevers+=	html/public_debugging.html
+SUBST_SED.apachevers=		-e "s|connection->remote_ip|connection->client_ip|g"
+SUBST_MESSAGE.apachevers= 	Fixing perl files for apache > 2.2.
+.endif
 
 do-build:
 	${RM} -f ${WRKSRC:Q}/html/doc/ChangeLog.txt
 	${RM} -f ${WRKSRC:Q}/Makefile
+	${RM} -f ${WRKSRC:Q}/bin/debian_install.sh
 	set -e; \
 	for i in INSTALL README README-API-BACKEND README-API-SHARED \
 	    UPGRADE ChangeLog; do \
@@ -131,6 +141,7 @@ do-build:
 	done
 	cd ${WRKSRC:Q} && \
 	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -print | ${XARGS} ${RM} -f
+	${CP} ${DISTDIR}/oui.txt ${WRKSRC:Q}
 
 do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon

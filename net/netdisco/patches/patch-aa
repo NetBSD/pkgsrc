@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2011/03/15 20:36:03 bouyer Exp $
+$NetBSD: patch-aa,v 1.3 2015/09/09 08:35:51 hauke Exp $
 
---- netdisco.conf.orig	2009-06-11 23:44:23.000000000 +0200
-+++ netdisco.conf	2011-03-14 17:03:43.000000000 +0100
-@@ -61,7 +61,7 @@
+--- netdisco.conf.orig	2014-03-27 22:48:23.000000000 +0000
++++ netdisco.conf
+@@ -67,7 +67,7 @@ expire_processes     = 1
  
  # ---- Admin Panel Daemon Settings ----
  daemon_bg       = true
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2011/03/15 20:36:03 bouyer Exp $
  daemon_poll     = 2
  
  # ---- Port Control Settings ---
-@@ -76,7 +76,7 @@
+@@ -82,7 +82,7 @@ portctl_timeout      = 60
  # Data Archiving and Logging
  compresslogs    = true
  compress        = /usr/bin/gzip -f
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2011/03/15 20:36:03 bouyer Exp $
  logextension    = txt
  #nmis_dump       = netdisco_nmis
  
-@@ -188,8 +188,8 @@
+@@ -198,8 +198,8 @@ graph_x         = 30
  graph_y         = 30
  
  node_fillcolor  = dimgrey
