@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2015/05/03 10:11:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49.2.1 2015/09/09 20:28:44 tron Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -23,6 +23,8 @@ man/man3/CURLMOPT_MAX_TOTAL_CONNECTIONS.3
 man/man3/CURLMOPT_PIPELINING.3
 man/man3/CURLMOPT_PIPELINING_SERVER_BL.3
 man/man3/CURLMOPT_PIPELINING_SITE_BL.3
+man/man3/CURLMOPT_PUSHDATA.3
+man/man3/CURLMOPT_PUSHFUNCTION.3
 man/man3/CURLMOPT_SOCKETDATA.3
 man/man3/CURLMOPT_SOCKETFUNCTION.3
 man/man3/CURLMOPT_TIMERDATA.3
@@ -140,6 +142,7 @@ man/man3/CURLOPT_OPENSOCKETFUNCTION.3
 man/man3/CURLOPT_PASSWORD.3
 man/man3/CURLOPT_PATH_AS_IS.3
 man/man3/CURLOPT_PINNEDPUBLICKEY.3
+man/man3/CURLOPT_PIPEWAIT.3
 man/man3/CURLOPT_PORT.3
 man/man3/CURLOPT_POST.3
 man/man3/CURLOPT_POSTFIELDS.3
@@ -160,6 +163,7 @@ man/man3/CURLOPT_PROXYPORT.3
 man/man3/CURLOPT_PROXYTYPE.3
 man/man3/CURLOPT_PROXYUSERNAME.3
 man/man3/CURLOPT_PROXYUSERPWD.3
+man/man3/CURLOPT_PROXY_SERVICE_NAME.3
 man/man3/CURLOPT_PROXY_TRANSFER_MODE.3
 man/man3/CURLOPT_PUT.3
 man/man3/CURLOPT_QUOTE.3
@@ -181,6 +185,7 @@ man/man3/CURLOPT_RTSP_TRANSPORT.3
 man/man3/CURLOPT_SASL_IR.3
 man/man3/CURLOPT_SEEKDATA.3
 man/man3/CURLOPT_SEEKFUNCTION.3
+man/man3/CURLOPT_SERVICE_NAME.3
 man/man3/CURLOPT_SHARE.3
 man/man3/CURLOPT_SOCKOPTDATA.3
 man/man3/CURLOPT_SOCKOPTFUNCTION.3
@@ -295,6 +300,7 @@ man/man3/libcurl-errors.3
 man/man3/libcurl-multi.3
 man/man3/libcurl-share.3
 man/man3/libcurl-symbols.3
+man/man3/libcurl-thread.3
 man/man3/libcurl-tutorial.3
 man/man3/libcurl.3
 share/aclocal/libcurl.m4

@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_hostcheck.c,v 1.1 2014/03/31 08:45:21 wiz Exp $
+$NetBSD: patch-lib_hostcheck.c,v 1.1.12.1 2015/09/09 20:28:44 tron Exp $
 
 Add missing header for DragonflyBSD.
 PR 48691 by David Shao.
 
---- lib/hostcheck.c.orig	2014-03-25 22:01:37.000000000 +0000
+--- lib/hostcheck.c.orig	2015-06-03 07:38:20.000000000 +0000
 +++ lib/hostcheck.c
-@@ -31,6 +31,13 @@
+@@ -34,6 +34,13 @@
  #include "inet_pton.h"
  
  #include "curl_memory.h"

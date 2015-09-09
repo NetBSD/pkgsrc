@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.30 2015/04/22 14:35:21 jperkin Exp $
+$NetBSD: patch-aa,v 1.30.2.1 2015/09/09 20:28:44 tron Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2015-04-21 07:21:35.000000000 +0000
+--- configure.orig	2015-08-10 12:54:00.000000000 +0000
 +++ configure
-@@ -3703,6 +3703,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3737,6 +3737,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -13,7 +13,7 @@ the gssapi option, and need an explicit -lgss
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16682,7 +16683,7 @@ squeeze() {
+@@ -16723,7 +16724,7 @@ squeeze() {
  
  
        #
@@ -22,19 +22,29 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21131,6 +21132,11 @@ $as_echo "yes" >&6; }
+@@ -19971,7 +19972,7 @@ done
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for monotonic clock_gettime" >&5
+ $as_echo_n "checking for monotonic clock_gettime... " >&6; }
+   #
+-  if test "x$dontwant_rt" == "xno" ; then
++  if test "x$dontwant_rt" = "xno" ; then
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -21174,7 +21175,11 @@ $as_echo "yes" >&6; }
+      if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
-      elif test -f "$GSSAPI_ROOT/bin/krb5-config"; then
-         GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
-+        if $GSSAPI_ROOT/bin/krb5-config --cflags gssapi 2>&1 | grep "Unknown option" >/dev/null; then
-+            GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags`
-+        else
-+            GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
-+        fi
       elif test -f "$KRB5CONFIG"; then
-         GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
+-        GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
++        if `$KRB5CONFIG --cflags gssapi` 2>&1 | grep "Unknown option" >/dev/null; then
++           GSSAPI_INCS=`$KRB5CONFIG --cflags`
++        else
++           GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
++        fi
       elif test "$GSSAPI_ROOT" != "yes"; then
-@@ -21305,7 +21311,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+         GSSAPI_INCS="-I$GSSAPI_ROOT/include"
+      fi
+@@ -21347,7 +21352,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -42,13 +52,4 @@ the gssapi option, and need an explicit -lgss
 +        LIBS="-lgssapi -lkrb5 $LIBS"
          ;;
       esac
-   fi
-@@ -24264,7 +24270,7 @@ _ACEOF
-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $capath (capath)" >&5
- $as_echo "$capath (capath)" >&6; }
-   fi
--  if test "x$ca" == "xno" && test "x$capath" == "xno"; then
-+  if test "x$ca" = "xno" && test "x$capath" = "xno"; then
-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
- $as_echo "no" >&6; }
    fi
