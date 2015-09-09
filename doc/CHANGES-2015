@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3855 2015/09/09 10:43:42 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3856 2015/09/09 11:11:47 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6829,3 +6829,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/netdisco to 1.3.3 [hauke 2015-09-09]
 	Updated multimedia/ffmpeg2 to 2.8 [adam 2015-09-09]
 	Updated multimedia/ffplay2 to 2.8 [adam 2015-09-09]
+	Updated geography/opencpn-plugin-weather_routing to 20150829 [bouyer 2015-09-09]
