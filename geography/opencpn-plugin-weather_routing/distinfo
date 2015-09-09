@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/02/02 20:41:34 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/09/09 11:07:07 bouyer Exp $
 
-SHA1 (weather_routing_pi-20150201.tar.gz) = c52122dc3c655307b7e7e5bd50b083567a3a7dc0
-RMD160 (weather_routing_pi-20150201.tar.gz) = a5313bd09a069a87f6b05b7f253ad4dcc2e49084
-Size (weather_routing_pi-20150201.tar.gz) = 3184466 bytes
+SHA1 (weather_routing_pi-20150829-e652536aca24809cd3514c8c903603806b22bb0d.tar.gz) = ee3a7a485f9e0f6be60ba7a5d92309b27acea029
+RMD160 (weather_routing_pi-20150829-e652536aca24809cd3514c8c903603806b22bb0d.tar.gz) = f563544b3601b5f325e5c00bb60eff847b52b467
+Size (weather_routing_pi-20150829-e652536aca24809cd3514c8c903603806b22bb0d.tar.gz) = 787968 bytes
