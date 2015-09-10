@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/03 07:14:12 agc Exp $
+$NetBSD: patch-aa,v 1.2 2015/09/10 23:05:53 prlw1 Exp $
 
 Remove some assumptions about the test(1) (sub)command
 
---- configure	2010/08/31 17:01:09	1.1
-+++ configure	2010/08/31 17:01:34
-@@ -12044,7 +12044,7 @@
+--- configure.orig	2013-03-09 10:22:58.000000000 +0000
++++ configure
+@@ -13113,7 +13113,7 @@ fi
  
  report_curltimeout="-"
  if test -n "${with_curltimeout}"; then
@@ -13,16 +13,25 @@ Remove some assumptions about the test(1) (sub)command
      $as_echo "#define OAUTH_CURL_TIMEOUT 60" >>confdefs.h
  
      report_curltimeout="60"
-@@ -12062,7 +12062,7 @@
+@@ -13131,7 +13131,7 @@ fi
  
  
  
--if test "${enable_nss}" == "yes"; then :
-+if test "${enable_nss}" = "yes"; then :
+-if test "${enable_builtinhash}" == "yes"; then :
++if test "${enable_builtinhash}" = "yes"; then :
+ 
+     $as_echo "#define USE_BUILTIN_HASH 1" >>confdefs.h
+  USE_BUILTIN_HASH=1
+@@ -13153,7 +13153,7 @@ $as_echo "$as_me:
+ 
+ else
+ 
+-  if test "${enable_nss}" == "yes"; then :
++  if test "${enable_nss}" = "yes"; then :
  
  
  pkg_failed=no
-@@ -12364,7 +12364,7 @@
+@@ -13451,7 +13451,7 @@ $as_echo "no" >&6; }
  fi
  
  
