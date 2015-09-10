@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2015/09/01 20:52:06 markd Exp $
+# $NetBSD: Makefile,v 1.63 2015/09/10 00:54:47 dsainty Exp $
 
 DISTNAME=	libgphoto2-2.5.8
+PKGREVISION=	1
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,6 +31,8 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
