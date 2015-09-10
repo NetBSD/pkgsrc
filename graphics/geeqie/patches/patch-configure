@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2015/09/10 19:06:57 gdt Exp $
+
+Fix bashisms.
+Reported upstream 20150910.
+
+--- configure.orig	2015-09-10 14:28:36.000000000 +0000
++++ configure
+@@ -9146,7 +9146,7 @@ else
+ fi
+ 
+ 
+-if test x$gtk3 == xyes; then
++if test x$gtk3 = xyes; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: \"Gtk3 enabled\"" >&5
+ $as_echo "$as_me: WARNING: \"Gtk3 enabled\"" >&2;}
+ 
+@@ -9158,7 +9158,7 @@ $as_echo "$as_me: WARNING: \"Gtk3 is pre
+     fi
+ fi
+ 
+-if test x$gtk3 == xno; then
++if test x$gtk3 = xno; then
+     # Check whether --enable-gtktest was given.
+ if test "${enable_gtktest+set}" = set; then :
+   enableval=$enable_gtktest;
