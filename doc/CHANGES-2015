@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3865 2015/09/10 00:57:10 dsainty Exp $
+$NetBSD: CHANGES-2015,v 1.3866 2015/09/10 12:58:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6839,3 +6839,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/libdevq version 0.0.2 [tnn 2015-09-09]
 	Updated print/gutenprint-lib to 5.2.10 [gdt 2015-09-10]
 	Updated devel/libgphoto2 to 2.5.8nb1 [dsainty 2015-09-10]
+	Updated textproc/qprint to 1.1 [wiz 2015-09-10]
