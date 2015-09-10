@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14880 2015/09/09 18:15:43 wiz Exp $
+$NetBSD: TODO,v 1.14881 2015/09/10 00:10:57 gdt Exp $
 
 Suggested new packages
 ======================
@@ -868,7 +868,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-applet-0.16.2
 	o guile-gnome-2.16.3
 	o guile-gtk-2.1
-	o gutenprint-lib-5.2.10
 	o gvfs-1.22.0
 	o gworkspace-0.9.3
 	o gxine-0.99.9
