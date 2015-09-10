@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2015/09/10 19:06:57 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2015/09/10 19:09:43 gdt Exp $
 #
 
 DISTNAME=	geeqie-1.2.2
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.xz
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geeqie.org/
@@ -29,7 +30,7 @@ post-build:
 .include "options.mk"
 
 .include "../../graphics/exiv2/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
