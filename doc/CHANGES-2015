@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3867 2015/09/10 19:07:08 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3868 2015/09/10 23:06:27 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6841,3 +6841,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libgphoto2 to 2.5.8nb1 [dsainty 2015-09-10]
 	Updated textproc/qprint to 1.1 [wiz 2015-09-10]
 	Updated graphics/geeqie to 1.2.2 [gdt 2015-09-10]
+	Updated security/liboauth to 1.0.3 [prlw1 2015-09-10]
