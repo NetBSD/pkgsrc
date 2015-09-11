@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2015/09/11 15:30:35 tnn Exp $
+# $NetBSD: options.mk,v 1.35 2015/09/11 16:27:30 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -31,8 +31,12 @@ PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-egl
 
-# use Thread Local Storage in GLX where it works.
-.if !empty(MACHINE_PLATFORM:MNetBSD-[789].*-*) || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
+# use Thread Local Storage in GLX where it is supported and works
+.if \
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
+	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
+	!empty(MACHINE_PLATFORM:MDragonFly-.*-x86_64)
 # Not yet, needs more testing and xorg-server support.
 #CONFIGURE_ARGS+=	--enable-glx-tls
 CONFIGURE_ARGS+=	--disable-glx-tls
