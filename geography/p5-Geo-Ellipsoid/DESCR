@@ -1,0 +1,5 @@
+Geo::Ellipsoid performs geometrical calculations on the surface of an
+ellipsoid. An ellipsoid is a three-dimension object formed from the
+rotation of an ellipse about one of its axes. The approximate shape of the
+earth is an ellipsoid, so Geo::Ellipsoid can accurately calculate distance
+and bearing between two widely-separated locations on the earth's surface.

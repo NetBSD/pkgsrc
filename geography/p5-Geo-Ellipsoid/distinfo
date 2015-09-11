@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/09/11 18:43:24 bouyer Exp $
+
+SHA1 (Geo-Ellipsoid-1.12.tar.gz) = b20f164032ffe4d357871604d61c4902a89a992c
+RMD160 (Geo-Ellipsoid-1.12.tar.gz) = b1340dd4a6b27a7939bdd765315ce8833d244a0d
+Size (Geo-Ellipsoid-1.12.tar.gz) = 80734 bytes
