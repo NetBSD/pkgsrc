@@ -1,0 +1,4 @@
+The original goal of this module was to produce GPX/XML files which were
+parseable by both GPX Spinner and EasyGPS. As of version 0.13 it has been
+extended to support general parsing and generation of GPX data.
+GPX 1.0 and 1.1 are supported.
