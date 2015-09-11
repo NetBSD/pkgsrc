@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/09/11 12:35:19 wiz Exp $
+
+=============================================================
+This patch fixes log2(3) detection which failed because just
+AC_CHECK_FUNCS(log2) fails to use -lm.
+Additionally, libdl is properly checked for so that it can be
+de-hardcoded from Makefile.am (see patch-Makefile.am)
+
+This patch has been submitted upstream
+http://schismtracker.org/scdev/read/1978/
+=============================================================
+
+--- configure.ac.orig	Sun Jul 05 12:54:41 2015 -0400
++++ configure.ac	Thu Sep 10 00:35:19 2015 +0200
+@@ -56,6 +56,10 @@
+ dnl Check for SDL libs
+ AM_PATH_SDL(1.2.10, , AC_MSG_ERROR([*** SDL version >= 1.2.10 not found.]))
+ 
++dnl Libs
++AC_CHECK_LIB([m], [log2])
++AC_CHECK_LIB([dl], [dlopen])
++
+ dnl Functions
+ AC_CHECK_FUNCS(strchr memmove strerror strtol strcasecmp strncasecmp strverscmp stricmp strnicmp strcasestr strptime asprintf vasprintf memcmp mmap nice unsetenv dup fnmatch log2 mkstemp)
+ AM_CONDITIONAL([NEED_ASPRINTF], [test "$ac_cv_func_asprintf" = "no"])
