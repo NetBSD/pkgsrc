@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2015/09/11 00:03:36 tnn Exp $
+# $NetBSD: Makefile,v 1.106 2015/09/11 06:30:55 wiz Exp $
 
 DISTNAME=	mesa-10.6.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -66,6 +66,7 @@ SUBST_SED.tr1+=		-e 's,include <tr1/,include <,g'
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 10.6.7
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 .include "../../lang/python/tool.mk"
 
