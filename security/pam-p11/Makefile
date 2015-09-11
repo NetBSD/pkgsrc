@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2015/09/09 22:02:03 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2015/09/11 20:17:17 gdt Exp $
 #
 
 DISTNAME=	pam_p11-0.1.5
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://www.opensc-project.org/files/pam_p11/
+# This has a bad name and doesn't have generated auto* files.
+#MASTER_SITES=	https://github.com/OpenSC/pam_p11/archive/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opensc-project.org/opensc/wiki/pam_p11
