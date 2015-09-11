@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2015/09/11 00:03:36 tnn Exp $
+$NetBSD: distinfo,v 1.98 2015/09/11 12:38:27 tnn Exp $
 
 SHA1 (mesa-10.6.7.tar.xz) = c63008bf8f2b1022a60a82fa4f2200db6fbd956c
 RMD160 (mesa-10.6.7.tar.xz) = cdf2062b98094afdb281da6b040484f66383a17a
@@ -30,6 +30,7 @@ SHA1 (patch-src_mesa_drivers_dri_Makefile.in) = 48032b8f8e6eac59092f68f3c32cfdd4
 SHA1 (patch-src_mesa_drivers_dri_common_Makefile.in) = 5e160f7d92c2e9f3fa36e52a082a496af67e634e
 SHA1 (patch-src_mesa_drivers_dri_common_xmlconfig.c) = 668cc1d6a58f8f02eb9eb32c1aeffb4bef7beaf4
 SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = fd8436e4e3a69250256c2cddf8138effb16bd7b3
+SHA1 (patch-src_mesa_drivers_dri_i965_brw__context.h) = e0db31a3ea077531d922923c300d06d9e265283b
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 7c1a1e5c549f64d4c390e0c87984c44a88d4abfe
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = b8a6cca517e1cccbdb2c59cf67a6d2481cdfebd4
 SHA1 (patch-src_mesa_main_context.c) = 30c3796865372aa16297c2aaa647ddb49958fa64
