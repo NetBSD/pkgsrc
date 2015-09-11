@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2015/06/07 15:48:12 tnn Exp $
+# $NetBSD: Makefile,v 1.105 2015/09/11 00:03:36 tnn Exp $
 
-DISTNAME=	mesa-10.5.7
+DISTNAME=	mesa-10.6.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
@@ -26,7 +26,6 @@ PKGCONFIG_OVERRIDE+=	src/gallium/targets/xa/xatracker.pc.in
 PKGCONFIG_OVERRIDE+=	src/gbm/main/gbm.pc.in
 PKGCONFIG_OVERRIDE+=	src/mapi/es1api/glesv1_cm.pc.in
 PKGCONFIG_OVERRIDE+=	src/mapi/es2api/glesv2.pc.in
-PKGCONFIG_OVERRIDE+=	src/mapi/vgapi/vg.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
@@ -44,6 +43,13 @@ SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.in
 SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_shared.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_static.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_shared.la,libglapi.la,g'
+
+# Replace /etc/drirc with ${PREFIX}/etc/drirc
+SUBST_CLASSES+=			drirc
+SUBST_STAGE.drirc=		post-patch
+SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
+SUBST_FILES.drirc+=		src/mesa/drivers/dri/common/xmlconfig.c
+SUBST_SED.drirc+=		 -e 's|/etc/|${PREFIX}/etc/|g'
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -76,6 +82,11 @@ BUILDLINK_TRANSFORM+=   l:pthread:pthread:c
 CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
 CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
 .endif
+
+INSTALLATION_DIRS+=	share/examples/MesaLib
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/mesa/drivers/dri/common/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
