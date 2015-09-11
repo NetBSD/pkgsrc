@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2015/04/18 20:11:35 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2015/09/11 20:32:33 tnn Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
-PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/7f6a55544bb3/security/nss/lib/ckfw/builtins/certdata.txt
+MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/2f1a37cb43ac/security/nss/lib/ckfw/builtins/certdata.txt
 DISTFILES=	${CERTDATA}
 EXTRACT_SUFX=	# empty
 
@@ -14,7 +13,7 @@ LICENSE=	mpl-2.0
 
 USE_TOOLS=	awk:run echo:run expr:run ln:run ls:run openssl:run rm:run mkdir:run
 
-CERTDATA_DATE=	20141117
+CERTDATA_DATE=	20150804
 CERTDATA=	certdata-${CERTDATA_DATE}.txt
 
 WRKSRC=		${WRKDIR}
