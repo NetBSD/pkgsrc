@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/09/11 12:35:19 wiz Exp $
+
+SHA1 (schismtracker-20150911005204.tgz) = 08d7efeb17341125f0825c16f2879eb278a7db98
+RMD160 (schismtracker-20150911005204.tgz) = 5c74cc835911f6c7fe3dc641dbb034211bf39cdf
+Size (schismtracker-20150911005204.tgz) = 1066449 bytes
+SHA1 (patch-Makefile.am) = 1b3cd9c9bef15fe8cc8da0bfccf904bd35da188b
+SHA1 (patch-configure.ac) = a0421d4cf44f0a53b6fecf1c7476e3f66b4e188c
