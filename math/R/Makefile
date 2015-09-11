@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2015/08/14 12:40:19 wen Exp $
+# $NetBSD: Makefile,v 1.162 2015/09/11 13:16:16 jperkin Exp $
 
 DISTNAME=		R-3.2.2
 CATEGORIES=		math
@@ -137,6 +137,24 @@ BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
 CONFIGURE_ARGS+=	--enable-mbcs=no
+.endif
+
+# Fix library names.  Relies on build system using -headerpad_max_install_names.
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -id ${PREFIX}/lib/R/lib/libR.dylib		\
+		${DESTDIR}${PREFIX}/lib/R/lib/libR.dylib
+	install_name_tool -id ${PREFIX}/lib/R/lib/libRlapack.dylib	\
+		${DESTDIR}${PREFIX}/lib/R/lib/libRlapack.dylib
+	${FIND} ${DESTDIR}${PREFIX} -name "*.so" | while read lib; do	\
+		libname=`basename $${lib}`;				\
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;	\
+		install_name_tool -id $${libdir}/$${libname}		\
+			-change libR.dylib				\
+			${PREFIX}/lib/R/lib/libR.dylib $${lib};		\
+	done
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
