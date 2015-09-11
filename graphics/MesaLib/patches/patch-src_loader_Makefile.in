@@ -1,0 +1,24 @@
+$NetBSD: patch-src_loader_Makefile.in,v 1.1 2015/09/11 00:03:36 tnn Exp $
+
+FreeBSD & DragonFly support for libdevq.
+
+--- src/loader/Makefile.in.orig	2015-08-12 00:50:19.110973000 +0000
++++ src/loader/Makefile.in
+@@ -319,6 +319,8 @@ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+ LIBCLC_INCLUDEDIR = @LIBCLC_INCLUDEDIR@
+ LIBCLC_LIBEXECDIR = @LIBCLC_LIBEXECDIR@
++LIBDEVQ_CFLAGS = @LIBDEVQ_CFLAGS@
++LIBDEVQ_LIBS = @LIBDEVQ_LIBS@
+ LIBDRM_CFLAGS = @LIBDRM_CFLAGS@
+ LIBDRM_LIBS = @LIBDRM_LIBS@
+ LIBOBJS = @LIBOBJS@
+@@ -508,7 +510,7 @@ EXTRA_DIST = SConscript
+ noinst_LTLIBRARIES = libloader.la
+ libloader_la_CPPFLAGS = $(DEFINES) -I$(top_srcdir)/include \
+ 	-I$(top_srcdir)/src $(VISIBILITY_CFLAGS) $(LIBUDEV_CFLAGS) \
+-	$(am__append_1) $(am__append_3) $(am__append_4)
++	$(LIBDEVQ_CFLAGS) $(am__append_1) $(am__append_3) $(am__append_4)
+ libloader_la_SOURCES = $(LOADER_C_FILES)
+ libloader_la_LIBADD = $(am__append_2) $(am__append_5)
+ all: all-am

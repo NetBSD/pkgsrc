@@ -1,23 +1,21 @@
-$NetBSD: patch-src_gallium_auxiliary_util_u__math.h,v 1.2 2015/05/11 21:33:58 tnn Exp $
+$NetBSD: patch-src_gallium_auxiliary_util_u__math.h,v 1.3 2015/09/11 00:03:36 tnn Exp $
 
 The C99 "restrict" keyword is not valid in C++, but most compilers will
 understand __restrict.
 
---- src/gallium/auxiliary/util/u_math.h.orig   2015-03-28 18:20:39.000000000 +0000
+--- src/gallium/auxiliary/util/u_math.h.orig	2015-09-10 17:40:30.000000000 +0000
 +++ src/gallium/auxiliary/util/u_math.h
-@@ -528,7 +528,10 @@ unsigned ffs( unsigned u )
- 
-    return i;
- }
--#elif defined(__MINGW32__) || defined(PIPE_OS_ANDROID)
+@@ -401,6 +401,9 @@ unsigned ffs( unsigned u )
+ #if defined(__MINGW32__) || defined(PIPE_OS_ANDROID) || \
+     defined(HAVE___BUILTIN_FFSLL)
+ #define ffsll __builtin_ffsll
 +#elif defined(__NetBSD__)
 +#include <sys/bitops.h>
 +#define ffsll ffs64
-+#elif defined(__GNUC__)
- #define ffs __builtin_ffs
- #define ffsll __builtin_ffsll
  #endif
-@@ -821,6 +824,11 @@ util_bswap16(uint16_t n)
+ 
+ #endif /* FFSLL_DEFINED */
+@@ -690,6 +693,11 @@ util_bswap16(uint16_t n)
            (n << 8);
  }
  
@@ -29,7 +27,7 @@ understand __restrict.
  static INLINE void*
  util_memcpy_cpu_to_le32(void * restrict dest, const void * restrict src, size_t n)
  {
-@@ -839,6 +847,11 @@ util_memcpy_cpu_to_le32(void * restrict 
+@@ -708,6 +716,11 @@ util_memcpy_cpu_to_le32(void * restrict 
  #endif
  }
  

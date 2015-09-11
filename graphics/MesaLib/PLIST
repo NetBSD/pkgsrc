@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/04/25 11:19:18 tnn Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/09/11 00:03:36 tnn Exp $
 include/EGL/egl.h
 include/EGL/eglext.h
 include/EGL/eglextchromium.h
@@ -14,7 +14,6 @@ include/GL/glxext.h
 ${PLIST.dri}include/GL/internal/dri_interface.h
 include/GL/osmesa.h
 include/GL/wglext.h
-include/GL/wmesa.h
 include/KHR/khrplatform.h
 ${PLIST.dri}include/gbm.h
 ${PLIST.i915_dri}lib/dri/i915_dri.so
@@ -38,3 +37,4 @@ ${PLIST.dri}lib/pkgconfig/dri.pc
 lib/pkgconfig/egl.pc
 ${PLIST.dri}lib/pkgconfig/gbm.pc
 lib/pkgconfig/gl.pc
+share/examples/MesaLib/drirc
