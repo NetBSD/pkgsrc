@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/09/11 15:08:39 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/11 18:01:02 bouyer Exp $
 
 DISTNAME=	XML-TokeParser-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-TokeParser/TokeParser.pm
 COMMENT=	Simplified interface to XML::Parser
 
-DEPENDS+=	p5-XML-Parser:../../textproc/p5-XML-Parser
+DEPENDS+=	p5-XML-Parser>=2.44:../../textproc/p5-XML-Parser
 
 PERL5_PACKLIST= auto/XML/TokeParser/.packlist
 
