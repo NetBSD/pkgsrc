@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2015/09/01 13:34:47 kim Exp $
+# $NetBSD: Makefile,v 1.96 2015/09/11 01:24:06 kim Exp $
 
 DISTNAME=	screen-4.3.1
 #PKGREVISION=	0
@@ -41,7 +41,7 @@ SUBST_STAGE.paths=	post-patch
 PLIST_VARS+=		terminfo
 
 .if ${OPSYS} == "SunOS"
-CPPFLAGS+=	-D_XOPEN_SOURCE=500
+CPPFLAGS+=	-D_XOPEN_SOURCE=500 -D__EXTENSIONS__
 .  if ${CURSES_DEFAULT} == "curses"
 INSTALLATION_DIRS+=	share/lib/terminfo
 PLIST.terminfo=		yes
