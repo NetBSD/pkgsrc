@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/09/11 15:16:27 bouyer Exp $
+# $NetBSD: Makefile,v 1.57 2015/09/11 18:45:01 bouyer Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -39,6 +39,7 @@ SUBDIR+=	osm-gps-map
 SUBDIR+=	osm2pgsql
 SUBDIR+=	p5-Geo-Coordinates-UTM
 SUBDIR+=	p5-Geo-Distance
+SUBDIR+=	p5-Geo-Ellipsoid
 SUBDIR+=	p5-Geo-Gpx
 SUBDIR+=	p5-Geo-Mercator
 SUBDIR+=	p5-Geo-ShapeFile
