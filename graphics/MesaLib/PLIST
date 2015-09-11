@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.28 2015/09/11 00:03:36 tnn Exp $
-include/EGL/egl.h
-include/EGL/eglext.h
-include/EGL/eglextchromium.h
-include/EGL/eglmesaext.h
-include/EGL/eglplatform.h
+@comment $NetBSD: PLIST,v 1.29 2015/09/11 15:30:35 tnn Exp $
+${PLIST.dri}include/EGL/egl.h
+${PLIST.dri}include/EGL/eglext.h
+${PLIST.dri}include/EGL/eglextchromium.h
+${PLIST.dri}include/EGL/eglmesaext.h
+${PLIST.dri}include/EGL/eglplatform.h
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glcorearb.h
@@ -14,7 +14,7 @@ include/GL/glxext.h
 ${PLIST.dri}include/GL/internal/dri_interface.h
 include/GL/osmesa.h
 include/GL/wglext.h
-include/KHR/khrplatform.h
+${PLIST.dri}include/KHR/khrplatform.h
 ${PLIST.dri}include/gbm.h
 ${PLIST.i915_dri}lib/dri/i915_dri.so
 ${PLIST.i965_dri}lib/dri/i965_dri.so
@@ -29,12 +29,12 @@ ${PLIST.radeon_dri}lib/dri/radeon_dri.so
 ${PLIST.radeonsi}lib/dri/radeonsi_dri.so
 ${PLIST.swrast_dri}lib/dri/swrast_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
-lib/libEGL.la
+${PLIST.dri}lib/libEGL.la
 lib/libGL.la
 ${PLIST.dri}lib/libgbm.la
 ${PLIST.dri}lib/libglapi.la
 ${PLIST.dri}lib/pkgconfig/dri.pc
-lib/pkgconfig/egl.pc
+${PLIST.dri}lib/pkgconfig/egl.pc
 ${PLIST.dri}lib/pkgconfig/gbm.pc
 lib/pkgconfig/gl.pc
 share/examples/MesaLib/drirc
