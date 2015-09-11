@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2015/09/11 06:30:55 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2015/09/11 12:38:27 tnn Exp $
 
 DISTNAME=	mesa-10.6.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -75,7 +75,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 # which breaks the build with -Wl,--no-undefined.
 # So we piggy back on -lpthread and inject -lc after it.
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
-BUILDLINK_TRANSFORM+=   l:pthread:pthread:c
+BUILDLINK_TRANSFORM+=   l:pthread:pthread:c l:m:m:c
 .endif
 
 # Handle platforms without exp2
