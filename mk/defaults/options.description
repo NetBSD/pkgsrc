@@ -423,8 +423,6 @@ libvpx			Enable libvpx support.
 libwildmidi		Enable MIDI support using libwildmidi.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
-liferea-gtkhtml		Use libgtkhtml2 to render HTML.
-liferea-mozilla		Use xulrunner to render HTML.
 lilypond		Enable LilyPond music typesetter support.
 links			Use and enable support for the links browser.
 lirc			Enable LIRC receiving and sending IR signals support.
