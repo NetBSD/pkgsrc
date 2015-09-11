@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3872 2015/09/11 18:46:00 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.3873 2015/09/11 20:34:41 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6848,3 +6848,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/p5-XML-Descent version 1.04 [bouyer 2015-09-11]
 	Added geography/p5-Geo-Gpx version 0.26 [bouyer 2015-09-11]
 	Added geography/p5-Geo-Ellipsoid version 1.12 [bouyer 2015-09-11]
+	Updated security/mozilla-rootcerts to 1.0.20150804 [tnn 2015-09-11]
