@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3871 2015/09/11 15:17:13 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.3872 2015/09/11 18:46:00 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6847,3 +6847,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/p5-XML-TokeParser version 0.05 [bouyer 2015-09-11]
 	Added textproc/p5-XML-Descent version 1.04 [bouyer 2015-09-11]
 	Added geography/p5-Geo-Gpx version 0.26 [bouyer 2015-09-11]
+	Added geography/p5-Geo-Ellipsoid version 1.12 [bouyer 2015-09-11]
