@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.6 2015/09/10 19:52:57 jperkin Exp $
+# $NetBSD: gfortran.mk,v 1.7 2015/09/11 15:23:21 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -90,8 +90,7 @@ PREPEND_PATH+=	${_GFORTRAN_DIR}/bin
 .  endif
 
 # Add the dependency on gfortran.
-_GCC_REQD=		4.8
-_USE_GCC_SHLIB?=	yes
+BUILDLINK_DEPMETHOD.gcc48=	full
 .  include "../../lang/gcc48/buildlink3.mk"
 
 .  if defined(GFORTRAN_DIR) && !empty(GFORTRAN_DIR)
