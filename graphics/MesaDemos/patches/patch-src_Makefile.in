@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/09/11 00:10:43 tnn Exp $
+
+egl subdir doesn't build with current Mesa release.
+
+--- src/Makefile.in.orig	2014-07-05 09:13:27.000000000 +0000
++++ src/Makefile.in
+@@ -354,7 +354,6 @@ SUBDIRS = \
+ 	util \
+ 	data \
+ 	demos \
+-	egl \
+ 	fp \
+ 	fpglsl \
+ 	glsl \
