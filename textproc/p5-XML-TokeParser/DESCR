@@ -1,0 +1,13 @@
+XML::TokeParser provides a procedural ("pull mode") interface to XML::Parser
+in much the same way that Gisle Aas' HTML::TokeParser provides a procedural
+interface to HTML::Parser. XML::TokeParser splits its XML input up into
+"tokens," each corresponding to an XML::Parser event.
+
+A token is a bless'd reference to an array whose first element is an
+event-type string and whose last element is the literal text of the
+XML input that generated the event, with intermediate elements varying
+according to the event type.
+
+Each token is an object of type XML::TokeParser::Token. Read
+"XML::TokeParser::Token" to learn what methods are available for
+inspecting the token, and retrieving data from it.
