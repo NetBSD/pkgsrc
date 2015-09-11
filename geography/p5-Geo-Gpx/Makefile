@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/09/11 15:14:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/11 18:01:02 bouyer Exp $
 #
 
 DISTNAME=	Geo-Gpx-0.26
@@ -15,9 +15,9 @@ PERL5_PACKLIST=	auto/Geo/Gpx/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
 MAKE_PARAMS+=	--skipdeps
 
-DEPENDS+=	p5-DateTime-Format-ISO8601:../../time/p5-DateTime-Format-ISO8601
-DEPENDS+=	p5-HTML-Parser:../../www/p5-HTML-Parser
-DEPENDS+=	p5-XML-Descent:../../textproc/p5-XML-Descent
+DEPENDS+=	p5-DateTime-Format-ISO8601>=0.0800:../../time/p5-DateTime-Format-ISO8601
+DEPENDS+=	p5-HTML-Parser>=3.71:../../www/p5-HTML-Parser
+DEPENDS+=	p5-XML-Descent>=1.04:../../textproc/p5-XML-Descent
 
 
 .include "../../lang/perl5/module.mk"
