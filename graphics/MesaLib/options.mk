@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2015/05/28 21:09:07 tnn Exp $
+# $NetBSD: options.mk,v 1.33 2015/09/11 00:03:36 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -114,6 +114,7 @@ PLIST.radeonsi=		yes
 GALLIUM_DRIVERS+=	radeonsi
 CONFIGURE_ARGS+=	--enable-gallium-llvm
 CONFIGURE_ARGS+=	--enable-r600-llvm-compiler
+.include "../../devel/libelf/buildlink3.mk"
 .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else # !llvm

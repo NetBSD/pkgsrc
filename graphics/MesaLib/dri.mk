@@ -1,4 +1,4 @@
-# $NetBSD: dri.mk,v 1.11 2015/06/22 22:45:06 jperkin Exp $
+# $NetBSD: dri.mk,v 1.12 2015/09/11 00:03:36 tnn Exp $
 #
 # Currently, this is for convenience only.
 #
@@ -34,5 +34,9 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.9.3
 .    include "../../x11/dri3proto/buildlink3.mk"
 .    include "../../x11/presentproto/buildlink3.mk"
 .    include "../../x11/libxshmfence/buildlink3.mk"
+.  endif
+.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.    include "../../x11/libxshmfence/buildlink3.mk"
+.    include "../../devel/libdevq/buildlink3.mk"
 .  endif
 .endif
