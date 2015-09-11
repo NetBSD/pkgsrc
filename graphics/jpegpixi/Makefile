@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/11 23:00:39 gdt Exp $
 
 DISTNAME=		jpegpixi-1.1.1
 PKGREVISION=		3
 CATEGORIES=		graphics
-MASTER_SITES=		http://www.zero-based.org/software/jpegpixi/
+# upstream is nonfunctional
+MASTER_SITES=		${MASTER_SITE_BACKUP}
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.zero-based.org/software/jpegpixi/
