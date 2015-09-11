@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2015/09/04 08:41:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2015/09/11 21:22:25 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1028,6 +1028,7 @@ lib/calibre/calibre/gui2/tweak_book/__init__.py
 lib/calibre/calibre/gui2/tweak_book/boss.py
 lib/calibre/calibre/gui2/tweak_book/char_select.py
 lib/calibre/calibre/gui2/tweak_book/check.py
+lib/calibre/calibre/gui2/tweak_book/check_links.py
 lib/calibre/calibre/gui2/tweak_book/completion/__init__.py
 lib/calibre/calibre/gui2/tweak_book/completion/basic.py
 lib/calibre/calibre/gui2/tweak_book/completion/popup.py
@@ -2508,6 +2509,7 @@ share/calibre/recipes/kahokushinpo.recipe
 share/calibre/recipes/kamerabild.recipe
 share/calibre/recipes/kamikaze.recipe
 share/calibre/recipes/karlsruhe.recipe
+share/calibre/recipes/karsi_gazete.recipe
 share/calibre/recipes/kath_net.recipe
 share/calibre/recipes/kathemerini.recipe
 share/calibre/recipes/kellog_faculty.recipe
@@ -2732,10 +2734,8 @@ share/calibre/recipes/nation_ke.recipe
 share/calibre/recipes/national_geographic_de.recipe
 share/calibre/recipes/national_geographic_es.recipe
 share/calibre/recipes/national_geographic_it.recipe
-share/calibre/recipes/national_geographic_mag.recipe
 share/calibre/recipes/national_geographic_pl.recipe
 share/calibre/recipes/national_post.recipe
-share/calibre/recipes/nationalgeographic.recipe
 share/calibre/recipes/nationalgeographicjp.recipe
 share/calibre/recipes/nationalgeoro.recipe
 share/calibre/recipes/nationalreviewonline.recipe
