@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/09/08 11:57:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2015/09/11 16:23:03 jperkin Exp $
 
 DISTNAME=	wml-2.0.11
 PKGREVISION=	3
@@ -17,12 +17,12 @@ BUILD_DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=	automake
+USE_TOOLS+=	automake bash
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-perl=${PERL5:Q} \
 		--with-openworld \
 		--with-tidy=${LOCALBASE}/bin/tidy
-
+CONFIG_SHELL=	${TOOLS_PATH.bash}
 TEST_TARGET=	test
 
 PERL_ARCHNAME_cmd=	eval `${PERL5} -V:archname 2>/dev/null`; \
