@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2015/04/03 01:57:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/09/11 16:54:56 tnn Exp $
 bin/arbfplight
 bin/arbfslight
 bin/arbocclude
 bin/arbocclude2
 bin/array
 bin/bezier
-bin/bitmap
+bin/bitmap_mesademos
 bin/blinking-teapot
 bin/bounce
 bin/brick
@@ -77,11 +77,11 @@ bin/gltestperf
 bin/glthreads
 bin/glxcontexts
 bin/glxdemo
-bin/glxgears
+bin/glxgears_mesademos
 bin/glxgears_fbconfig
 bin/glxgears_pixmap
 bin/glxheads
-bin/glxinfo
+bin/glxinfo_mesademos
 bin/glxpbdemo
 bin/glxpixmap
 bin/glxsnoop
