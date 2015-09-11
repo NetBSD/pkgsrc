@@ -7,3 +7,5 @@ Pam_p11 implements two authentication modules:
 in OpenSSH ~/.ssh/authorized_keys file.
 * pam_p11_opensc authenticates the user against certificates found
 in ~/.eid/authorized_certificates.
+
+This project is no longer maintained upstream.
