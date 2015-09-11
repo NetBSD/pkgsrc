@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2015/09/11 00:03:36 tnn Exp $
+# $NetBSD: options.mk,v 1.34 2015/09/11 15:30:35 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -28,9 +28,17 @@ PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 
 .if !empty(PKG_OPTIONS:Mdri)
 
-# (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
-# /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model initial-exec and dlopen is not supported
+CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-egl
+
+# use Thread Local Storage in GLX where it works.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[789].*-*) || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
+# Not yet, needs more testing and xorg-server support.
+#CONFIGURE_ARGS+=	--enable-glx-tls
 CONFIGURE_ARGS+=	--disable-glx-tls
+.else
+CONFIGURE_ARGS+=	--disable-glx-tls
+.endif
 
 PLIST.dri=	yes
 
@@ -126,5 +134,6 @@ CONFIGURE_ARGS+=	--with-gallium-drivers=
 CONFIGURE_ARGS+=	--with-dri-drivers=
 CONFIGURE_ARGS+=	--disable-dri
 CONFIGURE_ARGS+=	--disable-dri3
+CONFIGURE_ARGS+=	--disable-egl
 CONFIGURE_ARGS+=	--enable-xlib-glx
 .endif
