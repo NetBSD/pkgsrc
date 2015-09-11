@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/09/11 15:08:39 bouyer Exp $
+
+SHA1 (XML-TokeParser-0.05.tar.gz) = d2267f1f416ecc96b67ad57c7748f29438d87bf3
+RMD160 (XML-TokeParser-0.05.tar.gz) = 1985724180a522ed5cbe05225c87a66e79077be5
+Size (XML-TokeParser-0.05.tar.gz) = 10989 bytes
