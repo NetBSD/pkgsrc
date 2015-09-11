@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2015/07/20 05:49:53 adam Exp $
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
 SHA1 (cfe-3.6.2.src.tar.xz) = 7ba809c9c17819a16b668640a642ed134d7052f0
 RMD160 (cfe-3.6.2.src.tar.xz) = 10d913b4d5317f8c2520e5fc6117df30937317a8
@@ -17,6 +17,4 @@ SHA1 (patch-ac) = 0f0cc98d443ec957fc5374fb491809d27e4f9d4e
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
 SHA1 (patch-include_llvm_Support_Host.h) = 545f9542cd2aaa6cea58d3653902b4e1a9e7189a
 SHA1 (patch-tools_clang_tools_scan-build_scan-build) = a671f1e513fb43ddc0e73751a78235ab39aeaf9d
-SHA1 (patch-tools_lli_Makefile) = 9801878144833b9c871677110183539cd0a08e9a
 SHA1 (patch-tools_llvm-shlib_Makefile) = 5cd529e824a935abfe91c4b820cfd9c318e03102
-SHA1 (patch-unittests_ExecutionEngine_MCJIT_Makefile) = 8243131319b77f025568592acf9436cf6fe5219c
