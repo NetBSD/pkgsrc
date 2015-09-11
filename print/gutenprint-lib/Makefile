@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/09/10 00:10:24 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2015/09/11 12:52:04 gdt Exp $
 
 VERSION=	5.2.10
 DISTNAME=	gutenprint-${VERSION}
@@ -95,6 +95,9 @@ CONFIGURE_ARGS+=	--without-readline
 
 # XXX Make command.types be a CONF_FILE
 
+# Tests fail unless the package is installed because they use
+# /usr/pkg/libexec/cups/filter/rastertogutenprint.5.2 rather than
+# the pre-installed version.  Reported upstream 20150910.
 TEST_TARGET=		check
 
 # A libintl is optional in gutenprint.
