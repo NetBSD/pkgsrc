@@ -1,0 +1,6 @@
+The conventional models for parsing XML are either DOM (a data structure
+representing the entire document tree is created) or SAX (callbacks are
+issued for each element in the XML).
+
+XML grammar is recursive - so it's nice to be able to write recursive
+parsers for it. XML::Descent allows such parsers to be created.
