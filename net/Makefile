@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1082 2015/08/28 11:12:15 wiz Exp $
+# $NetBSD: Makefile,v 1.1083 2015/09/12 22:54:29 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -282,6 +282,7 @@ SUBDIR+=	libpcap
 SUBDIR+=	libquvi
 SUBDIR+=	libquvi-scripts
 SUBDIR+=	libradius
+SUBDIR+=	librsync
 SUBDIR+=	libsoup
 SUBDIR+=	libsscript
 SUBDIR+=	libtorrent
