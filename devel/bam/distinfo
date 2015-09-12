@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/09/12 18:51:07 wiz Exp $
+
+SHA1 (bam-0.4.0.tar.gz) = c0f32ff9272d5552e02a9d68fbdd72106437ee69
+RMD160 (bam-0.4.0.tar.gz) = cbb8d56c891e650f0a14c9a55efc4e9cc96e0e28
+Size (bam-0.4.0.tar.gz) = 206780 bytes
+SHA1 (patch-make_unix.sh) = 0a0ab4a7bd904ffceb4a06109624071478e19017
+SHA1 (patch-src_platform.h) = 35e306fbd7ed9f20748491d4a0b9c5446a95eb67
