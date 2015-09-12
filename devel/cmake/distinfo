@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2015/08/20 11:35:33 ryoon Exp $
+$NetBSD: distinfo,v 1.76 2015/09/12 15:15:49 joerg Exp $
 
 SHA1 (cmake-3.3.1.tar.gz) = 799aff559e9f330fefc60e6509f1d025fc3d9c8c
 RMD160 (cmake-3.3.1.tar.gz) = 39f63aef3c9ba9711f736fd8e51972429ceca527
@@ -6,6 +6,10 @@ Size (cmake-3.3.1.tar.gz) = 6577869 bytes
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_Platform_SCO__SV.cmake) = 3ed230b3a06ea693812db8f57bc73aebec12b99f
 SHA1 (patch-Modules_Platform_SunOS.cmake) = 7a53ae3c902dd69ee22ef9fe0ae2a022d5284f16
+SHA1 (patch-Source_CursesDialog_cmCursesLongMessageForm.cxx) = 61a9df02d1d29ebfd10ebed61692ad4f7f9c8e0b
+SHA1 (patch-Source_CursesDialog_cmCursesMainForm.cxx) = 3645f58b2b0ce70ce1cfa4084b95e5b0bbecf411
+SHA1 (patch-Source_CursesDialog_cmCursesStringWidget.cxx) = 346171b148e673ef4d8467ca37579ba6c85db295
+SHA1 (patch-Source_CursesDialog_cmCursesWidget.cxx) = a6652e6466e66b89bb987620fe9f5b6f7bafc800
 SHA1 (patch-Source_cmELF.cxx) = 5eb9dc0b3567b5685596ddf0a03ca8e5c76e6f92
 SHA1 (patch-Source_kwsys_SystemInformation.cxx) = e259da70601cf1b4641f253de3d4f3aaec5e68f6
 SHA1 (patch-Source_kwsys_SystemTools.cxx) = 634348b9bc8ccf8c72f23837baa6ba0bcacf5961
