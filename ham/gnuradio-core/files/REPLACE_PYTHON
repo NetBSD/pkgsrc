@@ -556,6 +556,8 @@ REPLACE_PYTHON = \
 	docs/doxygen/other/doxypy.py \
 	docs/exploring-gnuradio/dial_tone.py \
 	docs/exploring-gnuradio/fm_demod.py \
+	gnuradio-runtime/python/gnuradio/ctrlport/gr-ctrlport-monitor \
+	gnuradio-runtime/python/gnuradio/ctrlport/gr-perf-monitorx \
 	gr-fcd/python/fcd/qa_fcd.py \
 	gr-fcd/python/fcd/__init__.py \
 	gr-noaa/python/noaa/qa_noaa.py \
