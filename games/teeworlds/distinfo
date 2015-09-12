@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/09/12 18:53:17 wiz Exp $
+
+SHA1 (teeworlds-0.6.3-src.tar.gz) = f2dea0d14c4a8c817c658bd75dbe175b37ed70bd
+RMD160 (teeworlds-0.6.3-src.tar.gz) = cf8c6ef7a9295cc2127b977e5f0e000d0759ec25
+Size (teeworlds-0.6.3-src.tar.gz) = 13101446 bytes
+SHA1 (patch-bam.lua) = 07a10ef28ec44c77797e983e7b59da6da3247feb
+SHA1 (patch-src_base_detect.h) = d9cc6e2ae0566b5c4f7790e3e7a0c6a4a8654516
+SHA1 (patch-src_engine_shared_storage.cpp) = f03bdf0eb8799f4cfc26036e2153358e17943bc7
