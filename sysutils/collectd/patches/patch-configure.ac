@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.6 2015/09/01 09:00:04 he Exp $
+$NetBSD: patch-configure.ac,v 1.7 2015/09/12 19:04:56 he Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -81,7 +81,15 @@ Also, the start of process support, but that's not yet finished.
  AC_CHECK_MEMBERS([struct udphdr.uh_dport, struct udphdr.uh_sport], [], [],
  [#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
-@@ -5244,6 +5291,14 @@ then
+@@ -5175,6 +5206,7 @@ plugin_load="no"
+ plugin_log_logstash="no"
+ plugin_memory="no"
+ plugin_multimeter="no"
++plugin_netstat_udp="no"
+ plugin_nfs="no"
+ plugin_numa="no"
+ plugin_perl="no"
+@@ -5244,6 +5276,15 @@ then
  	plugin_tcpconns="yes"
  fi
  
@@ -91,6 +99,7 @@ Also, the start of process support, but that's not yet finished.
 +	plugin_irq="yes"
 +	plugin_processes="yes"
 +	plugin_disk="yes"
++	plugin_netstat_udp="yes"
 +fi
 +
  # Mac OS X devices
@@ -108,3 +117,19 @@ Also, the start of process support, but that's not yet finished.
  if test "x$with_kvm_openfiles$with_kvm_nlist" = "xyesyes"
  then
  	plugin_tcpconns="yes"
+@@ -5585,6 +5631,7 @@ AC_PLUGIN([multimeter],  [$plugin_multim
+ AC_PLUGIN([mysql],       [$with_libmysql],     [MySQL statistics])
+ AC_PLUGIN([netapp],      [$with_libnetapp],    [NetApp plugin])
+ AC_PLUGIN([netlink],     [$with_libmnl],       [Enhanced Linux network statistics])
++AC_PLUGIN([netstat_udp], [$plugin_netstat_udp], [UDP network statistics])
+ AC_PLUGIN([network],     [yes],                [Network communication plugin])
+ AC_PLUGIN([nfs],         [$plugin_nfs],        [NFS statistics])
+ AC_PLUGIN([nginx],       [$with_libcurl],      [nginx statistics])
+@@ -5963,6 +6010,7 @@ Configuration:
+     mysql . . . . . . . . $enable_mysql
+     netapp  . . . . . . . $enable_netapp
+     netlink . . . . . . . $enable_netlink
++    netstat_udp . . . . . $enable_netstat_udp
+     network . . . . . . . $enable_network
+     nfs . . . . . . . . . $enable_nfs
+     nginx . . . . . . . . $enable_nginx
