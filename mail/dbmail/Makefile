@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2015/08/30 17:52:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/09/12 14:23:59 tnn Exp $
 
 DISTNAME=	dbmail-3.2.3
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pjstevns/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +11,7 @@ HOMEPAGE=	http://www.dbmail.org/
 COMMENT=	Store and retrieve mail messages in a database
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config pax
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -43,6 +44,9 @@ INSTALLATION_DIRS=	lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${DESTDIR}${EGDIR}
+.for f in mysql postgresql sqlite
+	cd ${WRKSRC}/sql && pax -rw ${f} ${DESTDIR}${DATADIR}/sql/.
+.endfor
 
 .include "options.mk"
 
