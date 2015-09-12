@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3884 2015/09/12 22:55:31 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.3885 2015/09/12 23:38:49 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6861,3 +6861,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/collectd to 5.5.0nb8 [he 2015-09-12]
 	Added net/librsync version 1.0.1 [joerg 2015-09-12]
 	Added sysutils/burp version 1.4.40 [joerg 2015-09-12]
+	Updated games/openttd to 1.5.2 [tnn 2015-09-12]
