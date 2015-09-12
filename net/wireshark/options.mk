@@ -1,19 +1,21 @@
-# $NetBSD: options.mk,v 1.8 2015/05/07 21:40:43 roy Exp $
+# $NetBSD: options.mk,v 1.9 2015/09/12 19:03:59 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=	gtk2 lua
-PKG_SUGGESTED_OPTIONS=	gtk2 lua
-
+PKG_SUPPORTED_OPTIONS=	gtk3 lua
+PKG_SUGGESTED_OPTIONS=	gtk3 lua
+PKG_OPTIONS_LEGACY_OPTS+=	gtk2:gtk3
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk2
+PLIST_VARS+=		gtk3
 PLIST_VARS+=		icons
 
-.if !empty(PKG_OPTIONS:Mgtk2)
+.if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-wireshark
-PLIST.gtk2=		yes
+CONFIGURE_ARGS+=	--with-gtk3
+CONFIGURE_ARGS+=	--without-qt # XXX make this an option
+PLIST.gtk3=		yes
 POST_INSTALL_TARGETS+=	install-gtk-desktop
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 
 install-gtk-desktop:
 	${INSTALL_DATA} ${WRKSRC}/wireshark.desktop \
@@ -25,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-wireshark
 
 # We might install the qt front end one day as well,
 # so have a generic icon target
-.if !empty(PKG_OPTIONS:Mgtk2)
+.if !empty(PKG_OPTIONS:Mgtk3)
 PLIST.icons=		yes
 POST_INSTALL_TARGETS+=	install-icons
 INSTALLATION_DIRS+=	share/applications
