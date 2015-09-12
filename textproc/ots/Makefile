@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/31 12:16:52 nros Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/12 16:55:02 joerg Exp $
 
 DISTNAME=	ots-0.5.0
 CATEGORIES=	textproc
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	libots-1.pc.in
