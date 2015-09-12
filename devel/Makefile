@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2143 2015/09/09 23:04:59 tnn Exp $
+# $NetBSD: Makefile,v 1.2144 2015/09/12 18:51:43 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -69,6 +69,7 @@ SUBDIR+=	automake14
 SUBDIR+=	automoc4
 SUBDIR+=	avl
 SUBDIR+=	avltree
+SUBDIR+=	bam
 SUBDIR+=	bcc
 SUBDIR+=	bglibs
 SUBDIR+=	bin86
