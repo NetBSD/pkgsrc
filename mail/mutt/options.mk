@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2015/09/03 21:04:34 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2015/09/12 15:25:53 joerg Exp $
 
 # Global and legacy options
 
@@ -120,7 +120,9 @@ CONFIGURE_ARGS+=	--disable-hcache
 ###
 ### Compressed mail boxes
 ###
+PLIST_VARS+=		compressed_mbox
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
+PLIST.compressed_mbox=	yes
 PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
 PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
 PATCH_DIST_STRIP=	-p1
