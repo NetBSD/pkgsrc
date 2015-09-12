@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3875 2015/09/12 02:21:28 agc Exp $
+$NetBSD: CHANGES-2015,v 1.3876 2015/09/12 07:20:11 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6852,3 +6852,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.38.0 [wiz 2015-09-11]
 	Updated security/netpgpverify to 20150911 [agc 2015-09-11]
 	Updated security/libnetpgpverify to 20150911 [agc 2015-09-11]
+	Updated net/mikutter to 3.2.7 [tsutsui 2015-09-12]
