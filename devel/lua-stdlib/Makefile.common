@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2012/12/02 09:26:08 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/09/12 20:03:00 tnn Exp $
 # used by devel/lua-stdlib-doc/Makefile
 # used by devel/lua-stdlib/Makefile
 
 DISTNAME=		stdlib-28
 PKGNAME=		lua-${DISTNAME}
 CATEGORIES=		devel
-MASTER_SITES=		http://cloud.github.com/downloads/rrthomas/lua-stdlib/
+MASTER_SITES=		https://cloud.github.com/downloads/rrthomas/lua-stdlib/
 EXTRACT_SUFX=		.zip
 
 HOMEPAGE=		https://github.com/rrthomas/lua-stdlib

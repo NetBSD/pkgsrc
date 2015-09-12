@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:45 asau Exp $
+# $NetBSD: Makefile,v 1.9 2015/09/12 20:03:01 tnn Exp $
 #
 
 PECL_DISTNAME=	php-${MODNAME}-${PECL_VERSION}
@@ -6,7 +6,7 @@ MODNAME=	mecab
 PECL_VERSION=	0.5.0
 PECL_LEGACY_VERSION_SCHEME=	yes
 CATEGORIES=	textproc japanese
-MASTER_SITES=	http://cloud.github.com/downloads/rsky/php-mecab/
+MASTER_SITES=	https://cloud.github.com/downloads/rsky/php-mecab/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	taca@NetBSD.org
