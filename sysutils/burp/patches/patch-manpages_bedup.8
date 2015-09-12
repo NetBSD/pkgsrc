@@ -1,0 +1,22 @@
+$NetBSD: patch-manpages_bedup.8,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- manpages/bedup.8.orig	2015-09-12 22:49:17.926333040 +0000
++++ manpages/bedup.8
+@@ -16,7 +16,7 @@ A file deduplication program with additi
+ .SH OPTIONS
+ .TP
+ \fB\-c\fR \fBpath\fR
+-Path to config file (default: /etc/burp/burp.conf).
++Path to config file (default: @PKG_SYSCONFDIR@/burp.conf).
+ .TP
+ \fB\-g\fR \fB<list of group names>\fR
+ Only run on the directories of clients that are in one of the groups specified. The list is comma-separated. To put a client in a group, use the 'dedup_group' option in the client configuration file on the server.
+@@ -42,7 +42,7 @@ Print duplicate paths. Useful if you wan
+ \fB\-V\fR \fB\fR
+ Print version and exit.\fR
+ .TP
+-By default, bedup will read /etc/burp/burp.conf and deduplicate client storage directories using special knowledge of the structure.\fR
++By default, bedup will read @PKG_SYSCONFDIR@/burp.conf and deduplicate client storage directories using special knowledge of the structure.\fR
+ .TP
+ With '\-n', this knowledge is turned off and you have to specify the directories to deduplicate on the command line. Running with '\-n' is therefore dangerous if you are deduplicating burp storage directories.
+ 

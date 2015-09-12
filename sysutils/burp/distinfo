@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+SHA1 (burp-1.4.40.tar.bz2) = b06dbe9d1440b9e7915d35ad0c23b9d120fec10e
+RMD160 (burp-1.4.40.tar.bz2) = 3ba2a60605562bbff7bacc600ee511c3ce020995
+Size (burp-1.4.40.tar.bz2) = 712937 bytes
+SHA1 (patch-Makefile.in) = 3df0458b1fc50cc03d8f69a864830ab52e9d0f8d
+SHA1 (patch-configs_certs_CA_CA.cnf) = e58da075d16ecd16454b8b08dd6070101fa24475
+SHA1 (patch-configs_certs_CA_burp__ca) = cdcb697e0a40c612ef3881a0abdcbce89aa78980
+SHA1 (patch-configs_client_burp.conf) = b61837e0a4c358a12060ebb6b4a42e26a9667d0d
+SHA1 (patch-configs_server_burp.conf) = bf5a41c09117519b3b198ca1a13951a552a100c1
+SHA1 (patch-configs_server_summary__script) = 068cec66b0634f0746f94891e1390097ec0ef96c
+SHA1 (patch-manpages_Makefile.in) = 710bf51bd43c0ecbe8987a843b27fd0e460342f5
+SHA1 (patch-manpages_bedup.8) = 5e1a2e3c42118d98c9b66a0bc5cafb2eb9c09f11
+SHA1 (patch-manpages_burp.8) = 81879e11cf917c36467513aeb440d0ab2dbad142
+SHA1 (patch-manpages_burp__ca.8) = f9ac9ffe1f67df040c939bb1afcf614869695034
