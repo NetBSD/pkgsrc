@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/08/29 23:53:44 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/12 16:50:43 joerg Exp $
 
 DISTNAME=	bulk-small-20140101
 PKGREVISION=	2
@@ -63,7 +63,7 @@ BUILD_DEPENDS+=	emacs22>=22<23:../../editors/emacs22
 BUILD_DEPENDS+=	nano-[0-9]*:../../editors/nano
 BUILD_DEPENDS+=	vim-[0-9]*:../../editors/vim
 BUILD_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
-BUILD_DEPENDS+=	mutt>=1.5:../../mail/mutt-devel
+BUILD_DEPENDS+=	mutt>=1.5:../../mail/mutt
 BUILD_DEPENDS+=	procmail-[0-9]*:../../mail/procmail
 BUILD_DEPENDS+=	screen-[0-9]*:../../misc/screen
 BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
