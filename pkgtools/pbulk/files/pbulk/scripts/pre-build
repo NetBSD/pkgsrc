@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.13 2015/09/08 17:33:26 joerg Exp $
+# $NetBSD: pre-build,v 1.14 2015/09/12 23:04:30 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -69,7 +69,7 @@ if [ -d "${bulklog}/meta" ]; then
 		if [ -d "${bulklog}.old" ]; then
 			rm -rf "${bulklog}.old"/* || true
 			find "${bulklog}" -maxdepth 1 -mindepth 1 ! -name meta -exec rm -rf {} \; || true
-			cp -r "${bulklog}/." "${bulklog}.old/"
+			cp -pr "${bulklog}/." "${bulklog}.old/"
 			rm -rf "${bulklog}"/* || true
 		else
 			mv "${bulklog}" "${bulklog}.old"
