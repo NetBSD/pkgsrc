@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/09/12 18:51:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/12 20:03:01 tnn Exp $
 
-# The upstream distfile would be
-# http://github.com/downloads/matricks/bam/bam-0.4.0.tar.gz
-# But url2pkg rejects it, and pkgsrc cannot fetch it either
-# for reasons yet to be discovered.  Hence, the file is mirrored.
 DISTNAME=	bam-0.4.0
 CATEGORIES=	devel
-MASTER_SITES=	http://penenen.de/
+MASTER_SITES=	https://cloud.github.com/downloads/matricks/bam/
+MASTER_SITES+=	http://penenen.de/
+#enable when updating next time
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	fstd.lkml@gmail.com
 HOMEPAGE=	http://matricks.github.io/bam/
