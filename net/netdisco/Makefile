@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/09/09 08:35:51 hauke Exp $
+# $NetBSD: Makefile,v 1.37 2015/09/12 23:00:08 joerg Exp $
 
 DISTNAME=		netdisco-${PKGVERSION}_with_mibs
 PKGNAME=		netdisco-${PKGVERSION}
@@ -120,7 +120,7 @@ RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
 .include "../../mk/apache.mk"
 
-.if PKG_APACHE != apache22
+.if ${PKG_APACHE} != "apache22"
 SUBST_STAGE.apachevers=		pre-configure
 SUBST_FILES.apachevers=		html/admin_user.html html/change_pw.html html/login.html
 SUBST_FILES.apachevers+=	html/logout.html html/portcontrol.html
