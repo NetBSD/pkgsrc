@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2015/04/19 19:36:11 wiz Exp $
+# $NetBSD: Makefile,v 1.383 2015/09/12 18:55:56 wiz Exp $
 #
 
 COMMENT=	Games
@@ -317,6 +317,7 @@ SUBDIR+=	supertuxkart
 SUBDIR+=	svb
 SUBDIR+=	tads
 SUBDIR+=	tanked
+SUBDIR+=	teeworlds
 SUBDIR+=	teg
 SUBDIR+=	tetrinetx
 SUBDIR+=	thew
