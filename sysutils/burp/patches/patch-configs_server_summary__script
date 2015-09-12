@@ -1,0 +1,11 @@
+$NetBSD: patch-configs_server_summary__script,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- configs/server/summary_script.orig	2015-05-12 10:52:36.000000000 +0000
++++ configs/server/summary_script
+@@ -8,5 +8,5 @@ fi
+ (echo "To: $2"
+  echo "From: burp"
+  echo "Subject: $3"
+- /usr/sbin/burp -c "$1" -a S
++ @SBINDIR@/burp -c "$1" -a S
+  echo) | /usr/sbin/sendmail -t
