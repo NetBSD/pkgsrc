@@ -1,6 +1,7 @@
-$NetBSD: patch-Source_CursesDialog_cmCursesMainForm.cxx,v 1.1 2015/09/12 15:15:49 joerg Exp $
+$NetBSD: patch-Source_CursesDialog_cmCursesMainForm.cxx,v 1.2 2015/09/12 16:46:11 wiz Exp $
 
 printw takes a format string.
+http://public.kitware.com/Bug/view.php?id=15738
 
 --- Source/CursesDialog/cmCursesMainForm.cxx.orig	2015-09-07 09:50:58.000000000 +0000
 +++ Source/CursesDialog/cmCursesMainForm.cxx
