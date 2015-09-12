@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/04/29 07:57:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2015/09/12 16:47:24 joerg Exp $
 
 BUILDLINK_TREE+=	poppler
 
 .if !defined(POPPLER_BUILDLINK3_MK)
 POPPLER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.5.1
-BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=0.16.7nb8
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.5.1<0.34
+BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=0.16.7nb8<0.34
 BUILDLINK_PKGSRCDIR.poppler?=	../../print/poppler016
 
 pkgbase := poppler
