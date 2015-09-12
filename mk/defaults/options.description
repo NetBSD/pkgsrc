@@ -427,6 +427,7 @@ lilypond		Enable LilyPond music typesetter support.
 links			Use and enable support for the links browser.
 lirc			Enable LIRC receiving and sending IR signals support.
 live			Enable live555 support.
+llvm			Enable run time generation with Low Level Virtual Machine.
 lmdb			Enable lmdb support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
