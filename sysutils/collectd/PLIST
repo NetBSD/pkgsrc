@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/08/18 07:47:46 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/09/12 19:04:56 he Exp $
 bin/collectd-nagios
 bin/collectd-tg
 bin/collectdctl
@@ -31,6 +31,7 @@ lib/collectd/match_timediff.la
 lib/collectd/match_value.la
 lib/collectd/mbmon.la
 ${PLIST.memory}lib/collectd/memory.la
+${PLIST.netstat_udp}lib/collectd/netstat_udp.la
 ${PLIST.nfs}lib/collectd/nfs.la
 lib/collectd/ntpd.la
 lib/collectd/olsrd.la
