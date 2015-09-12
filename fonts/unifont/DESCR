@@ -1,0 +1,16 @@
+GNU Unifont is an official GNU package.  It is a dual-width
+(8x16/16x16) bitmap font, designed to provide coverage for all of
+Unicode Plane 0, the Basic Multilingual Plane (BMP).
+
+GNU Unifont has a glyph for each visible code point in the Unicode
+Basic Multilingual Plane (Plane 0) and some glyphs in the Supplemental
+Multilingual Plane (Plane 1).  This version also includes many
+glyphs in Michael Everson's ConScript Unicode Registry (CSUR).
+
+Unifont only provides a single glyph for each character, making it
+impossible to handle any language properly that needs context-dependent
+character shaping. It is supplied in the form of a hex file, with
+a converter to convert it to BDF. See http://czyborra.com/unifont/
+or http://unifoundry.com/unifont.html for more information.  The
+BDF font is converted to PCF, and the hex file is converted to a
+TrueType font.
