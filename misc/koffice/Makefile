@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2015/08/15 22:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2015/09/12 16:50:00 joerg Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	64
@@ -67,7 +67,7 @@ post-install:
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../print/poppler-qt/buildlink3.mk"
+.include "../../print/poppler016-qt3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
