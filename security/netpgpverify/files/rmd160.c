@@ -1,4 +1,4 @@
-/* 	$NetBSD: rmd160.c,v 1.3 2015/09/01 19:38:42 agc Exp $ */
+/* 	$NetBSD: rmd160.c,v 1.4 2015/09/12 02:19:06 agc Exp $ */
 /*	$KAME: rmd160.c,v 1.2 2003/07/25 09:37:55 itojun Exp $	*/
 /*	$OpenBSD: rmd160.c,v 1.3 2001/09/26 21:40:13 markus Exp $	*/
 /*
@@ -168,8 +168,13 @@ netpgpv_RMD160Transform(uint32_t state[5], const u_char block[64])
 #else
 	int i;
 
-	for (i = 0; i < 16; i++)
-		x[i] = le32dec(block+i*4);
+	for (i = 0; i < 16; i++) {
+		x[i] = (uint32_t)(
+		    (uint32_t)(block[i*4 + 0]) |
+		    (uint32_t)(block[i*4 + 1]) <<  8 |
+		    (uint32_t)(block[i*4 + 2]) << 16 |
+		    (uint32_t)(block[i*4 + 3]) << 24);
+	}
 #endif
 
 	a = state[0];

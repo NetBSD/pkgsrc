@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/09/01 19:38:42 agc Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/12 02:19:06 agc Exp $
 
-DISTNAME=		netpgpverify-20150901
+DISTNAME=		netpgpverify-20150911
 CATEGORIES=		security
 MASTER_SITES=		# empty
 DISTFILES=		# empty
