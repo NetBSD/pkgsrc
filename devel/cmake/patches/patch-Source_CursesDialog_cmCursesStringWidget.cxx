@@ -1,10 +1,12 @@
-$NetBSD: patch-Source_CursesDialog_cmCursesStringWidget.cxx,v 1.1 2015/09/12 15:15:49 joerg Exp $
+$NetBSD: patch-Source_CursesDialog_cmCursesStringWidget.cxx,v 1.2 2015/09/12 16:46:11 wiz Exp $
 
 printw takes a format string.
+http://public.kitware.com/Bug/view.php?id=15738
 
 Don't use implemention-details of ncurses to see
 if the overloading behavior of REQ_DEL_PREV is active, just undo any
 damage it may have done.
+http://public.kitware.com/Bug/view.php?id=15739
 
 --- Source/CursesDialog/cmCursesStringWidget.cxx.orig	2015-08-13 14:57:00.000000000 +0000
 +++ Source/CursesDialog/cmCursesStringWidget.cxx

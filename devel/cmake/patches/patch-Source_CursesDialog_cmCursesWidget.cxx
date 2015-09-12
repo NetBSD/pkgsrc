@@ -1,6 +1,7 @@
-$NetBSD: patch-Source_CursesDialog_cmCursesWidget.cxx,v 1.1 2015/09/12 15:15:49 joerg Exp $
+$NetBSD: patch-Source_CursesDialog_cmCursesWidget.cxx,v 1.2 2015/09/12 16:46:11 wiz Exp $
 
 Compensate for missing const attribute in NetBSD.
+http://public.kitware.com/Bug/view.php?id=15740
 
 --- Source/CursesDialog/cmCursesWidget.cxx.orig	2015-09-07 09:53:22.000000000 +0000
 +++ Source/CursesDialog/cmCursesWidget.cxx
