@@ -1,0 +1,7 @@
+librsync implements the rolling-checksum algorithm of remote
+file synchronization that was popularized by the rsync utility.  This
+algorithm transfers the differences between 2 files without needing both
+files on the same system.  librsync is for building other programs that
+transfer files as efficiently as rsync.  You can use librsync in a program
+you write to do backups, distribute binary patches to programs, or
+sync directories to a server or between peers.
