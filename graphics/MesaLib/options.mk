@@ -1,16 +1,21 @@
-# $NetBSD: options.mk,v 1.35 2015/09/11 16:27:30 tnn Exp $
+# $NetBSD: options.mk,v 1.36 2015/09/12 16:50:24 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
 PKG_SUGGESTED_OPTIONS=
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[789].*-*) && (	\
-	${MACHINE_ARCH} == "i386" ||			\
-	${MACHINE_ARCH} == "x86_64" ||			\
-	${MACHINE_ARCH} == "sparc64" ||			\
-	${MACHINE_ARCH} == "powerpc" ||			\
-	!empty(MACHINE_ARCH:M*arm*))
-#PKG_SUGGESTED_OPTIONS+=		llvm
+# The LLVM option enables JIT accelerated software rendering and
+# is also required to support the latest RADEON GPUs, so enable it
+# by default on platforms where such GPUs might be encountered.
+.if \
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) ||	\
+	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
+	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
+	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
+	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
+PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
 .if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
@@ -31,22 +36,22 @@ PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-egl
 
-# use Thread Local Storage in GLX where it is supported and works
+# Use Thread Local Storage in GLX where it is supported by Mesa and works.
 .if \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
+	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
+	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
 	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MDragonFly-.*-x86_64)
-# Not yet, needs more testing and xorg-server support.
-#CONFIGURE_ARGS+=	--enable-glx-tls
-CONFIGURE_ARGS+=	--disable-glx-tls
+	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
+CONFIGURE_ARGS+=	--enable-glx-tls
 .else
 CONFIGURE_ARGS+=	--disable-glx-tls
 .endif
 
 PLIST.dri=	yes
 
-BUILDLINK_DEPMETHOD.libpciaccess=      full
+BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../graphics/MesaLib/dri.mk"
 
@@ -140,4 +145,7 @@ CONFIGURE_ARGS+=	--disable-dri
 CONFIGURE_ARGS+=	--disable-dri3
 CONFIGURE_ARGS+=	--disable-egl
 CONFIGURE_ARGS+=	--enable-xlib-glx
+.if !empty(PKG_OPTIONS:Mllvm)
+PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
+.endif
 .endif
