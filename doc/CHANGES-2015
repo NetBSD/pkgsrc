@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3874 2015/09/11 21:22:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3875 2015/09/12 02:21:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6850,3 +6850,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added geography/p5-Geo-Ellipsoid version 1.12 [bouyer 2015-09-11]
 	Updated security/mozilla-rootcerts to 1.0.20150804 [tnn 2015-09-11]
 	Updated misc/calibre to 2.38.0 [wiz 2015-09-11]
+	Updated security/netpgpverify to 20150911 [agc 2015-09-11]
+	Updated security/libnetpgpverify to 20150911 [agc 2015-09-11]
