@@ -1,0 +1,15 @@
+$NetBSD: patch-man_Makefile,v 1.1 2015/09/12 18:22:22 wiz Exp $
+
+Adapt path for pkgsrc.
+
+--- man/Makefile.orig	2014-10-22 00:44:55.000000000 +0000
++++ man/Makefile
+@@ -16,7 +16,7 @@ MAN5PAGES = unifont.5
+ # to override the setting below.
+ #
+ PREFIX = /usr
+-INSTALLDIR = $(PREFIX)/share/man
++INSTALLDIR = $(PREFIX)/${PKGMANDIR}
+ 
+ #
+ # Set "COMPRESS = 0" to install uncompressed man pages (the default), or
