@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2015/06/09 15:03:43 tnn Exp $
+$NetBSD: distinfo,v 1.85 2015/09/12 16:56:47 joerg Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -97,6 +97,8 @@ SHA1 (patch-hotspot_src_os_solaris_dtrace_jhelper.d) = 43ae9934ce7cf477f7968bcf9
 SHA1 (patch-hotspot_src_os_solaris_vm_decoder__solaris.cpp) = 3be8a96525ead1df18a40b18dccfad4ef2765d47
 SHA1 (patch-hotspot_src_os_solaris_vm_os__solaris.cpp) = ea09ffd080fcf4c12b0b69cb622ee3945000cb68
 SHA1 (patch-hotspot_src_os_solaris_vm_perfMemory__solaris.cpp) = 1bc67dd849eec122162b71f21d204e5489555738
+SHA1 (patch-hotspot_src_share_vm_oops_klass.hpp) = 8f25f2df28e4d644cd0408cc6c198d6e9d8b9155
+SHA1 (patch-hotspot_src_share_vm_opto_library__call.cpp) = 86ba7f86ba769a444484f3c586e8b039079d2456
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = 869d8ec9dc6dae6e0b8a23fe44f2583747059553
 SHA1 (patch-hotspot_src_share_vm_runtime_os.cpp) = c7a33e791e3b5fec5cca9a5343c6d1f685e0cd4b
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = 1935e8225e08870fd912737de6dee3d599d260ab
