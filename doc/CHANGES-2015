@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3879 2015/09/12 18:52:09 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3880 2015/09/12 18:56:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6856,3 +6856,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/libzdb to 3.1 [tnn 2015-09-12]
 	Added fonts/unifont version 8.0.01 [wiz 2015-09-12]
 	Added devel/bam version 0.4.0 [wiz 2015-09-12]
+	Added games/teeworlds version 0.6.3 [wiz 2015-09-12]
