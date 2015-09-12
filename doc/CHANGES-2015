@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3878 2015/09/12 18:22:43 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3879 2015/09/12 18:52:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6855,3 +6855,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.7 [tsutsui 2015-09-12]
 	Updated databases/libzdb to 3.1 [tnn 2015-09-12]
 	Added fonts/unifont version 8.0.01 [wiz 2015-09-12]
+	Added devel/bam version 0.4.0 [wiz 2015-09-12]
