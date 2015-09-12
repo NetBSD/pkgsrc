@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3877 2015/09/12 15:20:55 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.3878 2015/09/12 18:22:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6854,3 +6854,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libnetpgpverify to 20150911 [agc 2015-09-11]
 	Updated net/mikutter to 3.2.7 [tsutsui 2015-09-12]
 	Updated databases/libzdb to 3.1 [tnn 2015-09-12]
+	Added fonts/unifont version 8.0.01 [wiz 2015-09-12]
