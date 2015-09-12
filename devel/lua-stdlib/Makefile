@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/10/19 22:27:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/12 20:03:00 tnn Exp $
 
 DISTNAME=		stdlib-28
 PKGNAME=		${DISTNAME:S/stdlib/${LUA_PKGPREFIX}-stdlib/}
 PKGREVISION=		3
 CATEGORIES=		devel
 COMMENT=		Standard library for Lua programming language
-MASTER_SITES=		http://cloud.github.com/downloads/rrthomas/lua-stdlib/
+MASTER_SITES=		https://cloud.github.com/downloads/rrthomas/lua-stdlib/
 EXTRACT_SUFX=		.zip
 MAINTAINER=		cheusov@NetBSD.org
 

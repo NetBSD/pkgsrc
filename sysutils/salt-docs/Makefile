@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/03/18 15:04:35 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/12 20:03:01 tnn Exp $
 
 DISTNAME=	salt-0.10.5
 PKGNAME=	${DISTNAME:S/-/-docs-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cloud.github.com/downloads/saltstack/salt/
+MASTER_SITES=	https://cloud.github.com/downloads/saltstack/salt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
