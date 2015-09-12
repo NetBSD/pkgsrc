@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2015/08/18 07:47:46 he Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2015/09/12 19:04:56 he Exp $
 
 Install config file in example directory.
 
@@ -21,7 +21,20 @@ Install config file in example directory.
  AUTOMAKE_OPTIONS = subdir-objects
  
  noinst_LTLIBRARIES = libmount.la liblookup.la
-@@ -1363,13 +1365,8 @@ riemann.pb-c.c riemann.pb-c.h: riemann.p
+@@ -657,6 +659,12 @@ netlink_la_CFLAGS = $(AM_CFLAGS) $(BUILD
+ netlink_la_LIBADD = $(BUILD_WITH_LIBMNL_LIBS)
+ endif
+ 
++if BUILD_PLUGIN_NETSTAT_UDP
++pkglib_LTLIBRARIES += netstat_udp.la
++netstat_udp_la_SOURCES = netstat_udp.c
++netstat_udp_la_LDFLAGS = $(PLUGIN_LDFLAGS)
++endif
++
+ if BUILD_PLUGIN_NETWORK
+ pkglib_LTLIBRARIES += network.la
+ network_la_SOURCES = network.c network.h \
+@@ -1363,13 +1371,8 @@ riemann.pb-c.c riemann.pb-c.h: riemann.p
  endif
  
  install-exec-hook:
@@ -37,7 +50,7 @@ Install config file in example directory.
  	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
  	$(INSTALL) -m 0644 $(srcdir)/types.db $(DESTDIR)$(pkgdatadir)/types.db;
  	$(INSTALL) -m 0644 $(srcdir)/postgresql_default.conf \
-@@ -1377,7 +1374,7 @@ install-exec-hook:
+@@ -1377,7 +1380,7 @@ install-exec-hook:
  
  uninstall-hook:
  	rm -f $(DESTDIR)$(pkgdatadir)/types.db;

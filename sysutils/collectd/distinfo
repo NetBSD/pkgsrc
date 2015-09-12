@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.20 2015/09/01 09:31:46 he Exp $
+$NetBSD: distinfo,v 1.21 2015/09/12 19:04:56 he Exp $
 
 SHA1 (collectd-5.5.0.tar.gz) = d24e284c1eae20c5e75b846c8b2612ab65bd5565
 RMD160 (collectd-5.5.0.tar.gz) = 2197758942a5fe56e4eabda3786f09d4138e943a
 Size (collectd-5.5.0.tar.gz) = 2244454 bytes
 SHA1 (patch-Makefile.am) = ed45b75293a4ea2dd577d04eeb3b9017b8f47319
 SHA1 (patch-Makefile.in) = a7cf69ca29c526be643af0ef85544e3a2dc80a77
-SHA1 (patch-configure) = bb7c5db3fed0ff298a243312190c5048de1397a4
-SHA1 (patch-configure.ac) = 9f215b31919426b54d653a79240bae56284c3544
-SHA1 (patch-src_Makefile.am) = 0df5125e05b46fb842d444f94683c4838dfd1f0f
-SHA1 (patch-src_Makefile.in) = bbce87cf8daf2a7d75f81c8019d936cada1191bd
+SHA1 (patch-configure) = c6b41d1ea12c99c7de0607e16c71e4ef9a61b013
+SHA1 (patch-configure.ac) = cb5c3000fdb4636d052d5476f5a678addd8b745b
+SHA1 (patch-src_Makefile.am) = 45930ca400c6c67927020c9a264d3d5adc30ca46
+SHA1 (patch-src_Makefile.in) = 29643e202fafeb5fa4a0b569ee7645d7ac38ff27
 SHA1 (patch-src_collectd-tg.c) = f9f41dfb0b1b55a62202128a165d5c9943faf5bc
 SHA1 (patch-src_collectd.conf.in) = f0b35085cf0ddfd766e140b145177ab1f1326f5f
 SHA1 (patch-src_config.h.in) = be17db23b6ee7a90ba57e73f073ed5be11c369c5
@@ -19,6 +19,7 @@ SHA1 (patch-src_entropy.c) = 46d5357d8407584943e9259325989e64a8710cc0
 SHA1 (patch-src_irq.c) = 6b621474de35a5879105025d1a2848e4896b8479
 SHA1 (patch-src_libcollectclient_network__buffer.c) = e07d403d299613fa0885a0e7285849eb85510253
 SHA1 (patch-src_memory.c) = f48d50245176426e26af7fa1b1f4ff6fbf0b1d95
+SHA1 (patch-src_netstat__udp.c) = 30cb12d25f56c60959658dbd181783212e00cc61
 SHA1 (patch-src_processes.c) = e00d2edf6b4e6bfe3663e34fffb05f40652affe5
 SHA1 (patch-src_swap.c) = e7602eb83eed6b90752b8293b9666b94bdd42493
 SHA1 (patch-src_tcpconns.c) = 712af1b821d62217283df884dd283d5b1218ab7c

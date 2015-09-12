@@ -1,10 +1,62 @@
-$NetBSD: patch-configure,v 1.8 2015/09/01 09:00:04 he Exp $
+$NetBSD: patch-configure,v 1.9 2015/09/12 19:04:56 he Exp $
 
 Regen from configure.ac.
 
---- configure.orig	2015-05-27 07:51:50.000000000 +0000
+--- configure.orig	2015-09-10 18:56:19.000000000 +0000
 +++ configure
-@@ -3625,8 +3625,8 @@ esac
+@@ -797,6 +797,8 @@ BUILD_PLUGIN_NFS_FALSE
+ BUILD_PLUGIN_NFS_TRUE
+ BUILD_PLUGIN_NETWORK_FALSE
+ BUILD_PLUGIN_NETWORK_TRUE
++BUILD_PLUGIN_NETSTAT_UDP_FALSE
++BUILD_PLUGIN_NETSTAT_UDP_TRUE
+ BUILD_PLUGIN_NETLINK_FALSE
+ BUILD_PLUGIN_NETLINK_TRUE
+ BUILD_PLUGIN_NETAPP_FALSE
+@@ -1083,9 +1085,6 @@ BUILD_WITH_LIBGCRYPT_TRUE
+ GCRYPT_LIBS
+ GCRYPT_LDFLAGS
+ GCRYPT_CPPFLAGS
+-LIBGCRYPT_LIBS
+-LIBGCRYPT_CFLAGS
+-LIBGCRYPT_CONFIG
+ BUILD_WITH_LIBGANGLIA_FALSE
+ BUILD_WITH_LIBGANGLIA_TRUE
+ GANGLIA_LIBS
+@@ -1327,7 +1326,6 @@ with_libdbi
+ with_libesmtp
+ with_libganglia
+ with_libgcrypt
+-with_libgcrypt_prefix
+ with_libiptc
+ with_java
+ with_libldap
+@@ -1431,6 +1429,7 @@ enable_multimeter
+ enable_mysql
+ enable_netapp
+ enable_netlink
++enable_netstat_udp
+ enable_network
+ enable_nfs
+ enable_nginx
+@@ -2230,6 +2229,7 @@ collectd plugins:
+   --enable-mysql          MySQL statistics
+   --enable-netapp         NetApp plugin
+   --enable-netlink        Enhanced Linux network statistics
++  --enable-netstat_udp    UDP network statistics
+   --enable-network        Network communication plugin
+   --enable-nfs            NFS statistics
+   --enable-nginx          nginx statistics
+@@ -2334,8 +2334,6 @@ collectd additional packages:
+                           Path to libganglia.
+   --with-libgcrypt[=PREFIX]
+                           Path to libgcrypt.
+-  --with-libgcrypt-prefix=PFX
+-                          prefix where LIBGCRYPT is installed (optional)
+   --with-libiptc[=PREFIX] Path to libiptc.
+   --with-java[=PREFIX]    Path to Java home.
+   --with-libldap[=PREFIX] Path to libldap.
+@@ -3625,8 +3623,8 @@ esac
  
  
  
@@ -15,7 +67,7 @@ Regen from configure.ac.
  
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
-@@ -5196,8 +5196,7 @@ else
+@@ -5196,8 +5194,7 @@ else
      ;;
    *)
      lt_cv_sys_max_cmd_len=`(getconf ARG_MAX) 2> /dev/null`
@@ -25,7 +77,7 @@ Regen from configure.ac.
        lt_cv_sys_max_cmd_len=`expr $lt_cv_sys_max_cmd_len \/ 4`
        lt_cv_sys_max_cmd_len=`expr $lt_cv_sys_max_cmd_len \* 3`
      else
-@@ -5598,6 +5597,10 @@ freebsd* | dragonfly*)
+@@ -5598,6 +5595,10 @@ freebsd* | dragonfly*)
    fi
    ;;
  
@@ -36,7 +88,7 @@ Regen from configure.ac.
  haiku*)
    lt_cv_deplibs_check_method=pass_all
    ;;
-@@ -5636,11 +5639,11 @@ irix5* | irix6* | nonstopux*)
+@@ -5636,11 +5637,11 @@ irix5* | irix6* | nonstopux*)
    ;;
  
  # This must be glibc/ELF.
@@ -50,7 +102,7 @@ Regen from configure.ac.
    if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
      lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
    else
-@@ -6760,7 +6763,7 @@ ia64-*-hpux*)
+@@ -6760,7 +6761,7 @@ ia64-*-hpux*)
    rm -rf conftest*
    ;;
  
@@ -59,7 +111,7 @@ Regen from configure.ac.
  s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
    # Find out which ABI we are using.
    echo 'int i;' > conftest.$ac_ext
-@@ -6776,19 +6779,9 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+@@ -6776,19 +6777,9 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
  	    LD="${LD-ld} -m elf_i386_fbsd"
  	    ;;
  	  x86_64-*linux*)
@@ -81,7 +133,7 @@ Regen from configure.ac.
  	    LD="${LD-ld} -m elf32ppclinux"
  	    ;;
  	  s390x-*linux*)
-@@ -6807,10 +6800,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+@@ -6807,10 +6798,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
  	  x86_64-*linux*)
  	    LD="${LD-ld} -m elf_x86_64"
  	    ;;
@@ -93,7 +145,7 @@ Regen from configure.ac.
  	    LD="${LD-ld} -m elf64ppc"
  	    ;;
  	  s390*-*linux*|s390*-*tpf*)
-@@ -8613,7 +8603,7 @@ lt_prog_compiler_static=
+@@ -8613,7 +8601,7 @@ lt_prog_compiler_static=
        lt_prog_compiler_static='-non_shared'
        ;;
  
@@ -102,7 +154,7 @@ Regen from configure.ac.
        case $cc_basename in
        # old Intel for x86_64 which still supported -KPIC.
        ecc*)
-@@ -9091,9 +9081,6 @@ $as_echo_n "checking whether the $compil
+@@ -9091,9 +9079,6 @@ $as_echo_n "checking whether the $compil
    openbsd*)
      with_gnu_ld=no
      ;;
@@ -112,7 +164,7 @@ Regen from configure.ac.
    esac
  
    ld_shlibs=yes
-@@ -9315,7 +9302,7 @@ _LT_EOF
+@@ -9315,7 +9300,7 @@ _LT_EOF
        fi
        ;;
  
@@ -121,7 +173,7 @@ Regen from configure.ac.
        if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
-@@ -9492,7 +9479,6 @@ _LT_EOF
+@@ -9492,7 +9477,6 @@ _LT_EOF
  	if test "$aix_use_runtimelinking" = yes; then
  	  shared_flag="$shared_flag "'${wl}-G'
  	fi
@@ -129,7 +181,7 @@ Regen from configure.ac.
        else
  	# not using gcc
  	if test "$host_cpu" = ia64; then
-@@ -9946,7 +9932,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -9946,7 +9930,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs=yes
        ;;
  
@@ -138,7 +190,7 @@ Regen from configure.ac.
        if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
        else
-@@ -10783,6 +10769,17 @@ freebsd* | dragonfly*)
+@@ -10783,6 +10767,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -156,7 +208,7 @@ Regen from configure.ac.
  haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -10899,7 +10896,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -10899,7 +10894,7 @@ linux*oldld* | linux*aout* | linux*coff*
    ;;
  
  # This must be glibc/ELF.
@@ -165,7 +217,7 @@ Regen from configure.ac.
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
    need_version=no
-@@ -10963,18 +10960,6 @@ fi
+@@ -10963,18 +10958,6 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -184,7 +236,7 @@ Regen from configure.ac.
  netbsd*)
    version_type=sunos
    need_lib_prefix=no
-@@ -12555,7 +12540,7 @@ else
+@@ -12555,7 +12538,7 @@ else
      # at 6.2 and later dlopen does load deplibs.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
@@ -193,7 +245,7 @@ Regen from configure.ac.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
    openbsd*)
-@@ -13026,7 +13011,7 @@ $as_echo "#define LIBTOOL_VERSION 2" >>c
+@@ -13026,7 +13009,7 @@ $as_echo "#define LIBTOOL_VERSION 2" >>c
  
  
  
@@ -202,7 +254,7 @@ Regen from configure.ac.
  
  # Find a good install program.  We prefer a C program (faster),
  # so one script is as good as another.  But avoid the broken or
-@@ -13215,7 +13200,7 @@ else
+@@ -13215,7 +13198,7 @@ else
  $as_echo "$as_me: WARNING: 'missing' script is too old or missing" >&2;}
  fi
  
@@ -211,7 +263,7 @@ Regen from configure.ac.
    case $am_aux_dir in
    *\ * | *\	*)
      install_sh="\${SHELL} '$am_aux_dir/install-sh'" ;;
-@@ -13564,8 +13549,8 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}ma
+@@ -13564,8 +13547,8 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}ma
  # <http://lists.gnu.org/archive/html/automake/2012-07/msg00014.html>
  mkdir_p='$(MKDIR_P)'
  
@@ -222,7 +274,7 @@ Regen from configure.ac.
  # Always define AMTAR for backward compatibility.  Yes, it's still used
  # in the wild :-(  We should find a proper way to deprecate it ...
  AMTAR='$${TAR-tar}'
-@@ -13835,6 +13820,7 @@ END
+@@ -13835,6 +13818,7 @@ END
      as_fn_error $? "Your 'rm' program is bad, sorry." "$LINENO" 5
    fi
  fi
@@ -230,7 +282,7 @@ Regen from configure.ac.
  # Check whether --enable-silent-rules was given.
  if test "${enable_silent_rules+set}" = set; then :
    enableval=$enable_silent_rules;
-@@ -13908,7 +13894,7 @@ else
+@@ -13908,7 +13892,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -239,7 +291,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -13954,7 +13940,7 @@ else
+@@ -13954,7 +13938,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -248,7 +300,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -13978,7 +13964,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -13978,7 +13962,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -257,7 +309,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -14023,7 +14009,7 @@ else
+@@ -14023,7 +14007,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -266,7 +318,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -14047,7 +14033,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -14047,7 +14031,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -275,7 +327,7 @@ Regen from configure.ac.
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -15319,6 +15305,12 @@ $as_echo "#define KERNEL_OPENBSD 1" >>co
+@@ -15319,6 +15303,12 @@ $as_echo "#define KERNEL_OPENBSD 1" >>co
  
  	ac_system="OpenBSD"
  	;;
@@ -288,7 +340,7 @@ Regen from configure.ac.
  	*aix*)
  
  $as_echo "#define KERNEL_AIX 1" >>confdefs.h
-@@ -15876,6 +15868,29 @@ fi
+@@ -15876,6 +15866,29 @@ fi
  done
  
  
@@ -318,7 +370,7 @@ Regen from configure.ac.
  # For ping library
  for ac_header in netinet/in_systm.h
  do :
-@@ -16215,6 +16230,27 @@ else
+@@ -16215,6 +16228,27 @@ else
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
  fi
@@ -346,7 +398,7 @@ Regen from configure.ac.
  
  # For hddtemp module
  for ac_header in linux/major.h
-@@ -19171,6 +19207,54 @@ else
+@@ -19171,6 +19205,54 @@ else
  fi
  
  
@@ -401,37 +453,236 @@ Regen from configure.ac.
  ac_fn_c_check_member "$LINENO" "struct udphdr" "uh_dport" "ac_cv_member_struct_udphdr_uh_dport" "#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
  #if HAVE_STDINT_H
-@@ -20882,6 +20966,7 @@ fi
+@@ -20882,220 +20964,6 @@ fi
  
  	if test "$with_libgcrypt" != "no"; then
  
-+
- # Check whether --with-libgcrypt-prefix was given.
- if test "${with_libgcrypt_prefix+set}" = set; then :
-   withval=$with_libgcrypt_prefix; libgcrypt_config_prefix="$withval"
-@@ -21065,10 +21150,9 @@ $as_echo "does not match. want=$req_libg
-     LIBGCRYPT_CFLAGS=`$LIBGCRYPT_CONFIG --cflags`
-     LIBGCRYPT_LIBS=`$LIBGCRYPT_CONFIG --libs`
-     :
+-# Check whether --with-libgcrypt-prefix was given.
+-if test "${with_libgcrypt_prefix+set}" = set; then :
+-  withval=$with_libgcrypt_prefix; libgcrypt_config_prefix="$withval"
+-else
+-  libgcrypt_config_prefix=""
+-fi
+-
+-  if test x$libgcrypt_config_prefix != x ; then
+-     if test x${LIBGCRYPT_CONFIG+set} != xset ; then
+-        LIBGCRYPT_CONFIG=$libgcrypt_config_prefix/bin/libgcrypt-config
+-     fi
+-  fi
+-
+-  if test -n "$ac_tool_prefix"; then
+-  # Extract the first word of "${ac_tool_prefix}libgcrypt-config", so it can be a program name with args.
+-set dummy ${ac_tool_prefix}libgcrypt-config; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_path_LIBGCRYPT_CONFIG+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  case $LIBGCRYPT_CONFIG in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_LIBGCRYPT_CONFIG="$LIBGCRYPT_CONFIG" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_LIBGCRYPT_CONFIG="$as_dir/$ac_word$ac_exec_ext"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-LIBGCRYPT_CONFIG=$ac_cv_path_LIBGCRYPT_CONFIG
+-if test -n "$LIBGCRYPT_CONFIG"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $LIBGCRYPT_CONFIG" >&5
+-$as_echo "$LIBGCRYPT_CONFIG" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-fi
+-if test -z "$ac_cv_path_LIBGCRYPT_CONFIG"; then
+-  ac_pt_LIBGCRYPT_CONFIG=$LIBGCRYPT_CONFIG
+-  # Extract the first word of "libgcrypt-config", so it can be a program name with args.
+-set dummy libgcrypt-config; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_path_ac_pt_LIBGCRYPT_CONFIG+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  case $ac_pt_LIBGCRYPT_CONFIG in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_ac_pt_LIBGCRYPT_CONFIG="$ac_pt_LIBGCRYPT_CONFIG" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_ac_pt_LIBGCRYPT_CONFIG="$as_dir/$ac_word$ac_exec_ext"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-ac_pt_LIBGCRYPT_CONFIG=$ac_cv_path_ac_pt_LIBGCRYPT_CONFIG
+-if test -n "$ac_pt_LIBGCRYPT_CONFIG"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_pt_LIBGCRYPT_CONFIG" >&5
+-$as_echo "$ac_pt_LIBGCRYPT_CONFIG" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-  if test "x$ac_pt_LIBGCRYPT_CONFIG" = x; then
+-    LIBGCRYPT_CONFIG="no"
+-  else
+-    case $cross_compiling:$ac_tool_warned in
+-yes:)
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
+-$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
+-ac_tool_warned=yes ;;
+-esac
+-    LIBGCRYPT_CONFIG=$ac_pt_LIBGCRYPT_CONFIG
+-  fi
+-else
+-  LIBGCRYPT_CONFIG="$ac_cv_path_LIBGCRYPT_CONFIG"
+-fi
+-
+-  tmp=1:1.2.0
+-  if echo "$tmp" | grep ':' >/dev/null 2>/dev/null ; then
+-     req_libgcrypt_api=`echo "$tmp"     | sed 's/\(.*\):\(.*\)/\1/'`
+-     min_libgcrypt_version=`echo "$tmp" | sed 's/\(.*\):\(.*\)/\2/'`
+-  else
+-     req_libgcrypt_api=0
+-     min_libgcrypt_version="$tmp"
+-  fi
+-
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBGCRYPT - version >= $min_libgcrypt_version" >&5
+-$as_echo_n "checking for LIBGCRYPT - version >= $min_libgcrypt_version... " >&6; }
+-  ok=no
+-  if test "$LIBGCRYPT_CONFIG" != "no" ; then
+-    req_major=`echo $min_libgcrypt_version | \
+-               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1/'`
+-    req_minor=`echo $min_libgcrypt_version | \
+-               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\2/'`
+-    req_micro=`echo $min_libgcrypt_version | \
+-               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\3/'`
+-    libgcrypt_config_version=`$LIBGCRYPT_CONFIG --version`
+-    major=`echo $libgcrypt_config_version | \
+-               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\1/'`
+-    minor=`echo $libgcrypt_config_version | \
+-               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\2/'`
+-    micro=`echo $libgcrypt_config_version | \
+-               sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
+-    if test "$major" -gt "$req_major"; then
+-        ok=yes
+-    else
+-        if test "$major" -eq "$req_major"; then
+-            if test "$minor" -gt "$req_minor"; then
+-               ok=yes
+-            else
+-               if test "$minor" -eq "$req_minor"; then
+-                   if test "$micro" -ge "$req_micro"; then
+-                     ok=yes
+-                   fi
+-               fi
+-            fi
+-        fi
+-    fi
+-  fi
+-  if test $ok = yes; then
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes ($libgcrypt_config_version)" >&5
+-$as_echo "yes ($libgcrypt_config_version)" >&6; }
+-  else
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-  fi
+-  if test $ok = yes; then
+-     # If we have a recent libgcrypt, we should also check that the
+-     # API is compatible
+-     if test "$req_libgcrypt_api" -gt 0 ; then
+-        tmp=`$LIBGCRYPT_CONFIG --api-version 2>/dev/null || echo 0`
+-        if test "$tmp" -gt 0 ; then
+-           { $as_echo "$as_me:${as_lineno-$LINENO}: checking LIBGCRYPT API version" >&5
+-$as_echo_n "checking LIBGCRYPT API version... " >&6; }
+-           if test "$req_libgcrypt_api" -eq "$tmp" ; then
+-             { $as_echo "$as_me:${as_lineno-$LINENO}: result: okay" >&5
+-$as_echo "okay" >&6; }
+-           else
+-             ok=no
+-             { $as_echo "$as_me:${as_lineno-$LINENO}: result: does not match. want=$req_libgcrypt_api got=$tmp" >&5
+-$as_echo "does not match. want=$req_libgcrypt_api got=$tmp" >&6; }
+-           fi
+-        fi
+-     fi
+-  fi
+-  if test $ok = yes; then
+-    LIBGCRYPT_CFLAGS=`$LIBGCRYPT_CONFIG --cflags`
+-    LIBGCRYPT_LIBS=`$LIBGCRYPT_CONFIG --libs`
+-    :
 -    if test x"$host" != x ; then
 -      libgcrypt_config_host=`$LIBGCRYPT_CONFIG --host 2>/dev/null || echo none`
 -      if test x"$libgcrypt_config_host" != xnone ; then
 -        if test x"$libgcrypt_config_host" != x"$host" ; then
-+    libgcrypt_config_host=`$LIBGCRYPT_CONFIG --host 2>/dev/null || echo none`
-+    if test x"$libgcrypt_config_host" != xnone ; then
-+      if test x"$libgcrypt_config_host" != x"$host" ; then
-   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING:
- ***
- *** The config script $LIBGCRYPT_CONFIG was
-@@ -21085,7 +21169,6 @@ $as_echo "$as_me: WARNING:
- *** You may want to use the configure option --with-libgcrypt-prefix
- *** to specify a matching config script.
- ***" >&2;}
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING:
+-***
+-*** The config script $LIBGCRYPT_CONFIG was
+-*** built for $libgcrypt_config_host and thus may not match the
+-*** used host $host.
+-*** You may want to use the configure option --with-libgcrypt-prefix
+-*** to specify a matching config script.
+-***" >&5
+-$as_echo "$as_me: WARNING:
+-***
+-*** The config script $LIBGCRYPT_CONFIG was
+-*** built for $libgcrypt_config_host and thus may not match the
+-*** used host $host.
+-*** You may want to use the configure option --with-libgcrypt-prefix
+-*** to specify a matching config script.
+-***" >&2;}
 -        fi
-       fi
-     fi
-   else
-@@ -27648,6 +27731,14 @@ then
+-      fi
+-    fi
+-  else
+-    LIBGCRYPT_CFLAGS=""
+-    LIBGCRYPT_LIBS=""
+-    with_libgcrypt="no (version 1.2.0+ required)"
+-  fi
+-
+-
+-
+ 		GCRYPT_CPPFLAGS="$LIBGCRYPT_CPPFLAGS $LIBGCRYPT_CFLAGS"
+ 		GCRYPT_LIBS="$LIBGCRYPT_LIBS"
+ 	fi
+@@ -27579,6 +27447,7 @@ plugin_load="no"
+ plugin_log_logstash="no"
+ plugin_memory="no"
+ plugin_multimeter="no"
++plugin_netstat_udp="no"
+ plugin_nfs="no"
+ plugin_numa="no"
+ plugin_perl="no"
+@@ -27648,6 +27517,15 @@ then
  	plugin_tcpconns="yes"
  fi
  
@@ -441,12 +692,13 @@ Regen from configure.ac.
 +	plugin_irq="yes"
 +	plugin_processes="yes"
 +	plugin_disk="yes"
++	plugin_netstat_udp="yes"
 +fi
 +
  # Mac OS X devices
  if test "x$with_libiokit" = "xyes"
  then
-@@ -27890,6 +27981,11 @@ then
+@@ -27890,6 +27768,11 @@ then
  	plugin_swap="yes"
  fi
  
@@ -458,3 +710,89 @@ Regen from configure.ac.
  if test "x$with_kvm_openfiles$with_kvm_nlist" = "xyesyes"
  then
  	plugin_tcpconns="yes"
+@@ -31715,6 +31598,66 @@ fi
+ 
+     enable_plugin="no"
+     force="no"
++    # Check whether --enable-netstat_udp was given.
++if test "${enable_netstat_udp+set}" = set; then :
++  enableval=$enable_netstat_udp;
++     if test "x$enableval" = "xyes"
++     then
++	     enable_plugin="yes"
++     else if test "x$enableval" = "xforce"
++     then
++	     enable_plugin="yes"
++	     force="yes"
++     else
++	     enable_plugin="no (disabled on command line)"
++     fi; fi
++
++else
++
++	 if test "x$enable_all_plugins" = "xauto"
++	 then
++	     if test "x$plugin_netstat_udp" = "xyes"
++	     then
++		     enable_plugin="yes"
++	     else
++		     enable_plugin="no"
++	     fi
++	 else
++	     enable_plugin="$enable_all_plugins"
++	 fi
++
++fi
++
++    if test "x$enable_plugin" = "xyes"
++    then
++	    if test "x$plugin_netstat_udp" = "xyes" || test "x$force" = "xyes"
++	    then
++
++$as_echo "#define HAVE_PLUGIN_NETSTAT_UDP 1" >>confdefs.h
++
++		    if test "x$plugin_netstat_udp" != "xyes"
++		    then
++			    dependency_warning="yes"
++		    fi
++	    else # User passed "yes" but dependency checking yielded "no" => Dependency problem.
++		    dependency_error="yes"
++		    enable_plugin="no (dependency error)"
++	    fi
++    fi
++     if test "x$enable_plugin" = "xyes"; then
++  BUILD_PLUGIN_NETSTAT_UDP_TRUE=
++  BUILD_PLUGIN_NETSTAT_UDP_FALSE='#'
++else
++  BUILD_PLUGIN_NETSTAT_UDP_TRUE='#'
++  BUILD_PLUGIN_NETSTAT_UDP_FALSE=
++fi
++
++    enable_netstat_udp="$enable_plugin"
++
++
++
++    enable_plugin="no"
++    force="no"
+     # Check whether --enable-network was given.
+ if test "${enable_network+set}" = set; then :
+   enableval=$enable_network;
+@@ -36781,6 +36724,10 @@ if test -z "${BUILD_PLUGIN_NETLINK_TRUE}
+   as_fn_error $? "conditional \"BUILD_PLUGIN_NETLINK\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+ fi
++if test -z "${BUILD_PLUGIN_NETSTAT_UDP_TRUE}" && test -z "${BUILD_PLUGIN_NETSTAT_UDP_FALSE}"; then
++  as_fn_error $? "conditional \"BUILD_PLUGIN_NETSTAT_UDP\" was never defined.
++Usually this means the macro was only invoked conditionally." "$LINENO" 5
++fi
+ if test -z "${BUILD_PLUGIN_NETWORK_TRUE}" && test -z "${BUILD_PLUGIN_NETWORK_FALSE}"; then
+   as_fn_error $? "conditional \"BUILD_PLUGIN_NETWORK\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+@@ -39602,6 +39549,7 @@ Configuration:
+     mysql . . . . . . . . $enable_mysql
+     netapp  . . . . . . . $enable_netapp
+     netlink . . . . . . . $enable_netlink
++    netstat_udp . . . . . $enable_netstat_udp
+     network . . . . . . . $enable_network
+     nfs . . . . . . . . . $enable_nfs
+     nginx . . . . . . . . $enable_nginx
