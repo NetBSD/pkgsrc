@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/09/05 20:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/09/12 11:48:10 wiz Exp $
 
 DISTNAME=	cups-filters-1.0.74
 CATEGORIES=	print
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bash:run gmake pkg-config
+USE_TOOLS+=	bash:run pkg-config
 USE_TOOLS+=	autoconf
 USE_LANGUAGES=	c c++
 
