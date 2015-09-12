@@ -1,0 +1,15 @@
+$NetBSD: patch-manpages_Makefile.in,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- manpages/Makefile.in.orig	2015-07-01 11:45:08.000000000 +0000
++++ manpages/Makefile.in
+@@ -17,9 +17,7 @@ depend:
+ install:
+ 	$(MKDIR) $(DESTDIR)/$(mandir)/man8
+ 	for I in ${MAN8}; \
+-	  do ($(RMF) $$I.gz; gzip -c $$I >$$I.gz; \
+-	     $(INSTALL_DATA) $$I.gz $(DESTDIR)$(mandir)/man8/$$I.gz; \
+-	     rm -f $$I.gz); \
++	  do $(INSTALL_DATA) $$I $(DESTDIR)$(mandir)/man8/$$I; \
+ 	done
+ 
+ uninstall:

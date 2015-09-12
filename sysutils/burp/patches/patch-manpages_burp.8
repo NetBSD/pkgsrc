@@ -1,0 +1,31 @@
+$NetBSD: patch-manpages_burp.8,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- manpages/burp.8.orig	2015-09-12 22:49:19.966332952 +0000
++++ manpages/burp.8
+@@ -17,7 +17,7 @@ BackUp and Restore Program.
+ .TP
+ \fB\-c\fR \fB[path]\fR
+ Short for 'config file'. The argument is a path to the config file. The default
+-is /etc/burp/burp.conf.
++is @PKG_SYSCONFDIR@/burp.conf.
+ .TP
+ \fB\-n\fR \fB\fR
+ No forking mode. The program will accept a single query, deal with it, and then
+@@ -66,7 +66,7 @@ backups.
+ .TP
+ \fB\-c\fR \fB[path]\fR
+ Short for 'config file'. The argument is a path to the config file. The default
+-is /etc/burp/burp.conf, or %PROGRAMFILES%\\Burp\\burp.conf on Windows.
++is @PKG_SYSCONFDIR@/burp.conf, or %PROGRAMFILES%\\Burp\\burp.conf on Windows.
+ .TP
+ \fB\-C\fR \fB[client]\fR
+ Allows you to specify an alternative client to list or restore from. Requires that the server configuration of the alternative client permits your client to do this. See the 'restore_client' option.
+@@ -373,7 +373,7 @@ If this is set to 1, server_script_post
+ Path to autoupgrade directory from which upgrades are downloaded. The option can be left unset in order not to autoupgrade clients. Please see docs/autoupgrade.txt in the source package for more help with this option.
+ .TP
+ \fBca_conf=[path]\fR
+-Path to certificate authority configuration file. The CA configuration file will usually be /etc/burp/CA.cnf. The CA directory indicated by CA.cnf will usually be /etc/burp/CA. If ca_conf is set and the CA directory does not exist, the server will create, populate it, and the paths indicated by ssl_cert_ca, ssl_cert, ssl_key and ssl_dhfile will be overwritten. For more detailed information on this and the other ca_* options, please see docs/burp_ca.txt.
++Path to certificate authority configuration file. The CA configuration file will usually be @PKG_SYSCONFDIR@/CA.cnf. The CA directory indicated by CA.cnf will usually be @PKG_SYSCONFDIR@/CA. If ca_conf is set and the CA directory does not exist, the server will create, populate it, and the paths indicated by ssl_cert_ca, ssl_cert, ssl_key and ssl_dhfile will be overwritten. For more detailed information on this and the other ca_* options, please see docs/burp_ca.txt.
+ .TP
+ \fBca_name=[name]\fR
+ Name of the CA that the server will generate when using the ca_conf option.

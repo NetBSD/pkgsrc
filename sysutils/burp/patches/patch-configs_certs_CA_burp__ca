@@ -1,0 +1,13 @@
+$NetBSD: patch-configs_certs_CA_burp__ca,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- configs/certs/CA/burp_ca.orig	2015-05-29 23:33:04.000000000 +0000
++++ configs/certs/CA/burp_ca
+@@ -7,7 +7,7 @@
+ 
+ set -e
+ 
+-etc=/etc/burp
++etc=@PKG_SYSCONFDIR@
+ dir=${etc}/CA
+ conf=${etc}/CA.cnf
+ 

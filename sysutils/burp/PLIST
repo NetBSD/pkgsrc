@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/12 22:55:18 joerg Exp $
+libexec/burp/notify_script
+libexec/burp/ssl_extra_checks_script
+libexec/burp/summary_script
+libexec/burp/timer_script
+man/man8/bedup.8
+man/man8/burp.8
+man/man8/burp_ca.8
+man/man8/vss_strip.8
+sbin/bedup
+sbin/burp
+sbin/burp_ca
+sbin/vss_strip
+share/examples/burp/autoupgrade/server/win32/script
+share/examples/burp/autoupgrade/server/win64/script
+share/examples/burp/burp.conf
+share/examples/burp/burp-server.conf
+share/examples/burp/CA.cnf
+share/examples/burp/clientconfdir/incexc/example
+share/examples/burp/clientconfdir/testclient
