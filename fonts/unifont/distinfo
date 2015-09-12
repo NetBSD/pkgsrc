@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/09/12 18:22:22 wiz Exp $
+
+SHA1 (unifont-8.0.01.tar.gz) = 235736072e6a7202ea7807559e028fd4e95fc424
+RMD160 (unifont-8.0.01.tar.gz) = 2aad88872215b625cb84aa327531cdd97c8b8fd2
+Size (unifont-8.0.01.tar.gz) = 19157156 bytes
+SHA1 (patch-man_Makefile) = 3d4274578270fc8df1e713ffacaecabfa356383a
