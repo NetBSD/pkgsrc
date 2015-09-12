@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3881 2015/09/12 19:05:07 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.3882 2015/09/12 19:05:42 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6858,3 +6858,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/bam version 0.4.0 [wiz 2015-09-12]
 	Added games/teeworlds version 0.6.3 [wiz 2015-09-12]
 	Updated net/wireshark to 1.12.7 [tnn 2015-09-12]
+	Updated sysutils/collectd to 5.5.0nb8 [he 2015-09-12]
