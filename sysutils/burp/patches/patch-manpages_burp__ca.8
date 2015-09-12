@@ -1,0 +1,17 @@
+$NetBSD: patch-manpages_burp__ca.8,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- manpages/burp_ca.8.orig	2015-09-12 22:49:27.626332624 +0000
++++ manpages/burp_ca.8
+@@ -38,10 +38,10 @@ revoke certificate with serial number
+ generate certificate revoke list
+ .TP
+ \fB\-d|\-\-dir\fR \fB<dir>\fR
+-ca output dir (default: /etc/burp/CA)
++ca output dir (default: @PKG_SYSCONFDIR@/CA)
+ .TP
+ \fB\-c|\-\-config\fR \fB\fR
+-config file (default: /etc/burp/CA.cnf)
++config file (default: @PKG_SYSCONFDIR@/CA.cnf)
+ .TP
+ \fB\-n|\-\-name\fR \fB\fR
+ name (default: builder)

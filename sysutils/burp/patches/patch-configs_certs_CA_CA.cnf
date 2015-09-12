@@ -1,0 +1,13 @@
+$NetBSD: patch-configs_certs_CA_CA.cnf,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- configs/certs/CA/CA.cnf.orig	2015-07-01 11:45:08.000000000 +0000
++++ configs/certs/CA/CA.cnf
+@@ -1,7 +1,7 @@
+ # simple config for burp_ca
+ 
+ RANDFILE                = /dev/urandom
+-CA_DIR                  = /etc/burp/CA
++CA_DIR                  = @PKG_SYSCONFDIR@/CA
+ 
+ 
+ [ ca ]

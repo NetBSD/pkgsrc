@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/09/12 22:55:18 joerg Exp $
+
+--- Makefile.in.orig	2015-07-01 11:45:08.000000000 +0000
++++ Makefile.in
+@@ -112,12 +112,13 @@ installation: install
+ 
+ install: installdirs
+ 	@for I in $(all_subdirs); do (cd $$I && $(MAKE) DESTDIR=$(DESTDIR) $@ || exit 1); done
++	${BSD_INSTALL_SCRIPT_DIR} ${DESTDIR}${libexecdir}
++	${BSD_INSTALL_SCRIPT} configs/server/notify_script $(DESTDIR)${libexecdir}
++	${BSD_INSTALL_SCRIPT} configs/server/ssl_extra_checks_script $(DESTDIR)${libexecdir}
++	${BSD_INSTALL_SCRIPT} configs/server/summary_script $(DESTDIR)${libexecdir}
++	${BSD_INSTALL_SCRIPT} configs/server/timer_script $(DESTDIR)${libexecdir}
+ 	@if [ ! -f $(DESTDIR)$(sysconfdir)/burp-server.conf ] ; then cp configs/server/burp.conf $(DESTDIR)$(sysconfdir)/burp-server.conf ; fi
+ 	@if [ ! -f $(DESTDIR)$(sysconfdir)/burp.conf ] ; then cp configs/client/burp.conf $(DESTDIR)$(sysconfdir)/burp.conf ; fi
+-	@if [ ! -f $(DESTDIR)$(sysconfdir)/notify_script ] ; then cp configs/server/notify_script $(DESTDIR)$(sysconfdir)/notify_script && chmod 755 $(DESTDIR)$(sysconfdir)/notify_script ; fi
+-	@if [ ! -f $(DESTDIR)$(sysconfdir)/ssl_extra_checks_script ] ; then cp configs/server/ssl_extra_checks_script $(DESTDIR)$(sysconfdir)/ssl_extra_checks_script && chmod 755 $(DESTDIR)$(sysconfdir)/ssl_extra_checks_script ; fi
+-	@if [ ! -f $(DESTDIR)$(sysconfdir)/summary_script ] ; then cp configs/server/summary_script $(DESTDIR)$(sysconfdir)/summary_script && chmod 755 $(DESTDIR)$(sysconfdir)/summary_script ; fi
+-	@if [ ! -f $(DESTDIR)$(sysconfdir)/timer_script ] ; then cp configs/server/timer_script $(DESTDIR)$(sysconfdir)/timer_script && chmod 755 $(DESTDIR)$(sysconfdir)/timer_script ; fi
+ 	@if [ ! -f $(DESTDIR)$(sysconfdir)/autoupgrade/server/win32/script ] ; then cp configs/server/autoupgrade/windows.script $(DESTDIR)$(sysconfdir)/autoupgrade/server/win32/script ; fi
+ 	@if [ ! -f $(DESTDIR)$(sysconfdir)/autoupgrade/server/win64/script ] ; then cp configs/server/autoupgrade/windows.script $(DESTDIR)$(sysconfdir)/autoupgrade/server/win64/script ; fi
+ 	@if [ ! -f $(DESTDIR)$(sysconfdir)/CA.cnf ] ; then cp configs/certs/CA/CA.cnf $(DESTDIR)$(sysconfdir)/CA.cnf ; fi
