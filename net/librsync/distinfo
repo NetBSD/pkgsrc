@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/09/12 22:54:01 joerg Exp $
+
+SHA1 (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = 72ba18f73df99ca77335d0952bad3e0ca8f53e34
+RMD160 (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = d027e202518252fd64ec11a0a21122ded262718a
+Size (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = 140956 bytes
+SHA1 (patch-Makefile.am) = 196443871ed3795e62267e0a5399010d1031a584
