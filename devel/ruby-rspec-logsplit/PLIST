@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/13 14:02:13 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/rspec/log_split.rb
+${GEM_LIBDIR}/lib/rspec/log_split/config.rb
+${GEM_LIBDIR}/lib/rspec/log_split/handler.rb
+${GEM_LIBDIR}/lib/rspec/log_split/version.rb
+${GEM_LIBDIR}/rspec-logsplit.gemspec
+${GEM_LIBDIR}/spec/demo_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/demo.rb
+${GEM_LIBDIR}/spec/support/shared_examples/win.rb
+${GEM_LIBDIR}/spec/things_spec.rb
+${GEM_LIBDIR}/spec/zebra_spec.rb
+${GEM_LIBDIR}/tasks/rspec.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
