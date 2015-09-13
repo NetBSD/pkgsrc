@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.99 2015/08/05 13:19:52 taca Exp $
+# $NetBSD: Makefile.common,v 1.100 2015/09/13 02:22:47 taca Exp $
 #
 # used by www/contao32/Makefile
 # used by www/contao35/Makefile
 
 # current release
 CT32_VERSION=	3.2.21
-CT35_VERSION=	3.5.2
+CT35_VERSION=	3.5.3
 
 CT_VERS?=	35
 
