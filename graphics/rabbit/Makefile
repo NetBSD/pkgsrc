@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2015/06/11 17:40:13 taca Exp $
+# $NetBSD: Makefile,v 1.54 2015/09/13 15:55:39 taca Exp $
 #
 
-DISTNAME=	rabbit-2.1.6
+DISTNAME=	rabbit-2.1.8
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rabbit-shocker.org/download/
 
@@ -11,6 +11,7 @@ COMMENT=	RD-document-based presentation application
 LICENSE=	gnu-gpl-v2 # or later
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=0.90.3:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=1.1.4:../../devel/ruby-gnome2-gio
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg-[0-9]*:../../graphics/ruby-gnome2-rsvg
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-poppler-[0-9]*:../../print/ruby-gnome2-poppler
 DEPENDS+=	${RUBY_PKGPREFIX}-hikidoc-[0-9]*:../../textproc/ruby-hikidoc
