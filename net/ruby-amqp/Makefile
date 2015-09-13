@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/02/04 15:47:45 taca Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/13 14:58:39 taca Exp $
 
-DISTNAME=	amqp-1.5.0
+DISTNAME=	amqp-1.5.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
