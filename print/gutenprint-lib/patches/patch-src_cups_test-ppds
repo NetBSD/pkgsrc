@@ -1,0 +1,16 @@
+$NetBSD: patch-src_cups_test-ppds,v 1.1 2015/09/13 18:34:54 gdt Exp $
+
+Resolves test failure when package is not installed.
+From upstream, and will be in 5.2.11.
+
+--- src/cups/test-ppds.orig	2014-02-15 03:44:49.000000000 +0000
++++ src/cups/test-ppds
+@@ -10,7 +10,7 @@ make EXTRA_GENPPD_OPTS='-b -Z' ppd-clean
+ # Also, a number of our media sizes aren't named correctly, but we'll
+ # accept those issues rather than cluttering the namespace further and/or
+ # changing tag names.
+-cupstestppdopts='-I profiles -W sizes'
++cupstestppdopts='-I profiles -W sizes -I filters'
+ 
+ ppd_count=`find ppd \( -name '*.ppd.gz' -o -name '*.ppd' \) -print | wc -l`
+ 
