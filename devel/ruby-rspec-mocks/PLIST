@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/06/12 23:59:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/09/13 11:54:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -33,9 +33,11 @@ ${GEM_LIBDIR}/lib/rspec/mocks/message_expectation.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/method_double.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/method_reference.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/mutate_const.rb
+${GEM_LIBDIR}/lib/rspec/mocks/mutex.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/object_reference.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/order_group.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/proxy.rb
+${GEM_LIBDIR}/lib/rspec/mocks/reentrant_mutex.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/space.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/standalone.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/syntax.rb
