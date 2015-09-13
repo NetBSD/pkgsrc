@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/13 13:57:25 taca Exp $
+bin/dotenv
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/dotenv
+${GEM_LIBDIR}/lib/dotenv.rb
+${GEM_LIBDIR}/lib/dotenv/cli.rb
+${GEM_LIBDIR}/lib/dotenv/environment.rb
+${GEM_LIBDIR}/lib/dotenv/parser.rb
+${GEM_LIBDIR}/lib/dotenv/substitutions/command.rb
+${GEM_LIBDIR}/lib/dotenv/substitutions/variable.rb
+${GEM_LIBDIR}/lib/dotenv/tasks.rb
+${GEM_LIBDIR}/lib/dotenv/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
