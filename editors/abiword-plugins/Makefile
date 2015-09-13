@@ -1,30 +1,128 @@
-# $NetBSD: Makefile,v 1.60 2015/04/25 14:20:41 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2015/09/13 21:56:55 nros Exp $
 
-.include "../../editors/abiword/Makefile.common"
-
+.include	"../../editors/abiword/Makefile.common"
+DISTNAME=	abiword-${ABIVERSION}
 PKGNAME=	abiword-plugins-${ABIVERSION}
-PKGREVISION=	22
-COMMENT=	Plugins enhancing Abiword's capabilities
+PKGREVISION=	1
+CATEGORIES=	editors
+MASTER_SITES=	http://www.abiword.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 
-CONFIGURE_ARGS+= --without-gnomevfs
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.abiword.com/
+COMMENT=	Open Source cross-platform word processor
+LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	abiword-${ABIVERSION}{,nb*}:../../editors/abiword
+DISTINFO_FILE=	${.CURDIR}/../../editors/abiword/distinfo
+PATCHDIR=	${.CURDIR}/../../editors/abiword/patches
 
-.include "../../mk/bsd.prefs.mk"
+CONFLICTS=      abiword-plugins-[0-9]* abiword-personal-[0-9]* abiword2-[0-9]*
 
-# disabled plugins:
-#  aiksaurus mathview ots gda goffice grammar psiconv rsvg wordperfect wpg
-CONFIGURE_ARGS+=	--enable-plugins="applix babelfish bmp clarisworks collab command docbook eml freetranslation garble gdict gimp google hancom hrtext iscii kword latex loadbindings mht mif mswrite opendocument openwriter openxml opml paint passepartout pdb pdf presentation s5 sdw t602 urldict wikipedia wmf wml xslfo"
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf automake gmake pkg-config
+USE_LANGUAGES=	c c++
 
 BUILD_DIRS=	plugins
 
-#.include "../../converters/libwpd/buildlink3.mk"
-#.include "../../converters/libwpg/buildlink3.mk"
-#.include "../../converters/libwps/buildlink3.mk"
-#.include "../../databases/libgda/buildlink3.mk"
-#.include "../../databases/libgnomedb/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-#.include "../../textproc/aiksaurus/buildlink3.mk"
+# All configure_args here
+CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
+CONFIGURE_ARGS+=	--enable-builtin-plugins
+CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
+CONFIGURE_ARGS+=	--with-inter7eps=no
+
+# evolution data server can't be found even if buildlinked
+# disable to make sure it's not found somewhere else
+CONFIGURE_ARGS+=        --with-evolution-data-server=no
+
+# Disabled plugins: gda rsvg mathview
+# rsvg is not needed with gtk, we don't have libgnomedb
+# and mathview doesn't work (in future versions mathveiw uses
+# lasem instead of gtkmathview, it might work) 
+CONFIGURE_ARGS+=	--enable-plugins="\
+	aiksaurus \
+	applix \
+	babelfish \
+	bmp \
+	clarisworks \
+	collab \
+	command \
+	docbook \
+	eml \
+	epub \
+	freetranslation \
+	garble \
+	gdict \
+	gimp \
+	goffice \
+	google \
+	grammar \
+	hancom \
+	hrtext \
+	iscii \
+	kword \
+	latex \
+	loadbindings \
+	mht \
+	mif \
+	mswrite \
+	opendocument \
+	openwriter \
+	openxml \
+	opml \
+	ots \
+	paint \
+	passepartout \
+	pdb \
+	pdf \
+	presentation \
+	psion \
+	s5 \
+	sdw \
+	t602 \
+	urldict \
+	wikipedia \
+	wmf \
+	wml \
+	wordperfect \
+	wpg \
+	xslfo"
+
+
+PKGCONFIG_OVERRIDE+=	libabiword.pc.in
+
+pre-configure:
+	cd ${WRKSRC}; \
+	autoreconf --force --install
+
+.include "../../editors/abiword/options.mk"
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../converters/psiconv/buildlink3.mk"
+.include "../../converters/libwpd/buildlink3.mk"
+.include "../../converters/libwpg/buildlink3.mk"
+.include "../../converters/libwps/buildlink3.mk"
+.include "../../chat/loudmouth/buildlink3.mk"
+.include "../../chat/telepathy-glib/buildlink3.mk"
+.include "../../devel/asio/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../editors/abiword/buildlink3.mk"
+.include "../../geography/libchamplain012/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/goffice0.10/buildlink3.mk"
+#.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/aiksaurus/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-#.include "../../textproc/link-grammar/buildlink3.mk"
+.include "../../textproc/link-grammar/buildlink3.mk"
+.include "../../textproc/ots/buildlink3.mk"
+.include "../../textproc/rasqal/buildlink3.mk"
+.include "../../textproc/redland/buildlink3.mk"
+.include "../../www/tidy/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
