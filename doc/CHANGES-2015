@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3886 2015/09/13 02:23:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3887 2015/09/13 04:28:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6863,3 +6863,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/burp version 1.4.40 [joerg 2015-09-12]
 	Updated games/openttd to 1.5.2 [tnn 2015-09-12]
 	Updated www/contao35 to 3.5.3 [taca 2015-09-13]
+	Updated net/pear-Net_SMTP to 1.7.1 [taca 2015-09-13]
