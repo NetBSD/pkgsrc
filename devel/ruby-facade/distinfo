@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/02/01 14:02:31 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/09/13 09:04:52 taca Exp $
 
-SHA1 (facade-1.0.6.gem) = 6919ec36c5cda5e64d2963deb6a2c6b02176fcf9
-RMD160 (facade-1.0.6.gem) = 0405cd387a1f23af587170e02f6a15f2c61f56a7
-Size (facade-1.0.6.gem) = 7168 bytes
+SHA1 (facade-1.0.7.gem) = ddb5feae70f467162746d7934aeebef421f581aa
+RMD160 (facade-1.0.7.gem) = 09fbf68899db22daba631a337f2eb3440597d08c
+Size (facade-1.0.7.gem) = 12288 bytes
