@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2015/08/31 15:31:26 taca Exp $
+# $NetBSD: options.mk,v 1.13 2015/09/13 14:39:37 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
@@ -59,7 +59,7 @@ WWW_CONF_FILE?=		apache.conf
 .endif
 
 ###
-### Use apache web server
+### Use nginx web server
 ###
 .if !empty(PKG_OPTIONS:Mnginx)
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
