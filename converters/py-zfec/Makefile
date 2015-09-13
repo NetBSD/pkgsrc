@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/05/09 07:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/09/13 20:29:59 gdt Exp $
 
 DISTNAME=	zfec-1.4.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://pypi.python.org/packages/source/z/zfec/
 
@@ -10,8 +11,9 @@ HOMEPAGE=	http://pypi.python.org/pypi/zfec/
 COMMENT=	Fast erasure codec
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
+
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
-DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
