@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/09/13 07:59:45 adam Exp $
+
+Use proper variable for external zlib.
+
+--- configure.orig	2015-09-13 07:49:05.000000000 +0000
++++ configure
+@@ -5682,7 +5682,7 @@ if test x${use_bundled_zlib} = xyes; the
+     extra_libs="zlib/libz.a"
+     mkdir -p zlib
+ else
+-    extra_libs="-lz"
++    extra_ldflags="-lz"
+ fi
+ 
+ if test x${windows_os} = xyes; then
