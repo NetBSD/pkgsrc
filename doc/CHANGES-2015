@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3916 2015/09/13 11:51:14 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3917 2015/09/13 11:55:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6893,3 +6893,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/cups-filters to 1.0.76 [wiz 2015-09-13]
 	Updated devel/ruby-power_assert to 0.2.4 [taca 2015-09-13]
 	Updated devel/ruby-rgl to 0.5.1 [taca 2015-09-13]
+	Updated devel/ruby-rspec-core to 3.3.2 [taca 2015-09-13]
+	Updated devel/ruby-rspec-expectations to 3.3.1 [taca 2015-09-13]
+	Updated devel/ruby-rspec-mocks to 3.3.2 [taca 2015-09-13]
