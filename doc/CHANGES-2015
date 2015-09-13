@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3903 2015/09/13 09:28:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3904 2015/09/13 09:30:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6880,3 +6880,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git to 2.5.2 [wiz 2015-09-13]
 	Updated graphics/tiff to 4.0.6 [wiz 2015-09-13]
 	Updated devel/py-setuptools to 18.3.1 [wiz 2015-09-13]
+	Updated devel/py-tortoisehg to 3.5.1 [wiz 2015-09-13]
