@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/06/11 16:23:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/09/13 15:21:30 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -447,6 +447,9 @@ ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/normal.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/normal.text
+${GEM_LIBDIR}/test/testcases/span/04_footnote/backlink_text.html
+${GEM_LIBDIR}/test/testcases/span/04_footnote/backlink_text.options
+${GEM_LIBDIR}/test/testcases/span/04_footnote/backlink_text.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/definitions.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/definitions.latex
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/definitions.text
@@ -461,6 +464,8 @@ ${GEM_LIBDIR}/test/testcases/span/04_footnote/markers.latex
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/markers.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.text
+${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.html
+${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/across_lines.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/across_lines.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/button.html
