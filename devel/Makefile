@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2145 2015/09/13 13:58:46 taca Exp $
+# $NetBSD: Makefile,v 1.2146 2015/09/13 14:00:58 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1891,6 +1891,7 @@ SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-msgpack
 SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-needle
+SUBDIR+=	ruby-nenv
 SUBDIR+=	ruby-ole
 SUBDIR+=	ruby-open4
 SUBDIR+=	ruby-parseconfig
