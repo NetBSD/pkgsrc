@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/03/13 13:28:23 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/09/13 14:06:36 taca Exp $
 
-SHA1 (timers-4.0.1.gem) = e4b0324f6ef2687bfd5e350399e9bd66c8acca63
-RMD160 (timers-4.0.1.gem) = c4728d02443e18a9a82b1424583040628c7af6fd
-Size (timers-4.0.1.gem) = 14848 bytes
+SHA1 (timers-4.1.1.gem) = ec3fded43e0985be6fbc69621eed278116b71ce2
+RMD160 (timers-4.1.1.gem) = 2fb6b29d27262fec960f5bf95b44d585e6d25208
+Size (timers-4.1.1.gem) = 15360 bytes
