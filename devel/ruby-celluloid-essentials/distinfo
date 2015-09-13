@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/09/13 14:08:58 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/09/13 14:24:25 taca Exp $
 
-SHA1 (celluloid-essentials-0.20.2.gem) = c9a1a9f8b48f84c3ff27e694f44517b93a9b5922
-RMD160 (celluloid-essentials-0.20.2.gem) = 3f1e5caa7eb56f8375f082809e1e1eab534c1492
-Size (celluloid-essentials-0.20.2.gem) = 17408 bytes
+SHA1 (celluloid-essentials-0.20.2.1.gem) = 54bfdffb173e2265088f754f8392332a90f97ef0
+RMD160 (celluloid-essentials-0.20.2.1.gem) = c6702e0d5469245c76af193596ed0e489b2f4cc8
+Size (celluloid-essentials-0.20.2.1.gem) = 17920 bytes
