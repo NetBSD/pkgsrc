@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2015/06/08 14:48:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/09/13 14:51:58 taca Exp $
 bin/sprockets${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/sprockets
@@ -68,6 +69,8 @@ ${GEM_LIBDIR}/lib/sprockets/sass_template.rb
 ${GEM_LIBDIR}/lib/sprockets/server.rb
 ${GEM_LIBDIR}/lib/sprockets/transformers.rb
 ${GEM_LIBDIR}/lib/sprockets/uglifier_compressor.rb
+${GEM_LIBDIR}/lib/sprockets/unloaded_asset.rb
+${GEM_LIBDIR}/lib/sprockets/uri_tar.rb
 ${GEM_LIBDIR}/lib/sprockets/uri_utils.rb
 ${GEM_LIBDIR}/lib/sprockets/utils.rb
 ${GEM_LIBDIR}/lib/sprockets/version.rb
