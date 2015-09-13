@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2015/02/05 15:04:31 taca Exp $
-bin/haml
+@comment $NetBSD: PLIST,v 1.15 2015/09/13 15:18:07 taca Exp $
+bin/haml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -41,6 +41,12 @@ ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.0.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.1.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.2.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-4.0.x
+${GEM_LIBDIR}/test/haml-spec/LICENSE
+${GEM_LIBDIR}/test/haml-spec/README.md
+${GEM_LIBDIR}/test/haml-spec/lua_haml_spec.lua
+${GEM_LIBDIR}/test/haml-spec/perl_haml_test.pl
+${GEM_LIBDIR}/test/haml-spec/ruby_haml_test.rb
+${GEM_LIBDIR}/test/haml-spec/tests.json
 ${GEM_LIBDIR}/test/helper_test.rb
 ${GEM_LIBDIR}/test/markaby/standard.mab
 ${GEM_LIBDIR}/test/mocks/article.rb

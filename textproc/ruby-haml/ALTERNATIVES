@@ -1,0 +1,1 @@
+bin/haml @PREFIX@/bin/haml@RUBY_SUFFIX@
