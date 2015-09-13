@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2014/05/15 21:16:16 joerg Exp $
+$NetBSD: distinfo,v 1.17 2015/09/13 15:09:03 joerg Exp $
 
 SHA1 (firefox-17.0.11esr.source.tar.bz2) = 593153bc2658be0bdf6d1361a079d4ce8fd516bd
 RMD160 (firefox-17.0.11esr.source.tar.bz2) = 9797f1553bf20008e62df2713a22c5844e7e3bdc
@@ -38,6 +38,7 @@ SHA1 (patch-config_system__wrappers_freetype.h) = 1835def5db7d6917651d675d07851b
 SHA1 (patch-config_system__wrappers_ftadvanc.h) = 04873463bbcaa2c91fc36632fafd5737fa1e2d55
 SHA1 (patch-config_system__wrappers_ftbitmap.h) = 781220fe7d440feace49215b9c772afb7c00b2ec
 SHA1 (patch-config_system__wrappers_ftcache.h) = bec64e0acfec2331de7c4b820d4a0b62eb8b4725
+SHA1 (patch-config_system__wrappers_ftfntfmt.h) = 3a9a8848c8dba7004239c5aeb14e205d75f93fcf
 SHA1 (patch-config_system__wrappers_ftglyph.h) = 5afb40641c5c95dfb9f1736d354d8a1d8c6279ff
 SHA1 (patch-config_system__wrappers_ftlcdfil.h) = 20a20832543dd241353166f854b6bbbb1add107a
 SHA1 (patch-config_system__wrappers_ftoutln.h) = 6fab38e6939377556e54c0ff13ce6abc46a46beb
