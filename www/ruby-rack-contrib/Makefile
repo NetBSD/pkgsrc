@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/03/13 17:23:04 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/13 15:39:37 taca Exp $
 
-DISTNAME=	rack-contrib-1.2.0
+DISTNAME=	rack-contrib-1.4.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rack/rack-contrib/
+HOMEPAGE=	https://github.com/rack/rack-contrib/
 COMMENT=	Contributed Rack Middleware and Utilities
 LICENSE=	mit
 
