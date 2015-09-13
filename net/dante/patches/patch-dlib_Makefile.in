@@ -1,0 +1,27 @@
+$NetBSD: patch-dlib_Makefile.in,v 1.1 2015/09/13 21:55:15 leot Exp $
+
+o Do not use ssp(3) when compiling interposition.c:
+
+    interposition.c:1616:1: error: redefinition of 'read'
+     read(d, buf, nbytes)
+     ^
+    In file included from /usr/include/ssp/stdio.h:34:0,
+                     from /usr/include/stdio.h:597,
+                     from ../include/osdep.h:158,
+                     from ../include/common.h:56,
+                     from interposition.c:47:
+    /usr/include/ssp/unistd.h:39:1: note: previous definition of 'read' was here
+     __ssp_redirect0(ssize_t, read, (int __fd, void *__buf, size_t __len), \
+     ^
+
+--- dlib/Makefile.in.orig	2014-09-03 14:52:38.000000000 +0000
++++ dlib/Makefile.in
+@@ -508,7 +508,7 @@ distclean-compile:
+ @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
+ 
+ libdsocks_la-interposition.lo: interposition.c
+-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(libdsocks_la_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libdsocks_la-interposition.lo -MD -MP -MF $(DEPDIR)/libdsocks_la-interposition.Tpo -c -o libdsocks_la-interposition.lo `test -f 'interposition.c' || echo '$(srcdir)/'`interposition.c
++@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(libdsocks_la_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS:S/-D_FORTIFY_SOURCE=2//) $(AM_CFLAGS) $(CFLAGS) -MT libdsocks_la-interposition.lo -MD -MP -MF $(DEPDIR)/libdsocks_la-interposition.Tpo -c -o libdsocks_la-interposition.lo `test -f 'interposition.c' || echo '$(srcdir)/'`interposition.c
+ @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdsocks_la-interposition.Tpo $(DEPDIR)/libdsocks_la-interposition.Plo
+ @am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='interposition.c' object='libdsocks_la-interposition.lo' libtool=yes @AMDEPBACKSLASH@
