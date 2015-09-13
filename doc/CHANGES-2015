@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3909 2015/09/13 10:11:19 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3910 2015/09/13 10:17:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6886,3 +6886,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-highline to 1.7.3 [taca 2015-09-13]
 	Updated devel/ruby-little-plugger to 1.1.4 [taca 2015-09-13]
 	Updated devel/ruby-minitest to 5.8.0 [taca 2015-09-13]
+	Updated devel/ruby-mixlib-shellout to 2.2.1 [taca 2015-09-13]
