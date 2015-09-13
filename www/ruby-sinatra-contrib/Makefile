@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/06/11 17:14:56 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/13 15:49:08 taca Exp $
 
-DISTNAME=	sinatra-contrib-1.4.4
+DISTNAME=	sinatra-contrib-1.4.6
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/sinatra/sinatra-contrib/
+HOMEPAGE=	https://github.com/sinatra/sinatra-contrib/
 COMMENT=	Collection of useful Sinatra extensions
 LICENSE=	mit
 
