@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3891 2015/09/13 04:51:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3892 2015/09/13 04:58:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6868,3 +6868,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-pg to 0.18.3 [taca 2015-09-13]
 	Updated databases/ruby-sequel to 4.26.0 [taca 2015-09-13]
 	Updated databases/ruby-tiny_tds to 0.7.0 [taca 2015-09-13]
+	Updated devel/ruby-backports to 3.6.6 [taca 2015-09-13]
