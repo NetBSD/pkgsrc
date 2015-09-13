@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/08/22 10:51:20 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/09/13 14:24:58 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -157,6 +157,7 @@ go/doc/progs/slices.go
 go/doc/progs/timeout1.go
 go/doc/progs/timeout2.go
 go/doc/root.html
+go/doc/security.html
 go/doc/share.png
 go/doc/tos.html
 go/favicon.ico
@@ -4773,6 +4774,7 @@ go/test/fixedbugs/issue11750.go
 go/test/fixedbugs/issue11771.go
 go/test/fixedbugs/issue11790.go
 go/test/fixedbugs/issue12133.go
+go/test/fixedbugs/issue12226.go
 go/test/fixedbugs/issue1304.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
