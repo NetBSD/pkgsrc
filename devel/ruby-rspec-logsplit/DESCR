@@ -1,0 +1,6 @@
+Separate the logs between examples to allow for easier understanding.
+# Log Splitter for RSpec
+
+This `RSpec` plugin allows you to change the logger for your library for each
+separate example. This gives the ability to see the log output for each
+specific test.
