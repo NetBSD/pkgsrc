@@ -1,6 +1,8 @@
-# $NetBSD: fetch.mk,v 1.65 2015/09/08 11:13:12 joerg Exp $
+# $NetBSD: fetch.mk,v 1.66 2015/09/13 15:03:57 joerg Exp $
 
+.if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
+.endif
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 
 # Where to put distfiles that don't have any other master site
@@ -115,7 +117,10 @@ post-fetch:
 ${DISTDIR}/${_file_}:
 	@${DO_NADA}
 .  else
-${DISTDIR}/${_file_}: fetch-check-interactive do-fetch-file error-check
+${DISTDIR}/${_file_}: do-fetch-file error-check
+.    if !empty(IGNORE_INTERACTIVE_FETCH:M[yY][eE][sS])
+${DISTDIR}/${_file_}: fetch-check-interactive
+.    endif
 .  endif
 .endfor
 
