@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/08 15:17:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/09/13 15:40:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/raindrops_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.manifest
-${GEM_LIBDIR}/.wrongdoc.yml
+${GEM_LIBDIR}/.olddoc.yml
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GIT-VERSION-FILE
 ${GEM_LIBDIR}/GIT-VERSION-GEN
 ${GEM_LIBDIR}/GNUmakefile
@@ -15,8 +14,9 @@ ${GEM_LIBDIR}/LATEST
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NEWS
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/archive/.gitignore
+${GEM_LIBDIR}/archive/slrnpull.conf
 ${GEM_LIBDIR}/examples/linux-listener-stats.rb
 ${GEM_LIBDIR}/examples/middleware.ru
 ${GEM_LIBDIR}/examples/watcher.ru
