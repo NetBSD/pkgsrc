@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/06/10 14:53:09 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/13 15:14:46 taca Exp $
 
-DISTNAME=	listen-2.10.0
+DISTNAME=	listen-2.10.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
