@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3887 2015/09/13 04:28:40 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3888 2015/09/13 04:45:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6864,3 +6864,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/openttd to 1.5.2 [tnn 2015-09-12]
 	Updated www/contao35 to 3.5.3 [taca 2015-09-13]
 	Updated net/pear-Net_SMTP to 1.7.1 [taca 2015-09-13]
+	Updated graphics/libepoxy to 1.3.1 [tnn 2015-09-13]
