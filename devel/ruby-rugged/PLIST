@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/03 13:22:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/09/13 12:27:45 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -65,9 +65,11 @@ ${GEM_LIBDIR}/vendor/libgit2/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/Makefile.embed
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/AddCFlagIfSupported.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindCoreFoundation.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindGSSAPI.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindHTTP_Parser.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindIconv.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindSecurity.cmake
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/LICENSE-MIT
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/http_parser.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/http_parser.h
@@ -78,6 +80,10 @@ ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regex.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regex_internal.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regex_internal.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regexec.c
+${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/urlmon.h
+${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp.def
+${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp.h
+${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp64.def
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/adler32.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/crc32.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/crc32.h
@@ -133,7 +139,6 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/oidarray.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/pack.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/patch.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/pathspec.h
-${GEM_LIBDIR}/vendor/libgit2/include/git2/push.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/rebase.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/refdb.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/reflog.h
@@ -192,7 +197,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/blob.c
 ${GEM_LIBDIR}/vendor/libgit2/src/blob.h
 ${GEM_LIBDIR}/vendor/libgit2/src/branch.c
 ${GEM_LIBDIR}/vendor/libgit2/src/branch.h
-${GEM_LIBDIR}/vendor/libgit2/src/bswap.h
 ${GEM_LIBDIR}/vendor/libgit2/src/buf_text.c
 ${GEM_LIBDIR}/vendor/libgit2/src/buf_text.h
 ${GEM_LIBDIR}/vendor/libgit2/src/buffer.c
@@ -216,6 +220,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/config_cache.c
 ${GEM_LIBDIR}/vendor/libgit2/src/config_file.c
 ${GEM_LIBDIR}/vendor/libgit2/src/config_file.h
 ${GEM_LIBDIR}/vendor/libgit2/src/crlf.c
+${GEM_LIBDIR}/vendor/libgit2/src/curl_stream.c
+${GEM_LIBDIR}/vendor/libgit2/src/curl_stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/date.c
 ${GEM_LIBDIR}/vendor/libgit2/src/delta-apply.c
 ${GEM_LIBDIR}/vendor/libgit2/src/delta-apply.h
@@ -266,6 +272,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/ignore.h
 ${GEM_LIBDIR}/vendor/libgit2/src/index.c
 ${GEM_LIBDIR}/vendor/libgit2/src/index.h
 ${GEM_LIBDIR}/vendor/libgit2/src/indexer.c
+${GEM_LIBDIR}/vendor/libgit2/src/integer.h
 ${GEM_LIBDIR}/vendor/libgit2/src/iterator.c
 ${GEM_LIBDIR}/vendor/libgit2/src/iterator.h
 ${GEM_LIBDIR}/vendor/libgit2/src/khash.h
@@ -347,6 +354,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/sortedcache.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stash.c
 ${GEM_LIBDIR}/vendor/libgit2/src/status.c
 ${GEM_LIBDIR}/vendor/libgit2/src/status.h
+${GEM_LIBDIR}/vendor/libgit2/src/stransport_stream.c
+${GEM_LIBDIR}/vendor/libgit2/src/stransport_stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/strmap.c
 ${GEM_LIBDIR}/vendor/libgit2/src/strmap.h
@@ -359,6 +368,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/tag.c
 ${GEM_LIBDIR}/vendor/libgit2/src/tag.h
 ${GEM_LIBDIR}/vendor/libgit2/src/thread-utils.c
 ${GEM_LIBDIR}/vendor/libgit2/src/thread-utils.h
+${GEM_LIBDIR}/vendor/libgit2/src/tls_stream.c
+${GEM_LIBDIR}/vendor/libgit2/src/tls_stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/trace.c
 ${GEM_LIBDIR}/vendor/libgit2/src/trace.h
 ${GEM_LIBDIR}/vendor/libgit2/src/transaction.c
@@ -414,6 +425,12 @@ ${GEM_LIBDIR}/vendor/libgit2/src/win32/reparse.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/utf-conv.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/utf-conv.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/version.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.c
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.c
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.c
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.h
 ${GEM_LIBDIR}/vendor/libgit2/src/xdiff/xdiff.h
