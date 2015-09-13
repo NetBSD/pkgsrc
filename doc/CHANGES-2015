@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3899 2015/09/13 09:05:26 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3900 2015/09/13 09:18:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6876,3 +6876,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ccache to 3.2.3 [adam 2015-09-13]
 	Updated devel/ruby-ffi to 1.9.10 [taca 2015-09-13]
 	Updated devel/ruby-facade to 1.0.7 [taca 2015-09-13]
+	Updated devel/afl to 1.94b [wiz 2015-09-13]
