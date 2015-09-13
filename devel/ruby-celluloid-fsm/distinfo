@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/13 14:11:45 taca Exp $
+
+SHA1 (celluloid-fsm-0.20.1.gem) = d91569b0630d1f6602d9b61daa67111c627c73f4
+RMD160 (celluloid-fsm-0.20.1.gem) = 2d94cb291d85c9c25d79501ca2c47d0ae6cb629a
+Size (celluloid-fsm-0.20.1.gem) = 8704 bytes
