@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3911 2015/09/13 10:19:06 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3912 2015/09/13 10:20:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6888,3 +6888,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-minitest to 5.8.0 [taca 2015-09-13]
 	Updated devel/ruby-mixlib-shellout to 2.2.1 [taca 2015-09-13]
 	Updated devel/ruby-msgpack to 0.6.2 [taca 2015-09-13]
+	Updated devel/ruby-parser to 3.7.1 [taca 2015-09-13]
