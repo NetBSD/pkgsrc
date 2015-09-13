@@ -1,0 +1,14 @@
+$NetBSD: patch-plugins_wordperfect_xp_Makefile.am,v 1.1 2015/09/13 21:32:13 nros Exp $
+* adapt wordperfect plugins to dependecies available in pkgsrc 
+  from abiword svn date 2014-12-27
+--- plugins/wordperfect/xp/Makefile.am.orig	2008-05-08 13:12:53.000000000 +0000
++++ plugins/wordperfect/xp/Makefile.am
+@@ -6,8 +6,6 @@ AM_CPPFLAGS = \
+ 	-DABI_BUILD_VERSION=\"$(VERSION)\"
+ 
+ libxp_la_SOURCES = \
+-	ie_exp_WordPerfect.cpp \
+-	ie_exp_WordPerfect.h \
+ 	ie_impexp_WordPerfect.cpp \
+ 	ie_impexp_WordPerfect.h \
+ 	ie_imp_WordPerfect.cpp \

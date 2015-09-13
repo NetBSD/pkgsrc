@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.17 2010/11/26 14:49:50 adam Exp $
-
---- src/af/util/xp/ut_iconv.cpp.orig	2009-06-25 00:52:27.000000000 +0000
+$NetBSD: patch-src_af_util_xp_ut__iconv.cpp,v 1.1 2015/09/13 21:32:13 nros Exp $
+* NetBSD uses citrus iconv that has UCS-4
+--- src/af/util/xp/ut_iconv.cpp.orig	2013-04-07 13:53:03.000000000 +0000
 +++ src/af/util/xp/ut_iconv.cpp
 @@ -267,9 +267,11 @@ const char * ucs4Internal ()
  #elif defined(_LIBICONV_H)

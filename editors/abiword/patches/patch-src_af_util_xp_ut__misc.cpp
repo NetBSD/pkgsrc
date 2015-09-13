@@ -1,8 +1,8 @@
-$NetBSD: patch-sa,v 1.3 2010/11/26 14:49:50 adam Exp $
+$NetBSD: patch-src_af_util_xp_ut__misc.cpp,v 1.1 2015/09/13 21:32:13 nros Exp $
 
---- src/af/util/xp/ut_misc.cpp.orig	2009-06-28 22:09:08.000000000 +0000
+--- src/af/util/xp/ut_misc.cpp.orig	2013-04-07 13:53:03.000000000 +0000
 +++ src/af/util/xp/ut_misc.cpp
-@@ -625,7 +625,7 @@ const gchar ** UT_splitPropsToArray(gcha
+@@ -589,7 +589,7 @@ const gchar ** UT_splitPropsToArray(gcha
  		}
  
  		char * semi = NULL;
@@ -11,7 +11,7 @@ $NetBSD: patch-sa,v 1.3 2010/11/26 14:49:50 adam Exp $
   		while((semi = (char *) strchr(p, ';')))
  		{
  			*semi = 0;
-@@ -639,7 +639,7 @@ const gchar ** UT_splitPropsToArray(gcha
+@@ -603,7 +603,7 @@ const gchar ** UT_splitPropsToArray(gcha
  		const gchar ** pPropsArray = new const gchar *[2 * iPropCount + 1];
  		UT_return_val_if_fail( pPropsArray, NULL );
  	
