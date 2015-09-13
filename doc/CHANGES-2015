@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3889 2015/09/13 04:48:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3890 2015/09/13 04:49:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6866,3 +6866,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/pear-Net_SMTP to 1.7.1 [taca 2015-09-13]
 	Updated graphics/libepoxy to 1.3.1 [tnn 2015-09-13]
 	Updated databases/ruby-pg to 0.18.3 [taca 2015-09-13]
+	Updated databases/ruby-sequel to 4.26.0 [taca 2015-09-13]
