@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2015/02/05 15:04:31 taca Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/13 15:18:07 taca Exp $
 
-DISTNAME=	haml-4.0.6
+DISTNAME=	haml-4.0.7
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=0:../../textproc/ruby-tilt
 
-CONFLICTS+=	ruby[1-9][0-9][0-9]-haml-[0-9]*
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
