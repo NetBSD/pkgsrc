@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/06/08 14:43:24 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/09/13 14:49:30 taca Exp $
 
-SHA1 (parallel-1.6.0.gem) = bdc10b4d32771adcedf0910af7576326c1333f06
-RMD160 (parallel-1.6.0.gem) = 195c3052d5413f582c53d2dc8b8cd065b1042673
-Size (parallel-1.6.0.gem) = 8704 bytes
+SHA1 (parallel-1.6.1.gem) = a0bfbedeaa0050ba23553d97bf90f3c62dd446bf
+RMD160 (parallel-1.6.1.gem) = 68b7f3c1fa67b25a8679ad5ef96896570d360c0b
+Size (parallel-1.6.1.gem) = 8704 bytes
