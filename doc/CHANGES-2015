@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3894 2015/09/13 07:32:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3895 2015/09/13 07:35:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6871,3 +6871,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-backports to 3.6.6 [taca 2015-09-13]
 	Updated devel/ruby-eventmachine to 1.0.8 [taca 2015-09-13]
 	Updated games/lgogdownloader to 2.25 [wiz 2015-09-13]
+	Updated devel/p5-Parse-RecDescent to 1.967.11 [wiz 2015-09-13]
