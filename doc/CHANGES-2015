@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3945 2015/09/13 15:22:18 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3946 2015/09/13 15:23:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6930,3 +6930,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/ruby-listen to 2.10.1 [taca 2015-09-13]
 	Updated textproc/ruby-haml to 4.0.7 [taca 2015-09-13]
 	Updated textproc/ruby-kramdown to 1.8.0 [taca 2015-09-13]
+	Updated textproc/ruby-multi_json to 1.11.2 [taca 2015-09-13]
