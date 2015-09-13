@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/06/03 10:48:18 taca Exp $
+$NetBSD: distinfo,v 1.16 2015/09/13 04:47:39 taca Exp $
 
-SHA1 (pg-0.18.2.gem) = 6b35a1a2b565277db26fabe9ce66e1fe62306528
-RMD160 (pg-0.18.2.gem) = d6797990b435afc803bf52c21e1e22d745ab08a7
-Size (pg-0.18.2.gem) = 216576 bytes
+SHA1 (pg-0.18.3.gem) = fc7af57ab8b8d58a35b78cfbe6be869b130127fe
+RMD160 (pg-0.18.3.gem) = 2622cd1b422ea0f3716edfe583a6aa082f80819c
+Size (pg-0.18.3.gem) = 218624 bytes
