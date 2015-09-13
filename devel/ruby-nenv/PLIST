@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/13 14:00:03 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/nenv.rb
+${GEM_LIBDIR}/lib/nenv/autoenvironment.rb
+${GEM_LIBDIR}/lib/nenv/builder.rb
+${GEM_LIBDIR}/lib/nenv/environment.rb
+${GEM_LIBDIR}/lib/nenv/environment/dumper.rb
+${GEM_LIBDIR}/lib/nenv/environment/loader.rb
+${GEM_LIBDIR}/lib/nenv/version.rb
+${GEM_LIBDIR}/nenv.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
