@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/05/20 21:57:10 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2015/09/13 02:31:22 joerg Exp $
 
 DISTNAME=	Botan-1.11.16
 PKGNAME=	${DISTNAME:tl}
@@ -40,6 +40,10 @@ PLIST.x86_64=	yes
 PLIST.x86=	yes
 .elif ${MACHINE_ARCH} == "i386"
 PLIST.x86=	yes
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKE_FLAGS+=	USER_APP_LINKS_TO=-lnsl
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
