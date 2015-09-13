@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3936 2015/09/13 14:49:56 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3937 2015/09/13 14:52:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6921,3 +6921,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-commander to 4.3.5 [taca 2015-09-13]
 	Updated misc/ruby-daemons to 1.2.3 [taca 2015-09-13]
 	Updated misc/ruby-parallel to 1.6.1 [taca 2015-09-13]
+	Updated misc/ruby-sprockets to 3.3.4 [taca 2015-09-13]
