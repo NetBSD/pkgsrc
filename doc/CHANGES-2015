@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3927 2015/09/13 14:24:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3928 2015/09/13 14:28:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6912,3 +6912,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/ruby-celluloid-supervision version 0.20.1.1 [taca 2015-09-13]
 	Updated devel/ruby-celluloid to 0.17.1.2 [taca 2015-09-13]
 	Updated devel/ruby-celluloid-essentials to 0.20.2.1 [taca 2015-09-13]
+	Updated graphics/ruby-RMagick to 2.15.4 [taca 2015-09-13]
