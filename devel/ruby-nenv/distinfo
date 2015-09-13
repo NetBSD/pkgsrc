@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/13 14:00:03 taca Exp $
+
+SHA1 (nenv-0.2.0.gem) = abadad26da4efca39096135b0a3bc864381e78ce
+RMD160 (nenv-0.2.0.gem) = fd6e02fa97c9cae27818e73953e67c58b11d86a5
+Size (nenv-0.2.0.gem) = 10240 bytes
