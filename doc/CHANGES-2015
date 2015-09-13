@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3920 2015/09/13 12:28:21 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3921 2015/09/13 13:00:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6899,3 +6899,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rspec-rails to 3.3.3 [taca 2015-09-13]
 	Updated devel/libgit2 to 0.23.2 [taca 2015-09-13]
 	Updated devel/ruby-rugged to 0.23.2 [taca 2015-09-13]
+	Updated devel/ruby-term-ansicolor to 1.3.2 [taca 2015-09-13]
