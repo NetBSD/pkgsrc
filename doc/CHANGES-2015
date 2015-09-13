@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3931 2015/09/13 14:36:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3932 2015/09/13 14:37:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6916,3 +6916,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/go to 1.5.1 [bsiegert 2015-09-13]
 	Updated graphics/ruby-mini-magick to 4.3.3 [taca 2015-09-13]
 	Updated lang/ruby-execjs to 2.6.0 [taca 2015-09-13]
+	Updated math/ruby-gsl to 1.16.0.6 [taca 2015-09-13]
