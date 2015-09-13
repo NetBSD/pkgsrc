@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/06/11 16:54:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/09/13 15:35:17 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -40,6 +40,7 @@ ${GEM_LIBDIR}/lib/puma/capistrano.rb
 ${GEM_LIBDIR}/lib/puma/cli.rb
 ${GEM_LIBDIR}/lib/puma/client.rb
 ${GEM_LIBDIR}/lib/puma/cluster.rb
+${GEM_LIBDIR}/lib/puma/commonlogger.rb
 ${GEM_LIBDIR}/lib/puma/compat.rb
 ${GEM_LIBDIR}/lib/puma/configuration.rb
 ${GEM_LIBDIR}/lib/puma/const.rb
@@ -55,8 +56,12 @@ ${GEM_LIBDIR}/lib/puma/jruby_restart.rb
 ${GEM_LIBDIR}/lib/puma/minissl.rb
 ${GEM_LIBDIR}/lib/puma/null_io.rb
 ${GEM_LIBDIR}/lib/puma/puma_http11.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/puma/rack/backports/uri/common_18.rb
+${GEM_LIBDIR}/lib/puma/rack/backports/uri/common_192.rb
+${GEM_LIBDIR}/lib/puma/rack/backports/uri/common_193.rb
+${GEM_LIBDIR}/lib/puma/rack/builder.rb
+${GEM_LIBDIR}/lib/puma/rack/urlmap.rb
 ${GEM_LIBDIR}/lib/puma/rack_default.rb
-${GEM_LIBDIR}/lib/puma/rack_patch.rb
 ${GEM_LIBDIR}/lib/puma/reactor.rb
 ${GEM_LIBDIR}/lib/puma/runner.rb
 ${GEM_LIBDIR}/lib/puma/server.rb
