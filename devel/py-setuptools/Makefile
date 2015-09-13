@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.78 2015/08/30 14:44:13 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2015/09/13 09:28:16 wiz Exp $
 
-EGG_VERSION=		18.2
+EGG_VERSION=		18.3.1
 DISTNAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
 CATEGORIES=		devel python
-MASTER_SITES=		https://pypi.python.org/packages/source/s/setuptools/
+MASTER_SITES=		${MASTER_SITE_PYPI:=s/setuptools/}
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://pypi.python.org/pypi/setuptools
