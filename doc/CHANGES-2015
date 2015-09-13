@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3901 2015/09/13 09:24:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3902 2015/09/13 09:27:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6878,3 +6878,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-facade to 1.0.7 [taca 2015-09-13]
 	Updated devel/afl to 1.94b [wiz 2015-09-13]
 	Updated devel/git to 2.5.2 [wiz 2015-09-13]
+	Updated graphics/tiff to 4.0.6 [wiz 2015-09-13]
