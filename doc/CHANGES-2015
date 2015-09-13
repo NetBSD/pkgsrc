@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3912 2015/09/13 10:20:40 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3913 2015/09/13 10:45:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6889,3 +6889,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-mixlib-shellout to 2.2.1 [taca 2015-09-13]
 	Updated devel/ruby-msgpack to 0.6.2 [taca 2015-09-13]
 	Updated devel/ruby-parser to 3.7.1 [taca 2015-09-13]
+	Updated lang/mono to 4.0.4.1 [wiz 2015-09-13]
