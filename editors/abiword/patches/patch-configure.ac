@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/09/13 21:32:13 nros Exp $
+Use the installed libabiword instead of the one in the build directory
+This is needed for the plugins so the can build as a separate package
+--- configure.ac.orig	2015-06-06 23:11:58.000000000 +0000
++++ configure.ac
+@@ -893,7 +893,7 @@ if test "$TOOLKIT" = "gtk"  && 
+    test "$enable_shared" = "yes"; then
+ 	# link plugins to work around gcc visibility issue with 
+ 	# derived classes in dlopened modules
+-	PLUGIN_LIBS='${top_builddir}/src/libabiword-'"$ABIWORD_SERIES"'.la'" $PLUGIN_LIBS"
++	PLUGIN_LIBS='${prefix}/lib/libabiword-'"$ABIWORD_SERIES"'.la'" $PLUGIN_LIBS"
+ elif test "$TOOLKIT" = "win"; then
+ 	PLUGIN_CFLAGS="$PLUGIN_CFLAGS "'-D_WIN32_IE=0x0501 -D_WIN32_WINNT=0x0500'
+ 	PLUGIN_LIBS='${top_builddir}/src/libabiword-'"$ABIWORD_SERIES"'.la'" $PLUGIN_LIBS"

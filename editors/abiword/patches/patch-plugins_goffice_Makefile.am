@@ -1,0 +1,24 @@
+$NetBSD: patch-plugins_goffice_Makefile.am,v 1.1 2015/09/13 21:32:13 nros Exp $
+GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
+to the linker.  Prefix with "-Wl," to fix build.
+Use CXX for linking.
+--- plugins/goffice/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
++++ plugins/goffice/Makefile.am
+@@ -1,4 +1,5 @@
+ 
++
+ SUBDIRS = unix
+ 
+ plugindir = $(ABIWORD_PLUGINSDIR)
+@@ -11,9 +12,10 @@ goffice_la_LIBADD = \
+ goffice_la_LDFLAGS = \
+ 	-avoid-version \
+ 	-module \
+-	-no-undefined
++	-Wl,-no-undefined
+ 
+ goffice_la_SOURCES = 
++nodist_EXTRA_goffice_la_SOURCES = dummy.cpp
+ 
+ EXTRA_DIST = \
+ 	plugin.m4
