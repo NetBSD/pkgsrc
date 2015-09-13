@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/06/14 21:50:07 prlw1 Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/13 04:44:48 tnn Exp $
 
-DISTNAME=	libepoxy-1.2
-PKGREVISION=	2
+DISTNAME=	libepoxy-1.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
