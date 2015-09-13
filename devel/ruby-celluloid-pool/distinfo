@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/13 14:12:40 taca Exp $
+
+SHA1 (celluloid-pool-0.20.1.gem) = b59db27c196f602bf7f1d487e2de03cf2b47b091
+RMD160 (celluloid-pool-0.20.1.gem) = 09a215654532f2a67ffb17a716aeeb2cd506a6af
+Size (celluloid-pool-0.20.1.gem) = 9216 bytes
