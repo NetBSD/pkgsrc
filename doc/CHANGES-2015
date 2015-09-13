@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3949 2015/09/13 15:32:41 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3950 2015/09/13 15:33:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-redcarpet to 3.3.2 [taca 2015-09-13]
 	Updated www/ruby-capybara to 2.5.0 [taca 2015-09-13]
 	Updated www/ruby-http_router to 0.11.2 [taca 2015-09-13]
+	Updated www/ruby-jekyll-gist to 1.3.4 [taca 2015-09-13]
