@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3885 2015/09/12 23:38:49 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.3886 2015/09/13 02:23:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6862,3 +6862,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/librsync version 1.0.1 [joerg 2015-09-12]
 	Added sysutils/burp version 1.4.40 [joerg 2015-09-12]
 	Updated games/openttd to 1.5.2 [tnn 2015-09-12]
+	Updated www/contao35 to 3.5.3 [taca 2015-09-13]
