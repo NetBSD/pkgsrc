@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.25 2015/06/07 10:32:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2015/09/13 14:27:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/.editorconfig
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.hound.yml
 ${GEM_LIBDIR}/.rspec
@@ -369,6 +370,13 @@ ${GEM_LIBDIR}/lib/rvg/units.rb
 ${GEM_LIBDIR}/rmagick.gemspec
 ${GEM_LIBDIR}/spec/rmagick/ImageList1_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/draw_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/blue_shift_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/composite_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/constitute_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/dispatch_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/from_blob_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/ping_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/properties_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/test/Image1.rb
 ${GEM_LIBDIR}/test/Image2.rb
