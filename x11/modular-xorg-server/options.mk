@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2015/04/29 15:11:02 tnn Exp $
+# $NetBSD: options.mk,v 1.12 2015/09/13 04:59:35 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	dri inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dri dri3 dtrace
+PLIST_VARS+=		dri dri3 dtrace glamor
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
@@ -20,11 +20,15 @@ PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx
+.  if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PLIST.glamor=		yes
+CONFIGURE_ARGS+=	--enable-glamor
+.include "../../x11/libxshmfence/buildlink3.mk"
+.  endif
 # Linux supports dri3
 .  if ${OPSYS} == "Linux"
 PLIST.dri3=		yes
 .include "../../x11/dri3proto/buildlink3.mk"
-.include "../../x11/libxshmfence/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-dri3
 .  else
 CONFIGURE_ARGS+=	--disable-dri3
@@ -40,14 +44,6 @@ pre-build: disable-modesetting
 disable-modesetting:
 	(echo "all:"; echo "install:") > ${WRKSRC}/hw/xfree86/drivers/modesetting/Makefile
 .endif
-
-#.if !empty(PKG_OPTIONS:Mglamor)
-#.include "../../x11/dri3proto/buildlink3.mk"
-#.include "../../x11/libxshmfence/buildlink3.mk"
-#CONFIGURE_ARGS+=	--enable-xtrans-send-fds
-#CONFIGURE_ARGS+=	--enable-dri3
-#CONFIGURE_ARGS+=	--enable-glamor
-#.endif
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
