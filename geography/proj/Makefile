@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/03/14 18:52:30 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/13 23:22:23 gdt Exp $
 
-VERSION_BASE=	4.9.1
+VERSION_BASE=	4.9.2
 VERSION=	${VERSION_BASE}
 WRKSRC=		${WRKDIR}/proj-${VERSION_BASE}
 DISTNAME=	proj-${VERSION}

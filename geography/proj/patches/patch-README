@@ -1,8 +1,8 @@
-$NetBSD: patch-README,v 1.1 2012/03/14 23:36:06 gdt Exp $
+$NetBSD: patch-README,v 1.2 2015/09/13 23:22:23 gdt Exp $
 
 Sent upstream by email 20120309.
 
---- README.orig	2010-12-05 16:06:32.000000000 +0000
+--- README.orig	2015-09-08 15:17:17.000000000 +0000
 +++ README
 @@ -40,6 +40,13 @@ After executing configure, execute:
  
