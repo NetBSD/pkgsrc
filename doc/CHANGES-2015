@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3905 2015/09/13 09:33:17 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3906 2015/09/13 10:07:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6882,3 +6882,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 18.3.1 [wiz 2015-09-13]
 	Updated devel/py-tortoisehg to 3.5.1 [wiz 2015-09-13]
 	Updated devel/py-atomicwrites to 0.1.8 [wiz 2015-09-13]
+	Updated devel/ruby-ffi-yajl to 2.2.2 [taca 2015-09-13]
