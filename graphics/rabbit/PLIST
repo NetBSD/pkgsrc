@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/03/13 17:58:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/09/13 15:55:39 taca Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -48,6 +48,7 @@ ${RUBY_VENDORLIB}/rabbit/element/text-renderer.rb
 ${RUBY_VENDORLIB}/rabbit/element/text.rb
 ${RUBY_VENDORLIB}/rabbit/element/title-slide.rb
 ${RUBY_VENDORLIB}/rabbit/element/video.rb
+${RUBY_VENDORLIB}/rabbit/error.rb
 ${RUBY_VENDORLIB}/rabbit/formatter.rb
 ${RUBY_VENDORLIB}/rabbit/frame.rb
 ${RUBY_VENDORLIB}/rabbit/front.rb
@@ -139,13 +140,11 @@ ${RUBY_VENDORLIB}/rabbit/renderer/display/search.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/spotlight.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/engine.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/engine/cairo.rb
-${RUBY_VENDORLIB}/rabbit/renderer/engine/gdk.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/gl.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/kernel.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/pixmap.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/pixmap/base.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/pixmap/cairo.rb
-${RUBY_VENDORLIB}/rabbit/renderer/pixmap/gdk.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/pixmap/gl.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/print.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/print/base.rb
