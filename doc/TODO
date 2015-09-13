@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14886 2015/09/12 19:05:07 tnn Exp $
+$NetBSD: TODO,v 1.14887 2015/09/13 07:32:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1014,7 +1014,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lft-3.73
 	o lgeneral-1.2.3
-	o lgogdownloader-2.25
 	o libassuan-2.2.1
 	o libasyncns-0.8
 	o libbpg-0.9.5
