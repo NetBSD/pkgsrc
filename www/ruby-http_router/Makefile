@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/03/14 19:02:56 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/13 15:32:01 taca Exp $
 
-DISTNAME=	http_router-0.11.1
+DISTNAME=	http_router-0.11.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/joshbuddy/http_router/
+HOMEPAGE=	https://github.com/joshbuddy/http_router/
 COMMENT=	Kick-ass HTTP router for use in Rack
 LICENSE=	mit
 
