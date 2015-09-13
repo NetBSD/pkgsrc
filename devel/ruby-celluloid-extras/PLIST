@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/13 14:10:34 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.gitmodules
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/celluloid-extras.gemspec
+${GEM_LIBDIR}/lib/celluloid/extras/hash.rb
+${GEM_LIBDIR}/lib/celluloid/extras/rehasher.rb
+${GEM_LIBDIR}/lib/celluloid/extras/version.rb
+${GEM_LIBDIR}/tasks/rspec.rake
+${GEM_LIBDIR}/tasks/rubocop.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
