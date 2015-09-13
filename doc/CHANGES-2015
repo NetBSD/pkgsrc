@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3957 2015/09/13 15:56:04 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3958 2015/09/13 21:15:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6942,3 +6942,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-sinatra-contrib to 1.4.6 [taca 2015-09-13]
 	Updated math/ruby-spreadsheet to 1.0.5 [taca 2015-09-13]
 	Updated graphics/rabbit to 2.1.8 [taca 2015-09-13]
+	Updated www/typo3_62 to 6.2.15 [taca 2015-09-13]
