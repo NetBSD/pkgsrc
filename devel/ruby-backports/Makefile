@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/02/01 13:56:35 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/13 04:57:44 taca Exp $
 
-DISTNAME=	backports-3.6.4
+DISTNAME=	backports-3.6.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
