@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/13 13:57:25 taca Exp $
+
+SHA1 (dotenv-2.0.2.gem) = 18f3d5ed7dfecef4968131672ddc2b8ae4602dff
+RMD160 (dotenv-2.0.2.gem) = c3402e1abd957e9ba545c02bf89860d3a999393c
+Size (dotenv-2.0.2.gem) = 10240 bytes
