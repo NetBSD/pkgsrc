@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/09/13 04:50:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/tiny_tds/tiny_tds.${RUBY_DLEXT}
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/compile/rake-compiler-dev-box.patch
-${GEM_LIBDIR}/ext/patch/dblib-30-char-username.diff
-${GEM_LIBDIR}/ext/patch/Makefile.in.diff
-${GEM_LIBDIR}/ext/patch/sspi_w_kerberos.diff
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/ext/tiny_tds/client.c
 ${GEM_LIBDIR}/ext/tiny_tds/client.h
 ${GEM_LIBDIR}/ext/tiny_tds/extconf.rb
@@ -14,20 +17,19 @@ ${GEM_LIBDIR}/ext/tiny_tds/result.c
 ${GEM_LIBDIR}/ext/tiny_tds/result.h
 ${GEM_LIBDIR}/ext/tiny_tds/tiny_tds_ext.c
 ${GEM_LIBDIR}/ext/tiny_tds/tiny_tds_ext.h
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/lib/tiny_tds.rb
 ${GEM_LIBDIR}/lib/tiny_tds/client.rb
 ${GEM_LIBDIR}/lib/tiny_tds/error.rb
-${GEM_LIBDIR}/lib/tiny_tds.rb
 ${GEM_LIBDIR}/lib/tiny_tds/result.rb
 ${GEM_LIBDIR}/lib/tiny_tds/tiny_tds.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/tiny_tds/version.rb
-${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/tasks/ports.rake
-${GEM_LIBDIR}/test/benchmark/query_odbc.rb
+${GEM_LIBDIR}/ports/archives/freetds-0.91.112.tar.gz
+${GEM_LIBDIR}/ports/patches/freetds/0.91/Makefile.in.diff
+${GEM_LIBDIR}/ports/patches/freetds/0.91/dblib-30-char-username.diff
+${GEM_LIBDIR}/test/appveyor/dbsetup.ps1
+${GEM_LIBDIR}/test/appveyor/dbsetup.sql
 ${GEM_LIBDIR}/test/benchmark/query.rb
+${GEM_LIBDIR}/test/benchmark/query_odbc.rb
 ${GEM_LIBDIR}/test/benchmark/query_tinytds.rb
 ${GEM_LIBDIR}/test/client_test.rb
 ${GEM_LIBDIR}/test/result_test.rb
@@ -35,6 +37,7 @@ ${GEM_LIBDIR}/test/schema/1px.gif
 ${GEM_LIBDIR}/test/schema/sqlserver_2000.sql
 ${GEM_LIBDIR}/test/schema/sqlserver_2005.sql
 ${GEM_LIBDIR}/test/schema/sqlserver_2008.sql
+${GEM_LIBDIR}/test/schema/sqlserver_2014.sql
 ${GEM_LIBDIR}/test/schema/sqlserver_azure.sql
 ${GEM_LIBDIR}/test/schema/sybase_ase.sql
 ${GEM_LIBDIR}/test/schema_test.rb
