@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3934 2015/09/13 14:43:05 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3935 2015/09/13 14:44:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6919,3 +6919,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/ruby-gsl to 1.16.0.6 [taca 2015-09-13]
 	Updated misc/ruby-bundler to 1.10.6 [taca 2015-09-13]
 	Updated misc/ruby-commander to 4.3.5 [taca 2015-09-13]
+	Updated misc/ruby-daemons to 1.2.3 [taca 2015-09-13]
