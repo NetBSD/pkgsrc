@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/07/04 09:58:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/09/13 21:14:36 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -439,9 +439,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/player.license.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/player.readme.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/player.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/qtobject/qtobject.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/src/doc_core_mediace.sxw
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/src/flvplayer.as
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/src/flvplayer.fla
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/swfobject/expressInstall.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/swfobject/swfobject.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flowplayer/LICENSE-exception.txt
@@ -1921,6 +1918,12 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Public/JavaScript/tcefor
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Public/JavaScript/toolbarmanager.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Public/JavaScript/tree.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Resources/Public/JavaScript/util.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Functional/Fixtures/Extensions/inlinetest/Configuration/TCA/tx_inlinetest_inline.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Functional/Fixtures/Extensions/inlinetest/Configuration/TCA/tx_inlinetest_record.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Functional/Fixtures/Extensions/inlinetest/ext_emconf.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Functional/Fixtures/Extensions/inlinetest/ext_tables.sql
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Functional/Fixtures/inlinetest.xml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Functional/Form/FormEngineInlineTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Configuration/TypoScript/ConditionMatching/ConditionMatcherTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Controller/File/FileControllerTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Form/Element/InlineElementTest.php
@@ -2354,6 +2357,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidTar
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/InvalidUidException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/NotInMountPointException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/ResourceDoesNotExistException.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/ResourcePermissionsUnavailableException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/UploadException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception/UploadSizeException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/File.php
@@ -2846,6 +2850,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/FormProtection/InstallTool
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Html/HtmlParserTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Html/RteHtmlParserTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Imaging/GraphicalFunctionsTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Localization/LocalizationFactoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Localization/Parser/Fixtures/fr.locallang.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Localization/Parser/Fixtures/fr.locallang_override.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Localization/Parser/Fixtures/locallang.xlf
@@ -3031,6 +3036,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/AdodbPreparedStateme
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/DatabaseConnection.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/Specifics/AbstractSpecifics.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/Specifics/Oci8.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/Specifics/Postgres.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/SqlParser.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/ExtensionManager/MessageDisplay.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/QueryCache.php
@@ -3592,6 +3598,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Object/Container/Contai
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Object/Container/Fixtures/ContainerConstructorInjectionTestFixtures.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Object/Container/Fixtures/NamespacedClass.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Object/Container/Fixtures/Testclasses.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Persistence/Fixture/Model/CustomDateTime.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Persistence/Fixture/Model/Entity2.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Persistence/Fixture/Model/Entity3.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Persistence/Generic/BackendTest.php
@@ -3634,6 +3641,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Security/Cryptography/H
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Service/CacheServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Service/ExtensionServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Service/FlexFormServiceTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Service/ImageScriptServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Service/TypeHandlingServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/Service/TypoScriptServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Unit/SignalSlot/DispatcherTest.php
@@ -3706,6 +3714,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Domain/Model/Repo
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Domain/Repository/ConfigurationItemRepository.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Domain/Repository/ExtensionRepository.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Domain/Repository/RepositoryRepository.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Exception/DependencyConfigurationNotFoundException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Exception/ExtensionManagerException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Exception/MissingExtensionDependencyException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Classes/Exception/MissingVersionDependencyException.php
@@ -4617,6 +4626,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Vi
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Viewport/Left/Options/Panel.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Viewport/Right.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Domain/Factory/TypoScriptFactoryTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Domain/Model/Attribute/AttributesAttributeTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/AlphabeticFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/AlphanumericFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/CurrencyFilterTest.php
@@ -4629,6 +4639,9 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/StripNewLinesFilter
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/TitleCaseFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/TrimFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Filter/UpperCaseFilterTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Fixtures/PostProcessorWithFormPrefixFixture.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Fixtures/PostProcessorWithoutFormPrefixFixture.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Fixtures/PostProcessorWithoutInterfaceFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/PostProcess/MailPostProcessorTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/PostProcess/PostProcessorTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/Validation/AlphabeticValidatorTest.php
@@ -7010,6 +7023,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/date-trigger.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/error-tip-corners.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/exclamation.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/search-trigger.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/spinner.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/text-bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/form/trigger.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/extjs/images/gradient-bg.gif
@@ -9214,6 +9228,10 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Public/JavaScript/wor
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Public/JavaScript/workspaces.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Public/StyleSheet/module.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Public/StyleSheet/preview.css
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/ActionHandler/ActionHandlerTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/ActionHandler/Fixtures/pages.xml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/ActionHandler/Fixtures/sys_workspace.xml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/ActionHandler/Fixtures/tt_content.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/FAL/AbstractActionTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/FAL/DataSet/LiveDefaultElements.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/FAL/DataSet/LiveDefaultPages.csv
