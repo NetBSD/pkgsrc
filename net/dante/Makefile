@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2012/10/23 17:18:15 asau Exp $
+# $NetBSD: Makefile,v 1.24 2015/09/13 21:55:15 leot Exp $
 
-DISTNAME=	dante-1.1.19
-PKGREVISION=	1
+DISTNAME=	dante-1.4.1
 CATEGORIES=	net security
-MASTER_SITES=	ftp://ftp.inet.no/pub/socks/
+MASTER_SITES=	http://www.inet.no/dante/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inet.no/dante/
 COMMENT=	BSD-licensed socks 4/5 proxy suite
+LICENSE=	modified-bsd
 
 CONFLICTS=	socks4-[0-9]*
 
