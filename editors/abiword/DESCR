@@ -1,5 +1,5 @@
 AbiWord is an open-source, cross-platform WYSIWYG word processor.
-This version uses GTK+2.
+This version uses GTK+3.
 
 Features include:
 - Basic character formatting (bold, underline, italics, etc.)
