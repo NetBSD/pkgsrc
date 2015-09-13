@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3938 2015/09/13 14:53:45 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3939 2015/09/13 14:59:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6923,3 +6923,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-parallel to 1.6.1 [taca 2015-09-13]
 	Updated misc/ruby-sprockets to 3.3.4 [taca 2015-09-13]
 	Updated net/ruby-amq-protocol to 2.0.0 [taca 2015-09-13]
+	Updated net/ruby-amqp to 1.5.1 [taca 2015-09-13]
