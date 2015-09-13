@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3943 2015/09/13 15:15:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3944 2015/09/13 15:18:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6928,3 +6928,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/ruby-pdf-core to 0.6.0 [taca 2015-09-13]
 	Updated print/ruby-prawn to 2.0.2 [taca 2015-09-13]
 	Updated sysutils/ruby-listen to 2.10.1 [taca 2015-09-13]
+	Updated textproc/ruby-haml to 4.0.7 [taca 2015-09-13]
