@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2015/07/26 18:06:45 nros Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/13 12:21:13 taca Exp $
 
-DISTNAME=	v0.22.2
+DISTNAME=	v0.23.2
 PKGNAME=	libgit2-${DISTNAME:S/v//1}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
 GITHUB_PROJECT=	libgit2
-GITHUB_TAG=	v0.22.2
+GITHUB_TAG=	v0.23.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libgit2.github.com/
+HOMEPAGE=	https://libgit2.github.com/
 COMMENT=	Portable, pure C implementation of the Git core methods
 LICENSE=	gnu-gpl-v2 # linking exception (linking allowed in more ways)
 
