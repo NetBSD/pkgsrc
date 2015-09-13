@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3897 2015/09/13 08:04:28 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3898 2015/09/13 09:03:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6874,3 +6874,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Parse-RecDescent to 1.967.11 [wiz 2015-09-13]
 	Updated www/p5-HTTP-Message to 6.11 [wiz 2015-09-13]
 	Updated devel/ccache to 3.2.3 [adam 2015-09-13]
+	Updated devel/ruby-ffi to 1.9.10 [taca 2015-09-13]
