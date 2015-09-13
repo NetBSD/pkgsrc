@@ -1,16 +1,51 @@
-$NetBSD: patch-ab,v 1.9 2007/05/23 11:12:35 sketch Exp $
+$NetBSD: patch-ab,v 1.10 2015/09/13 21:55:15 leot Exp $
 
---- configure.orig	2006-01-16 11:49:45.000000000 +0000
-+++ configure	2007-05-23 10:56:06.000000000 +0100
-@@ -19251,7 +19251,6 @@
- echo "${ECHO_T}no" >&6
+o Delete the -Werror flag in order to recognise the type of sa_len:
+
+    In function ‘main’:
+    warning: variable ‘sa_len_ptr’ set but not used [-Wunused-but-set-variable] uint8_t *sa_len_ptr;
+
+o Add support for DragonFly BSD
+
+--- configure.orig	2014-09-03 14:52:29.000000000 +0000
++++ configure
+@@ -12804,8 +12804,6 @@ if test x"${debug_enabled}" = xt; then
+ else
      #autoconf_compflags is set to "-g -O2" with GCC
      #override CFLAGS when running configure to avoid this
--    CFLAGS="$CFLAGS $autoconf_compflags"
- fi
+-    CPPFLAGS="$CPPFLAGS${CPPFLAGS:+ }-DDEBUG=0"
+-    CFLAGS="$CFLAGS${CFLAGS:+ }$autoconf_compflags"
  
- #-Wall ?
-@@ -25124,8 +25123,13 @@
+     case $COMPTYPE in
+ 	gcc)
+@@ -15424,7 +15422,7 @@ if test x"${have_sa_len}" != x; then
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for sa_len type" >&5
+ $as_echo_n "checking for sa_len type... " >&6; }
+    oCFLAGS="$CFLAGS"
+-   CFLAGS="$CFLAGS${CFLAGS:+ }$FAILWARN"
++   CFLAGS="$CFLAGS${CFLAGS:+ }"
+    unset sa_len_type_found
+    for type in uint8_t "unsigned char"; do
+        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -21835,7 +21833,7 @@ keyword="no-route"
+ keycnt=0
+ for keyval in ${ERRNO_NOROUTE}; do
+     for errno in $ERRNOVALS; do
+-	if test x"$keyval" == x"$errno"; then
++	if test x"$keyval" = x"$errno"; then
+ 	    echo "   { \"$keyword\",	$errno	}," >>$ERRNOSRC
+ 	    keycnt=`expr $keycnt + 1`
+ 	fi
+@@ -22633,7 +22631,7 @@ keyword="foo"
+ keycnt=0
+ for keyval in ${ERRNO_foo}; do
+     for errno in $GAIERRVALS; do
+-	if test x"$keyval" == x"$errno"; then
++	if test x"$keyval" = x"$errno"; then
+ 	    echo "   { \"$keyword\",	$errno	}," >>$ERRNOSRC
+ 	    keycnt=`expr $keycnt + 1`
+ 	fi
+@@ -24719,8 +24717,13 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  #include <netdb.h>
  #include <unistd.h>
  
@@ -24,7 +59,7 @@ $NetBSD: patch-ab,v 1.9 2007/05/23 11:12:35 sketch Exp $
  );
  int
  main ()
-@@ -25166,9 +25170,18 @@
+@@ -24740,9 +24743,18 @@ cat >>confdefs.h <<_ACEOF
  #define HAVE_PROT_GETHOSTBYADDR_1 const char *
  _ACEOF
  
@@ -44,11 +79,12 @@ $NetBSD: patch-ab,v 1.9 2007/05/23 11:12:35 sketch Exp $
  
  cat >>confdefs.h <<_ACEOF
  #define HAVE_PROT_GETHOSTBYADDR_3 int
-@@ -35245,6 +35258,6 @@
+@@ -67655,7 +67667,7 @@ problems.
  fi
  
  VINFO=README.latest
 -test -s "$VINFO" && cat "$VINFO"
 +test -s "$VINFO" && cat "$VINFO" || true
  
- exit 0
+ #XXX depcomp regen hack
+ touch _reconf

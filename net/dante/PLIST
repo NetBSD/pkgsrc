@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:07 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/09/13 21:55:15 leot Exp $
 bin/socksify
 include/dante/socks.h
 lib/libdsocks.la
 lib/libsocks.la
+man/man1/socksify.1
 man/man5/sockd.conf.5
 man/man5/socks.conf.5
 man/man8/sockd.8
