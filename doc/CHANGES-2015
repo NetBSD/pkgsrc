@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3961 2015/09/13 22:00:02 nros Exp $
+$NetBSD: CHANGES-2015,v 1.3962 2015/09/13 23:23:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6946,3 +6946,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/dante to 1.4.1 [leot 2015-09-13]
 	Updated editors/abiword to 3.0.1 [nros 2015-09-13]
 	Updated editors/abiword-plugins to 3.0.1nb1 [nros 2015-09-13]
+	Updated geography/proj to 4.9.2 [gdt 2015-09-13]
