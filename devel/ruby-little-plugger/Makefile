@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/12/15 15:05:22 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/13 10:09:39 taca Exp $
 
-DISTNAME=	little-plugger-1.1.3
+DISTNAME=	little-plugger-1.1.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
