@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/02 13:00:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/09/13 11:50:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
@@ -6,7 +6,6 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/canvas.rb
 ${GEM_LIBDIR}/examples/examples.rb
-${GEM_LIBDIR}/examples/graph.dot
 ${GEM_LIBDIR}/examples/images/example.jpg
 ${GEM_LIBDIR}/examples/images/module_graph.jpg
 ${GEM_LIBDIR}/examples/images/rgl_modules.png
