@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3922 2015/09/13 13:02:35 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3923 2015/09/13 14:03:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6901,3 +6901,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rugged to 0.23.2 [taca 2015-09-13]
 	Updated devel/ruby-term-ansicolor to 1.3.2 [taca 2015-09-13]
 	Updated devel/ruby-test-unit to 3.1.3 [taca 2015-09-13]
+	Added devel/ruby-dotenv version 2.0.2 [taca 2015-09-13]
+	Added devel/ruby-nenv version 0.2.0 [taca 2015-09-13]
+	Added devel/ruby-rspec-logsplit version 0.1.3 [taca 2015-09-13]
