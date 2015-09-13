@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3907 2015/09/13 10:08:54 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3908 2015/09/13 10:10:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6884,3 +6884,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-atomicwrites to 0.1.8 [wiz 2015-09-13]
 	Updated devel/ruby-ffi-yajl to 2.2.2 [taca 2015-09-13]
 	Updated devel/ruby-highline to 1.7.3 [taca 2015-09-13]
+	Updated devel/ruby-little-plugger to 1.1.4 [taca 2015-09-13]
