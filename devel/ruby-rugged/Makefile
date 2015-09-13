@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/06/03 13:22:02 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/13 12:27:45 taca Exp $
 
-DISTNAME=	rugged-0.22.2
+DISTNAME=	rugged-0.23.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
