@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/09/13 11:38:32 tron Exp $
+# $NetBSD: Makefile,v 1.8 2015/09/14 14:40:37 gdt Exp $
 
 DISTNAME=	libepoxy-1.3.1
+PKGEVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -32,8 +33,13 @@ CONFIGURE_ENV+=		PKGSRC_BUILD_EGL=yes
 CONFIGURE_ENV+=		PKGSRC_BUILD_EGL=no
 .endif
 
+# This could be garbage collected, but it seems likely that there will
+# be more glx issues, so it seems easier to leave it.
 PLIST_VARS+=		glx
 .if ${OPSYS} != "Darwin"
+PLIST.glx=		yes
+.else
+# On Darwin, we patch upstream to enable this.
 PLIST.glx=		yes
 .endif
 
