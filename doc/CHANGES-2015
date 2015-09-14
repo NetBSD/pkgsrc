@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3970 2015/09/14 13:47:56 manu Exp $
+$NetBSD: CHANGES-2015,v 1.3971 2015/09/14 13:53:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6955,3 +6955,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/db6 to 6.1.26 [adam 2015-09-14]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q3 branch [wiz 2015-09-14]
 	Updated net/nagios-plugin-dotpid to 0.4 [manu 2015-09-14]
+	Updated net/nagios-plugin-fstab to 0.3 [manu 2015-09-14]
