@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.165 2015/09/13 10:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2015/09/14 16:07:57 wiz Exp $
 
 DISTNAME=	mono-4.0.4.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -100,7 +101,9 @@ CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
 
 INSTALLATION_DIRS+=	share/examples/mono/4.5
