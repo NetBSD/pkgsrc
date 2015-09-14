@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/03/28 21:43:07 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/09/14 13:31:54 joerg Exp $
 
 SHA1 (kipi-plugins-0.1.7.tar.bz2) = 520b6b9d36a8c5b8893c3a6b5a1a14f6b9cbd216
 RMD160 (kipi-plugins-0.1.7.tar.bz2) = f66473c11e66f9e06aa6772c7952b640b565def9
@@ -11,6 +11,10 @@ SHA1 (patch-ae) = 6e12d87f6169d3ba1687eaa202c2edb1ac5ec7a4
 SHA1 (patch-kipi-plugins_batchprocessimages_plugin__batchprocessimages.h) = 699e11538538ae06232ecdd495cce0ce59240dd1
 SHA1 (patch-kipi-plugins_flickrexport_imageslist.cpp) = 43b3a56f1b686253e94eab921670447822c1695b
 SHA1 (patch-kipi-plugins_imageviewer_viewerwidget.cpp) = 173a70306d89fec21e27bb3cf6a14198b4eeffca
+SHA1 (patch-kipi-plugins_kameraklient_gpcamera.cpp) = 7f18f3e7505640a65d16ef0a00c7759f4af76582
+SHA1 (patch-kipi-plugins_kameraklient_gpiface.cpp) = 93acd947c9b830d87bb9e12e1f1b3302e6a86e37
+SHA1 (patch-kipi-plugins_kameraklient_gpstatus.cpp) = b8c890898b5a6d63a5033223238cab675396bd0f
+SHA1 (patch-kipi-plugins_kameraklient_gpstatus.h) = e6a23b4ff32411812981ba6c7844e14c1755beec
 SHA1 (patch-kipi-plugins_mpegencoder_kimg2mpg.h) = 8a594ee6610e2cb3726dd4179505c0450c1443ef
 SHA1 (patch-kipi-plugins_printwizard_cropframe.cpp) = 308813ad515ef0f9e9d7f863c456dd968ca78d39
 SHA1 (patch-kipi-plugins_rawconverter_rawdecodingiface.cpp) = 2105ef9bee4f4c64f1205ff40431fec2ef1517a5
