@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3963 2015/09/13 23:37:56 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.3964 2015/09/14 00:30:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6948,3 +6948,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/abiword-plugins to 3.0.1nb1 [nros 2015-09-13]
 	Updated geography/proj to 4.9.2 [gdt 2015-09-13]
 	Updated www/trac to 1.0.9 [gdt 2015-09-13]
+	Updated security/gnutls to 3.3.18 [mef 2015-09-14]
