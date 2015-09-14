@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/01 18:52:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/14 10:52:57 adam Exp $
 bin/db6_archive
 bin/db6_checkpoint
 bin/db6_deadlock
@@ -5037,7 +5037,10 @@ share/doc/db6/java/overview-frame.html
 share/doc/db6/java/overview-summary.html
 share/doc/db6/java/overview-tree.html
 share/doc/db6/java/package-list
-share/doc/db6/java/resources/inherit.gif
+share/doc/db6/java/resources/background.gif
+share/doc/db6/java/resources/tab.gif
+share/doc/db6/java/resources/titlebar.gif
+share/doc/db6/java/resources/titlebar_end.gif
 share/doc/db6/java/serialized-form.html
 share/doc/db6/java/style.css
 share/doc/db6/license/license_db.html

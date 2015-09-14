@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/09/08 18:51:28 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/09/14 10:52:57 adam Exp $
 
-SHA1 (db-6.1.19.tar.gz) = e266f8ab73f4f1ea276d203ce85426e5a6831501
-RMD160 (db-6.1.19.tar.gz) = fcb5fbe20e18339e18a244afbcfa13819aecad36
-Size (db-6.1.19.tar.gz) = 37492835 bytes
+SHA1 (db-6.1.26.tar.gz) = 5ae05c6c4a1766270fd5cfb28539e2b7a19c33b2
+RMD160 (db-6.1.26.tar.gz) = 6d242b65cd316060c5ed4634bb11e621f3cc6d93
+Size (db-6.1.26.tar.gz) = 37495772 bytes
 SHA1 (patch-dist_Makefile.in) = dbc5f8fd26e715f6dff8ff261a08b2856ea3c46e
 SHA1 (patch-dist_aclocal_libtool.m4) = 37367e10d9d856cf233b7a0efd3680f35728039e
 SHA1 (patch-dist_configure) = 2fb4c6cdd29ac5a9ad520af411517660b24e8768
