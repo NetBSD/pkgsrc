@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/07/12 04:59:55 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2015/09/14 11:30:49 hauke Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -8,7 +8,7 @@ CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nosuchname.net/scotty/
+HOMEPAGE=	https://www.ibr.cs.tu-bs.de/projects/scotty/
 COMMENT=	Network management extensions to TCL
 
 LICENSE=	2-clause-bsd
