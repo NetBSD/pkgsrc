@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/06 09:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/14 21:08:04 wiz Exp $
 
 DISTNAME=	Hack-v2_010-ttf
 PKGNAME=	Hack-ttf-2.010
@@ -23,5 +23,4 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*ttf ${DESTDIR}/${FONTS_DIRS.ttf}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
