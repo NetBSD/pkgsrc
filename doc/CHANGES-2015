@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3966 2015/09/14 06:04:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3967 2015/09/14 09:04:14 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6951,3 +6951,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnutls to 3.3.18 [mef 2015-09-14]
 	Updated net/mldonkey to 3.1.5 [wiz 2015-09-14]
 	Updated net/mldonkey-gui to 3.1.5 [wiz 2015-09-14]
+	Removed comms/asterisk10 [jnemeth 2015-09-14]
