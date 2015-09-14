@@ -1,7 +1,7 @@
-$NetBSD: patch-configure,v 1.5 2015/09/14 13:25:39 wiz Exp $
+$NetBSD: patch-configure,v 1.6 2015/09/14 14:58:49 wiz Exp $
 
 Fix build on Solaris 11.
-See PR 50242.
+https://bugs.gnupg.org/gnupg/issue2102
 
 --- configure.orig	2014-08-21 13:14:09.000000000 +0000
 +++ configure
