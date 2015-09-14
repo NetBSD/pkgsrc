@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3968 2015/09/14 10:54:15 adam Exp $
+$NetBSD: CHANGES-2015,v 1.3969 2015/09/14 12:46:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6953,3 +6953,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mldonkey-gui to 3.1.5 [wiz 2015-09-14]
 	Removed comms/asterisk10 [jnemeth 2015-09-14]
 	Updated databases/db6 to 6.1.26 [adam 2015-09-14]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q3 branch [wiz 2015-09-14]
