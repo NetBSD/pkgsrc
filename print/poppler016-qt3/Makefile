@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/12 16:50:01 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/14 13:34:09 joerg Exp $
 #
 
 .include "../../print/poppler016/Makefile.common"
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--enable-poppler-qt
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
 
-BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
+BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}<0.34
 .include "../../print/poppler016/buildlink3.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.poppler:Mpoppler-cms)
