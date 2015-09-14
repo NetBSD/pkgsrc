@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/08/15 22:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/09/14 03:09:00 dsainty Exp $
 
 DISTNAME=	libwpg-0.3.0
 PKGREVISION=	2
@@ -20,13 +20,16 @@ PKGCONFIG_OVERRIDE+=	libwpg.pc.in
 
 REPLACE_PERL=		src/conv/svg/wpg2svgbatch.pl
 
+.include "../../converters/libwpd/buildlink3.mk"
+.include "../../converters/librevenge/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+
+# Include all buildlink3.mk before compiler.mk, as the buildlink dependencies
+# may alter the compiler selection.
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Werror
 .endif
 
-.include "../../converters/libwpd/buildlink3.mk"
-.include "../../converters/librevenge/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
