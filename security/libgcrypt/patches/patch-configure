@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.5 2015/09/14 13:25:39 wiz Exp $
+
+Fix build on Solaris 11.
+See PR 50242.
+
+--- configure.orig	2014-08-21 13:14:09.000000000 +0000
++++ configure
+@@ -16481,6 +16531,11 @@ __asm__(
+ 		"asmfunc:\n\t"
+                 ".size asmfunc,.-asmfunc;\n\t"
+                 ".type asmfunc,@function;\n\t"
++                /* Test if assembler allows use of '/' for constant division
++                 * (Solaris/x86 issue). If previous constant division check
++                 * and "-Wa,--divide" workaround failed, this causes assembly
++                 * to be disable on this machine. */
++                 "xorl \$(123456789/12345678), %ebp;\n\t"
+             );
+ _ACEOF
+ if ac_fn_c_try_compile "$LINENO"; then :
