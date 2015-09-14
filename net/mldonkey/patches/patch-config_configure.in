@@ -1,40 +1,7 @@
-$NetBSD: patch-config_configure.in,v 1.4 2014/10/20 10:12:51 jaapb Exp $
+$NetBSD: patch-config_configure.in,v 1.5 2015/09/14 06:03:58 wiz Exp $
 
-Do proper GD version checking
 --- config/configure.in.orig	2012-08-05 15:49:02.000000000 +0000
 +++ config/configure.in
-@@ -929,13 +929,30 @@ if test "$GD" != "no"; then
-     GDMAJORVERSION=`$GDLIBCONFIG --majorversion`
-     GDMINORVERSION=`$GDLIBCONFIG --minorversion`
-     GDREVISION=`$GDLIBCONFIG --revision`
--    if [ [ $GDMAJORVERSION = 2 ] && [ $GDMINORVERSION = 0 ] && [ $GDREVISION -gt 14 ]]; then
-+		case $GDMAJORVERSION in
-+			1)
-+				AC_MSG_RESULT(no (found $GDVERSION))
-+				LIBGD=no
-+				;;
-+			2)
-+				if test $GDMINORVERSION -ge 1; then
-+				AC_MSG_RESULT($GDVERSION)
-+				LIBGD=yes
-+				else
-+					if test $GDREVISION -gt 14; then
- 	AC_MSG_RESULT($GDVERSION)
- 	LIBGD=yes
-     else
- 	AC_MSG_RESULT(no (found $GDVERSION))
- 	LIBGD=no
-     fi
-+        fi
-+        ;;
-+      *)
-+        AC_MSG_RESULT($GDVERSION)
-+        LIBGD=yes
-+        ;;
-+    esac
-   else
-     LIBGD=yes
-   fi
 @@ -1347,15 +1364,15 @@ if test "$GTK_CONFIG" = "no"; then
       LABLGTK_CONFIG=no
  else
