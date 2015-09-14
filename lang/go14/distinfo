@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/07/31 14:46:25 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/09/14 13:32:49 joerg Exp $
 
 SHA1 (go1.4.2.src.tar.gz) = 460caac03379f746c473814a65223397e9c9a2f6
 RMD160 (go1.4.2.src.tar.gz) = dea15b3b4c31554a47b40799f4b9a926ea760e70
@@ -8,6 +8,7 @@ SHA1 (patch-misc_cgo_test_cthread__unix.c) = a63f08f07713bd32e279315cca21235101c
 SHA1 (patch-misc_cgo_testso_cgoso.go) = ef782a6f173c814656eac0df640aedaa1a923bbc
 SHA1 (patch-misc_cgo_testso_cgoso__unix.go) = 58e221e1ce123428a3fe6ecededf0590cbfb81ca
 SHA1 (patch-src_cmd_5l_asm.c) = fd78203b7c92b9bbd057077671d649bac2d121ee
+SHA1 (patch-src_cmd_6c_txt.c) = 7ccddadedceb13b6a7c2f29cdfca501a85888488
 SHA1 (patch-src_cmd_6l_asm.c) = 1f244d7c760e738057b1649ed486206a6ec3812b
 SHA1 (patch-src_cmd_8l_asm.c) = e5233a3d9b08f2ef8d809756ef7d6fc4b03303b9
 SHA1 (patch-src_cmd_go_build.go) = f7705aa955241d3add353a144a676a58a0a1617e
