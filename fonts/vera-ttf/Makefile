@@ -1,5 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2015/08/17 17:59:57 leot Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/14 16:38:15 tnn Exp $
 #
+
+# The "vera-ttf" package must always contain unmodified TTF files according
+# to the terms of the license.
+# If you need to alter the TTF files you must import the package under a
+# different name that does not include the words "Vera" or Bitstream".
 
 DISTNAME=	ttf-bitstream-vera-1.10
 PKGNAME=	vera-ttf-1.10
