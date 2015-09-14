@@ -1,10 +1,26 @@
-$NetBSD: patch-configure.ac,v 1.2 2015/09/13 04:44:49 tnn Exp $
+$NetBSD: patch-configure.ac,v 1.3 2015/09/14 14:40:37 gdt Exp $
 
 Override EGL detection.
 
+Revert upstream's disabling of glx on Mac.  See
+https://github.com/anholt/libepoxy/commit/e3051481cc9f5b7b36b317aff1454ee16ea9cdb9
+for context.  We require X11 anyway, and libepoxy without glx is
+defective - in particular, gtk3+ fails to build.
+Not yet reported upstream.
+
 --- configure.ac.orig	2015-07-15 23:46:36.000000000 +0000
 +++ configure.ac
-@@ -85,7 +85,7 @@ case $host_os in
+@@ -77,15 +77,16 @@ case $host_os in
+         AC_SUBST([LOG_COMPILER], [wine])
+         ;;
+     darwin*)
++        # TODO: explain why egl is forced off on Darwin
+         build_egl=no
+-        build_glx=no
++        build_glx=yes
+         build_wgl=no
+         build_apple=yes
+         has_znow=no
          EPOXY_LINK_LIBS=""
          ;;
      *)
