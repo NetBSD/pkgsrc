@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.66 2015/09/13 15:03:57 joerg Exp $
+# $NetBSD: fetch.mk,v 1.67 2015/09/14 08:27:13 joerg Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -117,10 +117,10 @@ post-fetch:
 ${DISTDIR}/${_file_}:
 	@${DO_NADA}
 .  else
-${DISTDIR}/${_file_}: do-fetch-file error-check
-.    if !empty(IGNORE_INTERACTIVE_FETCH:M[yY][eE][sS])
+.    if empty(IGNORE_INTERACTIVE_FETCH:Uno:M[yY][eE][sS])
 ${DISTDIR}/${_file_}: fetch-check-interactive
 .    endif
+${DISTDIR}/${_file_}: do-fetch-file error-check
 .  endif
 .endfor
 
