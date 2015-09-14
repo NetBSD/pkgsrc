@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/08/23 16:17:12 spz Exp $
+$NetBSD: distinfo,v 1.16 2015/09/14 13:36:29 joerg Exp $
 
 SHA1 (xen-4.2.5.tar.gz) = f42741e4ec174495ace70c4b17a6b9b0e60e798a
 RMD160 (xen-4.2.5.tar.gz) = 7d4f7f1b32ee541d341a756b1f8da02816438d19
@@ -24,6 +24,7 @@ SHA1 (patch-xen_arch_x86_hvm_hvm.c) = b6bac1d466ba5bc276bc3aea9d4c9df37f2b9b0f
 SHA1 (patch-xen_arch_x86_mm_shadow_common.c) = 89dce860cc6aef7d0ec31f3137616b592490e60a
 SHA1 (patch-xen_arch_x86_x86_emulate_x86_emulate.c) = 8b906e762c8f94a670398b4e033d50a2fb012f0a
 SHA1 (patch-xen_common_spinlock.c) = 06f06b5e9b098262ebaa8af0be4837005fb5b8b4
+SHA1 (patch-xen_drivers_passthrough_vtd_x86_ats.c) = 5ab0bb0d1fd63abf8ef8d1f073f83a5f1f9f159a
 SHA1 (patch-xen_include_asm-arm_spinlock.h) = fe2e35a5ebec4c551df5d1680c93e6ad19348d93
 SHA1 (patch-xen_include_asm-x86_atomic.h) = d406c6071ea3823c25113a801dd77ff32146d162
 SHA1 (patch-xen_include_asm-x86_spinlock.h) = fbaaf264e9aa4857635a81b63c4a77cba4bf560f

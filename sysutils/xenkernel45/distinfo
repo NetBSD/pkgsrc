@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/06/23 17:45:33 bouyer Exp $
+$NetBSD: distinfo,v 1.9 2015/09/14 13:36:29 joerg Exp $
 
 SHA1 (xen-4.5.1.tar.gz) = f10328ce63625a5a7bfa3af5899c4432a467c051
 RMD160 (xen-4.5.1.tar.gz) = 4c449d799e041a52a94c00ee43a8c28fd4af1b96
@@ -6,5 +6,7 @@ Size (xen-4.5.1.tar.gz) = 18410400 bytes
 SHA1 (patch-Config.mk) = a2a104d023cea4e551a3ad40927d4884d6c610bf
 SHA1 (patch-xen_Makefile) = 750d0c8d4fea14d3ef3f872de5242a1f5104cbbe
 SHA1 (patch-xen_arch_x86_Rules.mk) = 7b0894ba7311edb02118a021671f304cf3872154
+SHA1 (patch-xen_common_page__alloc.c) = c4d606de1cada8cf89b5abd16efada3d58c68a03
+SHA1 (patch-xen_drivers_passthrough_vtd_x86_ats.c) = f72fd4bb2aeeaeb0b167031dfd5498e73666aa4e
 SHA1 (patch-xen_include_asm-x86_current.h) = 8a21577be06383c0c7f53c15ba828f77fb6314ad
 SHA1 (patch-xen_include_xen_lib.h) = 82a219b7d9c5deaa2b8e0adc774f60395adc4815
