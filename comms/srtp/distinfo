@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/09/06 14:02:08 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/09/14 13:30:03 joerg Exp $
 
 SHA1 (srtp-1.4.4.tgz) = 299c6cfe0c9d6f1804bc5921cfbdb6a6bc76a521
 RMD160 (srtp-1.4.4.tgz) = 64e58a3fc2cc30a8d7cba6b6ce59f807649d9dee
@@ -6,6 +6,10 @@ Size (srtp-1.4.4.tgz) = 502890 bytes
 SHA1 (patch-Makefile.in) = 8e0e6d7bed257263e4609d305dfa6a27efc1906d
 SHA1 (patch-configure) = d70d01b5f846b2f163ba2246511cf1314005fa35
 SHA1 (patch-configure.in) = 217c066920fedaaba02d86e3c2017a368ea8fee7
+SHA1 (patch-crypto_cipher_aes__icm.c) = 7e402b790678bd6c27daf8f56bf0a1123b087d07
+SHA1 (patch-crypto_math_datatypes.c) = f5358856026b91ae40db4a7c38bae6138656d94e
+SHA1 (patch-crypto_math_gf2__8.c) = 4e878e3debc2c287dcbce6ab1127ba8cd22352c3
+SHA1 (patch-crypto_math_math.c) = 06961bd3184b0e47475f76a55d9669ce6d3a7149
 SHA1 (patch-include_srtp.h) = 4e680a004d14a338c7ec4cc135f21da38490c315
 SHA1 (patch-srtp_srtp.c) = 90f2674702dc2070350abc61f7773a4a6234ae33
 SHA1 (patch-test_rtpw__test.sh) = 00f28ef1e91b963ab4d413ac10925150bff4b6be
