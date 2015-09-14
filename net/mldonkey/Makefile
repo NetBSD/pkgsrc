@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2015/08/07 11:20:34 jaapb Exp $
-#
+# $NetBSD: Makefile,v 1.82 2015/09/14 06:03:58 wiz Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=		19
 
 RCD_SCRIPTS=		mldonkey
 
