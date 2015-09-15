@@ -1,8 +1,24 @@
-$NetBSD: patch-config_system-headers,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.2 2015/09/15 20:57:14 joerg Exp $
 
---- config/system-headers.orig	2013-09-10 03:43:23.000000000 +0000
+--- config/system-headers.orig	2014-09-24 02:53:26.000000000 +0000
 +++ config/system-headers
-@@ -1132,3 +1132,14 @@ kvm.h
+@@ -402,6 +402,7 @@ frame/log.h
+ frame/req.h
+ freetype/freetype.h
+ freetype/ftcache.h
++freetype/ftfntfmt.h
+ freetype/ftglyph.h
+ freetype/ftsynth.h
+ freetype/ftoutln.h
+@@ -415,6 +416,7 @@ freetype/ftbitmap.h
+ freetype/ftxf86.h
+ freetype.h
+ ftcache.h
++ftfntfmt.h
+ ftglyph.h
+ ftsynth.h
+ ftoutln.h
+@@ -1145,3 +1147,14 @@ kvm.h
  spawn.h
  err.h
  xlocale.h
