@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.19 2015/02/03 22:50:27 abs Exp $
+# $NetBSD: mkpatches.pl,v 1.20 2015/09/15 08:36:07 wiz Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -13,7 +13,7 @@
 #   It retains the naming and header (RCS Id and comment) from the
 #   patches directory.
 #
-# Copyright (c) 2000, 2011 by Thomas Klausner <wiz@NetBSD.org>
+# Copyright (c) 2000, 2011, 2015 by Thomas Klausner <wiz@NetBSD.org>
 #               2004 by Dieter Baron <dillo@NetBSD.org>
 # All rights reserved.
 #
@@ -61,6 +61,18 @@ sub create_patchdir {
     }
 }
 
+sub get_variable {
+    my ($variable) = shift;
+    my ($value);
+
+    $value = `@MAKE@ show-var VARNAME=$variable`;
+    if (${^CHILD_ERROR_NATIVE} == 0) {
+	chomp($value);
+	return $value;
+    }
+    die("error executing \"make show-var VARNAME=$variable\": returned with exit code " . (${^CHILD_ERROR_NATIVE} >> 8));
+}
+    
 # read command line arguments
 
 undef($opt_c);
@@ -95,15 +107,9 @@ if ($opt_d && $opt_D) {
 
 # get some pkgsrc variables
 
-$wrksrc=`@MAKE@ show-var VARNAME=WRKSRC` or 
-    die ("can't find WRKSRC -- wrong dir?");
-chomp($wrksrc);
-$wrkdir=`@MAKE@ show-var VARNAME=WRKDIR` or
-    die ("can't find WRKDIR -- wrong dir?");
-chomp($wrkdir);
-$origpatchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
-    die ("can't find PATCHDIR -- wrong dir?");
-chomp($origpatchdir);
+$wrksrc = get_variable("WRKSRC");
+$wrkdir = get_variable("WRKDIR");
+$origpatchdir = get_variable("PATCHDIR");
 
 if ($opt_D) {
     $patchdir = "$wrkdir/.newpatches";
