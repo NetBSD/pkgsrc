@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.716 2015/09/03 08:14:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.717 2015/09/15 13:35:08 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -110,7 +110,6 @@ SUBDIR+=	f4l
 SUBDIR+=	fbm
 SUBDIR+=	feh
 SUBDIR+=	flickrnet
-SUBDIR+=	flphoto
 SUBDIR+=	fly
 SUBDIR+=	fnlib
 SUBDIR+=	fotoxx
