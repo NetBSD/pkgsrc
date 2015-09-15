@@ -1,8 +1,29 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.1 2014/07/27 05:36:07 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.2 2015/09/15 20:58:15 joerg Exp $
 
---- mozilla/config/system-headers.orig	2013-10-23 22:08:50.000000000 +0000
+--- mozilla/config/system-headers.orig	2014-09-24 05:24:54.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -1132,3 +1132,14 @@ kvm.h
+@@ -1,3 +1,4 @@
++unwind.h
+ nspr.h
+ plarena.h
+ plarenas.h
+@@ -402,6 +403,7 @@ frame/log.h
+ frame/req.h
+ freetype/freetype.h
+ freetype/ftcache.h
++freetype/ftfntfmt.h
+ freetype/ftglyph.h
+ freetype/ftsynth.h
+ freetype/ftoutln.h
+@@ -415,6 +417,7 @@ freetype/ftbitmap.h
+ freetype/ftxf86.h
+ freetype.h
+ ftcache.h
++ftfntfmt.h
+ ftglyph.h
+ ftsynth.h
+ ftoutln.h
+@@ -1145,3 +1148,14 @@ kvm.h
  spawn.h
  err.h
  xlocale.h
