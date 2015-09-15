@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2015/09/13 12:32:14 bouyer Exp $
+# $NetBSD: options.mk,v 1.39 2015/09/15 00:24:26 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -38,8 +38,6 @@ CONFIGURE_ARGS+=	--enable-egl
 
 # Use Thread Local Storage in GLX where it is supported by Mesa and works.
 .if \
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
 	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
 	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
 	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
