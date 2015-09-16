@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2015/09/16 12:28:53 tnn Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -52,9 +52,6 @@ QMAKE_CONF=		qmake.conf.mac
 .endif
 
 PLIST_VARS+=		egl
-.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
-PLIST.egl=		yes
-.endif
 
 .include "../../mk/compiler.mk"
 
@@ -186,6 +183,9 @@ post-install:
 .include "../../textproc/icu/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/glu/buildlink3.mk"
+.if !empty(MESALIB_SUPPORTS_EGL:Myes)
+PLIST.egl=	yes
+.endif
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
