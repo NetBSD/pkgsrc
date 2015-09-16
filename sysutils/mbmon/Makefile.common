@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2015/09/16 18:36:02 jperkin Exp $
 #
 # used by sysutils/xmbmon/Makefile
 # used by sysutils/mbmon/Makefile
@@ -17,7 +17,7 @@ DISTINFO_FILE?=	${.CURDIR}/../../sysutils/mbmon/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/mbmon/patches
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64 DragonFly-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64 DragonFly-*-i386 SunOS-*-*
 
 # for xmbmon205conf.tar.gz -- remove during next update!
 post-extract:
