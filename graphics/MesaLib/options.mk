@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2015/09/15 00:24:26 tnn Exp $
+# $NetBSD: options.mk,v 1.40 2015/09/16 17:03:28 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -12,9 +12,7 @@ PKG_SUGGESTED_OPTIONS=
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) ||	\
 	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
-	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
-	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
+	!empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
