@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/29 14:31:42 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/16 18:38:34 jperkin Exp $
 
 DISTNAME=	libxshmfence-1.2
 CATEGORIES=	x11
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	xshmfence.pc.in
 # implementation on NetBSD. See PR lib/49529.
 # (On FreeBSD, umtx is used.)
 
-ONLY_FOR_PLATFORM+=	Linux-*-* FreeBSD-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-* FreeBSD-*-* SunOS-*-*
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
