@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/28 06:56:18 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2015/09/16 12:28:53 tnn Exp $
 #
 
 DISTNAME=	libva-1.1.0
@@ -34,14 +34,14 @@ PKGCONFIG_OVERRIDE+=	libva-x11.pc.in
 PKGCONFIG_OVERRIDE+=	libva.pc.in
 
 PLIST_VARS+=		egl
-.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
-PLIST.egl=		yes
-.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
 .include "../../graphics/MesaLib/buildlink3.mk"
+.if !empty(MESALIB_SUPPORTS_EGL:Myes)
+PLIST.egl=		yes
+.endif
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
