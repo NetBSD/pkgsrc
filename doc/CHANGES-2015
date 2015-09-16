@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3976 2015/09/16 16:17:34 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3977 2015/09/16 20:22:02 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6961,3 +6961,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed graphics/flphoto [wiz 2015-09-15]
 	Updated devel/reposurgeon to 3.29 [wiz 2015-09-16]
 	Updated devel/cvs-fast-export to 1.33 [wiz 2015-09-16]
+	Updated chat/ircII to 20150903 [mrg 2015-09-16]
