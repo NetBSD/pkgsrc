@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/09/08 19:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/16 08:08:00 he Exp $
 
 VERREL=		4.3.7
 VERRC=		2
@@ -257,7 +257,7 @@ post-install:
 .include "../../converters/libvisio/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
-.include "../../converters/libwps/buildlink3.mk"
+.include "../../converters/libwps03/buildlink3.mk"
 .include "../../converters/libmwaw/buildlink3.mk"
 .include "../../converters/orcus0.8/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
