@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2015/04/25 11:19:18 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2015/09/16 12:28:53 tnn Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -33,6 +33,13 @@ PKG_BUILD_OPTIONS.MesaLib+=	dri
 
 .if !empty(PKG_BUILD_OPTIONS.MesaLib:Mdri)
 .  include "../../graphics/MesaLib/dri.mk"
+.endif
+
+.if	${X11_TYPE} == "modular" && !empty(PKG_BUILD_OPTIONS.MesaLib:Mdri) ||	\
+	${X11_TYPE} == "native"  && exists(${X11BASE}/include/EGL/egl.h)
+MESALIB_SUPPORTS_EGL=	yes
+.else
+MESALIB_SUPPORTS_EGL=	no
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
