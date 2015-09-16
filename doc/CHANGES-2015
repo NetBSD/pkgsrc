@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3974 2015/09/15 13:35:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3975 2015/09/16 16:13:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6959,3 +6959,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/mono to 4.0.4.1nb1 [wiz 2015-09-14]
 	Updated pkgtools/pkgdiff to 1.7 [wiz 2015-09-15]
 	Removed graphics/flphoto [wiz 2015-09-15]
+	Updated devel/reposurgeon to 3.29 [wiz 2015-09-16]
