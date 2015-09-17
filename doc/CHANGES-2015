@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3978 2015/09/17 10:42:51 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.3979 2015/09/17 14:30:11 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6963,3 +6963,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cvs-fast-export to 1.33 [wiz 2015-09-16]
 	Updated chat/ircII to 20150903 [mrg 2015-09-16]
 	Updated lang/nodejs to 4.1.0 [fhajny 2015-09-17]
+	Updated devel/py-trytond to 3.6.3 [richard 2015-09-17]
+	Updated devel/py-tryton to 3.6.3 [richard 2015-09-17]
