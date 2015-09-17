@@ -1,4 +1,4 @@
-$NetBSD: patch-common.gypi,v 1.3 2015/09/09 00:04:54 ryoon Exp $
+$NetBSD: patch-common.gypi,v 1.4 2015/09/17 10:42:34 fhajny Exp $
 
 Add support for NetBSD.
 
@@ -8,8 +8,8 @@ Add support for NetBSD.
          'cflags': [ '-pthread', ],
          'ldflags': [ '-pthread' ],
        }],
--      [ 'OS in "linux freebsd openbsd solaris android"', {
-+      [ 'OS in "linux freebsd openbsd solaris android netbsd"', {
+-      [ 'OS in "linux freebsd openbsd solaris android aix"', {
++      [ 'OS in "linux freebsd openbsd solaris android aix netbsd"', {
          'cflags': [ '-Wall', '-Wextra', '-Wno-unused-parameter', ],
          'cflags_cc': [ '-fno-rtti', '-fno-exceptions', '-std=gnu++0x' ],
          'ldflags': [ '-rdynamic' ],

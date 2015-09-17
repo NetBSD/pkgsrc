@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2015/09/09 15:59:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.41 2015/09/17 10:42:34 fhajny Exp $
 
-DISTNAME=	node-v4.0.0
+DISTNAME=	node-v4.1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
@@ -51,6 +51,8 @@ CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 .if ${OPSYS} == "NetBSD"
 BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 .endif
+
+TEST_TARGET=		check
 
 pre-install:
 	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
