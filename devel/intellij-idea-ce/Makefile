@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/24 16:19:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/17 17:13:33 joerg Exp $
 
 VERSION=	13.1.2
 DISTNAME=	ideaIC-${VERSION:S/.0.0//}-src
@@ -62,7 +62,7 @@ do-build:
 # Build libbreakgen native library
 	cd ${WRKSRC}/native/breakgen && \
 	${CC} -shared -fPIC -o libbreakgen.so AppMain.c \
-	-I ${BUILDLINK_PREFIX.openjdk7}/java/openjdk7/include/
+	-I ${PKG_JAVA_HOME}/include/
 
 do-install:
 	cd ${WRKDIR} && \
