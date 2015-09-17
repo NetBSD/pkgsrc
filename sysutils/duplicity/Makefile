@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2015/04/09 10:16:35 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.30 2015/09/17 17:53:35 joerg Exp $
 
 DISTNAME=		duplicity-0.6.25
+PKGREVISION=		1
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://code.launchpad.net/duplicity/0.6-series/${PKGVERSION_NOREV}/+download/
 
@@ -42,8 +43,7 @@ SUBST_VARS.gpgpath=		GPGPATH
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} go+r *
 
-BUILDLINK_API_DEPENDS.librsync+=	librsync>=0.9.6
-.include "../../devel/librsync/buildlink3.mk"
+.include "../../net/librsync/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
