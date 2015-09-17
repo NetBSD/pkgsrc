@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/08/24 14:49:41 richard Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/09/17 14:28:01 richard Exp $
 
 # used by meta-pkgs/py-tryton-platform/Makefile
 # used by devel/py-proteus/Makefile
@@ -49,8 +49,8 @@ TRYTON_BASEVER=		3.6
 
 #specific module revisions:
 MODULE_REVISION.proteus=					1
-MODULE_REVISION.tryton=						2
-MODULE_REVISION.trytond=					2
+MODULE_REVISION.tryton=						3
+MODULE_REVISION.trytond=					3
 MODULE_REVISION.trytond_account=				1
 MODULE_REVISION.trytond_account_asset=				1
 #MODULE_REVISION.trytond_account_fr=				0
