@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3977 2015/09/16 20:22:02 mrg Exp $
+$NetBSD: CHANGES-2015,v 1.3978 2015/09/17 10:42:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6962,3 +6962,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/reposurgeon to 3.29 [wiz 2015-09-16]
 	Updated devel/cvs-fast-export to 1.33 [wiz 2015-09-16]
 	Updated chat/ircII to 20150903 [mrg 2015-09-16]
+	Updated lang/nodejs to 4.1.0 [fhajny 2015-09-17]
