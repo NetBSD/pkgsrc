@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:55:45 asau Exp $
+# $NetBSD: Makefile,v 1.11 2015/09/17 14:06:12 tnn Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -42,8 +42,17 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 INSTALLATION_DIRS=	bin
 
+.include "../../mk/bsd.prefs.mk"
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/clit18/clit ${DESTDIR}${PREFIX}/bin/convertlit
+
+.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}) && !defined(CONVERTLIT_MASTER_SITES)
+PKG_FAIL_REASON+=	"Please define CONVERTLIT_MASTER_SITES in mk.conf."
+PKG_FAIL_REASON+=	"Alternatively you may download '${DISTNAME}${EXTRACT_SUFX}' manually"
+PKG_FAIL_REASON+=	"to ${DISTDIR}."
+.endif
+
 
 .include "../../math/ltm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
