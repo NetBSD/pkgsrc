@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3979 2015/09/17 14:30:11 richard Exp $
+$NetBSD: CHANGES-2015,v 1.3980 2015/09/17 19:11:54 morr Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6965,3 +6965,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/nodejs to 4.1.0 [fhajny 2015-09-17]
 	Updated devel/py-trytond to 3.6.3 [richard 2015-09-17]
 	Updated devel/py-tryton to 3.6.3 [richard 2015-09-17]
+	Updated www/wordpress to 4.3.1 [morr 2015-09-17]
