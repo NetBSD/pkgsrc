@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/12 00:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/17 17:12:38 joerg Exp $
 
 DISTNAME=	gnome-online-accounts-3.16.3
 CATEGORIES=	net devel
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool pkg-config msgfmt
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
