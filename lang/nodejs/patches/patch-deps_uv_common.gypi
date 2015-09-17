@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_uv_common.gypi,v 1.2 2015/04/30 15:04:56 ryoon Exp $
+$NetBSD: patch-deps_uv_common.gypi,v 1.3 2015/09/17 10:42:34 fhajny Exp $
 
 Add support for NetBSD.
 
@@ -8,8 +8,8 @@ Add support for NetBSD.
            }]
          ]
        }],
--      ['OS in "freebsd linux openbsd solaris android"', {
-+      ['OS in "freebsd linux openbsd solaris android netbsd"', {
+-      ['OS in "freebsd dragonflybsd linux openbsd solaris android"', {
++      ['OS in "freebsd dragonflybsd linux openbsd solaris android netbsd"', {
          'cflags': [ '-Wall' ],
          'cflags_cc': [ '-fno-rtti', '-fno-exceptions' ],
          'target_conditions': [
