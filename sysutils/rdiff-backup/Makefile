@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2014/12/31 13:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/09/17 17:53:35 joerg Exp $
 
 DISTNAME=	rdiff-backup-1.2.8
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://savannah.nongnu.org/download/rdiff-backup/
 
@@ -17,13 +17,11 @@ SUBST_FILES.path=	setup.py
 SUBST_SED.path=		-e "s|share/man|${PKGMANDIR}|"
 SUBST_MESSAGE.path=	Fixing path to manpages.
 
-BUILDLINK_API_DEPENDS.librsync+=	librsync>=0.9.6
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples.html \
 		${DESTDIR}${PREFIX}/share/doc/${DISTNAME}
 
-.include "../../devel/librsync/buildlink3.mk"
+.include "../../net/librsync/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 
