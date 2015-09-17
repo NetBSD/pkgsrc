@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.7 2015/09/12 19:04:56 he Exp $
+$NetBSD: patch-configure.ac,v 1.8 2015/09/17 11:24:11 he Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -81,7 +81,7 @@ Also, the start of process support, but that's not yet finished.
  AC_CHECK_MEMBERS([struct udphdr.uh_dport, struct udphdr.uh_sport], [], [],
  [#define _BSD_SOURCE
  #define _DEFAULT_SOURCE
-@@ -5175,6 +5206,7 @@ plugin_load="no"
+@@ -5175,6 +5222,7 @@ plugin_load="no"
  plugin_log_logstash="no"
  plugin_memory="no"
  plugin_multimeter="no"
@@ -89,7 +89,7 @@ Also, the start of process support, but that's not yet finished.
  plugin_nfs="no"
  plugin_numa="no"
  plugin_perl="no"
-@@ -5244,6 +5276,15 @@ then
+@@ -5244,6 +5292,15 @@ then
  	plugin_tcpconns="yes"
  fi
  
@@ -105,7 +105,7 @@ Also, the start of process support, but that's not yet finished.
  # Mac OS X devices
  if test "x$with_libiokit" = "xyes"
  then
-@@ -5482,6 +5537,11 @@ then
+@@ -5482,6 +5539,11 @@ then
  	plugin_swap="yes"
  fi
  
@@ -117,7 +117,7 @@ Also, the start of process support, but that's not yet finished.
  if test "x$with_kvm_openfiles$with_kvm_nlist" = "xyesyes"
  then
  	plugin_tcpconns="yes"
-@@ -5585,6 +5631,7 @@ AC_PLUGIN([multimeter],  [$plugin_multim
+@@ -5585,6 +5647,7 @@ AC_PLUGIN([multimeter],  [$plugin_multim
  AC_PLUGIN([mysql],       [$with_libmysql],     [MySQL statistics])
  AC_PLUGIN([netapp],      [$with_libnetapp],    [NetApp plugin])
  AC_PLUGIN([netlink],     [$with_libmnl],       [Enhanced Linux network statistics])
@@ -125,7 +125,7 @@ Also, the start of process support, but that's not yet finished.
  AC_PLUGIN([network],     [yes],                [Network communication plugin])
  AC_PLUGIN([nfs],         [$plugin_nfs],        [NFS statistics])
  AC_PLUGIN([nginx],       [$with_libcurl],      [nginx statistics])
-@@ -5963,6 +6010,7 @@ Configuration:
+@@ -5963,6 +6026,7 @@ Configuration:
      mysql . . . . . . . . $enable_mysql
      netapp  . . . . . . . $enable_netapp
      netlink . . . . . . . $enable_netlink

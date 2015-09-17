@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.in,v 1.4 2015/09/12 19:04:56 he Exp $
+$NetBSD: patch-src_Makefile.in,v 1.5 2015/09/17 11:24:11 he Exp $
 
 Use a reasonable db dir.
 Install config file into examples.
@@ -310,7 +310,20 @@ Install config file into examples.
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  am__relativize = \
    dir0=`pwd`; \
-@@ -2310,9 +2335,6 @@ LIBADD_DL = @LIBADD_DL@
+@@ -2275,12 +2300,6 @@ GANGLIA_LIBS = @GANGLIA_LIBS@
+ GCRYPT_CPPFLAGS = @GCRYPT_CPPFLAGS@
+ GCRYPT_LDFLAGS = @GCRYPT_LDFLAGS@
+ GCRYPT_LIBS = @GCRYPT_LIBS@
+-GLIB_CFLAGS = @GLIB_CFLAGS@
+-GLIB_COMPILE_RESOURCES = @GLIB_COMPILE_RESOURCES@
+-GLIB_GENMARSHAL = @GLIB_GENMARSHAL@
+-GLIB_LIBS = @GLIB_LIBS@
+-GLIB_MKENUMS = @GLIB_MKENUMS@
+-GOBJECT_QUERY = @GOBJECT_QUERY@
+ GREP = @GREP@
+ INCLTDL = @INCLTDL@
+ INSTALL = @INSTALL@
+@@ -2310,9 +2329,6 @@ LIBADD_DL = @LIBADD_DL@
  LIBADD_DLD_LINK = @LIBADD_DLD_LINK@
  LIBADD_DLOPEN = @LIBADD_DLOPEN@
  LIBADD_SHL_LOAD = @LIBADD_SHL_LOAD@
@@ -320,7 +333,7 @@ Install config file into examples.
  LIBLTDL = @LIBLTDL@
  LIBNETAPP_CPPFLAGS = @LIBNETAPP_CPPFLAGS@
  LIBNETAPP_LDFLAGS = @LIBNETAPP_LDFLAGS@
-@@ -2434,9 +2456,10 @@ PLUGIN_LDFLAGS = -module -avoid-version 
+@@ -2434,9 +2450,10 @@ PLUGIN_LDFLAGS = -module -avoid-version 
  AM_CPPFLAGS = -I$(srcdir)/daemon -DPREFIX='"${prefix}"' \
  	-DCONFIGFILE='"${sysconfdir}/${PACKAGE_NAME}.conf"' \
  	-DLOCALSTATEDIR='"${localstatedir}"' \
@@ -332,7 +345,7 @@ Install config file into examples.
  AUTOMAKE_OPTIONS = subdir-objects
  noinst_LTLIBRARIES = libmount.la liblookup.la
  libmount_la_SOURCES = utils_mount.c utils_mount.h
-@@ -2482,32 +2505,33 @@ pkglib_LTLIBRARIES = $(am__append_11) $(
+@@ -2482,32 +2499,33 @@ pkglib_LTLIBRARIES = $(am__append_11) $(
  	$(am__append_95) $(am__append_96) $(am__append_98) \
  	$(am__append_104) $(am__append_105) $(am__append_106) \
  	$(am__append_107) $(am__append_110) $(am__append_111) \
@@ -382,7 +395,7 @@ Install config file into examples.
  @BUILD_PLUGIN_AGGREGATION_TRUE@aggregation_la_SOURCES = aggregation.c \
  @BUILD_PLUGIN_AGGREGATION_TRUE@                         utils_vl_lookup.c utils_vl_lookup.h
  
-@@ -2765,23 +2789,25 @@ CLEANFILES = $(am__append_212)
+@@ -2765,23 +2783,25 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_NETLINK_TRUE@netlink_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_NETLINK_TRUE@netlink_la_CFLAGS = $(AM_CFLAGS) $(BUILD_WITH_LIBMNL_CFLAGS)
  @BUILD_PLUGIN_NETLINK_TRUE@netlink_la_LIBADD = $(BUILD_WITH_LIBMNL_LIBS)
@@ -413,7 +426,7 @@ Install config file into examples.
  @BUILD_PLUGIN_NGINX_TRUE@nginx_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_NOTIFY_DESKTOP_TRUE@notify_desktop_la_SOURCES = notify_desktop.c
  @BUILD_PLUGIN_NOTIFY_DESKTOP_TRUE@notify_desktop_la_CFLAGS = $(AM_CFLAGS) $(LIBNOTIFY_CFLAGS)
-@@ -2792,7 +2818,7 @@ CLEANFILES = $(am__append_212)
+@@ -2792,7 +2812,7 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_NOTIFY_EMAIL_TRUE@notify_email_la_LIBADD = -lesmtp -lssl -lcrypto -lpthread
  @BUILD_PLUGIN_NTPD_TRUE@ntpd_la_SOURCES = ntpd.c
  @BUILD_PLUGIN_NTPD_TRUE@ntpd_la_LDFLAGS = $(PLUGIN_LDFLAGS)
@@ -422,7 +435,7 @@ Install config file into examples.
  @BUILD_PLUGIN_NUMA_TRUE@numa_la_SOURCES = numa.c
  @BUILD_PLUGIN_NUMA_TRUE@numa_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_NUT_TRUE@nut_la_SOURCES = nut.c
-@@ -2801,7 +2827,7 @@ CLEANFILES = $(am__append_212)
+@@ -2801,7 +2821,7 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_NUT_TRUE@nut_la_LIBADD = -lpthread $(BUILD_WITH_LIBUPSCLIENT_LIBS)
  @BUILD_PLUGIN_OLSRD_TRUE@olsrd_la_SOURCES = olsrd.c
  @BUILD_PLUGIN_OLSRD_TRUE@olsrd_la_LDFLAGS = $(PLUGIN_LDFLAGS)
@@ -431,7 +444,7 @@ Install config file into examples.
  @BUILD_PLUGIN_ONEWIRE_TRUE@onewire_la_SOURCES = onewire.c \
  @BUILD_PLUGIN_ONEWIRE_TRUE@		     utils_ignorelist.c utils_ignorelist.h
  
-@@ -2830,7 +2856,7 @@ CLEANFILES = $(am__append_212)
+@@ -2830,7 +2850,7 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_PERL_TRUE@perl_la_CFLAGS = $(AM_CFLAGS) $(PERL_CFLAGS) \
  @BUILD_PLUGIN_PERL_TRUE@	-DXS_VERSION=\"$(VERSION)\" \
  @BUILD_PLUGIN_PERL_TRUE@	-DVERSION=\"$(VERSION)\" \
@@ -440,7 +453,7 @@ Install config file into examples.
  @BUILD_PLUGIN_PERL_TRUE@perl_la_LDFLAGS = $(PLUGIN_LDFLAGS) \
  @BUILD_PLUGIN_PERL_TRUE@		$(PERL_LDFLAGS)
  
-@@ -2858,12 +2884,12 @@ CLEANFILES = $(am__append_212)
+@@ -2858,12 +2878,12 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_PYTHON_TRUE@python_la_SOURCES = python.c pyconfig.c pyvalues.c cpython.h
  @BUILD_PLUGIN_PYTHON_TRUE@python_la_CPPFLAGS = $(AM_CPPFLAGS) $(BUILD_WITH_PYTHON_CPPFLAGS)
  @BUILD_PLUGIN_PYTHON_TRUE@python_la_CFLAGS = $(AM_CFLAGS) \
@@ -455,7 +468,7 @@ Install config file into examples.
  @BUILD_PLUGIN_PROTOCOLS_TRUE@protocols_la_SOURCES = protocols.c \
  @BUILD_PLUGIN_PROTOCOLS_TRUE@		       utils_ignorelist.c utils_ignorelist.h
  
-@@ -2905,9 +2931,9 @@ CLEANFILES = $(am__append_212)
+@@ -2905,9 +2925,9 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_SNMP_TRUE@snmp_la_SOURCES = snmp.c
  @BUILD_PLUGIN_SNMP_TRUE@snmp_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_SNMP_TRUE@snmp_la_CFLAGS = $(AM_CFLAGS) \
@@ -468,7 +481,7 @@ Install config file into examples.
  @BUILD_PLUGIN_STATSD_TRUE@statsd_la_SOURCES = statsd.c \
  @BUILD_PLUGIN_STATSD_TRUE@                    utils_latency.h utils_latency.c
  
-@@ -2915,11 +2941,11 @@ CLEANFILES = $(am__append_212)
+@@ -2915,11 +2935,11 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_STATSD_TRUE@statsd_la_LIBADD = -lpthread
  @BUILD_PLUGIN_SWAP_TRUE@swap_la_SOURCES = swap.c
  @BUILD_PLUGIN_SWAP_TRUE@swap_la_CFLAGS = $(AM_CFLAGS) \
@@ -484,7 +497,7 @@ Install config file into examples.
  @BUILD_PLUGIN_SYSLOG_TRUE@syslog_la_SOURCES = syslog.c
  @BUILD_PLUGIN_SYSLOG_TRUE@syslog_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_TABLE_TRUE@table_la_SOURCES = table.c
-@@ -2943,7 +2969,7 @@ CLEANFILES = $(am__append_212)
+@@ -2943,7 +2963,7 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_TARGET_V5UPGRADE_TRUE@target_v5upgrade_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_TCPCONNS_TRUE@tcpconns_la_SOURCES = tcpconns.c
  @BUILD_PLUGIN_TCPCONNS_TRUE@tcpconns_la_LDFLAGS = $(PLUGIN_LDFLAGS)
@@ -493,7 +506,7 @@ Install config file into examples.
  @BUILD_PLUGIN_TEAMSPEAK2_TRUE@teamspeak2_la_SOURCES = teamspeak2.c
  @BUILD_PLUGIN_TEAMSPEAK2_TRUE@teamspeak2_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_TED_TRUE@ted_la_SOURCES = ted.c
-@@ -2958,7 +2984,7 @@ CLEANFILES = $(am__append_212)
+@@ -2958,7 +2978,7 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_TOKYOTYRANT_TRUE@tokyotyrant_la_CPPFLAGS = $(AM_CPPFLAGS) $(BUILD_WITH_LIBTOKYOTYRANT_CPPFLAGS)
  @BUILD_PLUGIN_TOKYOTYRANT_TRUE@tokyotyrant_la_LDFLAGS = $(PLUGIN_LDFLAGS) $(BUILD_WITH_LIBTOKYOTYRANT_LDFLAGS)
  @BUILD_PLUGIN_TOKYOTYRANT_TRUE@tokyotyrant_la_LIBADD = $(BUILD_WITH_LIBTOKYOTYRANT_LIBS) \
@@ -502,7 +515,7 @@ Install config file into examples.
  @BUILD_PLUGIN_TURBOSTAT_TRUE@turbostat_la_SOURCES = turbostat.c
  @BUILD_PLUGIN_TURBOSTAT_TRUE@turbostat_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_UNIXSOCK_TRUE@unixsock_la_SOURCES = unixsock.c \
-@@ -2975,13 +3001,13 @@ CLEANFILES = $(am__append_212)
+@@ -2975,13 +2995,13 @@ CLEANFILES = $(am__append_212)
  @BUILD_PLUGIN_UPTIME_TRUE@uptime_la_SOURCES = uptime.c
  @BUILD_PLUGIN_UPTIME_TRUE@uptime_la_CFLAGS = $(AM_CFLAGS)
  @BUILD_PLUGIN_UPTIME_TRUE@uptime_la_LDFLAGS = $(PLUGIN_LDFLAGS)
@@ -520,7 +533,7 @@ Install config file into examples.
  @BUILD_PLUGIN_UUID_TRUE@uuid_la_SOURCES = uuid.c
  @BUILD_PLUGIN_UUID_TRUE@uuid_la_CFLAGS = $(AM_CFLAGS) $(BUILD_WITH_LIBHAL_CFLAGS)
  @BUILD_PLUGIN_UUID_TRUE@uuid_la_LIBADD = $(BUILD_WITH_LIBHAL_LIBS)
-@@ -3014,9 +3040,9 @@ CLEANFILES = $(am__append_212)
+@@ -3014,9 +3034,9 @@ CLEANFILES = $(am__append_212)
  
  @BUILD_PLUGIN_WRITE_HTTP_TRUE@write_http_la_LDFLAGS = $(PLUGIN_LDFLAGS)
  @BUILD_PLUGIN_WRITE_HTTP_TRUE@write_http_la_CFLAGS = $(AM_CFLAGS) \
@@ -532,7 +545,7 @@ Install config file into examples.
  @BUILD_PLUGIN_WRITE_KAFKA_TRUE@write_kafka_la_SOURCES = write_kafka.c \
  @BUILD_PLUGIN_WRITE_KAFKA_TRUE@                        utils_format_graphite.c utils_format_graphite.h \
  @BUILD_PLUGIN_WRITE_KAFKA_TRUE@                        utils_format_json.c utils_format_json.h \
-@@ -3108,7 +3134,6 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
+@@ -3108,7 +3128,6 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
  	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign src/Makefile'; \
  	$(am__cd) $(top_srcdir) && \
  	  $(AUTOMAKE) --foreign src/Makefile
@@ -540,7 +553,7 @@ Install config file into examples.
  Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
  	@case '$?' in \
  	  *config.status*) \
-@@ -3385,6 +3410,9 @@ netapp.la: $(netapp_la_OBJECTS) $(netapp
+@@ -3385,6 +3404,9 @@ netapp.la: $(netapp_la_OBJECTS) $(netapp
  netlink.la: $(netlink_la_OBJECTS) $(netlink_la_DEPENDENCIES) $(EXTRA_netlink_la_DEPENDENCIES) 
  	$(AM_V_CCLD)$(netlink_la_LINK) $(am_netlink_la_rpath) $(netlink_la_OBJECTS) $(netlink_la_LIBADD) $(LIBS)
  
@@ -550,7 +563,7 @@ Install config file into examples.
  network.la: $(network_la_OBJECTS) $(network_la_DEPENDENCIES) $(EXTRA_network_la_DEPENDENCIES) 
  	$(AM_V_CCLD)$(network_la_LINK) $(am_network_la_rpath) $(network_la_OBJECTS) $(network_la_LIBADD) $(LIBS)
  
-@@ -3811,6 +3839,7 @@ distclean-compile:
+@@ -3811,6 +3833,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netapp_la-netapp.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netapp_la-utils_ignorelist.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netlink_la-netlink.Plo@am__quote@
@@ -558,7 +571,7 @@ Install config file into examples.
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/network_la-network.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/network_la-utils_fbhash.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nfs.Plo@am__quote@
-@@ -4821,7 +4850,7 @@ $(TEST_SUITE_LOG): $(TEST_LOGS)
+@@ -4821,7 +4844,7 @@ $(TEST_SUITE_LOG): $(TEST_LOGS)
  	if test -n "$$am__remaking_logs"; then \
  	  echo "fatal: making $(TEST_SUITE_LOG): possible infinite" \
  	       "recursion detected" >&2; \
@@ -567,7 +580,7 @@ Install config file into examples.
  	  am__remaking_logs=yes $(MAKE) $(AM_MAKEFLAGS) $$redo_logs; \
  	fi; \
  	if $(am__make_dryrun); then :; else \
-@@ -5166,6 +5195,8 @@ uninstall-man: uninstall-man1 uninstall-
+@@ -5166,6 +5189,8 @@ uninstall-man: uninstall-man1 uninstall-
  	uninstall-man1 uninstall-man5 uninstall-pkglibLTLIBRARIES \
  	uninstall-sbinPROGRAMS
  
@@ -576,7 +589,7 @@ Install config file into examples.
  
  .pod.1:
  	pod2man --release=$(VERSION) --center=$(PACKAGE) $< \
-@@ -5190,13 +5221,8 @@ uninstall-man: uninstall-man1 uninstall-
+@@ -5190,13 +5215,8 @@ uninstall-man: uninstall-man1 uninstall-
  @HAVE_PROTOC_C_TRUE@	protoc-c -I$(srcdir) --c_out . $(srcdir)/riemann.proto
  
  install-exec-hook:
@@ -592,7 +605,7 @@ Install config file into examples.
  	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
  	$(INSTALL) -m 0644 $(srcdir)/types.db $(DESTDIR)$(pkgdatadir)/types.db;
  	$(INSTALL) -m 0644 $(srcdir)/postgresql_default.conf \
-@@ -5204,7 +5230,7 @@ install-exec-hook:
+@@ -5204,7 +5224,7 @@ install-exec-hook:
  
  uninstall-hook:
  	rm -f $(DESTDIR)$(pkgdatadir)/types.db;
