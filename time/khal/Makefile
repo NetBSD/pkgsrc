@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/07/21 19:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/17 17:11:25 joerg Exp $
 
 DISTNAME=		khal-0.6.0
 CATEGORIES=		time net
@@ -13,6 +13,7 @@ DEPENDS+=		${PYPKGPREFIX}-click>=3.2:../../devel/py-click
 DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
 DEPENDS+=		${PYPKGPREFIX}-pkginfo-[0-9]*:../../devel/py-pkginfo
+BUILD_DEPENDS+=		${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
