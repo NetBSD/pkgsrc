@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/08/25 06:22:18 mrg Exp $
+@comment $NetBSD: PLIST,v 1.27 2015/09/17 07:06:48 tron Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -575,6 +575,7 @@ share/irc/script/netsplit
 share/irc/script/newaway
 share/irc/script/newformat
 share/irc/script/nicks
+share/irc/script/nicksearch
 share/irc/script/nocolour
 share/irc/script/oldping
 share/irc/script/oper
