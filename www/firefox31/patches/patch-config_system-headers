@@ -1,10 +1,18 @@
-$NetBSD: patch-config_system-headers,v 1.2 2015/07/25 04:04:54 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.3 2015/09/17 17:11:02 joerg Exp $
 
 https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
 
 --- config/system-headers.orig	2015-06-24 21:24:43.000000000 +0000
 +++ config/system-headers
-@@ -415,6 +415,7 @@ freetype/ftbitmap.h
+@@ -402,6 +402,7 @@ frame/log.h
+ frame/req.h
+ freetype/freetype.h
+ freetype/ftcache.h
++freetype/ftfntfmt.h
+ freetype/ftglyph.h
+ freetype/ftsynth.h
+ freetype/ftoutln.h
+@@ -415,6 +416,7 @@ freetype/ftbitmap.h
  freetype/ftxf86.h
  freetype.h
  ftcache.h
@@ -12,7 +20,7 @@ https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
  ftglyph.h
  ftsynth.h
  ftoutln.h
-@@ -1048,8 +1049,6 @@ X11/Xlocale.h
+@@ -1048,8 +1050,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -21,7 +29,7 @@ https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1117,6 +1116,8 @@ ogg/ogg.h
+@@ -1117,6 +1117,8 @@ ogg/ogg.h
  ogg/os_types.h
  nestegg/nestegg.h
  cubeb/cubeb.h
@@ -30,7 +38,7 @@ https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1145,3 +1146,37 @@ unicode/utypes.h
+@@ -1145,3 +1147,37 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
