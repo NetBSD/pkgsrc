@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2015/09/18 09:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2015/09/18 11:37:02 wiz Exp $
 
 DISTNAME=		audacity-minsrc-2.1.0
 PKGNAME=		${DISTNAME:S/-minsrc//1}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=		.tar.xz
@@ -75,7 +75,7 @@ BUILDLINK_API_DEPENDS.flac+=	flac>=1.3.0
 .include "../../audio/flac/buildlink3.mk"
 .include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
