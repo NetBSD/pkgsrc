@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2015/04/20 13:38:23 rodent Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/09/18 09:32:48 wiz Exp $
 bin/audacity
+include/portaudio.h
+include/portmixer.h
+lib/libFileDialog.la
+lib/libportaudio.la
+lib/libportmixer.la
+lib/libwidgetextra.la
+lib/pkgconfig/libwidgetextra.pc
+lib/pkgconfig/portaudio-2.0.pc
 man/man1/audacity.1
 share/appdata/audacity.appdata.xml
 share/applications/audacity.desktop
@@ -73,6 +81,8 @@ share/audacity/plug-ins/vocalremover.ny
 share/audacity/plug-ins/vocoder.ny
 share/doc/audacity/LICENSE.txt
 share/doc/audacity/README.txt
+share/doc/portmixer/LICENSE.txt
+share/doc/portmixer/README.txt
 share/icons/hicolor/16x16/apps/audacity.png
 share/icons/hicolor/22x22/apps/audacity.png
 share/icons/hicolor/24x24/apps/audacity.png
