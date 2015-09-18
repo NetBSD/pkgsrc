@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2015/09/18 11:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2015/09/18 21:19:07 mrg Exp $
 
 DISTNAME=		audacity-minsrc-2.1.0
 PKGNAME=		${DISTNAME:S/-minsrc//1}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=		.tar.xz
@@ -13,6 +13,7 @@ COMMENT=		Audio editor
 LICENSE=		gnu-gpl-v2 # AND cc-by-v3.0-license
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		automake autoreconf
 USE_TOOLS+=		gmake intltool msgfmt msgmerge pkg-config
 USE_TOOLS+=		xgettext zip:run
 USE_LANGUAGES=		c c++
@@ -42,15 +43,12 @@ CONFIG_SUB_OVERRIDE=		\
 PTHREAD_AUTO_VARS=	yes
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
-# the configure script does not respect --disable-shared
-# so we need to install the convenience libraries so that the audacity
-# binary can use them
-# XXX: this causes a conflict with portaudio
-post-install:
-	cd ${WRKSRC}/lib-src/FileDialog && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
-	cd ${WRKSRC}/lib-src/portaudio-v19 && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
-	cd ${WRKSRC}/lib-src/portmixer && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
-	cd ${WRKSRC}/lib-src/lib-widget-extra && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
+# regen Makefile.in to avoid being built as shared libraries
+pre-configure:
+	cd ${WRKSRC}/lib-src/FileDialog && ${PKGSRC_SETENV} autoreconf -fiv
+	cd ${WRKSRC}/lib-src/portaudio-v19 && ${PKGSRC_SETENV} autoreconf -fiv
+	cd ${WRKSRC}/lib-src/portmixer && ${PKGSRC_SETENV} autoreconf -fiv
+	cd ${WRKSRC}/lib-src/lib-widget-extra && autoreconf -fiv
 
 .include "options.mk"
 
