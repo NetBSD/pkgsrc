@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2015/09/18 08:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2015/09/18 09:32:48 wiz Exp $
 
 DISTNAME=		audacity-minsrc-2.1.0
 PKGNAME=		${DISTNAME:S/-minsrc//1}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=		.tar.xz
@@ -41,6 +41,16 @@ CONFIG_SUB_OVERRIDE=		\
 
 PTHREAD_AUTO_VARS=	yes
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+
+# the configure script does not respect --disable-shared
+# so we need to install the convenience libraries so that the audacity
+# binary can use them
+# XXX: this causes a conflict with portaudio
+post-install:
+	cd ${WRKSRC}/lib-src/FileDialog && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
+	cd ${WRKSRC}/lib-src/portaudio-v19 && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
+	cd ${WRKSRC}/lib-src/portmixer && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
+	cd ${WRKSRC}/lib-src/lib-widget-extra && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
 
 .include "options.mk"
 
