@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14902 2015/09/15 22:11:43 wiz Exp $
+$NetBSD: TODO,v 1.14903 2015/09/18 15:14:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -453,9 +453,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aubio-0.4.0
 	o audacious-3.6.2
 	o audacious-plugins-3.6.2
+	o audacity-2.1.1
 	o augeas-1.4.0
 	o autoconvert-0.3.16
-	o autogen-5.18.5
+	o autogen-5.18.6
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
@@ -533,6 +534,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o claws-mail-3.12.0
 	o clawsker-0.7.12
 	o cloog-0.18.3
+	o clutter-1.24
 	o clutter-gst-3.0.2
 	o cmake-fedora-2.3.4
 	o cmocka-1.0.1
@@ -1022,6 +1024,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcfg+-0.7.0
 	o libchamplain08-0.12.10
 	o libdatrie-0.2.9
+	o libdrm-2.4.65
 	o libetonyek-0.1.3
 	o libev-4.20
 	o libextractor-1.2 [requires shm_open()]
@@ -1347,6 +1350,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
+	o p5-Parse-RecDescent-1.967.12
 	o p5-PerlMagick-6.9.1.10
 	o p5-Plack-Middleware-Auth-Digest-0.05
 	o p5-Plack-Middleware-ConsoleLogger-0.05
