@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3981 2015/09/18 08:46:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3982 2015/09/18 09:32:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6967,3 +6967,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tryton to 3.6.3 [richard 2015-09-17]
 	Updated www/wordpress to 4.3.1 [morr 2015-09-17]
 	Updated audio/audacity to 2.1.0nb3 [wiz 2015-09-18]
+	Updated audio/audacity to 2.1.0nb4 [wiz 2015-09-18]
