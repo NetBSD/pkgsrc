@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2015/09/18 08:46:20 wiz Exp $
+$NetBSD: distinfo,v 1.29 2015/09/18 21:19:07 mrg Exp $
 
 SHA1 (audacity-minsrc-2.1.0.tar.xz) = a53bce0276240bb56f2e3fd1bf235a4ef688caa3
 RMD160 (audacity-minsrc-2.1.0.tar.xz) = 16b0e91222b91b47eeb533d4725b68e5548c057f
@@ -6,10 +6,14 @@ Size (audacity-minsrc-2.1.0.tar.xz) = 5104924 bytes
 SHA1 (patch-Makefile.in) = 8a770c2ab0494359c22d7f8e1b548fb83c2c00ff
 SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
 SHA1 (patch-am) = 23ffc055ee81fad7b3aab8f7dd447e641644be96
+SHA1 (patch-lib-src_FileDialog_Makefile.am) = 234c29402f157000dc3afb0b39e23f107c50eaf3
+SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = afa60d928f9d3de287815b4f7aadd4bbcc700a21
 SHA1 (patch-lib-src_libnyquist_nyquist_ffts_src_fftlib.c) = 3724b3e7cdd1f45cd38c76f2da3a3af6048dddb3
 SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = c7a6c6a7f0dbb3828a4d5780ec94908b40d974d2
 SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = d313f137f11d3e0fafa383ddeccbc89021e9ddee
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlfio.c) = a55127d6173d3ffb729fde7358bedd7c1320bf09
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = a0d194f7f7f278cfba1f54269e0323990abb73f3
+SHA1 (patch-lib-src_portmixer_src-extra_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
+SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
 SHA1 (patch-src_effects_VST_VSTEffect.cpp) = 76a55afd7977505801dd129e139c9782bfd8dfcb
