@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2015/09/18 08:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2015/09/18 08:53:21 wiz Exp $
 
 DISTNAME=		audacity-minsrc-2.1.0
 PKGNAME=		${DISTNAME:S/-minsrc//1}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://audacity.sourceforge.net/
+HOMEPAGE=		http://audacityteam.org/
 COMMENT=		Audio editor
 LICENSE=		gnu-gpl-v2 # AND cc-by-v3.0-license
 
