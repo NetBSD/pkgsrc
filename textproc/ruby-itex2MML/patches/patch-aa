@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2011/03/08 15:33:49 taca Exp $
+$NetBSD: patch-aa,v 1.5 2015/09/19 15:42:44 taca Exp $
 
 * Make ruby and swig commands are settable.
 * support DESTDIR.
 * Add an include directory for ruby 1.9 and later.
+* Fix build for Ruby 2.2 and later.
 
 --- Makefile.orig	2010-06-09 17:13:08.000000000 +0000
 +++ Makefile
@@ -18,18 +19,35 @@ $NetBSD: patch-aa,v 1.4 2011/03/08 15:33:49 taca Exp $
  
  RM=rm -f
  INSTALL=install -c
-@@ -44,11 +43,12 @@ RUBY_PREFIX =  $(shell $(RUBY) -e 'requi
- RUBY_ARCH = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["arch"]')
- RUBYDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["archdir"]')
- RUBYHDRDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["rubyhdrdir"]')
+@@ -37,18 +36,19 @@ clean:		
+ install:	itex2MML
+ 		$(INSTALL) itex2MML $(BINDIR)
+ 
+-RUBY_CFLAGS = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["CFLAGS"]')
+-RUBY_LD = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["LDSHARED"]')
+-RUBYLIBDIR =$(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["libdir"]') 
+-RUBY_PREFIX =  $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["rubylibdir"]')
+-RUBY_ARCH = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["arch"]')
+-RUBYDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["archdir"]')
+-RUBYHDRDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["rubyhdrdir"]')
 -RUBY_SITEDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["sitelibdir"]')
 -RUBY_SITEARCHDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["sitearchdir"]')
-+RUBY_SITEDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["vendorlibdir"]')
-+RUBY_SITEARCHDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["vendorarchdir"]')
- LIBRUBYARG = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["LIBRUBYARG"]')
- DYLIB_EXT = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["DLEXT"]')
- RUBY_target_os = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["target_os"]')
-+RUBYARCHINCLUDE = $(shell $(RUBY) -e 'require "rbconfig"; if Config::CONFIG["ruby_version"] > "1.8"; print "-I" + File.join(Config::CONFIG["rubyhdrdir"], Config::CONFIG["arch"]); end ')
+-LIBRUBYARG = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["LIBRUBYARG"]')
+-DYLIB_EXT = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["DLEXT"]')
+-RUBY_target_os = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["target_os"]')
++RUBY_CFLAGS = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["CFLAGS"]')
++RUBY_LD = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["LDSHARED"]')
++RUBYLIBDIR =$(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["libdir"]') 
++RUBY_PREFIX =  $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["rubylibdir"]')
++RUBY_ARCH = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["arch"]')
++RUBYDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["archdir"]')
++RUBYHDRDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["rubyhdrdir"]')
++RUBY_SITEDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["vendorlibdir"]')
++RUBY_SITEARCHDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["vendorarchdir"]')
++LIBRUBYARG = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["LIBRUBYARG"]')
++DYLIB_EXT = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["DLEXT"]')
++RUBY_target_os = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["target_os"]')
++RUBYARCHINCLUDE = $(shell $(RUBY) -e 'require "rbconfig"; if RbConfig::CONFIG["ruby_version"] > "1.8"; print "-I" + File.join(RbConfig::CONFIG["rubyhdrdir"], RbConfig::CONFIG["arch"]); end ')
  
  ifneq (, $(findstring darwin, $(RUBY_target_os)) )
  EXTRA_CFLAGS = -DHAVE_SNPRINTF -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE
