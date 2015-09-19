@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.10 2014/12/09 11:43:19 wiz Exp $
+# $NetBSD: hacks.mk,v 1.11 2015/09/19 17:11:35 tnn Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
@@ -25,4 +25,5 @@ CONFIGURE_ARGS+=	PTHREAD_LIBS=-pthread
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
 CONFIGURE_ENV+=		ac_cv_tls=none
+CFLAGS+=		-DPIXMAN_NO_TLS
 .endif
