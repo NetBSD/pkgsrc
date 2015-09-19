@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3983 2015/09/18 11:37:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.3984 2015/09/19 03:59:19 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6969,3 +6969,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/audacity to 2.1.0nb3 [wiz 2015-09-18]
 	Updated audio/audacity to 2.1.0nb4 [wiz 2015-09-18]
 	Updated audio/audacity to 2.1.0nb5 [wiz 2015-09-18]
+	Updated net/nsd to 4.1.4 [pettai 2015-09-19]
