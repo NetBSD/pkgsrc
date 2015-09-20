@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/08/18 07:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/09/20 21:54:39 tnn Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	19
@@ -10,7 +10,7 @@ MAINTAINER=	pavel.arnost@clnet.cz
 HOMEPAGE=	http://www.ibiblio.org/mc/
 COMMENT=	User-friendly file manager and visual shell (old 4.6 branch)
 
-USE_TOOLS+=		pkg-config unzip:run zip:run
+USE_TOOLS+=		pkg-config unzip:run zip:run gmake
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
