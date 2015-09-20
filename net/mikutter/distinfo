@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.90 2015/09/12 07:18:52 tsutsui Exp $
+$NetBSD: distinfo,v 1.91 2015/09/20 14:20:04 tsutsui Exp $
 
-SHA1 (mikutter.3.2.7.tar.gz) = 08d2149aa4cac6327c8f70bc8ace15a7142c917b
-RMD160 (mikutter.3.2.7.tar.gz) = 0f50cbcde3ed7840bb0d0967171539a29b5114ff
-Size (mikutter.3.2.7.tar.gz) = 2576878 bytes
+SHA1 (mikutter.3.2.8.tar.gz) = 22ef9bc95d18945e64d3f58d7d5aafe7409000cb
+RMD160 (mikutter.3.2.8.tar.gz) = 22915531d27e5eabc0890aa9d21a1210dbc3ef44
+Size (mikutter.3.2.8.tar.gz) = 2577502 bytes
 SHA1 (patch-core_plugin_libnotify_rnotify.rb) = 0bb5630f4411d11ad188c722fb1d14e2d6748d17
