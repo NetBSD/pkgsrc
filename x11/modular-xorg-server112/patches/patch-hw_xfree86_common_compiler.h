@@ -1,7 +1,16 @@
-$NetBSD: patch-hw_xfree86_common_compiler.h,v 1.1 2015/04/03 09:46:18 tnn Exp $
+$NetBSD: patch-hw_xfree86_common_compiler.h,v 1.2 2015/09/20 16:39:18 tnn Exp $
 
---- hw/xfree86/common/compiler.h.orig	2013-05-21 17:33:57.000000000 +0000
+--- hw/xfree86/common/compiler.h.orig	2012-05-17 17:09:03.000000000 +0000
 +++ hw/xfree86/common/compiler.h
+@@ -470,7 +470,7 @@ inl(unsigned short port)
+     return ret;
+ }
+ 
+-#elif (defined(linux) || defined(sun) || defined(__OpenBSD__) || defined(__FreeBSD__)) && defined(__sparc__)
++#elif (defined(linux) || defined(sun) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__)) && defined(__sparc__)
+ 
+ #ifndef ASI_PL
+ #define ASI_PL 0x88
 @@ -1392,26 +1392,26 @@ inl(unsigned short port)
  static __inline__ void
  outb(unsigned short port, unsigned char val)

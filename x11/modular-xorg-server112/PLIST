@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/03 09:46:18 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/20 16:39:18 tnn Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -147,6 +147,7 @@ include/xorg/xf86Priv.h
 include/xorg/xf86Privstr.h
 include/xorg/xf86RamDac.h
 include/xorg/xf86RandR12.h
+${PLIST.sparc}include/xorg/xf86Sbus.h
 include/xorg/xf86Rename.h
 include/xorg/xf86VGAarbiter.h
 include/xorg/xf86Xinput.h
