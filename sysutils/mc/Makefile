@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2015/08/28 07:47:08 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2015/09/20 21:54:39 tnn Exp $
 
 DISTNAME=	mc-4.8.14
 CATEGORIES=	sysutils
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.midnight-commander.org/
 COMMENT=	User-friendly file manager and visual shell
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		pkg-config unzip:run perl:build
+USE_TOOLS+=		pkg-config unzip:run perl:build gmake
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
