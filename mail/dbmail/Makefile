@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2015/09/12 14:23:59 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2015/09/20 16:08:05 tnn Exp $
 
 DISTNAME=	dbmail-3.2.3
 PKGREVISION=	1
@@ -53,6 +53,7 @@ post-install:
 .include "../../databases/libzdb/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
