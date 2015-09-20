@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:59 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/20 19:18:15 tnn Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
 PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.nemoto.ecei.tohoku.ac.jp/~wai/Xbat/
+MASTER_SITES+=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nemoto.ecei.tohoku.ac.jp/~wai/index_e.html
