@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/04/03 09:46:18 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/09/20 16:39:18 tnn Exp $
 
 SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
 RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
@@ -43,9 +43,13 @@ SHA1 (patch-glx_singlepix.c) = 72ac42939b37ae0d57fc06453344ca76cdf2c856
 SHA1 (patch-glx_singlepixswap.c) = 1e3d54d3082a59d21edd81276980b953efc39ebb
 SHA1 (patch-glx_swap__interval.c) = 2ff4e2e7d2793dd8558b04c1f72abfa81998f2c6
 SHA1 (patch-glx_unpack.h) = 5ae5c10c93835cb51c08f5dae05c5a5e2afaad98
-SHA1 (patch-hw_xfree86_common_compiler.h) = 88de747715b80b22f448869ab32dce1641bcb6db
+SHA1 (patch-hw_xfree86_common_compiler.h) = 55ddbe73946ca3d3d8c5c398838cbfa60f06af42
+SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = 9095519b466df814bd8a7bc1decbc186d997c5cd
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 32a8c309f9ae417c99fe81b6a9c3b1f402880981
 SHA1 (patch-hw_xfree86_dri2_dri2ext.c) = bc2b57e4bef5ae386d1d3a015c01d243f8880ab4
+SHA1 (patch-hw_xfree86_os-support_bsd_sparc64__video.c) = d85331bbcf14ccae99bd8485aff8055a9f470f27
+SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = f4e1d8b6ac917e0310e64409f1e4dd246a6107b3
+SHA1 (patch-hw_xfree86_os-support_bus_xf86Sbus.h) = b05b6c6f7c68bdbfd98b559d9b87a35c229fb946
 SHA1 (patch-hw_xfree86_os-support_xf86__OSlib.h) = 7c2760509610b44915da077b22899bef9c338cc1
 SHA1 (patch-include_dix.h) = ab0dc2debd87f29c0ac7f971a3cad4850b239c3a
 SHA1 (patch-include_regionstr.h) = c6f3e3b263593b622e7087d3ebe2b470cf9526e3
