@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/08/30 01:20:45 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2015/09/21 00:46:30 ryoon Exp $
 
-SHA1 (wordpress-4.3-ja.tar.gz) = 017da1d891372e78c232a70853e7ac9aebf19f0e
-RMD160 (wordpress-4.3-ja.tar.gz) = 77d63310f7a4e48b1db67e5802f8b5ea8f6ad733
-Size (wordpress-4.3-ja.tar.gz) = 6966736 bytes
+SHA1 (wordpress-4.3.1-ja.tar.gz) = c1972eb2137e32538154df9152c26bec1af20028
+RMD160 (wordpress-4.3.1-ja.tar.gz) = bdbb7f1f9358c5662f5991e5183e03fa30ece735
+Size (wordpress-4.3.1-ja.tar.gz) = 6989655 bytes
