@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2015/09/13 21:32:12 nros Exp $
+# $NetBSD: Makefile,v 1.156 2015/09/21 11:28:45 nros Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
 CONFIGURE_ARGS+=	--enable-plugins=""
 # evolution data server can't be found even if buildlinked
-# disable to make  usre it's not found somewhere else
+# disable to make sure it's not found somewhere else
 CONFIGURE_ARGS+=        --with-evolution-data-server=no
 
 

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2015/09/13 21:32:13 nros Exp $
+$NetBSD: distinfo,v 1.66 2015/09/21 11:28:45 nros Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
@@ -25,6 +25,7 @@ SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = 15692cf15fd4099e7ad4ad854b6b57b103717
 SHA1 (patch-plugins_goffice_Makefile.am) = 935af789858b3fbf3b928837acca024a1415bf86
 SHA1 (patch-plugins_google_Makefile.am) = ae883071f847b641ded349e5cb2ac3c126942d8d
 SHA1 (patch-plugins_grammar_Makefile.am) = 0c651d09ae690a22ce70f93fd091ceabb18a44d0
+SHA1 (patch-plugins_grammar_linkgrammarwrap_LinkGrammarWrap.cpp) = f3916dbc0b208bfe9dbb55eac850a3094683694c
 SHA1 (patch-plugins_hancom_Makefile.am) = 93e6b69160438a254a6c68b81a6385456d328999
 SHA1 (patch-plugins_hrtext_Makefile.am) = 439ecd0ac09b147c5a789bfb498e5da866d0cb59
 SHA1 (patch-plugins_iscii_Makefile.am) = ff740a1d6e308658d18c0102a67fa8c3f32cf95b
