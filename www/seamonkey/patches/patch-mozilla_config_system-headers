@@ -1,16 +1,16 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.14 2015/09/13 15:05:35 joerg Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.15 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2015-03-22 02:59:55.000000000 +0000
+--- mozilla/config/system-headers.orig	2015-09-02 09:28:08.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -457,6 +457,7 @@ frame/log.h
- frame/req.h
- freetype/freetype.h
- freetype/ftcache.h
-+freetype/ftfntfmt.h
- freetype/ftglyph.h
- freetype/ftsynth.h
- freetype/ftoutln.h
-@@ -470,6 +471,7 @@ freetype/ftbitmap.h
+@@ -189,7 +189,6 @@ asm/signal.h
+ ASRegistry.h
+ assert.h
+ atk/atk.h
+-atk-bridge.h
+ atlcom.h
+ atlconv.h
+ atlctl.cpp
+@@ -471,6 +470,7 @@ freetype/ftbitmap.h
  freetype/ftxf86.h
  freetype.h
  ftcache.h
@@ -18,7 +18,15 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.14 2015/09/13 15:05:35 joerg Ex
  ftglyph.h
  ftsynth.h
  ftoutln.h
-@@ -1265,7 +1267,6 @@ X11/Xlocale.h
+@@ -636,6 +636,7 @@ libgnomevfs/gnome-vfs-mime-handlers.h
+ libgnomevfs/gnome-vfs-mime-utils.h
+ libgnomevfs/gnome-vfs-ops.h
+ libgnomevfs/gnome-vfs-standard-callbacks.h
++libv4l2.h
+ lib$routines.h
+ limits
+ limits.h
+@@ -1266,7 +1267,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -26,7 +34,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.14 2015/09/13 15:05:35 joerg Ex
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1327,10 +1328,13 @@ vorbis/codec.h
+@@ -1328,10 +1328,13 @@ vorbis/codec.h
  theora/theoradec.h
  tremor/ivorbiscodec.h
  speex/speex_resampler.h
@@ -40,7 +48,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.14 2015/09/13 15:05:35 joerg Ex
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1359,3 +1363,37 @@ unicode/utypes.h
+@@ -1360,3 +1363,43 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
@@ -65,6 +73,12 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.14 2015/09/13 15:05:35 joerg Ex
 +#endif
 +#if MOZ_NATIVE_TREMOR==1
 +tremor/ivorbiscodec.h
++#endif
++#if MOZ_NATIVE_CELT==1
++celt.h
++celt_header.h
++celt/celt.h
++celt/celt_header.h
 +#endif
 +#if MOZ_NATIVE_OPUS==1
 +opus.h
