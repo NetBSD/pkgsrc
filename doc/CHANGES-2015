@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3986 2015/09/20 14:23:00 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.3987 2015/09/21 00:47:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6972,3 +6972,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/nsd to 4.1.4 [pettai 2015-09-19]
 	Updated www/moodle to 2.9.2 [wen 2015-09-20]
 	Updated net/mikutter to 3.2.8 [tsutsui 2015-09-20]
+	Updated www/php-ja-wordpress to 4.3.1 [ryoon 2015-09-21]
