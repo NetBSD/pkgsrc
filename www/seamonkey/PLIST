@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2015/08/20 06:04:05 dholland Exp $
+@comment $NetBSD: PLIST,v 1.52 2015/09/21 05:03:45 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -381,6 +381,7 @@ lib/seamonkey/chrome/comm/content/branding/messenger-start-hdr.png
 lib/seamonkey/chrome/comm/content/communicator/about.js
 lib/seamonkey/chrome/comm/content/communicator/about.xhtml
 lib/seamonkey/chrome/comm/content/communicator/aboutLife.xhtml
+lib/seamonkey/chrome/comm/content/communicator/aboutPrivateBrowsing.css
 lib/seamonkey/chrome/comm/content/communicator/aboutPrivateBrowsing.js
 lib/seamonkey/chrome/comm/content/communicator/aboutPrivateBrowsing.xul
 lib/seamonkey/chrome/comm/content/communicator/aboutSessionRestore.js
@@ -457,7 +458,6 @@ lib/seamonkey/chrome/comm/content/communicator/history/places.css
 lib/seamonkey/chrome/comm/content/communicator/history/placesOverlay.xul
 lib/seamonkey/chrome/comm/content/communicator/history/tree.xml
 lib/seamonkey/chrome/comm/content/communicator/history/treeView.js
-lib/seamonkey/chrome/comm/content/communicator/history/utils.js
 lib/seamonkey/chrome/comm/content/communicator/labelsencodings.properties
 lib/seamonkey/chrome/comm/content/communicator/license.html
 lib/seamonkey/chrome/comm/content/communicator/migration/migration.js
@@ -950,7 +950,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/using_certs_help.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/using_priv_help.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/welcome_help.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/history/history.dtd
-lib/seamonkey/chrome/en-US/locale/en-US/communicator/history/places.properties
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/migration/migration.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/migration/migration.properties
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/notification.dtd
@@ -1096,6 +1095,7 @@ lib/seamonkey/chrome/en-US/locale/en-US/global/AccessFu.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/about.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutAbout.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutNetworking.dtd
+lib/seamonkey/chrome/en-US/locale/en-US/global/aboutReader.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutRights.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutSupport.properties
@@ -1130,6 +1130,7 @@ lib/seamonkey/chrome/en-US/locale/en-US/global/dialog.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/dialogOverlay.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/dom/dom.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/editMenuOverlay.dtd
+lib/seamonkey/chrome/en-US/locale/en-US/global/fallbackMenubar.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/filefield.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/filepicker.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/filepicker.properties
@@ -1372,7 +1373,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/passwordmgr/passwordManager.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/passwordmgr/passwordmgr.properties
 lib/seamonkey/chrome/en-US/locale/en-US/pipnss/nsserrors.properties
 lib/seamonkey/chrome/en-US/locale/en-US/pipnss/pipnss.properties
-lib/seamonkey/chrome/en-US/locale/en-US/pipnss/security.properties
 lib/seamonkey/chrome/en-US/locale/en-US/pippki/certManager.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/pippki/deviceManager.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/pippki/pippki.dtd
@@ -1704,7 +1704,6 @@ lib/seamonkey/chrome/pippki/content/pippki/escrowWarn.js
 lib/seamonkey/chrome/pippki/content/pippki/escrowWarn.xul
 lib/seamonkey/chrome/pippki/content/pippki/exceptionDialog.js
 lib/seamonkey/chrome/pippki/content/pippki/exceptionDialog.xul
-lib/seamonkey/chrome/pippki/content/pippki/getp12password.xul
 lib/seamonkey/chrome/pippki/content/pippki/getpassword.xul
 lib/seamonkey/chrome/pippki/content/pippki/load_device.xul
 lib/seamonkey/chrome/pippki/content/pippki/password.js
@@ -1735,9 +1734,8 @@ lib/seamonkey/chrome/toolkit/content/global/about.xhtml
 lib/seamonkey/chrome/toolkit/content/global/aboutAbout.js
 lib/seamonkey/chrome/toolkit/content/global/aboutAbout.xhtml
 lib/seamonkey/chrome/toolkit/content/global/aboutCache.js
+lib/seamonkey/chrome/toolkit/content/global/aboutCompartments.js
 lib/seamonkey/chrome/toolkit/content/global/aboutCompartments.xhtml
-lib/seamonkey/chrome/toolkit/content/global/aboutMedia.js
-lib/seamonkey/chrome/toolkit/content/global/aboutMedia.xhtml
 lib/seamonkey/chrome/toolkit/content/global/aboutMemory.css
 lib/seamonkey/chrome/toolkit/content/global/aboutMemory.js
 lib/seamonkey/chrome/toolkit/content/global/aboutMemory.xhtml
@@ -1850,6 +1848,7 @@ lib/seamonkey/chrome/toolkit/content/global/nsUserSettings.js
 lib/seamonkey/chrome/toolkit/content/global/platformHTMLBindings.xml
 lib/seamonkey/chrome/toolkit/content/global/plugins.css
 lib/seamonkey/chrome/toolkit/content/global/plugins.html
+lib/seamonkey/chrome/toolkit/content/global/post-fork-preload.js
 lib/seamonkey/chrome/toolkit/content/global/preload.js
 lib/seamonkey/chrome/toolkit/content/global/printPageSetup.js
 lib/seamonkey/chrome/toolkit/content/global/printPageSetup.xul
@@ -1863,6 +1862,8 @@ lib/seamonkey/chrome/toolkit/content/global/printdialog.js
 lib/seamonkey/chrome/toolkit/content/global/printdialog.xul
 lib/seamonkey/chrome/toolkit/content/global/printjoboptions.js
 lib/seamonkey/chrome/toolkit/content/global/printjoboptions.xul
+lib/seamonkey/chrome/toolkit/content/global/reader/aboutReader.html
+lib/seamonkey/chrome/toolkit/content/global/reader/aboutReader.js
 lib/seamonkey/chrome/toolkit/content/global/remote-test-ipc.js
 lib/seamonkey/chrome/toolkit/content/global/resetProfile.css
 lib/seamonkey/chrome/toolkit/content/global/resetProfile.js
@@ -1915,11 +1916,11 @@ lib/seamonkey/chrome/toolkit/content/mozapps/extensions/extensions.css
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/extensions.js
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/extensions.xml
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/extensions.xul
+lib/seamonkey/chrome/toolkit/content/mozapps/extensions/gmpPrefs.xul
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/list.js
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/list.xul
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/newaddon.js
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/newaddon.xul
-lib/seamonkey/chrome/toolkit/content/mozapps/extensions/openH264Prefs.xul
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/pluginPrefs.xul
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/selectAddons.css
 lib/seamonkey/chrome/toolkit/content/mozapps/extensions/selectAddons.js
@@ -1985,6 +1986,7 @@ lib/seamonkey/chrome/toolkit/skin/classic/global/about.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/aboutCache.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/aboutCacheEntry.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/aboutMemory.css
+lib/seamonkey/chrome/toolkit/skin/classic/global/aboutReader.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/aboutSupport.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/alerts/alert.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/alerts/notification-48.png
@@ -2093,17 +2095,18 @@ lib/seamonkey/chrome/toolkit/skin/classic/global/icons/warning-16.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/warning-24.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/warning-64.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/warning-large.png
+lib/seamonkey/chrome/toolkit/skin/classic/global/icons/warning.svg
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/webapps-16.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/webapps-64.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/windowControls.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/icons/wrap.png
-lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/check.png
-lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/check@2x.png
+lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/check-partial.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/check.svg
 lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/common.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/dropdown.svg
 lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/help-glyph.svg
-lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/sorter.png
-lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/sorter@2x.png
+lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/info-pages.css
+lib/seamonkey/chrome/toolkit/skin/classic/global/in-content/radio.svg
 lib/seamonkey/chrome/toolkit/skin/classic/global/inContentUI.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/inContentUI/background-texture.png
 lib/seamonkey/chrome/toolkit/skin/classic/global/linkTree.css
@@ -2147,6 +2150,14 @@ lib/seamonkey/chrome/toolkit/skin/classic/global/progressmeter.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/radio.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/radio/radio-check-dis.gif
 lib/seamonkey/chrome/toolkit/skin/classic/global/radio/radio-check.gif
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Add-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Close-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Delete-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Minus-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Plus-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Reading-List-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Type-Controls-24x24.svg
+lib/seamonkey/chrome/toolkit/skin/classic/global/reader/RM-Type-Controls-Arrow.svg
 lib/seamonkey/chrome/toolkit/skin/classic/global/resizer.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/richlistbox.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/scale.css
@@ -2228,7 +2239,7 @@ lib/seamonkey/chrome/toolkit/skin/classic/mozapps/extensions/stripes-warning.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/extensions/themeGeneric-16.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/extensions/themeGeneric.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/extensions/update.css
-lib/seamonkey/chrome/toolkit/skin/classic/mozapps/extensions/utilities.png
+lib/seamonkey/chrome/toolkit/skin/classic/mozapps/extensions/utilities.svg
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/formautofill/requestAutocomplete.css
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/handling/handling.css
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/passwordmgr/key-16.png
@@ -2261,6 +2272,7 @@ lib/seamonkey/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallItemGeneric
 lib/seamonkey/components/AlarmsManager.js
 lib/seamonkey/components/AppsService.js
 lib/seamonkey/components/BrowserElementParent.js
+lib/seamonkey/components/ChromeNotifications.js
 lib/seamonkey/components/ColorAnalyzer.js
 lib/seamonkey/components/ConsoleAPIStorage.js
 lib/seamonkey/components/ContactManager.js
@@ -2271,12 +2283,15 @@ lib/seamonkey/components/FeedConverter.js
 lib/seamonkey/components/FeedProcessor.js
 lib/seamonkey/components/FeedWriter.js
 lib/seamonkey/components/FormAutofillContentService.js
+lib/seamonkey/components/FormAutofillStartup.js
 lib/seamonkey/components/FormHistoryStartup.js
 lib/seamonkey/components/MainProcessSingleton.js
 lib/seamonkey/components/NetworkGeolocationProvider.js
+lib/seamonkey/components/NotificationStorage.js
 lib/seamonkey/components/PermissionSettings.js
 lib/seamonkey/components/PhoneNumberService.js
 lib/seamonkey/components/PlacesCategoriesStarter.js
+lib/seamonkey/components/PresentationDeviceInfoManager.js
 lib/seamonkey/components/SettingsManager.js
 lib/seamonkey/components/SiteSpecificUserAgent.js
 lib/seamonkey/components/SlowScriptDebug.js
@@ -2297,6 +2312,7 @@ lib/seamonkey/components/contentAreaDropListener.js
 lib/seamonkey/components/crypto-SDR.js
 lib/seamonkey/components/folderLookupService.js
 lib/seamonkey/components/glautocomp.js
+lib/seamonkey/components/htmlMenuBuilder.js
 lib/seamonkey/components/interfaces.xpt
 lib/seamonkey/components/jsconsole-clhandler.js
 lib/seamonkey/components/jsmimeemitter.js
@@ -2306,6 +2322,7 @@ lib/seamonkey/components/mdn-service.js
 lib/seamonkey/components/messageWakeupService.js
 lib/seamonkey/components/mimeJSComponents.js
 lib/seamonkey/components/msgAsyncPrompter.js
+lib/seamonkey/components/msgOAuth2Module.js
 lib/seamonkey/components/newMailNotificationService.js
 lib/seamonkey/components/newsblog.js
 lib/seamonkey/components/nsAbAutoCompleteMyDomain.js
@@ -2320,6 +2337,7 @@ lib/seamonkey/components/nsContentDispatchChooser.js
 lib/seamonkey/components/nsContentPrefService.js
 lib/seamonkey/components/nsDOMIdentity.js
 lib/seamonkey/components/nsDefaultCLH.js
+lib/seamonkey/components/nsDownloadsStartup.js
 lib/seamonkey/components/nsFilePicker.js
 lib/seamonkey/components/nsFormAutoComplete.js
 lib/seamonkey/components/nsFormHistory.js
@@ -2365,6 +2383,7 @@ lib/seamonkey/components/txEXSLTRegExFunctions.js
 lib/seamonkey/defaults/autoconfig/platform.js
 lib/seamonkey/defaults/autoconfig/prefcalls.js
 lib/seamonkey/defaults/messenger/mailViews.dat
+lib/seamonkey/defaults/permissions
 lib/seamonkey/defaults/pref/browser-prefs.js
 lib/seamonkey/defaults/pref/channel-prefs.js
 lib/seamonkey/defaults/pref/composer.js
@@ -3096,9 +3115,11 @@ lib/seamonkey/isp/rss.rdf
 lib/seamonkey/libldap60.so
 lib/seamonkey/libldif60.so
 lib/seamonkey/libmozalloc.so
+lib/seamonkey/libmozjs.so
 lib/seamonkey/libprldap60.so
 lib/seamonkey/libxul.so
 lib/seamonkey/license.txt
+lib/seamonkey/modules/AboutReader.jsm
 lib/seamonkey/modules/ActivitiesService.jsm
 lib/seamonkey/modules/ActivitiesServiceFilter.jsm
 lib/seamonkey/modules/AddonManager.jsm
@@ -3121,6 +3142,14 @@ lib/seamonkey/modules/BrowserUtils.jsm
 lib/seamonkey/modules/CertUtils.jsm
 lib/seamonkey/modules/CharsetMenu.jsm
 lib/seamonkey/modules/ChromeManifestParser.jsm
+lib/seamonkey/modules/CloudSync.jsm
+lib/seamonkey/modules/CloudSyncAdapters.jsm
+lib/seamonkey/modules/CloudSyncBookmarks.jsm
+lib/seamonkey/modules/CloudSyncBookmarksFolderCache.jsm
+lib/seamonkey/modules/CloudSyncEventSource.jsm
+lib/seamonkey/modules/CloudSyncLocal.jsm
+lib/seamonkey/modules/CloudSyncPlacesWrapper.jsm
+lib/seamonkey/modules/CloudSyncTabs.jsm
 lib/seamonkey/modules/ClusterLib.js
 lib/seamonkey/modules/ColorAnalyzer_worker.js
 lib/seamonkey/modules/ColorConversion.js
@@ -3170,8 +3199,10 @@ lib/seamonkey/modules/FxAccounts.jsm
 lib/seamonkey/modules/FxAccountsClient.jsm
 lib/seamonkey/modules/FxAccountsCommon.js
 lib/seamonkey/modules/FxAccountsOAuthClient.jsm
+lib/seamonkey/modules/FxAccountsOAuthGrantClient.jsm
 lib/seamonkey/modules/FxAccountsProfileClient.jsm
 lib/seamonkey/modules/GMPInstallManager.jsm
+lib/seamonkey/modules/GMPUtils.jsm
 lib/seamonkey/modules/Geometry.jsm
 lib/seamonkey/modules/History.jsm
 lib/seamonkey/modules/Http.jsm
@@ -3185,6 +3216,7 @@ lib/seamonkey/modules/InsecurePasswordUtils.jsm
 lib/seamonkey/modules/InterAppCommService.jsm
 lib/seamonkey/modules/JXON.js
 lib/seamonkey/modules/Keyboard.jsm
+lib/seamonkey/modules/Langpacks.jsm
 lib/seamonkey/modules/LightweightThemeConsumer.jsm
 lib/seamonkey/modules/LightweightThemeManager.jsm
 lib/seamonkey/modules/LoadContextInfo.jsm
@@ -3205,9 +3237,11 @@ lib/seamonkey/modules/NetUtil.jsm
 lib/seamonkey/modules/NewTabUtils.jsm
 lib/seamonkey/modules/NotificationDB.jsm
 lib/seamonkey/modules/OAuth2.jsm
+lib/seamonkey/modules/OAuth2Providers.jsm
 lib/seamonkey/modules/OfflineCacheInstaller.jsm
 lib/seamonkey/modules/OperatorApps.jsm
 lib/seamonkey/modules/PageMenu.jsm
+lib/seamonkey/modules/PageMetadata.jsm
 lib/seamonkey/modules/PageThumbUtils.jsm
 lib/seamonkey/modules/PageThumbs.jsm
 lib/seamonkey/modules/PageThumbsWorker.js
@@ -3229,6 +3263,8 @@ lib/seamonkey/modules/PlacesUtils.jsm
 lib/seamonkey/modules/PluralForm.jsm
 lib/seamonkey/modules/PopupNotifications.jsm
 lib/seamonkey/modules/Preferences.jsm
+lib/seamonkey/modules/Prefetcher.jsm
+lib/seamonkey/modules/PresentationDeviceInfoManager.jsm
 lib/seamonkey/modules/PrivateBrowsingUtils.jsm
 lib/seamonkey/modules/Promise-backend.js
 lib/seamonkey/modules/Promise.jsm
@@ -3236,6 +3272,7 @@ lib/seamonkey/modules/PromiseUtils.jsm
 lib/seamonkey/modules/PromiseWorker.jsm
 lib/seamonkey/modules/PropertyListUtils.jsm
 lib/seamonkey/modules/PushService.jsm
+lib/seamonkey/modules/ReaderMode.jsm
 lib/seamonkey/modules/RemoteAddonsChild.jsm
 lib/seamonkey/modules/RemoteAddonsParent.jsm
 lib/seamonkey/modules/RemoteController.jsm
@@ -3244,6 +3281,9 @@ lib/seamonkey/modules/RemoteSecurityUI.jsm
 lib/seamonkey/modules/RemoteWebNavigation.jsm
 lib/seamonkey/modules/RemoteWebProgress.jsm
 lib/seamonkey/modules/RequestAutocompleteUI.jsm
+lib/seamonkey/modules/RequestSyncApp.jsm
+lib/seamonkey/modules/RequestSyncService.jsm
+lib/seamonkey/modules/RequestSyncTask.jsm
 lib/seamonkey/modules/ResetProfile.jsm
 lib/seamonkey/modules/ResourceStatsDB.jsm
 lib/seamonkey/modules/ResourceStatsService.jsm
@@ -3273,6 +3313,7 @@ lib/seamonkey/modules/Task.jsm
 lib/seamonkey/modules/TelemetryFile.jsm
 lib/seamonkey/modules/TelemetryLog.jsm
 lib/seamonkey/modules/TelemetryPing.jsm
+lib/seamonkey/modules/TelemetrySession.jsm
 lib/seamonkey/modules/TelemetryStopwatch.jsm
 lib/seamonkey/modules/TelemetryTimestamps.jsm
 lib/seamonkey/modules/ThirdPartyCookieProbe.jsm
@@ -3283,6 +3324,7 @@ lib/seamonkey/modules/UITelemetry.jsm
 lib/seamonkey/modules/UpdateChannel.jsm
 lib/seamonkey/modules/UserAgentOverrides.jsm
 lib/seamonkey/modules/UserAgentUpdates.jsm
+lib/seamonkey/modules/UserCustomizations.jsm
 lib/seamonkey/modules/WebChannel.jsm
 lib/seamonkey/modules/WebappOSUtils.jsm
 lib/seamonkey/modules/Webapps.jsm
@@ -3308,8 +3350,8 @@ lib/seamonkey/modules/addons/AddonRepository.jsm
 lib/seamonkey/modules/addons/AddonRepository_SQLiteMigrator.jsm
 lib/seamonkey/modules/addons/AddonUpdateChecker.jsm
 lib/seamonkey/modules/addons/Content.js
+lib/seamonkey/modules/addons/GMPProvider.jsm
 lib/seamonkey/modules/addons/LightweightThemeImageOptimizer.jsm
-lib/seamonkey/modules/addons/OpenH264Provider.jsm
 lib/seamonkey/modules/addons/PluginProvider.jsm
 lib/seamonkey/modules/addons/SpellCheckDictionaryBootstrap.js
 lib/seamonkey/modules/addons/XPIProvider.jsm
@@ -3333,12 +3375,17 @@ lib/seamonkey/modules/commonjs/diffpatcher/test/patch.js
 lib/seamonkey/modules/commonjs/diffpatcher/test/tap.js
 lib/seamonkey/modules/commonjs/framescript/FrameScriptManager.jsm
 lib/seamonkey/modules/commonjs/framescript/LoaderHelper.jsm
+lib/seamonkey/modules/commonjs/framescript/context-menu.js
 lib/seamonkey/modules/commonjs/framescript/contextmenu-events.js
+lib/seamonkey/modules/commonjs/framescript/manager.js
 lib/seamonkey/modules/commonjs/framescript/tab-events.js
+lib/seamonkey/modules/commonjs/framescript/util.js
+lib/seamonkey/modules/commonjs/index.js
 lib/seamonkey/modules/commonjs/method/core.js
 lib/seamonkey/modules/commonjs/method/test/browser.js
 lib/seamonkey/modules/commonjs/method/test/common.js
 lib/seamonkey/modules/commonjs/node/os.js
+lib/seamonkey/modules/commonjs/sdk/addon/bootstrap.js
 lib/seamonkey/modules/commonjs/sdk/addon/events.js
 lib/seamonkey/modules/commonjs/sdk/addon/host.js
 lib/seamonkey/modules/commonjs/sdk/addon/installer.js
@@ -3360,9 +3407,12 @@ lib/seamonkey/modules/commonjs/sdk/content/sandbox.js
 lib/seamonkey/modules/commonjs/sdk/content/thumbnail.js
 lib/seamonkey/modules/commonjs/sdk/content/utils.js
 lib/seamonkey/modules/commonjs/sdk/content/worker-child.js
-lib/seamonkey/modules/commonjs/sdk/content/worker-parent.js
 lib/seamonkey/modules/commonjs/sdk/content/worker.js
 lib/seamonkey/modules/commonjs/sdk/context-menu.js
+lib/seamonkey/modules/commonjs/sdk/context-menu/context.js
+lib/seamonkey/modules/commonjs/sdk/context-menu/core.js
+lib/seamonkey/modules/commonjs/sdk/context-menu/readers.js
+lib/seamonkey/modules/commonjs/sdk/context-menu@2.js
 lib/seamonkey/modules/commonjs/sdk/core/disposable.js
 lib/seamonkey/modules/commonjs/sdk/core/heritage.js
 lib/seamonkey/modules/commonjs/sdk/core/namespace.js
@@ -3378,6 +3428,7 @@ lib/seamonkey/modules/commonjs/sdk/deprecated/light-traits.js
 lib/seamonkey/modules/commonjs/sdk/deprecated/list.js
 lib/seamonkey/modules/commonjs/sdk/deprecated/memory.js
 lib/seamonkey/modules/commonjs/sdk/deprecated/symbiont.js
+lib/seamonkey/modules/commonjs/sdk/deprecated/sync-worker.js
 lib/seamonkey/modules/commonjs/sdk/deprecated/traits-worker.js
 lib/seamonkey/modules/commonjs/sdk/deprecated/traits.js
 lib/seamonkey/modules/commonjs/sdk/deprecated/traits/core.js
@@ -3440,7 +3491,6 @@ lib/seamonkey/modules/commonjs/sdk/page-worker.js
 lib/seamonkey/modules/commonjs/sdk/panel.js
 lib/seamonkey/modules/commonjs/sdk/panel/events.js
 lib/seamonkey/modules/commonjs/sdk/panel/utils.js
-lib/seamonkey/modules/commonjs/sdk/panel/window.js
 lib/seamonkey/modules/commonjs/sdk/passwords.js
 lib/seamonkey/modules/commonjs/sdk/passwords/utils.js
 lib/seamonkey/modules/commonjs/sdk/places/bookmarks.js
@@ -3479,6 +3529,7 @@ lib/seamonkey/modules/commonjs/sdk/system/process.js
 lib/seamonkey/modules/commonjs/sdk/system/runtime.js
 lib/seamonkey/modules/commonjs/sdk/system/unload.js
 lib/seamonkey/modules/commonjs/sdk/system/xul-app.js
+lib/seamonkey/modules/commonjs/sdk/system/xul-app.jsm
 lib/seamonkey/modules/commonjs/sdk/tab/events.js
 lib/seamonkey/modules/commonjs/sdk/tabs.js
 lib/seamonkey/modules/commonjs/sdk/tabs/common.js
@@ -3509,6 +3560,7 @@ lib/seamonkey/modules/commonjs/sdk/ui/button/contract.js
 lib/seamonkey/modules/commonjs/sdk/ui/button/toggle.js
 lib/seamonkey/modules/commonjs/sdk/ui/button/view.js
 lib/seamonkey/modules/commonjs/sdk/ui/button/view/events.js
+lib/seamonkey/modules/commonjs/sdk/ui/component.js
 lib/seamonkey/modules/commonjs/sdk/ui/frame.js
 lib/seamonkey/modules/commonjs/sdk/ui/frame/model.js
 lib/seamonkey/modules/commonjs/sdk/ui/frame/view.html
@@ -3525,9 +3577,11 @@ lib/seamonkey/modules/commonjs/sdk/ui/state/events.js
 lib/seamonkey/modules/commonjs/sdk/ui/toolbar.js
 lib/seamonkey/modules/commonjs/sdk/ui/toolbar/model.js
 lib/seamonkey/modules/commonjs/sdk/ui/toolbar/view.js
+lib/seamonkey/modules/commonjs/sdk/uri/resource.js
 lib/seamonkey/modules/commonjs/sdk/url.js
 lib/seamonkey/modules/commonjs/sdk/url/utils.js
 lib/seamonkey/modules/commonjs/sdk/util/array.js
+lib/seamonkey/modules/commonjs/sdk/util/bond.js
 lib/seamonkey/modules/commonjs/sdk/util/collection.js
 lib/seamonkey/modules/commonjs/sdk/util/contract.js
 lib/seamonkey/modules/commonjs/sdk/util/deprecate.js
@@ -3535,7 +3589,6 @@ lib/seamonkey/modules/commonjs/sdk/util/dispatcher.js
 lib/seamonkey/modules/commonjs/sdk/util/list.js
 lib/seamonkey/modules/commonjs/sdk/util/match-pattern.js
 lib/seamonkey/modules/commonjs/sdk/util/object.js
-lib/seamonkey/modules/commonjs/sdk/util/registry.js
 lib/seamonkey/modules/commonjs/sdk/util/rules.js
 lib/seamonkey/modules/commonjs/sdk/util/sequence.js
 lib/seamonkey/modules/commonjs/sdk/util/uuid.js
@@ -3550,7 +3603,6 @@ lib/seamonkey/modules/commonjs/sdk/windows.js
 lib/seamonkey/modules/commonjs/sdk/windows/dom.js
 lib/seamonkey/modules/commonjs/sdk/windows/fennec.js
 lib/seamonkey/modules/commonjs/sdk/windows/firefox.js
-lib/seamonkey/modules/commonjs/sdk/windows/loader.js
 lib/seamonkey/modules/commonjs/sdk/windows/observer.js
 lib/seamonkey/modules/commonjs/sdk/windows/tabs-fennec.js
 lib/seamonkey/modules/commonjs/sdk/windows/tabs-firefox.js
@@ -3689,7 +3741,12 @@ lib/seamonkey/modules/devtools/pretty-fast.js
 lib/seamonkey/modules/devtools/qrcode/decoder/index.js
 lib/seamonkey/modules/devtools/qrcode/encoder/index.js
 lib/seamonkey/modules/devtools/qrcode/index.js
+lib/seamonkey/modules/devtools/security/auth.js
+lib/seamonkey/modules/devtools/security/cert.js
+lib/seamonkey/modules/devtools/security/prompt.js
+lib/seamonkey/modules/devtools/security/socket.js
 lib/seamonkey/modules/devtools/server/actors/actor-registry.js
+lib/seamonkey/modules/devtools/server/actors/animation.js
 lib/seamonkey/modules/devtools/server/actors/call-watcher.js
 lib/seamonkey/modules/devtools/server/actors/canvas.js
 lib/seamonkey/modules/devtools/server/actors/child-process.js
@@ -3697,6 +3754,8 @@ lib/seamonkey/modules/devtools/server/actors/childtab.js
 lib/seamonkey/modules/devtools/server/actors/common.js
 lib/seamonkey/modules/devtools/server/actors/csscoverage.js
 lib/seamonkey/modules/devtools/server/actors/device.js
+lib/seamonkey/modules/devtools/server/actors/director-manager.js
+lib/seamonkey/modules/devtools/server/actors/director-registry.js
 lib/seamonkey/modules/devtools/server/actors/eventlooplag.js
 lib/seamonkey/modules/devtools/server/actors/framerate.js
 lib/seamonkey/modules/devtools/server/actors/gcli.js
@@ -3711,6 +3770,7 @@ lib/seamonkey/modules/devtools/server/actors/pretty-print-worker.js
 lib/seamonkey/modules/devtools/server/actors/profiler.js
 lib/seamonkey/modules/devtools/server/actors/root.js
 lib/seamonkey/modules/devtools/server/actors/script.js
+lib/seamonkey/modules/devtools/server/actors/settings.js
 lib/seamonkey/modules/devtools/server/actors/storage.js
 lib/seamonkey/modules/devtools/server/actors/string.js
 lib/seamonkey/modules/devtools/server/actors/styleeditor.js
@@ -3718,8 +3778,12 @@ lib/seamonkey/modules/devtools/server/actors/styles.js
 lib/seamonkey/modules/devtools/server/actors/stylesheets.js
 lib/seamonkey/modules/devtools/server/actors/timeline.js
 lib/seamonkey/modules/devtools/server/actors/tracer.js
+lib/seamonkey/modules/devtools/server/actors/utils/ScriptStore.js
+lib/seamonkey/modules/devtools/server/actors/utils/actor-registry-utils.js
+lib/seamonkey/modules/devtools/server/actors/utils/automation-timeline.js
 lib/seamonkey/modules/devtools/server/actors/utils/make-debugger.js
 lib/seamonkey/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
+lib/seamonkey/modules/devtools/server/actors/utils/stack.js
 lib/seamonkey/modules/devtools/server/actors/webapps.js
 lib/seamonkey/modules/devtools/server/actors/webaudio.js
 lib/seamonkey/modules/devtools/server/actors/webbrowser.js
@@ -3729,6 +3793,7 @@ lib/seamonkey/modules/devtools/server/child.js
 lib/seamonkey/modules/devtools/server/content-globals.js
 lib/seamonkey/modules/devtools/server/main.js
 lib/seamonkey/modules/devtools/server/protocol.js
+lib/seamonkey/modules/devtools/shared/async-storage.js
 lib/seamonkey/modules/devtools/source-map.js
 lib/seamonkey/modules/devtools/styleinspector/css-logic.js
 lib/seamonkey/modules/devtools/tern/browser.js
@@ -3750,6 +3815,7 @@ lib/seamonkey/modules/devtools/transport/transport.js
 lib/seamonkey/modules/devtools/worker-loader.js
 lib/seamonkey/modules/editorUtilities.jsm
 lib/seamonkey/modules/errUtils.js
+lib/seamonkey/modules/extraMimeParsers.jsm
 lib/seamonkey/modules/folderUtils.jsm
 lib/seamonkey/modules/gloda/collection.js
 lib/seamonkey/modules/gloda/connotent.js
@@ -3795,7 +3861,7 @@ lib/seamonkey/modules/jsmime/jsmime.js
 lib/seamonkey/modules/mailServices.js
 lib/seamonkey/modules/mailnewsMigrator.js
 lib/seamonkey/modules/mcc_iso3166_table.jsm
-lib/seamonkey/modules/media/IdpProxy.jsm
+lib/seamonkey/modules/media/IdpSandbox.jsm
 lib/seamonkey/modules/media/PeerConnectionIdp.jsm
 lib/seamonkey/modules/media/RTCStatsReport.jsm
 lib/seamonkey/modules/mimeParser.jsm
@@ -3816,14 +3882,18 @@ lib/seamonkey/modules/osfile/osfile_win_front.jsm
 lib/seamonkey/modules/osfile/ospath.jsm
 lib/seamonkey/modules/osfile/ospath_unix.jsm
 lib/seamonkey/modules/osfile/ospath_win.jsm
+lib/seamonkey/modules/reader/JSDOMParser.js
+lib/seamonkey/modules/reader/Readability.js
+lib/seamonkey/modules/reader/ReaderWorker.js
+lib/seamonkey/modules/reader/ReaderWorker.jsm
 lib/seamonkey/modules/reflect.jsm
 lib/seamonkey/modules/sdk/bootstrap.js
 lib/seamonkey/modules/sdk/system/Startup.js
-lib/seamonkey/modules/sdk/system/XulApp.js
 lib/seamonkey/modules/services-common/async.js
 lib/seamonkey/modules/services-common/bagheeraclient.js
 lib/seamonkey/modules/services-common/hawkclient.js
 lib/seamonkey/modules/services-common/hawkrequest.js
+lib/seamonkey/modules/services-common/logmanager.js
 lib/seamonkey/modules/services-common/observers.js
 lib/seamonkey/modules/services-common/rest.js
 lib/seamonkey/modules/services-common/storageservice.js
@@ -3832,6 +3902,7 @@ lib/seamonkey/modules/services-common/tokenserverclient.js
 lib/seamonkey/modules/services-common/utils.js
 lib/seamonkey/modules/services-crypto/WeaveCrypto.js
 lib/seamonkey/modules/services-crypto/utils.js
+lib/seamonkey/modules/services-sync/FxaMigrator.jsm
 lib/seamonkey/modules/services-sync/addonsreconciler.js
 lib/seamonkey/modules/services-sync/addonutils.js
 lib/seamonkey/modules/services-sync/browserid_identity.js

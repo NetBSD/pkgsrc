@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.chatzilla,v 1.6 2015/03/17 19:50:42 ryoon Exp $
+@comment $NetBSD: PLIST.chatzilla,v 1.7 2015/09/21 05:03:45 ryoon Exp $
 lib/seamonkey/extensions/inspector@mozilla.org/chrome.manifest
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/.mkdir.done
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.ico
@@ -131,6 +131,30 @@ lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspec
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspector/viewers/stylesheets.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspector/viewers/usedFontFaces.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspector/viewers/xblBindings.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/editing.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/inspector.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/inspector.properties
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/prefs.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/tasksOverlay.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewer-registry.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEvent.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEvents.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEvents.properties
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEventsHandlerHelpDialog.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleProps.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleProps.properties
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleRelations.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleTree.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleTreeEvalJSDialog.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/boxModel.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/computedStyle.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/dom.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/domNode.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/jsObject.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/styleRules.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/stylesheets.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/usedFontFaces.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/xblBindings.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/en-GB/inspector/editing.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/en-GB/inspector/inspector.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/en-GB/inspector/inspector.properties
@@ -305,8 +329,6 @@ lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/skin/modern/insp
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/skin/modern/inspector/viewers/domNode/domNode.css
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/skin/modern/inspector/viewers/styleRules/styleRules.css
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/skin/modern/inspector/viewers/xblBindings/xblBindings.css
-lib/seamonkey/extensions/inspector@mozilla.org/components/inspector-cmdline.js
-lib/seamonkey/extensions/inspector@mozilla.org/components/inspector-cmdline.js
 lib/seamonkey/extensions/inspector@mozilla.org/defaults/preferences/inspector.js
 lib/seamonkey/extensions/inspector@mozilla.org/install.rdf
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome.manifest
@@ -440,6 +462,4 @@ lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/chatzilla
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/icons/default/chatzilla-window.ico
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/icons/default/chatzilla-window.xpm
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/chrome/icons/default/chatzilla-window16.xpm
-lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/components/chatzilla-service.js
-lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/components/chatzilla-service.js
 lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}/install.rdf
