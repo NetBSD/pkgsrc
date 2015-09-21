@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14903 2015/09/18 15:14:14 wiz Exp $
+$NetBSD: TODO,v 1.14904 2015/09/21 10:50:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -536,6 +536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cloog-0.18.3
 	o clutter-1.24
 	o clutter-gst-3.0.2
+	o cmake-3.3.2
 	o cmake-fedora-2.3.4
 	o cmocka-1.0.1
 	o cmus-2.7.1
@@ -773,6 +774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gimp-docs-ru-2.8.2
 	o gimp-docs-sv-2.8.2
 	o gimp-docs-zh_CN-2.8.2
+	o git-2.5.3
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -782,6 +784,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o gliv-1.9.7
+	o global-6.5.1
 	o glom-1.14.2 [GNOME 2.26]
 	o gloox-1.0.13
 	o gmock-1.7.0
@@ -1053,6 +1056,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libnasl-2.3.1
 	o libntfs-2015.3.14
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.5602
 	o libowfat-0.29
 	o libpcap-1.7.4
 	o libpgm-5.2.122
@@ -1324,10 +1328,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Net-Amazon-S3-0.80
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DHCP-0.696
+	o p5-Net-DNS-1.02
 	o p5-Net-GitHub-0.77
 	o p5-Net-ManageSieve-0.12
 	o p5-Net-OpenSSH-0.64
 	o p5-Net-SSH-1.37
+	o p5-Net-SSLeay-1.71
 	o p5-Net-Twitter-4.01010
 	o p5-Netdisco-2.033001
 	o p5-NetPacket-1.6.0
@@ -1543,7 +1549,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-notify-0.3.1
 	o py-oauthlib-1.0.1
 	o py-omniORBpy-3.7
-	o py-pbr-1.7.0
+	o py-pbr-1.8.0
 	o py-pdf-parser-0.6.3
 	o py-pendrell-0.3.7
 	o py-proteus-3.6.1
@@ -1553,6 +1559,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
+	o py-setuptools-18.3.2
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11
@@ -1661,6 +1668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ser-0.9.6
 	o sgb-20090810
 	o sge-8.1.8
+	o shared-mime-info-1.5
 	o sharity-3.7
 	o sharity-light-1.3
 	o shibboleth-sp-2.5.5
@@ -1829,6 +1837,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.8.14
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o warzone2100-2.3.8
@@ -1852,7 +1861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20150905
+	o x264-devel-20150919
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
