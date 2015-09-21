@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/09/02 12:39:33 fhajny Exp $
+$NetBSD: distinfo,v 1.17 2015/09/21 17:46:36 fhajny Exp $
 
 SHA1 (sqlrelay-0.63.tar.gz) = b71f8967269fee4bd7b0e50699276f2f01ee2a5a
 RMD160 (sqlrelay-0.63.tar.gz) = 381311a698a70e96aa92dfecf4910dc942e4a3fb
@@ -7,6 +7,7 @@ SHA1 (patch-ad) = cc4a94941ec737abede98bdd7b19bc902f755609
 SHA1 (patch-config.mk.in) = 297ac15bc1d59bdff7236107df8b5ad7b03737e5
 SHA1 (patch-configure) = 29bc9087fc814d0879c99b2772632a3034bec502
 SHA1 (patch-etc_Makefile) = 128102a3eaaeba96425060f82dc8e5e94edeabd0
+SHA1 (patch-src_api_nodejs_sqlrelay.cpp) = 61ae166cbb384d32dd1d2c500cce82e54a228c05
 SHA1 (patch-src_api_php_sql__relay.cpp) = d589837f05e86d614bc3b71bc0459ae786193d88
 SHA1 (patch-src_api_ruby_getcflags.rb) = 033e26ef03db4851f493d831c37ec947662d47ee
 SHA1 (patch-src_api_ruby_getsitearchdir.rb) = 603c66ed45f854b833eefbcdbd58e41465fb8120
