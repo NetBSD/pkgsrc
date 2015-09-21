@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3988 2015/09/21 05:04:17 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.3989 2015/09/21 05:09:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6974,3 +6974,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.8 [tsutsui 2015-09-20]
 	Updated www/php-ja-wordpress to 4.3.1 [ryoon 2015-09-21]
 	Updated www/seamonkey to 2.35 [ryoon 2015-09-21]
+	Updated www/seamonkey-l10n to 2.35 [ryoon 2015-09-21]
