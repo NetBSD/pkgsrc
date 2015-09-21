@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.2 2015/08/30 10:52:16 ryoon Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.3 2015/09/21 09:44:07 jperkin Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -39,7 +39,7 @@ java/oracle-8/bin/tnameserv
 java/oracle-8/bin/unpack200
 java/oracle-8/lib/amd64/jli/libjli.so
 java/oracle-8/lib/amd64/jspawnhelper
-java/oracle-8/lib/amd64/jvm.cfg
+java/oracle-8/lib/amd64/jvm.cfg.default
 java/oracle-8/lib/amd64/libawt.so
 java/oracle-8/lib/amd64/libawt_headless.so
 java/oracle-8/lib/amd64/libawt_xawt.so
@@ -83,7 +83,7 @@ java/oracle-8/lib/amd64/server/libjsig.so
 java/oracle-8/lib/amd64/server/libjvm.so
 java/oracle-8/lib/amd64/server/libjvm_db.so
 java/oracle-8/lib/amd64/server/libjvm_dtrace.so
-java/oracle-8/lib/calendars.properties
+java/oracle-8/lib/calendars.properties.default
 java/oracle-8/lib/charsets.jar
 java/oracle-8/lib/classlist
 java/oracle-8/lib/cmm/CIEXYZ.pf
@@ -91,7 +91,7 @@ java/oracle-8/lib/cmm/GRAY.pf
 java/oracle-8/lib/cmm/LINEAR_RGB.pf
 java/oracle-8/lib/cmm/PYCC.pf
 java/oracle-8/lib/cmm/sRGB.pf
-java/oracle-8/lib/content-types.properties
+java/oracle-8/lib/content-types.properties.default
 java/oracle-8/lib/currency.data
 java/oracle-8/lib/ext/cldrdata.jar
 java/oracle-8/lib/ext/dnsns.jar
@@ -104,9 +104,9 @@ java/oracle-8/lib/ext/sunjce_provider.jar
 java/oracle-8/lib/ext/sunpkcs11.jar
 java/oracle-8/lib/ext/ucrypto.jar
 java/oracle-8/lib/ext/zipfs.jar
-java/oracle-8/lib/flavormap.properties
-java/oracle-8/lib/fontconfig.bfc
-java/oracle-8/lib/fontconfig.properties.src
+java/oracle-8/lib/flavormap.properties.default
+java/oracle-8/lib/fontconfig.bfc.default
+java/oracle-8/lib/fontconfig.properties.src.default
 java/oracle-8/lib/fonts/LucidaBrightDemiBold.ttf
 java/oracle-8/lib/fonts/LucidaBrightDemiItalic.ttf
 java/oracle-8/lib/fonts/LucidaBrightItalic.ttf
@@ -116,8 +116,8 @@ java/oracle-8/lib/fonts/LucidaSansRegular.ttf
 java/oracle-8/lib/fonts/LucidaTypewriterBold.ttf
 java/oracle-8/lib/fonts/LucidaTypewriterRegular.ttf
 java/oracle-8/lib/fonts/fonts.dir
-java/oracle-8/lib/hijrah-config-umalqura.properties.default
-java/oracle-8/lib/images/cursors/cursors.properties
+java/oracle-8/lib/hijrah-config-umalqura.properties
+java/oracle-8/lib/images/cursors/cursors.properties.default
 java/oracle-8/lib/images/cursors/invalid32x32.gif
 java/oracle-8/lib/images/cursors/motif_CopyDrop32x32.gif
 java/oracle-8/lib/images/cursors/motif_CopyNoDrop32x32.gif
@@ -131,16 +131,16 @@ java/oracle-8/lib/jfr/default.jfc
 java/oracle-8/lib/jfr/profile.jfc
 java/oracle-8/lib/jsse.jar
 java/oracle-8/lib/jvm.hprof.txt
-java/oracle-8/lib/logging.properties
+java/oracle-8/lib/logging.properties.default
 java/oracle-8/lib/management-agent.jar
 java/oracle-8/lib/management/jmxremote.access
 java/oracle-8/lib/management/jmxremote.password.template
-java/oracle-8/lib/management/management.properties
+java/oracle-8/lib/management/management.properties.default
 java/oracle-8/lib/management/snmp.acl.template
 java/oracle-8/lib/meta-index
-java/oracle-8/lib/net.properties
-java/oracle-8/lib/psfont.properties.ja
-java/oracle-8/lib/psfontj2d.properties
+java/oracle-8/lib/net.properties.default
+java/oracle-8/lib/psfont.properties.ja.default
+java/oracle-8/lib/psfontj2d.properties.default
 java/oracle-8/lib/resources.jar
 java/oracle-8/lib/rt.jar
 java/oracle-8/lib/sdp/sdp.conf.template
@@ -149,12 +149,12 @@ java/oracle-8/lib/security/blacklist
 java/oracle-8/lib/security/blacklisted.certs
 java/oracle-8/lib/security/cacerts
 java/oracle-8/lib/security/java.policy
-java/oracle-8/lib/security/java.security
+java/oracle-8/lib/security/java.security.default
 java/oracle-8/lib/security/local_policy.jar
-java/oracle-8/lib/security/sunpkcs11-solaris.cfg
+java/oracle-8/lib/security/sunpkcs11-solaris.cfg.default
 java/oracle-8/lib/security/trusted.libraries
-java/oracle-8/lib/security/ucrypto-solaris.cfg
-java/oracle-8/lib/sound.properties
+java/oracle-8/lib/security/ucrypto-solaris.cfg.default
+java/oracle-8/lib/sound.properties.default
 java/oracle-8/lib/tzdb.dat
 java/oracle-8/man/ja/man1/java.1
 java/oracle-8/man/ja/man1/jjs.1
