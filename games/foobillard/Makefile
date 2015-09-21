@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2015/04/25 14:22:55 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2015/09/21 14:00:10 tnn Exp $
 #
+
+# This package should be replaced with
+# http://foobillardplus.sourceforge.net/
 
 DISTNAME=	foobillard-3.0a
 PKGREVISION=	14
@@ -22,6 +25,8 @@ CONFIGURE_ARGS+=	--enable-glut
 CONFIGURE_ARGS+=	--enable-nvidia=no
 .include "../../devel/SDL/buildlink3.mk"
 .endif
+
+CPPFLAGS+=	-DNO_NV_FRESNEL
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
