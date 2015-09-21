@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_xpcom_build_XPCOMInit.cpp,v 1.1 2015/02/15 02:11:03 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_build_XPCOMInit.cpp,v 1.2 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/xpcom/build/XPCOMInit.cpp.orig	2015-02-05 04:38:49.000000000 +0000
+--- mozilla/xpcom/build/XPCOMInit.cpp.orig	2015-09-02 09:27:33.000000000 +0000
 +++ mozilla/xpcom/build/XPCOMInit.cpp
-@@ -139,7 +139,9 @@ extern nsresult nsStringInputStreamConst
+@@ -141,7 +141,9 @@ extern nsresult nsStringInputStreamConst
  #include "mozilla/VisualEventTracer.h"
  #endif
  
@@ -10,9 +10,9 @@ $NetBSD: patch-mozilla_xpcom_build_XPCOMInit.cpp,v 1.1 2015/02/15 02:11:03 ryoon
  #include "ogg/ogg.h"
 +#endif
  #if defined(MOZ_VPX) && !defined(MOZ_VPX_NO_MEM_REPORTING)
- #include "vpx_mem/vpx_mem.h"
- #endif
-@@ -652,11 +654,13 @@ NS_InitXPCOM2(nsIServiceManager** aResul
+ #if defined(HAVE_STDINT_H)
+ // mozilla-config.h defines HAVE_STDINT_H, and then it's defined *again* in
+@@ -669,11 +671,13 @@ NS_InitXPCOM2(nsIServiceManager** aResul
    // this oddness.
    mozilla::SetICUMemoryFunctions();
  

@@ -1,11 +1,13 @@
-$NetBSD: patch-mozilla_netwerk_dns_moz.build,v 1.1 2015/01/02 04:26:21 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_dns_moz.build,v 1.2 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/netwerk/dns/moz.build.orig	2014-12-03 06:23:17.000000000 +0000
+--- mozilla/netwerk/dns/moz.build.orig	2015-09-02 09:28:02.000000000 +0000
 +++ mozilla/netwerk/dns/moz.build
-@@ -63,3 +63,6 @@ GENERATED_FILES = [
- LOCAL_INCLUDES += [
-     '../base/src',
+@@ -68,5 +68,8 @@ LOCAL_INCLUDES += [
+     '/netwerk/base',
  ]
-+
+ 
 +if CONFIG['MOZ_NATIVE_HARFBUZZ']:
 +    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
+ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk' and CONFIG['ANDROID_VERSION'] > '19':
+     CXXFLAGS += ['-I%s/bionic/libc/dns/include' % CONFIG['ANDROID_SOURCE']]
