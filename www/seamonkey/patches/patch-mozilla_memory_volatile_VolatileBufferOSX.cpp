@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_memory_mozalloc_VolatileBufferOSX.cpp,v 1.1 2015/02/15 02:11:03 ryoon Exp $
+$NetBSD: patch-mozilla_memory_volatile_VolatileBufferOSX.cpp,v 1.1 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/memory/mozalloc/VolatileBufferOSX.cpp.orig	2015-02-05 04:39:05.000000000 +0000
-+++ mozilla/memory/mozalloc/VolatileBufferOSX.cpp
-@@ -46,7 +46,14 @@ VolatileBuffer::Init(size_t aSize, size_
+--- mozilla/memory/volatile/VolatileBufferOSX.cpp.orig	2015-09-02 09:27:34.000000000 +0000
++++ mozilla/memory/volatile/VolatileBufferOSX.cpp
+@@ -47,7 +47,14 @@ VolatileBuffer::Init(size_t aSize, size_
    }
  
  heap_alloc:

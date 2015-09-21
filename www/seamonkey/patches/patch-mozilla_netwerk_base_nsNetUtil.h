@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_netwerk_base_public_nsNetUtil.h,v 1.1 2015/03/17 19:50:42 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_base_nsNetUtil.h,v 1.1 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/netwerk/base/public/nsNetUtil.h.orig	2015-03-09 05:34:54.000000000 +0000
-+++ mozilla/netwerk/base/public/nsNetUtil.h
+--- mozilla/netwerk/base/nsNetUtil.h.orig	2015-09-02 09:27:59.000000000 +0000
++++ mozilla/netwerk/base/nsNetUtil.h
 @@ -13,6 +13,7 @@
  #include "nsMemory.h"
  #include "nsCOMPtr.h"
@@ -10,7 +10,7 @@ $NetBSD: patch-mozilla_netwerk_base_public_nsNetUtil.h,v 1.1 2015/03/17 19:50:42
  #include "nsHashKeys.h"
  
  #include "plstr.h"
-@@ -2869,6 +2870,26 @@ NS_IsSrcdocChannel(nsIChannel *aChannel)
+@@ -2828,6 +2829,26 @@ NS_IsSrcdocChannel(nsIChannel *aChannel)
  bool NS_IsReasonableHTTPHeaderValue(const nsACString& aValue);
  
  /**

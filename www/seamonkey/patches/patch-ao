@@ -1,12 +1,14 @@
-$NetBSD: patch-ao,v 1.14 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-ao,v 1.15 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/toolkit/mozapps/installer/packager.mk.orig	2014-03-19 01:42:17.000000000 +0000
+--- mozilla/toolkit/mozapps/installer/packager.mk.orig	2015-09-02 09:27:31.000000000 +0000
 +++ mozilla/toolkit/mozapps/installer/packager.mk
-@@ -775,7 +775,7 @@ endif
+@@ -122,8 +122,8 @@ endif
+ 	  (cd $(DESTDIR)$(installdir) && tar -xf -)
  	$(NSINSTALL) -D $(DESTDIR)$(bindir)
  	$(RM) -f $(DESTDIR)$(bindir)/$(MOZ_APP_NAME)
- 	ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)
+-	ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)
 -ifdef INSTALL_SDK # Here comes the hard part
++	ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)/$(MOZILLA_PKG_NAME)
 +ifeq ($(MOZ_APP_NAME),xulrunner)
  	$(NSINSTALL) -D $(DESTDIR)$(includedir)
  	(cd $(DIST)/include && $(TAR) $(TAR_CREATE_FLAGS) - .) | \
