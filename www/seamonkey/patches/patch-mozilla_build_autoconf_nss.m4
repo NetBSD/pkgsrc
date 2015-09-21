@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.6 2013/01/07 21:55:30 ryoon Exp $
+$NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.7 2015/09/21 05:03:45 ryoon Exp $
 
---- mozilla/build/autoconf/nss.m4.orig	2012-11-18 10:19:31.000000000 +0000
+--- mozilla/build/autoconf/nss.m4.orig	2015-09-02 09:28:02.000000000 +0000
 +++ mozilla/build/autoconf/nss.m4
 @@ -22,18 +22,18 @@ AC_ARG_WITH(nss-exec-prefix,
  	if test -n "$nss_config_exec_prefix"; then
@@ -35,12 +35,12 @@ $NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.6 2013/01/07 21:55:30 ryoon Exp
  
 -		nss_config_major_version=`$NSS_CONFIG $nss_config_args --version | \
 +		nss_config_major_version=`$NSS_CONFIG $nss_config_args nss --modversion | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+ 			sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\(\.\([[0-9]]*\)\)\{0,1\}/\1/'`
 -		nss_config_minor_version=`$NSS_CONFIG $nss_config_args --version | \
 +		nss_config_minor_version=`$NSS_CONFIG $nss_config_args nss --modversion | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\2/'`
+ 			sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\(\.\([[0-9]]*\)\)\{0,1\}/\2/'`
 -		nss_config_micro_version=`$NSS_CONFIG $nss_config_args --version | \
 +		nss_config_micro_version=`$NSS_CONFIG $nss_config_args nss --modversion | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\3/'`
- 		min_nss_major_version=`echo $min_nss_version | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+ 			sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\(\.\([[0-9]]*\)\)\{0,1\}/\4/'`
+ 		if test -z "$nss_config_micro_version"; then
+ 			nss_config_micro_version="0"
