@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3991 2015/09/22 02:21:16 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.3992 2015/09/22 11:59:06 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6977,3 +6977,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey-l10n to 2.35 [ryoon 2015-09-21]
 	Updated textproc/miller to 2.2.0 [wiz 2015-09-21]
 	Updated net/solaris-tap to 1.1.0 [tnn 2015-09-22]
+	Updated textproc/p5-XML-Atom-SimpleFeed to 0.863 [kleink 2015-09-22]
+	Updated www/py-flask-login to 0.3.0 [kleink 2015-09-22]
