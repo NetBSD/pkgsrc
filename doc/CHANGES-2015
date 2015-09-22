@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3992 2015/09/22 11:59:06 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.3993 2015/09/22 13:39:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6979,3 +6979,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/solaris-tap to 1.1.0 [tnn 2015-09-22]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.863 [kleink 2015-09-22]
 	Updated www/py-flask-login to 0.3.0 [kleink 2015-09-22]
+	Updated www/squid3 to 3.5.9 [taca 2015-09-22]
