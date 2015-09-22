@@ -1,8 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/07/01 00:43:20 tnn Exp $
+$NetBSD: MESSAGE,v 1.2 2015/09/22 01:59:00 tnn Exp $
 
 To enable the TUN/TAP driver in your Solaris kernel after an installation
-or upgrade, you must manually copy the following files to /usr/kernel/drv:
+or upgrade, you must manually copy the following files to
+/usr/kernel/drv (or to /usr/kernel/drv/amd64 on x86_64 platforms).
+
 	${PREFIX}/lkm/tap
 	${PREFIX}/lkm/tap.conf
 	${PREFIX}/lkm/tun
