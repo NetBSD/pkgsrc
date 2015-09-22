@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/03/14 08:34:45 obache Exp $
+# $NetBSD: Makefile,v 1.9 2015/09/22 01:59:00 tnn Exp $
 
 DISTNAME=	tuntap
-PKGNAME=	solaris-tap-20091116
+PKGNAME=	solaris-tap-1.1.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.whiteboard.ne.jp/~admin2/tuntap/source/tuntap/
 
