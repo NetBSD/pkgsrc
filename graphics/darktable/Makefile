@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2015/08/25 13:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2015/09/23 11:52:15 joerg Exp $
 
 DISTNAME=	darktable-1.2.3
 PKGREVISION=	11
@@ -16,6 +16,7 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config bash
 
+CMAKE_ARGS+=	-DLENSFUN_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include/lensfun
 CMAKE_ARGS+=	-DGTHREAD_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
 CMAKE_ARGS+=	-DGMODULE_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PKGMANDIR}/man1
@@ -67,6 +68,7 @@ BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
