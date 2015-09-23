@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/06 14:22:51 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/09/23 12:11:47 joerg Exp $
 
-SHA1 (h5py-2.2.1.tar.gz) = 4b511ed7aa28ac4c61188a121d42f17f3096c15a
-RMD160 (h5py-2.2.1.tar.gz) = 9e5ee73fa28e07e21439cef289b8e1945eccfd4e
-Size (h5py-2.2.1.tar.gz) = 978796 bytes
+SHA1 (h5py-2.5.0.tar.gz) = 4be8ddc5f74d0e7c3a86aee60382b7705267fb4d
+RMD160 (h5py-2.5.0.tar.gz) = 94484badd1103c00421582a055b7b0f3368ad653
+Size (h5py-2.5.0.tar.gz) = 684354 bytes
