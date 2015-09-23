@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2015/08/18 07:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2015/09/23 08:44:41 wiz Exp $
 
 DISTNAME=	gdb-7.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
@@ -14,7 +14,7 @@ BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt makeinfo
+USE_TOOLS+=		gmake msgfmt makeinfo perl:build
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
