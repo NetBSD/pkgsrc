@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2015/04/25 13:40:39 tnn Exp $
+# $NetBSD: Makefile,v 1.82 2015/09/23 11:40:06 joerg Exp $
 
 DISTNAME=	psi-0.15
 PKGREVISION=	8
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}
-DISTFILES=	${DEFAULT_DISTFILES} ${LANG_FILES}
+DISTFILES=	${DEFAULT_DISTFILES}
 
 USE_TOOLS+=	gmake unzip pkg-config
 USE_LANGUAGES=	c c++
@@ -56,7 +56,8 @@ INSTALL_MAKE_FLAGS=	INSTALL_ROOT=${DESTDIR}
 # 	    psi_uk.qm psi_ur_PK.qm psi_vi.qm psi_zh_CN.qm psi_zh_TW.qm
 
 .for f in ${LANG_FILES}
-    SITES.${f}=http://psi-im.org/download/lang/
+DISTFILES+=	${f}
+SITES.${f}=	http://psi-im.org/download/lang/
 .endfor
 
 post-install:
