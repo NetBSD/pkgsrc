@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.16 2015/02/16 16:16:17 bad Exp $
+$NetBSD: patch-as,v 1.17 2015/09/23 06:44:42 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2015-01-23 05:59:58.000000000 +0000
-+++ js/src/configure.in	2015-02-16 11:09:33.000000000 +0000
-@@ -2180,8 +2180,7 @@
+--- js/src/configure.in.orig	2015-08-24 21:53:09.000000000 +0000
++++ js/src/configure.in
+@@ -2190,8 +2190,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -14,7 +14,7 @@ Treat DragonFly like FreeBSD.
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3095,7 +3094,7 @@
+@@ -3029,7 +3028,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -23,7 +23,7 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3989,6 +3988,16 @@
+@@ -3879,6 +3878,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
@@ -38,5 +38,5 @@ Treat DragonFly like FreeBSD.
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
- MALLOC_HEADERS="malloc.h malloc_np.h malloc/malloc.h sys/malloc.h"
- MALLOC_H=
+ MOZ_CHECK_ALLOCATOR
+ 

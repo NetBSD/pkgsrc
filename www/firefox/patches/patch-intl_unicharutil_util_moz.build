@@ -1,8 +1,8 @@
-$NetBSD: patch-intl_unicharutil_util_moz.build,v 1.2 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-intl_unicharutil_util_moz.build,v 1.3 2015/09/23 06:44:42 ryoon Exp $
 
---- intl/unicharutil/util/moz.build.orig	2015-03-27 02:20:20.000000000 +0000
+--- intl/unicharutil/util/moz.build.orig	2015-08-24 21:53:08.000000000 +0000
 +++ intl/unicharutil/util/moz.build
-@@ -38,5 +38,8 @@ if CONFIG['_MSC_VER']:
+@@ -42,6 +42,9 @@ if CONFIG['_MSC_VER']:
  if CONFIG['ENABLE_INTL_API']:
      CXXFLAGS += CONFIG['MOZ_ICU_CFLAGS']
  
@@ -11,3 +11,4 @@ $NetBSD: patch-intl_unicharutil_util_moz.build,v 1.2 2015/04/05 12:54:11 ryoon E
 +
  if CONFIG['GNU_CXX']:
      FAIL_ON_WARNINGS = True
+ 
