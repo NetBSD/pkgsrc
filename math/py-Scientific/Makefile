@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/09/25 12:59:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.40 2015/09/23 12:00:11 joerg Exp $
 
 DISTNAME=	ScientificPython-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -31,6 +31,6 @@ post-install:
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../parallel/mpi-ch/buildlink3.mk"
+.include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
