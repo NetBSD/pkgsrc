@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2015/09/07 23:24:46 gdt Exp $
+# $NetBSD: Makefile,v 1.88 2015/09/23 06:56:57 ryoon Exp $
 
 DISTNAME=	dbus-1.10.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -68,6 +69,12 @@ CONFIGURE_ARGS+=	--disable-selinux
 .endif
 
 PLIST_VARS+=    	linux launchd
+
+DBUS_CONF_DIR+=		${PKG_SYSCONFBASE}/dbus-1
+OWN_DIRS+=		${DBUS_CONF_DIR}/services 
+OWN_DIRS+=		${DBUS_CONF_DIR}/system-services 
+OWN_DIRS+=		${DBUS_CONF_DIR}/session.d
+OWN_DIRS+=		${DBUS_CONF_DIR}/system.d
 
 RCD_SCRIPTS=		dbus
 
