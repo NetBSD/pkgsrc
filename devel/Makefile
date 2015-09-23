@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2148 2015/09/13 14:15:24 taca Exp $
+# $NetBSD: Makefile,v 1.2149 2015/09/23 12:10:03 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -1690,6 +1690,7 @@ SUBDIR+=	py-pbr
 SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip
+SUBDIR+=	py-pkgconfig
 SUBDIR+=	py-pkginfo
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
