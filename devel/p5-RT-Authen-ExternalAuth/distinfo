@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/07/28 00:10:27 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2015/09/23 11:46:57 joerg Exp $
 
 SHA1 (RT-Authen-ExternalAuth-0.17.tar.gz) = 3df7c0cd5dcb9b821ffd060deb1cdf1a717d1d0c
 RMD160 (RT-Authen-ExternalAuth-0.17.tar.gz) = b78de768ef9b06f039ed4304c3bc88b88a2847c2
 Size (RT-Authen-ExternalAuth-0.17.tar.gz) = 68960 bytes
+SHA1 (patch-inc_Module_Install_RTx.pm) = 4c1c2f61fecd3d89975f067177a5d86a8aebc455
