@@ -1,20 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2015/07/04 16:18:33 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/23 11:34:16 ryoon Exp $
 #
 
-DISTNAME=	RobotoTTF
-PKGNAME=	roboto-fonts-20140716
+DISTNAME=	roboto-fonts-20150923
 CATEGORIES=	fonts
-MASTER_SITES=	http://material-design.storage.googleapis.com/downloads/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.google.com/design/spec/style/typography.html
-COMMENT=	Roboto font family from Google's Android 4
+HOMEPAGE=	https://www.google.com/fonts/specimen/Roboto
+COMMENT=	Roboto font family from Google's Android
 LICENSE=	apache-2.0
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
-WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
@@ -40,7 +34,8 @@ INSTALL_FONTS=	Roboto-Black.ttf \
 		RobotoCondensed-BoldItalic.ttf \
 		RobotoCondensed-Italic.ttf \
 		RobotoCondensed-Light.ttf \
-		RobotoCondensed-LightItalic.ttf
+		RobotoCondensed-LightItalic.ttf \
+		RobotoCondensed-Regular.ttf
 
 do-install:
 .for i in ${INSTALL_FONTS}
