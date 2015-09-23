@@ -1,0 +1,12 @@
+$NetBSD: patch-external_jfreereport_java_sac_build.xml,v 1.1 2015/09/23 20:45:50 joerg Exp $
+
+--- external/jfreereport/java/sac/build.xml.orig	2015-08-28 12:15:16.000000000 +0000
++++ external/jfreereport/java/sac/build.xml
+@@ -49,6 +49,7 @@
+   <target name="javadoc" depends="prepare">
+     <javadoc sourcepath="${src}"
+             destdir="${build.doc}"
++            additionalparam="-Xdoclint:none"
+             doctitle="${name} JavaDoc"
+             windowtitle="${name} JavaDoc"
+             package="true"

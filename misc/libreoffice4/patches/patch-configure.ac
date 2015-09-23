@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.8 2015/02/04 18:19:34 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
 
 * Use gstreamer under OpenBSD
 * Add FreeBSD support (GNU patch is not needed)
@@ -34,6 +34,38 @@ $NetBSD: patch-configure.ac,v 1.8 2015/02/04 18:19:34 ryoon Exp $
          _java_target_ver="1.6"
      else
          _java_target_ver="1.5"
+@@ -6755,30 +6757,7 @@ dnl ====================================
+ dnl Checks for javadoc
+ dnl ===================================================================
+ if test "$ENABLE_JAVA" != ""; then
+-    if test -z "$with_jdk_home"; then
+-        AC_PATH_PROG(JAVADOC, javadoc)
+-    else
+-        _javadoc_path="$with_jdk_home/bin/javadoc"
+-        dnl Check if there is a javadoc at all.
+-        if test -x "$_javadoc_path"; then
+-            JAVADOC=$_javadoc_path
+-        else
+-            AC_PATH_PROG(JAVADOC, javadoc)
+-        fi
+-    fi
+-    if test -z "$JAVADOC"; then
+-        AC_MSG_ERROR([$_javadoc_path not found set with_jdk_home])
+-    fi
+-    if test "$build_os" = "cygwin"; then
+-        if test x`echo "$JAVADOC" | $GREP -i '\.exe$'` = x; then
+-            JAVADOC="${JAVADOC}.exe"
+-        fi
+-        JAVADOC=`win_short_path_for_make "$JAVADOC"`
+-    fi
+-
+-    if test `$JAVADOC --version 2>&1 | $GREP -c "gjdoc"` -gt 0; then
+-    JAVADOCISGJDOC="yes"
+-    fi
++    AC_PATH_PROG(JAVADOC, javadoc)
+ fi
+ AC_SUBST(JAVADOCISGJDOC)
+ 
 @@ -7780,7 +7782,7 @@ no|disable)
      else
          # Unset variables set by the above AM_PATH_PYTHON so that
