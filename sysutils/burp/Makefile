@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/12 22:55:18 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/23 12:03:48 joerg Exp $
 #
 
 DISTNAME=	burp-1.4.40
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/burp \
 			libexecdir=${PREFIX}/libexec/burp
 
+.include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/librsync/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
