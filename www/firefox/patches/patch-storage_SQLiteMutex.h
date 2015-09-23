@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.4 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-storage_SQLiteMutex.h,v 1.1 2015/09/23 06:44:42 ryoon Exp $
 
---- storage/src/SQLiteMutex.h.orig	2013-10-25 22:27:40.000000000 +0000
-+++ storage/src/SQLiteMutex.h
-@@ -108,15 +108,19 @@ public:
+--- storage/SQLiteMutex.h.orig	2015-08-24 21:53:07.000000000 +0000
++++ storage/SQLiteMutex.h
+@@ -107,15 +107,19 @@ public:
    void assertCurrentThreadOwns()
    {
      NS_ASSERTION(mMutex, "No mutex associated with this wrapper!");

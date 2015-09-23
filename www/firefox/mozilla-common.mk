@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.61 2015/08/29 12:11:22 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.62 2015/09/23 06:44:41 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-graphite2
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
-CONFIGURE_ARGS+=	--enable-system-sqlite
+#CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
@@ -212,9 +212,9 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 #.include "../../audio/libopus/buildlink3.mk"
 #.include "../../audio/tremor/buildlink3.mk"
 #.include "../../audio/libvorbis/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.9
-CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
-.include "../../databases/sqlite3/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.9
+#CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
+#.include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"

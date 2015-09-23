@@ -1,11 +1,11 @@
-$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.4 2015/01/16 22:42:09 ryoon Exp $
+$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.5 2015/09/23 06:44:42 ryoon Exp $
 
---- memory/mozalloc/mozalloc_abort.cpp.orig	2015-01-09 04:38:22.000000000 +0000
+--- memory/mozalloc/mozalloc_abort.cpp.orig	2015-08-24 21:53:14.000000000 +0000
 +++ memory/mozalloc/mozalloc_abort.cpp
-@@ -63,7 +63,11 @@ void fillAbortMessage(char (&msg)[N], ui
- // Define abort() here, so that it is used instead of the system abort(). This
- // lets us control the behavior when aborting, in order to get better results
- // on *NIX platforms. See mozalloc_abort for details.
+@@ -68,7 +68,11 @@ void fillAbortMessage(char (&msg)[N], ui
+ //
+ // That segmentation fault will be interpreted as another bug by ASan and as a
+ // result, ASan will just exit(1) instead of aborting.
 +#if defined(SOLARIS)
 +void std::abort(void)
 +#else
