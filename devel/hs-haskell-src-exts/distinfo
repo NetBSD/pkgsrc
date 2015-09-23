@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/28 18:46:53 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/09/23 11:42:57 joerg Exp $
 
 SHA1 (haskell-src-exts-1.16.0.1.tar.gz) = f943877b86cbd95f193b8fbef1ea25d0b695ab52
 RMD160 (haskell-src-exts-1.16.0.1.tar.gz) = 84a9a4fcd09cd2a08fd4dd4b082c7cb6b39e814e
 Size (haskell-src-exts-1.16.0.1.tar.gz) = 1410081 bytes
+SHA1 (patch-dist_build_Language_Haskell_Exts_InternalParser.hs) = fd4d11078efbd10b1d91754e1b25fbd950959bcc
