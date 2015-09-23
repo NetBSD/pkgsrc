@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2015/09/08 19:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2015/09/23 20:47:42 joerg Exp $
 
 VERREL=		4.4.5
 VERRC=		2
@@ -226,6 +226,14 @@ post-extract:
 .endfor
 	mkdir ${WRKSRC}/tmp
 #	mkdir ${WRKSRC}/${OBJDIR}
+
+.if !empty(PKG_OPTIONS:Mjava)
+CONFIGURE_ARGS+=	JAVADOC=${TOOLS_DIR}/bin/javadoc
+
+pre-configure:
+	printf '#!/bin/sh\nexec ${PKG_JAVA_HOME}/bin/javadoc -Xdoclint:none "$$@"' > ${TOOLS_DIR}/bin/javadoc
+	${CHMOD} a+x ${TOOLS_DIR}/bin/javadoc
+.endif
 
 do-install:
 	cd ${WRKSRC} && make DESTDIR="${DESTDIR}" PREFIXDIR="${PREFIX}" distro-pack-install
