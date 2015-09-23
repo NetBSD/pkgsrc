@@ -1,0 +1,3 @@
+py-pkgconfig is a Python wrapper for the pkg-config program.  It
+simplifies checking for libraries and the necessary compiler and linker
+flags.
