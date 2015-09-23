@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2015/08/12 00:49:24 ryoon Exp $
+$NetBSD: distinfo,v 1.43 2015/09/23 20:45:50 joerg Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -146,14 +146,22 @@ RMD160 (libreoffice/libreoffice-translations-4.4.5.2.tar.xz) = 5b7ee3094d78013ea
 Size (libreoffice/libreoffice-translations-4.4.5.2.tar.xz) = 127872924 bytes
 SHA1 (patch-Makefile.in) = e34092a731f4da0d8c048945c75287327b6b9cb2
 SHA1 (patch-bin_distro-install-desktop-integration) = 78921a0fb6db8b87f5d64c09579dc6f9211949b5
-SHA1 (patch-configure.ac) = 271be73ef8ed5e507660098a92b98eeca85bb62f
+SHA1 (patch-configure.ac) = ff940ab10b913d24bc6b7a8e7c2f8f3c16673ab7
 SHA1 (patch-desktop_Library__sofficeapp.mk) = e445b1a265fadf4f83f1c40bc541c11c26860352
+SHA1 (patch-external_jfreereport_java_sac_build.xml) = 675a37dcf3a813f890ec2c28cb7c6b0948610445
+SHA1 (patch-external_libebook_ExternalProject__libebook.mk) = a9c2f7d30cf8efc7acea4d4a0523bad801c9b930
+SHA1 (patch-external_libmspub_ExternalProject__libmspub.mk) = 4c3555003d53c896935b74251847711b67eaa18d
+SHA1 (patch-external_liborcus_ExternalProject__liborcus.mk) = 637058d2c5e930db086238773ccb926997a1de46
+SHA1 (patch-external_librevenge_ExternalProject__librevenge.mk) = 334e4295af4a59459c304ff2d20176d16c07477c
 SHA1 (patch-odk_CustomTarget__classes.mk) = 991896c402d1d2505e5aacec5df78439c8e9a767
+SHA1 (patch-odk_CustomTarget__javadoc.mk) = e4ba79d7109b51d44338353790b7587d8d0a4dda
 SHA1 (patch-solenv_bin_ooinstall) = 3c9be63acc0af31ca0509f6546ae02ac53aff878
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = c6fa51c74e3be0e9d4f18e1481039d44d6c3db98
 SHA1 (patch-solenv_gbuild_Deliver.mk) = 07ffb548a24edfe64fcf370423a2124c7a32cafb
 SHA1 (patch-solenv_gbuild_ExternalProject.mk) = dd55f3e5fd17f6060898c68a7e1d97e647d4b5b1
 SHA1 (patch-solenv_gbuild_Module.mk) = 729f051341b21325537a7f9902e7283caa66a456
+SHA1 (patch-solenv_gbuild_platform_com__GCC__defs.mk) = 72e53e2f554714878853b4998fcac4ac20560e18
+SHA1 (patch-solenv_gbuild_platform_com__MSC__defs.mk) = 4d91f1ba84cee9cf1503736c41548e96507d6a1a
 SHA1 (patch-svx_Executable__gengal.mk) = 45de03599790cabea05539b4bb9fd01098c25eb8
 SHA1 (patch-sw_Executable__tiledrendering.mk) = a1a4c520582772526d821a78e42a23e182cdfba1
 SHA1 (patch-sysui_desktop_share_create_tree.sh) = 338cb0f157ea9b49965aa7b31350173b8b7557a6
