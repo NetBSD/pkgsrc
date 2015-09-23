@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2015/07/04 16:18:33 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/23 11:36:14 ryoon Exp $
 #
 
-DISTNAME=	motoya-fonts-20111115
-PKGREVISION=	1
+DISTNAME=	motoya-fonts-20150923
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://source.android.com/
+HOMEPAGE=	https://android.googlesource.com/platform/frameworks/base/+/master/data/fonts/
 COMMENT=	Motoya L Cider W3 and L Mulberry W3 fonts
 LICENSE=	apache-2.0
 
