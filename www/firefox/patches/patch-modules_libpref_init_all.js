@@ -1,4 +1,6 @@
-$NetBSD: patch-modules_libpref_init_all.js,v 1.1 2015/08/30 09:29:15 ryoon Exp $
+$NetBSD: patch-modules_libpref_init_all.js,v 1.2 2015/09/23 06:44:42 ryoon Exp $
+
+* Improve stability under NetBSD.
 
 --- modules/libpref/init/all.js.orig	2015-08-26 09:39:08.000000000 +0000
 +++ modules/libpref/init/all.js
