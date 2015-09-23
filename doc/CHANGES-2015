@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.3993 2015/09/22 13:39:58 taca Exp $
+$NetBSD: CHANGES-2015,v 1.3994 2015/09/23 06:45:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6980,3 +6980,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.863 [kleink 2015-09-22]
 	Updated www/py-flask-login to 0.3.0 [kleink 2015-09-22]
 	Updated www/squid3 to 3.5.9 [taca 2015-09-22]
+	Updated www/firefox to 41.0 [ryoon 2015-09-23]
