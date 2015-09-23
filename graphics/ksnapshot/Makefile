@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2015/04/25 14:23:15 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2015/09/23 12:04:37 joerg Exp $
 
 DISTNAME=	ksnapshot-${_KDE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	graphics
 COMMENT=	KDE screen capture program
+
+# CMakeFiles/kbackgroundsnapshot.dir/snapshottimer.o: In function `SnapshotTimer':
+# /data/scratch/graphics/ksnapshot/work/ksnapshot-4.14.3/snapshottimer.cpp:33: undefined reference to `vtable for SnapshotTimer'
+# ...
+MAKE_JOBS_SAFE=	no
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
