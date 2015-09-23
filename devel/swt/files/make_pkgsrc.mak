@@ -1,4 +1,4 @@
-# $NetBSD: make_pkgsrc.mak,v 1.4 2012/12/24 04:04:38 dholland Exp $
+# $NetBSD: make_pkgsrc.mak,v 1.5 2015/09/23 11:47:57 joerg Exp $
 #*******************************************************************************
 # Copyright (c) 2000, 2009 IBM Corporation and others.
 # All rights reserved. This program and the accompanying materials
@@ -49,9 +49,9 @@ CAIROLIBS = `pkg-config --libs-only-L cairo` `pkg-config --libs-only-other cairo
 GTKCFLAGS = `pkg-config --cflags gtk+-2.0`
 GTKLIBS = `pkg-config --libs-only-L gtk+-2.0 gthread-2.0` `pkg-config --libs-only-other gtk+-2.0 gthread-2.0` -lgtk-x11-2.0 -lgthread-2.0 `pkg-config --libs xtst`
 
-CDE_LIBS = -L$(CDE_HOME)/lib -R$(CDE_HOME)/lib -lXt -lX11 -lDtSvc
+CDE_LIBS = -L$(CDE_HOME)/lib ${COMPILER_RPATH_FLAG}$(CDE_HOME)/lib -lXt -lX11 -lDtSvc
 
-AWT_LIBS = -L$(JAVA_HOME)/jre/lib/$(LOWER_ARCH) -R$(JAVA_HOME)/jre/lib/$(LOWER_ARCH) -ljawt -shared
+AWT_LIBS = -L$(JAVA_HOME)/jre/lib/$(LOWER_ARCH) ${COMPILER_RPATH_FLAG}$(JAVA_HOME)/jre/lib/$(LOWER_ARCH) ${COMPILER_RPATH_FLAG}${X11BASE}/lib -ljawt -shared
 
 ATKCFLAGS = `pkg-config --cflags atk gtk+-2.0`
 ATKLIBS = `pkg-config --libs-only-L atk gtk+-2.0` `pkg-config --libs-only-other atk gtk+-2.0` -latk-1.0 -lgtk-x11-2.0

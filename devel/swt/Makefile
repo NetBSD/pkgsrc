@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/04/25 14:20:40 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2015/09/23 11:47:57 joerg Exp $
 #
 
 SWTREL=		3.5.1
@@ -7,7 +7,7 @@ SWTDATE=	200909170800
 
 PKGNAME=	swt-${SWTREL}.${SWTVER}
 DISTNAME=	swt-${SWTREL}-gtk-linux-x86
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	devel
 MASTER_SITES=	http://download.eclipse.org/eclipse/downloads/drops/R-${SWTREL}-${SWTDATE}/
 EXTRACT_SUFX=	.zip
@@ -44,14 +44,16 @@ post-extract:
 	cd ${WRKSRC} && jar -xf ${WRKSRC}/src.zip
 	cp ${FILESDIR}/make_pkgsrc.mak ${WRKSRC}
 
-do-build:
-.for target in ${BUILD_TARGETS}
-	cd ${WRKSRC} && ${GMAKE} \
-	    JAVA_HOME=${PKG_JAVA_HOME} \
+MAKE_FILE=	make_pkgsrc.mak
+BUILD_TARGET=	${BUILD_TARGETS}
+
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PKG_JAVA_HOME}/jre/lib/${MY_LOWER_ARCH}
+
+MAKE_FLAGS+=	JAVA_HOME=${PKG_JAVA_HOME} \
 	    LOWER_OPSYS=${LOWER_OPSYS} \
-	    LOWER_ARCH=${MY_LOWER_ARCH} \
-	    -f make_pkgsrc.mak ${target}
-.endfor
+	    LOWER_ARCH=${MY_LOWER_ARCH}
+
+post-build:
 	${TEST} -d ${WRKSRC}/bin || mkdir ${WRKSRC}/bin
 	cd ${WRKSRC} && find org/eclipse/swt -type f -name \*.java | \
 	    xargs ${JAVA_BINPREFIX}-javac -source 1.4 -target 1.4 -d bin
