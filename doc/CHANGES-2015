@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4000 2015/09/23 08:44:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4001 2015/09/23 11:34:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6987,3 +6987,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/dbus to 1.10.0nb1 [ryoon 2015-09-23]
 	Updated print/ghostscript-gpl to 9.06nb7 [he 2015-09-23]
 	Updated devel/gdb to 7.9nb4 [wiz 2015-09-23]
+	Updated fonts/roboto-fonts to 20150923 [ryoon 2015-09-23]
