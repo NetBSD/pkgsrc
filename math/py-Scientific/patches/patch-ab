@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2014/04/16 14:51:24 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2015/09/23 12:00:11 joerg Exp $
 
 * Fixed NumPy as numeric package for user-destdir installation.
 * Honor CFLAGS and LDFLAGS.
 
---- Src/MPI/compile.py.orig	2008-08-18 12:54:41.000000000 +0000
+--- Src/MPI/compile.py.orig	2008-10-28 20:24:44.000000000 +0000
 +++ Src/MPI/compile.py
 @@ -5,7 +5,6 @@
  import distutils
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.3 2014/04/16 14:51:24 wiz Exp $
      linkforshared = ' '.join(items)
  
 -cmd = '%s %s -o mpipython -I%s %s %s -L%s -lpython%s %s %s' % \
-+cmd = '%s %s %s -o mpipython -I../../Include %s -I%s %s %s -L%s -lmpich -lopa -lmpl -lpython%s %s %s' % \
++cmd = '%s %s %s -o mpipython -I../../Include %s -I%s %s %s -L%s -lpython%s %s %s' % \
      (mpicompiler, 
 +     ldflags,
       linkforshared,
