@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/07/31 13:07:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2015/09/23 11:53:27 joerg Exp $
 
 PKGNAME=	ibus-${DISTNAME}
 
@@ -9,6 +9,9 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
+
+# ../../session/key_info_util.cc:43:10: fatal error: 'protocol/commands.pb.h' file not found
+MAKE_JOBS_SAFE=	no
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
