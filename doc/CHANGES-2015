@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4004 2015/09/23 12:11:58 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.4005 2015/09/23 16:39:30 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6991,3 +6991,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/motoya-fonts to 20150923 [ryoon 2015-09-23]
 	Added devel/py-pkgconfig version 1.1.0 [joerg 2015-09-23]
 	Updated devel/py-h5py to 2.5.0 [joerg 2015-09-23]
+	Updated x11/xf86-video-newport to 0.2.4nb4 [rodent 2015-09-23]
