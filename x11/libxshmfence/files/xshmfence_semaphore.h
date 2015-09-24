@@ -40,6 +40,7 @@
 
 struct xshmfence {
 	/* page 1 */
+	int refcnt LOCK_ALIGN;
 	int triggered LOCK_ALIGN;
 	int waiting LOCK_ALIGN;
 	char lockname[16];

@@ -151,6 +151,7 @@ xshmfence_init(int fd)
 	sem_t *cond;
 	struct xshmfence f;
 
+	__sync_fetch_and_and(&f.refcnt, 0);
 	__sync_fetch_and_and(&f.triggered, 0);
 	__sync_fetch_and_and(&f.waiting, 0);
 	
@@ -201,6 +202,7 @@ xshmfence_open_semaphore(struct xshmfence *f)
 	if ((f->cond = sem_open(f->condname, 0 , 0)) == SEM_FAILED) {
 		errx(EXIT_FAILURE, "xshmfence_open_semaphore: sem_open failed");
 	}
+	__sync_fetch_and_add(&f->refcnt, 1);
 }
 
 /**
@@ -214,4 +216,8 @@ xshmfence_close_semaphore(struct xshmfence *f)
 {
 	sem_close(f->lock);
 	sem_close(f->cond);
+	if (__sync_sub_and_fetch(&f->refcnt, 1) == 0) {
+		sem_unlink(f->lockname);
+		sem_unlink(f->condname);
+	}
 }
