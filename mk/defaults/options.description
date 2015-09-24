@@ -791,6 +791,7 @@ xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
 xmlrpc			Enable XMLRPC support.
 xpm			Enable X PixMap image format support.
+xatracker		Enable XA X Acceleration API support.
 xrandr			Enable Xrandr support.
 xrender			Enable Xrender support.
 xscreensaver-webcollage	Install webcollage screensaver.
