@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4008 2015/09/24 22:20:11 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4009 2015/09/24 22:42:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6995,3 +6995,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice to 5.0.2.2 [ryoon 2015-09-24]
 	Updated lang/nodejs to 4.1.1 [fhajny 2015-09-24]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2015Q3 branch [wiz 2015-09-25]
+	Updated sysutils/smartmontools to 6.4 [tnn 2015-09-24]
