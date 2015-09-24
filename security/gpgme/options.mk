@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2011/03/03 11:39:47 adam Exp $
+# $NetBSD: options.mk,v 1.2 2015/09/24 23:33:08 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gpgme
 PKG_SUPPORTED_OPTIONS=	gpgsm
@@ -10,9 +10,11 @@ PKG_SUGGESTED_OPTIONS=	gpgsm
 ## Option to build with gpgsm. This provides SMIME support
 ##
 .if !empty(PKG_OPTIONS:Mgpgsm)
-.  include "../../security/gnupg2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg2}/bin/gpgsm
-CONFIGURE_ARGS+=	--with-gpg=${BUILDLINK_PREFIX.gnupg2}/bin/gpg2
+DEPENDS+=		gnupg2>=2.0<2.1:../../security/gnupg2
+FIND_PREFIX:=	GPG2DIR=gnupg2
+.include "../../mk/find-prefix.mk"
+CONFIGURE_ARGS+=	--with-gpgsm=${GPG2DIR}/bin/gpgsm
+CONFIGURE_ARGS+=	--with-gpg=${GPG2DIR}/bin/gpg2
 REPLACE_SH+=		tests/gpg/pinentry
 .else
 DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
