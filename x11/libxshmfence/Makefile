@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/09/16 18:38:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/24 23:34:16 tnn Exp $
 
 DISTNAME=	libxshmfence-1.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,15 +13,25 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoconf automake autoreconf
 
 PKGCONFIG_OVERRIDE+=	xshmfence.pc.in
 
-# Needs additional pthread functions or alternative synchronization
-# implementation on NetBSD. See PR lib/49529.
-# (On FreeBSD, umtx is used.)
+.include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM+=	Linux-*-* FreeBSD-*-* SunOS-*-*
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-futex
+CONFIGURE_ARGS+=	--enable-semaphore
+LIBXSHM_PAGESIZE!=	/sbin/sysctl -n hw.pagesize
+CPPFLAGS+=		-DLIBXSHM_PAGESIZE=${LIBXSHM_PAGESIZE}
+.endif
 
+post-extract:
+	cp ${FILESDIR}/xshmfence_semaphore.[ch] ${WRKSRC}/src
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
+
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
