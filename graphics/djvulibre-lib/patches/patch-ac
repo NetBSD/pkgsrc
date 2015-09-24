@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/08/30 17:03:28 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2015/09/24 23:05:31 ryoon Exp $
 
---- xmltools/Makefile.in.orig	2006-08-30 17:02:59.000000000 +0200
+--- xmltools/Makefile.in.orig	2015-02-12 16:04:02.000000000 +0000
 +++ xmltools/Makefile.in
-@@ -45,7 +45,7 @@ JPEG_CFLAGS=@JPEG_CFLAGS@
- THREAD_LIBS = @THREAD_LIBS@
- THREAD_CFLAGS = @THREAD_CFLAGS@
- 
--LIBDJVU = ${top_builddir}/libdjvu/libdjvulibre.la
-+LIBDJVU = ${prefix}/lib/libdjvulibre.la
- 
- INCS = -I${top_builddir} -I${top_srcdir}/libdjvu -I${srcdir}
- FLAGS = ${DEFS} ${INCS} ${OPTS} ${JPEG_CFLAGS} ${THREAD_CFLAGS}
+@@ -335,7 +335,7 @@ top_srcdir = @top_srcdir@
+ version_info = @version_info@
+ AM_CPPFLAGS = -I$(top_srcdir)/libdjvu -I$(top_srcdir)/tools
+ AM_CXXFLAGS = $(PTHREAD_CFLAGS)
+-DJLIB = $(top_builddir)/libdjvu/libdjvulibre.la
++DJLIB = $(prefix)/lib/libdjvulibre.la
+ djvutoxml_SOURCES = djvutoxml.cpp
+ djvutoxml_LDADD = $(DJLIB) $(PTHREAD_LIBS)
+ djvuxmlparser_SOURCES = djvuxmlparser.cpp
