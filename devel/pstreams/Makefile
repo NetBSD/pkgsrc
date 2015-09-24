@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/06/12 10:49:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/09/24 23:08:42 ryoon Exp $
 #
 
-DISTNAME=	pstreams-0.7.0
-PKGREVISION=	5
+DISTNAME=	pstreams-0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstreams/}
 
