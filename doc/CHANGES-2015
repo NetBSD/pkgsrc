@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4007 2015/09/24 14:17:32 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4008 2015/09/24 22:20:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6994,3 +6994,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-newport to 0.2.4nb4 [rodent 2015-09-23]
 	Updated misc/libreoffice to 5.0.2.2 [ryoon 2015-09-24]
 	Updated lang/nodejs to 4.1.1 [fhajny 2015-09-24]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2015Q3 branch [wiz 2015-09-25]
