@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/09/09 00:04:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.26 2015/09/24 14:17:18 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -618,25 +618,11 @@ lib/node_modules/npm/node_modules/fs-vacuum/.eslintrc
 lib/node_modules/npm/node_modules/fs-vacuum/.npmignore
 lib/node_modules/npm/node_modules/fs-vacuum/LICENSE
 lib/node_modules/npm/node_modules/fs-vacuum/README.md
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/fs-vacuum/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/fs-vacuum/package.json
 lib/node_modules/npm/node_modules/fs-vacuum/vacuum.js
 lib/node_modules/npm/node_modules/fs-write-stream-atomic/LICENSE
 lib/node_modules/npm/node_modules/fs-write-stream-atomic/README.md
 lib/node_modules/npm/node_modules/fs-write-stream-atomic/index.js
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/fs-write-stream-atomic/package.json
 lib/node_modules/npm/node_modules/fstream-npm/.npmignore
 lib/node_modules/npm/node_modules/fstream-npm/.travis.yml
@@ -679,13 +665,6 @@ lib/node_modules/npm/node_modules/fstream/lib/proxy-writer.js
 lib/node_modules/npm/node_modules/fstream/lib/reader.js
 lib/node_modules/npm/node_modules/fstream/lib/socket-reader.js
 lib/node_modules/npm/node_modules/fstream/lib/writer.js
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/fstream/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/fstream/package.json
 lib/node_modules/npm/node_modules/github-url-from-git/.npmignore
 lib/node_modules/npm/node_modules/github-url-from-git/LICENSE
@@ -1228,13 +1207,7 @@ lib/node_modules/npm/node_modules/read-installed/node_modules/debuglog/LICENSE
 lib/node_modules/npm/node_modules/read-installed/node_modules/debuglog/README.md
 lib/node_modules/npm/node_modules/read-installed/node_modules/debuglog/debuglog.js
 lib/node_modules/npm/node_modules/read-installed/node_modules/debuglog/package.json
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/read-installed/node_modules/graceful-fs/polyfills.js
+lib/node_modules/npm/node_modules/read-installed/node_modules/readdir-scoped-modules/.travis.yml
 lib/node_modules/npm/node_modules/read-installed/node_modules/readdir-scoped-modules/LICENSE
 lib/node_modules/npm/node_modules/read-installed/node_modules/readdir-scoped-modules/README.md
 lib/node_modules/npm/node_modules/read-installed/node_modules/readdir-scoped-modules/package.json
@@ -1246,15 +1219,9 @@ lib/node_modules/npm/node_modules/read-installed/node_modules/util-extend/test.j
 lib/node_modules/npm/node_modules/read-installed/package.json
 lib/node_modules/npm/node_modules/read-installed/read-installed.js
 lib/node_modules/npm/node_modules/read-package-json/.npmignore
+lib/node_modules/npm/node_modules/read-package-json/.travis.yml
 lib/node_modules/npm/node_modules/read-package-json/LICENSE
 lib/node_modules/npm/node_modules/read-package-json/README.md
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/read-package-json/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/json-parse-helpfulerror/.editorconfig
 lib/node_modules/npm/node_modules/read-package-json/node_modules/json-parse-helpfulerror/.npmignore
 lib/node_modules/npm/node_modules/read-package-json/node_modules/json-parse-helpfulerror/LICENSE
@@ -1322,6 +1289,7 @@ lib/node_modules/npm/node_modules/realize-package-specifier/LICENSE
 lib/node_modules/npm/node_modules/realize-package-specifier/README.md
 lib/node_modules/npm/node_modules/realize-package-specifier/index.js
 lib/node_modules/npm/node_modules/realize-package-specifier/package.json
+lib/node_modules/npm/node_modules/request/.eslintrc
 lib/node_modules/npm/node_modules/request/.npmignore
 lib/node_modules/npm/node_modules/request/.travis.yml
 lib/node_modules/npm/node_modules/request/CHANGELOG.md
@@ -1345,6 +1313,7 @@ lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/README.md
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/index.js
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/package.json
+lib/node_modules/npm/node_modules/request/node_modules/bl/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/bl/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/bl/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/bl/LICENSE.md
@@ -1410,6 +1379,7 @@ lib/node_modules/npm/node_modules/request/node_modules/combined-stream/node_modu
 lib/node_modules/npm/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js
 lib/node_modules/npm/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json
 lib/node_modules/npm/node_modules/request/node_modules/combined-stream/package.json
+lib/node_modules/npm/node_modules/request/node_modules/extend/.eslintrc
 lib/node_modules/npm/node_modules/request/node_modules/extend/.jscs.json
 lib/node_modules/npm/node_modules/request/node_modules/extend/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/extend/.travis.yml
@@ -1572,6 +1542,7 @@ lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_module
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/jsonpointer.js
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/test.js
+lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/LICENCE
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/Makefile
@@ -1674,6 +1645,7 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modul
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsl.conf
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsstyle
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/package.json
+lib/node_modules/npm/node_modules/request/node_modules/isstream/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/isstream/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/isstream/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/isstream/LICENSE.md
@@ -1752,6 +1724,7 @@ lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/lib/pubsuffi
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/lib/store.js
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/package.json
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/public-suffix.txt
+lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/README.md
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js
@@ -1892,6 +1865,7 @@ lib/node_modules/npm/node_modules/validate-npm-package-name/node_modules/builtin
 lib/node_modules/npm/node_modules/validate-npm-package-name/node_modules/builtins/builtins.json
 lib/node_modules/npm/node_modules/validate-npm-package-name/node_modules/builtins/package.json
 lib/node_modules/npm/node_modules/validate-npm-package-name/package.json
+lib/node_modules/npm/node_modules/which/.travis.yml
 lib/node_modules/npm/node_modules/which/LICENSE
 lib/node_modules/npm/node_modules/which/README.md
 lib/node_modules/npm/node_modules/which/bin/which
@@ -1913,13 +1887,6 @@ lib/node_modules/npm/node_modules/write-file-atomic/.npmignore
 lib/node_modules/npm/node_modules/write-file-atomic/LICENSE
 lib/node_modules/npm/node_modules/write-file-atomic/README.md
 lib/node_modules/npm/node_modules/write-file-atomic/index.js
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/write-file-atomic/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/write-file-atomic/package.json
 lib/node_modules/npm/package.json
 lib/node_modules/npm/scripts/clean-old.sh
