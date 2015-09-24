@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.32 2015/07/15 15:09:39 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/09/24 23:13:34 ryoon Exp $
 #
 
-DISTNAME=	pdf2djvu_0.7.14
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	16
+DISTNAME=	pdf2djvu-0.8.2
 CATEGORIES=	print
-MASTER_SITES=	http://pdf2djvu.googlecode.com/files/
+MASTER_SITES=	https://bitbucket.org/jwilk/pdf2djvu/downloads/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/pdf2djvu/
+HOMEPAGE=	http://jwilk.net/software/pdf2djvu
 COMMENT=	Creates DjVu files from PDF files
 LICENSE=	gnu-gpl-v2
 
