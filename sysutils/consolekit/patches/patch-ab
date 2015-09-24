@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.3 2014/08/17 15:59:07 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2015/09/24 23:50:44 ryoon Exp $
 
 Add backends for NetBSD and OpenBSD.
 
---- src/Makefile.am.orig	2008-07-25 18:38:56.000000000 +0000
+--- src/Makefile.am.orig	2013-07-19 04:15:28.000000000 +0000
 +++ src/Makefile.am
-@@ -56,11 +56,25 @@ libck_la_SOURCES +=		\
+@@ -63,11 +63,25 @@ libck_la_SOURCES +=		\
  	$(NULL)
- libck_la_LIBADD = $(KVM_LIBS)
+ libck_la_LIBADD = -lps
  endif
 +if CK_COMPILE_NETBSD
-+libck_la_SOURCES +=		\
-+	ck-sysdeps-netbsd.c	\
++libck_la_SOURCES +=            \
++	ck-sysdeps-netbsd.c     \
 +	$(NULL)
 +libck_la_LIBADD = -lkvm
 +endif
 +if CK_COMPILE_OPENBSD
-+libck_la_SOURCES +=		\
-+	ck-sysdeps-openbsd.c	\
++libck_la_SOURCES +=            \
++	ck-sysdeps-openbsd.c    \
 +	$(NULL)
 +libck_la_LIBADD = $(KVM_LIBS)
 +endif
@@ -27,6 +27,6 @@ Add backends for NetBSD and OpenBSD.
  	ck-sysdeps-freebsd.c		\
 +	ck-sysdeps-netbsd.c		\
 +	ck-sysdeps-openbsd.c		\
+ 	ck-sysdeps-gnu.c		\
  	$(NULL)
  
- sbin_PROGRAMS = 		\
