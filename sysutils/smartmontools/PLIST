@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/04/08 01:43:32 rodent Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/09/24 22:30:29 tnn Exp $
 man/man5/smartd.conf.5
 man/man8/smartctl.8
 man/man8/smartd.8
@@ -14,7 +14,6 @@ share/doc/smartmontools/INSTALL
 share/doc/smartmontools/NEWS
 share/doc/smartmontools/README
 share/doc/smartmontools/TODO
-share/doc/smartmontools/WARNINGS
 share/doc/smartmontools/examplescripts/Example1
 share/doc/smartmontools/examplescripts/Example2
 share/doc/smartmontools/examplescripts/Example3
