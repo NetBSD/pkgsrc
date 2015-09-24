@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1 2015/04/29 14:31:42 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/09/24 23:34:16 tnn Exp $
 
 SHA1 (libxshmfence-1.2.tar.bz2) = a2ebe90e5595afca4db93a4359732af43b2b8c69
 RMD160 (libxshmfence-1.2.tar.bz2) = fe4b42d4ee01a993cd653d8f10334069bcc4791c
 Size (libxshmfence-1.2.tar.bz2) = 267170 bytes
+SHA1 (patch-configure.ac) = 9301700c19d55b0c80f0265274ea6a158657d039
+SHA1 (patch-src_Makefile.am) = cdf80a7606cbc91ddca1443cd9210a3480de5241
+SHA1 (patch-src_xshmfence__alloc.c) = 355c20c55601c4ea71306d1e10cbd632b2d7f393
+SHA1 (patch-src_xshmfenceint.h) = 1996a0c18977c1e0f05fda3248ed3e97a181f6f1

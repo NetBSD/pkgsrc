@@ -1,0 +1,23 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2015/09/24 23:34:16 tnn Exp $
+
+--- src/Makefile.am.orig	2013-12-02 21:07:56.000000000 +0000
++++ src/Makefile.am
+@@ -4,6 +4,10 @@ if PTHREAD
+ PTHREAD_SOURCES=xshmfence_pthread.c xshmfence_pthread.h
+ endif
+ 
++if SEMAPHORE
++SEMAPHORE_SOURCES=xshmfence_semaphore.c xshmfence_semaphore.h
++endif
++
+ if FUTEX
+ FUTEX_SOURCES=xshmfence_futex.c xshmfence_futex.h
+ endif
+@@ -12,6 +16,7 @@ libxshmfence_la_SOURCES = \
+ 	xshmfenceint.h \
+ 	xshmfence_alloc.c \
+ 	$(PTHREAD_SOURCES) \
++	$(SEMAPHORE_SOURCES) \
+ 	$(FUTEX_SOURCES)
+ 
+ AM_CFLAGS = $(CWARNFLAGS)
