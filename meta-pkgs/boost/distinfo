@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2015/08/14 07:54:04 adam Exp $
+$NetBSD: distinfo,v 1.83 2015/09/24 23:02:54 tnn Exp $
 
 SHA1 (boost_1_59_0.tar.bz2) = b94de47108b2cdb0f931833a7a9834c2dd3ca46e
 RMD160 (boost_1_59_0.tar.bz2) = a106b3cd1dbda2323e5e84c7106cedee327db03c
@@ -19,6 +19,7 @@ SHA1 (patch-boost_core_noncopyable.hpp) = a693e5eda7fc303e1bd86ecfab40321d771af6
 SHA1 (patch-boost_math_tools_config.hpp) = 81402bc38dc858d0818ed91e204966c8382be4ff
 SHA1 (patch-boost_regex_config.hpp) = 6b752c7c23168c591cd391739c7a4539bef44c12
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
+SHA1 (patch-libs_config_test_boost__no__range__based__for.ipp) = d9936c472fc2c696d86522b36eb12813ae91bee4
 SHA1 (patch-libs_context_build_Jamfile.v2) = befc2ae62e893ac665e88405d6aca79712f2549b
 SHA1 (patch-libs_context_src_asm_make__ppc32__sysv__macho__gas.S) = 7f598bc270fcfa8babd99e1180248f04b50c2e46
 SHA1 (patch-libs_filesystem_src_unique_path.cpp) = 4693ea11cf464d82168cecaa143b48affa94563b
