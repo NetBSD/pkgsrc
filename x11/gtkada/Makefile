@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/06/12 10:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/09/24 02:38:33 tnn Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
@@ -26,18 +26,25 @@ CONFIGURE_ARGS+=	--enable-nls \
 			--with-GL=no
 MAKE_ENV+=		PROCESSORS=${MAKE_JOBS}
 
-SUBST_CLASSES+= 	docs lgnat
+SUBST_CLASSES+= 	docs lgnat sphinx
 SUBST_STAGE.docs=	post-patch
 SUBST_FILES.docs=	Makefile.in
 SUBST_SED.docs=		-e 's/^all: \(.*\)/all: \1 docs/g'
 SUBST_STAGE.lgnat=	post-patch
 SUBST_FILES.lgnat=	src/tools/Makefile.in testgtk/Makefile.in
 SUBST_SED.lgnat=	-e 's|-largs|-largs -lgnat|'
+SUBST_STAGE.sphinx=	post-patch
+SUBST_FILES.sphinx=	docs/gtkada_ug/Makefile
+SUBST_SED.sphinx=	-e 's|sphinx-build|${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}|'
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX}; \
 		${FIND} * \( -type f -or -type l \) | ${SORT};
 
 GTK2PC=		${BUILDLINK_DIR}/lib/pkgconfig/gtk+-2.0.pc
+
+# Make it find libgcc_s.so from lang/gcc-aux.
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/gcc-aux/lib
+LDFLAGS+=			-Wl,-R${PREFIX}/gcc-aux/lib
 
 post-wrapper:
 	# This hack works around missing gmodule entry in gtk2
@@ -47,7 +54,7 @@ post-wrapper:
 	${MV} ${GTK2PC}.tmp ${GTK2PC}
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} \
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		./configure ${CONFIGURE_ARGS}
 
 do-build:
