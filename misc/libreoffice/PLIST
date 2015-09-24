@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/30 07:38:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/09/24 03:18:34 ryoon Exp $
 ${PKGNAME}/CREDITS.fodt
 ${PKGNAME}/LICENSE
 ${PKGNAME}/LICENSE.fodt
@@ -311,6 +311,7 @@ ${PKGNAME}/program/msgbox.py
 ${PKGNAME}/program/officehelper.py
 ${PKGNAME}/program/oosplash
 ${PKGNAME}/program/open-url
+${PKGNAME}/program/opengl/areaHashCRC64TFragmentShader.glsl
 ${PKGNAME}/program/opengl/areaScaleFastFragmentShader.glsl
 ${PKGNAME}/program/opengl/areaScaleFragmentShader.glsl
 ${PKGNAME}/program/opengl/backgroundFragmentShader.glsl
@@ -332,6 +333,7 @@ ${PKGNAME}/program/opengl/linearMultiColorGradientFragmentShader.glsl
 ${PKGNAME}/program/opengl/linearTwoColorGradientFragmentShader.glsl
 ${PKGNAME}/program/opengl/maskFragmentShader.glsl
 ${PKGNAME}/program/opengl/maskedTextureFragmentShader.glsl
+${PKGNAME}/program/opengl/maskedTextureVertexShader.glsl
 ${PKGNAME}/program/opengl/pickingFragmentShader.glsl
 ${PKGNAME}/program/opengl/pickingVertexShader.glsl
 ${PKGNAME}/program/opengl/radialGradientFragmentShader.glsl
@@ -11391,8 +11393,6 @@ ${PKGNAME}/share/extensions/dict-cs/cs_CZ.dic
 ${PKGNAME}/share/extensions/dict-cs/description.xml
 ${PKGNAME}/share/extensions/dict-cs/dictionaries.xcu
 ${PKGNAME}/share/extensions/dict-cs/hyph_cs_CZ.dic
-${PKGNAME}/share/extensions/dict-cs/th_cs_CZ_v3.dat
-${PKGNAME}/share/extensions/dict-cs/th_cs_CZ_v3.idx
 ${PKGNAME}/share/extensions/dict-da/HYPH_da_DK_README.txt
 ${PKGNAME}/share/extensions/dict-da/META-INF/manifest.xml
 ${PKGNAME}/share/extensions/dict-da/README_da_DK.txt
@@ -13749,7 +13749,7 @@ ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_props.xsl
 ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_settings.xsl
 ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_table.xsl
 ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_text.xsl
-@comment $NetBSD: PLIST,v 1.4 2015/08/30 07:38:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/09/24 03:18:34 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
