@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14908 2015/09/24 22:40:03 wiz Exp $
+$NetBSD: TODO,v 1.14909 2015/09/24 22:42:18 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1688,7 +1688,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o slib-3b5
 	o slony1-2.2.4
 	o slurm-14.11.2
-	o smartmontools-6.4 [tnn]
 	o smokeping-2.6.11
 	o smproxy-1.0.3
 	o snappy-1.1.3
