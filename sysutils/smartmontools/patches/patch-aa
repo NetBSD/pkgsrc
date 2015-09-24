@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2015/04/08 01:43:33 rodent Exp $
+$NetBSD: patch-aa,v 1.9 2015/09/24 22:30:29 tnn Exp $
 
 Don't install Linux init.d files nor CONF_FILES.
 
---- Makefile.in.orig	2014-07-26 09:50:18.000000000 +0000
+--- Makefile.in.orig	2015-06-04 16:30:22.000000000 +0000
 +++ Makefile.in
-@@ -182,11 +182,10 @@ mkinstalldirs = $(install_sh) -d
+@@ -189,11 +189,10 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = config.h
  CONFIG_CLEAN_FILES =
  CONFIG_CLEAN_VPATH_FILES =
@@ -17,17 +17,17 @@ Don't install Linux init.d files nor CONF_FILES.
  	"$(DESTDIR)$(sysconfdir)" "$(DESTDIR)$(systemdsystemunitdir)"
  PROGRAMS = $(sbin_PROGRAMS)
  am__smartctl_SOURCES_DIST = smartctl.cpp smartctl.h atacmdnames.cpp \
-@@ -585,8 +584,7 @@ docs_DATA = \
+@@ -595,8 +594,7 @@ docs_DATA = \
+         INSTALL \
          NEWS \
          README \
-         TODO \
--        WARNINGS \
+-        TODO \
 -        smartd.conf
-+        WARNINGS
++        TODO
  
  examplesdir = $(exampledir)
  examples_DATA = \
-@@ -1666,7 +1664,7 @@ info-am:
+@@ -1686,7 +1684,7 @@ info-am:
  
  install-data-am: install-data-local install-docsDATA \
  	install-drivedbDATA install-examplesDATA \
