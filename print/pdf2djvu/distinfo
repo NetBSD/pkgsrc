@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/04/24 20:18:48 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/09/24 23:13:34 ryoon Exp $
 
-SHA1 (pdf2djvu_0.7.14.tar.gz) = 0023e1719f53452f64b1fffb6e5d20fc29b30308
-RMD160 (pdf2djvu_0.7.14.tar.gz) = 5116939c7bc698e3316bf6c86272104cd5040d24
-Size (pdf2djvu_0.7.14.tar.gz) = 320705 bytes
-SHA1 (patch-pdf-backend.cc) = 4b22e50aebff955c984403a672ecda17dc5fdb3e
-SHA1 (patch-pdf-backend.hh) = ccdb39f289c5c9b771fb11354aa800aaf86990c9
-SHA1 (patch-pdf2djvu.cc) = d2443a896bd898039eb6df048859fc210a5350e1
-SHA1 (patch-system.hh) = dcc18be77d5ff0e7d5f70043efd4ae739c54627a
+SHA1 (pdf2djvu-0.8.2.tar.xz) = fd71dc41ab4ef533b138af6e2165ae7930b7fb79
+RMD160 (pdf2djvu-0.8.2.tar.xz) = 6d9de34bb461f1a92b83734771432a63570c8d9e
+Size (pdf2djvu-0.8.2.tar.xz) = 234412 bytes
