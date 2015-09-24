@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1 2015/09/24 23:05:31 ryoon Exp $
+
+DISTNAME=		djvulibre-3.5.27
+CATEGORIES=		graphics
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
+
+HOMEPAGE=		http://djvu.sourceforge.net/
+COMMENT=		Compression library for scanned documents
+LICENSE=		gnu-gpl-v2
+
+PATCHDIR=		${.CURDIR}/../djvulibre-lib/patches
+DISTINFO_FILE=		${.CURDIR}/../djvulibre-lib/distinfo
+
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+
+PKGCONFIG_OVERRIDE+=	libdjvu/ddjvuapi.pc.in
+BUILD_DIRS=		libdjvu share
+INSTALL_DIRS=		libdjvu share
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*-i386) && !empty(PKGSRC_COMPILER:Mgcc)
+# The library uses Intel atomic intrinsics which don't work with NetBSD's
+# default arch setting of "i386" because eg. cmpxchgl is 486+.
+# On NetBSD-5+, i386 is desupported so we can safely assume a 486.
+CFLAGS+= -march=i486
+.endif
+
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
