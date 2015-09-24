@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4012 2015/09/24 23:09:07 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4013 2015/09/24 23:14:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7000,3 +7000,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/djvulibre-lib to 3.5.27 [ryoon 2015-09-24]
 	Updated graphics/djvulibre-tools to 3.5.27 [ryoon 2015-09-24]
 	Updated devel/pstreams to 0.8.1 [ryoon 2015-09-24]
+	Updated print/pdf2djvu to 0.8.2 [ryoon 2015-09-24]
