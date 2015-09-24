@@ -1,6 +1,6 @@
-$NetBSD: patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c,v 1.1 2015/02/08 08:41:25 tnn Exp $
+$NetBSD: patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c,v 1.2 2015/09/24 22:54:28 tnn Exp $
 
-patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c
+Ensure we use the bundled jpeg.
 
 --- jdk/src/share/native/sun/awt/image/jpeg/imageioJPEG.c.orig	2015-02-02 15:37:11.000000000 +0000
 +++ jdk/src/share/native/sun/awt/image/jpeg/imageioJPEG.c
