@@ -1,10 +1,11 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.6 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.7 2015/09/24 22:54:28 tnn Exp $
 
 GCC support on SunOS.
 Fix max heap.
 Avoid requiring ALSA.
+Fix broken configure check for llvm-config.
 
---- common/autoconf/generated-configure.sh.orig	2015-06-10 10:29:06.000000000 +0000
+--- common/autoconf/generated-configure.sh.orig	2015-08-05 15:28:20.000000000 +0000
 +++ common/autoconf/generated-configure.sh
 @@ -6883,7 +6883,7 @@ test -n "$target_alias" &&
        VAR_CPU_BITS=32
@@ -46,7 +47,7 @@ Avoid requiring ALSA.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -16217,16 +16217,15 @@ $as_echo_n "checking flags for boot jdk
+@@ -16217,16 +16217,15 @@ $as_echo_n "checking flags for boot jdk 
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BUILD_NUM_BITS" = x32; then
@@ -156,7 +157,7 @@ Avoid requiring ALSA.
              *)
                C_O_FLAG_HI="-O3"
                C_O_FLAG_NORM="-O2"
-@@ -29862,7 +29875,7 @@ fi
+@@ -29862,7 +29876,7 @@ fi
    #
    case $COMPILER_NAME in
      gcc )
@@ -165,7 +166,7 @@ Avoid requiring ALSA.
        -pipe \
        -D_GNU_SOURCE -D_REENTRANT -D_LARGEFILE64_SOURCE"
        case $OPENJDK_TARGET_CPU_ARCH in
-@@ -30475,7 +30488,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -30475,7 +30489,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -175,7 +176,7 @@ Avoid requiring ALSA.
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -31701,7 +31715,11 @@ $as_echo "$as_me: WARNING: freetype not
+@@ -31701,7 +31716,11 @@ $as_echo "$as_me: WARNING: freetype not 
  
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
@@ -188,7 +189,7 @@ Avoid requiring ALSA.
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -34519,7 +34537,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -34519,7 +34538,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -197,7 +198,7 @@ Avoid requiring ALSA.
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -34652,7 +34670,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -34652,7 +34671,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -206,7 +207,17 @@ Avoid requiring ALSA.
        fi
      fi
  
-@@ -35923,7 +35941,7 @@ fi
+@@ -35878,9 +35897,6 @@ fi
+ 
+ 
+ 
+-    if test "x$LLVM_CONFIG" != xllvm-config; then
+-      as_fn_error $? "llvm-config not found in $PATH." "$LINENO" 5
+-    fi
+ 
+     llvm_components="jit mcjit engine nativecodegen native"
+     unset LLVM_CFLAGS
+@@ -35923,7 +35939,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
