@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.31 2015/06/04 10:25:17 fhajny Exp $
+# $NetBSD: options.mk,v 1.32 2015/09/24 06:13:50 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
-			pcre push realip ssl sub uwsgi image-filter upload \
+			pcre push realip ssl sub uwsgi image-filter \
 			debug status nginx-autodetect-cflags spdy echo \
 			set-misc headers-more array-var encrypted-session \
 			form-input perl gzip
@@ -182,18 +182,6 @@ PUSH_DISTFILE=		${PUSH}.tar.gz
 SITES.${PUSH_DISTFILE}=	http://pushmodule.slact.net/downloads/
 
 DISTFILES+=		${PUSH_DISTFILE}
-.endif
-
-.if !empty(PKG_OPTIONS:Mupload)
-CONFIGURE_ARGS+=	--add-module=../${NGX_UPLOAD}
-.endif
-
-.if !empty(PKG_OPTIONS:Mupload) || make(makesum)
-DISTFILES+=		${NGX_UPLOAD_DISTFILE}
-
-NGX_UPLOAD=		nginx_upload_module-2.2.0
-NGX_UPLOAD_DISTFILE=	${NGX_UPLOAD}.tar.gz
-SITES.${NGX_UPLOAD_DISTFILE}=	http://www.grid.net.ru/nginx/download/
 .endif
 
 .if !empty(PKG_OPTIONS:Mimage-filter)

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/09/03 09:15:18 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2015/09/24 06:13:50 wiz Exp $
 
 SHA1 (array-var-nginx-module-0.03.tar.gz) = b2666aa3c092060fcd3931a6d45798a5745c1ad6
 RMD160 (array-var-nginx-module-0.03.tar.gz) = 171c2d9bd02d7a7ede9f87ab348ef035cea14aec
@@ -27,9 +27,6 @@ Size (nginx-1.9.4.tar.gz) = 866423 bytes
 SHA1 (nginx_http_push_module-0.692.tar.gz) = 72103084cad8f4d3d9a49a6b04cf780e4541605d
 RMD160 (nginx_http_push_module-0.692.tar.gz) = 9d2be16074cf28115af0f1d8f3646937cda649ad
 Size (nginx_http_push_module-0.692.tar.gz) = 29119 bytes
-SHA1 (nginx_upload_module-2.2.0.tar.gz) = 93d6e83e613a0ce2ed057a434b344fa1b6609b47
-RMD160 (nginx_upload_module-2.2.0.tar.gz) = 5734af837be3fe8ec444a7e5e7f6707118594098
-Size (nginx_upload_module-2.2.0.tar.gz) = 25796 bytes
 SHA1 (ngx_devel_kit-0.2.19.tar.gz) = 888635e80a8a0e6242b8e9b684ff60ffa70845a2
 RMD160 (ngx_devel_kit-0.2.19.tar.gz) = 64d3737bc4cc948c1363cce80d70e5260878811e
 Size (ngx_devel_kit-0.2.19.tar.gz) = 65029 bytes
