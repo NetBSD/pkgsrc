@@ -1,0 +1,53 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/09/24 23:34:16 tnn Exp $
+
+--- configure.ac.orig	2015-01-02 18:43:42.000000000 +0000
++++ configure.ac
+@@ -52,6 +52,9 @@ dnl
+ AC_ARG_ENABLE(futex,	AS_HELP_STRING([--enable-futex], [Enable futexes (default: auto)]),
+ 		[FUTEX=$enableval], [FUTEX=auto])
+ 
++AC_ARG_ENABLE(semaphore,	AS_HELP_STRING([--enable-semaphore], [Enable POSIX named semaphores (default: no)]),
++		[SEMAPHORE=$enableval], [FUTEX=no])
++
+ if test "x$FUTEX" = "xauto"; then
+ 	AC_CHECK_HEADER([linux/futex.h], [FUTEX=yes])
+ fi
+@@ -65,23 +68,36 @@ if test "x$FUTEX" = "xauto"; then
+ 	fi
+ fi
+ 
++if test "x$SEMAPHORE" = "xyes"; then
++	AC_CHECK_HEADER([semaphore.h], [], [AC_MSG_ERROR([No platform support for POSIX named semaphores])])
++fi
++
+ if test "x$FUTEX" = "xyes"; then
+ 	PTHREAD=no
+ 	AC_DEFINE(HAVE_FUTEX,1,[Use futexes])
+ else
+-	PTHREAD=yes
+-	AC_DEFINE(HAVE_PTHREAD,1,[Use pthread primitives])
++	if test "x$SEMAPHORE" = "xyes"; then
++		PTHREAD=no
++		AC_DEFINE(HAVE_SEMAPHORE,1,[Use semaphores])
++	else
++		PTHREAD=yes
++		AC_DEFINE(HAVE_PTHREAD,1,[Use pthread primitives])
++	fi
+ fi
+ 
+ PTHREAD_LIBS=
+ if test "x$PTHREAD" = "xyes"; then
+ 	AC_CHECK_LIB(pthread,pthread_create,[PTHREAD_LIBS=-lpthread],[PTHREAD_LIBS=])
+ fi
++if test "x$SEMAPHORE" = "xyes"; then
++	AC_CHECK_LIB(rt,sem_open,[PTHREAD_LIBS=-lrt])
++fi
+ 
+ AC_SUBST([PTHREAD_LIBS])
+ 
+ AM_CONDITIONAL([FUTEX], [test x"$FUTEX" = xyes])
+ AM_CONDITIONAL([PTHREAD], [test x"$PTHREAD" = xyes])
++AM_CONDITIONAL([SEMAPHORE], [test x"$SEMAPHORE" = xyes])
+ 
+ PKG_CHECK_MODULES(XPROTO, xproto)
+ 
