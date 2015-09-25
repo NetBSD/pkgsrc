@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/11 21:17:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/09/25 16:49:32 prlw1 Exp $
 bin/radicale
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/pbr.json
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/radicale/__init__.py
 ${PYSITELIB}/radicale/__init__.pyc
 ${PYSITELIB}/radicale/__init__.pyo

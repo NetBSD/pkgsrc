@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2015/01/28 07:22:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/09/25 16:49:32 prlw1 Exp $
 
-DISTNAME=	Radicale-0.10
-PKGREVISION=	1
+DISTNAME=	Radicale-1.0.1
 CATEGORIES=	net time www
 MASTER_SITES=	http://pypi.python.org/packages/source/R/Radicale/
 
@@ -12,25 +11,39 @@ LICENSE=	gnu-gpl-v3
 
 EGDIR=			share/examples/radicale
 
+RADICALE_USER?=		www
+RADICALE_GROUP?=	www
+PKG_GROUPS=		${RADICALE_GROUP}
+PKG_USERS=		${RADICALE_USER}:${RADICALE_GROUP}
+
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
 CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/radicale/config
+RCD_SCRIPTS=		radicale
+FILES_SUBST+=		RADICALE_USER=${RADICALE_USER}
+FILES_SUBST+=		RADICALE_GROUP=${RADICALE_GROUP}
+FILES_SUBST+=		PYTHONBIN=${PYTHONBIN}
 
 SUBST_CLASSES+=		config
-SUBST_SED.config+=	-e 's,/etc,${PKG_SYSCONFDIR},'
+SUBST_SED.config+=	-e 's,/etc,${PKG_SYSCONFDIR},g'
+SUBST_SED.config+=	-e 's,apache2/,httpd/,g'
 SUBST_FILES.config+=	radicale/config.py config logging
 SUBST_STAGE.config=	pre-configure
 SUBST_MESSAGE.config=	Fixing path to configuration file.
 
+SUBST_CLASSES+=		server
+SUBST_SED.server+=	-e 's,\#daemon = False,daemon = True,'
+SUBST_FILES.server+=	config
+SUBST_STAGE.server=	pre-configure
+SUBST_MESSAGE.server=	Configure as a daemon by default.
+
 .include "options.mk"
 
-post-build:
-	${SED} -e "s#/etc#${PKG_SYSCONFDIR}#" -e "s#apache2/#httpd/#" \
-	  ${WRKSRC}/config >${WRKSRC}/config.pkgsrc
+# for md5 htpasswd_encryption method
+DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/config.pkgsrc \
-	  ${DESTDIR}${PREFIX}/${EGDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/${EGDIR}/config
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
