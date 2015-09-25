@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/04/25 14:25:23 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/25 00:44:45 tnn Exp $
 
 DISTNAME=	xf86-video-tdfx-1.4.6
 PKGREVISION=	2
@@ -28,5 +28,4 @@ CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .include "../../x11/videoproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
