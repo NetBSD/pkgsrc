@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2011/08/12 16:31:45 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/25 08:51:34 taca Exp $
 
 DISTNAME=	heckle-1.4.3
 PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://seattlerb.rubyforge.org/heckle/
+HOMEPAGE=	http://docs.seattlerb.org/heckle/
 COMMENT=	Code mutation tester for Ruby
 LICENSE=	mit
 
