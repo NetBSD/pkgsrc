@@ -1,0 +1,3 @@
+$NetBSD: DESCR,v 1.1 2015/09/25 13:20:36 manu Exp $
+
+This Nagios plugin monitors GlusterFS bricks
