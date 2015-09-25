@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4022 2015/09/25 13:27:44 manu Exp $
+$NetBSD: CHANGES-2015,v 1.4023 2015/09/25 14:37:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7021,3 +7021,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/nagios-plugin-gfbricks version 0.2 [manu 2015-09-25]
 	Added net/nagios-plguin-mysqlslave version 0.1 [manu 2015-09-25]
 	Added net/syncffsd version 0.7 [manu 2015-09-25]
+	Updated audio/pulseaudio to 7.0 [ryoon 2015-09-25]
