@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/07/18 08:55:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/09/25 15:15:58 fhajny Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -219,7 +219,6 @@ lib/erlang/man/man3/heart.3
 lib/erlang/man/man3/http_uri.3
 lib/erlang/man/man3/httpc.3
 lib/erlang/man/man3/httpd.3
-lib/erlang/man/man3/httpd_conf.3
 lib/erlang/man/man3/httpd_custom_api.3
 lib/erlang/man/man3/httpd_socket.3
 lib/erlang/man/man3/httpd_util.3
@@ -388,6 +387,7 @@ lib/erlang/man/man3/wxAuiManagerEvent.3
 lib/erlang/man/man3/wxAuiNotebook.3
 lib/erlang/man/man3/wxAuiNotebookEvent.3
 lib/erlang/man/man3/wxAuiPaneInfo.3
+lib/erlang/man/man3/wxAuiSimpleTabArt.3
 lib/erlang/man/man3/wxAuiTabArt.3
 lib/erlang/man/man3/wxBitmap.3
 lib/erlang/man/man3/wxBitmapButton.3
@@ -510,6 +510,7 @@ lib/erlang/man/man3/wxMessageDialog.3
 lib/erlang/man/man3/wxMiniFrame.3
 lib/erlang/man/man3/wxMirrorDC.3
 lib/erlang/man/man3/wxMouseCaptureChangedEvent.3
+lib/erlang/man/man3/wxMouseCaptureLostEvent.3
 lib/erlang/man/man3/wxMouseEvent.3
 lib/erlang/man/man3/wxMoveEvent.3
 lib/erlang/man/man3/wxMultiChoiceDialog.3
