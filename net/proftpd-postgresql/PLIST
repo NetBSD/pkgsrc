@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/25 10:01:37 wiedi Exp $
+libexec/proftpd/mod_sql_postgres.la

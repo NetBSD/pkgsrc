@@ -1,0 +1,2 @@
+The ProFTPD mod_memcache module enables support for caching data in
+memcached servers.

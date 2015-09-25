@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1083 2015/09/12 22:54:29 joerg Exp $
+# $NetBSD: Makefile,v 1.1084 2015/09/25 10:01:36 wiedi Exp $
 #
 
 COMMENT=	Networking tools
@@ -553,6 +553,13 @@ SUBDIR+=	powerdns-recursor
 SUBDIR+=	pppd
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
+SUBDIR+=	proftpd-geoip
+SUBDIR+=	proftpd-ldap
+SUBDIR+=	proftpd-memcached
+SUBDIR+=	proftpd-mysql
+SUBDIR+=	proftpd-odbc
+SUBDIR+=	proftpd-postgresql
+SUBDIR+=	proftpd-sqlite
 SUBDIR+=	proxycheck
 SUBDIR+=	proxytunnel
 SUBDIR+=	publicfile
