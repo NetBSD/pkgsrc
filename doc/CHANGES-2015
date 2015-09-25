@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4029 2015/09/25 16:49:55 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.4030 2015/09/25 17:06:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7031,3 +7031,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/netpgpverify to 20150919 [agc 2015-09-25]
 	Updated security/libnetpgpverify to 20150919 [agc 2015-09-25]
 	Updated net/Radicale to 1.0.1 [prlw1 2015-09-25]
+	Updated devel/binutils to 2.25.1 [tnn 2015-09-25]
