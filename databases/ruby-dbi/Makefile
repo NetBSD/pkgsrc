@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2011/08/12 15:58:36 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/25 05:47:35 taca Exp $
 
 DISTNAME=	dbi-0.4.5
 PKGREVISION=	2
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ruby-dbi/
+HOMEPAGE=	# http://rubyforge.org/projects/ruby-dbi/
 COMMENT=	Database independent interface for Ruby
 LICENSE=	modified-bsd
 
