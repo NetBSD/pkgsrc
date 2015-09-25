@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.16 2015/08/13 20:47:42 adam Exp $
+$NetBSD: patch-ad,v 1.17 2015/09/25 08:43:04 richard Exp $
+
+apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
 
 --- Makefile.in.orig	2015-07-26 23:03:10.000000000 +0000
 +++ Makefile.in
@@ -11,7 +13,12 @@ $NetBSD: patch-ad,v 1.16 2015/08/13 20:47:42 adam Exp $
  
  javahl_javadir = @libdir@/svn-javahl
  javahl_javahdir = @libdir@/svn-javahl/include
-@@ -837,7 +837,7 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
+@@ -833,11 +833,11 @@ clean-swig-headers:
+ extraclean-swig-headers: clean-swig-headers
+ 	$(EXTRACLEAN_SWIG_HEADERS)
+ 
+-$(SWIG_PL_DIR)/native/Makefile.PL: $(SWIG_SRC_DIR)/perl/native/Makefile.PL.in
++$(SWIG_PL_DIR)/native/Makefile.PL: $(SWIG_SRC_DIR)/perl/native/Makefile.PL.in libsvn_swig_perl
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
  $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
