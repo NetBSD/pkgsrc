@@ -1,0 +1,4 @@
+The ProFTPD mod_conf_ldap module can be used to store configuration
+information, as would normally be found in the proftpd.conf file, in LDAP
+directories, and to have proftpd consequently retrieve that configuration
+information.

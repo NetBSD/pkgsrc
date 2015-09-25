@@ -1,0 +1,5 @@
+The ProFTPD mod_geoip module allows sites to quickly look up geolocation
+information such as country, continent, region, timezone, etc based on
+the connecting client's IP address. This information can be logged for
+tracking purposes, and used to configure access controls in order to
+reduce/prevent connections from locations unauthorized by site policy.

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/25 10:01:36 wiedi Exp $
+libexec/proftpd/mod_memcache.la
+libexec/proftpd/mod_tls_memcache.la

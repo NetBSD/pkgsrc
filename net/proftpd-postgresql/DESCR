@@ -1,0 +1,2 @@
+ProFTPD module that provides the PostgreSQL backend for SQL database
+authentication.
