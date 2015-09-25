@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 04:24:49 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/25 05:47:35 taca Exp $
 
 DISTNAME=	dbd-odbc-0.2.5
 PKGREVISION=	1
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ruby-dbi/
+HOMEPAGE=	# http://rubyforge.org/projects/ruby-dbi/
 COMMENT=	ODBC support for Ruby/DBI
 LICENSE=	modified-bsd
 
