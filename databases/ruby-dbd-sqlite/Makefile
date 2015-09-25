@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 04:24:49 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/25 05:47:36 taca Exp $
 
 DISTNAME=	dbd-sqlite-0.1.2
 PKGREVISION=	1
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ruby-dbi/
+HOMEPAGE=	# http://rubyforge.org/projects/ruby-dbi/
 COMMENT=	SQLite support for Ruby/DBI
 LICENSE=	modified-bsd
 
