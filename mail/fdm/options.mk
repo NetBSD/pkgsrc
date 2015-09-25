@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/10/03 11:12:43 obache Exp $
+# $NetBSD: options.mk,v 1.2 2015/09/25 13:08:44 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fdm
 PKG_SUPPORTED_OPTIONS=	debug pcre
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	pcre
 # Debug
 #
 .if !empty(PKG_OPTIONS:Mdebug)
-   MAKE_ENV+=	FDEBUG=1
+CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 #

@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/05 13:56:46 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/09/25 13:08:44 leot Exp $
 
-SHA1 (fdm-1.8.tar.gz) = 25c0ebc0c2b43984d04c82d0ba3909acf7403df7
-RMD160 (fdm-1.8.tar.gz) = 460bd3ced27caf248878d803c0efefd090b8e0b1
-Size (fdm-1.8.tar.gz) = 193220 bytes
-SHA1 (patch-aa) = 1464ecfca828c93b90a2700a2329273992cd1959
-SHA1 (patch-fdm.h) = aa13bc8507c9918fb56ff65e64a83b3b5d29ce14
+SHA1 (fdm-1.9.tar.gz) = 818bf39418ae4b170b4c3aa7c852015bf4802d7a
+RMD160 (fdm-1.9.tar.gz) = f44d009ac29cdf244509ce032270758be7f4be32
+Size (fdm-1.9.tar.gz) = 175815 bytes
+SHA1 (patch-fdm.h) = 98d01387d0e17d782950571c1b25e8faf841649b
