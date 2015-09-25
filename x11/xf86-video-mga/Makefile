@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/04/25 14:25:22 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2015/09/25 00:44:44 tnn Exp $
 
 DISTNAME=	xf86-video-mga-1.6.4
 PKGREVISION=	2
@@ -22,7 +22,6 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
