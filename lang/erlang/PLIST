@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/07/18 08:55:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/09/25 15:15:58 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -3734,7 +3734,6 @@ lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_daemon_channel.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_file.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_info.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_io.beam
-lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_math.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_message.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_no_io.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_server_key_api.beam
@@ -3770,7 +3769,6 @@ lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_daemon_channel.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_file.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_info.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_io.erl
-lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_math.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_message.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_no_io.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_server_key_api.erl
@@ -4192,6 +4190,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiManagerEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiNotebook.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiNotebookEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiPaneInfo.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiSimpleTabArt.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiTabArt.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxBitmap.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxBitmapButton.beam
@@ -4314,6 +4313,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMessageDialog.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMiniFrame.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMirrorDC.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMouseCaptureChangedEvent.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMouseCaptureLostEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMouseEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMoveEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMultiChoiceDialog.beam
@@ -4529,6 +4529,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiManagerEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiNotebook.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiNotebookEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiPaneInfo.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiSimpleTabArt.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiTabArt.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxBitmap.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxBitmapButton.erl
@@ -4651,6 +4652,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMessageDialog.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMiniFrame.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMirrorDC.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMouseCaptureChangedEvent.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMouseCaptureLostEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMouseEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMoveEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMultiChoiceDialog.erl
