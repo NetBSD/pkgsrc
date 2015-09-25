@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2010/09/10 04:23:25 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/25 05:47:35 taca Exp $
 
 DISTNAME=	dbd-mysql-0.4.4
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ruby-dbi/
+HOMEPAGE=	# http://rubyforge.org/projects/ruby-dbi/
 COMMENT=	MySQL support for Ruby/DBI
 LICENSE=	modified-bsd
 
