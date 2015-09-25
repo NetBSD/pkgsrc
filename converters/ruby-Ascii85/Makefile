@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/03/01 13:00:23 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/25 05:46:28 taca Exp $
 
 DISTNAME=	Ascii85-1.0.2
 PKGREVISION=	1
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ascii85/
+HOMEPAGE=	https://github.com/datawraith/ascii85gem
 COMMENT=	Ascii85 encoder/decoder
 LICENSE=	mit
 
