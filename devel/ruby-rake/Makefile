@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 22:54:40 taca Exp $
+# $NetBSD: Makefile,v 1.13 2015/09/25 08:55:18 taca Exp $
 
 DISTNAME=	rake-${VERS}
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/rake/
+HOMEPAGE=	https://github.com/ruby/rake
 COMMENT=	Ruby Make
 LICENSE=	mit
 
