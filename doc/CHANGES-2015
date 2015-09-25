@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4021 2015/09/25 13:08:58 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4022 2015/09/25 13:27:44 manu Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7018,3 +7018,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/proftpd-postgresql version 1.3.5a [wiedi 2015-09-25]
 	Added net/proftpd-sqlite version 1.3.5a [wiedi 2015-09-25]
 	Updated mail/fdm to 1.9 [leot 2015-09-25]
+	Added net/nagios-plugin-gfbricks version 0.2 [manu 2015-09-25]
+	Added net/nagios-plguin-mysqlslave version 0.1 [manu 2015-09-25]
+	Added net/syncffsd version 0.7 [manu 2015-09-25]
