@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4020 2015/09/25 10:05:39 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.4021 2015/09/25 13:08:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7017,3 +7017,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/proftpd-odbc version 1.3.5a [wiedi 2015-09-25]
 	Added net/proftpd-postgresql version 1.3.5a [wiedi 2015-09-25]
 	Added net/proftpd-sqlite version 1.3.5a [wiedi 2015-09-25]
+	Updated mail/fdm to 1.9 [leot 2015-09-25]
