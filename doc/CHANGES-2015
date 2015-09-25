@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4018 2015/09/25 06:47:37 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4019 2015/09/25 07:17:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7008,3 +7008,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/SOPE to 2.3.2 [taca 2015-09-25]
 	Updated www/SOGo to 2.3.2 [taca 2015-09-25]
 	Updated databases/py-elasticsearch to 1.7.0 [fhajny 2015-09-25]
+	Updated net/rabbitmq to 3.5.5 [fhajny 2015-09-25]
