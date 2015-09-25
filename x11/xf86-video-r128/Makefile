@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/05/02 08:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/09/25 00:44:45 tnn Exp $
 
 DISTNAME=	xf86-video-r128-6.10.0
 CATEGORIES=	x11
@@ -25,7 +25,6 @@ CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"

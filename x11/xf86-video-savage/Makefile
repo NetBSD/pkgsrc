@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/05/08 11:45:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/09/25 00:44:45 tnn Exp $
 
 DISTNAME=	xf86-video-savage-2.3.8
 CATEGORIES=	x11
@@ -21,7 +21,6 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
