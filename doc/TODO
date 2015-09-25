@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14911 2015/09/25 13:08:58 leot Exp $
+$NetBSD: TODO,v 1.14912 2015/09/25 17:06:19 tnn Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bibtool-2.61
 	o bin86-0.16.19
 	o binkd-104
-	o binutils-2.25.1
 	o bird-1.5.0
 	o bird6-1.5.0
 	o bitchx-1.2.1 [wip]
