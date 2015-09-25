@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2012/06/02 00:40:54 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/09/25 08:53:59 taca Exp $
 
 DISTNAME=	ParseTree-3.0.9
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://parsetree.rubyforge.org/
+HOMEPAGE=	https://github.com/seattlerb/parsetree
 COMMENT=	Extract and enumerate Ruby parse trees
 LICENSE=	mit
 
