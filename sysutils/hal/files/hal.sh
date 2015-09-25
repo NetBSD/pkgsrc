@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: hal.sh,v 1.2 2008/11/22 16:16:26 jmcneill Exp $
+# $NetBSD: hal.sh,v 1.3 2015/09/25 16:26:16 richard Exp $
 #
 # PROVIDE: hal
 # REQUIRE: DAEMON dbus
@@ -14,7 +14,7 @@ command="@PREFIX@/sbin/hald"
 start_precmd=hal_prestart
 
 hal_prestart() {
-	dir="@VARBASE@/run/hald"
+	dir="@PKG_HOME.haldaemon@"
 	if @TEST@ ! -d $dir; then
 		@MKDIR@ $dir
 		@CHMOD@ 0755 $dir

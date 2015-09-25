@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2015/09/07 09:03:24 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2015/09/25 16:26:15 richard Exp $
 
 DISTNAME=		hal-0.5.14
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -74,9 +74,9 @@ PLIST_SRC=		PLIST
 
 CFLAGS.SunOS+=		-Du_int32_t=uint32_t
 
-.if ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
-.endif
+OPSYSVARS+=	BUILDLINK_TRANSFORM
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-Wl,-zignore
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
@@ -92,15 +92,17 @@ CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
 CONFIGURE_ARGS+=	--disable-pmu
 
 RCD_SCRIPTS=		hal
+SMF_METHODS=		hal
 
 .if ${HAL_GROUP} != "operator"
 PKG_GROUPS=		${HAL_GROUP}
 .endif
 PKG_USERS=		${HAL_USER}:${HAL_GROUP}
-PKG_HOME.haldaemon=	${VARBASE}/run/hal
+PKG_HOME.haldaemon=	${VARBASE}/run/hald
 
 FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
+FILES_SUBST+=		PKG_HOME.haldaemon=${PKG_HOME.haldaemon}
 
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
