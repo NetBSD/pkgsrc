@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2015/09/25 05:19:25 richard Exp $
+update gdlib-config version info
+--- configure.orig	2015-01-08 05:12:18.000000000 +0000
++++ configure
+@@ -740,6 +740,8 @@ INSTALL_SCRIPT
+ INSTALL_PROGRAM
+ FEATURES
+ GDLIB_AGE
++GDLIB_MAJOR
++GDLIB_MINOR
+ GDLIB_REVISION
+ GDLIB_CURRENT
+ host_os
+@@ -2426,7 +2428,6 @@ GDLIB_VERSION=2.1.1
+ # See http://www.gnu.org/software/libtool/manual/libtool.html#Updating-version-info
+ 
+ GDLIB_CURRENT=3
+-GDLIB_REVISION=0
+ GDLIB_AGE=0
+ 
+ 
