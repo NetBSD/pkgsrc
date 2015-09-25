@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2012/09/03 15:08:45 taca Exp $
+# $NetBSD: Makefile,v 1.12 2015/09/25 05:46:56 taca Exp $
 
 DISTNAME=	activeldap-3.2.2
 CATEGORIES=	databases
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ruby-activeldap/
+HOMEPAGE=	http://activeldap.github.io/
 COMMENT=	Object oriented interface to LDAP
 LICENSE=	ruby-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
