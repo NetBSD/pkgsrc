@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4024 2015/09/25 14:58:23 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4025 2015/09/25 15:17:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7023,3 +7023,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/syncffsd version 0.7 [manu 2015-09-25]
 	Updated audio/pulseaudio to 7.0 [ryoon 2015-09-25]
 	Updated emulators/qemu to 2.4.0.1 [ryoon 2015-09-25]
+	Updated lang/erlang to 18.1 [fhajny 2015-09-25]
+	Updated lang/erlang-doc to 18.1 [fhajny 2015-09-25]
+	Updated lang/erlang-man to 18.1 [fhajny 2015-09-25]
