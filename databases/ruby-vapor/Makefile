@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2012/10/02 21:25:52 asau Exp $
+# $NetBSD: Makefile,v 1.27 2015/09/25 05:49:15 taca Exp $
 
 DISTNAME=	vapor-0.81
 PKGREVISION=	9
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/215/
+MASTER_SITES=	# http://rubyforge.org/frs/download.php/215/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vapor.rubyforge.org/
+HOMEPAGE=	# http://vapor.rubyforge.org/
 COMMENT=	Ruby transparent persistence to postgresql
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
