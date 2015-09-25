@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/03/24 12:15:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/09/25 07:17:37 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -148,12 +148,14 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_version.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_vhost.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_vm.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_writer.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/ssl_compat.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/supervised_lifecycle.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/supervisor2.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/tcp_acceptor.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/tcp_acceptor_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/tcp_listener.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/tcp_listener_sup.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/time_compat.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/truncate.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/vm_memory_monitor.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/worker_pool.beam
