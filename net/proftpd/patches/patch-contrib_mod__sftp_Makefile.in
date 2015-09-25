@@ -1,0 +1,18 @@
+$NetBSD: patch-contrib_mod__sftp_Makefile.in,v 1.1 2015/09/25 10:01:37 wiedi Exp $
+
+Install mod_sftp misc files into examples folder
+
+--- contrib/mod_sftp/Makefile.in.orig	2015-05-28 00:25:54.000000000 +0000
++++ contrib/mod_sftp/Makefile.in
+@@ -46,8 +46,9 @@ install: install-misc
+ 	fi
+ 
+ install-misc:
+-	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 dhparams.pem $(DESTDIR)$(sysconfdir)/dhparams.pem 
+-	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 blacklist.dat $(DESTDIR)$(sysconfdir)/blacklist.dat
++	$(INSTALL) -d -m 0755 $(DESTDIR)$(PREFIX)/share/examples/proftpd
++	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 dhparams.pem $(DESTDIR)$(PREFIX)/share/examples/proftpd/dhparams.pem
++	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 blacklist.dat $(DESTDIR)$(PREFIX)/share/examples/proftpd/blacklist.dat
+ 
+ clean:
+ 	$(LIBTOOL) --mode=clean $(RM) $(MODULE_NAME).a $(MODULE_NAME).la *.o *.lo .libs/*.o

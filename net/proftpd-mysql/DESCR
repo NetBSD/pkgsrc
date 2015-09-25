@@ -1,0 +1,2 @@
+ProFTPD module that provides the MySQL (and compatible) backend for SQL
+database authentication.

@@ -1,30 +1,44 @@
-# $NetBSD: Makefile,v 1.80 2015/08/18 07:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2015/09/25 10:01:37 wiedi Exp $
 
-DISTNAME=	proftpd-1.3.5a
-PKGREVISION=	1
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
-		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
-		ftp://ftp.fsn.hu/pub/proftpd/distrib/source/
+.include "../../net/proftpd/Makefile.common"
 
-MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.proftpd.org/
-COMMENT=	FTP server with Apache like configuration
-LICENSE=	gnu-gpl-v2
+PKGREVISION=	2
+COMMENT=	Highly configurable FTP server software
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+MODULES+=	\
+		mod_ban \
+		mod_copy \
+		mod_ctrls_admin \
+		mod_deflate \
+		mod_dnsbl \
+		mod_dynmasq \
+		mod_exec \
+		mod_ifsession \
+		mod_ifversion \
+		mod_load \
+		mod_qos \
+		mod_quotatab \
+		mod_quotatab_file \
+		mod_quotatab_radius \
+		mod_quotatab_sql \
+		mod_radius \
+		mod_ratio \
+		mod_readme \
+		mod_rewrite \
+		mod_sftp \
+		mod_sftp_sql \
+		mod_shaper \
+		mod_site_misc \
+		mod_sql \
+		mod_sql_passwd \
+		mod_tls \
+		mod_tls_shmcache \
+		mod_unique_id \
+		mod_wrap2 \
+		mod_wrap2_file \
+		mod_wrap2_sql
 
-USE_TOOLS+=		gmake intltool msgfmt perl:run
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
-CONFIGURE_ARGS+=	--disable-sendfile
-CONFIGURE_ARGS+=	--enable-ctrls
-CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ENV+=		install_group=${ROOT_GROUP}
-CONFIGURE_ENV+=		install_user=${ROOT_USER}
-
-BUILD_DEFS+=		VARBASE
+CONFIGURE_ARGS+=	--with-shared=${MODULES:ts:}
 
 RCD_SCRIPTS=		proftpd
 REPLACE_PERL+=		contrib/ftpasswd
@@ -39,15 +53,6 @@ INSTALLATION_DIRS+=	lib/proftpd
 INSTALLATION_DIRS+=	share/doc/proftpd
 INSTALLATION_DIRS+=	share/examples/proftpd
 
-PLIST_SRC+=		${PKGDIR}/PLIST
-
-.include "options.mk"
-
-SUBST_CLASSES+=		libwrap
-SUBST_STAGE.libwrap=	post-patch
-SUBST_FILES.libwrap=	contrib/mod_wrap.c
-SUBST_SED.libwrap=	-e '/^...\$$Libraries: /s/ -lnsl\$$$$/$$/'
-
 post-install:
 .for i in NEWS README README.IPv6 README.LDAP README.PAM README.capabilities \
           README.classes README.controls README.facl README.modules
@@ -61,6 +66,4 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/ftpasswd \
 		${DESTDIR}${PREFIX}/share/examples/proftpd
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

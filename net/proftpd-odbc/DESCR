@@ -1,0 +1,2 @@
+The purpose of the mod_sql_odbc module is to allow ProFTPD's mod_sql module to
+connect to any database that supports ODBC.
