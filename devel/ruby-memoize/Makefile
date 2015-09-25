@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2015/03/15 17:25:55 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/25 08:52:59 taca Exp $
 #
 
 DISTNAME=	memoize-1.3.1
 CATEGORIES=	devel
-MASTER_SITES=	http://rubyforge.org/frs/download.php/61790/
+MASTER_SITES=	# http://rubyforge.org/frs/download.php/61790/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rubyforge.org/projects/shards
+HOMEPAGE=	https://github.com/djberg96/memoize
 COMMENT=	Speeds up methods at the cost of memory (or disk space)
 LICENSE=	artistic-2.0
 
