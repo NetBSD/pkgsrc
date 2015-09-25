@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2015/04/25 11:47:03 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2015/09/25 00:57:16 tnn Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -23,8 +23,11 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/dri2proto/buildlink3.mk"
+.include "../../x11/dri3proto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
-.if empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
+.if !empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
+.include "../../graphics/MesaLib7/buildlink3.mk" # XXX should not be needed for non-dri build
+.else
 .include "../../graphics/MesaLib/buildlink3.mk" # XXX should not be needed for non-dri build
 .include "../../x11/resourceproto/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
