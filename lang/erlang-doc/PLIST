@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/07/18 08:55:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/09/25 15:15:58 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -692,7 +692,6 @@ lib/erlang/lib/inets-${VERSION.inets}/doc/html/http_server.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/http_uri.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpc.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd.html
-lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_conf.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_custom_api.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_socket.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/httpd_util.html
@@ -700,6 +699,7 @@ lib/erlang/lib/inets-${VERSION.inets}/doc/html/index.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/inets.eix
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/inets.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/inets_services.html
+lib/erlang/lib/inets-${VERSION.inets}/doc/html/introduction.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/mod_alias.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/mod_auth.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/mod_esi.html
@@ -1411,6 +1411,7 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxAuiManagerEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxAuiNotebook.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxAuiNotebookEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxAuiPaneInfo.html
+lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxAuiSimpleTabArt.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxAuiTabArt.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxBitmap.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxBitmapButton.html
@@ -1533,6 +1534,7 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMessageDialog.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMiniFrame.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMirrorDC.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMouseCaptureChangedEvent.html
+lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMouseCaptureLostEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMouseEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMoveEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMultiChoiceDialog.html
