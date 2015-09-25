@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4026 2015/09/25 15:22:38 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.4027 2015/09/25 15:36:47 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7027,3 +7027,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/erlang-doc to 18.1 [fhajny 2015-09-25]
 	Updated lang/erlang-man to 18.1 [fhajny 2015-09-25]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.900 [kleink 2015-09-25]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.521 [tsutsui 2015-09-25]
