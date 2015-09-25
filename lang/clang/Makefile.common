@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2015/09/25 15:59:19 tnn Exp $
 #
 # used by lang/clang/Makefile
 # used by lang/libLLVM/Makefile
+# Keep in mind that the MesaLib package is also heavily reliant on libLLVM.
+# The mesa project tends to release new stables whenever clang is updated,
+# so it is a good idea to update that package simultaneously.
 
 DISTNAME=	clang-3.6.2
 CATEGORIES=	lang
