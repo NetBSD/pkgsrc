@@ -1,0 +1,2 @@
+The mod_sql_sqlite module is designed to let ProFTPD's mod_sql module connect
+to and use a SQLite database.
