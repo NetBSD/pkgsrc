@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/08/30 14:28:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/09/25 00:44:45 tnn Exp $
 
 DISTNAME=	xf86-video-sis-0.10.8
 CATEGORIES=	x11
@@ -24,7 +24,6 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
