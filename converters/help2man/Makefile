@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2015/09/07 12:06:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2015/09/25 15:07:30 tnn Exp $
 
 DISTNAME=	help2man-1.47.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=help2man/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,14 +28,28 @@ INFO_FILES=		yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
+SOEXT=			dylib
 SUBST_CLASSES+=		shlibarg
 SUBST_STAGE.shlibarg=	pre-configure
 SUBST_FILES.shlibarg=	Makefile.in
-SUBST_SED.shlibarg=	-e 's, -shared , -dynamiclib -install_name ${PREFIX}/lib/bindtextdomain.so ,g'
+SUBST_SED.shlibarg=	-e 's, -shared , -dynamiclib -install_name ${PREFIX}/lib/bindtextdomain.${SOEXT} ,g'
+.elif ${OBJECT_FMT} == "SOM"
+SOEXT=			sl
+.else
+SOEXT=			so
 .endif
 
-PLIST_VARS+=		nls
+SUBST_CLASSES+=		soext
+SUBST_MESSAGE.soext=	Fixing shared library suffix
+SUBST_STAGE.soext=	pre-configure
+SUBST_FILES.soext=	bindtextdomain.c
+SUBST_FILES.soext+=	Makefile.in
+SUBST_SED.soext+=	-e 's,bindtextdomain\.so,bindtextdomain.${SOEXT},g'
+SUBST_SED.soext+=	-e 's,$$(preload)\.so,$$(preload).${SOEXT},g'
 
+PLIST_SUBST+=		SOEXT=${SOEXT}
+
+PLIST_VARS+=		nls
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 
