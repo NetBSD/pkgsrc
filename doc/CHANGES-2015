@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4015 2015/09/24 23:51:17 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4016 2015/09/25 06:01:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7005,3 +7005,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gpgme to 1.6.0nb1 [ryoon 2015-09-24]
 	Updated security/qca2-gnupg to 2.0.0beta3nb17 [ryoon 2015-09-24]
 	Updated sysutils/consolekit to 0.4.6 [ryoon 2015-09-24]
+	Updated devel/SOPE to 2.3.2 [taca 2015-09-25]
