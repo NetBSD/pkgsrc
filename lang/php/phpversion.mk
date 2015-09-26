@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.111 2015/09/06 12:27:43 taca Exp $
+# $NetBSD: phpversion.mk,v 1.112 2015/09/26 20:02:38 bouyer Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -11,7 +11,7 @@
 #	the package.
 #
 #	Possible: 54 55 56
-#	Default: 54
+#	Default: 55
 #
 # === Infrastructure variables ===
 #
@@ -28,7 +28,7 @@
 #	The PHP versions that are accepted by the package.
 #
 #	Possible: 54 55 56
-#	Default: 54
+#	Default: 54 55 56
 #
 # PHP_CHECK_INSTALLED
 #	Check installed version of PHP.  Should be used by lang/php54,
@@ -98,7 +98,7 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 
 .include "../../mk/bsd.prefs.mk"
 
-PHP_VERSION_DEFAULT?=		54
+PHP_VERSION_DEFAULT?=		55
 PHP_VERSIONS_ACCEPTED?=		54 55 56
 
 # transform the list into individual variables
