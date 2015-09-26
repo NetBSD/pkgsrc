@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/26 07:25:59 tnn Exp $
+
+SHA1 (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 97c32266e60eff1db2e9a59c7077e0f56b11ee38
+RMD160 (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 7fe9bc15bdecf08a91e2ef0fe4e139731ec0047b
+Size (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 163180 bytes
