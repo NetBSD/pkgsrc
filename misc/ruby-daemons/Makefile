@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2015/09/13 14:43:40 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/09/26 15:09:44 taca Exp $
 
 DISTNAME=	daemons-1.2.3
 CATEGORIES=	misc
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://daemons.rubyforge.org/
+HOMEPAGE=	https://github.com/thuehlinger/daemons
 COMMENT=	Toolkit to convert Ruby scripts to a daemon
 LICENSE=	mit
 
