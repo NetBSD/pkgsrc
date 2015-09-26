@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.767 2015/09/01 00:28:39 khorben Exp $
+# $NetBSD: Makefile,v 1.768 2015/09/26 07:21:46 tnn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -30,6 +30,7 @@ SUBDIR+=	clisp-gtk2
 SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
 SUBDIR+=	compositeproto
+SUBDIR+=	compton
 SUBDIR+=	damageproto
 SUBDIR+=	deforaos-integration
 SUBDIR+=	deforaos-keyboard
