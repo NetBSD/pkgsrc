@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/02/27 12:18:21 gdt Exp $
+$NetBSD: distinfo,v 1.4 2015/09/26 23:29:13 gdt Exp $
 
 SHA1 (mopher-0.5.3.tar.gz) = 1099f8a59a99eab69f8c77612a7e437f37d1bd27
 RMD160 (mopher-0.5.3.tar.gz) = a25468b4ed32ca953a0642123b41b0fe1cb0be9a
 Size (mopher-0.5.3.tar.gz) = 198633 bytes
+SHA1 (patch-configure) = fef08e200c37a09dce9e955cc5a9617ff77e73d9
+SHA1 (patch-src_Makefile.in) = 39a830da027332e0f2e1f26821c86fbd6d18efbf
