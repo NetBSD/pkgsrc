@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14916 2015/09/26 10:18:16 leot Exp $
+$NetBSD: TODO,v 1.14917 2015/09/26 14:28:51 wen Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-R2HTML-2.3.1
 	o R-RPostgreSQL-0.4
 	o R-RandomFields-3.1.1
-	o R-Rcpp-0.12.0
 	o R-akima-11
 	o R-car-25
 	o R-chron-47
