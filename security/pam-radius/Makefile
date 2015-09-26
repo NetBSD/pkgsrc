@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:48 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/26 20:01:27 bsiegert Exp $
 
 PKGNAME=	${DISTNAME:S/_/-/}
-DISTNAME=	pam_radius-1.3.16
+DISTNAME=	pam_radius-1.3.17
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/
+MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/pam_radius_auth/
 COMMENT=	PAM module for authentication against a RADIUS server
 
 NO_CONFIGURE=	YES
-EXTRACT_SUFX=	.tar
+EXTRACT_SUFX=	.tar.gz
 
 INSTALLATION_DIRS=	lib/security share/doc/pam-radius share/examples/pam-radius
 

@@ -1,0 +1,7 @@
+--- Makefile	2007-03-25 23:22:11.000000000 -0500
++++ Makefile	2012-11-30 15:29:34.000000000 -0600
+@@ -17,3 +17,3 @@
+ #
+-CFLAGS = -Wall -fPIC
++CFLAGS = -Wall -fPIC -DNO_STATIC_MODULES
+ #
