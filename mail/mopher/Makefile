@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/09/16 11:18:54 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/26 23:29:13 gdt Exp $
 
 DISTNAME=		mopher-0.5.3
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://mopher.org/download/
 
@@ -27,8 +28,6 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		lex
 USE_TOOLS+=		yacc
-# objcopy is not a tool (but maybe it should be)
-#USE_TOOLS+=		objcopy
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
