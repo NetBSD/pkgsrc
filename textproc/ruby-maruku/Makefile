@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2015/03/13 16:16:12 taca Exp $
+# $NetBSD: Makefile,v 1.10 2015/09/26 23:41:54 taca Exp $
 
 DISTNAME=	maruku-0.7.2
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://maruku.rubyforge.org/
+HOMEPAGE=	https://github.com/bhollis/maruku
 COMMENT=	Markdown-superset interpreter
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2015/02/05 15:09:25 taca Exp $
+# $NetBSD: Makefile,v 1.23 2015/09/26 23:41:32 taca Exp $
 
 DISTNAME=	libxml-ruby-2.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/ruby-//}
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libxml.rubyforge.org/
+HOMEPAGE=	http://xml4r.github.io/libxml-ruby/
 COMMENT=	Support module for libxml2 library
 LICENSE=	mit
 
