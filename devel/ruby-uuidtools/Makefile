@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/02/02 15:28:45 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/26 15:04:22 taca Exp $
 
 DISTNAME=	uuidtools-2.1.5
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://uuidtools.rubyforge.org/
+HOMEPAGE=	https://github.com/sporkmonger/uuidtools
 COMMENT=	Simple universally unique ID generation library
 LICENSE=	mit
 
