@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4041 2015/09/26 17:01:50 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4042 2015/09/26 17:59:16 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7057,3 +7057,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-MIME-EncWords to 1.014.3 [bouyer 2015-09-26]
 	Updated mail/sympa to 6.2.7 [bouyer 2015-09-26]
 	Updated graphics/MesaLib to 11.0.1 [tnn 2015-09-26]
+	Updated lang/go14 to 1.4.3 [bsiegert 2015-09-26]
