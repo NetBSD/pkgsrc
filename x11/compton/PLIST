@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/26 07:25:59 tnn Exp $
+bin/compton
+bin/compton-trans
+man/man1/compton-trans.1
+man/man1/compton.1
+share/applications/compton.desktop
+share/examples/compton/compton.sample.conf
+share/icons/hicolor/48x48/apps/compton.png
+share/icons/hicolor/scalable/apps/compton.svg
