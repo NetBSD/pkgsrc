@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4032 2015/09/26 05:07:45 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4033 2015/09/26 06:33:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7037,3 +7037,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/suse131_libgc version libgc1-7.2d-2.1.2 [kamil 2015-09-26]
 	Added emulators/suse131_32_libgc version libgc1-7.2d-2.1.2 [kamil 2015-09-26]
 	Updated www/p5-Mojolicious to 6.21 [wen 2015-09-26]
+	Updated devel/subversion to 1.9.2 [adam 2015-09-26]
+	Updated devel/subversion-base to 1.9.2 [adam 2015-09-26]
+	Updated devel/java-subversion to 1.9.2 [adam 2015-09-26]
+	Updated devel/p5-subversion to 1.9.2 [adam 2015-09-26]
+	Updated devel/py-subversion to 1.9.2 [adam 2015-09-26]
+	Updated devel/ruby-subversion to 1.9.2 [adam 2015-09-26]
+	Updated www/ap2-subversion to 1.9.2 [adam 2015-09-26]
