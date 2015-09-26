@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.4 2015/07/12 00:44:46 wiz Exp $
+$NetBSD: patch-aj,v 1.5 2015/09/26 10:16:38 leot Exp $
 
---- Source/WTF/wtf/InlineASM.h.orig	2015-03-04 07:19:42.000000000 +0000
+--- Source/WTF/wtf/InlineASM.h.orig	2015-07-22 12:37:57.000000000 +0000
 +++ Source/WTF/wtf/InlineASM.h
 @@ -40,7 +40,7 @@
  #define THUMB_FUNC_PARAM(name)
