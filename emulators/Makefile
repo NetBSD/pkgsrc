@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2015/09/26 00:21:39 kamil Exp $
+# $NetBSD: Makefile,v 1.235 2015/09/26 00:22:24 kamil Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -194,6 +194,7 @@ SUBDIR+=	suse121_32_krb5
 SUBDIR+=	suse121_32_libcups
 SUBDIR+=	suse121_32_libcurl
 SUBDIR+=	suse121_32_libdrm
+SUBDIR+=	suse121_32_libgc
 SUBDIR+=	suse121_32_libjpeg
 SUBDIR+=	suse121_32_libpng
 SUBDIR+=	suse121_32_libsigc++2
