@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2013/01/14 06:14:03 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/09/26 15:06:26 taca Exp $
 
 DISTNAME=	gnuplot-2.6.2
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://rgplot.rubyforge.org/
+HOMEPAGE=	https://github.com/rdp/ruby_gnuplot/tree/master
 COMMENT=	Ruby interface to a gnuplot process
 LICENSE=	modified-bsd
 
