@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/07/07 21:51:22 khorben Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/09/26 08:47:17 tnn Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -68,6 +68,7 @@ CONFIGURE_ARGS+=	--disable-kdrive
 #CONFIGURE_ARGS+=	--disable-kdrive-vesa
 CONFIGURE_ARGS+=	--disable-xfake
 CONFIGURE_ARGS+=	--disable-xfbdev
+CONFIGURE_ARGS+=	--enable-xtrans-send-fds
 
 CONFIGURE_ARGS+=	--with-int10=x86emu
 
