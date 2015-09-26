@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2015/09/13 04:59:35 tnn Exp $
+# $NetBSD: options.mk,v 1.13 2015/09/26 08:47:17 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -6,33 +6,25 @@ PKG_SUGGESTED_OPTIONS=	dri inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dri dri3 dtrace glamor
+PLIST_VARS+=		dri dtrace
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
-BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=10
+BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/dri2proto/buildlink3.mk"
+.include "../../x11/dri3proto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/libxshmfence/buildlink3.mk"
 .include "../../x11/xf86driproto/buildlink3.mk"
 PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-dri2
+CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx
-.  if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PLIST.glamor=		yes
 CONFIGURE_ARGS+=	--enable-glamor
-.include "../../x11/libxshmfence/buildlink3.mk"
-.  endif
-# Linux supports dri3
-.  if ${OPSYS} == "Linux"
-PLIST.dri3=		yes
-.include "../../x11/dri3proto/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-dri3
-.  else
-CONFIGURE_ARGS+=	--disable-dri3
-.  endif
 .else
 ###
 ### XXX Perhaps we should allow for a built-in glx without dri enabled?
