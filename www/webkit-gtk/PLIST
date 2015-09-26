@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/08/15 15:34:32 leot Exp $
+@comment $NetBSD: PLIST,v 1.26 2015/09/26 10:16:37 leot Exp $
 bin/MiniBrowser
 bin/jsc
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
@@ -20,6 +20,7 @@ include/webkitgtk-4.0/webkit2/WebKitCredential.h
 include/webkitgtk-4.0/webkit2/WebKitDefines.h
 include/webkitgtk-4.0/webkit2/WebKitDownload.h
 include/webkitgtk-4.0/webkit2/WebKitEditingCommands.h
+include/webkitgtk-4.0/webkit2/WebKitEditorState.h
 include/webkitgtk-4.0/webkit2/WebKitEnumTypes.h
 include/webkitgtk-4.0/webkit2/WebKitError.h
 include/webkitgtk-4.0/webkit2/WebKitFaviconDatabase.h
@@ -30,6 +31,7 @@ include/webkitgtk-4.0/webkit2/WebKitForwardDeclarations.h
 include/webkitgtk-4.0/webkit2/WebKitFrame.h
 include/webkitgtk-4.0/webkit2/WebKitGeolocationPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitHitTestResult.h
+include/webkitgtk-4.0/webkit2/WebKitInstallMissingMediaPluginsPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitJavascriptResult.h
 include/webkitgtk-4.0/webkit2/WebKitMimeInfo.h
 include/webkitgtk-4.0/webkit2/WebKitNavigationAction.h
@@ -53,6 +55,7 @@ include/webkitgtk-4.0/webkit2/WebKitUserContentManager.h
 include/webkitgtk-4.0/webkit2/WebKitUserMediaPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitVersion.h
 include/webkitgtk-4.0/webkit2/WebKitWebContext.h
+include/webkitgtk-4.0/webkit2/WebKitWebEditor.h
 include/webkitgtk-4.0/webkit2/WebKitWebExtension.h
 include/webkitgtk-4.0/webkit2/WebKitWebHitTestResult.h
 include/webkitgtk-4.0/webkit2/WebKitWebInspector.h
@@ -60,6 +63,7 @@ include/webkitgtk-4.0/webkit2/WebKitWebPage.h
 include/webkitgtk-4.0/webkit2/WebKitWebResource.h
 include/webkitgtk-4.0/webkit2/WebKitWebView.h
 include/webkitgtk-4.0/webkit2/WebKitWebViewBase.h
+include/webkitgtk-4.0/webkit2/WebKitWebsiteDataManager.h
 include/webkitgtk-4.0/webkit2/WebKitWindowProperties.h
 include/webkitgtk-4.0/webkit2/webkit-web-extension.h
 include/webkitgtk-4.0/webkit2/webkit2.h
@@ -207,6 +211,7 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMHistory.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMKeyboardEvent.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMLocation.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaController.h
+include/webkitgtk-4.0/webkitdom/WebKitDOMMediaDevices.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaError.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaList.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaQueryList.h
@@ -215,6 +220,7 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMMouseEvent.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMouseEventUnstable.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMNamedNodeMap.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMNavigator.h
+include/webkitgtk-4.0/webkitdom/WebKitDOMNavigatorMediaDevices.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMNode.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMNodeFilter.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMNodeIterator.h
@@ -274,14 +280,15 @@ lib/girepository-1.0/WebKit2-4.0.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.1.12
+lib/libjavascriptcoregtk-4.0.so.18.2.8
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.6.8
+lib/libwebkit2gtk-4.0.so.37.11.3
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
 lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
+libexec/webkit2gtk-4.0/WebKitDatabaseProcess
 libexec/webkit2gtk-4.0/WebKitNetworkProcess
 libexec/webkit2gtk-4.0/WebKitPluginProcess
 libexec/webkit2gtk-4.0/WebKitPluginProcess2
@@ -332,6 +339,7 @@ share/locale/sr@latin/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/sv/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/ta/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/te/LC_MESSAGES/WebKit2GTK-4.0.mo
+share/locale/tr/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/uk/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/vi/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/zh_CN/LC_MESSAGES/WebKit2GTK-4.0.mo
