@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/09/13 04:59:35 tnn Exp $
+@comment $NetBSD: PLIST,v 1.23 2015/09/26 08:47:17 tnn Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -33,7 +33,7 @@ include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
 ${PLIST.dri}include/xorg/dri.h
 ${PLIST.dri}include/xorg/dri2.h
-${PLIST.dri3}include/xorg/dri3.h
+${PLIST.dri}include/xorg/dri3.h
 ${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h
@@ -52,7 +52,7 @@ include/xorg/gc.h
 include/xorg/gcstruct.h
 include/xorg/geext.h
 include/xorg/geint.h
-${PLIST.glamor}include/xorg/glamor.h
+${PLIST.dri}include/xorg/glamor.h
 include/xorg/globals.h
 include/xorg/glx_extinit.h
 include/xorg/glyphstr.h
@@ -172,7 +172,7 @@ ${PLIST.dri}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/libexa.la
 lib/xorg/modules/libfb.la
 lib/xorg/modules/libfbdevhw.la
-${PLIST.glamor}lib/xorg/modules/libglamoregl.la
+${PLIST.dri}lib/xorg/modules/libglamoregl.la
 lib/xorg/modules/libint10.la
 lib/xorg/modules/libshadow.la
 lib/xorg/modules/libshadowfb.la
