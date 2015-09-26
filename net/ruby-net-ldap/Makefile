@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/02/04 15:56:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/26 15:11:30 taca Exp $
 
 DISTNAME=	net-ldap-0.11
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://net-ldap.rubyforge.org/
+HOMEPAGE=	https://github.com/ruby-ldap/ruby-net-ldap
 COMMENT=	Client access for the LDAP
 LICENSE=	mit
 
