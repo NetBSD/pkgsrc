@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2015/09/13 04:59:35 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2015/09/26 08:48:38 tnn Exp $
 
 DISTNAME=	xf86-video-ati-7.5.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,21 +20,17 @@ USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-glamor
-.else
-CONFIGURE_ARGS+=	--disable-glamor
-.endif
+
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	\
-	modular-xorg-server>=1.17.2nb5
+	modular-xorg-server>=1.17.2nb6
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.58
