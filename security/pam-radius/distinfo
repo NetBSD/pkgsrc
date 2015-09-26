@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/02/21 00:06:52 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2015/09/26 20:01:27 bsiegert Exp $
 
-SHA1 (pam_radius-1.3.16.tar) = 127352a693bafd9f32dd80ecece57de2bc1c19b8
-RMD160 (pam_radius-1.3.16.tar) = 6fb69c357b01ba5ac026b186de9be0e3f92c3fcd
-Size (pam_radius-1.3.16.tar) = 112640 bytes
-SHA1 (patch-aa) = a52b9561ca552a7b35b65b3f3361f5ab1bdf872e
+SHA1 (pam_radius-1.3.17.tar.gz) = 7623ca1b636bba729c69c3f50254b856bb4519a7
+RMD160 (pam_radius-1.3.17.tar.gz) = c3873d5a4275170420f98c2f37def0593293f463
+Size (pam_radius-1.3.17.tar.gz) = 31341 bytes
+SHA1 (patch-Makefile) = 192a300d690aa096fd31b3ffdb2394761ded23cc
+SHA1 (patch-pam_radius_auth.c) = ac1886fc20757a3787f57071c514e4518b4c25bd
