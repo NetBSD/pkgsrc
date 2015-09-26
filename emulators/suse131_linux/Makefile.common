@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2015/03/10 01:42:13 tnn Exp $
+# $NetBSD: Makefile.common,v 1.14 2015/09/26 00:40:58 kamil Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -21,6 +21,7 @@
 # used by emulators/suse131_libdrm/Makefile
 # used by emulators/suse131_libesd/Makefile
 # used by emulators/suse131_libffi/Makefile
+# used by emulators/suse131_libgc/Makefile
 # used by emulators/suse131_libidn/Makefile
 # used by emulators/suse131_libjpeg/Makefile
 # used by emulators/suse131_libjson/Makefile
