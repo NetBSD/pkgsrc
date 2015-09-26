@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/02/03 14:46:01 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/26 15:08:34 taca Exp $
 
 DISTNAME=	narray-0.6.1.1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://narray.rubyforge.org/
+HOMEPAGE=	http://masa16.github.io/narray/
 COMMENT=	N-dimensional Numerical Array class for Ruby
 LICENSE=	2-clause-bsd OR ruby-license
 
