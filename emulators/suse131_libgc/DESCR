@@ -1,0 +1,6 @@
+Linux compatibility package based on the openSUSE Linux distribution.
+Please visit http://www.opensuse.org/ for more information about openSUSE
+Linux.
+
+This package supports running ELF binaries linked with gc1 that require
+Boehm-Demers-Weiser conservative garbage collector libraries.
