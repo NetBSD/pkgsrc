@@ -1,4 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.1 2015/09/24 22:18:58 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.2 2015/09/26 06:06:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
+Pullup ticket #4816 - requested by agc
+security/netpgpverify: bug fix patch
+security/libnetpgpverify: bug fix patch
