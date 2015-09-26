@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4035 2015/09/26 07:21:46 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4036 2015/09/26 07:45:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7046,3 +7046,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ap2-subversion to 1.9.2 [adam 2015-09-26]
 	Updated textproc/p5-Text-CSV_XS to 1.19 [wen 2015-09-26]
 	Added x11/compton version 20150920 [tnn 2015-09-26]
+	Updated net/maradns to 2.0.13 [wen 2015-09-26]
