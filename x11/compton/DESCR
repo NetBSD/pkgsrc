@@ -1,0 +1,18 @@
+Compton is a compositor for X, and a fork of xcompmgr-dana.
+
+Changes from xcompmgr:
+
+  OpenGL backend (--backend glx), in addition to the old X Render backend.
+  Inactive window transparency (-i) / dimming (--inactive-dim).
+  Titlebar/frame transparency (-e).
+  Menu transparency (-m, thanks to Dana).
+  shadows are now enabled for argb windows, e.g. terminals with transparency
+  removed serverside shadows (and simple compositing) to clean the code,
+    the only option that remains is clientside shadows
+  configuration files (see the man page for more details)
+  colored shadows (--shadow-[red/green/blue])
+  a new fade system
+  VSync support (not always working)
+  Blur of background of transparent windows, window color inversion (bad in
+    performance)
+  Some more options...
