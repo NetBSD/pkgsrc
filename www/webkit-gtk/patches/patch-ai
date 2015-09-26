@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.5 2015/07/12 00:44:46 wiz Exp $
+$NetBSD: patch-ai,v 1.6 2015/09/26 10:16:38 leot Exp $
 
---- Source/WTF/wtf/ThreadIdentifierDataPthreads.cpp.orig	2014-08-08 18:05:15.000000000 +0000
+--- Source/WTF/wtf/ThreadIdentifierDataPthreads.cpp.orig	2015-09-14 07:08:10.000000000 +0000
 +++ Source/WTF/wtf/ThreadIdentifierDataPthreads.cpp
 @@ -39,6 +39,12 @@
  #if OS(HURD)
