@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/09/10 07:23:26 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/09/26 15:10:02 taca Exp $
 
 DISTNAME=	gem_plugin-0.2.3
 CATEGORIES=	misc
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://mongrel.rubyforge.org/
+HOMEPAGE=	# http://mongrel.rubyforge.org/
 COMMENT=	Gem-based plugin system
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
