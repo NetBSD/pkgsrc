@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4038 2015/09/26 10:18:16 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4039 2015/09/26 14:28:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7053,3 +7053,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/modular-xorg-server to 1.17.2nb6 [tnn 2015-09-26]
 	Updated x11/xf86-video-ati to 7.5.0nb5 [tnn 2015-09-26]
 	Updated www/webkit-gtk to 2.10.0 [leot 2015-09-26]
+	Updated devel/R-Rcpp to 0.12.1 [wen 2015-09-26]
