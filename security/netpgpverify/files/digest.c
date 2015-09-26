@@ -27,7 +27,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/param.h>
-#include <sys/syslog.h>
 
 #include <arpa/inet.h>
 #include <ctype.h>
