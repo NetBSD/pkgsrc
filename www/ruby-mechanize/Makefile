@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2015/06/11 17:34:28 taca Exp $
+# $NetBSD: Makefile,v 1.15 2015/09/26 23:45:00 taca Exp $
 
 DISTNAME=	mechanize-2.7.3
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://mechanize.rubyforge.org/
+HOMEPAGE=	https://github.com/sparklemotion/mechanize
 COMMENT=	Library to automate interaction with websites
 LICENSE=	mit
 
