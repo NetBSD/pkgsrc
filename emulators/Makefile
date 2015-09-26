@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2015/09/26 00:22:24 kamil Exp $
+# $NetBSD: Makefile,v 1.236 2015/09/26 00:23:00 kamil Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -303,6 +303,7 @@ SUBDIR+=	suse131_libdbus
 SUBDIR+=	suse131_libdrm
 SUBDIR+=	suse131_libesd
 SUBDIR+=	suse131_libffi
+SUBDIR+=	suse131_libgc
 SUBDIR+=	suse131_libidn
 SUBDIR+=	suse131_libjpeg
 SUBDIR+=	suse131_libjson
