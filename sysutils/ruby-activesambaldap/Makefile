@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/16 11:13:08 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/09/26 23:39:58 taca Exp $
 
 DISTNAME=	activesambaldap-0.1.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/asl/
+HOMEPAGE=	https://github.com/activeldap/activesambaldap
 COMMENT=	Library and management tools for Samba + LDAP environment
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 
