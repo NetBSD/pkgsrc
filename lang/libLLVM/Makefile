@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/05/28 13:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/26 08:42:19 tnn Exp $
 
 PKGNAME=		${DISTNAME:S/clang/libLLVM/}
 
@@ -9,6 +9,9 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/Release/lib
 BUILD_TARGET=		libs-only
 INSTALL_TARGET=		install-libs
 PYTHON_FOR_BUILD_ONLY=	yes
+
+# for MesaLib
+CONFIGURE_ARGS+=	 --enable-experimental-targets=AMDGPU
 
 SUBST_CLASSES+=		fix-pfx
 SUBST_STAGE.fix-pfx=	pre-configure

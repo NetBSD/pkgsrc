@@ -1,20 +1,21 @@
-$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+$NetBSD: distinfo,v 1.36 2015/09/26 08:42:19 tnn Exp $
 
-SHA1 (cfe-3.6.2.src.tar.xz) = 7ba809c9c17819a16b668640a642ed134d7052f0
-RMD160 (cfe-3.6.2.src.tar.xz) = 10d913b4d5317f8c2520e5fc6117df30937317a8
-Size (cfe-3.6.2.src.tar.xz) = 8617576 bytes
-SHA1 (compiler-rt-3.6.2.src.tar.xz) = c6c52d2923a60f1a2ca2f22fea1770fd2e25728d
-RMD160 (compiler-rt-3.6.2.src.tar.xz) = 9b68a32d49d4bef4603d550934192f39fea42895
-Size (compiler-rt-3.6.2.src.tar.xz) = 1128080 bytes
-SHA1 (libcxx-3.6.2.src.tar.xz) = 6c5aee9f05ecf17d1e3ecb1add34a33a5a904469
-RMD160 (libcxx-3.6.2.src.tar.xz) = 42b8832d01d4e6b553babc93cb5dbd4ce2bb1931
-Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
-SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
-RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
-Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
+SHA1 (cfe-3.7.0.src.tar.xz) = 4ff8100565528b13d99a73f807e9b426c3b3bed9
+RMD160 (cfe-3.7.0.src.tar.xz) = b59a82dcc44d16f1152f5204584bbc47861d223e
+Size (cfe-3.7.0.src.tar.xz) = 9147204 bytes
+SHA1 (compiler-rt-3.7.0.src.tar.xz) = b61362b409bb7909a6d11097b5f69fded061073c
+RMD160 (compiler-rt-3.7.0.src.tar.xz) = 94cc920bce769e8b6234376ce8c517cdccd96e0c
+Size (compiler-rt-3.7.0.src.tar.xz) = 1192832 bytes
+SHA1 (libcxx-3.7.0.src.tar.xz) = 73adf9fdca5086dd47a32b34a398d2c1d492d18e
+RMD160 (libcxx-3.7.0.src.tar.xz) = d78a0948483ff593ab2c39dc5ca745b4d08e8620
+Size (libcxx-3.7.0.src.tar.xz) = 994580 bytes
+SHA1 (llvm-3.7.0.src.tar.xz) = 0355c2fe01a8d17c3315069e6f2ef80c281e7dad
+RMD160 (llvm-3.7.0.src.tar.xz) = 1e47ce5e07df267a921c60e526673b2908ffb99b
+Size (llvm-3.7.0.src.tar.xz) = 14636252 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
 SHA1 (patch-ac) = 0f0cc98d443ec957fc5374fb491809d27e4f9d4e
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
+SHA1 (patch-configure) = 315347fed9d424c2f80a73275a781162c1ed069f
 SHA1 (patch-include_llvm_Support_Host.h) = 545f9542cd2aaa6cea58d3653902b4e1a9e7189a
 SHA1 (patch-tools_clang_tools_scan-build_scan-build) = a671f1e513fb43ddc0e73751a78235ab39aeaf9d
 SHA1 (patch-tools_llvm-shlib_Makefile) = 5cd529e824a935abfe91c4b820cfd9c318e03102

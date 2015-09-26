@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.8 2015/09/25 15:59:19 tnn Exp $
+# $NetBSD: Makefile.common,v 1.9 2015/09/26 08:42:19 tnn Exp $
 #
 # used by lang/clang/Makefile
 # used by lang/libLLVM/Makefile
 # Keep in mind that the MesaLib package is also heavily reliant on libLLVM.
-# The mesa project tends to release new stables whenever clang is updated,
-# so it is a good idea to update that package simultaneously.
+# The mesa project tends to release new stable releases whenever clang is
+# updated, so it is a good idea to update that package simultaneously.
 
-DISTNAME=	clang-3.6.2
+DISTNAME=	clang-3.7.0
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.xz \
@@ -29,6 +29,11 @@ CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
 CONFIGURE_ARGS+=	--disable-timestamps
 CONFIGURE_ARGS+=	--enable-optimized
+
+# In-tree builds are not allowed
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	../llvm-${PKGVERSION_NOREV}.src/configure
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
@@ -103,6 +108,7 @@ post-extract:
 .if ${OPSYS} == "SunOS"
 	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
 .endif
+	mkdir ${WRKSRC}/${OBJDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
