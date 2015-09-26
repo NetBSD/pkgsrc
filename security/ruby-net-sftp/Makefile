@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/06/16 17:17:04 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/26 23:37:45 taca Exp $
 
 DISTNAME=	net-sftp-2.1.2
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/net-ssh
+HOMEPAGE=	https://github.com/net-ssh/net-sftp
 COMMENT=	Secure FTP for Ruby
 LICENSE=	mit
 
