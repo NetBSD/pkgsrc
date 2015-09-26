@@ -1,79 +1,17 @@
-$NetBSD: patch-ab,v 1.6 2014/08/30 20:26:45 bouyer Exp $
+$NetBSD: patch-ab,v 1.7 2015/09/26 14:56:10 bouyer Exp $
 
---- src/sympa_wizard.pl.in.orig	2014-06-06 17:44:05.000000000 +0200
-+++ src/sympa_wizard.pl.in	2014-08-30 20:08:37.000000000 +0200
-@@ -655,73 +655,6 @@
- # Install a CPAN module
- ##----------------------
- sub install_module {
--    return unless $with_CPAN;
--
--    my ($module, $options, $cpan_modules) = @_;
--
--    my $default = $options->{'default'};
--
--    unless ($ENV{'FTP_PASSIVE'} eq 1) {
--        $ENV{'FTP_PASSIVE'} = 1;
--        print "Setting FTP Passive mode\n";
--    }
--
--    ## This is required on RedHat 9 for DBD::mysql installation
--    my $lang = $ENV{'LANG'};
--    $ENV{'LANG'} = 'C' if ($ENV{'LANG'} =~ /UTF\-8/);
--
--    unless ($EUID == 0) {
--        print "\#\# You need root privileges to install $module module. \#\#\n";
--        print "\#\# Press the Enter key to continue checking modules. \#\#\n";
--        my $t = <STDIN>;
--        return undef;
--    }
--
--    unless ($options->{'force'}) {
--        printf "-> Usage of this module: %s\n", $cpan_modules->{$module}{usage} if ($cpan_modules->{$module}{usage});
--        printf "-> Prerequisites: %s\n", $cpan_modules->{$module}{prerequisites} if ($cpan_modules->{$module}{prerequisites});
--	printf "-> Install module $module ? [$default]";
--        my $answer = <STDIN>; chomp $answer;
--        $answer ||= $default;
--        return unless ($answer =~ /^y$/i);
--    }
--
--  $CPAN::Config->{'inactivity_timeout'} = 0; ## disable timeout to prevent timeout during modules installation 
--  $CPAN::Config->{'colorize_output'} = 1; 
--  $CPAN::Config->{'build_requires_install_policy'} = 'yes';  ## automatically installed prerequisites without asking
--  $CPAN::Config->{'prerequisites_policy'} = 'follow'; ## build prerequisites automatically
--  $CPAN::Config->{'load_module_verbosity'} = 'none';  ## minimum verbosity during module loading
--  $CPAN::Config->{'tar_verbosity'} = 'none';  ## minimum verbosity with tar command
--
--    #CPAN::Shell->clean($module) if ($options->{'force'});
--
--    CPAN::Shell->make($module);
--
--    if ($options->{'force'}) {
--        CPAN::Shell->force('test', $module);
--    }else {
--        CPAN::Shell->test($module);
--    }
--
--    CPAN::Shell->install($module); ## Could use CPAN::Shell->force('install') if make test failed
--
--    ## Check if module has been successfuly installed
--    unless (eval "require $module") {
--
--        ## Prevent recusive calls if already in force mode
--        if ($options->{'force'}) {
--            print  "Installation of $module still FAILED. You should download the tar.gz from http://search.cpan.org and install it manually.";
--            my $answer = <STDIN>;
--        }else {
--            print  "Installation of $module FAILED. Do you want to force the installation of this module? (y/N) ";
--            my $answer = <STDIN>; chomp $answer;
--            if ($answer =~ /^y/i) {
--                install_module($module, {'force' => 1}, $cpan_modules);
--            }
--        }
--    }
--
--    ## Restore lang
--    $ENV{'LANG'} = $lang if (defined $lang);
-+    1;
+--- src/sbin/sympa_wizard.pl.in.orig	2015-09-25 15:37:58.000000000 +0200
++++ src/sbin/sympa_wizard.pl.in	2015-09-25 15:39:07.000000000 +0200
+@@ -35,11 +35,10 @@
+ use Sympa::Constants;
+ use Sympa::ModDef;
  
- }
+-my $with_CPAN;    # check if module "CPAN" installed.
++my $with_CPAN = 0;# check if module "CPAN" installed.
+ my $modfail;      # any of required modules are not installed.
+ 
+ BEGIN {
+-    $with_CPAN = eval { require CPAN; };
+     $modfail = !eval {
+         require Conf;
+         require Sympa::Language;

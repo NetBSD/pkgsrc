@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sympa.sh,v 1.1 2007/03/28 20:51:10 bouyer Exp $
+# $NetBSD: sympa.sh,v 1.2 2015/09/26 14:56:10 bouyer Exp $
 #
 # PROVIDE: sympa
 # REQUIRE: mail
@@ -13,8 +13,8 @@ fi
 
 name="sympa"
 rcvar=$name
-command="@PREFIX@/sympa/bin/sympa.pl"
-pidfile="/var/sympa/run/sympa.pid"
+command="@PREFIX@/sympa/bin/sympa_msg.pl"
+pidfile="/var/sympa/run/sympa_msg.pid"
 command_interpreter="@PREFIX@/bin/perl"
 sympa_user="sympa"
 
