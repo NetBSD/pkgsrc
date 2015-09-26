@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2015/02/05 15:46:57 taca Exp $
+# $NetBSD: Makefile,v 1.19 2015/09/26 23:44:03 taca Exp $
 
 DISTNAME=		fcgi-0.9.2.1
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel www
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fcgi.rubyforge.org/wiki/wiki.pl
+HOMEPAGE=		https://github.com/alphallc/ruby-fcgi-ng
 COMMENT=		FastCGI interface for Ruby
 LICENSE=		gnu-gpl-v2 OR ruby-license
 
