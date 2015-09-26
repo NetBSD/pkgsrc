@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.99 2015/09/11 16:27:30 tnn Exp $
+$NetBSD: distinfo,v 1.100 2015/09/26 08:45:02 tnn Exp $
 
-SHA1 (mesa-10.6.7.tar.xz) = c63008bf8f2b1022a60a82fa4f2200db6fbd956c
-RMD160 (mesa-10.6.7.tar.xz) = cdf2062b98094afdb281da6b040484f66383a17a
-Size (mesa-10.6.7.tar.xz) = 7041708 bytes
+SHA1 (mesa-11.0.0.tar.xz) = e4b1e7b6ec1326ddcc6a33c15d745e782411e781
+RMD160 (mesa-11.0.0.tar.xz) = 86707ecbbd1bf8972191198ad8c7bf89e1f2c68d
+Size (mesa-11.0.0.tar.xz) = 7257112 bytes
 SHA1 (patch-configure) = 24d1ee6bf62cdea9c9356132f727b490679f0330
-SHA1 (patch-include_EGL_eglplatform.h) = a20ee1690b2977d53a60c738e292b07c6f999e8d
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_gallium_auxiliary_util_u__cpu__detect.c) = 5f4c3db54620739da0fe7dfb57c58728ecbbb6e0
 SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43440ab131b8807f6840975
-SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = 8dd195b29f6ba598260348194aca149f1ca057f9
+SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = 812e4a5291aea47e06505f09891e0434c4d9c34d
 SHA1 (patch-src_gallium_auxiliary_util_u__network.c) = 283f505af780071dc9fd7914f8065e3fb7d8a4fd
 SHA1 (patch-src_gallium_auxiliary_util_u__network.h) = c6106d67b4fa9db0d790474182d6e0ce0c5da677
 SHA1 (patch-src_gallium_drivers_nouveau_codegen_nv50__ir__peephole.cpp) = 5fc2ef7eafac3006896af96bac8176c79b17cfdc
@@ -21,11 +20,11 @@ SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = e4b891e8b4ebe5b8
 SHA1 (patch-src_gbm_main_gbm.c) = 70225ab7352f123c9efc68b6d4ff0d9675b6f9dc
 SHA1 (patch-src_glsl_ralloc.c) = 7443d00ff05ee1e1dcfa2b76972b55abadebcad8
 SHA1 (patch-src_glx_glxclient.h) = e15256851559dafb7a86e1eb7e9d6afc86de581b
-SHA1 (patch-src_glx_glxcurrent.c) = cad9128925aa68e169c241e3d747ec6e6a9d884e
-SHA1 (patch-src_loader_Makefile.in) = b0475273e2fdd3379528a0d8d393236df131bb30
-SHA1 (patch-src_loader_loader.c) = 4086fcee5030b6d6624c08894ace67c8889887ce
-SHA1 (patch-src_mapi_entry__x86-64__tls.h) = c722ce4a22911d9a3d04e1a4fd6ab1a5ddd81cf0
-SHA1 (patch-src_mapi_entry__x86__tls.h) = 51d6ef1aa3db69b23eea6fe145a54c0e7e265190
+SHA1 (patch-src_glx_glxcurrent.c) = 713f75bcafb186c7123d19a6aae3deaed9d5fa69
+SHA1 (patch-src_loader_Makefile.in) = 25cf645bc43a8157961e9ddd249936ca2053c49c
+SHA1 (patch-src_loader_loader.c) = f99b13451f4f932031e876cd611ab746ec5caf1b
+SHA1 (patch-src_mapi_entry__x86-64__tls.h) = e1cc896dd9cf7d77b837104557c0e0bf9d41ff55
+SHA1 (patch-src_mapi_entry__x86__tls.h) = 3d6c11281b57c9c713899022bfc8fcea54d07d56
 SHA1 (patch-src_mapi_entry__x86__tsd.h) = 62501b6e609fa81e33fd826a694e9d9752a7ba21
 SHA1 (patch-src_mapi_glapi_gen_gl__gentable.py) = 53026e520a510e54494760a3fa05af6f15dfb9d8
 SHA1 (patch-src_mapi_u__current.c) = 1731375d82119be326b35d141d7879e083d6d620
@@ -37,7 +36,7 @@ SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = fd8436e4e3a69250256c2cd
 SHA1 (patch-src_mesa_drivers_dri_i965_brw__context.h) = e0db31a3ea077531d922923c300d06d9e265283b
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 7c1a1e5c549f64d4c390e0c87984c44a88d4abfe
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = b8a6cca517e1cccbdb2c59cf67a6d2481cdfebd4
-SHA1 (patch-src_mesa_main_context.c) = 30c3796865372aa16297c2aaa647ddb49958fa64
+SHA1 (patch-src_mesa_main_context.c) = 695b0e04cbd08dfed46b4dae5f9602b35e21f5b3
 SHA1 (patch-src_mesa_main_shader__query.cpp) = 6273c74161f045363c58f38adeb672287f6a0898
 SHA1 (patch-src_mesa_tnl_t__pipeline.c) = afc7d5f27aeadacc7c6a762e5aa892e01a0c1317
 SHA1 (patch-src_mesa_x86_common__x86.c) = bdac91384d67ad0238ecd4cdcf5cfc787952a3d9
