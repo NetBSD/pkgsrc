@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.16 2015/01/22 12:04:36 bouyer Exp $
+$NetBSD: distinfo,v 1.17 2015/09/26 14:56:10 bouyer Exp $
 
-SHA1 (sympa-6.1.24.tar.gz) = 852327e0d7374e387f087afd336b2751b1dc3d43
-RMD160 (sympa-6.1.24.tar.gz) = 6adc850b2c1ac07c80cb0e3beca94878a74e7a4e
-Size (sympa-6.1.24.tar.gz) = 8135217 bytes
-SHA1 (patch-aa) = 7f9da8ae9a11c447cb4dea51e2d80a9eba22f3c7
-SHA1 (patch-ab) = e2e0721dd5cf6c88d84d740df2fa202eaa2daadc
-SHA1 (patch-ac) = 87527936892090b310919ca55576aaeba795cb3b
-SHA1 (patch-af) = 901f6ddf04dffccc3b148c2465a23de6cd57f832
-SHA1 (patch-doc_man8_alias__manager.pod.in) = 8a712452a53a5d56688a7bd1fd2761bbf355aebf
-SHA1 (patch-doc_man8_archived.pod.in) = 606b0e2be25ddbb07adf7116938f1624f10d65d5
-SHA1 (patch-doc_man8_bounced.pod.in) = 15fc87a7bf8195ba050a36d9f7ec11236d632ec7
-SHA1 (patch-doc_man8_sympa.pod) = 8f86807e32d5896f7b847a95dcdd23a884f32fc2
+SHA1 (sympa-6.2.7.tar.gz) = f6a89eba884bf190e87376ae787b276550edb739
+RMD160 (sympa-6.2.7.tar.gz) = f86474086695164186a5481cf8133a33559547b4
+Size (sympa-6.2.7.tar.gz) = 11650142 bytes
+SHA1 (patch-aa) = e1626448cf85c1105cde682494ed5c92b67290bb
+SHA1 (patch-ab) = c13b55e6df818a10ed8b05d10cab464b9ace85e5
+SHA1 (patch-ac) = 0f4919b0583e52cda542cfa7351d160ffce372da
+SHA1 (patch-src_lib_Sympa_Session.pm) = 2a87a377881a32d6947b71af06507aa02079eecd
