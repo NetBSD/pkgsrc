@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2015/09/26 08:45:02 tnn Exp $
+# $NetBSD: options.mk,v 1.43 2015/09/26 10:45:56 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -41,6 +41,7 @@ PLIST_VARS+=		xatracker
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-dri2
 CONFIGURE_ARGS+=	--enable-dri3
+CFLAGS+=		-DHAVE_DRI3
 CONFIGURE_ARGS+=	--enable-egl
 CONFIGURE_ARGS+=	--enable-gbm
 CONFIGURE_ARGS+=	--enable-gles1
