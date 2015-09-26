@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.41 2015/09/18 16:18:47 tnn Exp $
+# $NetBSD: options.mk,v 1.42 2015/09/26 08:45:02 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -33,14 +33,23 @@ PKG_SUGGESTED_OPTIONS+=		dri
 PLIST_VARS+=		swrast svga ilo i915 i965 nouveau r300 r600 radeonsi
 # classic DRI
 PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
+# other features
+PLIST_VARS+=		xatracker
 
 .if !empty(PKG_OPTIONS:Mdri)
 
 CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-dri2
+CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-egl
+CONFIGURE_ARGS+=	--enable-gbm
+CONFIGURE_ARGS+=	--enable-gles1
+CONFIGURE_ARGS+=	--enable-gles2
 
 # Use Thread Local Storage in GLX where it is supported by Mesa and works.
 .if \
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
 	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
 	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
 	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
@@ -50,20 +59,16 @@ CONFIGURE_ARGS+=	--enable-glx-tls
 CONFIGURE_ARGS+=	--disable-glx-tls
 .endif
 
+# DRI on Linux needs either sysfs or udev
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--enable-sysfs
+.endif
+
 PLIST.dri=	yes
 
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../graphics/MesaLib/dri.mk"
-
-# Linux supports dri3
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-dri3
-# DRI on Linux needs either sysfs or udev
-CONFIGURE_ARGS+=	--enable-sysfs
-.else
-CONFIGURE_ARGS+=	--disable-dri3
-.endif
 
 DRI_DRIVERS=		#
 PLIST.swrast_dri=	yes
@@ -128,6 +133,9 @@ CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
 CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
 
 .if !empty(PKG_OPTIONS:Mllvm)
+# XA is useful for accelerating xf86-video-vmware
+CONFIGURE_ARGS+=	--enable-xa
+PLIST.xatracker=	yes
 # AMD Radeon r300
 PLIST.r300=		yes
 GALLIUM_DRIVERS+=	r300
@@ -141,6 +149,7 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
 .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else # !llvm
+CONFIGURE_ARGS+=	--disable-xa
 CONFIGURE_ARGS+=	--disable-gallium-llvm
 CONFIGURE_ARGS+=	--disable-r600-llvm-compiler
 .endif # llvm
@@ -150,6 +159,9 @@ CONFIGURE_ARGS+=	--with-dri-drivers=
 CONFIGURE_ARGS+=	--disable-dri
 CONFIGURE_ARGS+=	--disable-dri3
 CONFIGURE_ARGS+=	--disable-egl
+CONFIGURE_ARGS+=	--disable-gbm
+CONFIGURE_ARGS+=	--disable-gles1
+CONFIGURE_ARGS+=	--disable-gles2
 CONFIGURE_ARGS+=	--enable-xlib-glx
 .if !empty(PKG_OPTIONS:Mllvm)
 PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
