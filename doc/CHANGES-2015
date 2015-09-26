@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4039 2015/09/26 14:28:51 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4040 2015/09/26 14:57:41 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7054,3 +7054,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-ati to 7.5.0nb5 [tnn 2015-09-26]
 	Updated www/webkit-gtk to 2.10.0 [leot 2015-09-26]
 	Updated devel/R-Rcpp to 0.12.1 [wen 2015-09-26]
+	Updated mail/p5-MIME-EncWords to 1.014.3 [bouyer 2015-09-26]
+	Updated mail/sympa to 6.2.7 [bouyer 2015-09-26]
