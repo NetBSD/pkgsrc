@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2015/09/15 00:24:26 tnn Exp $
+# $NetBSD: Makefile,v 1.110 2015/09/26 08:45:02 tnn Exp $
 
-DISTNAME=	mesa-10.6.7
-PKGREVISION=	2
+DISTNAME=	mesa-11.0.0
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
@@ -31,6 +30,8 @@ PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
 
+CONFIGURE_ARGS+=		--enable-shared-glapi
+
 # Work around a buildlink and/or libtool bug:
 # In the libtool install/relink stage, if we want to link with two static
 # archives named libglapi.la but in different directories, bad things happen.
@@ -41,9 +42,9 @@ SUBST_FILES.wrapper-bug=	src/gbm/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/glx/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.in
-SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_shared.la,g'
-SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_static.la,g'
-SUBST_SED.wrapper-bug+=		-e 's,libglapi_shared.la,libglapi.la,g'
+SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_tmp_rename.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_impl.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename.la,libglapi.la,g'
 
 # Replace /etc/drirc with ${PREFIX}/etc/drirc
 SUBST_CLASSES+=			drirc

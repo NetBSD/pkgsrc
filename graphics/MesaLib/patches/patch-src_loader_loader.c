@@ -1,10 +1,10 @@
-$NetBSD: patch-src_loader_loader.c,v 1.1 2015/09/11 00:03:36 tnn Exp $
+$NetBSD: patch-src_loader_loader.c,v 1.2 2015/09/26 08:45:02 tnn Exp $
 
 FreeBSD & DragonFly support for libdevq. From FreeBSD ports(?)
 
---- src/loader/loader.c.orig	2015-07-26 13:32:59.000000000 +0000
+--- src/loader/loader.c.orig	2015-09-10 18:07:21.000000000 +0000
 +++ src/loader/loader.c
-@@ -68,7 +68,7 @@
+@@ -70,7 +70,7 @@
  #include <stdarg.h>
  #include <stdio.h>
  #include <string.h>
@@ -12,8 +12,8 @@ FreeBSD & DragonFly support for libdevq. From FreeBSD ports(?)
 +#if defined(HAVE_LIBUDEV) || defined(HAVE_LIBDEVQ)
  #include <assert.h>
  #include <dlfcn.h>
- #include <fcntl.h>
-@@ -501,6 +501,53 @@ sysfs_get_pci_id_for_fd(int fd, int *ven
+ #include <unistd.h>
+@@ -505,6 +505,53 @@ sysfs_get_pci_id_for_fd(int fd, int *ven
  }
  #endif
  
@@ -64,10 +64,10 @@ FreeBSD & DragonFly support for libdevq. From FreeBSD ports(?)
 +
 +#endif
 +
- #if !defined(__NOT_HAVE_DRM_H)
+ #if defined(HAVE_LIBDRM)
  /* for i915 */
  #include <i915_drm.h>
-@@ -584,6 +631,12 @@ loader_get_pci_id_for_fd(int fd, int *ve
+@@ -588,6 +635,12 @@ loader_get_pci_id_for_fd(int fd, int *ve
     if (sysfs_get_pci_id_for_fd(fd, vendor_id, chip_id))
        return 1;
  #endif
@@ -77,6 +77,6 @@ FreeBSD & DragonFly support for libdevq. From FreeBSD ports(?)
 +      return 1;
 +#endif
 +
- #if !defined(__NOT_HAVE_DRM_H)
+ #if HAVE_LIBDRM
     if (drm_get_pci_id_for_fd(fd, vendor_id, chip_id))
        return 1;
