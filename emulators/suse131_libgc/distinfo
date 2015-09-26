@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/09/26 00:18:53 kamil Exp $
+
+SHA1 (suse131/libgc1-7.2d-2.1.2.i586.rpm) = 6f7e036884f6ae90c5a6b6f66f31a056b56b7e40
+RMD160 (suse131/libgc1-7.2d-2.1.2.i586.rpm) = 9cbc4ee92e2f9e6b74191b7b8a5491df28e3ef0f
+Size (suse131/libgc1-7.2d-2.1.2.i586.rpm) = 164357 bytes
+SHA1 (suse131/libgc1-7.2d-2.1.2.x86_64.rpm) = de5058afc79ef8114bfe973f8d8f8fa6849f1223
+RMD160 (suse131/libgc1-7.2d-2.1.2.x86_64.rpm) = 7cec4daa8c71dbadf7d325de8d4e00509fc1e825
+Size (suse131/libgc1-7.2d-2.1.2.x86_64.rpm) = 168200 bytes
