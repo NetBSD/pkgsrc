@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4056 2015/09/27 20:01:04 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4057 2015/09/27 21:05:05 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7078,3 +7078,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/mpv to 0.11.0 [leot 2015-09-27]
 	Added x11/arandr version 0.1.8 [kamil 2015-09-27]
 	Updated chat/bitchx to 1.2.1 [kamil 2015-09-27]
+	Updated misc/ansiweather to 1.05 [kamil 2015-09-27]
