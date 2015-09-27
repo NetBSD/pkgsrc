@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/07/08 11:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/09/27 19:03:58 wiz Exp $
 
 DISTNAME=	exempi-2.2.2
 CATEGORIES=	devel graphics
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libopenraw.freedesktop.org/wiki/Exempi
-COMMENT=	XMP library
+COMMENT=	XMP (Extensible Metadata Platform) library
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
