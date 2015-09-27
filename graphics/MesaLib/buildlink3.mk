@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2015/09/16 12:28:53 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2015/09/27 21:58:03 tnn Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -20,7 +20,7 @@ GCC_REQD+=	4.2
 .endif
 
 # See <http://developer.apple.com/qa/qa2007/qa1567.html>.
-.if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
+.if ${X11_TYPE} == "native" && !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
 BUILDLINK_LDFLAGS.MesaLib+=	-Wl,-dylib_file,/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
 .endif
 

@@ -1,0 +1,111 @@
+$NetBSD: patch-manual_fdo90311,v 1.1 2015/09/27 21:58:03 tnn Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=90311
+
+Regenerated with autoconf to link with C++ linker using this addition:
+
+libglx_la_LIBADD += $(builddir)/apple/libappleglx.la + $(top_builddir)/src/mesa/libmesa.la
+nodist_EXTRA_lib@GL_LIB@_la_SOURCES = dummy.cpp
+
+and then dummy.cpp manuallly edited out.
+
+--- src/glx/Makefile.in.orig	2015-09-27 13:36:10.000000000 +0000
++++ src/glx/Makefile.in
+@@ -142,7 +142,7 @@ target_triplet = @target@
+ @HAVE_APPLEDRI_TRUE@	applegl_glx.c
+ 
+ @HAVE_APPLEDRI_TRUE@am__append_6 = apple
+-@HAVE_APPLEDRI_TRUE@am__append_7 = $(builddir)/apple/libappleglx.la
++@HAVE_APPLEDRI_TRUE@am__append_7 = $(builddir)/apple/libappleglx.la $(top_builddir)/src/mesa/libmesa.la
+ subdir = src/glx
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_gnu_make.m4 \
+@@ -201,10 +201,10 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-lib@GL_LIB@_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+-	$(AM_CFLAGS) $(CFLAGS) $(lib@GL_LIB@_la_LDFLAGS) $(LDFLAGS) -o \
+-	$@
++lib@GL_LIB@_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
++	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
++	$(AM_CXXFLAGS) $(CXXFLAGS) $(lib@GL_LIB@_la_LDFLAGS) \
++	$(LDFLAGS) -o $@
+ libglx_la_DEPENDENCIES = $(top_builddir)/src/loader/libloader.la \
+ 	$(am__append_7)
+ am__libglx_la_SOURCES_DIST = clientattrib.c clientinfo.c compsize.c \
+@@ -275,6 +275,24 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
+ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
+ am__v_CCLD_1 = 
++CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
++	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
++LTCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
++	$(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) \
++	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
++	$(AM_CXXFLAGS) $(CXXFLAGS)
++AM_V_CXX = $(am__v_CXX_@AM_V@)
++am__v_CXX_ = $(am__v_CXX_@AM_DEFAULT_V@)
++am__v_CXX_0 = @echo "  CXX     " $@;
++am__v_CXX_1 = 
++CXXLD = $(CXX)
++CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
++	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
++	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
++am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
++am__v_CXXLD_0 = @echo "  CXXLD   " $@;
++am__v_CXXLD_1 = 
+ SOURCES = $(lib@GL_LIB@_la_SOURCES) $(libglx_la_SOURCES)
+ DIST_SOURCES = $(lib@GL_LIB@_la_SOURCES) $(am__libglx_la_SOURCES_DIST)
+ RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
+@@ -683,7 +701,7 @@ lib@GL_LIB@_la_LDFLAGS = $(GL_LDFLAGS)
+ all: all-recursive
+ 
+ .SUFFIXES:
+-.SUFFIXES: .c .lo .o .obj
++.SUFFIXES: .c .cpp .lo .o .obj
+ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/install-lib-links.mk $(am__configure_deps)
+ 	@for dep in $?; do \
+ 	  case '$(am__configure_deps)' in \
+@@ -762,7 +780,7 @@ clean-noinstLTLIBRARIES:
+ 	}
+ 
+ lib@GL_LIB@.la: $(lib@GL_LIB@_la_OBJECTS) $(lib@GL_LIB@_la_DEPENDENCIES) $(EXTRA_lib@GL_LIB@_la_DEPENDENCIES) 
+-	$(AM_V_CCLD)$(lib@GL_LIB@_la_LINK) -rpath $(libdir) $(lib@GL_LIB@_la_OBJECTS) $(lib@GL_LIB@_la_LIBADD) $(LIBS)
++	$(AM_V_CXXLD)$(lib@GL_LIB@_la_LINK) -rpath $(libdir) $(lib@GL_LIB@_la_OBJECTS) $(lib@GL_LIB@_la_LIBADD) $(LIBS)
+ 
+ libglx.la: $(libglx_la_OBJECTS) $(libglx_la_DEPENDENCIES) $(EXTRA_libglx_la_DEPENDENCIES) 
+ 	$(AM_V_CCLD)$(LINK)  $(libglx_la_OBJECTS) $(libglx_la_LIBADD) $(LIBS)
+@@ -839,6 +857,30 @@ distclean-compile:
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
+ 
++.cpp.o:
++@am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
++@am__fastdepCXX_TRUE@	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
++@am__fastdepCXX_TRUE@	$(am__mv) $$depbase.Tpo $$depbase.Po
++@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXXCOMPILE) -c -o $@ $<
++
++.cpp.obj:
++@am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
++@am__fastdepCXX_TRUE@	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
++@am__fastdepCXX_TRUE@	$(am__mv) $$depbase.Tpo $$depbase.Po
++@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
++
++.cpp.lo:
++@am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
++@am__fastdepCXX_TRUE@	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
++@am__fastdepCXX_TRUE@	$(am__mv) $$depbase.Tpo $$depbase.Plo
++@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LTCXXCOMPILE) -c -o $@ $<
++
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
