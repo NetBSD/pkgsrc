@@ -1,0 +1,36 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2015/09/27 10:07:53 tnn Exp $
+
+DESTDIR support.
+
+--- Makefile.am.orig	2011-09-13 23:33:32.000000000 +0000
++++ Makefile.am
+@@ -27,17 +27,18 @@ dist-hook:
+ 	cp -p $(srcdir)/foobillardplus.xbm $(distdir)
+ 
+ install-data-hook:
+-	mkdir -p $(datadir)
+-	cp -p $(srcdir)/data/* $(datadir) -R
+-	cp -p $(srcdir)/AUTHORS $(prefix)
+-	cp -p $(srcdir)/COPYING $(prefix)
+-	cp -p $(srcdir)/INSTALL $(prefix)
+-	cp -p $(srcdir)/README $(prefix)
+-	cp -p $(srcdir)/ChangeLog $(prefix)
+-	cp -p $(srcdir)/TODO $(prefix)
+-	cp -p $(srcdir)/foobillardplus.desktop $(prefix)
+-	cp -p $(srcdir)/foobillardplus.png $(prefix)
+-	cp -p $(srcdir)/foobillardplus.xbm $(prefix)
++	mkdir -p $(DESTDIR)$(datadir)
++	cp -pR $(srcdir)/data/* $(DESTDIR)$(datadir)
++	cp -p $(srcdir)/AUTHORS $(DESTDIR)$(prefix)/share/foobillardplus
++	cp -p $(srcdir)/COPYING $(DESTDIR)$(prefix)/share/foobillardplus
++	cp -p $(srcdir)/INSTALL $(DESTDIR)$(prefix)/share/foobillardplus
++	cp -p $(srcdir)/README $(DESTDIR)$(prefix)/share/foobillardplus
++	cp -p $(srcdir)/ChangeLog $(DESTDIR)$(prefix)/share/foobillardplus
++	cp -p $(srcdir)/TODO $(DESTDIR)$(prefix)/share/foobillardplus
++	mkdir -p $(DESTDIR)$(prefix)/share/applications
++	cp -p $(srcdir)/foobillardplus.desktop $(DESTDIR)$(prefix)/share/applications
++	cp -p $(srcdir)/foobillardplus.png $(DESTDIR)$(prefix)/share/applications
++	cp -p $(srcdir)/foobillardplus.xbm $(DESTDIR)$(prefix)/share/applications
+ 
+ uninstall-hook:
+ 	rm $(prefix) -R

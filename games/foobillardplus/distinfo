@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2015/09/27 10:07:53 tnn Exp $
+
+SHA1 (foobillardplus-3.42beta.tar.gz) = 51507efab0f595cfff26149003faf669c0a42f32
+RMD160 (foobillardplus-3.42beta.tar.gz) = 321af661c2f82c6849baf072d25d8bd06a556b86
+Size (foobillardplus-3.42beta.tar.gz) = 37149700 bytes
+SHA1 (patch-src_Makefile.am) = ad4f63946e95759241b46285791e1ca6165e03d6
+SHA1 (patch-src_billard3d.c) = be4d9b415f36e536bdbcc8132ea16ba65c30b5fa
+SHA1 (patch-src_configure.in) = e3489d06d1dea528bbd28012367d4007594c60e5
+SHA1 (patch-src_sound__stuff.c) = e6b95b72dbf290b54db80c128521d4c7abc8ebea
+SHA1 (patch-src_sys__stuff.c) = bddd3f8e76c2b91eb1834768d9c9f63584ac8f0e
