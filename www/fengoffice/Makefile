@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2015/03/19 15:38:24 taca Exp $
+# $NetBSD: Makefile,v 1.34 2015/09/27 07:21:39 taca Exp $
 #
 
-DISTNAME=	fengoffice-3.1.2.2
+DISTNAME=	fengoffice_3.2.2.1
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
@@ -21,7 +21,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.1.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.1.0:../../mail/php-imap
 
-EXTRACT_DIR=	${WRKSRC}
 WRKSRC=		${WRKDIR}/fengoffice
 USE_TOOLS=	pax
 NO_BUILD=	yes
