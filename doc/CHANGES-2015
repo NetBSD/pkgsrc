@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4051 2015/09/27 09:15:44 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.4052 2015/09/27 10:07:52 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7071,4 +7071,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/isc-dhcrelay4 to 4.3.3 [taca 2015-09-27]
 	Updated www/fengoffice to 3.2.2.1 [taca 2015-09-27]
 	Updated www/geeklog to 2.1.0nb2 [taca 2015-09-27]
-	Removed devel/librsync [joerg 2015-09-27]
+	Removed devel/librsync successor net/librsync [joerg 2015-09-27]
+	Removed games/foobillard successor games/foobillardplus [tnn 2015-09-27]
+	Added games/foobillardplus version 3.42b [tnn 2015-09-27]

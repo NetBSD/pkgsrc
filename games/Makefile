@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.383 2015/09/12 18:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.384 2015/09/27 10:07:53 tnn Exp $
 #
 
 COMMENT=	Games
@@ -94,7 +94,7 @@ SUBDIR+=	flare-game
 SUBDIR+=	flightgear
 SUBDIR+=	flightgear-data
 SUBDIR+=	fltk-sudoku
-SUBDIR+=	foobillard
+SUBDIR+=	foobillardplus
 SUBDIR+=	fortune-strfile
 SUBDIR+=	fortunes-calvin
 SUBDIR+=	fortunes-de
