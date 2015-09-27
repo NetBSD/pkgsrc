@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.147 2015/08/20 15:30:47 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.148 2015/09/27 06:48:04 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 193 200 21
+#		Possible values: 18 193 200 21 22
 #		Default: 200
 #
 # RUBY_BUILD_RDOC
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 18 193 200 21
+#		Possible values: 18 193 200 21 22
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -78,9 +78,9 @@
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
 #	The value of RUBY_PKGPREFIX is "ruby-" and concatination of Ruby's
-#	major, minor and teeny version unless RUBY_VER is "18".
+#	major and minor version unless RUBY_VER is "193" or "200".
 #
-#		Example values: ruby18 ruby193 ruby200 ruby212
+#		Example values: ruby18 ruby193 ruby200 ruby21 ruby22
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -108,10 +108,10 @@
 #
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
-#	The value of RUBY_SUFFIX is concatination of Ruby's major, minor
-#	and teeny version unless RUBY_VER is "18".
+#	The value of RUBY_SUFFIX is concatination of Ruby's major and minor
+#	unless RUBY_VER is "193" or "200".
 #
-#		Possible values: 18 193 200 212
+#		Possible values: 18 193 200 21 22
 #
 # RUBY_VERSION
 #	Version of real Ruby's version excluding patchlevel.
