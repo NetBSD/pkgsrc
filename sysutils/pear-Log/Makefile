@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/07/19 02:38:03 wen Exp $
+# $NetBSD: Makefile,v 1.21 2015/09/27 07:13:04 taca Exp $
 
-DISTNAME=	Log-1.12.8
+DISTNAME=	Log-1.12.9
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
