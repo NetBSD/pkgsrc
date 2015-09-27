@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4048 2015/09/27 06:59:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4049 2015/09/27 07:16:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7069,3 +7069,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/isc-dhclient4 to 4.3.3 [taca 2015-09-27]
 	Updated net/isc-dhcpd4 to 4.3.3 [taca 2015-09-27]
 	Updated net/isc-dhcrelay4 to 4.3.3 [taca 2015-09-27]
+	Updated www/fengoffice to 3.2.2.1 [taca 2015-09-27]
