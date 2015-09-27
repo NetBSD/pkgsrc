@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.3 2015/03/26 19:46:19 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/09/27 06:41:06 taca Exp $
 
 SHA1 (wxruby-2.0.1.tar.gz) = ca53e97430330b34856d10dcde210e3772d61826
 RMD160 (wxruby-2.0.1.tar.gz) = 053a0adc5c08b339ab48b1931723095ca218dd59
 Size (wxruby-2.0.1.tar.gz) = 1878831 bytes
+SHA1 (patch-rake_rakeconfigure.rb) = f1591dc6c0596894bff947a5d07363da5df3c34a
 SHA1 (patch-rake_rakedocs.rb) = f8abbc78dd44127ccc8b97ef20c17278f6c5b022
+SHA1 (patch-rake_rakemingw.rb) = 27f4ecec928b8e490e538ff145931321f6ac19d0
+SHA1 (patch-rake_rakemswin.rb) = 764408da0097cdd7a46651838a96176ff3e6feb0
 SHA1 (patch-rake_rakenetbsd.rb) = 759c637e1280d6c5bfd3108168841b048f52e691
-SHA1 (patch-rake_rakewx.rb) = eb2bd65e914030a870026e109c6e2e751dcae1af
+SHA1 (patch-rake_rakewx.rb) = 3e37bc1d54c1e584d9646af5d5470128486c5aec
+SHA1 (patch-rakefile) = 0ba5099ef4c4e716c89a7f2c3ec2e95f3f496880
