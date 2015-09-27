@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/09/27 11:21:41 tnn Exp $
+
+Hook in tdestroy replacement.
+
+--- Makefile.in.orig	2012-06-11 12:57:07.000000000 +0000
++++ Makefile.in
+@@ -74,7 +74,7 @@ PROGRAMS = $(bin_PROGRAMS)
+ am_xtrace_OBJECTS = main.$(OBJEXT) x11common.$(OBJEXT) \
+ 	x11client.$(OBJEXT) x11server.$(OBJEXT) parse.$(OBJEXT) \
+ 	copyauth.$(OBJEXT) atoms.$(OBJEXT) translate.$(OBJEXT) \
+-	stringlist.$(OBJEXT)
++	stringlist.$(OBJEXT) tdestroy.$(OBJEXT)
+ xtrace_OBJECTS = $(am_xtrace_OBJECTS)
+ xtrace_LDADD = $(LDADD)
+ DEFAULT_INCLUDES = -I.@am__isrc@
+@@ -229,7 +229,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CPPFLAGS = -DPKGDATADIR='"$(pkgdatadir)"'
+-xtrace_SOURCES = main.c x11common.c x11client.c x11server.c parse.c copyauth.c atoms.c translate.c stringlist.c
++xtrace_SOURCES = main.c x11common.c x11client.c x11server.c parse.c copyauth.c atoms.c translate.c stringlist.c tdestroy.c
+ noinst_HEADERS = xtrace.h parse.h stringlist.h translate.h
+ dist_man_MANS = xtrace.1
+ MAINTAINERCLEANFILES = $(srcdir)/Makefile.in $(srcdir)/configure $(srcdir)/stamp-h.in $(srcdir)/aclocal.m4 $(srcdir)/config.h.in
