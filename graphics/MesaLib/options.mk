@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.43 2015/09/26 10:45:56 tnn Exp $
+# $NetBSD: options.mk,v 1.44 2015/09/27 21:58:03 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -21,9 +21,10 @@ PKG_SUGGESTED_OPTIONS+=		llvm
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
-.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
 	${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" ||	\
-	${OPSYS} == "SunOS") || ${OPSYS} == "NetBSD"
+	${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" ||		\
+	${OPSYS} == "Darwin"
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
@@ -34,7 +35,7 @@ PLIST_VARS+=		swrast svga ilo i915 i965 nouveau r300 r600 radeonsi
 # classic DRI
 PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 # other features
-PLIST_VARS+=		xatracker
+PLIST_VARS+=		gbm xatracker
 
 .if !empty(PKG_OPTIONS:Mdri)
 
@@ -43,7 +44,10 @@ CONFIGURE_ARGS+=	--enable-dri2
 CONFIGURE_ARGS+=	--enable-dri3
 CFLAGS+=		-DHAVE_DRI3
 CONFIGURE_ARGS+=	--enable-egl
+.if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--enable-gbm
+PLIST.gbm=		yes
+.endif
 CONFIGURE_ARGS+=	--enable-gles1
 CONFIGURE_ARGS+=	--enable-gles2
 
@@ -67,20 +71,25 @@ CONFIGURE_ARGS+=	--enable-sysfs
 
 PLIST.dri=	yes
 
+.if ${OPSYS} != "Darwin"
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
+.endif
 .include "../../graphics/MesaLib/dri.mk"
 
 DRI_DRIVERS=		#
-PLIST.swrast_dri=	yes
-DRI_DRIVERS+=		swrast
+GALLIUM_DRIVERS=	#
 
 # Software rasterizer
-GALLIUM_DRIVERS=	#
+PLIST.swrast_dri=	yes
+DRI_DRIVERS+=		swrast
+.if ${OPSYS} != "Darwin"
 PLIST.swrast=		yes
 GALLIUM_DRIVERS+=	swrast
+.endif
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+# x86 only drivers
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
 # svga / VMWare driver
 PLIST.svga=		yes
 GALLIUM_DRIVERS+=	svga
@@ -99,14 +108,17 @@ PLIST.i965_dri=		yes
 DRI_DRIVERS+=		i965
 .endif
 
+# ARM drivers
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 # Qualcomm SnapDragon, libdrm_freedreno.pc
 # GALLIUM_DRIVERS+=	freedreno
 
 # Broadcom VideoCore 4
 # GALLIUM_DRIVERS+=	vc4
+.endif
 
-.else
+# theoretically cross platform PCI drivers, but don't build on ARM
+.if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 
 # AMD Radeon r600
 PLIST.r600=		yes
@@ -129,7 +141,12 @@ PLIST.nouveau_dri=	yes
 DRI_DRIVERS+=		nouveau
 .endif
 
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-egl-platforms=x11
+.else
 CONFIGURE_ARGS+=	--with-egl-platforms=x11,drm
+.endif
+
 CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
 CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
 
