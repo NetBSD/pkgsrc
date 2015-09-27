@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.768 2015/09/26 07:21:46 tnn Exp $
+# $NetBSD: Makefile,v 1.769 2015/09/27 11:24:05 tnn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -731,6 +731,7 @@ SUBDIR+=	xteddy2
 SUBDIR+=	xterm
 SUBDIR+=	xtermset
 SUBDIR+=	xtoolwait
+SUBDIR+=	xtrace
 SUBDIR+=	xtrans
 SUBDIR+=	xtrap
 SUBDIR+=	xtruss
