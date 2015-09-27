@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2015/09/13 11:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/09/27 04:15:54 richard Exp $
 
 DISTNAME=	cups-filters-1.0.76
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -25,15 +26,19 @@ CONFLICTS+=	cups<1.6
 
 REPLACE_BASH+=	filter/textonly
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${INIT_SYSTEM} == "rc.d"
 CONFIGURE_ARGS+=	--with-rcdir=${PREFIX}/share/examples/rc.d
 CONFIGURE_ARGS+=	--with-rclevels=""
+.endif
 CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
 
-CONF_FILES=		${PREFIX}/share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf ${PKG_SYSCONFDIR}/fonts/conf.d/99pdftoopvp.conf
-CONF_FILES=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
+CONF_FILES=		${PREFIX}/share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf ${PKG_SYSCONFDIR}/fontconfig/conf.d/99pdftoopvp.conf
+CONF_FILES+=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/cups/cups-browsed.conf ${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
