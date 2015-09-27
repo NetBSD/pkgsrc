@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4047 2015/09/27 06:53:34 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4048 2015/09/27 06:59:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7065,3 +7065,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/php55-extensions to 5.5.29nb1 [taca 2015-09-27]
 	Updated meta-pkgs/php56-extensions to 5.6.13nb1 [taca 2015-09-27]
 	Updated net/mikutter to 3.2.9 [tsutsui 2015-09-27]
+	Updated net/isc-dhcp4 to 4.3.3 [taca 2015-09-27]
+	Updated net/isc-dhclient4 to 4.3.3 [taca 2015-09-27]
+	Updated net/isc-dhcpd4 to 4.3.3 [taca 2015-09-27]
+	Updated net/isc-dhcrelay4 to 4.3.3 [taca 2015-09-27]
