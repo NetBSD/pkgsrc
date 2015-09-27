@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.215 2015/09/23 06:44:41 ryoon Exp $
+$NetBSD: distinfo,v 1.216 2015/09/27 23:46:31 tnn Exp $
 
 SHA1 (firefox-41.0.source.tar.xz) = 0ce7a5ccdf671a6c98eaac07d06d49a895a99449
 RMD160 (firefox-41.0.source.tar.xz) = bb0297d545feaca8566a4b69fc14a2c142aa9bf6
@@ -25,8 +25,6 @@ SHA1 (patch-config_system-headers) = da0f1754eebac0d4a8234345b8d201e0e8fe774f
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-dom_base_moz.build) = 8b59c33958b7037c4c051742c64f1455096ced46
 SHA1 (patch-dom_media_AudioStream.h) = 96b5a1a2b1c930cfcfa77a125d47b6eb93fac1c6
-SHA1 (patch-dom_media_gmp_GMPChild.cpp) = 534a2c921a2d4d5b71d5ab75b8484ee792329460
-SHA1 (patch-dom_media_gmp_GMPParent.cpp) = a51a6197cd7be0b751180babe65fb65f93bdbad6
 SHA1 (patch-dom_media_gstreamer_GStreamerAllocator.cpp) = 4685a646a76282619d7c42fac43500e0065f067d
 SHA1 (patch-dom_media_moz.build) = a89695c9557f59e00b42c60742f27a82de0f77fb
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 6219ce1b3f2893c1d53453fcb5568d081b72e106
@@ -144,7 +142,6 @@ SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 6b926ccd
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = f5adba2137f2d7fd4d4a6a1e8ef8625866513890
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_platform__macros.h) = 3b0973c96eadb7bff91eab211d3c159a9b22fa9c
 SHA1 (patch-toolkit_library_moz.build) = 625d78e64959f78a5d0b8148749bb43a0abcbcf7
-SHA1 (patch-toolkit_mozapps_extensions_internal_GMPProvider.jsm) = 6e4ead21c1bcb1268a0530b3041ff4d5af20b743
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-toolkit_xre_nsAppRunner.cpp) = f335d64cb0e1d248fd2c41a167ee1874218e7db6
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a1075901fa8
