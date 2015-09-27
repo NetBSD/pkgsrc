@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4054 2015/09/27 14:56:08 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4055 2015/09/27 17:05:06 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7076,3 +7076,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added games/foobillardplus version 3.42b [tnn 2015-09-27]
 	Added x11/xtrace version 1.3.1 [tnn 2015-09-27]
 	Updated multimedia/mpv to 0.11.0 [leot 2015-09-27]
+	Added x11/arandr version 0.1.8 [kamil 2015-09-27]
