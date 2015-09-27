@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2014/02/09 04:34:31 taca Exp $
+$NetBSD: patch-ab,v 1.6 2015/09/27 06:58:11 taca Exp $
 
 * Don't install config files.
 
---- client/Makefile.in.orig	2014-01-31 19:20:49.000000000 +0000
+--- client/Makefile.in.orig	2015-08-26 19:13:14.000000000 +0000
 +++ client/Makefile.in
-@@ -492,19 +492,6 @@ uninstall-man8:
+@@ -543,19 +543,6 @@ uninstall-man8:
  	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
  install-dist_sysconfDATA: $(dist_sysconf_DATA)
  	@$(NORMAL_INSTALL)
