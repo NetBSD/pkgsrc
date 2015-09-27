@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2015/09/26 17:01:01 tnn Exp $
+# $NetBSD: Makefile,v 1.112 2015/09/27 21:58:03 tnn Exp $
 
 DISTNAME=	mesa-11.0.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -48,7 +48,7 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename.la,libglapi.la,g'
 
 # Replace /etc/drirc with ${PREFIX}/etc/drirc
 SUBST_CLASSES+=			drirc
-SUBST_STAGE.drirc=		post-patch
+SUBST_STAGE.drirc=		pre-configure
 SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
 SUBST_FILES.drirc+=		src/mesa/drivers/dri/common/xmlconfig.c
 SUBST_SED.drirc+=		 -e 's|/etc/|${PREFIX}/etc/|g'
@@ -84,6 +84,15 @@ BUILDLINK_TRANSFORM+=   l:pthread:pthread:c l:m:m:c
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
 CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
 CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
+.endif
+
+# Manual patch for FDO bug 90311. Don't apply if not on Darwin as there could
+# be side effects.
+.if ${OPSYS} == "Darwin"
+pre-configure: ${WRKDIR}/.manual_patch_done
+${WRKDIR}/.manual_patch_done:
+	cd ${WRKSRC} && ${TOOLS_PATCH} -z .manual -p0 < ${FILESDIR}/patch-manual_fdo90311
+	touch ${.TARGET}
 .endif
 
 INSTALLATION_DIRS+=	share/examples/MesaLib

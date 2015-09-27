@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2015/09/26 08:45:02 tnn Exp $
+@comment $NetBSD: PLIST,v 1.31 2015/09/27 21:58:03 tnn Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -26,7 +26,7 @@ ${PLIST.dri}include/GLES3/gl31.h
 ${PLIST.dri}include/GLES3/gl3ext.h
 ${PLIST.dri}include/GLES3/gl3platform.h
 ${PLIST.dri}include/KHR/khrplatform.h
-${PLIST.dri}include/gbm.h
+${PLIST.gbm}include/gbm.h
 ${PLIST.xatracker}include/xa_composite.h
 ${PLIST.xatracker}include/xa_context.h
 ${PLIST.xatracker}include/xa_tracker.h
@@ -47,12 +47,12 @@ ${PLIST.dri}lib/libEGL.la
 lib/libGL.la
 ${PLIST.dri}lib/libGLESv1_CM.la
 ${PLIST.dri}lib/libGLESv2.la
-${PLIST.dri}lib/libgbm.la
+${PLIST.gbm}lib/libgbm.la
 lib/libglapi.la
 ${PLIST.xatracker}lib/libxatracker.la
 ${PLIST.dri}lib/pkgconfig/dri.pc
 ${PLIST.dri}lib/pkgconfig/egl.pc
-${PLIST.dri}lib/pkgconfig/gbm.pc
+${PLIST.gbm}lib/pkgconfig/gbm.pc
 lib/pkgconfig/gl.pc
 ${PLIST.dri}lib/pkgconfig/glesv1_cm.pc
 ${PLIST.dri}lib/pkgconfig/glesv2.pc
