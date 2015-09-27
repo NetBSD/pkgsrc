@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/09/08 21:50:28 kamil Exp $
+$NetBSD: distinfo,v 1.2 2015/09/27 21:03:48 kamil Exp $
 
-SHA1 (ansiweather-1.03.tar.gz) = 3f8eccc0de0017494ae9cbeb43aaa13e9a244dea
-RMD160 (ansiweather-1.03.tar.gz) = 46c20cdac8204ee1ffb5619753bed5322eae9342
-Size (ansiweather-1.03.tar.gz) = 6230 bytes
+SHA1 (ansiweather-1.05.tar.gz) = 16bfcdb9ca0343058497da2aa8233af046ced040
+RMD160 (ansiweather-1.05.tar.gz) = 4ec2574fba18a3456ca7f56c25eb36999245d68a
+Size (ansiweather-1.05.tar.gz) = 6890 bytes
