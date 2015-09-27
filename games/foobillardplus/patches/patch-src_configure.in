@@ -1,0 +1,23 @@
+$NetBSD: patch-src_configure.in,v 1.1 2015/09/27 10:07:53 tnn Exp $
+
+Fix paths.
+
+--- configure.in.orig	2011-12-31 00:28:23.000000000 +0000
++++ configure.in
+@@ -61,14 +61,14 @@ AC_PREFIX_DEFAULT(/opt/foobillardplus)
+ if test "x$prefix" = "xNONE" ; then
+   prefix="/opt/foobillardplus"
+ else
+-  prefix=$prefix/foobillardplus
++  prefix=$prefix
+ fi
+ if test "x$exec_prefix" = "xNONE" ; then
+   exec_prefix=$prefix
+ fi
+ bindir=$prefix/bin
+ datarootdir=$prefix/data
+-datadir=$prefix/data
++datadir=$prefix/share/foobillardplus/data
+ localedir=$prefix/data/locale
+ docdir=$prefix/data/locale
+ PREFIX=$prefix
