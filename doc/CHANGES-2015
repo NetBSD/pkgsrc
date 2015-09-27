@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4045 2015/09/27 04:12:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4046 2015/09/27 06:51:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7061,3 +7061,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/pam-radius to 1.3.17 [bsiegert 2015-09-26]
 	Updated security/pam-radius to 1.4.0 [bsiegert 2015-09-26]
 	Updated net/ruby-userstream to 1.4.0nb3 [taca 2015-09-27]
+	Updated meta-pkgs/php54-extensions to 5.4.45nb1 [taca 2015-09-27]
+	Updated meta-pkgs/php55-extensions to 5.5.29nb1 [taca 2015-09-27]
+	Updated meta-pkgs/php56-extensions to 5.6.13nb1 [taca 2015-09-27]
