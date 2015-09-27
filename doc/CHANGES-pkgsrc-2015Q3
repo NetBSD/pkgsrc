@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.5 2015/09/27 16:59:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.6 2015/09/27 18:52:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -14,3 +14,6 @@ www/firefox: build fix
 
 Pullup ticket #4818 - requested by taca
 net/ruby-userstream: correct dependency
+
+Pullup ticket #4820 - requested by ryoon
+emulators/qemu: security fix
