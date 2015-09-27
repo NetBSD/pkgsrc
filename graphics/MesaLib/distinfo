@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.102 2015/09/26 17:01:01 tnn Exp $
+$NetBSD: distinfo,v 1.103 2015/09/27 21:58:03 tnn Exp $
 
 SHA1 (mesa-11.0.1.tar.xz) = cd6334fcb6f9047155d22d13de70e1d78fdfef87
 RMD160 (mesa-11.0.1.tar.xz) = d1c441bfbe2f38325bf88f83192052d3a0fa45b9
@@ -20,6 +20,7 @@ SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen.c) = 4b2ae565377b1a0396c8bf6
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = e4b891e8b4ebe5b8e8c7b8c2c1dbed11b9c417df
 SHA1 (patch-src_gbm_main_gbm.c) = 70225ab7352f123c9efc68b6d4ff0d9675b6f9dc
 SHA1 (patch-src_glsl_ralloc.c) = 7443d00ff05ee1e1dcfa2b76972b55abadebcad8
+SHA1 (patch-src_glx_apple_apple__glapi.c) = df70afc24759978f954ac3a774a14e6518dde97a
 SHA1 (patch-src_glx_glxclient.h) = e15256851559dafb7a86e1eb7e9d6afc86de581b
 SHA1 (patch-src_glx_glxcurrent.c) = 713f75bcafb186c7123d19a6aae3deaed9d5fa69
 SHA1 (patch-src_loader_Makefile.in) = 25cf645bc43a8157961e9ddd249936ca2053c49c
