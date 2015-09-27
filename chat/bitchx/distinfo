@@ -1,19 +1,6 @@
-$NetBSD: distinfo,v 1.19 2013/12/06 15:35:53 seanb Exp $
+$NetBSD: distinfo,v 1.20 2015/09/27 19:06:23 kamil Exp $
 
-SHA1 (ircii-pana-1.1-final.tar.gz) = b25635b62c7ff905b6492a4aaa88c43b5aa164f8
-RMD160 (ircii-pana-1.1-final.tar.gz) = 4105de2587964146e2391a26a8a16e3d0059a93f
-Size (ircii-pana-1.1-final.tar.gz) = 2532476 bytes
-SHA1 (patch-aa) = c184a5341217d21277060d07c4ed12c20f374dc8
-SHA1 (patch-ab) = 843e1bdfe6bdd93c93944484edb56be7393f298d
-SHA1 (patch-ac) = ba59735707ca8758d62e78b7756330aa933f2de7
-SHA1 (patch-ad) = ba00fb80b1b980a32b70d84e4ca4db91e9fd5538
-SHA1 (patch-ae) = 90c7e0a19c81e710392c675be650c57e64ee65b3
-SHA1 (patch-af) = c79fcbcc57b8234d5918b1414219965b75e3c0d1
-SHA1 (patch-ag) = fc0b31a959a5799122178a255006ee67521fb49a
-SHA1 (patch-ah) = e3e8334298ba06e7980309a6b2e9b624e1fbd398
-SHA1 (patch-an) = 59a6dc31a90b88bbffac5bb4629feaa2488afeff
-SHA1 (patch-ao) = b91a58efaac234c815542375f4f87eb3bd4055e8
-SHA1 (patch-ap) = 7cc6162de323bf07e52cbad7d4b4b54ac01d105e
-SHA1 (patch-aq) = 97387bc2f7059f1a864f47ecd611ce62e13cb969
-SHA1 (patch-ar) = 09286c5e21c6b8f6d35ab53146297c2e4f44ad55
-SHA1 (patch-include_irc__std.h) = 49d8164f76bbb1f0f6601763b50fbe4aa760fc3e
+SHA1 (bitchx-1.2.1.tar.gz) = 48ca956d43d6d62e32040bddfae49e88c1188927
+RMD160 (bitchx-1.2.1.tar.gz) = 0bf85169f26297fe517b2886f8b9693c360f32f7
+Size (bitchx-1.2.1.tar.gz) = 2549182 bytes
+SHA1 (patch-configure) = fa29df53d26437edf98901fd1a192978cda2e685
