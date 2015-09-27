@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/09/27 19:06:23 kamil Exp $
+
+Install path for document
+
+--- configure	2015-01-12 17:46:50.000000000 +0900
++++ configure	2015-01-12 17:46:19.000000000 +0900
+@@ -15765,7 +15765,7 @@
+   mandir="\$(IRCLIB)"
+ else
+   INSTALL_IRC="\${bindir}/\$(_VERSION_)\$(EXEEXT)"
+-  IRCLIB="\${libdir}/bx"
++  IRCLIB="\${datadir}/bx"
+   IRCPATH="\$(DEFAULT_CTOOLZ_DIR):\$(DEFAULT_CTOOLZ_DIR)/plugins:.:\$(PLUGINDIR):\$(INSTALL_SCRIPT):\$(IRCLIB)"
+   TRANSLATION_PATH="\$(IRCLIB)/translation"
+   HELPDIR="\$(IRCLIB)/help"
