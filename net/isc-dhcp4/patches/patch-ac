@@ -1,29 +1,29 @@
-$NetBSD: patch-ac,v 1.3 2014/02/09 04:34:31 taca Exp $
+$NetBSD: patch-ac,v 1.4 2015/09/27 06:58:11 taca Exp $
 
 * Honor PKG_SYSCONFDIR and PREFIX.
 
---- includes/dhcpd.h.orig	2014-01-31 19:20:49.000000000 +0000
+--- includes/dhcpd.h.orig	2015-08-26 19:13:14.000000000 +0000
 +++ includes/dhcpd.h
-@@ -1419,7 +1419,7 @@ typedef unsigned char option_mask [16];
+@@ -1500,7 +1500,7 @@ typedef unsigned char option_mask [16];
  #else /* !DEBUG */
  
  #ifndef _PATH_DHCPD_CONF
 -#define _PATH_DHCPD_CONF	"/etc/dhcpd.conf"
-+#define _PATH_DHCPD_CONF	"@@PKG_SYSCONFDIR@@/dhcpd.conf"
++#define _PATH_DHCPD_CONF	"/usr/pkg/etc/dhcp/dhcpd.conf"
  #endif /* DEBUG */
  
  #ifndef _PATH_DHCPD_DB
-@@ -1441,11 +1441,11 @@ typedef unsigned char option_mask [16];
+@@ -1522,11 +1522,11 @@ typedef unsigned char option_mask [16];
  #endif /* DEBUG */
  
  #ifndef _PATH_DHCLIENT_CONF
 -#define _PATH_DHCLIENT_CONF	"/etc/dhclient.conf"
-+#define _PATH_DHCLIENT_CONF	"@@PKG_SYSCONFDIR@@/dhclient.conf"
++#define _PATH_DHCLIENT_CONF	"/usr/pkg/etc/dhcp/dhclient.conf"
  #endif
  
  #ifndef _PATH_DHCLIENT_SCRIPT
 -#define _PATH_DHCLIENT_SCRIPT	"/sbin/dhclient-script"
-+#define _PATH_DHCLIENT_SCRIPT	"@@PREFIX@@/sbin/dhclient-script"
++#define _PATH_DHCLIENT_SCRIPT	"/usr/pkg/sbin/dhclient-script"
  #endif
  
  #ifndef _PATH_DHCLIENT_PID
