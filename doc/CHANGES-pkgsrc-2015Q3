@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.3 2015/09/27 08:14:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.4 2015/09/27 13:51:17 spz Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -8,3 +8,5 @@ security/libnetpgpverify: bug fix patch
 
 Pullup ticket #4817 - requested by dholland
 sysutils/findutils: build fix
+Pullup ticket #4815 - requested by ryoon
+www/firefox: build fix
