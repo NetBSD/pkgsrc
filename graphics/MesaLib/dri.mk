@@ -1,4 +1,4 @@
-# $NetBSD: dri.mk,v 1.13 2015/09/26 08:45:02 tnn Exp $
+# $NetBSD: dri.mk,v 1.14 2015/09/27 11:54:31 tnn Exp $
 #
 # Currently, this is for convenience only.
 #
@@ -22,14 +22,17 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.9.3
 .  endif
 .  include "../../textproc/expat/buildlink3.mk"
 .  include "../../x11/dri2proto/buildlink3.mk"
+# XXX these do not have builtin.mk
+.  if ${X11_TYPE} == "modular"
 .  include "../../x11/dri3proto/buildlink3.mk"
+.  include "../../x11/libxshmfence/buildlink3.mk"
+.  include "../../x11/presentproto/buildlink3.mk"
+.  endif
 .  include "../../x11/glproto/buildlink3.mk"
 .  include "../../x11/libXdamage/buildlink3.mk"
 .  include "../../x11/libXfixes/buildlink3.mk"
 .  include "../../x11/libXxf86vm/buildlink3.mk"
 .  include "../../x11/libdrm/buildlink3.mk"
-.  include "../../x11/libxshmfence/buildlink3.mk"
-.  include "../../x11/presentproto/buildlink3.mk"
 .  include "../../x11/xf86driproto/buildlink3.mk"
 .  include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
