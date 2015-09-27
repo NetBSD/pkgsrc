@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.164 2015/09/07 15:19:10 ryoon Exp $
+$NetBSD: distinfo,v 1.165 2015/09/27 23:46:31 tnn Exp $
 
 SHA1 (thunderbird-38.2.0.source.tar.bz2) = 0e27c54ee63b71cd7e8ff4fd87bbe66e0a16ffc1
 RMD160 (thunderbird-38.2.0.source.tar.bz2) = 62d8388cf8998bd051ee6b899a98883dd278d85b
@@ -43,8 +43,6 @@ SHA1 (patch-mozilla_config_system-headers) = 2b66e88ad46cf4e7c0b8a663c615b272a47
 SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = 32d4ab3fbf80bf19783dab7c4a875a7262f419cf
 SHA1 (patch-mozilla_dom_base_moz.build) = dce93f4c00bb662d5c702b442ee169bb8888237d
 SHA1 (patch-mozilla_dom_media_AudioStream.h) = b5092adaf26c8c1809b4ad62eb92be101c07ac88
-SHA1 (patch-mozilla_dom_media_gmp_GMPChild.cpp) = 18e604d744edf775776fb482e59a2864cbf146bd
-SHA1 (patch-mozilla_dom_media_gmp_GMPParent.cpp) = 1ca834cab61dac2c79ed4288da958f8ed7055953
 SHA1 (patch-mozilla_dom_media_gstreamer_GStreamerAllocator.cpp) = cadb3396a56ed3147c4ec2b4b8494205672883fb
 SHA1 (patch-mozilla_dom_media_moz.build) = 12ab0e2441422bbb683a5da163644db9bfd11aec
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = a877a2e086149d14004b15e2c96970d27b4de3a2
@@ -147,9 +145,6 @@ SHA1 (patch-mozilla_security_manager_ssl_src_nsNSSComponent.cpp) = dc5066e49bb37
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = 455c218c6fce4d7f26bda18c9169e3bd263af6f8
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 8f48e55d1a1483b7727ef8b2e11b0142894aa14c
 SHA1 (patch-mozilla_toolkit_library_moz.build) = 0d2a0509f34686260e417f0ae221e738b3378100
-SHA1 (patch-mozilla_toolkit_modules_GMPInstallManager.jsm) = 975a04826031128d04d2fdba2f7a2bd6dd7d2844
-SHA1 (patch-mozilla_toolkit_modules_GMPUtils.jsm) = b66bb759d73cea16372570cff288dd018b3ad0fc
-SHA1 (patch-mozilla_toolkit_mozapps_extensions_internal_GMPProvider.jsm) = 6dd0ab01b21e11a77b554d3be32bbb0aeed0a441
 SHA1 (patch-mozilla_toolkit_xre_nsAppRunner.cpp) = 9e2212cfa52080593c88e8ffc926681016dfb6a5
 SHA1 (patch-mozilla_toolkit_xre_nsEmbedFunctions.cpp) = 41dbac602fb4b61835c794c6fc950f16cadd2f6f
 SHA1 (patch-mozilla_webapprt_moz.build) = a61c46543c2c4cc5ecfcd3eb24facab3e6081b52

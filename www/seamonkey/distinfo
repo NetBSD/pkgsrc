@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.123 2015/09/21 05:03:45 ryoon Exp $
+$NetBSD: distinfo,v 1.124 2015/09/27 23:46:31 tnn Exp $
 
 SHA1 (seamonkey-2.35.source.tar.bz2) = 309078b0e2d7d1d25ef57e12df679bc3bbccfa81
 RMD160 (seamonkey-2.35.source.tar.bz2) = 6ce430d36a82e18b389b88e9dbad4226189db13e
@@ -14,8 +14,6 @@ SHA1 (patch-ldap_sdks_c-sdk_ldap_include_portable.h) = 4ce9e1a0e8f0d05367243e8d2
 SHA1 (patch-mail_app_Makefile.in) = 4d69a03cac313bd7f55c6dd5a54d8d361c3a9131
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 0cbabcf5b188e86404e3ded8452c73a7f498efe3
 SHA1 (patch-mozilla_accessible_atk_Platform.cpp) = c5f43a6b66fcf8a6c242b2b9400679e44b5ee8e8
-SHA1 (patch-mozilla_b2g_installer_Makefile.in) = 9281d16c242b7e7d8608244363bd32ab431fc5f0
-SHA1 (patch-mozilla_b2g_installer_package-manifest.in) = 2de99fe5dc609e0955d5b20d78813143c461e40f
 SHA1 (patch-mozilla_browser_app_nsBrowserApp.cpp) = b2a9784925d95947194d7ad3a4812abd91728b9d
 SHA1 (patch-mozilla_browser_installer_package-manifest.in) = 84825ae3eb2ed39da9792e890a5bfbf8fa7e4708
 SHA1 (patch-mozilla_build_autoconf_compiler-opts.m4) = 1970fa246049adde4f2338ccd51f3651081bea56
@@ -32,8 +30,6 @@ SHA1 (patch-mozilla_config_system-headers) = 35e01aa6f0fdb7299ea5ee4d07a7aa1b95d
 SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = e1e0b68c13af61edd54a6f12d63a8da3ddb21132
 SHA1 (patch-mozilla_dom_base_moz.build) = de05328ca4339e0e3a92da3e4517697df9d3b53a
 SHA1 (patch-mozilla_dom_media_AudioStream.h) = 92029dfdf3cfd168b88e313806340db9d13d408f
-SHA1 (patch-mozilla_dom_media_gmp_GMPChild.cpp) = 39bd9871057efd69853f26b2230f58bcf9e4c94b
-SHA1 (patch-mozilla_dom_media_gmp_GMPParent.cpp) = 8e3c3738e80c63503b34d20437a389e595cf4acb
 SHA1 (patch-mozilla_dom_media_gstreamer_GStreamerAllocator.cpp) = c160b78d4ea5058df602c74be43be9476cb78d1f
 SHA1 (patch-mozilla_dom_media_moz.build) = e21f162f6fb2f053e3e04a8273033b92bd6a75dd
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 005a611073f3a8b865d19e7204df9d40e5e1c3ff
@@ -142,9 +138,6 @@ SHA1 (patch-mozilla_security_manager_ssl_src_nsNSSComponent.cpp) = 0ab4f1ff35d40
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = abf9d1bb447264172ac7e7421e98113d926f44cd
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 9637d1ecc330845c43b02ab75873c2c1f4e446a2
 SHA1 (patch-mozilla_toolkit_library_moz.build) = ce5cf8db841d8161ee661f54bd30aa37cb08eaf5
-SHA1 (patch-mozilla_toolkit_modules_GMPInstallManager.jsm) = a9474a17fd78874bf6e646812d07cc5fa4d8deb6
-SHA1 (patch-mozilla_toolkit_modules_GMPUtils.jsm) = 2e4ea40458200837de154fc9e854b06ad7d41777
-SHA1 (patch-mozilla_toolkit_mozapps_extensions_internal_GMPProvider.jsm) = c65f084cee178bbf427cd1851b1e9c71757ff282
 SHA1 (patch-mozilla_toolkit_xre_nsAppRunner.cpp) = 6ce047ed4a029f0935ebc9c297e99c8b9ccd76f1
 SHA1 (patch-mozilla_toolkit_xre_nsEmbedFunctions.cpp) = 70030e59b2ed09b9bc9827d35e17b12be7f0cd71
 SHA1 (patch-mozilla_webapprt_moz.build) = 8323bfea8fe835571bf60d95cfa59859b745083f
