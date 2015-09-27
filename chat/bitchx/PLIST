@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:28:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/09/27 19:06:23 kamil Exp $
 bin/BitchX
-bin/BitchX-1.1-final
+bin/BitchX-${PKGVERSION}
 bin/scr-bx
-man/man1/BitchX.1
-share/bx/BitchX.doc
+man/man1/BitchX.1.bz2
 share/bx/BitchX.help
 share/bx/BitchX.ircnames
 share/bx/BitchX.kick
@@ -913,10 +912,6 @@ share/bx/help/8_Scripts/wallopstat.bz2
 share/bx/help/8_Scripts/webster.bz2
 share/bx/help/8_Scripts/window.bz2
 share/bx/help/README_FIRST.bz2
-share/bx/help/commands.bz2
-share/bx/help/findcomm.bz2
-share/bx/help/functions.bz2
-share/bx/help/out.bz2
 share/bx/script/SCRIPTS
 share/bx/script/actplug.gmz
 share/bx/script/auto_resume
@@ -967,4 +962,3 @@ share/bx/translation/SWISS.bz2
 share/bx/translation/UNITED_KINGDOM.bz2
 share/bx/translation/UNITED_KINGDOM_COM.bz2
 share/bx/wserv
-@pkgdir lib/bx/plugins
