@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4060 2015/09/28 19:12:53 reed Exp $
+$NetBSD: CHANGES-2015,v 1.4061 2015/09/28 22:36:06 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7081,3 +7081,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ansiweather to 1.05 [kamil 2015-09-27]
 	Updated devel/git to 2.5.3 [adam 2015-09-27]
 	Updated net/samba4 to 4.3.0 [ryoon 2015-09-28]
+	Added www/logswan version 1.00 [kamil 2015-09-28]
