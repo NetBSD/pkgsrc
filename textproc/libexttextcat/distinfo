@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/07/22 12:26:39 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/09/28 16:59:51 richard Exp $
 
 SHA1 (libexttextcat-3.4.4.tar.xz) = 445c4f0c2bd69850fbc79b540816e71062147180
 RMD160 (libexttextcat-3.4.4.tar.xz) = 6b438e1061a21ce1430a2204a911d84d0161b1c0
 Size (libexttextcat-3.4.4.tar.xz) = 1025376 bytes
+SHA1 (patch-src_Makefile.in) = a023cb31a7140e59b49cf022a4a47b59b6cb96b8
