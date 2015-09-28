@@ -1,0 +1,24 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/09/28 16:59:51 richard Exp $
+
+fix hard-coded bash to use $(SHELL) variable
+
+--- src/Makefile.in.orig	2014-06-27 10:17:39.000000000 +0000
++++ src/Makefile.in
+@@ -811,7 +811,7 @@ check:
+ 		ss st sv sw ta tet th tg ti tk tl tn tpi tr ts \
+ 		tt ty tzm-Latn ug uk uz uz-Cyrl ve vep vi wa xh \
+ 		yi yo zh-Hans zh-Hant zu; do \
+-		bash ./test-primary.sh $$primarylanguage; \
++		$(SHELL) ./test-primary.sh $$primarylanguage; \
+ 		if test x$$? != x0; then \
+ 			echo FAIL: $$primarylanguage && exit 1; \
+ 		else \
+@@ -820,7 +820,7 @@ check:
+ 	done
+ 	@echo secondary languages
+ 	@for secondarylanguage in sco; do \
+-		bash ./test-secondary.sh $$secondarylanguage; \
++		$(SHELL) ./test-secondary.sh $$secondarylanguage; \
+ 		if test x$$? != x0; then \
+ 			echo FAIL: $$secondarylanguage && exit 1; \
+ 		else \
