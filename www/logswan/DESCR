@@ -1,0 +1,15 @@
+Logswan is a fast Web log analyzer using probabilistic data structures. It is
+targeted at very large log files, typically APIs logs. It has constant memory
+usage regardless of the log file size, and takes approximatively 4MB of RAM.
+
+Unique visitors counting is performed using two HyperLogLog counters (one for
+IPv4, and another one for IPv6), providing a relative accuracy of 0.10%.
+
+Project design goals include : speed, memory-usage efficiency, and keeping the
+code as simple as possible.
+
+Logswan is opinionated software :
+ - It only supports the Common Log Format, in order to keep the parsing code
+   simple
+ - It does not split results per day, but log files can be split prior to being
+   processed
