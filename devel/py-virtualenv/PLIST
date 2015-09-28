@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/08/30 14:46:17 wiz Exp $
-bin/virtualenv
+@comment $NetBSD: PLIST,v 1.21 2015/09/28 23:16:12 rodent Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
