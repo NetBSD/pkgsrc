@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14917 2015/09/26 14:28:51 wen Exp $
+$NetBSD: TODO,v 1.14918 2015/09/28 07:52:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -451,6 +451,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-plugins-3.6.2
 	o audacity-2.1.1
 	o augeas-1.4.0
+	o autoconf-archive-2015.09.25
 	o autoconvert-0.3.16
 	o autogen-5.18.6
 	o avant-window-navigator-0.4.2
@@ -475,7 +476,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o binkd-104
 	o bird-1.5.0
 	o bird6-1.5.0
-	o bitchx-1.2.1 [wip]
 	o blender-2.75a
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -534,6 +534,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cmake-fedora-2.3.4
 	o cmocka-1.0.1
 	o cmus-2.7.1
+	o coinmp-1.8.3
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -587,6 +588,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
 	o di-4.36
+	o dialog-1.2.20150920
 	o dieharder-3.31.1
 	o digikam-4.12.0
 	o dinotrace-9.4d
@@ -854,6 +856,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gsharutils-4.15.2
 	o gss-1.0.3
 	o gst-plugins0.10-fluendo-mp3-0.10.32
+	o gst-plugins1-base-1.6.0
+	o gst-plugins1-good-1.6.0
+	o gst-plugins1-ugly-1.6.0
+	o gstreamer1-1.6.0
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -944,6 +950,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o imp-6.2.10
 	o inform-6.32.1
 	o ingo-3.2.6
+	o innoextract-1.5
 	o input-pad-1.4.2
 	o inspircd-1.2.1
 	o instiki-0.13
@@ -1233,6 +1240,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Apache-Gallery-1.0.2
 	o p5-Apache-LogFormat-Compiler-0.32
 	o p5-Apache-Test-1.39
+	o p5-Archive-Zip-1.53
 	o p5-AuthCAS-1.6
 	o p5-Authen-CAS-Client-0.07
 	o p5-Barcode-Code128-2.21
@@ -1521,6 +1529,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.0.0
 	o py-flake8-2.4.1
+	o py-foolscap-0.9.1
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
@@ -1586,7 +1595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o radiance-4R1
 	o rails-4.1.5
 	o rainbowcrack-1.5
-	o raine-0.64.8
+	o raine-0.64.9
 	o rakudo-star-2015.07
 	o rancid-3.2.99
 	o rasmol-2.7.5.2
@@ -1698,6 +1707,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sparse-0.5.0
 	o spcaview-20060501
 	o spectrwm-2.7.2
+	o spice-protocol-0.12.10
 	o spidermonkey-1.8.5
 	o spin-643
 	o spl-1.0pre6
@@ -1854,7 +1864,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20150919
+	o x264-devel-20150926
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
@@ -1868,8 +1878,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
+	o xf86-video-chips-1.2.6
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
+	o xf86-video-s3virge-1.10.7
 	o xf86-video-sisusb-0.9.4
 	o xfig-3.2.5c
 	o xforms-1.2.4
