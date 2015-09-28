@@ -1,4 +1,6 @@
-$NetBSD: patch-libgo_mksysinfo.sh,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+$NetBSD: patch-libgo_mksysinfo.sh,v 1.2 2015/09/28 16:39:13 ryoon Exp $
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=67695
 
 --- libgo/mksysinfo.sh.orig	2014-11-12 07:15:40.000000000 +0000
 +++ libgo/mksysinfo.sh
