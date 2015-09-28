@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4061 2015/09/28 22:36:06 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4062 2015/09/28 23:16:40 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7082,3 +7082,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git to 2.5.3 [adam 2015-09-27]
 	Updated net/samba4 to 4.3.0 [ryoon 2015-09-28]
 	Added www/logswan version 1.00 [kamil 2015-09-28]
+	Updated devel/py-virtualenv to 13.1.2nb1 [rodent 2015-09-28]
