@@ -1,4 +1,6 @@
-$NetBSD: patch-gas_configure,v 1.1 2015/06/09 20:24:39 ryoon Exp $
+$NetBSD: patch-gas_configure,v 1.2 2015/09/28 16:37:55 ryoon Exp $
+
+https://sourceware.org/bugzilla/show_bug.cgi?id=18994
 
 --- gas/configure.orig	2014-12-23 14:22:05.000000000 +0000
 +++ gas/configure
