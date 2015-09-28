@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4058 2015/09/28 14:23:34 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4059 2015/09/28 17:37:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7080,3 +7080,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/bitchx to 1.2.1 [kamil 2015-09-27]
 	Updated misc/ansiweather to 1.05 [kamil 2015-09-27]
 	Updated devel/git to 2.5.3 [adam 2015-09-27]
+	Updated net/samba4 to 4.3.0 [ryoon 2015-09-28]
