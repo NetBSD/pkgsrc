@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.63 2015/09/24 22:36:27 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.64 2015/09/29 15:22:07 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -24,7 +24,7 @@ USE_TOOLS+=		bsdtar
 GCC_REQD+=		4.8
 .if ${MACHINE_ARCH} == "i386"
 # Fix for PR pkg/48152.
-CXXFLAGS+=		-march=i486
+CXXFLAGS+=		-march=i586
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
 .endif
