@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2015/09/13 07:34:53 wiz Exp $
+$NetBSD: distinfo,v 1.14 2015/09/29 20:02:23 ast Exp $
 
-SHA1 (Parse-RecDescent-1.967011.tar.gz) = 62e17a7f3e820237806f4fc38b277fe277d11563
-RMD160 (Parse-RecDescent-1.967011.tar.gz) = 542020fa4e344db1b5226167bab13d5dd0922fa1
-Size (Parse-RecDescent-1.967011.tar.gz) = 174584 bytes
+SHA1 (Parse-RecDescent-1.967013.tar.gz) = 341f3ead507da0d7b84dd45ca5e061f03d4dcdb8
+RMD160 (Parse-RecDescent-1.967013.tar.gz) = f73ecb0e918bb53ff3db8442594625c5b42949d2
+Size (Parse-RecDescent-1.967013.tar.gz) = 176362 bytes
