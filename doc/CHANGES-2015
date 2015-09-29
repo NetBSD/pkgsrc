@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4077 2015/09/29 16:58:25 jakllsch Exp $
+$NetBSD: CHANGES-2015,v 1.4078 2015/09/29 19:18:41 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7098,3 +7098,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/openjdk8 to 1.8.60 [ryoon 2015-09-29]
 	Updated textproc/po4a to 0.47 [ryoon 2015-09-29]
 	Updated filesystems/openafs to 1.6.14 [jakllsch 2015-09-29]
+	Updated devel/lua-lpeg to 1.0.0 [alnsn 2015-09-29]
