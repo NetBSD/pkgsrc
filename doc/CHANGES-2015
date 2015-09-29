@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4065 2015/09/29 08:19:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4066 2015/09/29 08:21:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7086,3 +7086,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/MesaLib to 11.0.2 [tnn 2015-09-28]
 	Updated fonts/unifont to 8.0.01nb1 [wiz 2015-09-29]
 	Updated x11/xf86-video-s3virge to 1.10.7 [wiz 2015-09-29]
+	Updated x11/xf86-video-chips to 1.2.6 [wiz 2015-09-29]
