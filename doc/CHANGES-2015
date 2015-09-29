@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4076 2015/09/29 15:12:54 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4077 2015/09/29 16:58:25 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7097,3 +7097,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/coinmp to 1.8.3 [ryoon 2015-09-29]
 	Updated lang/openjdk8 to 1.8.60 [ryoon 2015-09-29]
 	Updated textproc/po4a to 0.47 [ryoon 2015-09-29]
+	Updated filesystems/openafs to 1.6.14 [jakllsch 2015-09-29]
