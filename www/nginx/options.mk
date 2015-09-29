@@ -1,11 +1,18 @@
-# $NetBSD: options.mk,v 1.32 2015/09/24 06:13:50 wiz Exp $
+# $NetBSD: options.mk,v 1.33 2015/09/29 13:48:33 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			pcre push realip ssl sub uwsgi image-filter \
-			debug status nginx-autodetect-cflags spdy echo \
+			debug status nginx-autodetect-cflags echo \
 			set-misc headers-more array-var encrypted-session \
 			form-input perl gzip
+.if !empty(NGINX_HTTP_V2)
+# nginx 1.9.5+ renamed spdy to v2
+PKG_SUPPORTED_OPTIONS+=	v2
+.else
+PKG_SUPPORTED_OPTIONS+=	spdy
+.endif
+
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi perl uwsgi
@@ -44,8 +51,12 @@ CONFIGURE_ARGS+=	--with-http_dav_module
 CONFIGURE_ARGS+=	--with-http_flv_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mspdy)
+.if !empty(PKG_OPTIONS:Mspdy) && empty(NGINX_HTTP_V2)
 CONFIGURE_ARGS+=	--with-http_spdy_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mv2) && !empty(NGINX_HTTP_V2)
+CONFIGURE_ARGS+=	--with-http_v2_module
 .endif
 
 .if !empty(PKG_OPTIONS:Msub)
@@ -65,7 +76,7 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
-NAXSI=				naxsi-0.53-2
+NAXSI=				naxsi-0.54
 NAXSI_DISTFILE=			${NAXSI}.tar.gz
 SITES.${NAXSI_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=			${NAXSI_DISTFILE}
