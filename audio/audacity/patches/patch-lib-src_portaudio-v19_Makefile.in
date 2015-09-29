@@ -1,0 +1,17 @@
+$NetBSD: patch-lib-src_portaudio-v19_Makefile.in,v 1.1 2015/09/29 04:49:55 mrg Exp $
+
+force static library build.
+
+--- lib-src/portaudio-v19/Makefile.in.orig	2015-03-01 17:07:00.000000000 -0800
++++ lib-src/portaudio-v19/Makefile.in	2015-09-28 17:57:01.000000000 -0700
+@@ -43,9 +43,7 @@
+ PALIB = libportaudio.la
+ PAINC = include/portaudio.h
+ 
+-PA_LDFLAGS = $(LDFLAGS) $(SHARED_FLAGS) -rpath $(libdir) -no-undefined \
+-	     -export-symbols-regex "(Pa|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS)_.*" \
+-	     -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
++PA_LDFLAGS = $(LDFLAGS) -static
+ 
+ COMMON_OBJS = \
+ 	src/common/pa_allocation.o \
