@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14920 2015/09/28 17:37:28 ryoon Exp $
+$NetBSD: TODO,v 1.14921 2015/09/29 08:19:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1879,7 +1879,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-chips-1.2.6
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
-	o xf86-video-s3virge-1.10.7
 	o xf86-video-sisusb-0.9.4
 	o xfig-3.2.5c
 	o xforms-1.2.4
