@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.18 2015/08/05 15:16:10 ryoon Exp $
+$NetBSD: MESSAGE,v 1.18.2.1 2015/09/29 19:41:29 bsiegert Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
@@ -98,8 +98,8 @@ server {
 
 	extension=pdo.so ;if you select sqlite backend.
 	extension=pdo_sqlite.so ;if you select sqlite backend.
-	extension=mysql.so ;if you select MySQL backend.
-	extension=pgsql.so ;if you select PostgreSQL backend.
+	extension=pdo_mysql.so ;if you select MySQL backend.
+	extension=pdo_pgsql.so ;if you select PostgreSQL backend.
 
 7. Start PHP-FPM daemon.
 
