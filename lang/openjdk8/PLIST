@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/05/05 17:07:39 abs Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/09/29 14:55:45 ryoon Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -397,6 +397,7 @@ java/openjdk8/jre/lib/currency.data
 java/openjdk8/jre/lib/ext/cldrdata.jar
 java/openjdk8/jre/lib/ext/dnsns.jar
 java/openjdk8/jre/lib/ext/localedata.jar
+java/openjdk8/jre/lib/ext/jaccess.jar
 java/openjdk8/jre/lib/ext/meta-index
 java/openjdk8/jre/lib/ext/nashorn.jar
 java/openjdk8/jre/lib/ext/sunec.jar
