@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4063 2015/09/28 23:51:17 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4064 2015/09/29 08:08:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7084,3 +7084,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/logswan version 1.00 [kamil 2015-09-28]
 	Updated devel/py-virtualenv to 13.1.2nb1 [rodent 2015-09-28]
 	Updated graphics/MesaLib to 11.0.2 [tnn 2015-09-28]
+	Updated fonts/unifont to 8.0.01nb1 [wiz 2015-09-29]
