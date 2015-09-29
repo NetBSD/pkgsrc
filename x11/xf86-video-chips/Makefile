@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2015/04/25 14:25:22 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.15 2015/09/29 08:21:08 wiz Exp $
 
-DISTNAME=	xf86-video-chips-1.2.5
-PKGREVISION=	3
+DISTNAME=	xf86-video-chips-1.2.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
