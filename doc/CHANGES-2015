@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4071 2015/09/29 09:20:14 roy Exp $
+$NetBSD: CHANGES-2015,v 1.4072 2015/09/29 13:48:55 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7092,3 +7092,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cmake to 3.3.2 [wiz 2015-09-29]
 	Updated sysutils/cdrtools to 3.01nb1 [wiz 2015-09-29]
 	Updated net/openresolv to 3.7.1 [roy 2015-09-29]
+	Updated www/nginx to 1.8.0 [imil 2015-09-29]
