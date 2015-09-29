@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.17 2015/09/25 08:43:04 richard Exp $
+$NetBSD: patch-ad,v 1.18 2015/09/29 11:52:48 richard Exp $
 
 apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
 
---- Makefile.in.orig	2015-07-26 23:03:10.000000000 +0000
+--- Makefile.in.orig	2015-09-18 12:56:29.000000000 +0000
 +++ Makefile.in
 @@ -89,7 +89,7 @@ swig_rbdir = $(SWIG_RB_SITE_ARCH_DIR)/sv
  toolsdir = @bindir@/svn-tools
@@ -13,7 +13,15 @@ apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
  
  javahl_javadir = @libdir@/svn-javahl
  javahl_javahdir = @libdir@/svn-javahl/include
-@@ -833,11 +833,11 @@ clean-swig-headers:
+@@ -145,6 +145,7 @@ SWIG_PY_COMPILE = @SWIG_PY_COMPILE@
+ SWIG_PY_LINK = @SWIG_PY_LINK@
+ SWIG_PY_LIBS = @SWIG_PY_LIBS@
+ SWIG_PL_INCLUDES = @SWIG_PL_INCLUDES@
++SWIG_PL_LDFLAGS = @SWIG_PL_LDFLAGS@
+ SWIG_RB_INCLUDES = @SWIG_RB_INCLUDES@ -I$(SWIG_SRC_DIR)/ruby/libsvn_swig_ruby
+ SWIG_RB_COMPILE = @SWIG_RB_COMPILE@
+ SWIG_RB_LINK = @SWIG_RB_LINK@
+@@ -832,11 +833,11 @@ clean-swig-headers:
  extraclean-swig-headers: clean-swig-headers
  	$(EXTRACLEAN_SWIG_HEADERS)
  
