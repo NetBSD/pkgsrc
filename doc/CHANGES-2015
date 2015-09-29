@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4068 2015/09/29 08:24:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4069 2015/09/29 08:34:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7089,3 +7089,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xf86-video-chips to 1.2.6 [wiz 2015-09-29]
 	Updated x11/libdrm to 2.4.65 [wiz 2015-09-29]
 	Updated devel/waf to 1.8.14 [wiz 2015-09-29]
+	Updated devel/cmake to 3.3.2 [wiz 2015-09-29]
