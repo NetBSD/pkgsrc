@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.7 2015/09/29 19:41:54 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.8 2015/09/29 20:49:01 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -20,3 +20,6 @@ emulators/qemu: security fix
 
 Pullup ticket #4824 - requested by bouyer
 www/php-owncloud: documentation fix
+
+Pullup ticket #4825 - requested by tnn
+multimedia/adobe-flash-plugin11: security fix
