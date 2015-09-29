@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4074 2015/09/29 14:51:46 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4075 2015/09/29 14:56:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7095,3 +7095,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/nginx to 1.8.0 [imil 2015-09-29]
 	Updated www/nginx-devel to 1.9.5 [imil 2015-09-29]
 	Updated math/coinmp to 1.8.3 [ryoon 2015-09-29]
+	Updated lang/openjdk8 to 1.8.60 [ryoon 2015-09-29]
