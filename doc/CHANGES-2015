@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4101 2015/09/30 19:57:00 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4102 2015/09/30 20:05:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7122,3 +7122,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/shared-mime-info to 1.5 [wiz 2015-09-30]
 	Updated finance/gnucash to 2.6.8 [wiz 2015-09-30]
 	Updated security/pinentry to 0.9.6 [wiz 2015-09-30]
+	Updated archivers/innoextract to 1.5 [wiz 2015-09-30]
