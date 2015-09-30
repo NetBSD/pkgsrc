@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4093 2015/09/30 19:15:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4094 2015/09/30 19:18:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7114,3 +7114,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.39.0 [wiz 2015-09-30]
 	Updated archivers/p5-Archive-Zip to 1.53 [wiz 2015-09-30]
 	Updated net/p5-Net-DNS to 1.02 [wiz 2015-09-30]
+	Updated devel/py-pbr to 1.8.0 [wiz 2015-09-30]
