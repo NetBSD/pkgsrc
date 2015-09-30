@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.15 2014/09/16 09:52:05 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2015/09/30 08:25:37 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	socksproxy
-PKG_OPTIONS_GROUP.socksproxy=	socks5 socks4
+PKG_OPTIONS_GROUP.socksproxy=	dante socks4
 
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses ncursesw slang curses
@@ -62,9 +62,9 @@ CONFIGURE_ARGS+=	--enable-color-style
 CONFIGURE_ARGS+=	--with-socks
 .  include "../../net/socks4/buildlink3.mk"
 .endif
-.if !empty(PKG_OPTIONS:Msocks5)
-CONFIGURE_ARGS+=	--with-socks5
-.  include "../../net/socks5/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mdante)
+CONFIGURE_ARGS+=	--with-socks
+.  include "../../net/dante/buildlink3.mk"
 .endif
 
 ###
