@@ -1,0 +1,15 @@
+$NetBSD: patch-kbx_Makefile.in,v 1.1 2015/09/30 12:56:47 fhajny Exp $
+
+Bring in libsocket, needed on SunOS.
+
+--- kbx/Makefile.in.orig	2015-09-30 11:23:15.890769261 +0000
++++ kbx/Makefile.in
+@@ -551,7 +551,7 @@ clean-binPROGRAMS:
+ 
+ kbxutil$(EXEEXT): $(kbxutil_OBJECTS) $(kbxutil_DEPENDENCIES) $(EXTRA_kbxutil_DEPENDENCIES) 
+ 	@rm -f kbxutil$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(kbxutil_OBJECTS) $(kbxutil_LDADD) $(LIBS)
++	$(AM_V_CCLD)$(LINK) $(kbxutil_OBJECTS) $(kbxutil_LDADD) $(LIBS) $(NETLIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
