@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/06/20 18:48:37 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/09/30 13:36:00 imil Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -98,7 +98,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
 	${INSTALL_MAN} ${WRKSRC}/man/nginx.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 .if !empty(PKG_OPTIONS:Mnaxsi)
-	${INSTALL_DATA} ${WRKDIR}/${NAXSI}/naxsi_config/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
+	${INSTALL_DATA} ${WRKDIR}/${NAXSI_DISTNAME}/naxsi_config/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
 .endif
 .if !empty(PKG_OPTIONS:Mperl)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
