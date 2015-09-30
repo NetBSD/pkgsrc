@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2015/07/27 22:31:30 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2015/09/30 08:25:37 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.scrollz
 PKG_SUPPORTED_OPTIONS=		efence inet6 regexp utf8
 PKG_SUGGESTED_OPTIONS+=		efence inet6
 PKG_OPTIONS_OPTIONAL_GROUPS=	socks ssl
-PKG_OPTIONS_GROUP.socks=	socks4 socks5
+PKG_OPTIONS_GROUP.socks=	socks4 dante
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
 .include "../../mk/bsd.options.mk"
@@ -49,11 +49,11 @@ CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.socks4}
 CONFIGURE_ARGS+=	--disable-socks4
 .endif
 
-.if !empty(PKG_OPTIONS:Msocks5)
-.include "../../net/socks5/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
+.if !empty(PKG_OPTIONS:Mdante)
+.include "../../net/dante/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.dante}
 .else
-CONFIGURE_ARGS+=	--disable-socks5
+CONFIGURE_ARGS+=	--disable-socks4
 .endif
 
 .if !empty(PKG_OPTIONS:Mutf8)

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2012/06/12 15:46:02 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2015/09/30 08:25:37 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
@@ -52,6 +52,6 @@ CONFIGURE_ARGS+=	--enable-nntp-only
 .endif
 
 .if !empty(PKG_OPTIONS:Msocks)
-.include "../../net/socks5/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
+.include "../../net/dante/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-socks=${BUILDLINK_PREFIX.dante}
 .endif

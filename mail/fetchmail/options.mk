@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.17 2014/02/12 23:19:49 tron Exp $
+# $NetBSD: options.mk,v 1.18 2015/09/30 08:25:37 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=	kerberos4 kerberos gssapi ssl
 PKG_OPTIONS_OPTIONAL_GROUPS=	socks
-PKG_OPTIONS_GROUP.socks=	socks4 socks5
+PKG_OPTIONS_GROUP.socks=	socks4 dante
 
 PKG_SUGGESTED_OPTIONS= ssl
 
@@ -59,7 +59,8 @@ CONFIGURE_ARGS+=	--without-ssl
 .include "../../net/socks4/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-socks=${BUILDLINK_PREFIX.socks4}
 .endif
-.if !empty(PKG_OPTIONS:Msocks5)
-.include "../../net/socks5/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
+.if !empty(PKG_OPTIONS:Mdante)
+.include "../../net/dante/buildlink3.mk"
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.dante}/include/dante
+CONFIGURE_ARGS+=	--with-socks=${BUILDLINK_PREFIX.dante}
 .endif

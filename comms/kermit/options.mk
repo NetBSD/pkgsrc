@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2015/01/17 15:30:03 bsiegert Exp $
+# $NetBSD: options.mk,v 1.6 2015/09/30 08:25:37 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kermit
 PKG_SUPPORTED_OPTIONS=		kermit-suid-uucp ssl kerberos
 PKG_OPTIONS_OPTIONAL_GROUPS+=	socks
-PKG_OPTIONS_GROUP.socks=	socks4 socks5
+PKG_OPTIONS_GROUP.socks=	socks4 dante
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,10 +25,10 @@ SPECIAL_PERMS+=		bin/kermit ${UUCP_USER} ${UUCP_GROUP} 4555
 KFLAGS+=	-DSOCKS -DCK_SOCKS
 LIBS+=		-L${BUILDLINK_PREFIX.dante}/lib -lsocks
 .include "../../net/dante/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Msocks5)
-KFLAGS+=	-DSOCKS -DCK_SOCKS5
-LIBS+=		-L${BUILDLINK_PREFIX.socks5}/lib -lsocks5
-.include "../../net/socks5/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mdante)
+KFLAGS+=	-DSOCKS -DCK_SOCKS
+LIBS+=		-L${BUILDLINK_PREFIX.dante}/lib -lsocks
+.include "../../net/dante/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
