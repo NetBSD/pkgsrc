@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4095 2015/09/30 19:19:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4096 2015/09/30 19:22:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7116,3 +7116,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Net-DNS to 1.02 [wiz 2015-09-30]
 	Updated devel/py-pbr to 1.8.0 [wiz 2015-09-30]
 	Updated misc/dialog to 1.2.20150920 [wiz 2015-09-30]
+	Updated devel/py-cython to 0.23.2 [wiz 2015-09-30]
