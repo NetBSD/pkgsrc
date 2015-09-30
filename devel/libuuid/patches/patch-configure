@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2015/06/14 16:23:03 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2015/09/30 20:38:16 wiz Exp $
 
---- configure.orig	2015-04-30 10:13:13.000000000 +0000
+--- configure.orig	2015-09-07 07:59:52.000000000 +0000
 +++ configure
-@@ -20035,7 +20035,7 @@ else
+@@ -20352,7 +20352,7 @@ else
  fi
  
  
@@ -11,3 +11,12 @@ $NetBSD: patch-configure,v 1.1 2015/06/14 16:23:03 wiz Exp $
  
  
  $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
+@@ -27616,7 +27616,7 @@ else
+ fi
+ 
+ 
+-if test "x$enable_usrdir_path" == xyes; then :
++if test "x$enable_usrdir_path" = xyes; then :
+ 
+ 
+ $as_echo "#define USE_USRDIR_PATHS_ONLY 1" >>confdefs.h
