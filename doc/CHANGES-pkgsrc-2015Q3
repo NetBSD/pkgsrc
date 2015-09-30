@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.8 2015/09/29 20:49:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.9 2015/09/30 19:42:29 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -23,3 +23,6 @@ www/php-owncloud: documentation fix
 
 Pullup ticket #4825 - requested by tnn
 multimedia/adobe-flash-plugin11: security fix
+
+Pullup ticket #4826 - requested by tnn
+textproc/icu: security fix
