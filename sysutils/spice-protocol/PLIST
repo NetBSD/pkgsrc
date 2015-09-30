@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/03 11:21:03 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/30 20:13:29 wiz Exp $
 include/spice-1/spice/barrier.h
 include/spice-1/spice/controller_prot.h
 include/spice-1/spice/end-packed.h
@@ -15,4 +15,13 @@ include/spice-1/spice/stats.h
 include/spice-1/spice/types.h
 include/spice-1/spice/vd_agent.h
 include/spice-1/spice/vdi_dev.h
+lib/spice-protocol/python_modules/__init__.py
+lib/spice-protocol/python_modules/codegen.py
+lib/spice-protocol/python_modules/demarshal.py
+lib/spice-protocol/python_modules/marshal.py
+lib/spice-protocol/python_modules/ptypes.py
+lib/spice-protocol/python_modules/spice_parser.py
+lib/spice-protocol/spice.proto
+lib/spice-protocol/spice1.proto
+lib/spice-protocol/spice_codegen.py
 share/pkgconfig/spice-protocol.pc
