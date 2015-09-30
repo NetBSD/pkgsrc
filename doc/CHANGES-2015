@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4109 2015/09/30 20:27:01 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4110 2015/09/30 20:28:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7130,3 +7130,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/pixman to 0.32.8 [wiz 2015-09-30]
 	Updated security/p5-IO-Socket-SSL to 2.020 [wiz 2015-09-30]
 	Updated devel/global to 6.5.1 [wiz 2015-09-30]
+	Updated devel/py-setuptools to 18.3.2 [wiz 2015-09-30]
