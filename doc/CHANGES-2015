@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4107 2015/09/30 20:22:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4108 2015/09/30 20:25:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7128,3 +7128,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Net-SSLeay to 1.72 [wiz 2015-09-30]
 	Updated time/p5-DateTime-Locale to 0.92 [wiz 2015-09-30]
 	Updated x11/pixman to 0.32.8 [wiz 2015-09-30]
+	Updated security/p5-IO-Socket-SSL to 2.020 [wiz 2015-09-30]
