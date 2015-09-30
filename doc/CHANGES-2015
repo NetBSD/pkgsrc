@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4085 2015/09/30 12:01:46 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4086 2015/09/30 12:46:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7106,3 +7106,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/p5-Test-TCP to 2.14 [wen 2015-09-30]
 	Updated devel/p5-Test-Deep to 0.119 [wen 2015-09-30]
 	Updated net/miniupnpd to 1.9.20150922 [adam 2015-09-30]
+	Updated textproc/p5-Encode to 2.78 [mef 2015-09-30]
