@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14931 2015/09/30 12:57:38 mef Exp $
+$NetBSD: TODO,v 1.14932 2015/09/30 18:09:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -327,6 +327,10 @@ Suggested new packages
 	diaspora
 	https://diasporafoundation.org/
 	Distributed social networking
+
+	hugo
+	https://gohugo.io/
+	Fast and Modern Static Website Engine
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
