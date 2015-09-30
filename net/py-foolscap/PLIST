@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/04/19 18:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/09/30 19:24:35 wiz Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -43,6 +43,12 @@ ${PYSITELIB}/foolscap/broker.pyo
 ${PYSITELIB}/foolscap/call.py
 ${PYSITELIB}/foolscap/call.pyc
 ${PYSITELIB}/foolscap/call.pyo
+${PYSITELIB}/foolscap/connection.py
+${PYSITELIB}/foolscap/connection.pyc
+${PYSITELIB}/foolscap/connection.pyo
+${PYSITELIB}/foolscap/connection_plugins.py
+${PYSITELIB}/foolscap/connection_plugins.pyc
+${PYSITELIB}/foolscap/connection_plugins.pyo
 ${PYSITELIB}/foolscap/constraint.py
 ${PYSITELIB}/foolscap/constraint.pyc
 ${PYSITELIB}/foolscap/constraint.pyo
@@ -55,6 +61,9 @@ ${PYSITELIB}/foolscap/crypto.pyo
 ${PYSITELIB}/foolscap/eventual.py
 ${PYSITELIB}/foolscap/eventual.pyc
 ${PYSITELIB}/foolscap/eventual.pyo
+${PYSITELIB}/foolscap/furl.py
+${PYSITELIB}/foolscap/furl.pyc
+${PYSITELIB}/foolscap/furl.pyo
 ${PYSITELIB}/foolscap/ipb.py
 ${PYSITELIB}/foolscap/ipb.pyc
 ${PYSITELIB}/foolscap/ipb.pyo
@@ -190,6 +199,9 @@ ${PYSITELIB}/foolscap/test/test_banana.pyo
 ${PYSITELIB}/foolscap/test/test_call.py
 ${PYSITELIB}/foolscap/test/test_call.pyc
 ${PYSITELIB}/foolscap/test/test_call.pyo
+${PYSITELIB}/foolscap/test/test_connection.py
+${PYSITELIB}/foolscap/test/test_connection.pyc
+${PYSITELIB}/foolscap/test/test_connection.pyo
 ${PYSITELIB}/foolscap/test/test_copyable.py
 ${PYSITELIB}/foolscap/test/test_copyable.pyc
 ${PYSITELIB}/foolscap/test/test_copyable.pyo
@@ -250,6 +262,9 @@ ${PYSITELIB}/foolscap/test/test_sturdyref.pyo
 ${PYSITELIB}/foolscap/test/test_tub.py
 ${PYSITELIB}/foolscap/test/test_tub.pyc
 ${PYSITELIB}/foolscap/test/test_tub.pyo
+${PYSITELIB}/foolscap/test/test_unreachable.py
+${PYSITELIB}/foolscap/test/test_unreachable.pyc
+${PYSITELIB}/foolscap/test/test_unreachable.pyo
 ${PYSITELIB}/foolscap/test/test_util.py
 ${PYSITELIB}/foolscap/test/test_util.pyc
 ${PYSITELIB}/foolscap/test/test_util.pyo
@@ -262,6 +277,7 @@ ${PYSITELIB}/foolscap/util.pyo
 ${PYSITELIB}/foolscap/vocab.py
 ${PYSITELIB}/foolscap/vocab.pyc
 ${PYSITELIB}/foolscap/vocab.pyo
+share/doc/py-foolscap/connection-handlers.rst
 share/doc/py-foolscap/copyable.rst
 share/doc/py-foolscap/failures.rst
 share/doc/py-foolscap/flappserver.rst
