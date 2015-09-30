@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4105 2015/09/30 20:19:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4106 2015/09/30 20:20:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7126,3 +7126,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/libopenmpt to 0.2.5602beta14 [wiz 2015-09-30]
 	Updated sysutils/spice-protocol to 0.12.10 [wiz 2015-09-30]
 	Updated security/p5-Net-SSLeay to 1.72 [wiz 2015-09-30]
+	Updated time/p5-DateTime-Locale to 0.92 [wiz 2015-09-30]
