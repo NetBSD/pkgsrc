@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/09/30 20:30:54 wiz Exp $
 
-DISTNAME=		libcfg+-0.6.2
-PKGREVISION=		3
+DISTNAME=		libcfg+-0.7.0
 CATEGORIES=		devel
 MASTER_SITES=		http://opensource.platon.sk/upload/_projects/00003/
 
