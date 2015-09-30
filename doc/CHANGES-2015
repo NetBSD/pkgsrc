@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4091 2015/09/30 19:13:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4092 2015/09/30 19:14:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7112,3 +7112,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/nginx-devel to 1.9.5nb1 [imil 2015-09-30]
 	Updated devel/ucpp to 1.3.2 [richard 2015-09-30]
 	Updated misc/calibre to 2.39.0 [wiz 2015-09-30]
+	Updated archivers/p5-Archive-Zip to 1.53 [wiz 2015-09-30]
