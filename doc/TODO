@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14951 2015/09/30 20:28:31 wiz Exp $
+$NetBSD: TODO,v 1.14952 2015/09/30 20:31:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1022,7 +1022,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libbpg-0.9.5
 	o libburn-1.4.0
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
-	o libcfg+-0.7.0
 	o libchamplain08-0.12.10
 	o libdatrie-0.2.9
 	o libetonyek-0.1.3
