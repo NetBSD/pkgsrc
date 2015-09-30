@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1085 2015/09/25 13:27:44 manu Exp $
+# $NetBSD: Makefile,v 1.1086 2015/09/30 05:09:51 tnn Exp $
 #
 
 COMMENT=	Networking tools
@@ -693,7 +693,6 @@ SUBDIR+=	snort-rules
 SUBDIR+=	socat
 SUBDIR+=	socket++
 SUBDIR+=	socks4
-SUBDIR+=	socks5
 SUBDIR+=	solaris-tap
 SUBDIR+=	speedtouch
 SUBDIR+=	spegla
