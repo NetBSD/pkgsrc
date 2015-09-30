@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14928 2015/09/29 20:18:04 ast Exp $
+$NetBSD: TODO,v 1.14929 2015/09/30 10:10:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -501,6 +501,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cacti-spine-0.8.8f
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.39.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -816,6 +817,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.6.8
 	o gnuchess-6.2.1
 	o gnuchess-book-1.02
 	o gnupg21-2.1.8
@@ -1265,12 +1267,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
 	o p5-DBD-Oracle-1.74
+	o p5-DBD-postgresql-3.5.2
 	o p5-DBIx-DBSchema-0.45
 	o p5-Dancer-Plugin-DBIC-0.2102
 	o p5-Data-SimplePassword-0.10
 	o p5-Date-Extract-0.05
 	o p5-DateTime-Format-Mail-0.4020
 	o p5-DateTime-Format-Pg-0.16011
+	o p5-DateTime-Locale-0.92
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-Email-MIME-ContentType-1.018
@@ -1786,6 +1790,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tkhylafax-3.2
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
+	o tnef-1.4.12
 	o tob-0.26
 	o tomboy-1.10.2
 	o top-3.8beta1
