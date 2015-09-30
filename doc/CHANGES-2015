@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4087 2015/09/30 12:57:38 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4088 2015/09/30 13:36:22 imil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7108,3 +7108,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/miniupnpd to 1.9.20150922 [adam 2015-09-30]
 	Updated textproc/p5-Encode to 2.78 [mef 2015-09-30]
 	Updated textproc/p5-Number-Format to 1.75 [mef 2015-09-30]
+	Updated www/nginx to 1.8.0nb1 [imil 2015-09-30]
