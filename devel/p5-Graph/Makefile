@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2015/06/12 10:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/09/30 10:47:35 wen Exp $
 
-DISTNAME=	Graph-0.96
+DISTNAME=	Graph-0.9703
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Graph/}
 
