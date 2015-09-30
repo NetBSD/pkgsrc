@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2015/09/11 21:22:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2015/09/30 19:13:14 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -376,6 +376,7 @@ lib/calibre/calibre/ebooks/metadata/sources/ozon.py
 lib/calibre/calibre/ebooks/metadata/sources/prefs.py
 lib/calibre/calibre/ebooks/metadata/sources/test.py
 lib/calibre/calibre/ebooks/metadata/sources/worker.py
+lib/calibre/calibre/ebooks/metadata/tag_mapper.py
 lib/calibre/calibre/ebooks/metadata/toc.py
 lib/calibre/calibre/ebooks/metadata/topaz.py
 lib/calibre/calibre/ebooks/metadata/txt.py
@@ -1018,6 +1019,7 @@ lib/calibre/calibre/gui2/tag_browser/__init__.py
 lib/calibre/calibre/gui2/tag_browser/model.py
 lib/calibre/calibre/gui2/tag_browser/ui.py
 lib/calibre/calibre/gui2/tag_browser/view.py
+lib/calibre/calibre/gui2/tag_mapper.py
 lib/calibre/calibre/gui2/threaded_jobs.py
 lib/calibre/calibre/gui2/throbber.py
 lib/calibre/calibre/gui2/toc/__init__.py
@@ -1971,6 +1973,7 @@ share/calibre/recipes/china_press.recipe
 share/calibre/recipes/china_times.recipe
 share/calibre/recipes/chinadaily.recipe
 share/calibre/recipes/chipro.recipe
+share/calibre/recipes/chosun.recipe
 share/calibre/recipes/chowk.recipe
 share/calibre/recipes/chr_mon.recipe
 share/calibre/recipes/christian_post.recipe
@@ -2474,7 +2477,6 @@ share/calibre/recipes/isar-loisachbote.recipe
 share/calibre/recipes/ittechblog.recipe
 share/calibre/recipes/ivanamilakovic.recipe
 share/calibre/recipes/ixbt.recipe
-share/calibre/recipes/izdiham.com.recipe
 share/calibre/recipes/izvestia.recipe
 share/calibre/recipes/jagran_josh.recipe
 share/calibre/recipes/jakarta_globe.recipe
@@ -2492,6 +2494,7 @@ share/calibre/recipes/jezebel.recipe
 share/calibre/recipes/jijinews.recipe
 share/calibre/recipes/joelonsoftware.recipe
 share/calibre/recipes/johm.recipe
+share/calibre/recipes/joongang.recipe
 share/calibre/recipes/joop.recipe
 share/calibre/recipes/jot_down.recipe
 share/calibre/recipes/journalgazette.recipe
@@ -2643,6 +2646,7 @@ share/calibre/recipes/mac_world.recipe
 share/calibre/recipes/mac_world_uk.recipe
 share/calibre/recipes/macity.recipe
 share/calibre/recipes/macleans.recipe
+share/calibre/recipes/maekyung.recipe
 share/calibre/recipes/magazyn_consido.recipe
 share/calibre/recipes/maharashtra_times.recipe
 share/calibre/recipes/mail_and_guardian.recipe
@@ -2931,6 +2935,7 @@ share/calibre/recipes/pravda_rs.recipe
 share/calibre/recipes/pravda_ru.recipe
 share/calibre/recipes/pravo.recipe
 share/calibre/recipes/prawica_net.recipe
+share/calibre/recipes/presse_portal.recipe
 share/calibre/recipes/presseurop.recipe
 share/calibre/recipes/pressonline.recipe
 share/calibre/recipes/pressthink.recipe
@@ -3064,7 +3069,7 @@ share/calibre/recipes/sinfest.recipe
 share/calibre/recipes/singtao_daily.recipe
 share/calibre/recipes/singtaohk.recipe
 share/calibre/recipes/siol.recipe
-share/calibre/recipes/sivil_dusunce.recipe
+share/calibre/recipes/sisainlive.recipe
 share/calibre/recipes/sizinti_derigisi.recipe
 share/calibre/recipes/skai.recipe
 share/calibre/recipes/skeptic.recipe
