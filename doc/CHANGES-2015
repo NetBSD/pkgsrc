@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4083 2015/09/30 11:41:10 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4084 2015/09/30 11:49:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7104,3 +7104,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/xemacs-packages to 1.17 [hauke 2015-09-30]
 	Updated devel/p5-Graph to 0.9703 [wen 2015-09-30]
 	Updated net/p5-Test-TCP to 2.14 [wen 2015-09-30]
+	Updated devel/p5-Test-Deep to 0.119 [wen 2015-09-30]
