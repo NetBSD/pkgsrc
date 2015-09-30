@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2014/02/12 23:18:45 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2015/09/30 08:25:37 tnn Exp $
 
 BUILDLINK_TREE+=	libwww
 
@@ -18,8 +18,8 @@ pkgbase := libwww
 .include "../../net/socks4/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.libwww:Msocks5)
-.include "../../net/socks5/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.libwww:Mdante)
+.include "../../net/dante/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
