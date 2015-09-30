@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/09/25 13:21:52 manu Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/30 02:03:56 manu Exp $
 
-DISTNAME=	syncffsd-0.7
+DISTNAME=	syncffsd-0.8
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/syncffsd/
 EXTRACT_SUFX=	.tgz
