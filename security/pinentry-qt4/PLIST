@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2010/02/25 11:30:03 drochner Exp $
-bin/pinentry-qt4
+@comment $NetBSD: PLIST,v 1.2 2015/09/30 19:56:42 wiz Exp $
+bin/pinentry-qt

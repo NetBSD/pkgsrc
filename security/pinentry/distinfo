@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2015/07/06 10:31:00 wiz Exp $
+$NetBSD: distinfo,v 1.20 2015/09/30 19:56:42 wiz Exp $
 
-SHA1 (pinentry-0.9.5.tar.bz2) = 11979a6826ef5de73b52fd8c5b84f8321a133e53
-RMD160 (pinentry-0.9.5.tar.bz2) = 526cce33b4178fe86d64a6f48b01e90ec964dd10
-Size (pinentry-0.9.5.tar.bz2) = 514677 bytes
+SHA1 (pinentry-0.9.6.tar.bz2) = 296992d7b26ba2a517b093ccae26bc00b88b3bb5
+RMD160 (pinentry-0.9.6.tar.bz2) = 1f2eb6ececac9c952ffb46b85b869300a4b27cd3
+Size (pinentry-0.9.6.tar.bz2) = 432889 bytes
