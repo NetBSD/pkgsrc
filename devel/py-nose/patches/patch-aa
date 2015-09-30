@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2012/02/17 18:30:23 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2015/09/30 13:58:15 jperkin Exp $
+
+Use PKGMANDIR.
 
 --- setup.py.orig	2011-07-30 23:49:15.000000000 +0000
 +++ setup.py
@@ -16,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2012/02/17 18:30:23 drochner Exp $
      keywords = 'test unittest doctest automatic discovery',
      url = 'http://readthedocs.org/docs/nose/',
 -    data_files = [('man/man1', ['nosetests.1'])],
-+    data_files = [('man/man1', ['nosetests' + sys.version[0:3] + '.1'])],
++    data_files = [('@PKGMANDIR@/man1', ['nosetests' + sys.version[0:3] + '.1'])],
      package_data = {'': ['*.txt',
                           'examples/*.py',
                           'examples/*/*.py']},
