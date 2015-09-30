@@ -1,0 +1,15 @@
+$NetBSD: patch-dirmngr_Makefile.in,v 1.1 2015/09/30 12:56:47 fhajny Exp $
+
+Bring in libsocket, needed on SunOS.
+
+--- dirmngr/Makefile.in.orig	2015-09-30 11:26:38.032707039 +0000
++++ dirmngr/Makefile.in
+@@ -723,7 +723,7 @@ dirmngr-client$(EXEEXT): $(dirmngr_clien
+ 
+ dirmngr_ldap$(EXEEXT): $(dirmngr_ldap_OBJECTS) $(dirmngr_ldap_DEPENDENCIES) $(EXTRA_dirmngr_ldap_DEPENDENCIES) 
+ 	@rm -f dirmngr_ldap$(EXEEXT)
+-	$(AM_V_CCLD)$(dirmngr_ldap_LINK) $(dirmngr_ldap_OBJECTS) $(dirmngr_ldap_LDADD) $(LIBS)
++	$(AM_V_CCLD)$(dirmngr_ldap_LINK) $(dirmngr_ldap_OBJECTS) $(dirmngr_ldap_LDADD) $(LIBS) $(NETLIBS)
+ 
+ t-dns-cert$(EXEEXT): $(t_dns_cert_OBJECTS) $(t_dns_cert_DEPENDENCIES) $(EXTRA_t_dns_cert_DEPENDENCIES) 
+ 	@rm -f t-dns-cert$(EXEEXT)
