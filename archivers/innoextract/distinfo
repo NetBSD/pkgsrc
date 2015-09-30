@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/04/03 09:40:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/09/30 20:05:07 wiz Exp $
 
-SHA1 (innoextract-1.4.tar.gz) = 3fd3ac98c802c72a1f4ae5f6e6a5dca35747ff98
-RMD160 (innoextract-1.4.tar.gz) = 5f9cd26d508ee8f28cedaa619df4108f5f761a9c
-Size (innoextract-1.4.tar.gz) = 151230 bytes
-SHA1 (patch-CMakeLists.txt) = ebc9db4211bf01ebab6881ea23e3e5c32321a7aa
-SHA1 (patch-cmake_VersionString.cmake) = db368ea50042a73b78770c0b43d3480398fdff1c
+SHA1 (innoextract-1.5.tar.gz) = cd3e3f68213c2730e9db4665b2997f5052f12af7
+RMD160 (innoextract-1.5.tar.gz) = 95ca36a54ff074272e11f680d1dbc2f83fdc9d13
+Size (innoextract-1.5.tar.gz) = 179582 bytes
