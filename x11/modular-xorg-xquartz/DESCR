@@ -1,0 +1,4 @@
+The XQuartz project is an open-source effort to develop a version of
+the X.Org X Window System that runs on OS X. Together with supporting
+libraries and applications, it forms the X11.app that Apple has shipped
+with OS X since version 10.5.
