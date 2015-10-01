@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/07/24 10:58:42 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.16 2015/10/01 15:53:48 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-jasper-${PIXBUF2_VERSION}
@@ -21,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libtiff --without-libjpeg --without-libpng
 CONFIGURE_ARGS+=	--with-libjasper
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 
 BUILD_DIRS=	gdk-pixbuf
 BUILD_TARGET=	libpixbufloader-jasper.la
