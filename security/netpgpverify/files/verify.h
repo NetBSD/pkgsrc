@@ -23,9 +23,9 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef NETPGP_VERIFY_H_
-#define NETPGP_VERIFY_H_	20150919
+#define NETPGP_VERIFY_H_	20150930
 
-#define NETPGPVERIFY_VERSION	"netpgpverify portable 20150919"
+#define NETPGPVERIFY_VERSION	"netpgpverify portable 20150930"
 
 #include <sys/types.h>
 
