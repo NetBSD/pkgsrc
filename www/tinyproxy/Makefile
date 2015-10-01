@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/08/13 20:32:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2015/10/01 07:02:29 tnn Exp $
 #
 
 DISTNAME=	tinyproxy-1.8.3
@@ -33,8 +33,6 @@ FILES_SUBST+=		TINYPROXY_GROUP=${TINYPROXY_GROUP:Q}
 CONFIGURE_ARGS+=	--with-config=${PKG_SYSCONFDIR}/tinyproxy.conf
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-transparent-proxy
-
-.include "options.mk"
 
 EGDIR=		${PREFIX}/share/examples/tinyproxy
 
