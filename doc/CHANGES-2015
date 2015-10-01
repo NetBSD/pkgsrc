@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4119 2015/10/01 11:08:16 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4120 2015/10/01 12:58:50 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7141,3 +7141,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/xz to 5.2.2 [adam 2015-10-01]
 	Updated print/poppler to 0.36.0 [wiz 2015-10-01]
 	Added wm/quartz-wm version 1.3.1 [tnn 2015-10-01]
+	Added x11/modular-xorg-xquartz version 1.17.2 [tnn 2015-10-01]

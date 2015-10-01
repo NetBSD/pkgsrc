@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.770 2015/09/27 16:50:56 kamil Exp $
+# $NetBSD: Makefile,v 1.771 2015/10/01 12:58:50 tnn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -343,6 +343,7 @@ SUBDIR+=	modeline
 SUBDIR+=	modular-xorg-server
 SUBDIR+=	modular-xorg-server112
 SUBDIR+=	modular-xorg-xephyr
+SUBDIR+=	modular-xorg-xquartz
 SUBDIR+=	motif
 SUBDIR+=	mowitz
 SUBDIR+=	mrxvt
