@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4128 2015/10/01 23:06:52 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.4129 2015/10/01 23:11:55 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7150,3 +7150,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/maxima to 5.37.2 [prlw1 2015-10-01]
 	Updated www/logswan to 1.01 [kamil 2015-10-01]
 	Updated devel/openocd to 0.9.0 [rodent 2015-10-01]
+	Updated devel/py-pip to 7.1.2 [rodent 2015-10-01]
