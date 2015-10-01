@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4123 2015/10/01 14:59:51 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4124 2015/10/01 15:18:00 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7145,3 +7145,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/py-relatorio to 0.6.2 [richard 2015-10-01]
 	Updated chat/ejabberd to 15.09 [fhajny 2015-10-01]
 	Updated cad/gtkwave to 3.3.67 [mef 2015-10-01]
+	Updated devel/kyua to 0.11 [prlw1 2015-10-01]
