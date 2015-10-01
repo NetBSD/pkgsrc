@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/09/11 21:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/10/01 12:32:22 tnn Exp $
 
 DISTNAME=		xinit-1.3.4
 CATEGORIES=		x11
@@ -12,7 +12,7 @@ LICENSE=		mit
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xinit=${PREFIX}/bin/xinit
-USE_TOOLS+=		pkg-config xauth:run
+USE_TOOLS+=		pkg-config xauth:run gmake # nb: gmake is needed on Darwin
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
