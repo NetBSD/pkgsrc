@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2015/06/05 22:50:26 youri Exp $
+# $NetBSD: Makefile,v 1.130 2015/10/01 11:08:16 tnn Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -69,6 +69,7 @@ SUBDIR+=	pekwm
 SUBDIR+=	piewm
 SUBDIR+=	pwm
 SUBDIR+=	py-tyle
+SUBDIR+=	quartz-wm
 SUBDIR+=	ratpoison
 SUBDIR+=	sawfish
 SUBDIR+=	selectwm
