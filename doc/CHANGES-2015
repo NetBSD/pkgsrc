@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4127 2015/10/01 21:33:28 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4128 2015/10/01 23:06:52 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7149,3 +7149,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gdk-pixbuf2 to 2.32.1 [wiz 2015-10-01]
 	Updated math/maxima to 5.37.2 [prlw1 2015-10-01]
 	Updated www/logswan to 1.01 [kamil 2015-10-01]
+	Updated devel/openocd to 0.9.0 [rodent 2015-10-01]
