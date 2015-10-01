@@ -1,0 +1,4 @@
+quartz-wm is the window manager used by XQuartz to bring an OS X-like
+experience to X11 applications. It makes use of the AppleWM X11 protocol
+extension to have libXplugin within XQuartz render window decoration on its
+behalf and handles basic wm functionality as described by the ICCCM.
