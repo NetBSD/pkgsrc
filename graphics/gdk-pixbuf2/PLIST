@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2014/01/12 00:24:01 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/10/01 15:53:48 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h
@@ -19,14 +20,11 @@ lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-gif.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-icns.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jpeg.la
-lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-pcx.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-pnm.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-qtif.la
-lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ras.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-tga.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-tiff.la
-lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-wbmp.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xbm.la
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xpm.la
 lib/girepository-1.0/GdkPixbuf-2.0.typelib
@@ -43,6 +41,7 @@ share/gtk-doc/html/gdk-pixbuf/api-index-2-2.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-26.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-28.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-30.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-32.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-4.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-6.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-8.html
@@ -71,7 +70,6 @@ share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-query-loaders.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf.devhelp2
 share/gtk-doc/html/gdk-pixbuf/home.png
 share/gtk-doc/html/gdk-pixbuf/index.html
-share/gtk-doc/html/gdk-pixbuf/index.sgml
 share/gtk-doc/html/gdk-pixbuf/left-insensitive.png
 share/gtk-doc/html/gdk-pixbuf/left.png
 share/gtk-doc/html/gdk-pixbuf/license.html
@@ -130,6 +128,7 @@ share/locale/is/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/it/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ja/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ka/LC_MESSAGES/gdk-pixbuf.mo
+share/locale/kk/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/km/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/kn/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ko/LC_MESSAGES/gdk-pixbuf.mo
