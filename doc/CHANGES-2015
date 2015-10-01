@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4117 2015/10/01 05:12:24 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4118 2015/10/01 05:36:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7139,3 +7139,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Dancer to 1.3142 [wen 2015-10-01]
 	Updated www/p5-Dancer2 to 0.162000 [wen 2015-10-01]
 	Updated archivers/xz to 5.2.2 [adam 2015-10-01]
+	Updated print/poppler to 0.36.0 [wiz 2015-10-01]
