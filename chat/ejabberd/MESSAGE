@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2014/03/10 11:33:59 fhajny Exp $
-
-You will need to customize the following files to configure ejabberd for
-local use:
-
-    ${PKG_SYSCONFDIR}/ejabberd.yml
-
-===========================================================================
