@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/10/01 09:36:57 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2015/10/01 13:50:05 tnn Exp $
 
 DISTNAME=	libepoxy-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -36,6 +36,10 @@ PLIST.glx=		yes
 .else
 # On Darwin, we patch upstream to enable this.
 PLIST.glx=		yes
+.endif
+
+.if ${OPSYS} == "Darwin" && ${X11_TYPE} == "modular"
+CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.1.dylib\"
 .endif
 
 .include "../../lang/python/tool.mk"
