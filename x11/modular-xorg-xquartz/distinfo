@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2015/10/01 12:55:09 tnn Exp $
+
+SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
+RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
+Size (xorg-server-1.17.2.tar.bz2) = 5767983 bytes
+SHA1 (patch-fb_fb.h) = 82099b0982da0d9d64e3ae8f03393ec0df22f916
+SHA1 (patch-fb_fbpict.c) = 101645f653665c917c0f899b0eb771e7ff1280c4
+SHA1 (patch-fb_fbpict.h) = 686d6634e0cee9b56660787b616435c8134f8c61
+SHA1 (patch-fb_fbscreen.c) = 6bc92e7002f215430e8647337d596bfe99d3d63a
+SHA1 (patch-fb_fbtrap.c) = 60e74d8d6f86dfb24491b17170e02a6040ad9abb
+SHA1 (patch-hw_xfree86_Makefile.am) = 0388fa2a2cb08194def579c014848eaf66f02b24
+SHA1 (patch-hw_xquartz_GL_indirect.c) = f915ce2f6043c21cbaf6a656b7339776156b609e
+SHA1 (patch-hw_xquartz_X11Controller.m) = d25fb8915d6ee9b1214a346d3042b47a43ee46f8
+SHA1 (patch-hw_xquartz_pbproxy_Makefile.in) = a877cf56033544b46169757c1ceda5f17fe7a224
+SHA1 (patch-mi_miexpose.c) = e53cbee2330300ef016aae5a5ee9fe8a65efc46b
+SHA1 (patch-render_mipict.c) = fa9058f76d69d9227c41f16094a9ee9926214337
+SHA1 (patch-render_mipict.h) = 11ee673c750ce7860670110ce792ad9f0094d4ad
+SHA1 (patch-render_mitrap.c) = d31fdb56b129b4d5c131dd8caaac41cc37df9f99
+SHA1 (patch-render_mitri.c) = dfb0061cb39bfadea0ac32f77f03e988f958d14c
