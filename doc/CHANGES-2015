@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4114 2015/10/01 01:15:54 agc Exp $
+$NetBSD: CHANGES-2015,v 1.4115 2015/10/01 02:18:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7136,3 +7136,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/gettext to 0.19.6 [wiz 2015-09-30]
 	Updated security/netpgpverify to 20150930 [agc 2015-09-30]
 	Updated security/libnetpgpverify to 20150930 [agc 2015-09-30]
+	Updated www/p5-Dancer to 1.3142 [wen 2015-10-01]
