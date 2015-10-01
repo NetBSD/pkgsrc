@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2015/03/02 09:36:24 adam Exp $
+# $NetBSD: Makefile,v 1.22 2015/10/01 05:11:36 adam Exp $
 
-DISTNAME=	xz-5.2.1
+DISTNAME=	xz-5.2.2
 CATEGORIES=	archivers
 MASTER_SITES=	http://tukaani.org/xz/
 EXTRACT_SUFX=	.tar.bz2
