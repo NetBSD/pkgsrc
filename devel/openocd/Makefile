@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/04/04 00:26:42 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/01 23:06:37 rodent Exp $
 
-DISTNAME=	openocd-0.8.0
+DISTNAME=	openocd-0.9.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openocd/}
 EXTRACT_SUFX=	.tar.bz2
