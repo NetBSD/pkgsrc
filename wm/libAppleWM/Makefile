@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/16 20:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/01 11:03:07 tnn Exp $
 
 DISTNAME=	libAppleWM-1.4.1
 CATEGORIES=	x11 devel
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	applewm.pc.in
+
+MAKE_ENV+=		OSX_SDK_PATH=${OSX_SDK_PATH}
 
 .include "../../wm/applewmproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
