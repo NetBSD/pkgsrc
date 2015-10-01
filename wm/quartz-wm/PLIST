@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/01 11:06:08 tnn Exp $
+bin/quartz-wm
+lib/libquartz-wm-ds.1.dylib
+lib/libquartz-wm-ds.dylib
+man/man1/quartz-wm.1
