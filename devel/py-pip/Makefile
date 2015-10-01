@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/07/04 14:12:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2015/10/01 23:11:41 rodent Exp $
 
-DISTNAME=	pip-1.5.6
-PKGREVISION=	1
+DISTNAME=	pip-7.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pip/
@@ -19,6 +18,7 @@ REPLACE_PYTHON+=	pip/_vendor/requests/packages/chardet/chardetect.py
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/pip
+	${RM} -f ${DESTDIR}${PREFIX}/bin/pip[2-3]
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
