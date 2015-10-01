@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4116 2015/10/01 02:32:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4117 2015/10/01 05:12:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7138,3 +7138,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/libnetpgpverify to 20150930 [agc 2015-09-30]
 	Updated www/p5-Dancer to 1.3142 [wen 2015-10-01]
 	Updated www/p5-Dancer2 to 0.162000 [wen 2015-10-01]
+	Updated archivers/xz to 5.2.2 [adam 2015-10-01]
