@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2015/09/01 11:36:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.58 2015/10/01 14:48:14 fhajny Exp $
 
-DISTNAME=	ejabberd-15.07
+DISTNAME=	ejabberd-15.09
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -23,16 +23,21 @@ USE_TOOLS+=		bash:run gmake patch
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-iconv
-CONFIGURE_ARGS+=	--enable-json
 CONFIGURE_ARGS+=	--enable-lager
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-nif
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pgsql
 CONFIGURE_ARGS+=	--enable-zlib
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 
 CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+
+# Configure normally happens as part of getting the deps, which we avoid
+# by using a separate deps distfile.
+CONFIGURE_DIRS=		. deps/esip deps/p1_stringprep deps/p1_tls deps/p1_xml deps/p1_yaml
+BUILD_DIRS=		.
 
 RCD_SCRIPTS=		ejabberd
 
@@ -66,8 +71,7 @@ PKG_SHELL.${EJABBERD_USER}=	${SH}
 
 EGDIR=			share/examples/ejabberd
 
-INSTALLATION_DIRS+=	share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EGDIR} share/bash-completion.d
 
 CONF_FILES_PERMS=	${EGDIR}/ejabberd.yml ${PKG_SYSCONFDIR}/ejabberd.yml \
 			${ROOT_USER} ${EJABBERD_GROUP} 0640
@@ -77,21 +81,15 @@ CONF_FILES_PERMS+=	${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc \
 			${ROOT_USER} ${EJABBERD_GROUP} 0640
 SPECIAL_PERMS+=		sbin/ejabberdctl ${ROOT_USER} ${EJABBERD_GROUP} 0750
 
-REPLACE_BASH=		ejabberdctl.template tools/captcha.sh \
-			tools/joincluster tools/leavecluster
+REPLACE_BASH=		tools/captcha.sh
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	Makefile.in
-SUBST_FILES.paths+=	ejabberd.yml.example
-SUBST_FILES.paths+=	ejabberdctl.template
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
-SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
-SUBST_SED.paths+=	-e 's,@EJABBERD_PIDDIR@,${EJABBERD_PIDDIR},g'
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@DISTNAME@,${DISTNAME},g'
+SUBST_FILES.paths=	Makefile.in ejabberd.yml.example ejabberdctl.template
+SUBST_FILES.paths+=	tools/ejabberdctl.bc
+SUBST_VARS.paths=	DISTNAME EJABBERD_DB EJABBERD_LOGDIR EJABBERD_PIDDIR
+SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX
 
 # Helper target to refresh remote deps for tarring up
 fetch-deps:
@@ -99,6 +97,10 @@ fetch-deps:
 
 post-extract:
 	${LN} -s ${WRKDIR}/deps ${WRKSRC}/
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/tools/ejabberdctl.bc				\
+		${DESTDIR}${PREFIX}/share/bash-completion.d/ejabberd
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
