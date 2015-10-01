@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/09/16 12:28:53 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2015/10/01 09:36:57 tnn Exp $
 
 DISTNAME=	libepoxy-1.3.1
 PKGREVISION=	1
@@ -41,7 +41,7 @@ PLIST.glx=		yes
 .include "../../lang/python/tool.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.if !empty(MESALIB_SUPPORTS_EGL:Myes)
+.if !empty(MESALIB_SUPPORTS_EGL:Myes) && ${OPSYS} != "Darwin"
 PLIST.egl=		yes
 .endif
 .include "../../x11/libX11/buildlink3.mk"
