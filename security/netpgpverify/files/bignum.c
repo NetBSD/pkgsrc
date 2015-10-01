@@ -5121,6 +5121,94 @@ subtract_modulo(mp_int *a, mp_int *b, mp_int *c, mp_int *d)
 	return res;
 }
 
+/* bn_mp_gcd.c */
+/* Greatest Common Divisor using the binary method */
+static int
+mp_gcd(mp_int *a, mp_int *b, mp_int *c)
+{
+	mp_int  u, v;
+	int     k, u_lsb, v_lsb, res;
+
+	/* either zero than gcd is the largest */
+	if (PGPV_BN_is_zero(a) == MP_YES) {
+		return absolute(b, c);
+	}
+	if (PGPV_BN_is_zero(b) == MP_YES) {
+		return absolute(a, c);
+	}
+
+	/* get copies of a and b we can modify */
+	if ((res = mp_init_copy(&u, a)) != MP_OKAY) {
+		return res;
+	}
+
+	if ((res = mp_init_copy(&v, b)) != MP_OKAY) {
+		goto LBL_U;
+	}
+
+	/* must be positive for the remainder of the algorithm */
+	u.sign = v.sign = MP_ZPOS;
+
+	/* B1.  Find the common power of two for u and v */
+	u_lsb = mp_cnt_lsb(&u);
+	v_lsb = mp_cnt_lsb(&v);
+	k = MIN(u_lsb, v_lsb);
+
+	if (k > 0) {
+		/* divide the power of two out */
+		if ((res = rshift_bits(&u, k, &u, NULL)) != MP_OKAY) {
+			goto LBL_V;
+		}
+
+		if ((res = rshift_bits(&v, k, &v, NULL)) != MP_OKAY) {
+			goto LBL_V;
+		}
+	}
+
+	/* divide any remaining factors of two out */
+	if (u_lsb != k) {
+		if ((res = rshift_bits(&u, u_lsb - k, &u, NULL)) != MP_OKAY) {
+			goto LBL_V;
+		}
+	}
+
+	if (v_lsb != k) {
+		if ((res = rshift_bits(&v, v_lsb - k, &v, NULL)) != MP_OKAY) {
+			goto LBL_V;
+		}
+	}
+
+	while (PGPV_BN_is_zero(&v) == 0) {
+		/* make sure v is the largest */
+		if (compare_magnitude(&u, &v) == MP_GT) {
+			/* swap u and v to make sure v is >= u */
+			mp_exch(&u, &v);
+		}
+
+		/* subtract smallest from largest */
+		if ((res = signed_subtract(&v, &u, &v)) != MP_OKAY) {
+			goto LBL_V;
+		}
+
+		/* Divide out all factors of two */
+		if ((res = rshift_bits(&v, mp_cnt_lsb(&v), &v, NULL)) != MP_OKAY) {
+			goto LBL_V;
+		} 
+	} 
+
+	/* multiply by 2**k which we divided out at the beginning */
+	if ((res = lshift_bits(&u, k, c)) != MP_OKAY) {
+		goto LBL_V;
+	}
+	c->sign = MP_ZPOS;
+	res = MP_OKAY;
+LBL_V:
+	mp_clear (&u);
+LBL_U:
+	mp_clear (&v);
+	return res;
+}
+
 /**************************************************************************/
 
 /* PGPV_BIGNUM emulation layer */
@@ -5545,6 +5633,7 @@ PGPV_BN_rand(PGPV_BIGNUM *rnd, int bits, int top, int bottom)
 		r <<= 32;
 		r |= arc4random();
 		rnd->dp[i] = (r & MP_MASK);
+		rnd->used += 1;
 	}
 	if (top == 0) {
 		rnd->dp[rnd->used - 1] |= (((mp_digit)1)<<((mp_digit)DIGIT_BIT));
@@ -5680,4 +5769,11 @@ PGPV_BN_factorial(PGPV_BIGNUM *res, PGPV_BIGNUM *f)
 	}
 	PGPV_BN_free(i);
 	return 1;
+}
+
+/* get greatest common divisor */
+int
+PGPV_BN_gcd(PGPV_BIGNUM *r, PGPV_BIGNUM *a, PGPV_BIGNUM *b, PGPV_BN_CTX *ctx)
+{
+	return mp_gcd(a, b, r);
 }

@@ -44,6 +44,65 @@
 
 __BEGIN_DECLS
 
+#ifdef	USE_BN_INTERFACE
+#define	BIGNUM		PGPV_BIGNUM
+#define	BN_ULONG	PGPV_BN_ULONG
+#define	BN_CTX		PGPV_BN_CTX
+#define BN_is_negative	PGPV_BN_is_negative
+#define BN_is_zero	PGPV_BN_is_zero
+#define BN_is_odd	PGPV_BN_is_odd
+#define BN_is_even	PGPV_BN_is_even
+#define BN_new		PGPV_BN_new
+#define BN_dup		PGPV_BN_dup
+#define BN_copy		PGPV_BN_copy
+#define BN_init		PGPV_BN_init
+#define BN_free		PGPV_BN_free
+#define BN_clear	PGPV_BN_clear
+#define BN_clear_free	PGPV_BN_clear_free
+#define BN_cmp		PGPV_BN_cmp
+#define BN_bn2bin	PGPV_BN_bn2bin
+#define BN_bn2hex	PGPV_BN_bn2hex
+#define BN_bn2dec	PGPV_BN_bn2dec
+#define BN_bn2radix	PGPV_BN_bn2radix
+#define BN_hex2bn	PGPV_BN_hex2bn
+#define BN_dec2bn	PGPV_BN_dec2bn
+#define BN_radix2bn	PGPV_BN_radix2bn
+#ifndef _KERNEL
+#define BN_print_fp	PGPV_BN_print_fp
+#endif
+#define BN_add		PGPV_BN_add
+#define BN_sub		PGPV_BN_sub
+#define BN_mul		PGPV_BN_mul
+#define BN_div		PGPV_BN_div
+#define BN_swap		PGPV_BN_swap
+#define BN_bitop	PGPV_BN_bitop
+#define BN_lshift	PGPV_BN_lshift
+#define BN_lshift1	PGPV_BN_lshift1
+#define BN_rshift	PGPV_BN_rshift
+#define BN_rshift1	PGPV_BN_rshift1
+#define BN_set_word	PGPV_BN_set_word
+#define BN_set_negative	PGPV_BN_set_negative
+#define BN_num_bytes	PGPV_BN_num_bytes
+#define BN_num_bits	PGPV_BN_num_bits
+#define BN_mod_exp	PGPV_BN_mod_exp
+#define BN_mod_inverse	PGPV_BN_mod_inverse
+#define BN_mod_mul	PGPV_BN_mod_mul
+#define BN_raise	PGPV_BN_raise
+#define BN_factorial	PGPV_BN_factorial
+#define BN_CTX_new	PGPV_BN_CTX_new
+#define BN_CTX_get	PGPV_BN_CTX_get
+#define BN_CTX_start	PGPV_BN_CTX_start
+#define BN_CTX_end	PGPV_BN_CTX_end
+#define BN_CTX_init	PGPV_BN_CTX_init
+#define BN_CTX_free	PGPV_BN_CTX_free
+#define BN_rand		PGPV_BN_rand
+#define BN_rand_range	PGPV_BN_rand_range
+#define BN_is_prime	PGPV_BN_is_prime
+#define BN_value_one	PGPV_BN_value_one
+#define BN_is_bit_set	PGPV_BN_is_bit_set
+#define BN_gcd		PGPV_BN_gcd
+#endif /* USE_BN_INTERFACE */
+
 /* should be 32bit on ILP32, 64bit on LP64 */
 typedef unsigned long	mp_digit;
 typedef uint64_t	mp_word;
@@ -146,6 +205,8 @@ int PGPV_BN_is_prime(const PGPV_BIGNUM */*a*/, int /*checks*/, void (*callback)(
 
 const PGPV_BIGNUM *PGPV_BN_value_one(void);
 int PGPV_BN_is_bit_set(const PGPV_BIGNUM */*a*/, int /*n*/);
+
+int PGPV_BN_gcd(PGPV_BIGNUM */*r*/, PGPV_BIGNUM */*a*/, PGPV_BIGNUM */*b*/, PGPV_BN_CTX */*ctx*/);
 
 __END_DECLS
 
