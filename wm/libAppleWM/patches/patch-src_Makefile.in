@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/10/01 11:03:07 tnn Exp $
+
+--- src/Makefile.in.orig	2011-04-06 23:02:31.000000000 +0000
++++ src/Makefile.in
+@@ -258,7 +258,7 @@ AM_CFLAGS = \
+ 	$(APPLEWM_CFLAGS) \
+ 	$(MALLOC_ZERO_CFLAGS) \
+ 	$(CWARNFLAGS) \
+-	-F/System/Library/Frameworks/ApplicationServices.framework/Frameworks \
++	-F$(OSX_SDK_PATH)/System/Library/Frameworks/ApplicationServices.framework/Frameworks \
+ 	-I$(top_srcdir)/include \
+ 	-I$(top_srcdir)/include/X11 \
+ 	-I$(top_srcdir)/include/X11/extensions
