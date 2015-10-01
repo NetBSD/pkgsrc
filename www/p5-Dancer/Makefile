@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2015/07/11 09:09:50 wen Exp $
+# $NetBSD: Makefile,v 1.35 2015/10/01 02:16:00 wen Exp $
 
-DISTNAME=	Dancer-1.3140
+DISTNAME=	Dancer-1.3142
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Y/YA/YANICK/}
@@ -13,7 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Dancer/.packlist
 
-BUILD_DEPENDS+=	p5-CGI>=0:../../www/p5-CGI
+BUILD_DEPENDS+=	p5-CGI>=0:../../www/p5-CGI \
+		p5-Test-NoWarnings>=0:../../devel/p5-Test-NoWarnings
 
 DEPENDS+=	p5-Clone>=0:../../devel/p5-Clone
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
