@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.10 2015/10/02 19:25:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.11 2015/10/02 19:49:40 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -29,3 +29,9 @@ textproc/icu: security fix
 
 Pullup ticket #4827 - requested by ryoon
 www/firefox: build fix
+
+Pullup ticket #4828 - requested by bouyer
+www/p5-HTML-StripScripts: build fix
+
+Pullup ticket #4829 - requested by bouyer
+mail/mhonarc: build fix
