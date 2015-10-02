@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2015/08/26 11:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2015/10/02 07:55:53 wiz Exp $
 
-DISTNAME=	mame-0.165
+DISTNAME=	mame-0.166
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -15,7 +15,6 @@ SHAREDIR=		share/mame
 INSTALLATION_DIRS=	bin ${DOCDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man6
 INSTALLATION_DIRS+=	${SHAREDIR}/artwork ${SHAREDIR}/hash
 
-
 RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -23,9 +22,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 USE_LANGUAGES=		c99 c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		bsdtar gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile
+EXTRACT_USING=		bsdtar
 # 0.141 has too many conversion warnings
 MAKE_ENV=		NOWERROR=1
 
