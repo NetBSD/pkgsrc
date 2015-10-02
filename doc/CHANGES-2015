@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4132 2015/10/02 07:57:58 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4133 2015/10/02 12:58:39 reed Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7099,7 +7099,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/po4a to 0.47 [ryoon 2015-09-29]
 	Updated filesystems/openafs to 1.6.14 [jakllsch 2015-09-29]
 	Updated devel/lua-lpeg to 1.0.0 [alnsn 2015-09-29]
-	Updated net-syncffsd to 0.8 [manu 2015-09-30]
+	Updated net/syncffsd to 0.8 [manu 2015-09-30]
 	Removed net/socks5 successor net/dante [tnn 2015-09-30]
 	Updated editors/xemacs-packages to 1.17 [hauke 2015-09-30]
 	Updated devel/p5-Graph to 0.9703 [wen 2015-09-30]
