@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.21 2015/03/17 19:50:42 ryoon Exp $
+$NetBSD: patch-as,v 1.22 2015/10/02 22:49:36 ryoon Exp $
 
 * Fix _res is not supported for multi-threaded programs. error.
 * Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2015-03-09 05:34:27.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2015-09-25 07:35:29.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2201,8 +2201,7 @@ AC_LANG_CPLUSPLUS
+@@ -2190,8 +2190,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -15,7 +15,7 @@ $NetBSD: patch-as,v 1.21 2015/03/17 19:50:42 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3082,7 +3081,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3029,7 +3028,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -24,7 +24,7 @@ $NetBSD: patch-as,v 1.21 2015/03/17 19:50:42 ryoon Exp $
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3974,6 +3973,16 @@ MOZ_SUBCONFIGURE_ICU()
+@@ -3879,6 +3878,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
@@ -39,5 +39,5 @@ $NetBSD: patch-as,v 1.21 2015/03/17 19:50:42 ryoon Exp $
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
- MALLOC_HEADERS="malloc.h malloc_np.h malloc/malloc.h sys/malloc.h"
- MALLOC_H=
+ MOZ_CHECK_ALLOCATOR
+ 

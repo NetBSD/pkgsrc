@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.3 2015/09/21 05:03:45 ryoon Exp $
+$NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/10/02 22:49:36 ryoon Exp $
 
---- mozilla/image/decoders/nsJPEGDecoder.cpp.orig	2015-09-02 09:27:13.000000000 +0000
+--- mozilla/image/decoders/nsJPEGDecoder.cpp.orig	2015-09-25 07:34:55.000000000 +0000
 +++ mozilla/image/decoders/nsJPEGDecoder.cpp
 @@ -23,13 +23,28 @@
  
@@ -32,7 +32,7 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.3 2015/09/21 05:03:4
  
  static void cmyk_convert_rgb(JSAMPROW row, JDIMENSION width);
  
-@@ -373,6 +388,7 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -368,6 +383,7 @@ nsJPEGDecoder::WriteInternal(const char*
          case JCS_GRAYSCALE:
          case JCS_RGB:
          case JCS_YCbCr:
@@ -40,7 +40,7 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.3 2015/09/21 05:03:4
            // if we're not color managing we can decode directly to
            // MOZ_JCS_EXT_NATIVE_ENDIAN_XRGB
            if (mCMSMode != eCMSMode_All) {
-@@ -381,6 +397,9 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -376,6 +392,9 @@ nsJPEGDecoder::WriteInternal(const char*
            } else {
                mInfo.out_color_space = JCS_RGB;
            }
@@ -50,7 +50,7 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.3 2015/09/21 05:03:4
            break;
          case JCS_CMYK:
          case JCS_YCCK:
-@@ -450,6 +469,15 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -443,6 +462,16 @@ nsJPEGDecoder::WriteInternal(const char*
        return; // I/O suspension
      }
  
@@ -63,10 +63,11 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.3 2015/09/21 05:03:4
 +      mInfo.cconvert->color_convert = ycc_rgb_convert_argb;
 +    }
 +#endif
- 
++
      // If this is a progressive JPEG ...
      mState = mInfo.buffered_image ?
-@@ -632,7 +660,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
+              JPEG_DECOMPRESS_PROGRESSIVE : JPEG_DECOMPRESS_SEQUENTIAL;
+@@ -624,7 +653,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
  
        MOZ_ASSERT(imageRow, "Should have a row buffer here");
  
@@ -78,9 +79,9 @@ $NetBSD: patch-mozilla_image_decoders_nsJPEGDecoder.cpp,v 1.3 2015/09/21 05:03:4
          // Special case: scanline will be directly converted into packed ARGB
          if (jpeg_read_scanlines(&mInfo, (JSAMPARRAY)&imageRow, 1) != 1) {
            *suspend = true; // suspend
-@@ -959,6 +991,282 @@ term_source (j_decompress_ptr jd)
+@@ -948,6 +981,282 @@ term_source (j_decompress_ptr jd)
+ } // namespace image
  } // namespace mozilla
- 
  
 +#ifndef JCS_EXTENSIONS
 +/**************** YCbCr -> Cairo's RGB24/ARGB32 conversion: most common case **************/

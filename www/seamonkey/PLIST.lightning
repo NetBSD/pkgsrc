@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST.lightning,v 1.21 2015/09/21 05:03:45 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.22 2015/10/02 22:49:35 ryoon Exp $
 lib/seamonkey/extensions/quitter@mozilla.org/chrome.manifest
-lib/seamonkey/extensions/quitter@mozilla.org/chrome/.mkdir.done
 lib/seamonkey/extensions/quitter@mozilla.org/chrome/quitter/content/contentscript.js
 lib/seamonkey/extensions/quitter@mozilla.org/components/QuitterObserver.js
 lib/seamonkey/extensions/quitter@mozilla.org/install.rdf
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome.manifest
-lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/.mkdir.done
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.dtd
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.properties
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/browserRequest.js
@@ -46,7 +44,7 @@ lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/shim/Pro
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/shim/Task.jsm
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/shim/Timer.jsm
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/modules/timezoneMap.jsm
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/application.ini
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/app.ini
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarm.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmMonitor.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmService.js
@@ -94,7 +92,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calW
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calWeekInfoService.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calWeekPrinter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/.mkdir.done
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar-en-US/locale/en-US/calendar/calendar-alarms.properties
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar-en-US/locale/en-US/calendar/calendar-event-dialog-attendees.properties
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar-en-US/locale/en-US/calendar/calendar-event-dialog.dtd
@@ -449,7 +446,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/wind
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/lightning/mode-switch-icons-aero.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/lightning/mode-switch-icons-inverted.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/lightning/suite-accountCentral.css
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/.mkdir.done
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calBackendLoader.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calBackendLoader.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calCompositeCalendar.js

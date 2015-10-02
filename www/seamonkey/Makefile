@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.135 2015/09/27 23:46:31 tnn Exp $
+# $NetBSD: Makefile,v 1.136 2015/10/02 22:49:35 ryoon Exp $
 
-DISTNAME=	# empty
+DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-SM_VER=		2.35
-#LIGHTNINGVER=	1.9
-PKGREVISION=	1
+SM_VER=		2.38
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
-#MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
-DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
-#		lightning-${LIGHTNINGVER}.source.tar.bz2
-#SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
-EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2=	${WRKSRC}/lightning
+MASTER_SITES=	https://archive.mozilla.org/pub/mozilla.org/seamonkey/releases/${SM_VER}/source/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
@@ -23,7 +17,7 @@ PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	unzip pax
 
-.include "../../www/firefox38/mozilla-common.mk"
+.include "../../www/firefox/mozilla-common.mk"
 .include "options.mk"
 
 # Workaround to fix pixman.h detection
@@ -58,21 +52,13 @@ SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
 
-#post-extract:
-#	cd ${WRKSRC} && ${RM} -r calendar
-#	${CP} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
-#	${RM} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}
-
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
-#	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
-	cd ${WRKSRC}/ldap/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
-#	mkdir ${WRKSRC}/mozilla/js/src/.deps
 # If there is no .mozconfig, codegen.pp target fails.
-	touch ${WRKSRC}/.mozconfig
+#	touch ${WRKSRC}/.mozconfig
 
 post-install:
 #	${TOUCH} ${TOUCH_FLAGS} \
