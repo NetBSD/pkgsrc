@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.19 2014/04/22 22:32:18 schnoebe Exp $
+$NetBSD: distinfo,v 1.19.12.1 2015/10/02 19:49:13 bsiegert Exp $
 
 SHA1 (MHonArc-2.6.19.tar.bz2) = e8297b3da1ba3369a0292b2815cc356cbb7ff6bd
 RMD160 (MHonArc-2.6.19.tar.bz2) = 13614f38275795221131d7ba459c3a18d607c5cb
 Size (MHonArc-2.6.19.tar.bz2) = 1577790 bytes
+SHA1 (patch-lib_mhamain.pl) = 56c0d55c11fb005f911b8430e5c683c834c861aa
+SHA1 (patch-lib_mhopt.pl) = a077249040fc4f9b80380abd59c0472895983465
 SHA1 (patch-lib_mhtxthtml.pl) = bfd6420fd9e0ffdbf1f781441f8c1b8b71ef94e7
