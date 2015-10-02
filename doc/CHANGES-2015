@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4134 2015/10/02 14:38:29 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4135 2015/10/02 22:50:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7156,3 +7156,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/squid3 to 3.5.10 [adam 2015-10-02]
 	Updated lang/php55 to 5.5.30 [taca 2015-10-02]
 	Updated lang/php56 to 5.6.14 [taca 2015-10-02]
+	Updated www/seamonkey to 2.38 [ryoon 2015-10-02]
