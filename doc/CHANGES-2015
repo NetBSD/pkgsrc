@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4130 2015/10/02 06:39:26 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4131 2015/10/02 07:56:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7152,3 +7152,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/openocd to 0.9.0 [rodent 2015-10-01]
 	Updated devel/py-pip to 7.1.2 [rodent 2015-10-01]
 	Updated security/p5-Crypt-GPG to 1.64 [wen 2015-10-02]
+	Updated emulators/mame to 0.166 [wiz 2015-10-02]
