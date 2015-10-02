@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.9 2015/09/30 19:42:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.10 2015/10/02 19:25:35 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -26,3 +26,6 @@ multimedia/adobe-flash-plugin11: security fix
 
 Pullup ticket #4826 - requested by tnn
 textproc/icu: security fix
+
+Pullup ticket #4827 - requested by ryoon
+www/firefox: build fix
