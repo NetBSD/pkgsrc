@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2015/06/12 10:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2015/10/02 11:33:14 richard Exp $
 
 DISTNAME=	groff-1.22.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 
@@ -49,11 +49,6 @@ BUILD_DEFS+=	PAPERSIZE
 CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
 .endif
 
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4.[6-9].*)
-CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
-.endif
-
 post-extract:
 	${CP} -p ${FILESDIR}/*.c ${WRKSRC}
 
@@ -75,6 +70,12 @@ post-patch:
 # It also installs wrappers around the system macros for a variety of
 # other traditional macro packages, if those macros don't have an FSF
 # copyright.
+SYMLINK_FILES=	chem diffmk eqn grn indxbib lookbib neqn nroff pic refer \
+		soelim tbl troff
+SYMLINK_MANFILES=	chem.1 eqn.1 grn.1 indxbib.1 lookbib.1 neqn.1 nroff.1 \
+		pic.1 refer.1 soelim.1 tbl.1 troff.1
+
+INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mdoc.local \
@@ -91,6 +92,24 @@ post-install:
 	  done;								\
 	  ${ECHO} "$$line" >> ${WRKDIR}/PLIST-local;			\
 	done
+.for f in ${SYMLINK_FILES}
+	if [ -f ${DESTDIR}${PREFIX}/bin/g${f} ]; then			\
+	    ${LN} -sf ../../bin/g${f}					\
+		${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f};		\
+	fi
+.endfor
+# fixup where necessary and symlink man pages
+.for f in ${SYMLINK_MANFILES}
+	if [ -f ${DESTDIR}${PREFIX}/man/man1/g${f} ]; then		\
+	    ${LN} -sf ../../../man/man1/g${f}				\
+		${DESTDIR}${PREFIX}/${PKGGNUDIR}man/man1/${f};		\
+	elif [ -f ${DESTDIR}${PREFIX}/man/man1/${f} ]; then		\
+	    ${MV} -f ${DESTDIR}${PREFIX}/man/man1/${f}			\
+		${DESTDIR}${PREFIX}/man/man1/g${f};			\
+	    ${LN} -sf ../../../man/man1/g${f}				\
+		${DESTDIR}${PREFIX}/${PKGGNUDIR}man/man1/${f};		\
+	fi
+.endfor
 
 # we only want the charset.alias file, so no buildlinkery for libiconv
 DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
