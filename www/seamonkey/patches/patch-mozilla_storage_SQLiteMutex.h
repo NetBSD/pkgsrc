@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.8 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: patch-mozilla_storage_SQLiteMutex.h,v 1.1 2015/10/02 22:49:36 ryoon Exp $
 
---- mozilla/storage/src/SQLiteMutex.h.orig	2013-10-29 01:21:11.000000000 +0000
-+++ mozilla/storage/src/SQLiteMutex.h
-@@ -108,15 +108,19 @@ public:
+--- mozilla/storage/SQLiteMutex.h.orig	2015-09-25 07:34:55.000000000 +0000
++++ mozilla/storage/SQLiteMutex.h
+@@ -107,15 +107,19 @@ public:
    void assertCurrentThreadOwns()
    {
      NS_ASSERTION(mMutex, "No mutex associated with this wrapper!");
