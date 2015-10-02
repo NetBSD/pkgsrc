@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2013/04/08 11:17:26 rodent Exp $
+$NetBSD: MESSAGE,v 1.5 2015/10/02 23:03:32 ryoon Exp $
 
-To change the language in Seamonkey
+To change the language in SeaMonkey
 1) Enable language packs in Tools->Add-ons->Languages
 2) Navigate to about:config
 3) Edit the general.useragent.locale property.
