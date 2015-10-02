@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/08/26 11:08:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/10/02 07:55:53 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -97,9 +97,12 @@ share/mame/hash/attache.xml
 share/mame/hash/b2m.xml
 share/mame/hash/bbca_cass.xml
 share/mame/hash/bbcb_cass.xml
+share/mame/hash/bbcb_de_cass.xml
+share/mame/hash/bbcb_us_flop.xml
 share/mame/hash/bbcbc.xml
 share/mame/hash/bbcm_cart.xml
 share/mame/hash/bbcm_cass.xml
+share/mame/hash/bbcmc_flop.xml
 share/mame/hash/bk0010.xml
 share/mame/hash/bml3_flop.xml
 share/mame/hash/bw12.xml
@@ -309,6 +312,7 @@ share/mame/hash/plus4_cass.xml
 share/mame/hash/plus4_flop.xml
 share/mame/hash/pmd85_cass.xml
 share/mame/hash/pokemini.xml
+share/mame/hash/pro128_cart.xml
 share/mame/hash/prof180.xml
 share/mame/hash/prof80.xml
 share/mame/hash/psion1.xml
