@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/02/22 19:27:13 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2015/10/02 11:33:14 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
 PKG_SUPPORTED_OPTIONS=	groff-docs x11
@@ -7,6 +7,8 @@ PKG_SUGGESTED_OPTIONS=	groff-docs x11
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgroff-docs)
+BUILD_DEPENDS+=	gtexinfo>=4.8:../../devel/gtexinfo
+CONFIGURE_ARGS+=	ac_cv_prog_MAKEINFO=${LOCALBASE}/bin/makeinfo
 DEPENDS+=		netpbm>=10.0:../../graphics/netpbm
 DEPENDS+=		psutils>=1.17:../../print/psutils
 USE_TOOLS+=		gs:run
