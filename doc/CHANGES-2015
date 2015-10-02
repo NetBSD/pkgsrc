@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4133 2015/10/02 12:58:39 reed Exp $
+$NetBSD: CHANGES-2015,v 1.4134 2015/10/02 14:38:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7154,3 +7154,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/p5-Crypt-GPG to 1.64 [wen 2015-10-02]
 	Updated emulators/mame to 0.166 [wiz 2015-10-02]
 	Updated www/squid3 to 3.5.10 [adam 2015-10-02]
+	Updated lang/php55 to 5.5.30 [taca 2015-10-02]
+	Updated lang/php56 to 5.6.14 [taca 2015-10-02]
