@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.2 2015/09/21 05:03:45 ryoon Exp $
+$NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.3 2015/10/02 22:49:36 ryoon Exp $
 
---- mozilla/mfbt/Attributes.h.orig	2015-09-02 09:27:34.000000000 +0000
+--- mozilla/mfbt/Attributes.h.orig	2015-09-25 07:35:44.000000000 +0000
 +++ mozilla/mfbt/Attributes.h
 @@ -50,6 +50,7 @@
   * don't indicate support for them here, due to
@@ -20,13 +20,11 @@ $NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.2 2015/09/21 05:03:45 ryoon Exp $
  #  if __has_extension(cxx_constexpr)
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #  endif
-@@ -84,6 +88,9 @@
- #  endif
- #elif defined(__GNUC__)
+@@ -86,6 +90,7 @@
  #  if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
-+#    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
+ #    define MOZ_HAVE_CXX11_CONSTEXPR
+ #    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
 +#      define MOZ_HAVE_CXX11_ALIGNAS
-+#    endif
- #      define MOZ_HAVE_CXX11_CONSTEXPR
- #      define MOZ_HAVE_EXPLICIT_CONVERSION
- #  endif
+ #      define MOZ_HAVE_CXX11_CONSTEXPR_IN_TEMPLATES
+ #    endif
+ #    define MOZ_HAVE_EXPLICIT_CONVERSION
