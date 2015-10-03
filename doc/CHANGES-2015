@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4140 2015/10/03 14:14:33 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.4141 2015/10/03 16:31:09 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7167,3 +7167,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql55-server to 5.5.46 [adam 2015-10-03]
 	Updated databases/py-mysql-connector to 2.1.3 [adam 2015-10-03]
 	Updated x11/deforaos-panel to 0.3.4 [khorben 2015-10-03]
+	Added net/syncthing version 0.11.25 [tnn 2015-10-03]
+	Added net/syncthing-gtk version 0.7.5.1 [tnn 2015-10-03]
