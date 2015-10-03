@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4137 2015/10/03 02:55:57 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4138 2015/10/03 12:09:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7159,3 +7159,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey to 2.38 [ryoon 2015-10-02]
 	Updated www/seamonkey-l10n to 2.38 [ryoon 2015-10-02]
 	Updated x11/py-terminator to 0.98 [kamil 2015-10-03]
+	Updated graphics/exiv2 to 0.25 [bsiegert 2015-10-03]
+	Updated graphics/exiv2-organize to 0.25 [bsiegert 2015-10-03]
