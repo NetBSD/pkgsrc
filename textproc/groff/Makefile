@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2015/10/02 11:33:14 richard Exp $
+# $NetBSD: Makefile,v 1.81 2015/10/03 07:45:26 richard Exp $
 
 DISTNAME=	groff-1.22.3
 PKGREVISION=	2
@@ -94,19 +94,19 @@ post-install:
 	done
 .for f in ${SYMLINK_FILES}
 	if [ -f ${DESTDIR}${PREFIX}/bin/g${f} ]; then			\
-	    ${LN} -sf ../../bin/g${f}					\
+	    ${LN} -sf ${PREFIX}/bin/g${f}				\
 		${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f};		\
 	fi
 .endfor
 # fixup where necessary and symlink man pages
 .for f in ${SYMLINK_MANFILES}
-	if [ -f ${DESTDIR}${PREFIX}/man/man1/g${f} ]; then		\
-	    ${LN} -sf ../../../man/man1/g${f}				\
+	if [ -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/g${f} ]; then	\
+	    ${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}			\
 		${DESTDIR}${PREFIX}/${PKGGNUDIR}man/man1/${f};		\
-	elif [ -f ${DESTDIR}${PREFIX}/man/man1/${f} ]; then		\
-	    ${MV} -f ${DESTDIR}${PREFIX}/man/man1/${f}			\
-		${DESTDIR}${PREFIX}/man/man1/g${f};			\
-	    ${LN} -sf ../../../man/man1/g${f}				\
+	elif [ -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${f} ]; then	\
+	    ${MV} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${f}		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/g${f};		\
+	    ${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}			\
 		${DESTDIR}${PREFIX}/${PKGGNUDIR}man/man1/${f};		\
 	fi
 .endfor
