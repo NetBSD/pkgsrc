@@ -1,0 +1,8 @@
+Syncthing replaces proprietary sync and cloud services with something open,
+trustworthy and decentralized.
+Features include:
+- web admin console
+- directory watcher
+- authentication with x509 certificates
+- node discovery
+- written in "go"
