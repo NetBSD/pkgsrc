@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.27 2015/06/13 12:09:32 spz Exp $
+# $NetBSD: mkreadme,v 1.28 2015/10/03 13:17:57 bsiegert Exp $
 #
 # Script for README.html generation
 #
@@ -381,6 +381,7 @@ if [ "x$restart" = "xno" ] ; then
 		    		echo "          but the directory does not exist.  Please fix this!" > /dev/stderr
 	    		else
 		    		cd ${PKGSRCDIR}/${c}/${pkgdir}
+				o=`${BMAKE} show-options | ${AWK} -f ${PKGSRCDIR}/mk/scripts/htmloptions.awk`
 		    		l=`${BMAKE} print-summary-data`
 		    		if [ $? != 0 ]; then
 			    		echo "WARNING (printdepends):  the package in ${c}/${pkgdir} had problem with" \
@@ -391,6 +392,7 @@ if [ "x$restart" = "xno" ] ; then
 			    		${BMAKE} print-summary-data  2>&1 > /dev/stderr
 		    		else
 			    		echo "$l" >> $DATABASEFILE
+					echo "htmloptions ${c}/${pkgdir} $o" >> $DATABASEFILE
 		    		fi
 	    		fi
 			if [ "x$quiet" = "xno" ]; then
