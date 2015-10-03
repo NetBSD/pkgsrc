@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/09/02 23:18:45 khorben Exp $
+$NetBSD: distinfo,v 1.11 2015/10/03 14:13:49 khorben Exp $
 
-SHA1 (Panel-0.3.3.tar.gz) = fa6968414c3bea845a1f86dc325d6d6dd42e7a2a
-RMD160 (Panel-0.3.3.tar.gz) = 69c4a3ebc1f45f10ce1d8bfe954808a39f7b11ac
-Size (Panel-0.3.3.tar.gz) = 142212 bytes
+SHA1 (Panel-0.3.4.tar.gz) = 90c4ce36fd1b74a3233cbfb03b3f3ba5dde95986
+RMD160 (Panel-0.3.4.tar.gz) = 6e116370715619cc4dda0206bf76cd3573a67777
+Size (Panel-0.3.4.tar.gz) = 144020 bytes
 SHA1 (patch-tools_Makefile) = f05ebc04da359e181de0e7d44de8b960a3c266f8
