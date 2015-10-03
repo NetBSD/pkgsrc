@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.26 2015/07/30 14:39:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2015/10/03 12:46:13 adam Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
 
-DISTNAME=	mysql-5.6.26
+DISTNAME=	mysql-5.6.27
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.6/}
 
@@ -121,15 +121,19 @@ SUBST_FILES.fixpaths+=	${DESTDIR}${PREFIX}/share/doc/mysql/INFO_BIN
 SUBST_SED.fixpaths=	-e "s,${WRAPPER_BINDIR}/gcc,${CCPATH},g"
 SUBST_SED.fixpaths+=	-e "s,${WRAPPER_BINDIR}/g++,${CXXPATH},g"
 
+.include "../../mk/readline.buildlink3.mk"
+
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
-SOEXT="dylib"
+SOEXT=dylib
 .else
-SOEXT="so"
+SOEXT=so
 .endif
 
+.if !empty(READLINE_TYPE:Mreadline)
 CMAKE_ARGS+=	-DWITH_EDITLINE=system
-CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editline}/lib/libedit.${SOEXT}
-CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readline
+.endif
+CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editlinereadline}/lib/libedit.${SOEXT}
+CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 
 # Don't use the base system "libedit" under NetBSD because MySQL expects
 # an incompatible prototype for "rl_completion_entry_function".
@@ -137,5 +141,4 @@ CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readlin
 USE_BUILTIN.editline=	no
 .endif
 
-.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
