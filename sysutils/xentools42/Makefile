@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/08/23 16:17:12 spz Exp $
+# $NetBSD: Makefile,v 1.36 2015/10/03 00:56:02 jnemeth Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -233,7 +233,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xend-config.sxp.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-.if ${OPSYS} == "NetBSD" && !exists(/var/shm)
+.if (${OPSYS} == "NetBSD" && \
+    (empty(OS_VERSION:M6.99.3?) && empty(OS_VERSION:M[7-9].*)))
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
