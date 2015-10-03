@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/04/30 08:15:22 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/10/03 12:49:11 adam Exp $
 
-SHA1 (mysql-connector-python-2.0.4.tar.gz) = 5844d896ce1e9bae8e8525a0f0325fd735b4963e
-RMD160 (mysql-connector-python-2.0.4.tar.gz) = 1ada44c2eccd2aefdef916d54480197303c4923e
-Size (mysql-connector-python-2.0.4.tar.gz) = 212192 bytes
+SHA1 (mysql-connector-python-2.1.3.tar.gz) = 98e54a58505bcedcd561ffcf4a26cd133a54818a
+RMD160 (mysql-connector-python-2.1.3.tar.gz) = 5c023304c4af4f20eae23c7aa1341f2505c2cefb
+Size (mysql-connector-python-2.1.3.tar.gz) = 271939 bytes
