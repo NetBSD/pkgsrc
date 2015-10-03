@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4136 2015/10/02 23:41:05 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4137 2015/10/03 02:55:57 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7158,3 +7158,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.14 [taca 2015-10-02]
 	Updated www/seamonkey to 2.38 [ryoon 2015-10-02]
 	Updated www/seamonkey-l10n to 2.38 [ryoon 2015-10-02]
+	Updated x11/py-terminator to 0.98 [kamil 2015-10-03]
