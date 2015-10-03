@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.26 2010/03/18 10:18:19 wiz Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.27 2015/10/03 13:17:57 bsiegert Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -68,12 +68,19 @@ This package requires the following package(s) to run:
 </p>
 
 <p>
+This package supports the following build-time options:
+</p>
+<dl>
+%%OPTIONS%%
+</dl>
+
+<p>
 Select one of the links below to <FONT COLOR="red">download</FONT> the
 package in precompiled binary form for installation with pkg_add(1).
 Available machine architectures and package versions:
-<TABLE>
+<table>
 %%BIN_PKGS%%
-</TABLE>
+</table>
 
 <p>
 The NetBSD packages collection is designed to permit

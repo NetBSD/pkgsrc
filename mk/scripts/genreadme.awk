@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.35 2013/05/09 23:37:27 riastradh Exp $
+# $NetBSD: genreadme.awk,v 1.36 2015/10/03 13:17:57 bsiegert Exp $
 #
-# Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
+# Copyright (c) 2002, 2003, 2005, 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -162,6 +162,15 @@ BEGIN {
 	gsub(/README.html/, readme_name, htmlname);
 	dir2htmlname[dir] = htmlname;
 	if (debug) printf("added dir2htmlname[%s]=%s\n", dir, htmlname);
+	next;
+}
+
+/^htmloptions / {
+	htmloptions = $3;
+	for (i = 4; i <= NF; i++){
+		htmloptions = htmloptions " " $i;
+	}
+	options[$2] = htmloptions;
 	next;
 }
 
@@ -395,6 +404,7 @@ END {
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
 				gsub(/%%RUN_DEPENDS%%/, ""rundeps"");
+				gsub(/%%OPTIONS%%/, ""options[toppkg]"");
 
 				line = $0;
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkdatabase,v 1.9 2005/11/18 11:07:27 rillig Exp $
+# $NetBSD: mkdatabase,v 1.10 2015/10/03 13:17:57 bsiegert Exp $
 #
 # Script for generating a database with complete dependency information
 # for a particular package
@@ -160,6 +160,11 @@ case ${DATABASE} in
 esac
 
 
+here=`pwd`
+tmp1=`dirname "$here"`
+pkgcat=`basename "$tmp1"`
+pkg=`basename "$here"`
+pkgpath=$pkgcat/$pkg
 if [ $append_flag = yes ]; then
     echo "$prompt Appending to database in ${DATABASE}"
     if [ ! -f "${DATABASE}" ]; then
@@ -167,11 +172,6 @@ if [ $append_flag = yes ]; then
     fi
     # make sure we haven't already been listed before
     # appending ourselves.
-    here=`pwd`
-    tmp1=`dirname "$here"`
-    pkgcat=`basename "$tmp1"`
-    pkg=`basename "$here"`
-    pkgpath=$pkgcat/$pkg
     case $debug_flag in
     yes)	echo "Looking for $pkgpath before appending";;
     esac
@@ -184,7 +184,9 @@ if [ $append_flag = yes ]; then
     fi
 else
     echo "$prompt Creating new database in ${DATABASE}"
-    ${BMAKE} print-summary-data > "${DATABASE}" || exit 1
+    o=`${BMAKE} show-options | ${AWK} -f ../../mk/scripts/htmloptions.awk`
+    echo "htmloptions ${pkgpath} $o" > ${DATABASE}
+    ${BMAKE} print-summary-data >> "${DATABASE}" || exit 1
 fi
 here=`pwd`
 echo "$prompt Depending in $here (pass #1)"
