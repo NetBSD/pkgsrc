@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4141 2015/10/03 16:31:09 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4142 2015/10/03 22:54:29 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7169,3 +7169,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/deforaos-panel to 0.3.4 [khorben 2015-10-03]
 	Added net/syncthing version 0.11.25 [tnn 2015-10-03]
 	Added net/syncthing-gtk version 0.7.5.1 [tnn 2015-10-03]
+	Updated security/py-paramiko to 1.15.3 [rodent 2015-10-03]
