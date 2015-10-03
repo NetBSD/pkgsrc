@@ -1,22 +1,34 @@
-# $NetBSD: Makefile,v 1.2 2015/07/11 23:19:54 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/03 02:52:33 kamil Exp $
 
-DISTNAME=	terminator-0.97
+DISTNAME=	terminator-0.98
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11
-MASTER_SITES=	https://launchpad.net/terminator/trunk/0.97/+download/
+MASTER_SITES=	https://launchpad.net/terminator/trunk/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/terminator
 COMMENT=	Terminator, multiple terminals in one window
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-notify-python, py-keybinder, py-vte
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.98
 
 REPLACE_PYTHON+= *.py
 REPLACE_PYTHON+= terminatorlib/*.py
 REPLACE_PYTHON+= terminatorlib/plugins/*.py
 
-USE_TOOLS+=	intltool
+USE_TOOLS+=	intltool bash
+
+REPLACE_SH+=	terminator.wrapper
+REPLACE_BASH+=	terminatorlib/pylint.sh
+REPLACE_BASH+=	run_tests
+
+post-install:
+	${RUN}${FIND} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR} \
+		${DESTDIR}${PREFIX}/share/doc \
+		${DESTDIR}${PREFIX}/share/icons \
+		${DESTDIR}${PREFIX}/share/pixmaps \
+			-type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
