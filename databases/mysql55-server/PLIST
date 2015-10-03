@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2015/07/30 14:36:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2015/10/03 12:13:29 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -988,11 +988,11 @@ share/mysql/test/r/lowercase0.require
 share/mysql/test/r/lowercase1.require
 share/mysql/test/r/lowercase2.require
 share/mysql/test/r/lowercase_fs_off.result
+share/mysql/test/r/lowercase_fs_on.result
 share/mysql/test/r/lowercase_mixed_tmpdir.result
 share/mysql/test/r/lowercase_mixed_tmpdir_innodb.result
 share/mysql/test/r/lowercase_table.result
 share/mysql/test/r/lowercase_table2.result
-share/mysql/test/r/lowercase_table3.result
 share/mysql/test/r/lowercase_table4.result
 share/mysql/test/r/lowercase_table_grant.result
 share/mysql/test/r/lowercase_table_qcache.result
@@ -1314,6 +1314,8 @@ share/mysql/test/std_data/binlog_savepoint.000001
 share/mysql/test/std_data/binlog_transaction.000001
 share/mysql/test/std_data/bug11747416_32228_binlog.000001
 share/mysql/test/std_data/bug15328.cnf
+share/mysql/test/std_data/bug16171518_1.dat
+share/mysql/test/std_data/bug16171518_2.dat
 share/mysql/test/std_data/bug16266.000001
 share/mysql/test/std_data/bug19371.MYD
 share/mysql/test/std_data/bug19371.MYI
@@ -3117,7 +3119,6 @@ share/mysql/test/suite/innodb/t/innodb_bug60049-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60049.test
 share/mysql/test/suite/innodb/t/innodb_bug60196-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60196.test
-share/mysql/test/suite/innodb/t/innodb_bug60229-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60229.test
 share/mysql/test/suite/innodb/t/innodb_corrupt_bit.test
 share/mysql/test/suite/innodb/t/innodb_file_format-master.opt
@@ -3315,13 +3316,9 @@ share/mysql/test/suite/jp/t/jp_create_tbl_sjis.test
 share/mysql/test/suite/jp/t/jp_create_tbl_ucs2.test
 share/mysql/test/suite/jp/t/jp_create_tbl_ujis.test
 share/mysql/test/suite/jp/t/jp_create_tbl_utf8.test
-share/mysql/test/suite/jp/t/jp_enum_sjis-master.opt
 share/mysql/test/suite/jp/t/jp_enum_sjis.test
-share/mysql/test/suite/jp/t/jp_enum_ucs2-master.opt
 share/mysql/test/suite/jp/t/jp_enum_ucs2.test
-share/mysql/test/suite/jp/t/jp_enum_ujis-master.opt
 share/mysql/test/suite/jp/t/jp_enum_ujis.test
-share/mysql/test/suite/jp/t/jp_enum_utf8-master.opt
 share/mysql/test/suite/jp/t/jp_enum_utf8.test
 share/mysql/test/suite/jp/t/jp_insert_sjis.test
 share/mysql/test/suite/jp/t/jp_insert_ucs2.test
@@ -5946,6 +5943,7 @@ share/mysql/test/t/long_tmpdir-master.opt
 share/mysql/test/t/long_tmpdir-master.sh
 share/mysql/test/t/long_tmpdir.test
 share/mysql/test/t/lowercase_fs_off.test
+share/mysql/test/t/lowercase_fs_on.test
 share/mysql/test/t/lowercase_mixed_tmpdir-master.opt
 share/mysql/test/t/lowercase_mixed_tmpdir-master.sh
 share/mysql/test/t/lowercase_mixed_tmpdir.test
@@ -5955,8 +5953,6 @@ share/mysql/test/t/lowercase_mixed_tmpdir_innodb.test
 share/mysql/test/t/lowercase_table-master.opt
 share/mysql/test/t/lowercase_table.test
 share/mysql/test/t/lowercase_table2.test
-share/mysql/test/t/lowercase_table3-master.opt
-share/mysql/test/t/lowercase_table3.test
 share/mysql/test/t/lowercase_table4-master.opt
 share/mysql/test/t/lowercase_table4.test
 share/mysql/test/t/lowercase_table_grant-master.opt
