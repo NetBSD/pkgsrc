@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/10/04 09:35:50 wen Exp $
 #
 
-DISTNAME=	PDF-Create-1.10
+DISTNAME=	PDF-Create-1.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDF/}
 
@@ -13,6 +12,8 @@ COMMENT=	Perl5 module for creating pdf documents
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/PDF/Create/.packlist
+
+BUILD_DEPENDS=	p5-Test-LeakTrace>=0.14:../../devel/p5-Test-LeakTrace
 
 REPLACE_PERL=	sample.pl sample-cgi.pl
 
