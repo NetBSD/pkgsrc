@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4165 2015/10/04 12:35:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4166 2015/10/04 12:38:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7198,3 +7198,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-tins to 1.6.0 [taca 2015-10-04]
 	Updated devel/ruby-uglifier to 2.7.2 [taca 2015-10-04]
 	Updated graphics/ruby-mini-magick to 4.3.5 [taca 2015-10-04]
+	Updated mail/ruby-mime-types to 2.6.2 [taca 2015-10-04]
