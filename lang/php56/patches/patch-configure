@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-configure,v 1.1.8.1 2015/10/04 14:03:38 bsiegert Exp $
 
---- configure.orig	2014-11-13 10:07:25.000000000 +0000
+--- configure.orig	2015-09-30 07:18:32.000000000 +0000
 +++ configure
-@@ -8310,27 +8310,6 @@ EOF
+@@ -8315,27 +8315,6 @@ EOF
      ;;
    esac
  
@@ -30,7 +30,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -9134,27 +9113,6 @@ EOF
+@@ -9139,27 +9118,6 @@ EOF
      ;;
    esac
  
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -24596,7 +24554,7 @@ fi
+@@ -24712,7 +24670,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -67,7 +67,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -26751,7 +26709,7 @@ $as_echo "yes" >&6; }
+@@ -26868,7 +26826,7 @@ $as_echo "yes" >&6; }
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -76,7 +76,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -37864,7 +37822,7 @@ fi
+@@ -37981,7 +37939,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -85,7 +85,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -49266,7 +49224,7 @@ fi
+@@ -49593,7 +49551,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -94,7 +94,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -66188,7 +66146,7 @@ rm -f core *.core core.conftest.* gmon.o
+@@ -66618,7 +66576,7 @@ rm -f core *.core core.conftest.* gmon.o
  fi
  
  
@@ -103,7 +103,7 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
  	as_fn_error $? "Don't know how to define struct flock on this system, set --enable-opcache=no" "$LINENO" 5
  fi
  
-@@ -106720,12 +106678,7 @@ old_CC=$CC
+@@ -107099,12 +107057,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
@@ -117,30 +117,3 @@ $NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
  fi
  
  if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
-@@ -110497,7 +110450,7 @@ freebsd* | dragonfly*)
-     objformat=`/usr/bin/objformat`
-   else
-     case $host_os in
--    freebsd[123]*) objformat=aout ;;
-+    freebsd[123]|freebsd[123].*) objformat=aout ;;
-     *) objformat=elf ;;
-     esac
-   fi
-@@ -112577,7 +112530,7 @@ if test -z "$aix_libpath"; then aix_libp
- 	;;
-     esac
-     ;;
--  freebsd[12]*)
-+  freebsd[12]|freebsd[12].*)
-     # C++ shared libraries reported to be fairly broken before switch to ELF
-     ld_shlibs_CXX=no
-     ;;
-@@ -114130,7 +114083,7 @@ freebsd* | dragonfly*)
-     objformat=`/usr/bin/objformat`
-   else
-     case $host_os in
--    freebsd[123]*) objformat=aout ;;
-+    freebsd[123]|freebsd[123].*) objformat=aout ;;
-     *) objformat=elf ;;
-     esac
-   fi
