@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/13 13:27:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/04 13:39:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/hitimes/${RUBY_MAJOR_MINOR}/hitimes.${RUBY_DLEXT}
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/HISTORY.md
 ${GEM_LIBDIR}/LICENSE
