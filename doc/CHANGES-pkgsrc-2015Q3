@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.11 2015/10/02 19:49:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.12 2015/10/04 14:04:17 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -35,3 +35,9 @@ www/p5-HTML-StripScripts: build fix
 
 Pullup ticket #4829 - requested by bouyer
 mail/mhonarc: build fix
+
+Pullup ticket #4831 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #4832 - requested by taca
+lang/php56: security fix
