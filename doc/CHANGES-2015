@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4156 2015/10/04 12:14:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4157 2015/10/04 12:16:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7189,3 +7189,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-celluloid to 0.17.2 [taca 2015-10-04]
 	Updated devel/ruby-flexmock to 2.0.1 [taca 2015-10-04]
 	Updated devel/ruby-gettext to 3.1.7 [taca 2015-10-04]
+	Updated devel/ruby-highline to 1.7.7 [taca 2015-10-04]
