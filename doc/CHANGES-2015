@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.2765 2015/06/28 15:36:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.2765.2.1 2015/10/04 09:09:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -5345,3 +5345,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php54 to 5.4.42nb1 [taca 2015-06-28]
 	Updated lang/php55 to 5.5.26nb1 [taca 2015-06-28]
 	Updated lang/php56 to 5.6.10nb1 [taca 2015-06-28]
+	Updated lang/pcc-current to 20151003 [he 2015-10-04]
