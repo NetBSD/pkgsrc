@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/06/11 16:51:04 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/10/04 13:49:30 taca Exp $
 #
 
-DISTNAME=	http-0.8.12
+DISTNAME=	http-0.9.8
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
