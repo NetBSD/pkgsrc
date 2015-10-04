@@ -1,9 +1,10 @@
-/*	$NetBSD: ssl.c,v 1.1.1.1 2014/10/31 18:47:17 spz Exp $	*/
-/*	from	NetBSD: ssl.c,v 1.2 2012/12/24 22:12:28 christos Exp	*/
+/*	$NetBSD: ssl.c,v 1.2 2015/10/04 14:44:07 tnn Exp $	*/
+/*	from	NetBSD: ssl.c,v 1.5 2015/09/16 15:32:53 joerg Exp	*/
 
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
+ * Copyright (c) 2015 Thomas Klausner <wiz@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -38,7 +39,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID(" NetBSD: ssl.c,v 1.2 2012/12/24 22:12:28 christos Exp  ");
+__RCSID(" NetBSD: ssl.c,v 1.5 2015/09/16 15:32:53 joerg Exp  ");
 #endif
 
 #include <time.h>
@@ -552,7 +553,7 @@ fetch_getline(struct fetch_connect *conn, char *buf, size_t buflen,
 }
 
 void *
-fetch_start_ssl(int sock)
+fetch_start_ssl(int sock, const char *servername)
 {
 	SSL *ssl;
 	SSL_CTX *ctx;
@@ -576,6 +577,11 @@ fetch_start_ssl(int sock)
 		return NULL;
 	}
 	SSL_set_fd(ssl, sock);
+	if (!SSL_set_tlsext_host_name(ssl, __UNCONST(servername))) {
+		fprintf(ttyout, "SSL hostname setting failed\n");
+		SSL_CTX_free(ctx);
+		return NULL;
+	}
 	while ((ret = SSL_connect(ssl)) == -1) {
 		ssl_err = SSL_get_error(ssl, ret);
 		if (ssl_err != SSL_ERROR_WANT_READ &&

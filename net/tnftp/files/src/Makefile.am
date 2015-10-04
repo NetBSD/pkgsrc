@@ -1,4 +1,4 @@
-## $NetBSD: Makefile.am,v 1.1.1.1 2014/10/31 18:47:16 spz Exp $
+## $NetBSD: Makefile.am,v 1.2 2015/10/04 14:44:07 tnn Exp $
 
 bin_PROGRAMS = tnftp
 
