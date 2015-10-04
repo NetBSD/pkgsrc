@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4175 2015/10/04 13:24:14 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4176 2015/10/04 13:26:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7208,3 +7208,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-twitter to 5.15.0 [taca 2015-10-04]
 	Updated x11/xfce4-exo to 0.10.7 [youri 2015-10-04]
 	Updated lang/yabasic to 2.769 [wen 2015-10-04]
+	Updated sysutils/ruby-listen to 3.0.3 [taca 2015-10-04]
