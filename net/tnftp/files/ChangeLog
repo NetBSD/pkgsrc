@@ -1,5 +1,13 @@
-$NetBSD: ChangeLog,v 1.9 2014/11/04 22:38:26 agc Exp $
+$NetBSD: ChangeLog,v 1.10 2015/10/04 14:44:06 tnn Exp $
 
+Sun Oct  4 06:19:25 UTC 2015	lukem
+
+	* Release as "tnftp 20151004".
+
+	* Merge NetBSD usr.bin/ftp from 20141026 to 20151003:
+		- Add  -x xferbufsize  to set xferbuf size.
+		- Add Server Name Indication (SNI) support for https.
+		- Increase buffer limit used for response handling.
 
 Mon Nov  3 21:43:20 UTC 2014	lukem
 
