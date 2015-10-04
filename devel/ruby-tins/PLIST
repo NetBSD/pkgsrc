@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/07 10:28:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/04 12:29:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -44,6 +44,7 @@ ${GEM_LIBDIR}/lib/tins/ask_and_send.rb
 ${GEM_LIBDIR}/lib/tins/attempt.rb
 ${GEM_LIBDIR}/lib/tins/bijection.rb
 ${GEM_LIBDIR}/lib/tins/case_predicate.rb
+${GEM_LIBDIR}/lib/tins/complete.rb
 ${GEM_LIBDIR}/lib/tins/concern.rb
 ${GEM_LIBDIR}/lib/tins/count_by.rb
 ${GEM_LIBDIR}/lib/tins/date_dummy.rb
@@ -100,6 +101,7 @@ ${GEM_LIBDIR}/lib/tins/xt/ask_and_send.rb
 ${GEM_LIBDIR}/lib/tins/xt/attempt.rb
 ${GEM_LIBDIR}/lib/tins/xt/blank.rb
 ${GEM_LIBDIR}/lib/tins/xt/case_predicate.rb
+${GEM_LIBDIR}/lib/tins/xt/complete.rb
 ${GEM_LIBDIR}/lib/tins/xt/concern.rb
 ${GEM_LIBDIR}/lib/tins/xt/count_by.rb
 ${GEM_LIBDIR}/lib/tins/xt/date_dummy.rb
