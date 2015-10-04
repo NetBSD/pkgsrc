@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/09/13 14:51:58 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/10/04 13:05:08 taca Exp $
 
-DISTNAME=	sprockets-3.3.4
+DISTNAME=	sprockets-3.3.5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/sstephenson/sprockets
 COMMENT=	Rack-based asset packaging system
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.6<2:../../www/ruby-rack
+DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.6<3:../../www/ruby-rack
 
 RUBYGEM_OPTIONS+=	--format-executable
 
