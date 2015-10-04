@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/01 16:13:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/04 12:21:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MANIFEST
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/benchmarks/bench_pathname.rb
 ${GEM_LIBDIR}/benchmarks/bench_plus.rb
+${GEM_LIBDIR}/certs/djberg96_pub.pem
 ${GEM_LIBDIR}/examples/example_pathname.rb
 ${GEM_LIBDIR}/lib/pathname2.rb
 ${GEM_LIBDIR}/pathname2.gemspec
