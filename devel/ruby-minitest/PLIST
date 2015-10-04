@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/03 14:48:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/04 12:20:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
