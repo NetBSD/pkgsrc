@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2015/09/04 04:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/10/04 16:09:34 taca Exp $
 
-DISTNAME=	bulk-medium-20150904
+DISTNAME=	bulk-medium-20151004
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -82,11 +82,12 @@ BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk-[0-9]*:../../graphics/py-matplotlib-gtk2
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
-BUILD_DEPENDS+=	php>=5.4<5.5:../../lang/php54
 BUILD_DEPENDS+=	php>=5.5<5.6:../../lang/php55
+BUILD_DEPENDS+=	php>=5.6<5.7:../../lang/php56
 BUILD_DEPENDS+=	ruby18-base-[0-9]*:../../lang/ruby18-base
-BUILD_DEPENDS+=	ruby193-base-[0-9]*:../../lang/ruby193-base
 BUILD_DEPENDS+=	ruby200-base-[0-9]*:../../lang/ruby200-base
+BUILD_DEPENDS+=	ruby21-base-[0-9]*:../../lang/ruby21-base
+BUILD_DEPENDS+=	ruby22-base-[0-9]*:../../lang/ruby22-base
 BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
 BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
