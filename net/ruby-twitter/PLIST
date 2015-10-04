@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/13 15:14:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/10/04 13:13:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -91,7 +91,6 @@ ${GEM_LIBDIR}/lib/twitter/trend_results.rb
 ${GEM_LIBDIR}/lib/twitter/tweet.rb
 ${GEM_LIBDIR}/lib/twitter/user.rb
 ${GEM_LIBDIR}/lib/twitter/utils.rb
-${GEM_LIBDIR}/lib/twitter/value.rb
 ${GEM_LIBDIR}/lib/twitter/variant.rb
 ${GEM_LIBDIR}/lib/twitter/version.rb
 ${GEM_LIBDIR}/twitter.gemspec
