@@ -1,15 +1,15 @@
-#       $NetBSD: configure.ac,v 1.6 2015/02/01 08:58:52 obache Exp $
+#       $NetBSD: configure.ac,v 1.7 2015/10/04 14:44:06 tnn Exp $
 #
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([tnftp], [20141104], [lukem@NetBSD.org])
+AC_INIT([tnftp], [20151004], [lukem@NetBSD.org])
 AC_PREREQ([2.69])
 
 AC_COPYRIGHT([
-Copyright (c) 1999-2014 The NetBSD Foundation, Inc.
+Copyright (c) 1999-2015 The NetBSD Foundation, Inc.
 All rights reserved.
 ])
-AC_REVISION([$Revision: 1.6 $])
+AC_REVISION([$Revision: 1.7 $])
 
 AS_SHELL_SANITIZE()
 
@@ -41,8 +41,8 @@ AC_ARG_ENABLE([ssl],
               [AS_HELP_STRING([--enable-ssl],
                               [enable SSL support (requires --with-openssl)
                                [default=auto]])],
-              [opt_ssl=$enableval],
-              [opt_ssl=auto])
+              [with_ssl=$enableval],
+              [with_ssl=auto])
 AC_ARG_WITH([socks],
             [AS_HELP_STRING([--with-socks],
                             [enable support for (Dante) SOCKS5 proxy
@@ -129,7 +129,7 @@ AS_IF([test "$with_socks" != no],
                               opt_ipv6=no])],
                       [AS_IF([test "$with_socks" != "auto"],
                              [AC_MSG_FAILURE(
-                [--with-socks was given, but SOCKSinit() wasn't found])])
+                [--with-socks was given, but SOCKSinit() was not found])])
                        AC_MSG_NOTICE([disabling --with-socks])
                        with_socks=no])])
 
@@ -145,7 +145,7 @@ AS_IF([test "$with_ssl" != no],
               AC_MSG_NOTICE([enabling SSL support])
               with_ssl=yes],
              [AS_IF([test "$with_ssl" != "auto"],
-                    [AC_MSG_FAILURE([--with-ssl was given, but OpenSSL wasn't found])])
+                    [AC_MSG_FAILURE([--with-ssl was given, but OpenSSL was not found])])
               AC_MSG_NOTICE([disabling --with-ssl])
               with_ssl=no])])
 
