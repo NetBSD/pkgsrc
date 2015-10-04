@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/09/13 15:21:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/10/04 13:32:49 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -40,6 +40,7 @@ ${GEM_LIBDIR}/lib/kramdown.rb
 ${GEM_LIBDIR}/lib/kramdown/compatibility.rb
 ${GEM_LIBDIR}/lib/kramdown/converter.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/base.rb
+${GEM_LIBDIR}/lib/kramdown/converter/hash_ast.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/html.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/kramdown.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/latex.rb
@@ -169,9 +170,6 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-minted.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-opts.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-opts.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-opts.text
-${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-rouge.html
-${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-rouge.options
-${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting-rouge.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.text
@@ -185,6 +183,12 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/no_newline_at_end_1.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/no_newline_at_end_1.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/normal.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/normal.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/disabled.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/disabled.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/disabled.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/simple.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/simple.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/simple.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/tilde_syntax.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/tilde_syntax.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/whitespace.html
@@ -440,13 +444,16 @@ ${GEM_LIBDIR}/test/testcases/span/03_codespan/errors.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-minted.latex
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-minted.options
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-minted.text
-${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-rouge.html
-${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-rouge.options
-${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting-rouge.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/highlighting.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/normal.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/normal.text
+${GEM_LIBDIR}/test/testcases/span/03_codespan/rouge/disabled.html
+${GEM_LIBDIR}/test/testcases/span/03_codespan/rouge/disabled.options
+${GEM_LIBDIR}/test/testcases/span/03_codespan/rouge/disabled.text
+${GEM_LIBDIR}/test/testcases/span/03_codespan/rouge/simple.html
+${GEM_LIBDIR}/test/testcases/span/03_codespan/rouge/simple.options
+${GEM_LIBDIR}/test/testcases/span/03_codespan/rouge/simple.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/backlink_text.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/backlink_text.options
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/backlink_text.text
@@ -466,6 +473,9 @@ ${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.text
+${GEM_LIBDIR}/test/testcases/span/04_footnote/without_backlink.html
+${GEM_LIBDIR}/test/testcases/span/04_footnote/without_backlink.options
+${GEM_LIBDIR}/test/testcases/span/04_footnote/without_backlink.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/across_lines.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/across_lines.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/button.html
