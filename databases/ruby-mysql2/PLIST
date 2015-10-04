@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2015/03/08 15:17:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/10/04 08:49:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/mysql2/mysql2.${RUBY_DLEXT}
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/examples/eventmachine.rb
 ${GEM_LIBDIR}/examples/threaded.rb
@@ -16,14 +18,18 @@ ${GEM_LIBDIR}/ext/mysql2/mysql_enc_name_to_ruby.h
 ${GEM_LIBDIR}/ext/mysql2/mysql_enc_to_ruby.h
 ${GEM_LIBDIR}/ext/mysql2/result.c
 ${GEM_LIBDIR}/ext/mysql2/result.h
+${GEM_LIBDIR}/ext/mysql2/statement.c
+${GEM_LIBDIR}/ext/mysql2/statement.h
 ${GEM_LIBDIR}/ext/mysql2/wait_for_single_fd.h
 ${GEM_LIBDIR}/lib/mysql2.rb
 ${GEM_LIBDIR}/lib/mysql2/client.rb
 ${GEM_LIBDIR}/lib/mysql2/console.rb
 ${GEM_LIBDIR}/lib/mysql2/em.rb
 ${GEM_LIBDIR}/lib/mysql2/error.rb
+${GEM_LIBDIR}/lib/mysql2/field.rb
 ${GEM_LIBDIR}/lib/mysql2/mysql2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/mysql2/result.rb
+${GEM_LIBDIR}/lib/mysql2/statement.rb
 ${GEM_LIBDIR}/lib/mysql2/version.rb
 ${GEM_LIBDIR}/spec/configuration.yml.example
 ${GEM_LIBDIR}/spec/em/em_spec.rb
@@ -31,8 +37,22 @@ ${GEM_LIBDIR}/spec/my.cnf.example
 ${GEM_LIBDIR}/spec/mysql2/client_spec.rb
 ${GEM_LIBDIR}/spec/mysql2/error_spec.rb
 ${GEM_LIBDIR}/spec/mysql2/result_spec.rb
+${GEM_LIBDIR}/spec/mysql2/statement_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/ssl/ca-cert.pem
+${GEM_LIBDIR}/spec/ssl/ca-key.pem
+${GEM_LIBDIR}/spec/ssl/ca.cnf
+${GEM_LIBDIR}/spec/ssl/cert.cnf
+${GEM_LIBDIR}/spec/ssl/client-cert.pem
+${GEM_LIBDIR}/spec/ssl/client-key.pem
+${GEM_LIBDIR}/spec/ssl/client-req.pem
+${GEM_LIBDIR}/spec/ssl/gen_certs.sh
+${GEM_LIBDIR}/spec/ssl/pkcs8-client-key.pem
+${GEM_LIBDIR}/spec/ssl/pkcs8-server-key.pem
+${GEM_LIBDIR}/spec/ssl/server-cert.pem
+${GEM_LIBDIR}/spec/ssl/server-key.pem
+${GEM_LIBDIR}/spec/ssl/server-req.pem
 ${GEM_LIBDIR}/spec/test_data
 ${GEM_LIBDIR}/support/libmysql.def
 ${GEM_LIBDIR}/support/mysql_enc_to_ruby.rb
