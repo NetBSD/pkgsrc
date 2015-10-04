@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4163 2015/10/04 12:30:15 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4164 2015/10/04 12:31:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7196,3 +7196,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-pathname2 to 1.7.4 [taca 2015-10-04]
 	Updated devel/ruby-test-unit to 3.1.4 [taca 2015-10-04]
 	Updated devel/ruby-tins to 1.6.0 [taca 2015-10-04]
+	Updated devel/ruby-uglifier to 2.7.2 [taca 2015-10-04]
