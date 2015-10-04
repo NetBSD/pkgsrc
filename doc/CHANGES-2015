@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4181 2015/10/04 13:48:49 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4182 2015/10/04 13:50:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7214,3 +7214,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-redcarpet to 3.3.3 [taca 2015-10-04]
 	Updated time/ruby-hitimes to 1.2.3 [taca 2015-10-04]
 	Updated www/ruby-css-parser to 1.3.7 [taca 2015-10-04]
+	Updated www/ruby-http to 0.9.8 [taca 2015-10-04]
