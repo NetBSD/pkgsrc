@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.15 2015/09/06 12:27:43 taca Exp $
+$NetBSD: distinfo,v 1.15.2.1 2015/10/04 14:03:38 bsiegert Exp $
 
-SHA1 (php-5.6.13.tar.bz2) = 0fc2f582a6670efc512dc872da6638796ed64525
-RMD160 (php-5.6.13.tar.bz2) = a7f243e72b185f6da2a859bb80a59790c2c2aaba
-Size (php-5.6.13.tar.bz2) = 14077633 bytes
+SHA1 (php-5.6.14.tar.bz2) = 21706059790fb48db7e7105bf1734d7e677aa7cd
+RMD160 (php-5.6.14.tar.bz2) = cb3c8a389d3b2d9c4a1ee88e6b5568de9182a347
+Size (php-5.6.14.tar.bz2) = 14073920 bytes
 SHA1 (patch-acinclude.m4) = b38fc34c3a3847dc317e8e286612b21ec8fd5ce8
-SHA1 (patch-aclocal.m4) = 49117c42e03bd3ed57d967d33ba543f936013b4f
-SHA1 (patch-build_libtool.m4) = f459cda09cbdad9780568d271091fb17bbc5d965
-SHA1 (patch-configure) = d3d44c814deb0264fd4fc41908c2ff31fde00b0d
+SHA1 (patch-configure) = a72aa43759c6f3d3ad350659397570582c3ca3ff
 SHA1 (patch-ext_gd_config.m4) = 4b44853250eb4a638af4c663e618307ff25d2cbd
 SHA1 (patch-ext_imap_config.m4) = 9c6ed6966366c4fe1b7cfd34b5910e2ff0e68577
 SHA1 (patch-ext_mssql_php__mssql.c) = c4fa9231dc539ffb027f1beb6f182f21ddb94a3c
