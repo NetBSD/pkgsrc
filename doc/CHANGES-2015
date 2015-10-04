@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4147 2015/10/04 08:51:00 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4148 2015/10/04 09:36:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7175,3 +7175,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/p5-DateTime to 1.2100 [wiz 2015-10-04]
 	Updated databases/ruby-mysql2 to 0.4.1 [taca 2015-10-04]
 	Updated databases/ruby-sequel to 4.27.0 [taca 2015-10-04]
+	Updated textproc/p5-PDF-Create to 1.11 [wen 2015-10-04]
