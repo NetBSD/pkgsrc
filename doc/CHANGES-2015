@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4146 2015/10/04 08:49:29 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4147 2015/10/04 08:51:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7174,3 +7174,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-MIME-tools to 5.507 [wiz 2015-10-04]
 	Updated time/p5-DateTime to 1.2100 [wiz 2015-10-04]
 	Updated databases/ruby-mysql2 to 0.4.1 [taca 2015-10-04]
+	Updated databases/ruby-sequel to 4.27.0 [taca 2015-10-04]
