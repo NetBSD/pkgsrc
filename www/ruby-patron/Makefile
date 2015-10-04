@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2015/03/13 17:14:02 taca Exp $
+# $NetBSD: Makefile,v 1.20 2015/10/04 15:38:00 taca Exp $
 
-DISTNAME=	patron-0.4.20
+DISTNAME=	patron-0.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://toland.github.com/patron/
+HOMEPAGE=	https://toland.github.com/patron/
 COMMENT=	Ruby HTTP client library based on libcurl
 LICENSE=	mit
 
