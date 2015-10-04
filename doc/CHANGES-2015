@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4173 2015/10/04 13:13:34 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4174 2015/10/04 13:22:53 youri Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7206,3 +7206,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-sprockets to 3.3.5 [taca 2015-10-04]
 	Updated net/ruby-em-socksify to 0.3.1 [taca 2015-10-04]
 	Updated net/ruby-twitter to 5.15.0 [taca 2015-10-04]
+	Updated x11/xfce4-exo to 0.10.7 [youri 2015-10-04]
