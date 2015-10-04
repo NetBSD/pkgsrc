@@ -1,8 +1,8 @@
-/*	$NetBSD: main.c,v 1.10 2014/10/31 18:59:33 spz Exp $	*/
-/*	from	NetBSD: main.c,v 1.122 2012/12/22 16:57:10 christos Exp	*/
+/*	$NetBSD: main.c,v 1.11 2015/10/04 14:44:07 tnn Exp $	*/
+/*	from	NetBSD: main.c,v 1.123 2015/04/23 23:31:23 lukem Exp	*/
 
 /*-
- * Copyright (c) 1996-2009 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2015 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -96,14 +96,14 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\
  The Regents of the University of California.  All rights reserved.\
-  Copyright 1996-2008 The NetBSD Foundation, Inc.  All rights reserved");
+  Copyright 1996-2015 The NetBSD Foundation, Inc.  All rights reserved");
 #endif /* not lint */
 
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)main.c	8.6 (Berkeley) 10/9/94";
 #else
-__RCSID(" NetBSD: main.c,v 1.122 2012/12/22 16:57:10 christos Exp  ");
+__RCSID(" NetBSD: main.c,v 1.123 2015/04/23 23:31:23 lukem Exp  ");
 #endif
 #endif /* not lint */
 
@@ -275,7 +275,7 @@ main(int volatile argc, char **volatile argv)
 		}
 	}
 
-	while ((ch = getopt(argc, argv, "46AadefginN:o:pP:q:r:Rs:tT:u:vV")) != -1) {
+	while ((ch = getopt(argc, argv, "46AadefginN:o:pP:q:r:Rs:tT:u:vVx:")) != -1) {
 		switch (ch) {
 		case '4':
 			family = AF_INET;
@@ -415,6 +415,13 @@ main(int volatile argc, char **volatile argv)
 
 		case 'V':
 			progress = verbose = 0;
+			break;
+
+		case 'x':
+			sndbuf_size = strsuftoi(optarg);
+			if (sndbuf_size < 1)
+				errx(1, "Bad xferbuf value: %s", optarg);
+			rcvbuf_size = sndbuf_size;
 			break;
 
 		default:
@@ -1054,7 +1061,7 @@ usage(void)
 
 	(void)fprintf(stderr,
 "usage: %s [-46AadefginpRtVv] [-N netrc] [-o outfile] [-P port] [-q quittime]\n"
-"           [-r retry] [-s srcaddr] [-T dir,max[,inc]]\n"
+"           [-r retry] [-s srcaddr] [-T dir,max[,inc]] [-x xferbufsize]\n"
 "           [[user@]host [port]] [host:path[/]] [file:///file]\n"
 "           [ftp://[user[:pass]@]host[:port]/path[/]]\n"
 "           [http://[user[:pass]@]host[:port]/path] [...]\n"
