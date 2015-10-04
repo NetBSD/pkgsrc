@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4186 2015/10/04 15:40:50 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4187 2015/10/04 16:10:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7219,3 +7219,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-patron to 0.5.0 [taca 2015-10-04]
 	Updated www/ruby-puma to 2.14.0 [taca 2015-10-04]
 	Updated www/thin to 1.6.4 [taca 2015-10-04]
+	Updated meta-pkgs/bulk-medium to 20151004 [taca 2015-10-04]
