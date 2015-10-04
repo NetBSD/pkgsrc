@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4154 2015/10/04 12:08:05 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4155 2015/10/04 12:13:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7187,3 +7187,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-celluloid-fsm to 0.20.5 [taca 2015-10-04]
 	Updated devel/ruby-celluloid-extras to 0.20.5 [taca 2015-10-04]
 	Updated devel/ruby-celluloid to 0.17.2 [taca 2015-10-04]
+	Updated devel/ruby-flexmock to 2.0.1 [taca 2015-10-04]
