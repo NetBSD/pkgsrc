@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 18:46:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/04 13:11:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/em-socksify.gemspec
