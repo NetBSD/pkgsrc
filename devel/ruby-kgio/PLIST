@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/10/04 12:17:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/kgio_ext.${RUBY_DLEXT}
@@ -21,7 +21,6 @@ ${GEM_LIBDIR}/archive/.gitignore
 ${GEM_LIBDIR}/archive/slrnpull.conf
 ${GEM_LIBDIR}/ext/kgio/accept.c
 ${GEM_LIBDIR}/ext/kgio/ancient_ruby.h
-${GEM_LIBDIR}/ext/kgio/autopush.c
 ${GEM_LIBDIR}/ext/kgio/blocking_io_region.h
 ${GEM_LIBDIR}/ext/kgio/broken_system_compat.h
 ${GEM_LIBDIR}/ext/kgio/connect.c
