@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4159 2015/10/04 12:19:35 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4160 2015/10/04 12:20:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7192,3 +7192,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-highline to 1.7.7 [taca 2015-10-04]
 	Updated devel/ruby-kgio to 2.10.0 [taca 2015-10-04]
 	Updated devel/ruby-locale to 2.1.2 [taca 2015-10-04]
+	Updated devel/ruby-minitest to 5.8.1 [taca 2015-10-04]
