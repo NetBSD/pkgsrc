@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4170 2015/10/04 13:02:51 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4171 2015/10/04 13:05:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7203,3 +7203,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-naught to 1.1.0 [taca 2015-10-04]
 	Updated misc/ruby-ohai to 8.6.0 [taca 2015-10-04]
 	Updated misc/ruby-pry to 0.10.2 [taca 2015-10-04]
+	Updated misc/ruby-sprockets to 3.3.5 [taca 2015-10-04]
