@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2014/03/14 15:36:16 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/10/04 12:12:53 taca Exp $
 
-DISTNAME=	flexmock-1.3.3
+DISTNAME=	flexmock-2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jimweirich/flexmock
+HOMEPAGE=	https://github.com/doudou/flexmock
 COMMENT=	Flexible mock object library for Ruby unit testing
 LICENSE=	isc
 
