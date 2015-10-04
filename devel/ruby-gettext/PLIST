@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/06/03 13:51:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/10/04 12:14:13 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -1380,6 +1380,7 @@ ${GEM_LIBDIR}/test/fixtures/erb/ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rxml
 ${GEM_LIBDIR}/test/fixtures/erb/non_ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/gladeparser.glade
+${GEM_LIBDIR}/test/fixtures/hello.rb
 ${GEM_LIBDIR}/test/fixtures/multi_text_domain.rb
 ${GEM_LIBDIR}/test/fixtures/n_.rb
 ${GEM_LIBDIR}/test/fixtures/non_ascii.rb
@@ -1436,6 +1437,7 @@ ${GEM_LIBDIR}/test/po/ja/_.po.time_stamp
 ${GEM_LIBDIR}/test/po/ja/backslash.edit.po
 ${GEM_LIBDIR}/test/po/ja/backslash.po
 ${GEM_LIBDIR}/test/po/ja/backslash.po.time_stamp
+${GEM_LIBDIR}/test/po/ja/hello.po
 ${GEM_LIBDIR}/test/po/ja/non_ascii.edit.po
 ${GEM_LIBDIR}/test/po/ja/non_ascii.po
 ${GEM_LIBDIR}/test/po/ja/non_ascii.po.time_stamp
