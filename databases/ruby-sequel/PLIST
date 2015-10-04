@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2015/09/13 04:48:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/10/04 08:50:13 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -114,6 +114,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.23.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.24.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.25.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.26.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.27.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
@@ -303,6 +304,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/association_dependencies.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_pks.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_proxies.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/auto_validations.rb
+${GEM_LIBDIR}/lib/sequel/plugins/before_after_save.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/blacklist_security.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/boolean_readers.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/caching.rb
@@ -403,6 +405,7 @@ ${GEM_LIBDIR}/spec/extensions/association_dependencies_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_pks_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_proxies_spec.rb
 ${GEM_LIBDIR}/spec/extensions/auto_validations_spec.rb
+${GEM_LIBDIR}/spec/extensions/before_after_save_spec.rb
 ${GEM_LIBDIR}/spec/extensions/blacklist_security_spec.rb
 ${GEM_LIBDIR}/spec/extensions/blank_spec.rb
 ${GEM_LIBDIR}/spec/extensions/boolean_readers_spec.rb
