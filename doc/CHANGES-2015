@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4150 2015/10/04 10:52:57 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4151 2015/10/04 11:04:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7178,3 +7178,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-PDF-Create to 1.11 [wen 2015-10-04]
 	Updated textproc/p5-PDF-API2 to 2.025 [wen 2015-10-04]
 	Updated textproc/p5-PDF-Table to 0.9.9 [wen 2015-10-04]
+	Updated devel/hoe to 3.14.2 [taca 2015-10-04]
