@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/03/09 15:23:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/04 12:49:29 taca Exp $
 #
 
-DISTNAME=	naught-1.0.0
+DISTNAME=	naught-1.1.0
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
