@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/13 14:19:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/10/04 12:07:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/culture/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/culture/CONDUCT.md
 ${GEM_LIBDIR}/culture/Gemfile
 ${GEM_LIBDIR}/culture/LICENSE.txt
 ${GEM_LIBDIR}/culture/README.md
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/culture/gems/loader.rb
 ${GEM_LIBDIR}/culture/rubocop/README.md
 ${GEM_LIBDIR}/culture/rubocop/lint.yml
 ${GEM_LIBDIR}/culture/rubocop/metrics.yml
+${GEM_LIBDIR}/culture/rubocop/perf.yml
 ${GEM_LIBDIR}/culture/rubocop/rubocop.yml
 ${GEM_LIBDIR}/culture/rubocop/style.yml
 ${GEM_LIBDIR}/culture/spec/gems_spec.rb
@@ -101,17 +102,18 @@ ${GEM_LIBDIR}/spec/shared/group_examples.rb
 ${GEM_LIBDIR}/spec/shared/mailbox_examples.rb
 ${GEM_LIBDIR}/spec/shared/task_examples.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/configure_rspec.rb
 ${GEM_LIBDIR}/spec/support/coverage.rb
 ${GEM_LIBDIR}/spec/support/crash_checking.rb
 ${GEM_LIBDIR}/spec/support/debugging.rb
 ${GEM_LIBDIR}/spec/support/env.rb
 ${GEM_LIBDIR}/spec/support/examples/actor_class.rb
+${GEM_LIBDIR}/spec/support/examples/call_class.rb
 ${GEM_LIBDIR}/spec/support/examples/evented_mailbox_class.rb
 ${GEM_LIBDIR}/spec/support/includer.rb
 ${GEM_LIBDIR}/spec/support/logging.rb
 ${GEM_LIBDIR}/spec/support/loose_threads.rb
 ${GEM_LIBDIR}/spec/support/reset_class_variables.rb
 ${GEM_LIBDIR}/spec/support/sleep_and_wait.rb
-${GEM_LIBDIR}/spec/support/split_logs.rb
 ${GEM_LIBDIR}/spec/support/stubbing.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
