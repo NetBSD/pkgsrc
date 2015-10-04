@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4167 2015/10/04 12:40:57 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4168 2015/10/04 12:50:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ruby-mini-magick to 4.3.5 [taca 2015-10-04]
 	Updated mail/ruby-mime-types to 2.6.2 [taca 2015-10-04]
 	Updated math/ruby-spreadsheet to 1.0.7 [taca 2015-10-04]
+	Updated misc/ruby-naught to 1.1.0 [taca 2015-10-04]
