@@ -1,0 +1,16 @@
+$NetBSD: patch-script_confhc,v 1.1 2015/10/05 06:33:46 dholland Exp $
+
+Fix gcc version detection so it doesn't object to what NetBSD gcc
+prints, which is: "gcc (nb1 20140527) 4.8.3".
+
+--- script/confhc~	2008-10-28 12:00:56.000000000 +0000
++++ script/confhc
+@@ -53,7 +53,7 @@ esac
+ # Report gcc version number
+ echo "  Found C compiler:    "`which $CCC`
+ echo "  C compiler version:  "`$CCC --version | head -n 1`
+-GCCVERSION=`$CCC --version | head -n 1 | cut -d' ' -f 3`
++GCCVERSION=`$CCC --version | head -n 1 | awk '{ print $NF }'`
+ 
+ # Ok, so first look for HBC
+ echo -n "  Looking for hbc...   "
