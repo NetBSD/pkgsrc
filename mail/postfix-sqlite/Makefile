@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/07 09:47:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/05 00:05:31 taca Exp $
 #
 
 COMMENT=		Postfix SMTP server SQLite backend module
@@ -12,7 +12,7 @@ POSTFIX_LIB_MKMAP=	no
 
 CCARGS+=		-I${BUILDLINK_PREFIX.sqlite3}/include
 AUXLIBS_MODULE=		-L${BUILDLINK_PREFIX.sqlite3}/lib -lsqlite3		\
-			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.}/lib
+			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
