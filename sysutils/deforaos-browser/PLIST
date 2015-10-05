@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/11 21:11:53 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/10/05 23:43:55 khorben Exp $
 bin/browser
 bin/copy
 bin/delete
@@ -11,6 +11,7 @@ bin/view
 include/Desktop/Browser.h
 include/Desktop/Browser/desktop.h
 include/Desktop/Browser/plugin.h
+include/Desktop/Browser/vfs.h
 lib/Browser/plugins/cvs.so
 lib/Browser/plugins/dirtree.so
 lib/Browser/plugins/favorites.so
@@ -18,9 +19,24 @@ lib/Browser/plugins/git.so
 lib/Browser/plugins/make.so
 lib/Browser/plugins/preview.so
 lib/Browser/plugins/properties.so
+lib/Browser/plugins/selection.so
 lib/Browser/plugins/subversion.so
+lib/Browser/plugins/trash.so
 lib/Browser/plugins/volumes.so
+lib/libBrowser.a
+lib/libBrowser.so
+lib/libBrowser.so.0
+lib/libBrowser.so.0.0
 lib/pkgconfig/Browser.pc
+man/html1/browser.html
+man/html1/copy.html
+man/html1/delete.html
+man/html1/desktop.html
+man/html1/desktopctl.html
+man/html1/move.html
+man/html1/open.html
+man/html1/properties.html
+man/html1/view.html
 man/man1/browser.1
 man/man1/copy.1
 man/man1/delete.1
@@ -30,17 +46,8 @@ man/man1/move.1
 man/man1/open.1
 man/man1/properties.1
 man/man1/view.1
-share/applications/browser.desktop
-share/applications/desktop-settings.desktop
-share/doc/html/Browser/browser.html
-share/doc/html/Browser/copy.html
-share/doc/html/Browser/delete.html
-share/doc/html/Browser/desktop.html
-share/doc/html/Browser/desktopctl.html
-share/doc/html/Browser/move.html
-share/doc/html/Browser/open.html
-share/doc/html/Browser/properties.html
-share/doc/html/Browser/view.html
+share/applications/deforaos-browser.desktop
+share/applications/deforaos-desktop-settings.desktop
 share/icons/hicolor/16x16/apps/browser-view-details.png
 share/icons/hicolor/16x16/apps/browser-view-icons.png
 share/icons/hicolor/16x16/apps/browser-view-list.png
