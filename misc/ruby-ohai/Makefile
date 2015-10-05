@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/10/05 21:45:36 sevan Exp $
+# $NetBSD: Makefile,v 1.10 2015/10/05 23:54:58 taca Exp $
 
-DISTNAME=	ohai-8.6.0
+DISTNAME=	ohai-8.4.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,21 +16,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=1.5.0:../../devel/ruby-mixlib-cli
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-config>=2.1.0:../../devel/ruby-mixlib-config
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=1.6.0:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0.0:../../devel/ruby-mixlib-shellout
+DEPENDS+=	${RUBY_PKGPREFIX}-rake>=10.1:../../devel/ruby-rake
 DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0:../../devel/ruby-wmi-lite
 DEPENDS+=	${RUBY_PKGPREFIX}-ipaddress>=0.8.0:../../net/ruby-ipaddress
-#DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<13:../../sysutils/ruby-chef-config
 
 RUBY_VERSION_SUPPORTED=	200 21 22
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-BROKEN= 	Missing dependency ruby-chef-config
-
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} == 200
-DEPENDS+=	${RUBY_PKGPREFIX}-rake>=10.1:../../devel/ruby-rake
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
