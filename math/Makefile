@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2015/08/25 05:05:39 richard Exp $
+# $NetBSD: Makefile,v 1.307 2015/10/05 01:14:06 wen Exp $
 
 COMMENT=	Mathematics
 
@@ -39,6 +39,7 @@ SUBDIR+=	R-intervals
 SUBDIR+=	R-lmm
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
+SUBDIR+=	R-minqa
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
 SUBDIR+=	R-pixmap
