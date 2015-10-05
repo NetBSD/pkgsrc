@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4187 2015/10/04 16:10:19 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4188 2015/10/05 00:16:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7220,3 +7220,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-puma to 2.14.0 [taca 2015-10-04]
 	Updated www/thin to 1.6.4 [taca 2015-10-04]
 	Updated meta-pkgs/bulk-medium to 20151004 [taca 2015-10-04]
+	Updated mail/postfix-lmdb to 3.0.2nb1 [taca 2015-10-05]
+	Updated mail/postfix-mysql to 3.0.2nb1 [taca 2015-10-05]
+	Updated mail/postfix-pcre to 3.0.2nb1 [taca 2015-10-05]
+	Updated mail/postfix-pgsql to 3.0.2nb1 [taca 2015-10-05]
+	Updated mail/postfix-sqlite to 3.0.2nb1 [taca 2015-10-05]
