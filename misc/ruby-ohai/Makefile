@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/10/04 13:01:04 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/10/05 21:45:36 sevan Exp $
 
 DISTNAME=	ohai-8.6.0
 CATEGORIES=	misc
@@ -18,11 +18,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=1.6.0:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0.0:../../devel/ruby-mixlib-shellout
 DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0:../../devel/ruby-wmi-lite
 DEPENDS+=	${RUBY_PKGPREFIX}-ipaddress>=0.8.0:../../net/ruby-ipaddress
-DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<13:../../sysutils/ruby-chef-config
+#DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<13:../../sysutils/ruby-chef-config
 
 RUBY_VERSION_SUPPORTED=	200 21 22
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+BROKEN= 	Missing dependency ruby-chef-config
 
 .include "../../lang/ruby/rubyversion.mk"
 
