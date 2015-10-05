@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/04/25 14:22:57 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2015/10/05 05:06:52 richard Exp $
 
 DISTNAME=	kajongg-${_KDE_VERSION}
 PKGREVISION=	3
@@ -22,6 +22,7 @@ REPLACE_PYTHON+=	src/server.py
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
