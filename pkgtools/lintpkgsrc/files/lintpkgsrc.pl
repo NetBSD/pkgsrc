@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.7 2015/10/05 13:12:12 tnn Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.8 2015/10/05 13:16:44 tnn Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -154,7 +154,7 @@ sub main() {
 		    if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/)
 			{
 			my($dn);
-			if ($2 =~ /^patch-[\w._+\-]+$/)
+			if ($2 =~ /^patch-[\w.+\-]+$/)
 			    { next; }
 			$dn = $2;
 			# Strip leading ./ which sometimes gets added
@@ -1596,7 +1596,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
                         $dt = $1;
                         $dn = $2;
                         $ds = $3;
-                        if ( $dn =~ /^patch-[\w._+\-]+$/ ) {
+                        if ( $dn =~ /^patch-[\w.+\-]+$/ ) {
                             next;
                         }
 
