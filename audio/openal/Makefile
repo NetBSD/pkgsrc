@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2014/02/28 11:59:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2015/10/05 03:56:17 richard Exp $
 
 DISTNAME=	openal-0.0.8
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
@@ -34,6 +34,18 @@ SUBST_SED.fixdev=	-e 's;/dev/dsp;${DEVOSSSOUND};g'
 .if !empty(MACHINE_PLATFORM:MDarwin-10.*-*)
 CONFIGURE_ENV+=		NASM_FORMAT="-f macho"
 .endif
+
+.if ${OPSYS} == "SunOS"
+.  if ${ABI} == "64"
+CONFIGURE_ENV+=	NASM_FORMAT="-f elf64"
+.  else
+CONFIGURE_ENV+=	NASM_FORMAT="-f elf32"
+.  endif
+CONFIGURE_ENV+=	NM="${NM:Unm} -p"
+LDFLAGS+=	-Wl,-zdefs
+.endif
+
+BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
