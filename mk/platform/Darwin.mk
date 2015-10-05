@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.71 2015/09/07 11:48:35 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.72 2015/10/05 17:06:22 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -77,25 +77,29 @@ _USER_DEPENDS=		user-darwin>=20130712:../../sysutils/user_darwin
 
 _OPSYS_EMULDIR.darwin=	# empty
 
-#
-# From Xcode 5 onwards system headers are no longer installed by default
-# into /usr/include, so we need to query their location.
-# Use current system version SDK (avoid newer SDKs).
-#
-.if exists(/usr/bin/xcrun)
-OSX_VERS!=	sw_vers -productVersion
-.  if ${OSX_VERS:R:R} != ${OSX_VERS:R}
-OSX_VERS:=${OSX_VERS:R}
-.  endif
-OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERS} --show-sdk-path 2>/dev/null || echo /nonexistent
-.endif
-
 _OPSYS_SYSTEM_RPATH?=		/usr/lib
 _OPSYS_LIB_DIRS?=		/usr/lib
+
+#
+# From Xcode 5 onwards system headers are no longer installed by default
+# into /usr/include, so we need to query their location if /usr/include is
+# not available.
+#
+# Use current system version SDK (avoid newer SDKs).
+#
 .if exists(/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=		/usr/include
-.elif exists(${OSX_SDK_PATH}/usr/include/stdio.h)
+.elif exists(/usr/bin/xcrun)
+OSX_VERS!=	sw_vers -productVersion
+.  if ${OSX_VERS:R:R} != ${OSX_VERS:R}
+OSX_VERS:=	${OSX_VERS:R}
+.  endif
+OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERS} --show-sdk-path 2>/dev/null || echo /nonexistent
+MAKEFLAGS+=	OSX_VERS=${OSX_VERS:Q}
+MAKEFLAGS+=	OSX_SDK_PATH=${OSX_SDK_PATH:Q}
+.  if exists(${OSX_SDK_PATH}/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=		${OSX_SDK_PATH}/usr/include
+.  endif
 .endif
 
 .if ${OS_VERSION:R} >= 6
