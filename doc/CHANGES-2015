@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4188 2015/10/05 00:16:11 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4189 2015/10/05 01:15:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7225,3 +7225,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/postfix-pcre to 3.0.2nb1 [taca 2015-10-05]
 	Updated mail/postfix-pgsql to 3.0.2nb1 [taca 2015-10-05]
 	Updated mail/postfix-sqlite to 3.0.2nb1 [taca 2015-10-05]
+	Added math/R-minqa version 1.2.4 [wen 2015-10-05]
