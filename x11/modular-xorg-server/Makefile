@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/09/26 08:47:17 tnn Exp $
+# $NetBSD: Makefile,v 1.104 2015/10/06 11:29:55 tnn Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-${DISTNAME}
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Modular X11 server from modular X.org
 
 SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 .include "Makefile.common"
 
