@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.27 2015/04/17 15:53:06 adam Exp $
+# $NetBSD: Makefile,v 1.27.4.1 2015/10/06 17:44:21 spz Exp $
 
-PKGREVISION= 1
 .include "../../graphics/exiv2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/exiv2/exiv2-organize/}

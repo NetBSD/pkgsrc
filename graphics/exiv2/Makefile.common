@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2014/10/05 16:41:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4.8.1 2015/10/06 17:44:21 spz Exp $
 #
 # used by graphics/exiv2/Makefile
 # used by graphics/exiv2-organize/Makefile
 
-DISTNAME=	exiv2-0.24
+DISTNAME=	exiv2-0.25
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.exiv2.org/
 
