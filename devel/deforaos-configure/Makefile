@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/08/09 15:04:58 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2015/10/06 16:50:03 khorben Exp $
 
-DISTNAME=	configure-0.2.1
-PKGNAME=	deforaos-configure-0.2.1
+DISTNAME=	configure-0.2.2
+PKGNAME=	deforaos-configure-0.2.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.defora.org/os/download/download/4354/
+MASTER_SITES=	http://www.defora.org/os/download/download/4378/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -19,6 +19,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
