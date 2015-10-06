@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.24 2014/06/05 07:12:53 adam Exp $
+$NetBSD: distinfo,v 1.24.12.1 2015/10/06 17:44:21 spz Exp $
 
-SHA1 (exiv2-0.24.tar.gz) = 2f19538e54f8c21c180fa96d17677b7cff7dc1bb
-RMD160 (exiv2-0.24.tar.gz) = 453247926e8626bf888578afd5a0dde42c6f6962
-Size (exiv2-0.24.tar.gz) = 4635028 bytes
-SHA1 (patch-aa) = e98a4f1ae3ff2ad5ce0cd0d107ae21752a4edb45
-SHA1 (patch-configure) = 11b8d348f94eda4b84c61f34ffced54316d70a70
+SHA1 (exiv2-0.25.tar.gz) = adb8ffe63916e7c27bda9792e690d1330ec7273d
+RMD160 (exiv2-0.25.tar.gz) = 2f43f8737dad9ffd7d5759ef4dd9688658125794
+Size (exiv2-0.25.tar.gz) = 5434325 bytes
+SHA1 (patch-aa) = 947061d168d5db0d9969fa91ef837b364c641fcb
+SHA1 (patch-configure) = 39d6589dc82315d7a2bffeb332c21b6f54d69cf1
 SHA1 (patch-contrib_organize_Makefile) = de74227211b79e49126178f27391831507c2948f
+SHA1 (patch-src_Makefile) = 09c51b7da85584aece0147b446bff27ebc7f549f
+SHA1 (patch-src_http.cpp) = 75a64b80c37c54c0f65cc8455bd730ae01df0bae
+SHA1 (patch-src_svn_version.sh) = a80e142ab14ba4f5aad62936c5b5375d2a9b4b58

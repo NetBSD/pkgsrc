@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2014/06/05 06:43:54 adam Exp $
+$NetBSD: patch-aa,v 1.4.12.1 2015/10/06 17:44:21 spz Exp $
 
 Fix build on Solaris, from PR 37720.
 
---- config/config.mk.in.orig	2013-12-01 12:13:42.000000000 +0000
-+++ config/config.mk.in
-@@ -133,7 +133,7 @@ ifdef DEP_TRACKING
+--- config/config.mk.in.orig	2015-06-21 16:19:25.000000000 +0200
++++ config/config.mk.in	2015-10-02 05:22:11.000000000 +0200
+@@ -148,7 +148,7 @@
  
-     # Dependency files post-process commands
-     POSTDEPEND = if test ! -d $(DEPDIR); then mkdir $(DEPDIR); fi; \
--                 if test -e $*.d; then cp $*.d $(DEPDIR)/$*.d; \
-+                 if test -f $*.d; then cp $*.d $(DEPDIR)/$*.d; \
-                    sed -e 's/^\#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+         # Dependency files post-process commands
+         POSTDEPEND = if test ! -d $(DEPDIR); then mkdir $(DEPDIR); fi; \
+-	        if test -e $*.d; then cp $*.d $(DEPDIR)/$*.d; \
++	        if test -f $*.d; then cp $*.d $(DEPDIR)/$*.d; \
+ 	        sed -e 's/^\#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
                      -e '/^$$/ d' -e 's/$$/ :/' < $*.d >> $(DEPDIR)/$*.d; \
-                    $(RM) $*.d; fi
+                 $(RM) $*.d; fi
