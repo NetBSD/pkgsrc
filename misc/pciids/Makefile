@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2015/09/07 08:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2015/10/06 18:48:22 spz Exp $
 
 DISTNAME=	pci.ids
 PKGNAME=	pciids-20150907
 CATEGORIES=	misc
-MASTER_SITES=	http://pci-ids.ucw.cz/v2.2/
+MASTER_SITES=	# dynamically generated file http://pci-ids.ucw.cz/v2.2/
 EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	mark@coris.org.uk
