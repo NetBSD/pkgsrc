@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4195 2015/10/05 23:56:21 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4196 2015/10/06 08:00:49 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7230,3 +7230,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 41.0.1 [ryoon 2015-10-05]
 	Updated www/webkit-gtk to 2.10.0nb1 [leot 2015-10-05]
 	Updated sysutils/deforaos-browser to 0.4.14 [khorben 2015-10-06]
+	Updated lang/nodejs to 4.1.2 [fhajny 2015-10-06]
