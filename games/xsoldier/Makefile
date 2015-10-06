@@ -1,29 +1,25 @@
-# $NetBSD: Makefile,v 1.22 2012/10/06 11:55:03 asau Exp $
-#
+# $NetBSD: Makefile,v 1.23 2015/10/06 22:10:02 leot Exp $
 
-DISTNAME=		xsoldier-0.96
-PKGREVISION=		2
+DISTNAME=		xsoldier-1.8
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.interq.or.jp/libra/oohara/xsoldier/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.interq.or.jp/libra/oohara/xsoldier/
 COMMENT=		Updated xgalaga type game with awesome graphics
+LICENSE=		gnu-gpl-v2
 
-SETGIDGAME=		yes
-SPECIAL_PERMS+=		bin/xsoldier ${SETGID_GAMES_PERMS}
+USE_PKGLOCALEDIR=	yes
+USE_GAMESGROUP=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-USE_IMAKE=		YES
-NO_INSTALL_MANPAGES=	YES
+BUILD_DEFS+=		VARBASE
 
-MAKE_ENV+=		BINOWN=${BINOWN:Q}
-
-CONF_FILES_PERMS=	${PREFIX}/share/xsoldier/xsoldier.score.dist	\
-			/var/games/xsoldier				\
-			games games 0664
-
-post-patch:
-	${TOUCH} ${WRKSRC}/xsoldier.man
+OWN_DIRS_PERMS+=	${VARBASE}/games/xsoldier ${GAMEDIR_PERMS}
+REQD_FILES_PERMS+=	${WRKSRC}/scorefile.txt \
+			${VARBASE}/games/xsoldier/xsoldier.scores ${GAMEDATA_PERMS}
+SPECIAL_PERMS+=		${PREFIX}/bin/xsoldier ${SETGID_GAMES_PERMS}
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
