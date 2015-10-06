@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/08/22 23:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2015/10/06 16:37:05 spz Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO14_VERSION}.src
 PKGNAME=	go14-${GO14_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
@@ -24,9 +23,6 @@ BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
-# bash script may use unportable bash constructs
-CHECK_PORTABILITY_SKIP=	lib/time/update.bash
-
 GOROOT_FINAL=	${PREFIX}/go14
 INSTALLATION_DIRS= bin go14
 
@@ -34,6 +30,7 @@ REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/codewalk/run
 REPLACE_BASH+=	doc/progs/run
 REPLACE_BASH+=	doc/progs/update.bash
+REPLACE_BASH+=	lib/codereview/test.sh
 REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/benchcmp
