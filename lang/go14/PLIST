@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/31 14:46:25 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2015/10/06 16:37:05 spz Exp $
 go14/AUTHORS
 go14/CONTRIBUTORS
 go14/LICENSE
@@ -187,6 +187,9 @@ go14/include/plan9/stdarg.h
 go14/include/plan9/utf.h
 go14/include/u.h
 go14/include/utf.h
+go14/lib/codereview/codereview.cfg
+go14/lib/codereview/codereview.py
+go14/lib/codereview/test.sh
 go14/lib/time/README
 go14/lib/time/update.bash
 go14/lib/time/zoneinfo.zip
@@ -338,33 +341,9 @@ go14/misc/chrome/gophertool/gopher.png
 go14/misc/chrome/gophertool/manifest.json
 go14/misc/chrome/gophertool/popup.html
 go14/misc/chrome/gophertool/popup.js
-go14/misc/dashboard/codereview/app.yaml
-go14/misc/dashboard/codereview/cron.yaml
-go14/misc/dashboard/codereview/dashboard/cl.go
-go14/misc/dashboard/codereview/dashboard/front.go
-go14/misc/dashboard/codereview/dashboard/gc.go
-go14/misc/dashboard/codereview/dashboard/mail.go
-go14/misc/dashboard/codereview/dashboard/people.go
-go14/misc/dashboard/codereview/index.yaml
-go14/misc/dashboard/codereview/queue.yaml
-go14/misc/dashboard/codereview/static/gopherstamp.jpg
-go14/misc/dashboard/codereview/static/icon.png
 go14/misc/editors
 go14/misc/git/pre-commit
 go14/misc/linkcheck/linkcheck.go
-go14/misc/makerelease/darwin/Distribution
-go14/misc/makerelease/darwin/Resources/bg.png
-go14/misc/makerelease/darwin/etc/paths.d/go
-go14/misc/makerelease/darwin/scripts/postinstall
-go14/misc/makerelease/darwin/scripts/preinstall
-go14/misc/makerelease/makerelease.go
-go14/misc/makerelease/windows/LICENSE.rtf
-go14/misc/makerelease/windows/README.txt
-go14/misc/makerelease/windows/images/Banner.jpg
-go14/misc/makerelease/windows/images/Dialog.jpg
-go14/misc/makerelease/windows/images/DialogLeft.jpg
-go14/misc/makerelease/windows/images/gopher.ico
-go14/misc/makerelease/windows/installer.wxs
 go14/misc/nacl/README
 go14/misc/nacl/go_nacl_386_exec
 go14/misc/nacl/go_nacl_amd64p32_exec
@@ -4039,6 +4018,7 @@ go14/test/fixedbugs/bug488.go
 go14/test/fixedbugs/bug489.go
 go14/test/fixedbugs/bug490.go
 go14/test/fixedbugs/bug491.go
+go14/test/fixedbugs/issue10135.go
 go14/test/fixedbugs/issue1304.go
 go14/test/fixedbugs/issue2615.go
 go14/test/fixedbugs/issue3552.dir/one.go
