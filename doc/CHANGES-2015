@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4197 2015/10/06 14:56:26 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4198 2015/10/06 16:51:35 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7232,3 +7232,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/deforaos-browser to 0.4.14 [khorben 2015-10-06]
 	Updated lang/nodejs to 4.1.2 [fhajny 2015-10-06]
 	Updated devel/libgit2 to 0.23.3 [fhajny 2015-10-06]
+	Updated devel/deforaos-configure to 0.2.2 [khorben 2015-10-06]
