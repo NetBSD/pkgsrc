@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/06 13:03:20 fhajny Exp $
 #
 
 RSYSLOG_MOD=	gssapi
@@ -16,11 +16,11 @@ BUILD_DIRS=		. plugins/imgssapi plugins/omgssapi
 INSTALL_DIRS=		plugins/imgssapi plugins/omgssapi
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/.libs/lmgssutil.a    \
+	${INSTALL_DATA} ${WRKSRC}/runtime/.libs/lmgssutil.a    \
 		${DESTDIR}${PREFIX}/lib/rsyslog/
-	${INSTALL_LIB} ${WRKSRC}/.libs/lmgssutil.so    \
+	${INSTALL_LIB} ${WRKSRC}/runtime/.libs/lmgssutil.so    \
 		${DESTDIR}${PREFIX}/lib/rsyslog/
-	${INSTALL_LIB} ${WRKSRC}/.libs/lmgssutil.lai   \
+	${INSTALL_LIB} ${WRKSRC}/runtime/.libs/lmgssutil.lai   \
 		${DESTDIR}${PREFIX}/lib/rsyslog/lmgssutil.la
 
 .include "../../mk/krb5.buildlink3.mk"
