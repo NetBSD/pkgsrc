@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/08/16 02:08:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/10/07 09:30:19 fhajny Exp $
 
 DISTNAME=	librevenge-0.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +27,8 @@ PKGCONFIG_OVERRIDE+=	librevenge.pc.in
 
 LIBS+=	-lboost_system
 
+PTHREAD_AUTO_VARS=	yes
+
 #.include "../../mk/compiler.mk"
 #.if !empty(PKGSRC_COMPILER:Mclang)
 #CWRAPPERS_APPEND.cxx+=	-Wno-error=unused-local-typedef \
@@ -37,4 +39,5 @@ LIBS+=	-lboost_system
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
