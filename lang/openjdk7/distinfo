@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2015/09/12 16:56:47 joerg Exp $
+$NetBSD: distinfo,v 1.86 2015/10/07 10:07:11 jperkin Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -108,7 +108,7 @@ SHA1 (patch-jdk_make_com_sun_java_pack_Makefile) = bb258d4c2235ea780810d980b84b9
 SHA1 (patch-jdk_make_com_sun_jmx_Makefile) = 697467f606ff6a13127ea9027018ca401d354e58
 SHA1 (patch-jdk_make_com_sun_nio_Makefile) = ab2ce3fd1a1a8ad6009d81025cc07077abe9a048
 SHA1 (patch-jdk_make_com_sun_script_Makefile) = ae6408118933387f4ac7a4f13c1fc4a73b44a2a3
-SHA1 (patch-jdk_make_common_Defs-solaris-gcc.gmk) = 32c0bbd91ec0c85eb725cd721ed759c6d6499f50
+SHA1 (patch-jdk_make_common_Defs-solaris-gcc.gmk) = d813b39d23cc90c9f51c4714e6f066cc7804e61d
 SHA1 (patch-jdk_make_common_Defs-solaris.gmk) = ea0bef0fd67a1ff809a17005458dadaed202ba70
 SHA1 (patch-jdk_make_common_Mapfile-vers.gmk) = 7115ec8e0fc25f952a6c72ee78df33901040a7b6
 SHA1 (patch-jdk_make_common_Program.gmk) = 66edaf69cb12c1e024ba1145c98b667d54ea9239
