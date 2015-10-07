@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4201 2015/10/06 22:10:44 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4202 2015/10/07 06:47:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7237,3 +7237,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/p5-GraphicsMagick to 1.3.22 [adam 2015-10-06]
 	Updated geography/kplex to 1.3.1 [plunky 2015-10-06]
 	Updated games/xsoldier to 1.8 [leot 2015-10-06]
+	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200003 [wen 2015-10-07]
