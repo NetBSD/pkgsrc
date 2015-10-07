@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4207 2015/10/07 14:29:38 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4208 2015/10/07 14:46:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7250,3 +7250,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/gitweb to 2.6.1 [ryoon 2015-10-07]
 	Added devel/p5-Test-API version 0.005 [wen 2015-10-07]
 	Added devel/p5-Test-Modern version 0.013 [wen 2015-10-07]
+	Added databases/p5-DBICx-Sugar version 0.0001 [wen 2015-10-07]
