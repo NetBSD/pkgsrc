@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:48:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/10/07 14:51:38 wen Exp $
 
-DISTNAME=	Dancer-Plugin-DBIC-0.2100
+DISTNAME=	Dancer-Plugin-DBIC-0.2102
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dancer/}
 
@@ -13,6 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-Dancer>=1.3098:../../www/p5-Dancer
+DEPENDS+=	p5-DBICx-Sugar>=0:../../databases/p5-DBICx-Sugar
 
 # recommended ...
 DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.07002:../../databases/p5-DBIx-Class-Schema-Loader
