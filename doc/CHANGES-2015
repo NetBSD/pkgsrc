@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4202 2015/10/07 06:47:01 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4203 2015/10/07 10:15:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7238,3 +7238,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/kplex to 1.3.1 [plunky 2015-10-06]
 	Updated games/xsoldier to 1.8 [leot 2015-10-06]
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200003 [wen 2015-10-07]
+	Updated databases/lmdb to 0.9.16 [fhajny 2015-10-07]
