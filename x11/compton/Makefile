@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/26 07:25:59 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/07 23:21:51 joerg Exp $
 
 GITHUB_PROJECT=	compton
 GITHUB_TAG=	d7f95b56b176281bfb252c54defef48c9cd1f4e1
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 NO_CONFIGURE=	yes
 BUILD_TARGET=	compton docs
 MAKEFLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
