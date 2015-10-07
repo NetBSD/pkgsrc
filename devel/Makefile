@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2151 2015/10/07 12:34:00 adam Exp $
+# $NetBSD: Makefile,v 1.2152 2015/10/07 14:11:09 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1367,6 +1367,7 @@ SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Term-Size-Any
 SUBDIR+=	p5-Term-Size-Perl
 SUBDIR+=	p5-Term-UI
+SUBDIR+=	p5-Test-API
 SUBDIR+=	p5-Test-Aggregate
 SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
