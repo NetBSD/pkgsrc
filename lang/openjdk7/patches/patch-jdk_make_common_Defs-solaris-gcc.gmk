@@ -1,4 +1,4 @@
-$NetBSD: patch-jdk_make_common_Defs-solaris-gcc.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+$NetBSD: patch-jdk_make_common_Defs-solaris-gcc.gmk,v 1.2 2015/10/07 10:07:11 jperkin Exp $
 
 GCC support.
 
@@ -189,7 +189,7 @@ GCC support.
 +
 +CC_OPT/NONE     = 
 +CC_OPT/LOWER    = -O2
-+CC_OPT/HIGHER   = -O3
++CC_OPT/HIGHER   = -O2
 +CC_OPT/HIGHEST  = -O3
 +
 +CC_OPT          = $(CC_OPT/$(OPTIMIZATION_LEVEL))
