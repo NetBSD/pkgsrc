@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/07 12:33:16 adam Exp $
+include/utarray.h
+include/uthash.h
+include/utlist.h
+include/utstring.h
+share/doc/uthash/ChangeLog.html
+share/doc/uthash/ChangeLog.txt
+share/doc/uthash/Makefile
+share/doc/uthash/banner.png
+share/doc/uthash/banner.svg
+share/doc/uthash/google315d692c9c632ed0.html
+share/doc/uthash/index.html
+share/doc/uthash/license.html
+share/doc/uthash/rss.png
+share/doc/uthash/styles.css
+share/doc/uthash/todo.txt
+share/doc/uthash/userguide.html
+share/doc/uthash/userguide.txt
+share/doc/uthash/utarray.html
+share/doc/uthash/utarray.txt
+share/doc/uthash/uthash-mini.png
+share/doc/uthash/uthash-mini.svg
+share/doc/uthash/uthash.png
+share/doc/uthash/utlist.html
+share/doc/uthash/utlist.txt
+share/doc/uthash/utstring.html
+share/doc/uthash/utstring.txt
