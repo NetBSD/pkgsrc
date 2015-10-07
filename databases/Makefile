@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2015/09/03 07:31:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.499 2015/10/07 14:45:23 wen Exp $
 
 COMMENT=	Databases
 
@@ -143,6 +143,7 @@ SUBDIR+=	p5-DBI
 SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-DBICx-Deploy
 SUBDIR+=	p5-DBICx-MapMaker
+SUBDIR+=	p5-DBICx-Sugar
 SUBDIR+=	p5-DBICx-TestDatabase
 SUBDIR+=	p5-DBIWrapper
 SUBDIR+=	p5-DBIx-Abstract
