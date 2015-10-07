@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/08/23 17:02:58 spz Exp $
+# $NetBSD: Makefile,v 1.16 2015/10/07 08:02:27 jnemeth Exp $
 
 VERSION=	4.5.1
 VERSION_IPXE=	9a93db3f0947484e30e753bbd61a10b17336e20e
@@ -181,7 +181,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xl.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKDIR}/xlcpupool.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-.if ${OPSYS} == "NetBSD" && !exists(/var/shm)
+.if (${OPSYS} == "NetBSD" && \
+    (empty(OS_VERSION:M6.99.3?) && empty(OS_VERSION:M[7-9].*)))
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
