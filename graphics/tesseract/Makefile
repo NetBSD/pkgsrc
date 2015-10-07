@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/07 16:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.16 2015/10/07 11:26:22 fhajny Exp $
 
 DISTNAME=	tesseract-ocr-3.02.02
 PKGNAME=	${DISTNAME:S/-ocr//}
@@ -31,6 +31,8 @@ TESSERACT_LANGS=	afr ara aze bel ben bul cat ces chi_sim chi_tra chr \
 .for l in ${TESSERACT_LANGS}
 DISTFILES+=	tesseract-ocr-3.02.${l}.tar.gz
 .endfor
+
+LIBS.SunOS+=		-lsocket -lnsl
 
 .include "../../graphics/leptonica/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
