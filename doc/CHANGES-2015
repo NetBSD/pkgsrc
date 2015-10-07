@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4204 2015/10/07 13:07:07 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4205 2015/10/07 14:10:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7241,3 +7241,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/lmdb to 0.9.16 [fhajny 2015-10-07]
 	Added devel/uthash version 1.9.9 [adam 2015-10-07]
 	Updated net/dhcpd-pools to 2.27 [adam 2015-10-07]
+	Updated devel/git to 2.6.1 [ryoon 2015-10-07]
+	Updated devel/git-base to 2.6.1 [ryoon 2015-10-07]
+	Updated devel/git-docs to 2.6.1 [ryoon 2015-10-07]
+	Updated devel/git-svn to 2.6.1 [ryoon 2015-10-07]
+	Updated devel/git-gitk to 2.6.1 [ryoon 2015-10-07]
+	Updated devel/git-contrib to 2.6.1 [ryoon 2015-10-07]
+	Updated www/gitweb to 2.6.1 [ryoon 2015-10-07]
