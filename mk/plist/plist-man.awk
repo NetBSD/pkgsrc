@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.9 2013/09/12 11:01:47 jperkin Exp $
+# $NetBSD: plist-man.awk,v 1.10 2015/10/07 09:56:14 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -76,13 +76,15 @@ BEGIN {
 	MANZ = getenv("MANZ", "no")
 	PKGMANDIR = getenv("PKGMANDIR", "man")
 	CATMAN_SECTION_SUFFIX = getenv("CATMAN_SECTION_SUFFIX", "no")
+	CATPAGE_REGEX = "cat[1-9ln](am|f)?/[^/]*\\.[0-9ln](am|f)?"
+	MANPAGE_REGEX = "man[1-9ln](am|f)?/[^/]*\\.[1-9ln](am|f)?"
+	CATORMAN_REGEX = "(" MANPAGE_REGEX "|" CATPAGE_REGEX ")"
 }
 
 ###
 ### Canonicalize man page entries by stripping any ".gz" suffixes.
 ###
-/^[^@]/ && \
-/^([^\/]*\/)+(man[1-9ln]\/[^\/]*\.[1-9ln]|cat[1-9ln]\/[^\/]*\.[0-9])\.gz$/ {
+/^[^@]/ && $0 ~ "^([^/]*/)+" CATORMAN_REGEX "\\.gz$" {
 	sub("\\.gz$", "")
 }
 
@@ -90,8 +92,7 @@ BEGIN {
 ### Rewrite "imake-installed" catman pages as man pages if imake only
 ### supports man pages.
 ###
-(IMAKE_MANINSTALL == "maninstall") && /^[^@]/ && \
-/^([^\/]*\/)+cat[1-9ln]\/[^\/]*\.[0-9ln]$/ {
+(IMAKE_MANINSTALL == "maninstall") && /^[^@]/ && $0 ~ "^([^/]*/)+" CATPAGE_REGEX "$" {
 	n = split($0, components, "/")
 	sub("cat", "man", components[n-1])
 	section = substr(components[n-1], 4, 1)
@@ -103,8 +104,7 @@ BEGIN {
 ### Rewrite "imake-installed" man pages as catman pages if imake only
 ### supports catman pages.
 ###
-(IMAKE_MANINSTALL == "catinstall") && /^[^@]/ && \
-/^([^\/]*\/)+man[1-9ln]\/[^\/]*\.[0-9ln]$/ {
+(IMAKE_MANINSTALL == "catinstall") && /^[^@]/ && $0 ~ "^([^/]*/)+" MANPAGE_REGEX "$" {
 	n = split($0, components, "/")
 	sub("man", "cat", components[n-1])
 	if (CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/) {
@@ -121,12 +121,10 @@ BEGIN {
 ### entries from the PLIST, and similarly for "catinstall" and catman page
 ### entries.
 ###
-(MANINSTALL !~ /catinstall/) && /^[^@]/ && \
-/^([^\/]*\/)+cat[1-9ln]\/[^\/]*\.[0-9ln]$/ {
+(MANINSTALL !~ /catinstall/) && /^[^@]/ && $0 ~ "^([^/]*/)+" CATPAGE_REGEX "$" {
 	next
 }
-(MANINSTALL !~ /maninstall/) && /^[^@]/ && \
-/^([^\/]*\/)+man[1-9ln]\/[^\/]*\.[0-9ln]$/ {
+(MANINSTALL !~ /maninstall/) && /^[^@]/ && $0 ~ "^([^/]*/)+" MANPAGE_REGEX "$" {
 	next
 }
 
@@ -134,24 +132,21 @@ BEGIN {
 ### Append ".gz" to the end of man page entries if compressed pages are
 ### requested.
 ###
-(MANZ ~ /[yY][eE][sS]/) && /^[^@]/ && \
-/^([^\/]*\/)+(man[1-9ln]\/[^\/]*\.[1-9ln]|cat[1-9ln]\/[^\/]*\.[0-9])$/ {
+(MANZ ~ /[yY][eE][sS]/) && /^[^@]/ && $0 ~ "^([^/]*/)+" CATORMAN_REGEX "$" {
 	$0 = $0 ".gz"
 }
 
 ###
 ### Convert man/ to ${PKGMANDIR}/ for all man and catman page entries.
 ###
-/^[^@]/ && \
-/^man\/([^\/]*\/)?(man[1-9ln]\/[^\/]*\.[1-9ln]|cat[1-9ln]\/[^\/]*\.[0-9])/ {
+/^[^@]/ && $0 ~ "^man/([^/]*/)?" CATORMAN_REGEX {
 	sub("^man/", PKGMANDIR "/")
 }
 
 ###
 ### Fixup catman entries to use section suffixes if required.
 ###
-(CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/)&& /^[^@]/ && \
-/^man\/([^\/]*\/)?(cat[1-9ln]\/[^\/]*\.[0-9])/ {
+(CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/)&& /^[^@]/ && $0 ~ "^man/([^/]*/)?" CATPAGE_REGEX {
 	n = split($0, components, "/")
 	sub("^cat", "", components[n-1])
 	sub("0$", components[n-1], $0)
