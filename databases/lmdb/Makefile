@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/03/01 21:19:29 mspo Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/07 10:00:20 fhajny Exp $
 
 VERSION=	0.9.14
 DISTNAME=	mdb-${VERSION}
 PKGNAME=	lmdb-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 
@@ -18,6 +19,8 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/mdb-mdb
 BUILD_DIRS=	libraries/liblmdb
+
+USE_GCC_RUNTIME=	yes
 
 SUBST_CLASSES+=			makefile
 SUBST_STAGE.makefile=	pre-configure
