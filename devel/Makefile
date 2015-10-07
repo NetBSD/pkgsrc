@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2150 2015/09/27 09:16:31 joerg Exp $
+# $NetBSD: Makefile,v 1.2151 2015/10/07 12:34:00 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2059,6 +2059,7 @@ SUBDIR+=	umbrello
 SUBDIR+=	unidiff
 SUBDIR+=	uno
 SUBDIR+=	userspace-rcu
+SUBDIR+=	uthash
 SUBDIR+=	valgrind
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
