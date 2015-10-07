@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2014/04/17 21:19:02 asau Exp $
+$NetBSD: distinfo,v 1.22 2015/10/07 10:36:54 sevan Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -10,10 +10,10 @@ SHA1 (patch-ab) = 7429a4da26aa573dcdd94bf417da1e009f95d273
 SHA1 (patch-ac) = b20a90cc2f9078cf0048980b75fa6836da0f28a8
 SHA1 (patch-g95spec.c) = d6f434e715835cd39511c45ed18632c8401b78a2
 SHA1 (patch-gcc_Makefile.in) = cc5cc142a85612ebf2d38513e4b05db0ae795268
-SHA1 (patch-gcc_config.gcc) = 77c241a77e1879cd0a73847591d39adac7b13fc3
+SHA1 (patch-gcc_config.gcc) = 36d6af33ee7997d67179090114dfd8fc3e403a74
 SHA1 (patch-gcc_config_dragonfly-spec.h) = bf0c97caa314714542cf8cc63fdf0c73bda80511
 SHA1 (patch-gcc_config_dragonfly.h) = 6d46b7b4637a20b36e19a15e1eaffdfff6638de9
-SHA1 (patch-gcc_config_freebsd-spec.h) = 8a1b78b479a386caec14e6a6333fde4a8af6de2c
+SHA1 (patch-gcc_config_freebsd-spec.h) = 58eb1a97c243da253f7be070521ed4b6ea6c2c76
 SHA1 (patch-gcc_config_i386_dragonfly.h) = 7d60d29b5ae636d69650e8c412a94f7a6045f6d9
 SHA1 (patch-gcc_config_i386_dragonfly64.h) = 9d2d8512a913e58055fa5c1b7d85a109117dcfba
 SHA1 (patch-gcc_config_t-dragonfly) = dd8d5919af737dfb9e3c18be9a41b4e2c6f31155

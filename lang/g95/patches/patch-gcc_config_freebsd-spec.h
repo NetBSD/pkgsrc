@@ -1,18 +1,21 @@
-$NetBSD: patch-gcc_config_freebsd-spec.h,v 1.1 2013/09/23 17:56:32 asau Exp $
+$NetBSD: patch-gcc_config_freebsd-spec.h,v 1.2 2015/10/07 10:36:54 sevan Exp $
 
 Do not create duplicate definitions.
+Add support for FreeBSD 9 to 11
 From FreeBSD ports.
 
---- ../gcc-4.1.2/gcc/config/freebsd-spec.h.orig	2005-07-20 13:12:58.000000000 +0200
-+++ ../gcc-4.1.2/gcc/config/freebsd-spec.h	2012-06-20 15:57:35.000000000 +0200
-@@ -51,11 +51,13 @@
+--- ../gcc-4.1.2/gcc/config/freebsd-spec.h.orig	2005-07-19 13:42:12.000000000 +0000
++++ ../gcc-4.1.2/gcc/config/freebsd-spec.h
+@@ -51,11 +51,15 @@ Boston, MA 02110-1301, USA.  */
  #define FBSD_TARGET_OS_CPP_BUILTINS()					\
    do									\
      {									\
 -	if (FBSD_MAJOR == 9)						\
-+	if (FBSD_MAJOR == 10)						\
++	if (FBSD_MAJOR == 11)						\
++	  builtin_define ("__FreeBSD__=11");				\
++	else if (FBSD_MAJOR == 10)					\
 +	  builtin_define ("__FreeBSD__=10");			       	\
-+	else if (FBSD_MAJOR == 9)						\
++	else if (FBSD_MAJOR == 9)					\
  	  builtin_define ("__FreeBSD__=9");			       	\
  	else if (FBSD_MAJOR == 8)					\
  	  builtin_define ("__FreeBSD__=8");			       	\
