@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4211 2015/10/08 01:03:06 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4212 2015/10/08 12:49:25 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7254,3 +7254,13 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-Dancer-Plugin-DBIC to 0.2102 [wen 2015-10-07]
 	Removed www/php-sugarcrm [ryoon 2015-10-07]
 	Updated multimedia/ffmpeg2 to 2.8nb1 [leot 2015-10-08]
+	Updated sysutils/rsyslog to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-dbi to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-elasticsearch to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-gnutls to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-gssapi to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-libgcrypt to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-mysql to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-pgsql to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-rabbitmq to 8.13.0 [fhajny 2015-10-08]
+	Updated sysutils/rsyslog-snmp to 8.13.0 [fhajny 2015-10-08]
