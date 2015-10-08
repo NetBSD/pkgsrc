@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.13 2015/10/06 20:41:27 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.14 2015/10/08 00:14:17 spz Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -58,4 +58,7 @@ mail/postfix-sqlite: build fix
 
 Pullup ticket #4834 - requested by tnn
 misc/pciids: build fix
+
+Pullup ticket #4835 - requested by leot
+www/webkit-gtk: build fix
 
