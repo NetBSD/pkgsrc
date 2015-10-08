@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/23 09:30:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2015/10/08 12:46:07 fhajny Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -9,7 +9,7 @@ BUILDLINK_DEPMETHOD.libuuid=	full
 
 COMMENT=		The enhanced syslogd for Unix
 
-CONFIGURE_ARGS+=	--disable-testbench --enable-cached-man-pages		\
+CONFIGURE_ARGS+=	--disable-testbench					\
 			--enable-diagtools --enable-usertools --enable-uuid	\
 			--enable-imdiag --enable-imfile	--enable-impstats	\
 			--enable-mail --enable-mmjsonparse --enable-mmnormalize	\
