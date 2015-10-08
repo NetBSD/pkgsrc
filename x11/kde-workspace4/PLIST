@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/11/13 10:53:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/10/08 10:08:03 tnn Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -29,6 +29,7 @@ bin/ksysguard
 bin/ksysguardd
 bin/ksystraycmd
 bin/kwin
+${PLIST.gles}bin/kwin_gles
 ${PLIST.noutempter}bin/kwrited
 bin/oxygen-demo
 bin/oxygen-settings
@@ -155,6 +156,7 @@ lib/kde4/kcm_keys.so
 lib/kde4/kcm_krunner_kill.so
 lib/kde4/kcm_ksplashthemes.so
 lib/kde4/kcm_kwin4_effect_builtins.so
+${PLIST.gles}lib/kde4/kwin4_effect_gles_builtins.so
 lib/kde4/kcm_kwin4_genericscripted.so
 lib/kde4/kcm_kwin_scripts.so
 lib/kde4/kcm_kwincompositing.so
@@ -339,6 +341,7 @@ lib/libkdeinit4_krunner.so
 lib/libkdeinit4_ksmserver.so
 lib/libkdeinit4_ksysguard.so
 lib/libkdeinit4_kwin.so
+${PLIST.gles}lib/libkdeinit4_kwin_gles.so
 lib/libkdeinit4_kwin_rules_dialog.so
 lib/libkdeinit4_plasma-desktop.so
 lib/libkdeinit4_plasma-netbook.so
@@ -367,6 +370,9 @@ lib/libksignalplotter.so.${KDE_VERSION}
 lib/libkwineffects.so
 lib/libkwineffects.so.1
 lib/libkwineffects.so.1.0.0
+${PLIST.gles}lib/libkwinglesutils.so
+${PLIST.gles}lib/libkwinglesutils.so.1
+${PLIST.gles}lib/libkwinglesutils.so.1.0.0
 lib/libkwinglutils.so
 lib/libkwinglutils.so.1
 lib/libkwinglutils.so.1.0.0
