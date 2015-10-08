@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/10/03 12:44:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2015/10/08 13:35:39 fhajny Exp $
 
 DISTNAME=	gnupg-2.1.6
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,8 @@ USE_TOOLS+=		gmake pkg-config makeinfo
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
+
+.include "options.mk"
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
 .include "../../security/libgpg-error/buildlink3.mk"
