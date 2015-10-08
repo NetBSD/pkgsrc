@@ -1,20 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2015/02/05 03:51:13 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2015/10/08 17:45:59 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opencv
-PKG_SUPPORTED_OPTIONS=	python ffmpeg
+PKG_SUPPORTED_OPTIONS=	ffmpeg
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=	python
-.if !empty(PKG_OPTIONS:Mpython)
-CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
-PY_PATCHPLIST=	yes
-.include "../../lang/python/extension.mk"
-.include "../../math/py-numpy/buildlink3.mk"
-PLIST.python=	yes
-.else
-CMAKE_ARGS+=	-D BUILD_NEW_PYTHON_SUPPORT=OFF
-.endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CMAKE_ARGS+=	-D WITH_FFMPEG=ON
