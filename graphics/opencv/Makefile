@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2015/06/30 09:57:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2015/10/08 17:45:59 fhajny Exp $
 
-DISTNAME=	opencv-2.4.9
-PKGREVISION=	4
+DISTNAME=	opencv-3.0.0
 CATEGORIES=	graphics devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	anthony.mallet@laas.fr
@@ -23,6 +22,7 @@ INSTALLATION_DIRS+=	share/OpenCV/haarcascades
 
 PKGCONFIG_OVERRIDE+=	opencv.pc.cmake.in
 
+PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	samples/python/*.py
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
@@ -34,24 +34,24 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
+CXXFLAGS+=		-std=c++11
 .endif
 
 OPSYSVARS+=		CMAKE_ARGS
+CMAKE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
 
-PLIST_VARS+=	opencl
-
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
-PLIST.opencl=	yes
-.endif
+CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
