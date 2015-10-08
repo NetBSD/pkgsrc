@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/04/25 14:25:07 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2015/10/08 10:08:03 tnn Exp $
 
 DISTNAME=	kde-workspace-4.11.14
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -65,18 +65,13 @@ PLIST_SUBST+=		KDE_VERSION=${_KDE_VERSION}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PLIST_VARS+=	utempter noutempter
+PLIST_VARS+=	gles utempter noutempter
 .if ${OPSYS} == "Linux" && exists(/usr/include/utempter.h)
 PLIST.utempter=		yes
 .elif ${OPSYS} == "FreeBSD" && exists(/usr/include/utempter.h)
 PLIST.utempter=		yes
 .else
 PLIST.noutempter=	yes
-.endif
-
-PLIST_VARS+=	gles
-.if ${OPSYS} == "Linux" && exists(/usr/include/GLES2/gl2.h)
-PLIST.gles=		yes
 .endif
 
 .if ${OPSYS} == "Linux"
@@ -141,6 +136,12 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../lang/python/extension.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/qjson/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.if ${X11_TYPE} == "modular" && !empty(MESALIB_SUPPORTS_EGL:M[yY][eE][sS])
+PLIST.gles=	yes
+.elif exists(${X11BASE:Q}/include/GLES2/gl2.h)
+PLIST.gles=	yes
+.endif
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../security/polkit-qt/buildlink3.mk"

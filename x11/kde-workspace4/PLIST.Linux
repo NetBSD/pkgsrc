@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2014/03/26 13:24:52 jperkin Exp $
-${PLIST.gles}bin/kwin_gles
+@comment $NetBSD: PLIST.Linux,v 1.4 2015/10/08 10:08:03 tnn Exp $
 lib/kde4/kcm_joystick.so
-${PLIST.gles}lib/kde4/kwin4_effect_gles_builtins.so
 lib/kde4/libexec/backlighthelper
-${PLIST.gles}lib/libkdeinit4_kwin_gles.so
-${PLIST.gles}lib/libkwinglesutils.so
-${PLIST.gles}lib/libkwinglesutils.so.1
-${PLIST.gles}lib/libkwinglesutils.so.1.0.0
 share/dbus-1/system-services/org.kde.powerdevil.backlighthelper.service
 share/examples/kde4-dbus/org.kde.powerdevil.backlighthelper.conf
 share/kde4/services/joystick.desktop
