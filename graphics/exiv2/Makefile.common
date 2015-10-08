@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/10/03 12:08:37 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/10/08 12:20:45 fhajny Exp $
 #
 # used by graphics/exiv2/Makefile
 # used by graphics/exiv2-organize/Makefile
@@ -18,7 +18,7 @@ PATCHDIR=	${.CURDIR}/../../graphics/exiv2/patches
 GCC_REQD+=		3.3
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 # The visibility feature seems complicated and causes problems on DragonFly
 # (reported by Matt Madden) and on Gentoo (http://bugs.gentoo.org/185907).
