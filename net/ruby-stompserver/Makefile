@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/09/26 15:12:14 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/10/08 14:05:55 taca Exp $
 
 DISTNAME=	drizztbsd-stompserver-1c7a275
 PKGNAME=	${RUBY_PKGPREFIX}-stompserver-1.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	imil@NetBSD.org
