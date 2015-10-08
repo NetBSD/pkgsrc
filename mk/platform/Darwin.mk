@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.72 2015/10/05 17:06:22 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.73 2015/10/08 11:36:00 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -166,6 +166,13 @@ _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysctl -n kern.argmax
 .  if !exists(/usr/include/poll.h) && !exists(/usr/include/sys/poll.h)
 CONFIGURE_ENV+=		ac_cv_func_poll=no
 .  endif
+.endif
+
+# El Capitan GM has a file system bug where a deep directory hierarchy can be
+# created but not removed.  Avoid running a test which does exactly this.
+# See https://openradar.appspot.com/radar?id=6160634819379200
+.if defined(GNU_CONFIGURE) && !empty(OS_VERSION:M15.0.0)
+CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 .endif
 
 # Use "/bin/ksh" for buildlink3 wrapper script to improve build performance.
