@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4230 2015/10/11 01:11:32 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4216 2015/10/08 17:46:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -6818,7 +6818,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/pcsc-tools to 1.4.24 [gdt 2015-09-07]
 	Updated security/opensc to 0.15.0 [gdt 2015-09-07]
 	Updated security/pgpdump to 0.29 [gdt 2015-09-07]
-	Updated pkgtools/bootstrap-mk-files to 20150908 [dholland 2015-09-08]
 	Updated www/py-django-cms to 3.1.3 [adam 2015-09-08]
 	Updated mail/amavisd-new to 2.10.1 [fhajny 2015-09-08]
 	Added sysutils/WCMCommander version 0.20.0 [wiz 2015-09-08]
@@ -7269,17 +7268,3 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/ruby-stompserver to 1.0.0nb2 [taca 2015-10-08]
 	Updated mail/pear-Mail_Mime to 1.10.0 [taca 2015-10-08]
 	Updated graphics/opencv to 3.0.0 [fhajny 2015-10-08]
-	Updated www/py-django to 1.8.5 [adam 2015-10-08]
-	Updated devel/ccache to 3.2.4 [adam 2015-10-09]
-	Updated graphics/feh to 2.14 [szptvlfn 2015-10-09]
-	Added devel/zookeeper version 3.4.6 [fhajny 2015-10-09]
-	Added devel/libzookeeper version 3.4.6 [fhajny 2015-10-09]
-	Updated textproc/icu to 56.1 [ryoon 2015-10-09]
-	Updated devel/ruby-redmine to 3.1.1 [ryoon 2015-10-10]
-	Removed sysutils/storage-manager [joerg 2015-10-10]
-	Updated filesystems/glustefs to 3.7.5 [manu 2015-10-10]
-	Updated fonts/umefont-ttf to 0.550 [ryoon 2015-10-10]
-	Added x11/xf86-input-ws version 1.3.0.20151010 [tnn 2015-10-10]
-	Removed x11/openbsd-input-ws successor x11/xf86-input-ws [tnn 2015-10-10]
-	Added emulators/8086tiny version 1.25 [ryoon 2015-10-11]
-	Added cross/objconv version 2.39 [ryoon 2015-10-11]
