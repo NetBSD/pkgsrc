@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2015/06/30 10:02:22 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2015/10/08 01:02:42 leot Exp $
 
 BUILDLINK_TREE+=	ffmpeg2
 
@@ -13,6 +13,14 @@ pkgbase := ffmpeg2
 .  include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.ffmpeg2:Mfreetype)
+.  include "../../graphics/freetype2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.ffmpeg2:Mfontconfig)
+.  include "../../fonts/fontconfig/buildlink3.mk"
+.endif
 
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg2:Mtheora)
 .  include "../../multimedia/libtheora/buildlink3.mk"
