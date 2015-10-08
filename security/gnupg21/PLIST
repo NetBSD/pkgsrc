@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/04 05:26:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/08 13:35:39 fhajny Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -15,7 +15,7 @@ bin/gpgv2
 bin/kbxutil
 bin/watchgnupg
 info/gnupg.info
-libexec/dirmngr_ldap
+${PLIST.ldap}libexec/dirmngr_ldap
 libexec/gpg-check-pattern
 libexec/gpg-preset-passphrase
 libexec/gpg-protect-tool
