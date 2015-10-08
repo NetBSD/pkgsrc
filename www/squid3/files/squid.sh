@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.2 2014/08/29 11:13:46 tron Exp $
+# $NetBSD: squid.sh,v 1.3 2015/10/08 10:07:10 sborrill Exp $
 #
 # PROVIDE: squid
 # REQUIRE: DAEMON
@@ -20,7 +20,17 @@ procname="squid-1"
 required_files="${squid_conf} @PKG_SYSCONFDIR@/mime.conf"
 command_args="-Y -f ${squid_conf}"
 
-start_precmd='ulimit -n 4096'
+start_precmd='setproclimits'
+
+setproclimits()
+{
+	local climit
+	climit=`ulimit -n`
+	if [ "$climit" -lt 4096 ]; then
+		ulimit -n 4096
+	fi
+}
+
 # Note: 'shutdown' waits 30 seconds, while 'interrupt' stops immediately
 reload_cmd="${command} ${squid_flags} ${command_args} -k reconfigure"
 rotate_cmd="${command} ${squid_flags} ${command_args} -k rotate"
