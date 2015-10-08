@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: chronyd.sh,v 1.5 2013/08/16 08:30:20 hannken Exp $
+# $NetBSD: chronyd.sh,v 1.6 2015/10/08 09:47:33 sborrill Exp $
 #
 # PROVIDE: chronyd
 # REQUIRE: DAEMON
@@ -8,6 +8,7 @@
 . /etc/rc.subr
 
 name="chronyd"
+rcvar="$name"
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/chrony.conf"
