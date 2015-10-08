@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4210 2015/10/07 22:20:18 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4211 2015/10/08 01:03:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7253,3 +7253,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/p5-DBICx-Sugar version 0.0001 [wen 2015-10-07]
 	Updated databases/p5-Dancer-Plugin-DBIC to 0.2102 [wen 2015-10-07]
 	Removed www/php-sugarcrm [ryoon 2015-10-07]
+	Updated multimedia/ffmpeg2 to 2.8nb1 [leot 2015-10-08]
