@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.7 2015/02/12 08:54:15 adam Exp $
+# $NetBSD: options.mk,v 1.8 2015/10/08 01:02:42 leot Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
-PKG_SUPPORTED_OPTIONS=	ass faac fdk-aac gnutls lame libvpx opencore-amr \
-			openssl theora vorbis x264 x265 xvid
-PKG_SUGGESTED_OPTIONS=	lame ass libvpx theora vorbis x264 xvid
+PKG_SUPPORTED_OPTIONS=	ass faac fdk-aac fontconfig freetype gnutls lame \
+			libvpx opencore-amr openssl theora vorbis x264 x265 xvid
+PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx theora vorbis x264 \
+			xvid
 
 # Add VDPAU if it is available
 .include "../../multimedia/libvdpau/available.mk"
@@ -22,6 +23,24 @@ PKG_SUGGESTED_OPTIONS+=	vaapi
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+# Fontconfig
+.if !empty(PKG_OPTIONS:Mfontconfig)
+USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=	--enable-fontconfig
+.include "../../fonts/fontconfig/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-fontconfig
+.endif
+
+# freetype option
+.if !empty(PKG_OPTIONS:Mfreetype)
+USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=	--enable-libfreetype
+.include "../../graphics/freetype2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libfreetype
+.endif
 
 # ass option
 .if !empty(PKG_OPTIONS:Mass)
