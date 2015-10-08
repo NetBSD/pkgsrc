@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.275 2015/10/08 17:17:23 richard Exp $
+# $NetBSD: replace.mk,v 1.276 2015/10/08 18:16:31 richard Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1120,7 +1120,6 @@ TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=		gsoelim
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.gsoelim=groff
 TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/gsoelim
-TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/soelim
 .  endif
 TOOLS_ALIASES.gsoelim=	soelim
 .endif
