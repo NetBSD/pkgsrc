@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4214 2015/10/08 14:06:41 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4215 2015/10/08 14:08:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7266,3 +7266,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/rsyslog-snmp to 8.13.0 [fhajny 2015-10-08]
 	Updated databases/py-peewee to 2.6.4 [fhajny 2015-10-08]
 	Updated net/ruby-stompserver to 1.0.0nb2 [taca 2015-10-08]
+	Updated mail/pear-Mail_Mime to 1.10.0 [taca 2015-10-08]
