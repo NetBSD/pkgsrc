@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.274 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: replace.mk,v 1.275 2015/10/08 17:17:23 richard Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1099,8 +1099,9 @@ _TOOLS_USE_PKGSRC.${_t_}= yes
 TOOLS_DEPENDS.${_t_}?=	groff>=1.19.2nb3:../../textproc/groff
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=groff
-.        if ${OPSYS} == "SunOS" && "${_t_}" != "groff"
+.        if "${_t_}" != "groff"
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
+TOOLS_ALIASES.${_t_}=	g${_t_}
 .        else
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .        endif
@@ -1109,9 +1110,8 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .  endif
 .endfor
 
-# The ``gsoelim'' tool is special because there's actually no tool named
-# ``gsoelim'' -- the real tool is called just ``soelim''.
-#
+# ``gsoelim'' is the real tool ``soelim'' above, but the
+# legacy tools names are still possible.
 .if !defined(TOOLS_IGNORE.gsoelim) && !empty(_USE_TOOLS:Mgsoelim)
 .  if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
@@ -1119,11 +1119,8 @@ MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
 TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=		gsoelim
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.gsoelim=groff
-.    if ${OPSYS} == "SunOS"
 TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/gsoelim
-.    else
 TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/soelim
-.    endif
 .  endif
 TOOLS_ALIASES.gsoelim=	soelim
 .endif
