@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4212 2015/10/08 12:49:25 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4213 2015/10/08 12:59:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7264,3 +7264,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/rsyslog-pgsql to 8.13.0 [fhajny 2015-10-08]
 	Updated sysutils/rsyslog-rabbitmq to 8.13.0 [fhajny 2015-10-08]
 	Updated sysutils/rsyslog-snmp to 8.13.0 [fhajny 2015-10-08]
+	Updated databases/py-peewee to 2.6.4 [fhajny 2015-10-08]
