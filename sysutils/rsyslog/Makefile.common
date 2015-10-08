@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2015/09/05 15:32:19 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.14 2015/10/08 12:46:07 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -12,7 +12,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=		rsyslog-8.12.0
+DISTNAME=		rsyslog-8.13.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -40,7 +40,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 EGDIR=			${PREFIX}/share/examples/rsyslog
 
 CONFIGURE_ARGS+=	--disable-libgcrypt --disable-testbench			\
-			--enable-diagtools --enable-usertools
+			--enable-diagtools --enable-usertools			\
+			--enable-generate-man-pages
 
 BUILDLINK_DEPMETHOD.libestr+=		build
 BUILDLINK_DEPMETHOD.liblogging+=	build
