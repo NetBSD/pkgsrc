@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/10 00:32:08 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2015/10/09 11:27:23 jperkin Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -63,6 +63,9 @@ BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
+
+# Ignore missing rpaths in "fake" library.
+CHECK_SHLIBS_SKIP+=	${GCC_PKGNAME}/lib*/libgcj_bc.so*
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
