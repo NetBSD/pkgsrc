@@ -1,14 +1,14 @@
-$NetBSD: patch-configure.ac,v 1.4 2015/08/31 15:26:19 sevan Exp $
+$NetBSD: patch-configure.ac,v 1.5 2015/10/09 23:15:34 ryoon Exp $
 
 * Detect NetBSD libatomic
 * test(1) portability fix
 * Add support for Bitrig
 
---- configure.ac.orig	Fri Mar 27 21:17:48 2015
+--- configure.ac.orig	2015-10-08 04:00:26.000000000 +0000
 +++ configure.ac
-@@ -409,6 +409,18 @@ if test "x$ac_cv_header_elf_h" = "xyes"; then
-     CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_ELF_H=1";
+@@ -427,6 +427,18 @@ if test "x$plugins" = "xtrue"; then
  fi
+ 
  
 +# check if sys/atomic.h is present.
 +AC_CHECK_HEADERS([sys/atomic.h])
@@ -24,8 +24,8 @@ $NetBSD: patch-configure.ac,v 1.4 2015/08/31 15:26:19 sevan Exp $
 +
  U_ENABLE_DYLOAD=1
  enable=yes
- AC_MSG_CHECKING([whether to enable dynamic loading of plugins])
-@@ -1234,7 +1246,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
+ AC_MSG_CHECKING([whether to enable dynamic loading of plugins. Ignored if plugins disabled.])
+@@ -1251,7 +1263,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
  case "${host}" in
  	*-*-solaris*) 	platform=U_SOLARIS ;;
  	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
@@ -34,7 +34,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/08/31 15:26:19 sevan Exp $
  	*-*-aix*) 	platform=U_AIX ;;
  	*-*-hpux*) 	platform=U_HPUX ;;
  	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;
-@@ -1253,6 +1265,7 @@ case "${host}" in
+@@ -1270,6 +1282,7 @@ case "${host}" in
  	*-*-beos)		platform=U_BEOS ;;
  	*-*-irix*)		platform=U_IRIX ;;
  	*-ncr-*)		platform=U_MPRAS ;;
@@ -42,7 +42,7 @@ $NetBSD: patch-configure.ac,v 1.4 2015/08/31 15:26:19 sevan Exp $
  	*) 		platform=U_UNKNOWN_PLATFORM ;;
  esac
  AC_SUBST(ICUDATA_CHAR)
-@@ -1270,13 +1283,13 @@ fi
+@@ -1287,13 +1300,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  

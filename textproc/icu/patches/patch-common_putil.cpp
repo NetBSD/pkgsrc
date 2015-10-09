@@ -1,10 +1,10 @@
-$NetBSD: patch-common_putil.cpp,v 1.1 2014/10/26 19:46:48 bsiegert Exp $
+$NetBSD: patch-common_putil.cpp,v 1.2 2015/10/09 23:15:34 ryoon Exp $
 
---- common/putil.cpp.orig	2014-10-25 17:54:47.000000000 +0000
+--- common/putil.cpp.orig	2015-10-08 03:53:44.000000000 +0000
 +++ common/putil.cpp
 @@ -117,6 +117,14 @@
  #endif
-
+ 
  /*
 + * Mac OS X 10.4 doesn't use its localtime_r() declaration in <time.h> if either _ANSI_SOURCE or _POSIX_C_SOURCE is #defined.
 + */
