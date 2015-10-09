@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/09 13:59:57 fhajny Exp $
+bin/cli_mt
+bin/cli_st
+bin/load_gen
+include/zookeeper/proto.h
+include/zookeeper/recordio.h
+include/zookeeper/zookeeper.h
+include/zookeeper/zookeeper.jute.h
+include/zookeeper/zookeeper_log.h
+include/zookeeper/zookeeper_version.h
+lib/libzookeeper_mt.la
+lib/libzookeeper_st.la
