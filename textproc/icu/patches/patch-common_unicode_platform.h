@@ -1,17 +1,17 @@
-$NetBSD: patch-common_unicode_platform.h,v 1.6 2013/12/03 21:16:06 bsiegert Exp $
+$NetBSD: patch-common_unicode_platform.h,v 1.7 2015/10/09 23:15:34 ryoon Exp $
 
---- common/unicode/platform.h.orig	2013-10-04 20:49:10.000000000 +0000
+--- common/unicode/platform.h.orig	2015-10-08 03:53:34.000000000 +0000
 +++ common/unicode/platform.h
-@@ -151,7 +151,7 @@
+@@ -159,7 +159,7 @@
  #   else
  #       define U_PLATFORM U_PF_DARWIN
  #   endif
 -#elif defined(BSD) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__MirBSD__)
 +#elif defined(BSD) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__MirBSD__) || defined(__DragonFly__)
- #   define U_PLATFORM U_PF_BSD
- #elif defined(sun) || defined(__sun)
-     /* Check defined(__SVR4) || defined(__svr4__) to distinguish Solaris from SunOS? */
-@@ -379,6 +379,18 @@
+ #   if defined(__FreeBSD__)
+ #       include <sys/endian.h>
+ #   endif
+@@ -388,6 +388,18 @@
  #   define U_IS_BIG_ENDIAN 1
  #elif defined(__LITTLE_ENDIAN__) || defined(_LITTLE_ENDIAN)
  #   define U_IS_BIG_ENDIAN 0
