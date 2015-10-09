@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4220 2015/10/09 14:01:39 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4221 2015/10/09 14:01:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7272,3 +7272,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ccache to 3.2.4 [adam 2015-10-09]
 	Updated graphics/feh to 2.14 [szptvlfn 2015-10-09]
 	Added devel/zookeeper version 3.4.6 [fhajny 2015-10-09]
+	Added devel/libzookeeper version 3.4.6 [fhajny 2015-10-09]
