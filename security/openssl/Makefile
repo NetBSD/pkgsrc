@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2015/08/31 19:49:44 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2015/10/09 11:44:47 jperkin Exp $
 
 DISTNAME=	openssl-1.0.2d
 CATEGORIES=	security
@@ -123,6 +123,9 @@ CONFIGURE_ARGS+=	hpux-ia64-${CC}
 .  if ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	linux-ppc64
+.  elif ${MACHINE_ARCH} == "i386"
+CONFIGURE_SCRIPT=	./Configure
+CONFIGURE_ARGS+=	linux-elf
 .  endif
 .elif ${OS_VARIANT} == "SCOOSR5"
 # SIGILL in _sha1_block_data_order_ssse3().
