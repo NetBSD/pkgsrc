@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/09/12 15:20:19 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/10 01:57:51 ryoon Exp $
 
 DISTNAME=	libzdb-3.1
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.tildeslash.com/libzdb/dist/
 

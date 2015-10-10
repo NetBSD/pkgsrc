@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2015/05/23 06:23:43 kefren Exp $
+# $NetBSD: Makefile,v 1.27 2015/10/10 01:58:11 ryoon Exp $
 
 DISTNAME=	mono-basic-4.0.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono-basic/
 EXTRACT_SUFX=	.tar.bz2

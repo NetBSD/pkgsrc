@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.78 2015/09/04 18:49:36 wiedi Exp $
+# $NetBSD: Makefile,v 1.79 2015/10/10 01:58:12 ryoon Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
 # must match (see PR 49563).
 
 DISTNAME=	dovecot-2.2.18
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 

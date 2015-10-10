@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/04/06 08:17:39 adam Exp $
+# $NetBSD: Makefile,v 1.11 2015/10/10 01:58:21 ryoon Exp $
 
 DISTNAME=	cppcms-1.0.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcms/}
 EXTRACT_SUFX=	.tar.bz2
