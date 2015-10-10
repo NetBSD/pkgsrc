@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4225 2015/10/10 13:28:20 manu Exp $
+$NetBSD: CHANGES-2015,v 1.4226 2015/10/10 13:57:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7277,3 +7277,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-redmine to 3.1.1 [ryoon 2015-10-10]
 	Removed sysutils/storage-manager [joerg 2015-10-10]
 	Updated filesystems/glustefs to 3.7.5 [manu 2015-10-10]
+	Updated fonts/umefont-ttf to 0.550 [ryoon 2015-10-10]
