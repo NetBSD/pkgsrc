@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2015/04/06 08:17:15 adam Exp $
+# $NetBSD: Makefile,v 1.32 2015/10/10 01:57:53 ryoon Exp $
 #
 
 DISTNAME=		Addresses-0.4.8
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		misc gnustep
 MASTER_SITES=		http://savannah.nongnu.org/download/gap/
 
