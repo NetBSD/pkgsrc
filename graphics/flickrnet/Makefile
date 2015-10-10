@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/05/23 09:52:59 kefren Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/10 01:58:09 ryoon Exp $
 
 DISTNAME=	3.16
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	flickrnet-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samjudson/flickr-net/archive/}
