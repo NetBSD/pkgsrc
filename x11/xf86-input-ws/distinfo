@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/10/10 20:02:52 tnn Exp $
+
+SHA1 (xf86-input-ws-1.3.0.20151010.tar.gz) = c8951b6e2d0dd3f741948bb6e1ae28e0966bec90
+RMD160 (xf86-input-ws-1.3.0.20151010.tar.gz) = a3e66b571f791f3d1ddac6d9e477cdc28faa5952
+Size (xf86-input-ws-1.3.0.20151010.tar.gz) = 323648 bytes
+SHA1 (patch-src_ws.c) = 66cdc536a6a931d117f2e22111b1b95bf1d63b84
