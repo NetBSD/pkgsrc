@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:25:19 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2015/10/10 01:57:59 ryoon Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-sqlite3-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Qt5 SQLite3 plugin
 
 BUILD_DIRS=		src/plugins/sqldrivers

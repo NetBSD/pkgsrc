@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.287 2015/09/08 14:03:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.288 2015/10/10 01:58:12 ryoon Exp $
 
 .include "../../mail/postfix/Makefile.common"
 
 COMMENT=	Postfix SMTP server and tools
-PKGREVISION=	1
+PKGREVISION=	2
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]*

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2015/04/25 14:20:32 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2015/10/10 01:58:03 ryoon Exp $
 #
 
 PKGVER=		0.8.8
 DISTNAME=	compizconfig-backend-gconf-${PKGVER}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 

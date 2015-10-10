@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2015/05/23 06:44:58 kefren Exp $
+# $NetBSD: Makefile,v 1.21 2015/10/10 01:58:19 ryoon Exp $
 
 DISTNAME=	ndesk-dbus-0.6.1a
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ndesk.org/archive/ndesk-dbus/
 
