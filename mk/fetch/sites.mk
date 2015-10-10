@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.134 2015/08/11 23:41:41 ryoon Exp $
+# $NetBSD: sites.mk,v 1.135 2015/10/10 15:17:17 ryoon Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -28,8 +28,8 @@ MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/
 
 MASTER_SITE_OSDN+=	\
-	http://jaist.dl.sourceforge.jp/ \
-	http://iij.dl.sourceforge.jp/ \
+	http://jaist.dl.osdn.jp/ \
+	http://iij.dl.osdn.jp/ \
 	http://osdn.dl.osdn.jp/
 
 MASTER_SITE_PERL_CPAN+= \
