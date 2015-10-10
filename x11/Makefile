@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.771 2015/10/01 12:58:50 tnn Exp $
+# $NetBSD: Makefile,v 1.772 2015/10/10 20:09:17 tnn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -354,7 +354,6 @@ SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
 SUBDIR+=	ocaml-lablgtk
 SUBDIR+=	oneko
-SUBDIR+=	openbsd-input-ws
 SUBDIR+=	p5-Alien-wxWidgets
 SUBDIR+=	p5-Clipboard
 SUBDIR+=	p5-Gtk2-Ex-FormFactory
@@ -569,6 +568,7 @@ SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-penmount
 SUBDIR+=	xf86-input-vmmouse
 SUBDIR+=	xf86-input-void
+SUBDIR+=	xf86-input-ws
 SUBDIR+=	xf86-video-apm
 SUBDIR+=	xf86-video-ark
 SUBDIR+=	xf86-video-ast
