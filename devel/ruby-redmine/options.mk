@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/07/05 23:55:25 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2015/10/10 02:03:04 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine
 
@@ -15,38 +15,38 @@ PLIST_VARS+=	mysql pgsql sqlite3
 ###
 ### Use mysql, pgsql, or sqlite3 backend
 ###
-MYSQL_DISTFILE=		mysql2-0.3.18.gem
-PGSQL_DISTFILE=		pg-0.18.1.gem
+MYSQL_DISTFILE=		mysql2-0.3.20.gem
+PGSQL_DISTFILE=		pg-0.18.3.gem
 SQLITE3_DISTFILE=	sqlite3-1.3.10.gem
 
 .if make (distinfo) || make (mdi) # for checksum generation only
-DISTFILES+=	${MYSQL_DISTFILE}
-DISTFILES+=	${PGSQL_DISTFILE}
-DISTFILES+=	${SQLITE3_DISTFILE}
+GEMS_DISTFILES+=	${MYSQL_DISTFILE}
+GEMS_DISTFILES+=	${PGSQL_DISTFILE}
+GEMS_DISTFILES+=	${SQLITE3_DISTFILE}
 .elif !empty(PKG_OPTIONS:Mmysql)
-DISTFILES+=	${MYSQL_DISTFILE}
+GEMS_DISTFILES+=	${MYSQL_DISTFILE}
 .include "../../mk/mysql.buildlink3.mk"
-PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.mysql
+RM_PLIST_SRC+=		PLIST.mysql
 .elif !empty(PKG_OPTIONS:Mpgsql)
-DISTFILES+=	${PGSQL_DISTFILE}
+GEMS_DISTFILES+=	${PGSQL_DISTFILE}
 .include "../../mk/pgsql.buildlink3.mk"
 CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/pg-*/spec/*
 CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/pg-*/spec/pg/*
-PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.pgsql
+RM_PLIST_SRC+=		PLIST.pgsql
 .elif !empty(PKG_OPTIONS:Msqlite3)
-DISTFILES+=	${SQLITE3_DISTFILE}
+GEMS_DISTFILES+=	${SQLITE3_DISTFILE}
 .include "../../databases/sqlite3/buildlink3.mk"
-PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.sqlite3
+RM_PLIST_SRC+=		PLIST.sqlite3
 .endif
 
 ###
 ### Use Unicorn web server
 ###
 .if !empty(PKG_OPTIONS:Municorn) || make (distinfo) || make (mdi)
-PLIST_SRC+=	PLIST.unicorn
-DISTFILES+=	kgio-2.9.3.gem \
-		raindrops-0.13.0.gem \
-		unicorn-4.9.0.gem
+RM_PLIST_SRC+=		PLIST.unicorn
+GEMS_DISTFILES+=	kgio-2.10.0.gem \
+			raindrops-0.15.0.gem \
+			unicorn-4.9.0.gem
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
@@ -55,13 +55,13 @@ SUBST_FILES.prefix=		${WRKDIR}/unicorn.rb
 SUBST_SED.prefix+=		-e "s|@RUBY_PKGPREFIX@|${RUBY_PKGPREFIX}|g"
 SUBST_VARS.prefix+=		PREFIX
 
-.include "../../lang/ruby/rubyversion.mk"
-
 RCD_SCRIPTS+=	redmine_unicorn${RUBY_SUFFIX}
 RCD_SCRIPT_SRC.redmine_unicorn${RUBY_SUFFIX}=	${FILESDIR}/redmine_unicorn.sh
 
 CONF_FILES+=	${EGDIR}/unicorn.rb.example \
 		${PREFIX}/${RM_DIR}/app/config/unicorn.rb
+
+PLIST_SRC=	${PLIST_SRC_DFLT} ${RM_PLIST_SRC}
 
 post-extract:
 	${CP} ${FILESDIR}/unicorn.rb ${WRKDIR}/unicorn.rb
@@ -72,6 +72,7 @@ unicorn-post-install:
 		${DESTDIR}${EGDIR}/unicorn.rb.example
 	${CP} ${FILESDIR}/Gemfile.local \
 		${DESTDIR}${PREFIX}/${RM_DIR}/app
+	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/rc.d/redmine*
 .endif
 .PHONY: unicorn-post-install
 unicorn-post-install:
