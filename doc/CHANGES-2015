@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4223 2015/10/10 02:03:35 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4224 2015/10/10 10:52:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7275,3 +7275,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/libzookeeper version 3.4.6 [fhajny 2015-10-09]
 	Updated textproc/icu to 56.1 [ryoon 2015-10-09]
 	Updated devel/ruby-redmine to 3.1.1 [ryoon 2015-10-10]
+	Removed sysutils/storage-manager [joerg 2015-10-10]
