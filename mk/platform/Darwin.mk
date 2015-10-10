@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.73 2015/10/08 11:36:00 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.74 2015/10/10 13:12:50 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -88,17 +88,19 @@ _OPSYS_LIB_DIRS?=		/usr/lib
 # Use current system version SDK (avoid newer SDKs).
 #
 .if exists(/usr/include/stdio.h)
-_OPSYS_INCLUDE_DIRS?=		/usr/include
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 .elif exists(/usr/bin/xcrun)
 OSX_VERS!=	sw_vers -productVersion
 .  if ${OSX_VERS:R:R} != ${OSX_VERS:R}
 OSX_VERS:=	${OSX_VERS:R}
 .  endif
 OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERS} --show-sdk-path 2>/dev/null || echo /nonexistent
-MAKEFLAGS+=	OSX_VERS=${OSX_VERS:Q}
-MAKEFLAGS+=	OSX_SDK_PATH=${OSX_SDK_PATH:Q}
 .  if exists(${OSX_SDK_PATH}/usr/include/stdio.h)
-_OPSYS_INCLUDE_DIRS?=		${OSX_SDK_PATH}/usr/include
+_OPSYS_INCLUDE_DIRS?=	${OSX_SDK_PATH}/usr/include
+MAKEFLAGS+=		OSX_VERS=${OSX_VERS:Q}
+MAKEFLAGS+=		OSX_SDK_PATH=${OSX_SDK_PATH:Q}
+.  else
+PKG_FAIL_REASON+=	"No suitable Xcode SDK or Command Line Tools installed."
 .  endif
 .endif
 
