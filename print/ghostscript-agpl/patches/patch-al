@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.2 2013/08/22 21:07:08 adam Exp $
+$NetBSD: patch-al,v 1.3 2015/10/10 11:55:19 adam Exp $
 
---- base/unixlink.mak.orig	2010-02-18 12:08:31.000000000 +0000
+--- base/unixlink.mak.orig	2015-10-05 08:21:11.000000000 +0000
 +++ base/unixlink.mak
-@@ -51,7 +51,7 @@ $(GS_A): $(obj_tr) $(ECHOGS_XE) $(INT_AR
- # which has limited environment space.
+@@ -58,7 +58,7 @@ $(GS_A): $(PSOBJ)gsromfs$(COMPILE_INITS)
  ldt_tr=$(PSOBJ)ldt.tr
- $(GS_XE): $(ld_tr) $(ECHOGS_XE) $(XE_ALL) $(PSOBJ)gsromfs$(COMPILE_INITS).$(OBJ)
+ 
+ $(GS_XE): $(ld_tr) $(gs_tr) $(ECHOGS_XE) $(XE_ALL) $(PSOBJ)gsromfs$(COMPILE_INITS).$(OBJ)
 -	$(ECHOGS_XE) -w $(ldt_tr) -n - $(CCLD) $(LDFLAGS) -o $(GS_XE)
 +	$(ECHOGS_XE) -w $(ldt_tr) -n - $(CCLD) $(LDFLAGS) $(LDFLAGS_SO) -o $(GS_XE)
  	$(ECHOGS_XE) -a $(ldt_tr) -n -s $(PSOBJ)gsromfs$(COMPILE_INITS).$(OBJ) $(PSOBJ)gs.$(OBJ) -s
- 	cat $(ld_tr) >>$(ldt_tr)
+ 	cat $(gsld_tr) >> $(ldt_tr)
  	$(ECHOGS_XE) -a $(ldt_tr) -s - $(EXTRALIBS) $(STDLIBS)
