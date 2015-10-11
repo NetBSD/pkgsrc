@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.879 2015/10/11 07:27:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.880 2015/10/11 08:04:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6476,30 +6476,16 @@ sub checkfile_patch($) {
 		}
 	};
 
-	my $transitions =
+	my $transitions = {
+		PST_START() =>
 		# [ from state, regex, to state, action ]
 		[   [PST_START, re_patch_rcsid, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
 		}], [PST_START, undef, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
-		}], [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
-			#
-		}], [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
-			if (!$seen_comment) {
-				$line->log_error("Comment expected.");
-				$line->explain_error(@comment_explanation);
-			}
-			$line->log_warning("Please use unified diffs (diff -u) for patches.");
-		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
-			if (!$seen_comment) {
-				$line->log_error("Comment expected.");
-				$line->explain_error(@comment_explanation);
-			}
-		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
-			$seen_comment = true;
-		}], [PST_TEXT, re_patch_empty, PST_TEXT, sub() {
-			#
-		}], [PST_TEXT, undef, PST_TEXT, sub() {
+		}]],
+		PST_CENTER() =>
+		[   [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
 			#
 		}], [PST_CENTER, re_patch_cfd, PST_CFA, sub() {
 			if ($seen_comment) {
@@ -6518,25 +6504,59 @@ sub checkfile_patch($) {
 			}
 		}], [PST_CENTER, undef, PST_TEXT, sub() {
 			$opt_warn_space and $line->log_note("Empty line expected.");
-		}], [PST_CFA, re_patch_cfa, PST_CH, sub() {
+		}]],
+		PST_TEXT() =>
+		[   [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
+			if (!$seen_comment) {
+				$line->log_error("Comment expected.");
+				$line->explain_error(@comment_explanation);
+			}
+			$line->log_warning("Please use unified diffs (diff -u) for patches.");
+		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
+			if (!$seen_comment) {
+				$line->log_error("Comment expected.");
+				$line->explain_error(@comment_explanation);
+			}
+		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
+			$seen_comment = true;
+		}], [PST_TEXT, re_patch_empty, PST_TEXT, sub() {
+			#
+		}], [PST_TEXT, undef, PST_TEXT, sub() {
+			#
+		}]],
+		PST_CFA() =>
+		[   [PST_CFA, re_patch_cfa, PST_CH, sub() {
 			$current_fname = $m->text(1);
 			$current_ftype = get_filetype($line, $current_fname);
 			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
 			$patched_files++;
 			$hunks = 0;
-		}], [PST_CH, re_patch_ch, PST_CHD, sub() {
+		}]],
+		PST_CH() =>
+		[   [PST_CH, re_patch_ch, PST_CHD, sub() {
 			$hunks++;
-		}], [PST_CHD, re_patch_chd, PST_CLD0, sub() {
+		}]],
+		PST_CHD() =>
+		[   [PST_CHD, re_patch_chd, PST_CLD0, sub() {
 			$dellines = ($m->has(2))
 			    ? (1 + $m->text(2) - $m->text(1))
 			    : ($m->text(1));
-		}], [PST_CLD0, re_patch_clc, PST_CLD, sub() {
+		}]],
+		PST_CLD0() =>
+		[   [PST_CLD0, re_patch_clc, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD0, re_patch_cld, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD0, re_patch_clm, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD, re_patch_clc, PST_CLD, sub() {
+		}], [PST_CLD0, re_patch_cha, PST_CLA0, sub() {
+			$dellines = undef;
+			$addlines = ($m->has(2))
+			    ? (1 + $m->text(2) - $m->text(1))
+			    : ($m->text(1));
+		}]],
+		PST_CLD() =>
+		[   [PST_CLD, re_patch_clc, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD, re_patch_cld, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
@@ -6546,18 +6566,19 @@ sub checkfile_patch($) {
 			if ($dellines != 0) {
 				$line->log_warning("Invalid number of deleted lines (${dellines} missing).");
 			}
-		}], [PST_CLD0, re_patch_cha, PST_CLA0, sub() {
-			$dellines = undef;
-			$addlines = ($m->has(2))
-			    ? (1 + $m->text(2) - $m->text(1))
-			    : ($m->text(1));
-		}], [PST_CLA0, re_patch_clc, PST_CLA, sub() {
+		}]],
+		PST_CLA0() =>
+		[   [PST_CLA0, re_patch_clc, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA0, re_patch_clm, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA0, re_patch_cla, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA, re_patch_clc, PST_CLA, sub() {
+		}], [PST_CLA0, undef, PST_CH, sub() {
+			#
+		}]],
+		PST_CLA() =>
+		[   [PST_CLA, re_patch_clc, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA, re_patch_clm, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
@@ -6567,17 +6588,21 @@ sub checkfile_patch($) {
 			if ($addlines != 0) {
 				$line->log_warning("Invalid number of added lines (${addlines} missing).");
 			}
-		}], [PST_CLA0, undef, PST_CH, sub() {
+		}]],
+		PST_CH() =>
+		[   [PST_CH, undef, PST_TEXT, sub() {
 			#
-		}], [PST_CH, undef, PST_TEXT, sub() {
-			#
-		}], [PST_UFA, re_patch_ufa, PST_UH, sub() {
+		}]],
+		PST_UFA() =>
+		[    [PST_UFA, re_patch_ufa, PST_UH, sub() {
 			$current_fname = $m->text(1);
 			$current_ftype = get_filetype($line, $current_fname);
 			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
 			$patched_files++;
 			$hunks = 0;
-		}], [PST_UH, re_patch_uh, PST_UL, sub() {
+		}]],
+		PST_UH() =>
+		[   [PST_UH, re_patch_uh, PST_UL, sub() {
 			$dellines = ($m->has(1) ? $m->text(2) : 1);
 			$addlines = ($m->has(3) ? $m->text(4) : 1);
 			$check_text->($line->text);
@@ -6590,7 +6615,11 @@ sub checkfile_patch($) {
 			$context_scanning_leading = (($m->has(1) && $m->text(1) ne "1") ? true : undef);
 			$leading_context_lines = 0;
 			$trailing_context_lines = 0;
-		}], [PST_UL, re_patch_uld, PST_UL, sub() {
+		}], [PST_UH, undef, PST_TEXT, sub() {
+			($hunks != 0) || $line->log_warning("No hunks for file ${current_fname}.");
+		}]],
+		PST_UL() =>
+		[   [PST_UL, re_patch_uld, PST_UL, sub() {
 			$check_hunk_line->(1, 0, PST_UH);
 		}], [PST_UL, re_patch_ula, PST_UL, sub() {
 			$check_hunk_line->(0, 1, PST_UH);
@@ -6605,9 +6634,7 @@ sub checkfile_patch($) {
 			if ($dellines != 0 || $addlines != 0) {
 				$line->log_warning("Unexpected end of hunk (-${dellines},+${addlines} expected).");
 			}
-		}], [PST_UH, undef, PST_TEXT, sub() {
-			($hunks != 0) || $line->log_warning("No hunks for file ${current_fname}.");
-		}]];
+		}]]};
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_patch()");
 
@@ -6637,7 +6664,7 @@ sub checkfile_patch($) {
 		$opt_debug_patches and $line->log_debug("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
 
 		my $found = false;
-		foreach my $t (@{$transitions}) {
+		foreach my $t (@{$transitions->{$state}}) {
 			if ($state == $t->[0]) {
 				if (!defined($t->[1])) {
 					$m = undef;
@@ -6674,7 +6701,7 @@ sub checkfile_patch($) {
 		$opt_debug_patches and log_debug($fname, "EOF", "[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."]");
 
 		my $found = false;
-		foreach my $t (@{$transitions}) {
+		foreach my $t (@{$transitions->{$state}}) {
 			if ($state == $t->[0] && !defined($t->[1])) {
 				my $newstate;
 
