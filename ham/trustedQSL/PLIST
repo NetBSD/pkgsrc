@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/13 11:38:03 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/11 02:59:07 mef Exp $
 bin/tqsl
 include/adif.h
 include/cabrillo.h
@@ -8,10 +8,13 @@ include/tqsllib.h
 lib/libtqsllib.so
 man/man5/tqsl.5
 share/TrustedQSL/LICENSE.txt
-share/TrustedQSL/ca-bundle.crt
 share/TrustedQSL/config.xml
+share/TrustedQSL/help/tqslapp/CertProp.bmp
+share/TrustedQSL/help/tqslapp/EnterPassword.bmp
+share/TrustedQSL/help/tqslapp/LoTWCerts.bmp
 share/TrustedQSL/help/tqslapp/P12.bmp
 share/TrustedQSL/help/tqslapp/Pending.bmp
+share/TrustedQSL/help/tqslapp/RenewUpload.bmp
 share/TrustedQSL/help/tqslapp/TQ5.bmp
 share/TrustedQSL/help/tqslapp/TQ6.bmp
 share/TrustedQSL/help/tqslapp/TQ8.bmp
@@ -27,6 +30,10 @@ share/TrustedQSL/help/tqslapp/cabrillo.htm
 share/TrustedQSL/help/tqslapp/certaccept.htm
 share/TrustedQSL/help/tqslapp/certaccept1.bmp
 share/TrustedQSL/help/tqslapp/certaccept2.bmp
+share/TrustedQSL/help/tqslapp/certificateproperties.htm
+share/TrustedQSL/help/tqslapp/certificatesecurity.htm
+share/TrustedQSL/help/tqslapp/certificatevalidity.htm
+share/TrustedQSL/help/tqslapp/certreplace.htm
 share/TrustedQSL/help/tqslapp/certreq.htm
 share/TrustedQSL/help/tqslapp/certreq1.bmp
 share/TrustedQSL/help/tqslapp/certs-icons.htm
@@ -53,7 +60,9 @@ share/TrustedQSL/help/tqslapp/files-icons.htm
 share/TrustedQSL/help/tqslapp/glossary.htm
 share/TrustedQSL/help/tqslapp/index.htm
 share/TrustedQSL/help/tqslapp/installation.htm
-share/TrustedQSL/help/tqslapp/loadcert.htm
+share/TrustedQSL/help/tqslapp/key-concepts.htm
+share/TrustedQSL/help/tqslapp/load-certificate.htm
+share/TrustedQSL/help/tqslapp/localization.htm
 share/TrustedQSL/help/tqslapp/login.htm
 share/TrustedQSL/help/tqslapp/logopstab.bmp
 share/TrustedQSL/help/tqslapp/lotw.htm
@@ -73,15 +82,20 @@ share/TrustedQSL/help/tqslapp/pref-cab3.bmp
 share/TrustedQSL/help/tqslapp/pref-opt.bmp
 share/TrustedQSL/help/tqslapp/pref-opt.htm
 share/TrustedQSL/help/tqslapp/primary.htm
+share/TrustedQSL/help/tqslapp/promptforcall.bmp
 share/TrustedQSL/help/tqslapp/qsodata.bmp
 share/TrustedQSL/help/tqslapp/qsodata.htm
 share/TrustedQSL/help/tqslapp/renewing.htm
 share/TrustedQSL/help/tqslapp/renewing1.bmp
 share/TrustedQSL/help/tqslapp/renewing2.bmp
 share/TrustedQSL/help/tqslapp/replaced.bmp
-share/TrustedQSL/help/tqslapp/save.htm
+share/TrustedQSL/help/tqslapp/restoredeletedcert.htm
+share/TrustedQSL/help/tqslapp/restoredeletedstnloc.htm
+share/TrustedQSL/help/tqslapp/save-certificate.htm
 share/TrustedQSL/help/tqslapp/savestnl.bmp
 share/TrustedQSL/help/tqslapp/secondarycertops.htm
+share/TrustedQSL/help/tqslapp/secondarystnlocops.htm
+share/TrustedQSL/help/tqslapp/selectlanguage.htm
 share/TrustedQSL/help/tqslapp/sign1.bmp
 share/TrustedQSL/help/tqslapp/signconf.bmp
 share/TrustedQSL/help/tqslapp/signdone.bmp
@@ -90,6 +104,7 @@ share/TrustedQSL/help/tqslapp/signupload.htm
 share/TrustedQSL/help/tqslapp/signupload1.bmp
 share/TrustedQSL/help/tqslapp/stnloc.bmp
 share/TrustedQSL/help/tqslapp/stnloc.htm
+share/TrustedQSL/help/tqslapp/stnloc0.bmp
 share/TrustedQSL/help/tqslapp/stnloc1.bmp
 share/TrustedQSL/help/tqslapp/stnloc1.htm
 share/TrustedQSL/help/tqslapp/stnloc2.bmp
@@ -105,4 +120,10 @@ share/TrustedQSL/help/tqslapp/unlock.htm
 share/TrustedQSL/help/tqslapp/update.htm
 share/TrustedQSL/help/tqslapp/update1.bmp
 share/TrustedQSL/help/tqslapp/update2.bmp
+share/locale/de/LC_MESSAGES/tqslapp.mo
+share/locale/es/LC_MESSAGES/tqslapp.mo
+share/locale/fr/LC_MESSAGES/tqslapp.mo
+share/locale/it/LC_MESSAGES/tqslapp.mo
+share/locale/ja/LC_MESSAGES/tqslapp.mo
+share/locale/pt/LC_MESSAGES/tqslapp.mo
 share/pixmaps/TrustedQSL.png
