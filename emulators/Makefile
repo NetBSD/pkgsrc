@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.237 2015/09/26 00:23:43 kamil Exp $
+# $NetBSD: Makefile,v 1.238 2015/10/11 00:54:08 ryoon Exp $
 #
 
 COMMENT=	Emulators for other operating systems
 
+SUBDIR+=	8086tiny
 SUBDIR+=	BasiliskII
 SUBDIR+=	Cygne-SDL
 SUBDIR+=	DatLib
