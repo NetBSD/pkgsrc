@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1127 2015/10/07 22:17:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.1128 2015/10/11 18:38:57 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -91,7 +91,6 @@ SUBDIR+=	dansguardian
 SUBDIR+=	davical
 SUBDIR+=	deforaos-surfer
 SUBDIR+=	dillo
-SUBDIR+=	dojo
 SUBDIR+=	drivel
 SUBDIR+=	drraw
 SUBDIR+=	drupal6
