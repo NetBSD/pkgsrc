@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/11 11:37:50 rodent Exp $
+bin/mysqltuner.pl
+share/doc/mysqltuner/basic_passwords.txt
+share/doc/mysqltuner/CONTRIBUTING.md
+share/doc/mysqltuner/INTERNALS.md
+share/doc/mysqltuner/README.md
+share/doc/mysqltuner/README.ru.md
+share/doc/mysqltuner/USAGE.md
