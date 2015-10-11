@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.883 2015/10/11 14:31:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.884 2015/10/11 18:16:50 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6754,13 +6754,13 @@ sub checkfile_PLIST($) {
 	foreach my $line (@{$extra_lines}, @{$lines}) {
 		my $text = $line->text;
 
-		if ($text =~ m"\$\{([\w_]+)\}(.*)") {
+		if (index($text, '${') != -1 && $text =~ m"\$\{([\w_]+)\}(.*)") {
 			if (defined($pkgctx_plist_subst_cond) && exists($pkgctx_plist_subst_cond->{$1})) {
 				$opt_debug_misc and $line->log_debug("Removed PLIST_SUBST conditional $1.");
 				$text = $2;
 			}
 		}
-		
+
 		if ($text =~ m"^[\w\$]") {
 			$all_files->{$text} = $line;
 			my $dir = $text;
@@ -6768,7 +6768,7 @@ sub checkfile_PLIST($) {
 				$all_dirs->{$dir} = $line;
 			}
 		}
-		if ($text =~ m"^\@exec \$\{MKDIR\} %D/(.*)$") {
+		if (substr($text, 0, 1) eq '@' && $text =~ m"^\@exec \$\{MKDIR\} %D/(.*)$") {
 			my $dir = $1;
 			do {
 				$all_dirs->{$dir} = $line;
@@ -6786,7 +6786,7 @@ sub checkfile_PLIST($) {
 		}
 
 		# @foo directives.
-		if ($text =~ /^(?:\$\{[\w_]+\})?\@([a-z-]+)\s+(.*)/) {
+		if (index($text, '@') != -1 && $text =~ /^(?:\$\{[\w_]+\})?\@([a-z-]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 
 			if ($cmd eq "unexec" && $arg =~ m"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
@@ -6847,11 +6847,11 @@ sub checkfile_PLIST($) {
 				$last_file_seen = $text;
 			}
 
-			if ($basename =~ m"\$\{IMAKE_MANNEWSUFFIX\}") {
+			if (index($basename, '${IMAKE_MANNEWSUFFIX}') != -1) {
 				warn_about_PLIST_imake_mannewsuffix($line);
 			}
 
-			if ($dirname =~ m"^bin/") {
+			if (substr($dirname, 0, 4) eq "bin/") {
 				$line->log_warning("The bin/ directory should not have subdirectories.");
 
 			} elsif ($dirname eq "bin") {
@@ -6871,25 +6871,25 @@ sub checkfile_PLIST($) {
 "section 8.");
 				}
 
-			} elsif ($text =~ m"^doc/") {
+			} elsif (substr($text, 0, 4) eq "doc/") {
 				$line->log_error("Documentation must be installed under share/doc, not doc.");
 
-			} elsif ($text =~ m"^etc/rc\.d/") {
+			} elsif (substr($text, 0, 9) eq "etc/rc.d/") {
 				$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
 
-			} elsif ($text =~ m"^etc/") {
+			} elsif (substr($text, 0, 4) eq "etc/") {
 				my $f = "mk/pkginstall/bsd.pkginstall.mk";
 
 				assert(-f "${cwd_pkgsrcdir}/${f}", "${cwd_pkgsrcdir}/${f} is not a regular file.");
 				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in ${f}.");
 
-			} elsif ($text =~ m"^include/.*\.(?:h|hpp)$") {
+			} elsif (substr($text, 0, 8) eq "include/" && $text =~ m"^include/.*\.(?:h|hpp)$") {
 				# Fine.
 
 			} elsif ($text eq "info/dir") {
 				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
 
-			} elsif ($text =~ m"^info/.+$") {
+			} elsif (substr($text, 0, 5) eq "info/" && length($text) > 5) {
 				if (defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"INFO_FILES"})) {
 					$line->log_warning("Packages that install info files should set INFO_FILES.");
 				}
@@ -6897,10 +6897,10 @@ sub checkfile_PLIST($) {
 			} elsif (defined($effective_pkgbase) && $text =~ m"^lib/\Q${effective_pkgbase}\E/") {
 				# Fine.
 
-			} elsif ($text =~ m"^lib/locale/") {
+			} elsif (substr($text, 0, 11) eq "lib/locale/") {
 				$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 
-			} elsif ($text =~ m"^(lib/(?:.*/)*)([^/]+)\.(so|a|la)$") {
+			} elsif (substr($text, 0, 4) eq "lib/" && $text =~ m"^(lib/(?:.*/)*)([^/]+)\.(so|a|la)$") {
 				my ($dir, $lib, $ext) = ($1, $2, $3);
 
 				if ($dir eq "lib/" && $lib !~ m"^lib") {
@@ -6912,7 +6912,7 @@ sub checkfile_PLIST($) {
 					}
 				}
 
-			} elsif ($text =~ m"^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$") {
+			} elsif (substr($text, 0, 4) eq "man/" && $text =~ m"^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$") {
 				my ($cat_or_man, $section, $manpage, $ext, $gz) = ($1, $2, $3, $4, $5);
 
 				if ($section !~ m"^[\dln]$") {
@@ -6942,14 +6942,14 @@ sub checkfile_PLIST($) {
 "or not.");
 				}
 
-			} elsif ($text =~ m"^man/cat") {
+			} elsif (substr($text, 0, 7) eq "man/cat") {
 				$line->log_warning("Invalid filename \"${text}\" for preformatted manual page.");
 
-			} elsif ($text =~ m"^man/man") {
+			} elsif (substr($text, 0, 7) eq "man/man") {
 				$line->log_warning("Invalid filename \"${text}\" for unformatted manual page.");
 
-			} elsif ($text =~ m"^sbin/(.*)") {
-				my ($binname) = ($1);
+			} elsif (substr($text, 0, 5) eq "sbin/") {
+				my $binname = substr($text, 5);
 
 				if (!exists($all_files->{"man/man8/${binname}.8"})) {
 					$opt_warn_extra and $line->log_warning("Manual page missing for sbin/${binname}.");
@@ -6960,7 +6960,7 @@ sub checkfile_PLIST($) {
 "section 1.");
 				}
 
-			} elsif ($text =~ m"^share/applications/.*\.desktop$") {
+			} elsif (substr($text, 0, 6) eq "share/" && $text =~ m"^share/applications/.*\.desktop$") {
 				my $f = "../../sysutils/desktop-file-utils/desktopdb.mk";
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
 					$line->log_warning("Packages that install a .desktop entry may .include \"$f\".");
@@ -6970,7 +6970,7 @@ sub checkfile_PLIST($) {
 "Otherwise, this warning is harmless.");
 				}
 
-			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
+			} elsif (substr($text, 0, 6) eq "share/" && $pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
 				my $f = "../../graphics/hicolor-icon-theme/buildlink3.mk";
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
 					$line->log_error("Please .include \"$f\" in the Makefile");
@@ -6979,7 +6979,7 @@ sub checkfile_PLIST($) {
 "maintained. The hicolor-icon-theme package takes care of that.");
 				}
 
-			} elsif ($pkgpath ne "graphics/gnome-icon-theme" && $text =~ m"^share/icons/gnome(?:$|/)") {
+			} elsif (substr($text, 0, 6) eq "share/" && $pkgpath ne "graphics/gnome-icon-theme" && $text =~ m"^share/icons/gnome(?:$|/)") {
 				my $f = "../../graphics/gnome-icon-theme/buildlink3.mk";
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
 					$line->log_error("Please .include \"$f\"");
@@ -6989,30 +6989,24 @@ sub checkfile_PLIST($) {
 			} elsif ($dirname eq "share/aclocal" && $basename =~ m"\.m4$") {
 				# Fine.
 
-			} elsif ($text =~ m"^share/doc/html/") {
+			} elsif (substr($text, 0, 15) eq "share/doc/html/") {
 				$opt_warn_plist_depr and $line->log_warning("Use of \"share/doc/html\" is deprecated. Use \"share/doc/\${PKGBASE}\" instead.");
 
-			} elsif (defined($effective_pkgbase) && $text =~ m"^share/doc/\Q${effective_pkgbase}\E/") {
-				# Fine.
-
-			} elsif (defined($effective_pkgbase) && $text =~ m"^share/examples/\Q${effective_pkgbase}\E/") {
-				# Fine.
-
-			} elsif (defined($effective_pkgbase) && $text =~ m"^share/\Q${effective_pkgbase}\E/") {
+			} elsif (defined($effective_pkgbase) && $text =~ m"^share/(?:doc/|examples/|)\Q${effective_pkgbase}\E/") {
 				# Fine.
 
 			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor/icon-theme\.cache") {
 				$line->log_error("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
 
-			} elsif ($text =~ m"^share/info/") {
+			} elsif (substr($text, 0, 11) eq "share/info/") {
 				$line->log_warning("Info pages should be installed into info/, not share/info/.");
 				$line->explain_warning(
 "To fix this, you should add INFO_FILES=yes to the package Makefile.");
 
-			} elsif ($text =~ m"^share/locale/[\w\@_]+/LC_MESSAGES/[^/]+\.mo$") {
+			} elsif (substr($text, -3) eq ".mo" && $text =~ m"^share/locale/[\w\@_]+/LC_MESSAGES/[^/]+\.mo$") {
 				# Fine.
 
-			} elsif ($text =~ m"^share/man/") {
+			} elsif (substr($text, 0, 10) eq "share/man/") {
 				$line->log_warning("Man pages should be installed into man/, not share/man/.");
 
 			} else {
@@ -7023,13 +7017,13 @@ sub checkfile_PLIST($) {
 				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 			}
 
-			if ($text =~ m"/CVS/") {
+			if (index($text, "/CVS/") != -1) {
 				$line->log_warning("CVS files should not be in the PLIST.");
 			}
-			if ($text =~ m"\.orig$") {
+			if (substr($text, -5) eq ".orig") {
 				$line->log_warning(".orig files should not be in the PLIST.");
 			}
-			if ($text =~ m"/perllocal\.pod$") {
+			if (substr($text, -14) eq "/perllocal.pod") {
 				$line->log_warning("perllocal.pod files should not be in the PLIST.");
 				$line->explain_warning(
 "This file is handled automatically by the INSTALL/DEINSTALL scripts,",
