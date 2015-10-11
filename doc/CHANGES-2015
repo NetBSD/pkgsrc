@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4232 2015/10/11 02:59:18 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4233 2015/10/11 04:00:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7287,3 +7287,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added cross/arm-none-eabi-gcc5 version 5.2.0 [ryoon 2015-10-11]
 	Added cross/arm-none-eabi-gdb version 7.10 [ryoon 2015-10-11]
 	Updated ham/trustedQSL to 2.1.2 [mef 2015-10-11]
+	Updated ham/fldigi to 3.23.03 [mef 2015-10-11]
