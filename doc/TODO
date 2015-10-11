@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14970 2015/10/11 05:20:57 ryoon Exp $
+$NetBSD: TODO,v 1.14971 2015/10/11 07:03:05 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1782,7 +1782,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o turba-4.2.8
 	o uae-0.8.29
 	o ubs-0.20
-	o ucblogo-6.0
 	o udpcast-20120424
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
