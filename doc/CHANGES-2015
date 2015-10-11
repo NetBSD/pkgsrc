@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4228 2015/10/11 00:38:05 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.4229 2015/10/11 00:53:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7281,3 +7281,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/umefont-ttf to 0.550 [ryoon 2015-10-10]
 	Added x11/xf86-input-ws version 1.3.0.20151010 [tnn 2015-10-10]
 	Removed x11/openbsd-input-ws successor x11/xf86-input-ws [tnn 2015-10-10]
+	Added emulators/8086tiny version 1.25 [ryoon 2015-10-11]
