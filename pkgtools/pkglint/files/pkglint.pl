@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.882 2015/10/11 12:31:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.883 2015/10/11 14:31:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1769,7 +1769,8 @@ sub check_pkglint_version() {
 sub lines_log_warning($$$) {
 	my ($lines, $lineno, $msg) = @_;
 
-	assert(0 <= $lineno, "The line number is negative (${lineno}).");
+	assert(false, "The line number is negative (${lineno}).")
+		unless 0 <= $lineno;
 	assert(@{$lines} != 0, "The lines may not be empty.");
 
 	if ($lineno <= $#{$lines}) {
@@ -7167,10 +7168,14 @@ sub checkdir_CVS($) {
 	foreach my $line (@$cvs_entries) {
 		my ($type, $fname, $mtime, $date, $keyword_mode, $tag, $undef) = my_split("/", $line->text);
 		next if ($type eq "D" && !defined($fname));
-		assert($type eq "" || $type eq "D", "Unknown line format: " . $line->text);
-		assert(defined($tag), "Unknown line format: " . $line->text);
-		assert(defined($keyword_mode), "Unknown line format: " . $line->text);
-		assert(!defined($undef), "Unknown line format: " . $line->text);
+		assert(false, "Unknown line format: " . $line->text)
+			unless $type eq "" || $type eq "D";
+		assert(false, "Unknown line format: " . $line->text)
+			unless defined($tag);
+		assert(false, "Unknown line format: " . $line->text)
+			unless defined($keyword_mode);
+		assert(false, "Unknown line format: " . $line->text)
+			if defined($undef);
 	}
 }
 
