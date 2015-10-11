@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.2 2014/06/13 11:38:03 mef Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.3 2015/10/11 02:59:07 mef Exp $
 
 (1)
 Avoid following error (interim, only valid with db5)
@@ -10,8 +10,8 @@ gmake[1]: *** [apps/CMakeFiles/tqsl.dir/all] Error 2
 tqsl-2.0.1/apps/tqsl.cpp:2963:10: error: #pragma GCC diagnostic not allowed inside functions
 tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed inside functions
 
---- apps/tqsl.cpp.orig	2014-02-27 03:07:41.000000000 +0900
-+++ apps/tqsl.cpp	2014-02-27 20:21:11.000000000 +0900
+--- apps/tqsl.cpp.orig	2015-09-20 09:15:24.000000000 +0900
++++ apps/tqsl.cpp	2015-10-11 01:19:49.000000000 +0900
 @@ -55,7 +55,7 @@
  #endif
  #include <zlib.h>
@@ -30,8 +30,8 @@ tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed insi
  	#pragma GCC diagnostic ignored "-Wunused-local-typedefs"
  #endif
  void
-@@ -3192,7 +3192,7 @@ MyFrame::DoCheckForUpdates(bool silent, 
- 	DoCheckExpiringCerts(noGUI);
+@@ -3632,7 +3632,7 @@ MyFrame::DoCheckForUpdates(bool silent, 
+ 		DoCheckExpiringCerts(noGUI);
  	return;
  }
 -#if !defined(__APPLE__) && !defined(_WIN32)
