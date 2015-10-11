@@ -34,7 +34,7 @@ sub load_physical_lines($) {
 	my ($physlines, $line, $lineno);
 
 	$physlines = [];
-	open(F, "< $fname") or return undef;
+	open(F, "<", $fname) or return undef;
 	$lineno = 0;
 	while (defined($line = <F>)) {
 		$lineno++;
