@@ -1,9 +1,12 @@
-package PkgLint::Type;
-#==========================================================================
+# $NetBSD: Type.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
+#
 # A Type in pkglint is a combination of a data type and a permission
 # specification. Further details can be found in the chapter ``The pkglint
 # type system'' of the pkglint book.
-#==========================================================================
+#
+package PkgLint::Type;
+
+use strict;
 
 BEGIN {
 	import PkgLint::Util qw(
@@ -47,7 +50,7 @@ sub perms($$) {
 			return $acl_entry->[ACLE_PERMS];
 		}
 	}
-	return undef;
+	return;
 }
 
 # Returns the union of all possible permissions. This can be used to
@@ -96,7 +99,3 @@ sub to_string($) {
 
 	return (["", "InternalList of ", "List of "]->[$self->kind_of_list]) . $self->basic_type;
 }
-
-#== End of PkgLint::Type ==================================================
-
-1;

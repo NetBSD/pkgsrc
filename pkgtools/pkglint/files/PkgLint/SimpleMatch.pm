@@ -1,9 +1,12 @@
-#==========================================================================
+# $NetBSD: SimpleMatch.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
+#
 # A SimpleMatch is the result of applying a regular expression to a Perl
 # scalar value. It can return the range and the text of the captured
 # groups.
-#==========================================================================
+#
 package PkgLint::SimpleMatch;
+
+use strict;
 
 use enum qw(STRING STARTS ENDS N);
 
@@ -38,5 +41,3 @@ sub range($$) {
 
 	return ($self->[STARTS]->[$n], $self->[ENDS]->[$n]);
 }
-
-1;

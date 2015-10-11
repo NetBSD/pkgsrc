@@ -1,7 +1,10 @@
+# $NetBSD: CVS_Entry.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
+#
+# One line from a CVS/Entries file.
+#
 package PkgLint::CVS_Entry;
-#==========================================================================
-# A CVS_Entry represents one line from a CVS/Entries file.
-#==========================================================================
+
+use strict;
 
 use enum qw(FNAME REVISION MTIME TAG);
 
@@ -15,6 +18,3 @@ sub fname($)			{ return shift()->[FNAME]; }
 sub revision($)			{ return shift()->[REVISION]; }
 sub mtime($)			{ return shift()->[MTIME]; }
 sub tag($)			{ return shift()->[TAG]; }
-#== End of PkgLint::CVS_Entry =============================================
-
-1;
