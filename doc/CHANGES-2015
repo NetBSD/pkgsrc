@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4230 2015/10/11 01:11:32 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4231 2015/10/11 01:17:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7283,3 +7283,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed x11/openbsd-input-ws successor x11/xf86-input-ws [tnn 2015-10-10]
 	Added emulators/8086tiny version 1.25 [ryoon 2015-10-11]
 	Added cross/objconv version 2.39 [ryoon 2015-10-11]
+	Added cross/arm-none-eabi-binutils version 2.25.1 [ryoon 2015-10-11]
+	Added cross/arm-none-eabi-gcc5 version 5.2.0 [ryoon 2015-10-11]
+	Added cross/arm-none-eabi-gdb version 7.10 [ryoon 2015-10-11]
