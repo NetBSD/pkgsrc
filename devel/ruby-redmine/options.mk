@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/10/10 02:03:04 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2015/10/11 00:19:33 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine
 
@@ -72,7 +72,6 @@ unicorn-post-install:
 		${DESTDIR}${EGDIR}/unicorn.rb.example
 	${CP} ${FILESDIR}/Gemfile.local \
 		${DESTDIR}${PREFIX}/${RM_DIR}/app
-	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/rc.d/redmine*
 .endif
 .PHONY: unicorn-post-install
 unicorn-post-install:
