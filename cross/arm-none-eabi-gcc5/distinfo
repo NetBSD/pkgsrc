@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/10/11 01:14:56 ryoon Exp $
+
+SHA1 (gcc-5.2.0.tar.bz2) = fe3f5390949d47054b613edc36c557eb1d51c18e
+RMD160 (gcc-5.2.0.tar.bz2) = eaedd62e7a738f6bdc0e97a0c40fbbd75d35925b
+Size (gcc-5.2.0.tar.bz2) = 95221552 bytes
+SHA1 (newlib-2.2.0.tar.gz) = 16fc7bc82e445341b9e741a3fc57b818691fa375
+RMD160 (newlib-2.2.0.tar.gz) = f295a83d08c4ccb4ccde355fbbd55f54352ff2ad
+Size (newlib-2.2.0.tar.gz) = 16521910 bytes
+SHA1 (patch-libgo_mksysinfo.sh) = f14e68a0c8cc823442661e3523b3b6b9b9a5fd1c
