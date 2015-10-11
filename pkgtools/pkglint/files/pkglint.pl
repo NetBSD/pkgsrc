@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.884 2015/10/11 18:16:50 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.885 2015/10/11 18:34:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5463,8 +5463,6 @@ sub checkfile_ALTERNATIVES($) {
 	}
 }
 
-sub checklines_buildlink3_mk_2009($$$);
-sub checklines_buildlink3_mk_pre2009($$);
 sub checkfile_buildlink3_mk($) {
 	my ($fname) = @_;
 	my ($lines, $lineno, $m);
@@ -5495,7 +5493,6 @@ sub checkfile_buildlink3_mk($) {
 	}
 	expect_empty_line($lines, \$lineno);
 
-	# This line does not belong here, but appears often.
 	if (expect($lines, \$lineno, qr"^BUILDLINK_DEPMETHOD\.(\S+)\?=.*$")) {
 		$lines->[$lineno - 1]->log_warning("This line belongs inside the .ifdef block.");
 		while ($lines->[$lineno]->text eq "") {
@@ -5503,222 +5500,14 @@ sub checkfile_buildlink3_mk($) {
 		}
 	}
 
-	if (($m = expect($lines, \$lineno, qr"^BUILDLINK_TREE\+=\s*(\S+)$"))) {
-		checklines_buildlink3_mk_2009($lines, $lineno, $m->text(1));
-	} else {
-		checklines_buildlink3_mk_pre2009($lines, $lineno);
+	if (!($m = expect($lines, \$lineno, qr"^BUILDLINK_TREE\+=\s*(\S+)$"))) {
+		$lines->[$lineno]->log_warning("Expected a BUILDLINK_TREE line.");
 	}
+
+	checklines_buildlink3_mk($lines, $lineno, $m->text(1));
 }
 
-sub checklines_buildlink3_mk_pre2009($$) {
-	my ($lines, $lineno) = @_;
-	my ($m);
-	my ($bl_PKGBASE_line, $bl_PKGBASE);
-	my ($bl_pkgbase_line, $bl_pkgbase);
-	my ($abi_line, $abi_pkg, $abi_version);
-	my ($api_line, $api_pkg, $api_version);
-
-	# First paragraph: Reference counters.
-	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH\}\+$")) {
-		# When none of the formats has been found, prefer the 2009 format.
-		lines_log_warning($lines, $lineno, "Expected BUILDLINK_TREE line.");
-		return;
-	}
-	$lines->[$lineno - 1]->log_warning("Please switch to the new buildlink3.mk format.");
-	$lines->[$lineno - 1]->explain_warning(
-"The format for buildlink3.mk files has changed in 2009Q1. You can",
-"generate a new-style buildlink3.mk file with the createbuildlink>=3.14",
-"package and then adjust the variable's values manually.");
-
-	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t*\$\{\1_BUILDLINK3_MK\}\+$"))) {
-		$bl_PKGBASE_line = $lines->[$lineno - 1];
-		$bl_PKGBASE = $m->text(1);
-		$opt_debug_misc and $bl_PKGBASE_line->log_debug("bl_PKGBASE=${bl_PKGBASE}");
-	} else {
-		lines_log_warning($lines, $lineno, "Expected {PKGNAME}_BUILDLINK3_MK:= \${{PKGNAME}_BUILDLINK3_MK}+.");
-		return;
-	}
-	expect_empty_line($lines, \$lineno);
-
-	# Second paragraph: Adding the dependency.
-	if (!expect($lines, \$lineno, qr"^\.if !empty\(BUILDLINK_DEPTH:M\+\)$")) {
-		if (!expect_text($lines, \$lineno, ".if \${BUILDLINK_DEPTH} == \"+\"")) {
-			return;
-		}
-	}
-	if (($m = expect($lines, \$lineno, qr"^BUILDLINK_DEPENDS\+=\t+(\S+)$"))) {
-		$bl_pkgbase_line = $lines->[$lineno - 1];
-		$bl_pkgbase = $m->text(1);
-		$opt_debug_misc and $bl_pkgbase_line->log_debug("bl_pkgbase=${bl_pkgbase}");
-	} else {
-		lines_log_warning($lines, $lineno, "BUILDLINK_DEPENDS line expected.");
-		return;
-	}
-
-	my $norm_bl_pkgbase = $bl_pkgbase;
-	$norm_bl_pkgbase =~ s/-/_/g;
-	$norm_bl_pkgbase = uc($norm_bl_pkgbase);
-	if ($norm_bl_pkgbase ne $bl_PKGBASE) {
-		$bl_PKGBASE_line->log_error("Package name mismatch between ${bl_PKGBASE} ...");
-		$bl_pkgbase_line->log_error("... and ${bl_pkgbase}.");
-	}
-	if (defined($effective_pkgbase) && $effective_pkgbase ne $bl_pkgbase) {
-		$bl_pkgbase_line->log_error("Package name mismatch between ${bl_pkgbase} ...");
-		$effective_pkgname_line->log_error("... and ${effective_pkgbase}.");
-	}
-
-	if (!expect_text($lines, \$lineno, ".endif")) {
-		return;
-	}
-	expect_empty_line($lines, \$lineno);
-
-	# Third paragraph: Duplicate elimination.
-	if (expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}\s+\Q${bl_pkgbase}\E$")) {
-		# The compressed form of duplicate elimination.
-
-	} else {
-		if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}$")) {
-			lines_log_warning($lines, $lineno, "Expected BUILDLINK_PACKAGES:= \${BUILDLINK_PACKAGES:N${bl_pkgbase}} line.");
-			return;
-		}
-		if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES\+=\t+\Q${bl_pkgbase}\E$")) {
-			lines_log_warning($lines, $lineno, "Expected BUILDLINK_PACKAGES+= ${bl_pkgbase} line.");
-			return;
-		}
-	}
-	expect_text($lines, \$lineno, "BUILDLINK_ORDER:=\t\${BUILDLINK_ORDER} \${BUILDLINK_DEPTH}${bl_pkgbase}");
-	expect_empty_line($lines, \$lineno);
-
-	# Fourth paragraph: Package information.
-	if (!expect($lines, \$lineno, qr"^\.if !empty\(\Q${bl_PKGBASE}\E_BUILDLINK3_MK:M\+\)$")) {
-		if (!expect_text($lines, \$lineno, ".if \${${bl_PKGBASE}_BUILDLINK3_MK} == \"+\"")) {
-			return;
-		}
-	}
-	while (!expect($lines, \$lineno, qr"^\.endif.*$")) {
-
-		if ($lineno > $#{$lines}) {
-			lines_log_warning($lines, $lineno, "Expected .endif");
-			return;
-		}
-
-		my $line = $lines->[$lineno];
-
-		if (($m = expect($lines, \$lineno, regex_varassign))) {
-			my ($varname, $value) = ($m->text(1), $m->text(3));
-			my $do_check = false;
-
-			if ($varname eq "BUILDLINK_ABI_DEPENDS.${bl_pkgbase}") {
-				$abi_line = $line;
-				if ($value =~ regex_dependency_lge) {
-					($abi_pkg, $abi_version) = ($1, $2);
-				} elsif ($value =~ regex_dependency_wildcard) {
-					($abi_pkg) = ($1);
-				} else {
-					$opt_debug_unchecked and $line->log_debug("Unchecked dependency pattern \"${value}\".");
-				}
-				$do_check = true;
-			}
-			if ($varname eq "BUILDLINK_API_DEPENDS.${bl_pkgbase}") {
-				$api_line = $line;
-				if ($value =~ regex_dependency_lge) {
-					($api_pkg, $api_version) = ($1, $2);
-				} elsif ($value =~ regex_dependency_wildcard) {
-					($api_pkg) = ($1);
-				} else {
-					$opt_debug_unchecked and $line->log_debug("Unchecked dependency pattern \"${value}\".");
-				}
-				$do_check = true;
-			}
-			if ($do_check && defined($abi_pkg) && defined($api_pkg)) {
-				if ($abi_pkg ne $api_pkg) {
-					$abi_line->log_warning("Package name mismatch between ${abi_pkg} ...");
-					$api_line->log_warning("... and ${api_pkg}.");
-				}
-			}
-			if ($do_check && defined($abi_version) && defined($api_version)) {
-				if (!dewey_cmp($abi_version, ">=", $api_version)) {
-					$abi_line->log_warning("ABI version (${abi_version}) should be at least ...");
-					$api_line->log_warning("... API version (${api_version}).");
-				}
-			}
-
-			if ($varname =~ m"^BUILDLINK_[\w_]+\.(.*)$") {
-				my ($varparam) = ($1);
-
-				if ($varparam ne $bl_pkgbase) {
-					$line->log_warning("Only buildlink variables for ${bl_pkgbase}, not ${varparam} may be set in this file.");
-				}
-			}
-
-			# TODO: More checks.
-
-		} elsif (expect($lines, \$lineno, qr"^(?:#.*)?$")) {
-			# Comments and empty lines are fine here.
-
-		} else {
-			$opt_debug_unchecked and lines_log_warning($lines, $lineno, "Unchecked line in fourth paragraph.");
-			$lineno++;
-		}
-	}
-	if (!defined($api_line)) {
-		$lines->[$lineno - 1]->log_warning("Definition of BUILDLINK_API_DEPENDS is missing.");
-	}
-	expect_empty_line($lines, \$lineno);
-
-	# Before the fifth paragraph, it may be necessary to resolve the build
-	# options of other packages.
-	if (expect($lines, \$lineno, qr"^pkgbase\s*:=\s*(\S+)$")) {
-		do {
-			expect_text($lines, \$lineno, ".include \"../../mk/pkg-build-options.mk\"");
-		} while (expect($lines, \$lineno, qr"^pkgbase\s*:=\s*(\S+)$"));
-		expect_empty_line($lines, \$lineno);
-	}
-
-	# Fifth paragraph (optional): Dependencies.
-	my $have_dependencies = false;
-	my $need_empty_line = false;
-	while (true) {
-		if (expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk\"$")
-		 || expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./mk/(\S+)\.buildlink3\.mk\"$")
-		 || expect($lines, \$lineno, qr"^\.if !empty\(PKG_BUILD_OPTIONS\.\Q${bl_pkgbase}\E:M\S+\)$")
-		 || expect($lines, \$lineno, qr"^\.endif$")) {
-			$have_dependencies = true;
-			$need_empty_line = true;
-		} elsif ($have_dependencies && expect($lines, \$lineno, qr"^$")) {
-			$need_empty_line = false;
-		} else {
-			last;
-		}
-	}
-	if ($need_empty_line) {
-		expect_empty_line($lines, \$lineno);
-	}
-
-	# Sixth paragraph: Reference counter.
-	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH:S/\+\$//\}$")) {
-		lines_log_warning($lines, $lineno, "Expected BUILDLINK_DEPTH:= \${BUILDLINK_DEPTH:S/+\$//}.");
-		explain_warning($lines, $lineno,
-			"Everything besides the .include lines for the buildlink3.mk files of",
-			"dependencies should go between the .if !empty({PKGNAME}_BUILDLINK3_MK)",
-			"and the corresponding .endif.");
-		return;
-	}
-
-	if ($lineno <= $#{$lines}) {
-		$lines->[$lineno]->log_warning("The file should end here.");
-	}
-
-	checklines_buildlink3_inclusion($lines);
-}
-
-# This code is copy-pasted from checklines_buildlink3_mk_pre2009, which
-# will disappear after branching 2010Q1.
-#
-# In 2009, the format of the buildlink3.mk files has been revised to
-# improve the speed of pkgsrc. As a result, the file format has improved
-# in legibility and size.
-sub checklines_buildlink3_mk_2009($$$) {
+sub checklines_buildlink3_mk($$$) {
 	my ($lines, $lineno, $pkgid) = @_;
 	my ($m);
 	my ($bl_PKGBASE_line, $bl_PKGBASE);
@@ -5731,7 +5520,7 @@ sub checklines_buildlink3_mk_2009($$$) {
 	$bl_pkgbase = $pkgid;
 	$opt_debug_misc and $bl_pkgbase_line->log_debug("bl_pkgbase=${bl_pkgbase}");
 	expect_empty_line($lines, \$lineno);
-	
+
 	# Second paragraph: multiple inclusion protection and introduction
 	# of the uppercase package identifier.
 	return unless ($m = expect_re($lines, \$lineno, qr"^\.if !defined\((\S+)_BUILDLINK3_MK\)$"));
