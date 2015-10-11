@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/10/11 01:15:18 ryoon Exp $
+
+SHA1 (gdb-7.10.tar.xz) = 95338f65ae9f61ecb76592f2cbe336a7d948b905
+RMD160 (gdb-7.10.tar.xz) = af4ae2437a37570198bc3c0f57fbc343f50d595f
+Size (gdb-7.10.tar.xz) = 18540820 bytes
+SHA1 (patch-gdb_config_djgpp_djconfig.sh) = 66a75c3670a8391639ba175072a68dd605ebc09b
