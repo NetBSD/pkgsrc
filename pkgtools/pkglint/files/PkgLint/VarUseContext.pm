@@ -5,6 +5,7 @@
 package PkgLint::VarUseContext;
 
 use strict;
+use warnings;
 
 BEGIN {
 	import PkgLint::Util qw(

@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.888 2015/10/11 21:06:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.889 2015/10/11 21:23:34 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2693,7 +2693,7 @@ sub checkline_mk_varuse($$$$) {
 		}
 	}
 
-	if ($opt_warn_quoting and $context->shellword != VUC_SHELLWORD_UNKNOWN && $needs_quoting != dont_know) {
+	if ($opt_warn_quoting && $context->shellword != VUC_SHELLWORD_UNKNOWN && $needs_quoting != dont_know) {
 
 		# In GNU configure scripts, a few variables need to be
 		# passed through the :M* operator before they reach the
@@ -5614,7 +5614,7 @@ sub checkfile_distinfo($) {
 
 			if (open(my $patchfile, "<", $fname)) {
 				my $sha1 = Digest::SHA1->new();
-				foreach my $patchline (<$patchfile>) {
+				while (defined(my $patchline = <$patchfile>)) {
 					$sha1->add($patchline) unless $patchline =~ m"\$[N]etBSD";
 				}
 				close($patchfile);
@@ -6743,7 +6743,7 @@ sub checkitem($) {
 
 sub main() {
 
-	$| = true;
+	local $| = true;
 	parse_command_line();
 
 	@todo_items = (@ARGV != 0) ? @ARGV : (".");
