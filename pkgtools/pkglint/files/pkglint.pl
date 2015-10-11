@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.878 2015/06/14 18:18:34 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.879 2015/10/11 07:27:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4058,7 +4058,14 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			foreach my $site (keys(%{$sites})) {
 				if (index($value, $site) == 0) {
 					my $subdir = substr($value, length($site));
+					my $is_github = $value =~ m"^https://github\.com/";
+					if ($is_github) {
+						$subdir =~ s|/.*|/|;
+					}
 					$line->log_warning(sprintf("Please use \${%s:=%s} instead of \"%s\".", $sites->{$site}, $subdir, $value));
+					if ($is_github) {
+						$line->log_warning("Run \"".conf_make." help topic=github\" for further tips.");
+					}
 					last;
 				}
 			}
