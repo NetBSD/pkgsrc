@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.62 2015/10/11 01:11:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2015/10/11 01:16:29 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
 
 SUBDIR+=	GenFw
 SUBDIR+=	atasm
+SUBDIR+=	arm-none-eabi-binutils
+SUBDIR+=	arm-none-eabi-gcc5
+SUBDIR+=	arm-none-eabi-gdb
 SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
