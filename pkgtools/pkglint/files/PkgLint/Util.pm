@@ -1,12 +1,16 @@
-package PkgLint::Util;
-#==========================================================================
+# $NetBSD: Util.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
+#
 # This package is a catch-all for subroutines that are not application-spe-
 # cific. Currently it contains the boolean constants C<false> and C<true>,
 # as well as a function to print text in a table format, and a function
 # that converts an array into a hash. The latter is just for convenience
 # because I don't know of a Perl operator similar to qw() that can be used
 # for creating a hash.
-#==========================================================================
+#
+package PkgLint::Util;
+
+use strict;
+
 BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
@@ -90,6 +94,3 @@ sub normalize_pathname($) {
 
 	return $fname;
 }
-#== End of PkgLint::Util ==================================================
-
-1;
