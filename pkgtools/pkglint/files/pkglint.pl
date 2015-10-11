@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.885 2015/10/11 18:34:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.886 2015/10/11 18:42:34 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5502,6 +5502,7 @@ sub checkfile_buildlink3_mk($) {
 
 	if (!($m = expect($lines, \$lineno, qr"^BUILDLINK_TREE\+=\s*(\S+)$"))) {
 		$lines->[$lineno]->log_warning("Expected a BUILDLINK_TREE line.");
+		return;
 	}
 
 	checklines_buildlink3_mk($lines, $lineno, $m->text(1));
