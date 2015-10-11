@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/09/07 09:07:18 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/10/11 07:00:19 tnn Exp $
 
 DISTNAME=	libpciaccess-0.13.4
 PKGREVISION=	1
@@ -19,7 +19,7 @@ DEPENDS+=	pciids-[0-9]*:../../misc/pciids
 ONLY_FOR_PLATFORM=	FreeBSD-*-i386 OpenBSD-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386 DragonFly-*-x86_64
-ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-* Darwin-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-*-*
 
 GNU_CONFIGURE=		yes
