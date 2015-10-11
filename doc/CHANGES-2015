@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4237 2015/10/11 11:38:02 rodent Exp $
+$NetBSD: CHANGES-2015,v 1.4238 2015/10/11 23:34:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7298,3 +7298,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/postgresql92 to 9.2.14 [adam 2015-10-10]
 	Updated databases/postgresql91 to 9.1.19 [adam 2015-10-10]
 	Added databases/mysqltuner version 1.6.0 [rodent 2015-10-11]
+	Updated mail/thunderbird to 38.3.0 [ryoon 2015-10-11]
