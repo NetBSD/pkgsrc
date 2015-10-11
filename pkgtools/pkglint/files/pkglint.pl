@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.887 2015/10/11 19:20:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.888 2015/10/11 21:06:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -611,7 +611,7 @@ sub parse_acls($$) {
 		) (?:\,\s*|$)"x;
 
 	if (!defined($acltext)) {
-		return undef;
+		return;
 	}
 
 	$acls = [];
@@ -1834,7 +1834,7 @@ sub get_variable_type($$) {
 	}
 
 	$opt_debug_vartypes and $line->log_debug("No type definition found for ${varcanon}.");
-	return undef;
+	return;
 }
 
 sub get_variable_perms($$) {
@@ -2370,7 +2370,7 @@ sub checkword_absolute_pathname($$) {
 
 sub check_unused_licenses() {
 
-	for my $licensefile (<${cwd_pkgsrcdir}/licenses/*>) {
+	for my $licensefile (glob("${cwd_pkgsrcdir}/licenses/*")) {
 		if (-f $licensefile) {
 			my $licensename = basename($licensefile);
 			if (!exists($ipc_used_licenses{$licensename})) {
@@ -2427,7 +2427,7 @@ sub checkline_valid_characters($$) {
 
 	($rest = $line->text) =~ s/$re_validchars//g;
 	if ($rest ne "") {
-		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
+		my @chars = map { sprintf("0x%02x", ord($_)); } split(//, $rest);
 		$line->log_warning("Line contains invalid characters (" . join(", ", @chars) . ").");
 	}
 }
@@ -2441,7 +2441,7 @@ sub checkline_valid_characters_in_variable($$) {
 
 	$rest =~ s/$re_validchars//g;
 	if ($rest ne "") {
-		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
+		my @chars = map { sprintf("0x%02x", ord($_)); } split(//, $rest);
 		$line->log_warning("${varname} contains invalid characters (" . join(", ", @chars) . ").");
 	}
 }
@@ -3146,7 +3146,7 @@ sub checkline_mk_shelltext($$) {
 		INSTALL_DIR INSTALL_DIR2
 	);
 	use enum (":SCST_", scst);
-	use constant scst_statename => [ map { $_ = "SCST_$_"; } scst ];
+	use constant scst_statename => [ map { "SCST_$_" } scst ];
 
 	use constant forbidden_commands => array_to_hash(qw(
 		ktrace
@@ -5612,17 +5612,17 @@ sub checkfile_distinfo($) {
 				$line->log_warning("${patches_dir}/${chksum_fname} is registered in distinfo but not added to CVS.");
 			}
 
-			if (open(PATCH, "<", $fname)) {
-				my $data = "";
-				foreach my $patchline (<PATCH>) {
-					$data .= $patchline unless $patchline =~ m"\$[N]etBSD";
+			if (open(my $patchfile, "<", $fname)) {
+				my $sha1 = Digest::SHA1->new();
+				foreach my $patchline (<$patchfile>) {
+					$sha1->add($patchline) unless $patchline =~ m"\$[N]etBSD";
 				}
-				close(PATCH);
-				my $chksum = Digest::SHA1::sha1_hex($data);
+				close($patchfile);
+				my $chksum = $sha1->hexdigest();
 				if ($sum ne $chksum) {
 					$line->log_error("${alg} checksum of ${chksum_fname} differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
 				}
-			} elsif (true) {
+			} else {
 				$line->log_warning("${chksum_fname} does not exist.");
 				$line->explain_warning(
 "All patches that are mentioned in a distinfo file should actually exist.",
@@ -5634,7 +5634,7 @@ sub checkfile_distinfo($) {
 	checklines_trailing_empty_lines($lines);
 
 	if (defined($patches_dir)) {
-		foreach my $patch (<${current_dir}/${patches_dir}/patch-*>) {
+		foreach my $patch (glob("${current_dir}/${patches_dir}/patch-*")) {
 			$patch = basename($patch);
 			if (!exists($in_distinfo{$patch})) {
 				log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
@@ -6593,14 +6593,14 @@ sub checkdir_package() {
 		goto cleanup;
 	}
 
-	my @files = <${current_dir}/*>;
+	my @files = glob("${current_dir}/*");
 	if ($pkgdir ne ".") {
-		push(@files, <${current_dir}/${pkgdir}/*>);
+		push(@files, glob("${current_dir}/${pkgdir}/*"));
 	}
 	if ($opt_check_extra) {
-		push(@files, <${current_dir}/${filesdir}/*>);
+		push(@files, glob("${current_dir}/${filesdir}/*"));
 	}
-	push(@files, <${current_dir}/${patchdir}/*>);
+	push(@files, glob("${current_dir}/${patchdir}/*"));
 	if ($distinfo_file !~ m"^(?:\./)?distinfo$") {
 		push(@files, "${current_dir}/${distinfo_file}");
 	}
