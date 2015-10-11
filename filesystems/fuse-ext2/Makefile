@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/10/25 21:42:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.7 2015/10/11 10:56:43 tron Exp $
 
 DISTNAME=	fuse-ext2-0.0.7
 PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-ext2/fuse-ext2/${DISTNAME}/}
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alperakcan.net/projects/fuse-ext2/
 COMMENT=	FUSE file-system to mount ext2 and ext3 file system
 LICENSE=	gnu-gpl-v2

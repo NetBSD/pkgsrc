@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 14:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/10/11 10:56:43 tron Exp $
 
 DISTNAME=	netio126
 PKGNAME=	netio-1.26
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.ars.de/ars/ars.nsf/f24a6a0b94c22d82862566960071bf5a/aa5
 EXTRACT_SUFX=	.zip
 
 HOMEPAGE=	http://www.ars.de/ars/ars.nsf/docs/netio
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Network benchmark for OS/2 2.x, Windows NT/2000 and Unix
 LICENSE=	no-commercial-use
 
