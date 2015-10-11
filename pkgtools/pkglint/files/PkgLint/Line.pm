@@ -50,12 +50,14 @@ sub has($$) {
 }
 sub get($$) {
 	my ($self, $name) = @_;
-	assert(exists($self->[EXTRA]->{$name}), "Field ${name} does not exist.");
+	assert(false, "Field ${name} does not exist.")
+		unless exists($self->[EXTRA]->{$name});
 	return $self->[EXTRA]->{$name};
 }
 sub set($$$) {
 	my ($self, $name, $value) = @_;
-	assert(!exists($self->[EXTRA]->{$name}), "Field ${name} already exists.");
+	assert(false, "Field ${name} already exists.")
+		if exists($self->[EXTRA]->{$name});
 
 	# Make sure that the line does not become a cyclic data structure.
 	my $type = ref($value);
@@ -64,8 +66,8 @@ sub set($$$) {
 	} elsif ($type eq "ARRAY") {
 		foreach my $element (@{$value}) {
 			my $element_type = ref($element);
-			assert($element_type eq "" || $element_type eq "PkgLint::SimpleMatch",
-				"Invalid array data type: name=${name}, type=${element_type}.");
+			assert(false, "Invalid array data type: name=${name}, type=${element_type}.")
+				unless $element_type eq "" || $element_type eq "PkgLint::SimpleMatch";
 		}
 	} else {
 		assert(false, "Invalid data: name=${name}, value=${value}.");
