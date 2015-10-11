@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: build.pl,v 1.1 2013/03/26 15:08:29 schmonz Exp $
+# $NetBSD: build.pl,v 1.2 2015/10/11 19:20:17 rillig Exp $
 #
 
 use strict;
@@ -17,8 +17,8 @@ sub readfile {
 }
 
 while (my $line = <>) {
-	if ($line =~ /^use PkgLint::(.+);$/) {
-		print readfile("PkgLint/$1.pm");
+	if ($line =~ m"^#include (.+)$/") {
+		print readfile($1);
 	} else {
 		print $line;
 	}
