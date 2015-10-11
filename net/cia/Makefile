@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/07 11:06:43 tron Exp $
+# $NetBSD: Makefile,v 1.18 2015/10/11 10:56:43 tron Exp $
 
 DISTNAME=	cia-20030922
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://zhadum.org.uk/~tron/files/
 EXTRACT_SUFX=	.tar.bz2
 
-OWNER=		tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Simple IP accounting software
 
 DOC_DIR=	${PREFIX}/share/doc/cia

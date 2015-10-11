@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2014/03/03 02:40:34 obache Exp $
+# $NetBSD: Makefile,v 1.66 2015/10/11 10:56:44 tron Exp $
 
 PKGNAME=	rpm2pkg-3.2.3
 CATEGORIES=	pkgtools
 NO_CHECKSUM=	yes
 
-OWNER=		tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Convert RPM archives to NetBSD packages
 LICENSE=	modified-bsd
