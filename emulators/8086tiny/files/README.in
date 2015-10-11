@@ -1,0 +1,28 @@
+$NetBSD: README.in,v 1.1 2015/10/11 00:52:23 ryoon Exp $
+
+To run FreeDOS, please perform the following steps.
+
+1. Create working directory in your home directory.
+
+	$ mkdir ~/8086tiny
+
+2. Copy @PREFIX@/share/8086tiny/bios and @PREFIX@/share/8086tiny/freedos.img
+   to your working directory.
+
+	$ cd ~/8086tiny
+	$ cp @PREFIX@/share/8086tiny/bios .
+	$ cp @PREFIX@/share/8086tiny/freedos.img .
+
+3. Run 8086tiny
+
+	$ @PREFIX@/bin/run-8086tiny-freedos.sh
+
+4. You will get FreeDOS command prompt.
+
+5. To shutdown 8086tiny, run a:\quitemu.com command.
+
+	A:\> quitemu
+
+Note: If you want to use HDD image, run
+
+	$ 8086tiny bios freedos.img hd.img
