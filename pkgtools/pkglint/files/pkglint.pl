@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.880 2015/10/11 08:04:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.881 2015/10/11 08:15:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6476,18 +6476,18 @@ sub checkfile_patch($) {
 		}
 	};
 
+	# [ regex, to state, action ]
 	my $transitions = {
 		PST_START() =>
-		# [ from state, regex, to state, action ]
-		[   [PST_START, re_patch_rcsid, PST_CENTER, sub() {
+		[   [re_patch_rcsid, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
-		}], [PST_START, undef, PST_CENTER, sub() {
+		}], [undef, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
 		}]],
 		PST_CENTER() =>
-		[   [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
+		[   [re_patch_empty, PST_TEXT, sub() {
 			#
-		}], [PST_CENTER, re_patch_cfd, PST_CFA, sub() {
+		}], [re_patch_cfd, PST_CFA, sub() {
 			if ($seen_comment) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
@@ -6495,37 +6495,37 @@ sub checkfile_patch($) {
 				$line->explain_error(@comment_explanation);
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
-		}], [PST_CENTER, re_patch_ufd, PST_UFA, sub() {
+		}], [re_patch_ufd, PST_UFA, sub() {
 			if ($seen_comment) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
 				$line->log_error("Comment expected.");
 				$line->explain_error(@comment_explanation);
 			}
-		}], [PST_CENTER, undef, PST_TEXT, sub() {
+		}], [undef, PST_TEXT, sub() {
 			$opt_warn_space and $line->log_note("Empty line expected.");
 		}]],
 		PST_TEXT() =>
-		[   [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
+		[   [re_patch_cfd, PST_CFA, sub() {
 			if (!$seen_comment) {
 				$line->log_error("Comment expected.");
 				$line->explain_error(@comment_explanation);
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
-		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
+		}], [re_patch_ufd, PST_UFA, sub() {
 			if (!$seen_comment) {
 				$line->log_error("Comment expected.");
 				$line->explain_error(@comment_explanation);
 			}
-		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
+		}], [re_patch_text, PST_TEXT, sub() {
 			$seen_comment = true;
-		}], [PST_TEXT, re_patch_empty, PST_TEXT, sub() {
+		}], [re_patch_empty, PST_TEXT, sub() {
 			#
-		}], [PST_TEXT, undef, PST_TEXT, sub() {
+		}], [undef, PST_TEXT, sub() {
 			#
 		}]],
 		PST_CFA() =>
-		[   [PST_CFA, re_patch_cfa, PST_CH, sub() {
+		[   [re_patch_cfa, PST_CH, sub() {
 			$current_fname = $m->text(1);
 			$current_ftype = get_filetype($line, $current_fname);
 			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
@@ -6533,68 +6533,68 @@ sub checkfile_patch($) {
 			$hunks = 0;
 		}]],
 		PST_CH() =>
-		[   [PST_CH, re_patch_ch, PST_CHD, sub() {
+		[   [re_patch_ch, PST_CHD, sub() {
 			$hunks++;
 		}]],
 		PST_CHD() =>
-		[   [PST_CHD, re_patch_chd, PST_CLD0, sub() {
+		[   [re_patch_chd, PST_CLD0, sub() {
 			$dellines = ($m->has(2))
 			    ? (1 + $m->text(2) - $m->text(1))
 			    : ($m->text(1));
 		}]],
 		PST_CLD0() =>
-		[   [PST_CLD0, re_patch_clc, PST_CLD, sub() {
+		[   [re_patch_clc, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD0, re_patch_cld, PST_CLD, sub() {
+		}], [re_patch_cld, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD0, re_patch_clm, PST_CLD, sub() {
+		}], [re_patch_clm, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD0, re_patch_cha, PST_CLA0, sub() {
+		}], [re_patch_cha, PST_CLA0, sub() {
 			$dellines = undef;
 			$addlines = ($m->has(2))
 			    ? (1 + $m->text(2) - $m->text(1))
 			    : ($m->text(1));
 		}]],
 		PST_CLD() =>
-		[   [PST_CLD, re_patch_clc, PST_CLD, sub() {
+		[   [re_patch_clc, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD, re_patch_cld, PST_CLD, sub() {
+		}], [re_patch_cld, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD, re_patch_clm, PST_CLD, sub() {
+		}], [re_patch_clm, PST_CLD, sub() {
 			$check_hunk_line->(1, 0, PST_CLD0);
-		}], [PST_CLD, undef, PST_CLD0, sub() {
+		}], [undef, PST_CLD0, sub() {
 			if ($dellines != 0) {
 				$line->log_warning("Invalid number of deleted lines (${dellines} missing).");
 			}
 		}]],
 		PST_CLA0() =>
-		[   [PST_CLA0, re_patch_clc, PST_CLA, sub() {
+		[   [re_patch_clc, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA0, re_patch_clm, PST_CLA, sub() {
+		}], [re_patch_clm, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA0, re_patch_cla, PST_CLA, sub() {
+		}], [re_patch_cla, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA0, undef, PST_CH, sub() {
+		}], [undef, PST_CH, sub() {
 			#
 		}]],
 		PST_CLA() =>
-		[   [PST_CLA, re_patch_clc, PST_CLA, sub() {
+		[   [re_patch_clc, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA, re_patch_clm, PST_CLA, sub() {
+		}], [re_patch_clm, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA, re_patch_cla, PST_CLA, sub() {
+		}], [re_patch_cla, PST_CLA, sub() {
 			$check_hunk_line->(0, 1, PST_CH);
-		}], [PST_CLA, undef, PST_CLA0, sub() {
+		}], [undef, PST_CLA0, sub() {
 			if ($addlines != 0) {
 				$line->log_warning("Invalid number of added lines (${addlines} missing).");
 			}
 		}]],
 		PST_CH() =>
-		[   [PST_CH, undef, PST_TEXT, sub() {
+		[   [undef, PST_TEXT, sub() {
 			#
 		}]],
 		PST_UFA() =>
-		[    [PST_UFA, re_patch_ufa, PST_UH, sub() {
+		[   [re_patch_ufa, PST_UH, sub() {
 			$current_fname = $m->text(1);
 			$current_ftype = get_filetype($line, $current_fname);
 			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
@@ -6602,7 +6602,7 @@ sub checkfile_patch($) {
 			$hunks = 0;
 		}]],
 		PST_UH() =>
-		[   [PST_UH, re_patch_uh, PST_UL, sub() {
+		[   [re_patch_uh, PST_UL, sub() {
 			$dellines = ($m->has(1) ? $m->text(2) : 1);
 			$addlines = ($m->has(3) ? $m->text(4) : 1);
 			$check_text->($line->text);
@@ -6615,22 +6615,22 @@ sub checkfile_patch($) {
 			$context_scanning_leading = (($m->has(1) && $m->text(1) ne "1") ? true : undef);
 			$leading_context_lines = 0;
 			$trailing_context_lines = 0;
-		}], [PST_UH, undef, PST_TEXT, sub() {
+		}], [undef, PST_TEXT, sub() {
 			($hunks != 0) || $line->log_warning("No hunks for file ${current_fname}.");
 		}]],
 		PST_UL() =>
-		[   [PST_UL, re_patch_uld, PST_UL, sub() {
+		[   [re_patch_uld, PST_UL, sub() {
 			$check_hunk_line->(1, 0, PST_UH);
-		}], [PST_UL, re_patch_ula, PST_UL, sub() {
+		}], [re_patch_ula, PST_UL, sub() {
 			$check_hunk_line->(0, 1, PST_UH);
-		}], [PST_UL, re_patch_ulc, PST_UL, sub() {
+		}], [re_patch_ulc, PST_UL, sub() {
 			$check_hunk_line->(1, 1, PST_UH);
-		}], [PST_UL, re_patch_ulnonl, PST_UL, sub() {
+		}], [re_patch_ulnonl, PST_UL, sub() {
 			#
-		}], [PST_UL, re_patch_empty, PST_UL, sub() {
+		}], [re_patch_empty, PST_UL, sub() {
 			$opt_warn_space and $line->log_note("Leading white-space missing in hunk.");
 			$check_hunk_line->(1, 1, PST_UH);
-		}], [PST_UL, undef, PST_UH, sub() {
+		}], [undef, PST_UH, sub() {
 			if ($dellines != 0 || $addlines != 0) {
 				$line->log_warning("Unexpected end of hunk (-${dellines},+${addlines} expected).");
 			}
@@ -6665,29 +6665,27 @@ sub checkfile_patch($) {
 
 		my $found = false;
 		foreach my $t (@{$transitions->{$state}}) {
-			if ($state == $t->[0]) {
-				if (!defined($t->[1])) {
+				if (!defined($t->[0])) {
 					$m = undef;
-				} elsif ($text =~ $t->[1]) {
-					$opt_debug_patches and $line->log_debug($t->[1]);
+				} elsif ($text =~ $t->[0]) {
+					$opt_debug_patches and $line->log_debug($t->[0]);
 					$m = PkgLint::SimpleMatch->new($text, \@-, \@+);
 				} else {
 					next;
 				}
 				$redostate = undef;
-				$nextstate = $t->[2];
-				$t->[3]->();
+				$nextstate = $t->[1];
+				$t->[2]->();
 				if (defined($redostate)) {
 					$state = $redostate;
 				} else {
 					$state = $nextstate;
-					if (defined($t->[1])) {
+					if (defined($t->[0])) {
 						$lineno++;
 					}
 				}
 				$found = true;
 				last;
-			}
 		}
 
 		if (!$found) {
@@ -6702,13 +6700,13 @@ sub checkfile_patch($) {
 
 		my $found = false;
 		foreach my $t (@{$transitions->{$state}}) {
-			if ($state == $t->[0] && !defined($t->[1])) {
+			if (!defined($t->[0])) {
 				my $newstate;
 
 				$m = undef;
 				$redostate = undef;
-				$nextstate = $t->[2];
-				$t->[3]->();
+				$nextstate = $t->[1];
+				$t->[2]->();
 				$newstate = (defined($redostate)) ? $redostate : $nextstate;
 				if ($newstate == $state) {
 					log_fatal($fname, "EOF", "Internal error in the patch transition table.");
