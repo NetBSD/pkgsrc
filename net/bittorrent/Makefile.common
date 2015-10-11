@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2010/01/30 13:31:59 tron Exp $
+# $NetBSD: Makefile.common,v 1.20 2015/10/11 10:56:43 tron Exp $
 #
 # used by net/bittorrent/Makefile
 # used by net/bittorrent-gui/Makefile
@@ -7,7 +7,7 @@ DISTNAME=	BitTorrent-4.4.0
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}/dl/
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bittorrent.com/
 COMMENT=	File sharing tool
 
