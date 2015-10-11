@@ -1,4 +1,7 @@
-$NetBSD: patch-src_xmlrpcpp_XmlRpcBase64.h,v 1.1 2015/04/27 23:51:52 joerg Exp $
+$NetBSD: patch-src_xmlrpcpp_XmlRpcBase64.h,v 1.2 2015/10/11 03:59:56 mef Exp $
+
+date: 2015-04-28 08:51:52 +0900;  author: joerg;  state: Exp;  commitid: 2iTQbBPEdUwBShjy;
+Deal with C++11 user defined string literals. Add missing includes.
 
 --- src/xmlrpcpp/XmlRpcBase64.h.orig	2015-04-27 23:29:49.000000000 +0000
 +++ src/xmlrpcpp/XmlRpcBase64.h

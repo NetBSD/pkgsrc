@@ -1,4 +1,7 @@
-$NetBSD: patch-src_fsq_fsq.cxx,v 1.1 2015/08/10 19:26:43 joerg Exp $
+$NetBSD: patch-src_fsq_fsq.cxx,v 1.2 2015/10/11 03:59:56 mef Exp $
+
+date: 2015-08-11 04:26:43 +0900;  author: joerg;  state: Exp;  commitid: PzvH77JwGWkn2Lwy;
+std::complex::imag() and std::complex::real() are not lvalues.
 
 --- src/fsq/fsq.cxx.orig	2015-07-21 14:54:32.000000000 +0000
 +++ src/fsq/fsq.cxx

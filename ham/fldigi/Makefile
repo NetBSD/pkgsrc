@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.57 2015/07/23 12:11:29 mef Exp $
+# $NetBSD: Makefile,v 1.58 2015/10/11 03:59:56 mef Exp $
 
-DISTNAME=	fldigi-3.22.13
+DISTNAME=	fldigi-3.23.03
 CATEGORIES=	ham
-MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
-LICENSE=	gnu-gpl-v3
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fldigi/}
 
 MAINTAINER=	makoto@ki.nu
-HOMEPAGE=	http://www.w1hkj.com/Fldigi.html
-#HOMEPAGE=	http://lists.berlios.de/mailman/listinfo/fldigi-devel
+HOMEPAGE=	http://www.w1hkj.com/
 COMMENT=	Digital radio modem
+LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
