@@ -1,7 +1,7 @@
-package PkgLint::Logging;
-#==========================================================================
-# This package provides subroutines for printing messages to the user in a
-# common format. The subroutines all have the parameters C<$fname>,
+# $NetBSD: Logging.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
+#
+# Subroutines for printing messages to the user in a common format.
+# The subroutines all have the parameters C<$fname>,
 # C<$lineno> and C<$message>. In case there's no appropriate filename for
 # the message, NO_FILE may be passed, likewise for C<$lineno> and
 # NO_LINES. Before printing, the filename is normalized, that is,
@@ -13,10 +13,12 @@ package PkgLint::Logging;
 #   log_error(NO_FILE, NO_LINES, "Invalid command line.");
 #   log_warning($fname, NO_LINES, "Not found.");
 #   log_debug($fname, $lineno, sprintf("invalid character (0x%02x).", $c));
-#==========================================================================
+#
+package PkgLint::Logging;
 
 use strict;
 use warnings;
+
 BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
@@ -130,7 +132,3 @@ sub set_explain()		{ $explain_flag = true; }
 sub set_gcc_output_format()	{ $gcc_output_format = true; }
 sub get_show_source_flag()	{ return $show_source_flag; }
 sub set_show_source_flag()	{ $show_source_flag = true; }
-
-#== End of PkgLint::Logging ===============================================
-
-1;

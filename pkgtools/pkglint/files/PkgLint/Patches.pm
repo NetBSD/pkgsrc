@@ -1,7 +1,9 @@
-# $NetBSD: Patches.pm,v 1.1 2015/10/11 19:20:17 rillig Exp $
+# $NetBSD: Patches.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
 #
 # Everything concerning checks for patch files.
 #
+
+use strict;
 
 # Guess the type of file based on the filename. This is used to select
 # the proper subroutine for detecting absolute pathnames.

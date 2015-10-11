@@ -1,9 +1,10 @@
+# The various contexts in which make(1) variables can appear in pkgsrc.
+# Further details can be found in the chapter ``The pkglint type system''
+# of the pkglint book.
+#
 package PkgLint::VarUseContext;
-#==========================================================================
-# This class represents the various contexts in which make(1) variables can
-# appear in pkgsrc. Further details can be found in the chapter ``The
-# pkglint type system'' of the pkglint book.
-#==========================================================================
+
+use strict;
 
 BEGIN {
 	import PkgLint::Util qw(
@@ -63,7 +64,3 @@ sub to_string($) {
 	    ["none", "plain", "squot", "dquot", "backt", "for"]->[$self->shellword],
 	    ["unknown", "full", "word", "word-part"]->[$self->extent]);
 }
-
-#== End of PkgLint::VarUseContext =========================================
-
-1;
