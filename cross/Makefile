@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2014/12/12 13:30:07 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2015/10/11 01:11:06 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -43,6 +43,7 @@ SUBDIR+=	nios2-binutils
 SUBDIR+=	nios2-gcc
 SUBDIR+=	nios2-gcc3
 SUBDIR+=	nios2-gcc41
+SUBDIR+=	objconv
 SUBDIR+=	uisp
 
 .include "../mk/misc/category.mk"
