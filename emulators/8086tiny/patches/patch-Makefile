@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2015/10/11 00:52:23 ryoon Exp $
+
+* Pass LDFLAGS for NetBSD's libcompat for ftime(3).
+
+--- Makefile.orig	2014-03-18 04:39:36.000000000 +0000
++++ Makefile
+@@ -13,7 +13,7 @@ OPTS_NOGFX=-DNO_GRAPHICS
+ OPTS_SLOWCPU=-DGRAPHICS_UPDATE_DELAY=25000
+ 
+ 8086tiny: 8086tiny.c
+-	${CC} 8086tiny.c ${OPTS_SDL} ${OPTS_ALL} -o 8086tiny
++	${CC} 8086tiny.c ${OPTS_SDL} ${OPTS_ALL} -o 8086tiny ${LDFLAGS}
+ 	strip 8086tiny
+ 
+ 8086tiny_slowcpu: 8086tiny.c
