@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/11 00:52:23 ryoon Exp $
+bin/8086tiny
+bin/run-8086tiny-freedos.sh
+share/8086tiny/README
+share/8086tiny/bios
+share/8086tiny/freedos.img
