@@ -1,4 +1,4 @@
-# $NetBSD: Line.pm,v 1.4 2015/10/11 21:06:20 rillig Exp $
+# $NetBSD: Line.pm,v 1.5 2015/10/11 21:23:34 rillig Exp $
 #
 # When files are read in by pkglint, they are interpreted in terms of
 # lines. For Makefiles, line continuations are handled properly, allowing
@@ -23,6 +23,7 @@
 package PkgLint::Line;
 
 use strict;
+use warnings;
 
 BEGIN {
 	import PkgLint::Util qw(
