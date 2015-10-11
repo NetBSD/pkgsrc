@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/10/10 02:03:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/10/11 00:19:33 ryoon Exp $
 
 DISTNAME=	redmine-3.1.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -214,10 +214,10 @@ post-install: unicorn-post-install
 		${DESTDIR}/${EGDIR}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/config/additional_environment.rb.example \
 		${DESTDIR}/${EGDIR}
-	find ${DESTDIR} -type f -print0 | xargs -0 chmod g+r,g-w,-x
-	find ${DESTDIR} -type d -print0 | xargs -0 chmod g-w
-	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/redmine_*${RUBY_SUFFIX}.sh
-	${CHMOD} +x ${DESTDIR}${PREFIX}/${RM_DIR}/gems/bin/*
+	find ${DESTDIR}${PREFIX}/share/${RUBY_NAME}-redmine -type f -print0 \
+		| xargs -0 chmod g+r,g-w,-x
+	find ${DESTDIR}${PREFIX}/share/${RUBY_NAME}-redmine -type d -print0 \
+		| xargs -0 chmod g-w
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
