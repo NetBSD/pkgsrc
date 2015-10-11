@@ -1,0 +1,8 @@
+#! @SH@
+# $NetBSD: run-8086tiny-freedos.sh.in,v 1.1 2015/10/11 00:52:23 ryoon Exp $
+clear
+stty cbreak raw -echo min 0
+@PREFIX@/bin/8086tiny \
+	./bios \
+	./freedos.img 
+stty cooked echo
