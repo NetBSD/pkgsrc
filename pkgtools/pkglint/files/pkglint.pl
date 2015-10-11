@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.881 2015/10/11 08:15:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.882 2015/10/11 12:31:43 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -31,7 +31,7 @@
 # recognized as subroutines but as file handles.
 #==========================================================================
 
-use strict;
+use v5.12;
 use warnings;
 
 use PkgLint::Util;
@@ -514,12 +514,9 @@ sub parse_command_line() {
 # reasons like backwards compatibility and other developer's
 # expectations that make changes to most of the following variables
 # highly unlikely.
-my $get_regex_plurals_value = undef;
 sub get_regex_plurals() {
-
-	if (defined($get_regex_plurals_value)) {
-		return $get_regex_plurals_value;
-	}
+	state $result = undef;
+	return $result if defined($result);
 
 	my @plurals_ok = qw(
 		.*S
@@ -585,8 +582,8 @@ sub get_regex_plurals() {
 		@plurals_reluctantly_accepted
 	);
 
-	$get_regex_plurals_value = qr"^(?:${plurals})$";
-	return $get_regex_plurals_value;
+	$result = qr"^(?:${plurals})$";
+	return $result;
 }
 
 #
@@ -643,11 +640,9 @@ sub parse_acls($$) {
 	return $acls;
 }
 
-my $get_vartypes_basictypes_result = undef;
 sub get_vartypes_basictypes() {
-	if (defined($get_vartypes_basictypes_result)) {
-		return $get_vartypes_basictypes_result;
-	}
+	state $result = undef;
+	return $result if defined($result);
 
 	my $lines = load_file($program);
 	my $types = {};
@@ -658,16 +653,14 @@ sub get_vartypes_basictypes() {
 			$types->{$1} = 1;
 		}
 	}
-	return ($get_vartypes_basictypes_result = $types);
+	return ($result = $types);
 }
 
-my $get_vartypes_map_result = undef;
 sub get_vartypes_map() {
-	my ($fname, $vartypes);
+	state $result = undef;
+	return $result if defined($result);
 
-	if (defined($get_vartypes_map_result)) {
-		return $get_vartypes_map_result;
-	}
+	my ($fname, $vartypes);
 
 	use constant re_acl_def => qr"^
 		acl \s+
@@ -751,16 +744,14 @@ if (false) {
 	}
 }
 
-	return ($get_vartypes_map_result = $vartypes);
+	return ($result = $vartypes);
 }
 
-my $get_deprecated_map_result = undef;
 sub get_deprecated_map() {
-	my ($fname, $lines, $vars);
+	state $result = undef;
+	return $result if defined($result);
 
-	if (defined($get_deprecated_map_result)) {
-		return $get_deprecated_map_result;
-	}
+	my ($fname, $lines, $vars);
 
 	$fname = conf_datadir."/deprecated.map";
 	if (!($lines = load_file($fname))) {
@@ -779,7 +770,7 @@ sub get_deprecated_map() {
 			$line->log_fatal("Unknown line format.");
 		}
 	}
-	return ($get_deprecated_map_result = $vars);
+	return ($result = $vars);
 }
 
 my $load_dist_sites_url2name = undef;
@@ -852,12 +843,9 @@ sub get_dist_sites_names() {
 	return $load_dist_sites_names;
 }
 
-my $get_pkg_options_result = undef;
 sub get_pkg_options() {
-
-	if (defined($get_pkg_options_result)) {
-		return $get_pkg_options_result;
-	}
+	state $result = undef;
+	return $result if defined($result);
 
 	my ($fname) = ("${cwd_pkgsrcdir}/mk/defaults/options.description");
 	my ($lines, $options);
@@ -879,7 +867,7 @@ sub get_pkg_options() {
 		}
 	}
 
-	return ($get_pkg_options_result = $options);
+	return ($result = $options);
 }
 
 my $load_tool_names_system_build_defs = undef;		# XXX: misplaced, but works
@@ -1124,22 +1112,14 @@ sub load_doc_TODO_updates($) {
 	return $updates;
 }
 
-my $get_doc_TODO_updates_result = undef;
 sub get_doc_TODO_updates() {
-
-	if (!defined($get_doc_TODO_updates_result)) {
-		$get_doc_TODO_updates_result = load_doc_TODO_updates("${cwd_pkgsrcdir}/doc/TODO");
-	}
-	return $get_doc_TODO_updates_result;
+	state $result = load_doc_TODO_updates("${cwd_pkgsrcdir}/doc/TODO");
+	return $result;
 }
 
-my $get_wip_TODO_updates_result = undef;
 sub get_wip_TODO_updates() {
-
-	if (!defined($get_wip_TODO_updates_result)) {
-		$get_wip_TODO_updates_result = load_doc_TODO_updates("${cwd_pkgsrcdir}/wip/TODO");
-	}
-	return $get_wip_TODO_updates_result;
+	state $result = load_doc_TODO_updates("${cwd_pkgsrcdir}/wip/TODO");
+	return $result;
 }
 
 sub load_doc_CHANGES($) {
@@ -1242,13 +1222,9 @@ sub load_userdefined_variables() {
 	return $vars;
 }
 
-my $get_userdefined_variables_result = undef;
 sub get_userdefined_variables() {
-
-	if (!defined($get_userdefined_variables_result)) {
-		$get_userdefined_variables_result = load_userdefined_variables();
-	}
-	return $get_userdefined_variables_result;
+	state $result = load_userdefined_variables();
+	return $result;
 }
 
 sub match_all($$);	# needed by load_shared_dirs()
@@ -1758,11 +1734,10 @@ sub get_nbpart() {
 	return "nb$pkgrevision";
 }
 
-my $check_pkglint_version_done = false;
 sub check_pkglint_version() {
-
-	return if $check_pkglint_version_done;
-	$check_pkglint_version_done = true;
+	state $done = false;
+	return if $done;
+	$done = true;
 
 	my $lines = load_lines("${cwd_pkgsrcdir}/pkgtools/pkglint/Makefile", true);
 	return unless $lines;
