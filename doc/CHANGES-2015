@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4235 2015/10/11 10:44:31 tron Exp $
+$NetBSD: CHANGES-2015,v 1.4236 2015/10/11 11:25:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7281,6 +7281,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/umefont-ttf to 0.550 [ryoon 2015-10-10]
 	Added x11/xf86-input-ws version 1.3.0.20151010 [tnn 2015-10-10]
 	Removed x11/openbsd-input-ws successor x11/xf86-input-ws [tnn 2015-10-10]
+	Updated databases/postgresql94 to 9.4.5 [adam 2015-10-10]
+	Updated databases/postgresql93 to 9.3.10 [adam 2015-10-10]
+	Updated print/ghostscript-agpl to 9.18 [adam 2015-10-10]
 	Added emulators/8086tiny version 1.25 [ryoon 2015-10-11]
 	Added cross/objconv version 2.39 [ryoon 2015-10-11]
 	Added cross/arm-none-eabi-binutils version 2.25.1 [ryoon 2015-10-11]
@@ -7291,3 +7294,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ucblogo to 6.0 [ryoon 2015-10-11]
 	Updated net/libtorrent to 0.13.6 [tron 2015-10-11]
 	Updated net/rtorrent to 0.9.6 [tron 2015-10-11]
+	Updated converters/help2man to 1.47.2 [adam 2015-10-11]
+	Updated databases/postgresql92 to 9.2.14 [adam 2015-10-10]
+	Updated databases/postgresql91 to 9.1.19 [adam 2015-10-10]
