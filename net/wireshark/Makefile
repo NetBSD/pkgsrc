@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2015/09/12 19:03:59 tnn Exp $
+# $NetBSD: Makefile,v 1.138 2015/10/11 14:20:57 tnn Exp $
 
 DISTNAME=	wireshark-1.12.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -61,6 +62,13 @@ post-install: ${POST_INSTALL_TARGETS}
 
 # wireshark no longer builds with NetBSD 3.x provided zlib
 BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
+
+# wireshark uses gdk_pixbuf_new_from_inline which is deprecated, but asks
+# to hide deprecated prototypes. This leads to pointer truncation.
+# gui_utils.c:514:12: warning: incompatible integer to pointer conversion
+# assigning to 'GdkPixbuf *' (aka 'struct _GdkPixbuf *') from 'int'
+# [-Wint-conversion]
+BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
