@@ -1,10 +1,13 @@
-package PkgLint::SubstContext;
-#==========================================================================
+# $NetBSD: SubstContext.pm,v 1.2 2015/10/11 21:06:20 rillig Exp $
+#
 # This class records the state of a block of variable assignments that make
 # up a SUBST class. As these variable assignments are not easy to get right
 # unless you do it every day, and the possibility of typos is high, pkglint
 # provides additional checks for them.
-#==========================================================================
+#
+package PkgLint::SubstContext;
+
+use strict;
 
 BEGIN {
 	import PkgLint::Util qw(
@@ -192,6 +195,3 @@ sub to_string($) {
 	    scalar(@{$self->subst_sed}),
 	    (defined($self->subst_id) ? $self->subst_id : "(undef)"));
 }
-#== End of PkgLint::SubstContext ==========================================
-
-1;
