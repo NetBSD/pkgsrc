@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2015/10/12 00:21:48 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.21 2015/10/12 07:24:50 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -38,9 +38,6 @@ BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 PYTHON_VERSIONS_INCOMPATIBLE=  33 # py-gyp
 
 USE_LANGUAGES=	c c++
-# nullptr requires -std=c++11, and -std=c++11 requires gcc 4.6 or later
-GCC_REQD+=	4.6
-CXXFLAGS+=	-std=c++03
 
 USE_TOOLS+=	gmake pkg-config
 
