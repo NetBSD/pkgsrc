@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4241 2015/10/12 05:48:00 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4242 2015/10/12 05:50:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7307,3 +7307,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/ibus-mozc to 2.17.2116.102 [ryoon 2015-10-12]
 	Updated inputmethod/uim-mozc to 2.17.2116.102 [ryoon 2015-10-12]
 	Updated www/contao35 to 3.5.4 [taca 2015-10-12]
+	Updated time/ruby-tzinfo to 0.3.45 [taca 2015-10-12]
