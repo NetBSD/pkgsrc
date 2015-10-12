@@ -1,9 +1,9 @@
-# $NetBSD: checksum.mk,v 1.20 2013/11/16 15:29:39 jakllsch Exp $
+# $NetBSD: checksum.mk,v 1.21 2015/10/12 18:23:48 agc Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
 
-_DIGEST_ALGORITHMS?=		SHA1 RMD160
+_DIGEST_ALGORITHMS?=		SHA1 RMD160 SHA512
 _PATCH_DIGEST_ALGORITHMS?=	SHA1
 
 # These variables are set by pkgsrc/mk/fetch/bsd.fetch-vars.mk.
