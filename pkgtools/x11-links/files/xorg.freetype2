@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.20 2015/07/31 08:51:31 jperkin Exp $
+# $NetBSD: xorg.freetype2,v 1.21 2015/10/12 18:47:21 sevan Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -120,6 +120,8 @@ lib/libfreetype.so.18.1
 lib/libfreetype.so.18.3
 lib/libfreetype.so.20.0
 lib/libfreetype.so.22.0
+lib/libfreetype.so.23.0
+lib/libfreetype.so.24.0
 lib/libfreetype.so.6
 lib/libfreetype.so.6.3.17
 lib/libfreetype.so.7
