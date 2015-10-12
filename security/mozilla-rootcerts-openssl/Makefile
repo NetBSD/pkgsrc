@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/09/12 13:03:54 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/10/12 08:33:38 tnn Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-1
 PKGREVISION=	1
@@ -37,13 +37,13 @@ PLACE=			/etc
 SET_PREFIX=		yes
 PLIST_SUBST+=		MYETCDIR=etc
 CHECK_FILES_SUPPORTED=	no
-NOT_FOR_UNPRIVILEGED=	yes
-
 .else
 PLACE=			${MY_PKG_SYSCONFDIR}
 SET_PREFIX=		yes
 PLIST_SUBST+=		MYETCDIR=${MY_PKG_SYSCONFDIR:S/^${PREFIX}//}
 .endif
+
+NOT_FOR_UNPRIVILEGED=	yes
 
 OPENSSLDIR=		${PLACE}/openssl/certs
 SSLDIR=			/etc/ssl/certs
