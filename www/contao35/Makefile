@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/26 17:18:35 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/12 05:47:19 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -65,7 +65,7 @@ REPLACE_FILES.php=	system/bin/automator system/bin/filesync \
     vendor/bin/pscss vendor/leafo/scssphp/bin/pscss \
     vendor/oyejorge/less.php/bin/lessc \
     vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php \
-    vendor/tecnick.com/tcpdf/tools/tcpdf_addfont.php
+    vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/contao.conf
