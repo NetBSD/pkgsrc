@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2014/06/20 18:48:37 fhajny Exp $
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.so
+@comment $NetBSD: PLIST,v 1.10 2015/10/12 14:53:17 jperkin Exp $
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.${SOEXT}
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/nginx.pm
 man/man8/nginx.8
 sbin/nginx
