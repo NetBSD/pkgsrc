@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2015/06/12 10:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/10/12 16:01:18 adam Exp $
 
-DISTNAME=	enblend-enfuse-4.1.3
-PKGREVISION=	7
+DISTNAME=	enblend-enfuse-4.1.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 
@@ -30,7 +29,6 @@ LIBS+=			-lboost_system
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
@@ -38,4 +36,5 @@ LIBS+=			-lboost_system
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/vigra/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
