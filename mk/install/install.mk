@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.66 2013/01/05 07:32:49 sbd Exp $
+# $NetBSD: install.mk,v 1.67 2015/10/12 09:08:22 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -370,7 +370,7 @@ install-strip-debug: plist
 _PLIST_REGEXP.info=	\
 	^([^\/]*\/)*${PKGINFODIR}/[^/]*(\.info)?(-[0-9]+)?(\.gz)?$$
 _PLIST_REGEXP.man=	\
-	^([^/]*/)+(man[1-9ln]/[^/]*\.[1-9ln]|cat[1-9ln]/[^/]*\.[0-9])(\.gz)?$$
+	^([^/]*/)+(man[1-9ln](am|f)?/[^/]*\.[1-9ln](am|f)?|cat[1-9ln](am|f)?/[^/]*\.[0-9])(\.gz)?$$
 
 _DOC_COMPRESS=								\
 	${PKGSRC_SETENV} PATH=${PATH:Q}					\
