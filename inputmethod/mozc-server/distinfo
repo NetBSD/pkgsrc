@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/07/31 13:07:05 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2015/10/12 00:21:48 ryoon Exp $
 
-SHA1 (mozc-2.17.2106.102-3648b9bf06d5d9b36bed2425640bfd18ae05b588.tar.gz) = cc9c59329fee015a4149686f103a5554a0e085ff
-RMD160 (mozc-2.17.2106.102-3648b9bf06d5d9b36bed2425640bfd18ae05b588.tar.gz) = b40e1c9b62ef6ee4d953add8ab3beed1ee2c4056
-Size (mozc-2.17.2106.102-3648b9bf06d5d9b36bed2425640bfd18ae05b588.tar.gz) = 59324198 bytes
+SHA1 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = bb35db84e85bbcf413c36dc2a0d05d8af3f483e2
+RMD160 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = d24b1e1caf00a919620bf6da0855d137a41cb82e
+Size (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = 59322409 bytes
 SHA1 (uim-mozc-318.0562676.tar.xz) = 5cd298aaac5afd7ff8882453e3e8fa698c2c5aa1
 RMD160 (uim-mozc-318.0562676.tar.xz) = 7b93efa2ed2710d5098b1b6b81c0fd195645857b
 Size (uim-mozc-318.0562676.tar.xz) = 24316 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2015/07/31 13:07:05 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.20 2015/10/12 00:21:48 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,11 +7,11 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-2.17.2106.102
+DISTNAME=	mozc-2.17.2116.102
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	mozc
-GITHUB_TAG=	3648b9bf06d5d9b36bed2425640bfd18ae05b588
+GITHUB_TAG=	fd0f5b347d35fe287f4cc9be49f650c87f82ba03
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/google/mozc/
