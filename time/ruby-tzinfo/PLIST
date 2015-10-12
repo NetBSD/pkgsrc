@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/10/25 03:34:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2015/10/12 05:50:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -123,6 +123,8 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Edmonton.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Eirunepe.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/El_Salvador.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Ensenada.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fort_Nelson.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fort_Nelson.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fort_Wayne.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fortaleza.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Glace_Bay.rb
