@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4252 2015/10/12 16:49:27 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4253 2015/10/12 18:25:18 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7324,3 +7324,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-test-unit to 3.1.5 [taca 2015-10-12]
 	Updated graphics/enblend-enfuse to 4.1.4 [adam 2015-10-12]
 	Added biology/cdhit version 4.6.4 [leot 2015-10-12]
+	mk/bsd.pkg.mk: add SHA512 digests for distfiles [agc 2015-10-12]
