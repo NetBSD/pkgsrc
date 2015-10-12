@@ -1,4 +1,4 @@
-# $NetBSD: xfree.MesaLib,v 1.9 2014/01/23 21:05:18 ryoon Exp $
+# $NetBSD: xfree.MesaLib,v 1.10 2015/10/12 18:47:21 sevan Exp $
 #
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
@@ -18,6 +18,11 @@ include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
+include/EGL/egl.h
+include/EGL/eglext.h
+include/EGL/eglmesaext.h
+include/EGL/eglplatform.h
+include/KHR/khrplatform.h
 lib/libGL.a
 lib/libGL.so
 lib/libGL.so.1
@@ -43,6 +48,10 @@ lib/libGLw.so.5.1
 lib/libGLw.dylib
 lib/libGLw.1.dylib
 lib/libGLw.1.0.dylib
+lib/libEGL.a
+lib/libEGL.so
+lib/libEGL.so.0
+lib/libEGL.so.0.0
 lib/libOSMesa.a
 lib/libOSMesa.so
 lib/libOSMesa.so.4
@@ -58,3 +67,4 @@ lib/libOSMesa.7.8.dylib
 lib/libOSMesa.7.dylib
 lib/pkgconfig/gl.pc
 lib/pkgconfig/glw.pc
+lib/pkgconfig/egl.pc
