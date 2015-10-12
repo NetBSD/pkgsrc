@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/10/08 12:46:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2015/10/12 10:28:56 fhajny Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -54,6 +54,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/platform/redhat/rsyslog.conf			\
 		${DESTDIR}${EGDIR}/rsyslog.conf
 
-BUILDLINK_ABI_DEPENDS.liblognorm+=	liblognorm>=1.0.2
+BUILDLINK_API_DEPENDS.liblognorm+=	liblognorm>=1.1.2
 .include "../../sysutils/liblognorm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
