@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/09/13 12:27:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/10/12 05:55:27 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -280,7 +280,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/map.h
 ${GEM_LIBDIR}/vendor/libgit2/src/merge.c
 ${GEM_LIBDIR}/vendor/libgit2/src/merge.h
 ${GEM_LIBDIR}/vendor/libgit2/src/merge_file.c
-${GEM_LIBDIR}/vendor/libgit2/src/merge_file.h
 ${GEM_LIBDIR}/vendor/libgit2/src/message.c
 ${GEM_LIBDIR}/vendor/libgit2/src/message.h
 ${GEM_LIBDIR}/vendor/libgit2/src/mwindow.c
@@ -427,10 +426,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/win32/utf-conv.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/version.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.h
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.c
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.h
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.c
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.h
 ${GEM_LIBDIR}/vendor/libgit2/src/xdiff/xdiff.h
