@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/04/08 19:11:09 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/10/12 10:29:48 ryoon Exp $
 
-SHA1 (matcha-sns-1.3.6.zip) = 1356ad18f05550a53ab2c3b7bcfad85058a7e69c
-RMD160 (matcha-sns-1.3.6.zip) = 9016a09244514ebe9966802543984bc09c682063
-Size (matcha-sns-1.3.6.zip) = 2853920 bytes
+SHA1 (matcha-sns-1.3.7.zip) = 0a8499c7b87abfbbca473e28658fd62a07fa5929
+RMD160 (matcha-sns-1.3.7.zip) = 9cfb4cc89128010600f104284e67ddb6a5afe0ef
+Size (matcha-sns-1.3.7.zip) = 2855192 bytes
