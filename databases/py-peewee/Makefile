@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/10/08 12:59:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2015/10/12 10:00:57 fhajny Exp $
 
 DISTNAME=	peewee-2.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,7 @@ MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 REPLACE_BASH+=		playhouse/berkeley_build.sh
 REPLACE_PYTHON+=	pwiz.py
 
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
