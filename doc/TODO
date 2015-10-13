@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14973 2015/10/13 18:15:23 shattered Exp $
+$NetBSD: TODO,v 1.14974 2015/10/13 21:50:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -364,6 +364,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
+	o MesaLib-11.0.3
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -399,6 +400,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
 	o YoSucker-81
+	o abcde-2.7.1
 	o abcl-1.3.2
 	o abcm2ps-8.8.3
 	o abcmidi-20150316
@@ -503,8 +505,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cacti-0.8.8f
 	o cacti-spine-0.8.8f
+	o cairomm-1.12.0
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.40.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -561,6 +565,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.6
 	o cue-20150720
+	o curl-7.45.0
 	o cvm-0.97
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsgraph-1.7.0
@@ -718,7 +723,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fuse-archivemount-0.8.5
 	o fuse-encfs-1.5.2
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
-	o fuse-ntfs-3g-32015.3.14
+	o fuse-ntfs-3g-2015.3.14
 	o fuse-unionfs-0.25
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
@@ -815,9 +820,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnu-pw-mgr-1.6
+	o gnucash-2.6.9
 	o gnuchess-6.2.1
 	o gnuchess-book-1.02
-	o gnupg21-2.1.8
+	o gnupg21-2.1.9
 	o gnuradio-3.7.7.1
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
@@ -1111,7 +1118,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcollective-2.3.2
 	o mcsim-5.5.0
 	o mednafen-0.9.38.2
-	o meld-3.14.1
+	o meld-3.15.0
 	o memcached-1.4.24
 	o menhir-20141215
 	o mergeant-0.67
@@ -1499,7 +1506,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-creole-1.1.1
 	o py-cryptography-1.0.2
 	o py-cups-1.9.73
-	o py-cython-0.23.3
+	o py-cython-0.23.4
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
 	o py-datapkg-0.9
@@ -1530,6 +1537,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-notify-0.3.1
 	o py-oauthlib-1.0.1
 	o py-omniORBpy-3.7
+	o py-pbr-1.8.1
 	o py-pdf-parser-0.6.3
 	o py-pendrell-0.3.7
 	o py-proteus-3.6.1
@@ -1539,7 +1547,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
+	o py-setuptools-18.4
 	o py-simpletal-5.1
+	o py-six-1.10.0
 	o py-smb-1.1.16
 	o py-spf-2.0.11
 	o py-sphinx-theme-cloud-1.6
@@ -1549,8 +1559,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-stdnum-1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
-	o py-test-2.8.1
+	o py-test-2.8.2
 	o py-tlslite-0.4.6
+	o py-tortoisehg-3.5.2
 	o py-uliweb-0.4.1
 	o py-unittest2-1.1.0
 	o py-uwsgi-2.0.11.1
@@ -1837,7 +1848,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151003
+	o x264-devel-20151010
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
@@ -1846,7 +1857,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcircuit-3.9.38
 	o xcoral-3.14
 	o xdaliclock-2.43
-	o xdg-utils-1.1.0rc3
+	o xdg-utils-1.1.1
 	o xemacs-current-21.5.31
 	o xentools44-4.4.0
 	o xerces-j-2.4.0 [pkg/21725]
