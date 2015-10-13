@@ -1,0 +1,34 @@
+$NetBSD: patch-src_contrib_build-contrib.xml,v 1.1 2015/10/13 15:03:37 fhajny Exp $
+
+Don't look for a specific Ivy version.
+Add Ivy resolver tasks to let us forbid fetch on demand.
+
+--- src/contrib/build-contrib.xml.orig	2014-02-20 10:14:09.000000000 +0000
++++ src/contrib/build-contrib.xml
+@@ -41,7 +41,7 @@
+ 
+   <property name="build.encoding" value="ISO-8859-1"/>
+ 
+-  <property name="ivy.version" value="2.2.0"/>
++  <property name="ivy.version" value="0.0.0"/>
+   <property name="ivy.url"
+             value="http://repo2.maven.org/maven2/org/apache/ivy/ivy" />
+   <property name="ivy.home" value="${user.home}/.ant" />
+@@ -233,6 +233,8 @@
+   </target>
+ 
+   <target name="ivy-retrieve" depends="init,ivy-init">
++    <ivy:resolve settingsRef="${ant.project.name}" conf="default"
++                 useCacheOnly="true"/>
+     <ivy:retrieve settingsRef="${ant.project.name}" type="jar" conf="default"
+                   pattern="${ivy.lib}/[artifact]-[revision].[ext]"/>
+     <ivy:retrieve settingsRef="${ant.project.name}" type="bundle" conf="default"
+@@ -240,6 +242,8 @@
+   </target>
+ 
+   <target name="ivy-retrieve-test" depends="init,ivy-init">
++    <ivy:resolve settingsRef="${ant.project.name}" conf="test"
++                 useCacheOnly="true"/>
+     <ivy:retrieve settingsRef="${ant.project.name}" type="jar" conf="test"
+                   pattern="${ivy.test.lib}/[artifact]-[revision].[ext]"/>
+   </target>

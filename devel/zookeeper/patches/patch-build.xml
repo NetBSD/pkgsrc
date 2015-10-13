@@ -1,0 +1,62 @@
+$NetBSD: patch-build.xml,v 1.1 2015/10/13 15:03:37 fhajny Exp $
+
+Don't look for a specific Ivy version.
+Add Ivy resolver tasks to let us forbid fetch on demand.
+
+--- build.xml.orig	2014-02-20 10:14:08.000000000 +0000
++++ build.xml
+@@ -105,7 +105,7 @@ xmlns:maven="antlib:org.apache.maven.art
+     <property name="contrib.dir" value="${src.dir}/contrib"/>
+     <property name="recipes.dir" value="${src.dir}/recipes"/>
+ 
+-    <property name="ivy.version" value="2.2.0"/>
++    <property name="ivy.version" value="0.0.0"/>
+     <property name="ivy.url"
+               value="http://repo2.maven.org/maven2/org/apache/ivy/ivy" />
+     <property name="ivy.home" value="${user.home}/.ant" />
+@@ -360,33 +360,45 @@ xmlns:maven="antlib:org.apache.maven.art
+     </target>
+ 
+     <target name="ivy-retrieve" depends="init,ivy-init">
++      <ivy:resolve settingsRef="${ant.project.name}" conf="default"
++                    useCacheOnly="true"/>
+       <ivy:retrieve settingsRef="${ant.project.name}" conf="default"
+                     pattern="${ivy.lib}/[artifact]-[revision].[ext]"/>
+     </target>
+ 
+     <target name="ivy-retrieve-test" depends="init,ivy-init">
++      <ivy:resolve settingsRef="${ant.project.name}" conf="test"
++                    useCacheOnly="true"/>
+       <ivy:retrieve settingsRef="${ant.project.name}" conf="test"
+                     pattern="${ivy.test.lib}/[artifact]-[revision].[ext]"/>
+     </target>
+ 
+     <target name="ivy-retrieve-package" depends="init,ivy-init">
++      <ivy:resolve settingsRef="${ant.project.name}" conf="package"
++                    useCacheOnly="true"/>
+       <ivy:retrieve settingsRef="${ant.project.name}" conf="package"
+                     pattern="${ivy.package.lib}/[artifact]-[revision].[ext]"/>
+     </target>
+ 
+     <target name="ivy-retrieve-jdiff" depends="init,ivy-init">
+       <mkdir dir="${ivy.jdiff.lib}"/>
++      <ivy:resolve settingsRef="${ant.project.name}" conf="jdiff"
++                    useCacheOnly="true"/>
+       <ivy:retrieve settingsRef="${ant.project.name}" conf="jdiff"
+                     pattern="${ivy.jdiff.lib}/[artifact]-[revision].[ext]"/>
+     </target>
+ 
+     <target name="ivy-retrieve-releaseaudit" depends="init,ivy-init">
++      <ivy:resolve settingsRef="${ant.project.name}" conf="releaseaudit"
++                    useCacheOnly="true"/>
+       <ivy:retrieve settingsRef="${ant.project.name}" conf="releaseaudit"
+                     pattern="${ivy.lib}/[artifact]-[revision].[ext]"/>
+       <ivy:cachepath pathid="releaseaudit-classpath" conf="releaseaudit"/>
+     </target>
+ 
+     <target name="ivy-retrieve-mvn-ant-task" depends="init,ivy-init">
++      <ivy:resolve settingsRef="${ant.project.name}" conf="mvn-ant-task"
++                    useCacheOnly="true"/>
+       <ivy:retrieve settingsRef="${ant.project.name}" conf="mvn-ant-task"
+                     pattern="${ivy.lib}/[artifact]-[revision].[ext]"/>
+       <ivy:cachepath pathid="mvn-ant-task-classpath" conf="mvn-ant-task"/>
