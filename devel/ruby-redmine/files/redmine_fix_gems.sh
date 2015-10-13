@@ -2,12 +2,13 @@
 
 GEM_HOME=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems
 GEM_PATH=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems
+PATH=@PREFIX@/sbin:@PREFIX@/bin:${PATH}
 
-export GEM_HOME GEM_PATH
+export GEM_HOME GEM_PATH PATH
 
 cd @PREFIX@/share/@RUBY_PKGPREFIX@-redmine/app
 
-@GEM@ install nokogiri --version 1.6.6.2 -- --use-system-libraries --with-xml2-config=@PREFIX@/bin/xml2-config --with-xslt-config=@PREFIX@/bin/xslt-config
+@GEM@ pristine nokogiri --version 1.6.6.2 -- --use-system-libraries --with-xml2-config=@PREFIX@/bin/xml2-config --with-xslt-config=@PREFIX@/bin/xslt-config
 @GEM@ pristine json --version 1.8.3
 @GEM@ pristine kgio --version 2.10.0
 @GEM@ pristine mysql2 --version 0.3.20
