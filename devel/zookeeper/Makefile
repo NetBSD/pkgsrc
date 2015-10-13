@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2015/10/09 13:59:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/13 15:03:37 fhajny Exp $
 #
 
 .include "Makefile.common"
 
+PKGREVISION=		1
 COMMENT=		Highly reliable distributed coordination server
 
+DISTFILES=			${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
+SITES.${DISTNAME}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+
 BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
+BUILD_DEPENDS+=		apache-ivy>=2.2.0:../../devel/apache-ivy
 
 USE_JAVA=		yes
 USE_JAVA2=		yes
@@ -57,8 +62,14 @@ CONF_FILES_PERMS+=	${EGDIR}/zookeeper-env.sh ${PKG_SYSCONFDIR}/zookeeper-env.sh 
 
 FILES_SUBST+=		ZK_USER=${ZK_USER} ZK_GROUP=${ZK_GROUP}
 
+ANT_ARGS+=		-Duser.home=${FAKEHOMEDIR} -Divy.home=${WRKDIR}/ivy
+ANT_TARGET=		bin-package
+
+post-extract:
+	${LN} -s ${PREFIX}/lib/java/ant/ivy-*.jar ${WRKSRC}/src/java/lib/ivy-0.0.0.jar
+
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ant bin-package
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ant ${ANT_ARGS} ${ANT_TARGET}
 
 do-install:
 	${INSTALL_SCRIPT} ${BUILDDIR}/bin/zkCli.sh ${DESTDIR}${PREFIX}/bin
