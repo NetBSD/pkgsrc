@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/10/13 18:18:09 shattered Exp $
 
 DISTNAME=		ocp-0.1.21
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opencubicplayer/}
 EXTRACT_SUFX=		.tar.bz2
@@ -38,6 +38,7 @@ PLIST_VARS+=		sdl x11 desktop
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
