@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4253 2015/10/12 18:25:18 agc Exp $
+$NetBSD: CHANGES-2015,v 1.4254 2015/10/13 07:48:02 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7325,3 +7325,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/enblend-enfuse to 4.1.4 [adam 2015-10-12]
 	Added biology/cdhit version 4.6.4 [leot 2015-10-12]
 	mk/bsd.pkg.mk: add SHA512 digests for distfiles [agc 2015-10-12]
+	Updated lang/nodejs to 4.2.0 [fhajny 2015-10-13]
