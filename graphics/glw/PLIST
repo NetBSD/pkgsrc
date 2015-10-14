@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/14 21:35:28 wiz Exp $
+include/GL/GLwDrawA.h
+include/GL/GLwDrawAP.h
+include/GL/GLwMDrawA.h
+include/GL/GLwMDrawAP.h
+lib/libGLw.la
+lib/pkgconfig/glw.pc
