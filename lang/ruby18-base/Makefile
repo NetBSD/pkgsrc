@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/02/16 14:03:32 taca Exp $
+# $NetBSD: Makefile,v 1.84 2015/10/14 18:33:08 sevan Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+= --enable-shared \
 WRKSRC=		${RUBY_WRKSRC}
 
 #
-# Don't refrect pkgsrc's INSTALL macro since Ruby expect it could
+# Don't reference pkgsrc's INSTALL macro since Ruby expect it could
 # execute by unprivileged user.
 #
 CONFIGURE_ENV+=	INSTALL="${INSTALL} ${COPY}" \
