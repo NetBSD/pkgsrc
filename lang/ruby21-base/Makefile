@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/08/20 15:27:43 taca Exp $
+# $NetBSD: Makefile,v 1.16 2015/10/14 18:38:00 sevan Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${RUBY_LICENSE}
 RUBY_VERSION_SUPPORTED=	21
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		pax yacc
+USE_TOOLS+=		pax yacc pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared
@@ -23,11 +23,13 @@ WRKSRC=			${RUBY_WRKSRC}
 MAKE_DIRS=		${RUBY_SITEARCHLIB} ${RUBY_VENDORARCHLIB}
 
 #
-# Don't refrect pkgsrc's INSTALL macro since Ruby expect it could
+# Don't reference pkgsrc's INSTALL macro since Ruby expect it could
 # execute by unprivileged user.
 #
 CONFIGURE_ENV+=		INSTALL="${INSTALL} ${COPY}" \
 			INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
+
+CONFIGURE_ENV+= 	ac_cv_prog_PKG_CONFIG=""
 
 .include "../../mk/compiler.mk"
 
@@ -46,7 +48,6 @@ LIBS.SunOS+=	-lm
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	OBJCOPY=:
-CONFIGURE_ENV+=	ac_cv_prog_PKG_CONFIG=""
 .endif
 
 .if ${OPSYS} == "MirBSD"
