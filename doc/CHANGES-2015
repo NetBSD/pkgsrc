@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4257 2015/10/14 13:13:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4258 2015/10/14 14:38:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7330,3 +7330,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/ezstream to 0.6.0 [shattered 2015-10-13]
 	Updated chat/gloox to 1.0.13 [shattered 2015-10-13]
 	Updated net/openconnect to 7.06 [wiz 2015-10-14]
+	Updated fonts/Hack-ttf to 2.015 [leot 2015-10-14]
