@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/10/14 21:35:28 wiz Exp $
+
+SHA1 (glw-8.0.0.tar.bz2) = 08de9c63a2d0ec452fb80cca91cd1fa0d9550db4
+RMD160 (glw-8.0.0.tar.bz2) = f8d0c06d9c379dfafa656c72dffd6a20f652293a
+SHA512 (glw-8.0.0.tar.bz2) = 09e1352edb16a9a34b9031996c2a1545d69dc690d7eda10a1aad6a7ad9ef0576d0af8a1b7740dba47f9647b7c957c1d7a078b38747d2d2c28ea39314a0e53587
+Size (glw-8.0.0.tar.bz2) = 221136 bytes
