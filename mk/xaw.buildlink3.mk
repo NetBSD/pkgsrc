@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink3.mk,v 1.6 2013/01/15 16:21:34 morr Exp $
+# $NetBSD: xaw.buildlink3.mk,v 1.7 2015/10/14 20:17:27 wiz Exp $
 #
 # This file selects the X Athena Widgets (Xaw) implementation.
 #
@@ -22,7 +22,7 @@ BUILD_DEFS+=		XAW_TYPE
 .  include "../../x11/Xaw-Xpm/buildlink3.mk"
 BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.Xaw-Xpm}
 .elif ${XAW_TYPE} == "3d"
-.  include "../../x11/Xaw3d/buildlink3.mk"
+.  include "../../x11/libXaw3d/buildlink3.mk"
 BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.Xaw3d}
 .elif ${XAW_TYPE} == "neXtaw"
 .  include "../../x11/neXtaw/buildlink3.mk"
