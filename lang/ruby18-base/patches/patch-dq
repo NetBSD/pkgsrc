@@ -1,16 +1,17 @@
-$NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
+$NetBSD: patch-dq,v 1.3 2015/10/14 18:33:08 sevan Exp $
 
 * r18172: suppress warnings.
 * r20494: (ossl_ssl_read_nonblock): OpenSSL::SSL::SSLSocket should implement
-	  read_nonblock. a patch from Aaron Patterson in [ruby-core:20277].
-	  fix: #814 [ruby-core:20241]
+          read_nonblock. a patch from Aaron Patterson in [ruby-core:20277].
+          fix: #814 [ruby-core:20241]
 * r21772: Test for Server Name Indication support.
 * r23008: revert incomplete read_nonblock implemenatation.
 * r26835: backport fixes in 1.9.
 * r26838: backport the commit from trunk.
 * Constify (some cases are depends on OpenSSL's version).
+* Only enable SSLv3 methods if library provides support.
 
---- ext/openssl/ossl_ssl.c.orig	2010-06-21 09:18:59.000000000 +0000
+--- ext/openssl/ossl_ssl.c.orig	Wed Feb  8 06:09:40 2012
 +++ ext/openssl/ossl_ssl.c
 @@ -26,6 +26,12 @@
  #  define TO_SOCKET(s) s
@@ -25,7 +26,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  VALUE mSSL;
  VALUE eSSLError;
  VALUE cSSLContext;
-@@ -69,6 +75,9 @@ static const char *ossl_sslctx_attrs[] =
+@@ -69,6 +75,9 @@ static const char *ossl_sslctx_attrs[] = {
      "verify_callback", "options", "cert_store", "extra_chain_cert",
      "client_cert_cb", "tmp_dh_callback", "session_id_context",
      "session_get_cb", "session_new_cb", "session_remove_cb",
@@ -35,7 +36,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  };
  
  #define ossl_ssl_get_io(o)           rb_iv_get((o),"@io")
-@@ -86,7 +95,12 @@ static const char *ossl_sslctx_attrs[] =
+@@ -86,7 +95,12 @@ static const char *ossl_sslctx_attrs[] = {
  #define ossl_ssl_set_tmp_dh(o,v)     rb_iv_set((o),"@tmp_dh",(v))
  
  static const char *ossl_ssl_attr_readers[] = { "io", "context", };
@@ -58,7 +59,20 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  } ossl_ssl_method_tab[] = {
  #define OSSL_SSL_METHOD_ENTRY(name) { #name, name##_method }
      OSSL_SSL_METHOD_ENTRY(TLSv1),
-@@ -144,7 +158,7 @@ ossl_sslctx_s_alloc(VALUE klass)
+@@ -107,9 +121,12 @@ struct {
+     OSSL_SSL_METHOD_ENTRY(SSLv2_server),
+     OSSL_SSL_METHOD_ENTRY(SSLv2_client),
+ #endif
++#if defined(HAVE_SSLV3_METHOD) && defined(HAVE_SSLV3_SERVER_METHOD) && \
++	defined(HAVE_SSLV3_CLIENT_METHOD)
+     OSSL_SSL_METHOD_ENTRY(SSLv3),
+     OSSL_SSL_METHOD_ENTRY(SSLv3_server),
+     OSSL_SSL_METHOD_ENTRY(SSLv3_client),
++#endif
+     OSSL_SSL_METHOD_ENTRY(SSLv23),
+     OSSL_SSL_METHOD_ENTRY(SSLv23_server),
+     OSSL_SSL_METHOD_ENTRY(SSLv23_client),
+@@ -146,7 +163,7 @@ ossl_sslctx_s_alloc(VALUE klass)
  static VALUE
  ossl_sslctx_set_ssl_version(VALUE self, VALUE ssl_method)
  {
@@ -67,7 +81,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      const char *s;
      int i;
  
-@@ -297,7 +311,7 @@ ossl_ssl_verify_callback(int preverify_o
+@@ -299,7 +316,7 @@ ossl_ssl_verify_callback(int preverify_ok, X509_STORE_
  static VALUE
  ossl_call_session_get_cb(VALUE ary)
  {
@@ -76,7 +90,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      
      Check_Type(ary, T_ARRAY);
      ssl_obj = rb_ary_entry(ary, 0);
-@@ -325,7 +339,7 @@ ossl_sslctx_session_get_cb(SSL *ssl, uns
+@@ -327,7 +344,7 @@ ossl_sslctx_session_get_cb(SSL *ssl, unsigned char *bu
      ssl_obj = (VALUE)ptr;
      ary = rb_ary_new2(2);
      rb_ary_push(ary, ssl_obj);
@@ -85,7 +99,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  
      ret_obj = rb_protect((VALUE(*)_((VALUE)))ossl_call_session_get_cb, ary, &state);
      if (state) {
-@@ -344,7 +358,7 @@ ossl_sslctx_session_get_cb(SSL *ssl, uns
+@@ -346,7 +363,7 @@ ossl_sslctx_session_get_cb(SSL *ssl, unsigned char *bu
  static VALUE
  ossl_call_session_new_cb(VALUE ary)
  {
@@ -94,7 +108,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      
      Check_Type(ary, T_ARRAY);
      ssl_obj = rb_ary_entry(ary, 0);
-@@ -387,10 +401,11 @@ ossl_sslctx_session_new_cb(SSL *ssl, SSL
+@@ -389,10 +406,11 @@ ossl_sslctx_session_new_cb(SSL *ssl, SSL_SESSION *sess
      return RTEST(ret_obj) ? 1 : 0;
  }
  
@@ -107,7 +121,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      
      Check_Type(ary, T_ARRAY);
      sslctx_obj = rb_ary_entry(ary, 0);
-@@ -400,6 +415,7 @@ ossl_call_session_remove_cb(VALUE ary)
+@@ -402,6 +420,7 @@ ossl_call_session_remove_cb(VALUE ary)
  
      return rb_funcall(cb, rb_intern("call"), 1, ary);
  }
@@ -115,7 +129,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  
  static void
  ossl_sslctx_session_remove_cb(SSL_CTX *ctx, SSL_SESSION *sess)
-@@ -446,6 +462,66 @@ ossl_sslctx_add_extra_chain_cert_i(VALUE
+@@ -448,6 +467,66 @@ ossl_sslctx_add_extra_chain_cert_i(VALUE i, VALUE arg)
      return i;
  }
  
@@ -182,7 +196,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  /*
   * call-seq:
   *    ctx.setup => Qtrue # first time
-@@ -563,7 +639,7 @@ ossl_sslctx_setup(VALUE self)
+@@ -569,7 +648,7 @@ ossl_sslctx_setup(VALUE self)
      val = ossl_sslctx_get_sess_id_ctx(self);
      if (!NIL_P(val)){
  	StringValue(val);
@@ -191,7 +205,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  					    RSTRING_LEN(val))){
  	    ossl_raise(eSSLError, "SSL_CTX_set_session_id_context:");
  	}
-@@ -581,11 +657,20 @@ ossl_sslctx_setup(VALUE self)
+@@ -587,11 +666,20 @@ ossl_sslctx_setup(VALUE self)
  	SSL_CTX_sess_set_remove_cb(ctx, ossl_sslctx_session_remove_cb);
  	OSSL_Debug("SSL SESSION remove callback added");
      }
@@ -213,7 +227,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  {
      VALUE ary;
      int bits, alg_bits;
-@@ -609,7 +694,7 @@ ossl_sslctx_get_ciphers(VALUE self)
+@@ -615,7 +703,7 @@ ossl_sslctx_get_ciphers(VALUE self)
  {
      SSL_CTX *ctx;
      STACK_OF(SSL_CIPHER) *ciphers;
@@ -222,7 +236,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      VALUE ary;
      int i, num;
  
-@@ -623,10 +708,10 @@ ossl_sslctx_get_ciphers(VALUE self)
+@@ -629,10 +717,10 @@ ossl_sslctx_get_ciphers(VALUE self)
      if (!ciphers)
          return rb_ary_new();
  
@@ -235,7 +249,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
          rb_ary_push(ary, ossl_ssl_cipher_to_ary(cipher));
      }
      return ary;
-@@ -815,7 +900,6 @@ ossl_sslctx_flush_sessions(int argc, VAL
+@@ -821,7 +909,6 @@ ossl_sslctx_flush_sessions(int argc, VALUE *argv, VALU
      VALUE arg1;
      SSL_CTX *ctx;
      time_t tm = 0;
@@ -243,7 +257,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  
      rb_scan_args(argc, argv, "01", &arg1);
  
-@@ -889,6 +973,8 @@ ossl_ssl_initialize(int argc, VALUE *arg
+@@ -895,6 +982,8 @@ ossl_ssl_initialize(int argc, VALUE *argv, VALUE self)
      ossl_sslctx_setup(ctx);
      rb_call_super(0, 0);
  
@@ -252,7 +266,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      return self;
  }
  
-@@ -902,6 +988,10 @@ ossl_ssl_setup(VALUE self)
+@@ -908,6 +997,10 @@ ossl_ssl_setup(VALUE self)
  
      Data_Get_Struct(self, SSL, ssl);
      if(!ssl){
@@ -263,7 +277,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
          v_ctx = ossl_ssl_get_ctx(self);
          Data_Get_Struct(v_ctx, SSL_CTX, ctx);
  
-@@ -911,6 +1001,12 @@ ossl_ssl_setup(VALUE self)
+@@ -917,6 +1010,12 @@ ossl_ssl_setup(VALUE self)
          }
          DATA_PTR(self) = ssl;
  
@@ -276,7 +290,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
          io = ossl_ssl_get_io(self);
          GetOpenFile(io, fptr);
          rb_io_check_readable(fptr);
-@@ -947,7 +1043,15 @@ ossl_start_ssl(VALUE self, int (*func)()
+@@ -953,7 +1052,15 @@ ossl_start_ssl(VALUE self, int (*func)(), const char *
      Data_Get_Struct(self, SSL, ssl);
      GetOpenFile(ossl_ssl_get_io(self), fptr);
      for(;;){
@@ -293,7 +307,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  	switch((ret2 = ssl_get_error(ssl, ret))){
  	case SSL_ERROR_WANT_WRITE:
              rb_io_wait_writable(FPTR_TO_FD(fptr));
-@@ -963,10 +1067,6 @@ ossl_start_ssl(VALUE self, int (*func)()
+@@ -969,10 +1076,6 @@ ossl_start_ssl(VALUE self, int (*func)(), const char *
  	}
      }
  
@@ -304,7 +318,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      return self;
  }
  
-@@ -1004,6 +1104,72 @@ ossl_ssl_accept(VALUE self)
+@@ -1010,6 +1113,72 @@ ossl_ssl_accept(VALUE self)
  static VALUE
  ossl_ssl_read(int argc, VALUE *argv, VALUE self)
  {
@@ -377,7 +391,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      SSL *ssl;
      int ilen, nread = 0;
      VALUE len, str;
-@@ -1021,12 +1187,11 @@ ossl_ssl_read(int argc, VALUE *argv, VAL
+@@ -1027,12 +1196,11 @@ ossl_ssl_read(int argc, VALUE *argv, VALUE self)
  
      Data_Get_Struct(self, SSL, ssl);
      GetOpenFile(ossl_ssl_get_io(self), fptr);
@@ -392,7 +406,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  	    case SSL_ERROR_NONE:
  		goto end;
  	    case SSL_ERROR_ZERO_RETURN:
-@@ -1035,7 +1200,7 @@ ossl_ssl_read(int argc, VALUE *argv, VAL
+@@ -1041,7 +1209,7 @@ ossl_ssl_read(int argc, VALUE *argv, VALUE self)
                  rb_io_wait_writable(FPTR_TO_FD(fptr));
                  continue;
  	    case SSL_ERROR_WANT_READ:
@@ -401,7 +415,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  		continue;
  	    case SSL_ERROR_SYSCALL:
  		if(ERR_peek_error() == 0 && nread == 0) rb_eof_error();
-@@ -1046,9 +1211,8 @@ ossl_ssl_read(int argc, VALUE *argv, VAL
+@@ -1052,9 +1220,8 @@ ossl_ssl_read(int argc, VALUE *argv, VALUE self)
          }
      }
      else {
@@ -412,7 +426,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
      }
  
    end:
-@@ -1221,7 +1385,7 @@ ossl_ssl_get_cipher(VALUE self)
+@@ -1227,7 +1394,7 @@ ossl_ssl_get_cipher(VALUE self)
          rb_warning("SSL session is not started yet.");
          return Qnil;
      }
@@ -421,7 +435,7 @@ $NetBSD: patch-dq,v 1.2 2010/09/10 03:29:00 taca Exp $
  
      return ossl_ssl_cipher_to_ary(cipher);
  }
-@@ -1344,13 +1508,13 @@ Init_ossl_ssl()
+@@ -1350,13 +1517,13 @@ Init_ossl_ssl()
  
      ID_callback_state = rb_intern("@callback_state");
  
