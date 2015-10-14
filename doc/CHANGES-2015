@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4258 2015/10/14 14:38:05 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4259 2015/10/14 15:46:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7331,3 +7331,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/gloox to 1.0.13 [shattered 2015-10-13]
 	Updated net/openconnect to 7.06 [wiz 2015-10-14]
 	Updated fonts/Hack-ttf to 2.015 [leot 2015-10-14]
+	Updated sysutils/salt to 2014.7.2nb2 [jperkin 2015-10-14]
