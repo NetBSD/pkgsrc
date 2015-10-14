@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/08/25 12:23:13 sevan Exp $
+# $NetBSD: Makefile,v 1.5 2015/10/14 20:17:39 ryoon Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC5_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc5-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC5_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,6 +35,7 @@ GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
