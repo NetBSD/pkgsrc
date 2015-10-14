@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2015/07/04 16:18:28 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2015/10/14 20:17:24 wiz Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=felt/}
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
@@ -16,6 +16,13 @@ EXTRACT_ONLY=		felt-3.05.src.tar.gz
 WRKSRC=			${WRKDIR}/FElt-3.05
 USE_TOOLS+=		gzcat
 XAW_TYPE?=		3d
+# does not directly support Xaw3d
+BUILDLINK_TRANSFORM+=   l:Xaw:Xaw3d
+.PHONY: buildlink-Xaw3d-inc-hack
+pre-configure: buildlink-Xaw3d-inc-hack
+
+buildlink-Xaw3d-inc-hack: buildlink-directories
+	cd ${BUILDLINK_DIR}/include/X11 && ln -s Xaw3d Xaw
 
 MAKE_ENV+=		CCOPTS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDOPTS=${LDFLAGS:M*:Q}
