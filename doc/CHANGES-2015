@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4263 2015/10/14 20:20:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4264 2015/10/14 21:35:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7337,3 +7337,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/gcc5 to 5.2.0nb1 [ryoon 2015-10-14]
 	Updated lang/gcc5-libs to 5.2.0nb2 [ryoon 2015-10-14]
 	Removed x11/Xaw3d successor x11/libXaw3d [wiz 2015-10-14]
+	Added graphics/glw version 8.0.0 [wiz 2015-10-14]
