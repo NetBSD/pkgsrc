@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/08/18 07:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/10/14 20:17:24 wiz Exp $
 
 DISTNAME=	PDCurses-3.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdcurses/}
 

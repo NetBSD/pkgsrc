@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/04/26 19:19:42 spz Exp $
+# $NetBSD: options.mk,v 1.8 2015/10/14 20:17:25 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeciv-client
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
@@ -51,7 +51,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.xaw
 CONFIGURE_ARGS+=	--enable-client=xaw
 CONFIGURE_ARGS+=	--enable-fcmp=cli
 CONFIGURE_ARGS+=	--with-xaw3d
-.include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 PLIST_SRC=		${PKGDIR}/PLIST.xaw
 .endif
