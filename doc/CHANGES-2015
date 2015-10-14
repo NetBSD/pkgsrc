@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4261 2015/10/14 17:14:28 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4262 2015/10/14 20:18:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7334,3 +7334,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/salt to 2014.7.2nb2 [jperkin 2015-10-14]
 	Updated finance/gnucash to 2.6.9 [wiz 2015-10-14]
 	Added biology/bwa version 0.7.9a [leot 2015-10-14]
+	Updated lang/gcc5 to 5.2.0nb1 [ryoon 2015-10-14]
+	Updated lang/gcc5-libs to 5.2.0nb2 [ryoon 2015-10-14]
