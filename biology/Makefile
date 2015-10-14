@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/10/12 16:49:03 leot Exp $
+# $NetBSD: Makefile,v 1.40 2015/10/14 17:13:44 leot Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -7,6 +7,7 @@ SUBDIR+=	arka
 SUBDIR+=	azara
 SUBDIR+=	bioperl
 SUBDIR+=	bodr
+SUBDIR+=	bwa
 SUBDIR+=	cdhit
 SUBDIR+=	chemical-mime-data
 SUBDIR+=	chemtool
