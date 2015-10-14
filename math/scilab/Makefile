@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.98 2015/08/07 11:20:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.99 2015/10/14 20:17:27 wiz Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
-PKGREVISION=	16
+PKGREVISION=	17
 PKGNAME=	${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	http://www.scilab.org/download/4.1/
@@ -149,5 +149,5 @@ CONFIGURE_ARGS+=	--without-ocaml
 .include "../../parallel/pvm3/buildlink3.mk"
 .include "../../textproc/sablotron/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

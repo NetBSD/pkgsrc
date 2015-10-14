@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2015/06/14 15:46:22 mef Exp $
+# $NetBSD: options.mk,v 1.11 2015/10/14 20:17:24 wiz Exp $
 #
 
 ### Set options
@@ -90,7 +90,7 @@ CONFIGURE_ARGS+=	--without-gconf
 ### Support Xaw3d (This is only valid with Lucid Toolkit)
 ###
 .  if !empty(PKG_OPTIONS:Mxaw3d)
-.include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../x11/libXaw3d/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--without-xaw3d
 .  endif

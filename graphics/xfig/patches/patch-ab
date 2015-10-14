@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.14 2011/02/17 08:46:50 markd Exp $
+$NetBSD: patch-ab,v 1.15 2015/10/14 20:17:26 wiz Exp $
 
---- Imakefile.orig	2009-03-30 17:53:05.000000000 +0200
+--- Imakefile.orig	2009-03-30 15:53:05.000000000 +0000
 +++ Imakefile
-@@ -65,18 +65,21 @@ XCOMM #define XAW3D1_5E
+@@ -60,23 +60,26 @@ XCOMM Uncomment the following if you hav
+ XCOMM some new features, including "Tips", which replace xfig's "help balloons"
+ XCOMM NOTE: This is the default for many X systems now.
+ 
+-XCOMM #define XAW3D1_5E
++#define XAW3D1_5E
+ 
  #ifdef XAW3D1_5E
      DUSEXAW3D = -DXAW3D -DXAW3D1_5E
  #else
@@ -56,6 +62,15 @@ $NetBSD: patch-ab,v 1.14 2011/02/17 08:46:50 markd Exp $
  #endif
  
  XCOMM Uncomment the following definiton if you want to use the small icons
+@@ -150,7 +153,7 @@ XCOMM Comment out the next line if you h
+ XCOMM If your setlocale() doesn't support the locale, you should
+ XCOMM add -DSETLOCALE to I18N_DEFS.
+ 
+-XCOMM #define I18N
++#define I18N
+ 
+ XCOMM If using an input tablet uncomment the following
+ 
 @@ -161,7 +164,7 @@ XCOMM uncomment the following line if yo
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures

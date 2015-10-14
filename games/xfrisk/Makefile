@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2014/05/11 02:19:04 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.32 2015/10/14 20:17:25 wiz Exp $
 
 DISTNAME=	xfrisk-1.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	http://www.tuxick.net/xfrisk/files/
 
@@ -30,6 +29,13 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 
 # xfrisk doesn't work with standard Xaw.
 XAW_TYPE=	3d
+# does not directly support Xaw3d
+BUILDLINK_TRANSFORM+=   l:Xaw:Xaw3d
+.PHONY: buildlink-Xaw3d-inc-hack
+pre-configure: buildlink-Xaw3d-inc-hack
+
+buildlink-Xaw3d-inc-hack: buildlink-directories
+	cd ${BUILDLINK_DIR}/include/X11 && ln -s Xaw3d Xaw
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
