@@ -12,6 +12,7 @@
       <method_credential user='root' group='root' />
       <method_environment>
         <envvar name="LD_PRELOAD_32" value="/usr/lib/extendedFILE.so.1" />
+        <envvar name="PATH" value="@PREFIX@/sbin:@PREFIX@/bin:/sbin:/usr/sbin:/usr/bin" />
       </method_environment>
     </method_context>
     <instance name='master' enabled='false'>
