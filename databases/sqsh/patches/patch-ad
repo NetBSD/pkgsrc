@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2004/03/29 03:11:03 grant Exp $
+$NetBSD: patch-ad,v 1.3 2015/10/14 18:32:54 wiz Exp $
 
---- src/sqsh_readline.c.orig	Tue Jan  5 21:30:16 1999
-+++ src/sqsh_readline.c	Tue May 22 01:03:21 2001
-@@ -32,17 +32,7 @@
+--- src/sqsh_readline.c.orig	2001-11-05 16:05:56.000000000 +0000
++++ src/sqsh_readline.c
+@@ -33,17 +33,7 @@
  
  #if defined(USE_READLINE)
  #include <readline/readline.h>
@@ -21,3 +21,12 @@ $NetBSD: patch-ad,v 1.2 2004/03/29 03:11:03 grant Exp $
  #endif /* USE_READLINE */
  
  /*-- Current Version --*/
+@@ -129,7 +119,7 @@ int sqsh_readline_init()
+ 
+ 	rl_readline_name                 = "sqsh" ;
+ 	rl_completion_entry_function     = (rl_compentry_func_t*)sqsh_completion ;
+-	rl_attempted_completion_function = (CPPFunction*)sqsh_completion ;
++	rl_attempted_completion_function = sqsh_completion ;
+ #endif /* USE_READLINE */
+ 
+ 	return True ;
