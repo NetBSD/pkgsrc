@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4260 2015/10/14 16:17:00 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4261 2015/10/14 17:14:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7333,3 +7333,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/Hack-ttf to 2.015 [leot 2015-10-14]
 	Updated sysutils/salt to 2014.7.2nb2 [jperkin 2015-10-14]
 	Updated finance/gnucash to 2.6.9 [wiz 2015-10-14]
+	Added biology/bwa version 0.7.9a [leot 2015-10-14]
