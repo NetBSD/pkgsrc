@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/16 12:07:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/14 20:17:39 ryoon Exp $
 
 GCC_PKGNAME=	gcc5
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC5_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc5 package so that with the dependence pattern
 ## '{gcc5,gcc5-libs}>=5.1.*' pkg_add will choose gcc5-libs over gcc5.
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
