@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4262 2015/10/14 20:18:38 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4263 2015/10/14 20:20:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7336,3 +7336,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added biology/bwa version 0.7.9a [leot 2015-10-14]
 	Updated lang/gcc5 to 5.2.0nb1 [ryoon 2015-10-14]
 	Updated lang/gcc5-libs to 5.2.0nb2 [ryoon 2015-10-14]
+	Removed x11/Xaw3d successor x11/libXaw3d [wiz 2015-10-14]
