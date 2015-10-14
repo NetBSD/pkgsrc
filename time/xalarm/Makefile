@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 13:01:28 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2015/10/14 20:17:28 wiz Exp $
 
 DISTNAME=	xalarm-3.06
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
@@ -16,6 +16,14 @@ XAW_TYPE?=	3d
 FORTUNE=	"Sorry, xfortune is unavailable - no fortune!"
 YOW=		"Sorry, xyow is unavailable - no yow!"
 KILL=		/bin/kill # should this be in bsd.pkg.mk ?
+
+# does not directly support Xaw3d
+BUILDLINK_TRANSFORM+=	l:Xaw:Xaw3d
+.PHONY: buildlink-Xaw3d-inc-hack
+pre-configure: buildlink-Xaw3d-inc-hack
+
+buildlink-Xaw3d-inc-hack: buildlink-directories
+	cd ${BUILDLINK_DIR}/include/X11 && ln -s Xaw3d Xaw
 
 .include "../../mk/bsd.prefs.mk"
 

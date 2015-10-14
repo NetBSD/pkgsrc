@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2015/06/14 12:50:07 markd Exp $
+# $NetBSD: Makefile,v 1.19 2015/10/14 20:17:27 wiz Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	xdvik-22.87
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
 EXTRACT_SUFX=	.tar.xz

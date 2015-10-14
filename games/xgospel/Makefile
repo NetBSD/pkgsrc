@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 11:55:01 asau Exp $
-#
+# $NetBSD: Makefile,v 1.20 2015/10/14 20:17:26 wiz Exp $
 
 DISTNAME=	xgospel-1.12d
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games x11
 MASTER_SITES=	http://gailly.net/
 
@@ -20,6 +19,12 @@ XAW_TYPE=		3d
 .if defined(XAW_TYPE)
 .  if (${XAW_TYPE} == "3d") || (${XAW_TYPE} == "xpm")
 CONFIGURE_ARGS+=	--with-xaw3d
+# does not directly support Xaw3d
+.PHONY: buildlink-Xaw3d-inc-hack
+pre-configure: buildlink-Xaw3d-inc-hack
+
+buildlink-Xaw3d-inc-hack: buildlink-directories
+	cd ${BUILDLINK_DIR}/include/X11 && ln -s Xaw3d Xaw
 .  endif
 .endif
 
