@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/08/20 15:22:16 taca Exp $
+# $NetBSD: Makefile,v 1.21 2015/10/14 18:36:06 sevan Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${RUBY_LICENSE}
 RUBY_VERSION_SUPPORTED=	200
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		pax yacc
+USE_TOOLS+=		pax yacc pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared
@@ -37,11 +37,13 @@ post-wrapper:
 .endif
 
 #
-# Don't refrect pkgsrc's INSTALL macro since Ruby expect it could
+# Don't reference pkgsrc's INSTALL macro since Ruby expect it could
 # execute by unprivileged user.
 #
 CONFIGURE_ENV+=		INSTALL="${INSTALL} ${COPY}" \
 			INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
+
+CONFIGURE_ENV+= 	ac_cv_prog_PKG_CONFIG=""
 
 .include "../../mk/compiler.mk"
 
@@ -60,12 +62,16 @@ LIBS.SunOS+=	-lm
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	OBJCOPY=:
-CONFIGURE_ENV+=	ac_cv_prog_PKG_CONFIG=""
 .endif
 
 .if ${OPSYS} == "MirBSD"
 # if present, an unsupported sysconf call is used
 CONFIGURE_ENV+=	ac_cv_func_getgrnam_r=no
+.endif
+
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig"
+USE_TOOLS+= 	bash
+CONFIG_SHELL= 	${TOOLS_PATH.bash}
 .endif
 
 .if ${OPSYS} == "Cygwin"
