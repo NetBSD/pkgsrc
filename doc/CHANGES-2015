@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4285 2015/10/15 15:09:52 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4286 2015/10/15 17:33:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7359,3 +7359,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/tnef to 1.4.12 [wiz 2015-10-15]
 	Updated www/links to 2.12 [wiz 2015-10-15]
 	Updated www/p5-Dancer2 to 0.163000 [wen 2015-10-15]
+	Updated databases/sqlite3 to 3.9.0 [adam 2015-10-15]
+	Updated databases/sqlite3-docs to 3.9.0 [adam 2015-10-15]
+	Updated databases/sqlite3-tcl to 3.9.0 [adam 2015-10-15]
+	Updated multimedia/ffmpeg2 to 2.8.1 [adam 2015-10-15]
