@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2015/09/30 19:13:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2015/10/15 11:15:12 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -343,6 +343,7 @@ lib/calibre/calibre/ebooks/metadata/haodoo.py
 lib/calibre/calibre/ebooks/metadata/html.py
 lib/calibre/calibre/ebooks/metadata/imp.py
 lib/calibre/calibre/ebooks/metadata/kdl.py
+lib/calibre/calibre/ebooks/metadata/kfx.py
 lib/calibre/calibre/ebooks/metadata/library_thing.py
 lib/calibre/calibre/ebooks/metadata/lit.py
 lib/calibre/calibre/ebooks/metadata/lrx.py
@@ -659,6 +660,7 @@ lib/calibre/calibre/gui2/actions/show_template_tester.py
 lib/calibre/calibre/gui2/actions/similar_books.py
 lib/calibre/calibre/gui2/actions/sort.py
 lib/calibre/calibre/gui2/actions/store.py
+lib/calibre/calibre/gui2/actions/tag_mapper.py
 lib/calibre/calibre/gui2/actions/toc_edit.py
 lib/calibre/calibre/gui2/actions/tweak_epub.py
 lib/calibre/calibre/gui2/actions/unpack_book.py
@@ -1761,6 +1763,8 @@ share/calibre/quick_start/eng.epub
 share/calibre/quick_start/fra.epub
 share/calibre/quick_start/ita.epub
 share/calibre/rapydscript/compiler.js.xz
+share/calibre/rapydscript/lib/elementmaker.pyj
+share/calibre/rapydscript/lib/gettext.pyj
 share/calibre/rapydscript/lib/math.pyj
 share/calibre/rapydscript/lib/operator.pyj
 share/calibre/rapydscript/lib/random.pyj
