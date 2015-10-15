@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/09/25 00:44:44 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/10/15 21:12:43 leot Exp $
 
 DISTNAME=	xf86-video-nouveau-1.0.11
 CATEGORIES=	x11
@@ -25,7 +25,6 @@ CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/xf86driproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
