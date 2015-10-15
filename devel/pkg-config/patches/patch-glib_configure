@@ -1,0 +1,15 @@
+$NetBSD: patch-glib_configure,v 1.3 2015/10/15 09:47:56 wiz Exp $
+
+Fix unportable test construct.
+
+--- glib/configure.orig	2015-09-27 14:07:16.000000000 +0000
++++ glib/configure
+@@ -5885,7 +5885,7 @@ else
+   ENABLE_ALWAYS_BUILD_TESTS_FALSE=
+ fi
+ 
+-  if test "$ENABLE_INSTALLED_TESTS" == "1"; then
++  if test "$ENABLE_INSTALLED_TESTS" = "1"; then
+     installed_test_metadir=${datadir}/installed-tests/glib
+ 
+     installed_testdir=${libexecdir}/installed-tests/glib
