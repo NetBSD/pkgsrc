@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2015/06/12 10:50:08 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/10/15 11:07:53 wiz Exp $
 
-DISTNAME=	cairomm-1.10.0
-PKGREVISION=	14
+DISTNAME=	cairomm-1.12.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -36,6 +35,7 @@ PLIST_VARS+=	x11 quartz
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILDLINK_ABI_DEPENDS.libsigcpp+=	libsigc++>=2.5.1
 .include "../../devel/libsigc++/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8
 .include "../../graphics/cairo/buildlink3.mk"
