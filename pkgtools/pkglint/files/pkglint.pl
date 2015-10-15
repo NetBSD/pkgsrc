@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.889 2015/10/11 21:23:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.890 2015/10/15 01:27:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5495,10 +5495,7 @@ sub checkfile_DESCR($) {
 
 sub checkfile_distinfo($) {
 	my ($fname) = @_;
-	my ($lines, %in_distinfo, $current_fname, $state, $patches_dir);
-	my ($di_is_committed);
-
-	use enum qw(:DIS_ start=0 SHA1=0 RMD160 Size);
+	my ($lines, %in_distinfo, $patches_dir, $di_is_committed, $current_fname, $is_patch, @seen_algs);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_distinfo()");
 
@@ -5528,15 +5525,38 @@ sub checkfile_distinfo($) {
 		# it stays undefined.
 	}
 
-	$current_fname = undef;
-	$state = DIS_start;
+	my $on_filename_change = sub($$) {
+		my ($line, $new_fname) = @_;
+
+		if (defined($current_fname)) {
+			my $seen_algs = join(", ", @seen_algs);
+			$opt_debug_misc and $line->log_debug("File ${current_fname} has checksums ${seen_algs}.");
+			if ($is_patch) {
+				if ($seen_algs ne "SHA1") {
+					$line->log_error("Expected SHA1 checksum for ${current_fname}, got ${seen_algs}.");
+				}
+			} else {
+				if ($seen_algs ne "SHA1, RMD160, Size" && $seen_algs ne "SHA1, RMD160, SHA512, Size") {
+					$line->log_error("Expected SHA1, RMD160, Size checksums for ${current_fname}, got ${seen_algs}.");
+				}
+			}
+		}
+
+		$is_patch = defined($new_fname) && $new_fname =~ m"^patch-.+$" ? true : false;
+		$current_fname = $new_fname;
+		@seen_algs = ();
+	};
+
 	foreach my $line (@{$lines}[2..$#{$lines}]) {
 		if ($line->text !~ m"^(\w+) \(([^)]+)\) = (.*)(?: bytes)?$") {
 			$line->log_error("Unknown line type.");
 			next;
 		}
 		my ($alg, $chksum_fname, $sum) = ($1, $2, $3);
-		my $is_patch = (($chksum_fname =~ m"^patch-.+$") ? true : false);
+
+		if (!defined($current_fname) || $chksum_fname ne $current_fname) {
+			$on_filename_change->($line, $chksum_fname);
+		}
 
 		if ($chksum_fname !~ m"^\w") {
 			$line->log_error("All file names should start with a letter.");
@@ -5559,54 +5579,9 @@ sub checkfile_distinfo($) {
 			}
 		}
 
-		if ($alg eq "MD5") {
-			$line->log_error("MD5 checksums are obsolete.");
-			$line->explain_error(
-"Run \"".conf_make." makedistinfo\" to regenerate the distinfo file.");
-			next;
-		}
+		push(@seen_algs, $alg);
 
-		if ($state == DIS_SHA1) {
-			if ($alg eq "SHA1") {
-				$state = ($is_patch ? DIS_start : DIS_RMD160);
-				$current_fname = $chksum_fname;
-			} else {
-				$line->log_warning("Expected an SHA1 checksum.");
-			}
-
-		} elsif ($state == DIS_RMD160) {
-			$state = DIS_start;
-			if ($alg eq "RMD160") {
-				if ($chksum_fname eq $current_fname) {
-					$state = DIS_Size;
-				} else {
-					$line->log_warning("Expected an RMD160 checksum for ${current_fname}, not for ${chksum_fname}.");
-				}
-			} else {
-				if ($chksum_fname eq $current_fname) {
-					# This is an error because this really should be fixed.
-					$line->log_error("Expected an RMD160 checksum, not ${alg} for ${chksum_fname}.");
-				} else {
-					$line->log_warning("Expected an RMD160 checksum for ${current_fname}, not ${alg} for ${chksum_fname}.");
-				}
-			}
-
-		} elsif ($state == DIS_Size) {
-			$state = DIS_start;
-			if ($alg eq "Size") {
-				if ($chksum_fname ne $current_fname) {
-					$line->log_warning("Expected a Size checksum for ${current_fname}, not for ${chksum_fname}.");
-				}
-			} else {
-				if ($chksum_fname eq $current_fname) {
-					$line->log_warning("Expected a Size checksum, not ${alg} for ${chksum_fname}.");
-				} else {
-					$line->log_warning("Expected a Size checksum for ${current_fname}, not ${alg} for ${chksum_fname}.");
-				}
-			}
-		}
-
-		if ($is_patch && defined($patches_dir) && !(defined($distinfo_file) && $distinfo_file eq "./../../lang/php5/distinfo")) {
+		if ($is_patch && $alg eq "SHA1" && defined($patches_dir) && !(defined($distinfo_file) && $distinfo_file eq "./../../lang/php5/distinfo")) {
 			my $fname = "${current_dir}/${patches_dir}/${chksum_fname}";
 			if ($di_is_committed && !is_committed($fname)) {
 				$line->log_warning("${patches_dir}/${chksum_fname} is registered in distinfo but not added to CVS.");
@@ -5630,7 +5605,9 @@ sub checkfile_distinfo($) {
 			}
 		}
 		$in_distinfo{$chksum_fname} = true;
+
 	}
+	$on_filename_change->(PkgLint::Line->new($fname, undef, "", []), undef);
 	checklines_trailing_empty_lines($lines);
 
 	if (defined($patches_dir)) {
