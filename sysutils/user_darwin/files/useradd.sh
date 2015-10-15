@@ -21,12 +21,12 @@ getnextuid()
 {
     # Find an unused UID. Constraints:
     # * must be <500 (typical OS X user accounts are 500 and up)
-    # * must be <400 (Fink uses 400 and up)
     # * must be from a reasonably sized range
+    # As of El Capitan, Apple use up to UID 252 for system accounts.
 
     used_uids=`nireport . /users uid 2>/dev/null ||			\
       dscl . -readall /users UniqueID | grep '^UniqueID:' | cut -d' ' -f2`
-    low_uid=300; high_uid=399
+    low_uid=300; high_uid=499
 
     # Try to use the GID as the UID.
     maybe_uid=$1
