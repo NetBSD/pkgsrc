@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2015/07/26 23:01:11 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2015/10/15 11:47:14 wiz Exp $
 
-DISTNAME=		meld-3.14.0
+DISTNAME=		meld-3.15.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/3.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/3.15/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		wiz@NetBSD.org
@@ -27,11 +27,11 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/distutils.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.34.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.6
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.14
 .include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.6
+BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.14
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
