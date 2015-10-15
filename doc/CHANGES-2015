@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4272 2015/10/15 10:38:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4273 2015/10/15 10:41:02 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7346,3 +7346,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mercurial to 3.5.2 [wiz 2015-10-15]
 	Updated devel/py-tortoisehg to 3.5.2 [wiz 2015-10-15]
 	Updated lang/py-six to 1.10.0 [wiz 2015-10-15]
+	Updated sysutils/user_darwin to 20151015 [jperkin 2015-10-15]
