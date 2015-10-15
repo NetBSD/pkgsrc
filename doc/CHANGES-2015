@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4284 2015/10/15 12:27:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4285 2015/10/15 15:09:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7358,3 +7358,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/meld to 3.15.0 [wiz 2015-10-15]
 	Updated mail/tnef to 1.4.12 [wiz 2015-10-15]
 	Updated www/links to 2.12 [wiz 2015-10-15]
+	Updated www/p5-Dancer2 to 0.163000 [wen 2015-10-15]
