@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4265 2015/10/15 02:43:48 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4266 2015/10/15 02:52:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7339,3 +7339,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed x11/Xaw3d successor x11/libXaw3d [wiz 2015-10-14]
 	Added graphics/glw version 8.0.0 [wiz 2015-10-14]
 	Updated www/p5-Mojolicious to 6.24 [wen 2015-10-15]
+	Updated devel/p5-Config-Tiny to 2.23 [wen 2015-10-15]
