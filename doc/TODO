@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14984 2015/10/15 10:53:44 wiz Exp $
+$NetBSD: TODO,v 1.14985 2015/10/15 10:56:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1542,7 +1542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
-	o py-setuptools-18.4
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11

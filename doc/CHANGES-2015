@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4275 2015/10/15 10:53:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4276 2015/10/15 10:56:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7349,3 +7349,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/user_darwin to 20151015 [jperkin 2015-10-15]
 	Updated textproc/iso-codes to 3.62 [wiz 2015-10-15]
 	Updated misc/xdg-utils to 1.1.1 [wiz 2015-10-15]
+	Updated devel/py-setuptools to 18.4 [wiz 2015-10-15]
