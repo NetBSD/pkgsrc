@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/05/28 05:55:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/10/15 08:41:14 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -43,6 +43,7 @@ share/X11/xkb/geometry/sgi_vndr/indigo
 share/X11/xkb/geometry/sgi_vndr/indy
 share/X11/xkb/geometry/sony
 share/X11/xkb/geometry/sun
+share/X11/xkb/geometry/teck
 share/X11/xkb/geometry/thinkpad
 share/X11/xkb/geometry/typematrix
 share/X11/xkb/geometry/winbook
