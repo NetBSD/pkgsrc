@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.892 2015/10/15 02:09:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.893 2015/10/15 03:00:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -619,7 +619,7 @@ sub parse_acls($$) {
 		) (?:\,\s*|$)"x;
 
 	if (!defined($acltext)) {
-		return;
+		return undef;
 	}
 
 	$acls = [];
@@ -1807,7 +1807,7 @@ sub get_variable_type($$) {
 	}
 
 	$opt_debug_vartypes and $line->log_debug("No type definition found for ${varcanon}.");
-	return;
+	return undef;
 }
 
 sub get_variable_perms($$) {
