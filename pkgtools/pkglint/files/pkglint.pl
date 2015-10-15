@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.890 2015/10/15 01:27:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.891 2015/10/15 01:57:47 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -590,6 +590,14 @@ sub get_regex_plurals() {
 # Loading pkglint-specific data from files.
 #
 
+sub load_existing_lines($$) {
+	my ($fname, $fold_backslash_lines) = @_;
+
+	my $lines = load_lines($fname, $fold_backslash_lines)
+		or log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+	return $lines;
+}
+
 # The symbol table for ACL definitions maps ACL names to ACLs.
 my $acl_definitions = {};
 
@@ -683,46 +691,43 @@ sub get_vartypes_map() {
 	$fname = conf_datadir."/makevars.map";
 	$vartypes = {};
 
-	if ((my $lines = load_lines($fname, true))) {
-		foreach my $line (@{$lines}) {
-			if ($line->text =~ m"^(?:#.*|\s*)$") {
-				# ignore empty and comment lines
+	my $lines = load_existing_lines($fname, true);
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ m"^(?:#.*|\s*)$") {
+			# ignore empty and comment lines
 
-			} elsif ($line->text =~ re_acl_def) {
-				my ($aclname, $aclvalue) = ($1, $2);
+		} elsif ($line->text =~ re_acl_def) {
+			my ($aclname, $aclvalue) = ($1, $2);
 
-				$acl_definitions->{$aclname} = parse_acls($line, $aclvalue);
+			$acl_definitions->{$aclname} = parse_acls($line, $aclvalue);
 
-			} elsif ($line->text =~ re_vartypedef) {
-				my ($varname, $par, $kind_of_list_text, $typename, $enums, $acltext) = ($1, $2, $3, $4, $5, $6);
-				my $kind_of_list = !defined($kind_of_list_text) ? LK_NONE
-				    : ($kind_of_list_text eq "List") ? LK_EXTERNAL
-				    : LK_INTERNAL;
+		} elsif ($line->text =~ re_vartypedef) {
+			my ($varname, $par, $kind_of_list_text, $typename, $enums, $acltext) = ($1, $2, $3, $4, $5, $6);
+			my $kind_of_list = !defined($kind_of_list_text) ? LK_NONE
+			    : ($kind_of_list_text eq "List") ? LK_EXTERNAL
+			    : LK_INTERNAL;
 
-				if (defined($typename) && !exists(get_vartypes_basictypes()->{$typename})) {
-					$line->log_fatal("Unknown basic type \"$typename\" for variable $varname. "
-						. "Valid basic types are "
-						. join(", ", sort keys %{get_vartypes_basictypes()})
-						. ".");
-				}
-
-				my $basic_type = defined($enums)
-				    ? array_to_hash(split(qr"\s+", $enums))
-				    : $typename;
-				my $type = PkgLint::Type->new($kind_of_list, $basic_type, parse_acls($line, $acltext), NOT_GUESSED);
-				if ($par eq "" || $par eq "*") {
-					$vartypes->{$varname} = $type;
-				}
-				if ($par eq "*" || $par eq ".*") {
-					$vartypes->{"${varname}.*"} = $type;
-				}
-
-			} else {
-				$line->log_fatal("Unknown line format.");
+			if (defined($typename) && !exists(get_vartypes_basictypes()->{$typename})) {
+				$line->log_fatal("Unknown basic type \"$typename\" for variable $varname. "
+					. "Valid basic types are "
+					. join(", ", sort keys %{get_vartypes_basictypes()})
+					. ".");
 			}
+
+			my $basic_type = defined($enums)
+			    ? array_to_hash(split(qr"\s+", $enums))
+			    : $typename;
+			my $type = PkgLint::Type->new($kind_of_list, $basic_type, parse_acls($line, $acltext), NOT_GUESSED);
+			if ($par eq "" || $par eq "*") {
+				$vartypes->{$varname} = $type;
+			}
+			if ($par eq "*" || $par eq ".*") {
+				$vartypes->{"${varname}.*"} = $type;
+			}
+
+		} else {
+			$line->log_fatal("Unknown line format.");
 		}
-	} else {
-		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
 	}
 
 # TODO: Enable when the time is ripe.
@@ -886,11 +891,7 @@ sub load_tool_names() {
 	@tool_files = ("defaults.mk");
 	{
 		my $fname = "${cwd_pkgsrcdir}/mk/tools/bsd.tools.mk";
-		my $lines = load_lines($fname, true);
-		if (!$lines) {
-			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-		}
-
+		my $lines = load_existing_lines($fname, true);
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_mk_include) {
 				my (undef, $includefile) = ($1, $2);
@@ -913,12 +914,7 @@ sub load_tool_names() {
 	$system_build_defs = {};
 	foreach my $basename (@tool_files) {
 		my $fname = "${cwd_pkgsrcdir}/mk/tools/${basename}";
-		my $lines = load_lines($fname, true);
-
-		if (!$lines) {
-			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-		}
-
+		my $lines = load_existing_lines($fname, true);
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_varassign) {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
@@ -945,13 +941,9 @@ sub load_tool_names() {
 
 	foreach my $basename ("bsd.pkg.mk") {
 		my $fname = "${cwd_pkgsrcdir}/mk/${basename}";
-		my $lines = load_lines($fname, true);
 		my $cond_depth = 0;
 
-		if (!$lines) {
-			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-		}
-
+		my $lines = load_existing_lines($fname, true);
 		foreach my $line (@{$lines}) {
 			my $text = $line->text;
 
@@ -1203,14 +1195,9 @@ sub get_suggested_package_updates() {
 # definitions have to be added explicitly.
 sub load_userdefined_variables() {
 	my $fname = "${cwd_pkgsrcdir}/mk/defaults/mk.conf";
-	my ($lines, $vars);
+	my $vars = {};
 
-	$vars = {};
-	$lines = load_lines($fname, true);
-	if (!$lines) {
-		log_fatal($fname, NO_LINES, "Cannot be read.");
-	}
-
+	my $lines = load_existing_lines($fname, true);
 	foreach my $line (@{$lines}) {
 		if ($line->text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
@@ -1248,9 +1235,7 @@ sub load_shared_dirs() {
 		print/texmf-dirs)) {
 
 		$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "pkg=$pkg");
-		my $dirs_mk = load_lines("$cwd_pkgsrcdir/$pkg/dirs.mk", true);
-		assert($dirs_mk, "$pkg/dirs.mk is not readable.");
-
+		my $dirs_mk = load_existing_lines("$cwd_pkgsrcdir/$pkg/dirs.mk", true);
 		foreach my $line (@$dirs_mk) {
 			parseline_mk($line);
 			if ($line->has("is_varassign")) {
@@ -1274,8 +1259,7 @@ sub load_shared_dirs() {
 			}
 		}
 
-		my $makefile = load_lines("$cwd_pkgsrcdir/$pkg/Makefile", true);
-		assert(defined($makefile), "$pkg/Makefile is not readable.");
+		my $makefile = load_existing_lines("$cwd_pkgsrcdir/$pkg/Makefile", true);
 		foreach my $line (@$makefile) {
 			my $pkgname = undef;
 
@@ -5521,8 +5505,6 @@ sub checkfile_distinfo($) {
 	$patches_dir = $patchdir;
 	if (!defined($patches_dir) && -d "${current_dir}/patches") {
 		$patches_dir = "patches";
-	} else {
-		# it stays undefined.
 	}
 
 	my $on_filename_change = sub($$) {
@@ -5581,7 +5563,7 @@ sub checkfile_distinfo($) {
 
 		push(@seen_algs, $alg);
 
-		if ($is_patch && $alg eq "SHA1" && defined($patches_dir) && !(defined($distinfo_file) && $distinfo_file eq "./../../lang/php5/distinfo")) {
+		if ($is_patch && defined($patches_dir) && !(defined($distinfo_file) && $distinfo_file eq "./../../lang/php5/distinfo")) {
 			my $fname = "${current_dir}/${patches_dir}/${chksum_fname}";
 			if ($di_is_committed && !is_committed($fname)) {
 				$line->log_warning("${patches_dir}/${chksum_fname} is registered in distinfo but not added to CVS.");
@@ -5607,7 +5589,7 @@ sub checkfile_distinfo($) {
 		$in_distinfo{$chksum_fname} = true;
 
 	}
-	$on_filename_change->(PkgLint::Line->new($fname, undef, "", []), undef);
+	$on_filename_change->(PkgLint::Line->new($fname, NO_LINE_NUMBER, "", []), undef);
 	checklines_trailing_empty_lines($lines);
 
 	if (defined($patches_dir)) {
@@ -5622,35 +5604,25 @@ sub checkfile_distinfo($) {
 
 sub checkfile_extra($) {
 	my ($fname) = @_;
-	my ($lines);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_extra()");
 
-	$lines = load_file($fname);
-	if (!$lines) {
-		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
-		return;
-	}
+	my $lines = load_file($fname) or return log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 	checklines_trailing_empty_lines($lines);
 	checkperms($fname);
 }
 
 sub checkfile_INSTALL($) {
 	my ($fname) = @_;
-	my ($lines);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_INSTALL()");
 
 	checkperms($fname);
-	if (!($lines = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
+	my $lines = load_file($fname) or return log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 }
 
 sub checkfile_MESSAGE($) {
 	my ($fname) = @_;
-	my ($lines);
 
 	my @explanation = (
 		"A MESSAGE file should consist of a header line, having 75 \"=\"",
@@ -5661,10 +5633,7 @@ sub checkfile_MESSAGE($) {
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_MESSAGE()");
 
 	checkperms($fname);
-	if (!($lines = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
+	my $lines = load_file($fname) or return log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 
 	if (@{$lines} < 3) {
 		log_warning($fname, NO_LINE_NUMBER, "File too short.");
@@ -5691,15 +5660,11 @@ sub checkfile_MESSAGE($) {
 
 sub checkfile_mk($) {
 	my ($fname) = @_;
-	my ($lines);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_mk()");
 
 	checkperms($fname);
-	if (!($lines = load_lines($fname, true))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
+	my $lines = load_lines($fname, true) or return log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 
 	parselines_mk($lines);
 	checklines_mk($lines);
