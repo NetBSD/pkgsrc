@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/10/15 14:19:54 tnn Exp $
 
 DISTNAME=	atkmm-2.22.7
 PKGREVISION=	3
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 CONFLICTS+=	gtkmm<2.22.0
 
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gmake perl pkg-config
 GNU_CONFIGURE=		yes
