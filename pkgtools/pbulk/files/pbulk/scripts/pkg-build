@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.27 2015/09/13 11:45:37 joerg Exp $
+# $NetBSD: pkg-build,v 1.28 2015/10/15 11:47:47 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -39,6 +39,7 @@ if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
 fi
 
 default_sync_package() {
+	mkdir -p ${packages}/All
 	cp "$1" "${packages}/All/${pkgname}${pkg_sufx}"
 	for cat in $3; do
 		mkdir -p ${packages}/$cat
