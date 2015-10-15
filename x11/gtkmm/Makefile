@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/06/12 10:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2015/10/15 14:19:54 tnn Exp $
 
 DISTNAME=	gtkmm-2.24.4
 PKGREVISION=	6
@@ -12,6 +12,7 @@ COMMENT=	C++ interface to Gtk+ v2
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
