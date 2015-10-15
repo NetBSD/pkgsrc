@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/10/15 10:40:52 jperkin Exp $
 #
 
-DISTNAME=		user-darwin-20130712
+DISTNAME=		user-darwin-20151015
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
