@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.81 2015/10/11 07:27:12 rillig Exp $
+$NetBSD: TODO,v 1.82 2015/10/15 02:09:49 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -12,8 +12,6 @@ include the name of an example package where a warning should occur.
   don't. Find out how pkglint can distinguish them.
 * Make sure that no variable is modified at load-time after it has been
   used once. This should at least flag BUILD_DEFS in bsd.pkg.mk.
-* Implement unescape_shellword, which is required for the type check for
-  SedCommand.
 * Invent an annotation scheme for files that intentionally define
   variables for use in other files.
 * ${MACHINE_ARCH}-${LOWER_OPSYS}elf in PLISTs etc. is a NetBSD config.guess
