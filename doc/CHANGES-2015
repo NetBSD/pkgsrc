@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4269 2015/10/15 09:50:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4270 2015/10/15 10:35:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7343,3 +7343,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/xkeyboard-config to 2.16 [wiz 2015-10-15]
 	Updated devel/pkg-config to 0.29 [wiz 2015-10-15]
 	Updated audio/abcde to 2.7.1 [wiz 2015-10-15]
+	Updated devel/py-mercurial to 3.5.2 [wiz 2015-10-15]
