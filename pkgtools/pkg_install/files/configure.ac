@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.39 2015/01/22 18:15:39 pho Exp $
+dnl $NetBSD: configure.ac,v 1.40 2015/10/15 13:31:27 sevan Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -67,9 +67,8 @@ AC_HEADER_STDC
 AC_CHECK_HEADERS([assert.h ctype.h dirent.h err.h errno.h fnctl.h \
 	fnmatch.h glob.h grp.h inttypes.h limits.h pwd.h signal.h \
 	stdarg.h stdio.h stdlib.h string.h time.h unistd.h vis.h])
-AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/param.h \
-	sys/queue.h sys/stat.h sys/time.h sys/types.h sys/utsname.h \
-	sys/wait.h])
+AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/queue.h \
+	sys/stat.h sys/time.h sys/types.h sys/utsname.h sys/wait.h])
 
 # Checks for library functions.
 AC_CHECK_FUNCS([vfork])
