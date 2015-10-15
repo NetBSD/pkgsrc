@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2015/07/30 12:37:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2015/10/15 17:31:32 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -46,6 +46,7 @@ share/doc/sqlite3/c3ref/c_deterministic.html
 share/doc/sqlite3/c3ref/c_fail.html
 share/doc/sqlite3/c3ref/c_fcntl_busyhandler.html
 share/doc/sqlite3/c3ref/c_index_constraint_eq.html
+share/doc/sqlite3/c3ref/c_index_scan_unique.html
 share/doc/sqlite3/c3ref/c_iocap_atomic.html
 share/doc/sqlite3/c3ref/c_limit_attached.html
 share/doc/sqlite3/c3ref/c_lock_exclusive.html
@@ -139,6 +140,7 @@ share/doc/sqlite3/c3ref/release_memory.html
 share/doc/sqlite3/c3ref/reset.html
 share/doc/sqlite3/c3ref/reset_auto_extension.html
 share/doc/sqlite3/c3ref/result_blob.html
+share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/set_authorizer.html
 share/doc/sqlite3/c3ref/sleep.html
 share/doc/sqlite3/c3ref/soft_heap_limit.html
@@ -167,6 +169,7 @@ share/doc/sqlite3/c3ref/user_data.html
 share/doc/sqlite3/c3ref/value.html
 share/doc/sqlite3/c3ref/value_blob.html
 share/doc/sqlite3/c3ref/value_dup.html
+share/doc/sqlite3/c3ref/value_subtype.html
 share/doc/sqlite3/c3ref/vfs.html
 share/doc/sqlite3/c3ref/vfs_find.html
 share/doc/sqlite3/c3ref/vtab.html
@@ -181,6 +184,7 @@ share/doc/sqlite3/c_interface.html
 share/doc/sqlite3/capi3.html
 share/doc/sqlite3/capi3ref.html
 share/doc/sqlite3/changes.html
+share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
 share/doc/sqlite3/cli.html
 share/doc/sqlite3/compile.html
@@ -207,6 +211,7 @@ share/doc/sqlite3/docs.html
 share/doc/sqlite3/download.html
 share/doc/sqlite3/eqp.html
 share/doc/sqlite3/errlog.html
+share/doc/sqlite3/expridx.html
 share/doc/sqlite3/famous.html
 share/doc/sqlite3/faq.html
 share/doc/sqlite3/favicon.ico
@@ -310,6 +315,7 @@ share/doc/sqlite3/images/foreignlogos/bentley.jpg
 share/doc/sqlite3/images/foreignlogos/bloomberg.gif
 share/doc/sqlite3/images/foreignlogos/bosch_logo1.gif
 share/doc/sqlite3/images/foreignlogos/dropbox.gif
+share/doc/sqlite3/images/foreignlogos/expensify.png
 share/doc/sqlite3/images/foreignlogos/firefox.gif
 share/doc/sqlite3/images/foreignlogos/flame.gif
 share/doc/sqlite3/images/foreignlogos/ge.gif
@@ -319,6 +325,7 @@ share/doc/sqlite3/images/foreignlogos/mcaffee.gif
 share/doc/sqlite3/images/foreignlogos/microsoft.gif
 share/doc/sqlite3/images/foreignlogos/monotone.gif
 share/doc/sqlite3/images/foreignlogos/mozilla.gif
+share/doc/sqlite3/images/foreignlogos/nds.png
 share/doc/sqlite3/images/foreignlogos/nokia.gif
 share/doc/sqlite3/images/foreignlogos/oracle.gif
 share/doc/sqlite3/images/foreignlogos/philips.gif
@@ -453,6 +460,7 @@ share/doc/sqlite3/index.html
 share/doc/sqlite3/inmemorydb.html
 share/doc/sqlite3/intern-v-extern-blob.html
 share/doc/sqlite3/isolation.html
+share/doc/sqlite3/json1.html
 share/doc/sqlite3/keyword_index.html
 share/doc/sqlite3/lang.html
 share/doc/sqlite3/lang_aggfunc.html
@@ -655,6 +663,7 @@ share/doc/sqlite3/releaselog/3_8_8_1.html
 share/doc/sqlite3/releaselog/3_8_8_2.html
 share/doc/sqlite3/releaselog/3_8_8_3.html
 share/doc/sqlite3/releaselog/3_8_9.html
+share/doc/sqlite3/releaselog/3_9_0.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/rescode.html
@@ -743,10 +752,12 @@ share/doc/sqlite3/th3.html
 share/doc/sqlite3/threadsafe.html
 share/doc/sqlite3/toc.db
 share/doc/sqlite3/transactional.html
+share/doc/sqlite3/undoredo.html
 share/doc/sqlite3/unlock_notify.html
 share/doc/sqlite3/uri.html
 share/doc/sqlite3/vdbe.html
 share/doc/sqlite3/version3.html
+share/doc/sqlite3/versionnumbers.html
 share/doc/sqlite3/vfs.html
 share/doc/sqlite3/vtab.html
 share/doc/sqlite3/wal.html
