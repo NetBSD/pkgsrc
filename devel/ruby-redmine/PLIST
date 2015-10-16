@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2015/10/13 12:30:38 ryoon Exp $
-bin/redmine_fix_gems22.sh
-bin/redmine_generate_secret22.sh
-bin/redmine_migrate_db22.sh
-bin/redmine_migrate_plugins22.sh
+@comment $NetBSD: PLIST,v 1.6 2015/10/16 12:09:46 ryoon Exp $
+bin/redmine_fix_gems${RUBY_SUFFIX}.sh
+bin/redmine_generate_secret${RUBY_SUFFIX}.sh
+bin/redmine_migrate_db${RUBY_SUFFIX}.sh
+bin/redmine_migrate_plugins${RUBY_SUFFIX}.sh
 ${RUBY_EG}-redmine/additional_environment.rb.example
 ${RUBY_EG}-redmine/configuration.yml.example
 ${RUBY_EG}-redmine/database.yml.example
