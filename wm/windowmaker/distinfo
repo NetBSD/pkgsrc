@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.39 2015/02/02 11:30:37 jperkin Exp $
+$NetBSD: distinfo,v 1.40 2015/10/16 10:42:23 adam Exp $
 
-SHA1 (WindowMaker-0.95.6.tar.gz) = e39c9d1bb012a087de5791c9474ff8776b2d230b
-RMD160 (WindowMaker-0.95.6.tar.gz) = 6faba86fb79190fe1e9de0192e1003603dbcf4ac
-Size (WindowMaker-0.95.6.tar.gz) = 3004856 bytes
-SHA1 (patch-aa) = e926a78bc5b800a1e5fbc8792099fc4a97ae916f
-SHA1 (patch-ab) = f954dadf7863a0ffc5eb4fb31bfadc218570324d
-SHA1 (patch-ac) = 0a2843e3f8e8456080082d1f3e57f58a5d440d18
-SHA1 (patch-ad) = ec668c0e40289e87e92ec85d26810ef358d2407a
-SHA1 (patch-ae) = af4cf08ef774080efeaa5baa2662748418b442a3
-SHA1 (patch-af) = 87c1ddd22f4afae10ae60f012d12a41de44b0f12
-SHA1 (patch-ai) = e13349dcdf08a332d8979a21b45c2a8be4951ce2
-SHA1 (patch-aj) = 14636a50f9cb1a2353f813cd7873de0e6c31ddb4
-SHA1 (patch-ak) = 40221313ce3456f4357082caec17991390607159
-SHA1 (patch-doc_cs_Makefile.in) = ab0b42a60863fec8fba0de0e8a2ae74fa3cf8103
-SHA1 (patch-doc_ru_Makefile.in) = 7c0b861c6bbe457e8e55e0265335195b95bbe031
+SHA1 (WindowMaker-0.95.7.tar.gz) = ceae84f67e056dd291199b76afd0235edda214a0
+RMD160 (WindowMaker-0.95.7.tar.gz) = 2ae5003eb4e59b89c2b81c3b7b751b2f2dc98b14
+SHA512 (WindowMaker-0.95.7.tar.gz) = 9c1190503efdc58c11a90d5ba80796979cdc9f2beb69a6d233ffc8d531a54c877c5270841bf6318738069098cd488e5ab77ac19f661ac888e892bf05ac22d93f
+Size (WindowMaker-0.95.7.tar.gz) = 3238325 bytes
+SHA1 (patch-WINGs_dragsource.c) = a9b8dfb0ac453e5835b683a2119428d0b1182ced
+SHA1 (patch-WindowMaker_Defaults_Makefile.in) = 3f0fbb4f1adef603cc7e3c371c3e72dd1d8f594c
+SHA1 (patch-configure) = dde661da4d1b3632b4710285f9f7a9485356e8b8
 SHA1 (patch-src_event.c) = 9f72b77f7f7890c9b4283eecca3e2bb25ad8d5b3
-SHA1 (patch-wrlib_load__gif.c) = 039c342b99d8cc4edf4ce6ee93c9d1a1a2ac1f5d
+SHA1 (patch-src_main.c) = e1693470d803b96f8ff93906dfeea43d5c3509c9
+SHA1 (patch-src_switchpanel.c) = 4c494eff64b17bf4b08ddaafc95ffa37f43452f9
+SHA1 (patch-util_Makefile.in) = 066a9e54b4b4f7be6415259b737c85171f9aa548
+SHA1 (patch-wrlib_Makefile.in) = a7a5f601219c1fe8f7f0273a2a1518ab0d8e99b2
