@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.9 2013/05/21 14:38:40 hans Exp $
+$NetBSD: patch-src_main.c,v 1.1 2015/10/16 10:42:23 adam Exp $
 
---- src/main.c.orig	2013-01-09 21:42:49.000000000 +0000
+--- src/main.c.orig	2015-08-11 18:41:14.000000000 +0000
 +++ src/main.c
 @@ -31,6 +31,7 @@
  #include <sys/stat.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.9 2013/05/21 14:38:40 hans Exp $
  
  #include <X11/Xlib.h>
  #include <X11/Xutil.h>
-@@ -315,6 +316,12 @@ void SetupEnvironment(WScreen * scr)
+@@ -241,6 +242,12 @@ void SetupEnvironment(WScreen * scr)
  {
  	char *tmp, *ptr;
  	char buf[16];
