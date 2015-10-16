@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.4 2014/10/07 16:11:11 adam Exp $
+$NetBSD: patch-src_switchpanel.c,v 1.1 2015/10/16 10:42:23 adam Exp $
 
---- src/switchpanel.c.orig	2014-08-30 12:29:09.000000000 +0000
+--- src/switchpanel.c.orig	2015-08-11 18:41:14.000000000 +0000
 +++ src/switchpanel.c
 @@ -37,6 +37,8 @@
  

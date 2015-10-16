@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.15 2014/01/17 08:48:06 adam Exp $
+$NetBSD: patch-configure,v 1.1 2015/10/16 10:42:23 adam Exp $
 
---- configure.orig	2013-01-09 21:43:05.000000000 +0000
+--- configure.orig	2015-08-11 18:52:18.000000000 +0000
 +++ configure
-@@ -11948,9 +11948,9 @@ test "x$exec_prefix" = xNONE && exec_pre
- _bindir=`eval echo $bindir`
- _bindir=`eval echo $_bindir`
+@@ -13840,9 +13840,9 @@ _bindir=`eval echo $_bindir`
+ _libdir=`eval echo $libdir`
+ _libdir=`eval echo $_libdir`
  
 -lib_search_path='-L${libdir}'
 +lib_search_path="-L${BUILDLINK_DIR}/lib -L${BUILDLINK_X11_DIR}/lib"
