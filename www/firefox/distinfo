@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.218 2015/10/07 23:21:22 joerg Exp $
+$NetBSD: distinfo,v 1.219 2015/10/16 12:59:36 jmcneill Exp $
 
 SHA1 (firefox-41.0.1.source.tar.xz) = 4f6bf34b7b286e033f401d7d4112ec6310577aae
 RMD160 (firefox-41.0.1.source.tar.xz) = 527ab5c4f55f654b2570163a0b4dcc620e77bee8
@@ -33,14 +33,19 @@ SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae619540665
 SHA1 (patch-dom_plugins_ipc_PluginProcessChild.cpp) = 0d10aa4c913d431fb8fa5f995f6e40cb364f069e
 SHA1 (patch-dom_system_OSFileConstants.cpp) = 4fe5d4ecf6116c7163ee6d2322db8b1b783fe5ec
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 747354373bcaf2c76bdff71677f354d47837704b
+SHA1 (patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 0379bef956f8abf2da2e059389149e133527faab
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2cc997cab71a84c1f50a791693519a0626564426
 SHA1 (patch-gfx_graphite2_moz-gr-update.sh) = b987dad1bd4513b8a04fb280bd1c5280a03af746
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
 SHA1 (patch-gfx_skia_generate__mozbuild.py) = b15b7586cfbdea112bcf4b5792663f4cdbe91560
 SHA1 (patch-gfx_skia_moz.build) = 2537653a708b986d179d17ffdb56e88fe147290c
+SHA1 (patch-gfx_skia_trunk_src_core_SkUtilsArm.cpp) = b2b38f65d27f60e2be6a49f3eae63b59bf96d0e5
+SHA1 (patch-gfx_skia_trunk_src_opts_SkBitmapProcState__opts__arm.cpp) = 208a46fa9012546b62249b3b12650805e12f4dbc
+SHA1 (patch-gfx_skia_trunk_src_opts_memset.arm.S) = 47a0fc35dbd57c995cde20e7294f7de90dc2f07e
 SHA1 (patch-gfx_thebes_gfxWindowsPlatform.cpp) = 55f978ab302dea08e13dfb1b09f460f10d4f5dc8
 SHA1 (patch-gfx_thebes_moz.build) = f64917350eaf693866b0e7196cb7f1cc9e9470fc
+SHA1 (patch-gfx_ycbcr__row__arm.s) = cddf801b7ffc113a3e26bcc1f8d4a0aa3ced60c7
 SHA1 (patch-gfx_ycbcr_moz.build) = 121386ef62ff7425e6f93bc624555199f2ac3485
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f9909ded72762b2c3547dd002707db43745f2b9d
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = 522c46732d44be15411d39e16c89bc848d5c6f7a
@@ -104,6 +109,7 @@ SHA1 (patch-media_libvorbis_moz.build) = 927f7848305eb2341c9efa96800d30b4a1b8eaa
 SHA1 (patch-media_libyuv_include_libyuv_scale__row.h) = 503b6f2065e9d548a1f01f7158d65874f4886c78
 SHA1 (patch-media_mtransport_third__party_nICEr_src_util_mbslen.c) = 087e8788c72b96d2059ca82ce4282d78aed546da
 SHA1 (patch-media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h) = de7055f891387f96f8fd32366c7189d480354e9e
+SHA1 (patch-media_openmax__dl_dl_api_armCOMM__s.h) = 1ce4fe73581ea53f03858f97ce7d7214bcbb5f51
 SHA1 (patch-media_webrtc_signaling_test_common.build) = febf2033154d64208632524732c4ef26e9247267
 SHA1 (patch-media_webrtc_trunk_webrtc_build_common.gypi) = 4ff5796e15d9aa6adb8495d6f2e5a7f0445a0fac
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__coding_codecs_opus_opus.gypi) = e47f1c64c0455f1b31011bf90346645a4ce38e52
@@ -141,6 +147,7 @@ SHA1 (patch-testing_mozharness_configs_vcs__sync_staging__build-repos.py) = dd52
 SHA1 (patch-testing_mozharness_configs_vcs__sync_staging__l10n.py) = d1d6ab7d789a97a079989cc600038d4790a0e809
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 6b926ccd793391ad7bd7101635f4b3eefe3db130
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = f5adba2137f2d7fd4d4a6a1e8ef8625866513890
+SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 4b664bb6ac2c23e8bfddd406bf76e288548e8910
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_platform__macros.h) = 3b0973c96eadb7bff91eab211d3c159a9b22fa9c
 SHA1 (patch-toolkit_library_moz.build) = 625d78e64959f78a5d0b8148749bb43a0abcbcf7
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
