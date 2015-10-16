@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4286 2015/10/15 17:33:04 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4287 2015/10/16 10:44:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -1120,7 +1120,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Module-Metadata to 1.000026 [mef 2015-02-12]
 	Updated devel/p5-Module-ScanDeps to 1.18 [mef 2015-02-12]
 	Updated devel/p5-Module-Starter to 1.710 [mef 2015-02-12]
-        Updated pkgtools/pkg_rolling-replace to 0.24.2 [abs 2015-02-12]
+	Updated pkgtools/pkg_rolling-replace to 0.24.2 [abs 2015-02-12]
 	Updated multimedia/x265 to 1.5 [adam 2015-02-12]
 	Updated devel/p5-FindBin-libs to 2.12 [schmonz 2015-02-12]
 	Updated security/openssl to 1.0.2 [adam 2015-02-12]
@@ -5363,7 +5363,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/p5-DateTime-TimeZone to 1.92 [wiz 2015-06-29]
 	Updated x11/xf86-input-vmmouse to 13.1.0 [wiz 2015-06-29]
 	Updated sysutils/xfce4-diskperf-plugin to 2.5.5 [youri 2015-06-29]
-        Updated sysutils/logrotate to 0.9.1 [nils 2015-06-29]
+	Updated sysutils/logrotate to 0.9.1 [nils 2015-06-29]
 	Updated multimedia/ffmpeg2 to 2.7.1 [adam 2015-06-29]
 	Updated multimedia/ffplay2 to 2.7.1 [adam 2015-06-29]
 	Updated graphics/lensfun to 0.3.1 [adam 2015-06-29]
@@ -5732,7 +5732,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/fml4 to 4.0.3.20040215nb9 [taca 2015-07-20]
 	Updated www/apache24 to 2.4.16 [taca 2015-07-20]
 	Updated lang/clang to 3.6.2 [adam 2015-07-20]
-        Updated lang/libLLVM to 3.6.2 [adam 2015-07-20]
+	Updated lang/libLLVM to 3.6.2 [adam 2015-07-20]
 	Added devel/py-setuptools_scm version 1.5.5 [wiz 2015-07-20]
 	Updated time/py-vdirsyncer to 0.5.2nb1 [wiz 2015-07-20]
 	Updated audio/mpg123 to 1.22.2 [adam 2015-07-20]
@@ -7363,3 +7363,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-docs to 3.9.0 [adam 2015-10-15]
 	Updated databases/sqlite3-tcl to 3.9.0 [adam 2015-10-15]
 	Updated multimedia/ffmpeg2 to 2.8.1 [adam 2015-10-15]
+	Updated wm/windowmaker to 0.95.7 [adam 2015-10-16]
