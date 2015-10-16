@@ -1,6 +1,6 @@
-$NetBSD: patch-gio_gtestdbus.c,v 1.1 2015/10/16 10:18:48 tnn Exp $
+$NetBSD: patch-gio_gtestdbus.c,v 1.2 2015/10/16 17:00:24 tnn Exp $
 
-%m modifier is a GNU extension and not permitted in sprintf.
+https://bugzilla.gnome.org/show_bug.cgi?id=756706
 
 --- gio/gtestdbus.c.orig	2015-05-13 02:39:04.000000000 +0000
 +++ gio/gtestdbus.c
