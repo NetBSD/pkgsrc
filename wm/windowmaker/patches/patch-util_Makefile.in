@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.6 2014/01/17 08:48:06 adam Exp $
+$NetBSD: patch-util_Makefile.in,v 1.1 2015/10/16 10:42:23 adam Exp $
 
---- util/Makefile.in.orig	2013-09-12 22:00:17.000000000 +0000
+--- util/Makefile.in.orig	2015-08-11 18:52:20.000000000 +0000
 +++ util/Makefile.in
-@@ -375,21 +375,21 @@ AM_CPPFLAGS = -DLOCALEDIR=\"$(NLSDIR)\" 
+@@ -482,21 +482,21 @@ AM_CPPFLAGS = \
  	-DETCDIR=\"sysconfdir\" -DDATADIR=\"pkgdatadir\"
  
  liblist = @LIBRARY_SEARCH_PATH@ @INTLIBS@

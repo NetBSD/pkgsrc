@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/10/07 16:11:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/10/16 10:42:23 adam Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -55,6 +55,7 @@ man/man1/wdwrite.1
 man/man1/wmagnify.1
 man/man1/wmaker.1
 man/man1/wmgenmenu.1
+man/man1/wmiv.1
 man/man1/wmmenugen.1
 man/man1/wmsetbg.1
 man/man1/wxcopy.1
@@ -117,6 +118,7 @@ share/GNUstep/Applications/WPrefs.app/tiff/oldstyle.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/opaque.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/opaqueresize.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/paths.tiff
+share/GNUstep/Applications/WPrefs.app/tiff/smallwindow.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/smooth.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/sound.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/speed0.tiff
@@ -290,6 +292,7 @@ share/WindowMaker/menu.el
 share/WindowMaker/menu.es
 share/WindowMaker/menu.fi
 share/WindowMaker/menu.fr
+share/WindowMaker/menu.fy
 share/WindowMaker/menu.gl
 share/WindowMaker/menu.he
 share/WindowMaker/menu.hr
@@ -316,6 +319,7 @@ share/WindowMaker/plmenu.de
 share/WindowMaker/plmenu.es
 share/WindowMaker/plmenu.fi
 share/WindowMaker/plmenu.fr
+share/WindowMaker/plmenu.fy
 share/WindowMaker/plmenu.hr
 share/WindowMaker/plmenu.it
 share/WindowMaker/plmenu.ja
@@ -327,10 +331,6 @@ share/WindowMaker/plmenu.sk
 share/WindowMaker/plmenu.zh_CN
 share/WindowMaker/plmenu.zh_TW
 share/WindowMaker/wmmacros
-share/doc/WindowMaker/FAQ
-share/doc/WindowMaker/FAQ.I18N
-share/doc/WindowMaker/README
-share/doc/WindowMaker/README.definable-cursor
 share/examples/WindowMaker/WMGLOBAL
 share/examples/WindowMaker/WMRootMenu
 share/examples/WindowMaker/WMState

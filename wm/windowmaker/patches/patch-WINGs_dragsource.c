@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.3 2014/10/07 16:11:11 adam Exp $
+$NetBSD: patch-WINGs_dragsource.c,v 1.1 2015/10/16 10:42:23 adam Exp $
 
---- WINGs/dragsource.c.orig	2014-08-30 12:29:09.000000000 +0000
+--- WINGs/dragsource.c.orig	2015-08-11 18:41:14.000000000 +0000
 +++ WINGs/dragsource.c
 @@ -2,6 +2,8 @@
  #include "wconfig.h"

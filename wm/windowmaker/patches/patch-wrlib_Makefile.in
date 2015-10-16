@@ -1,0 +1,13 @@
+$NetBSD: patch-wrlib_Makefile.in,v 1.1 2015/10/16 10:42:23 adam Exp $
+
+--- wrlib/Makefile.in.orig	2015-08-11 18:52:20.000000000 +0000
++++ wrlib/Makefile.in
+@@ -447,7 +447,7 @@ DIST_SUBDIRS = $(SUBDIRS) tests
+ AUTOMAKE_OPTIONS = 
+ EXTRA_DIST = tests
+ lib_LTLIBRARIES = libwraster.la
+-libwraster_la_LDFLAGS = -version-info @WRASTER_VERSION@ \
++libwraster_la_LDFLAGS = @LIBRARY_SEARCH_PATH@ @GFXLIBS@ @XLIBS@ -lm -version-info @WRASTER_VERSION@ \
+ 	$(am__append_1)
+ @HAVE_LD_VERSION_SCRIPT_TRUE@EXTRA_libwraster_la_DEPENDENCIES = libwraster.map
+ @HAVE_LD_VERSION_SCRIPT_TRUE@CLEANFILES = libwraster.map

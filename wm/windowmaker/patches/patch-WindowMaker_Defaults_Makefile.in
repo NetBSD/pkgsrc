@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2013/05/21 14:38:40 hans Exp $
+$NetBSD: patch-WindowMaker_Defaults_Makefile.in,v 1.1 2015/10/16 10:42:23 adam Exp $
 
---- WindowMaker/Defaults/Makefile.in.orig	2013-01-09 21:43:07.000000000 +0000
+--- WindowMaker/Defaults/Makefile.in.orig	2015-08-11 18:52:19.000000000 +0000
 +++ WindowMaker/Defaults/Makefile.in
-@@ -235,7 +235,7 @@ top_builddir = @top_builddir@
+@@ -314,7 +314,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  wprefs_bindir = @wprefs_bindir@
  wprefs_datadir = @wprefs_datadir@
