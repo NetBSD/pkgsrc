@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4287 2015/10/16 10:44:13 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4288 2015/10/16 20:56:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7364,3 +7364,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-tcl to 3.9.0 [adam 2015-10-15]
 	Updated multimedia/ffmpeg2 to 2.8.1 [adam 2015-10-15]
 	Updated wm/windowmaker to 0.95.7 [adam 2015-10-16]
+	Updated www/firefox to 41.0.2 [ryoon 2015-10-16]
+	Updated www/firefox-l10n to 41.0.2 [ryoon 2015-10-16]
