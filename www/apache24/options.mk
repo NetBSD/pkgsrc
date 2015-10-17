@@ -1,14 +1,15 @@
-# $NetBSD: options.mk,v 1.10 2015/06/26 19:25:12 ryoon Exp $
+# $NetBSD: options.mk,v 1.11 2015/10/17 10:16:35 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
-PKG_SUPPORTED_OPTIONS=		lua suexec apache-mpm-event apache-mpm-prefork apache-mpm-worker
+PKG_SUPPORTED_OPTIONS=		apache-mpm-event apache-mpm-prefork apache-mpm-worker \
+				lua http2 suexec
 PKG_SUGGESTED_OPTIONS=		apache-mpm-event apache-mpm-prefork \
 				apache-mpm-worker
 
 .if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.1[0-9])
 PKG_SUPPORTED_OPTIONS+=		privileges
 # Disabled until DTrace support is fully implemented/fixed
-# PKG_SUPPORTED_OPTIONS+=		dtrace
+#PKG_SUPPORTED_OPTIONS+=		dtrace
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -24,6 +25,7 @@ PKG_SUPPORTED_OPTIONS+=		privileges
 #	worker		hybrid multi-threaded multi-process web server
 #
 PLIST_VARS+=		worker prefork event only-prefork not-only-prefork
+PLIST_VARS+=		http2 lua privileges suexec
 
 .if !empty(PKG_OPTIONS:Mapache-mpm-event)
 MPMS+=			event
@@ -54,7 +56,6 @@ PLIST.not-only-prefork=	yes
 
 BUILD_DEFS+=		APACHE_MODULES
 
-PLIST_VARS+=		suexec
 .if !empty(PKG_OPTIONS:Msuexec)
 BUILD_DEFS+=		APACHE_SUEXEC_PATH
 BUILD_DEFS+=		APACHE_SUEXEC_DOCROOT APACHE_SUEXEC_LOGFILE
@@ -79,22 +80,28 @@ PLIST.suexec=		yes
 SPECIAL_PERMS+=		sbin/suexec ${REAL_ROOT_USER} ${APACHE_GROUP} 4510
 .endif
 
-PLIST_VARS+=		lua
+.if !empty(PKG_OPTIONS:Mhttp2)
+.include "../../www/nghttp2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-nghttp2
+PLIST.http2=		yes
+.else
+CONFIGURE_ARGS+=	--without-nghttp2
+.endif
+
 .if !empty(PKG_OPTIONS:Mlua)
-CONFIGURE_ARGS+=	--enable-lua
 .include "../../lang/lua/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-lua
 PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--disable-lua
 .endif
 
-PLIST_VARS+=		privileges
 .if !empty(PKG_OPTIONS:Mprivileges)
 CONFIGURE_ARGS+=	--enable-privileges
 PLIST.privileges=	yes
 .endif
 
 # DTrace support is manifest, but actually not implemented at all
-# .if !empty(PKG_OPTIONS:Mdtrace)
-# CONFIGURE_ARGS+=	--enable-dtrace
-# .endif
+#.if !empty(PKG_OPTIONS:Mdtrace)
+#CONFIGURE_ARGS+=	--enable-dtrace
+#.endif
