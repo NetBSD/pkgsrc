@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/09/01 08:26:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/10/17 10:16:35 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -119,6 +119,7 @@ lib/httpd/mod_filter.so
 lib/httpd/mod_headers.so
 lib/httpd/mod_heartbeat.so
 lib/httpd/mod_heartmonitor.so
+${PLIST.http2}lib/httpd/mod_http2.so
 lib/httpd/mod_include.so
 lib/httpd/mod_info.so
 lib/httpd/mod_lbmethod_bybusyness.so
@@ -1279,6 +1280,8 @@ share/httpd/manual/mod/mod_heartbeat.html.fr
 share/httpd/manual/mod/mod_heartmonitor.html
 share/httpd/manual/mod/mod_heartmonitor.html.en
 share/httpd/manual/mod/mod_heartmonitor.html.fr
+share/httpd/manual/mod/mod_http2.html
+share/httpd/manual/mod/mod_http2.html.en
 share/httpd/manual/mod/mod_ident.html
 share/httpd/manual/mod/mod_ident.html.en
 share/httpd/manual/mod/mod_ident.html.fr
