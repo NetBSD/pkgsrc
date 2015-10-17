@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4290 2015/10/17 05:52:00 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4291 2015/10/17 07:54:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7368,3 +7368,15 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox-l10n to 41.0.2 [ryoon 2015-10-16]
 	Added textproc/lucene++ version 3.0.7 [ryoon 2015-10-17]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.535 [tsutsui 2015-10-17]
+	Updated databases/sqlite3 to 3.9.1 [adam 2015-10-17]
+	Updated databases/sqlite3-docs to 3.9.1 [adam 2015-10-17]
+	Updated databases/sqlite3-tcl to 3.9.1 [adam 2015-10-17]
+	Updated devel/git to 2.6.2 [adam 2015-10-17]
+	Updated devel/git-base to 2.6.2 [adam 2015-10-17]
+	Updated devel/git-docs to 2.6.2 [adam 2015-10-17]
+	Updated devel/git-svn to 2.6.2 [adam 2015-10-17]
+	Updated devel/git-gitk to 2.6.2 [adam 2015-10-17]
+	Updated devel/git-contrib to 2.6.2 [adam 2015-10-17]
+	Updated www/gitweb to 2.6.2 [adam 2015-10-17]
+	Updated mail/dovecot2 to 2.2.19 [adam 2015-10-17]
+	Updated mail/dovecot2-pigeonhole to 0.4.9 [adam 2015-10-17]
