@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.58 2015/10/10 01:58:15 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.59 2015/10/17 09:14:43 adam Exp $
 
-DISTNAME=	aria2-1.18.10
-PKGREVISION=	2
+DISTNAME=	aria2-1.19.2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aria2.sourceforge.net/
 COMMENT=	Multi-threaded, multi-protocol, flexible download accelerator
 LICENSE=	gnu-gpl-v2
 
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
+
 # Minimum requirement is 4.6.4
 GCC_REQD+=	4.6
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison msgfmt msgmerge xgettext
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-
+USE_TOOLS+=		bison msgfmt msgmerge xgettext
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-bittorrent
 CONFIGURE_ARGS+=	--enable-metalink
 CONFIGURE_ARGS+=	--with-included-gettext=no
@@ -43,9 +42,9 @@ CONFIGURE_ARGS+=	--disable-xmltest
 
 .include "options.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
