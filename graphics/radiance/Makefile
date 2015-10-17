@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/02/27 14:35:01 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2015/10/17 22:23:25 dholland Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -54,7 +54,7 @@ REPLACE_CSH+=	obj/office/anim.csh obj/office/anim2.csh
 
 PLIST_VARS+=	gl
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig"
 PKGSRC_ARCH=	9
 .elif ${OPSYS} == "FreeBSD"
 PKGSRC_ARCH=	8
