@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4288 2015/10/16 20:56:17 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4289 2015/10/17 03:04:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7366,3 +7366,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated wm/windowmaker to 0.95.7 [adam 2015-10-16]
 	Updated www/firefox to 41.0.2 [ryoon 2015-10-16]
 	Updated www/firefox-l10n to 41.0.2 [ryoon 2015-10-16]
+	Added textproc/lucene++ version 3.0.7 [ryoon 2015-10-17]
