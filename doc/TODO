@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14993 2015/10/16 10:44:13 adam Exp $
+$NetBSD: TODO,v 1.14994 2015/10/17 09:57:26 wen Exp $
 
 Suggested new packages
 ======================
@@ -1267,7 +1267,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DateTime-Format-Pg-0.16011
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
-	o p5-Email-MIME-ContentType-1.018
 	o p5-Excel-Template-0.34
 	o p5-Excel-Template-Plus-0.06
 	o p5-File-Tail-1.2
