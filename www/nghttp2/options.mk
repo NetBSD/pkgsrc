@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/06/03 11:53:53 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2015/10/17 09:56:40 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nghttp2
 PKG_SUPPORTED_OPTIONS=	nghttp2-asio nghttp2-tools
@@ -16,7 +16,9 @@ PLIST_VARS+=	asio tools
 GCC_REQD+=		4.8
 CONFIGURE_ARGS+=	--enable-asio-lib
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
-CONFIGURE_ARGS+=	--with-boost-asio --with-boost-system --with-boost-thread
+CONFIGURE_ARGS+=	--with-boost-asio
+CONFIGURE_ARGS+=	--with-boost-system
+CONFIGURE_ARGS+=	--with-boost-thread
 PLIST.asio=		yes
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
