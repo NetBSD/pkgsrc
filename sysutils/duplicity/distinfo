@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2015/09/17 17:53:35 joerg Exp $
+$NetBSD: distinfo,v 1.19 2015/10/17 13:18:14 adam Exp $
 
-SHA1 (duplicity-0.6.25.tar.gz) = fe0b6b0b0dc7dbc02598d96567954b48c4308420
-RMD160 (duplicity-0.6.25.tar.gz) = a7457b3be4ea73707a1ef7b9021014a82f917eaa
-Size (duplicity-0.6.25.tar.gz) = 1269583 bytes
+SHA1 (duplicity-0.6.26.tar.gz) = ba6760852f0ed90d7fedade6d5fc72806added04
+RMD160 (duplicity-0.6.26.tar.gz) = 14a5f5ac3dcef81c4d7d488d9a8562d59b527838
+SHA512 (duplicity-0.6.26.tar.gz) = 0cd02984eda99c81a30c9ac9926c41df0597f8f287a3e8ccd7d6fb9d420159028112be6b3fc8acf9b413940c07d0e754b2a509b6bca52965d2c333d4bcec8689
+Size (duplicity-0.6.26.tar.gz) = 1270436 bytes
 SHA1 (patch-aa) = f1210f703dccf759f234846a3139ce98063011cb
-SHA1 (patch-duplicity___librsyncmodule.c) = 505d97e127051f6d7e4546e7343eea54a53083d2
