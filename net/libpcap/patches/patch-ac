@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.9 2015/03/11 21:05:09 tnn Exp $
+$NetBSD: patch-ac,v 1.10 2015/10/17 10:07:54 adam Exp $
 
 Add libtoolization
 Fix manpage installation
 
---- Makefile.in.orig	2015-03-09 19:22:07.000000000 +0000
+--- Makefile.in.orig	2015-06-28 01:03:37.000000000 +0000
 +++ Makefile.in
 @@ -43,7 +43,7 @@ VPATH = @srcdir@
  #
@@ -57,7 +57,7 @@ Fix manpage installation
  shared: libpcap.$(DYEXT)
  
 @@ -450,10 +449,10 @@ scanner.c: $(srcdir)/scanner.l
- 	cat $@.top $@.bottom > $@
+ 	cat $(srcdir)/$@.top $@.bottom > $@
  	@rm $@.bottom
  
 -scanner.o: scanner.c tokdefs.h
