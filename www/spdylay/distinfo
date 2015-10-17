@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/06/03 11:00:15 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/10/17 09:55:42 adam Exp $
 
-SHA1 (spdylay-1.3.2.tar.gz) = 3b6b1c3d0df223d826c06e72456c74a2e97cf7c4
-RMD160 (spdylay-1.3.2.tar.gz) = 8cda3f2e8130c68e0addfc4368b52f08597c2379
-Size (spdylay-1.3.2.tar.gz) = 936830 bytes
+SHA1 (spdylay-1.3.2.tar.xz) = a38f5b7a4569cc393b6797e66f2da882df7fd9a3
+RMD160 (spdylay-1.3.2.tar.xz) = ee85aa0e338af4f7d625c60792354251df8f46f8
+SHA512 (spdylay-1.3.2.tar.xz) = 05ebb3308fa6bd3fa0186e5421b32a8d960595f354841f1c27d1e188bf364d9fe98ca2d84f05426c0b62a33b04b95bfb0c8c713f017545768c9625d800231306
+Size (spdylay-1.3.2.tar.xz) = 660900 bytes
 SHA1 (patch-src_shrpx.cc) = 035a348dfcce942003d9c518001ad816ac04c8a7
