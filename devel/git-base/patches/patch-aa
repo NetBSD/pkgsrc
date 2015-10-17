@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2014/11/20 21:43:10 bsiegert Exp $
+$NetBSD: patch-aa,v 1.5 2015/10/17 07:44:56 adam Exp $
 
---- Makefile.orig	2014-05-30 21:38:10.000000000 +0000
+--- Makefile.orig	2015-10-16 21:58:26.000000000 +0000
 +++ Makefile
-@@ -354,8 +354,6 @@ GIT-VERSION-FILE: FORCE
+@@ -371,8 +371,6 @@ GIT-VERSION-FILE: FORCE
  
  CFLAGS = -g -O2 -Wall
  LDFLAGS =
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.4 2014/11/20 21:43:10 bsiegert Exp $
 -ALL_LDFLAGS = $(LDFLAGS)
  STRIP ?= strip
  
- # Among the variables below, these:
-@@ -396,13 +394,9 @@ htmldir_relative = $(patsubst $(prefix)/
+ # Create as necessary, replace existing, make ranlib unneeded.
+@@ -416,13 +414,9 @@ htmldir_relative = $(patsubst $(prefix)/
  
  export prefix bindir sharedir sysconfdir gitwebdir localedir
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.4 2014/11/20 21:43:10 bsiegert Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -1635,8 +1629,8 @@ ifdef DEFAULT_HELP_FORMAT
+@@ -1586,8 +1580,8 @@ ifdef DEFAULT_HELP_FORMAT
  BASIC_CFLAGS += -DDEFAULT_HELP_FORMAT='"$(DEFAULT_HELP_FORMAT)"'
  endif
  
@@ -36,10 +36,10 @@ $NetBSD: patch-aa,v 1.4 2014/11/20 21:43:10 bsiegert Exp $
  
  export DIFF TAR INSTALL DESTDIR SHELL_PATH
  
-@@ -2349,11 +2343,10 @@ install: all
+@@ -2278,11 +2272,10 @@ install: all
  ifndef NO_GETTEXT
-	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(localedir_SQ)'
-	(cd po/build/locale && $(TAR) cf - .) | \
+ 	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(localedir_SQ)'
+ 	(cd po/build/locale && $(TAR) cf - .) | \
 -	(cd '$(DESTDIR_SQ)$(localedir_SQ)' && umask 022 && $(TAR) xof -)
 +	(cd '$(DESTDIR_SQ)$(localedir_SQ)' && umask 022 && $(TAR) xf -)
  endif
