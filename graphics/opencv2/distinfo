@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2015/10/17 10:28:43 fhajny Exp $
+
+SHA1 (opencv-2.4.11.zip) = d6e3048416d42213c204f89b9dfe39742f9a708c
+RMD160 (opencv-2.4.11.zip) = 793391b05b571859005b98612cb176c02352a94f
+Size (opencv-2.4.11.zip) = 91671436 bytes
+SHA1 (patch-modules_contrib_src_inputoutput.cpp) = 57255cda71854e490d83602828299f0ab6420887
+SHA1 (patch-modules_contrib_src_spinimages.cpp) = b3e465700059616be991d597230bc8dc42f15be1
+SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = c056068c01c417dc262f21c00324da7f86c0cd8e
+SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
+SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
+SHA1 (patch-modules_ocl_src_gftt.cpp) = fe1107c1613881d050ec5a87fad12b916ac8b8fc
+SHA1 (patch-modules_python_src2_cv2.cv.hpp) = 477bc2dd2090fd2aa955a7335717e7a0f23ebdf8
+SHA1 (patch-modules_ts_src_ts.cpp) = 61e4ab59f2ca57f75212743bf869616dfc9e5f13
