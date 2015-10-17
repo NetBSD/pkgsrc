@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4289 2015/10/17 03:04:36 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4290 2015/10/17 05:52:00 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7367,3 +7367,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 41.0.2 [ryoon 2015-10-16]
 	Updated www/firefox-l10n to 41.0.2 [ryoon 2015-10-16]
 	Added textproc/lucene++ version 3.0.7 [ryoon 2015-10-17]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.535 [tsutsui 2015-10-17]
