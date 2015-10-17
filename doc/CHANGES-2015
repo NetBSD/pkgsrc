@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4302 2015/10/17 11:12:21 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4303 2015/10/17 12:42:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7396,3 +7396,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/awstats to 7.4 [adam 2015-10-17]
 	Updated devel/py-pbr to 1.8.1 [adam 2015-10-17]
 	Updated devel/py-lockfile to 0.11.0 [adam 2015-10-17]
+	Updated textproc/p5-Pod-Markdown to 3.003 [wen 2015-10-17]
