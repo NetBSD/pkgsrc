@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/10/17 09:55:42 adam Exp $
+# $NetBSD: Makefile,v 1.3 2015/10/17 11:03:09 fhajny Exp $
 
 DISTNAME=	spdylay-1.3.2
 CATEGORIES=	www
@@ -16,10 +16,12 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+
 CONFIGURE_ARGS=		--enable-examples
-CONFIGURE_ARGS=		--enable-src
+CONFIGURE_ARGS+=	--enable-src
 CONFIGURE_ENV+=		LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
 CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
+
 PKGCONFIG_OVERRIDE+=	lib/libspdylay.pc.in
 
 .include "../../mk/bsd.prefs.mk"
