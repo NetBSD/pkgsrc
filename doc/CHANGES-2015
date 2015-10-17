@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4297 2015/10/17 09:58:13 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4298 2015/10/17 10:17:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7387,3 +7387,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-Email-MIME-ContentType to 1.018 [wen 2015-10-17]
 	Updated devel/libev to 4.20 [adam 2015-10-17]
 	Updated www/nghttp2 to 1.3.4 [adam 2015-10-17]
+	Updated net/libpcap to 1.7.4 [adam 2015-10-17]
+	Updated net/tcpdump to 4.7.4 [adam 2015-10-17]
+	Updated www/apache24 to 2.4.17 [adam 2015-10-17]
