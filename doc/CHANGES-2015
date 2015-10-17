@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4304 2015/10/17 13:19:11 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4305 2015/10/17 18:00:11 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7398,3 +7398,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-lockfile to 0.11.0 [adam 2015-10-17]
 	Updated textproc/p5-Pod-Markdown to 3.003 [wen 2015-10-17]
 	Updated sysutils/duplicity to 0.6.26 [adam 2015-10-17]
+	Updated devel/deforaos-libsystem to 0.2.3 [khorben 2015-10-17]
