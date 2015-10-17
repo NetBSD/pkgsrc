@@ -1,20 +1,20 @@
-$NetBSD: patch-tests_tests.sh,v 1.3 2015/05/20 23:08:37 khorben Exp $
+$NetBSD: patch-tests_tests.sh,v 1.4 2015/10/17 17:57:28 khorben Exp $
 
 Avoid building the (experimental) Python binding.
 Use LD_LIBRARY_PATH to find pre-installed libraries.
 
---- tests/tests.sh.orig	2015-05-10 22:00:47.000000000 +0000
+--- tests/tests.sh.orig	2015-10-14 23:30:20.000000000 +0000
 +++ tests/tests.sh
 @@ -42,7 +42,7 @@ _run()
  	echo -n "$test:" 1>&2
  	(echo
  	echo "Testing: $test" "$@"
--	"$OBJDIR$test" "$@") 2>&1
-+	env LD_LIBRARY_PATH="../src" "$OBJDIR$test" "$@") 2>&1
+-	LD_LIBRARY_PATH="$OBJDIR../src" "$OBJDIR$test" "$@") 2>&1
++	env LD_LIBRARY_PATH="$OBJDIR../src" "$OBJDIR$test" "$@") 2>&1
  	res=$?
  	if [ $res -ne 0 ]; then
  		echo "Test: $test$sep$@: FAIL (error $res)"
-@@ -105,7 +105,7 @@ _test "includes"
+@@ -107,7 +107,7 @@ _test "includes"
  _test "string"
  _test "variable"
  echo "Expected failures:" 1>&2
