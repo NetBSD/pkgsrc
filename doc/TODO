@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14996 2015/10/17 10:17:32 adam Exp $
+$NetBSD: TODO,v 1.14997 2015/10/17 11:12:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.25.1
 	o awesome-3.5.6
-	o awstats-7.4
 	o baci-20040415
 	o base-1.4.5
 	o bastet-0.43
@@ -1521,7 +1520,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-notify-0.3.1
 	o py-oauthlib-1.0.1
 	o py-omniORBpy-3.7
-	o py-pbr-1.8.1
 	o py-pdf-parser-0.6.3
 	o py-pendrell-0.3.7
 	o py-proteus-3.6.1
