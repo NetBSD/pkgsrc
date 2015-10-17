@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.64 2015/09/29 15:22:07 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.65 2015/10/17 00:31:41 szptvlfn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -70,7 +70,6 @@ CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 #CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
