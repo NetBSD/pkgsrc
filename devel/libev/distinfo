@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/11/10 18:09:10 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/10/17 09:53:31 adam Exp $
 
-SHA1 (libev-4.15.tar.gz) = 88655b1e2c0b328c9f90a6df7e72361a97fa8dc3
-RMD160 (libev-4.15.tar.gz) = 100812a3d24b9968a670c9cd4f16c9de172a0994
-Size (libev-4.15.tar.gz) = 513919 bytes
-SHA1 (patch-ev.c) = abfc6630d0989e6d0d6d6474b19adff0e465ffb5
+SHA1 (libev-4.20.tar.gz) = 2b9e01e0ceda77bb214f66a663b374813a3296d0
+RMD160 (libev-4.20.tar.gz) = 58c52e5bb2c3911238c704daaa052d5dbde71b6e
+SHA512 (libev-4.20.tar.gz) = 0623f3fd4c8125c90b50d20aec2bd1bb2e42e4853723bb987d6289e588b3e063a002adc0fbcf9ee6a6f6c10eaf317b6aceb5cad139ff92f98af4df9001d901a6
+Size (libev-4.20.tar.gz) = 530091 bytes
