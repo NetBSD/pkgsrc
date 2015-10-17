@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/02/01 11:38:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2015/10/17 10:46:45 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -122,6 +122,7 @@ awstats/cgi-bin/plugins/clusterinfo.pm
 awstats/cgi-bin/plugins/decodeutfkeys.pm
 awstats/cgi-bin/plugins/export_to_csv.pm
 awstats/cgi-bin/plugins/geoip.pm
+awstats/cgi-bin/plugins/geoip6.pm
 awstats/cgi-bin/plugins/geoip_asn_maxmind.pm
 awstats/cgi-bin/plugins/geoip_city_maxmind.pm
 awstats/cgi-bin/plugins/geoip_isp_maxmind.pm
@@ -634,6 +635,8 @@ awstats/icon/os/linuxzenwalk.png
 awstats/icon/os/mac.png
 awstats/icon/os/macintosh.png
 awstats/icon/os/macosx.png
+awstats/icon/os/macosx10.png
+awstats/icon/os/macosx11.png
 awstats/icon/os/macosx4.png
 awstats/icon/os/macosx5.png
 awstats/icon/os/macosx6.png
@@ -660,6 +663,7 @@ awstats/icon/os/vms.png
 awstats/icon/os/webtv.png
 awstats/icon/os/wii.png
 awstats/icon/os/win.png
+awstats/icon/os/win10.png
 awstats/icon/os/win16.png
 awstats/icon/os/win2000.png
 awstats/icon/os/win2003.png
@@ -667,6 +671,8 @@ awstats/icon/os/win2008.png
 awstats/icon/os/win7.png
 awstats/icon/os/win8.1.png
 awstats/icon/os/win8.png
+awstats/icon/os/win80.png
+awstats/icon/os/win81.png
 awstats/icon/os/win95.png
 awstats/icon/os/win98.png
 awstats/icon/os/wince.png
