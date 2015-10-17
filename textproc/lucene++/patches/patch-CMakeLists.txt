@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/10/17 03:02:47 ryoon Exp $
+
+No cmake_uninstall.cmake is provided.
+
+--- CMakeLists.txt.orig	2015-01-30 16:14:22.000000000 +0000
++++ CMakeLists.txt
+@@ -182,17 +182,6 @@ install(
+ ####################################
+ # custom targets
+ ####################################
+-configure_file(
+-  "${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in"
+-  "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+-  IMMEDIATE @ONLY
+-)
+-
+-add_custom_target(
+-  uninstall
+-  "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+-  VERBATIM
+-)
+ 
+ if(ENABLE_PACKAGING)
+   include(CreateLucene++Packages)
