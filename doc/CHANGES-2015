@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4300 2015/10/17 10:35:47 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4301 2015/10/17 11:01:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7392,3 +7392,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache24 to 2.4.17 [adam 2015-10-17]
 	Added graphics/opencv2 version 2.4.11 [fhajny 2015-10-17]
 	Updated mail/p5-Mail-Box to 2.118 [wen 2015-10-17]
+	Updated textproc/p5-Pod-Simple to 3.31 [wen 2015-10-17]
