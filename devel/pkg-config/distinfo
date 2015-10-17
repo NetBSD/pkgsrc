@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2015/10/15 09:47:56 wiz Exp $
+$NetBSD: distinfo,v 1.29 2015/10/17 09:50:48 tnn Exp $
 
 SHA1 (pkg-config-0.29.tar.gz) = f4b19d203b3896a4293af4b62c7f908063c88a5a
 RMD160 (pkg-config-0.29.tar.gz) = 79036ecce25b2fc74ddf03b93e082d3b70f1e73a
 SHA512 (pkg-config-0.29.tar.gz) = c2857cd67801c0db5d204912453ff6bdc7da3ea61f8b1c6b38983d48dffb958725e7723f909abbc057c7b34a85c27290eec6943808312a75909306076064aa63
 Size (pkg-config-0.29.tar.gz) = 1973875 bytes
 SHA1 (patch-configure) = 6847644b9df3e3e2334f7c45bcbb2d3b7734d165
-SHA1 (patch-glib_configure) = 5411687502079f143a66a045ce20961e85e98789
+SHA1 (patch-glib_configure) = 5080a19186a948ba305278cef91ec76a920429e4
 SHA1 (patch-glib_glib_gtimer.c) = ee877a6c148b148a86f9087960863cfa8305bbf7
