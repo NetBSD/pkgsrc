@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.6 2011/10/03 02:53:39 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2015/10/17 22:34:21 dholland Exp $
 
 csh programming considered harmful.
 
 note that this is now a sh script, but I can't patch the #! line
 because there's an rcsid in the way.
 
---- makeall.orig	2003-12-14 12:24:09.000000000 -0500
-+++ makeall	2009-04-29 00:37:35.000000000 -0400
+--- makeall.orig	2003-12-14 17:24:09.000000000 +0000
++++ makeall
 @@ -3,27 +3,27 @@
  # 
  # Make all the Radiance programs
@@ -43,7 +43,7 @@ because there's an rcsid in the way.
  	cat << _EOF_
  
  		`cat src/rt/VERSION` INSTALLATION
-@@ -35,183 +35,166 @@ this script.  You can type ^C (followed 
+@@ -35,183 +35,167 @@ this script.  You can type ^C (followed 
  You must first answer the following questions.
  
  _EOF_
@@ -348,6 +348,7 @@ because there's an rcsid in the way.
 -	set arch=other
 -	breaksw
 -default:
+-	echo "Illegal choice\!"
 +	read FOO
 +	case "$FOO" in
 +	    y*|Y*) extras="CC=gcc";;
@@ -361,8 +362,9 @@ because there's an rcsid in the way.
 +	arch=IBMPC
 +	;;
 +    *)
- 	echo "Illegal choice\!"
++	echo "Illegal architecture choice\!"
  	echo "Installation aborted."
++	echo "(You must set PKGSRC_ARCH in the pkgsrc makefile.)"
  	exit 1
 -	breaksw
 -endsw
@@ -377,7 +379,7 @@ because there's an rcsid in the way.
  	"OPT=$opt" \
  	"MACH=$mach" \
  	ARCH=$arch "COMPAT=$compat" \
-@@ -222,71 +205,47 @@ exec make "SPECIAL=$special" \
+@@ -222,71 +206,47 @@ exec make "SPECIAL=$special" \
  _EOF_
  chmod 755 $rmake
  chmod 644 src/*/Rmakefile src/rt/devtable.c
