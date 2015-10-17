@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.369 2015/09/08 12:07:55 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.370 2015/10/17 01:50:46 sevan Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -94,6 +94,7 @@ GNU_ARCH.aarch64eb?=	aarch64_be
 GNU_ARCH.coldfire?=	m5407
 GNU_ARCH.arm26?=	arm
 GNU_ARCH.arm32?=	arm
+GNU_ARCH.amd64?=	x86_64
 GNU_ARCH.earm?=		arm
 GNU_ARCH.earmhf?=	arm
 GNU_ARCH.earmeb?=	armeb
