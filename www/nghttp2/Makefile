@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/06/03 11:53:53 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/17 09:56:40 adam Exp $
 
-DISTNAME=	nghttp2-1.0.1
+DISTNAME=	nghttp2-1.3.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nghttp2.org/
@@ -11,17 +12,19 @@ LICENSE=	mit
 
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
-
-.include "options.mk"
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-examples
+CONFIGURE_ARGS+=	--disable-python-bindings
 PKGCONFIG_OVERRIDE+=	lib/libnghttp2.pc.in
 PKGCONFIG_OVERRIDE+=	src/libnghttp2_asio.pc.in
 
-CONFIGURE_ARGS+=	--disable-examples
-CONFIGURE_ARGS+=	--disable-python-bindings
+REPLACE_PYTHON+=	script/fetch-ocsp-response
 
+.include "options.mk"
+
+.include "../../lang/python/application.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
