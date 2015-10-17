@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/14 12:08:48 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/17 11:09:58 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/lockfile/__init__.py
 ${PYSITELIB}/lockfile/__init__.pyc
 ${PYSITELIB}/lockfile/__init__.pyo
@@ -14,3 +21,6 @@ ${PYSITELIB}/lockfile/pidlockfile.pyo
 ${PYSITELIB}/lockfile/sqlitelockfile.py
 ${PYSITELIB}/lockfile/sqlitelockfile.pyc
 ${PYSITELIB}/lockfile/sqlitelockfile.pyo
+${PYSITELIB}/lockfile/symlinklockfile.pyc
+${PYSITELIB}/lockfile/symlinklockfile.pyo
+${PYSITELIB}/lockfile/symlinklockfile.py
