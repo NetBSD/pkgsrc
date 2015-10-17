@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4295 2015/10/17 09:50:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4296 2015/10/17 09:57:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7384,3 +7384,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/aria2 to 1.19.2 [adam 2015-10-17]
 	Updated mail/p5-Email-Valid to 1.197 [wen 2015-10-17]
 	Updated mail/p5-Email-Sender to 1.300021 [wen 2015-10-17]
+	Updated mail/p5-Email-MIME-ContentType to 1.018 [wen 2015-10-17]
