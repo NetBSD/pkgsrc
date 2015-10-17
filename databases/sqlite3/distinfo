@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.109 2015/10/15 20:59:18 ryoon Exp $
+$NetBSD: distinfo,v 1.110 2015/10/17 07:36:50 adam Exp $
 
-SHA1 (sqlite-autoconf-3090000.tar.gz) = 6578aa8df05fd7777fbbc4fbf1912d981623f73b
-RMD160 (sqlite-autoconf-3090000.tar.gz) = 995eb214a84f1cb390b07ead61c1596062f0c090
-SHA512 (sqlite-autoconf-3090000.tar.gz) = ab483e3f8c29e7160bb312b0d8cd6799a4322d95dcd6198dae69846158bf74171c57bc0332f87e271870cd1b14596f63e6f0f20cf9c65cf274e0c3e66faf95a7
-Size (sqlite-autoconf-3090000.tar.gz) = 2283997 bytes
+SHA1 (sqlite-autoconf-3090100.tar.gz) = 6b7d22c24c9695118a2706c8e026fb3c31780a30
+RMD160 (sqlite-autoconf-3090100.tar.gz) = f848ac3ce9f5264310697c73d72a2f4ae770be07
+SHA512 (sqlite-autoconf-3090100.tar.gz) = 6465c22afa68a44b7a6e739d242d2c921147fba11c92bb3a7d0bc5b6a58bd3f85d42a1e2710f60c18c5d82e4fc6f5651255f3aebd684e0fdc69dd099337182cb
+Size (sqlite-autoconf-3090100.tar.gz) = 2284128 bytes
 SHA1 (patch-configure) = 1b9379f8f995456e9e39416123e08c0b4aa6d9b5
