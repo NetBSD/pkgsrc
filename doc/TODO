@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14995 2015/10/17 09:58:13 adam Exp $
+$NetBSD: TODO,v 1.14996 2015/10/17 10:17:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1050,7 +1050,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libntfs-2015.3.14
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libowfat-0.29
-	o libpcap-1.7.4
 	o libpgm-5.2.122
 	o libplist-1.12
 	o libprelude-1.2.5
@@ -1728,7 +1727,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcl85-8.5.18
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-4.7.4
 	o tcpillust-1.00b
 	o tcpreplay-4.0.4
 	o tct-1.19
