@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/10/12 16:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.35 2015/10/17 17:41:49 adam Exp $
 
 DISTNAME=	enblend-enfuse-4.1.4
 CATEGORIES=	graphics
@@ -14,6 +14,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost-filesystem
+
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 .include "../../mk/bsd.prefs.mk"
 
