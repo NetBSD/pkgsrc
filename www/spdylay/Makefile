@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/06/03 11:00:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/17 09:55:42 adam Exp $
 
 DISTNAME=	spdylay-1.3.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tatsuhiro-t/spdylay/
@@ -11,16 +12,15 @@ LICENSE=	mit
 
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--enable-examples
+CONFIGURE_ARGS=		--enable-src
+CONFIGURE_ENV+=		LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
+CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
 PKGCONFIG_OVERRIDE+=	lib/libspdylay.pc.in
-
-CONFIGURE_ARGS=	--enable-examples --enable-src
-CONFIGURE_ENV+=	LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
-CONFIGURE_ENV+=	LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
 
 .include "../../mk/bsd.prefs.mk"
 
