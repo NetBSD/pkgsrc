@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4315 2015/10/18 12:23:32 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.4316 2015/10/18 14:16:14 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7413,3 +7413,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/rabbitmq-c to 0.7.1 [fhajny 2015-10-18]
 	Added textproc/multimarkdown version 4.7.1 [ryoon 2015-10-18]
 	Added sysutils/tegra-firmware version 20151018 [jmcneill 2015-10-18]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.540 [tsutsui 2015-10-18]
