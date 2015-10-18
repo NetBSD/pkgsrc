@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2014/12/03 14:00:57 joerg Exp $
+# $NetBSD: options.mk,v 1.9 2015/10/18 00:54:19 dholland Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gauche
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gauche
 PKG_OPTIONS_OPTIONAL_GROUPS=	multibyte
 PKG_OPTIONS_GROUP.multibyte=	utf8 eucjp sjis
-PKG_SUPPORTED_OPTIONS=	gdbm
-PKG_SUGGESTED_OPTIONS=	gdbm utf8
+PKG_SUPPORTED_OPTIONS=		gdbm
+PKG_SUGGESTED_OPTIONS=		gdbm utf8
 PKG_OPTIONS_LEGACY_VARS+=	GAUCHE_MULTIBYTE:utf8
 PKG_OPTIONS_LEGACY_OPTS+=	multibyte:utf8
 
@@ -29,9 +29,9 @@ MAKE_ENV+=	GDBM_LDFLAGS=${GDBM_LDFLAGS:Q}
 ### Multibyte extension.
 ###
 .for encoding in utf8 eucjp sjis
-.if !empty(PKG_OPTIONS:M${encoding})
+.  if !empty(PKG_OPTIONS:M${encoding})
 CONFIGURE_ARGS+=	--enable-multibyte=${encoding}
-.endif
+.  endif
 .endfor
 
 .if defined(PKG_DEVELOPER)
