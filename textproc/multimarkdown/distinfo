@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/10/18 09:14:11 ryoon Exp $
+
+SHA1 (MultiMarkdown-4-4.7.1.tar.gz) = 90a06cff838e598b9f1d30be0fe8f2d853ce8c59
+RMD160 (MultiMarkdown-4-4.7.1.tar.gz) = 24b8b3a6631dd2aac3ea648fd0bb5715101d0e09
+SHA512 (MultiMarkdown-4-4.7.1.tar.gz) = 0859e1b96f9321ab2ecf9f895ad6550bd36b48f8f77b1f403fdbef7d154e7a3e3e42ccd97d32e3002be773ba4d4cec166eba4f19903f4f084162ca61ec612d3b
+Size (MultiMarkdown-4-4.7.1.tar.gz) = 759765 bytes
+SHA1 (patch-scripts_mmd2pdf) = 234d96fc56a27bb1b69755b4097a3cf14cba1fd0
