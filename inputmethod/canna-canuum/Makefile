@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/10/18 03:58:31 tsutsui Exp $
 
-PKGREVISION=	4
 CANNA_MODULE=	canuum
 
 .include "../../inputmethod/canna/Makefile.common"
@@ -9,12 +8,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 
 INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/man1
 
-CONFIGURE_DIRS=	. canuum
-BUILD_DIRS=	canuum
+CONFIGURE_DIRS=		${WRKSRC}/canuum
 
 INSTALL_MAKE_FLAGS+=	INSTUGIDFLAGS=
-
-SPECIAL_PERMS+=	bin/canuum ${SETUID_ROOT_PERMS}
 
 .include "../../mk/curses.buildlink3.mk"
 SUBST_CLASSES+=		fix_curs

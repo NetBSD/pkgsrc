@@ -1,22 +1,23 @@
-$NetBSD: distinfo,v 1.11 2012/07/03 17:44:39 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/10/18 03:58:31 tsutsui Exp $
 
-SHA1 (Canna36p4.tar.gz) = 4edc22e2e4e5c6db42daa2083fabb53aa1ae8168
-RMD160 (Canna36p4.tar.gz) = 7f8bb7f5d87e6b939ff2b84edf58072c75a5d09d
-Size (Canna36p4.tar.gz) = 1455672 bytes
-SHA1 (patch-aa) = 6bb6da1cc2a458ebbcfe09fe19a371d7e8aea7da
-SHA1 (patch-ab) = b203ad0cb1285ffed0037e0eced3ae298bec5eb9
-SHA1 (patch-ac) = a81a07db87d3b501dedd423e148a8e7e1d1804c4
-SHA1 (patch-ad) = d4b5720c206f81124e0d53e71590de86f66c524c
-SHA1 (patch-ae) = 9e8de536052d76d8aeeab2d443dc42450ae53947
-SHA1 (patch-af) = 2700fc8395895176c16562af66ea5bf0b13d4e10
-SHA1 (patch-ag) = cb435e54334ead8dba6a9ac9f14368d69d6e3a7c
-SHA1 (patch-ah) = 5d2f01fa4810dafa7a83d02edaec36fc274173fe
-SHA1 (patch-ai) = b44d683b2c1d489746f1174f8ae6d06ddca66a59
-SHA1 (patch-aj) = 30d19c8ef9c1129e5214cb9a8a1d8b2b636b0361
-SHA1 (patch-ak) = 18b408344b8b617142ced8804990e87b7ae27f56
-SHA1 (patch-al) = f6025d6fb7a3247ef44b0a50ae13b67ef3dad2d9
-SHA1 (patch-am) = 756aed6fc81a9d75a55d123c8dc00c0932b8df7f
-SHA1 (patch-an) = ef892b0837e7b3b5b569a7a9a518df2379c43f1c
-SHA1 (patch-ao) = c577319f50df6624333726cd62b48d869989d881
-SHA1 (patch-ap) = 3f514037c4d67b2e18b27285370fe2ea84d977cc
-SHA1 (patch-dic_phono_Imakefile) = 3192d7c6e38caf2e5e8378283d673df29c2dc430
+SHA1 (Canna37p3.tar.bz2) = e39eece7c70c669dd46dd74b26121a60a2496fde
+RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
+SHA512 (Canna37p3.tar.bz2) = 82846f2393aa2654dd2c97a93178098b8bd11e5409b584447f1b6fdf303adacc9802e2293cafd98b68af8b69622625ed00aa9712bf270feaa119adfdf4211158
+Size (Canna37p3.tar.bz2) = 1263065 bytes
+SHA1 (patch-Canna.conf) = 81b46285a2b91c07b8497dc6669eb26552391a6c
+SHA1 (patch-Imakefile) = a70dee63ce9ce392b29b76df70479fee45e1a2b9
+SHA1 (patch-canna_widedef.h) = c52cbbe5b55fc4fca6a501eef50fbf5bb878e514
+SHA1 (patch-canuum_Imakefile) = 5f4e7970a92d514ec538e4591eaa4f46843654a3
+SHA1 (patch-canuum_canna.c) = a543a720fba9e2f770d6397d6b05352cfa58f300
+SHA1 (patch-canuum_config.h.in) = 98547954e459bd85e5b03fc86f34fb5d1e3eed4b
+SHA1 (patch-canuum_configure) = c08efb73bb7d93d8c539873c1337be54ed864902
+SHA1 (patch-canuum_configure.in) = a1a6a821b9e9f9baef450ad340cb57a6f20a6989
+SHA1 (patch-canuum_jhlp.c) = 1d15186608f116cc4fb3e6a9691bb1b701d8b0ec
+SHA1 (patch-canuum_printf.c) = c05ef114fae689855989d5d5eded2f734c62e12e
+SHA1 (patch-canuum_termcap.c) = 958015b3bf4e9f89703e198c1ed28d51ae3f8c4e
+SHA1 (patch-canuum_termio.c) = df9e68c8fb564ee4c4367acf6b042c253d17e525
+SHA1 (patch-cmd_cmd.tmpl) = f6ec97c273aa84eb84bdd24cbe16aaf7e696e041
+SHA1 (patch-dic_phono_Imakefile) = 4e1210517317b57796cad5b350de41e1f0d8157d
+SHA1 (patch-lib_RKC_convert.c) = f196cfa3db3ef163c1869ca6bfd3f22170997aef
+SHA1 (patch-lib_RK_dd.c) = 8055a2a3902e7d4d0cc1d782295c2879311750ec
+SHA1 (patch-lib_RK_ncache.c) = f322d8b0c23e3b00b6d605ec2a044ac637a3cbfe

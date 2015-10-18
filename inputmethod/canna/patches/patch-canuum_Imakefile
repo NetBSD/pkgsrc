@@ -1,0 +1,25 @@
+$NetBSD: patch-canuum_Imakefile,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+
+Disable obsolete libspt because posix_openpt(3) or openpty(3) is enough for us.
+
+--- canuum/Imakefile.orig	2004-05-19 15:39:22.000000000 +0000
++++ canuum/Imakefile
+@@ -17,9 +17,15 @@ TERMCAP_LIB = -ltermcap
+ INSTUGIDFLAGS = 
+      CANNASRC = $(CANNAROOT)/lib/canna16
+       DEFINES = -DCANNA -DJAPANESE $(SIGNAL_DEFINES) -DHAVE_CONFIG_H \
+-		-DCONFIG_TERMINFO -DUSE_LIBSPT
+-     INCLUDES = -I$(CANNAROOT)/include -I. `libspt-config --cflags`
+-SYS_LIBRARIES = $(TERMCAP_LIB) `libspt-config --libs`
++		-DCONFIG_TERMINFO
++     INCLUDES = -I$(CANNAROOT)/include -I.
++SYS_LIBRARIES = $(TERMCAP_LIB)
++
++XCOMM XXX required only for openpty(3)
++#if (defined(LinuxArchitecture) && \
++     (LinuxCLibMajorVersion == 6) && (LinuxCLibMinorVersion < 1))
++SYS_LIBRARIES += -lutil  
++#endif
+ 
+          SRCS = header.c printf.c termio.c termcap.c \
+ 		screen.c cursor.c jhlp.c xutoj.c canna.c

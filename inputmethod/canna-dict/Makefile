@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2013/07/12 10:44:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2015/10/18 03:58:31 tsutsui Exp $
 
-PKGREVISION=	3
 CANNA_MODULE=	dict
 
 MAKE_JOBS_SAFE=	no
@@ -15,7 +14,6 @@ CANNA_CMD_SED_SCRIPT+=	\
 	-e 's|\(${cmd} = \).*/\(.*\)|\1${CANNASERVERBINDIR}/bin/\2|'
 .endfor
 
-CONFIGURE_DIRS=		${DICT_WRKSRC}
 DICT_WRKSRC=		${WRKSRC}/dic/ideo
 CANNA_DICTDIR=		${PREFIX}/libdata/canna
 
@@ -23,6 +21,9 @@ PKG_GROUPS=	${CANNA_GROUP}
 PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}
 
 post-patch:
+	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
+	${SED} -e 's|\(SUBDIRS = \).*|\1 canna lib/RKindep dic/ideo|' \
+		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
 	@${MV} ${WRKSRC}/Canna.conf ${WRKSRC}/Canna.conf.orig
 	@${SED} -e 's|\(DicDir.*=\).*|\1${IMDICTDIR}/canna|'		\
 		${WRKSRC}/Canna.conf.orig > ${WRKSRC}/Canna.conf
@@ -72,4 +73,5 @@ REQD_DIRS_PERMS+=	${CANNA_DICTDIR} ${CANNA_USER} ${CANNA_GROUP} 0775
 SPECIAL_PERMS+=	${CANNA_DICTDIR}/${d} ${CANNA_USER} ${CANNA_GROUP} 0664
 .endfor
 
+.include "../../inputmethod/canna-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

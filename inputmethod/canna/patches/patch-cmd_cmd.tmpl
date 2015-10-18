@@ -1,0 +1,16 @@
+$NetBSD: patch-cmd_cmd.tmpl,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+
+Add a hook to disable installation of unnecessary commands in canna-lib
+
+--- cmd/cmd.tmpl.orig	2003-09-25 06:30:21.000000000 +0000
++++ cmd/cmd.tmpl
+@@ -33,7 +33,9 @@ NormalProgramTarget($(TARGET),$(OBJS),$(
+ # else
+ NormalProgramTarget($(TARGET),$(OBJS),$(DEPRKINDEPLIB),$(RKINDEPLIB),)
+ # endif
++# ifndef DontInstallProgram
+ InstallProgram($(TARGET),$(cannaBinDir))
++# endif
+ # ifdef ManSrcName
+ InstallManPageLong(ManSrcName,$(cannaManDir),$(TARGET))
+ # endif

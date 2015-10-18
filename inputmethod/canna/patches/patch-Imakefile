@@ -1,7 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2003/05/31 07:24:41 uebayasi Exp $
---- Imakefile.orig	Thu Dec  5 22:39:41 2002
-+++ Imakefile	Thu Dec  5 22:40:03 2002
-@@ -60,7 +60,7 @@
+$NetBSD: patch-Imakefile,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+
+Explicitly install man pages.
+
+--- Imakefile.orig	2004-05-19 15:39:22.000000000 +0000
++++ Imakefile
+@@ -166,7 +166,7 @@ instserver::
  	for i in $(SERVERDIR) ;\
  	do \
  		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
@@ -10,7 +13,7 @@ $NetBSD: patch-ab,v 1.1 2003/05/31 07:24:41 uebayasi Exp $
  	done
  
  instclient::
-@@ -68,7 +68,7 @@
+@@ -174,7 +174,7 @@ instclient::
  	for i in $(CLIENTDIR) ;\
  	do \
  		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
