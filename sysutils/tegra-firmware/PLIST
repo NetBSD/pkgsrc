@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2015/10/18 12:20:51 jmcneill Exp $
+libdata/nvidia/LICENCE.nvidia
+libdata/nvidia/gk20a/fecs_data.bin
+libdata/nvidia/gk20a/fecs_inst.bin
+libdata/nvidia/gk20a/gpccs_data.bin
+libdata/nvidia/gk20a/gpccs_inst.bin
+libdata/nvidia/gk20a/sw_bundle_init.bin
+libdata/nvidia/gk20a/sw_ctx.bin
+libdata/nvidia/gk20a/sw_method_init.bin
+libdata/nvidia/gk20a/sw_nonctx.bin
+libdata/nvidia/tegra124/xusb.bin
+libdata/nvidia/tegra210/xusb.bin

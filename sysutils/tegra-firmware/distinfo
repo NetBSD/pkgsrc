@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/10/18 12:20:51 jmcneill Exp $
+
+SHA1 (tegra-firmware-20151018.tar.gz) = 44c633e4ed4e2d660a579e9e702e734c96d9965f
+RMD160 (tegra-firmware-20151018.tar.gz) = 01e6424cc58b309c958d390e2b177d4cf001a16a
+SHA512 (tegra-firmware-20151018.tar.gz) = 47e53179a576a26018834dca057bbd63ff8a0252fce772704a050d69b767923187288e3378e4af076bd648562aaa387245cf3ba51ede95d2cdf91245a2470c03
+Size (tegra-firmware-20151018.tar.gz) = 185209 bytes
