@@ -1,0 +1,49 @@
+$NetBSD: patch-canuum_configure.in,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+
+Check openpty(3), posix_openpt(3), and ptsname(3).
+
+--- canuum/configure.in.orig	2003-03-24 04:15:22.000000000 +0000
++++ canuum/configure.in
+@@ -378,6 +378,8 @@ AC_CHECK_LIB(socket, connect)
+ AC_CHECK_LIB(bind, getservbyname)
+ AC_CHECK_LIB(nsl, gethostbyname)
+ ])dnl not CANNA
++dnl libutil only needed by uum with openpty... (determine later)
++AC_CHECK_LIB(util, openpty, [HAVE_LIBUTIL='have_libutil'])
+ 
+ dnl
+ dnl Checks for header files.
+@@ -390,7 +392,7 @@ AC_CHECK_HEADERS(fcntl.h sgtty.h syslog.
+ 	sys/file.h sys/ioctl.h sys/time.h sys/types.h sys/param.h \
+ 	malloc.h strings.h memory.h \
+ 	curses.h ncurses.h term.h termio.h \
+-	termcap.h sgtty.h sys/termio.h termios.h
++	termcap.h sgtty.h sys/termio.h termios.h libutil.h util.h 
+ )
+ dnl If you don't use ansidecl.h, use this (and modify Wnn/jserver/error.c)
+ dnl AC_CHECK_HEADERS(stdarg.h varargs.h, break)
+@@ -508,7 +510,8 @@ dnl AC_FUNC_WAIT3
+ AC_CHECK_FUNCS(random drand48 fchmod getopt \
+ 	gethostname select socket closesocket setsockopt send recv \
+ 	FD_SET \
+-	getdtablesize getrlimit syslog vsyslog setenv snprintf)
++	getdtablesize getrlimit syslog vsyslog setenv snprintf \
++	ptsname posix_openpt openpty)
+ dnl for bcopy/index -> memcpy/strchr conversion (preparation):
+ AC_CHECK_FUNCS(bcopy bzero bcmp index rindex \
+ 	memcpy memmove memset strchr strrchr)
+@@ -520,6 +523,14 @@ AC_CHECK_FUNCS(mkdir vasprintf, ,
+ [JS_SUPPORTOBJS="${JS_SUPPORTOBJS} ${ac_func}.o"])
+ AC_SUBST(JS_SUPPORTOBJS)
+ 
++dnl
++dnl File Existence
++dnl Checking file at compile time may bring false result when cross-
++dnl compiling. So, one have to check generated config.h and edit it
++dnl if necessary after running configure.
++dnl
++dnl AC_CHECK_FILE(/dev/ptmx, AC_DEFINE(HAVE_DEV_PTMX, 1, [/dev/ptmx found]),)
++AC_CHECK_FILES(/dev/ptmx,,)
+ 
+ dnl
+ dnl Creating Makefiles.
