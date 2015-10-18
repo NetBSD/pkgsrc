@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2015/08/12 13:49:40 wen Exp $
+# $NetBSD: Makefile,v 1.55 2015/10/18 03:11:26 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "options.mk"
 
 VER=			1.25
-PVER=			2
+PVER=			3
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -79,13 +79,6 @@ SUBST_STAGE.python2=	post-patch
 SUBST_MESSAGE.python2=	Fixing python path
 SUBST_FILES.python2+=	maintenance/language/zhtable/Makefile.py
 SUBST_SED.python2=	-e "s,/usr/bin/env python,${PYTHONBIN},"
-
-SUBST_CLASSES+=		php
-SUBST_MESSAGE.php=	Fixing the path of php.
-SUBST_STAGE.php=	post-patch
-SUBST_FILES.php+=	includes/normal/UtfNormalTest2.php
-SUBST_FILES.php+=	maintenance/update.php
-SUBST_SED.php=          -e "s,/usr/bin/env php,${PREFIX}/bin/php,g"
 
 post-extract:
 	${CP} ${FILESDIR}/mediawiki.conf ${WRKDIR}/mediawiki.conf
