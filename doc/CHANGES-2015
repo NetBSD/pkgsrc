@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4314 2015/10/18 09:15:32 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4315 2015/10/18 12:23:32 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7412,3 +7412,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/redis to 3.0.5 [fhajny 2015-10-18]
 	Updated net/rabbitmq-c to 0.7.1 [fhajny 2015-10-18]
 	Added textproc/multimarkdown version 4.7.1 [ryoon 2015-10-18]
+	Added sysutils/tegra-firmware version 20151018 [jmcneill 2015-10-18]
