@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4305 2015/10/17 18:00:11 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.4306 2015/10/18 03:14:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7399,3 +7399,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Markdown to 3.003 [wen 2015-10-17]
 	Updated sysutils/duplicity to 0.6.26 [adam 2015-10-17]
 	Updated devel/deforaos-libsystem to 0.2.3 [khorben 2015-10-17]
+	Updated textproc/p5-Pod-Markdown to 3.003 [wen 2015-10-18]
