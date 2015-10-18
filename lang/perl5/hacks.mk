@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.17 2015/08/07 22:11:22 mrg Exp $
+# $NetBSD: hacks.mk,v 1.17.2.1 2015/10/18 16:45:27 spz Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -81,6 +81,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
 .if !empty(CC_VERSION:Mgcc-4.5.*) && ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "vax" ||	\
        ${MACHINE_CPU} == "mips" ||	\
+       ${MACHINE_ARCH} == "sparc" ||	\
        ${MACHINE_ARCH} == "sparc64")
 PKG_HACKS+=	gcc-4.5-codegen
 CFLAGS+=	-fno-reorder-blocks
