@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:02 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/10/18 03:58:31 tsutsui Exp $
 bin/addwords
 bin/canlisp
 bin/cannacheck
 bin/cannastat
 bin/catdic
+bin/chkconc
 bin/chmoddic
 bin/cpdic
 bin/crfreq
