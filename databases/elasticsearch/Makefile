@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/08/03 11:57:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2015/10/18 16:02:05 fhajny Exp $
 
-DISTNAME=	elasticsearch-1.7.1
+DISTNAME=	elasticsearch-1.7.3
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.elasticsearch.org/elasticsearch/elasticsearch/
 
@@ -95,9 +95,9 @@ INSTALLATION_DIRS+=	${ES_LIBDIR}/sigar
 .endif
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	config/elasticsearch.yml
-SUBST_VARS.paths=	PKG_SYSCONFDIR ES_DBDIR ES_LIBDIR ES_LOGDIR ES_TMPDIR
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	bin/plugin config/elasticsearch.yml
+SUBST_VARS.paths=	PKG_JAVA_HOME PKG_SYSCONFDIR PREFIX ES_DBDIR ES_LIBDIR ES_LOGDIR ES_TMPDIR
 
 do-install:
 .for f in ${CONFS}
