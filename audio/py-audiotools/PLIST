@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/05/04 11:41:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/18 15:25:04 adam Exp $
 bin/audiotools-config
 bin/cd2track
 bin/cdinfo
@@ -137,9 +137,6 @@ ${PYSITELIB}/audiotools/py_encoders/wavpack.py
 ${PYSITELIB}/audiotools/py_encoders/wavpack.pyc
 ${PYSITELIB}/audiotools/py_encoders/wavpack.pyo
 ${PYSITELIB}/audiotools/replaygain.so
-${PYSITELIB}/audiotools/shn.py
-${PYSITELIB}/audiotools/shn.pyc
-${PYSITELIB}/audiotools/shn.pyo
 ${PYSITELIB}/audiotools/text.py
 ${PYSITELIB}/audiotools/text.pyc
 ${PYSITELIB}/audiotools/text.pyo

@@ -1,15 +1,20 @@
-$NetBSD: patch-src_cdiomodule.h,v 1.1 2014/10/09 12:44:37 adam Exp $
+$NetBSD: patch-src_cdiomodule.h,v 1.2 2015/10/18 15:25:04 adam Exp $
 
-Fix for newer libcdio-paranoia.
+Fix includes.
 
---- src/cdiomodule.h.orig	2014-10-09 12:37:31.000000000 +0000
+--- src/cdiomodule.h.orig	2015-07-08 09:42:02.000000000 +0000
 +++ src/cdiomodule.h
-@@ -1,6 +1,6 @@
+@@ -1,11 +1,6 @@
  #include <Python.h>
+-#ifdef OLD_PARANOIA
 -#include <cdio/cdda.h>
 -#include <cdio/paranoia.h>
+-#else
+-#include <cdio/cdparanoia/cdda.h>
+-#include <cdio/cdparanoia/paranoia.h>
+-#endif
 +#include <cdio/paranoia/cdda.h>
 +#include <cdio/paranoia/paranoia.h>
- #include "array.h"
  
  /********************************************************
+  Audio Tools, a module and set of tools for manipulating audio data
