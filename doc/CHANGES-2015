@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4313 2015/10/18 08:47:58 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4314 2015/10/18 09:15:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7411,3 +7411,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/kinput2 to 3.1nb4 [tsutsui 2015-10-18]
 	Updated databases/redis to 3.0.5 [fhajny 2015-10-18]
 	Updated net/rabbitmq-c to 0.7.1 [fhajny 2015-10-18]
+	Added textproc/multimarkdown version 4.7.1 [ryoon 2015-10-18]
