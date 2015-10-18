@@ -1,0 +1,73 @@
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.15 2015/10/18 19:32:04 spz Exp $
+
+Changes to the packages collection and infrastructure on the 2015Q3 branch:
+
+Pullup ticket #4816 - requested by agc
+security/netpgpverify: bug fix patch
+security/libnetpgpverify: bug fix patch
+
+Pullup ticket #4817 - requested by dholland
+sysutils/findutils: build fix
+
+Pullup ticket #4815 - requested by ryoon
+www/firefox: build fix
+
+Pullup ticket #4818 - requested by taca
+net/ruby-userstream: correct dependency
+
+Pullup ticket #4820 - requested by ryoon
+emulators/qemu: security fix
+
+Pullup ticket #4824 - requested by bouyer
+www/php-owncloud: documentation fix
+
+Pullup ticket #4825 - requested by tnn
+multimedia/adobe-flash-plugin11: security fix
+
+Pullup ticket #4826 - requested by tnn
+textproc/icu: security fix
+
+Pullup ticket #4827 - requested by ryoon
+www/firefox: build fix
+
+Pullup ticket #4828 - requested by bouyer
+www/p5-HTML-StripScripts: build fix
+
+Pullup ticket #4829 - requested by bouyer
+mail/mhonarc: build fix
+
+Pullup ticket #4831 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #4832 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #4819 - requested by bsiegert
+lang/go14: security update
+
+Pullup ticket #4830 - requested by bsiegert
+graphics/exiv2: security update
+graphics/exiv2-organize: dependant update
+
+Pullup ticket #4833 - requested by taca
+mail/postfix-lmdb: build fix
+mail/postfix-mysql: build fix
+mail/postfix-pcre: build fix
+mail/postfix-pgsql: build fix
+mail/postfix-sqlite: build fix
+
+Pullup ticket #4834 - requested by tnn
+misc/pciids: build fix
+
+Pullup ticket #4835 - requested by leot
+www/webkit-gtk: build fix
+
+Pullup ticket #4839 - requested by gdt
+sysutils/dbus: build fix
+
+Pullup ticket #4840 - requested by mrg
+lang/perl5: fix for sparc
+
+Pullup ticket #4841 - requested by tnn
+multimedia/adobe-flash-plugin11: security update
+
