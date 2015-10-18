@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_dbus-print-message.c,v 1.1 2015/10/08 14:32:08 joerg Exp $
+$NetBSD: patch-tools_dbus-print-message.c,v 1.1.2.2 2015/10/18 16:26:11 spz Exp $
 
 --- tools/dbus-print-message.c.orig	2015-10-07 20:10:37.000000000 +0000
 +++ tools/dbus-print-message.c
