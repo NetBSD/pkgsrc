@@ -1,0 +1,51 @@
+$NetBSD: patch-canuum_config.h.in,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+
+Check openpty(3), posix_openpt(3), and ptsname(3).
+
+--- canuum/config.h.in.orig	2004-05-19 15:48:58.000000000 +0000
++++ canuum/config.h.in
+@@ -83,6 +83,9 @@
+ /* Define to 1 if you have the `killpg' function. */
+ #undef HAVE_KILLPG
+ 
++/* Define to 1 if you have the <libutil.h> header file. */
++#undef HAVE_LIBUTIL_H
++
+ /* Define to 1 if you have the <malloc.h> header file. */
+ #undef HAVE_MALLOC_H
+ 
+@@ -98,6 +101,15 @@
+ /* Define to 1 if you have the `memset' function. */
+ #undef HAVE_MEMSET
+ 
++/* Define to 1 if you have the openpty function.  */
++#undef HAVE_OPENPTY
++
++/* Define to 1 if you have the posix_openpt function.  */
++#undef HAVE_POSIX_OPENPT
++
++/* Define to 1 if you have the ptsname function.  */
++#undef HAVE_PTSNAME
++
+ /* Define to 1 if you have the <ncurses.h> header file. */
+ #undef HAVE_NCURSES_H
+ 
+@@ -200,12 +212,18 @@
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the <util.h> header file. */
++#undef HAVE_UTIL_H
++
+ /* Define to 1 if you have the `vsyslog' function. */
+ #undef HAVE_VSYSLOG
+ 
+ /* Define to 1 if you have the `wait3' function. */
+ #undef HAVE_WAIT3
+ 
++/* Define to 1 if you have the util library (-lutil).  */
++#undef HAVE_LIBUTIL
++
+ /* Define to the address where bug reports for this package should be sent. */
+ #undef PACKAGE_BUGREPORT
+ 
