@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4308 2015/10/18 03:32:38 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4309 2015/10/18 04:02:51 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7402,3 +7402,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Pod-Markdown to 3.003 [wen 2015-10-18]
 	Updated www/mediawiki to 1.25.3 [wen 2015-10-18]
 	Updated www/drupal7 to 7.40 [wen 2015-10-18]
+	Updated inputmethod/canna to 3.7pl3 [tsutsui 2015-10-18]
+	Updated inputmethod/canna-canuum to 3.7pl3 [tsutsui 2015-10-18]
+	Updated inputmethod/canna-dict to 3.7pl3 [tsutsui 2015-10-18]
+	Updated inputmethod/canna-lib to 3.7pl3 [tsutsui 2015-10-18]
+	Updated inputmethod/canna-server to 3.7pl3 [tsutsui 2015-10-18]
