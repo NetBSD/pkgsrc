@@ -1,8 +1,11 @@
-$NetBSD: patch-ac,v 1.4 2011/01/12 11:46:28 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/10/18 15:56:56 adam Exp $
 
---- CMakeLists.txt.orig	2010-09-28 22:06:42.000000000 +0000
+Correct 'man' path.
+Do not make an application bundle on OS X.
+
+--- CMakeLists.txt.orig	2013-06-26 11:19:08.000000000 +0000
 +++ CMakeLists.txt
-@@ -319,7 +319,7 @@ IF (NOT MANDIR AND NOT $ENV{MANDIR} STRE
+@@ -423,7 +423,7 @@ IF (NOT MANDIR AND NOT $ENV{MANDIR} STRE
  ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
      SET (MANDIR "man")
  ELSE(NOT MANDIR AND NOT $ENV{MANDIR} STREQUAL "")
@@ -11,7 +14,7 @@ $NetBSD: patch-ac,v 1.4 2011/01/12 11:46:28 adam Exp $
  ENDIF(NOT MANDIR AND NOT $ENV{MANDIR} STREQUAL "")
  
  SET(LOCALEDIR share/locale) 
-@@ -355,16 +355,6 @@ IF (APPLE)
+@@ -447,16 +447,6 @@ IF (APPLE)
    ENDIF (NOT MAC_SELF_CONTAINED_BUNDLE)
  ENDIF (APPLE)
  

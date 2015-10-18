@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_deghosting_mask.pod,v 1.1 2015/10/18 15:56:56 adam Exp $
+
+Avoid non-ASCII characters.
+
+--- doc/deghosting_mask.pod.orig	2013-08-04 19:26:36.000000000 +0000
++++ doc/deghosting_mask.pod
+@@ -87,5 +87,5 @@ Verbose, repeat for more verbose output
+ 
+ =head1 AUTHORS
+ 
+-Lukáš Jirkovský
++Lukas Jirkovsky
+ 
