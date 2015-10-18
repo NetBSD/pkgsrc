@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4318 2015/10/18 16:02:17 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4319 2015/10/18 16:47:09 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7420,3 +7420,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/py-Pillow to 3.0.0 [adam 2015-10-18]
 	Updated graphics/hugin to 2015.0.0 [adam 2015-10-18]
 	Updated databases/elasticsearch to 1.7.3 [fhajny 2015-10-18]
+	Updated databases/py-elasticsearch to 2.0.0 [fhajny 2015-10-18]
