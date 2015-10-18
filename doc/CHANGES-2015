@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4310 2015/10/18 05:46:01 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4311 2015/10/18 06:46:28 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7408,3 +7408,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated inputmethod/canna-lib to 3.7pl3 [tsutsui 2015-10-18]
 	Updated inputmethod/canna-server to 3.7pl3 [tsutsui 2015-10-18]
 	Updated databases/mongodb to 3.0.7 [ryoon 2015-10-18]
+	Updated inputmethod/kinput2 to 3.1nb4 [tsutsui 2015-10-18]
