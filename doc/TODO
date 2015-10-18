@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14999 2015/10/18 04:02:51 tsutsui Exp $
+$NetBSD: TODO,v 1.15000 2015/10/18 15:57:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -935,7 +935,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o htmldoc-1.8.28
 	o htop-1.0.3
 	o http_load-20140814
-	o hugin-2012.0.0
 	o icc11-13.0
 	o icdprog-0.5
 	o icedtea-web-1.6

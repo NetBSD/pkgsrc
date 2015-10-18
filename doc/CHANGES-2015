@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4316 2015/10/18 14:16:14 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4317 2015/10/18 15:57:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7414,3 +7414,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/multimarkdown version 4.7.1 [ryoon 2015-10-18]
 	Added sysutils/tegra-firmware version 20151018 [jmcneill 2015-10-18]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.540 [tsutsui 2015-10-18]
+	Updated audio/mpg123 to 1.22.4 [adam 2015-10-18]
+	Updated audio/wavpack to 4.75.2 [adam 2015-10-18]
+	Updated audio/py-audiotools to 3.1 [adam 2015-10-18]
+	Updated graphics/py-Pillow to 3.0.0 [adam 2015-10-18]
+	Updated graphics/hugin to 2015.0.0 [adam 2015-10-18]
