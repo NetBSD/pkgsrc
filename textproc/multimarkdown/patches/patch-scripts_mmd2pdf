@@ -1,0 +1,25 @@
+$NetBSD: patch-scripts_mmd2pdf,v 1.1 2015/10/18 09:14:11 ryoon Exp $
+
+* POSIX shell portability
+  https://github.com/fletcher/MultiMarkdown-4/pull/141
+
+--- scripts/mmd2pdf.orig	2015-10-18 07:29:25.000000000 +0000
++++ scripts/mmd2pdf
+@@ -37,7 +37,7 @@ do
+ 		
+ 		xelatex "$file_name.tex"
+ 
+-		if [ "$?" == "127" ]
++		if [ "$?" = "127" ]
+ 		then
+ 			echo "It doesn't appear that xelatex is installed properly." 1>&2
+ 			echo "Be sure you have a working LaTeX installation." 1>&2
+@@ -53,7 +53,7 @@ do
+ 		# Use LaTeX
+ 		latexmk "$file_name.tex"
+ 	
+-		if [ "$?" == "127" ]
++		if [ "$?" = "127" ]
+ 		then
+ 			echo "It doesn't appear that latexmk is installed properly." 1>&2
+ 			echo "Be sure you have a working LaTeX installation." 1>&2

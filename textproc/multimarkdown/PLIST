@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/18 09:14:11 ryoon Exp $
+bin/markdown
+bin/mmd
+bin/mmd2all
+bin/mmd2odf
+bin/mmd2opml
+bin/mmd2pdf
+bin/mmd2rtf
+bin/mmd2tex
+bin/multimarkdown
