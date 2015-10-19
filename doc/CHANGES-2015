@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4329 2015/10/19 11:44:05 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4330 2015/10/19 22:56:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7432,3 +7432,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/py-xlsxwriter version 0.7.7 [fhajny 2015-10-19]
 	Updated devel/libbson to 1.2.0 [fhajny 2015-10-19]
 	Updated databases/mongo-c-driver to 1.2.0 [fhajny 2015-10-19]
+	Updated x11/xinput to 1.6.2 [wiz 2015-10-19]
