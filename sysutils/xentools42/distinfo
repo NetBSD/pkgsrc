@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2015/08/23 16:17:12 spz Exp $
+$NetBSD: distinfo,v 1.20 2015/10/19 16:40:41 joerg Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -53,6 +53,8 @@ SHA1 (patch-libfsimage_ufs_ufs.h) = 598d2c9d8e563c9ed6eb32e0877a5ea8d865e2ca
 SHA1 (patch-libxc_xc__netbsd.c) = 1ed0804174badf9e0c788a8ff0b1797459663d68
 SHA1 (patch-libxl_libxl__create.c) = 1706f782bcd3bea19b8127e9aefe8bda4a4061de
 SHA1 (patch-libxl_libxl__internal.h) = bc2865f5c14b1fb9df1f9ad77d3be4a1494068c6
+SHA1 (patch-libxl_libxl__save__helper.c) = 1592f07e30db119905ae1efa9bd272fa75f60651
+SHA1 (patch-libxl_xl.c) = f7ca33eac8ce6c2383d985c82bf8cb406588e2c9
 SHA1 (patch-ocaml_common.make) = a809e3bed475cdffea3cb7ae480c8fe7af6aa798
 SHA1 (patch-ocaml_xenstored_Makefile) = a0e91b946307a610490a492d4d56dfe426bddb63
 SHA1 (patch-ocaml_xenstored_define.ml) = c0772dff8e59f495a0ebe17a905aed04a29f2469
@@ -75,8 +77,12 @@ SHA1 (patch-qemu-xen-traditional_hw_pt-msi.h) = 8c9f2c39ddab9b5efc7e9a1a10aad4d7
 SHA1 (patch-qemu-xen-traditional_i386-dm_hookstarget.mak) = dbefbb3c32fd9d1af4b5d32ef269233d641a0bd4
 SHA1 (patch-qemu-xen-traditional_xen-hooks.mak) = 07426cfb7a552032b56aad7fc679e74a7bdd67fe
 SHA1 (patch-qemu-xen_audio_audio.c) = 996bbabfc195e4809d9343da31dc924e2fb3b22f
+SHA1 (patch-qemu-xen_dyngen-exec.h) = fad93fe2f570c27edcba961b0dc4507e56258a1a
 SHA1 (patch-qemu-xen_fpu_softfloat-specialize.h) = 25aada20285cc2f9f4e91811a42c2f55da63758f
 SHA1 (patch-qemu-xen_ioport.c) = b88f7b3f8ea9ea64aefe6048ffd950c6a452c9cf
 SHA1 (patch-qemu-xen_memory.c) = 8c5440055111a5c2b350346b8db06ec15912bc4c
+SHA1 (patch-qemu-xen_pc-bios_optionrom_Makefile) = c3f35cb5f9ab46834351efe683562ddf8f28b9cf
 SHA1 (patch-qemu-xen_qemu-doc.texi) = 843adbe6a37fe5d600b0cf61d6bd78bf527aa4a6
+SHA1 (patch-qemu-xen_target-i386_op__helper.c) = a3fd45a03dc739234712bc9f2dba4fb414cced96
+SHA1 (patch-qemu-xen_xen-all.c) = 4c8c8ae1cffc88db7cfa5a56dfef9e0ee35047db
 SHA1 (patch-xentrace_Makefile) = 751b59769254509c5da199c5498d428f9788b7e5

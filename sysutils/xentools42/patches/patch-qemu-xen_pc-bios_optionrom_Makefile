@@ -1,0 +1,13 @@
+$NetBSD: patch-qemu-xen_pc-bios_optionrom_Makefile,v 1.1 2015/10/19 16:40:41 joerg Exp $
+
+--- qemu-xen/pc-bios/optionrom/Makefile.orig	2015-10-09 22:32:24.000000000 +0000
++++ qemu-xen/pc-bios/optionrom/Makefile
+@@ -11,7 +11,7 @@ $(call set-vpath, $(SRC_PATH)/pc-bios/op
+ 
+ CFLAGS := -Wall -Wstrict-prototypes -Werror -fomit-frame-pointer -fno-builtin
+ CFLAGS += -I$(SRC_PATH)
+-CFLAGS += $(call cc-option, $(CFLAGS), -fno-stack-protector)
++CFLAGS += $(call cc-option, $(CFLAGS), -fno-stack-protector) ${EXTRA_CFLAGS}
+ QEMU_CFLAGS = $(CFLAGS)
+ 
+ build-all: multiboot.bin linuxboot.bin
