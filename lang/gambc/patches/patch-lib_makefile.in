@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_makefile.in,v 1.1 2013/12/15 19:39:34 joerg Exp $
+$NetBSD: patch-lib_makefile.in,v 1.2 2015/10/19 16:38:17 joerg Exp $
 
 --- lib/makefile.in.orig	2009-08-01 21:29:10.000000000 +0000
 +++ lib/makefile.in
@@ -13,11 +13,12 @@ $NetBSD: patch-lib_makefile.in,v 1.1 2013/12/15 19:39:34 joerg Exp $
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
  
-@@ -136,8 +136,10 @@ all-pre:
+@@ -136,8 +136,11 @@ all-pre:
  
  all-post: $(LIBRARY) _$(GAMBCLIB).c
  
 +CFLAGS._io.c= ${CLANG_NO_OPT}
++CFLAGS._num.c= ${CLANG_NO_OPT}
 +
  .c@obj@:
 -	@BUILD_OBJ@ -D___LIBRARY
