@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2013/05/16 05:47:01 richard Exp $
-#
+# $NetBSD: Makefile,v 1.12 2015/10/19 22:56:32 wiz Exp $
 
-DISTNAME=	xinput-1.6.0
+DISTNAME=	xinput-1.6.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Xinput diagnostic utility for modular X.org
-LICENSE=		mit
+LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
