@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/10/15 09:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/10/19 17:26:44 jperkin Exp $
 
 DISTNAME=	pkg-config-0.29
 CATEGORIES=	devel
@@ -39,6 +39,7 @@ CONFIGURE_ENV+=		glib_cv_value_AF_INET6=yes
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-dtrace
+CFLAGS+=		-DENABLE_NLS # required due to __EXTENSIONS__
 .endif
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
