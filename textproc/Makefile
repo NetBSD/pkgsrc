@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.846 2015/10/18 09:15:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.847 2015/10/19 10:57:13 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -710,6 +710,7 @@ SUBDIR+=	py-uritemplate
 SUBDIR+=	py-validators
 SUBDIR+=	py-vobject
 SUBDIR+=	py-xlrd
+SUBDIR+=	py-xlsxwriter
 SUBDIR+=	py-xlwt
 SUBDIR+=	py-xml
 SUBDIR+=	py-yamcha
