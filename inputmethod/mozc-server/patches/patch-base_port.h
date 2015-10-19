@@ -1,4 +1,4 @@
-$NetBSD: patch-base_port.h,v 1.1 2015/10/12 07:24:51 ryoon Exp $
+$NetBSD: patch-base_port.h,v 1.2 2015/10/19 16:37:37 joerg Exp $
 
 --- base/port.h.orig	2015-09-05 17:32:12.000000000 +0000
 +++ base/port.h
@@ -7,7 +7,7 @@ $NetBSD: patch-base_port.h,v 1.1 2015/10/12 07:24:51 ryoon Exp $
  #define AS_STRING_INTERNAL(x)   #x
  
 +// gcc>=46 has nullptr, otherwise use __null instead.
-+#if defined(__GNUC__) && __GNUC__ * 1000 + __GNUC__MINOR__ < 4006
++#if __cplusplus < 201103L && !defined(__clang__) && defined(__GNUC__) && __GNUC__ * 1000 + __GNUC__MINOR__ < 4006
 +#define nullptr __null
 +#endif
  
