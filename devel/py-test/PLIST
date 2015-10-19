@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/21 18:26:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/10/19 09:44:10 wiz Exp $
 bin/py.test-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/_pytest/__init__.pyo
 ${PYSITELIB}/_pytest/_argcomplete.py
 ${PYSITELIB}/_pytest/_argcomplete.pyc
 ${PYSITELIB}/_pytest/_argcomplete.pyo
+${PYSITELIB}/_pytest/_pluggy.py
+${PYSITELIB}/_pytest/_pluggy.pyc
+${PYSITELIB}/_pytest/_pluggy.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
@@ -31,15 +34,15 @@ ${PYSITELIB}/_pytest/assertion/rewrite.pyo
 ${PYSITELIB}/_pytest/assertion/util.py
 ${PYSITELIB}/_pytest/assertion/util.pyc
 ${PYSITELIB}/_pytest/assertion/util.pyo
+${PYSITELIB}/_pytest/cacheprovider.py
+${PYSITELIB}/_pytest/cacheprovider.pyc
+${PYSITELIB}/_pytest/cacheprovider.pyo
 ${PYSITELIB}/_pytest/capture.py
 ${PYSITELIB}/_pytest/capture.pyc
 ${PYSITELIB}/_pytest/capture.pyo
 ${PYSITELIB}/_pytest/config.py
 ${PYSITELIB}/_pytest/config.pyc
 ${PYSITELIB}/_pytest/config.pyo
-${PYSITELIB}/_pytest/core.py
-${PYSITELIB}/_pytest/core.pyc
-${PYSITELIB}/_pytest/core.pyo
 ${PYSITELIB}/_pytest/doctest.py
 ${PYSITELIB}/_pytest/doctest.pyc
 ${PYSITELIB}/_pytest/doctest.pyo
@@ -103,6 +106,12 @@ ${PYSITELIB}/_pytest/tmpdir.pyo
 ${PYSITELIB}/_pytest/unittest.py
 ${PYSITELIB}/_pytest/unittest.pyc
 ${PYSITELIB}/_pytest/unittest.pyo
+${PYSITELIB}/_pytest/vendored_packages/__init__.py
+${PYSITELIB}/_pytest/vendored_packages/__init__.pyc
+${PYSITELIB}/_pytest/vendored_packages/__init__.pyo
+${PYSITELIB}/_pytest/vendored_packages/pluggy.py
+${PYSITELIB}/_pytest/vendored_packages/pluggy.pyc
+${PYSITELIB}/_pytest/vendored_packages/pluggy.pyo
 ${PYSITELIB}/pytest.py
 ${PYSITELIB}/pytest.pyc
 ${PYSITELIB}/pytest.pyo
