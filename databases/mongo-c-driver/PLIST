@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2015/06/10 17:22:57 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/10/19 11:42:46 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-array-private.h
+include/libmongoc-1.0/mongoc-async-cmd-private.h
+include/libmongoc-1.0/mongoc-async-private.h
 include/libmongoc-1.0/mongoc-b64-private.h
 include/libmongoc-1.0/mongoc-buffer-private.h
 include/libmongoc-1.0/mongoc-bulk-operation-private.h
@@ -39,10 +41,12 @@ include/libmongoc-1.0/mongoc-index.h
 include/libmongoc-1.0/mongoc-init.h
 include/libmongoc-1.0/mongoc-iovec.h
 include/libmongoc-1.0/mongoc-list-private.h
+include/libmongoc-1.0/mongoc-log-private.h
 include/libmongoc-1.0/mongoc-log.h
 include/libmongoc-1.0/mongoc-matcher-op-private.h
 include/libmongoc-1.0/mongoc-matcher-private.h
 include/libmongoc-1.0/mongoc-matcher.h
+include/libmongoc-1.0/mongoc-opcode-private.h
 include/libmongoc-1.0/mongoc-opcode.h
 include/libmongoc-1.0/mongoc-queue-private.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-rand-private.h
@@ -52,9 +56,13 @@ include/libmongoc-1.0/mongoc-read-prefs.h
 include/libmongoc-1.0/mongoc-rpc-private.h
 include/libmongoc-1.0/mongoc-sasl-private.h
 include/libmongoc-1.0/mongoc-scram-private.h
+include/libmongoc-1.0/mongoc-server-description-private.h
+include/libmongoc-1.0/mongoc-server-description.h
+include/libmongoc-1.0/mongoc-set-private.h
+include/libmongoc-1.0/mongoc-socket-private.h
 include/libmongoc-1.0/mongoc-socket.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-ssl.h
 include/libmongoc-1.0/mongoc-ssl-private.h
+${PLIST.ssl}include/libmongoc-1.0/mongoc-ssl.h
 include/libmongoc-1.0/mongoc-stream-buffered.h
 include/libmongoc-1.0/mongoc-stream-file.h
 include/libmongoc-1.0/mongoc-stream-gridfs.h
@@ -63,10 +71,14 @@ include/libmongoc-1.0/mongoc-stream-socket.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls.h
 include/libmongoc-1.0/mongoc-stream.h
 include/libmongoc-1.0/mongoc-thread-private.h
+include/libmongoc-1.0/mongoc-topology-description-private.h
+include/libmongoc-1.0/mongoc-topology-private.h
+include/libmongoc-1.0/mongoc-topology-scanner-private.h
 include/libmongoc-1.0/mongoc-trace.h
 include/libmongoc-1.0/mongoc-uri-private.h
 include/libmongoc-1.0/mongoc-uri.h
 include/libmongoc-1.0/mongoc-util-private.h
+include/libmongoc-1.0/mongoc-version-functions.h
 include/libmongoc-1.0/mongoc-version.h
 include/libmongoc-1.0/mongoc-write-command-private.h
 include/libmongoc-1.0/mongoc-write-concern-private.h
@@ -81,6 +93,7 @@ include/libmongoc-1.0/op-msg.def
 include/libmongoc-1.0/op-query.def
 include/libmongoc-1.0/op-reply.def
 include/libmongoc-1.0/op-update.def
+include/libmongoc-1.0/utlist.h
 lib/libmongoc-1.0.la
 lib/libmongoc-priv.la
 lib/pkgconfig/libmongoc-1.0.pc
@@ -90,6 +103,7 @@ man/man3/mongoc_bulk_operation_delete.3
 man/man3/mongoc_bulk_operation_delete_one.3
 man/man3/mongoc_bulk_operation_destroy.3
 man/man3/mongoc_bulk_operation_execute.3
+man/man3/mongoc_bulk_operation_get_write_concern.3
 man/man3/mongoc_bulk_operation_insert.3
 man/man3/mongoc_bulk_operation_remove.3
 man/man3/mongoc_bulk_operation_remove_one.3
@@ -97,6 +111,7 @@ man/man3/mongoc_bulk_operation_replace_one.3
 man/man3/mongoc_bulk_operation_t.3
 man/man3/mongoc_bulk_operation_update.3
 man/man3/mongoc_bulk_operation_update_one.3
+man/man3/mongoc_check_version.3
 man/man3/mongoc_cleanup.3
 man/man3/mongoc_client_command.3
 man/man3/mongoc_client_command_simple.3
@@ -104,6 +119,7 @@ man/man3/mongoc_client_destroy.3
 man/man3/mongoc_client_get_collection.3
 man/man3/mongoc_client_get_database.3
 man/man3/mongoc_client_get_database_names.3
+man/man3/mongoc_client_get_default_database.3
 man/man3/mongoc_client_get_gridfs.3
 man/man3/mongoc_client_get_max_bson_size.3
 man/man3/mongoc_client_get_max_message_size.3
@@ -114,6 +130,8 @@ man/man3/mongoc_client_get_write_concern.3
 man/man3/mongoc_client_new.3
 man/man3/mongoc_client_new_from_uri.3
 man/man3/mongoc_client_pool_destroy.3
+man/man3/mongoc_client_pool_max_size.3
+man/man3/mongoc_client_pool_min_size.3
 man/man3/mongoc_client_pool_new.3
 man/man3/mongoc_client_pool_pop.3
 man/man3/mongoc_client_pool_push.3
@@ -184,6 +202,10 @@ man/man3/mongoc_database_set_read_prefs.3
 man/man3/mongoc_database_set_write_concern.3
 man/man3/mongoc_database_t.3
 man/man3/mongoc_delete_flags_t.3
+man/man3/mongoc_get_major_version.3
+man/man3/mongoc_get_micro_version.3
+man/man3/mongoc_get_minor_version.3
+man/man3/mongoc_get_version.3
 man/man3/mongoc_gridfs_create_file.3
 man/man3/mongoc_gridfs_create_file_from_stream.3
 man/man3/mongoc_gridfs_destroy.3
@@ -194,6 +216,7 @@ man/man3/mongoc_gridfs_file_get_aliases.3
 man/man3/mongoc_gridfs_file_get_chunk_size.3
 man/man3/mongoc_gridfs_file_get_content_type.3
 man/man3/mongoc_gridfs_file_get_filename.3
+man/man3/mongoc_gridfs_file_get_id.3
 man/man3/mongoc_gridfs_file_get_length.3
 man/man3/mongoc_gridfs_file_get_md5.3
 man/man3/mongoc_gridfs_file_get_metadata.3
@@ -222,9 +245,15 @@ man/man3/mongoc_gridfs_get_chunks.3
 man/man3/mongoc_gridfs_get_files.3
 man/man3/mongoc_gridfs_remove_by_filename.3
 man/man3/mongoc_gridfs_t.3
+man/man3/mongoc_index_opt_geo_get_default.3
+man/man3/mongoc_index_opt_geo_init.3
+man/man3/mongoc_index_opt_geo_t.3
 man/man3/mongoc_index_opt_get_default.3
 man/man3/mongoc_index_opt_init.3
 man/man3/mongoc_index_opt_t.3
+man/man3/mongoc_index_opt_wt_get_default.3
+man/man3/mongoc_index_opt_wt_init.3
+man/man3/mongoc_index_opt_wt_t.3
 man/man3/mongoc_init.3
 man/man3/mongoc_insert_flags_t.3
 man/man3/mongoc_iovec_t.3
@@ -250,6 +279,11 @@ man/man3/mongoc_read_prefs_set_tags.3
 man/man3/mongoc_read_prefs_t.3
 man/man3/mongoc_remove_flags_t.3
 man/man3/mongoc_reply_flags_t.3
+man/man3/mongoc_server_description_destroy.3
+man/man3/mongoc_server_description_host.3
+man/man3/mongoc_server_description_id.3
+man/man3/mongoc_server_description_new_copy.3
+man/man3/mongoc_server_description_t.3
 man/man3/mongoc_socket_accept.3
 man/man3/mongoc_socket_bind.3
 man/man3/mongoc_socket_close.3
@@ -304,6 +338,7 @@ man/man3/mongoc_uri_get_hosts.3
 man/man3/mongoc_uri_get_options.3
 man/man3/mongoc_uri_get_password.3
 man/man3/mongoc_uri_get_read_prefs.3
+man/man3/mongoc_uri_get_read_prefs_t.3
 man/man3/mongoc_uri_get_replica_set.3
 man/man3/mongoc_uri_get_ssl.3
 man/man3/mongoc_uri_get_string.3
