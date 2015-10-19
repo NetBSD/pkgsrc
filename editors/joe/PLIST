@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2015/05/03 01:45:32 wen Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/10/19 09:15:54 adam Exp $
 bin/jmacs
 bin/joe
 bin/jpico
 bin/jstar
 bin/rjoe
-bin/stringify
-bin/termidx
 man/man1/joe.1
 man/ru/man1/joe.1
 share/doc/joe/ChangeLog
@@ -18,6 +16,7 @@ share/examples/joe/ftyperc
 share/examples/joe/jicerc.ru
 share/examples/joe/jmacsrc
 share/examples/joe/joerc
+share/examples/joe/joerc.zh_TW
 share/examples/joe/jpicorc
 share/examples/joe/jstarrc
 share/examples/joe/rjoerc
@@ -28,19 +27,24 @@ share/joe/lang/de.po
 share/joe/lang/fr.po
 share/joe/lang/ru.po
 share/joe/lang/uk.po
+share/joe/lang/zh.po
 share/joe/syntax/4gl.jsf
 share/joe/syntax/ada.jsf
 share/joe/syntax/ant.jsf
 share/joe/syntax/asm.jsf
+share/joe/syntax/avr.jsf
 share/joe/syntax/awk.jsf
 share/joe/syntax/batch.jsf
 share/joe/syntax/c.jsf
+share/joe/syntax/clojure.jsf
 share/joe/syntax/cobol.jsf
+share/joe/syntax/coffee.jsf
 share/joe/syntax/comment_todo.jsf
 share/joe/syntax/conf.jsf
 share/joe/syntax/csh.jsf
 share/joe/syntax/csharp.jsf
 share/joe/syntax/css.jsf
+share/joe/syntax/d.jsf
 share/joe/syntax/debian.jsf
 share/joe/syntax/diff.jsf
 share/joe/syntax/elixir.jsf
@@ -50,6 +54,7 @@ share/joe/syntax/filename.jsf
 share/joe/syntax/fortran.jsf
 share/joe/syntax/git-commit.jsf
 share/joe/syntax/go.jsf
+share/joe/syntax/groovy.jsf
 share/joe/syntax/haml.jsf
 share/joe/syntax/haskell.jsf
 share/joe/syntax/html.jsf
@@ -79,8 +84,11 @@ share/joe/syntax/properties.jsf
 share/joe/syntax/ps.jsf
 share/joe/syntax/puppet.jsf
 share/joe/syntax/python.jsf
+share/joe/syntax/r.jsf
 share/joe/syntax/rexx.jsf
 share/joe/syntax/ruby.jsf
+share/joe/syntax/rust.jsf
+share/joe/syntax/scala.jsf
 share/joe/syntax/sed.jsf
 share/joe/syntax/sh.jsf
 share/joe/syntax/sieve.jsf
@@ -88,6 +96,7 @@ share/joe/syntax/skill.jsf
 share/joe/syntax/sml.jsf
 share/joe/syntax/spec.jsf
 share/joe/syntax/sql.jsf
+share/joe/syntax/swift.jsf
 share/joe/syntax/tcl.jsf
 share/joe/syntax/tex.jsf
 share/joe/syntax/troff.jsf
