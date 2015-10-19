@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/10/12 07:24:50 ryoon Exp $
+$NetBSD: distinfo,v 1.17 2015/10/19 16:37:37 joerg Exp $
 
 SHA1 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = bb35db84e85bbcf413c36dc2a0d05d8af3f483e2
 RMD160 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = d24b1e1caf00a919620bf6da0855d137a41cb82e
@@ -16,7 +16,7 @@ SHA1 (patch-base_logging.cc) = 96ee9d1426ef1cf946a00fb15c9754603ab15bb8
 SHA1 (patch-base_mutex.cc) = aed8588d4ff7b057fed072097ef09ddbc2696d31
 SHA1 (patch-base_mutex.h) = 6c3c8f0845f0fdad815c4877026894000d5eac2c
 SHA1 (patch-base_password__manager.cc) = f16982447f54e397d1aa103260d8f4d10aa76f96
-SHA1 (patch-base_port.h) = 47231ec5b4c46005b626da21d63bb3e714ed93bd
+SHA1 (patch-base_port.h) = 953b1f0d6101d31eded3bba9665824b726d36b58
 SHA1 (patch-base_process.cc) = abdd6a955e87506972e7f71fd4bc3a300f49b304
 SHA1 (patch-base_run__level.cc) = ead96536246093bd3d44f59a80085da2f39904e8
 SHA1 (patch-base_system__util.cc) = f3ef575a15cd518fe7d29264b39f775ccf502802
