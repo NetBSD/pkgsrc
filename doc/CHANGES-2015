@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4325 2015/10/19 09:42:31 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4326 2015/10/19 09:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7427,3 +7427,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/joe to 4.1 [adam 2015-10-18]
 	Updated security/py-cryptography to 1.0.2 [wiz 2015-10-19]
 	Updated devel/py-cython to 0.23.4 [wiz 2015-10-19]
+	Updated pkgtools/pkglint to 4.157 [wiz 2015-10-19]
