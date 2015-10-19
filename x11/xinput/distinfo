@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/05/16 05:47:01 richard Exp $
+$NetBSD: distinfo,v 1.7 2015/10/19 22:56:32 wiz Exp $
 
-SHA1 (xinput-1.6.0.tar.gz) = cb36f3bde1aabde7c0d0d907124a05eb2597bd28
-RMD160 (xinput-1.6.0.tar.gz) = cab4898e86611c128a26035fd4b4deb28a0dac11
-Size (xinput-1.6.0.tar.gz) = 183484 bytes
+SHA1 (xinput-1.6.2.tar.gz) = c3bdd9c39a0d30db8948ae5e8a1354e6b4e9640a
+RMD160 (xinput-1.6.2.tar.gz) = 184e5307c0e4cb1f0075d568598dbfdbbd6bfc1d
+SHA512 (xinput-1.6.2.tar.gz) = 0ba2f59eb0fa347beb9219d04cb0279a243856f5b5e333386dd2b8fe287dccf6d8aebf8031c80e06b6a5260db9fe25cfaef6cd9ed373836525f15b85a5e535b3
+Size (xinput-1.6.2.tar.gz) = 200635 bytes
