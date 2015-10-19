@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/10/03 00:56:02 jnemeth Exp $
+# $NetBSD: Makefile,v 1.37 2015/10/19 16:40:41 joerg Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -248,7 +248,7 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
 		-Wno-error=unused-function -Wno-error=format \
 		-Wno-error=unused-const-variable \
 		-Wno-error=gnu-designator -Wno-error=uninitialized \
-		-Wno-error=parentheses-equality
+		-Wno-error=parentheses-equality -Wno-error=enum-conversion
 BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 			rm:-mpreferred-stack-boundary=2
 .endif
