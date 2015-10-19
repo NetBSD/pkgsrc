@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4323 2015/10/19 09:17:14 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4324 2015/10/19 09:37:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7425,3 +7425,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/rabbitmq to 3.5.6 [fhajny 2015-10-18]
 	Updated games/lgogdownloader to 2.26 [wiz 2015-10-18]
 	Updated editors/joe to 4.1 [adam 2015-10-18]
+	Updated security/py-cryptography to 1.0.2 [wiz 2015-10-19]
