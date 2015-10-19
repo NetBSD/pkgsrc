@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15004 2015/10/19 09:44:21 wiz Exp $
+$NetBSD: TODO,v 1.15005 2015/10/19 11:38:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -875,6 +875,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.0.6
 	o harminv-1.4
 	o haskell-mode-1.45
 	o hdevtools-0.1.1.9
@@ -1020,6 +1021,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.10
 	o libdatrie-0.2.9
+	o libebml-1.3.2
 	o libetonyek-0.1.3
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
@@ -1038,6 +1040,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libkgeomap-4.12.0
 	o libkvkontakte-4.12.0
 	o libmatheval-1.1.11
+	o libmatroska-1.4.3
 	o libmcs-0.7.2
 	o libmediawiki-4.12.0
 	o libmicrohttpd-0.9.42
@@ -1231,6 +1234,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Bytes-Random-Secure-0.29
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
+	o p5-CGI-4.22
 	o p5-CGI-Emulate-PSGI-0.21
 	o p5-CGI-Lite-3.00
 	o p5-CPANPLUS-2.101
@@ -1480,6 +1484,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.18
+	o py-anki2-2.0.33
 	o py-bleach-1.4.1
 	o py-bsddb3-6.1.0
 	o py-cassa-1.11.0
@@ -1714,6 +1719,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
+	o talloc-2.1.4
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl85-8.5.18
@@ -1809,6 +1815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-devel-1.7.51
+	o wireshark-1.12.8
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
@@ -1818,7 +1825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151010
+	o x264-devel-20151017
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
