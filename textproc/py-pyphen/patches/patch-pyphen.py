@@ -1,15 +1,18 @@
-$NetBSD: patch-pyphen.py,v 1.1 2015/07/13 16:13:55 kleink Exp $
+$NetBSD: patch-pyphen.py,v 1.2 2015/10/20 17:18:57 kleink Exp $
 
 Adjust dictionaries path to allow multiple Python version installs.
 
---- pyphen.py.orig	2013-12-27 17:53:36.000000000 +0100
-+++ pyphen.py	2015-07-13 17:48:37.000000000 +0200
-@@ -53,10 +53,10 @@
- else:
+--- pyphen.py.orig	2015-09-28 11:41:52.000000000 +0200
++++ pyphen.py	2015-10-20 18:26:32.000000000 +0200
+@@ -50,13 +50,13 @@ try:
+     import pkg_resources
      dictionaries_roots = (os.path.join(
          pkg_resources.resource_filename('pyphen', ''),
 -        'share', 'pyphen', 'dictionaries'),)
 +        'share', 'pyphen%s' % sys.version[0:3], 'dictionaries'),)
+ except ImportError:
+     dictionaries_roots = ()
+
  finally:
      dictionaries_roots += (
 -        os.path.join(sys.prefix, 'share', 'pyphen', 'dictionaries'),
