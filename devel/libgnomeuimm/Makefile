@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/04/25 14:20:36 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2015/10/20 09:40:21 tnn Exp $
 
 DISTNAME=	libgnomeuimm-2.28.0
 PKGREVISION=	31
@@ -11,6 +11,7 @@ HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnomeui
 
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 gmake pkg-config
