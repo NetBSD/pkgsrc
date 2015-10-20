@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/04/25 14:23:10 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2015/10/20 09:40:21 tnn Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
@@ -13,6 +13,7 @@ COMMENT=	GTKMM-based image viewing program
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	share/doc/gimmage
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 

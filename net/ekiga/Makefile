@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2015/10/10 01:58:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2015/10/20 09:40:21 tnn Exp $
 #
 
 DISTNAME=		ekiga-3.2.6
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--enable-gstreamer
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

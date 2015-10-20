@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/08/23 14:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/10/20 09:40:21 tnn Exp $
 #
 
 DISTNAME=	net6-1.3.14
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 
 PKGCONFIG_OVERRIDE+=	net6-1.3.pc.in
 
