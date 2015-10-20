@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/08/12 08:33:31 prlw1 Exp $
+# $NetBSD: Makefile,v 1.44 2015/10/20 10:26:40 jperkin Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -105,6 +105,8 @@ MAKE_ENV+=		ac_cv_func_gethostbyname_r=no
 
 LIBS.SunOS+=		-lgmp
 
+# Ignore missing rpaths in "fake" library.
+CHECK_SHLIBS_SKIP+=	${GCC_PKGNAME}/lib*/libgcj_bc.so*
 
 do-configure:
 	${MKDIR} ${WRKDIR}/obj
