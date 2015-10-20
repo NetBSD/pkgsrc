@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/02/12 23:18:10 tron Exp $
+# $NetBSD: Makefile,v 1.29 2015/10/20 10:53:24 tnn Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -8,7 +8,7 @@
 DISTNAME=	ssmtp_2.64.orig
 EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	ssmtp-2.64
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 
@@ -36,7 +36,7 @@ SUBST_FILES.paths=	${WRKDIR}/mailer.conf ssmtp.c ssmtp.conf ssmtp.8
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,/etc/ssl/certs,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,/etc/ssmtp,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS+=	${EGDIR}
 
