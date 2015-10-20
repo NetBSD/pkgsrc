@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/04/25 14:25:06 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2015/10/20 09:40:21 tnn Exp $
 #
 
 DISTNAME=	gtkmm-utils-0.4.1
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++
+CXXFLAGS+=	-std=c++11
 
 PKGCONFIG_OVERRIDE+=	glibmm-utils/glibmm-utils.pc.in
 PKGCONFIG_OVERRIDE+=	gtkmm-utils/gtkmm-utils.pc.in

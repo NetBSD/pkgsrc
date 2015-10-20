@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/07/26 23:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/10/20 09:40:21 tnn Exp $
 
 DISTNAME=	gtkmm-3.16.0
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
@@ -12,6 +12,7 @@ COMMENT=	C++ Interfaces for GTK+ and GNOME (v3)
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
