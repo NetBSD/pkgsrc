@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/04/10 22:01:43 rodent Exp $
+# $NetBSD: Makefile,v 1.19 2015/10/20 10:30:54 jperkin Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -94,7 +94,10 @@ CONFIGURE_ARGS+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
 CONFIGURE_ARGS+=	--with-dwarf2
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc) \
+ || (!empty(MACHINE_PLATFORM:MLinux-*-x86_64) && \
+      exists(/usr/include/gnu/stubs-64.h) && \
+     !exists(/usr/include/gnu/stubs-32.h))
 CONFIGURE_ARGS+=	--disable-multilib
 .endif
 
