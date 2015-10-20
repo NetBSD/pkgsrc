@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/04 12:56:14 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/20 08:42:43 fhajny Exp $
 bin/barman
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/barman/__init__.pyo
 ${PYSITELIB}/barman/backup.py
 ${PYSITELIB}/barman/backup.pyc
 ${PYSITELIB}/barman/backup.pyo
+${PYSITELIB}/barman/backup_executor.py
+${PYSITELIB}/barman/backup_executor.pyc
+${PYSITELIB}/barman/backup_executor.pyo
 ${PYSITELIB}/barman/cli.py
 ${PYSITELIB}/barman/cli.pyc
 ${PYSITELIB}/barman/cli.pyo
@@ -41,15 +44,15 @@ ${PYSITELIB}/barman/lockfile.pyo
 ${PYSITELIB}/barman/output.py
 ${PYSITELIB}/barman/output.pyc
 ${PYSITELIB}/barman/output.pyo
+${PYSITELIB}/barman/recovery_executor.py
+${PYSITELIB}/barman/recovery_executor.pyc
+${PYSITELIB}/barman/recovery_executor.pyo
 ${PYSITELIB}/barman/retention_policies.py
 ${PYSITELIB}/barman/retention_policies.pyc
 ${PYSITELIB}/barman/retention_policies.pyo
 ${PYSITELIB}/barman/server.py
 ${PYSITELIB}/barman/server.pyc
 ${PYSITELIB}/barman/server.pyo
-${PYSITELIB}/barman/testing_helpers.py
-${PYSITELIB}/barman/testing_helpers.pyc
-${PYSITELIB}/barman/testing_helpers.pyo
 ${PYSITELIB}/barman/utils.py
 ${PYSITELIB}/barman/utils.pyc
 ${PYSITELIB}/barman/utils.pyo
