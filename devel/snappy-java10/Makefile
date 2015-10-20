@@ -1,37 +1,46 @@
-# $NetBSD: Makefile,v 1.4 2014/12/15 13:24:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2015/10/20 12:13:33 fhajny Exp $
 
-SNAPPYVER=	1.0.5
-PKGNAME=	snappy-java10-${SNAPPYVER}
+DISTNAME=	snappy-java-${SNAPPYVER}
+PKGNAME=	${DISTNAME:S/java/java10/}
+PKGREVISION=	1
 CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=xerial/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/snappy-java/
-COMMENT=	Snappy for Java, a fast compressor/decompressor library
+HOMEPAGE=	http://github.com/xerial/snappy-java/
+COMMENT=	Snappy compressor/decompressor for Java
 LICENSE=	apache-2.0
 
-DISTFILES+=	snappy-java-${SNAPPYVER}.tar.gz snappy-${SNAPPYVER}.tar.gz
-SITES.snappy-${SNAPPYVER}.tar.gz=	https://snappy.googlecode.com/files/
-SITES.snappy-java-${SNAPPYVER}.tar.gz=	http://snappy-java.googlecode.com/files/
+GITHUB_PROJECT=	snappy-java
+SNAPPYVER=	1.0.5
+
+DIST_SUBDIR=	${PKGBASE}
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	snappy-java-${SNAPPYVER}-deps.tar.gz
+DISTFILES+=	snappy-${SNAPPYVER}.tar.gz
+SITES.snappy-${SNAPPYVER}.tar.gz=		https://snappy.googlecode.com/files/
+SITES.snappy-java-${SNAPPYVER}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+EXTRACT_DIR.snappy-${SNAPPYVER}.tar.gz=		${WRKSRC}/target
 
 TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
-
-DIST_SUBDIR=	snappy-java10
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:S/snappy-java10/snappy-java/}
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 USE_JAVA=	yes
 USE_JAVA2=	6
 
-INSTALLATION_DIRS+=	lib/java/snappy-java
+MAVEN_FLAGS+=	-Duser.home=${FAKEHOMEDIR}
+MAVEN_FLAGS+=	-Dmaven.repo.local=${WRKDIR}/deps
+MAVEN_FLAGS+=	--offline
 
 MAKE_FLAGS+=	JAVA_HOME=${PKG_JAVA_HOME}
+MAKE_FLAGS+=	MVN="mvn ${MAVEN_FLAGS}"
 MAKE_JOBS_SAFE=	no
 
-pre-build:
-	${MKDIR} ${WRKSRC}/target
-	${CP} -f ${DISTDIR}/${DIST_SUBDIR}/snappy-${SNAPPYVER}.tar.gz ${WRKSRC}/target
+INSTALLATION_DIRS+=	lib/java/snappy-java
+
+post-extract:
+	${TOUCH} ${WRKSRC}/target/snappy-extracted.log
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/target/snappy-java-${SNAPPYVER}.jar \
