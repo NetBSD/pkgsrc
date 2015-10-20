@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2015/09/12 20:14:39 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2015/10/20 08:27:56 adam Exp $
 
-VERSION_DATE=	2015.08.09
+VERSION_DATE=	2015.10.18
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//S/.//}
 CATEGORIES=	net
@@ -20,9 +20,9 @@ DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-open
 # the version you are going to commit.
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	gmake
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/youtube-dl
-USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} MANDIR=${PREFIX}/${PKGMANDIR} \
 		BASHCOMPDIR=${PREFIX}/share/bash-completion/completions \
