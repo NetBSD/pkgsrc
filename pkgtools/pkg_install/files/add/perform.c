@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.106 2014/12/30 15:13:20 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.107 2015/10/20 08:18:12 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.106 2014/12/30 15:13:20 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.107 2015/10/20 08:18:12 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -907,7 +907,7 @@ check_platform(struct pkg_task *pkg)
 	if (OverrideMachine != NULL)
 		effective_arch = OverrideMachine;
 	else
-		effective_arch = MACHINE_ARCH;
+		effective_arch = PKGSRC_MACHINE_ARCH;
 
 	/* If either the OS or arch are different, bomb */
 	if (strcmp(OPSYS_NAME, pkg->buildinfo[BI_OPSYS]) ||
