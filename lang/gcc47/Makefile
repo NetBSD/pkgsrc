@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/04/10 01:50:32 rodent Exp $
+# $NetBSD: Makefile,v 1.34 2015/10/20 10:26:40 jperkin Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -60,6 +60,9 @@ LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
 # Needed on Darwin when LDFLAGS point to a SDK
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
+
+# Ignore missing rpaths in "fake" library.
+CHECK_SHLIBS_SKIP+=	${GCC_PKGNAME}/lib*/libgcj_bc.so*
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
