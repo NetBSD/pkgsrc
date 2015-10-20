@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15006 2015/10/19 22:56:42 wiz Exp $
+$NetBSD: TODO,v 1.15007 2015/10/20 08:27:59 tnn Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-11.0.3
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
