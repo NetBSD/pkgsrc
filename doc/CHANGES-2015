@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4334 2015/10/21 03:31:35 nonaka Exp $
+$NetBSD: CHANGES-2015,v 1.4335 2015/10/21 08:21:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7437,3 +7437,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/youtube-dl to 20151018 [adam 2015-10-20]
 	Updated databases/py-barman to 1.5.0 [fhajny 2015-10-20]
 	Updated fonts/koruri-ttf to 20151021 [nonaka 2015-10-21]
+	Updated www/p5-CGI to 4.22 [wiz 2015-10-21]
