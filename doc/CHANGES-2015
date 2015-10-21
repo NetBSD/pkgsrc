@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4338 2015/10/21 08:31:14 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4339 2015/10/21 08:32:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7441,3 +7441,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI to 4.22 [wiz 2015-10-21]
 	Updated fonts/harfbuzz to 1.0.6 [wiz 2015-10-21]
 	Updated misc/py-anki2 to 2.0.33 [wiz 2015-10-21]
+	Updated devel/libebml to 1.3.2 [wiz 2015-10-21]
