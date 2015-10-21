@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/21 16:37:22 fhajny Exp $
+bin/bsondump
+bin/mongodump
+bin/mongoexport
+bin/mongofiles
+bin/mongoimport
+bin/mongooplog
+bin/mongorestore
+bin/mongostat
+bin/mongotop
