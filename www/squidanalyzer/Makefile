@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/10/21 09:39:10 adam Exp $
 
-DISTNAME=	squidanalyzer-6.2-1
-PKGNAME=	squidanalyzer-6.2.1
-PKGREVISION=	1
+DISTNAME=	squidanalyzer-6.3-1
+PKGNAME=	squidanalyzer-6.3.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squid-report/}
 
@@ -12,8 +11,6 @@ COMMENT=	Squid proxy native log analyser and reports generator
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	p5-GD-Graph3d>=0.63:../../graphics/p5-GD-Graph3d
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:R}
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl:run
