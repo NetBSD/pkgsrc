@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4344 2015/10/21 12:53:40 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4345 2015/10/21 12:55:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7447,3 +7447,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/wireshark to 1.12.8 [wiz 2015-10-21]
 	Updated www/py-flask-login to 0.3.2 [kleink 2015-10-21]
 	Updated databases/apache-cassandra to 1.2.19 [fhajny 2015-10-21]
+	Added databases/apache-cassandra2 version 2.1.11 [fhajny 2015-10-21]
