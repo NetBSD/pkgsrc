@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2015/10/21 12:57:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.502 2015/10/21 16:39:23 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -82,6 +82,7 @@ SUBDIR+=	mariadb55-client
 SUBDIR+=	mariadb55-server
 SUBDIR+=	metakit-lib
 SUBDIR+=	mongo-c-driver
+SUBDIR+=	mongo-tools
 SUBDIR+=	mongodb
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-cluster
