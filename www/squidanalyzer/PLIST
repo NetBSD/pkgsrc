@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/25 11:43:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/21 09:39:10 adam Exp $
 bin/squid-analyzer
 man/man3/squid-analyzer.3
 share/examples/squidanalyzer/excluded
 share/examples/squidanalyzer/included
+share/examples/squidanalyzer/lang/ca_CA.txt
 share/examples/squidanalyzer/lang/cs_CZ.txt
 share/examples/squidanalyzer/lang/de_DE.txt
 share/examples/squidanalyzer/lang/en_US.txt
