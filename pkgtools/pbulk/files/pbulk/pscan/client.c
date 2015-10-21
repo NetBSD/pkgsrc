@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.3 2009/03/06 15:21:17 joerg Exp $ */
+/* $NetBSD: client.c,v 1.4 2015/10/21 23:03:17 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -77,6 +77,8 @@ loop:
 	if (recv_bytes != 2)
 		errx(1, "Premature end while reading path length from socket");
 	path_len = ntohs(path_len);
+	if (path_len == 0)
+		exit(0);
 	if (path_len < 3)
 		errx(1, "Invalid path length from master");
 
