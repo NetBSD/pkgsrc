@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.8 2013/01/14 14:33:28 jperkin Exp $ */
+/* $NetBSD: master.c,v 1.9 2015/10/21 23:03:17 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -70,6 +70,11 @@ struct scan_peer {
 };
 
 static void	assign_job(struct scan_peer *);
+
+static void
+do_nothing(void *arg)
+{
+}
 
 static void
 kill_peer(void *arg)
@@ -156,8 +161,14 @@ shutdown_master(void)
 
 	event_del(&listen_event);
 	(void)close(listen_event_socket);
-	LIST_FOREACH(peer, &inactive_peers, peer_link)
+	LIST_FOREACH(peer, &inactive_peers, peer_link) {
 		(void)shutdown(peer->fd, SHUT_RDWR);
+		uint16_t net_job_len = htons(job_len);
+		(void)memcpy(peer->tmp_buf, &net_job_len, 2);
+
+		deferred_write(peer->fd, peer->tmp_buf, 2, peer, do_nothing,
+		    kill_peer);
+	}
 	tv.tv_sec = 1;
 	tv.tv_usec = 0;
 	event_loopexit(&tv);
