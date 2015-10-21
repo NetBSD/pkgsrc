@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/10/21 16:37:22 fhajny Exp $
+
+SHA1 (mongo-tools-3.0.7.tar.gz) = 26d1838286826d0e6022f8f51e2be541887d91ac
+RMD160 (mongo-tools-3.0.7.tar.gz) = b7ca05ae1f66bf8d1152eada1c673f99f5f5cdc3
+SHA512 (mongo-tools-3.0.7.tar.gz) = ff410f25a42e76f55716e6e478564aaeefd3999cf0e9db718969877709974d099c479690e81d6f639c27b0a4d9b59d193c43f1c31dc027b594f1fef33129cb5a
+Size (mongo-tools-3.0.7.tar.gz) = 2183495 bytes
+SHA1 (patch-vendor_src_github.com_howeyc_gopass_bsd.go) = 13efab29de38877ef9948439edc23d57ca41e48d
+SHA1 (patch-vendor_src_github.com_spacemonkeygo_openssl_build.go) = fa1dd7b8e6d4811298e52d11fa5c198db0cb0f50
+SHA1 (patch-vendor_src_gopkg.in_mgo.v2_internal_sasl_sasl.go) = b860646c4125001d2c025005bc2d63cf12d10a68
