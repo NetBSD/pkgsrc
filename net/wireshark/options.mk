@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/09/12 19:03:59 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2015/10/21 09:12:10 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	gtk3 lua
@@ -17,6 +17,7 @@ PLIST.gtk3=		yes
 POST_INSTALL_TARGETS+=	install-gtk-desktop
 .include "../../x11/gtk3/buildlink3.mk"
 
+.PHONY: install-gtk-desktop
 install-gtk-desktop:
 	${INSTALL_DATA} ${WRKSRC}/wireshark.desktop \
 		${DESTDIR}${PREFIX}/share/applications
@@ -49,6 +50,7 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 
+.PHONY: install-icons
 install-icons:
 	${INSTALL_DATA} ${WRKSRC}/image/wsicon.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wireshark.svg
