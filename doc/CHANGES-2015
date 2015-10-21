@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4340 2015/10/21 08:37:35 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4341 2015/10/21 08:41:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7443,3 +7443,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/py-anki2 to 2.0.33 [wiz 2015-10-21]
 	Updated devel/libebml to 1.3.2 [wiz 2015-10-21]
 	Updated devel/talloc to 2.1.4 [wiz 2015-10-21]
+	Updated multimedia/libmatroska to 1.4.3 [wiz 2015-10-21]
