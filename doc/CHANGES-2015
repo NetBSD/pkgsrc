@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4343 2015/10/21 11:47:34 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.4344 2015/10/21 12:53:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7446,3 +7446,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libmatroska to 1.4.3 [wiz 2015-10-21]
 	Updated net/wireshark to 1.12.8 [wiz 2015-10-21]
 	Updated www/py-flask-login to 0.3.2 [kleink 2015-10-21]
+	Updated databases/apache-cassandra to 1.2.19 [fhajny 2015-10-21]
