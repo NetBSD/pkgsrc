@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4342 2015/10/21 09:12:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4343 2015/10/21 11:47:34 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7445,3 +7445,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/talloc to 2.1.4 [wiz 2015-10-21]
 	Updated multimedia/libmatroska to 1.4.3 [wiz 2015-10-21]
 	Updated net/wireshark to 1.12.8 [wiz 2015-10-21]
+	Updated www/py-flask-login to 0.3.2 [kleink 2015-10-21]
