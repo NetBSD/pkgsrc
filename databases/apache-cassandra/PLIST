@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/10/21 12:53:27 fhajny Exp $
 share/cassandra/bin/cassandra
 share/cassandra/bin/cassandra-cli
-share/cassandra/bin/cassandra-shuffle
 share/cassandra/bin/cassandra.in.sh
 share/cassandra/bin/cqlsh
 share/cassandra/bin/debug-cql
@@ -1465,12 +1464,14 @@ share/cassandra/javadoc/org/apache/cassandra/io/util/package-use.html
 share/cassandra/javadoc/org/apache/cassandra/locator/AbstractEndpointSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/AbstractNetworkTopologySnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/AbstractReplicationStrategy.html
+share/cassandra/javadoc/org/apache/cassandra/locator/CloudstackSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/DynamicEndpointSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/DynamicEndpointSnitchMBean.html
 share/cassandra/javadoc/org/apache/cassandra/locator/Ec2MultiRegionSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/Ec2Snitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/EndpointSnitchInfo.html
 share/cassandra/javadoc/org/apache/cassandra/locator/EndpointSnitchInfoMBean.html
+share/cassandra/javadoc/org/apache/cassandra/locator/GoogleCloudSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/GossipingPropertyFileSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/IEndpointSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/ILatencySubscriber.html
@@ -1490,12 +1491,14 @@ share/cassandra/javadoc/org/apache/cassandra/locator/TokenMetadata.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/AbstractEndpointSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/AbstractNetworkTopologySnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/AbstractReplicationStrategy.html
+share/cassandra/javadoc/org/apache/cassandra/locator/class-use/CloudstackSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/DynamicEndpointSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/DynamicEndpointSnitchMBean.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/Ec2MultiRegionSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/Ec2Snitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/EndpointSnitchInfo.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/EndpointSnitchInfoMBean.html
+share/cassandra/javadoc/org/apache/cassandra/locator/class-use/GoogleCloudSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/GossipingPropertyFileSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/IEndpointSnitch.html
 share/cassandra/javadoc/org/apache/cassandra/locator/class-use/ILatencySubscriber.html
@@ -1519,6 +1522,7 @@ share/cassandra/javadoc/org/apache/cassandra/locator/package-use.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/CacheMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/ClientMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/ClientRequestMetrics.html
+share/cassandra/javadoc/org/apache/cassandra/metrics/ColumnFamilyMetrics.ColumnFamilyHistogram.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/ColumnFamilyMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/CommitLogMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/CompactionMetrics.html
@@ -1527,6 +1531,7 @@ share/cassandra/javadoc/org/apache/cassandra/metrics/DefaultNameFactory.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/DroppedMessageMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/HintedHandoffMetrics.DifferencingCounter.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/HintedHandoffMetrics.html
+share/cassandra/javadoc/org/apache/cassandra/metrics/KeyspaceMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/LatencyMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/MetricNameFactory.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/ReadRepairMetrics.html
@@ -1536,6 +1541,7 @@ share/cassandra/javadoc/org/apache/cassandra/metrics/ThreadPoolMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/CacheMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/ClientMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/ClientRequestMetrics.html
+share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/ColumnFamilyMetrics.ColumnFamilyHistogram.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/ColumnFamilyMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/CommitLogMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/CompactionMetrics.html
@@ -1544,6 +1550,7 @@ share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/DefaultNameFactor
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/DroppedMessageMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/HintedHandoffMetrics.DifferencingCounter.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/HintedHandoffMetrics.html
+share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/KeyspaceMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/LatencyMetrics.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/MetricNameFactory.html
 share/cassandra/javadoc/org/apache/cassandra/metrics/class-use/ReadRepairMetrics.html
@@ -1679,7 +1686,6 @@ share/cassandra/javadoc/org/apache/cassandra/service/RangeSliceVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/ReadCallback.html
 share/cassandra/javadoc/org/apache/cassandra/service/RowDataResolver.html
 share/cassandra/javadoc/org/apache/cassandra/service/RowDigestResolver.html
-share/cassandra/javadoc/org/apache/cassandra/service/ScheduledRangeTransferExecutorService.html
 share/cassandra/javadoc/org/apache/cassandra/service/SnapshotVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/StorageProxy.WritePerformer.html
 share/cassandra/javadoc/org/apache/cassandra/service/StorageProxy.html
@@ -1735,7 +1741,6 @@ share/cassandra/javadoc/org/apache/cassandra/service/class-use/RangeSliceVerbHan
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/ReadCallback.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/RowDataResolver.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/RowDigestResolver.html
-share/cassandra/javadoc/org/apache/cassandra/service/class-use/ScheduledRangeTransferExecutorService.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/SnapshotVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/StorageProxy.WritePerformer.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/StorageProxy.html
@@ -2465,7 +2470,6 @@ share/cassandra/javadoc/org/apache/cassandra/tools/NodeToolHelp.html
 share/cassandra/javadoc/org/apache/cassandra/tools/SSTableExport.html
 share/cassandra/javadoc/org/apache/cassandra/tools/SSTableImport.html
 share/cassandra/javadoc/org/apache/cassandra/tools/SSTableMetadataViewer.html
-share/cassandra/javadoc/org/apache/cassandra/tools/Shuffle.html
 share/cassandra/javadoc/org/apache/cassandra/tools/StandaloneScrubber.html
 share/cassandra/javadoc/org/apache/cassandra/tools/StandaloneSplitter.html
 share/cassandra/javadoc/org/apache/cassandra/tools/StandaloneUpgrader.html
@@ -2480,7 +2484,6 @@ share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeToolHelp.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/SSTableExport.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/SSTableImport.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/SSTableMetadataViewer.html
-share/cassandra/javadoc/org/apache/cassandra/tools/class-use/Shuffle.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/StandaloneScrubber.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/StandaloneSplitter.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/StandaloneUpgrader.html
