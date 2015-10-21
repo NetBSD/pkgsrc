@@ -1,0 +1,15 @@
+$NetBSD: patch-bin_cassandra,v 1.1 2015/10/21 12:55:29 fhajny Exp $
+
+Fix default log dir.
+
+--- bin/cassandra.orig	2014-09-07 13:29:54.000000000 +0000
++++ bin/cassandra
+@@ -134,7 +134,7 @@ launch_service()
+     props="$3"
+     class="$4"
+     cassandra_parms="-Dlogback.configurationFile=logback.xml"
+-    cassandra_parms="$cassandra_parms -Dcassandra.logdir=$CASSANDRA_HOME/logs"
++    cassandra_parms="$cassandra_parms -Dcassandra.logdir=@VARBASE@/log/cassandra"
+     cassandra_parms="$cassandra_parms -Dcassandra.storagedir=$cassandra_storagedir"
+ 
+     if [ "x$pidpath" != "x" ]; then
