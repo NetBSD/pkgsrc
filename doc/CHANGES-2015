@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4333 2015/10/20 08:42:55 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4334 2015/10/21 03:31:35 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7436,3 +7436,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/MesaLib to 11.0.3 [tnn 2015-10-20]
 	Updated net/youtube-dl to 20151018 [adam 2015-10-20]
 	Updated databases/py-barman to 1.5.0 [fhajny 2015-10-20]
+	Updated fonts/koruri-ttf to 20151021 [nonaka 2015-10-21]
