@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4346 2015/10/21 14:47:55 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4347 2015/10/21 16:37:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7449,3 +7449,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/apache-cassandra to 1.2.19 [fhajny 2015-10-21]
 	Added databases/apache-cassandra2 version 2.1.11 [fhajny 2015-10-21]
 	Updated lang/nodejs to 4.2.1 [fhajny 2015-10-21]
+	Added databases/mongo-tools version 3.0.7 [fhajny 2015-10-21]
