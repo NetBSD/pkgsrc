@@ -1,0 +1,16 @@
+$NetBSD: patch-common_autoconf_build-aux_autoconf-config.sub,v 1.1 2015/10/22 21:55:55 jmcneill Exp $
+
+Fix build on NetBSD/arm (complaints that armv7--netbsdelf-eabihf is an unknown
+machine name).
+
+--- common/autoconf/build-aux/autoconf-config.sub.orig	2015-09-28 21:01:41.000000000 +0000
++++ common/autoconf/build-aux/autoconf-config.sub
+@@ -147,7 +147,7 @@ esac
+ maybe_os=`echo $1 | sed 's/^\(.*\)-\([^-]*-[^-]*\)$/\2/'`
+ case $maybe_os in
+   nto-qnx* | linux-gnu* | linux-dietlibc | linux-newlib* | linux-uclibc* | \
+-  uclinux-uclibc* | uclinux-gnu* | kfreebsd*-gnu* | knetbsd*-gnu* | netbsd*-gnu* | \
++  uclinux-uclibc* | uclinux-gnu* | kfreebsd*-gnu* | knetbsd*-gnu* | netbsd*-gnu* | netbsd*-eabi* | \
+   storm-chaos* | os2-emx* | rtmk-nova*)
+     os=-$maybe_os
+     basic_machine=`echo $1 | sed 's/^\(.*\)-\([^-]*-[^-]*\)$/\1/'`
