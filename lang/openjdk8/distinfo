@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2015/10/22 21:55:55 jmcneill Exp $
+$NetBSD: distinfo,v 1.30 2015/10/22 23:01:52 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -47,7 +47,6 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 190056b3d4c42986ae0a600668b02711598361b8
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = b7f8722a25c1c7ab489a9fd65cf60fb4af9530eb
-SHA1 (patch-common_autoconf_build-aux_autoconf-config.sub) = 53ac6deffff0f22a0da458c36d37ddbb909e99a4
 SHA1 (patch-common_autoconf_generated-configure.sh) = cda7bc95247400a1702e9da937d485d1a2084f97
 SHA1 (patch-common_autoconf_spec.gmk.in) = e98bc4c8a09f49c6a26447e6f78abf4709ee694b
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
