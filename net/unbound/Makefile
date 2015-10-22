@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2015/10/21 21:30:14 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2015/10/22 18:14:40 pettai Exp $
 
-DISTNAME=	unbound-1.5.4
-PKGREVISION=	1
+DISTNAME=	unbound-1.5.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
