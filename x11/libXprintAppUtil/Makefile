@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 12:38:32 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/22 14:34:45 tnn Exp $
 #
 
 DISTNAME=	libXprintAppUtil-1.0.1
+PKGREVISION=	1
 CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +14,7 @@ COMMENT=	Xprint application utility routines
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++ fortran
+USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gsed pkg-config
 
 PKGCONFIG_OVERRIDE+=	xprintapputil.pc.in
