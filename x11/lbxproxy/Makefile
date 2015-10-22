@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/07/04 18:06:37 richard Exp $
+# $NetBSD: Makefile,v 1.14 2015/10/22 14:34:45 tnn Exp $
 
 DISTNAME=	lbxproxy-1.0.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
