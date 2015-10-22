@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/09/29 14:55:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2015/10/22 23:01:52 tnn Exp $
 
 DISTNAME=	openjdk-1.8.60-20150929
 PKGNAME=	openjdk8-1.8.60
@@ -24,11 +24,12 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jps keytool orbd \
 
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
-HAS_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	common/autoconf/configure
 CONFIG_SHELL=		bash
 CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/config.sub
 CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.sub
 CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run
@@ -39,6 +40,7 @@ PLIST_SRC+=		${PLIST_SRC_DFLT}
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 PREPEND_PATH+=			${ALT_BOOTDIR}/bin
 
+CONFIGURE_ARGS+=	--disable-option-checking # for --with-libiconv-prefix
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
