@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4353 2015/10/22 18:15:21 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.4354 2015/10/22 19:00:01 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7455,3 +7455,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/sunxi-tools version 20150915 [bouyer 2015-10-22]
 	Updated net/nsd to 4.1.6 [pettai 2015-10-22]
 	Updated net/unbound to 1.5.6 [pettai 2015-10-22]
+	Updated net/powerdns to 3.4.6 [fhajny 2015-10-22]
+	Updated net/powerdns-ldap to 3.4.6 [fhajny 2015-10-22]
+	Updated net/powerdns-mysql to 3.4.6 [fhajny 2015-10-22]
+	Updated net/powerdns-pgsql to 3.4.6 [fhajny 2015-10-22]
