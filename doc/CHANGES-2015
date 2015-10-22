@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4350 2015/10/22 14:00:47 reed Exp $
+$NetBSD: CHANGES-2015,v 1.4351 2015/10/22 15:53:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7452,3 +7452,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/mongo-tools version 3.0.7 [fhajny 2015-10-21]
 	Updated www/drupal7 to 7.41 [taca 2015-10-22]
 	Added textproc/php-sphinx version 1.3.3 [fhajny 2015-10-22]
+	Added sysutils/sunxi-tools version 20150915 [bouyer 2015-10-22]
