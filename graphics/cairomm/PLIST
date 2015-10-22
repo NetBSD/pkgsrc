@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/10/15 11:07:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/10/22 11:54:38 tnn Exp $
 include/cairomm-1.0/cairomm/cairomm.h
 include/cairomm-1.0/cairomm/context.h
 include/cairomm-1.0/cairomm/device.h
@@ -138,6 +138,7 @@ share/doc/cairomm-1.0/reference/html/classcairo__matrix__t.html
 share/doc/cairomm-1.0/reference/html/classcairo__matrix__t__inherit__graph.png
 share/doc/cairomm-1.0/reference/html/classes.html
 share/doc/cairomm-1.0/reference/html/classhash__load__check__resize__trigger__size__base.html
+share/doc/cairomm-1.0/reference/html/classhash__load__check__resize__trigger__size__base__inherit__graph.png
 share/doc/cairomm-1.0/reference/html/classlu__counter__policy__base.html
 share/doc/cairomm-1.0/reference/html/classlu__counter__policy__base__inherit__graph.png
 share/doc/cairomm-1.0/reference/html/closed.png
