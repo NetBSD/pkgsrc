@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.847 2015/10/19 10:57:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.848 2015/10/22 10:53:38 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -638,6 +638,7 @@ SUBDIR+=	php-intl
 SUBDIR+=	php-json
 SUBDIR+=	php-mecab
 SUBDIR+=	php-pspell
+SUBDIR+=	php-sphinx
 SUBDIR+=	php-wddx
 SUBDIR+=	php-xsl
 SUBDIR+=	po-mode
