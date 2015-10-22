@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4351 2015/10/22 15:53:27 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.4352 2015/10/22 18:15:02 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7453,3 +7453,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/drupal7 to 7.41 [taca 2015-10-22]
 	Added textproc/php-sphinx version 1.3.3 [fhajny 2015-10-22]
 	Added sysutils/sunxi-tools version 20150915 [bouyer 2015-10-22]
+	Updated net/nsd to 4.1.6 [pettai 2015-10-22]
