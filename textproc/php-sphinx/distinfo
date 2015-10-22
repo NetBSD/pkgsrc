@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/10/22 10:53:01 fhajny Exp $
+
+SHA1 (php-sphinx/sphinx-1.3.3.tgz) = 74c3220b79029ee59c35331e0341e631eda138c7
+RMD160 (php-sphinx/sphinx-1.3.3.tgz) = 25a917d05086274a83e6b89a40194f703ae64120
+SHA512 (php-sphinx/sphinx-1.3.3.tgz) = 86e40660bc3be346f23eaa98eb49552c2e51385c41e5c0ac04ba26776375816d777e470765e103d771bd46206ced1778ffb80747a6656c4948f047e61a4112b7
+Size (php-sphinx/sphinx-1.3.3.tgz) = 15555 bytes
