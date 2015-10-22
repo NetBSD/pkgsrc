@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/22 15:51:47 bouyer Exp $
+bin/fexc
+bin/bin2fex
+bin/fex2bin
+bin/fel
+bin/fel-gpio
+bin/pio
+bin/bootinfo
+bin/phoenix_info
+libdata/sunxi-tools/fel-pio.bin
+libdata/sunxi-tools/fel-sdboot.sunxi
+libdata/sunxi-tools/ramboot.scr
+libdata/sunxi-tools/fel-pio.nm
+libdata/sunxi-tools/jtag-loop.sunxi
+libdata/sunxi-tools/ramboot.uboot-sh
