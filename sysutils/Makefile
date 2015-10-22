@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2015/10/18 12:22:33 jmcneill Exp $
+# $NetBSD: Makefile,v 1.646 2015/10/22 15:52:35 bouyer Exp $
 #
 
 COMMENT=	System utilities
@@ -484,6 +484,7 @@ SUBDIR+=	stow
 SUBDIR+=	strace
 SUBDIR+=	strigi
 SUBDIR+=	su2
+SUBDIR+=	sunxi-tools
 SUBDIR+=	sux
 SUBDIR+=	swapd
 SUBDIR+=	swatch
