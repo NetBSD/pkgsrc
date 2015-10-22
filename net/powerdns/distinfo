@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.19 2015/06/10 16:24:44 fhajny Exp $
+$NetBSD: distinfo,v 1.20 2015/10/22 19:01:24 fhajny Exp $
 
-SHA1 (pdns-3.4.5.tar.bz2) = 8d848d832d477c85280fa26fb78e4f53b59798f2
-RMD160 (pdns-3.4.5.tar.bz2) = 904b7f30f474aa68e28f0e96779a6ec1e4f31b83
-Size (pdns-3.4.5.tar.bz2) = 1337222 bytes
+SHA1 (pdns-3.4.6.tar.bz2) = 5b01b21e7a2807d9770fea5ed1acc4dc3ed609bd
+RMD160 (pdns-3.4.6.tar.bz2) = 222927cb39dbf4d5421dc5a2319739bd94b8c6ba
+SHA512 (pdns-3.4.6.tar.bz2) = 6ab4bef0482041d511ce0ea15e92cd12b0b331d3199c01463fa9150d04aca428c7b90fe25e53251f76a8809331cf32830240961dbf887e6b7c4e0a7fe07c8089
+Size (pdns-3.4.6.tar.bz2) = 1336760 bytes
 SHA1 (patch-aa) = a7e66245ab7acbff4f568650ee285ee18a88ea56
 SHA1 (patch-ab) = a816def3825c0260642dab85f518bebaf4ba904b
 SHA1 (patch-modules_luabackend_luabackend.hh) = 23ae1a2c047f367a51b7bfa10a546aeb91cccea4
