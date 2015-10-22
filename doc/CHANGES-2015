@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4349 2015/10/22 10:53:14 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4350 2015/10/22 14:00:47 reed Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7277,7 +7277,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/icu to 56.1 [ryoon 2015-10-09]
 	Updated devel/ruby-redmine to 3.1.1 [ryoon 2015-10-10]
 	Removed sysutils/storage-manager [joerg 2015-10-10]
-	Updated filesystems/glustefs to 3.7.5 [manu 2015-10-10]
+	Updated filesystems/glusterfs to 3.7.5 [manu 2015-10-10]
 	Updated fonts/umefont-ttf to 0.550 [ryoon 2015-10-10]
 	Added x11/xf86-input-ws version 1.3.0.20151010 [tnn 2015-10-10]
 	Removed x11/openbsd-input-ws successor x11/xf86-input-ws [tnn 2015-10-10]
