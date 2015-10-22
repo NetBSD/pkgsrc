@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/10/19 16:40:57 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2015/10/22 05:05:22 jnemeth Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -234,7 +234,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .if (${OPSYS} == "NetBSD" && \
-    (empty(OS_VERSION:M6.99.3?) && empty(OS_VERSION:M[7-9].*)))
+    (empty(OS_VERSION:M6.99.[3-9]?) && empty(OS_VERSION:M[7-9].*)))
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
