@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/03/15 01:07:20 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2015/10/23 08:06:49 pettai Exp $
 #
 
-DISTNAME=	log4shib-1.0.6
+DISTNAME=	log4shib-1.0.9
 CATEGORIES=	devel
 MASTER_SITES=	http://www.shibboleth.net/downloads/log4shib/${PKGVERSION_NOREV}/
 
