@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/07/02 12:38:32 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/10/23 09:53:35 tnn Exp $
 
 SHA1 (liblbxutil-1.1.0.tar.bz2) = 99616bab0ca0afeaa9c0a19222091b1ff4f18680
 RMD160 (liblbxutil-1.1.0.tar.bz2) = d719285993a86ac0b364997e9261373d5aad9912
 Size (liblbxutil-1.1.0.tar.bz2) = 268278 bytes
+SHA1 (patch-src_delta_lbxdelta.c) = 399d055096e9e55feed25246baccf99f6aee7751
+SHA1 (patch-src_lbx__zlib_lbx__zlib.h) = 021125caeb75bf489090fcc9d8358e13470ceb6a
