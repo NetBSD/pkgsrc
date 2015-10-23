@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4354 2015/10/22 19:00:01 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4355 2015/10/23 03:44:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7459,3 +7459,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/powerdns-ldap to 3.4.6 [fhajny 2015-10-22]
 	Updated net/powerdns-mysql to 3.4.6 [fhajny 2015-10-22]
 	Updated net/powerdns-pgsql to 3.4.6 [fhajny 2015-10-22]
+	Updated net/ntp4 to 4.2.8p4 [taca 2015-10-23]
