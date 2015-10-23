@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2015/09/02 21:04:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.76 2015/10/23 14:24:30 richard Exp $
 
 DISTNAME=	mailman-2.1.20
 PKGNAME=	mailman-2.1.20
@@ -97,6 +97,10 @@ SUBST_SED.paths+=	-e 's,@EXECDIR@,${EXECDIR},g'
 SUBST_SED.paths+=	-e 's,@MAILMAN_DATADIR@,${MAILMAN_DATADIR},g'
 SUBST_STAGE.paths=	post-patch
 
+DOCFILELIST=	ACKNOWLEDGMENTS BUGS FAQ INSTALL NEWS README \
+		README-I18N.en README.CONTRIB README.NETSCAPE \
+		README.USERAGENT STYLEGUIDE.txt TODO UPGRADING
+
 # mailman depends a lot on it and will bitch if changed.
 CHECK_PERMS=	no
 
@@ -114,7 +118,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXECDIR}/support
 
 post-install:
-	cd ${WRKSRC} && for i in [A-IN-U]*; do \
+	cd ${WRKSRC} && for i in ${DOCFILELIST}; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${DOCDIR}/; \
 	done
 	cd ${WRKSRC}/doc && for i in \
