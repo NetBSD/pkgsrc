@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4362 2015/10/23 16:40:49 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4363 2015/10/23 19:14:10 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7467,3 +7467,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Data-Alias to 1.20 [wen 2015-10-23]
 	Updated www/p5-CGI-Lite to 3.00 [wen 2015-10-23]
 	Updated databases/pgbouncer to 1.6.1 [fhajny 2015-10-23]
+	Removed multimedia/libflashsupport10 successor multimedia/libflashsupport [tsutsui 2015-10-23]
