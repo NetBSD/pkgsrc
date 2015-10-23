@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/22 15:51:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2015/10/23 11:01:24 tnn Exp $
 #
 
 VERSION=	20150915
@@ -10,13 +10,12 @@ GITHUB_TAG=	568c7a0e81fc5d52189710c6d832677aa8770b16
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://linux-sunxi.org/
-COMMENT=	 tools to help hacking Allwinner A10 (and successors) devices 
+COMMENT=	Tools to help hacking Allwinner A10 (and successors) devices
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS= bin libdata/sunxi-tools
+INSTALLATION_DIRS=	bin libdata/sunxi-tools
 
 do-install:
 .for f in fexc fel pio bootinfo phoenix_info
