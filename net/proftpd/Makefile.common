@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/09/25 10:01:37 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/10/23 08:37:35 fhajny Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -38,5 +38,6 @@ CHECK_SHLIBS_SKIP=libexec/proftpd/*.a
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
