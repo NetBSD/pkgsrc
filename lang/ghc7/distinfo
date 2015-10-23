@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/02/16 07:04:58 pho Exp $
+$NetBSD: distinfo,v 1.12 2015/10/23 20:46:22 tnn Exp $
 
 SHA1 (ghc-7.6.3-boot-i386-unknown-freebsd.tar.xz) = aea6224f30aa52d9998f2c77f473902179f03b8c
 RMD160 (ghc-7.6.3-boot-i386-unknown-freebsd.tar.xz) = 39a588cac4a0411db45ef269fbe6a63c6cb428ee
@@ -21,6 +21,8 @@ SHA1 (patch-libraries_integer-simple_GHC_Integer_Type.hs) = b3140e169726f78f6d3b
 SHA1 (patch-libraries_time_Data_Time_Clock_CTimeval.hs) = acc2a2255f53fbe55d91004f9d843ae249dad206
 SHA1 (patch-libraries_unix_System_Posix_Files.hsc) = f2e0892f9ebb9d82ddaf71b014d9af33967848dc
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 3fbb8cff53b342dd69efa186ad8b86718a101a79
+SHA1 (patch-libraries_unix_cbits_execvpe.c) = 7e1464f9db0839221252a5328c170248fe21e727
+SHA1 (patch-libraries_unix_include_execvpe.h) = 4c48b72f74d360e925528ecce95baa8a2ae923d7
 SHA1 (patch-mk_config.mk.in) = 90a156f6c455d4b2c5d10fdf65b3a170dcfc4892
 SHA1 (patch-rts_Linker.c) = 39d1ca7a856a3ec25e493e97832ef255562c0719
 SHA1 (patch-rts_StgCRun.c) = 5d4010dc250af25db0b5b2717c510752f4813e73
