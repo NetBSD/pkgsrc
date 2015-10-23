@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: shibd.sh,v 1.1.1.1 2011/03/15 13:15:37 pettai Exp $
+# $NetBSD: shibd.sh,v 1.2 2015/10/23 07:35:07 pettai Exp $
 #
 # PROVIDE: shibd
 # REQUIRE: DAEMON
@@ -13,7 +13,18 @@ name="shibd"
 rcvar=$name
 command="@PREFIX@/sbin/shibd"
 pidfile="/var/run/shibboleth/shibd.pid"
-command_args=""
+start_precmd="shibd_precmd"
+command_args="-p $pidfile"
+
+shibd_precmd()
+{
+    if [ ! -d /var/run/shibboleth ]; then
+        mkdir -p -m 755 /var/run/shibboleth
+    fi
+    if [ -f /var/run/shibboleth/shibd.sock ]; then
+        rm -f /var/run/shibboleth/shibd.sock
+    fi
+}
 
 if [ -f /etc/rc.subr ]; then
         load_rc_config $name
