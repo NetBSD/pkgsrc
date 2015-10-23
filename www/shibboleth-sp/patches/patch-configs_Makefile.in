@@ -1,14 +1,16 @@
-$NetBSD: patch-configs_Makefile.in,v 1.1 2013/09/21 22:16:41 pettai Exp $
+$NetBSD: patch-configs_Makefile.in,v 1.2 2015/10/23 07:35:08 pettai Exp $
 
 Install config and example pkgsrc-ish
 
---- configs/Makefile.in.orig	2013-06-16 22:06:20.000000000 +0000
-+++ configs/Makefile.in
-@@ -296,18 +296,13 @@ pkgrundir = $(localstatedir)/run/@PACKAG
+--- configs/Makefile.in.orig	2015-07-09 09:16:39.000000000 -0700
++++ configs/Makefile.in	2015-10-20 15:27:28.000000000 -0700
+@@ -354,20 +354,13 @@
  pkgcachedir = $(localstatedir)/cache/@PACKAGE_NAME@
  pkgsysconfdir = $(sysconfdir)/@PACKAGE_NAME@
  pkgsysconf_DATA = \
+-	shibd-systemd \
 -	shibd-redhat \
+-	shibd-amazon \
 -	shibd-suse \
 -	shibd-debian \
 -	shibd-osx.plist \
@@ -24,7 +26,7 @@ Install config and example pkgsrc-ish
  
  # The config files are installed "special".  Unlike the entries in
  # pkgsysconf_DATA, these files are installed as "foo.dist" and only
-@@ -417,16 +412,16 @@ install-pkgsysconfDATA: $(pkgsysconf_DAT
+@@ -480,16 +475,16 @@
  	@$(NORMAL_INSTALL)
  	@list='$(pkgsysconf_DATA)'; test -n "$(pkgsysconfdir)" || list=; \
  	if test -n "$$list"; then \
@@ -45,7 +47,7 @@ Install config and example pkgsrc-ish
  	done
  
  uninstall-pkgsysconfDATA:
-@@ -477,7 +472,7 @@ check-am: all-am
+@@ -538,7 +533,7 @@
  check: check-am
  all-am: Makefile $(DATA)
  installdirs:
@@ -54,7 +56,7 @@ Install config and example pkgsrc-ish
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
-@@ -533,7 +528,6 @@ info-am:
+@@ -594,7 +589,6 @@
  
  install-data-am: install-data-local install-pkgsysconfDATA
  	@$(NORMAL_INSTALL)
@@ -62,7 +64,7 @@ Install config and example pkgsrc-ish
  install-dvi: install-dvi-am
  
  install-dvi-am:
-@@ -649,18 +643,18 @@ install-data-local:	all-data-local
+@@ -720,18 +714,18 @@
  	$(mkinstalldirs) $(DESTDIR)$(pkgrundir)
  	$(mkinstalldirs) $(DESTDIR)$(pkgcachedir)
  	$(mkinstalldirs) $(DESTDIR)$(pkgxmldir)
