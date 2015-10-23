@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4360 2015/10/23 14:21:51 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4361 2015/10/23 14:29:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7465,3 +7465,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/log4shib to 1.0.9 [pettai 2015-10-23]
 	Added net/tcptraceroute6 version 1.0.3 [he 2015-10-23]
 	Updated devel/p5-Data-Alias to 1.20 [wen 2015-10-23]
+	Updated www/p5-CGI-Lite to 3.00 [wen 2015-10-23]
