@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/23 07:35:07 pettai Exp $
 bin/mdquery
 bin/resolvertest
 bin/shib-metagen
@@ -63,17 +63,17 @@ include/shibsp/version.h
 lib/libshibsp-lite.a
 lib/libshibsp-lite.so
 lib/libshibsp-lite.so.6
-lib/libshibsp-lite.so.6.0.2
+lib/libshibsp-lite.so.6.0.5
 lib/libshibsp.a
 lib/libshibsp.so
 lib/libshibsp.so.6
-lib/libshibsp.so.6.0.2
+lib/libshibsp.so.6.0.5
 lib/shibboleth/adfs-lite.a
 lib/shibboleth/adfs-lite.so
 lib/shibboleth/adfs.a
 lib/shibboleth/adfs.so
-lib/shibboleth/mod_shib_22.a
-lib/shibboleth/mod_shib_22.so
+lib/shibboleth/mod_shib_${PKG_APACHE_NUM}.a
+lib/shibboleth/mod_shib_${PKG_APACHE_NUM}.so
 lib/shibboleth/plugins-lite.a
 lib/shibboleth/plugins-lite.so
 lib/shibboleth/plugins.a
