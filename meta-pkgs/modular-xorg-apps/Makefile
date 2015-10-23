@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/07/05 15:08:03 khorben Exp $
+# $NetBSD: Makefile,v 1.35 2015/10/23 10:58:28 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.14.1.7
@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
 DEPENDS+=	xbiff-[0-9]*:../../mail/xbiff
 DEPENDS+=	twm-[0-9]*:../../wm/twm
 DEPENDS+=	appres-[0-9]*:../../x11/appres
@@ -26,7 +28,9 @@ DEPENDS+=	ico-[0-9]*:../../x11/ico
 DEPENDS+=	listres-[0-9]*:../../x11/listres
 DEPENDS+=	luit-[0-9]*:../../x11/luit
 DEPENDS+=	mkcomposecache-[0-9]*:../../x11/mkcomposecache
+.if ${OPSYS} != "Darwin"
 DEPENDS+=	modular-xorg-xephyr-[0-9]*:../../x11/modular-xorg-xephyr
+.endif
 DEPENDS+=	oclock-[0-9]*:../../time/oclock
 DEPENDS+=	lbxproxy-[0-9]*:../../x11/lbxproxy
 DEPENDS+=	proxymngr-[0-9]*:../../x11/proxymngr
