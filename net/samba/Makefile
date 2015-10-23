@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2015/06/12 10:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.256 2015/10/23 19:07:58 tnn Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -76,6 +76,7 @@ CONFIGURE_ARGS+=	--enable-merged-build=no
 .include "../../net/samba/options.mk"
 
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
+CHECK_SHLIBS_SKIP+=	lib/samba/*/*.dylib lib/security/pam_winbind.dylib
 PLIST_SUBST+=	LIBEXT=dylib
 SAMBA_LIBEXT=	dylib
 .else
