@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/10/23 19:09:31 tsutsui Exp $
+# $NetBSD: Makefile,v 1.15 2015/10/23 23:05:37 tsutsui Exp $
 
 DISTNAME=	libflashsupport-1.1
 CATEGORIES=	multimedia
@@ -9,8 +9,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://labs.adobe.com/wiki/index.php/Flash_Player:Additional_Interface_Support_for_Linux
 COMMENT=	Additional Interface Support for Linux Flash Player
 LICENSE=		adobe-flashsupport-license
-
-CONFLICTS=	libflashsupport-pulse-[0-9]*
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base openssl
