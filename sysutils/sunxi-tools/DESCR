@@ -27,7 +27,7 @@ fel:
 fel-gpio:
 	Simple wrapper around fel-pio and fel to allow GPIO manipulations
 	via FEL
-	
+
 fel-sdboot:
 	ARM native sdcard bootloader forcing the device into FEL mode
 
