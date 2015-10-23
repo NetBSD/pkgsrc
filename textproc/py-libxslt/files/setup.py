@@ -36,7 +36,6 @@ else:
 # - iconv.h 
 # - libxslt/xsltconfig.h
 includes_dir = [
-"@LIBICONVDIR@/include",
 "@LIBXML2DIR@/include",
 "@LIBXSLTDIR@/include"
 ];
@@ -51,15 +50,7 @@ if xml_includes == "":
     print "failed to find headers for libxml2: update includes_dir"
     sys.exit(1)
 
-iconv_includes=""
-for dir in includes_dir:
-    if not missing(dir + "/iconv.h"):
-        iconv_includes=dir
-	break;
-
-if iconv_includes == "":
-    print "failed to find headers for libiconv: update includes_dir"
-    sys.exit(1)
+iconv_includes="@LIBICONVDIR@/include"
 
 # those are added in the linker search path for libraries
 libdirs = ["@LIBXML2DIR@/lib"]
