@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.5 2013/09/29 10:19:47 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/10/23 07:35:07 pettai Exp $
 
-SHA1 (shibboleth-sp-2.5.2.tar.gz) = a9b42cc7c1d401bb217c94c11aef06ce7d21265c
-RMD160 (shibboleth-sp-2.5.2.tar.gz) = 8b37921bf16488dc4f3890abf09e7cb44c16367f
-Size (shibboleth-sp-2.5.2.tar.gz) = 949163 bytes
+SHA1 (shibboleth-sp-2.5.5.tar.gz) = e69f4dae585771292e6ad51d5872f14edd683f7a
+RMD160 (shibboleth-sp-2.5.5.tar.gz) = f0176c78e8a85b582266bdc9845f833cf35a83a6
+Size (shibboleth-sp-2.5.5.tar.gz) = 1003433 bytes
 SHA1 (patch-ab) = f667e876e1ebd84e706433156eed2cd60e905372
-SHA1 (patch-configs_Makefile.in) = 9601da9a6aadc2bbc8abef7b1008782d4dcda2e8
-SHA1 (patch-shibsp_SPConfig.cpp) = 3befe1fba7f8f02d53a41c09fc50f7cf39bd447d
+SHA1 (patch-configs_Makefile.in) = 00235f36dc529da21cdc55fd833d561ace153d22
+SHA1 (patch-shibsp_SPConfig.cpp) = 2fd64032705f56de3c1a9c32a9916ce5e91b2964
 SHA1 (patch-shibsp_attribute_filtering_impl_XMLAttributeFilter.cpp) = 1ec2c98134d1bfc50e7571a26b5992c8ac47ef46
-SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeExtractor.cpp) = 058d65ab9481a3894a8156386a6f7416e524be82
-SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeResolver.cpp) = 4bf251804def14395b11dc178f699e4c21b712be
+SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeExtractor.cpp) = 6ca0844486031880919bb52a9b72829e2f48fe79
+SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeResolver.cpp) = 37a7d6d7d03c27489db2b6e198a4b85233f57e34
 SHA1 (patch-shibsp_attribute_resolver_impl_QueryAttributeResolver.cpp) = 8ce5f3dbdb0b77864401c03335637cc2b2d4f400
 SHA1 (patch-shibsp_base.h) = c1b6d2598afdff067990224d1202c5e10ae0259a
