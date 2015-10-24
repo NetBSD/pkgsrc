@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4366 2015/10/24 06:35:04 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4367 2015/10/24 06:55:23 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7471,3 +7471,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed multimedia/libflashsupport-pulse [tsutsui 2015-10-23]
 	Updated multimedia/libflashsupport to 4.2.2011 [tsutsui 2015-10-24]
 	Updated www/nspluginwrapper to 1.4.4 [tsutsui 2015-10-24]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.540nb1 [tsutsui 2015-10-24]
