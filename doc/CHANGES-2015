@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4376 2015/10/24 21:36:52 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.4377 2015/10/24 21:39:33 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7506,3 +7506,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed databases/postgresql90-server [joerg 2015-10-24]
 	Removed databases/postgresql90-upgrade [joerg 2015-10-24]
 	Removed databases/postgresql90-uuid [joerg 2015-10-24]
+	Removed games/quake3arena [joerg 2015-10-24]
+	Removed games/quake3arena-demo [joerg 2015-10-24]
+	Removed games/quake3server [joerg 2015-10-24]
+	Removed games/quake3server-excessive [joerg 2015-10-24]
+	Removed games/quake3server-osp [joerg 2015-10-24]
+	Removed games/quake3server-ra3 [joerg 2015-10-24]
+	Removed games/quake3server-ut [joerg 2015-10-24]
