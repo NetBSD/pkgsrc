@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.15 2015/10/18 19:32:04 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.16 2015/10/24 19:26:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -70,4 +70,7 @@ lang/perl5: fix for sparc
 
 Pullup ticket #4841 - requested by tnn
 multimedia/adobe-flash-plugin11: security update
+
+Pullup ticket #4842 - requested by joerg
+devel/netbsd-iscsi-lib: SmartOS build fix
 
