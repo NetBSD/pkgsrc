@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.646 2015/10/22 15:52:35 bouyer Exp $
+# $NetBSD: Makefile,v 1.647 2015/10/24 21:48:32 tnn Exp $
 #
 
 COMMENT=	System utilities
@@ -428,6 +428,7 @@ SUBDIR+=	rdfind
 SUBDIR+=	rdiff-backup
 SUBDIR+=	rename
 SUBDIR+=	rfstool
+SUBDIR+=	rkflashtool
 SUBDIR+=	rmtrash
 SUBDIR+=	roller
 SUBDIR+=	rox
