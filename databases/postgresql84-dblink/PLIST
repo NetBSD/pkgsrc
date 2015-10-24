@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/15 08:14:16 adam Exp $
-lib/postgresql/dblink.so
-share/postgresql/contrib/dblink.sql
-share/postgresql/contrib/uninstall_dblink.sql

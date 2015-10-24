@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2011/04/22 08:10:24 adam Exp $
-lib/postgresql/fuzzystrmatch.so
-share/postgresql/contrib/fuzzystrmatch.sql
-share/postgresql/contrib/uninstall_fuzzystrmatch.sql
