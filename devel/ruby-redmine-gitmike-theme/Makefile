@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:12:49 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.2 2015/10/24 07:37:12 wiz Exp $
 
 GITHUB_TAG=	r7
 DISTNAME=	${GITHUB_TAG}
 GITHUB_PROJECT=	redmine-theme-gitmike
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-gitmike-theme-${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-redmine-gitmike-theme-${DISTNAME:S/r//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makotokw/}
 DIST_SUBDIR=	ruby-redmine-gitmike-theme
 
