@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4371 2015/10/24 19:15:17 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.4372 2015/10/24 19:17:03 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7476,3 +7476,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed games/wxhugo [joerg 2015-10-24]
 	Removed x11/wxGTK24 [joerg 2015-10-24]
 	Removed converters/tex2rtf [joerg 2015-10-24]
+	Removed x11/wxhaskell [joerg 2015-10-24]
