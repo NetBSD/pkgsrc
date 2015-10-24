@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/24 21:46:07 tnn Exp $
+bin/rkcrc
+bin/rkflashtool
+bin/rkmisc
+bin/rkpad
+bin/rkparameters
+bin/rkparametersblock
+bin/rkunpack
+bin/rkunsign
