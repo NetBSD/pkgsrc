@@ -1,0 +1,10 @@
+Tools included in this package:
+
+rkcrc			sign files with CRC and KRNL or PARM header
+rkflashtool		read/write flash data and device info via libusb
+rkmisc			generate a "misc" partition
+rkpad			pad file to 512 byte blocks
+rkparameters		generate a "parameters" file
+rkparametersblock	generate a "parameters" block
+rkunpack		unpack "update.img" files
+rnunsign		remove KRNL/PARM header and crc footer
