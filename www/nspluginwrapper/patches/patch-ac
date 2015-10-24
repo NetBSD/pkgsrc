@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2012/05/03 06:09:55 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2015/10/24 06:30:40 tsutsui Exp $
 
 --- src/npw-viewer.sh.orig	2008-12-14 12:24:19.000000000 +0100
-+++ src/npw-viewer.sh	2011-01-19 12:20:26.000000000 +0100
-@@ -40,6 +40,13 @@
-     ;;
- esac
++++ src/npw-viewer.sh
+@@ -83,6 +83,13 @@
+ NPW_USE_VALGRIND=${NPW_USE_VALGRIND:-no}
+ can_use_valgrind="no"
  
 +case $OS in
-+FreeBSD|NetBSD)
++freebsd|netbsd)
 +    # preset LD_PRELOAD is most likely for the native emul
 +    unset LD_PRELOAD
 +    ;;
