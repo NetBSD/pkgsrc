@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4364 2015/10/23 23:06:53 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4365 2015/10/24 05:32:29 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7469,3 +7469,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/pgbouncer to 1.6.1 [fhajny 2015-10-23]
 	Removed multimedia/libflashsupport10 successor multimedia/libflashsupport [tsutsui 2015-10-23]
 	Removed multimedia/libflashsupport-pulse [tsutsui 2015-10-23]
+	Updated multimedia/libflashsupport to 4.2.2011 [tsutsui 2015-10-24]
