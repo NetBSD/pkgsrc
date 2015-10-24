@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/05 15:12:20 abs Exp $
-${EMULSUBDIRSLASH}usr/lib/libflashsupport.so
+@comment $NetBSD: PLIST,v 1.6 2015/10/24 05:30:50 tsutsui Exp $
+${EMULSUBDIRSLASH}usr/${LIBDIR}/libflashsupport.so
