@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.502 2015/10/21 16:39:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.503 2015/10/24 21:36:48 joerg Exp $
 
 COMMENT=	Databases
 
@@ -49,7 +49,6 @@ SUBDIR+=	java-qdbm
 SUBDIR+=	java-tokyocabinet
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
-SUBDIR+=	jdbc-postgresql84
 SUBDIR+=	jdbc-postgresql92
 SUBDIR+=	jdbc-postgresql93
 SUBDIR+=	jdbc-postgresql94
@@ -264,33 +263,6 @@ SUBDIR+=	poco-data-sqlite
 SUBDIR+=	postgresql-pgbench
 SUBDIR+=	postgresql-postgis
 SUBDIR+=	postgresql-postgis2
-#SUBDIR+=	postgresql-uuid	# just contains files for postgresql*-uuid
-SUBDIR+=	postgresql84
-SUBDIR+=	postgresql84-adminpack
-SUBDIR+=	postgresql84-client
-SUBDIR+=	postgresql84-dblink
-SUBDIR+=	postgresql84-pgcrypto
-SUBDIR+=	postgresql84-plperl
-SUBDIR+=	postgresql84-plpython
-SUBDIR+=	postgresql84-pltcl
-SUBDIR+=	postgresql84-server
-SUBDIR+=	postgresql84-uuid
-SUBDIR+=	postgresql90
-SUBDIR+=	postgresql90-adminpack
-SUBDIR+=	postgresql90-client
-SUBDIR+=	postgresql90-datatypes
-SUBDIR+=	postgresql90-dblink
-SUBDIR+=	postgresql90-docs
-SUBDIR+=	postgresql90-fuzzystrmatch
-SUBDIR+=	postgresql90-monitoring
-SUBDIR+=	postgresql90-pgcrypto
-SUBDIR+=	postgresql90-plperl
-SUBDIR+=	postgresql90-plpython
-SUBDIR+=	postgresql90-pltcl
-SUBDIR+=	postgresql90-replicationtools
-SUBDIR+=	postgresql90-server
-SUBDIR+=	postgresql90-upgrade
-SUBDIR+=	postgresql90-uuid
 SUBDIR+=	postgresql91
 SUBDIR+=	postgresql91-adminpack
 SUBDIR+=	postgresql91-client
