@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4373 2015/10/24 19:19:42 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.4374 2015/10/24 19:20:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7478,3 +7478,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed converters/tex2rtf [joerg 2015-10-24]
 	Removed x11/wxhaskell [joerg 2015-10-24]
 	Removed x11/wxGTK26 [joerg 2015-10-24]
+	Removed x11/wxGTK26-contrib [joerg 2015-10-24]
