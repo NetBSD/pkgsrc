@@ -1,26 +1,40 @@
-# $NetBSD: Makefile,v 1.15 2015/10/23 23:05:37 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2015/10/24 05:30:50 tsutsui Exp $
 
-DISTNAME=	libflashsupport-1.1
+PKGNAME=	libflashsupport-4.2.2011
+DISTNAME=	libflashsupport-v4.2-build2011
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/
-EXTRACT_SUFX=	.tbz
+MASTER_SITES=	http://teokurebsd.org/netbsd/packages/distfiles/libflashsupport/
 
-MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://labs.adobe.com/wiki/index.php/Flash_Player:Additional_Interface_Support_for_Linux
+MAINTAINER=	tsutsui@NetBSD.org
+HOMEPAGE=	http://developer.opensound.com/
 COMMENT=	Additional Interface Support for Linux Flash Player
-LICENSE=		adobe-flashsupport-license
+LICENSE=	adobe-flashsupport-license
 
-EMUL_PLATFORMS=		linux-i386
+# On NetBSD, requires sufficiently new compat_linux.
+NOT_FOR_PLATFORM=	NetBSD-[0-4]*-* NetBSD-5.[0-9].*-* Linux-*-*
+
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base openssl
-EMUL_REQD=		suse>=11.3
+EMUL_REQD=		suse>=12.1
 
-WRKSRC=			${WRKDIR}
+.include "../../mk/bsd.prefs.mk"
+
+.if ${EMUL_PLATFORM} == "linux-i386"
+FLASH_ARCH=		i386
+FLASH_LIBDIR=		lib
+.elif ${EMUL_PLATFORM} == "linux-x86_64"
+FLASH_ARCH=		x86_64
+FLASH_LIBDIR=		lib64
+.endif
+
+PLIST_SUBST+=		LIBDIR=${FLASH_LIBDIR}
+
 BUILD_DIRS=		# empty
 
-INSTALLATION_DIRS=	${EMULSUBDIR}/usr/lib
+INSTALLATION_DIRS=	${EMULSUBDIR}/usr/${FLASH_LIBDIR}
 
 do-install:
-	${INSTALL_LIB} ${WRKDIR}/libflashsupport.so \
-		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/lib
+	${INSTALL_LIB} ${WRKSRC}/${FLASH_ARCH}/libflashsupport.so \
+		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/${FLASH_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
