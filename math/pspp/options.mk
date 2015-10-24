@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/09/04 21:39:10 asau Exp $
+# $NetBSD: options.mk,v 1.2 2015/10/24 21:20:10 joerg Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pspp
 PKG_SUPPORTED_OPTIONS=		pgsql x11
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--without-gui --without-libplot
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 CONFIGURE_ARGS+=	--with-libpq
-.include "../../databases/postgresql84-client/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-libpq
 .endif
