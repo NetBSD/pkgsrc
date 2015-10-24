@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/24 06:30:40 tsutsui Exp $
 bin/nspluginplayer
 bin/nspluginwrapper
 lib/nspluginwrapper/${MACHINE_ARCH}/${LOWER_OPSYS}/npconfig
 lib/nspluginwrapper/${MACHINE_ARCH}/${LOWER_OPSYS}/npplayer
 lib/nspluginwrapper/${MACHINE_ARCH}/${LOWER_OPSYS}/npwrapper.so
-lib/nspluginwrapper/i386/linux/libxpcom.so
-lib/nspluginwrapper/i386/linux/npviewer
-lib/nspluginwrapper/i386/linux/npviewer.bin
-lib/nspluginwrapper/noarch/npviewer
+lib/nspluginwrapper/${MACHINE_ARCH}/linux/libnoxshm.so
+lib/nspluginwrapper/${MACHINE_ARCH}/linux/npviewer
+lib/nspluginwrapper/${MACHINE_ARCH}/linux/npviewer.bin
+lib/nspluginwrapper/noarch/npviewer.sh

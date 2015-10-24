@@ -1,13 +1,18 @@
-$NetBSD: distinfo,v 1.11 2013/10/12 12:39:15 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/10/24 06:30:40 tsutsui Exp $
 
-SHA1 (nspluginwrapper-1.2.2.tar.bz2) = be581c39dcc1a8d9a5b3f81e4650f553a30cf249
-RMD160 (nspluginwrapper-1.2.2.tar.bz2) = d5aa265966f87c51bb9ea4f2a079a87b74fdcbf3
-Size (nspluginwrapper-1.2.2.tar.bz2) = 327947 bytes
-SHA1 (nspluginwrapper-i386-1.2.2-1.x86_64.rpm) = 0d49757623c62da52292e48a0173024c14aa12cd
-RMD160 (nspluginwrapper-i386-1.2.2-1.x86_64.rpm) = 9cf3e6ac3e5171c2bbda71c082b6b9fc30d69a84
-Size (nspluginwrapper-i386-1.2.2-1.x86_64.rpm) = 69425 bytes
-SHA1 (patch-Makefile) = 1bdcc3e90713b5aa08eda0efca4929a5903f1fbb
+SHA1 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = cc093d1c6d6729434ec90e216afeae1601e0b3b4
+RMD160 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = a9d79dcd31efc4b1a9b71e29694eff9c8555b10d
+SHA512 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = 5b514f3a8dd2aad5f395181984995bdaa2cbe9f357d2767c88f2ac5f4c28f513b3023144ea9135ad2e7d0f854efa209dafe3fe00314bb7f0742174d7fc3769c1
+Size (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = 179439 bytes
+SHA1 (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = a8286f351979746b8887421ad04e32759c60331a
+RMD160 (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = a5fc4473a462f91f838f8b34faa2bb7bdcab9494
+SHA512 (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = a95295cf3a63cf982e8b04794c5010554d5ea1ab741ae5b3e89acc7c014d3deafe152ffca1abed966052b1c424a94e8440c9371529dd870a9efb1fd1caad9735
+Size (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = 161846 bytes
+SHA1 (nspluginwrapper-1.4.4.tar.gz) = ffb271a741215874808d4a77d0a0dd65588a8440
+RMD160 (nspluginwrapper-1.4.4.tar.gz) = 6acd93653aa8466e1e3703c2b794f32691c10d12
+SHA512 (nspluginwrapper-1.4.4.tar.gz) = 41126d98284cae6d25d23233b08ccca0dea841d457d4e41210282c6ab4c0fbf020f2ab4173ce39db8a47a1db20840bcc856f9c7309aa2e6ef2a777e3f2ebf503
+Size (nspluginwrapper-1.4.4.tar.gz) = 412513 bytes
 SHA1 (patch-aa) = 28f9e18e519337852cb47d04ed0c1cea76b3416d
 SHA1 (patch-ab) = 20dc1b6ff4036a0946dd469860eb9b6c129fdb7a
-SHA1 (patch-ac) = b42a1241abcbfc9344c810797785222cd79681ac
-SHA1 (patch-src_npw-player.c) = 14828d0644ce3823b89b373b36afdf29f9a563a1
+SHA1 (patch-ac) = 87cb838f6b203947d9efc4350313e410d06d486e
+SHA1 (patch-src_npw-viewer.c) = eb8855ae6d1015eb7627ada5c39af5e0d80f0e75
