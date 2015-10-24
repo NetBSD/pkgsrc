@@ -1,4 +1,0 @@
-The ``adminpack'' PostgreSQL contrib module implements a number of
-support functions which pgAdmin and other administration and management
-tools can use to provide additional functionality if installed on a
-server.

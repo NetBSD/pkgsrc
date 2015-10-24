@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2013/02/09 11:19:11 adam Exp $
-lib/postgresql/adminpack.so
-share/postgresql/contrib/adminpack.sql
-share/postgresql/contrib/uninstall_adminpack.sql

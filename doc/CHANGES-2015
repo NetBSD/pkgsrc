@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4375 2015/10/24 21:22:54 joerg Exp $
+$NetBSD: CHANGES-2015,v 1.4376 2015/10/24 21:36:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7480,3 +7480,29 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed x11/wxGTK26 [joerg 2015-10-24]
 	Removed x11/wxGTK26-contrib [joerg 2015-10-24]
 	Removed databases/jdbc-postgresql84 [joerg 2015-10-24]
+	Removed databases/postgresql84 [joerg 2015-10-24]
+	Removed databases/postgresql84-adminpack [joerg 2015-10-24]
+	Removed databases/postgresql84-client [joerg 2015-10-24]
+	Removed databases/postgresql84-dblink [joerg 2015-10-24]
+	Removed databases/postgresql84-pgcrypto [joerg 2015-10-24]
+	Removed databases/postgresql84-plperl [joerg 2015-10-24]
+	Removed databases/postgresql84-plpython [joerg 2015-10-24]
+	Removed databases/postgresql84-pltcl [joerg 2015-10-24]
+	Removed databases/postgresql84-server [joerg 2015-10-24]
+	Removed databases/postgresql84-uuid [joerg 2015-10-24]
+	Removed databases/postgresql90 [joerg 2015-10-24]
+	Removed databases/postgresql90-adminpack [joerg 2015-10-24]
+	Removed databases/postgresql90-client [joerg 2015-10-24]
+	Removed databases/postgresql90-datatypes [joerg 2015-10-24]
+	Removed databases/postgresql90-dblink [joerg 2015-10-24]
+	Removed databases/postgresql90-docs [joerg 2015-10-24]
+	Removed databases/postgresql90-fuzzystrmatch [joerg 2015-10-24]
+	Removed databases/postgresql90-monitoring [joerg 2015-10-24]
+	Removed databases/postgresql90-pgcrypto [joerg 2015-10-24]
+	Removed databases/postgresql90-plperl [joerg 2015-10-24]
+	Removed databases/postgresql90-plpython [joerg 2015-10-24]
+	Removed databases/postgresql90-pltcl [joerg 2015-10-24]
+	Removed databases/postgresql90-replicationtools [joerg 2015-10-24]
+	Removed databases/postgresql90-server [joerg 2015-10-24]
+	Removed databases/postgresql90-upgrade [joerg 2015-10-24]
+	Removed databases/postgresql90-uuid [joerg 2015-10-24]
