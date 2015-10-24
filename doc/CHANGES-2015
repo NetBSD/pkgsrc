@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4368 2015/10/24 13:38:46 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4369 2015/10/24 19:08:23 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7473,3 +7473,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/nspluginwrapper to 1.4.4 [tsutsui 2015-10-24]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.540nb1 [tsutsui 2015-10-24]
 	Updated www/webkit-gtk to 2.10.2 [leot 2015-10-24]
+	Removed games/wxhugo [joerg 2015-10-24]
