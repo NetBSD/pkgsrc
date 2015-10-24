@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2015/10/18 14:15:23 tsutsui Exp $
+# $NetBSD: Makefile,v 1.53 2015/10/24 06:52:43 tsutsui Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.${FLASH_ARCH}
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
+PKGREVISION=		1
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/pdc/${FLASH_VERSION}/
 
@@ -25,9 +26,7 @@ EXTRACT_SUFX=		.rpm
 
 CRYPTO=			yes
 
-# XXX At present, it seems www/nspluginwrapper does not support native x86_64
-#     plugin. --2011-10-08 ryoon
-EMUL_PLATFORMS=		linux-i386 #linux-x86_64
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl nss nspr
 EMUL_REQD=		suse>=11.3
 
