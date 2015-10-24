@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/19 09:53:29 adam Exp $
-bin/pg_archivecleanup
-bin/pg_standby
