@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.384 2015/09/27 10:07:53 tnn Exp $
+# $NetBSD: Makefile,v 1.385 2015/10/24 19:09:16 joerg Exp $
 #
 
 COMMENT=	Games
@@ -338,7 +338,6 @@ SUBDIR+=	warzone2100
 SUBDIR+=	wesnoth
 SUBDIR+=	wormz
 SUBDIR+=	wtf
-SUBDIR+=	wxhugo
 SUBDIR+=	xarchon
 SUBDIR+=	xbat
 SUBDIR+=	xbill
