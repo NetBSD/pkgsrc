@@ -1,9 +1,0 @@
-$NetBSD: patch-ah,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
-
---- contrib/src/Makefile.in.orig	Sun Sep 21 13:32:39 2003
-+++ contrib/src/Makefile.in
-@@ -2,3 +2,3 @@
- 
--CONTRIB_SUBDIRS=canvas fl gizmos mmedia net ogl plot stc svg xrc animate #applet
-+CONTRIB_SUBDIRS=canvas fl gizmos net ogl plot stc svg xrc #applet
- 
