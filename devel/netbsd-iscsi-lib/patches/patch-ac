@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.1.1.1.44.1 2015/10/24 19:25:36 bsiegert Exp $
+
 --- src/initiator/Makefile.in.orig	2010-04-16 20:26:17.000000000 +0100
 +++ src/initiator/Makefile.in	2010-04-16 20:28:51.000000000 +0100
 @@ -53,7 +53,7 @@
