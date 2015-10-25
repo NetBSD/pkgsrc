@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2015/08/18 07:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/10/25 23:48:11 darcy Exp $
 #
 
 DISTNAME=	alpine-2.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://patches.freeiz.com/alpine/release/src/
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+= --with-ssl-include-dir=${SSLBASE}/include
 CONFIGURE_ARGS+= --with-ssl-lib-dir=${SSLBASE}/lib
 CONFIGURE_ARGS+= --with-system-pinerc=${PKG_SYSCONFDIR}/pine.conf
 CONFIGURE_ARGS+= --with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
+CONFIGURE_ARGS+= --with-passfile=.pine-passfile
 # disabled, for Web Alpine Support
 CONFIGURE_ARGS+=	--without-tcl
 
