@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4386 2015/10/25 09:50:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4387 2015/10/25 09:52:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7522,3 +7522,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libebml to 1.3.3 [wiz 2015-10-25]
 	Updated multimedia/libmatroska to 1.4.4 [wiz 2015-10-25]
 	Updated devel/py-cffi to 1.3.0 [wiz 2015-10-25]
+	Updated devel/waf to 1.8.15 [wiz 2015-10-25]
