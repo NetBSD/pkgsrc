@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2015/01/04 05:09:51 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2015/10/25 10:18:34 wiz Exp $
 
 DISTNAME=	libusb-0.1.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 
@@ -40,7 +40,7 @@ CXXFLAGS+=		-Du_int32_t=uint32_t
 SED_TRANSFORMS=		-e 's,@BIGENDIAN@,0,' -e 's,@LINUX_API@,0,'
 SED_TRANSFORMS+=	-e 's,u_int8_t,uint8_t,g'
 SED_TRANSFORMS+=	-e 's,u_int16_t,uint16_t,g'
-SED_TRANSFORMS+=	-e 's,u_int32_t,uint32_t,g' 
+SED_TRANSFORMS+=	-e 's,u_int32_t,uint32_t,g'
 SED_TRANSFORMS+=	-e "s,@prefix@,${PREFIX},g"
 SED_TRANSFORMS+=	-e "s,@exec_prefix@,${PREFIX},g"
 SED_TRANSFORMS+=	-e "s,@LIBUSB_VERSION@,${PKGVERSION_NOREV},g"

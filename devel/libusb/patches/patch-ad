@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.9 2007/10/11 18:25:19 drochner Exp $
+$NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
 
---- bsd.c.orig	2006-03-04 03:52:46.000000000 +0100
+--- bsd.c.orig	2006-03-04 02:52:46.000000000 +0000
 +++ bsd.c
 @@ -25,8 +25,8 @@
   * 	for both read and write.
@@ -123,7 +123,7 @@ $NetBSD: patch-ad,v 1.9 2007/10/11 18:25:19 drochner Exp $
        fprintf (stderr, "usb_interrupt_read: got negative open file descriptor for endpoint %d\n", UE_GET_ADDR(ep));
  #else
        fprintf (stderr, "usb_interrupt_read: got negative open file descriptor for endpoint %02d\n", UE_GET_ADDR(ep));
-@@ -429,9 +433,10 @@ int usb_interrupt_read(usb_dev_handle *d
+@@ -429,17 +433,19 @@ int usb_interrupt_read(usb_dev_handle *d
      USB_ERROR_STR(-errno, "error setting short xfer: %s", strerror(errno));
  
    do {
@@ -136,16 +136,18 @@ $NetBSD: patch-ad,v 1.9 2007/10/11 18:25:19 drochner Exp $
        USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%d: %s",
                      dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #else
-@@ -439,7 +444,7 @@ int usb_interrupt_read(usb_dev_handle *d
+       USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%02d: %s",
                    dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #endif
-     retrieved += ret;
+-    retrieved += ret;
 -  } while (ret > 0 && retrieved < size);
-+  } while (ret > 0 && retrieved < size && ret == requested);
++    else
++      retrieved += ret;
++  } while (ret > 0 && retrieved < size && ret != requested);
  
    return retrieved;
  }
-@@ -477,7 +482,7 @@ int usb_control_msg(usb_dev_handle *dev,
+@@ -477,7 +483,7 @@ int usb_control_msg(usb_dev_handle *dev,
      USB_ERROR_STR(-errno, "error sending control message: %s",
                    strerror(errno));
  
@@ -154,7 +156,7 @@ $NetBSD: patch-ad,v 1.9 2007/10/11 18:25:19 drochner Exp $
  }
  
  int usb_os_find_busses(struct usb_bus **busses)
-@@ -548,7 +553,7 @@ int usb_os_find_devices(struct usb_bus *
+@@ -548,7 +554,7 @@ int usb_os_find_devices(struct usb_bus *
        /* best not to play with things we don't understand */
        continue;
  
@@ -163,7 +165,7 @@ $NetBSD: patch-ad,v 1.9 2007/10/11 18:25:19 drochner Exp $
      snprintf(buf, sizeof(buf) - 1, "/dev/%s", di.udi_devnames[0]);
  #else
      snprintf(buf, sizeof(buf) - 1, "/dev/%s.00", di.udi_devnames[0]);
-@@ -574,7 +579,7 @@ int usb_os_find_devices(struct usb_bus *
+@@ -574,7 +580,7 @@ int usb_os_find_devices(struct usb_bus *
      /* we need to report the device name as /dev/ugenx NOT /dev/ugenx.00
       * This seemed easier than having 2 variables...
       */
