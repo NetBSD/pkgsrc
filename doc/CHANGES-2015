@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4395 2015/10/25 13:51:02 jmcneill Exp $
+$NetBSD: CHANGES-2015,v 1.4396 2015/10/25 14:00:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7531,3 +7531,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed multimedia/vlc21 successor multimedia/vlc [wiz 2015-10-25]
 	Updated multimedia/phonon-backend-vlc to 0.8.2nb1 [wiz 2015-10-25]
 	Updated www/midori to 0.5.11 [jmcneill 2015-10-25]
+	Updated databases/unixodbc to 2.3.4 [adam 2015-10-25]
+	Updated multimedia/x265 to 1.8 [adam 2015-10-25]
