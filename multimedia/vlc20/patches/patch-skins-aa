@@ -1,0 +1,12 @@
+$NetBSD: patch-skins-aa,v 1.1 2015/10/25 10:52:24 wiz Exp $
+
+--- modules/gui/skins2/src/theme_loader.cpp.orig	2012-01-31 21:10:02.000000000 +0000
++++ modules/gui/skins2/src/theme_loader.cpp
+@@ -57,6 +57,7 @@ int gzwrite_frontend( int, const void *,
+ #if defined( HAVE_LIBTAR_H )
+ #   include <libtar.h>
+ #else
++#include <limits.h> /* for PATH_MAX */
+ typedef gzFile TAR;
+ int tar_open        ( TAR **t, char *pathname, int oflags );
+ int tar_extract_all ( TAR *t, char *prefix );

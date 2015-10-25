@@ -1,0 +1,22 @@
+$NetBSD: patch-at,v 1.1 2015/10/25 10:52:24 wiz Exp $
+
+--- bin/override.c.orig	2011-12-08 18:00:25.000000000 +0000
++++ bin/override.c
+@@ -27,7 +27,7 @@
+ 
+ void vlc_enable_override (void);
+ 
+-#if defined (__GNUC__) \
++#if 0 && defined (__GNUC__) \
+  && (defined (__ELF__) && !defined (__sun__))
+ /* Solaris crashes on printf("%s", NULL); which is legal, but annoying. */
+ 
+@@ -124,7 +124,7 @@ static void *getsym (const char *name)
+  *
+  * Some evil libraries modify the environment. We currently ignore the calls as
+  * they could crash the process. This may cause funny behaviour though. */
+-int putenv (char *str)
++int putenv (const char *str)
+ {
+     if (override)
+     {
