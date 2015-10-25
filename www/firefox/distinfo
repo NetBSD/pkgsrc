@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.220 2015/10/16 20:50:23 ryoon Exp $
+$NetBSD: distinfo,v 1.221 2015/10/25 15:59:37 jmcneill Exp $
 
 SHA1 (firefox-41.0.2.source.tar.xz) = 5e8243cbbd3ea306bd1e5f1b16079bdcc9af95a4
 RMD160 (firefox-41.0.2.source.tar.xz) = 82d222110184eda1f1393db52267071181c96696
@@ -41,7 +41,7 @@ SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
 SHA1 (patch-gfx_skia_generate__mozbuild.py) = b15b7586cfbdea112bcf4b5792663f4cdbe91560
 SHA1 (patch-gfx_skia_moz.build) = 2537653a708b986d179d17ffdb56e88fe147290c
-SHA1 (patch-gfx_skia_trunk_src_core_SkUtilsArm.cpp) = b2b38f65d27f60e2be6a49f3eae63b59bf96d0e5
+SHA1 (patch-gfx_skia_trunk_src_core_SkUtilsArm.cpp) = 1eac771fa8527b6c90dd42937c47e896312ae971
 SHA1 (patch-gfx_skia_trunk_src_opts_SkBitmapProcState__opts__arm.cpp) = 208a46fa9012546b62249b3b12650805e12f4dbc
 SHA1 (patch-gfx_skia_trunk_src_opts_memset.arm.S) = 47a0fc35dbd57c995cde20e7294f7de90dc2f07e
 SHA1 (patch-gfx_thebes_gfxWindowsPlatform.cpp) = 55f978ab302dea08e13dfb1b09f460f10d4f5dc8
@@ -131,6 +131,8 @@ SHA1 (patch-mfbt_Attributes.h) = 509d389e0053615aaf817d49f0cc5a12bd620aae
 SHA1 (patch-mfbt_Poison.cpp) = f502581db96b3e5eca25a9aa9035f436e9167503
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
 SHA1 (patch-modules_libpref_init_all.js) = 0a160b88816dee021617658226fb8d1e3787cc43
+SHA1 (patch-mozglue_build_arm.cpp) = e89e9ff5a26fb11b55df29a0b29d1cd6f35e46e6
+SHA1 (patch-mozglue_build_arm.h) = e303e53d1931b28aab68346c7f6caac4402d16f1
 SHA1 (patch-mozglue_misc_StackWalk.cpp) = 7615f5578585f5b410f51c2b2ea530c71a8d5f12
 SHA1 (patch-netwerk_base_nsNetUtil.h) = e80f40b048e4628876ceb1a5ca90f7b07862d9ab
 SHA1 (patch-netwerk_dns_moz.build) = 447ea9652f67cb5e48ea14a725c4cf45647eec6b
