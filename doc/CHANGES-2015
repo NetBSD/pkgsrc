@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4396 2015/10/25 14:00:13 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4397 2015/10/25 16:48:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7533,3 +7533,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/midori to 0.5.11 [jmcneill 2015-10-25]
 	Updated databases/unixodbc to 2.3.4 [adam 2015-10-25]
 	Updated multimedia/x265 to 1.8 [adam 2015-10-25]
+	Updated www/webkit-gtk to 2.10.2nb1 [leot 2015-10-25]
