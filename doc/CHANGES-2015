@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4379 2015/10/25 01:20:39 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.4380 2015/10/25 01:25:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7515,3 +7515,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed games/quake3server-ut [joerg 2015-10-24]
 	Added sysutils/rkflashtool version 20151023 [tnn 2015-10-24]
 	Updated textproc/p5-Swim to 0.1.41 [schmonz 2015-10-25]
+	Updated devel/p5-FindBin-libs to 2.15 [schmonz 2015-10-25]
