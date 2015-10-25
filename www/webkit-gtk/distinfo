@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2015/10/24 13:37:45 leot Exp $
+$NetBSD: distinfo,v 1.83 2015/10/25 16:48:23 leot Exp $
 
 SHA1 (webkitgtk-2.10.2.tar.xz) = 34743186985299355eb84c04a944c7decf21a8e6
 RMD160 (webkitgtk-2.10.2.tar.xz) = 768d1a1e3af7497369af9392815101b7004139ce
@@ -12,6 +12,6 @@ SHA1 (patch-Source_WTF_wtf_MathExtras.h) = ba957541a8b70e77707013bb5a93abbeb1829
 SHA1 (patch-Source_WTF_wtf_Platform.h) = cbf239e3b05909b63a33fbe5ced4f8b8743ce4aa
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = dfc5d06c3ec7112bdacabd0e66dd2ee6564f4ab3
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = f7b869cc197e9f2341566e5bcd4c4190e394ea29
-SHA1 (patch-Source_cmake_OptionsGTK.cmake) = afcfdbb5688dfa13f7f6b5cc4003bc66f6488593
+SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 620bfd4bae3eaf638fda0a1da3707e842a34adab
 SHA1 (patch-ai) = f0b059fe71022e961903655f5c2a5205fe452968
 SHA1 (patch-aj) = 8247194bd8d62fcc356650c946756898fbe22982
