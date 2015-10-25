@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/05/29 12:03:06 adam Exp $
+$NetBSD: distinfo,v 1.8 2015/10/25 13:51:09 adam Exp $
 
-SHA1 (x265_1.7.tar.gz) = ee078ffe6858d17a25a268b69a1c651ef3b63945
-RMD160 (x265_1.7.tar.gz) = cd95f53096d2c47939251e3f7847bd283ebe8518
-Size (x265_1.7.tar.gz) = 844212 bytes
+SHA1 (x265_1.8.tar.gz) = 97b86d065c36265a32756ac8d64d26278be6f9a0
+RMD160 (x265_1.8.tar.gz) = dab48b0cfca885ef6b29f3c88916af09e167b80e
+SHA512 (x265_1.8.tar.gz) = 498c25ff6e5c68849db11d1509cc6f7e96d3a2e6594542589ac5b9f6d65a09ab3af590dcc3357f985f218f8d54af364c998cfedfbe95644747835c059214935c
+Size (x265_1.8.tar.gz) = 918469 bytes
