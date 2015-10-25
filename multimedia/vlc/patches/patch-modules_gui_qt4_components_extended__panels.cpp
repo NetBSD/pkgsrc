@@ -1,8 +1,11 @@
-$NetBSD: patch-ac,v 1.6 2012/08/30 18:54:41 christos Exp $
+$NetBSD: patch-modules_gui_qt4_components_extended__panels.cpp,v 1.1 2015/10/25 11:00:18 wiz Exp $
 
---- modules/gui/qt4/components/extended_panels.cpp	2011-09-29 23:32:38.000000000 +0300
-+++ modules/gui/qt4/components/extended_panels.cpp	2012-08-30 17:46:39.000000000 +0300
-@@ -1411,7 +1411,7 @@
+Qt's MOC doesn't handle int64_t, so introduce a meaningful type name
+so that slot/signal/connection macros work properly.
+
+--- modules/gui/qt4/components/extended_panels.cpp.orig	2015-04-01 10:47:07.000000000 +0000
++++ modules/gui/qt4/components/extended_panels.cpp
+@@ -1583,7 +1583,7 @@ void SyncControls::update()
  {
      b_userAction = false;
  
@@ -11,7 +14,7 @@ $NetBSD: patch-ac,v 1.6 2012/08/30 18:54:41 christos Exp $
      if( THEMIM->getInput() )
      {
          i_delay = var_GetTime( THEMIM->getInput(), "audio-delay" );
-@@ -1427,7 +1427,7 @@
+@@ -1600,7 +1600,7 @@ void SyncControls::advanceAudio( double 
  {
      if( THEMIM->getInput() && b_userAction )
      {
@@ -20,7 +23,7 @@ $NetBSD: patch-ac,v 1.6 2012/08/30 18:54:41 christos Exp $
          var_SetTime( THEMIM->getInput(), "audio-delay", i_delay );
      }
  }
-@@ -1436,7 +1436,7 @@
+@@ -1609,7 +1609,7 @@ void SyncControls::advanceSubs( double f
  {
      if( THEMIM->getInput() && b_userAction )
      {
