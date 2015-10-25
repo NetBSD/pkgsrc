@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4391 2015/10/25 10:53:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4392 2015/10/25 11:00:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7527,3 +7527,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libusb to 0.1.12nb4 [wiz 2015-10-25]
 	Updated graphics/sane-backends to 1.0.25 [wiz 2015-10-25]
 	Moved multimedia/vlc2 to multimedia/vlc20 [wiz 2015-10-25]
+	Updated multimedia/vlc to 2.2.1 [wiz 2015-10-25]
