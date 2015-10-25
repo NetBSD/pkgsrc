@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/10/12 17:51:02 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2015/10/25 20:05:01 tnn Exp $
 
 DISTNAME=	libAppleWM-1.4.1
 CATEGORIES=	x11 devel
@@ -22,6 +22,9 @@ PKGCONFIG_OVERRIDE+=	applewm.pc.in
 
 .if exists(/usr/bin/xcrun) && exists(/usr/bin/sw_vers)
 MY_OSX_VERS!=		/usr/bin/sw_vers -productVersion
+.  if ${MY_OSX_VERS:R:R} != ${MY_OSX_VERS:R}
+MY_OSX_VERS:=	${MY_OSX_VERS:R}
+.  endif
 MY_XCODE_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${MY_OSX_VERS} --show-sdk-path
 .endif
 MAKE_ENV+=		OSX_SDK_PATH=${MY_XCODE_SDK_PATH}
