@@ -1,0 +1,13 @@
+$NetBSD: patch-modules_access_rtp_Modules.am,v 1.1 2015/10/25 10:52:24 wiz Exp $
+
+--- modules/access/rtp/Modules.am.orig	2011-12-08 18:00:26.000000000 +0000
++++ modules/access/rtp/Modules.am
+@@ -15,7 +15,7 @@ librtp_plugin_la_DEPENDENCIES =
+ libvlc_srtp_la_SOURCES = srtp.c
+ libvlc_srtp_la_CPPFLAGS =
+ libvlc_srtp_la_CFLAGS = $(GCRYPT_CFLAGS)
+-libvlc_srtp_la_LDFLAGS = -static
++libvlc_srtp_la_LDFLAGS = 
+ libvlc_srtp_la_LIBADD = $(GCRYPT_LIBS)
+ srtp_test_recv_CPPFLAGS =
+ srtp_test_recv_LDADD = libvlc_srtp.la
