@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/10/24 13:37:45 leot Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/10/25 16:48:23 leot Exp $
 bin/MiniBrowser
 bin/jsc
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
@@ -288,7 +288,6 @@ lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
 lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
-libexec/webkit2gtk-4.0/WebKitDatabaseProcess
 libexec/webkit2gtk-4.0/WebKitNetworkProcess
 libexec/webkit2gtk-4.0/WebKitPluginProcess
 libexec/webkit2gtk-4.0/WebKitPluginProcess2
