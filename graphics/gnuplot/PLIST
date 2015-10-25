@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/03/03 15:22:20 mef Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/10/25 10:13:53 wiz Exp $
 bin/gnuplot
 ${PLIST.qt4}libexec/gnuplot/${API_VERSION}/gnuplot_qt
 ${PLIST.x11}libexec/gnuplot/${API_VERSION}/gnuplot_x11
@@ -24,7 +24,7 @@ share/gnuplot/${API_VERSION}/colors_default.gp
 share/gnuplot/${API_VERSION}/colors_mono.gp
 share/gnuplot/${API_VERSION}/colors_podo.gp
 share/gnuplot/${API_VERSION}/gnuplot.gih
-share/gnuplot/${API_VERSION}/gnuplot.pdf
+${PLIST.gnuplot-pdf-doc}share/gnuplot/${API_VERSION}/gnuplot.pdf
 share/gnuplot/${API_VERSION}/gnuplotrc
 share/gnuplot/${API_VERSION}/js/README
 share/gnuplot/${API_VERSION}/js/canvasmath.js
