@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/10/10 01:58:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2015/10/25 11:53:24 jmcneill Exp $
 
 DISTNAME=	midori_0.5.9_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
@@ -45,6 +45,8 @@ CONFIGURE_ENV=	VALAC=${VALAC}
 pre-configure:
 	${RM} ${WRKSRC}/extensions/history-list.vala.orig
 
+.include "options.mk"
+
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
@@ -54,9 +56,7 @@ pre-configure:
 #.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
