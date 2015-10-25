@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.12 2015/04/26 11:37:07 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2015/10/25 08:18:00 adam Exp $
 
-SHA1 (unixODBC-2.3.2.tar.gz) = f84520fd58143625b614fde551435178a558ee2e
-RMD160 (unixODBC-2.3.2.tar.gz) = 023122427bd8bdabdbfddf727d16210bb32c60f3
-Size (unixODBC-2.3.2.tar.gz) = 1849173 bytes
+SHA1 (unixODBC-2.3.4.tar.gz) = df3578b080fb67da544d4c83424a770729ef25fb
+RMD160 (unixODBC-2.3.4.tar.gz) = 4188d9ccfa849c569626af0e2686289ad830fd73
+SHA512 (unixODBC-2.3.4.tar.gz) = 34799777c95539905d4bbe60ad2b83631a31a68483b6be96dba25f80fa2fff4624ba170078097c942f2206873776d179d7d02a340598c4627f8723eb6f083a26
+Size (unixODBC-2.3.4.tar.gz) = 1830660 bytes
 SHA1 (patch-aa) = b0c9295a16207176eb01fa7fbbed8790d9f9dbb8
 SHA1 (patch-ac) = 8925e66b81fa8896badcafda6af5dae9edbda753
 SHA1 (patch-ad) = b2e695d8c8c682c99af80e362369b0295070c1ab
