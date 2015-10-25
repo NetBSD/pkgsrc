@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4393 2015/10/25 11:01:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4394 2015/10/25 11:06:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7529,3 +7529,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Moved multimedia/vlc2 to multimedia/vlc20 [wiz 2015-10-25]
 	Updated multimedia/vlc to 2.2.1 [wiz 2015-10-25]
 	Removed multimedia/vlc21 successor multimedia/vlc [wiz 2015-10-25]
+	Updated multimedia/phonon-backend-vlc to 0.8.2nb1 [wiz 2015-10-25]
