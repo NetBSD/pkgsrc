@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.184 2015/08/23 14:30:39 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2015/10/25 11:00:18 wiz Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		54
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
 			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
-VLC_VERSION=		1.1.13
+VLC_VERSION=		2.2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -17,19 +16,14 @@ LICENSE=		gnu-gpl-v2
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config \
-			autoconf automake autoreconf
-# for autopoint
-BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+USE_TOOLS+=		gmake perl pkg-config
+
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
-PLIST_VARS+=		x86simd altivec v4l2
-
-# Incompatible with current versions
-CONFIGURE_ARGS+=	--disable-live555
+PLIST_VARS+=		x86simd altivec v4l2 oss
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -37,16 +31,49 @@ CONFIGURE_ARGS+=	--disable-live555
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
-CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch [1.2 in pkgsrc]
-CONFIGURE_ARGS+=	--disable-smb
+CONFIGURE_ARGS+=	--enable-dvdread
+CONFIGURE_ARGS+=	--enable-flac
+CONFIGURE_ARGS+=	--enable-theora
+CONFIGURE_ARGS+=	--disable-bluray
+CONFIGURE_ARGS+=	--disable-bonjour
+CONFIGURE_ARGS+=	--disable-caca
+CONFIGURE_ARGS+=	--disable-chromaprint
+CONFIGURE_ARGS+=	--disable-dc1394
+CONFIGURE_ARGS+=	--disable-decklink
+CONFIGURE_ARGS+=	--disable-dv1394
+CONFIGURE_ARGS+=	--disable-freerdp
+CONFIGURE_ARGS+=	--disable-goom
+CONFIGURE_ARGS+=	--disable-gst-decode
+CONFIGURE_ARGS+=	--disable-lua
+CONFIGURE_ARGS+=	--disable-mfx
+CONFIGURE_ARGS+=	--disable-mmal-codec
+CONFIGURE_ARGS+=	--disable-notify
+CONFIGURE_ARGS+=	--disable-opencv
+CONFIGURE_ARGS+=	--disable-projectm
+CONFIGURE_ARGS+=	--disable-samplerate
+CONFIGURE_ARGS+=	--disable-sftp
+CONFIGURE_ARGS+=	--disable-shine
+CONFIGURE_ARGS+=	--disable-sid
+CONFIGURE_ARGS+=	--disable-smbclient
+CONFIGURE_ARGS+=	--disable-twolame
+CONFIGURE_ARGS+=	--disable-udev
+CONFIGURE_ARGS+=	--disable-vnc
+CONFIGURE_ARGS+=	--disable-vsxu
+CONFIGURE_ARGS+=	--disable-zvbi
 
-CONFIGURE_ARGS+=	--enable-dvdread \
-			--enable-flac \
-			--enable-live555 \
-			--enable-theora \
-			--enable-lua=no
 
-# Build optimalized modules
+CFLAGS+=		-fPIC
+CXXFLAGS+=		-fPIC
+
+# which platforms support OSSv4?
+.if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
+PLIST.oss=		yes
+.include "../../mk/oss.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-oss
+.endif
+
+# Build optimized modules
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST.x86simd=		yes
 CONFIGURE_ARGS+=	--enable-mmx \
@@ -78,17 +105,16 @@ INSTALLATION_DIRS+=	share/vlc/http/dialogs share/vlc/http/images \
 			share/vlc/osdmenu/dvd/selection \
 			share/vlc/skins2/fonts \
 			${PKGMANDIR}/man1
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 # Let's use dejavu-ttf as it has nice unicode support
 #
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+ORIGMONOFNT=		/usr/share/fonts/truetype/freefont/FreeMono.ttf
 DEFAULT_FONT?=		${PREFIX}/share/fonts/X11/TTF/DejaVuSans.ttf
+DEFAULT_MONO_FONT?=	${PREFIX}/share/fonts/X11/TTF/DejaVuSansMono.ttf
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
 
 SUBST_CLASSES+=		oss
@@ -102,27 +128,36 @@ SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 SUBST_CLASSES+=		fnt
 SUBST_STAGE.fnt=	pre-configure
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
-SUBST_FILES.fnt=	modules/misc/freetype.c
-SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
-
-REPLACE_SH+=		vlc-config.in.in
+SUBST_SED.fnt+=		-e "s,${ORIGMONOFNT},${DEFAULT_MONO_FONT},"
+SUBST_FILES.fnt=	modules/text_renderer/platform_fonts.h
+SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 
 # VLC embeds the build environment info to help debuging.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so*
 
-.include "../../audio/musepack/buildlink3.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
+.include "../../multimedia/libkate/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libmodplug/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
+.include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
+.include "../../audio/musepack/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
+.include "../../devel/libmtp/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
+.include "../../multimedia/libass/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libebml/buildlink3.mk"
@@ -133,25 +168,28 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 
-.include "../../multimedia/ffmpeg010/buildlink3.mk"
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi0/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libdvdnav+=	libdvdnav>=5.0
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../multimedia/schroedinger/buildlink3.mk"
 # libX11 should be built with xcb enabled
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.3.5
 .include "../../x11/libX11/buildlink3.mk"
 # needs x264_encoder_delayed_frames
 BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .include "../../multimedia/x264-devel/buildlink3.mk"
+#.include "../../lang/lua/buildlink3.mk"
+.include "../../net/libupnp/buildlink3.mk"
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../mk/oss.buildlink3.mk"
+.if "${OPSYS}" == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

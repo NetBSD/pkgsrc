@@ -1,31 +1,51 @@
-$NetBSD: patch-include_vlc__fixups.h,v 1.1 2013/09/08 16:28:27 joerg Exp $
+$NetBSD: patch-include_vlc__fixups.h,v 1.2 2015/10/25 11:00:18 wiz Exp $
 
---- include/vlc_fixups.h.orig	2013-05-15 20:39:43.000000000 +0000
+on NetBSD-current, just define "uselocale", nothing else
+fixes build
+
+static_assert: a C compiler is used to detect if this symbol
+exists in assert.h, but the header file is included by a c++
+compiler too.
+
+--- include/vlc_fixups.h.orig	2015-02-17 09:07:37.000000000 +0000
 +++ include/vlc_fixups.h
-@@ -177,25 +177,7 @@ static inline char *getenv (const char *
- #   define ATTR_ALIGN(align)
- #endif
+@@ -218,16 +218,28 @@ int posix_memalign (void **, size_t, siz
  
--#ifndef HAVE_USELOCALE
--#define LC_NUMERIC_MASK  0
--#define LC_MESSAGES_MASK 0
--typedef void *locale_t;
--static inline locale_t uselocale(locale_t loc)
--{
--    (void)loc;
--    return NULL;
--}
--static inline void freelocale(locale_t loc)
--{
--    (void)loc;
--}
--static inline locale_t newlocale(int mask, const char * locale, locale_t base)
--{
--    (void)mask; (void)locale; (void)base;
--    return NULL;
--}
--#endif
+ /* locale.h */
+ #ifndef HAVE_USELOCALE
++#ifdef __NetBSD__
++#include <sys/param.h>
++#if __NetBSD_Version__ >= 699002300
++/* NetBSD-current has locale_t but no uselocale */
++#define NetBSD_LOCALE_HACK
++#endif
++#endif
++#ifdef NetBSD_LOCALE_HACK
 +#include <locale.h>
++#else
+ #define LC_ALL_MASK      0
+ #define LC_NUMERIC_MASK  0
+ #define LC_MESSAGES_MASK 0
+ #define LC_GLOBAL_LOCALE ((locale_t)(uintptr_t)1)
+ typedef void *locale_t;
++#endif
+ static inline locale_t uselocale(locale_t loc)
+ {
+     (void)loc;
+     return NULL;
+ }
++#ifndef NetBSD_LOCALE_HACK
+ static inline void freelocale(locale_t loc)
+ {
+     (void)loc;
+@@ -238,8 +250,9 @@ static inline locale_t newlocale(int mas
+     return NULL;
+ }
+ #endif
++#endif
  
- #ifdef WIN32
- # include <dirent.h>
+-#if !defined (HAVE_STATIC_ASSERT)
++#if !defined (static_assert)
+ # define _Static_assert(x, s) ((void) sizeof (struct { unsigned:-!(x); }))
+ # define static_assert _Static_assert
+ #endif
