@@ -1,17 +1,29 @@
-$NetBSD: patch-af,v 1.1 2012/08/30 18:54:42 christos Exp $
+$NetBSD: patch-modules_gui_qt4_input__manager.cpp,v 1.1 2015/10/25 11:00:18 wiz Exp $
 
---- modules/gui/qt4/input_manager.cpp	2011-10-18 18:56:16.000000000 +0300
-+++ modules/gui/qt4/input_manager.cpp	2012-08-30 17:46:07.000000000 +0300
-@@ -397,7 +397,7 @@
+Qt's MOC doesn't handle int64_t, so introduce a meaningful type name
+so that slot/signal/connection macros work properly.
+
+--- modules/gui/qt4/input_manager.cpp.orig	2015-04-12 21:29:20.000000000 +0000
++++ modules/gui/qt4/input_manager.cpp
+@@ -138,7 +138,7 @@ void InputManager::setInput( input_threa
+                     !var_GetFloat( p_input, "start-time" ) &&
+                     !var_GetFloat( p_input, "stop-time" ) )
+             {
+-                emit resumePlayback( (int64_t)i_time * 1000 );
++                emit resumePlayback( (putime_t)i_time * 1000 );
+             }
+         }
+ 
+@@ -446,7 +446,7 @@ void InputManager::UpdatePosition()
  {
      /* Update position */
      int i_length;
 -    int64_t i_time;
 +    putime_t i_time;
      float f_pos;
-     i_length = var_GetTime(  p_input , "length" ) / 1000000;
+     i_length = var_GetTime(  p_input , "length" ) / CLOCK_FREQ;
      i_time = var_GetTime(  p_input , "time");
-@@ -889,21 +889,21 @@
+@@ -981,21 +981,21 @@ void InputManager::setAtoB()
      {
          timeB = var_GetTime( THEMIM->getInput(), "time"  );
          var_SetTime( THEMIM->getInput(), "time" , timeA );
@@ -36,5 +48,5 @@ $NetBSD: patch-af,v 1.1 2012/08/30 18:54:42 christos Exp $
 -void InputManager::AtoBLoop( float, int64_t i_time, int )
 +void InputManager::AtoBLoop( float, putime_t i_time, int )
  {
-     if( timeB )
-     {
+     if( timeB && i_time >= timeB )
+         var_SetTime( THEMIM->getInput(), "time" , timeA );
