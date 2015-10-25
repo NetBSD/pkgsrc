@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.29 2013/09/02 11:10:23 jperkin Exp $
+# $NetBSD: options.mk,v 1.30 2015/10/25 11:00:18 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome dts
-PKG_SUGGESTED_OPTIONS=		faad x11
+PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack live pulseaudio
+PKG_SUPPORTED_OPTIONS+=		sdl vlc-skins x11
+PKG_SUGGESTED_OPTIONS=		dbus live x11
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
@@ -35,6 +36,16 @@ PLIST.pulseaudio=	yes
 CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
+## Jack Audio Connection Kit support
+
+.if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=	--enable-jack
+.include "../../audio/jack/buildlink3.mk"
+PLIST.jack=		yes
+.else
+CONFIGURE_ARGS+=	--disable-jack
+.endif
+
 ## SDL backend support
 
 .if !empty(PKG_OPTIONS:Msdl)
@@ -59,38 +70,13 @@ CONFIGURE_ARGS+=	--disable-gnomevfs
 .endif
 
 ## DBUS message bus support
-## also libnotify because it uses dbus
-## so taking them apart would make no sense.
 
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
 .include "../../sysutils/dbus/buildlink3.mk"
 PLIST.dbus=		yes
-CONFIGURE_ARGS+=	--enable-notify
-.include "../../sysutils/libnotify/buildlink3.mk"
-
-# telepathy needs dbus, but its also gnome-ish
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../chat/libtelepathy/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-telepathy
-.else
-CONFIGURE_ARGS+=	--disable-telepathy
-.endif
-
-PLIST.dbus=		yes
-
-## HAL support (requires dbus)
-.if !empty(PKG_OPTIONS:Mhal)
-CONFIGURE_ARGS+=	--enable-hal
-.include "../../sysutils/hal/buildlink3.mk"
-PLIST.hal=		yes
-.else
-CONFIGURE_ARGS+=	--disable-hal
-.endif
 .else
 CONFIGURE_ARGS+=	--disable-dbus
-CONFIGURE_ARGS+=	--disable-hal
-CONFIGURE_ARGS+=	--disable-notify
 .endif
 
 ## DEBUG build or release build
@@ -98,15 +84,13 @@ CONFIGURE_ARGS+=	--disable-notify
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--disable-optimizations
-.else
-CONFIGURE_ARGS+=	--enable-release
 .endif
 
 ## SKINS frontend
 
-.if !empty(PKG_OPTIONS:Mskins)
+.if !empty(PKG_OPTIONS:Mvlc-skins)
 CONFIGURE_ARGS+=	--enable-skins2
-PLIST.skins=		yes
+PLIST.vlc-skins=	yes
 INSTALLATION_DIRS+=	share/vlc/skins2
 .else
 CONFIGURE_ARGS+=	--disable-skins2
@@ -114,6 +98,7 @@ CONFIGURE_ARGS+=	--disable-skins2
 
 ## X11 dependency and QT4 frontend
 
+PLIST_VARS+=		egl
 .if !empty(PKG_OPTIONS:Mx11)
 DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -124,22 +109,21 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xcb-util036/buildlink3.mk"
+.include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-qt4 \
-			--with-x \
-			--enable-glx \
-			--enable-snapshot
+CONFIGURE_ARGS+=	--enable-qt \
+			--with-x
 PLIST.x11=		yes
+.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+PLIST.egl=		yes
+.endif
 .else
 CONFIGURE_ARGS+=	--without-x \
 			--disable-xcb \
-			--disable-qt4 \
-			--disable-glx \
-			--disable-freetype \
-			--disable-snapshot
+			--disable-qt \
+			--disable-freetype
 .endif
 
 .if !empty(PKG_OPTIONS:Mfaad)
@@ -158,6 +142,17 @@ PLIST.dts=		yes
 .  include "../../audio/libdca/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--enable-dca=no
+.endif
+
+## RTSP support
+
+.if !empty(PKG_OPTIONS:Mlive)
+CONFIGURE_ARGS+=	--enable-live555
+PLIST.live=		yes
+BUILDLINK_API_DEPENDS.liblive+= liblive>=20111223
+.  include "../../net/liblive/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-live555
 .endif
 
 ## VAAPI support
