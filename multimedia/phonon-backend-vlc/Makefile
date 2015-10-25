@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/09/01 22:23:07 markd Exp $
+# $NetBSD: Makefile,v 1.12 2015/10/25 11:04:34 wiz Exp $
 
 DISTNAME=	phonon-backend-vlc-0.8.2
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.8.2/src/}
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +26,7 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 	${MKDIR} ${WRKSRC}/_build
 
-.include "../../multimedia/vlc2/buildlink3.mk"
+.include "../../multimedia/vlc/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
