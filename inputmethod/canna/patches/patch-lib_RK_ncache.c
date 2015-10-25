@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_RK_ncache.c,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+$NetBSD: patch-lib_RK_ncache.c,v 1.2 2015/10/25 12:17:36 tsutsui Exp $
 
-Fix crash problem of cannaserver.
+Pull upstream fix to avoid crash problem of cannaserver.
+ https://osdn.jp/cvs/view/canna/canna/lib/RK/ncache.c?view=log#rev1.3
 
 --- lib/RK/ncache.c.orig	2003-09-17 08:50:52.000000000 +0000
 +++ lib/RK/ncache.c
