@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2012/12/10 12:06:51 ryoon Exp $
+$NetBSD: patch-ab,v 1.14 2015/10/25 10:39:13 wiz Exp $
 
---- configure.orig	2012-08-19 20:45:11.000000000 +0000
+--- configure.orig	2015-10-04 13:18:39.000000000 +0000
 +++ configure
-@@ -7236,13 +7236,13 @@ if test "x$ac_cv_header_pthread_h" = xye
+@@ -7377,13 +7377,13 @@ if test "x$ac_cv_header_pthread_h" = xye
  #define HAVE_PTHREAD_H 1
  _ACEOF
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.13 2012/12/10 12:06:51 ryoon Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -7273,7 +7273,7 @@ fi
+@@ -7414,7 +7414,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pthread_pthread_create" >&5
  $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
  if test "x$ac_cv_lib_pthread_pthread_create" = xyes; then :
@@ -28,20 +28,12 @@ $NetBSD: patch-ab,v 1.13 2012/12/10 12:06:51 ryoon Exp $
  fi
  
         have_pthread=yes
-@@ -17741,14 +17741,14 @@ for be in ${BACKENDS}; do
+@@ -18138,7 +18138,7 @@ for be in ${BACKENDS}; do
      ;;
  
      mustek_pp)
 -    if test "${sane_cv_use_libieee1284}" != "yes" && test "${enable_parport_directio}" != "yes"; then
 +    if test "${sane_cv_use_libieee1284}" != "yes" || test "${enable_parport_directio}" != "yes"; then
-       echo "*** $be backend requires libieee1284 and paraport-directio libraries - $DISABLE_MSG"
-       backend_supported="no"
-     fi
-     ;;
- 
-     dell1600n_net)
--    if test "${sane_cv_use_libjpeg}" != "yes" || test "${sane_cv_use_libtiff}" != "yes"; then
-+    if test "${sane_cv_use_libjpeg}" != "yes" && test "${sane_cv_use_libtiff}" != "yes"; then
-       echo "*** $be backend requires JPEG and/or TIFF library - $DISABLE_MSG"
+       echo "*** $be backend requires libieee1284 or parport-directio libraries - $DISABLE_MSG"
        backend_supported="no"
      fi
