@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/12/02 10:07:23 snj Exp $
+@comment $NetBSD: PLIST,v 1.27 2015/10/25 13:50:22 jmcneill Exp $
 bin/midori
 lib/libmidori-core.so
 lib/libmidori-core.so.0.0.0
@@ -51,6 +51,9 @@ share/icons/hicolor/16x16/status/internet-news-reader.png
 share/icons/hicolor/22x22/apps/midori.png
 share/icons/hicolor/22x22/categories/extension.png
 share/icons/hicolor/22x22/status/internet-news-reader.png
+share/icons/hicolor/24x24/status/adblock-blocked.svg
+share/icons/hicolor/24x24/status/adblock-disabled.svg
+share/icons/hicolor/24x24/status/adblock-enabled.svg
 share/icons/hicolor/scalable/apps/midori.svg
 share/icons/hicolor/scalable/categories/extension.svg
 share/icons/hicolor/scalable/status/internet-news-reader.svg
@@ -93,7 +96,9 @@ share/locale/ka/LC_MESSAGES/midori.mo
 share/locale/kk/LC_MESSAGES/midori.mo
 share/locale/km/LC_MESSAGES/midori.mo
 share/locale/ko/LC_MESSAGES/midori.mo
+share/locale/ku/LC_MESSAGES/midori.mo
 share/locale/ky/LC_MESSAGES/midori.mo
+share/locale/lb/LC_MESSAGES/midori.mo
 share/locale/lt/LC_MESSAGES/midori.mo
 share/locale/lv/LC_MESSAGES/midori.mo
 share/locale/ml/LC_MESSAGES/midori.mo
@@ -121,20 +126,19 @@ share/locale/th/LC_MESSAGES/midori.mo
 share/locale/tr/LC_MESSAGES/midori.mo
 share/locale/ug/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
+share/locale/ur/LC_MESSAGES/midori.mo
+share/locale/uz/LC_MESSAGES/midori.mo
 share/locale/vi/LC_MESSAGES/midori.mo
 share/locale/zh_CN/LC_MESSAGES/midori.mo
+share/locale/zh_HK/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
 share/midori/res/about.css
 share/midori/res/adblock.list
-share/midori/res/adblock/blocked.png
-share/midori/res/adblock/disabled.png
 share/midori/res/adblock/element_hider.js
-share/midori/res/adblock/enabled.png
 share/midori/res/autosuggestcontrol.css
 share/midori/res/autosuggestcontrol.js
 share/midori/res/bookmarks/Create.sql
 share/midori/res/bookmarks/Import_old_db_bookmarks.sql
-share/midori/res/close.png
 share/midori/res/error.html
 share/midori/res/flummi/Create.sql
 share/midori/res/forms/Create.sql
