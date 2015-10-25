@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2015/10/25 11:53:24 jmcneill Exp $
+# $NetBSD: Makefile,v 1.85 2015/10/25 13:50:22 jmcneill Exp $
 
-DISTNAME=	midori_0.5.9_all_
+DISTNAME=	midori_0.5.11_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
-PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://midori-browser.org/downloads/
 
@@ -41,9 +40,6 @@ CONF_FILES+=	${EGDIR}/extensions/adblock/config \
 		${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock/config
 
 CONFIGURE_ENV=	VALAC=${VALAC}
-
-pre-configure:
-	${RM} ${WRKSRC}/extensions/history-list.vala.orig
 
 .include "options.mk"
 
