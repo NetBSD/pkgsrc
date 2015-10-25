@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.24 2015/10/21 08:32:01 wiz Exp $
+$NetBSD: distinfo,v 1.25 2015/10/25 09:44:09 wiz Exp $
 
-SHA1 (libebml-1.3.2.tar.bz2) = 0eb0deb17d45c8a75ef50f43eb4c59de72f8420a
-RMD160 (libebml-1.3.2.tar.bz2) = 2958eab27455f83869a485f4cf8624bc2cbe00f3
-SHA512 (libebml-1.3.2.tar.bz2) = b40ead62bf0f3768d0e669b96ee5b059f43eb1d77d35c8b7b738cd4b727195f61a681ba87f1fa0bf9844a93807e40442db8f8d549e76922b75880c83fd2678d3
-Size (libebml-1.3.2.tar.bz2) = 588180 bytes
+SHA1 (libebml-1.3.3.tar.bz2) = 9fa8c5a08d8e9069638a9b04751efa3f57b14a2f
+RMD160 (libebml-1.3.3.tar.bz2) = 8632f60f99c45d3c6b0c23270e63bec11b47029c
+SHA512 (libebml-1.3.3.tar.bz2) = 3ae048b468272e5ff1dc813121c1addcbbe324cd466e4b43ccce5aca148095190c10196433db951529ff62c587cc2b9a3c0c713db7921825221babaf7d4e824d
+Size (libebml-1.3.3.tar.bz2) = 588607 bytes
 SHA1 (patch-ebml_EbmlBinary.h) = f2253fd395dad676a494c388dfaca742c57098a8
