@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2015/10/24 13:37:45 leot Exp $
+# $NetBSD: Makefile,v 1.102 2015/10/25 16:48:23 leot Exp $
 
 DISTNAME=	webkitgtk-2.10.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -21,8 +22,11 @@ USE_LANGUAGES=	c c++
 #USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
-# GCC >= 4.9 or Clang >= 3.3
-GCC_REQD+=	4.9
+# GCC >= 4.7 or Clang >= 3.3
+# XXX: Kludge, upstream needs GCC 4.9.0 for IndexedDB support.
+# XXX: patches/patch-Source_cmake_OptionsGTK.cmake disables that to
+# XXX: avoid requiring GCC 4.9.0.
+GCC_REQD+=	4.7
 
 # Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
 # versions of ld.gold.
