@@ -1,11 +1,11 @@
-$NetBSD: patch-au,v 1.13 2012/01/12 15:54:00 drochner Exp $
+$NetBSD: patch-modules_video__output_sdl.c,v 1.1 2015/10/25 11:00:18 wiz Exp $
 
---- modules/video_output/sdl.c.orig	2010-08-08 17:47:49.000000000 +0000
+--- modules/video_output/sdl.c.orig	2014-11-16 18:57:59.000000000 +0000
 +++ modules/video_output/sdl.c
-@@ -42,10 +42,9 @@
+@@ -41,10 +41,9 @@
  #include <SDL.h>
  
- #ifndef WIN32
+ #if !defined(_WIN32) && !defined(__OS2__)
 -# ifdef X_DISPLAY_MISSING
 -#  error Xlib required due to XInitThreads
 -# endif
