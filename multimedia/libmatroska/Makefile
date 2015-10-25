@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2015/10/21 08:41:41 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/10/25 09:49:18 wiz Exp $
 
-DISTNAME=	libmatroska-1.4.3
+DISTNAME=	libmatroska-1.4.4
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,6 @@ PKGCONFIG_OVERRIDE=	libmatroska.pc.in
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 
-BUILDLINK_API_DEPENDS.libebml+=	libebml>=1.3.1
+BUILDLINK_API_DEPENDS.libebml+=	libebml>=1.3.3
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
