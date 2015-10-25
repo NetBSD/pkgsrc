@@ -1,18 +1,35 @@
-$NetBSD: patch-Source_cmake_OptionsGTK.cmake,v 1.3 2015/10/24 13:37:45 leot Exp $
+$NetBSD: patch-Source_cmake_OptionsGTK.cmake,v 1.4 2015/10/25 16:48:23 leot Exp $
 
-Do not conflict with CMAKE_MODULE_PATH during the linking phase of
-libwebkit2gtk-4.0.so:
+o Do not require GCC 4.9.0 (should be build *without* IndexedDB support)
+o Do not conflict with CMAKE_MODULE_PATH during the linking phase of
+  libwebkit2gtk-4.0.so:
 
- Linking CXX shared library ../../lib/libwebkit2gtk-4.0.so
- ld:/usr/pkgsrc/wip/webkit-gtk/work/.buildlink/cmake-Modules:1: ignoring invalid character `3' in script
- [...]
- ld:/usr/pkgsrc/wip/webkit-gtk/work/.buildlink/cmake-Modules:1: syntax error in VERSION script
- Source/WebKit2/CMakeFiles/WebKit2.dir/build.make:16139: recipe for target 'lib/libwebkit2gtk-4.0.so.37.2.6' failed
- [...]
+   Linking CXX shared library ../../lib/libwebkit2gtk-4.0.so
+   ld:/usr/pkgsrc/wip/webkit-gtk/work/.buildlink/cmake-Modules:1: ignoring invalid character `3' in script
+   [...]
+   ld:/usr/pkgsrc/wip/webkit-gtk/work/.buildlink/cmake-Modules:1: syntax error in VERSION script
+   Source/WebKit2/CMakeFiles/WebKit2.dir/build.make:16139: recipe for target 'lib/libwebkit2gtk-4.0.so.37.2.6' failed
+   [...]
+
+o Disable DatabaseProcess and IndexedDB support.
 
 --- Source/cmake/OptionsGTK.cmake.orig	2015-10-15 09:18:14.000000000 +0000
 +++ Source/cmake/OptionsGTK.cmake
-@@ -105,7 +105,7 @@ else ()
+@@ -6,13 +6,6 @@ set(PROJECT_VERSION_MICRO 2)
+ set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_MICRO})
+ set(WEBKITGTK_API_VERSION 4.0)
+ 
+-# IndexedDB support requires GCC 4.9, see https://bugs.webkit.org/show_bug.cgi?id=98932.
+-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9.0")
+-        message(FATAL_ERROR "GCC 4.9.0 is required to build WebKitGTK+, use a newer GCC version or clang")
+-    endif ()
+-endif ()
+-
+ # Libtool library version, not to be confused with API version.
+ # See http://www.gnu.org/software/libtool/manual/html_node/Libtool-versioning.html
+ CALCULATE_LIBRARY_VERSIONS_FROM_LIBTOOL_TRIPLE(WEBKIT2 48 5 11)
+@@ -105,7 +98,7 @@ else ()
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_MINIBROWSER PUBLIC OFF)
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_API_TESTS PRIVATE OFF)
      if (NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
@@ -21,3 +38,21 @@ libwebkit2gtk-4.0.so:
      endif ()
  endif ()
  
+@@ -140,7 +133,7 @@ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_CSS_REGIONS PRIVATE ON)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_CSS_SELECTORS_LEVEL4 PRIVATE ON)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_CUSTOM_SCHEME_HANDLER PRIVATE OFF)
+-WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_DATABASE_PROCESS PRIVATE ON)
++WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_DATABASE_PROCESS PRIVATE OFF)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_DATALIST_ELEMENT PRIVATE OFF)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_DOWNLOAD_ATTRIBUTE PRIVATE OFF)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_ENCRYPTED_MEDIA PRIVATE OFF)
+@@ -150,7 +143,7 @@ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_FULLSCREEN_API PRIVATE ON)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_GAMEPAD PRIVATE OFF)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_GAMEPAD_DEPRECATED PRIVATE OFF)
+-WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_INDEXED_DATABASE PRIVATE ON)
++WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_INDEXED_DATABASE PRIVATE OFF)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_INDEXED_DATABASE_IN_WORKERS PRIVATE OFF)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_INPUT_TYPE_COLOR PRIVATE ON)
+ WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_LEGACY_WEB_AUDIO PRIVATE OFF)
