@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2015/10/25 10:52:24 wiz Exp $
+
+--- modules/access/file.c.orig	2011-12-08 18:00:26.000000000 +0000
++++ modules/access/file.c
+@@ -52,6 +52,9 @@
+ #ifdef HAVE_LINUX_MAGIC_H
+ #   include <sys/vfs.h>
+ #   include <linux/magic.h>
++#elif defined (HAVE_FSTATVFS)
++#   include <sys/statvfs.h>
++#   include <sys/mount.h>
+ #endif
+ 
+ #if defined( WIN32 )
+@@ -87,7 +90,7 @@ struct access_sys_t
+ #if !defined (WIN32) && !defined (__OS2__)
+ static bool IsRemote (int fd)
+ {
+-#if defined (HAVE_FSTATVFS) && defined (MNT_LOCAL)
++#if !defined(__linux__) && defined (HAVE_FSTATVFS) && defined (MNT_LOCAL)
+     struct statvfs stf;
+ 
+     if (fstatvfs (fd, &stf))
