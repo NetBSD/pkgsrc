@@ -1,4 +1,4 @@
-$NetBSD: patch-include_endian_compat.h,v 1.1 2015/10/22 15:51:47 bouyer Exp $
+$NetBSD: patch-include_endian_compat.h,v 1.2 2015/10/25 09:05:23 bouyer Exp $
 
 --- include/endian_compat.h.orig	2015-10-01 16:09:19.000000000 +0200
 +++ include/endian_compat.h	2015-10-01 16:20:48.000000000 +0200

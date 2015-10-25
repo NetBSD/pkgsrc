@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/22 15:51:47 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/25 09:05:23 bouyer Exp $
 bin/fexc
 bin/bin2fex
 bin/fex2bin
