@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.30 2012/12/12 08:40:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.31 2015/10/25 10:39:13 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
 bin/scanimage
+bin/umax_pp
 include/sane/sane.h
 include/sane/saneopts.h
 lib/libsane.la
@@ -31,6 +32,7 @@ lib/sane/libsane-dmc.la
 lib/sane/libsane-epjitsu.la
 lib/sane/libsane-epson.la
 lib/sane/libsane-epson2.la
+lib/sane/libsane-epsonds.la
 lib/sane/libsane-fujitsu.la
 lib/sane/libsane-genesys.la
 lib/sane/libsane-gt68xx.la
@@ -62,6 +64,7 @@ lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
 lib/sane/libsane-p5.la
 lib/sane/libsane-pie.la
+lib/sane/libsane-pieusb.la
 ${PLIST.pint}lib/sane/libsane-pint.la
 lib/sane/libsane-pixma.la
 lib/sane/libsane-plustek.la
@@ -114,6 +117,7 @@ man/man5/sane-dmc.5
 man/man5/sane-epjitsu.5
 man/man5/sane-epson.5
 man/man5/sane-epson2.5
+man/man5/sane-epsonds.5
 man/man5/sane-fujitsu.5
 man/man5/sane-genesys.5
 man/man5/sane-gt68xx.5
@@ -145,6 +149,7 @@ man/man5/sane-net.5
 man/man5/sane-niash.5
 man/man5/sane-p5.5
 man/man5/sane-pie.5
+man/man5/sane-pieusb.5
 ${PLIST.pint}man/man5/sane-pint.5
 man/man5/sane-pixma.5
 man/man5/sane-plustek.5
@@ -281,6 +286,7 @@ share/examples/sane/dmc.conf
 share/examples/sane/epjitsu.conf
 share/examples/sane/epson.conf
 share/examples/sane/epson2.conf
+share/examples/sane/epsonds.conf
 share/examples/sane/fujitsu.conf
 share/examples/sane/genesys.conf
 share/examples/sane/gt68xx.conf
@@ -305,6 +311,7 @@ share/examples/sane/nec.conf
 share/examples/sane/net.conf
 share/examples/sane/p5.conf
 share/examples/sane/pie.conf
+share/examples/sane/pieusb.conf
 share/examples/sane/pixma.conf
 share/examples/sane/plustek.conf
 share/examples/sane/plustek_pp.conf
@@ -339,6 +346,7 @@ share/locale/es/LC_MESSAGES/sane-backends.mo
 share/locale/fi/LC_MESSAGES/sane-backends.mo
 share/locale/fr/LC_MESSAGES/sane-backends.mo
 share/locale/gl/LC_MESSAGES/sane-backends.mo
+share/locale/hu/LC_MESSAGES/sane-backends.mo
 share/locale/it/LC_MESSAGES/sane-backends.mo
 share/locale/ja/LC_MESSAGES/sane-backends.mo
 share/locale/nb/LC_MESSAGES/sane-backends.mo
