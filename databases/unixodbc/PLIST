@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/04/26 11:37:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/10/25 08:18:00 adam Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -10,6 +10,7 @@ include/odbcinst.h
 include/odbcinstext.h
 include/sql.h
 include/sqlext.h
+include/sqlspi.h
 include/sqltypes.h
 include/sqlucode.h
 include/unixodbc_conf.h
@@ -34,8 +35,12 @@ ${UNIXODBC_DRIVERS_DIR}/liboraodbcS.la
 ${UNIXODBC_DRIVERS_DIR}/libsapdbS.la
 ${UNIXODBC_DRIVERS_DIR}/libtdsS.la
 ${UNIXODBC_DRIVERS_DIR}/libtemplate.la
+man/man1/dltest.1
 man/man1/isql.1
+man/man1/iusql.1
+man/man1/odbc_config.1
 man/man1/odbcinst.1
 man/man5/odbc.ini.5
 man/man5/odbcinst.ini.5
+man/man7/unixODBC.7
 share/examples/unixodbc/odbc.ini
