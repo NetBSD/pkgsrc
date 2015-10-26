@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/10/10 01:58:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2015/10/26 09:30:18 jperkin Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.20.0
@@ -42,7 +42,7 @@ SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
-.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
+.if ${OPSYS} == "SunOS" && (${PKGSRC_COMPILER} == "clang" || ${PKGSRC_COMPILER} == "gcc")
 MAKE_ENV+=	NS_USE_GCC=YES
 .endif
 
