@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2015/06/30 13:17:10 pettai Exp $
+# $NetBSD: Makefile,v 1.25 2015/10/26 19:23:08 pettai Exp $
 
-DISTNAME=	knot-1.5.3
+DISTNAME=	knot-2.0.1
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.knot-dns.cz/
@@ -17,9 +18,16 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/knot
 CONFIGURE_ARGS+=	--with-rundir=${VARBASE}/run/knot
 CONFIGURE_ARGS+=	--with-storage=${VARBASE}/knot/lib
+CONFIGURE_ARGS+=	--with-urcu=${BUILDLINK_PREFIX.userspace-rcu}
+CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison flex gmake
+USE_TOOLS+=	bison flex gmake pkg-config
+
+PKGCONFIG_OVERRIDE=	src/dnssec/libdnssec.pc.in
+PKGCONFIG_OVERRIDE+=	src/libknot.pc.in
+PKGCONFIG_OVERRIDE+=	src/zscanner/libzscanner.pc.in
+
 RCD_SCRIPTS=	knot
 
 EGDIR=			${PREFIX}/share/examples/knot
@@ -39,6 +47,8 @@ INSTALLATION_DIRS=	${EGDIR} ${KNOT_SYSCONFDIR}
 OWN_DIRS+=		${VARBASE}/knot
 
 .include "../../devel/userspace-rcu/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
