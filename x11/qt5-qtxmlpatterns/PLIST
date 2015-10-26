@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/10/26 19:04:01 adam Exp $
 lib/pkgconfig/Qt5XmlPatterns.pc
 qt5/bin/xmlpatterns
 qt5/bin/xmlpatternsvalidator
@@ -106,7 +106,6 @@ qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdatetimefn_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdatetimefns_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdatetimefns_tpl_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdaytimeduration_p.h
-qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdebug_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdecimal_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdeduplicateiterator_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qdeepequalfn_p.h
@@ -279,6 +278,7 @@ qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtocodepointsitera
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtokenizer_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtokenrevealer_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtokensource_p.h
+qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtokenvalue_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtracefn_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtreatas_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtriplecontainer_p.h
@@ -307,6 +307,7 @@ qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qvariabledeclarati
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qvariableloader_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qvariablereference_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qwithparam_p.h
+qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qxmldebug_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qxmlpatternistcli_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qxmlquery_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qxmlresultitems_p.h

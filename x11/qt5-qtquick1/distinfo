@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 17:23:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
 
-SHA1 (qtquick1-opensource-src-5.4.0.tar.xz) = d4af107f1227f111b7a65924d2ce5e3c08c7ee20
-RMD160 (qtquick1-opensource-src-5.4.0.tar.xz) = b3241866d7a79b22287d29d8002ec8f2c709d01e
-Size (qtquick1-opensource-src-5.4.0.tar.xz) = 15982676 bytes
+SHA1 (qtquick1-opensource-src-5.5.1.tar.xz) = b2cbe02abc8e80ec33c31dd3b641a2ebe4326cef
+RMD160 (qtquick1-opensource-src-5.5.1.tar.xz) = dd1c71468426a5b9fe4f5297a6f2b04c9caddc78
+SHA512 (qtquick1-opensource-src-5.5.1.tar.xz) = dda4ae2af3cccbced78cb98cb3f1cd1f00a6944da9629e3064454f3c0fdbdf5131ca6833c2247807326216a9fecd9f11f6535bf69f9542e41ffce12f75f44fc2
+Size (qtquick1-opensource-src-5.5.1.tar.xz) = 16028732 bytes
 SHA1 (patch-tests_auto_declarative_qdeclarativeimage_tst__qdeclarativeimage.cpp) = a8b96ccfdda1b7cb617c67fad6e8d6c821e7e882

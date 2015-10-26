@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/10/10 01:57:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2015/10/26 19:04:00 adam Exp $
 
 DISTNAME=	qtquick1-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtquick1-${QTVERSION}
-PKGREVISION=	5
 COMMENT=	Qt5 module for Quick1
 
 BUILD_TARGET=		sub-tools

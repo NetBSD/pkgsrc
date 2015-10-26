@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 17:23:48 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/10/26 19:04:01 adam Exp $
 
-SHA1 (qtx11extras-opensource-src-5.4.0.tar.xz) = 999026cf8389c66af22ffb29767b87b1a793595b
-RMD160 (qtx11extras-opensource-src-5.4.0.tar.xz) = c764f7862df3bc2400e340c4cc205f251cd28b18
-Size (qtx11extras-opensource-src-5.4.0.tar.xz) = 25456 bytes
+SHA1 (qtx11extras-opensource-src-5.5.1.tar.xz) = 1b200045600ddd93aaf8eb489d7bdc09a172b8fe
+RMD160 (qtx11extras-opensource-src-5.5.1.tar.xz) = d14ee6fbaa96eb59bd7ce4319371230ddc65f39a
+SHA512 (qtx11extras-opensource-src-5.5.1.tar.xz) = 5c89324cc0335c97d8028894d3a190cabfde3a132403a9983a10f32d557d146de65cd534b9cf1a7fe85251e5f0f91e009072f8f02d9b03f58318543993cf7a14
+Size (qtx11extras-opensource-src-5.5.1.tar.xz) = 33416 bytes

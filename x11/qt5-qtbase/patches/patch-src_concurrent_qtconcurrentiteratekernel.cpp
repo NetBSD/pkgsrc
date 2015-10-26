@@ -1,4 +1,6 @@
-$NetBSD: patch-src_concurrent_qtconcurrentiteratekernel.cpp,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-src_concurrent_qtconcurrentiteratekernel.cpp,v 1.2 2015/10/26 19:03:59 adam Exp $
+
+Fix building on Darwin.
 
 --- src/concurrent/qtconcurrentiteratekernel.cpp.orig	2013-11-27 01:01:16.000000000 +0000
 +++ src/concurrent/qtconcurrentiteratekernel.cpp
