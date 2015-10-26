@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 17:23:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
 
-SHA1 (qttools-opensource-src-5.4.0.tar.xz) = e923f9f7b2696bc7f451325599d55739dd5aa88a
-RMD160 (qttools-opensource-src-5.4.0.tar.xz) = 8b0e1da7e8f9215c04b68b58fdded0d4553ff11d
-Size (qttools-opensource-src-5.4.0.tar.xz) = 9261924 bytes
+SHA1 (qttools-opensource-src-5.5.1.tar.xz) = f7815165d0b427346028901a42be5f0f47d05962
+RMD160 (qttools-opensource-src-5.5.1.tar.xz) = 279aacc94f7fa583a59d3fe005ecb3e598e92b32
+SHA512 (qttools-opensource-src-5.5.1.tar.xz) = b5049cb48aa051c5d049821c55e62788bc7928acef1c668c142f317072d904bbd9571944665bd727d13b3c516a1361e909f99c87717ffc6eb6210e443e821b1b
+Size (qttools-opensource-src-5.5.1.tar.xz) = 9327100 bytes
 SHA1 (patch-src_assistant_3rdparty_clucene_src_CLucene_index_SegmentMerger.cpp) = 8161e4a61815b047f9c8b7c7a5578170db3a5eb7
 SHA1 (patch-src_assistant_3rdparty_clucene_src_CLucene_search_FieldCacheImpl.cpp) = dc741575811ee3f65d51c971c9907bd5eda3993a
 SHA1 (patch-src_assistant_3rdparty_clucene_src_CLucene_util_Arrays.h) = b0b5c5c5c8fbd26fbf89899e4b32e35ccf946f83
 SHA1 (patch-src_assistant_clucene_qclucene-config__p.h) = 9c093ca76ae4eef6ba5622d4f2916d42813f4f1a
-SHA1 (patch-src_designer_src_uitools_uitools.pro) = 17e6c0f3904ef83d2a46fb03a04556d306268075
+SHA1 (patch-src_designer_src_uitools_uitools.pro) = f4879d5a8ac5c0fdc316656a2bd05f2dbb726231
