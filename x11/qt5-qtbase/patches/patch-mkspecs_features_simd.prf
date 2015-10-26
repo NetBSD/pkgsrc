@@ -1,5 +1,7 @@
-$NetBSD: patch-mkspecs_features_simd.prf,v 1.1 2015/01/01 21:05:13 wiz Exp $
+$NetBSD: patch-mkspecs_features_simd.prf,v 1.2 2015/10/26 19:03:59 adam Exp $
+
 * Use libtool 
+
 --- mkspecs/features/simd.prf.orig	2014-12-05 16:24:38.000000000 +0000
 +++ mkspecs/features/simd.prf
 @@ -33,12 +33,12 @@ defineTest(addSimdCompiler) {

@@ -1,10 +1,8 @@
-$NetBSD: patch-src_corelib_io_io.pri,v 1.3 2015/08/30 04:13:46 markd Exp $
+$NetBSD: patch-src_corelib_io_io.pri,v 1.4 2015/10/26 19:03:59 adam Exp $
 
-* Add NetBSD support
 * Add DragonFly support
 * Patch sent and merged upstream:
   http://codereview.qt-project.org/#/c/111741/
-
 * fix linux test.
 
 --- src/corelib/io/io.pri.orig	2014-12-05 16:24:37.000000000 +0000
@@ -20,7 +18,7 @@ $NetBSD: patch-src_corelib_io_io.pri,v 1.3 2015/08/30 04:13:46 markd Exp $
          }
  
          !nacl {
--            freebsd-*|mac|darwin-*|openbsd-*:{
+-            freebsd-*|mac|darwin-*|openbsd-*|netbsd-*:{
 +            freebsd-*|mac|darwin-*|openbsd-*|netbsd-*|dragonfly-*:{
                  SOURCES += io/qfilesystemwatcher_kqueue.cpp
                  HEADERS += io/qfilesystemwatcher_kqueue_p.h
