@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.65 2015/04/17 08:22:30 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.66 2015/10/26 09:33:16 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -93,6 +93,11 @@ BUILDLINK_TRANSFORM+=	rm:-export-dynamic
 
 # Convert GNU ld flags to native SunOS ld flags where possible.
 BUILDLINK_TRANSFORM+=	opt:-Wl,--rpath:-Wl,-R
+
+# Remove GCC-specific flags if using clang
+.if ${PKGSRC_COMPILER} == "clang"
+BUILDLINK_TRANSFORM+=	rm:-mimpure-text
+.endif
 
 # Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
