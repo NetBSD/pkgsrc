@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: knot.sh,v 1.2 2015/06/30 13:17:10 pettai Exp $
+# $NetBSD: knot.sh,v 1.3 2015/10/26 19:23:08 pettai Exp $
 #
 # PROVIDE: knot
 # REQUIRE: NETWORKING syslogd
@@ -17,10 +17,9 @@ knotd="@PREFIX@/sbin/knotd"
 command_args=""
 pidfile="@VARBASE@/knot/${name}.pid"
 start_precmd="knot_precmd"
-extra_commands="restart reload"
+extra_commands="reload"
 start_cmd="$knotd -d"
 stop_cmd="$command stop"
-restart_cmd="$command restart"
 reload_cmd="$command reload"
 status_cmd="$command status"
 

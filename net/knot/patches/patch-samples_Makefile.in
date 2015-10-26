@@ -1,10 +1,8 @@
-$NetBSD: patch-samples_Makefile.in,v 1.3 2014/11/10 21:20:32 pettai Exp $
+$NetBSD: patch-samples_Makefile.in,v 1.4 2015/10/26 19:23:08 pettai Exp $
 
-Fix sysconfdir + sample conf snippet
-
---- samples/Makefile.in.orig	2014-09-15 14:32:42.000000000 +0000
+--- samples/Makefile.in.orig	2015-10-26 16:12:16.000000000 +0000
 +++ samples/Makefile.in
-@@ -252,6 +252,7 @@ sharedstatedir = @sharedstatedir@
+@@ -264,6 +264,7 @@ sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  storage_dir = @storage_dir@
  sysconfdir = @sysconfdir@
@@ -12,18 +10,16 @@ Fix sysconfdir + sample conf snippet
  systemd_CFLAGS = @systemd_CFLAGS@
  systemd_LIBS = @systemd_LIBS@
  target_alias = @target_alias@
-@@ -469,10 +470,10 @@ knot.sample.conf: knot.sample.conf.in
+@@ -483,9 +484,9 @@ knot.sample.conf: knot.sample.conf.in
  	mv $@.tmp $@
  
- install-data-local: knot.sample.conf
--	[ -d $(DESTDIR)/$(config_dir) ] || \
--	  $(INSTALL) -d $(DESTDIR)/$(config_dir)
--	[ -f $(DESTDIR)/$(config_dir)/knot.sample.conf ] || \
--	  $(INSTALL_DATA) knot.sample.conf $(srcdir)/example.com.zone $(DESTDIR)/$(config_dir)
-+	[ -d $(DESTDIR)/$(EGDIR) ] || \
-+	  $(INSTALL) -d $(DESTDIR)/$(EGDIR)
-+	[ -f $(DESTDIR)/$(EGDIR)/knot.sample.conf ] || \
-+	  $(INSTALL_DATA) knot.sample.conf $(srcdir)/example.com.zone $(DESTDIR)/$(EGDIR)
- 
- uninstall-local:
- 	[ -f $(DESTDIR)/$(config_dir)/knot.sample.conf ] && \
+ @HAVE_DAEMON_TRUE@install-data-local: knot.sample.conf
+-@HAVE_DAEMON_TRUE@	if [ \! -f $(DESTDIR)/$(config_dir)/knot.sample.conf ]; then \
+-@HAVE_DAEMON_TRUE@	  $(INSTALL) -d $(DESTDIR)/$(config_dir); \
+-@HAVE_DAEMON_TRUE@	  $(INSTALL_DATA) knot.sample.conf $(srcdir)/example.com.zone $(DESTDIR)/$(config_dir); \
++@HAVE_DAEMON_TRUE@	if [ \! -f $(DESTDIR)/$(EGDIR)/knot.sample.conf ]; then \
++@HAVE_DAEMON_TRUE@	  $(INSTALL) -d $(DESTDIR)/$(EGDIR); \
++@HAVE_DAEMON_TRUE@	  $(INSTALL_DATA) knot.sample.conf $(srcdir)/example.com.zone $(DESTDIR)/$(EGDIR); \
+ @HAVE_DAEMON_TRUE@	fi
+ @HAVE_BASH_COMPLETIONS_TRUE@@HAVE_DAEMON_TRUE@	if [ \! -f $(DESTDIR)/$(bash_completions_dir)/keymgr ]; then \
+ @HAVE_BASH_COMPLETIONS_TRUE@@HAVE_DAEMON_TRUE@	  $(INSTALL) -d $(DESTDIR)/$(bash_completions_dir); \
