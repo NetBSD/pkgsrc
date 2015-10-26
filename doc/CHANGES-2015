@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4405 2015/10/26 20:40:51 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4406 2015/10/26 21:30:38 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7568,3 +7568,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qt5-qtxmlpatterns to 5.5.1 [adam 2015-10-26]
 	Updated x11/qt5-sqlite3 to 5.5.1 [adam 2015-10-26]
 	Updated pkgtools/pkgdep to 1.0nb5 [kamil 2015-10-26]
+	Updated net/knot to 2.0.1 [pettai 2015-10-26]
