@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2015/10/09 11:44:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.215 2015/10/26 09:42:47 jperkin Exp $
 
 DISTNAME=	openssl-1.0.2d
 CATEGORIES=	security
@@ -43,7 +43,7 @@ OPENSSL_MACHINE_ARCH=	${MACHINE_ARCH}
 # back to ./config's autodetection if not.
 .  if defined(OPENSSL_MACHINE_ARCH) && !empty(OPENSSL_MACHINE_ARCH)
 CONFIGURE_SCRIPT=	./Configure
-.    if !empty(CC_VERSION:Mgcc*)
+.    if ${PKGSRC_COMPILER} == "clang" || ${PKGSRC_COMPILER} == "gcc"
 CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-gcc
 .    else
 CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-cc
