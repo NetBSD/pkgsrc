@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/10/26 20:38:09 kamil Exp $
+# $NetBSD: Makefile,v 1.23 2015/10/26 23:26:27 kamil Exp $
 #
 
 PKGNAME=	pkgdep-1.0
@@ -11,7 +11,7 @@ COMMENT=	Script for displaying dependence information on software packages
 WRKSRC=		${WRKDIR}/files
 USE_TOOLS+=	perl:run
 
-BUILD_DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
+DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 REPLACE_PERL=	pkgdep.pl
 
