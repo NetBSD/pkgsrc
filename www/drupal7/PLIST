@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/06/18 11:44:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.12.4.1 2015/10/26 21:01:16 bsiegert Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -636,6 +636,11 @@ share/drupal/modules/simpletest/tests/batch.test
 share/drupal/modules/simpletest/tests/batch_test.callbacks.inc
 share/drupal/modules/simpletest/tests/batch_test.info
 share/drupal/modules/simpletest/tests/batch_test.module
+share/drupal/modules/simpletest/tests/boot.test
+share/drupal/modules/simpletest/tests/boot_test_1.info
+share/drupal/modules/simpletest/tests/boot_test_1.module
+share/drupal/modules/simpletest/tests/boot_test_2.info
+share/drupal/modules/simpletest/tests/boot_test_2.module
 share/drupal/modules/simpletest/tests/bootstrap.test
 share/drupal/modules/simpletest/tests/cache.test
 share/drupal/modules/simpletest/tests/common.test
@@ -654,6 +659,7 @@ share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.
 share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.module
 share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test_class.inc
 share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test_interface.inc
+share/drupal/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test_trait.sh
 share/drupal/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info
 share/drupal/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.module
 share/drupal/modules/simpletest/tests/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info
@@ -695,6 +701,7 @@ share/drupal/modules/simpletest/tests/menu_test.info
 share/drupal/modules/simpletest/tests/menu_test.module
 share/drupal/modules/simpletest/tests/module.test
 share/drupal/modules/simpletest/tests/module_test.file.inc
+share/drupal/modules/simpletest/tests/module_test.implementations.inc
 share/drupal/modules/simpletest/tests/module_test.info
 share/drupal/modules/simpletest/tests/module_test.install
 share/drupal/modules/simpletest/tests/module_test.module
@@ -732,6 +739,8 @@ share/drupal/modules/simpletest/tests/system_incompatible_module_version_depende
 share/drupal/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.module
 share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.info
 share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.module
+share/drupal/modules/simpletest/tests/system_project_namespace_test.info
+share/drupal/modules/simpletest/tests/system_project_namespace_test.module
 share/drupal/modules/simpletest/tests/system_test.info
 share/drupal/modules/simpletest/tests/system_test.module
 share/drupal/modules/simpletest/tests/tablesort.test
@@ -943,6 +952,7 @@ share/drupal/modules/user/user.pages.inc
 share/drupal/modules/user/user.permissions.js
 share/drupal/modules/user/user.test
 share/drupal/modules/user/user.tokens.inc
+share/drupal/profiles/README.txt
 share/drupal/profiles/minimal/minimal.info
 share/drupal/profiles/minimal/minimal.install
 share/drupal/profiles/minimal/minimal.profile
@@ -1080,4 +1090,3 @@ share/drupal/update.php
 share/drupal/xmlrpc.php
 share/examples/drupal/default.settings.php
 share/examples/drupal/drupal.conf
-@pkgdir share/drupal/files
