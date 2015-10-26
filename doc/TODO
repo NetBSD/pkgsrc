@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15029 2015/10/25 11:00:34 wiz Exp $
+$NetBSD: TODO,v 1.15030 2015/10/26 18:39:31 gson Exp $
 
 Suggested new packages
 ======================
@@ -335,6 +335,10 @@ Suggested new packages
 	kexi
 	http://www.kexi-project.org/
 	Visual database applications creator
+
+	pyFFTW
+	https://pypi.python.org/pypi/pyFFTW
+	Python wrapper around math/fftw
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
