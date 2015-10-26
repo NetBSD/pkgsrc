@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2015/02/08 09:07:27 wiz Exp $
-# used by x11/qt5-dbus/Makefile
+# $NetBSD: Makefile.common,v 1.16 2015/10/26 19:03:59 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -55,7 +54,7 @@ PLIST.unix=		yes
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-.if empty(PKGPATH:Mx11/qt5-qtbase) && empty(PKGPATH:Mx11/qt5-dbus) \
+.if empty(PKGPATH:Mx11/qt5-qtbase) \
 	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
 	&& empty(PKGPATH:Mx11/qt5-psql) && empty(PKGPATH:Mx11/qt5-sqlite3)
 do-configure:

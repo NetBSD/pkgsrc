@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
 
-SHA1 (qtlocation-opensource-src-5.4.0.tar.xz) = c47e80c4282f96de843d90341f93cd0f48333284
-RMD160 (qtlocation-opensource-src-5.4.0.tar.xz) = 575c3660a81fc285b331a23d49df43dd5d070006
-Size (qtlocation-opensource-src-5.4.0.tar.xz) = 3297720 bytes
+SHA1 (qtlocation-opensource-src-5.5.1.tar.xz) = 700bf32e15c7d808e71bca7b908b08111e81eda4
+RMD160 (qtlocation-opensource-src-5.5.1.tar.xz) = 3792eedc159db6bf15eef706ee218f3cc5759a51
+SHA512 (qtlocation-opensource-src-5.5.1.tar.xz) = d7b1563fdfdb628e78f5a1cdd7c381221888370f96446d47eedb1bc4dbbffb512bc336940f0fc6b65501c2d8ff81eff153512ff231c74e760907122683172ba2
+Size (qtlocation-opensource-src-5.5.1.tar.xz) = 3108096 bytes
