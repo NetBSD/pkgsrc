@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/10/26 20:38:09 kamil Exp $
 #
 
 PKGNAME=	pkgdep-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,8 @@ COMMENT=	Script for displaying dependence information on software packages
 
 WRKSRC=		${WRKDIR}/files
 USE_TOOLS+=	perl:run
+
+BUILD_DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 REPLACE_PERL=	pkgdep.pl
 
