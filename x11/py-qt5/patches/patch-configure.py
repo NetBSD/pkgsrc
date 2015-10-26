@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.py,v 1.2 2015/04/12 17:55:46 adam Exp $
+$NetBSD: patch-configure.py,v 1.3 2015/10/26 21:40:40 adam Exp $
 
 On Darwin, do not expect application bundle.
 Adapt for pkgsrc change to make qmake create libtool files.
 
---- configure.py.orig	2014-12-25 10:18:15.000000000 +0000
+--- configure.py.orig	2015-10-25 11:42:16.000000000 +0000
 +++ configure.py
-@@ -1858,10 +1858,7 @@ def run_make(target_config, verbose, exe
+@@ -1932,10 +1932,7 @@ def run_make(target_config, verbose, exe
          make = 'make'
          makefile_target = ''
  
@@ -17,7 +17,7 @@ Adapt for pkgsrc change to make qmake create libtool files.
  
      remove_file(platform_exe)
  
-@@ -2363,8 +2360,8 @@ win32 {
+@@ -2441,8 +2438,8 @@ win32 {
      target.files = %s%s.pyd
      LIBS += %s
  } else {
@@ -28,11 +28,21 @@ Adapt for pkgsrc change to make qmake create libtool files.
  }
  ''' % (target_name, debug_suffix, target_name, debug_suffix, link, target_name, target_name)
  
-@@ -2434,7 +2431,6 @@ win32 {
+@@ -2517,9 +2514,6 @@ win32 {
+             # common case where the PyQt configuration reflects the Qt
+             # configuration.
+             fwks = []
+-            for m in ('QtPrintSupport', 'QtDBus', 'QtWidgets'):
+-                if m in target_config.pyqt_modules:
+-                    fwks.append('-framework ' + m)
+ 
+             if len(fwks) != 0:
+                 extra_lflags = 'QMAKE_LFLAGS += "%s"\n        ' % ' '.join(fwks)
+@@ -2532,7 +2526,6 @@ win32 {
  }
  macx {
      QMAKE_LFLAGS += "-undefined dynamic_lookup"
 -    QMAKE_LFLAGS += "-install_name $$absolute_path($$PY_MODULE, $$target.path)"
- }
- '''
  
+     greaterThan(QT_MINOR_VERSION, 4) {
+         %sQMAKE_RPATHDIR += $$[QT_INSTALL_LIBS]
