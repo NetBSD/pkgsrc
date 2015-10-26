@@ -1,10 +1,18 @@
-$NetBSD: patch-qmake_Makefile.unix,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-qmake_Makefile.unix,v 1.2 2015/10/26 19:03:59 adam Exp $
 
 * Pass environmental variables from pkgsrc
 
---- qmake/Makefile.unix.orig	2014-12-05 16:24:30.000000000 +0000
+--- qmake/Makefile.unix.orig	2015-06-29 20:03:23.000000000 +0000
 +++ qmake/Makefile.unix
-@@ -92,7 +92,7 @@ DEPEND_SRC = \
+@@ -74,6 +74,7 @@ DEPEND_SRC = \
+ 	   $(SOURCE_PATH)/src/corelib/tools/qlocale_win.cpp \
+ 	   $(SOURCE_PATH)/src/corelib/tools/qlinkedlist.cpp \
+ 	   $(SOURCE_PATH)/src/corelib/tools/qhash.cpp $(SOURCE_PATH)/src/corelib/kernel/qcore_mac.cpp \
++	   $(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm \
+ 	   $(SOURCE_PATH)/src/corelib/kernel/qcore_mac_objc.mm \
+ 	   $(SOURCE_PATH)/src/corelib/io/qtemporaryfile.cpp $(SOURCE_PATH)/src/corelib/kernel/qmetatype.cpp \
+ 	   $(SOURCE_PATH)/src/corelib/io/qsettings.cpp $(SOURCE_PATH)/src/corelib/kernel/qvariant.cpp \
+@@ -93,7 +94,7 @@ DEPEND_SRC = \
  	   $(SOURCE_PATH)/src/corelib/json/qjsonvalue.cpp \
  	   $(QTSRCS)
  
@@ -13,7 +21,7 @@ $NetBSD: patch-qmake_Makefile.unix,v 1.1 2014/12/30 17:23:46 adam Exp $
  	   -I$(QMKSRC) -I$(QMKLIBSRC) -I$(QMKSRC)/generators -I$(QMKSRC)/generators/unix -I$(QMKSRC)/generators/win32 \
  	   -I$(QMKSRC)/generators/mac -I$(QMKSRC)/generators/integrity \
  	   -I$(INC_PATH) -I$(INC_PATH)/QtCore \
-@@ -105,7 +105,7 @@ CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
+@@ -106,7 +107,7 @@ CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
  	   -DQT_NO_THREAD -DQT_NO_QOBJECT -DQT_NO_GEOM_VARIANT -DQT_NO_DATASTREAM \
  	   -DQT_CRYPTOGRAPHICHASH_ONLY_SHA1 -DQT_JSON_READONLY -DQT_NO_STANDARDPATHS
  
@@ -22,3 +30,13 @@ $NetBSD: patch-qmake_Makefile.unix,v 1.1 2014/12/30 17:23:46 adam Exp $
  
  first all: $(BUILD_PATH)/bin/qmake$(EXEEXT)
  qmake: $(BUILD_PATH)/bin/qmake$(EXEEXT)
+@@ -284,6 +285,9 @@ qstring.o: $(SOURCE_PATH)/src/corelib/to
+ qstring_compat.o: $(SOURCE_PATH)/src/corelib/tools/qstring_compat.cpp
+ 	$(CXX) -c -o $@ $(CXXFLAGS) $(SOURCE_PATH)/src/corelib/tools/qstring_compat.cpp
+ 
++qstring_mac.o: $(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm
++	$(CXX) -c -o $@ $(CXXFLAGS) $(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm
++
+ qstringbuilder.o: $(SOURCE_PATH)/src/corelib/tools/qstringbuilder.cpp
+ 	$(CXX) -c -o $@ $(CXXFLAGS) $(SOURCE_PATH)/src/corelib/tools/qstringbuilder.cpp
+ 

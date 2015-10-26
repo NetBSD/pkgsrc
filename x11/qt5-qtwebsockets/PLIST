@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/08 09:07:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/10/26 19:04:01 adam Exp $
 lib/pkgconfig/Qt5Websockets.pc
 qt5/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qdefaultmaskgenerator_p.h
 qt5/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qsslserver_p.h
@@ -31,6 +31,7 @@ qt5/lib/libQt5WebSockets.prl
 qt5/lib/pkgconfig/Qt5WebSockets.pc
 qt5/mkspecs/modules/qt_lib_websockets.pri
 qt5/mkspecs/modules/qt_lib_websockets_private.pri
-qt5/qml/Qt/WebSockets/libdeclarative_qmlwebsockets.la
-qt5/qml/Qt/WebSockets/plugins.qmltypes
 qt5/qml/Qt/WebSockets/qmldir
+qt5/qml/QtWebSockets/libdeclarative_qmlwebsockets.la
+qt5/qml/QtWebSockets/plugins.qmltypes
+qt5/qml/QtWebSockets/qmldir

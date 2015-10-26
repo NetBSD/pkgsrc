@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2015/08/30 09:56:45 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/10/26 19:04:01 adam Exp $
 
-SHA1 (qtwebkit-opensource-src-5.4.0.tar.xz) = e5e92e126bb673dadc329bc726c21bf4f994d829
-RMD160 (qtwebkit-opensource-src-5.4.0.tar.xz) = 7310e566174839214a962f1d2ff07cbb7decb7a2
-Size (qtwebkit-opensource-src-5.4.0.tar.xz) = 33456404 bytes
+SHA1 (qtwebkit-opensource-src-5.5.1.tar.xz) = e1e16f3eb48c1ce863b9ab33364e4ac178ae51a7
+RMD160 (qtwebkit-opensource-src-5.5.1.tar.xz) = 0594ec1150f7899d72f57d8ff2f108f3f75faaf9
+SHA512 (qtwebkit-opensource-src-5.5.1.tar.xz) = a44ca088fee7dbf0b10df7e1f6c914f37b31cf7c3b95156c32e5b8373a8de54013cd51cdf5b18b72f165d60c21ce55bceca86b038de68b1eb78ae0cd4bb8228a
+Size (qtwebkit-opensource-src-5.5.1.tar.xz) = 33489924 bytes
 SHA1 (patch-Source_JavaScriptCore_API_ObjCCallbackFunction.h) = be77c4b19f5f97c12180c1b7d3b72968364f3229
 SHA1 (patch-Source_JavaScriptCore_DerivedSources.pri) = b7a81c85257ddebd7bdff546a6d6720c9a2c5b56
 SHA1 (patch-Source_JavaScriptCore_JavaScriptCore.pri) = ccf64d0df1c61ff5c31c000636f3b64460562314
@@ -11,7 +12,6 @@ SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = a6cfdbced0bb528f47
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 2ed23192d9a4ec2c0f7b7b9a48bed664adbc7fb3
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = cf39645a9b61299bb7b5b700a4cf2af68aa2f9f6
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 09bfdb6e63b835fb50611289d4a1c50cd18c9e37
-SHA1 (patch-Source_JavaScriptCore_runtime_JSObject.cpp) = f08f344bb88ccf9b2383d6d7b9f7fcd07b667a39
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = 3b73e876e89e920267a6bd19dba696298f00c704
 SHA1 (patch-Source_QtWebKit.pro) = cfa9b6a36ce63f7655a164bbc696db2c0a44d288
 SHA1 (patch-Source_ThirdParty_ANGLE_Target.pri) = 33473cbae5e2f835b0cea6cfd5fe50f031bea60c
@@ -33,7 +33,6 @@ SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 0112
 SHA1 (patch-Source_WebCore_editing_Editor.h) = 8b566568d843c9699789e9d45a019e7f4192699a
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = f596432d46cb67b5b233bf7fdf0286d94c554e5e
 SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = dd409929936955ad31b8ec0902067e2f23c054a2
-SHA1 (patch-Source_WebCore_platform_graphics_gstreamer_WebKitWebSourceGStreamer.cpp) = 1527bd277a547d7aa4791b1e0f51be74bc8b6f20
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = d1d986afd5525143fc786a959240a72167f03352
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 838acb2d7ecf41e5f6989d98459d103f4268cdcf
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_mac_GraphicsSurfaceMac.cpp) = a42d4604c92ec43d11966f2a599125d6a1e9febc

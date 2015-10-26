@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/30 17:23:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/10/26 19:04:00 adam Exp $
 lib/pkgconfig/Qt5Positioning.pc
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qcache3q_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocameracapabilities_p.h
@@ -9,9 +9,8 @@ qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocodingmanager_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocodingmanagerengine_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomaneuver_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomap_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomap_p_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomapcontroller_p.h
-qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomapdata_p.h
-qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomapdata_p_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomappingmanager_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomappingmanager_p_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomappingmanagerengine_p.h
@@ -27,8 +26,8 @@ qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeoroutingmanager_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeoroutingmanagerengine_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeoserviceprovider_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotilecache_p.h
-qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmapdata_p.h
-qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmapdata_p_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmap_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmap_p_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmappingmanagerengine_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmappingmanagerengine_p_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeotiledmapreply_p.h
@@ -192,6 +191,7 @@ qt5/include/QtPositioning/qpositioningglobal.h
 qt5/include/QtPositioning/qtpositioningversion.h
 qt5/lib/cmake/Qt5Location/Qt5LocationConfig.cmake
 qt5/lib/cmake/Qt5Location/Qt5LocationConfigVersion.cmake
+qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryMapbox.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryNokia.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryOsm.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5PositioningConfig.cmake
@@ -207,6 +207,7 @@ qt5/mkspecs/modules/qt_lib_location.pri
 qt5/mkspecs/modules/qt_lib_location_private.pri
 qt5/mkspecs/modules/qt_lib_positioning.pri
 qt5/mkspecs/modules/qt_lib_positioning_private.pri
+qt5/plugins/geoservices/libqtgeoservices_mapbox.la
 qt5/plugins/geoservices/libqtgeoservices_nokia.la
 qt5/plugins/geoservices/libqtgeoservices_osm.la
 qt5/plugins/position/libqtposition_positionpoll.la

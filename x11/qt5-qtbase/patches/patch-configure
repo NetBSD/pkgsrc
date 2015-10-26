@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-configure,v 1.2 2015/10/26 19:03:59 adam Exp $
 
 * Don't use SDKs on OS X
 * Add NetBSD/sparc{,64} support
 
---- configure.orig	2014-02-01 20:37:23.000000000 +0000
+--- configure.orig	2015-06-29 20:03:05.000000000 +0000
 +++ configure
-@@ -319,7 +319,6 @@ getQMakeConf()
+@@ -337,7 +337,6 @@ getQMakeConf()
  {
      if [ -z "$specvals" ]; then
          specvals=`expandQMakeConf "$QMAKESPEC/qmake.conf" | extractQMakeVariables "host_build"`
@@ -13,7 +13,7 @@ $NetBSD: patch-configure,v 1.1 2014/12/30 17:23:46 adam Exp $
      fi
      getSingleQMakeVariable "$1" "$specvals"
  }
-@@ -328,7 +327,6 @@ getXQMakeConf()
+@@ -346,7 +345,6 @@ getXQMakeConf()
  {
      if [ -z "$xspecvals" ]; then
          xspecvals=`expandQMakeConf "$XQMAKESPEC/qmake.conf" | extractQMakeVariables "!host_build"`
@@ -21,7 +21,7 @@ $NetBSD: patch-configure,v 1.1 2014/12/30 17:23:46 adam Exp $
      fi
      getSingleQMakeVariable "$1" "$xspecvals"
  }
-@@ -2679,6 +2677,19 @@ if [ -z "$PLATFORM" ]; then
+@@ -2894,6 +2892,19 @@ if [ -z "$PLATFORM" ]; then
       UNIX_SV:*)
          PLATFORM=unixware-g++
          ;;
@@ -41,12 +41,16 @@ $NetBSD: patch-configure,v 1.1 2014/12/30 17:23:46 adam Exp $
       QNX:*)
          PLATFORM=unsupported/qnx-g++
          ;;
-@@ -6263,7 +6274,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
- [ "$CFG_PNG" != "yes" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_PNG"
- [ "$CFG_JPEG" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_JPEG"
- [ "$CFG_ZLIB" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_ZLIB"
--[ "$CFG_DBUS" = "no" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_DBUS"
-+#[ "$CFG_DBUS" = "no" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_DBUS"
- 
- # X11/Unix/Mac only configs
- [ "$CFG_CUPS" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_CUPS"
+@@ -4001,10 +4012,12 @@ if true; then ###[ '!' -f "$outpath/bin/
+             EXTRA_CXXFLAGS="$EXTRA_CXXFLAGS \$(CARBON_CFLAGS)"
+             EXTRA_OBJS="$EXTRA_OBJS \
+                         qsettings_mac.o \
++                        qstring_mac.o \
+                         qcore_mac.o \
+                         qcore_mac_objc.o"
+             EXTRA_SRCS="$EXTRA_SRCS \
+                         \"\$(SOURCE_PATH)/src/corelib/io/qsettings_mac.cpp\" \
++                        \"\$(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm\" \
+                         \"\$(SOURCE_PATH)/src/corelib/kernel/qcore_mac.cpp\" \
+                         \"\$(SOURCE_PATH)/src/corelib/kernel/qcore_mac_objc.mm\""
+         fi

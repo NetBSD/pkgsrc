@@ -1,29 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/30 17:23:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/10/26 19:04:00 adam Exp $
 lib/pkgconfig/Qt5SerialPort.pc
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qcore_mac_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qcore_unix_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qlockfile_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qringbuffer_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_symbian_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_unix_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_win_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_wince_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtudev_p.h
-qt5/include/QtSerialPort/QLockFile
 qt5/include/QtSerialPort/QSerialPort
 qt5/include/QtSerialPort/QSerialPortInfo
-qt5/include/QtSerialPort/QWinEventNotifier
 qt5/include/QtSerialPort/QtSerialPort
 qt5/include/QtSerialPort/QtSerialPortDepends
 qt5/include/QtSerialPort/QtSerialPortVersion
-qt5/include/QtSerialPort/qlockfile.h
 qt5/include/QtSerialPort/qserialport.h
 qt5/include/QtSerialPort/qserialportglobal.h
 qt5/include/QtSerialPort/qserialportinfo.h
 qt5/include/QtSerialPort/qtserialportversion.h
-qt5/include/QtSerialPort/qwineventnotifier.h
 qt5/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake
 qt5/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake
 qt5/lib/libQt5SerialPort.la

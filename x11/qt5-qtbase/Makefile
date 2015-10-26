@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2015/10/10 01:57:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2015/10/26 19:03:59 adam Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	6
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -19,12 +18,13 @@ CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license
 CONFIGURE_ARGS+=	-sysconfdir "${PKG_SYSCONFDIR}/xdg"
 CONFIGURE_ARGS+=	-accessibility
+CONFIGURE_ARGS+=	-dbus-linked
 CONFIGURE_ARGS+=	-fontconfig
+CONFIGURE_ARGS+=	-force-pkg-config
 CONFIGURE_ARGS+=	-icu
 CONFIGURE_ARGS+=	-openssl-linked
 CONFIGURE_ARGS+=	-nomake examples
 CONFIGURE_ARGS+=	-nomake tests
-CONFIGURE_ARGS+=	-no-dbus
 CONFIGURE_ARGS+=	-no-pch
 CONFIGURE_ARGS+=	-no-sql-mysql
 CONFIGURE_ARGS+=	-no-sql-psql
@@ -90,6 +90,9 @@ LDFLAGS+=		-ldl
 .  if exists(/usr/lib/libexecinfo.so)
 LDFLAGS+=		-lexecinfo
 .  endif
+.endif
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+LDFLAGS+=		-lkvm	# see patch-src_corelib_io_qlockfile__unix.cpp
 .endif
 
 REPLACE_PERL+=		bin/syncqt.pl
@@ -180,12 +183,15 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+# Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
+USE_DBUS-ARCH-DEPS_H=	yes
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/glu/buildlink3.mk"
-.if !empty(MESALIB_SUPPORTS_EGL:Myes)
+.  if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
-.endif
+.  endif
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"

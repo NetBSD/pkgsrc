@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/30 17:23:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/10/26 19:04:00 adam Exp $
 lib/pkgconfig/Qt5CLucene.pc
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5DesignerComponents.pc
@@ -23,6 +23,7 @@ qt5/bin/qhelpconverter
 qt5/bin/qhelpgenerator
 qt5/bin/qtdiag
 qt5/bin/qtpaths
+qt5/bin/qtplugininfo
 qt5/include/QtCLucene/${PKGVERSION}/QtCLucene/private/qanalyzer_p.h
 qt5/include/QtCLucene/${PKGVERSION}/QtCLucene/private/qclucene-config_p.h
 qt5/include/QtCLucene/${PKGVERSION}/QtCLucene/private/qclucene_global_p.h
@@ -258,6 +259,15 @@ qt5/include/QtHelp/qhelpsearchengine.h
 qt5/include/QtHelp/qhelpsearchquerywidget.h
 qt5/include/QtHelp/qhelpsearchresultwidget.h
 qt5/include/QtHelp/qthelpversion.h
+qt5/include/QtUiPlugin/QDesignerCustomWidgetCollectionInterface
+qt5/include/QtUiPlugin/QDesignerCustomWidgetInterface
+qt5/include/QtUiPlugin/QDesignerExportWidget
+qt5/include/QtUiPlugin/QtUiPlugin
+qt5/include/QtUiPlugin/QtUiPluginDepends
+qt5/include/QtUiPlugin/QtUiPluginVersion
+qt5/include/QtUiPlugin/customwidget.h
+qt5/include/QtUiPlugin/qdesignerexportwidget.h
+qt5/include/QtUiPlugin/qtuipluginversion.h
 qt5/include/QtUiTools/${PKGVERSION}/QtUiTools/private/quiloader_p.h
 qt5/include/QtUiTools/QUiLoader
 qt5/include/QtUiTools/QtUiTools
@@ -275,6 +285,8 @@ qt5/lib/cmake/Qt5Help/Qt5HelpConfigVersion.cmake
 qt5/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake
 qt5/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfigVersion.cmake
 qt5/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake
+qt5/lib/cmake/Qt5UiPlugin/Qt5UiPluginConfig.cmake
+qt5/lib/cmake/Qt5UiPlugin/Qt5UiPluginConfigVersion.cmake
 qt5/lib/cmake/Qt5UiTools/Qt5UiToolsConfig.cmake
 qt5/lib/cmake/Qt5UiTools/Qt5UiToolsConfigVersion.cmake
 qt5/lib/libQt5CLucene.la
@@ -298,6 +310,7 @@ qt5/mkspecs/modules/qt_lib_designer_private.pri
 qt5/mkspecs/modules/qt_lib_designercomponents_private.pri
 qt5/mkspecs/modules/qt_lib_help.pri
 qt5/mkspecs/modules/qt_lib_help_private.pri
+qt5/mkspecs/modules/qt_lib_uiplugin.pri
 qt5/mkspecs/modules/qt_lib_uitools.pri
 qt5/mkspecs/modules/qt_lib_uitools_private.pri
 qt5/phrasebooks/danish.qph
