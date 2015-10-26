@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/10/10 01:57:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2015/10/26 19:04:00 adam Exp $
 
 DISTNAME=	qttools-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
-PKGREVISION=	5
 COMMENT=	Qt5 tools
 
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
@@ -23,7 +22,6 @@ post-install:
 	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../x11/qt5-sqlite3/buildlink3.mk"

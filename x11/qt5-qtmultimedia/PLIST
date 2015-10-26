@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/08/30 04:17:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/10/26 19:04:00 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaQuick_p.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
@@ -16,10 +16,13 @@ qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstbufferpoolinterf
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstcodecsinfo_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreameraudioinputselector_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreameraudioprobecontrol_p.h
+qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamerbufferprobe_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamerbushelper_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamergltexturerenderer_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamermessage_p.h
+qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamermirtexturerenderer_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideoinputdevicecontrol_p.h
+qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideooverlay_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideoprobecontrol_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideorenderer_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideorendererinterface_p.h
@@ -27,6 +30,8 @@ qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideowidge
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamervideowindow_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstutils_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstvideobuffer_p.h
+qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstvideorendererplugin_p.h
+qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstvideorenderersink_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qimagevideobuffer_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediacontrol_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmedianetworkplaylistprovider_p.h
@@ -61,6 +66,7 @@ qt5/include/QtMultimedia/QAbstractAudioInput
 qt5/include/QtMultimedia/QAbstractAudioOutput
 qt5/include/QtMultimedia/QAbstractPlanarVideoBuffer
 qt5/include/QtMultimedia/QAbstractVideoBuffer
+qt5/include/QtMultimedia/QAbstractVideoFilter
 qt5/include/QtMultimedia/QAbstractVideoSurface
 qt5/include/QtMultimedia/QAudio
 qt5/include/QtMultimedia/QAudioBuffer
@@ -97,7 +103,9 @@ qt5/include/QtMultimedia/QCameraImageProcessingControl
 qt5/include/QtMultimedia/QCameraInfo
 qt5/include/QtMultimedia/QCameraInfoControl
 qt5/include/QtMultimedia/QCameraLocksControl
+qt5/include/QtMultimedia/QCameraViewfinderSettings
 qt5/include/QtMultimedia/QCameraViewfinderSettingsControl
+qt5/include/QtMultimedia/QCameraViewfinderSettingsControl2
 qt5/include/QtMultimedia/QCameraZoomControl
 qt5/include/QtMultimedia/QImageEncoderControl
 qt5/include/QtMultimedia/QImageEncoderSettings
@@ -143,6 +151,7 @@ qt5/include/QtMultimedia/QSoundEffect
 qt5/include/QtMultimedia/QVideoDeviceSelectorControl
 qt5/include/QtMultimedia/QVideoEncoderSettings
 qt5/include/QtMultimedia/QVideoEncoderSettingsControl
+qt5/include/QtMultimedia/QVideoFilterRunnable
 qt5/include/QtMultimedia/QVideoFrame
 qt5/include/QtMultimedia/QVideoProbe
 qt5/include/QtMultimedia/QVideoRendererControl
@@ -152,6 +161,7 @@ qt5/include/QtMultimedia/QtMultimedia
 qt5/include/QtMultimedia/QtMultimediaDepends
 qt5/include/QtMultimedia/QtMultimediaVersion
 qt5/include/QtMultimedia/qabstractvideobuffer.h
+qt5/include/QtMultimedia/qabstractvideofilter.h
 qt5/include/QtMultimedia/qabstractvideosurface.h
 qt5/include/QtMultimedia/qaudio.h
 qt5/include/QtMultimedia/qaudiobuffer.h
@@ -185,6 +195,7 @@ qt5/include/QtMultimedia/qcameraimageprocessingcontrol.h
 qt5/include/QtMultimedia/qcamerainfo.h
 qt5/include/QtMultimedia/qcamerainfocontrol.h
 qt5/include/QtMultimedia/qcameralockscontrol.h
+qt5/include/QtMultimedia/qcameraviewfindersettings.h
 qt5/include/QtMultimedia/qcameraviewfindersettingscontrol.h
 qt5/include/QtMultimedia/qcamerazoomcontrol.h
 qt5/include/QtMultimedia/qimageencodercontrol.h
@@ -231,18 +242,18 @@ qt5/include/QtMultimedia/qvideosurfaceformat.h
 qt5/include/QtMultimedia/qvideowindowcontrol.h
 qt5/include/QtMultimediaQuick_p/${PKGVERSION}/QtMultimediaQuick_p/private/qdeclarativevideooutput_render_p.h
 qt5/include/QtMultimediaQuick_p/${PKGVERSION}/QtMultimediaQuick_p/private/qdeclarativevideooutput_window_p.h
-qt5/include/QtMultimediaQuick_p/QSGVideoNodeFactory_I420
 qt5/include/QtMultimediaQuick_p/QSGVideoNodeFactory_RGB
 qt5/include/QtMultimediaQuick_p/QSGVideoNodeFactory_Texture
-qt5/include/QtMultimediaQuick_p/QSGVideoNode_I420
+qt5/include/QtMultimediaQuick_p/QSGVideoNodeFactory_YUV
 qt5/include/QtMultimediaQuick_p/QSGVideoNode_RGB
 qt5/include/QtMultimediaQuick_p/QSGVideoNode_Texture
+qt5/include/QtMultimediaQuick_p/QSGVideoNode_YUV
 qt5/include/QtMultimediaQuick_p/QtMultimediaQuick_p
 qt5/include/QtMultimediaQuick_p/QtMultimediaQuick_pDepends
 qt5/include/QtMultimediaQuick_p/QtMultimediaQuick_pVersion
-qt5/include/QtMultimediaQuick_p/qsgvideonode_i420.h
 qt5/include/QtMultimediaQuick_p/qsgvideonode_rgb.h
 qt5/include/QtMultimediaQuick_p/qsgvideonode_texture.h
+qt5/include/QtMultimediaQuick_p/qsgvideonode_yuv.h
 qt5/include/QtMultimediaQuick_p/qtmultimediaquick_pversion.h
 qt5/include/QtMultimediaWidgets/${PKGVERSION}/QtMultimediaWidgets/private/qeglimagetexturesurface_p.h
 qt5/include/QtMultimediaWidgets/${PKGVERSION}/QtMultimediaWidgets/private/qpaintervideosurface_p.h

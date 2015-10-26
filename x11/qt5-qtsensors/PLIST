@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/30 17:23:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/10/26 19:04:00 adam Exp $
 lib/pkgconfig/Qt5Sensors.pc
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaccelerometer_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaltimeter_p.h
@@ -120,7 +120,6 @@ qt5/lib/cmake/Qt5Sensors/Qt5SensorsConfig.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5SensorsConfigVersion.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QShakeSensorGesturePlugin.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QtSensorGesturePlugin.cmake
-qt5/lib/cmake/Qt5Sensors/Qt5Sensors_dummySensorPlugin.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_genericSensorPlugin.cmake
 qt5/lib/libQt5Sensors.la
 qt5/lib/libQt5Sensors.prl
@@ -129,7 +128,6 @@ qt5/mkspecs/modules/qt_lib_sensors.pri
 qt5/mkspecs/modules/qt_lib_sensors_private.pri
 qt5/plugins/sensorgestures/libqtsensorgestures_plugin.la
 qt5/plugins/sensorgestures/libqtsensorgestures_shakeplugin.la
-qt5/plugins/sensors/libqtsensors_dummy.la
 qt5/plugins/sensors/libqtsensors_generic.la
 qt5/qml/QtSensors/libdeclarative_sensors.la
 qt5/qml/QtSensors/plugins.qmltypes
