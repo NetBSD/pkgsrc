@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4406 2015/10/26 21:30:38 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.4407 2015/10/26 21:42:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7541,7 +7541,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/py-geojson to 1.3.1 [kleink 2015-10-26]
 	Updated www/py-flask-sqlalchemy to 2.1 [kleink 2015-10-26]
 	Updated x11/qt5 to 5.5.1 [adam 2015-10-26]
-	Removed x11/qt5-dbus to 5.5.1 [adam 2015-10-26]
+	Removed x11/qt5-dbus [adam 2015-10-26]
 	Updated x11/qt5-mysql to 5.5.1 [adam 2015-10-26]
 	Updated x11/qt5-odbc to 5.5.1 [adam 2015-10-26]
 	Updated x11/qt5-psql to 5.5.1 [adam 2015-10-26]
@@ -7569,3 +7569,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qt5-sqlite3 to 5.5.1 [adam 2015-10-26]
 	Updated pkgtools/pkgdep to 1.0nb5 [kamil 2015-10-26]
 	Updated net/knot to 2.0.1 [pettai 2015-10-26]
+	Updated x11/py-sip to 4.17 [adam 2015-10-26]
+	Updated x11/py-qt5 to 5.5.1 [adam 2015-10-26]
