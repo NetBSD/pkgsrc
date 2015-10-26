@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/10/26 05:52:06 agc Exp $
 bin/dieharder
 include/dieharder/Dtest.h
 include/dieharder/Vtest.h
 include/dieharder/Xtest.h
 include/dieharder/copyright.h
+include/dieharder/dab_bytedistrib.h
+include/dieharder/dab_dct.h
+include/dieharder/dab_filltree.h
+include/dieharder/dab_filltree2.h
+include/dieharder/dab_monobit2.h
 include/dieharder/diehard_2dsphere.h
 include/dieharder/diehard_3dsphere.h
 include/dieharder/diehard_birthdays.h
@@ -21,17 +26,25 @@ include/dieharder/diehard_rank_6x8.h
 include/dieharder/diehard_runs.h
 include/dieharder/diehard_squeeze.h
 include/dieharder/diehard_sums.h
+include/dieharder/dieharder_rng_types.h
+include/dieharder/dieharder_test_types.h
 include/dieharder/libdieharder.h
 include/dieharder/marsaglia_tsang_gcd.h
 include/dieharder/marsaglia_tsang_gorilla.h
 include/dieharder/parse.h
 include/dieharder/rgb_bitdist.h
+include/dieharder/rgb_kstest_test.h
+include/dieharder/rgb_lagged_sums.h
 include/dieharder/rgb_lmn.h
+include/dieharder/rgb_minimum_distance.h
+include/dieharder/rgb_operm.h
+include/dieharder/rgb_permutations.h
 include/dieharder/rgb_persist.h
 include/dieharder/rgb_timing.h
 include/dieharder/std_test.h
 include/dieharder/sts_monobit.h
 include/dieharder/sts_runs.h
+include/dieharder/sts_serial.h
 include/dieharder/tests.h
 include/dieharder/verbose.h
 lib/libdieharder.la
