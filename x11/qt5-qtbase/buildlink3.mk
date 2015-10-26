@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.10 2015/04/25 14:25:17 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2015/10/26 19:03:59 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
 .if !defined(QT5_QTBASE_BUILDLINK3_MK)
 QT5_QTBASE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.4.0
-BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.4.0nb3
+BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.5.1
+BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.5.1
 BUILDLINK_PKGSRCDIR.qt5-qtbase?=	../../x11/qt5-qtbase
 
 BUILDLINK_INCDIRS.qt5-qtbase+=	qt5/include
@@ -28,6 +28,7 @@ PTHREAD_OPTS+=	require
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

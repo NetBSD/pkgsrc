@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2015/08/30 01:21:42 markd Exp $
+# $NetBSD: options.mk,v 1.6 2015/10/26 19:03:59 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5
 PKG_SUPPORTED_OPTIONS=	cups debug gtk2
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	-no-gtkstyle
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
+# this does not work - builds libQtBoostracp_debug
 CC+=			-ggdb
 CXX+=			-ggdb
 CONFIGURE_ARGS+=	-debug
