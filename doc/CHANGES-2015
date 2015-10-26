@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4399 2015/10/26 03:46:26 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4400 2015/10/26 05:53:51 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7536,3 +7536,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/webkit-gtk to 2.10.2nb1 [leot 2015-10-25]
 	Updated graphics/MesaLib to 11.0.4 [tnn 2015-10-25]
 	Updated ham/fldigi to 3.23.04 [mef 2015-10-26]
+	Updated math/dieharder to 3.31.1 [agc 2015-10-26]
