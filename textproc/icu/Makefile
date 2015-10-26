@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/10/09 23:15:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2015/10/26 09:28:20 jperkin Exp $
 
 DISTNAME=	icu4c-56_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-threads
 
 # from ICU_CHECK_MH_FRAG in source/acinclude.m4
 .if ${OPSYS} == "SunOS"
-.  if !empty(CC_VERSION:Mgcc*)
+.  if ${PKGSRC_COMPILER} == "clang" || ${PKGSRC_COMPILER} == "gcc"
 PLIST_SUBST+=		MH_NAME=mh-solaris-gcc
 .  else
 PLIST_SUBST+=		MH_NAME=mh-solaris
