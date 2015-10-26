@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2015/07/15 18:09:05 pettai Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2015/10/26 20:12:11 bsiegert Exp $
 
 DISTNAME=	unbound-1.5.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -80,6 +81,8 @@ CONF_FILES+=	share/examples/unbound/unbound.conf \
 	${PKG_SYSCONFDIR}/unbound.conf
 
 RCD_SCRIPTS=	unbound
+SMF_METHODS=	unbound
+SMF_NAME=	unbound
 
 UNBOUND_USER?=	unbound
 UNBOUND_GROUP?=	unbound
