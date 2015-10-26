@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.775 2015/10/24 19:24:10 joerg Exp $
+# $NetBSD: Makefile,v 1.776 2015/10/26 07:49:40 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -500,7 +500,6 @@ SUBDIR+=	wxGTK28
 SUBDIR+=	wxGTK28-contrib
 SUBDIR+=	wxGTK30
 SUBDIR+=	wxWindows-docs
-SUBDIR+=	wxhaskell
 SUBDIR+=	x11perf
 SUBDIR+=	x11vnc
 SUBDIR+=	x2x
