@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2015/10/25 16:48:23 leot Exp $
+# $NetBSD: Makefile,v 1.103 2015/10/26 10:53:24 jmcneill Exp $
 
 DISTNAME=	webkitgtk-2.10.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -69,8 +69,8 @@ CXXFLAGS.SunOS+=	-fpermissive
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
-CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON	# XXX: not completely sure (was --disable-fast-malloc)
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON
 .endif
 
 .include "options.mk"
