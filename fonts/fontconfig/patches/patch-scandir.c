@@ -1,4 +1,4 @@
-$NetBSD: patch-scandir.c,v 1.1 2014/07/15 14:48:34 ryoon Exp $
+$NetBSD: patch-scandir.c,v 1.2 2015/10/27 20:20:31 bsiegert Exp $
 
 --- scandir.c.orig	2014-07-14 12:36:57.000000000 +0000
 +++ scandir.c
@@ -12,7 +12,7 @@ $NetBSD: patch-scandir.c,v 1.1 2014/07/15 14:48:34 ryoon Exp $
 + * Update Count    : 2
 + * Status          : Unknown, Use with caution!
 + * 
-+ * (C) Copyright 1997, Universität Dortmund, all rights reserved.
++ * (C) Copyright 1997, Universitaet Dortmund, all rights reserved.
 + * (C) Copyright CNIDR (see ../doc/CNIDR/COPYRIGHT)
 + */
 +
