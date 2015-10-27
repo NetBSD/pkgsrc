@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2010/09/19 15:06:18 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2015/10/27 11:29:35 wiz Exp $
+
+DragonFly support.
+https://alioth.debian.org/tracker/index.php?func=detail&aid=315205&group_id=30186&atid=410366
 
 --- sanei/sanei_ab306.c.orig	2010-04-05 13:18:05.000000000 +0000
 +++ sanei/sanei_ab306.c
