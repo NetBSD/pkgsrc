@@ -1,4 +1,7 @@
-$NetBSD: patch-backend_kodakaio.c,v 1.2 2015/08/16 20:24:23 leot Exp $
+$NetBSD: patch-backend_kodakaio.c,v 1.3 2015/10/27 11:29:35 wiz Exp $
+
+DragonFly build fix.
+https://alioth.debian.org/tracker/index.php?func=detail&aid=315207&group_id=30186&atid=410366
 
 --- backend/kodakaio.c.orig	2013-08-25 21:22:58.000000000 +0000
 +++ backend/kodakaio.c
