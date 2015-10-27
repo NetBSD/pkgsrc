@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2015/07/26 23:10:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2015/10/27 09:04:38 jperkin Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -1737,6 +1737,9 @@ share/cmake-${CMAKE_API}/Modules/Platform/QNX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/RISCos.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/SCO_SV.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/SINIX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/SunOS-Clang-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/SunOS-Clang-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/SunOS-Clang-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/SunOS-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/SunOS-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/SunOS-GNU-Fortran.cmake
