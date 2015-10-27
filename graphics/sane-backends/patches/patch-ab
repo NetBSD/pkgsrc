@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.14 2015/10/25 10:39:13 wiz Exp $
+$NetBSD: patch-ab,v 1.15 2015/10/27 11:29:35 wiz Exp $
 
 --- configure.orig	2015-10-04 13:18:39.000000000 +0000
 +++ configure
@@ -28,12 +28,3 @@ $NetBSD: patch-ab,v 1.14 2015/10/25 10:39:13 wiz Exp $
  fi
  
         have_pthread=yes
-@@ -18138,7 +18138,7 @@ for be in ${BACKENDS}; do
-     ;;
- 
-     mustek_pp)
--    if test "${sane_cv_use_libieee1284}" != "yes" && test "${enable_parport_directio}" != "yes"; then
-+    if test "${sane_cv_use_libieee1284}" != "yes" || test "${enable_parport_directio}" != "yes"; then
-       echo "*** $be backend requires libieee1284 or parport-directio libraries - $DISABLE_MSG"
-       backend_supported="no"
-     fi
