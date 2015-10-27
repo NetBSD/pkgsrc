@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.128 2015/10/10 01:58:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.129 2015/10/27 08:49:01 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-11.19.0
+DISTNAME=	asterisk-11.20.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-PKGREVISION=	2
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
@@ -38,8 +37,15 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
-#JMN doesn't build properly on NetBSD, remove when -current is fixed
+
+.if (${OPSYS} == "NetBSD" && \
+    (empty(OS_VERSION:M6.99.[4-9]?) && empty(OS_VERSION:M[7-9].*)))
 CONFIGURE_ARGS+=	--without-srtp
+.else
+CONFIGURE_ARGS+=	--with-srtp
+PLIST.srtp=		YES
+.include "../../comms/srtp/buildlink3.mk"
+.endif
 
 INSTALL_TARGET=		install samples
 INSTALLATION_DIRS+=	lib/pkgconfig share/doc/${PKGBASE}
@@ -178,8 +184,9 @@ CONF_FILES_PERMS=	# empty
 CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
 .endfor
 
+.if !empty(PKG_OPTIONS:Masterisk-config)
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
-.for f in acl.conf adsi.conf agents.conf alarmreceiver.conf alsa.conf	\
+.  for f in acl.conf adsi.conf agents.conf alarmreceiver.conf alsa.conf	\
 	amd.conf app_mysql.conf asterisk.adsi calendar.conf ccss.conf	\
 	cdr.conf cdr_adaptive_odbc.conf cdr_custom.conf			\
 	cdr_manager.conf cdr_mysql.conf cdr_odbc.conf cdr_pgsql.conf	\
@@ -204,7 +211,8 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	smdi.conf telcordia-1.adsi udptl.conf unistim.conf users.conf	\
 	voicemail.conf vpb.conf xmpp.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
-.endfor
+.  endfor
+.endif
 
 PTHREAD_OPTS+=	require native
 

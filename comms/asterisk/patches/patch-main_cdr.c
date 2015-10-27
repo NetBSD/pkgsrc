@@ -1,6 +1,6 @@
-$NetBSD: patch-main_cdr.c,v 1.1 2015/05/19 07:52:14 jnemeth Exp $
+$NetBSD: patch-main_cdr.c,v 1.2 2015/10/27 08:49:01 jnemeth Exp $
 
---- main/cdr.c.orig	2013-08-06 08:19:42.000000000 +0000
+--- main/cdr.c.orig	2015-10-09 22:23:39.000000000 +0000
 +++ main/cdr.c
 @@ -260,7 +260,7 @@ static const char *ast_cdr_getvar_intern
  static void cdr_get_tv(struct timeval when, const char *fmt, char *buf, int bufsize)
@@ -23,7 +23,7 @@ $NetBSD: patch-main_cdr.c,v 1.1 2015/05/19 07:52:14 jnemeth Exp $
  	} else if (!strcasecmp(name, "disposition")) {
  		if (raw) {
 -			snprintf(workspace, workspacelen, "%ld", cdr->disposition);
-+			snprintf(workspace, workspacelen, "%jd", cdr->disposition);
++			snprintf(workspace, workspacelen, "%jd", (intmax_t)cdr->disposition);
  		} else {
  			ast_copy_string(workspace, ast_cdr_disp2str(cdr->disposition), workspacelen);
  		}
