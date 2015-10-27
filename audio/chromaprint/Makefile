@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/06/30 09:57:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2015/10/27 06:48:57 adam Exp $
 
 DISTNAME=	chromaprint-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://bitbucket.org/acoustid/chromaprint/downloads/
 
@@ -15,9 +15,10 @@ USE_CMAKE=	yes
 # build and install "fpcalc"
 CMAKE_ARGS+=	-DBUILD_EXAMPLES:BOOL=on
 # tell it where to find ffmpeg
-CMAKE_ARGS+=	-DFFMPEG_ROOT:PATH=${BUILDLINK_PREFIX.ffmpeg1}
+CMAKE_ARGS+=	-DFFMPEG_ROOT:PATH=${BUILDLINK_PREFIX.ffmpeg2}
 
 PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake
 
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+# On Darwin, chromaprint uses Accelerate.framework, but fpcalc still needs FFmpeg
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
