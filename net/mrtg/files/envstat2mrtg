@@ -1,9 +1,9 @@
 #! @PREFIX@/bin/perl
-#	$NetBSD: envstat2mrtg,v 1.3 2009/01/14 12:20:57 sketch Exp $
+#	$NetBSD: envstat2mrtg,v 1.4 2015/10/27 20:32:14 bsiegert Exp $
 
 if (@ARGV == 1)
 {
-	open(CMDOUT, "envstat -n0 -s '@ARGV[0]'|");
+	open(CMDOUT, "envstat -s '@ARGV[0]'|");
 	$line = <CMDOUT>;
 	chop $line;
 	if ($line =~ m|^[\s\t]+(\w+)$|)
@@ -25,7 +25,7 @@ if (@ARGV == 1)
 
 if (@ARGV == 2)
 {
-	open(CMDOUT, "envstat -n0 -s '@ARGV[0],@ARGV[1]'|");
+	open(CMDOUT, "envstat -s '@ARGV[0],@ARGV[1]'|");
 	$line = <CMDOUT>;
 	if ($line =~ m|^[\s\t]+(\w+)[\s\t]+(\w+)$|)
 	{
