@@ -1,8 +1,17 @@
-$NetBSD: patch-configure,v 1.4 2013/06/14 04:26:55 jnemeth Exp $
+$NetBSD: patch-configure,v 1.5 2015/10/27 08:49:01 jnemeth Exp $
 
---- configure.orig	2013-02-27 12:22:30.000000000 +0000
+--- configure.orig	2015-10-09 22:23:39.000000000 +0000
 +++ configure
-@@ -14200,7 +14200,7 @@ fi
+@@ -12409,7 +12409,7 @@ fi
+ done
+ 
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
++ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_poll_h" = xyes; then :
+ 
+ else
+@@ -14464,7 +14464,7 @@ fi
  done
  
  
@@ -11,7 +20,16 @@ $NetBSD: patch-configure,v 1.4 2013/06/14 04:26:55 jnemeth Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -16195,16 +16195,16 @@ if $(${CC} -march=native -S -o /dev/null
+@@ -14645,7 +14645,7 @@ rm -f core conftest.err conftest.$ac_obj
+ LDFLAGS=${old_LDFLAGS}
+ rm -f conftest.dynamics
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
++ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_poll_h" = xyes; then :
+   HAS_POLL=1
+ 
+@@ -16459,16 +16459,16 @@ if $(${CC} -march=native -S -o /dev/null
  	if test "${CONFIG_CFLAGS}" = ""; then
  		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
@@ -31,7 +49,7 @@ $NetBSD: patch-configure,v 1.4 2013/06/14 04:26:55 jnemeth Exp $
  fi
  
  
-@@ -16729,6 +16729,148 @@ fi
+@@ -16968,6 +16968,148 @@ fi
  
  
  
@@ -180,7 +198,7 @@ $NetBSD: patch-configure,v 1.4 2013/06/14 04:26:55 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -17871,6 +18013,8 @@ $as_echo_n "checking if \"struct ifaddrs
+@@ -18218,6 +18360,8 @@ $as_echo_n "checking if \"struct ifaddrs
  
  	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
