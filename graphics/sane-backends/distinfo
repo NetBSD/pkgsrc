@@ -1,21 +1,17 @@
-$NetBSD: distinfo,v 1.37 2015/10/25 10:39:13 wiz Exp $
+$NetBSD: distinfo,v 1.38 2015/10/27 11:29:35 wiz Exp $
 
 SHA1 (sane-backends-1.0.25.tar.gz) = 05824922d91571e1fc2f5cdd270745783d593754
 RMD160 (sane-backends-1.0.25.tar.gz) = 1cfd81eeddf3ef3c2cea98f6ca7640522b249fab
 SHA512 (sane-backends-1.0.25.tar.gz) = b9548646fff13558a4da4a4e9e8bad730f05121bcc65b72d24ded3bfddc6fe574e08c39c8651544b8fbfeab036fffd76cc14d76ef5d5d47e7513a2ce3afcc9df
 Size (sane-backends-1.0.25.tar.gz) = 5955016 bytes
-SHA1 (patch-aa) = ff3439b060d6aa78f63d6acd09d87499a4d7f224
-SHA1 (patch-ab) = 58ef8bb791cfb043931e119a1cfe521d3bb346e0
-SHA1 (patch-ac) = 900911de5cde4a6cdc35cbc2d13371b13c596474
-SHA1 (patch-ae) = bf9b53fd5c9b74915769afe9e17bed292a8a9ed9
-SHA1 (patch-af) = db4ba80826d76363ad28c22eea325e19868fd1e4
-SHA1 (patch-ag) = 8155659bce4e1ce569a8a4a74131f21670c0a834
+SHA1 (patch-aa) = 91f5838b7c455dc160ba22d15659c1b19a222668
+SHA1 (patch-ab) = 8fb594d82c2ecab3c7c73c28448831208fef8af9
+SHA1 (patch-ac) = 49e0cc0b6e0dfb96e5ee3cfc3f554b7e40492757
+SHA1 (patch-ae) = d374c33cad835d56fb9f2fbb2594a85e0a0d7158
 SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
 SHA1 (patch-ai) = 14f5467eb865406cbec00b8d47b5c23c4c89f113
 SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
 SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
-SHA1 (patch-backend_kodakaio.c) = d15cb7af0a5cc506fc42e3a71fa0998329e6eef9
-SHA1 (patch-backend_magicolor.c) = e6cbb54a0ea0e688b0189b3d07d1dff34070a179
-SHA1 (patch-backend_pieusb__buffer.c) = 8d65f0f1927bb70af451fa9c04c7d535832b6ced
-SHA1 (patch-backend_xerox__mfp-tcp.c) = 3818b623217f15ed7f30724d1d70b1614befb88f
-SHA1 (patch-sanei_sanei__ir.c) = 35720c31542ed02238d59e6f5be908609c7dd85a
+SHA1 (patch-backend_kodakaio.c) = f96af8b2fb0369f51d2320285253c5e67218e629
+SHA1 (patch-backend_pieusb__buffer.c) = eef6201f7c13b40398f254c4d84369aa0d1a61d5
+SHA1 (patch-sanei_sanei__ir.c) = fef80a2fe854b0afd20849213feaa0c6282582ce
