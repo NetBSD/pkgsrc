@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4407 2015/10/26 21:42:52 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4408 2015/10/27 08:49:30 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7571,3 +7571,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/knot to 2.0.1 [pettai 2015-10-26]
 	Updated x11/py-sip to 4.17 [adam 2015-10-26]
 	Updated x11/py-qt5 to 5.5.1 [adam 2015-10-26]
+	Updated comms/asterisk to 11.20.0 [jnemeth 2015-10-27]
