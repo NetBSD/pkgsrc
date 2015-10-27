@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.894 2015/10/27 21:10:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.895 2015/10/27 21:23:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2466,15 +2466,6 @@ sub checkline_relative_pkgdir($$) {
 	}
 }
 
-sub checkline_spellcheck($) {
-	my ($line) = @_;
-
-	if ($line->text =~ m"existant") {
-		$line->log_warning("The word \"existant\" is nonexistent in the m-w dictionary.");
-		$line->explain_warning("Please use \"existent\" instead.");
-	}
-}
-
 sub checkline_mk_varuse($$$$) {
 	my ($line, $varname, $mod, $context) = @_;
 
@@ -4183,7 +4174,6 @@ sub checklines_mk($) {
 		my $text = $line->text;
 
 		checkline_trailing_whitespace($line);
-		checkline_spellcheck($line);
 
 		if ($line->has("is_empty")) {
 			$substcontext->check_end($line);
@@ -4682,7 +4672,6 @@ sub checkfile_DESCR($) {
 		checkline_length($line, $maxchars);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
-		checkline_spellcheck($line);
 		if ($line->text =~ m"\$\{") {
 			$line->log_warning("Variables are not expanded in the DESCR file.");
 		}
@@ -4873,7 +4862,6 @@ sub checkfile_MESSAGE($) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
-		checkline_spellcheck($line);
 	}
 	if ($lines->[-1]->text ne "=" x 75) {
 		$lines->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");

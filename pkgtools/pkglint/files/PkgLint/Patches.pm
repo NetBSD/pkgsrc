@@ -1,4 +1,4 @@
-# $NetBSD: Patches.pm,v 1.3 2015/10/11 21:23:34 rillig Exp $
+# $NetBSD: Patches.pm,v 1.4 2015/10/27 21:23:37 rillig Exp $
 #
 # Everything concerning checks for patch files.
 #
@@ -271,7 +271,6 @@ sub checkfile_patch($) {
 		return unless $m->has(1);
 		$text = $m->text(1);
 		checkline_cpp_macro_names($line, $text);
-		checkline_spellcheck($line);
 
 		# XXX: This check is not as accurate as the similar one in
 		# checkline_mk_shelltext().
