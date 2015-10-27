@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2015/09/29 08:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2015/10/27 09:04:38 jperkin Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
@@ -58,6 +59,10 @@ SUBST_SED.flags=	-e 's,-O.,,'
 pre-configure:
 	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
 	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
+.for lang in C CXX Fortran
+	${LN} -f ${WRKSRC}/Modules/Platform/SunOS-GNU-${lang}.cmake \
+	    ${WRKSRC}/Modules/Platform/SunOS-Clang-${lang}.cmake
+.endfor
 
 INCOMPAT_CURSES=	NetBSD-[0-5].*
 
