@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.7 2015/08/09 04:07:13 jnemeth Exp $
+# $NetBSD: options.mk,v 1.8 2015/10/27 08:49:01 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
-PKG_SUPPORTED_OPTIONS+=		jabber speex snmp pgsql
+PKG_SUPPORTED_OPTIONS+=		jabber speex snmp pgsql asterisk-config
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
-PKG_SUGGESTED_OPTIONS=		ldap jabber speex
+PKG_SUGGESTED_OPTIONS=		ldap jabber speex asterisk-config
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		zaptel x11 unixodbc webvmail ldap spandsp jabber
-PLIST_VARS+=		speex snmp pgsql
+PLIST_VARS+=		speex snmp pgsql srtp
 
 # Asterisk now uses DAHDI, not zaptel; not implemented yet...
 #.if !empty(PKG_OPTIONS:Mzaptel)
