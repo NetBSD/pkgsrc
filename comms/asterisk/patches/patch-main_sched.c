@@ -1,8 +1,8 @@
-$NetBSD: patch-main_sched.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+$NetBSD: patch-main_sched.c,v 1.2 2015/10/27 08:49:01 jnemeth Exp $
 
---- main/sched.c.orig	2012-06-15 16:20:16.000000000 +0000
+--- main/sched.c.orig	2015-10-09 22:23:39.000000000 +0000
 +++ main/sched.c
-@@ -349,7 +349,7 @@ static int sched_settime(struct timeval 
+@@ -474,7 +474,7 @@ static int sched_settime(struct timeval 
  {
  	struct timeval now = ast_tvnow();
  
@@ -11,19 +11,17 @@ $NetBSD: patch-main_sched.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  	if (ast_tvzero(*t))	/* not supplied, default to now */
  		*t = now;
  	*t = ast_tvadd(*t, ast_samp2tv(when, 1000));
-@@ -557,12 +557,12 @@ void ast_sched_dump(struct ast_sched_con
+@@ -688,11 +688,11 @@ void ast_sched_dump(struct ast_sched_con
  		struct timeval delta;
  		q = ast_heap_peek(con->sched_heap, x);
  		delta = ast_tvsub(q->when, when);
 -		ast_debug(1, "|%.4d | %-15p | %-15p | %.6ld : %.6ld |\n",
-+		ast_debug(1, "|%.4d | %-15p | %-15p | %.6jd : %.6jd |\n",
- 			q->id,
++		ast_debug(1, "|%.4d | %-15p | %-15p | %.6jd : %.6ld |\n",
+ 			q->sched_id->id,
  			q->callback,
  			q->data,
 -			(long)delta.tv_sec,
--			(long int)delta.tv_usec);
 +			(intmax_t)delta.tv_sec,
-+			(intmax_t)delta.tv_usec);
+ 			(long int)delta.tv_usec);
  	}
  	ast_mutex_unlock(&con->lock);
- 	ast_debug(1, "=============================================================\n");
