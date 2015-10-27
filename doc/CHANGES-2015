@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4409 2015/10/27 09:04:47 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4410 2015/10/27 13:39:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7573,3 +7573,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/py-qt5 to 5.5.1 [adam 2015-10-26]
 	Updated comms/asterisk to 11.20.0 [jnemeth 2015-10-27]
 	Updated devel/cmake to 3.3.2nb1 [jperkin 2015-10-27]
+	Updated devel/waf to 1.8.16 [wiz 2015-10-27]
