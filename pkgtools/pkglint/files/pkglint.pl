@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.893 2015/10/15 03:00:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.894 2015/10/27 21:10:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1212,70 +1212,6 @@ sub load_userdefined_variables() {
 sub get_userdefined_variables() {
 	state $result = load_userdefined_variables();
 	return $result;
-}
-
-sub match_all($$);	# needed by load_shared_dirs()
-
-my $load_shared_dirs_dir_to_varname = undef;
-my $load_shared_dirs_varname_to_dirs = undef;
-my $load_shared_dirs_dir_to_id = undef;
-sub load_shared_dirs() {
-	return if defined($load_shared_dirs_dir_to_varname);
-
-	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "load_shared_dirs()");
-
-	my $dir_to_varname = {};
-	my $varname_to_dirs = {};
-	my $dir_to_id = {};
-
-	foreach my $pkg (qw(
-		misc/gnome-dirs misc/gnome1-dirs misc/gnome2-dirs
-		misc/theme-dirs
-		misc/xdg-dirs misc/xdg-x11-dirs
-		print/texmf-dirs)) {
-
-		$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "pkg=$pkg");
-		my $dirs_mk = load_existing_lines("$cwd_pkgsrcdir/$pkg/dirs.mk", true);
-		foreach my $line (@$dirs_mk) {
-			parseline_mk($line);
-			if ($line->has("is_varassign")) {
-				my $varname = $line->get("varname");
-				my $value = $line->get("value");
-
-				if ($varname =~ m"^[A-Z]\w*_DIRS$" && $value ne "") {
-					if (exists($dir_to_varname->{$value})) {
-						# FIXME: misc/xdg-x11-dirs and misc/xdg-dirs conflict.
-						#$line->log_warning("Duplicate directory, also appears in " . $dir_to_varname->{$value} . ".");
-					} else {
-						$dir_to_varname->{$value} = $varname;
-					}
-				}
-
-			} elsif ($line->has("is_cond") && $line->get("directive") eq "for") {
-				my $args = $line->get("args");
-				while ($args =~ /\$\{(\w+_DIRS)\}/gc) {
-					push(@{$varname_to_dirs->{$1}}, $pkg);
-				}
-			}
-		}
-
-		my $makefile = load_existing_lines("$cwd_pkgsrcdir/$pkg/Makefile", true);
-		foreach my $line (@$makefile) {
-			my $pkgname = undef;
-
-			parseline_mk($line);
-			if ($line->has("is_varassign") && $line->get("varname") eq "DISTNAME") {
-				if ($line->get("value") =~ m"^(.*)-dirs-(.*)$") {
-					$dir_to_id->{$pkg} = "$1-$2";
-				} else {
-					assert(false, "$pkg/Makefile does not define a proper DISTNAME.");
-				}
-			}
-		}
-	}
-	$load_shared_dirs_dir_to_varname = $dir_to_varname;
-	$load_shared_dirs_varname_to_dirs = $varname_to_dirs;
-	$load_shared_dirs_dir_to_id = $dir_to_id;
 }
 
 #
