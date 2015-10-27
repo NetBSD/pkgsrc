@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2015/10/26 19:03:59 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2015/10/27 06:45:31 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
@@ -17,6 +17,8 @@ QTDIR=		${BUILDLINK_PREFIX.qt5-qtbase}/qt5
 CMAKE_PREFIX_PATH+=	${QTDIR}
 
 PTHREAD_OPTS+=	require
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
