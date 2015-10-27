@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/09/07 12:02:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2015/10/27 09:08:20 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -45,6 +45,12 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 # and lacks the zone memory allocator
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "clang"
+CONFIGURE_ARGS+=	--disable-libgcc
 .endif
 
 post-extract:
