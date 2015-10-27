@@ -1,8 +1,8 @@
-$NetBSD: patch-main_pbx.c,v 1.1 2015/05/19 07:52:14 jnemeth Exp $
+$NetBSD: patch-main_pbx.c,v 1.2 2015/10/27 08:49:01 jnemeth Exp $
 
---- main/pbx.c.orig	2015-01-30 16:55:39.000000000 +0000
+--- main/pbx.c.orig	2015-10-09 22:23:39.000000000 +0000
 +++ main/pbx.c
-@@ -11201,7 +11201,7 @@ static int testtime_write(struct ast_cha
+@@ -11427,7 +11427,7 @@ static int testtime_write(struct ast_cha
  	sscanf(remainder, "%79s", timezone);
  	tv = ast_mktime(&tm, S_OR(timezone, NULL));
  
@@ -11,7 +11,16 @@ $NetBSD: patch-main_pbx.c,v 1.1 2015/05/19 07:52:14 jnemeth Exp $
  	pbx_builtin_setvar_helper(chan, "__TESTTIME", result);
  	return 0;
  }
-@@ -11235,7 +11235,7 @@ static int pbx_builtin_gotoiftime(struct
+@@ -11446,7 +11446,7 @@ static int pbx_builtin_gotoiftime(struct
+ 	struct ast_timing timing;
+ 	const char *ctime;
+ 	struct timeval tv = ast_tvnow();
+-	long timesecs;
++	intmax_t timesecs;
+ 
+ 	if (!chan) {
+ 		ast_log(LOG_WARNING, "GotoIfTime requires a channel on which to operate\n");
+@@ -11461,7 +11461,7 @@ static int pbx_builtin_gotoiftime(struct
  	ts = s = ast_strdupa(data);
  
  	ast_channel_lock(chan);
