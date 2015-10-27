@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2015/10/24 21:36:48 joerg Exp $
+# $NetBSD: Makefile,v 1.504 2015/10/27 20:42:25 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -461,6 +461,7 @@ SUBDIR+=	sqlite3
 SUBDIR+=	sqlite3-docs
 SUBDIR+=	sqlite3-tcl
 SUBDIR+=	sqlitebrowser
+SUBDIR+=	sqliteman
 SUBDIR+=	sqlrelay
 SUBDIR+=	sqlrelay-freetds
 SUBDIR+=	sqlrelay-mysql
