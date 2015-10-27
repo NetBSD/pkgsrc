@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2009/08/15 17:53:11 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2015/10/27 11:29:35 wiz Exp $
+
+Adapt installation to pkgsrc example config file location.
 
 --- backend/Makefile.in.orig	2009-04-30 13:41:18.000000000 +0000
 +++ backend/Makefile.in
