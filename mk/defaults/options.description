@@ -77,6 +77,7 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 catalog-sqlite3		Store Bacula catalog in SQLite 3 database.
 cdb			Enable CDB support.
 cdparanoia		Use cdparanoia to rip CDDA media.
+cerf			Enable libcerf support.
 cg			Add support for the Cg compiler.
 cgi			Enable CGI support.
 chasen			Use ChaSen as the Japanese Morphological Analzer.
@@ -237,6 +238,7 @@ gnome-keyring		Enable GNOME keyring support.
 gnomecanvas		Enable GNOME canvas support
 gnomevfs		Enable GNOME Virtual File System support.
 gnupg2-gpgsm		Install gpgsm binary.
+gnuplot-pdf-doc		Install PDF document.
 gnutls			Enable GNU TLS support.
 goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
@@ -554,7 +556,6 @@ pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
 pcsc			Enable PC/SC support.
 pdf			Enable PDF support.
-gnuplot-pdf-doc		Install PDF document.
 perl			Enable Perl support.
 pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 pgsql			Enable PostgreSQL support.
@@ -780,6 +781,7 @@ x264			Enable x264 support.
 x265			Enable x265 support.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
+xatracker		Enable XA X Acceleration API support.
 xaw			Enable Xaw support.
 xaw3d			Enable Xaw3D support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
@@ -795,7 +797,6 @@ xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
 xmlrpc			Enable XMLRPC support.
 xpm			Enable X PixMap image format support.
-xatracker		Enable XA X Acceleration API support.
 xrandr			Enable Xrandr support.
 xrender			Enable Xrender support.
 xscreensaver-webcollage	Install webcollage screensaver.
