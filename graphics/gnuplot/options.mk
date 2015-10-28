@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2015/10/28 19:02:22 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2015/10/28 19:03:17 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=	cairo cerf gd lua pdf gnuplot-pdf-doc x11 qt4 wxwidgets
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--without-cairo
 .endif
 
 .if !empty(PKG_OPTIONS:Mcerf)
-.include "../../nih/libcerf/buildlink3.mk"
+.include "../../devel/libcerf/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgd)
