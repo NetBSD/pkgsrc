@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4412 2015/10/28 00:47:20 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.4413 2015/10/28 01:27:56 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7575,4 +7575,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cmake to 3.3.2nb1 [jperkin 2015-10-27]
 	Updated devel/waf to 1.8.16 [wiz 2015-10-27]
 	Added databases/sqliteman version 1.2.2 [ryoon 2015-10-27]
-	Updated sysutils/xentools45 to 4.5.1nb1 [jnemeth 2015-10-28]
+	Updated sysutils/xentools45 to 4.5.1nb6 [jnemeth 2015-10-28]
