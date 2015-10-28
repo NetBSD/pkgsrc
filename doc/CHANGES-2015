@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4415 2015/10/28 15:54:30 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4416 2015/10/28 19:01:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7578,3 +7578,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xentools45 to 4.5.1nb6 [jnemeth 2015-10-28]
 	Added sysutils/collectd-riemann version 5.5.0 [jperkin 2015-10-28]
 	Updated lang/algol68g to 2.8.2 [leot 2015-10-28]
+	Added devel/libcerf version 1.4 [wiz 2015-10-28]
