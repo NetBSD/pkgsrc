@@ -563,6 +563,7 @@ pim			Enable pim (personal information management) support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 pkcs11			Use certificate-on-a-stick (or card) support.
+plotutils		Enable plotutils support.
 png			Enable PNG support.
 poppler			Enable poppler-utils support.
 portals			Enable BSD Portals support
