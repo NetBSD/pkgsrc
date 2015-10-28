@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4414 2015/10/28 11:45:08 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4415 2015/10/28 15:54:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7577,3 +7577,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/sqliteman version 1.2.2 [ryoon 2015-10-27]
 	Updated sysutils/xentools45 to 4.5.1nb6 [jnemeth 2015-10-28]
 	Added sysutils/collectd-riemann version 5.5.0 [jperkin 2015-10-28]
+	Updated lang/algol68g to 2.8.2 [leot 2015-10-28]
