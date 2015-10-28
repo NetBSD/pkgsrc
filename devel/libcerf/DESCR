@@ -1,0 +1,12 @@
+This is libcerf, a self-contained numeric library that provides an
+efficient and accurate implementation of complex error functions,
+along with Dawson, Faddeeva, and Voigt functions.
+
+On current GNU/Linux systems, the man page complex(7) has a "see
+also" section that lists complex mathematical functions like cabs(3),
+cacos(3), and so on. Among them, there is a complex error function.
+However, its manual page cerf(3) describes the functions cerf and
+cerfc as "unimplemented" and "reserved for future use". The present
+library libcerf provides the missing implementation, along with a
+related functions. It comes with a set of man pages, including a
+page cerf(3) that overwrites the standard one.
