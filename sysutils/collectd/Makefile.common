@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2015/09/07 12:57:29 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.11 2015/10/28 11:46:07 jperkin Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -10,6 +10,7 @@
 # used by sysutils/collectd-network/Makefile
 # used by sysutils/collectd-notify-email/Makefile
 # used by sysutils/collectd-postgresql/Makefile
+# used by sysutils/collectd-riemann/Makefile
 # used by sysutils/collectd-rrdtool/Makefile
 # used by sysutils/collectd-snmp/Makefile
 # used by sysutils/p5-collectd/Makefile
