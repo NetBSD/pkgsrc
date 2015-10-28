@@ -1,0 +1,17 @@
+$NetBSD: patch-mkspecs_features_create__cmake.prf,v 1.1 2015/10/28 15:52:11 adam Exp $
+
+Fix for shared libraries naming on Darwin.
+
+--- mkspecs/features/create_cmake.prf.orig	2015-10-28 08:15:14.000000000 +0000
++++ mkspecs/features/create_cmake.prf
+@@ -213,8 +213,8 @@ mac {
+             CMAKE_LIB_FILE_LOCATION_RELEASE = Qt$${CMAKE_MODULE_NAME}$${QT_LIBINFIX}.framework/Qt$${CMAKE_MODULE_NAME}$${QT_LIBINFIX}
+             CMAKE_BUILD_IS_FRAMEWORK = "true"
+         } else {
+-            CMAKE_LIB_FILE_LOCATION_DEBUG = lib$${CMAKE_QT_STEM}_debug.$$eval(QT.$${MODULE}.VERSION).dylib
+-            CMAKE_LIB_FILE_LOCATION_RELEASE = lib$${CMAKE_QT_STEM}.$$eval(QT.$${MODULE}.VERSION).dylib
++            CMAKE_LIB_FILE_LOCATION_DEBUG = lib$${CMAKE_QT_STEM}_debug.$$QT_MAJOR_VERSION.dylib
++            CMAKE_LIB_FILE_LOCATION_RELEASE = lib$${CMAKE_QT_STEM}.$$QT_MAJOR_VERSION.dylib
+         }
+     }
+ } else:win32 {
