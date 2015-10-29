@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2015/10/29 16:34:13 fhajny Exp $
+
+Portability.
+
+--- configure.orig	2015-08-17 08:56:19.000000000 +0000
++++ configure
+@@ -16011,7 +16011,7 @@ $as_echo "$as_me: Too old java version r
+       fi
+     fi
+ 
+-    if test "$VERSION_OK" == "1";
++    if test "$VERSION_OK" = "1";
+     then
+       JNI_HOME=`echo $JAVAC_BIN | sed "s/\(.*\)[/]bin[/]java.*/\1/"`
+       JNI_LIBDIR=`find $JNI_HOME -name "libjvm.so" | sed "s/\(.*\)libjvm.so/\1/" | head -n 1`
+@@ -16112,7 +16112,7 @@ $as_echo "$as_me: Too old java version r
+       fi
+     fi
+ 
+-    if test "$VERSION_OK" == "1";
++    if test "$VERSION_OK" = "1";
+     then
+       JNI_HOME=`echo $JAVAC_BIN | sed "s/\(.*\)[/]bin[/]java.*/\1/"`
+       JNI_LIBDIR=`find $JNI_HOME -name "libjvm.so" | sed "s/\(.*\)libjvm.so/\1/" | head -n 1`

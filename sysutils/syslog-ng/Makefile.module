@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.module,v 1.1 2015/10/29 16:34:13 fhajny Exp $
+# used by sysutils/py-syslog-ng/Makefile
+# used by sysutils/syslog-ng-geoip/Makefile
+# used by sysutils/syslog-ng-json/Makefile
+# used by sysutils/syslog-ng-mongodb/Makefile
+# used by sysutils/syslog-ng-redis/Makefile
+# used by sysutils/syslog-ng-smtp/Makefile
+# used by sysutils/syslog-ng-sql/Makefile
+
+.include "../../sysutils/syslog-ng/Makefile.common"
+
+PKGNAME?=	${DISTNAME:S/ng/ng-${SYSLOG_MOD}/}
+
+DEPENDS+=	syslog-ng-${PKGVERSION_NOREV}{nb*,}:../../sysutils/syslog-ng
+
+CONFIGURE_ARGS+=	--enable-${SYSLOG_MOD}
+
+SYSLOG_MOD_DIR?=	${SYSLOG_MOD}
+SYSLOG_MOD_TARGET?=	${SYSLOG_MOD_DIR}
+BUILD_TARGET?=		modules/${SYSLOG_MOD_DIR}/lib${SYSLOG_MOD_TARGET}.la
+
+INSTALL_TARGET=		install-moduleLTLIBRARIES
+INSTALL_MAKE_FLAGS+=	module_LTLIBRARIES=${BUILD_TARGET}
+
+INSTALLATION_DIRS=	lib/syslog-ng

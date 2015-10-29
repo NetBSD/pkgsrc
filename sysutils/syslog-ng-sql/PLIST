@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/10/29 16:34:14 fhajny Exp $
+lib/syslog-ng/libafsql.la
