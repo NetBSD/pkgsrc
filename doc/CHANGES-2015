@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4424 2015/10/29 22:00:30 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.4425 2015/10/29 22:55:27 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7594,3 +7594,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xenkernel41 to 4.1.6.1nb17 [bouyer 2015-10-29]
 	Updated sysutils/xenkernel45 to 4.5.1nb1 [bouyer 2015-10-29]
 	Updated sysutils/xenkernel42 to 4.2.5nb9 [bouyer 2015-10-29]
+	Updated graphics/cogl to 1.22.0 [prlw1 2015-10-29]
