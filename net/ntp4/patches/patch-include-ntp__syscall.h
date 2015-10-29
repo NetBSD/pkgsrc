@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2014/01/12 17:01:02 spz Exp $
+$NetBSD: patch-include-ntp__syscall.h,v 1.1 2015/10/29 11:23:47 christos Exp $
 
 --- include/ntp_syscall.h.orig	2011-03-31 10:03:53.000000000 +0000
 +++ include/ntp_syscall.h
