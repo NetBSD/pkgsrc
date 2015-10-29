@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2015/08/31 15:31:26 taca Exp $
+# $NetBSD: Makefile,v 1.77 2015/10/29 15:54:20 prlw1 Exp $
 
-DISTNAME=	roundcubemail-1.1.2
+DISTNAME=	roundcubemail-1.1.3
 PKGNAME=	${DISTNAME:S/mail-/-/}
-PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -11,13 +10,11 @@ HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=${PHP_BASE_VERS}:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_Sieve>=1.3.2:../../net/pear-Net_Sieve
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
