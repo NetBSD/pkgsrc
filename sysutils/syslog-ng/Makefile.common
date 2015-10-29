@@ -1,0 +1,70 @@
+# $NetBSD: Makefile.common,v 1.1 2015/10/29 16:34:13 fhajny Exp $
+# used by sysutils/syslog-ng/Makefile
+# used by sysutils/syslog-ng/Makefile.module
+
+DISTNAME=	syslog-ng-3.7.2
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.syslog-ng.org/
+COMMENT=	Highly portable log management solution
+LICENSE=	gnu-gpl-v2
+
+GITHUB_RELEASE=	${DISTNAME}
+
+PATCHDIR=	${.CURDIR}/../../sysutils/syslog-ng/patches
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/syslog-ng/distinfo
+
+USE_LANGUAGES=	c c99
+USE_TOOLS+=	flex pkg-config gmake awk:run
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+
+CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
+
+CONFIGURE_ARGS+=	--disable-amqp
+CONFIGURE_ARGS+=	--disable-geoip
+CONFIGURE_ARGS+=	--disable-ipv6
+CONFIGURE_ARGS+=	--disable-java
+CONFIGURE_ARGS+=	--disable-json
+CONFIGURE_ARGS+=	--disable-mongodb
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-redis
+CONFIGURE_ARGS+=	--disable-smtp
+CONFIGURE_ARGS+=	--disable-sql
+CONFIGURE_ARGS+=	--disable-ssl
+CONFIGURE_ARGS+=	--disable-stomp
+CONFIGURE_ARGS+=	--disable-sun-streams
+CONFIGURE_ARGS+=	--disable-tcp-wrapper
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-ivykis=${BUILDLINK_PREFIX.ivykis}
+CONFIGURE_ARGS+=	--with-jsonc=no
+CONFIGURE_ARGS+=	--with-libmongo-client=no
+CONFIGURE_ARGS+=	--with-librabbitmq-client=no
+CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-dynamic-linking
+CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+.endif
+
+SUBST_CLASSES+=		unamepath
+SUBST_STAGE.unamepath=	post-configure
+SUBST_FILES.unamepath=	contrib/syslog2ng
+SUBST_VARS.unamepath=	UNAME
+
+REPLACE_AWK+=		contrib/syslog2ng
+REPLACE_PERL+=		lib/merge-grammar.pl
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/ivykis/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/eventlog/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
