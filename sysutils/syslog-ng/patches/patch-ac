@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2011/10/09 10:59:32 obache Exp $
+$NetBSD: patch-ac,v 1.3 2015/10/29 16:34:13 fhajny Exp $
 
 # add NetBSD support and fix some paths
 
---- contrib/syslog2ng.orig	Thu Jun 19 14:24:03 2003
-+++ contrib/syslog2ng	Thu Jun 19 14:24:13 2003
+--- contrib/syslog2ng.orig	2014-12-15 14:48:45.000000000 +0000
++++ contrib/syslog2ng
 @@ -5,18 +5,24 @@
  # Translator from syslog.conf to syslog-ng.conf
  # by Jonathan W. Marks <j-marks@uiuc.edu>
@@ -32,7 +32,7 @@ $NetBSD: patch-ac,v 1.2 2011/10/09 10:59:32 obache Exp $
  	} else {
  		print "!!! Unsupported system: " sysname ".";
  		exit 1;
-@@ -29,7 +35,7 @@
+@@ -29,7 +35,7 @@ BEGIN {
  
  	print \
  "source local {\n" \
