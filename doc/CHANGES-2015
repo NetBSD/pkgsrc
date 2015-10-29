@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4418 2015/10/29 12:33:23 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4419 2015/10/29 14:25:56 roy Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7581,3 +7581,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/libcerf version 1.4 [wiz 2015-10-28]
 	Updated filesystems/openafs to 1.6.15 [jakllsch 2015-10-28]
 	Updated sysutils/user_darwin to 20151029 [jperkin 2015-10-29]
+	Updated net/openresolv to 3.7.2 [roy 2015-10-29]
