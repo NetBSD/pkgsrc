@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4423 2015/10/29 20:42:37 bouyer Exp $
+$NetBSD: CHANGES-2015,v 1.4424 2015/10/29 22:00:30 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7593,3 +7593,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/py-syslog-ng version 3.7.2 [fhajny 2015-10-29]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb17 [bouyer 2015-10-29]
 	Updated sysutils/xenkernel45 to 4.5.1nb1 [bouyer 2015-10-29]
+	Updated sysutils/xenkernel42 to 4.2.5nb9 [bouyer 2015-10-29]
