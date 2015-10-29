@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: pbulk.sh,v 1.1 2014/07/15 21:29:38 asau Exp $
+# $Id: pbulk.sh,v 1.2 2015/10/29 22:12:04 he Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
@@ -44,7 +44,7 @@ fi
 if [ ! -n "$unprivileged" ]; then
 case "$(uname)" in
 NetBSD)
-if ! id pbulk; then user add -m -g users pbulk; fi
+if ! id pbulk; then user add -m -g users pbulk -s /bin/sh; fi
 ;;
 FreeBSD)
 if ! id pbulk; then
