@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4421 2015/10/29 16:36:15 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4422 2015/10/29 16:38:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7584,3 +7584,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/openresolv to 3.7.2 [roy 2015-10-29]
 	Updated mail/roundcube to 1.1.3 [prlw1 2015-10-29]
 	Updated sysutils/syslog-ng to 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/syslog-ng-geoip version 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/syslog-ng-json version 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/syslog-ng-mongodb version 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/syslog-ng-redis version 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/syslog-ng-smtp version 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/syslog-ng-sql version 3.7.2 [fhajny 2015-10-29]
+	Added sysutils/py-syslog-ng version 3.7.2 [fhajny 2015-10-29]
