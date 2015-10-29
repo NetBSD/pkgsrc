@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2015/06/06 14:14:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.38 2015/10/29 15:54:20 prlw1 Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README.md
@@ -1662,6 +1662,7 @@ share/roundcube/program/lib/Roundcube/rcube_message.php
 share/roundcube/program/lib/Roundcube/rcube_message_header.php
 share/roundcube/program/lib/Roundcube/rcube_message_part.php
 share/roundcube/program/lib/Roundcube/rcube_mime.php
+share/roundcube/program/lib/Roundcube/rcube_mime_decode.php
 share/roundcube/program/lib/Roundcube/rcube_output.php
 share/roundcube/program/lib/Roundcube/rcube_plugin.php
 share/roundcube/program/lib/Roundcube/rcube_plugin_api.php
