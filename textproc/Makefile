@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.848 2015/10/22 10:53:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.849 2015/10/29 09:00:01 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -359,8 +359,8 @@ SUBDIR+=	metauml
 SUBDIR+=	migemo
 SUBDIR+=	migemo-elisp
 SUBDIR+=	miller
-SUBDIR+=	mxml
 SUBDIR+=	multimarkdown
+SUBDIR+=	mxml
 SUBDIR+=	mythes
 SUBDIR+=	namazu
 SUBDIR+=	nbsed
