@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/01/12 07:29:42 mef Exp $
+$NetBSD: distinfo,v 1.9 2015/10/30 12:45:14 wen Exp $
 
-SHA1 (HTTP-DAV-0.47.tar.gz) = 884c437ef0b8867dcc3413c753fd341195001574
-RMD160 (HTTP-DAV-0.47.tar.gz) = a3a52616da15d9f9a34ab1fd9a1cf113527a0338
-Size (HTTP-DAV-0.47.tar.gz) = 109648 bytes
+SHA1 (HTTP-DAV-0.48.tar.gz) = c32db94b0e7ceed4fdb0959dc45e464b99be03ff
+RMD160 (HTTP-DAV-0.48.tar.gz) = b7496555ead2315734b90b4ccceeb51641835657
+SHA512 (HTTP-DAV-0.48.tar.gz) = 2edf92791660b1996eb22b9ea68bd4e417c497afeebb56cb0a2ecf0cf72ea54b6fb8efd4d69dae1dcb946517f917593932a8040bd0ef5cfc83f7fdfd1fe3ccf8
+Size (HTTP-DAV-0.48.tar.gz) = 105090 bytes
