@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4429 2015/10/30 12:54:58 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4430 2015/10/30 13:27:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7599,3 +7599,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-Async to 0.30 [wen 2015-10-30]
 	Updated www/p5-HTTP-DAV to 0.48 [wen 2015-10-30]
 	Updated www/p5-HTTP-Lite to 2.44 [wen 2015-10-30]
+	Updated textproc/p5-XML-Twig to 3.49 [wen 2015-10-30]
