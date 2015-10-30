@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2013/03/02 17:54:52 joerg Exp $
+$NetBSD: distinfo,v 1.26 2015/10/30 15:53:00 tsutsui Exp $
 
 SHA1 (kterm-6.2.0-scroll-wd0.2.patch) = 384d938d3cfea48ae31426c918be6b8df59eb1de
 RMD160 (kterm-6.2.0-scroll-wd0.2.patch) = e2ea4285def5c4ec8b88d36a20a328cc1082a469
@@ -23,6 +23,7 @@ SHA1 (patch-ad) = 35e78a604a19d52e4367419acacab054c5653f42
 SHA1 (patch-ae) = bfeceb762f7b0f57cc42a4166ffd86baa8e31229
 SHA1 (patch-button.c) = 4d98e3a42979e49074417003f608c3216d43723b
 SHA1 (patch-cursor.c) = 00af175233449e3eeeec294e03d6769223f93e12
+SHA1 (patch-gset.c) = b22f8a8f75effa0c0435016a2d7945c1f69fb8c3
 SHA1 (patch-input.c) = eb7528cb9578ba1e46188ff7e347c30a29f182f2
 SHA1 (patch-screen.c) = 48c0042ed2fd6162e20c523544c1c9aa6eb9ab2a
 SHA1 (patch-scrollbar.c) = c2e9a2e20def7408423fa3bf7411e0c8ca2f2819

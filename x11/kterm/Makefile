@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2015/10/14 20:17:28 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2015/10/30 15:53:00 tsutsui Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	24
