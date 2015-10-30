@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4430 2015/10/30 13:27:49 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4431 2015/10/30 15:29:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7530,6 +7530,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/vlc to 2.2.1 [wiz 2015-10-25]
 	Removed multimedia/vlc21 successor multimedia/vlc [wiz 2015-10-25]
 	Updated multimedia/phonon-backend-vlc to 0.8.2nb1 [wiz 2015-10-25]
+	Updated inputmethod/canna-lib to 3.7pl3nb1 [tsutsui 2015-10-25]
 	Updated www/midori to 0.5.11 [jmcneill 2015-10-25]
 	Updated databases/unixodbc to 2.3.4 [adam 2015-10-25]
 	Updated multimedia/x265 to 1.8 [adam 2015-10-25]
@@ -7600,3 +7601,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-HTTP-DAV to 0.48 [wen 2015-10-30]
 	Updated www/p5-HTTP-Lite to 2.44 [wen 2015-10-30]
 	Updated textproc/p5-XML-Twig to 3.49 [wen 2015-10-30]
+	Updated x11/mlterm to 3.6.0 [tsutsui 2015-10-30]
