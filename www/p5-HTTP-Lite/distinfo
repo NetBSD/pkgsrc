@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/12 07:37:07 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/10/30 12:53:37 wen Exp $
 
-SHA1 (HTTP-Lite-2.43.tar.gz) = 9e649a5f7ac53da0632c32ef1ce67e2e77f61584
-RMD160 (HTTP-Lite-2.43.tar.gz) = 41d1e589c795db042c4433d961bf723984ad2d24
-Size (HTTP-Lite-2.43.tar.gz) = 306320 bytes
+SHA1 (HTTP-Lite-2.44.tar.gz) = 0713c3e51a6610183d578c21f4137ba281b7ac63
+RMD160 (HTTP-Lite-2.44.tar.gz) = 510732f5a796c059e73c65cc5497532b1cc9b02b
+SHA512 (HTTP-Lite-2.44.tar.gz) = a30dbcdd3af404117f626502e3c591e073bbf9f113b137e6be0f2fca44948c04c1816064091f1a8bed4bfc1635efb02e57a1830f1f577eadc748b6b08e4e5e0f
+Size (HTTP-Lite-2.44.tar.gz) = 287819 bytes
