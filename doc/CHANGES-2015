@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4426 2015/10/30 12:26:21 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4427 2015/10/30 12:37:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7596,3 +7596,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/xenkernel42 to 4.2.5nb9 [bouyer 2015-10-29]
 	Updated graphics/cogl to 1.22.0 [prlw1 2015-10-29]
 	Updated www/p5-Mojolicious to 6.27 [wen 2015-10-30]
+	Updated www/p5-HTTP-Async to 0.30 [wen 2015-10-30]
