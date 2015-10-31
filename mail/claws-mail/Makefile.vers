@@ -1,3 +1,3 @@
-# $NetBSD: Makefile.vers,v 1.18 2015/04/03 12:34:44 nros Exp $
+# $NetBSD: Makefile.vers,v 1.19 2015/10/31 18:54:46 nros Exp $
 #
-CLAWS_VERSION=	3.11.1
+CLAWS_VERSION=	3.13.0
