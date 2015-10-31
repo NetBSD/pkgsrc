@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/10/31 11:41:10 shattered Exp $
 
-DISTNAME=		build-farm-4_11
-PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/:S/_/./}
-PKGREVISION=		3
+DISTNAME=		build-farm-4_15_1
+PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/:S/_/./g}
 CATEGORIES=		databases
 MASTER_SITES=		http://www.pgbuildfarm.org/downloads/releases/
 EXTRACT_SUFX=		.tgz
@@ -15,7 +14,7 @@ LICENSE=		postgresql-license
 DEPENDS+=		git-base>=1.6:../../devel/git-base
 DEPENDS+=		p5-libwww>=5.0:../../www/p5-libwww
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/_/./}
+WRKSRC=			${WRKDIR}/${DISTNAME:S/_/./g}
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
 USE_TOOLS+=		perl:run
