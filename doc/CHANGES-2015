@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4434 2015/10/31 14:21:11 schmonz Exp $
+$NetBSD: CHANGES-2015,v 1.4435 2015/10/31 14:25:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7606,3 +7606,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/grepcidr to 2.97 [shattered 2015-10-31]
 	Updated databases/pgbuildfarm to 4.15.1 [shattered 2015-10-31]
 	Updated textproc/py-feedparser to 5.2.1 [schmonz 2015-10-31]
+	Updated devel/p5-Test-BDD-Cucumber to 0.39 [schmonz 2015-10-31]
