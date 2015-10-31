@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/10/31 14:18:32 schmonz Exp $
 
-DISTNAME=		feedparser-5.1.3
+DISTNAME=		feedparser-5.2.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
-MASTER_SITES=		http://feedparser.googlecode.com/files/
+MASTER_SITES=		${MASTER_SITE_PYPI:=f/feedparser/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://feedparser.googlecode.com/
+HOMEPAGE=		https://pypi.python.org/pypi/feedparser
 COMMENT=		Parse RSS and Atom feeds in Python
 LICENSE=		2-clause-bsd
 
