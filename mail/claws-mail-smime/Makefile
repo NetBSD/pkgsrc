@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2015/09/24 23:31:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2015/10/31 18:54:47 nros Exp $
 #
 
 PLUGIN_NAME=	smime
-PKGREVISION= 2
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
