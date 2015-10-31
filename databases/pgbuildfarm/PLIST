@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/21 09:24:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/10/31 11:41:10 shattered Exp $
 bin/run_branches.pl
 bin/run_build.pl
 bin/run_web_txn.pl
 bin/setnotes.pl
 bin/update_personality.pl
 share/examples/pgbuildfarm/build-farm.conf
+${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/FileTextArrayFDW.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/Skeleton.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/TestCollateLinuxUTF8.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/TestDecoding.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/TestUpgrade.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Options.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/SCM.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/WebTxn.pm
-${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/FileTextArrayFDW.pm
-${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/Skeleton.pm
-${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Modules/TestUpgrade.pm
