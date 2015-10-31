@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2015/06/07 14:05:58 youri Exp $
+# $NetBSD: Makefile.common,v 1.15 2015/10/31 18:54:46 nros Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -6,7 +6,7 @@
 
 DISTNAME=	claws-mail-${CLAWS_VERSION}
 CATEGORIES=	mail news x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=claws-mail/}
+MASTER_SITES=	http://claws-mail.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	http://claws-mail.org/
