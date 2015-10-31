@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4433 2015/10/31 12:20:22 shattered Exp $
+$NetBSD: CHANGES-2015,v 1.4434 2015/10/31 14:21:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7605,3 +7605,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.15 [taca 2015-10-31]
 	Updated textproc/grepcidr to 2.97 [shattered 2015-10-31]
 	Updated databases/pgbuildfarm to 4.15.1 [shattered 2015-10-31]
+	Updated textproc/py-feedparser to 5.2.1 [schmonz 2015-10-31]
