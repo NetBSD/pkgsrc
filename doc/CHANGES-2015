@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4432 2015/10/31 01:59:07 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4433 2015/10/31 12:20:22 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7603,3 +7603,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-XML-Twig to 3.49 [wen 2015-10-30]
 	Updated x11/mlterm to 3.6.0 [tsutsui 2015-10-30]
 	Updated lang/php56 to 5.6.15 [taca 2015-10-31]
+	Updated textproc/grepcidr to 2.97 [shattered 2015-10-31]
+	Updated databases/pgbuildfarm to 4.15.1 [shattered 2015-10-31]
