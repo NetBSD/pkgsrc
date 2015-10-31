@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15036 2015/10/31 12:20:22 shattered Exp $
+$NetBSD: TODO,v 1.15037 2015/10/31 13:26:29 taca Exp $
 
 Suggested new packages
 ======================
@@ -1157,7 +1157,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mutagen-tools-1.29
 	o mxml-2.9
 	o myodbc-5.3.4
-	o mysql-5.7.6
+	o mysql-5.7.9
 	o mysql-workbench-6.2.5
 	o nagios-base-4.1.1
 	o nagios-plugin-ldap-2.1.1
