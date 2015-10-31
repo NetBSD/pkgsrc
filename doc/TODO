@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15035 2015/10/30 12:37:22 wen Exp $
+$NetBSD: TODO,v 1.15036 2015/10/31 12:20:22 shattered Exp $
 
 Suggested new packages
 ======================
@@ -851,7 +851,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.1.0
 	o grantlee-5.0.0
 	o greed-4.1
-	o grepcidr-2.97
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
 	o gromacs-5.0.6
@@ -1422,7 +1421,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o perlsh-1.8.1
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pflogsumm-1.1.5
-	o pgbuildfarm-4_15_1
 	o phoronix-test-suite-5.8.1
 	o php-concrete5-5.7.5.1
 	o php-geoip-1.1.0
