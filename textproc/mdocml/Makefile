@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2015/10/10 01:58:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2015/10/31 21:53:24 jym Exp $
 
 DISTNAME=	mdocml-1.13.3
 PKGREVISION=	3
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
-MAINTAINER=	kristaps@kth.se
+MAINTAINER=	schwarze@usta.de
 HOMEPAGE=	http://mdocml.bsd.lv/
 COMMENT=	Convert man pages from mdoc, man, and tbl to txt, html, ps, or pdf
 LICENSE=	2-clause-bsd # not exactly, but near enough
