@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.67 2015/10/12 21:48:33 tnn Exp $
+$NetBSD: distinfo,v 1.68 2015/11/01 22:58:52 tnn Exp $
 
-SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
-RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
-Size (xorg-server-1.17.2.tar.bz2) = 5767983 bytes
+SHA1 (xorg-server-1.17.4.tar.bz2) = 139c4d6795eb4c3848616cc514d134532975e49e
+RMD160 (xorg-server-1.17.4.tar.bz2) = d89d56015d093666e932fd0afc7d51aa2db7cc2f
+SHA512 (xorg-server-1.17.4.tar.bz2) = 4b8377b86ca88f27dcf59db2996b2ee620ce6f181a37dc47600365db588d48f2f3ca66a3149e7c856e686e5783b1cccb2ba0827aa7413299163dfca869f4d376
+Size (xorg-server-1.17.4.tar.bz2) = 5791384 bytes
 SHA1 (patch-configure) = b3c5ae8cd7aca96dbb5a237dda061e8c2569b2f2
 SHA1 (patch-exa_exa__render.c) = 4e144b977797d9cdc7e08c286aaedb303f1a1aa8
 SHA1 (patch-hw_xfree86_common_compiler.h) = c6f2a1ec352e3577dcd46acc8c9c45d81a0c3964
