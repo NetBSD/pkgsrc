@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4440 2015/11/01 09:59:09 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4441 2015/11/01 13:39:06 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7612,3 +7612,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/kid3 to 3.3.0 [adam 2015-11-01]
 	Updated math/py-sympy to 0.7.6.1 [wiz 2015-11-01]
 	Updated math/py-networkx to 1.10 [wiz 2015-11-01]
+	Added devel/ivykis version 0.39 [fhajny 2015-11-01]
