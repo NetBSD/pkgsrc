@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.60 2015/10/10 01:57:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2015/11/01 09:13:16 adam Exp $
 
-DISTNAME=		kid3-3.1
-PKGREVISION=		8
-CATEGORIES=		kde audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
+DISTNAME=	kid3-3.3.0
+CATEGORIES=	kde audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kid3/}
 
-MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://kid3.sourceforge.net/
-COMMENT=		ID3 tagger for QT
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	wiz@NetBSD.org
+HOMEPAGE=	http://kid3.sourceforge.net/
+COMMENT=	ID3 tagger for QT
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
@@ -25,6 +24,14 @@ CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
 # -DCMAKE_SKIP_RPATH:BOOL=TRUE, so re-add it manually
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
 
+SUBST_CLASSES+=		apple
+SUBST_MESSAGE.apple=	Avoiding Mac OS X application bundles
+SUBST_STAGE.apple=	pre-configure
+SUBST_FILES.apple+=	src/app/cli/CMakeLists.txt
+SUBST_FILES.apple+=	src/app/qt/CMakeLists.txt
+SUBST_FILES.apple+=	src/plugins/kid3qml/CMakeLists.txt
+SUBST_SED.apple=	-e 's,APPLE,ELPPA,g'
+
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
@@ -32,7 +39,6 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
