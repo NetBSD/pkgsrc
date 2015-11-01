@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2012/01/14 02:09:36 hans Exp $
+# $NetBSD: options.mk,v 1.6 2015/11/01 13:25:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zphoto
-PKG_SUPPORTED_OPTIONS=	zip wx
+PKG_SUPPORTED_OPTIONS=	zip
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
 PKG_OPTIONS_GROUP.graphics=	imlib2 imagemagick
 PKG_SUGGESTED_OPTIONS=	imlib2
@@ -36,11 +36,3 @@ CONFIGURE_ARGS+=	--disable-zip
 #.else
 #CONFIGURE_ARGS+=	--disable-avifile
 #.endif
-
-PLIST_VARS+=		wx
-.if !empty(PKG_OPTIONS:Mwx)
-.include "../../x11/wxGTK26/buildlink3.mk"
-PLIST.wx=		yes
-.else
-CONFIGURE_ARGS+=	--disable-wx
-.endif
