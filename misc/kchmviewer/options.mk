@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/01/16 10:46:00 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2015/11/01 09:15:13 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kchmviewer
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
@@ -40,7 +40,6 @@ BUILDLINK_API_DEPENDS.qt4-libs+=        qt4-libs>=4.5.0
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt5)
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .endif
