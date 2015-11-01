@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4441 2015/11/01 13:39:06 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4442 2015/11/01 17:37:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7613,3 +7613,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/py-sympy to 0.7.6.1 [wiz 2015-11-01]
 	Updated math/py-networkx to 1.10 [wiz 2015-11-01]
 	Added devel/ivykis version 0.39 [fhajny 2015-11-01]
+	Updated print/cups-filters to 1.1.0 [leot 2015-11-01]
