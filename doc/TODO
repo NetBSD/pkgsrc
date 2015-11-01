@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15037 2015/10/31 13:26:29 taca Exp $
+$NetBSD: TODO,v 1.15038 2015/11/01 09:26:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cacti-spine-0.8.8f
 	o cal3d-0.11.0
 	o calcoo-2.1.0
-	o calibre-2.41.0
+	o calibre-2.42.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -1021,6 +1021,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lgeneral-1.2.3
 	o libassuan-2.2.1
 	o libasyncns-0.8
+	o libbluray-0.9.0
 	o libbpg-0.9.5
 	o libburn-1.4.0
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
@@ -1133,6 +1134,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-8.4.0
 	o moc-2.5.0
+	o modular-xorg-server-1.17.4
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.4
 	o monit-5.14
@@ -1179,6 +1181,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o nikto-2.1.5
+	o nodejs-5.0.0
 	o nqp-2015.07.2
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1412,7 +1415,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-1.1.0
 	o pcc-current-20150801
 	o pcc-libs-1.1.0
-	o pciutils-3.3.1
+	o pciutils-3.4.0
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pcre2-10.20
 	o pdmenu-1.2.87
@@ -1478,6 +1481,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.8.5
 	o pstree-2.39
+	o pulseaudio-7.1
 	o pure-ftpd-1.0.40
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1810,7 +1814,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-devel-1.7.53
+	o wine-devel-1.7.54
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
