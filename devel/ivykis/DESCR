@@ -1,0 +1,4 @@
+ivykis is a thin wrapper over various OS'es implementation of I/O
+readiness notification facilities (such as poll(2), kqueue(2))
+and is mainly intended for writing portable high-performance
+network servers.
