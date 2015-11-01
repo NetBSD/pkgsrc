@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4438 2015/11/01 09:16:22 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4439 2015/11/01 09:54:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7610,3 +7610,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-enum to 1.110 [wiz 2015-11-01]
 	Updated mail/p5-Email-Valid to 1.198 [wiz 2015-11-01]
 	Updated audio/kid3 to 3.3.0 [adam 2015-11-01]
+	Updated math/py-sympy to 0.7.6.1 [wiz 2015-11-01]
