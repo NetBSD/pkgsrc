@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2014/04/30 12:43:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/11/01 09:13:16 adam Exp $
 bin/kid3-cli
 bin/kid3-qt
 lib/kid3/libkid3-core.so
-lib/kid3/libkid3-core.so.${PKGVERSION}.0
+lib/kid3/libkid3-core.so.3.3.0
 lib/kid3/libkid3-gui.so
-lib/kid3/libkid3-gui.so.${PKGVERSION}.0
+lib/kid3/libkid3-gui.so.3.3.0
+lib/kid3/plugins/imports/Kid3/Kid3Script.qml
+lib/kid3/plugins/imports/Kid3/libkid3qml.so
+lib/kid3/plugins/imports/Kid3/qmldir
 lib/kid3/plugins/libacoustidimport.so
 lib/kid3/plugins/libamazonimport.so
 lib/kid3/plugins/libdiscogsimport.so
@@ -12,13 +15,15 @@ lib/kid3/plugins/libfreedbimport.so
 lib/kid3/plugins/libid3libmetadata.so
 lib/kid3/plugins/libmusicbrainzimport.so
 lib/kid3/plugins/liboggflacmetadata.so
+lib/kid3/plugins/libqmlcommand.so
 lib/kid3/plugins/libtaglibmetadata.so
-man/de/man1/kid3-cli.1.gz
-man/de/man1/kid3-qt.1.gz
-man/de/man1/kid3.1.gz
-man/man1/kid3-cli.1.gz
-man/man1/kid3-qt.1.gz
-man/man1/kid3.1.gz
+man/de/man1/kid3-cli.1
+man/de/man1/kid3-qt.1
+man/de/man1/kid3.1
+man/man1/kid3-cli.1
+man/man1/kid3-qt.1
+man/man1/kid3.1
+share/appdata/kid3-qt.appdata.xml
 share/applications/kid3-qt.desktop
 share/doc/kid3-qt/kid3_de.html
 share/doc/kid3-qt/kid3_en.html
@@ -28,6 +33,16 @@ share/icons/hicolor/32x32/apps/kid3-qt.png
 share/icons/hicolor/48x48/apps/kid3-qt.png
 share/icons/hicolor/64x64/apps/kid3-qt.png
 share/icons/hicolor/scalable/apps/kid3-qt.svg
+share/kid3/qml/script/EmbedAlbumArt.qml
+share/kid3/qml/script/EmbedLyrics.qml
+share/kid3/qml/script/ExportCsv.qml
+share/kid3/qml/script/ExportHtmlPlayer.qml
+share/kid3/qml/script/ExtractAlbumArt.qml
+share/kid3/qml/script/ImportCsv.qml
+share/kid3/qml/script/QmlConsole.qml
+share/kid3/qml/script/ReplayGain2SoundCheck.qml
+share/kid3/qml/script/ResizeAlbumArt.qml
+share/kid3/qml/script/ShowTextEncodingV1.qml
 share/kid3/translations/kid3_cs.qm
 share/kid3/translations/kid3_de.qm
 share/kid3/translations/kid3_es.qm
@@ -43,4 +58,5 @@ share/kid3/translations/kid3_sr@ijekavian.qm
 share/kid3/translations/kid3_sr@ijekavianlatin.qm
 share/kid3/translations/kid3_sr@latin.qm
 share/kid3/translations/kid3_tr.qm
+share/kid3/translations/kid3_zh_CN.qm
 share/kid3/translations/kid3_zh_TW.qm
