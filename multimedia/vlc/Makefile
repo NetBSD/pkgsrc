@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2015/10/25 11:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2015/11/01 19:39:43 tnn Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 CATEGORIES=		multimedia
@@ -150,7 +150,6 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../audio/libcddb/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
