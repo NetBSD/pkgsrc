@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2014/01/21 08:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/11/01 09:54:11 wiz Exp $
 
-DISTNAME=	sympy-0.7.4.1
+DISTNAME=	sympy-0.7.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://github.com/sympy/sympy/releases/download/${DISTNAME}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=sympy/}
+GITHUB_PROJECT=	sympy
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/sympy/
+HOMEPAGE=	http://www.sympy.org/
 COMMENT=	Python library for symbolic mathematics
 LICENSE=	modified-bsd
 
