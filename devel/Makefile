@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2155 2015/10/28 19:01:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2156 2015/11/01 13:40:12 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -367,6 +367,7 @@ SUBDIR+=	intel2gas
 SUBDIR+=	intellij-idea-ce
 SUBDIR+=	isect
 SUBDIR+=	its4
+SUBDIR+=	ivykis
 SUBDIR+=	jam
 SUBDIR+=	java-subversion
 SUBDIR+=	javacc
