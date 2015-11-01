@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4443 2015/11/01 18:09:10 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4444 2015/11/01 22:59:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7615,3 +7615,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/ivykis version 0.39 [fhajny 2015-11-01]
 	Updated print/cups-filters to 1.1.0 [leot 2015-11-01]
 	Updated multimedia/mpv to 0.12.0 [leot 2015-11-01]
+	Updated x11/modular-xorg-server to 1.17.4 [tnn 2015-11-01]
+	Updated x11/modular-xorg-xephyr to 1.17.4 [tnn 2015-11-01]
