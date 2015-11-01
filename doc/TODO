@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15038 2015/11/01 09:26:49 wiz Exp $
+$NetBSD: TODO,v 1.15039 2015/11/01 10:35:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -509,6 +509,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cacti-0.8.8f
 	o cacti-spine-0.8.8f
+	o cairo-1.14.4
+	o cairo-gobject-1.14.4
 	o cal3d-0.11.0
 	o calcoo-2.1.0
 	o calibre-2.42.0
@@ -544,6 +546,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cmake-fedora-2.3.4
 	o cmocka-1.0.1
 	o cmus-2.7.1
+	o colordiff-1.0.16
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -568,6 +571,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.6
 	o cue-20150720
+	o cups-filters-1.1.0
 	o cvm-0.97
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsgraph-1.7.0
@@ -586,6 +590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dateutils-0.3.3
 	o davical-1.1.2
+	o dbus-1.10.2
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.20
@@ -856,12 +861,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gromacs-5.0.6
 	o groonga-5.0.6
 	o gsharutils-4.15.2
+	o gsl-2.0
 	o gss-1.0.3
 	o gst-plugins0.10-fluendo-mp3-0.10.32
-	o gst-plugins1-base-1.6.0
-	o gst-plugins1-good-1.6.0
-	o gst-plugins1-ugly-1.6.0
-	o gstreamer1-1.6.0
+	o gst-plugins1-base-1.6.1
+	o gst-plugins1-good-1.6.1
+	o gst-plugins1-ugly-1.6.1
+	o gstreamer1-1.6.1
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -1053,6 +1059,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmusicbrainz5-5.1.0
 	o libntfs-2015.3.14
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.5705beta15
 	o libowfat-0.29
 	o libpgm-5.2.122
 	o libplist-1.12
@@ -1156,6 +1163,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
+	o musicpd-0.19.11
 	o mutagen-tools-1.29
 	o mxml-2.9
 	o myodbc-5.3.4
@@ -1196,6 +1204,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o obby-0.4.8
 	o objc-3.2.13
 	o ocaml-cmdliner-0.9.7
+	o ocaml-findlib-1.5.6
 	o ocaml-graphics-4.02.3
 	o ocaml-mysql-1.2.0
 	o ocaml-oasis-0.4.5
@@ -1494,6 +1503,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
+	o py-cryptography-1.1
 	o py-cups-1.9.73
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
@@ -1512,6 +1522,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-jaraco_util-11.0
 	o py-junos-eznc-1.2.2
 	o py-libmc-1.5.0
+	o py-markdown-2.6.3
 	o py-matplotlib-1.4.3
 	o py-metar-0.20
 	o py-mezzanine-4.0.1
@@ -1547,6 +1558,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-uliweb-0.4.1
 	o py-unittest2-1.1.0
 	o py-uwsgi-2.0.11.1
+	o py-vdirsyncer-0.7.0
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1824,7 +1836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151024
+	o x264-devel-20151031
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
