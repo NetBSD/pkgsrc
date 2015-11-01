@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/07/29 12:21:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2015/11/01 14:24:45 tnn Exp $
 
 DISTNAME=		rcs-5.9.4
 CATEGORIES=		devel scm
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.cs.purdue.edu/homes/trinkle/RCS/
 COMMENT=		GNU Revision Control System - version control software
 LICENSE=		gnu-gpl-v3
 
+GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gsoelim
 
 .include "../../mk/bsd.prefs.mk"
@@ -17,11 +18,8 @@ USE_TOOLS+=		gmake gsoelim
 DEPENDS+=		diffutils>=2.7:../../devel/diffutils
 CONFIGURE_ARGS+=	--with-diffutils
 # the native diff/diff3 is not sufficient for rcs
-TOOLS_PLATFORM.diff=	${LOCALBASE}/bin/gdiff
+TOOLS_PLATFORM.diff=	${PREFIX}/bin/gdiff
 .endif
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PATH=${LOCALBASE}/bin:"$$PATH"
 
 REPLACE_SH=		build-aux/extract-help
 
