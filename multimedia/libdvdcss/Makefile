@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/01/31 21:52:15 adam Exp $
+# $NetBSD: Makefile,v 1.32 2015/11/01 00:32:48 rodent Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE=	src/libdvdcss.pc.in
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-doc
+CONFIGURE_ARGS+=	--disable-doc --libdir=${PREFIX}/lib
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=
 
 .include "../../mk/bsd.prefs.mk"
