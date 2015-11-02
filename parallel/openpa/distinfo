@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/03/17 14:43:48 asau Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:46:13 agc Exp $
 
 SHA1 (openpa-1.0.4.tar.gz) = 0c714376245a7bf0d5c885d129fb301e5431a3af
 RMD160 (openpa-1.0.4.tar.gz) = f0a34b769be9d91db3ebb18ebbb828757748f142
+SHA512 (openpa-1.0.4.tar.gz) = 3c969c8dcc6eb2cab9312af72b111f235d10c298c2e1ec8a5a2f2cbdd284393d511321f38cda81576b2a4bc8c8ea2af93ed97b6cfc859a8c77a5a8e8f3a7dec2
 Size (openpa-1.0.4.tar.gz) = 378763 bytes
 SHA1 (patch-src_opa__primitives.c) = 7a33197519270ef4ba2a922376b50ccc1a5eedfd

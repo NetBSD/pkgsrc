@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2014/01/17 02:33:20 asau Exp $
+$NetBSD: distinfo,v 1.11 2015/11/02 23:46:12 agc Exp $
 
 SHA1 (DQS-3.3.2.tgz) = fbb165cc058dcbda8bcfa6dbead78e2f1a4f031e
 RMD160 (DQS-3.3.2.tgz) = eb32ef1cd8243b508fbee91710982637de185b7a
+SHA512 (DQS-3.3.2.tgz) = 92ce8a6160a7b1d07477b3e71d35296f32acbe25254c244a4562b86712f148addfcc827088b522979cdbc03dba6eb7e5436819d3a6975e6dc4136d1804a3175a
 Size (DQS-3.3.2.tgz) = 1498996 bytes
 SHA1 (patch-SRC_dqs__parse.c) = d25940416e918238a034ac7a663d1ce1fed743fb
 SHA1 (patch-SRC_dqs__parse__qconf.c) = 7446f326d433a70c81ee9521e9f69cbb89451f78
