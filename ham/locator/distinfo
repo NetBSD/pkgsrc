@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/05/04 16:19:37 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:57:24 agc Exp $
 
 SHA1 (locator-0.1.tar.gz) = a7c6efe6b10df583b473e673f9332c1ddfd424ea
 RMD160 (locator-0.1.tar.gz) = 5d50e54318d88437fbfd76c51fa5b5052cf732d7
+SHA512 (locator-0.1.tar.gz) = 5031477b7e4fe6f861208ef71f1757ecded08552065779fb0e73d2b1e6f31d007ede06f86f5fecd13764cb561e3674bbe47c2d829ed18a10bcd792ac16594db8
 Size (locator-0.1.tar.gz) = 2555 bytes
 SHA1 (patch-aa) = 810c0ec364beeb0d399907fbfdf8f887b091bf6c
 SHA1 (patch-locator.cc) = 10101d147bb3ec6e1adabb6c3a9ad2e27d138a66

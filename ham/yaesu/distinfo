@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2012/11/19 23:15:10 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/02 23:57:25 agc Exp $
 
 SHA1 (yaesu-0.13.tar.gz) = 188cd4f472bc191c0467f09cfd5d7df79a7b280b
 RMD160 (yaesu-0.13.tar.gz) = 779c982112255c72f4fb1d95d8921714aa266bb8
+SHA512 (yaesu-0.13.tar.gz) = 77b3bcfb1b53d23ead9f6893d8765870c3fd3df38a80f561c545b62b560a46f24aed75f96e6fa9f49b132fbbb950ad411084ef094ea07abec200e1050c7d7066
 Size (yaesu-0.13.tar.gz) = 26388 bytes
 SHA1 (patch-aa) = 3b0181d8989dd6f69eb4e9f486a552d17f301908
 SHA1 (patch-ab) = d51cb63253878428c9b751d64a138c7a0e54cbba
