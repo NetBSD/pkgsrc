@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/04/21 18:14:53 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/02 23:31:37 agc Exp $
 
 SHA1 (libgcal-0.9.6.tar.bz2) = d616b911a99b1846851371184dcd547dccf548de
 RMD160 (libgcal-0.9.6.tar.bz2) = 1ee61c22190d929178d9c75ced8a984536e2c1e2
+SHA512 (libgcal-0.9.6.tar.bz2) = be2e0592a19531fa202017e529dad765a1bd6f9205ffdaba33bfd32231ad5eafb0237081fda8c5bbbe605e07204fc7895e2168b72718dde6cc660c97c08bbf26
 Size (libgcal-0.9.6.tar.bz2) = 555942 bytes
 SHA1 (patch-CMakeLists.txt) = 3a40b248d5b36d13701186af276a6c0b8712ea7f

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/16 12:07:22 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:31:36 agc Exp $
 
 SHA1 (fet-5.25.0.tar.bz2) = 8429c8a04af531deb587aaee634de4f88f7e9a1e
 RMD160 (fet-5.25.0.tar.bz2) = 8eb3db4734813138d848860d4a5ef9d7c9281929
+SHA512 (fet-5.25.0.tar.bz2) = 67e78852cb93822b59e859a6b02ace090b725c4ca4c1022f4445f17170e49e672e8db63379e041a9ecd37a25a2475909e75ca38144c64e0c4c2e3185b8ef184c
 Size (fet-5.25.0.tar.bz2) = 8741472 bytes
