@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/10/14 17:12:52 leot Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 18:42:20 agc Exp $
 
 SHA1 (bwa-0.7.9a.tar.bz2) = a77ce327e8acba554b1d27bfdd1c148f79726484
 RMD160 (bwa-0.7.9a.tar.bz2) = a51b7c686a206144eab2aee0a372d5ae46fcfce1
+SHA512 (bwa-0.7.9a.tar.bz2) = 93804b2c0ac0f675e76f762441e1eec039d7f1cf77b033fd88f2e6c39d9cd4b5c21bba9fb44e34a3dab28c630c3855792a707e5b33109d4be0097cec97eaa686
 Size (bwa-0.7.9a.tar.bz2) = 166193 bytes
