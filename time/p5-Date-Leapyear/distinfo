@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/18 01:27:43 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:38 agc Exp $
 
 SHA1 (Date-Leapyear-1.72.tar.gz) = 838a492f0408d021e40db3fffb802a66769dc79c
 RMD160 (Date-Leapyear-1.72.tar.gz) = a92914266c1cdef7ba837eb0328987f8920ec1f8
+SHA512 (Date-Leapyear-1.72.tar.gz) = 160d4da05ec96ed2f8a8a4604b86b4728d00465432b35869ad18202c6ec771ace6be1998eddd23a82492b153a1955bda72f0986e15c2bad02fd2f03ea2a6a9db
 Size (Date-Leapyear-1.72.tar.gz) = 11153 bytes
