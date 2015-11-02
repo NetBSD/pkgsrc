@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2013/12/17 06:45:40 asau Exp $
+$NetBSD: distinfo,v 1.16 2015/11/02 23:46:12 agc Exp $
 
 SHA1 (clusterit-2.5.tar.gz) = 65d36116665179dd16029ac53182fde92d868020
 RMD160 (clusterit-2.5.tar.gz) = b08f7903bc90375e45a733ef843df3e9bf216bb7
+SHA512 (clusterit-2.5.tar.gz) = 7efb0aa55c9581151ec73405d4e69df2d4258ee4c6b254a29bab95a7b90c4d645387db0d7c884eda6d7a861ce25bea27136df4af1990e5401a1b2a3d035999fc
 Size (clusterit-2.5.tar.gz) = 295347 bytes
 SHA1 (patch-aa) = 15b4db813a8cb91b2c2ac277297fe4394637e804
 SHA1 (patch-ab) = 32a8efdbf45226a7ec1a7a190ff7fae9e2bfe2ae
