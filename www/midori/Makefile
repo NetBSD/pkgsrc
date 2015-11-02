@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2015/10/25 13:50:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.86 2015/11/02 05:29:46 dholland Exp $
 
 DISTNAME=	midori_0.5.11_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://midori-browser.org/downloads/
 
@@ -53,6 +54,7 @@ CONFIGURE_ENV=	VALAC=${VALAC}
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
