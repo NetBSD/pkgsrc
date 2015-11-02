@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4449 2015/11/02 15:25:35 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4450 2015/11/02 15:43:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7622,3 +7622,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/pulseaudio to 7.1 [ryoon 2015-11-02]
 	Updated shells/zsh to 5.1.1 [ryoon 2015-11-02]
 	Updated devel/nspr to 4.10.10 [ryoon 2015-11-02]
+	Updated www/php-owncloud to 8.2.0 [ryoon 2015-11-02]
