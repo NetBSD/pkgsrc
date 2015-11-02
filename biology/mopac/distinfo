@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/09 17:52:57 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 18:42:21 agc Exp $
 
 SHA1 (mopac7-linux.diff.gz) = 50ce608ab611d5bd533ffa6a08a41a37ffb58b65
 RMD160 (mopac7-linux.diff.gz) = 8a62d6536491c99493178cc544482dac9a3a6600
+SHA512 (mopac7-linux.diff.gz) = 5724e65919d2e08c567c65e36f5deb4f060ba9eea6585cc400dd59e5c28bd4892e80613214bba7d3b2c43442525e22d4332e59ed9e1db43f3a767b98c133503f
 Size (mopac7-linux.diff.gz) = 72591 bytes
 SHA1 (mopac7-man.tar.gz) = 38a3c0d7096e1374746952ded2691e867247ff05
 RMD160 (mopac7-man.tar.gz) = 3986b3806e7b316314c5905b0e08c6da23b03ec8
+SHA512 (mopac7-man.tar.gz) = 66202e4489868991eb036f198491ea27dadcb63a7017eda285c8724cac6b1d5055cdf0dc4d053330f16b5f95421c42689ad6aa5f73c6873e8127980a901f192c
 Size (mopac7-man.tar.gz) = 356464 bytes
 SHA1 (mopac7.tar.Z) = 6d84877e515b95544941bb671cf18ec79e7498ef
 RMD160 (mopac7.tar.Z) = 9eabb1f0d81d4fdb7a633ca2367a984a69f84c4f
+SHA512 (mopac7.tar.Z) = c29299f644d2dfe748fecbe3e78722e4b180079968b782c90e365117596fbe7bc4201f393e22394303a18977d8962cf2795b6f225b7589cc6155b649be818ca9
 Size (mopac7.tar.Z) = 606379 bytes
 SHA1 (patch-aa) = 9ba7b36845f2065b3a75f6b4044ba0a3c723afcd
 SHA1 (patch-ab) = 1759bb6c2a104f195596a76b139dffc5012a36f5
