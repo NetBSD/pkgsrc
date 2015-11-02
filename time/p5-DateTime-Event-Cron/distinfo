@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/12 12:43:32 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:39 agc Exp $
 
 SHA1 (DateTime-Event-Cron-0.08.tar.gz) = 65b49bdbcb81f829455bf3a2da4c5d95cdab0d5d
 RMD160 (DateTime-Event-Cron-0.08.tar.gz) = 4605519b9da365d76780e43dd02e5d9ea05431a8
+SHA512 (DateTime-Event-Cron-0.08.tar.gz) = 6ba7ce58e9754ce34a269c2de5a8c05afa0c8e79feaa554635a862c36b8e66c9c8ab6aca8721e4cfa32949ba63407738c17ecf32afd0c499dabff02e4c6e4187
 Size (DateTime-Event-Cron-0.08.tar.gz) = 10687 bytes

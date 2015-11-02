@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 19:14:56 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (xtimer-8089.tar.gz) = 87aa5cbd5b33720af2134ac048bf3c388d6a3ebc
 RMD160 (xtimer-8089.tar.gz) = 53cfa04aacbe912790c485a474574fa0c12a5127
+SHA512 (xtimer-8089.tar.gz) = ac699431f601c286e06a356a0df69be9dfc1cb621073399ac175433bcc2dd06c93832686b78b7020cd8411ded5a61cbe2d59b4d575d6571defb5611ca264fa7a
 Size (xtimer-8089.tar.gz) = 6526 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/10/02 02:36:54 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:31:42 agc Exp $
 
 SHA1 (Time-Local-1.2300.tar.gz) = 1632bff3578cfdc8a23d3abed5ad205ef279fa23
 RMD160 (Time-Local-1.2300.tar.gz) = e812a09820f530ebed183f2b173684d80568c4b2
+SHA512 (Time-Local-1.2300.tar.gz) = 812a4e1d8820becfc4c19a3a862e5234744b4124b99fd33c856e331e0f2f6131b98ae9e8cfde637c9db5b2de036f643424f4d2d15bdb47fa57dffd8f3bdeeb41
 Size (Time-Local-1.2300.tar.gz) = 19818 bytes
