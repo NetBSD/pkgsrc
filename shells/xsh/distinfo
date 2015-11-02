@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:14:41 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/02 23:00:35 agc Exp $
 
 SHA1 (XML-XSH-1.8.2.tar.gz) = bea1485cd27f6920a514f59193dce51b460b2d42
 RMD160 (XML-XSH-1.8.2.tar.gz) = b0b0562d0f5fff3621047919c58ab5c36e7855cb
+SHA512 (XML-XSH-1.8.2.tar.gz) = 6da2883a369890753a4468547fa2ed8b94a8fa581f5aea1ce2d36747a5c53ad0dfd1afcc4efee750ad02df579f0bcf5d55369421a457583f3c489d9e3a509516
 Size (XML-XSH-1.8.2.tar.gz) = 243860 bytes
