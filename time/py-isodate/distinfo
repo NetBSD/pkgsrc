@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/19 21:27:58 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:44 agc Exp $
 
 SHA1 (isodate-0.5.1.tar.gz) = b4ee406451fbc95cf12beac368a7155704c52635
 RMD160 (isodate-0.5.1.tar.gz) = b8d10643027b172f6841d255ab086085bdc70b42
+SHA512 (isodate-0.5.1.tar.gz) = 8bc1006a1d3aa03fc69885415f2acc18efde870d1c8e5ac9741672b2818983fabb781d853766105298fc55d187add20f4e3a4bf33966fc5b9d5f5ca08dc77748
 Size (isodate-0.5.1.tar.gz) = 26859 bytes

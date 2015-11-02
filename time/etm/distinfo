@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.21 2011/09/17 13:35:17 ryoon Exp $
+$NetBSD: distinfo,v 1.22 2015/11/02 23:31:36 agc Exp $
 
 SHA1 (etm-877.tar.gz) = 0963fcd2098133d44cce4a8dd96d5dc486728744
 RMD160 (etm-877.tar.gz) = 6b0944d930c3abc41aa84240472264ce45d02988
+SHA512 (etm-877.tar.gz) = 4ab7e3a43b153629a16c5d47c16019a9ea4edbe5851b59210880042d27c1b2391c0a8e55b649b27644686864628aa7b2fc34765584968fab9135ae7bc469e7aa
 Size (etm-877.tar.gz) = 192878 bytes

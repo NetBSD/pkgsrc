@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/11/01 19:27:36 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/02 23:31:46 agc Exp $
 
 SHA1 (xcal41.tar.Z) = dc2562b9c9fccdee230b3a0b0643d878eae0d014
 RMD160 (xcal41.tar.Z) = 41189d892b98cd4ec3e00f64e48c200169bbfb3e
+SHA512 (xcal41.tar.Z) = 1e03182a468a7a932bb3fbd93389677cfefc46fcd5ee4779fd8d6566afb515758c03d65cf56208ab1580d37b2e1a466a20c83375b2c8f967702693a0c05e5d8c
 Size (xcal41.tar.Z) = 172377 bytes
 SHA1 (patch-aa) = fb7ce902996ebbc01307f46ef2006d1fe23026f2
 SHA1 (patch-ab) = 847c05195281b468d8b913b26f18637964ffd43e

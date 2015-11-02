@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/29 09:37:40 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:38 agc Exp $
 
 SHA1 (calendar-2.04.tar.gz) = 20193984bd685170d546102dd57eb1fce34058d9
 RMD160 (calendar-2.04.tar.gz) = ac002410334f008300c74d7ec3ef4a4cff909e6f
+SHA512 (calendar-2.04.tar.gz) = 3941768428eda47f47912846cc2921ee82c722bda7cf6095c1c8bdcfebc19bb8f64ebb1a25475396d2a49c186b83421af63602a54a261684117b1c036a66cf3d
 Size (calendar-2.04.tar.gz) = 271522 bytes

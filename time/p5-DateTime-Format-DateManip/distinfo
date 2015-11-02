@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/14 00:02:12 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:39 agc Exp $
 
 SHA1 (DateTime-Format-DateManip-0.04.tar.gz) = e3e4e671e36b855194aa87c145c54bae0b203d6a
 RMD160 (DateTime-Format-DateManip-0.04.tar.gz) = 97f3b1bfb4a256ff890a99fe5db41f81cdc96092
+SHA512 (DateTime-Format-DateManip-0.04.tar.gz) = 2389147282b69af2ee7d0ab9bbccadcf7dec51e8e95e833bfbb5a183969c189312c8eba57e4ad7d0c5cf74a027df350bc72c5381f13279a09bec08754d0b39c6
 Size (DateTime-Format-DateManip-0.04.tar.gz) = 14460 bytes

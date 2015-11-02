@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/12/20 22:12:59 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (polclock-1.11.tar.gz) = a2cbe123655fcf9608996a7ccbd5f6af3e74f9ea
 RMD160 (polclock-1.11.tar.gz) = b04c33a4871a16ea6ea92ccc8331c10e47a110b5
+SHA512 (polclock-1.11.tar.gz) = 8c73cd128eb307497ea230e95a66a5476817eb7bae28bce73ab4883b0a8f28f065d08155cb3dbde3cb41256fb0c4f829e2435d7f14fb34b927a78a898dceb026
 Size (polclock-1.11.tar.gz) = 49716 bytes
 SHA1 (patch-polsys.c) = 5fb58143cd2db0045ebda26b424d41bc83f84b2b

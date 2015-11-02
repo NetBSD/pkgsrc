@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/06/12 02:14:53 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (pclock_0.13.1.orig.tar.gz) = 35c88a5faed28231703ddc1073af98a18e947e0f
 RMD160 (pclock_0.13.1.orig.tar.gz) = 110bc42c255712cda0ef299ae8cec3180969b909
+SHA512 (pclock_0.13.1.orig.tar.gz) = dca1731e687945d8ba7612ad5284e023ffad32c9968e138964e476568382e07beacccf2f571944a5e793784ccc4df297389927b079250d998a63f4c365a3a182
 Size (pclock_0.13.1.orig.tar.gz) = 53043 bytes
 SHA1 (patch-aa) = 7f41fcb6e4bae008553c242b6fd18241203cfeaf

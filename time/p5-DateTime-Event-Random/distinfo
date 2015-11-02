@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/17 14:59:52 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:39 agc Exp $
 
 SHA1 (DateTime-Event-Random-0.03.tar.gz) = af5074e577ba053313abb2124bd0756915c263bd
 RMD160 (DateTime-Event-Random-0.03.tar.gz) = 360c45dbeb422ce74db254be4fc86efdedef8216
+SHA512 (DateTime-Event-Random-0.03.tar.gz) = 51c4925ff8fccaa8cd0af3c358d148c5a41a648084f22ec46b76da0451c7557272f5baf7454b518ea97ecb42e6b2a5b03e8095c9242d30b46052d616dffd8d3f
 Size (DateTime-Event-Random-0.03.tar.gz) = 14374 bytes

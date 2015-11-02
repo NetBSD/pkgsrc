@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2012/02/23 12:05:50 obache Exp $
+$NetBSD: distinfo,v 1.11 2015/11/02 23:31:37 agc Exp $
 
 SHA1 (kronolith-h3-2.3.6.tar.gz) = c717b61d95e218b9f17cf6cc3c1183b293af4696
 RMD160 (kronolith-h3-2.3.6.tar.gz) = 4509760fcc17c5f7f2a6f296357344bd4572a342
+SHA512 (kronolith-h3-2.3.6.tar.gz) = 35066bc0a49eb5268dead85362ef99e9c73bc93c0783c30ce5e6477f7a8d6a850f15607b2bdf623630eab38392631146da1f80b7259ac0a1a5f4190c8d273000
 Size (kronolith-h3-2.3.6.tar.gz) = 2781918 bytes

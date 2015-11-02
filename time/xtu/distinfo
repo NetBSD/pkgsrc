@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/06/15 14:05:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (xtu-1.3.tar.gz) = f7765d9e7afe7a140ce1e6bb50a2e635d29dcfe9
 RMD160 (xtu-1.3.tar.gz) = a810535acfed006caf7ad138a9612468027bc837
+SHA512 (xtu-1.3.tar.gz) = 1a3544ecf9780c1bcda24b9a3efe51e630d7e110771a113b1249d40bb72a46247168a295e0ce4a31e8109a1e3553444e7ff12c360fa0725100af454d936d32f0
 Size (xtu-1.3.tar.gz) = 21980 bytes

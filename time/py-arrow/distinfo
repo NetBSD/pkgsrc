@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/14 14:12:57 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (arrow-0.4.2.tar.gz) = 0a032a1a093ddf88fbf46b2d98c2183f7a67b213
 RMD160 (arrow-0.4.2.tar.gz) = 21d077db1401f4d58fa0fc178436948a73d4ecd5
+SHA512 (arrow-0.4.2.tar.gz) = 79b5cb74d7f6e81ec6d3de035e21a33c5600fa5d95d99e5e09cf4c34dd33b1cd989c3e91e023d759de26f8634f8e5b9178534d8dff4e534b70620a4b494f97d7
 Size (arrow-0.4.2.tar.gz) = 19731 bytes

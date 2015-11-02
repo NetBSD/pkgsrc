@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2012/07/03 17:29:19 joerg Exp $
+$NetBSD: distinfo,v 1.13 2015/11/02 23:31:35 agc Exp $
 
 SHA1 (catclock.zip) = 0e977f080968067c4232072aa88d919e3f5daf84
 RMD160 (catclock.zip) = 6caf81ec08f5c237902aaf9999e642300e4517c2
+SHA512 (catclock.zip) = e0c7bc109b56cf89318b853f0681ff3348db063da7c1de411f89573b908093de83891f42cc395bb6dd255bbdd1bcb91ac4beb910621eb2ef9fdc5a20f164db6a
 Size (catclock.zip) = 180008 bytes
 SHA1 (patch-aa) = 74594a6a41e6eae4f70d85cf74e32ba49af0546a
 SHA1 (patch-ab) = 43e732c0068cbf814dc73942e2a10a20fb1f2f24

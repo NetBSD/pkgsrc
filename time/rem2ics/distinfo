@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/07 01:29:21 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:44 agc Exp $
 
 SHA1 (rem2ics-0.93.zip) = be93d75f62ff81d9f0b15928ad5b71b6aa17afe9
 RMD160 (rem2ics-0.93.zip) = 2e9694e5c1f1d3d6fee6c266cab1f757339b1803
+SHA512 (rem2ics-0.93.zip) = d4770f93e5db51f872a330ce38b603d3f9b2d4aaac5c667864468b6309b536e480eab2081330fdbebb0f0ef9e6dd4f050e99dfe2b5d8cb56294b1672d4b52d8a
 Size (rem2ics-0.93.zip) = 13707 bytes

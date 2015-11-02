@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/02/17 15:58:06 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/02 23:31:46 agc Exp $
 
 SHA1 (wxRemind-0.6.18.tar.gz) = 243188e1f6a32673e8105038231dfcfaea139199
 RMD160 (wxRemind-0.6.18.tar.gz) = dbd05208766981388041d56204d3772d3050542e
+SHA512 (wxRemind-0.6.18.tar.gz) = 4266a0960646dc844410d419ec9cf049a48aae1d77880eae1d8f7ae786466d66997a06b5b984926a9ceb2a945dda5e326f161b91110890505a230b60eda33b0c
 Size (wxRemind-0.6.18.tar.gz) = 112867 bytes
 SHA1 (patch-aa) = 3ba7714be3399c68f0de20ab0504202110ce89bf

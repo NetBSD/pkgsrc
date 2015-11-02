@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/06/29 15:03:01 youri Exp $
+$NetBSD: distinfo,v 1.9 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (orage-4.12.1.tar.bz2) = c856ad30f7a17a732d5cc794ef90aedf98575699
 RMD160 (orage-4.12.1.tar.bz2) = a3d40692e851c96ee409eed03ac3a2f66bbc8f11
+SHA512 (orage-4.12.1.tar.bz2) = 3fec0201171140586cdc9bcf151450a7086515e18b5815afe4fe4c4726ba554c50582b0479e52985b330140c51b7233ef81f678f986f848afbeee74c66b2d196
 Size (orage-4.12.1.tar.bz2) = 2590788 bytes
