@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/12/03 14:10:09 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:45 agc Exp $
 
 SHA1 (tdl-1.5.2.tar.gz) = 273c15eafa0a856532865ac4ccfee6685f88e1ad
 RMD160 (tdl-1.5.2.tar.gz) = 5bf21e214faa208c85e72b67b2f0d21bd279a4fe
+SHA512 (tdl-1.5.2.tar.gz) = 8c07a5b6a5434bb567a2d68b6e0215bbfa7be3f7176ae1042652ac18684289117230af25d8d161fcf1ba27d9b740fd3fcd43c3213467b533de64390686481fe0
 Size (tdl-1.5.2.tar.gz) = 66057 bytes
 SHA1 (patch-aa) = fe952643aba9af71eb4d20730a7261084850c9ee
 SHA1 (patch-inter.c) = fc355f7e6abc85dbe66ffe4058862579158ac4b8

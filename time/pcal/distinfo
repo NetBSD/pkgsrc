@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2010/04/29 00:17:14 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (pcal-4.7.tar.bz2) = 4604067da16b7674630eb4d8894406b885e85d89
 RMD160 (pcal-4.7.tar.bz2) = d0b5380da2bbf94c5c5824f3355b583abba593bc
+SHA512 (pcal-4.7.tar.bz2) = eb643ea869e808a813aee8a3d3bb7e259370de464a19d5863ddf0d10429247489eec3e978aae771b2d5b54eb3c71cb3b8052da4e8994b131a0f273658808c494
 Size (pcal-4.7.tar.bz2) = 134913 bytes
 SHA1 (patch-aa) = 4defcb72a9cfdfa167e02b15c896be5550d2b219
 SHA1 (patch-ab) = 95205a855ed29f45f68bdb940f88d33133348b97
