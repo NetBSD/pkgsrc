@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2007/10/11 21:26:11 adam Exp $
+$NetBSD: distinfo,v 1.13 2015/11/02 23:42:56 agc Exp $
 
 SHA1 (wmx-6.tar.gz) = 89563c8c2af1d3ffbee06197928123fd03ae9c54
 RMD160 (wmx-6.tar.gz) = 871c0de0ddd30ed90cc8f7eae287fa62177142c4
+SHA512 (wmx-6.tar.gz) = eee03c4ee532d6a7335468da7c0ce6fc91d504917f5dd1047d6eb3c7c90ac9c1db427b3635bc59dc289442a9457e682faa14e2e7dae3901952a73545d417edf5
 Size (wmx-6.tar.gz) = 86515 bytes
 SHA1 (patch-aa) = 991b6cacbcf23569b52233b3fcc394457aa2181e
 SHA1 (patch-ab) = 2f210b6965248be688a640472fb018d62e5197d0

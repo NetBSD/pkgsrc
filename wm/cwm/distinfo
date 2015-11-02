@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/04 04:56:04 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:42:51 agc Exp $
 
 SHA1 (cwm-3.tar.gz) = 04490462ba74de2f388bbb4cb04c0f1d7c2b2921
 RMD160 (cwm-3.tar.gz) = c533065d7d8a5044f03418aea38c295450c54af1
+SHA512 (cwm-3.tar.gz) = fe984d695b16769f92a4b981495bd7bb55200a342e972dce9b320701fed59307021dab9fa8b937347bb7cfb76aa0eb0288deb0b35eadbb7f13595df455471892
 Size (cwm-3.tar.gz) = 137437 bytes

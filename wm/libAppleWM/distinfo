@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/10/01 11:03:07 tnn Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:42:53 agc Exp $
 
 SHA1 (libAppleWM-1.4.1.tar.bz2) = 0db56a17df93683aef16c8e7779cd9527aa0ffc8
 RMD160 (libAppleWM-1.4.1.tar.bz2) = 187f6efc2b1db31c034f1d2d9364b79692a0cf53
+SHA512 (libAppleWM-1.4.1.tar.bz2) = 9f4becf30cbf5e1d24938b0700e998b23c5fc8a2c379fb3bcf32c8ac91caad84130e1e77e78e814d87a73bb80b6f8408ef98d3419936e93f3e7b071a53101063
 Size (libAppleWM-1.4.1.tar.bz2) = 249868 bytes
 SHA1 (patch-src_Makefile.in) = abd2895ea9221e1f946a2f79989cce5932a3c0e8
