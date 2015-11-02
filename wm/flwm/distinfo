@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/02/26 10:59:44 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/02 23:42:52 agc Exp $
 
 SHA1 (flwm-1.02.tgz) = bd348fa8a1c65b2318bf59e15cba0dcd511b3134
 RMD160 (flwm-1.02.tgz) = 634af3b1882f1753fd82d54e09f2484c9aadad68
+SHA512 (flwm-1.02.tgz) = a13c2c3801afc3efa8d42e5a2cbf2628e2b3433b66fd83cea22d503aed0838228466ea159a852459570838624d12696d88b2008ce9e336d68227954e5f3b378e
 Size (flwm-1.02.tgz) = 64142 bytes
 SHA1 (patch-aa) = f71ebceef3d4f39963113fbf32d3efddcf489c8f
 SHA1 (patch-ab) = 22cf873b56d36675c86fac3059490ed717ebed12
