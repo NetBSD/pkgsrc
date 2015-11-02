@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.3 2014/02/16 15:54:09 wiedi Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (harmonics-dwf-20060708.tcd.bz2) = 1f54ed856b064e485f7e386eb4a71965e83abfa4
 RMD160 (harmonics-dwf-20060708.tcd.bz2) = 754255ac5f2e36cf2dce587e7f9f7bd0561226d9
+SHA512 (harmonics-dwf-20060708.tcd.bz2) = 38988e5db30d734c6e937077a473a69eb1ef34ab9c5d493f4818f197734104223bdc0f069bd5a919d15c4d2685effc62aa85a439ae1803d7fa502a1a95d07fe5
 Size (harmonics-dwf-20060708.tcd.bz2) = 477682 bytes
 SHA1 (xtide-2.8.3.tar.bz2) = 0abfdf8a695facfeb239af0018e7b3c392592cb4
 RMD160 (xtide-2.8.3.tar.bz2) = 926d116d6d36b3e4ff5e4630e0df394a4f9a0a8b
+SHA512 (xtide-2.8.3.tar.bz2) = d1138890663756c0373f512e580fd09dc874ede96b17c32c1d08236b8ea16cf965e7a8fe7c4c1283c9e2db8e8127d4630a18790be7b1d13c63424a5fdf115e96
 Size (xtide-2.8.3.tar.bz2) = 463382 bytes
 SHA1 (patch-aa) = 8b9059e2870f6b8149e72ca33c452e75650f8230
 SHA1 (patch-ab) = 889c68bce0bd78cfc1b5f7410364e8c39182cfec
