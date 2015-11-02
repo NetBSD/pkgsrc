@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2013/05/19 08:14:05 shattered Exp $
+$NetBSD: distinfo,v 1.14 2015/11/02 23:31:44 agc Exp $
 
 SHA1 (remind-03.01.13.tar.gz) = dce46b2334b3849255feffe6cba4973f3c883647
 RMD160 (remind-03.01.13.tar.gz) = d4bccb26e97764c1c1d85ffa8b415bf62b4ba241
+SHA512 (remind-03.01.13.tar.gz) = 28478e78a52055ca0c8f8d1da82149c4afa4436bb02652c39eb0547777b7fad0a9489faf3c86f9225dad5f843a708b72dd48e1aa44bd02f4361600cf2d0f0392
 Size (remind-03.01.13.tar.gz) = 361650 bytes
 SHA1 (patch-ab) = d32cb94e8d7a6126cb39bb611471949b93e472bb
 SHA1 (patch-ac) = a1a16349917f3fc5d5951b8c8fb92030859a3a2e

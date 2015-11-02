@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/12/04 03:01:23 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:42 agc Exp $
 
 SHA1 (Time-modules-2013.0912.tar.gz) = 4e97dc266e550afd0b9bdea64edbfa6f338d6cfa
 RMD160 (Time-modules-2013.0912.tar.gz) = a99612e43b5911ea6f57712fa62d3cb38b2e1de7
+SHA512 (Time-modules-2013.0912.tar.gz) = 610cc454c83d1486fbb327e0a6f44d32f2dc4b8ac09643c145489b5135a718d730a14c311823904b6832a1606d49bec0cd80f8286e8892fa8d52294b16041cd3
 Size (Time-modules-2013.0912.tar.gz) = 26041 bytes

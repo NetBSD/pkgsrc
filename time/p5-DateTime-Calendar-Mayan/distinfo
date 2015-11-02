@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 18:39:02 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:39 agc Exp $
 
 SHA1 (DateTime-Calendar-Mayan-0.0601.tar.gz) = b64421ef42d3b2c7852a09887057e54e17c748a9
 RMD160 (DateTime-Calendar-Mayan-0.0601.tar.gz) = 4c7b7d67e0e60e188dd701707eb96b0d48d750f2
+SHA512 (DateTime-Calendar-Mayan-0.0601.tar.gz) = 464bbdc20f1cd3ce60dc3fb7d3b08abeccd9b07eeec510ff66899e1dc2a2d0ff0d28f9bf9d74640c64b3116bd8fb16286a9fa0109f8bd62108559e49c506c2c9
 Size (DateTime-Calendar-Mayan-0.0601.tar.gz) = 16618 bytes

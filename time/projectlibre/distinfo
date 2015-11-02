@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2015/07/21 23:33:11 asau Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (projectlibre-1.6.1.tar.gz) = 438a0d2f42dc5f35fe4af57742de8615d6ef5b27
 RMD160 (projectlibre-1.6.1.tar.gz) = 1e36c60c0ec819e0039a9677c7fb4d5f1d6914fa
+SHA512 (projectlibre-1.6.1.tar.gz) = df928b4437d77a3257f9438e8f9c373d20b47e2dac2783d03e133e0c37979934167faa02d72370bf5499588278fe78b8acb5267df4447779a05912929808dd23
 Size (projectlibre-1.6.1.tar.gz) = 12360179 bytes

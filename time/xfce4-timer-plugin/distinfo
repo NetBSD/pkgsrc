@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/04/21 08:56:42 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (xfce4-timer-plugin-1.6.0.tar.bz2) = aa37ccf7dad36000f413fd7dd29068da4858c8fe
 RMD160 (xfce4-timer-plugin-1.6.0.tar.bz2) = e7ffdbd03a19c87f206eef9920a4402a45d74405
+SHA512 (xfce4-timer-plugin-1.6.0.tar.bz2) = aa2c6760945fe28fb1e8189b167dae176137164c017acb7057c93eb579147ef31134a840b23c78e3d1914c89865a0cc7b428e3561449f7ae01eb2d8a0fbd5815
 Size (xfce4-timer-plugin-1.6.0.tar.bz2) = 325662 bytes
 SHA1 (patch-src_Makefile.in) = 4778b32931ff6f2c10364cd824abfec43bc96082

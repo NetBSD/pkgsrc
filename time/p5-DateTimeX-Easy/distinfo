@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/09/19 11:29:41 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:41 agc Exp $
 
 SHA1 (DateTimeX-Easy-0.089.tar.gz) = ee7f52cc3be32c8a20e8d6b3a8617b8a069499e4
 RMD160 (DateTimeX-Easy-0.089.tar.gz) = 4fde9c1871d891b1a87f52df07b93dd71c2fa3cc
+SHA512 (DateTimeX-Easy-0.089.tar.gz) = 7f508bd78fc2bd257af55d61c43c26b270729b1d2de9643eb1c025c21bde51537e12a0b260037347b46808dbaf16a5b81f01fd4229bfe0926deae753e62be870
 Size (DateTimeX-Easy-0.089.tar.gz) = 30965 bytes

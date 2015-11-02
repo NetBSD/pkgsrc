@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/08/01 20:41:10 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:38 agc Exp $
 
 SHA1 (Calendar-Simple-1.21.tar.gz) = a61ad8b1c9032862598b0d3987905c276e1ef6c6
 RMD160 (Calendar-Simple-1.21.tar.gz) = 069a3791321272dbb7d414ac8ef7fd9eba707817
+SHA512 (Calendar-Simple-1.21.tar.gz) = 29ec836e774c5d3879c309eb58fdedddb12b146b382ed3c3cf014b602dd31edc7f4eff8929bd485968fa328931a589b4bde5cd87c3456b5665480ed51466252b
 Size (Calendar-Simple-1.21.tar.gz) = 7007 bytes

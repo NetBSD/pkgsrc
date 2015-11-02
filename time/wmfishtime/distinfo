@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2010/02/12 00:28:02 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/02 23:31:46 agc Exp $
 
 SHA1 (wmfishtime-1.24.tar.gz) = f5c730102787bac48b19bb5418a70333cbe22c31
 RMD160 (wmfishtime-1.24.tar.gz) = 9c705351ecbc28e15fd8e3b73712940fdb73baf1
+SHA512 (wmfishtime-1.24.tar.gz) = 7df3c6648b46c6f67cf094f634dc7699c1dd1ee4f4a18dbf63d74ebda74f322524b83d99f10a1c8c8c8a5040d78b071754a40ff162fdb13a5a00d01f1eb5c4e6
 Size (wmfishtime-1.24.tar.gz) = 21895 bytes
 SHA1 (patch-aa) = b4529e948b3534b7ee7c62571eeed63c073ec6e2
 SHA1 (patch-ba) = cd739472544fe79dcc12b22fa0b1dbc0281ac7bd

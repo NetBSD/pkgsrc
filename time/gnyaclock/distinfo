@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/07/04 16:18:40 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:36 agc Exp $
 
 SHA1 (gnya.shar) = 8d5ba47445bc28eb1cf5019d1e1cd0fd38b025c5
 RMD160 (gnya.shar) = f23bf47732b51ea03fbe4cabc13d20bcc9848247
+SHA512 (gnya.shar) = c5fc8db94ecd5d0e3c674b78ea94a89fb9fd4e943b8bce69c734a4588d90e080e33d5d443900377c7f47517301d9a97c6e966cf821ec90fdf67059ce9751a5cd
 Size (gnya.shar) = 46266 bytes
 SHA1 (patch-aa) = c289b86e19aeb455974411a8b7a866ecd186f20b
 SHA1 (patch-ab) = 6c79cb5d3d7eff42e0f5418c061feefac1672524

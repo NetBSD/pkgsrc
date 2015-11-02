@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/07/07 11:42:40 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/02 23:31:45 agc Exp $
 
 SHA1 (titrax-1.98.tar.gz) = 2849f8930aac945d435f58ad0a2a98fc19477da0
 RMD160 (titrax-1.98.tar.gz) = 519898ed0d74b50d1a01041a6479fb4974823f3e
+SHA512 (titrax-1.98.tar.gz) = 5d7f0833efe3dc4b2ef638836b171fcc83efc0cb66b119b17bd3937773555ab6171d0558439bf3265a95e66c3dbe44eae57df3198c3131265b75cf44ec11848c
 Size (titrax-1.98.tar.gz) = 41154 bytes
 SHA1 (patch-Imakefile) = b6e2ab54377d0720c60f53224257b5dcf123ec2c
 SHA1 (patch-sumtitra) = 2fbad9d6cdbc5239cf2a25ab057f640452c5a33e

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/31 12:23:14 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (mrbs-1.4.11.tar.gz) = 154392261befaae2aa39ae7457283c17feb03ca1
 RMD160 (mrbs-1.4.11.tar.gz) = 37db5cddacb89eaa2622c914f4d5e3edee313a09
+SHA512 (mrbs-1.4.11.tar.gz) = 20e2859a5fd56f92ed8de86294198991c7d9f1f9d9a76011cab6dd5fe829c8baf6611e0370cd7437c8b443440d5f19b4325c5ebf136623ce075fe6bab2571906
 Size (mrbs-1.4.11.tar.gz) = 1081223 bytes

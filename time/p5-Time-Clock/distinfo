@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/12/04 02:34:00 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:31:41 agc Exp $
 
 SHA1 (Time-Clock-1.03.tar.gz) = 81bfc61e4aae52a184631a8efe3bcfdcd0882c80
 RMD160 (Time-Clock-1.03.tar.gz) = 39df10fe832c59b1ee2b22ebaf05294cb457f058
+SHA512 (Time-Clock-1.03.tar.gz) = d4e0d725cec5a6f2da0b951cc57f67ea5022f5351c8b07099ba2659fc6e70e51a258cbb1478751c97fc837c056702b24f2b1c360052c087a306fbc6a4a0dee74
 Size (Time-Clock-1.03.tar.gz) = 8885 bytes

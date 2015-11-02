@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/07/03 17:31:01 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:31:35 agc Exp $
 
 SHA1 (cairo-clock_0.3.3-1.tar.gz) = 921c1f6468c913ebbd692aeb5f2dde58be6b4006
 RMD160 (cairo-clock_0.3.3-1.tar.gz) = c5fa101a51884a04ade0185672276d5a828063f8
+SHA512 (cairo-clock_0.3.3-1.tar.gz) = 664bdb25abba858c5c59fbf1065327c435b45503ddc616fb1aea606d5ca360a96a98905ea20ec4316a9036dc44da3ef1436277cf5a433623150a106dd8d7f237
 Size (cairo-clock_0.3.3-1.tar.gz) = 1248398 bytes
 SHA1 (patch-ab) = 4f5b453c7a2edfeb79a84a17b31ec46630c3539c
 SHA1 (patch-src_Makefile.in) = 7c3d78243d382abf305c5fb16da30419b51733f7

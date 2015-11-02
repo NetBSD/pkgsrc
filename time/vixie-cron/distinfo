@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/11/02 23:47:37 sbd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:45 agc Exp $
 
 SHA1 (cron_4.1.shar) = 77c52a492b075a77f87eded9dfdbf4bf9ba0ac91
 RMD160 (cron_4.1.shar) = a9a8d3fe6c851d7fcd098676f2edc0bc310f695e
+SHA512 (cron_4.1.shar) = fa1b03591a5471238771249b4353bc456fa56c21340ecdac6480e907a8c5176b234e6bd6b8c486402a61764768e4cb75a466808d374bad125ce4b637f54ba89b
 Size (cron_4.1.shar) = 205506 bytes
 SHA1 (patch-aa) = 98605040a8bd02b85b75baad1dabf53d807c5af8
 SHA1 (patch-ab) = 2d88ecfa9d3db6faf0951ad1a6e127a5e1e05054

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/12/04 04:55:13 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (xdaliclock-2.41.tar.gz) = 15ad18456969d5a51ad91f38185c061ab2f5e96f
 RMD160 (xdaliclock-2.41.tar.gz) = 84136babeae71404b630f1855cc818e860c33791
+SHA512 (xdaliclock-2.41.tar.gz) = 66f22a4cf16c63fbc01c1fcb6cd1a714e539669ccc088cf13ab792ab2d4407b5870b2a6e9caf998285efc74d0d70b2bed1f35e28af22ef412bf8842a5413e27a
 Size (xdaliclock-2.41.tar.gz) = 2340437 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/08 16:28:56 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:31:40 agc Exp $
 
 SHA1 (DateTime-TimeZone-HPUX-1.04.tar.gz) = bb0243648e33d99e261f572b387f713c898626e1
 RMD160 (DateTime-TimeZone-HPUX-1.04.tar.gz) = cd80f7003ed7fb00992fb9bbe1aebf1871507a42
+SHA512 (DateTime-TimeZone-HPUX-1.04.tar.gz) = fa39fe4133c929de60238c9c895d46964bf0e6aee2ed06a3332148595bf6ac23099e1d16e0c20d45a1245f903b3b2bc0c8960fc31bf465fce86efa27b0ce8096
 Size (DateTime-TimeZone-HPUX-1.04.tar.gz) = 19511 bytes

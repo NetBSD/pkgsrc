@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/12/04 02:04:09 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:41 agc Exp $
 
 SHA1 (Schedule-At-1.15.tar.gz) = 89b5d488534e370c0095122ac4c96a0664794ecc
 RMD160 (Schedule-At-1.15.tar.gz) = 59036ea5a14a1729b81a8a40b5b57587128fadc0
+SHA512 (Schedule-At-1.15.tar.gz) = 15df903f990d4b72fd921fb838b00d61261c711fd963a03a6dad6a55ce86a3da268e5efa5446d477ba4bfe1e25d74ab703f4121411b79ac1001b55d136e4fd74
 Size (Schedule-At-1.15.tar.gz) = 8174 bytes

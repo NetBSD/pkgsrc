@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/10/05 13:47:35 youri Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:31:36 agc Exp $
 
 SHA1 (globe_14Aug2014.tar.gz) = d9c2657e0080c762f797dc6d2956d9ce91e220b8
 RMD160 (globe_14Aug2014.tar.gz) = 85f00508aa7625bbe3296ffc4b465c26dd8351a6
+SHA512 (globe_14Aug2014.tar.gz) = 4bf472ecbedb1582bc4caa71bdce3dd44914d9263d58277bc9b82184a8621fb2ebba26ad49aee7a29e625816009604b49fc02719c0a3cfe8351b70463b89bf46
 Size (globe_14Aug2014.tar.gz) = 9956 bytes
 SHA1 (patch-Makefile) = 6b977be1e83edf385b350552bd4e798eea634dca

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/02/16 19:47:20 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:31:47 agc Exp $
 
 SHA1 (xonclock-0.0.9.4.tar.gz) = 8abde3356f5ac39175adf712a18ad20f7f9560b1
 RMD160 (xonclock-0.0.9.4.tar.gz) = ab8bc3f44e4a65254b4531f53c5bb239b47167c0
+SHA512 (xonclock-0.0.9.4.tar.gz) = e5e0a2cfc16b6b4204e49fbbfbc650557f9211a622bb2d5b7dbaa79779fb076c66e760db463f36a69d6c7939f62578c264819ab50832795991b080eddb03a26a
 Size (xonclock-0.0.9.4.tar.gz) = 403971 bytes
