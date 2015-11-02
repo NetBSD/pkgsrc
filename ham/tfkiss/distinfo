@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2009/02/16 19:19:01 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:57:24 agc Exp $
 
 SHA1 (tfkiss-1.2.4.tar.gz) = 4bf8afb539fd155a86de439554f1b5b0ffd45343
 RMD160 (tfkiss-1.2.4.tar.gz) = b220afb5940e377957cfebfb8167f183202a89ab
+SHA512 (tfkiss-1.2.4.tar.gz) = e40cfd723a1045320a6113ef5a7bf4fad1c795254daa1da2f3d3c7e5d4329fc56fea4c064c02b8bacb1aea1e133b487e62a7e5b666a2afae161815a5a6746520
 Size (tfkiss-1.2.4.tar.gz) = 142842 bytes
 SHA1 (patch-aa) = 25ff7b5753885826e12e53adc440bcba622d008a
 SHA1 (patch-ab) = 40ce8e60a0b85e260f0fd45739f2056066034f71
