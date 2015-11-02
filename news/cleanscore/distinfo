@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/12/09 14:59:37 is Exp $
+$NetBSD: distinfo,v 1.3 2015/11/02 23:49:46 agc Exp $
 
 SHA1 (cleanscore-0.9.8.1.tar.gz) = ae132707ee5e7e5805ee6a7051d34f605b8340cb
 RMD160 (cleanscore-0.9.8.1.tar.gz) = 575e1ac974ad23aa557ca2c67a28bbd07546f9ec
+SHA512 (cleanscore-0.9.8.1.tar.gz) = 46c4f392890f06ccbd1eeb829760b6c20fdd36b20a758b243b4e982b82aab88b8f78def5cfe16048a8a83b7efb7fb80111632040809ab3a1d336f0069a2708df
 Size (cleanscore-0.9.8.1.tar.gz) = 13439 bytes
 SHA1 (patch-aa) = 4622601fe21bacb1a775b28539ff477c1272ac9d

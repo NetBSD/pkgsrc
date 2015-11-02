@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/02/04 11:20:34 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:49:47 agc Exp $
 
 SHA1 (lottanzb-0.4.1.tar.gz) = e6a0819be35a5f26edf1c06792156dc9beaef90b
 RMD160 (lottanzb-0.4.1.tar.gz) = cf576f92628e505f282e88b7c6c523429c1b5c75
+SHA512 (lottanzb-0.4.1.tar.gz) = ff9dd4ba800e28205ceecdaf741623ca19028badc53a9b3ed5c846a1cba35dacebc9c524a661cf6e4021e557d71761ea06d958bf1691e60a516b126127901232
 Size (lottanzb-0.4.1.tar.gz) = 4003577 bytes
