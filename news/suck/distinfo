@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2014/10/15 22:08:11 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/02 23:49:48 agc Exp $
 
 SHA1 (suck-4.3.2.tar.gz) = 8c48889e407473ab565a3d8ba5cda969862d216a
 RMD160 (suck-4.3.2.tar.gz) = bbe952cc1dc8c76fad6651b3530cb87daeb6bb1a
+SHA512 (suck-4.3.2.tar.gz) = 704559ea54daabc6ef7b205431e587a90de20d8a5648e60910e4bc1a1493eebc8a3497c308a9de34febf6b26eda13785cf9f1f5ae034ee7fb0a9230173d13d4f
 Size (suck-4.3.2.tar.gz) = 187560 bytes
 SHA1 (patch-aa) = 970ffa385a2b2b3f95944ba9a4321452bb247319
 SHA1 (patch-ab) = c0bfe3946e4e2360ccc85e8bbf4abaf837f4ace4
