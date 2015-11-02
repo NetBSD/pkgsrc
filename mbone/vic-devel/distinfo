@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.6 2015/03/31 15:49:57 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:54:09 agc Exp $
 
 SHA1 (vic-2.8ucl1.4.0_ov511.diff.gz) = 46faceb1d926820e41ffda71228f63959747a73e
 RMD160 (vic-2.8ucl1.4.0_ov511.diff.gz) = b60a9d3f5764cc4528dffbf5e9465301d71723de
+SHA512 (vic-2.8ucl1.4.0_ov511.diff.gz) = b2618dddb2b07ceec37fb8f11d05c7164bc089f9f720c6d697e2d3b83f086bf2f1efeb99bf79f3b9d164f472fe485b31780d687c9f4fc04a28ba2d22a109dfb5
 Size (vic-2.8ucl1.4.0_ov511.diff.gz) = 8646 bytes
 SHA1 (vic-2.8ucl1.4.0beta-4337.tgz) = 6c15491fa5bdfaedf94731094f8952ed3ff027bb
 RMD160 (vic-2.8ucl1.4.0beta-4337.tgz) = 631b18fe036c289e5622722e521af2c9735c63da
+SHA512 (vic-2.8ucl1.4.0beta-4337.tgz) = d159ce47447432193d6b537beb6faeb3f2f64ba06223d9726ff813c6f81eff1a6a64bb1fd5a4edcf41b9e069c159e55a680e0edaf668817173b9dfe1fc068fef
 Size (vic-2.8ucl1.4.0beta-4337.tgz) = 9345775 bytes
 SHA1 (patch-Makefile.in) = 9f913eee4a9b9bfbf6e5735f04af97cdba92d297
 SHA1 (patch-codec_tmndec_store.c) = 65b7aa01864f428088788b0311a2c88dc7a46914
