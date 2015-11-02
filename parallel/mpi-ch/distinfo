@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.24 2013/05/10 08:24:57 adam Exp $
+$NetBSD: distinfo,v 1.25 2015/11/02 23:46:12 agc Exp $
 
 SHA1 (mpich-3.0.4.tar.gz) = e89cc8de89d18d5718f7b881f3835b5a0943f897
 RMD160 (mpich-3.0.4.tar.gz) = c14b3b335be863dd36c0a58630c969719d8ef217
+SHA512 (mpich-3.0.4.tar.gz) = f9d8b2cf561fe5f85c12512ef4dd7b0cf5ec8b53ddb07bfa0d1db2e3c8ae0382c77e0661f46b82ec96b05d18ea2d25328bb84e9528ac06e5925f30ec8ef030d0
 Size (mpich-3.0.4.tar.gz) = 10921075 bytes
 SHA1 (patch-Makefile.in) = 32a78a384ecb94a30631a8a756e746edbe6e0060
 SHA1 (patch-configure) = 0e7fec4d30e33387d8b434c6b4e90bab1daa42ba

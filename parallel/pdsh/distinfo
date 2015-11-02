@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/10 21:30:09 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:46:13 agc Exp $
 
 SHA1 (pdsh-2.29.tar.bz2) = a3e44ffba151f023d72df67cd7a7d37b4a80c80e
 RMD160 (pdsh-2.29.tar.bz2) = c56e6cc85e3af4c3f5c025c45c723b04c683a797
+SHA512 (pdsh-2.29.tar.bz2) = eb68974aa22b3051a886e3a8abde41ed4cb221cdd2a224b930eda60fc252a4952fa066f536b86be81a96bad3814299450ff9fd05fb322ad37b859bb05ef081ae
 Size (pdsh-2.29.tar.bz2) = 470693 bytes
