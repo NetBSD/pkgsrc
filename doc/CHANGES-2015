@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4445 2015/11/02 05:30:40 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.4446 2015/11/02 10:28:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7618,3 +7618,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/modular-xorg-server to 1.17.4 [tnn 2015-11-01]
 	Updated x11/modular-xorg-xephyr to 1.17.4 [tnn 2015-11-01]
 	Updated www/midori to 0.5.11nb1 [dholland 2015-11-02]
+	Updated devel/py-mercurial to 3.6 [wiz 2015-11-02]
