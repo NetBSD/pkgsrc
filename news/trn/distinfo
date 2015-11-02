@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/08/19 10:18:26 leot Exp $
+$NetBSD: distinfo,v 1.15 2015/11/02 23:49:48 agc Exp $
 
 SHA1 (trn-4.0-test77.tar.gz) = de43b0ac38e6d921c6f3fa55c8b5b948ac034e8e
 RMD160 (trn-4.0-test77.tar.gz) = 291a8ded5ebbf2724f132e52b77db84b3079371d
+SHA512 (trn-4.0-test77.tar.gz) = 9b76ba004fb47dfd162afcfec51630431e8ad7099e5151d4a21b55c8fa670227d6e0756029e57312872c8f4ea986112af50508144caf59adb065212a661f408a
 Size (trn-4.0-test77.tar.gz) = 564694 bytes
 SHA1 (patch-ac) = b6e06444f55242c1fe0dac194e04cd2c5f6a4c53
 SHA1 (patch-ad) = f6d102af2b6e3095ea765f622085464193d94835
