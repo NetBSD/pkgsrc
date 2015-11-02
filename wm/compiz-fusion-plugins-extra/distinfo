@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/06/30 22:13:40 rodent Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:42:51 agc Exp $
 
 SHA1 (compiz-plugins-extra-0.8.8.tar.gz) = 4ab88a4e533e4ccc73f917e6357f176ed07402f1
 RMD160 (compiz-plugins-extra-0.8.8.tar.gz) = 593ec9358ff2609231f96055534fddcb3a7a30db
+SHA512 (compiz-plugins-extra-0.8.8.tar.gz) = d03f7586c5b12e44adc056752016eab4395f703b6cb93fc7d0138b9971aed79956934dc9311ce7ea0bc1f01b6d8485b08bfb0b5af7f1a58e8cb46d50f0374642
 Size (compiz-plugins-extra-0.8.8.tar.gz) = 3351016 bytes
 SHA1 (patch-src_notification_notification.c) = d5cbe8e2fe4642d71e24eefa033d45b5b6809a97

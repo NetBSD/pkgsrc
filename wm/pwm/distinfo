@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2011/01/17 11:15:16 jmcneill Exp $
+$NetBSD: distinfo,v 1.20 2015/11/02 23:42:54 agc Exp $
 
 SHA1 (pwm-20060517.tar.gz) = d69dd232e07c20a053d1eec92355ee5134a422b3
 RMD160 (pwm-20060517.tar.gz) = a2df30c1a4b68b569b5c9e3ec3a8c4ff003714ab
+SHA512 (pwm-20060517.tar.gz) = bcdfc21183acdce5fa7ece6fc5dc305397981ab9c0f6a8c3e41421ddd56b12c26ee06d1b69ffc40fc7f8cde2e988707ca772d79aafcf39e5f309e6c1bdc2fbc3
 Size (pwm-20060517.tar.gz) = 153106 bytes
 SHA1 (patch-aa) = 991d7871bc2f804163483cce9935c4e8c914d7d4
 SHA1 (patch-ac) = 793f1348e45a6ee3e21b5fa5ff02b00d1dd48ef1
