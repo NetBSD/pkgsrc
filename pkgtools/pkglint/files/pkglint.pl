@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.895 2015/10/27 21:23:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.896 2015/11/02 18:45:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4737,7 +4737,7 @@ sub checkfile_distinfo($) {
 			}
 		}
 
-		$is_patch = defined($new_fname) && $new_fname =~ m"^patch-.+$" ? true : false;
+		$is_patch = defined($new_fname) && $new_fname =~ m"^patch-.+$" && -f "${current_dir}/${patches_dir}/${new_fname}";
 		$current_fname = $new_fname;
 		@seen_algs = ();
 	};
