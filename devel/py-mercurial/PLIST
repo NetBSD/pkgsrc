@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/08/01 10:12:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/02 10:28:29 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -21,6 +21,9 @@ ${PYSITELIB}/hgext/children.pyo
 ${PYSITELIB}/hgext/churn.py
 ${PYSITELIB}/hgext/churn.pyc
 ${PYSITELIB}/hgext/churn.pyo
+${PYSITELIB}/hgext/clonebundles.py
+${PYSITELIB}/hgext/clonebundles.pyc
+${PYSITELIB}/hgext/clonebundles.pyo
 ${PYSITELIB}/hgext/color.py
 ${PYSITELIB}/hgext/color.pyc
 ${PYSITELIB}/hgext/color.pyo
@@ -259,6 +262,9 @@ ${PYSITELIB}/mercurial/default.d/mergetools.rc
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
 ${PYSITELIB}/mercurial/demandimport.pyo
+${PYSITELIB}/mercurial/destutil.py
+${PYSITELIB}/mercurial/destutil.pyc
+${PYSITELIB}/mercurial/destutil.pyo
 ${PYSITELIB}/mercurial/diffhelpers.so
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
@@ -515,6 +521,9 @@ ${PYSITELIB}/mercurial/statichttprepo.pyo
 ${PYSITELIB}/mercurial/store.py
 ${PYSITELIB}/mercurial/store.pyc
 ${PYSITELIB}/mercurial/store.pyo
+${PYSITELIB}/mercurial/streamclone.py
+${PYSITELIB}/mercurial/streamclone.pyc
+${PYSITELIB}/mercurial/streamclone.pyo
 ${PYSITELIB}/mercurial/strutil.py
 ${PYSITELIB}/mercurial/strutil.pyc
 ${PYSITELIB}/mercurial/strutil.pyo
@@ -687,7 +696,7 @@ ${PYSITELIB}/mercurial/templates/static/feed-icon-14x14.png
 ${PYSITELIB}/mercurial/templates/static/hgicon.png
 ${PYSITELIB}/mercurial/templates/static/hglogo.png
 ${PYSITELIB}/mercurial/templates/static/mercurial.js
-${PYSITELIB}/mercurial/templates/static/style-coal.css
+${PYSITELIB}/mercurial/templates/static/style-extra-coal.css
 ${PYSITELIB}/mercurial/templates/static/style-gitweb.css
 ${PYSITELIB}/mercurial/templates/static/style-monoblue.css
 ${PYSITELIB}/mercurial/templates/static/style-paper.css
