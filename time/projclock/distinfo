@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/12/04 04:28:36 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:31:43 agc Exp $
 
 SHA1 (pclock0.9.tgz) = 0d455e47cfb1ce43cb0c75a1d274a2869f77a79e
 RMD160 (pclock0.9.tgz) = 179d4195bc22a3458354820907163bf7c7c718a7
+SHA512 (pclock0.9.tgz) = 0b4949600ceac82264acc64d6bb537cdf3f2f93c63d41ec1c6708310bc781b5398e6278dc81ec7ee966a18919f51698f648bf86b4a14e7bf319fbd368502508c
 Size (pclock0.9.tgz) = 19754 bytes
 SHA1 (patch-aa) = f1627a4ff458170cd77b1e8e585f41f6ace52c12
 SHA1 (patch-ab) = d3bd23f114d85cac7cfca7ac51cf4d05a4ac72bc
