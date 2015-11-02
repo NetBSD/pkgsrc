@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.7 2009/04/07 18:45:04 hasso Exp $
+$NetBSD: distinfo,v 1.8 2015/11/02 23:57:22 agc Exp $
 
 SHA1 (7pl225sr.tgz) = 9c393e8f6968d24ec469fbca45ade65a5c6d52fc
 RMD160 (7pl225sr.tgz) = 23fe71c10ab4e006c49c7b0e7fbf96d498b2ccf7
+SHA512 (7pl225sr.tgz) = c1c303b19ed14b3398a8a0c58eb505f03f27e957cfe3cbf2432db115a1efaf6a637e657490079791d245aebf6d2b14497e111b5d5cfd52637f25f135e5008476
 Size (7pl225sr.tgz) = 65122 bytes
 SHA1 (7pl210mg.tgz) = 7acc708cabf8d166f74bd398940fb71aac2c7495
 RMD160 (7pl210mg.tgz) = ffaf7b5dd4c55fb847a6b5fd87cdfaecf904e53e
+SHA512 (7pl210mg.tgz) = 579a18b734dd719dc0a8f1074af3f9ebeb0a42c7219c7d79c6a92cc956a64a00b241d9a2d6e9fc176e3649fa96e127fd08a8d09d2ff7b7afa92237f16e932014
 Size (7pl210mg.tgz) = 31095 bytes
 SHA1 (patch-aa) = 62fa52455c8225cbd4465bbd5e1565e7eaae3421
 SHA1 (patch-ab) = 4bf37d21aceced7b8faaeb67dffb8280b220fc16
