@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15045 2015/11/02 05:31:05 dholland Exp $
+$NetBSD: TODO,v 1.15046 2015/11/02 13:41:17 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1488,7 +1488,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.8.5
 	o pstree-2.39
-	o pulseaudio-7.1
 	o pure-ftpd-1.0.40
 	o pvs-5.0
 	o pwlib-1.11.1
