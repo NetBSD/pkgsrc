@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/02/04 00:15:14 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:54:09 agc Exp $
 
 SHA1 (wbd-1.0ucl4.tar.gz) = 09a399ed435372d7a62fd1c98c6a06aca15cb4e3
 RMD160 (wbd-1.0ucl4.tar.gz) = ae094420243f35edc664b1be5c496e4f504e277e
+SHA512 (wbd-1.0ucl4.tar.gz) = 1cf6abf09e42cb84f7fee44c0b2e78ad1edf869703ab330a10cbfc3b4fad2e33c03af2e34e4ce37057b671ab11d61b12d4e760dcb9219def9964d5f77ca55d37
 Size (wbd-1.0ucl4.tar.gz) = 53591 bytes
 SHA1 (patch-aa) = 98f774d61ca9a5464709735269c8f7c487a1c4b0
 SHA1 (patch-ab) = 70c932caacddb93aacbf245ea8aab3ed685fed8c
