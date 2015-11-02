@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4447 2015/11/02 13:41:17 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4448 2015/11/02 15:21:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7620,3 +7620,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/midori to 0.5.11nb1 [dholland 2015-11-02]
 	Updated devel/py-mercurial to 3.6 [wiz 2015-11-02]
 	Updated audio/pulseaudio to 7.1 [ryoon 2015-11-02]
+	Updated shells/zsh to 5.1.1 [ryoon 2015-11-02]
