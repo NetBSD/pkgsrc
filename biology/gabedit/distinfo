@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2015/07/22 19:05:10 asau Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 18:42:21 agc Exp $
 
 SHA1 (GabeditSrc248.tar.gz) = 7a48f42c39258471faa0a3942890c16b6290de41
 RMD160 (GabeditSrc248.tar.gz) = 8dec36e32d493c8e024b7a5bdc386da48ad79675
+SHA512 (GabeditSrc248.tar.gz) = d06b54693c4887e3cecb6bb20b98307db8aeb7f32ff87b85af536a4034f2d6af04f30809c04e29ed6fb4744e6290dcd276c9f85b2940daa71a595f6bd5f154da
 Size (GabeditSrc248.tar.gz) = 1992373 bytes
 SHA1 (patch-src_Common_Gabedit.c) = 44d14190db24e88c20618a0167b2699e234288e8

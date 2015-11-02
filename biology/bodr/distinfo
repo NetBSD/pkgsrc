@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/05 22:03:12 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 18:42:20 agc Exp $
 
 SHA1 (bodr-9.tar.gz) = 851502a59d8cd03c0a67f70768f97dc8692b2893
 RMD160 (bodr-9.tar.gz) = 9df0c0397f036c9d2f3efc66d3f3b705b5c10b25
+SHA512 (bodr-9.tar.gz) = cf878aeddf2c9eaade0c113a90dd2ea420e306c8e8c837b6e9ce4e2a7eb438cc4d056916efcbfff5383c4a555e9f57aacd0b087a0747d94a222d74f9741e0a36
 Size (bodr-9.tar.gz) = 286732 bytes
