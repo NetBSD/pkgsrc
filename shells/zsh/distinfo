@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.54 2015/09/02 10:54:29 szptvlfn Exp $
+$NetBSD: distinfo,v 1.55 2015/11/02 15:21:01 ryoon Exp $
 
-SHA1 (zsh-5.1.tar.xz) = 5461213760341a9010a90cd7a3c48e27804879b0
-RMD160 (zsh-5.1.tar.xz) = 3d66abaad114be7d90969f8f1bd4a90b3b3d0f22
-Size (zsh-5.1.tar.xz) = 2785404 bytes
+SHA1 (zsh-5.1.1.tar.xz) = c47a6a6a3624c28290832f29eba40ac6155c6b0d
+RMD160 (zsh-5.1.1.tar.xz) = 28baa80559d3bad4a38859c2c5b5ac65d508f518
+SHA512 (zsh-5.1.1.tar.xz) = 732f183a03125e83da11a38c638ca54a667326a23ca19418b0df27b1d5b3b1f360383d84f66bde064911effaa2ce9cbb9b6ab86deddb92f80e8f601af8a82b3e
+Size (zsh-5.1.1.tar.xz) = 2788676 bytes
 SHA1 (patch-aczsh.m4) = 36c270d8d7cf727f48787ef889b2bd89cbf065e2
 SHA1 (patch-configure.ac) = e34bbae6385442b51a7263b22681898203d0c013
