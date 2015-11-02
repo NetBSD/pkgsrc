@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2014/07/18 10:40:48 obache Exp $
+$NetBSD: distinfo,v 1.18 2015/11/02 23:42:51 agc Exp $
 
 SHA1 (ctwm-3.8.2.tar.xz) = b1bb8c75c4896738686c1f42222be20508ea2cb2
 RMD160 (ctwm-3.8.2.tar.xz) = e5fc23208e019814388e6336ad7af80f1c208238
+SHA512 (ctwm-3.8.2.tar.xz) = 4633b7bf7b8528ecfd2a753f443fd5286fd394df37ebe885138d30a498f0d721076835d135974a2bd11ca9c32ffd288f84788cb0407ae346a29c5f6371dca497
 Size (ctwm-3.8.2.tar.xz) = 549984 bytes

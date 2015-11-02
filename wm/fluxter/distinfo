@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/08 23:29:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:42:52 agc Exp $
 
 SHA1 (fluxter-0.1.0.tar.gz) = d0da4759a21fdadc8a6457195c87b6648b5d69bc
 RMD160 (fluxter-0.1.0.tar.gz) = b4059b81aa448f6f5c3ef7f4672335396448ac2d
+SHA512 (fluxter-0.1.0.tar.gz) = 92dbb74072b33a59fd356ca055e3b183276f314753f42591da0ecb845de271869a7717bd206e041e6d7a077cc8f931df3cfa1ec671a1ecf36ef565ed21382786
 Size (fluxter-0.1.0.tar.gz) = 99522 bytes

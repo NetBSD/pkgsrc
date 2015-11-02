@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/10/01 11:06:08 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:42:54 agc Exp $
 
 SHA1 (quartz-wm-1.3.1.tar.xz) = cb627148636202795104a196fd7dcb2197c22fa3
 RMD160 (quartz-wm-1.3.1.tar.xz) = bbc18e5cb4ebe6d3bb02f8209ad37e265122e7a1
+SHA512 (quartz-wm-1.3.1.tar.xz) = 5a76a32e0efafc5777dbc9b3e5baf73a9cf6addb2aed9822244f6987f830d9064f3d917abe4f25218b6bd2390027005a90cc83e729c9b6663aaef2c1b896420c
 Size (quartz-wm-1.3.1.tar.xz) = 166928 bytes
