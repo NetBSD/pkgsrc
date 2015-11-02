@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2015/11/02 00:34:04 tnn Exp $
+# $NetBSD: Makefile,v 1.132 2015/11/02 12:02:23 tnn Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -225,7 +225,7 @@ PTHREAD_OPTS+=	require native
 post-patch:
 .if ${OPSYS} == "Darwin"
 .  for dir in ${COMPILER_INCLUDE_DIRS}
-.    if exists(${dir}/sys/poll.h))
+.    if exists(${dir}/sys/poll.h)
 	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
 .    endif
 .  endfor
