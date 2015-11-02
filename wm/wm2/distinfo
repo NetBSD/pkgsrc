@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2008/09/08 09:41:50 dholland Exp $
+$NetBSD: distinfo,v 1.10 2015/11/02 23:42:55 agc Exp $
 
 SHA1 (wm2-4.tar.gz) = dd959e72eedca113b372ddf67b95260e25226a91
 RMD160 (wm2-4.tar.gz) = 32b8f7c0ae3d280684505b3f69b2a82bafabacf1
+SHA512 (wm2-4.tar.gz) = 9151267e5a6bf39587b15dc3e55b4acc05aa1b14a7a9bcb4e1ed25d474af8b0e7699343117f184c745645deb404d6f6e230809b88d9b7bb5c1f67ba0fbde72e9
 Size (wm2-4.tar.gz) = 32807 bytes
 SHA1 (patch-aa) = 3abf330bd012205dbb6eeff06b0be28fe27835d3
 SHA1 (patch-ab) = 047f72483a5f7d250742a5d53aa8a48ca123558e

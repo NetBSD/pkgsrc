@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 18:43:53 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/02 23:42:50 agc Exp $
 
 SHA1 (9wm-1.1.shar.gz) = 43a4e28a0665d54331d81d9691abae65927738ac
 RMD160 (9wm-1.1.shar.gz) = d2daa96d1b8dec45d349e49406156629e4b2c50a
+SHA512 (9wm-1.1.shar.gz) = 61114b96896bf16f66af7727d039e9d09d85971f6cffa10cfea1719697bc355d18f56d3813dfefe6cfb8b2bec16683fa541735debdca2dc25b2ddc11363a0714
 Size (9wm-1.1.shar.gz) = 19517 bytes
 SHA1 (patch-aa) = 3e0c11e450876ee882694fb653fa8222ee53340a

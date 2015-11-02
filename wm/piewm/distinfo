@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/05/14 08:08:39 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:42:54 agc Exp $
 
 SHA1 (piewm-1.04.tar.gz) = 90cfd7cd8708fd5b6514951d392163e7cf5e350e
 RMD160 (piewm-1.04.tar.gz) = bb963f3f5d1a06c665b7040ba5c5e39d2a227a98
+SHA512 (piewm-1.04.tar.gz) = 0159256bb46cf457ed7bae2b3cfb3e492ae0b39c5a117a668c12b2ca6bb4cb7b57474fd0f80c23a0eb1f7c4a3d4135a4e401d15bb42ca934386dba6e904a828d
 Size (piewm-1.04.tar.gz) = 300723 bytes
 SHA1 (patch-ab) = 38d8407cb4d40425db0cf998a08e75d4218cad41
 SHA1 (patch-ac) = 62b7491e7658db8ac0c00bf691ba4e0e270a7b70

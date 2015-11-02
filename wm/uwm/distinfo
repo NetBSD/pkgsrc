@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/01/11 23:36:16 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:42:55 agc Exp $
 
 SHA1 (X.V11R3uwm.tar.gz) = 180ad291555e3ff887fd32c9f7c286d5f1899bb8
 RMD160 (X.V11R3uwm.tar.gz) = b5722e71e50cd2b9a3d5727c1519be23704ddc54
+SHA512 (X.V11R3uwm.tar.gz) = 57a7ba3c56bfab33937e1afb549a1b40cfedef876422173628f8d577c6215afc089fcb6437fd178c6362877f6ff68b5a775df0c38c8c50e498d1d25bca765ef8
 Size (X.V11R3uwm.tar.gz) = 114262 bytes
 SHA1 (patch-RubberBand.c) = f3c730d375b5cb1d2c574098155423c0c193583f
 SHA1 (patch-aa) = 99d696103e0bd2f845a516bb13770bd17d6546fa

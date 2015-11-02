@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/04/25 02:28:24 reed Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 23:42:55 agc Exp $
 
 SHA1 (weewm-0.0.2.tar.bz2) = 2ed619043f11bca71ef62caa255aa2dfb549532b
 RMD160 (weewm-0.0.2.tar.bz2) = 8fe602c67e5fbe6ac2ee4a12a5a1704aba4de4e3
+SHA512 (weewm-0.0.2.tar.bz2) = 91eb7c77ce783cd96ffaee390d6683b565dc636eac77c11508eb7a83e631d1f3aef34f0c3be16a938755ac9a4fb48f4699d8330dbfd21e666b8eaf968881ab86
 Size (weewm-0.0.2.tar.bz2) = 44051 bytes
 SHA1 (patch-aa) = 9a7c9b1a5e85f51ed7c52ae39f5b08b95cbc1c08
 SHA1 (patch-ab) = 14ebcb4169fd466057fb666cd86d5c4de361306e

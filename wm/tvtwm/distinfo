@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 18:43:55 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:42:54 agc Exp $
 
 SHA1 (tvtwm.pl11.tar.gz) = a0e092c6dbab072b488606c28a78746d1b55d078
 RMD160 (tvtwm.pl11.tar.gz) = ec346d31b1e9302d781ba5d67d08e8c2728f4a4f
+SHA512 (tvtwm.pl11.tar.gz) = a754b4bc0307116d3c86b7f159bab47ff4cceb190567db793b9be61963280dd22050fa0041f60d394ca55d190dad92ba9a2859e592b05f25952592943ed59fa0
 Size (tvtwm.pl11.tar.gz) = 224935 bytes
 SHA1 (patch-aa) = 2cb8fb25d1c1f6a60713c6bc35aa6b057f552c52
 SHA1 (patch-ad) = 8f7deb5c837794d1b485fdd3b494123f39d87252

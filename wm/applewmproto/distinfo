@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/31 00:33:43 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:42:50 agc Exp $
 
 SHA1 (applewmproto-1.4.2.tar.bz2) = 71dd2374e745a7db7ae0e94410e55ba721683d10
 RMD160 (applewmproto-1.4.2.tar.bz2) = b6ba0eb3e12d783d73d18934587acd1b11fb3989
+SHA512 (applewmproto-1.4.2.tar.bz2) = d4fd66b1566a1250a5c5d30fa19d2bb017f01ab39db5f9791951e738d323c54bb308f0223f52c781a59605c5691b217ae04379ebf211dc8b49fdd1c280c22b3d
 Size (applewmproto-1.4.2.tar.bz2) = 97192 bytes

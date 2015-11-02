@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/10/20 17:51:08 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/02 23:42:53 agc Exp $
 
 SHA1 (olvwm4.src4.tar.gz) = d8900f1aeccfc75924e922d9e86008462de12e62
 RMD160 (olvwm4.src4.tar.gz) = 6523adb9a2f08829dbe6099e88ac031b1dd232a4
+SHA512 (olvwm4.src4.tar.gz) = 2ceea3f5bb81c2c467a72492b35dbe99b61e3757a1f13fb41b15daed5f5eef4685fae003371a27173e095463338b9a9f332925073e4f25a530726e44bfed66fb
 Size (olvwm4.src4.tar.gz) = 386560 bytes
 SHA1 (patch-aa) = 1a3f6f87ad6c39cb70923b6c54f66d6abdab5e9d
 SHA1 (patch-ab) = c9e045f8dbc966feac732adb2ab53c531bdfa8cf
