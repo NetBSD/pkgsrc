@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/22 21:28:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/02 18:42:23 agc Exp $
 
 SHA1 (sewer.zip) = cd5ab1417a453412c556ae895d8f56e452b97a52
 RMD160 (sewer.zip) = f94b80a686da5da7b535e77fcd1b0ef811a6b377
+SHA512 (sewer.zip) = 4b1bcedb517ee268e8e3275681e1708a476a0bbaf144073bc2f5f234ff480b62ff49562d657b4798001159ed6178dcbb237a9c545afb392d9e08aa64403602fb
 Size (sewer.zip) = 126601 bytes
