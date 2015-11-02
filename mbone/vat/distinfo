@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2014/02/04 00:17:35 joerg Exp $
+$NetBSD: distinfo,v 1.15 2015/11/02 23:54:09 agc Exp $
 
 SHA1 (vatsrc-4.0b2.tar.gz) = 92390be72438647bef422c7a493ee520e82e33b3
 RMD160 (vatsrc-4.0b2.tar.gz) = 3540a371f2d4bbd388561157009dc744bec24a0a
+SHA512 (vatsrc-4.0b2.tar.gz) = 94409fd62856e8e932f155c8ca6700330ae311ebe8b6259d4a1d579709191313679f036493e2b745a5e0a4860f9508a469edeafee79f71fc6af1b8dd62b429ed
 Size (vatsrc-4.0b2.tar.gz) = 263799 bytes
 SHA1 (patch-aa) = 58021f5a9accc06efb168374036f9c737fb9cbe6
 SHA1 (patch-ab) = f1ba1d4877de8ab3650ba5e19f1197ac756560af
