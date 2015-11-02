@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/22 21:28:55 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/02 18:42:21 agc Exp $
 
 SHA1 (fastDNAml_1.2.2.tar.gz) = 78197cbd760163f65085ac80c36d4286a1f29e34
 RMD160 (fastDNAml_1.2.2.tar.gz) = 1ded8fe0c9621d9fb2f6f090a97d16fbdf8e18bf
+SHA512 (fastDNAml_1.2.2.tar.gz) = 46727f0e6e10bc33a8fc22b2e5297ed1d23a225c88a478bcbe6aa69dd6aab2351142ce8b0e5c1bf500712157e2021d15136edec3519993cdcb8cacd4d4eabadc
 Size (fastDNAml_1.2.2.tar.gz) = 70005 bytes
