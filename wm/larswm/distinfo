@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.6 2014/02/24 12:36:27 wiedi Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:42:53 agc Exp $
 
 SHA1 (larswm-7.5.3.tar.gz) = 5a79861f5e052a785fbd498eafe532799390a756
 RMD160 (larswm-7.5.3.tar.gz) = bfc777b88b8bd783c1f1ce12ab2128c167fe5cb3
+SHA512 (larswm-7.5.3.tar.gz) = 7c99aadcc419f695b55bf0ea2f9833757c06f6ba0f00ae58e1db6e38df70bf944bac44834418bb52188d844722a7ac3c49388280c649ede073a74c21572cf3d4
 Size (larswm-7.5.3.tar.gz) = 84505 bytes
 SHA1 (keyboard_refcard.pdf) = 855f0509cd3ce047c89b88a272fcfebec76bed92
 RMD160 (keyboard_refcard.pdf) = fd56b0619614341e91dc74ae23e40a8bbba9d791
+SHA512 (keyboard_refcard.pdf) = 4156de5bb5d6898f0bf1e16de851579b7a253f2af53bdad753146ae20a7cd7e2c6bc270a087409c6febc56c87fc652b884dd92a1e80abc02dae60f2dd3d08b73
 Size (keyboard_refcard.pdf) = 3861 bytes
 SHA1 (mouse_refcard.pdf) = df0e4cdad3d320f7395755e23d379cc047075372
 RMD160 (mouse_refcard.pdf) = 7dd33ecbb66bd715f69606ef1e93068f02b50e0d
+SHA512 (mouse_refcard.pdf) = b4f728614c713837be29740e56dcd0169c46dce5b6ac141babd6eadff89923d4b803eb17fe27adc53d8ba974efdabe06ee4c23d4ddc580cb3adf020188aaab96
 Size (mouse_refcard.pdf) = 3332 bytes
 SHA1 (patch-Imakefile) = 5788e841e77f7146e030835a9642b293b47c13fe
 SHA1 (patch-aa) = 8ab134d48754c071688bce9120248214cb3bf989

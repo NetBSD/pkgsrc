@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/08/08 06:24:02 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/02 23:42:54 agc Exp $
 
 SHA1 (spectrwm-2.5.1.tgz) = a7803e88f1ac3f06f136d455b7408afa0e4d0042
 RMD160 (spectrwm-2.5.1.tgz) = 8d05b65ad8eb6be2ae8687f5bb9f679e4f224637
+SHA512 (spectrwm-2.5.1.tgz) = 2bcb88d0b9ea9ed02672ca6a2d963644f5b38d1612ac3d7f16327e9ebf373464032ce3bc8fd3eec0e8f040a40ef6abccb502b2fa216c6ee5164c6621cc418512
 Size (spectrwm-2.5.1.tgz) = 116781 bytes

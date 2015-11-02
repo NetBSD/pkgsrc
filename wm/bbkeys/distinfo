@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 18:43:53 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/02 23:42:50 agc Exp $
 
 SHA1 (bbkeys-0.8.6.tar.gz) = b1638ec44903fffbe8ca822b6ee854c8d48d91eb
 RMD160 (bbkeys-0.8.6.tar.gz) = c78e1386e18131105a9be7eacf249026d315c516
+SHA512 (bbkeys-0.8.6.tar.gz) = 41d498c75d947ea8f9c1c621e92adb8fcada3e388fdf9da60cd8ab0194f215993f9868b80cc5f0ac1aae2dcd03f03dabfc0de0a59a166d87339143919fd13248
 Size (bbkeys-0.8.6.tar.gz) = 185230 bytes
 SHA1 (patch-aa) = 303186f314c9d0f18415cef97630e874de14048d
