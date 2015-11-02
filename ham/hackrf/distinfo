@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/10/13 13:46:23 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/02 23:57:23 agc Exp $
 
 SHA1 (hackrf-2014.08.1.tar.xz) = f6e1372d128f86d374f58f9ca7b8a27aa54d1466
 RMD160 (hackrf-2014.08.1.tar.xz) = e179414cfb6ef0c65d0f22511f7bf72935528a5e
+SHA512 (hackrf-2014.08.1.tar.xz) = 2bb2e9398479f635fc4cb73875d9728c689f5d29bfbdcaae661d98ecafe51d38ac8768dd4f38b87766195d9ed08757e76d790030edf6f6f572d547146287c073
 Size (hackrf-2014.08.1.tar.xz) = 14376904 bytes
