@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:45 agc Exp $
 
 SHA1 (tex-belleek-18651/belleek.doc.tar.xz) = 9368b63ff1f1f5d88038c6fe613eda997549a685
 RMD160 (tex-belleek-18651/belleek.doc.tar.xz) = 1120d990959b4d7888d3bb09963561e945650cd1
+SHA512 (tex-belleek-18651/belleek.doc.tar.xz) = 57c0182d830ab50cbcd7ba788a13158c3e328733ad8c70c06062c96c307dcbae4a1b9e26027639398e6efa26d17eea27082df830c223928cd23950d32ff4ac79
 Size (tex-belleek-18651/belleek.doc.tar.xz) = 720 bytes

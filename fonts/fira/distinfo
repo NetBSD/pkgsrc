@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2014/05/24 07:26:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:30 agc Exp $
 
 SHA1 (FiraMono3105.zip) = 421de6032fc78bfc8d539cc003d781a917aea11a
 RMD160 (FiraMono3105.zip) = 707ff6f0218a65116418c6974df81e9e80453dac
+SHA512 (FiraMono3105.zip) = 3ff57f63f2a1da5091caffbf413a1dfcd93eb1bb5c6a43b57558a685e8f634733b835aef661a9f655a62753d005d18d0dbb73615b56568b8f051ba94d2287738
 Size (FiraMono3105.zip) = 248960 bytes
 SHA1 (FiraSans3105.zip) = 8bb1685c59a8b9ad8b77482ddb00622ef4914510
 RMD160 (FiraSans3105.zip) = ca3200fa65c7f35e5ee6eb4e1159492ee53dc6f2
+SHA512 (FiraSans3105.zip) = 2babd01613a5680441ada52ed40353c5b38ede858b51fa90c80311a481f46c4ab0e622b8b3cdccdee7bcd1a40a5e7204c65b7995aa210bea7a77bec37a7aca7f
 Size (FiraSans3105.zip) = 3494079 bytes

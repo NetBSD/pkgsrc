@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/11 13:16:29 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:37 agc Exp $
 
 SHA1 (monafont-ttf-2.90.zip) = 0bf207d2b0c0cbe5610aad820996305645eddbff
 RMD160 (monafont-ttf-2.90.zip) = 92947e25c73f114d5720d23b629cdf9536875fe3
+SHA512 (monafont-ttf-2.90.zip) = 0cb0ddf13f398f8504d387e590748c8bf44f01f672eb1f1bffac7c3e027f730ea0e7db41d10727beaf42d26e10e2e518c686669bcdc33a7113343863e49a0a55
 Size (monafont-ttf-2.90.zip) = 1712768 bytes

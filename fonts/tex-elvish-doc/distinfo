@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:56 agc Exp $
 
 SHA1 (tex-elvish-15878/elvish.doc.tar.xz) = 938a8f816768c5f866121f00f916f5e95dd572b1
 RMD160 (tex-elvish-15878/elvish.doc.tar.xz) = ca968d21c93db11e7119bfa24d3adfcce2f53631
+SHA512 (tex-elvish-15878/elvish.doc.tar.xz) = fb049122ae17be504be82b02ce41bb63d6ca3e3ddf3a8e81d0670d0c8d31e186c4347e13d53562ff18e3bfbebb407b2baede4e7511977e7a9d725cc0f14b349d
 Size (tex-elvish-15878/elvish.doc.tar.xz) = 2384 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:17 agc Exp $
 
 SHA1 (tex-sansmathaccent-30187/sansmathaccent.tar.xz) = a4f4b4e43c36e1444e1679d477f1abc8ffb3383f
 RMD160 (tex-sansmathaccent-30187/sansmathaccent.tar.xz) = 11c272aee110ea60ce5371eb8c3014e52d1db661
+SHA512 (tex-sansmathaccent-30187/sansmathaccent.tar.xz) = 29d6ee26276baac488b4358e3acec6259f3ceff2812e0e45a082843c9b5d88dffba98b3452001176b8fdc7a2348a9e8cc4c623b4bc688064320d4b8bb39b0045
 Size (tex-sansmathaccent-30187/sansmathaccent.tar.xz) = 10556 bytes

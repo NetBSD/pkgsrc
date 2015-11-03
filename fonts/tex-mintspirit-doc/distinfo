@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:11 agc Exp $
 
 SHA1 (tex-mintspirit-32069/mintspirit.doc.tar.xz) = 96f71d3cb1a674d9f806f380f04996c6b4236e43
 RMD160 (tex-mintspirit-32069/mintspirit.doc.tar.xz) = ab528ce7fbc9ece0339a34bec0f3e696ccdb6163
+SHA512 (tex-mintspirit-32069/mintspirit.doc.tar.xz) = 452806a52787cc8d60d195f7e67aea6f856cd1610bcb32fe0abf21534f8c3d63425cb6ce1bfcde49486fd77be7bb82012170f8854780eb265c4e899e81e8eea3
 Size (tex-mintspirit-32069/mintspirit.doc.tar.xz) = 308408 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:16 agc Exp $
 
 SHA1 (tex-romande-19537/romande.doc.tar.xz) = 6b95cbd5b1df9d6c50be125ba6a36e4d1922d1fd
 RMD160 (tex-romande-19537/romande.doc.tar.xz) = e2b377c8812594fb5466622fc8f2b6a4cba00d92
+SHA512 (tex-romande-19537/romande.doc.tar.xz) = 65f05171e84b4ab31cd26b0b6edd2b6ca6c7e5e2f8968ded6b780d3edda46713b3e935f9e041e1b3cc0f4b8536973e0e73ae7458e5121f99ea8e5a0c5826484e
 Size (tex-romande-19537/romande.doc.tar.xz) = 279440 bytes

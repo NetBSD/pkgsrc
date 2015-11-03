@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 18:57:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:51 agc Exp $
 
 SHA1 (tex-concmath-17219/concmath.doc.tar.xz) = 3da60615d62b4b045f55a7b5440f7deef0096b2a
 RMD160 (tex-concmath-17219/concmath.doc.tar.xz) = 02f0a98eaabd50c291ecaaee8e822298fa97d7b8
+SHA512 (tex-concmath-17219/concmath.doc.tar.xz) = 2f57ef3039c7db9bd1980da1e04f0dfa71dc4f75ff01116feec7491e2ae664334e7c5aa16297fff98397174184aa595063becf22e26c18093aade158c2dcffe8
 Size (tex-concmath-17219/concmath.doc.tar.xz) = 266160 bytes

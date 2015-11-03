@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:45 agc Exp $
 
 SHA1 (tex-blacklettert1-15878/blacklettert1.doc.tar.xz) = 5e87bb9b97329e60918d7ed589ca00da8faaee22
 RMD160 (tex-blacklettert1-15878/blacklettert1.doc.tar.xz) = 70f5e6f38b7d1a6eaac292106aa025d18033eb8d
+SHA512 (tex-blacklettert1-15878/blacklettert1.doc.tar.xz) = 615eeb2861d17dd0649fd563a1654e7674de7df66eb0d4d3f3941cb7e4a8d73fc52951d3c25c5d602eb5f150ce93cb7cea72c1039b4f74462bc272484895899b
 Size (tex-blacklettert1-15878/blacklettert1.doc.tar.xz) = 88900 bytes

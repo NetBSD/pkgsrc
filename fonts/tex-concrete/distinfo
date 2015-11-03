@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 14:51:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:51 agc Exp $
 
 SHA1 (tex-concrete-15878/concrete.tar.xz) = 5bfeab328227ef0d2b4f6f886471576b019ff57b
 RMD160 (tex-concrete-15878/concrete.tar.xz) = 1f8d62b8ce421fd3882d8206b06af8587d5bd53a
+SHA512 (tex-concrete-15878/concrete.tar.xz) = 0c3b114dbca614da4b38fc4cb41c3f2d856f7d852130aa0e32ce6a2b6c47752d0b7b8874178fdb1ac6559543e41833ea84ab83c61619e5bc95b2483d360b3998
 Size (tex-concrete-15878/concrete.tar.xz) = 9520 bytes

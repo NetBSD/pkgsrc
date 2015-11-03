@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:29 agc Exp $
 
 SHA1 (chkfontpath-1.9.7-1.src.rpm) = 678c96d1e6e0a0c27397d205b45581055c5db7bc
 RMD160 (chkfontpath-1.9.7-1.src.rpm) = de37618ec0fa35a7100c842679e16750a6d7dc3a
+SHA512 (chkfontpath-1.9.7-1.src.rpm) = 2d41b10c961bde00520291f8dddd5971174823faa258b9a614bcfb169962bfaa92e98c48e3024a1d7c4e8787b33ee945bebb6e78d9cb93b18e403181aaae777c
 Size (chkfontpath-1.9.7-1.src.rpm) = 13352 bytes
 SHA1 (patch-aa) = fa54e0d9e096b41fa78c010edecfa6fe658fb935
 SHA1 (patch-ab) = 209948e625493a769671b17ee2fc2696de42c73d

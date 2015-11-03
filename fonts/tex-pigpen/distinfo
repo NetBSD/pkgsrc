@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:14 agc Exp $
 
 SHA1 (tex-pigpen-15878/pigpen.tar.xz) = b947a610567aed86f7ea9ccb7330d4ffba26ef05
 RMD160 (tex-pigpen-15878/pigpen.tar.xz) = dd79e26c2448a6f39f644f9f10d1b13f5f092369
+SHA512 (tex-pigpen-15878/pigpen.tar.xz) = c64238e62674a648b8985c68aaa479946a1c055ad4d5cfdf3dd2d7261457d856f02c525c11b71c7b87dfc00ebe9dec773200f230240f6082093f6867761b171c
 Size (tex-pigpen-15878/pigpen.tar.xz) = 6808 bytes
