@@ -1,7 +1,7 @@
-$NetBSD: patch-gfx_skia_trunk_src_core_SkUtilsArm.cpp,v 1.2 2015/10/25 15:59:37 jmcneill Exp $
+$NetBSD: patch-gfx_skia_skia_src_core_SkUtilsArm.cpp,v 1.1 2015/11/03 15:52:57 ryoon Exp $
 
---- gfx/skia/trunk/src/core/SkUtilsArm.cpp.orig	2015-09-29 21:44:49.000000000 +0000
-+++ gfx/skia/trunk/src/core/SkUtilsArm.cpp
+--- gfx/skia/skia/src/core/SkUtilsArm.cpp.orig	2015-10-22 22:30:24.000000000 +0000
++++ gfx/skia/skia/src/core/SkUtilsArm.cpp
 @@ -16,6 +16,10 @@
  #include <string.h>
  #include <pthread.h>
