@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/08/19 13:34:00 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:34:01 agc Exp $
 
 SHA1 (gmic_1.5.9.3.tar.gz) = c795fd628a4e416538dd5521581307326d1785df
 RMD160 (gmic_1.5.9.3.tar.gz) = 19f7edd3200ec1fb199d1584b2999d6137a1273f
+SHA512 (gmic_1.5.9.3.tar.gz) = e8f9128ae819d07dbd87f0b13fd7b96926efad02ee8cf4371247912a47332d199aa1572fd06f62423af394f7921c4d772d8c79253f74e06a48721a4ad387829c
 Size (gmic_1.5.9.3.tar.gz) = 2791352 bytes
 SHA1 (patch-src_Makefile) = c84a9719023dfdaac512ee85acd104d633e103d8

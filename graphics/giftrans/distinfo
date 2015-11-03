@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:06 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 21:33:59 agc Exp $
 
 SHA1 (sgif1122.tgz) = 7080d835f1fe507c0f561756f669e9484e6f6af8
 RMD160 (sgif1122.tgz) = 331bf6c202069b7d987a74d3ac1128d3e32671ca
+SHA512 (sgif1122.tgz) = a86dca9f826582d8c657081b7bf8e819f9917da45c67b48ba29746decc1ab6f8adf9039a8158c72dae74e5df79b991af6599043cd68f6c6dca978aa9e100afa4
 Size (sgif1122.tgz) = 15960 bytes
 SHA1 (patch-aa) = 80f1194ed57289858653e5749f0e19e7da96b497

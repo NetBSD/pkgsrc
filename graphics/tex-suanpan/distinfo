@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:32 agc Exp $
 
 SHA1 (tex-suanpan-15878/suanpan.tar.xz) = baa88e5d47f436b71969f78b033f6b5c1fee4200
 RMD160 (tex-suanpan-15878/suanpan.tar.xz) = b8bf5339d23da17a76f56536d0c316e42c07b04d
+SHA512 (tex-suanpan-15878/suanpan.tar.xz) = 420461f06d33b011e4a28728ebfb735d3318daabeeb16b205f4e92e01e50ddfcd6a9dadf3389e9fa29259168c30533103e78145ac559b051d7b05c1bc5c584d5
 Size (tex-suanpan-15878/suanpan.tar.xz) = 4480 bytes

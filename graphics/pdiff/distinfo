@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/06/18 05:41:00 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 21:34:14 agc Exp $
 
 SHA1 (PerceptualDiff-1.0.1.tar.gz) = 301d703e7d3c474b663a4abcd63d81500d073be9
 RMD160 (PerceptualDiff-1.0.1.tar.gz) = a2931d55b7efa66b907f9002d9380f2f8a088534
+SHA512 (PerceptualDiff-1.0.1.tar.gz) = 7746b455d310e75a0d105449329d86f8b3df5a5988a3e6d1385d5d9733e5c1b1bed2ff307f8e2bda58c957c75bdf5a5ae5aee43820cbdb32dada93faf79c0d6a
 Size (PerceptualDiff-1.0.1.tar.gz) = 32344 bytes
 SHA1 (patch-Metric_cpp) = df75a8b9ac43e53a911e8afa041725680ef8a124
 SHA1 (patch-aa) = 8741a4f366964e6a43db23befe859b82cd27d048

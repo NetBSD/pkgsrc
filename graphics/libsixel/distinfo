@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2015/04/11 21:11:28 ryoon Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 21:34:09 agc Exp $
 
 SHA1 (libsixel-1.4.11.tar.gz) = 53afd51994461c3974ef2944366bbc399da9f1fc
 RMD160 (libsixel-1.4.11.tar.gz) = 4a0f2b0271e413d57a7feb887cdad870d227a022
+SHA512 (libsixel-1.4.11.tar.gz) = 1e8d481e425713adca247b3490de35bb343546693a9266fbb5b22a48f182c7dc20ad3e97ac2a4469b308ee4a2557a1937edf93f461880ef058c8201a30c3efdc
 Size (libsixel-1.4.11.tar.gz) = 4057623 bytes
