@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/05/23 06:55:10 kefren Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:27:50 agc Exp $
 
 SHA1 (mono-addins-1.1.tar.gz) = dc3d494f484bfef0b7e7024939f18c7b4d7ee4db
 RMD160 (mono-addins-1.1.tar.gz) = 403be8552cd2bfae244799766c3b37abd6273270
+SHA512 (mono-addins-1.1.tar.gz) = dfe5996e02b7b4ce082991eba9872b92d5e0a390edcfd6f64db96a58b65cb192a6ba1039d0a2af7055e1cc6f88d4454393ff4060c1da5a97108737d1635bece7
 Size (mono-addins-1.1.tar.gz) = 500318 bytes
 SHA1 (patch-configure) = f04ad986cdfcc53c830c15112677d52a956fbdb6

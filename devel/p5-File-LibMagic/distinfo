@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/09/23 06:43:47 mef Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:28:15 agc Exp $
 
 SHA1 (File-LibMagic-1.13.tar.gz) = 1f074a7f9fce9ac1e11b1fae41abfb6db51b7ae0
 RMD160 (File-LibMagic-1.13.tar.gz) = d4c22be7f59483bebacc3f204e63d216eb186802
+SHA512 (File-LibMagic-1.13.tar.gz) = 75bed10222401282fdd922d7d4a5538501ac91ae8fb48610eb19f5c879eea0a1da0fdd98222b60eac0943ff9dcce9cec8095b9510e1a8e59df51c41b3663abba
 Size (File-LibMagic-1.13.tar.gz) = 124384 bytes
 SHA1 (patch-aa) = 987e3f1aab290b8c04a84ec7d8b01ddf89684bc6

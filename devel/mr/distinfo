@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2014/10/25 15:34:54 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:27:50 agc Exp $
 
 SHA1 (myrepos_1.20141024.tar.gz) = e1cf7fac548ceaa60ebe855363cec916f5302cb8
 RMD160 (myrepos_1.20141024.tar.gz) = dacfaf333fb669f7c279cfa0d7d080243acb90ec
+SHA512 (myrepos_1.20141024.tar.gz) = 79d908d12e09a872cfeb4a2255d161887d47f16ffb47b6674c0fb1c5218a305e33b1b080d579a772387f3ef8d893e9858db7635a1576719f87b3e54ab85679a3
 Size (myrepos_1.20141024.tar.gz) = 44947 bytes
 SHA1 (patch-Makefile) = ecba0066c07532ab3c445e9c50ba6d4beeecea4b
 SHA1 (patch-mr) = 85b67b89019c5b96ee24337b8b2a86650cbdb978

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/02/26 10:25:38 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:25 agc Exp $
 
 SHA1 (fhist-1.16.tar.gz) = e8d4f353240bde8afd48862d9b225c410e47c11e
 RMD160 (fhist-1.16.tar.gz) = 234ae94aeb9638453ac6ba4aebbe66b3af36f24a
+SHA512 (fhist-1.16.tar.gz) = 919fc4d424e1f878404ec2d305dbcd66a4697c88c38af54033bdb178704cf08997c816d75db93ddbfc5248f29b997c4b8aaa3fd98ee790c32582124fc332bc1d
 Size (fhist-1.16.tar.gz) = 383180 bytes
 SHA1 (patch-common_input.h) = c72555eaf8dad73406531b2933314c22c67784b2
 SHA1 (patch-common_output.h) = ea2b35c288892e6a509318501bc2b537b3837ee9

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/12/12 08:37:53 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:27:56 agc Exp $
 
 SHA1 (App-cpanoutdated-0.24.tar.gz) = 5fe35c328f7265331123731076f84a802d2874c4
 RMD160 (App-cpanoutdated-0.24.tar.gz) = cd15d04594b542ba8faf1e2b42f1ade6412b253a
+SHA512 (App-cpanoutdated-0.24.tar.gz) = ff8e7cab1792c99af07549b10481acab28a0f44d7fd4ae694aaf354143d0f23f76c8cf272d57fad4a8e633b0c1af8693bb585837a3fd2731528e5ea89c1c484a
 Size (App-cpanoutdated-0.24.tar.gz) = 13898 bytes

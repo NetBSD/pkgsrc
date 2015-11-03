@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/01 08:49:39 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:59 agc Exp $
 
 SHA1 (CPAN-ParseDistribution-1.52.tar.gz) = 918091810da4db90c70e5a8e700baca88d460bf2
 RMD160 (CPAN-ParseDistribution-1.52.tar.gz) = 6402092e9925c7fef00d83a88962da3ad64ce851
+SHA512 (CPAN-ParseDistribution-1.52.tar.gz) = 0b5bde313aaa6279b4ffec6cf75d1f0f8ab242093f0636de3803b1cc728843da856976981b62b4bc14633f3f398124ca49eb8fda98a469416f7d814d83470b79
 Size (CPAN-ParseDistribution-1.52.tar.gz) = 1168279 bytes

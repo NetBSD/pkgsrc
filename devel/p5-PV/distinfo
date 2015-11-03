@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/02/22 18:08:02 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:37 agc Exp $
 
 SHA1 (PerlVision-1.5.tar.gz) = 2f1ecc3069f580baa3f0124224f10fcffff83c00
 RMD160 (PerlVision-1.5.tar.gz) = 6c98f2851b145932cf87afb09eefbd960903c038
+SHA512 (PerlVision-1.5.tar.gz) = 980360dbba6b5f1836579b35bd499f1844dcde7fee7db878e751cdfa47b3e7ed92bdb556b4a5134e71e4ca34d6f976a2ed0252de150a2b904a5900fd98144f93
 Size (PerlVision-1.5.tar.gz) = 19538 bytes

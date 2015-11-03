@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/14 19:56:11 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:09 agc Exp $
 
 SHA1 (Devel-EvalContext-0.09.tar.gz) = c5ff983a9af479cacd8763b682866b2d8a9dd301
 RMD160 (Devel-EvalContext-0.09.tar.gz) = 8256144f75683c02384dde428c546dbdd9e5ef37
+SHA512 (Devel-EvalContext-0.09.tar.gz) = d1f92184c72086e8dafa86683c61d75ae83b79117886375c81c62e0e8a45fb3329ba7aa95a50f0dc5df30475bc6e5df9c4b0a6e37600fe45daf21493a209bf85
 Size (Devel-EvalContext-0.09.tar.gz) = 5162 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/12/19 07:09:39 wen Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:41 agc Exp $
 
 SHA1 (Proc-Simple-1.31.tar.gz) = 6d19836780db01be9211f739adbda9b97fedb116
 RMD160 (Proc-Simple-1.31.tar.gz) = fb9d03c741fad87a7fb2e8810cf5b36833db82c5
+SHA512 (Proc-Simple-1.31.tar.gz) = 0000011949b9c725f2af18f02bddbcfa1e70edea4be7a1d730ac3dd8a4335e658e4852db1230180fb27ee86144d0b0eb57ac6bb1fbca72952960cd9e0abd3b8a
 Size (Proc-Simple-1.31.tar.gz) = 17151 bytes

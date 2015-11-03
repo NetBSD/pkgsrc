@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/11/25 21:44:06 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:27:30 agc Exp $
 
 SHA1 (GTL-1.2.4-lgpl.tar.gz) = 472a29211aa37a9c3f2e47336ddc16034d81c80f
 RMD160 (GTL-1.2.4-lgpl.tar.gz) = 5ee228fadfda0c450c358dd2be16265cca49e1f1
+SHA512 (GTL-1.2.4-lgpl.tar.gz) = 1409bfde89e687a5118187d0b590d280be1d2e52959413c53bf9c3e5083e259fb3f201638adaece0f58c9f5233bc92bcdde8dfc9cb79fca1e3e6f6f4f6a02240
 Size (GTL-1.2.4-lgpl.tar.gz) = 1074276 bytes
 SHA1 (patch-include_GTL_edge.h) = b2eb9205824136dc03a28839a421e295ec7f81ab
 SHA1 (patch-src_graph.cpp) = 96e00cf0999a27a613a37abbae64a15f9d824fd7

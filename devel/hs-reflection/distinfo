@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/07 13:07:56 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:33 agc Exp $
 
 SHA1 (reflection-1.5.1.tar.gz) = cb0c9630b562667fe4044b329309c8aae792b9fe
 RMD160 (reflection-1.5.1.tar.gz) = 2069fc51ecc5e26e733929c3172bc4bb131c7849
+SHA512 (reflection-1.5.1.tar.gz) = 8872bb50c2e059455f4dc80803747f2dcb08953176db99ddd2b49e55933a85278f6a354425145d32957055b7925d47677b4b85a88560b73263c54ae4700de451
 Size (reflection-1.5.1.tar.gz) = 9436 bytes

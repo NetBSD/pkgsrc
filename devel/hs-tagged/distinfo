@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/17 20:56:10 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:34 agc Exp $
 
 SHA1 (tagged-0.7.2.tar.gz) = 2b758b1bc6417a8355795882c2fedd031e396b63
 RMD160 (tagged-0.7.2.tar.gz) = fb4a80216dab057d1b0381c3679f29c627b190a3
+SHA512 (tagged-0.7.2.tar.gz) = c5f68448a36e025830ae41111502d1669cce47a343622e65813a83308e0c365a78213ec51143193acfd1a434af24c9e8deb346a659ed7b35a8da8d11dae46cae
 Size (tagged-0.7.2.tar.gz) = 5534 bytes

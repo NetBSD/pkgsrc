@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/01 20:58:03 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:33 agc Exp $
 
 SHA1 (split-0.2.2.tar.gz) = c5aa04f033846058a96450e7720268348c13d928
 RMD160 (split-0.2.2.tar.gz) = 7d4fe221283836386807f0e73a90df1255061f6f
+SHA512 (split-0.2.2.tar.gz) = d3e1a0d875632d15b12c0e454188382b705f2b9d93cb99d64f0a2a150ee7b7458628eff95da7da5f51fe9ed4ef3bd8ef3640f925f66e8f6f61253f679326614e
 Size (split-0.2.2.tar.gz) = 14666 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/21 20:59:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:27 agc Exp $
 
 SHA1 (gccmakedep-1.0.3.tar.bz2) = 03018e2fb9d7df4fec1623cedb1c090bc224f971
 RMD160 (gccmakedep-1.0.3.tar.bz2) = 52bba35ccad3ae7057b5987d2c924984a00f7ae9
+SHA512 (gccmakedep-1.0.3.tar.bz2) = 563b2897770a4df2792ea3eae8183a1f9e78192b7efc9c8296ee68d1cba6e72fa962a88e3251bb780df776e2aa7e80d74d5096675c61526c232aefa4f9e6a5fc
 Size (gccmakedep-1.0.3.tar.bz2) = 104766 bytes
