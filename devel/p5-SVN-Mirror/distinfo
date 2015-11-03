@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2008/11/17 22:05:14 he Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 03:28:43 agc Exp $
 
 SHA1 (SVN-Mirror-0.75.tar.gz) = ce78647269f5c984aea444dc503e3f8dec6f4866
 RMD160 (SVN-Mirror-0.75.tar.gz) = 4912cfcb93d1b1e91fc11e3ab5134d4096a44b5d
+SHA512 (SVN-Mirror-0.75.tar.gz) = 0029edf67c6983944d3cc062b8712a6d46d30f46d0f5c3e035a487ff75135d00b861bc198e0cdb78f904d103aced26b8aa7ef7ca01c948ba1370ee2e72ae4d81
 Size (SVN-Mirror-0.75.tar.gz) = 122577 bytes

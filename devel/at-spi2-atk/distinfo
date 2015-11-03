@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2015/06/10 23:14:26 prlw1 Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 03:27:15 agc Exp $
 
 SHA1 (at-spi2-atk-2.16.0.tar.xz) = b3b8db5f1482b3fba2ed4a9528a7eac98515b607
 RMD160 (at-spi2-atk-2.16.0.tar.xz) = f07f9e4edb6af57a273d9c44cee3f275ffa16c36
+SHA512 (at-spi2-atk-2.16.0.tar.xz) = fcd40693e5ef55c640a52158996dc8bc66f53ef211c343cd5401c4bcd1669110ea836e0550eb41caee9c9f3a4f9670095a7dd8252600af943ddcb374bf50f011
 Size (at-spi2-atk-2.16.0.tar.xz) = 286668 bytes
 SHA1 (patch-atk-adaptor_Makefile.in) = 91ea0570a8a99dfa8c06005cb8c26b161b93731c

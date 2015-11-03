@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/01/28 02:09:17 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:28:50 agc Exp $
 
 SHA1 (Test-Compile-v1.2.1.tar.gz) = 2a56b985a4cf87f2db468c3683da315967397e26
 RMD160 (Test-Compile-v1.2.1.tar.gz) = 7b8b904ffd6442727580695954866e6e6126ffab
+SHA512 (Test-Compile-v1.2.1.tar.gz) = ebc11e6209e89676900d847b312252fc9915576da08ac4c9c2c73cc446e8c5007c1cdc71f0b1e3b19980a9ec2b7b9190c2d823b8510a6e2f45e798b89a979b73
 Size (Test-Compile-v1.2.1.tar.gz) = 15104 bytes

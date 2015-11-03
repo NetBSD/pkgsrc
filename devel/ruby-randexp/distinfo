@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/03/17 14:41:08 taca Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:27 agc Exp $
 
 SHA1 (randexp-0.1.7.gem) = b77aab995076fcf52a07a1e3188420b90dedb7e1
 RMD160 (randexp-0.1.7.gem) = 7b4640850cedcaaee5e740edb8c1c2d7f2cc6535
+SHA512 (randexp-0.1.7.gem) = 0c2d9747721d5049664c3ab3a9490118a5df8f8d4d63ff6462f56bece9a92bda0c5b218923b8583f5fd77b9cbcfb3c4d6ebcbc898c63db604e47128029733911
 Size (randexp-0.1.7.gem) = 35840 bytes

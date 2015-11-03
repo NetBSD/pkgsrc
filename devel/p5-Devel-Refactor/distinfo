@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/05 09:00:51 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:10 agc Exp $
 
 SHA1 (Devel-Refactor-0.05.tar.gz) = 6d94f77e2a0a2841784fd453bf0f58605c481761
 RMD160 (Devel-Refactor-0.05.tar.gz) = 3bfa9f8a1797213f7d76d92aa38f19f0fdff657f
+SHA512 (Devel-Refactor-0.05.tar.gz) = 81b77f3d3e12f198b5c6633b0fd715d894143e0aca9760c8b183162b86579b930ea56319a5222f2da506541a63f5d295f65add122f5e9760c0c2de21b254e03e
 Size (Devel-Refactor-0.05.tar.gz) = 10109 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/03/01 10:03:07 mef Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:28:15 agc Exp $
 
 SHA1 (File-MimeInfo-0.27.tar.gz) = 571dbd2faa15ba87809b3b5d5e200cccb247c493
 RMD160 (File-MimeInfo-0.27.tar.gz) = 39b25436ec4c552a5276f1c7ccbf10a85e953c2d
+SHA512 (File-MimeInfo-0.27.tar.gz) = 0be5b23d96291f792ac3190e38183021b0905870185979f11edc27ebb6fd0fb4726e3fde129cd92e42305978e15acf745eed9d7d203851b7ee2392c7f1e9a5c2
 Size (File-MimeInfo-0.27.tar.gz) = 30814 bytes

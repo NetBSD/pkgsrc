@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/29 07:27:20 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:45 agc Exp $
 
 SHA1 (String-PerlIdentifier-0.05.tar.gz) = 583f2a8f6484dcbcd54b2ecbe2b76b8919af6980
 RMD160 (String-PerlIdentifier-0.05.tar.gz) = d56cbf9064e9f88d9a8badc43285860f700eaa37
+SHA512 (String-PerlIdentifier-0.05.tar.gz) = 5414b3b18012900decb3fb75c2e17a9ea0e079e717a50a4e52b31d1218f616d94012a30f63309e39e7325c152ec4e40cb137f853b44a6b121172fc47f6772a32
 Size (String-PerlIdentifier-0.05.tar.gz) = 13278 bytes

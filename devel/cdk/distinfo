@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/12/29 20:32:37 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:18 agc Exp $
 
 SHA1 (latestCDK.tgz) = 0751eb6099d43e8d1f4e8b86d5684cc039310194
 RMD160 (latestCDK.tgz) = 07e5216db00bb6cfa4d5a61cc71b225c038be736
+SHA512 (latestCDK.tgz) = 55cea8a9f16ed2442937c180187ec31d57426161f1088785fd898ba841a4ae3f3ed1e97a122a597d180ab9e5ee3b73af479cb80cbe81f4a1ea4680df2433857a
 Size (latestCDK.tgz) = 267523 bytes
 SHA1 (patch-aa) = 95ee808fa302481a04fbe2fdcb94900e0dc09978
 SHA1 (patch-ac) = 3abc1f7b646d69331f9cf5228e1095a2579d2891

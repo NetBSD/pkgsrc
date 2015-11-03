@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/04/30 16:28:09 marino Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:30 agc Exp $
 
 SHA1 (gprbuild-gpl-2013-src.tgz) = 71c6278fd19f80ba4574de2696bfb3cbb9be4b70
 RMD160 (gprbuild-gpl-2013-src.tgz) = 8a7b78a84e1d52afc4009dad64ea89e773f1f585
+SHA512 (gprbuild-gpl-2013-src.tgz) = 5b84621770855bdc145eb100c3f61e1aeda6b05edc7c208b11377532619da9c7f9d920db03414aec02cf0e53317c132da99a018015af71434f14e426cf9f4664
 Size (gprbuild-gpl-2013-src.tgz) = 2291685 bytes
 SHA1 (patch-Makefile.in) = adf984726ac1c9cfed3fd57ec969b25d7c059b18
 SHA1 (patch-gprbuild.gpr) = 5ed5b2079c1a5a16595753d9559259ab182dbaa6

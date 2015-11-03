@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/27 13:12:55 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:31 agc Exp $
 
 SHA1 (MooseX-Attribute-Chained-1.0.1.tar.gz) = 3cbe623c20386497861478b8cf7837a0f1d76956
 RMD160 (MooseX-Attribute-Chained-1.0.1.tar.gz) = a166b54ab1f06bfebc8dca59dfa8e70633de0b40
+SHA512 (MooseX-Attribute-Chained-1.0.1.tar.gz) = 9e234b1813bbfa9f37c2d522ca78c57fc8426540afbb0b81ec520077617e7aa4da1cd9ba7539e8b71075f7439feb8d7364fa49af9b87c8fa33ede8122d14b6df
 Size (MooseX-Attribute-Chained-1.0.1.tar.gz) = 15133 bytes

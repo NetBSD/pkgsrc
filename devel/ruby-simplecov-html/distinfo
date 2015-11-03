@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/06/07 10:12:31 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:29 agc Exp $
 
 SHA1 (simplecov-html-0.10.0.gem) = 069857dfe3ec48845835a00521456423e0d41438
 RMD160 (simplecov-html-0.10.0.gem) = 5c14f353c0fb348813822907ba4309b33558649b
+SHA512 (simplecov-html-0.10.0.gem) = e9ca6bf2bd210c4f038a8f0e5a80ee3c4f47207cce74e5a6cb339358a9228cab26765a32da8c4d27d6aa83242616161af87fd3b40ffadc8af3ee5b95e70374cd
 Size (simplecov-html-0.10.0.gem) = 183296 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/08/20 13:36:37 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:28:10 agc Exp $
 
 SHA1 (Devel-PartialDump-0.18.tar.gz) = 274d3bf6871d458c7972d1571c8bee8aea9c4572
 RMD160 (Devel-PartialDump-0.18.tar.gz) = 408c4170ecc86807f024d27a1eaf8fa7301a3a25
+SHA512 (Devel-PartialDump-0.18.tar.gz) = 706639f5d5b5f67fd76fefd68a8019be08f44b58c3ce38a979101cd96053eef36977a78c14be91dbdf0b0e728f9b29941fc74b4d52a9925492e57a5897a1fec1
 Size (Devel-PartialDump-0.18.tar.gz) = 30047 bytes

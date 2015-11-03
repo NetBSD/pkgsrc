@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/08/24 14:49:41 richard Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:12 agc Exp $
 
 SHA1 (tryton-3.6/proteus-3.6.1.tar.gz) = f0642a6449565d03d657af55ac467d1bc5dc0357
 RMD160 (tryton-3.6/proteus-3.6.1.tar.gz) = 70f2f874f4823f4cfaf5721cf364fc0d4b5d9c09
+SHA512 (tryton-3.6/proteus-3.6.1.tar.gz) = f63b435a46e5e3f33e42b45d33a74c10ad208410dd31eae9cd90a4205e2dfd8fb883fb05d62627ea1080fc7a28cf4782dfb4d3c048c66b1276db1c441bbf4992
 Size (tryton-3.6/proteus-3.6.1.tar.gz) = 23400 bytes

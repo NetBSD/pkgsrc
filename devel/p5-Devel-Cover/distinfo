@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/08/03 07:44:48 wen Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:28:09 agc Exp $
 
 SHA1 (Devel-Cover-1.20.tar.gz) = d8850d193dc5d6da27c03911d99ebd0a94243c9c
 RMD160 (Devel-Cover-1.20.tar.gz) = 7dabb147d321ef4b3995042b88e25f5e8f8c3f61
+SHA512 (Devel-Cover-1.20.tar.gz) = 2c51eb033c9e37dfbe2d0cbf664b5044a99f5cac4c3e87aeada7829a5d130ec0efc390b5fb2e6795c39d01bfb4d18c4249bf81aeee639841f51b9f306b918faa
 Size (Devel-Cover-1.20.tar.gz) = 223004 bytes

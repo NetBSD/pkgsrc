@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/10 06:30:47 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:30 agc Exp $
 
 SHA1 (test-spec-0.10.0.gem) = ec7ea48707f247316a4556c3790d49e580c2e8c9
 RMD160 (test-spec-0.10.0.gem) = 83ffab654c447d423ee7c6325eb09e779a88aa19
+SHA512 (test-spec-0.10.0.gem) = a356080d7da179d1d0517f28b73172289b909ff58b1d1ec901632148d9e39839e95b884b3c07bb5387dd278bf6f29de45a80ac87f178d2bea7a3b481d4375a8c
 Size (test-spec-0.10.0.gem) = 23040 bytes

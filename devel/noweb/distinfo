@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/10/30 02:58:19 minskim Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:27:51 agc Exp $
 
 SHA1 (noweb-2.11b.tgz) = 3b391c42f46dcb8a002b863fb2e483560a7da51d
 RMD160 (noweb-2.11b.tgz) = 01e4fbb636dfd0f6d117caa045cf105e49d25fca
+SHA512 (noweb-2.11b.tgz) = 0363c68aa31549fd806a575e6055b117db51fb5b5f28e7b30bdf3c108b3cf9546e1c6a4e64faf892b013c79665b14d436879800d4e970b0732fbd482b416d0f9
 Size (noweb-2.11b.tgz) = 738870 bytes
 SHA1 (patch-aa) = 23dc54db5c96accd196cda14fb0c249f1fc117aa
 SHA1 (patch-ab) = 8b07b126d9b49c410ad7338ebef1991f631dde29

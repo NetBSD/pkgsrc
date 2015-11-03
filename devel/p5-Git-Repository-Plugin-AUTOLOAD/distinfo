@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/07 08:47:27 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:18 agc Exp $
 
 SHA1 (Git-Repository-Plugin-AUTOLOAD-1.001.tar.gz) = be4b0e52fb84ddc41cb1f1a620d132e5e521959d
 RMD160 (Git-Repository-Plugin-AUTOLOAD-1.001.tar.gz) = 1628379b2af9ff39af9e7285075656d692076b94
+SHA512 (Git-Repository-Plugin-AUTOLOAD-1.001.tar.gz) = 385d471e67c5d150b8357c9fb92c8edcbc8f7e02da124dca55c3cfd65c3403d5d1b74df344ecaa0265cad6348f0687dee3b4bbaa7d615f034fd41f6f85230a05
 Size (Git-Repository-Plugin-AUTOLOAD-1.001.tar.gz) = 11821 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:25 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:15 agc Exp $
 
 SHA1 (File-FlockDir-1.02.tar.gz) = a85b8ad825a2bf81020affcf242fd2b4aa0e8654
 RMD160 (File-FlockDir-1.02.tar.gz) = 5a8b5219c017e745f77c8f230dab8cb34c0d9495
+SHA512 (File-FlockDir-1.02.tar.gz) = efb351a5a2b8b7795f414c4fdb9c4ceb8ee2d6ac6245869fb6333d5ac43662b039617635357f3fe5c7eec939770166bb419bb3504619e0f3da5fd938c11e63c7
 Size (File-FlockDir-1.02.tar.gz) = 6060 bytes

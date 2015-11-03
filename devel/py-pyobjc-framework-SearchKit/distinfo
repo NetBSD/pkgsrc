@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:51 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:14 agc Exp $
 
 SHA1 (pyobjc-framework-SearchKit-3.0.4.tar.gz) = 35488ece9f9cb67bbef6e891b0239ed1736bf82d
 RMD160 (pyobjc-framework-SearchKit-3.0.4.tar.gz) = 0a90432df9debef372f7a4436cdaacc6905d8850
+SHA512 (pyobjc-framework-SearchKit-3.0.4.tar.gz) = 70d9617d4e90c77704d2d5c38c64ab0662b62c3ef6aa41557df96a86f64be18dab15ee8cf8e3e87e74cb26ce5dc57b141f94a01f6f2fa77d72fdc5f1968d29cd
 Size (pyobjc-framework-SearchKit-3.0.4.tar.gz) = 38259 bytes

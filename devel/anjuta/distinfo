@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.26 2013/12/07 23:47:02 dholland Exp $
+$NetBSD: distinfo,v 1.27 2015/11/03 03:27:13 agc Exp $
 
 SHA1 (anjuta-3.10.0.tar.xz) = bfa975641b3e25818b7eda34905c4d65eeb01152
 RMD160 (anjuta-3.10.0.tar.xz) = 871dbb7e6174296729eeefae6b8766591fff2ad0
+SHA512 (anjuta-3.10.0.tar.xz) = 32c3dd4e04f1efedf57b755775fc94293ec3d6eac2f2753bc16418c974cb9b35908179e22b4922b78257087e44b0b0aaacc5d7aa496ec433823c82b209edb174
 Size (anjuta-3.10.0.tar.xz) = 6468032 bytes
 SHA1 (patch-libanjuta_anjuta-plugin-manager.c) = cf8ec97d221ca9e091b4addd9ada24e3427bb025
 SHA1 (patch-libanjuta_anjuta-status.c) = 7541533e061a588ea9b6c404c8a7dd78710905f9

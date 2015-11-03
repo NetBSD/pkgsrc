@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/12/17 01:28:29 dholland Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:16 agc Exp $
 
 SHA1 (blame-1.3.1.tar.gz) = 9183b9b5f1db0611bda1b724e99957480764bbd7
 RMD160 (blame-1.3.1.tar.gz) = fef43320fd6148f4543824642d6b2e86227af245
+SHA512 (blame-1.3.1.tar.gz) = 906c546aa4d86ba695cd4afe4c82dbdd7a64c0ad0a44bb91b3b231e09df7f8b0aad6664f0e9646128567813a1b5eeb787381f86c99097668729f8f39295f8e21
 Size (blame-1.3.1.tar.gz) = 483406 bytes
 SHA1 (patch-configure) = dda113d5e55ada8d3464942c01d1a16f3543b92f
 SHA1 (patch-lib_argp-fmtstream.h) = 9cdd925d9eb80ab69b31e600d7cd01c5e8fe65b2

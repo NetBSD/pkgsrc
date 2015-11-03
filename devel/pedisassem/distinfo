@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2006/08/29 19:57:09 rillig Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:29:02 agc Exp $
 
 SHA1 (dsasmsrc.zip) = bc50eb6786dd0f5c68e61036587e04919721156c
 RMD160 (dsasmsrc.zip) = fac4e2e37f5b3c6649a32e4ed6004079e2cb60bb
+SHA512 (dsasmsrc.zip) = af37040683697e62b798d5a3d74c52fd5b50441af0e50d1b85f19e1f8580c728995dbf01c7bb703d645f2c69007b2ed688410f9964e74d7fd607b6ff09f5441e
 Size (dsasmsrc.zip) = 104759 bytes
 SHA1 (patch-aa) = fa289b7dad71b9c732681dd57ffd06a9118dc2d3
 SHA1 (patch-ab) = 5ee866f0bc5faa6658485b0b5a77dd2e84aa781a

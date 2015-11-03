@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/11/22 18:09:31 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:46 agc Exp $
 
 SHA1 (lincvs-1.4.4-0-generic-src.tgz) = b144d4faf67a0e6a45a925e7937cccfd4084049e
 RMD160 (lincvs-1.4.4-0-generic-src.tgz) = 163d85fa2567fe6f1eeacfeb080a188e2ff04bef
+SHA512 (lincvs-1.4.4-0-generic-src.tgz) = 4e89d262bbc68c3e5290a6e2b627281f514dea7e5f3fd8d6c1e9c8ee87d4d6393bd697033fdfe5673b27046c022c2031f74e5e2bec43ee3eda782e779eb38190
 Size (lincvs-1.4.4-0-generic-src.tgz) = 1232079 bytes
 SHA1 (patch-ah) = 781ddbcbbd310f1db3d2dfbc3b3f0042dd5e4bcb
 SHA1 (patch-ai) = 4a748fd61e552f3503f025027a9c9e50e3d79e64

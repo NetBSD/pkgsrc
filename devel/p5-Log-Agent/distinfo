@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/07/17 12:19:33 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:24 agc Exp $
 
 SHA1 (Log-Agent-1.000.tar.gz) = 8e38a4f82eab78a7d8df92e7d6a873a4bc34e85c
 RMD160 (Log-Agent-1.000.tar.gz) = 99b86fda6dbac72c87291b5e633539b4289c187e
+SHA512 (Log-Agent-1.000.tar.gz) = 5bdb068ebce637d88a5bfe51162de773dec4938aa2d9285130d7f51e9d875e02842387fda52c4189fa329f747ce34290bdd3e46b0a1eadfd7384008de998c302
 Size (Log-Agent-1.000.tar.gz) = 55407 bytes
