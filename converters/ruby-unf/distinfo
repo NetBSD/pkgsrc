@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/02/01 12:51:37 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:43:54 agc Exp $
 
 SHA1 (unf-0.1.4.gem) = 847ecaefb95c6639920a70e21812fad48c40fe08
 RMD160 (unf-0.1.4.gem) = 335553720ae6eab8fbc3a67f45ffb29503867cf2
+SHA512 (unf-0.1.4.gem) = a4784afa8b852497f758d1b6cdcf095eb9e5397a36c97b1f22b53cf8077cfedbf83fdcda36f359acf59ba61f1ab8b706ddd31d097afbc98a40d2dbd0f934292b
 Size (unf-0.1.4.gem) = 120320 bytes

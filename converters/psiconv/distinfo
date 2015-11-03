@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/08/06 11:13:32 wiz Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 01:43:53 agc Exp $
 
 SHA1 (psiconv-0.9.9.tar.gz) = e5065bc34c83eaf00d8325d30fd4730afe270442
 RMD160 (psiconv-0.9.9.tar.gz) = 8da701123273775db6e6f8fcacfc34e4077b9455
+SHA512 (psiconv-0.9.9.tar.gz) = ec21d1e4734ad79dc19146223d7016bd53b3a3bb602f3a55489663ccbf3a4c6f5c6417728e798b4448acc2e49ff5145f58c812edfdd6c11ee9060128b6157d3a
 Size (psiconv-0.9.9.tar.gz) = 554882 bytes

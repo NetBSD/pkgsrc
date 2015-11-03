@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/12/17 13:15:39 obache Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:43:55 agc Exp $
 
 SHA1 (txt2html-2.51.tar.gz) = 56ff47a8f6d833b4dda7fe44000215500e699e67
 RMD160 (txt2html-2.51.tar.gz) = 4c60b068c6856bad878e3a4228063b71f9dfa558
+SHA512 (txt2html-2.51.tar.gz) = 5670b53c73d3361b712f46723e548ce6cd5bd6f930852d1862753422e3c689f1fe5cd4ca3aee711e4553121970ccde6061eaa0fb0e4c134107bfb949b817872b
 Size (txt2html-2.51.tar.gz) = 119759 bytes

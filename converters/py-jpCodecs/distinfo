@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:12:34 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:43:53 agc Exp $
 
 SHA1 (JapaneseCodecs-1.4.11.tar.gz) = d5a93944dd06c21a604309cfd23e1a923576c88e
 RMD160 (JapaneseCodecs-1.4.11.tar.gz) = a1833451f4d51a78f2f16044fe3d85cd6c7be20f
+SHA512 (JapaneseCodecs-1.4.11.tar.gz) = de3e8ab035fb48c508eb64289aacf2c17e48427fd202a00bb549f133374f4083feda56fca9681552a5e046cf51c1d26ac1db477d4db059edc609e1fdd785e598
 Size (JapaneseCodecs-1.4.11.tar.gz) = 288814 bytes
