@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2011/09/12 07:24:52 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:25:50 agc Exp $
 
 SHA1 (flops.c) = f7f62c6d726f19e26a6621f8cc30ce3dd190a1d6
 RMD160 (flops.c) = d193df09aef2ebdb3ce8b76c5942bb2543c72623
+SHA512 (flops.c) = 56321837ecb2f66839e33a65833b362d71a7a9b713f718a6563d950e99d98f90209bc83d9f9a10d09cd1746e86388c1064ac8abb4fe0430c6541c3cd024ca926
 Size (flops.c) = 33791 bytes
 SHA1 (flops.doc) = 97e57d0e847f67fa177418163c67a753b52ade2f
 RMD160 (flops.doc) = 7705d274ae852c312c7b510732f29e9905901370
+SHA512 (flops.doc) = e14a73ae02c0e2be2fcbd9b78cad6e1d556b2335d64cce04cb00889122cfda91d194754bb42fc071823c808af00ddf28547a263db6ce3aa0ccc1b2c922643d3f
 Size (flops.doc) = 7751 bytes
 SHA1 (patch-aa) = 7539f7c2c8c995ffc3d53ced5a8b93b62eebcac6
