@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2010/06/02 12:34:02 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 22:13:37 agc Exp $
 
 SHA1 (libtabe-0.2.6.tar.gz) = d0c6a8a82e22567fa47e897ba7141414c9b71431
 RMD160 (libtabe-0.2.6.tar.gz) = 0d5d6d5cadb8d099ec77a28d54a0366efacc9ffd
+SHA512 (libtabe-0.2.6.tar.gz) = 005211bee052f5ddef9e20dbdd8a1f72c4daff07ca44da14a51397f05191893642ec1f09389364b7d876d83c43c235e2cda8fb05d6592e4520c8cd3cbf507749
 Size (libtabe-0.2.6.tar.gz) = 1788455 bytes
 SHA1 (patch-aa) = d4ac9101ce7352a9f440638e6ab81c1017df71ce
 SHA1 (patch-ad) = 474f0ff1a02d949d66f2802c25b81ed1722041d1

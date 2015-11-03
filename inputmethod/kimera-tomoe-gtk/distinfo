@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/20 07:48:09 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:36 agc Exp $
 
 SHA1 (kimera-tomoe-gtk-0.5.tar.gz) = 39ab9ce3198fa294851c27736eb9da72a522d27a
 RMD160 (kimera-tomoe-gtk-0.5.tar.gz) = ba8c77fffaaf4824f5a907e9cdced71cb78d81a0
+SHA512 (kimera-tomoe-gtk-0.5.tar.gz) = 67082b3934d46e3f2b23c135bc28de5a418281a01e9151348f4c64bbc0b8335173de76974e306174b43e5f1d9f781260024f8ae3a5c4e790acb9bf9c51e9d8c6
 Size (kimera-tomoe-gtk-0.5.tar.gz) = 334888 bytes
 SHA1 (patch-aa) = 986162267dfe5e4c84c1fa07ce98dcce34e47fd4

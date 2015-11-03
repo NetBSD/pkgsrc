@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.30 2014/05/31 22:41:32 ryoon Exp $
+$NetBSD: distinfo,v 1.31 2015/11/03 22:13:41 agc Exp $
 
 SHA1 (uim-1.8.6.tar.bz2) = 43b9dbdead6797880e6cfc9c032ecb2d37d42777
 RMD160 (uim-1.8.6.tar.bz2) = 5f94218d82475ac463534ec681769f34547e5707
+SHA512 (uim-1.8.6.tar.bz2) = 26a95d3b51ef7a99108234b9af30ee7b74141cb3af13d092d4cdbf0749f630934cfd67f74b09dacc3adcdce4a390104489d68a4e2419ec07418645a9b4e5715b
 Size (uim-1.8.6.tar.bz2) = 6500739 bytes
 SHA1 (patch-af) = 9f543b90bfefc5f560e1eaac97d60af70ffed5cc
 SHA1 (patch-fep_escseq.c) = 6c25c344e5b694542a3c5bc137ae1a1d36a8c835

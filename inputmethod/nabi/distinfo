@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2011/11/10 10:47:05 obache Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 22:13:37 agc Exp $
 
 SHA1 (nabi-0.99.9.tar.gz) = 1d51f48f15b6da60d00368d2357a170afa3b9f00
 RMD160 (nabi-0.99.9.tar.gz) = e254fa40c6a3d2de5351de7ee3d3f50b7f18be45
+SHA512 (nabi-0.99.9.tar.gz) = 19e6875a11f602534d91f52b0871665cf58be0d50356dcfe36a898cc9103c7cd40f7708121c877da4a830be68ae7ee21509284b63eb3ab87b6e41899f8a7de7c
 Size (nabi-0.99.9.tar.gz) = 834110 bytes
