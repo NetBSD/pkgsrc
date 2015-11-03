@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.c,v 1.6 2013/01/14 14:33:28 jperkin Exp $ */
+/* $NetBSD: pbuild.c,v 1.7 2015/11/03 19:06:47 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -150,6 +150,7 @@ main(int argc, char **argv)
 		if (argc != 0)
 			usage();
 		client_mode(client_port);
+		/* UNREACHABLE */
 	}
 
 	if (argc != 3)
@@ -160,10 +161,12 @@ main(int argc, char **argv)
 
 	init_jobs(argv[0], argv[1], argv[2]);
 
-	if (master_port != NULL)
-		master_mode(master_port, start_script);
-	else
-		standalone_mode();
+	if (has_job()) {
+		if (master_port != NULL)
+			master_mode(master_port, start_script);
+		else
+			standalone_mode();
+	}
 
 	if (report_file)
 		finish_build(report_file);

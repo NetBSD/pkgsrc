@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.h,v 1.3 2012/11/23 12:13:35 joerg Exp $ */
+/* $NetBSD: pscan.h,v 1.4 2015/11/03 19:06:48 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -60,5 +60,6 @@ void		 add_job_full(const char *);
 struct scan_job	*get_job(void);
 void		 process_job(struct scan_job *, enum job_state);
 void		 write_jobs(const char *);
+int		 has_job(void);
 
 void		read_old_scan(const char *);
