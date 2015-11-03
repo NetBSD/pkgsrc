@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/08/12 21:41:02 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 20:56:51 agc Exp $
 
 SHA1 (genecys-0.2.tar.gz) = 0140f91e1469237a385437ac7b2e6030902de110
 RMD160 (genecys-0.2.tar.gz) = 0039088028aae5f993a77d50c6d1c856ee61967d
+SHA512 (genecys-0.2.tar.gz) = a93e0e556855f361fdc25d2ce927b8ea3481662156e53879edde665ab7670909fec247c4104f8659c97611868d1f083376a9e1d2a75e0242eb8c9ce55247297b
 Size (genecys-0.2.tar.gz) = 786136 bytes
 SHA1 (patch-aa) = db825cb0ae83091babe798be06623a8067d59d7f
 SHA1 (patch-ab) = 6a9b73b9d45779bdc57061bed9baf058a3433c1f

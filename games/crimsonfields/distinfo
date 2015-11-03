@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.18 2012/11/07 15:24:39 joerg Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (crimson-0.5.2.tar.bz2) = c772f9c0bb34ac47251c7aaf8f4e55a49df463f0
 RMD160 (crimson-0.5.2.tar.bz2) = a78df45718a76476b063a46e3d7a3d623d4cf07b
+SHA512 (crimson-0.5.2.tar.bz2) = 3cc351d371c840a3f33c21c8ef5e53942ccdafcceafc1431fa5df18e33dcac2467d4e169bf47f1e275836fcb9787ed037ebd2453f363a26d0e0706be64832209
 Size (crimson-0.5.2.tar.bz2) = 858371 bytes
 SHA1 (patch-src_cf_path.cpp) = c4f8efb3c7e6f70af94b5bfd468a070003914322

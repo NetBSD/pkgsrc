@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/03 11:19:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:59 agc Exp $
 
 SHA1 (M1A1.zip) = 4be1baa1ae6c3fd89b0880470e7ad7cf8cf7ad07
 RMD160 (M1A1.zip) = 33c01d1082cbb9ab7f4aa60e03c1ed5e8ca0c508
+SHA512 (M1A1.zip) = e5b5c75f3aaac8fa693e47fdac58c2e71518e32a236c4b2e0ae4752abe50a2bc5633680e7e71a68fded40e3713715ae99f65c81f90e549ad0412cf3089d502ba
 Size (M1A1.zip) = 39545293 bytes
 SHA1 (Marathon2.zip) = 1e676497f505e6dea6d41afbb3ca8e98b9eba8cb
 RMD160 (Marathon2.zip) = bb6b10fc4969ce654ed2b3ac409cb9e749c35425
+SHA512 (Marathon2.zip) = 0719b807d3fff120448016ae634c6b44d893c6f7ad775fef57019d6b9239ae9194454b148b8f243a8881995e27c75df95db8648a07b9dccca82354b39f62ca2e
 Size (Marathon2.zip) = 27248151 bytes
 SHA1 (MarathonInfinity.zip) = dbff98ce3a9c27b6c2a5eb79ce3937eee72888a2
 RMD160 (MarathonInfinity.zip) = f9985ba752728c31d5370cd2fd5c64198f115c61
+SHA512 (MarathonInfinity.zip) = 1f347615b96d2c07914cda78bdc6971311f3933af78debfcd9fa87a0a3048220726a082602b7a76f516f7b3dd3240d1ea843794ab34e4e9e7733342d9d9fe5b1
 Size (MarathonInfinity.zip) = 30109883 bytes

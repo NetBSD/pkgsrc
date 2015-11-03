@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:11:55 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:56:46 agc Exp $
 
 SHA1 (colchess-7.0/colchess.tgz) = 66ece148fb68ca43a8354cc90788dcfd6cc30793
 RMD160 (colchess-7.0/colchess.tgz) = 84d2d5d5b58e66e1f895cd394caf20bd5dd6a7c9
+SHA512 (colchess-7.0/colchess.tgz) = 3cb88659c42f44ac188b5ebf1284f84881aefbc967e7f6a1572d18d2f79a680fc0221a22363c7b3fdb8865e8214be62070bd5ceba1c5f59d5d600ffcb40eb5fc
 Size (colchess-7.0/colchess.tgz) = 141954 bytes

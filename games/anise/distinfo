@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/11/23 23:28:06 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:56:43 agc Exp $
 
 SHA1 (anise-beta10-20040307-linux.tar.gz) = 3018edc28b8777a3e94343237557f0c74a135e0e
 RMD160 (anise-beta10-20040307-linux.tar.gz) = 3b711393ad72b4eb22343098d359424229f9097a
+SHA512 (anise-beta10-20040307-linux.tar.gz) = b16113fade071c51ce2701ea112bb994b4517010244b5b7340d83cec9c24760b8b5b68f9826a40041c3f84aba4c189234ebc131aa189862792513c4bbe71a453
 Size (anise-beta10-20040307-linux.tar.gz) = 517545 bytes
 SHA1 (patch-file.cpp) = 603f88b56af6edfbc3dbf8bd81522ed28a74ecdb
 SHA1 (patch-option.cpp) = bb985b8c3d074e775a8b1020032403a82074ccb2

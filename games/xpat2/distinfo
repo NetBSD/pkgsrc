@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/08/17 08:19:49 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 20:57:09 agc Exp $
 
 SHA1 (xpat2-1.07-src.tar.gz) = a200c526e842bc6dfe5da67d4e49714c21403e9c
 RMD160 (xpat2-1.07-src.tar.gz) = 79658d1c8372768200ae42f225da0c7fcdcf187c
+SHA512 (xpat2-1.07-src.tar.gz) = 2ac6e966a87d9b35f364a3c523bb10a4f6efe6f0dfd7c1f8bf1f64b35447a63a52b1651ea85b4e1e7d64c197b678f9a29454f1e2c24736c58f849226c000b97a
 Size (xpat2-1.07-src.tar.gz) = 519326 bytes
 SHA1 (patch-aa) = eac6d498efa924cb0aed966a2f3924e7ac432261
 SHA1 (patch-ac) = c7bebfc930d2357fdb7c48aca1d2e8b39e9f1e43

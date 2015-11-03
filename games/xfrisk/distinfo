@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2014/05/11 02:19:04 dholland Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:57:08 agc Exp $
 
 SHA1 (xfrisk-1.2.tar.gz) = 2a82c4be95e151fd34f816aaa125f3eb237c28be
 RMD160 (xfrisk-1.2.tar.gz) = 7e55be2742bf9b2db40cc10156a6ff615bc37e7a
+SHA512 (xfrisk-1.2.tar.gz) = fb27bd86e20ae0a4b90fd403da37ff4aa253bc801f6ff82cbfde3af1134a10f204cfec2e21127e1825981ac4e38ac5a50955a18510e3cd93b602c3a205357223
 Size (xfrisk-1.2.tar.gz) = 228943 bytes
 SHA1 (patch-aa) = eb7ec1f41c10582ece9dc65d858e5e03b2856049
 SHA1 (patch-ab) = 8c458f0fa7db8e2a032f592b857f4024769cb4f1
