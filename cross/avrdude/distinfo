@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/10/07 15:10:29 mef Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 00:47:43 agc Exp $
 
 SHA1 (avrdude-6.1.tar.gz) = 15525cbff5918568ef3955d871dbb94feaf83c79
 RMD160 (avrdude-6.1.tar.gz) = f2c31951c0941e86ff6deab6bd0348b54d05658c
+SHA512 (avrdude-6.1.tar.gz) = 7d9d12f1597308dd059a1ab43dca31ad145601c59f8655d7edb596224a754694202c0838f2b907398f796ef7bed90c5dc6a58d811481dd775da1e07b842362de
 Size (avrdude-6.1.tar.gz) = 714595 bytes
 SHA1 (patch-aa) = 619f682af2e8eff36684993b331ba37cd1b446b6
 SHA1 (patch-ab) = a9105ae562c078eec5c87df6e7f27a80184bb6d4
