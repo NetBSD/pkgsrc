@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/21 12:21:45 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:43:52 agc Exp $
 
 SHA1 (MIME-Base64-URLSafe-0.01.tar.gz) = f37a9c32c8f2847db2e00aca4998b32c7b9ca384
 RMD160 (MIME-Base64-URLSafe-0.01.tar.gz) = 561b7c26371079494c91f56b3f23347837f14a1b
+SHA512 (MIME-Base64-URLSafe-0.01.tar.gz) = c1633763e1e5439af331696b11a05b16d539bf92896cdd3daa7314c3be09c73044fd254ec2562c0da4d306dd2b60e827fe0acdfacaf327b2e00ba0e242139d9a
 Size (MIME-Base64-URLSafe-0.01.tar.gz) = 2404 bytes

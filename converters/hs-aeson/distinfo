@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/07 21:07:53 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:43:48 agc Exp $
 
 SHA1 (aeson-0.7.0.6.tar.gz) = 0c81c28e2524e2f9c67dd5f8736714a6ddd55354
 RMD160 (aeson-0.7.0.6.tar.gz) = 385100fc318f8ffd11c31814891a7caddf12f5d9
+SHA512 (aeson-0.7.0.6.tar.gz) = 68a34188e3fb3a4c99a9b2380b5b0e294c2e4a11321162cda7fc6b73c81e6706d51f77c069df4ada68e372867891fdee9ca2443993f802b06aa5137170e613ea
 Size (aeson-0.7.0.6.tar.gz) = 141565 bytes

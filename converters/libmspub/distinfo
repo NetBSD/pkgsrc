@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/08/25 08:15:18 richard Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:43:50 agc Exp $
 
 SHA1 (libmspub-0.1.2.tar.xz) = e1bab3a4be9215b69700dcdb81cf27e194097776
 RMD160 (libmspub-0.1.2.tar.xz) = d7b57b74503fab484d694042af109febaec57bb4
+SHA512 (libmspub-0.1.2.tar.xz) = c19025a2b887c33f5966b0972204ab2a8ae841b82df38eaf53c0cdc8f99d93cccab5e1c78143a79d5aef9c7a7387bd6f2cf34833a00861058e0e4687f48be714
 Size (libmspub-0.1.2.tar.xz) = 345556 bytes
 SHA1 (patch-configure) = 6e06700444a6dbde7a34de9df96b37291a9a6830
 SHA1 (patch-src_lib_MSPUBMetaData.cpp) = bdc6f44f44a2cc059b6918d742d8d184c707571f

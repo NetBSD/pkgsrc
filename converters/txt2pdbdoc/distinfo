@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:35 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:43:55 agc Exp $
 
 SHA1 (txt2pdbdoc-1.4.4.tar.gz) = 0098fa89040327fceb38fd4824345cacb866a008
 RMD160 (txt2pdbdoc-1.4.4.tar.gz) = 4b07fa6fad6b1ca129c5aad117801f79b5d66236
+SHA512 (txt2pdbdoc-1.4.4.tar.gz) = db3f89b30a99afff79ad54ee600ff661ea750ffd39f0b2dfdb94dade42df930f5890839cd157fc77666887604ce5abc866d127176d2a9a36b4305cf0a30c6c93
 Size (txt2pdbdoc-1.4.4.tar.gz) = 77486 bytes

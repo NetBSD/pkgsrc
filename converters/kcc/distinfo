@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/01/06 02:31:53 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:43:49 agc Exp $
 
 SHA1 (kcc-2.3/kcc.tar.gz) = 3bf36115891b18b2f34e7cd01770cf9937cf57f0
 RMD160 (kcc-2.3/kcc.tar.gz) = d9dd9a1f80fb0e47f1159bdd98c2dc931314b419
+SHA512 (kcc-2.3/kcc.tar.gz) = db942cb689d16c70898ba56c5231f2f78e8346c5faa8381439a63bd8b8fe5458b0f81c4f1399a9e35aaf23d2727a58a2100a138fe194c7fbc358ffce473c3860
 Size (kcc-2.3/kcc.tar.gz) = 18937 bytes
 SHA1 (patch-aa) = 1b3aff164bfe9a970750849ba8162242a82ed4d3

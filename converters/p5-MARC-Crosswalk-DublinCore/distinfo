@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 10:35:27 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:43:52 agc Exp $
 
 SHA1 (MARC-Crosswalk-DublinCore-0.02.tar.gz) = 75f5805dbfca9ab8070b577a804e506c4dac53b0
 RMD160 (MARC-Crosswalk-DublinCore-0.02.tar.gz) = d231d2c715d25e8b377b2b3aa70268c1c780506f
+SHA512 (MARC-Crosswalk-DublinCore-0.02.tar.gz) = ac2e05b3e37169c6182327d3975be4d85b1619931c5cb38a622db4b362d63dda45cc30bfb6bc83a0f7ce9a42bacb408ee4ffab6928834914f99344afad1cb78c
 Size (MARC-Crosswalk-DublinCore-0.02.tar.gz) = 7822 bytes

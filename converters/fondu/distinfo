@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/02/07 17:12:34 zafer Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:43:48 agc Exp $
 
 SHA1 (fondu_src-060102.tgz) = 4fa5438df935f15f0370802f94a04e8d1263061b
 RMD160 (fondu_src-060102.tgz) = e83da2821068e862c80550162cb0dd3cb097b3a5
+SHA512 (fondu_src-060102.tgz) = 01d31901ab50eee70a74a3e211d78c55173748ad6e0cdadcda471a1f543856795a3bd8b421206cde044d240a1b425f32f6e40239ade0e87517e00b6ed9277bce
 Size (fondu_src-060102.tgz) = 131516 bytes

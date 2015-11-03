@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2012/02/22 21:01:53 shattered Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 01:43:50 agc Exp $
 
 SHA1 (mpack-1.6.tar.gz) = 7fd3a73e0f131412920b6ff34872e7e7fa03e03b
 RMD160 (mpack-1.6.tar.gz) = a83330aa15437dc3ca6475cbf6e35b09ab9cef07
+SHA512 (mpack-1.6.tar.gz) = 9bff0d2753d78288e428a20c8cbb4596bd9862de4da7f42176731ce5fd459b15883d758f9b1ec7d4e1281cc1aeaaa046cec54aeb0997a7ffed74de07edd84714
 Size (mpack-1.6.tar.gz) = 179850 bytes
 SHA1 (patch-ab) = 8df8609e0a2268346d0a3a806f502b48193128de
 SHA1 (patch-ac) = a69986a5c1b7659fac6df05f4db9a44df3110892

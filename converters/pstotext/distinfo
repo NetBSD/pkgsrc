@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2010/04/28 07:32:40 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:43:53 agc Exp $
 
 SHA1 (pstotext-1.9.tar.gz) = d84732ba42301a8905f6b14f37d8b57ff8b42a3e
 RMD160 (pstotext-1.9.tar.gz) = 16dc199d19df64280184d11ccbced7a32770ddad
+SHA512 (pstotext-1.9.tar.gz) = a8148e94d635544a7dfa8c96ff6071717388e4dc6c3db36f2c50939dce96c1f824ee423b1622af9111fffc60cb298215a6ee85d956c81873d71ceac804ee48ca
 Size (pstotext-1.9.tar.gz) = 37461 bytes
 SHA1 (patch-aa) = ea34c276a605580e9a80427c9f5588c98f8778a0
 SHA1 (patch-ab) = 5273ef0a2380619e3ee4c02606327ff6bd5ba3ec

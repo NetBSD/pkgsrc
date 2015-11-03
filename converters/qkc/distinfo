@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:35 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:43:54 agc Exp $
 
 SHA1 (qkcc100.zip) = 25b5ecc5d34c76d6e784686621e5679aeb0ded66
 RMD160 (qkcc100.zip) = 7293482e4f37b3292785a2b32b045f82b4dd3e1f
+SHA512 (qkcc100.zip) = a03f12625c1205d1220c70e2c3bd8f4ef281a3f0f6317ad7a0221624ba6461a7f9fbbb1da68048fc2bb3b071895dfb13aaa630e780fd49eddb0b6c528ce2e4a0
 Size (qkcc100.zip) = 36308 bytes
 SHA1 (patch-aa) = 175287eaa1403848981c1948fca9fd3f8f9d97b3

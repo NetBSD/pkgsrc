@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2007/12/16 16:14:32 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:43:47 agc Exp $
 
 SHA1 (base64-1.5.tar.gz) = 25b5ae71c2818c7a489065ca1637806cd5109524
 RMD160 (base64-1.5.tar.gz) = 37852c8ace20924b310119d600070a0552d516b4
+SHA512 (base64-1.5.tar.gz) = 55cb42fbbe02b8d4a85fee1a8225aa5345fc66ea7f74bf5724439041c0e09f6217de198800e0562c1f6c6fb0526c355b1083dc27f44e23f51c54e8858563bc05
 Size (base64-1.5.tar.gz) = 223946 bytes

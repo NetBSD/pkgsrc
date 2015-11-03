@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/06/14 10:01:41 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:43:47 agc Exp $
 
 SHA1 (TECkit_2.5.3.tar.gz) = a10a78dd0512ad7812f689622a619a5102933797
 RMD160 (TECkit_2.5.3.tar.gz) = 18aadecc5ecd31d64080a446d4944018ac7b9e00
+SHA512 (TECkit_2.5.3.tar.gz) = 7185f84d2f488d16941257d9307ae73758faf315c1ec337a407809f87e702fe4f6319cbe5cc6e28425cf2452140d726415ef52ea33e88a251447502a8f43aeb2
 Size (TECkit_2.5.3.tar.gz) = 2417611 bytes

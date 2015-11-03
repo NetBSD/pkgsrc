@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/03 10:25:35 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:43:52 agc Exp $
 
 SHA1 (Sereal-Encoder-3.005.tar.gz) = 31f5e31a52faa75ae07d3721af0bfc395cd2f2c4
 RMD160 (Sereal-Encoder-3.005.tar.gz) = 1c3021dfd9b9c7d98c3ccfb6ba76f8ff32880579
+SHA512 (Sereal-Encoder-3.005.tar.gz) = 775c210d59078d0f8b36e66f773275d8b6c400b732501c651c414401e60f8be7dbcf2f8c4aa779f32d0c21f44c0399e53c7fe2369676420ca3394873168cfd3e
 Size (Sereal-Encoder-3.005.tar.gz) = 364799 bytes
