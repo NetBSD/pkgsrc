@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2014/05/25 08:04:00 obache Exp $
+$NetBSD: distinfo,v 1.20 2015/11/03 23:27:21 agc Exp $
 
 SHA1 (spamprobe-1.4d.tar.gz) = fbcd65eb21097cd860d5e5ee2c4c2524c717a237
 RMD160 (spamprobe-1.4d.tar.gz) = 4a9e098b92e6900d8b03d7ed5e8d052f2b2e8c56
+SHA512 (spamprobe-1.4d.tar.gz) = 176097b7e9de04a26a0a6a2c6b331ff375108ef7eb20cdfbda9abeec7ceb24a52c0edc932d8fcd8a5731f06b891469b4ee328562f4e88fbe6c737b719f45a8d8
 Size (spamprobe-1.4d.tar.gz) = 262761 bytes
 SHA1 (patch-aa) = 1a139882a9913537663a0d03b645e014b488ecbe
 SHA1 (patch-ab) = da2cd2cbc3b37e529e45b67eb7eea127afcaa07c

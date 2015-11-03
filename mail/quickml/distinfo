@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/09/26 09:42:23 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:27:19 agc Exp $
 
 SHA1 (quickml-0.7.tar.gz) = 7122a100840d16762e101e62993752401e95e5bb
 RMD160 (quickml-0.7.tar.gz) = bc34b93676eb342a450bc1a2d3b92d7a06603872
+SHA512 (quickml-0.7.tar.gz) = 48d5ef62430f015ccc58e8111e055064ce10bcf9d7cd5520fe615b869143a24419a360bad9fa0b9908f24c3a92172f8e73d8e2362d28aa1f6a086dd104ddb0a8
 Size (quickml-0.7.tar.gz) = 94147 bytes
 SHA1 (patch-Makefile.in) = d1c73befff63dac3f76dad27d70460527f2a1e2a
 SHA1 (patch-lib_quickml_config.rb) = f47e92e2cd2c89c2d400cca8813c5a82466cec18

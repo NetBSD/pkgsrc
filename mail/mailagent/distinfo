@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/06/16 01:00:54 mef Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:27:08 agc Exp $
 
 SHA1 (mailagent-3.0.73.tar.gz) = c8a0329d79c98cb25bb53c79f06fcd63df58c418
 RMD160 (mailagent-3.0.73.tar.gz) = 70b2804fdd0602a20cb5a9f3391d460f47972570
+SHA512 (mailagent-3.0.73.tar.gz) = f8ff7177abfd6d2f2395205f74ca9849f4c9bc123122070d470cfb731ef4243eafacb7173f5c73cfc3dcc0f8ba29e3fa683666d3ca19ce9c55f8f7ba7be5e3eb
 Size (mailagent-3.0.73.tar.gz) = 533579 bytes
 SHA1 (patch-aa) = 3a54c5549bb38050871546b9ab9b58c30349c7a7
 SHA1 (patch-ab) = 06234ca205484e24dc175d828c6ecc82d4dc3342
