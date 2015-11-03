@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2014/09/10 12:21:12 joerg Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 23:54:30 agc Exp $
 
 SHA1 (mediatomb-0.12.1.tar.gz) = 86e880584cc9c8aaf3926d56048510d1d06e76b4
 RMD160 (mediatomb-0.12.1.tar.gz) = ecb61ca2483f76421beef1036ac442b8f805fa96
+SHA512 (mediatomb-0.12.1.tar.gz) = 36e7269a532a79c91b4ea7be36f92cbefa913a1f856e422e46fe2b97ee7a569dd20c38b0cbe651a8e7faacde892ea18f3cac66c3c0737480c44f9b9bc3a45438
 Size (mediatomb-0.12.1.tar.gz) = 1240612 bytes
 SHA1 (patch-aa) = ac6c102295a64d101bb9afc8226869c30d0301fb
 SHA1 (patch-ab) = 3bc30de7f20c9468489453de95db28ec2192e2bb
