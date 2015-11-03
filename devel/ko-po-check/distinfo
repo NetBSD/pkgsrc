@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/06/10 21:54:07 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:37 agc Exp $
 
 SHA1 (ko-po-check-0.8.tar.gz) = 9a5e91d8234be86a18f8ce101eb69590bd216aaa
 RMD160 (ko-po-check-0.8.tar.gz) = 4e8c82c99386b977641c972d0bc6ca9fb2e6efed
+SHA512 (ko-po-check-0.8.tar.gz) = ef9a5529088fd3eb8d428d651bebc6cb75e33f5a713beccafa8fee9338d7612afe5b70c8875e012dcc621aee1d1e099e15cac431a606e0f08f18bb43cad9489d
 Size (ko-po-check-0.8.tar.gz) = 110419 bytes
 SHA1 (patch-aa) = e031d781ac18357ed3f4411233724328fe9d1e94

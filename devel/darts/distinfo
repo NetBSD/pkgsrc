@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/08/03 15:21:56 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:22 agc Exp $
 
 SHA1 (darts-0.32.tar.gz) = 14a20a36ded935bef2752a726e027baece7bc801
 RMD160 (darts-0.32.tar.gz) = 16b82a9ca2861bdda2a0f96cdf1f7ee8030408b7
+SHA512 (darts-0.32.tar.gz) = b9af8ce60688f5858dac2cac35a8666848dba6729f9f4364786123a1c0484e56c8b981ec04e59653afbcf20cce3b326a49243095213efb525b5669472ac7358e
 Size (darts-0.32.tar.gz) = 234001 bytes

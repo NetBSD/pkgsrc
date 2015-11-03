@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:25 agc Exp $
 
 SHA1 (Log-Dispatch-DBI-0.02.tar.gz) = 4c1732a96d8e7907a026d50665711a93fa1afc8d
 RMD160 (Log-Dispatch-DBI-0.02.tar.gz) = 8dd5579eed3f560726d6e3e48869f0977d373df5
+SHA512 (Log-Dispatch-DBI-0.02.tar.gz) = 57fc6ad726f835db9f97aa334e5a59b6340750b8eb7a0b9da879605dfb23137ccf63c02d68b22dceab3cfb857f04bea564a2c22f4b81fd09d319d832ed607491
 Size (Log-Dispatch-DBI-0.02.tar.gz) = 2882 bytes

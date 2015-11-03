@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/10 10:14:08 richard Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:09 agc Exp $
 
 SHA1 (hgnested-0.6.tar.gz) = 41aaf34f1cd55778cea1fb9327d96e079ded6d55
 RMD160 (hgnested-0.6.tar.gz) = 6f8c6e45813b9031efdbdd49788f61cd245543ab
+SHA512 (hgnested-0.6.tar.gz) = 8db033f16e85b854a5a3b9ce1795d2ffa9906bb9f2087a644de03aaa7de7ac89f43b0958a4a9b8e21f617cffa7ed47f17d35196e92d6a01ada096fc9f6c9d86a
 Size (hgnested-0.6.tar.gz) = 20020 bytes

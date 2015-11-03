@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/10/22 21:30:34 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:31 agc Exp $
 
 SHA1 (MonadRandom-0.3.tar.gz) = 0c60fb87483f5a4b7a133772352856c0f7c199cd
 RMD160 (MonadRandom-0.3.tar.gz) = 4a8ed8b3b464fab4251b517112005346a8da4e98
+SHA512 (MonadRandom-0.3.tar.gz) = a69b4858ae34336b3b0337d70b6ecec4835bdc90d2f151a93bf231dbff773691c466e6422c4d5f93421dec48a0341f3476fcf3d90ecbe8e3a7ec478d0dd04d0a
 Size (MonadRandom-0.3.tar.gz) = 4980 bytes

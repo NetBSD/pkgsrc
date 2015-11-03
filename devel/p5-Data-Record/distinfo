@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/11 11:04:10 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:07 agc Exp $
 
 SHA1 (Data-Record-0.02.tar.gz) = 0d9cbd2b3119aa65c9f4ca6cb6333eb921e1e1be
 RMD160 (Data-Record-0.02.tar.gz) = 21dd12e9e087ba7886bea60fbedca9d7c56e2c02
+SHA512 (Data-Record-0.02.tar.gz) = 958198edb099ec33cdf986bd74c36f44f553b1a6ffaec3f153e350765f06c51ae3e2bd09e342d9958e62032653c086fd60c2f059d9a58fea3b2023df16012294
 Size (Data-Record-0.02.tar.gz) = 7029 bytes

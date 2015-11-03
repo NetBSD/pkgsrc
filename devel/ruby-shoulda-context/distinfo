@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/05 12:21:46 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:29 agc Exp $
 
 SHA1 (shoulda-context-1.2.1.gem) = 6da0c5967e5c0ca12ff9391dac752237f309672c
 RMD160 (shoulda-context-1.2.1.gem) = a3c838c434d5a3ab0e876d726a32b2a3346984d4
+SHA512 (shoulda-context-1.2.1.gem) = eda6f82c101d0abdf517cabd9663a6a45d9e3d1ef19bdc51d4de35a45e18de15b1aee02a7a557460a3a9b1eafa61cd892240563b6f239b94339e9869c6e63ef3
 Size (shoulda-context-1.2.1.gem) = 24064 bytes

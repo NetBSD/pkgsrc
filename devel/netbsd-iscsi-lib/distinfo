@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/10/15 13:15:50 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:27:51 agc Exp $
 
 SHA1 (netbsd-iscsi-20111006.tar.gz) = e8c0176a32416e17f90ec33ebd014ec19d978c3b
 RMD160 (netbsd-iscsi-20111006.tar.gz) = fcb28098f0048f726570ee0f10d6d84e641330f2
+SHA512 (netbsd-iscsi-20111006.tar.gz) = 79fb4c93d81b52ad00f0dcb9124e7ce7d93fdf9c367e6b7f273d23c73f18990b50f41c81f5525d43565942e272417088923eee0ceff43801e10eb5a3ea62f5ca
 Size (netbsd-iscsi-20111006.tar.gz) = 535267 bytes
 SHA1 (patch-ab) = d769048053104c03739a7ff3f77280ef1357e23c
 SHA1 (patch-ac) = d7a7f72b83eb444f62bbfc34c2c02cc03b186ee9

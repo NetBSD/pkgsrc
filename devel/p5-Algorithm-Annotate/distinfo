@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:54 agc Exp $
 
 SHA1 (Algorithm-Annotate-0.10.tar.gz) = 7d6c94c4911d6472e0007dfb64210960a5255169
 RMD160 (Algorithm-Annotate-0.10.tar.gz) = f068df0cf68b6fd0093319da4137807256d440b5
+SHA512 (Algorithm-Annotate-0.10.tar.gz) = ee828f91876713db6dbcb3ca97dfee57350f1487f3583ecc1874a6a86eeb13d1bb35ee57dad67a8bd8b050417763ff4efef9db49e7061e355972f7a8aa6d000d
 Size (Algorithm-Annotate-0.10.tar.gz) = 1611 bytes

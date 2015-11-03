@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/01/03 14:25:50 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:21 agc Exp $
 
 SHA1 (ruby-bsearch-1.5.tar.gz) = d3af447d03a3e0a78e7f5a8b1965a9f482b8a2c1
 RMD160 (ruby-bsearch-1.5.tar.gz) = 17f4e241050aa6ac0792baf4d005a54b8c1d7ec7
+SHA512 (ruby-bsearch-1.5.tar.gz) = 7e67856869fcd42b93b96a6ed668dff4a3d892196a478ef0ade57b69bccd9562531d7f218b84e6ea255743b6e29eeca69243d5271290b3e2e384cc7f111e23de
 Size (ruby-bsearch-1.5.tar.gz) = 14836 bytes

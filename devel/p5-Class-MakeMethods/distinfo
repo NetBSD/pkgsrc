@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/04 20:41:58 tv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:02 agc Exp $
 
 SHA1 (Class-MakeMethods-1.01.tar.gz) = 723ac3f5bff2e49945864165e8fd5fe07bf8ee48
 RMD160 (Class-MakeMethods-1.01.tar.gz) = d8ee1820ac6cfabb6a47974a8310f2ea8bbce458
+SHA512 (Class-MakeMethods-1.01.tar.gz) = 3eb30d7a97362dc3e4622d5efbce903c38b90f98c9612734406db07e8c8c048ec528eb6f0556a67e8f89f267dd458c1c6bae94a43fdab9e28be83c905567d81e
 Size (Class-MakeMethods-1.01.tar.gz) = 162174 bytes

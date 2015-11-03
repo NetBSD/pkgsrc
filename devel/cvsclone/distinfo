@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/12 10:16:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:21 agc Exp $
 
 SHA1 (cvsclone-0.00/cvsclone.l) = f0886e5b028df2b863aeb11e08ece4031626a25b
 RMD160 (cvsclone-0.00/cvsclone.l) = b0fa4c32731e49f986c67e9639ba1fdd16149c2c
+SHA512 (cvsclone-0.00/cvsclone.l) = 61e8457eb1c6da9afb65270160a4e1dcf9ae64347e638764110c1ef24e5ba5bd9773afd72eb031c9d30516efe4546aaf4199127107b18592d8815c189092548e
 Size (cvsclone-0.00/cvsclone.l) = 33927 bytes
 SHA1 (patch-aa) = 390251a65275977b58fb356f858d0c2244e82ec8

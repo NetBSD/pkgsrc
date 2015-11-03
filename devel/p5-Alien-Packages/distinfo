@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/11/30 22:39:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:54 agc Exp $
 
 SHA1 (Alien-Packages-0.003.tar.gz) = 676519235ad817760b4e454e85e384f9d768eae9
 RMD160 (Alien-Packages-0.003.tar.gz) = e9bde00668e9b5134a14e4a47403a5816ce1c381
+SHA512 (Alien-Packages-0.003.tar.gz) = 9ea55c705c489652d42a3fb4b50f7579d91be68b39f8e3283be812d1480647157c18fca7cf21b5e0f00596a90631b8b45ed91ea03532359b1e2bffbf41730658
 Size (Alien-Packages-0.003.tar.gz) = 13506 bytes

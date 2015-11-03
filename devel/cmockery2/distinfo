@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/08/07 11:18:04 manu Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:19 agc Exp $
 
 SHA1 (v1.3.8.zip) = c50311fdcbbb207affacce9628c743c7e940aff9
 RMD160 (v1.3.8.zip) = 21dd89e27608a5e1a5cb091bc2fa39dceae31432
+SHA512 (v1.3.8.zip) = 5cbe7171b70da8ae57eeecf36d7112b0a2bf91d22a880e0891fa64f58478f13145bc226f982273121041722f94a69ee09b3a7fd896e23638ab163b8b021a2f91
 Size (v1.3.8.zip) = 83204 bytes
 SHA1 (patch-autogen.sh) = 91a064f8af52b48cdf91f1a285dd549e22a53351

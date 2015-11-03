@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/10/07 14:26:42 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:52 agc Exp $
 
 SHA1 (Test-Modern-0.013.tar.gz) = 444aea6a88844b7c6ddc8a85c6f48c64ceaad358
 RMD160 (Test-Modern-0.013.tar.gz) = bc6f045b8c2f8875de3371df6e39e8826becbdb9
+SHA512 (Test-Modern-0.013.tar.gz) = b59f897662bfecb1781959fb93bcb7b8090e13fe98beb50cf55b240d9a8e731c16a46ce6db1172953f2c86fad8c201a760ce918be03259d87218023be4438896
 Size (Test-Modern-0.013.tar.gz) = 38747 bytes

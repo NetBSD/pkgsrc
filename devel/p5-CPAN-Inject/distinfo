@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/10/04 13:23:20 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:58 agc Exp $
 
 SHA1 (CPAN-Inject-1.14.tar.gz) = 6d0b575ee3c9a0f17720522b25a4a431bc7d7ca5
 RMD160 (CPAN-Inject-1.14.tar.gz) = c88e0f94e65633a3490d48db18d38bcda9d9dc0f
+SHA512 (CPAN-Inject-1.14.tar.gz) = 32c69f3e7235b8491b14589089e1b687fb91cc0a15722dc682d2e08fe4ceb9b0587fc2fe3b18cca57cd56a8764c813ab91e2efe38f622177a8ee2355e71f84a2
 Size (CPAN-Inject-1.14.tar.gz) = 51015 bytes

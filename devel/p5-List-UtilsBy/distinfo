@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/09/02 12:16:53 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:24 agc Exp $
 
 SHA1 (List-UtilsBy-0.10.tar.gz) = babe5d5d8a3365e5b4bba77d7750675bb4ca940f
 RMD160 (List-UtilsBy-0.10.tar.gz) = ccc6df404ba2d9217e5d8652c900f748f2907540
+SHA512 (List-UtilsBy-0.10.tar.gz) = 3e73ca8a99da111ff8869fce9561f52163bd4173589f0ff5c17913afea080279765a1f306af50b11040e26eea0f8ae9d993a93b0f0908ed15fa301e421dc0384
 Size (List-UtilsBy-0.10.tar.gz) = 21845 bytes

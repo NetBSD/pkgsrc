@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/07/10 01:58:44 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:26 agc Exp $
 
 SHA1 (Memoize-1.03.tgz) = 90c989112741f43d8abc37b5c270517c5cecf1f8
 RMD160 (Memoize-1.03.tgz) = 4a83a51799cf8956d514d9f1e3fea71a02142d93
+SHA512 (Memoize-1.03.tgz) = 68302422a9fb4583e8dd535c86a62c3d55ba046221ce87ac66978c8ccc588be42fda109b9716a87196badea9455349d542c765d5dce50c80099c111e1b16d5cd
 Size (Memoize-1.03.tgz) = 47026 bytes

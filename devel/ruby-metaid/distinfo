@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:17:50 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:25 agc Exp $
 
 SHA1 (metaid-1.0.gem) = 9ed2a0f62da2749312571ea8c874fea48b7f4200
 RMD160 (metaid-1.0.gem) = ec5197db3a1527ed63b4499ea60d5ee0bda4aaf1
+SHA512 (metaid-1.0.gem) = 3c841a759568b9273b1e8addbe58a23df643e93a9d1f24a75a5686e26b7f16de1ab0573fd9f5032451ef813ab29c0801442a8bc74df94fc1d58f09062569ba33
 Size (metaid-1.0.gem) = 3072 bytes

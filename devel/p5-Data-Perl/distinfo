@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/06 14:19:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:07 agc Exp $
 
 SHA1 (Data-Perl-0.002009.tar.gz) = e62244f9e09c1db528992bbf55954a1e4dc54067
 RMD160 (Data-Perl-0.002009.tar.gz) = 078d40fd49ccd79e8afeb58856414f98fc2271fc
+SHA512 (Data-Perl-0.002009.tar.gz) = 872eae53641b7ac19a8bcd4a6522475bf042463fbb8380a45481289c6792fa17cf4d52d146228acf089b9cff091413684fa5b39f67bc28f362a5d2eb85d1d01a
 Size (Data-Perl-0.002009.tar.gz) = 23155 bytes

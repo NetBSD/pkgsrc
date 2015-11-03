@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 15:45:11 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:57 agc Exp $
 
 SHA1 (Wx-Perl-DataWalker-0.02.tar.gz) = d199c6a765168282c574c744bfdf707e10bb5549
 RMD160 (Wx-Perl-DataWalker-0.02.tar.gz) = 438cb23ac04047404c567698ddec999862ac19e7
+SHA512 (Wx-Perl-DataWalker-0.02.tar.gz) = 82c3277b6fb028fa307b582a9c9a2504fae50edcd2552a3f25aa36e531b509bd3a2b528e04c708ef06fa8321090077f0b19505901de7c339e790ea4a1e64dcbd
 Size (Wx-Perl-DataWalker-0.02.tar.gz) = 7588 bytes

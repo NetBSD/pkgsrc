@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/06/07 08:15:40 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:28:48 agc Exp $
 
 SHA1 (TermReadKey-2.33.tar.gz) = e0d94aa238de92516fc33ef020d16dd6c958ad54
 RMD160 (TermReadKey-2.33.tar.gz) = a7d8d7d843827f6ded972b384a466ac593bd5f38
+SHA512 (TermReadKey-2.33.tar.gz) = ecee70695f8d48f8eeeb6916a7f25aac536e8725815e6c22ed01791f152b55a4203460cb090b00b64ed71e093890b9bc096679223cc97bda0c323e61f105a0ee
 Size (TermReadKey-2.33.tar.gz) = 82916 bytes
