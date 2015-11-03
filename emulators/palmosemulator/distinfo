@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.12 2015/04/21 17:15:20 joerg Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 20:31:01 agc Exp $
 
 SHA1 (palmosemulator/emulator_src_3.5.tar.gz) = 2debd7690736397d0af41f7b2d482df65391fc65
 RMD160 (palmosemulator/emulator_src_3.5.tar.gz) = fbb6761e4c43ecc9fb20d90d2ae0ec6ccf1c3f27
+SHA512 (palmosemulator/emulator_src_3.5.tar.gz) = ab2d925048b4ffb697ef96aff71c78e3a25366ad7766099b38d97dbf59a5e3e52b11596f0a6aa7aa2effa41b1bfbc74355e4074be51a2f81349fd88abff4cd03
 Size (palmosemulator/emulator_src_3.5.tar.gz) = 3162363 bytes
 SHA1 (palmosemulator/emulator-skins-19.tar.gz) = 70b0497061d6877a4e3c6a378fa647c64fe3e019
 RMD160 (palmosemulator/emulator-skins-19.tar.gz) = 9b4e16f50b1d2b9ad9b17e3a104c34a983d0a4ba
+SHA512 (palmosemulator/emulator-skins-19.tar.gz) = baa36363d4b222048d081a8c0a95fd76dc0cc51523c58497241baacf5911226b130b4a7002e0aa86aac3c7e3ea560810a953f85c2b78e57b94894d887a75db14
 Size (palmosemulator/emulator-skins-19.tar.gz) = 2443913 bytes
 SHA1 (patch-SrcShared_Hardware_EmRegs328Prv.h) = 6f60a4ef6056eee5909407f8369b3e1a21327bc6
 SHA1 (patch-SrcShared_Hardware_EmRegsASICSymbol1700.cpp) = a2154e85ad61cdaa9cc09829c6107842a0e9044b

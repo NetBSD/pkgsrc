@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/10/03 04:45:40 dholland Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 20:31:10 agc Exp $
 
 SHA1 (BASIC2.rom) = 4a7393f3a45ea309f744441c16723e2ef447a281
 RMD160 (BASIC2.rom) = 2179cda4734227556bac230346cacd805e4e03a4
@@ -8,6 +8,7 @@ RMD160 (OS-1.2.rom) = 58d05cbbc98a3070ac746db4d8ef712f13671896
 Size (OS-1.2.rom) = 16384 bytes
 SHA1 (xbeeb-0.4.1.tgz) = 5e2fccfabd0aa5a656758b2ea0536570a790dabe
 RMD160 (xbeeb-0.4.1.tgz) = 67dba3262f7e5886a86e5656288d807fea540d9b
+SHA512 (xbeeb-0.4.1.tgz) = 121359c0f96d24cb48152fe5b28b48118abe4f74430321a1ea787337c4ccd578350b3a37ef1b04882f1660021beb75859a5d01b4fb48a54d235c81f2aede996a
 Size (xbeeb-0.4.1.tgz) = 351715 bytes
 SHA1 (patch-ab) = 704fca768a80b17e3aed1ebb8c6525c52f30e3f0
 SHA1 (patch-ac) = 72622acf9671ac0f72bd9b8271fc17f25d3655f1
