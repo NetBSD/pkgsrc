@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/03 02:46:46 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:56:25 agc Exp $
 
 SHA1 (yuicompressor-2.4.8.tar.gz) = b98fc627e931060e7fe87e15115ee0d76aa8080f
 RMD160 (yuicompressor-2.4.8.tar.gz) = ca321a415320624a4766f354237dfdf673e8aaec
+SHA512 (yuicompressor-2.4.8.tar.gz) = e47f6aa94b722b6a4f524b2b02d0343e43c2486aa8b71bb921e6a426dbf61dad464c42135f309fcc65907f7a253530ab85dbbb891125bd84597b1ec261e72e4d
 Size (yuicompressor-2.4.8.tar.gz) = 754433 bytes

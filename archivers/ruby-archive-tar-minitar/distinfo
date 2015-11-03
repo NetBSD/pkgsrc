@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/04/07 21:06:54 seb Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:56:25 agc Exp $
 
 SHA1 (archive-tar-minitar-0.5.2.gem) = 00002e37dba2de3022236b93a2a01d2d5582b97d
 RMD160 (archive-tar-minitar-0.5.2.gem) = e8d5eb202aae8f76010464baa1255b37a70da9e3
+SHA512 (archive-tar-minitar-0.5.2.gem) = eebe0f948721f40c75f06f3cce7a040564fc89bd6408a5b9a67bd7f437ca2de2dbcbab4a56d7b799d320329a5a0e21022ca6ccba834f725d0cf9b0d3cde58671
 Size (archive-tar-minitar-0.5.2.gem) = 23040 bytes
 SHA1 (patch-aa) = 1cebf4219c0aa9336cf859b68a0bf7566494d55c

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/01/04 10:43:44 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 00:56:20 agc Exp $
 
 SHA1 (arc-5.21p.tar.gz) = e68e358b86a67c68e8a1cb95a840f380bfda3684
 RMD160 (arc-5.21p.tar.gz) = c6a97105ab26cf1d2b6ad45d528894628cff0586
+SHA512 (arc-5.21p.tar.gz) = c70c01ec407cc27f6507e2715d8b553277609cb49369a1e65a83d007362a24b69bb09ef2bf168ee36ca6797bd4524644a89e9114d866351ae53fece193c2967c
 Size (arc-5.21p.tar.gz) = 84791 bytes
 SHA1 (patch-aa) = efbb7e0a3a715d871dc98ad4fad58d0ae49f5b02
 SHA1 (patch-ab) = e85c2698747106a7319db07185bfe0b6e2480974

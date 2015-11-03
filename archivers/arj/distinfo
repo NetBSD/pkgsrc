@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2015/05/10 18:50:47 bsiegert Exp $
+$NetBSD: distinfo,v 1.23 2015/11/03 00:56:20 agc Exp $
 
 SHA1 (arj-3.10.22.tar.gz) = e8470f480e9eee14906e5485a8898e5c24738c8b
 RMD160 (arj-3.10.22.tar.gz) = 80f8a1a8cd203f73def8e957d96563a4dba80153
+SHA512 (arj-3.10.22.tar.gz) = 4730dfdbab4f8095396c337578ed69bdaae52955ad468db50b52af8ad2846ecd6cfc05eb3ac0d03838c1c32ea60126f14a22b93e8181c06b9546456f3937ff76
 Size (arj-3.10.22.tar.gz) = 431467 bytes
 SHA1 (patch-arj__user.c) = 011e5deaa24c696b212beadad7d386ccb3c7112d
 SHA1 (patch-arjdata.c) = 4e4c142b97feee0673b14ea6f454f3d9de45f584
