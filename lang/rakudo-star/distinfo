@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/09/13 22:04:07 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:43 agc Exp $
 
 SHA1 (rakudo-star-2013.08.tar.gz) = ac59cbfdd52d82e21570c82b6b81a98135ef2bc9
 RMD160 (rakudo-star-2013.08.tar.gz) = 16e3ee89dec6f4927a97a4f9e223ac107c188b25
+SHA512 (rakudo-star-2013.08.tar.gz) = 34c1750a3e1c71c5d88512ae49495ebe3c5848cba59b56a9883a1d6d10b4420f295f4e7ab41994cdf94c6986fb582e8c97e7da58b0c7e9ec4e1e67d34353f288
 Size (rakudo-star-2013.08.tar.gz) = 9230224 bytes
