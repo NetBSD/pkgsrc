@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/09/12 20:29:30 asau Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 22:50:32 agc Exp $
 
 SHA1 (abcl-src-1.3.1.tar.gz) = 8516ebbc156a834a329e3fbbb8ddb6a4911dd278
 RMD160 (abcl-src-1.3.1.tar.gz) = 0ac87a862470e1997e0181a3ed7e2c1ad1237811
+SHA512 (abcl-src-1.3.1.tar.gz) = bceec515fa28c41fe1d501bf15c3b683b0684f0ed50bfef088ff2afaf7a1456e75474b01fcb5305c95ef977ea43c1bb995c155afec9b08cc21650c32b19a2153
 Size (abcl-src-1.3.1.tar.gz) = 1079773 bytes
