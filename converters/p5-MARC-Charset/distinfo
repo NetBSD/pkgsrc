@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/08/15 08:02:23 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:43:52 agc Exp $
 
 SHA1 (MARC-Charset-1.35.tar.gz) = 0db7c2294cb636abf79e3c69404d81ab0411fd86
 RMD160 (MARC-Charset-1.35.tar.gz) = 3fc740ead065e809f35d22ece970f31f198a88b7
+SHA512 (MARC-Charset-1.35.tar.gz) = a75f5d09a45c3abf78899649fb8f0eb8e9973fbcf4eeacf8aae515f0533c60d78b66dbfaecb18c3228b70d815aa90a1e4c7a55f978c4407fda093b094e833d30
 Size (MARC-Charset-1.35.tar.gz) = 194082 bytes
