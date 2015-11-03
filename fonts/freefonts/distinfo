@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 19:18:27 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:33 agc Exp $
 
 SHA1 (freefonts-0.10.tar.gz) = 9521b10068649db2140ea80e33145bcd6e368704
 RMD160 (freefonts-0.10.tar.gz) = 2f88aad8fa9ac021042ea90c0b6e7f7a7f78c293
+SHA512 (freefonts-0.10.tar.gz) = 21b911cb574015b6474b125fe20be6670fe32fe40e6534e738f8d0b527d3b7a8000843206343187deb565970e04fa900eeb5eae43e14b19a7acbeacad6b057b5
 Size (freefonts-0.10.tar.gz) = 2422824 bytes

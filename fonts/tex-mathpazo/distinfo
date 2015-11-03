@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/06 23:27:59 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:09 agc Exp $
 
 SHA1 (tex-mathpazo-15878/mathpazo.tar.xz) = 9c7492ee183caa0f2dca3db0a0158eb65b77cb18
 RMD160 (tex-mathpazo-15878/mathpazo.tar.xz) = 5bfc2a43952f57b34c69fedfa6e52901029930a7
+SHA512 (tex-mathpazo-15878/mathpazo.tar.xz) = 15ab2d5e4309e11d56c9922590a87dcc96d6e306f616eda72493a691579b4005f62b602cf65913c75b53527335009579751421a10d396dc9a7be06238942ed9e
 Size (tex-mathpazo-15878/mathpazo.tar.xz) = 63640 bytes

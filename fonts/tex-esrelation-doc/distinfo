@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/09/02 11:06:14 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:57 agc Exp $
 
 SHA1 (tex-esrelation-37236/esrelation.doc.tar.xz) = 416fafcb24683505e4615b8fb22dddf1b70bb26c
 RMD160 (tex-esrelation-37236/esrelation.doc.tar.xz) = a9dda6aad599e9aae63765255c1cee6b490bafa8
+SHA512 (tex-esrelation-37236/esrelation.doc.tar.xz) = a65577e62be7df903122d19369c1a119e97b307d1385732d5655f801b5f1e72deb7f18ade47082ce39cfa837f00fb1bbe78c3cfc0fb2a5856d2653bec68e58de
 Size (tex-esrelation-37236/esrelation.doc.tar.xz) = 158896 bytes

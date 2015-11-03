@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:40 agc Exp $
 
 SHA1 (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 26ad0bf4bb9fb4ef379f4593eb254230ee133630
 RMD160 (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 0d31466993cd94c5594db5acfbb1f3d23bd595eb
+SHA512 (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 5d5f518760fc6feec3dfddf8d7d0726999add56a0eb87d6768aa93dbb47db8d8595514ada5268f3a336cf5cca1bd20ec6a4a231a259bf14ca4ebb09e660eeb46
 Size (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 383652 bytes

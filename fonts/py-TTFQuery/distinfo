@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 22:59:03 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:38 agc Exp $
 
 SHA1 (TTFQuery-1.0.5.tar.gz) = fc7d1e8f8fcc0ad497dc9564b4bc788b8f7f448e
 RMD160 (TTFQuery-1.0.5.tar.gz) = 5630dbbda57708d4170bcba757c669c1a1b60e69
+SHA512 (TTFQuery-1.0.5.tar.gz) = c5bbdd7cb020dd23f20341d53f400f592654293bd923f64a0d33e269cbd3bc44a97a5cf5bb16485a8978e0d35d729edefbdd6c7d2e51dc65820699bb1df0f60b
 Size (TTFQuery-1.0.5.tar.gz) = 17850 bytes

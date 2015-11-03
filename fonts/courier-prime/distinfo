@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/29 07:57:18 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:29 agc Exp $
 
 SHA1 (courier-prime-1.203/courier-prime.zip) = 05e3c5fb937d44f8b2dd9b5705df98812ed73711
 RMD160 (courier-prime-1.203/courier-prime.zip) = e02c8414efd407ee86c7339a10cdc704a0e965b8
+SHA512 (courier-prime-1.203/courier-prime.zip) = 4a039d87ac236c96bf6b82e05bc3f9308ada20507bd6b2e6d265d0046b5c640daf4d1c19c3450131797cba575c60c651977bcfd51e791f7a59fa8c8718b96b28
 Size (courier-prime-1.203/courier-prime.zip) = 193595 bytes

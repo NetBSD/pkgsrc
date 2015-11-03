@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/12 02:10:24 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:32 agc Exp $
 
 SHA1 (font-dec-misc-1.0.3.tar.bz2) = a748d35b8b0241abd3e1d85f80da318b529a74d0
 RMD160 (font-dec-misc-1.0.3.tar.bz2) = f9c78b5534d3db41cd4a108d396fb0eb23ddeace
+SHA512 (font-dec-misc-1.0.3.tar.bz2) = af755d51c4c59cdbe5d3dccf37990bc787373958feb984bb037c8d8aba8a0eb410965a3600886b5123d89e85e1ea0498b84dfa384fccbbcbcaf3549b83c839c6
 Size (font-dec-misc-1.0.3.tar.bz2) = 99832 bytes

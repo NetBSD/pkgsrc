@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:14 agc Exp $
 
 SHA1 (tex-paratype-32859/paratype.tar.xz) = 9d6790e01af6683b983b6bdf98d02b8e110ac59f
 RMD160 (tex-paratype-32859/paratype.tar.xz) = d7827730bc550527cd427324937a3cd9e9001a0a
+SHA512 (tex-paratype-32859/paratype.tar.xz) = b35b1a7d37e1d86b0076ce715038cd5e6f09764749208c87b10ea487f40e4dd7fbe33f799f1ffe147d8f4ab266f4d372c85248faacb31401dc24309ac4e78ff1
 Size (tex-paratype-32859/paratype.tar.xz) = 4164704 bytes

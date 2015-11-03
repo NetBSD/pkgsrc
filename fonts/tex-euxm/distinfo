@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 14:48:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:58 agc Exp $
 
 SHA1 (tex-euxm-20202/euxm.tar.xz) = 996662d96151a0edcdf263253a2cbd226189e593
 RMD160 (tex-euxm-20202/euxm.tar.xz) = c821908d3c93d17d2c512df3e313d9dfbda7b28c
+SHA512 (tex-euxm-20202/euxm.tar.xz) = d7fbf1d5205c21da1c7a5844b8aed0c6a750151f37195fb79b2343ad8e61fc83a6ca44550dcc9f2ae8fbe7a032e73aca2fc428372683116461435e53e24fe7f4
 Size (tex-euxm-20202/euxm.tar.xz) = 25736 bytes

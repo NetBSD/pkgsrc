@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:43 agc Exp $
 
 SHA1 (tex-augie-18948/augie.doc.tar.xz) = 6a8bccc8ceca18afa2a4a0a7eaa4ba8078182f78
 RMD160 (tex-augie-18948/augie.doc.tar.xz) = faa2453f2232a33f96ccba9f5eeb8e4030fea444
+SHA512 (tex-augie-18948/augie.doc.tar.xz) = ea7010833a47c0d8e0b59a949d84d50e3e959dc9fe67bbc0a03336f7ffacf25ca249b6e94dbc57e1653eb971cb3fb027a23cdb4ba6d40087d4b02f86881260c1
 Size (tex-augie-18948/augie.doc.tar.xz) = 3332 bytes

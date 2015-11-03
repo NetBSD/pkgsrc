@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:16 agc Exp $
 
 SHA1 (tex-pxtxalfa-23682/pxtxalfa.tar.xz) = 622475825e45586adc661780e49d6758294b10a6
 RMD160 (tex-pxtxalfa-23682/pxtxalfa.tar.xz) = 90a41db6f8648fc65139e54dce4f13bdd1eb88f6
+SHA512 (tex-pxtxalfa-23682/pxtxalfa.tar.xz) = 858fadd0ced58296649a867e53a76e56fc41047077678dd2efd92933426011f298422dfbf5b9270b76a94aef1b461f90a0a676f12ac06c8f6be20215a242775c
 Size (tex-pxtxalfa-23682/pxtxalfa.tar.xz) = 9028 bytes
