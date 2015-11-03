@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/09/12 14:05:26 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:47:43 agc Exp $
 
 SHA1 (cflib-CVS-20130415.tar.bz2) = 524baca68c986a127fffb80a536ce8c42f7fd824
 RMD160 (cflib-CVS-20130415.tar.bz2) = 7e881fce899e39c2075a86fa9220f375a0d8b8c7
+SHA512 (cflib-CVS-20130415.tar.bz2) = 49b608b2622c58bf08f6ff0013cf5ce80926547051742385ffd8be625be2b06e8cee92ec8cd38886206f1598e2672e9e5c65a09b6d8d7ff958333cc48edf21df
 Size (cflib-CVS-20130415.tar.bz2) = 147537 bytes
 SHA1 (patch-CONFIGVARS) = 4b4fb58cca7bd5817a8ccb15ee6ef5ba5d9d712c
 SHA1 (patch-RULES) = 9bd511579b3e16b6de0d7aba2efcec82c3c791ba

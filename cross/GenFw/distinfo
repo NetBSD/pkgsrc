@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/06 16:14:16 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:47:42 agc Exp $
 
 SHA1 (GenFw-r15188.tar.xz) = 70b4a08bed0796ef5564589906eba43ea90d8545
 RMD160 (GenFw-r15188.tar.xz) = f9016fa23456f096388557a4d7151f36885b82dd
+SHA512 (GenFw-r15188.tar.xz) = 0472f8d072fd8ccf504db51578c621bb2e617d7368ba2d8c9bdc28636f3ccb0b9bd79bfea823049222734b560d3f18988810623cb7d6463d17c0cfe1be5e89ec
 Size (GenFw-r15188.tar.xz) = 134644 bytes

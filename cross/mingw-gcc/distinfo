@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.2 2012/12/19 12:49:16 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:47:45 agc Exp $
 
 SHA1 (gcc-core-3.4.5-20060117-2-src.tar.gz) = 75d59049f26dc62f3732d11abbf056efc7bc8e95
 RMD160 (gcc-core-3.4.5-20060117-2-src.tar.gz) = 624dd55ac00fba15269f1b3b3bbd6c383cc20827
+SHA512 (gcc-core-3.4.5-20060117-2-src.tar.gz) = 2ad427e309a4d63d019f36dfea97fb38a9a6e47cdc2a1a328aa9d1eb48bcd5c2e9e95968d8ed6bd30f9669e11175439300ed118d6fb8b27613fb661e2c2ac55d
 Size (gcc-core-3.4.5-20060117-2-src.tar.gz) = 17695876 bytes
 SHA1 (gcc-g++-3.4.5-20060117-2-src.tar.gz) = edafa412d86085cf39f0db1c19a6ea2890d05946
 RMD160 (gcc-g++-3.4.5-20060117-2-src.tar.gz) = 7e3341c6ef1494462dfd3f682ad4cc6871b73e98
+SHA512 (gcc-g++-3.4.5-20060117-2-src.tar.gz) = 30d0ccff89f03001e10694b3afa06a47733a7b21d6d51c4853e26996b836c84bc2312b6931462c4a37106753597d4a1bc893f9adfffb39ab0c0ecf6a4b8f33da
 Size (gcc-g++-3.4.5-20060117-2-src.tar.gz) = 3949457 bytes
 SHA1 (gcc-objc-3.4.5-20060117-2-src.tar.gz) = c96f1531d9d73e9279e0b6faf085deec5c2bda7b
 RMD160 (gcc-objc-3.4.5-20060117-2-src.tar.gz) = a02ad94da674760799ec945c7ff75ed99f9e8c3a
+SHA512 (gcc-objc-3.4.5-20060117-2-src.tar.gz) = e4fea537336d7d213de547396c84dbf917b7b0855d5de629f62f6cf3a74c5e539801061ff1b7c6ab0d5e569dd93bc5c1737770085682754fa225a99e0139b8ae
 Size (gcc-objc-3.4.5-20060117-2-src.tar.gz) = 266470 bytes
 SHA1 (patch-ab) = 7f7dfd0fd55037cc938c31b4ada03a7877e2cfc4
 SHA1 (patch-gcc_cp_cfns.h) = d9661d0e250819f2267ad88b30d0e0dca0031d0f

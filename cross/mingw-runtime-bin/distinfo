@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/15 18:34:39 asau Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:47:45 agc Exp $
 
 SHA1 (mingw-runtime-3.14.tar.gz) = ebd523dff5cb5bc476124a283b3ba9781f907fea
 RMD160 (mingw-runtime-3.14.tar.gz) = 1447b8894346ba46ecd350bc6d0feb06485ec0f9
+SHA512 (mingw-runtime-3.14.tar.gz) = e0f3f57ee08b08dad3b1c9876604908f7d47f90d1184606ecec3635587050d2b4a0684822bdfd1ad02b95ee27b52a14db883703895894b158dc48afe60d3c9e6
 Size (mingw-runtime-3.14.tar.gz) = 506843 bytes

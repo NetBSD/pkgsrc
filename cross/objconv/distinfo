@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/10/11 01:10:22 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:47:45 agc Exp $
 
 SHA1 (objconv-2.39/objconv.zip) = 51f3f5054b61ac952d466dc4c72b3b669e9890e3
 RMD160 (objconv-2.39/objconv.zip) = 5e161385bb3edaa373f473a660e61f3f5f97bf6e
+SHA512 (objconv-2.39/objconv.zip) = 3e64458be618b78f7c76ae1b29da8b07f9e983c5c2b0153298e4b2fba07215cb20cece426ba4c4e0ae96fa583c1a7feccaaeaaedc270ca24c76d339f9dc17a0f
 Size (objconv-2.39/objconv.zip) = 1007405 bytes
