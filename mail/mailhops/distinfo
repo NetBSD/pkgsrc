@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/05 13:20:52 is Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:08 agc Exp $
 
 SHA1 (mailhops-1.4) = 831945974ac5fb1221984fb7fce94148859dd977
 RMD160 (mailhops-1.4) = cad6b14ed8afb0b56ba445e2a8a46d0a740fe1c0
+SHA512 (mailhops-1.4) = 455608e8f390cb4f152736ddf2f60b56f1b27bb14b99c11a584d03f357872a7b755f97ed49e8aeb565239dfaed756f21a11f879a28ea28f125c0c13293ace398
 Size (mailhops-1.4) = 2982 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/03/15 04:41:39 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:27:18 agc Exp $
 
 SHA1 (qcheck-1.0/qcheck.tar.gz) = 9808edb279a83c6a881b5feaf458b7ea40157708
 RMD160 (qcheck-1.0/qcheck.tar.gz) = 29c5f147d6dd80a03fd3a1a31ac0b0df510b93bc
+SHA512 (qcheck-1.0/qcheck.tar.gz) = a94bd52b7a9b527dfa0a06e11b2bea1e06808f2f48405dda5b4ad2884b51d1b43245094e9f068447fb1c8a4c92756382acca0b3b0fe11cb184940ef4bb4e17f7
 Size (qcheck-1.0/qcheck.tar.gz) = 898 bytes
 SHA1 (patch-aa) = c02c027d8855edf44c4d37924672cc0e96710146

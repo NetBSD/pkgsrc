@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2014/01/06 03:52:38 htodd Exp $
+$NetBSD: distinfo,v 1.20 2015/11/03 23:27:01 agc Exp $
 
 SHA1 (alpine-2.11.tar.xz) = 656556f5d2e5ec7e3680d1760cd02aa3a0072c46
 RMD160 (alpine-2.11.tar.xz) = ea4b2d87500d1aa1b424033ec3263e3cf3c53814
+SHA512 (alpine-2.11.tar.xz) = 0bc0c163d57a92619315e386ff5b77bfa3c69d6721bcd33572fecf837f6c186fb8ea7a7e396036c853e41e8b7a2c7ec763bce3bd666a4c69868491c5bfd5776f
 Size (alpine-2.11.tar.xz) = 4403188 bytes
 SHA1 (patch-aa) = c306613a297d61591d577b6968a31fc85b03f852
 SHA1 (patch-ab) = f0983d8c0123b06a2970eb2736b04afad1502450

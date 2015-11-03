@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/21 21:39:38 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Net-ManageSieve-0.10.tar.gz) = e63f00cbcf2e9ade67db59c4043075ed4698a0a5
 RMD160 (Net-ManageSieve-0.10.tar.gz) = b53f6414332a215fa19600dc26425448a57ce04e
+SHA512 (Net-ManageSieve-0.10.tar.gz) = fa7b7ee545c3a59cd899f666ffeb88d4273ddf23a486d0bcbab4749d1cc42229e7cf40974a182e8795b877c443274e3d13dd9b8e9518fc3dfd1d3a8e7c1372b0
 Size (Net-ManageSieve-0.10.tar.gz) = 16012 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2005/07/14 04:23:14 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:18 agc Exp $
 
 SHA1 (queue-repair-0.9.0.tar.gz) = 123a9034c2fbbda7ca7c193153d67c4837909e56
 RMD160 (queue-repair-0.9.0.tar.gz) = 7634105825299e5d2314c819d7eb3260a3bdb2b3
+SHA512 (queue-repair-0.9.0.tar.gz) = b7c21de207c80c3f764eddae6e60b4d54869f2037f572f98ff4e0a1e34f55ae1feeab5162b4f0f902a5a3c9d631c687057cdfdc4f646d6843d845f31f5b7bf6f
 Size (queue-repair-0.9.0.tar.gz) = 13913 bytes

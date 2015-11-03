@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/03/04 16:27:26 schwarz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:24 agc Exp $
 
 SHA1 (xmailbox-2.5.tar.gz) = 5a213b7551c1d288bb5d5eb16b857c24ac72be38
 RMD160 (xmailbox-2.5.tar.gz) = 9a3c1e3fae890bdb84da09cca8357ceba9705b25
+SHA512 (xmailbox-2.5.tar.gz) = fd63a035a1994d22d6ab85c3d6adbce609de9a9a88936cf2936958294c995b4ed9ce35d2cabbed73fecaca9d735a49447ce59162d7154e090d560657824ab7b2
 Size (xmailbox-2.5.tar.gz) = 43535 bytes
 SHA1 (patch-aa) = 31682497caef92bed7b0cde4c1ace990079938af
 SHA1 (patch-ab) = de5e0dc8ec927827c156d61a1e4291ddaa6973dc

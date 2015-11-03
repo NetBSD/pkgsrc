@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/25 21:17:06 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Net-LMTP-0.02.tar.gz) = 2075fbb77b2e0878b385d1e62dfe05b4edc36e3f
 RMD160 (Net-LMTP-0.02.tar.gz) = ae26e4443f37df9bc804a932d9cf395d1fbe46c6
+SHA512 (Net-LMTP-0.02.tar.gz) = 1ec89d8391685a3af73b55d69d7606ffad7e154fa1c5616cc94c177e4ecf2a0a15ff2aec84d73dccaedcb07e5ea24d8116baeeb03ef0b0f00fff36cebf314fe8
 Size (Net-LMTP-0.02.tar.gz) = 5633 bytes

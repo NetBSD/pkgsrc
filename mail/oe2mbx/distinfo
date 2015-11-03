@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/05/07 19:21:57 dholland Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:11 agc Exp $
 
 SHA1 (oe2mbx-1.21.tar.gz) = e3931f0eb8c27c4ba0f1118e6d3bb7342ec172e2
 RMD160 (oe2mbx-1.21.tar.gz) = 147b02fac16d2d5124ee069f2b11c236baf00235
+SHA512 (oe2mbx-1.21.tar.gz) = 4149a45c475ebe62814295bfc8854bd319413db7b4c43bbc708189ce0122655b7bd4f5544d8fc5f522d5bcd7c098c545a76f7992fc2c38f6e8ccd15ddf2b936a
 Size (oe2mbx-1.21.tar.gz) = 22817 bytes
 SHA1 (patch-aa) = b43592c823057f57ac091449c8365995c3027440
 SHA1 (patch-src_liboe_c) = 2a2c90d94403b96e069ee1f2c0d8ff787d6dffb1

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/12/17 10:16:08 sbd Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:23 agc Exp $
 
 SHA1 (up-imapproxy-1.2.5.tar.gz) = 07851f057c351e0421a351c9494c3cb97113028e
 RMD160 (up-imapproxy-1.2.5.tar.gz) = 3ae62cae816b760e1f768678c5889f6ec37989e7
+SHA512 (up-imapproxy-1.2.5.tar.gz) = 3fe67f74acf6cf19ffbfb7350acb0b613e82b8d4ac45a80d0ddd8ede4eff3d60a6ab396d3473f3788a0be7cfa066a4f84786b287e18052d0fb9e1b0052611595
 Size (up-imapproxy-1.2.5.tar.gz) = 132317 bytes
 SHA1 (patch-aa) = ff6f92050ec95f5ac3b1b82585e427a66338809e
 SHA1 (patch-ac) = 1f2cd6af6a2a7d472f7d0f507da7e56ac2afc5a3

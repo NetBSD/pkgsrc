@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/12/22 04:33:27 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:04 agc Exp $
 
 SHA1 (elmo-1.3.2.tar.gz) = d4e7999ce85c17df082a016fd70ee4978cfe1043
 RMD160 (elmo-1.3.2.tar.gz) = 3db1fafbbe38636459c4b1bbc3dae414e54c92d6
+SHA512 (elmo-1.3.2.tar.gz) = 11860c7d3b94ea72efd3ed60fac26208c201e4cd7ae2ada50b15ff15d2a49b1ffcc3cbb4cb1c2721ec10d3cd4a44e173b48cc69e75df5c29e688284538aca07b
 Size (elmo-1.3.2.tar.gz) = 536768 bytes
 SHA1 (patch-aa) = d7596f202bcd3ed1596ea61602aa7b9e3ec7f542
 SHA1 (patch-ab) = 64f3b1e5e913811da210b8df99076ba2dd3fd99c

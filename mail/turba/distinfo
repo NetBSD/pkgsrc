@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2012/02/23 11:46:07 obache Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 23:27:23 agc Exp $
 
 SHA1 (turba-h3-2.3.6.tar.gz) = afc1615d460b7e982918dd1557728adffa7750a6
 RMD160 (turba-h3-2.3.6.tar.gz) = 8ced7174546b5946c9676757d60fe8b0449d9701
+SHA512 (turba-h3-2.3.6.tar.gz) = b67f828a89433b067746aa07b27d34b454260811c060df2a514465c0864110dbd459b09bfe04f18914f124847f0251e083ec03733962db9713d2bfd045418b60
 Size (turba-h3-2.3.6.tar.gz) = 2580295 bytes

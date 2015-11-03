@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:27:09 agc Exp $
 
 SHA1 (mdfrm.pl) = dbfa156f91b363aeaec29a57942fc8c924b8c5ac
 RMD160 (mdfrm.pl) = c10af5b23348a97b62a276d5ef45db3bd6e780dc
+SHA512 (mdfrm.pl) = 16ee298fada789710d1780aec5ca92ba26f5a1d6af790afafeaa1b972e2bf3c00c06ba578a80b64f4fbaccd2280020ea68b608f23618f008e3a20b81f852378a
 Size (mdfrm.pl) = 3989 bytes

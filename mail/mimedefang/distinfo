@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.28 2015/05/03 21:09:01 pettai Exp $
+$NetBSD: distinfo,v 1.29 2015/11/03 23:27:10 agc Exp $
 
 SHA1 (mimedefang-2.78.tar.gz) = 9b8d004c7d4720864a2a6860f4554683ff11d0c2
 RMD160 (mimedefang-2.78.tar.gz) = be42cadf9bc2588ce9731c4dcd616e544c7461d5
+SHA512 (mimedefang-2.78.tar.gz) = 037a6f33a6a721e923c8d7242e6cd7eac6d249b4024e9fbe5aa2583675fd1fd710c8ff0ffd3ed331d1637c5e07373b264781b378b2e44e50ae13d30c1b7bff47
 Size (mimedefang-2.78.tar.gz) = 364501 bytes
 SHA1 (patch-ac) = 8733dca9408f29f63d71f6a0f3af817ef6b9a148
 SHA1 (patch-ad) = 1130dad09875d069ca246db8f8f567366e0af5be

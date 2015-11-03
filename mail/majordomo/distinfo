@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2011/12/11 11:53:23 marino Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 23:27:09 agc Exp $
 
 SHA1 (majordomo-1.94.5.tgz) = 44b18c7b9133f2cd992f6e718551d613d9d45c00
 RMD160 (majordomo-1.94.5.tgz) = 7f6b48fb5cc5b23948133658b055588d0d6608c4
+SHA512 (majordomo-1.94.5.tgz) = d771ee99f31110676ce526687c8c2f47e0b45afd14643fb10b46bed0e238cd9edc6394fb385ac5ed0bbf19e5ca3c368f7af06a3dc17ccccddac4999678285136
 Size (majordomo-1.94.5.tgz) = 312244 bytes
 SHA1 (patch-aa) = 2be639e71d75780f82d2d6364431d7d40d97ba94
 SHA1 (patch-ab) = 58aec7d2ad3625caf8bdcd9b41792a2075605fa5

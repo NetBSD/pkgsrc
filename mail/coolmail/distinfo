@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/06/23 21:45:24 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:27:02 agc Exp $
 
 SHA1 (coolmail-1.3.tgz) = 7b8dccf16f575827a595f1025294dfc66f00a6dc
 RMD160 (coolmail-1.3.tgz) = e23a8e8a465d700163393e70ebed60870ddcbc95
+SHA512 (coolmail-1.3.tgz) = d7c9cafba7c1d435076c9e20211bdae90009d2f4029becb37cd1bbca1307762aaf92f2611bd50b7fd79fed5435e71022b9f4bd20cd04e94150da8fbfe381790c
 Size (coolmail-1.3.tgz) = 26809 bytes
 SHA1 (patch-aa) = dd16e3150674a92f4ad43270d523bbc1f5b5eb16
 SHA1 (patch-ab) = 5734f1f7e57f59db437996c192b98c24b4356009

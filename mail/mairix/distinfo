@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/11/11 06:53:59 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:09 agc Exp $
 
 SHA1 (mairix-0.21.tar.gz) = a5f4767462d3f86950acaa0dafd132de0e0d0c43
 RMD160 (mairix-0.21.tar.gz) = 68e9d0cf509c8524aa9e2f519b4385fd198f996a
+SHA512 (mairix-0.21.tar.gz) = 82a7f5bc92efb7d6960922e8c05b075619b7072e90a0f3c0d3477ff5fb3cf9607e81748e1394f599e5049033207fbe72a373aaf872ac8db0f5e88ef17a5de1bc
 Size (mairix-0.21.tar.gz) = 159089 bytes
 SHA1 (patch-aa) = bc87571018a2470b09dd7f096794439ba8244025
 SHA1 (patch-dfasyn_Makefile) = 6788d8e793e05c3ee078d8471a69adaffe4cb1b3

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/06/12 02:14:35 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:17 agc Exp $
 
 SHA1 (pulsar-0.1.1.tar.bz2) = bc99f184809f42b312d23d76aa34f01db65ac823
 RMD160 (pulsar-0.1.1.tar.bz2) = bac068845f10a7c879c1fab9cff95791369bfa84
+SHA512 (pulsar-0.1.1.tar.bz2) = 5bf2bb9cab16c7948d97c41daca8c6b44e4f9c38e333ab018d4fea88ada8ecb826cedc82e04287341b8377e09d50a00e7f92e9ca235fd78c3c78340fdd3ae860
 Size (pulsar-0.1.1.tar.bz2) = 149675 bytes
 SHA1 (patch-aa) = 7b6ee91a55ec8c583df2bd0a407e9e43bd9e2c3f
 SHA1 (patch-ab) = c48065bea2ec3516b547492929002658ebe33100

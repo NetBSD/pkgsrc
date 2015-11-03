@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/01/26 14:56:56 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:11 agc Exp $
 
 SHA1 (newmail-1.0.1.tar.gz) = 031387e2ba10e5e4ba801dab25d86fce3b55e02c
 RMD160 (newmail-1.0.1.tar.gz) = 411e94b61909400a580fbad887f1ad730738679e
+SHA512 (newmail-1.0.1.tar.gz) = 9fbea29f95368a9a2bbae89c3e3b810b96b80eb4a6426e690b7a862d00f89b351249a7aa710b23fa5df76400deb0d3676d3b420cfb8180199089f16091838fdb
 Size (newmail-1.0.1.tar.gz) = 3476 bytes
 SHA1 (patch-aa) = 3d81434a8d98390df7964cc701c83496791de267
 SHA1 (patch-ab) = da5a2a0608986c074c5ed02e6fc6742c3747c0c7

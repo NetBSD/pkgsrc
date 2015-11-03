@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:59:26 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Mail-SRS-0.31.tar.gz) = 52e536cf796a9d1a83e6b685dbd1d5b8e6944c88
 RMD160 (Mail-SRS-0.31.tar.gz) = 5f91268b1f231050b0b047659c4c4f4e932a1d50
+SHA512 (Mail-SRS-0.31.tar.gz) = d9810563cb512ba2e5441895c5ceac61bbfa44d1308a5f8521a2e9c49d35f22d77a8f03878c7016823ad996f061071ca82486f4e0dd21a98cdb8398a9208915d
 Size (Mail-SRS-0.31.tar.gz) = 26605 bytes
 SHA1 (patch-aa) = c6f0fc852e19de651f58cefa36e9ab5d54a2a9f4

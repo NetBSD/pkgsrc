@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/11/29 06:19:43 sbd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:27:16 agc Exp $
 
 SHA1 (policyd-1.82.tar.gz) = 4a9bf4bcf63eb3792794d87682e67b15e4a04707
 RMD160 (policyd-1.82.tar.gz) = 0258ee9abaa00cde9a139bdeafed36df1ec37537
+SHA512 (policyd-1.82.tar.gz) = 08de114736620d5f1c11f7183135ecf4589c2d6258dee486b5f4f5a9156e4feabd7eaf19fa09428e79d5d5c72ac4757c83af86f43a7547030b1a59cb368e82a8
 Size (policyd-1.82.tar.gz) = 68372 bytes
 SHA1 (patch-aa) = f1be4bf5f101e15d8f73b05a73fdd1ca324b72eb
 SHA1 (patch-ab) = 21183b12a60446f15116d7709df3f2cf93202619

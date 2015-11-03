@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/09 21:24:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:23 agc Exp $
 
 SHA1 (trojita-0.4.1.tar.bz2) = 3db0c6736db9834630dc8bcded00707cfef60a20
 RMD160 (trojita-0.4.1.tar.bz2) = 8b609585865ede4e3318174cfff06114f13bbd5f
+SHA512 (trojita-0.4.1.tar.bz2) = f24210d4f8e10cfbca25ab4d62ae3c8eea3e8824c13119cd6dc4511d4cf9b5f82be67586b6494aff5290ab06f869ae3bd1c8a19664bcf0f57059ee8d67d6c81a
 Size (trojita-0.4.1.tar.bz2) = 1219460 bytes

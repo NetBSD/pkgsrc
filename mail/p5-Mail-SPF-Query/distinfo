@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/02/15 23:37:39 heinz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Mail-SPF-Query-1.999.tar.gz) = c8584cf056507127d7c2a8019d0d43da3824028b
 RMD160 (Mail-SPF-Query-1.999.tar.gz) = 008640c9af069361f51da1d1a84d93c684cf2d36
+SHA512 (Mail-SPF-Query-1.999.tar.gz) = 337eb18663235226b15918afd83a8f3c846b8a4c1929c37548c437128db412e83717d37f063425512e9ae59c47983a6eaa898c245a8cd90bcc64c7a14891f31c
 Size (Mail-SPF-Query-1.999.tar.gz) = 54874 bytes

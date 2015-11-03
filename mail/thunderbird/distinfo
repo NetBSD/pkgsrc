@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.166 2015/10/11 23:33:59 ryoon Exp $
+$NetBSD: distinfo,v 1.167 2015/11/03 23:27:22 agc Exp $
 
 SHA1 (thunderbird-38.3.0.source.tar.bz2) = 7c8ef066d6b6516fddbb654b38353f894f85d469
 RMD160 (thunderbird-38.3.0.source.tar.bz2) = 0b30a430d9006d737a7116b63c66b8a1843c0381
+SHA512 (thunderbird-38.3.0.source.tar.bz2) = 622731a3a6d40fabcf709e08ed20f8faf0d79a26229ab59c5a39d12b4445e090a7968055cc4804d829d6918f6879f1d47e3d453eefca58c8b68486bce20f21ea
 Size (thunderbird-38.3.0.source.tar.bz2) = 204361602 bytes
 SHA1 (patch-aa) = 199400ee6dc3c727c950e33ccc65cf57b81cdcb7
 SHA1 (patch-al) = 81a733e9b13a47abfef818ecd10d7ef18a191855

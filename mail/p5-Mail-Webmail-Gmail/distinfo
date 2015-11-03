@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/11/29 15:18:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Mail-Webmail-Gmail-1.09.tar.gz) = deab3ef8e11294eb7d4ca2b9e767444f9ed941d2
 RMD160 (Mail-Webmail-Gmail-1.09.tar.gz) = 1d01c5f462fd00eabea5b501de31d30648c94f5f
+SHA512 (Mail-Webmail-Gmail-1.09.tar.gz) = 02ef3d41db5309425d6e1bc8788ca01bdd7df1e0f1845a076d640bffbcd04d9f2cf605ada35aa7620a11dc65bc391d5cc8eb28bb429cfe8ad63e7af134746e7f
 Size (Mail-Webmail-Gmail-1.09.tar.gz) = 23477 bytes

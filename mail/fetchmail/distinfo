@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.48 2012/11/04 18:41:47 morr Exp $
+$NetBSD: distinfo,v 1.49 2015/11/03 23:27:05 agc Exp $
 
 SHA1 (fetchmail-6.3.22.tar.bz2) = f9411a16d4055669e5cfd89bf38acba6a5cce041
 RMD160 (fetchmail-6.3.22.tar.bz2) = b1b4ae20e7fc6d307cf97c697d5e27daddc6bc72
+SHA512 (fetchmail-6.3.22.tar.bz2) = 965761c873ea5c2d80ecabf40f0a161148f2cded5cb0ef0d71a44798ba7da1b80022a4dcea4060dddb0c87764d905b5a6f5076eb925732eee4ba4e6884330b06
 Size (fetchmail-6.3.22.tar.bz2) = 1724108 bytes
 SHA1 (patch-Makefile.in) = c08ef115550f004496481e610140d7d2391016b2
