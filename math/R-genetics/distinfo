@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/01/24 02:24:15 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:33:28 agc Exp $
 
 SHA1 (R/genetics_1.3.8.tar.gz) = f1bd9f75da1aedf4aaa7d3ee81d422c25ba03e8f
 RMD160 (R/genetics_1.3.8.tar.gz) = cde22d63c019171360a9baee6a2843f731d96bb2
+SHA512 (R/genetics_1.3.8.tar.gz) = 642ff00f97a9ad86126a4ef117e7bf688d6acb532608548af5799740ed051ba86d01da518317f02b5da932428e644e224a740051a439d8bfb833db88b5cc2f0a
 Size (R/genetics_1.3.8.tar.gz) = 210785 bytes

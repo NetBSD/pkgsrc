@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/12/29 16:33:09 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:33:31 agc Exp $
 
 SHA1 (blitz-0.8.tar.gz) = e1396cdfdbf4ec93bfc69ca581b8e9a64d745ca1
 RMD160 (blitz-0.8.tar.gz) = 95b8eb6ee8a99f0632a0c510eafd0051053c1e0e
+SHA512 (blitz-0.8.tar.gz) = 15d8f56de18eea00bee269a91461da4e435a0d976dc2c65ec124d5c5178c242a0ad4d8a988c266b7e65c78ce1e1edc631519da24d48e68459bd8b9d662d5bf9e
 Size (blitz-0.8.tar.gz) = 2729167 bytes
 SHA1 (patch-aa) = deb437da8741a87c18f56883a880a03a6e94c84d
 SHA1 (patch-ab) = 30b268204142b5f8a63ca7d3273d323d82e82077

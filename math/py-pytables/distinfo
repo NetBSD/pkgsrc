@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2014/09/20 17:56:36 wiz Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 23:33:42 agc Exp $
 
 SHA1 (tables-3.1.1.tar.gz) = c1ff909112b69b38b744cf81381496173c85c8af
 RMD160 (tables-3.1.1.tar.gz) = f4c4c68c931fe8d3c5817f2619e699bab6fc7f07
+SHA512 (tables-3.1.1.tar.gz) = b5b2052dd81c4748c5e26c1f61f9f92891f48335b0a553f7602ab11c9029dd673d27b91e24cac0da21a81df0c26dbcd9a438214fa58af1ae831c5f04dfa212a6
 Size (tables-3.1.1.tar.gz) = 6715786 bytes
 SHA1 (patch-setup.py) = a343bbf94ab7bcc46c81c5db7ca5a9afa85e306a

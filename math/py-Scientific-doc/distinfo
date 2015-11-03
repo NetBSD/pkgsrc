@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 12:06:57 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:41 agc Exp $
 
 SHA1 (ScientificPython-2.4.5.tar.gz) = 452b04a20dd065fd9ea01092ae2e1e726406d2be
 RMD160 (ScientificPython-2.4.5.tar.gz) = 5a5620856fce81726110e12a03871b39d4b462b0
+SHA512 (ScientificPython-2.4.5.tar.gz) = 5fd0bbff90ac63aa2f9c4a494a6950327c925e03b0f82e9e2647008aa21a8a35d5ddc349aeb3f2f7290c01005c11449983a3f950c45713c6bb0337c03aa7b512
 Size (ScientificPython-2.4.5.tar.gz) = 487379 bytes

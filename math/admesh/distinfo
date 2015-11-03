@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 12:06:53 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:30 agc Exp $
 
 SHA1 (admesh-0.95.tar.gz) = b9d242366efa2af90bcd84951ed23d283fe72bd2
 RMD160 (admesh-0.95.tar.gz) = 3785b996e70cba26efe005b7ec519beb02e16c21
+SHA512 (admesh-0.95.tar.gz) = 6e8f0d3b0acb3c1d92d2ce8d12f3f3d5fcb81439b1484be6f2d7f51328ad6ab3a83244dcede60a24dc9df64a8f56830fda463a350ed9a6bc86bf3b09fab90624
 Size (admesh-0.95.tar.gz) = 51340 bytes

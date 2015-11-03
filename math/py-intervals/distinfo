@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/05 19:33:17 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:42 agc Exp $
 
 SHA1 (intervals-0.3.1.tar.gz) = cc52b6f3523528b4f21a0bd35f28e60d6d23fe2f
 RMD160 (intervals-0.3.1.tar.gz) = 97c2e5f64232de2aeb33aeaa0a0ed9a3ba875b36
+SHA512 (intervals-0.3.1.tar.gz) = 411af76c29c864fed27c74a2fb34500d0014c40edb2ad11218d67868f7cece2fed6f1e9105870c8d1f9e6b72288bd206cd208f07b1e1875e9cdd8565779571f4
 Size (intervals-0.3.1.tar.gz) = 11250 bytes

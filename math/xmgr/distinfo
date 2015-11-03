@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/12/11 02:11:52 asau Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:45 agc Exp $
 
 SHA1 (xmgr-4.1.2.tar.gz) = 7e679de2d48ca0de8dcb0435910df3f3d7a2c2ac
 RMD160 (xmgr-4.1.2.tar.gz) = 5f8b08b5e2cea0ca4e2c8b9d7d590f7bdb93a4ee
+SHA512 (xmgr-4.1.2.tar.gz) = 74c481fe2a845d1f48c6aceb347fadc01351d1f30bb02bbf7ce10478eb5cff36e719dccf22962771f3909f36112823b986c8cfe883423930cc4e42f2bf73ca30
 Size (xmgr-4.1.2.tar.gz) = 881991 bytes
 SHA1 (patch-aa) = 04a521046a0c4877653e17a6966e6ea0737ba2b7
 SHA1 (patch-ab) = 60660554d658b62a454b36f732501864ddf01220

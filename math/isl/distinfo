@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/04/10 01:54:45 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:33:35 agc Exp $
 
 SHA1 (isl-0.14.1.tar.bz2) = b653327b20e807d1df3a7e2f546ea924f1e030c0
 RMD160 (isl-0.14.1.tar.bz2) = e4e45a8b777f89108303c165b149404ef84fd190
+SHA512 (isl-0.14.1.tar.bz2) = 0d8e04e4a029a1c382357570d0e58b45cff0c89ef576084af3841dda112a1275575fb85f62e7c0ea6e89a4fccf90cae55cdd12c37b824ce5e8845ed6d31edb2d
 Size (isl-0.14.1.tar.bz2) = 1402630 bytes
 SHA1 (patch-Makefile.in) = 2fcae513a23e31d41a9a0c3e3d792f94c995f354

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 12:06:55 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:34 agc Exp $
 
 SHA1 (fplsa.zoo) = 05133200b31dc6294cb2e085b3ad478d4b5b87c5
 RMD160 (fplsa.zoo) = b0357c9c4b18dbfa32112478a16adbb4bc58a59f
+SHA512 (fplsa.zoo) = 9c8da4c1e9b2657ec8188310921d47428dc0ee1104e13bf9bffdf53516cc3a43f3f271beceaaae463336a1d376dbb81f9444aeb440d822dbfcc004f0dea1c238
 Size (fplsa.zoo) = 206427 bytes
 SHA1 (patch-aa) = cc93cf7a25adcf1ea9d58ae87200519538f96e26

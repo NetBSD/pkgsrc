@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/15 18:45:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:44 agc Exp $
 
 SHA1 (tex-kastrup-15878/kastrup.tar.xz) = 5506d5568267aa1c949127beb374cbe555d452af
 RMD160 (tex-kastrup-15878/kastrup.tar.xz) = cb1e6cea56d3e5b9ec45db73e71fc17ed4d63753
+SHA512 (tex-kastrup-15878/kastrup.tar.xz) = 6d0011a198f4139d4edb8cbfc2fa4b36c9a881674510ecef40345b740a57db0054f8e8d8bf3d2d5432fb5677808b37b0d65fc138bf2556ef9d32aaa4243d6860
 Size (tex-kastrup-15878/kastrup.tar.xz) = 1224 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/05/12 19:16:01 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:33:43 agc Exp $
 
 SHA1 (qalculate-kde-0.9.5.tar.gz) = b8c5ae248d630e18933ac80d873df2ee2e6d5fc9
 RMD160 (qalculate-kde-0.9.5.tar.gz) = 1808d53d8f49d7f0222ba2db891391e70ba6d575
+SHA512 (qalculate-kde-0.9.5.tar.gz) = f1feb494a0fc32cf804150960947596ec84029a79e6721664f17741d551f79ac5289be3630f5294e89c32cf1d84e55528fa0dcd65eb4c0498a0c9516f0fdf1b0
 Size (qalculate-kde-0.9.5.tar.gz) = 1562344 bytes
 SHA1 (patch-aa) = 6ee895f1b782d8c06301c74951959a5e0be8b0ba
 SHA1 (patch-ac) = 0dd571e91b86052b772a892a2581b4ce8bd1feee

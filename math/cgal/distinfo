@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/03/31 15:48:32 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:31 agc Exp $
 
 SHA1 (CGAL-3.9.tar.gz) = cc99fad7116f221b6301326834f71ff65cebf2eb
 RMD160 (CGAL-3.9.tar.gz) = 0a5a929ecedeeac3833ec90f802b7f5ac069ad47
+SHA512 (CGAL-3.9.tar.gz) = 9b03c08aae470877eb7fb2f16d7091a4ea2c79a643ba075d7b1bd5c056342c10e6fb3eed48a2756d74da48f6b7171f7d041446a0edb57ca212f0bb053912995d
 Size (CGAL-3.9.tar.gz) = 14276059 bytes
 SHA1 (patch-include_CGAL_Mesh__2_Do__not__refine__edges.h) = 5a66b2ff56d3e20e554ab73829e3c8c735144489
 SHA1 (patch-include_CGAL_config.h) = ba29667305fc4868a9995048801408e95d75bd41

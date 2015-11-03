@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/08/01 21:05:37 sno Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:40 agc Exp $
 
 SHA1 (Set-Infinite-0.65.tar.gz) = 88792579087b558bbd00e87af16100c28a4e88ce
 RMD160 (Set-Infinite-0.65.tar.gz) = 85466b16ed86d9b9f3d7de7321c28ad8ba7fc2a1
+SHA512 (Set-Infinite-0.65.tar.gz) = 7ff4f999270c938f7a6d5c1f77927568e9575284b306cf3b831ca087ce93b904db74656fbe26a282be27ea7f556d54dbaeb73c7b2404efa0429964674be67d4c
 Size (Set-Infinite-0.65.tar.gz) = 50041 bytes

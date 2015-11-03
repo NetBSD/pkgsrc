@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 12:06:55 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:33 agc Exp $
 
 SHA1 (geg-1.0.2.tar.gz) = 80bcacbe48f236fe2cd6497e32ef70209255dd1e
 RMD160 (geg-1.0.2.tar.gz) = 5c79eba81ab7a3926f3c081e8a2173c781a0e9e8
+SHA512 (geg-1.0.2.tar.gz) = d4f12e7b50eed5e8a373142acfddfeccc3060ffb5cb125fa8cdc535264d7124ee7ac983545612f2857ad238e5bf0ba977e082a2428b026b3da60c868476558c3
 Size (geg-1.0.2.tar.gz) = 68312 bytes

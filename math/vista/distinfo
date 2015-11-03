@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/12/12 22:10:21 asau Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:45 agc Exp $
 
 SHA1 (vista.tar.gz) = 2fd92743cd1677dfb74ae9a86b329794e2c3b790
 RMD160 (vista.tar.gz) = 40191ddbb444b5d7517e33779e97e738e3a2c090
+SHA512 (vista.tar.gz) = 4e8643606b8b691268a9873b012b2f5615f1241ab2c6ac4957da1f110817e32d5be3d7f9f45df1fbfdc7e9425d5c4fdccd027294e609011766899cd43f25b272
 Size (vista.tar.gz) = 399121 bytes
 SHA1 (patch-aa) = 5064dcbbde8adab74b6ae6defcf983704ef9e6b7
 SHA1 (patch-ab) = a707f3d4e8c3c0b4da3eb81cc165fd04c132e2c6

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/05/31 02:32:48 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:30 agc Exp $
 
 SHA1 (R/spacetime_1.1-4.tar.gz) = 495aaf322c6cc43d82292ac0fc093d14a1c02173
 RMD160 (R/spacetime_1.1-4.tar.gz) = 1a59a4e6e1e47c044e9456be7660e51d01c7c6f8
+SHA512 (R/spacetime_1.1-4.tar.gz) = ba6e185f4d506d5e734bb41dadc5bb1a779bf9bd7f00b9c4dfb8dd5ed780f3ec8f978ce019628266e9117665855c85244168ef14e068217e18ac4efed6f124f5
 Size (R/spacetime_1.1-4.tar.gz) = 3013768 bytes

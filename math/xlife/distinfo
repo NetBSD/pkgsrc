@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/10/26 20:39:57 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:33:45 agc Exp $
 
 SHA1 (xlife-5.0.tar.gz) = 168edb2c8bdeb1689fea82c56db76e85aeeed43e
 RMD160 (xlife-5.0.tar.gz) = cbfcc570832337ba51703ad5fe86822aa0c5ad7d
+SHA512 (xlife-5.0.tar.gz) = d876986ead303a4e4fa0fc1562dc91f640189184f4ae0f8994c245fef7188db2573fda35bd31cbeb75cc8927dbc436f6b3e0689db6ba65bac59de9023dda562a
 Size (xlife-5.0.tar.gz) = 214220 bytes
 SHA1 (patch-aa) = a1797c733efa564b361f299650ea521987635feb
 SHA1 (patch-ab) = 891c098845652ad9f172b3693cdf416685e9a960

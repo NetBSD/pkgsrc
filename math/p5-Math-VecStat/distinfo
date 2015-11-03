@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/21 17:47:10 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:40 agc Exp $
 
 SHA1 (Math-VecStat-0.08.tar.gz) = ee370f6b03fb59df44fb2adb81e39843d6a89061
 RMD160 (Math-VecStat-0.08.tar.gz) = 28c4d99911ca34ffe128c18f7b9c997388902493
+SHA512 (Math-VecStat-0.08.tar.gz) = 0e88896a7a10846c6ac2ce9264de4b4938000e36bf5e5bb1fd0b8af478b8d02809981067302a2f7b45b29a21fa2ccd60e5f0e628e0bbd634107ab1aff7ac8c9e
 Size (Math-VecStat-0.08.tar.gz) = 4539 bytes

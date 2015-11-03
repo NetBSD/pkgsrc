@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/03/09 14:22:53 wen Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:33:30 agc Exp $
 
 SHA1 (R/wle_0.9-9.tar.gz) = f86ef5d7d829801b8e3b381a218f22b170f9ffc2
 RMD160 (R/wle_0.9-9.tar.gz) = 793231bfb1b2080a8b9605b41057496d84df8464
+SHA512 (R/wle_0.9-9.tar.gz) = 45f20a9ebbd5df2f65fdcd3c987f43b3de0ebd3a4c9b00d44dd618fd25877c14f72fb4792f2eb6c22d6c5dad3ab0ec6e291e1ee5bfc76caee51b9798f4943716
 Size (R/wle_0.9-9.tar.gz) = 231935 bytes

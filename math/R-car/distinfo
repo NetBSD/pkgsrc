@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/08/15 01:56:37 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:27 agc Exp $
 
 SHA1 (R/car_2.0-18.tar.gz) = f0fb53cedfe698acfe9fbbd5577fe72be11024ba
 RMD160 (R/car_2.0-18.tar.gz) = c2342b641dc8f5d1f4ce54c8577f8f8fe937d775
+SHA512 (R/car_2.0-18.tar.gz) = 36802e5fa300c178050c6c210d9c7d380a58c7561c0fee676f47f231685e569bf1463681cb8b611167d59789c9f2a74c6623b8161d4ef79a4872a5cca9d919f9
 Size (R/car_2.0-18.tar.gz) = 334622 bytes

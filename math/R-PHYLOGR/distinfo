@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/04/15 14:48:26 brook Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:27 agc Exp $
 
 SHA1 (R/PHYLOGR_1.0.7.tar.gz) = bb7c280fef9c48a8ded1612c915323e6e77f831b
 RMD160 (R/PHYLOGR_1.0.7.tar.gz) = a342763177baef67e90e555bcdf3d2ed2efbfd68
+SHA512 (R/PHYLOGR_1.0.7.tar.gz) = 14ca9c4dd4f358dcef8f8c6ccd2f2ad8cd44fc31ff80c55eefab406c64cd5e97a357b0b4524d9d5776d5cc51a01efff3e8955808bb8681a68718273c51052fee
 Size (R/PHYLOGR_1.0.7.tar.gz) = 751227 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/28 13:24:28 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:38 agc Exp $
 
 SHA1 (Math-FFT-1.32.tar.gz) = d4c6b10f450ca4384e3161dc25d31c94385942b3
 RMD160 (Math-FFT-1.32.tar.gz) = a0868e0c55ee445fea33151006b45d1da9e8614c
+SHA512 (Math-FFT-1.32.tar.gz) = f961ebd9ec3e011131df17cd311cf2658a12786e74ac6031d8e59d89c63aa7d8b8930867b8c807ba94e19f9f1656ae2036bbc422bc23bb3385b0e30fef7e00bd
 Size (Math-FFT-1.32.tar.gz) = 48468 bytes

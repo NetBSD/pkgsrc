@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/04/17 00:41:38 wen Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 23:33:42 agc Exp $
 
 SHA1 (numpy-1.9.2.tar.gz) = 86b4414cd01c4244141c59ea476ca8fdad8e9be2
 RMD160 (numpy-1.9.2.tar.gz) = f95c73c0260c2623d0a3ab08b09c241c06b86898
+SHA512 (numpy-1.9.2.tar.gz) = 70470ebb9afef5dfd0c83ceb7a9d5f1b7a072b1a9b54b04f04f5ed50fbaedd5b4906bd500472268d478f94df9e749a88698b1ff30f2d80258e7f3fec040617d9
 Size (numpy-1.9.2.tar.gz) = 3986067 bytes
 SHA1 (patch-aa) = 6c1716e1963533721f06853127573f5c271330f9
 SHA1 (patch-ab) = 74196abcc2eab4d409e8d3c0d8fb65dc99f2920b
