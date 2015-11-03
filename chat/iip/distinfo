@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/02/16 15:00:58 hans Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:20:20 agc Exp $
 
 SHA1 (iip-1.1.0.tgz) = 722ce551c3d330aad04729a4c9b729b10a0ca960
 RMD160 (iip-1.1.0.tgz) = 5acc5e33bd060bbdc79e819ade9e5ef07ed7299c
+SHA512 (iip-1.1.0.tgz) = ecc4135cb731713f95f15f021428f375314b0d3b4dc20aeee01d14be7fb4ccf2a7b081b0f43bc4aca7cae58faf421a7034bd6763a0e29fc142aab365f8c1c742
 Size (iip-1.1.0.tgz) = 139021 bytes
 SHA1 (patch-aa) = 73b7d1be726bf639a97f404f2ea5219d0f48bf50
 SHA1 (patch-src_misc_unix.c) = 2f72adc7dd64386ac1b41538ea21d10e390dcca4
