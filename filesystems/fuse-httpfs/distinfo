@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/08/03 13:50:39 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:15:01 agc Exp $
 
 SHA1 (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 857dfe72b817b01c8a445eb486a047b8c4f8ec02
 RMD160 (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 0172c155d38b0ee2e862fdcf8815886ed7d28e48
+SHA512 (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 49620221d7dac0e831670666772d35f63e3a153d1fb75156f1825d72b158a1492eed7f4db3441807aec4a7fa86408d05f1adef03b8075d0889a7d8f685676fd2
 Size (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 115384 bytes
 SHA1 (patch-aa) = 6dc82d997847f2bb5e6618f59736d5bee5d97eb1

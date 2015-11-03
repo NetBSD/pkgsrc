@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/09 22:46:25 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:14:59 agc Exp $
 
 SHA1 (cloudfuse/1003a82) = fb0a1b4f6280e2e432d656ddd60f7dd8a54262d9
 RMD160 (cloudfuse/1003a82) = a3aa583002bd47c4b9dffc4dcd1ac1777d12d6ed
+SHA512 (cloudfuse/1003a82) = fe3d55ee85d3e446cc6ba74f3a76cb793c0e55c525b64014c649c722ef22bc49835d620a16d33e1d93a49eec5a6b9830cce14059d77d7244dc0227680834158b
 Size (cloudfuse/1003a82) = 58640 bytes

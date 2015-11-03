@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/02/09 17:23:54 wiedi Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:15:02 agc Exp $
 
 SHA1 (u9fs-2.0.3.tar.gz) = 98b6d1b26a516761ee392d2c3ed15528af84601b
 RMD160 (u9fs-2.0.3.tar.gz) = 460879d27c4d282a3b4822c194b2abf458851b4d
+SHA512 (u9fs-2.0.3.tar.gz) = bd55ac2a3a0f47052fa1d3873c8713147f040e68610523fb54ffeff4eb7638aa0fe5c140a253b28a7036efcc5f58f42a12da8d0228bbb47867a05df90364061b
 Size (u9fs-2.0.3.tar.gz) = 42325 bytes
 SHA1 (patch-aa) = 790924f9761fc90cb8db2b4ca0385eca864dfc73
 SHA1 (patch-ab) = 34a5460b9a3d527e65e31940f66a83d295ac3ef1
