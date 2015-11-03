@@ -1,11 +1,11 @@
-$NetBSD: patch-src_fsq_fsq.cxx,v 1.2 2015/10/11 03:59:56 mef Exp $
+$NetBSD: patch-src_fsq_fsq.cxx,v 1.3 2015/11/03 19:03:27 joerg Exp $
 
-date: 2015-08-11 04:26:43 +0900;  author: joerg;  state: Exp;  commitid: PzvH77JwGWkn2Lwy;
+Resolve conflict between std::next and the local variable of the same name.
 std::complex::imag() and std::complex::real() are not lvalues.
 
---- src/fsq/fsq.cxx.orig	2015-07-21 14:54:32.000000000 +0000
+--- src/fsq/fsq.cxx.orig	2015-09-28 18:24:41.000000000 +0000
 +++ src/fsq/fsq.cxx
-@@ -1197,9 +1197,12 @@ int fsq::rx_process(const double *buf, i
+@@ -1193,9 +1193,12 @@ int fsq::rx_process(const double *buf, i
  						&rx_stream[SHIFT_SIZE],				// from
  						BLOCK_SIZE*sizeof(*rx_stream));	// # bytes
  				memset(fft_data, 0, sizeof(fft_data));
@@ -21,3 +21,34 @@ std::complex::imag() and std::complex::real() are not lvalues.
  				fft->ComplexFFT(fft_data);
  				process_tones();
  			}
+@@ -1423,7 +1426,7 @@ static string tx_text_queue = "";
+ 
+ static vector<string> commands;
+ #define NUMCOMMANDS 10
+-static size_t next = 0;
++static size_t nextidx = 0;
+ 
+ double fsq_xmtdelay() // in seconds
+ {
+@@ -1440,9 +1443,9 @@ double fsq_xmtdelay() // in seconds
+ void fsq_repeat_last_command()
+ {
+ 	fsq_tx_text->clear();
+-	fsq_tx_text->addstr(sz2utf8(commands[next].c_str()));
+-	next++;
+-	if (next == commands.size()) next = 0;
++	fsq_tx_text->addstr(sz2utf8(commands[nextidx].c_str()));
++	nextidx++;
++	if (nextidx == commands.size()) nextidx = 0;
+ }
+ 
+ int get_fsq_tx_char(void)
+@@ -1484,7 +1487,7 @@ void try_transmit(void *)
+ 	if (active_modem != fsq_modem) return;
+ 
+ 	if (!active_modem->fsq_squelch_open() && trx_state == STATE_RX) {
+-		next = 0;
++		nextidx = 0;
+ 		fsq_que_clear();
+ //LOG_WARN("%s", "start_tx()");
+ 		start_tx();
