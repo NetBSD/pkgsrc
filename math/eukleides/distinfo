@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/06/10 12:24:29 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:33:32 agc Exp $
 
 SHA1 (eukleides-1.5.4.tar.bz2) = a608ccde9ec412cf9337c71afab613d9fd986427
 RMD160 (eukleides-1.5.4.tar.bz2) = 63da73f7147f57f48046071564b9865145cda09e
+SHA512 (eukleides-1.5.4.tar.bz2) = 610207be875abefe165d85ede9ebc3359ec052eef942f76c57673866a922ebfbbb2cff2f226a07a3ad831e65ed146293a853a8824c8e074b87143da18118a3f8
 Size (eukleides-1.5.4.tar.bz2) = 77410 bytes
 SHA1 (patch-Makefile) = 5fee73d0f18d399a3268140addb328b62e4669d8
 SHA1 (patch-bash_euktoeps) = 64e5fe59779197e2f03afd88823d53168f7bfa9a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/05/30 11:05:17 wen Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:33:29 agc Exp $
 
 SHA1 (R/sp_1.1-0.tar.gz) = da95e76d604aba5ae861ef92a9a5292355931f7d
 RMD160 (R/sp_1.1-0.tar.gz) = ae053b3e0ba0b92596f5406aafd17f019959b3e9
+SHA512 (R/sp_1.1-0.tar.gz) = 65e2b764d9511932f02ddbf573b458c0ac5ad706590186ba92497cb31ee26f0387a97e7a36d89ed9f41e7cbd3344817da44550e7b76440639afc176c13e27fd8
 Size (R/sp_1.1-0.tar.gz) = 1175034 bytes

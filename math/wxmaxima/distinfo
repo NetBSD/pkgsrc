@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/10/01 11:09:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:45 agc Exp $
 
 SHA1 (wxmaxima-14.09.0.tar.gz) = b8dad346edc820b0c3744219fa55561ad084cdda
 RMD160 (wxmaxima-14.09.0.tar.gz) = 5d54f45deacb7dd9c471055d7d2c3fc66ad54f34
+SHA512 (wxmaxima-14.09.0.tar.gz) = 0543ae4e230a927fa400f0db67cc98593f48552e4ab92b8826ffcced01ab27b459da36d31e66c05fe1fbf981378a25fd99916b7bc54ea2b78af0bc94d8a153a4
 Size (wxmaxima-14.09.0.tar.gz) = 1703308 bytes

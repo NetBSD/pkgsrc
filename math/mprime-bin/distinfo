@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/02 12:40:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:37 agc Exp $
 
 SHA1 (mprime2414.tar.gz) = 851220b4e006ef58669c61b47689c4ab4afe7aee
 RMD160 (mprime2414.tar.gz) = c8fd7b96fdb65c45954cb847c45a686e51e2702d
+SHA512 (mprime2414.tar.gz) = 29129a4c88e2c3c1be55c4174d4a3eb1aac131ee190a4f70e395bd7747d790203353a07f62395e0cc8352c51e8bfc9afce22f30d69c8a889ce497849bc5c459a
 Size (mprime2414.tar.gz) = 659468 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/04/15 14:51:05 brook Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:27 agc Exp $
 
 SHA1 (R/R2HTML_2.2.tar.gz) = afd181886b3ba5c01a8ebdbed010a7477dca4b91
 RMD160 (R/R2HTML_2.2.tar.gz) = d088b22bcaea90835360926d5ad8172cdbe4f24c
+SHA512 (R/R2HTML_2.2.tar.gz) = 155970028aa3b7f6e16ce8efcd60152fa7a6fd8693e139e0751e8b85b38f0e01a1d784311756120fa0c304c6c03ab8f480a32ef4ca805e0a4f9508adbf47aa11
 Size (R/R2HTML_2.2.tar.gz) = 315405 bytes
