@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2011/11/16 19:48:30 drochner Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 23:54:32 agc Exp $
 
 SHA1 (gst-python-0.10.22.tar.bz2) = 7012445d921ae1b325c162500750c9b0e777201f
 RMD160 (gst-python-0.10.22.tar.bz2) = 6c4e43c5464297e0d45aa89f3cb82ed424caa283
+SHA512 (gst-python-0.10.22.tar.bz2) = bbbd6b661778cca990da0e216294d86da31a6e472049905989a3311459dd1227bf8f2ae3699a3cdbb66a16288569764352f1e1b93e696d3db4b0728bc38e5b12
 Size (gst-python-0.10.22.tar.bz2) = 632651 bytes
 SHA1 (patch-ac) = b0d45bacffc79ceaa67aa37c03d1c4d5fdd21385

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.43 2010/11/24 20:55:28 drochner Exp $
+$NetBSD: distinfo,v 1.44 2015/11/03 23:54:32 agc Exp $
 
 SHA1 (totem-2.32.0.tar.gz) = 5c220271a92bd123aedbfa4343181b6df9a38244
 RMD160 (totem-2.32.0.tar.gz) = ae2dfaa956114201c2816e757eb7e98afb3886b0
+SHA512 (totem-2.32.0.tar.gz) = 7010b9b4bbfc3843a47051a780f556801ac78712e004254ac366aa23ca156b4149b64f84a3a03e83c2f441cb4247107b269f49c9b488abda710aeea6cc6bb48d
 Size (totem-2.32.0.tar.gz) = 4914567 bytes
 SHA1 (patch-ad) = ec8cd092d202255981049ace4ac643c41a0044be
 SHA1 (patch-af) = 8e4ffb97aedbf56a052d5ffacea73f8b2f071183

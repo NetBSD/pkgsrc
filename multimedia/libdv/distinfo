@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/12/03 21:46:46 bsiegert Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:54:28 agc Exp $
 
 SHA1 (libdv-1.0.0.tar.gz) = 2e5ba0e95f665d60e72cbebcf1c4989e0d6c92c8
 RMD160 (libdv-1.0.0.tar.gz) = a8d3ae083340cec411d5294db7197ea72c8b3c4f
+SHA512 (libdv-1.0.0.tar.gz) = 19887a6f452fa7da8924901ad841f5c4a434a3bde56c932ddb43717592aa744281e3a8ad220231e11d7e6bc3b0e704952a8324e5f85d4e088675edceeeca7dc8
 Size (libdv-1.0.0.tar.gz) = 574565 bytes
 SHA1 (patch-aa) = bd8c5caebd6a1d3c3276a3a41d47920fcefae7f0
 SHA1 (patch-ab) = b0798b112c586b041d29d498221dc772387f1c22

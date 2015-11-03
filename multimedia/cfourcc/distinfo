@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/22 12:44:45 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:54:22 agc Exp $
 
 SHA1 (cfourcc-0.1.2.tar.gz) = 3af3a67986342ea29dc65c2106aff89e2cea58aa
 RMD160 (cfourcc-0.1.2.tar.gz) = 533e6ef7e4600bcc16022faaeb56181c365b89d4
+SHA512 (cfourcc-0.1.2.tar.gz) = 16daa017337f944653c02017f78b8c90d3454c9ec5175bcb43fac8ed0a2236e5bd45f06d8730f739d4ac82e0b0366a925b4a0e11a0d1a6fd3e495a5239df57cb
 Size (cfourcc-0.1.2.tar.gz) = 15009 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2014/09/25 15:08:29 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:54:33 agc Exp $
 
 SHA1 (tvtime-1.0.2.tar.gz) = ea609876084b2d627a84a1f77bf81cc2175ee58e
 RMD160 (tvtime-1.0.2.tar.gz) = e7d9621054edba5833f4ea002be8979983fbf3dc
+SHA512 (tvtime-1.0.2.tar.gz) = d62d6b351c08cab56a7589b8c0b40208acc34f8baf1d312ebf6eed0f079502e1fee5ec0cbdb15c4251d9d2ea1845380db07b253348263b6cb7daf5d1038c61ff
 Size (tvtime-1.0.2.tar.gz) = 1645742 bytes
 SHA1 (patch-aa) = dd2f2dbda25704ed249f8da8c2d6e5832d09826e
 SHA1 (patch-ab) = 94adf60aa7ebc1eb20934542fc6a0a6aadcb4caa

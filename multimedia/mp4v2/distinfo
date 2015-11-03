@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/12/03 22:26:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:54:30 agc Exp $
 
 SHA1 (mp4v2-2.0.0.tar.bz2) = 193260cfb7201e6ec250137bcca1468d4d20e2f0
 RMD160 (mp4v2-2.0.0.tar.bz2) = 1b309ec6480dd06fac2e1e72ab666ca123e714d8
+SHA512 (mp4v2-2.0.0.tar.bz2) = 15eb882f33d72d4209053b54c883b67715f539c33096705a0e7bc79015b93f6f3ac80ae29c65a0ffe9eab1bf0dedf07198bdee23fa6eafcd6ccb34f984484be0
 Size (mp4v2-2.0.0.tar.bz2) = 495672 bytes

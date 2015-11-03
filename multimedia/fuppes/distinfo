@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/12/08 22:33:33 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:54:24 agc Exp $
 
 SHA1 (fuppes-0.660.tar.gz) = ca729343754e0d775fb8291fda8b3ac64ef64df2
 RMD160 (fuppes-0.660.tar.gz) = 4a1f278fd4cb00d80ce2efae57201aaa73d11840
+SHA512 (fuppes-0.660.tar.gz) = 36076f57fb0c7266b392f1fc0949de5422dcc1533cb6e2d5e09698f36b0b734bfd063396c5574c7446641f9de6b2589ccf8979f5ce4b04c7a97fe1928a7e49ec
 Size (fuppes-0.660.tar.gz) = 685373 bytes
 SHA1 (patch-include_fuppes__plugin.h) = bfe692659f2b2033c5acf197845c3adfc9ed516f
 SHA1 (patch-src_lib_Common_Common.cpp) = c9f1cfd036c9e5b95065bd28d75c497edfbfe32f

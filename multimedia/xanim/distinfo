@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/08/31 14:52:50 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:54:33 agc Exp $
 
 SHA1 (xanim2920.tar.gz) = 8adb5948cc6fd9bba5417aee4d319b5f041830e8
 RMD160 (xanim2920.tar.gz) = dae33cdbd9f20388a067df8269b625f2594cdfb9
+SHA512 (xanim2920.tar.gz) = 4c3c39d4fca42a6fdce80b3f4fddb300fc714c1466590e8f0d4c0b6f732c15c06604b059d8a6d3661d31dc54f967d789699b6c0fcbac1422b751673e46516455
 Size (xanim2920.tar.gz) = 431258 bytes
 SHA1 (xa2.0_cvid_netbsd386.o.gz) = eace3d11b675d39dfa1d6522e963d3ec7185ba11
 RMD160 (xa2.0_cvid_netbsd386.o.gz) = 38159bb4b92b08475845df0e8a8ee4f01ef8be72

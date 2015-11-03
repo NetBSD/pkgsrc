@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/11/12 18:38:18 khorben Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:54:24 agc Exp $
 
 SHA1 (flvstreamer-2.1c1.tar.gz) = 07fac3dea65d8de8afbcc3c892d7830a90b66f10
 RMD160 (flvstreamer-2.1c1.tar.gz) = 48ab173d4f0332ef2b4d42a72e7c637c7943066f
+SHA512 (flvstreamer-2.1c1.tar.gz) = 660971abcccdb50c0eb9113eb1420ccc169c96ba1c1a593e44f096596c94ea1a6c94879f99cee4ab601f3650e69fad6813a18fd3711d93bfc394b6568f944acd
 Size (flvstreamer-2.1c1.tar.gz) = 77379 bytes
 SHA1 (patch-Makefile) = e1222d997dc7e1cca7535efaaf0b403b80d011f5
 SHA1 (patch-rtmp.c) = aebc2b14fa57de50a159b6d25b1f10f69cec9563

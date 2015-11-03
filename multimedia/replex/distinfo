@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2009/02/18 08:00:37 mlelstv Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:54:32 agc Exp $
 
 SHA1 (replex-0.1.6.8.tar.gz) = 594a5195d65059f26203ac25ad2f332d3c34c1ae
 RMD160 (replex-0.1.6.8.tar.gz) = 9b29af523b82e008981169497956e5a590d5c268
+SHA512 (replex-0.1.6.8.tar.gz) = cddbc00a4f882eabcfd32fddddd8a087fa7aa27a42546cb187baa496c59622122b77e90d662b2fc57d065d882370c2671fad5e10680e34b9f88b8075064b392c
 Size (replex-0.1.6.8.tar.gz) = 49587 bytes
 SHA1 (patch-aa) = b6b5a9052b9de50b52f3a38a70e3b9010f4a2524
 SHA1 (patch-ab) = c397040e37d5ef420210b3ed5b9f5e20a5f19e2e

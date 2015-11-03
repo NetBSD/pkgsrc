@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/21 08:56:39 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:54:33 agc Exp $
 
 SHA1 (thunar-media-tags-plugin-0.2.1.tar.bz2) = 97199d278e384ad75e1f121ade034dcb73e291fa
 RMD160 (thunar-media-tags-plugin-0.2.1.tar.bz2) = 16805f0a313fd0f7f228f6f363fb3449864019c7
+SHA512 (thunar-media-tags-plugin-0.2.1.tar.bz2) = 008ba9cf5405fba2582d072c48c915ad0afe2eb6bd193a710caf5f99247285362747265fa93fe28d9cedd75285a8f9593baf675310b5dbada948aefe359e951d
 Size (thunar-media-tags-plugin-0.2.1.tar.bz2) = 324833 bytes

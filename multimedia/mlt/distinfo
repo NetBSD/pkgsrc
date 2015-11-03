@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/05/30 11:34:51 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:54:30 agc Exp $
 
 SHA1 (mlt-0.9.0.tar.gz) = 76bf18f4442801fae963c5a676d6626e383d1617
 RMD160 (mlt-0.9.0.tar.gz) = c58b21463562367ad1fad46fa3e524f283bd4c82
+SHA512 (mlt-0.9.0.tar.gz) = 631ab41ee6e3673c712f784b9c02b567a5e3b982d49eabe032ef20e89be9424cf9ce6d97fe6906f03b0ac082544316ba8524ae041d017aeac009ab9b98d457d9
 Size (mlt-0.9.0.tar.gz) = 1167943 bytes
 SHA1 (patch-configure) = 0abcfe32e1e9c5505e00690226e7ae99349839bb
 SHA1 (patch-src_framework_mlt__properties.c) = 9a4f0351ddcbed4c431a65a16375a19357605d76

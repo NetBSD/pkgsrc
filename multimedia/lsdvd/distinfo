@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2014/10/13 18:29:54 snj Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 23:54:30 agc Exp $
 
 SHA1 (lsdvd-0.17/lsdvd-0.17.tar.gz) = aa44b8c33c66df2a131e469988ced2b11ebf9aab
 RMD160 (lsdvd-0.17/lsdvd-0.17.tar.gz) = d2895c2b7dc806b8d3ed10ae022976b09ef6e55a
+SHA512 (lsdvd-0.17/lsdvd-0.17.tar.gz) = d217ebe063c9d4c1584abe99cba5c5d09e1d600d26c58f90d542235f9a629433aa24f24fd8399c639e21391e7a5e8bdf54a9c85083aed63eae1090f4c23677e0
 Size (lsdvd-0.17/lsdvd-0.17.tar.gz) = 99250 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/09/14 17:24:13 hans Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:54:32 agc Exp $
 
 SHA1 (smpeg-0.4.4.tar.gz) = 6d7f4449472e6270ab435b2224f3fad951c35259
 RMD160 (smpeg-0.4.4.tar.gz) = d55249ad53417fa0df3d925aed0e83d2204e28b7
+SHA512 (smpeg-0.4.4.tar.gz) = d566bb68b0caacecdf61cd766b26e003fd4e153c243d873f7aae33ab69919202bd121bb9c10f494bd9530267ddec2a9e018eb46ee8bb9d502a29cd2de2f1bbfb
 Size (smpeg-0.4.4.tar.gz) = 315054 bytes
 SHA1 (patch-aa) = 0a691663e1966dbd5d37225b11b6f5f6d9ad0bf0
 SHA1 (patch-ab) = 8b4ef487dc7176dd0ef21e9a6d90e72e26d68c73
