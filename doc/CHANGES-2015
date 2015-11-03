@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4460 2015/11/03 19:36:25 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.4461 2015/11/03 20:43:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7634,3 +7634,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nss to 3.20.1 [ryoon 2015-11-03]
 	Updated net/bmon to 3.8 [bsiegert 2015-11-03]
 	Updated devel/confuse to 2.8 [bsiegert 2015-11-03]
+	Updated net/youtube-dl to 20151102 [adam 2015-11-03]
