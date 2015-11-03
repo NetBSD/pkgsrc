@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:40 agc Exp $
 
 SHA1 (tex-accanthis-32089/accanthis.tar.xz) = c551e72d1ba07694ab97af1341e83a6ad07e26bc
 RMD160 (tex-accanthis-32089/accanthis.tar.xz) = 1630aafa9ed491f3e15fe803ef97ae663a29bba9
+SHA512 (tex-accanthis-32089/accanthis.tar.xz) = 46c1d4934ad5ebdf85310bcc53a570221cb709ad9b089ac8d1433b7508d624534efa9aea34a9b178af5223252ad7bc46af3d85d1acb9044c2dedb6a236a3633a
 Size (tex-accanthis-32089/accanthis.tar.xz) = 368020 bytes

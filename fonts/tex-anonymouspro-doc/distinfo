@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-anonymouspro-33441/anonymouspro.doc.tar.xz) = 896d946fa0a5731ad9486b3a3b4f631bab55a547
 RMD160 (tex-anonymouspro-33441/anonymouspro.doc.tar.xz) = 953b770551713479a26c2569e94e67fcc0c6b7dc
+SHA512 (tex-anonymouspro-33441/anonymouspro.doc.tar.xz) = 46f7b459cec0186c90399a6a13303c0502bb54f1c306492f378680e11b3108f316e384f65c11a089dc2628efde25a0e80d54280de5dbb52532b51da834146d0b
 Size (tex-anonymouspro-33441/anonymouspro.doc.tar.xz) = 370484 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:06 agc Exp $
 
 SHA1 (tex-lato-24986/lato.doc.tar.xz) = b213fa8f1bbf4e297aba67acacdd2ad5a475808c
 RMD160 (tex-lato-24986/lato.doc.tar.xz) = 65081d9d3b934fcb0a29c6175c39bfec4d9bf756
+SHA512 (tex-lato-24986/lato.doc.tar.xz) = b19eab5b4f3dcd19d3f88481c3c066a90de9779c46df86ce7b83b59107608bc1fc15b1d6f4284c41765abd31315f50bcaef0c5fbbf5f0f8b229130a31fc118aa
 Size (tex-lato-24986/lato.doc.tar.xz) = 374512 bytes

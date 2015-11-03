@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:43 agc Exp $
 
 SHA1 (tex-astro-15878/astro.tar.xz) = 555f950bce63437dcb056c4bdaf410ec20c13862
 RMD160 (tex-astro-15878/astro.tar.xz) = b1a8a8c1e7d2277681fbfbca4ba15e47f795f740
+SHA512 (tex-astro-15878/astro.tar.xz) = 7df86bab44580e817b4d1592fbb4234ce7b6a191c0a22e7fbf70e88fd2f18302fd2fd78cab704c09783602dc8fcccfd0344437f74fbba534077841ea9b69876c
 Size (tex-astro-15878/astro.tar.xz) = 12812 bytes

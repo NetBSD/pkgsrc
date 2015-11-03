@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
 
 SHA1 (tex-gillcm-19878/gillcm.doc.tar.xz) = b5d4c88d4634c8ba0435a683fc6f8121da5dfe9f
 RMD160 (tex-gillcm-19878/gillcm.doc.tar.xz) = 93fd2cdbe5485d97ab5c67dab860785da8f3f57e
+SHA512 (tex-gillcm-19878/gillcm.doc.tar.xz) = aac253a49559b734ca7ee695afe389ba21dbc13d2a2da0c8b0a820774fd4cf2bb4e9a9c9518f7a9c0aaba99ca29215ed459c8c2306816369d3407690d5ed5e95
 Size (tex-gillcm-19878/gillcm.doc.tar.xz) = 196164 bytes

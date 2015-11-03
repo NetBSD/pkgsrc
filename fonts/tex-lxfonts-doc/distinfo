@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:08 agc Exp $
 
 SHA1 (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 034e33c3cd4fe05d00d26ffca8846d5920ef5ae0
 RMD160 (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 149b21979d5aef447dfaef7cba4f512a65a4367e
+SHA512 (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 4c66fbe35337f43dcae53cf26fe1564f8cdd5897038f676d862c54cc25f3633e146cda0afe2aca564960e2075bd337d463037db6e05201395ffa04b846870621
 Size (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 530100 bytes

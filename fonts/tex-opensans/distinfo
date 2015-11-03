@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:13 agc Exp $
 
 SHA1 (tex-opensans-24706/opensans.tar.xz) = d39a3e5665829b082d4b5cd09a2912f65b125718
 RMD160 (tex-opensans-24706/opensans.tar.xz) = 6038dadd07fadef2d16cbd236e03f0b47f595d2b
+SHA512 (tex-opensans-24706/opensans.tar.xz) = d75ca7f327c11b4bb4a3bc0c33926a0e1f240b42d08a73a333b24bb261d4ea15d93d7ed96e3f4379829d8b89961884fe6207ffe80d86508ab2d918490554403a
 Size (tex-opensans-24706/opensans.tar.xz) = 2056748 bytes

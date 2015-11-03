@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:56 agc Exp $
 
 SHA1 (tex-eiad-ltx-15878/eiad-ltx.doc.tar.xz) = 0ceefcf75c9ae830688022d2ae898be19c9acfc3
 RMD160 (tex-eiad-ltx-15878/eiad-ltx.doc.tar.xz) = d44dbd41adeddd958a70e6941fbcb4ae7e2b62d3
+SHA512 (tex-eiad-ltx-15878/eiad-ltx.doc.tar.xz) = 4357235cbf076616a2eb38c92c1ac58afa2831d3640aa2cd763e7550486a0e9fc7f3ab74ef62dbcbb8c29fd3f6132716934895fb077cbbdee161a74c8fe33a94
 Size (tex-eiad-ltx-15878/eiad-ltx.doc.tar.xz) = 1956 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:04 agc Exp $
 
 SHA1 (tex-hfbright-29349/hfbright.doc.tar.xz) = e79681280de5128cfb2206ecb6195d93cecb862e
 RMD160 (tex-hfbright-29349/hfbright.doc.tar.xz) = 7bfedb09f988aa2f36ae002a7896beb4fa0bed33
+SHA512 (tex-hfbright-29349/hfbright.doc.tar.xz) = 3d19bca1a4179f7508f3ff29488732418276108c0ed4d1495e7410eafc53d13d4f7fa08b80b2afabb2b65d7a81fcbafa3b18497b0b1f022a1b8ad7df326c1302
 Size (tex-hfbright-29349/hfbright.doc.tar.xz) = 4964 bytes

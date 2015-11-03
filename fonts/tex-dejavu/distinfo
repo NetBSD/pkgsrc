@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:53 agc Exp $
 
 SHA1 (tex-dejavu-31771/dejavu.tar.xz) = 1fd4fee5ea401b0831ecf2c324cbb417d43cf0bc
 RMD160 (tex-dejavu-31771/dejavu.tar.xz) = 6974b04e2c8808a95be35fdd06c68eb59e3b5e11
+SHA512 (tex-dejavu-31771/dejavu.tar.xz) = ecda5734015171a2cc8d2a7bbaa638cf7b5f20e104bcab7100c0313b465ef5725a5a434fc3810bfb23c41da8a63363263550b3290ffe401fa38e5df8aec14b9f
 Size (tex-dejavu-31771/dejavu.tar.xz) = 10725176 bytes

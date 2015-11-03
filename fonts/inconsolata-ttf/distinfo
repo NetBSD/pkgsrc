@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/02/27 10:26:56 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:34 agc Exp $
 
 SHA1 (inconsolata-ttf-20090207/Inconsolata.otf) = 7f0a4919d91edcef0af9dc153054ec49d1ab3072
 RMD160 (inconsolata-ttf-20090207/Inconsolata.otf) = dfa28f2bc34263f4447d1fbabbe51d5f036cfbc8
+SHA512 (inconsolata-ttf-20090207/Inconsolata.otf) = 672772c15b52987e4e16cee68680b088b40c1f60d7ec30d2d1a13e962119fe05913c3aece9db0604824682098a9115bbd68e6c5aa4571983b8263d647b9c2c7e
 Size (inconsolata-ttf-20090207/Inconsolata.otf) = 58464 bytes

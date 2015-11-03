@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:56 agc Exp $
 
 SHA1 (tex-epigrafica-17210/epigrafica.tar.xz) = 6fa8f10ee2eb6268b244b49cc95ad559539fb083
 RMD160 (tex-epigrafica-17210/epigrafica.tar.xz) = c59f55174f5232f75bd96cdc06411f2fe5aad337
+SHA512 (tex-epigrafica-17210/epigrafica.tar.xz) = 84636aa890fd7bf03807a739904551047c0f08043c2c0c191943621cc466d764c38a706a1974106953290b458e11f27048cc333d26eec939374fb9ce48996a7c
 Size (tex-epigrafica-17210/epigrafica.tar.xz) = 343612 bytes

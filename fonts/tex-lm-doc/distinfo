@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/12/03 22:33:45 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:45:08 agc Exp $
 
 SHA1 (tex-lm-28119/lm.doc.tar.xz) = d166099cb18578ea9384d5265b490ea1d9571ee8
 RMD160 (tex-lm-28119/lm.doc.tar.xz) = 1375ef0cfb72612193be1c7769e285e28335244f
+SHA512 (tex-lm-28119/lm.doc.tar.xz) = f91dbb14223eec48487114702db2a51bcbf043374356a4613735fc9028c419f7aecf374169bf72be1425467fb70248b4cf59db782400457215ace23593f9c3d9
 Size (tex-lm-28119/lm.doc.tar.xz) = 1630436 bytes

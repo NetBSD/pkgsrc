@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:22 agc Exp $
 
 SHA1 (tex-wsuipa-25469/wsuipa.tar.xz) = d5cb349d430806e9ba3f231f599f857e4699cc43
 RMD160 (tex-wsuipa-25469/wsuipa.tar.xz) = 6441be90ce14fc5fc2ba9fdbc32076b6d0334d39
+SHA512 (tex-wsuipa-25469/wsuipa.tar.xz) = 1680c9c39280e64cb1a92fac3c51743a5cc36e9c38895c7b29bfaef03eefc6520fcdc0965b97cf466d990057b14304eefc16d19836d20fad6167404794408726
 Size (tex-wsuipa-25469/wsuipa.tar.xz) = 36072 bytes

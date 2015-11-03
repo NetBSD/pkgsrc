@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:55 agc Exp $
 
 SHA1 (tex-ean-20851/ean.doc.tar.xz) = e3a3321f2db82ab7813dc709598dddbef95e6a6e
 RMD160 (tex-ean-20851/ean.doc.tar.xz) = a4d57a12798f4ac4d4385b6078e8b7d4110ab3de
+SHA512 (tex-ean-20851/ean.doc.tar.xz) = 215230a3c9b25a6556f644ecaf605318310441bd91222495ae2056fdd45fe367a6cb5b6816212bcdce629edab5cdd9c51e7ec07279cc9e903caa5089823bb6a0
 Size (tex-ean-20851/ean.doc.tar.xz) = 952 bytes

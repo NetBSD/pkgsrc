@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:09 agc Exp $
 
 SHA1 (tex-mathabx-type1-21129/mathabx-type1.doc.tar.xz) = f7ff5aff91ac8c2da8d2bbbdd7f42841f6c46f52
 RMD160 (tex-mathabx-type1-21129/mathabx-type1.doc.tar.xz) = 3b785e29362e261fd7818e453162b5dd916617bf
+SHA512 (tex-mathabx-type1-21129/mathabx-type1.doc.tar.xz) = 4aec0785bae2607c2fec67cd6611658924521b33f9080d1f0314cc4baa282a21331fb52669313792f0cff8c34c740f85d8de4ba900952e0ab83aedd0123c565a
 Size (tex-mathabx-type1-21129/mathabx-type1.doc.tar.xz) = 920 bytes

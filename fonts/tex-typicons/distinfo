@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/09/02 11:06:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:20 agc Exp $
 
 SHA1 (tex-typicons-37623/typicons.tar.xz) = 2b1258de31bb6dac136b39476b456aaadc586390
 RMD160 (tex-typicons-37623/typicons.tar.xz) = 9d14b6ab1b474de4ba2923e7bf7bd4da5101e5eb
+SHA512 (tex-typicons-37623/typicons.tar.xz) = 7be69a17191737fef285ae54ecee5cf06576506aaebe8ae338c9402d3137e420386c4acc37a0e1ab509e46b99909b9e96e997e563278f764c990ce24459c0b18
 Size (tex-typicons-37623/typicons.tar.xz) = 59552 bytes

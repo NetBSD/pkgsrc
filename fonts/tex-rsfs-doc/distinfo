@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:24:39 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:45:17 agc Exp $
 
 SHA1 (tex-rsfs-15878.2010/rsfs.doc.tar.xz) = 8c926307d4b69c257824f31c44da8179ff707157
 RMD160 (tex-rsfs-15878.2010/rsfs.doc.tar.xz) = 44d50f463aeb44af6b356f75d70757ee32485684
+SHA512 (tex-rsfs-15878.2010/rsfs.doc.tar.xz) = eb46c94d4fb3ee4403e28778db8b8b165d73d7673abfc44761d9a395d5d02ec406758bdddcd86c32947eb7c11030c425fb51d596a9928eb897cfe1a342bff5eb
 Size (tex-rsfs-15878.2010/rsfs.doc.tar.xz) = 2288 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:12 agc Exp $
 
 SHA1 (tex-obnov-33355/obnov.doc.tar.xz) = 5ef8b056160d5f6097994945393a9a35c6a97a3b
 RMD160 (tex-obnov-33355/obnov.doc.tar.xz) = e614058c3c7e1f4e49667146d4f73bb619222251
+SHA512 (tex-obnov-33355/obnov.doc.tar.xz) = b4682717f5b9d6dcf0947152666dc480d681594294d71270a1f7de13a970ee679adef2b4337d2c6b7498aae829b6bf773d2d21ae5dc20c9ee7921297c32ff3b2
 Size (tex-obnov-33355/obnov.doc.tar.xz) = 808600 bytes

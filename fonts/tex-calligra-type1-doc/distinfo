@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:47 agc Exp $
 
 SHA1 (tex-calligra-type1-24302/calligra-type1.doc.tar.xz) = 5f50365620f13d9a8a5bc57a1b51d82ecbe33790
 RMD160 (tex-calligra-type1-24302/calligra-type1.doc.tar.xz) = 14dc3213c74240b1df39464973fed7655df8181d
+SHA512 (tex-calligra-type1-24302/calligra-type1.doc.tar.xz) = 2bc8271efeb80307cc4ef226b04809120d1043be6de922b6a87a141672cef1befc8c006d6478aa16d566de23b358af18357df43be04564fca44c40503e451307
 Size (tex-calligra-type1-24302/calligra-type1.doc.tar.xz) = 736 bytes

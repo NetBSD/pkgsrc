@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:23 agc Exp $
 
 SHA1 (tex-xits-32763/xits.doc.tar.xz) = 56a6d139678aecb4691b1769ea6b08d23a772d68
 RMD160 (tex-xits-32763/xits.doc.tar.xz) = c3f0c81339184ba165046c22149b90b05932fd89
+SHA512 (tex-xits-32763/xits.doc.tar.xz) = 4aa3e3399507268af8195d8e0ae9f57a3f4f5fc1b5f1eb7ea76871626e1db9813170a3606bda29f2114cfd5ac6a54892131f484cb0bc0244d1707a0dc5aa009a
 Size (tex-xits-32763/xits.doc.tar.xz) = 87328 bytes

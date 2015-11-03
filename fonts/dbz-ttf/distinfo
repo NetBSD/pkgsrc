@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/09/29 13:46:16 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:30 agc Exp $
 
 SHA1 (dbz-ttf-20050114/dbz.zip) = 86ec49252f34b73e0c17fb425afc9990ea55be62
 RMD160 (dbz-ttf-20050114/dbz.zip) = 63f95e7d95057fc96aaf57bd3b3d1aa31b5f3d38
+SHA512 (dbz-ttf-20050114/dbz.zip) = 85ac42f9dcd8e2fff6599d74c657341e008bdb56365c36e4318d82b76722814b692a80d931ad6747e22da68cffcd5957d9548c31fa99caa96dee7e940d5f1485
 Size (dbz-ttf-20050114/dbz.zip) = 1620679 bytes

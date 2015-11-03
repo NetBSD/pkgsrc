@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/04 19:52:01 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:58 agc Exp $
 
 SHA1 (tex-euro-ce-15878/euro-ce.doc.tar.xz) = 31db6f9adff116600fd4893b59b9adf996ed6892
 RMD160 (tex-euro-ce-15878/euro-ce.doc.tar.xz) = 832667cf9d1addca7c4c11d58407577ca27f2adb
+SHA512 (tex-euro-ce-15878/euro-ce.doc.tar.xz) = 8aee8be1d4a63c67c2938cd0df6bfb69e781c02e8f65e44c92b5c595d88f6575f16344a6495906280346e8743a6ac4fba619f2b9d5b0419e284df04a1a774c21
 Size (tex-euro-ce-15878/euro-ce.doc.tar.xz) = 4716 bytes

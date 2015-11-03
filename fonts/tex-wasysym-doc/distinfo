@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/08 19:20:58 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:22 agc Exp $
 
 SHA1 (tex-wasysym-15878/wasysym.doc.tar.xz) = af9dfdcc534b83c4a2a383b2131cf6c6e1fc3732
 RMD160 (tex-wasysym-15878/wasysym.doc.tar.xz) = 1737fcb374e46144e1bceaf102f2dced32c7e008
+SHA512 (tex-wasysym-15878/wasysym.doc.tar.xz) = bf564353b702e77eebc06c2b1c6949ad702733ed6614dd1cdb35db5ffd672512fe9b5b47ff61420cb011ac14bda34ecdf25d7d1d340e146a438176848fc9055e
 Size (tex-wasysym-15878/wasysym.doc.tar.xz) = 90892 bytes

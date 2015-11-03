@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/08/09 06:14:07 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-archaic-38005/archaic.tar.xz) = e19753f5e5b2c2f3cf6bf9662d46cd9e21bc060b
 RMD160 (tex-archaic-38005/archaic.tar.xz) = 48bea95d4c27aadf7aff7f3a17c9e480f6c67cbe
+SHA512 (tex-archaic-38005/archaic.tar.xz) = 4898381af52b70f2eefa83bdb0157ec3497196a27f1beea9472edae00a72b26e6b93410866feff5cc0cd0e815ec9e6402642a58d640ee9d26166c338aae07af0
 Size (tex-archaic-38005/archaic.tar.xz) = 372728 bytes

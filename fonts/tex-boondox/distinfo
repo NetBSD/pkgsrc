@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:46 agc Exp $
 
 SHA1 (tex-boondox-22313/boondox.tar.xz) = 8d4532625aeff16ae8946ee3924a0f2e39a397c7
 RMD160 (tex-boondox-22313/boondox.tar.xz) = 5bc75f055b90a1a25a6daa72c13003af447fcc18
+SHA512 (tex-boondox-22313/boondox.tar.xz) = a8a45122f2a126186e6ca807359e794d5baefa42512e7828d065570ea41e1bcc14b202cf72998ce2cd6ee8538d8db98ed1938c753552fec979b4c2d39dd366d4
 Size (tex-boondox-22313/boondox.tar.xz) = 97664 bytes

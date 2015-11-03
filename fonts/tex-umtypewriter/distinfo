@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
 
 SHA1 (tex-umtypewriter-18651/umtypewriter.tar.xz) = 11d4ee6112efcb092ede44967fb0babfc51a3f0e
 RMD160 (tex-umtypewriter-18651/umtypewriter.tar.xz) = 85d4e5213d2bfade5eea08efdcda5e466ee9d99e
+SHA512 (tex-umtypewriter-18651/umtypewriter.tar.xz) = 7bffac6f8b3a9b7058a9d94c0c1029e879fd3a42cbcf3467a8aa5a8a29eb4a3093a8b07bbce23f2eaa57056a043823f2858d6324a8a008e2bc9930341bbc6b62
 Size (tex-umtypewriter-18651/umtypewriter.tar.xz) = 338560 bytes

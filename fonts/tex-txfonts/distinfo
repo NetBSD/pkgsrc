@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:24:39 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:45:20 agc Exp $
 
 SHA1 (tex-txfonts-15878/txfonts.tar.xz) = b79ac66a94ad5a3bf7357cf445fecee24fa5758a
 RMD160 (tex-txfonts-15878/txfonts.tar.xz) = dbf62d9e07757cbf4e3714b16720b0812af589df
+SHA512 (tex-txfonts-15878/txfonts.tar.xz) = 4fdae120616c3e10a46042bfa5aa7004c3745954483246ce222b055ec31939083072d8d3a0306e057200a23339fc84299544290aa154e2dff9972e248e7b1bfa
 Size (tex-txfonts-15878/txfonts.tar.xz) = 709536 bytes

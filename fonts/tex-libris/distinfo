@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:07 agc Exp $
 
 SHA1 (tex-libris-19409/libris.tar.xz) = 70d9801f041cad4d409da532abd18b9b10b90992
 RMD160 (tex-libris-19409/libris.tar.xz) = 682eb85040c9cc0423eaaf8b8c7307774ebbb91c
+SHA512 (tex-libris-19409/libris.tar.xz) = 7a505f86ae40aa0e88ae84649ee0372defccea6cfa32dd9188faaada1f708de860039c56ef52539fae004bc08dcb4ad3421c4e1c13d657b71c921c516ad58091
 Size (tex-libris-19409/libris.tar.xz) = 239784 bytes

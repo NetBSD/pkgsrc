@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:03 agc Exp $
 
 SHA1 (tex-gillius-32068/gillius.tar.xz) = 26d184699a236978237f4c270cf4ee5eeb50f6d1
 RMD160 (tex-gillius-32068/gillius.tar.xz) = d7a6ba21072fa75a96b31b1fe70c863150c6efbb
+SHA512 (tex-gillius-32068/gillius.tar.xz) = 59e25f78104bc6b74e3fe95f26ce5b37eaee7d54f6a5c00e4e3ed85351b91a8322353b5e42f0dcc3009fdd97be7db526c6f38b58e04b9a11f48148e13da5e431
 Size (tex-gillius-32068/gillius.tar.xz) = 941848 bytes

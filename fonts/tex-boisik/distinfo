@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:46 agc Exp $
 
 SHA1 (tex-boisik-15878/boisik.tar.xz) = dd036f5c006a5ba27f5df32468642e4ccd7fa209
 RMD160 (tex-boisik-15878/boisik.tar.xz) = 353d7e7acabbefe3f18433465f891e01d2c50270
+SHA512 (tex-boisik-15878/boisik.tar.xz) = f68e4b551d7dab40ffa524195926c0d502abcb78ee19b8391380a9599440ab0743c3c3e0f60c6ecb8c70a83b3cf58156c5916ca333960e028214af5cb1593df0
 Size (tex-boisik-15878/boisik.tar.xz) = 215548 bytes

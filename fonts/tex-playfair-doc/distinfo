@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:15 agc Exp $
 
 SHA1 (tex-playfair-34236/playfair.doc.tar.xz) = 4269a0606994abbfdf1f316c6ee1bcc48cd696a7
 RMD160 (tex-playfair-34236/playfair.doc.tar.xz) = 3fc80dd6707bfaa1ea8aeb22304e37d556437caa
+SHA512 (tex-playfair-34236/playfair.doc.tar.xz) = 010c52f0ae1352ffd2614bd17fd7a55896d46e6d07b5556ffe0e9e65b62e60420d701b0e180b97a06ad83f068ae8d5fc6625a99b9e6c62c5cd34c241e6b99523
 Size (tex-playfair-34236/playfair.doc.tar.xz) = 97628 bytes

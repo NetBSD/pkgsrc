@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:05 agc Exp $
 
 SHA1 (tex-iwona-19611/iwona.tar.xz) = 7fb0a1d59c05500a60cfc46af81284c8b6cdadfa
 RMD160 (tex-iwona-19611/iwona.tar.xz) = 292638a9ef646b4d67cab25b384b676dccaadb13
+SHA512 (tex-iwona-19611/iwona.tar.xz) = 46df9a6482c399190dbd47eeb86dff7ef48781944f2df9693703daf0906ccb248fce671028837457238764acd5882a03577de85564070d95299a3beb5d943763
 Size (tex-iwona-19611/iwona.tar.xz) = 3901900 bytes

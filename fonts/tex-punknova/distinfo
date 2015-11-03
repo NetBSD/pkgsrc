@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:15 agc Exp $
 
 SHA1 (tex-punknova-24649/punknova.tar.xz) = 01fd063dabe5d92c2598cfdb48c899b9af87e442
 RMD160 (tex-punknova-24649/punknova.tar.xz) = 3daf007c88c56dac99d1f722510e9754265fdb53
+SHA512 (tex-punknova-24649/punknova.tar.xz) = 2572d80dd0791fb6dd8b25bebe5e50004a22e4685f1f693bd2a83fe9ebaa099bcfc217ab6b2f318170b4a54d5a593f312e4d8478a4f40c7e360b37562804fb23
 Size (tex-punknova-24649/punknova.tar.xz) = 813988 bytes

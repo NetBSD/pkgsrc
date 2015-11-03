@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:52 agc Exp $
 
 SHA1 (tex-courier-scaled-24940/courier-scaled.doc.tar.xz) = e7f8fe3e005b9650f4d988a8452dfe46f09ba592
 RMD160 (tex-courier-scaled-24940/courier-scaled.doc.tar.xz) = 6261578ad84f7751579b75805f102301c55f4a4c
+SHA512 (tex-courier-scaled-24940/courier-scaled.doc.tar.xz) = a622c63dc1c407389d8542e2359f4dcbdd145864484c5e4393408d26b36add92146ac291ae4cf9006a181b897712ac48416607672f831635903bab209877100f
 Size (tex-courier-scaled-24940/courier-scaled.doc.tar.xz) = 151608 bytes

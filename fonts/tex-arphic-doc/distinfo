@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/21 16:52:39 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-arphic-15878/arphic.doc.tar.xz) = b38b0f2089bdf158a8cfa9edee0ec44dd53f5b20
 RMD160 (tex-arphic-15878/arphic.doc.tar.xz) = 0c11d1de22997b34371304b1ddccdc8bdcedc2ec
+SHA512 (tex-arphic-15878/arphic.doc.tar.xz) = ca3bc5f8b32dc06154d31b67b69cb9f2615c6c839a9c4ced08dbc6ae7c84fa7bed0fae26a1c80002f0c4317f0afd1187a4fd1c6d5cc2e8196e45102ff13d74d2
 Size (tex-arphic-15878/arphic.doc.tar.xz) = 170072 bytes

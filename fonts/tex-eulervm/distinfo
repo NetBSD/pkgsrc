@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:58 agc Exp $
 
 SHA1 (tex-eulervm-15878/eulervm.tar.xz) = 9f55ec7c1a973ac93e6be6528e850dc856b328a6
 RMD160 (tex-eulervm-15878/eulervm.tar.xz) = 0b9815dc8a0c88a7419c5629b9babe2b2d7f0e6d
+SHA512 (tex-eulervm-15878/eulervm.tar.xz) = 007b84dfaf01de6816566c287ca27d9948380ead63730c3d02223170e47294fab9c980c700ed6959be884bcdc21f08a201f8c54df8d509b2ebc90c6c95f1eac8
 Size (tex-eulervm-15878/eulervm.tar.xz) = 13572 bytes

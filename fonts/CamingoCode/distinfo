@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/08 00:17:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:27 agc Exp $
 
 SHA1 (CamingoCode-v1.0.zip) = 1809ebc624e2cfdc1f7109e9c13413b335770494
 RMD160 (CamingoCode-v1.0.zip) = 9164a1f14c3ba6775949fefec2476ae03f6016e0
+SHA512 (CamingoCode-v1.0.zip) = 7e146fb823871e7ae52f37a278c9d042e5946c5e12c50874737fe8c0e4602547a29b9703b90210ab645cc9938df56d3f8a7daca4abecbf1c6b17b00156827d6d
 Size (CamingoCode-v1.0.zip) = 707082 bytes

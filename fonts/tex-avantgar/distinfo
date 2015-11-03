@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/25 05:36:21 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:43 agc Exp $
 
 SHA1 (tex-avantgar-31835/avantgar.tar.xz) = ec89f41a9b70472d5c3d87af6d9b54807a284132
 RMD160 (tex-avantgar-31835/avantgar.tar.xz) = b7ba678722fdf2a9dbfd9350ab439acc83b6bc91
+SHA512 (tex-avantgar-31835/avantgar.tar.xz) = f4b303c8a0fe033ce32288357e5d19923304ce6f0b8cfcaa06635a04e3a4a7b1cd2690cde388e6abb80f5d646abe26be7c4e172c8f8e3f5c53ade530bfcf5c3a
 Size (tex-avantgar-31835/avantgar.tar.xz) = 241096 bytes

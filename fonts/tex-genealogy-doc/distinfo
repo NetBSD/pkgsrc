@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:01 agc Exp $
 
 SHA1 (tex-genealogy-25112/genealogy.doc.tar.xz) = 4d49546cc50c0a26774a69788125c765d4e5abb8
 RMD160 (tex-genealogy-25112/genealogy.doc.tar.xz) = e58bd519282f8a59c668803ef228f8f6b0679f1b
+SHA512 (tex-genealogy-25112/genealogy.doc.tar.xz) = d3ff438a1d10749676e8d4278509e30ad5aee227f0602cb96d811b23200b3e43bb772bf307f599ef6c163f4dabdcbdbe0a94b565acf5fdfd727c688fcdab467c
 Size (tex-genealogy-25112/genealogy.doc.tar.xz) = 1128 bytes

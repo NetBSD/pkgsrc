@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:16 agc Exp $
 
 SHA1 (tex-recycle-15878/recycle.tar.xz) = e2ca2aeba46d4e267631acec0345a08d2f9ddf29
 RMD160 (tex-recycle-15878/recycle.tar.xz) = e3981ac870fa32c33f794cd0572e5a7a567dc87a
+SHA512 (tex-recycle-15878/recycle.tar.xz) = 8a835a15a778c7c3a5894f722dca2093c9e348264f4e099d75d62655f271fcfa508327c7c6b28670724aec6cef148d898548c165955d9c6b0344786fc09db10e
 Size (tex-recycle-15878/recycle.tar.xz) = 9800 bytes

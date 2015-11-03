@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 08:37:20 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:44 agc Exp $
 
 SHA1 (tex-bartel-chess-fonts-20619/bartel-chess-fonts.tar.xz) = 24eabdb4639dd3b8700b9c39bfba3521abb88b8c
 RMD160 (tex-bartel-chess-fonts-20619/bartel-chess-fonts.tar.xz) = 47569a2e9de39ea843a7d4f94c9c78ea28fd3f06
+SHA512 (tex-bartel-chess-fonts-20619/bartel-chess-fonts.tar.xz) = ba1c6bc2bea805dfe1844332f5d922b4c2ca632b2029783a655281655ddc7eb2010fa8fc74d490662cccfc633c9906534c28eaedff9cb88fdb61a721f26d1a96
 Size (tex-bartel-chess-fonts-20619/bartel-chess-fonts.tar.xz) = 17436 bytes

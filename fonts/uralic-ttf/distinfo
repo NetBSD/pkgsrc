@@ -1,29 +1,38 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/01 21:04:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:24 agc Exp $
 
 SHA1 (BookmanUralic.zip) = 44bc773cb06e8296b874dab575ed0be71065d3ea
 RMD160 (BookmanUralic.zip) = 9ccca568aee97927718f1f247241a112b6a8d8a8
+SHA512 (BookmanUralic.zip) = 29d14baa36ab07e59002a0f77d8a0bd0d0de09f42fd95298577fe711046789fc21e489f7359480f32a5b3104142317616f4fb5b6333a786a914afda856d23a67
 Size (BookmanUralic.zip) = 113214 bytes
 SHA1 (ChanceryUralic.zip) = 5d4c05aa23b21591a141ddac6551b1ee91c4e619
 RMD160 (ChanceryUralic.zip) = c99635b86d19a920400f0a78db914444997b4e28
+SHA512 (ChanceryUralic.zip) = ddebae474544222401f06c5983a7de24d7bff7c8dce26e03792160c45bc67365db1fcd2cfecd205c32103b00223afc02ef121fb585eed9dcca689f1962123438
 Size (ChanceryUralic.zip) = 45765 bytes
 SHA1 (GothicUralic.zip) = db139071a5e48ffddeba4107aae798ddee516c63
 RMD160 (GothicUralic.zip) = d0741c31ac6ea74f936085f9ae98b4b1516ad1cf
+SHA512 (GothicUralic.zip) = fdff6c97bb781c6c80ea8faf271f1ffeee6bc1585a12caea111b4df060e2a376f0c9185eb59be96932d6791e1635970b5fd2980fd37d3370092a9cec74cc8c3a
 Size (GothicUralic.zip) = 57798 bytes
 SHA1 (MonoUralic.zip) = b038b97d9e7ea8c5bef69a12080f62656e59748e
 RMD160 (MonoUralic.zip) = be74c8d3a4bfb3bc2d67911136bdb79e4bc14f87
+SHA512 (MonoUralic.zip) = 47a6cfee71cfc81c74b2388fda0cadb59895df63d319b6e8581fcb7728b2febe000674600ec5386f0c05c695a6f412e6a50f5065f4c0dcf46f19375a481f1fa3
 Size (MonoUralic.zip) = 38355 bytes
 SHA1 (PalladioUralic.zip) = cd7ce87db7a0b81717a2015f40b2d7f3d5bfe654
 RMD160 (PalladioUralic.zip) = fbd3ea3583a8e6427594ffe190b8a6a8be07f791
+SHA512 (PalladioUralic.zip) = 01a39dafc49e0f3213f6d841bf754a361e40163319fa6b470c890ae541e22df98b3a364c31946ac3751da86f39ec91a7daf6ec6ad1890d928e42f47a477cadf4
 Size (PalladioUralic.zip) = 114775 bytes
 SHA1 (RomanUralic.zip) = 4f41c59fa9fd16f9e716a599b893e856f41b7f91
 RMD160 (RomanUralic.zip) = c98de5c1db6c6052dcbcc939c7da9375861933a8
+SHA512 (RomanUralic.zip) = 3f450b27a3970dedf5f90282b3caffaf80ba765636fde0fdc39c3c89b69cd2d0f7f3cb736a6ff37a2c4d5f38a7d31d050de9d5adf96ed03f8a66c805d750d38f
 Size (RomanUralic.zip) = 113133 bytes
 SHA1 (SansCondUralic.zip) = 4b357f4263c12154e3361c17ee77972ee48f6779
 RMD160 (SansCondUralic.zip) = fcbbd2bee0a0a870e6dbb08f4a9ff5bfcf8d4853
+SHA512 (SansCondUralic.zip) = 79079f93a0104a720e2f08adbea45eebdeecef4945d9e7e50f444fa0ddffc9da9fa3cd1d496cb44cf9e730a7c6ee399cbcde5cd9bf402cee9f506cf47ea6ca11
 Size (SansCondUralic.zip) = 57647 bytes
 SHA1 (SansUralic.zip) = 3a6646d24a131812ebf52b05df99b9afef4a8ca8
 RMD160 (SansUralic.zip) = e2f0c60a5086f9bb51bba04b69b581a8a48a7112
+SHA512 (SansUralic.zip) = 50fa65d89d5e4b3ec3fe521980aef2d0e657f8cf394595f5897c4fa187c9ca7e1fc485b1a2a5ec47ff689011491d42461e7bcca5022d620587408f1c057aad35
 Size (SansUralic.zip) = 112723 bytes
 SHA1 (SchoolbookUralic.zip) = 549b598e2cca795e0713b20c30bdb5ed596ac0d7
 RMD160 (SchoolbookUralic.zip) = 35867dc626696e23c54a975dd183b1ad71f877af
+SHA512 (SchoolbookUralic.zip) = 722e0c4da00e1bad65592c42eeaac192c5b9450ed4296a0082b73d06a720bed5a1561c69ad0ad07733742b3800535683c02d1f36b2773adc7eff709077beeba8
 Size (SchoolbookUralic.zip) = 115235 bytes

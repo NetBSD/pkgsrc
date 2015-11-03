@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:03 agc Exp $
 
 SHA1 (tex-grotesq-35859/grotesq.doc.tar.xz) = 31a48612ec83b70a31e451aa42dd21d085a4aa9e
 RMD160 (tex-grotesq-35859/grotesq.doc.tar.xz) = 276b40e8db3c4328de4d88347b47e80857669566
+SHA512 (tex-grotesq-35859/grotesq.doc.tar.xz) = ac6bbc936bb8ad2479df20f6cbb47b8d027bbb0f8dd684a9be8e76a9bc34e19cc7bfc44fbe8f67b049b796ad1fa0959c30945c0b7d9b04bdf38482f1d4d0abfc
 Size (tex-grotesq-35859/grotesq.doc.tar.xz) = 2800 bytes

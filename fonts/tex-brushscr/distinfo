@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:46 agc Exp $
 
 SHA1 (tex-brushscr-28363/brushscr.tar.xz) = 822d1713549a3b28f67b4e5ac87bccc4cb4dff48
 RMD160 (tex-brushscr-28363/brushscr.tar.xz) = d029488700cdb190fc0ffe31c51d89f810c97f0c
+SHA512 (tex-brushscr-28363/brushscr.tar.xz) = 2035a64b5ea6dfefadc3840443e34c74d115780aba96488483784d050b7df8c3f0847ce00ddec31a2aceb47f226b0e17f28926dc81e47e66e88aa80e2298e2c6
 Size (tex-brushscr-28363/brushscr.tar.xz) = 48600 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:13 agc Exp $
 
 SHA1 (tex-ogham-24876/ogham.tar.xz) = 92073787f15b647402f3561f2d409b69952dfe3a
 RMD160 (tex-ogham-24876/ogham.tar.xz) = 7456b8f4070300e0512529dbeef4c62ed167f006
+SHA512 (tex-ogham-24876/ogham.tar.xz) = 073f4c0f3a8e03f841a87cd1f7be2bca50118d6bf5575609bceb03b6b7c4cbcf9c6044a236afd2cf760c89147c9c96b6ad1e03394cdd4093c34f31c932195766
 Size (tex-ogham-24876/ogham.tar.xz) = 1820 bytes

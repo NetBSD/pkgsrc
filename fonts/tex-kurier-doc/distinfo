@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:06 agc Exp $
 
 SHA1 (tex-kurier-19612/kurier.doc.tar.xz) = 8eb508cfd80801d2ca238c54f16cd6dbc885a638
 RMD160 (tex-kurier-19612/kurier.doc.tar.xz) = 84eb4b882ee9e62e6dbf2514d27d2ef47e0decbb
+SHA512 (tex-kurier-19612/kurier.doc.tar.xz) = 3012a1b673c9b45116c5b3fc34dc676ee46bf4ab35286725a493cc30149669be8c28eaa8856e93bb9e3a91c80b47fe5b012fedec6b9ed6ff377c555e0263cc68
 Size (tex-kurier-19612/kurier.doc.tar.xz) = 465112 bytes

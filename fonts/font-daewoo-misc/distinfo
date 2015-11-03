@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/06/12 02:10:24 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:32 agc Exp $
 
 SHA1 (font-daewoo-misc-1.0.3.tar.bz2) = 0c7b24e08e6d42eb006d79ae7ab4bbf446d59f7a
 RMD160 (font-daewoo-misc-1.0.3.tar.bz2) = e1bfdac593681b32c6e3d6a362b2dcd9782c25c7
+SHA512 (font-daewoo-misc-1.0.3.tar.bz2) = 7e97bc580f66a1316e366617d34e1dbefd576b47b9373ef34833aaaf2fdefc50befc2add5f038915db0b45fbdd56b77304a8a980bb72726479d429085c406f06
 Size (font-daewoo-misc-1.0.3.tar.bz2) = 723414 bytes

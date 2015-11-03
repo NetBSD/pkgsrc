@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:07 agc Exp $
 
 SHA1 (tex-libertine-36755/libertine.doc.tar.xz) = f4414e0aab40cef9dfd664ed08567d81d52b5652
 RMD160 (tex-libertine-36755/libertine.doc.tar.xz) = 1075ebc189dee443d4a1e810cad8d1b21461cd42
+SHA512 (tex-libertine-36755/libertine.doc.tar.xz) = 0d5a5b636cbaf32486f61aeee31f58038ad7f155607d2b2657071f0d14f8ec4606e98e7a949020954d62563ab0c2c15de01a9b565409edfe3441dd6e7bb3fe59
 Size (tex-libertine-36755/libertine.doc.tar.xz) = 1112916 bytes

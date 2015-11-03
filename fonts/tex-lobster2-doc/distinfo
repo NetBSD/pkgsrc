@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:08 agc Exp $
 
 SHA1 (tex-lobster2-32617/lobster2.doc.tar.xz) = 527bbed296c8b2b2d4a493069820321e120f3c38
 RMD160 (tex-lobster2-32617/lobster2.doc.tar.xz) = 175a242740fab9d55f9cfaf17250a80d36c6fe80
+SHA512 (tex-lobster2-32617/lobster2.doc.tar.xz) = 3127a05288cd393b8613885fbf8c5f9c9caa30621e43defb96a4b0b83f85c583c6d38b74816b4bb98b81fd4cae6627dd10e4548084b734fa68201c8242c1009d
 Size (tex-lobster2-32617/lobster2.doc.tar.xz) = 39180 bytes

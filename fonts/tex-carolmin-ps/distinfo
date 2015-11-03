@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:47 agc Exp $
 
 SHA1 (tex-carolmin-ps-15878/carolmin-ps.tar.xz) = dc85097cd7106d9d90e15445e33043fa7c34a610
 RMD160 (tex-carolmin-ps-15878/carolmin-ps.tar.xz) = 54572c502b674ec6b76784393d120eedc64eb0d4
+SHA512 (tex-carolmin-ps-15878/carolmin-ps.tar.xz) = 41a946ef8db119fafbd3525949b5e87aa543ad1df5cda3a2fce045006d6b594d70ce9b6336259da4805521f8d45d9fb2ee74772f85bd2a008c7dd47e39088211
 Size (tex-carolmin-ps-15878/carolmin-ps.tar.xz) = 105220 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/01 05:31:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:11 agc Exp $
 
 SHA1 (tex-nanumtype1-29558/nanumtype1.doc.tar.xz) = 3ff05e6e2178496d1a085a7683b40b8ae5d78bb1
 RMD160 (tex-nanumtype1-29558/nanumtype1.doc.tar.xz) = 3596419c9d80df9a34e92d5db6a8013e0f695ae6
+SHA512 (tex-nanumtype1-29558/nanumtype1.doc.tar.xz) = d7ed0797fcc5b8a3da5d82f5eaed4be693537b4d94c892ea8716a7eac83c612b04f35acbdaba8e020a175b37205c4cb9a28598e736c46dde3cca39820e0aedb6
 Size (tex-nanumtype1-29558/nanumtype1.doc.tar.xz) = 78696 bytes

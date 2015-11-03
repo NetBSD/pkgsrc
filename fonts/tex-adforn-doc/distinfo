@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:40 agc Exp $
 
 SHA1 (tex-adforn-20019/adforn.doc.tar.xz) = fc02f4226048c8157004604d47875abfbcc88bf5
 RMD160 (tex-adforn-20019/adforn.doc.tar.xz) = c2162f423ce859004318ddb5f5611238000603fe
+SHA512 (tex-adforn-20019/adforn.doc.tar.xz) = edc8fe705cd124726053ce931a4e8137b30d0ae88459374cc45ab2b2a4bb026ec20362010dded83b5044d6c7837a314931f60c57aa7b159d92cb6b686403006d
 Size (tex-adforn-20019/adforn.doc.tar.xz) = 360280 bytes

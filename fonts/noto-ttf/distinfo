@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 13:20:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:38 agc Exp $
 
 SHA1 (noto-ttf-20150630.tar.gz) = 632d33342ad86d12411ce91a026417b0e65d1f27
 RMD160 (noto-ttf-20150630.tar.gz) = 019fc1b8eecc061e038efe734b3af023f07a38d5
+SHA512 (noto-ttf-20150630.tar.gz) = 89b2fdbd13f03a9fd2cc8014688bdee0fe87657e074038cadbec655e4157b62f48d84f6e587fa055116265d90d08fbb16e552bd20e5be285c94d1fdc582593ad
 Size (noto-ttf-20150630.tar.gz) = 17551792 bytes

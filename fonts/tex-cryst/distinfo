@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:52 agc Exp $
 
 SHA1 (tex-cryst-15878/cryst.tar.xz) = a4f0701049c72ff90b02b92cf9f70799a7665575
 RMD160 (tex-cryst-15878/cryst.tar.xz) = 3c6fb3cb2e263db75028453260b8759c10556e3e
+SHA512 (tex-cryst-15878/cryst.tar.xz) = 541405d81efe6ec365587f7832431d57d78981efdf8dd91f8bf4ba9788b1b9e13b973feb2374ec837a98195e2ca1417453586cc2036a4a4ef7adf68c9d304855
 Size (tex-cryst-15878/cryst.tar.xz) = 35480 bytes

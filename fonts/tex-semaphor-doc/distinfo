@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:17 agc Exp $
 
 SHA1 (tex-semaphor-18651/semaphor.doc.tar.xz) = f8f256fc3ec0e9b8c259151e0d6c1b9175ce4327
 RMD160 (tex-semaphor-18651/semaphor.doc.tar.xz) = d9b9a2c0e094357c38349cdf60be6a9d318b093d
+SHA512 (tex-semaphor-18651/semaphor.doc.tar.xz) = bffe1d824528da0425910aa08e2a9a18b384a7bbbecfac84edd573f88bdf88fb45bcc08c9ed4c5030e46eb33d43f3eea6ab8de97fcbe4ef1f3f1c1c6b976661a
 Size (tex-semaphor-18651/semaphor.doc.tar.xz) = 266768 bytes

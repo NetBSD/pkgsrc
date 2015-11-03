@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/06/12 02:10:25 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:32 agc Exp $
 
 SHA1 (font-misc-cyrillic-1.0.3.tar.bz2) = 9c0e283ae59e7b05c0798fe0645cc822d22dcb0c
 RMD160 (font-misc-cyrillic-1.0.3.tar.bz2) = b02a86aaf6d6a7e51500541d7f2e1e0e9b4aca02
+SHA512 (font-misc-cyrillic-1.0.3.tar.bz2) = 75e49cdb633f7ce5b9612d5adb0a85471c8fde5d55e8ccd9302f79f01e99e78b02449642c2cf785289f58d833bfa62042fce4253093fb17c87471559d1f9bdbf
 Size (font-misc-cyrillic-1.0.3.tar.bz2) = 125971 bytes

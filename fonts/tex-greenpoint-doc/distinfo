@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:03 agc Exp $
 
 SHA1 (tex-greenpoint-15878/greenpoint.doc.tar.xz) = 689af66b318767e4fd1e798fad6440fcdd56e0b6
 RMD160 (tex-greenpoint-15878/greenpoint.doc.tar.xz) = d05a25ab5440c937a956fada6dc3dfc6cc046d66
+SHA512 (tex-greenpoint-15878/greenpoint.doc.tar.xz) = 41539143c6fc8b6c2ec57419053fac6e559e9a8414c80d55b7d45ebd8a4f6dc53f83ac53f25cf9f4aa77f75a143ce83fb844c2a6a195d16f1217f88b17c67f01
 Size (tex-greenpoint-15878/greenpoint.doc.tar.xz) = 948 bytes

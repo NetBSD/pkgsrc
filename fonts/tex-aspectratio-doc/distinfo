@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:43 agc Exp $
 
 SHA1 (tex-aspectratio-25243/aspectratio.doc.tar.xz) = 2a726d48208a1e884aa0a774ffce3bec1c3c549c
 RMD160 (tex-aspectratio-25243/aspectratio.doc.tar.xz) = 72a488de188b690ddc706d48980c2cba9c350089
+SHA512 (tex-aspectratio-25243/aspectratio.doc.tar.xz) = bf06203d331b0cfb16a423f31dba9a65a486294ddeac3dd647b6e761f2ae7756317f290bd897b8062cf75f91bf28cc73218ffbc6b372c11e91eb8ed5ab43cf1e
 Size (tex-aspectratio-25243/aspectratio.doc.tar.xz) = 337268 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/06/01 16:35:36 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:44:37 agc Exp $
 
 SHA1 (mozilla-fonts-1.0.tar.gz) = 78bdf7d984f4d3fb63f1ab2ae6313be5adf297a0
 RMD160 (mozilla-fonts-1.0.tar.gz) = acc0875c52a9e37318775188980d7e9a4bda5a41
+SHA512 (mozilla-fonts-1.0.tar.gz) = be835f87e43fc3a056666a41bb37be03a0e93df444f442cdd67c76763857c3adbcdc84c0b6f20e6ef4659096a82d4e8f124f740a043cb773b756f2798b2ca1f1
 Size (mozilla-fonts-1.0.tar.gz) = 646850 bytes
 SHA1 (patch-aa) = 24a3c1674098e3c23ea510dc3fac60ab58e90986

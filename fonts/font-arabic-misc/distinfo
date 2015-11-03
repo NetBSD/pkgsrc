@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/06/12 02:10:22 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:31 agc Exp $
 
 SHA1 (font-arabic-misc-1.0.3.tar.bz2) = 322ae41e74deea8de11fa077fd0e0191927a667c
 RMD160 (font-arabic-misc-1.0.3.tar.bz2) = eed5aaa92bf66f164cdaf31b65d679e16a78887f
+SHA512 (font-arabic-misc-1.0.3.tar.bz2) = 46a416bf888afdb54f5dda6c9a7207dc069d14089ba14b262c60cb9ad427784c46e2a61b32a79f1d745e73ea657bbc36b48aa5d4bbd79f73a2d997b027ddfbc0
 Size (font-arabic-misc-1.0.3.tar.bz2) = 112136 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/08/02 10:58:31 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:59 agc Exp $
 
 SHA1 (tex-fira-37565/fira.doc.tar.xz) = 9974b35e807b6a33586ca7d02a19b25c39066e8c
 RMD160 (tex-fira-37565/fira.doc.tar.xz) = 07314551b52ec30664d7ac05c7423f1a4b749fd3
+SHA512 (tex-fira-37565/fira.doc.tar.xz) = fe66780e9e4337082ef8481afba19fff92e2a66b26415d9195fd9c9ebe56b0a377ac1fbf3decae07d6f25aca6b5c8815b3d615c89efbb56dbdac232baffca9de
 Size (tex-fira-37565/fira.doc.tar.xz) = 193032 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/16 23:41:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:28 agc Exp $
 
 SHA1 (ae_fonts_mono.tar.bz2) = 908a7ebbc41ab37518e2db293c32071661e409cb
 RMD160 (ae_fonts_mono.tar.bz2) = 37f1de916cdbbfc27004ab9f66efd72b6965fd68
+SHA512 (ae_fonts_mono.tar.bz2) = 55f5fce7b007c4d1fd2669410a97f80dbe7b71736615f38299d8c56cc091a9b74f8cbc76934c9a517c618fabd4b97174f91190dc66c05eb79e90928bb7455405
 Size (ae_fonts_mono.tar.bz2) = 125961 bytes

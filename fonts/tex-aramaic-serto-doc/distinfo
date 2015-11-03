@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 12:20:00 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-aramaic-serto-30042/aramaic-serto.doc.tar.xz) = 0e88142d3379931c17e161bdb745038977154164
 RMD160 (tex-aramaic-serto-30042/aramaic-serto.doc.tar.xz) = 775e76877b4d1ba25e480bc038cfad6553f5249a
+SHA512 (tex-aramaic-serto-30042/aramaic-serto.doc.tar.xz) = 7d50c66557d224b2647866045f56402b723386dd37b2a48eb6f9ccdb7ca3041cd8f90ee4c036b5ddac6f0123440dc6e470f319a810a29f64aebe390c443d79eb
 Size (tex-aramaic-serto-30042/aramaic-serto.doc.tar.xz) = 220648 bytes

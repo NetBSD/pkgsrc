@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:04 agc Exp $
 
 SHA1 (tex-heuristica-35964/heuristica.doc.tar.xz) = 6a710476ff3a00be2a051c480c0041f280f68593
 RMD160 (tex-heuristica-35964/heuristica.doc.tar.xz) = 9170a769c3ce5a28e87cba06221b2a0d8f573354
+SHA512 (tex-heuristica-35964/heuristica.doc.tar.xz) = 8d946ca3e1e0b4b5d64e7f4f69033ba6f4634de20ab5ff4ca44aa16e1cdd3ebfe74e96ae70bb11490562113af949508493bdf1d629879f5d26a7fd2c40bfa1ea
 Size (tex-heuristica-35964/heuristica.doc.tar.xz) = 201344 bytes

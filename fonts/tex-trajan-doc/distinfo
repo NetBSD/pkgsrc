@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:20 agc Exp $
 
 SHA1 (tex-trajan-15878/trajan.doc.tar.xz) = 6d1b7fe9a2829bbd266175f96ec74d3540292ee4
 RMD160 (tex-trajan-15878/trajan.doc.tar.xz) = 7e89fbe7f48a231898c7a054ae5e2058106391c2
+SHA512 (tex-trajan-15878/trajan.doc.tar.xz) = a59e7f52f759422412a479f92c9ba4a0ebde3f1568932a60e814229897158b6b853ca33e49970ee1e6d4987a8fe6bc4898ab2e7b74b3b3fbc6ad634bd2cadb98
 Size (tex-trajan-15878/trajan.doc.tar.xz) = 172196 bytes

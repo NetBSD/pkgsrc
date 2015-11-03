@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/16 08:13:27 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:38 agc Exp $
 
 SHA1 (Font-TTFMetrics-0.1.tar.gz) = 0e504a29e9f8c1cb5f76da243ade8e320b708d5d
 RMD160 (Font-TTFMetrics-0.1.tar.gz) = 8609503ba45beb6643832d724b816d10fd1e89a4
+SHA512 (Font-TTFMetrics-0.1.tar.gz) = 30ea66c9d231c909e52e44b6208b84c5a35e697e609517344f72f9099f117451adf264e6a03211f6776565b5c22e589044d13e35a973e2addaff531d75bbb1d1
 Size (Font-TTFMetrics-0.1.tar.gz) = 14372 bytes
