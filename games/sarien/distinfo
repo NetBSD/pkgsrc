@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/11/14 02:13:49 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:57:03 agc Exp $
 
 SHA1 (sarien-0.7.0.tar.gz) = f1c3236ed554cbde479fbbfa52cbc95cb9759fde
 RMD160 (sarien-0.7.0.tar.gz) = 68392593de5896cb4ed9d281b66d0b2b05464de4
+SHA512 (sarien-0.7.0.tar.gz) = aae6b9faa480afba48b2aaea071d1c6f10128b36b9c1ef1ac64c2b8de0a642c8dcc81fa91e0c7d1d166c50d57580c0779a4220f0fb9bae377150265802c7831f
 Size (sarien-0.7.0.tar.gz) = 284109 bytes
 SHA1 (patch-Rules_in) = 1ddbfaa6caf377f310ed40c889b792fdb15f3645
 SHA1 (patch-aa) = 437bf3108d437f265c97a813a1a1d512003f20b4

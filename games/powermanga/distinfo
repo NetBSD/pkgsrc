@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/09/02 11:38:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:57:01 agc Exp $
 
 SHA1 (powermanga-0.90.tar.gz) = 50ca2844f8d3fa53af89e94aeb6dd10d7b320cc8
 RMD160 (powermanga-0.90.tar.gz) = 2f7e9cc50fd97de7131b726732acffcd5a0deaea
+SHA512 (powermanga-0.90.tar.gz) = eb0d363e60088ca9b849aa88e0e51667cd2e4519cdf04d851495ad03394e1ee58ad1b881ca3011652ea0fb23a8af7ee6e78943985511b6d66e0d33c43c734052
 Size (powermanga-0.90.tar.gz) = 11412193 bytes
 SHA1 (patch-ab) = 1173f73ac26a25402c31d771578a3ca188b367f6
 SHA1 (patch-ad) = 58c7089a05d7b23d929de1ff5eae1b5141c68553

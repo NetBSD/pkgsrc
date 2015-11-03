@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/02/10 22:25:24 snj Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:57:04 agc Exp $
 
 SHA1 (singularity-0.30c-src.tar.gz) = f4cb2d9e7a04cf22fe76c58b482c568c817baa02
 RMD160 (singularity-0.30c-src.tar.gz) = ab2b1b057767fb3f1d903bd3807fc30cd2d7698a
+SHA512 (singularity-0.30c-src.tar.gz) = ffca50c179b745561a25e3fb3525abb862d72f63f533f8a41472067d0ce94c8a236486c9c40a5040335d84e903c498805d591dc546a92d0a7651105103fe114f
 Size (singularity-0.30c-src.tar.gz) = 2265133 bytes

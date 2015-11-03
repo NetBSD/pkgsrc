@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/19 19:35:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:48 agc Exp $
 
 SHA1 (exultaudio-1.0/exult_audio.zip) = 13c094ef845c8dc0f2335777c75bbfb9fae81ce4
 RMD160 (exultaudio-1.0/exult_audio.zip) = 63e88ddc955cd8fe2c1df4a4197423924daecb42
+SHA512 (exultaudio-1.0/exult_audio.zip) = 70374a079935b063f41a37aeb90315d55abb584e5542f7fa12c707318db6365e989a5848bba9045a2c2cca1ccd902cc1d31fec8c95511a986de7a75d322d0919
 Size (exultaudio-1.0/exult_audio.zip) = 48439905 bytes
