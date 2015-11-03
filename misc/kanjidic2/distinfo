@@ -1,17 +1,22 @@
-$NetBSD: distinfo,v 1.7 2006/12/08 16:59:56 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:49:38 agc Exp $
 
 SHA1 (kanjidic2-20061208/kanjidic2.xml.gz) = bbaa1f3bd29289113bfad174d126021b82a2e3c5
 RMD160 (kanjidic2-20061208/kanjidic2.xml.gz) = 5d33a0a8dc21f4bb9bf2b324f4822de301ea53c8
+SHA512 (kanjidic2-20061208/kanjidic2.xml.gz) = 55472fd933aeee9adb9b1a4efae332a0d00abb12a9c421de5d381b37a6e7127156380c7d7547e51ab6c227c20a90acdf18d261d0384e369bfc1b454b59ac15b3
 Size (kanjidic2-20061208/kanjidic2.xml.gz) = 1224608 bytes
 SHA1 (kanjidic2-20061208/kanjidic2_dtd.gz) = b9289acc3e3e5b37f0e23e2d5b3aed9cfc3c3155
 RMD160 (kanjidic2-20061208/kanjidic2_dtd.gz) = 413ff8cd423dc65db291c5445c10830d60986d17
+SHA512 (kanjidic2-20061208/kanjidic2_dtd.gz) = 93b2ffccf357adec19710554f2efda59a3b5c03aa982867fd3d467c31d0cb392553e7e66b3b29d033aeda96de90ee3b19acb8c6b9f6ca4c149509ff667fa62f2
 Size (kanjidic2-20061208/kanjidic2_dtd.gz) = 4206 bytes
 SHA1 (kanjidic2-20061208/kanjidic2_ov.html) = 08d8ef038b63bedef3a0275887505fdce948b79a
 RMD160 (kanjidic2-20061208/kanjidic2_ov.html) = 0f87924ca1ff0e5c39d74596a8c59c931f2d86a6
+SHA512 (kanjidic2-20061208/kanjidic2_ov.html) = 50df579d74f4a053459d3c94ab2d7d1b3b6bd172a08cd3e693878b559a74065938d9985be7b7f16d2eea9b9e22b5cc85603616302529e7cf45c326c911f814b9
 Size (kanjidic2-20061208/kanjidic2_ov.html) = 6741 bytes
 SHA1 (kanjidic2-20061208/kanjidic2_xsd.gz) = c7fb1aa4474630f07a52953b5411b86c1eb6cfd2
 RMD160 (kanjidic2-20061208/kanjidic2_xsd.gz) = 42669a2f276cf13d73d857485fe3dd01bc4ae4fb
+SHA512 (kanjidic2-20061208/kanjidic2_xsd.gz) = 904f6ed50a0f06cc7ff7fb370860922879debbc62521b81937e8fd9334b28cd70ca9b67eeb28b4ff5923639f9aea282dd3a6151cb56e70f3191657ed644a7c2e
 Size (kanjidic2-20061208/kanjidic2_xsd.gz) = 631 bytes
 SHA1 (kanjidic2-20061208/kanjidic_doc.html) = c68d203059b61209769121755e42830b0f6eddd1
 RMD160 (kanjidic2-20061208/kanjidic_doc.html) = 6c3a0887e02642f3c5f8c8ae8ed188747ebfc01e
+SHA512 (kanjidic2-20061208/kanjidic_doc.html) = 9f694cab8c29649a1746e6eb4efc42fe1f31bd97021c8dad86a33805f8406d0d012ad1ddf02ab339b40befdb5d09463d0b78d57db77fb637453c6a1380367d2d
 Size (kanjidic2-20061208/kanjidic_doc.html) = 57387 bytes

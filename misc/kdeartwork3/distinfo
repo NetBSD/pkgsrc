@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.36 2015/03/18 10:27:54 joerg Exp $
+$NetBSD: distinfo,v 1.37 2015/11/03 23:49:39 agc Exp $
 
 SHA1 (kdeartwork-3.5.10.tar.bz2) = 928079e1bd54062b53a7cac192998a4c44022003
 RMD160 (kdeartwork-3.5.10.tar.bz2) = 4078546bb1cdab86a7510f5bcd6aac54751fe47b
+SHA512 (kdeartwork-3.5.10.tar.bz2) = adc1e8e06747161a0f4b14deb2732fc5f303aa8be386fc35ce8c10aea18960917584fca4feaa560ab14dd223aaf52065c8626e9e72b4ba5f8f7c3308db5a6eae
 Size (kdeartwork-3.5.10.tar.bz2) = 16621355 bytes
 SHA1 (patch-aa) = 22c752e2d6b9a1bca140e78bd1ec0f29c5257f26
 SHA1 (patch-kscreensaver_kdesavers_rkodesolver.cpp) = 28a6b808c871d3f7144a473d8a696a3ac7651882

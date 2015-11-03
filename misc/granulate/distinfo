@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/03/03 11:03:29 shattered Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:37 agc Exp $
 
 SHA1 (granulate-0.2.tar.gz) = 44214ec0020851445bd1c65c92c96d2a789b2e0c
 RMD160 (granulate-0.2.tar.gz) = 8dd3c7c27c09104d23fcf40d2780d0dd548f3366
+SHA512 (granulate-0.2.tar.gz) = 349dcb564c79d24ad815a89c02d18f206637c11f4fbd6696b26dd389927b21eb0ba761893fcb6a2953177ad5105093c326626024bda0d4bb0caca924e53f5723
 Size (granulate-0.2.tar.gz) = 11098 bytes
 SHA1 (patch-aa) = 75c04296f16da1b3d0a81c08b9534ad1df45d7c2
