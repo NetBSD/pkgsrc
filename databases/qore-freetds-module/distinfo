@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 15:41:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:29 agc Exp $
 
 SHA1 (qore-sybase-modules-1.0.3.tar.gz) = cce3009389cf5e348a36cc92dfe04c05bbd80f96
 RMD160 (qore-sybase-modules-1.0.3.tar.gz) = 3a4f1ed55410ee03a33530f808a087cbd4b25887
+SHA512 (qore-sybase-modules-1.0.3.tar.gz) = a8fa60a6fa2c3dfe3032ea45034f03efc9243f3c015fb13da362947606bee34d1d94b9e029f5f788cb019e734e7ba403688a2b269f8c73f482c3a9e9b592c85b
 Size (qore-sybase-modules-1.0.3.tar.gz) = 471104 bytes
 SHA1 (patch-configure) = 4298d577373ea71a41a804bf5f133d2fe3a0236e
 SHA1 (patch-src_Makefile.in) = ba748dde79e9474e1050cffd2d57b8151be36968

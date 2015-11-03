@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:23:47 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:31 agc Exp $
 
 SHA1 (dm-is-list-1.2.0.gem) = b3e517628292f94a81fa550c3b28841e62a25b3d
 RMD160 (dm-is-list-1.2.0.gem) = e030a2226b0de2bb5a6632f0b564e252303a1d64
+SHA512 (dm-is-list-1.2.0.gem) = 8d704446df3411647af0878721108ad7662ba41ecb56f843445c61e0d4a6990f103ceeda5740592b5e16d036aeaf5fe1637dbc6a9ed741d8fa7cde092fb6000b
 Size (dm-is-list-1.2.0.gem) = 18944 bytes
