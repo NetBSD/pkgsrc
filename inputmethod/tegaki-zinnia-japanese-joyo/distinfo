@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 12:58:36 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:41 agc Exp $
 
 SHA1 (tegaki-zinnia-japanese-joyo-0.3.zip) = ce8052a17707b2ddb8a5e24122f5f0c2b86b8e80
 RMD160 (tegaki-zinnia-japanese-joyo-0.3.zip) = 7e0db754654912a96d1d182f856a1eb88b1672a5
+SHA512 (tegaki-zinnia-japanese-joyo-0.3.zip) = 8b41ad22db2c62443d8bf6b5fd0dd4d9b62b1cfaa0b9c76b07dc0448edd076722eca389dd203a0aac61fec071d84e45884d40d2052381a8739680d800a4a374b
 Size (tegaki-zinnia-japanese-joyo-0.3.zip) = 4865213 bytes

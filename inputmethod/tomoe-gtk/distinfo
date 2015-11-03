@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/06/27 08:51:11 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 22:13:41 agc Exp $
 
 SHA1 (tomoe-gtk-0.6.0.tar.gz) = dddb1178c437380a92b59dbc273dafdd2045e1d1
 RMD160 (tomoe-gtk-0.6.0.tar.gz) = 72e0954b8994d1e62acb7d4cb0c478dadb54b8f0
+SHA512 (tomoe-gtk-0.6.0.tar.gz) = caa9b79edde7885e00d939cb3de30b32da0c1c8a7d803e26c756ee0695f7e15bee241036b1125f838e72e016f4bee9736a398108fff0eed20f1fdb86d221dc43
 Size (tomoe-gtk-0.6.0.tar.gz) = 448058 bytes
 SHA1 (patch-aa) = 7b185b3ec670661c5bcd85f3e1ef91729348b19c
 SHA1 (patch-ab) = 3a06e51f7ca8ab0930a2482d6f006d883b88840d

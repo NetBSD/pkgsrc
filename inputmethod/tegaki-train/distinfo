@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 12:53:49 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:40 agc Exp $
 
 SHA1 (tegaki-train-0.3.1.tar.gz) = 1c2d10e38fd35644525aed88c73e4113d7e276ac
 RMD160 (tegaki-train-0.3.1.tar.gz) = 34167191dc5a0624467e8c24482143181ea6f980
+SHA512 (tegaki-train-0.3.1.tar.gz) = aac8f8bbc1730ac1aa6c2cd138e794411a693918218211c4941784b44cc967228e231b65aec08215616cbbe4b406428d1d8e95bfc67ca81a53950f4c56762377
 Size (tegaki-train-0.3.1.tar.gz) = 17951 bytes

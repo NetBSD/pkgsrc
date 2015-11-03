@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/12/08 11:52:41 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 22:13:40 agc Exp $
 
 SHA1 (skkinput-2.06.4.tar.gz) = 2f612427cdc96c94e3a9bdf0254253fdf176ecae
 RMD160 (skkinput-2.06.4.tar.gz) = d7631b166e15094b06983a56c673e4d116d1b409
+SHA512 (skkinput-2.06.4.tar.gz) = 1d456b4c1f57f269ab37f91c6df4b1bcf0dffdc2061f82ee7200ea425b49581b017995cd823315fdf30466658119c37dc60576be635490d14cef041205a49ff8
 Size (skkinput-2.06.4.tar.gz) = 420106 bytes
 SHA1 (patch-aa) = b61c76152bf73c1094d2163b4af731e89b2ce0c1

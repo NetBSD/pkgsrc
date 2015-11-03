@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/11/05 17:39:46 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 22:13:39 agc Exp $
 
 SHA1 (sj3-2.0.1.23p1.tar.gz) = 313a8f71f03071ad4d6006d18b569ce390edca8d
 RMD160 (sj3-2.0.1.23p1.tar.gz) = 2541f19bcf6b74c5b59c2e930fe27bb0ffa97ddf
+SHA512 (sj3-2.0.1.23p1.tar.gz) = 159581200399b81ee1fbda6e5a9e8b19a58cb8a3adb437343057b836fb65e2a26f479aff641e6fee493f618d595ab8d2b79b26de678277dea66cffca82686a83
 Size (sj3-2.0.1.23p1.tar.gz) = 1117190 bytes
 SHA1 (patch-aa) = 83416c5aeae4514349c6ab1a4f1ac3018feea406
 SHA1 (patch-doc_man_sj3dic.1) = f990df9cd36043fb2501fea96dce9307d16a0637

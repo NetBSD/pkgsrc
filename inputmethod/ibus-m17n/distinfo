@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/11/19 23:19:30 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 22:13:35 agc Exp $
 
 SHA1 (ibus-m17n-1.3.4.tar.gz) = 068de56caa87c002adeae0de9e908f47e3f9fde9
 RMD160 (ibus-m17n-1.3.4.tar.gz) = ee9a153549d47a563e8bebf10af81b2e5f4136c4
+SHA512 (ibus-m17n-1.3.4.tar.gz) = 9e9bc290b0f0d68558d408f6e69aa3bd9bb767db827a95839b576b58c7a5056dedcbd9b0bf1aab5e26ab21e601acd67a53404a5fd54b436efaf2a706489f25c4
 Size (ibus-m17n-1.3.4.tar.gz) = 436687 bytes
 SHA1 (patch-src_setup.c) = 3159e91232cdb48dddfc87d8e80210cb8e628c2e

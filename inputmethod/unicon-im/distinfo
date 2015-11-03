@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2011/12/14 18:31:48 marino Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 22:13:42 agc Exp $
 
 SHA1 (unicon-1.2.tar.gz) = 61854d160547f645f8033f0b4fd15ebb15ab92a8
 RMD160 (unicon-1.2.tar.gz) = c862f03ba561fe4c3641cf8b364a9bae40a78c03
+SHA512 (unicon-1.2.tar.gz) = fa2e25f451b9eac27702fca0a9066532ffbfe118ec95bb3d6035a4279543882aaa23870d3392d2bf3731d9b3b98cfb8955857f7e46bb90693dc21b3dc5a33ee1
 Size (unicon-1.2.tar.gz) = 7815217 bytes
 SHA1 (patch-ImmModules_TL-1_xl__mfile.c) = 733383b9196ec16d2c0ff274487c012631b8e985
 SHA1 (patch-aa) = b9103d7fb810a6151144ccff9ff537fe8e505d51

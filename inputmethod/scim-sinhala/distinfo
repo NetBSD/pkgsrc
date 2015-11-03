@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:05:45 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:39 agc Exp $
 
 SHA1 (scim-sinhala-0.1.0.tar.gz) = 2a4699c6cd26d6c7b6ed54ba3acda5c200e53e9c
 RMD160 (scim-sinhala-0.1.0.tar.gz) = bbb4df83ee7a25bfea2d79ebbbb56956e8a8c734
+SHA512 (scim-sinhala-0.1.0.tar.gz) = ca88ad9775e0ec3ab6a938e504f21142d07ffef57d0a996aad0a8b47251515e93937b125cb921228c0fc1b60d15b81135d87dc7f8261d82e91083c930b6936ca
 Size (scim-sinhala-0.1.0.tar.gz) = 488409 bytes
 SHA1 (patch-aa) = 213bf2d512ec25c71b82fbd433195037ba80e1bc

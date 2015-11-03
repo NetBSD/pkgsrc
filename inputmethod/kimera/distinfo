@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/20 07:46:41 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:36 agc Exp $
 
 SHA1 (kimera-2.11.tar.gz) = 9e6073c0927aaa3a4f4820c6728cfd06eb4e90ee
 RMD160 (kimera-2.11.tar.gz) = 0f9d95587a078118a225e3772bfda95612155a1d
+SHA512 (kimera-2.11.tar.gz) = b03ca2a665010e2d63100e367c42ebf1b1e68178093b78955bbeb5a73ebb6305f4292f925494e484edd574836ce66375f74766bd43445901c388e8db8d3a8e5b
 Size (kimera-2.11.tar.gz) = 106010 bytes

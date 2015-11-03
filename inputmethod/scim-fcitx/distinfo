@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/03/26 12:13:17 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 22:13:38 agc Exp $
 
 SHA1 (scim-fcitx.3.1.1.tar.bz2) = 900d4c4de01bc87a1f9b543afc15e8ccb1ae7775
 RMD160 (scim-fcitx.3.1.1.tar.bz2) = 7c064af4b8c847caac1ae27d6356e9b925bb6528
+SHA512 (scim-fcitx.3.1.1.tar.bz2) = d33c5544c63822b19a83a1ae37da40fd524acc30af83c7a38aa66ce0c08c4077c1903ea03f39a38bfbfdcd7357093fa318a7df98199327f153972c3281934f65
 Size (scim-fcitx.3.1.1.tar.bz2) = 1612134 bytes
 SHA1 (patch-aa) = 3b50251864dd69c79dfef9c46c728e735a88248e
 SHA1 (patch-src_ime.cpp) = e773fbdd58e671cd68515f648724ddc702ec0d65

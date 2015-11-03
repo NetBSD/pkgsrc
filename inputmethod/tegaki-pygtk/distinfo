@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 12:51:29 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:40 agc Exp $
 
 SHA1 (tegaki-pygtk-0.3.1.tar.gz) = 2827380d5faa892d072c66127951f245238d527b
 RMD160 (tegaki-pygtk-0.3.1.tar.gz) = 6fa951ac09d0b27a714e04226ac19cd3e9eb7205
+SHA512 (tegaki-pygtk-0.3.1.tar.gz) = 20adff6fbac28fe5c251f6509c945d94afe6c311aef9f665061f37f21a099c45f3e4fd282c193377ee2cd2aac021fe704ac261adf2b1c208bae1ed46c0ec0ff4
 Size (tegaki-pygtk-0.3.1.tar.gz) = 29787 bytes
