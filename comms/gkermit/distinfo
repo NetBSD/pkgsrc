@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/03/24 14:07:02 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:34:53 agc Exp $
 
 SHA1 (gku100.tar.gz) = 7c8091d1cc8184eb2e0445d2b1deeb781ba632b6
 RMD160 (gku100.tar.gz) = e4fa3a8dea1c08e439e096d6f3f916d0d1f1669d
+SHA512 (gku100.tar.gz) = 7dd8476b9f92b3a5453493486313cf6f2018b698f0c2d7076a7bfaf4be3ff94024602a41495449591bd0c5ca699b324205847ce1b3498e27c418c0a0175cf64f
 Size (gku100.tar.gz) = 62195 bytes
 SHA1 (patch-aa) = 7fd1df0ac08751ae01f3ca16032a672bdba99675

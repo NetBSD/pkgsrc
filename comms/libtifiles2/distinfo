@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/26 22:59:42 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:55 agc Exp $
 
 SHA1 (libtifiles2-1.1.5.tar.bz2) = ed08600bd767cf878e56cbd55143e16d42ecd372
 RMD160 (libtifiles2-1.1.5.tar.bz2) = cdac8e83f70c1019d00ba0d7e230911d770ec173
+SHA512 (libtifiles2-1.1.5.tar.bz2) = 77bae380dafc9c127f032ff6d09674a13d3327f992564a25ce2172d0897dc51ee1b7adf2e2d7ae170dd482add3f71d793bb9857e1b6f3a6e5ddc54a18c5680e3
 Size (libtifiles2-1.1.5.tar.bz2) = 460500 bytes

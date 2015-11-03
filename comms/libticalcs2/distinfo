@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/26 22:58:30 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:55 agc Exp $
 
 SHA1 (libticalcs2-1.1.7.tar.bz2) = cda1d356816b352618d25fc2d7afed59352a91ad
 RMD160 (libticalcs2-1.1.7.tar.bz2) = c5bed4064c708489835dc591d04bbc7d7fa5a747
+SHA512 (libticalcs2-1.1.7.tar.bz2) = 641b1f9050a59a7aaecf92d013fc6e61838c460e8ee4cd6ac178367c81b234fa242fbaaceef931b479d8eb18da05b3a7fa113174ddd0a15c1d27df28ebd48bed
 Size (libticalcs2-1.1.7.tar.bz2) = 525111 bytes
